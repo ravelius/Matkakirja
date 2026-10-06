@@ -5,9 +5,9 @@
 // LinssiTiedot.Esittely lukee ensin linssimoduulin JSON:n (radio, maat, keksinnöt ja vesistöt tulevat webin moduulista), sitten
 // tämän taulun, joka kattaa myös koodissa määritellyt linssit (topografia, astronautin kamera, ihmisen matka, vertailu, pallo).
 // Taulu vastaa webiä sanasta sanaan: Linssit-testit/Testit/LinssiEsittelytTestit.cs vertaa sitä kultaiseen
-// linssi-esittelyt.json:iin (tee-linssi-esittelyt.mjs webin rekisteristä). Havainnekuvia ei vielä ole yhdelläkään linssillä
-// (Pelikoodari kerää puuttuvat Päätoimittajalle); osoitteet lisätään tähän, kun ne tulevat.
+// linssi-esittelyt.json:iin (tee-linssi-esittelyt.mjs webin rekisteristä). Havainnekuvat tulevat linssikatalogista (Katalogi).
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Matkakirja.Linssit
 {
@@ -27,8 +27,22 @@ namespace Matkakirja.Linssit
             ["vesistot"] = "Joet ja järvet maaston päällä: vesi näkyy siellä minne maa viettää.",
         };
 
-        /// <summary>Havainnekuvien osoitteet tunnuksittain (tyhjä, kunnes kuvat tulevat).</summary>
-        static readonly Dictionary<string, string> Havainnekuvat = new Dictionary<string, string>();
+        /// <summary>
+        /// LINSSIKATALOGIN KUVAT (omistaja 6.10.2026 klo 20.1x, Päätoimittaja: kaikkiin linsseihin kuvat valikkoa varten; ensin olemassa
+        /// olevat): natiivin tunnus → linssikatalogin tunnus (linssikatalogi-data.js), kuva media.matkakirja.app/linssikatalogi/
+        /// &lt;katalogitunnus&gt;-havainne.jpg. Puuttuvat (ihmisen-matka-2, maapallon-vuosi, ajattelijat, yokartta, tahdet, lontoo, opas)
+        /// on tilattu Codexilta; ne lisätään tähän, kun kuvat ovat ämpärissä.
+        /// </summary>
+        public static readonly IReadOnlyDictionary<string, string> Katalogi = new Dictionary<string, string>
+        {
+            ["topografia"] = "X2", ["isoisa-1873"] = "Q1", ["vesistot"] = "X3", ["keksinnot"] = "B1", ["ihmisen-matka"] = "C7",
+            ["satelliitti"] = "X4", ["radio"] = "X5", ["vertailu"] = "X6", ["maatiedot"] = "X7", ["poikkileikkaus"] = "E11",
+        };
+
+        public const string KatalogiOsoite = "https://media.matkakirja.app/linssikatalogi/";
+
+        /// <summary>Havainnekuvien osoitteet tunnuksittain (linssikatalogista).</summary>
+        static readonly Dictionary<string, string> Havainnekuvat = Katalogi.ToDictionary(k => k.Key, k => KatalogiOsoite + k.Value + "-havainne.jpg");
 
         /// <summary>Tunnukset, joilla on esittely (testit).</summary>
         public static IEnumerable<string> Tunnukset => Esittelyt.Keys;

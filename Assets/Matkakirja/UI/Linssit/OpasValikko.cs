@@ -93,8 +93,15 @@ namespace Matkakirja.Natiivi
 
         const int Kaupunkeja = 12;
 
-        VisualElement napit;
-        Button mikkiNappi;
+        VisualElement napit, rivinIkkuna, liuku;
+        Button mikkiNappi, vakanen;
+        // VÄKÄNEN (omistaja 6.10. 19.5x, Päätoimittaja): Kysy, Liiku, mikki ja näppäimistö piilossa vasemman reunan OHJAUSNAPPI-
+        // väkäsen › alla; napautus liu'uttaa ne esiin oikealle (--tk-kesto-liuku 240 ms) ja väkänen kääntyy ‹:ksi. Rivi sulkeutuu
+        // väkäsestä tai napin valinnasta. Ensimmäisellä kerralla rivi on 3 s auki ja liukuu sitten väkäsen alle.
+        const string EsittelyAvain = "matkakirja-opas-nappirivi-esitelty";
+        const int EsittelyMs = 3000;
+        bool riviAuki;
+        IVisualElementScheduledItem esittely;
         bool nappiNakyy;
         enum Nakyma { Paa, Takyt, Maanosat, Maat, Kaupungit, Kysy, Liiku, Mika, Aika }
 
@@ -110,8 +117,20 @@ namespace Matkakirja.Natiivi
         // yläkulmassa OHJAUSNAPPI-pohjalla (julistekuvake, pois-tilassa vino viiva), oletus päällä, valinta muistetaan.
         const string KuvatAvain = "matkakirja-opas-kuvat";
         const string KuvaPoisIkoni = Ikonit.PilleriJulisteet + "<path d=\"M3.2 3.6 20.8 20.4\"/>";
-        const float KuvaLeveys = 132f, KuvaRako = 8f;
-        readonly VisualElement kuvaKortti, kuvaKehys, kuvaEl, kuvaMerkki;
+        const float KuvaRako = 8f;
+        // KUVANAPPI (omistaja 6.10. 19.5x): pieni neliö nappi.ohjaus-iso (56 pt) iPhonella, iPadilla samassa suhteessa ruudun
+        // lyhyeen sivuun; kulma.nappi, ei kehystä; nipun kuvamäärä pienenä numeropäänä. HAVAINNEKUVA vain kokoruudun lähderivillä.
+        const float KuvaViiteLyhyt = 393f;
+        float KuvaKoko
+        {
+            get
+            {
+                float lyhyt = Mathf.Min(Juuri.layout.width, Juuri.layout.height);
+                float suhde = UiKerros.Tabletti && lyhyt > 0f && !float.IsNaN(lyhyt) ? Mathf.Max(1f, lyhyt / KuvaViiteLyhyt) : 1f;
+                return Mathf.Round(Tyylikirja.Nappi.OhjausIso * suhde);
+            }
+        }
+        readonly VisualElement kuvaKortti, kuvaEl;
         readonly Label kuvaLaskuri;
         Kuvasuurennos suurennos;
         OpasKuva naytettyKuva;
@@ -197,9 +216,15 @@ namespace Matkakirja.Natiivi
             puhuSiru.tooltip = "Puhu tai kirjoita";
             // NELJÄ NAPPIA (omistaja 6.10. 11.5x: kaksi kysymyssirua pois; Kysy, Liiku, mikrofoni ja näppäimistö keskellä alhaalla,
             // LIIKU-nappipohja pyöristetyin kulmin, tekstit ja kuvakkeet keskitettyinä). Harmaa teema rivin tk-teema-harmaasta.
-            napit = Rakenne.El("tk-teema-harmaa mk-opas-napit", Juuri, PickingMode.Ignore);
+            napit = Rakenne.El("tk-teema-harmaa mk-opas-napit mk-opas-napit--vakanen", Juuri, PickingMode.Ignore);
             napit.style.display = DisplayStyle.None;
             napit.style.opacity = 0f;
+            napit.style.left = OpasTapit.Reuna;
+            napit.style.height = NappiriviKorkeus;
+            vakanen = Ohjausnappi.Nappi(Ikonit.NuoliOikea, "Näytä napit", () => { LopetaEsittely(); AsetaRiviAuki(!riviAuki); }, napit);
+            rivinIkkuna = Rakenne.El("mk-opas-napit__ikkuna", napit, PickingMode.Ignore);
+            liuku = Rakenne.El("mk-opas-napit__liuku", rivinIkkuna, PickingMode.Ignore);
+            liuku.style.display = DisplayStyle.None;
             OpasNappi("Kysy", Ikonit.Puhekupla, () => Avaa(Nakyma.Kysy), "Valmiit kysymykset oppaalle");
             // JATKA KIERROSTA (omistaja 6.10. 16.3x, Päätoimittaja): kysymys keskeyttää kaupunkikierroksen; vastauksen jälkeen
             // nappirivin lasipohjalla oleva nappi keskitettynä rivin yläpuolelle (LS1: KierrosJatkettavissa, JatkaKierrosta()).
@@ -225,9 +250,9 @@ namespace Matkakirja.Natiivi
             tahtain.style.display = DisplayStyle.None;
             OpasNappi("Liiku", Ikonit.Viiva["kompassi"], () => Avaa(Nakyma.Liiku), "Lähikohteet ja kaupunkikierros");
             // Omistaja 16.3x "paremmin linjaan": tekstinapit samanlevyisiksi (leveimmän mukaan), sisältö keskellä.
-            napit.RegisterCallback<GeometryChangedEvent>(_ =>
+            liuku.RegisterCallback<GeometryChangedEvent>(_ =>
             {
-                var tekstilliset = napit.Children().Where(c => !c.ClassListContains("mk-opas-nappi--ikoni")).ToList();
+                var tekstilliset = liuku.Children().Where(c => !c.ClassListContains("mk-opas-nappi--ikoni")).ToList();
                 if (tekstilliset.Count < 2) return;
                 float lev = 0f;
                 foreach (var c in tekstilliset) lev = Mathf.Max(lev, c.layout.width);
@@ -242,28 +267,19 @@ namespace Matkakirja.Natiivi
 
             RakennaSiirtyma(kerros.Juuri(kerrosNro));
             RakennaKirjoitus();
-            kuvaKortti = Rakenne.El("mk-nosto tk-teema-harmaa", Juuri, PickingMode.Position);
+            kuvaKortti = Rakenne.El("mk-ohjausnappi mk-ohjausnappi--iso mk-ohjausnappi--kuva tk-teema-harmaa", Juuri, PickingMode.Position);
+            kuvaKortti.tooltip = "Kuvat";
             kuvaKortti.style.position = Position.Absolute;
-            kuvaKortti.style.right = 0;
-            kuvaKortti.style.width = KuvaLeveys;
-            kuvaKortti.style.maxWidth = KuvaLeveys;
-            kuvaKortti.style.paddingTop = 6; kuvaKortti.style.paddingBottom = 6; kuvaKortti.style.paddingLeft = 6; kuvaKortti.style.paddingRight = 6;
             kuvaKortti.style.display = DisplayStyle.None;
             kuvaKortti.style.opacity = 0f;
             kuvaKortti.style.transitionProperty = new List<StylePropertyName> { new StylePropertyName("opacity") };
             kuvaKortti.style.transitionDuration = new List<TimeValue> { new TimeValue(Tyylikirja.Kesto.Sulku / 1000f) };
-            kuvaKehys = Rakenne.El("mk-nosto__kuvakehys mk-nosto__kuvakehys--nyky", kuvaKortti, PickingMode.Ignore);
-            kuvaKehys.style.height = Mathf.Round((KuvaLeveys - 12f) * 2f / 3f);
-            kuvaEl = Rakenne.El("mk-nosto__kuva", kuvaKehys, PickingMode.Ignore);
-            // USEAT KUVAT (omistaja 5.10.2026 klo 23.5x): kortissa yksi kuva ja nostokortin kuvalaskuri "+N" muiden määrästä.
-            kuvaLaskuri = Rakenne.Teksti("", "mk-nosto__laskuri", kuvaKehys);
+            kuvaEl = Rakenne.El("mk-ohjausnappi__kuva", kuvaKortti, PickingMode.Ignore);
+            // Nipun kuvamäärä nostokortin kuvalaskurin pohjalla (numeropää kulmassa, vain kun kuvia on useampi).
+            kuvaLaskuri = Rakenne.Teksti("", "mk-nosto__laskuri", kuvaKortti);
             kuvaLaskuri.pickingMode = PickingMode.Ignore;
             Kirjasimet.Aseta(kuvaLaskuri, Kirjasin.Moderni);
             kuvaLaskuri.style.display = DisplayStyle.None;
-            kuvaMerkki = Rakenne.El("mk-nosto__kuvateksti mk-nosto__kuvateksti--kotelo", kuvaKortti, PickingMode.Ignore);
-            var hm = Rakenne.Teksti("Havainnekuva".ToUpperInvariant(), "mk-nosto__havainne", kuvaMerkki);
-            hm.tooltip = "Havainnekuva";
-            Kirjasimet.Aseta(hm, Kirjasin.Moderni);
             kuvaKortti.RegisterCallback<ClickEvent>(_ => SuurennaKuva());
             kuvaKortti.RegisterCallback<PointerDownEvent>(e => e.StopPropagation());
             kerros.JokaRuutu += PaivitaKuva;
@@ -339,7 +355,7 @@ namespace Matkakirja.Natiivi
         /// <summary>Oppaan alarivin nappi LIIKU-pohjalla: teksti (Kysy, Liiku) tai pelkkä kuvake (mikrofoni, näppäimistö), keskitettynä.</summary>
         Button OpasNappi(string teksti, string ikoni, Action teko, string ohje)
         {
-            var b = Rakenne.Nappi(null, "mk-liiku__nappi mk-opas-nappi" + (teksti == null ? " mk-opas-nappi--ikoni" : ""), teko, napit);
+            var b = Rakenne.Nappi(null, "mk-liiku__nappi mk-opas-nappi" + (teksti == null ? " mk-opas-nappi--ikoni" : ""), () => { LopetaEsittely(); AsetaRiviAuki(false); teko(); }, liuku);
             b.tooltip = ohje;
             Rakenne.Ikoni(ikoni, "mk-ikoni mk-opas-nappi__ikoni", b);
             if (teksti != null) Kirjasimet.Aseta(Rakenne.Teksti(teksti, "mk-nappi__teksti mk-opas-nappi__teksti", b), Kirjasin.ModerniLihava);
@@ -618,16 +634,13 @@ namespace Matkakirja.Natiivi
             string teksti = lataa ? "Haetaan…" : "Mikä tämä on?";
             if (mikaTeksti.text != teksti) mikaTeksti.text = teksti;
             mikaNappi.SetEnabled(!lataa);
-            if (nappi && napit.childCount > 0)
+            if (nappi)
             {
-                // Havainnekuvan paikka: nappirivin viereen, kun tilaa on (iPad); muuten rivin yllä oikealla.
-                float oikea = Juuri.WorldToLocal(napit[napit.childCount - 1].worldBound).xMax;
-                float w = Juuri.layout.width, mw = mikaRivi.layout.width;
-                bool vieressa = !float.IsNaN(oikea) && mw > 0 && oikea + KuvaRako + mw + OpasTapit.Reuna <= w;
-                mikaRivi.style.left = vieressa ? oikea + KuvaRako : StyleKeyword.Auto;
-                mikaRivi.style.right = vieressa ? StyleKeyword.Auto : (StyleLength)OpasTapit.Reuna;
-                // Puhelimella rivin yllä oikealla: tappien yläpuolelle, kun ne näkyvät (simu 19.20: osui oikeaan tappiin).
-                mikaRivi.style.bottom = vieressa ? krediittiAla : tapit.Nakyy ? TapitAla + OpasTapit.Halkaisija + KuvaRako : krediittiAla + NappiriviKorkeus + KuvaRako;
+                // Havainnekuvan paikalla oikeassa reunassa (OikeaAla).
+                mikaRivi.style.left = StyleKeyword.Auto;
+                mikaRivi.style.right = OpasTapit.Reuna;
+                float ma = OikeaAla(mikaRivi.layout.width);
+                if (mikaRivi.style.bottom.value.value != ma) mikaRivi.style.bottom = ma;
             }
             // Vaihtoehdot (≥ 2) Liiku-listan pohjalla; 0 → ilmoitus listassa; 1 kerrotaan suoraan (LS1).
             var v = OpasSovitin.MikaTamaVaihtoehdot;
@@ -688,7 +701,7 @@ namespace Matkakirja.Natiivi
             if (napitNakyy != nappiNakyy)
             {
                 nappiNakyy = napitNakyy;
-                if (napitNakyy) { napit.style.display = DisplayStyle.Flex; napit.schedule.Execute(() => { if (nappiNakyy) napit.style.opacity = 1f; }); }
+                if (napitNakyy) { napit.style.display = DisplayStyle.Flex; napit.schedule.Execute(() => { if (nappiNakyy) napit.style.opacity = 1f; }); AloitaEsittely(); }
                 else { napit.style.opacity = 0f; napit.schedule.Execute(() => { if (!nappiNakyy) napit.style.display = DisplayStyle.None; }).StartingIn(Tyylikirja.Kesto.Sulku); }
             }
             napit.style.bottom = krediittiAla;
@@ -871,10 +884,9 @@ namespace Matkakirja.Natiivi
                 if (k != null)
                 {
                     int v = ++kuvaVersio;
-                    kuvaMerkki.style.display = k.Havainnekuva ? DisplayStyle.Flex : DisplayStyle.None;
-                    int muita = NykyisetKuvat().Count - 1;
-                    kuvaLaskuri.text = muita > 0 ? "+" + muita : "";
-                    kuvaLaskuri.style.display = muita > 0 ? DisplayStyle.Flex : DisplayStyle.None;
+                    int maara = NykyisetKuvat().Count;
+                    kuvaLaskuri.text = maara > 1 ? maara.ToString() : "";
+                    kuvaLaskuri.style.display = maara > 1 ? DisplayStyle.Flex : DisplayStyle.None;
                     NostoSisalto.HaeKuva(k.Url, t =>
                     {
                         if (v != kuvaVersio || naytettyKuva != k) return;
@@ -888,26 +900,67 @@ namespace Matkakirja.Natiivi
             // Vapaassa tilassa havainnekuvan paikalla on Mikä tämä on? -nappi.
             var kd = mikaRivi.style.display == DisplayStyle.Flex ? DisplayStyle.None : DisplayStyle.Flex;
             if (kuvaKortti.style.display != kd) kuvaKortti.style.display = kd;
+            float koko = KuvaKoko;
+            if (kuvaKortti.style.width.value.value != koko) { kuvaKortti.style.width = koko; kuvaKortti.style.height = koko; kuvaKortti.style.minHeight = koko; }
+            // Oikean tapin keskilinjalle (iPhonella), iPadilla reunaan; pohja nappirivin nappien alareunaan.
+            float oikea = Mathf.Max(OpasTapit.Reuna, OpasTapit.Reuna + (OpasTapit.Halkaisija - koko) * 0.5f);
+            if (kuvaKortti.style.right.value.value != oikea) kuvaKortti.style.right = oikea;
+            float ala = OikeaAla(koko);
             float h = Juuri.resolvedStyle.height;
-            // Kortti oikean tapin yläpuolelle, kun tapit näkyvät.
-            float ala = tapit.Nakyy ? TapitAla + OpasTapit.Halkaisija + KuvaRako : nappiNakyy ? krediittiAla + NappiriviKorkeus + KuvaRako : krediittiAla;
             if (siruNakyy && !float.IsNaN(h) && sirurivi.layout.height > 0) ala = Mathf.Max(ala, h - sirurivi.layout.yMin + KuvaRako);
-            // Omistaja 6.10. 16.3x: pikkukuva nappirivin viereen samaan alareunaan, kun leveys riittää (iPad); muuten oikealle ylle.
-            bool vieressa = false;
-            if (nappiNakyy && napit.childCount > 0 && napit[napit.childCount - 1].worldBound.width > 0)
-            {
-                float oikea = Juuri.WorldToLocal(napit[napit.childCount - 1].worldBound).xMax;
-                float w = Juuri.layout.width;
-                if (!float.IsNaN(oikea) && oikea + KuvaRako + KuvaLeveys + OpasTapit.Reuna + OpasTapit.Halkaisija <= w)
-                {
-                    vieressa = true;
-                    if (kuvaKortti.style.left.value.value != oikea + KuvaRako || kuvaKortti.style.left.keyword != StyleKeyword.Undefined) kuvaKortti.style.left = oikea + KuvaRako;
-                    kuvaKortti.style.right = StyleKeyword.Auto;
-                    ala = krediittiAla;
-                }
-            }
-            if (!vieressa && kuvaKortti.style.right.value.value != 0) { kuvaKortti.style.left = StyleKeyword.Auto; kuvaKortti.style.right = 0; }
             if (kuvaKortti.style.bottom.value.value != ala) kuvaKortti.style.bottom = ala;
+        }
+
+        /// <summary>
+        /// Oikean reunan elementin (kuvanappi, Mikä tämä on?) alareuna: oikean tapin yläpuolella, kun tapit näkyvät; muuten
+        /// nappirivin linjalla, kun avoin rivi ei ulotu sen kohdalle, ja muuten rivin yläpuolella.
+        /// </summary>
+        float OikeaAla(float leveys)
+        {
+            float linja = krediittiAla + (NappiriviKorkeus - Tyylikirja.Nappi.Korkeus) * 0.5f;
+            if (tapit.Nakyy) return TapitAla + OpasTapit.Halkaisija + KuvaRako;
+            if (!nappiNakyy) return linja;
+            var rb = (riviAuki ? rivinIkkuna : vakanen).worldBound;
+            if (rb.width <= 0 || float.IsNaN(rb.xMax)) return linja;
+            float riviOikea = Juuri.WorldToLocal(rb).xMax;
+            return riviOikea + KuvaRako + leveys + OpasTapit.Reuna <= Juuri.layout.width ? linja : krediittiAla + NappiriviKorkeus + KuvaRako;
+        }
+
+        /// <summary>Väkäsen rivi auki/kiinni: liuku esiin väkäsestä oikealle (--tk-kesto-liuku), väkänen › ↔ ‹.</summary>
+        void AsetaRiviAuki(bool auki)
+        {
+            if (auki == riviAuki) return;
+            riviAuki = auki;
+            vakanen.Clear();
+            vakanen.Add(new SvgIkoni(auki ? Ikonit.Takaisin : Ikonit.NuoliOikea));
+            vakanen.tooltip = auki ? "Piilota napit" : "Näytä napit";
+            vakanen.EnableInClassList("mk-valittu", auki);
+            if (auki)
+            {
+                liuku.style.display = DisplayStyle.Flex;
+                liuku.schedule.Execute(() => { if (riviAuki) napit.AddToClassList("mk-opas-napit--auki"); });
+            }
+            else
+            {
+                napit.RemoveFromClassList("mk-opas-napit--auki");
+                liuku.schedule.Execute(() => { if (!riviAuki) liuku.style.display = DisplayStyle.None; }).StartingIn(Tyylikirja.Kesto.Liuku);
+            }
+            Debug.Log("MATKAKIRJA opas: nappirivi " + (auki ? "auki" : "kiinni"));
+        }
+
+        /// <summary>Ensimmäinen kerta: rivi 3 s auki, sitten väkäsen alle (muistetaan PlayerPrefsissä).</summary>
+        void AloitaEsittely()
+        {
+            if (esittely != null || PlayerPrefs.GetInt(EsittelyAvain, 0) == 1) return;
+            AsetaRiviAuki(true);
+            esittely = napit.schedule.Execute(() => { LopetaEsittely(); AsetaRiviAuki(false); }).StartingIn(EsittelyMs);
+        }
+
+        void LopetaEsittely()
+        {
+            if (PlayerPrefs.GetInt(EsittelyAvain, 0) == 1 && esittely == null) return;
+            esittely?.Pause();
+            PlayerPrefs.SetInt(EsittelyAvain, 1); PlayerPrefs.Save();
         }
 
         void AsetaKuvaNakyviin(bool nayta)
@@ -1505,8 +1558,11 @@ namespace Matkakirja.Natiivi
                 case "napit":
                 {
                     var r = napit.worldBound;
-                    var osat = napit.Children().Select(c => $"{c.tooltip} {c.worldBound.width:0}×{c.worldBound.height:0}").ToArray();
-                    return $"opas: napit {(nappiNakyy ? "näkyy" : "piilossa")} @ {r.xMin:0},{r.yMin:0} {r.width:0}×{r.height:0}, keskikohta {r.center.x:0}/{(Juuri.panel?.visualTree.layout.width ?? 0) / 2:0}: {string.Join(" | ", osat)}";
+                    if (o.Length > 1 && o[1] == "auki") { LopetaEsittely(); AsetaRiviAuki(true); }
+                    else if (o.Length > 1 && o[1] == "kiinni") { LopetaEsittely(); AsetaRiviAuki(false); }
+                    else if (o.Length > 1 && o[1] == "esittely") { PlayerPrefs.DeleteKey(EsittelyAvain); esittely = null; return "opas: nappirivin esittely nollattu"; }
+                    var osat = new[] { vakanen }.Concat(liuku.Children()).Select(c => $"{c.tooltip} {c.worldBound.xMin:0}–{c.worldBound.xMax:0} y{c.worldBound.center.y:0.0} {c.worldBound.width:0}×{c.worldBound.height:0}").ToArray();
+                    return $"opas: napit {(nappiNakyy ? "näkyy" : "piilossa")} rivi {(riviAuki ? "auki" : "kiinni")}, kuva {kuvaKortti.worldBound.width:0}×{kuvaKortti.worldBound.height:0} y{kuvaKortti.worldBound.center.y:0.0} @ {r.xMin:0},{r.yMin:0} {r.width:0}×{r.height:0}, keskikohta {r.center.x:0}/{(Juuri.panel?.visualTree.layout.width ?? 0) / 2:0}: {string.Join(" | ", osat)}";
                 }
                 case "kysy": Avaa(Nakyma.Kysy); return "opas: kysy-lista";
                 case "krediitit": return "opas: " + KrediititTiivis.Kuvaus();

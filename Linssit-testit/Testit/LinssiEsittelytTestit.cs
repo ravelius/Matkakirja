@@ -20,8 +20,11 @@ namespace Matkakirja.Linssit.Testit
             {
                 var esittely = l.Value.GetProperty("esittely");
                 Oleta.Sama(esittely.ValueKind == JsonValueKind.String ? esittely.GetString() : null, LinssiEsittelyt.Esittely(l.Name), l.Name);
+                // Havainnekuva: webin oma, muuten linssikatalogin kuva (natiivi on malli 5.10.; web ei saa katalogikuvia).
                 var kuva = l.Value.GetProperty("havainnekuva");
-                Oleta.Sama(kuva.ValueKind == JsonValueKind.String ? kuva.GetString() : null, LinssiEsittelyt.Havainnekuva(l.Name), l.Name);
+                string odotettu = kuva.ValueKind == JsonValueKind.String ? kuva.GetString()
+                    : LinssiEsittelyt.Katalogi.TryGetValue(l.Name, out var k) ? LinssiEsittelyt.KatalogiOsoite + k + "-havainne.jpg" : null;
+                Oleta.Sama(odotettu, LinssiEsittelyt.Havainnekuva(l.Name), l.Name);
             }
             // Taulussa ei ole linssejä, joita web ei tunne.
             foreach (var t in LinssiEsittelyt.Tunnukset) Oleta.Tosi(web.Any(w => w.Name == t), "webissä ei ole: " + t);
@@ -35,7 +38,8 @@ namespace Matkakirja.Linssit.Testit
             t.Esittely = "Moduulin oma esittely.";
             Oleta.Sama("Moduulin oma esittely.", t.Esittely);
             Oleta.Tosi(new LinssiTiedot { Id = "tuntematon" }.Esittely == null, "tuntematon linssi: ei esittelyä (UI: Lyhyt)");
-            Oleta.Tosi(new LinssiTiedot { Id = "radio" }.Havainnekuva == null, "havainnekuvia ei vielä ole");
+            Oleta.Sama(LinssiEsittelyt.KatalogiOsoite + "X5-havainne.jpg", new LinssiTiedot { Id = "radio" }.Havainnekuva, "radio: katalogin X5");
+            Oleta.Tosi(new LinssiTiedot { Id = "opas" }.Havainnekuva == null, "opas: ei vielä katalogikuvaa (varustekuva)");
         }
     }
 }
