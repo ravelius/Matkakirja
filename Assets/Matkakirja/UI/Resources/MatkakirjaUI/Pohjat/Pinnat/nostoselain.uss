@@ -369,3 +369,38 @@
 .mk-nostoselain__sivu--oikea > .mk-nostoselain__auto {
     margin-right: var(--tk-vali-s);
 }
+
+/* LEVEYSBUDJETTI (omistaja TF 154 6.10. 22.x, iPadin vaakapaneeli "Noston yläpalkki vielä sekaisin": TEKNIIKKA-teksti vei tilan
+ * ja › meni AUTO:n päälle): kategoria ylärivillä aina vain kuvakkeena (kuten pystykortissa); osat eivät kutistu; Nostoselain
+ * tiivistää rivin portaittain, jos osat menisivät päällekkäin (tiivis1: askelnapit kapeat, tiivis2: harvennus pois ja pienemmät
+ * välit). */
+.mk-nostoselain .mk-nostoselain__sivu .mk-nosto__ylarivi-teksti {
+    display: none;
+}
+
+.mk-nostoselain .mk-nostoselain__askel,
+.mk-nostoselain .mk-nostoselain__avaaja,
+.mk-nostoselain .mk-lukija.mk-nosto__pin,
+.mk-nostoselain .mk-nosto__ylarivi-symboli {
+    flex-shrink: 0;
+}
+
+.mk-nostoselain--tiivis1 .mk-nostoselain__askel {
+    width: 26px;
+}
+
+.mk-nostoselain--tiivis2 .mk-nostoselain__avaaja > Label,
+.mk-nostoselain--tiivis2 .mk-nostoselain__autoteksti {
+    letter-spacing: 0;
+}
+
+.mk-nostoselain.mk-nostoselain--tiivis2 .mk-nostoselain__auto {
+    padding: 0 var(--tk-vali-s);
+}
+
+.mk-nostoselain--tiivis2 .mk-nostoselain__sivu--oikea > .mk-nostoselain__auto,
+.mk-nostoselain--tiivis2 .mk-nostoselain__sivu--oikea > .mk-lukija,
+.mk-nostoselain--tiivis2 .mk-nostoselain__sivu--oikea > .mk-nosto__lukijapaikka {
+    margin-right: 0;
+    margin-left: var(--tk-vali-xs);
+}
