@@ -87,3 +87,21 @@ Brotli (haara linnanrakentaja-zstd, worktree olemassa), akustiikka #3979 (Steam 
   ovat Natiivi-UI:lla. Lähde: lahde/tekstuurit.py → tuotanto.py → jalki.py (raaka/ poistettu; aja uudelleen tarvittaessa).
 - 6.10. klo 11.3x: ohjaamo v3b HYVÄKSYTTY junaan 147 (_valmiit/iss-ohjaamo-v3b/; numerot pois, asteikko vivun juureen, LCD 1,16 × 0,58,
   ruuvit 0,10 reunasta, kuvaan marginaali → koko 374 × 129,33 pt, kaasu.ura portaattomalle kahvalle). Korvaa v3:n Natiivi-UI:lla.
+
+## Päivitys 6.10. klo 13.5x
+- LINNAN ESITTELY (omistaja 13.1x, juna 149): PR #4051 (saapuminen.loppu 'kertoja', tornit kohtisuoraan az 157, nimet 3 s).
+  Natiivi Siirtosepällä (siirtoseppa/linna-149): tauko, kaari kertojan kameraan, nimet, kuva, pan-suunta, iPadin vaakalukko,
+  Codex-kasvot pois. KESKEN: toistovideo nykyisestä hypystä (simuvuoro Julkaisijalta) → sama ajo korjattuna → video Päätoimittajalle.
+  Perustajan kuva (jakso.kuva 1,6 s, ~5 s) kytketään, kun Codex toimittaa (haara codex-perustaja-tott).
+- STEAM AUDIO 4.8.1: _lahteet/steam-audio/4.8.1/ + LAHTEET.md. Siirtoseppä toi sen protoon (siirtoseppa/steam-audio 65527de0,
+  kappelin kaiku cdfe7acd). Akustiikkapeili: v37 = v36 + akustiikka/ → blender 382614adc2385881, peili 2147deefd414e4b6
+  (haara linnanrakentaja-akustiikka-koe = main + #3979). Siirtoseppä leipoo keittiön ja pihan ja tekee ääni-videon.
+- ESINEET (omistaja: ei MC Village Lifea): PR #4052, tools/dioraama/blender/hahmo_esineet.py. Kokin kauha ja hämmennys, apulaisen
+  vati (kanto*) ja luuta (tyo, tyo_puhe; keittiössä paikka [11.7, 0, 7.5] suunta 215), rengin säkki (kanto*). v38 = v37 +
+  linna-hahmot/mixamo-v4 → blender e4c6abb04c926293, peili bba43057b5a83bfe. Natiivi a57c8450 (kanto_idle/kanto_puhe).
+  HUOM: _valmiit/olavinlinna-blender-vNN/hahmot on symlinkki linna-hahmot/mixamo-vN:ään. Uudet glb:t aina uuteen mixamo-kansioon.
+- TRIPO-koe voudilla: odottaa omistajan kirjautumista (Päätoimittaja klikkaa). Tiedostot tulevat _lahteet/tripo/vouti/ → retarget,
+  kappelivertailu (lähi/kauko, puhe-ele) ja mitat.
+- FACEIT: omistaja todennäköisesti ostaa → 15 ARKit-muotoa kahteen pohjapäähän + visemiraidat datasta (ElevenLabs/Rhubarb).
+- ACTORCORE: lista Päätoimittajalle. EULA kieltää jakelun kolmansille, joten julkinen ämpäri vaatii Reallusionin kuittauksen.
+  Suositus: ei tilausta nyt.
