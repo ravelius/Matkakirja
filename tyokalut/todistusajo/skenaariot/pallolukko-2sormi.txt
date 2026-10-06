@@ -1,0 +1,41 @@
+# Pallolukko A/B kahdella sormella (LS2 6.10.: vika on nipistyksessä/kierrossa Cupolan ikkunan alueella, ei yhden sormen
+# vedossa). Simkosketus tekee vain yhden sormen eleitä, joten kahden sormen ele annetaan iOS-simulaattorin ohjaustyökalulla
+# (touch2_path) ODOTA-ikkunassa talteen- ja vertaa-askelten välissä. Tunniste: astro kyyti tila → kamera (lat, lon) km kall.
+# Vaatii appin, jossa "astro kyyti pallolukko" (2c2ad7ac, runko 7ac47be9).
+linssi linssi satelliitti
+oleta 30 linssit: auki: satelliitti -- astronautin kamera aukesi
+odota 8
+linssi astro kyyti
+oleta 30 astro kyyti: Ikkuna -- Cupolaan (kyyti Ikkuna)
+nakyy 30 mk-issohjaamo__sauvakuva -- ohjaamo näkyy
+ui linssi taulu kiinni
+odota 4
+# A: lukko pois → nipistys pallolla liikuttaa kameraa (vika näkyy)
+linssi astro kyyti pallolukko 0
+oleta 5 pallolukko pois -- lukko pois (entinen käytös)
+linssi astro kyyti tila
+talteen kameraA 5 astro kyyti: .*kamera \(([-0-9,]+), ([-0-9,]+)\) ([0-9]+) km kall ([-0-9,]+)
+kuva pA1-ennen Lukko pois: ennen nipistystä
+# >>> KAHDEN SORMEN ELE TÄSSÄ (25 s ikkuna): nipistys auki ikkunan alueella (200,420) ±40 → ±130 pt, 0,8 s + pito 1 s
+odota 25
+linssi astro kyyti tila
+vertaa kameraA 5 >1,1,100,3 astro kyyti: .*kamera \(([-0-9,]+), ([-0-9,]+)\) ([0-9]+) km kall ([-0-9,]+) -- LUKKO POIS: nipistys liikuttaa kameraa (vika näkyy)
+kuva pA2-jalkeen Lukko pois: nipistyksen jälkeen
+# B: lukko päälle → ei mitään
+linssi astro kyyti pois
+odota 3
+linssi astro kyyti
+oleta 30 astro kyyti: Ikkuna -- takaisin Cupolaan
+odota 4
+linssi astro kyyti pallolukko 1
+oleta 5 pallolukko päällä -- lukko päällä
+linssi astro kyyti tila
+talteen kameraB 5 astro kyyti: .*kamera \(([-0-9,]+), ([-0-9,]+)\) ([0-9]+) km kall ([-0-9,]+)
+kuva pB1-ennen Lukko päällä: ennen nipistystä
+# >>> KAHDEN SORMEN ELE TÄSSÄ (25 s ikkuna), sama ele
+odota 25
+linssi astro kyyti tila
+vertaa kameraB 5 1,1,100,3 astro kyyti: .*kamera \(([-0-9,]+), ([-0-9,]+)\) ([0-9]+) km kall ([-0-9,]+) -- LUKKO PÄÄLLÄ: nipistys ei liikuta kameraa
+kuva pB2-jalkeen Lukko päällä: nipistyksen jälkeen
+linssi linssi pois
+odota 3
