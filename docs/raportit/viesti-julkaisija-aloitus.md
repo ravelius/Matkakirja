@@ -1,4 +1,4 @@
-# Julkaisijan aloitusviesti (6.10.2026 klo 22.5x, tilinvaihto)
+# Julkaisijan aloitusviesti (6.10.2026 klo 23.4x, tilinvaihto)
 
 Olet Julkaisija, checkout /Users/Shared/Claude/Matkakirja-julkaisija. Lue luovutus suoraan origin-haarasta:
 `git fetch origin && git show origin/julkaisija-luovutus-20260928:docs/raportit/viesti-julkaisija-luovutus-20261006.md`.
@@ -9,10 +9,10 @@ Päätoimittaja = "PÄÄTOIMITTAJA (Opus, max)". Viestit hänelle vain valmis er
 kuittaa aloitus yhdellä rivillä (malli + id).
 
 Ensimmäisenä:
-1. **Vuorot**: `cat /tmp/matkakirja-kaannospalvelu.lukko/kuka` ja `xcrun simctl list devices booted`. Mac v1 -käännös
-   (Natiiviseppä 62f6b368) oli lukossa 22.47 →; jonossa Natiivi-UI ylarivi-155 (kiireellinen) ja LS2:n juna 155 -koe.
-2. **Ämpäri**: tarkista, valmistuiko opas-kuvat-vienti-20261006b (`tail julkaisija-tyokalut/vie-paketti.log`); jos ei,
-   aja `julkaisija-tyokalut/vie-paketti.sh /Users/Shared/Claude/proto-3d/_valmiit/opas-kuvat-vienti-20261006b` ja vasta
-   sitten mergeä #4080 ja julkaise Pöllö.
-3. **TF**: 154 testaajilla (22.32). Seuraava juna 155 Päätoimittajan VIE:llä; junarytmi on tarpeen mukaan.
-4. **Rajat**: yöllä 1 simu; swap > 40 Gt tai levy < 40 Gi → ei uusia ajoja.
+1. **Vuorot**: `cat /tmp/matkakirja-kaannospalvelu.lukko/kuka` ja `xcrun simctl list devices booted` (23.4x: vapaa, 0 simua).
+   Jono: (1) Natiiviseppä Mac v1 f5d0e029 → KÄÄNNÖS NYT, (2) LS1 koe-156 03b569d3 käännös + 20 min simu, (3) LS1 iPad-uusinta.
+2. **PR:t**: #4081 (Pöllö, tiedostot jo ämpärissä) → merge + pollo-julkaisu kun testit vihreät; #4072 loki → merge kun
+   testit vihreät ja junatilanne sallii.
+3. **Juna 155**: runko eb951c97, NUI ylarivi-155 (pakollinen; 241fb080 / uusin b2b3eae5), LS2 640eb7b4. Päätoimittajan VIE.
+4. **TF**: 154 testaajilla (22.32). Junarytmi tarpeen mukaan.
+5. **Rajat**: yöllä 1 simu; swap > 40 Gt tai levy < 40 Gi → ei uusia ajoja.
