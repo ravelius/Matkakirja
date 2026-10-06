@@ -1,0 +1,39 @@
+# Pallolukko A/B (LS2 2c2ad7ac, Päätoimittaja 6.10. 08.0x: junan 146 kuittaus): ISS-ohjaamossa yhden sormen veto + pito
+# pallon päällä. Lukko 0 = entinen käytös → kartta (kamera) liikkuu = vika näkyy; lukko 1 → ei mitään. Ele ja tunniste LS2:lta:
+# polku (60,550) → (230,650) 0,8 s + pito 1 s (iPhone 402×874 pt; Pulun taulu peittää 158–390 × 267–535, joten veto sen alapuolella); "astro kyyti tila" → kamera (lat, lon) km kall.
+# Vaatii appin, jossa "astro kyyti pallolukko" (2c2ad7ac, esim. runko 7ac47be9).
+linssi linssi satelliitti
+oleta 30 linssit: auki: satelliitti -- astronautin kamera aukesi
+odota 8
+linssi astro kyyti
+oleta 30 astro kyyti: Ikkuna -- Cupolaan (kyyti Ikkuna)
+nakyy 30 mk-issohjaamo__sauvakuva -- ohjaamo näkyy
+odota 4
+# A: lukko pois → vika näkyy
+linssi astro kyyti pallolukko 0
+oleta 5 pallolukko pois -- lukko pois (entinen käytös)
+linssi astro kyyti tila
+talteen kameraA 5 astro kyyti: .*kamera \(([-0-9,]+), ([-0-9,]+)\) ([0-9]+) km kall ([-0-9,]+)
+kuva pA1-ennen Lukko pois: ennen vetoa
+polku 60,550 230,650,800 230,650,1000
+linssi astro kyyti tila
+vertaa kameraA 5 >1,1,100,3 astro kyyti: .*kamera \(([-0-9,]+), ([-0-9,]+)\) ([0-9]+) km kall ([-0-9,]+) -- LUKKO POIS: pallon veto liikuttaa kameraa (vika näkyy)
+kuva pA2-jalkeen Lukko pois: vedon jälkeen (kartta liikkui)
+# B: lukko päälle → ei mitään. Takaisin seurantaan: kyyti pois ja uudelleen.
+linssi astro kyyti pois
+odota 3
+linssi astro kyyti
+oleta 30 astro kyyti: Ikkuna -- takaisin Cupolaan
+odota 4
+linssi astro kyyti pallolukko 1
+oleta 5 pallolukko päällä -- lukko päällä
+linssi astro kyyti tila
+talteen kameraB 5 astro kyyti: .*kamera \(([-0-9,]+), ([-0-9,]+)\) ([0-9]+) km kall ([-0-9,]+)
+kuva pB1-ennen Lukko päällä: ennen vetoa
+polku 60,550 230,650,800 230,650,1000
+linssi astro kyyti tila
+vertaa kameraB 5 1,1,100,3 astro kyyti: .*kamera \(([-0-9,]+), ([-0-9,]+)\) ([0-9]+) km kall ([-0-9,]+) -- LUKKO PÄÄLLÄ: pallon veto + pito ei liikuta kameraa
+kuva pB2-jalkeen Lukko päällä: vedon jälkeen (sama näkymä)
+linssi linssi pois
+odota 3
+ei-testattu kahden sormen nipistys pallolla (simkosketus tekee yhden sormen eleitä; Päätoimittaja: myöhemmin)
