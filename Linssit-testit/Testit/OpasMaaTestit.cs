@@ -9,14 +9,25 @@ namespace Matkakirja.Linssit.Testit
         {
             // Eiffel: keskipisteen säde osuu toiseen tasanteeseen (~191 m), kehä maahan (~77 m), yksi kehäpiste puuhun.
             var (maa, korkeus) = OpasKuvaus.MaaJaKorkeus(191, new double[] { 77, 78, 76, 79, 77, 95, 78, 77 });
-            Oleta.Sama(77.0, maa, "maa kehältä (toiseksi matalin)");
-            Oleta.Sama(114.0, korkeus, "korkeus keskus − maa");
+            Oleta.Sama(77.5, maa, "maa kehän mediaanista");
+            Oleta.Sama(113.5, korkeus, "korkeus keskus − maa");
             var (m2, k2) = OpasKuvaus.MaaJaKorkeus(80, new double[] { 77, 60, 78, 79, 77, 78, 78, 77 });
-            Oleta.Tosi(m2 == 77 && k2 == 0, "matala kohde: korkeus 0; yksittäinen kuoppa (60) ei vedä alas");
+            Oleta.Tosi(m2 == 77.5 && k2 == 0, "matala kohde: korkeus 0; yksittäinen kuoppa (60) ei vedä alas");
             var (m3, k3) = OpasKuvaus.MaaJaKorkeus(77, new double[] { double.NaN, double.NaN });
             Oleta.Tosi(m3 == 77 && k3 == 0, "ilman kehää keskus");
             var (m4, _) = OpasKuvaus.MaaJaKorkeus(70, new double[] { 77, 78, 79, 80, 81, 82, 83, 84 });
             Oleta.Sama(70.0, m4, "keskus matalampi (kuoppa, ranta) → keskus");
+        }
+
+        [Testi] static void RinteessaMaaJalanTasolla()
+        {
+            // Sacré-Cœur -tyyppinen mäki: jalka 130 m, kehä rinteessä 112…140 m (alas etelään, ylös pohjoiseen), kupoli 213 m.
+            var (maa, korkeus) = OpasKuvaus.MaaJaKorkeus(213, new double[] { 140, 136, 128, 118, 112, 120, 129, 137 });
+            Oleta.Tosi(Math.Abs(maa - 128.5) < 0.01, $"maa mediaanista jalan tasolla ({maa:F1}), ei rinteen pohjalla (112)");
+            Oleta.Tosi(korkeus > 80 && korkeus < 90, $"korkeus {korkeus:F1}");
+            // Naapurin katot puolessa kehästä eivät nosta maata yli keskuksen (matala rakennus, keskus = oma katto 25 m).
+            var (m2, _) = OpasKuvaus.MaaJaKorkeus(102, new double[] { 77, 77, 100, 101, 78, 99, 77, 78 });
+            Oleta.Tosi(m2 <= 102, "maa ≤ keskus");
         }
 
         [Testi] static void KorkeaTorniKehystetaanKauas()

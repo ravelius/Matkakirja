@@ -186,7 +186,8 @@ namespace Matkakirja.Linssit.Kierros
         // ---- MAA JA KORKEUS NÄYTTEISTÄ (Päätoimittaja 7.10. 02.0x, juna 156 VIE-este: Eiffelin pysähdyksellä kamera tornin sisällä).
         // Juurisyy: maa näytteistettiin kohteen keskipisteestä (SampleHeightMostDetailed), ja tornissa ja katoissa säde osui
         // rakenteeseen (Eiffel ~190 m, Sydneyn oopperatalo 73 m katto), jolloin kehys rakennettiin latvaan. Maa otetaan nyt kehältä
-        // kohteen ympäriltä (toiseksi matalin 8 pisteestä: yksittäinen kuoppa ei vedä alas), ja puuttuva korkeus arvioidaan
+        // kohteen ympäriltä: MEDIAANI 8 pisteestä (Päätoimittaja 02.1x: rinteessä matalin piste on selvästi jalkaa alempana, ja
+        // yksittäinen kuoppa tai naapurin katto ei siirrä mediaania), ja puuttuva korkeus arvioidaan
         // keskipisteen ja maan erotuksesta (workerin korkeus_m tulee mallilta eikä ole aina mukana). ----
         public const int KehaPisteita = 8;
         public const double KorkeusArvioMinM = 20;
@@ -201,7 +202,7 @@ namespace Matkakirja.Linssit.Kierros
             return (lat + sadeM * Math.Cos(a) / 111195.0, lon + sadeM * Math.Sin(a) / (111195.0 * Math.Max(0.01, Math.Cos(lat * Math.PI / 180))));
         }
 
-        /// <summary>Maa = min(keskus, kehän toiseksi matalin); korkeus = keskus − maa, jos vähintään KorkeusArvioMinM, muuten 0.
+        /// <summary>Maa = min(keskus, kehän mediaani); korkeus = keskus − maa, jos vähintään KorkeusArvioMinM, muuten 0.
         /// NaN-näytteet ohitetaan; ei yhtään kehänäytettä → keskus (vanha käytös).</summary>
         public static (double maa, double korkeus) MaaJaKorkeus(double keskus, IReadOnlyList<double> keha)
         {
@@ -209,7 +210,7 @@ namespace Matkakirja.Linssit.Kierros
             if (keha != null) foreach (var h in keha) if (!double.IsNaN(h)) l.Add(h);
             if (l.Count == 0) return (keskus, 0);
             l.Sort();
-            double maa = l[Math.Min(1, l.Count - 1)];
+            double maa = l.Count % 2 == 1 ? l[l.Count / 2] : 0.5 * (l[l.Count / 2 - 1] + l[l.Count / 2]);
             if (!double.IsNaN(keskus)) maa = Math.Min(maa, keskus);
             double korkeus = double.IsNaN(keskus) ? 0 : keskus - maa;
             return (maa, korkeus >= KorkeusArvioMinM ? korkeus : 0);
