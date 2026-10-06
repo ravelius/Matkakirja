@@ -41,6 +41,31 @@ namespace Matkakirja.Natiivi
         public static Func<IReadOnlyList<Kaupunki>> Kaupungit = Lue;
 
         static List<Kaupunki> luettu;
+
+        // SALLITUT KAUPUNGIT (omistaja 7.10. 00.4x, Päätoimittaja: vapaa haku pois, pelaajat vain hyvän 3D:n kaupunkeihin; juna 157):
+        // Vaihda kohde ja aloitusvalikon paikat näyttävät vain LS1:n OpasSovitin.SallitutKaupungit-listan kaupungit (maanosa › maa ›
+        // kaupunki karsiutuu niiden mukaan). Tyhjä lista = palvelin ei vielä palauta kenttää → ei rajausta (vanha lista varalla).
+        // Vastaavuus nimellä (kirjainkoosta riippumatta) tai alle SallittuKm:n päässä keskipisteestä (nimen kirjoitusasu voi erota).
+        const double SallittuKm = 25.0;
+
+        static IReadOnlyList<Kaupunki> VainSallitut(IReadOnlyList<Kaupunki> kaikki)
+        {
+            var s = OpasSovitin.SallitutKaupungit;
+            if (kaikki == null || s == null || s.Count == 0) return kaikki;
+            var tulos = new List<Kaupunki>();
+            foreach (var k in kaikki)
+                foreach (var t in s)
+                    if (string.Equals(k.Nimi, t.Nimi, StringComparison.OrdinalIgnoreCase) || EtaisyysKm(k.Lat, k.Lon, t.Lat, t.Lon) < SallittuKm)
+                    { tulos.Add(k); break; }
+            return tulos;
+        }
+
+        static double EtaisyysKm(double la1, double lo1, double la2, double lo2)
+        {
+            double r = Math.PI / 180.0, dla = (la2 - la1) * r, dlo = (lo2 - lo1) * r;
+            double a = Math.Sin(dla / 2) * Math.Sin(dla / 2) + Math.Cos(la1 * r) * Math.Cos(la2 * r) * Math.Sin(dlo / 2) * Math.Sin(dlo / 2);
+            return 6371.0 * 2.0 * Math.Asin(Math.Min(1.0, Math.Sqrt(a)));
+        }
         static readonly Dictionary<string, string> Maanosat = new Dictionary<string, string>
         {
             ["Europe"] = "Eurooppa", ["Asia"] = "Aasia", ["Africa"] = "Afrikka", ["North America"] = "Pohjois-Amerikka",
@@ -305,6 +330,8 @@ namespace Matkakirja.Natiivi
             nimilappu = new OpasNimilappu(Juuri);
             kerros.JokaRuutu += PaivitaTapit;
             OpasSovitin.LatausKuvaVaihtui += LatausKuvaVaihtui;
+            // Sallitut saapuvat oppaan avauksessa (aloitusvalikko jo auki): lista uudelleen, jotta rajaamaton ei jää näkyviin.
+            OpasSovitin.SallitutVaihtui += () => { if (nakyy && Auki) Rakenna(); };
             Viimeisin = this;
         }
 
@@ -1113,7 +1140,7 @@ namespace Matkakirja.Natiivi
             valikko.Add(vanhat);
             rivit = null;
             nykyiset.Clear();
-            var kaikki = Kaupungit?.Invoke();
+            var kaikki = VainSallitut(Kaupungit?.Invoke());
             if (aloitus) RakennaAloitus();
             switch (nakyma)
             {
@@ -1667,7 +1694,13 @@ namespace Matkakirja.Natiivi
                     if (p.Length == 2) { maanosa = p[0]; maa = p[1]; }
                     Avaa(Nakyma.Kaupungit);
                     return $"opas: kaupungit {maanosa} / {maa}";
-                default: Avaa(Nakyma.Paa); return "opas: valikko (" + (Kaupungit?.Invoke()?.Count ?? 0) + " kaupunkia)";
+                case "sallitut":
+                {
+                    var kaikki = Kaupungit?.Invoke(); var vain = VainSallitut(kaikki);
+                    return $"opas: sallitut {OpasSovitin.SallitutKaupungit?.Count ?? 0} → valikossa {vain?.Count ?? 0}/{kaikki?.Count ?? 0} kaupunkia"
+                         + (vain != null && vain.Count <= 40 ? ": " + string.Join(", ", vain.Select(k => k.Nimi)) : "");
+                }
+                default: Avaa(Nakyma.Paa); return "opas: valikko (" + (VainSallitut(Kaupungit?.Invoke())?.Count ?? 0) + " kaupunkia)";
             }
         }
     }
