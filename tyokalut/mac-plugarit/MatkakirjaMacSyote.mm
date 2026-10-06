@@ -3,6 +3,7 @@
 //   MatkakirjaMacSyote_Asenna(pakota) → 1, kun tarkkailijat ovat käytössä
 //   MatkakirjaMacSyote_Lue(float[8])  → [vetoX, vetoY, rullaX, rullaY, nipistys, osoitinX, osoitinY, tapahtumia]
 //   MatkakirjaMacSyote_Ikkuna(minL, minK) → ikkunan minimikoko pisteinä ja vihreä nappi macOS:n kokonäytöksi (vain natiivi Mac)
+//   MatkakirjaMacSyote_Laite(double[4]) → [fyysinen muisti, vapaa muisti (tavua), thermalState 0–3, virransäästö 0/1] (MacLaatu, Lampo)
 // (pikseleinä, origo vasen yläkulma; nipistys kertoimena, 1 = ei muutosta) ja nollaus.
 // Lähteet ovat NSEventin paikallisia tarkkailijoita (sovelluksen omat tapahtumat; tapahtuma kulkee edelleen Unitylle):
 //   - ohjauslevyn kahden sormen veto: scrollWheel, hasPreciseScrollingDeltas → veto
@@ -10,6 +11,7 @@
 //   - ohjauslevyn nipistys: magnify → nipistys *= 1 + magnification
 // Käännös: tyokalut/mac-plugarit/kaanna.sh → Assets/Plugins/macOS/MatkakirjaMacSyote.bundle (arm64).
 #import <AppKit/AppKit.h>
+#import <mach/mach.h>
 
 static float mkVetoX, mkVetoY, mkRullaX, mkRullaY, mkNipistys = 1.0f, mkOsX = -1.0f, mkOsY = -1.0f;
 static int mkTapahtumia;
@@ -96,4 +98,23 @@ extern "C" int MatkakirjaMacSyote_Ikkuna(float minLeveys, float minKorkeus)
         n++;
     }
     return n;
+}
+
+// Laite (Päätoimittaja 7.10.2026, omistajan MacBook Air M4 16 Gt ilman tuuletinta): MacLaatu valitsee laatuprofiilin
+// fyysisen ja vapaan muistin mukaan ja Lampo lukee thermalStaten kuten iOS:llä. Vapaa = free + inactive + purgeable +
+// speculative (sivut, jotka macOS antaa sovellukselle ilman swappia); −1, jos host_statistics64 ei vastaa.
+extern "C" void MatkakirjaMacSyote_Laite(double* ulos)
+{
+    NSProcessInfo* pi = [NSProcessInfo processInfo];
+    ulos[0] = (double)pi.physicalMemory;
+    vm_statistics64_data_t vm;
+    mach_msg_type_number_t n = HOST_VM_INFO64_COUNT;
+    vm_size_t sivu = 0;
+    host_page_size(mach_host_self(), &sivu);
+    if (host_statistics64(mach_host_self(), HOST_VM_INFO64, (host_info64_t)&vm, &n) == KERN_SUCCESS && sivu > 0)
+        ulos[1] = (double)((uint64_t)vm.free_count + vm.inactive_count + vm.purgeable_count + vm.speculative_count) * sivu;
+    else
+        ulos[1] = -1.0;
+    ulos[2] = (double)pi.thermalState;
+    ulos[3] = pi.lowPowerModeEnabled ? 1.0 : 0.0;
 }
