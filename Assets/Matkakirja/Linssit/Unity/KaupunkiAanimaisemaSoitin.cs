@@ -5,7 +5,8 @@
 //  - kaupunkikerroksilla AudioLowPassFilter (korkeus → humina); sade ja tuuli ilman suodinta.
 //  - suhina: proseduraalinen kaistanpäästetty kohina (Ydin Kohina + Biquad) omassa lähteessä OnAudioFilterReadilla.
 //  - kellot: tasatunnein TasatunninLyonnit, kirkkojen määrä äänikartasta (KirkkojaLahella), KelloUrl kertasoittona.
-//  - puhe: Aanisoitin-tilan Voimassa < 1 (kertoja/Pulu/opas puhuu) → väistö; Äänimaisema-kytkin ja testimykistys hiljentävät.
+//  - puhe: Aanisoitin-tilan Voimassa < 1 (kertoja/Pulu) tai OpasSovitin.OpasAaniSoi (William, siltalause) → väistö; Äänimaisema-
+//    kytkin ja testimykistys hiljentävät.
 // Syötteet asetetaan ulkoa: Kamera (LS1: korkeus, nopeus, kohteen lat/lon), Aanikartta ja SilmukanUrl (Pelikoodari), Sade (COZY).
 using System;
 using System.Collections;
@@ -32,6 +33,40 @@ namespace Matkakirja.Natiivi
         public const float Taso = 0.55f, KelloTaso = 0.35f, VapautusS = 5f;
 
         static KaupunkiAanimaisemaSoitin instanssi;
+
+        // OPPAAN KYTKENTÄ (LS1 73a0379f, kytkentä toisin päin: OpasSovitin ei tunne soitinta): vahti lukee joka kehys
+        // OpasSovitin.KaupunkiNakyvissa (päälle/pois), KaupunkiKamera (korkeus, nopeus, kohde) ja OpasAaniSoi (Williamin väistö).
+        // Ulkoa asetetut Kamera/KaupunkiId/Aanikartta voittavat (linna ja testit).
+        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
+        static void Vahti() => DontDestroyOnLoad(new GameObject("Kaupunkiäänimaisema vahti").AddComponent<OppaanVahti>().gameObject);
+
+        sealed class OppaanVahti : MonoBehaviour
+        {
+            void Update()
+            {
+                bool nakyy = OpasSovitin.KaupunkiNakyvissa;
+                if (nakyy != (instanssi != null)) Kaytossa(nakyy);
+            }
+        }
+
+        static (double KorkeusM, double NopeusMs, double Lat, double Lon)? OppaanKamera()
+        {
+            var k = OpasSovitin.KaupunkiKamera;
+            return k.HasValue ? (k.Value.korkeusM, k.Value.nopeusMs, k.Value.lat, k.Value.lon) : ((double, double, double, double)?)null;
+        }
+
+        /// <summary>Kaupungin tunnus äänikartalle nimestä (Kööpenhamina → koopenhamina): pienet kirjaimet, ä/å → a, ö → o, välit → -.</summary>
+        public static string Tunnus(string nimi)
+        {
+            if (string.IsNullOrEmpty(nimi)) return null;
+            var sb = new System.Text.StringBuilder();
+            foreach (char c0 in nimi.ToLowerInvariant())
+            {
+                char c = c0 == 'ä' || c0 == 'å' || c0 == 'á' || c0 == 'à' ? 'a' : c0 == 'ö' || c0 == 'ø' || c0 == 'ó' ? 'o' : c0 == 'é' || c0 == 'è' ? 'e' : c0;
+                if (char.IsLetterOrDigit(c)) sb.Append(c); else if (c == ' ' || c == '-') sb.Append('-');
+            }
+            return sb.ToString();
+        }
         readonly KaupunkiAanimaisema mikseri = new KaupunkiAanimaisema();
         readonly AudioSource[] lahteet = new AudioSource[KaupunkiAanimaisema.Kerrokset.Length];
         readonly float[] hiljaaAlkaen = new float[KaupunkiAanimaisema.Kerrokset.Length];
@@ -65,8 +100,8 @@ namespace Matkakirja.Natiivi
 
         void Update()
         {
-            var k = Kamera?.Invoke();
-            string id = KaupunkiId?.Invoke();
+            var k = Kamera != null ? Kamera() : OppaanKamera();
+            string id = KaupunkiId != null ? KaupunkiId() : Tunnus(OpasSovitin.Aloituskaupunki);
             if (!string.IsNullOrEmpty(id) && id != karttaId && id != karttaLadataan) StartCoroutine(LataaKartta(id));
             var tila = Aanisoitin.Instanssi?.Tila;
             bool paalla = (tila?.Aanimaisema ?? Asetukset.Paalla(Kytkin.Aanimaisema)) && !(TestiMykistys.Paalla && !AaniKaappaus.Kaynnissa);
@@ -79,7 +114,7 @@ namespace Matkakirja.Natiivi
             mikseri.Paivita(new KaupunkiAanimaisema.Syote
             {
                 Painot = painot, KorkeusM = k?.KorkeusM ?? 100, NopeusMs = k?.NopeusMs ?? 0, Tunti = tunti,
-                Sade = Sade?.Invoke() ?? 0, Puhe = tila != null && tila.Voimassa < 0.999, Paalla = paalla && k.HasValue,
+                Sade = Sade?.Invoke() ?? 0, Puhe = (tila != null && tila.Voimassa < 0.999) || OpasSovitin.OpasAaniSoi, Paalla = paalla && k.HasValue,
             }, Time.unscaledDeltaTime);
             float kokonais = (float)mikseri.Kokonais * Taso;
             for (int i = 0; i < lahteet.Length; i++)
