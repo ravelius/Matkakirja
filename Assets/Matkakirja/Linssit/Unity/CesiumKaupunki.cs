@@ -212,6 +212,9 @@ namespace Matkakirja.Natiivi
         Camera esikamera, kamera;
         CesiumCameraManager hallinta;
         CesiumGeoreference georef;
+        CesiumOmatMallit omat;
+        /// <summary>Omat mallit (Giza-pilotti): tekijärivi CesiumOmatMallit.Tekijat.</summary>
+        public CesiumOmatMallit OmatMallit => omat;
         double3 vanhaOrigo;
         Cesium3DTileset palloTileset;
         Pohjapallolaskenta.Tila pohjaTila;
@@ -220,7 +223,7 @@ namespace Matkakirja.Natiivi
         Color vanhaTausta;
         string tunnus;
 
-        public CesiumKaupunki(PalloKierto kierto, Action<string> kirjaa) { this.kierto = kierto; this.kirjaa = kirjaa; }
+        public CesiumKaupunki(PalloKierto kierto, Action<string> kirjaa) { this.kierto = kierto; this.kirjaa = kirjaa; omat = new CesiumOmatMallit(kirjaa); }
 
         /// <summary>
         /// KUVANLAADUN KOUKUT (Siirtoseppä 5.10., kaupunkikuvan parannukset junaan 144): Avattu kutsutaan, kun näkymä ja tilesetit
@@ -404,6 +407,7 @@ namespace Matkakirja.Natiivi
         {
             Kaytossa = data;
             if (hallinta != null && esikamera != null) hallinta.additionalCameras.Remove(esikamera);
+            omat.Sulje();
             if (maasto != null) UnityEngine.Object.Destroy(maasto.gameObject);
             if (rakennukset != null) UnityEngine.Object.Destroy(rakennukset.gameObject);
             maasto = null; rakennukset = null;
@@ -428,6 +432,8 @@ namespace Matkakirja.Natiivi
             hallinta = CesiumCameraManager.GetOrCreate(maasto.gameObject);
             if (hallinta != null && !hallinta.additionalCameras.Contains(esikamera)) hallinta.additionalCameras.Add(esikamera);
             kirjaa("kaupunki: data " + data);
+            // Omat mallit (Giza-pilotti 7.10.): vain Googlen datalla, leikkaus Googlen tilesetiin (CesiumOmatMallit).
+            if (data == Lahde.Google && georef != null) omat.Avaa(juuri.transform, maasto, georef.latitude, georef.longitude, Kerros);
             if (auki) { karkeaKaytossa = false; Karkeaksi(); }   // uusi data (avaus tai Google/ion-vaihto): saapuminen karkeana
             if (auki) Avattu?.Invoke(this);
             // Muistikatto kuvanlaadun koukun jälkeen: Googlen SSE ei alle GoogleSseMin:n (asetin luo tilesetin uudelleen vain jos muuttuu).
@@ -559,6 +565,7 @@ namespace Matkakirja.Natiivi
             georef.Initialize();
             georef.SetOriginLongitudeLatitudeHeight(lon, lat, korkeus);
             PaivitaKorkeusKerroin();
+            if (auki && Kaytossa == Lahde.Google) omat.Paivita(lat, lon);
         }
 
         /// <summary>Paikallinen ylös-suunta Unityn maailmassa pisteessä p (ellipsoidin normaali; oppaan lähiluotain).</summary>
@@ -652,6 +659,7 @@ namespace Matkakirja.Natiivi
             if (hallinta != null) hallinta.useMainCamera = true;
             if (karkea != null) UnityEngine.Object.Destroy(karkea.gameObject);
             karkea = null; karkeaKaytossa = false; tarkkaAlku = -1f;
+            omat.Sulje();
             if (juuri != null) UnityEngine.Object.Destroy(juuri);
             juuri = null; maasto = null; rakennukset = null; esikamera = null; hallinta = null;
             KarttaKerrokset.RuutukrediititNakyviin = false;
