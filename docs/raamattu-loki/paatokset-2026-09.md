@@ -10872,3 +10872,95 @@ Toteutus (omistajan generointilupa määrineen): language_code "fi" pakotettu ka
 ## PÄÄTOIMITTAJA: JUNAT 148–150 JA ÄÄNIEN VIENTI (6.10. iltapäivä) (6.10.2026 klo 16.05)
 
 Juna 148 (opas-juna, 148c b9499e74: Kysy/Liiku/kaupunkikierros, mikrofoni ja näppäimistö oppaalle, siirtymäruutu > 30 km, PCM-vastausääni 0,9 s vs 14,3 s, ISS v3b + portaaton kahva + heilunta, aloitusruutu ilman Pulua/kuplia) VIE 14.0x, TF 148 testaajilla 14.24. Juna 149 = iPad Pro -kaatumiskorjaus (LS1 a3a0ba3e) + Siirtoseppä 7d35f7d9 Pulu-chat, BUILD 149 = master c2f8e951, TF-ajo 15.51. Juna 150 (Natiiviseppä, runko 31fa2050): kuitataan todisteiden mukaan LS1 silta-150 c619538e (siltalauseet tilanteen mukaan, nimet-v2, kuittaukset-v1, aloitus ilman karttaa + 50 suosikkia), Natiivi-UI maakunta-149 (maakunnat nostokorttiin, krediitit: Google-logo 16 dp, lähderivi 7 pt …, ion-logo vain latauksessa) ja LS1 kuva-150 (utu, gradienttitaivas, LUT; iPad-muistimittaus). Myöhemmin: Linnanrakentaja (Faceit-päät, kädet esineisiin, Steam Audio, linnan esittely), Siirtoseppä morph-tuki, LS2 juliste. Tavoite VIE ~20–21 tai 7.10. klo 12. Mac-käännös junan 150 jälkeen (pohja natiiviseppa/mac d2d9c1b9).
+
+## OMISTAJA: INCREASED MEMORY LIMIT LISÄTTY — MUISTIOIKEUS BUILD 150:NÄ, ISO JUNA ON 151 (6.10.2026 klo 17.33)
+
+Omistaja 6.10.2026 klo 16.17 (chat) sanatarkasti: "Muutokset tehty ja tallennettu." → Increased Memory Limit lisätty App ID:hen fi.matkakirja.peli (developer.apple.com). Kysymykseen "Kannattaisiko tuossa samalla muuten rastittaa joku muukin kohta jo valmiiksi tuolta developer lehdeltä?" vastattu: ei (In-App Purchase oletuksena päällä, muut toiminnot Info.plist-luvilla; Extended Virtual Addressing ei auta per-process-limit-kaatumiseen). → muistioikeuden pikkujuna (Natiiviseppä 62a7112a) heti.
+
+16.20 NUMEROINTI: muistioikeuden pikkujuna = BUILD 150 (Julkaisija: 149.1 ei käy validaattorissa); iso juna = 151; sitä seuraava 152.
+
+16.59 TF 150 (muistioikeus) testaajilla: profiili uusittu, increased-memory-limit = 1 allekirjoituksessa.
+
+## OMISTAJA: IPADIN KAUPUNKITARKKUUS VAPAAN MUISTIN MUKAAN (6.10.2026 klo 17.33)
+
+Omistaja 6.10.2026 klo 16.2x (chat) sanatarkasti: "Näkyykö grafiikka nyt huonompana, kun muistia on laskettu?" → vastattu: iPhone ennallaan, iPadilla keski- ja kaukoetäisyys pehmeämpi (SSE × 1,71); LS1 452ea1f6: kerroin vapaan muistin mukaan (os_proc_available_memory, vara ≥ 1,5 Gt, 1–1,71), mittaus iPadilla 00008103 TF 150:n oikeudella, still-pari omistajalle.
+
+## OMISTAJA: MUSTA ALOITUSRUUTU JA VALKOINEN LOGO HÄIVYTYKSIN (UUSI POHJA ALOITUSLOGO) (6.10.2026 klo 17.33)
+
+Omistaja 16.2x sanatarkasti: "IPadissa on muuten vieläkin ihan sovelluksen alussa. Todella rakeinen matkakirjan logo, joka ei mahdu edes näytölle kokonaan, ja hetken päästä se päivittyy vasta oikeankokoiseen matkakirjan logoon. Saisiko sen kokonaan pois vaikka mustaksi ruuduksi alussa? Ja mietin myös, että voisi olla vielä tyylikkäämpi, jos latautuessa näkyisi pelkkä musta tausta, jossa olisi matkakirjan logo valkoisella ja aika pienellä keskitettynä ruudulle. Tämä saisi olla kaikilla laitteilla, ja se matkakirjan logo saisi feidautua sisään ja ulos." → UUSI POHJA ALOITUSLOGO (omistajan päätös): iOS-käynnistysruutu mustaksi (Natiiviseppä; nyt iOSLaunchScreenType 1 = skaalattu kuva), Unityn 1. ruutu musta + valkoinen pieni logo ~30 % lyhyestä sivusta, häivytys sisään ~0,6 s / ulos ~0,5 s (Natiivi-UI), kaikki laitteet. Juna 151/152.
+
+Toteutus: Natiiviseppä d7c55dab + 246c4817 (iOS-käynnistysruutu ja storyboardin tausta mustiksi), Natiivi-UI c80afbef + f9b48e74 (Aloitusverho #000000, logo 30 % lyhyestä sivusta, sisään 0,6 s, vähintään 1 s ensimmäisestä näkyvästä ruudusta, ulos 0,5 s). iPadin kylmäkäynnistysvideo 6.10. 17.2x: logo ~2 s ilman välähdyksiä. Juna 151.
+
+## PÄÄTOIMITTAJA: NOSTOJEN JA MAAKUNTIEN TEKIJÄRIVI SUUREN KORTIN KUVAN ALLE (LÖYDÖS 150) (6.10.2026 klo 17.33)
+
+Päätoimittaja 16.25: nostojen Commons-tekijärivi puuttui kortista (löydös 150: "tekijärivi jää korttiin") → palautetaan suuren noston ja suuren maakuntakortin kuvan alle, ei kokoruutuun.
+
+Natiivi-UI b0d043a2, juna 151. CC BY-SA -nimeäminen; kokoruutu pysyy ilman lähderiviä.
+
+## OMISTAJA: OPPAAN LIIKU-LISTA RUUTUUN JA VIERITETTÄVÄKSI, LASINAPIT KESKITETYSTI, HAVAINNEKUVA NAPPIRIVIN VIEREEN, TAUKO AINA NÄKYVISSÄ (6.10.2026 klo 17.33)
+
+Omistaja 6.10.2026 klo 16.30 (chat + 2 iPad-kuvaa TF 149:stä, proto-3d/lokit/omistaja-kuvat-20261006/) sanatarkasti: "Tuo mihin siirrytään lista menee yli ruudun. Se täytyy korjata ja tehdä niin, että sitä listaa voi vierittää ja muuttaa tekstit valkoisiksi. Ainakin otsikot, ne tarkennukset voivat olla vähän tummemmalla, mutta vaaleita silti. Ja toisessa ruutukaappauksessa näkyvä havainnekuva. Niin sen voisi siirtää lähemmäs noita kysy ja liiku ja muita nappeja. Nyt nuo kysy, liikut ja muut napit ovat kuitenkin vähän, miten sattuu, asemoitu. Voisit katsoa niiden nappien sisällöt paremmin linjaan ja keskitetysti. Lisäksi ne voisivat olla läpinäkyvää lasia ja lisää pausenappi kuitenkin hampurilaisen vasemmalle puolelle niin, että se on koko ajan näkyvissä." → Natiivi-UI: Liiku-lista ruutuun + vieritys + Kaupunkikierros kiinni alareunassa, valkoiset otsikot; nappirivi keskitetysti tasaväleihin; havainnekuva nappirivin viereen; napit läpinäkyvämmäksi lasiksi (harmaa lasiteema); TAUKO aina näkyvissä ☰:n vasemmalla (kumoaa 12.03:n tauon osalta, kuvanappi jää ☰:iin). Juna 151/152.
+
+Natiivi-UI efd24abf, juna 151 (stillit 7–8 katsottu 6.10. 17.1x).
+
+## OMISTAJA: LUKIJA EI SAA KATKETA, KOHTEET LÄHEMPÄÄ; TF 149 EI KAADU (6.10.2026 klo 17.33)
+
+Omistaja 6.10.2026 klo 16.3x (chat, iPad Pro TF 149) sanatarkasti: "Ja onkohan tämä korjaus jo tulossa, mutta ainakin tässä uusimmassa versiossa vielä lukijan teksti jää aina kesken, kun kamera siirtyykin jo seuraavaan kohteeseen. Kohteet myös näytetään vieläkin välillä turhan kaukaa. VIELÄ EI OLE KAATUNUT OPAS KERTAKAAN. JATKAN TESTAAMISTA." → TF 149 -kaatumiskorjaus toimii omistajan laitteella. LS1: automaattinen siirto vasta lukijan äänen loputtua (+ ~1 s), kehystys kohteen koon mukaan (~puolet näkymän korkeudesta). Juna 151/152.
+
+LS1:n juurisyy: PCM-virran alivuodot ja kiinteä klipin pituus → mukautuva puskuri, loppu klipin pysähdyksestä, 1 s tauko ennen lentoa; kehys ~50 % kuvasta, minimit 110/100/160 m. silta-150, juna 151.
+
+## OMISTAJA: KYSYMYS KESKEYTTÄÄ KIERROKSEN JA JATKA KIERROSTA -NAPPI (6.10.2026 klo 17.33)
+
+Omistaja 6.10.2026 klo 16.3x (chat) sanatarkasti: "Myös jos kysyn oppaalta jotain kierroksen aikana, niin se ei ota sitä huomioon, vaan jatkaa omaa kierrostaan. Oppaan pitäisi siis keskeyttää kierros ja vastata kysymyksiin. Ja sitten pitäisi tulla myös näkyviin Jatka kierrosta-nappi, jolla voisin jatkaa keskeytynyttä opaskierrosta. Sen jälkeen, kun olen saanut kaikkiin kysymyksiini vastauksen." → LS1: kysymys keskeyttää kierroksen (kamera ja lukija seis), vastauksen jälkeen JATKA KIERROSTA (Natiivi-UI, nappirivin lasipohja); jatko keskeytyneestä kohteesta (kesken jäänyt luenta alusta), nappi pois uuden kierroksen tai Liikun myötä.
+
+## OMISTAJA: LOPETA KIERROS (■), VAPAA LIIKKUMINEN JA MIKÄ TÄMÄ ON? (6.10.2026 klo 17.33)
+
+Omistaja 6.10.2026 klo 16.4x (chat) sanatarkasti: "Pelissä saisi olla myös mahdollisuus painaa lopeta-kierros. Se itse asiassa voisi olla pausenapin vasemmalla puolella, ihan pelkkä stop-merkki. Silloin voisin vapaasti kiertää kaupunkia edelleen niillä joystick-säätimillä, mutta nyt niiden lisäksi toiseen säätimään pitäisi saada, todennäköisesti yksi toiminto lisää. Tai muuttaa jotenkin ne säätimet niin, että niillä voikin liikkua vapaasti, kun nyt ei olekaan mitään kiinteää kohdetta, minkä ympärillä kamera pyörisi. Ja kun olen itse löytänyt jonkun mielenkiintoisen kohteen, niin olisi hyvä, jos olisi nappi valmiina ruudulla, mitä voisi painaa, missä lukisi, mikä tämä on, jolloin peli etsisi koordinaattien perusteella lähimmän tunnetun rakennuksen ja kertoisi siitä lisää. Mikäli lähellä on useita rakennuksia, niin pelaajalle voisi tulla lista niistä, joista pelaaja voisi valita, mitä hän tarkoitti. Täytyy vain miettiä, että mitä nappeja kannattaa tässä tilassa piilottaa, jotta ei tule liikaa nappeja näkyville yhtä aikaa. Onko tälllainen mahdollista toteuttaa?" → LS1 johtaa: (A) ■ Lopeta kierros tauon vasemmalla (vain kierroksella) → vapaa tila; (B) vapaa tila: vasen tappi liike, oikea katse (+ korkeus), yksi suositus; (C) MIKÄ TÄMÄ ON? + tähtäin, katsepiste kevyesti (syvyys/säde, ei fysiikkaverkkoja), Pelikoodari GET /opas/lahella (Wikidata/OSM, ≤ 8, 150→400 m), useasta lista (Liiku-listan pohja); (D) vapaassa tilassa havainnekuvan paikalle Mikä tämä on?, ■ vain kierroksella, tauko ja ☰ aina. A junaan 151/152, B–D arvio 152–153.
+
+Vapaa ohjaus (Linssiseppä 2, linssiseppa2/opas-vapaa ed1db3dc, hyväksytty suositus): vasen tappi liike katsesuunnan mukaan, oikea kääntää ja nostaa/laskee, kallistus korkeudesta automaattisesti (100 m → 78°, 1 km → 66°, 10 km → 54°), vähintään 40 m 3D-laattojen pinnasta (rakennukset). Pelikoodari GET /opas/lahella (Wikipedia-geohaku fi+en + wbgetentities, R2-välimuisti 30 vrk). Juna 152–153.
+
+## OMISTAJA: KERTOJA VASTA KAUPUNGIN VALINNASTA; PEKING JA TOKIO ILMAN ESITTELYÄ (6.10.2026 klo 17.33)
+
+Omistaja 6.10.2026 klo 16.5x (chat, TF 149) sanatarkasti: "Jos valitsin Pekingin tai Tokion, niin silloin matkaopas ei osannut esitellä yhtään mitään. Matkaoppaan ääni myös katkeilee alussa ja se turhan sanoo jo siinä vaiheessa, jos valitsen ensin maan osa, niin sitten maan, niin matkaopas kommentoi jo siinä vaiheessa, että hyvää valinta tuo Japani. Sitten kun valitsen kaupungin, niin sitten kehuu vielä, että hyvä Tokio. Lähinnä siis se kommentointi pitää ottaa pois siinä vaiheessa, kun valitaan maa, koska eihän välttämättä pelaaja valitsekaan vielä sitä maata, vaan saattaa peruuttaa takaisinpäin valikossa, joten kertojan ääni pitäisi aktivoitua vasta kun kaupunki on valittu." → LS1: valikossa ei puhetta maanosasta/maasta, kertoja vasta kaupungin (tai suosikin) valinnasta kerran; äänen katkeilu alussa toistoon. Pelikoodari: Peking/Tokio ilman esittelyä, todennäköisesti WDQS-katko → varapolku, worker heti.
+
+Pelikoodarin juurisyy: Sonnet jätti välillä KOHDE:-etuliitteen pois → 0 kohdetta → 502; korjaus PR #4063 (rivit etuliitteellä tai ilman). LS1: valikko hiljainen, kertoja kerran kaupungin tai suosikin valinnasta.
+
+## OMISTAJA: VINO TEKSTIVÄLÄHDYS KOKO RUUDUN POIKKI JA OIKEAN TAPIN SUUNTA (6.10.2026 klo 17.33)
+
+Omistaja 6.10.2026 klo 16.5x (chat, TF 149) sanatarkasti: "Karttaan muuten välillä tulee hyvin nopeita, ihan kuin tekstileikkeitä, vaakasuuntaisina viivoina. Ne ovat kuitenkin niin nopeita, että on mahdotonta saada selvää, mitä siinä lukee. Ja toinen korjaus, oikeanpuoleinen joystick toimii väärinpäin panoroitaessa vasemmalle ja oikealle." → Natiivi-UI + LS1: tekstivälähdysten loki (< 200 ms), epäily PCM-alivuoto → tekstitys; LS2: oikean tapin vaakasuunta käännetään (juna 151), sitten vapaa ohjaus (B, juna 152). LS1:n PCM-juurisyy 16.5x: alivuodot + kiinteä klipin pituus → lukija kesken, kierros jumiin, alun katkeilu; korjaus mukautuva puskuri.
+
+Omistaja 6.10.2026 klo 16.50 (chat) sanatarkasti: "En usko, että se on tekstitys. Näyttää enemmän joltain muulta virheeltä. Teksti nimittäin menee hieman vinoottaen ja aivan koko ruudun poikki." → Natiivi-UI: 60 fps -kaappaus siirtymistä, epäily 3D-tilan teksti (karttapallon nimet / 3D-laput) yhden ruudun väärällä kameramatriisilla; korjaus elementin omistajalle.
+
+Oikea tappi: Linssiseppä 2 f55cf1ce (silta-150 1ec7d900), Pelikoodarin ennen/jälkeen-toisto 17.10 OK, juna 151. Välähdys ei toistu simussa (7 781 ruutua) → iPadin 00008103 60 fps -tallenne Natiivi-UI:lle.
+
+## OMISTAJA: TAUKO ENNEN KAUPUNGIN SELOSTUSTA (6.10.2026 klo 17.33)
+
+Omistaja 6.10.2026 klo 16.49 (chat) sanatarkasti: "Nyt kun uusi kaupunki aukeaa, niin selostus lähtee välittömästi liikkeelle. Siinä voisi jopa olla reilu sekunnin mittainen tauko alussa. Muuten se tuntuu liian hätiköydyltä." → LS1 (6): ~1,3 s tauko valmiin kaupunkinäkymän ja kertojan alun välissä (myös siirtymäruudun jälkeen), juna 151.
+
+## OMISTAJA: ISS-JULISTEEN LOGO YLHÄÄLLÄ AVARUUDESSA, IKKUNA SUUREMMAKSI (6.10.2026 klo 17.33)
+
+Omistaja 6.10.2026 klo 16.55 (chat, nähtyään julisteen e315f33e) sanatarkasti: "Kyllä, matkakirjan logo pitää olla tuolla ylhäällä juuri niin kun se onkin. Itse ehkä zoomaisin tuota ikkunaa hieman suuremmaksi." → kumoaa 12.40:n "logo ohjaamoon" -tulkinnan: logo avaruuteen ikkunan yläosaan (e315f33e), ikkuna ~10–15 % suuremmaksi; horisontin utu ja pilvien sulkareunat pysyvät. LS2, juna 152.
+
+Linssiseppä 2 b7a32d4a: logo kuten e315f33e, ikkuna ja kehys +12 %, 2D-halo, utu ja pilvien sulkareunat, vientikoko 2160 × 2700. Juna 152.
+
+## OMISTAJA: LAITETESTAAJAN TULOKSET LUETAAN ISTUNNOSTA, EI "JATKA"-PYYNTÖJÄ OMISTAJALLE (6.10.2026 klo 17.33)
+
+Omistaja 6.10.2026 klo 17.3x (kuva Laitetestaajan istunnosta, jossa pyyntö kirjoittaa "jatka" lähetysrajan nollaamiseksi) sanatarkasti: "Eikö tähän pitäisi olla joku kiertotie? Painan nyt kyllä tuohon, etten jatka, mutta jatkoa varten."
+
+Ratkaisu (Päätoimittaja): Laitetestaaja ei lähetä tuloksia viesteinä, vaan kirjoittaa vuoronsa viimeiseksi riviksi "TULOS <build>: OK/VIKA – …" ja raporttiinsa; Julkaisija ja Päätoimittaja lukevat sen istunnosta (list_events) jokaisen SIMU NYT -ajon jälkeen. Viesti vain jumissa, enintään yksi Julkaisijalle. Omistajaa ei koskaan pyydetä kirjoittamaan "jatka".
+
+## OMISTAJA: TALON TILAN JUNAT AJAN TASALLE JA TULEVIEN JUNIEN SUUNNITELMAT (6.10.2026 klo 17.33)
+
+Omistaja 6.10.2026 klo 17.3x sanatarkasti: "Talon tilan junat eivät taida oikein päivittyä. Siinä olisi muuten kiva, jos näkyisi myös tulevien junien suunnitelmat. Tosin jos se vie paljon energiaa, niin ei tarvitse tehdä. Mutta olisi tärkeää, että junat olisivat kuitenkin ajan tasalla tuossa talon tilalapussa."
+
+Ratkaisu: talon-tila.json päivitetty (TF 149–150 valmiit, juna 151 käynnissä, juna 152 ja Mac-appi tulossa). Lisäosaan (lisaosat/matkakirja-talo) lisätty valmiit TF-junat automaattisesti mainin muutoslokista (gh api, 5 min välein; nauhan TF-nimi samasta), voimaan seuraavassa appin käynnistyksessä. Päätoimittaja päivittää suunnitelmarivit jokaisen junatapahtuman jälkeen.
+
+## OMISTAJA: JUNAT TARPEEN MUKAAN — KIINTEÄT VIE-IKKUNAT 12 JA 20 POISTUVAT; JUNA 151 HETI (6.10.2026 klo 17.33)
+
+Omistaja 6.10.2026 klo 17.3x sanatarkasti: "Laita vain 151 heti juna liikkeelle, kun mahdollista. En itse asiassa ymmärrä, miksi junia ei voisi olla aina tarpeen mukaan."
+
+Ratkaisu: Raamatun KEHITYSTAHTI päivitetty: juna lähtee heti, kun kuitattua sisältöä on ja edellinen juna on TestFlightissa (yksi juna kerrallaan; käännös ja savu ovat ainoa raja); keskeneräinen tulee seuraavaan junaan. Juna 151 = ed36864e (2a48148d + 246c4817): Laitetestaajan täysi savu 2a48148d:stä oikeilla napautuksilla, lopulliseen lyhyt tarkistus ja LS1:n tulosrivi, sitten VIE. Muutosloki 1.1 (151): "Elävä opas puhuu loppuun asti, näyttää kohteet lähempää ja keskeyttää kierroksen vastatakseen kysymykseesi; kierroksen voi jatkaa tai lopettaa. Peli alkaa mustalla ruudulla ja logolla. Maakunnat avautuvat nostokorttina, ja kuvien tekijät näkyvät korteissa." (validaattorin raja 280 merkkiä) Kaikille rooleille tiedotettu (Postivahti).
+
+## PÄÄTOIMITTAJA: IPAD-TALLENNE — QUICKTIME VARASI KAAPPAUKSEN, IPADIN UUDELLEENKÄYNNISTYS, WI-FI-ILMOITUS (6.10.2026 klo 17.33)
+
+6.10.2026 klo 17.1x–17.25: iPadin 00008103 laitteistotallenne antoi '!dev' (-11800). Omistaja käynnisti iPadin uudelleen ("Nyt käynnistetty uudestaan."), sulki 30 h auki olleen QuickTime Playerin ("quicktime nyt suljettu") ja napautti iPadin Wi-Fi-ilmoituksesta "Kumoa" ("painoin kumoa"); sen jälkeen tallenne toimi (kylmäkäynnistys 1 092 kuvaa / 30 s, opas 210 s). Muistisääntö: ennen iPad-kaappausta QuickTime kiinni (omistajalta, roolit eivät sulje sitä itse), konsolikäyttäjä koodaus, iPad auki. Kehityskäännös (.kehitys) allekirjoitetaan wildcard-profiililla, joten Increased Memory Limit on vain TF/App Store -käännöksissä (Natiiviseppä f3a48802).
