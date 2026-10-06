@@ -1,0 +1,35 @@
+# Pallolukko iPadilla (omistaja 6.10. Päätoimittajan kautta: "nipistys ainakin ipadilla"; LS2): nipistys Cupolan ison
+# maan päällä ISS-ohjaamossa (Ikkuna). Ele iOS-simulaattorin ohjaustyökalulla odota-ikkunassa. Mittari km, kall, fov.
+# Korjaus 2c2ad7ac (koe eb6ac1aa): lukko 0 = vika näkyy, lukko 1 = ei muutosta.
+linssi linssi satelliitti
+oleta 30 linssit: auki: satelliitti -- astronautin kamera aukesi
+odota 8
+linssi astro kyyti
+oleta 30 astro kyyti: Ikkuna -- Cupolaan (ISS-ohjaamo)
+odota 4
+linssi astro kyyti pallolukko 0
+odota 1
+ui linssi taulu kiinni
+odota 1
+linssi astro kyyti tila
+talteen iA0 5 astro kyyti: .*kamera \([-0-9,]+, [-0-9,]+\) ([0-9]+) km kall ([-0-9,]+)° suunt [-0-9]+° fov ([0-9]+)
+kuva iA0-ennen ennen nipistystä
+# >>> NIPISTYS iPadilla Cupolan ison maan päällä, ikkunan keskellä (taulun ja paneelin ulkopuolella) 25 s ikkunassa
+odota 25
+linssi astro kyyti tila
+vertaa iA0 5 >60,3,3 astro kyyti: .*kamera \([-0-9,]+, [-0-9,]+\) ([0-9]+) km kall ([-0-9,]+)° suunt [-0-9]+° fov ([0-9]+) -- LUKKO 0: nipistys liikuttaa kameraa (vika näkyy)
+kuva iA0-jalkeen nipistyksen jälkeen
+linssi astro kyyti pallolukko 1
+odota 1
+ui linssi taulu kiinni
+odota 1
+linssi astro kyyti tila
+talteen iA1 5 astro kyyti: .*kamera \([-0-9,]+, [-0-9,]+\) ([0-9]+) km kall ([-0-9,]+)° suunt [-0-9]+° fov ([0-9]+)
+kuva iA1-ennen ennen nipistystä
+# >>> NIPISTYS iPadilla Cupolan ison maan päällä, ikkunan keskellä (taulun ja paneelin ulkopuolella) 25 s ikkunassa
+odota 25
+linssi astro kyyti tila
+vertaa iA1 5 60,3,3 astro kyyti: .*kamera \([-0-9,]+, [-0-9,]+\) ([0-9]+) km kall ([-0-9,]+)° suunt [-0-9]+° fov ([0-9]+) -- LUKKO 1: nipistys ei liikuta kameraa
+kuva iA1-jalkeen nipistyksen jälkeen
+linssi linssi pois
+odota 3

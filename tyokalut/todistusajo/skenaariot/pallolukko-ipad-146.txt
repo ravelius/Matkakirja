@@ -1,0 +1,21 @@
+# Pallolukko iPadilla (omistaja 6.10. Päätoimittajan kautta: "nipistys ainakin ipadilla"; LS2): nipistys Cupolan ison
+# maan päällä ISS-ohjaamossa (Ikkuna). Ele iOS-simulaattorin ohjaustyökalulla odota-ikkunassa. Mittari km, kall, fov.
+# BUILD 146 (ei pallolukkoa): vika näkyy = kamera muuttuu.
+linssi linssi satelliitti
+oleta 30 linssit: auki: satelliitti -- astronautin kamera aukesi
+odota 8
+linssi astro kyyti
+oleta 30 astro kyyti: Ikkuna -- Cupolaan (ISS-ohjaamo)
+odota 4
+ui linssi taulu kiinni
+odota 1
+linssi astro kyyti tila
+talteen i146a 5 astro kyyti: .*kamera \([-0-9,]+, [-0-9,]+\) ([0-9]+) km kall ([-0-9,]+)° suunt [-0-9]+° fov ([0-9]+)
+kuva i146a-ennen ennen nipistystä
+# >>> NIPISTYS iPadilla Cupolan ison maan päällä, ikkunan keskellä (taulun ja paneelin ulkopuolella) 25 s ikkunassa
+odota 25
+linssi astro kyyti tila
+vertaa i146a 5 >60,3,3 astro kyyti: .*kamera \([-0-9,]+, [-0-9,]+\) ([0-9]+) km kall ([-0-9,]+)° suunt [-0-9]+° fov ([0-9]+) -- BUILD 146: nipistys liikuttaa kameraa (vika näkyy)
+kuva i146a-jalkeen nipistyksen jälkeen
+linssi linssi pois
+odota 3
