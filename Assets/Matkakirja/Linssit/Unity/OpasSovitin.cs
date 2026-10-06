@@ -673,7 +673,7 @@ namespace Matkakirja.Natiivi
         }
 
         // ---- MAIDEN JA KAUPUNKIEN NIMET (juna 146; Ydin OpasNimiaanet) ----
-        public const string NimetOsoite = "https://media.matkakirja.app/aanet/opas/nimet-v1/nimet.json",
+        public const string NimetOsoite = "https://media.matkakirja.app/aanet/opas/nimet-v2/nimet.json",   // v2 (Pelikoodari 6.10.): suomi pakotettuna + 38 uutta jatkoa
             MaatOsoite = "https://media.matkakirja.app/aanet/opas/maat-v1/maat.json";
         static OpasNimiaanet nimiaanet;
         static bool nimiaLadataan;
