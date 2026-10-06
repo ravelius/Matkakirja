@@ -22,7 +22,7 @@ import { kirjaaKaynti, lueKaynnit } from './kaynnit.js';
 import {
   OPAS_KEHOTE, siivoaOpasPyynto, kaupunginSijainti, paikanKoordinaatit, kaydytNimiksi, oppaanViesti, jasennaOpas,
   kaupunginAineisto, kuvatPaikalle, wikidataKuva, lisaKuvatValimuistilla, yhdistaKuvat, OPAS_KIERROS_KEHOTE, kierroksenViesti, jasennaKierros,
-  seuraavaKierrokselta, paikanNimi, onKierrosToive, ESITTELE_KAUPUNKI, LISAA_KAUPUNKIA, KIERROKSEN_PITUUS, jarjestaReitti,
+  seuraavaKierrokselta, paikanNimi, onKierrosToive, ESITTELE_KAUPUNKI, LISAA_KAUPUNKIA, KIERROKSEN_PITUUS, lyhinReitti,
   seuraavaSuunta, SUUNNANVAIHDOT, paikanKorostus, siltaRyhma, kuvallaTekijatiedot, kohteetErana, kohteetLahella, etaisyys,
 } from './opas.js';
 import { OPAS_AINEISTO } from './opas-aineisto.js';
@@ -3241,8 +3241,12 @@ async function hoidaOppaanLiiku(pyynto, env, kors) {
   const kuvaLista = await kuvalista(env);
   const lukitut = kaupunginKohteet(kuvaLista, kaupunki);
   if (lukitut.length >= LUKITTU_VAHINTAAN) {
+    // Kaupunkikierros-rivi (omistaja 6.10. 23.4x, natiivi lukee kentän junasta 156): 8 tärkeintä lyhimpänä reittinä
+    // sijaintia lähimmästä alkaen; kohteet pysyvät tärkeysjärjestyksessä listaa varten.
+    const alku = Number.isFinite(lat) && Number.isFinite(lon) && !(lat === 0 && lon === 0) ? { lat, lon } : null;
     return vastaa({ kaupunki, kohteet: lukitut.map((k, i) => ({ id: k.id, nimi: k.nimi, lat: k.lat, lon: k.lon, alarivi: null,
-      luokka: null, tarkeys: i + 1, kuva: k.kuvat[0] ?? null, kuvat: k.kuvat })) }, kors);
+      luokka: null, tarkeys: i + 1, kuva: k.kuvat[0] ?? null, kuvat: k.kuvat })),
+      kierros: lyhinReitti(lukitut.slice(0, KIERROKSEN_PITUUS), alku).map((k) => k.id) }, kors);
   }
   try {
     const viite = await tarkistettuSijainti(kaupunki, Number.isFinite(lat) && Number.isFinite(lon) && !(lat === 0 && lon === 0) ? { lat, lon } : null);
@@ -3381,8 +3385,8 @@ async function hoidaOpas(pyynto, env, kors, runko, ctx) {
   // ensimmäisen kappaleen kanssa; kertoja aloittaa kaupungin tunnetuimmasta paikasta kameran läheltä, ja se lisätään
   // kierroksen alkuun (muu reitti lähin naapuri sen jälkeen).
   const aloitaKierros = Boolean(kierrosAvain && onKierrosToive(p.toive));
-  // Lukitusta listasta kierros on valmis heti: 8 tärkeintä listan järjestyksessä, ensimmäinen pysähdys listan ensimmäinen.
-  const listanKierros = aloitaKierros && listatila ? lukitut.slice(0, KIERROKSEN_PITUUS) : null;
+  // Lukitusta listasta kierros on valmis heti: 8 tärkeintä lyhimpänä reittinä, alku sijaintia lähimmästä (omistaja 6.10. 23.4x).
+  const listanKierros = aloitaKierros && listatila ? lyhinReitti(lukitut.slice(0, KIERROKSEN_PITUUS), sijainti) : null;
   const suunnittelu = aloitaKierros && !listanKierros ? (async () => {
     try {
       const suunnitelma = jasennaKierros((await kysyMallitiedot(env, {
@@ -3463,7 +3467,7 @@ async function hoidaOpas(pyynto, env, kors, runko, ctx) {
     const suunnitelma = await suunnittelu;
     const eka = tulos?.tyyppi === 'pysahdys' ? tuloksenPaikka : null;
     const muut = suunnitelma.filter((x) => x.id !== eka?.id);
-    const paikat = eka ? [eka, ...jarjestaReitti(muut, eka)] : jarjestaReitti(muut, sijainti);
+    const paikat = eka ? lyhinReitti([eka, ...muut], null, { ensimmainen: eka }) : lyhinReitti(muut, sijainti);
     if (paikat.length >= 3) {
       kierros = { kaupunki: p.kaupunki ?? '', paikat: paikat.slice(0, KIERROKSEN_PITUUS) };
       await pysyvaKirjoita(env.PUHE_R2, kierrosAvain, JSON.stringify(kierros), 60 * 60 * 6);
