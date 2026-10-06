@@ -145,3 +145,8 @@ TYÖTAPA (Päätoimittaja 23.1x): vika toistetaan ennen korjausta, sitten sama a
 - Natiivi-UI kysyi (vastaamatta): nopein onnistuva kuva = astro kyyti; kello +X (päivä); siirra 60.17 24.94; kuvaa 4:5 1080.
   UI on piilossa vain renderöintivaiheessa (kamera.targetTexture = rt, Edistyminen 0,85→1); KEHITETÄÄN-palkki näkyy haku- ja
   työstövaiheissa (0→0,85). Ehdotus: näyttökamera renderöinnin ajaksi, tai kehittyvä kuva (RT) UI:hin.
+- Natiivi-UI 2. kysymys (vastaamatta, viestit tauolla): meren yllä ei kuvaa tarkoituksella. Lopputila on IssKameraKuva.Tila, kun
+  Kaynnissa → false: "valmis" | "ei maata" (näkymässä < 3 % maata) | "ei kuvauspaikkaa" (S2-indeksin ulkopuolella) |
+  "keskeytyi" (muu virhe) | "osta" (kuvat loppu, heti Laukaise-kutsussa). LCD-ehdotus 2 s: EI MAATA KUVASSA / EI KUVA-AINEISTOA /
+  KUVAUS KESKEYTYI. Nopea onnistuva kuva simussa: astro kyyti; astro kyyti kello +<h> (paikallinen päivä); astro kyyti siirra 60.17 24.94;
+  astro kyyti kuvaa 4:5 1080.
