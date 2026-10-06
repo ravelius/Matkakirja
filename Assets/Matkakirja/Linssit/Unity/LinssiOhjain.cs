@@ -1926,6 +1926,7 @@ namespace Matkakirja.Natiivi
                             Matkakirja.Linssit.Kyytipino.AsetaS2Savy();
                             Kirjaa("astro " + Matkakirja.Linssit.Kyytipino.Tila());
                         }
+                        else if (a == "meri" && osat.Length > 3) { AstronauttiKerros.KyydinMeriPois = osat[3] == "0"; Kirjaa($"astro meri {(AstronauttiKerros.KyydinMeriPois ? "BMNG" : "S2-väri")} (seuraavalla tietorivillä)"); }
                         else if (a == "valotus" && osat.Length > 3) { Matkakirja.Linssit.Kyytipino.Valotus = (float)Luku(osat[3]); Kirjaa("astro " + Matkakirja.Linssit.Kyytipino.Tila()); }
                         else if (a == "bloom" && osat.Length > 3) { Matkakirja.Linssit.Kyytipino.BloomPois = osat[3] == "0"; Kirjaa("astro " + Matkakirja.Linssit.Kyytipino.Tila()); }
                         else if (a == "filmi" && osat.Length > 3) { Matkakirja.Linssit.Kyytipino.Filmi = osat[3] != "0"; Kirjaa("astro " + Matkakirja.Linssit.Kyytipino.Tila()); }   // ISS-kamera
