@@ -123,6 +123,9 @@ namespace Matkakirja.Natiivi
         bool nakyy, siruNakyy;
         OpasKohde odotettuKysymys;
         float krediittiAla = 40f;
+        /// <summary>Oppaan nappirivin korkeus (mk-opas-nappi 44 pt).</summary>
+        const float NappiriviKorkeus = 44f;
+        float TapitAla => nappiNakyy ? krediittiAla + NappiriviKorkeus + KuvaRako : krediittiAla;
         readonly OpasTapit tapit;
         readonly OpasNimilappu nimilappu;
         int siruPoletti = -1;
@@ -533,7 +536,15 @@ namespace Matkakirja.Natiivi
                 else { napit.style.opacity = 0f; napit.schedule.Execute(() => { if (!nappiNakyy) napit.style.display = DisplayStyle.None; }).StartingIn(Tyylikirja.Kesto.Sulku); }
             }
             napit.style.bottom = krediittiAla;
-            kirjoitus.style.bottom = krediittiAla + 52f;
+            // Kirjoitusrivi näppäimistön yläpuolelle (junan 148b video: rivi jäi näppäimistön alle).
+            float kirjoitusAla = krediittiAla + 52f;
+            if (TouchScreenKeyboard.visible && Screen.height > 0 && Juuri.panel != null)
+            {
+                float kb = TouchScreenKeyboard.area.height / Screen.height * Juuri.panel.visualTree.layout.height;
+                float alaVara = Juuri.panel.visualTree.layout.height - Juuri.worldBound.yMax;
+                if (kb > 0f) kirjoitusAla = Mathf.Max(kirjoitusAla, kb - alaVara + KuvaRako);
+            }
+            if (kirjoitus.style.bottom.value.value != kirjoitusAla) kirjoitus.style.bottom = kirjoitusAla;
             if (VanhatSirut) PaivitaVanhatSirut();
         }
 
@@ -643,7 +654,8 @@ namespace Matkakirja.Natiivi
             var chat = UiNakymat.Olemassa ? UiNakymat.Hae().Chat : null;
             var l = OpasSovitin.Viimeisin?.Silmukka;
             bool pysahdys = l != null && l.Nykyinen != null && (l.Vaihe == OpasVaihe.Puhuu || l.Vaihe == OpasVaihe.Odottaa);
-            tapit.Paivita(pysahdys && !Auki && !(chat?.Auki ?? false), krediittiAla);
+            // Tapit nappirivin yläpuolelle, kun napit näkyvät (junan 148b video 6.10.: oikea tappi peitti näppäimistönapin).
+            tapit.Paivita(pysahdys && !Auki && !(chat?.Auki ?? false), TapitAla);
             // Kohteen nimilappu pysähdyksellä (myös valikon aikana; chat peittää sen joka tapauksessa).
             nimilappu.Paivita(pysahdys && !(chat?.Auki ?? false) ? l.Nykyinen.Nimi : null);
             float siruAla = krediittiAla;
@@ -719,7 +731,7 @@ namespace Matkakirja.Natiivi
             if (!kuvaNakyy) return;
             float h = Juuri.resolvedStyle.height;
             // Kortti oikean tapin yläpuolelle, kun tapit näkyvät.
-            float ala = tapit.Nakyy ? krediittiAla + OpasTapit.Halkaisija + KuvaRako : krediittiAla;
+            float ala = tapit.Nakyy ? TapitAla + OpasTapit.Halkaisija + KuvaRako : nappiNakyy ? krediittiAla + NappiriviKorkeus + KuvaRako : krediittiAla;
             if (siruNakyy && !float.IsNaN(h) && sirurivi.layout.height > 0) ala = Mathf.Max(ala, h - sirurivi.layout.yMin + KuvaRako);
             if (kuvaKortti.style.bottom.value.value != ala) kuvaKortti.style.bottom = ala;
         }
