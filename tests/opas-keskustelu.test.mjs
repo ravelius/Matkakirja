@@ -100,3 +100,11 @@ test('/opas/liiku: tärkeysjärjestys koordinaatteineen, välimuisti', async () 
     assert.ok(a.kohteet.every((k) => Number.isFinite(k.lat) && Number.isFinite(k.lon) && k.id));
   });
 });
+
+test('/opas/seuraava "lyhyt": true → lyhyen kerronnan ohje (natiivin kaupunkikierros); ilman ei ohjetta', async () => {
+  const { oppaanViesti, siivoaOpasPyynto } = await import('../tools/pollo/opas.js');
+  assert.equal(siivoaOpasPyynto({ lyhyt: true }).lyhyt, true);
+  assert.equal(siivoaOpasPyynto({}).lyhyt, false);
+  assert.match(oppaanViesti({ kaupunki: 'Venetsia', toive: 'Rialto', kaydyt: [], lyhyt: true }, []), /LYHYT KERRONTA/);
+  assert.doesNotMatch(oppaanViesti({ kaupunki: 'Venetsia', toive: 'Rialto', kaydyt: [] }, []), /LYHYT/);
+});
