@@ -28,7 +28,7 @@ namespace Matkakirja.Linssit
         /// <summary>Heilunnan voima 0…1: 0 alle 250×, 0,25 oranssissa (300×), 1 punaisessa (1000×).</summary>
         public static float TarinaVoima { get; private set; }
         /// <summary>Kameran heilunnan amplitudi osuutena ruudun korkeudesta täydellä voimalla.</summary>
-        public static float TarinaAmplitudi = 0.0025f;
+        public static float TarinaAmplitudi = 0.004f;   // Päätoimittaja 6.10. 12.0x: 0,25 % ei näkynyt → 0,4 % 1000×:llä (300×: 0,1 %)
 
         /// <summary>
         /// Ruudun siirto tässä kehyksessä pikseleinä UI:n suunnissa (x oikealle, y alas): kameran kuva (maa, Cupolan 3D-kehys,

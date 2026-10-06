@@ -491,6 +491,9 @@ namespace Matkakirja.Natiivi
             // läpi (Linssiseppä 29.9., laitekuva 6 kuva-minipulu-taulu; web: iso Pulu ei näy). Vain näkyvyys: puhe ja
             // luenta jatkuvat (Pulu.Nayta(false) pysäyttäisi puhekanavan).
             Linssit.Astronautti.Kuva.AukiMuuttui += auki => { kuvaPeittaaPulun = auki; PaivitaPulunPeitto(); };
+            // Aloitus ennen lähtövalintaa (omistaja 6.10.2026): Pulu ei näy portissa eikä avauksessa.
+            Aloitusnakyma.PulunPeittoMuuttui += _ => PaivitaPulunPeitto();
+            PaivitaPulunPeitto();
             Karttaselite.AukiMuuttui += auki => { Linssit.Valitsin.Vaista(auki); Matkakirja.SeliteVaisto(auki); };
             // Linssit-karttanappi avaa valitsimen: ohi-napautus ei saa sulkea sitä samasta napautuksesta (savuke 1128: simulaattorin
             // tap painuu ja nousee samassa ruudussa, joten Avaa ja TarkistaOhiNapautus osuivat samaan ruutuun).
@@ -562,6 +565,7 @@ namespace Matkakirja.Natiivi
         /// </summary>
         void NollaaMuistit()
         {
+            Tilarivi.PiilotaPysyva(); // kartan valintavihje ei jää uuteen peliin
             Karttaselite.Nollaa();
             Matkalaukku.Nollaa();
             Chat.Nollaa();
@@ -619,9 +623,10 @@ namespace Matkakirja.Natiivi
             o.AloituslentoAlkoi += _ => UiKerros.PaaSaikeessa(() => { if (!Aloitus.Lennolla) Aloitus.LentoKirjoitus(); AloituslentoPiilo(true); });
             // Löydös 23: lennon ajaksi kaikki muu piiloon (Nousu … Perilla, myös aloituslento).
             o.LennonVaiheMuuttui += (v, _) => UiKerros.PaaSaikeessa(() => LentoPiilo(v != LennonVaihe.Perilla));
-            // Pöllön valintavihje nopan jälkeen (Pelikoodari: 15 s ilman valintaa, kerran vaiheessa).
-            o.ValintavihjeAika += t => UiKerros.PaaSaikeessa(() => Pulu.NaytaVihje(t));
-            o.ValintavihjePois += () => UiKerros.PaaSaikeessa(Pulu.PiilotaVihje);
+            // Pöllön valintavihje nopan jälkeen (Pelikoodari: 15 s ilman valintaa, kerran vaiheessa). Ei Pulun kuplana kartalla
+            // (Päätoimittaja 6.10.2026): pysyvä ilmoitusrivi, kunnes pelaaja toimii (ValintavihjePois).
+            o.ValintavihjeAika += t => UiKerros.PaaSaikeessa(() => Tilarivi.PysyvaViesti(t));
+            o.ValintavihjePois += () => UiKerros.PaaSaikeessa(Tilarivi.PiilotaPysyva);
             o.AloituslentoPaattyi += _ => UiKerros.PaaSaikeessa(() => { AloituslentoPerilla(); Aloitus.AloituslentoPaattyi(); });
             // C16: Livian tuurauspaljastus (ensimmäinen saapuminen koskaan) tai saapumisen ohjekuplat aloituslennon jälkeen.
             LivianPaljastus.Kytke(o);
@@ -869,13 +874,14 @@ namespace Matkakirja.Natiivi
         {
             if (Aloitus.Auki) return;
             SuljeKaikki();
+            Tilarivi.PiilotaPysyva();
             Aloitus.Nayta(id => Aloita(o, id), o.Lahtokaupungit(), o.TallennusOn ? () => { var v = o.Jatka(); if (v != null) Tilarivi.Viesti(v); } : (System.Action)null);
         }
 
         bool lehtiAuki, arkkiAuki, chatNostonPaalla, valikkoAuki, kuvaPeittaaPulun, valikkoPeittaaPulun;
 
         /// <summary>Pulun hahmo piilossa astronautin kuvaselaimen tai vaakavalikon ajan (Pulu.Peita: puhe ja kuplat jatkuvat).</summary>
-        void PaivitaPulunPeitto() => Pulu.Peita(kuvaPeittaaPulun || valikkoPeittaaPulun || opasPeittaaPulun);
+        void PaivitaPulunPeitto() => Pulu.Peita(kuvaPeittaaPulun || valikkoPeittaaPulun || opasPeittaaPulun || Aloitusnakyma.PeittaaPulun);
 
         bool opasPeittaaPulun;
         /// <summary>Elävä opas (Päätoimittaja 5.10.: kaupunki koko ruudulla): Pulun hahmo piiloon oppaan ajaksi (OpasValikko.Nayta).</summary>

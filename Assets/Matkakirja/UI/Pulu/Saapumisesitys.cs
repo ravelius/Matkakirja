@@ -3,7 +3,7 @@
 //
 //   PeliOhjain.LuentoAlkoi(kaupunki)  → fokusvirran merkintä kirjoittuu, isoisän
 //                                       luentakuva pakkaan, luentakuva2 9 s kohdalla
-//   PeliOhjain.LuentoLoppui(kaupunki) → Livian kommentti(t) kuplaan äänineen,
+//   PeliOhjain.LuentoLoppui(kaupunki) → Livian kommentti(t) äänineen ilman kuplaa (6.10.),
 //                                       PuluCam-kuvat pakkaan 4 s välein, kuvat
 //                                       häipyvät 6 s hiljaisuuden jälkeen ja
 //                                       lentävät kortin pikkukuviksi
@@ -385,7 +385,8 @@ namespace Matkakirja.Natiivi
                 juuri.schedule.Execute(() => kortti.Kuvat.Lisaa(kuva)).StartingIn(n * Luentakuvasarja.PuluVaihtoMs); // C10: 0 ms, 4 s välein
             }
             var teksti = v.PuluKommentit[i];
-            pulu.Sano(teksti, KommentinAani(v.Kaupunki, i, teksti), null, () => Kommentti(v, i + 1));
+            // Kartan kohtaus (omistaja 6.10.2026, Ateena): kommentti puhuu ilman kuplaa; seuraava lukuajan ajastimella.
+            pulu.Sano(teksti, KommentinAani(v.Kaupunki, i, teksti), null, () => Kommentti(v, i + 1), kuplaton: true);
             // Ilman kuittausta seuraava kommentti lukuajan jälkeen.
             juuri.schedule.Execute(() => { if (i + 1 < v.PuluKommentit.Count) Kommentti(v, i + 1); else kortti.Kuvat.Hiljeni(); })
                 .StartingIn((long)PuluKuplat.Lukuaika(teksti) + 280);

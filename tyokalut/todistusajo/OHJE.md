@@ -36,7 +36,7 @@ käännös) on vuorossa käynnissä, lisää `--nyt`; ilman sitä ajo pysähtyy.
 käytä `nakyy`/`ei-nay` + `kuva` ja nimeä palaute selitteessä. Valmiit skenaariot: `skenaariot/` (junan vakiosarja) ja `esimerkki-nosto.txt`.
 
 Haku (`tap-teksti`, `nakyy`, `tap-kohta` …) osuu näkyvään tekstiin, `name`-kenttään tai USS-luokkaan (tekstittömät
-kuvakenapit luokalla, esim. `mk-linssitNappi`, `mk-pilleri`). Täsmäosuma ja ylin kerros voittavat; jos sama teksti on
+kuvakenapit luokalla, esim. `mk-linssitNappi`, `mk-pilleri`; samanluokkaisista n:s vasemmalta `luokka#n`, oikeanpuoleisin `luokka#-1`). Täsmäosuma ja ylin kerros voittavat; jos sama teksti on
 kahdessa paikassa (esim. linssin esikatselun otsikko), napauta yksilöivää tekstiä (`Aktivoi`). Epäonnistunut haku tallentaa
 `ui-puu-<aika>.json`:n ajokansioon skenaarion korjausta varten. Linssin avausrivi (`linssit: auki: …`) haetaan
 `linssi`-komennon alusta, joten `oleta` heti linssin jälkeen löytää sen.
@@ -55,11 +55,12 @@ kahdessa paikassa (esim. linssin esikatselun otsikko), napauta yksilöivää tek
 | 08 | Asetukset: pilleri → Asetukset → ‹ Takaisin → ohinapautus | ei |
 | 09 | Radio | ei |
 | 10 | Kuvakatselin: kortin kuva → suurennos → pyyhkäisy → sulku | ei |
+| 11 | Elävä opas ilman ääntä (testiotsake): avaus → täkynäkymä → 1. täky → 1. kohde → ☰ (`mk-ohjausnappi#-1`) → Vaihda kohde → Amsterdam (1. napautus) | ei (worker ei tuota ääntä) |
 | 12 | ISS-ohjaamo: joystick keskeltä (ei suuntaa), veto oikealle + pito, pallon veto ei ohjaa | ei |
 
 Vakiosarjan ulkopuolella (`todistusajo.sh --skenaario skenaariot/<nimi>.txt`): `pulu-elava`, `kuvaselite-kaiutin`,
-`mykistys-todiste` ja `opas-amsterdam` (elävä opas: avaus → 1. kohde → Vaihda kohde → Amsterdam). **opas-amsterdam generoi
-ElevenLabs-ääntä noin 1,5–2 k merkkiä per ajo, joten aja vain omistajan luvalla määrästä.**
+`mykistys-todiste`. Skenaario 11 ajaa oppaan ilman ääntä (`opas testiotsake 1`, omistaja 6.10.): ElevenLabsia ei kutsuta,
+ja kohteiden ääni on `ei-testattu`.
 
 Yksittäinen vika toistetaan yhdellä komennolla (VIKA TOISTETAAN ENNEN KORJAUSTA): `sarja.sh … --vain 07,12`.
 
