@@ -192,7 +192,10 @@ namespace Matkakirja.Linssit.IssKamera
             return r;
         }
 
-        public HashSet<(int taso, int tx, int ty)> HaettavatLaatat(S2Ruutu ru, CogOtsake o, Func<(int z, int x, int y), bool> suodin = null)
+        /// <param name="mosaiikkiKattaa">Budjettiarvio ennen mosaiikin hakua: mosaiikin lehdet lasketaan katetuiksi (juliste 6.10.:
+        /// arvio sisälsi kaukoalueen, jonka mosaiikki kattaa, ja Helsingin kuva karkeutui 32-kertaiseksi).</param>
+        public HashSet<(int taso, int tx, int ty)> HaettavatLaatat(S2Ruutu ru, CogOtsake o, Func<(int z, int x, int y), bool> suodin = null,
+            bool mosaiikkiKattaa = false)
         {
             var r = new HashSet<(int, int, int)>(); int v = ru.Vyohyke;
             foreach (var (z, x, y) in Lehdet())
@@ -201,7 +204,7 @@ namespace Matkakirja.Linssit.IssKamera
                 bool sisarus = nakyvat != null && !nakyvat.Contains((z, x, y));   // näkymän ulkopuolinen sisarus: vain karkein taso
                 var (n0, w0) = Uudelleenprojisointi.Pikseli(z, x, y, 0, 0); var (s0, e0) = Uudelleenprojisointi.Pikseli(z, x, y, 256, 256);
                 if (e0 < ru.W || w0 > ru.E || n0 < ru.S || s0 > ru.N) continue;
-                if (Mosaiikki != null && MosaiikinLaatta(z, x, y) && Mosaiikki(z, x, y) != null) continue;   // kaukoalue mosaiikista (haettu)
+                if (MosaiikinLaatta(z, x, y) && (mosaiikkiKattaa || Mosaiikki != null && Mosaiikki(z, x, y) != null)) continue;   // kaukoalue mosaiikista
                 if (Ensisijainen && ru.Valinta == 0)   // varakuva haetaan aina suodatetuille lehdille
                 {
                     // Ensimmäinen ruutu (Data.Ruudut-järjestys), joka kattaa lehden kokonaan, ottaa sen; muut ohittavat.
@@ -433,8 +436,31 @@ namespace Matkakirja.Linssit.IssKamera
         public static bool MosaiikinLaatta(int z, int x, int y)
         {
             if (z > MosaiikkiMaxZ || z < JuuriZ) return false;
+            if (Euroopassa(z, x, y)) return true;
+            // Maailman mosaiikki (S2-maailma v2, juna 145): z11-lehti z10-isästä kuten Euroopassa.
+            var m = Maailma;
+            return m != null && (z > 10 ? m.Onko(10, x >> 1, y >> 1) : m.Onko(z, x, y));
+        }
+
+        /// <summary>Euroopan mosaiikin 13 × 13 z6-lohkossa (s2-eurooppa/{Laattapalvelin.S2EuroopanVersio}).</summary>
+        public static bool Euroopassa(int z, int x, int y)
+        {
+            if (z < JuuriZ) return false;
             int k = 1 << (z - JuuriZ), bx = x / k, by = y / k;
             return bx >= MosaiikkiX0 && bx < MosaiikkiX0 + MosaiikkiKoko && by >= MosaiikkiY0 && by < MosaiikkiY0 + MosaiikkiKoko;
+        }
+
+        /// <summary>S2-maailma v2:n saatavuus (laatat.json; null = vain Eurooppa kuten ennen, myös hakuvirheessä).</summary>
+        public static volatile S2MaailmaLaatat Maailma;
+
+        /// <summary>Lähdelaatan (z ≤ 10) täysi osoite: Euroopassa v1:n rajattu jako, muualla maailman v2.</summary>
+        public static string MosaiikinOsoite(string euroopanJuuri, int z, int x, int y)
+        {
+            var k = Maailma?.KorjausKansio(z, x, y);
+            if (k != null) return $"{S2MaailmaLaatat.KorjausJuuriPohja}{k}/{z}/{x}/{y}.jpg";   // korjauskerros voittaa (myös Eurooppa)
+            if (!Euroopassa(z, x, y)) return $"{S2MaailmaLaatat.Juuri}{z}/{x}/{y}.jpg";
+            var ek = Maailma?.EuroopanKorjausKansio(z, x, y);
+            return ek != null ? $"{S2MaailmaLaatat.EuroopanKorjausJuuriPohja}{ek}/{MosaiikinPolku(z, x, y)}" : euroopanJuuri + MosaiikinPolku(z, x, y);
         }
 
         /// <summary>Mosaiikin suhteellinen polku "{t}/{x'}/{y'}.jpg".</summary>
@@ -502,7 +528,20 @@ namespace Matkakirja.Linssit.IssKamera
                 for (int px = 0; px < 256; px++)
                 {
                     int o = (py * 256 + px) * 4;
-                    if (rgba[o + 3] == 0) continue;   // ei S2-dataa: alempi kerros näkyy, pilviä ei (avomeri)
+                    if (rgba[o + 3] == 0)
+                    {
+                        // Ei S2-dataa (rataväli, avomeri): alempi kerros näkyy. GIBS-pilvet jatkuvat silti sen päälle läpikuultavina
+                        // (Manaus 2504ef45: datattomassa kiilassa pilvetön kaista ja venyneet pilviläikät sen reunalla); Pilvikenttä ei.
+                        if (!(Pilvet is GibsPilvet)) continue;
+                        var (la0, lo0) = Uudelleenprojisointi.Pikseli(z, x, y, px + 0.5, py + 0.5);
+                        var (pa0, pk0) = Pilvet.Lahi(la0, lo0, PeittoK(la0, lo0), pm);
+                        float a0 = (float)pa0 * haivytys;
+                        if (a0 <= 0.004f) continue;
+                        float k0 = 246f * (float)pk0;
+                        rgba[o] = (byte)Math.Min(255f, k0 + 0.5f); rgba[o + 1] = (byte)Math.Min(255f, k0 * 0.975f + 0.5f);
+                        rgba[o + 2] = (byte)Math.Min(255f, k0 * 0.94f + 0.5f); rgba[o + 3] = (byte)Math.Min(255f, 255f * a0 + 0.5f);
+                        continue;
+                    }
                     float gx = px * G / 256f, gy = py * G / 256f; int ix = Math.Min(G - 1, (int)gx), iy = Math.Min(G - 1, (int)gy);
                     float tx = gx - ix, ty = gy - iy;
                     float H(float[] f) { int q = iy * (G + 1) + ix; return (f[q] * (1 - tx) + f[q + 1] * tx) * (1 - ty) + (f[q + G + 1] * (1 - tx) + f[q + G + 2] * tx) * ty; }

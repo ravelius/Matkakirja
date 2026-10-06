@@ -23,8 +23,10 @@ namespace Matkakirja.Linssit.Iss
         public readonly struct Paikka
         {
             public readonly string Nimi, Maa; public readonly double Lat, Lon; public readonly int Tarkeys;
-            public Paikka(string nimi, double lat, double lon, string maa = null, int tarkeys = 0)
-            { Nimi = nimi; Lat = lat; Lon = lon; Maa = maa; Tarkeys = tarkeys; }
+            /// <summary>IANA-aikavyöhyke (Natural Earth TIMEZONE, esim. "Europe/Helsinki"); null = ei tiedossa.</summary>
+            public readonly string Vyohyke;
+            public Paikka(string nimi, double lat, double lon, string maa = null, int tarkeys = 0, string vyohyke = null)
+            { Nimi = nimi; Lat = lat; Lon = lon; Maa = maa; Tarkeys = tarkeys; Vyohyke = string.IsNullOrEmpty(vyohyke) ? null : vyohyke; }
         }
 
         /// <summary>Paikkadata (Unity täyttää, kun sisältö on ladattu). Maa: (lat, lon) → (ISO3, nimi) tai null merellä.</summary>
@@ -77,6 +79,41 @@ namespace Matkakirja.Linssit.Iss
 
         /// <summary>Unityn täyttämä aineisto (null = ei vielä ladattu).</summary>
         public static Aineisto Nykyinen;
+
+        /// <summary>
+        /// Paikan oma kellonaika (Päätoimittaja 6.10.: julisteen "klo" kuvauspaikan aikana, ei laitteen; Manaus näkyi Suomen ajassa).
+        /// Lähimmän aikavyöhykkeellisen Natural Earth -paikan vyöhyke ≤ 1 500 km; muuten aurinkoaika (pituus / 15 h, tasatunnein).
+        /// </summary>
+        public static DateTime PaikallinenAika(Aineisto a, double lat, double lon, DateTime utc)
+        {
+            utc = DateTime.SpecifyKind(utc, DateTimeKind.Utc);
+            var vz = Vyohyke(a, lat, lon);
+            if (vz != null) return TimeZoneInfo.ConvertTimeFromUtc(utc, vz);
+            return utc.AddHours(Math.Round(lon / 15));
+        }
+
+        static readonly Dictionary<string, TimeZoneInfo> vyohykkeet = new Dictionary<string, TimeZoneInfo>();
+
+        /// <summary>Lähimmän aikavyöhykkeellisen paikan vyöhyke (≤ 1 500 km) tai null (ei dataa tai järjestelmä ei tunne).</summary>
+        public static TimeZoneInfo Vyohyke(Aineisto a, double lat, double lon)
+        {
+            if (a == null) return null;
+            string id = null; double paras = 1500;
+            foreach (var x in a.Paikat)
+            {
+                if (x.Vyohyke == null || Math.Abs(x.Lat - lat) > 14) continue;
+                double km = Ylilennot.MaaEtaisyysKm(lat, lon, x.Lat, x.Lon);
+                if (km < paras) { paras = km; id = x.Vyohyke; }
+            }
+            if (id == null) return null;
+            lock (vyohykkeet)
+            {
+                if (vyohykkeet.TryGetValue(id, out var v)) return v;
+                try { v = TimeZoneInfo.FindSystemTimeZoneById(id); } catch (Exception) { v = null; }
+                vyohykkeet[id] = v;
+                return v;
+            }
+        }
 
         static readonly CultureInfo Fi = new CultureInfo("fi-FI");
 

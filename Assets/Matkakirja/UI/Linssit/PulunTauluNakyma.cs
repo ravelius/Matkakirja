@@ -270,7 +270,7 @@ namespace Matkakirja.Natiivi
                 Rivi(r.Otsikko, r.Selite, r.Aktiivinen && lisaAktiivinen == null, () => Valitse(tunnus));
                 // Lisärivit ISS-rivien jälkeen, ennen kuvia (kyydin kanssa kuten ISS-rivit).
                 if (tunnus == "iss-sisalle")
-                    foreach (var x in lisarivit) { var y = x; Rivi(y.Otsikko, y.Selite, ReferenceEquals(y, lisaAktiivinen), () => Valitse(y.Tunnus)); }
+                    foreach (var x in lisarivit) { var y = x; if (y.Nakyy != null && !Kysy(y.Nakyy)) continue; Rivi(y.Otsikko, y.Selite, ReferenceEquals(y, lisaAktiivinen), () => Valitse(y.Tunnus)); }
             }
         }
 
@@ -290,7 +290,7 @@ namespace Matkakirja.Natiivi
         sealed class LisaRivi
         {
             public string Tunnus, Otsikko, Selite;
-            public Func<bool> Aktiivinen;
+            public Func<bool> Aktiivinen, Nakyy;
             public Action Toiminto;
             public AstroMoodi? Lahto;
         }
@@ -302,11 +302,12 @@ namespace Matkakirja.Natiivi
         /// annettu, askelkone vie ensin siihen moodiin (esim. kuva kiinni ja ISS:n rinnalle) ja kutsuu toiminto() vasta perillä.
         /// Sama tunnus korvaa aiemman rivin. Rivi rekisteröidään omasta koodista, jotta haarat eivät riipu toisistaan.
         /// </summary>
-        public void LisaaRivi(string tunnus, string otsikko, string selite, Func<bool> aktiivinen, Action toiminto, AstroMoodi? lahto = null)
+        public void LisaaRivi(string tunnus, string otsikko, string selite, Func<bool> aktiivinen, Action toiminto, AstroMoodi? lahto = null,
+            Func<bool> nakyy = null)
         {
             if (string.IsNullOrEmpty(tunnus) || toiminto == null) return;
             lisarivit.RemoveAll(x => x.Tunnus == tunnus);
-            lisarivit.Add(new LisaRivi { Tunnus = tunnus, Otsikko = otsikko, Selite = selite, Aktiivinen = aktiivinen, Toiminto = toiminto, Lahto = lahto });
+            lisarivit.Add(new LisaRivi { Tunnus = tunnus, Otsikko = otsikko, Selite = selite, Aktiivinen = aktiivinen, Toiminto = toiminto, Lahto = lahto, Nakyy = nakyy });
             if (Auki) Rakenna();
         }
 
@@ -366,11 +367,20 @@ namespace Matkakirja.Natiivi
                 Debug.Log($"MATKAKIRJA pulun taulu: paikka {paikka} → {valittu.Nimi} (h {h:0}), {++paikanVaihtoja}. vaihto");
             paikka = valittu.Nimi;
             ala = valittu.Ala;
-            paneeli.style.bottom = valittu.Ala;
+            // OHJAAMO LATTIANA (Päätoimittaja 6.10. 11.3x, vaakakuva: Poistu-rivi LAAJA-napin päällä): taulun alareuna aina
+            // ohjaamopaneelin yläreunan yläpuolelle; matalalla ruudulla rivit vierittyvät (maxHeight alla), paneeli jää näkyviin.
+            var ohj = astro.Kyyti?.OhjaamoLaatikko ?? default;
+            if (ohj.height > 0f)
+            {
+                float ohjYla = juuri.WorldToLocal(new Vector2(ohj.xMin, ohj.yMin)).y;
+                float lattia = Mathf.Round(H - ohjYla + PulunTaulu.RakoPt);
+                if (ala < lattia) { ala = lattia; if (!vainYlos) Debug.Log($"MATKAKIRJA pulun taulu: ohjaamon yläpuolelle (ala {ala:0})"); }
+            }
+            paneeli.style.bottom = ala;
             paneeli.style.right = valittu.Oikea ?? PulunTaulu.OikeaReuna;
             // Yläreuna ei koskaan ylaMinin yläpuolelle (linssin ✕:n alle): ennen raja salli 12 pt:n ja vaakana taulun oma ✕ osui
             // linssin ✕:n viereen. Yli jäävät rivit vierittyvät.
-            paneeli.style.maxHeight = Mathf.Max(44f, H - valittu.Ala - ylaMin);
+            paneeli.style.maxHeight = Mathf.Max(44f, H - ala - ylaMin);
         }
 
         float RivienKorkeus()

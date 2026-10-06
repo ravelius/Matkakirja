@@ -269,7 +269,7 @@
     right: 6px;
     bottom: 6px;
     flex-direction: row;
-    padding: 6px;
+    padding: 4px; /* TASAISET VÄLIT (omistaja 6.10.): reunaväli = nappien väli 4 pt (IssOhjaamo.LaajennusVali) */
     border-width: 1px;
     border-radius: 12px;
     border-color: var(--tk-lcd-reunus);
@@ -279,13 +279,17 @@
 .mk-issohjaamo__rivit {
     flex-grow: 1;
     flex-shrink: 1;
-    margin: 0 6px;
+    margin: 0 4px;
 }
 
 .mk-issohjaamo__rivi {
     flex-direction: row;
     flex-grow: 1;
-    margin: 2px 0;
+    margin: 0;
+}
+
+.mk-issohjaamo__rivi--toinen {
+    margin-top: 4px;
 }
 
 .mk-issohjaamo__lcdnappi {
@@ -293,7 +297,7 @@
     flex-basis: 0;
     min-width: 0;
     min-height: 0;
-    margin: 0 2px;
+    margin: 0 0 0 4px;
     padding: 0;
     border-width: 1px;
     border-radius: 6px;
@@ -313,6 +317,10 @@
     white-space: nowrap;
 }
 
+.mk-issohjaamo__lcdnappi:first-child {
+    margin-left: 0;
+}
+
 .mk-issohjaamo__lcdnappi.mk-valittu {
     background-color: var(--tk-lcd-muste);
 }
@@ -329,7 +337,7 @@
     flex-grow: 0;
     flex-basis: auto;
     width: 72px;
-    margin: 2px 0;
+    margin: 0;
 }
 
 /* SIJAINTI-IKKUNA (vaihe 3): perinteinen pelin ikkuna mustalla pohjalla ja vihreällä tekstillä ilman LCD-efektiä (kirjasin Luku),
@@ -496,6 +504,9 @@
  * omina kuvaelementteinään tilan mukaan, piirretyt varret, napa, ura ja kahva piiloon. Ilman kuvia mikään näistä ei vaikuta. */
 .mk-issohjaamo--kuva {
     border-width: 0;
+    /* Kuvan kulmat kuvasta (omistaja 6.10. 11.1x: "paneeli leikkautuu oudosti, varsinkin vasemmassa alakulmassa"):
+     * piirretyn paneelin 18 pt:n pyöristys leikkasi pohjakuvan kulmat. */
+    border-radius: 0;
     background-color: initial;
     -unity-background-scale-mode: stretch-to-fill;
 }
@@ -578,4 +589,71 @@
 
 .mk-issohjaamo--asettelu > .mk-issohjaamo__lcd > .mk-issohjaamo__maa {
     letter-spacing: 2px; /* web 0.02em: konseptin lukemarivi lähes harventamatta (UITK em/100) */
+}
+
+/* KEHITYKSEN SEGMENTTIPALKKI (omistaja 6.10.2026: "pienistä neliöistä koostuva"): rivi LCD-neliöitä kohdenimen alla, syttyvät
+ * edistymisen mukaan; sammuneet himmeinä kuten LCD:n sammuneet segmentit (--tk-lcd-reunus), palavat --tk-lcd-muste. */
+.mk-issohjaamo__segmentit {
+    flex-direction: row;
+    align-self: center;
+    margin: 3px 0 0 0;
+}
+
+.mk-issohjaamo__segmentti {
+    width: 4px;
+    height: 4px;
+    margin: 0 0.75px;
+    background-color: var(--tk-lcd-reunus);
+}
+
+.mk-issohjaamo__segmentti--paalla {
+    background-color: var(--tk-lcd-muste);
+}
+
+/* LCD-MATRIISI (omistaja 6.10.2026: "aavistusvihreää LCD-matriisiä taustassa"): pisteruudukko näytön taustalla, väri piirtoon
+ * color-ominaisuudesta (IssOhjaamo.Matriisi); hento, jotta teksti pysyy luettavana. */
+.mk-issohjaamo__matriisi {
+    /* Omistaja 6.10. 11.1x: ei erillisiä pisteitä, "melkein tasainen, hyvin haalea vihreä laatta" kuin vanhan LCD:n valaistu tausta. */
+    /* Simu f9d71a57: muuttujan alfa ei periydy, joten 0,22 antoi RGB 17,76,44 (pohja 17,25,21) = liian vihreä; 0,06 ≈ 24,39,30. */
+    background-color: var(--tk-lcd-reunus);
+    opacity: 0.06;
+}
+
+/* NOPEUSLUKEMA (omistaja 6.10.2026): kaasua muutettaessa 3 s LCD:ssä kerroin vasemmalla, oikea nopeus oikealla ja sen alla
+ * osuus valon nopeudesta; vihreä, oranssi suurilla kertoimilla (--tk-lcd-varoitus), punainen täydellä teholla (--tk-lcd-vaara). */
+.mk-issohjaamo__nopeusrivi {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+    padding: 0 4px;
+}
+
+.mk-issohjaamo__nopeussarake {
+    align-items: flex-end;
+}
+
+.mk-issohjaamo__kerroin,
+.mk-issohjaamo__nopeus,
+.mk-issohjaamo__valo {
+    margin: 0;
+    padding: 0;
+    color: var(--tk-lcd-muste);
+    white-space: nowrap;
+}
+
+.mk-issohjaamo__valo {
+    color: var(--tk-lcd-muste-pehmea);
+}
+
+.mk-issohjaamo__nopeusrivi--varoitus .mk-issohjaamo__kerroin,
+.mk-issohjaamo__nopeusrivi--varoitus .mk-issohjaamo__nopeus,
+.mk-issohjaamo__nopeusrivi--varoitus .mk-issohjaamo__valo {
+    color: var(--tk-lcd-varoitus);
+}
+
+.mk-issohjaamo__nopeusrivi--vaara .mk-issohjaamo__kerroin,
+.mk-issohjaamo__nopeusrivi--vaara .mk-issohjaamo__nopeus,
+.mk-issohjaamo__nopeusrivi--vaara .mk-issohjaamo__valo {
+    color: var(--tk-lcd-vaara);
 }

@@ -383,6 +383,27 @@ namespace Matkakirja.Natiivi
             // Suodatin AudioSourcen perään samassa GameObjectissa (web: GainNode + kompressori).
             vahvistin = gameObject.AddComponent<PuheVahvistin>();
             Asetukset.Muuttui += AsetuksetMuuttuivat;
+            StartCoroutine(LataaValmisluennat());
+        }
+
+        /// <summary>
+        /// VALMIIT LUENNAT (Valmisluennat.cs, junaan 147): manifesti kerran käynnistyksessä. ?t= tunnin tarkkuudella, jotta uudet
+        /// avaimet tulevat käyttöön (julkaisu: mp3:t ensin, manifesti viimeisenä). Virhe → ei osumia → palavirta kuten ennen.
+        /// </summary>
+        IEnumerator LataaValmisluennat()
+        {
+            string url = Matkakirja.Peli.Asetus.Teksti("osoitteet.luennat-manifesti", Valmisluennat.ManifestiOletus);
+            if (string.IsNullOrEmpty(url)) yield break;
+            string haku = url + (url.Contains("?") ? "&" : "?") + "t=" + DateTime.UtcNow.ToString("yyyyMMddHH");
+            using var r = UnityWebRequest.Get(haku);
+            r.timeout = 20;
+            yield return r.SendWebRequest();
+            if (r.result != UnityWebRequest.Result.Success)
+            {
+                Debug.Log($"MATKAKIRJA valmisluennat: manifesti ei saatavilla ({r.responseCode}) → palavirta");
+                yield break;
+            }
+            Debug.Log($"MATKAKIRJA valmisluennat: {Valmisluennat.Lue(r.downloadHandler.text, url)} kappaletta");
         }
 
         void OnDestroy()
@@ -480,6 +501,19 @@ namespace Matkakirja.Natiivi
             mittaaEka = true;
             // Uusi puhe: vanhan puheen jonottavat esihaut pois (kutsuja lisää omat seuraavat palansa heti Luen jälkeen).
             esihakujono.Clear();
+            // Valmis kappale ämpärissä (Valmisluennat; koko kappale yhtenä ottona, tauko tiedostossa): soitetaan se.
+            if (sailo && (persoona == "kertoja" || persoona == "merkinnat"))
+            {
+                var m = Saadot.MoottoriPersoonalle(persoona);
+                string valmis = m?.Moottori == Striimiaani.Eleven ? Valmisluennat.Url(teksti, m.Value.Aani, Saadot.Nopeus, loppuTagi) : null;
+                if (valmis != null)
+                {
+                    PalaNyt = "valmis";
+                    Kirjaa($"valmis kappale {teksti.Length} mrk ← {Path.GetFileName(valmis)}");
+                    lataus = StartCoroutine(LataaJaSoita(valmis, () => new UnityWebRequest(valmis, UnityWebRequest.kHttpVerbGET), viiveS, oma, false, true));
+                    return true;
+                }
+            }
             // Palavirta (Virta): lyhyt ensimmäinen pala soi heti, loput haetaan sen soidessa (Lukijaaani.VirtaPalat).
             var palat = PyyntoPalat(teksti, sailo, loppuTagi);
             // Yksikin pala kulkee SoitaPalatin kautta: uusinta ja palaloki koskevat kaikkea luentaa.

@@ -655,17 +655,44 @@ namespace Matkakirja.Linssit.Astronautti
         /// ("kuin otettu hetkeä myöhemmin, kun ISS on lähempänä"); suunta kohteesta alukseen säilyy, joten kuva on samalta puolelta.
         /// Loiva Cupolan katse (~74°) toi pitkän ilmakehäpolun ja violetin usvan.
         /// </summary>
-        public Kuvakulma JyrkkaKuvakulma(double lat, double lon, double maxKallistus)
+        /// <param name="tarkka">true = zeniittikulma täsmälleen <paramref name="maxKallistus"/> (laaja juliste: maapallon kaari kuvan
+        /// yläosaan, omistaja 6.10.), false = enintään.</param>
+        public Kuvakulma JyrkkaKuvakulma(double lat, double lon, double maxKallistus, bool tarkka = false)
         {
             var h = AlusHetki(Iss.IssNyt.Kello(), Nyt / 1000);
             var nyt = Iss.IssKuvakulma.KohteenKulma(h, lat, lon);
-            if (nyt.Kallistus <= maxKallistus) return nyt;
+            if (!tarkka && nyt.Kallistus <= maxKallistus) return nyt;
             const double R = 6_371_000, D = Math.PI / 180;
             double z = maxKallistus * D, eta = Math.Asin(R / (R + Math.Max(1000, h.KorkeusM)) * Math.Sin(z));
             double kaari = (z - eta) / D;
             double suunta = Iss.IssKuvakulma.Suunta(lat, lon, h.Paikka.Lat, h.Paikka.Lon);
             Iss.IssKuvakulma.Kohde(lat, lon, suunta, kaari, out double plat, out double plon, out _);
             return Iss.IssKuvakulma.KohteenKulma(new Iss.IssHetki(new LatLon(plat, plon), h.KorkeusM, h.Suuntima), lat, lon);
+        }
+
+        /// <summary>
+        /// Laajan julistekuvan sommittelu (Päätoimittaja 6.10.: "maapallon kaari noin 20–25 % kuvan yläreunasta ja logo mustassa
+        /// avaruudessa kaaren yllä"). Kamera radalla kohteen suunnassa niin, että pystykentässä pystyKentta (°) horisontti on
+        /// osuudella kaariYlhaalta ja kohde osuudella kohdeYlhaalta kuvan yläreunasta; kamera tähtää kuvan keskipisteen maapisteeseen.
+        /// </summary>
+        public Kuvakulma LaajaKuvakulma(double lat, double lon, double pystyKentta, double kaariYlhaalta = 0.22, double kohdeYlhaalta = 0.62,
+            double? suunta = null)
+        {
+            var h = AlusHetki(Iss.IssNyt.Kello(), Nyt / 1000);
+            const double R = 6_371_000, D = Math.PI / 180;
+            double H = Math.Max(1000, h.KorkeusM), k = R / (R + H), puoli = Math.Tan(pystyKentta * D / 2);
+            // Kulmat aluksesta alapisteestä mitattuna (nadiiri); horisontti + 0,3° (ilmakehän kaari näkyy kiinteän reunan yllä).
+            double horisontti = Math.Asin(k) + 0.3 * D;
+            double keskus = horisontti - Math.Atan((1 - 2 * kaariYlhaalta) * puoli);
+            double kohde = keskus - Math.Atan((2 * kohdeYlhaalta - 1) * puoli);
+            double Kaari(double nadiiri) => Math.Asin(Math.Min(1, Math.Sin(nadiiri) / k)) - nadiiri;   // maakaari alapisteestä (rad)
+            // Kamera kohteesta katsottuna aluksen suunnassa (tai annetussa suunnassa, testi `astro kyyti kuvaa suunta`).
+            double s = suunta ?? Iss.IssKuvakulma.Suunta(lat, lon, h.Paikka.Lat, h.Paikka.Lon);
+            Iss.IssKuvakulma.Kohde(lat, lon, s, Kaari(kohde) / D, out double plat, out double plon, out _);
+            var iss = new Iss.IssHetki(new LatLon(plat, plon), h.KorkeusM, h.Suuntima);
+            double takaisin = Iss.IssKuvakulma.Suunta(plat, plon, lat, lon);
+            Iss.IssKuvakulma.Kohde(plat, plon, takaisin, Kaari(keskus) / D, out double tlat, out double tlon, out _);
+            return Iss.IssKuvakulma.KohteenKulma(iss, tlat, tlon);
         }
 
         /// <summary>Tarkan kuvan kamera kuvauspaikkaan aluksen nykyisestä paikasta (Iss.Kuvauspaikat.Rajaus).</summary>
@@ -688,12 +715,49 @@ namespace Matkakirja.Linssit.Astronautti
             lento = null;
             Iss.IssNyt.Simu.AsetaKerroin(kerroin);
             tietoAika = -1;
+            if (KaasuKerroin != kerroin) { KaasuKerroin = kerroin; KaasuKerroinVaihtui?.Invoke(kerroin); }
             if (kerroin != Kaasu)
             {
                 Kaasu = kerroin;
                 y?.Tehoste(KaasuTehoste, 1f);   // vivun pykälän aito naksahdus (Sisältökirjuri, Tehostetaulu)
                 KaasuVaihtui?.Invoke(kerroin);
             }
+            return true;
+        }
+
+        /// <summary>Kaasun portaaton kerroin 1…1000 (AsetaKaasuPortaaton; pykälillä sama kuin Kaasu).</summary>
+        public double KaasuKerroin { get; private set; } = 1;
+        /// <summary>Natiivi-UI:n nimellä: sama kuin KaasuKerroin.</summary>
+        public double KaasuArvo => KaasuKerroin;
+        /// <summary>Natiivi-UI:n nimellä: portaaton kaasu (sama kuin AsetaKaasuPortaaton; int-pykälä menee AsetaKaasu(int):lle).</summary>
+        public bool AsetaKaasu(double kerroin) => AsetaKaasuPortaaton(kerroin);
+        /// <summary>Portaaton kerroin vaihtui (Natiivi-UI: LCD:n kerroin ja nopeus).</summary>
+        public event Action<double> KaasuKerroinVaihtui;
+
+        /// <summary>
+        /// Portaaton kaasu (omistaja 6.10.: portaaton nopeuskahva 1×–1000×, Natiivi-UI): kerroin 1…1000 tästä hetkestä ilman hyppyä.
+        /// Kaasu (int) on suurin ylitetty pykälä (KaasuVaihtui); naksahdus soi vain pykälän ylityksessä.
+        /// </summary>
+        public bool AsetaKaasuPortaaton(double kerroin)
+        {
+            if (!Auki || double.IsNaN(kerroin)) return false;
+            var p = Iss.Simukello.Nopeudet;
+            kerroin = Math.Max(p[0], Math.Min(p[p.Length - 1], kerroin));
+            lento = null;
+            Iss.IssNyt.Simu.AsetaKerroin(kerroin);
+            tietoAika = -1;
+            bool muuttui = Math.Abs(kerroin - KaasuKerroin) > 1e-9;
+            KaasuKerroin = kerroin;
+            // Pykälä = suurin 1/10/100/1000, jonka kerroin on ylittänyt: naksahdus vain pykälän ylityksessä (Natiivi-UI 6.10.).
+            int pykala = p[0];
+            foreach (int x in p) if (kerroin >= x - 1e-6) pykala = x;
+            if (pykala != Kaasu)
+            {
+                Kaasu = pykala;
+                y?.Tehoste(KaasuTehoste, 1f);
+                KaasuVaihtui?.Invoke(pykala);
+            }
+            if (muuttui) KaasuKerroinVaihtui?.Invoke(kerroin);
             return true;
         }
 
@@ -925,7 +989,7 @@ namespace Matkakirja.Linssit.Astronautti
             kyyti.Katse.Ohjaa(Iss.JoystickSuunta.Ei, y?.Aika ?? 0);
             suhina?.Lopeta(SuhinaLiukuS);
             suhina = null;
-            Kaasu = 1;
+            Kaasu = 1; KaasuKerroin = 1;
             // Web pura: linssi suljetaan, aika heti todelliseksi (testikellon siirto säilyy).
             lento = null;
             Iss.IssNyt.Simu.PalaaLive(vahennetty: true);

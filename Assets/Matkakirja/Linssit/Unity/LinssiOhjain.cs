@@ -1738,6 +1738,11 @@ namespace Matkakirja.Natiivi
                         // veto <dx> <dy> [ms] simuloi sormen vedon pisteinä (ms > 0 jättää inertian).
                         else if (a == "katse" && osat.Length > 3) Kirjaa("astro kyyti katse: " + KyydinKatse(l, osat.Skip(3).ToArray()));
                         else if (a == "veto") Kirjaa("astro kyyti veto: " + KyydinVeto(l, osat.Skip(3).ToArray()));
+                        else if (a == "pallolukko")   // ISS-ohjaamo: pallon eleet pois (omistaja 6.10.); 0 = entinen käytös (vian toisto)
+                        {
+                            if (osat.Length > 3) CupolaVeto.PalloLukittuOhjaamossa = osat[3] != "0";
+                            Kirjaa($"astro kyyti pallolukko {(CupolaVeto.PalloLukittuOhjaamossa ? "päällä" : "pois")}, pallo {(kierto != null && kierto.EleetMuualla ? "lukittu" : "auki")}");
+                        }
                         // Ohjaamo (omistaja 4.10.): joystick <ylos|alas|vasen|oikea|ei> ja kaasu <1|10|100|1000>.
                         else if (a == "joy" && osat.Length > 3 && Enum.TryParse<Matkakirja.Linssit.Iss.JoystickSuunta>(osat[3], true, out var js))
                         { l.Joystick(js); Ruudunpaivitys.Herata(1f); Kirjaa($"astro kyyti joy: {js}, {l.CupolanKatse.Tila(KatseenOletus())}"); }
@@ -1801,6 +1806,13 @@ namespace Matkakirja.Natiivi
                             Kirjaa($"astro kyyti sijainti satunnaiset: {pisteet.Count} pistettä, paikkoja {ai?.Paikat.Count ?? 0} (Documents/sijainti-taulukko.txt)");
                         }
                         else if (a == "sijainti") { var (k1, m1) = l.Sijainti(); Kirjaa($"astro kyyti sijainti: {k1} / {m1}"); }
+                        else if (a == "nopeustehoste")
+                        {
+                            if (osat.Length > 3) Matkakirja.Linssit.Nopeustehoste.Pois = osat[3] == "0";
+                            Kirjaa("astro kyyti " + Matkakirja.Linssit.Nopeustehoste.Tila());
+                        }
+                        else if (a == "kaasu" && osat.Length > 4 && osat[3] == "portaaton" && LukuOk(osat[4], out double kaasuK))
+                            Kirjaa($"astro kyyti kaasu portaaton: {(l.AsetaKaasuPortaaton(kaasuK) ? l.KaasuKerroin.ToString("0.#") + "×, pykälä " + l.Kaasu : "ei auki")}");
                         else if (a == "kaasu" && osat.Length > 3 && int.TryParse(osat[3], out int kk))
                             Kirjaa($"astro kyyti kaasu: {(l.AsetaKaasu(kk) ? kk + "×" : "ei pykälää")}, {Matkakirja.Linssit.Iss.IssNyt.Simu}");
                         else if (a == "tumma" && osat.Length > 3 && float.TryParse(osat[3].Replace(',', '.'),
@@ -1932,6 +1944,12 @@ namespace Matkakirja.Natiivi
                             AstronauttiKerros.S2KevytPakotettu = osat[3] == "auto" ? null : osat[3] != "0";
                             Kirjaa($"astro s2kevyt {(AstronauttiKerros.S2KevytPakotettu.HasValue ? (AstronauttiKerros.S2KevytPakotettu.Value ? "kevyt" : "täysi") : "auto")} → {(AstronauttiKerros.S2Kevyt ? "kevyt" : "täysi")}");
                         }
+                        else if (a == "s2maailma" && osat.Length > 3)   // S2-maailma v2 (juna 145): 0 = vain Eurooppa kuten ennen
+                        {
+                            AstronauttiKerros.S2MaailmaKaytossa = osat[3] != "0";
+                            Matkakirja.Linssit.IssKamera.KuvanTyosto.Maailma = AstronauttiKerros.S2MaailmaKaytossa ? AstronauttiKerros.S2MaailmaLadattu : null;
+                            Kirjaa($"astro kyyti s2maailma {(AstronauttiKerros.S2MaailmaKaytossa ? "päällä" : "pois")}, laatat {(Matkakirja.Linssit.IssKamera.KuvanTyosto.Maailma != null ? "ladattu" : "ei")}");
+                        }
                         else if (a == "s2" && osat.Length > 3)   // Euroopan S2-mosaiikki kyydissä (AstronauttiKerros.PaivitaS2)
                         {
                             if (osat[3] == "url" && osat.Length > 4) AstronauttiKerros.S2Osoite = osat[4] == "pois" ? null : osat[4];
@@ -1978,6 +1996,7 @@ namespace Matkakirja.Natiivi
                                     + (lahin == null ? "-" : $"{lahin.Tunniste} {Matkakirja.Linssit.Iss.Ylilennot.MaaEtaisyysKm(a0.Lat, a0.Lon, lahin.Lat, lahin.Lon):0.0} km")
                                     + $", paikkoja {Matkakirja.Linssit.Iss.Kuvauspaikat.Nykyiset.Count}, kuvia jäljellä {Matkakirja.Natiivi.IssKameraKuva.KuviaJaljella}");
                             }
+                            else if (osat.Length > 4 && osat[3] == "julistebudjetti") { Matkakirja.Natiivi.IssKameraKuva.JulisteBudjettiMt = Luku(osat[4]); Kirjaa("astro kyyti kuvaa julistebudjetti: " + osat[4] + " Mt"); }
                             else if (osat.Length > 4 && osat[3] == "budjetti") { Matkakirja.Natiivi.IssKameraKuva.BudjettiMt = Luku(osat[4]); Kirjaa("astro kyyti kuvaa budjetti: " + osat[4] + " Mt"); }
                             else if (osat.Length > 4 && osat[3] == "valotus")
                             {
@@ -1986,6 +2005,13 @@ namespace Matkakirja.Natiivi
                                 Kirjaa($"astro kyyti kuvaa valotus: tavoite {Matkakirja.Natiivi.IssKameraKuva.ValotusTavoite}, max {Matkakirja.Natiivi.IssKameraKuva.ValotusMax}");
                             }
                             else if (osat.Length > 4 && osat[3] == "reuna") { Matkakirja.Natiivi.IssKameraKuva.ReunaKarkeus = Luku(osat[4]); Kirjaa("astro kyyti kuvaa reuna: " + osat[4]); }
+                            else if (osat.Length > 4 && osat[3] == "kontrasti") { Matkakirja.Natiivi.IssKameraKuva.KuvanKontrasti = (float)Luku(osat[4]); Kirjaa($"astro kyyti kuvaa kontrasti {Matkakirja.Natiivi.IssKameraKuva.KuvanKontrasti:0.00}"); }
+                            else if (osat.Length > 4 && osat[3] == "siluetti") { Matkakirja.Natiivi.IssJuliste.Siluetti = osat[4] != "0"; Kirjaa($"astro kyyti kuvaa siluetti {(Matkakirja.Natiivi.IssJuliste.Siluetti ? "päällä" : "pois")}"); }
+                            else if (osat.Length > 4 && osat[3] == "juliste") { Matkakirja.Natiivi.IssJuliste.Kaytossa = osat[4] != "0"; Kirjaa($"astro kyyti kuvaa juliste {(Matkakirja.Natiivi.IssJuliste.Kaytossa ? "päällä" : "pois")}"); }
+                            else if (osat.Length > 5 && osat[3] == "sommittelu") { Matkakirja.Natiivi.IssKameraKuva.LaajaKaari = Luku(osat[4]); Matkakirja.Natiivi.IssKameraKuva.LaajaKohde = Luku(osat[5]); Kirjaa($"astro kyyti kuvaa sommittelu: kaari {Matkakirja.Natiivi.IssKameraKuva.LaajaKaari:0.00}, kohde {Matkakirja.Natiivi.IssKameraKuva.LaajaKohde:0.00} yläreunasta"); }
+                            else if (osat.Length > 4 && osat[3] == "suunta") { Matkakirja.Natiivi.IssKameraKuva.KuvanSuunta = LukuOk(osat[4], out double ks) ? ks : (double?)null; Kirjaa($"astro kyyti kuvaa suunta {(Matkakirja.Natiivi.IssKameraKuva.KuvanSuunta is double d ? d.ToString("0") + "°" : "aluksen mukaan")}"); }
+                            else if (osat.Length > 5 && osat[3] == "kohde" && LukuOk(osat[4], out double kkLat) && LukuOk(osat[5], out double kkLon)) { Matkakirja.Natiivi.IssKameraKuva.KuvanKohde = (kkLat, kkLon); Kirjaa($"astro kyyti kuvaa kohde {kkLat:0.000}, {kkLon:0.000} (seuraava kuva)"); }
+                            else if (osat.Length > 4 && osat[3] == "laaja") { Matkakirja.Natiivi.IssKameraKuva.Laaja = osat[4] != "0"; Kirjaa($"astro kyyti kuvaa laaja {(Matkakirja.Natiivi.IssKameraKuva.Laaja ? "päällä" : "pois (tele)")}, kenttä ≤ {Matkakirja.Natiivi.IssKameraKuva.KuvanMaxKentta:0}°"); }
                             else if (osat.Length > 4 && osat[3] == "kentta") { Matkakirja.Natiivi.IssKameraKuva.MaxKentta = Luku(osat[4]); Kirjaa("astro kyyti kuvaa kentta: " + osat[4] + "°"); }
                             else if (osat.Length > 3 && osat[3] == "albumi")
                             {
@@ -2106,6 +2132,27 @@ namespace Matkakirja.Natiivi
                     else if (osat.Length > 2 && osat[1] == "testiotsake") OpasSovitin.Testiotsake = osat[2] == "1";
                     else if (osat.Length > 2 && osat[1] == "pysayta") OpasSovitin.Pysaytetty = osat[2] == "1";
                     else if (osat.Length > 2 && osat[1] == "pcm") OpasSovitin.PcmKaytossa = osat[2] == "1";
+                    // Laitekokeet ilman kosketusta (juna 151): kierros, Liiku-kohde, lopetus, jatko ja kysymys kuten napeista.
+                    else if (osat.Length > 1 && osat[1] == "kierros") Kirjaa($"opas: kierros → {OpasSovitin.Kaupunkikierros()}");
+                    else if (osat.Length > 1 && osat[1] == "lopeta") Kirjaa($"opas: lopeta → {OpasSovitin.LopetaKierros()}");
+                    else if (osat.Length > 1 && osat[1] == "jatka") Kirjaa($"opas: jatka → {OpasSovitin.JatkaKierrosta()}");
+                    else if (osat.Length > 2 && osat[1] == "kysy") Kirjaa($"opas: kysy → {OpasSovitin.Kysy(string.Join(" ", osat.Skip(2)))}");
+                    else if (osat.Length > 2 && osat[1] == "liiku")
+                    {
+                        string arvo = string.Join(" ", osat.Skip(2));
+                        var lista = OpasSovitin.Kohteet;
+                        var t = lista == null ? null : int.TryParse(arvo, out int li) ? (li >= 0 && li < lista.Count ? lista[li] : null)
+                            : lista.FirstOrDefault(x => string.Equals(x.Nimi, arvo, StringComparison.OrdinalIgnoreCase));
+                        Kirjaa($"opas: liiku {arvo} → {(t != null && OpasSovitin.Siirry(t) ? "ok" : "ei löytynyt")}");
+                    }
+                    // Laitekoe ilman kosketusta: suosikin (täkyn) valinta indeksillä tai nimellä (Akropolis).
+                    else if (osat.Length > 2 && osat[1] == "valitse")
+                    {
+                        string arvo = string.Join(" ", osat.Skip(2));
+                        bool ok = int.TryParse(arvo, out int ix) ? OpasSovitin.Valitse(ix)
+                            : OpasSovitin.Takyt != null && OpasSovitin.Takyt.FirstOrDefault(t => string.Equals(t.Nimi, arvo, StringComparison.OrdinalIgnoreCase)) is var tk && tk != null && OpasSovitin.Valitse(tk);
+                        Kirjaa($"opas: valitse {arvo} → {(ok ? "ok" : "ei löytynyt")}");
+                    }
                     else if (osat.Length > 5 && osat[1] == "tapit"
                         && double.TryParse(osat[2], System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out var tk)
                         && double.TryParse(osat[3], System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out var th)

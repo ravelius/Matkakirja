@@ -54,9 +54,9 @@ namespace Matkakirja.Natiivi
         public static bool Pysaytetty;
         /// <summary>Testiotsake (komento "opas testiotsake 1"): worker palauttaa kerronnan ilman ääntä (ei ElevenLabs-kulutusta simussa).</summary>
         public static bool Testiotsake;
-        /// <summary>PCM-suoratoisto (Pöllön aani_pcm) käytössä. Oletus pois, kunnes virta on todennettu simulla äänen kanssa
-        /// (Päätoimittaja 5.10. 20.3x: juna 144 ilman riskiä); pois-tilassa käytetään mp3:a (aani) kuten ennen. Komento "opas pcm 0|1".</summary>
-        public static bool PcmKaytossa;
+        /// <summary>PCM-suoratoisto (Pöllön aani_pcm) käytössä. OLETUS PÄÄLLÄ (Päätoimittaja 6.10. 13.2x, juna 148): Pöllön kylmä mp3 alkaa
+        /// ~14 s:ssa, PCM-virta ~0,9 s:ssa (mitattu 6.10. 13.1x). Virran virheessä mp3-varapolku (LataaPcm). Komento "opas pcm 0|1".</summary>
+        public static bool PcmKaytossa = true;
         /// <summary>Kappaleen äänen avain: PCM-virta vain kytkimellä, muuten mp3.</summary>
         static string AaniAvain(OpasKohde k) => k == null ? null : PcmKaytossa ? k.AaniAvain : (string.IsNullOrEmpty(k.Aani) ? null : k.Aani);
         /// <summary>Aloituskaupunki (komento "opas kaupunki <nimi>"); ensimmäinen pyyntö on tämä toive.</summary>
@@ -100,7 +100,8 @@ namespace Matkakirja.Natiivi
             Aloituskaupunki = nimi.Trim();
             Viimeisin.pakotettuSijainti = (lat, lon);
             Viimeisin.o.Kirjaa($"opas: kaupunki vaihtuu → {Aloituskaupunki} ({lat:F3}, {lon:F3})");
-            Viimeisin.silmukka.VaihdaPaikka(lat, lon);   // kamera lentää heti kaupungin yleiskuvaan (Natiivi-UI 6.10. 00.2x)
+            if (!Viimeisin.AvaaKaupunki(lat, lon, Aloituskaupunki)) return false;
+            Viimeisin.silmukka.VaihdaPaikka(lat, lon, nimi.Trim());   // kamera lentää heti kaupungin yleiskuvaan (Natiivi-UI 6.10. 00.2x)
             var v = Viimeisin;
             if (!v.SanoNimi(nimiaanet?.Kaupungille(iso, nimi))) v.Silta(OpasSiltalauseet.Kaupunki, true);
             return true;
@@ -109,8 +110,9 @@ namespace Matkakirja.Natiivi
         /// <summary>Maan valinta Vaihda kohde -valikossa (Natiivi-UI, juna 146): maan nimi Williamin äänellä heti. true = sanottiin.</summary>
         public static bool MaaValittu(string iso)
         {
-            if (!Auki || string.IsNullOrEmpty(iso)) return false;
-            return Viimeisin.SanoNimi(nimiaanet?.Maalle(iso));
+            // Omistaja TF 149 (16.5x): ei puhetta maanosan eikä maan valinnasta (pelaaja voi vielä peruuttaa); kertoja vasta
+            // kaupungin tai suosikin valinnasta, kerran (VaihdaKaupunki: nimi + yksi jatko).
+            return false;
         }
         (double lat, double lon)? pakotettuSijainti;
 
@@ -150,7 +152,14 @@ namespace Matkakirja.Natiivi
             Viimeisin = this;
             var alku = OpasSilmukka.Avauskuva(KoopenhaminaTesti.Alku.Lat, KoopenhaminaTesti.Alku.Lon);
             silmukka = new OpasSilmukka(alku);
-            if (!kaupunki.Avaa(alku.Lat, alku.Lon, 45))
+            // AVAUS ILMAN KARTTAA (omistaja 6.10. 14.2x, juna 149): täkyavauksessa Cesium avataan vasta pelaajan valinnasta
+            // (AvaaKaupunki), joten aloitusvalikko aukeaa heti eikä yhtään laattaa ladata ennen valintaa.
+            // Natiivi-UI nostaa TakyAvaus-lipun valikon Nayta-kutsussa (KytkeChat): kytke ensin, päätä sitten (simu 6.10. 17.00:
+            // lippu nousi vasta tämän jälkeen, ja kartta latautui turhaan mustan aloitusvalikon taakse).
+            KytkeChat(true);
+            kaupunkiOdottaa = TakyAvaus && !Testi;
+            if (kaupunkiOdottaa) silmukka.PakotaSiirto = true;   // mikä tahansa ensimmäinen liike avaa kartan siirtoruudun kautta
+            if (!kaupunkiOdottaa && !kaupunki.Avaa(alku.Lat, alku.Lon, 45))
             {
                 Virhe = OpasTiedot.Nimi + ": " + kaupunki.Virhe;
                 Vaihtui?.Invoke(this);
@@ -164,18 +173,26 @@ namespace Matkakirja.Natiivi
             y.Pelikerrokset(false);
             y.MusiikkiPitoon(true);
             y.Peite(true);
-            o.StartCoroutine(PeitePois());   // simu 18.39: peite jäi päälle ja tummensi koko näkymän
+            if (!kaupunkiOdottaa) o.StartCoroutine(PeitePois());   // simu 18.39: peite jäi päälle ja tummensi koko näkymän
+            else y.Peite(false);   // aloitusvalikko piirtää oman tumman pintansa; peite himmensi sen ja esti napautukset (simu 6.10. 17.2x, juna 151)
             if (puhe == null)
             {
                 puhe = o.gameObject.AddComponent<AudioSource>();
                 puhe.playOnAwake = false; puhe.spatialBlend = 0f; puhe.loop = false;
             }
-            KytkeChat(true);   // chat ei aukea itsestään (opas kevyeksi, Päätoimittaja 5.10.): vain valikon "Näytä teksti" -rivistä
+            // KytkeChat(true) ajettiin jo ennen karttapäätöstä; chat ei aukea itsestään (opas kevyeksi, Päätoimittaja 5.10.), vain valikon "Näytä teksti" -rivistä
             silmukka.Pyyda += Pyyda;
             silmukka.Saapui += Saapui;
             silmukka.Hiljenna += Hiljenna;
             silmukka.Kysyy += Kysyy;
             silmukka.LentoAlkaa += LentoAlkoi;
+            // Siirto ilman lentoa (omistaja 6.10. 12.0x): origo heti kohteeseen, latausaste kohdekameran laatoista.
+            silmukka.SiirtoAlkaa += (la, lo) => { if (kaupunkiOdottaa && !AvaaKaupunki(la, lo, silmukka.SiirtoNimi)) return; kaupunki.SiirraOrigo(la, lo, MaaPisteessa(la, lo) is double m && !double.IsNaN(m) ? m : 45); o.Kirjaa($"opas: siirrytään {silmukka.SiirtoNimi} ({la:F3}, {lo:F3})"); };
+            silmukka.LatausEdistys = () => kaupunki.Latausaste / 100.0;
+            // Maaston korkeus kohdekehykseen (simu 6.10. 12.42: Praha aukesi 45 m:n arviolla mäen sisältä): näyte pisteeseen.
+            silmukka.MaaPisteessa = MaaPisteessa;
+            silmukka.MaaTarvitaan += (la, lo) => o.StartCoroutine(KorkeusPisteessa(la, lo));
+            silmukka.KehysKorjattu += (arvio, m) => o.Kirjaa($"opas: kehyksen maa {arvio:F0} → {m:F0} m (näyte)");
             if (silta == null)
             {
                 silta = o.gameObject.AddComponent<AudioSource>();
@@ -191,7 +208,7 @@ namespace Matkakirja.Natiivi
             else silmukka.Aloita(Aloituskaupunki);
             PaivitaKamera();
             Vaihtui?.Invoke(this);
-            o.Kirjaa($"opas: auki, data {kaupunki.Kaytossa}, {(Testi ? "TESTI (ei workeria)" : "worker " + PuluChat.Palvelin + Polku)}{(PolloTestitunnus.Asetettu ? ", testitunnus asetettu" : "")}");
+            o.Kirjaa($"opas: auki{(kaupunkiOdottaa ? " (aloitusvalikko, kartta valinnasta)" : "")}, data {kaupunki.Kaytossa}, {(Testi ? "TESTI (ei workeria)" : "worker " + PuluChat.Palvelin + Polku)}{(PolloTestitunnus.Asetettu ? ", testitunnus asetettu" : "")}");
         }
 
         // Natiivi-UI:n koukku (PuluChat.Sieppaa, haara natiivi-ui/pulu-sieppaus) heijastuksella, jotta tämä kääntyy myös ilman sitä.
@@ -211,8 +228,31 @@ namespace Matkakirja.Natiivi
             }
             var kentta = typeof(PuluChat).GetField("Sieppaa", System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Static);
             if (kentta == null || kentta.FieldType != typeof(Func<string, bool>)) return;
-            if (paalle) { vanhaSieppaus = kentta.GetValue(null) as Delegate; kentta.SetValue(null, (Func<string, bool>)Toive); }
+            // Mikrofoni ja kirjoitus suoraan oppaalle keskusteluna (omistaja 6.10. 11.57): vastaus ja toiminto /opas/kysy:stä.
+            if (paalle) { vanhaSieppaus = kentta.GetValue(null) as Delegate; kentta.SetValue(null, (Func<string, bool>)Puhu); }
             else kentta.SetValue(null, vanhaSieppaus);
+        }
+
+        /// <summary>Aloitusvalikko: opas auki, paikkaa ei valittu, Cesium ei auki (UI piirtää läpinäkymättömän tumman taustan).</summary>
+        public static bool Avausvalikko => Auki && Viimeisin.kaupunkiOdottaa;
+        bool kaupunkiOdottaa;
+
+        /// <summary>Ensimmäinen valinta: Cesium auki suoraan kohteeseen, ja paikka avautuu siirtoruudun kautta. true = auki.</summary>
+        bool AvaaKaupunki(double lat, double lon, string nimi)
+        {
+            if (!kaupunkiOdottaa) return true;
+            kaupunkiOdottaa = false;
+            double maa = MaaPisteessa(lat, lon);
+            if (!kaupunki.Avaa(lat, lon, double.IsNaN(maa) ? 45 : maa))
+            {
+                Virhe = OpasTiedot.Nimi + ": " + kaupunki.Virhe;
+                Vaihtui?.Invoke(this);
+                return false;
+            }
+            o.StartCoroutine(PeitePois());
+            silmukka.PakotaSiirto = true;
+            o.Kirjaa($"opas: kartta auki valinnasta → {nimi} ({lat:F3}, {lon:F3})");
+            return true;
         }
 
         public void Paivita()
@@ -225,20 +265,36 @@ namespace Matkakirja.Natiivi
         {
             if (silmukka == null || Virhe != null || paivitetty == Time.frameCount) return;
             paivitetty = Time.frameCount;
-            bool loppui = !tauolla && (pcmNyt != null ? pcmNyt.Loppui : Time.unscaledTime >= puheLoppuu && (puhe == null || !puhe.isPlaying));
+            // Aloitusvalikko: ei kameraa eikä laattoja; silmukka etenee silti (toive tai kysymys ennen valintaa → ensimmäinen
+            // lento on pakotettu siirto, joka avaa kartan SiirtoAlkaa-kutsussa suoraan kohteeseen).
+            if (kaupunkiOdottaa) { silmukka.Paivita(Time.unscaledDeltaTime, MaaKorkeus, () => false); return; }
+            // PCM: loppu = kaikki ladattu ja soitettu; varmistus: klippi pysähtyi (ei saa jäädä odottamaan ikuisesti, toisto 16.4x).
+            bool pcmPysahtyi = pcmNyt != null && puhe != null && !puhe.isPlaying && Time.unscaledTime - puheAlkoi > 1f;
+            bool loppui = !tauolla && (pcmNyt != null ? (puhe != null && pcmNyt.SoitettuLoppuun(puhe.timeSamples)) || pcmPysahtyi : Time.unscaledTime >= puheLoppuu && (puhe == null || !puhe.isPlaying));
             if (puhuu && loppui)
             {
                 if (pcmNyt != null) { if (pcmNyt.Katkoja > 0) o.Kirjaa($"opas: PCM-virrassa {pcmNyt.Katkoja} katkoa"); pcmNyt = null; if (puhe != null) puhe.Stop(); }
                 puhuu = false; y.Repliikki(false); silmukka.AaniLoppui();
             }
             kaupunki.PidaMaski();
+            kaupunki.PaivitaAvauslataus();   // ion-logo avauslatauksen ajan (Natiivi-UI KrediititTiivis)
             // OSM-tekijätieto aina oppaan ajan: worker käyttää Nominatimia koordinaatteihin ja reittiviivoihin (ODbL, juna 146).
             KrediititTiivis.OsmNakyvissa = true;
             KrediititTiivis.Paivita(true);   // kapealla ruudulla logot + "Data sources" (Googlen policy)
             if (Pysaytetty) { y.Kuvaa(silmukka.Asento); return; }
             var ennen = silmukka.Vaihe;
             LueTapit();
-            if (!tauolla && pelaajanToimi > 0 && !puhuu && Time.unscaledTime - pelaajanToimi > OdotusLauseS) { pelaajanToimi = -1f; Silta(OpasSiltalauseet.Odotus, false); }
+            bool siirtyy = silmukka.Siirtymassa;
+            if (siirtyy != siirtymaEdellinen) { siirtymaEdellinen = siirtyy; if (siirtyy) SiirtymaAlkaa?.Invoke(silmukka.SiirtoNimi); else SiirtymaValmis?.Invoke(); }
+            if (silmukka.Aloitettu) PaivitaKohteet();
+            if (!tauolla && pelaajanToimi > 0 && !puhuu && Time.unscaledTime - pelaajanToimi > OdotusLauseS) { pelaajanToimi = -1f; Silta(silmukka.Vaihe == OpasVaihe.Lentaa ? OpasSiltalauseet.Odotus : OpasSiltalauseet.OdotusPaikalla, false); }
+            if (!tauolla)
+                switch (kysyOdotus.Paivita(Time.unscaledDeltaTime))
+                {
+                    case KysyOdotus.Tapahtuma.Odotus5: Silta(OpasSiltalauseet.Odotus5, false); break;
+                    case KysyOdotus.Tapahtuma.Odotus12: Silta(OpasSiltalauseet.Odotus12, false); break;
+                    case KysyOdotus.Tapahtuma.Virhe: o.Kirjaa("opas: kysymykseen ei vastausta 25 s:ssa"); Silta(OpasSiltalauseet.Virhe, false); break;
+                }
             silmukka.Paivita(Time.unscaledDeltaTime, MaaKorkeus, () => kaupunki.Valmis);
             if (silmukka.Vaihe != ennen) o.Kirjaa($"opas: {ennen} → {silmukka.Vaihe} {(silmukka.Nykyinen?.Nimi ?? "")}, laatat {kaupunki.Latausaste:F0} %");
             if (silmukka.Vaihe != ennen && silmukka.Vaihe == OpasVaihe.Lentaa) OpasKorostusKuva.Piilota();
@@ -250,7 +306,12 @@ namespace Matkakirja.Natiivi
             else kaupunki.EsikameraPois();   // ei esilattavaa: piilokamera ei pidä vanhoja laattoja elossa
         }
 
-        double MaaKorkeus(OpasKohde k) => maaKorkeudet.TryGetValue(Avain(k), out var h) ? h : double.NaN;
+        double MaaKorkeus(OpasKohde k) => maaKorkeudet.TryGetValue(Avain(k), out var h) ? h : MaaPisteessa(k.Lat, k.Lon);
+        double MaaPisteessa(double lat, double lon) => pisteKorkeudet.TryGetValue(PisteAvain(lat, lon), out var h) ? h : double.NaN;
+        static string PisteAvain(double lat, double lon) => lat.ToString("F4") + "," + lon.ToString("F4");
+        readonly Dictionary<string, double> pisteKorkeudet = new Dictionary<string, double>(StringComparer.Ordinal);
+        readonly HashSet<string> pisteNaytteet = new HashSet<string>(StringComparer.Ordinal);
+        (double lat, double lon, double? h) viimeMaa;
         static string Avain(OpasKohde k) => k.Id ?? (k.Lat.ToString("F5") + "," + k.Lon.ToString("F5"));
 
         // ── Pyynnöt workerille (tai testilista) ──────────────────────────────
@@ -259,6 +320,312 @@ namespace Matkakirja.Natiivi
             if (Testi) { o.StartCoroutine(TestiVastaus(n)); return; }
             o.StartCoroutine(Hae(n, toive));
         }
+
+        // ---- KYSY, LIIKU, KAUPUNKIKIERROS, KESKUSTELU (omistaja 6.10. 11.57; Pelikoodarin endpointit, Natiivi-UI:n nimet) ----
+        /// <summary>Kysy-lista: vastauksen jatkokysymykset ensin, sitten paikan kysymykset; null = latautuu.</summary>
+        public static IReadOnlyList<string> Kysymykset => Viimeisin?.kysymykset;
+        /// <summary>Liiku-lista: kaupungin 12 tärkeintä (GET /opas/liiku); null = latautuu.</summary>
+        public static IReadOnlyList<OpasTaky> Kohteet => Viimeisin?.kohteet;
+        public static bool KierrosKaynnissa => Viimeisin?.silmukka != null && Viimeisin.silmukka.KierrosKaynnissa;
+
+        /// <summary>JATKA KIERROSTA -nappi näkyviin (Natiivi-UI): kysymys keskeytti kierroksen, ja vastaus on kuultu.</summary>
+        public static bool KierrosJatkettavissa
+        {
+            get
+            {
+                var v = Viimeisin;
+                return Auki && v.silmukka.KierrosKeskeytetty && !v.puhuu && !v.kysyOdotus.Kaynnissa && v.silmukka.Vaihe != OpasVaihe.Lentaa
+                    && (v.silta == null || !v.silta.isPlaying);
+            }
+        }
+
+        /// <summary>JATKA KIERROSTA -napin napautus: kesken jäänyt kohde alusta, muuten seuraava. true = jatkui.</summary>
+        public static bool JatkaKierrosta()
+        {
+            if (!Auki) return false;
+            var v = Viimeisin;
+            v.puhuttu = null;   // sama kohde saa alkaa uudelleen alusta
+            // Kesken jäänyt kohde luetaan alusta: ääni uudelleen, jos se ehdittiin vapauttaa (simu 17.4x: luettiin tekstinä).
+            if (v.silmukka.JatkoKohde is OpasKohde jk) v.Valmistele(jk);
+            bool ok = v.silmukka.JatkaKierrosta();
+            v.o.Kirjaa(ok ? $"opas: kierros jatkuu ({v.silmukka.KierrosTieto.numero}/{v.silmukka.KierrosTieto.maara})" : "opas: ei keskeytettyä kierrosta");
+            return ok;
+        }
+
+        /// <summary>■ LOPETA KIERROS (Natiivi-UI, tauon vasemmalla): kierros päättyy, kertoja vaikenee, vapaa tila. true = lopetettiin.</summary>
+        public static bool LopetaKierros()
+        {
+            if (!Auki) return false;
+            var v = Viimeisin;
+            if (v.tauolla) Tauko(false);
+            v.silmukka.LopetaKierros();
+            v.Hiljenna();
+            if (v.silta != null && v.silta.isPlaying) v.silta.Stop();
+            v.o.Kirjaa("opas: kierros lopetettu, vapaa tila");
+            return true;
+        }
+
+        /// <summary>Vapaa tila (■ jälkeen): ei kohdetta, Linssiseppä 2:n vapaa ohjaus (juna 152).</summary>
+        public static bool VapaaTila => Auki && Viimeisin.silmukka.VapaaTila;
+        string[] kysymykset, jatkoKysymykset = Array.Empty<string>();
+        List<OpasTaky> kohteet;
+        string kohteetKaupunki;
+        readonly List<(string rooli, string teksti)> historia = new List<(string, string)>();
+        int kysyLaskuri;
+
+        /// <summary>Liiku-listan kohde: lento heti (yli 30 km siirtoruudulla), pysähdys pyydetään samalla.</summary>
+        public static bool Siirry(OpasTaky t)
+        {
+            if (!Auki || t == null || string.IsNullOrEmpty(t.Nimi)) return false;
+            var v = Viimeisin;
+            if (v.tauolla) Tauko(false);
+            v.o.Kirjaa($"opas: liiku {t.Nimi}");
+            v.silmukka.Liiku(t.Nimi, t.Lat, t.Lon);
+            v.Silta(OpasSiltalauseet.Valinta, true);   // siirrossa (> 30 km) hiljaa: kertoja odottaa näkymää
+            return true;
+        }
+
+        /// <summary>Sama kuin Siirry (Natiivi-UI:n nimi Liiku-listalle).</summary>
+        public static bool Liiku(OpasTaky t) => Siirry(t);
+
+        /// <summary>Kaupunkikierros: Liiku-listan kohteet järjestyksessä, lyhyt kerronta kullekin.</summary>
+        public static bool Kaupunkikierros()
+        {
+            var v = Viimeisin;
+            if (!Auki || v.kohteet == null || v.kohteet.Count == 0) return false;
+            if (v.tauolla) Tauko(false);
+            var jono = new List<(string, double, double)>();
+            foreach (var t in v.kohteet) jono.Add((t.Nimi, t.Lat, t.Lon));
+            v.o.Kirjaa($"opas: kaupunkikierros {jono.Count} kohdetta");
+            v.silmukka.AloitaKierros(jono);
+            v.Silta(OpasSiltalauseet.Aloitus, true);
+            return true;
+        }
+
+        /// <summary>Kysy-listan kysymys: sama keskustelureitti kuin mikki ja näppäimistö.</summary>
+        public static bool Kysy(string kysymys) => Puhu(kysymys, true);
+
+        /// <summary>Mikki ja näppäimistö suoraan oppaalle: POST /opas/kysy → vastaus (Williamin ääni) ja toiminto.</summary>
+        public static bool Puhu(string teksti) => Puhu(teksti, false);
+
+        static bool Puhu(string teksti, bool kysymysListalta)
+        {
+            if (!Auki || string.IsNullOrWhiteSpace(teksti)) return false;
+            var v = Viimeisin;
+            if (v.tauolla) Tauko(false);
+            v.o.Kirjaa("opas: kysy \"" + teksti.Trim() + "\"");
+            // Kierroksella kysymys keskeyttää kierroksen heti (omistaja TF 149): kamera paikalleen, kertoja vaikenee, JATKA-nappi vastauksen jälkeen.
+            if (v.silmukka.KeskeytaKierros()) v.o.Kirjaa("opas: kierros keskeytetty kysymykseen");
+            // Siltalause tilanteen mukaan (juna 150): kysymykseen syventävä lause ilman odotus-ajastinta (vastaus PCM:llä ~5–6 s);
+            // käskyyn ("vie minut …") ei lausetta ennen vastausta, koska liikettä ei vielä tiedetä (vastauksen oma ääni kuittaa).
+            if (kysymysListalta || OpasSiltalauseet.OnKysymys(teksti)) v.Silta(OpasSiltalauseet.Kysymys, false);
+            v.kysyOdotus.Aloita();   // vastaus ei ala: odotus5 → odotus12 → virhe (PaivitaKamera)
+            v.o.StartCoroutine(v.KysyWorkerilta(teksti.Trim(), v.kysyOdotus.Numero));
+            return true;
+        }
+
+        IEnumerator KysyWorkerilta(string kysymys, int nro)
+        {
+            var nyt = silmukka.Nykyinen; var kehys = silmukka.NykyinenKehys;
+            var sb = new StringBuilder("{");
+            sb.Append("\"istunto\":\"").Append(istunto).Append("\",\"kaupunki\":\"").Append(Escape(Aloituskaupunki)).Append("\",");
+            if (nyt != null && kehys != null && !nyt.Kysymys)
+                sb.Append("\"paikka\":{\"id\":").Append(nyt.Id == null ? "null" : "\"" + Escape(nyt.Id) + "\"").Append(",\"nimi\":\"").Append(Escape(nyt.Nimi ?? ""))
+                  .Append("\",\"lat\":").Append(kehys.Lat.ToString("F5", System.Globalization.CultureInfo.InvariantCulture))
+                  .Append(",\"lon\":").Append(kehys.Lon.ToString("F5", System.Globalization.CultureInfo.InvariantCulture)).Append("},");
+            else sb.Append("\"paikka\":null,");
+            sb.Append("\"kysymys\":\"").Append(Escape(kysymys)).Append("\",\"historia\":[");
+            for (int i = Math.Max(0, historia.Count - 6); i < historia.Count; i++)
+            {
+                if (i > Math.Max(0, historia.Count - 6)) sb.Append(',');
+                sb.Append("{\"rooli\":\"").Append(historia[i].rooli).Append("\",\"teksti\":\"").Append(Escape(historia[i].teksti)).Append("\"}");
+            }
+            sb.Append("],\"kaydyt\":[");
+            bool eka = true;
+            foreach (var id in silmukka.Nahdyt) { if (!eka) sb.Append(','); sb.Append('"').Append(Escape(id)).Append('"'); eka = false; }
+            sb.Append("],\"kieli\":\"fi\",\"krediitit\":[\"osm\"]}");
+            using var r = Pyynto("/opas/kysy", sb.ToString());
+            float t0 = Time.realtimeSinceStartup;
+            yield return r.SendWebRequest();
+            if (silmukka == null) yield break;
+            var v = r.result == UnityWebRequest.Result.Success ? OpasKysyVastaus.Lue(MiniJson.Jasenna(r.downloadHandler.text) as Dictionary<string, object>) : null;
+            o.Kirjaa($"opas: kysy-vastaus {(v == null ? "VIRHE " + r.responseCode : v.Toiminto + (v.ToimintoNimi != null ? " " + v.ToimintoNimi : ""))} ({Time.realtimeSinceStartup - t0:F1} s)");
+            if (v == null) { if (kysyOdotus.Epaonnistui(nro)) Silta(OpasSiltalauseet.Virhe, false); yield break; }
+            if (!kysyOdotus.Kelpaa(nro)) { o.Kirjaa("opas: kysy-vastaus myöhästyi tai uudempi kysymys, hylätty"); yield break; }
+            // Toiminnoton vastaus alkaa kerrontana (AlkaaPuhua kuittaa portaat); toiminto kuittaa heti.
+            if (v.Toiminto != OpasToiminto.Ei) kysyOdotus.Alkoi();
+            historia.Add(("pelaaja", kysymys));
+            if (!string.IsNullOrWhiteSpace(v.Teksti)) historia.Add(("opas", v.Teksti));
+            while (historia.Count > 12) historia.RemoveAt(0);
+            jatkoKysymykset = v.Jatkokysymykset ?? Array.Empty<string>();
+            kysymykset = OpasKysyVastaus.Yhdista(jatkoKysymykset, nyt?.Kysymykset ?? kysymykset);
+            // Vastaus kerrotaan paikalla (toiminnoton) tai toiminnon kuittauksena (siirry/kaupunki/kierros), sitten toiminto.
+            var vastaus = new OpasKohde { Id = "kysy-" + (++kysyLaskuri), Nimi = nyt?.Nimi, Alarivi = nyt?.Alarivi, Teksti = v.Teksti, Aani = v.Aani, AaniPcm = v.AaniPcm,
+                KestoS = v.KestoS, Lat = kehys?.Lat ?? silmukka.Asento.Lat, Lon = kehys?.Lon ?? silmukka.Asento.Lon, KokoM = nyt?.KokoM ?? 100, Kuvat = nyt?.Kuvat,
+                Korostus = nyt?.Korostus, Kysymykset = kysymykset };
+            switch (v.Toiminto)
+            {
+                case OpasToiminto.Siirry:
+                    if (!double.IsNaN(v.ToimintoLat)) LiikuVastauksesta(v, vastaus, v.ToimintoNimi ?? kysymys, v.ToimintoLat, v.ToimintoLon);
+                    break;
+                case OpasToiminto.Kohde:
+                {
+                    var t = kohteet?.Find(x => x.Id == v.ToimintoId);
+                    if (t != null) LiikuVastauksesta(v, vastaus, t.Nimi, t.Lat, t.Lon);
+                    else if (!string.IsNullOrWhiteSpace(v.Teksti)) { Valmistele(vastaus); silmukka.Esita(vastaus); }
+                    break;
+                }
+                case OpasToiminto.Kaupunki:
+                    if (!double.IsNaN(v.ToimintoLat)) { SoitaKuittaus(v); VaihdaKaupunki(v.ToimintoNimi, v.ToimintoLat, v.ToimintoLon); }
+                    break;
+                case OpasToiminto.Kierros: SoitaKuittaus(v); Kaupunkikierros(); break;
+                case OpasToiminto.Tauko: Tauko(true); break;
+                case OpasToiminto.Jatka: if (silmukka.KierrosKeskeytetty) JatkaKierrosta(); else Tauko(false); break;
+                default:
+                    if (!string.IsNullOrWhiteSpace(v.Teksti)) { Valmistele(vastaus); silmukka.Esita(vastaus); }
+                    break;
+            }
+        }
+
+        /// <summary>Toiminnon kuittaus ("Lennetään Nyhavniin.") siltalauseen kanavalla; pysähdyksen kerronta jatkaa sen perään.</summary>
+        /// <summary>Vastauksen siirto: alle LahiVastausM nykyisestä kohteesta = sama paikka → vastaus kerrotaan tässä (ei uutta lentoa
+        /// eikä toista kerrontaa); kauempana lento, ja keskeytetty kierros säilyy jatkettavana.</summary>
+        void LiikuVastauksesta(OpasKysyVastaus v, OpasKohde vastaus, string nimi, double lat, double lon)
+        {
+            var k = silmukka.NykyinenKehys;
+            double et = k != null ? KierrosLento.EtaisyysM(k.Lat, k.Lon, lat, lon) : KierrosLento.EtaisyysM(silmukka.Asento.Lat, silmukka.Asento.Lon, lat, lon);
+            if (et < LahiVastausM && !string.IsNullOrWhiteSpace(v.Teksti)) { Valmistele(vastaus); silmukka.Esita(vastaus); return; }
+            SoitaKuittaus(v);
+            silmukka.LiikuVastauksesta(nimi, lat, lon);
+        }
+        const double LahiVastausM = 300;
+
+        void SoitaKuittaus(OpasKysyVastaus v)
+        {
+            if (string.IsNullOrEmpty(v.Aani) || silta == null || !Asetukset.Paalla(Kytkin.Kertoja)) return;
+            o.StartCoroutine(SoitaUrl(v.Aani));
+        }
+
+        IEnumerator SoitaUrl(string url)
+        {
+            using var p = UnityWebRequestMultimedia.GetAudioClip(url, AudioType.MPEG);
+            p.SetRequestHeader("x-matkakirja-natiivi", Application.identifier);
+            PolloTestitunnus.Lisaa(p);
+            p.timeout = 10;
+            yield return p.SendWebRequest();
+            if (p.result != UnityWebRequest.Result.Success || silmukka == null || puhuu) yield break;
+            silta.clip = DownloadHandlerAudioClip.GetContent(p); silta.volume = 1f; silta.Play();
+        }
+
+        /// <summary>Saapuessa: pysähdyksen omat kysymykset, muuten GET /opas/kysymykset (worker esihakee ne jo taustalla).</summary>
+        void PaivitaKysymykset(OpasKohde k)
+        {
+            jatkoKysymykset = Array.Empty<string>();
+            if (k.Kysymykset != null && k.Kysymykset.Length > 0) { kysymykset = k.Kysymykset; return; }
+            kysymykset = null;
+            if (!Testi && !string.IsNullOrEmpty(k.Id)) o.StartCoroutine(HaeKysymykset(k));
+        }
+
+        IEnumerator HaeKysymykset(OpasKohde k)
+        {
+            using var r = Pyynto($"/opas/kysymykset?paikka={UnityWebRequest.EscapeURL(k.Id)}&nimi={UnityWebRequest.EscapeURL(k.Nimi ?? "")}&kaupunki={UnityWebRequest.EscapeURL(Aloituskaupunki)}");
+            yield return r.SendWebRequest();
+            if (silmukka == null || silmukka.Nykyinen?.Id != k.Id) yield break;
+            string[] lista = null;
+            if (r.result == UnityWebRequest.Result.Success && MiniJson.Jasenna(r.downloadHandler.text) is Dictionary<string, object> j
+                && j.TryGetValue("kysymykset", out var ko) && ko is IList<object> l)
+            {
+                var t = new List<string>();
+                foreach (var x in l) if (x is string s && !string.IsNullOrWhiteSpace(s)) t.Add(s.Trim());
+                lista = t.ToArray();
+            }
+            k.Kysymykset = lista;
+            kysymykset = OpasKysyVastaus.Yhdista(jatkoKysymykset, lista ?? Array.Empty<string>());
+            o.Kirjaa($"opas: kysymykset {kysymykset.Length} ({k.Nimi})");
+        }
+
+        /// <summary>Liiku-lista kaupungin vaihtuessa (ja avauksessa): GET /opas/liiku?kaupunki=…</summary>
+        void PaivitaKohteet()
+        {
+            if (Testi || string.IsNullOrEmpty(Aloituskaupunki) || kohteetKaupunki == Aloituskaupunki) return;
+            kohteetKaupunki = Aloituskaupunki; kohteet = null;
+            o.StartCoroutine(HaeKohteet(Aloituskaupunki));
+        }
+
+        IEnumerator HaeKohteet(string kaupunki)
+        {
+            var a = silmukka.Asento;
+            using var r = Pyynto($"/opas/liiku?kaupunki={UnityWebRequest.EscapeURL(kaupunki)}&lat={a.Lat.ToString("F4", System.Globalization.CultureInfo.InvariantCulture)}&lon={a.Lon.ToString("F4", System.Globalization.CultureInfo.InvariantCulture)}");
+            yield return r.SendWebRequest();
+            if (silmukka == null || kohteetKaupunki != kaupunki) yield break;
+            kohteet = r.result == UnityWebRequest.Result.Success ? OpasTaky.Lue(MiniJson.Jasenna(r.downloadHandler.text) as Dictionary<string, object>) : new List<OpasTaky>();
+            o.Kirjaa($"opas: liiku-lista {kohteet.Count} ({kaupunki}, {(r.result == UnityWebRequest.Result.Success ? "ok" : r.responseCode.ToString())})");
+        }
+
+        /// <summary>Pöllö-pyyntö natiiviotsakkein (GET, tai POST jos body).</summary>
+        UnityWebRequest Pyynto(string polku, string body = null)
+        {
+            var r = body == null ? UnityWebRequest.Get(PuluChat.Palvelin + polku)
+                : new UnityWebRequest(PuluChat.Palvelin + polku, "POST") { uploadHandler = new UploadHandlerRaw(Encoding.UTF8.GetBytes(body)), downloadHandler = new DownloadHandlerBuffer() };
+            r.timeout = AikarajaS;
+            if (body != null) r.SetRequestHeader("Content-Type", "application/json");
+            r.SetRequestHeader("x-matkakirja-natiivi", Application.identifier);
+            r.SetRequestHeader("User-Agent", "Matkakirja/" + Application.version + " (" + Application.identifier + ")");
+            string koodi = Asetukset.PolloKoodi;
+            if (!string.IsNullOrEmpty(koodi)) r.SetRequestHeader(Lukijaaani.KoodiOtsake, koodi);
+            PolloTestitunnus.Lisaa(r);
+            return r;
+        }
+
+        // Natiivi-UI:n nimet siirtoruudulle (tapahtumat reunoista PaivitaKamerassa).
+        public static event Action<string> SiirtymaAlkaa;
+        public static event Action SiirtymaValmis;
+        public static float SiirtymaEdistyminen => SiirtymaEdistys;
+        bool siirtymaEdellinen;
+
+        // ---- KUVASUURENNOKSEN SUMENNUS (omistaja 12.1x): kevyt Gaussian-syväterävyys koko kuvalle ja kamera seis ----
+        UnityEngine.Rendering.Volume sumennus;
+        bool vanhaJalkikasittely, sumeana;
+        /// <summary>Natiivi-UI: Kuvasuurennoksen AukiMuuttui → KuvaSumennus = auki (sama kuin Sumenna).</summary>
+        public static bool KuvaSumennus { get => Viimeisin != null && Viimeisin.sumeana; set => Sumenna(value); }
+        public static void Sumenna(bool paalle)
+        {
+            var v = Viimeisin;
+            if (v == null || v.silmukka == null || v.sumeana == paalle) return;
+            v.sumeana = paalle;
+            v.silmukka.KameraSeis = paalle;
+            var kamera = v.kaupunki.Kamera;
+            if (kamera == null) return;
+            var lisa = UnityEngine.Rendering.Universal.CameraExtensions.GetUniversalAdditionalCameraData(kamera);
+            if (paalle)
+            {
+                if (v.sumennus == null)
+                {
+                    var go = new GameObject("OpasSumennus");
+                    v.sumennus = go.AddComponent<UnityEngine.Rendering.Volume>();
+                    v.sumennus.isGlobal = true; v.sumennus.priority = 100;
+                    var profiili = ScriptableObject.CreateInstance<UnityEngine.Rendering.VolumeProfile>();
+                    var dof = profiili.Add<UnityEngine.Rendering.Universal.DepthOfField>(true);
+                    dof.mode.Override(UnityEngine.Rendering.Universal.DepthOfFieldMode.Gaussian);
+                    dof.gaussianStart.Override(0f); dof.gaussianEnd.Override(1f); dof.gaussianMaxRadius.Override(1.5f); dof.highQualitySampling.Override(false);
+                    v.sumennus.sharedProfile = profiili;
+                }
+                v.sumennus.weight = 1f; v.sumennus.enabled = true;
+                if (lisa != null) { v.vanhaJalkikasittely = lisa.renderPostProcessing; lisa.renderPostProcessing = true; }
+            }
+            else
+            {
+                if (v.sumennus != null) v.sumennus.enabled = false;
+                if (lisa != null) lisa.renderPostProcessing = v.vanhaJalkikasittely;
+            }
+            v.o.Kirjaa($"opas: sumennus {(paalle ? "päälle" : "pois")}");
+        }
+
+        // ---- SIIRTO ILMAN LENTOA (UI: tumma ruutu "Siirrytään", nimi ja latauspalkki; Natiivi-UI) ----
+        public static bool Siirtymassa => Viimeisin?.silmukka != null && Viimeisin.silmukka.Siirtymassa;
+        public static string SiirtymaNimi => Viimeisin?.silmukka?.SiirtoNimi;
+        /// <summary>0–1: kohdekameran laattojen todellinen latausaste; näkymä aukeaa 0,95:ssä (enintään 25 s).</summary>
+        public static float SiirtymaEdistys => Viimeisin?.silmukka != null ? (float)Viimeisin.silmukka.SiirtoEdistys : 0f;
 
         // ---- KAUPUNKIEN KESKUSTAT (Päätoimittaja 6.10. 00.4x: Amsterdam laskeutui Natural Earthin pisteeseen 2,5 km keskustasta) ----
         /// <summary>
@@ -325,29 +692,53 @@ namespace Matkakirja.Natiivi
             v.pakotettuSijainti = (t.Lat, t.Lon);
             v.o.Kirjaa($"opas: täky valittu {t.Nimi} ({t.Kaupunki}, {t.Iso2})");
             if (v.tauolla) Tauko(false);
-            v.silmukka.Toive(t.Nimi);
-            v.Silta(OpasSiltalauseet.Kuittaus, true);
+            if (v.kaupunkiOdottaa)
+            {
+                // Aloitusvalikosta: kartta auki kohteeseen ja siirtoruutu heti; workerin pysähdys pyydetään samalla (Liiku).
+                if (!v.AvaaKaupunki(t.Lat, t.Lon, t.Nimi)) return false;
+                v.silmukka.Liiku(t.Nimi, t.Lat, t.Lon);
+            }
+            else v.silmukka.Toive(t.Nimi);
+            v.Silta(OpasSiltalauseet.Valinta, true);
             return true;
         }
         /// <summary>Kuten Valitse(OpasTaky) luettelon indeksillä (heijastuksen helpottamiseksi).</summary>
         public static bool Valitse(int indeksi) => Takyt != null && indeksi >= 0 && indeksi < Takyt.Count && Valitse(Takyt[indeksi]);
 
+        /// <summary>Aloituksen suosikit (omistaja 6.10. 14.2x: jopa 50; Pelikoodari #4054 GET /opas/kohteet?n=50). Kylmä 50 kestää
+        /// workerilla 30–60 s, joten aikarajan jälkeen haetaan tavalliset 8 täkyä (lämpimät) ennen kuin luovutetaan.</summary>
+        public const int SuosikkejaMax = 50;
+        public const int SuosikitAikarajaS = 20;
+
         IEnumerator LataaTakyt()
         {
-            using var r = UnityWebRequest.Get(PuluChat.Palvelin + "/opas/kohteet");
-            r.timeout = 20;
-            r.SetRequestHeader("x-matkakirja-natiivi", Application.identifier);
-            r.SetRequestHeader("User-Agent", "Matkakirja/" + Application.version + " (" + Application.identifier + ")");
-            PolloTestitunnus.Lisaa(r);
-            yield return r.SendWebRequest();
-            if (silmukka == null) yield break;
-            takyt = r.result == UnityWebRequest.Result.Success ? OpasTaky.Lue(MiniJson.Jasenna(r.downloadHandler.text) as Dictionary<string, object>) : new List<OpasTaky>();
-            o.Kirjaa($"opas: täkyt {takyt.Count} ({(r.result == UnityWebRequest.Result.Success ? "ok" : r.responseCode.ToString())})");
-            if (takyt.Count == 0 && !silmukka.Aloitettu) silmukka.Aloita(Aloituskaupunki);
+            List<OpasTaky> lista = null; string tila = "";
+            foreach (var polku in new[] { "/opas/kohteet?n=" + SuosikkejaMax, "/opas/kohteet" })
+            {
+                using var r = UnityWebRequest.Get(PuluChat.Palvelin + polku);
+                r.timeout = SuosikitAikarajaS;
+                r.SetRequestHeader("x-matkakirja-natiivi", Application.identifier);
+                r.SetRequestHeader("User-Agent", "Matkakirja/" + Application.version + " (" + Application.identifier + ")");
+                PolloTestitunnus.Lisaa(r);
+                yield return r.SendWebRequest();
+                if (silmukka == null) yield break;
+                tila += (tila.Length > 0 ? ", " : "") + polku + " " + (r.result == UnityWebRequest.Result.Success ? "ok" : r.responseCode.ToString());
+                if (r.result != UnityWebRequest.Result.Success) continue;
+                lista = OpasTaky.Lue(MiniJson.Jasenna(r.downloadHandler.text) as Dictionary<string, object>);
+                if (lista.Count > 0) break;
+            }
+            takyt = lista ?? new List<OpasTaky>();
+            o.Kirjaa($"opas: täkyt {takyt.Count} ({tila})");
+            if (takyt.Count == 0 && !silmukka.Aloitettu)
+            {
+                // Ei täkyjä: vanha alku (Kööpenhamina) ja kartta auki heti.
+                var a = KoopenhaminaTesti.Alku;
+                if (AvaaKaupunki(a.Lat, a.Lon, Aloituskaupunki)) silmukka.Aloita(Aloituskaupunki);
+            }
         }
 
         // ---- MAIDEN JA KAUPUNKIEN NIMET (juna 146; Ydin OpasNimiaanet) ----
-        public const string NimetOsoite = "https://media.matkakirja.app/aanet/opas/nimet-v1/nimet.json",
+        public const string NimetOsoite = "https://media.matkakirja.app/aanet/opas/nimet-v2/nimet.json",   // v2 (Pelikoodari 6.10.): suomi pakotettuna + 38 uutta jatkoa
             MaatOsoite = "https://media.matkakirja.app/aanet/opas/maat-v1/maat.json";
         static OpasNimiaanet nimiaanet;
         static bool nimiaLadataan;
@@ -358,6 +749,7 @@ namespace Matkakirja.Natiivi
         bool SanoNimi(NimiLeike[] leikkeet)
         {
             pelaajanToimi = Time.unscaledTime;
+            if (silmukka != null && silmukka.Siirtymassa) return true;   // ei puhetta latausruudun aikana
             if (leikkeet == null || leikkeet.Length == 0 || silta == null || !Asetukset.Paalla(Kytkin.Kertoja)) return false;
             if (nimiSoitto != null) o.StopCoroutine(nimiSoitto);
             nimiSoitto = o.StartCoroutine(SoitaNimi(leikkeet));
@@ -400,6 +792,10 @@ namespace Matkakirja.Natiivi
 
         // ---- SILTALAUSEET (juna 146; Ydin OpasSiltalauseet) ----
         public const string SiltalauseetOsoite = "https://media.matkakirja.app/aanet/opas/siltalauseet-v1/siltalauseet.json";
+        /// <summary>Kuittaukset-v1 (Pelikoodari 6.10.): kysymys, odotus5, odotus12, virhe; yhdistetään siltalauseisiin.</summary>
+        public const string KuittauksetOsoite = "https://media.matkakirja.app/aanet/opas/kuittaukset-v1/kuittaukset.json";
+        /// <summary>Kysymyksen odotusportaat (juna 150): 5 s / 12 s / 25 s, myöhäinen vastaus hylätään.</summary>
+        readonly KysyOdotus kysyOdotus = new KysyOdotus();
         const float OdotusLauseS = 6f, SiltaOdotusS = 5f;
         AudioSource silta;
         OpasSiltalauseet siltalauseet;
@@ -412,8 +808,10 @@ namespace Matkakirja.Natiivi
         void Silta(string ryhma, bool pelaajalta)
         {
             if (pelaajalta) pelaajanToimi = Time.unscaledTime;
+            if (silmukka != null && silmukka.Siirtymassa) return;   // kertoja odottaa näkymän aukeamista (omistaja 12.0x)
             if (siltalauseet == null || silta == null || !Asetukset.Paalla(Kytkin.Kertoja) || puhuu || silta.isPlaying) return;
-            var l = siltalauseet.Valitse(ryhma, ryhma == OpasSiltalauseet.Odotus ? null : OpasSiltalauseet.Kuittaus, x => siltaKlipit.ContainsKey(x.Url));
+            bool eiVaraa = ryhma == OpasSiltalauseet.Odotus || ryhma == OpasSiltalauseet.Odotus5 || ryhma == OpasSiltalauseet.Odotus12 || ryhma == OpasSiltalauseet.Virhe;
+            var l = siltalauseet.Valitse(ryhma, eiVaraa ? null : OpasSiltalauseet.Kuittaus, x => siltaKlipit.ContainsKey(x.Url));
             if (l == null) return;
             silta.clip = siltaKlipit[l.Url]; silta.volume = 1f; silta.Play();
             o.Kirjaa($"opas: siltalause {l.Id} ({ryhma}) \"{l.Teksti}\"");
@@ -445,6 +843,14 @@ namespace Matkakirja.Natiivi
                 siltalauseet = OpasSiltalauseet.Lue(MiniJson.Jasenna(r.downloadHandler.text) as Dictionary<string, object>);
             }
             if (siltalauseet == null) { o.Kirjaa("opas: siltalauseet: virheellinen JSON"); yield break; }
+            using (var k = UnityWebRequest.Get(KuittauksetOsoite))
+            {
+                k.timeout = 15;
+                yield return k.SendWebRequest();
+                var ku = k.result == UnityWebRequest.Result.Success ? OpasSiltalauseet.Lue(MiniJson.Jasenna(k.downloadHandler.text) as Dictionary<string, object>) : null;
+                if (ku != null) siltalauseet.Yhdista(ku);
+                o.Kirjaa($"opas: kuittaukset {(ku != null ? ku.Maara + " lausetta" : "ei latautunut (" + k.responseCode + ")")}");
+            }
             var jono = new Queue<Siltalause>(siltalauseet.Kaikki());
             int kesken = 0, ok = 0;
             float t0 = Time.realtimeSinceStartup;
@@ -466,8 +872,9 @@ namespace Matkakirja.Natiivi
                 yield return null;
             }
             o.Kirjaa($"opas: siltalauseet {ok}/{siltalauseet.Maara} ladattu {Time.realtimeSinceStartup - t0:F1} s:ssa");
-            // Avauksen lause, jos kerronta ei vielä soi (worker suunnittelee ensimmäistä pysähdystä).
-            if (silmukka != null && !puhuu) Silta(OpasSiltalauseet.Aloitus, false);
+            // Avauksen lause, jos kerronta ei vielä soi (worker suunnittelee ensimmäistä pysähdystä). Ei aloitusvalikossa: kertoja
+            // puhuu vasta kaupungin tai suosikin valinnasta (omistaja TF 149, simu 17.2x: "Lähdetään kierrokselle" valikossa).
+            if (silmukka != null && !puhuu && !kaupunkiOdottaa && silmukka.Aloitettu) Silta(OpasSiltalauseet.Aloitus, false);
         }
 
         /// <summary>
@@ -513,7 +920,9 @@ namespace Matkakirja.Natiivi
             }
             if (tapVasen == null || tapOikea == null || tapKosketaan == null) { silmukka.Tapit = default; silmukka.PelaajaOhjaa = false; return; }
             var v = (Vector2)tapVasen.GetValue(null); var o2 = (Vector2)tapOikea.GetValue(null);
-            silmukka.Tapit = (o2.x, o2.y, -v.y);
+            // Oikean tapin vaakasuunta käännetty (omistaja 6.10. TF 149 iPad: "oikeanpuoleinen joystick toimii väärinpäin
+            // panoroitaessa vasemmalle ja oikealle"): tappi oikealle → näkymä panoroi oikealle. Pystysuunta ennallaan.
+            silmukka.Tapit = (-o2.x, o2.y, -v.y);
             silmukka.PelaajaOhjaa = (bool)tapKosketaan.GetValue(null);
         }
         bool tapitHaettu;
@@ -565,6 +974,8 @@ namespace Matkakirja.Natiivi
             var a = silmukka.Asento;
             double sLat = a.Lat, sLon = a.Lon;
             if (pakotettuSijainti is (double, double) ps) { sLat = ps.lat; sLon = ps.lon; pakotettuSijainti = null; }
+            if (silmukka.PyynnonSijainti is (double, double) pk) { sLat = pk.lat; sLon = pk.lon; silmukka.PyynnonSijainti = null; }
+            var kt = silmukka.KierrosTieto;
             var sb = new StringBuilder("{");
             sb.Append("\"istunto\":\"").Append(istunto).Append("\",");
             sb.Append("\"toive\":").Append(toive == null ? "null" : "\"" + Escape(toive) + "\"").Append(',');
@@ -575,6 +986,8 @@ namespace Matkakirja.Natiivi
             bool eka = true;
             foreach (var id in silmukka.Nahdyt) { if (!eka) sb.Append(','); sb.Append('"').Append(Escape(id)).Append('"'); eka = false; }
             sb.Append("],\"kieli\":\"fi\"");
+            // Kaupunkikierros: lyhyt kerronta ja järjestysnumero (omistaja 11.57).
+            if (kt.numero > 0) sb.Append(",\"kierros\":{\"numero\":").Append(kt.numero).Append(",\"maara\":").Append(kt.maara).Append("},\"lyhyt\":true");
             // Näytettävät tekijätiedot (Pelikoodari #4028, ODbL): worker palauttaa OSM-pohjaista dataa vain, kun "osm" on mukana.
             sb.Append(",\"krediitit\":[\"osm\"]");
             // "Kerro lisää" ei toista edellistä kappaletta (Pelikoodari #4011).
@@ -622,7 +1035,7 @@ namespace Matkakirja.Natiivi
         readonly Dictionary<string, PcmVirta> pcmVirrat = new Dictionary<string, PcmVirta>(StringComparer.Ordinal);
         PcmVirta pcmNyt;
         /// <summary>Toisto alkaa, kun virrassa on näin paljon puskuria (s) tai lataus on valmis.</summary>
-        const float PcmPuskuriS = 0.5f;
+        const float PcmPuskuriS = 1.0f;   // Päätoimittaja 16.5x: alku ~1 s varalla (nopea alku), alivuodossa PcmVirta puskuroi ~2 s
 
         /// <summary>PCM-virran lataus: klippi valmiina (klipit[avain]), kun puskuria on PcmPuskuriS; lataus jatkuu taustalla loppuun.</summary>
         IEnumerator LataaPcm(OpasKohde k)
@@ -659,7 +1072,31 @@ namespace Matkakirja.Natiivi
             var tehtava = pinta.SampleHeightMostDetailed(new double3(k.Lon, k.Lat, 0));
             while (!tehtava.IsCompleted) yield return null;
             if (tehtava.IsFaulted || tehtava.Result == null || tehtava.Result.sampleSuccess == null || tehtava.Result.sampleSuccess.Length == 0) yield break;
-            if (tehtava.Result.sampleSuccess[0]) maaKorkeudet[Avain(k)] = tehtava.Result.longitudeLatitudeHeightPositions[0].z;
+            if (tehtava.Result.sampleSuccess[0])
+            {
+                maaKorkeudet[Avain(k)] = pisteKorkeudet[PisteAvain(k.Lat, k.Lon)] = tehtava.Result.longitudeLatitudeHeightPositions[0].z;
+                viimeMaa = (k.Lat, k.Lon, maaKorkeudet[Avain(k)]);   // varaarvo myös kohteiden näytteistä (simu 17.4x: Pláka sai 45 m)
+            }
+        }
+
+        /// <summary>Kohdekehyksen maa pisteeseen (silmukka.MaaTarvitaan); epäonnistuessa arvio 45 m, jottei siirto jää odottamaan.</summary>
+        IEnumerator KorkeusPisteessa(double lat, double lon)
+        {
+            string a = PisteAvain(lat, lon);
+            var pinta = kaupunki.Pinta;
+            if (pinta == null || pisteKorkeudet.ContainsKey(a) || !pisteNaytteet.Add(a)) yield break;
+            float t0 = Time.realtimeSinceStartup;
+            var tehtava = pinta.SampleHeightMostDetailed(new double3(lon, lat, 0));
+            while (!tehtava.IsCompleted) yield return null;
+            pisteNaytteet.Remove(a);
+            var tulos = tehtava.IsFaulted ? null : tehtava.Result;
+            bool ok = tulos?.sampleSuccess != null && tulos.sampleSuccess.Length > 0 && tulos.sampleSuccess[0];
+            // Epäonnistunut näyte (simu 17.0x: Pláka 0,1 s:ssa, arvio 45 m, vaikka Ateena ~100 m): lähin tunnettu korkeus 15 km:n
+            // sisältä (sama kaupunki), vasta sitten yleisarvio.
+            double vara = viimeMaa.h is double vh && KierrosLento.EtaisyysM(viimeMaa.lat, viimeMaa.lon, lat, lon) < 15000 ? vh : OpasSilmukka.MaaArvioM;
+            pisteKorkeudet[a] = ok ? tulos.longitudeLatitudeHeightPositions[0].z : vara;
+            if (ok) viimeMaa = (lat, lon, pisteKorkeudet[a]);
+            o.Kirjaa($"opas: maa ({lat:F4}, {lon:F4}) {(ok ? "" : "näyte epäonnistui, lähin tunnettu ")}{pisteKorkeudet[a]:F0} m, {Time.realtimeSinceStartup - t0:F1} s");
         }
 
         IEnumerator LataaAani(string url)
@@ -680,9 +1117,11 @@ namespace Matkakirja.Natiivi
         {
             kaupunki.SiirraOrigo(k.Lat, k.Lon, MaaKorkeus(k) is double m && !double.IsNaN(m) ? m : 45);
             if (puhuttu != k) AlkaaPuhua(k);   // ei aloitettu lennon lopussa (esim. sama paikka): nyt
+            if (!k.Id?.StartsWith("kysy-") ?? true) PaivitaKysymykset(k);
             saapumisia++;
             o.StartCoroutine(Siivoa());
             o.Kirjaa($"opas: saapui {k.Nimi} ({k.Lat:F4}, {k.Lon:F4}), ääni {(puhuu ? "soi" : "ei")}, laatat {kaupunki.Latausaste:F0} %");
+            o.Kirjaa($"opas: kuvat {k.Kuvat?.Length ?? 0} (tekijällä {System.Linq.Enumerable.Count(k.Kuvat ?? Array.Empty<OpasKuva>(), x => !string.IsNullOrEmpty(x.Tekija))}), hylätty yhteensä {OpasKuva.Hylatyt}");
             OpasKorostusKuva.Nayta(k, silmukka?.NykyinenKehys?.MaaM ?? (MaaKorkeus(k) is double mk && !double.IsNaN(mk) ? mk : 45), kaupunki.Georef);   // Siirtoseppä: korostus (juna 145)
         }
 
@@ -702,7 +1141,7 @@ namespace Matkakirja.Natiivi
             if (kertoja && !string.IsNullOrEmpty(avain) && klipit.TryGetValue(avain, out var klippi) && klippi != null && puhe != null)
             {
                 puhe.clip = klippi; puhe.volume = 1f; puhe.Play();
-                puhuu = true; y.Repliikki(true);
+                puhuu = true; y.Repliikki(true); puheAlkoi = Time.unscaledTime;
                 pelaajanToimi = -1f;   // kerronta alkoi: odotus-lausetta ei tarvita
                 pcmNyt = pcmVirrat.TryGetValue(avain, out var v) ? v : null;
                 puheLoppuu = pcmNyt != null ? float.MaxValue : Time.unscaledTime + klippi.length;
@@ -714,6 +1153,7 @@ namespace Matkakirja.Natiivi
             o.StartCoroutine(TekstiLoppuu(s, k));
         }
         OpasKohde tekstina, aaniOdotus;
+        float puheAlkoi;
         const float AaniOdotusS = 10f;   // #4018: mp3 valmistuu GETissä ~8–9 s tekstin jälkeen (toiveen polku)
 
         IEnumerator OdotaAani(OpasKohde k)
@@ -734,6 +1174,7 @@ namespace Matkakirja.Natiivi
         {
             if (k == null || puhuttu == k) return;
             puhuttu = k;
+            if (k.Id != null && k.Id.StartsWith("kysy-")) kysyOdotus.Alkoi();   // kysymyksen vastaus alkoi: odotusportaat seis
             VapautaVanhatAanet(k);
             Soita(k);
             KysymysChattiin(k);   // kappale ja sen vaihtoehdot Pulu-chatiin (Natiivi-UI 18.0x)
@@ -745,6 +1186,7 @@ namespace Matkakirja.Natiivi
             var pidetaan = new HashSet<string>();
             if (AaniAvain(nyt) != null) pidetaan.Add(AaniAvain(nyt));
             if (AaniAvain(silmukka?.Seuraava) != null) pidetaan.Add(AaniAvain(silmukka.Seuraava));
+            if (AaniAvain(silmukka?.JatkoKohde) != null) pidetaan.Add(AaniAvain(silmukka.JatkoKohde));   // JATKA lukee sen alusta
             if (AaniAvain(viimeKysymys) != null && silmukka != null && silmukka.OdottaaVastausta) pidetaan.Add(AaniAvain(viimeKysymys));
             var pois = new List<string>();
             foreach (var kv in klipit) if (!pidetaan.Contains(kv.Key)) pois.Add(kv.Key);
@@ -860,8 +1302,11 @@ namespace Matkakirja.Natiivi
             OpasKorostusKuva.Piilota(true);
             KyydinKameraEnnen.Ajo = null;
             KytkeNimilappu(false);
+            Sumenna(false);
+            kysymykset = null; kohteet = null; kohteetKaupunki = null; historia.Clear(); siirtymaEdellinen = false;
             if (silta != null && silta.isPlaying) silta.Stop();
             pelaajanToimi = -1f;
+            kysyOdotus.Alkoi();
             if (nimiaanet == null) nimiaLadataan = false;   // lataus katkesi sulkuun: uusi yritys seuraavassa avauksessa
             nimiSoitto = null;
             KrediititTiivis.OsmNakyvissa = false;

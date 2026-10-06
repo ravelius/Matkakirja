@@ -125,6 +125,9 @@ namespace Matkakirja.Natiivi
         /// </summary>
         public static bool Ohjaamo = true;
         readonly IssOhjaamo ohjaamo;
+        /// <summary>Ohjaamopaneelin näkyvä laatikko ruudulla (worldBound) tai tyhjä, kun paneeli ei näy (Pulun taulun väistö, juna 148).</summary>
+        public Rect OhjaamoLaatikko => Ohjaamo && ohjaamo != null && ohjaamo.Juuri.panel != null
+            && ohjaamo.Juuri.resolvedStyle.display == DisplayStyle.Flex ? ohjaamo.Nakyva : default;
         /// <summary>Kytkinpöytä käytössä (ei ohjaamoa): pöydän omat mitat (YlaReuna, Suuri, Nakyva) ja kohdelista pöydän yllä.</summary>
         static bool KytkinKaytossa => Kytkinpoyta && !Ohjaamo;
 
@@ -400,6 +403,7 @@ namespace Matkakirja.Natiivi
             poyta.EstaPienennys = () => lista.style.display == DisplayStyle.Flex;
             poyta.KokoMuuttui += PaivitaPulu;
             ohjaamo = new IssOhjaamo(turva, Linssi, Kuvaa);
+            ohjaamo.Kehys = kupu;   // täyden tehon tärinä myös Cupolan kehykseen (omistaja 6.10.)
             ohjaamo.KokoMuuttui += PaivitaPulu;
             // LCD:n laajennus (vaihe 3): samat vuodenaika- ja vuorokausivalinnat kuin kytkinpöydän nupeissa.
             ohjaamo.AsetaKausi = k => AsetaKausi(k);
@@ -525,6 +529,7 @@ namespace Matkakirja.Natiivi
             else if (k == "sijainti") { if (!n.sijaintiIkkuna.Auki) n.ohjaamo.AvaaSijainti?.Invoke(); return n.sijaintiIkkuna.Testaa(a.Length > 1 ? string.Join(" ", a, 1, a.Length - 1) : null); }
             else if (k == "sijainti-pois") n.sijaintiIkkuna.Sulje("testi");
             else if (k == "kamera") n.ohjaamo.PainaKamera();
+            else if (k == "kehitys" && a.Length > 1) n.ohjaamo.TestaaKehitys(a[1]);
             else if (k == "nahka" && a.Length > 1) { IssOhjaamo.NahkaKaytossa = a[1] != "0"; n.ohjaamo.KaytaNahka(); }
             else if (k == "kuvat") return n.omatKuvat.Testaa(a.Length > 1 ? a[1] : "tila");
             return n.ohjaamo.Tila();
@@ -787,7 +792,9 @@ namespace Matkakirja.Natiivi
             bool oliAuki = Tila != KyydinTila.Kauko;
             Tila = tila;
             bool auki = tila != KyydinTila.Kauko;
-            juuri.style.display = auki && !Matkakirja.Linssit.Astronautti.AstronauttiLinssi.Vertailu.HasValue ? DisplayStyle.Flex : DisplayStyle.None;
+            // Kuvauksen ajan ohjaamo näkyy myös renderöinnissä (LCD:n KEHITETÄÄN-segmentit, omistaja 6.10.): kuva renderöidään omaan
+            // tekstuuriinsa, joten UI ei tule kuvaan; Cupolan näkymä on renderöinnin ajan pysähdyksissä (LS2 b45dd8b2).
+            juuri.style.display = auki && (!Matkakirja.Linssit.Astronautti.AstronauttiLinssi.Vertailu.HasValue || IssKameraKuva.Kaynnissa) ? DisplayStyle.Flex : DisplayStyle.None;
             // Nopeutettuna (web tietorivi kertoimella): "● 100× · ISS · …" ilman LIVE-sanaa, piste harmaa eikä syki.
             var rivi = KyydinTeksti.Tietorivi(korkeusKm, nopeusKmh, arvio, aika.Nopeutettu ? aika.Nopeus : (double?)null);
             if (auki) { tieto.text = rivi.Teksti; live.text = rivi.Merkki ?? ""; }

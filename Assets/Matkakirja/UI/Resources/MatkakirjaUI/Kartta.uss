@@ -846,7 +846,7 @@
 .mk-maakunnat__lteksti {
     flex-shrink: 1;
     flex-grow: 1;
-    font-size: 13px;
+    font-size: var(--tk-koko-leipa); /* omistaja 6.10. 13.0x: sama koko kuin nostoissa (mk-nosto__teksti) */
     white-space: normal;
     color: rgba(70, 51, 31, 0.92);
 }
@@ -875,7 +875,7 @@
 }
 
 .mk-maakunnat--tabletti .mk-maakunnat__lteksti {
-    font-size: 18px;
+    font-size: var(--tk-koko-leipa);
 }
 
 .mk-maakunnat__lisaa {
@@ -2133,6 +2133,11 @@
     background-color: rgba(10, 7, 4, 0.6);
 }
 
+/* Ilman pysäytyskuvaa (elävä opas, Päätoimittaja 6.10.): tumma himmennys tokenista, ettei 3D-näkymä näy terävänä kuvan takana. */
+.mk-nosto__suurennos.mk-suurennos--kokoruutu.mk-suurennos--ei-pysaytysta {
+    background-color: var(--tk-himmennys-kuva);
+}
+
 /* Löydös 132: pallon pysäytyskuva kokoruudun taustana, tummennettuna sävyllä (lapsi piirtyy kerroksen värin päälle). */
 .mk-suurennos__pysaytys {
     position: absolute;
@@ -2162,6 +2167,14 @@
 .mk-suurennos--kokoruutu .mk-nosto__lahde,
 .mk-suurennos--kokoruutu .mk-reaktiot--suurennos {
     display: none;
+}
+
+/* Elävä opas (Päätoimittaja 6.10., CC BY): lähderivi näkyy kokoruudussakin kuvan alla, vaalea teksti tummalla. */
+.mk-suurennos--kokoruutu.mk-suurennos--lahde-nakyy .mk-nosto__lahde {
+    display: flex;
+    margin: 6px 12px 0 12px;
+    color: var(--tk-tumma-muste-pehmea);
+    -unity-text-align: middle-center;
 }
 
 /* Elävä kartta, kohta 2: löytämättömän musteen jälki ja pääkohteen hehku merkin alla (MusteJaljet, NostotKartalla.AsetaMuste). */
@@ -2222,7 +2235,7 @@
 }
 
 .mk-maakunnat--kartta .mk-maakunnat__lteksti {
-    font-size: 15px;
+    font-size: var(--tk-koko-leipa);
 }
 
 /* Tabletti + maakuntakartta (omistaja 29.9.2026): ~1,4 × isonnus vain iPadilla, sama suhde kuin perustilan
@@ -2243,7 +2256,7 @@
 }
 
 .mk-maakunnat--tabletti.mk-maakunnat--kartta .mk-maakunnat__lteksti {
-    font-size: 21px;
+    font-size: var(--tk-koko-leipa);
 }
 
 .mk-maakunnat__ohje {

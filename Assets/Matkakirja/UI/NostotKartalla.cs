@@ -556,6 +556,36 @@ namespace Matkakirja.Natiivi
         /// <summary>malliRuutujen nostot (Symbolimallit.LisaaKalusteet, sama indeksi): mallinoston oma laatikko.</summary>
         readonly List<string> malliAvaimet = new List<string>();
 
+        /// <summary>
+        /// Alareunan toimintonapit (Liiku) ruutupikseleinä (y ylös), UiNakymat asettaa. Päätoimittaja 6.10. klo 07.2x (LS1:n kuva
+        /// BUILD 145: Liiku-laatikko Stonehenge-nimiön loppuosan päällä): nostojen ja mallien nimiöt väistävät niitä. Ei koko
+        /// kalustelistaa (yläpalkki, kartussi): se piilotti laitekuvassa cl14 vasemman laidan nimiöt.
+        /// </summary>
+        public static System.Func<IReadOnlyList<Ruutulaatikko>> Napit;
+        readonly List<Rect> nappiRuudut = new List<Rect>();
+
+        void NapitPaneeliin()
+        {
+            nappiRuudut.Clear();
+            var lista = Napit?.Invoke();
+            var paneeli = juuri.panel;
+            if (lista == null || paneeli == null) return;
+            foreach (var k in lista)
+            {
+                var a = RuntimePanelUtils.ScreenToPanel(paneeli, new Vector2(k.X0, Screen.height - k.Y1));
+                var b = RuntimePanelUtils.ScreenToPanel(paneeli, new Vector2(k.X1, Screen.height - k.Y0));
+                nappiRuudut.Add(Rect.MinMaxRect(a.x, a.y, b.x, b.y));
+            }
+        }
+
+        bool OsuuNappiin(Rect a) { foreach (var r in nappiRuudut) if (r.Overlaps(a)) return true; return false; }
+
+        Rect LukonLaatikko(Merkki m, string kylki)
+        {
+            var r = NimionLaatikko(m, kylki);
+            return new Rect(r.x + m.Piste.x, r.y + m.Piste.y, r.width, r.height);
+        }
+
         /// <summary>KaupunkiMerkit.Kalusteet (ruutupikselit, y ylös) tämän kerroksen paneelin pisteiksi (y alas).</summary>
         void KalusteetPaneeliin()
         {
@@ -629,6 +659,7 @@ namespace Matkakirja.Natiivi
             float W = juuri.layout.width, H = juuri.layout.height;
             if (n == 0) lukot.Clear();
             if (n == 0 || float.IsNaN(W) || W <= 0) return;
+            NapitPaneeliin();
             var jono = new List<Merkki>(n);
             for (int i = 0; i < n; i++) if (merkit[i].Nimio.text.Length > 0) jono.Add(merkit[i]);
             // Web sovittelu.js jono: levossa lukittu näkyvä (0) ennen eleen aikana tullutta (1) ennen lukotonta (2),
@@ -667,7 +698,7 @@ namespace Matkakirja.Natiivi
                 bool Kalusteeton(Rect a)
                 {
                     for (int k = 0; k < malliRuudut.Count; k++) if (k != oma && malliRuudut[k].Overlaps(a)) return false;
-                    return true;
+                    return !OsuuNappiin(a);
                 }
                 bool Vapaa(Rect r, float vara)
                 {
@@ -684,7 +715,8 @@ namespace Matkakirja.Natiivi
                 // Löydös 106 (web sovittelu.js sääntö 5): lukittu nimiö, jonka laatikko on ruudulla, kokeilee vain
                 // lukittua kylkeään. Reunaa ei koeteta (nimi saa leikkautua); tukossa nimiö häipyy paikallaan ja
                 // palaa samaan kylkeen hystereesillä — ei koskaan merkin toiselle puolelle.
-                if (m.Id != null && lukot.TryGetValue(m.Id, out var lukko) && (!malli || lukko.Kylki == "yla" || lukko.Kylki == "ala"))
+                if (m.Id != null && lukot.TryGetValue(m.Id, out var lukko) && (!malli || lukko.Kylki == "yla" || lukko.Kylki == "ala")
+                    && !(malli && OsuuNappiin(LukonLaatikko(m, lukko.Kylki))))   // mallin lukittu kylki Liikun alla: kokeile toista
                 {
                     var r0 = NimionLaatikko(m, lukko.Kylki);
                     var a0 = new Rect(r0.x + m.Piste.x, r0.y + m.Piste.y, r0.width, r0.height);
@@ -735,11 +767,13 @@ namespace Matkakirja.Natiivi
                 // Mallin nimi ei katoa (Český Krumlov ylhäältä): tukossa se jää ylä- tai alapuolelle, kunhan mahtuu
                 // ruudulle — ylä hylätään alan hyväksi, jos mallin kalustelaatikko (ei tunne kameran kallistusta)
                 // ulottuu ruudun yli, ettei nimiö jää "näkyy"-tilaan ruudun ulkopuolella.
-                if (loytyi == null && malli)
+                // Ensin kylki, joka ei jää alareunan napin (Liiku) alle; vasta sitten mikä tahansa ruudulle mahtuva.
+                for (int kierros = 0; kierros < 2 && loytyi == null && malli; kierros++)
                     foreach (var ky in ehdokkaat)
                     {
                         var r = NimionLaatikko(m, ky);
                         var a = new Rect(r.x + m.Piste.x, r.y + m.Piste.y, r.width, r.height);
+                        if (kierros == 0 && OsuuNappiin(a)) continue;
                         if (a.xMin >= 0 && a.yMin >= 0 && a.xMax <= W && a.yMax <= H) { loytyi = ky; paikka = a; break; }
                     }
                 // Taso 1 ei häivy muiden lappujen tieltä (sovittelu.js sääntö 4): ensimmäinen reunan sisällä oleva

@@ -23,10 +23,15 @@ namespace Matkakirja.Natiivi
         public static Pinnaus Viimeisin { get; private set; }
         public static Kohde Nykyinen { get; private set; }
         public static bool Pienena { get; private set; }
+        /// <summary>
+        /// VÄISTÖ (Päätoimittaja 6.10. klo 00.5x, juna 147): ikkuna, joka väistää chattia (maakuntakortti), käyttää samaa palkkia
+        /// ilman puheen pinnausta; palkissa vain otsikko (ei taukoa eikä edistymistä). Napautus palauttaa ikkunan.
+        /// </summary>
+        public static bool Vaisto { get; private set; }
         /// <summary>Pinnaus vaihtui (ikkunat päivittävät pin-kuvakkeensa ja himmennyksensä).</summary>
         public static event Action Muuttui;
 
-        readonly VisualElement palkki, taytto;
+        readonly VisualElement palkki, taytto, raita;
         readonly Label otsikko;
         readonly Button tauko;
         PalloKierto kierto;
@@ -43,7 +48,7 @@ namespace Matkakirja.Natiivi
             Kirjasimet.Aseta(otsikko, Kirjasin.Kone);
             tauko = Rakenne.Nappi(null, "mk-pinpalkki__tauko", VaihdaTauko, rivi, Ikonit.Tauko);
             tauko.tooltip = "Tauko";
-            var raita = Rakenne.El("mk-edistyminen mk-pinpalkki__edistyminen", palkki, PickingMode.Ignore);
+            raita = Rakenne.El("mk-edistyminen mk-pinpalkki__edistyminen", palkki, PickingMode.Ignore);
             taytto = Rakenne.El("mk-edistyminen__taytto", raita, PickingMode.Ignore);
             Puhe.PinnattuMuuttui += PuheMuuttui;
             Puhe.Edistyminen += (aika, kesto) => taytto.style.width = Length.Percent(kesto > 0f ? Mathf.Clamp01(aika / kesto) * 100f : 0f);
@@ -61,9 +66,32 @@ namespace Matkakirja.Natiivi
             var vanha = Nykyinen;
             Nykyinen = k;
             Pienena = false;
+            Vaisto = false;
             vanha?.Irti?.Invoke();
             Puhe.Instanssi?.Pinnaa(k.Omistaja, k.Otsikko);
             Debug.Log($"MATKAKIRJA ui pinnaus: {k.Omistaja} \"{k.Otsikko}\"");
+            Viimeisin?.NaytaPalkki(false);
+            Muuttui?.Invoke();
+        }
+
+        /// <summary>Ikkuna väistää palkiksi (ei puheen pinnausta). false = palkki on jo pinnatun ikkunan käytössä.</summary>
+        public static bool Vaista(Kohde k)
+        {
+            if (k == null || (Nykyinen != null && !Vaisto)) return false;
+            Nykyinen = k;
+            Vaisto = Pienena = true;
+            Debug.Log($"MATKAKIRJA ui pinnaus: väistö {k.Omistaja} \"{k.Otsikko}\"");
+            Viimeisin?.NaytaPalkki(true);
+            Muuttui?.Invoke();
+            return true;
+        }
+
+        /// <summary>Väistö päättyi (chat suljettiin tai ikkuna suljettiin): palkki pois, ikkuna hoitaa oman palautuksensa.</summary>
+        public static void LopetaVaisto(Kohde k)
+        {
+            if (!Vaisto || Nykyinen != k) return;
+            Nykyinen = null;
+            Vaisto = Pienena = false;
             Viimeisin?.NaytaPalkki(false);
             Muuttui?.Invoke();
         }
@@ -85,17 +113,25 @@ namespace Matkakirja.Natiivi
         /// <summary>Kartan liike tai napautus: pinnattu ikkuna palkiksi (ikkuna kiinni, puhe jatkuu).</summary>
         public static void Pienenna()
         {
-            if (Nykyinen == null || Pienena) return;
+            if (Nykyinen == null || Pienena || Vaisto) return;
             Pienena = true;
             Nykyinen.Pienenna?.Invoke();
             Viimeisin?.NaytaPalkki(true);
             Muuttui?.Invoke();
         }
 
+        /// <summary>
+        /// Piste (paneelin koordinaatit) osuu näkyvään palkkiin. Ylempi kerros (toinen kortti himmennyksineen) kysyy tätä, ettei
+        /// palkin napautus vain sulje sitä (junan 148b video 6.10.: ensimmäinen napautus sulki toisen kortin, vasta toinen palautti).
+        /// </summary>
+        public static bool OsuuPalkkiin(Vector2 p) =>
+            Viimeisin != null && Pienena && Viimeisin.palkki.resolvedStyle.display != DisplayStyle.None && Viimeisin.palkki.worldBound.Contains(p);
+
         /// <summary>Palkin napautus: pinnattu ikkuna takaisin.</summary>
         public static void Palauta()
         {
             if (Nykyinen == null || !Pienena) return;
+            if (Vaisto) { var v = Nykyinen; LopetaVaisto(v); v.Palauta?.Invoke(); return; }
             Pienena = false;
             Viimeisin?.NaytaPalkki(false);
             Nykyinen.Palauta?.Invoke();
@@ -106,7 +142,7 @@ namespace Matkakirja.Natiivi
         void PuheMuuttui()
         {
             var p = Puhe.Instanssi?.Pinnattu;
-            if (Nykyinen == null || p == Nykyinen.Omistaja) return;
+            if (Nykyinen == null || Vaisto || p == Nykyinen.Omistaja) return;
             var k = Nykyinen;
             Nykyinen = null;
             bool olipienena = Pienena;
@@ -122,6 +158,7 @@ namespace Matkakirja.Natiivi
             if (nayta)
             {
                 otsikko.text = Nykyinen?.Otsikko ?? "";
+                tauko.style.display = raita.style.display = Vaisto ? DisplayStyle.None : DisplayStyle.Flex;
                 Asettele();
                 Ponnahdus.Avaa(palkki, origo: new TransformOrigin(Length.Percent(100), Length.Percent(0)));
             }
@@ -149,7 +186,7 @@ namespace Matkakirja.Natiivi
                 kierto = UnityEngine.Object.FindAnyObjectByType<PalloKierto>();
                 if (kierto != null) { kierto.PelaajanEle += Pienenna; kierto.Napautettu += _ => Pienenna(); }
             }
-            if (Nykyinen == null || !Pienena) return;
+            if (Nykyinen == null || !Pienena || Vaisto) return;
             bool tauolla = Puhe.Instanssi != null && Puhe.Instanssi.Tauolla;
             if (tauko.ClassListContains("mk-pinpalkki__tauko--jatka") != tauolla)
             {
