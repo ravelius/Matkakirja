@@ -99,6 +99,7 @@ namespace Matkakirja.Natiivi
             (lat, lon) = Keskusta(lat, lon);   // Natural Earth -piste → kaupungin keskusta (Wikidata P625)
             Aloituskaupunki = nimi.Trim();
             Viimeisin.pakotettuSijainti = (lat, lon);
+            AloitusKeskusta = (lat, lon);
             Viimeisin.o.Kirjaa($"opas: kaupunki vaihtuu → {Aloituskaupunki} ({lat:F3}, {lon:F3})");
             if (!Viimeisin.AvaaKaupunki(lat, lon, Aloituskaupunki)) return false;
             Viimeisin.silmukka.VaihdaPaikka(lat, lon, nimi.Trim());   // kamera lentää heti kaupungin yleiskuvaan (Natiivi-UI 6.10. 00.2x)
@@ -115,6 +116,10 @@ namespace Matkakirja.Natiivi
             return false;
         }
         (double lat, double lon)? pakotettuSijainti;
+        /// <summary>Valitun kaupungin keskusta (kaupunki, täky tai avaus): pyyntöjen sijainti, kunnes kamera on kaupungissa (TF 152).
+        /// Staattinen kuten Aloituskaupunki, jotta nimi ja paikka vaihtuvat aina yhdessä.</summary>
+        public static (double lat, double lon) AloitusKeskusta = (KoopenhaminaTesti.Alku.Lat, KoopenhaminaTesti.Alku.Lon);
+        (double lat, double lon) PyynnonPaikka() => OpasSilmukka.PyynnonPaikka(silmukka.Asento, AloitusKeskusta);
 
         readonly LinssiOhjain o;
         readonly PalloKierto kierto;
@@ -187,7 +192,7 @@ namespace Matkakirja.Natiivi
             silmukka.Kysyy += Kysyy;
             silmukka.LentoAlkaa += LentoAlkoi;
             // Siirto ilman lentoa (omistaja 6.10. 12.0x): origo heti kohteeseen, latausaste kohdekameran laatoista.
-            silmukka.SiirtoAlkaa += (la, lo) => { if (kaupunkiOdottaa && !AvaaKaupunki(la, lo, silmukka.SiirtoNimi)) return; kaupunki.YritaGoogleUudelleen(); kaupunki.SiirraOrigo(la, lo, MaaPisteessa(la, lo) is double m && !double.IsNaN(m) ? m : 45); o.Kirjaa($"opas: siirrytään {silmukka.SiirtoNimi} ({la:F3}, {lo:F3})"); };
+            silmukka.SiirtoAlkaa += (la, lo) => { if (kaupunkiOdottaa && !AvaaKaupunki(la, lo, silmukka.SiirtoNimi)) return; kaupunki.YritaGoogleUudelleen(); kaupunki.Karkeaksi(); kaupunki.SiirraOrigo(la, lo, MaaPisteessa(la, lo) is double m && !double.IsNaN(m) ? m : 45); o.Kirjaa($"opas: siirrytään {silmukka.SiirtoNimi} ({la:F3}, {lo:F3})"); };
             silmukka.LatausEdistys = () => kaupunki.Latausaste / 100.0;
             // Maaston korkeus kohdekehykseen (simu 6.10. 12.42: Praha aukesi 45 m:n arviolla mäen sisältä): näyte pisteeseen.
             silmukka.MaaPisteessa = MaaPisteessa;
@@ -242,6 +247,7 @@ namespace Matkakirja.Natiivi
         {
             if (!kaupunkiOdottaa) return true;
             kaupunkiOdottaa = false;
+            AloitusKeskusta = (lat, lon);
             double maa = MaaPisteessa(lat, lon);
             if (!kaupunki.Avaa(lat, lon, double.IsNaN(maa) ? 45 : maa))
             {
@@ -281,6 +287,21 @@ namespace Matkakirja.Natiivi
             // OSM-tekijätieto aina oppaan ajan: worker käyttää Nominatimia koordinaatteihin ja reittiviivoihin (ODbL, juna 146).
             KrediititTiivis.OsmNakyvissa = true;
             KrediititTiivis.Paivita(true);   // kapealla ruudulla logot + "Data sources" (Googlen policy)
+            if (KiinteaKamera is Kuvakulma kk)   // kuvaparit samasta kulmasta (testi)
+            {
+                y.Kuvaa(kk); kaupunki.AsetaEsikamera(kk);
+                if (!kiinteaKirjattu) { kiinteaKirjattu = true; kiinteaAlku = Time.realtimeSinceStartup; kiinteaLaski = false; o.Kirjaa($"opas: kiinteä kamera käytössä {kk}"); }
+                // Latausaika kiinnityksestä 99 %:iin (Päätoimittaja: kolmikon latausajat); vasta kun aste on ensin laskenut tai 3 s.
+                if (kiinteaAlku > 0)
+                {
+                    if (kaupunki.Latausaste < CesiumKaupunki.ValmisProsentti) kiinteaLaski = true;
+                    else if ((kiinteaLaski || Time.realtimeSinceStartup - kiinteaAlku > 3f) && !kaupunki.KarkeaKaytossa)
+                    { o.Kirjaa($"opas: kiinteä kamera: laatat 99 % {Time.realtimeSinceStartup - kiinteaAlku:F1} s:ssa (kerroin {CesiumKaupunki.SseKerroin:F2})"); kiinteaAlku = -1f; }
+                }
+                if (kaupunki.KarkeaKaytossa && kaupunki.Latausaste >= CesiumKaupunki.ValmisProsentti) kaupunki.Tarkenna();
+                return;
+            }
+            kiinteaKirjattu = false;
             if (Pysaytetty) { y.Kuvaa(silmukka.Asento); return; }
             var ennen = silmukka.Vaihe;
             LueTapit();
@@ -296,9 +317,19 @@ namespace Matkakirja.Natiivi
                     case KysyOdotus.Tapahtuma.Virhe: o.Kirjaa("opas: kysymykseen ei vastausta 25 s:ssa"); Silta(OpasSiltalauseet.Virhe, false); break;
                 }
             silmukka.Paivita(Time.unscaledDeltaTime, MaaKorkeus, () => kaupunki.Valmis);
+            // Kaksivaiheinen tarkkuus: pysähdyksellä (ei lento eikä siirto) ja laatat ≥ 99 % → tarkentuminen tavoitekertoimeen.
+            // Vapaan tilan liike (LS2 6.10. 19.4x, Eiffel 40 m: venyneet laatat liikkeessä): tapit käytössä → karkea valinta kuten
+            // saapuessa; paikallaan ja laatat ≥ 99 % → tarkentuminen.
+            var vt = silmukka.VapaaTapit;
+            bool vapaaLiikkuu = silmukka.VapaaTila && (Math.Abs(vt.vx) + Math.Abs(vt.vy) + Math.Abs(vt.ox) + Math.Abs(vt.oy)) > 0.05;
+            if (vapaaLiikkuu) kaupunki.Karkeaksi();
+            else if (kaupunki.KarkeaKaytossa && !silmukka.Siirtymassa && silmukka.Vaihe != OpasVaihe.Lentaa && kaupunki.Latausaste >= CesiumKaupunki.ValmisProsentti)
+                kaupunki.Tarkenna();
             if (silmukka.Vaihe != ennen) o.Kirjaa($"opas: {ennen} → {silmukka.Vaihe} {(silmukka.Nykyinen?.Nimi ?? "")}, laatat {kaupunki.Latausaste:F0} %");
             if (silmukka.Vaihe != ennen && silmukka.Vaihe == OpasVaihe.Lentaa) OpasKorostusKuva.Piilota();
             y.Kuvaa(silmukka.Asento);
+            LatausKuvaPaivita();
+            Luotaa();
             KameraKuvattu?.Invoke(kierto != null ? kierto.GetComponent<Camera>() : null, silmukka);
             // Esilataus: lennon aikana laskeutumiskehys, muuten esihaetun kohteen kehys (OpasKuvaus, sama kuin lento).
             var esi = silmukka.Esilataus(MaaKorkeus);
@@ -431,10 +462,19 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Testikomento "opas testi429": Googlen root-pyyntö kuin 429 (uusintayritykset ja ion-vara lokiin).</summary>
+        /// <summary>VAIN TESTIKÄYTTÖÖN (Päätoimittaja 6.10. 19.0x: still-parit täsmälleen samasta kulmasta): komento
+        /// "opas kamera lat lon etäisyys_m kallistus suuntima katseKorkeus_m" lukitsee kameran; "opas kamera pois" vapauttaa.</summary>
+        public static Kuvakulma? KiinteaKamera;
+        bool kiinteaKirjattu, kiinteaLaski;
+        float kiinteaAlku = -1f;
+
         public static void TestiGoogle429() { if (Viimeisin != null && Viimeisin.nakymaAuki) Viimeisin.kaupunki.TestiVirhe429(); }
 
         /// <summary>Vapaa tila (■ jälkeen): ei kohdetta, Linssiseppä 2:n vapaa ohjaus (juna 152).</summary>
         public static bool VapaaTila => Auki && Viimeisin.silmukka.VapaaTila;
+        /// <summary>Vapaan lennon tila (komento `opas vapaa`): korkeus, pinta ja tunnetut näytteet; null = ei vapaassa tilassa.</summary>
+        public static string VapaanTila => !VapaaTila ? null : Viimeisin.silmukka.Vapaa.Tila() +
+            (Viimeisin.luotain is OpasLahiluotain l ? $", luotain {l.PiirtoMs:0.00} ms × {1 / OpasLahiluotain.ValiS:0}/s ({l.Mittauksia} mittausta), syvyys ala {l.AlaKeski:0} / ylä {l.YlaKeski:0} m" : "");
         string[] kysymykset, jatkoKysymykset = Array.Empty<string>();
         List<OpasTaky> kohteet;
         string kohteetKaupunki;
@@ -631,12 +671,12 @@ namespace Matkakirja.Natiivi
 
         IEnumerator HaeKohteet(string kaupunki)
         {
-            var a = silmukka.Asento;
-            using var r = Pyynto($"/opas/liiku?kaupunki={UnityWebRequest.EscapeURL(kaupunki)}&lat={a.Lat.ToString("F4", System.Globalization.CultureInfo.InvariantCulture)}&lon={a.Lon.ToString("F4", System.Globalization.CultureInfo.InvariantCulture)}");
+            var (aLat, aLon) = PyynnonPaikka();
+            using var r = Pyynto($"/opas/liiku?kaupunki={UnityWebRequest.EscapeURL(kaupunki)}&lat={aLat.ToString("F4", System.Globalization.CultureInfo.InvariantCulture)}&lon={aLon.ToString("F4", System.Globalization.CultureInfo.InvariantCulture)}");
             yield return r.SendWebRequest();
             if (silmukka == null || kohteetKaupunki != kaupunki) yield break;
             kohteet = r.result == UnityWebRequest.Result.Success ? OpasTaky.Lue(MiniJson.Jasenna(r.downloadHandler.text) as Dictionary<string, object>) : new List<OpasTaky>();
-            o.Kirjaa($"opas: liiku-lista {kohteet.Count} ({kaupunki}, {(r.result == UnityWebRequest.Result.Success ? "ok" : r.responseCode.ToString())})");
+            o.Kirjaa($"opas: liiku-lista {kohteet.Count} ({kaupunki} {aLat:F3}/{aLon:F3}, {(r.result == UnityWebRequest.Result.Success ? "ok" : r.responseCode.ToString())})");
         }
 
         /// <summary>Pöllö-pyyntö natiiviotsakkein (GET, tai POST jos body).</summary>
@@ -728,6 +768,47 @@ namespace Matkakirja.Natiivi
 
         // ---- TAUKO JA TÄKYLUETTELO (omistaja TF 144, juna 146; UI Natiivi-UI heijastuksella) ----
         /// <summary>UI asettaa true, kun se näyttää täkyluettelon avauksessa; muuten opas alkaa kuten ennen (vanha UI).</summary>
+        // ---- SEURAAVA-NAPPI (›|; omistaja 6.10. 23.3x; Natiivi-UI tekee napin play/pausen viereen, juna 156) ----
+        /// <summary>Seuraava-nappi käytettävissä (opas käynnissä, ei siirtoruutua).</summary>
+        public static bool SeuraavaKaytettavissa => Auki && Viimeisin.silmukka.SeuraavaKaytettavissa;
+        /// <summary>Ohittaa nykyisen kohteen ja siirtyy seuraavaan (myös kierroksella ja vapaassa tilassa). true = ohitettiin.</summary>
+        public static bool Seuraava()
+        {
+            if (!Auki) return false;
+            var v = Viimeisin;
+            if (v.tauolla) Tauko(false);
+            bool ok = v.silmukka.OhitaKohde();
+            if (ok) { v.LatausKuvaPois("ohitus"); v.o.Kirjaa($"opas: seuraava (ohitettiin {v.silmukka.Nykyinen?.Nimi})"); }
+            return ok;
+        }
+
+        // ---- KUVA LATAUKSEN AJAKSI (omistaja 23.3x: "näyttää automaattisesti yhden kuvan 80% kokoisena", juna 156) ----
+        /// <summary>Saavuttaessa laattoja alle LatausKuvaRaja: kohteen ensimmäinen kuva (Natiivi-UI näyttää 80 %:n kokoisena
+        /// Kuvasuurennoksen pohjalla); null, kun laattoja on ≥ raja tai LatausKuvaMaxS kului. Ei kuvaa → ei näytetä.</summary>
+        public static OpasKuva LatausKuva => Auki ? Viimeisin.latausKuva : null;
+        public static event Action<OpasKuva> LatausKuvaVaihtui;
+        public const float LatausKuvaRaja = 90f, LatausKuvaMaxS = 8f;
+        OpasKuva latausKuva; float latausKuvaAlku, saapumisAika = -1f;
+
+        void LatausKuvaPaivita()
+        {
+            // Tarkka näkymä saapumisesta (mittari ennen/jälkeen esilatauksen, Päätoimittaja: Pariisi ja Sydney).
+            if (saapumisAika > 0 && kaupunki.Latausaste >= CesiumKaupunki.ValmisProsentti && !kaupunki.KarkeaKaytossa)
+            { o.Kirjaa($"opas: tarkka näkymä {Time.realtimeSinceStartup - saapumisAika:F1} s saapumisesta ({silmukka.Nykyinen?.Nimi})"); saapumisAika = -1f; }
+            if (latausKuva == null) return;
+            if (kaupunki.Latausaste >= LatausKuvaRaja) LatausKuvaPois($"laatat {kaupunki.Latausaste:F0} %");
+            else if (Time.realtimeSinceStartup - latausKuvaAlku > LatausKuvaMaxS) LatausKuvaPois("aikaraja");
+            else if (silmukka.Vaihe == OpasVaihe.Lentaa) LatausKuvaPois("lento");
+        }
+
+        void LatausKuvaPois(string syy)
+        {
+            if (latausKuva == null) return;
+            latausKuva = null;
+            o.Kirjaa($"opas: latauskuva pois ({syy}, {Time.realtimeSinceStartup - latausKuvaAlku:F1} s)");
+            LatausKuvaVaihtui?.Invoke(null);
+        }
+
         public static bool TakyAvaus;
         /// <summary>Täkyt (null = latautuu, tyhjä = ei saatu); UI lukee avauksessa.</summary>
         public static IReadOnlyList<OpasTaky> Takyt => Viimeisin?.takyt;
@@ -767,6 +848,7 @@ namespace Matkakirja.Natiivi
             var v = Viimeisin;
             if (!string.IsNullOrEmpty(t.Kaupunki)) Aloituskaupunki = t.Kaupunki;
             v.pakotettuSijainti = (t.Lat, t.Lon);
+            AloitusKeskusta = (t.Lat, t.Lon);
             v.o.Kirjaa($"opas: täky valittu {t.Nimi} ({t.Kaupunki}, {t.Iso2})");
             if (v.tauolla) Tauko(false);
             if (v.kaupunkiOdottaa)
@@ -897,6 +979,8 @@ namespace Matkakirja.Natiivi
         /// <summary>Kierroksen siirtymä: automaattinen lento soittaa "kierros" (yli 20 km "lento"); toiveen lento soitti jo valinnasta.</summary>
         void LentoAlkoi(OpasKohde k, double matkaM, bool toiveesta)
         {
+            kaupunki.Karkeaksi();   // kaksivaiheinen tarkkuus (juna 153): lento ja saapuminen karkealla valinnalla
+            o.Kirjaa($"opas: lento {k.Nimi} {matkaM:F0} m, kesto {silmukka.LentoKestoS:F1} s, suurin kiihtyvyys {silmukka.LentoMittari.kiihtyvyys:F1} m/s², suurin lasku {silmukka.LentoMittari.lasku:F1} m/s");
             kaupunki.YritaGoogleUudelleen();   // ion-varalla: Google uudelleen seuraavassa kohteessa (laatat lennon aikana)
             if (!toiveesta) Silta(matkaM > 20000 ? OpasSiltalauseet.Lento : OpasSiltalauseet.Kierros, false);
         }
@@ -986,6 +1070,20 @@ namespace Matkakirja.Natiivi
             t.GetField("Kamera", F)?.SetValue(null, kamera);
         }
 
+        OpasLahiluotain luotain;
+        /// <summary>Vapaassa tilassa syvyysluotain toivotun liikkeen suuntaan (ristikkorakenteet, OpasLahiluotain) → Vapaa.EsteM.</summary>
+        void Luotaa()
+        {
+            var kam = kierto != null ? kierto.GetComponent<Camera>() : null;
+            if (silmukka.VapaaTila && kam != null)
+            {
+                luotain ??= new OpasLahiluotain();
+                luotain.Paivita(kam, silmukka.Vapaa.ToiveSuuntaEro, kaupunki.Ylos(kam.transform.position));
+                silmukka.Vapaa.EsteM = luotain.VaakaM; silmukka.Vapaa.EsteAllaM = luotain.AllaM;
+            }
+            else if (luotain != null) { luotain.Dispose(); luotain = null; silmukka.Vapaa.EsteM = silmukka.Vapaa.EsteAllaM = double.PositiveInfinity; }
+        }
+
         void LueTapit()
         {
             if (Time.unscaledTime < vapaaTestiLoppuu) { silmukka.VapaaTapit = vapaaTesti; silmukka.Tapit = default; silmukka.PelaajaOhjaa = true; return; }
@@ -1060,11 +1158,11 @@ namespace Matkakirja.Natiivi
 
         IEnumerator Hae(int n, string toive)
         {
-            var a = silmukka.Asento;
-            double sLat = a.Lat, sLon = a.Lon;
+            var (sLat, sLon) = PyynnonPaikka();
             if (pakotettuSijainti is (double, double) ps) { sLat = ps.lat; sLon = ps.lon; pakotettuSijainti = null; }
             if (silmukka.PyynnonSijainti is (double, double) pk) { sLat = pk.lat; sLon = pk.lon; silmukka.PyynnonSijainti = null; }
             var kt = silmukka.KierrosTieto;
+            o.Kirjaa($"opas: pyyntö {n} {Aloituskaupunki} {sLat:F3}/{sLon:F3}");
             var sb = new StringBuilder("{");
             sb.Append("\"istunto\":\"").Append(istunto).Append("\",");
             sb.Append("\"toive\":").Append(toive == null ? "null" : "\"" + Escape(toive) + "\"").Append(',');
@@ -1123,10 +1221,10 @@ namespace Matkakirja.Natiivi
         /// <summary>PCM-virrat avaimittain (Pöllön aani_pcm) ja soiva virta (loppu tunnistetaan siitä, ei klipin pituudesta).</summary>
         readonly Dictionary<string, PcmVirta> pcmVirrat = new Dictionary<string, PcmVirta>(StringComparer.Ordinal);
         PcmVirta pcmNyt;
-        /// <summary>Toisto alkaa, kun virrassa on näin paljon puskuria (s) tai lataus on valmis.</summary>
-        const float PcmPuskuriS = 1.0f;   // Päätoimittaja 16.5x: alku ~1 s varalla (nopea alku), alivuodossa PcmVirta puskuroi ~2 s
+        // Toisto alkaa, kun virrassa on OpasPcmPuskuri.Tarvitaan (nopealla virralla 1 s; Päätoimittaja 16.5x) tai lataus on valmis;
+        // alivuodossa PcmVirta puskuroi ~2 s.
 
-        /// <summary>PCM-virran lataus: klippi valmiina (klipit[avain]), kun puskuria on PcmPuskuriS; lataus jatkuu taustalla loppuun.</summary>
+        /// <summary>PCM-virran lataus: klippi valmiina (klipit[avain]), kun puskuria on OpasPcmPuskuri.Tarvitaan; lataus jatkuu taustalla loppuun.</summary>
         IEnumerator LataaPcm(OpasKohde k)
         {
             string avain = k.AaniPcm;
@@ -1136,9 +1234,22 @@ namespace Matkakirja.Natiivi
             p.SetRequestHeader("x-matkakirja-natiivi", Application.identifier);
             PolloTestitunnus.Lisaa(p);
             p.SetRequestHeader("User-Agent", "Matkakirja/" + Application.version + " (" + Application.identifier + ")");
-            float t0 = Time.realtimeSinceStartup;
+            float t0 = Time.realtimeSinceStartup, tEka = -1f;
             var op = p.SendWebRequest();
-            while (!op.isDone && virta.PuskuroituS < PcmPuskuriS) yield return null;
+            // Alkupuskuri mitatusta latausnopeudesta (juna 154): hidas virta (< 1 × reaaliaika) puskuroi niin, ettei kertoja katkea.
+            double nopeus = double.NaN, tarvitaan = OpasPcmPuskuri.PohjaS;
+            while (!op.isDone)
+            {
+                if (tEka < 0 && virta.KirjoitettuS > 0) tEka = Time.realtimeSinceStartup;
+                if (tEka >= 0)
+                {
+                    nopeus = OpasPcmPuskuri.Nopeus(virta.KirjoitettuS, Time.realtimeSinceStartup - tEka);
+                    tarvitaan = OpasPcmPuskuri.Tarvitaan(k.KestoS, nopeus);
+                    virta.AlkuTarve = (float)tarvitaan;
+                    if (virta.PuskuroituS >= tarvitaan) break;
+                }
+                yield return null;
+            }
             if (p.result == UnityWebRequest.Result.ConnectionError || p.result == UnityWebRequest.Result.ProtocolError || virta.KirjoitettuS <= 0f)
             {
                 while (!op.isDone) yield return null;
@@ -1149,9 +1260,9 @@ namespace Matkakirja.Natiivi
                 yield break;
             }
             klipit[avain] = virta.Klippi("opas-pcm", (float)k.KestoS);
-            o.Kirjaa($"opas: PCM-virta soittovalmis {Time.realtimeSinceStartup - t0:F1} s:ssa ({virta.PuskuroituS:F1} s puskurissa)");
+            o.Kirjaa($"opas: PCM-virta soittovalmis {Time.realtimeSinceStartup - t0:F1} s:ssa ({virta.PuskuroituS:F1} s puskurissa, nopeus {nopeus:F2} ×, tarve {tarvitaan:F1} s)");
             while (!op.isDone) yield return null;
-            o.Kirjaa($"opas: PCM-virta valmis {Time.realtimeSinceStartup - t0:F1} s, {virta.KirjoitettuS:F1} s ääntä");
+            o.Kirjaa($"opas: PCM-virta valmis {Time.realtimeSinceStartup - t0:F1} s, {virta.KirjoitettuS:F1} s ääntä ({virta.KirjoitettuS / Mathf.Max(0.1f, Time.realtimeSinceStartup - (tEka >= 0 ? tEka : t0)):F2} ×)");
         }
 
         IEnumerator Korkeus(OpasKohde k)
@@ -1227,6 +1338,13 @@ namespace Matkakirja.Natiivi
             saapumisia++;
             o.StartCoroutine(Siivoa());
             o.Kirjaa($"opas: saapui {k.Nimi} ({k.Lat:F4}, {k.Lon:F4}), ääni {(puhuu ? "soi" : "ei")}, laatat {kaupunki.Latausaste:F0} %");
+            saapumisAika = Time.realtimeSinceStartup;
+            if (kaupunki.Latausaste < LatausKuvaRaja && k.Kuvat != null && k.Kuvat.Length > 0 && !k.Kysymys)
+            {
+                latausKuva = k.Kuvat[0]; latausKuvaAlku = Time.realtimeSinceStartup;
+                o.Kirjaa($"opas: latauskuva näkyviin (laatat {kaupunki.Latausaste:F0} %)");
+                LatausKuvaVaihtui?.Invoke(latausKuva);
+            }
             o.Kirjaa($"opas: kuvat {k.Kuvat?.Length ?? 0} (tekijällä {System.Linq.Enumerable.Count(k.Kuvat ?? Array.Empty<OpasKuva>(), x => !string.IsNullOrEmpty(x.Tekija))}), hylätty yhteensä {OpasKuva.Hylatyt}");
             OpasKorostusKuva.Nayta(k, silmukka?.NykyinenKehys?.MaaM ?? (MaaKorkeus(k) is double mk && !double.IsNaN(mk) ? mk : 45), kaupunki.Georef);   // Siirtoseppä: korostus (juna 145)
         }
@@ -1260,13 +1378,28 @@ namespace Matkakirja.Natiivi
         }
         OpasKohde tekstina, aaniOdotus;
         float puheAlkoi;
-        const float AaniOdotusS = 10f;   // #4018: mp3 valmistuu GETissä ~8–9 s tekstin jälkeen (toiveen polku)
+        const float AaniOdotusS = 10f;
+        /// <summary>Alkupuskurin tarve, jonka ylittyessä odotus täytetään siltalauseella (Päätoimittaja: ~3 s).</summary>
+        const float PcmSiltaS = 3f;   // #4018: mp3 valmistuu GETissä ~8–9 s tekstin jälkeen (toiveen polku)
 
         IEnumerator OdotaAani(OpasKohde k)
         {
             float t0 = Time.realtimeSinceStartup;
             string avain = AaniAvain(k);
-            while (silmukka != null && !klipit.ContainsKey(avain) && Time.realtimeSinceStartup - t0 < AaniOdotusS) yield return null;
+            bool siltaSoitettu = false;
+            // Hidas PCM-virta (juna 154): odotus voi venyä alkupuskurin verran (enintään OpasPcmPuskuri.MaxS), ja yli PcmSiltaS:n
+            // odotus täytetään siltalauseella eikä hiljaisuudella (Päätoimittaja 6.10. 21.0x).
+            while (silmukka != null && !klipit.ContainsKey(avain)
+                && Time.realtimeSinceStartup - t0 < AaniOdotusS + (pcmVirrat.ContainsKey(avain) ? (float)OpasPcmPuskuri.MaxS : 0f))
+            {
+                if (!siltaSoitettu && pcmVirrat.TryGetValue(avain, out var pv) && pv.AlkuTarve > PcmSiltaS)
+                {
+                    siltaSoitettu = true;
+                    o.Kirjaa($"opas: hidas PCM-virta, alkupuskuri {pv.AlkuTarve:F1} s → siltalause");
+                    Silta(silmukka.Vaihe == OpasVaihe.Lentaa ? OpasSiltalauseet.Odotus : OpasSiltalauseet.OdotusPaikalla, false);
+                }
+                yield return null;
+            }
             if (silmukka == null || (silmukka.Nykyinen != k && !(silmukka.OdottaaVastausta && viimeKysymys == k))) yield break;
             o.Kirjaa($"opas: ääni {(klipit.ContainsKey(avain) ? "latautui" : "ei latautunut")} {Time.realtimeSinceStartup - t0:F1} s:ssa");
             Soita(k);
@@ -1405,6 +1538,7 @@ namespace Matkakirja.Natiivi
 
         public void Sulje()
         {
+            luotain?.Dispose(); luotain = null;
             OpasKorostusKuva.Piilota(true);
             KyydinKameraEnnen.Ajo = null;
             KytkeNimilappu(false);

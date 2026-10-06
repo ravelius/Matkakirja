@@ -39,8 +39,12 @@ namespace Matkakirja.Natiivi
         // JUNAN OLETUS (Päätoimittajan sääntö 5.10. 19.1x): vain MSAA + aniso, kunnes kuvapari näyttää utu-, Volume-, vuorokausi-
         // ja kupolikuvan selvästi paremmiksi ja Päätoimittaja kuittaa (juna 150: kuvaparit aamu/päivä/ilta/yö + iPad-muisti);
         // viritys asetustiedostolla ("sumu 1 volume 1 vuorokausi 1 kupoli 1"). Ei tonemappausta (Neutral latisti kuvan).
-        public static bool Sumu = false, Savytys = false, Volyymi = false, VuorokausiPaalla = false, Kupoli = false;
+        // VuorokausiPaalla oletuksena (Päätoimittaja 6.10. 21.0x kuittasi sävykolmikon 20.53: aamu kullanlämmin, päivä neutraali, ilta
+        // hillitty; juna 154): automaattinen vuorokausi = kohteen paikallisen ajan sävy, ilman pelaajan valintaa.
+        public static bool Sumu = false, Savytys = false, Volyymi = false, VuorokausiPaalla = true, Kupoli = false;
         public static float Kontrasti = 12f, Saturaatio = 10f, Hehku = 0f, Tunti = -1f;
+        /// <summary>Terävöitys 0–1 (KaupunkiTerava, kuvanlaatulista kohta 1; oletus pois kuvapariin ja iPad-mittaukseen asti).</summary>
+        public static float Terava = 0f;
 
         // ---- VUOROKAUDENAJAN VALINTA (omistaja 6.10. 19.0x, Natiivi-UI:n nappi vasemmassa yläkulmassa; juna 152) ----
         /// <summary>Pelaajan valinta: "auto" (kohteen oma aurinko), "aamu", "paiva", "ilta" ("yo" myöhemmin valojen kanssa).
@@ -80,6 +84,7 @@ namespace Matkakirja.Natiivi
         }
         internal static ColorAdjustments varit;
         internal static WhiteBalance valko;
+        internal static SplitToning jako;
 
         static KaupunkiKuvaAjo ajo;
         static GameObject volyymiGo;
@@ -131,8 +136,9 @@ namespace Matkakirja.Natiivi
             tallennettu = false;
             GoogleSse = 16f; MaastoSse = 10f; RakennusSse = 16f; Msaa = 4; // asetustiedosto luetaan uudelleen seuraavassa avauksessa
             AlkuKerroin = 15f; LoppuKerroin = 80f; AlkuMinM = 3000f; LoppuMinM = 15000f; Sumu = false; Savytys = false; Volyymi = false;
-            Kontrasti = 12f; Saturaatio = 10f; Hehku = 0f; VuorokausiPaalla = false; Kupoli = false; Tunti = -1f; asetuksetMuokattu = default;
-            varit = null; valko = null;
+            Kontrasti = 12f; Saturaatio = 10f; Hehku = 0f; VuorokausiPaalla = true; Kupoli = false; Tunti = -1f; asetuksetMuokattu = default;
+            Terava = 0f; KaupunkiTerava.Pois();
+            varit = null; valko = null; jako = null;
             if (ajo != null) { ajo.Lopeta(); Object.Destroy(ajo.gameObject); ajo = null; }
             QualitySettings.anisotropicFiltering = vanhaAniso;
             Texture.SetGlobalAnisotropicFilteringLimits(-1, -1);
@@ -185,6 +191,7 @@ namespace Matkakirja.Natiivi
                         case "vuorokausi": VuorokausiPaalla = v != 0; break;
                         case "tunti": Tunti = v; break;
                         case "kupoli": Kupoli = v != 0; break;
+                        case "terava": Terava = v; KaupunkiTerava.Aseta(v); break;
                     }
                 }
                 return true;
@@ -222,6 +229,9 @@ namespace Matkakirja.Natiivi
             valko = profiili.Add<WhiteBalance>(true);
             valko.temperature.Override(0f);
             valko.tint.Override(0f);
+            // Lämmin valo, viileämmät varjot (Päätoimittaja 19.3x: ilta näytti tasaiselta oranssilta suodattimelta).
+            jako = profiili.Add<SplitToning>(true);
+            jako.shadows.Override(Color.gray); jako.highlights.Override(Color.gray); jako.balance.Override(10f);
             v.profile = profiili;
         }
     }
@@ -243,7 +253,6 @@ namespace Matkakirja.Natiivi
             vanhaSumu = RenderSettings.fog; vanhaMoodi = RenderSettings.fogMode; vanhaVari = RenderSettings.fogColor;
             vanhaAlku = RenderSettings.fogStartDistance; vanhaLoppu = RenderSettings.fogEndDistance;
             vanhaTausta = k.Kamera != null ? k.Kamera.backgroundColor : Color.black;
-            if (KaupunkiKuva.Kupoli) LuoKupoli();
         }
 
         public void Lopeta()
@@ -304,6 +313,10 @@ namespace Matkakirja.Natiivi
             var (aurinko, aamupaiva, auringonSuunta) = KaupunkiValo.Aurinko(System.DateTime.UtcNow, lat, lon);
             if (pakko >= 0) auringonSuunta = KaupunkiValo.AtsimuuttiTunnista(tunti);
             if (KaupunkiKuva.SavyKaytossa) KaupunkiKuva.VarmistaVolyymi(kamera);
+            // Kupoli asetuksen mukaan myös kesken näkymän (stillit 19.10: avattiin kupoli 0 → myöhempi "kupoli 1" ei luonut sitä,
+            // ja taivas näkyi yhtenä horisontin värinä).
+            if ((KaupunkiKuva.Kupoli || KaupunkiKuva.SavyKaytossa) && kupoli == null) LuoKupoli();
+            else if (!(KaupunkiKuva.Kupoli || KaupunkiKuva.SavyKaytossa) && kupoli != null) { Destroy(kupoli); kupoli = null; if (kupoliMat != null) Destroy(kupoliMat); if (kupoliMesh != null) Destroy(kupoliMesh); kupoliMat = null; kupoliMesh = null; }
             // Oletus: auringon todellinen korkeus kohteessa; pelaajan valinta tai asetuksen tunti avainkuvista.
             var savy = !KaupunkiKuva.SavyKaytossa ? KaupunkiValo.Paiva
                 : pakko >= 0 ? KaupunkiValo.Tunnille(tunti) : KaupunkiValo.Korkeudelle(aurinko, aamupaiva);
@@ -320,6 +333,12 @@ namespace Matkakirja.Natiivi
                 KaupunkiKuva.varit.saturation.value = KaupunkiKuva.SavyKaytossa ? (float)savy.Saturaatio : KaupunkiKuva.Saturaatio;
             }
             if (KaupunkiKuva.valko != null) { KaupunkiKuva.valko.temperature.value = (float)savy.Lampotila; KaupunkiKuva.valko.tint.value = (float)savy.Savytys; }
+            if (KaupunkiKuva.jako != null)
+            {
+                float lampo = KaupunkiKuva.SavyKaytossa ? Mathf.Clamp01((float)savy.Lampotila / 30f) : 0f;
+                KaupunkiKuva.jako.highlights.value = Color.Lerp(Color.gray, new Color(1f, 0.82f, 0.62f), lampo * 0.6f);
+                KaupunkiKuva.jako.shadows.value = Color.Lerp(Color.gray, new Color(0.45f, 0.55f, 0.75f), lampo * 0.5f);
+            }
             if (kupoli != null)
             {
                 // Kupoli kameran ympärille lähi- ja kaukotason väliin (piirtyy ensimmäisenä ilman syvyyttä, joten koko ei näy).

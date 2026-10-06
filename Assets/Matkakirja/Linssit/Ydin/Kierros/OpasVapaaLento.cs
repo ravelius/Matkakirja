@@ -4,7 +4,8 @@
 //   vasen tappi   ↕ eteen/taakse katsesuunnan mukaan, ↔ sivuttain (strafe)
 //   oikea tappi   ↔ kääntää katsetta paikallaan (kamera pysyy, näkymä kääntyy), ↕ nousee/laskee suoraan ylös/alas
 //   kallistus     korkeuden mukaan automaattisesti: matalalla lähes vaakaan (78°), ylhäällä jyrkemmin alas (54° 10 km:ssä)
-//   nopeus        verrannollinen korkeuteen pinnasta (0,6 × korkeus / s täydellä tapilla), pehmeä kiihdytys ja hiipuma
+//   nopeus        verrannollinen korkeuteen pinnasta (0,6 × korkeus / s täydellä tapilla; nousu 0,5 ×, Päätoimittaja 6.10. ilta:
+//                 0,8 vei 3 s:ssa 2 km:iin), pehmeä kiihdytys ja hiipuma
 //   pinta         vähintään MinKorkeusM 3D-laattojen pinnan (rakennukset mukana: OpasSovitin SampleHeightMostDetailed) yläpuolella
 //                 kamerassa ja EnnakkoS:n päässä liikkeen suunnassa (Päätoimittaja: ei läpi korkeista rakennuksista); enintään MaxKorkeusM
 // Tila: kameran alapiste, absoluuttinen korkeus (ellipsoidi), suunta; ulos Kuvakulma PalloKierto.Kuvaa-muodossa (katsepiste
@@ -15,7 +16,7 @@ namespace Matkakirja.Linssit.Kierros
 {
     public sealed class OpasVapaaLento
     {
-        public const double NopeusKerroin = 0.6, NousuKerroin = 0.8, KaantoAstS = 55, SyoteAikaS = 0.2, HiipumaAikaS = 0.5, KuollutAlue = 0.12;
+        public const double NopeusKerroin = 0.6, NousuKerroin = 0.5, KaantoAstS = 55, SyoteAikaS = 0.2, HiipumaAikaS = 0.5, KuollutAlue = 0.12;
         public const double MinKorkeusM = 40, MaxKorkeusM = 12000, MinNopeusMS = 15, EnnakkoS = 0.6, NostoAikaS = 0.25;
         /// <summary>
         /// Naapuruston näytteet (Päätoimittaja 6.10.: Eiffel-tornin ristikko läpäisi pistenäytteen): kaksi kehää kameran ympärillä
@@ -30,6 +31,26 @@ namespace Matkakirja.Linssit.Kierros
             return Siirra(Lat, Lon, s * 360.0 / KehaSuuntia + (r % 2) * 22.5, KehaSateet[r]);
         }
         public static int KehaPisteita => KehaSateet.Length * KehaSuuntia;
+        /// <summary>Tunnettuja näytteitä (kamera, ennakko, kehät) viime päivityksessä; alle NaapurustoTaysi → varovainen tila.</summary>
+        public int Tunnetut { get; private set; }
+        public const int NaapurustoTaysi = 14;
+        public string Tila() => $"vapaa: korkeus {KorkeusAbsM:0} m (pinnasta {KorkeusM:0}), pinta {PintaM:0}, näytteitä {Tunnetut}/{2 + KehaPisteita}, " +
+            $"este {M(EsteM)} m, alla {M(EsteAllaM)} m, suunta {Suunta:0}°, kall {Kallistus:0}°";
+        static string M(double m) => double.IsInfinity(m) ? "-" : m.ToString("0");
+        /// <summary>
+        /// Lähiluotaimen (syvyyspuskuri, OpasLahiluotain; Päätoimittaja 6.10.) vaakaeste toivotun liikkeen suunnassa (m; vain
+        /// pisteet, jotka eivät ole selvästi kameran alapuolella, OpasLuotainKuva). Eiffel-toisto 19.1x: 40 m:n rajalla kamera jäi
+        /// 56–62 m:n päähän ristikosta, joka täytti ruudun → alle EsteRajaM:n kamera nousee eikä laskeudu, ja vaakavauhti on
+        /// ≤ (EsteM − EstePysahdysM) m/s.
+        /// </summary>
+        public double EsteM { get; set; } = double.PositiveInfinity;
+        /// <summary>Pystyvara kameran alla olevaan geometriaan (ristikon taso, jota pistenäyte ei osu); alle MinKorkeusM → nousu.</summary>
+        public double EsteAllaM { get; set; } = double.PositiveInfinity;
+        // Juna 153 -koe a53bcdb2 (Pelikoodari 19.4x): 14b korjautui (este 101 m, torni kokonaisena), mutta 14c pysähtyi 63 m:iin, ja
+        // ristikko täytti taas ruudun → pysähdys 120 m ja nousu alle 180 m:n esteestä.
+        public const double EsteRajaM = 180, EstePysahdysM = 120, EsteNousuMS = 15;
+        /// <summary>Toivotun vaakaliikkeen suunta katsesuunnasta (°, + oikealle): tapista, muuten nopeudesta; paikallaan 0.</summary>
+        public double ToiveSuuntaEro { get; private set; }
 
         public double Lat { get; private set; }
         public double Lon { get; private set; }
@@ -81,19 +102,40 @@ namespace Matkakirja.Linssit.Kierros
             vSivu += (sivu * v - vSivu) * a;
             vNousu += (nousu * Math.Max(MinNopeusMS, NousuKerroin * KorkeusM) - vNousu) * a;
             vKaanto += (kaanto * KaantoAstS - vKaanto) * a;
+            if (eteen != 0 || sivu != 0) ToiveSuuntaEro = Math.Atan2(sivu, eteen) * 180 / Math.PI;
+            else if (Math.Abs(vEteen) + Math.Abs(vSivu) > 1) ToiveSuuntaEro = Math.Atan2(vSivu, vEteen) * 180 / Math.PI;
+            else ToiveSuuntaEro = 0;
+            if (!double.IsInfinity(EsteM))
+            {
+                // Vaakavauhti enintään (este − pysähdysmatka) / 1 s: jarruttaa kaukaa, pysähtyy EstePysahdysM:iin.
+                double raja = Math.Max(0, EsteM - EstePysahdysM), vaaka = Math.Sqrt(vEteen * vEteen + vSivu * vSivu);
+                if (vaaka > raja) { double s = vaaka > 0 ? raja / vaaka : 0; vEteen *= s; vSivu *= s; }
+                if (EsteM < EsteRajaM) vNousu = Math.Max(vNousu, EsteNousuMS * Math.Min(1, 0.3 + 1.2 * (1 - EsteM / EsteRajaM)));
+            }
+            if (EsteAllaM < MinKorkeusM * 1.5)
+                vNousu = Math.Max(vNousu, EsteAllaM < MinKorkeusM ? EsteNousuMS * Math.Min(1, 0.3 + (1 - EsteAllaM / MinKorkeusM)) : 0);
             Suunta = KierrosLento.Kiedo(Suunta + vKaanto * dt);
             (Lat, Lon) = Siirra(Lat, Lon, Suunta, vEteen * dt);
             (Lat, Lon) = Siirra(Lat, Lon, Suunta + 90, vSivu * dt);
             // Pinta kamerassa ja liikkeen suunnassa (rakennus edessä nostaa jo ennen kuin kamera on sen kohdalla).
             var (el, eo) = Ennakko;
-            double suurin = double.NaN;
-            void Ota(double h) { if (!double.IsNaN(h)) suurin = double.IsNaN(suurin) ? h : Math.Max(suurin, h); }
+            double suurin = double.NaN; int tunnetut = 0;
+            void Ota(double h) { if (!double.IsNaN(h)) { tunnetut++; suurin = double.IsNaN(suurin) ? h : Math.Max(suurin, h); } }
             if (pinta != null)
             {
                 Ota(pinta(Lat, Lon)); Ota(pinta(el, eo));
                 for (int i = 0; i < KehaPisteita; i++) { var (kl, ko) = KehaPiste(i); Ota(pinta(kl, ko)); }
             }
-            if (!double.IsNaN(suurin)) PintaM = suurin;
+            // Naapurusto tuntematon (näytteet kesken: SampleHeightMostDetailed voi kestää sekunteja; koe-152 Eiffel: kamera laskeutui
+            // ristikon viereen ennen kuin kehän näytteet ehtivät): ei laskeuduta eikä pinta laske, ja matalalla vaakavauhti hidastuu.
+            Tunnetut = tunnetut;
+            bool taysi = pinta == null || tunnetut >= NaapurustoTaysi;
+            if (!double.IsNaN(suurin)) PintaM = taysi ? suurin : Math.Max(PintaM, suurin);
+            if (!taysi)
+            {
+                if (vNousu < 0) vNousu = 0;
+                if (KorkeusM < 150) { vEteen *= 0.3; vSivu *= 0.3; }
+            }
             KorkeusAbsM += vNousu * dt;
             double ala = PintaM + MinKorkeusM, yla = PintaM + MaxKorkeusM;
             // Pinnan nousu nostaa kameraa pehmeästi (NostoAikaS), muttei koskaan alle rajan.

@@ -1,14 +1,15 @@
 # 14 Oppaan vapaa tila (omistaja 6.10. 16.5x, Päätoimittaja hyväksyi; LS2 linssiseppa2/opas-vapaa, juna 152). Kierros ■ → vapaa
 # lento tapeilla OIKEILLA kosketuksilla (veto-kohta). Odotus: vasen ↕ eteen/taakse ja ↔ sivuttain katsesuunnassa, oikea ↔
 # kääntää paikallaan ja ↕ nousee/laskee, kallistus muuttuu korkeuden mukaan, eikä kamera mene rakenteiden läpi (40 m pinnasta
-# naapuruston maksimista 20/45 m:n kehiltä, Päätoimittaja 6.10.). Kohde: 1. täky (6.10. Eiffel-torni; ristikkotornin testi).
+# naapuruston maksimista 20/45 m:n kehiltä + syvyysluotain alle 40 m:n esteille, Päätoimittaja 6.10.; "opas vapaa" kirjaa korkeuden,
+# esteen ja luotaimen ms-ajan lokiin). Kohde: 1. täky (6.10. Eiffel-torni; ristikkotornin testi).
 # Ilman ääntä (testiotsake).
 linssi opas testiotsake 1
 oleta 5 opas: -- testiotsake päällä
 linssi linssi opas
 oleta 30 opas: auki -- elävä opas aukesi
 oleta 30 opas: täkyt [1-9] -- täkyt workerilta
-nakyy 20 MIHIN LENNETÄÄN -- täkynäkymä
+nakyy 20 SUOSIKIT -- täkynäkymä (juna 153: otsikot VALITSE PAIKKA / SUOSIKIT)
 tap-teksti mk-linssirivi__nimi
 oleta 90 opas: saapui -- 1. kohde saapui
 odota 3
@@ -18,16 +19,22 @@ ui opasvalikko tapit
 oleta 5 tapit näkyy -- tapit näkyvissä
 video-alku 14-vapaa
 kuva 14a-alku Vapaa tila alkaa kohteen kehyksestä
+linssi opas vapaa
 veto-kohta 0.5 0.5 0.5 0.95 3 mk-tappi--oikea
 kuva 14b-alas Oikea tappi ALAS 3 s (odotus: kamera laskee, mutta pysyy ≥ 40 m tornin rakenteiden yllä, katse lähes vaakaan)
+linssi opas vapaa
 veto-kohta 0.5 0.5 0.5 0.05 5 mk-tappi--vasen
 kuva 14c-eteen Vasen tappi ETEEN 5 s (odotus: lento katsesuuntaan, tornin yli tai ohi, ei läpi)
+linssi opas vapaa
 veto-kohta 0.5 0.5 0.95 0.5 2 mk-tappi--oikea
 kuva 14d-kaanto Oikea tappi OIKEALLE 2 s (odotus: katse kääntyy oikealle paikallaan)
+linssi opas vapaa
 veto-kohta 0.5 0.5 0.95 0.5 3 mk-tappi--vasen
 kuva 14e-sivulle Vasen tappi OIKEALLE 3 s (odotus: sivuttain oikealle)
+linssi opas vapaa
 veto-kohta 0.5 0.5 0.5 0.05 3 mk-tappi--oikea
 kuva 14f-ylos Oikea tappi YLÖS 3 s (odotus: nousu, katse jyrkemmin alas)
+linssi opas vapaa
 video-loppu
 linssi linssi pois
 odota 2

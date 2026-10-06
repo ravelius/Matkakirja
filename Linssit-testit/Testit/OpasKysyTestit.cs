@@ -257,5 +257,111 @@ namespace Matkakirja.Linssit.Testit
             s.Liiku("Rundetaarn", 55.6814, 12.5757);
             Oleta.Tosi(!s.VapaaTila, "pelaajan valinta päättää vapaan tilan");
         }
+
+        // ---- OMISTAJA TF 152 (Sydney): Kysy-vastaus katkesi, koska heti perään tehty esihaku palautti kysymyksen ----
+
+        [Testi] static void KysyVastausEiTeeEsihakuaPuheenAikana()
+        {
+            var (s, p, puhe) = Pysahdyksella();
+            var kysyt = new List<string>(); s.Kysyy += k => kysyt.Add(k.Teksti);
+            int pyyntoja = p.Count;
+            var vastaus = new OpasKohde { Id = "kysy-1", Nimi = "A", Lat = 55.6760, Lon = 12.5700, Teksti = "Utzon.", KestoS = 22 };
+            s.Esita(vastaus);   // katkaisee A:n kerronnan (pelaajan kysymys), ei omaa vastaustaan
+            int hiljennyksia = 0; s.Hiljenna += () => hiljennyksia++;
+            for (int i = 0; i < 200; i++) s.Paivita(0.1, _ => 5);   // 20 s vastausta, ääni soi yhä
+            Oleta.Sama("kysy-1", s.Nykyinen?.Id); Oleta.Sama(OpasVaihe.Puhuu, s.Vaihe);
+            Oleta.Sama(pyyntoja, p.Count, "ei seuraava-kutsua vastauksen aikana");
+            Oleta.Sama(0, hiljennyksia, "vastausta ei katkaista");
+            s.AaniLoppui();
+            for (int i = 0; i < 5; i++) s.Paivita(0.1, _ => 5);
+            Oleta.Sama(pyyntoja, p.Count, "ei ennen lopputaukoa");
+            for (int i = 0; i < 10; i++) s.Paivita(0.1, _ => 5);
+            Oleta.Sama(pyyntoja + 1, p.Count, "esihaku vastauksen jälkeen");
+            s.Vastaus(p[^1].n, new OpasKohde { Kysymys = true, Teksti = "Mitä haluaisit nähdä?", Vaihtoehdot = new[] { "a", "b" } });
+            Oleta.Sama(1, kysyt.Count, "kysymys vasta vastauksen jälkeen");
+            Oleta.Sama(0, hiljennyksia);
+        }
+
+        [Testi] static void KysymysOdottaaPuheenLoppuun()
+        {
+            var s = new OpasSilmukka(new Kuvakulma(55.68, 12.57, 1500, 50, 0, 40));
+            var p = new List<(int n, string t)>(); s.Pyyda += (n, t) => p.Add((n, t));
+            s.Aloita("Kööpenhamina");
+            s.Vastaus(p[^1].n, K("A", 55.6760, 12.5700));   // ei vaihtoehtoja: esihaku lähtee saapuessa
+            for (int i = 0; i < 300 && s.Vaihe != OpasVaihe.Puhuu; i++) s.Paivita(0.1, _ => 5);
+            Oleta.Sama(2, p.Count, "esihaku saapuessa");
+            int hiljennyksia = 0; s.Hiljenna += () => hiljennyksia++;
+            var kysyt = new List<string>(); s.Kysyy += k => kysyt.Add(k.Teksti);
+            s.Vastaus(p[^1].n, new OpasKohde { Kysymys = true, Teksti = "Minne haluaisit?", Vaihtoehdot = new[] { "a", "b" } });
+            Oleta.Tosi(kysyt.Count == 0 && s.KysymysOdottaaPuhetta, "kysymys odottaa puheen loppua");
+            for (int i = 0; i < 50; i++) s.Paivita(0.1, _ => 5);
+            Oleta.Sama(0, kysyt.Count); Oleta.Sama(0, hiljennyksia);
+            s.AaniLoppui();
+            for (int i = 0; i < 15; i++) s.Paivita(0.1, _ => 5);
+            Oleta.Sama(1, kysyt.Count, "kysymys puheen jälkeen");
+            Oleta.Tosi(s.OdottaaVastausta && !s.KysymysOdottaaPuhetta);
+        }
+
+        [Testi] static void PelaajanToimintaHylkaaLykatynKysymyksen()
+        {
+            var (s, p, puhe) = Pysahdyksella();
+            var kysyt = new List<string>(); s.Kysyy += k => kysyt.Add(k.Teksti);
+            s.Vastaus(p[^1].n, new OpasKohde { Kysymys = true, Teksti = "Minne?", Vaihtoehdot = new[] { "a" } });
+            s.Toive("Nyhavn");
+            s.AaniLoppui();
+            for (int i = 0; i < 30; i++) s.Paivita(0.1, _ => 5);
+            Oleta.Sama(0, kysyt.Count, "toive ohittaa vanhan kysymyksen");
+        }
+
+        [Testi] static void PyynnonPaikkaOnValittuKaupunkiKunnesKameraPerilla()
+        {
+            var kpn = new Kuvakulma(55.679, 12.576, 2200, 55, 40, 45);
+            var sydney = (-33.8688, 151.2093);
+            var (lat, lon) = OpasSilmukka.PyynnonPaikka(kpn, sydney);
+            Oleta.Tosi(Math.Abs(lat + 33.8688) < 1e-9 && Math.Abs(lon - 151.2093) < 1e-9, "kamera Kööpenhaminassa → Sydneyn keskusta");
+            var oopperatalo = new Kuvakulma(-33.8568, 151.2153, 800, 55, 40, 45);
+            (lat, lon) = OpasSilmukka.PyynnonPaikka(oopperatalo, sydney);
+            Oleta.Tosi(Math.Abs(lat + 33.8568) < 1e-9, "kamera Sydneyssä → kameran paikka");
+            (lat, lon) = OpasSilmukka.PyynnonPaikka(kpn, (55.6761, 12.5683));
+            Oleta.Tosi(Math.Abs(lat - 55.679) < 1e-9, "Kööpenhamina valittuna → kamera");
+        }
+
+        [Testi] static void PcmAlkupuskuriMitatustaNopeudesta()
+        {
+            // Nopea virta (tavallinen, 1,5–3,5 ×): alku 1 s kuten ennen.
+            Oleta.Sama(1.0, OpasPcmPuskuri.Tarvitaan(15, OpasPcmPuskuri.Nopeus(1.0, 0.4)));
+            Oleta.Sama(1.0, OpasPcmPuskuri.Tarvitaan(30, 2.0));
+            // Simu 6.10. 20.38 Sydney: 15 s ääntä 18,5 s:ssa (0,81 ×) → noin 4,4 s; ei katkoa (B ≥ T(1 − r)).
+            double b = OpasPcmPuskuri.Tarvitaan(15, 15 / 18.5);
+            Oleta.Tosi(b >= 15 * (1 - 15 / 18.5) && b < 5, $"hidas virta {b:F2} s");
+            Oleta.Sama(OpasPcmPuskuri.MaxS, OpasPcmPuskuri.Tarvitaan(60, 0.5), "yläraja");
+            Oleta.Sama(1.0, OpasPcmPuskuri.Tarvitaan(0, 0.5), "kesto tuntematon");
+            Oleta.Tosi(OpasPcmPuskuri.Tarvitaan(3, 0.2) <= 3, "ei yli keston");
+        }
+
+        // ---- SEURAAVA-NAPPI JA ESILATAUS (omistaja 6.10. 23.3x, juna 156) ----
+
+        [Testi] static void SeuraavaOhittaaKierroksenKohteen()
+        {
+            var (s, p, puhe, _) = KierroksellaT1Puhuu();
+            int hiljennyksia = 0; s.Hiljenna += () => hiljennyksia++;
+            Oleta.Sama("T2", p[^1].t, "T2 pyynnössä");
+            Oleta.Tosi(s.OdotettuPaikka != null, "jonon paikka tunnetaan ennen vastausta");
+            Oleta.Tosi(s.Esilataus(_ => 5) != null, "esilataus jonon paikasta");
+            Oleta.Tosi(s.OhitaKohde(), "ohitettiin");
+            Oleta.Sama(1, hiljennyksia, "T1 vaikeni");
+            s.Vastaus(p[^1].n, K("T2", 55.6786, 12.5790));
+            for (int i = 0; i < 300 && !(s.Nykyinen?.Id == "T2" && s.Vaihe == OpasVaihe.Puhuu); i++) s.Paivita(0.1, _ => 5);
+            Oleta.Sama("T2", s.Nykyinen?.Id, "lensi T2:een heti vastauksen tultua");
+        }
+
+        [Testi] static void SeuraavaVapaastaTilastaPyytaaOppaanKohteen()
+        {
+            var (s, p, puhe, _) = KierroksellaT1Puhuu();
+            s.LopetaKierros();
+            int n = p.Count;
+            Oleta.Tosi(s.OhitaKohde() && !s.VapaaTila, "vapaa tila päättyi");
+            Oleta.Sama(n + 1, p.Count, "uusi pyyntö");
+        }
     }
 }

@@ -913,22 +913,45 @@ namespace Matkakirja.Editori
         /// MUSTA LAUNCHSCREEN varmistettuna (6.10.2026: iPad-laitekäännöksen LaunchScreen-iPad/-iPhone.storyboardien
         /// backgroundColor oli valkoinen 1,1,1, vaikka Aloitusruutu asettaa värin PlayerSettingsiin, ja kylmäkäynnistyksessä näkyi
         /// harmaa ruutu ennen Aloitusverhoa). Unityn generoimien storyboardien taustaväri kirjoitetaan mustaksi viennin jälkeen.
+        /// JÄTTILOGO (6.10.2026 ilta, omistajan TF-iPhone): storyboardissa oli yhä imageView (scaleAspectFill, 1×1 #231F20 -kuva)
+        /// ja iOS näytti päivityksen jälkeen välimuistista vanhan samannimisen käynnistysruudun (ruskea logo aspect-fillinä,
+        /// ~10× liian suuri). Siksi imageView, sen rajoitteet ja kuvaresurssi poistetaan, ja storyboardit nimetään uudelleen
+        /// (LaunchScreen-Musta-*): uusi nimi Info.plistin UILaunchStoryboardName*-avaimissa pakottaa iOS:n rakentamaan
+        /// käynnistysruudun uudelleen.
         /// </summary>
         [UnityEditor.Callbacks.PostProcessBuild(197)]
         static void MustaLaunchScreen(BuildTarget kohde, string polku)
         {
             if (kohde != BuildTarget.iOS) return;
-            foreach (var nimi in new[] { "LaunchScreen-iPhone.storyboard", "LaunchScreen-iPad.storyboard" })
+            var re = System.Text.RegularExpressions.RegexOptions.Singleline;
+            string pbxPolku = Path.Combine(polku, "Unity-iPhone.xcodeproj", "project.pbxproj");
+            string pbx = File.Exists(pbxPolku) ? File.ReadAllText(pbxPolku) : null;
+            var plistPolku = Path.Combine(polku, "Info.plist");
+            var plist = new UnityEditor.iOS.Xcode.PlistDocument();
+            plist.ReadFromFile(plistPolku);
+            foreach (var laite in new[] { "iPhone", "iPad" })
             {
-                string sb = Path.Combine(polku, nimi);
-                if (!File.Exists(sb)) continue;
+                string vanha = $"LaunchScreen-{laite}", uusiNimi = $"LaunchScreen-Musta-{laite}";
+                string sb = Path.Combine(polku, vanha + ".storyboard"), kohdeSb = Path.Combine(polku, uusiNimi + ".storyboard");
+                if (!File.Exists(sb)) { Debug.LogWarning($"MATKAKIRJA: {vanha}.storyboard puuttuu viennistä"); continue; }
                 string teksti = File.ReadAllText(sb);
                 string uusi = System.Text.RegularExpressions.Regex.Replace(teksti,
                     "<color key=\"backgroundColor\"[^>]*/>",
                     "<color key=\"backgroundColor\" red=\"0\" green=\"0\" blue=\"0\" alpha=\"1\" colorSpace=\"custom\" customColorSpace=\"sRGB\"/>");
-                if (uusi != teksti) File.WriteAllText(sb, uusi);
-                Debug.Log($"MATKAKIRJA: {nimi} tausta musta ({(uusi != teksti ? "korjattu" : "ennallaan")})");
+                uusi = System.Text.RegularExpressions.Regex.Replace(uusi, @"\s*<subviews>.*?</subviews>", "", re);
+                uusi = System.Text.RegularExpressions.Regex.Replace(uusi, @"\s*<constraints>.*?</constraints>", "", re);
+                uusi = System.Text.RegularExpressions.Regex.Replace(uusi, @"\s*<resources>.*?</resources>", "", re);
+                if (File.Exists(kohdeSb)) File.Delete(kohdeSb);
+                File.WriteAllText(kohdeSb, uusi);
+                File.Delete(sb);
+                if (pbx != null) pbx = pbx.Replace(vanha + ".storyboard", uusiNimi + ".storyboard");
+                foreach (var avain in laite == "iPad" ? new[] { "UILaunchStoryboardName~ipad" }
+                                                       : new[] { "UILaunchStoryboardName", "UILaunchStoryboardName~iphone", "UILaunchStoryboardName~ipod" })
+                    plist.root.SetString(avain, uusiNimi);
+                Debug.Log($"MATKAKIRJA: {uusiNimi}.storyboard: tausta musta, ei kuvaa ({(uusi.Contains("imageView") ? "VIKA: imageView jäi" : "ok")})");
             }
+            if (pbx != null) File.WriteAllText(pbxPolku, pbx);
+            plist.WriteToFile(plistPolku);
         }
 
         [UnityEditor.Callbacks.PostProcessBuild(200)]

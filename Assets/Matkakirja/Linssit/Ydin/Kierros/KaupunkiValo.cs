@@ -41,10 +41,12 @@ namespace Matkakirja.Linssit.Kierros
             TaivasYla = new[] { 0.30, 0.50, 0.80 }, Horisontti = new[] { 0.78, 0.85, 0.92 }, Suodin = new[] { 1.0, 1.0, 1.0 },
             Lampotila = 0, Savytys = 0, Valotus = 0, Kontrasti = 8, Saturaatio = 8,
         };
+        // Päätoimittaja 6.10. 19.3x: ilta oli tasaisen oranssi (suodatin) → lämmin valo, viileämmät varjot (SplitToning
+        // KaupunkiKuvassa), kylläisyys ~30 % alas, taivas liukuu horisontin kullasta siniseen.
         public static readonly Savy Ilta = new Savy
         {
-            TaivasYla = new[] { 0.26, 0.30, 0.55 }, Horisontti = new[] { 1.0, 0.64, 0.40 }, Suodin = new[] { 1.0, 0.88, 0.76 },
-            Lampotila = 25, Savytys = 5, Valotus = -0.15, Kontrasti = 10, Saturaatio = 10,
+            TaivasYla = new[] { 0.30, 0.38, 0.62 }, Horisontti = new[] { 0.98, 0.70, 0.48 }, Suodin = new[] { 1.0, 0.93, 0.85 },
+            Lampotila = 18, Savytys = 4, Valotus = -0.12, Kontrasti = 10, Saturaatio = -8,
         };
         // YÖ = HIMMEÄ ILTA (Päätoimittaja 6.10. 19.0x: sininen yö näytti "siniseltä päivältä" ilman kaupungin valoja): oikea yö
         // vasta Black Marble- tai ikkunavalojen kanssa; siihen asti illan sävy himmeämpänä ja vähemmän värikkäänä.
