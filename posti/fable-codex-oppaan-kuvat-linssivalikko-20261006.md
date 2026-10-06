@@ -184,7 +184,7 @@ Natiivin linssivalikossa on 17 linssiä; 10:lle on jo linssikatalogin kuva (X2, 
 | tunnus | nimi | aihe kuvaan |
 |---|---|---|
 | opas | Elävä opas | kaupunki ylhäältä viistosti kultaisessa valossa, tunnistettava kaupunkinäkymä ja yksi korostettu maamerkki; tunnelma: matkaopas vie kierrokselle (ÄLÄ käytä mitään todellista karttapalvelun ulkoasua tai logoa) |
-| ihmisen-matka-2 | Ihmisen matka II | ihmiskunnan matkan jatko-osa: kaupunkien ja kulkuvälineiden aika (laivat, rautatiet, lentokoneet) yhtenä panoraamana |
+| ihmisen-matka-2 | Ihmisen matka II | SAMA aihe kuin Ihmisen matka (katalogikuva C7: ihmiskunnan vaellus), mutta versio II:n tehosteilla: dramaattinen kohdennettu valo tai valokeila ja hehku (Raamattu: IHMISEN MATKA II = sama sisältö + valoefektit); kuvan pitää erottua C7:stä yhdellä silmäyksellä |
 | maapallon-vuosi | Maapallon vuosi | maapallo avaruudesta, jossa vuodenajat näkyvät vyöhykkeinä (lumi pohjoisessa, vihreä kesä etelämpänä), tähtitaivas taustalla |
 | ajattelijat | Ajattelijat | antiikin pylväskäytävä (stoa) iltavalossa, marmoripäät tai kaksi viittaan pukeutunutta ajattelijaa keskustelemassa selin tai sivuttain; ei tunnistettavia todellisia kasvoja |
 | yokartta | Yökartta | Eurooppa yöllä avaruudesta: kaupunkien valot verkostoina, kuun valaisema pilviharso |
