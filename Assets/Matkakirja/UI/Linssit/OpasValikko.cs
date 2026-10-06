@@ -1300,18 +1300,11 @@ namespace Matkakirja.Natiivi
         string aikaKuvake;
         static readonly (string Arvo, string Nimi)[] AikaValinnat = { ("auto", "Automaattinen"), ("aamu", "Aamu"), ("paiva", "Päivä"), ("ilta", "Ilta") };
 
-        /// <summary>LS1: OpasSovitin.VuorokausiValinta (auto | aamu | paiva | ilta) heijastuksella; oletus auto.</summary>
-        static string AikaValinta
-        {
-            get { try { return typeof(OpasSovitin).GetProperty("VuorokausiValinta", System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Static)?.GetValue(null) as string ?? "auto"; } catch { return "auto"; } }
-            set { try { typeof(OpasSovitin).GetProperty("VuorokausiValinta", System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Static)?.SetValue(null, value); } catch (Exception e) { Debug.LogWarning("MATKAKIRJA opas: VuorokausiValinta: " + e.GetType().Name); } }
-        }
+        /// <summary>LS1: KaupunkiKuva.Valinta (auto | aamu | paiva | ilta), pysyy avauksesta toiseen.</summary>
+        static string AikaValinta { get => KaupunkiKuva.Valinta ?? "auto"; set => KaupunkiKuva.Valinta = value; }
 
-        /// <summary>LS1: OpasSovitin.VuorokausiNyt (aamu | paiva | ilta | yo) heijastuksella; oletus paiva.</summary>
-        static string AikaNyt
-        {
-            get { try { return typeof(OpasSovitin).GetProperty("VuorokausiNyt", System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Static)?.GetValue(null) as string ?? "paiva"; } catch { return "paiva"; } }
-        }
+        /// <summary>LS1: KaupunkiKuva.Nyt (aamu | paiva | ilta | yo), voimassa oleva tila.</summary>
+        static string AikaNyt => KaupunkiKuva.Nyt ?? "paiva";
 
         void PaivitaAika()
         {
