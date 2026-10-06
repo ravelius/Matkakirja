@@ -314,7 +314,8 @@ namespace Matkakirja.Natiivi
                 }
                 k.Kohta = i;
                 if (kiinni) { kohta = i; latausAlku = Time.unscaledTime * 1000f; }
-                if (!puhe.Lue(k.Palat[i], persoona, 0, () => UiKerros.PaaSaikeessa(Seuraava), pyynnosta: true, loppuTagi: k.Tagit[i]))
+                // Pinnatun seuraava pala jatkona (ei korvaa omaa pinnausta); ensimmäinen pala korvaa muun pinnatun kuten ennen.
+                if (!puhe.LueJatkona(k.Omistaja, k.Palat[i], persoona, () => UiKerros.PaaSaikeessa(Seuraava), k.Tagit[i]))
                 {
                     k.Elossa = false;
                     if (tausta == k) tausta = null;
