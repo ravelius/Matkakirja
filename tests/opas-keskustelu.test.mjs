@@ -28,7 +28,10 @@ const verkko = async (u, init) => {
   }
   if (s.includes('api.elevenlabs.io')) { aanikutsut += 1; return new Response(new Uint8Array(8000)); }
   const t = /titles=([^&]+)/.exec(s)?.[1];
-  if (t && PAIKAT[t]) return new Response(JSON.stringify({ query: { pages: { 1: { title: t, coordinates: [{ lat: PAIKAT[t][0], lon: PAIKAT[t][1] }] } } } }));
+  if (t && t.split('|').some((x) => PAIKAT[x])) {   // myös erähaku (titles=A|B)
+    return new Response(JSON.stringify({ query: { pages: Object.fromEntries(t.split('|').filter((x) => PAIKAT[x]).map((x, i) => [String(i + 1),
+      { title: x, coordinates: [{ lat: PAIKAT[x][0], lon: PAIKAT[x][1] }] }])) } }));
+  }
   return new Response(JSON.stringify({ query: { pages: {} }, search: [], claims: {}, entities: {} }));
 };
 function ymparisto() {
@@ -123,5 +126,17 @@ test('/opas/liiku: mallikutsu pettää kerran → uusinta, ei 502 (juna 148 todi
     const v = await worker.fetch(new Request('https://pollo.example/opas/liiku?kaupunki=Praha', { headers: H({ 'cf-connecting-ip': '10.8.0.9' }) }), env, {});
     assert.equal(v.status, 200, 'toisto: ensimmäinen virhe antoi 502');
     assert.ok((await v.json()).kohteet.length >= 1);
+  } finally { globalThis.fetch = vanha; }
+});
+
+test('/opas/liiku: erähaku, alipyyntöjä vähän (Cloudflaren raja 50; Ateena 502 6.10. 14.32)', async () => {
+  let muut = 0;
+  const vanha = globalThis.fetch;
+  globalThis.fetch = async (u, init) => { if (!String(u).includes('api.anthropic.com')) muut += 1; return verkko(u, init); };
+  try {
+    const { env } = ymparisto();
+    const v = await worker.fetch(new Request('https://pollo.example/opas/liiku?kaupunki=Venetsia', { headers: H({ 'cf-connecting-ip': '10.8.0.7' }) }), env, {});
+    assert.equal(v.status, 200);
+    assert.ok(muut <= 8, `alipyyntöjä ${muut}`);
   } finally { globalThis.fetch = vanha; }
 });

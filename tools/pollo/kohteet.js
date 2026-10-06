@@ -67,7 +67,7 @@ export const eilenUtc = (nyt = new Date()) => new Date(nyt.getTime() - 86400000)
  * maanosat sekoitettuina; koordinaatit ja kuvat erähaulla (opas.js kohteetErana), 50 ensimmäistä kelpaavaa.
  */
 export const MAAILMAN_SUOSIKKEJA = 50;
-export const maailmanSuosikitAvain = () => 'opas:kohteet:maailma50:v1';
+export const maailmanSuosikitAvain = () => 'opas:kohteet:maailma50:v2';
 export const MAAILMAN_SUOSIKIT_KEHOTE = `Valitset Matkakirja-pelin elävälle oppaalle maailman suosikkikohteet: 60 \
 tunnetuinta ja kiinnostavinta nähtävyyttä, joista pelaaja valitsee yhden ja kamera lentää sen ylle kertojan kertoessa. \
 Kohteet ovat yksittäisiä nähtävyyksiä, jotka näkyvät ilmasta (esimerkiksi Akropolis, Central Park, Sydneyn oopperatalo), \

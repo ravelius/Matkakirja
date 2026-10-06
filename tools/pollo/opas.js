@@ -633,6 +633,8 @@ const KUVAKENTAT = '&prop=imageinfo&iiprop=url%7Cextmetadata%7Csize%7Cmime&iiurl
  * TÄKYJEN ERÄHAKU (omistaja 6.10.: aloitukseen jopa 50 maailman kohdetta; Päätoimittaja). Koordinaatit, Wikidata-tunnus,
  * suomenkielinen kuvaus ja P18-kuva 50 kohteen erinä: Wikipedia (titles, enintään 50) → Wikidata (wbgetentities, 50) →
  * Commons (imageinfo, 50). Muutama alipyyntö yhteensä (Cloudflaren ilmaistason raja 50 alipyyntöä/pyyntö).
+ * colimit=max: Wikipedia antaa muuten vain 10 koordinaattia pyyntöä kohti (6.10.: 60 ehdokkaasta jäi 20). Nimeksi Wikidatan
+ * suomenkielinen nimiö, jos on (malli keksi nimiä kuten "Mosku Alhambra"), muuten mallin nimi.
  * Kuva vain vapaalla lisenssillä ja tekijätiedoin (kuvallaTekijatiedot). Palauttaa [{ ...kohde, id, lat, lon, alarivi, kuva }]
  * syöttöjärjestyksessä; kohteet ilman koordinaattia jäävät pois.
  */
@@ -643,7 +645,7 @@ export async function kohteetErana(haku, ehdokkaat) {
   for (const pala of palat(otsikot)) {
     try {
       const d = await haeJson(haku, 'https://en.wikipedia.org/w/api.php?action=query&format=json&redirects=1'
-        + `&prop=coordinates%7Cpageprops&ppprop=wikibase_item&titles=${encodeURIComponent(pala.join('|'))}`);
+        + `&prop=coordinates%7Cpageprops&colimit=max&ppprop=wikibase_item&titles=${encodeURIComponent(pala.join('|'))}`);
       const nimet = new Map(pala.map((t) => [t, t]));
       for (const n of [...(d?.query?.normalized ?? []), ...(d?.query?.redirects ?? [])]) {
         for (const [alku, nyt] of nimet) if (nyt === n.from) nimet.set(alku, n.to);
@@ -659,9 +661,10 @@ export async function kohteetErana(haku, ehdokkaat) {
   const tiedot = new Map();
   for (const pala of palat(tunnukset)) {
     try {
-      const d = await haeJson(haku, `https://www.wikidata.org/w/api.php?action=wbgetentities&format=json&props=claims%7Cdescriptions&languages=fi&ids=${pala.join('|')}`);
+      const d = await haeJson(haku, `https://www.wikidata.org/w/api.php?action=wbgetentities&format=json&props=claims%7Cdescriptions%7Clabels&languages=fi&ids=${pala.join('|')}`);
       for (const [q, e] of Object.entries(d?.entities ?? {})) {
-        tiedot.set(q, { kuva: e?.claims?.P18?.[0]?.mainsnak?.datavalue?.value ?? null, kuvaus: e?.descriptions?.fi?.value ?? null });
+        tiedot.set(q, { kuva: e?.claims?.P18?.[0]?.mainsnak?.datavalue?.value ?? null, kuvaus: e?.descriptions?.fi?.value ?? null,
+          nimi: e?.labels?.fi?.value ?? null });
       }
     } catch { /* ilman kuvia */ }
   }
@@ -689,7 +692,7 @@ export async function kohteetErana(haku, ehdokkaat) {
     nahty.add(id);
     const t = o.qid ? tiedot.get(o.qid) : null;
     const kuva = t?.kuva ? kuvalle.get(t.kuva) ?? null : null;
-    return { ...k, id, lat: o.lat, lon: o.lon, alarivi: siivoa(t?.kuvaus, 80) || null,
+    return { ...k, id, nimi: siivoa(t?.nimi, 80) || k.nimi, lat: o.lat, lon: o.lon, alarivi: siivoa(t?.kuvaus, 80) || null,
       kuva: kuva && kuvallaTekijatiedot(kuva) ? kuva : null };
   }).filter(Boolean);
 }

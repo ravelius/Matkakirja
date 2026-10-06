@@ -18,15 +18,19 @@ const verkko = async (u) => {
   kutsut.muut += 1;
   if (s.includes('en.wikipedia.org') && s.includes('titles=')) {
     const t = /titles=([^&]+)/.exec(s)[1].split('|');
+    const raja = s.includes('colimit=max') ? Infinity : 10;   // oikea Wikipedia: ilman colimitiä vain 10 koordinaattia
+    let annettu = 0;
     return new Response(JSON.stringify({ query: { pages: Object.fromEntries(t.map((x, i) => {
       const n = Number(x.split(' ')[1]);
-      return [String(n + 1), n % 10 === 9 ? { title: x, missing: '' } : { title: x, coordinates: [{ lat: 10 + n / 10, lon: 20 }], pageprops: { wikibase_item: `Q${n + 100}` } }];
+      if (n % 10 === 9) return [String(n + 1), { title: x, missing: '' }];
+      const c = annettu++ < raja ? { coordinates: [{ lat: 10 + n / 10, lon: 20 }] } : {};
+      return [String(n + 1), { title: x, ...c, pageprops: { wikibase_item: `Q${n + 100}` } }];
     })) } }));
   }
   if (s.includes('wbgetentities')) {
     const ids = /ids=([^&]+)/.exec(s)[1].split('|');
     return new Response(JSON.stringify({ entities: Object.fromEntries(ids.map((q) => [q, { claims: { P18: [{ mainsnak: { datavalue: { value: `${q}.jpg` } } }] },
-      descriptions: { fi: { value: `kuvaus ${q}` } } }])) }));
+      descriptions: { fi: { value: `kuvaus ${q}` } }, ...(q === 'Q101' ? { labels: { fi: { value: 'Oikea nimi' } } } : {}) }])) }));
   }
   if (s.includes('commons.wikimedia.org')) {
     const t = /titles=([^&]+)/.exec(s)[1].split('|');
@@ -54,6 +58,8 @@ test('/opas/kohteet?n=50: 50 kohdetta erähaulla, kuvat vain tekijätiedoin, toi
     assert.ok(d.kohteet.every((k) => !k.kuva || (k.kuva.tekija && k.kuva.lisenssi)), 'kuva vain tekijätiedoin');
     assert.ok(d.kohteet.some((k) => k.kuva) && d.kohteet.some((k) => !k.kuva));
     assert.match(d.kohteet[0].alarivi, /kuvaus Q100/);
+    assert.equal(d.kohteet[1].nimi, 'Oikea nimi', 'Wikidatan suomenkielinen nimiö voittaa mallin nimen');
+    assert.equal(d.kohteet[0].nimi, 'Kohde 0', 'ilman nimiötä mallin nimi');
     const ennen = kutsut.malli; await hae();
     assert.equal(kutsut.malli, ennen, 'välimuistista');
   } finally { globalThis.fetch = vanha; }
