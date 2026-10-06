@@ -481,7 +481,7 @@ namespace Matkakirja.Natiivi
         public static string VapaanTila => !VapaaTila ? null : Viimeisin.silmukka.Vapaa.Tila() +
             (Viimeisin.luotain is OpasLahiluotain l ? $", luotain {l.PiirtoMs:0.00} ms × {1 / OpasLahiluotain.ValiS:0}/s ({l.Mittauksia} mittausta), syvyys ala {l.AlaKeski:0} / ylä {l.YlaKeski:0} m" : "");
         string[] kysymykset, jatkoKysymykset = Array.Empty<string>();
-        List<OpasTaky> kohteet;
+        List<OpasTaky> kohteet, kierrosKohteet;   // kierrosKohteet: /opas/liiku "kierros"-järjestys (lyhin reitti), muuten kohteet
         string kohteetKaupunki;
         readonly List<(string rooli, string teksti)> historia = new List<(string, string)>();
         int kysyLaskuri;
@@ -508,7 +508,7 @@ namespace Matkakirja.Natiivi
             if (!Auki || v.kohteet == null || v.kohteet.Count == 0) return false;
             if (v.tauolla) Tauko(false);
             var jono = new List<(string, double, double)>();
-            foreach (var t in v.kohteet) jono.Add((t.Nimi, t.Lat, t.Lon));
+            foreach (var t in v.kierrosKohteet ?? v.kohteet) jono.Add((t.Nimi, t.Lat, t.Lon));
             v.o.Kirjaa($"opas: kaupunkikierros {jono.Count} kohdetta");
             v.silmukka.AloitaKierros(jono);
             v.Silta(OpasSiltalauseet.Aloitus, true);
@@ -670,7 +670,7 @@ namespace Matkakirja.Natiivi
         void PaivitaKohteet()
         {
             if (Testi || string.IsNullOrEmpty(Aloituskaupunki) || kohteetKaupunki == Aloituskaupunki) return;
-            kohteetKaupunki = Aloituskaupunki; kohteet = null;
+            kohteetKaupunki = Aloituskaupunki; kohteet = null; kierrosKohteet = null;
             o.StartCoroutine(HaeKohteet(Aloituskaupunki));
         }
 
@@ -680,7 +680,9 @@ namespace Matkakirja.Natiivi
             using var r = Pyynto($"/opas/liiku?kaupunki={UnityWebRequest.EscapeURL(kaupunki)}&lat={aLat.ToString("F4", System.Globalization.CultureInfo.InvariantCulture)}&lon={aLon.ToString("F4", System.Globalization.CultureInfo.InvariantCulture)}");
             yield return r.SendWebRequest();
             if (silmukka == null || kohteetKaupunki != kaupunki) yield break;
-            kohteet = r.result == UnityWebRequest.Result.Success ? OpasTaky.Lue(MiniJson.Jasenna(r.downloadHandler.text) as Dictionary<string, object>) : new List<OpasTaky>();
+            var lj = r.result == UnityWebRequest.Result.Success ? MiniJson.Jasenna(r.downloadHandler.text) as Dictionary<string, object> : null;
+            kohteet = lj != null ? OpasTaky.Lue(lj) : new List<OpasTaky>();
+            kierrosKohteet = OpasTaky.Kierros(lj, kohteet);
             o.Kirjaa($"opas: liiku-lista {kohteet.Count} ({kaupunki} {aLat:F3}/{aLon:F3}, {(r.result == UnityWebRequest.Result.Success ? "ok" : r.responseCode.ToString())})");
         }
 

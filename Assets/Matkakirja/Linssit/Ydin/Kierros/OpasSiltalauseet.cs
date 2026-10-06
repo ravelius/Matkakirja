@@ -177,5 +177,18 @@ namespace Matkakirja.Linssit.Kierros
             }
             return r;
         }
+
+        /// <summary>Kaupunkikierroksen järjestys (Pelikoodari #4086, omistaja 6.10. 23.4x lyhin reitti): /opas/liiku "kierros": [id, …]
+        /// reittijärjestyksessä. Kohteet, joiden id on kierroksessa, siinä järjestyksessä (tuntemattomat id:t ohitetaan); ilman
+        /// kenttää tai yhtään osumaa koko lista sellaisenaan (tärkeysjärjestys).</summary>
+        public static List<OpasTaky> Kierros(Dictionary<string, object> j, List<OpasTaky> kohteet)
+        {
+            if (kohteet == null) return new List<OpasTaky>();
+            if (j == null || !j.TryGetValue("kierros", out var ki) || !(ki is IList<object> ids)) return new List<OpasTaky>(kohteet);
+            var r = new List<OpasTaky>();
+            foreach (var x in ids)
+                if (x is string id && kohteet.Find(t => t.Id == id) is OpasTaky t && !r.Contains(t)) r.Add(t);
+            return r.Count > 0 ? r : new List<OpasTaky>(kohteet);
+        }
     }
 }
