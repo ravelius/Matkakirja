@@ -1,0 +1,810 @@
+{
+ "kaupunki": "sanfrancisco",
+ "kaupunkiQ": "Q62",
+ "kohteet": [
+  {
+   "q": "Q44440",
+   "nimi": "Golden Gate -silta",
+   "peruste": "sitelinks",
+   "koko_m": 2800,
+   "lat": 37.81972,
+   "lon": -122.47861,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "GoldenGateBridge-001.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/GoldenGateBridge-001.jpg?width=1280",
+     "tekija": "Rich Niewiroski Jr.",
+     "lisenssi": "CC BY 2.5",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.5",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:GoldenGateBridge-001.jpg",
+     "selite": "Golden Gate -silta ylittää lahden suuaukon, ja sen punaoranssit tornit ovat San Franciscon tunnetuin tunnusmerkki.",
+     "leveys": 3264,
+     "korkeus": 2448,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Aerial view of Golden Gate Bridge from southwest dllu.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aerial_view_of_Golden_Gate_Bridge_from_southwest_dllu.jpg?width=1280",
+     "tekija": "Daniel L. Lu (user:dllu)",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aerial_view_of_Golden_Gate_Bridge_from_southwest_dllu.jpg",
+     "selite": "Ilmasta silta yhdistää kaupungin Marinin niemimaahan salmen yli.",
+     "leveys": 7345,
+     "korkeus": 4515,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Golden Gate Bridge at sunset 1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Golden_Gate_Bridge_at_sunset_1.jpg?width=1280",
+     "tekija": "Brocken Inaglory",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Golden_Gate_Bridge_at_sunset_1.jpg",
+     "selite": "Meren sumu peittää usein sillan jalustat, ja vain tornit näkyvät pilvimeren yllä.",
+     "leveys": 2222,
+     "korkeus": 1481,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 4,
+     "tiedosto": "Golden Gate Bridge at Sunset from Marin.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Golden_Gate_Bridge_at_Sunset_from_Marin.jpg?width=1280",
+     "tekija": "Dasturias",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Golden_Gate_Bridge_at_Sunset_from_Marin.jpg",
+     "selite": "Marinin kukkuloilta silta näkyy iltavalossa kaupungin edessä.",
+     "leveys": 5225,
+     "korkeus": 2939,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q131354",
+   "nimi": "Alcatraz",
+   "peruste": "pelin nosto",
+   "koko_m": 600,
+   "lat": 37.82672,
+   "lon": -122.42283,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Alcatraz Island aerial view.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Alcatraz_Island_aerial_view.jpg?width=1280",
+     "tekija": "Ralf Baechle",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Alcatraz_Island_aerial_view.jpg",
+     "selite": "Alcatraz on pieni kallioinen saari San Franciscon lahdella, jolla toimi linnake ja liittovaltion vankila.",
+     "leveys": 3244,
+     "korkeus": 2162,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Alcatraz Island as seen from the East.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Alcatraz_Island_as_seen_from_the_East.jpg?width=1280",
+     "tekija": "Frank Schulenburg",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Alcatraz_Island_as_seen_from_the_East.jpg",
+     "selite": "Saaren laella seisovat vankilarakennus ja majakka.",
+     "leveys": 4708,
+     "korkeus": 2942,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Alcatraz cell block (5938779149).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Alcatraz_cell_block_(5938779149).jpg?width=1280",
+     "tekija": "Tim Wilson from Blaine, MN, USA",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Alcatraz_cell_block_(5938779149).jpg",
+     "selite": "Pitkä sellirakennus on yksi saaren tunnetuimmista sisätiloista.",
+     "leveys": 2463,
+     "korkeus": 1630,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q930276",
+   "nimi": "Lombard Street",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 37.80194,
+   "lon": -122.41889,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Lombard St., San Francisco, CA.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lombard_St.%2C_San_Francisco%2C_CA.jpg?width=1280",
+     "tekija": "DroneEddie",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Lombard_St.%2C_San_Francisco%2C_CA.jpg",
+     "selite": "Lombard Streetin jyrkkä, mutkitteleva kortteli kulkee Russian Hillin rinnettä alas.",
+     "leveys": 4000,
+     "korkeus": 2250,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Lombard Street San Francisco no cars.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lombard_Street_San_Francisco_no_cars.jpg?width=1280",
+     "tekija": "Adbar",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Lombard_Street_San_Francisco_no_cars.jpg",
+     "selite": "Ylhäältä katu laskee kohti Telegraph Hilliä ja Coit Toweria.",
+     "leveys": 2592,
+     "korkeus": 3344,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "1040 Lombard Street, San Francisco (August 2013).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/1040_Lombard_Street%2C_San_Francisco_(August_2013).jpg?width=1280",
+     "tekija": "dronepicr",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:1040_Lombard_Street%2C_San_Francisco_(August_2013).jpg",
+     "selite": "Mutkien väliset penkereet ovat täynnä kukkia.",
+     "leveys": 2448,
+     "korkeus": 3264,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1107297",
+   "nimi": "Coit Tower",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 37.8025,
+   "lon": -122.40583,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Coit Tower aerial.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Coit_Tower_aerial.jpg?width=1280",
+     "tekija": "Kyle Harmon from Oakland, CA, USA",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Coit_Tower_aerial.jpg",
+     "selite": "Coit Tower kohoaa Telegraph Hillin laella ja näkyy kauas lahdelle.",
+     "leveys": 3264,
+     "korkeus": 2448,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Coit Tower in San Francisco, California.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Coit_Tower_in_San_Francisco%2C_California.jpg?width=1280",
+     "tekija": "Sasha • Stories",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Coit_Tower_in_San_Francisco%2C_California.jpg",
+     "selite": "Torni on puistoalueen yläpuolella, ja sen takana häämöttää lahti.",
+     "leveys": 1664,
+     "korkeus": 2079,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "San Francisco (CA, USA), Coit Tower -- 2022 -- 3082.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/San_Francisco_(CA%2C_USA)%2C_Coit_Tower_--_2022_--_3082.jpg?width=1280",
+     "tekija": "Dietmar Rabich",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:San_Francisco_(CA%2C_USA)%2C_Coit_Tower_--_2022_--_3082.jpg",
+     "selite": "Betonitornin kylkien pitkät vaakaviivat ja avoin yläkerros erottuvat selvästi.",
+     "leveys": 3780,
+     "korkeus": 6720,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1418042",
+   "nimi": "Painted Ladies",
+   "peruste": "sitelinks",
+   "koko_m": 120,
+   "lat": 37.77639,
+   "lon": -122.43306,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Painted Ladies San Francisco January 2013 002.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Painted_Ladies_San_Francisco_January_2013_002.jpg?width=1280",
+     "tekija": "King of Hearts",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Painted_Ladies_San_Francisco_January_2013_002.jpg",
+     "selite": "Painted Ladies on rivi viktoriaanisia värikkäitä taloja Alamo Squaren laidalla, ja taustalla kohoaa keskusta.",
+     "leveys": 3840,
+     "korkeus": 2560,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Alamo Square, San Francisco, California, USA - 52462334439.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Alamo_Square%2C_San_Francisco%2C_California%2C_USA_-_52462334439.jpg?width=1280",
+     "tekija": "dconvertini",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Alamo_Square%2C_San_Francisco%2C_California%2C_USA_-_52462334439.jpg",
+     "selite": "Alamo Squaren nurmikolta talorivi näkyy hyvin keskustan siluetin edessä.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q216865",
+   "nimi": "Transamerica Pyramid",
+   "peruste": "pelin nosto",
+   "koko_m": 200,
+   "lat": 37.79514,
+   "lon": -122.40275,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "San Francisco and its Transamerica Pyramid as seen from the Bay.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/San_Francisco_and_its_Transamerica_Pyramid_as_seen_from_the_Bay.jpg?width=1280",
+     "tekija": "Frank Schulenburg",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:San_Francisco_and_its_Transamerica_Pyramid_as_seen_from_the_Bay.jpg",
+     "selite": "Transamerica Pyramid on San Franciscon keskustan teräväkärkinen pilvenpiirtäjä.",
+     "leveys": 5007,
+     "korkeus": 2303,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Transamerica Pyramid as seen from Telegraph Hill in 2016.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Transamerica_Pyramid_as_seen_from_Telegraph_Hill_in_2016.jpg?width=1280",
+     "tekija": "Dllu",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Transamerica_Pyramid_as_seen_from_Telegraph_Hill_in_2016.jpg",
+     "selite": "Torni kohoaa kapeana kärkenä muiden keskustan rakennusten yläpuolelle.",
+     "leveys": 4761,
+     "korkeus": 7920,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "South face of the Transamerica Pyramid, 2017.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/South_face_of_the_Transamerica_Pyramid%2C_2017.jpg?width=1280",
+     "tekija": "Dllu",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:South_face_of_the_Transamerica_Pyramid%2C_2017.jpg",
+     "selite": "Pyramidin julkisivu on jaettu tiheään ruudukkoon.",
+     "leveys": 7682,
+     "korkeus": 4786,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1408117",
+   "nimi": "Ferry Building",
+   "peruste": "pelin nosto",
+   "koko_m": 200,
+   "lat": 37.79556,
+   "lon": -122.39361,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Ferry Building San Francisco from Hyatt Regency with R-Evolution and Bay Bridge 2026 dllu.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ferry_Building_San_Francisco_from_Hyatt_Regency_with_R-Evolution_and_Bay_Bridge_2026_dllu.jpg?width=1280",
+     "tekija": "Daniel Lu (User:dllu)",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ferry_Building_San_Francisco_from_Hyatt_Regency_with_R-Evolution_and_Bay_Bridge_2026_dllu.jpg",
+     "selite": "Ferry Building seisoo Embarcaderolla, ja sen takana kaartuu Bay Bridge.",
+     "leveys": 10638,
+     "korkeus": 7092,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Ferry Building clock tower as seen from the North.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ferry_Building_clock_tower_as_seen_from_the_North.jpg?width=1280",
+     "tekija": "Frank Schulenburg",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ferry_Building_clock_tower_as_seen_from_the_North.jpg",
+     "selite": "Rakennuksen kellotorni on satama-alueen tunnusmerkki.",
+     "leveys": 5472,
+     "korkeus": 3648,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "San Francisco Ferry Building clock tower, night (Dec 2013).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/San_Francisco_Ferry_Building_clock_tower%2C_night_(Dec_2013).jpg?width=1280",
+     "tekija": "Hugh Nelson",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:San_Francisco_Ferry_Building_clock_tower%2C_night_(Dec_2013).jpg",
+     "selite": "Iltavalaistuksessa torni ja pääsisäänkäynti hohtavat kellotaulun ympärillä.",
+     "leveys": 2848,
+     "korkeus": 4288,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q771404",
+   "nimi": "San Francisco–Oakland Bay Bridge",
+   "peruste": "sitelinks",
+   "koko_m": 2500,
+   "lat": 37.81806,
+   "lon": -122.34667,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "San Francisco–Oakland Bay Bridge- New and Old bridges.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/San_Francisco%E2%80%93Oakland_Bay_Bridge-_New_and_Old_bridges.jpg?width=1280",
+     "tekija": "Frank Schulenburg",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:San_Francisco%E2%80%93Oakland_Bay_Bridge-_New_and_Old_bridges.jpg",
+     "selite": "Bay Bridgen uusi ja vanha itäosa kaartuvat rinnakkain lahden yli Yerba Buena -saarelle.",
+     "leveys": 4914,
+     "korkeus": 3100,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "San Francisco Bay Bridge Western Span at night.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/San_Francisco_Bay_Bridge_Western_Span_at_night.jpg?width=1280",
+     "tekija": "Dllu",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:San_Francisco_Bay_Bridge_Western_Span_at_night.jpg",
+     "selite": "Sillan läntistä osaa valaisevat yöllä pitkät valonauhat.",
+     "leveys": 6999,
+     "korkeus": 3937,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q635559",
+   "nimi": "Golden Gate Park",
+   "peruste": "sitelinks",
+   "koko_m": 4000,
+   "lat": 37.76972,
+   "lon": -122.47694,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Golden Gate Park.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Golden_Gate_Park.jpg?width=1280",
+     "tekija": "Taras Bobrovytsky",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Golden_Gate_Park.jpg",
+     "selite": "Golden Gate Park on pitkä kaupunkipuisto, joka ulottuu keskeltä kaupunkia aina Tyynellemerelle.",
+     "leveys": 4765,
+     "korkeus": 2602,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Golden Gate Park aerial.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Golden_Gate_Park_aerial.jpg?width=1280",
+     "tekija": "Dicklyon",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Golden_Gate_Park_aerial.jpg",
+     "selite": "Ilmasta puisto näkyy kapeana vihreänä suorakulmiona asuinkortteleiden keskellä.",
+     "leveys": 1501,
+     "korkeus": 2585,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1093944",
+   "nimi": "San Franciscon kaupungintalo",
+   "peruste": "pelin nosto",
+   "koko_m": 200,
+   "lat": 37.77928,
+   "lon": -122.41928,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "San Francisco City Hall - Dec. 2025.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/San_Francisco_City_Hall_-_Dec._2025.jpg?width=1280",
+     "tekija": "9yz",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:San_Francisco_City_Hall_-_Dec._2025.jpg",
+     "selite": "Kaupungintalon beaux-arts-kupoli nousee Civic Centerin yllä.",
+     "leveys": 4402,
+     "korkeus": 6596,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Dome of San Francisco City Hall - San Francisco, CA - DSC01297.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dome_of_San_Francisco_City_Hall_-_San_Francisco%2C_CA_-_DSC01297.JPG?width=1280",
+     "tekija": "Daderot",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Dome_of_San_Francisco_City_Hall_-_San_Francisco%2C_CA_-_DSC01297.JPG",
+     "selite": "Kupolin kultareunaiset yksityiskohdat erottuvat sinistä taivasta vasten.",
+     "leveys": 5472,
+     "korkeus": 3648,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "San Francisco City Hall, nighttime, September 2016.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/San_Francisco_City_Hall%2C_nighttime%2C_September_2016.jpg?width=1280",
+     "tekija": "Dllu",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:San_Francisco_City_Hall%2C_nighttime%2C_September_2016.jpg",
+     "selite": "Illalla rakennuksen kupoli valaistaan sinisellä.",
+     "leveys": 7104,
+     "korkeus": 4895,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1073644",
+   "nimi": "Chinatown",
+   "peruste": "sitelinks",
+   "koko_m": 600,
+   "lat": 37.79472,
+   "lon": -122.40722,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Entrance to Chinatown 2012, San Francisco.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Entrance_to_Chinatown_2012%2C_San_Francisco.JPG?width=1280",
+     "tekija": "Michael Rivera",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Entrance_to_Chinatown_2012%2C_San_Francisco.JPG",
+     "selite": "Vihreäkattoinen porttikaari Grant Avenuen alussa merkitsee Chinatownin sisäänkäyntiä.",
+     "leveys": 3072,
+     "korkeus": 2304,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "San Francisco Chinatown (3).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/San_Francisco_Chinatown_(3).jpg?width=1280",
+     "tekija": "Pierre André",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:San_Francisco_Chinatown_(3).jpg",
+     "selite": "Porttia koristavat perinteiset kiinalaiset lohikäärmeet ja laattakatot.",
+     "leveys": 3234,
+     "korkeus": 2243,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3082361",
+   "nimi": "Grace Cathedral",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": 37.7919,
+   "lon": -122.413,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Grace Cathedral (5).JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Grace_Cathedral_(5).JPG?width=1280",
+     "tekija": "Chris06",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Grace_Cathedral_(5).JPG",
+     "selite": "Grace Cathedral on goottilaistyylinen katedraali Nob Hillin laella.",
+     "leveys": 1393,
+     "korkeus": 1359,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Grace Cathedral - San Francisco, CA - DSC02462.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Grace_Cathedral_-_San_Francisco%2C_CA_-_DSC02462.JPG?width=1280",
+     "tekija": "Daderot",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Grace_Cathedral_-_San_Francisco%2C_CA_-_DSC02462.JPG",
+     "selite": "Katedraalin kaksoistornit ja ruusuikkuna hallitsevat julkisivua.",
+     "leveys": 3648,
+     "korkeus": 5472,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q374956",
+   "nimi": "San Franciscon kaapeliraitiotie",
+   "peruste": "sitelinks",
+   "koko_m": 500,
+   "lat": 37.79556,
+   "lon": -122.4075,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "San Francisco (California, USA), Cable Car -- 2012 -- 4180.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/San_Francisco_(California%2C_USA)%2C_Cable_Car_--_2012_--_4180.jpg?width=1280",
+     "tekija": "Dietmar Rabich",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:San_Francisco_(California%2C_USA)%2C_Cable_Car_--_2012_--_4180.jpg",
+     "selite": "Kaapeliraitiovaunut kiipeävät kaupungin jyrkkiä katuja ja ovat yhä liikenteessä.",
+     "leveys": 4913,
+     "korkeus": 2738,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "San Francisco cable car no. 24 en 2016.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/San_Francisco_cable_car_no._24_en_2016.JPG?width=1280",
+     "tekija": "© Pierre André",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:San_Francisco_cable_car_no._24_en_2016.JPG",
+     "selite": "Puuvaunut kääntyvät päätepysäkeillä käsin kääntölavalla.",
+     "leveys": 4912,
+     "korkeus": 3264,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1324280",
+   "nimi": "Fisherman's Wharf",
+   "peruste": "sitelinks",
+   "koko_m": 800,
+   "lat": 37.80831,
+   "lon": -122.41567,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Fisherman's Wharf San Francisco January 2013 002.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Fisherman's_Wharf_San_Francisco_January_2013_002.jpg?width=1280",
+     "tekija": "King of Hearts",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Fisherman's_Wharf_San_Francisco_January_2013_002.jpg",
+     "selite": "Fisherman's Wharfin satamassa kalastusveneet ovat vanhan työsataman perintöä.",
+     "leveys": 4928,
+     "korkeus": 3264,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "San Francisco (CA, USA), Fisherman's Wharf Sign -- 2022 -- 202542.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/San_Francisco_(CA%2C_USA)%2C_Fisherman's_Wharf_Sign_--_2022_--_202542.jpg?width=1280",
+     "tekija": "Dietmar Rabich",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:San_Francisco_(CA%2C_USA)%2C_Fisherman's_Wharf_Sign_--_2022_--_202542.jpg",
+     "selite": "Kyltti kehystää turistialueen tunnetuinta kulmaa.",
+     "leveys": 4200,
+     "korkeus": 6720,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1755360",
+   "nimi": "Presidio",
+   "peruste": "sitelinks",
+   "koko_m": 1500,
+   "lat": 37.79806,
+   "lon": -122.46583,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Old Crissy Field Coast Guard Station in the fog (December 2015).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Old_Crissy_Field_Coast_Guard_Station_in_the_fog_(December_2015).jpg?width=1280",
+     "tekija": "Frank Schulenburg",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Old_Crissy_Field_Coast_Guard_Station_in_the_fog_(December_2015).jpg",
+     "selite": "Presidion entisen varuskunta-alueen rannalla Golden Gate -silta kohoaa sumusta.",
+     "leveys": 4849,
+     "korkeus": 3233,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Presidio of SF Main Post Parade Ground 1.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Presidio_of_SF_Main_Post_Parade_Ground_1.JPG?width=1280",
+     "tekija": "BrokenSphere",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Presidio_of_SF_Main_Post_Parade_Ground_1.JPG",
+     "selite": "Pääkasarmin paraatikenttää reunustavat vanhat punakattoiset sotilasrakennukset.",
+     "leveys": 3264,
+     "korkeus": 2448,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q14684154",
+   "nimi": "Salesforce Tower",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 37.7899,
+   "lon": -122.397,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Salesforce Tower SF 2017.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Salesforce_Tower_SF_2017.jpg?width=1280",
+     "tekija": "homebucket",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Salesforce_Tower_SF_2017.jpg",
+     "selite": "Salesforce Tower on San Franciscon korkein pilvenpiirtäjä, ja sen pyöristetty latva erottuu kauas.",
+     "leveys": 2000,
+     "korkeus": 3320,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Salesforce Tower Roof.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Salesforce_Tower_Roof.jpg?width=1280",
+     "tekija": "InvadingInvader",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Salesforce_Tower_Roof.jpg",
+     "selite": "Ylhäältä torni näkyy soikeana rakennuksena kortteleiden keskellä.",
+     "leveys": 4000,
+     "korkeus": 2250,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1470276",
+   "nimi": "de Young -museo",
+   "peruste": "sitelinks",
+   "koko_m": 200,
+   "lat": 37.77147,
+   "lon": -122.46868,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Hamon Tower, De Young Museum 2.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hamon_Tower%2C_De_Young_Museum_2.JPG?width=1280",
+     "tekija": "BrokenSphere",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Hamon_Tower%2C_De_Young_Museum_2.JPG",
+     "selite": "de Young -museon kuparinen torni kohoaa Golden Gate Parkin puiden yläpuolelle.",
+     "leveys": 3264,
+     "korkeus": 2448,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "De Young Museum roof from Hamon Observation Tower 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/De_Young_Museum_roof_from_Hamon_Observation_Tower_01.jpg?width=1280",
+     "tekija": "Joe Mabel",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:De_Young_Museum_roof_from_Hamon_Observation_Tower_01.jpg",
+     "selite": "Tornin näköalatasanteelta näkyy museon rei'itetty katto ja puiston puita.",
+     "leveys": 4288,
+     "korkeus": 2848,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q5636548",
+   "nimi": "Haas–Lilienthalin talo",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": 37.79301,
+   "lon": -122.42459,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Haas-Lilienthal House exterior 2025.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Haas-Lilienthal_House_exterior_2025.jpg?width=1280",
+     "tekija": "Ppienovagem",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Haas-Lilienthal_House_exterior_2025.jpg",
+     "selite": "Haas–Lilienthalin talo on vuonna 1886 valmistunut kuninkatar Anne -tyylinen kaupunkitalo.",
+     "leveys": 2992,
+     "korkeus": 2992,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Haas-Lilienthal House.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Haas-Lilienthal_House.jpg?width=1280",
+     "tekija": "Dreamword",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Haas-Lilienthal_House.jpg",
+     "selite": "Talon torni ja koristeelliset puukoristeet kuuluvat viktoriaaniseen kaupunkikuvaan.",
+     "leveys": 1350,
+     "korkeus": 1988,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q298585",
+   "nimi": "Oracle Park",
+   "peruste": "sitelinks",
+   "koko_m": 250,
+   "lat": 37.77833,
+   "lon": -122.38944,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "AT&T Park July 24, 2016.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/AT%26T_Park_July_24%2C_2016.jpg?width=1280",
+     "tekija": "User Coasttocoast on en.wikipedia",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:AT%26T_Park_July_24%2C_2016.jpg",
+     "selite": "Oracle Park on San Franciscon pesäpallostadion lahden rannalla, ja sen takana näkyy vesi.",
+     "leveys": 2272,
+     "korkeus": 1704,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "San Francisco Downtown Aerial, August 2025.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/San_Francisco_Downtown_Aerial%2C_August_2025.jpg?width=1280",
+   "tekija": "Spicypepper999",
+   "lisenssi": "CC0",
+   "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:San_Francisco_Downtown_Aerial%2C_August_2025.jpg",
+   "selite": "San Franciscon keskustan pilvenpiirtäjät kohoavat lahden rannalla.",
+   "leveys": 2560,
+   "korkeus": 1440,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "San Francisco downtown aerial 2015.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/San_Francisco_downtown_aerial_2015.jpg?width=1280",
+   "tekija": "Kevin P. Siu",
+   "lisenssi": "CC BY-SA 3.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:San_Francisco_downtown_aerial_2015.jpg",
+   "selite": "Ilmasta keskustan korttelit muodostavat tiheän suorakulmaisen ruudukon.",
+   "leveys": 2048,
+   "korkeus": 1284,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}
