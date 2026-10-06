@@ -80,7 +80,7 @@ namespace Matkakirja.Natiivi
             if (!karkeaKaytossa || hallinta == null) return;
             if (karkea != null) hallinta.additionalCameras.Remove(karkea);
             hallinta.useMainCamera = true;
-            karkeaKaytossa = false; tarkkaAlku = Time.realtimeSinceStartup;
+            karkeaKaytossa = false; tarkkaAlku = Time.realtimeSinceStartup; tarkkaLaski = false;
             kirjaa($"kaupunki: tarkkuus tarkentuu → {SseKerroin:F2} ({(karkeaAlku > 0 ? Time.realtimeSinceStartup - karkeaAlku : 0):F1} s karkeana)");
         }
 
@@ -95,9 +95,14 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Tarkentumisen jälkeen 99 %:iin kulunut aika lokiin kerran (latausajan mittaus).</summary>
+        bool tarkkaLaski;
         void SeuraaTarkentumista()
         {
-            if (tarkkaAlku < 0 || Latausaste < ValmisProsentti) return;
+            if (tarkkaAlku < 0) return;
+            // Mittaus vasta, kun uudet laatat ovat ehtineet pudottaa latausasteen (simu 19.4x: "99 % 0,0 s" samassa kehyksessä).
+            if (Latausaste < ValmisProsentti) { tarkkaLaski = true; return; }
+            if (!tarkkaLaski && Time.realtimeSinceStartup - tarkkaAlku < 3f) return;
+            tarkkaLaski = false;
             kirjaa($"kaupunki: tarkentunut {SseKerroin:F2}:een, 99 % {Time.realtimeSinceStartup - tarkkaAlku:F1} s:ssa");
             tarkkaAlku = -1f;
         }

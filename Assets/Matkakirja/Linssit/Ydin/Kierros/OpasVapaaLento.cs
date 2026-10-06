@@ -4,7 +4,8 @@
 //   vasen tappi   ↕ eteen/taakse katsesuunnan mukaan, ↔ sivuttain (strafe)
 //   oikea tappi   ↔ kääntää katsetta paikallaan (kamera pysyy, näkymä kääntyy), ↕ nousee/laskee suoraan ylös/alas
 //   kallistus     korkeuden mukaan automaattisesti: matalalla lähes vaakaan (78°), ylhäällä jyrkemmin alas (54° 10 km:ssä)
-//   nopeus        verrannollinen korkeuteen pinnasta (0,6 × korkeus / s täydellä tapilla), pehmeä kiihdytys ja hiipuma
+//   nopeus        verrannollinen korkeuteen pinnasta (0,6 × korkeus / s täydellä tapilla; nousu 0,5 ×, Päätoimittaja 6.10. ilta:
+//                 0,8 vei 3 s:ssa 2 km:iin), pehmeä kiihdytys ja hiipuma
 //   pinta         vähintään MinKorkeusM 3D-laattojen pinnan (rakennukset mukana: OpasSovitin SampleHeightMostDetailed) yläpuolella
 //                 kamerassa ja EnnakkoS:n päässä liikkeen suunnassa (Päätoimittaja: ei läpi korkeista rakennuksista); enintään MaxKorkeusM
 // Tila: kameran alapiste, absoluuttinen korkeus (ellipsoidi), suunta; ulos Kuvakulma PalloKierto.Kuvaa-muodossa (katsepiste
@@ -15,7 +16,7 @@ namespace Matkakirja.Linssit.Kierros
 {
     public sealed class OpasVapaaLento
     {
-        public const double NopeusKerroin = 0.6, NousuKerroin = 0.8, KaantoAstS = 55, SyoteAikaS = 0.2, HiipumaAikaS = 0.5, KuollutAlue = 0.12;
+        public const double NopeusKerroin = 0.6, NousuKerroin = 0.5, KaantoAstS = 55, SyoteAikaS = 0.2, HiipumaAikaS = 0.5, KuollutAlue = 0.12;
         public const double MinKorkeusM = 40, MaxKorkeusM = 12000, MinNopeusMS = 15, EnnakkoS = 0.6, NostoAikaS = 0.25;
         /// <summary>
         /// Naapuruston näytteet (Päätoimittaja 6.10.: Eiffel-tornin ristikko läpäisi pistenäytteen): kaksi kehää kameran ympärillä
@@ -39,13 +40,15 @@ namespace Matkakirja.Linssit.Kierros
         /// <summary>
         /// Lähiluotaimen (syvyyspuskuri, OpasLahiluotain; Päätoimittaja 6.10.) vaakaeste toivotun liikkeen suunnassa (m; vain
         /// pisteet, jotka eivät ole selvästi kameran alapuolella, OpasLuotainKuva). Eiffel-toisto 19.1x: 40 m:n rajalla kamera jäi
-        /// 56–62 m:n päähän ristikosta, joka täytti ruudun → alle EsteRajaM (100 m) kamera nousee eikä laskeudu, ja vaakavauhti on
-        /// ≤ (EsteM − EstePysahdysM) m/s (pysähtyy 60 m:iin).
+        /// 56–62 m:n päähän ristikosta, joka täytti ruudun → alle EsteRajaM:n kamera nousee eikä laskeudu, ja vaakavauhti on
+        /// ≤ (EsteM − EstePysahdysM) m/s.
         /// </summary>
         public double EsteM { get; set; } = double.PositiveInfinity;
         /// <summary>Pystyvara kameran alla olevaan geometriaan (ristikon taso, jota pistenäyte ei osu); alle MinKorkeusM → nousu.</summary>
         public double EsteAllaM { get; set; } = double.PositiveInfinity;
-        public const double EsteRajaM = 100, EstePysahdysM = 60, EsteNousuMS = 15;
+        // Juna 153 -koe a53bcdb2 (Pelikoodari 19.4x): 14b korjautui (este 101 m, torni kokonaisena), mutta 14c pysähtyi 63 m:iin, ja
+        // ristikko täytti taas ruudun → pysähdys 120 m ja nousu alle 180 m:n esteestä.
+        public const double EsteRajaM = 180, EstePysahdysM = 120, EsteNousuMS = 15;
         /// <summary>Toivotun vaakaliikkeen suunta katsesuunnasta (°, + oikealle): tapista, muuten nopeudesta; paikallaan 0.</summary>
         public double ToiveSuuntaEro { get; private set; }
 

@@ -281,7 +281,21 @@ namespace Matkakirja.Natiivi
             // OSM-tekijätieto aina oppaan ajan: worker käyttää Nominatimia koordinaatteihin ja reittiviivoihin (ODbL, juna 146).
             KrediititTiivis.OsmNakyvissa = true;
             KrediititTiivis.Paivita(true);   // kapealla ruudulla logot + "Data sources" (Googlen policy)
-            if (KiinteaKamera is Kuvakulma kk) { y.Kuvaa(kk); kaupunki.AsetaEsikamera(kk); return; }   // kuvaparit samasta kulmasta (testi)
+            if (KiinteaKamera is Kuvakulma kk)   // kuvaparit samasta kulmasta (testi)
+            {
+                y.Kuvaa(kk); kaupunki.AsetaEsikamera(kk);
+                if (!kiinteaKirjattu) { kiinteaKirjattu = true; kiinteaAlku = Time.realtimeSinceStartup; kiinteaLaski = false; o.Kirjaa($"opas: kiinteä kamera käytössä {kk}"); }
+                // Latausaika kiinnityksestä 99 %:iin (Päätoimittaja: kolmikon latausajat); vasta kun aste on ensin laskenut tai 3 s.
+                if (kiinteaAlku > 0)
+                {
+                    if (kaupunki.Latausaste < CesiumKaupunki.ValmisProsentti) kiinteaLaski = true;
+                    else if ((kiinteaLaski || Time.realtimeSinceStartup - kiinteaAlku > 3f) && !kaupunki.KarkeaKaytossa)
+                    { o.Kirjaa($"opas: kiinteä kamera: laatat 99 % {Time.realtimeSinceStartup - kiinteaAlku:F1} s:ssa (kerroin {CesiumKaupunki.SseKerroin:F2})"); kiinteaAlku = -1f; }
+                }
+                if (kaupunki.KarkeaKaytossa && kaupunki.Latausaste >= CesiumKaupunki.ValmisProsentti) kaupunki.Tarkenna();
+                return;
+            }
+            kiinteaKirjattu = false;
             if (Pysaytetty) { y.Kuvaa(silmukka.Asento); return; }
             var ennen = silmukka.Vaihe;
             LueTapit();
@@ -444,6 +458,8 @@ namespace Matkakirja.Natiivi
         /// <summary>VAIN TESTIKÄYTTÖÖN (Päätoimittaja 6.10. 19.0x: still-parit täsmälleen samasta kulmasta): komento
         /// "opas kamera lat lon etäisyys_m kallistus suuntima katseKorkeus_m" lukitsee kameran; "opas kamera pois" vapauttaa.</summary>
         public static Kuvakulma? KiinteaKamera;
+        bool kiinteaKirjattu, kiinteaLaski;
+        float kiinteaAlku = -1f;
 
         public static void TestiGoogle429() { if (Viimeisin != null && Viimeisin.nakymaAuki) Viimeisin.kaupunki.TestiVirhe429(); }
 
