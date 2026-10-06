@@ -25,3 +25,15 @@ Alkuperäisen149paikan erän seuraava12paikan osapaketti26–37 on työnalla.162
 Juba,Bern,Ngerulmud ovat valmiit ja julkisesti R2-varmennettu, yksi1536×1024sRGBPNG kustakin. Manifesti `posti/kuvatoimitus-oppaan-kaupunkinakymat-1b-01-yksi-kuva-pilotti-20261006.json` sisältää3kuvaa sekä tunnukset,WikidataQ,koordinaatit,URL/r2Key/SHA,promptit ja Commons-viitteet. Katso nämä ennen1B-erän kytkentää.
 
 162paikan uusi lista säilyy lähdejärjestyksessä, ensimmäiset25työnalla. Alkuperäisen149paikan seuraava25paikan erä etenee, eikä uusia vuorokausiversioita tehdä. Seitsemänlinssin prioriteettitoimitus on jo valmis; pelikytkentää tai julkaisutulosta ei vieläväitetä.
+
+## ERÄ1B / erä01:25paikkaa×yksi kuva — R2-varmennettu
+
+Uuden162kaupungin listan ensimmäiset25paikkaa(Juba–N_Djamena) ovat nyt kaikkiR2:ssa julkisesti varmennettu, yksi1536×1024sRGBPNG kustakin. Manifesti `posti/kuvatoimitus-oppaan-kaupunkinakymat-1b-01-20261006.json`:25URL/r2Key/SHA-riviä,sourceQ/koordinaatit/nimi/maa,mitat,promptit ja2–4Commons-viitettä/attribuutiot/lisenssit. Koordinaattien/id:n järjestys vastaa Sisältökirjurin162listaa.
+
+Esikatselu: https://media.matkakirja.app/julisteet/herokoe/20261006/era1b01-yksi-kuva-esikatselu.jpg
+
+AbuDhabi: Qasr al-Hosnin todellinen nykyinen maamerkki kolmelta kuvaajalta2019/2024. Moskeijahaku ei täyttänyt tarkistetun otoksen viiteporttia, joten ei tehty keksittyä moskeijaa; paikkatilaus salli tämän aidon vaihtoehtoisen maamerkin. Aiempieste on ratkaistu ja säilyy historiassa. Kunkin kuvan caption on kytkennän lähde.
+
+Katselmuksen kolmeensimmäistä:Juba,Bern,Ngerulmud; katso ennen erän pelikytkentää. Vastaanottokuittaus/katselmus/pelikytkentä odottavat edelleen todentamista. Ei mergeämainiin/versionnostoa/julkaisutoimea.
+
+Molempien paikkalistojen seuraavat25erät etenevät. ToistuvatCommons/Wikidata429:t pysäyttävät tilapäisesti vain uusia viitehakuja: yhteinen hiljainenikkuna19:03:51–19:13:51UTC, ei tunnisteen/reitin vaihtoa; ladatuilla viitteillä generointi ja kaikkivalmiiden R2/postitoimitus jatkuu. Seitsemänlinssinprioriteettitoimitus on jo valmis.
