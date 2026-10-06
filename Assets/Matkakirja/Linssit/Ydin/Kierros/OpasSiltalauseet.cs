@@ -18,7 +18,45 @@ namespace Matkakirja.Linssit.Kierros
     public sealed class OpasSiltalauseet
     {
         /// <summary>Ryhmät (Pelikoodari): kuittaus, ruoka, moderni, vihrea, vesi, vanha, lento, kierros, syventava, kaupunki, aloitus, odotus.</summary>
-        public const string Kuittaus = "kuittaus", Kaupunki = "kaupunki", Kierros = "kierros", Lento = "lento", Aloitus = "aloitus", Odotus = "odotus";
+        public const string Kuittaus = "kuittaus", Kaupunki = "kaupunki", Kierros = "kierros", Lento = "lento", Aloitus = "aloitus", Odotus = "odotus",
+            Syventava = "syventava";
+        /// <summary>Kuittaukset-v1 (Pelikoodari 6.10., omistaja hyväksyi): kysymyksen kuittaus (52 neutraalia) ja odotusportaat.</summary>
+        public const string KysymysRyhma = "kysymys", Odotus5 = "odotus5", Odotus12 = "odotus12", Virhe = "virhe";
+
+        // TILANTEEN MUKAAN (omistaja 6.10. 14.3x "välilauseet eivät täsmää pyyntöön", Päätoimittaja hyväksyi taulukon, juna 150):
+        // näennäisryhmät rajaavat aineiston ryhmiä lauseittain, eikä niillä ole vararyhmää (väärä lause on pahempi kuin hiljaisuus).
+        /// <summary>Kysymys (Kysy-lista, kysyvä mikki/näppäin): vain kysymykseen sopivat syventävät lauseet; kamera ei liiku.</summary>
+        public const string Kysymys = "@kysymys";
+        /// <summary>Valinta listasta (täky, Liiku): kuittaus ilman vapaan toiveen lauseita.</summary>
+        public const string Valinta = "@valinta";
+        /// <summary>Odotus ilman lentoa: odotus ilman "perillä"-lauseita.</summary>
+        public const string OdotusPaikalla = "@odotus-paikalla";
+        public static readonly string[] KysymysLauseet = { "Hyvä kysymys.", "Tästä on kiinnostava tarina.", "Kerron mielelläni lisää.", "Katsotaan tarkemmin." };
+        public static readonly string[] VapaanToiveenLauseet = { "Tiedän juuri oikean paikan.", "Hyvä, minulla on sinulle jotain.", "Hyvä toive, se onnistuu.", "Mainio ajatus." };
+        public static readonly string[] LennonOdotukset = { "Melkein perillä.", "Kohta ollaan siellä." };
+
+        static bool On(string[] lista, string teksti) => teksti != null && Array.IndexOf(lista, teksti.Trim()) >= 0;
+
+        /// <summary>Näennäisryhmä → aineiston ryhmä ja lauseehto; tavallinen ryhmä sellaisenaan (ehto null).</summary>
+        public static (string ryhma, Func<Siltalause, bool> ehto) Rajaus(string ryhma) => ryhma switch
+        {
+            Kysymys => (Syventava, l => On(KysymysLauseet, l.Teksti)),
+            Valinta => (Kuittaus, l => !On(VapaanToiveenLauseet, l.Teksti)),
+            OdotusPaikalla => (Odotus, l => !On(LennonOdotukset, l.Teksti)),
+            _ => (ryhma, null),
+        };
+
+        /// <summary>Mikin tai näppäimistön teksti on kysymys (kysymysmerkki tai kysyvä alku); muuten toive tai käsky.</summary>
+        public static bool OnKysymys(string teksti)
+        {
+            if (string.IsNullOrWhiteSpace(teksti)) return false;
+            string t = teksti.Trim().ToLowerInvariant();
+            if (t.EndsWith("?")) return true;
+            foreach (var a in new[] { "mikä", "mitä", "mitkä", "kuka", "ketkä", "keitä", "miksi", "milloin", "missä", "mistä", "mihin", "miten",
+                "kuinka", "montako", "paljonko", "onko", "oliko", "voiko", "saako", "kerro", "kertoisitko", "tiedätkö", "millainen", "minkä" })
+                if (t == a || t.StartsWith(a + " ") || t.StartsWith(a + ",")) return true;
+            return false;
+        }
 
         readonly Dictionary<string, List<Siltalause>> ryhmat = new Dictionary<string, List<Siltalause>>(StringComparer.Ordinal);
         readonly HashSet<string> kaytetyt = new HashSet<string>(StringComparer.Ordinal);
@@ -27,6 +65,19 @@ namespace Matkakirja.Linssit.Kierros
         public OpasSiltalauseet(int siemen = 0) { satunnainen = siemen == 0 ? new Random() : new Random(siemen); }
 
         public int Maara { get; private set; }
+
+        /// <summary>Toisen aineiston ryhmät tähän (kuittaukset-v1 siltalauseiden rinnalle); samanniminen ryhmä korvautuu.</summary>
+        public void Yhdista(OpasSiltalauseet muut)
+        {
+            if (muut == null) return;
+            foreach (var kv in muut.ryhmat)
+            {
+                if (ryhmat.TryGetValue(kv.Key, out var vanha)) Maara -= vanha.Count;
+                ryhmat[kv.Key] = kv.Value; Maara += kv.Value.Count;
+            }
+        }
+
+        public bool OnRyhma(string ryhma) => ryhma != null && ryhmat.ContainsKey(ryhma);
 
         public IEnumerable<Siltalause> Kaikki()
         {
@@ -62,6 +113,11 @@ namespace Matkakirja.Linssit.Kierros
         /// </summary>
         public Siltalause Valitse(string ryhma, string vara = Kuittaus, Func<Siltalause, bool> saatavilla = null)
         {
+            // Kysymykseen kuittaukset-v1:n oma ryhmä, kun se on ladattu; muuten syventävien kysymyslauseiden rajaus.
+            if (ryhma == Kysymys && ryhmat.ContainsKey(KysymysRyhma)) return Ryhmasta(KysymysRyhma, saatavilla);
+            var (aineisto, ehto) = Rajaus(ryhma);
+            if (ehto != null)   // näennäisryhmä: ei vararyhmää
+                return Ryhmasta(aineisto, l => ehto(l) && (saatavilla == null || saatavilla(l)));
             return Ryhmasta(ryhma, saatavilla) ?? (vara != null && vara != ryhma ? Ryhmasta(vara, saatavilla) : null);
         }
 

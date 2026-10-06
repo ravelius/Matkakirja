@@ -846,7 +846,7 @@
 .mk-maakunnat__lteksti {
     flex-shrink: 1;
     flex-grow: 1;
-    font-size: 13px;
+    font-size: var(--tk-koko-leipa); /* omistaja 6.10. 13.0x: sama koko kuin nostoissa (mk-nosto__teksti) */
     white-space: normal;
     color: rgba(70, 51, 31, 0.92);
 }
@@ -875,7 +875,7 @@
 }
 
 .mk-maakunnat--tabletti .mk-maakunnat__lteksti {
-    font-size: 18px;
+    font-size: var(--tk-koko-leipa);
 }
 
 .mk-maakunnat__lisaa {
@@ -2235,7 +2235,7 @@
 }
 
 .mk-maakunnat--kartta .mk-maakunnat__lteksti {
-    font-size: 15px;
+    font-size: var(--tk-koko-leipa);
 }
 
 /* Tabletti + maakuntakartta (omistaja 29.9.2026): ~1,4 × isonnus vain iPadilla, sama suhde kuin perustilan
@@ -2256,7 +2256,7 @@
 }
 
 .mk-maakunnat--tabletti.mk-maakunnat--kartta .mk-maakunnat__lteksti {
-    font-size: 21px;
+    font-size: var(--tk-koko-leipa);
 }
 
 .mk-maakunnat__ohje {

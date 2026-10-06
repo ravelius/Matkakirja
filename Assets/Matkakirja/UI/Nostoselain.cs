@@ -10,6 +10,8 @@
 //             laskurilla (TUMMA lappu "Seuraava: <nimi> 3 s · Pysäytä"). Sama asetus kuin lehden jatkuva luenta
 //             (PlayerPrefs matkakirja-lukija-auto, web localStorage sama avain).
 // Kaupungit eivät ole listalla (niiden valo avaa kaupungin, ei nostoa); näkymätön (NostonMuste.Nakyy false) ei ole.
+// MAAKUNNAT (omistaja 6.10. 13.0x): maakunta avautuu samaan nostokorttiin, ja selain näyttää silloin maan kaikki maakunnat
+// (MuuLista: "<MAA> · MAAKUNNAT", yksi siru); ‹ › ja AUTO pysyvät maakuntien sisällä, eikä nostoista päästä maakuntiin.
 // Testikomennot Nostokortti.Testaa-nimillä: selain, selain-seuraava, selain-edellinen, selain-siru:<aihe>, selain-rivi:<n>,
 // auto, auto-pois, siirto, pysayta.
 using System;
@@ -36,7 +38,7 @@ namespace Matkakirja.Natiivi
         readonly VisualElement kortti, rivi, paneeli, siruRivi, lappu, palkki;
         readonly ScrollView sirut, lista;
         readonly Button edellinen, seuraava, avaaja, pysayta;
-        readonly Label otsikko, lappuNimi, lappuAika;
+        readonly Label otsikko, lappuNimi, lappuAika, avaajaTeksti;
         readonly Action<string> avaa;
         readonly Action autoVaihtui;
         Button autoNappi;
@@ -44,6 +46,19 @@ namespace Matkakirja.Natiivi
         string nykyinen, maa, aihe;
         IVisualElementScheduledItem siirtoAjo;
         float siirtoAlku;
+
+        /// <summary>Muu kuin nostojen lista (maakunnat): otsikko, sirun nimi ja rivit (tunnus, nimi) järjestyksessä.</summary>
+        public sealed class Lista
+        {
+            public string Otsikko, Siru, Avaaja;
+            public List<(string Id, string Nimi)> Rivit = new List<(string, string)>();
+            /// <summary>Rivi luettu (✓ ja himmennys kuten luetulla nostolla); null = ei merkintää.</summary>
+            public Func<string, bool> Luettu;
+        }
+        /// <summary>Valon tunnuksesta muu lista (null = nostojen lista maan mukaan).</summary>
+        public Func<string, Lista> MuuLista;
+        Lista muu;
+        const string MuuAihe = "muu";
 
         public bool PaneeliAuki { get; private set; }
         /// <summary>Kortin pystyvieritys (Kosketusvieritys) vierittää paneelin listaa, kun paneeli on auki.</summary>
@@ -87,6 +102,7 @@ namespace Matkakirja.Natiivi
             // Nostopaneelin ylärivi (omistaja 2.10. klo 13.53): ‹ NOSTOT ▾ › ja AUTO samalla rivillä HISTORIA-kapiteelin
             // kirjasimella, molemmat kevyinä suorakulmioina (ei ovaalia; web #3849 AUTO:n malli).
             avaaja = Rakenne.Nappi("NOSTOT", "mk-nostoselain__avaaja", VaihdaPaneeli, rivi);
+            avaajaTeksti = avaaja.Q<Label>();
             // ▾ piirroksena (Kone-kirjasimesta puuttuu merkki: laitteella neliö).
             Rakenne.Ikoni("<path class=\"taytto\" d=\"M7.5 10h9L12 15z\"/>", "mk-nostoselain__avaajaikoni", avaaja);
             seuraava = Rakenne.Nappi(null, "mk-nostoselain__askel", () => Askel(1), rivi, Ikonit.NuoliOikea);
@@ -165,10 +181,22 @@ namespace Matkakirja.Natiivi
         {
             LopetaSiirto();
             nykyinen = valoId;
+            jarjestys.Clear();
+            muu = valoId != null ? MuuLista?.Invoke(valoId) : null;
+            avaajaTeksti.text = muu?.Avaaja ?? "NOSTOT";
+            if (muu != null)
+            {
+                foreach (var r in muu.Rivit) jarjestys.Add(new NostoKerros.Nosto { Id = r.Id, Nimi = r.Nimi, Aihe = MuuAihe });
+                aihe = MuuAihe;
+                rivi.style.display = jarjestys.Count > 0 ? DisplayStyle.Flex : DisplayStyle.None;
+                PaivitaAskeleet();
+                PaivitaAuto();
+                if (PaneeliAuki) RakennaPaneeli();
+                return;
+            }
             var k = NostoKerros.Instanssi;
             var n = k?.NostoIdlla(valoId);
             maa = n?.Maa ?? k?.NykyinenMaa;
-            jarjestys.Clear();
             if (k != null && maa != null)
             {
                 var mukana = k.MaanNostot(maa).Where(Mukaan).ToList();
@@ -185,7 +213,8 @@ namespace Matkakirja.Natiivi
             x.Id != null && x.Aihe != null && x.Aihe != "kaupungit" && x.Aihe != "kaikki" && x.Aihe != "ei"
             && (PeliOhjain.Instanssi == null || PeliOhjain.Instanssi.NostonMuste(x.Id).Nakyy);
 
-        static bool Luettu(NostoKerros.Nosto x) => PeliOhjain.Instanssi != null && PeliOhjain.Instanssi.NostonMuste(x.Id).Loydetty;
+        bool Luettu(NostoKerros.Nosto x) => muu != null ? muu.Luettu?.Invoke(x.Id) ?? false
+            : PeliOhjain.Instanssi != null && PeliOhjain.Instanssi.NostonMuste(x.Id).Loydetty;
 
         static string Nimi(NostoKerros.Nosto x) => x.Nimi ?? x.Nimio ?? x.Id;
 
@@ -227,7 +256,8 @@ namespace Matkakirja.Natiivi
             nykyinen = x.Id;
             aihe = x.Aihe;
             PaivitaAskeleet();
-            var kierto = UnityEngine.Object.FindAnyObjectByType<PalloKierto>();
+            // Maakunnat: kartta siirtyy valinnan mukana (avaa → Maakunnat), ei lentoa nostokoordinaatteihin.
+            var kierto = muu != null ? null : UnityEngine.Object.FindAnyObjectByType<PalloKierto>();
             kierto?.Aja(x.OmaLat, x.OmaLon, 0, LentoS, null);
             avaa?.Invoke(x.Id);
         }
@@ -266,10 +296,16 @@ namespace Matkakirja.Natiivi
         void RakennaPaneeli()
         {
             var nimi = UiSisalto.Maa(maa)?.Nimi ?? maa ?? "";
-            otsikko.text = (nimi + " · Nostot").ToUpperInvariant();
+            otsikko.text = muu != null ? muu.Otsikko.ToUpperInvariant() : (nimi + " · Nostot").ToUpperInvariant();
             siruRivi.Clear();
             Button valittu = null;
-            foreach (var r in NostoMerkit.Jarjestys)
+            if (muu != null)
+            {
+                var (ml, mk) = Maarat(MuuAihe);
+                valittu = Rakenne.Nappi($"{muu.Siru} ({ml}/{mk})", "mk-nostoselain__siru mk-valittu", () => { }, siruRivi);
+                Kirjasimet.Aseta(valittu, Kirjasin.KoneBold);
+            }
+            else foreach (var r in NostoMerkit.Jarjestys)
             {
                 var (l, k) = Maarat(r.Id);
                 if (k == 0) continue;

@@ -187,7 +187,7 @@
     border-width: 1px;
     border-radius: var(--tk-kulma-nappi);
     border-color: var(--tk-reunus);
-    background-color: var(--tk-pinta-peitto);
+    background-color: var(--tk-pinta); /* omistaja 6.10. 16.3x: läpinäkyvämpi lasi (harmaan lasiteeman pinta, ei peittävä) */
     color: var(--tk-korostus);
     flex-direction: row;
     justify-content: center;
@@ -214,7 +214,7 @@
 }
 
 .mk-liiku__nappi.mk-opas-nappi .mk-nappi__teksti.mk-opas-nappi__teksti {
-    margin: 0 0 0 6px;
+    margin: 0 0 0 var(--tk-vali-s);
     padding: 0;
     font-size: var(--tk-koko-leipa);
     letter-spacing: 0;
@@ -234,4 +234,65 @@
     border-radius: var(--tk-kulma-nappi);
     border-color: var(--tk-reunus);
     background-color: var(--tk-pinta-peitto);
+}
+
+/* OPPAAN ALOITUS ILMAN KARTTAA (omistaja 6.10.2026 13.4x; OpasValikko.aloitus): sama linssivalikko koko ruutuna TUMMALLA
+ * teemalla (lasin muuttujat tumman teeman arvoiksi, tekstit vaaleina), kaksi saraketta: paikat ja suosikit (LINSSIRIVI).
+ * Puhelimella pystyssä (--pino) paikat ylhäällä ja suosikit alla. */
+.mk-linssivalikko.mk-linssivalikko--pohja.mk-opas-aloitus {
+    --tk-lasi-pinta: var(--tk-tumma-pinta);
+    --tk-lasi-muste: var(--tk-tumma-muste);
+    --tk-lasi-muste-pehmea: var(--tk-tumma-muste-pehmea);
+    --tk-lasi-reunus: var(--tk-tumma-reunus);
+    --tk-lasi-korostus: var(--tk-tumma-korostus);
+    position: absolute;
+    flex-direction: row;
+    max-width: none;
+    border-width: 0;
+    border-radius: 0;
+    background-color: var(--tk-tumma-pinta);
+}
+
+/* Sama tarkkuus kuin yllä (kolme luokkaa + pino), muuten rivi voittaa (simu 16.08: puhelin jäi kahdelle sarakkeelle). */
+.mk-linssivalikko.mk-linssivalikko--pohja.mk-opas-aloitus.mk-opas-aloitus--pino {
+    flex-direction: column;
+}
+
+.mk-opas-aloitus__sarake {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+    margin: 0 var(--tk-vali-s);
+}
+
+.mk-opas-aloitus--pino .mk-opas-aloitus__sarake {
+    margin: 0 0 var(--tk-vali-m) 0;
+}
+
+.mk-opas-aloitus--pino .mk-opas-aloitus__sarake--paikat {
+    flex-grow: 0;
+    flex-basis: auto;
+}
+
+.mk-opas-aloitus__lista {
+    flex-shrink: 1;
+}
+
+.mk-opas-aloitus .mk-linssivalitsin__valiotsikko,
+.mk-opas-aloitus .mk-linssirivi__lyhyt {
+    color: var(--tk-tumma-muste-pehmea);
+}
+
+.mk-opas-aloitus .mk-linssirivi__nimi {
+    color: var(--tk-tumma-muste);
+}
+
+/* Oppaan listat harmaalla lasilla (omistaja 6.10. 16.3x): otsikot valkoisina, tarkennukset vaaleina mutta himmeämpinä. */
+.tk-teema-harmaa.mk-linssivalikko--pohja .mk-linssirivi__nimi {
+    color: var(--tk-harmaa-korostus);
+}
+
+.tk-teema-harmaa.mk-linssivalikko--pohja .mk-linssirivi__lyhyt,
+.tk-teema-harmaa.mk-linssivalikko--pohja .mk-linssivalitsin__valiotsikko {
+    color: var(--tk-harmaa-muste-pehmea);
 }
