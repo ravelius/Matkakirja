@@ -2011,6 +2011,19 @@ namespace Matkakirja.Natiivi
                     else if (osat.Length > 2 && osat[1] == "testiotsake") OpasSovitin.Testiotsake = osat[2] == "1";
                     else if (osat.Length > 2 && osat[1] == "pysayta") OpasSovitin.Pysaytetty = osat[2] == "1";
                     else if (osat.Length > 2 && osat[1] == "pcm") OpasSovitin.PcmKaytossa = osat[2] == "1";
+                    // Laitekokeet ilman kosketusta (juna 151): kierros, Liiku-kohde, lopetus, jatko ja kysymys kuten napeista.
+                    else if (osat.Length > 1 && osat[1] == "kierros") Kirjaa($"opas: kierros → {OpasSovitin.Kaupunkikierros()}");
+                    else if (osat.Length > 1 && osat[1] == "lopeta") Kirjaa($"opas: lopeta → {OpasSovitin.LopetaKierros()}");
+                    else if (osat.Length > 1 && osat[1] == "jatka") Kirjaa($"opas: jatka → {OpasSovitin.JatkaKierrosta()}");
+                    else if (osat.Length > 2 && osat[1] == "kysy") Kirjaa($"opas: kysy → {OpasSovitin.Kysy(string.Join(" ", osat.Skip(2)))}");
+                    else if (osat.Length > 2 && osat[1] == "liiku")
+                    {
+                        string arvo = string.Join(" ", osat.Skip(2));
+                        var lista = OpasSovitin.Kohteet;
+                        var t = lista == null ? null : int.TryParse(arvo, out int li) ? (li >= 0 && li < lista.Count ? lista[li] : null)
+                            : lista.FirstOrDefault(x => string.Equals(x.Nimi, arvo, StringComparison.OrdinalIgnoreCase));
+                        Kirjaa($"opas: liiku {arvo} → {(t != null && OpasSovitin.Siirry(t) ? "ok" : "ei löytynyt")}");
+                    }
                     // Laitekoe ilman kosketusta: suosikin (täkyn) valinta indeksillä tai nimellä (Akropolis).
                     else if (osat.Length > 2 && osat[1] == "valitse")
                     {
