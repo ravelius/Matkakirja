@@ -602,6 +602,7 @@ namespace Matkakirja.Natiivi
         {
             if (!nakyy) return;
             PaivitaJatka();
+            Valahdysvahti.Paivita(Juuri);
             // Neljä nappia näkyvät aina oppaassa, paitsi chatin tai valikon ollessa auki (vanha sirurivi ei enää näy).
             var c0 = UiNakymat.Olemassa ? UiNakymat.Hae().Chat : null;
             bool napitNakyy = c0 != null && !c0.Auki && !Auki;
