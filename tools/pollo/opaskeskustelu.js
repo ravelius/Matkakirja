@@ -8,6 +8,7 @@
  * toiminto: { tyyppi: 'siirry', nimi, lat, lon, ulkona } | { tyyppi: 'kohde', id } | { tyyppi: 'kaupunki', nimi, lat, lon }
  *   | { tyyppi: 'kierros' } | { tyyppi: 'tauko' } | { tyyppi: 'jatka' } | null.
  */
+import { kenttarivit } from './rivit.js';
 
 const siivoa = (t, katto) => String(t ?? '').replace(/[\u0000-\u001f]+/g, ' ').replace(/\s+/g, ' ').trim().slice(0, katto);
 
@@ -122,8 +123,8 @@ const LUOKAT = ['katu', 'kanava', 'aukio', 'rakennus', 'torni', 'kirkko', 'linno
 
 export function jasennaLiiku(teksti) {
   const tulos = [];
-  for (const m of String(teksti ?? '').matchAll(/^\s*KOHDE\s*:\s*(.+)$/gim)) {
-    const [nimi, wikipedia, alarivi, luokka] = m[1].split('|').map((x) => x.trim());
+  for (const rivi of kenttarivit(teksti, 'KOHDE', 3)) {
+    const [nimi, wikipedia, alarivi, luokka] = rivi.split('|').map((x) => x.trim());
     const k = { nimi: siivoa(nimi, 120), wikipedia: siivoa(wikipedia, 200) || null, alarivi: siivoa(alarivi, 60) || null,
       luokka: LUOKAT.includes(String(luokka ?? '').toLowerCase()) ? luokka.toLowerCase() : null };
     if (k.nimi && !tulos.some((x) => x.nimi.toLowerCase() === k.nimi.toLowerCase())) tulos.push(k);
