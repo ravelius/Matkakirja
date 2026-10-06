@@ -14,7 +14,8 @@ const arg = (n, o = null) => { const i = process.argv.indexOf(`--${n}`); return 
 const UA = 'Matkakirja-kartta/1.0 (https://matkakirja.app; peli@matkakirja.app)';
 const OVERPASS = ['https://overpass-api.de/api/interpreter', 'https://overpass.kumi.systems/api/interpreter',
   'https://overpass.private.coffee/api/interpreter'];
-const KATTO_T = 2_000_000, PIENI_R = 2000;
+// Linssiseppä 6.10.: isoille kaupungeille r 6 000 (Eiffel 4,2 km Pariisin keskustasta); pienet kadut 3 km:iin, jos yli 2,5 Mt.
+const KATTO_T = 2_500_000, PIENI_R = 3000;
 const PIENET = new Set(['residential', 'living_street', 'pedestrian', 'unclassified']);
 const odota = (ms) => new Promise((r) => setTimeout(r, ms));
 
@@ -72,7 +73,7 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   const id = arg('id'), ulos = arg('ulos');
   if (!id || !ulos) { console.error('käyttö: --id <id> --lat <lat> --lon <lon> [--r 4000] --ulos <paketti>'); process.exit(1); }
   const vm = arg('valimuisti'); if (vm) mkdirSync(vm, { recursive: true });
-  const t = await teeTiet({ lat: Number(arg('lat')), lon: Number(arg('lon')), r: Number(arg('r', '4000')), valimuisti: vm ? join(vm, `tiet-${id}.json`) : null });
+  const t = await teeTiet({ lat: Number(arg('lat')), lon: Number(arg('lon')), r: Number(arg('r', '4000')), valimuisti: vm ? join(vm, `tiet-${id}-r${arg('r', '4000')}.json`) : null });
   const kansio = join(ulos, 'kartta', 'tiet-v1'); mkdirSync(kansio, { recursive: true });
   writeFileSync(join(kansio, `${id}.json`), JSON.stringify(t));
   const lkm = {}; for (const x of t.tiet) lkm[x.t] = (lkm[x.t] ?? 0) + 1;
