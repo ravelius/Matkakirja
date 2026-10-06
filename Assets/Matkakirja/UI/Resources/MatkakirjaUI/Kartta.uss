@@ -2169,6 +2169,14 @@
     display: none;
 }
 
+/* Elävä opas (Päätoimittaja 6.10., CC BY): lähderivi näkyy kokoruudussakin kuvan alla, vaalea teksti tummalla. */
+.mk-suurennos--kokoruutu.mk-suurennos--lahde-nakyy .mk-nosto__lahde {
+    display: flex;
+    margin: 6px 12px 0 12px;
+    color: var(--tk-tumma-muste-pehmea);
+    -unity-text-align: middle-center;
+}
+
 /* Elävä kartta, kohta 2: löytämättömän musteen jälki ja pääkohteen hehku merkin alla (MusteJaljet, NostotKartalla.AsetaMuste). */
 .mk-nosto-merkki__jalki,
 .mk-nosto-merkki__hehku {

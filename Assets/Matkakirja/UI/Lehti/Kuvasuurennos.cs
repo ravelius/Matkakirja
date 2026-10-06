@@ -52,6 +52,17 @@ namespace Matkakirja.Natiivi
             set { kokoruutu = value; kerros.EnableInClassList("mk-suurennos--kokoruutu", value); selaus.VainPyyhkaisy = value; Mitoita(); }
         }
         bool kokoruutu;
+
+        /// <summary>
+        /// Lähderivi myös kokoruudussa (elävä opas, Päätoimittaja 6.10.: CC BY vaatii tekijän näkyviin; junan 146 still: rivi oli
+        /// piilossa löydöksen 150 kokoruutusäännön vuoksi). Rivi kuvan alla tummalla taustalla (.mk-suurennos--lahde-nakyy).
+        /// </summary>
+        public bool LahdeKokoruudussa
+        {
+            get => lahdeKokoruudussa;
+            set { lahdeKokoruudussa = value; kerros.EnableInClassList("mk-suurennos--lahde-nakyy", value); }
+        }
+        bool lahdeKokoruudussa;
         const float ZoomMax = 4f, AlasSulku = 90f, Liike = 8f;
         readonly KuvaSelaus selaus;
         readonly Dictionary<int, Vector2> osoittimet = new Dictionary<int, Vector2>();
@@ -321,7 +332,7 @@ namespace Matkakirja.Natiivi
             lahdeUrl = string.IsNullOrEmpty(k.LahdeUrl) ? null : k.LahdeUrl;
             lahde.pickingMode = lahdeUrl != null ? PickingMode.Position : PickingMode.Ignore;
             lahde.EnableInClassList("mk-nosto__lahde--linkki", lahdeUrl != null);
-            lahde.style.display = lahde.text.Length > 0 && !kokoruutu ? DisplayStyle.Flex : DisplayStyle.None;
+            lahde.style.display = lahde.text.Length > 0 && (!kokoruutu || lahdeKokoruudussa) ? DisplayStyle.Flex : DisplayStyle.None;
             bool monta = sarja.Count > 1;
             // Löydös 34: ei nuolia kuvan päällä; selaus reunanapautuksella ja pyyhkäisyllä (KuvaSelaus).
             edellinen.style.display = seuraava.style.display = DisplayStyle.None;

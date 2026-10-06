@@ -460,7 +460,7 @@ namespace Matkakirja.Natiivi
         {
             var k = naytettyKuva;
             if (k == null) return;
-            if (suurennos == null) suurennos = new Kuvasuurennos(UiKerros.Hae().Juuri(UiKerros.Valikot)) { Tayteen = true, Kokoruutu = true };
+            if (suurennos == null) suurennos = new Kuvasuurennos(UiKerros.Hae().Juuri(UiKerros.Valikot)) { Tayteen = true, Kokoruutu = true, LahdeKokoruudussa = true };
             var l = OpasSovitin.Viimeisin?.Silmukka?.Nykyinen;
             // Kokoruutuselaus: nostojen Kuvasuurennos sarjana (pyyhkäisy ja ‹ ›), lähderivi ja selite kuvakohtaisesti.
             var kaikki = NykyisetKuvat();
