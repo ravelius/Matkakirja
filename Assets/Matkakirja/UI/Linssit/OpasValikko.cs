@@ -152,6 +152,7 @@ namespace Matkakirja.Natiivi
         {
             uiKerros = kerros;
             this.kerrosNro = kerrosNro;
+            kerros.TurvaMuuttui += () => { if (aloitus && Auki) AsetteleAloitus(); }; // kierto aloituksen aikana
             Juuri = Rakenne.El("mk-linnavalikko", kerros.Turva(kerrosNro), PickingMode.Ignore);
             Juuri.style.position = Position.Absolute;
             Juuri.style.left = 0; Juuri.style.right = 0; Juuri.style.top = 0; Juuri.style.bottom = 0;
@@ -365,7 +366,8 @@ namespace Matkakirja.Natiivi
 
         void PaivitaAvausIon()
         {
-            bool nayta = nakyy && KrediititTiivis.AvausLatautuu && KrediititTiivis.IonLogoKuva != null;
+            // Aloituksen aikana ei logoa (simu 15.45: ion-logo piirtyi paikkalistan päälle; Cesium ei ole vielä auki).
+            bool nayta = nakyy && !aloitus && KrediititTiivis.AvausLatautuu && KrediititTiivis.IonLogoKuva != null;
             KrediititTiivis.IonOmaPiirto = nayta;
             if (!nayta) { if (avausIon.style.display != DisplayStyle.None) avausIon.style.display = DisplayStyle.None; return; }
             // Cesiumin paikka: Googlen logon yläpuolella (sen mitattu yläreuna; simu 6.10. 13.13: laskettu paikka osui logon päälle).
@@ -1045,8 +1047,8 @@ namespace Matkakirja.Natiivi
             valikko.style.maxHeight = StyleKeyword.Null;
             valikko.style.paddingLeft = r.x + Tyylikirja.Vali.L; valikko.style.paddingRight = r.z + Tyylikirja.Vali.L;
             valikko.style.paddingTop = r.y + Tyylikirja.Vali.L; valikko.style.paddingBottom = r.w + Tyylikirja.Vali.L;
-            var koko = valikko.parent?.layout ?? default;
-            bool pino = !UiKerros.Tabletti && koko.height > koko.width;
+            // Ruudun mitoista (simu 15.45: paneelin asettelu ei ollut vielä valmis, ja puhelin jäi kahdelle sarakkeelle).
+            bool pino = !UiKerros.Tabletti && Screen.height > Screen.width;
             valikko.EnableInClassList("mk-opas-aloitus--pino", pino);
         }
 
