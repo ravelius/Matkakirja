@@ -10992,3 +10992,9 @@ Omistaja 6.10.2026 klo 19.00 (chat): "posterboard on kaatunut 5 kertaa" → vast
 ## PÄÄTOIMITTAJA: T7-SIMULAATTORISIIRTO, TOINEN YRITYS EI TOIMINUT (6.10.2026 klo 19.03)
 
 6.10.2026 klo 18.48–18.53: omistaja ajoi sudo diskutil enableOwnership "/Volumes/T7 4TB" (Owners: Enabled). rsync päivitti T7-kopion (319 733 / 319 733 tiedostoa), mutta Devices-symlinkin jälkeen CoreSimulator näki taas 0 laitetta, ja skripti palautti alkuperäisen automaattisesti (24 laitetta). Syy ei siis ollut omistajuus; todennäköisesti CoreSimulatorService ei seuraa Devices-symlinkkiä ulkoiselle taltiolle. Kolmatta samaa yritystä ei tehdä ilman uutta tietoa; vaihtoehdot ovat xcrun simctl --set <polku> (roolien työkalut käyttävät oletussettiä) tai TCC-lupa (omistajan päätös). T7:llä on käyttämätön kopio. Levy 94 Gi klo 19.01 roolien omien simujen erase-tyhjennysten jälkeen.
+
+## OMISTAJA: PÄÄTOIMITTAJAN SESSION NIMI ISOILLA KIRJAIMILLA (6.10.2026 klo 19.12)
+
+Omistaja 6.10.2026 klo 19.1x (chat) sanatarkasti: "Muuta sinun päätoimittajanimi sessionimessä Kapitaaleille, jotta minun on jatkossa helpompi löytää se. Kirjaa myös tämän raamattuun, jotta se näkyy samalla lailla myös jatkossa."
+
+Ratkaisu: session nimi on nyt "PÄÄTOIMITTAJA (Opus, max)" (set_session_title 19.1x). Raamatun Ydinajatus-kohta PÄÄTOIMITTAJA = FABLE päivitetty: päätoimittajan session nimi aina isoilla kirjaimilla "PÄÄTOIMITTAJA (<malli>, <effort>)" myös nollausten ja tilinvaihtojen jälkeen; muiden roolien nimet tavallisesti. Roolit, jotka lähettävät viestejä nimellä, käyttävät uutta nimeä (tai ListAgentsin riviä).
