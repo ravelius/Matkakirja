@@ -61,13 +61,17 @@ def main():
         tila, d = kutsu('GET', f'/v1/bundleIds?filter[identifier]={bid}&limit=20')
         osuma = [b for b in d.get('data', []) if b.get('attributes', {}).get('identifier') == bid] if tila == 200 else []
         if not osuma:
-            rivit.append(f'| {bid} | App ID:tä ei löydy ({tila}) |')
+            t3, kaikki = kutsu('GET', '/v1/bundleIds?limit=200&fields[bundleIds]=identifier,platform')
+            loydetyt = sorted(b['attributes']['identifier'] for b in kaikki.get('data', [])
+                              if 'matkakirja' in b.get('attributes', {}).get('identifier', '')) if t3 == 200 else []
+            rivit.append(f"| {bid} | App ID:tä ei löydy ({tila}); tilillä: {', '.join(loydetyt) or '–'} |")
             virheita += 1
             continue
         resurssi = osuma[0]['id']
-        tila, c = kutsu('GET', f'/v1/bundleIds/{resurssi}/bundleIdCapabilities?limit=200')
+        tila, c = kutsu('GET', f'/v1/bundleIds/{resurssi}/bundleIdCapabilities')
         if tila != 200:
-            rivit.append(f'| {bid} | oikeuksia ei saatu ({tila}) |')
+            syy = '; '.join(e.get('detail', '') for e in c.get('errors', []))[:300]
+            rivit.append(f'| {bid} | oikeuksia ei saatu ({tila}): {syy} |')
             virheita += 1
             continue
         if any(x.get('attributes', {}).get('capabilityType') == OIKEUS for x in c.get('data', [])):
