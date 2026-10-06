@@ -1347,6 +1347,7 @@ namespace Matkakirja.Natiivi
             // Löydös 34: reunanapautus ja pyyhkäisy selaavat (ei nuolia), keskiosa suurentaa.
             new KuvaSelaus(kehysPaikka, () => kuvat.Count, s => Nayta(kuvaIndeksi + s), () => kehysPaikka.childCount > 0 ? kehysPaikka[0] : kehysPaikka);
             Nayta(kuvaIndeksi);
+            napit["suurenna"] = () => Suurenna(kuvaIndeksi); // testi: kuvasuurennos tekijärivin kanssa
         }
 
         // --- "Havainnekuva"-merkintä (web js/havainnekuva.js lisaaHavainnekuvaMerkki, css/fokusnosto.css
