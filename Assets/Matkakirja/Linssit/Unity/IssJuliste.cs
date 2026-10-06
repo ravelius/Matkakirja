@@ -194,8 +194,13 @@ namespace Matkakirja.Natiivi
             nimi.style.flexDirection = FlexDirection.Column;
             nimi.style.alignItems = Align.FlexStart;
             juuri.Add(nimi);
-            nimi.Add(Rivi((t.Nimi ?? "").ToUpperInvariant(), Kirjasin.KoneBold, W * NimiKoko, valkea, 0.10f * W * NimiKoko, TextAnchor.MiddleLeft));
-            nimi.Add(Rivi(Koordinaatit(t.Lat, t.Lon), Kirjasin.Kone, W * KoordKoko, kulta, 0.12f * W * KoordKoko, TextAnchor.MiddleLeft));
+            // Pehmeä tumma varjo: teksti erottuu myös pilven päällä (Manaus 41658bec: valkoinen valkoisella).
+            Color varjo = Color.black; varjo.a = 0.75f;
+            var tv = new TextShadow { offset = new Vector2(0, W * 0.0012f), blurRadius = W * 0.006f, color = varjo };
+            var n1 = Rivi((t.Nimi ?? "").ToUpperInvariant(), Kirjasin.KoneBold, W * NimiKoko, valkea, 0.10f * W * NimiKoko, TextAnchor.MiddleLeft);
+            var n2 = Rivi(Koordinaatit(t.Lat, t.Lon), Kirjasin.Kone, W * KoordKoko, kulta, 0.12f * W * KoordKoko, TextAnchor.MiddleLeft);
+            n1.style.textShadow = tv; n2.style.textShadow = tv;
+            nimi.Add(n1); nimi.Add(n2);
 
             // Alamarginaali: kolme riviä keskellä, ISS-sinetti oikealla kuvan oikean reunan tasalla.
             float ala = H - reuna - h;

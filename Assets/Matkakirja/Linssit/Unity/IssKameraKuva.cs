@@ -1106,7 +1106,8 @@ namespace Matkakirja.Natiivi
             if (W <= 0 || H <= 0) { valmis(null); yield break; }
             int R = GibsPilvet.Ruutu, tx0 = x0 / R, ty0 = y0 / R, tx1 = (x0 + W - 1) / R, ty1 = (y0 + H - 1) / R;
             var kello = System.Diagnostics.Stopwatch.StartNew();
-            var tanaan = DateTime.UtcNow.Date;
+            // Pilvet kuvan hetkeltä (pelin kello; Helsinki vedoksen valossa 21.6. sai lokakuun pilvet), tulevaisuudessa tältä päivältä.
+            var tanaan = IssNyt.Kello().Date; if (tanaan > DateTime.UtcNow.Date) tanaan = DateTime.UtcNow.Date;
             var paivat = new List<(DateTime paiva, byte[][] kerrokset)>();
             for (int d = 1; d <= 7; d++) paivat.Add((tanaan.AddDays(-d), new byte[GibsPilvet.Kerrokset.Length][]));
             long tavut = 0; int pyyntoja = 0;
@@ -1309,12 +1310,12 @@ namespace Matkakirja.Natiivi
             var (k, maa) = IssSijainti.Nimet(a, lat, lon);
             if (!string.IsNullOrEmpty(paikka)) k = paikka;
             if (string.IsNullOrEmpty(maa)) return k;   // merellä
-            for (int r = 10; r <= 40; r += 10)
-                for (int i = 0; i < 12; i++)
+            for (int r = 0; r <= 40; r += 10)
+                for (int i = 0; i < (r == 0 ? 1 : 12); i++)
                 {
                     IssKuvakulma.Kohde(lat, lon, i * 30, r / 111.2, out double mla, out double mlo, out _);
-                    var (m, mm) = IssSijainti.Nimet(a, mla, mlo);
-                    if (string.IsNullOrEmpty(mm) && !string.IsNullOrEmpty(m)) return $"{k} · {m}";
+                    var m = IssSijainti.Merialue(a, mla, mlo);
+                    if (!string.IsNullOrEmpty(m)) return $"{k} · {m}";
                 }
             return k == maa ? k : $"{k} · {maa}";
         }

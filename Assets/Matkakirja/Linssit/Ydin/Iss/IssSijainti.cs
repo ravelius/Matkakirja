@@ -162,6 +162,22 @@ namespace Matkakirja.Linssit.Iss
             return (meri.HasValue ? Iso(meri.Value.Nimi) : "", "");
         }
 
+        /// <summary>
+        /// Merialueen nimi pisteessä (Natural Earthin merialueet, pienin pisteen sisältävä; suomeksi tai pelin nimipiste), null = ei
+        /// merialuetta. Julisteen "HELSINKI · SUOMENLAHTI" (E v3): maiden rajat kattavat rannikon vedet, joten Hae palauttaa maan.
+        /// </summary>
+        public static string Merialue(Aineisto a, double lat, double lon)
+        {
+            if (a == null) return null;
+            MeriAlue alue = null;
+            foreach (var m2 in a.MeriAlueet)
+                if ((alue == null || m2.Ala < alue.Ala) && m2.Sisalla(lat, lon)) alue = m2;
+            if (alue == null) return null;
+            if (alue.NimiFi.Length > 0) return alue.NimiFi;
+            string peli = PelinNimiAlueelle(a, alue);
+            return string.IsNullOrEmpty(peli) ? null : peli;
+        }
+
         /// <summary>Pelin meren tai valtameren nimipiste alueen sisällä (alueen keskikohtaa lähin); kerran per alue.</summary>
         static string PelinNimiAlueelle(Aineisto a, MeriAlue alue)
         {
