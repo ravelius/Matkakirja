@@ -48,6 +48,10 @@ done
 # Hybridi-PBR (laatusuunnitelma 30.9., menetelmä B): materiaalimaski + kirjaston 4 materiaalia (diff + nor_gl), maskin
 # kanavajärjestyksessä R graniittilohkomuuri, G paanukatto, B kivilaatta, A kallio. Mukaan, jos lähteissä on.
 KIRJASTO=${KIRJASTO:-/Users/Shared/Claude/proto-3d/_kirjasto/valmiit}
+# Akustiikkaverkot (5.10.2026, Siirtosepän suunnitelma kohta 6; tools/dioraama/blender/akustiikka.py): jos lähteessä on akustiikka/
+if [ -d "$LAHDE/akustiikka" ]; then
+  for f in "$LAHDE"/akustiikka/*.glb(N) "$LAHDE"/akustiikka/akustiikka.json(N); do lisaa "akustiikka/${f:t}" "akustiikka/${f:t}"; done
+fi
 if [ -f "$LAHDE/ulkokuori/hybridi/kuori-materiaali-2k.png" ]; then
   lisaa "ulkokuori/hybridi/kuori-materiaali-2k.png" "ulkokuori/hybridi/kuori-materiaali-2k.png"
   for id in graniittilohkomuuri paanukatto kivilaatta kallio; do
