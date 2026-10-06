@@ -756,7 +756,6 @@ namespace Matkakirja.Natiivi
             // Maakunta (omistaja 6.10. 13.0x): otsikko ja koko ensimmäinen kappale nostotekstin koossa kuvan alla, sitten LISÄÄ.
             if (nosto.Laji == NostoLaji.Maakunta)
             {
-                if (!string.IsNullOrEmpty(k.LahdeRivi)) Rakenne.Teksti(k.LahdeRivi, "mk-kansikuva__lahde", sisus);
                 Kirjasimet.Aseta(Rakenne.Teksti(nosto.Otsikko ?? "", "mk-nosto__otsikko", sisus), Kirjasin.LukuLihava);
                 var eka = Kappaleet(nosto.Teksti).FirstOrDefault();
                 if (!string.IsNullOrEmpty(eka)) Rakenne.Teksti(Riviva(eka), "mk-nosto__teksti", sisus);
@@ -1328,9 +1327,6 @@ namespace Matkakirja.Natiivi
             var lohko = Rakenne.El("mk-nosto__kuvasarja", isa, PickingMode.Ignore);
             var kehysPaikka = Rakenne.El("mk-nosto__kuvapaikka", lohko, PickingMode.Ignore);
             var teksti = Kuvateksti(lohko, "", null); // web .nostokuva-selite: Iowan pysty, keskitetty
-            // Maakunta (Päätoimittaja 6.10. 16.1x, CC BY-SA vaatii nimeämisen): tekijä- ja lisenssirivi kuvan alla kuten
-            // lisäkaupungin herokuvassa (mk-kansikuva__lahde).
-            Label lahde = nosto.Laji == NostoLaji.Maakunta ? Rakenne.Teksti("", "mk-kansikuva__lahde", lohko) : null;
             Label laskuri = null;
             void Nayta(int i)
             {
@@ -1342,7 +1338,6 @@ namespace Matkakirja.Natiivi
                 var kehys = Kuvakehys(kehysPaikka, k, () => Suurenna(kohta), suhde: HeroSuhde,
                     puuttui: kuvat.Count == 1 ? () => lohko.style.display = DisplayStyle.None : (Action)null);
                 AsetaKuvateksti(teksti, k.Lyhyt, k);
-                if (lahde != null) { lahde.text = k.LahdeRivi ?? ""; lahde.style.display = string.IsNullOrEmpty(k.LahdeRivi) ? DisplayStyle.None : DisplayStyle.Flex; }
                 if (kuvat.Count > 1)
                 {
                     laskuri = Rakenne.Teksti($"{kuvaIndeksi + 1} / {kuvat.Count}", "mk-nosto__laskuri", kehys);
