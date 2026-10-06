@@ -612,6 +612,7 @@ namespace Matkakirja.Natiivi
             bool nappi = nappiNakyy && !Auki && !(c0?.Auki ?? false) && (testiMika == true || OpasSovitin.MikaTamaKaytettavissa || lataa);
             var d = nappi ? DisplayStyle.Flex : DisplayStyle.None;
             if (mikaRivi.style.display != d) mikaRivi.style.display = d;
+            if (nappi && kuvaKortti.style.display != DisplayStyle.None) kuvaKortti.style.display = DisplayStyle.None;   // havainnekuvan paikalla
             var td = vapaa && !Auki ? DisplayStyle.Flex : DisplayStyle.None;
             if (tahtain.style.display != td) tahtain.style.display = td;
             string teksti = lataa ? "Haetaan…" : "Mikä tämä on?";
@@ -625,7 +626,8 @@ namespace Matkakirja.Natiivi
                 bool vieressa = !float.IsNaN(oikea) && mw > 0 && oikea + KuvaRako + mw + OpasTapit.Reuna <= w;
                 mikaRivi.style.left = vieressa ? oikea + KuvaRako : StyleKeyword.Auto;
                 mikaRivi.style.right = vieressa ? StyleKeyword.Auto : (StyleLength)OpasTapit.Reuna;
-                mikaRivi.style.bottom = vieressa ? krediittiAla : krediittiAla + NappiriviKorkeus + KuvaRako;
+                // Puhelimella rivin yllä oikealla: tappien yläpuolelle, kun ne näkyvät (simu 19.20: osui oikeaan tappiin).
+                mikaRivi.style.bottom = vieressa ? krediittiAla : tapit.Nakyy ? TapitAla + OpasTapit.Halkaisija + KuvaRako : krediittiAla + NappiriviKorkeus + KuvaRako;
             }
             // Vaihtoehdot (≥ 2) Liiku-listan pohjalla; 0 → ilmoitus listassa; 1 kerrotaan suoraan (LS1).
             var v = OpasSovitin.MikaTamaVaihtoehdot;
