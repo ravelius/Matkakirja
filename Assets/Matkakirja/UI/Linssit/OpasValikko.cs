@@ -1584,12 +1584,27 @@ namespace Matkakirja.Natiivi
 
         void TarkistaOhiNapautus()
         {
-            if (!Auki) return;
             var osoitin = Pointer.current;
             if (osoitin == null || !osoitin.press.wasPressedThisFrame || valikko.panel == null) return;
             var ruutu = osoitin.position.ReadValue();
             var p = RuntimePanelUtils.ScreenToPanel(valikko.panel, new Vector2(ruutu.x, Screen.height - ruutu.y));
-            if (!valikko.worldBound.Contains(p) && !nappi.worldBound.Contains(p)) Sulje();
+            // ☰-OSUMAN DIAGNOSTIIKKA (juna 156, oikean yläkulman osumavika: simussa 18/20 ja 19/20): painallus ☰:n lähellä →
+            // mihin UITK:n poiminta osuu ja onko valikko auki (lokista erottuu ohi-osuma, toinen elementti tai sulku-avaus).
+            if (Vector2.Distance(p, nappi.worldBound.center) < 40f && Juuri.panel != null)
+            {
+                var osuma = Juuri.panel.Pick(p);
+                Debug.Log($"MATKAKIRJA opas: ☰-painallus {p.x:0},{p.y:0} (ero {p.x - nappi.worldBound.center.x:0},{p.y - nappi.worldBound.center.y:0}), "
+                          + $"auki {Auki}, poiminta [{(osuma == null ? "-" : string.Join(".", osuma.GetClasses()) + "#" + osuma.name)}], "
+                          + $"laajennettu {nappi.ContainsPoint(nappi.WorldToLocal(p))}");
+            }
+            if (!Auki) return;
+            // Ohi-napautus ei saa sulkea, kun painallus osuu ☰:n laajennettuun osuma-alaan (Kosketusnappi 44 pt): muuten sulku
+            // tässä ja ☰:n klikkaus perään avasivat valikon uudelleen, eli napautus näytti menevän ohi.
+            if (!valikko.worldBound.Contains(p) && !nappi.ContainsPoint(nappi.WorldToLocal(p)))
+            {
+                Debug.Log($"MATKAKIRJA opas: ohi-napautus sulki valikon {p.x:0},{p.y:0}");
+                Sulje();
+            }
         }
 
         /// <summary>Testikomento `ui opasvalikko valikko|maanosat|maat <maanosa>|kaupungit <maanosa>|<maa>|sulje`.</summary>
