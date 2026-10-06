@@ -39,13 +39,15 @@ namespace Matkakirja.Linssit.Kierros
         /// <summary>
         /// Lähiluotaimen (syvyyspuskuri, OpasLahiluotain; Päätoimittaja 6.10.) vaakaeste toivotun liikkeen suunnassa (m; vain
         /// pisteet, jotka eivät ole selvästi kameran alapuolella, OpasLuotainKuva). Eiffel-toisto 19.1x: 40 m:n rajalla kamera jäi
-        /// 56–62 m:n päähän ristikosta, joka täytti ruudun → alle EsteRajaM (100 m) kamera nousee eikä laskeudu, ja vaakavauhti on
-        /// ≤ (EsteM − EstePysahdysM) m/s (pysähtyy 60 m:iin).
+        /// 56–62 m:n päähän ristikosta, joka täytti ruudun → alle EsteRajaM:n kamera nousee eikä laskeudu, ja vaakavauhti on
+        /// ≤ (EsteM − EstePysahdysM) m/s.
         /// </summary>
         public double EsteM { get; set; } = double.PositiveInfinity;
         /// <summary>Pystyvara kameran alla olevaan geometriaan (ristikon taso, jota pistenäyte ei osu); alle MinKorkeusM → nousu.</summary>
         public double EsteAllaM { get; set; } = double.PositiveInfinity;
-        public const double EsteRajaM = 100, EstePysahdysM = 60, EsteNousuMS = 15;
+        // Juna 153 -koe a53bcdb2 (Pelikoodari 19.4x): 14b korjautui (este 101 m, torni kokonaisena), mutta 14c pysähtyi 63 m:iin, ja
+        // ristikko täytti taas ruudun → pysähdys 120 m ja nousu alle 180 m:n esteestä.
+        public const double EsteRajaM = 180, EstePysahdysM = 120, EsteNousuMS = 15;
         /// <summary>Toivotun vaakaliikkeen suunta katsesuunnasta (°, + oikealle): tapista, muuten nopeudesta; paikallaan 0.</summary>
         public double ToiveSuuntaEro { get; private set; }
 
