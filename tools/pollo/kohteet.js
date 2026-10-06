@@ -67,7 +67,7 @@ export const eilenUtc = (nyt = new Date()) => new Date(nyt.getTime() - 86400000)
  * maanosat sekoitettuina; koordinaatit ja kuvat erähaulla (opas.js kohteetErana), 50 ensimmäistä kelpaavaa.
  */
 export const MAAILMAN_SUOSIKKEJA = 50;
-export const maailmanSuosikitAvain = () => 'opas:kohteet:maailma50:v2';
+export const maailmanSuosikitAvain = () => 'opas:kohteet:maailma50:v3';
 
 /**
  * KIISTANALAISET SIJAINNIT (Päätoimittaja 6.10.2026): Jerusalemin kohteet neutraalisti, ei maakoodia eikä maan nimeä,
