@@ -1,6 +1,6 @@
 {
   "source": "posti/fable-codex-oppaan-kuvat-linssivalikko-20261006.md",
-  "sourceCommit": "4e70a3603c6aede271c06ba11761fa14191c753c",
+  "sourceCommit": "269382b2f65f2498fd29618e7f4e2ed4bab16ca1",
   "batch": 1,
   "pilot": true,
   "createdAt": "2026-10-06T17:25:34.248628+00:00",
@@ -684,5 +684,8 @@
     "mime": "image/jpeg",
     "cors": "https://matkakirja.app",
     "byteExactReadback": true
-  }
+  },
+  "instructionsVersion": 2,
+  "deliveryRole": "already-completed-series-review-only",
+  "newImagesPerPlace": 1
 }
