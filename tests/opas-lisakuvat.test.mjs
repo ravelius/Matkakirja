@@ -80,3 +80,18 @@ test('aikaraja: hidas Commons ei hidasta vastausta; haku valmistuu taustalla vä
     assert.equal(toka.kuvat.length, 7, 'välimuistista');
   } finally { globalThis.fetch = vanha; }
 });
+
+// TEKIJÄTIETO PAKOLLINEN (Linssiseppä 6.10.: natiivi näki Canal Granden kuvat ilman tekijää/lisenssiä; CC BY vaatii
+// tekijän). Lisäkuva kelpaa vain, jos sillä on lisenssi ja lähde sekä tekijä (PD/CC0 ilman tekijääkin). Vika ensin.
+test('yhdistaKuvat: lisäkuva ilman tekijää tai lisenssiä pudotetaan (CC BY vaatii tekijän); PD ilman tekijää kelpaa', async () => {
+  const { yhdistaKuvat } = await import('../tools/pollo/opas.js');
+  const lahde = (n) => `https://commons.wikimedia.org/wiki/File:${n}.jpg`;
+  const tulos = yhdistaKuvat([], [
+    { url: 'a', tyyppi: 'valokuva', tekija: 'Iain Cameron', lisenssi: 'CC BY 2.0', lahde: lahde('a') },
+    { url: 'b', tyyppi: 'valokuva', tekija: null, lisenssi: 'CC BY-SA 4.0', lahde: lahde('b') },
+    { url: 'c', tyyppi: 'valokuva', tekija: 'X', lisenssi: null, lahde: lahde('c') },
+    { url: 'd', tyyppi: 'valokuva', tekija: null, lisenssi: 'PD', lahde: lahde('d') },
+    { url: 'e', tyyppi: 'valokuva', tekija: 'Y', lisenssi: 'CC0', lahde: null },
+  ]);
+  assert.deepEqual(tulos.map((k) => k.url), ['a', 'd'], 'toisto: tekijätön CC-kuva tai lisenssitön kuva meni läpi');
+});

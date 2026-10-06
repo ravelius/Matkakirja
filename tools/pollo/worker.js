@@ -23,7 +23,7 @@ import {
   OPAS_KEHOTE, siivoaOpasPyynto, kaupunginSijainti, paikanKoordinaatit, kaydytNimiksi, oppaanViesti, jasennaOpas,
   kaupunginAineisto, kuvatPaikalle, wikidataKuva, lisaKuvatValimuistilla, yhdistaKuvat, OPAS_KIERROS_KEHOTE, kierroksenViesti, jasennaKierros,
   seuraavaKierrokselta, paikanNimi, onKierrosToive, ESITTELE_KAUPUNKI, LISAA_KAUPUNKIA, KIERROKSEN_PITUUS, jarjestaReitti,
-  seuraavaSuunta, SUUNNANVAIHDOT, paikanKorostus, siltaRyhma,
+  seuraavaSuunta, SUUNNANVAIHDOT, paikanKorostus, siltaRyhma, kuvallaTekijatiedot,
 } from './opas.js';
 import { OPAS_AINEISTO } from './opas-aineisto.js';
 import { reunaLue, reunaKirjoita, reunaPoista, pysyvaLue, pysyvaKirjoita, pysyvaPoista, kvLue, kvKirjoita } from './reuna.js';
@@ -2979,7 +2979,8 @@ async function hoidaOppaanKohteet(pyynto, env, kors) {
     const kohteet = (await Promise.all(ehdokkaat.map(async (k) => {
       const paikka = await paikanKoordinaatit(fetch, k, viite);
       if (!paikka) return null;
-      const kuva = /^Q\d+$/.test(paikka.id ?? '') ? (await wikidataKuva(fetch, paikka.id))[0] ?? null : null;
+      const ehdokas = /^Q\d+$/.test(paikka.id ?? '') ? (await wikidataKuva(fetch, paikka.id))[0] ?? null : null;
+      const kuva = ehdokas && kuvallaTekijatiedot(ehdokas) ? ehdokas : null;   // CC BY vaatii tekijän (6.10.)
       return { id: paikka.id, nimi: paikanNimi(paikka, k.nimi), koukku: k.koukku, kaupunki: k.kaupunki ?? kaupunki, iso: k.iso,
         lat: paikka.lat, lon: paikka.lon, alarivi: paikka.alarivi ?? null, kuva };
     }))).filter(Boolean);

@@ -406,7 +406,7 @@ export async function wikidataKuva(haku, id) {
     const lisenssi = ilmanHtml(meta.LicenseShortName?.value);
     if (!tieto?.thumburl || !VAPAA_LISENSSI.test(lisenssi) || /\b(nc|nd)\b/i.test(lisenssi)) return [];
     return [{
-      url: tieto.thumburl, tyyppi: 'valokuva', tekija: ilmanHtml(meta.Artist?.value).slice(0, 120) || null,
+      url: tieto.thumburl, tyyppi: 'valokuva', tekija: siistiTekija(meta.Artist?.value),
       lisenssi: /^public domain$/i.test(lisenssi) ? 'PD' : lisenssi, lahde: tieto.descriptionurl ?? null,
       selite: null,   // Commonsin kuvaus on yleensä englanniksi; natiivi näyttää pysähdyksen nimen
     }];
@@ -673,10 +673,20 @@ export async function lisaKuvatValimuistilla(haku, kv, id, r2 = null) {
 }
 
 /** Pelin omat ensin, sitten lisät ilman kaksoiskappaleita (tiedostonimi), yhteensä enintään OPAS_KUVIA_ENINTAAN. */
+/**
+ * Lisäkuvan tekijätiedot (Linssiseppä 6.10.: CC BY vaatii tekijän): lisenssi ja lähde aina, tekijä paitsi PD/CC0.
+ * Pelin omat kuvat (omat) eivät kulje tämän läpi.
+ */
+export function kuvallaTekijatiedot(k) {
+  if (!k?.lisenssi || !k?.lahde) return false;
+  return Boolean(k.tekija) || /^(PD|CC0|public domain)/i.test(k.lisenssi);
+}
+
 export function yhdistaKuvat(omat, lisat) {
   const nahty = new Set(omat.map((k) => tiedostonimi(k.lahde)).filter(Boolean));
   const tulos = [...omat];
   for (const k of lisat ?? []) {
+    if (!kuvallaTekijatiedot(k)) continue;
     const n = tiedostonimi(k.lahde);
     if (tulos.length >= OPAS_KUVIA_ENINTAAN) break;
     if (n && nahty.has(n)) continue;
