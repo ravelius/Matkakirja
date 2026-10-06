@@ -436,6 +436,15 @@ namespace Matkakirja.Natiivi
             Kirjasimet.Aseta(kentta, Kirjasin.Moderni);
             void Laheta() { var t = kentta.value; kentta.value = ""; kirjoitus.style.display = DisplayStyle.None; PuhuOppaalle(t, "kirjoitus"); }
             kentta.RegisterCallback<KeyDownEvent>(e => { if (e.keyCode == KeyCode.Return || e.keyCode == KeyCode.KeypadEnter) { Laheta(); e.StopPropagation(); } });
+            // iOS (LS1:n todistusajo 6.10. 12.42): järjestelmän oma syöttörivi (✓/×) avautui tämän rivin lisäksi ja teksti jäi siihen →
+            // oma rivi riittää (hideMobileInput), ja näppäimistön Valmis/Lähetä lähettää kuten Return.
+            kentta.textEdition.hideMobileInput = true;
+            kirjoitus.schedule.Execute(() =>
+            {
+                var k = kentta.textEdition.touchScreenKeyboard;
+                if (k == null) return;
+                if (k.status == TouchScreenKeyboard.Status.Done && !string.IsNullOrWhiteSpace(kentta.value)) Laheta();
+            }).Every(100);
             rivi.Add(kentta);
             var laheta = Rakenne.Nappi(null, "mk-chat__laheta", Laheta, rivi, Ikonit.Nuoli);
             laheta.tooltip = "Lähetä oppaalle";
