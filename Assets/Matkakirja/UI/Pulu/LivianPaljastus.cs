@@ -1,6 +1,7 @@
 // LIVIAN TUURAUSPALJASTUS JA SAAPUMISEN OHJEKUPLAT (Natiivi-UI, liikkumisen pariteetti C16): webin
 // js/livia.js naytaLivianPaljastus + paljastusRepliikki + odotaLuenta ja js/ui.js saapumisenKuplat +
 // saapumisenOhjekuplat. Vain aloituslennon jälkeen, ei tavallisilla saapumisilla.
+// 6.10.2026 (omistaja): paljastuksen repliikit ilman puhekuplaa (Pulu.Sano kuplaton), ääni ja ajastimet ennallaan.
 //
 // ENSIMMÄINEN SAAPUMINEN KOSKAAN (laitelippu matkakirja-livia-paljastus + istunnon lippu; omistaja
 // 7.9.2026, repliikit sanatarkkoja): isoisän luenta on lykätty (PeliOhjain.Lykkays.cs). 1800 ms saapumisen
@@ -212,7 +213,8 @@ namespace Matkakirja.Natiivi
                 ohjain?.AloitaLykattyLuenta();
                 return;
             }
-            pulu.Sano(teksti, aani, null, Jatka, klippi => puheMs = klippi != null ? klippi.length * 1000f : 0f);
+            // Kartan kohtaus (omistaja 6.10.2026, Ateena): paljastus puhuu ilman kuplaa; jatko ajastimella (lukuaika / puheen loppu).
+            pulu.Sano(teksti, aani, null, Jatka, klippi => puheMs = klippi != null ? klippi.length * 1000f : 0f, kuplaton: true);
             // Kupla odottaa puheen loppuun: lukuaika on vähimmäisaika (web livianKuplanAjastin).
             float lukuaika = PuluKuplat.Lukuaika(teksti);
             Ajasta(() =>
