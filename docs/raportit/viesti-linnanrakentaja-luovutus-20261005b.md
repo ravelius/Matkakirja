@@ -186,3 +186,8 @@ Brotli (haara linnanrakentaja-zstd, worktree olemassa), akustiikka #3979 (Steam 
   (instanssit), kk_halli.py, kokoa.py (Blender → pilotti/kielletty.blend, --glb EXT_mesh_gpu_instancing), mitat.py (V/A
   datasta kielletty-kaupunki-data.md + OSM osm_alue.py → kk-alue.json), kk_tekstuurit.py (venv), esik.py. Taihedian 35,05 m ja
   Taihemen 23,72 m täsmäävät lähteisiin. SEURAAVA: esikatselu Päätoimittajalle (pilotti/arkki.jpg), sitten aukion galleriat.
+- 7.10. 02.2x: KIELLETTY KAUPUNKI v2 Päätoimittajalla (esikatselu/arkki-pilotti-v2.jpg): portaat + 垂带 + kaiverrettu 御路
+  (kk_tekstuurit yulu_*), pronssit (kk_osat: ding, kurki, kilpikonna, aurinkokello, jyvamitta, leijona; mitat.PRONSSIT),
+  Jinshui-joki + 5 siltaa (kk_joki.py, kk-joki.json), katon kultainen sävy, pohjoissivun galleriat/portit ja kulmatornit.
+  257 k staattista kolmiota + 6 100 instanssia, GLB 6,9 Mt. SEURAAVA kuittauksen jälkeen: natiivi-dioraamaan vienti
+  (kysy Siirtosepältä: EXT_mesh_gpu_instancing natiivissa? rakennus-id, ulkokuori-LOD:t), sisätilat vasta tarinan kuittauksella.
