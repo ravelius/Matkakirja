@@ -54,9 +54,9 @@ namespace Matkakirja.Natiivi
         public static bool Pysaytetty;
         /// <summary>Testiotsake (komento "opas testiotsake 1"): worker palauttaa kerronnan ilman ääntä (ei ElevenLabs-kulutusta simussa).</summary>
         public static bool Testiotsake;
-        /// <summary>PCM-suoratoisto (Pöllön aani_pcm) käytössä. Oletus pois, kunnes virta on todennettu simulla äänen kanssa
-        /// (Päätoimittaja 5.10. 20.3x: juna 144 ilman riskiä); pois-tilassa käytetään mp3:a (aani) kuten ennen. Komento "opas pcm 0|1".</summary>
-        public static bool PcmKaytossa;
+        /// <summary>PCM-suoratoisto (Pöllön aani_pcm) käytössä. OLETUS PÄÄLLÄ (Päätoimittaja 6.10. 13.2x, juna 148): Pöllön kylmä mp3 alkaa
+        /// ~14 s:ssa, PCM-virta ~0,9 s:ssa (mitattu 6.10. 13.1x). Virran virheessä mp3-varapolku (LataaPcm). Komento "opas pcm 0|1".</summary>
+        public static bool PcmKaytossa = true;
         /// <summary>Kappaleen äänen avain: PCM-virta vain kytkimellä, muuten mp3.</summary>
         static string AaniAvain(OpasKohde k) => k == null ? null : PcmKaytossa ? k.AaniAvain : (string.IsNullOrEmpty(k.Aani) ? null : k.Aani);
         /// <summary>Aloituskaupunki (komento "opas kaupunki <nimi>"); ensimmäinen pyyntö on tämä toive.</summary>
