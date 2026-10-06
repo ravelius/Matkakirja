@@ -16,7 +16,7 @@ namespace Matkakirja.Linssit.Kierros
     {
         public const double KiertoMaxAstS = 50, KallistusMaxAstS = 28, EtaisyysMaxS = 0.9;   // täysi tappi (etäisyys log-asteikolla /s)
         public const double SyoteAikaS = 0.18, HiipumaAikaS = 0.45, PaluuS = 1.5, KuollutAlue = 0.12;
-        public const double KallistusMin = 25, KallistusMax = 78, EtMinM = 110, EtMaxM = 2200, KattoYlaM = 55;
+        public const double KallistusMin = 25, KallistusMax = 78, EtMinM = 110, EtMaxM = 2200, KattoYlaM = 55, YlaKerroin = 1.5;
 
         /// <summary>Pelaajan siirtymät automaattiseen kehykseen: kierto (°), jyrkkyys (°, + = vaakaan) ja etäisyyskerroin (log).</summary>
         public double Kierto { get; private set; }
@@ -49,7 +49,9 @@ namespace Matkakirja.Linssit.Kierros
         public Kuvakulma Sovella(Kuvakulma perus, double maaM)
         {
             double kall = Rajaa(perus.Kallistus + Kallistus, KallistusMin, KallistusMax);
-            double et = Rajaa(perus.EtaisyysM * Math.Exp(EtaisyysLog), EtMinM, EtMaxM);
+            // Rajat perussuhteisia (Linssiseppä 6.10.: kaupungin vaihdon 5 km:n yläkuva hyppäsi 2 200 m:iin): enintään
+            // max(EtMaxM, 1,5 × perus), vähintään min(EtMinM, perus) — perusasento itse on aina sallittu.
+            double et = Rajaa(perus.EtaisyysM * Math.Exp(EtaisyysLog), Math.Min(EtMinM, perus.EtaisyysM), Math.Max(EtMaxM, perus.EtaisyysM * YlaKerroin));
             // Korkeusraja: kameran korkeus = katse + et·cos(kall) ≥ maa + KattoYlaM → cos(kall) ≥ (maa + KattoYlaM − katse) / et.
             double tarve = (maaM + KattoYlaM - perus.KatseKorkeusM) / et;
             if (tarve > 0)
