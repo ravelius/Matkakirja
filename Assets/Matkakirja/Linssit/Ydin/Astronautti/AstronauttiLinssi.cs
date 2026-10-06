@@ -688,11 +688,39 @@ namespace Matkakirja.Linssit.Astronautti
             lento = null;
             Iss.IssNyt.Simu.AsetaKerroin(kerroin);
             tietoAika = -1;
+            KaasuKerroin = kerroin;
             if (kerroin != Kaasu)
             {
                 Kaasu = kerroin;
                 y?.Tehoste(KaasuTehoste, 1f);   // vivun pykälän aito naksahdus (Sisältökirjuri, Tehostetaulu)
                 KaasuVaihtui?.Invoke(kerroin);
+            }
+            return true;
+        }
+
+        /// <summary>Kaasun portaaton kerroin 1…1000 (AsetaKaasuPortaaton; pykälillä sama kuin Kaasu).</summary>
+        public double KaasuKerroin { get; private set; } = 1;
+
+        /// <summary>
+        /// Portaaton kaasu (omistaja 6.10.: portaaton nopeuskahva 1×–1000×, Natiivi-UI): kerroin 1…1000 tästä hetkestä ilman hyppyä.
+        /// Kaasu (int) on lähin pykälä log-asteikolla (LCD, KaasuVaihtui); naksahdus soi pykälän vaihtuessa kuten vivussa.
+        /// </summary>
+        public bool AsetaKaasuPortaaton(double kerroin)
+        {
+            if (!Auki || double.IsNaN(kerroin)) return false;
+            var p = Iss.Simukello.Nopeudet;
+            kerroin = Math.Max(p[0], Math.Min(p[p.Length - 1], kerroin));
+            lento = null;
+            Iss.IssNyt.Simu.AsetaKerroin(kerroin);
+            tietoAika = -1;
+            KaasuKerroin = kerroin;
+            int lahin = p[0];
+            foreach (int x in p) if (Math.Abs(Math.Log10(x) - Math.Log10(kerroin)) < Math.Abs(Math.Log10(lahin) - Math.Log10(kerroin))) lahin = x;
+            if (lahin != Kaasu)
+            {
+                Kaasu = lahin;
+                y?.Tehoste(KaasuTehoste, 1f);
+                KaasuVaihtui?.Invoke(lahin);
             }
             return true;
         }
@@ -925,7 +953,7 @@ namespace Matkakirja.Linssit.Astronautti
             kyyti.Katse.Ohjaa(Iss.JoystickSuunta.Ei, y?.Aika ?? 0);
             suhina?.Lopeta(SuhinaLiukuS);
             suhina = null;
-            Kaasu = 1;
+            Kaasu = 1; KaasuKerroin = 1;
             // Web pura: linssi suljetaan, aika heti todelliseksi (testikellon siirto säilyy).
             lento = null;
             Iss.IssNyt.Simu.PalaaLive(vahennetty: true);

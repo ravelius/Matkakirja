@@ -737,6 +737,9 @@ namespace Matkakirja.Natiivi
                 Matkakirja.Linssit.Kyytipino.AurinkoSin = Vector3.Dot((kamera.transform.position - keski).normalized, au);
             }
             Matkakirja.Linssit.Kyytipino.Paivita(kamera, kyyti != KyydinTila.Kauko);
+            // Täyden vauhdin reunat ja tärinä (omistaja 6.10.); kuvan ajaksi pois.
+            Matkakirja.Linssit.Nopeustehoste.Paivita(kamera, kyyti != KyydinTila.Kauko, Matkakirja.Linssit.Iss.IssNyt.Simu.Kerroin,
+                Matkakirja.Natiivi.IssKameraKuva.Kaynnissa);
             Matkakirja.Linssit.IssSiluetti.Paivita(kamera, georeferenssi, kyyti != KyydinTila.Kauko && AstronauttiLinssi.Vertailu.HasValue);
             nimijono.Aja();
             taivas?.Paivita(Time.unscaledDeltaTime, tahtienPeitto);

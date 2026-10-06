@@ -1801,6 +1801,13 @@ namespace Matkakirja.Natiivi
                             Kirjaa($"astro kyyti sijainti satunnaiset: {pisteet.Count} pistettä, paikkoja {ai?.Paikat.Count ?? 0} (Documents/sijainti-taulukko.txt)");
                         }
                         else if (a == "sijainti") { var (k1, m1) = l.Sijainti(); Kirjaa($"astro kyyti sijainti: {k1} / {m1}"); }
+                        else if (a == "nopeustehoste")
+                        {
+                            if (osat.Length > 3) Matkakirja.Linssit.Nopeustehoste.Pois = osat[3] == "0";
+                            Kirjaa("astro kyyti " + Matkakirja.Linssit.Nopeustehoste.Tila());
+                        }
+                        else if (a == "kaasu" && osat.Length > 4 && osat[3] == "portaaton" && LukuOk(osat[4], out double kaasuK))
+                            Kirjaa($"astro kyyti kaasu portaaton: {(l.AsetaKaasuPortaaton(kaasuK) ? l.KaasuKerroin.ToString("0.#") + "×, pykälä " + l.Kaasu : "ei auki")}");
                         else if (a == "kaasu" && osat.Length > 3 && int.TryParse(osat[3], out int kk))
                             Kirjaa($"astro kyyti kaasu: {(l.AsetaKaasu(kk) ? kk + "×" : "ei pykälää")}, {Matkakirja.Linssit.Iss.IssNyt.Simu}");
                         else if (a == "tumma" && osat.Length > 3 && float.TryParse(osat[3].Replace(',', '.'),
