@@ -40,6 +40,8 @@ namespace Matkakirja.Natiivi
         // pienistä neliöistä koostuva"): rivi LCD-neliöitä, jotka syttyvät edistymisen mukaan, sammuneet himmeinä kuten LCD:n
         // sammuneet segmentit. Valmiin kuvan jälkeen "KUVA VALMIS" 2 s; sitten sijainti takaisin.
         public const int Segmentteja = 12;
+        /// <summary>Laajennuksen nappien väli ja reunaväli (pt), sama kaikkialla (omistaja 6.10.; USS-arvo 4px).</summary>
+        public const float LaajennusVali = 4f;
         readonly VisualElement segmentit;
         readonly VisualElement[] segmentti = new VisualElement[Segmentteja];
         /// <summary>Testi (`astro ohjaamo kehitys 0–1|valmis|pois`): edistyminen ilman kuvausta stilliä varten.</summary>
@@ -297,7 +299,7 @@ namespace Matkakirja.Natiivi
             sijainti.tooltip = "Valitse kohde listalta";
             var rivit = Rakenne.El("mk-issohjaamo__rivit", laajennus, PickingMode.Ignore);
             var r1 = Rakenne.El("mk-issohjaamo__rivi", rivit, PickingMode.Ignore);
-            var r2 = Rakenne.El("mk-issohjaamo__rivi", rivit, PickingMode.Ignore);
+            var r2 = Rakenne.El("mk-issohjaamo__rivi mk-issohjaamo__rivi--toinen", rivit, PickingMode.Ignore);
             for (int i = 0; i < 4; i++)
             {
                 int k = i;
@@ -312,6 +314,7 @@ namespace Matkakirja.Natiivi
         {
             var osa = Rakenne.El(null, objektiivi);
             osa.style.flexGrow = 1; osa.style.flexBasis = 0; osa.style.justifyContent = Justify.FlexEnd;
+            if (!laaja) osa.style.marginLeft = LaajennusVali;   // sama väli kuin laajennuksen napeilla (omistaja 6.10.)
             osa.tooltip = laaja ? "Laaja objektiivi" : "Teleobjektiivi";
             osa.RegisterCallback<PointerDownEvent>(e => e.StopPropagation());
             osa.AddManipulator(new Clickable(() => ValitseObjektiivi(laaja)));
@@ -513,8 +516,10 @@ namespace Matkakirja.Natiivi
             if (iso.width > 0)
             {
                 Aseta(laajennus, iso, s);
-                laajennus.style.paddingLeft = (a.LcdIso.x - iso.x) * s; laajennus.style.paddingTop = (a.LcdIso.y - iso.y) * s;
-                laajennus.style.paddingRight = (iso.xMax - a.LcdIso.xMax) * s; laajennus.style.paddingBottom = (iso.yMax - a.LcdIso.yMax) * s;
+                // TASAISET VÄLIT (omistaja 6.10. 08.3x: "kaikki nappien välit mukaan lukien äärireunat yhtä leveitä"): lasin reunasta
+                // ensimmäiseen nappiin sama LaajennusVali kuin nappien välissä (USS .mk-issohjaamo__laajennus/__rivit/__lcdnappi).
+                laajennus.style.paddingLeft = (a.LcdIso.x - iso.x) * s + LaajennusVali; laajennus.style.paddingTop = (a.LcdIso.y - iso.y) * s + LaajennusVali;
+                laajennus.style.paddingRight = (iso.xMax - a.LcdIso.xMax) * s + LaajennusVali; laajennus.style.paddingBottom = (iso.yMax - a.LcdIso.yMax) * s + LaajennusVali;
             }
             // Tekstit pohjan mittakaavassa (Linnanrakentaja: LCD:n rivi 1 ~15 pt, rivi 2 ≥ 10–11 pt; rummun numerot täyttävät aukon).
             mittakaava = s;
