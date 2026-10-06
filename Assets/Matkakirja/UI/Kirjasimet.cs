@@ -25,7 +25,9 @@ namespace Matkakirja.Natiivi
         /// <summary>ISS-ohjaamon mittaristo (Linnanrakentajan paneeli v1: DIN Condensed kuten kaiverrukset; järjestelmäfontti).</summary>
         Mittari,
         /// <summary>Elävän oppaan moderni teksti (SF Pro; omistaja 5.10.2026 klo 20.5x): vain nykyajan näkymiin.</summary>
-        Moderni, ModerniLihava }
+        Moderni, ModerniLihava,
+        /// <summary>Kevein moderni (SF Pro Light): datalähderivi Google-logon alla (omistaja 6.10. 12.2x "mahdollisimman kevyttä fonttia").</summary>
+        ModerniKevyt }
 
     public static class Kirjasimet
     {
@@ -47,6 +49,7 @@ namespace Matkakirja.Natiivi
             // MODERNI (omistaja 5.10.2026 klo 20.5x): iOS:n järjestelmäkirjasin SF Pro vain nykyajan näkymiin (elävä opas);
             // web -apple-system, system-ui, sans-serif. Jos SF ei ole nimellä saatavilla, Helvetica Neue.
             Kirjasin.Moderni => new[] { ("SF Pro Text", "Regular"), ("SF Pro", "Regular"), (".SF UI Text", "Regular"), ("Helvetica Neue", "Regular"), ("Helvetica", "Regular") },
+            Kirjasin.ModerniKevyt => new[] { ("SF Pro Text", "Light"), ("SF Pro", "Light"), (".SF UI Text", "Light"), ("Helvetica Neue", "Light"), ("Helvetica Neue", "Thin"), ("Helvetica", "Light"), ("Helvetica Neue", "Regular") },
             Kirjasin.ModerniLihava => new[] { ("SF Pro Display", "Semibold"), ("SF Pro", "Semibold"), (".SF UI Display", "Semibold"), ("Helvetica Neue", "Medium"), ("Helvetica Neue", "Bold"), ("Helvetica", "Bold") },
             _ => new (string, string)[0],
         };
