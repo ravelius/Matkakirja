@@ -63,5 +63,42 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama(2, lennot.Count);
             Oleta.Tosi(!lennot[0] && lennot[1], $"lennot {string.Join(",", lennot)}");
         }
+        // Juna 150 (omistaja 6.10. 14.3x): lause tilanteen mukaan, näennäisryhmillä ei vararyhmää.
+        const string Json2 = "{\"versio\":1,\"ryhmat\":{"
+            + "\"kuittaus\":[{\"id\":\"k1\",\"teksti\":\"Tiedän juuri oikean paikan.\",\"url\":\"u1\"},{\"id\":\"k2\",\"teksti\":\"Hyvä valinta, lähdetään.\",\"url\":\"u2\"}],"
+            + "\"syventava\":[{\"id\":\"s1\",\"teksti\":\"Pysähdytään hetkeksi tähän.\",\"url\":\"u3\"},{\"id\":\"s2\",\"teksti\":\"Hyvä kysymys.\",\"url\":\"u4\"}],"
+            + "\"odotus\":[{\"id\":\"o1\",\"teksti\":\"Melkein perillä.\",\"url\":\"u5\"},{\"id\":\"o2\",\"teksti\":\"Hetkinen, katson karttaa.\",\"url\":\"u6\"}]}}";
+
+        [Testi] static void LauseTilanteenMukaan()
+        {
+            for (int siemen = 1; siemen < 20; siemen++)
+            {
+                var s = OpasSiltalauseet.Lue((Dictionary<string, object>)MiniJson.Jasenna(Json2), siemen);
+                Oleta.Sama("s2", s.Valitse(OpasSiltalauseet.Kysymys)?.Id, "kysymykseen vain kysymyslause");
+                Oleta.Tosi(s.Valitse(OpasSiltalauseet.Kysymys) == null, "ei vararyhmää (ei kuittausta kysymykseen)");
+                Oleta.Sama("k2", s.Valitse(OpasSiltalauseet.Valinta)?.Id, "listavalintaan ei 'Tiedän juuri oikean paikan'");
+                Oleta.Tosi(s.Valitse(OpasSiltalauseet.Valinta) == null);
+                Oleta.Sama("o2", s.Valitse(OpasSiltalauseet.OdotusPaikalla)?.Id, "paikallaan ei 'Melkein perillä'");
+            }
+        }
+
+        [Testi] static void KysymysTunnistetaan()
+        {
+            foreach (var k in new[] { "Kuka asuu linnassa?", "mikä tuo torni on", "Kerro Kaarlensillasta", "Onko täällä museoita", "miksi" })
+                Oleta.Tosi(OpasSiltalauseet.OnKysymys(k), k);
+            foreach (var k in new[] { "Vie minut Pariisiin", "Näytä Kaarlensilta", "Mikaelinkirkko", "", "Kertausta" })
+                Oleta.Tosi(!OpasSiltalauseet.OnKysymys(k), k);
+        }
+        [Testi] static void KuittauksetYhdistetaan()
+        {
+            var s = OpasSiltalauseet.Lue((Dictionary<string, object>)MiniJson.Jasenna(Json2), 3);
+            var k = OpasSiltalauseet.Lue((Dictionary<string, object>)MiniJson.Jasenna("{\"versio\":1,\"ryhmat\":{\"kysymys\":[{\"id\":\"q1\",\"teksti\":\"Mietitäänpä.\",\"url\":\"q\"}],"
+                + "\"odotus5\":[{\"id\":\"w5\",\"teksti\":\"Hetki.\",\"url\":\"w\"}]}}"), 3);
+            int ennen = s.Maara; s.Yhdista(k);
+            Oleta.Sama(ennen + 2, s.Maara);
+            Oleta.Sama("q1", s.Valitse(OpasSiltalauseet.Kysymys)?.Id, "kysymykseen kuittaukset-v1:n oma ryhmä");
+            Oleta.Sama("w5", s.Valitse(OpasSiltalauseet.Odotus5, null)?.Id);
+            Oleta.Tosi(s.Valitse(OpasSiltalauseet.Virhe, null) == null && !s.OnRyhma(OpasSiltalauseet.Virhe), "puuttuva ryhmä: hiljaa");
+        }
     }
 }

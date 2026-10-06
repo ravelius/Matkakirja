@@ -318,6 +318,7 @@ namespace Matkakirja.Linssit.Kierros
         public void Toive(string teksti)
         {
             if (string.IsNullOrWhiteSpace(teksti) || Vaihe == OpasVaihe.Valmis) return;
+            PelaajaValitsi();
             toive = teksti.Trim(); toiveesta = true;
             KierrosKaynnissa = false;
             Seuraava = null;
@@ -335,7 +336,7 @@ namespace Matkakirja.Linssit.Kierros
         public void VaihdaPaikka(double lat, double lon, string nimi = null)
         {
             VaihdaPaikka();
-            if (Vaihe == OpasVaihe.Valmis || KierrosLento.EtaisyysM(Asento.Lat, Asento.Lon, lat, lon) < SiirtymaMinM) return;
+            if (Vaihe == OpasVaihe.Valmis || (!PakotaSiirto && KierrosLento.EtaisyysM(Asento.Lat, Asento.Lon, lat, lon) < SiirtymaMinM)) return;
             // Sama 5 km:n yläkuva kuin avauksessa (Päätoimittaja 6.10. 00.4x: Amsterdam laskeutui matalaan viistoon kuvaan).
             double maa = MaaPisteessa?.Invoke(lat, lon) ?? double.NaN;
             AsetaKohdeKehys(new Pysahdys { Lat = lat, Lon = lon, MaaM = double.IsNaN(maa) ? 0 : maa, NostoM = 0, Suuntima = KierrosLento.Kiedo(Suunta(Asento.Lat, Asento.Lon, lat, lon)),
@@ -362,9 +363,16 @@ namespace Matkakirja.Linssit.Kierros
         /// <summary>Siirto alkoi (sovitin siirtää georeferenssin origon heti kohteeseen).</summary>
         public event Action<double, double> SiirtoAlkaa;
 
+        /// <summary>
+        /// AVAUS ILMAN KARTTAA (omistaja 6.10. 14.2x, juna 149): ensimmäinen paikka avataan aina siirtoruudun kautta (kaupunkinäkymää
+        /// ei ole vielä ladattu) matkasta riippumatta. Seuraava lento tai paikan vaihto kuluttaa lipun.
+        /// </summary>
+        public bool PakotaSiirto;
+
         void AloitaSiirtoJosKaukana(double matkaM, double lat, double lon, string nimi)
         {
-            siirto = matkaM >= SiirtoRajaM;
+            siirto = matkaM >= SiirtoRajaM || PakotaSiirto;
+            PakotaSiirto = false;
             if (!siirto) return;
             SiirtoNimi = nimi; SiirtoEdistys = 0;
             SiirtoAlkaa?.Invoke(lat, lon);
@@ -394,7 +402,7 @@ namespace Matkakirja.Linssit.Kierros
             bool kierros = KierrosKaynnissa;
             Toive(nimi);
             KierrosKaynnissa = kierros;   // Toive keskeyttää kierroksen; kierroksen oma siirto ei
-            if (KierrosLento.EtaisyysM(Asento.Lat, Asento.Lon, lat, lon) < 150) return;
+            if (!PakotaSiirto && KierrosLento.EtaisyysM(Asento.Lat, Asento.Lon, lat, lon) < 150) return;
             var arvio = new OpasKohde { Nimi = nimi, Lat = lat, Lon = lon, KokoM = 120 };
             double maa = MaaPisteessa?.Invoke(lat, lon) ?? double.NaN, tulo = Suunta(Asento.Lat, Asento.Lon, lat, lon);
             AsetaKohdeKehys(OpasKuvaus.Kehysta(arvio, double.IsNaN(maa) ? MaaArvioM : maa, tulo), double.IsNaN(maa), arvio, tulo);
@@ -407,10 +415,80 @@ namespace Matkakirja.Linssit.Kierros
             puheAloitettu = true; siirtyma = true;   // perillä odotetaan workerin pysähdystä (sama paikka → kerronta heti)
         }
 
+        /// <summary>Siirtoruudun jälkeen näkymä on auki näin kauan ennen kertojaa (omistaja 6.10. 16.5x: ~1,3 s).</summary>
+        public const double AvausTaukoS = 1.3;
+        double avausViive;
+
+        // ---- KIERROKSEN KESKEYTYS, JATKO JA LOPETUS (omistaja TF 149, Päätoimittaja 16.3x/16.4x, juna 151) ----
+        /// <summary>Kysymys keskeytti kierroksen: kamera pysähtyy paikalleen, kertoja vaikenee, ja jono odottaa JatkaKierrosta-kutsua.</summary>
+        public bool KierrosKeskeytetty { get; private set; }
+        /// <summary>Lopeta kierros (■): ei jonoa eikä workerin omia pysähdyksiä; kamera paikallaan (Linssiseppä 2:n vapaa ohjaus).</summary>
+        public bool VapaaTila { get; private set; }
+        /// <summary>Automaattiset pyynnöt seis (keskeytetty kierros tai vapaa tila); kysymykset ja pelaajan valinnat toimivat.</summary>
+        bool Pysaytetty => KierrosKeskeytetty || VapaaTila;
+        OpasKohde jatkoKohde;
+        (int, int) keskeytysTieto;
+
+        /// <summary>Kamera jää nykyiseen asentoon (lento keskeytyy): uusi kehys tähän, kierto jatkuu tästä.</summary>
+        void PysahdyTahan()
+        {
+            if (Vaihe != OpasVaihe.Lentaa) return;
+            NykyinenKehys = new Pysahdys { Lat = Asento.Lat, Lon = Asento.Lon, MaaM = Asento.KatseKorkeusM, NostoM = 0, Suuntima = Asento.Suuntima,
+                Kallistus = Asento.Kallistus, EtaisyysM = Asento.EtaisyysM, Id = Nykyinen?.Id, Nimi = Nykyinen?.Nimi };
+            kierto = 0; siirto = false; siirtyma = false; avausViive = 0;
+            Vaihe = OpasVaihe.Odottaa; VaiheAika = 0;
+        }
+
+        /// <summary>Pelaajan kysymys kierroksella: kierros pysähtyy (kesken jäänyt kohde luetaan jatkossa alusta). true = keskeytettiin.</summary>
+        public bool KeskeytaKierros()
+        {
+            if (!KierrosKaynnissa || Vaihe == OpasVaihe.Valmis) return false;
+            bool kesken = Vaihe == OpasVaihe.Lentaa || (Vaihe == OpasVaihe.Puhuu && !aaniLoppui);
+            jatkoKohde = kesken ? Nykyinen : null;   // luettu loppuun → seuraava pyydetään jatkossa uudelleen
+            if (Seuraava != null || odotettu != 0) kierrosIndeksi = Math.Max(0, kierrosIndeksi - 1);   // esihaettu tai pyynnössä: uudelleen
+            keskeytysTieto = KierrosTieto;
+            PysahdyTahan();
+            Seuraava = null; odotettu = 0; OdottaaVastausta = false; kysymysAika = -1;
+            KierrosKaynnissa = false; KierrosKeskeytetty = true;
+            aaniLoppui = true;
+            Hiljenna?.Invoke();
+            return true;
+        }
+
+        /// <summary>JATKA KIERROSTA: kesken jäänyt kohde alusta, muuten seuraava jonosta. true = jatkui.</summary>
+        public bool JatkaKierrosta()
+        {
+            if (!KierrosKeskeytetty || Vaihe == OpasVaihe.Valmis) return false;
+            KierrosKeskeytetty = false; KierrosKaynnissa = true; KierrosTieto = keskeytysTieto;
+            Seuraava = null; odotettu = 0; OdottaaVastausta = false; toiveesta = false;
+            if (Vaihe == OpasVaihe.Puhuu) Hiljenna?.Invoke();
+            aaniLoppui = true; hiljaS = double.MaxValue;
+            if (jatkoKohde != null) { Seuraava = jatkoKohde; jatkoKohde = null; }
+            else UusiPyynto();   // KierrosPyynto: seuraava jonosta (tai kierros päättyy)
+            return true;
+        }
+
+        /// <summary>LOPETA KIERROS (■): kierros päättyy, kertoja vaikenee, kamera jää paikalleen vapaaseen tilaan.</summary>
+        public void LopetaKierros()
+        {
+            if (Vaihe == OpasVaihe.Valmis) return;
+            KierrosKaynnissa = false; KierrosKeskeytetty = false; KierrosTieto = (0, 0);
+            kierrosJono.Clear(); kierrosIndeksi = 0; jatkoKohde = null;
+            PysahdyTahan();
+            Seuraava = null; odotettu = 0; OdottaaVastausta = false; kysymysAika = -1;
+            aaniLoppui = true;
+            VapaaTila = true;
+            Hiljenna?.Invoke();
+        }
+
+        /// <summary>Pelaajan oma suunta (toive, Liiku, paikan vaihto, uusi kierros): vanha kierros ja vapaa tila päättyvät.</summary>
+        void PelaajaValitsi() { KierrosKeskeytetty = false; jatkoKohde = null; VapaaTila = false; }
+
         /// <summary>Kaupunkikierros: kohteet järjestyksessä; ensimmäiseen heti, seuraava esihaetaan kerronnan aikana.</summary>
         public void AloitaKierros(IList<(string nimi, double lat, double lon)> kohteet)
         {
             if (kohteet == null || kohteet.Count == 0 || Vaihe == OpasVaihe.Valmis) return;
+            PelaajaValitsi();
             kierrosJono.Clear(); kierrosJono.AddRange(kohteet);
             kierrosIndeksi = 0;
             KierrosKaynnissa = true;
@@ -450,6 +528,7 @@ namespace Matkakirja.Linssit.Kierros
         public void VaihdaPaikka()
         {
             if (Vaihe == OpasVaihe.Valmis) return;
+            PelaajaValitsi();
             KierrosKaynnissa = false; KierrosTieto = (0, 0);
             nahdyt.Clear();
             toive = null; toiveesta = true;
@@ -530,7 +609,12 @@ namespace Matkakirja.Linssit.Kierros
         bool virhe;
 
         /// <summary>Puhe loppui (tai sitä ei voitu soittaa).</summary>
-        public void AaniLoppui() => aaniLoppui = true;
+        public void AaniLoppui() { if (!aaniLoppui) hiljaS = 0; aaniLoppui = true; }
+
+        /// <summary>Kertojan äänen lopusta vähintään näin kauan ennen seuraavaa lentoa (Päätoimittaja 16.3x: "+ ~1 s tauko";
+        /// omistaja TF 149: kamera ei saa lähteä ennen kuin lukija on lopettanut).</summary>
+        public const double LoppuTaukoS = 1.0;
+        double hiljaS = double.MaxValue;
 
         /// <summary>
         /// Kerran kehyksessä. aika = monotoninen s; maaKorkeus(kohde) palauttaa maaston korkeuden ellipsoidista (tai NaN,
@@ -540,6 +624,7 @@ namespace Matkakirja.Linssit.Kierros
         {
             if (Vaihe == OpasVaihe.Valmis || Tauolla) return;   // tauko: kerronta, lento ja kierto seis (omistaja TF 144)
             VaiheAika += Math.Max(0, dt);
+            if (hiljaS < double.MaxValue) hiljaS += Math.Max(0, dt);
             if (Luovutti) return;
             ohjausLepoS = PelaajaOhjaa ? 0 : (ohjausLepoS == double.MaxValue ? ohjausLepoS : ohjausLepoS + Math.Max(0, dt));
             if (odotettu != 0) { if (odotusAlku < 0) odotusAlku = 0; odotusAlku += dt; if (odotusAlku > VastausMaxS) { odotettu = 0; Virhe(0, 0); } }
@@ -565,7 +650,7 @@ namespace Matkakirja.Linssit.Kierros
                     break;
                 case OpasVaihe.Puhuu:
                     PysahdysAsento(dt);
-                    if (aaniLoppui && VaiheAika >= TaukoS && Seuraava != null && !OhjausPitaa) AloitaLento(maaKorkeus);
+                    if (aaniLoppui && VaiheAika >= TaukoS && hiljaS >= LoppuTaukoS && Seuraava != null && !OhjausPitaa) AloitaLento(maaKorkeus);
                     else if (aaniLoppui && Seuraava == null && odotettu == 0) { Vaihe = OpasVaihe.Odottaa; VaiheAika = 0; }
                     break;
                 case OpasVaihe.Lentaa:
@@ -585,7 +670,10 @@ namespace Matkakirja.Linssit.Kierros
                         bool tuore = VaiheAika - maaTunnettu >= SiirtoMaaOdotusS;
                         if (VaiheAika < SiirtoMinS || ((SiirtoEdistys < SiirtoValmis || !tuore) && VaiheAika < SiirtoMaxS)) break;
                         siirto = false; VaiheAika = LentoKestoS + SaapumisOdotusS;   // perillä, laatat valmiit
+                        avausViive = AvausTaukoS;   // omistaja 16.5x: reilu sekunti ennen kertojaa, ei "hätiköityä" alkua
                     }
+                    // Näkymä auki siirron jälkeen, kertoja odottaa AvausTaukoS (kamera kehyksessä, puhe ei vielä ala).
+                    if (avausViive > 0) { Asento = KehysAsento(kohdeKehys, 0); avausViive -= Math.Max(0, dt); break; }
                     kehysVaihto = Math.Min(1, kehysVaihto + Math.Max(0, dt) / KehysVaihtoS);
                     double t = Math.Min(1, VaiheAika / LentoKestoS);
                     Asento = OpasKuvaus.Lennossa(lahto, KohdeAsento(), t);
@@ -612,7 +700,7 @@ namespace Matkakirja.Linssit.Kierros
                         // Esihaku puheen ajaksi — ei, jos seuraava on jo tiedossa tai pyynnössä (lennon aikana annettu toive;
                         // simu 23.05: saapumisen esihaku korvasi toiveen "näytä Strøget").
                         // Vaihtoehdollinen pysähdys (ei kierros) odottaa pelaajan valintaa: ei esihakua (omistaja, TF 144).
-                        if (!OdottaaVastausta && Seuraava == null && odotettu == 0 && !Nykyinen.OdottaaValintaa) UusiPyynto();
+                        if (!OdottaaVastausta && Seuraava == null && odotettu == 0 && !Nykyinen.OdottaaValintaa && !Pysaytetty) UusiPyynto();
                     }
                     break;
                 }
@@ -685,7 +773,7 @@ namespace Matkakirja.Linssit.Kierros
                 Vaihe = OpasVaihe.Puhuu; VaiheAika = 0; aaniLoppui = false;
                 puheAloitettu = true; AlkaaPuhua?.Invoke(k);
                 Saapui?.Invoke(k);
-                if (!OdottaaVastausta && !k.OdottaaValintaa) UusiPyynto();
+                if (!OdottaaVastausta && !k.OdottaaValintaa && !Pysaytetty) UusiPyynto();
                 return;
             }
             var kehys = KehysKohteelle(k, maaKorkeus, out bool maaArvio, out double tulo);
