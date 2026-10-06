@@ -57,10 +57,11 @@ export const sallittuId = (nimi) => String(nimi ?? '').toLowerCase().normalize('
   .replace(/ø/g, 'o').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 
 /*
- * Testiympäristö (env.OPAS_AINEISTO_TESTI annettu): rajaus vain, jos testi antaa oman listan env.OPAS_SALLITUT_TESTI
- * ({ sallitut }); muuten ei rajausta (vanhat testit kuvitteellisilla kaupungeilla). Tuotannossa aina tämä lista.
+ * KYTKIN (Päätoimittaja 7.10. 01.3x): /opas/aineistot palauttaa sallitut aina, mutta workerin esto (403, kohteiden
+ * suodatus, Kysyn ei-sallittu) on päällä vain, kun env.OPAS_SALLITUT_ESTO = '1' — TF 154/155 eivät vielä lue listaa
+ * (natiivi junassa 157). Testi voi antaa oman listan env.OPAS_SALLITUT_TESTI ({ sallitut }), jolloin esto on päällä.
  */
-const lista = (env) => (env?.OPAS_SALLITUT_TESTI ?? (env?.OPAS_AINEISTO_TESTI !== undefined ? null : OPAS_SALLITUT));
+const lista = (env) => env?.OPAS_SALLITUT_TESTI ?? (String(env?.OPAS_SALLITUT_ESTO ?? '') === '1' ? OPAS_SALLITUT : null);
 const kaikki = (l) => l.sallitut;
 const metreina = (a, b) => {
   const r = Math.PI / 180, dLat = (b.lat - a.lat) * r, dLon = (b.lon - a.lon) * r;
