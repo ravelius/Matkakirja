@@ -1218,7 +1218,8 @@ namespace Matkakirja.Natiivi
         void PaivitaTauko()
         {
             if (!nakyy) return;
-            var ld = (testiLopeta ?? OpasSovitin.KierrosKaynnissa) ? DisplayStyle.Flex : DisplayStyle.None;
+            // ■ myös keskeytetylle kierrokselle (LS1: KierrosKaynnissa || KierrosJatkettavissa).
+            var ld = (testiLopeta ?? (OpasSovitin.KierrosKaynnissa || KierrosKeskeytetty)) ? DisplayStyle.Flex : DisplayStyle.None;
             if (lopetaNappi.style.display != ld) lopetaNappi.style.display = ld;
             bool tauolla = OpasSovitin.Tauolla;
             if (tauolla == taukoNakyy) return;
