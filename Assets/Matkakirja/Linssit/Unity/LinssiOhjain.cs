@@ -423,6 +423,7 @@ namespace Matkakirja.Natiivi
         {
             StartCoroutine(IssSijaintiLataaja.Lataa());   // ohjaamon LCD:n paikkadata (omistaja 4.10.)
             StartCoroutine(IssKameraKuva.LataaPaikat());   // tarkan ISS-kuvan kuvauspaikat (omistaja 4.10.)
+            StartCoroutine(Matkakirja.Natiivi.IssJuliste.EsilataaKehys());   // julisteen Cupola-kehys ajoissa (kuvan muoto riippuu aukosta)
             IssKuvaKauppa.Lataa();   // kuvan osto: tuote, hinta ja keskeytyneiden hyvitys (omistaja #3939)
             StartCoroutine(OhjaamonAanet.Lataa());   // kaasun naksahdus ja kameran laukaisin (Sisältökirjuri, CC0)
             string data = null, kysymykset = null;
