@@ -11,7 +11,8 @@ namespace Matkakirja
     ///    näyttökerrointa ja käyttämättömien laattojen välimuisti. Vähäinen vapaa muisti (alle VahanVapaanGt) karkeuttaa yhden
     ///    portaan. CesiumKaupunki (LS1) lukee GoogleSse- ja Valimuisti-arvot avatessaan.
     /// 2) KUORMA (≥ 1, pehmeä): tavoite on lämmön (thermalState: fair 1,25, serious 1,6, critical 2,2; virransäästö 1,25) ja
-    ///    kehysajan maksimi. Kehysaika mitataan vain täydellä taajuudella (Ruudunpaivitys.Tila.Taysi, tavoite ≥ 60 fps):
+    ///    kehysajan maksimi. Kehysaika mitataan vain täydellä taajuudella (Ruudunpaivitys.Tila.Taysi, tavoite ≥ 60 fps; ei
+    ///    käynnistyksen 20 s:n eikä latausverhon aikana, nykäys rajataan 50 ms:iin):
     ///    keskiarvo yli 25 ms (alle 40 fps, alaraja 30 lähestyy) nostaa kehyskuormaa 5 %/s, alle 18 ms laskee 2 %/s.
     ///    Kuorma seuraa tavoitetta eksponentiaalisesti (nousu 6 s, lasku 20 s), joten laatu ei hyppää. CesiumKaupunki
     ///    karkeuttaa laattavalintaa kuormalla (karkea kamera, ei tilesetin uudelleenluontia). Lampo hoitaa serious-tason
@@ -93,10 +94,14 @@ namespace Matkakirja
 
             // Kehysaika vain täydellä taajuudella (lepo ja paikallaan piirtävät tarkoituksella harvemmin).
             var r = Ruudunpaivitys.Instanssi;
-            bool taysi = r != null && r.Nyt == Ruudunpaivitys.Tila.Taysi && Application.targetFrameRate >= 60;
+            // Ei käynnistyksen 20 s:n eikä latausverhon aikana (Mac Studio -mittaus 7.10.: latausnykäykset 80 ms nostivat kuorman
+            // 1,5:een ennen kaupunkia), ja yksittäinen nykäys rajataan 50 ms:iin, jottei se hallitse keskiarvoa.
+            bool taysi = r != null && r.Nyt == Ruudunpaivitys.Tila.Taysi && Application.targetFrameRate >= 60
+                && r.Syy != "verho" && !Valmius.Verhossa && Time.realtimeSinceStartup > 20f;
             if (taysi && dt > 0f && dt < 0.5f)
             {
-                kehysKa = kehysKa < 0f ? dt : Mathf.Lerp(kehysKa, dt, 1f - Mathf.Exp(-dt / 2f));
+                float d = Mathf.Min(dt, 0.05f);
+                kehysKa = kehysKa < 0f ? d : Mathf.Lerp(kehysKa, d, 1f - Mathf.Exp(-dt / 2f));
                 if (kehysKa > KehysYla) kehysKuorma = Mathf.Min(2f, kehysKuorma * (1f + 0.05f * dt));
                 else if (kehysKa < KehysAla) kehysKuorma = Mathf.Max(1f, kehysKuorma * (1f - 0.02f * dt));
             }
