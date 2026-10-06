@@ -407,7 +407,8 @@ async function main() {
       console.log(v.length ? `EI KELPAA ${id}:\n  ${v.join('\n  ')}` : `ok ${id}`);
     }
     process.exitCode = vikoja ? 1 : 0;
-  } else if (komento === 'kokoa') kokoa();
+  } else if (komento === 'rakenna') await rakenna(a[0]);
+  else if (komento === 'kokoa') kokoa();
   else console.log('käyttö: seed | q | kuvat | taulu | tarkista | kokoa (ks. tiedoston alku)');
 }
 
