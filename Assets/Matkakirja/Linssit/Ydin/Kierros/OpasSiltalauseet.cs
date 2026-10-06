@@ -22,6 +22,8 @@ namespace Matkakirja.Linssit.Kierros
             Syventava = "syventava";
         /// <summary>Kuittaukset-v1 (Pelikoodari 6.10., omistaja hyväksyi): kysymyksen kuittaus (52 neutraalia) ja odotusportaat.</summary>
         public const string KysymysRyhma = "kysymys", Odotus5 = "odotus5", Odotus12 = "odotus12", Virhe = "virhe";
+        /// <summary>Sallitun 3D-alueen ulkopuolinen toive (Päätoimittaja 7.10. 01.0x: "valitse kohde listasta"; Pelikoodari generoi).</summary>
+        public const string EiSallittu = "ei-sallittu";
 
         // TILANTEEN MUKAAN (omistaja 6.10. 14.3x "välilauseet eivät täsmää pyyntöön", Päätoimittaja hyväksyi taulukon, juna 150):
         // näennäisryhmät rajaavat aineiston ryhmiä lauseittain, eikä niillä ole vararyhmää (väärä lause on pahempi kuin hiljaisuus).
@@ -176,6 +178,19 @@ namespace Matkakirja.Linssit.Kierros
                 r.Add(t);
             }
             return r;
+        }
+
+        /// <summary>Kaupunkikierroksen järjestys (Pelikoodari #4086, omistaja 6.10. 23.4x lyhin reitti): /opas/liiku "kierros": [id, …]
+        /// reittijärjestyksessä. Kohteet, joiden id on kierroksessa, siinä järjestyksessä (tuntemattomat id:t ohitetaan); ilman
+        /// kenttää tai yhtään osumaa koko lista sellaisenaan (tärkeysjärjestys).</summary>
+        public static List<OpasTaky> Kierros(Dictionary<string, object> j, List<OpasTaky> kohteet)
+        {
+            if (kohteet == null) return new List<OpasTaky>();
+            if (j == null || !j.TryGetValue("kierros", out var ki) || !(ki is IList<object> ids)) return new List<OpasTaky>(kohteet);
+            var r = new List<OpasTaky>();
+            foreach (var x in ids)
+                if (x is string id && kohteet.Find(t => t.Id == id) is OpasTaky t && !r.Contains(t)) r.Add(t);
+            return r.Count > 0 ? r : new List<OpasTaky>(kohteet);
         }
     }
 }

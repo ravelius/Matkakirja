@@ -70,6 +70,41 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama(1, t.Count); Oleta.Tosi(t[0].Iso2 == "IT" && t[0].Kaupunki == "Venetsia" && t[0].KuvaUrl == "u");
         }
 
+        [Testi] static void SallitunUlkopuolelleEiLenneta()
+        {
+            // Omistaja 7.10. 00.4x / Päätoimittaja 01.0x: "vie minut X" vain sallittuun; muuten siltalause eikä lentoa.
+            var (s, p) = Uusi();
+            s.Sallitut = new List<OpasSallitut.Kaupunki> { new OpasSallitut.Kaupunki { Id = "koopenhamina", Nimi = "Kööpenhamina", Lat = 55.6761, Lon = 12.5683, RM = 5000 } };
+            var torjutut = new List<(string, bool)>();
+            s.Torjuttu += (n, pel) => torjutut.Add((n, pel));
+            s.Vastaus(p[^1].n, K("A", 55.6760, 12.5700));
+            for (int i = 0; i < 300 && s.Vaihe != OpasVaihe.Puhuu; i++) s.Paivita(0.1, _ => 5);
+            Oleta.Sama("A", s.Nykyinen?.Id, "sallittu kohde lennetään");
+            int pyyntoja = p.Count;
+            s.Toive("vie minut Tukholmaan");
+            s.Vastaus(p[^1].n, K("T", 59.33, 18.07));
+            Aja(s, 20);
+            Oleta.Tosi(s.Nykyinen?.Id != "T" && s.Seuraava?.Id != "T", "Tukholmaan ei lennetä");
+            Oleta.Tosi(torjutut.Count == 1 && torjutut[0].Item2, "torjunta pelaajan pyynnöstä (siltalause)");
+            s.Liiku("Malmö", 55.605, 13.0038);
+            Oleta.Sama(2, torjutut.Count, "Liiku ulos torjutaan");
+            s.VaihdaPaikka(59.33, 18.07, "Tukholma");
+            Oleta.Sama(3, torjutut.Count, "kaupungin vaihto ulos torjutaan");
+        }
+
+        [Testi] static void KierrosReittijarjestyksessa()
+        {
+            // Pelikoodari #4086: /opas/liiku "kierros" = id:t lyhimmän reitin järjestyksessä; kohteet pysyvät tärkeysjärjestyksessä.
+            string K3 = "\"kohteet\":[{\"id\":\"a\",\"nimi\":\"A\",\"lat\":1,\"lon\":1},{\"id\":\"b\",\"nimi\":\"B\",\"lat\":2,\"lon\":2},{\"id\":\"c\",\"nimi\":\"C\",\"lat\":3,\"lon\":3}]";
+            var j = (Dictionary<string, object>)Matkakirja.Peli.MiniJson.Jasenna("{" + K3 + ",\"kierros\":[\"c\",\"x\",\"a\"]}");
+            var k = OpasTaky.Kierros(j, OpasTaky.Lue(j));
+            Oleta.Sama("C,A", string.Join(",", k.ConvertAll(t => t.Nimi)), "kierroksen järjestys, tuntematon ohitetaan");
+            var ilman = (Dictionary<string, object>)Matkakirja.Peli.MiniJson.Jasenna("{" + K3 + "}");
+            Oleta.Sama("A,B,C", string.Join(",", OpasTaky.Kierros(ilman, OpasTaky.Lue(ilman)).ConvertAll(t => t.Nimi)), "ilman kenttää lista sellaisenaan");
+            var tyhja = (Dictionary<string, object>)Matkakirja.Peli.MiniJson.Jasenna("{" + K3 + ",\"kierros\":[\"x\"]}");
+            Oleta.Sama(3, OpasTaky.Kierros(tyhja, OpasTaky.Lue(tyhja)).Count, "ei osumia → lista");
+        }
+
         [Testi] static void KaupunginVaihtoLentaaHeti()
         {
             // Natiivi-UI 6.10. 00.2x (toistoappi 3244207f): Amsterdam valittu, kertoja kysyi Amsterdamista, mutta kamera jäi Kööpenhaminaan.
