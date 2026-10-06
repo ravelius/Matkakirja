@@ -43,5 +43,16 @@ namespace Matkakirja.Linssit.Testit
             var (pLat, pLon) = OpasSallitut.Rajaa(k, k.Lat + 1000 / 111195.0, k.Lon, 0, askel);
             Oleta.Tosi(pLat == 0 && Math.Abs(pLon - askel) < 1e-12, "keskellä sivuttain vapaasti");
         }
+
+        [Testi] static void VapaaLentoEiYlitaReunaa()
+        {
+            var alue = new OpasSallitut.Kaupunki { Nimi = "Testi", Lat = 48.8566, Lon = 2.3522, RM = 800 };
+            var v = new OpasVapaaLento();
+            v.Aloita(new Kuvakulma(alue.Lat, alue.Lon, 300, 60, 0, 0), (la, lo) => 0);
+            v.Alue = alue;
+            double suurin = 0;
+            for (int i = 0; i < 3000; i++) { v.Paivita(0.05, 0, 1, 0, 0, (la, lo) => 0); suurin = Math.Max(suurin, KierrosLento.EtaisyysM(v.Lat, v.Lon, alue.Lat, alue.Lon)); }
+            Oleta.Tosi(suurin <= alue.RM + 0.5 && suurin > alue.RM - 50, $"täysi kaasu 150 s: enintään {suurin:F1} m (r {alue.RM})");
+        }
     }
 }

@@ -870,7 +870,7 @@ namespace Matkakirja.Linssit.Kierros
                 if (Vaihe == OpasVaihe.Puhuu && !aaniLoppui) { vapaaKaynnissa = false; return false; }
                 vapaaKehyksessa = false;
             }
-            if (!vapaaKaynnissa) { Vapaa.Aloita(Asento, MaaPisteessa); vapaaKaynnissa = true; }
+            if (!vapaaKaynnissa) { Vapaa.Aloita(Asento, MaaPisteessa); Vapaa.Alue = OpasSallitut.Sisalla(Sallitut, Asento.Lat, Asento.Lon); vapaaKaynnissa = true; }
             Asento = Vapaa.Paivita(dt, VapaaTapit.vx, VapaaTapit.vy, VapaaTapit.ox, VapaaTapit.oy, MaaPisteessa);
             // 3D-pinnan näytteet (rakennukset mukana) kamerasta ja liikkeen suunnasta 4 kertaa sekunnissa (sovitin välimuistittaa ~11 m:n ruutuun).
             vapaaNayteS -= dt;
