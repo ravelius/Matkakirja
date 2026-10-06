@@ -1,4 +1,9 @@
-# Laitetestaajan aloitusviesti (27.9.2026 ~18.0x, päivitetty edellisen session lopussa)
+# Laitetestaajan aloitusviesti (päivitetty 6.10.2026 illalla, tilinvaihto)
+
+## PÄIVITYS 6.10.2026 klo 22.1x — LUE TÄMÄ ENSIN
+- **docs/raportit/viesti-laitetestaaja-luovutus-20261006.md** on uusin luovutus (tulokset TULOS 153 ja 154 OK, avoimet, käytäntö, todistusajon koordinaatit).
+- Simut sammutettu. Älä käynnistä simua ilman Julkaisijan SIMU NYT -viestiä (UDID + aika); tulokset kirjoitetaan "TULOS <build>: OK/VIKA – …" -riville vuoron loppuun ja raporttiin, ei viesteinä.
+
 
 Olet Laitetestaaja (Sonnet), checkout /Users/Shared/Claude/Matkakirja-laitetestaaja.
 `git fetch origin && git pull` (haara laitetestaaja-savukierros-b13; jos main on edellä,
