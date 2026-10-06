@@ -335,7 +335,7 @@ namespace Matkakirja.Linssit.Kierros
         public void VaihdaPaikka(double lat, double lon, string nimi = null)
         {
             VaihdaPaikka();
-            if (Vaihe == OpasVaihe.Valmis || KierrosLento.EtaisyysM(Asento.Lat, Asento.Lon, lat, lon) < SiirtymaMinM) return;
+            if (Vaihe == OpasVaihe.Valmis || (!PakotaSiirto && KierrosLento.EtaisyysM(Asento.Lat, Asento.Lon, lat, lon) < SiirtymaMinM)) return;
             // Sama 5 km:n yläkuva kuin avauksessa (Päätoimittaja 6.10. 00.4x: Amsterdam laskeutui matalaan viistoon kuvaan).
             double maa = MaaPisteessa?.Invoke(lat, lon) ?? double.NaN;
             AsetaKohdeKehys(new Pysahdys { Lat = lat, Lon = lon, MaaM = double.IsNaN(maa) ? 0 : maa, NostoM = 0, Suuntima = KierrosLento.Kiedo(Suunta(Asento.Lat, Asento.Lon, lat, lon)),
@@ -362,9 +362,16 @@ namespace Matkakirja.Linssit.Kierros
         /// <summary>Siirto alkoi (sovitin siirtää georeferenssin origon heti kohteeseen).</summary>
         public event Action<double, double> SiirtoAlkaa;
 
+        /// <summary>
+        /// AVAUS ILMAN KARTTAA (omistaja 6.10. 14.2x, juna 149): ensimmäinen paikka avataan aina siirtoruudun kautta (kaupunkinäkymää
+        /// ei ole vielä ladattu) matkasta riippumatta. Seuraava lento tai paikan vaihto kuluttaa lipun.
+        /// </summary>
+        public bool PakotaSiirto;
+
         void AloitaSiirtoJosKaukana(double matkaM, double lat, double lon, string nimi)
         {
-            siirto = matkaM >= SiirtoRajaM;
+            siirto = matkaM >= SiirtoRajaM || PakotaSiirto;
+            PakotaSiirto = false;
             if (!siirto) return;
             SiirtoNimi = nimi; SiirtoEdistys = 0;
             SiirtoAlkaa?.Invoke(lat, lon);
@@ -394,7 +401,7 @@ namespace Matkakirja.Linssit.Kierros
             bool kierros = KierrosKaynnissa;
             Toive(nimi);
             KierrosKaynnissa = kierros;   // Toive keskeyttää kierroksen; kierroksen oma siirto ei
-            if (KierrosLento.EtaisyysM(Asento.Lat, Asento.Lon, lat, lon) < 150) return;
+            if (!PakotaSiirto && KierrosLento.EtaisyysM(Asento.Lat, Asento.Lon, lat, lon) < 150) return;
             var arvio = new OpasKohde { Nimi = nimi, Lat = lat, Lon = lon, KokoM = 120 };
             double maa = MaaPisteessa?.Invoke(lat, lon) ?? double.NaN, tulo = Suunta(Asento.Lat, Asento.Lon, lat, lon);
             AsetaKohdeKehys(OpasKuvaus.Kehysta(arvio, double.IsNaN(maa) ? MaaArvioM : maa, tulo), double.IsNaN(maa), arvio, tulo);

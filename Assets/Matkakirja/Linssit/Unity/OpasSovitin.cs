@@ -100,6 +100,7 @@ namespace Matkakirja.Natiivi
             Aloituskaupunki = nimi.Trim();
             Viimeisin.pakotettuSijainti = (lat, lon);
             Viimeisin.o.Kirjaa($"opas: kaupunki vaihtuu → {Aloituskaupunki} ({lat:F3}, {lon:F3})");
+            if (!Viimeisin.AvaaKaupunki(lat, lon, Aloituskaupunki)) return false;
             Viimeisin.silmukka.VaihdaPaikka(lat, lon, nimi.Trim());   // kamera lentää heti kaupungin yleiskuvaan (Natiivi-UI 6.10. 00.2x)
             var v = Viimeisin;
             if (!v.SanoNimi(nimiaanet?.Kaupungille(iso, nimi))) v.Silta(OpasSiltalauseet.Kaupunki, true);
@@ -150,7 +151,10 @@ namespace Matkakirja.Natiivi
             Viimeisin = this;
             var alku = OpasSilmukka.Avauskuva(KoopenhaminaTesti.Alku.Lat, KoopenhaminaTesti.Alku.Lon);
             silmukka = new OpasSilmukka(alku);
-            if (!kaupunki.Avaa(alku.Lat, alku.Lon, 45))
+            // AVAUS ILMAN KARTTAA (omistaja 6.10. 14.2x, juna 149): täkyavauksessa Cesium avataan vasta pelaajan valinnasta
+            // (AvaaKaupunki), joten aloitusvalikko aukeaa heti eikä yhtään laattaa ladata ennen valintaa.
+            kaupunkiOdottaa = TakyAvaus && !Testi;
+            if (!kaupunkiOdottaa && !kaupunki.Avaa(alku.Lat, alku.Lon, 45))
             {
                 Virhe = OpasTiedot.Nimi + ": " + kaupunki.Virhe;
                 Vaihtui?.Invoke(this);
@@ -164,7 +168,7 @@ namespace Matkakirja.Natiivi
             y.Pelikerrokset(false);
             y.MusiikkiPitoon(true);
             y.Peite(true);
-            o.StartCoroutine(PeitePois());   // simu 18.39: peite jäi päälle ja tummensi koko näkymän
+            if (!kaupunkiOdottaa) o.StartCoroutine(PeitePois());   // simu 18.39: peite jäi päälle ja tummensi koko näkymän
             if (puhe == null)
             {
                 puhe = o.gameObject.AddComponent<AudioSource>();
@@ -198,7 +202,7 @@ namespace Matkakirja.Natiivi
             else silmukka.Aloita(Aloituskaupunki);
             PaivitaKamera();
             Vaihtui?.Invoke(this);
-            o.Kirjaa($"opas: auki, data {kaupunki.Kaytossa}, {(Testi ? "TESTI (ei workeria)" : "worker " + PuluChat.Palvelin + Polku)}{(PolloTestitunnus.Asetettu ? ", testitunnus asetettu" : "")}");
+            o.Kirjaa($"opas: auki{(kaupunkiOdottaa ? " (aloitusvalikko, kartta valinnasta)" : "")}, data {kaupunki.Kaytossa}, {(Testi ? "TESTI (ei workeria)" : "worker " + PuluChat.Palvelin + Polku)}{(PolloTestitunnus.Asetettu ? ", testitunnus asetettu" : "")}");
         }
 
         // Natiivi-UI:n koukku (PuluChat.Sieppaa, haara natiivi-ui/pulu-sieppaus) heijastuksella, jotta tämä kääntyy myös ilman sitä.
@@ -223,6 +227,28 @@ namespace Matkakirja.Natiivi
             else kentta.SetValue(null, vanhaSieppaus);
         }
 
+        /// <summary>Aloitusvalikko: opas auki, paikkaa ei valittu, Cesium ei auki (UI piirtää läpinäkymättömän tumman taustan).</summary>
+        public static bool Avausvalikko => Auki && Viimeisin.kaupunkiOdottaa;
+        bool kaupunkiOdottaa;
+
+        /// <summary>Ensimmäinen valinta: Cesium auki suoraan kohteeseen, ja paikka avautuu siirtoruudun kautta. true = auki.</summary>
+        bool AvaaKaupunki(double lat, double lon, string nimi)
+        {
+            if (!kaupunkiOdottaa) return true;
+            kaupunkiOdottaa = false;
+            double maa = MaaPisteessa(lat, lon);
+            if (!kaupunki.Avaa(lat, lon, double.IsNaN(maa) ? 45 : maa))
+            {
+                Virhe = OpasTiedot.Nimi + ": " + kaupunki.Virhe;
+                Vaihtui?.Invoke(this);
+                return false;
+            }
+            o.StartCoroutine(PeitePois());
+            silmukka.PakotaSiirto = true;
+            o.Kirjaa($"opas: kartta auki valinnasta → {nimi} ({lat:F3}, {lon:F3})");
+            return true;
+        }
+
         public void Paivita()
         {
             if (silmukka == null || Virhe != null) return;
@@ -233,6 +259,7 @@ namespace Matkakirja.Natiivi
         {
             if (silmukka == null || Virhe != null || paivitetty == Time.frameCount) return;
             paivitetty = Time.frameCount;
+            if (kaupunkiOdottaa) return;   // aloitusvalikko: ei kameraa eikä laattoja (puhetta ei vielä ole)
             bool loppui = !tauolla && (pcmNyt != null ? pcmNyt.Loppui : Time.unscaledTime >= puheLoppuu && (puhe == null || !puhe.isPlaying));
             if (puhuu && loppui)
             {
@@ -583,7 +610,13 @@ namespace Matkakirja.Natiivi
             v.pakotettuSijainti = (t.Lat, t.Lon);
             v.o.Kirjaa($"opas: täky valittu {t.Nimi} ({t.Kaupunki}, {t.Iso2})");
             if (v.tauolla) Tauko(false);
-            v.silmukka.Toive(t.Nimi);
+            if (v.kaupunkiOdottaa)
+            {
+                // Aloitusvalikosta: kartta auki kohteeseen ja siirtoruutu heti; workerin pysähdys pyydetään samalla (Liiku).
+                if (!v.AvaaKaupunki(t.Lat, t.Lon, t.Nimi)) return false;
+                v.silmukka.Liiku(t.Nimi, t.Lat, t.Lon);
+            }
+            else v.silmukka.Toive(t.Nimi);
             v.Silta(OpasSiltalauseet.Kuittaus, true);
             return true;
         }
@@ -601,7 +634,12 @@ namespace Matkakirja.Natiivi
             if (silmukka == null) yield break;
             takyt = r.result == UnityWebRequest.Result.Success ? OpasTaky.Lue(MiniJson.Jasenna(r.downloadHandler.text) as Dictionary<string, object>) : new List<OpasTaky>();
             o.Kirjaa($"opas: täkyt {takyt.Count} ({(r.result == UnityWebRequest.Result.Success ? "ok" : r.responseCode.ToString())})");
-            if (takyt.Count == 0 && !silmukka.Aloitettu) silmukka.Aloita(Aloituskaupunki);
+            if (takyt.Count == 0 && !silmukka.Aloitettu)
+            {
+                // Ei täkyjä: vanha alku (Kööpenhamina) ja kartta auki heti.
+                var a = KoopenhaminaTesti.Alku;
+                if (AvaaKaupunki(a.Lat, a.Lon, Aloituskaupunki)) silmukka.Aloita(Aloituskaupunki);
+            }
         }
 
         // ---- MAIDEN JA KAUPUNKIEN NIMET (juna 146; Ydin OpasNimiaanet) ----

@@ -170,5 +170,21 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(suurin < 10, $"ei hyppyä (suurin askel {suurin:F1} m)");
             Oleta.Tosi(s.NykyinenKehys != null && s.NykyinenKehys.MaaM == 120, "perillä näytteen maa");
         }
+        // Avaus ilman karttaa (omistaja 6.10. 14.2x): ensimmäinen valinta siirtoruudun kautta matkasta riippumatta.
+        [Testi] static void PakotettuSiirtoLahellakin()
+        {
+            var s = new OpasSilmukka(OpasSilmukka.Avauskuva(55.68, 12.57));
+            s.Pyyda += (n, t) => { };
+            s.LatausEdistys = () => 0.2;
+            s.PakotaSiirto = true;
+            s.Liiku("Rundetaarn", 55.6814, 12.5757);   // ~0,5 km
+            Oleta.Tosi(s.Siirtymassa && s.SiirtoNimi == "Rundetaarn", "lähelläkin siirtoruutu");
+            Oleta.Tosi(!s.PakotaSiirto, "lippu kuluu");
+            var k = new OpasSilmukka(OpasSilmukka.Avauskuva(55.68, 12.57));
+            k.Pyyda += (n, t) => { };
+            k.PakotaSiirto = true;
+            k.VaihdaPaikka(55.6761, 12.5683, "Kööpenhamina");
+            Oleta.Tosi(k.Siirtymassa, "kaupungin valinta samassa kaupungissa: siirtoruutu");
+        }
     }
 }
