@@ -2702,6 +2702,16 @@ async function hoidaSahke(pyynto, env, kors, runko) {
  * jotta natiivi voi esihakea seuraavan pysähdyksen kappaleen aikana. Testiotsake → aani null (ei ElevenLabs-kulutusta).
  */
 const OPAS_MALLI_OLETUS = 'claude-sonnet-5-5';
+/*
+ * OPUS-KYTKIN (Päätoimittaja 7.10.2026 00.4x, ei päällä): OPAS_MALLI=claude-opus-5-5 vaihtaa oppaan Opukseen. Opus 5.5:n
+ * ajattelua ei voi sulkea (ajatteluKentat: effort low), joten 700 tokenin raja loppui ajatteluun ennen tekstiä (mittaus
+ * 7.10.: 5/6 tyhjää). Malleille, jotka ajattelevat aina, vastausraja on vähintään 4000; Sonnet 5.5 ja Haiku ennallaan.
+ */
+const AJATTELEVAN_TOKENIT = 4000;
+function oppaanMalli(env, maxTokens) {
+  const malli = env.OPAS_MALLI || OPAS_MALLI_OLETUS;
+  return { malliOhitus: malli, maxTokens: /fable|mythos|opus-5-5/.test(malli) ? Math.max(maxTokens, AJATTELEVAN_TOKENIT) : maxTokens };
+}
 const KOHTEITA_OLETUS = 8;
 const OPAS_KAUPUNGIN_SADE_KM = 40;
 /** Lisäkuvien aikaraja koordinaateista laskien: haku kulkee korostuksen ja äänen rinnalla eikä saa pidentää vastausta. */
@@ -2984,7 +2994,7 @@ async function maailmanSuosikit(env) {
   if (suosikitKaynnissa) return suosikitKaynnissa;
   suosikitKaynnissa = (async () => {
     const v = await kysyMallitiedot(env, { jarjestelma: MAAILMAN_SUOSIKIT_KEHOTE, viestit: [{ role: 'user', content: 'Koko maailma.' }],
-      maxTokens: 4000, malliOhitus: env.OPAS_MALLI || OPAS_MALLI_OLETUS });
+      ...oppaanMalli(env, 4000) });
     const ehdokkaat = jasennaKohteet(v.teksti, 70);
     const kohteet = (await kohteetErana(fetch, ehdokkaat)).slice(0, MAAILMAN_SUOSIKKEJA).map((k) => ({
       id: k.id, nimi: k.nimi, koukku: k.koukku, kaupunki: k.kaupunki, iso: k.iso, lat: k.lat, lon: k.lon, alarivi: k.alarivi, kuva: k.kuva,
@@ -3067,7 +3077,7 @@ async function hoidaOppaanKohteet(pyynto, env, kors, ctx) {
     const ehdokkaat = jasennaKohteet((await kysyMallitiedot(env, {
       jarjestelma: KOHTEET_KEHOTE,
       viestit: [{ role: 'user', content: kohteidenViesti({ kaupunki, eiNaita: (eilinen?.kohteet ?? []).map((k) => k.nimi) }) }],
-      maxTokens: 900, malliOhitus: env.OPAS_MALLI || OPAS_MALLI_OLETUS,
+      ...oppaanMalli(env, 900),
     })).teksti);
     // Erähaku (6.10.): yksittäiset haut per kohde (2–6 alipyyntöä kukin) ylittivät Cloudflaren 50 alipyynnön rajan.
     const kohteet = (await kohteetErana(fetch, ehdokkaat))
@@ -3157,7 +3167,7 @@ async function oppaanKysymykset(env, { paikka, nimi, kaupunki }) {
   if (talletettu) { try { return JSON.parse(talletettu); } catch { /* uusi */ } }
   try {
     const v = await kysyMallitiedot(env, { jarjestelma: KYSYMYKSET_KEHOTE, viestit: [{ role: 'user', content: kysymystenViesti({ nimi, kaupunki }) }],
-      maxTokens: 300, malliOhitus: env.OPAS_MALLI || OPAS_MALLI_OLETUS });
+      ...oppaanMalli(env, 300) });
     const kysymykset = poimiKysymykset(v.teksti);
     if (kysymykset.length >= 5) await pysyvaKirjoita(env.PUHE_R2, avain, JSON.stringify(kysymykset), KESKUSTELU_TTL_S);
     return kysymykset;
@@ -3199,7 +3209,7 @@ async function oppaanLiikuLista(env, kaupunki, viite) {
     for (let yritys = 0; yritys < 2; yritys += 1) {
       try {
         const v = await kysyMallitiedot(env, { jarjestelma: LIIKU_KEHOTE, viestit: [{ role: 'user', content: `Kaupunki: ${kaupunki}.` }],
-          maxTokens: 900, malliOhitus: env.OPAS_MALLI || OPAS_MALLI_OLETUS });
+          ...oppaanMalli(env, 900) });
         const ehdokkaat = jasennaLiiku(v.teksti);
         // Erähaku (6.10., Ateena 502 14.32): yksittäiset haut ylittivät Cloudflaren 50 alipyynnön rajan; kauempana kuin
         // kaupungin säde oleva samanniminen paikka pois.
@@ -3284,8 +3294,7 @@ async function hoidaOppaanKysy(pyynto, env, kors, runko, ctx) {
     const kaupunkiPiste = p.kaupunki ? await kaupunginSijainti(fetch, p.kaupunki).catch(() => null) : null;
     const lista = p.kaupunki ? await pysyvaLue(env.PUHE_R2, liikuAvain(p.kaupunki)).then((x) => (x ? JSON.parse(x) : [])).catch(() => []) : [];
     const v = await kysyMallitiedot(env, { jarjestelma: KESKUSTELU_KEHOTE,
-      viestit: [{ role: 'user', content: keskustelunViesti({ ...p, kohteet: lista }) }], maxTokens: 500,
-      malliOhitus: env.OPAS_MALLI || OPAS_MALLI_OLETUS });
+      viestit: [{ role: 'user', content: keskustelunViesti({ ...p, kohteet: lista }) }], ...oppaanMalli(env, 500) });
     const j = jasennaKeskustelu(v.teksti);
     if (!j) return vastaa({ virhe: 'palvelin', viesti: 'Opas ei saanut kysymyksestä kiinni. Kysy uudelleen.' }, { status: 502, ...kors });
     let toiminto = null;
@@ -3384,7 +3393,7 @@ async function hoidaOpas(pyynto, env, kors, runko, ctx) {
     try {
       const suunnitelma = jasennaKierros((await kysyMallitiedot(env, {
         jarjestelma: OPAS_KIERROS_KEHOTE, viestit: [{ role: 'user', content: kierroksenViesti({ ...p, sijainti }, kaydytNimet) }],
-        maxTokens: 700, malliOhitus: env.OPAS_MALLI || OPAS_MALLI_OLETUS,
+        ...oppaanMalli(env, 700),
       })).teksti);
       return (await Promise.all(suunnitelma.map(async (x) => {
         const paikka = await paikanKoordinaatit(fetch, x, sijainti, osm);
@@ -3415,8 +3424,7 @@ async function hoidaOpas(pyynto, env, kors, runko, ctx) {
     viestit: [{ role: 'user', content: [oppaanViesti({ ...p, sijainti, isoisaKaytetty, toive: jatkaKierrosta || aloitaKierros ? null : p.toive,
       kohdelista: listatila ? lukitut.map((x) => x.nimi) : [] }, kaydytNimet, aineisto), ohje]
       .filter(Boolean).join('\n\n') }],
-    maxTokens: 700,
-    malliOhitus: env.OPAS_MALLI || OPAS_MALLI_OLETUS,
+    ...oppaanMalli(env, 700),
   };
   let tulos = null;
   let tuloksenPaikka = null;
