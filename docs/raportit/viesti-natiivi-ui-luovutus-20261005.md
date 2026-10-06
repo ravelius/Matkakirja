@@ -18,6 +18,16 @@ AD119F7B-A2A2-43EE-8769-7326DD757F89; lopuksi sammutus ja "simu vapaa".
   AVOIN: LCD "KEHITETÄÄN…"-palkki ja "KUVA VALMIS" eivät näkyneet (UI piilossa renderöinnin ajan, meri ilman maata):
   odottaa LS2:n vastausta (nopein onnistuva kuva ja missä vaiheessa palkki näkyy).
 
+## TILA 6.10. klo 08.4x (uusin)
+
+- Juna 147: natiivi-ui/koe-147 ad4b7b35 (Natiivisepällä viimeksi 6de35578; lähetä uusin, kun v3 on sovitettu). Todennettu:
+  segmenttipalkki oikealla kuvalla (37c74eac, juna147/segmentit-*), Stonehenge-väistö (a), Pulu-sirut, väistö, objektiivi.
+  Omistajan ohjaamopalaute 08.3x: 1 välit 4 pt, 2 mikseri Pulun valikon Äänet-riviin, 4 LCD-matriisi, 5 vaaka kiinni
+  alareunassa: koodattu, EI vielä simussa (Päätoimittaja: stillit vasta v3:n kanssa, yksi kierros iPhone pysty+vaaka, iPad).
+- ODOTTAA: Linnanrakentajan ohjaamo v3 (kahva vasemmalla, LCD+kamera keskellä, joystick oikealla, rumpu pois, isompi LCD;
+  ohjaamo.json + sauvaKeski + objektiivi). Kopioi kuvat Resources/IssOhjaamo/ (.metat), sovita, käännä, yksi still-kierros.
+- Klo 10 junan 146 käännöksen jälkeen: poista 20 proto-worktreeta (git worktree remove; jätä proto-natiivi-ui-koe147).
+
 ## KEHITYSTAHTI (omistaja 5.10. 12.30, Raamattu kohta 2 #3992)
 VIE-ikkunat klo 12 ja 20 (valmis + kuitattu lähtee, keskeneräinen odottaa). iPad-mittaus ei ole VIE-ehto. Toiminnallinen
 rutiinierä kuitataan ENSIN Laitetestaajalla; Päätoimittajalle vain omistajalle näkyvä/maku/sisältö (esim. latauspalkki).
