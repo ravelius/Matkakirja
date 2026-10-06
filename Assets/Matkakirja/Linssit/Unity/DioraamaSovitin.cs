@@ -1084,6 +1084,13 @@ namespace Matkakirja.Natiivi
                 o.Kirjaa($"poikki: saapuminen {(SaapuminenNahty ? "nähty (lyhyt)" : "täysi")}, osuus {(Linssi != null ? Linssi.SaapuminenOsuus(y != null ? YdinAika : 0).ToString("F2", CultureInfo.InvariantCulture) : "-")}");
                 return;
             }
+            // "poikki eleet 0|1": eleet puheen tahdissa (ajoitetut kertaeleet, nyökkäykset, katse, harhailu) pois/päällä A/B:tä varten.
+            if (mita == "eleet")
+            {
+                if (arvo != null) DioraamaHahmot3D.EleetPaalla = arvo != "0";
+                o.Kirjaa($"poikki: eleet {(DioraamaHahmot3D.EleetPaalla ? "päällä" : "pois")}");
+                return;
+            }
             // "poikki tunnelma [paiva|hamara|auto]": päivä / iltahämärä (kehittäjä, muistetaan; auto = rakennuksen oletus).
             if (mita == "tunnelma")
             {

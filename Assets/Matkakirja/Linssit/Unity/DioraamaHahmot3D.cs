@@ -91,6 +91,11 @@ namespace Matkakirja.Natiivi
             public int PaaIndeksi = -2;
             public Quaternion PaaKierto = Quaternion.identity;
             public string EleNimi; public double EleAlku; // kertaeleen (ele_<ele>) vuoro ja alkuhetki
+            // Eleet puheen tahdissa (7.10.): ajoitettu kertaele, kuulijan nyökkäys, puhujan katseen kohde, vakaa siemen.
+            public string AjoitettuEle; public double AjoitettuAlku = double.NegativeInfinity; public int EleLaskuri;
+            public double NyokkaysAlku = double.NegativeInfinity; public int NyokkaysLaskuri;
+            public string KatseKohde;
+            public int Siemen = int.MinValue;
         }
 
         /// <summary>Keskustelun puhuja (KuunnelmaKaistale.PuhuvaHahmo; DioraamaSovitin asettaa joka kehys) ja tila. Saman huoneen
@@ -98,6 +103,118 @@ namespace Matkakirja.Natiivi
         /// ja puhuja kääntyy kohti edellistä puhujaa. Ei keskustelua → takaisin omaan suuntaan.</summary>
         public static string Puhuja, PuhujanTila, EdellinenPuhuja;
         const float MaxKatseAsteet = 70f, KatseNopeus = 90f;
+
+        /// <summary>
+        /// ELEET PUHEEN TAHDISSA (Siirtoseppä 7.10.2026; omistaja 7.10. 01.3x "linna loppuun mahdollisimman hyväksi (eleet yms.)"):
+        /// puhujan kertaeleet (ele_puhe*, kysymyksessä ele_kysymys) lauseiden ja painotusten alkuun (Eleajoitus: kohdistuksesta tai
+        /// puheen voimakkuudesta), kuulijat nyökkäävät lauseen lopussa (ele_nyokkays tai pään nyökkäys), puhuja katsoo kuulijoita
+        /// vuorotellen painotuksissa, ja paikallaan olevien päät harhailevat hiljaa. "poikki eleet 0|1" (A/B samalla apilla).
+        /// </summary>
+        public static bool EleetPaalla = true;
+        const double EleEnnakkoS = 0.2, NyokkaysS = 0.75;
+        const float HarhailuYaw = 6f, HarhailuPitch = 2.5f, NyokkaysAst = 9f;
+        static readonly Dictionary<Kohdistus, List<Eleajoitus.Tapahtuma>> eleKohdistukset = new Dictionary<Kohdistus, List<Eleajoitus.Tapahtuma>>();
+        static readonly List<Eleajoitus.Tapahtuma> eleUlos = new List<Eleajoitus.Tapahtuma>();
+        static readonly TasoAjoitus tasoAjoitus = new TasoAjoitus();
+        static Kohdistus eleK; static double eleKohtaP = double.NaN, eleKohtaL = double.NaN; static string elePuhuja;
+        static readonly HashSet<string> KuulijanEleet = new HashSet<string>(StringComparer.Ordinal) { "ele_nyokkays", "ele_kallistus", "ele_kuuntelu" };
+
+        static int Siemen(Esiintyma e)
+        {
+            if (e.Siemen != int.MinValue) return e.Siemen;
+            int h = 17; foreach (char c in e.HahmoId ?? "") h = h * 31 + c;
+            return e.Siemen = h & 0x7fffffff;
+        }
+
+        void AjoitaEleet(double t)
+        {
+            if (Puhuja == null) { tasoAjoitus.Nollaa(); eleK = null; elePuhuja = null; return; }
+            if (Puhuja != elePuhuja) { tasoAjoitus.Nollaa(); elePuhuja = Puhuja; }
+            var sk = DioraamaAanet.SoivaKohdistus;
+            string lahde;
+            if (sk.HasValue)
+            {
+                lahde = "kohdistus";
+                var k = sk.Value.Kohdistus; double kohta = sk.Value.Kohta;
+                if (!eleKohdistukset.TryGetValue(k, out var lista)) eleKohdistukset[k] = lista = Eleajoitus.Kohdistuksesta(k);
+                if (k != eleK || double.IsNaN(eleKohtaP) || kohta < eleKohtaL - 0.05) { eleK = k; eleKohtaP = kohta + EleEnnakkoS - 1e-4; eleKohtaL = kohta - 1e-4; }
+                eleUlos.Clear();
+                foreach (var x in lista)
+                    if (x.Laji == Eleajoitus.Laji.Painotus ? x.T > eleKohtaP && x.T <= kohta + EleEnnakkoS : x.T > eleKohtaL && x.T <= kohta) eleUlos.Add(x);
+                eleKohtaP = Math.Max(eleKohtaP, kohta + EleEnnakkoS); eleKohtaL = Math.Max(eleKohtaL, kohta);
+            }
+            else
+            {
+                lahde = "taso";
+                eleK = null; eleUlos.Clear();
+                var x = tasoAjoitus.Syota(t, DioraamaAanet.PuheenTaso());
+                if (x.HasValue) eleUlos.Add(x.Value);
+            }
+            if (eleUlos.Count == 0) return;
+            Esiintyma puhuja = null;
+            foreach (var m in esiintymat) if (m.HahmoId == Puhuja && m.TilaId == PuhujanTila && m.Sekoitin != null && m.Nakyvissa) { puhuja = m; break; }
+            foreach (var x in eleUlos)
+            {
+                if (x.Laji == Eleajoitus.Laji.Painotus)
+                {
+                    if (puhuja == null) continue;
+                    AjoitaPuhujanEle(puhuja, t, x.Kysymys, lahde);
+                    VaihdaKatse(puhuja);
+                }
+                else
+                    foreach (var m in esiintymat)
+                    {
+                        if (m == puhuja || m.TilaId != PuhujanTila || m.Sekoitin == null || !m.Nakyvissa || m.Hahmo.Reitti != null) continue;
+                        int h = (Siemen(m) * 7919 + m.NyokkaysLaskuri++ * 104729) & 0x7fffffff;
+                        if (h % 100 >= 65) continue;   // ~2/3 kuulijoista nyökkää, ei kaikki yhtä aikaa
+                        m.NyokkaysAlku = t + 0.1 + (h % 7) * 0.05;
+                        Debug.Log($"MATKAKIRJA linssit: nyökkäys {m.HahmoId} ({(m.Malli.Glb.Animaatio("ele_nyokkays") != null ? "leike" : "pää")}, {lahde})");
+                    }
+            }
+        }
+
+        /// <summary>Puhujan kertaele painotukseen: kysymyksessä ele_kysymys, muuten hahmon ele_puhe*-leikkeistä vuorotellen (ei samaa
+        /// peräkkäin). Ei katkaise soivaa vuoron eletä (vuorot[].ele) eikä edellistä ajoitettua.</summary>
+        static void AjoitaPuhujanEle(Esiintyma e, double t, bool kysymys, string lahde)
+        {
+            var glb = e.Malli.Glb;
+            if (e.EleNimi != null) { var ea = glb.Animaatio("ele_" + e.EleNimi); if (ea != null && t - e.EleAlku < ea.Kesto) return; }
+            if (e.AjoitettuEle != null) { var aa = glb.Animaatio(e.AjoitettuEle); if (aa != null && t - e.AjoitettuAlku < aa.Kesto) return; }
+            string valinta = null;
+            if (kysymys && glb.Animaatio("ele_kysymys") != null) valinta = "ele_kysymys";
+            else
+            {
+                var ehdokkaat = new List<string>();
+                foreach (var a in glb.Animaatiot) if (a.Nimi.StartsWith("ele_puhe", StringComparison.Ordinal)) ehdokkaat.Add(a.Nimi);
+                if (ehdokkaat.Count == 0) return;
+                ehdokkaat.Sort(StringComparer.Ordinal);
+                int i = (Siemen(e) + e.EleLaskuri++) % ehdokkaat.Count;
+                if (ehdokkaat.Count > 1 && ehdokkaat[i] == e.AjoitettuEle) i = (i + 1) % ehdokkaat.Count;
+                valinta = ehdokkaat[i];
+            }
+            e.AjoitettuEle = valinta; e.AjoitettuAlku = t;
+            Debug.Log($"MATKAKIRJA linssit: ele ajoitettu {e.HahmoId} {valinta} ({lahde}{(kysymys ? ", kysymys" : "")})");
+        }
+
+        /// <summary>Puhuja katsoo painotuksissa vuorotellen saman huoneen paikallaan olevia kuulijoita (2 hengen keskustelussa aina toista).</summary>
+        void VaihdaKatse(Esiintyma e)
+        {
+            var kuulijat = new List<string>();
+            foreach (var m in esiintymat)
+                if (m != e && m.TilaId == e.TilaId && m.Juuri != null && m.Nakyvissa && m.Hahmo.Reitti == null && !kuulijat.Contains(m.HahmoId)) kuulijat.Add(m.HahmoId);
+            if (kuulijat.Count == 0) return;
+            kuulijat.Sort(StringComparer.Ordinal);
+            int i = e.KatseKohde == null ? (EdellinenPuhuja != null ? kuulijat.IndexOf(EdellinenPuhuja) : -1) : kuulijat.IndexOf(e.KatseKohde) + 1;
+            e.KatseKohde = kuulijat[((i % kuulijat.Count) + kuulijat.Count) % kuulijat.Count];
+        }
+
+        /// <summary>Keskustelukumppani, jota hahmo katsoo: kuulija → puhuja, puhuja → valittu kuulija (tai edellinen puhuja).</summary>
+        static string KatseenKohde(Esiintyma e)
+        {
+            if (e.TilaId != PuhujanTila || Puhuja == null) { e.KatseKohde = null; return null; }
+            if (e.HahmoId != Puhuja) { e.KatseKohde = null; return Puhuja; }
+            return EleetPaalla && e.KatseKohde != null ? e.KatseKohde : EdellinenPuhuja;
+        }
         /// <summary>Puhujan pään yläpuolinen maailmanpiste (kasvokuvan ankkuri, Natiivi-UI:n pohja), tai null.</summary>
         public static Vector3? PuhujanPaa { get; private set; }
 
@@ -524,6 +641,7 @@ namespace Matkakirja.Natiivi
             nakymaHaku.Clear();
             PuhujanPaa = null;
             if (nakyma.Hahmot != null) foreach (var hn in nakyma.Hahmot) nakymaHaku[(hn.TilaId, hn.HahmoId)] = hn;
+            if (EleetPaalla) AjoitaEleet(t);
 
             foreach (var e in esiintymat)
             {
@@ -621,6 +739,19 @@ namespace Matkakirja.Natiivi
                 leike = ea != null && t - e.EleAlku < ea.Kesto - PuheHaivytysS ? "ele_" + tavoite : Leike(m3, "puhe");
             }
             else if (!puheTaiEle || tavoite == "puhe") e.EleNimi = null;
+            // Ajoitettu kertaele (painotus) puheen päälle, kun vuoron ele ei soi; puhe loppuu → ele pois.
+            if (!puheTaiEle) e.AjoitettuEle = null;
+            else if (EleetPaalla && e.AjoitettuEle != null && !leike.StartsWith("ele_", StringComparison.Ordinal))
+            {
+                var aa = e.Malli.Glb.Animaatio(e.AjoitettuEle);
+                if (aa != null && t >= e.AjoitettuAlku && t - e.AjoitettuAlku < aa.Kesto - PuheHaivytysS) leike = e.AjoitettuEle;
+            }
+            // Kuulijan nyökkäys leikkeenä (ele_nyokkays), kun hahmo seisoo idlessä; muuten pään nyökkäys PaaKatsessa.
+            if (EleetPaalla && tavoite == "idle" && e.NyokkaysAlku > double.NegativeInfinity)
+            {
+                var na = e.Malli.Glb.Animaatio("ele_nyokkays");
+                if (na != null && t >= e.NyokkaysAlku && t - e.NyokkaysAlku < na.Kesto - HaivytysS) leike = "ele_nyokkays";
+            }
             // Ele (vuorot[].ele) → puhe → idle: puuttuva eleleike ei pysäytä puhetta.
             if (!e.Sekoitin.Toista(leike, haivytys) && !(puheTaiEle && e.Sekoitin.Toista(Leike(m3, "puhe"), haivytys)))
                 e.Sekoitin.Toista(Leike(m3, "idle"), haivytys);
@@ -645,7 +776,7 @@ namespace Matkakirja.Natiivi
                 tr.localScale = new Vector3(s.S[i * 3], s.S[i * 3 + 1], s.S[i * 3 + 2]);
             }
             PaivitaSijainti(e, t);
-            PaaKatse(e);
+            PaaKatse(e, t, e.Sekoitin.Nykyinen == "ele_nyokkays");
         }
 
         /// <summary>
@@ -653,7 +784,7 @@ namespace Matkakirja.Natiivi
         /// hahmot animoi oma DioraamaSekoitin): animaation jälkeen pää kääntyy kohti keskustelukumppanin päätä (kuulija → puhuja,
         /// puhuja → edellinen puhuja), enintään PaaMaxAsteet, painolla PaaPaino, pehmeästi. Vartalon kääntö on Katse-metodissa.
         /// </summary>
-        void PaaKatse(Esiintyma e)
+        void PaaKatse(Esiintyma e, double t, bool nyokkaysLeike)
         {
             if (e.PaaIndeksi == -2)
             {
@@ -665,7 +796,7 @@ namespace Matkakirja.Natiivi
                 }
             }
             if (e.PaaIndeksi < 0) return;
-            string kohde = e.TilaId != PuhujanTila || Puhuja == null ? null : e.HahmoId == Puhuja ? EdellinenPuhuja : Puhuja;
+            string kohde = KatseenKohde(e);
             Quaternion tavoite = Quaternion.identity;
             var paa = e.SolmuT[e.PaaIndeksi];
             if (kohde != null && e.Hahmo.Reitti == null)
@@ -688,15 +819,32 @@ namespace Matkakirja.Natiivi
                         }
                         break;
                     }
+            var eteenM = -e.Juuri.transform.forward;
+            var oikea = Vector3.Cross(Vector3.up, eteenM);
+            if (EleetPaalla && e.Hahmo.Reitti == null)
+            {
+                // Idle-mikroliike: hidas pään harhailu (Perlin, oma siemen), keskustelussa pienempänä katseen päällä.
+                float paino = kohde == null ? 1f : 0.35f, s0 = Siemen(e) % 1000 * 0.137f;
+                float yaw = (Mathf.PerlinNoise(s0, (float)(t * 0.13)) * 2f - 1f) * HarhailuYaw * paino;
+                float pitch = (Mathf.PerlinNoise(s0 + 50f, (float)(t * 0.11)) * 2f - 1f) * HarhailuPitch * paino;
+                tavoite = Quaternion.AngleAxis(yaw, Vector3.up) * Quaternion.AngleAxis(pitch, oikea) * tavoite;
+            }
             e.PaaKierto = Quaternion.Slerp(e.PaaKierto, tavoite, 1f - Mathf.Exp(-4f * Time.unscaledDeltaTime));
             paa.rotation = e.PaaKierto * paa.rotation;
+            // Kuulijan nyökkäys päällä (ei leikettä): yksi selvä ja toinen pienempi, NyokkaysS.
+            double u = (t - e.NyokkaysAlku) / NyokkaysS;
+            if (EleetPaalla && !nyokkaysLeike && u >= 0 && u < 1)
+            {
+                float ast = u < 0.6 ? NyokkaysAst * Mathf.Sin((float)(Math.PI * u / 0.6)) : NyokkaysAst * 0.45f * Mathf.Sin((float)(Math.PI * (u - 0.6) / 0.4));
+                paa.rotation = Quaternion.AngleAxis(ast, oikea) * paa.rotation;
+            }
         }
         const float PaaMaxAsteet = 40f, PaaPaino = 0.7f, PaaPystyAst = 12f;
 
         /// <summary>Kasvosuunta keskustelussa: kuulija → puhuja, puhuja → edellinen puhuja; rajattu ja pehmennetty.</summary>
         Vector3 Katse(Esiintyma e, Vector3 paikka, Vector3 oma)
         {
-            string kohde = e.TilaId != PuhujanTila || Puhuja == null ? null : e.HahmoId == Puhuja ? EdellinenPuhuja : Puhuja;
+            string kohde = KatseenKohde(e);
             float tavoite = 0f;
             if (kohde != null)
                 foreach (var m in esiintymat)
