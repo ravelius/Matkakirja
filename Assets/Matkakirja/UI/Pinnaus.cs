@@ -31,7 +31,8 @@ namespace Matkakirja.Natiivi
         /// <summary>Pinnaus vaihtui (ikkunat päivittävät pin-kuvakkeensa ja himmennyksensä).</summary>
         public static event Action Muuttui;
 
-        readonly VisualElement palkki, taytto, raita;
+        readonly VisualElement palkki, taytto, raita, kuva;
+        int kuvaVersio;
         readonly Label otsikko;
         readonly Button tauko;
         PalloKierto kierto;
@@ -50,6 +51,9 @@ namespace Matkakirja.Natiivi
             tauko.tooltip = "Tauko";
             raita = Rakenne.El("mk-edistyminen mk-pinpalkki__edistyminen", palkki, PickingMode.Ignore);
             taytto = Rakenne.El("mk-edistyminen__taytto", raita, PickingMode.Ignore);
+            // Uuden noston ensimmäinen kuva palkin alla 3 s (omistaja 6.10. 23.0x), palkin levyisenä ilman kehystä ja tekstiä.
+            kuva = Rakenne.El("mk-pinpalkki__kuva", turva, PickingMode.Ignore);
+            kuva.style.display = DisplayStyle.None;
             Puhe.PinnattuMuuttui += PuheMuuttui;
             // Omistaja 6.10. 23.0x: "tilapalkki saisi näyttää koko noston pituutta ei kappaleen": kortin luennalla koko
             // luennan eteneminen (KortinLukija.KokoEdistyminen), muuten (Pulun chat) soivan palan.
@@ -159,8 +163,55 @@ namespace Matkakirja.Natiivi
             Muuttui?.Invoke();
         }
 
+        /// <summary>
+        /// Uuden pinnatun noston ensimmäinen kuva palkin alle 3 s:ksi, sitten häivytys (--tk-kesto-sulku 200 ms). null = ei kuvaa
+        /// (mitään ei näytetä). Leveys palkin, korkeus kuvan suhteesta; kulmat kulma.nappi, ei kehystä eikä tekstiä.
+        /// </summary>
+        public static void NaytaKuva(string url)
+        {
+            var p = Viimeisin;
+            if (p == null) return;
+            int v = ++p.kuvaVersio;
+            p.kuva.style.display = DisplayStyle.None;
+            p.kuva.style.opacity = 0f;
+            if (string.IsNullOrEmpty(url)) return;
+            NostoSisalto.HaeKuva(url, t =>
+            {
+                if (v != p.kuvaVersio || t == null || !Pienena || p.palkki.resolvedStyle.display == DisplayStyle.None) return;
+                p.kuva.style.backgroundImage = new StyleBackground(t);
+                float suhde = t.width > 0 ? (float)t.height / t.width : 2f / 3f;
+                // Palkki voi olla vielä avautumassa (Ponnahdus): paikka seuraavassa kehyksessä, kun sen asettelu on valmis.
+                p.kuva.schedule.Execute(() =>
+                {
+                    if (v != p.kuvaVersio) return;
+                    p.SijoitaKuva(suhde);
+                    p.kuva.style.display = DisplayStyle.Flex;
+                    p.kuva.schedule.Execute(() => { if (v == p.kuvaVersio) p.kuva.style.opacity = 1f; });
+                }).StartingIn(50);
+                p.kuva.schedule.Execute(() =>
+                {
+                    if (v != p.kuvaVersio) return;
+                    p.kuva.style.opacity = 0f;
+                    p.kuva.schedule.Execute(() => { if (v == p.kuvaVersio) p.kuva.style.display = DisplayStyle.None; }).StartingIn(Tyylikirja.Kesto.Sulku);
+                }).StartingIn(3000);
+                Debug.Log("MATKAKIRJA ui pinnaus: ensimmäinen kuva 3 s");
+            });
+        }
+
+        void SijoitaKuva(float suhde)
+        {
+            var isa = palkki.parent;
+            if (isa == null || palkki.layout.width <= 0) return;
+            var r = palkki.layout;
+            kuva.style.left = r.xMin;
+            kuva.style.top = r.yMax + Tyylikirja.Vali.Xs;
+            kuva.style.width = r.width;
+            kuva.style.height = Mathf.Round(r.width * Mathf.Clamp(suhde, 0.4f, 1f));
+        }
+
         void NaytaPalkki(bool nayta)
         {
+            if (!nayta) { kuvaVersio++; kuva.style.display = DisplayStyle.None; }
             if (nayta)
             {
                 otsikko.text = Nykyinen?.Otsikko ?? "";

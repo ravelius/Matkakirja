@@ -97,6 +97,8 @@ namespace Matkakirja.Natiivi
             public int Kohta;
             public bool Elossa = true;
         }
+        /// <summary>Taustalla jatkunut pinnattu luenta luettiin loppuun (omistaja): AUTO siirtyy seuraavaan nostoon.</summary>
+        public static event Action<string> TaustaLoppui;
         /// <summary>Tähän lukijaan kiinnitetty luenta (null = ei luentaa).</summary>
         Ketju ketju;
         /// <summary>Pinnattu luenta, jonka kortti suljettiin tai vaihtui (jatkuu taustalla).</summary>
@@ -307,6 +309,7 @@ namespace Matkakirja.Natiivi
                     k.Elossa = false;
                     if (tausta == k) tausta = null;
                     if (kiinni) { ketju = null; jatkoKohta = -1; kohta = palat.Count; Pysayta(false); loppui?.Invoke(); } // luettu loppuun: alusta
+                    else TaustaLoppui?.Invoke(k.Omistaja);
                     return;
                 }
                 k.Kohta = i;

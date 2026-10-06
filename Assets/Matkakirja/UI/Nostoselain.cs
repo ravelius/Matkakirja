@@ -88,7 +88,7 @@ namespace Matkakirja.Natiivi
         const float KapeaRivi = 360f;
 
         /// <summary>Ylärivin tiivistys 0–3 (1: askelnapit kapeat, 2: lisäksi AUTO ja NOSTOT ilman harvennusta, ryhmävälit pienemmiksi,
-        /// 3: AUTO- ja avaajateksti 85 %).</summary>
+        /// 3: askelnapit 22 pt ja avaajan sivuvälit pois).</summary>
         int tiivis;
         float tiivisLeveys;
 

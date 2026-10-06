@@ -444,7 +444,11 @@
     --mk-ikoni-viiva: 2.2;
 }
 
-.mk-nostoselain--tiivis3 .mk-nostoselain__avaaja > Label,
-.mk-nostoselain--tiivis3 .mk-nostoselain__autoteksti {
-    font-size: 9.25px; /* 85 % ylärivin 10,88:sta */
+/* Kolmas porras: askelnapit nappi.ohjaus-kuvakkeen levyisiksi ja avaajan sivuvälit pois (kirjasinkoko pysyy tyylikirjan). */
+.mk-nostoselain--tiivis3 .mk-nostoselain__askel {
+    width: var(--tk-nappi-ohjaus-kuvake);
+}
+
+.mk-nostoselain--tiivis3 .mk-nostoselain__avaaja {
+    padding: 0;
 }
