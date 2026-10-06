@@ -443,7 +443,7 @@ namespace Matkakirja.Natiivi
         public static bool VapaaTila => Auki && Viimeisin.silmukka.VapaaTila;
         /// <summary>Vapaan lennon tila (komento `opas vapaa`): korkeus, pinta ja tunnetut näytteet; null = ei vapaassa tilassa.</summary>
         public static string VapaanTila => !VapaaTila ? null : Viimeisin.silmukka.Vapaa.Tila() +
-            (Viimeisin.luotain != null ? $", luotain {Viimeisin.luotain.PiirtoMs:0.00} ms × {1 / OpasLahiluotain.ValiS:0}/s ({Viimeisin.luotain.Mittauksia} mittausta)" : "");
+            (Viimeisin.luotain is OpasLahiluotain l ? $", luotain {l.PiirtoMs:0.00} ms × {1 / OpasLahiluotain.ValiS:0}/s ({l.Mittauksia} mittausta), syvyys ala {l.AlaKeski:0} / ylä {l.YlaKeski:0} m" : "");
         string[] kysymykset, jatkoKysymykset = Array.Empty<string>();
         List<OpasTaky> kohteet;
         string kohteetKaupunki;
@@ -1004,9 +1004,9 @@ namespace Matkakirja.Natiivi
             {
                 luotain ??= new OpasLahiluotain();
                 luotain.Paivita(kam, silmukka.Vapaa.ToiveSuuntaEro, kaupunki.Ylos(kam.transform.position));
-                silmukka.Vapaa.EsteM = luotain.LahinM;
+                silmukka.Vapaa.EsteM = luotain.VaakaM; silmukka.Vapaa.EsteAllaM = luotain.AllaM;
             }
-            else if (luotain != null) { luotain.Dispose(); luotain = null; silmukka.Vapaa.EsteM = double.PositiveInfinity; }
+            else if (luotain != null) { luotain.Dispose(); luotain = null; silmukka.Vapaa.EsteM = silmukka.Vapaa.EsteAllaM = double.PositiveInfinity; }
         }
 
         void LueTapit()

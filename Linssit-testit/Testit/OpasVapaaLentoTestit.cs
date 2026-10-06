@@ -108,10 +108,10 @@ namespace Matkakirja.Linssit.Testit
             Func<double, double, double> maa = (la, lo) => 200;
             for (double t = 0; t < 1; t += 1 / 60.0) l.Paivita(1 / 60.0, 0, 0, 0, 0, maa);
             double h0 = l.KorkeusAbsM, lat0 = l.Lat;
-            l.EsteM = 22;
+            l.EsteM = 62;   // Eiffel-toisto 19.1x: ristikko 62 m:ssä täytti ruudun
             for (double t = 0; t < 2; t += 1 / 60.0) l.Paivita(1 / 60.0, 0, 1, 0, -1, maa);   // täysi eteen + alas
             double eteen = (l.Lat - lat0) * 111320;
-            Oleta.Tosi(eteen < 5, $"este 22 m edessä → ei eteenpäin: {eteen:0.0} m");
+            Oleta.Tosi(eteen < 5, $"este 62 m edessä → ei eteenpäin: {eteen:0.0} m");
             Oleta.Tosi(l.KorkeusAbsM > h0 + 5, $"este → nousu, ei laskua: {h0:0} → {l.KorkeusAbsM:0} m");
             Oleta.Tosi(Math.Abs(l.ToiveSuuntaEro) < 1, $"toive eteen: {l.ToiveSuuntaEro:0}°");
             // Taaksepäin toive kääntää luotaimen; kun luotain näkee taakse vapaata, liike sallitaan.
@@ -120,6 +120,46 @@ namespace Matkakirja.Linssit.Testit
             l.EsteM = double.PositiveInfinity; double lat1 = l.Lat;
             for (double t = 0; t < 1; t += 1 / 60.0) l.Paivita(1 / 60.0, 0, -1, 0, 0, maa);
             Oleta.Tosi((lat1 - l.Lat) * 111320 > 5, $"vapaa taakse → liikkuu: {(lat1 - l.Lat) * 111320:0} m");
+        }
+
+        [Testi]
+        static void LuotainAllaNostaa()
+        {
+            // Ristikon taso 25 m kameran alla (pistenäyte osuu maahan): kamera nousee eikä laskeudu.
+            var l = Alussa(0);
+            Func<double, double, double> maa = (la, lo) => 35;
+            for (double t = 0; t < 1; t += 1 / 60.0) l.Paivita(1 / 60.0, 0, 0, 0, -1, maa);
+            double h0 = l.KorkeusAbsM; l.EsteAllaM = 25;
+            for (double t = 0; t < 1; t += 1 / 60.0) l.Paivita(1 / 60.0, 0, 0, 0, -1, maa);
+            Oleta.Tosi(l.KorkeusAbsM > h0 + 3, $"taso alla 25 m → nousu: {h0:0} → {l.KorkeusAbsM:0} m");
+        }
+
+        [Testi]
+        static void LuotainKuvaErottaaMaanJaTornin()
+        {
+            const int W = 48, H = 32; const double fov = 100, alas = 35, korkeus = 40;
+            double tanV = Math.Tan(fov * 0.5 * Math.PI / 180), tanH = tanV * W / H, ca = Math.Cos(alas * Math.PI / 180), sa = Math.Sin(alas * Math.PI / 180);
+            // Tasainen maa 40 m alla: säde (sivu, ylös, eteen) osuu maahan kun ylös < 0; silmäsyvyys = t (kameran z).
+            double[] Kuva(double tornissaM)
+            {
+                var z = new double[W * H];
+                for (int y = 0; y < H; y++)
+                    for (int x = 0; x < W; x++)
+                    {
+                        double nx = ((x + 0.5) / W * 2 - 1) * tanH, ny = ((y + 0.5) / H * 2 - 1) * tanV;
+                        double ylos = ny * ca - sa, eteen = ca + ny * sa;   // per yksikkö silmäsyvyyttä
+                        double t = ylos < 0 ? korkeus / -ylos : double.PositiveInfinity;
+                        if (tornissaM > 0 && eteen > 0) t = Math.Min(t, tornissaM / eteen);   // pystyseinä eteen-etäisyydellä
+                        z[y * W + x] = t > 400 ? double.PositiveInfinity : t;
+                    }
+                return z;
+            }
+            var maa = OpasLuotainKuva.Tulkitse(Kuva(0), W, H, fov, alas);
+            Oleta.Tosi(double.IsInfinity(maa.vaaka), $"pelkkä maa 40 m alla ei ole vaakaeste: {maa.vaaka:0}");
+            Oleta.Tosi(Math.Abs(maa.alla - korkeus) < 2, $"maa alla 40 m: {maa.alla:0}");
+            Oleta.Tosi(maa.alaKeski < maa.ylaKeski || double.IsNaN(maa.ylaKeski), $"alarivit lähempänä: {maa.alaKeski:0} < {maa.ylaKeski:0}");
+            var torni = OpasLuotainKuva.Tulkitse(Kuva(62), W, H, fov, alas);
+            Oleta.Tosi(Math.Abs(torni.vaaka - 62) < 3, $"seinä 62 m edessä: {torni.vaaka:0}");
         }
     }
 }

@@ -34,13 +34,18 @@ namespace Matkakirja.Linssit.Kierros
         public int Tunnetut { get; private set; }
         public const int NaapurustoTaysi = 14;
         public string Tila() => $"vapaa: korkeus {KorkeusAbsM:0} m (pinnasta {KorkeusM:0}), pinta {PintaM:0}, näytteitä {Tunnetut}/{2 + KehaPisteita}, " +
-            $"este {(double.IsInfinity(EsteM) ? "-" : EsteM.ToString("0"))} m, suunta {Suunta:0}°, kall {Kallistus:0}°";
+            $"este {M(EsteM)} m, alla {M(EsteAllaM)} m, suunta {Suunta:0}°, kall {Kallistus:0}°";
+        static string M(double m) => double.IsInfinity(m) ? "-" : m.ToString("0");
         /// <summary>
-        /// Lähiluotaimen (syvyyspuskuri, OpasLahiluotain; Päätoimittaja 6.10.) lähin este toivotun liikkeen suunnassa (m). Alle
-        /// EsteRajaM: laskeutuminen estyy ja kamera nousee (enintään EsteNousuMS); vaakavauhti ≤ (EsteM − EsteRajaM/2) m/s aina.
+        /// Lähiluotaimen (syvyyspuskuri, OpasLahiluotain; Päätoimittaja 6.10.) vaakaeste toivotun liikkeen suunnassa (m; vain
+        /// pisteet, jotka eivät ole selvästi kameran alapuolella, OpasLuotainKuva). Eiffel-toisto 19.1x: 40 m:n rajalla kamera jäi
+        /// 56–62 m:n päähän ristikosta, joka täytti ruudun → alle EsteRajaM (100 m) kamera nousee eikä laskeudu, ja vaakavauhti on
+        /// ≤ (EsteM − EstePysahdysM) m/s (pysähtyy 60 m:iin).
         /// </summary>
         public double EsteM { get; set; } = double.PositiveInfinity;
-        public const double EsteRajaM = 40, EsteNousuMS = 12;
+        /// <summary>Pystyvara kameran alla olevaan geometriaan (ristikon taso, jota pistenäyte ei osu); alle MinKorkeusM → nousu.</summary>
+        public double EsteAllaM { get; set; } = double.PositiveInfinity;
+        public const double EsteRajaM = 100, EstePysahdysM = 60, EsteNousuMS = 15;
         /// <summary>Toivotun vaakaliikkeen suunta katsesuunnasta (°, + oikealle): tapista, muuten nopeudesta; paikallaan 0.</summary>
         public double ToiveSuuntaEro { get; private set; }
 
@@ -99,11 +104,13 @@ namespace Matkakirja.Linssit.Kierros
             else ToiveSuuntaEro = 0;
             if (!double.IsInfinity(EsteM))
             {
-                // Vaakavauhti enintään (este − puoli rajaa) / 1 s: jarruttaa kaukaa, pysähtyy puolessa rajasta (20 m).
-                double raja = Math.Max(0, EsteM - EsteRajaM * 0.5), vaaka = Math.Sqrt(vEteen * vEteen + vSivu * vSivu);
+                // Vaakavauhti enintään (este − pysähdysmatka) / 1 s: jarruttaa kaukaa, pysähtyy EstePysahdysM:iin.
+                double raja = Math.Max(0, EsteM - EstePysahdysM), vaaka = Math.Sqrt(vEteen * vEteen + vSivu * vSivu);
                 if (vaaka > raja) { double s = vaaka > 0 ? raja / vaaka : 0; vEteen *= s; vSivu *= s; }
-                if (EsteM < EsteRajaM) vNousu = Math.Max(vNousu, EsteNousuMS * Math.Min(1, 1.5 * (1 - EsteM / EsteRajaM)));
+                if (EsteM < EsteRajaM) vNousu = Math.Max(vNousu, EsteNousuMS * Math.Min(1, 0.3 + 1.2 * (1 - EsteM / EsteRajaM)));
             }
+            if (EsteAllaM < MinKorkeusM * 1.5)
+                vNousu = Math.Max(vNousu, EsteAllaM < MinKorkeusM ? EsteNousuMS * Math.Min(1, 0.3 + (1 - EsteAllaM / MinKorkeusM)) : 0);
             Suunta = KierrosLento.Kiedo(Suunta + vKaanto * dt);
             (Lat, Lon) = Siirra(Lat, Lon, Suunta, vEteen * dt);
             (Lat, Lon) = Siirra(Lat, Lon, Suunta + 90, vSivu * dt);

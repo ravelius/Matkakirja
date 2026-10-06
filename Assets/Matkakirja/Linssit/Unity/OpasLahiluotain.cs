@@ -19,8 +19,13 @@ namespace Matkakirja.Natiivi
         public const float ValiS = 1f / 6, AlasAst = 35f, PystyFov = 100f, KaukoM = 400f, LahiM = 0.5f;
         Camera kamera; RenderTexture syvyys, ulos; Material muunnin;
         float seuraava; bool kesken, eiTukea;
-        /// <summary>Lähin kaupungin geometria luotaimen kuvassa (m); ääretön = ei mitään KaukoM:n sisällä.</summary>
-        public double LahinM { get; private set; } = double.PositiveInfinity;
+        /// <summary>Vaakaeste ja pystyvara alla (OpasLuotainKuva.Tulkitse); ääretön = ei mitään KaukoM:n sisällä.</summary>
+        public double VaakaM { get; private set; } = double.PositiveInfinity;
+        public double AllaM { get; private set; } = double.PositiveInfinity;
+        /// <summary>Alimman ja ylimmän neljänneksen keskisyvyys (m): kuvan suunnan tarkistus (matalalla alarivit lähempänä).</summary>
+        public double AlaKeski { get; private set; }
+        public double YlaKeski { get; private set; }
+        double[] syvyydet;
         public int Mittauksia { get; private set; }
         /// <summary>Luotainkuvan pääsäikeen aika (ms, liukuva keskiarvo): Render + Blit + pyyntö (LS1: iPad-mittaus).</summary>
         public double PiirtoMs { get; private set; }
@@ -53,17 +58,11 @@ namespace Matkakirja.Natiivi
             if (p.hasError || kamera == null) return;
             var d = p.GetData<float>();
             bool kaanteinen = SystemInfo.usesReversedZBuffer;
-            double tanV = Math.Tan(PystyFov * 0.5 * Math.PI / 180), tanH = tanV * Leveys / Korkeus;
-            double lahin = double.PositiveInfinity;
-            for (int y = 0; y < Korkeus; y++)
-                for (int x = 0; x < Leveys; x++)
-                {
-                    double z = Etaisyys(d[y * Leveys + x], kaanteinen);
-                    if (z >= KaukoM * 0.98) continue;
-                    double nx = ((x + 0.5) / Leveys * 2 - 1) * tanH, ny = ((y + 0.5) / Korkeus * 2 - 1) * tanV;
-                    lahin = Math.Min(lahin, z * Math.Sqrt(1 + nx * nx + ny * ny));
-                }
-            LahinM = lahin; Mittauksia++;
+            syvyydet ??= new double[Leveys * Korkeus];
+            for (int i = 0; i < syvyydet.Length; i++) { double z = Etaisyys(d[i], kaanteinen); syvyydet[i] = z >= KaukoM * 0.98 ? double.PositiveInfinity : z; }
+            // AsyncGPUReadback: rivi 0 on kuvan alareuna (Unityn tekstuurikäytäntö); AlaKeski/YlaKeski lokiin tarkistukseksi.
+            var t = Matkakirja.Linssit.Kierros.OpasLuotainKuva.Tulkitse(syvyydet, Leveys, Korkeus, PystyFov, AlasAst);
+            VaakaM = t.vaaka; AllaM = t.alla; AlaKeski = t.alaKeski; YlaKeski = t.ylaKeski; Mittauksia++;
         }
 
         /// <summary>Raaka syvyys (0…1) → silmäsyvyys (m) perspektiivikameralle; käänteinen Z: 1 lähellä, 0 kaukana.</summary>
@@ -102,7 +101,7 @@ namespace Matkakirja.Natiivi
             if (syvyys != null) { syvyys.Release(); UnityEngine.Object.Destroy(syvyys); }
             if (ulos != null) { ulos.Release(); UnityEngine.Object.Destroy(ulos); }
             if (muunnin != null) UnityEngine.Object.Destroy(muunnin);
-            kamera = null; syvyys = ulos = null; muunnin = null; kesken = false; LahinM = double.PositiveInfinity;
+            kamera = null; syvyys = ulos = null; muunnin = null; kesken = false; VaakaM = AllaM = double.PositiveInfinity;
         }
     }
 }
