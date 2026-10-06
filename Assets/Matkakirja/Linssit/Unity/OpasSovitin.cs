@@ -187,7 +187,7 @@ namespace Matkakirja.Natiivi
             silmukka.Kysyy += Kysyy;
             silmukka.LentoAlkaa += LentoAlkoi;
             // Siirto ilman lentoa (omistaja 6.10. 12.0x): origo heti kohteeseen, latausaste kohdekameran laatoista.
-            silmukka.SiirtoAlkaa += (la, lo) => { if (kaupunkiOdottaa && !AvaaKaupunki(la, lo, silmukka.SiirtoNimi)) return; kaupunki.SiirraOrigo(la, lo, MaaPisteessa(la, lo) is double m && !double.IsNaN(m) ? m : 45); o.Kirjaa($"opas: siirrytään {silmukka.SiirtoNimi} ({la:F3}, {lo:F3})"); };
+            silmukka.SiirtoAlkaa += (la, lo) => { if (kaupunkiOdottaa && !AvaaKaupunki(la, lo, silmukka.SiirtoNimi)) return; kaupunki.YritaGoogleUudelleen(); kaupunki.SiirraOrigo(la, lo, MaaPisteessa(la, lo) is double m && !double.IsNaN(m) ? m : 45); o.Kirjaa($"opas: siirrytään {silmukka.SiirtoNimi} ({la:F3}, {lo:F3})"); };
             silmukka.LatausEdistys = () => kaupunki.Latausaste / 100.0;
             // Maaston korkeus kohdekehykseen (simu 6.10. 12.42: Praha aukesi 45 m:n arviolla mäen sisältä): näyte pisteeseen.
             silmukka.MaaPisteessa = MaaPisteessa;
@@ -429,6 +429,9 @@ namespace Matkakirja.Natiivi
             kysyOdotus.Alkoi();   // lista tai ei mitään: pelaaja valitsee
             mikaLista = lista;
         }
+
+        /// <summary>Testikomento "opas testi429": Googlen root-pyyntö kuin 429 (uusintayritykset ja ion-vara lokiin).</summary>
+        public static void TestiGoogle429() { if (Viimeisin != null && Viimeisin.nakymaAuki) Viimeisin.kaupunki.TestiVirhe429(); }
 
         /// <summary>Vapaa tila (■ jälkeen): ei kohdetta, Linssiseppä 2:n vapaa ohjaus (juna 152).</summary>
         public static bool VapaaTila => Auki && Viimeisin.silmukka.VapaaTila;
@@ -894,6 +897,7 @@ namespace Matkakirja.Natiivi
         /// <summary>Kierroksen siirtymä: automaattinen lento soittaa "kierros" (yli 20 km "lento"); toiveen lento soitti jo valinnasta.</summary>
         void LentoAlkoi(OpasKohde k, double matkaM, bool toiveesta)
         {
+            kaupunki.YritaGoogleUudelleen();   // ion-varalla: Google uudelleen seuraavassa kohteessa (laatat lennon aikana)
             if (!toiveesta) Silta(matkaM > 20000 ? OpasSiltalauseet.Lento : OpasSiltalauseet.Kierros, false);
         }
 
