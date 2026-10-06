@@ -688,7 +688,7 @@ namespace Matkakirja.Linssit.Astronautti
             lento = null;
             Iss.IssNyt.Simu.AsetaKerroin(kerroin);
             tietoAika = -1;
-            KaasuKerroin = kerroin;
+            if (KaasuKerroin != kerroin) { KaasuKerroin = kerroin; KaasuKerroinVaihtui?.Invoke(kerroin); }
             if (kerroin != Kaasu)
             {
                 Kaasu = kerroin;
@@ -700,10 +700,12 @@ namespace Matkakirja.Linssit.Astronautti
 
         /// <summary>Kaasun portaaton kerroin 1…1000 (AsetaKaasuPortaaton; pykälillä sama kuin Kaasu).</summary>
         public double KaasuKerroin { get; private set; } = 1;
+        /// <summary>Portaaton kerroin vaihtui (Natiivi-UI: LCD:n kerroin ja nopeus).</summary>
+        public event Action<double> KaasuKerroinVaihtui;
 
         /// <summary>
         /// Portaaton kaasu (omistaja 6.10.: portaaton nopeuskahva 1×–1000×, Natiivi-UI): kerroin 1…1000 tästä hetkestä ilman hyppyä.
-        /// Kaasu (int) on lähin pykälä log-asteikolla (LCD, KaasuVaihtui); naksahdus soi pykälän vaihtuessa kuten vivussa.
+        /// Kaasu (int) on suurin ylitetty pykälä (KaasuVaihtui); naksahdus soi vain pykälän ylityksessä.
         /// </summary>
         public bool AsetaKaasuPortaaton(double kerroin)
         {
@@ -713,15 +715,18 @@ namespace Matkakirja.Linssit.Astronautti
             lento = null;
             Iss.IssNyt.Simu.AsetaKerroin(kerroin);
             tietoAika = -1;
+            bool muuttui = Math.Abs(kerroin - KaasuKerroin) > 1e-9;
             KaasuKerroin = kerroin;
-            int lahin = p[0];
-            foreach (int x in p) if (Math.Abs(Math.Log10(x) - Math.Log10(kerroin)) < Math.Abs(Math.Log10(lahin) - Math.Log10(kerroin))) lahin = x;
-            if (lahin != Kaasu)
+            // Pykälä = suurin 1/10/100/1000, jonka kerroin on ylittänyt: naksahdus vain pykälän ylityksessä (Natiivi-UI 6.10.).
+            int pykala = p[0];
+            foreach (int x in p) if (kerroin >= x - 1e-6) pykala = x;
+            if (pykala != Kaasu)
             {
-                Kaasu = lahin;
+                Kaasu = pykala;
                 y?.Tehoste(KaasuTehoste, 1f);
-                KaasuVaihtui?.Invoke(lahin);
+                KaasuVaihtui?.Invoke(pykala);
             }
+            if (muuttui) KaasuKerroinVaihtui?.Invoke(kerroin);
             return true;
         }
 
