@@ -3,7 +3,7 @@
   "versio": 1,
   "kehys": {
     "_selite": "Sovelluksen kehyksen ja kartan värit. Nimet ovat samat kuin ennen (css/styles.css :root ja Matkakirja.uss :root), joten mikään käyttöpaikka ei muutu.",
-    "_vainNatiivi": ["kulta", "rivi-tausta"],
+    "_vainNatiivi": ["kulta", "kulta-kuulto", "rivi-tausta"],
     "_vainNatiiviSyy": "Webissä --kulta on määrittelemätön (käyttöpaikat var(--kulta, #eab84e), var(--kulta, #d9a13b) ja ilman varaa); määrittely muuttaisi niitä. Yhtenäistetään KORTTI-pohjan siirrossa.",
     "bg": "#1d1610",
     "panel": "#2a1f16",
@@ -14,6 +14,7 @@
     "accent": "#d9a13b",
     "accent-dark": "#8a6114",
     "kulta": "#eab84e",
+    "kulta-kuulto": "rgba(234, 184, 78, 0.4)",
     "danger": "#ff9b8a",
     "rivi-tausta": "rgba(53, 39, 26, 0.55)",
     "overlay-card": "rgba(46, 33, 20, 0.88)",
