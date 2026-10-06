@@ -74,7 +74,10 @@ namespace Matkakirja.Linssit.IssKamera
             for (int i = 0; i < n; i++)
             {
                 float t = l[i] / 255f, suoja = 1f - (2f * t - 1f) * (2f * t - 1f);   // 0 mustassa ja valkoisessa, 1 keskellä
-                float d = maara * (l[i] - b[i]) * suoja;
+                // Reunatietoinen: suuret erot (paneelin reuna merta vasten) rajataan pehmeästi ±12:een, jottei synny vaaleaa
+                // kehää (Päätoimittaja ca48b99e: kermaviiva paneelin reunassa), pienet yksityiskohdat voimistuvat täysin.
+                float e = l[i] - b[i];
+                float d = maara * 12f * (float)Math.Tanh(e / 12f) * suoja;
                 if (d == 0) continue;
                 int o = i * 4;
                 rgba[o] = Tavu(rgba[o] + d); rgba[o + 1] = Tavu(rgba[o + 1] + d); rgba[o + 2] = Tavu(rgba[o + 2] + d);

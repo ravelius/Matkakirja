@@ -689,6 +689,14 @@ namespace Matkakirja.Natiivi
                     // Päivä valitaan koko alueen karkealta tasolta lähialueen pilvisyyden mukaan; lähialue sitten vain sille päivälle
                     // tarkemmalta tasolta (2048 px → z8–9; Päätoimittaja 6.10.: z5 + z7 oli litteitä laikkuja ja laattasaumoja).
                     yield return HaeGibs(w, s, e, nn, x => gp = x, null, 1024, (lw, ls, le, ln));
+                    // Koko alue valitulta päivältä tarkemmin (2048 px → z6; ca48b99e: z5 oli kaukana maitomainen kerros). Pysyvän
+                    // valkoisen poisto jää karkealle (yksi päivä); lähialue alla vielä tarkemmin.
+                    if (gp != null && GibsPilvet.TasoAlueelle(w, s, e, nn, 2048) > gp.Taso)
+                    {
+                        GibsPilvet koko = null;
+                        yield return HaeGibs(w, s, e, nn, x => koko = x, gp.Paiva, 2048);
+                        if (koko != null && koko.Taso > gp.Taso) gp = koko;
+                    }
                     if (gp != null && GibsPilvet.TasoAlueelle(lw, ls, le, ln, 2048) > gp.Taso)
                     {
                         GibsPilvet tarkka = null;
