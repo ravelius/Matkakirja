@@ -3432,6 +3432,7 @@ async function hoidaOpas(pyynto, env, kors, runko, ctx) {
   let kuvaLupaus = null;
   let kuvaAlku = 0;
   let p18Lupaus = null;
+  let puheOhitus = null;
   // ESIGENEROITU ESITTELY (omistaja 7.10.): kierroksen pysähdys tai listan kohde nimellä → valmis teksti ilman mallikutsua.
   const valmisPaikka = seuraava?.paikka ?? (listatila && p.toive ? lukitut.find((x) => samaNimi(x.nimi, p.toive)) ?? null : null);
   const valmis = valmisPaikka && listatila ? valmisKohde(await oppaanEsittely(env, p.kaupunki), valmisPaikka.id) : null;
@@ -3445,6 +3446,8 @@ async function hoidaOpas(pyynto, env, kors, runko, ctx) {
       wiki: paikka.wiki ?? null, kuva: null, vaihtoehdot: valmis.syventava ? [valmis.syventava] : [], koordinaatit: paikka.lahde,
       ...(seuraava ? { kierros: { numero: seuraava.numero, maara: seuraava.maara } } : {}),
       kuvat: kohteenKuvat(kuvaLista, paikka.id) };
+    // Ääntämisversio (esim. roomalaiset numerot): näytölle kirjoitusasu, ääneen puhe_*-kenttä, jos se on.
+    puheOhitus = (p.lyhyt && valmis.lyhyt ? valmis.puhe_lyhyt : valmis.puhe_teksti) || null;
     kuvaAlku = Date.now();
     korostusLupaus = paikanKorostus(fetch, { lat: paikka.lat, lon: paikka.lon, koko_m: tulos.koko_m, luokka: valmis.luokka,
       reitti: [], nimi, nimet: [nimi], id: paikka.id }, sijainti, osm);
@@ -3524,7 +3527,7 @@ async function hoidaOpas(pyynto, env, kors, runko, ctx) {
   if (!tulos) return vastaa({ virhe: 'palvelin', viesti: 'Opas ei saanut seuraavaa paikkaa kiinni. Yritä uudelleen.' }, { status: 502, ...kors });
   // Ääni ja kuvan varahaku (Wikidatan P18) rinnakkain; pelin oma kuva voittaa.
   const [aani, korostus] = await Promise.all([
-    oppaanAani(pyynto, env, ctx, tulos.teksti, kehittaja),
+    oppaanAani(pyynto, env, ctx, puheOhitus ?? tulos.teksti, kehittaja),
     tulos.tyyppi === 'pysahdys' ? korostusLupaus : null,
   ]);
   // Lisäkuvat (P18 + Commons-luokka) pelin omien perään (omistaja 23.5x). Muun työn jälkeen odotetaan enintään

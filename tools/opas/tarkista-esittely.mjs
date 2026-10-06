@@ -10,8 +10,8 @@ import { readFileSync } from 'node:fs';
 import { vuosiluvutSanoiksi } from '../pollo/puhesanat.js';
 
 const sanat = (t) => String(t ?? '').split(/\s+/).filter(Boolean).length;
-const SEISOO = /\b(seisot|seisotte|kävelet|kävelette|olet nyt|katso (suoraan )?ylös|tässä edessäsi|edessäsi näet)\b/i;
-const LYHENNE = /\b(esim|mm|ns|n|ks|jne|eKr|jKr|kpl|km|m)\.(?=\s|$)/;
+const SEISOO = /(?<![\p{L}])(seisot|seisotte|kävelet|kävelette|olet nyt|katso (suoraan )?ylös|tässä edessäsi|edessäsi näet)(?![\p{L}])/iu;
+const LYHENNE = /(?<![\p{L}\d])(esim|mm|ns|n|ks|jne|eKr|jKr|kpl|km|m|St|Pt)\.(?=\s|$)/u;
 const LUOKAT = ['katu', 'kanava', 'aukio', 'rakennus', 'torni', 'kirkko', 'linnoitus', 'puisto', 'vesi', 'silta', 'muu'];
 
 /** Yhden kaupungin virheet ja huomiot: { virheet: [], huomiot: [] }. */
@@ -34,16 +34,17 @@ export function tarkistaEsittely(pohja, e) {
       if (!k.lyhyt) v(k.id, 'kierroskohteelta puuttuu lyhyt');
       else if (m > 45) v(k.id, `lyhyt ${m} sanaa (≤ 42)`);
     } else if (k.lyhyt) huomiot.push(`${k.id}: lyhyt kierroksen ulkopuolella (ei käytetä)`);
-    for (const [kentta, t] of [['teksti', k.teksti], ['lyhyt', k.lyhyt]]) {
+    for (const [kentta, t] of [['teksti', k.teksti], ['lyhyt', k.lyhyt], ['puhe_teksti', k.puhe_teksti], ['puhe_lyhyt', k.puhe_lyhyt]]) {
       if (!t) continue;
       const alku = p.nimi.split(/\s+/)[0].replace(/[^\p{L}-]/gu, '').slice(0, 5).toLowerCase();
       if (!t.toLowerCase().startsWith(alku)) huomiot.push(`${k.id}: ${kentta} ei ala paikan nimellä`);
       if (SEISOO.test(t)) v(k.id, `${kentta}: perspektiivi ("${t.match(SEISOO)[0]}")`);
       if (LYHENNE.test(t)) v(k.id, `${kentta}: lyhenne ("${t.match(LYHENNE)[0]}")`);
+      if (/\b[IVX]{2,}\b/.test(vuosiluvutSanoiksi((kentta === 'teksti' ? k.puhe_teksti : kentta === 'lyhyt' ? k.puhe_lyhyt : t) || t))) v(k.id, `${kentta}: roomalainen numero ääneen (lisää puhe_${kentta.replace('puhe_', '')})`);
       if (/[()[\]•]/.test(t)) v(k.id, `${kentta}: sulkeet tai luettelomerkki`);
       if (/tuhat\p{L}*sata/iu.test(t)) v(k.id, `${kentta}: vuosiluku sanoina (pitää olla numeroin)`);
       if (/\d+:\p{L}/u.test(t)) v(k.id, `${kentta}: kaksoispistetaivutus`);
-      const puhe = vuosiluvutSanoiksi(t);
+      const puhe = vuosiluvutSanoiksi(kentta.startsWith('puhe') ? t : (kentta === 'teksti' ? k.puhe_teksti : k.puhe_lyhyt) || t);
       if (/\d/.test(puhe)) v(k.id, `${kentta}: puhetekstiin jää numero ("${puhe.match(/\S*\d\S*/)[0]}"); muut luvut sanoina`);
     }
     if (k.isoisa || /isoisä/i.test(k.teksti ?? '') || /isoisä/i.test(k.lyhyt ?? '')) isoisia += 1;
@@ -53,7 +54,7 @@ export function tarkistaEsittely(pohja, e) {
     if (sanat(k.kuvaus) > 5 || !k.kuvaus) v(k.id, `kuvaus "${k.kuvaus}"`);
     if (!k.syventava || sanat(k.syventava) > 7) v(k.id, `syventava "${k.syventava}"`);
     if (!Array.isArray(k.lahteet) || !k.lahteet.length) v(k.id, 'lähteet puuttuvat');
-    else for (const l of k.lahteet) if (!/^https:\/\//.test(l.url ?? '')) v(k.id, `lähteen url "${l.url}"`);
+    else for (const l of k.lahteet) if (!/^(https:\/\/|kaanon:)/.test(l.url ?? '')) v(k.id, `lähteen url "${l.url}" (https:// tai kaanon:)`);
   }
   if (isoisia > 1) virheet.push(`${e.id}: isoisä ${isoisia} kohteessa (enintään 1)`);
   return { virheet, huomiot };
@@ -65,7 +66,7 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   for (let i = 0; i < a.length; i += 2) {
     const pohja = JSON.parse(readFileSync(a[i], 'utf8')), e = JSON.parse(readFileSync(a[i + 1], 'utf8'));
     const { virheet, huomiot } = tarkistaEsittely(pohja, e);
-    const merkit = e.kohteet.reduce((s, k) => s + vuosiluvutSanoiksi(k.teksti).length + (k.lyhyt ? vuosiluvutSanoiksi(k.lyhyt).length : 0), 0);
+    const merkit = e.kohteet.reduce((s, k) => s + vuosiluvutSanoiksi(k.puhe_teksti || k.teksti).length + (k.lyhyt ? vuosiluvutSanoiksi(k.puhe_lyhyt || k.lyhyt).length : 0), 0);
     console.log(`${e.kaupunki}: ${e.kohteet.length} kohdetta, ${virheet.length} virhettä, ${huomiot.length} huomiota, puhetta ${merkit} merkkiä`);
     for (const x of virheet) console.log(`  VIRHE ${x}`);
     for (const x of huomiot) console.log(`  huomio ${x}`);

@@ -70,3 +70,16 @@ test('oppaanEsittely: vain listatut id:t, haku kerran, virhe → null', async ()
   assert.equal(valmisKohde(ESITTELY, 'Q102').lyhyt, 'Kohde 2 lyhyesti.');
   assert.equal(valmisKohde(ESITTELY, 'Q999'), null);
 });
+
+test('puhe_teksti: näytölle kirjoitusasu, äänen tunniste ääntämisversiosta', async () => {
+  const { createHash } = await import('node:crypto');
+  const env = ymparisto();
+  const kohde = { ...ESITTELY.kohteet[0], teksti: 'Kohde 0 eli Pont Alexandre III on silta.', puhe_teksti: 'Kohde 0 eli Pont Alexandre Trois on silta.' };
+  env.OPAS_ESITTELY_TESTI = { testila: { ...ESITTELY, kohteet: [kohde, ...ESITTELY.kohteet.slice(1)] } };
+  const sha = createHash('sha256').update(`william|eleven_v4_turbo|${kohde.puhe_teksti}`).digest('hex').slice(0, 32);
+  const vanhaGet = env.PUHE_R2.get;
+  env.PUHE_R2.get = async (k) => (k === `opas/${sha}.mp3` ? { body: new Uint8Array(4), text: async () => '' } : vanhaGet(k));
+  const { d } = await opas(env, { toive: 'Esittele kaupunki', istunto: 'e6' });
+  assert.equal(d.teksti, kohde.teksti);
+  assert.ok(String(d.aani).includes(sha), `ääni ${d.aani}`);
+});

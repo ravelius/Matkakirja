@@ -13,6 +13,7 @@ import { join } from 'node:path';
 import { kaupunginKohteet } from '../pollo/opas-kuvat.js';
 import { lyhinReitti, kaupunginAineisto, KIERROKSEN_PITUUS, OPAS_KEHOTE } from '../pollo/opas.js';
 import { OPAS_AINEISTO } from '../pollo/opas-aineisto.js';
+import { kaupunkiId } from '../pollo/opas-esittely.js';
 
 const arg = (n) => { const i = process.argv.indexOf(`--${n}`); return i > 0 ? process.argv[i + 1] : null; };
 const kaupungit = process.argv.slice(2).filter((x, i, a) => !x.startsWith('--') && !a[i - 1]?.startsWith('--'));
@@ -21,9 +22,6 @@ const ulos = arg('ulos');
 mkdirSync(ulos, { recursive: true });
 const UA = 'Matkakirja-esittely/1.0 (https://matkakirja.app; peli@matkakirja.app)';
 
-/** Kaupungin id kuten aineistoindeksissä: pienaakkoset, ä/å → a, ö/ø → o, é → e, muut → "-". */
-export const kaupunkiId = (nimi) => String(nimi).toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '')
-  .replace(/ø/g, 'o').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 
 async function wikilinkit(ids) {
   const v = await fetch(`https://www.wikidata.org/w/api.php?action=wbgetentities&format=json&props=sitelinks/urls&sitefilter=fiwiki|enwiki&ids=${ids.join('|')}`,
