@@ -437,7 +437,8 @@ namespace Matkakirja.Natiivi
         /// <summary>Vapaa tila (■ jälkeen): ei kohdetta, Linssiseppä 2:n vapaa ohjaus (juna 152).</summary>
         public static bool VapaaTila => Auki && Viimeisin.silmukka.VapaaTila;
         /// <summary>Vapaan lennon tila (komento `opas vapaa`): korkeus, pinta ja tunnetut näytteet; null = ei vapaassa tilassa.</summary>
-        public static string VapaanTila => VapaaTila ? Viimeisin.silmukka.Vapaa.Tila() : null;
+        public static string VapaanTila => !VapaaTila ? null : Viimeisin.silmukka.Vapaa.Tila() +
+            (Viimeisin.luotain != null ? $", luotain {Viimeisin.luotain.PiirtoMs:0.00} ms × {1 / OpasLahiluotain.ValiS:0}/s ({Viimeisin.luotain.Mittauksia} mittausta)" : "");
         string[] kysymykset, jatkoKysymykset = Array.Empty<string>();
         List<OpasTaky> kohteet;
         string kohteetKaupunki;

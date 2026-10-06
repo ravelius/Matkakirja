@@ -22,6 +22,8 @@ namespace Matkakirja.Natiivi
         /// <summary>Lähin kaupungin geometria luotaimen kuvassa (m); ääretön = ei mitään KaukoM:n sisällä.</summary>
         public double LahinM { get; private set; } = double.PositiveInfinity;
         public int Mittauksia { get; private set; }
+        /// <summary>Luotainkuvan pääsäikeen aika (ms, liukuva keskiarvo): Render + Blit + pyyntö (LS1: iPad-mittaus).</summary>
+        public double PiirtoMs { get; private set; }
 
         /// <summary>Kerran kehyksessä vapaassa tilassa pääkameran asennon jälkeen: suunta = toivotun liikkeen suunta pääkameran
         /// suunnasta (astetta, + oikealle), ylos = paikallinen ylös-suunta Unityn maailmassa (CesiumKaupunki.Ylos).</summary>
@@ -35,11 +37,14 @@ namespace Matkakirja.Natiivi
             eteen = Quaternion.AngleAxis((float)suuntaEro, ylos) * eteen.normalized;
             kamera.transform.SetPositionAndRotation(paa.transform.position, Quaternion.LookRotation(eteen, ylos) * Quaternion.Euler(AlasAst, 0, 0));
             kamera.cullingMask = 1 << CesiumKaupunki.Kerros;
+            long t0 = System.Diagnostics.Stopwatch.GetTimestamp();
             kamera.Render();
             muunnin.SetTexture("_Syvyys", syvyys);
             Graphics.Blit(null, ulos, muunnin, 0);
             kesken = true;
             AsyncGPUReadback.Request(ulos, 0, TextureFormat.RFloat, Luettu);
+            double ms = (System.Diagnostics.Stopwatch.GetTimestamp() - t0) * 1000.0 / System.Diagnostics.Stopwatch.Frequency;
+            PiirtoMs = PiirtoMs == 0 ? ms : PiirtoMs * 0.8 + ms * 0.2;
         }
 
         void Luettu(AsyncGPUReadbackRequest p)
