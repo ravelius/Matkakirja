@@ -746,35 +746,15 @@ namespace Matkakirja.Natiivi
 
         /// <summary>Kameranappi: tarkka ISS-kuva (omistaja 4.10. klo 15.2x: ostot pois, kuvia rajattomasti; LS2 IssKameraKuva).</summary>
         /// <summary>
-        /// LCD-MATRIISI (omistaja 6.10. 08.3x: "aavistusvihreää LCD-matriisiä taustassa näkyvissä"): hento pisteruudukko näytön
-        /// taustalla tekstin alla. Väri USS:stä (.mk-issohjaamo__matriisi color = --tk-lcd-reunus, opacity), ei värivakioita.
+        /// LCD:N TAUSTAHEHKU (omistaja 6.10. 08.3x "aavistusvihreää LCD-matriisiä", 11.1x tarkennus: ei erillisiä pisteitä vaan
+        /// "melkein tasainen, hyvin haalea vihreä laatta"): tasainen vihreä kerros tekstin alla, väri USS:stä (.mk-issohjaamo__matriisi).
         /// </summary>
-        public const float MatriisiVali = 3f, MatriisiPiste = 1.2f;
-
         static void Matriisi(VisualElement isa)
         {
             var m = Rakenne.El("mk-issohjaamo__matriisi", isa, PickingMode.Ignore);
             m.style.position = Position.Absolute;
             m.style.left = 0; m.style.top = 0; m.style.right = 0; m.style.bottom = 0;
             m.SendToBack();
-            m.generateVisualContent += mgc =>
-            {
-                var r = m.contentRect;
-                if (r.width <= 0 || r.height <= 0) return;
-                var p = mgc.painter2D;
-                p.fillColor = m.resolvedStyle.color;
-                p.BeginPath();
-                float x0 = (r.width % MatriisiVali) * 0.5f, y0 = (r.height % MatriisiVali) * 0.5f;
-                for (float y = y0; y + MatriisiPiste <= r.height; y += MatriisiVali)
-                    for (float x = x0; x + MatriisiPiste <= r.width; x += MatriisiVali)
-                    {
-                        p.MoveTo(new Vector2(x, y)); p.LineTo(new Vector2(x + MatriisiPiste, y));
-                        p.LineTo(new Vector2(x + MatriisiPiste, y + MatriisiPiste)); p.LineTo(new Vector2(x, y + MatriisiPiste));
-                        p.ClosePath();
-                    }
-                p.Fill();
-            };
-            m.RegisterCallback<GeometryChangedEvent>(_ => m.MarkDirtyRepaint());
         }
 
         /// <summary>Oikea nopeus tekstinä: alle miljoonan "275 700 km/h", sitten "9,37 milj. km/h" / "27,6 milj. km/h".</summary>
