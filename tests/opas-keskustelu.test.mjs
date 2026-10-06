@@ -108,3 +108,20 @@ test('/opas/seuraava "lyhyt": true → lyhyen kerronnan ohje (natiivin kaupunkik
   assert.match(oppaanViesti({ kaupunki: 'Venetsia', toive: 'Rialto', kaydyt: [], lyhyt: true }, []), /LYHYT KERRONTA/);
   assert.doesNotMatch(oppaanViesti({ kaupunki: 'Venetsia', toive: 'Rialto', kaydyt: [] }, []), /LYHYT/);
 });
+
+test('/opas/liiku: mallikutsu pettää kerran → uusinta, ei 502 (juna 148 todistusajo, Praha)', async () => {
+  const vanha = globalThis.fetch; let ekat = 0;
+  globalThis.fetch = async (u, init) => {
+    const s = decodeURIComponent(String(u));
+    if (s.includes('api.anthropic.com') && JSON.stringify(JSON.parse(init.body).system).includes('tärkeimmät kohteet') && ekat++ === 0) {
+      return new Response('{"type":"error","error":{"type":"overloaded_error"}}', { status: 529 });
+    }
+    return verkko(u, init);
+  };
+  try {
+    const { env } = ymparisto();
+    const v = await worker.fetch(new Request('https://pollo.example/opas/liiku?kaupunki=Praha', { headers: H({ 'cf-connecting-ip': '10.8.0.9' }) }), env, {});
+    assert.equal(v.status, 200, 'toisto: ensimmäinen virhe antoi 502');
+    assert.ok((await v.json()).kohteet.length >= 1);
+  } finally { globalThis.fetch = vanha; }
+});
