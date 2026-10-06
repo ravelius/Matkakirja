@@ -58,8 +58,8 @@ kahdessa paikassa (esim. linssin esikatselun otsikko), napauta yksilöivää tek
 | 12 | ISS-ohjaamo: joystick keskeltä (ei suuntaa), veto oikealle + pito, pallon veto ei ohjaa | ei |
 
 Vakiosarjan ulkopuolella (`todistusajo.sh --skenaario skenaariot/<nimi>.txt`): `pulu-elava`, `kuvaselite-kaiutin`,
-`mykistys-todiste` ja `opas-amsterdam` (elävä opas: avaus → 1. kohde → Vaihda kohde → Amsterdam). **opas-amsterdam generoi
-ElevenLabs-ääntä noin 1,5–2 k merkkiä per ajo, joten aja vain omistajan luvalla määrästä.**
+`mykistys-todiste` ja `opas-amsterdam` (elävä opas: avaus → 1. kohde → Vaihda kohde → Amsterdam). **opas-amsterdam ajaa
+oppaan ilman ääntä (`opas testiotsake 1`, omistaja 6.10.): ElevenLabsia ei kutsuta, ja kohteiden ääni on `ei-testattu`.**
 
 Yksittäinen vika toistetaan yhdellä komennolla (VIKA TOISTETAAN ENNEN KORJAUSTA): `sarja.sh … --vain 07,12`.
 
