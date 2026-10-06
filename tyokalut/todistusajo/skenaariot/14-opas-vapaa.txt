@@ -1,18 +1,16 @@
 # 14 Oppaan vapaa tila (omistaja 6.10. 16.5x, Päätoimittaja hyväksyi; LS2 linssiseppa2/opas-vapaa, juna 152). Kierros ■ → vapaa
-# lento Prahassa tapeilla OIKEILLA kosketuksilla (veto-kohta). Odotus: vasen ↕ eteen/taakse ja ↔ sivuttain katsesuunnassa, oikea ↔
-# kääntää paikallaan ja ↕ nousee/laskee, kallistus muuttuu korkeuden mukaan, ja Žižkovin tv-tornin vierestä ohilento ilman
-# läpimenoa (40 m pinnasta, rakennukset mukana). Ilman ääntä (testiotsake).
+# lento tapeilla OIKEILLA kosketuksilla (veto-kohta). Odotus: vasen ↕ eteen/taakse ja ↔ sivuttain katsesuunnassa, oikea ↔
+# kääntää paikallaan ja ↕ nousee/laskee, kallistus muuttuu korkeuden mukaan, eikä kamera mene rakenteiden läpi (40 m pinnasta
+# naapuruston maksimista 20/45 m:n kehiltä, Päätoimittaja 6.10.). Kohde: 1. täky (6.10. Eiffel-torni; ristikkotornin testi).
+# Ilman ääntä (testiotsake).
 linssi opas testiotsake 1
 oleta 5 opas: -- testiotsake päällä
-linssi opas kaupunki Praha
 linssi linssi opas
 oleta 30 opas: auki -- elävä opas aukesi
 oleta 30 opas: täkyt [1-9] -- täkyt workerilta
 nakyy 20 MIHIN LENNETÄÄN -- täkynäkymä
 tap-teksti mk-linssirivi__nimi
 oleta 90 opas: saapui -- 1. kohde saapui
-linssi opas toive Žižkovin televisiotorni
-oleta 120 opas: saapui -- tv-torni
 odota 3
 linssi opas lopeta
 oleta 5 opas: lopeta -- kierros lopetettu (vapaa tila)
@@ -21,9 +19,9 @@ oleta 5 tapit näkyy -- tapit näkyvissä
 video-alku 14-vapaa
 kuva 14a-alku Vapaa tila alkaa kohteen kehyksestä
 veto-kohta 0.5 0.5 0.5 0.95 3 mk-tappi--oikea
-kuva 14b-alas Oikea tappi ALAS 3 s (odotus: kamera laskee, katse lähes vaakaan)
+kuva 14b-alas Oikea tappi ALAS 3 s (odotus: kamera laskee, mutta pysyy ≥ 40 m tornin rakenteiden yllä, katse lähes vaakaan)
 veto-kohta 0.5 0.5 0.5 0.05 5 mk-tappi--vasen
-kuva 14c-eteen Vasen tappi ETEEN 5 s (odotus: lento katsesuuntaan, tornin vierestä, ei läpi)
+kuva 14c-eteen Vasen tappi ETEEN 5 s (odotus: lento katsesuuntaan, tornin yli tai ohi, ei läpi)
 veto-kohta 0.5 0.5 0.95 0.5 2 mk-tappi--oikea
 kuva 14d-kaanto Oikea tappi OIKEALLE 2 s (odotus: katse kääntyy oikealle paikallaan)
 veto-kohta 0.5 0.5 0.95 0.5 3 mk-tappi--vasen
