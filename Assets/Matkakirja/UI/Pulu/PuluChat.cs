@@ -271,6 +271,17 @@ namespace Matkakirja.Natiivi
             kentta.AddToClassList("mk-chat__kentta");
             kentta.textEdition.placeholder = "Kysy pululta…";
             kentta.RegisterCallback<KeyDownEvent>(e => { if (e.keyCode == KeyCode.Return || e.keyCode == KeyCode.KeypadEnter) { Kysy(kentta.value); e.StopPropagation(); } });
+            // iOS (LS1:n todistusajo 6.10., sama vika kuin oppaan rivissä): järjestelmän oma syöttörivi (✓/×) pois, ja näppäimistön
+            // Valmis lähettää kuten Return (siirtymä Valmiiksi, ettei kesken vastauksen jäänyt teksti lähde myöhemmin uudelleen).
+            kentta.textEdition.hideMobileInput = true;
+            var nappaimistoTila = TouchScreenKeyboard.Status.Visible;
+            kentta.schedule.Execute(() =>
+            {
+                var k = kentta.textEdition.touchScreenKeyboard;
+                var tila = k != null ? k.status : TouchScreenKeyboard.Status.Visible;
+                if (tila == TouchScreenKeyboard.Status.Done && nappaimistoTila != TouchScreenKeyboard.Status.Done) Kysy(kentta.value);
+                nappaimistoTila = tila;
+            }).Every(100);
             rivi.Add(kentta);
             var laheta = Rakenne.Nappi(null, "mk-chat__laheta", () => Kysy(kentta.value), rivi, Ikonit.Nuoli);
             laheta.tooltip = "Lähetä";
@@ -737,6 +748,13 @@ namespace Matkakirja.Natiivi
         {
             AvaaLinssissa(ankkuri ?? (() => pulu.Laatikko), "opas", null, "lasi");
             Asetu(OppaanJatkot);
+        }
+
+        /// <summary>Oppaan näppäimistönappi (omistaja 6.10.): sama keskustelu syöttörivi kirjoitustilassa ja kohdistettuna.</summary>
+        public void AvaaOppaalleKirjoitus(Func<Rect> ankkuri = null)
+        {
+            AvaaOppaalle(ankkuri);
+            VaihdaTilaan(false, kohdista: true);
         }
 
         /// <summary>
@@ -1986,7 +2004,7 @@ namespace Matkakirja.Natiivi
         internal const string MikkiIkoni = "<rect x=\"9\" y=\"2.8\" width=\"6\" height=\"11.4\" rx=\"3\"/>"
             + "<path d=\"M5.6 11.4a6.4 6.4 0 0 0 12.8 0\"/><path d=\"M12 17.8v3.4M8.6 21.2h6.8\"/>";
         const string PysaytysIkoni = "<rect class=\"taytto\" x=\"7.2\" y=\"7.2\" width=\"9.6\" height=\"9.6\" rx=\"1.6\"/>";
-        const string NappaimistoIkoni = "<rect x=\"2.4\" y=\"6.2\" width=\"19.2\" height=\"11.6\" rx=\"2.2\"/>"
+        internal const string NappaimistoIkoni = "<rect x=\"2.4\" y=\"6.2\" width=\"19.2\" height=\"11.6\" rx=\"2.2\"/>"
             + "<path d=\"M6 10h.01M9.3 10h.01M12.6 10h.01M15.9 10h.01M19.2 10h.01\"/>"
             + "<path d=\"M6 13h.01M9.3 13h.01M12.6 13h.01M15.9 13h.01M19.2 13h.01\"/><path d=\"M8.4 15.6h7.2\"/>";
 
