@@ -52,6 +52,10 @@ else
   git -C $KOPIO checkout -q --detach $SHA >> $LOKI 2>&1 || vika "checkout $SHA"
 fi
 mkdir -p $KOPIO/tulokset
+# Laattapaketti ja sisällön tilannekuva pääkopion Buildista (APFS-klooni), ettei Varmista lataa niitä ämpäristä uudelleen.
+for k in laattapaketti tilannekuva; do
+  [[ -d $PAA/Build/$k && ! -d $KOPIO/Build/$k ]] && { mkdir -p $KOPIO/Build; cp -c -R $PAA/Build/$k $KOPIO/Build/$k; }
+done
 echo "$(date +%T) $REF = $SHA, versio $VERSIO ($BUILD)" >> $LOKI
 
 export MATKAKIRJA_KANSIO=Build/mac MATKAKIRJA_VERSIO=$VERSIO MATKAKIRJA_BUILD=$BUILD
