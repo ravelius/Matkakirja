@@ -3,6 +3,20 @@
 Edellinen: viesti-linssiseppa2-luovutus-20261004.md. Päätoimittaja local_5df52e10-10e4-4b72-9554-0049db300dfe.
 VUOROT: käännös- ja simuvuoro aina Julkaisijalta ("NYT käännös", "SIMU NYT"). Ilmoita: "KÄÄNNETTY <sha>, lukko vapaa" ja "simu vapaa".
 
+## ALOITUSVIESTI UUDELLE SESSIOLLE (tilinvaihto 6.10. 23.4x)
+Olet Linssiseppä 2 (Opus, high). Lue tämä tiedosto (TILA-osiot ylhäältä alas) ja CLAUDE.md. Proto-git on
+/Users/Shared/Claude/proto-3d/Matkakirja-proto. Worktreet ovat wt/proto-linssiseppa2-pilvet (gibs-pehmea) ja wt/proto-linssiseppa2-meri
+(s2-meri). Ne poistetaan, kun haarat ovat mainissa. Vuorot (KÄÄNNÖS NYT / SIMU NYT) tulevat Julkaisijalta, ja ilmoitat "lukko vapaa"
+ja "simu vapaa". Simulaattorit ovat F2D9B022 (iPhone) ja 4CE6C737 (iPad). Ajoskriptit ovat scratchpadissa, joka ei säily: ajo147.sh
+on myös aiemmissa luovutuksissa, ja todistusajo.sh löytyy proton masterista.
+Avoimet työt:
+1. gibs-pehmea 640eb7b4 on KUITATTU junaan 155. Seuraa, että Natiiviseppä ottaa sen junaan.
+2. Omistajan Helsinki-juliste: tarvitaan saman näkymän pari (olkapää 0/1 tai ennen/jälkeen) KIINTEÄLLÄ kellolla. ajo147.sh laskee
+   kellon kuvakohtaisesti, joten korjaa se ensin (laske siirto kerran ja käytä samaa). Pari lähetetään Päätoimittajalle omistajaa varten.
+3. Vapaan tilan 14d/14e (sumeat laatat matalalla) on kirjattu suoratoiston normaaliksi viiveeksi, koska kuva tarkentuu +5 s:ssa.
+   Vauhtirajaus opas-vapaa-lataus 5683ffaf jäi pois junasta. Ei uutta työtä tähän.
+4. s2-meri 0f6e4e89 on KUITATTU junaan 154 (BMNG:n meri S2:n meriväriin).
+
 ## TILA 6.10. 23.3x (uusin)
 - KUITATTU junaan 155: gibs-pehmea 640eb7b4 (merisumun pinnanmuoto 5adaf326 + valotuksen olkapää 8f2db691 + A/B 640eb7b4), worktree wt/proto-linssiseppa2-pilvet.
   - Saman näkymän pari kiinteällä kellolla tarvitaan vasta omistajan Helsinki-julisteeseen (ajo147 laskee kellon kuvakohtaisesti: korjaa ensin).
