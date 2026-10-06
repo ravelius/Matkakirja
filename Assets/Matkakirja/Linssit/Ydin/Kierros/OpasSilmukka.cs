@@ -646,7 +646,8 @@ namespace Matkakirja.Linssit.Kierros
             {
                 case OpasVaihe.Alku:
                 case OpasVaihe.Odottaa:
-                    if (NykyinenKehys != null) PysahdysAsento(dt);
+                    if (VapaaAsento(dt)) { }
+                    else if (NykyinenKehys != null) PysahdysAsento(dt);
                     else
                     {
                         // Avaus: kamera lähtee heti laskeutumaan kaupungin ylle, kun worker suunnittelee (ei pysähtynyttä kuvaa).
@@ -658,7 +659,7 @@ namespace Matkakirja.Linssit.Kierros
                     if (Seuraava != null && aaniLoppuiTaiAlku() && !OdottaaVastausta && !OhjausPitaa) AloitaLento(maaKorkeus);
                     break;
                 case OpasVaihe.Puhuu:
-                    PysahdysAsento(dt);
+                    if (!VapaaAsento(dt)) PysahdysAsento(dt);   // vapaassa tilassa kysymyksen vastaus ei palauta kameraa
                     if (aaniLoppui && VaiheAika >= TaukoS && hiljaS >= LoppuTaukoS && Seuraava != null && !OhjausPitaa) AloitaLento(maaKorkeus);
                     else if (aaniLoppui && Seuraava == null && odotettu == 0) { Vaihe = OpasVaihe.Odottaa; VaiheAika = 0; }
                     break;
@@ -751,6 +752,20 @@ namespace Matkakirja.Linssit.Kierros
         /// </summary>
         public readonly OpasOhjaus Ohjaus = new OpasOhjaus();
         public (double kierto, double korkeus, double etaisyys) Tapit;
+        /// <summary>Vapaan tilan tapit (Linssiseppä 2, juna 152): vasen x/y ja oikea x/y −1…1 (y + = ylös); OpasVapaaLento.</summary>
+        public (double vx, double vy, double ox, double oy) VapaaTapit;
+        /// <summary>Vapaa lento kierroksen ■ jälkeen (VapaaTila): kamera tapeilla ilman kiertokeskipistettä.</summary>
+        public readonly OpasVapaaLento Vapaa = new OpasVapaaLento();
+        bool vapaaKaynnissa;
+
+        /// <summary>Vapaassa tilassa asento vapaasta lennosta (aloitus nykyisestä asennosta); muuten false.</summary>
+        bool VapaaAsento(double dt)
+        {
+            if (!VapaaTila) { vapaaKaynnissa = false; return false; }
+            if (!vapaaKaynnissa) { Vapaa.Aloita(Asento, MaaPisteessa); vapaaKaynnissa = true; }
+            Asento = Vapaa.Paivita(dt, VapaaTapit.vx, VapaaTapit.vy, VapaaTapit.ox, VapaaTapit.oy, MaaPisteessa);
+            return true;
+        }
         public bool PelaajaOhjaa;
         /// <summary>Kuva koko ruudulla (Kuvasuurennos): pysähdyksen kierto ja dolly seis; puhe jatkuu.</summary>
         public bool KameraSeis;

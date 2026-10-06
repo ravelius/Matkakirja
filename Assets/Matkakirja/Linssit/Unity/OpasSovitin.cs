@@ -906,6 +906,7 @@ namespace Matkakirja.Natiivi
 
         void LueTapit()
         {
+            if (Time.unscaledTime < vapaaTestiLoppuu) { silmukka.VapaaTapit = vapaaTesti; silmukka.Tapit = default; silmukka.PelaajaOhjaa = true; return; }
             if (Time.unscaledTime < tapitTestiLoppuu) { silmukka.Tapit = tapitTesti; silmukka.PelaajaOhjaa = true; return; }
             if (!tapitHaettu)
             {
@@ -919,12 +920,22 @@ namespace Matkakirja.Natiivi
             // Oikean tapin vaakasuunta käännetty (omistaja 6.10. TF 149 iPad: "oikeanpuoleinen joystick toimii väärinpäin
             // panoroitaessa vasemmalle ja oikealle"): tappi oikealle → näkymä panoroi oikealle. Pystysuunta ennallaan.
             silmukka.Tapit = (-o2.x, o2.y, -v.y);
+            silmukka.VapaaTapit = (v.x, v.y, o2.x, o2.y);   // vapaa tila: vasen liikkuu, oikea kääntää ja nostaa
             silmukka.PelaajaOhjaa = (bool)tapKosketaan.GetValue(null);
         }
         bool tapitHaettu;
         System.Reflection.PropertyInfo tapVasen, tapOikea, tapKosketaan;
         static (double, double, double) tapitTesti;
         static float tapitTestiLoppuu = -1f;
+        static (double, double, double, double) vapaaTesti;
+        static float vapaaTestiLoppuu = -1f;
+        /// <summary>Komento "opas vapaa vx vy ox oy s": vapaan tilan tapit −1…1 kestoksi s sekuntia (video ja testi; ■ ensin).</summary>
+        public static void TestiVapaa(double vx, double vy, double ox, double oy, float s)
+        {
+            vapaaTesti = (Mathf.Clamp((float)vx, -1, 1), Mathf.Clamp((float)vy, -1, 1), Mathf.Clamp((float)ox, -1, 1), Mathf.Clamp((float)oy, -1, 1));
+            vapaaTestiLoppuu = Time.unscaledTime + Mathf.Max(0, s);
+        }
+
         /// <summary>Komento "opas tapit k h e s" (LinssiOhjain): akselit −1…1 kestoksi s sekuntia.</summary>
         public static void TestiTapit(double kierto, double korkeus, double etaisyys, float s)
         {
