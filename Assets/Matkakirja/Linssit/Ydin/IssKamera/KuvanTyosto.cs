@@ -18,6 +18,23 @@ namespace Matkakirja.Linssit.IssKamera
         /// lunta pilvestä (esiselvitys 5.10.: Alpit). Pinnan valkoisuus samalla kaavalla kuin GibsPilvet.MaskiAlfa.
         /// </summary>
         public bool PintaRajaaPilvet;
+        /// <summary>
+        /// Kirkas alue pääkohteen ympärillä (omistaja 6.10.: "Jos pilvet tehdään keinotekoisesti, niitä voisi laittaa vain kuvan
+        /// sivuille, jotta pääkohde ei peity"; Päätoimittaja: pehmeäreunainen, ~25–30 % kuvan leveydestä, kaikki julisteet):
+        /// pilvet ja niiden varjot vaimenevat maan pinnan etäisyydellä R0 → 0 … R1 → täysi. null = ei aluetta.
+        /// </summary>
+        public (double Lat, double Lon, double R0Km, double R1Km)? SelkeaAlue;
+
+        /// <summary>Pilvien kerroin 0…1 kirkkaan alueen mukaan (1 = ei vaimennusta).</summary>
+        public static double Selkeys((double Lat, double Lon, double R0Km, double R1Km)? alue, double lat, double lon)
+        {
+            if (!(alue is (double, double, double, double) a)) return 1;
+            double f1 = lat * Math.PI / 180, f2 = a.Lat * Math.PI / 180, dl = (lon - a.Lon) * Math.PI / 180;
+            double h = Math.Sin((f2 - f1) / 2) * Math.Sin((f2 - f1) / 2) + Math.Cos(f1) * Math.Cos(f2) * Math.Sin(dl / 2) * Math.Sin(dl / 2);
+            double km = 2 * 6371 * Math.Asin(Math.Min(1, Math.Sqrt(h)));
+            double t = Math.Max(0, Math.Min(1, (km - a.R0Km) / Math.Max(1e-6, a.R1Km - a.R0Km)));
+            return t * t * (3 - 2 * t);
+        }
         /// <summary>Kameran paikka ECEF (m); pilvipeitto kasvaa etäisyyden mukaan (null = kerroin 1).</summary>
         public (double x, double y, double z)? Kamera;
         /// <summary>
@@ -458,7 +475,8 @@ namespace Matkakirja.Linssit.IssKamera
         /// Pilvet valmiin laatan päälle pikseleittäin (kuvauspaikat, Päätoimittaja 5.10.: GIBS-pilvet myös Helsinkiin): sama
         /// sekoitus kuin Piirra (varjo pohjaan, pilvi 246 · kirkkaus lämpimällä sävyllä). pintaRajaa: valkoinen pinta ei saa pilveä.
         /// </summary>
-        public static void PiirraPilvet(IKuvanPilvet pilvet, int z, int x, int y, byte[] rgba, bool pintaRajaa)
+        public static void PiirraPilvet(IKuvanPilvet pilvet, int z, int x, int y, byte[] rgba, bool pintaRajaa,
+            (double Lat, double Lon, double R0Km, double R1Km)? selkea = null)
         {
             var (laK, _) = Uudelleenprojisointi.Pikseli(z, x, y, 128, 128);
             double pm = Uudelleenprojisointi.PikseliM(z, laK);
@@ -471,6 +489,7 @@ namespace Matkakirja.Linssit.IssKamera
                     var (a, k, v) = pilvet.Nayte(la, lo);
                     if (a <= 0.002 && v <= 0.002) continue;
                     if (a > 0.002) (a, k) = pilvet.Lahi(la, lo, 1, pm);   // terävä reuna ja aurinkopuoli
+                    if (selkea != null) { double sf = Selkeys(selkea, la, lo); a *= sf; v *= sf; }
                     if (pintaRajaa) { double pv = GibsPilvet.MaskiAlfa(rgba[o], rgba[o + 1], rgba[o + 2]); a *= 1 - pv; v *= 1 - pv; }
                     for (int c = 0; c < 3; c++)
                     {
@@ -519,7 +538,7 @@ namespace Matkakirja.Linssit.IssKamera
                         if (!(Pilvet is GibsPilvet)) continue;
                         var (la0, lo0) = Uudelleenprojisointi.Pikseli(z, x, y, px + 0.5, py + 0.5);
                         var (pa0, pk0) = Pilvet.Lahi(la0, lo0, PeittoK(la0, lo0), pm);
-                        float a0 = (float)pa0 * haivytys;
+                        float a0 = (float)pa0 * haivytys * (float)Selkeys(SelkeaAlue, la0, lo0);
                         if (a0 <= 0.004f) continue;
                         float k0 = 246f * (float)pk0;
                         rgba[o] = (byte)Math.Min(255f, k0 + 0.5f); rgba[o + 1] = (byte)Math.Min(255f, k0 * 0.975f + 0.5f);
@@ -545,6 +564,11 @@ namespace Matkakirja.Linssit.IssKamera
                     }
                     else { al = H(a); ki = H(kk); }
                     al *= haivytys;
+                    if (SelkeaAlue != null)
+                    {
+                        var (las, los) = Uudelleenprojisointi.Pikseli(z, x, y, px + 0.5, py + 0.5);
+                        float sf = (float)Selkeys(SelkeaAlue, las, los); al *= sf; va *= sf;
+                    }
                     if (PintaRajaaPilvet && al > 0) { double pv = GibsPilvet.MaskiAlfa(rgba[o], rgba[o + 1], rgba[o + 2]); al *= (float)(1 - pv); va *= (float)(1 - pv); }
                     float si = MaanSini > 0 ? Math.Min(1f, H(sv)) : 0f;
                     if (si > 0)

@@ -672,6 +672,19 @@ namespace Matkakirja.Natiivi
                 var (az, korkeus) = AurinkoPisteessa(utc, naytteet.Average(n => n.Lat), naytteet.Average(n => n.Lon));
                 var kentta = new Pilvikentta { MaaOsuus = ty.MaaOsuus, AurinkoAz = az, AurinkoKorkeus = korkeus }.Kalibroi();
                 ty.Pilvet = kentta;
+                // Kirkas alue pääkohteen ympärillä (omistaja 6.10.: pilvet sivuille, pääkohde ei peity): ~26 % kuvan leveydestä
+                // täysin kirkas, vaimennus 54 %:iin asti (maan pinnalla kohteen etäisyydellä).
+                if (IssJuliste.Kaytossa)
+                {
+                    var kesk = naytteet.OrderBy(q => Math.Abs(q.Sx - 24) + Math.Abs(q.Sy - 18)).First();
+                    var (kLat, kLon) = kohdePiste ?? (kesk.Lat, kesk.Lon);
+                    var kpE = Kuvasuunnitelma.Ecef(kLat, kLon);
+                    double dKm = Math.Sqrt(Math.Pow(kk.Paikka.x - kpE.x, 2) + Math.Pow(kk.Paikka.y - kpE.y, 2) + Math.Pow(kk.Paikka.z - kpE.z, 2)) / 1000;
+                    double vaaka = 2 * Math.Atan(Math.Tan(kk.PystykenttaAst * Math.PI / 360) * W / H);
+                    double leveysKm = 2 * dKm * Math.Tan(vaaka / 2);
+                    ty.SelkeaAlue = (kLat, kLon, 0.13 * leveysKm, 0.27 * leveysKm);
+                    Loki($"selkeä alue: ({kLat:0.00}, {kLon:0.00}) {0.13 * leveysKm:0}–{0.27 * leveysKm:0} km");
+                }
                 // Päivän todelliset pilvet GIBS:stä, selkein 7 päivästä (omistaja 5.10. klo 15.5x); ei dataa → Pilvikenttä.
                 string kuvanLahde = "Contains modified Copernicus Sentinel data", pilviTieto = "pilvikenttä";
                 if (GibsPilvetPaalla)
@@ -938,7 +951,8 @@ namespace Matkakirja.Natiivi
                 var tyot = Task.Run(() => System.Threading.Tasks.Parallel.ForEach(lista, rinnakkain, l =>
                 {
                     var rgba = pl.Piirra(l.z, l.x, l.y);
-                    if (gp != null) KuvanTyosto.PiirraPilvet(gp, l.z, l.x, l.y, rgba, true);
+                    if (gp != null) KuvanTyosto.PiirraPilvet(gp, l.z, l.x, l.y, rgba, true,
+                        IssJuliste.Kaytossa ? (p.Lat, p.Lon, 0.13 * p.KokoM / 1000, 0.27 * p.KokoM / 1000) : ((double, double, double, double)?)null);
                     var kaanto = new byte[rgba.Length];   // EncodeArrayToPNG: rivi 0 alin
                     for (int y = 0; y < 256; y++) Buffer.BlockCopy(rgba, y * 1024, kaanto, (255 - y) * 1024, 1024);
                     var png = ImageConversion.EncodeArrayToPNG(kaanto, UnityEngine.Experimental.Rendering.GraphicsFormat.R8G8B8A8_SRGB, 256, 256);
