@@ -99,6 +99,7 @@ namespace Matkakirja.Natiivi
             (lat, lon) = Keskusta(lat, lon);   // Natural Earth -piste → kaupungin keskusta (Wikidata P625)
             Aloituskaupunki = nimi.Trim();
             Viimeisin.pakotettuSijainti = (lat, lon);
+            Viimeisin.keskusta = (lat, lon);
             Viimeisin.o.Kirjaa($"opas: kaupunki vaihtuu → {Aloituskaupunki} ({lat:F3}, {lon:F3})");
             if (!Viimeisin.AvaaKaupunki(lat, lon, Aloituskaupunki)) return false;
             Viimeisin.silmukka.VaihdaPaikka(lat, lon, nimi.Trim());   // kamera lentää heti kaupungin yleiskuvaan (Natiivi-UI 6.10. 00.2x)
@@ -115,6 +116,9 @@ namespace Matkakirja.Natiivi
             return false;
         }
         (double lat, double lon)? pakotettuSijainti;
+        /// <summary>Valitun kaupungin keskusta (kaupunki, täky tai avaus): pyyntöjen sijainti, kunnes kamera on kaupungissa (TF 152).</summary>
+        (double lat, double lon) keskusta = (KoopenhaminaTesti.Alku.Lat, KoopenhaminaTesti.Alku.Lon);
+        (double lat, double lon) PyynnonPaikka() => OpasSilmukka.PyynnonPaikka(silmukka.Asento, keskusta);
 
         readonly LinssiOhjain o;
         readonly PalloKierto kierto;
@@ -242,6 +246,7 @@ namespace Matkakirja.Natiivi
         {
             if (!kaupunkiOdottaa) return true;
             kaupunkiOdottaa = false;
+            keskusta = (lat, lon);
             double maa = MaaPisteessa(lat, lon);
             if (!kaupunki.Avaa(lat, lon, double.IsNaN(maa) ? 45 : maa))
             {
@@ -664,12 +669,12 @@ namespace Matkakirja.Natiivi
 
         IEnumerator HaeKohteet(string kaupunki)
         {
-            var a = silmukka.Asento;
-            using var r = Pyynto($"/opas/liiku?kaupunki={UnityWebRequest.EscapeURL(kaupunki)}&lat={a.Lat.ToString("F4", System.Globalization.CultureInfo.InvariantCulture)}&lon={a.Lon.ToString("F4", System.Globalization.CultureInfo.InvariantCulture)}");
+            var (aLat, aLon) = PyynnonPaikka();
+            using var r = Pyynto($"/opas/liiku?kaupunki={UnityWebRequest.EscapeURL(kaupunki)}&lat={aLat.ToString("F4", System.Globalization.CultureInfo.InvariantCulture)}&lon={aLon.ToString("F4", System.Globalization.CultureInfo.InvariantCulture)}");
             yield return r.SendWebRequest();
             if (silmukka == null || kohteetKaupunki != kaupunki) yield break;
             kohteet = r.result == UnityWebRequest.Result.Success ? OpasTaky.Lue(MiniJson.Jasenna(r.downloadHandler.text) as Dictionary<string, object>) : new List<OpasTaky>();
-            o.Kirjaa($"opas: liiku-lista {kohteet.Count} ({kaupunki}, {(r.result == UnityWebRequest.Result.Success ? "ok" : r.responseCode.ToString())})");
+            o.Kirjaa($"opas: liiku-lista {kohteet.Count} ({kaupunki} {aLat:F3}/{aLon:F3}, {(r.result == UnityWebRequest.Result.Success ? "ok" : r.responseCode.ToString())})");
         }
 
         /// <summary>Pöllö-pyyntö natiiviotsakkein (GET, tai POST jos body).</summary>
@@ -800,6 +805,7 @@ namespace Matkakirja.Natiivi
             var v = Viimeisin;
             if (!string.IsNullOrEmpty(t.Kaupunki)) Aloituskaupunki = t.Kaupunki;
             v.pakotettuSijainti = (t.Lat, t.Lon);
+            v.keskusta = (t.Lat, t.Lon);
             v.o.Kirjaa($"opas: täky valittu {t.Nimi} ({t.Kaupunki}, {t.Iso2})");
             if (v.tauolla) Tauko(false);
             if (v.kaupunkiOdottaa)
@@ -1108,11 +1114,11 @@ namespace Matkakirja.Natiivi
 
         IEnumerator Hae(int n, string toive)
         {
-            var a = silmukka.Asento;
-            double sLat = a.Lat, sLon = a.Lon;
+            var (sLat, sLon) = PyynnonPaikka();
             if (pakotettuSijainti is (double, double) ps) { sLat = ps.lat; sLon = ps.lon; pakotettuSijainti = null; }
             if (silmukka.PyynnonSijainti is (double, double) pk) { sLat = pk.lat; sLon = pk.lon; silmukka.PyynnonSijainti = null; }
             var kt = silmukka.KierrosTieto;
+            o.Kirjaa($"opas: pyyntö {n} {Aloituskaupunki} {sLat:F3}/{sLon:F3}");
             var sb = new StringBuilder("{");
             sb.Append("\"istunto\":\"").Append(istunto).Append("\",");
             sb.Append("\"toive\":").Append(toive == null ? "null" : "\"" + Escape(toive) + "\"").Append(',');
