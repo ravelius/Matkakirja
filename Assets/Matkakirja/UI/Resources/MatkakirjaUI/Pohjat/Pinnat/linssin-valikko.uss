@@ -235,3 +235,53 @@
     border-color: var(--tk-reunus);
     background-color: var(--tk-pinta-peitto);
 }
+
+/* OPPAAN ALOITUS ILMAN KARTTAA (omistaja 6.10.2026 13.4x; OpasValikko.aloitus): sama linssivalikko koko ruutuna TUMMALLA
+ * teemalla (lasin muuttujat tumman teeman arvoiksi, tekstit vaaleina), kaksi saraketta: paikat ja suosikit (LINSSIRIVI).
+ * Puhelimella pystyssä (--pino) paikat ylhäällä ja suosikit alla. */
+.mk-linssivalikko.mk-linssivalikko--pohja.mk-opas-aloitus {
+    --tk-lasi-pinta: var(--tk-tumma-pinta);
+    --tk-lasi-muste: var(--tk-tumma-muste);
+    --tk-lasi-muste-pehmea: var(--tk-tumma-muste-pehmea);
+    --tk-lasi-reunus: var(--tk-tumma-reunus);
+    --tk-lasi-korostus: var(--tk-tumma-korostus);
+    position: absolute;
+    flex-direction: row;
+    max-width: none;
+    border-width: 0;
+    border-radius: 0;
+    background-color: var(--tk-tumma-pinta);
+}
+
+.mk-opas-aloitus.mk-opas-aloitus--pino {
+    flex-direction: column;
+}
+
+.mk-opas-aloitus__sarake {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+    margin: 0 var(--tk-vali-s);
+}
+
+.mk-opas-aloitus--pino .mk-opas-aloitus__sarake {
+    margin: 0 0 var(--tk-vali-m) 0;
+}
+
+.mk-opas-aloitus--pino .mk-opas-aloitus__sarake--paikat {
+    flex-grow: 0;
+    flex-basis: auto;
+}
+
+.mk-opas-aloitus__lista {
+    flex-shrink: 1;
+}
+
+.mk-opas-aloitus .mk-linssivalitsin__valiotsikko,
+.mk-opas-aloitus .mk-linssirivi__lyhyt {
+    color: var(--tk-tumma-muste-pehmea);
+}
+
+.mk-opas-aloitus .mk-linssirivi__nimi {
+    color: var(--tk-tumma-muste);
+}
