@@ -2172,13 +2172,27 @@ namespace Matkakirja.Natiivi
         Button taukoNappi;
         bool taukoTauolla;
 
+        /// <summary>
+        /// Pulun luenta soi, on tauolla tai palojen välissä. Vastausvirta (luentaVirta) päättyy jo tekstin valmistuttua, vaikka
+        /// ääni soi vielä, joten tauko tunnistetaan soivasta persoonasta (pollo), ei virrasta.
+        /// </summary>
+        bool PulunLuentaKesken
+        {
+            get
+            {
+                var p = Puhe.Instanssi;
+                if (p == null || lukija.Lukee) return false;
+                return p.PuluaaniSoi || (p.Tauolla && p.SoivaPersoona == "pollo") || luentaVirta != null;
+            }
+        }
+
         /// <summary>Tauko pyydetty palojen välissä (Puhe.Tauko onnistuu vasta, kun seuraava pala soi): yritetään uudelleen.</summary>
         bool taukoPyydetty;
 
         void VaihdaTauko()
         {
             var p = Puhe.Instanssi;
-            if (p == null || !(OmaLuentaKaynnissa || luentaVirta != null)) return;
+            if (p == null || !PulunLuentaKesken) return;
             if (p.Tauolla || taukoPyydetty) { taukoPyydetty = false; p.Jatka(); }
             else if (!p.Tauko()) taukoPyydetty = true;
             PaivitaTauko();
@@ -2188,7 +2202,7 @@ namespace Matkakirja.Natiivi
         {
             var p = Puhe.Instanssi;
             // Myös palojen välissä (luentaVirta auki), ettei nappi välky virkkeiden välillä.
-            bool nakyy = Auki && (OmaLuentaKaynnissa || taukoPyydetty || (luentaVirta != null && !lukija.Lukee));
+            bool nakyy = Auki && (PulunLuentaKesken || taukoPyydetty);
             if (!nakyy) taukoPyydetty = false;
             else if (taukoPyydetty && p != null && !p.Tauolla && p.Tauko()) taukoPyydetty = false;
             taukoNappi.style.display = nakyy ? DisplayStyle.Flex : DisplayStyle.None;
