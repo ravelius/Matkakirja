@@ -180,6 +180,7 @@ namespace Matkakirja.Natiivi
             sirurivi.schedule.Execute(SovitaKrediitteihin).Every(500);
 
             RakennaSiirtyma();
+            RakennaKirjoitus();
             kuvaKortti = Rakenne.El("mk-nosto tk-teema-harmaa", Juuri, PickingMode.Position);
             kuvaKortti.style.position = Position.Absolute;
             kuvaKortti.style.right = 0;
@@ -362,8 +363,7 @@ namespace Matkakirja.Natiivi
                     mikkiNappi.RemoveFromClassList("mk-valittu");
                     string teksti = (t ?? "").Trim();
                     if (teksti.Length == 0) return;
-                    Debug.Log("MATKAKIRJA opas: puhe oppaalle \"" + teksti + "\"");
-                    if (!(PuluChat.Sieppaa?.Invoke(teksti) ?? false)) UiNakymat.Hae()?.Chat?.Kysy(teksti, true);
+                    PuhuOppaalle(teksti, "puhe");
                 },
                 virhe: _ => mikkiNappi.RemoveFromClassList("mk-valittu"));
         }
@@ -372,8 +372,41 @@ namespace Matkakirja.Natiivi
         void Kirjoita()
         {
             Sulje();
-            UiNakymat.Hae()?.Chat?.AvaaOppaalleKirjoitus(() => napit.worldBound.width > 0 ? napit.worldBound : nappi.worldBound);
-            Debug.Log("MATKAKIRJA opas: kirjoitus auki");
+            bool auki = kirjoitus.style.display != DisplayStyle.Flex;
+            kirjoitus.style.display = auki ? DisplayStyle.Flex : DisplayStyle.None;
+            if (auki) { kentta.value = ""; kentta.schedule.Execute(() => kentta.Focus()).ExecuteLater(16); }
+            Debug.Log("MATKAKIRJA opas: kirjoitus " + (auki ? "auki" : "kiinni"));
+        }
+
+        /// <summary>Mikin ja näppäimistön teksti suoraan oppaalle (LS1 OpasSovitin.Puhu); varalla Pulun sieppaus.</summary>
+        void PuhuOppaalle(string teksti, string mista)
+        {
+            teksti = (teksti ?? "").Trim();
+            if (teksti.Length == 0) return;
+            Debug.Log($"MATKAKIRJA opas: {mista} oppaalle \"{teksti}\"");
+            if (Sano("Puhu", new[] { typeof(string) }, teksti)) return;
+            if (!(PuluChat.Sieppaa?.Invoke(teksti) ?? false)) UiNakymat.Hae()?.Chat?.Kysy(teksti, true);
+        }
+
+        // Näppäimistön syöttörivi: Pulun syöttörivin pohja (mk-chat__rivi, __kentta, __laheta) lasiteemassa napinrivin yläpuolella.
+        VisualElement kirjoitus;
+        TextField kentta;
+
+        void RakennaKirjoitus()
+        {
+            kirjoitus = Rakenne.El("tk-teema-harmaa mk-chat--lasi mk-opas-kirjoitus", Juuri, PickingMode.Position);
+            kirjoitus.style.display = DisplayStyle.None;
+            var rivi = Rakenne.El("mk-chat__rivi", kirjoitus, PickingMode.Ignore);
+            kentta = new TextField { maxLength = 300 };
+            kentta.AddToClassList("mk-chat__kentta");
+            kentta.textEdition.placeholder = "Kysy oppaalta…";
+            Kirjasimet.Aseta(kentta, Kirjasin.Moderni);
+            void Laheta() { var t = kentta.value; kentta.value = ""; kirjoitus.style.display = DisplayStyle.None; PuhuOppaalle(t, "kirjoitus"); }
+            kentta.RegisterCallback<KeyDownEvent>(e => { if (e.keyCode == KeyCode.Return || e.keyCode == KeyCode.KeypadEnter) { Laheta(); e.StopPropagation(); } });
+            rivi.Add(kentta);
+            var laheta = Rakenne.Nappi(null, "mk-chat__laheta", Laheta, rivi, Ikonit.Nuoli);
+            laheta.tooltip = "Lähetä oppaalle";
+            kirjoitus.RegisterCallback<PointerDownEvent>(e => e.StopPropagation());
         }
 
         /// <summary>OpasSovittimen lista nimellä (LS1:n rajapinta: Kysymykset, Kohteet); null = latautuu tai ei vielä saatavilla.</summary>
@@ -397,7 +430,12 @@ namespace Matkakirja.Natiivi
             foreach (var q in kys)
             {
                 string t = q;
-                Action teko = () => { Sulje(); Valitse(t); };
+                Action teko = () =>
+                {
+                    Sulje();
+                    Debug.Log("MATKAKIRJA opas: kysy \"" + t + "\"");
+                    if (!Sano("Kysy", new[] { typeof(string) }, t)) Valitse(t);
+                };
                 var b = Rakenne.Nappi(null, "mk-linssivalikko__kohta mk-linssivalikko__komento", () => Rivilta(teko), rivit);
                 var n = Rakenne.Teksti(t, "mk-linssivalikko__nimi", b);
                 n.style.whiteSpace = WhiteSpace.Normal;
@@ -433,7 +471,7 @@ namespace Matkakirja.Natiivi
             {
                 Sulje();
                 Debug.Log("MATKAKIRJA opas: siirry " + t.Nimi);
-                if (!Sano("Siirry", new[] { typeof(Matkakirja.Linssit.Kierros.OpasTaky) }, t)) OpasSovitin.Valitse(t);
+                if (!Sano("Liiku", new[] { typeof(Matkakirja.Linssit.Kierros.OpasTaky) }, t)) OpasSovitin.Valitse(t);
             };
             var b = Rakenne.Nappi(null, "mk-linssirivi mk-opas-taky", () => Rivilta(teko), rivit);
             b.tooltip = t.Nimi;
@@ -460,6 +498,7 @@ namespace Matkakirja.Natiivi
                 else { napit.style.opacity = 0f; napit.schedule.Execute(() => { if (!nappiNakyy) napit.style.display = DisplayStyle.None; }).StartingIn(Tyylikirja.Kesto.Sulku); }
             }
             napit.style.bottom = krediittiAla;
+            kirjoitus.style.bottom = krediittiAla + 52f;
             if (VanhatSirut) PaivitaVanhatSirut();
         }
 

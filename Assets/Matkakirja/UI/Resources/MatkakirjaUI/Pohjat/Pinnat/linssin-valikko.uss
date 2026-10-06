@@ -222,3 +222,16 @@
     color: var(--tk-korostus);
     -unity-text-align: middle-center;
 }
+
+/* Oppaan näppäimistö: Pulun syöttörivi lasiteemassa nappirivin yläpuolella, kirjoitus menee suoraan oppaalle. */
+.mk-opas-kirjoitus {
+    position: absolute;
+    left: var(--tk-vali-m);
+    right: var(--tk-vali-m);
+    bottom: 92px;
+    padding: 6px;
+    border-width: 1px;
+    border-radius: var(--tk-kulma-nappi);
+    border-color: var(--tk-reunus);
+    background-color: var(--tk-pinta-peitto);
+}
