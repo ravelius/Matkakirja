@@ -1,0 +1,717 @@
+{
+  "source": "posti/fable-codex-oppaan-kuvat-linssivalikko-20261006.md",
+  "sourceCommit": "93aa2ab1e1151ab29d744d508bf8260fd21e9cab",
+  "batch": 2,
+  "orderGroup": "1b",
+  "pilot": false,
+  "instructionsVersion": 2,
+  "imagesPerPlace": 1,
+  "createdAt": "2026-10-06T22:17:53.964511+00:00",
+  "cityIds": [
+    "alger",
+    "sanjose",
+    "belgrad",
+    "luanda"
+  ],
+  "cityCount": 4,
+  "imageCount": 4,
+  "requestedCityIds": [
+    "alger",
+    "sanjose",
+    "belgrad",
+    "bamako",
+    "khartum",
+    "brasilia",
+    "bratislava",
+    "bangui",
+    "lome",
+    "minsk",
+    "amman",
+    "andorralavella",
+    "sanmarino",
+    "luanda",
+    "lusaka",
+    "beirut",
+    "manama",
+    "belmopan",
+    "ottawa",
+    "pretoria",
+    "rabat",
+    "harare",
+    "mogadishu",
+    "nouakchott",
+    "dodoma"
+  ],
+  "requestedCityCount": 25,
+  "blockedPlaces": [],
+  "pendingPlaces": [
+    {
+      "cityId": "bamako",
+      "orderIndex": 29,
+      "state": "source-or-current-condition-gate",
+      "evidence": "kaupungit/bamako/sourceblock.json",
+      "imageDelivered": false
+    },
+    {
+      "cityId": "khartum",
+      "orderIndex": 30,
+      "state": "source-or-current-condition-gate",
+      "evidence": "kaupungit/khartum/este.json",
+      "imageDelivered": false
+    },
+    {
+      "cityId": "brasilia",
+      "orderIndex": 31,
+      "state": "source-or-current-condition-gate",
+      "evidence": "kaupungit/brasilia/sourceblock.json",
+      "imageDelivered": false
+    },
+    {
+      "cityId": "bratislava",
+      "orderIndex": 32,
+      "state": "source-or-current-condition-gate",
+      "evidence": "kaupungit/bratislava/sourceblock.json",
+      "imageDelivered": false
+    },
+    {
+      "cityId": "bangui",
+      "orderIndex": 33,
+      "state": "source-or-current-condition-gate",
+      "evidence": "kaupungit/bangui/sourceblock.json",
+      "imageDelivered": false
+    },
+    {
+      "cityId": "lome",
+      "orderIndex": 34,
+      "state": "source-or-current-condition-gate",
+      "evidence": "kaupungit/lome/sourceblock.json",
+      "imageDelivered": false
+    },
+    {
+      "cityId": "minsk",
+      "orderIndex": 35,
+      "state": "source-or-current-condition-gate",
+      "evidence": "kaupungit/minsk/sourceblock.json",
+      "imageDelivered": false
+    },
+    {
+      "cityId": "amman",
+      "orderIndex": 36,
+      "state": "source-or-current-condition-gate",
+      "evidence": "kaupungit/amman/sourceblock.json",
+      "imageDelivered": false
+    },
+    {
+      "cityId": "andorralavella",
+      "orderIndex": 37,
+      "state": "source-or-current-condition-gate",
+      "evidence": "kaupungit/andorralavella/sourceblock.json",
+      "imageDelivered": false
+    },
+    {
+      "cityId": "sanmarino",
+      "orderIndex": 38,
+      "state": "source-or-current-condition-gate",
+      "evidence": "kaupungit/sanmarino/sourceblock.json",
+      "imageDelivered": false
+    },
+    {
+      "cityId": "lusaka",
+      "orderIndex": 40,
+      "state": "source-or-current-condition-gate",
+      "evidence": "kaupungit/lusaka/este.json",
+      "imageDelivered": false
+    },
+    {
+      "cityId": "beirut",
+      "orderIndex": 41,
+      "state": "source-or-current-condition-gate",
+      "evidence": "kaupungit/beirut/este.json",
+      "imageDelivered": false
+    },
+    {
+      "cityId": "manama",
+      "orderIndex": 42,
+      "state": "source-or-current-condition-gate",
+      "evidence": "kaupungit/manama/este.json",
+      "imageDelivered": false
+    },
+    {
+      "cityId": "belmopan",
+      "orderIndex": 43,
+      "state": "source-or-current-condition-gate",
+      "evidence": "kaupungit/belmopan/este.json",
+      "imageDelivered": false
+    },
+    {
+      "cityId": "ottawa",
+      "orderIndex": 44,
+      "state": "source-or-current-condition-gate",
+      "evidence": "kaupungit/ottawa/este.json",
+      "imageDelivered": false
+    },
+    {
+      "cityId": "pretoria",
+      "orderIndex": 45,
+      "state": "source-or-current-condition-gate",
+      "evidence": "kaupungit/pretoria/este.json",
+      "imageDelivered": false
+    },
+    {
+      "cityId": "rabat",
+      "orderIndex": 46,
+      "state": "source-or-current-condition-gate",
+      "evidence": "kaupungit/rabat/este.json",
+      "imageDelivered": false
+    },
+    {
+      "cityId": "harare",
+      "orderIndex": 47,
+      "state": "source-or-current-condition-gate",
+      "evidence": "kaupungit/harare/este.json",
+      "imageDelivered": false
+    },
+    {
+      "cityId": "mogadishu",
+      "orderIndex": 48,
+      "state": "source-or-current-condition-gate",
+      "evidence": "kaupungit/mogadishu/este.json",
+      "imageDelivered": false
+    },
+    {
+      "cityId": "nouakchott",
+      "orderIndex": 49,
+      "state": "source-or-current-condition-gate",
+      "evidence": "kaupungit/nouakchott/este.json",
+      "imageDelivered": false
+    },
+    {
+      "cityId": "dodoma",
+      "orderIndex": 50,
+      "state": "source-or-current-condition-gate",
+      "evidence": "kaupungit/dodoma/este.json",
+      "imageDelivered": false
+    }
+  ],
+  "batchComplete": false,
+  "productionDimensions": {
+    "width": 1536,
+    "height": 1024,
+    "aspectRatio": "3:2",
+    "format": "PNG",
+    "colorSpace": "sRGB",
+    "alpha": "opaque"
+  },
+  "sampleSeriesVerification": [
+    {
+      "city": "petra",
+      "time": "aamu",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/sources/valmiit-sarjat/hero-petra-aamu.png",
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-petra-aamu.png",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGB",
+      "mime": "image/png",
+      "bytes": 3303791,
+      "sha256": "102f5c115c82b3d031cc11abbb02719f1b57cc82dc56fb1a607714e0d516dd15"
+    },
+    {
+      "city": "petra",
+      "time": "keskipaiva",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/sources/valmiit-sarjat/hero-petra-keskipaiva.png",
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-petra-keskipaiva.png",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGB",
+      "mime": "image/png",
+      "bytes": 3353858,
+      "sha256": "694ac4c78c74ea3d4989eca0ae1becca3d5e4772bc27bf3189c71b31cd050be6"
+    },
+    {
+      "city": "petra",
+      "time": "ilta",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/sources/valmiit-sarjat/hero-petra-ilta.png",
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-petra-ilta.png",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGB",
+      "mime": "image/png",
+      "bytes": 3400112,
+      "sha256": "d9f25f596e3103de9c60fbb6cfb60b10d2291b8a48c4f853495ffd84c8efd4ba"
+    },
+    {
+      "city": "adelaide",
+      "time": "aamu",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/sources/valmiit-sarjat/hero-adelaide-aamu.png",
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-adelaide-aamu.png",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGB",
+      "mime": "image/png",
+      "bytes": 3403905,
+      "sha256": "a95a5118e3be1c8a20830e56a29d4e3bbd3bcdc306dbd45fec6c6b7510cccc60"
+    },
+    {
+      "city": "adelaide",
+      "time": "keskipaiva",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/sources/valmiit-sarjat/hero-adelaide-keskipaiva.png",
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-adelaide-keskipaiva.png",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGB",
+      "mime": "image/png",
+      "bytes": 3212483,
+      "sha256": "b350e1619355b41a265d006f1d3aa5bb935f2181319683c0b49c91a47130d2ce"
+    },
+    {
+      "city": "adelaide",
+      "time": "ilta",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/sources/valmiit-sarjat/hero-adelaide-ilta.png",
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-adelaide-ilta.png",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGB",
+      "mime": "image/png",
+      "bytes": 3200990,
+      "sha256": "5785b042bda03b0ffdfbb88f268b3f6637378cee52a4f06f2d0e2dbd16d9fc8f"
+    },
+    {
+      "city": "tampere",
+      "time": "aamu",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/sources/valmiit-sarjat/hero-tampere-aamu.png",
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-tampere-aamu.png",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGB",
+      "mime": "image/png",
+      "bytes": 2901348,
+      "sha256": "2ab40418138cc6abd27a6fd76db13ff7622e1c4673b3c68eac25d3e51828a2a4"
+    },
+    {
+      "city": "tampere",
+      "time": "keskipaiva",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/sources/valmiit-sarjat/hero-tampere-keskipaiva.png",
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-tampere-keskipaiva.png",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGB",
+      "mime": "image/png",
+      "bytes": 3358624,
+      "sha256": "92386c3c9a1ea07d507c701c3996a830d4534b01f6459f660338dd865f23b98d"
+    },
+    {
+      "city": "tampere",
+      "time": "ilta",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/sources/valmiit-sarjat/hero-tampere-ilta.png",
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-tampere-ilta.png",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGB",
+      "mime": "image/png",
+      "bytes": 3365770,
+      "sha256": "2d36abe2539bed4a2f9d7e11dae30884d285178127cc6333c809b438a5cc7dd5"
+    }
+  ],
+  "cameraRule": "Yksi paikan mielenkiintoisin tunnuskuva, fotorealistinen nykymaailma; hetki ja kuvakulma valitaan paikalle.",
+  "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+  "originalsPreserved": true,
+  "generationMethod": "built-in image_gen; one image per place; any rejected candidate is retained and replaced with a complete new generation",
+  "review": {
+    "primaryVisualReview": "passed",
+    "editorFirstThree": "pending",
+    "gameIntegrationVerified": false,
+    "published": false,
+    "firstThreeRequested": [
+      "alger",
+      "sanjose",
+      "belgrad"
+    ],
+    "firstThreeAllDelivered": true
+  },
+  "assets": [
+    {
+      "cityId": "alger",
+      "q": "Q3561",
+      "lat": 36.7764,
+      "lon": 3.0586,
+      "orderGroup": "1B",
+      "file": "hero-alger.png",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/alger/hero-alger.png",
+      "r2Key": "julisteet/herokoe/hero-alger.png",
+      "sha256": "150d0885955f8a6ead0757b9349722b5b5719def63de28b603c8442c53bb8c7e",
+      "width": 1536,
+      "height": 1024,
+      "generationPrompt": "Use case: photorealistic-natural.\nAsset: one contemporary city hero, opaque landscape PNG exactly 1536 x 1024 pixels, 3:2.\nPrimary request: Generate a complete new photorealistic view of the authentic Notre-Dame d'Afrique basilica on its hill in Algiers, Algeria (city Q3561, 36.7764 N, 3.0586 E), at early blue hour with its existing lights on.\nReferences: three Commons photographs by Dezedien (2023), Muhammed amine benloulou (2023) and Mehdi Guenifi (2020) are factual architecture references from the exact basilica category, not edit targets or compositions to copy. The frontal photo anchors the actual entrance, flanking cylindrical turrets and steps; the oblique photos establish the central drum, main dome, side apses, mosaic bands and stonework. Do not copy the photographed people, plaques or photographic artefacts.\nSubject: the real compact Neo-Byzantine basilica in pale honey and softly rosy stone blocks, its main pale-grey rounded dome on an arched-window drum behind the facade, actual lower domed side apses, curved front pediment topped by its small statue, and exactly two slender CYLINDRICAL FRONT turrets capped by the actual open domed lantern kiosks. Preserve the striking blue-and-white mosaic bands around the turrets and upper cornices, the two wooden entrance doors with their round tracery windows, the central blind arch and three low rounded front roof forms. Correct relative heights, massing and masonry; no invented minarets, pointed spires or substituted mosque.\nCamera: LOW ELEVATED viewpoint about 20 metres at adjacent rooftop height from the front terrace, slightly oblique and gently down about 15 degrees. The full building, dome and turret tops remain large and dominant with comfortable margins. Show its actual broad stone steps and hill terrace directly below, and restrained immediate low Algiers houses and sloping local terrain at the edges, following the reference setting. Keep the view tight and geographically believable, no imported skyline, exotic mountain chain or extra domed building. Upright architecture and natural full-frame perspective, not top-down or ground-level looking upward.\nLight: blue twilight sky with a few soft pale clouds, remaining ambient light on pale stone and blue mosaic, the basilica's real warm floodlights just on as shown in the night references. Gentle warm highlights and cool shaded details, photographic colour and contrast, not pitch-black night, neon fantasy or theatrical beams.\nConstraints: current Algiers exterior. No readable words, digits, inscriptions, typography, signs, logos, watermark, border or frame. No identifiable people or large foreground vehicles. No repeated towers, imaginary domes, painterly or miniature rendering, or excessive HDR. Entire image opaque.",
+      "viitteet": [
+        {
+          "nimi": "File:Basilique Notre-Dame-d'Afrique 2023 01.jpg",
+          "tekija": "Dezedien",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Basilique_Notre-Dame-d%27Afrique_2023_01.jpg"
+        },
+        {
+          "nimi": "File:Notre Dame d'Afrique at night.jpg",
+          "tekija": "Muhammed amine benloulou",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Notre_Dame_d%27Afrique_at_night.jpg"
+        },
+        {
+          "nimi": "File:Notre Dame d'Afrique ou Madame D'Afrique Cathedralle.jpg",
+          "tekija": "Mehdi Guenifi",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Notre_Dame_d%27Afrique_ou_Madame_D%27Afrique_Cathedralle.jpg"
+        }
+      ],
+      "originalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/alger/originals/hero-alger-original.png",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "license": "CC BY-SA 4.0",
+      "caption": "Notre-Dame-d’Afrique-basilika Algerin rinteellä sinisen iltahetken valossa.",
+      "QA": {
+        "result": "production_review_pass",
+        "viewedAtNativeSize": true,
+        "previewWidths": [
+          384,
+          480
+        ],
+        "subjectIdentification": "Kohteen oma Commons-kategoria ja katsotut eri kuvaajien viitteet.",
+        "visualReview": "Notre-Dame-d’Afrique-basilikan todellinen kupoli ja ikkunoiden rumpu, kaksi sylinterimäistä etutornia, mosaiikkivyöhykkeet, kaksi puuovea ja portaat vastaavat kolmea eri viitettä. Rinneympäristö pysyy Algerissa ja kuvassa ei ole kuviteltuja minareetteja tai lisättyä tekstiä. Kupoli ja mosaiikit tunnistettavat myös pikkukoossa.",
+        "referenceGate": {
+          "certainty": "kategoria",
+          "category": "Category:Notre Dame d'Afrique",
+          "count": 3,
+          "differentPhotographers": 3
+        },
+        "technical": {
+          "format": "PNG",
+          "size": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "opaque": true,
+          "iccProfile": "sRGB built-in",
+          "sourceSize": [
+            1536,
+            1024
+          ],
+          "pixelsUnchangedInTechnicalExport": true,
+          "sha256": "150d0885955f8a6ead0757b9349722b5b5719def63de28b603c8442c53bb8c7e"
+        },
+        "approvalStatus": "awaiting_parent_review_and_chief_editor_approval"
+      },
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-alger.png",
+      "bytes": 2519252,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "gameIntegrated": false,
+      "editorReview": "pending",
+      "instructionsVersion": 2,
+      "orderIndex": 26,
+      "nimi": "Alger",
+      "maa": "Algeria"
+    },
+    {
+      "cityId": "sanjose",
+      "q": "Q3070",
+      "lat": 9.9327,
+      "lon": -84.0796,
+      "orderGroup": "1B",
+      "file": "hero-sanjose.png",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/sanjose/hero-sanjose.png",
+      "r2Key": "julisteet/herokoe/hero-sanjose.png",
+      "sha256": "2c9f478bb42dcb35c8b2a895e8a5c0677575bc6e9466f18e4de5ea9d3725f3f5",
+      "width": 1536,
+      "height": 1024,
+      "generationPrompt": "Use case: photorealistic-natural.\nAsset: one opaque contemporary city hero photograph, exactly 1536 x 1024 pixels, landscape 3:2.\nGenerate a complete new photorealistic exterior view of the real National Theatre of Costa Rica in central San José, Costa Rica (Q3070, 9.9327 N, 84.0796 W). Use the three supplied Commons photographs by AndSalx95, Mariordo and CZmarlin as factual architecture and immediate-setting references, not compositions to copy. Retain the real theatre identity and geometry.\nThe actual compact two-storey warm sandstone neoclassical theatre dominates the frame: central triangular sculpted pediment with exactly the real three roofline statues (winged figure at apex and standing figures at both lower corners), three central upper arched windows with ornate white lunettes, three upper windows on each lateral wing, correct stone pilasters, balustrade and central dark curved metal entrance canopy. Preserve the red low roof behind the facade, original wrought iron fence, planted narrow garden and pale checkered pavement in front. The building is in contemporary San José with restrained real downtown blocks at the sides, not isolated in a European park.\nCamera: a LOW elevated neighbouring rooftop about 17 metres above the plaza, gently looking down about 15 degrees, slight three-quarter angle with the front dominant. Entire pediment, statues, both facade wings, fence and a little foreground paving are inside frame with comfortable margins. Building large and unmistakable, upright verticals and realistic 40mm full-frame perspective. No ground-level upward view or high aerial view.\nLight: clean early morning after a light overnight shower, low warm side sunlight gently describing sandstone and statuary, cool soft shadows, a few pale clouds in fresh blue sky, subtly damp paving with restrained reflections. No orange flood, excessive HDR or illustration style.\nConstraints: true present-day exterior; no readable words, letters or digits even on the facade, no typography, signage, brands, logos, watermark, border or frame. Do not copy any photographed people; plaza calm, no identifiable people. No foreground cars, fantasy towers or additional pediments. Photographic materials and believable urban scale. Entire image opaque.",
+      "viitteet": [
+        {
+          "nimi": "File:National Theatre of Costa Rica - October 2023.jpg",
+          "tekija": "AndSalx95",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:National_Theatre_of_Costa_Rica_-_October_2023.jpg"
+        },
+        {
+          "nimi": "File:Teatro Nacional CRI 07 2019 8963.jpg",
+          "tekija": "Mario Roberto Durán Ortiz (Mariordo)",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Teatro_Nacional_CRI_07_2019_8963.jpg"
+        },
+        {
+          "nimi": "File:Front of National Theater in San Jose Costa Rica night.jpg",
+          "tekija": "Christopher Ziemnowicz (CZmarlin)",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Front_of_National_Theater_in_San_Jose_Costa_Rica_night.jpg"
+        }
+      ],
+      "originalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/sanjose/originals/hero-sanjose-original.png",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "license": "CC BY-SA 4.0",
+      "caption": "San Josén Kansallisteatterin hiekkakivijulkisivu aamun pehmeässä valossa.",
+      "QA": {
+        "result": "production_review_pass",
+        "viewedAtNativeSize": true,
+        "previewWidths": [
+          384,
+          480
+        ],
+        "subjectIdentification": "Kohteen oma Commons-kategoria ja katsotut eri kuvaajien viitteet.",
+        "visualReview": "Kolme katsottua eri kuvaajan kategorian Kansallisteatteri-ulkojulkisivua. Keskuspäädyn kolme kattopatsasta, 3+3+3 kaari-ikkunat, kivipilasterit, punainen katto, balustradi, metallikatos, puutarha ja portti vastaavat aihetta. Matala kattokamera; aamun valo, nykyiset keskustakorttelit. Ei luettavaa tekstiä tai tunnistettavia ihmisiä.",
+        "referenceGate": {
+          "certainty": "kategoria",
+          "category": "Category:National Theatre of Costa Rica",
+          "count": 3,
+          "differentPhotographers": 3
+        },
+        "technical": {
+          "format": "PNG",
+          "size": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "opaque": true,
+          "iccProfile": "sRGB built-in",
+          "sourceSize": [
+            1536,
+            1024
+          ],
+          "pixelsUnchangedInTechnicalExport": true,
+          "sha256": "2c9f478bb42dcb35c8b2a895e8a5c0677575bc6e9466f18e4de5ea9d3725f3f5"
+        },
+        "approvalStatus": "awaiting_parent_review_and_chief_editor_approval"
+      },
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-sanjose.png",
+      "bytes": 3092406,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "gameIntegrated": false,
+      "editorReview": "pending",
+      "instructionsVersion": 2,
+      "orderIndex": 27,
+      "nimi": "San José",
+      "maa": "Costa Rica"
+    },
+    {
+      "cityId": "belgrad",
+      "q": "Q3711",
+      "lat": 44.8178,
+      "lon": 20.4569,
+      "orderGroup": "1B",
+      "file": "hero-belgrad.png",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/belgrad/hero-belgrad.png",
+      "r2Key": "julisteet/herokoe/hero-belgrad.png",
+      "sha256": "5db439ad6bd70f78205d8d20f99814b6d68bb5236edcf4acb1767eede6fd03e4",
+      "width": 1536,
+      "height": 1024,
+      "generationPrompt": "Use case: photorealistic-natural.\nAsset: one opaque contemporary city hero, exactly 1536 x 1024 pixels, landscape 3:2.\nGenerate a complete new photorealistic view of the real Temple of Saint Sava on the Vračar plateau in Belgrade, Serbia (Q3711, 44.8178 N,20.4569 E). Three supplied Commons exterior photographs by VID Maxim (2025), Gorica1812 (2025) and Marina Jana (2024) establish the actual white-stone architecture, green copper roofs and planted plateau. Use as factual references, not edit targets; omit the foreground flowers and people. This is the huge temple, not the small neighbouring old Saint Sava church.\nComposition: slightly oblique view from the EASTERN APSE SIDE shown clearly in the first supplied photograph. The large real building dominates: massive high central pale-patina green copper dome on a tall drum with round arched dark windows, tiered broad half-domes beneath, lower rounded apse in the foreground with tall slim dark arched windows, real flanking square/octagonal towers capped with small green roofs and gold Orthodox crosses. Preserve the plain ivory-white rectangular stone cladding, dark maroon roof edging, exact relative heights and compact tiered massing in the photographs. This apse is windowed, do not invent front entry doors on this side.\nCamera: LOW elevated rooftop height approximately 22 metres above the plateau, looking gently down about 15 degrees, upright architectural perspective around 40mm. The entire dome, gold central cross, lower roofs and whole apse are in frame with comfortable sky margins; building large, no high top-down aerial or ground-level upward view. Show the real immediately surrounding paved walks, modest lawn, trees and restrained low contemporary Belgrade residential blocks at far edges. No copied flower foreground, no dramatic mountains, imported skyscrapers or fantasy skyline.\nLight: luminous late-afternoon light after the clouds part, warmly grazing white stone and the soft patinated green roofs, natural pale-blue sky and layered small clouds, gently cool shadows with real masonry detail. Fresh greenery. Natural photographic contrast and lens rendition.\nConstraints: correct current building and urban plateau setting. No readable letters, numbers, inscriptions, signage, overlays, logos, watermarks, borders or text. No identifiable people or large foreground cars. No duplicate main domes, minarets, pointy spires, fictitious entrances or marble miniature appearance. Entire image opaque.",
+      "viitteet": [
+        {
+          "nimi": "File:Hram Vracar 1.jpg",
+          "tekija": "VID Maxim",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Hram_Vracar_1.jpg"
+        },
+        {
+          "nimi": "File:Hram Svetog Save 2025.jpg",
+          "tekija": "Gorica 1812",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Hram_Svetog_Save_2025.jpg"
+        },
+        {
+          "nimi": "File:Светосавски плато - Храм и тмуран дан.jpg",
+          "tekija": "Marina Jana",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:%D0%A1%D0%B2%D0%B5%D1%82%D0%BE%D1%81%D0%B0%D0%B2%D1%81%D0%BA%D0%B8_%D0%BF%D0%BB%D0%B0%D1%82%D0%BE_-_%D0%A5%D1%80%D0%B0%D0%BC_%D0%B8_%D1%82%D0%BC%D1%83%D1%80%D0%B0%D0%BD_%D0%B4%D0%B0%D0%BD.jpg"
+        }
+      ],
+      "originalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/belgrad/originals/hero-belgrad-original.png",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "license": "CC BY-SA 4.0",
+      "caption": "Belgradin Pyhän Savan temppelin valkoinen kivirunko ja vihreät kupolit iltapäivän valossa.",
+      "QA": {
+        "result": "production_review_pass",
+        "viewedAtNativeSize": true,
+        "previewWidths": [
+          384,
+          480
+        ],
+        "subjectIdentification": "Kohteen oma Commons-kategoria ja katsotut eri kuvaajien viitteet.",
+        "visualReview": "Kolmen eri kuvaajan nykykuvat kategoriasta katsottu. Itäinen ikkunallinen pyöröapse, vihreät pää- ja puolikupolit, kupolirumpujen kaari-ikkunat, nelikulmaisten sivutornien massat, kultaristit ja valkokiven nauhat vastaavat rakennusta. Ikkunallinen apse ei virheellisesti vaihdu sisäänkäynniksi. Matala kattokamera, koko tunnistettava rakennus myös 480 px:ssa, ei luettavaa tekstiä eikä tunnistettavia ihmisiä.",
+        "referenceGate": {
+          "certainty": "kategoria",
+          "category": "Category:Temple of Saint Sava",
+          "count": 3,
+          "differentPhotographers": 3
+        },
+        "technical": {
+          "format": "PNG",
+          "size": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "opaque": true,
+          "iccProfile": "sRGB built-in",
+          "sourceSize": [
+            1536,
+            1024
+          ],
+          "pixelsUnchangedInTechnicalExport": true,
+          "sha256": "5db439ad6bd70f78205d8d20f99814b6d68bb5236edcf4acb1767eede6fd03e4"
+        },
+        "approvalStatus": "awaiting_parent_review_and_chief_editor_approval"
+      },
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-belgrad.png",
+      "bytes": 2774841,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "gameIntegrated": false,
+      "editorReview": "pending",
+      "instructionsVersion": 2,
+      "orderIndex": 28,
+      "nimi": "Belgrad",
+      "maa": "Serbia"
+    },
+    {
+      "cityId": "luanda",
+      "city": "luanda",
+      "q": "Q3897",
+      "lat": -8.8383,
+      "lon": 13.2344,
+      "orderGroup": "1B",
+      "file": "hero-luanda.png",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/luanda/final/hero-luanda.png",
+      "r2Key": "julisteet/herokoe/hero-luanda.png",
+      "sha256": "59acf7bd584a368939cd3903429fd3881a48ebb409dd9f1ff3e139f0b57d60e7",
+      "bytes": 2532445,
+      "width": 1536,
+      "height": 1024,
+      "mime": "image/png",
+      "colorSpace": "sRGB",
+      "opaque": true,
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "caption": "São Miguelin linnoituksen vartiotorni ja kunnostetut ulkomuurit Luandassa.",
+      "generationPrompt": "Use case: photorealistic-natural.\nONE new current-day hero architecture photograph of the actual Fortaleza de SaoMiguel in LUANDA, ANGOLA. Landscape1536x1024,3:2,opaquePNG. Use the four actual Commons photographs only for the verified restored exterior wall section and real small guard turret. Input1 DavidStanley2015 gives current pale sand/cream plaster, crenellations and the turret. Input2 RidgeLeoni2024 gives the working museum context, not its people/artillery/canopy. Input3 PauloCesarSantos2011 gives round watch turret shape; input4 ErikClevesKristensen2006 gives stable angular outer-wall geometry. Older white paint is superseded by the restored cream finish shown by input1. No historical reconstruction.\nCRITICAL CAMERA: an elevated rooftop architecture photograph, camera about11metres above the adjoining paved ground, ABOVE the top of the small guard turret by about2metres, so we see the curved upper hemisphere of its cap FROM ABOVE and the upper horizontal ledges of the wall. Lens optical axis downward15degrees, natural35mm, level horizon placed high near the UPPER QUARTER of frame. This must visibly be looking DOWN at a modest fortress rampart, never looking up from a hill path or street. Show the authentic dome-topped cylindrical sentry box projecting from the corner of a sloping low cream-plastered bastion, tiny square lookout, round moulding and the conical corbel below it. Keep the turret modest, not an enormous tower. It and the receding crenellated wall together occupy middle/lower frame, all of the complete cap inside frame with comfortable top margin. See wall TOP SURFACES and a narrow strip of actual pale cobbled museum-side ground/path below, as the real photographs support. No whole-fortress invented roofplan or new pavilions.\nCROP THE VIEW CLOSE TO VERIFIED ARCHITECTURE. Only the authentic cream wall, real sentry turret, small adjacent cobbled/stone ground and restrained trees at the extreme edge, plus sky as needed. NO SEA OR COASTLINE in this photograph. Do not invent a rural rocky headland, cliff, secluded beach, harbor, hills or palm jungle around the urban Luanda fortress. No invented city skyline either; the crop deliberately does not show an unverified surrounding panorama. Do not add canals, ruins, extra forts, terraces, bridges or ornate balustrades. Keep real simple rectangular crenels and smooth sloped cream wall.\nWarm clear late-afternoon light grazing the authentic plaster, natural small texture, cool blue shadows, fine believable natural architectural photograph, strong readable shape at480px. No people, planes, artillery, cars, readable text, signs, logos, watermarks or frames. No illustration, miniature, fantasycastle orCGI look. Produce a completely new photograph from this elevated viewpoint; do not reuse or edit the previous candidate.",
+      "generationArguments": {
+        "prompt": "Use case: photorealistic-natural.\nONE new current-day hero architecture photograph of the actual Fortaleza de SaoMiguel in LUANDA, ANGOLA. Landscape1536x1024,3:2,opaquePNG. Use the four actual Commons photographs only for the verified restored exterior wall section and real small guard turret. Input1 DavidStanley2015 gives current pale sand/cream plaster, crenellations and the turret. Input2 RidgeLeoni2024 gives the working museum context, not its people/artillery/canopy. Input3 PauloCesarSantos2011 gives round watch turret shape; input4 ErikClevesKristensen2006 gives stable angular outer-wall geometry. Older white paint is superseded by the restored cream finish shown by input1. No historical reconstruction.\nCRITICAL CAMERA: an elevated rooftop architecture photograph, camera about11metres above the adjoining paved ground, ABOVE the top of the small guard turret by about2metres, so we see the curved upper hemisphere of its cap FROM ABOVE and the upper horizontal ledges of the wall. Lens optical axis downward15degrees, natural35mm, level horizon placed high near the UPPER QUARTER of frame. This must visibly be looking DOWN at a modest fortress rampart, never looking up from a hill path or street. Show the authentic dome-topped cylindrical sentry box projecting from the corner of a sloping low cream-plastered bastion, tiny square lookout, round moulding and the conical corbel below it. Keep the turret modest, not an enormous tower. It and the receding crenellated wall together occupy middle/lower frame, all of the complete cap inside frame with comfortable top margin. See wall TOP SURFACES and a narrow strip of actual pale cobbled museum-side ground/path below, as the real photographs support. No whole-fortress invented roofplan or new pavilions.\nCROP THE VIEW CLOSE TO VERIFIED ARCHITECTURE. Only the authentic cream wall, real sentry turret, small adjacent cobbled/stone ground and restrained trees at the extreme edge, plus sky as needed. NO SEA OR COASTLINE in this photograph. Do not invent a rural rocky headland, cliff, secluded beach, harbor, hills or palm jungle around the urban Luanda fortress. No invented city skyline either; the crop deliberately does not show an unverified surrounding panorama. Do not add canals, ruins, extra forts, terraces, bridges or ornate balustrades. Keep real simple rectangular crenels and smooth sloped cream wall.\nWarm clear late-afternoon light grazing the authentic plaster, natural small texture, cool blue shadows, fine believable natural architectural photograph, strong readable shape at480px. No people, planes, artillery, cars, readable text, signs, logos, watermarks or frames. No illustration, miniature, fantasycastle orCGI look. Produce a completely new photograph from this elevated viewpoint; do not reuse or edit the previous candidate.",
+        "referenced_image_paths": [
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/luanda/references/photo-738078f4121d.jpg",
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/luanda/references/photo-a74adef8fdde.jpg",
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/luanda/references/reference-2.jpg",
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/luanda/references/reference-3.jpg"
+        ],
+        "transparent_background": false
+      },
+      "generationArgumentsPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/luanda/prompts/hero-arguments.json",
+      "generationTool": "built-in image_gen",
+      "viitteet": [
+        {
+          "nimi": "File:Museu Nacional de Historia Militar.jpg",
+          "tekija": "David Stanley",
+          "lisenssi": "CC BY 2.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Museu_Nacional_de_Historia_Militar.jpg"
+        },
+        {
+          "nimi": "File:USS Hershel \"Woody\" Williams Visits Luanda Angola (8596090).jpg",
+          "tekija": "U.S. Navy photo by Petty Officer 1st Class  Ridge Leoni",
+          "lisenssi": "Public domain",
+          "lisenssiUrl": "",
+          "sivu": "https://commons.wikimedia.org/wiki/File:USS_Hershel_%22Woody%22_Williams_Visits_Luanda_Angola_(8596090).jpg"
+        },
+        {
+          "nimi": "File:Fortaleza Luanda.JPG",
+          "tekija": "Paulo César Santos",
+          "lisenssi": "CC0",
+          "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Fortaleza_Luanda.JPG"
+        },
+        {
+          "nimi": "File:Luanda-SMiguelFort1.jpg",
+          "tekija": "Erik Cleves Kristensen",
+          "lisenssi": "CC BY 2.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Luanda-SMiguelFort1.jpg"
+        }
+      ],
+      "originalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/luanda/originals/hero.png",
+      "toolOriginalPath": "/Users/samireivinen/.codex/generated_images/01a11231-0d49-7ed3-ad77-a02d5972ea41/exec-464be8fc-d440-42ce-b7c8-1fb0ca74baf9.png",
+      "originalWidth": 1536,
+      "originalHeight": 1024,
+      "originalSha256": "9fef5d289cfc55dd6dea61b68a9a37c11c85962899218b1431a099f560aad1cc",
+      "technicalExport": "RGB PNG with sRGB ICC; no artistic image edits. Native 1536x1024 pixels retained exactly when source has that size.",
+      "QA": {
+        "format": true,
+        "dimensions": true,
+        "sRGB": "sRGB built-in",
+        "opaque": true,
+        "viewedLarge": true,
+        "viewed480": true,
+        "viewed384": false,
+        "referenceGate": {
+          "identification": "kategoria",
+          "category": "Category:Fortaleza de São Miguel",
+          "count": 4,
+          "authors": 4
+        },
+        "geographicIdentity": {
+          "q": "Q3897",
+          "nimi": "Luanda",
+          "en": "Luanda",
+          "maa": "Angola",
+          "iso": "AO",
+          "lat": -8.8383,
+          "lon": 13.2344,
+          "peruste": "pääkaupunki",
+          "id": "luanda",
+          "index": 39,
+          "wiki": "Fortress of São Miguel",
+          "subject": "São Miguelin linnoitus",
+          "category": "Category:Fortaleza de São Miguel",
+          "subjectQ": "Q1408988"
+        },
+        "observations": "Neljä valokuvaa / neljä eri tekijää katsottu ja API-lisenssit varmennettu rakennuksen omasta kategoriasta. Kunnostetun muurin hiekanväri ja vartiotorni tukeutuvat vuoden2015kuvaan; vuoden2024ulkopiha varmentaa nykyisen museokontekstin.2006/2011kuvat tukevat vain säilynyttä ulkorakenteen yksityiskohtaa. V2:ssa näkyvät muurin yläpinnat ja alempi mukulakivialue; ei keksittyä rannikkoa tai skylineä. Koko linnoituksen pohjapiirrosta ei esitetä.",
+        "generationAttempts": 2,
+        "currentConditionVerifiedWithLimits": true
+      },
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-luanda.png",
+      "http": 200,
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "gameIntegrated": false,
+      "editorReview": "pending",
+      "instructionsVersion": 2,
+      "orderIndex": 39,
+      "nimi": "Luanda",
+      "maa": "Angola"
+    }
+  ],
+  "preview": {
+    "file": "era1b02-osatoimitus-20261006-esikatselu.jpg",
+    "r2Key": "julisteet/herokoe/20261006/era1b02-osatoimitus-20261006-esikatselu.jpg",
+    "url": "https://media.matkakirja.app/julisteet/herokoe/20261006/era1b02-osatoimitus-20261006-esikatselu.jpg",
+    "sha256": "7841ebf7b663d007a59e301be906c767ada13294888068e4ef8d0d210c3ae7dd",
+    "bytes": 204743,
+    "http": 200,
+    "mime": "image/jpeg",
+    "cors": "https://matkakirja.app",
+    "byteExactReadback": true
+  }
+}

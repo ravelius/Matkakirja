@@ -109,3 +109,29 @@ Sansibar: House of Wondersin ennen sortumista esittävä viite hylättiin. Daraj
 Yksi sovittu kevyt Wikimedia-kokeilu 21:25:42 UTC sai jälleen 429-vastauksen. Uudet haut ovat yhteisesti tauolla 22:25:42 UTC asti. Jo varmennettujen lähteiden tuotanto ja valmiiden toimitus jatkuvat. Viitepaketit Sisältökirjurilta tai yhteinen hakuvuorojen koordinointi auttaisivat jatkoa; ei reitin tai tunnisteen kiertoa.
 
 Fablen vastaanottokuittaus, katselmus ja pelikytkentä ovat edelleen erillisiä, todentamista odottavia vaiheita. Codex ei mergeä mainiin, nosta versiota tai julkaise.
+
+## Seuraavat varmennetut osatoimitukset: ERÄ 1 / 04 ja 05 sekä ERÄ 1B / 02
+
+Valmiit kuvat toimitetaan nyt ilman loppujen paikkojen odotusta. Jokainen manifesti säilyttää koko alkuperäisen erälistan ja erottaa toimitetut kuvat, viite-esteet ja edelleen tuotannossa olevat paikat. Yksikään näistä ei ole kokonainen 25 paikan kuittaus.
+
+| Paketti | Toimitetut kuvat | Manifesti | Katselmus |
+|---|---:|---|---|
+| ERÄ 1 / 04 | 20/25 | `posti/kuvatoimitus-oppaan-kaupunkinakymat-04-osatoimitus-20261006.json` | Yellowknife, Iqaluit, Santa Fe |
+| ERÄ 1 / 05 | 6/25 | `posti/kuvatoimitus-oppaan-kaupunkinakymat-05-osatoimitus-20261006.json` | Alkuperäisestä kolmikosta Kamerun ja Suakin puuttuvat; ei täyttynyttä kolmen kuvan katselmusporttia |
+| ERÄ 1B / 02 | 4/25 | `posti/kuvatoimitus-oppaan-kaupunkinakymat-1b-02-osatoimitus-20261006.json` | Alger, San José, Belgrad; Luanda lisäksi mukana |
+
+Esikatselut:
+
+- https://media.matkakirja.app/julisteet/herokoe/20261006/era04-osatoimitus-20261006-esikatselu.jpg
+- https://media.matkakirja.app/julisteet/herokoe/20261006/era05-osatoimitus-20261006-esikatselu.jpg
+- https://media.matkakirja.app/julisteet/herokoe/20261006/era1b02-osatoimitus-20261006-esikatselu.jpg
+
+Viidennen erän valmiit ovat Ahaggar, Mosambik, Cayenne, Bahr el Ghazal, Sepik ja Broome. Ensimmäiset pyydetyt Kamerun ja Suakin jäävät viite-esteeseen. Pyydän päätoimittajan päätöstä tämän valmiin osapaketin katselmuksesta; sitä ei pidä käsitellä alkuperäisen kolmen ensimmäisen kuvan portin automaattisena täyttymisenä.
+
+Dokumentoidut alkuperäisen listan viitepuutteet: Kamerunissa toinen kuva näyttää eri huipun; Suakinin tullitalon vanha rauniojulkisivu ei vastaa todettua restaurointia; Darfurin toinen Deriba-kuva on saman kuvaajan muokkaus; Tšad-järven näennäinen nykyvene on historiallinen postikortti; Ras Hafunilta puuttuu riippumaton nykypari; Orjarannikon portin toinen kuva on nimilaatta. Puutteet, nähdyt kuvat ja täydennystarpeet ovat paikkojen `este.json`-tiedostoissa. Kap Palmasin uudet 2020 rannikkokuvat näyttävät olevan saman valokuvaajan nimi/username-alias, ja riippumaton Harper-kuva on mustavalkoinen raunio, joten portti odottaa toista oikeaa nykykuvaajaa. Näistä ei tehty arvattuja rakennuksia.
+
+1B-paikkojen 26–50 paikallinen lähdepassi on valmis: `era1b-26-38-prior-source-pass.json` ja `prior-source-1b-39-50-audit.json`. Yksi oikea kuva Bratislavan linnasta ja yksi Ammanin Herkuleen temppelistä on varmistettu, mutta kummaltakin puuttuu toinen saman kohteen kuvaaja. Muut paikat tarvitsevat edelleen varmennetut nykyiset valokuvapaketit. Bamakon kahdeksan jo metatietovarmennettua ehdokasta eivät ole pelin omassa mediavarastossa (8×404), joten niitä ei oleteta ladatuiksi.
+
+140 kohteen mediatoimitus on nyt julkisesti tavuntarkasti varmennettu (104 alkuperäistä paikkaa, 29 lisäkaupunkia, 7 linssiä). 139 erillistä kuvatiivistettä: Angola käyttää aiemmin hyväksyttyä Luanda-kuvaa eikä siitä tehty uutta generointia.
+
+Tuotanto etenee jäljellä oleviin alkuperäisiin paikkoihin viiden tekijän vuorokierrossa. Wikimedia-viitehaut ovat edelleen tauolla 22:25:42 UTC asti, ja sen jälkeen tehdään yksi pieni, tunnetun tiedoston metatietokoe. Ei identiteetin tai reitin vaihtoa. Päätoimittajan vastaanottokuittaus, katselmus ja pelikytkentä eivät vielä ole todennettuja; Codex ei mergeä mainiin tai julkaise peliä.
