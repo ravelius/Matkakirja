@@ -220,6 +220,8 @@ namespace Matkakirja
         {
             if (Time.unscaledTime < vieritysAsti) return "vieritys";
             if (Kosketus.activeTouches.Count > 0) return "kosketus";
+            // Mac: hiiren veto on kosketus (täysi taajuus vedon ajan).
+            if (UnityEngine.InputSystem.Mouse.current?.leftButton.isPressed ?? false) return "kosketus";
             if (kierto != null && kierto.Liikkeessa && !kierto.Peitetty) return "pallo";
             if (nappula != null && nappula.Liikkeessa) return "lento";
             if (Time.unscaledTime < herattyAsti) return "herätys";
