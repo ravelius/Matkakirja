@@ -145,3 +145,16 @@ Brotli (haara linnanrakentaja-zstd, worktree olemassa), akustiikka #3979 (Steam 
 - SIMUT TAUOLLA (Julkaisija 18.51): levyä 19 Gi, ei uusia simuja. Esineajo (#4052) tehdään Siirtosepän D5900D45:llä hänen
   linnavuorossaan: proto-3d/tyokalut/linnanrakentaja-ajot/ajo-esineet.sh (app-183866ed, peili bba43057, mykkä).
   Siirtoseppä ajaa esittelyn (ennen BUILD 150 ea457278 / jälkeen linna-149 + feea163c) ja Faceit-kappelin (94a0df22) äänellisinä.
+
+## Päivitys 7.10. klo 01.0x (tilinvaihdon jälkeen)
+- GIZA (kaikki proto-3d/_valmiit/giza-v1/, ei repossa): pyramidit v1 VALMIIT → LS1 (3D Tiles, Cesium, leikkaus + maapohja).
+  lahde/: atlas.py (kerrosatlakset, venv) → koot.py (r2048…r256) → pyramidit.py (Blender: kerrokset, segmentit, viistot
+  askelmat, verhous/graniitti, lohkeama, maapohja, LOD0/1/2, Draco) → glb/ + sijainnit.json (lat/lon, EGM-korkeus, leikkauskulmat).
+  esikatselu.py (+ maasto_laske.py venvissä) → esikatselu/arkki-v1.jpg. LAHTEET.md giza-v1:ssä; pintakuviot _lahteet/polyhaven-giza.
+- SFINKSI v0 (karkea) LS1:llä: sfinksi_sdf.py (venv, SDF → marching cubes, 0,10 m) → sfinksi_glb.py (Blender: desimointi
+  90k/14k/2,5k, smart UV, Cycles-leivonta väri+AO+normaali, maapohja). Pikakatselu sfinksi_esik.py. Referenssikuvat
+  scratchpadissa (Commons: Profile Sphinx, Sphinx of Giza 9059). SEURAAVA: v1 = kasvot (nyt "apina"), rungon pyöreys
+  (nyt sohvamainen laatikko), liepeet. Pohjan korkeus 20 m = A.
+- Olavinlinnan yhdistetty peili a0e537492bff2189 (#4051 + #4052, haara linnanrakentaja-peili156, worktree wt/…-peili156)
+  junaan 156: Siirtoseppä todentaa, Julkaisija vaihtaa osoittimen kuittausten jälkeen. Worktree poistetaan, kun PR:t on mergetty.
+- Esineajo (Siirtoseppä D5900D45): luuta ja säkki OK, kokin kauha ei näy (kokki selin).
