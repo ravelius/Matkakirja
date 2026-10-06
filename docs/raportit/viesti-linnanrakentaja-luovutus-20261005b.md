@@ -85,3 +85,5 @@ Brotli (haara linnanrakentaja-zstd, worktree olemassa), akustiikka #3979 (Steam 
 - ISS-ohjaamo v3 HYVÄKSYTTY junaan 147 (Päätoimittaja): _valmiit/iss-ohjaamo-v3/ (rumpu pois; vasemmalta kaasu ja asteikko, LCD isompi,
   kamera, joystick oikealla; välit 28–30 px @3x mitattuna uloimmista osista; uudet ankkurit sauvaKeski ja objektiivi). Kuvat ja json
   ovat Natiivi-UI:lla. Lähde: lahde/tekstuurit.py → tuotanto.py → jalki.py (raaka/ poistettu; aja uudelleen tarvittaessa).
+- 6.10. klo 11.3x: ohjaamo v3b HYVÄKSYTTY junaan 147 (_valmiit/iss-ohjaamo-v3b/; numerot pois, asteikko vivun juureen, LCD 1,16 × 0,58,
+  ruuvit 0,10 reunasta, kuvaan marginaali → koko 374 × 129,33 pt, kaasu.ura portaattomalle kahvalle). Korvaa v3:n Natiivi-UI:lla.
