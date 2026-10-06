@@ -165,6 +165,11 @@ koodimuutos main-haarassa julkaisee workerin uudelleen itsestään.
   tuomioon (`sahke`) samoin päivä- ja kuukausirajoin kuin selain
   (30/vrk per IP); kuva ja tila palauttavat 403 (`NATIIVIN_TEHTAVAT`,
   `natiivilleSallittu`).
+- **Elävän oppaan ohjaimet** (omistaja 6.10.2026, opas-juna 148; `opaskeskustelu.js`): `GET /opas/kysymykset?paikka&nimi&kaupunki`
+  → 5–6 valmista kysymystä (esihaku taustalla pysähdyksen yhteydessä, R2 30 vrk), `POST /opas/kysy` → oppaan vastaus,
+  Williamin ääni oppaan polulla ja katolla, toiminto (siirry {nimi, lat, lon, ulkona} | kohde {id} | kaupunki {nimi, lat,
+  lon} | kierros | tauko | jatka | null) ja 2 jatkokysymystä, `GET /opas/liiku?kaupunki` → 12 tärkeintä kohdetta
+  koordinaatteineen (R2 30 vrk). Kysy lasketaan oppaan IP-rajoihin.
 - **Testit eivät tuota ääntä** (omistaja 6.10.2026, sitova): roolien testitunnus (`x-matkakirja-testitunnus`) ja
   testiotsake (`x-matkakirja-testi: 1`) eivät koskaan kutsu puhemoottoria (ElevenLabs, xAI, OpenAI). Luenta palauttaa
   valmiin äänen säilöistä tai 204, opas antaa ääni-urlin vain R2:ssa jo olevalle äänelle, eivätkä GET-polut tuota.
