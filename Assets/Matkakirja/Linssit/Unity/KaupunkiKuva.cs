@@ -41,6 +41,8 @@ namespace Matkakirja.Natiivi
         // viritys asetustiedostolla ("sumu 1 volume 1 vuorokausi 1 kupoli 1"). Ei tonemappausta (Neutral latisti kuvan).
         public static bool Sumu = false, Savytys = false, Volyymi = false, VuorokausiPaalla = false, Kupoli = false;
         public static float Kontrasti = 12f, Saturaatio = 10f, Hehku = 0f, Tunti = -1f;
+        /// <summary>Terävöitys 0–1 (KaupunkiTerava, kuvanlaatulista kohta 1; oletus pois kuvapariin ja iPad-mittaukseen asti).</summary>
+        public static float Terava = 0f;
 
         // ---- VUOROKAUDENAJAN VALINTA (omistaja 6.10. 19.0x, Natiivi-UI:n nappi vasemmassa yläkulmassa; juna 152) ----
         /// <summary>Pelaajan valinta: "auto" (kohteen oma aurinko), "aamu", "paiva", "ilta" ("yo" myöhemmin valojen kanssa).
@@ -132,6 +134,7 @@ namespace Matkakirja.Natiivi
             GoogleSse = 16f; MaastoSse = 10f; RakennusSse = 16f; Msaa = 4; // asetustiedosto luetaan uudelleen seuraavassa avauksessa
             AlkuKerroin = 15f; LoppuKerroin = 80f; AlkuMinM = 3000f; LoppuMinM = 15000f; Sumu = false; Savytys = false; Volyymi = false;
             Kontrasti = 12f; Saturaatio = 10f; Hehku = 0f; VuorokausiPaalla = false; Kupoli = false; Tunti = -1f; asetuksetMuokattu = default;
+            Terava = 0f; KaupunkiTerava.Pois();
             varit = null; valko = null;
             if (ajo != null) { ajo.Lopeta(); Object.Destroy(ajo.gameObject); ajo = null; }
             QualitySettings.anisotropicFiltering = vanhaAniso;
@@ -185,6 +188,7 @@ namespace Matkakirja.Natiivi
                         case "vuorokausi": VuorokausiPaalla = v != 0; break;
                         case "tunti": Tunti = v; break;
                         case "kupoli": Kupoli = v != 0; break;
+                        case "terava": Terava = v; KaupunkiTerava.Aseta(v); break;
                     }
                 }
                 return true;
