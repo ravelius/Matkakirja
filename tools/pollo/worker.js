@@ -2981,6 +2981,33 @@ async function maailmanSuosikit(env) {
   try { return await suosikitKaynnissa; } finally { suosikitKaynnissa = null; }
 }
 
+/**
+ * KAUPUNGIN JA SIJAINNIN RISTIRIITA (omistaja TF 152 6.10. 19.37: "Sydneyn oopperatalolta en pääse minnekään"): natiivi
+ * lähetti jokaisen kaupungin kanssa saman sijainnin (55,679, 12,576 = Kööpenhamina), joten kierros, Liiku ja täkyt
+ * suodattivat kaikki kohteet liian kaukaisina (502 / "Minne haluaisit mennä?"). Jos annettu sijainti on yli
+ * SIJAINTI_RISTIRIITA_KM päässä kaupungista, käytetään kaupungin sijaintia. Kaupungin piste isolaatin muistissa.
+ */
+const SIJAINTI_RISTIRIITA_KM = 60;
+const kaupunkiPisteet = new Map();
+async function kaupunginPiste(kaupunki) {
+  const avain = kaupunki.toLowerCase();
+  if (kaupunkiPisteet.has(avain)) return kaupunkiPisteet.get(avain);
+  const piste = await kaupunginSijainti(fetch, kaupunki).catch(() => null);
+  if (piste) kaupunkiPisteet.set(avain, piste);
+  return piste;
+}
+async function tarkistettuSijainti(kaupunki, sijainti) {
+  if (!kaupunki) return sijainti ?? null;
+  const piste = await kaupunginPiste(kaupunki);
+  if (!piste) return sijainti ?? null;
+  if (!sijainti) return piste;
+  if (etaisyysKm(piste, sijainti) > SIJAINTI_RISTIRIITA_KM) {
+    console.log(`opas: sijainti ${sijainti.lat.toFixed(3)},${sijainti.lon.toFixed(3)} ei ole ${kaupunki} → kaupungin sijainti`);
+    return piste;
+  }
+  return sijainti;
+}
+
 async function hoidaOppaanKohteet(pyynto, env, kors, ctx) {
   const url = new URL(pyynto.url);
   const natiivit = env.POLLO_NATIIVIT ? lueLista(env.POLLO_NATIIVIT) : NATIIVIT_OLETUS;
@@ -3019,8 +3046,7 @@ async function hoidaOppaanKohteet(pyynto, env, kors, ctx) {
   await reunaKirjoita(lukko, '1', 60);
   try {
     const eilinen = kv ? await kv.get(kohdeAvain(kaupunki, eilenUtc())).then((x) => (x ? JSON.parse(x) : null)).catch(() => null) : null;
-    const viite = Number.isFinite(lat) && Number.isFinite(lon) && !(lat === 0 && lon === 0) ? { lat, lon }
-      : kaupunki ? await kaupunginSijainti(fetch, kaupunki) : null;
+    const viite = await tarkistettuSijainti(kaupunki, Number.isFinite(lat) && Number.isFinite(lon) && !(lat === 0 && lon === 0) ? { lat, lon } : null);
     const ehdokkaat = jasennaKohteet((await kysyMallitiedot(env, {
       jarjestelma: KOHTEET_KEHOTE,
       viestit: [{ role: 'user', content: kohteidenViesti({ kaupunki, eiNaita: (eilinen?.kohteet ?? []).map((k) => k.nimi) }) }],
@@ -3191,7 +3217,7 @@ async function hoidaOppaanLiiku(pyynto, env, kors) {
   if (!kaupunki) return vastaa({ virhe: 'kysely', viesti: 'Kaupunki puuttuu.' }, { status: 400, ...kors });
   const lat = Number(url.searchParams.get('lat')), lon = Number(url.searchParams.get('lon'));
   try {
-    const viite = Number.isFinite(lat) && Number.isFinite(lon) && !(lat === 0 && lon === 0) ? { lat, lon } : await kaupunginSijainti(fetch, kaupunki);
+    const viite = await tarkistettuSijainti(kaupunki, Number.isFinite(lat) && Number.isFinite(lon) && !(lat === 0 && lon === 0) ? { lat, lon } : null);
     const kohteet = await oppaanLiikuLista(env, kaupunki, viite);
     if (!kohteet?.length) return vastaa({ virhe: 'palvelin', viesti: 'Kohteita ei saatu juuri nyt.' }, { status: 502, ...kors });
     return vastaa({ kaupunki, kohteet }, kors);
@@ -3240,7 +3266,7 @@ async function hoidaOppaanKysy(pyynto, env, kors, runko, ctx) {
     let toiminto = null;
     if (j.toiminto === 'kohde' && lista.some((k) => k.id === j.kohde)) toiminto = { tyyppi: 'kohde', id: j.kohde };
     else if (j.toiminto === 'siirry' || j.toiminto === 'kohde') {
-      const viite = p.paikka?.lat != null ? { lat: p.paikka.lat, lon: p.paikka.lon } : kaupunkiPiste;
+      const viite = await tarkistettuSijainti(p.kaupunki, p.paikka?.lat != null ? { lat: p.paikka.lat, lon: p.paikka.lon } : null) ?? kaupunkiPiste;
       // Ensin kaupungin säteeltä (samanniminen paikka muualla ei osu), sitten mistä tahansa (kohde kaupungin ulkopuolella).
       const haeKohde = (v) => paikanKoordinaatit(fetch, { nimi: j.kohde, wikipedia: j.wikipedia }, v).catch(() => null);
       const paikka = j.kohde ? (await haeKohde(viite)) ?? (viite ? await haeKohde(null) : null) : null;
@@ -3302,7 +3328,7 @@ async function hoidaOpas(pyynto, env, kors, runko, ctx) {
   const isoisaAvain = p.istunto && kv ? `opas:isoisa:${p.istunto}` : null;
   const kierrosAvain = p.istunto && kv ? `opas:kierros:${p.istunto}` : null;
   const [sijainti, kaydytNimet, isoisaKaytetty, tallessa] = await Promise.all([
-    p.sijainti ?? kaupunginSijainti(fetch, p.kaupunki), kaydytNimiksi(fetch, p.kaydyt),
+    tarkistettuSijainti(p.kaupunki, p.sijainti), kaydytNimiksi(fetch, p.kaydyt),
     isoisaAvain ? pysyvaLue(env.PUHE_R2, isoisaAvain).then(Boolean) : false,
     kierrosAvain ? pysyvaLue(env.PUHE_R2, kierrosAvain).then((x) => (x ? JSON.parse(x) : null)).catch(() => null) : null]);
   // Liiku-listan esihaku taustalla (juna 148 todistusajo: kylmä /opas/liiku ~10 s → natiivin lista jäi tyhjäksi).

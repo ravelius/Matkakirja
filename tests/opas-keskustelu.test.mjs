@@ -140,3 +140,13 @@ test('/opas/liiku: erähaku, alipyyntöjä vähän (Cloudflaren raja 50; Ateena 
     assert.ok(muut <= 8, `alipyyntöjä ${muut}`);
   } finally { globalThis.fetch = vanha; }
 });
+
+test('/opas/liiku: väärä sijainti kaupungin kanssa (omistaja TF 152, Sydney + Kööpenhaminan 55,679/12,576) → kaupungin sijainti, ei 502', async () => {
+  await aja(async () => {
+    const { env } = ymparisto();
+    const v = await worker.fetch(new Request('https://pollo.example/opas/liiku?kaupunki=Venetsia&lat=55.6790&lon=12.5760',
+      { headers: H({ 'cf-connecting-ip': '10.8.0.11' }) }), env, {});
+    assert.equal(v.status, 200);
+    assert.ok((await v.json()).kohteet.length >= 2, 'kohteet Venetsian säteeltä, ei Kööpenhaminan');
+  });
+});
