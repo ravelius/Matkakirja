@@ -10,8 +10,8 @@
 // hiljaa luennan ajan; kommentti (Saapumisesitys) tulee sarjan jälkeen. Linssin ajan sarja odottaa (700 ms).
 // Äänite on vain äänitetylle variantille (Ateenaan / Ateenaa, web LIVIAN_AANITETTY_PALJASTUS).
 //
-// MUUT ALOITUSLENNOT: luennan jälkeen +900 ms (ilman luentaa 1800 ms) ohjekupla "Tervetuloa X. Sinun on
-// ratkaistava tehtävä Y ennen kuin voit etsiä aarretta." ja +2500 ms "Klikkaa kaupungin kultaista merkkiä
+// MUUT ALOITUSLENNOT: luennan jälkeen +900 ms (ilman luentaa 1800 ms) vihjerivi (tilarivin ilmoitus 3 s, ei Pulun kuplaa,
+// 6.10.2026) "Tervetuloa X. Sinun on ratkaistava tehtävä Y ennen kuin voit etsiä aarretta." ja +3 s "Klikkaa kaupungin kultaista merkkiä
 // kartalla." (web ui.js:821–828, polloVihje + polloLisavihje).
 //
 // Traileri: saapumiskuplat odottavat, kunnes silmukka on kartalla (web odotaLivianTraileria). Paikan puheen
@@ -29,7 +29,7 @@ namespace Matkakirja.Natiivi
         public const string Avain = "matkakirja-livia-paljastus";
 
         /// <summary>Web SAAPUMISEN_KUPLA_MS, SAAPUMISEN_KUPLA_VALI_MS, SAAPUMISEN_KUPLA_LUENNAN_JALKEEN_MS.</summary>
-        const long KuplaMs = 1800, KuplaValiMs = 2500, LuennanJalkeenMs = 900;
+        const long KuplaMs = 1800, LuennanJalkeenMs = 900;
         /// <summary>Web PALJASTUKSEN_LINSSIVALI ja LUENNAN_VARAVIIVE (= LUKUAIKA_VAHINTAAN 3,2 s).</summary>
         const long LinssiValiMs = 700, LuennanVaraviiveMs = 3200;
         const float PuheenHanta = 400f;
@@ -175,13 +175,19 @@ namespace Matkakirja.Natiivi
             Ohjekuplat(v, tervetuloa);
         }
 
-        /// <summary>Web saapumisenOhjekuplat: tervetulotoivotus ja 2,5 s päästä toimintaohje (tai pelkkä ohje).</summary>
+        /// <summary>
+        /// Web saapumisenOhjekuplat: tervetulotoivotus ja sen jälkeen toimintaohje (tai pelkkä ohje). Ei Pulun kuplina
+        /// (omistajan linja 6.10.2026: Pulun puhekuplia ei näytetä kartalla; Päätoimittaja): lyhyt vihjerivi tilarivin
+        /// ilmoituksella, kumpikin Nimikyltti.NakyyMs (3 s), ohje heti tervetulon perään.
+        /// </summary>
         static void Ohjekuplat(int v, string tervetuloa)
         {
-            var pulu = Pulu.Hae();
-            pulu.Sano(tervetuloa.Length > 0 ? tervetuloa : OhjeToinen);
+            if (!UiNakymat.Olemassa) return;
+            var rivi = UiNakymat.Hae().Tilarivi;
+            float s = Nimikyltti.NakyyMs / 1000f;
+            rivi.Viesti(tervetuloa.Length > 0 ? tervetuloa : OhjeToinen, s);
             if (tervetuloa.Length == 0) return;
-            Ajasta(() => { if (Voimassa(v)) pulu.Sano(OhjeToinen); }, KuplaValiMs);
+            Ajasta(() => { if (Voimassa(v)) rivi.Viesti(OhjeToinen, s); }, Nimikyltti.NakyyMs);
         }
 
         /// <summary>Web paljastusRepliikki: kupla, ääni ja jatko (napautus tai ajastin, vain kerran).</summary>
