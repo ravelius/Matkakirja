@@ -43,6 +43,7 @@ const verkko = async (u) => {
 function ymparisto() {
   const r2 = new Map();
   return { r2, env: { ANTHROPIC_API_KEY: 'a', POLLO_ORIGINIT: 'https://matkakirja.app',
+    OPAS_KUVALISTA_TESTI: { kohteet: { Q100: { nimi: 'Kohde 0', kuvat: [{ url: 'https://media.matkakirja.app/kuvat/x.jpg', tyyppi: 'valokuva', tekija: 'Listan kuvaaja', lisenssi: 'CC BY-SA 4.0', lahdeUrl: 'https://commons/File:X.jpg', jarjestys: 1 }] } }, kaupungit: {} },
     PUHE_R2: { get: async (k) => (r2.has(k) ? { text: async () => r2.get(k) } : null), put: async (k, v) => { r2.set(k, v); } } } };
 }
 
@@ -56,8 +57,8 @@ test('/opas/kohteet?n=50: 50 kohdetta erähaulla, kuvat vain tekijätiedoin, toi
     assert.equal(d.kohteet.length, 50, 'missing-otsikot (joka 10.) pois, 54 kelpaavaa → 50');
     assert.ok(kutsut.muut <= 8, `alipyyntöjä ${kutsut.muut} (Cloudflaren raja 50)`);
     assert.ok(d.kohteet.every((k) => k.id && Number.isFinite(k.lat) && k.koukku));
-    assert.ok(d.kohteet.every((k) => !k.kuva || (k.kuva.tekija && k.kuva.lisenssi)), 'kuva vain tekijätiedoin');
-    assert.ok(d.kohteet.some((k) => k.kuva) && d.kohteet.some((k) => !k.kuva));
+    assert.equal(d.kohteet[0].kuva.url, 'https://media.matkakirja.app/kuvat/x.jpg', 'kuva kuvalistasta (omistaja 6.10. 20.0x)');
+    assert.ok(d.kohteet.slice(1).every((k) => k.kuva === null), 'ei listalla → ei kuvaa, ei Commons-hakua');
     assert.match(d.kohteet[0].alarivi, /kuvaus Q100/);
     assert.equal(d.kohteet[1].nimi, 'Oikea nimi', 'Wikidatan suomenkielinen nimiö voittaa mallin nimen');
     assert.equal(d.kohteet[0].nimi, 'Kohde 0', 'ilman nimiötä mallin nimi');
