@@ -1117,9 +1117,12 @@ namespace Matkakirja.Natiivi
             Action teko = () => { Sulje(); Debug.Log("MATKAKIRJA opas: täky " + t.Nimi); OpasSovitin.Valitse(t); };
             var b = Rakenne.Nappi(null, "mk-linssirivi mk-opas-taky", () => Rivilta(teko), isa ?? rivit);
             b.tooltip = t.Nimi;
-            var kehys = Rakenne.El("mk-linssirivi__ikoni mk-linssirivi__kuva", b, PickingMode.Ignore);
+            // Kuvapaikka vain kuvalliselle suosikille (Pelikoodari 6.10.: /opas/kohteet?n=50, kuva voi olla null).
             if (!string.IsNullOrEmpty(t.KuvaUrl))
+            {
+                var kehys = Rakenne.El("mk-linssirivi__ikoni mk-linssirivi__kuva", b, PickingMode.Ignore);
                 NostoSisalto.HaeKuva(t.KuvaUrl, tex => { if (tex != null && kehys.panel != null) kehys.style.backgroundImage = new StyleBackground(tex); });
+            }
             var tekstit = Rakenne.El("mk-linssirivi__tekstit", b, PickingMode.Ignore);
             Kirjasimet.Aseta(Rakenne.Teksti(t.Nimi ?? "", "mk-linssirivi__nimi", tekstit), Kirjasin.ModerniLihava);
             if (!string.IsNullOrEmpty(t.Koukku)) Kirjasimet.Aseta(Rakenne.Teksti(t.Koukku, "mk-linssirivi__lyhyt", tekstit), Kirjasin.Moderni);
