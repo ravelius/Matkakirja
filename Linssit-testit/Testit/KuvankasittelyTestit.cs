@@ -54,5 +54,21 @@ namespace Matkakirja.Linssit.Testit
             var t = Tasainen(1, 1, 60, 90, 150); Kuvankasittely.ValojenKatto(t);
             Oleta.Sama((byte)150, t[2], "tummat ennallaan");
         }
+
+        [Testi]
+        static void HaloGradienttiHorisontinYlla()
+        {
+            // 2160 × 200, horisontti rivillä 150 (ylhäältä), rivit ylhäältä alas; taivas musta, maa harmaa.
+            int w = 2160, h = 200; var k = Tasainen(w, h, 0, 0, 0);
+            for (int y = 150; y < h; y++) for (int x = 0; x < w; x++) { int o = (y * w + x) * 4; k[o] = k[o + 1] = k[o + 2] = 200; }
+            var raja = new float[w]; for (int x = 0; x < w; x++) raja[x] = 150;
+            Kuvankasittely.Halo(k, w, h, raja, false);
+            int Px(int y) => (y * w + 1000) * 4;
+            Oleta.Tosi(k[Px(149) + 2] > 240 && k[Px(149)] > 180, $"ydin vaalea syaani: {k[Px(149)]},{k[Px(149) + 1]},{k[Px(149) + 2]}");
+            Oleta.Tosi(k[Px(135) + 2] > k[Px(135)] + 100, $"sininen ylempänä: {k[Px(135)]},{k[Px(135) + 2]}");
+            Oleta.Tosi(k[Px(80)] < 5 && k[Px(80) + 2] < 5, "musta 70 px yllä");
+            Oleta.Tosi(k[Px(160)] < 200, "maan reuna himmenee");
+            Oleta.Sama((byte)200, k[Px(190)], "syvemmällä maa ennallaan");
+        }
     }
 }

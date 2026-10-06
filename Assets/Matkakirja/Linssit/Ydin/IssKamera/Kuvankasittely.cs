@@ -129,6 +129,46 @@ namespace Matkakirja.Linssit.IssKamera
             }
         }
 
+        /// <summary>
+        /// Ilmakehän reuna 2D-gradienttina (Päätoimittaja 6.10. 14.3x, omistajan viite: "pehmeä sininen hehku … valkoista vyötä ei
+        /// ole"): horisontin yllä ohut vaalea syaani (2–3 px / 2160), sitten taivaansininen → kuninkaansininen → laivastonsininen →
+        /// musta ~58 px:n matkalla; fysikaalinen sironta jää alle himmennettynä (20 %), ja maan puolella 14 px:n vyö himmenee.
+        /// raja[x] = ensimmäisen maarivin y ylhäältä (murtoluku), &lt; 0 = sarakkeessa ei horisonttia. rivitAlhaalta: Unityn tekstuuri.
+        /// </summary>
+        public static void Halo(byte[] rgba, int w, int h, float[] raja, bool rivitAlhaalta)
+        {
+            float s = w / 2160f;
+            var p = new (float d, float r, float g, float b)[] { (0f, 205, 245, 255), (2.5f, 150, 215, 255), (9f, 70, 150, 250), (24f, 30, 75, 205), (40f, 12, 28, 95), (58f, 0, 0, 0) };
+            int yla = (int)Math.Ceiling(92 * s) + 2, ala = (int)Math.Ceiling(14 * s);
+            for (int x = 0; x < w; x++)
+            {
+                float yr = raja[x];
+                if (yr < 0) continue;
+                int y0 = (int)Math.Floor(yr);
+                for (int y = Math.Max(0, y0 - yla); y < Math.Min(h, y0 + ala + 1); y++)
+                {
+                    float dd = (yr - (y + 0.5f)) / s;   // > 0 taivaan puolella
+                    int o = ((rivitAlhaalta ? h - 1 - y : y) * w + x) * 4;
+                    if (dd >= 0)
+                    {
+                        int i = 0; while (i < p.Length - 2 && dd > p[i + 1].d) i++;
+                        float t = Math.Min(1f, Math.Max(0f, (dd - p[i].d) / (p[i + 1].d - p[i].d)));
+                        float r = p[i].r + (p[i + 1].r - p[i].r) * t, g = p[i].g + (p[i + 1].g - p[i].g) * t, b = p[i].b + (p[i + 1].b - p[i].b) * t;
+                        // Sironta alle 20 %:iin, gradientin jälkeen (58–90 px) takaisin täyteen, ettei synny saumaa.
+                        float u = Math.Min(1f, Math.Max(0f, (dd - 58f) / 32f)), f = 0.2f + 0.8f * u * u * (3 - 2 * u);
+                        rgba[o] = Tavu(r + f * rgba[o]); rgba[o + 1] = Tavu(g + f * rgba[o + 1]); rgba[o + 2] = Tavu(b + f * rgba[o + 2]);
+                    }
+                    else
+                    {
+                        // Maan puoli: reunan valkoinen utu himmenee ja saa ytimen syaanin sävyn aivan pinnassa.
+                        float t = Math.Min(1f, -dd / 14f), k = 0.72f + 0.28f * t, ydin = Math.Max(0f, 1f - (-dd) / 1.5f) * 0.5f;
+                        rgba[o] = Tavu(rgba[o] * k * (1 - ydin) + 205 * ydin); rgba[o + 1] = Tavu(rgba[o + 1] * k * (1 - ydin) + 245 * ydin);
+                        rgba[o + 2] = Tavu(rgba[o + 2] * k * (1 - ydin) + 255 * ydin);
+                    }
+                }
+            }
+        }
+
         /// <summary>Hehku: luminanssi yli kynnyksen sumennetaan säteellä ja lisätään lämpimänä valkoisena.</summary>
         public static void Hehku(byte[] rgba, int w, int h, int kynnys, int sade, float voima)
         {

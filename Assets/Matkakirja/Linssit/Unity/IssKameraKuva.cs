@@ -66,7 +66,9 @@ namespace Matkakirja.Natiivi
         // Omistajan viite 6.10. (Cupola-kuva): ei valkoista vyötä, ohut vaaleansininen–syaani reuna ja laaja pehmeä sininen mustaan
         // → kaarivoima 4, ydin 0,3 (maan utu reunalla ~1,8×, ei 5×), syvänsininen 3; valojen katto pitää sävyn (A/B 13.1x).
         // A/B 13388aa7 (Helsinki 14.1x): kolmesta paras voima 3, ydin 0,25, syvä 2,5 (ohuin valkoinen); valkoinen vyö jäi silti.
-        const float KaariVoima = 3f, KaariHr = 1f, KaariSini = 1f, KaariUtu = 0.8f, KaariYdin = 0.25f, KaariSyva = 2.5f;
+        // 6.10. 14.3x: halo piirretään 2D-gradienttina (Halo); sironta jää alle himmeänä: ei syvänsinistä varjostimessa, ja maan
+        // reunan utu kertoimella 2 · 0,25 · 1,5 = 0,75 (ei valkoista vyötä).
+        const float KaariVoima = 1f, KaariHr = 1f, KaariSini = 1f, KaariUtu = 0.8f, KaariYdin = 1f, KaariSyva = 0f;
 
         static bool KaariOletuksissa() => Avaruus.KuvanKaariVoima == 1f && Avaruus.KuvanHrKerroin == 1f && Avaruus.KuvanSiniKerroin == 1f
             && Avaruus.KuvanUtuKerroin == 1f && Avaruus.KuvanKaariYdin == 1f && Avaruus.KuvanKaariSyva == 0f;
@@ -830,6 +832,7 @@ namespace Matkakirja.Natiivi
                     Kehita(kuva);
                     Kontrasti(kuva, KuvanKontrasti);
                     ValojenKatto(kuva);
+                    Halo(kuva, kk);
                     byte[] j = null;
                     if (k == 0 && IssJuliste.Kaytossa)
                     {
@@ -1094,6 +1097,37 @@ namespace Matkakirja.Natiivi
 
         /// <summary>A/B `astro kyyti kuvaa kehitys 0|1`: Kuvankasittely.Kehita (omistaja 6.10.: sinisempi, enemmän wow-efektiä).</summary>
         public static bool Kehitys = true;
+
+        /// <summary>A/B `astro kyyti kuvaa halo 0|1`: ilmakehän reuna 2D-gradienttina (Kuvankasittely.Halo).</summary>
+        public static bool Halo2D = true;
+
+        /// <summary>Horisontti sarakkeittain kameran geometriasta (ensimmäinen maahan osuva rivi ylhäältä, binäärihaku) ja halo.</summary>
+        static void Halo(Texture2D kuva, KuvaKamera kk)
+        {
+            if (!Halo2D || !IssJuliste.Kaytossa) return;
+            int W = kuva.width, H = kuva.height;
+            double tv = Math.Tan(kk.PystykenttaAst * Math.PI / 360), th = tv * W / H;
+            var raja = new float[W]; int loydetty = 0;
+            for (int x = 0; x < W; x++)
+            {
+                double u = (2 * (x + 0.5) / W - 1) * th;
+                bool Osuu(double yy)
+                {
+                    double v = (1 - 2 * yy / H) * tv;
+                    var d = (kk.Katse.x + u * kk.Oikea.x + v * kk.Ylos.x, kk.Katse.y + u * kk.Oikea.y + v * kk.Ylos.y, kk.Katse.z + u * kk.Oikea.z + v * kk.Ylos.z);
+                    return Kuvasuunnitelma.Osuma(kk.Paikka, d) != null;
+                }
+                if (Osuu(0) || !Osuu(H)) { raja[x] = -1; continue; }
+                double lo = 0, hi = H;
+                for (int k = 0; k < 24; k++) { double m = (lo + hi) / 2; if (Osuu(m)) hi = m; else lo = m; }
+                raja[x] = (float)hi; loydetty++;
+            }
+            if (loydetty == 0) return;
+            var data = kuva.GetPixelData<byte>(0); var t = data.ToArray();
+            Kuvankasittely.Halo(t, W, H, raja, true);
+            data.CopyFrom(t); kuva.Apply(false);
+            Loki($"halo: horisontti {loydetty}/{W} sarakkeessa");
+        }
 
         static void ValojenKatto(Texture2D kuva)
         {
