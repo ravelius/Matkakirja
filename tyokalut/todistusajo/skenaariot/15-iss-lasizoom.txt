@@ -1,0 +1,11 @@
+# 15 ISS-ohjaamon ikkunan lasizoom iPadilla (LS2 6.10.: koe-152 1,15 vs. BUILD 151 1,3; Päätoimittaja kuittaa parista).
+# Ei kosketuksia: satelliittilinssi → astronautin kyyti (Cupola) → 20 s → still. Ilman ääntä.
+linssi linssi satelliitti
+oleta 30 linssit: auki: satelliitti -- astronautin kamera aukesi
+odota 8
+linssi astro kyyti
+oleta 30 astro kyyti: Ikkuna -- Cupolaan
+odota 20
+kuva 15a-cupola ISS-ohjaamo (Cupola) 20 s, ei kosketuksia
+linssi linssi pois
+odota 2
