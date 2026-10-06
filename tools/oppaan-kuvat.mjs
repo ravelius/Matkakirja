@@ -10,6 +10,7 @@
  *   node tools/oppaan-kuvat.mjs haku "<teksti>" [--raja 30]   Commons-vapaahaku samoilla suodattimilla (kun kategoria ei riitä)
  *   node tools/oppaan-kuvat.mjs tiedosto "<Nimi.jpg>" ...    yksittäisten tiedostojen tiedot ja suodatus
  *   node tools/oppaan-kuvat.mjs taulu <Q|haku:teksti|tiedosto:Nimi.jpg> ... --ulos <t.jpg> [--raja 30]   ehdokkaat numeroituna kuvatauluna
+ *   node tools/oppaan-kuvat.mjs rakenna <spec.json>        spec -> kaupunkitiedosto (kuvakentät Commonsista, P625 Wikidatasta) + validointi
  *   node tools/oppaan-kuvat.mjs tarkista <kaupunki-id|--kaikki>   validointi (lisenssi, mitat, P625, selite) livenä
  *   node tools/oppaan-kuvat.mjs kokoa                    kaikki kaupungit -> data/oppaan-kuvat/oppaan-kuvat.json
  *
@@ -307,6 +308,43 @@ export async function tarkistaKaupunki(id) {
     if (x.url !== tiedostoUrl(x.tiedosto)) virheet.push(`${p}: url ei ole Special:FilePath?width=1280`);
   }
   return virheet;
+}
+
+/** Kuvakentät työkalun omista tiedoista: spec = [{tiedosto, selite}] -> täysi kuvaluettelo (järjestys = listan järjestys). */
+export async function rakennaKuvat(spec) {
+  const t = await tiedot(spec.map((x) => `File:${x.tiedosto.replace(/^File:/, '')}`));
+  return spec.map((x, i) => {
+    const nimi = x.tiedosto.replace(/^File:/, '').replace(/_/g, ' ');
+    const c = t[`File:${nimi}`];
+    if (!c) throw new Error(`Tiedostoa ei ole Commonsissa: ${nimi}`);
+    const syy = hylkaysSyy(c);
+    if (syy) throw new Error(`${nimi}: ${syy}`);
+    return { jarjestys: i + 1, tiedosto: c.tiedosto, url: tiedostoUrl(c.tiedosto), tekija: c.tekija, lisenssi: c.lisenssi,
+      lisenssiUrl: c.lisenssiUrl || lisenssiUrlOletus(c.lisenssi), lahdeUrl: sivuUrl(c.tiedosto), selite: x.selite.trim(),
+      leveys: c.leveys, korkeus: c.korkeus, tarkistettu: x.tarkistettu !== false };
+  });
+}
+
+/**
+ * rakenna <spec.json>: spec = { kaupunki, kaupunkiQ, jarjestys?, kohteet:[{q, nimi, peruste, koko_m?, aliakset?, kuvat:[{tiedosto, selite}]}],
+ * kaupunginKuvat:[{tiedosto, selite}], eiKuvaa:[{q, nimi, peruste, syy}] }. Koordinaatit Wikidatan P625:stä, kuvakentät Commonsista;
+ * kirjoittaa data/oppaan-kuvat/kaupungit/<id>.json ja ajaa validoinnin. `tarkistettu` = true: vain silmätarkistuksen jälkeen.
+ */
+async function rakenna(tiedosto) {
+  const sp = JSON.parse(readFileSync(tiedosto, 'utf8'));
+  const qt = [...sp.kohteet, ...(sp.eiKuvaa ?? [])].map((k) => k.q);
+  const ent = await entiteetit(qt);
+  const sij = (k) => { const e = ent[k.q]; if (!e || e.lat == null) throw new Error(`${k.q} ${k.nimi}: ei P625-koordinaattia`); return { lat: +e.lat.toFixed(5), lon: +e.lon.toFixed(5) }; };
+  const ulos = { kaupunki: sp.kaupunki, kaupunkiQ: sp.kaupunkiQ, ...(sp.jarjestys ? { jarjestys: sp.jarjestys } : {}), kohteet: [], kaupunginKuvat: await rakennaKuvat(sp.kaupunginKuvat), eiKuvaa: [] };
+  for (const k of sp.kohteet) {
+    ulos.kohteet.push({ q: k.q, nimi: k.nimi, peruste: k.peruste, ...(k.koko_m ? { koko_m: k.koko_m } : {}), ...(k.aliakset?.length ? { aliakset: k.aliakset } : {}), ...sij(k), kuvat: await rakennaKuvat(k.kuvat) });
+  }
+  for (const k of sp.eiKuvaa ?? []) ulos.eiKuvaa.push({ q: k.q, nimi: k.nimi, peruste: k.peruste, ...sij(k), syy: k.syy });
+  mkdirSync(KAUPUNGIT, { recursive: true });
+  writeFileSync(join(KAUPUNGIT, `${sp.kaupunki}.json`), `${JSON.stringify(ulos, null, 1)}\n`);
+  const v = await tarkistaKaupunki(sp.kaupunki);
+  console.log(v.length ? `EI KELPAA ${sp.kaupunki}:\n  ${v.join('\n  ')}` : `ok ${sp.kaupunki}`);
+  process.exitCode = v.length ? 1 : 0;
 }
 
 function kokoa() {
