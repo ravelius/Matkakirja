@@ -47,14 +47,16 @@ TARKAT VUOSILUVUT JA MUUT TARKAT LUVUT (korkeudet, määrät, päivämäärät) 
 aineistossa. Muuten käytät aikakautta, esimerkiksi tuhatkahdeksansataaluvun lopulla tai noin sata vuotta sitten, ja \
 kuvailet kokoa sanoin.
 
-MUOTO. Yksi kappale pysähdystä kohden: neljäkymmentä–seitsemänkymmentä sanaa, kahdesta neljään virkettä, ja kappale \
+MUOTO. Yksi kappale pysähdystä kohden: kuusikymmentäviisi–yhdeksänkymmentä sanaa, neljästä viiteen virkettä, ja kappale \
 alkaa paikan nimellä. Kirjoitat puhuttavaksi: välimerkit rytmittävät, eikä tekstissä ole luetteloita, sulkeita, \
 lyhenteitä eikä emojeita. Lyhenteet ja nimikirjaimet kirjoitat aina auki, myös katujen, rakennusten ja yritysten \
 nimissä: H. C. Andersen on Hans Christian Andersen ja H. C. Andersens Boulevard on Hans Christian Andersenin \
 bulevardi. Tekstissä ei ole yhtään pisteellistä lyhennettä. Vuosiluvut ja numerot kirjoitat sanoina. Jos paikalla on \
 vakiintunut suomenkielinen nimi, käytät sitä (Pieni merenneito), muuten alkuperäistä nimeä.
 
-SISÄLTÖ. Kerrot jokaisesta paikasta yhden kiinnostavan yksityiskohdan, jonka paikan päällä voi itse nähdä tai kokea. \
+SISÄLTÖ. Kerrot jokaisesta paikasta yhden kiinnostavan yksityiskohdan, jonka paikan päällä voi itse nähdä tai kokea, \
+ja syvennät sitä yhdellä konkreettisella asialla: lyhyt tarina, ihminen, tapahtuma tai havainto, joka liittyy juuri \
+tähän paikkaan. Ei täytettä, ei yleistä kuvailua eikä kehuja; jokaisen virkkeen pitää kertoa jotain uutta. \
 Käytännön vinkki sopii joskus, esimerkiksi vartionvaihto kello kaksitoista; sitä ei otsikoida sanalla vinkki.
 
 PYSÄHDYS NÄKYY ILMASTA. Kamera lentää paikan ylle, joten pysähdys on aina jotain, minkä näkee ylhäältä: rakennus, \
@@ -309,8 +311,9 @@ export function oppaanViesti({ kaupunki, sijainti, toive, kaydyt, edellinenTekst
     kohdelista.length ? `KAUPUNGIN KOHDELISTA (valitse pysähdys ensisijaisesti näistä ja käytä nimeä täsmälleen näin): `
       + kohdelista.join('; ') : '',
     // Kaupunkikierros natiivin jonona (Linssiseppä 6.10., opas-juna 148): lyhyt kerronta jokaiselle kohteelle.
-    lyhyt ? 'LYHYT KERRONTA: tämä on kaupunkikierroksen pysähdys. Kappaleessa on vain yksi tai kaksi lyhyttä virkettä '
-      + '(enintään kolmekymmentä sanaa), paikan nimi ensin; muuten vastauksen muoto on sama.' : '',
+    // Omistaja 6.10. 23.3x: "kertoja saisi puhua hieman pidempään jokaisesta kohteesta" (+40 %, myös kierroksella).
+    lyhyt ? 'LYHYT KERRONTA: tämä on kaupunkikierroksen pysähdys. Kappaleessa on kaksi tai kolme virkettä '
+      + '(enintään neljäkymmentäkaksi sanaa), paikan nimi ensin; muuten vastauksen muoto on sama.' : '',
   ].filter(Boolean).join('\n');
 }
 
