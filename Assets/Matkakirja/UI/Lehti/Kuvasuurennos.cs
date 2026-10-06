@@ -96,8 +96,13 @@ namespace Matkakirja.Natiivi
             lahde.RegisterCallback<ClickEvent>(e => { if (lahdeUrl != null) { e.StopPropagation(); Application.OpenURL(lahdeUrl); } });
         }
 
+        /// <summary>Testi: kokoruudun tausta (luokat, laskettu väri, peitto) simukuvan tulkintaan.</summary>
+        public string Tausta() => $"suurennos {(Auki ? "auki" : "kiinni")}, kokoruutu {kokoruutu}, pysäytys {(pysaytys.resolvedStyle.display == DisplayStyle.Flex ? "on" : "ei")}, "
+            + $"tausta {kerros.resolvedStyle.backgroundColor}, peitto {kerros.resolvedStyle.opacity:0.00}, laatikko {kerros.worldBound}, paneeli {kerros.panel?.visualTree.worldBound}";
+
         public void Avaa(IReadOnlyList<LehtiKuva> kuvat, int alku = 0)
         {
+            if (kokoruutu && pysaytys.resolvedStyle.display != DisplayStyle.Flex) kerros.AddToClassList("mk-suurennos--ei-pysaytysta");
             sarja = new List<LehtiKuva>(kuvat ?? Array.Empty<LehtiKuva>());
             if (sarja.Count == 0) return;
             Nayta(alku);
@@ -187,6 +192,9 @@ namespace Matkakirja.Natiivi
 
         void AsetaPysaytys(Texture t)
         {
+            // Ilman pysäytyskuvaa (elävä opas, Cesium; Päätoimittaja 6.10. junan 146 stillit: 3D näkyi terävänä kuvan takana)
+            // kokoruudun tausta tummenee himmennys.kuva-tokenilla (.mk-suurennos--ei-pysaytysta).
+            kerros.EnableInClassList("mk-suurennos--ei-pysaytysta", t == null);
             if (t == null) { pysaytys.style.backgroundImage = StyleKeyword.None; pysaytys.style.display = DisplayStyle.None; return; }
             var tausta = t is RenderTexture rt ? Background.FromRenderTexture(rt) : t is Texture2D t2 ? Background.FromTexture2D(t2) : default;
             pysaytys.style.backgroundImage = new StyleBackground(tausta);

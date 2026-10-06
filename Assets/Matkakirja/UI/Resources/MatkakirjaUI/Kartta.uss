@@ -2133,6 +2133,11 @@
     background-color: rgba(10, 7, 4, 0.6);
 }
 
+/* Ilman pysäytyskuvaa (elävä opas, Päätoimittaja 6.10.): tumma himmennys tokenista, ettei 3D-näkymä näy terävänä kuvan takana. */
+.mk-nosto__suurennos.mk-suurennos--kokoruutu.mk-suurennos--ei-pysaytysta {
+    background-color: var(--tk-himmennys-kuva);
+}
+
 /* Löydös 132: pallon pysäytyskuva kokoruudun taustana, tummennettuna sävyllä (lapsi piirtyy kerroksen värin päälle). */
 .mk-suurennos__pysaytys {
     position: absolute;

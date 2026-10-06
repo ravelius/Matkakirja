@@ -820,6 +820,7 @@ namespace Matkakirja.Natiivi
                     return "opas: testikuva" + (testiKuva.Havainnekuva ? " (havainnekuva)" : "");
                 case "kuvat": VaihdaKuvat(); return "opas: kuvat " + (KuvatPaalla ? "päällä" : "pois");
                 case "suurenna": SuurennaKuva(); return "opas: suurennos " + (naytettyKuva != null ? "auki" : "ei kuvaa");
+                case "suurennos": return "opas: " + (suurennos?.Tausta() ?? "suurennos ei luotu");
                 case "kuvasarja":
                     testiKuvat = new[]
                     {
