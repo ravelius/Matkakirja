@@ -16,6 +16,12 @@
   "main": "worker.js",
   "compatibility_date": "2026-08-12",
   /*
+   * Workers Logs (6.10.2026: Pariisin Liiku-listan 502 jäi selvittämättä, koska lokeja ei ollut). console.log-rivit
+   * säilyvät hallintapaneelissa ja telemetriarajapinnassa muutaman päivän. Ilmaistasolla on päiväkiintiö; sen ylittävät
+   * rivit jäävät pois, eikä lisäkustannusta synny.
+   */
+  "observability": { "enabled": true },
+  /*
    * Julkiset asetukset. Salaisuudet EIVÄT tule tänne — API-avain
    * asetetaan komennolla `npx wrangler secret put ANTHROPIC_API_KEY`.
    *
