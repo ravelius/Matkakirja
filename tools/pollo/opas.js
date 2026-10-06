@@ -628,6 +628,71 @@ function commonsKuvaksi(sivu, tiukka = true) {
 }
 
 const KUVAKENTAT = '&prop=imageinfo&iiprop=url%7Cextmetadata%7Csize%7Cmime&iiurlwidth=1280';
+
+/**
+ * TÄKYJEN ERÄHAKU (omistaja 6.10.: aloitukseen jopa 50 maailman kohdetta; Päätoimittaja). Koordinaatit, Wikidata-tunnus,
+ * suomenkielinen kuvaus ja P18-kuva 50 kohteen erinä: Wikipedia (titles, enintään 50) → Wikidata (wbgetentities, 50) →
+ * Commons (imageinfo, 50). Muutama alipyyntö yhteensä (Cloudflaren ilmaistason raja 50 alipyyntöä/pyyntö).
+ * Kuva vain vapaalla lisenssillä ja tekijätiedoin (kuvallaTekijatiedot). Palauttaa [{ ...kohde, id, lat, lon, alarivi, kuva }]
+ * syöttöjärjestyksessä; kohteet ilman koordinaattia jäävät pois.
+ */
+export async function kohteetErana(haku, ehdokkaat) {
+  const palat = (lista, n = 50) => Array.from({ length: Math.ceil(lista.length / n) }, (_, i) => lista.slice(i * n, i * n + n));
+  const otsikot = [...new Set(ehdokkaat.map((k) => k.wikipedia ?? k.nimi).filter(Boolean))];
+  const otsikolle = new Map();
+  for (const pala of palat(otsikot)) {
+    try {
+      const d = await haeJson(haku, 'https://en.wikipedia.org/w/api.php?action=query&format=json&redirects=1'
+        + `&prop=coordinates%7Cpageprops&ppprop=wikibase_item&titles=${encodeURIComponent(pala.join('|'))}`);
+      const nimet = new Map(pala.map((t) => [t, t]));
+      for (const n of [...(d?.query?.normalized ?? []), ...(d?.query?.redirects ?? [])]) {
+        for (const [alku, nyt] of nimet) if (nyt === n.from) nimet.set(alku, n.to);
+      }
+      const sivut = new Map(Object.values(d?.query?.pages ?? {}).map((x) => [x.title, x]));
+      for (const [alku, lopullinen] of nimet) {
+        const x = sivut.get(lopullinen); const c = x?.coordinates?.[0];
+        if (c && Number.isFinite(c.lat) && Number.isFinite(c.lon)) otsikolle.set(alku, { lat: c.lat, lon: c.lon, qid: x.pageprops?.wikibase_item ?? null, otsikko: x.title });
+      }
+    } catch { /* pala jää ilman koordinaatteja */ }
+  }
+  const tunnukset = [...new Set([...otsikolle.values()].map((x) => x.qid).filter((q) => /^Q\d+$/.test(q ?? '')))];
+  const tiedot = new Map();
+  for (const pala of palat(tunnukset)) {
+    try {
+      const d = await haeJson(haku, `https://www.wikidata.org/w/api.php?action=wbgetentities&format=json&props=claims%7Cdescriptions&languages=fi&ids=${pala.join('|')}`);
+      for (const [q, e] of Object.entries(d?.entities ?? {})) {
+        tiedot.set(q, { kuva: e?.claims?.P18?.[0]?.mainsnak?.datavalue?.value ?? null, kuvaus: e?.descriptions?.fi?.value ?? null });
+      }
+    } catch { /* ilman kuvia */ }
+  }
+  const tiedostot = [...new Set([...tiedot.values()].map((t) => t.kuva).filter(Boolean))];
+  const kuvalle = new Map();
+  for (const pala of palat(tiedostot)) {
+    try {
+      const d = await haeJson(haku, 'https://commons.wikimedia.org/w/api.php?action=query&format=json&prop=imageinfo'
+        + `&iiprop=url%7Cextmetadata%7Csize%7Cmime&iiurlwidth=800&titles=${encodeURIComponent(pala.map((t) => `File:${t}`).join('|'))}`);
+      const nimet = new Map(pala.map((t) => [`File:${t}`, t]));
+      for (const n of d?.query?.normalized ?? []) if (nimet.has(n.from)) { nimet.set(n.to, nimet.get(n.from)); }
+      for (const x of Object.values(d?.query?.pages ?? {})) {
+        const k = commonsKuvaksi(x, false);
+        const alku = nimet.get(x.title);
+        if (k && alku) { delete k._nimi; delete k._vaaka; kuvalle.set(alku, k); }
+      }
+    } catch { /* ilman kuvia */ }
+  }
+  const nahty = new Set();
+  return ehdokkaat.map((k) => {
+    const o = otsikolle.get(k.wikipedia ?? k.nimi);
+    if (!o) return null;
+    const id = o.qid ?? `en:${o.otsikko}`;
+    if (nahty.has(id)) return null;
+    nahty.add(id);
+    const t = o.qid ? tiedot.get(o.qid) : null;
+    const kuva = t?.kuva ? kuvalle.get(t.kuva) ?? null : null;
+    return { ...k, id, lat: o.lat, lon: o.lon, alarivi: siivoa(t?.kuvaus, 80) || null,
+      kuva: kuva && kuvallaTekijatiedot(kuva) ? kuva : null };
+  }).filter(Boolean);
+}
 const tiedostonimi = (lahde) => decodeURIComponent(String(lahde ?? '').split('/').pop() ?? '').replace(/^File:/, '').replace(/_/g, ' ').toLowerCase();
 
 /** P18 + Commons-luokka (P373) → enintään `maara` kuvaa, `olemassa` (pelin omat) suodatetaan pois tiedostonimellä. */

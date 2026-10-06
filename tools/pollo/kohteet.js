@@ -45,8 +45,8 @@ export function kohteidenViesti({ kaupunki = null, eiNaita = [] } = {}) {
     .filter(Boolean).join('\n');
 }
 
-/** Mallin vastaus → [{ nimi, wikipedia, kaupunki, iso, koukku }] (enintään KOHTEITA, kaksoiskappaleet pois). */
-export function jasennaKohteet(teksti) {
+/** Mallin vastaus → [{ nimi, wikipedia, kaupunki, iso, koukku }] (enintään maara, kaksoiskappaleet pois). */
+export function jasennaKohteet(teksti, maara = KOHTEITA) {
   const tulos = [];
   for (const m of String(teksti ?? '').matchAll(/^\s*KOHDE\s*:\s*(.+)$/gim)) {
     const [nimi, wikipedia, kaupunki, iso, ...koukku] = m[1].split('|').map((x) => x.trim());
@@ -54,9 +54,31 @@ export function jasennaKohteet(teksti) {
       iso: /^[A-Za-z]{2}$/.test(iso ?? '') ? iso.toUpperCase() : null, koukku: koukuksi(koukku.join('|')) || null };
     if (k.nimi && k.koukku && !tulos.some((x) => x.nimi.toLowerCase() === k.nimi.toLowerCase())) tulos.push(k);
   }
-  return tulos.slice(0, KOHTEITA);
+  return tulos.slice(0, maara);
 }
 
 export const kohdeAvain = (kaupunki, paiva) => `opas:kohteet:v1:${kaupunki ? kaupunki.toLowerCase().replace(/\s+/g, '-') : 'maailma'}:${paiva}`;
 export const paivaUtc = (nyt = new Date()) => nyt.toISOString().slice(0, 10);
 export const eilenUtc = (nyt = new Date()) => new Date(nyt.getTime() - 86400000).toISOString().slice(0, 10);
+
+/*
+ * MAAILMAN 50 SUOSIKKIA (omistaja 6.10.2026: oppaan aloitukseen jopa 50 suosikkikohdetta koko maailmasta; juna 149).
+ * GET /opas/kohteet?n=50 (ilman kaupunkia): vakaa lista (ei päivittäin vaihtuva), R2 30 vrk. Malli antaa 60 ehdokasta
+ * maanosat sekoitettuina; koordinaatit ja kuvat erähaulla (opas.js kohteetErana), 50 ensimmäistä kelpaavaa.
+ */
+export const MAAILMAN_SUOSIKKEJA = 50;
+export const maailmanSuosikitAvain = () => 'opas:kohteet:maailma50:v1';
+export const MAAILMAN_SUOSIKIT_KEHOTE = `Valitset Matkakirja-pelin elävälle oppaalle maailman suosikkikohteet: 60 \
+tunnetuinta ja kiinnostavinta nähtävyyttä, joista pelaaja valitsee yhden ja kamera lentää sen ylle kertojan kertoessa. \
+Kohteet ovat yksittäisiä nähtävyyksiä, jotka näkyvät ilmasta (esimerkiksi Akropolis, Central Park, Sydneyn oopperatalo), \
+eivät pelkkiä kaupunkien nimiä. Maanosat tasaisesti: noin 18 Euroopasta, 12 Aasiasta, 8 Pohjois-Amerikasta, 6 \
+Etelä-Amerikasta, 6 Afrikasta, 5 Lähi-idästä ja 5 Oseaniasta. Painota paikkoja suurissa kaupungeissa, joista on hyvä \
+fotorealistinen 3D-malli, mutta mukaan sopii myös luontokohteita. Sekoita maanosat järjestyksessä: ei kahta saman \
+maanosan kohdetta peräkkäin. Kirjoitat suomeksi.
+
+KOUKKU. Jokaiselle kohteelle yksi lyhyt koukkurivi (enintään kahdeksan sanaa, yksi virke), joka herättää uteliaisuuden \
+ja jonka pitää olla totta. Ei tarkkoja lukuja eikä vuosilukuja, ellet ole täysin varma. Ei mainoskieltä.
+
+Vastaat vain riveillä, yksi kohde riviä kohden, ei mitään muuta:
+KOHDE: <nimi suomeksi tai vakiintunut alkuperäinen> | <englanninkielisen Wikipedia-artikkelin tarkka otsikko> | \
+<kaupunki suomeksi> | <maan ISO 3166-1 alpha-2 -koodi> | <koukkurivi>`;

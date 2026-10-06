@@ -170,6 +170,10 @@ koodimuutos main-haarassa julkaisee workerin uudelleen itsestään.
   Williamin ääni oppaan polulla ja katolla, toiminto (siirry {nimi, lat, lon, ulkona} | kohde {id} | kaupunki {nimi, lat,
   lon} | kierros | tauko | jatka | null) ja 2 jatkokysymystä, `GET /opas/liiku?kaupunki` → 12 tärkeintä kohdetta
   koordinaatteineen (R2 30 vrk). Kysy lasketaan oppaan IP-rajoihin.
+- **Maailman 50 suosikkia** (omistaja 6.10.2026, juna 149): `GET /opas/kohteet?n=50` ilman kaupunkia → `{kohteet: [50 ×
+  {id, nimi, koukku, kaupunki, iso, lat, lon, alarivi, kuva|null}]}`. Lista on vakaa (R2 30 vrk), ja maanosat ovat tasaisesti.
+  Koordinaatit, kuvaus ja P18-kuva haetaan erinä (`kohteetErana`, muutama alipyyntö), ja kuva tulee vain tekijä- ja
+  lisenssitiedoin. Täkyjen oletuspyyntö (8, päivittäin) lämmittää listan taustalla.
 - **Testit eivät tuota ääntä** (omistaja 6.10.2026, sitova): roolien testitunnus (`x-matkakirja-testitunnus`) ja
   testiotsake (`x-matkakirja-testi: 1`) eivät koskaan kutsu puhemoottoria (ElevenLabs, xAI, OpenAI). Luenta palauttaa
   valmiin äänen säilöistä tai 204, opas antaa ääni-urlin vain R2:ssa jo olevalle äänelle, eivätkä GET-polut tuota.
