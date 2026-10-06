@@ -186,3 +186,172 @@ Kaikki natiivin linssivalikon linssit, myös keskeneräiset. Valmiit linssikatal
 Oppaan lukituista kohdelistoista ne kohteet, joille ei löydy kelvollista CC/PD-valokuvaa, sekä kadonneet ja rappeutuneet kohteet. Luokat Raamatun mukaan: kadonnut / rappeutunut (parikuvana) / olemassa vain jos tuo lisää. Tunnus = Wikidata Q.
 
 Kysymykset ja jumit: tiedosto `posti/codex-fable-oppaan-kuvat-<pvm>.md`.
+
+## ERÄ 1B (Sisältökirjuri 6.10.2026): 162 kaupunkia × 1 kuva
+
+Maailman pääkaupungit ja suosikkikaupungit, joita pelissä ei ole (ei päällekkäisiä: yksikään ei ole 35 km:n sisällä pelin 266 kaupungista). YKSI kuva per kaupunki, ei vuorokausiversioita (omistaja 20.2x), valitse kaupungille edullisin hetki ja kuvakulma. Tiedostonimi `julisteet/herokoe/hero-<tunnus>.png`, sama muoto kuin ERÄ 1:ssä. Tunnus on tässä listassa uusi (ei pelin kaupunkitunnus); nimi on suomeksi (Wikidatan fi-label), maa suomeksi. Koordinaatit ja Wikidata Q: `data/oppaan-kuvat/kaupungit-vaihe2.json` (Sisältökirjurin haara sisaltokirjuri-oppaan-kuvat). Lista on järjestyksessä: ensin pääkaupungit, sitten suosikkikaupungit (Osaka, Hiroshima, Cusco, Cartagena, Boston, Zürich ym.).
+
+| # | tunnus | nimi | maa |
+|---|---|---|---|
+| 1 | juba | Juba | Etelä-Sudan |
+| 2 | bern | Bern | Sveitsi |
+| 3 | ngerulmud | Ngerulmud | Palau |
+| 4 | taskent | Taškent | Uzbekistan |
+| 5 | washington | Washington | Yhdysvallat |
+| 6 | dhaka | Dhaka | Bangladesh |
+| 7 | islamabad | Islamabad | Pakistan |
+| 8 | lapaz | La Paz | Bolivia |
+| 9 | abudhabi | Abu Dhabi | Yhdistyneet arabiemiraatit |
+| 10 | monaco | Monaco | Monaco |
+| 11 | vaduz | Vaduz | Liechtenstein |
+| 12 | nassau | Nassau | Bahama |
+| 13 | kualalumpur | Kuala Lumpur | Malesia |
+| 14 | phnompenh | Phnom Penh | Kambodža |
+| 15 | skopje | Skopje | Pohjois-Makedonia |
+| 16 | santiagodechile | Santiago de Chile | Chile |
+| 17 | tbilisi | Tbilisi | Georgia |
+| 18 | zagreb | Zagreb | Kroatia |
+| 19 | jerevan | Jerevan | Armenia |
+| 20 | paramaribo | Paramaribo | Suriname |
+| 21 | tegucigalpa | Tegucigalpa | Honduras |
+| 22 | sucre | Sucre | Bolivia |
+| 23 | sansalvador | San Salvador | El Salvador |
+| 24 | canberra | Canberra | Australia |
+| 25 | ndjamena | N’Djamena | Tšad |
+| 26 | alger | Alger | Algeria |
+| 27 | sanjose | San José | Costa Rica |
+| 28 | belgrad | Belgrad | Serbia |
+| 29 | bamako | Bamako | Mali |
+| 30 | khartum | Khartum | Sudan |
+| 31 | brasilia | Brasília | Brasilia |
+| 32 | bratislava | Bratislava | Slovakia |
+| 33 | bangui | Bangui | Keski-Afrikan tasavalta |
+| 34 | lome | Lomé | Togo |
+| 35 | minsk | Minsk | Valko-Venäjä |
+| 36 | amman | Amman | Jordania |
+| 37 | andorralavella | Andorra la Vella | Andorra |
+| 38 | sanmarino | San Marino | San Marino |
+| 39 | luanda | Luanda | Angola |
+| 40 | lusaka | Lusaka | Sambia |
+| 41 | beirut | Beirut | Libanon |
+| 42 | manama | Manama | Bahrain |
+| 43 | belmopan | Belmopan | Belize |
+| 44 | ottawa | Ottawa | Kanada |
+| 45 | pretoria | Pretoria | Etelä-Afrikka |
+| 46 | rabat | Rabat | Marokko |
+| 47 | harare | Harare | Zimbabwe |
+| 48 | mogadishu | Mogadishu | Somalia |
+| 49 | nouakchott | Nouakchott | Mauritania |
+| 50 | dodoma | Dodoma | Tansania |
+| 51 | biskek | Biškek | Kirgisia |
+| 52 | bandarseribegawan | Bandar Seri Begawan | Brunei |
+| 53 | male | Malé | Malediivit |
+| 54 | niamey | Niamey | Niger |
+| 55 | dusanbe | Dušanbe | Tadžikistan |
+| 56 | asmara | Asmara | Eritrea |
+| 57 | djibouti | Djibouti | Djibouti |
+| 58 | bissau | Bissau | Guinea-Bissau |
+| 59 | majuro | Majuro | Marshallinsaaret |
+| 60 | georgetown | Georgetown | Guyana |
+| 61 | vientiane | Vientiane | Laos |
+| 62 | monrovia | Monrovia | Liberia |
+| 63 | thimphu | Thimphu | Bhutan |
+| 64 | pjongjang | Pjongjang | Korean demokraattinen kansantasavalta |
+| 65 | yaounde | Yaoundé | Kamerun |
+| 66 | portauprince | Port-au-Prince | Haiti |
+| 67 | yaren | Yaren | Nauru |
+| 68 | apia | Apia | Samoa |
+| 69 | banjul | Banjul | Gambia |
+| 70 | ouagadougou | Ouagadougou | Burkina Faso |
+| 71 | abuja | Abuja | Nigeria |
+| 72 | praia | Praia | Kap Verde |
+| 73 | yamoussoukro | Yamoussoukro | Norsunluurannikko |
+| 74 | kingston | Kingston | Jamaika |
+| 75 | libreville | Libreville | Gabon |
+| 76 | freetown | Freetown | Sierra Leone |
+| 77 | kinshasa | Kinshasa | Kongon demokraattinen tasavalta |
+| 78 | asgabat | Ašgabat | Turkmenistan |
+| 79 | portonovo | Porto-Novo | Benin |
+| 80 | naypyidaw | Naypyidaw | Myanmar |
+| 81 | bloemfontein | Bloemfontein | Etelä-Afrikka |
+| 82 | conakry | Conakry | Guinea |
+| 83 | funafuti | Funafuti | Tuvalu |
+| 84 | accra | Accra | Ghana |
+| 85 | nukualofa | Nukuʻalofa | Tonga |
+| 86 | brazzaville | Brazzaville | Kongon tasavalta |
+| 87 | kingstown | Kingstown | Saint Vincent ja Grenadiinit |
+| 88 | roseau | Roseau | Dominica |
+| 89 | moroni | Moroni | Komorit |
+| 90 | kampala | Kampala | Uganda |
+| 91 | santodomingo | Santo Domingo | Dominikaaninen tasavalta |
+| 92 | maputo | Maputo | Mosambik |
+| 93 | stgeorges | St. George’s | Grenada |
+| 94 | mbabane | Mbabane | Swazimaa |
+| 95 | basseterre | Basseterre | Saint Kitts ja Nevis |
+| 96 | lilongwe | Lilongwe | Malawi |
+| 97 | baku | Baku | Azerbaidžan |
+| 98 | kigali | Kigali | Ruanda |
+| 99 | castries | Castries | Saint Lucia |
+| 100 | windhoek | Windhoek | Namibia |
+| 101 | antananarivo | Antananarivo | Madagaskar |
+| 102 | victoria | Victoria | Seychellit |
+| 103 | rawalpindi | Rawalpindi | Pakistan |
+| 104 | portofspain | Port of Spain | Trinidad ja Tobago |
+| 105 | gaborone | Gaborone | Botswana |
+| 106 | palikir | Palikir | Mikronesia |
+| 107 | tirana | Tirana | Albania |
+| 108 | pristina | Pristina | Kosovo |
+| 109 | saotome | São Tomé | São Tomé ja Príncipe |
+| 110 | portlouis | Port Louis | Mauritius |
+| 111 | southtarawa | South Tarawa | Kiribati |
+| 112 | bridgetown | Bridgetown | Barbados |
+| 113 | maseru | Maseru | Lesotho |
+| 114 | gitega | Gitega | Burundi |
+| 115 | lobamba | Lobamba | Swazimaa |
+| 116 | chisinau | Chișinău | Moldova |
+| 117 | podgorica | Podgorica | Montenegro |
+| 118 | ciudaddelapaz | Ciudad de la Paz | Päiväntasaajan Guinea |
+| 119 | hiroshima | Hiroshima | Japani |
+| 120 | sapporo | Sapporo | Japani |
+| 121 | nagoya | Nagoya | Japani |
+| 122 | busan | Busan | Etelä-Korea |
+| 123 | chengdu | Chengdu | Kiina |
+| 124 | hangzhou | Hangzhou | Kiina |
+| 125 | siemreab | Siĕm Réab | Kambodža |
+| 126 | louangphabang | Louangphabang | Laos |
+| 127 | chiangmai | Chiang Mai | Thaimaa |
+| 128 | phuket | Phuket | Thaimaa |
+| 129 | agra | Agra | Intia |
+| 130 | jaipur | Jaipur | Intia |
+| 131 | udaipur | Udaipur | Intia |
+| 132 | cusco | Cusco | Peru |
+| 133 | cartagena | Cartagena | Kolumbia |
+| 134 | medellin | Medellín | Kolumbia |
+| 135 | florianopolis | Florianópolis | Brasilia |
+| 136 | boston | Boston | Yhdysvallat |
+| 137 | philadelphia | Philadelphia | Yhdysvallat |
+| 138 | seattle | Seattle | Yhdysvallat |
+| 139 | lasvegas | Las Vegas | Yhdysvallat |
+| 140 | sandiego | San Diego | Yhdysvallat |
+| 141 | orlando | Orlando | Yhdysvallat |
+| 142 | quebec | Quebec | Kanada |
+| 143 | cancun | Cancún | Meksiko |
+| 144 | oaxaca | Oaxaca | Meksiko |
+| 145 | casablanca | Casablanca | Marokko |
+| 146 | munchen | München | Saksa |
+| 147 | hampuri | Hampuri | Saksa |
+| 148 | frankfurtammain | Frankfurt am Main | Saksa |
+| 149 | salzburg | Salzburg | Itävalta |
+| 150 | zurich | Zürich | Sveitsi |
+| 151 | milano | Milano | Italia |
+| 152 | torino | Torino | Italia |
+| 153 | lyon | Lyon | Ranska |
+| 154 | nizza | Nizza | Ranska |
+| 155 | gdansk | Gdańsk | Puola |
+| 156 | split | Split | Kroatia |
+| 157 | thessaloniki | Thessaloniki | Kreikka |
+| 158 | antalya | Antalya | Turkki |
+| 159 | glasgow | Glasgow | Britannia |
+| 160 | manchester | Manchester | Britannia |
+| 161 | osaka | Osaka | Japani |
+| 162 | valencia | Valencia | Espanja |
