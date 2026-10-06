@@ -28,7 +28,7 @@ roolien todisteet → Päätoimittaja VIE → JUNAN AVAUS NYT Natiivisepälle �
 
 - **Lukossa: Natiiviseppä Mac v1** 62f6b368 (natiiviseppa/mac + BUILD 154, 22.47 →, 30–60 min). Pyysin setsid-irrotuksen.
   Mac-käännöksen rinnalla enintään 1 mykkä simu, ei muita käännöksiä.
-- Jonossa Macin jälkeen: (1) **Natiivi-UI ylarivi-155 716744c9** (KIIREELLINEN, omistajan TF 154 iPad-vaaka) + mykkä 8 min;
+- Jonossa Macin jälkeen: (1) **Natiivi-UI ylarivi-155 960faaa7** (korvaa 716744c9; KIIREELLINEN, omistajan TF 154 iPad-vaaka) + mykkä 8 min;
   (2) **LS2 juna 155 koe** "linssiseppa2/gibs-pehmea+linssiseppa2/opas-vapaa-lataus" (640eb7b4 + 5683ffaf) + 20 min hiljainen
   (F2D9B022 olkapää A/B 6 kuvaa, 4CE6C737 vapaa tila +5 s); (3) LS2 gibs-pehmea 8f2db691 + 4 min Helsinki (voi yhdistää (2):een).
 - Linssiseppä 1:n yövalot v4 (4c51ceea) ajossa 22.47 →, ~6 min.

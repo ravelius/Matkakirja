@@ -1,12 +1,32 @@
 {
   "permissions": {
     "allow": [
-      "Bash(aws s3 sync:*)",
       "Bash(aws s3 cp:*)",
       "Bash(aws s3 ls:*)",
+      "Bash(aws s3 sync:*)",
+      "Bash(gh workflow run proto3d-testflight.yml:*)",
+      "Bash(gh workflow run:*)",
+      "Bash(git worktree remove:*)",
+      "Bash(python3 -)",
       "Bash(source:*)",
+      "Edit(.github/workflows/**)",
+      "Write(.github/workflows/**)",
       "Read(//Users/Shared/Claude/wt-julkaisija-tyotilat/**)",
-      "Bash(python3 -)"
+      "Bash(gh pr merge:*)",
+      "Bash(/Users/Shared/Claude/julkaisija-tyokalut/mergaa.sh:*)",
+      "Bash(zsh /Users/Shared/Claude/julkaisija-tyokalut/mergaa.sh:*)",
+      "Bash(/Users/Shared/Claude/julkaisija-tyokalut/jonoon.sh:*)",
+      "Bash(zsh /Users/Shared/Claude/julkaisija-tyokalut/jonoon.sh:*)",
+      "Bash(/Users/Shared/Claude/julkaisija-tyokalut/juna.sh:*)",
+      "Bash(zsh /Users/Shared/Claude/julkaisija-tyokalut/juna.sh:*)",
+      "Bash(gh pr view:*)",
+      "Bash(gh pr checks:*)",
+      "Bash(gh pr list:*)",
+      "Bash(gh run list:*)",
+      "Bash(gh run view:*)",
+      "Bash(gh run watch:*)",
+      "Bash(/Users/Shared/Claude/julkaisija-tyokalut/vie-paketti.sh:*)",
+      "Bash(zsh /Users/Shared/Claude/julkaisija-tyokalut/vie-paketti.sh:*)"
     ]
   }
 }
