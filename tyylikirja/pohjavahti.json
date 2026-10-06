@@ -58,9 +58,6 @@
   "Assets/Matkakirja/UI/Linssit/Keksijakaruselli.cs": {
    "vari": 1
   },
-  "Assets/Matkakirja/UI/Linssit/Kuvanakyma.cs": {
-   "vari": 4
-  },
   "Assets/Matkakirja/UI/Linssit/Maakayrakuva.cs": {
    "vari": 4
   },
@@ -128,19 +125,24 @@
    "vari": 73
   },
   "Assets/Matkakirja/UI/Resources/MatkakirjaUI/Lehti.uss": {
-   "fontti": 131,
+   "fontti": 130,
    "siirtyma": 2,
-   "vari": 338
+   "vari": 332
   },
   "Assets/Matkakirja/UI/Resources/MatkakirjaUI/Linssit.uss": {
-   "fontti": 132,
+   "fontti": 130,
    "siirtyma": 18,
-   "vari": 371
+   "vari": 356
   },
   "Assets/Matkakirja/UI/Resources/MatkakirjaUI/Matkakirja.uss": {
    "fontti": 149,
    "siirtyma": 16,
-   "vari": 370
+   "vari": 367
+  },
+  "Assets/Matkakirja/UI/Resources/MatkakirjaUI/Pohjat/Pinnat/ajattelija.uss": {
+   "fontti": 0,
+   "siirtyma": 0,
+   "vari": 0
   },
   "Assets/Matkakirja/UI/Resources/MatkakirjaUI/Pohjat/Pinnat/astronautin-auto.uss": {
    "fontti": 0,
@@ -148,6 +150,11 @@
    "vari": 0
   },
   "Assets/Matkakirja/UI/Resources/MatkakirjaUI/Pohjat/Pinnat/dialogit.uss": {
+   "fontti": 0,
+   "siirtyma": 0,
+   "vari": 0
+  },
+  "Assets/Matkakirja/UI/Resources/MatkakirjaUI/Pohjat/Pinnat/erikoisnostot.uss": {
    "fontti": 0,
    "siirtyma": 0,
    "vari": 0
@@ -207,6 +214,11 @@
    "siirtyma": 0,
    "vari": 0
   },
+  "Assets/Matkakirja/UI/Resources/MatkakirjaUI/Pohjat/iss-ohjaamo.uss": {
+   "fontti": 0,
+   "siirtyma": 0,
+   "vari": 0
+  },
   "Assets/Matkakirja/UI/Resources/MatkakirjaUI/Pohjat/kentta.uss": {
    "fontti": 0,
    "siirtyma": 0,
@@ -220,7 +232,7 @@
   "Assets/Matkakirja/UI/Resources/MatkakirjaUI/Pohjat/kuvanakyma.uss": {
    "fontti": 0,
    "siirtyma": 0,
-   "vari": 5
+   "vari": 0
   },
   "Assets/Matkakirja/UI/Resources/MatkakirjaUI/Pohjat/nostokortti.uss": {
    "fontti": 0,
@@ -243,9 +255,9 @@
    "vari": 0
   },
   "Assets/Matkakirja/UI/Resources/MatkakirjaUI/Pulu.uss": {
-   "fontti": 44,
+   "fontti": 43,
    "siirtyma": 8,
-   "vari": 90
+   "vari": 83
   },
   "Assets/Matkakirja/UI/Resources/MatkakirjaUI/Sahke.uss": {
    "fontti": 13,
@@ -253,9 +265,9 @@
    "vari": 28
   },
   "Assets/Matkakirja/UI/Resources/MatkakirjaUI/Sahketehtava.uss": {
-   "fontti": 22,
+   "fontti": 21,
    "siirtyma": 1,
-   "vari": 76
+   "vari": 74
   },
   "Assets/Matkakirja/UI/Saagraafi.cs": {
    "vari": 9

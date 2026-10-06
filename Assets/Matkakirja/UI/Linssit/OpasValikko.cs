@@ -123,7 +123,6 @@ namespace Matkakirja.Natiivi
         bool nakyy, siruNakyy;
         OpasKohde odotettuKysymys;
         float krediittiAla = 40f;
-        string krediittiPysahdys;
         readonly OpasTapit tapit;
         readonly OpasNimilappu nimilappu;
         int siruPoletti = -1;
@@ -290,7 +289,7 @@ namespace Matkakirja.Natiivi
         // --- SIIRTYMÄ KAUPUNGIN ULKOPUOLELLE (omistaja 6.10. 12.0x): ei lentoa, vaan Cupolan alkutekstin musta ruutu (mk-astroavaus),
         // keskellä "Siirrytään" ja kohteen nimi (Lcd/VT323 kuten Cupolassa) sekä LATAUSPALKKI (EDISTYMINEN-pohja, tk-teema-tumma);
         // näkymä aukeaa häivyttäen, kun kohde on ladattu tarkaksi. Linssisepän OpasSovitin: SiirtymaAlkaa(string), SiirtymaEdistyminen
-        // (0–1) ja SiirtymaValmis (nimellä, jotta tämä kääntyy ilman rajapintaa).
+        // (0–1) ja SiirtymaValmis.
         VisualElement siirtyma;
         Label siirtymaNimi;
         Latauspalkki siirtymaPalkki;
@@ -304,21 +303,8 @@ namespace Matkakirja.Natiivi
             siirtymaNimi = Rakenne.Teksti("", "mk-ajattelija__nimi", siirtyma);
             foreach (var t in new[] { otsikko, siirtymaNimi }) { t.pickingMode = PickingMode.Ignore; t.style.unityTextAlign = TextAnchor.MiddleCenter; Kirjasimet.Aseta(t, Kirjasin.Lcd); }
             siirtymaPalkki = new Latauspalkki(siirtyma);
-            try
-            {
-                var tyyppi = typeof(OpasSovitin);
-                var alkaa = tyyppi.GetEvent("SiirtymaAlkaa");
-                if (alkaa != null) alkaa.AddEventHandler(null, new Action<string>(n => UiKerros.PaaSaikeessa(() => SiirtymaAlkaa(n))));
-                var valmis = tyyppi.GetEvent("SiirtymaValmis");
-                if (valmis != null) valmis.AddEventHandler(null, new Action(() => UiKerros.PaaSaikeessa(SiirtymaValmis)));
-            }
-            catch (Exception e) { Debug.LogWarning("MATKAKIRJA opas: siirtymän kytkentä: " + e.GetType().Name); }
-        }
-
-        static float SiirtymaEdistyminen()
-        {
-            try { return typeof(OpasSovitin).GetProperty("SiirtymaEdistyminen")?.GetValue(null) is float f ? f : 0f; }
-            catch { return 0f; }
+            OpasSovitin.SiirtymaAlkaa += n => UiKerros.PaaSaikeessa(() => SiirtymaAlkaa(n));
+            OpasSovitin.SiirtymaValmis += () => UiKerros.PaaSaikeessa(SiirtymaValmis);
         }
 
         /// <summary>Siirtymä alkaa: musta ruutu nimellä ja latauspalkilla (myös testi `ui opasvalikko siirtyma <nimi>`).</summary>
@@ -336,7 +322,7 @@ namespace Matkakirja.Natiivi
             KrediititTiivis.CesiumNakyviin = true;   // Cesium ion -logo Siirrytään-ruudulla (omistaja 6.10.)
             Debug.Log("MATKAKIRJA opas: siirtymä alkaa → " + nimi);
             siirtymaKierros?.Pause();
-            siirtymaKierros = siirtyma.schedule.Execute(() => siirtymaPalkki.Arvo = testiEdistyminen ?? SiirtymaEdistyminen()).Every(100);
+            siirtymaKierros = siirtyma.schedule.Execute(() => siirtymaPalkki.Arvo = testiEdistyminen ?? OpasSovitin.SiirtymaEdistyminen).Every(100);
         }
 
         /// <summary>Kohde ladattu: musta ruutu häipyy (Cupolan häivytys) ja näkymä aukeaa.</summary>
@@ -350,7 +336,6 @@ namespace Matkakirja.Natiivi
             siirtyma.schedule.Execute(() => { if (siirtyma.resolvedStyle.opacity < 0.01f) siirtyma.style.display = DisplayStyle.None; }).StartingIn(1200);
             testiEdistyminen = null;
             KrediititTiivis.CesiumNakyviin = false;
-            KrediititTiivis.NaytaRivi();
             Debug.Log("MATKAKIRJA opas: siirtymä valmis");
         }
 
@@ -391,7 +376,7 @@ namespace Matkakirja.Natiivi
             teksti = (teksti ?? "").Trim();
             if (teksti.Length == 0) return;
             Debug.Log($"MATKAKIRJA opas: {mista} oppaalle \"{teksti}\"");
-            if (Sano("Puhu", new[] { typeof(string) }, teksti)) return;
+            if (OpasSovitin.Puhu(teksti)) return;
             if (!(PuluChat.Sieppaa?.Invoke(teksti) ?? false)) UiNakymat.Hae()?.Chat?.Kysy(teksti, true);
         }
 
@@ -416,22 +401,15 @@ namespace Matkakirja.Natiivi
             kirjoitus.RegisterCallback<PointerDownEvent>(e => e.StopPropagation());
         }
 
-        /// <summary>OpasSovittimen lista nimellä (LS1:n rajapinta: Kysymykset, Kohteet); null = latautuu tai ei vielä saatavilla.</summary>
-        static object Lista(string nimi)
-        {
-            try { return typeof(OpasSovitin).GetProperty(nimi, System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Static)?.GetValue(null); }
-            catch (Exception e) { Debug.LogWarning("MATKAKIRJA opas: " + nimi + ": " + e.GetType().Name); return null; }
-        }
-
         void RakennaKysy()
         {
             Vieritys();
             Kirjasimet.Aseta(Rakenne.Teksti("KYSY OPPAALTA", "mk-linssivalitsin__valiotsikko", rivit), Kirjasin.ModerniLihava);
-            if (!(Lista("Kysymykset") is IReadOnlyList<string> kys) || kys.Count == 0)
+            if (!(OpasSovitin.Kysymykset is IReadOnlyList<string> kys) || kys.Count == 0)
             {
                 Kirjasimet.Aseta(Rakenne.Teksti("Kysymykset latautuvat…", "mk-linssivalikko__lahde", rivit), Kirjasin.Moderni);
-                valikko.schedule.Execute(() => { if (Auki && nakyma == Nakyma.Kysy && Lista("Kysymykset") is IReadOnlyList<string> k && k.Count > 0) Rakenna(); })
-                    .Every(500).Until(() => !Auki || nakyma != Nakyma.Kysy || Lista("Kysymykset") is IReadOnlyList<string> k2 && k2.Count > 0);
+                valikko.schedule.Execute(() => { if (Auki && nakyma == Nakyma.Kysy && OpasSovitin.Kysymykset is IReadOnlyList<string> k && k.Count > 0) Rakenna(); })
+                    .Every(500).Until(() => !Auki || nakyma != Nakyma.Kysy || OpasSovitin.Kysymykset is IReadOnlyList<string> k2 && k2.Count > 0);
                 return;
             }
             foreach (var q in kys)
@@ -441,7 +419,7 @@ namespace Matkakirja.Natiivi
                 {
                     Sulje();
                     Debug.Log("MATKAKIRJA opas: kysy \"" + t + "\"");
-                    if (!Sano("Kysy", new[] { typeof(string) }, t)) Valitse(t);
+                    if (!OpasSovitin.Kysy(t)) Valitse(t);
                 };
                 var b = Rakenne.Nappi(null, "mk-linssivalikko__kohta mk-linssivalikko__komento", () => Rivilta(teko), rivit);
                 var n = Rakenne.Teksti(t, "mk-linssivalikko__nimi", b);
@@ -456,16 +434,16 @@ namespace Matkakirja.Natiivi
         {
             Vieritys();
             Kirjasimet.Aseta(Rakenne.Teksti("MIHIN SIIRRYTÄÄN?", "mk-linssivalitsin__valiotsikko", rivit), Kirjasin.ModerniLihava);
-            var kohteet = Lista("Kohteet") as IReadOnlyList<Matkakirja.Linssit.Kierros.OpasTaky>;
+            var kohteet = OpasSovitin.Kohteet;
             if (kohteet == null)
             {
                 Kirjasimet.Aseta(Rakenne.Teksti("Kohteet latautuvat…", "mk-linssivalikko__lahde", rivit), Kirjasin.Moderni);
-                valikko.schedule.Execute(() => { if (Auki && nakyma == Nakyma.Liiku && Lista("Kohteet") != null) Rakenna(); })
-                    .Every(500).Until(() => !Auki || nakyma != Nakyma.Liiku || Lista("Kohteet") != null);
+                valikko.schedule.Execute(() => { if (Auki && nakyma == Nakyma.Liiku && OpasSovitin.Kohteet != null) Rakenna(); })
+                    .Every(500).Until(() => !Auki || nakyma != Nakyma.Liiku || OpasSovitin.Kohteet != null);
             }
             else foreach (var k in kohteet) LiikuRivi(k);
             // Alimpana aina Kaupunkikierros (omistaja 6.10.).
-            Action kierros = () => { Sulje(); Debug.Log("MATKAKIRJA opas: kaupunkikierros"); Sano("Kaupunkikierros", Type.EmptyTypes); };
+            Action kierros = () => { Sulje(); Debug.Log("MATKAKIRJA opas: kaupunkikierros"); OpasSovitin.Kaupunkikierros(); };
             var kb = Rakenne.Nappi(null, "mk-linssivalikko__kohta mk-linssivalikko__komento", () => Rivilta(kierros), rivit);
             Kirjasimet.Aseta(Rakenne.Teksti("Kaupunkikierros", "mk-linssivalikko__nimi", kb), Kirjasin.ModerniLihava);
             kb.tooltip = "Kaupunkikierros";
@@ -478,7 +456,7 @@ namespace Matkakirja.Natiivi
             {
                 Sulje();
                 Debug.Log("MATKAKIRJA opas: siirry " + t.Nimi);
-                if (!Sano("Liiku", new[] { typeof(Matkakirja.Linssit.Kierros.OpasTaky) }, t)) OpasSovitin.Valitse(t);
+                if (!OpasSovitin.Liiku(t)) OpasSovitin.Valitse(t);
             };
             var b = Rakenne.Nappi(null, "mk-linssirivi mk-opas-taky", () => Rivilta(teko), rivit);
             b.tooltip = t.Nimi;
@@ -617,10 +595,6 @@ namespace Matkakirja.Natiivi
             tapit.Paivita(pysahdys && !Auki && !(chat?.Auki ?? false), krediittiAla);
             // Kohteen nimilappu pysähdyksellä (myös valikon aikana; chat peittää sen joka tapauksessa).
             nimilappu.Paivita(pysahdys && !(chat?.Auki ?? false) ? l.Nykyinen.Nimi : null);
-            // Pysähdykseen saavuttaessa datalähderivi logon viereen ~3 s (omistaja 6.10. 12.1x; Googlen ehdot).
-            string pys = pysahdys ? l.Nykyinen.Nimi : null;
-            if (pys != null && pys != krediittiPysahdys) KrediititTiivis.NaytaRivi();
-            krediittiPysahdys = pys;
             float siruAla = krediittiAla;
             if (tapit.Nakyy && siruNakyy)
             {
@@ -720,7 +694,11 @@ namespace Matkakirja.Natiivi
         {
             var k = naytettyKuva;
             if (k == null) return;
-            if (suurennos == null) suurennos = new Kuvasuurennos(UiKerros.Hae().Juuri(UiKerros.Valikot)) { Tayteen = true, Kokoruutu = true, LahdeKokoruudussa = true };
+            if (suurennos == null)
+            {
+                suurennos = new Kuvasuurennos(UiKerros.Hae().Juuri(UiKerros.Valikot)) { Tayteen = true, Kokoruutu = true, LahdeKokoruudussa = true };
+                suurennos.AukiMuuttui += auki => OpasSovitin.KuvaSumennus = auki;   // LS1: kaupunkikamera sumeaksi ja seis koko ruudun ajaksi
+            }
             var l = OpasSovitin.Viimeisin?.Silmukka?.Nykyinen;
             // Kokoruutuselaus: nostojen Kuvasuurennos sarjana (pyyhkäisy ja ‹ ›), lähderivi ja selite kuvakohtaisesti.
             var kaikki = NykyisetKuvat();
