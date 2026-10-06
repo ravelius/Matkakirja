@@ -576,6 +576,15 @@ namespace Matkakirja.Natiivi
             if (georef != null) Matkakirja.KorkeusKerroin.Aseta(Matkakirja.KorkeusKerroin.Arvo, georef);
         }
 
+        // ESILATAUKSEN EHTORAJAT (Päätoimittaja 7.10.2026 klo 00.4x, Googlen ehtojen tarkistus; ÄLÄ LÖYSENNÄ ilman uutta tarkistusta):
+        // Map Tiles API -ohjeet: "must not pre-fetch, index, store, or cache any Content except under the limited conditions
+        // stated in the terms"; yleisehdot 3.2.3(a) kieltävät esilatauksen "for use outside the Services". Sallittu on sama kuin
+        // Cesiumin oma toiminta (CesiumJS preloadFlightDestinations, oletus true; Unityssä additionalCameras):
+        //   1. esikamera vain reitin SEURAAVAAN pysähdykseen, joka näytetään noin minuutin sisällä; ei varastoa useasta kohteesta,
+        //   2. EsikameraPois heti, kun suunnitelma muuttuu (toive, Seuraava, kierroksen loppu),
+        //   3. ei offline-käyttöä eikä omaa laattatallennusta; levylle vain Cesium Nativen HTTP-välimuisti, joka noudattaa
+        //      Googlen otsakkeita ("your client must respect the max-age value"; laatat: private, max-age=14400, must-revalidate,
+        //      ETag → If-None-Match). CesiumRuntimeSettings 1024/1000 rajaa vain koon, ei pidennä säilytysaikaa.
         /// <summary>Esilatauskamera kuvakulmaan: sama laskenta kuin PalloKierto (kohde, suuntima, kallistus pystystä, etäisyys).</summary>
         public void AsetaEsikamera(Kuvakulma k)
         {
