@@ -309,7 +309,7 @@
 }
 
 .mk-nosto__lukija .mk-lukija__valikkoikoni {
-    --mk-ikoni-viiva: 2.1;
+    --mk-ikoni-viiva: 2;
 }
 
 /* Pin (stillit 154: viiva 4 px @3x vs ≡ 5 px): 2,0 tasaa painon. */
@@ -317,11 +317,15 @@
     --mk-ikoni-viiva: 2;
 }
 
-/* Kaiutin: muste 14,4/24 → 24 pt laatikossa ~14,4 pt, pinnin korkuinen. */
+/* Kaiutin (Päätoimittaja 21.0x: rivin suurin): 22 pt ja pinnin viiva 2,0, jottei se ole pinniä raskaampi. */
 .mk-nosto__lukija .mk-lukija--kortti > .mk-kaiutin,
 .mk-nosto__lukija .mk-lukija--kortti .mk-kaiutin__osa {
-    width: 24px;
-    height: 24px;
+    width: var(--tk-nappi-ohjaus-kuvake);
+    height: var(--tk-nappi-ohjaus-kuvake);
+}
+
+.mk-nosto__lukija .mk-lukija--kortti .mk-kaiutin__osa {
+    --mk-ikoni-viiva: 2;
 }
 
 .mk-nostoselain .mk-nostoselain__avaaja > Label,
