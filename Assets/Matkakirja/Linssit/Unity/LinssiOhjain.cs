@@ -2011,6 +2011,14 @@ namespace Matkakirja.Natiivi
                     else if (osat.Length > 2 && osat[1] == "testiotsake") OpasSovitin.Testiotsake = osat[2] == "1";
                     else if (osat.Length > 2 && osat[1] == "pysayta") OpasSovitin.Pysaytetty = osat[2] == "1";
                     else if (osat.Length > 2 && osat[1] == "pcm") OpasSovitin.PcmKaytossa = osat[2] == "1";
+                    // Laitekoe ilman kosketusta: suosikin (täkyn) valinta indeksillä tai nimellä (Akropolis).
+                    else if (osat.Length > 2 && osat[1] == "valitse")
+                    {
+                        string arvo = string.Join(" ", osat.Skip(2));
+                        bool ok = int.TryParse(arvo, out int ix) ? OpasSovitin.Valitse(ix)
+                            : OpasSovitin.Takyt != null && OpasSovitin.Takyt.FirstOrDefault(t => string.Equals(t.Nimi, arvo, StringComparison.OrdinalIgnoreCase)) is var tk && tk != null && OpasSovitin.Valitse(tk);
+                        Kirjaa($"opas: valitse {arvo} → {(ok ? "ok" : "ei löytynyt")}");
+                    }
                     else if (osat.Length > 5 && osat[1] == "tapit"
                         && double.TryParse(osat[2], System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out var tk)
                         && double.TryParse(osat[3], System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out var th)

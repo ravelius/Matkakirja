@@ -155,6 +155,7 @@ namespace Matkakirja.Natiivi
             // AVAUS ILMAN KARTTAA (omistaja 6.10. 14.2x, juna 149): täkyavauksessa Cesium avataan vasta pelaajan valinnasta
             // (AvaaKaupunki), joten aloitusvalikko aukeaa heti eikä yhtään laattaa ladata ennen valintaa.
             kaupunkiOdottaa = TakyAvaus && !Testi;
+            if (kaupunkiOdottaa) silmukka.PakotaSiirto = true;   // mikä tahansa ensimmäinen liike avaa kartan siirtoruudun kautta
             if (!kaupunkiOdottaa && !kaupunki.Avaa(alku.Lat, alku.Lon, 45))
             {
                 Virhe = OpasTiedot.Nimi + ": " + kaupunki.Virhe;
@@ -182,7 +183,7 @@ namespace Matkakirja.Natiivi
             silmukka.Kysyy += Kysyy;
             silmukka.LentoAlkaa += LentoAlkoi;
             // Siirto ilman lentoa (omistaja 6.10. 12.0x): origo heti kohteeseen, latausaste kohdekameran laatoista.
-            silmukka.SiirtoAlkaa += (la, lo) => { kaupunki.SiirraOrigo(la, lo, MaaPisteessa(la, lo) is double m && !double.IsNaN(m) ? m : 45); o.Kirjaa($"opas: siirrytään {silmukka.SiirtoNimi} ({la:F3}, {lo:F3})"); };
+            silmukka.SiirtoAlkaa += (la, lo) => { if (kaupunkiOdottaa && !AvaaKaupunki(la, lo, silmukka.SiirtoNimi)) return; kaupunki.SiirraOrigo(la, lo, MaaPisteessa(la, lo) is double m && !double.IsNaN(m) ? m : 45); o.Kirjaa($"opas: siirrytään {silmukka.SiirtoNimi} ({la:F3}, {lo:F3})"); };
             silmukka.LatausEdistys = () => kaupunki.Latausaste / 100.0;
             // Maaston korkeus kohdekehykseen (simu 6.10. 12.42: Praha aukesi 45 m:n arviolla mäen sisältä): näyte pisteeseen.
             silmukka.MaaPisteessa = MaaPisteessa;
@@ -260,7 +261,9 @@ namespace Matkakirja.Natiivi
         {
             if (silmukka == null || Virhe != null || paivitetty == Time.frameCount) return;
             paivitetty = Time.frameCount;
-            if (kaupunkiOdottaa) return;   // aloitusvalikko: ei kameraa eikä laattoja (puhetta ei vielä ole)
+            // Aloitusvalikko: ei kameraa eikä laattoja; silmukka etenee silti (toive tai kysymys ennen valintaa → ensimmäinen
+            // lento on pakotettu siirto, joka avaa kartan SiirtoAlkaa-kutsussa suoraan kohteeseen).
+            if (kaupunkiOdottaa) { silmukka.Paivita(Time.unscaledDeltaTime, MaaKorkeus, () => false); return; }
             // PCM: loppu = kaikki ladattu ja soitettu; varmistus: klippi pysähtyi (ei saa jäädä odottamaan ikuisesti, toisto 16.4x).
             bool pcmPysahtyi = pcmNyt != null && puhe != null && !puhe.isPlaying && Time.unscaledTime - puheAlkoi > 1f;
             bool loppui = !tauolla && (pcmNyt != null ? pcmNyt.Loppui || pcmPysahtyi : Time.unscaledTime >= puheLoppuu && (puhe == null || !puhe.isPlaying));
