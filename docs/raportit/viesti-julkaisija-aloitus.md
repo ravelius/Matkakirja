@@ -11,7 +11,7 @@ kuittaa aloitus yhdellä rivillä (malli + id).
 Ensimmäisenä:
 1. **Vuorot**: `cat /tmp/matkakirja-kaannospalvelu.lukko/kuka` ja `xcrun simctl list devices booted` (23.4x: vapaa, 0 simua).
    Jono: (1) Natiiviseppä Mac v1 f5d0e029 → KÄÄNNÖS NYT, (2) LS1 koe-156 kärki 70f0bca62 käännös + 20 min simu, (3) LS1 iPad-uusinta.
-2. **PR:t**: #4081 (Pöllö, tiedostot jo ämpärissä) → merge + pollo-julkaisu kun testit vihreät; #4072 loki → merge kun
+2. **PR:t**: #4081 PIDOSSA: ensin Pelikoodarin tiet-v2-paketti (Pariisi/Lontoo/Rooma 6 km) ämpäriin, sitten merge + pollo-julkaisu; #4072 loki → merge kun
    testit vihreät ja junatilanne sallii.
 3. **Juna 155**: runko eb951c97, NUI ylarivi-155 (pakollinen; 241fb080 / uusin b2b3eae5), LS2 640eb7b4. Päätoimittajan VIE.
 4. **TF**: 154 testaajilla (22.32). Junarytmi tarpeen mukaan.

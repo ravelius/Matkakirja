@@ -63,9 +63,11 @@ roolien todisteet → Päätoimittaja VIE → JUNAN AVAUS NYT Natiivisepälle �
 
 - Julki 6.10.: #4049, #4054, #4055, #4058, #4060, #4063, #4062, #4064, #4067, #4068, #4071, #4075, #4076, #4077,
   **#4080** (kuvat-v2; merge 05d8f43b, julkaisu 37524385705 success 23.12).
-- **AVOIN: #4081** (Pelikoodari, GET /opas/aineistot + tiet-lista; head 29256bc1f). Tiedostot ovat jo ämpärissä, joten
-  kun "testit" on vihreä (oli pending 23.38, ajo 37526565895), merge `gh pr merge 4081 --squash --match-head-commit
-  29256bc1f78efdf103f1210896e0d667aedd5778` ja `gh workflow run pollo-julkaisu.yml --ref main`, ilmoita Pelikoodarille.
+- **PIDOSSA: #4081** (Pelikoodari, GET /opas/aineistot + tiet-lista). tiet-v1 (7 kaupunkia, 4 km) on jo ämpärissä, mutta
+  LS1 pyysi Pariisille, Lontoolle ja Roomalle 6 km:n säteen (Eiffel jäi ulos). Pelikoodari tekee ne uuteen pakettiin
+  **kartta/tiet-v2/** (~30–60 min, Overpass) ja päivittää #4081:n listan. Järjestys: (1) vie-paketti.sh uusi tiet-v2-paketti
+  (lue LAHTEET.md, SHA256SUMS) ja tarkista 200 `?t=`-parametrilla, (2) vasta sitten merge #4081 uudella headilla, kun testit
+  vihreät (`--match-head-commit <uusi head>`), ja `gh workflow run pollo-julkaisu.yml --ref main`, (3) ilmoita Pelikoodarille.
 - Merge-skriptit (merge-sitkea3.sh, pollo-karki.sh) olivat scratchpadissa ja katoavat; mergeä käsin yllä olevalla kaavalla.
 - Kustannus- ja rajamuutokset Pöllöön vain Päätoimittajan suoralla kuittauksella.
 
