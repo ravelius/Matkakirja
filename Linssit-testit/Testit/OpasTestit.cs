@@ -152,8 +152,9 @@ namespace Matkakirja.Linssit.Testit
         {
             var k = OpasKuva.Lue((IList<object>)MiniJson.Jasenna("[{\"url\":\"https://x/1.jpg\",\"tekija\":\"A\",\"lisenssi\":\"CC BY 4.0\"},"
                 + "{\"url\":\"https://x/2.jpg\",\"lisenssi\":\"CC BY 4.0\"},{\"url\":\"https://x/3.jpg\",\"tekija\":\"B\"},"
-                + "{\"url\":\"https://x/4.jpg\",\"tyyppi\":\"havainnekuva\"}]"));
-            Oleta.Sama(2, k.Length, "tekijätön ja lisenssitön valokuva pois, havainnekuva jää");
+                + "{\"url\":\"https://x/4.jpg\",\"tyyppi\":\"havainnekuva\"},{\"url\":\"https://x/5.jpg\",\"lisenssi\":\"Public domain\"},"
+                + "{\"url\":\"https://x/6.jpg\",\"lisenssi\":\"CC0\"}]"));
+            Oleta.Sama(4, k.Length, "tekijätön (CC BY) ja lisenssitön pois; havainnekuva, PD ja CC0 jäävät");
             Oleta.Tosi(k[0].Tekija == "A" && k[1].Havainnekuva);
         }
 
