@@ -2,10 +2,12 @@
  * REUNAMUISTI JA KV-KESTÄVYYS (Päätoimittaja 6.10.2026 aamu: Cloudflaren hälytys "KV daily operation limit 50% reached";
  * ilmaistaso 1 000 kirjoitusta/vrk, nollaus 03.00). Opas kirjoitti KV:hen useita kertoja pysähdystä kohden.
  *
- * 1) Lyhytikäinen istunto- ja lukkotieto (kierros, suunnat, isoisä, tuotantolukot, Nominatimin vuoro) asuu reunan
- *    Cache API:ssa (caches.default): ei KV-kiintiötä, säilyy saman PoP:n sisällä, ja pelaajan laite osuu käytännössä
- *    aina samaan PoP:hen. Ilman Cache API:a (testit, paikallinen ajo) isolaatin muisti.
- * 2) Kaikki KV-kutsut fail-open: luku- tai kirjoitusvirhe (raja ylittyi) ei koskaan kaada pyyntöä.
+ * 1) LUKOT ja Nominatimin vuoro (reunaLue/reunaKirjoita): isolaatin muisti + Cache API. HUOM: Cache API ei toimi
+ *    *.workers.dev-osoitteissa (Cloudflaren dokumentaatio: toimiva cache vain omilla domaineilla), joten Pöllössä tämä on
+ *    käytännössä isolaatin muisti; lukolle ja vuorolle se riittää (pahimmillaan yksi tuplatuotanto).
+ * 2) ISTUNNON TILA ja lisäkuvien välimuisti (pysyvaLue/pysyvaKirjoita): R2 (ilmaistaso ~1 M kirjoitusta/kk, ~33 000/vrk;
+ *    vanhenemisaika tallennetaan olioon) + isolaatin muisti läpilukuna. Ilman R2:ta pelkkä muisti.
+ * 3) Kaikki KV-kutsut fail-open: luku- tai kirjoitusvirhe (raja ylittyi) ei koskaan kaada pyyntöä.
  */
 
 const REUNA_JUURI = 'https://pollo-reuna.invalid/';
@@ -80,6 +82,46 @@ export async function kvKirjoita(kv, avain, arvo, asetukset) {
     console.log(`pollo: KV-kirjoitus epäonnistui (${avain.split(':').slice(0, 2).join(':')}): ${virhe?.message ?? virhe}`);
     return false;
   }
+}
+
+const pysyvaAvain = (avain) => `tila/${encodeURIComponent(avain)}.json`;
+
+/** Pysyvä luku (R2 + muisti): merkkijono tai null (ei ole / vanhentunut / virhe). Ei koskaan heitä. */
+export async function pysyvaLue(r2, avain, nyt = Date.now()) {
+  const m = muisti.get(avain);
+  if (m && m.vanhenee > nyt) return m.arvo;
+  if (!r2) return null;
+  try {
+    const olio = await r2.get(pysyvaAvain(avain));
+    if (!olio) return null;
+    const t = JSON.parse(typeof olio.text === 'function' ? await olio.text() : await new Response(olio.body).text());
+    if (!t || !(t.v > nyt)) return null;
+    muisti.set(avain, { arvo: String(t.a), vanhenee: t.v });
+    return String(t.a);
+  } catch {
+    return null;
+  }
+}
+
+/** Pysyvä kirjoitus (R2 + muisti), ttlS sekuntia. Ei koskaan heitä. */
+export async function pysyvaKirjoita(r2, avain, arvo, ttlS, nyt = Date.now()) {
+  const vanhenee = nyt + ttlS * 1000;
+  muisti.set(avain, { arvo: String(arvo), vanhenee });
+  if (muisti.size > 5000) muisti.delete(muisti.keys().next().value);
+  if (!r2) return;
+  try {
+    await r2.put(pysyvaAvain(avain), JSON.stringify({ a: String(arvo), v: vanhenee }),
+      { httpMetadata: { contentType: 'application/json' } });
+  } catch (virhe) {
+    console.log(`pollo: R2-tilan kirjoitus epäonnistui (${avain.split(':').slice(0, 2).join(':')}): ${virhe?.message ?? virhe}`);
+  }
+}
+
+/** Pysyvä poisto (R2 + muisti). Ei koskaan heitä. */
+export async function pysyvaPoista(r2, avain) {
+  muisti.delete(avain);
+  if (!r2?.delete) return;
+  try { await r2.delete(pysyvaAvain(avain)); } catch { /* fail-open */ }
 }
 
 /** Testeille: tyhjennä isolaatin reunamuisti. */

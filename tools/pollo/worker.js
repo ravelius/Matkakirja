@@ -26,7 +26,7 @@ import {
   seuraavaSuunta, SUUNNANVAIHDOT, paikanKorostus, siltaRyhma,
 } from './opas.js';
 import { OPAS_AINEISTO } from './opas-aineisto.js';
-import { reunaLue, reunaKirjoita, reunaPoista, kvLue, kvKirjoita } from './reuna.js';
+import { reunaLue, reunaKirjoita, reunaPoista, pysyvaLue, pysyvaKirjoita, pysyvaPoista, kvLue, kvKirjoita } from './reuna.js';
 import { KOHTEET_KEHOTE, kohteidenViesti, jasennaKohteet, kohdeAvain, paivaUtc, eilenUtc } from './kohteet.js';
 import {
   siivoaKuva, kuvaKontekstiksi, kuvaSirujenAvain, lueKuvasirut, KUVASIRUKEHOTE, KUVASIRUJA, KUVASIRUJEN_TTL_S,
@@ -2991,18 +2991,18 @@ async function hoidaOpas(pyynto, env, kors, runko, ctx) {
   // ulkopuolella, kun jo jotain on nähty → ei uutta pysähdystä (ei Sonnetia, ääntä eikä kustannusta). Vanhan natiivin
   // esihaku ei siis enää tuota automaattista jatkoa.
   if (!p.toive && p.kaydyt.length && kv) {
-    const k = p.istunto ? await reunaLue(`opas:kierros:${p.istunto}`).then((x) => (x ? JSON.parse(x) : null)).catch(() => null) : null;
+    const k = p.istunto ? await pysyvaLue(env.PUHE_R2, `opas:kierros:${p.istunto}`).then((x) => (x ? JSON.parse(x) : null)).catch(() => null) : null;
     if (!k || k.kaupunki !== (p.kaupunki ?? '')) return vastaa({ tyyppi: 'odota' }, kors);
   }
   // Sonnet valitsee paikan omasta tiedostaan (omistaja 18.0x); worker hakee vain koordinaatit nimellä.
   // Isoisään viitataan kerran istunnossa (Päätoimittaja 5.10.): muisti natiivin istunto-tunnuksella. Istunnon tila (isoisä,
-  // kierros, suunnat) asuu reunamuistissa eikä KV:ssä (6.10.: KV:n päiväkiintiö; ks. reuna.js).
+  // kierros, suunnat) asuu R2:ssa eikä KV:ssä (6.10.: KV:n päiväkiintiö; ks. reuna.js).
   const isoisaAvain = p.istunto && kv ? `opas:isoisa:${p.istunto}` : null;
   const kierrosAvain = p.istunto && kv ? `opas:kierros:${p.istunto}` : null;
   const [sijainti, kaydytNimet, isoisaKaytetty, tallessa] = await Promise.all([
     p.sijainti ?? kaupunginSijainti(fetch, p.kaupunki), kaydytNimiksi(fetch, p.kaydyt),
-    isoisaAvain ? reunaLue(isoisaAvain).then(Boolean) : false,
-    kierrosAvain ? reunaLue(kierrosAvain).then((x) => (x ? JSON.parse(x) : null)).catch(() => null) : null]);
+    isoisaAvain ? pysyvaLue(env.PUHE_R2, isoisaAvain).then(Boolean) : false,
+    kierrosAvain ? pysyvaLue(env.PUHE_R2, kierrosAvain).then((x) => (x ? JSON.parse(x) : null)).catch(() => null) : null]);
   const aineisto = kaupunginAineisto(env.OPAS_AINEISTO_TESTI ?? OPAS_AINEISTO, p.kaupunki);
   // OSM (Nominatim) vain asiakkaille, jotka näyttävät OSM-maininnan (Päätoimittaja: ODbL; vanhat natiivit TF 143–145
   // eivät lähetä krediittejä → Wikidata-reitti kuten ennen).
@@ -3076,7 +3076,7 @@ async function hoidaOpas(pyynto, env, kors, runko, ctx) {
       // Reittipisteiden haku (kadut ja kanavat ~1–2 s) rinnakkain äänen ja kuvan kanssa, ei vastauksen kriittisellä polulla.
       // Lisäkuvat alkavat heti koordinaattien jälkeen (välimuisti Q-tunnuksella), rinnakkain korostuksen kanssa.
       kuvaAlku = Date.now();
-      kuvaLupaus = lisaKuvatValimuistilla(fetch, kv, paikka.id).catch(() => []);
+      kuvaLupaus = lisaKuvatValimuistilla(fetch, kv, paikka.id, env.PUHE_R2).catch(() => []);
       korostusLupaus = paikanKorostus(fetch, { lat: paikka.lat, lon: paikka.lon, koko_m: tulos.koko_m, luokka: vastaus.luokka,
         reitti: vastaus.reitti ?? [], nimi: seuraava?.paikka.wikipedia ?? vastaus.wikipedia ?? nimi, nimet: [vastaus.nimi, nimi], id: paikka.id },
         sijainti, osm);
@@ -3094,10 +3094,10 @@ async function hoidaOpas(pyynto, env, kors, runko, ctx) {
     const paikat = eka ? [eka, ...jarjestaReitti(muut, eka)] : jarjestaReitti(muut, sijainti);
     if (paikat.length >= 3) {
       kierros = { kaupunki: p.kaupunki ?? '', paikat: paikat.slice(0, KIERROKSEN_PITUUS) };
-      await reunaKirjoita(kierrosAvain, JSON.stringify(kierros), 60 * 60 * 6);
+      await pysyvaKirjoita(env.PUHE_R2, kierrosAvain, JSON.stringify(kierros), 60 * 60 * 6);
       // Lämmitä lisäkuvien välimuisti kierroksen kaikille pysähdyksille taustalla (Päätoimittaja 6.10.): seuraavat
       // pysähdykset saavat heti kaikki kuvat.
-      const lammitys = Promise.all(kierros.paikat.map((x) => lisaKuvatValimuistilla(fetch, kv, x.id).catch(() => [])));
+      const lammitys = Promise.all(kierros.paikat.map((x) => lisaKuvatValimuistilla(fetch, kv, x.id, env.PUHE_R2).catch(() => [])));
       if (typeof ctx?.waitUntil === 'function') ctx.waitUntil(lammitys);
       if (eka) tulos.kierros = { numero: 1, maara: kierros.paikat.length };
     }
@@ -3109,11 +3109,11 @@ async function hoidaOpas(pyynto, env, kors, runko, ctx) {
     const muut = (tulos.vaihtoehdot ?? []).filter((x) => !onKierrosToive(x));
     tulos.vaihtoehdot = [ensin, muut[0] ?? 'Näytä jotain modernia'];
   }
-  if (kierrosLoppui && tulos?.tyyppi === 'kysymys' && kierrosAvain) await reunaPoista(kierrosAvain);
+  if (kierrosLoppui && tulos?.tyyppi === 'kysymys' && kierrosAvain) await pysyvaPoista(env.PUHE_R2, kierrosAvain);
   // Suunnanvaihtosiru koodissa (Päätoimittaja 5.10.): istunnon muisti KV:ssä, ilman istuntoa kierto nähtyjen määrällä.
   if (tulos?.tyyppi === 'pysahdys') {
     const suuntaAvain = p.istunto && kv ? `opas:suunnat:${p.istunto}` : null;
-    const kaytetyt = suuntaAvain ? await reunaLue(suuntaAvain).then((x) => (x ? JSON.parse(x) : [])).catch(() => [])
+    const kaytetyt = suuntaAvain ? await pysyvaLue(env.PUHE_R2, suuntaAvain).then((x) => (x ? JSON.parse(x) : [])).catch(() => [])
       : [SUUNNANVAIHDOT[(p.kaydyt.length + SUUNNANVAIHDOT.length - 1) % SUUNNANVAIHDOT.length]];
     // Juuri valittua suuntaa ei tarjota heti uudelleen ("Missä voisi syödä?" → ei taas "Missä voisi syödä?").
     const valittu = SUUNNANVAIHDOT.find((x) => x === p.toive);
@@ -3122,7 +3122,7 @@ async function hoidaOpas(pyynto, env, kors, runko, ctx) {
     const syventava = (tulos.vaihtoehdot ?? []).find((x) => !SUUNNANVAIHDOT.includes(x) && !/modernia|syödä|syödään/i.test(x)) ?? tulos.vaihtoehdot?.[0];
     tulos.vaihtoehdot = [syventava ?? 'Mitä täällä näkee?', siru];
     if (suuntaAvain) {
-      const kirjoitus = reunaKirjoita(suuntaAvain, JSON.stringify(uudet), 60 * 60 * 6);
+      const kirjoitus = pysyvaKirjoita(env.PUHE_R2, suuntaAvain, JSON.stringify(uudet), 60 * 60 * 6);
       if (typeof ctx?.waitUntil === 'function') ctx.waitUntil(kirjoitus); else await kirjoitus;
     }
   }
@@ -3151,7 +3151,7 @@ async function hoidaOpas(pyynto, env, kors, runko, ctx) {
     tulos.kuvat = yhdistaKuvat(tulos.kuvat, lisat ?? []);
   }
   if (isoisaAvain && kv && !isoisaKaytetty && tulos.tyyppi === 'pysahdys' && /isoisä/i.test(tulos.teksti)) {
-    const kirjoitus = reunaKirjoita(isoisaAvain, '1', 60 * 60 * 48);
+    const kirjoitus = pysyvaKirjoita(env.PUHE_R2, isoisaAvain, '1', 60 * 60 * 48);
     if (typeof ctx?.waitUntil === 'function') ctx.waitUntil(kirjoitus); else await kirjoitus;
   }
   console.log(`opas: ${tulos.tyyppi} ${tulos.id ?? ''} ${p.kaydyt.length} käyty, ääni ${aani ? 'kyllä' : 'ei'}, kuvia ${tulos.kuvat?.length ?? 0}`);

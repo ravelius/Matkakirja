@@ -67,3 +67,18 @@ test('tavallinen pysäkki kirjoittaa KV:hen enintään 2 kertaa; testitunnuksell
   const testin = kirjoitukset.slice(ennen).filter((k) => /^opas:p|^pollo:p/.test(k));
   assert.deepEqual(testin, [], 'testitunnuksen pyyntö ei kirjoita IP-laskuria');
 });
+
+test('istunnon tila R2:ssa säilyy isolaatin vaihdon yli ja vanhenee (Cache API ei toimi workers.dev:ssä)', async () => {
+  const { pysyvaLue, pysyvaKirjoita, pysyvaPoista } = await import('../tools/pollo/reuna.js');
+  const r2m = new Map();
+  const r2 = { get: async (k) => (r2m.has(k) ? { text: async () => r2m.get(k) } : null), put: async (k, v) => { r2m.set(k, v); },
+    delete: async (k) => { r2m.delete(k); } };
+  await pysyvaKirjoita(r2, 'opas:kierros:x', '{"a":1}', 60, 1000);
+  tyhjennaReunamuisti();   // uusi isolaatti
+  assert.equal(await pysyvaLue(r2, 'opas:kierros:x', 2000), '{"a":1}', 'R2:sta');
+  tyhjennaReunamuisti();
+  assert.equal(await pysyvaLue(r2, 'opas:kierros:x', 1000 + 61000), null, 'vanhentunut');
+  await pysyvaPoista(r2, 'opas:kierros:x');
+  assert.equal(r2m.size, 0);
+  assert.equal(await pysyvaLue({ get: async () => { throw new Error('R2 alhaalla'); } }, 'y'), null, 'R2-virhe = null');
+});

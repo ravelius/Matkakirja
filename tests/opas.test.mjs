@@ -2,7 +2,7 @@
 // kertoo omasta tiedostaan, worker hakee koordinaatit nimellä (ei Wikipedian tekstiä), kaksi vaihtoehtoa joka kappaleeseen.
 // Rajapinnat tyngätty (Wikipedia, Wikidata, Anthropic, ElevenLabs).
 import test, { beforeEach } from 'node:test';
-import { tyhjennaReunamuisti, reunaLue } from '../tools/pollo/reuna.js';
+import { tyhjennaReunamuisti, pysyvaLue } from '../tools/pollo/reuna.js';
 import assert from 'node:assert/strict';
 import { jasennaOpas, siivoaOpasPyynto, paikanKoordinaatit, kaydytNimiksi, oppaanViesti, etaisyys, OPAS_KEHOTE } from '../tools/pollo/opas.js';
 import worker from '../tools/pollo/worker.js';
@@ -357,7 +357,7 @@ test('worker: "Esittele kaupunki" suunnittelee kierroksen, toive null jatkaa, lo
     const loppu = await kysy({ nahdyt: ['Q110289', 'Q19409991', c.id] });
     assert.equal(loppu.tyyppi, 'kysymys');
     assert.deepEqual(loppu.vaihtoehdot, ['Lisää tätä kaupunkia', 'Jotain']);
-    assert.equal(await reunaLue('opas:kierros:s1'), null, 'kierros päättyi (reunamuisti, 6.10.)');
+    assert.equal(await pysyvaLue(null, "opas:kierros:s1"), null, "kierros päättyi (R2/muisti, 6.10.)");
     const vapaa = await kysy({ nahdyt: ['Q110289'], toive: 'Missä voisi syödä?' });
     assert.equal(vapaa.kierros, undefined);
   } finally {
