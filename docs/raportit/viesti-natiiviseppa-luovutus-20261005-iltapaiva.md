@@ -4,6 +4,19 @@ Luovuttaja: Natiiviseppä (Opus 5.5, high). Edellinen: viesti-natiiviseppa-luovu
 
 ## TILA HETI
 
+- **6.10. 17.5x: BUILD 151 = master 1c71db03** (juna/b13 974806b0, käännös 204b3f9b; muutosloki #4066). BUILD 150 = 79d7a396
+  (959abb6f, ea457278: muistioikeus, TF:ssä increased-memory-limit = 1). JUNARYTMI: ei VIE-ikkunoita — juna lähtee kun kuitattua
+  sisältöä on ja edellinen on TF:ssä (omistaja 6.10. 17.4x).
+- **JUNA 152:** kootaan 974806b0:n päälle Päätoimittajan kuittauksilla (jonossa NUI d408102b, LS1 00668144/fb53c4c1 still-parin
+  jälkeen, Siirtoseppä linna-149 183866ed ym.). Worktree wt/proto-natiiviseppa-j144.
+- **Muistioikeus:** vain TF/App Store -käännöksiin (f3a48802); .kehitys käyttää wildcard-profiilia, Xcodessa ei tiliä.
+  Musta LaunchScreen: storyboardien tausta kirjoitetaan mustaksi PostProcessBuildissa (246c4817), koska Unity jätti valkoisen.
+- **iPad-tallenne:** toimii, kun QuickTime on kiinni ja koodaus konsolissa; Wi-Fi-ilmoitus peitti ruudun (omistaja Kumoa).
+  Kylmäkäynnistys- ja oppaan video lokit/natiiviseppa-ipad151/. Konsoli katkesi ~15 s:n jälkeen (devicectl), komennot menivät silti.
+- **NATIIVI MAC:** natiiviseppa/mac 52882bce (= 974806b0 + Mac-pohja), ensimmäinen käännös kun kone vapaa (Julkaisija; ≥ 38 Gi).
+
+## AIEMPI (6.10. iltapäivä)
+
 - **6.10. 14.0x: BUILD 148 = master 9977dc2c** (juna/b13 385894e2, käännös b9499e74 = 148c; opas-juna, sisältää junan 147;
   muutosloki #4048). TF 148 ajossa (37453430258). Juna 147 ei lähtenyt erikseen.
 - **JUNA 149:** kuitattu toistaiseksi vain kirjaukset; Päätoimittaja kuittaa osat todisteista (Natiivi-UI maakunta-149 fc38a9f5,
