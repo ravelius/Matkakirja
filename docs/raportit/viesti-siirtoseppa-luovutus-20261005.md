@@ -1,4 +1,4 @@
-# Siirtosepän luovutus 5.–6.10.2026 — TILA KLO 22.xx, TILINVAIHTO (Opus 5.5, high)
+# Siirtosepän luovutus 5.–6.10.2026 — TILA KLO 23.3x, TILINVAIHTO (Opus 5.5, high)
 
 ## ALOITUSVIESTI SEURAAJALLE
 
@@ -7,7 +7,7 @@ Worktreet: /Users/Shared/Claude/wt/proto-siirtoseppa-*. Käännös vain Julkaisi
 (oma UDID D5900D45 = siirtoseppa-iPad13, TYHJENNETTY 19.0x, appit asennettava uudelleen). Ei detachia simupaneelista.
 Oikeat tapit: lokit/siirtoseppa-alo/.sk (simkosketus, käännä tarvittaessa tyokalut/todistusajo/simkosketus.m).
 
-## Nyt (6.10. 22.xx) — avoimet erät
+## Nyt (6.10. 23.3x) — avoimet erät
 
 1. **Linna-149** (wt/proto-siirtoseppa-l149, siirtoseppa/linna-149 **183866ed**, juna 152, EI todennettu): saapuminen.loppu
    "kertoja" (testi), esittelyn tauko II/▶, jakso.nimet nimilappuina, panorointi käännetty, iPad-vaaka + AutoRotation, Codex-
