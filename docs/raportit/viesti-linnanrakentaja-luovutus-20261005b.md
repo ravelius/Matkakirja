@@ -191,3 +191,11 @@ Brotli (haara linnanrakentaja-zstd, worktree olemassa), akustiikka #3979 (Steam 
   Jinshui-joki + 5 siltaa (kk_joki.py, kk-joki.json), katon kultainen sävy, pohjoissivun galleriat/portit ja kulmatornit.
   257 k staattista kolmiota + 6 100 instanssia, GLB 6,9 Mt. SEURAAVA kuittauksen jälkeen: natiivi-dioraamaan vienti
   (kysy Siirtosepältä: EXT_mesh_gpu_instancing natiivissa? rakennus-id, ulkokuori-LOD:t), sisätilat vasta tarinan kuittauksella.
+- 7.10. 02.36: KIELLETTY KAUPUNKI NATIIVIIN (Päätoimittaja kuittasi v2): lahde/kuori_leivo.py (kaikki yhdeksi meshiksi,
+  smart_project reunus 0, Cycles COMBINED float-kuvaan + savyta() valotus 0,5 / valkopiste 2,0 / sRGB, 8k päivä + hämärä,
+  LOD 892k/400k/150k) → _valmiit/kielletty-kaupunki-blender-v1 (+ tilat/aukio.glb paikkamerkki, LUEMINUT, LAHTEET, MUUTOKSET).
+  vie-blender.sh → blender 3d0c7bae5ca33373; worktree wt/linnanrakentaja-kielletty, haara linnanrakentaja-kielletty 857a1a116
+  (js/dioraama/rakennukset/kielletty-kaupunki.js + /blender.json; rakenna.mjs ulkokuoriVesi, oletus −7, Kielletty −3).
+  vie-dioraama osoitin=false → peili 89707f601722ed7a: `poikki peili https://media.matkakirja.app/dioraama/kielletty-kaupunki/89707f601722ed7a/`.
+  SEURAAVA: Siirtoseppä todentaa → ilmoita Julkaisijalle (kuvavuoro ~25 min jonossa, ~04.00) → kuvat (ilma, aukio, portaat;
+  iPhone + iPad) Päätoimittajalle → PR vasta kuvien jälkeen. Tiedossa: aukion tiilet sumeat maan tasolta (yksi 8k-atlas).
