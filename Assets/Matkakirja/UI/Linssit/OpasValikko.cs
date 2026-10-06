@@ -123,6 +123,7 @@ namespace Matkakirja.Natiivi
         bool nakyy, siruNakyy;
         OpasKohde odotettuKysymys;
         float krediittiAla = 40f;
+        string krediittiPysahdys;
         readonly OpasTapit tapit;
         readonly OpasNimilappu nimilappu;
         int siruPoletti = -1;
@@ -332,6 +333,7 @@ namespace Matkakirja.Natiivi
             siirtyma.style.display = DisplayStyle.Flex;
             siirtyma.BringToFront();
             siirtymaPalkki.Nayta(true);
+            KrediititTiivis.CesiumNakyviin = true;   // Cesium ion -logo Siirrytään-ruudulla (omistaja 6.10.)
             Debug.Log("MATKAKIRJA opas: siirtymä alkaa → " + nimi);
             siirtymaKierros?.Pause();
             siirtymaKierros = siirtyma.schedule.Execute(() => siirtymaPalkki.Arvo = testiEdistyminen ?? SiirtymaEdistyminen()).Every(100);
@@ -347,6 +349,8 @@ namespace Matkakirja.Natiivi
             siirtyma.schedule.Execute(() => siirtyma.style.opacity = 0f).ExecuteLater(16);
             siirtyma.schedule.Execute(() => { if (siirtyma.resolvedStyle.opacity < 0.01f) siirtyma.style.display = DisplayStyle.None; }).StartingIn(1200);
             testiEdistyminen = null;
+            KrediititTiivis.CesiumNakyviin = false;
+            KrediititTiivis.NaytaRivi();
             Debug.Log("MATKAKIRJA opas: siirtymä valmis");
         }
 
@@ -613,6 +617,10 @@ namespace Matkakirja.Natiivi
             tapit.Paivita(pysahdys && !Auki && !(chat?.Auki ?? false), krediittiAla);
             // Kohteen nimilappu pysähdyksellä (myös valikon aikana; chat peittää sen joka tapauksessa).
             nimilappu.Paivita(pysahdys && !(chat?.Auki ?? false) ? l.Nykyinen.Nimi : null);
+            // Pysähdykseen saavuttaessa datalähderivi logon viereen ~3 s (omistaja 6.10. 12.1x; Googlen ehdot).
+            string pys = pysahdys ? l.Nykyinen.Nimi : null;
+            if (pys != null && pys != krediittiPysahdys) KrediititTiivis.NaytaRivi();
+            krediittiPysahdys = pys;
             float siruAla = krediittiAla;
             if (tapit.Nakyy && siruNakyy)
             {
@@ -784,6 +792,7 @@ namespace Matkakirja.Natiivi
                     Komento(OpasSovitin.Tauolla ? "Jatka" : "Tauko", () => OpasSovitin.Tauko(!OpasSovitin.Tauolla));
                     Komento(KuvatPaalla ? "Kuvat: päällä" : "Kuvat: pois", VaihdaKuvat);
                     Komento("Näytä teksti", NaytaTeksti);
+                    Komento("Tietoja ja lähteet", () => { KrediititTiivis.NaytaKaikki(); Debug.Log("MATKAKIRJA opas: tietoja ja lähteet"); });
                     Viiva();
                     Komento("Poistu linssistä", () => UiNakymat.Hae()?.Linssit?.SuljeLinssi());
                     break;
@@ -1105,6 +1114,8 @@ namespace Matkakirja.Natiivi
                     return $"opas: napit {(nappiNakyy ? "näkyy" : "piilossa")} @ {r.xMin:0},{r.yMin:0} {r.width:0}×{r.height:0}, keskikohta {r.center.x:0}/{(Juuri.panel?.visualTree.layout.width ?? 0) / 2:0}: {string.Join(" | ", osat)}";
                 }
                 case "kysy": Avaa(Nakyma.Kysy); return "opas: kysy-lista";
+                case "krediitit": return "opas: " + KrediititTiivis.Kuvaus();
+                case "lahteet": KrediititTiivis.NaytaKaikki(); return "opas: lähteet näkyviin";
                 case "siirtyma":
                 {
                     // ui opasvalikko siirtyma <nimi> | siirtyma 0.5 | siirtyma valmis
