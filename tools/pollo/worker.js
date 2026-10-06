@@ -26,6 +26,7 @@ import {
   seuraavaSuunta, SUUNNANVAIHDOT, paikanKorostus, siltaRyhma,
 } from './opas.js';
 import { OPAS_AINEISTO } from './opas-aineisto.js';
+import { reunaLue, reunaKirjoita, reunaPoista, kvLue, kvKirjoita } from './reuna.js';
 import { KOHTEET_KEHOTE, kohteidenViesti, jasennaKohteet, kohdeAvain, paivaUtc, eilenUtc } from './kohteet.js';
 import {
   siivoaKuva, kuvaKontekstiksi, kuvaSirujenAvain, lueKuvasirut, KUVASIRUKEHOTE, KUVASIRUJA, KUVASIRUJEN_TTL_S,
@@ -2496,7 +2497,7 @@ async function haeClaudeKulut(env, kkAlku) {
 async function hoidaTila(env, kors) {
   const kv = env.POLLO_KV ?? null;
   if (kv) {
-    const talletettu = await kv.get(TILA_KV_AVAIN);
+    const talletettu = await kvLue(kv, TILA_KV_AVAIN);
     if (talletettu) return vastaa(JSON.parse(talletettu), kors);
   }
   const nyt = new Date();
@@ -2554,7 +2555,7 @@ async function hoidaTila(env, kors) {
     aika: nyt.toISOString(),
   };
   const ttl = Object.keys(viat).length ? TILA_VALIMUISTI_VAJAA_S : TILA_VALIMUISTI_S;
-  if (kv) await kv.put(TILA_KV_AVAIN, JSON.stringify(tila), { expirationTtl: ttl });
+  await kvKirjoita(kv, TILA_KV_AVAIN, JSON.stringify(tila), { expirationTtl: ttl });
   return vastaa(tila, kors);
 }
 
@@ -2681,7 +2682,7 @@ async function sha256Heksa(puskuri) {
  * joten POST ei enää odota sitä. POST tallentaa tekstin KV:hen (opas:teksti:<sha>) ja palauttaa aani-url:n heti
  * Sonnetin jälkeen; natiivi lataa url:n heti (myös esihaussa) ja lentää kameran samaan aikaan. GET tuottaa äänen
  * yhdellä pyynnöllä ja palauttaa sen KOKONAISENA (iOS ei jäsennä striimattua mp3:a, TF 1.0.29), tallentaa R2:een ja
- * reunavälimuistiin. Rinnakkainen GET samasta äänestä odottaa (KV-lukko opas:tuotanto:<sha>) eikä tuota uudelleen.
+ * reunavälimuistiin. Rinnakkainen GET samasta äänestä odottaa (reunamuistin lukko opas:tuotanto:<sha>) eikä tuota uudelleen.
  * Tunniste on tekstin tiiviste, joten sama teksti tuotetaan kerran. Päiväkatto lasketaan POSTissa.
  */
 const OPAS_AANI_TEKSTI_TTL = 60 * 60 * 48;
@@ -2697,7 +2698,7 @@ async function oppaanAaniTunniste(teksti) {
 async function oppaanAani(pyynto, env, ctx, teksti, kehittaja) {
   if (!env.ELEVEN_API_KEY || pyynto.headers.get(TESTI_OTSAKE) === '1' || !teksti) return null;
   const kv = env.POLLO_KV ?? null;
-  if (!kv) return null;
+  if (!kv && !env.PUHE_R2) return null;
   const nyt = new Date();
   if (!kehittaja) {
     const kaytetty = await lueLaskuri(kv, opasElevenPaivaAvain(nyt));
@@ -2709,7 +2710,9 @@ async function oppaanAani(pyynto, env, ctx, teksti, kehittaja) {
   const sha = await oppaanAaniTunniste(teksti);
   // Katto lasketaan vasta, kun ääni oikeasti tuotetaan (GET): esihaut, joiden ääntä natiivi ei hae, eivät kuluta
   // (5.10. ilta: ylilaskenta täytti katon ja pysähdykset jäivät mykiksi). k = kehittäjä (ei kuluta kattoa).
-  await kv.put(`opas:teksti:${sha}`, JSON.stringify({ t: teksti, k: Boolean(kehittaja) }), { expirationTtl: OPAS_AANI_TEKSTI_TTL });
+  // KV-KESTÄVYYS (6.10.): teksti R2:een (ei KV:n 1 000 kirjoituksen päiväkiintiötä), KV vain varana. Jos kumpikaan ei
+  // onnistu, pysäkki tulee tekstinä ilman ääntä eikä kaadu.
+  if (!(await tallennaOppaanTeksti(env, sha, { t: teksti, k: Boolean(kehittaja) }))) return null;
   const juuri = `${new URL(pyynto.url).origin}/opas/aani/${sha}`;
   return { aani: `${juuri}.mp3`, aani_pcm: `${juuri}.pcm`, aani_taajuus: OPAS_PCM_TAAJUUS,
     kesto_s: Math.round((teksti.length / OPAS_MERKKIA_SEKUNNISSA) * 10) / 10 };
@@ -2739,6 +2742,33 @@ function oppaanTekstitietue(arvo) {
   return { teksti: arvo, kehittaja: false };
 }
 
+const oppaanTekstiR2 = (sha) => `opas/teksti/${sha}.json`;
+
+/** Oppaan äänen teksti talteen GETiä varten: R2 ensin, KV varana. false = ei tallessa (ääni jätetään pois). */
+async function tallennaOppaanTeksti(env, sha, tietue) {
+  const data = JSON.stringify(tietue);
+  if (env.PUHE_R2) {
+    try {
+      await env.PUHE_R2.put(oppaanTekstiR2(sha), data, { httpMetadata: { contentType: 'application/json' } });
+      return true;
+    } catch (virhe) {
+      console.log(`opas: tekstin R2-tallennus epäonnistui: ${virhe?.message ?? virhe}`);
+    }
+  }
+  return kvKirjoita(env.POLLO_KV ?? null, `opas:teksti:${sha}`, data, { expirationTtl: OPAS_AANI_TEKSTI_TTL });
+}
+
+/** Oppaan äänen teksti: R2 (uusi), sitten KV (ennen 6.10. tallennetut). Virhe = null. */
+async function lueOppaanTeksti(env, sha) {
+  if (env.PUHE_R2) {
+    try {
+      const olio = await env.PUHE_R2.get(oppaanTekstiR2(sha));
+      if (olio) return oppaanTekstitietue(typeof olio.text === 'function' ? await olio.text() : await new Response(olio.body).text());
+    } catch { /* KV-varaan */ }
+  }
+  return oppaanTekstitietue(await kvLue(env.POLLO_KV ?? null, `opas:teksti:${sha}`));
+}
+
 /** Toteutunut äänituotanto kuluttaa oppaan päiväkattoa (paitsi kehittäjän). */
 function kirjaaOppaanAani(env, ctx, tietue) {
   if (tietue.kehittaja || !env.POLLO_KV) return;
@@ -2762,20 +2792,19 @@ async function hoidaOppaanAani(pyynto, env, ctx) {
   };
   const loytyi = await valmis();
   if (loytyi) return loytyi;
-  const kv = env.POLLO_KV ?? null;
-  const tietue = oppaanTekstitietue(kv ? await kv.get(`opas:teksti:${sha}`) : null);
+  const tietue = await lueOppaanTeksti(env, sha);
   const teksti = tietue?.teksti;
   if (!teksti || !env.ELEVEN_API_KEY) return new Response('Ei löydy', { status: 404 });
-  // Toinen GET samasta äänestä (esim. uudelleenyritys) odottaa ensimmäisen tuotantoa R2:sta.
+  // Toinen GET samasta äänestä (esim. uudelleenyritys) odottaa ensimmäisen tuotantoa R2:sta. Lukko reunamuistissa (6.10.).
   const lukko = `opas:tuotanto:${sha}`;
-  if (await kv.get(lukko)) {
+  if (await reunaLue(lukko)) {
     for (let odotettu = 0; odotettu < OPAS_TUOTANTO_ODOTUS_MS; odotettu += 500) {
       await new Promise((r) => setTimeout(r, 500));
       const r2 = await valmis();
       if (r2) return r2;
     }
   }
-  await kv.put(lukko, '1', { expirationTtl: 60 }).catch(() => {});
+  await reunaKirjoita(lukko, '1', 60);
   try {
     const v = await kutsuElevenPuhetta(env, { teksti, malli: 'eleven_v4_turbo', nopeus: 1, aani: KERTOJA_ELEVEN_AANI, vakaus: null, tyyli: 0 });
     const data = await v.arrayBuffer();
@@ -2789,7 +2818,7 @@ async function hoidaOppaanAani(pyynto, env, ctx) {
     return mp3Vastaus(data);
   } catch (virhe) {
     console.log(`opas: ääni epäonnistui (${virhe?.status ?? 'verkko'})`);
-    await kv.delete?.(lukko)?.catch?.(() => {});
+    await reunaPoista(lukko);
     return new Response('Ääni epäonnistui', { status: 502 });
   }
 }
@@ -2817,26 +2846,25 @@ async function hoidaOppaanPcm(pyynto, env, ctx, sha) {
   const r2 = async () => (env.PUHE_R2 ? env.PUHE_R2.get(avain) : null);
   const valmis = await r2();
   if (valmis) return new Response(valmis.body, { headers: PCM_OTSAKKEET });
-  const kv = env.POLLO_KV ?? null;
-  const tietue = oppaanTekstitietue(kv ? await kv.get(`opas:teksti:${sha}`) : null);
+  const tietue = await lueOppaanTeksti(env, sha);
   const teksti = tietue?.teksti;
   if (!teksti || !env.ELEVEN_API_KEY) return new Response('Ei löydy', { status: 404 });
   const lukko = `opas:tuotanto-pcm:${sha}`;
-  if (await kv.get(lukko)) {
+  if (await reunaLue(lukko)) {
     for (let odotettu = 0; odotettu < OPAS_TUOTANTO_ODOTUS_MS; odotettu += 500) {
       await new Promise((r) => setTimeout(r, 500));
       const olio = await r2();
       if (olio) return new Response(olio.body, { headers: PCM_OTSAKKEET });
     }
   }
-  await kv.put(lukko, '1', { expirationTtl: 60 }).catch(() => {});
+  await reunaKirjoita(lukko, '1', 60);
   let v;
   try {
     v = await kutsuElevenPuhetta(env, { teksti, malli: 'eleven_v4_turbo', nopeus: 1, aani: KERTOJA_ELEVEN_AANI, vakaus: null, tyyli: 0,
       ulostulo: `pcm_${OPAS_PCM_TAAJUUS}` });
   } catch (virhe) {
     console.log(`opas: pcm-ääni epäonnistui (${virhe?.status ?? 'verkko'})`);
-    await kv.delete?.(lukko)?.catch?.(() => {});
+    await reunaPoista(lukko);
     return new Response('Ääni epäonnistui', { status: 502 });
   }
   await kirjaaOppaanAani(env, ctx, tietue);
@@ -2896,11 +2924,11 @@ async function hoidaOppaanKohteet(pyynto, env, kors) {
   let tulos = await valmis();
   if (tulos) return vastaa(tulos, kors);
   const lukko = `${avain}:tuotanto`;
-  if (kv && await kv.get(lukko)) {
+  if (await reunaLue(lukko)) {
     for (let i = 0; i < 30 && !tulos; i += 1) { await new Promise((r) => setTimeout(r, 500)); tulos = await valmis(); }
     if (tulos) return vastaa(tulos, kors);
   }
-  if (kv) await kv.put(lukko, '1', { expirationTtl: 60 }).catch(() => {});
+  await reunaKirjoita(lukko, '1', 60);
   try {
     const eilinen = kv ? await kv.get(kohdeAvain(kaupunki, eilenUtc())).then((x) => (x ? JSON.parse(x) : null)).catch(() => null) : null;
     const viite = Number.isFinite(lat) && Number.isFinite(lon) && !(lat === 0 && lon === 0) ? { lat, lon }
@@ -2928,7 +2956,7 @@ async function hoidaOppaanKohteet(pyynto, env, kors) {
     console.log(`opas: kohteet epäonnistui (${virhe?.status ?? 'verkko'})`);
     return vastaa({ virhe: 'palvelin', viesti: 'Kohteita ei saatu juuri nyt. Yritä hetken päästä.' }, { status: 502, ...kors });
   } finally {
-    if (kv) await kv.delete?.(lukko)?.catch?.(() => {});
+    await reunaPoista(lukko);
   }
 }
 
@@ -2949,11 +2977,13 @@ async function hoidaOpas(pyynto, env, kors, runko, ctx) {
   const kv = env.POLLO_KV ?? null;
   if (!kehittaja && !testitunnus) {
     const avain = opasPaivaAvain(ip);
-    const kaytetty = Math.max(await lueLaskuri(kv, avain), muisti.get(avain) ?? 0);
+    const kaytetty = Math.max(await lueHarvaLaskuri(kv, avain), muisti.get(avain) ?? 0);
     if (kaytetty >= lueLuku(env.OPAS_PAIVARAJA, OPAS_PAIVARAJA_OLETUS)) {
       return vastaa({ virhe: 'paivaraja', viesti: 'Opas lepää tänään. Jatketaan huomenna.' }, { status: 429, ...kors });
     }
-    const kirjoitus = kasvataLaskuri(kv, avain, 60 * 60 * 30);
+    // Harva (6.10., KV:n päiväkiintiö): IP:n laskuri kertyy isolaatin muistiin ja kirjoitetaan KV:hen 10 pyynnön tai 10 min
+    // välein. Raja 400/vrk on väärinkäytön esto, ei kirjanpito; isolaatin vaihto voi hukata enintään 9 pyyntöä.
+    const kirjoitus = kasvataHarvaLaskuri(kv, avain, 60 * 60 * 30, 1, { kynnys: 10 });
     if (typeof ctx?.waitUntil === 'function') ctx.waitUntil(kirjoitus); else await kirjoitus;
   }
   if (!p.sijainti && !p.kaupunki) return vastaa({ virhe: 'kysely', viesti: 'Kaupunki tai sijainti puuttuu.' }, { status: 400, ...kors });
@@ -2961,17 +2991,18 @@ async function hoidaOpas(pyynto, env, kors, runko, ctx) {
   // ulkopuolella, kun jo jotain on nähty → ei uutta pysähdystä (ei Sonnetia, ääntä eikä kustannusta). Vanhan natiivin
   // esihaku ei siis enää tuota automaattista jatkoa.
   if (!p.toive && p.kaydyt.length && kv) {
-    const k = p.istunto ? await kv.get(`opas:kierros:${p.istunto}`).then((x) => (x ? JSON.parse(x) : null)).catch(() => null) : null;
+    const k = p.istunto ? await reunaLue(`opas:kierros:${p.istunto}`).then((x) => (x ? JSON.parse(x) : null)).catch(() => null) : null;
     if (!k || k.kaupunki !== (p.kaupunki ?? '')) return vastaa({ tyyppi: 'odota' }, kors);
   }
   // Sonnet valitsee paikan omasta tiedostaan (omistaja 18.0x); worker hakee vain koordinaatit nimellä.
-  // Isoisään viitataan kerran istunnossa (Päätoimittaja 5.10.): muisti KV:ssä natiivin istunto-tunnuksella.
+  // Isoisään viitataan kerran istunnossa (Päätoimittaja 5.10.): muisti natiivin istunto-tunnuksella. Istunnon tila (isoisä,
+  // kierros, suunnat) asuu reunamuistissa eikä KV:ssä (6.10.: KV:n päiväkiintiö; ks. reuna.js).
   const isoisaAvain = p.istunto && kv ? `opas:isoisa:${p.istunto}` : null;
   const kierrosAvain = p.istunto && kv ? `opas:kierros:${p.istunto}` : null;
   const [sijainti, kaydytNimet, isoisaKaytetty, tallessa] = await Promise.all([
     p.sijainti ?? kaupunginSijainti(fetch, p.kaupunki), kaydytNimiksi(fetch, p.kaydyt),
-    isoisaAvain ? kv.get(isoisaAvain).then(Boolean).catch(() => false) : false,
-    kierrosAvain ? kv.get(kierrosAvain).then((x) => (x ? JSON.parse(x) : null)).catch(() => null) : null]);
+    isoisaAvain ? reunaLue(isoisaAvain).then(Boolean) : false,
+    kierrosAvain ? reunaLue(kierrosAvain).then((x) => (x ? JSON.parse(x) : null)).catch(() => null) : null]);
   const aineisto = kaupunginAineisto(env.OPAS_AINEISTO_TESTI ?? OPAS_AINEISTO, p.kaupunki);
   // OSM (Nominatim) vain asiakkaille, jotka näyttävät OSM-maininnan (Päätoimittaja: ODbL; vanhat natiivit TF 143–145
   // eivät lähetä krediittejä → Wikidata-reitti kuten ennen).
@@ -3063,7 +3094,7 @@ async function hoidaOpas(pyynto, env, kors, runko, ctx) {
     const paikat = eka ? [eka, ...jarjestaReitti(muut, eka)] : jarjestaReitti(muut, sijainti);
     if (paikat.length >= 3) {
       kierros = { kaupunki: p.kaupunki ?? '', paikat: paikat.slice(0, KIERROKSEN_PITUUS) };
-      await kv.put(kierrosAvain, JSON.stringify(kierros), { expirationTtl: 60 * 60 * 6 }).catch(() => {});
+      await reunaKirjoita(kierrosAvain, JSON.stringify(kierros), 60 * 60 * 6);
       // Lämmitä lisäkuvien välimuisti kierroksen kaikille pysähdyksille taustalla (Päätoimittaja 6.10.): seuraavat
       // pysähdykset saavat heti kaikki kuvat.
       const lammitys = Promise.all(kierros.paikat.map((x) => lisaKuvatValimuistilla(fetch, kv, x.id).catch(() => [])));
@@ -3078,11 +3109,11 @@ async function hoidaOpas(pyynto, env, kors, runko, ctx) {
     const muut = (tulos.vaihtoehdot ?? []).filter((x) => !onKierrosToive(x));
     tulos.vaihtoehdot = [ensin, muut[0] ?? 'Näytä jotain modernia'];
   }
-  if (kierrosLoppui && tulos?.tyyppi === 'kysymys' && kierrosAvain) await kv.delete?.(kierrosAvain)?.catch?.(() => {});
+  if (kierrosLoppui && tulos?.tyyppi === 'kysymys' && kierrosAvain) await reunaPoista(kierrosAvain);
   // Suunnanvaihtosiru koodissa (Päätoimittaja 5.10.): istunnon muisti KV:ssä, ilman istuntoa kierto nähtyjen määrällä.
   if (tulos?.tyyppi === 'pysahdys') {
     const suuntaAvain = p.istunto && kv ? `opas:suunnat:${p.istunto}` : null;
-    const kaytetyt = suuntaAvain ? await kv.get(suuntaAvain).then((x) => (x ? JSON.parse(x) : [])).catch(() => [])
+    const kaytetyt = suuntaAvain ? await reunaLue(suuntaAvain).then((x) => (x ? JSON.parse(x) : [])).catch(() => [])
       : [SUUNNANVAIHDOT[(p.kaydyt.length + SUUNNANVAIHDOT.length - 1) % SUUNNANVAIHDOT.length]];
     // Juuri valittua suuntaa ei tarjota heti uudelleen ("Missä voisi syödä?" → ei taas "Missä voisi syödä?").
     const valittu = SUUNNANVAIHDOT.find((x) => x === p.toive);
@@ -3091,7 +3122,7 @@ async function hoidaOpas(pyynto, env, kors, runko, ctx) {
     const syventava = (tulos.vaihtoehdot ?? []).find((x) => !SUUNNANVAIHDOT.includes(x) && !/modernia|syödä|syödään/i.test(x)) ?? tulos.vaihtoehdot?.[0];
     tulos.vaihtoehdot = [syventava ?? 'Mitä täällä näkee?', siru];
     if (suuntaAvain) {
-      const kirjoitus = kv.put(suuntaAvain, JSON.stringify(uudet), { expirationTtl: 60 * 60 * 6 }).catch(() => {});
+      const kirjoitus = reunaKirjoita(suuntaAvain, JSON.stringify(uudet), 60 * 60 * 6);
       if (typeof ctx?.waitUntil === 'function') ctx.waitUntil(kirjoitus); else await kirjoitus;
     }
   }
@@ -3120,7 +3151,7 @@ async function hoidaOpas(pyynto, env, kors, runko, ctx) {
     tulos.kuvat = yhdistaKuvat(tulos.kuvat, lisat ?? []);
   }
   if (isoisaAvain && kv && !isoisaKaytetty && tulos.tyyppi === 'pysahdys' && /isoisä/i.test(tulos.teksti)) {
-    const kirjoitus = kv.put(isoisaAvain, '1', { expirationTtl: 60 * 60 * 48 }).catch(() => {});
+    const kirjoitus = reunaKirjoita(isoisaAvain, '1', 60 * 60 * 48);
     if (typeof ctx?.waitUntil === 'function') ctx.waitUntil(kirjoitus); else await kirjoitus;
   }
   console.log(`opas: ${tulos.tyyppi} ${tulos.id ?? ''} ${p.kaydyt.length} käyty, ääni ${aani ? 'kyllä' : 'ei'}, kuvia ${tulos.kuvat?.length ?? 0}`);
@@ -3282,8 +3313,10 @@ export default {
      * KV:n kirjoitus kulkee waitUntilissa mallikutsun rinnalla. Muistilaskuri
      * päivittyy silti tässä pyynnössä (kasvataLaskuri).
      */
+    // Kehittäjän ja testitunnuksen pyynnöt eivät kirjoita IP-päivälaskuria (6.10., KV:n päiväkiintiö); kuukausikatto kertyy.
+    const ohitaIp = kehittaja || testitunnusOhitus(pyynto, env);
     const kirjoitukset = Promise.all([
-      kasvataLaskuri(kv, pAvain, 60 * 60 * 30),
+      ohitaIp ? null : kasvataLaskuri(kv, pAvain, 60 * 60 * 30),
       kasvataHarvaLaskuri(kv, kAvain, 60 * 60 * 24 * 40, 1, { kynnys: 20 }),
     ]);
     if (typeof ctx?.waitUntil === 'function') ctx.waitUntil(kirjoitukset);
