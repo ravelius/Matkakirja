@@ -167,7 +167,7 @@ namespace Matkakirja.Linssit.Kierros
         /// <summary>Kehystys: etäisyys = koko × kerroin + lisä (rajattuna), kallistus pystystä, katse nostetaan osuuteen korkeudesta.</summary>
         public const double KokoKerroin = 3.0, KokoLisaM = 150, EtaisyysMinM = 220, EtaisyysMaxM = 1600, Kallistus = 62, KatseOsuus = 0.45;
         /// <summary>Lennon kesto: kaupungissa per km, kauas logaritmisesti; rajat.</summary>
-        public const double LentoMinS = 4.5, LentoMaxS = 14, LyhytKm = 1.5, LyhytLentoS = 3.5;   // omistaja TF 144: lento liian hidas
+        public const double LentoMinS = 4.5, LentoMaxS = 14, LyhytKm = 1.5, LyhytLentoS = 5, LyhytLentoMaxS = 7;   // juna 156: 5–7 s lähilennolle (omistaja 23.4x "turhan nopeasti")
         /// <summary>Kertoja aloittaa kappaleen näin monta sekuntia ennen saapumista (nimi kuuluu, kun kamera laskeutuu).</summary>
         public const double PuheEnnenS = 5, PuheAikaisinS = 2;
         /// <summary>Avauksen liuku kaupungin ylle odottaessa ensimmäistä kohdetta (s; etäisyys × kerroin, kallistus +).</summary>
@@ -297,9 +297,9 @@ namespace Matkakirja.Linssit.Kierros
         public static double LennonKesto(double matkaM)
         {
             double km = matkaM / 1000.0;
-            // Alle 1,5 km: 5 s (Päätoimittaja 5.10. 19.4x: esilataus hoitaa laatat, hiljaisuus pois).
-            if (km < LyhytKm) return LyhytLentoS;
-            double s = km < 10 ? 4.0 + 0.45 * km : 8.5 + 4.0 * Math.Log10(km / 10.0);   // 2 km ≈ 5 s, 10 km ≈ 8,5 s, 1000 km ≈ 14 s
+            // Alle 1,5 km: 5 s → 7 s matkan mukaan (juna 156: pehmeämpi; aiempi 3,5 s oli omistajan mukaan "turhan nopea").
+            if (km < LyhytKm) return LyhytLentoS + (LyhytLentoMaxS - LyhytLentoS) * km / LyhytKm;
+            double s = km < 10 ? Math.Max(LyhytLentoMaxS, 4.0 + 0.45 * km) : 8.5 + 4.0 * Math.Log10(km / 10.0);   // 1,5–6,7 km 7 s, 10 km ≈ 8,5 s, 1000 km ≈ 14 s
             return Math.Max(LentoMinS, Math.Min(LentoMaxS, s));
         }
 

@@ -249,7 +249,8 @@ namespace Matkakirja.Linssit.Testit
 
         [Testi] static void PuheAlkaaKolmeSekuntiaEnnenSaapumistaJaLyhytLentoViisiSekuntia()
         {
-            Oleta.Sama(OpasSilmukka.LyhytLentoS, OpasSilmukka.LennonKesto(800));
+            double l800 = OpasSilmukka.LennonKesto(800);
+            Oleta.Tosi(l800 >= 5 && l800 <= 7, $"lähilento 5–7 s ({l800:F1})");
             Oleta.Tosi(OpasSilmukka.LennonKesto(3000) >= OpasSilmukka.LentoMinS);
             var s = new OpasSilmukka(new Kuvakulma(55.68, 12.57, 1500, 50, 0, 40));
             double puheT = -1, saapuiT = -1, t = 0;

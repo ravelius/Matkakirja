@@ -35,12 +35,9 @@ namespace Matkakirja.Linssit.Kierros
         // rakennus ja torni yksityiskohtaan lähemmäs (×LahemmasOsuus, hieman viistommin), ja sama orbit jatkuu sieltä.
         public const double KiertoAsteS = 0.9, KiertoAlkuS = 3, DollyOsuus = 0.07, DollyAikaS = 25;
         public const double VaiheS = 13, SiirtoS = 4, SiirtoKulma = 150, LahemmasOsuus = 0.7, LahemmasKallistus = 4, SiirtoUlosOsuus = 0.15;
-        // Lento
-        // TF 144 -palaute (omistaja 6.10.: "mätkähtää lopuksi maahan"; Linssisepän toisto 00.04: lennon lopussa matala viisto liuku
-        // karkean laattamassan yllä): lento korkealla ja jyrkkänä (LentoKallistus pystystä, etäisyys ≥ KorkeusKerroin × kehys)
-        // viimeiseen neljännekseen asti; vasta silloin lasku ja kääntö kehyksen viistoon kulmaan lähes pystysuunnassa.
-        public const double NousuLoppu = 0.25, LaskuAlku = 0.75, KaariOsuus = 0.35, KaariMinM = 250, KaariMaxM = 1600;
-        public const double LentoKallistus = 30, KorkeusKerroin = 1.5;
+        // Lento (juna 156, omistaja 23.4x / Päätoimittaja): pehmeä kaari matkan mukaan (ks. Lennossa). Aiempi TF 144 -linja "korkealla
+        // ja jyrkkänä viimeiseen neljännekseen" kumottu; "ei mätkähdystä" hoituu sin²-kummulla (pystynopeus 0 laskussa).
+        public const double LahiKaariOsuus = 0.3, KaariOsuus = 0.22, KaariMaxM = 1200, MinKorkeusM = 150, KeskiJyrkennys = 10;
         public const double LahiRajaM = 20000;
 
         /// <summary>Luokka workerin kentästä ("katu" | "kanava" | "aukio" | "rakennus" | "torni" | "linnoitus" | "puisto" |
@@ -109,26 +106,27 @@ namespace Matkakirja.Linssit.Kierros
             return new Kuvakulma(p.Lat, p.Lon, et, kall, KierrosLento.Kiedo(p.Suuntima + kierto + lisaSuunta), p.KatseKorkeusM);
         }
 
-        /// <summary>Lento a → b osuudella t (0…1): nousu – liuku – lasku, katse lentosuuntaan ja lopuksi kohteeseen.</summary>
+        /// <summary>
+        /// Lento a → b osuudella t (0…1). PEHMEÄ KAARI (omistaja 6.10. 23.4x: "kamera liikkuu välillä turhan nopeasti ja tekee turhan
+        /// ylhäällä käyviä liikkeitä … kamera-ajot pehmeämmiksi"; Päätoimittaja kumosi "korkea kaari ripeästi" -linjan, "ei mätkähdystä"
+        /// pysyy): yksi kumpu h = sin²(πt) (pystynopeus nolla lähdössä ja laskussa), korkeus suhteessa matkaan (KaariOsuus × matka
+        /// pystysuunnassa, lähikohteisiin 0,3), vähintään MinKorkeusM kohteen yläpuolella kesken lennon, kallistus liukuu a → b
+        /// hieman jyrkempänä keskellä, sijainti ease-in-out (smootherstep). Katse lentosuuntaan keskellä, lopuksi kohteeseen.
+        /// </summary>
         public static Kuvakulma Lennossa(Kuvakulma a, Kuvakulma b, double t)
         {
             t = Math.Max(0, Math.Min(1, t));
             double matka = KierrosLento.EtaisyysM(a.Lat, a.Lon, b.Lat, b.Lon);
             if (matka >= LahiRajaM) return OpasSilmukka.Lennossa(a, b, t);
             double s = KierrosLento.Smootherstep(t);
-            // Nousu (0…NousuLoppu) ja lasku (LaskuAlku…1) pehmeästi; välissä korkea ja jyrkkä liuku.
-            double ylos = KierrosLento.Smootherstep(Math.Min(1, t / NousuLoppu));
-            double alas = KierrosLento.Smootherstep(Math.Max(0, (t - LaskuAlku) / (1 - LaskuAlku)));
-            double h = ylos * (1 - alas);
+            double sp = Math.Sin(Math.PI * t), h = sp * sp;
             double L(double x, double y) => x + (y - x) * s;
-            // Korkeus: vähintään KorkeusKerroin × suurempi kehysetäisyys tai kaari matkan mukaan (kumpi suurempi).
+            double kall = L(a.Kallistus, b.Kallistus) - KeskiJyrkennys * h;
+            double cosK = Math.Max(0.25, Math.Cos(kall * Math.PI / 180));
             double perus = L(a.EtaisyysM, b.EtaisyysM);
-            double huippu = Math.Max(KorkeusKerroin * Math.Max(a.EtaisyysM, b.EtaisyysM), perus + Rajaa(KaariOsuus * matka, matka < 50 ? 0 : KaariMinM, KaariMaxM));
-            double et = perus + (huippu - perus) * h;
-            // Kallistus: lähtökulmasta jyrkkään (LentoKallistus) nousun aikana, jyrkästä kohteen kulmaan laskun aikana.
-            double kall = a.Kallistus + (LentoKallistus - a.Kallistus) * ylos;
-            kall += (b.Kallistus - kall) * alas;
-            // Katse: alku → lentosuunta (0…1/3) → kohteen kehyssuunta (2/3…1); hyvin lyhyellä matkalla suoraan a → b.
+            double nousu = Rajaa((matka < 1000 ? LahiKaariOsuus : KaariOsuus) * matka, 0, KaariMaxM);   // pystysuunnassa (m)
+            double et = perus + nousu / cosK * h;
+            et = Math.Max(et, perus + (MinKorkeusM / cosK - perus) * h);   // kesken lennon vähintään MinKorkeusM kohteen yläpuolella
             double lento = matka < 50 ? b.Suuntima : OpasSilmukka.Suunta(a.Lat, a.Lon, b.Lat, b.Lon);
             double w1 = KierrosLento.Smootherstep(Math.Min(1, t * 3)), w2 = KierrosLento.Smootherstep(Math.Max(0, t * 3 - 2));
             double suunta = KierrosLento.Kiedo(a.Suuntima + KierrosLento.Kiedo(lento - a.Suuntima) * w1);
