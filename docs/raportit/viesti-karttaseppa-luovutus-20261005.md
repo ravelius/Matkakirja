@@ -1,15 +1,19 @@
-# TILANNE 7.10. klo 00.5x
+# TILANNE 7.10. klo 01.1x
 
-- **AJOSSA (irrallinen, perl setsid, PGID 22563):** `iss-eurooppa-s2/kaudet/aja-syksy-A2.sh` → syksyn rivit 13–19 kansioon `s2-eurooppa-syksy-A2/`
-  ja rengas kansioon `iss-maailma-s2/kausi-rengas/syksy-A2/`. Valmis noin klo 3.30; tila `kaudet/aja-syksy-A2.out`.
-- **JÄRVI-korjaus (7.10.):** `kausimosaiikki.mjs`:n v2e-sääntö laski merimaskin ulkopuoliset sisäjärvet maaksi, jolloin
-  Vänern, Laatokka ja Ääninen jäivät mustiksi ja laikukkaiksi. Vika koskee kaikkia 5.10. jälkeen ajettuja: syksy A, kevät/syksy-pohjoinen ja talvi.
-  Korjattu (vanha koodi `kausimosaiikki-ennen-jarvi-20261007.mjs`); testilohkot 34_18 ja 37_18 kuvassa `kuvapari-jarvikorjaus-20261007.jpg`.
-- **Ajo A (`s2-eurooppa-syksy-sovitusA/`) HYLÄTTY** järvivian takia. A2 korvaa sen. Sovitus A pienentää tilkkuja vain vähän.
-- **Talvi katsottu** (`kuvapari-talvi-20261007.jpg`, `-talvi-b-`). Viat: Tukholman seudulla lumiset ja paljaat MGRS-ruudut vuorottelevat, Laatokka on puoliksi musta (järvivika) ja rannoilla on leveä sumea reunus.
-  PT:ltä kysytty 0.5x talven uusintaa: järvikorjaus ja lumisääntö, jossa yli 55° N lumiset näkymät tulevat ensin. Ajo kestää noin 5 h.
-- **Kuvapariohjelma:** `kaudet/kuvapari.py <sarakkeet> <rivit> ulos.jpg pieni.jpg`. Sarakkeet: nyt, kevat, syksy, syksyA, talvi.
-  A2-kuvaparia varten sarakkeen SYA kerrokset vaihdetaan syksy-A2:ksi.
+- **AJOSSA (irralliset, perl setsid):**
+  1) `kaudet/aja-syksy-A2.sh` (PGID 22563) → `s2-eurooppa-syksy-A2/` + `kausi-rengas/syksy-A2/`, valmis noin klo 4.15 (`aja-syksy-A2.out`).
+  2) `kaudet/aja-talvi2.sh` (PGID 59734) odottaa A2:n VALMIS-merkkiä ja ajaa sitten talven 169 lohkoa → `s2-eurooppa-talvi2/` (rengasta ei tehdä, kuten ei talvellakaan). Valmis noin klo 10 (`aja-talvi2.out`).
+- **Valmistuttua:** kuvaparit ennen ja jälkeen PT:lle (`kaudet/kuvapari.py`; SYA-kerrokset → syksy-A2, TAL → s2-eurooppa-talvi2/laatat).
+  Rivit: Alpit, Skandinavia, Ruotsin keskiosa, Pohjois-Lappi, Lappi, Vänern, Laatokka–Ääninen, Tukholma, Altan vuono ja Skåne.
+- **JÄRVI-korjaus (7.10.):** v2e-sääntö laski merimaskin ulkopuoliset sisäjärvet maaksi, jolloin Vänern ja Laatokka olivat mustia.
+  Korjattu `kausimosaiikki.mjs`:ään (vanha koodi `-ennen-jarvi-20261007.mjs`). Ajo A (`s2-eurooppa-syksy-sovitusA/`) on HYLÄTTY, ja A2 korvaa sen.
+  Vika koskee myös kevät- ja syksy-pohjoista (rivit 13–16); niiden uusinnasta ei ole vielä päätetty.
+- **TALVI2=1 (PT hyväksyi 7.10. 01.0x, kolme tarkennusta):**
+  1) Yli 53° N lumiset näkymät ensin, ja pikselissä lumen mediaani leveysasteliukumalla 54→57° N.
+  2) Yli 56° N sisäjärvien tummat pikselit saavat jääsävyn JAA (Laatokka ja Ääninen jäässä).
+  3) Vuonojen reunus: jää-sääntö ohitetaan S2-maalle 3 km:n päähän rannasta, ja talven rantasumennus on 0,2–1,2 km.
+  Testi 4 lohkolla: `kuvapari-talvi2-testi-20261007.jpg`.
+- **Talvi (6.10.) ja ajo A:** hylätyt kansiot poistetaan vain luvalla.
 
 ---
 
