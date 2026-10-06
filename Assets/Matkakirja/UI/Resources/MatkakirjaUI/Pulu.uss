@@ -791,6 +791,16 @@
     margin-bottom: 8px;
 }
 
+/* Kysymyssirut kiinni syöttökentän yläpuolella (Päätoimittaja 5.10.2026): ei vieritä, ei kutistu; tyhjänä ei vie tilaa. */
+.mk-chat__sirualue {
+    flex-shrink: 0;
+    padding: 6px 12px 0 12px;
+}
+
+.mk-chat__sirualue > .mk-chat__sirut {
+    margin-bottom: 2px;
+}
+
 .mk-chat__siru {
     min-height: 34px;
     margin-bottom: 6px;

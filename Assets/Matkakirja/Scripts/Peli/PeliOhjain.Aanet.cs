@@ -81,7 +81,7 @@ namespace Matkakirja.Natiivi
         {
             string ennen = SoivatAanet();
             if (soivaLuento != null || odottavaLuento != null || saapumisluenta.Kesken) VaiennaPaikanPuhe("linssi", LinssinKatkaisuS);
-            puhe?.Pysayta(LinssinKatkaisuS);
+            puhe?.Pysayta(LinssinKatkaisuS, pakota: true);   // linssin avaus katkaisee myös pinnatun luennan (Raamattu)
             Aanet.Haivyta(AaniKanava.Puhe, LinssinKatkaisuS);
             Aanet.Haivyta(AaniKanava.Kertoja, LinssinKatkaisuS);
             Aanet.Haivyta(AaniKanava.Tehoste, LinssinKatkaisuS);

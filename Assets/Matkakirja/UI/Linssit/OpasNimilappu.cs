@@ -20,7 +20,8 @@ namespace Matkakirja.Natiivi
         readonly VisualElement isa, viiva, nasta;
         readonly Label lappu;
         bool nakyy;
-        string teksti;
+        string teksti, edellinen;
+        float nimiAlku = -100f;
 
         public OpasNimilappu(VisualElement isa)
         {
@@ -39,6 +40,11 @@ namespace Matkakirja.Natiivi
         /// <summary>Joka ruudulla: nimi (null = piiloon); paikka kohteen pisteestä ruudulle, lappu viivan päässä yläpuolella.</summary>
         public void Paivita(string nimi)
         {
+            // NIMIKYLTTI (omistaja 5.10.2026, juna 146): lappu ~3 s pysähdyksen alussa, sitten se häipyy (seuraava pysähdys
+            // tuo sen takaisin); ei koko pysähdyksen ajan.
+            if (string.IsNullOrEmpty(nimi)) edellinen = null;
+            else if (nimi != edellinen) { edellinen = nimi; nimiAlku = Time.unscaledTime; }
+            if (!string.IsNullOrEmpty(nimi) && Time.unscaledTime - nimiAlku >= Nimikyltti.NakyyMs / 1000f) nimi = null;
             Vector2? p = null;
             if (!string.IsNullOrEmpty(nimi) && isa.panel != null)
             {

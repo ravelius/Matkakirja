@@ -87,3 +87,75 @@
     -unity-background-image-tint-color: var(--tk-korostus);
     color: var(--tk-korostus);
 }
+
+/* PIN-KUVAKE JA PINNATTU PALKKI (omistaja 5.10.2026 klo 23.3x, uusi UI-pohja): pin-kuvake ikkunan ylärivillä rivin muiden
+ * kuvakkeiden koossa, pinnattuna korostusvärillä; pinnatun ikkunan himmennys läpinäkyväksi (kartta liikkuu ohi). Palkki: yksi
+ * rivi oikeaan yläreunaan nappien alle (paikka koodista), otsikko + tauko/jatka + ohut edistyminen (EDISTYMINEN-pohja).
+ * Teema elementin tk-teema-*-luokasta; VAIN --tk-*-tokenit. */
+.mk-chat__ikoninappi.mk-chat__pin.mk-valittu,
+.mk-lukija.mk-nosto__pin.mk-valittu {
+    color: var(--tk-paperi-korostus);
+    -unity-background-image-tint-color: var(--tk-paperi-korostus);
+    background-color: var(--tk-paperi-reunus);
+}
+
+.mk-lukija.mk-nosto__pin {
+    margin-right: 2px;
+}
+
+.mk-himmennys.mk-himmennys--pin {
+    background-color: initial;
+}
+
+.mk-pinpalkki {
+    position: absolute;
+    max-width: 260px;
+    min-height: 40px;
+    padding: 0 var(--tk-vali-s) 0 var(--tk-vali-m);
+    border-width: 1px;
+    border-color: var(--tk-reunus);
+    border-radius: var(--tk-kulma-nappi);
+    background-color: var(--tk-pinta);
+    color: var(--tk-muste);
+    justify-content: center;
+}
+
+.mk-pinpalkki__rivi {
+    flex-direction: row;
+    align-items: center;
+}
+
+.mk-pinpalkki__pin {
+    width: 16px;
+    height: 16px;
+    margin-right: var(--tk-vali-s);
+    color: var(--tk-korostus);
+}
+
+.mk-pinpalkki__otsikko {
+    flex-shrink: 1;
+    font-size: var(--tk-koko-apuri);
+    color: var(--tk-muste);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.mk-pinpalkki__tauko {
+    width: 34px;
+    height: 34px;
+    margin-left: var(--tk-vali-s);
+    justify-content: center;
+    align-items: center;
+    background-color: initial;
+    border-width: 0;
+    color: var(--tk-korostus);
+}
+
+.mk-pinpalkki__edistyminen {
+    position: absolute;
+    left: var(--tk-vali-m);
+    right: var(--tk-vali-m);
+    bottom: 3px;
+    height: 2px;
+}
