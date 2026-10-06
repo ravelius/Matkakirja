@@ -58,6 +58,8 @@ namespace Matkakirja.Natiivi
         public const float KaikkiS = 6f;
         /// <summary>Datalähderivin kirjainkoko (pt; omistaja 6.10. 12.4x "pienemmällä fontilla": 9 → 7).</summary>
         public const float RiviPt = 7f;
+        /// <summary>Lähderivin näkyvä leveys osuutena ruudun leveydestä (omistaja 6.10. 13.2x).</summary>
+        public const float RiviOsuus = 0.40f;
 
         /// <summary>☰ Tietoja ja lähteet: koko lista rivitettynä ja Cesium ion -logo hetkeksi.</summary>
         /// <summary>Koko lista auki (oppaan sirut eivät nouse sen yläpuolelle).</summary>
@@ -184,7 +186,8 @@ namespace Matkakirja.Natiivi
             // Yksi rivi 10 dp:n marginaalein, katkeaa "…":llä; napautus näyttää listan rivitettynä.
             bool kaikki = Time.unscaledTime < kaikkiAsti;
             float lev = juuri.worldBound.width - 2 * TyhjaSivuPt * pt;
-            tiivis.style.width = lev; lista.style.width = lev;
+            // Omistaja 6.10. 13.2x "niin kompakti kuin ikinä pystyt": näkyvä rivi ~40 % ruudun leveydestä (sanamuoto ennallaan).
+            tiivis.style.width = Mathf.Min(lev, juuri.worldBound.width * RiviOsuus); lista.style.width = lev;
             tiivis.style.display = kaikki ? DisplayStyle.None : DisplayStyle.Flex;
             lista.style.display = kaikki ? DisplayStyle.Flex : DisplayStyle.None;
             int avain = lista.childCount;
