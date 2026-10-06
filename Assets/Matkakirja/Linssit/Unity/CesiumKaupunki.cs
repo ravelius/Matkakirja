@@ -378,6 +378,10 @@ namespace Matkakirja.Natiivi
             // pallo näkyi pelkkänä pergamenttina horisontin alla (Laitetestaaja 5.10., juna 144 e95826b4, toistettu simulla 22.11).
             vanhaAsento = (kierto.leveys, kierto.pituus, kierto.korkeus, kierto.kallistus, kierto.suuntima, kierto.katseKorkeus);
             asentoTalteen = true;
+            // Pallon maaston rako pois kaupunkinäkymän ajaksi (Natiiviseppä 18a9e4d3, LS1:n juurisyy 7.10. 01.0x): pallon tilesetin
+            // näyte × korkeuskerroin 2 nosti oppaan kameraa väärin (sama kiinteä kamera 22° / 24,9° / 33,9°); oppaan oma törmäysraja
+            // Googlen pinnasta (OpasOhjaus, lähiluotain) on ainoa raja.
+            if (kierto != null) kierto.MaastoRakoPois = true;
             SiirraOrigo(origoLat, origoLon, origoKorkeus);
 
             juuri = new GameObject("Cesium-kaupunki");
@@ -652,6 +656,7 @@ namespace Matkakirja.Natiivi
             juuri = null; maasto = null; rakennukset = null; esikamera = null; hallinta = null;
             KarttaKerrokset.RuutukrediititNakyviin = false;
             PallonViivat(true);
+            if (kierto != null) kierto.MaastoRakoPois = false;
             if (georef != null && georef.isActiveAndEnabled) { georef.Initialize(); georef.SetOriginLongitudeLatitudeHeight(vanhaOrigo.x, vanhaOrigo.y, vanhaOrigo.z); PaivitaKorkeusKerroin(); }
             if (asentoTalteen && kierto != null)
             {
