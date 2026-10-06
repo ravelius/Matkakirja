@@ -39,7 +39,9 @@ namespace Matkakirja.Linssit
 
         public CesiumOmatMallit(Action<string> kirjaa) { this.kirjaa = kirjaa; }
 
-        static bool Leikkaa => !File.Exists(Path.Combine(Application.persistentDataPath, "omat-mallit", "leikkaus-pois"));
+        /// <summary>Googlen leikkaus OLETUKSENA POIS (Päätoimittaja 7.10. 01.2x: koe-156:ssa leikkaus piilotti koko tilesetin; ei junaan
+        /// ennen kuin leikkaus rajautuu pyramidien polygoneihin ja ennen/jälkeen-kuva on näytetty). Testi: Documents/omat-mallit/leikkaus-paalle.</summary>
+        static bool Leikkaa => File.Exists(Path.Combine(Application.persistentDataPath, "omat-mallit", "leikkaus-paalle"));
 
         public int Maara => mallit.Count;
         string avattu;   // avattujen kohteiden id:t (Paivita avaa uudelleen vain, jos joukko vaihtuu)
@@ -124,7 +126,7 @@ namespace Matkakirja.Linssit
             if (google == null || juuri == null) return;
             if (laatta != null) laatta.layer = juuri.layer;
             Tekijat = tekija;
-            if (!Leikkaa) return;   // testi: Documents/omat-mallit/leikkaus-pois (mallit ilman Googlen leikkausta)
+            if (!Leikkaa) return;   // oletuksena pois (Päätoimittaja 7.10.); testi Documents/omat-mallit/leikkaus-paalle
             if (leikkaus == null)
             {
                 leikkaus = google.gameObject.AddComponent<CesiumPolygonRasterOverlay>();
