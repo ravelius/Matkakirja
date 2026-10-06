@@ -40,7 +40,10 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(raati.EtaisyysM > 140 && raati.EtaisyysM < 230, $"Raatihuone {raati.EtaisyysM:F0} m");
             Oleta.Sama(OpasKuvaus.RakennusEtMinM, OpasKuvaus.Kehysta(K(8, 4), 5, 0, "patsas").EtaisyysM, "patsas vähimmäisetäisyydellä");
             var nyhavn = OpasKuvaus.Kehysta(K(250, 15), 5, 0, "kanava");
-            Oleta.Tosi(nyhavn.EtaisyysM > 300 && nyhavn.EtaisyysM <= 350, $"Nyhavn {nyhavn.EtaisyysM:F0} m");
+            Oleta.Tosi(nyhavn.EtaisyysM > 250 && nyhavn.EtaisyysM <= 350, $"Nyhavn {nyhavn.EtaisyysM:F0} m");
+            // TF 149 (omistaja: "turhan kaukaa"): pieni rakennus (40 m) lähempänä kuin ennen (150 m), kohde ~puolet kuvasta.
+            var pieni = OpasKuvaus.Kehysta(K(40, 15), 5, 0, "rakennus");
+            Oleta.Tosi(pieni.EtaisyysM < 120, $"pieni rakennus {pieni.EtaisyysM:F0} m");
         }
 
         [Testi] static void PysahdysAlkaaKehyksestaJaKiertaaHitaasti()
