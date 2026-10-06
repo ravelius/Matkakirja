@@ -4,6 +4,14 @@ Luovuttaja: Natiiviseppä (Opus 5.5, high). Edellinen: viesti-natiiviseppa-luovu
 
 ## TILA HETI
 
+- **6.10. 10.3x: BUILD 146 = master 783b6fe5** (juna/b13 4b8e8159, käännös 50938e7f, app lokit/juna-1.1.146-50938e7f; muutosloki #4040).
+- **JUNA 147 RUNKO 642e40e1** (haara natiiviseppa/juna-147, wt/proto-natiiviseppa-j144) = 4b8e8159 + pelikoodari 3610cf64 (valmisluennat)
+  + natiivi-ui 38100de1 (koe-147: ISS-ohjaamo v3, LCD, LAAJA/TELE ym.) + pelikoodari fe9fba87 (ei havaintovaraa) + LS1 9df9f436
+  (kuvatekijä) — kaikki Päätoimittajan suoraan kuittaamia. Testit 0/712/419/444. Odottaa: LS2 2c2ad7ac (pallolukko, omistajan
+  simulupa), tyylikirja #4035 (web). Muutosloki 1.1 (147) junan mukana. Käännös vasta Julkaisijan KÄÄNNÖS NYT -luvalla.
+
+## AIEMPI (6.10. yö)
+
 - **6.10. 00.0x: BUILD 145 = master eff8d65c** (juna/b13 c2d40258, käännös f16f7fa7, app lokit/juna-1.1.145-f16f7fa7). BUILD 144 =
   d8d89704 (juna 921a1a80, käännös 72645b63; omistajan VIE tunnetulla Amsterdam-vialla). Muutosloki 1.1 (145) PR #4034
   (Julkaisija mergeää ja vie; Actions-häiriö). Tunnetut viat → 146: kaupunkivalinta vaatii joskus toisen napautuksen, tumma vyö.
