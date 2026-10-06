@@ -18,6 +18,8 @@ namespace Matkakirja.Linssit
         public static float Pituus = 0.5f;
         /// <summary>Reunan pehmeys (varjostimen _Sumeus, oletus 0,006). 400 mm:n etualan bokeh (omistaja 1.10.): ~0,05–0,08.</summary>
         public static float Sumeus = 0.006f;
+        /// <summary>Auringonpuoleisen reunavalon voima 0…1 (juliste 6.10.: 0, Päätoimittaja: kesken reunaa alkava kermaviiva pois).</summary>
+        public static float Reunavalo = 1f;
 
         static readonly int IdPeitto = Shader.PropertyToID("_Peitto"), IdRuutu = Shader.PropertyToID("_Ruutu"),
             IdAurinko = Shader.PropertyToID("_AurinkoRuutu"), IdAsettelu = Shader.PropertyToID("_Asettelu"), IdPituus = Shader.PropertyToID("_Pituus"), IdSumeus = Shader.PropertyToID("_Sumeus");
@@ -47,7 +49,7 @@ namespace Matkakirja.Linssit
                 Vector3 a = gt.TransformDirection((Vector3)(float3)g.TransformEarthCenteredEarthFixedDirectionToUnity(
                     global::Matkakirja.Aurinko.AurinkoEcef(Iss.IssNyt.AurinkoKello()))).normalized;
                 Vector3 k = kamera.transform.InverseTransformDirection(a);
-                materiaali.SetVector(IdAurinko, new Vector4(k.x, k.y, k.z, 1f));
+                materiaali.SetVector(IdAurinko, new Vector4(k.x, k.y, k.z, Reunavalo));
             }
         }
 
