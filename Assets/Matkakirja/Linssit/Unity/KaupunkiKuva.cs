@@ -39,7 +39,9 @@ namespace Matkakirja.Natiivi
         // JUNAN OLETUS (Päätoimittajan sääntö 5.10. 19.1x): vain MSAA + aniso, kunnes kuvapari näyttää utu-, Volume-, vuorokausi-
         // ja kupolikuvan selvästi paremmiksi ja Päätoimittaja kuittaa (juna 150: kuvaparit aamu/päivä/ilta/yö + iPad-muisti);
         // viritys asetustiedostolla ("sumu 1 volume 1 vuorokausi 1 kupoli 1"). Ei tonemappausta (Neutral latisti kuvan).
-        public static bool Sumu = false, Savytys = false, Volyymi = false, VuorokausiPaalla = false, Kupoli = false;
+        // VuorokausiPaalla oletuksena (Päätoimittaja 6.10. 21.0x kuittasi sävykolmikon 20.53: aamu kullanlämmin, päivä neutraali, ilta
+        // hillitty; juna 154): automaattinen vuorokausi = kohteen paikallisen ajan sävy, ilman pelaajan valintaa.
+        public static bool Sumu = false, Savytys = false, Volyymi = false, VuorokausiPaalla = true, Kupoli = false;
         public static float Kontrasti = 12f, Saturaatio = 10f, Hehku = 0f, Tunti = -1f;
         /// <summary>Terävöitys 0–1 (KaupunkiTerava, kuvanlaatulista kohta 1; oletus pois kuvapariin ja iPad-mittaukseen asti).</summary>
         public static float Terava = 0f;
@@ -134,7 +136,7 @@ namespace Matkakirja.Natiivi
             tallennettu = false;
             GoogleSse = 16f; MaastoSse = 10f; RakennusSse = 16f; Msaa = 4; // asetustiedosto luetaan uudelleen seuraavassa avauksessa
             AlkuKerroin = 15f; LoppuKerroin = 80f; AlkuMinM = 3000f; LoppuMinM = 15000f; Sumu = false; Savytys = false; Volyymi = false;
-            Kontrasti = 12f; Saturaatio = 10f; Hehku = 0f; VuorokausiPaalla = false; Kupoli = false; Tunti = -1f; asetuksetMuokattu = default;
+            Kontrasti = 12f; Saturaatio = 10f; Hehku = 0f; VuorokausiPaalla = true; Kupoli = false; Tunti = -1f; asetuksetMuokattu = default;
             Terava = 0f; KaupunkiTerava.Pois();
             varit = null; valko = null; jako = null;
             if (ajo != null) { ajo.Lopeta(); Object.Destroy(ajo.gameObject); ajo = null; }
