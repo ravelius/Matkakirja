@@ -3,7 +3,17 @@
 Edellinen: viesti-linssiseppa2-luovutus-20261004.md. Päätoimittaja local_5df52e10-10e4-4b72-9554-0049db300dfe.
 VUOROT: käännös- ja simuvuoro aina Julkaisijalta ("NYT käännös", "SIMU NYT"). Ilmoita: "KÄÄNNETTY <sha>, lukko vapaa" ja "simu vapaa".
 
-## TILA 6.10. 18.4x (uusin)
+## TILA 6.10. 19.1x (uusin)
+- 152: S2-jatko 1354ef53 ja juliste b7a32d4a + 81cedf76 on KUITATTU (koe 7e91ce76, kuvat lokit/linssiseppa2-koe152c).
+- Vapaa tila 6fac9fe2 on mika-152:ssa.
+  - Käännetty: a6b61595, app lokit/linssiseppa2-app-vapaa2-a6b61595. Eiffel-toisto on pyydetty Pelikoodarilta.
+  - Skenaario 14 on haarassa (worktree wt/proto-linssiseppa2-vapaa2).
+- Merisumu (153, Päätoimittajan pyyntö): haara linssiseppa2/gibs-pehmea 19814f64 (worktree wt/proto-linssiseppa2-pilvet).
+  - Muutokset: pilvikannen kirkkausvenytys, pinnanmuoto auringon suuntaan ja kolmen kehän sulkareuna.
+  - Esikatselu: scratchpad/sumu (GIBS_TASO=8, ESI_Z=8).
+  - Seuraavaksi: käännös ja Helsinki-juliste ennen/jälkeen F2D9B022:lla (aja-152c.sh:n juliste-osa, LEVEYS=1920) Päätoimittajalle.
+
+## TILA 6.10. 18.4x
 - Juliste 4bac4faa ja lasizoom e0b5f049 on kuitattu junaan 152. Juliste meni omistajalle, ja hänen OK:llaan se lähtee 152:ssa.
 - Vapaa tila, Eiffel: haara linssiseppa2/opas-vapaa-2 2be5ec83 (worktree wt/proto-linssiseppa2-vapaa2, mika-152 d3d7104e:n
   päällä).
