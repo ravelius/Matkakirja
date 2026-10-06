@@ -16,7 +16,7 @@ oleta 5 pallolukko pois -- lukko pois (entinen käytös)
 linssi astro kyyti tila
 talteen kameraA 5 astro kyyti: .*kamera \(([-0-9,]+), ([-0-9,]+)\) ([0-9]+) km kall ([-0-9,]+)
 kuva pA1-ennen Lukko pois: ennen nipistystä
-# >>> KAHDEN SORMEN ELE TÄSSÄ (25 s ikkuna): nipistys auki ikkunan alueella (200,420) ±40 → ±130 pt, 0,8 s + pito 1 s
+# >>> KAHDEN SORMEN ELE TÄSSÄ (25 s ikkuna): pystynipistys auki taulun alla: (150,585)+(150,645) → (150,545)+(150,690), 0,8 s + pito 1 s (taulu 158–390 × 267–535, Pulu oikealla)
 odota 25
 linssi astro kyyti tila
 vertaa kameraA 5 >1,1,100,3 astro kyyti: .*kamera \(([-0-9,]+), ([-0-9,]+)\) ([0-9]+) km kall ([-0-9,]+) -- LUKKO POIS: nipistys liikuttaa kameraa (vika näkyy)
