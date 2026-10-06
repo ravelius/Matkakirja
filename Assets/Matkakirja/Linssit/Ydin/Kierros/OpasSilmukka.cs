@@ -167,7 +167,7 @@ namespace Matkakirja.Linssit.Kierros
         /// <summary>Kehystys: etäisyys = koko × kerroin + lisä (rajattuna), kallistus pystystä, katse nostetaan osuuteen korkeudesta.</summary>
         public const double KokoKerroin = 3.0, KokoLisaM = 150, EtaisyysMinM = 220, EtaisyysMaxM = 1600, Kallistus = 62, KatseOsuus = 0.45;
         /// <summary>Lennon kesto: kaupungissa per km, kauas logaritmisesti; rajat.</summary>
-        public const double LentoMinS = 4.5, LentoMaxS = 14, LyhytKm = 1.5, LyhytLentoS = 5, LyhytLentoMaxS = 7;   // juna 156: 5–7 s lähilennolle (omistaja 23.4x "turhan nopeasti")
+        public const double LentoMinS = 3.5, LentoMaxS = 14;
         /// <summary>Kertoja aloittaa kappaleen näin monta sekuntia ennen saapumista (nimi kuuluu, kun kamera laskeutuu).</summary>
         public const double PuheEnnenS = 5, PuheAikaisinS = 2;
         /// <summary>Avauksen liuku kaupungin ylle odottaessa ensimmäistä kohdetta (s; etäisyys × kerroin, kallistus +).</summary>
@@ -186,6 +186,8 @@ namespace Matkakirja.Linssit.Kierros
         public Kuvakulma Asento { get; private set; }
         public double VaiheAika { get; private set; }
         public double LentoKestoS { get; private set; }
+        /// <summary>Alkaneen lennon mittari (OpasKuvaus.Mittari): suurin kiihtyvyys m/s² ja suurin laskunopeus m/s; siirrossa (0, 0).</summary>
+        public (double kiihtyvyys, double lasku) LentoMittari { get; private set; }
         /// <summary>Lähtevä pyyntö: toive (tai null) — sovitin lähettää workerille. Palauttaa pyynnön järjestysnumeron.</summary>
         public event Action<int, string> Pyyda;
         /// <summary>
@@ -293,13 +295,15 @@ namespace Matkakirja.Linssit.Kierros
             return Math.Atan2(y, x) / r;
         }
 
-        /// <summary>Lennon kesto matkasta: 7 s naapurikortteliin, ~11 s kaupungin halki, ~18 s mantereen yli, enintään 22 s.</summary>
+        /// <summary>
+        /// Lennon kesto matkasta, jatkuvasti (omistaja 6.10. 23.4x: "lennon mitan sijaan tärkeämpää on, että kamera ei syöksy
+        /// luonnottomasti … siirtymä voi olla nopeakin, varsinkin jos kohde on lähellä"): 300 m ≈ 4,2 s, 1 km ≈ 5,2 s, 4 km ≈ 7,4 s,
+        /// 10 km = 10 s, sitten logaritmisesti enintään 14 s. Pehmeys tulee nopeusprofiilista (OpasKuvaus.Eteneminen).
+        /// </summary>
         public static double LennonKesto(double matkaM)
         {
             double km = matkaM / 1000.0;
-            // Alle 1,5 km: 5 s → 7 s matkan mukaan (juna 156: pehmeämpi; aiempi 3,5 s oli omistajan mukaan "turhan nopea").
-            if (km < LyhytKm) return LyhytLentoS + (LyhytLentoMaxS - LyhytLentoS) * km / LyhytKm;
-            double s = km < 10 ? Math.Max(LyhytLentoMaxS, 4.0 + 0.45 * km) : 8.5 + 4.0 * Math.Log10(km / 10.0);   // 1,5–6,7 km 7 s, 10 km ≈ 8,5 s, 1000 km ≈ 14 s
+            double s = km < 10 ? 3.0 + 2.2 * Math.Sqrt(km) : 10.0 + 4.0 * Math.Log10(km / 10.0);
             return Math.Max(LentoMinS, Math.Min(LentoMaxS, s));
         }
 
@@ -902,6 +906,7 @@ namespace Matkakirja.Linssit.Kierros
             double matka = KierrosLento.EtaisyysM(lahto.Lat, lahto.Lon, k.Lat, k.Lon);
             LentoKestoS = LennonKesto(matka);
             AloitaSiirtoJosKaukana(matka, k.Lat, k.Lon, k.Nimi);
+            LentoMittari = siirto ? (0, 0) : OpasKuvaus.Mittari(lahto, KohdeAsento(), LentoKestoS);
             LentoAlkaa?.Invoke(k, matka, toiveesta);
             toiveesta = false;
             Vaihe = OpasVaihe.Lentaa; VaiheAika = 0;
