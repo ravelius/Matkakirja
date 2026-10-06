@@ -2926,8 +2926,18 @@ async function hoidaOppaanPcm(pyynto, env, ctx, sha) {
   }
   await kirjaaOppaanAani(env, ctx, tietue);
   const [natiiville, talteen] = v.body.tee();
-  const tallennus = new Response(talteen).arrayBuffer()
-    .then((data) => (data.byteLength && env.PUHE_R2 ? env.PUHE_R2.put(avain, data, { httpMetadata: { contentType: PCM_OTSAKKEET['content-type'] } }) : null))
+  // VIRRAN NOPEUS (Linssiseppä 6.10. 20.38–20.40: Kysy 15,0 s ääntä 18,5 s:ssa, tavallisesti 1,5–3,5 ×): talteen-haara luetaan
+  // niin nopeasti kuin ElevenLabs tuottaa, joten tämä mittaa tuottajan nopeuden, ei natiivin lukutahtia.
+  const virtaAlku = Date.now();
+  let ekaTavuMs = null;
+  const mittari = new TransformStream({ transform(pala, ohjain) { ekaTavuMs ??= Date.now() - virtaAlku; ohjain.enqueue(pala); } });
+  const tallennus = new Response(talteen.pipeThrough(mittari)).arrayBuffer()
+    .then((data) => {
+      const kesto = (Date.now() - virtaAlku) / 1000, aaniS = data.byteLength / (OPAS_PCM_TAAJUUS * 2);
+      console.log(`opas: pcm ${aaniS.toFixed(1)} s ääntä ${kesto.toFixed(1)} s:ssa (${(aaniS / Math.max(kesto, 0.01)).toFixed(2)} ×), `
+        + `1. tavu ${ekaTavuMs ?? '-'} ms, ${teksti.length} mrk`);
+      return data.byteLength && env.PUHE_R2 ? env.PUHE_R2.put(avain, data, { httpMetadata: { contentType: PCM_OTSAKKEET['content-type'] } }) : null;
+    })
     .catch(() => {});
   if (typeof ctx?.waitUntil === 'function') ctx.waitUntil(tallennus);
   return new Response(natiiville, { headers: PCM_OTSAKKEET });
