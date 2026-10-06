@@ -20,6 +20,8 @@ namespace Matkakirja.Linssit.Kierros
         /// <summary>Ryhmät (Pelikoodari): kuittaus, ruoka, moderni, vihrea, vesi, vanha, lento, kierros, syventava, kaupunki, aloitus, odotus.</summary>
         public const string Kuittaus = "kuittaus", Kaupunki = "kaupunki", Kierros = "kierros", Lento = "lento", Aloitus = "aloitus", Odotus = "odotus",
             Syventava = "syventava";
+        /// <summary>Kuittaukset-v1 (Pelikoodari 6.10., omistaja hyväksyi): kysymyksen kuittaus (52 neutraalia) ja odotusportaat.</summary>
+        public const string KysymysRyhma = "kysymys", Odotus5 = "odotus5", Odotus12 = "odotus12", Virhe = "virhe";
 
         // TILANTEEN MUKAAN (omistaja 6.10. 14.3x "välilauseet eivät täsmää pyyntöön", Päätoimittaja hyväksyi taulukon, juna 150):
         // näennäisryhmät rajaavat aineiston ryhmiä lauseittain, eikä niillä ole vararyhmää (väärä lause on pahempi kuin hiljaisuus).
@@ -64,6 +66,19 @@ namespace Matkakirja.Linssit.Kierros
 
         public int Maara { get; private set; }
 
+        /// <summary>Toisen aineiston ryhmät tähän (kuittaukset-v1 siltalauseiden rinnalle); samanniminen ryhmä korvautuu.</summary>
+        public void Yhdista(OpasSiltalauseet muut)
+        {
+            if (muut == null) return;
+            foreach (var kv in muut.ryhmat)
+            {
+                if (ryhmat.TryGetValue(kv.Key, out var vanha)) Maara -= vanha.Count;
+                ryhmat[kv.Key] = kv.Value; Maara += kv.Value.Count;
+            }
+        }
+
+        public bool OnRyhma(string ryhma) => ryhma != null && ryhmat.ContainsKey(ryhma);
+
         public IEnumerable<Siltalause> Kaikki()
         {
             foreach (var r in ryhmat.Values) foreach (var l in r) yield return l;
@@ -98,6 +113,8 @@ namespace Matkakirja.Linssit.Kierros
         /// </summary>
         public Siltalause Valitse(string ryhma, string vara = Kuittaus, Func<Siltalause, bool> saatavilla = null)
         {
+            // Kysymykseen kuittaukset-v1:n oma ryhmä, kun se on ladattu; muuten syventävien kysymyslauseiden rajaus.
+            if (ryhma == Kysymys && ryhmat.ContainsKey(KysymysRyhma)) return Ryhmasta(KysymysRyhma, saatavilla);
             var (aineisto, ehto) = Rajaus(ryhma);
             if (ehto != null)   // näennäisryhmä: ei vararyhmää
                 return Ryhmasta(aineisto, l => ehto(l) && (saatavilla == null || saatavilla(l)));

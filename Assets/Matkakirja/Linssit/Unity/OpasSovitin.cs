@@ -278,6 +278,13 @@ namespace Matkakirja.Natiivi
             if (siirtyy != siirtymaEdellinen) { siirtymaEdellinen = siirtyy; if (siirtyy) SiirtymaAlkaa?.Invoke(silmukka.SiirtoNimi); else SiirtymaValmis?.Invoke(); }
             if (silmukka.Aloitettu) PaivitaKohteet();
             if (!tauolla && pelaajanToimi > 0 && !puhuu && Time.unscaledTime - pelaajanToimi > OdotusLauseS) { pelaajanToimi = -1f; Silta(silmukka.Vaihe == OpasVaihe.Lentaa ? OpasSiltalauseet.Odotus : OpasSiltalauseet.OdotusPaikalla, false); }
+            if (!tauolla)
+                switch (kysyOdotus.Paivita(Time.unscaledDeltaTime))
+                {
+                    case KysyOdotus.Tapahtuma.Odotus5: Silta(OpasSiltalauseet.Odotus5, false); break;
+                    case KysyOdotus.Tapahtuma.Odotus12: Silta(OpasSiltalauseet.Odotus12, false); break;
+                    case KysyOdotus.Tapahtuma.Virhe: o.Kirjaa("opas: kysymykseen ei vastausta 25 s:ssa"); Silta(OpasSiltalauseet.Virhe, false); break;
+                }
             silmukka.Paivita(Time.unscaledDeltaTime, MaaKorkeus, () => kaupunki.Valmis);
             if (silmukka.Vaihe != ennen) o.Kirjaa($"opas: {ennen} → {silmukka.Vaihe} {(silmukka.Nykyinen?.Nimi ?? "")}, laatat {kaupunki.Latausaste:F0} %");
             if (silmukka.Vaihe != ennen && silmukka.Vaihe == OpasVaihe.Lentaa) OpasKorostusKuva.Piilota();
@@ -359,11 +366,12 @@ namespace Matkakirja.Natiivi
             // Siltalause tilanteen mukaan (juna 150): kysymykseen syventävä lause ilman odotus-ajastinta (vastaus PCM:llä ~5–6 s);
             // käskyyn ("vie minut …") ei lausetta ennen vastausta, koska liikettä ei vielä tiedetä (vastauksen oma ääni kuittaa).
             if (kysymysListalta || OpasSiltalauseet.OnKysymys(teksti)) v.Silta(OpasSiltalauseet.Kysymys, false);
-            v.o.StartCoroutine(v.KysyWorkerilta(teksti.Trim()));
+            v.kysyOdotus.Aloita();   // vastaus ei ala: odotus5 → odotus12 → virhe (PaivitaKamera)
+            v.o.StartCoroutine(v.KysyWorkerilta(teksti.Trim(), v.kysyOdotus.Numero));
             return true;
         }
 
-        IEnumerator KysyWorkerilta(string kysymys)
+        IEnumerator KysyWorkerilta(string kysymys, int nro)
         {
             var nyt = silmukka.Nykyinen; var kehys = silmukka.NykyinenKehys;
             var sb = new StringBuilder("{");
@@ -389,7 +397,10 @@ namespace Matkakirja.Natiivi
             if (silmukka == null) yield break;
             var v = r.result == UnityWebRequest.Result.Success ? OpasKysyVastaus.Lue(MiniJson.Jasenna(r.downloadHandler.text) as Dictionary<string, object>) : null;
             o.Kirjaa($"opas: kysy-vastaus {(v == null ? "VIRHE " + r.responseCode : v.Toiminto + (v.ToimintoNimi != null ? " " + v.ToimintoNimi : ""))} ({Time.realtimeSinceStartup - t0:F1} s)");
-            if (v == null) yield break;
+            if (v == null) { if (kysyOdotus.Epaonnistui(nro)) Silta(OpasSiltalauseet.Virhe, false); yield break; }
+            if (!kysyOdotus.Kelpaa(nro)) { o.Kirjaa("opas: kysy-vastaus myöhästyi tai uudempi kysymys, hylätty"); yield break; }
+            // Toiminnoton vastaus alkaa kerrontana (AlkaaPuhua kuittaa portaat); toiminto kuittaa heti.
+            if (v.Toiminto != OpasToiminto.Ei) kysyOdotus.Alkoi();
             historia.Add(("pelaaja", kysymys));
             if (!string.IsNullOrWhiteSpace(v.Teksti)) historia.Add(("opas", v.Teksti));
             while (historia.Count > 12) historia.RemoveAt(0);
@@ -716,6 +727,10 @@ namespace Matkakirja.Natiivi
 
         // ---- SILTALAUSEET (juna 146; Ydin OpasSiltalauseet) ----
         public const string SiltalauseetOsoite = "https://media.matkakirja.app/aanet/opas/siltalauseet-v1/siltalauseet.json";
+        /// <summary>Kuittaukset-v1 (Pelikoodari 6.10.): kysymys, odotus5, odotus12, virhe; yhdistetään siltalauseisiin.</summary>
+        public const string KuittauksetOsoite = "https://media.matkakirja.app/aanet/opas/kuittaukset-v1/kuittaukset.json";
+        /// <summary>Kysymyksen odotusportaat (juna 150): 5 s / 12 s / 25 s, myöhäinen vastaus hylätään.</summary>
+        readonly KysyOdotus kysyOdotus = new KysyOdotus();
         const float OdotusLauseS = 6f, SiltaOdotusS = 5f;
         AudioSource silta;
         OpasSiltalauseet siltalauseet;
@@ -730,7 +745,8 @@ namespace Matkakirja.Natiivi
             if (pelaajalta) pelaajanToimi = Time.unscaledTime;
             if (silmukka != null && silmukka.Siirtymassa) return;   // kertoja odottaa näkymän aukeamista (omistaja 12.0x)
             if (siltalauseet == null || silta == null || !Asetukset.Paalla(Kytkin.Kertoja) || puhuu || silta.isPlaying) return;
-            var l = siltalauseet.Valitse(ryhma, ryhma == OpasSiltalauseet.Odotus ? null : OpasSiltalauseet.Kuittaus, x => siltaKlipit.ContainsKey(x.Url));
+            bool eiVaraa = ryhma == OpasSiltalauseet.Odotus || ryhma == OpasSiltalauseet.Odotus5 || ryhma == OpasSiltalauseet.Odotus12 || ryhma == OpasSiltalauseet.Virhe;
+            var l = siltalauseet.Valitse(ryhma, eiVaraa ? null : OpasSiltalauseet.Kuittaus, x => siltaKlipit.ContainsKey(x.Url));
             if (l == null) return;
             silta.clip = siltaKlipit[l.Url]; silta.volume = 1f; silta.Play();
             o.Kirjaa($"opas: siltalause {l.Id} ({ryhma}) \"{l.Teksti}\"");
@@ -762,6 +778,14 @@ namespace Matkakirja.Natiivi
                 siltalauseet = OpasSiltalauseet.Lue(MiniJson.Jasenna(r.downloadHandler.text) as Dictionary<string, object>);
             }
             if (siltalauseet == null) { o.Kirjaa("opas: siltalauseet: virheellinen JSON"); yield break; }
+            using (var k = UnityWebRequest.Get(KuittauksetOsoite))
+            {
+                k.timeout = 15;
+                yield return k.SendWebRequest();
+                var ku = k.result == UnityWebRequest.Result.Success ? OpasSiltalauseet.Lue(MiniJson.Jasenna(k.downloadHandler.text) as Dictionary<string, object>) : null;
+                if (ku != null) siltalauseet.Yhdista(ku);
+                o.Kirjaa($"opas: kuittaukset {(ku != null ? ku.Maara + " lausetta" : "ei latautunut (" + k.responseCode + ")")}");
+            }
             var jono = new Queue<Siltalause>(siltalauseet.Kaikki());
             int kesken = 0, ok = 0;
             float t0 = Time.realtimeSinceStartup;
@@ -1073,6 +1097,7 @@ namespace Matkakirja.Natiivi
         {
             if (k == null || puhuttu == k) return;
             puhuttu = k;
+            if (k.Id != null && k.Id.StartsWith("kysy-")) kysyOdotus.Alkoi();   // kysymyksen vastaus alkoi: odotusportaat seis
             VapautaVanhatAanet(k);
             Soita(k);
             KysymysChattiin(k);   // kappale ja sen vaihtoehdot Pulu-chatiin (Natiivi-UI 18.0x)
@@ -1203,6 +1228,7 @@ namespace Matkakirja.Natiivi
             kysymykset = null; kohteet = null; kohteetKaupunki = null; historia.Clear(); siirtymaEdellinen = false;
             if (silta != null && silta.isPlaying) silta.Stop();
             pelaajanToimi = -1f;
+            kysyOdotus.Alkoi();
             if (nimiaanet == null) nimiaLadataan = false;   // lataus katkesi sulkuun: uusi yritys seuraavassa avauksessa
             nimiSoitto = null;
             KrediititTiivis.OsmNakyvissa = false;

@@ -89,5 +89,16 @@ namespace Matkakirja.Linssit.Testit
             foreach (var k in new[] { "Vie minut Pariisiin", "Näytä Kaarlensilta", "Mikaelinkirkko", "", "Kertausta" })
                 Oleta.Tosi(!OpasSiltalauseet.OnKysymys(k), k);
         }
+        [Testi] static void KuittauksetYhdistetaan()
+        {
+            var s = OpasSiltalauseet.Lue((Dictionary<string, object>)MiniJson.Jasenna(Json2), 3);
+            var k = OpasSiltalauseet.Lue((Dictionary<string, object>)MiniJson.Jasenna("{\"versio\":1,\"ryhmat\":{\"kysymys\":[{\"id\":\"q1\",\"teksti\":\"Mietitäänpä.\",\"url\":\"q\"}],"
+                + "\"odotus5\":[{\"id\":\"w5\",\"teksti\":\"Hetki.\",\"url\":\"w\"}]}}"), 3);
+            int ennen = s.Maara; s.Yhdista(k);
+            Oleta.Sama(ennen + 2, s.Maara);
+            Oleta.Sama("q1", s.Valitse(OpasSiltalauseet.Kysymys)?.Id, "kysymykseen kuittaukset-v1:n oma ryhmä");
+            Oleta.Sama("w5", s.Valitse(OpasSiltalauseet.Odotus5, null)?.Id);
+            Oleta.Tosi(s.Valitse(OpasSiltalauseet.Virhe, null) == null && !s.OnRyhma(OpasSiltalauseet.Virhe), "puuttuva ryhmä: hiljaa");
+        }
     }
 }
