@@ -31,6 +31,12 @@ ASSETS=../Assets/Matkakirja
 ULOS=rakennus/unity
 VAROITUKSET=0
 [ "$1" = "-v" ] && VAROITUKSET=1
+# UNITY_TARKISTUS_MAC=1 (natiivi Mac, omistaja 6.10.2026): pelaaja-assemblyt macOS-määritteillä (Mono, StandaloneOSX)
+# Mac-pelaajan Managed-moduuleja vasten iOS:n sijaan; tulokset rakennus/unity-mac/. Editorikäännös on sama.
+if [ "$UNITY_TARKISTUS_MAC" = 1 ]; then
+  IOS_MODUULIT=$U/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/Variations/mono/Managed
+  ULOS=rakennus/unity-mac
+fi
 
 for p in "$DN" "$CSC" "$NS/ref/2.1.0/netstandard.dll" "$IOS_MODUULIT" "$EDITORI_MODUULIT" "$KIRJASTOT"; do
   [ -e "$p" ] || { echo "unity-tarkistus: puuttuu $p"; exit 100; }
@@ -79,6 +85,9 @@ EDI=""
 for f in "$EDITORI_MODUULIT"/*.dll; do EDI="$EDI -r:$f"; done
 EDI="$EDI -r:$S/Managed/UnityEditor.dll"
 DEF_IOS="$DEF_YHT;ENABLE_IL2CPP"
+if [ "$UNITY_TARKISTUS_MAC" = 1 ]; then
+  DEF_IOS="${DEF_YHT%;UNITY_IOS;UNITY_IPHONE;PLATFORM_IOS};UNITY_STANDALONE_OSX;UNITY_STANDALONE;PLATFORM_STANDALONE_OSX;PLATFORM_STANDALONE;ENABLE_MONO"
+fi
 DEF_EDI="$DEF_YHT;UNITY_EDITOR;UNITY_EDITOR_OSX;UNITY_EDITOR_64"
 LISTAT="$ULOS/listat"
 rm -rf "$LISTAT"
