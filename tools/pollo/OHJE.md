@@ -165,6 +165,12 @@ koodimuutos main-haarassa julkaisee workerin uudelleen itsestään.
   tuomioon (`sahke`) samoin päivä- ja kuukausirajoin kuin selain
   (30/vrk per IP); kuva ja tila palauttavat 403 (`NATIIVIN_TEHTAVAT`,
   `natiivilleSallittu`).
+- **KV:n päiväkiintiö** (6.10.2026, ilmaistaso 1 000 kirjoitusta/vrk; `reuna.js`): kaikki KV-kutsut fail-open. Oppaan
+  äänen teksti on R2:ssa (`opas/teksti/<sha>.json`, KV varana). Istunnon tila (kierros, suunnat, isoisä) ja lisäkuvien
+  välimuisti ovat R2:ssa (`tila/…`, vanhenemisaika oliossa). Tuotantolukot ja Nominatimin vuoro ovat isolaatin muistissa
+  (Cache API ei toimi *.workers.dev-osoitteissa). Oppaan IP-laskuri kirjoitetaan harvana
+  (10 pyynnön välein), ja testitunnuksen ja kehittäjän pyynnöt eivät kirjoita IP-laskureita. Päivän operaatiot näkyvät
+  julkaisuajon yhteenvedossa (`kv-kaytto.mjs`).
 - **Astronauttien kuvan sirut** (omistaja 6.10.2026, `kuvasirut.js`): `vastaus`- ja
   `ehdotukset`-pyynnössä valinnainen `kuva: { tunnus, nimi, maa, lat, lon, selite, teksti, aika }`
   (tunnus pakollinen). Ehdotukset (3) tehdään vain kuvan tiedoista ja tallennetaan KV:hen

@@ -17,6 +17,7 @@
  * Worker (worker.js hoidaOpas) hoitaa rajat ja mallikutsun; ääni kulkee puhereitillä persoonalla 'opas'.
  */
 
+import { pysyvaLue, pysyvaKirjoita } from './reuna.js';
 import { nominatimHaku, geometriaPisteiksi } from './nominatim.js';
 
 export const OPAS_KAYDYT = 40;
@@ -657,15 +658,17 @@ export async function lisaKuvat(haku, id, maara, olemassa = []) {
 
 /*
  * LISÄKUVIEN VÄLIMUISTI (Päätoimittaja 6.10.: lisäkuvat eivät saa pidentää "teksti heti" -vastausta): Q-tunnuksen koko lista
- * (OPAS_KUVIA_ENINTAAN) KV:hen 7 vrk:ksi; pelin omat suodatetaan pois vasta yhdistettäessä. Tyhjäkin tulos talteen (1 vrk).
+ * (OPAS_KUVIA_ENINTAAN) R2:een 7 vrk:ksi; pelin omat suodatetaan pois vasta yhdistettäessä. Tyhjäkin tulos talteen (1 vrk).
  */
-export async function lisaKuvatValimuistilla(haku, kv, id) {
+export async function lisaKuvatValimuistilla(haku, kv, id, r2 = null) {
   if (!/^Q\d+$/.test(id ?? '')) return [];
   const avain = `opas:kuvat:v1:${id}`;
-  const talletettu = kv ? await kv.get(avain).catch(() => null) : null;
+  // 6.10.: välimuisti R2:ssa (reuna.js pysyva*), ei KV:ssä: kierroksen lämmitys kirjoitti KV:hen
+  // jokaisen kierroksen paikan (KV:n 1 000 kirjoituksen päiväkiintiö). Vanhat KV-merkinnät luetaan vielä.
+  const talletettu = (await pysyvaLue(r2, avain)) ?? (kv ? await kv.get(avain).catch(() => null) : null);
   if (talletettu) { try { return JSON.parse(talletettu); } catch { /* uusi haku */ } }
   const kuvat = await lisaKuvat(haku, id, OPAS_KUVIA_ENINTAAN);
-  if (kv) await kv.put(avain, JSON.stringify(kuvat), { expirationTtl: kuvat.length ? 7 * 86400 : 86400 }).catch(() => {});
+  await pysyvaKirjoita(r2, avain, JSON.stringify(kuvat), kuvat.length ? 7 * 86400 : 86400);
   return kuvat;
 }
 

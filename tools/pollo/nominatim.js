@@ -6,11 +6,13 @@
  * nominatim): enintään 1 haku sekunnissa koko palvelusta, tulokset välimuistiin, tunnistava User-Agent, ei
  * automaattista täydennystä eikä massahakuja. Siksi:
  *   - pysyvä KV-välimuisti (nominatim:v1:…; tyhjä tulos 7 vrk),
- *   - vuoro: isolaatin oma 1/s-jono + KV-aikaleima koko palvelulle (paras mahdollinen ilman keskitettyä lukkoa;
+ *   - vuoro: isolaatin oma 1/s-jono + reunamuistin aikaleima PoP:lle (6.10.: ei KV-kirjoitusta per haku) (paras mahdollinen ilman keskitettyä lukkoa;
  *     hakuja on vain oppaan pysähdyksissä, joten todellinen tahti on paljon alle rajan),
  *   - oma UA sovelluksen nimellä (ei sähköpostia), palvelin env.NOMINATIM_OSOITE (vaihdettavissa ilman sovelluspäivitystä).
  * Data: © OpenStreetMap -tekijät, ODbL; vastaukseen merkitään lahteet: ['osm'], ja natiivi näyttää krediitin.
  */
+
+import { reunaLue, reunaKirjoita } from './reuna.js';
 
 export const NOMINATIM_OLETUS = 'https://nominatim.openstreetmap.org';
 const UA = 'Matkakirja-opas/1.0 (+https://matkakirja.app)';
@@ -25,16 +27,19 @@ async function tiiviste(teksti) {
   return [...new Uint8Array(h)].slice(0, 16).map((b) => b.toString(16).padStart(2, '0')).join('');
 }
 
-/** Odottaa vuoroa: ≤ 1 haku/s isolaatissa ja (paras mahdollinen) koko palvelussa KV-aikaleimalla. */
+/**
+ * Odottaa vuoroa: ≤ 1 haku/s isolaatissa ja (paras mahdollinen) PoP:ssa reunamuistin aikaleimalla. Ennen 6.10. aikaleima
+ * oli KV:ssä, ja jokainen haku kulutti KV:n 1 000 kirjoituksen päiväkiintiötä (reuna.js).
+ */
 async function vuoro(kv, kello = Date.now) {
   const oma = Math.max(0, viimeisin + VALI_MS - kello());
   viimeisin = kello() + oma;
   if (oma) await nuku(oma);
   if (kv) {
-    const yhteinen = Number(await kv.get('nominatim:vuoro').catch(() => 0)) || 0;
+    const yhteinen = Number(await reunaLue('nominatim:vuoro')) || 0;
     const odota = Math.max(0, yhteinen + VALI_MS - kello());
     if (odota) await nuku(Math.min(odota, 2000));
-    await kv.put('nominatim:vuoro', String(kello()), { expirationTtl: 60 }).catch(() => {});
+    await reunaKirjoita('nominatim:vuoro', String(kello()), 60);
   }
 }
 

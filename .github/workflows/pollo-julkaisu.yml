@@ -389,6 +389,11 @@ jobs:
           origin=$(printf '%s' "$POLLO_ORIGINIT" | cut -d, -f1)
           node tools/pollo/tarkista-puhemoottori.mjs "$POLLO_OSOITE" "$origin" eleven
 
+      # KV:n päiväkiintiö (6.10.2026, Cloudflaren hälytys): tämän päivän operaatiot lajeittain ajon yhteenvetoon. Ei kaada.
+      - name: KV-operaatiot tänään
+        continue-on-error: true
+        run: node tools/pollo/kv-kaytto.mjs
+
       - name: Kerro mitä julkaistiin
         if: success()
         run: |

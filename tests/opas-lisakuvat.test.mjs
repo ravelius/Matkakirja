@@ -1,8 +1,12 @@
 // OPPAAN LISÄKUVAT (omistaja 5.10.2026 klo 23.5x; muoto Natiivi-UI:n kanssa): enintään 6 kuvaa per pysähdys, paras ensin:
 // pelin omat → Wikidatan P18 → kohteen Commons-luokka (P373); vain vapaat lisenssit, ei karttoja/logoja/svg:tä.
-import test from 'node:test';
+import test, { beforeEach } from 'node:test';
+import { tyhjennaReunamuisti } from '../tools/pollo/reuna.js';
 import assert from 'node:assert/strict';
 import worker from '../tools/pollo/worker.js';
+
+// Reunamuisti (reuna.js) on isolaatin muistia: jokainen testi alkaa kylmänä kuten ennen KV-mallilla (6.10.).
+beforeEach(() => tyhjennaReunamuisti());
 
 const tiedosto = (nimi, { lisenssi = 'CC BY-SA 4.0', leveys = 4000, korkeus = 3000, mime = 'image/jpeg' } = {}) => ({
   title: `File:${nimi}`, imageinfo: [{ thumburl: `https://upload/1280px-${nimi}`, descriptionurl: `https://commons/File:${nimi}`,
