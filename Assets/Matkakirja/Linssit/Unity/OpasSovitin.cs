@@ -1184,8 +1184,8 @@ namespace Matkakirja.Natiivi
                 }
                 foreach (var avain in poistettavat) pisteKorkeudet.Remove(avain);
             }
-            // Vapaa lento (LS1 6.10.): enintään 2 näytettä kesken, muut pyydetään seuraavalla kierroksella.
-            if (pinta == null || pisteKorkeudet.ContainsKey(a) || (silmukka != null && silmukka.VapaaTila && pisteNaytteet.Count >= 2) || !pisteNaytteet.Add(a)) yield break;
+            // Vapaa lento (LS1 6.10.): enintään 6 näytettä kesken (kamera, ennakko ja kehät), muut pyydetään seuraavalla kierroksella.
+            if (pinta == null || pisteKorkeudet.ContainsKey(a) || (silmukka != null && silmukka.VapaaTila && pisteNaytteet.Count >= 6) || !pisteNaytteet.Add(a)) yield break;
             float t0 = Time.realtimeSinceStartup;
             var tehtava = pinta.SampleHeightMostDetailed(new double3(lon, lat, 0));
             while (!tehtava.IsCompleted) yield return null;

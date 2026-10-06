@@ -54,6 +54,8 @@ namespace Matkakirja.Natiivi
         readonly UiKerros kerros;
         readonly VisualElement ylarivi, paneeli, paneelinKuva, kertomus, kertomusLaatikko, valinaytos, valinaytosRivit, esittely, musta;
         readonly VisualElement otsikot, kelloRuutu, ohjaimet;
+        readonly Nimikyltti otsikkoKyltti;
+        bool ylariviAuki;
         readonly Label otsikko, paikka, kello, kelloYksikko, pVuosi, pOtsikko, pAlarivi, pTeksti, kertomusTeksti, vOtsikko;
         // Havainnekuva (web .aikajana-ilmiokuva): kaksi kerrosta ristihäivytykseen ja kuvateksti kuvan alareunassa.
         readonly VisualElement havainne, havainneTeksti;
@@ -125,6 +127,17 @@ namespace Matkakirja.Natiivi
             Kirjasimet.Aseta(otsikko, Kirjasin.Kone);
             paikka = Rakenne.Teksti("", "mk-aikajana-ylarivi__paikka", otsikot);
             Kirjasimet.Aseta(paikka, Kirjasin.LukuKursiivi);
+            // NIMIKYLTTI (omistaja 5.10.2026, juna 146): linssin nimi ja paikka ~3 s avautuessa ja vaihtuessa, sitten ne
+            // häipyvät; palkin kello ja ohjaimet jäävät. Uusi teksti tuo ne takaisin.
+            otsikkoKyltti = new Nimikyltti(otsikot);
+            otsikko.RegisterValueChangedCallback(_ => otsikkoKyltti.Nayta(otsikko.text + "|" + paikka.text));
+            paikka.RegisterValueChangedCallback(_ => otsikkoKyltti.Nayta(otsikko.text + "|" + paikka.text));
+            ylarivi.RegisterCallback<GeometryChangedEvent>(_ =>
+            {
+                bool auki = ylarivi.resolvedStyle.display == DisplayStyle.Flex;
+                if (auki && !ylariviAuki) { otsikkoKyltti.Nollaa(); otsikkoKyltti.Nayta(); }
+                ylariviAuki = auki;
+            });
             // Kello (web .aikajana-kello): luku ja ihmisen matkassa perään pieni yksikkö (web .aikajana-kelloyksikko
             // 0,5 em, himmeä). Luvun leveys on vakio (web: rullat ja piilotetut etunollat), jottei palkki nytki.
             kelloRuutu = Rakenne.El("mk-aikajana-kello", ylarivi, PickingMode.Ignore);

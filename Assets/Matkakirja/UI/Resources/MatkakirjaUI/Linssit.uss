@@ -358,6 +358,15 @@
     color: rgba(232, 237, 245, 0.72);
 }
 
+/* PUHUJAKUVA (Puhujakuva.cs, omistaja 5.10.2026 klo 14.3x): kehyksetön muotokuva puhujan pään yläpuolella; pehmeä
+ * ellipsimaski on kuvan alfassa (ei kehystä, ei reunusta, ei kulmia), häivytys --tk-kesto-sulku. */
+.mk-puhujakuva {
+    position: absolute;
+    -unity-background-scale-mode: scale-and-crop;
+    transition-property: opacity;
+    transition-duration: 200ms;
+}
+
 /* --- astronautin kamera: avaruussumu -------------------------------------- */
 
 .mk-astrosumu {
@@ -446,6 +455,35 @@
     font-size: 16px;
     white-space: normal;
     color: rgb(93, 255, 168);
+}
+
+/* Striimilukija kuvaselitteen otsikkorivin oikeassa päässä (omistaja 5.10.2026, Päätoimittajan hyväksyntä): lukijapohja
+ * (KortinLukija saatimet) kuten tiedeliitteessä; kuvakkeet lasi-avaruus-teeman tokeneilla (muste, pehmeä muste, korostus
+ * luennan aikana), ei uutta väriä eikä kokoa. */
+.mk-astrokuva__otsikkorivi {
+    flex-direction: row;
+    align-items: center;
+}
+
+.mk-astrokuva__otsikkorivi > .mk-astrokuva__otsikko {
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.mk-astrokuva__lukija .mk-lukija.mk-lukija--kortti {
+    color: var(--tk-muste);
+}
+
+.mk-astrokuva__lukija .mk-lukija.mk-lukija--kortti.mk-lukee {
+    color: var(--tk-korostus);
+}
+
+.mk-astrokuva__lukija .mk-lukija.mk-lukija__valikkonappi {
+    color: var(--tk-muste-pehmea);
+}
+
+.mk-astrokuva__lukija .mk-lukija.mk-lukija__valikkonappi.mk-valittu {
+    color: var(--tk-muste);
 }
 
 .mk-astrokuva__selite.mk-kiinni .mk-astrokuva__otsikko {

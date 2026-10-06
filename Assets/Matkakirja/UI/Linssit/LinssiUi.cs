@@ -372,8 +372,11 @@ namespace Matkakirja.Natiivi
             Asettele();
             // Aikajanalinsseillä oma palkki korvaa Matkakirjan yläpalkin (web body.aikajana-palkki-auki .topbar).
             bool aikajana = id == AikajanaNakyma.KeksinnotId || global::Matkakirja.Linssit.Aikajana.IhmisenMatkaLinssi.OnIhmisenMatka(id); // myös Ihmisen matka II
-            ui.Tilarivi.NaytaPalkki(!astro && !aikajana && !vuosi);
-            Valitsin.NaytaNappi(!astro && !aikajana && !vuosi);
+            // Elävä opas (Päätoimittaja 5.10.: kaupunki koko ruudulla): yläpalkki pois kuten astronautin kamerassa; ylhäällä vain
+            // pysähdyksen nimi ja kuvausrivi (KierrosTaulu) sekä kuvakytkin ja ☰ (OpasValikko).
+            bool opas = id == OpasSovitin.OpasTiedot.Id;
+            ui.Tilarivi.NaytaPalkki(!astro && !aikajana && !vuosi && !opas);
+            Valitsin.NaytaNappi(!astro && !aikajana && !vuosi && !opas);
             Pulu.Hae().Astronautti = astro;
             Astronautti.Vaihtui(astro);
             using (MerkkiAikajana.Auto())

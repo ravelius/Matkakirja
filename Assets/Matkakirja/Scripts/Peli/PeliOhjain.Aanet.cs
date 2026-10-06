@@ -81,7 +81,7 @@ namespace Matkakirja.Natiivi
         {
             string ennen = SoivatAanet();
             if (soivaLuento != null || odottavaLuento != null || saapumisluenta.Kesken) VaiennaPaikanPuhe("linssi", LinssinKatkaisuS);
-            puhe?.Pysayta(LinssinKatkaisuS);
+            puhe?.Pysayta(LinssinKatkaisuS, pakota: true);   // linssin avaus katkaisee myös pinnatun luennan (Raamattu)
             Aanet.Haivyta(AaniKanava.Puhe, LinssinKatkaisuS);
             Aanet.Haivyta(AaniKanava.Kertoja, LinssinKatkaisuS);
             Aanet.Haivyta(AaniKanava.Tehoste, LinssinKatkaisuS);
@@ -200,11 +200,32 @@ namespace Matkakirja.Natiivi
         /// <summary>Sisältö latautui: kaupunkien maa ja tyyppi heti, aanitaulut ja aani-ehdokkaat taustalla.</summary>
         void AloitaAanitaulut()
         {
+            StartCoroutine(HaeAsetukset());
+            if (!asetuksetKuuntelee)
+            {
+                asetuksetKuuntelee = true;
+                PakettiPaivitys.SisaltoVaihtui += (versio, muuttuneet) => StartCoroutine(HaeAsetukset());
+            }
             if (aanisoitin == null || verkko == null) return;
             try { aanisoitin.Taulut.LueKaupungit(verkko.KaupunkiLista); }
             catch (Exception e) { Debug.LogWarning("MATKAKIRJA ääni: kaupungit: " + e.Message); }
             aanitaulutAlkoi = Time.unscaledTime;
             StartCoroutine(HaeAanitaulut());
+        }
+
+        bool asetuksetKuuntelee;
+
+        /// <summary>
+        /// Asetukset datana (Natiiviseppä 5.10.2026): kokoelmat/asetukset.json sisältöpaketista (tai Documents/sisalto-koe/),
+        /// valinnainen: vanhassa paketissa sitä ei ole → koodin oletukset (Peli/Asetus.cs). Luetaan uudelleen, kun paketti vaihtuu.
+        /// </summary>
+        public IEnumerator HaeAsetukset()
+        {
+            string teksti = null;
+            yield return HaeTiedosto("kokoelmat/asetukset.json", false, true, x => teksti = x);
+            bool koe = System.IO.File.Exists(System.IO.Path.Combine(Application.persistentDataPath, "sisalto-koe", "kokoelmat", "asetukset.json"));
+            Asetus.Lue(teksti, koe ? "koekansio" : "paketti " + Sisalto.IstunnonPolku);
+            Debug.Log("MATKAKIRJA " + Asetus.Raportti());
         }
 
         IEnumerator HaeAanitaulut()

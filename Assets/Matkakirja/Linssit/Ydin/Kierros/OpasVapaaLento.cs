@@ -17,6 +17,19 @@ namespace Matkakirja.Linssit.Kierros
     {
         public const double NopeusKerroin = 0.6, NousuKerroin = 0.8, KaantoAstS = 55, SyoteAikaS = 0.2, HiipumaAikaS = 0.5, KuollutAlue = 0.12;
         public const double MinKorkeusM = 40, MaxKorkeusM = 12000, MinNopeusMS = 15, EnnakkoS = 0.6, NostoAikaS = 0.25;
+        /// <summary>
+        /// Naapuruston näytteet (Päätoimittaja 6.10.: Eiffel-tornin ristikko läpäisi pistenäytteen): kaksi kehää kameran ympärillä
+        /// (20 ja 45 m, kummassakin 8 suuntaa); pinnaksi suurin tunnettu korkeus kamerasta, ennakosta ja kehiltä.
+        /// </summary>
+        public static readonly double[] KehaSateet = { 20, 45 };
+        public const int KehaSuuntia = 8;
+        /// <summary>Kehän piste i (0 … KehaSateet.Length · KehaSuuntia − 1) kameran ympäriltä.</summary>
+        public (double lat, double lon) KehaPiste(int i)
+        {
+            int r = (i / KehaSuuntia) % KehaSateet.Length, s = i % KehaSuuntia;
+            return Siirra(Lat, Lon, s * 360.0 / KehaSuuntia + (r % 2) * 22.5, KehaSateet[r]);
+        }
+        public static int KehaPisteita => KehaSateet.Length * KehaSuuntia;
 
         public double Lat { get; private set; }
         public double Lon { get; private set; }
@@ -73,9 +86,14 @@ namespace Matkakirja.Linssit.Kierros
             (Lat, Lon) = Siirra(Lat, Lon, Suunta + 90, vSivu * dt);
             // Pinta kamerassa ja liikkeen suunnassa (rakennus edessä nostaa jo ennen kuin kamera on sen kohdalla).
             var (el, eo) = Ennakko;
-            double tassa = pinta != null ? pinta(Lat, Lon) : double.NaN, edessa = pinta != null ? pinta(el, eo) : double.NaN;
-            if (!double.IsNaN(tassa) || !double.IsNaN(edessa))
-                PintaM = Math.Max(double.IsNaN(tassa) ? double.MinValue : tassa, double.IsNaN(edessa) ? double.MinValue : edessa);
+            double suurin = double.NaN;
+            void Ota(double h) { if (!double.IsNaN(h)) suurin = double.IsNaN(suurin) ? h : Math.Max(suurin, h); }
+            if (pinta != null)
+            {
+                Ota(pinta(Lat, Lon)); Ota(pinta(el, eo));
+                for (int i = 0; i < KehaPisteita; i++) { var (kl, ko) = KehaPiste(i); Ota(pinta(kl, ko)); }
+            }
+            if (!double.IsNaN(suurin)) PintaM = suurin;
             KorkeusAbsM += vNousu * dt;
             double ala = PintaM + MinKorkeusM, yla = PintaM + MaxKorkeusM;
             // Pinnan nousu nostaa kameraa pehmeästi (NostoAikaS), muttei koskaan alle rajan.

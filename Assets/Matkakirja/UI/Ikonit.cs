@@ -70,15 +70,21 @@ namespace Matkakirja.Natiivi
         public const string NuoliYlos = "<path d=\"M12 19V5M6 11l6-6 6 6\"/>";
         public const string Kyna = "<path d=\"M4 20h4L19 9l-4-4L4 16z\"/><path d=\"M13.5 6.5l4 4\"/>";
         public const string Edellinen = "<path d=\"M16.5 4.8 5 12l11.5 7.2z\" fill=\"currentColor\"/>";
+        /// <summary>Lopeta (■, omistaja 6.10. 16.4x: "ihan pelkkä stop-merkki"; oppaan Lopeta kierros).</summary>
+        public const string Lopeta = "<rect x=\"6.5\" y=\"6.5\" width=\"11\" height=\"11\" rx=\"1.5\" fill=\"currentColor\"/>";
         public const string Toista = "<path d=\"M7.5 4.8 19 12 7.5 19.2z\" fill=\"currentColor\"/>";
 
         // js/karttatyokalu-maakunnat.js PLUS_IKONI ja PULU_IKONI (maakunnan luonnehdinta ja kortti).
         public const string Plus = "<circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M12 8v8M8 12h8\"/>";
+        /// <summary>Jaa (iOS-tyylinen laatikko ja nuoli ylös): oman ISS-kuvan jakonappi.</summary>
+        public const string Jaa = "<path d=\"M12 3.6v11\"/><path d=\"M8.2 7.3 12 3.6l3.8 3.7\"/><path d=\"M8.8 10.2H6.6a1 1 0 0 0-1 1v8.2a1 1 0 0 0 1 1h10.8a1 1 0 0 0 1-1v-8.2a1 1 0 0 0-1-1h-2.2\"/>";
         public const string Puhekupla = "<path d=\"M4 5h16v10H9l-4 4v-4H4z\"/><circle cx=\"9.5\" cy=\"10\" r=\"0.9\"/><circle cx=\"14.5\" cy=\"10\" r=\"0.9\"/>";
 
         /// <summary>VIIVA_IKONIT avaimittain (sama avain kuin webissä, js/ui-apurit.js).</summary>
         public static readonly Dictionary<string, string> Viiva = new Dictionary<string, string>
         {
+            // PIN (omistaja 5.10.2026 klo 23.3x, PIN-KUVAKE JA PINNATTU PALKKI): nuppineula, pinnattuna täytetty pää (mk-valittu).
+            ["pin"] = "<path d=\"M9 3.6h6M10.2 3.6v6.2L7 13.4h10l-3.2-3.6V3.6M12 13.4v7\"/>",
             ["saapas"] = "<path d=\"M7 3.5h4.4v8.2c0 .9.6 1.7 1.5 2l4.8 1.6c1.4.5 2.3 1.3 2.3 2.4 0 .8-.6 1.4-1.4 1.4H8.6c-.9 0-1.6-.7-1.6-1.6z\"/><path d=\"M7 6h4.4M7 8.2h4.4M4 20.6h16.5\"/>",
             ["purje"] = "<path d=\"M11 5.4 6 13.6h5zM13 4.2l5.6 9.4H13z\"/><path d=\"M4.6 16.2h14.8l-2 3.4H6.6zM12 13.6v2.6\"/>",
             ["suurennuslasi"] = "<circle cx=\"9.8\" cy=\"9.8\" r=\"5.6\"/><path d=\"M13.9 13.9 20 20\"/>",
@@ -104,6 +110,8 @@ namespace Matkakirja.Natiivi
             ["ankkuri"] = "<circle cx=\"12\" cy=\"5\" r=\"1.8\"/><path d=\"M12 6.8v12.6M8.7 9.6h6.6\"/><path d=\"M5.2 13.8c.3 3.9 3.2 6.3 6.8 6.3s6.5-2.4 6.8-6.3\"/><path d=\"M5.2 13.8 3.5 12.6M18.8 13.8l1.7-1.2\"/>",
             ["mitali"] = "<path d=\"M9.6 3.6 8.2 9.2M14.4 3.6l1.4 5.6\"/><circle cx=\"12\" cy=\"14.4\" r=\"5.2\"/><circle class=\"taytto\" cx=\"12\" cy=\"14.4\" r=\"1.1\"/>",
             ["kaiutin"] = "<path d=\"M4.2 9.3h3.2l4.4-3.6v12.6l-4.4-3.6H4.2z\"/><path d=\"M14.8 9.4a3.7 3.7 0 0 1 0 5.2\"/><path d=\"M17.4 6.9a7.3 7.3 0 0 1 0 10.2\"/>",
+            // Ei luentaa (omistaja 5.10.2026 klo 16.5x: "ei luentaa tilassa riittää yksi poikkiviiva"): sama kaiutin, yksi vino viiva.
+            ["kaiutin-pois"] = "<path d=\"M4.2 9.3h3.2l4.4-3.6v12.6l-4.4-3.6H4.2z\"/><path d=\"M14.8 9.4a3.7 3.7 0 0 1 0 5.2\"/><path d=\"M17.4 6.9a7.3 7.3 0 0 1 0 10.2\"/><path d=\"M3.2 3.6 20.8 20.4\"/>",
             ["taitekartta"] = "<path d=\"M3.6 6.6 9 4.4v13l-5.4 2.2z\"/><path d=\"M9 4.4 15 6.6v13L9 17.4z\"/><path d=\"M15 6.6l5.4-2.2v13L15 19.6z\"/>",
             ["satelliitti"] = "<rect x=\"2.8\" y=\"9.7\" width=\"5.4\" height=\"4.6\" rx=\"0.7\"/><rect x=\"15.8\" y=\"9.7\" width=\"5.4\" height=\"4.6\" rx=\"0.7\"/><rect x=\"9.9\" y=\"9.3\" width=\"4.2\" height=\"5.4\" rx=\"1\"/><path d=\"M8.2 12h1.7M14.1 12h1.7\"/><path d=\"M12 9.3V6.4\"/><path d=\"M9.7 5.5a3.4 3.4 0 0 1 4.6 0\"/>",
             ["varikartta"] = "<path d=\"M12 3.6c4.7 0 8.4 3.1 8.4 7 0 2.5-1.9 3.5-3.7 3.5h-1.9c-1 0-1.7.8-1.4 1.7.3.8.9 1.3.9 2.3 0 1.4-1.1 2.3-2.5 2.3-4.6 0-8.2-3.8-8.2-8.4 0-4.6 3.8-8.4 8.4-8.4z\"/><circle class=\"taytto\" cx=\"8.2\" cy=\"9.4\" r=\"1\"/><circle class=\"taytto\" cx=\"12\" cy=\"7.6\" r=\"1\"/><circle class=\"taytto\" cx=\"15.8\" cy=\"9.4\" r=\"1\"/>",

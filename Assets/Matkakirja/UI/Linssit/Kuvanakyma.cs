@@ -33,6 +33,11 @@
 // AUTOn aikana selite pysyy minimoituna, otsikkona on pelkkä kohteen nimi, ja kertoja lukee leipätekstin (vaikka Kertoja olisi
 // pois); luennan jälkeen 3 s ja seuraava kohde AstronauttiKierroksen järjestyksessä. Pelaajan kosketus (muu kuin kytkin tai
 // lappu) pysäyttää AUTOn.
+// SELITE VAIN KAIUTTIMESTA (omistaja 5.10.2026 klo 13.2x, Päätoimittajan kortti): kuvaselitettä EI lueta itsestään, ei myöskään
+// AUTOssa. Kaiutin on striimilukijan pohja (KortinLukija saatimet: [valikko][kaiutin + VU], Raamattu STRIIMILUKIJAN KAKSI NAPPIA)
+// selitteen otsikkorivin oikeassa päässä kuten tiedeliitteessä, kuvakkeet lasi-avaruus-teeman tokeneilla (Päätoimittaja 5.10.
+// hyväksyi). AUTOssa käynnissä oleva luenta jatkuu seuraavaan selitteeseen (siirto loppui-kutsusta kuten ennen); ilman luentaa
+// AUTO siirtyy lukuajan jälkeen (Lukuaika: 0,06 s/merkki, 6–20 s) ja sitten 3 s:n siirrolla. Ääni on workerin kertoja (William).
 // PALLOVALITSIN (omistaja 3.10.2026, vain natiivi): vasemman alakulman sijaintipalloa voi pyörittää; tartunta kasvattaa sen ja
 // himmentää kuvan, keskimmäisen kohteen nimi näkyy pallon alla, ja 0,5 s pysähdyksestä (sormi irti) kohde avautuu kuten ‹ ›.
 // AUTO on tauolla pyörityksen ajan ja jatkaa valitusta kohteesta (Sijaintipallo, Pallovalitsin).
@@ -41,8 +46,12 @@
 using System;
 using System.Collections.Generic;
 using System.Globalization;
+using System.Text;
+using System.Text.RegularExpressions;
 using Matkakirja.Linssit;
 using Matkakirja.Linssit.Astronautti;
+using Matkakirja.Linssit.Iss;
+using Matkakirja.Peli;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -66,6 +75,11 @@ namespace Matkakirja.Natiivi
         readonly Dictionary<int, Vector2> sormet = new Dictionary<int, Vector2>();
         // AUTO (web PR #3817).
         const float AutoSiirtoS = 3f;
+        // Selite vain kaiuttimesta (omistaja 5.10.2026): luenta päällä tämän avauksen ajan; lukuaika ilman luentaa (AUTO).
+        KortinLukija lukija;
+        bool jatkaLuentaa;   // AUTO: edellinen selite luettiin loppuun → seuraavakin luetaan
+        IVisualElementScheduledItem lukuaikaAjo;
+        static float Lukuaika(string t) => Mathf.Clamp(0.06f * (t?.Length ?? 0), 6f, 20f);
         readonly VisualElement autoKulma, autoLappu, autoPalkki;
         // AUTON HILJAINEN TILA (omistaja 2.10. 21.3x, web sama Pelikoodarin kanssa): AUTOn aikana ✕, Pulu, ‹ › ja AUTO häivytetään
         // (Kesto.Sulku), ensimmäinen napautus vain palauttaa ne (Kesto.Avaus) ja ne häviävät taas 4 s viimeisen kosketuksen jälkeen.
@@ -128,8 +142,13 @@ namespace Matkakirja.Natiivi
 
             selite = Rakenne.El("mk-astrokuva__selite", turva);
             selite.RegisterCallback<ClickEvent>(_ => Kelaa());
-            otsikko = Rakenne.Teksti("", "mk-astrokuva__otsikko", selite);
+            var otsikkoRivi = Rakenne.El("mk-astrokuva__otsikkorivi", selite, PickingMode.Ignore);
+            otsikko = Rakenne.Teksti("", "mk-astrokuva__otsikko", otsikkoRivi);
             Kirjasimet.Aseta(otsikko, Kirjasin.Kone);
+            // Striimilukija otsikkorivin oikeaan päähän (omistaja 5.10.2026, ks. otsake); napautus ei kelaa selitettä.
+            lukija = new KortinLukija(otsikkoRivi, "Kuuntele selite", "mk-astrokuva__lukija tk-teema-lasi-avaruus", saatimet: true,
+                rajaus: () => turva.worldBound, loppui: LukijaLoppui);
+            lukija.Juuri.RegisterCallback<ClickEvent>(e => e.StopPropagation());
             runko = Rakenne.El("mk-astrokuva__runko", selite, PickingMode.Ignore);
             teksti = Rakenne.Teksti("", "mk-astrokuva__teksti", runko);
             var vakasenRivi = Rakenne.El("mk-astrokuva__vakasenRivi", runko, PickingMode.Ignore);
@@ -317,7 +336,9 @@ namespace Matkakirja.Natiivi
             NaytaAutoNapit(true);   // seuraava avaus alkaa napit näkyvissä
             autoPiilotus?.Pause();
             luentaVuoro++;
-            LopetaLuenta();
+            lukija.Pysayta();
+            lukuaikaAjo?.Pause();
+            jatkaLuentaa = false;   // seuraava avaus alkaa hiljaa (omistaja 5.10.2026)
             kelaus?.Pause();
             riveittain?.Pause();
             vinkki = false;
@@ -335,6 +356,7 @@ namespace Matkakirja.Natiivi
             kohde = null;
             indeksi = -1;
             AukiMuuttui?.Invoke(false);
+            KuvaVaihtui?.Invoke();
         }
 
         void SuljeKuva() => Sulje(true);
@@ -356,6 +378,39 @@ namespace Matkakirja.Natiivi
         /// </summary>
         public (string Nimi, string Seutu, string Teksti)? AvoinKuva =>
             Auki && kohde != null ? (kohde.Nimi, kohde.Seutu, teksti.text) : ((string, string, string)?)null;
+
+        /// <summary>
+        /// Ruudulla oleva kuva vaihtui (avaus, selaus, AUTO) tai kuva suljettiin (null): Pulun sirut ja konteksti vaihtuvat kuvan
+        /// mukaan (juna 147; Pelikoodarin worker PR #4038 kenttä "kuva").
+        /// </summary>
+        public static event Action KuvaVaihtui;
+
+        /// <summary>
+        /// Pulun pyynnön "kuva"-kenttä JSONina (Pelikoodari #4038): {tunnus, nimi, maa, lat, lon, selite, teksti, aika}; null, kun kuva
+        /// on kiinni. Tunnus on havainnon Id (sallitut merkit [A-Za-z0-9._:-], enintään 80), workerin välimuistin avain.
+        /// </summary>
+        public string KuvaJson
+        {
+            get
+            {
+                if (!Auki || kohde == null) return null;
+                var h = indeksi >= 0 && indeksi < kohde.Havainnot.Count ? kohde.Havainnot[indeksi] : null;
+                string tunnus = Regex.Replace(h?.Id ?? ((kohde.Tunnus ?? "kohde") + ":" + indeksi), "[^A-Za-z0-9._:-]", "-");
+                if (tunnus.Length > 80) tunnus = tunnus.Substring(0, 80);
+                string maa = null;
+                if (IssSijainti.Nykyinen != null) maa = IssSijainti.Nimet(IssSijainti.Nykyinen, kohde.Lat, kohde.Lon).Maa;
+                var ci = System.Globalization.CultureInfo.InvariantCulture;
+                var sb = new StringBuilder("{\"tunnus\":").Append(PeliApu.Json(tunnus));
+                void Kentta(string nimi, string arvo) { if (!string.IsNullOrWhiteSpace(arvo)) sb.Append(",\"").Append(nimi).Append("\":").Append(PeliApu.Json(arvo.Trim())); }
+                Kentta("nimi", kohde.Nimi);
+                Kentta("maa", string.IsNullOrWhiteSpace(maa) ? kohde.Seutu : maa);
+                sb.Append(",\"lat\":").Append(kohde.Lat.ToString("0.####", ci)).Append(",\"lon\":").Append(kohde.Lon.ToString("0.####", ci));
+                Kentta("selite", kohde.Selite);
+                Kentta("teksti", h?.Teksti);
+                Kentta("aika", h?.Aika);
+                return sb.Append('}').ToString();
+            }
+        }
 
         /// <summary>Testikomento ja Pulun taulun "Kysy Pululta": minipulun kysymyskortti auki nykyiselle kohteelle.</summary>
         public void AvaaPulukortti() { if (Auki) pulukortti.Avaa(kohde); }
@@ -380,7 +435,8 @@ namespace Matkakirja.Natiivi
             var h = i >= 0 && i < kohde.Havainnot.Count ? kohde.Havainnot[i] : null;
             AsetaOtsikko();
             teksti.text = h?.Teksti ?? kohde.Selite ?? "";
-            LueSelite(h);
+            SeliteNakyi(h);
+            KuvaVaihtui?.Invoke();
             if (lisatiedotAuki) LadoLisatiedot();
             for (int n = 0; n < nauha.childCount; n++) nauha[n].EnableInClassList("mk-valittu", n == i);
             // AUTOssa seuraava kuva samalla zoomilla (omistaja 23.0x: "Jos kuvan suurentaa kokonäytön kokoiseksi, seuraava kuva tulee
@@ -507,8 +563,6 @@ namespace Matkakirja.Natiivi
 
         // --- luenta ------------------------------------------------------------------
 
-        string luettu, luennanUrl;
-
         /// <summary>
         /// Selitettä ei lueta, kun tämä on tosi: Pulun tervetulo puhuu, ja sen C1 avaa väärän kuvan kesken repliikin (omistaja
         /// 8.9.2026: pulun ja kertojan äänet eivät mene päällekkäin; PulunTervetuloNakyma asettaa).
@@ -516,36 +570,35 @@ namespace Matkakirja.Natiivi
         public static Func<bool> LuentaEste;
 
         /// <summary>
-        /// SELITE LUETAAN ÄÄNEEN (omistaja 28.9.2026: "Tee selitteelle myös striinilukija joka automaattisesti päällä"; web
-        /// satelliitti.js lueSelite, PR #3568): kuvan avautuessa ja vaihtuessa selite luetaan kertojan äänellä palavirtana
-        /// (Puhe.Lue), kun Kertoja on päällä (sama kytkin kuin matkakirjan automaattisella luennalla). Uusi kuva keskeyttää
-        /// edellisen luennan (yksi puhuja kerrallaan), ja kuvan sulkeminen lopettaa sen. Teksti (Havaintokohde.Luettava) ja
-        /// säilölohko (AstronauttiLinssi.SelitteenSailio) ovat samat kuin webissä, joten sama selite syntetisoidaan kerran
-        /// molemmille alustoille (laite, reuna ja ämpäri).
+        /// Selite tuli näkyviin (kuva avautui tai vaihtui, AUTO kytkettiin): lukija saa uuden tekstin (Havaintokohde.Luettava)
+        /// eikä lue itsestään (omistaja 5.10.2026). AUTOssa käynnissä ollut luenta jatkuu uuteen selitteeseen; muuten AUTO
+        /// siirtyy lukuajan jälkeen (sama LuentaLoppui-reitti kuin luennan päättyessä).
         /// </summary>
-        void LueSelite(Havainto h)
+        void SeliteNakyi(Havainto h)
         {
-            // AUTO lukee itse, vaikka Kertoja olisi pois (web: NOSTOKORTTI-osa AUTO "luenta, siirtyy seuraavaan").
-            bool auto = AutoKaytossa;
-            if (kohde == null || (!Puhe.Paalla && !auto) || LuentaEste?.Invoke() == true) return;
-            string t = kohde.Luettava(h);
-            if (string.IsNullOrEmpty(t) || t == luettu) return;
-            luettu = t;
-            var puhe = Puhe.Hae();
+            lukuaikaAjo?.Pause();
             int vuoro = ++luentaVuoro;
-            luennanUrl = puhe.Lue(t, "kertoja", loppu: () => LuentaLoppui(vuoro), pyynnosta: auto, lohko: AstronauttiLinssi.SelitteenSailio)
-                ? puhe.SoivaUrl : null;
-            if (luennanUrl == null) LuentaLoppui(vuoro);   // ei ääntä: AUTO siirtyy silti
-            Debug.Log($"MATKAKIRJA kuvaselite luetaan ({AstronauttiLinssi.SelitteenSailio}, {t.Length} mrk): "
-                + (luennanUrl != null ? t.Substring(0, Math.Min(60, t.Length)) : "ei alkanut"));
+            bool jatka = AutoKaytossa && (lukija.Lukee || jatkaLuentaa) && LuentaEste?.Invoke() != true;
+            jatkaLuentaa = false;
+            string t = kohde?.Luettava(h);
+            lukija.Aseta(string.IsNullOrEmpty(t) ? Array.Empty<string>() : new[] { t });
+            if (jatka && lukija.Juuri.style.display.value == DisplayStyle.Flex)
+            {
+                lukija.Paina();
+                Debug.Log($"MATKAKIRJA kuvaselite luetaan (AUTO jatkaa, {t.Length} mrk): {t.Substring(0, Math.Min(60, t.Length))}");
+                return;
+            }
+            if (!AutoKaytossa || kohde == null) return;
+            float s = Lukuaika(t);
+            lukuaikaAjo = autoLappu.schedule.Execute(() => LuentaLoppui(vuoro)).StartingIn((long)(s * 1000));
+            Debug.Log($"MATKAKIRJA kuvaselite: ei luentaa (kaiutin pois), AUTO siirtyy {s:0.#} s:n lukuajan jälkeen");
         }
 
-        /// <summary>Kuvan sulkeminen lopettaa selitteen luennan, ei muiden puhujien (esim. pulun vastausta).</summary>
-        void LopetaLuenta()
+        /// <summary>Lukija luki selitteen loppuun: AUTO siirtyy (3 s) ja seuraavakin selite luetaan.</summary>
+        void LukijaLoppui()
         {
-            var puhe = Puhe.Instanssi;
-            if (luennanUrl != null && puhe != null && puhe.SoivaUrl == luennanUrl) puhe.Pysayta(0.3f);
-            luettu = luennanUrl = null;
+            jatkaLuentaa = AutoKaytossa;
+            LuentaLoppui(luentaVuoro);
         }
 
         // --- AUTO (web PR #3817) ---------------------------------------------------------
@@ -584,20 +637,12 @@ namespace Matkakirja.Natiivi
             if (kohde == null || indeksi < 0) return;
             var h = indeksi < kohde.Havainnot.Count ? kohde.Havainnot[indeksi] : null;
             // Omistaja 4.10.2026 klo 19.4x: "kun pelaaja painaa auto moden päälle, niin luennan pitää jatkua ilman että se hyppää
-            // tekstin alkuun". Kesken oleva saman selitteen luenta jatkuu kohdastaan, ja AUTO siirtyy seuraavaan vasta sen loputtua
-            // (LuentaLoppui saman vuoron loppukutsusta). Jo luettu selite → suoraan siirtoon; muuten luenta alkaa nyt.
-            string t = kohde.Luettava(h);
-            if (LuentaSoi && t == luettu) { Debug.Log("MATKAKIRJA kuvaselite: AUTO päälle, luenta jatkuu kohdastaan"); return; }
-            if (!string.IsNullOrEmpty(t) && t == luettu && luennanUrl != null) { Debug.Log("MATKAKIRJA kuvaselite: AUTO päälle, selite jo luettu → siirto"); LuentaLoppui(luentaVuoro); return; }
-            luettu = null;
-            LueSelite(h);
+            // tekstin alkuun". Kesken oleva luenta jatkuu kohdastaan, ja AUTO siirtyy seuraavaan vasta sen loputtua (LukijaLoppui);
+            // muuten lukuajan jälkeen (selitettä ei lueta itsestään, omistaja 5.10.2026).
+            if (lukija.Lukee) { Debug.Log("MATKAKIRJA kuvaselite: AUTO päälle, luenta jatkuu kohdastaan"); return; }
+            SeliteNakyi(h);
         }
 
-        /// <summary>
-        /// Tämän kuvan selitteen luenta on käynnissä: puhekanavan osoite on sama synteesin latauksesta (ennen ensimmäistä palaa)
-        /// loppuun asti, myös tauolla (Pelikoodari 4.10.: Puhe.Soi on epätosi latauksen ja tauon aikana).
-        /// </summary>
-        bool LuentaSoi => luennanUrl != null && Puhe.Instanssi != null && Puhe.Instanssi.SoivaUrl == luennanUrl;
 
         /// <summary>Luenta loppui: AUTO päällä → lappu ja 3 s:n päästä seuraava kohde (vain tämän kuvan tuorein luenta).</summary>
         void LuentaLoppui(int vuoro)
@@ -730,12 +775,12 @@ namespace Matkakirja.Natiivi
                 case "mittaa": MittaaKoko(1.2f); break;
                 case "auto": AsetaAuto(true); break;          // AUTO päälle (web PR #3817)
                 case "auto-pois": AsetaAuto(false); break;
+                case "kaiutin": lukija.Paina(); break;        // kuin kaiuttimen napautus (todisteeseen oikea tap: mk-lukija--kortti)
                 case "luettu":
                 {
                     // Testi: selitteen luenta päättyy nyt (AUTO-vaihdot tallenteeseen odottamatta koko luentaa).
                     int v = luentaVuoro;
-                    var p = Puhe.Instanssi;
-                    if (luennanUrl != null && p != null && p.SoivaUrl == luennanUrl) p.Pysayta(0.1f);
+                    lukija.Pysayta();
                     LuentaLoppui(v);
                     return $"luenta päättyi, AUTO {(AutoKaytossa ? "päällä" : "pois")}, zoomi {zoomi:0.##}, kuva {indeksi}";
                 }
@@ -759,13 +804,10 @@ namespace Matkakirja.Natiivi
             {
                 var r = selite.layout;
                 var puhe = Puhe.Instanssi;
-                // Oma luenta on kesken, kunnes Puhe päättää sen (SoivaUrl nollautuu viimeisen palan jälkeen tai pysäytyksessä).
-                bool oma = puhe != null && luennanUrl != null && puhe.SoivaUrl == luennanUrl;
-                string luenta = luettu == null ? "ei" : luennanUrl == null ? "ei alkanut" : !oma ? "ohi"
-                    : puhe.Soi ? $"soi {puhe.Aika:0.0}/{puhe.Kesto:0.0} s" : "latautuu";
+                string luenta = !lukija.Lukee ? "ei" : puhe != null && puhe.Soi ? $"soi {puhe.Aika:0.0}/{puhe.Kesto:0.0} s" : "latautuu";
                 return $"selite {(kiinni ? "kiinni" : "auki")}{(vinkki ? " (vinkki)" : "")} {r.width:0}x{r.height:0}, otsikko \"{otsikko.text}\", "
                     + $"auto {(AutoKaytossa ? (autoAjo != null ? "siirto " + autoAika.text : "päällä") : "pois")}, liukuja {Tiivistys.Kesken}, "
-                    + $"luenta {luenta} ({AstronauttiLinssi.SelitteenSailio}, {luettu?.Length ?? 0} mrk)";
+                    + $"luenta {luenta}, lukija {(lukija.Juuri.style.display.value == DisplayStyle.Flex ? "näkyy" : "piilossa")}";
             }
         }
 

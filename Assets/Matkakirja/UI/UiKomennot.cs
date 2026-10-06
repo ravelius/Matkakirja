@@ -110,6 +110,7 @@
 //   ui pilleri [paa|linssit|aarteet|tasot] [n] pillerivalikko auki, näkymä ja n:s rivi kerran (esikatselu), kahdesti = toiminto
 //   ui maakunnat [kortti] [ISO:tunnus]        karttaselite Maakunnat-välilehdellä, valinta, kortti
 //   ui maakunnat sulje                        auki oleva maakuntakortti tai lappu kiinni (sulkuanimaatio)
+//   ui maakunnat vaisto                       kortin väistö chatille (PINNATTU PALKKI, juna 147): tila
 //   ui maakunnat kysymys [n]                  auki olevan kortin n:s kysymys auki/kiinni; kortin reunat ja vieritys 300 ms päästä
 //   ui pulu tekstit piiloon|nakyviin|auto | ui pulu napauta   löydös 21: repliikkien tekstit / piilotettu kuplaksi
 //   ui pulu sano [teksti] | aani [lähde n] | ele id | tilanne laji | tunne t | pois | paalle
@@ -761,6 +762,12 @@ namespace Matkakirja.Natiivi
                         : t == "flush-ilman" ? "<align=flush>" : "<align=\"justified\">";
                     return "tasaus: " + (Lehtinakyma.TasausTagi.Length > 0 ? Lehtinakyma.TasausTagi.Replace("<", "‹") : "pois");
                 }
+                case "linnapalkki":
+                    // Linnan nimiruudun LATAUSPALKKI (Latauspalkki.cs): ui linnapalkki <0–1> | pois — nimiruutu auki annetulla arvolla.
+                    return DioraamaTaulu.TestiPalkki(loput);
+                case "puhujakuva":
+                    // PUHUJAKUVA (Puhujakuva.cs): ui puhujakuva <kuva> [x y] | pois — Resources/Puhujakuvat/<kuva> pisteeseen tai ankkuriin.
+                    return "=" + Puhujakuva.Testi(loput);
                 case "kuunnelma":
                 {
                     // Olavinlinnan kuunnelman tekstitys (KuunnelmaKaistale): ui kuunnelma [tila] | ohita | alusta.
@@ -1019,7 +1026,7 @@ namespace Matkakirja.Natiivi
                     // ui kutsu [napauta]: avauskortin kutsuminiatyyrin tila / napautus.
                     if (loput == "napauta") return ui.Kutsu.Napauta();
                     Kirjaa("kutsu " + (ui.Kutsu.Nakyy ? "näkyy " + ui.Kutsu.Laatikko : "piilossa") + ", nostojen kerroin " + ui.Nostot.Karttakerroin.ToString("0.00", CultureInfo.InvariantCulture)
-                        + ", maan näkymässä " + (Object.FindAnyObjectByType<PalloKierto>()?.MaanNakymassa ?? false));
+                        + ", maan näkymässä " + (Object.FindAnyObjectByType<PalloKierto>()?.MaanNakymassa ?? false) + ", syy: " + ui.Kutsu.Syy());
                     return null;
                 case "avauskortti":
                 {
@@ -1117,6 +1124,9 @@ namespace Matkakirja.Natiivi
                     else if (pk.Length > 1 && pk[0] == "alku") Matkakirja.Pelikello.AlkuKelloUtc = luku;
                     return ui.Kellonaytto.Kuvaus;
                 }
+                case "pinnaus":
+                    // Pinnattu palkki (Pinnaus.cs): ui pinnaus [palkki <otsikko> | pois]
+                    return "=" + Pinnaus.Testi(loput);
                 case "opasvalikko":
                     // Elävän oppaan valikko (OpasValikko): ui opasvalikko valikko|maanosat|maat <maanosa>|kaupungit <maanosa>|<maa>|sulje.
                     return "=" + OpasValikko.Hae().Komento(loput);
@@ -1202,6 +1212,9 @@ namespace Matkakirja.Natiivi
                 case "maakunnat" when loput.StartsWith("kartta"):
                     // Minikartta suureksi / takaisin (omistajan kortti 30.9.2026 klo 22.5x): "ui maakunnat kartta [pois]".
                     return "=" + ui.Karttaselite.Maakunnat.TestiKartta(!loput.Contains("pois"));
+                case "maakunnat" when loput == "vaisto":
+                    // Väistö chatille (juna 147): kortin ja PINNATTU PALKIN tila.
+                    return "=" + ui.Karttaselite.Maakunnat.VaistoKuvaus;
                 case "maakunnat" when loput.StartsWith("kysymys"):
                 {
                     // Kortin kysymys auki/kiinni (omistaja 29.9.: koko ei saa muuttua): kortin reunat ja vieritys lokiin.

@@ -396,6 +396,7 @@ namespace Matkakirja.Natiivi
             Chat = new PuluChat(kerros, Pulu);
             Traileri = new Saapumistraileri(kerros);
             KaupunkiMerkit.Kalusteet = KartanKalusteet; // löydös 164
+            NostotKartalla.Napit = KartanNapit;         // Stonehenge Liikun alla (Päätoimittaja 6.10.)
             // Löydös 170: sisältöpaketti vaihtui kesken istunnon (Siirtoseppä) → maakunta- ja nostodata uudesta versiosta.
             PakettiPaivitys.SisaltoVaihtui += (versio, muuttuneet) =>
             {
@@ -484,10 +485,15 @@ namespace Matkakirja.Natiivi
             });
             // Linssit (valitsin, peite, selite, astronautti, vertailu, aikajanat): kartuschan ja selitteen jälkeen.
             Linssit = new LinssiUi(kerros, this);
+            // PIN-KUVAKE JA PINNATTU PALKKI (omistaja 5.10.2026): yksi pinnattu ikkuna kerrallaan, palkki oikeaan yläreunaan.
+            new Pinnaus(kerros);
             // Astronautin kuvaselaimessa pulu on minipulu (Kuvanakyma): iso Pulu kuulsi sen takaa kuvanäkymän himmennyksen
             // läpi (Linssiseppä 29.9., laitekuva 6 kuva-minipulu-taulu; web: iso Pulu ei näy). Vain näkyvyys: puhe ja
             // luenta jatkuvat (Pulu.Nayta(false) pysäyttäisi puhekanavan).
             Linssit.Astronautti.Kuva.AukiMuuttui += auki => { kuvaPeittaaPulun = auki; PaivitaPulunPeitto(); };
+            // Aloitus ennen lähtövalintaa (omistaja 6.10.2026): Pulu ei näy portissa eikä avauksessa.
+            Aloitusnakyma.PulunPeittoMuuttui += _ => PaivitaPulunPeitto();
+            PaivitaPulunPeitto();
             Karttaselite.AukiMuuttui += auki => { Linssit.Valitsin.Vaista(auki); Matkakirja.SeliteVaisto(auki); };
             // Linssit-karttanappi avaa valitsimen: ohi-napautus ei saa sulkea sitä samasta napautuksesta (savuke 1128: simulaattorin
             // tap painuu ja nousee samassa ruudussa, joten Avaa ja TarkistaOhiNapautus osuivat samaan ruutuun).
@@ -559,6 +565,7 @@ namespace Matkakirja.Natiivi
         /// </summary>
         void NollaaMuistit()
         {
+            Tilarivi.PiilotaPysyva(); // kartan valintavihje ei jää uuteen peliin
             Karttaselite.Nollaa();
             Matkalaukku.Nollaa();
             Chat.Nollaa();
@@ -616,9 +623,10 @@ namespace Matkakirja.Natiivi
             o.AloituslentoAlkoi += _ => UiKerros.PaaSaikeessa(() => { if (!Aloitus.Lennolla) Aloitus.LentoKirjoitus(); AloituslentoPiilo(true); });
             // Löydös 23: lennon ajaksi kaikki muu piiloon (Nousu … Perilla, myös aloituslento).
             o.LennonVaiheMuuttui += (v, _) => UiKerros.PaaSaikeessa(() => LentoPiilo(v != LennonVaihe.Perilla));
-            // Pöllön valintavihje nopan jälkeen (Pelikoodari: 15 s ilman valintaa, kerran vaiheessa).
-            o.ValintavihjeAika += t => UiKerros.PaaSaikeessa(() => Pulu.NaytaVihje(t));
-            o.ValintavihjePois += () => UiKerros.PaaSaikeessa(Pulu.PiilotaVihje);
+            // Pöllön valintavihje nopan jälkeen (Pelikoodari: 15 s ilman valintaa, kerran vaiheessa). Ei Pulun kuplana kartalla
+            // (Päätoimittaja 6.10.2026): pysyvä ilmoitusrivi, kunnes pelaaja toimii (ValintavihjePois).
+            o.ValintavihjeAika += t => UiKerros.PaaSaikeessa(() => Tilarivi.PysyvaViesti(t));
+            o.ValintavihjePois += () => UiKerros.PaaSaikeessa(Tilarivi.PiilotaPysyva);
             o.AloituslentoPaattyi += _ => UiKerros.PaaSaikeessa(() => { AloituslentoPerilla(); Aloitus.AloituslentoPaattyi(); });
             // C16: Livian tuurauspaljastus (ensimmäinen saapuminen koskaan) tai saapumisen ohjekuplat aloituslennon jälkeen.
             LivianPaljastus.Kytke(o);
@@ -866,13 +874,14 @@ namespace Matkakirja.Natiivi
         {
             if (Aloitus.Auki) return;
             SuljeKaikki();
+            Tilarivi.PiilotaPysyva();
             Aloitus.Nayta(id => Aloita(o, id), o.Lahtokaupungit(), o.TallennusOn ? () => { var v = o.Jatka(); if (v != null) Tilarivi.Viesti(v); } : (System.Action)null);
         }
 
         bool lehtiAuki, arkkiAuki, chatNostonPaalla, valikkoAuki, kuvaPeittaaPulun, valikkoPeittaaPulun;
 
         /// <summary>Pulun hahmo piilossa astronautin kuvaselaimen tai vaakavalikon ajan (Pulu.Peita: puhe ja kuplat jatkuvat).</summary>
-        void PaivitaPulunPeitto() => Pulu.Peita(kuvaPeittaaPulun || valikkoPeittaaPulun || opasPeittaaPulun);
+        void PaivitaPulunPeitto() => Pulu.Peita(kuvaPeittaaPulun || valikkoPeittaaPulun || opasPeittaaPulun || Aloitusnakyma.PeittaaPulun);
 
         bool opasPeittaaPulun;
         /// <summary>Elävä opas (Päätoimittaja 5.10.: kaupunki koko ruudulla): Pulun hahmo piiloon oppaan ajaksi (OpasValikko.Nayta).</summary>
@@ -897,7 +906,7 @@ namespace Matkakirja.Natiivi
         {
             // Linssitila (Pelikoodari 1.10.2026) ja maakuntakortin Pulun kysymys (omistajan kortti 30.9.2026 klo 22.5x):
             // chat nousee kortin / linssin yläkerroksen päälle.
-            bool p = Chat.Auki && (Nostokortti.Auki || MaakuntaKortti.JokinAuki || Chat.Linssissa);
+            bool p = Chat.Auki && (Nostokortti.Auki || Chat.Linssissa);
             if (p == chatNostonPaalla) return;
             chatNostonPaalla = p;
             PulunKerros();
@@ -1099,6 +1108,27 @@ namespace Matkakirja.Natiivi
             if (Matkavalinta != null) Lisaa(Matkavalinta.LiikuLaatikko);
             if (Pulu != null) Lisaa(Pulu.Laatikko);
             return kalusteet;
+        }
+
+        readonly System.Collections.Generic.List<Ruutulaatikko> napit = new System.Collections.Generic.List<Ruutulaatikko>();
+
+        /// <summary>Alareunan toimintonapit (Liiku) ruutupikseleinä kuten KartanKalusteet: nostojen ja mallien nimiöiden esteet.</summary>
+        System.Collections.Generic.IReadOnlyList<Ruutulaatikko> KartanNapit()
+        {
+            napit.Clear();
+            var juuri = Kerros.Juuri(UiKerros.Valikot);
+            var paneeli = juuri.panel;
+            var r = Matkavalinta != null ? Matkavalinta.LiikuLaatikko : default;
+            if (paneeli == null || r.width <= 0 || r.height <= 0) return napit;
+            var a = UnityEngine.UIElements.RuntimePanelUtils.ScreenToPanel(paneeli, Vector2.zero);
+            var b = UnityEngine.UIElements.RuntimePanelUtils.ScreenToPanel(paneeli, new Vector2(Screen.width, Screen.height));
+            if (b.x - a.x <= 0 || b.y - a.y <= 0) return napit;
+            float sx = Screen.width / (b.x - a.x), sy = Screen.height / (b.y - a.y);
+            const float Vara = 4f;
+            float x0 = (r.xMin - Vara - a.x) * sx, x1 = (r.xMax + Vara - a.x) * sx;
+            float yla = (r.yMin - Vara - a.y) * sy, ala = (r.yMax + Vara - a.y) * sy;
+            napit.Add(new Ruutulaatikko(x0, Screen.height - ala, x1, Screen.height - yla));
+            return napit;
         }
 
         /// <summary>Testikomento 'ui matka': esimerkkivalinta ilman peliä.</summary>

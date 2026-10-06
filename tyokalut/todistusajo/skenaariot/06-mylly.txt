@@ -1,0 +1,14 @@
+# 06 Mylly: helppo peli, oikea siirto, botti vastaa, Luovuta → tuloskortti → Jatka matkaa (Laitetestaaja 5.10.: solmu (46,264) iPhone)
+ui mylly peli helppo
+odota 3
+kuva 06a-mylly-auki Mylly auki (helppo)
+tap 46 264
+odota 3
+ui mylly tila
+oleta 5 mylly: .*vuoro -- siirto tehty ja botti vastasi
+kuva 06b-mylly-siirto Mylly: oma siirto ja botin vastaus
+tap-teksti Luovuta
+nakyy 6 Luovutit -- Luovuta → tuloskortti
+kuva 06c-mylly-luovutettu Mylly luovutettu
+tap-teksti Jatka matkaa
+ei-nay 6 Luovutit -- Jatka matkaa sulki pelin

@@ -260,6 +260,31 @@ namespace Matkakirja.Natiivi
             return Heksa(s.ComputeHash(f));
         }
 
+        // --- EDISTYMINEN (linnan latauspalkki, omistaja 5.10. klo 12.5x; Natiivi-UI:n pohja DioraamaTaulu.LatausEdistyminen) ---
+        // Tavuina manifestin koon mukaan: pyydetty = tämän avauksen haettavaksi pyydetyt tiedostot, valmis = valmiit (välimuisti
+        // tai verkko), lennossa = käynnissä olevien latausten jo saapuneet tavut. Nollataan linnan avauksessa (NollaaEdistys).
+        static long pyydetty, valmisTavuja;
+        static readonly HashSet<string> pyydetyt = new HashSet<string>(), valmiit = new HashSet<string>();
+        static readonly Dictionary<string, UnityWebRequest> lennossa = new Dictionary<string, UnityWebRequest>();
+        public static long PyydettyTavuja => pyydetty;
+        public static void NollaaEdistys() { pyydetty = 0; valmisTavuja = 0; pyydetyt.Clear(); valmiit.Clear(); }
+        static long ManifestinKoko(string url)
+        {
+            if (juuri == null || manifesti == null || url == null || !url.StartsWith(juuri, StringComparison.Ordinal)) return 0;
+            return manifesti.TryGetValue(url.Substring(juuri.Length), out var e) && e.Tavuja > 0 ? e.Tavuja : 0;
+        }
+        static void Pyyda(string url) { if (url != null && pyydetyt.Add(url)) pyydetty += ManifestinKoko(url); }
+        static void Valmis(string url) { if (url != null && valmiit.Add(url)) valmisTavuja += ManifestinKoko(url); }
+        /// <summary>0…1 tavuina; nimittäjä vähintään muistettu (edellisen täyden latauksen pyydetyt tavut). NaN = ei tietoa.</summary>
+        public static float Edistys(long muistettu)
+        {
+            long nimittaja = Math.Max(pyydetty, muistettu);
+            if (nimittaja <= 0) return float.NaN;
+            long saapunut = valmisTavuja;
+            foreach (var e in lennossa) { try { saapunut += (long)e.Value.downloadedBytes; } catch (Exception) { } }
+            return Mathf.Clamp01((float)((double)saapunut / nimittaja));
+        }
+
         // --- HAUT ------------------------------------------------------------------------------------------------------
         /// <summary>Tavut välimuistista tai verkosta (onnistunut lataus tarkistetaan ja tallennetaan taustasäikeessä). null = epäonnistui.</summary>
         /// <summary>Testikomento "poikki pakota-virhe N" (Päätoimittaja 5.10.: teardown-kilvan todennus): N valmistuneen tiedoston
@@ -269,6 +294,7 @@ namespace Matkakirja.Natiivi
 
         public static IEnumerator Hae(string url, int aikakatkaisu, Action<byte[]> valmis)
         {
+            Pyyda(url);
             yield return OdotaKesken(url);
             if (Pakotettu()) { Epaonnistui++; valmis(null); yield break; }
             var (paikka, sha) = Paikka(url);
@@ -277,7 +303,7 @@ namespace Matkakirja.Natiivi
                 byte[] luettu = null;
                 var luku = Task.Run(() => { try { luettu = File.ReadAllBytes(paikka); } catch { luettu = null; } });
                 while (!luku.IsCompleted) yield return null;
-                if (luettu != null && luettu.Length > 0) { Osumia++; valmis(luettu); yield break; }
+                if (luettu != null && luettu.Length > 0) { Osumia++; Valmis(url); valmis(luettu); yield break; }
             }
             byte[] tavut = null;
             var pak = Pakattu(url);
@@ -307,7 +333,9 @@ namespace Matkakirja.Natiivi
                     using (var p = UnityWebRequest.Get(pak.Url))
                     {
                         p.timeout = aikakatkaisu;
+                        lennossa[url] = p;
                         yield return p.SendWebRequest();
+                        lennossa.Remove(url);
                         if (p.result == UnityWebRequest.Result.Success) pakattu = p.downloadHandler.data;
                     }
                     if (pakattu != null)
@@ -333,15 +361,17 @@ namespace Matkakirja.Natiivi
                 {
                     using var p = UnityWebRequest.Get(url);
                     p.timeout = aikakatkaisu;
+                    lennossa[url] = p;
                     yield return p.SendWebRequest();
                     if (p.result == UnityWebRequest.Result.Success) tavut = p.downloadHandler.data;
                 }
             }
-            finally { haussa.Remove(url); }
+            finally { haussa.Remove(url); lennossa.Remove(url); }
             if (tavut == null) Epaonnistui++;
             if (tavut != null)
             {
                 Latauksia++;
+                Valmis(url);
                 if (paikka != null)
                 {
                     // Tiiviste ensin, sitten kirjoitus väliaikaiseen ja siirto, ettei keskeytynyt kirjoitus jää puolikkaaksi osumaksi.
@@ -368,6 +398,7 @@ namespace Matkakirja.Natiivi
         /// ensilataus kulkee Hae:n kautta ja kopioidaan kerran. default = epäonnistui. Kutsuja vapauttaa (Dispose).</summary>
         public static IEnumerator HaeNatiivi(string url, int aikakatkaisu, Action<Unity.Collections.NativeArray<byte>> valmis)
         {
+            Pyyda(url);
             yield return OdotaKesken(url);
             if (Pakotettu()) { Epaonnistui++; valmis(default); yield break; }
             var (paikka, _) = Paikka(url);
@@ -403,7 +434,7 @@ namespace Matkakirja.Natiivi
                         catch (Exception) { ok = false; }
                     });
                     while (!luku.IsCompleted) yield return null;
-                    if (ok) { Osumia++; valmis(data); yield break; }
+                    if (ok) { Osumia++; Valmis(url); valmis(data); yield break; }
                     data.Dispose();
                 }
             }
@@ -417,11 +448,12 @@ namespace Matkakirja.Natiivi
         /// edellisen pakettiversion samasisältöinen tiedosto). Vain nykyisen paketin manifestin tiedostot; muut false.</summary>
         public static IEnumerator Esilataa(string url, int aikakatkaisu, Action<bool> valmis)
         {
+            Pyyda(url);
             yield return OdotaKesken(url);
             if (Pakotettu()) { Epaonnistui++; valmis(false); yield break; }
             var (paikka, sha) = Paikka(url);
             if (paikka == null) { valmis(false); yield break; }
-            if (File.Exists(paikka)) { Osumia++; valmis(true); yield break; }
+            if (File.Exists(paikka)) { Osumia++; Valmis(url); valmis(true); yield break; }
             bool ok = false;
             haussa.Add(url);
             try
@@ -477,7 +509,7 @@ namespace Matkakirja.Natiivi
                 }
                 if (ok)
                 {
-                    try { if (File.Exists(paikka)) File.Delete(tmp); else File.Move(tmp, paikka); Latauksia++; }
+                    try { if (File.Exists(paikka)) File.Delete(tmp); else File.Move(tmp, paikka); Latauksia++; Valmis(url); }
                     catch (Exception e) { ok = false; Debug.LogWarning("MATKAKIRJA dioraama: esilataus ei siirtynyt välimuistiin: " + e.Message); }
                 }
                 if (!ok) { try { if (File.Exists(tmp)) File.Delete(tmp); } catch (Exception) { } Epaonnistui++; }
