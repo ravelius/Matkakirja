@@ -119,7 +119,7 @@ import { kaynnistaKarttamittari, mittariPaalla } from './karttamittari.js';
 // Lautojen yhdistetyt sisältötaulut, luentajoukot ja kuratoidut
 // galleriat (siirretty tästä tiedostosta 17.8.2026, remontin M1).
 import {
-  ARTIKKELIT, EI_VALOKUVAKYSYMYKSEEN, HAVAINTOLUENNAT, KAIKKI_VALOKUVAT,
+  ARTIKKELIT, EI_VALOKUVAKYSYMYKSEEN, KAIKKI_VALOKUVAT,
   KULTTUURIT, LAUTA_TUNNUSLUVUT,
   OMAT_GALLERIAT, SAAPUMISLUENNAT, SAAPUMISTEKSTIT, VALOKUVAT, luentaLauta,
 } from './sisaltotaulut.js';
@@ -14377,85 +14377,10 @@ export class UI {
         return;
       }
 
-      const faktat = game.pack.placeFacts?.[saapuminen.cityId] ?? [];
-      const isoisanIdx = faktat.findIndex((f) => factVoice(f) === 'isoisa');
-      const fakta = faktat[isoisanIdx >= 0 ? isoisanIdx : 0];
-      if (fakta && kaupunki) {
-        const luentaAvain = `saapui:${saapuminen.packId}:${saapuminen.cityId}`;
-        const key = luentaAvain + aikatauluLisa;
-        if (this.factKey === key) return;
-        this.uusiFactKey(key);
-        this.asetaOtsake(voiceTitle(factVoice(fakta)));
-        this.asetaPaikkarivi(kaupunki.name);
-        this.factImageTitle = typeof fakta === 'string' ? null : fakta.wiki ?? null;
-        this.factImage.hidden = !this.factImageTitle;
-        // Vanha valokuva kaupungista pikkukuvana tekstin kylkeen.
-        this.naytaFactValokuva(saapuminen.cityId, kaupunki.name);
-        // Ensimmäinen lause lihavoituna, loput perään samalla koneella.
-        const teksti = factText(fakta);
-        const { eka, loput } = ekaLause(teksti);
-        this.factText.textContent = '';
-        const lihava = html('b', 'fact-lead');
-        const jatko = html('span');
-        this.factText.appendChild(lihava);
-        this.factText.appendChild(document.createTextNode(' '));
-        this.factText.appendChild(jatko);
-        this.typeText(lihava, eka, 'fact', () => {
-          const loppuun = () => {
-            const rivi = this.aikatauluRivi();
-            if (rivi) this.factText.appendChild(rivi);
-          };
-          if (loput) this.typeText(jatko, loput, 'fact', loppuun);
-          else loppuun();
-        });
-        // Luenta pysähtyy ensimmäisen virkkeen jälkeiseen hengähdykseen —
-        // kaiutin jatkaa samasta kohdasta. Vihjeen tai aikataulun väläys
-        // ei käynnistä luentaa uudelleen samassa kaupungissa.
-        //
-        // Lukijaääni ensin (14.8.2026): havainto luetaan striimaten
-        // tekstistä — ensimmäinen virke heti, loput kaiuttimesta.
-        if (puheTuettu()) {
-          this.diaryFullUrl = null;
-          this.naytaMerkinnanKaiutin(false);
-          const aloitaHavainto = () => {
-            if (kertojaTila() === 'ei') return;
-            stopDiaryVoice(this);
-            this.merkintaJatko = loput || null;
-            lueMerkinta(this, eka, { viive: 1000 });
-          };
-          if (this.luettuSaapuminen !== luentaAvain && kertojaTila() !== 'ei') {
-            this.luettuSaapuminen = luentaAvain;
-            this.asetaMerkinnanLuenta(aloitaHavainto);
-          } else {
-            stopDiaryVoice(this);
-            this.asetaMerkinnanLuenta(aloitaHavainto, { aloita: false });
-          }
-          return;
-        }
-        const havaintoLauta = luentaLauta(HAVAINTOLUENNAT, saapuminen.packId, saapuminen.cityId);
-        this.diaryFullUrl = havaintoLauta
-          ? `assets/audio/puhe-${havaintoLauta}-havainto-${saapuminen.cityId}.mp3`
-          : null;
-        this.naytaMerkinnanKaiutin(Boolean(havaintoLauta));
-        const havaintoAani = this.diaryFullUrl;
-        const soitaHavainto = havaintoLauta ? () => {
-          if (kertojaTila() === 'ei') return;
-          playDiaryVoice(this, havaintoAani, {
-            ekaLauseeseen: true,
-            // Ensimmäisen virkkeen osuus tekstistä ohjaa tauon valintaa.
-            osuus: teksti.length ? eka.length / teksti.length : null,
-            viive: 1000,
-          });
-        } : null;
-        if (soitaHavainto && this.luettuSaapuminen !== luentaAvain && kertojaTila() !== 'ei') {
-          this.luettuSaapuminen = luentaAvain;
-          this.asetaMerkinnanLuenta(soitaHavainto);
-        } else {
-          stopDiaryVoice(this);
-          this.asetaMerkinnanLuenta(soitaHavainto, { aloita: false });
-        }
-        return;
-      }
+      // SAAPUMISEN VARATEKSTI POISTETTU (omistaja 6.10.2026: "Nuo varatekstit kannattaa poistaa koko pelistä. Se kuulostaa
+      // vaaralliselta, että siellä on roikkumassa tälläisiä tekstejä."): ilman kaupungin omaa merkintää saapuminen etenee
+      // ilman varatekstiä — ei paikkatiedon ensimmäistä virkettä luentoineen eikä arvottua paikkatietoa korttiin.
+      if (kaupunki) return;
     }
 
     const player = game.player;
