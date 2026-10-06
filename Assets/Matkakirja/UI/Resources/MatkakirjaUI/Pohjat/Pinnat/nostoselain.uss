@@ -336,6 +336,8 @@
 .mk-nostoselain .mk-nostoselain__auto {
     border-width: 0;
     border-radius: var(--tk-kulma-nappi);
+    /* UITK mittaa harvennetun tekstin kapeammaksi kuin piirtää (stillit k2: "● AUTO" taustan reunoilla) → vali-l, näkyvä väli ~8 pt */
+    padding: 0 var(--tk-vali-l);
     background-color: initial;
 }
 
