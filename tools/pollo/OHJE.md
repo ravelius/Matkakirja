@@ -174,6 +174,14 @@ koodimuutos main-haarassa julkaisee workerin uudelleen itsestään.
   {id, nimi, koukku, kaupunki, iso, lat, lon, alarivi, kuva|null}]}`. Lista on vakaa (R2 30 vrk), ja maanosat ovat tasaisesti.
   Koordinaatit, kuvaus ja P18-kuva haetaan erinä (`kohteetErana`, muutama alipyyntö), ja kuva tulee vain tekijä- ja
   lisenssitiedoin. Täkyjen oletuspyyntö (8, päivittäin) lämmittää listan taustalla.
+- **"Mikä tämä on?"** (omistaja 6.10.2026; Päätoimittaja): `GET /opas/lahella?lat&lon&r` → `{r, laajennettu, kohteet: [enintään
+  8 × {id, nimi, alarivi, etaisyys_m, lat, lon, kuva|null}]}` etäisyysjärjestyksessä. Säde r on oletuksena 150 m (25–400). Jos
+  säteeltä ei löydy mitään, haetaan 400 m:stä (`laajennettu: true`). Lähde on Wikipedian geohaku (fi + en; artikkeli = tunnettu).
+  Wikidatan tyypeillä pois jäävät ihmiset, järjestöt, tapahtumat, asutukset, kadut ja puretut rakennukset (P576, Q19860854).
+  Nimi tulee fi-Wikipedian otsikosta tai nimiöstä (`suomiNimi`), kuva Commonsista vain tekijätiedoin. WDQS (SPARQL) jätettiin
+  pois: se oli 6.10. rajoitettu yhteen pyyntöön minuutissa. Ehdokkaat tallennetaan ruuduittain (0,002°, R2 30 vrk, 3–5
+  alipyyntöä kylmänä). Jerusalemin alueella alarivistä jätetään maan nimi pois. Valitusta kohteesta kysytään `POST
+  /opas/kysy` -polulla (`paikka: {id, nimi, lat, lon}`).
 - **Testit eivät tuota ääntä** (omistaja 6.10.2026, sitova): roolien testitunnus (`x-matkakirja-testitunnus`) ja
   testiotsake (`x-matkakirja-testi: 1`) eivät koskaan kutsu puhemoottoria (ElevenLabs, xAI, OpenAI). Luenta palauttaa
   valmiin äänen säilöistä tai 204, opas antaa ääni-urlin vain R2:ssa jo olevalle äänelle, eivätkä GET-polut tuota.

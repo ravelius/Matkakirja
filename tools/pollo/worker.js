@@ -23,7 +23,7 @@ import {
   OPAS_KEHOTE, siivoaOpasPyynto, kaupunginSijainti, paikanKoordinaatit, kaydytNimiksi, oppaanViesti, jasennaOpas,
   kaupunginAineisto, kuvatPaikalle, wikidataKuva, lisaKuvatValimuistilla, yhdistaKuvat, OPAS_KIERROS_KEHOTE, kierroksenViesti, jasennaKierros,
   seuraavaKierrokselta, paikanNimi, onKierrosToive, ESITTELE_KAUPUNKI, LISAA_KAUPUNKIA, KIERROKSEN_PITUUS, jarjestaReitti,
-  seuraavaSuunta, SUUNNANVAIHDOT, paikanKorostus, siltaRyhma, kuvallaTekijatiedot, kohteetErana,
+  seuraavaSuunta, SUUNNANVAIHDOT, paikanKorostus, siltaRyhma, kuvallaTekijatiedot, kohteetErana, kohteetLahella, etaisyys,
 } from './opas.js';
 import { OPAS_AINEISTO } from './opas-aineisto.js';
 import {
@@ -32,7 +32,8 @@ import {
 } from './opaskeskustelu.js';
 import { reunaLue, reunaKirjoita, reunaPoista, pysyvaLue, pysyvaKirjoita, pysyvaPoista, kvLue, kvKirjoita } from './reuna.js';
 import {
-  KOHTEET_KEHOTE, kohteidenViesti, jasennaKohteet, kohdeAvain, paivaUtc, eilenUtc, MAAILMAN_SUOSIKKEJA, maailmanSuosikitAvain, neutraalitKohteet, lyhytAlarivi,
+  KOHTEET_KEHOTE, kohteidenViesti, jasennaKohteet, kohdeAvain, paivaUtc, eilenUtc, MAAILMAN_SUOSIKKEJA, maailmanSuosikitAvain, neutraalitKohteet, lyhytAlarivi, jerusalemissa, ilmanMaanNimea,
+  LAHELLA_OLETUS_M, LAHELLA_LAAJA_M, LAHELLA_ENINTAAN, LAHELLA_HAKUSADE_M, lahellaRuutu,
   MAAILMAN_SUOSIKIT_KEHOTE,
 } from './kohteet.js';
 import {
@@ -3045,6 +3046,57 @@ async function hoidaOppaanKohteet(pyynto, env, kors, ctx) {
   }
 }
 
+/**
+ * GET /opas/lahella?lat=&lon=&r= ("Mikä tämä on?", omistaja 6.10.2026): enintään 8 tunnettua kohdetta säteeltä r (oletus 150 m,
+ * enintään 400 m; tyhjästä laajennetaan 400 m:iin) etäisyysjärjestyksessä: { r, laajennettu, kohteet: [{ id, nimi, alarivi,
+ * etaisyys_m, lat, lon, kuva }] }. Ehdokkaat ruuduittain R2:ssa 30 vrk (lahellaRuutu); rinnakkaiset haut jakavat saman haun.
+ * Valitusta kohteesta opas kertoo /opas/kysy-polulla (paikka { id, nimi, lat, lon }).
+ */
+const lahellaKaynnissa = new Map();
+async function ruudunKohteet(env, lat, lon) {
+  const { keskus, avain } = lahellaRuutu(lat, lon);
+  const talletettu = await pysyvaLue(env.PUHE_R2, avain);
+  if (talletettu) { try { return JSON.parse(talletettu); } catch { /* uusi */ } }
+  if (lahellaKaynnissa.has(avain)) return lahellaKaynnissa.get(avain);
+  const haku = (async () => {
+    const kohteet = await kohteetLahella(fetch, keskus, LAHELLA_HAKUSADE_M);
+    await pysyvaKirjoita(env.PUHE_R2, avain, JSON.stringify(kohteet), 30 * 86400);
+    return kohteet;
+  })();
+  lahellaKaynnissa.set(avain, haku);
+  try { return await haku; } finally { lahellaKaynnissa.delete(avain); }
+}
+
+async function hoidaOppaanLahella(pyynto, env, kors) {
+  if (!oppaanAsiakas(pyynto, kors, env)) return new Response('Origin ei ole sallittu', { status: 403 });
+  const ip = pyynto.headers.get('cf-connecting-ip');
+  if (ip && oppaanTiheysYlittyy(`lahella:${ip}`, Date.now(), 30)) {
+    return vastaa({ virhe: 'liian-tiheaan', viesti: 'Hetki, katson pian uudelleen.' }, { status: 429, ...kors });
+  }
+  const url = new URL(pyynto.url);
+  const lat = Number(url.searchParams.get('lat')), lon = Number(url.searchParams.get('lon'));
+  if (!Number.isFinite(lat) || !Number.isFinite(lon) || Math.abs(lat) > 90 || Math.abs(lon) > 180) {
+    return vastaa({ virhe: 'kysely', viesti: 'Sijainti puuttuu.' }, { status: 400, ...kors });
+  }
+  const pyydetty = Number(url.searchParams.get('r'));
+  const r = Math.min(LAHELLA_LAAJA_M, Math.max(25, Number.isFinite(pyydetty) && pyydetty > 0 ? pyydetty : LAHELLA_OLETUS_M));
+  let ehdokkaat;
+  try {
+    ehdokkaat = await ruudunKohteet(env, lat, lon);
+  } catch (virhe) {
+    console.log(`opas: lähellä epäonnistui (${virhe?.message ?? 'verkko'})`);
+    return vastaa({ virhe: 'palvelin', viesti: 'En saanut juuri nyt tietoja. Yritä hetken päästä.' }, { status: 502, ...kors });
+  }
+  const piste = { lat, lon };
+  const jer = jerusalemissa(piste);
+  const etaisyydella = ehdokkaat.map((k) => ({ id: k.id, nimi: k.nimi, alarivi: lyhytAlarivi(jer ? ilmanMaanNimea(k.alarivi) : k.alarivi),
+    etaisyys_m: etaisyys(piste, k), lat: k.lat, lon: k.lon, kuva: k.kuva ?? null })).sort((a, b) => a.etaisyys_m - b.etaisyys_m);
+  let kohteet = etaisyydella.filter((k) => k.etaisyys_m <= r);
+  const laajennettu = !kohteet.length && r < LAHELLA_LAAJA_M;
+  if (laajennettu) kohteet = etaisyydella.filter((k) => k.etaisyys_m <= LAHELLA_LAAJA_M);
+  return vastaa({ r: laajennettu ? LAHELLA_LAAJA_M : r, laajennettu, kohteet: kohteet.slice(0, LAHELLA_ENINTAAN) }, kors);
+}
+
 /* ---- ELÄVÄN OPPAAN OHJAIMET (opaskeskustelu.js; omistaja 6.10.2026, opas-juna 148) -------------------------------- */
 
 /** Natiivi tai sallittu origin (GET-reitit kuten /opas/kohteet). */
@@ -3441,6 +3493,7 @@ export default {
     if (pyynto.method === 'GET' && new URL(pyynto.url).pathname === '/opas/kohteet') return hoidaOppaanKohteet(pyynto, env, kors, ctx);
     if (pyynto.method === 'GET' && new URL(pyynto.url).pathname === '/opas/kysymykset') return hoidaOppaanKysymykset(pyynto, env, kors);
     if (pyynto.method === 'GET' && new URL(pyynto.url).pathname === '/opas/liiku') return hoidaOppaanLiiku(pyynto, env, kors);
+    if (pyynto.method === 'GET' && new URL(pyynto.url).pathname === '/opas/lahella') return hoidaOppaanLahella(pyynto, env, kors);
     if (pyynto.method !== 'POST') {
       return vastaa({ virhe: 'menetelma', viesti: 'Vain POST.' }, { status: 405, ...kors });
     }

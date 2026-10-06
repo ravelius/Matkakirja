@@ -61,7 +61,7 @@ test('/opas/kohteet?n=50: 50 kohdetta erähaulla, kuvat vain tekijätiedoin, toi
     assert.match(d.kohteet[0].alarivi, /kuvaus Q100/);
     assert.equal(d.kohteet[1].nimi, 'Oikea nimi', 'Wikidatan suomenkielinen nimiö voittaa mallin nimen');
     assert.equal(d.kohteet[0].nimi, 'Kohde 0', 'ilman nimiötä mallin nimi');
-    assert.equal(d.kohteet[3].nimi, 'Wikipedian nimi', 'fi-Wikipedian otsikko ilman tarkenninta voittaa nimiön');
+    assert.equal(d.kohteet[3].nimi, 'Nimiö', 'tarkentimellinen otsikko → nimiö ("Aleksanteri II (patsas, Helsinki)" → "…muistomerkki")');
     assert.equal(d.kohteet[4].alarivi, 'pilvenpiirtäjä ja maailman korkein rakennus Dubaissa Yhdistyneissä…', 'alarivi sanarajalla');
     const jer = d.kohteet[2];
     assert.deepEqual([jer.kaupunki, jer.iso, jer.alarivi], ['Jerusalem', null, null], 'kiistanalainen sijainti neutraalisti (Päätoimittaja 6.10.)');
