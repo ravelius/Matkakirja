@@ -17,6 +17,7 @@ namespace Matkakirja.Natiivi
         readonly object lukko = new object();
         short[] data;
         int kirjoitettu, luettu, katkoja;
+        long annettu, loppuKohta = -1;   // Unitylle annetut näytteet (data + hiljaisuus) ja kohta, jossa viimeinen datanäyte annettiin
         bool parittomia; byte pariton;
         bool alivuoto, puskuroi;
         /// <summary>Alivuodon jälkeen soitto jatkuu, kun puskurissa on näin paljon (s) tai lataus on valmis (Päätoimittaja: ~2 s).</summary>
@@ -58,6 +59,13 @@ namespace Matkakirja.Natiivi
         public bool Loppui { get { lock (lukko) return Valmis && luettu >= kirjoitettu; } }
         public int Katkoja => katkoja;
 
+        /// <summary>
+        /// SOITETTU LOPPUUN (simu 6.10. 17.0x: kierros lähti ~1,6 s ennen kerronnan loppua, koska Unity lukee virtaklippiä etukäteen
+        /// eikä "kaikki luettu" tarkoita "kaikki kuultu"): klipin soittokohta (AudioSource.timeSamples) on ohittanut kohdan, jossa
+        /// viimeinen datanäyte annettiin Unitylle.
+        /// </summary>
+        public bool SoitettuLoppuun(int soittokohta) { lock (lukko) return loppuKohta >= 0 && soittokohta >= loppuKohta; }
+
         /// <summary>AudioClipin PCMReaderCallback (äänisäie).</summary>
         public void Lue(float[] ulos)
         {
@@ -70,6 +78,8 @@ namespace Matkakirja.Natiivi
                 {
                     if (!puskuroi && luettu < kirjoitettu) ulos[i] = data[luettu++] / 32768f;
                     else { ulos[i] = 0f; if (!puskuroi) vaje = true; }
+                    annettu++;
+                    if (loppuKohta < 0 && Valmis && luettu >= kirjoitettu) loppuKohta = annettu;
                 }
                 if (vaje && !Valmis && !alivuoto) { alivuoto = true; katkoja++; puskuroi = true; }
                 else if (!vaje) alivuoto = false;

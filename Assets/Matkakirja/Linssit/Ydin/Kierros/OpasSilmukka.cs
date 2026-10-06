@@ -427,6 +427,8 @@ namespace Matkakirja.Linssit.Kierros
         /// <summary>Automaattiset pyynnöt seis (keskeytetty kierros tai vapaa tila); kysymykset ja pelaajan valinnat toimivat.</summary>
         bool Pysaytetty => KierrosKeskeytetty || VapaaTila;
         OpasKohde jatkoKohde;
+        /// <summary>Keskeytetyn kierroksen kesken jäänyt kohde (luetaan JATKA:ssa alusta); sovitin pitää sen äänen tallessa.</summary>
+        public OpasKohde JatkoKohde => jatkoKohde;
         (int, int) keskeytysTieto;
 
         /// <summary>Kamera jää nykyiseen asentoon (lento keskeytyy): uusi kehys tähän, kierto jatkuu tästä.</summary>
@@ -646,7 +648,8 @@ namespace Matkakirja.Linssit.Kierros
             {
                 case OpasVaihe.Alku:
                 case OpasVaihe.Odottaa:
-                    if (NykyinenKehys != null) PysahdysAsento(dt);
+                    if (VapaaAsento(dt)) { }
+                    else if (NykyinenKehys != null) PysahdysAsento(dt);
                     else
                     {
                         // Avaus: kamera lähtee heti laskeutumaan kaupungin ylle, kun worker suunnittelee (ei pysähtynyttä kuvaa).
@@ -658,7 +661,7 @@ namespace Matkakirja.Linssit.Kierros
                     if (Seuraava != null && aaniLoppuiTaiAlku() && !OdottaaVastausta && !OhjausPitaa) AloitaLento(maaKorkeus);
                     break;
                 case OpasVaihe.Puhuu:
-                    PysahdysAsento(dt);
+                    if (!VapaaAsento(dt)) PysahdysAsento(dt);   // vapaassa tilassa kysymyksen vastaus ei palauta kameraa
                     if (aaniLoppui && VaiheAika >= TaukoS && hiljaS >= LoppuTaukoS && Seuraava != null && !OhjausPitaa) AloitaLento(maaKorkeus);
                     else if (aaniLoppui && Seuraava == null && odotettu == 0) { Vaihe = OpasVaihe.Odottaa; VaiheAika = 0; }
                     break;
@@ -703,6 +706,7 @@ namespace Matkakirja.Linssit.Kierros
                     {
                         NykyinenKehys = kohdeKehys; kierto = 0;
                         Vaihe = OpasVaihe.Puhuu; VaiheAika = 0;
+                        if (VapaaTila) vapaaKehyksessa = true;   // vapaassa tilassa lennetty kohde: kehys kerronnan ajan
                         if (!puheAloitettu) aaniLoppui = false;
                         if (Nykyinen.Id != null) nahdyt.Add(Nykyinen.Id);
                         Saapui?.Invoke(Nykyinen);
@@ -751,6 +755,36 @@ namespace Matkakirja.Linssit.Kierros
         /// </summary>
         public readonly OpasOhjaus Ohjaus = new OpasOhjaus();
         public (double kierto, double korkeus, double etaisyys) Tapit;
+        /// <summary>Vapaan tilan tapit (Linssiseppä 2, juna 152): vasen x/y ja oikea x/y −1…1 (y + = ylös); OpasVapaaLento.</summary>
+        public (double vx, double vy, double ox, double oy) VapaaTapit;
+        /// <summary>Vapaa lento kierroksen ■ jälkeen (VapaaTila): kamera tapeilla ilman kiertokeskipistettä.</summary>
+        public readonly OpasVapaaLento Vapaa = new OpasVapaaLento();
+        bool vapaaKaynnissa, vapaaKehyksessa;
+        double vapaaNayteS;
+
+        /// <summary>Vapaassa tilassa asento vapaasta lennosta (aloitus nykyisestä asennosta); muuten false.</summary>
+        bool VapaaAsento(double dt)
+        {
+            if (!VapaaTila) { vapaaKaynnissa = false; return false; }
+            // Mikä tämä on? (LS1, juna 152): kohteeseen lennetty → kamera kiertää kohdetta kerronnan ajan, ja vapaa lento jatkuu
+            // sen jälkeen siitä asennosta (ei hyppyä takaisin vapaan lennon vanhaan paikkaan).
+            if (vapaaKehyksessa)
+            {
+                if (Vaihe == OpasVaihe.Puhuu && !aaniLoppui) { vapaaKaynnissa = false; return false; }
+                vapaaKehyksessa = false;
+            }
+            if (!vapaaKaynnissa) { Vapaa.Aloita(Asento, MaaPisteessa); vapaaKaynnissa = true; }
+            Asento = Vapaa.Paivita(dt, VapaaTapit.vx, VapaaTapit.vy, VapaaTapit.ox, VapaaTapit.oy, MaaPisteessa);
+            // 3D-pinnan näytteet (rakennukset mukana) kamerasta ja liikkeen suunnasta 4 kertaa sekunnissa (sovitin välimuistittaa ~11 m:n ruutuun).
+            vapaaNayteS -= dt;
+            if (vapaaNayteS <= 0)
+            {
+                vapaaNayteS = 0.25;
+                MaaTarvitaan?.Invoke(Vapaa.Lat, Vapaa.Lon);
+                var (el, eo) = Vapaa.Ennakko; MaaTarvitaan?.Invoke(el, eo);
+            }
+            return true;
+        }
         public bool PelaajaOhjaa;
         /// <summary>Kuva koko ruudulla (Kuvasuurennos): pysähdyksen kierto ja dolly seis; puhe jatkuu.</summary>
         public bool KameraSeis;

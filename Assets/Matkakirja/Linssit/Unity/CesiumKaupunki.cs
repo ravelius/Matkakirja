@@ -37,7 +37,88 @@ namespace Matkakirja.Natiivi
         /// sama kulmatarkkuus ja laattamäärä kuin iPhonella.
         /// </summary>
         public const float ViiteKorkeusPx = 1206f;
-        public static float SseKerroin => Mathf.Max(1f, Mathf.Min(Screen.width, Screen.height) / ViiteKorkeusPx);
+        /// <summary>Näytön kerroin (iPhone-vastaava laattamäärä): iPad Pro 13" 1,71, iPhone 1.</summary>
+        public static float NayttoKerroin => Mathf.Max(1f, Mathf.Min(Screen.width, Screen.height) / ViiteKorkeusPx);
+        /// <summary>Käytössä oleva kerroin: avauksessa vapaan muistin mukaan valittu (ValitseKerroin), muuten näytön kerroin.</summary>
+        public static float SseKerroin => kerroin > 0f ? kerroin : NayttoKerroin;
+        static float kerroin = -1f;
+
+        /// <summary>
+        /// TARKKUUS MUISTIN MUKAAN (Päätoimittaja 6.10. 16.2x, omistaja: "näkyykö grafiikka nyt huonompana"): kerroin valitaan
+        /// kaupungin avautuessa os_proc_available_memory():n mukaan niin, että kaupungin arvioidun huipun jälkeen vapaata jää
+        /// vähintään MarginaaliGt (muistioikeudella vara on suurempi → tarkempi kuva), aina välillä 1…NayttoKerroin.
+        /// Kaupungin muistin kasvu kertoimella k ≈ KaupunkiGt × (NayttoKerroin / k)^Eksponentti, missä KaupunkiGt on laitteen
+        /// kasvu iPhone-vastaavalla laattamäärällä (simu 6.10.: Akropolis 1,3 Gt × laitekerroin 1,85 ≈ 2,4 Gt) ja eksponentti
+        /// laattojen ja tekstuurien mitattu riippuvuus (1396 → 743 laattaa, 1450 → 942 Mt kertoimella 1,71). Hätävahti: jos
+        /// vapaa muisti laskee alle HataGt:n näkymän aikana, kerroin nousee kerran ×1,3 (laatat latautuvat uudelleen, ei kaatumista).
+        /// </summary>
+        public const double MarginaaliGt = 1.5, KaupunkiGt = 2.4, Eksponentti = 0.8, HataGt = 0.7;
+
+        /// <summary>Prosessin vapaa muisti ennen jetsam-rajaa (tavua); −1 = ei tiedossa (editori, simu palauttaa 0).</summary>
+        public static long VapaaMuisti()
+        {
+            // VAIN TESTIKÄYTTÖÖN (Päätoimittaja 6.10. 17.1x: still-pari simulla, kehityskäännös ei saa muistioikeutta):
+            // Documents/kaupunki-vapaa-muisti.txt "7.0" = vapaa muisti 7 Gt (simu palauttaa muuten 0 → ei tiedossa).
+            try
+            {
+                var p = Path.Combine(Application.persistentDataPath, "kaupunki-vapaa-muisti.txt");
+                if (File.Exists(p) && double.TryParse(File.ReadAllText(p).Trim(), System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out var gt) && gt > 0)
+                    return (long)(gt * 1e9);
+            }
+            catch (Exception) { }
+#if UNITY_IOS && !UNITY_EDITOR
+            long v = (long)os_proc_available_memory();
+            return v > 0 ? v : -1;
+#else
+            return -1;
+#endif
+        }
+#if UNITY_IOS && !UNITY_EDITOR
+        [System.Runtime.InteropServices.DllImport("__Internal")] static extern System.UIntPtr os_proc_available_memory();
+#endif
+
+        /// <summary>Kerroin vapaasta muistista (Gt) ja näytön kertoimesta; vapaa ≤ 0 = ei tiedossa → näytön kerroin.</summary>
+        public static float KerroinMuistille(double vapaaGt, float naytto)
+        {
+            if (naytto <= 1f || vapaaGt <= 0) return Mathf.Max(1f, naytto);
+            double budjetti = vapaaGt - MarginaaliGt;
+            if (budjetti <= 0.1) return naytto;
+            double k = naytto * System.Math.Pow(KaupunkiGt / budjetti, 1.0 / Eksponentti);
+            return Mathf.Clamp((float)k, 1f, naytto);
+        }
+
+        /// <summary>Kehittäjän kuvapari: Documents/kaupunki-sse-kerroin.txt pakottaa kertoimen (esim. 1.71 = nykyinen, 1 = täysi).</summary>
+        static float PakotettuKerroin()
+        {
+            try
+            {
+                var p = Path.Combine(Application.persistentDataPath, "kaupunki-sse-kerroin.txt");
+                if (File.Exists(p) && float.TryParse(File.ReadAllText(p).Trim(), System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out var v) && v >= 1f) return v;
+            }
+            catch (Exception) { }
+            return -1f;
+        }
+
+        float muistiTarkistettu, muistiKirjattu;
+        bool hataKaytetty;
+        long minVapaa = long.MaxValue;
+
+        /// <summary>Kerran 2 s:ssa näkymän aikana: vapaa muisti alle HataGt → kerroin ×1,3 kerran (Cesium lataa laatat uudelleen).</summary>
+        void Muistivahti()
+        {
+            if (!auki || maasto == null || Time.realtimeSinceStartup - muistiTarkistettu < 2f) return;
+            muistiTarkistettu = Time.realtimeSinceStartup;
+            long v = VapaaMuisti();
+            if (v > 0 && v < minVapaa) minVapaa = v;
+            // Laitemittaus (Päätoimittaja: huippu ja vapaa muisti ennen/jälkeen): vapaa nyt ja pienin 15 s välein.
+            if (v > 0 && Time.realtimeSinceStartup - muistiKirjattu > 15f)
+            { muistiKirjattu = Time.realtimeSinceStartup; kirjaa($"kaupunki: vapaa muisti {v / 1e9:F2} Gt (pienin {minVapaa / 1e9:F2} Gt), kerroin {SseKerroin:F2}, laatat {Latausaste:F0} %"); }
+            if (hataKaytetty || v <= 0 || v / 1e9 >= HataGt) return;
+            hataKaytetty = true;
+            kerroin = SseKerroin * 1.3f;
+            maasto.maximumScreenSpaceError = (Kaytossa == Lahde.Google ? GoogleSse : MaastoSse) * kerroin;
+            kirjaa($"kaupunki: MUISTIHÄTÄ vapaa {v / 1e9:F2} Gt → kerroin {kerroin:F2}, SSE {maasto.maximumScreenSpaceError:F1}");
+        }
         public const long GoogleAsset = 2275207;
         public const uint Rinnakkain = 12;   // 8 → 12 (omistaja TF 144: nopeampi lento, saapuessa laatat 68 %)
         /// <summary>Laattojen valmiusraja (%): ComputeLoadProgress on arvio, joten 100 ei aina täyty.</summary>
@@ -131,6 +212,7 @@ namespace Matkakirja.Natiivi
         public void PidaMaski()
         {
             if (auki && kamera != null && kamera.cullingMask != 1 << Kerros) kamera.cullingMask = 1 << Kerros;
+            Muistivahti();
         }
         public Cesium3DTileset Rakennukset => rakennukset;
 
@@ -195,6 +277,12 @@ namespace Matkakirja.Natiivi
             if (georef == null || kamera == null) { Virhe = "pallon kamera puuttuu"; return false; }
             auki = true;
             avausAika = Time.realtimeSinceStartup;
+            // Tarkkuus muistin mukaan ennen tilesettien luontia (LuoTileset käyttää SseKerrointa).
+            long vapaa = VapaaMuisti();
+            float pakotettu = PakotettuKerroin();
+            kerroin = pakotettu > 0 ? pakotettu : KerroinMuistille(vapaa / 1e9, NayttoKerroin);
+            hataKaytetty = false; muistiTarkistettu = 0f; muistiKirjattu = 0f; minVapaa = long.MaxValue;
+            kirjaa($"kaupunki: muisti vapaa {(vapaa > 0 ? (vapaa / 1e9).ToString("F2") + " Gt" : "ei tiedossa")}, näyttö {Screen.width}×{Screen.height} (kerroin {NayttoKerroin:F2}) → SSE-kerroin {kerroin:F2}{(pakotettu > 0 ? " (pakotettu)" : "")}");
 
             // Pallon tileset: ei SetActivea (pallo on samassa oliossa kuin georeferenssi → SetOrigin heitti "Initialize"-poikkeuksen, simu 18.0x).
             palloTileset = KarttaKerrokset.Instanssi != null ? KarttaKerrokset.Instanssi.pallo : null;
