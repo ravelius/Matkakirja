@@ -154,6 +154,9 @@ namespace Matkakirja.Natiivi
             silmukka = new OpasSilmukka(alku);
             // AVAUS ILMAN KARTTAA (omistaja 6.10. 14.2x, juna 149): täkyavauksessa Cesium avataan vasta pelaajan valinnasta
             // (AvaaKaupunki), joten aloitusvalikko aukeaa heti eikä yhtään laattaa ladata ennen valintaa.
+            // Natiivi-UI nostaa TakyAvaus-lipun valikon Nayta-kutsussa (KytkeChat): kytke ensin, päätä sitten (simu 6.10. 17.00:
+            // lippu nousi vasta tämän jälkeen, ja kartta latautui turhaan mustan aloitusvalikon taakse).
+            KytkeChat(true);
             kaupunkiOdottaa = TakyAvaus && !Testi;
             if (kaupunkiOdottaa) silmukka.PakotaSiirto = true;   // mikä tahansa ensimmäinen liike avaa kartan siirtoruudun kautta
             if (!kaupunkiOdottaa && !kaupunki.Avaa(alku.Lat, alku.Lon, 45))
@@ -176,7 +179,7 @@ namespace Matkakirja.Natiivi
                 puhe = o.gameObject.AddComponent<AudioSource>();
                 puhe.playOnAwake = false; puhe.spatialBlend = 0f; puhe.loop = false;
             }
-            KytkeChat(true);   // chat ei aukea itsestään (opas kevyeksi, Päätoimittaja 5.10.): vain valikon "Näytä teksti" -rivistä
+            // KytkeChat(true) ajettiin jo ennen karttapäätöstä; chat ei aukea itsestään (opas kevyeksi, Päätoimittaja 5.10.), vain valikon "Näytä teksti" -rivistä
             silmukka.Pyyda += Pyyda;
             silmukka.Saapui += Saapui;
             silmukka.Hiljenna += Hiljenna;
