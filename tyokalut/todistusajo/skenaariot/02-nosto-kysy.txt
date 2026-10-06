@@ -1,0 +1,13 @@
+# 02 Nostokortti → Kysy → Pulun chat → ohinapautus sulkee (iPhone 402×874 pt; tap-teksti toimii kaikilla laitteilla)
+ui nosto kohde:pompeji@ITA
+oleta 60 ui nosto kohde:pompeji@ITA: auki -- nostokortti avautui
+nakyy 20 Pompejin Forum -- kortin kuvateksti näkyy
+odota 3
+kuva 02a-nosto-auki Nostokortti auki (Pompeji)
+tap-teksti Kysy
+nakyy 6 Olen Livia -- Kysy avasi Pulun chatin
+kuva 02b-chat-auki Pulun chat auki nostokortista
+tap 200 250
+ei-nay 6 Olen Livia -- ohinapautus kartalle sulki chatin
+kuva 02c-chat-suljettu Chat suljettu ohinapautuksella
+aanitaso 3
