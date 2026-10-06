@@ -1,0 +1,575 @@
+{
+ "kaupunki": "islanti",
+ "kaupunkiQ": "Q189",
+ "kohteet": [
+  {
+   "q": "Q271466",
+   "nimi": "Hallgrímskirkja",
+   "peruste": "sitelinks",
+   "koko_m": 80,
+   "lat": 64.14194,
+   "lon": -21.92694,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Hallgrimskirkja mai 2026.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hallgrimskirkja_mai_2026.jpg?width=1280",
+     "tekija": "Steinninn",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Hallgrimskirkja_mai_2026.jpg",
+     "selite": "Hallgrímskirkja on Reykjavíkin korkeimpia rakennuksia, ja sen torni kohoaa kaupungin yli.",
+     "leveys": 1318,
+     "korkeus": 1157,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Hallgrimskirkja 2026.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hallgrimskirkja_2026.jpg?width=1280",
+     "tekija": "VeraVidiVici",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Hallgrimskirkja_2026.jpg",
+     "selite": "Kirkon julkisivu muistuttaa basalttipylväitä.",
+     "leveys": 4080,
+     "korkeus": 3060,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q38519",
+   "nimi": "Gullfoss",
+   "peruste": "sitelinks",
+   "koko_m": 400,
+   "lat": 64.32611,
+   "lon": -20.12111,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Gullfoss, Suðurland, Islandia, 2014-08-16, DD 123.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gullfoss%2C_Su%C3%B0urland%2C_Islandia%2C_2014-08-16%2C_DD_123.JPG?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Gullfoss%2C_Su%C3%B0urland%2C_Islandia%2C_2014-08-16%2C_DD_123.JPG",
+     "selite": "Gullfoss eli Kultainen putous syöksyy kahdessa portaassa Hvítá-joen kanjoniin.",
+     "leveys": 5390,
+     "korkeus": 3329,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Gullfoss (Golden Falls) is a waterfall located in the canyon of Hvítá river in southwest Iceland. (21675419004).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gullfoss_(Golden_Falls)_is_a_waterfall_located_in_the_canyon_of_Hv%C3%ADt%C3%A1_river_in_southwest_Iceland._(21675419004).jpg?width=1280",
+     "tekija": "Bryan Ledgard",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Gullfoss_(Golden_Falls)_is_a_waterfall_located_in_the_canyon_of_Hv%C3%ADt%C3%A1_river_in_southwest_Iceland._(21675419004).jpg",
+     "selite": "Putouksen suihku nousee kanjonin seinämien väliin.",
+     "leveys": 4608,
+     "korkeus": 3072,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "GullfossOverview.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/GullfossOverview.jpg?width=1280",
+     "tekija": "Andreas Tille",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:GullfossOverview.jpg",
+     "selite": "Gullfoss kuuluu Islannin kuuluisan Kultaisen kierroksen kohteisiin.",
+     "leveys": 2932,
+     "korkeus": 1913,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q216846",
+   "nimi": "Geysir",
+   "peruste": "sitelinks",
+   "koko_m": 400,
+   "lat": 64.31383,
+   "lon": -20.29949,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "+Der aktivste Geysir Islands. 03.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%2BDer_aktivste_Geysir_Islands._03.jpg?width=1280",
+     "tekija": "Holger Uwe Schmitt",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%2BDer_aktivste_Geysir_Islands._03.jpg",
+     "selite": "Geysirin kuumien lähteiden alue on antanut nimensä kaikille maailman geysireille; vieressä purkautuu aktiivinen Strokkur.",
+     "leveys": 5906,
+     "korkeus": 4143,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "+Der aktivste Geysir Islands. 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%2BDer_aktivste_Geysir_Islands._01.jpg?width=1280",
+     "tekija": "Holger Uwe Schmitt",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%2BDer_aktivste_Geysir_Islands._01.jpg",
+     "selite": "Strokkur ampuu vesipatsaan ilmaan muutaman minuutin välein.",
+     "leveys": 3939,
+     "korkeus": 5906,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q107370",
+   "nimi": "Þingvellir",
+   "peruste": "UNESCO",
+   "koko_m": 2000,
+   "lat": 64.25806,
+   "lon": -21.125,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Thingvellir.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Thingvellir.jpg?width=1280",
+     "tekija": "Andreas Tille",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Thingvellir.jpg",
+     "selite": "Þingvellirissä perustettiin Alþingi noin vuonna 930, ja paikka on Islannin kansallinen symboli.",
+     "leveys": 2876,
+     "korkeus": 1708,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "+ Um das Jahr 930 wurde hier das Althing, eines der ältesten Parlamente der Welt, gegründet. 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%2B_Um_das_Jahr_930_wurde_hier_das_Althing%2C_eines_der_%C3%A4ltesten_Parlamente_der_Welt%2C_gegr%C3%BCndet._01.jpg?width=1280",
+     "tekija": "Holger Uwe Schmitt",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%2B_Um_das_Jahr_930_wurde_hier_das_Althing%2C_eines_der_%C3%A4ltesten_Parlamente_der_Welt%2C_gegr%C3%BCndet._01.jpg",
+     "selite": "Kansallispuisto sijaitsee mannerlaattojen välisessä hautavajoamassa.",
+     "leveys": 5906,
+     "korkeus": 2802,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "+ Um das Jahr 930 wurde hier das Althing, eines der ältesten Parlamente der Welt, gegründet. 03.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%2B_Um_das_Jahr_930_wurde_hier_das_Althing%2C_eines_der_%C3%A4ltesten_Parlamente_der_Welt%2C_gegr%C3%BCndet._03.jpg?width=1280",
+     "tekija": "Holger Uwe Schmitt",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%2B_Um_das_Jahr_930_wurde_hier_das_Althing%2C_eines_der_%C3%A4ltesten_Parlamente_der_Welt%2C_gegr%C3%BCndet._03.jpg",
+     "selite": "Tasanteen halki kulkevat joet ja järvet.",
+     "leveys": 5906,
+     "korkeus": 3937,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q886946",
+   "nimi": "Blue Lagoon",
+   "peruste": "sitelinks",
+   "koko_m": 500,
+   "lat": 63.8792,
+   "lon": -22.44552,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Blue Lagoon with Þorbjörn, Iceland, 20230430 1626 3692.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Blue_Lagoon_with_%C3%9Eorbj%C3%B6rn%2C_Iceland%2C_20230430_1626_3692.jpg?width=1280",
+     "tekija": "Jakub Hałun",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Blue_Lagoon_with_%C3%9Eorbj%C3%B6rn%2C_Iceland%2C_20230430_1626_3692.jpg",
+     "selite": "Blue Lagoon on laavakentälle syntynyt geoterminen kylpylä Reykjanesin niemimaalla.",
+     "leveys": 5016,
+     "korkeus": 3348,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Blue Lagoon Bath.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Blue_Lagoon_Bath.jpg?width=1280",
+     "tekija": "Sindre Jacobsen",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Blue_Lagoon_Bath.jpg",
+     "selite": "Veden maitomaisen sininen väri tulee mineraaleista.",
+     "leveys": 3875,
+     "korkeus": 2511,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1130718",
+   "nimi": "Skógafoss",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 63.52972,
+   "lon": -19.51389,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Skogafoss-02-2018-gje.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Skogafoss-02-2018-gje.jpg?width=1280",
+     "tekija": "Gerd Eichmann",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Skogafoss-02-2018-gje.jpg",
+     "selite": "Skógafoss on Etelä-Islannin leveä ja korkea putous, joka syöksyy suoraan rinteen reunalta.",
+     "leveys": 5156,
+     "korkeus": 2921,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "17845-Skogafoss (22882095653).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/17845-Skogafoss_(22882095653).jpg?width=1280",
+     "tekija": "oliver.dodd",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:17845-Skogafoss_(22882095653).jpg",
+     "selite": "Putouksen suihku kastelee vihreän rinteen.",
+     "leveys": 4256,
+     "korkeus": 2832,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q511933",
+   "nimi": "Jökulsárlón",
+   "peruste": "sitelinks",
+   "koko_m": 1500,
+   "lat": 64.07028,
+   "lon": -16.21167,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Icebergs in the Jökulsárlón Glacier Lagoon, Iceland.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Icebergs_in_the_J%C3%B6kuls%C3%A1rl%C3%B3n_Glacier_Lagoon%2C_Iceland.jpg?width=1280",
+     "tekija": "Marine SABRES",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Icebergs_in_the_J%C3%B6kuls%C3%A1rl%C3%B3n_Glacier_Lagoon%2C_Iceland.jpg",
+     "selite": "Jökulsárlón on jäätikköjärvi, jossa kelluu Vatnajökullista irronneita jäävuoria.",
+     "leveys": 5184,
+     "korkeus": 2920,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Striped iceberg at Jökulsárlón Glacier Lagoon.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Striped_iceberg_at_J%C3%B6kuls%C3%A1rl%C3%B3n_Glacier_Lagoon.jpg?width=1280",
+     "tekija": "Snowolf",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Striped_iceberg_at_J%C3%B6kuls%C3%A1rl%C3%B3n_Glacier_Lagoon.jpg",
+     "selite": "Jäävuorten raidat syntyvät jäätikön sisään jääneestä tuhkasta ja mudasta.",
+     "leveys": 5568,
+     "korkeus": 3712,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q777882",
+   "nimi": "Seljalandsfoss",
+   "peruste": "sitelinks",
+   "koko_m": 120,
+   "lat": 63.61583,
+   "lon": -19.99278,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "+60 Meter hoch ist der Wasservorhang des Seljalandsfoss. 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%2B60_Meter_hoch_ist_der_Wasservorhang_des_Seljalandsfoss._01.jpg?width=1280",
+     "tekija": "Holger Uwe Schmitt",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%2B60_Meter_hoch_ist_der_Wasservorhang_des_Seljalandsfoss._01.jpg",
+     "selite": "Seljalandsfossin taakse pääsee kävelemään putouksen ja kallion väliin.",
+     "leveys": 5906,
+     "korkeus": 4106,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "+60 Meter hoch ist der Wasservorhang des Seljalandsfoss. 02.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%2B60_Meter_hoch_ist_der_Wasservorhang_des_Seljalandsfoss._02.jpg?width=1280",
+     "tekija": "Holger Uwe Schmitt",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%2B60_Meter_hoch_ist_der_Wasservorhang_des_Seljalandsfoss._02.jpg",
+     "selite": "Putous laskeutuu vihreän kalliojyrkänteen reunalta.",
+     "leveys": 5906,
+     "korkeus": 3937,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q179734",
+   "nimi": "Vatnajökull",
+   "peruste": "sitelinks",
+   "koko_m": 5000,
+   "lat": 64.4,
+   "lon": -16.8,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Island Vatnajökull 02.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Island_Vatnaj%C3%B6kull_02.JPG?width=1280",
+     "tekija": "Zairon",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Island_Vatnaj%C3%B6kull_02.JPG",
+     "selite": "Vatnajökull on Euroopan suurin jäätikkö, jonka reunalta laskee useita jäätikkökieliä.",
+     "leveys": 3444,
+     "korkeus": 2586,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q210280",
+   "nimi": "Dettifoss",
+   "peruste": "sitelinks",
+   "koko_m": 300,
+   "lat": 65.82192,
+   "lon": -16.38817,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "100 Meter breit und 45 Meter hoch ist der Dettifoss. 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/100_Meter_breit_und_45_Meter_hoch_ist_der_Dettifoss._01.jpg?width=1280",
+     "tekija": "Holger Uwe Schmitt",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:100_Meter_breit_und_45_Meter_hoch_ist_der_Dettifoss._01.jpg",
+     "selite": "Dettifoss on Euroopan vesirikkaimpia putouksia ja syöksyy Jökulsá á Fjöllum -joesta kanjoniin.",
+     "leveys": 5906,
+     "korkeus": 3937,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1137629",
+   "nimi": "Goðafoss",
+   "peruste": "sitelinks",
+   "koko_m": 200,
+   "lat": 65.68313,
+   "lon": -17.55038,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Goðafoss Island.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Go%C3%B0afoss_Island.jpg?width=1280",
+     "tekija": "Superbass",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Go%C3%B0afoss_Island.jpg",
+     "selite": "Goðafoss eli jumalten putous on hevosenkengän muotoinen putous Pohjois-Islannissa.",
+     "leveys": 3888,
+     "korkeus": 2592,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "1 Goðafoss aerial pano 2017.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/1_Go%C3%B0afoss_aerial_pano_2017.jpg?width=1280",
+     "tekija": "Chensiyuan",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:1_Go%C3%B0afoss_aerial_pano_2017.jpg",
+     "selite": "Ilmasta näkyy putouksen kaareva reuna ja Skjálfandafljót-joen uoma.",
+     "leveys": 9606,
+     "korkeus": 4134,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1547402",
+   "nimi": "Kirkjufell",
+   "peruste": "sitelinks",
+   "koko_m": 600,
+   "lat": 64.9475,
+   "lon": -23.31083,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Kirkjufell, Iceland (Unsplash LoKG7kKx7Zc).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kirkjufell%2C_Iceland_(Unsplash_LoKG7kKx7Zc).jpg?width=1280",
+     "tekija": "Steven Diaz stevendiazphoto",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kirkjufell%2C_Iceland_(Unsplash_LoKG7kKx7Zc).jpg",
+     "selite": "Kirkjufell on Snæfellsnesin pyramidinmuotoinen vuori, jonka vierellä Kirkjufellsfoss-putoukset virtaavat.",
+     "leveys": 3463,
+     "korkeus": 2309,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "1 grundarfjörður 2017 aerial pano.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/1_grundarfj%C3%B6r%C3%B0ur_2017_aerial_pano.jpg?width=1280",
+     "tekija": "Chensiyuan",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:1_grundarfj%C3%B6r%C3%B0ur_2017_aerial_pano.jpg",
+     "selite": "Vuori kohoaa Grundarfjörðurin kalastajakylän vieressä.",
+     "leveys": 11525,
+     "korkeus": 4714,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q212051",
+   "nimi": "Mývatn",
+   "peruste": "sitelinks",
+   "koko_m": 3000,
+   "lat": 65.6,
+   "lon": -17,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Myvatn-Skutustathagigar-26-2018-gje.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Myvatn-Skutustathagigar-26-2018-gje.jpg?width=1280",
+     "tekija": "Gerd Eichmann",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Myvatn-Skutustathagigar-26-2018-gje.jpg",
+     "selite": "Mývatn on tulivuoritoiminnan muovaama järvi, jonka ympärillä on pseudokraattereita ja laavamuodostelmia.",
+     "leveys": 5184,
+     "korkeus": 2537,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "+Der Mückensee im Norden Islands. 02.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%2BDer_M%C3%BCckensee_im_Norden_Islands._02.jpg?width=1280",
+     "tekija": "Holger Uwe Schmitt",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%2BDer_M%C3%BCckensee_im_Norden_Islands._02.jpg",
+     "selite": "Järven rannat ja tulivuoren rinteet muodostavat Pohjois-Islannin tunnetuimman maiseman.",
+     "leveys": 5906,
+     "korkeus": 3937,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q184975",
+   "nimi": "Hekla",
+   "peruste": "sitelinks",
+   "koko_m": 3000,
+   "lat": 63.99222,
+   "lon": -19.66583,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "2006-05-21-153901 Iceland Stórinúpur.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2006-05-21-153901_Iceland_St%C3%B3rin%C3%BApur.jpg?width=1280",
+     "tekija": "Hansueli Krapf",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2006-05-21-153901_Iceland_St%C3%B3rin%C3%BApur.jpg",
+     "selite": "Hekla on Islannin tunnetuimpia tulivuoria, jota keskiajalla pidettiin helvetin porttina.",
+     "leveys": 2048,
+     "korkeus": 1536,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "2016-06-13 10-52-37 80.0 Iceland - Hellu Hella.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2016-06-13_10-52-37_80.0_Iceland_-_Hellu_Hella.jpg?width=1280",
+     "tekija": "Hansueli Krapf This file was uploaded with Commonist.",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2016-06-13_10-52-37_80.0_Iceland_-_Hellu_Hella.jpg",
+     "selite": "Lumihuippuinen kartiomainen tulivuori hallitsee Etelä-Islannin tasankoa.",
+     "leveys": 4288,
+     "korkeus": 2848,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q178124",
+   "nimi": "Surtsey",
+   "peruste": "UNESCO",
+   "koko_m": 1500,
+   "lat": 63.30403,
+   "lon": -20.60471,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Surtsey by Brian Gratwicke.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Surtsey_by_Brian_Gratwicke.jpg?width=1280",
+     "tekija": "Brian Gratwicke",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Surtsey_by_Brian_Gratwicke.jpg",
+     "selite": "Surtsey nousi merestä tulivuorenpurkauksessa 1960-luvulla, ja saarta on suojeltu luonnon tutkimusta varten.",
+     "leveys": 5142,
+     "korkeus": 3381,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Surstey Island2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Surstey_Island2.jpg?width=1280",
+     "tekija": "CanonS2",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Surstey_Island2.jpg",
+     "selite": "Saari on maailmanperintökohde, jonne pääsevät vain tutkijat.",
+     "leveys": 2048,
+     "korkeus": 1525,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Approaching Reykjavik - aerial 2021-10-05.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Approaching_Reykjavik_-_aerial_2021-10-05.jpg?width=1280",
+   "tekija": "Eric Kilby",
+   "lisenssi": "CC BY-SA 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Approaching_Reykjavik_-_aerial_2021-10-05.jpg",
+   "selite": "Reykjavík on Islannin pääkaupunki ja pohjoisin maailman pääkaupunki, jonka taustalla kohoavat vuoret.",
+   "leveys": 8256,
+   "korkeus": 4749,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Iceland Today - Society, Landscapes and Infrastructure (P-070318-00-49).jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Iceland_Today_-_Society%2C_Landscapes_and_Infrastructure_(P-070318-00-49).jpg?width=1280",
+   "tekija": "Europäische Kommission - Audiovisueller Dienst, Halldór Kolbeins, CE - Service audiovisuel, EC - Audiovisual Service, FACTSTORY",
+   "lisenssi": "CC BY 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Iceland_Today_-_Society%2C_Landscapes_and_Infrastructure_(P-070318-00-49).jpg",
+   "selite": "Reykjavíkin rantaa ja kaupunkia illan valossa.",
+   "leveys": 11232,
+   "korkeus": 4882,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}
