@@ -502,6 +502,28 @@ namespace Matkakirja.Linssit.Kierros
             KierrosKeskeytetty = kesk; VapaaTila = vapaa; jatkoKohde = jk; keskeytysTieto = kt;
         }
 
+        // ---- SEURAAVA (›|; omistaja 6.10. 23.3x "seuraava nappi, jolla nykyisen kohteen voisi ohittaa", juna 156) ----
+        /// <summary>Seuraava-nappi käytettävissä: opas käynnissä eikä siirtoruutu.</summary>
+        public bool SeuraavaKaytettavissa => Vaihe != OpasVaihe.Valmis && Aloitettu && !Siirtymassa && !Luovutti;
+
+        /// <summary>
+        /// Ohittaa nykyisen kohteen: kertoja vaikenee ja opas siirtyy seuraavaan (esihaettu heti; muuten pyyntö ja lento, kun vastaus
+        /// tulee). Kierroksella seuraava jonosta; keskeytetty kierros jatkuu seuraavasta (kesken jäänyttä ei lueta); vapaasta tilasta
+        /// palataan oppaan omiin kohteisiin. Lennon aikana kamera pysähtyy ja lento suuntautuu seuraavaan. true = ohitettiin.
+        /// </summary>
+        public bool OhitaKohde()
+        {
+            if (!SeuraavaKaytettavissa) return false;
+            if (KierrosKeskeytetty) { KierrosKeskeytetty = false; KierrosKaynnissa = true; KierrosTieto = keskeytysTieto; jatkoKohde = null; }
+            VapaaTila = false; vapaaKehyksessa = false;
+            lykattyKysymys = null; esihakuPuheenJalkeen = false; OdottaaVastausta = false; kysymysAika = -1;
+            if (Vaihe == OpasVaihe.Puhuu || (puheAloitettu && !aaniLoppui)) Hiljenna?.Invoke();
+            aaniLoppui = true; hiljaS = double.MaxValue;
+            if (Vaihe == OpasVaihe.Lentaa) PysahdyTahan();
+            if (Seuraava == null && odotettu == 0) UusiPyynto();   // kierros: jonosta; muuten workerin seuraava
+            return true;
+        }
+
         /// <summary>Pelaajan oma suunta (toive, Liiku, paikan vaihto, uusi kierros): vanha kierros ja vapaa tila päättyvät.</summary>
         void PelaajaValitsi() { KierrosKeskeytetty = false; jatkoKohde = null; VapaaTila = false; lykattyKysymys = null; esihakuPuheenJalkeen = false; }
 
@@ -541,6 +563,7 @@ namespace Matkakirja.Linssit.Kierros
             var e = kierrosJono[kierrosIndeksi++];
             KierrosTieto = (kierrosIndeksi, kierrosJono.Count);
             toive = e.nimi; PyynnonSijainti = (e.lat, e.lon);
+            odotettuPaikka = (e.lat, e.lon);   // esilataus heti jonon paikasta, ei vasta workerin vastauksesta (juna 156)
             return false;
         }
         public const double SiirtymaMinM = 5000;
@@ -573,6 +596,7 @@ namespace Matkakirja.Linssit.Kierros
         void UusiPyynto()
         {
             lykattyKysymys = null; esihakuPuheenJalkeen = false;   // uusi pyyntö korvaa puheen aikana tulleen kysymyksen
+            odotettuPaikka = null;
             if (toive == null && KierrosPyynto()) return;   // kierros päättyi: ei uutta pysähdystä
             pyynto++;
             odotettu = pyynto;
@@ -781,11 +805,18 @@ namespace Matkakirja.Linssit.Kierros
         /// ESILATAUSKAMERA (Siirtoseppä 5.10. 21.0x: saapuessa laatat 55–62 %, esilataus käytti vanhaa kehystä ja lennon aikana ei mitään):
         /// lennon aikana täsmälleen laskeutumiskehys, muuten esihaetun kohteen kehys samalla laskennalla kuin lento; null = ei esilattavaa.
         /// </summary>
+        /// <summary>Pyynnössä olevan kohteen tunnettu paikka (kierroksen jono): esilataus ennen workerin vastausta (omistaja 23.3x:
+        /// "laatat ehtivät latautua vasta kertomuksen puolivälin jälkeen").</summary>
+        (double lat, double lon)? odotettuPaikka;
+        public (double lat, double lon)? OdotettuPaikka => odotettu != 0 ? odotettuPaikka : null;
+
         public Kuvakulma? Esilataus(Func<OpasKohde, double> maaKorkeus)
         {
             // Saavuttu (odotetaan laattoja): pääkamera on jo kehyksessä → esikamera pois, latausaste mittaa vain pääkameraa.
             if (Vaihe == OpasVaihe.Lentaa && kohdeKehys != null) return VaiheAika >= LentoKestoS ? (Kuvakulma?)null : OpasKuvaus.Pysahdyksella(kohdeKehys, 0);
             if (Seuraava != null && !Seuraava.Kysymys) return OpasKuvaus.Pysahdyksella(KehysKohteelle(Seuraava, maaKorkeus), 0);
+            if (OdotettuPaikka is (double, double) op)
+                return OpasKuvaus.Pysahdyksella(KehysKohteelle(new OpasKohde { Lat = op.lat, Lon = op.lon, KokoM = 120 }, maaKorkeus), 0);
             return null;
         }
 

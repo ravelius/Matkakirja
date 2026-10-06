@@ -338,5 +338,30 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama(1.0, OpasPcmPuskuri.Tarvitaan(0, 0.5), "kesto tuntematon");
             Oleta.Tosi(OpasPcmPuskuri.Tarvitaan(3, 0.2) <= 3, "ei yli keston");
         }
+
+        // ---- SEURAAVA-NAPPI JA ESILATAUS (omistaja 6.10. 23.3x, juna 156) ----
+
+        [Testi] static void SeuraavaOhittaaKierroksenKohteen()
+        {
+            var (s, p, puhe, _) = KierroksellaT1Puhuu();
+            int hiljennyksia = 0; s.Hiljenna += () => hiljennyksia++;
+            Oleta.Sama("T2", p[^1].t, "T2 pyynnössä");
+            Oleta.Tosi(s.OdotettuPaikka != null, "jonon paikka tunnetaan ennen vastausta");
+            Oleta.Tosi(s.Esilataus(_ => 5) != null, "esilataus jonon paikasta");
+            Oleta.Tosi(s.OhitaKohde(), "ohitettiin");
+            Oleta.Sama(1, hiljennyksia, "T1 vaikeni");
+            s.Vastaus(p[^1].n, K("T2", 55.6786, 12.5790));
+            for (int i = 0; i < 300 && !(s.Nykyinen?.Id == "T2" && s.Vaihe == OpasVaihe.Puhuu); i++) s.Paivita(0.1, _ => 5);
+            Oleta.Sama("T2", s.Nykyinen?.Id, "lensi T2:een heti vastauksen tultua");
+        }
+
+        [Testi] static void SeuraavaVapaastaTilastaPyytaaOppaanKohteen()
+        {
+            var (s, p, puhe, _) = KierroksellaT1Puhuu();
+            s.LopetaKierros();
+            int n = p.Count;
+            Oleta.Tosi(s.OhitaKohde() && !s.VapaaTila, "vapaa tila päättyi");
+            Oleta.Sama(n + 1, p.Count, "uusi pyyntö");
+        }
     }
 }

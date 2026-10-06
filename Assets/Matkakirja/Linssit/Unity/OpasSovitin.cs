@@ -328,6 +328,7 @@ namespace Matkakirja.Natiivi
             if (silmukka.Vaihe != ennen) o.Kirjaa($"opas: {ennen} → {silmukka.Vaihe} {(silmukka.Nykyinen?.Nimi ?? "")}, laatat {kaupunki.Latausaste:F0} %");
             if (silmukka.Vaihe != ennen && silmukka.Vaihe == OpasVaihe.Lentaa) OpasKorostusKuva.Piilota();
             y.Kuvaa(silmukka.Asento);
+            LatausKuvaPaivita();
             Luotaa();
             KameraKuvattu?.Invoke(kierto != null ? kierto.GetComponent<Camera>() : null, silmukka);
             // Esilataus: lennon aikana laskeutumiskehys, muuten esihaetun kohteen kehys (OpasKuvaus, sama kuin lento).
@@ -767,6 +768,47 @@ namespace Matkakirja.Natiivi
 
         // ---- TAUKO JA TÄKYLUETTELO (omistaja TF 144, juna 146; UI Natiivi-UI heijastuksella) ----
         /// <summary>UI asettaa true, kun se näyttää täkyluettelon avauksessa; muuten opas alkaa kuten ennen (vanha UI).</summary>
+        // ---- SEURAAVA-NAPPI (›|; omistaja 6.10. 23.3x; Natiivi-UI tekee napin play/pausen viereen, juna 156) ----
+        /// <summary>Seuraava-nappi käytettävissä (opas käynnissä, ei siirtoruutua).</summary>
+        public static bool SeuraavaKaytettavissa => Auki && Viimeisin.silmukka.SeuraavaKaytettavissa;
+        /// <summary>Ohittaa nykyisen kohteen ja siirtyy seuraavaan (myös kierroksella ja vapaassa tilassa). true = ohitettiin.</summary>
+        public static bool Seuraava()
+        {
+            if (!Auki) return false;
+            var v = Viimeisin;
+            if (v.tauolla) Tauko(false);
+            bool ok = v.silmukka.OhitaKohde();
+            if (ok) { v.LatausKuvaPois("ohitus"); v.o.Kirjaa($"opas: seuraava (ohitettiin {v.silmukka.Nykyinen?.Nimi})"); }
+            return ok;
+        }
+
+        // ---- KUVA LATAUKSEN AJAKSI (omistaja 23.3x: "näyttää automaattisesti yhden kuvan 80% kokoisena", juna 156) ----
+        /// <summary>Saavuttaessa laattoja alle LatausKuvaRaja: kohteen ensimmäinen kuva (Natiivi-UI näyttää 80 %:n kokoisena
+        /// Kuvasuurennoksen pohjalla); null, kun laattoja on ≥ raja tai LatausKuvaMaxS kului. Ei kuvaa → ei näytetä.</summary>
+        public static OpasKuva LatausKuva => Auki ? Viimeisin.latausKuva : null;
+        public static event Action<OpasKuva> LatausKuvaVaihtui;
+        public const float LatausKuvaRaja = 90f, LatausKuvaMaxS = 8f;
+        OpasKuva latausKuva; float latausKuvaAlku, saapumisAika = -1f;
+
+        void LatausKuvaPaivita()
+        {
+            // Tarkka näkymä saapumisesta (mittari ennen/jälkeen esilatauksen, Päätoimittaja: Pariisi ja Sydney).
+            if (saapumisAika > 0 && kaupunki.Latausaste >= CesiumKaupunki.ValmisProsentti && !kaupunki.KarkeaKaytossa)
+            { o.Kirjaa($"opas: tarkka näkymä {Time.realtimeSinceStartup - saapumisAika:F1} s saapumisesta ({silmukka.Nykyinen?.Nimi})"); saapumisAika = -1f; }
+            if (latausKuva == null) return;
+            if (kaupunki.Latausaste >= LatausKuvaRaja) LatausKuvaPois($"laatat {kaupunki.Latausaste:F0} %");
+            else if (Time.realtimeSinceStartup - latausKuvaAlku > LatausKuvaMaxS) LatausKuvaPois("aikaraja");
+            else if (silmukka.Vaihe == OpasVaihe.Lentaa) LatausKuvaPois("lento");
+        }
+
+        void LatausKuvaPois(string syy)
+        {
+            if (latausKuva == null) return;
+            latausKuva = null;
+            o.Kirjaa($"opas: latauskuva pois ({syy}, {Time.realtimeSinceStartup - latausKuvaAlku:F1} s)");
+            LatausKuvaVaihtui?.Invoke(null);
+        }
+
         public static bool TakyAvaus;
         /// <summary>Täkyt (null = latautuu, tyhjä = ei saatu); UI lukee avauksessa.</summary>
         public static IReadOnlyList<OpasTaky> Takyt => Viimeisin?.takyt;
@@ -1295,6 +1337,13 @@ namespace Matkakirja.Natiivi
             saapumisia++;
             o.StartCoroutine(Siivoa());
             o.Kirjaa($"opas: saapui {k.Nimi} ({k.Lat:F4}, {k.Lon:F4}), ääni {(puhuu ? "soi" : "ei")}, laatat {kaupunki.Latausaste:F0} %");
+            saapumisAika = Time.realtimeSinceStartup;
+            if (kaupunki.Latausaste < LatausKuvaRaja && k.Kuvat != null && k.Kuvat.Length > 0 && !k.Kysymys)
+            {
+                latausKuva = k.Kuvat[0]; latausKuvaAlku = Time.realtimeSinceStartup;
+                o.Kirjaa($"opas: latauskuva näkyviin (laatat {kaupunki.Latausaste:F0} %)");
+                LatausKuvaVaihtui?.Invoke(latausKuva);
+            }
             o.Kirjaa($"opas: kuvat {k.Kuvat?.Length ?? 0} (tekijällä {System.Linq.Enumerable.Count(k.Kuvat ?? Array.Empty<OpasKuva>(), x => !string.IsNullOrEmpty(x.Tekija))}), hylätty yhteensä {OpasKuva.Hylatyt}");
             OpasKorostusKuva.Nayta(k, silmukka?.NykyinenKehys?.MaaM ?? (MaaKorkeus(k) is double mk && !double.IsNaN(mk) ? mk : 45), kaupunki.Georef);   // Siirtoseppä: korostus (juna 145)
         }
