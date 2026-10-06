@@ -103,7 +103,11 @@ namespace Matkakirja.Natiivi
                 Palauta = () => Avaa(false),
                 Irti = PaivitaPin,
             });
-            if (vanha != null && vanha.Omistaja != PinOmistaja && Pinnaus.Nykyinen?.Omistaja == PinOmistaja) vanha.Pienenna?.Invoke();
+            if (Pinnaus.Nykyinen?.Omistaja != PinOmistaja) return;
+            if (vanha != null && vanha.Omistaja != PinOmistaja) vanha.Pienenna?.Invoke();
+            // Kysy-napista avattu nosto on yleensä yhä auki yläreunassa (sen pinnaus päättyy Pulun luennan alkaessa): chat korvaa sen.
+            var nosto = UiNakymat.Olemassa ? UiNakymat.Hae().Nostokortti : null;
+            if (nosto != null && nosto.Auki) nosto.Sulje();
         }
 
         bool ylhaalla;
@@ -262,7 +266,7 @@ namespace Matkakirja.Natiivi
             taukoNappi = Rakenne.Nappi(null, "mk-chat__ikoninappi mk-chat__tauko", VaihdaTauko, ylarivi, Ikonit.Tauko);
             taukoNappi.tooltip = "Tauko";
             taukoNappi.style.display = DisplayStyle.None;
-            paneeli.schedule.Execute(PaivitaTauko).Every(200);
+            paneeli.schedule.Execute(PaivitaTauko).Every(50);
             kaiutinNappi = Rakenne.Nappi(null, "mk-chat__ikoninappi mk-chat__kaiutin", VaihdaAani, ylarivi, AaniPaalla ? Ikonit.Viiva["kaiutin"] : Ikonit.Viiva["kaiutin-pois"]);
             PaivitaKaiutin();
             // Pulu lukee jo vastausta automaattisesti (virkevirta): kaiutin keskeyttää ja jatkaa sitä eikä aloita alusta.
@@ -2168,19 +2172,27 @@ namespace Matkakirja.Natiivi
         Button taukoNappi;
         bool taukoTauolla;
 
+        /// <summary>Tauko pyydetty palojen välissä (Puhe.Tauko onnistuu vasta, kun seuraava pala soi): yritetään uudelleen.</summary>
+        bool taukoPyydetty;
+
         void VaihdaTauko()
         {
             var p = Puhe.Instanssi;
-            if (p == null || !OmaLuentaKaynnissa) return;
-            if (p.Tauolla) p.Jatka(); else p.Tauko();
+            if (p == null || !(OmaLuentaKaynnissa || luentaVirta != null)) return;
+            if (p.Tauolla || taukoPyydetty) { taukoPyydetty = false; p.Jatka(); }
+            else if (!p.Tauko()) taukoPyydetty = true;
             PaivitaTauko();
         }
 
         void PaivitaTauko()
         {
-            bool nakyy = Auki && OmaLuentaKaynnissa;
+            var p = Puhe.Instanssi;
+            // Myös palojen välissä (luentaVirta auki), ettei nappi välky virkkeiden välillä.
+            bool nakyy = Auki && (OmaLuentaKaynnissa || taukoPyydetty || (luentaVirta != null && !lukija.Lukee));
+            if (!nakyy) taukoPyydetty = false;
+            else if (taukoPyydetty && p != null && !p.Tauolla && p.Tauko()) taukoPyydetty = false;
             taukoNappi.style.display = nakyy ? DisplayStyle.Flex : DisplayStyle.None;
-            bool tauolla = nakyy && Puhe.Instanssi.Tauolla;
+            bool tauolla = nakyy && (taukoPyydetty || (p != null && p.Tauolla));
             if (tauolla == taukoTauolla) return;
             taukoTauolla = tauolla;
             taukoNappi.Clear();
