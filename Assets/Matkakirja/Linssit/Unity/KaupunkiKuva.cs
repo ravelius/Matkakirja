@@ -36,10 +36,10 @@ namespace Matkakirja.Natiivi
         /// <summary>Sumun alku ja loppu kameran korkeuden kerrannaisina (vähintään AlkuMinM / LoppuMinM metriä).</summary>
         // A/B 5.10. 18.59: alku 6 × korkeus / 1,2 km haalisti koko Raatihuoneen kuvan → sumu vasta kauempana (horisontti).
         public static float AlkuKerroin = 15f, LoppuKerroin = 80f, AlkuMinM = 3000f, LoppuMinM = 15000f;
-        // JUNAN OLETUS (Päätoimittajan sääntö 5.10. 19.1x): vain MSAA + aniso, kunnes kuvapari näyttää sumun ja Volumen
-        // selvästi paremmiksi; viritys asetustiedostolla ("sumu 1 volume 1").
-        // JUNA 150 (ehdotus, kuvapari ennen/jälkeen Päätoimittajalle): sumu ja Volume päälle vuorokaudenajan sävyllä, ei tonemappausta.
-        public static bool Sumu = true, Savytys = false, Volyymi = true, VuorokausiPaalla = true, Kupoli = true;
+        // JUNAN OLETUS (Päätoimittajan sääntö 5.10. 19.1x): vain MSAA + aniso, kunnes kuvapari näyttää utu-, Volume-, vuorokausi-
+        // ja kupolikuvan selvästi paremmiksi ja Päätoimittaja kuittaa (juna 150: kuvaparit aamu/päivä/ilta/yö + iPad-muisti);
+        // viritys asetustiedostolla ("sumu 1 volume 1 vuorokausi 1 kupoli 1"). Ei tonemappausta (Neutral latisti kuvan).
+        public static bool Sumu = false, Savytys = false, Volyymi = false, VuorokausiPaalla = false, Kupoli = false;
         public static float Kontrasti = 12f, Saturaatio = 10f, Hehku = 0f, Tunti = -1f;
         internal static ColorAdjustments varit;
         internal static WhiteBalance valko;
@@ -93,8 +93,8 @@ namespace Matkakirja.Natiivi
             if (!tallennettu) return;
             tallennettu = false;
             GoogleSse = 16f; MaastoSse = 10f; RakennusSse = 16f; Msaa = 4; // asetustiedosto luetaan uudelleen seuraavassa avauksessa
-            AlkuKerroin = 15f; LoppuKerroin = 80f; AlkuMinM = 3000f; LoppuMinM = 15000f; Sumu = true; Savytys = false; Volyymi = true;
-            Kontrasti = 12f; Saturaatio = 10f; Hehku = 0f; VuorokausiPaalla = true; Kupoli = true; Tunti = -1f;
+            AlkuKerroin = 15f; LoppuKerroin = 80f; AlkuMinM = 3000f; LoppuMinM = 15000f; Sumu = false; Savytys = false; Volyymi = false;
+            Kontrasti = 12f; Saturaatio = 10f; Hehku = 0f; VuorokausiPaalla = false; Kupoli = false; Tunti = -1f; asetuksetMuokattu = default;
             varit = null; valko = null;
             if (ajo != null) { ajo.Lopeta(); Object.Destroy(ajo.gameObject); ajo = null; }
             QualitySettings.anisotropicFiltering = vanhaAniso;
@@ -113,12 +113,18 @@ namespace Matkakirja.Natiivi
             Debug.Log("MATKAKIRJA kaupunki: kuva palautettu");
         }
 
-        internal static void LueAsetukset()
+        static System.DateTime asetuksetMuokattu;
+
+        /// <summary>Asetustiedosto; muuttumaton = true (Siirtosepän katselmointi: ei turhaa lukua joka sekunti, vain muokattuna).</summary>
+        internal static bool LueAsetukset(bool vainMuuttunut = false)
         {
             try
             {
                 var polku = System.IO.Path.Combine(Application.persistentDataPath, "kaupunki-kuva-asetukset.txt");
-                if (!System.IO.File.Exists(polku)) return;
+                if (!System.IO.File.Exists(polku)) return false;
+                var aika = System.IO.File.GetLastWriteTimeUtc(polku);
+                if (vainMuuttunut && aika == asetuksetMuokattu) return false;
+                asetuksetMuokattu = aika;
                 var o = System.IO.File.ReadAllText(polku).Split((char[])null, System.StringSplitOptions.RemoveEmptyEntries);
                 for (int i = 0; i + 1 < o.Length; i += 2)
                 {
@@ -144,8 +150,9 @@ namespace Matkakirja.Natiivi
                         case "kupoli": Kupoli = v != 0; break;
                     }
                 }
+                return true;
             }
-            catch (System.Exception) { }
+            catch (System.Exception) { return false; }
         }
 
         static void Sse(Cesium3DTileset t, float sse)
@@ -252,11 +259,12 @@ namespace Matkakirja.Natiivi
             if (kamera == null) return;
             var georef0 = kaupunki.Georef;
             // Kuvaparit ilman uudelleenavausta: asetustiedosto luetaan sekunnin välein (tunti, vuorokausi, sumu, kontrasti …).
-            if (Time.realtimeSinceStartup - luettu > 1f) { luettu = Time.realtimeSinceStartup; KaupunkiKuva.LueAsetukset(); }
+            if (Time.realtimeSinceStartup - luettu > 1f) { luettu = Time.realtimeSinceStartup; KaupunkiKuva.LueAsetukset(true); }
             // Vuorokaudenaika kohteen paikallisesta aurinkoajasta (tai asetuksen tunnista).
             double lon = georef0 != null ? georef0.longitude : 0, lat = georef0 != null ? georef0.latitude : 0;
             double tunti = KaupunkiKuva.Tunti >= 0 ? KaupunkiKuva.Tunti : KaupunkiValo.PaikallinenTunti(System.DateTime.UtcNow, lon);
-            var (aurinko, aamupaiva) = KaupunkiValo.Aurinko(System.DateTime.UtcNow, lat, lon);
+            var (aurinko, aamupaiva, auringonSuunta) = KaupunkiValo.Aurinko(System.DateTime.UtcNow, lat, lon);
+            if (KaupunkiKuva.Tunti >= 0) auringonSuunta = KaupunkiValo.AtsimuuttiTunnista(tunti);
             // Oletus: auringon todellinen korkeus kohteessa; asetuksen tunti (A/B-kuvat) avainkuvista.
             var savy = !KaupunkiKuva.VuorokausiPaalla ? KaupunkiValo.Paiva
                 : KaupunkiKuva.Tunti >= 0 ? KaupunkiValo.Tunnille(tunti) : KaupunkiValo.Korkeudelle(aurinko, aamupaiva);
@@ -277,9 +285,11 @@ namespace Matkakirja.Natiivi
                 float r = Mathf.Clamp(kamera.nearClipPlane * 50f, kamera.nearClipPlane * 2f, kamera.farClipPlane * 0.5f);
                 kupoli.transform.SetPositionAndRotation(kamera.transform.position, Quaternion.identity);
                 kupoli.transform.localScale = Vector3.one * r;
-                // Kajo aamulla ja illalla auringon puolella (atsimuutti 90° klo 6 → 270° klo 18; x = itä, z = pohjoinen).
-                float kajo = Mathf.Max(0f, 1f - Mathf.Abs((float)tunti - 6.5f) / 2f) + Mathf.Max(0f, 1f - Mathf.Abs((float)tunti - 19f) / 2f);
-                float az = (90f + ((float)tunti - 6f) * 15f) * Mathf.Deg2Rad;
+                // Kajo auringon puolella, kun aurinko on matalalla (−6…10°; asetuksen tunnilla aamu 6.30 ja ilta 19); x = itä, z = pohjoinen.
+                float kajo = KaupunkiKuva.Tunti >= 0
+                    ? Mathf.Max(0f, 1f - Mathf.Abs((float)tunti - 6.5f) / 2f) + Mathf.Max(0f, 1f - Mathf.Abs((float)tunti - 19f) / 2f)
+                    : Mathf.Max(0f, 1f - Mathf.Abs((float)aurinko - 2f) / 8f);
+                float az = (float)auringonSuunta * Mathf.Deg2Rad;   // sama alihajapiste kuin sävyllä (asetuksen tunnilla kellosta)
                 Shader.SetGlobalColor(IdHorisontti, horisontti);
                 Shader.SetGlobalColor(IdLaki, V(savy.TaivasYla));
                 var kajoVari = Color.Lerp(horisontti, Color.white, 0.25f); kajoVari.a = Mathf.Clamp01(kajo) * 0.7f;

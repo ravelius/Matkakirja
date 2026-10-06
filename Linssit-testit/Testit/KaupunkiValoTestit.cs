@@ -17,12 +17,15 @@ namespace Matkakirja.Linssit.Testit
         [Testi] static void AuringonKorkeusAteenassa()
         {
             // 6.10. Ateena (37,97 N, 23,73 E): aurinkokeskipäivä ~10.15 UTC (korkeus ~46°); 01.00 UTC yö; 15.30 UTC ilta-aurinko matalalla.
-            var (k12, aamu12) = KaupunkiValo.Aurinko(new DateTime(2026, 10, 6, 9, 30, 0, DateTimeKind.Utc), 37.97, 23.73);
+            var (k12, aamu12, az12) = KaupunkiValo.Aurinko(new DateTime(2026, 10, 6, 9, 30, 0, DateTimeKind.Utc), 37.97, 23.73);
             Oleta.Tosi(k12 > 38 && k12 < 50 && aamu12, $"aamupäivä {k12:F1}°, aamupäivä");
-            var (k3, _) = KaupunkiValo.Aurinko(new DateTime(2026, 10, 6, 1, 0, 0, DateTimeKind.Utc), 37.97, 23.73);
+            Oleta.Tosi(az12 > 120 && az12 < 180, $"aamupäivällä kaakossa {az12:F0}°");
+            var (k3, _, _) = KaupunkiValo.Aurinko(new DateTime(2026, 10, 6, 1, 0, 0, DateTimeKind.Utc), 37.97, 23.73);
             Oleta.Tosi(k3 < -30, $"yö {k3:F1}°");
-            var (k16, aamu16) = KaupunkiValo.Aurinko(new DateTime(2026, 10, 6, 15, 30, 0, DateTimeKind.Utc), 37.97, 23.73);
+            var (k16, aamu16, az16) = KaupunkiValo.Aurinko(new DateTime(2026, 10, 6, 15, 30, 0, DateTimeKind.Utc), 37.97, 23.73);
             Oleta.Tosi(k16 > -2 && k16 < 10 && !aamu16, $"ilta {k16:F1}°");
+            Oleta.Tosi(az16 > 240 && az16 < 280, $"illalla lännessä {az16:F0}°");
+            Oleta.Tosi(Math.Abs(KaupunkiValo.AtsimuuttiTunnista(6) - 90) < 1e-9 && Math.Abs(KaupunkiValo.AtsimuuttiTunnista(18) - 270) < 1e-9, "kellosta");
         }
 
         [Testi] static void SavyKorkeudesta()

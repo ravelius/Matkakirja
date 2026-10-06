@@ -77,14 +77,19 @@ namespace Matkakirja.Linssit.Kierros
             return Yo;
         }
 
-        /// <summary>Auringon korkeus (astetta) pisteessä ja onko aamupäivä (aurinko idässä); Iss.Aurinko (sama malli kuin ISS-kyydissä).</summary>
-        public static (double korkeus, bool aamu) Aurinko(DateTime utc, double lat, double lon)
+        /// <summary>Auringon korkeus ja atsimuutti (astetta, pohjoisesta myötäpäivään) pisteessä ja onko aamupäivä; Iss.Aurinko
+        /// (sama malli kuin ISS-kyydissä). Siirtosepän katselmointi: kajon suunta samasta alihajapisteestä kuin sävy.</summary>
+        public static (double korkeus, bool aamu, double atsimuutti) Aurinko(DateTime utc, double lat, double lon)
         {
             Matkakirja.Linssit.Iss.Aurinko.Alihajapiste(Matkakirja.Linssit.Iss.Aika.Jd(utc), out double dekl, out double slon);
             double r = Math.PI / 180, h = ((lon - slon) % 360 + 540) % 360 - 180;   // tuntikulma: − = aamupäivä
             double k = Math.Asin(Math.Sin(lat * r) * Math.Sin(dekl * r) + Math.Cos(lat * r) * Math.Cos(dekl * r) * Math.Cos(h * r)) / r;
-            return (k, h < 0);
+            double az = Math.Atan2(-Math.Sin(h * r), Math.Tan(dekl * r) * Math.Cos(lat * r) - Math.Sin(lat * r) * Math.Cos(h * r)) / r;
+            return (k, h < 0, (az + 360) % 360);
         }
+
+        /// <summary>Atsimuutti kellosta (asetuksen tunti): 90° klo 6 → 180° klo 12 → 270° klo 18.</summary>
+        public static double AtsimuuttiTunnista(double tunti) => ((90 + (tunti - 6) * 15) % 360 + 360) % 360;
 
         /// <summary>Sävy auringon korkeudesta: yö ≤ −8°, hämärä → aamu/ilta −2…6°, päivä ≥ 20°.</summary>
         public static Savy Korkeudelle(double korkeus, bool aamu)
