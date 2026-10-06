@@ -22,7 +22,7 @@ namespace Matkakirja.Natiivi
         /// <summary>Viritys (KaupunkiKuva-asetukset "yovalot 0|1", "yohehku" = valosaaste, "yopisteet" = katuvalot, "yosolu" (m),
         /// "yoikkunat" = ikkunoiden voima, "yoikkunaosuus" = palavien ikkunoiden osuus enintään). v2 simun 21.5x kuvista.</summary>
         public static bool Kaytossa = true;
-        public static float Hehku = 0.10f, Pisteet = 1.3f, SoluM = 22f, Ikkunat = 0.9f, IkkunaOsuus = 0.55f;
+        public static float Hehku = 0.07f, Pisteet = 1.3f, SoluM = 22f, Ikkunat = 0.9f, IkkunaOsuus = 0.55f;
         /// <summary>Natrium-oranssi (omistaja) ja valkoisten LED-pisteiden osuus.</summary>
         public static Color Vari = new Color(1.0f, 0.62f, 0.28f, 0.25f);
 

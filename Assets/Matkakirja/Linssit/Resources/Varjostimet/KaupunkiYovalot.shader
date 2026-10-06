@@ -8,6 +8,7 @@
 //  - katuvalot vain ylöspäin osoittaville pinnoille (kadut, aukiot; Pariisin viistot katot eivät),
 //  - ikkunat pystypinnoille: 3,2 × 3,0 m:n ruudukko, osa palaa (tiheys Black Marblesta), kaukana keskiarvo pehmeänä,
 //  - Black Marble -arvo loivennetaan (saturoitunut keskusta ≈ 0,7), joten kaupungin sisällä on vielä vaihtelua.
+// v3: valot vain tasaisille pinnoille (ei puiden latvoja eikä reunoja), valosaaste 0,07.
 // Taivas (syvyys kaukotasossa) ohitetaan. KaupunkiYovalot.cs kytkee passin FullScreenPassRendererFeaturena vain yöllä.
 Shader "Matkakirja/Linssit/KaupunkiYovalot"
 {
@@ -79,6 +80,12 @@ Shader "Matkakirja/Linssit/KaupunkiYovalot"
                 float3 n = normalize(cross(dy, dx));
                 if (n.y < 0.0) n = -n;                                   // ylöspäin (kamera on yleensä yläpuolella)
                 float jalanjalki = max(length(dx), length(dy));          // pikselin koko pinnalla (m)
+                // Tasaisuus (v3, simu 22.2x: puiden latvoihin syttyi ikkunoita, nurmelle katuvaloja): seinä ja katu ovat tasaisia
+                // (peräkkäiset erot samansuuntaisia), lehvästö ja reunat eivät. Valot vain tasaisille pinnoille.
+                float sx = dot(normalize(pr - p + 1e-6), normalize(p - pl + 1e-6)), sy = dot(normalize(pu - p + 1e-6), normalize(p - pd + 1e-6));
+                float tasainen = saturate((min(sx, sy) - 0.94) / 0.05);
+                tasainen = lerp(tasainen, 1.0, saturate((jalanjalki - 2.0) / 4.0));   // kaukana (pikseli > 2–6 m) mattoa ei karsita
+                if (tasainen <= 0.0) return half4(c.rgb + (half3)(_ValoVari.rgb * bm * bm * _ValoParam.y * _ValoParam.x), c.a);
 
                 float3 lisa = _ValoVari.rgb * bm * bm * _ValoParam.y;  // valosaaste
 
@@ -103,7 +110,7 @@ Shader "Matkakirja/Linssit/KaupunkiYovalot"
                         pisteet += w;
                         pv += w * lerp(_ValoVari.rgb, float3(0.95, 0.97, 1.0), led);
                     }
-                    lisa += pv * vaaka * nakyvyys * _ValoParam.z;
+                    lisa += pv * vaaka * nakyvyys * tasainen * _ValoParam.z;
                 }
 
                 // Ikkunat pystypinnoille: julkisivun vaakasuunta × korkeus, 3,2 × 3,0 m.
@@ -119,7 +126,7 @@ Shader "Matkakirja/Linssit/KaupunkiYovalot"
                     float terava = saturate(2.0 - jalanjalki * 2.0 / 1.2);       // ikkuna (~1,2 m) yli puolen pikselin
                     float keski = bm * _IkkunaParam.y * 0.23;                     // kaukana: palavien osuus × ikkunan ala
                     float3 iv = lerp(float3(1.0, 0.72, 0.42), float3(1.0, 0.88, 0.70), h.y);
-                    lisa += iv * pysty * _IkkunaParam.x * (0.6 + 0.4 * h.z) * lerp(keski, palaa * ikkuna, terava);
+                    lisa += iv * pysty * tasainen * _IkkunaParam.x * (0.6 + 0.4 * h.z) * lerp(keski, palaa * ikkuna, terava);
                 }
                 return half4(c.rgb + (half3)(lisa * _ValoParam.x), c.a);
             }
