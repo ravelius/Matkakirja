@@ -7,6 +7,17 @@ Worktreet: /Users/Shared/Claude/wt/proto-siirtoseppa-*. Käännös vain Julkaisi
 (oma UDID D5900D45 = siirtoseppa-iPad13, TYHJENNETTY 19.0x, appit asennettava uudelleen). Ei detachia simupaneelista.
 Oikeat tapit: lokit/siirtoseppa-alo/.sk (simkosketus, käännä tarvittaessa tyokalut/todistusajo/simkosketus.m).
 
+## TILA 7.10. 00.4x (uusi tili, Opus 5.5 high)
+
+- **Linna-149 183866ed + FACEIT 55ad6594 TODENNETTU** (D5900D45 00.16–00.29, A/V ±1 ms, 0 Exceptionia) → ehdotettu junaan 156,
+  tulos Päätoimittajalle. Todisteet: proto-3d/lokit/siirtoseppa-l149v/{ennen,jalkeen}/tallenne-aanella.mp4 (+ tauko.png, veto.png),
+  lokit/siirtoseppa-face-v/ik/kappeli-ik0/kasvot-lahikuva.mp4, lokit/siirtoseppa-esineet-v/ (Linnanrakentajalle). Raa'at .mov poistettu
+  (levy). Tapit iPad-vaakassa (raakakoordinaatit, pt): II = 993 1299, ☰ = 993 1348; panorointi = veto 500 450 → 500 1000.
+- **lokit/siirtoseppa-alo** siivottu: jäljellä .sk, app-183866ed, app-55ad6594, parit.
+- **Äänimaisema:** Pariisin kartta ämpärissä (aanet/aanikartta-v1/pariisi.json, yhteensopiva AaniKartta.Lue:n kanssa); silmukat
+  aanimaisema-v1/<kerros>-01.mp3 puuttuvat (404) → kysytty Pelikoodarilta (sopimuksen mukaan hänen).
+- **COZY e9729420:** Julkaisijan käännösjonossa (NUI f1f455e7 ja LS1 koe-156 ensin), odottaa KÄÄNNÖS NYT.
+
 ## Nyt (6.10. 23.3x) — avoimet erät
 
 1. **Linna-149** (wt/proto-siirtoseppa-l149, siirtoseppa/linna-149 **183866ed**, juna 152, EI todennettu): saapuminen.loppu
