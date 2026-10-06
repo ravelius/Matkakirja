@@ -1,6 +1,17 @@
-# Siirtosepän luovutus 5.–6.10.2026 — TILA KLO 12.4x (Opus 5.5, high)
+# Siirtosepän luovutus 5.–6.10.2026 — TILA KLO 14.3x (Opus 5.5, high)
 
-## Nyt (6.10. 12.4x)
+## Nyt (6.10. 14.3x)
+
+- **Aloitus-pulu** (wt/proto-siirtoseppa-alo): b6d02f9a juna 147; fcc69f41 (ohjeet + valintavihje ilmoitusriviksi) junaan 148/149.
+- **Pulu-chat** (wt/proto-siirtoseppa-chat, siirtoseppa/pulu-chat 7d35f7d9, juna-148b:n päällä) KUITATTU junaan 149: noston
+  tekstin napautus ei sulje, Kysy → matala chat, Pulun luennan II/▶, pin → yläreunaan ja korvaa noston. Parit parit/7–10.
+- **Linna-149** (wt/proto-siirtoseppa-l149, 183866ed): saapuminen.loppu "kertoja", esittelyn tauko, jakso.nimet, panorointi,
+  iPad-vaaka + AutoRotation, Codex-kasvot pois, kanto/kanto_idle. EI vielä todennettu: Julkaisijan vuoro ~15.50 (KÄÄNNÖS +
+  30 min hiljainen D5900D45), ennen-ajo 148b-apilla (lokit/natiiviseppa-app-148b-8a01ead5), jälkeen peilillä
+  dioraama/olavinlinna/feea163c4ed34d5f/ (#4051), esinepeili bba43057b5a83bfe (#4052) erikseen. jakso.kuva-näyttö odottaa kuvaa.
+- **Seuraava:** FACEIT morph-tuki (arvio Päätoimittajalla, odottaa kuittausta), Steam Audio keittiö/piha (peili 2147deefd414e4b6).
+
+## Aiempi tila 12.4x
 
 - **Aloitusruutu ja kartan Pulu (omistajan vikaerä, Päätoimittaja 11.42):** haara `siirtoseppa/aloitus-pulu`,
   worktree `wt/proto-siirtoseppa-alo` (säilytä junien ajan).
