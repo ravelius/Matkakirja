@@ -1,0 +1,424 @@
+{
+ "kaupunki": "kreeta",
+ "kaupunkiQ": "Q34374",
+ "kohteet": [
+  {
+   "q": "Q173527",
+   "nimi": "Knossos",
+   "peruste": "UNESCO",
+   "koko_m": 300,
+   "lat": 35.29796,
+   "lon": 25.16316,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Knossos North entrance bull fresco.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Knossos_North_entrance_bull_fresco.jpg?width=1280",
+     "tekija": "Jebulon",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Knossos_North_entrance_bull_fresco.jpg",
+     "selite": "Knossos oli minolaisen sivilisaation suuri palatsikeskus, jonka pohjoisen sisäänkäynnin seinää koristaa härkäfriisi.",
+     "leveys": 4315,
+     "korkeus": 2872,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Knossos in Crete west court.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Knossos_in_Crete_west_court.jpg?width=1280",
+     "tekija": "This Photo was taken by Wolfgang Moroder. Feel free to use my photos, but please mention me as the author and send me a message. This image is not in the public domain. Please respect the copyright protection. It may only be used according to the rules mentioned here. This specifically excludes use in social media, if applicable terms of the licenses listed here not appropriate. Please do not upload an updated image here without consultation with the Author. The author would like to make corrections only at his own source. This ensures that the changes are preserved.Please if you think that any changes should be required, please inform the author.Otherwise you can upload a new image with a new name. Please use one of the templates derivative or extract.",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Knossos_in_Crete_west_court.jpg",
+     "selite": "Palatsin läntinen esipiha on kivetty kuninkaan tien varrelle.",
+     "leveys": 7360,
+     "korkeus": 4912,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Throne of Minos at Knossos Palace.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Throne_of_Minos_at_Knossos_Palace.jpg?width=1280",
+     "tekija": "Jebulon",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Throne_of_Minos_at_Knossos_Palace.jpg",
+     "selite": "Valtaistuinsali on punaisin kukkamaalauksin koristeltu huone, jossa on kivinen istuin.",
+     "leveys": 3056,
+     "korkeus": 4090,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 4,
+     "tiedosto": "Ruins of the Minoan Palace in Knossos.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ruins_of_the_Minoan_Palace_in_Knossos.jpg?width=1280",
+     "tekija": "Annatsach",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ruins_of_the_Minoan_Palace_in_Knossos.jpg",
+     "selite": "Palatsin kivijäänteet ovat levittäytyneet männikön keskelle kukkulan rinteelle.",
+     "leveys": 4512,
+     "korkeus": 3000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1128366",
+   "nimi": "Samarián rotko",
+   "peruste": "pelin nosto",
+   "koko_m": 600,
+   "lat": 35.27111,
+   "lon": 23.96139,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Φαράγγι Σαμαριάς 3754.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%CE%A6%CE%B1%CF%81%CE%AC%CE%B3%CE%B3%CE%B9_%CE%A3%CE%B1%CE%BC%CE%B1%CF%81%CE%B9%CE%AC%CF%82_3754.jpg?width=1280",
+     "tekija": "C messier",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%CE%A6%CE%B1%CF%81%CE%AC%CE%B3%CE%B3%CE%B9_%CE%A3%CE%B1%CE%BC%CE%B1%CF%81%CE%B9%CE%AC%CF%82_3754.jpg",
+     "selite": "Samarián rotko on Euroopan pisimpiä rotkoja ja kansallispuisto Kreetan Valkoisissa vuorissa.",
+     "leveys": 4587,
+     "korkeus": 3464,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Samaria Gorge 09.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Samaria_Gorge_09.jpg?width=1280",
+     "tekija": "Lapplaender",
+     "lisenssi": "CC BY-SA 3.0 de",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Samaria_Gorge_09.jpg",
+     "selite": "Rotkon kapein kohta on vaeltajien suosima ja jyrkkien kallioseinien rajaama.",
+     "leveys": 3600,
+     "korkeus": 2400,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Samaria Gorge Summer of 2025 15.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Samaria_Gorge_Summer_of_2025_15.jpg?width=1280",
+     "tekija": "Wormcrane",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Samaria_Gorge_Summer_of_2025_15.jpg",
+     "selite": "Korkeat kalliot nousevat kuivan joenuoman molemmin puolin.",
+     "leveys": 1856,
+     "korkeus": 4096,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q249707",
+   "nimi": "Faistos",
+   "peruste": "UNESCO",
+   "koko_m": 200,
+   "lat": 35.05123,
+   "lon": 24.81427,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Central courtyard Phaistos palace Crete.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Central_courtyard_Phaistos_palace_Crete.jpg?width=1280",
+     "tekija": "Jebulon",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Central_courtyard_Phaistos_palace_Crete.jpg",
+     "selite": "Faistos oli minolainen palatsi Messaran tasangon laidalla, ja sen taustalla näkyvät lumiset vuoret.",
+     "leveys": 4592,
+     "korkeus": 3056,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Storage Magazines Phaistos Palace.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Storage_Magazines_Phaistos_Palace.jpg?width=1280",
+     "tekija": "Tholos History",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Storage_Magazines_Phaistos_Palace.jpg",
+     "selite": "Palatsin varastotilat olivat pitkiä käytäviä kivisten seinien välissä.",
+     "leveys": 4032,
+     "korkeus": 2268,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q182299",
+   "nimi": "Hania",
+   "peruste": "sitelinks",
+   "koko_m": 500,
+   "lat": 35.51667,
+   "lon": 24.01667,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Chania - Venetian harbor 3.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Chania_-_Venetian_harbor_3.jpg?width=1280",
+     "tekija": "Lapplaender",
+     "lisenssi": "CC BY-SA 3.0 de",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Chania_-_Venetian_harbor_3.jpg",
+     "selite": "Hanian vanha venetsialainen satama on kaupungin sydän, ja sen ympärillä on värikkäitä taloja.",
+     "leveys": 3600,
+     "korkeus": 2400,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Kreta (GR), Chania, Alter Hafen, Leuchtturm -- 2023 -- 8527.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kreta_(GR)%2C_Chania%2C_Alter_Hafen%2C_Leuchtturm_--_2023_--_8527.jpg?width=1280",
+     "tekija": "Dietmar Rabich",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kreta_(GR)%2C_Chania%2C_Alter_Hafen%2C_Leuchtturm_--_2023_--_8527.jpg",
+     "selite": "Satamamuurin päässä seisoo vanha majakka.",
+     "leveys": 6556,
+     "korkeus": 4371,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Chania - Venetian harbor 2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Chania_-_Venetian_harbor_2.jpg?width=1280",
+     "tekija": "Lapplaender",
+     "lisenssi": "CC BY-SA 3.0 de",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Chania_-_Venetian_harbor_2.jpg",
+     "selite": "Satamaa reunustavat vanhat venetsialaiset rakennukset.",
+     "leveys": 3600,
+     "korkeus": 2400,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q916136",
+   "nimi": "Spinalonga",
+   "peruste": "sitelinks",
+   "koko_m": 500,
+   "lat": 35.297,
+   "lon": 25.738,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "20090620 Spinalogka Elounta panoramic view from the mountain.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20090620_Spinalogka_Elounta_panoramic_view_from_the_mountain.jpg?width=1280",
+     "tekija": "Ggia",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20090620_Spinalogka_Elounta_panoramic_view_from_the_mountain.jpg",
+     "selite": "Spinalonga on pieni linnoitussaari Eloundan lahdella, jolla toimi myöhemmin spitaalisten siirtola.",
+     "leveys": 4284,
+     "korkeus": 2844,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Spinalonga island - panoramic view from Plaka.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Spinalonga_island_-_panoramic_view_from_Plaka.jpg?width=1280",
+     "tekija": "Alexey laa",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Spinalonga_island_-_panoramic_view_from_Plaka.jpg",
+     "selite": "Saari kohoaa matalana meren yllä Kreetan rannikon edustalla.",
+     "leveys": 10883,
+     "korkeus": 2758,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Σπιναλόγκα 0761.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%CE%A3%CF%80%CE%B9%CE%BD%CE%B1%CE%BB%CF%8C%CE%B3%CE%BA%CE%B1_0761.jpg?width=1280",
+     "tekija": "C messier",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%CE%A3%CF%80%CE%B9%CE%BD%CE%B1%CE%BB%CF%8C%CE%B3%CE%BA%CE%B1_0761.jpg",
+     "selite": "Saaren rapistuneet kivitalot ovat jäännöksiä asutuksesta.",
+     "leveys": 4279,
+     "korkeus": 3209,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1324824",
+   "nimi": "Elafonisi",
+   "peruste": "sitelinks",
+   "koko_m": 1000,
+   "lat": 35.26917,
+   "lon": 23.5325,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Aerial view of Elafonisi beach separating Crete and Elafonisi Island in Greece.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aerial_view_of_Elafonisi_beach_separating_Crete_and_Elafonisi_Island_in_Greece.jpg?width=1280",
+     "tekija": "dronepicr",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aerial_view_of_Elafonisi_beach_separating_Crete_and_Elafonisi_Island_in_Greece.jpg",
+     "selite": "Elafonisi on Kreetan lounaisrannikon pieni saari, jonka hiekka on osin vaaleanpunaista.",
+     "leveys": 5444,
+     "korkeus": 3627,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Ελαφονήσι 0976.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%CE%95%CE%BB%CE%B1%CF%86%CE%BF%CE%BD%CE%AE%CF%83%CE%B9_0976.jpg?width=1280",
+     "tekija": "C messier",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%CE%95%CE%BB%CE%B1%CF%86%CE%BF%CE%BD%CE%AE%CF%83%CE%B9_0976.jpg",
+     "selite": "Matala laguuni yhdistää saaren Kreetaan ja hiekkaranta jatkuu kaukaisuuteen.",
+     "leveys": 4632,
+     "korkeus": 3008,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q603920",
+   "nimi": "Iraklionin Koules-linnoitus",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 35.34457,
+   "lon": 25.13688,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Venetian Fortress in Heraklion Crete NE side.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Venetian_Fortress_in_Heraklion_Crete_NE_side.jpg?width=1280",
+     "tekija": "This Photo was taken by Wolfgang Moroder. Feel free to use my photos, but please mention me as the author and send me a message. This image is not in the public domain. Please respect the copyright protection. It may only be used according to the rules mentioned here. This specifically excludes use in social media, if applicable terms of the licenses listed here not appropriate. Please do not upload an updated image here without consultation with the Author. The author would like to make corrections only at his own source. This ensures that the changes are preserved.Please if you think that any changes should be required, please inform the author.Otherwise you can upload a new image with a new name. Please use one of the templates derivative or extract.",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Venetian_Fortress_in_Heraklion_Crete_NE_side.jpg",
+     "selite": "Koules on venetsialaisten rakentama linnoitus Iraklionin vanhan sataman suulla.",
+     "leveys": 7360,
+     "korkeus": 3982,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Venetian Fortress of Koules in Heraklion, Crete 003.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Venetian_Fortress_of_Koules_in_Heraklion%2C_Crete_003.jpg?width=1280",
+     "tekija": "Moonik",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Venetian_Fortress_of_Koules_in_Heraklion%2C_Crete_003.jpg",
+     "selite": "Linnoituksen edustalla on pieni kalastajasatama.",
+     "leveys": 4288,
+     "korkeus": 2848,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q541696",
+   "nimi": "Arkádin luostari",
+   "peruste": "sitelinks",
+   "koko_m": 120,
+   "lat": 35.31,
+   "lon": 24.62944,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Arkadi Monastery - Apses of the church.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Arkadi_Monastery_-_Apses_of_the_church.jpg?width=1280",
+     "tekija": "Bernard Gagnon",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Arkadi_Monastery_-_Apses_of_the_church.jpg",
+     "selite": "Arkádin luostari on kreetalaisen vastarinnan symboli, ja sen kirkko on 1500-luvulta.",
+     "leveys": 2718,
+     "korkeus": 1945,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Arkadi Monastery - Main bell.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Arkadi_Monastery_-_Main_bell.jpg?width=1280",
+     "tekija": "Bernard Gagnon",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Arkadi_Monastery_-_Main_bell.jpg",
+     "selite": "Luostarin kellotorni kohoaa taivasta vasten.",
+     "leveys": 1907,
+     "korkeus": 2296,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q636972",
+   "nimi": "Iraklionin arkeologinen museo",
+   "peruste": "sitelinks",
+   "koko_m": 80,
+   "lat": 35.33917,
+   "lon": 25.1375,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Building of the Archaeological Museum of Heraklion, 061381.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Building_of_the_Archaeological_Museum_of_Heraklion%2C_061381.jpg?width=1280",
+     "tekija": "Zde",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Building_of_the_Archaeological_Museum_of_Heraklion%2C_061381.jpg",
+     "selite": "Iraklionin arkeologinen museo säilyttää maailman laajinta minolaisten esineiden kokoelmaa.",
+     "leveys": 2592,
+     "korkeus": 1868,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Clay bull-shaped rhyton from Koumasa 2000-1900 BC (js).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Clay_bull-shaped_rhyton_from_Koumasa_2000-1900_BC_(js).jpg?width=1280",
+     "tekija": "Jerzystrzelecki",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Clay_bull-shaped_rhyton_from_Koumasa_2000-1900_BC_(js).jpg",
+     "selite": "Kokoelmaan kuuluu esimerkiksi savinen härän muotoinen juomasoitin.",
+     "leveys": 3441,
+     "korkeus": 2294,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Aerial view of the north-west part of the island of Crete, Greece.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aerial_view_of_the_north-west_part_of_the_island_of_Crete%2C_Greece.jpg?width=1280",
+   "tekija": "dronepicr",
+   "lisenssi": "CC BY 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aerial_view_of_the_north-west_part_of_the_island_of_Crete%2C_Greece.jpg",
+   "selite": "Kreetan luoteisosan rannikko ja vuoret avautuvat ilmasta nähtynä.",
+   "leveys": 5464,
+   "korkeus": 3640,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Panoramic view of Kourtaliotiko Gorge on Crete, Greece.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Panoramic_view_of_Kourtaliotiko_Gorge_on_Crete%2C_Greece.jpg?width=1280",
+   "tekija": "dronepicr",
+   "lisenssi": "CC BY 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Panoramic_view_of_Kourtaliotiko_Gorge_on_Crete%2C_Greece.jpg",
+   "selite": "Kourtaliotikon rotko leikkaa Kreetan vuoristoista sisämaata.",
+   "leveys": 8192,
+   "korkeus": 2704,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

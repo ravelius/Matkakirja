@@ -1,0 +1,663 @@
+{
+ "kaupunki": "sisilia",
+ "kaupunkiQ": "Q1460",
+ "kohteet": [
+  {
+   "q": "Q16990",
+   "nimi": "Etna",
+   "peruste": "sitelinks",
+   "koko_m": 3000,
+   "lat": 37.75083,
+   "lon": 14.99322,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Mount Etna snow-toppd.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mount_Etna_snow-toppd.jpg?width=1280",
+     "tekija": "Jeanne boleyn",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mount_Etna_snow-toppd.jpg",
+     "selite": "Etna on Euroopan korkein ja yksi maailman aktiivisimmista tulivuorista, ja sen huippu on talvella lumen peitossa.",
+     "leveys": 1542,
+     "korkeus": 1330,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Etna eruption seen from the International Space Station.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Etna_eruption_seen_from_the_International_Space_Station.jpg?width=1280",
+     "tekija": "NASA",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Etna_eruption_seen_from_the_International_Space_Station.jpg",
+     "selite": "Avaruudesta nähdään Etnan purkautumisen savupilvi ja laavavirrat saaren itärannalla.",
+     "leveys": 2720,
+     "korkeus": 2000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Etna Volcano Paroxysmal Eruption October 26 2013 - Creative Commons by gnuckx (10491911996).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Etna_Volcano_Paroxysmal_Eruption_October_26_2013_-_Creative_Commons_by_gnuckx_(10491911996).jpg?width=1280",
+     "tekija": "gnuckx",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Etna_Volcano_Paroxysmal_Eruption_October_26_2013_-_Creative_Commons_by_gnuckx_(10491911996).jpg",
+     "selite": "Etnan purkaukset lähettävät tuhkapilviä korkealle taivaalle.",
+     "leveys": 1872,
+     "korkeus": 2816,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q199952",
+   "nimi": "Taormina",
+   "peruste": "pelin nosto",
+   "koko_m": 700,
+   "lat": 37.85179,
+   "lon": 15.28565,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Taormina as seen from the castle overlooking the town..jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Taormina_as_seen_from_the_castle_overlooking_the_town..jpg?width=1280",
+     "tekija": "Solomonn Levi",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Taormina_as_seen_from_the_castle_overlooking_the_town..jpg",
+     "selite": "Taormina on Sisilian itärannikon vuorenrinteeseen rakennettu kaupunki, jonka alapuolella avautuu Joonianmeri.",
+     "leveys": 5645,
+     "korkeus": 3768,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Taormina BW 2025-04-27 10-10-49.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Taormina_BW_2025-04-27_10-10-49.jpg?width=1280",
+     "tekija": "Berthold Werner",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Taormina_BW_2025-04-27_10-10-49.jpg",
+     "selite": "Kaupungin katot ja vuoristomaisema avautuvat Monte Tauron rinteeltä.",
+     "leveys": 6016,
+     "korkeus": 4000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q636774",
+   "nimi": "Agrigenton temppelilaakso",
+   "peruste": "UNESCO",
+   "koko_m": 2000,
+   "lat": 37.28972,
+   "lon": 13.59,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Valle dei Templi – Temple of Concordia 2024e.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Valle_dei_Templi_%E2%80%93_Temple_of_Concordia_2024e.jpg?width=1280",
+     "tekija": "Cayambe",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Valle_dei_Templi_%E2%80%93_Temple_of_Concordia_2024e.jpg",
+     "selite": "Agrigenton temppelilaaksossa seisovat antiikin Kreikan doorilaiset temppelit lähes ehjinä.",
+     "leveys": 8256,
+     "korkeus": 2998,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Tempio della Concordia, Valle dei Templi, Agrigento, Sicilia, Italia 2024.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tempio_della_Concordia%2C_Valle_dei_Templi%2C_Agrigento%2C_Sicilia%2C_Italia_2024.jpg?width=1280",
+     "tekija": "Sharon Hahn Darlin",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tempio_della_Concordia%2C_Valle_dei_Templi%2C_Agrigento%2C_Sicilia%2C_Italia_2024.jpg",
+     "selite": "Concordian temppeli on yksi parhaiten säilyneistä kreikkalaisista temppeleistä.",
+     "leveys": 3956,
+     "korkeus": 2967,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Valle dei Templi – towards Temple of Concordia.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Valle_dei_Templi_%E2%80%93_towards_Temple_of_Concordia.jpg?width=1280",
+     "tekija": "Cayambe",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Valle_dei_Templi_%E2%80%93_towards_Temple_of_Concordia.jpg",
+     "selite": "Vanha tie johtaa oliivipuiden lomitse kohti Concordian temppeliä.",
+     "leveys": 5880,
+     "korkeus": 3286,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1478407",
+   "nimi": "Palermon katedraali",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 38.11444,
+   "lon": 13.35611,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Palermo Cathedral BW 2025-04-29 11-14-42.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Palermo_Cathedral_BW_2025-04-29_11-14-42.jpg?width=1280",
+     "tekija": "Berthold Werner",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Palermo_Cathedral_BW_2025-04-29_11-14-42.jpg",
+     "selite": "Palermon katedraali yhdistää normannilaista, arabialaista ja barokkityyliä.",
+     "leveys": 5496,
+     "korkeus": 3664,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Palermo Cathedral BW 2025-04-29 11-57-44.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Palermo_Cathedral_BW_2025-04-29_11-57-44.jpg?width=1280",
+     "tekija": "Berthold Werner",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Palermo_Cathedral_BW_2025-04-29_11-57-44.jpg",
+     "selite": "Katedraalin kupolit ja tornit nousevat Piazza della Vittorian puutarhan yläpuolelle.",
+     "leveys": 8995,
+     "korkeus": 4276,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Palermo Cathedral BW 2025-04-29 11-56-13.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Palermo_Cathedral_BW_2025-04-29_11-56-13.jpg?width=1280",
+     "tekija": "Berthold Werner",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Palermo_Cathedral_BW_2025-04-29_11-56-13.jpg",
+     "selite": "Etelän sisäänkäynnin kolme kaarta on 1400-luvun goottilaista käsityötä.",
+     "leveys": 5724,
+     "korkeus": 3806,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1233234",
+   "nimi": "Ortigia",
+   "peruste": "UNESCO",
+   "koko_m": 800,
+   "lat": 37.061,
+   "lon": 15.2945,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Siracusa, Ortigia, Piazza Duomo.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Siracusa%2C_Ortigia%2C_Piazza_Duomo.jpg?width=1280",
+     "tekija": "Rosaria Privitera Saggio",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Siracusa%2C_Ortigia%2C_Piazza_Duomo.jpg",
+     "selite": "Ortigia on Syrakusan vanhin kaupunginosa, jonka Piazza Duomolla seisoo barokkikatedraali.",
+     "leveys": 4752,
+     "korkeus": 3168,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Siracusa Ortigia.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Siracusa_Ortigia.jpg?width=1280",
+     "tekija": "Yiannis Vacondios",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Siracusa_Ortigia.jpg",
+     "selite": "Illalla Piazza Duomo hohtaa lämpimänä vaaleiden kivitalojen välissä.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Ortygia - Syracuse (cropped).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ortygia_-_Syracuse_(cropped).jpg?width=1280",
+     "tekija": "Andrea Schaffer",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ortygia_-_Syracuse_(cropped).jpg",
+     "selite": "Saaren rannoilla vanhat muurit nousevat suoraan merestä.",
+     "leveys": 2040,
+     "korkeus": 1361,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1058967",
+   "nimi": "Syrakusan kreikkalainen teatteri",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 37.07611,
+   "lon": 15.275,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Greek theater of Syracuse AvL.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Greek_theater_of_Syracuse_AvL.JPG?width=1280",
+     "tekija": "AlexanderVanLoon",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Greek_theater_of_Syracuse_AvL.JPG",
+     "selite": "Syrakusan teatteri on kallioon louhittu antiikin kreikkalaisen ajan katsomo, jossa esitetään yhä näytelmiä.",
+     "leveys": 3648,
+     "korkeus": 2736,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Syracusa01(js).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Syracusa01(js).jpg?width=1280",
+     "tekija": "Jerzy Strzelecki",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Syracusa01(js).jpg",
+     "selite": "Katsomon portaat kaartuvat rinnettä pitkin kohti ympäröivää puistoa.",
+     "leveys": 1920,
+     "korkeus": 1224,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1303856",
+   "nimi": "Monrealen katedraali",
+   "peruste": "UNESCO",
+   "koko_m": 120,
+   "lat": 38.08186,
+   "lon": 13.29207,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Monreale Cathedral exterior BW 2012-10-09 10-23-10.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Monreale_Cathedral_exterior_BW_2012-10-09_10-23-10.jpg?width=1280",
+     "tekija": "Berthold Werner",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Monreale_Cathedral_exterior_BW_2012-10-09_10-23-10.jpg",
+     "selite": "Monrealen katedraali on normannikauden mahtava kirkko Palermon yläpuolella.",
+     "leveys": 3535,
+     "korkeus": 2354,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Monreale Cathedral BW 2025-04-29 15-56-55.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Monreale_Cathedral_BW_2025-04-29_15-56-55.jpg?width=1280",
+     "tekija": "Berthold Werner",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Monreale_Cathedral_BW_2025-04-29_15-56-55.jpg",
+     "selite": "Katedraalin viereinen luostarin pihakäytävä on koristeltu kaksinaisin pylväin.",
+     "leveys": 5777,
+     "korkeus": 3857,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Monreale Cathedral BW 2025-04-29 15-42-01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Monreale_Cathedral_BW_2025-04-29_15-42-01.jpg?width=1280",
+     "tekija": "Berthold Werner",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Monreale_Cathedral_BW_2025-04-29_15-42-01.jpg",
+     "selite": "Sisällä kullanhohtoiset mosaiikit peittävät seinät ja Kristus Pantokratorin kuvan apsiksessa.",
+     "leveys": 3351,
+     "korkeus": 5026,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1354756",
+   "nimi": "Cefalùn katedraali",
+   "peruste": "UNESCO",
+   "koko_m": 100,
+   "lat": 38.03984,
+   "lon": 14.02341,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Cefalù BW 2025-05-01 13-11-30.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cefal%C3%B9_BW_2025-05-01_13-11-30.jpg?width=1280",
+     "tekija": "Berthold Werner",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cefal%C3%B9_BW_2025-05-01_13-11-30.jpg",
+     "selite": "Cefalùn katedraali on normannikuninkaiden perustama, ja sen kaksi tornia kohoavat kaupungin yläpuolella.",
+     "leveys": 5362,
+     "korkeus": 3875,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Cefalù - Duomo di Cefalù - 2025-09-10 22-33-38 001.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cefal%C3%B9_-_Duomo_di_Cefal%C3%B9_-_2025-09-10_22-33-38_001.jpg?width=1280",
+     "tekija": "Enricopis",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cefal%C3%B9_-_Duomo_di_Cefal%C3%B9_-_2025-09-10_22-33-38_001.jpg",
+     "selite": "Ilmasta näkyy, kuinka kaupunki ja katedraali nojaavat jyrkkää kallioseinämää vasten.",
+     "leveys": 2720,
+     "korkeus": 1530,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q505617",
+   "nimi": "Villa Romana del Casale",
+   "peruste": "UNESCO",
+   "koko_m": 200,
+   "lat": 37.36472,
+   "lon": 14.33455,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Mosaïque de la Grande Chasse, villa de Casale.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mosa%C3%AFque_de_la_Grande_Chasse%2C_villa_de_Casale.jpg?width=1280",
+     "tekija": "Unknown authorUnknown author",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mosa%C3%AFque_de_la_Grande_Chasse%2C_villa_de_Casale.jpg",
+     "selite": "Villa Romana del Casalen mosaiikit ovat antiikin roomalaisen taiteen laajimpia ja parhaiten säilyneitä.",
+     "leveys": 1702,
+     "korkeus": 2502,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Transport d'animaux exotiques, villa de Casale, Piazza Armerina, Sicile, Italie.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Transport_d'animaux_exotiques%2C_villa_de_Casale%2C_Piazza_Armerina%2C_Sicile%2C_Italie.jpg?width=1280",
+     "tekija": "Unknown authorUnknown author",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Transport_d'animaux_exotiques%2C_villa_de_Casale%2C_Piazza_Armerina%2C_Sicile%2C_Italie.jpg",
+     "selite": "Mosaiikissa kuvataan villieläinten kuljetusta areenoille.",
+     "leveys": 2945,
+     "korkeus": 1072,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1034853",
+   "nimi": "Palatiinikappeli",
+   "peruste": "pelin nosto",
+   "koko_m": 40,
+   "lat": 38.11083,
+   "lon": 13.35361,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Cappella Palatina 2014.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cappella_Palatina_2014.jpg?width=1280",
+     "tekija": "Liilia Moroz",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cappella_Palatina_2014.jpg",
+     "selite": "Palermon Palatiinikappelin kullanhohtoiset mosaiikit yhdistävät bysanttilaista, arabialaista ja normannilaista taidetta.",
+     "leveys": 4752,
+     "korkeus": 3168,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q747484",
+   "nimi": "Taorminan teatteri",
+   "peruste": "pelin nosto",
+   "koko_m": 120,
+   "lat": 37.85245,
+   "lon": 15.29212,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Taormina BW 2025-04-27 10-06-34.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Taormina_BW_2025-04-27_10-06-34.jpg?width=1280",
+     "tekija": "Berthold Werner",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Taormina_BW_2025-04-27_10-06-34.jpg",
+     "selite": "Taorminan antiikin teatterin rauniot ovat tiilimuurien ja pylväiden muotoilemia.",
+     "leveys": 6161,
+     "korkeus": 4097,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Taormina BW 2025-04-27 10-26-20.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Taormina_BW_2025-04-27_10-26-20.jpg?width=1280",
+     "tekija": "Berthold Werner",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Taormina_BW_2025-04-27_10-26-20.jpg",
+     "selite": "Teatterista avautuu näkymä Joonianmerelle ja kaukana kohoavalle Etnalle.",
+     "leveys": 6016,
+     "korkeus": 3384,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q487174",
+   "nimi": "Noto",
+   "peruste": "UNESCO",
+   "koko_m": 600,
+   "lat": 36.88333,
+   "lon": 15.08333,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Noto Cathedral BW 2025-04-26 11-08-40.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Noto_Cathedral_BW_2025-04-26_11-08-40.jpg?width=1280",
+     "tekija": "Berthold Werner",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Noto_Cathedral_BW_2025-04-26_11-08-40.jpg",
+     "selite": "Noto jälleenrakennettiin 1693 maanjäristyksen jälkeen harmoniseksi sisiliaisen barokin kaupungiksi.",
+     "leveys": 5919,
+     "korkeus": 4011,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Dome of Noto Cathedral.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dome_of_Noto_Cathedral.jpg?width=1280",
+     "tekija": "Bernard Gagnon",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Dome_of_Noto_Cathedral.jpg",
+     "selite": "Katedraalin kupoli rakennettiin uudelleen sen romahdettua vuonna 1996.",
+     "leveys": 2996,
+     "korkeus": 4195,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q179883",
+   "nimi": "Liparisaaret",
+   "peruste": "UNESCO",
+   "koko_m": 15000,
+   "lat": 38.49667,
+   "lon": 14.93583,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Aerial image of Stromboli (view from the northeast).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aerial_image_of_Stromboli_(view_from_the_northeast).jpg?width=1280",
+     "tekija": "Carsten Steger",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aerial_image_of_Stromboli_(view_from_the_northeast).jpg",
+     "selite": "Liparisaaret ovat tulivuoriperäinen saaristo Sisilian pohjoispuolella, ja Stromboli on yhä aktiivinen.",
+     "leveys": 5000,
+     "korkeus": 2700,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Castello di Lipari 02.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Castello_di_Lipari_02.jpg?width=1280",
+     "tekija": "Bernard Gagnon",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Castello_di_Lipari_02.jpg",
+     "selite": "Liparin linnoitus kohoaa sataman yllä saariston pääkaupungissa.",
+     "leveys": 4491,
+     "korkeus": 2994,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q692847",
+   "nimi": "Segesta",
+   "peruste": "sitelinks",
+   "koko_m": 400,
+   "lat": 37.91591,
+   "lon": 12.86359,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Segesta AncientGreekTemple 0932.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Segesta_AncientGreekTemple_0932.jpg?width=1280",
+     "tekija": "Ludvig14",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Segesta_AncientGreekTemple_0932.jpg",
+     "selite": "Segestan keskeneräinen doorilainen temppeli seisoo yksinäisellä kukkulalla kauniissa maisemassa.",
+     "leveys": 5173,
+     "korkeus": 3281,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Segesta BW 2012-10-10 17-08-52.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Segesta_BW_2012-10-10_17-08-52.jpg?width=1280",
+     "tekija": "Berthold Werner",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Segesta_BW_2012-10-10_17-08-52.jpg",
+     "selite": "Temppelin pylväät erottuvat selvästi taivasta vasten.",
+     "leveys": 3550,
+     "korkeus": 3260,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q952173",
+   "nimi": "Selinunte",
+   "peruste": "sitelinks",
+   "koko_m": 1000,
+   "lat": 37.58361,
+   "lon": 12.82472,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Selinunte Temple C aerial view.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Selinunte_Temple_C_aerial_view.jpg?width=1280",
+     "tekija": "Jorre (Jochen Reinhard)",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Selinunte_Temple_C_aerial_view.jpg",
+     "selite": "Selinunte oli antiikin kreikkalainen kaupunki Sisilian lounaisrannikolla, jonka temppelien rauniot jäivät maanjäristyksen jäljiltä.",
+     "leveys": 3375,
+     "korkeus": 2419,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Temples A, B, and C at Selinunte sel26.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Temples_A%2C_B%2C_and_C_at_Selinunte_sel26.jpg?width=1280",
+     "tekija": "Michael Gunther",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Temples_A%2C_B%2C_and_C_at_Selinunte_sel26.jpg",
+     "selite": "Akropoliin temppelin pylväsrivi on osittain pystytetty uudelleen.",
+     "leveys": 2920,
+     "korkeus": 2035,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q261439",
+   "nimi": "Teatro Massimo",
+   "peruste": "sitelinks",
+   "koko_m": 120,
+   "lat": 38.12028,
+   "lon": 13.35722,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Teatro Massimo Vittorio Emanuele, Palermo.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Teatro_Massimo_Vittorio_Emanuele%2C_Palermo.jpg?width=1280",
+     "tekija": "Chiara Saffioti",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Teatro_Massimo_Vittorio_Emanuele%2C_Palermo.jpg",
+     "selite": "Palermon Teatro Massimo on Italian suurin oopperatalo ja sen uusklassinen pylväikkö hallitsee aukiota.",
+     "leveys": 4592,
+     "korkeus": 3448,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Palermo - Teatro Massimo Vittorio Emanuele.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Palermo_-_Teatro_Massimo_Vittorio_Emanuele.jpg?width=1280",
+     "tekija": "Vinpao",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Palermo_-_Teatro_Massimo_Vittorio_Emanuele.jpg",
+     "selite": "Rakennuksen kupoli ja palmut kehystävät sisäänkäyntiä.",
+     "leveys": 4608,
+     "korkeus": 3072,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Aerial image of the coast of Taormina (view from the southeast).jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aerial_image_of_the_coast_of_Taormina_(view_from_the_southeast).jpg?width=1280",
+   "tekija": "Carsten Steger",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aerial_image_of_the_coast_of_Taormina_(view_from_the_southeast).jpg",
+   "selite": "Sisilian itärannikon vuoristoinen rantaviiva kohoaa jyrkästi Joonianmerestä.",
+   "leveys": 5568,
+   "korkeus": 3712,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Palermo panorama monte pellegrino.JPG",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Palermo_panorama_monte_pellegrino.JPG?width=1280",
+   "tekija": "Gabrios1984",
+   "lisenssi": "CC BY-SA 3.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Palermo_panorama_monte_pellegrino.JPG",
+   "selite": "Monte Pellegrinolta näkyy Palermo, Sisilian pääkaupunki, vuorten ja meren välissä.",
+   "leveys": 9356,
+   "korkeus": 1513,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}
