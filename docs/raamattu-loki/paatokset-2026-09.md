@@ -11076,3 +11076,9 @@ Omistaja 6.10.2026 klo 19.5x (chat) sanatarkasti: "Nyt ISS jalka hyvä, voi lait
 ## PÄÄTOIMITTAJA: MCP FOR BLENDER -ARVIO (6.10.2026 klo 20.06)
 
 Omistaja 6.10.2026 klo 20.0x kysyi sivusta mcp-for-blender.com ("Onko tästä hyötyä sinulle Blenderin käytössä? Ymmärsinkö oikein, että se nopeuttaisi jopa 40 prosenttia Blenderin käyttöä"). Arvio: ilmainen avoimen lähdekoodin MCP-lisäosa (execute_blender_code, look, get_scene_info, Poly Haven/Sketchfab/Hyper3D/Tripo); sivulla tai ohjeissa ei 40 %:n väitettä. Ei nyt: roolit ajavat Blenderiä jo Python-skripteillä ilman näkyvää ikkunaa, lisäosa vaatii auki olevan Blender-ikkunan (kone muistirajoilla), avaa paikallisen portin koodin ajoon ja asennetaan curl | sh -skriptillä; Poly Havenin CC0-aineiston voi hakea suoraan.
+
+## OMISTAJA: OPPAAN KOHTEITA 6–20 KAUPUNGIN MUKAAN JA KUVIA 1–5 KOHTEEN MUKAAN (6.10.2026 klo 20.12)
+
+Omistaja 6.10.2026 klo 20.1x (chat) sanatarkasti: "Kannattaisiko kaupungin kohteiden määrää kuitenkin säätää kaupungin koon ja mielenkiintoisten kohteiden mukaisesti? Minusta vaihteluväli voisi olla kaikkea kuuden ja kahdenkymmenen välillä. Mitä olet mieltä? Sama liukuva määrä voisi koskea myös yhden kohteen. Kuvien lukumäärää, mikä voisi olla 1–5 kappaletta."
+
+Päätoimittaja: samaa mieltä. Kohteet 6–20: mukaan pelin omat nostot, UNESCO-kohteet ja kohteet, joilla Wikidatassa vähintään noin 15 kieliversiota, merkittävyysjärjestyksessä (esim. Pariisi, Rooma, Lontoo, Istanbul 20; keskikokoinen pääkaupunki 10–12; pieni kaupunki 6–8). Kuvat 1–5: suuret maamerkit 4–5 (eri kulmat, sisätila, yksityiskohta, ilta), tavalliset 2–3, pienet 1; heikoilla kuvilla ei täytetä. Liiku näyttää koko listan, kaupunkikierros 8–10 tärkeintä. Raamatun ELÄVÄ OPAS -kohta päivitetty; Sisältökirjuri ja Pelikoodari ohjeistettu.
