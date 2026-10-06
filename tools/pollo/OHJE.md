@@ -165,6 +165,10 @@ koodimuutos main-haarassa julkaisee workerin uudelleen itsestään.
   tuomioon (`sahke`) samoin päivä- ja kuukausirajoin kuin selain
   (30/vrk per IP); kuva ja tila palauttavat 403 (`NATIIVIN_TEHTAVAT`,
   `natiivilleSallittu`).
+- **Testit eivät tuota ääntä** (omistaja 6.10.2026, sitova): roolien testitunnus (`x-matkakirja-testitunnus`) ja
+  testiotsake (`x-matkakirja-testi: 1`) eivät koskaan kutsu puhemoottoria (ElevenLabs, xAI, OpenAI). Luenta palauttaa
+  valmiin äänen säilöistä tai 204, opas antaa ääni-urlin vain R2:ssa jo olevalle äänelle, eivätkä GET-polut tuota.
+  Ohitus vain äänilupalipulla `x-matkakirja-aanilupa` = salaisuus `POLLO_AANILUPA`, omistajan luvalla tarkalle määrälle.
 - **KV:n päiväkiintiö** (6.10.2026, ilmaistaso 1 000 kirjoitusta/vrk; `reuna.js`): kaikki KV-kutsut fail-open. Oppaan
   äänen teksti on R2:ssa (`opas/teksti/<sha>.json`, KV varana). Istunnon tila (kierros, suunnat, isoisä) ja lisäkuvien
   välimuisti ovat R2:ssa (`tila/…`, vanhenemisaika oliossa). Tuotantolukot ja Nominatimin vuoro ovat isolaatin muistissa
