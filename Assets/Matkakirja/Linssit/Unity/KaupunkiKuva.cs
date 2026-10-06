@@ -47,14 +47,14 @@ namespace Matkakirja.Natiivi
         public static float Terava = 0f;
 
         // ---- VUOROKAUDENAJAN VALINTA (omistaja 6.10. 19.0x, Natiivi-UI:n nappi vasemmassa yläkulmassa; juna 152) ----
-        /// <summary>Pelaajan valinta: "auto" (kohteen oma aurinko), "aamu", "paiva", "ilta" ("yo" myöhemmin valojen kanssa).
+        /// <summary>Pelaajan valinta: "auto" (kohteen oma aurinko), "aamu", "paiva", "ilta", "yo" (Black Marble -valot, 6.10.).
         /// Pysyy, kunnes vaihdetaan (myös seuraavissa avauksissa). Vaihto näkyy heti seuraavassa kehyksessä ilman uudelleenlatausta.</summary>
         public static string Valinta
         {
             get => valinta;
             set
             {
-                var v = value == "aamu" || value == "paiva" || value == "ilta" ? value : "auto";
+                var v = value == "aamu" || value == "paiva" || value == "ilta" || value == "yo" ? value : "auto";
                 if (v == valinta) return;
                 valinta = v;
                 Debug.Log($"MATKAKIRJA kaupunki: vuorokausi valittu {v}");
@@ -67,7 +67,7 @@ namespace Matkakirja.Natiivi
         /// <summary>Voimassa oleva tila "aamu" | "paiva" | "ilta" | "yo" (automaattisessa kohteen oman ajan mukaan).</summary>
         public static string Nyt { get; private set; } = "paiva";
         /// <summary>Valinnan tunti (aamu 7, päivä 12, ilta 18.30); −1 = automaattinen.</summary>
-        internal static float ValinnanTunti => valinta == "aamu" ? 7f : valinta == "paiva" ? 12f : valinta == "ilta" ? 18.5f : -1f;
+        internal static float ValinnanTunti => valinta == "aamu" ? 7f : valinta == "paiva" ? 12f : valinta == "ilta" ? 18.5f : valinta == "yo" ? 23f : -1f;
         /// <summary>Pakotettu tunti: asetustiedosto ensin (kuvaparit), sitten pelaajan valinta; −1 = auringon mukaan.</summary>
         internal static float TuntiNyt => Tunti >= 0 ? Tunti : ValinnanTunti;
         /// <summary>Sävytys käytössä: asetus tai pelaajan oma valinta (nappi kytkee sävyn päälle, vaikka oletus odottaa kuittausta).</summary>
@@ -138,6 +138,7 @@ namespace Matkakirja.Natiivi
             AlkuKerroin = 15f; LoppuKerroin = 80f; AlkuMinM = 3000f; LoppuMinM = 15000f; Sumu = false; Savytys = false; Volyymi = false;
             Kontrasti = 12f; Saturaatio = 10f; Hehku = 0f; VuorokausiPaalla = true; Kupoli = false; Tunti = -1f; asetuksetMuokattu = default;
             Terava = 0f; KaupunkiTerava.Pois();
+            KaupunkiYovalot.Pois(true); KaupunkiYovalot.Kaytossa = true;
             varit = null; valko = null; jako = null;
             if (ajo != null) { ajo.Lopeta(); Object.Destroy(ajo.gameObject); ajo = null; }
             QualitySettings.anisotropicFiltering = vanhaAniso;
@@ -192,6 +193,10 @@ namespace Matkakirja.Natiivi
                         case "tunti": Tunti = v; break;
                         case "kupoli": Kupoli = v != 0; break;
                         case "terava": Terava = v; KaupunkiTerava.Aseta(v); break;
+                        case "yovalot": KaupunkiYovalot.Kaytossa = v != 0; break;
+                        case "yohehku": KaupunkiYovalot.Hehku = v; break;
+                        case "yopisteet": KaupunkiYovalot.Pisteet = v; break;
+                        case "yosolu": KaupunkiYovalot.SoluM = v; break;
                     }
                 }
                 return true;
@@ -320,8 +325,12 @@ namespace Matkakirja.Natiivi
             // Oletus: auringon todellinen korkeus kohteessa; pelaajan valinta tai asetuksen tunti avainkuvista.
             var savy = !KaupunkiKuva.SavyKaytossa ? KaupunkiValo.Paiva
                 : pakko >= 0 ? KaupunkiValo.Tunnille(tunti) : KaupunkiValo.Korkeudelle(aurinko, aamupaiva);
-            KaupunkiKuva.AsetaNyt(pakko >= 0 ? (tunti < 9.5 ? "aamu" : tunti < 16 ? "paiva" : "ilta")
+            KaupunkiKuva.AsetaNyt(pakko >= 0 ? (tunti >= 21 || tunti < 5 ? "yo" : tunti < 9.5 ? "aamu" : tunti < 16 ? "paiva" : "ilta")
                 : aurinko <= -8 ? "yo" : aurinko < 15 ? (aamupaiva ? "aamu" : "ilta") : "paiva");
+            // Yövalot (kuvanlaatujärjestys kohta 2): hämärästä yöhön auringon tai valitun kellonajan mukaan.
+            double yoOsuus = !KaupunkiKuva.SavyKaytossa ? 0 : pakko >= 0 ? Matkakirja.Linssit.Kierros.KaupunkiYovalot.OsuusTunnista(tunti)
+                : Matkakirja.Linssit.Kierros.KaupunkiYovalot.OsuusAuringosta(aurinko);
+            KaupunkiYovalot.Paivita(this, georef0, kamera, yoOsuus);
             Color V(double[] x) => new Color((float)x[0], (float)x[1], (float)x[2], 1f);
             Color horisontti = V(savy.Horisontti);
             kamera.backgroundColor = horisontti;
