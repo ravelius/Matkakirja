@@ -180,7 +180,7 @@
 }
 
 .mk-liiku__nappi.mk-opas-nappi {
-    height: 44px;
+    height: var(--tk-nappi-korkeus); /* omistaja 6.10. 19.5x: nappi.korkeus 38 pt */
     min-width: 88px;
     margin: 0 4px;
     padding: 0 14px;
@@ -200,8 +200,8 @@
 }
 
 .mk-liiku__nappi.mk-opas-nappi--ikoni {
-    min-width: 44px;
-    width: 44px;
+    min-width: var(--tk-nappi-korkeus);
+    width: var(--tk-nappi-korkeus);
     padding: 0;
 }
 
@@ -311,4 +311,60 @@
 .mk-opas-tahtain > .mk-ikoni.mk-opas-tahtain__ikoni {
     width: 100%;
     height: 100%;
+}
+
+/* VÄKÄNEN (omistaja 6.10.2026 klo 19.5x, Päätoimittaja): neljä nappia OHJAUSNAPPI-väkäsen › alla vasemmassa reunassa; liuku
+ * esiin väkäsestä oikealle --tk-kesto-liuku (240 ms), ikkuna leikkaa. Napit nappi.korkeus (38 pt) samalla keskilinjalla
+ * tasavälein. Paikka ja korkeus koodista. VAIN --tk-*-tokenit. */
+.mk-opas-napit.mk-opas-napit--vakanen {
+    right: auto;
+    justify-content: flex-start;
+}
+
+.mk-opas-napit--vakanen > .mk-ohjausnappi {
+    margin: 0;
+}
+
+.mk-opas-napit__ikkuna {
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+    overflow: hidden;
+}
+
+.mk-opas-napit__liuku {
+    flex-direction: row;
+    align-items: center;
+    padding-left: var(--tk-vali-xs);
+    translate: -100% 0;
+    opacity: 0;
+    transition-property: translate, opacity;
+    transition-duration: 0.24s, 0.24s; /* --tk-kesto-liuku */
+}
+
+.mk-opas-napit--auki .mk-opas-napit__liuku {
+    translate: 0 0;
+    opacity: 1;
+}
+
+/* Kuvanappi: OHJAUSNAPPI-iso ilman kehystä, kuva täyttää neliön kulma.nappi-pyöristyksellä; nipun kuvamäärä kulmassa. */
+.mk-ohjausnappi.mk-ohjausnappi--iso.mk-ohjausnappi--kuva {
+    margin: 0;
+    padding: 0;
+    border-width: 0;
+    overflow: hidden;
+}
+
+.mk-ohjausnappi__kuva {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    -unity-background-scale-mode: scale-and-crop;
+}
+
+.mk-ohjausnappi--kuva > .mk-nosto__laskuri {
+    right: var(--tk-vali-xs);
+    bottom: var(--tk-vali-xs);
 }
