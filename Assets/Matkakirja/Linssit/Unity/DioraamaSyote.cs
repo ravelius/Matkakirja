@@ -91,6 +91,11 @@ namespace Matkakirja.Natiivi
         {
             var sormet = Kosketus.activeTouches;
             int n = sormet.Count;
+            // MAC (Natiivi-UI, juna 152): hiiren vasen nappi on yhden sormen veto ja napautus, kun kosketuksia ei ole
+            // (iPad-sovellus Macilla ja natiivi Mac; samoin kartta PalloKierrossa ja Cupola).
+            Vector2 p0 = n > 0 ? sormet[0].screenPosition : default, p1 = n > 1 ? sormet[1].screenPosition : default;
+            var hiiri = UnityEngine.InputSystem.Mouse.current;
+            if (n == 0 && hiiri != null && hiiri.leftButton.isPressed) { n = 1; p0 = hiiri.position.ReadValue(); }
             // Leijunta (era 2b, "poikki drift") ei etene kesken vedon/nipistyksen: PoikkileikkausLinssi.Leijunta
             // lukee tämän NakymaHetkellässä joka kehys (ks. sen alkukommentti).
             if (DioraamaSovitin.Linssi != null) DioraamaSovitin.Linssi.VetoKaynnissa = n > 0;
@@ -122,7 +127,7 @@ namespace Matkakirja.Natiivi
 
             if (edellisetSormet == 0 && n >= 1)
             {
-                aloitusKohta = edellinenYhdenSormenKohta = sormet[0].screenPosition;
+                aloitusKohta = edellinenYhdenSormenKohta = p0;
                 aloitusAika = Time.unscaledTime;
                 liikeSitenAlusta = 0f;
                 vetoAlkuDa = edellinenDa = kokonaisDa; vetoAlkuDk = kokonaisDk; inertiaDa = 0;
@@ -139,9 +144,9 @@ namespace Matkakirja.Natiivi
             {
                 // Paluu kahdesta sormesta yhteen: jatketaan nykyisestä kohdasta (ei hyppyä nipistystä edeltävään pisteeseen).
                 // Uusi alku myös vedolle, jottei kahden sormen jälkeen yhden sormen veto napsahda eleen alun kohtaan.
-                if (kaksiKaynnissa) { edellinenYhdenSormenKohta = aloitusKohta = sormet[0].screenPosition; vetoAlkuDa = edellinenDa = kokonaisDa; vetoAlkuDk = kokonaisDk; liikeSitenAlusta = NapautusKynnysPx; }
+                if (kaksiKaynnissa) { edellinenYhdenSormenKohta = aloitusKohta = p0; vetoAlkuDa = edellinenDa = kokonaisDa; vetoAlkuDk = kokonaisDk; liikeSitenAlusta = NapautusKynnysPx; }
                 kaksiKaynnissa = false;
-                Vector2 p = sormet[0].screenPosition;
+                Vector2 p = p0;
                 liikeSitenAlusta += Vector2.Distance(p, edellinenYhdenSormenKohta);
                 edellinenYhdenSormenKohta = p;
                 if (liikeSitenAlusta >= NapautusKynnysPx)
@@ -158,7 +163,7 @@ namespace Matkakirja.Natiivi
             }
             else // n >= 2: nipistys (zoom) + kahden sormen kierto siirtää da:ta samalla tavalla kuin veto
             {
-                Vector2 a = sormet[0].screenPosition, b = sormet[1].screenPosition;
+                Vector2 a = p0, b = p1;
                 float vali = Vector2.Distance(a, b);
                 if (!kaksiKaynnissa) { kaksiAlkuVali = Mathf.Max(1f, vali); kaksiKaynnissa = true; zoomAlku = kokonaisZoom; }
                 else

@@ -211,5 +211,23 @@ namespace Matkakirja.Natiivi
         [System.Runtime.InteropServices.DllImport(Kirjasto)]
         static extern void MatkakirjaMacSyote_Lue(float[] ulos);
 #endif
+#if UNITY_STANDALONE_OSX && !UNITY_EDITOR
+        [System.Runtime.InteropServices.DllImport("MatkakirjaMacSyote")]
+        static extern float MatkakirjaMacSyote_Skaala();
+#endif
+
+        /// <summary>Natiivi Mac: pikseliä pisteessä ikkunan näytöltä (Retina 2, muuten 1); muualla 1.</summary>
+        public static float Skaala
+        {
+            get
+            {
+#if UNITY_STANDALONE_OSX && !UNITY_EDITOR
+                try { float s = MatkakirjaMacSyote_Skaala(); return s >= 1f ? s : 1f; }
+                catch (System.Exception) { return 2f; }
+#else
+                return 1f;
+#endif
+            }
+        }
     }
 }

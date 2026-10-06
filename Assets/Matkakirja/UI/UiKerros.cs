@@ -204,6 +204,7 @@ namespace Matkakirja.Natiivi
             get
             {
                 if (SystemInfo.deviceModel.StartsWith("iPad", StringComparison.Ordinal)) return true;
+                if (Mac) return true;   // natiivi Mac: iPadin asettelut ja koot (Natiivi-UI, juna 152)
                 if (!Application.isMobilePlatform) return false;
                 float pitka = Mathf.Max(Screen.width, Screen.height), lyhyt = Mathf.Max(1, Mathf.Min(Screen.width, Screen.height));
                 return pitka / lyhyt < 1.6f;
@@ -215,6 +216,19 @@ namespace Matkakirja.Natiivi
         /// CSS-px, viiteruutu teki siitä 648 × 298 ja UI:sta ~35 % webiä suuremman), editorissa viiteruutu.
         /// Testikomennolla pakotettavissa (piste | viite).
         /// </summary>
+        /// <summary>Natiivi Mac-sovellus (ei editori, ei iPad-sovellus Macilla).</summary>
+        public static bool Mac
+        {
+            get
+            {
+#if UNITY_STANDALONE_OSX && !UNITY_EDITOR
+                return true;
+#else
+                return false;
+#endif
+            }
+        }
+
         public static bool Pisteskaala
         {
             get
@@ -233,6 +247,8 @@ namespace Matkakirja.Natiivi
         {
             get
             {
+                // Natiivi Mac: ikkunan näytön backingScaleFactor (Retina 2, muuten 1; Natiiviseppä f3a80d8e), ei Screen.dpi:tä.
+                if (Mac) return MacSyote.Skaala;
                 if (Tabletti) return Screen.dpi > 0 ? Mathf.Max(1f, Mathf.Round(Screen.dpi / 132f)) : 2f;
                 return Mathf.Min(Screen.width, Screen.height) >= 1000 ? 3f : 2f;
             }
@@ -357,9 +373,26 @@ namespace Matkakirja.Natiivi
         public event Action KameranJalkeen;
         internal void AjaKameranJalkeen() => KameranJalkeen?.Invoke();
 
+        /// <summary>Natiivi Mac: ikkunan pienin koko pisteinä (Natiiviseppä 6.10.: muutettava ikkuna, oletus 1440 × 900).</summary>
+        public const int MacMinLeveys = 1024, MacMinKorkeus = 700;
+        float macIkkunaTarkistus;
+
+        /// <summary>Muutettava Mac-ikkuna ei pienene alle minimin: liian pieni koko palautetaan rajalle (0,5 s välein).</summary>
+        void PidaMacIkkuna()
+        {
+            if (!Mac || Screen.fullScreenMode != FullScreenMode.Windowed || Time.unscaledTime < macIkkunaTarkistus) return;
+            macIkkunaTarkistus = Time.unscaledTime + 0.5f;
+            float sk = MacSyote.Skaala;
+            int mw = Mathf.RoundToInt(MacMinLeveys * sk), mh = Mathf.RoundToInt(MacMinKorkeus * sk);
+            if (Screen.width >= mw && Screen.height >= mh) return;
+            Debug.Log($"MATKAKIRJA ui: Mac-ikkuna {Screen.width}×{Screen.height} → vähintään {mw}×{mh}");
+            Screen.SetResolution(Mathf.Max(Screen.width, mw), Mathf.Max(Screen.height, mh), FullScreenMode.Windowed);
+        }
+
         void Update()
         {
             PaivitaTurvaalueet();
+            PidaMacIkkuna();
             JokaRuutu?.Invoke();
             while (true)
             {
