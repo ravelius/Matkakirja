@@ -3,6 +3,10 @@
 // itse: DownloadHandlerScript kerää näytteet kasvavaan puskuriin (lukko vain indekseille), ja AudioClip.Create(stream: true) lukee ne
 // PCMReaderCallbackissa äänisäikeessä. Alivuodossa callback antaa hiljaisuutta (katko kirjataan). Pariton tavu siirtyy seuraavaan
 // pakettiin. Loppu = lataus valmis ja kaikki luettu.
+// MUKAUTUVA PUSKURI (omistaja TF 149: "lukijan teksti jää kesken" ja "ääni katkeilee alussa"; Linssisepän toisto 6.10. 16.4x:
+// ElevenLabs virtaa lähes reaaliajassa → alivuotoja, ja kiinteän pituinen klippi kului hiljaisuuteen ennen kuin kaikki oli soitettu,
+// joten kertoja vaikeni kesken ja kierros jäi odottamaan loppua). Nyt: klippi on pitkä (hiljaisuus ei katkaise), alivuodossa soitto
+// pysähtyy (hiljaisuus) ja jatkuu vasta, kun puskurissa on UudelleenS (tai lataus on valmis), jotta katkoja tulee yksi eikä pätkintää.
 using UnityEngine;
 using UnityEngine.Networking;
 
@@ -13,8 +17,11 @@ namespace Matkakirja.Natiivi
         readonly object lukko = new object();
         short[] data;
         int kirjoitettu, luettu, katkoja;
+        long annettu, loppuKohta = -1;   // Unitylle annetut näytteet (data + hiljaisuus) ja kohta, jossa viimeinen datanäyte annettiin
         bool parittomia; byte pariton;
-        bool alivuoto;
+        bool alivuoto, puskuroi;
+        /// <summary>Alivuodon jälkeen soitto jatkuu, kun puskurissa on näin paljon (s) tai lataus on valmis (Päätoimittaja: ~2 s).</summary>
+        public const float UudelleenS = 2f;
         public readonly int Taajuus;
         public volatile bool Valmis;
         public volatile bool Virhe;
@@ -52,26 +59,38 @@ namespace Matkakirja.Natiivi
         public bool Loppui { get { lock (lukko) return Valmis && luettu >= kirjoitettu; } }
         public int Katkoja => katkoja;
 
+        /// <summary>
+        /// SOITETTU LOPPUUN (simu 6.10. 17.0x: kierros lähti ~1,6 s ennen kerronnan loppua, koska Unity lukee virtaklippiä etukäteen
+        /// eikä "kaikki luettu" tarkoita "kaikki kuultu"): klipin soittokohta (AudioSource.timeSamples) on ohittanut kohdan, jossa
+        /// viimeinen datanäyte annettiin Unitylle.
+        /// </summary>
+        public bool SoitettuLoppuun(int soittokohta) { lock (lukko) return loppuKohta >= 0 && soittokohta >= loppuKohta; }
+
         /// <summary>AudioClipin PCMReaderCallback (äänisäie).</summary>
         public void Lue(float[] ulos)
         {
             lock (lukko)
             {
+                // Uudelleenpuskurointi: hiljaisuutta, kunnes puskurissa on UudelleenS tai kaikki on ladattu.
+                if (puskuroi && (Valmis || kirjoitettu - luettu >= (int)(UudelleenS * Taajuus))) puskuroi = false;
                 bool vaje = false;
                 for (int i = 0; i < ulos.Length; i++)
                 {
-                    if (luettu < kirjoitettu) ulos[i] = data[luettu++] / 32768f;
-                    else { ulos[i] = 0f; vaje = true; }
+                    if (!puskuroi && luettu < kirjoitettu) ulos[i] = data[luettu++] / 32768f;
+                    else { ulos[i] = 0f; if (!puskuroi) vaje = true; }
+                    annettu++;
+                    if (loppuKohta < 0 && Valmis && luettu >= kirjoitettu) loppuKohta = annettu;
                 }
-                if (vaje && !Valmis && !alivuoto) { alivuoto = true; katkoja++; }
+                if (vaje && !Valmis && !alivuoto) { alivuoto = true; katkoja++; puskuroi = true; }
                 else if (!vaje) alivuoto = false;
             }
         }
 
-        /// <summary>Virtaava klippi (pituus yläraja; loppu tunnistetaan Loppui-arvosta).</summary>
+        /// <summary>Virtaava klippi (pituus yläraja; loppu tunnistetaan Loppui-arvosta). Pituus on reilusti yli arvion (3 × + 60 s),
+        /// jotta alivuotojen hiljaisuus ei koskaan kuluta klippiä loppuun ennen kuin kaikki on soitettu.</summary>
         public AudioClip Klippi(string nimi, float arvioS)
         {
-            int pituus = Mathf.Max(Taajuus * 2, (int)(Taajuus * ((arvioS > 0 ? arvioS : 40) + 10)));
+            int pituus = Mathf.Max(Taajuus * 120, (int)(Taajuus * ((arvioS > 0 ? arvioS : 40) * 3 + 60)));
             return AudioClip.Create(nimi, pituus, 1, Taajuus, true, Lue);
         }
     }

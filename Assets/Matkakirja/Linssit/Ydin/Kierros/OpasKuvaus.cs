@@ -23,8 +23,11 @@ namespace Matkakirja.Linssit.Kierros
         // TIUKKA KEHYS (omistaja 5.10. 20.5x: "kohde näytti olevan vähän kaukana kuvassa"): kohde täyttää ~40 % ruudun leveydestä
         // (pystykuvakulma 50°, suunniteltu kuvasuhteelle 1,8 → puhelimella ~33 %, iPadilla ~54 %), korkea kohde enintään 60 %
         // ruudun korkeudesta; pienelle kohteelle vähimmäisetäisyys. Katse hieman kohteen alapuolelle → kohde keskikohdan yllä.
-        public const double KuvaPystyAst = 50, KuvaSuhde = 1.8, LeveysOsuus = 0.4, KorkeusOsuus = 0.6, KatseAlasOsuus = 0.06;
-        public const double KatuEtMinM = 150, KatuEtMaxM = 350, RakennusEtMinM = 150, RakennusEtMaxM = 600, AlueEtMinM = 220, AlueEtMaxM = 350;   // Päätoimittaja 21.3x: Nyhavn/Tivoli/Strøget liian kaukaa → enintään ~350 m
+        // LÄHEMMÄS (omistaja TF 149, Päätoimittaja 6.10. 16.3x: "kohteet näytetään vieläkin välillä turhan kaukaa"): kohde täyttää
+        // ~50 % kuvasta (leveys 0,4 → 0,5, korkeus 0,6 → 0,5) ja vähimmäisetäisyydet alas (150/150/220 → 110/100/160 m), jotta alle
+        // ~70 m:n kohteet (patsas, pieni kirkko, Agoran rakennukset) eivät jää pieniksi; yläraja ennallaan.
+        public const double KuvaPystyAst = 50, KuvaSuhde = 1.8, LeveysOsuus = 0.5, KorkeusOsuus = 0.5, KatseAlasOsuus = 0.06;
+        public const double KatuEtMinM = 110, KatuEtMaxM = 350, RakennusEtMinM = 100, RakennusEtMaxM = 600, AlueEtMinM = 160, AlueEtMaxM = 350;   // Päätoimittaja 21.3x: Nyhavn/Tivoli/Strøget liian kaukaa → enintään ~350 m
         public const double SivuKulma = 25;
         // Pysähdys
         // KAKSI KEHYSTÄ (omistaja 5.10. 23.3x: "hidas orbit … saisi olla nopeampi ja näyttää samasta kohteesta myös toisen suunnan"):
