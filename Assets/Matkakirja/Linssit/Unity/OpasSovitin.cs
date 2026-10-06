@@ -99,7 +99,7 @@ namespace Matkakirja.Natiivi
             (lat, lon) = Keskusta(lat, lon);   // Natural Earth -piste → kaupungin keskusta (Wikidata P625)
             Aloituskaupunki = nimi.Trim();
             Viimeisin.pakotettuSijainti = (lat, lon);
-            Viimeisin.keskusta = (lat, lon);
+            AloitusKeskusta = (lat, lon);
             Viimeisin.o.Kirjaa($"opas: kaupunki vaihtuu → {Aloituskaupunki} ({lat:F3}, {lon:F3})");
             if (!Viimeisin.AvaaKaupunki(lat, lon, Aloituskaupunki)) return false;
             Viimeisin.silmukka.VaihdaPaikka(lat, lon, nimi.Trim());   // kamera lentää heti kaupungin yleiskuvaan (Natiivi-UI 6.10. 00.2x)
@@ -116,9 +116,10 @@ namespace Matkakirja.Natiivi
             return false;
         }
         (double lat, double lon)? pakotettuSijainti;
-        /// <summary>Valitun kaupungin keskusta (kaupunki, täky tai avaus): pyyntöjen sijainti, kunnes kamera on kaupungissa (TF 152).</summary>
-        (double lat, double lon) keskusta = (KoopenhaminaTesti.Alku.Lat, KoopenhaminaTesti.Alku.Lon);
-        (double lat, double lon) PyynnonPaikka() => OpasSilmukka.PyynnonPaikka(silmukka.Asento, keskusta);
+        /// <summary>Valitun kaupungin keskusta (kaupunki, täky tai avaus): pyyntöjen sijainti, kunnes kamera on kaupungissa (TF 152).
+        /// Staattinen kuten Aloituskaupunki, jotta nimi ja paikka vaihtuvat aina yhdessä.</summary>
+        public static (double lat, double lon) AloitusKeskusta = (KoopenhaminaTesti.Alku.Lat, KoopenhaminaTesti.Alku.Lon);
+        (double lat, double lon) PyynnonPaikka() => OpasSilmukka.PyynnonPaikka(silmukka.Asento, AloitusKeskusta);
 
         readonly LinssiOhjain o;
         readonly PalloKierto kierto;
@@ -246,7 +247,7 @@ namespace Matkakirja.Natiivi
         {
             if (!kaupunkiOdottaa) return true;
             kaupunkiOdottaa = false;
-            keskusta = (lat, lon);
+            AloitusKeskusta = (lat, lon);
             double maa = MaaPisteessa(lat, lon);
             if (!kaupunki.Avaa(lat, lon, double.IsNaN(maa) ? 45 : maa))
             {
@@ -805,7 +806,7 @@ namespace Matkakirja.Natiivi
             var v = Viimeisin;
             if (!string.IsNullOrEmpty(t.Kaupunki)) Aloituskaupunki = t.Kaupunki;
             v.pakotettuSijainti = (t.Lat, t.Lon);
-            v.keskusta = (t.Lat, t.Lon);
+            AloitusKeskusta = (t.Lat, t.Lon);
             v.o.Kirjaa($"opas: täky valittu {t.Nimi} ({t.Kaupunki}, {t.Iso2})");
             if (v.tauolla) Tauko(false);
             if (v.kaupunkiOdottaa)
