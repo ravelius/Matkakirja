@@ -523,7 +523,8 @@ namespace Matkakirja.Natiivi
         {
             var m3 = e.Henkilo.Malli3d?.Skin;
             string silmukka = hn.Silmukka ?? "idle";
-            bool reitilla = e.Hahmo.Reitti != null && silmukka == "kavely";
+            // Kanto kulkee kuten kävely (Linnanrakentaja 6.10.: UAL-jalat + kantokädet, sama askel): nopeuteen sidottu, tauoilla idle.
+            bool reitilla = e.Hahmo.Reitti != null && (silmukka == "kavely" || silmukka == "kanto");
             double kavely = reitilla ? ReittiPaikkaJaSuunta(e, t).kavely : 1;
             string tavoite = reitilla && kavely < 0.5 ? "idle" : silmukka;
             // Istuva tai polvistuva hahmo puhuu asennossaan (Päätoimittaja 5.10. 22.0x: kappalainen polvistuu jakkaralle, mutta
@@ -554,7 +555,7 @@ namespace Matkakirja.Natiivi
             // Askelsykli on mitattu skaalaamattomasta mallista (hahmo_skin.py), mutta hahmo piirretään Skin.Skaala-koossa:
             // ilman skaalaa askel oli ~5 % siirtymää lyhyempi ja jalat liukuivat (Linnanrakentaja 5.10.).
             double sykliM = m3?.KavelySykliM > 0 ? m3.KavelySykliM * (m3.Skaala > 0 ? m3.Skaala : 1.0) : 0;
-            e.Sekoitin.Nopeus = tavoite == "kavely" && sykliM > 0 && kesto > 0
+            e.Sekoitin.Nopeus = (tavoite == "kavely" || tavoite == "kanto") && sykliM > 0 && kesto > 0
                 ? (float)((e.Hahmo.Reitti?.Nopeus > 0 ? e.Hahmo.Reitti.Nopeus : 1.0) * kesto / sykliM) : 1f;
             float dt = double.IsNaN(e.EdellinenT) ? (float)(VaiheYksikko(e.HahmoId) * kesto) : (float)Math.Clamp(t - e.EdellinenT, 0, 0.1);
             e.EdellinenT = t;
