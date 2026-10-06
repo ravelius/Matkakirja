@@ -4,6 +4,19 @@ Luovuttaja: Natiiviseppä (Opus 5.5, high). Edellinen: viesti-natiiviseppa-luovu
 
 ## TILA HETI
 
+- **6.10. 23.0x: BUILD 154 = master 8878ab70** (juna/b13 286e8f34, käännös 787db464, muutosloki #4079). BUILD 153 = 72788914
+  (juna b9f09bcd, käännös 7920e6a0, #4073). Jättilogo korjattu d8cf0e82:lla: MustaLaunchScreen poistaa storyboardien imageViewin
+  ja nimeää ne LaunchScreen-Musta-* (iOS:n käynnistysruudun välimuisti näytti vanhaa logoa aspect-fillinä).
+- **JUNA 155:** koehaara natiiviseppa/juna-155-koe (wt/proto-natiiviseppa-j144) = 8878ab70, tyhjä. Jonossa Päätoimittajan
+  kuittauksella: merisumu 5adaf326, LS2 14d/14e, LS1 yövalot 960b1bd7, Codexin linssikuvat, NUI ylarivi-155.
+- **MAC v1:** 62f6b368 kaatui Burst AOT -linkkiin (burst-lld-21-hostmac, llvm-lipo, dsymutil ilman suoritusbittiä jaetussa
+  PackageCachessa). Korjaus f5d0e029 (natiiviseppa/mac, mac-kaanna.sh chmod ennen käännöstä), todennettu lld:llä. Uusi vuoro
+  Julkaisijalta ~23.40: `perl -e 'use POSIX; exit if fork; setsid; exec "zsh", @ARGV' <scratchpad>/mac-v1.sh` tai suoraan
+  `zsh /Users/Shared/Claude/wt/proto-natiiviseppa-mac/tyokalut/mac-kaanna.sh f5d0e029 1.1.0 154` irrallisena. Tulos
+  lokit/kaannospalvelu/*-mac-f5d0e029.log; sen jälkeen NUI tarkistaa ikkunan, skaalan ja hiiren.
+
+## AIEMPI (6.10. ilta)
+
 - **6.10. 17.5x: BUILD 151 = master 1c71db03** (juna/b13 974806b0, käännös 204b3f9b; muutosloki #4066). BUILD 150 = 79d7a396
   (959abb6f, ea457278: muistioikeus, TF:ssä increased-memory-limit = 1). JUNARYTMI: ei VIE-ikkunoita — juna lähtee kun kuitattua
   sisältöä on ja edellinen on TF:ssä (omistaja 6.10. 17.4x).
