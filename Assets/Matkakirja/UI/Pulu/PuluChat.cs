@@ -87,10 +87,32 @@ namespace Matkakirja.Natiivi
         const string PinOmistaja = "pulu";
         bool PinNakyvissa => Auki && Pinnaus.Nykyinen != null && Pinnaus.Nykyinen.Omistaja == PinOmistaja && !Pinnaus.Pienena;
 
+        /// <summary>
+        /// CHATIN PIN (omistaja 6.10.2026: "kun chatissa painetaan pin päälle, chat pitää nousta ruudun yläreunaan ja korvata siellä
+        /// mahdollisesti oleva pinnattu nosto. chat ikkuna jää sinne vielä kokonaisena näkyviin, mutta jos pelaaja sitten liikuttaa
+        /// karttaa tms. niin chat ikkuna pienenee yhdeksi riviksi"): pinnattu chat asettuu yläreunaan (Asettele), pinnattu nosto
+        /// sulkeutuu sen tieltä (sen Pienenna), ja kartan liike pienentää chatin PINNATTU PALKKI -riviksi (Pinnaus).
+        /// </summary>
+        void VaihdaPin()
+        {
+            var vanha = Pinnaus.Nykyinen;
+            Pinnaus.Vaihda(new Pinnaus.Kohde
+            {
+                Omistaja = PinOmistaja, Otsikko = "Pulu",
+                Pienenna = () => { if (Auki) { pienennetaan = true; Sulje(); pienennetaan = false; } },
+                Palauta = () => Avaa(false),
+                Irti = PaivitaPin,
+            });
+            if (vanha != null && vanha.Omistaja != PinOmistaja && Pinnaus.Nykyinen?.Omistaja == PinOmistaja) vanha.Pienenna?.Invoke();
+        }
+
+        bool ylhaalla;
+
         /// <summary>Pinnattuna sulkija ja syötelukko pois: kartta liikkuu chatin ohi (pienentää sen palkiksi).</summary>
         void PaivitaPin()
         {
             bool p = PinNakyvissa;
+            if (Auki && p != ylhaalla) Asettele();
             pinNappi.EnableInClassList("mk-valittu", p);
             pinNappi.tooltip = p ? "Poista pinnaus" : "Pinnaa";
             sulkija.pickingMode = p ? PickingMode.Ignore : PickingMode.Position;
@@ -223,13 +245,7 @@ namespace Matkakirja.Natiivi
             var ehdota = Rakenne.Nappi(null, "mk-chat__ikoninappi", EhdotaSisaltoa, ylarivi, Ikonit.Kyna);
             ehdota.tooltip = "Ehdota sisältöä";
             // PIN-KUVAKE (omistaja 5.10.2026 klo 23.3x): samassa koossa kuin rivin muut kuvakkeet.
-            pinNappi = Rakenne.Nappi(null, "mk-chat__ikoninappi mk-chat__pin", () => Pinnaus.Vaihda(new Pinnaus.Kohde
-            {
-                Omistaja = PinOmistaja, Otsikko = "Pulu",
-                Pienenna = () => { if (Auki) { pienennetaan = true; Sulje(); pienennetaan = false; } },
-                Palauta = () => Avaa(false),
-                Irti = PaivitaPin,
-            }), ylarivi, Ikonit.Viiva["pin"]);
+            pinNappi = Rakenne.Nappi(null, "mk-chat__ikoninappi mk-chat__pin", VaihdaPin, ylarivi, Ikonit.Viiva["pin"]);
             pinNappi.tooltip = "Pinnaa";
             Pinnaus.Muuttui += PaivitaPin;
             Rakenne.El("mk-chat__ylarivi-vali", ylarivi, PickingMode.Ignore);
@@ -241,6 +257,12 @@ namespace Matkakirja.Natiivi
             // vastaus luetaan) tai ei luentaa (kaiutin ja yksi vino viiva). Tila on yhteinen koko pelissä ja tallentuu (AaniAvain).
             // Lukija jää taustalle luennan välineeksi; sen luku/tauko-nappia ja ≡-valikkoa ei näytetä chatissa.
             lukija.Juuri.style.display = DisplayStyle.None;
+            // PULUN LUENNAN TAUKO (omistaja 6.10.2026: "pulun chattiin tarvitaan myös pause nappi pulun luennalle"): sama II/▶ kuin
+            // oppaassa ja pinnatussa palkissa, kaiuttimen vieressä; näkyy vain, kun Pulun oma luenta soi tai on tauolla.
+            taukoNappi = Rakenne.Nappi(null, "mk-chat__ikoninappi mk-chat__tauko", VaihdaTauko, ylarivi, Ikonit.Tauko);
+            taukoNappi.tooltip = "Tauko";
+            taukoNappi.style.display = DisplayStyle.None;
+            paneeli.schedule.Execute(PaivitaTauko).Every(200);
             kaiutinNappi = Rakenne.Nappi(null, "mk-chat__ikoninappi mk-chat__kaiutin", VaihdaAani, ylarivi, AaniPaalla ? Ikonit.Viiva["kaiutin"] : Ikonit.Viiva["kaiutin-pois"]);
             PaivitaKaiutin();
             // Pulu lukee jo vastausta automaattisesti (virkevirta): kaiutin keskeyttää ja jatkaa sitä eikä aloita alusta.
@@ -365,6 +387,9 @@ namespace Matkakirja.Natiivi
             float pYla = Mathf.Max(Mathf.Max(sivulla ? 12f : 96f, r.y + 12f), sivulla ? 0f : r.y + Ylapalkki.Varaus + 12f);
             float pVasen = Mathf.Max(r.x + 12f, pOikea - 384f);
             korkeus = Mathf.Max(0f, Mathf.Min(640f, sivulla ? 640f : h * 0.68f, pAla - pYla));
+            // Pinnattu chat yläreunaan (omistaja 6.10.2026): sama leveys ja korkeus, yläreuna yläpalkin alle.
+            ylhaalla = PinNakyvissa;
+            if (ylhaalla && !sivulla) pAla = pYla + korkeus;
             var st = paneeli.style;
             st.left = pVasen;
             st.right = StyleKeyword.Auto;
@@ -407,7 +432,7 @@ namespace Matkakirja.Natiivi
         void AsetaKorkeus()
         {
             if (korkeus < 0f) return;
-            paneeli.style.height = paneeli.ClassListContains("mk-chat--alku") ? new StyleLength(StyleKeyword.Auto) : korkeus;
+            paneeli.style.height = matala || paneeli.ClassListContains("mk-chat--alku") ? new StyleLength(StyleKeyword.Auto) : korkeus;
         }
 
         // --- avaus ja sulkeminen -------------------------------------------------
@@ -416,6 +441,7 @@ namespace Matkakirja.Natiivi
 
         public void Avaa()
         {
+            AsetaMatala(false);
             var lk = LinssiKysymykset.Nykyinen();
             Paikka(lk != null ? "linssi:" + lk.Avain : "kartta");
             Avaa(true);
@@ -453,7 +479,25 @@ namespace Matkakirja.Natiivi
             Avaa(false);
             PoistaSirut();
             NaytaKohteenValmiit(valmiit, aihe);
+            AsetaMatala(valmiit != null && valmiit.Count > 0);
             Asettele();
+        }
+
+        bool matala;
+
+        /// <summary>
+        /// MATALA KYSY (omistaja 6.10.2026: "jos nostossa valitsee kysy, niin pulun chatissa ei saa näkyä silloin mitään muuta kuin
+        /// kohteeseen liittyvät kysymykset ... avata pulun chat ikkuna vain niin matalana että siinä näkyy pelkät uudet
+        /// kysymysvaihtoehdot"): keskusteluvirta piiloon ja paneeli sisällön mittaiseksi (ylärivi, kysymyssirut, syöte). Vanha
+        /// keskustelu säilyy; kysymys palauttaa virran, joka vierii uusimpaan (vanha jää ylös piiloon).
+        /// </summary>
+        void AsetaMatala(bool m)
+        {
+            if (m == matala) return;
+            matala = m;
+            virta.style.display = m ? DisplayStyle.None : StyleKeyword.Null;
+            AsetaKorkeus();
+            if (!m) Vierita(VirranLoppu());
         }
 
         /// <param name="ehdotukset">false = avaus kysymyksen takia (Kysy): ei rinnakkaista ehdotushakua, joka hidasti
@@ -538,6 +582,7 @@ namespace Matkakirja.Natiivi
             valmiitAihe = aihe;
             valmiit = kysymykset;
             NaytaJaljellaOlevat();
+            AsetaMatala(kysymykset != null && kysymykset.Count > 0);
             Asettele();
         }
 
@@ -579,6 +624,7 @@ namespace Matkakirja.Natiivi
         {
             kysymys = (kysymys ?? "").Trim();
             if (kysymys.Length == 0 || kysyy) return;
+            AsetaMatala(false);
             var avain = ValmiidenAvain(aihe);
             if (!valmiitKysytyt.TryGetValue(avain, out var kysytyt)) valmiitKysytyt[avain] = kysytyt = new HashSet<string>();
             kysytyt.Add(kysymys);
@@ -608,6 +654,7 @@ namespace Matkakirja.Natiivi
         {
             // Pinnattu chat ei sulkeudu (ohinapautus, Esc, linssin vahti): se pienenee palkiksi ja puhe jatkuu.
             if (PinNakyvissa && !pienennetaan) { Pinnaus.Pienenna(); return; }
+            if (!pienennetaan) AsetaMatala(false);
             keskustelunAihe = null;
             LopetaSanelu();
             // Web sulje: luenta pysähtyy ja puhevuoro päättyy. PUHE LOPPUU CHATIN MUKANA (omistaja TF 1.0.37: "se ei lopettanut
@@ -818,6 +865,7 @@ namespace Matkakirja.Natiivi
         {
             kysymys = (kysymys ?? "").Trim();
             if (kysymys.Length == 0 || kysyy) return;
+            AsetaMatala(false);
             kysymyksenAihe = aihe ?? keskustelunAihe;
             // Kortin kysymys suljetusta chatista (nostokortin sirut ja korostetut sanat): kortti on oma paikkansa.
             if (!Auki && aihe != null) Paikka("kortti:" + ValmiidenAvain(aihe));
@@ -2115,6 +2163,29 @@ namespace Matkakirja.Natiivi
         {
             autolukuTila = KortinLukija.KytkinRivi(saadot, "Lue vastaukset automaattisesti", VaihdaAani);
             PaivitaKaiutin();
+        }
+
+        Button taukoNappi;
+        bool taukoTauolla;
+
+        void VaihdaTauko()
+        {
+            var p = Puhe.Instanssi;
+            if (p == null || !OmaLuentaKaynnissa) return;
+            if (p.Tauolla) p.Jatka(); else p.Tauko();
+            PaivitaTauko();
+        }
+
+        void PaivitaTauko()
+        {
+            bool nakyy = Auki && OmaLuentaKaynnissa;
+            taukoNappi.style.display = nakyy ? DisplayStyle.Flex : DisplayStyle.None;
+            bool tauolla = nakyy && Puhe.Instanssi.Tauolla;
+            if (tauolla == taukoTauolla) return;
+            taukoTauolla = tauolla;
+            taukoNappi.Clear();
+            taukoNappi.Add(new SvgIkoni(tauolla ? Ikonit.Toista : Ikonit.Tauko));
+            taukoNappi.tooltip = tauolla ? "Jatka" : "Tauko";
         }
 
         /// <summary>Pulun oma automaattinen luenta soi tai on tauolla (ei ylärivin lukijan käynnistämä).</summary>
