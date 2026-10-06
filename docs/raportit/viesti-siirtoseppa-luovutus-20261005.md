@@ -1,6 +1,18 @@
-# Siirtosepän luovutus 5.–6.10.2026 — TILA KLO 14.3x (Opus 5.5, high)
+# Siirtosepän luovutus 5.–6.10.2026 — TILA KLO 16.2x (Opus 5.5, high)
 
-## Nyt (6.10. 14.3x)
+## Nyt (6.10. 16.2x)
+
+- **Odottaa hiljaista D5900D45-vuoroa ~17.10** (TF 150 ensin): käännökset valmiina lokit/siirtoseppa-alo/app-183866ed (7c62beca,
+  linna-149) ja app-55ad6594 (0960214b, FACEIT). Ajo: tyokalut/siirtoseppa-ajot/ajo-linna-esittely.sh (UDID APP L N PEILI KESTO).
+  ENNEN = lokit/natiiviseppa-app-149vara-e9023eae (tuotannon peili), JÄLKEEN = 7c62beca + PEILI feea163c4ed34d5f, FACEIT =
+  0960214b + PEILI 94a0df22044155fa (kappeli, kohdistus aanet['kappeli-keskustelu'], vouti 9,4–16,1 s ja 25,2–29,0 s).
+  Tapit simkosketuksella (lokit/siirtoseppa-alo/.sk): tauko II ☰:n vieressä, panorointiveto kierroksen jälkeen.
+- **FACEIT** (wt/proto-siirtoseppa-face, siirtoseppa/faceit 55ad6594, linna-149:n päällä, juna 150, HYVÄKSYTTY): glb morph,
+  Visemit (Linnanrakentajan arvot), räpäytys, kohdistus. Natiiviseppä ajaa iPad ABAB:n (raja 0,3 ms/kehys) videon jälkeen.
+- **Katselmoitu:** Linssisepän kuva-150 e59c9ca0 (oletukset pois kunnes kuittaus).
+- Oppaan Kysy (opas → Praha) on tarkoituksella oppaan kerronta, ei Pulu-chat (Päätoimittaja 15.5x).
+
+## Aiempi tila 14.3x
 
 - **Aloitus-pulu** (wt/proto-siirtoseppa-alo): b6d02f9a juna 147; fcc69f41 (ohjeet + valintavihje ilmoitusriviksi) junaan 148/149.
 - **Pulu-chat** (wt/proto-siirtoseppa-chat, siirtoseppa/pulu-chat 7d35f7d9, juna-148b:n päällä) KUITATTU junaan 149: noston
