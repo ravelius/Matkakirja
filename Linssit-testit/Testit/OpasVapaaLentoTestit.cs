@@ -99,5 +99,27 @@ namespace Matkakirja.Linssit.Testit
             for (double t = 0; t < 3; t += 1 / 60.0) l.Paivita(1 / 60.0, 0, 0, 0, 0, pinta);
             Oleta.Tosi(l.KorkeusAbsM >= 500 + OpasVapaaLento.MinKorkeusM * 0.9, $"torni naapurustossa → kamera sen yllä: {l.KorkeusAbsM:0} m");
         }
+
+        [Testi]
+        static void LuotainPysayttaaJaNostaa()
+        {
+            // Syvyysluotain (Eiffel, koe-152 14b): pistenäytteet näkevät vain maan (200 m), luotain näkee ristikon 25 m edessä.
+            var l = Alussa(0);
+            Func<double, double, double> maa = (la, lo) => 200;
+            for (double t = 0; t < 1; t += 1 / 60.0) l.Paivita(1 / 60.0, 0, 0, 0, 0, maa);
+            double h0 = l.KorkeusAbsM, lat0 = l.Lat;
+            l.EsteM = 22;
+            for (double t = 0; t < 2; t += 1 / 60.0) l.Paivita(1 / 60.0, 0, 1, 0, -1, maa);   // täysi eteen + alas
+            double eteen = (l.Lat - lat0) * 111320;
+            Oleta.Tosi(eteen < 5, $"este 22 m edessä → ei eteenpäin: {eteen:0.0} m");
+            Oleta.Tosi(l.KorkeusAbsM > h0 + 5, $"este → nousu, ei laskua: {h0:0} → {l.KorkeusAbsM:0} m");
+            Oleta.Tosi(Math.Abs(l.ToiveSuuntaEro) < 1, $"toive eteen: {l.ToiveSuuntaEro:0}°");
+            // Taaksepäin toive kääntää luotaimen; kun luotain näkee taakse vapaata, liike sallitaan.
+            l.Paivita(1 / 60.0, 0, -1, 0, 0, maa);
+            Oleta.Tosi(Math.Abs(Math.Abs(l.ToiveSuuntaEro) - 180) < 1, $"toive taakse: {l.ToiveSuuntaEro:0}°");
+            l.EsteM = double.PositiveInfinity; double lat1 = l.Lat;
+            for (double t = 0; t < 1; t += 1 / 60.0) l.Paivita(1 / 60.0, 0, -1, 0, 0, maa);
+            Oleta.Tosi((lat1 - l.Lat) * 111320 > 5, $"vapaa taakse → liikkuu: {(lat1 - l.Lat) * 111320:0} m");
+        }
     }
 }

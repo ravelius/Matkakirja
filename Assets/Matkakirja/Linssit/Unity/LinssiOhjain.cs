@@ -2163,6 +2163,7 @@ namespace Matkakirja.Natiivi
                     else if (osat.Length > 6 && osat[1] == "vapaa" && LukuOk(osat[2], out double vvx) && LukuOk(osat[3], out double vvy)
                         && LukuOk(osat[4], out double vox) && LukuOk(osat[5], out double voy) && LukuOk(osat[6], out double vs))
                         OpasSovitin.TestiVapaa(vvx, vvy, vox, voy, (float)vs);
+                    else if (osat.Length > 1 && osat[1] == "vapaa") Kirjaa("opas " + (OpasSovitin.VapaanTila ?? "vapaa: ei vapaassa tilassa"));
                     else if (osat.Length > 1 && osat[1] == "muisti") Kirjaa(opas?.Muisti() ?? "opas: ei sovitinta");
                     else if (osat.Length > 2 && osat[1] == "kaupunki") OpasSovitin.Aloituskaupunki = string.Join(" ", osat.Skip(2));
                     else if (osat.Length > 2 && osat[1] == "toive") OpasSovitin.Toive(string.Join(" ", osat.Skip(2)));

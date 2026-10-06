@@ -30,6 +30,19 @@ namespace Matkakirja.Linssit.Kierros
             return Siirra(Lat, Lon, s * 360.0 / KehaSuuntia + (r % 2) * 22.5, KehaSateet[r]);
         }
         public static int KehaPisteita => KehaSateet.Length * KehaSuuntia;
+        /// <summary>Tunnettuja näytteitä (kamera, ennakko, kehät) viime päivityksessä; alle NaapurustoTaysi → varovainen tila.</summary>
+        public int Tunnetut { get; private set; }
+        public const int NaapurustoTaysi = 14;
+        public string Tila() => $"vapaa: korkeus {KorkeusAbsM:0} m (pinnasta {KorkeusM:0}), pinta {PintaM:0}, näytteitä {Tunnetut}/{2 + KehaPisteita}, " +
+            $"este {(double.IsInfinity(EsteM) ? "-" : EsteM.ToString("0"))} m, suunta {Suunta:0}°, kall {Kallistus:0}°";
+        /// <summary>
+        /// Lähiluotaimen (syvyyspuskuri, OpasLahiluotain; Päätoimittaja 6.10.) lähin este toivotun liikkeen suunnassa (m). Alle
+        /// EsteRajaM: laskeutuminen estyy ja kamera nousee (enintään EsteNousuMS); vaakavauhti ≤ (EsteM − EsteRajaM/2) m/s aina.
+        /// </summary>
+        public double EsteM { get; set; } = double.PositiveInfinity;
+        public const double EsteRajaM = 40, EsteNousuMS = 12;
+        /// <summary>Toivotun vaakaliikkeen suunta katsesuunnasta (°, + oikealle): tapista, muuten nopeudesta; paikallaan 0.</summary>
+        public double ToiveSuuntaEro { get; private set; }
 
         public double Lat { get; private set; }
         public double Lon { get; private set; }
@@ -81,19 +94,38 @@ namespace Matkakirja.Linssit.Kierros
             vSivu += (sivu * v - vSivu) * a;
             vNousu += (nousu * Math.Max(MinNopeusMS, NousuKerroin * KorkeusM) - vNousu) * a;
             vKaanto += (kaanto * KaantoAstS - vKaanto) * a;
+            if (eteen != 0 || sivu != 0) ToiveSuuntaEro = Math.Atan2(sivu, eteen) * 180 / Math.PI;
+            else if (Math.Abs(vEteen) + Math.Abs(vSivu) > 1) ToiveSuuntaEro = Math.Atan2(vSivu, vEteen) * 180 / Math.PI;
+            else ToiveSuuntaEro = 0;
+            if (!double.IsInfinity(EsteM))
+            {
+                // Vaakavauhti enintään (este − puoli rajaa) / 1 s: jarruttaa kaukaa, pysähtyy puolessa rajasta (20 m).
+                double raja = Math.Max(0, EsteM - EsteRajaM * 0.5), vaaka = Math.Sqrt(vEteen * vEteen + vSivu * vSivu);
+                if (vaaka > raja) { double s = vaaka > 0 ? raja / vaaka : 0; vEteen *= s; vSivu *= s; }
+                if (EsteM < EsteRajaM) vNousu = Math.Max(vNousu, EsteNousuMS * Math.Min(1, 1.5 * (1 - EsteM / EsteRajaM)));
+            }
             Suunta = KierrosLento.Kiedo(Suunta + vKaanto * dt);
             (Lat, Lon) = Siirra(Lat, Lon, Suunta, vEteen * dt);
             (Lat, Lon) = Siirra(Lat, Lon, Suunta + 90, vSivu * dt);
             // Pinta kamerassa ja liikkeen suunnassa (rakennus edessä nostaa jo ennen kuin kamera on sen kohdalla).
             var (el, eo) = Ennakko;
-            double suurin = double.NaN;
-            void Ota(double h) { if (!double.IsNaN(h)) suurin = double.IsNaN(suurin) ? h : Math.Max(suurin, h); }
+            double suurin = double.NaN; int tunnetut = 0;
+            void Ota(double h) { if (!double.IsNaN(h)) { tunnetut++; suurin = double.IsNaN(suurin) ? h : Math.Max(suurin, h); } }
             if (pinta != null)
             {
                 Ota(pinta(Lat, Lon)); Ota(pinta(el, eo));
                 for (int i = 0; i < KehaPisteita; i++) { var (kl, ko) = KehaPiste(i); Ota(pinta(kl, ko)); }
             }
-            if (!double.IsNaN(suurin)) PintaM = suurin;
+            // Naapurusto tuntematon (näytteet kesken: SampleHeightMostDetailed voi kestää sekunteja; koe-152 Eiffel: kamera laskeutui
+            // ristikon viereen ennen kuin kehän näytteet ehtivät): ei laskeuduta eikä pinta laske, ja matalalla vaakavauhti hidastuu.
+            Tunnetut = tunnetut;
+            bool taysi = pinta == null || tunnetut >= NaapurustoTaysi;
+            if (!double.IsNaN(suurin)) PintaM = taysi ? suurin : Math.Max(PintaM, suurin);
+            if (!taysi)
+            {
+                if (vNousu < 0) vNousu = 0;
+                if (KorkeusM < 150) { vEteen *= 0.3; vSivu *= 0.3; }
+            }
             KorkeusAbsM += vNousu * dt;
             double ala = PintaM + MinKorkeusM, yla = PintaM + MaxKorkeusM;
             // Pinnan nousu nostaa kameraa pehmeästi (NostoAikaS), muttei koskaan alle rajan.

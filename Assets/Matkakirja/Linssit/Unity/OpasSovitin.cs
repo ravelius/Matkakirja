@@ -299,6 +299,7 @@ namespace Matkakirja.Natiivi
             if (silmukka.Vaihe != ennen) o.Kirjaa($"opas: {ennen} → {silmukka.Vaihe} {(silmukka.Nykyinen?.Nimi ?? "")}, laatat {kaupunki.Latausaste:F0} %");
             if (silmukka.Vaihe != ennen && silmukka.Vaihe == OpasVaihe.Lentaa) OpasKorostusKuva.Piilota();
             y.Kuvaa(silmukka.Asento);
+            Luotaa();
             KameraKuvattu?.Invoke(kierto != null ? kierto.GetComponent<Camera>() : null, silmukka);
             // Esilataus: lennon aikana laskeutumiskehys, muuten esihaetun kohteen kehys (OpasKuvaus, sama kuin lento).
             var esi = silmukka.Esilataus(MaaKorkeus);
@@ -435,6 +436,8 @@ namespace Matkakirja.Natiivi
 
         /// <summary>Vapaa tila (■ jälkeen): ei kohdetta, Linssiseppä 2:n vapaa ohjaus (juna 152).</summary>
         public static bool VapaaTila => Auki && Viimeisin.silmukka.VapaaTila;
+        /// <summary>Vapaan lennon tila (komento `opas vapaa`): korkeus, pinta ja tunnetut näytteet; null = ei vapaassa tilassa.</summary>
+        public static string VapaanTila => VapaaTila ? Viimeisin.silmukka.Vapaa.Tila() : null;
         string[] kysymykset, jatkoKysymykset = Array.Empty<string>();
         List<OpasTaky> kohteet;
         string kohteetKaupunki;
@@ -986,6 +989,20 @@ namespace Matkakirja.Natiivi
             t.GetField("Kamera", F)?.SetValue(null, kamera);
         }
 
+        OpasLahiluotain luotain;
+        /// <summary>Vapaassa tilassa syvyysluotain toivotun liikkeen suuntaan (ristikkorakenteet, OpasLahiluotain) → Vapaa.EsteM.</summary>
+        void Luotaa()
+        {
+            var kam = kierto != null ? kierto.GetComponent<Camera>() : null;
+            if (silmukka.VapaaTila && kam != null)
+            {
+                luotain ??= new OpasLahiluotain();
+                luotain.Paivita(kam, silmukka.Vapaa.ToiveSuuntaEro, kaupunki.Ylos(kam.transform.position));
+                silmukka.Vapaa.EsteM = luotain.LahinM;
+            }
+            else if (luotain != null) { luotain.Dispose(); luotain = null; silmukka.Vapaa.EsteM = double.PositiveInfinity; }
+        }
+
         void LueTapit()
         {
             if (Time.unscaledTime < vapaaTestiLoppuu) { silmukka.VapaaTapit = vapaaTesti; silmukka.Tapit = default; silmukka.PelaajaOhjaa = true; return; }
@@ -1405,6 +1422,7 @@ namespace Matkakirja.Natiivi
 
         public void Sulje()
         {
+            luotain?.Dispose(); luotain = null;
             OpasKorostusKuva.Piilota(true);
             KyydinKameraEnnen.Ajo = null;
             KytkeNimilappu(false);

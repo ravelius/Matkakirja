@@ -486,6 +486,16 @@ namespace Matkakirja.Natiivi
             PaivitaKorkeusKerroin();
         }
 
+        /// <summary>Paikallinen ylös-suunta Unityn maailmassa pisteessä p (ellipsoidin normaali; oppaan lähiluotain).</summary>
+        public Vector3 Ylos(Vector3 p)
+        {
+            if (georef == null) return Vector3.up;
+            var gt = georef.transform;
+            double3 ecef = georef.TransformUnityPositionToEarthCenteredEarthFixed((float3)gt.InverseTransformPoint(p));
+            double3 n = math.normalize(CesiumWgs84Ellipsoid.GeodeticSurfaceNormal(ecef));
+            return ((Vector3)gt.TransformDirection((float3)georef.TransformEarthCenteredEarthFixedDirectionToUnity(n))).normalized;
+        }
+
         /// <summary>
         /// Pallon tileset-varjostimen shaderglobaalit (maan keskipiste, akseli, LentoVaraUV-akselit) lasketaan georeferenssin
         /// origosta vain KorkeusKerroin.Asetassa, eikä niitä päivitetä origon siirtyessä. Kaupunkinäkymän jälkeen pallon rinnevalon
