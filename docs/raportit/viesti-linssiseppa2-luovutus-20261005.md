@@ -3,7 +3,18 @@
 Edellinen: viesti-linssiseppa2-luovutus-20261004.md. Päätoimittaja local_5df52e10-10e4-4b72-9554-0049db300dfe.
 VUOROT: käännös- ja simuvuoro aina Julkaisijalta ("NYT käännös", "SIMU NYT"). Ilmoita: "KÄÄNNETTY <sha>, lukko vapaa" ja "simu vapaa".
 
-## TILA 6.10. 21.5x (uusin)
+## TILA 6.10. 22.4x (uusin)
+- Juna 155, merisumu: juurisyy on Valota (×1,35), joka leikkasi pilvet 255:een.
+  - gibs-pehmea 8f2db691 lisää pehmeän olkapään (polvi 160), 640eb7b4 A/B-komennon `astro kyyti kuvaa olkapaa 0|1`.
+  - Päätoimittaja hyväksyy, jos pilvikansi saa muotoa eivätkä lumi ja jää harmaannu.
+- Juna 155, 14d/14e: vauhtirajaus toimii, mutta sumeus jää. Päätoimittaja: +5 s still. Jos kuva tarkentuu, alarajaa ei tehdä.
+- Ketju scratchpad/ketju-155b.sh odottaa lupia:
+  - Julkaisijan KÄÄNNÖS NYT → `touch scratchpad/kaannos-lupa-155b`, ilmoita "lukko vapaa" (rivi LUKKO VAPAA lokissa).
+  - SIMU NYT → `touch scratchpad/simu-lupa-155b`.
+  - Loki: lokit/linssiseppa2-kaannos-155b.log. Ajat: noin 23.55 Mac v1:n jälkeen.
+  - Tulokset Päätoimittajalle: olkapää-parit (o0-/o1-kuvat) ja 14d/14e-5s.
+
+## TILA 6.10. 21.5x
 - Juna 153 on testaajilla. Päätoimittaja kuittasi Eiffel 14b/14c/14f (7920e6a0). Meri s2-meri 0f6e4e89 on KUITATTU junaan 154.
 - Junaan 155 menevät:
   - gibs-pehmea 5adaf326: merisumu vahvempana. Simussa 19814f64 nosti hajonnan vain 1,9 → 2,2, esikatselussa 5adaf326 2,9 → 8,3.
