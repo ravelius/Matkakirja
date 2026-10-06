@@ -100,7 +100,7 @@ namespace Matkakirja.Natiivi
             Aloituskaupunki = nimi.Trim();
             Viimeisin.pakotettuSijainti = (lat, lon);
             Viimeisin.o.Kirjaa($"opas: kaupunki vaihtuu → {Aloituskaupunki} ({lat:F3}, {lon:F3})");
-            Viimeisin.silmukka.VaihdaPaikka(lat, lon);   // kamera lentää heti kaupungin yleiskuvaan (Natiivi-UI 6.10. 00.2x)
+            Viimeisin.silmukka.VaihdaPaikka(lat, lon, nimi.Trim());   // kamera lentää heti kaupungin yleiskuvaan (Natiivi-UI 6.10. 00.2x)
             var v = Viimeisin;
             if (!v.SanoNimi(nimiaanet?.Kaupungille(iso, nimi))) v.Silta(OpasSiltalauseet.Kaupunki, true);
             return true;
@@ -176,6 +176,9 @@ namespace Matkakirja.Natiivi
             silmukka.Hiljenna += Hiljenna;
             silmukka.Kysyy += Kysyy;
             silmukka.LentoAlkaa += LentoAlkoi;
+            // Siirto ilman lentoa (omistaja 6.10. 12.0x): origo heti kohteeseen, latausaste kohdekameran laatoista.
+            silmukka.SiirtoAlkaa += (la, lo) => { kaupunki.SiirraOrigo(la, lo, 45); o.Kirjaa($"opas: siirrytään {silmukka.SiirtoNimi} ({la:F3}, {lo:F3})"); };
+            silmukka.LatausEdistys = () => kaupunki.Latausaste / 100.0;
             if (silta == null)
             {
                 silta = o.gameObject.AddComponent<AudioSource>();
@@ -259,6 +262,12 @@ namespace Matkakirja.Natiivi
             if (Testi) { o.StartCoroutine(TestiVastaus(n)); return; }
             o.StartCoroutine(Hae(n, toive));
         }
+
+        // ---- SIIRTO ILMAN LENTOA (UI: tumma ruutu "Siirrytään", nimi ja latauspalkki; Natiivi-UI) ----
+        public static bool Siirtymassa => Viimeisin?.silmukka != null && Viimeisin.silmukka.Siirtymassa;
+        public static string SiirtymaNimi => Viimeisin?.silmukka?.SiirtoNimi;
+        /// <summary>0–1: kohdekameran laattojen todellinen latausaste; näkymä aukeaa 0,95:ssä (enintään 25 s).</summary>
+        public static float SiirtymaEdistys => Viimeisin?.silmukka != null ? (float)Viimeisin.silmukka.SiirtoEdistys : 0f;
 
         // ---- KAUPUNKIEN KESKUSTAT (Päätoimittaja 6.10. 00.4x: Amsterdam laskeutui Natural Earthin pisteeseen 2,5 km keskustasta) ----
         /// <summary>
@@ -358,6 +367,7 @@ namespace Matkakirja.Natiivi
         bool SanoNimi(NimiLeike[] leikkeet)
         {
             pelaajanToimi = Time.unscaledTime;
+            if (silmukka != null && silmukka.Siirtymassa) return true;   // ei puhetta latausruudun aikana
             if (leikkeet == null || leikkeet.Length == 0 || silta == null || !Asetukset.Paalla(Kytkin.Kertoja)) return false;
             if (nimiSoitto != null) o.StopCoroutine(nimiSoitto);
             nimiSoitto = o.StartCoroutine(SoitaNimi(leikkeet));
@@ -412,6 +422,7 @@ namespace Matkakirja.Natiivi
         void Silta(string ryhma, bool pelaajalta)
         {
             if (pelaajalta) pelaajanToimi = Time.unscaledTime;
+            if (silmukka != null && silmukka.Siirtymassa) return;   // kertoja odottaa näkymän aukeamista (omistaja 12.0x)
             if (siltalauseet == null || silta == null || !Asetukset.Paalla(Kytkin.Kertoja) || puhuu || silta.isPlaying) return;
             var l = siltalauseet.Valitse(ryhma, ryhma == OpasSiltalauseet.Odotus ? null : OpasSiltalauseet.Kuittaus, x => siltaKlipit.ContainsKey(x.Url));
             if (l == null) return;
