@@ -6,7 +6,25 @@ worktreet /Users/Shared/Claude/wt/proto-natiivi-ui-<aihe>. Käännös: lokit/nat
 Simu vain Julkaisijan "SIMU NYT" -viestistä, oma iPhone FB234D08-4693-4496-9C7A-6C7C15B03963, iPad
 AD119F7B-A2A2-43EE-8769-7326DD757F89; lopuksi sammutus ja "simu vapaa".
 
-## TILA 6.10. klo 23.4x (uusin, TILINVAIHTO)
+## TILA 7.10. klo 01.4x (uusin)
+
+- JUNA 155 KUITATTU (Päätoimittaja 01.4x) → SHA natiivi-ui/ylarivi-155 73cac46a lähetetty Natiivisepälle. Käännös f84f11bf, stillit
+  lokit/natiivi-ui-1035/ylarivi-155/arkki-m-{iphone,iphonevaaka,ipad,ipadvaaka}.jpg (skriptit/vuoro-155b.sh; ylarivi155.sh sulkee
+  kortin ennen palkkia). Lisäkorjaus: Nostoselain tiivistysporras 4 (▾ pois; iPhonen vaakakortti 304 pt, MAAKUNNAT › AUTO −11 pt).
+- JUNA 156: natiivi-ui/opas-156 9595d33c (wt/proto-natiivi-ui-opas156) = 155 + LS1 esilataus-156 + ohjainrivi ‖/▶ + ›| (Seuraava)
+  oikean tapin alle (tauko pois ☰:n vierestä), tapit iPadilla sisemmäs/ylemmäs (17 %, 1/3), latauskuva KUVASUURENNOS 80 %
+  (Kuvasuurennos.Osuus), ☰/tauko-lokit. Testit ui opasvalikko ohjain|seuraava on/off/auto|latauskuva [pois]. Odottaa käännöstä
+  (Julkaisijan jono, levy ≥ 36 Gi) → skriptit/opas-156.sh <UDID> <nimi> <app> [vaaka] (iPhone + iPad): stillit + ☰-osuma 20 oikeaa
+  napautusta (oikean yläkulman osumavika, toista ensin!) → Päätoimittaja.
+- JUNA 157: natiivi-ui/sallitut-157 0f770be2 (wt/proto-natiivi-ui-sallitut157) = opas-156 + LS1 sallitut-157 (9c4d369f) + Vaihda kohde /
+  aloitusvalikko vain OpasSovitin.SallitutKaupungit (nimi tai < 25 km; tyhjä = ei rajausta) + TorjuntaTeksti → PuluChat.Vastaa.
+  Päätoimittaja A: suurennuslasi (LINSSIT-nappi) JÄÄ; "vapaa haku pois" = vain sallitut kaupungit. Testit ui opasvalikko sallitut|torjunta.
+- GIZA: natiivi-ui/giza-tekijat be9347a6 (LS1 giza-omat-mallit päällä): CesiumOmatMallit.Tekijat omana 7 pt:n rivinä Googlen rivien
+  alla; LS1 ottaa junaan, still LS1:ltä.
+- MAC: v1 f5d0e029 kokonäyttö vaihtoi näytön 2560×1440:een (ei palautunut; omistajalle Päätoimittajan kautta, EI muuteta itse).
+  v2 6f849fc8 OK (lokit/natiivi-ui-1035/mac-v2/). Työkalut scratchpadissa: hiiri (CGEvent klik/veto/rulla/ohjaus/nappain).
+
+## TILA 6.10. klo 23.4x (TILINVAIHTO)
 
 ALOITUSVIESTI uudelle sessiolle: "Olet Natiivi-UI (Opus, high). Lue docs/raportit/viesti-natiivi-ui-luovutus-20261005.md
 (TILA 23.4x) ja jatka junan 155 todisteista. Käännös vain Julkaisijan KÄÄNNÖS NYT -viestistä, simu vain SIMU NYT -viestistä."
