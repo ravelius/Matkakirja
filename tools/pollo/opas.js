@@ -667,7 +667,7 @@ export async function kohteetErana(haku, ehdokkaat) {
       const d = await haeJson(haku, `https://www.wikidata.org/w/api.php?action=wbgetentities&format=json&props=claims%7Cdescriptions%7Clabels%7Csitelinks&languages=fi&sitefilter=fiwiki&ids=${pala.join('|')}`);
       for (const [q, e] of Object.entries(d?.entities ?? {})) {
         tiedot.set(q, { kuva: e?.claims?.P18?.[0]?.mainsnak?.datavalue?.value ?? null, kuvaus: e?.descriptions?.fi?.value ?? null,
-          nimi: (e?.sitelinks?.fiwiki?.title ?? '').replace(/\s*\([^)]*\)\s*$/, '') || e?.labels?.fi?.value || null });
+          nimi: suomiNimi(e) });
       }
     } catch { /* ilman kuvia */ }
   }
@@ -698,6 +698,82 @@ export async function kohteetErana(haku, ehdokkaat) {
     return { ...k, id, nimi: siivoa(t?.nimi, 80) || k.nimi, lat: o.lat, lon: o.lon, alarivi: siivoa(t?.kuvaus, 200) || null,
       kuva: kuva && kuvallaTekijatiedot(kuva) ? kuva : null };
   }).filter(Boolean);
+}
+/**
+ * Kohteen suomenkielinen nimi Wikidatasta: fi-Wikipedian otsikko; jos otsikossa on tarkennin ("Aleksanteri II (patsas,
+ * Helsinki)"), nimiö on parempi ("Aleksanteri II:n muistomerkki"), muuten otsikko ilman tarkenninta ("Pöytävuori").
+ */
+export function suomiNimi(e) {
+  const otsikko = String(e?.sitelinks?.fiwiki?.title ?? '');
+  const ilman = otsikko.replace(/\s*\([^)]*\)\s*$/, '');
+  const nimio = e?.labels?.fi?.value || null;
+  return (ilman !== otsikko ? nimio || ilman : ilman || nimio) || null;
+}
+
+/**
+ * "MIKÄ TÄMÄ ON?" (omistaja 6.10.2026; Päätoimittaja): tunnetut kohteet pisteen ympäriltä. WDQS (SPARQL) oli 6.10. rajoitettu
+ * pyyntöön minuutissa, joten lähteenä Wikipedian geohaku (fi + en; artikkeli = tunnettu) → Wikidata (tyypit, nimet) →
+ * Commons (kuvan lisenssi ja tekijä). Enintään 6 alipyyntöä. Wikidatan virheessä jatketaan ilman tyyppisuodatusta.
+ * Palauttaa [{ id, nimi, alarivi, lat, lon, kuva }] (järjestämättä) tai heittää, jos kumpikaan geohaku ei vastaa.
+ */
+// Ei rakennuksia eikä nähtävyyksiä: ihmiset, järjestöt ja virastot, tapahtumat, asutukset ja alueet, kadut ja tiet,
+// tuhoutuneet rakennukset (Q19860854).
+const EI_LAHELLA = new Set(['Q5', 'Q43229', 'Q4830453', 'Q783794', 'Q327333', 'Q597897', 'Q1656682', 'Q1190554', 'Q132241', 'Q57607',
+  'Q178561', 'Q3199915', 'Q172754', 'Q486972', 'Q515', 'Q1549591', 'Q3957', 'Q532', 'Q15284', 'Q5119', 'Q123705', 'Q2983893',
+  'Q188509', 'Q1907114', 'Q79007', 'Q34442', 'Q19860854']);
+export async function kohteetLahella(haku, keskus, sadeM) {
+  const kohteet = new Map();
+  let vastasi = false;
+  for (const kieli of KIELET) {
+    try {
+      const d = await haeJson(haku, `https://${kieli}.wikipedia.org/w/api.php?action=query&format=json&generator=geosearch`
+        + `&ggscoord=${keskus.lat}%7C${keskus.lon}&ggsradius=${Math.round(sadeM)}&ggslimit=50&prop=coordinates%7Cpageprops%7Cdescription`
+        + '&colimit=max&ppprop=wikibase_item%7Cpage_image_free');
+      vastasi = true;
+      for (const x of Object.values(d?.query?.pages ?? {})) {
+        const q = x?.pageprops?.wikibase_item; const c = x?.coordinates?.[0];
+        if (!/^Q\d+$/.test(q ?? '') || !c || !Number.isFinite(c.lat) || !Number.isFinite(c.lon) || kohteet.has(q)) continue;
+        kohteet.set(q, { id: q, nimi: String(x.title ?? '').replace(/\s*\([^)]*\)\s*$/, ''), kieli, lat: c.lat, lon: c.lon,
+          alarivi: kieli === 'fi' ? siivoa(x.description, 200) || null : null, tiedosto: x.pageprops.page_image_free ?? null });
+      }
+    } catch { /* toinen kieli voi vastata */ }
+  }
+  if (!vastasi) throw new Error('geohaku ei vastannut');
+  const tunnukset = [...kohteet.keys()];
+  for (let i = 0; i < tunnukset.length && i < 100; i += 50) {
+    try {
+      const d = await haeJson(haku, 'https://www.wikidata.org/w/api.php?action=wbgetentities&format=json&props=claims%7Clabels%7Cdescriptions%7Csitelinks'
+        + `&languages=fi%7Cen&sitefilter=fiwiki&ids=${tunnukset.slice(i, i + 50).join('|')}`);
+      for (const [q, e] of Object.entries(d?.entities ?? {})) {
+        const k = kohteet.get(q); if (!k) continue;
+        const tyypit = (e?.claims?.P31 ?? []).map((c) => c?.mainsnak?.datavalue?.value?.id);
+        // Tapahtumilla on ajankohta (P585) tai alku (P580); purettu tai tuhoutunut (P576, Q19860854) ei ole enää paikalla.
+        if (tyypit.some((t) => EI_LAHELLA.has(t)) || e?.claims?.P585 || e?.claims?.P580 || e?.claims?.P576) { kohteet.delete(q); continue; }
+        k.nimi = suomiNimi(e) || (k.kieli === 'fi' ? k.nimi : e?.labels?.en?.value || k.nimi);
+        k.alarivi = siivoa(e?.descriptions?.fi?.value, 200) || k.alarivi;
+        k.tiedosto = e?.claims?.P18?.[0]?.mainsnak?.datavalue?.value ?? k.tiedosto;
+      }
+    } catch { /* ilman tyyppejä */ }
+  }
+  const lista = [...kohteet.values()].sort((a, b) => etaisyys(keskus, a) - etaisyys(keskus, b)).slice(0, 50);
+  const tiedostot = [...new Set(lista.map((k) => k.tiedosto).filter(Boolean))];
+  const kuvalle = new Map();
+  if (tiedostot.length) {
+    try {
+      const d = await haeJson(haku, `https://commons.wikimedia.org/w/api.php?action=query&format=json&prop=imageinfo`
+        + `&iiprop=url%7Cextmetadata%7Csize%7Cmime&iiurlwidth=800&titles=${encodeURIComponent(tiedostot.map((t) => `File:${t.replace(/_/g, ' ')}`).join('|'))}`);
+      const nimet = new Map(tiedostot.map((t) => [`File:${t.replace(/_/g, ' ')}`, t]));
+      for (const n of d?.query?.normalized ?? []) if (nimet.has(n.from)) nimet.set(n.to, nimet.get(n.from));
+      for (const x of Object.values(d?.query?.pages ?? {})) {
+        const k = commonsKuvaksi(x, false); const alku = nimet.get(x.title);
+        if (k && alku) { delete k._nimi; delete k._vaaka; kuvalle.set(alku, k); }
+      }
+    } catch { /* ilman kuvia */ }
+  }
+  return lista.map(({ id, nimi, alarivi, lat, lon, tiedosto }) => {
+    const kuva = tiedosto ? kuvalle.get(tiedosto) ?? null : null;
+    return { id, nimi, alarivi, lat, lon, kuva: kuva && kuvallaTekijatiedot(kuva) ? kuva : null };
+  });
 }
 const tiedostonimi = (lahde) => decodeURIComponent(String(lahde ?? '').split('/').pop() ?? '').replace(/^File:/, '').replace(/_/g, ' ').toLowerCase();
 

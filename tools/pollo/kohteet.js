@@ -81,6 +81,22 @@ export function neutraaliKohde(k) {
   if (!k || !(KIISTANALAINEN.test(k.kaupunki ?? '') || KIISTANALAINEN.test(k.nimi ?? ''))) return k;
   return { ...k, kaupunki: 'Jerusalem', iso: null, alarivi: MAAN_NIMI.test(k.alarivi ?? '') ? null : k.alarivi ?? null };
 }
+/** Jerusalemin alue (noin 31,70–31,88 N, 35,10–35,30 E): "Mikä tämä on?" -riveillä ei kaupunkia, joten neutraalius sijainnista. */
+export const jerusalemissa = (p) => Number(p?.lat) >= 31.70 && Number(p?.lat) <= 31.88 && Number(p?.lon) >= 35.10 && Number(p?.lon) <= 35.30;
+export const ilmanMaanNimea = (alarivi) => (MAAN_NIMI.test(alarivi ?? '') ? null : alarivi ?? null);
+
+/** "MIKÄ TÄMÄ ON?" -haun ruutu: 0,002° (noin 220 m); haetaan ruudun keskeltä säteellä, joka kattaa ruudun ja 400 m. */
+export const LAHELLA_RUUTU = 0.002;
+export const LAHELLA_OLETUS_M = 150;
+export const LAHELLA_LAAJA_M = 400;
+export const LAHELLA_ENINTAAN = 8;
+export const LAHELLA_HAKUSADE_M = 560;
+export function lahellaRuutu(lat, lon) {
+  const r = (x) => (Math.round(x / LAHELLA_RUUTU) * LAHELLA_RUUTU).toFixed(3);
+  const keskus = { lat: Number(r(lat)), lon: Number(r(lon)) };
+  return { keskus, avain: `opas:lahella:v1:${keskus.lat.toFixed(3)}:${keskus.lon.toFixed(3)}` };
+}
+
 /**
  * Alarivi enintään `katto` merkkiä sanarajalla ja "…" (6.10.: 80 merkin leikkaus katkaisi "…arabiemiraate").
  * Täsmälleen katon mittainen rivi on vanhan leikkauksen jälki välimuistissa, joten sekin lyhennetään sanarajalle.
