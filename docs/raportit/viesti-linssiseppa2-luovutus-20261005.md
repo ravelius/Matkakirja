@@ -3,7 +3,16 @@
 Edellinen: viesti-linssiseppa2-luovutus-20261004.md. Päätoimittaja local_5df52e10-10e4-4b72-9554-0049db300dfe.
 VUOROT: käännös- ja simuvuoro aina Julkaisijalta ("NYT käännös", "SIMU NYT"). Ilmoita: "KÄÄNNETTY <sha>, lukko vapaa" ja "simu vapaa".
 
-## TILA 6.10. 21.0x (uusin)
+## TILA 6.10. 21.5x (uusin)
+- Juna 153 on testaajilla. Päätoimittaja kuittasi Eiffel 14b/14c/14f (7920e6a0). Meri s2-meri 0f6e4e89 on KUITATTU junaan 154.
+- Junaan 155 menevät:
+  - gibs-pehmea 5adaf326: merisumu vahvempana. Simussa 19814f64 nosti hajonnan vain 1,9 → 2,2, esikatselussa 5adaf326 2,9 → 8,3.
+  - opas-vapaa-lataus 5683ffaf.
+  Yhteinen käännös on pyydetty Julkaisijalta. Ajoskripti on scratchpad/aja-155.sh <app> <sha> (lupa simu-lupa-155): Helsinki-juliste + skenaario 14 iPadilla.
+  Tulokset Päätoimittajalle: Helsinki-pari (vertailu linssiseppa2-merisumu-153/jalkeen) ja 14d/14e.
+- Tulokset: lokit/linssiseppa2-meri-ab, todistus-eiffel153-daf949ed-20261006-2144, linssiseppa2-merisumu-153.
+
+## TILA 6.10. 21.0x
 - Simuajot hiljaisessa vuorossa noin 21.15 (scratchpad, ketju odottaa lupaa):
   1. aja-153s.sh: Helsinki ennen/jälkeen. Lupa: `touch scratchpad/simu-lupa-153s`.
   2. aja-eiffel153.sh: iPad 4CE6C737, app junan 153 koe a9cae09c (eiffel-app.txt), skenaario 14. Todennetaan 14c/14f.
