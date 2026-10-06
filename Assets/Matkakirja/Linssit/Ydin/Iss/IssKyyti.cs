@@ -165,7 +165,18 @@ namespace Matkakirja.Linssit.Iss
         /// (IssKyytiNakyma, CupolaKerros) suurenevat samassa suhteessa ja kehys täyttää ruudusta vähemmän. 1 = 1.0.37.
         /// A/B `astro kyyti lasi <kerroin>`.
         /// </summary>
-        public static double LasiZoom = 1.3;
+        public static double LasiZoom
+        {
+            get => Ipad ? LasiZoomIpad : LasiZoomPuhelin;
+            set { if (Ipad) LasiZoomIpad = value; else LasiZoomPuhelin = value; }
+        }
+        /// <summary>
+        /// iPadilla kehystä näkyy enemmän (omistaja 6.10. klo 08.35: "iPadilla ikkunaa tai sen reunoja voisi näkyä hieman enemmän.
+        /// iPhonella nykyinen zoomitaso on hyvä"): puhelin 1,3 ennallaan, iPad 1,15.
+        /// </summary>
+        public static double LasiZoomPuhelin = 1.3, LasiZoomIpad = 1.15;
+        /// <summary>Leveä ruutu (iPad); Unity asettaa käynnistyksessä (CupolaKerros, sama raja kuin kehyksen iPad-kuvalla).</summary>
+        public static bool Ipad;
         /// <summary>Ikkunan kenttäkulma pystyyn zoomin jälkeen: tan(k / 2) = tan(80° / 2) / LasiZoom (1,3 → 65,7°).</summary>
         public static double IkkunanKentta => KenttaZoomilla(IkkunanPerusKentta, LasiZoom);
 

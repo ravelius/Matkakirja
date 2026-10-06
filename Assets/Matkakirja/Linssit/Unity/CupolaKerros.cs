@@ -145,6 +145,13 @@ namespace Matkakirja.Natiivi
             materiaali.SetFloat(IdRuutu, kamera.aspect);
         }
 
+        /// <summary>iPad-tunnistus lasin zoomille (IssKuvakulma.Ipad) heti käynnistyksessä, sama raja kuin kehyksen iPad-kuvalla.</summary>
+        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
+        static void TunnistaIpad()
+        {
+            IssKuvakulma.Ipad = Screen.width > 0.5f * Screen.height || SystemInfo.deviceModel.StartsWith("iPad", StringComparison.Ordinal);
+        }
+
         IEnumerator HaeKuvat()
         {
             // iPad-kehys leveämmälle ruudulle (1536 × 2732), muuten iPhone (1206 × 2622); cover rajaa loput.
