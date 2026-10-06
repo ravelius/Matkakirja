@@ -112,5 +112,5 @@ Brotli (haara linnanrakentaja-zstd, worktree olemassa), akustiikka #3979 (Steam 
   esineiden #4052 päällä; PR vasta #4052:n mergen jälkeen, ei pinottuja). Faceit asennettu Blenderiin (bl_ext.user_default.faceit),
   lisäosa _lahteet/faceit (ei repoon). Leivonnassa modifier_action FACEIT (REMOVE poisti vartalon skinnauksen!).
   v39 blender 0265cd493b0728f4, peili 94a0df22044155fa. Kappelin keskustelun kohdistus aanet.js:ssä, rakenna.mjs välittää sen.
-  Muiden äänten kohdistukset: _valmiit/linna-kohtaukset-v3/raaka/*-vastaus.json. Natiivin morph-tuki Siirtosepällä, juna 150.
+  Muiden äänten kohdistukset: _valmiit/linna-kohtaukset-v3/raaka/*-vastaus.json. Natiivin morph-tuki Siirtosepällä (siirtoseppa/faceit 55ad6594), juna 151 (16.2x: entinen "150" = 151, BUILD 150 = muistioikeuden pikkujuna).
 - Esittelyvideot (148b ja linna-149 + peili feea163c): Siirtoseppä ajaa ~15.50, minä tarkistan ruuduittain → Päätoimittaja.
