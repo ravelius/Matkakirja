@@ -6,7 +6,19 @@ worktreet /Users/Shared/Claude/wt/proto-natiivi-ui-<aihe>. Käännös: lokit/nat
 Simu vain Julkaisijan "SIMU NYT" -viestistä, oma iPhone FB234D08-4693-4496-9C7A-6C7C15B03963, iPad
 AD119F7B-A2A2-43EE-8769-7326DD757F89; lopuksi sammutus ja "simu vapaa".
 
-## TILA 6.10. klo 00.3x (uusin)
+## TILA 6.10. klo 13.4x (uusin)
+
+- Juna 148b (8a01ead5) yhteinen äänellinen video valmis: lokit/natiivi-ui-1035/juna148-yhteinen/juna148-yhteinen.mp4 + LUE.md
+  (ääni +1,915 s Cupolan huminasta; napautukset simkosketuksella, MCP-tap ei toiminut: machPortNotConnected).
+- Juna 148c: natiivi-ui/opas-148c b23ec051 (e2f60242 + lähdelistan monistuminen, tapit nappirivin yläpuolelle, kirjoitusrivi
+  näppäimistön yläpuolelle, Liiku-listan tyhjät kuvapaikat pois) → Natiiviseppä.
+- Juna 149: natiivi-ui/maakunta-149 fc38a9f5 (worktree wt/proto-natiivi-ui-taulu148): taulu-vaaka, maakunta nostokorttina
+  (Nostoselain.MuuLista, MinikartanSuurennos), opas-napit 367a68ec (ion-logo Googlen yläpuolelle), lähderivi 40 %, Googlen
+  virallinen outlined-logo (Resources/Krediitit + LAHTEET.md, omistajan lupa chatissa), 148c merge, pinnatun palkin 1. napautus.
+- Odottaa: mykkä simuvuoro maakunnan ENNEN-kuviin 148b:stä (skripti skriptit/maakunta-kuvat.sh ennen|jalkeen), 149:n .app →
+  JÄLKEEN-kuvat + logon 3×-still Päätoimittajalle. Mac-sovellus (TouchSimulation, minimikoko, skaalaus) 148:n jälkeen.
+
+## TILA 6.10. klo 00.3x
 
 - Juna 146: SHA natiivi-ui/iss-joystick 9256b8bd Natiivisepälle (joystickin keski piirretyn sauvan kohdalle, maanimet
   paikat.json "maanimet", täkyjen varapolku). Todennettu käännöksellä 472a6a0e (+ LS1 444cd016 Amsterdam-lento), kuvat
@@ -18,7 +30,7 @@ AD119F7B-A2A2-43EE-8769-7326DD757F89; lopuksi sammutus ja "simu vapaa".
   AVOIN: LCD "KEHITETÄÄN…"-palkki ja "KUVA VALMIS" eivät näkyneet (UI piilossa renderöinnin ajan, meri ilman maata):
   odottaa LS2:n vastausta (nopein onnistuva kuva ja missä vaiheessa palkki näkyy).
 
-## TILA 6.10. klo 11.4x (uusin)
+## TILA 6.10. klo 11.4x
 
 - Juna 146: VIE annettu 10.3x. Video osa 2 (pin + joystick) lokit/natiivi-ui-1035/juna146-video/, +N-stillit samassa.
 - Juna 147 LÄHETETTY Natiivisepälle: natiivi-ui/koe-147 37df02f8 (Päätoimittajan kuittaus 11.33) = ohjaamo v3b, LCD-tausta 6 %,
@@ -29,7 +41,7 @@ AD119F7B-A2A2-43EE-8769-7326DD757F89; lopuksi sammutus ja "simu vapaa".
 - Juna 148: vaakana "Minne katsotaan?" -valikko paneelin yläpuolelle (peittää nyt LAAJA/Poistu); Pulun ilmeet kertoimen
   mukaan (Codex b2736fa9c).
 
-## TILA 6.10. klo 09.2x (uusin)
+## TILA 6.10. klo 09.2x
 
 - Juna 147 LÄHETETTY Natiivisepälle: natiivi-ui/koe-147 38100de1 + web-PR #4035 (tyylikirja: PINNATTU PALKKI, --tk-lcd-varoitus
   #ffb347 / --tk-lcd-vaara #ff5a4a). Päätoimittaja kuittasi. Sisältö: ohjaamo v3 (Linnanrakentaja), segmenttipalkki, LCD:n
@@ -40,7 +52,7 @@ AD119F7B-A2A2-43EE-8769-7326DD757F89; lopuksi sammutus ja "simu vapaa".
   Pulun ilmeet kertoimen mukaan (Codexin kuvat, posti b2736fa9c).
 - Proto-worktreet siivottu 9.00 (20 kpl); jäljellä proto-natiivi-ui-koe147. Web: wt/natiivi-ui-tyylikirja-sirurivi (#4035).
 
-## TILA 6.10. klo 08.4x (uusin)
+## TILA 6.10. klo 08.4x
 
 - Juna 147: natiivi-ui/koe-147 ad4b7b35 (Natiivisepällä viimeksi 6de35578; lähetä uusin, kun v3 on sovitettu). Todennettu:
   segmenttipalkki oikealla kuvalla (37c74eac, juna147/segmentit-*), Stonehenge-väistö (a), Pulu-sirut, väistö, objektiivi.
