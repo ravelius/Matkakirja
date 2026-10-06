@@ -37,6 +37,7 @@ import {
   MAAILMAN_SUOSIKIT_KEHOTE,
 } from './kohteet.js';
 import { OPAS_AINEISTOT } from './aineistot.js';
+import { vuosiluvutSanoiksi } from './puhesanat.js';
 import { kuvalista, kohteenKuvat, kaupunginKohteet, listanKuvin, kuvaKaupunkitilassa, LUKITTU_VAHINTAAN } from './opas-kuvat.js';
 import {
   siivoaKuva, kuvaKontekstiksi, kuvaSirujenAvain, lueKuvasirut, KUVASIRUKEHOTE, KUVASIRUJA, KUVASIRUJEN_TTL_S,
@@ -2737,8 +2738,10 @@ async function oppaanAaniTunniste(teksti) {
 }
 
 /** POST: ääni-url heti (teksti KV:hen, katto lasketaan nyt) → { aani, kesto_s } tai null. */
-async function oppaanAani(pyynto, env, ctx, teksti, kehittaja) {
-  if (!teksti) return null;
+async function oppaanAani(pyynto, env, ctx, naytettava, kehittaja) {
+  if (!naytettava) return null;
+  // Näytölle vuosiluvut numeroina, ElevenLabsille sanoina (Päätoimittaja 7.10.: mallin lukusanat sotkeutuivat).
+  const teksti = vuosiluvutSanoiksi(naytettava);
   // Testi ilman äänilupaa: vain R2:ssa jo valmiina oleva ääni (mp3/pcm erikseen), ei tekstiä talteen → GET ei voi tuottaa.
   if (testiIlmanAanta(pyynto, env)) {
     const sha = await oppaanAaniTunniste(teksti);
