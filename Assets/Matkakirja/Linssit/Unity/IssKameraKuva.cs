@@ -1069,6 +1069,7 @@ namespace Matkakirja.Natiivi
         /// nosteta harmaaksi), kirkkaita kuvia ei tummenneta. Testikomento `astro kyyti kuvaa valotus <tavoite> [max]`.
         /// </summary>
         public static float ValotusTavoite = 0.36f, ValotusMax = 1.8f;
+        public static bool ValotusOlkapaa = true;
 
         /// <summary>
         /// KUVAN PARANNUS (Päätoimittaja 6.10., omistaja: "kuvaa oli paranneltu"; juliste E v2:n jälkikäsittely juliste-jalki.py 1.10.):
@@ -1163,7 +1164,8 @@ namespace Matkakirja.Natiivi
             Loki($"valotus: keskikirkkaus {keski:0.000}, kerroin {k:0.00}, renderissä leikattu {100.0 * tayt / Math.Max(1, n):0.0} %");
             if (k <= 1.01f) return;
             var data = kuva.GetPixelData<byte>(0); var t = data.ToArray();
-            Kuvankasittely.Valota(t, k);   // pehmeä olkapää: pilvikannen sävyt eivät leikkaudu 255:een
+            // Pehmeä olkapää: pilvikannen sävyt eivät leikkaudu 255:een; A/B `astro kyyti kuvaa olkapaa 0|1` (0 = suora kerto).
+            Kuvankasittely.Valota(t, k, ValotusOlkapaa ? 160f : 255f);
             data.CopyFrom(t); kuva.Apply(false);
         }
 

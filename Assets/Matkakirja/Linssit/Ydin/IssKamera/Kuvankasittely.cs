@@ -125,6 +125,11 @@ namespace Matkakirja.Linssit.IssKamera
         public static void Valota(byte[] rgba, float k, float polvi = 160f)
         {
             float vara = 255f - polvi;
+            if (vara <= 0)   // polvi ≥ 255: vanha suora kerto kanavittain (A/B)
+            {
+                for (int o = 0; o < rgba.Length; o += 4) { rgba[o] = Tavu(rgba[o] * k); rgba[o + 1] = Tavu(rgba[o + 1] * k); rgba[o + 2] = Tavu(rgba[o + 2] * k); }
+                return;
+            }
             for (int o = 0; o < rgba.Length; o += 4)
             {
                 float m = Math.Max(rgba[o], Math.Max(rgba[o + 1], rgba[o + 2]));
