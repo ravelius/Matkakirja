@@ -606,3 +606,10 @@
 .mk-issohjaamo__segmentti--paalla {
     background-color: var(--tk-lcd-muste);
 }
+
+/* LCD-MATRIISI (omistaja 6.10.2026: "aavistusvihreää LCD-matriisiä taustassa"): pisteruudukko näytön taustalla, väri piirtoon
+ * color-ominaisuudesta (IssOhjaamo.Matriisi); hento, jotta teksti pysyy luettavana. */
+.mk-issohjaamo__matriisi {
+    color: var(--tk-lcd-reunus);
+    opacity: 0.55;
+}

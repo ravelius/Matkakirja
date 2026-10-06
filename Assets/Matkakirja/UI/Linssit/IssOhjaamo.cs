@@ -127,6 +127,7 @@ namespace Matkakirja.Natiivi
 
             // --- LCD: kohde isolla, maa alla ---------------------------------------------------------------------
             lcd = Rakenne.El("mk-issohjaamo__lcd", paneeli);
+            Matriisi(lcd);
             kohde = Rakenne.Teksti("", "mk-issohjaamo__kohde", lcd);
             maa = Rakenne.Teksti("", "mk-issohjaamo__maa", lcd);
             foreach (var t in new[] { kohde, maa }) { t.pickingMode = PickingMode.Ignore; Kirjasimet.Aseta(t, Kirjasin.Lcd); }
@@ -175,6 +176,7 @@ namespace Matkakirja.Natiivi
             // --- mininäyttö --------------------------------------------------------------------------------------
             mini = Rakenne.El("mk-issohjaamo__mini", Juuri);
             mini.tooltip = "Avaa ohjaamo";
+            Matriisi(mini);
             miniTeksti = Rakenne.Teksti("", "mk-issohjaamo__miniteksti", mini);
             miniTeksti.pickingMode = PickingMode.Ignore;
             Kirjasimet.Aseta(miniTeksti, Kirjasin.Lcd);
@@ -702,6 +704,38 @@ namespace Matkakirja.Natiivi
         public void PainaKamera() => Laukaise();
 
         /// <summary>Kameranappi: tarkka ISS-kuva (omistaja 4.10. klo 15.2x: ostot pois, kuvia rajattomasti; LS2 IssKameraKuva).</summary>
+        /// <summary>
+        /// LCD-MATRIISI (omistaja 6.10. 08.3x: "aavistusvihreää LCD-matriisiä taustassa näkyvissä"): hento pisteruudukko näytön
+        /// taustalla tekstin alla. Väri USS:stä (.mk-issohjaamo__matriisi color = --tk-lcd-reunus, opacity), ei värivakioita.
+        /// </summary>
+        public const float MatriisiVali = 3f, MatriisiPiste = 1.2f;
+
+        static void Matriisi(VisualElement isa)
+        {
+            var m = Rakenne.El("mk-issohjaamo__matriisi", isa, PickingMode.Ignore);
+            m.style.position = Position.Absolute;
+            m.style.left = 0; m.style.top = 0; m.style.right = 0; m.style.bottom = 0;
+            m.SendToBack();
+            m.generateVisualContent += mgc =>
+            {
+                var r = m.contentRect;
+                if (r.width <= 0 || r.height <= 0) return;
+                var p = mgc.painter2D;
+                p.fillColor = m.resolvedStyle.color;
+                p.BeginPath();
+                float x0 = (r.width % MatriisiVali) * 0.5f, y0 = (r.height % MatriisiVali) * 0.5f;
+                for (float y = y0; y + MatriisiPiste <= r.height; y += MatriisiVali)
+                    for (float x = x0; x + MatriisiPiste <= r.width; x += MatriisiVali)
+                    {
+                        p.MoveTo(new Vector2(x, y)); p.LineTo(new Vector2(x + MatriisiPiste, y));
+                        p.LineTo(new Vector2(x + MatriisiPiste, y + MatriisiPiste)); p.LineTo(new Vector2(x, y + MatriisiPiste));
+                        p.ClosePath();
+                    }
+                p.Fill();
+            };
+            m.RegisterCallback<GeometryChangedEvent>(_ => m.MarkDirtyRepaint());
+        }
+
         /// <summary>Testi: kehitys 0–1 (segmentit), "valmis" (KUVA VALMIS 2 s) tai "pois".</summary>
         public void TestaaKehitys(string arvo)
         {
