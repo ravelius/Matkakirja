@@ -19,7 +19,14 @@ namespace Matkakirja.Linssit.IssKamera
         /// sarjan uudelleenvientiä). Kullakin kansiolla oma korjaus.json (sama bittikartta absoluuttisessa XYZ:ssä); ensimmäinen
         /// kansio, jonka bitti on 1, voittaa – myös Euroopan lohkossa (Madeira), muuten Eurooppa tai maailman v2.
         /// </summary>
-        public static readonly string[] KorjausKansiot = { "v2-korjaus2" };   // 6.10. 11.01: WorldCover-tasaus, järvet, rengas, 4 aluetta
+        public static readonly string[] KorjausKansiot = { "v2-korjaus3", "v2-korjaus2" };   // 3: Eyre; 2: WorldCover-tasaus, järvet, rengas
+        /// <summary>
+        /// Euroopan mosaiikin korjauskerrokset uusin ensin (Karttaseppä 6.10.: s2-eurooppa/v2-korjaus1, Madeiran pilvi): laatat Euroopan
+        /// rajatussa jaossa ({t}/{x'}/{y'}.jpg), korjaus.json:n saatavuus absoluuttisessa XYZ:ssä. Maailman kerrokset voittavat nämä.
+        /// </summary>
+        public static readonly string[] EuroopanKorjausKansiot = { "v2-korjaus1" };
+        public const string EuroopanKorjausJuuriPohja = "https://media.matkakirja.app/linssit/astronautin-kamera/s2-eurooppa/";
+        public const string EuroopanKorjausPolkuPohja = "linssit/astronautin-kamera/s2-eurooppa/";
         public const string KorjausJuuriPohja = "https://media.matkakirja.app/linssit/astronautin-kamera/s2-maailma/";
         public const string KorjausPolkuPohja = "linssit/astronautin-kamera/s2-maailma/";
         public readonly int ZMin, ZMax;
@@ -37,6 +44,16 @@ namespace Matkakirja.Linssit.IssKamera
         }
 
         public bool Korjattu(int z, int x, int y) => KorjausKansio(z, x, y) != null;
+
+        /// <summary>Euroopan korjauskerrokset (EuroopanKorjausKansiot-järjestyksessä).</summary>
+        public (string Kansio, S2MaailmaLaatat Bitit)[] EuroopanKorjaukset = Array.Empty<(string, S2MaailmaLaatat)>();
+
+        /// <summary>Euroopan korjauskansio laatalle (absoluuttinen XYZ) tai null.</summary>
+        public string EuroopanKorjausKansio(int z, int x, int y)
+        {
+            foreach (var (k, b) in EuroopanKorjaukset) if (b != null && b.Onko(z, x, y)) return k;
+            return null;
+        }
 
         /// <summary>laatat.json → saatavuus; null, jos muoto on väärä (kutsujan käytös ennallaan).</summary>
         public static S2MaailmaLaatat Jasenna(string json)

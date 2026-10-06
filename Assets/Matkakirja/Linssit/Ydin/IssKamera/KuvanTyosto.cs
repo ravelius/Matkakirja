@@ -455,7 +455,9 @@ namespace Matkakirja.Linssit.IssKamera
         {
             var k = Maailma?.KorjausKansio(z, x, y);
             if (k != null) return $"{S2MaailmaLaatat.KorjausJuuriPohja}{k}/{z}/{x}/{y}.jpg";   // korjauskerros voittaa (myös Eurooppa)
-            return Euroopassa(z, x, y) ? euroopanJuuri + MosaiikinPolku(z, x, y) : $"{S2MaailmaLaatat.Juuri}{z}/{x}/{y}.jpg";
+            if (!Euroopassa(z, x, y)) return $"{S2MaailmaLaatat.Juuri}{z}/{x}/{y}.jpg";
+            var ek = Maailma?.EuroopanKorjausKansio(z, x, y);
+            return ek != null ? $"{S2MaailmaLaatat.EuroopanKorjausJuuriPohja}{ek}/{MosaiikinPolku(z, x, y)}" : euroopanJuuri + MosaiikinPolku(z, x, y);
         }
 
         /// <summary>Mosaiikin suhteellinen polku "{t}/{x'}/{y'}.jpg".</summary>

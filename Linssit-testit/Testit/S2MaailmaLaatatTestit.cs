@@ -48,7 +48,7 @@ namespace Matkakirja.Linssit.Testit
                 Oleta.Tosi(!KuvanTyosto.MosaiikinLaatta(8, 99, 105), "avomeri ei");
                 Oleta.Sama("https://media.matkakirja.app/linssit/astronautin-kamera/s2-maailma/v2/8/85/130.jpg", KuvanTyosto.MosaiikinOsoite("E/", 8, 85, 130));
                 Oleta.Sama("E/2/37/22.jpg", KuvanTyosto.MosaiikinOsoite("E/", 8, 145, 74), "Eurooppa rajatulla jaolla");
-                KuvanTyosto.Maailma.Korjaukset = new[] { (S2MaailmaLaatat.KorjausKansiot[0], S2MaailmaLaatat.Jasenna(Json(6, 10, (z, x, y) => z == 8 && x == 85 && y == 130))) };
+                KuvanTyosto.Maailma.Korjaukset = new[] { ("v2-korjaus2", S2MaailmaLaatat.Jasenna(Json(6, 10, (z, x, y) => z == 8 && x == 85 && y == 130))) };
                 Oleta.Sama("https://media.matkakirja.app/linssit/astronautin-kamera/s2-maailma/v2-korjaus2/8/85/130.jpg", KuvanTyosto.MosaiikinOsoite("E/", 8, 85, 130), "korjaussarjasta");
                 Oleta.Sama("https://media.matkakirja.app/linssit/astronautin-kamera/s2-maailma/v2/8/86/130.jpg", KuvanTyosto.MosaiikinOsoite("E/", 8, 86, 130), "korjaamaton v2:sta");
                 // Korjauskerrokset uusin ensin (Karttaseppä 6.10.): uudempi voittaa, vanhempi jää alle; korjaus voittaa myös Euroopan.
@@ -60,6 +60,11 @@ namespace Matkakirja.Linssit.Testit
                 Oleta.Sama("https://media.matkakirja.app/linssit/astronautin-kamera/s2-maailma/v2-korjaus3/8/86/130.jpg", KuvanTyosto.MosaiikinOsoite("E/", 8, 86, 130), "uusin kerros");
                 Oleta.Sama("https://media.matkakirja.app/linssit/astronautin-kamera/s2-maailma/v2-korjaus2/8/85/130.jpg", KuvanTyosto.MosaiikinOsoite("E/", 8, 85, 130), "vanhempi kerros");
                 Oleta.Sama("https://media.matkakirja.app/linssit/astronautin-kamera/s2-maailma/v2-korjaus3/8/145/74.jpg", KuvanTyosto.MosaiikinOsoite("E/", 8, 145, 74), "korjaus Euroopan lohkossa");
+                // Euroopan korjauskerros (rajattu jako): Madeira-tyyppinen.
+                KuvanTyosto.Maailma.Korjaukset = System.Array.Empty<(string, S2MaailmaLaatat)>();
+                KuvanTyosto.Maailma.EuroopanKorjaukset = new[] { ("v2-korjaus1", S2MaailmaLaatat.Jasenna(Json(6, 10, (z, x, y) => z == 8 && x == 145 && y == 74))) };
+                Oleta.Sama("https://media.matkakirja.app/linssit/astronautin-kamera/s2-eurooppa/v2-korjaus1/2/37/22.jpg", KuvanTyosto.MosaiikinOsoite("E/", 8, 145, 74), "Euroopan korjaus rajatulla jaolla");
+                Oleta.Sama("E/2/37/23.jpg", KuvanTyosto.MosaiikinOsoite("E/", 8, 145, 75), "korjaamaton Eurooppa");
             }
             finally { KuvanTyosto.Maailma = ennen; }
         }

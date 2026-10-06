@@ -370,14 +370,15 @@ namespace Matkakirja
         /// </summary>
         /// <param name="korjausPolku">Korjauskerroksen polku laatalle (esim. "…/s2-maailma/v2-korjaus2/") tai null; voittaa myös
         /// Euroopan lohkossa (Karttaseppä 6.10.: pienet korjauserät omiin kansioihinsa).</param>
-        public static void S2Maailma(string polku, Func<int, int, int, bool> saatavuus, Func<int, int, int, string> korjausPolku = null)
+        public static void S2Maailma(string polku, Func<int, int, int, bool> saatavuus, Func<int, int, int, string> korjausPolku = null,
+            Func<int, int, int, string> euroopanKorjausPolku = null)
         {
-            s2MaailmaKorjausPolku = korjausPolku;
+            s2MaailmaKorjausPolku = korjausPolku; s2EuroopanKorjausPolku = euroopanKorjausPolku;
             s2MaailmaPolku = polku; s2MaailmaSaatavuus = saatavuus;
         }
         static volatile string s2MaailmaPolku;
         static volatile Func<int, int, int, bool> s2MaailmaSaatavuus;
-        static volatile Func<int, int, int, string> s2MaailmaKorjausPolku;
+        static volatile Func<int, int, int, string> s2MaailmaKorjausPolku, s2EuroopanKorjausPolku;
 
         static string S2MaailmaOhjaus(string polku, out bool tyhja)
         {
@@ -393,7 +394,12 @@ namespace Matkakirja
             if (z >= 6 && z <= 10)
             {
                 int t = z - 6, bx = x >> t, by = y >> t;
-                if (bx >= 27 && bx < 40 && by >= 13 && by < 26) return $"{S2Polku}/{S2EuroopanVersio}/{t}/{x - (27 << t)}/{y - (13 << t)}.jpg";
+                if (bx >= 27 && bx < 40 && by >= 13 && by < 26)
+                {
+                    // Euroopan korjauskerros (rajattu jako), muuten Euroopan mosaiikki.
+                    string ek = s2EuroopanKorjausPolku?.Invoke(z, x, y);
+                    return $"{ek ?? S2Polku + "/" + S2EuroopanVersio + "/"}{t}/{x - (27 << t)}/{y - (13 << t)}.jpg";
+                }
             }
             tyhja = !onko(z, x, y);
             return polku;

@@ -465,14 +465,30 @@ namespace Matkakirja.Natiivi
                     if (!kj.IsFaulted && kj.Result != null) korjaukset.Add((kansio, kj.Result));
                 }
             m.Korjaukset = korjaukset.ToArray();
+            var ekorjaukset = new System.Collections.Generic.List<(string, S2MaailmaLaatat)>();
+            foreach (var kansio in S2MaailmaLaatat.EuroopanKorjausKansiot)
+                using (var kq = UnityWebRequest.Get(S2MaailmaLaatat.EuroopanKorjausJuuriPohja + kansio + "/korjaus.json"))
+                {
+                    yield return kq.SendWebRequest();
+                    if (kq.result != UnityWebRequest.Result.Success) continue;
+                    var kt = kq.downloadHandler.data;
+                    var kj = System.Threading.Tasks.Task.Run(() => S2MaailmaLaatat.Jasenna(System.Text.Encoding.UTF8.GetString(kt)));
+                    while (!kj.IsCompleted) yield return null;
+                    if (!kj.IsFaulted && kj.Result != null) ekorjaukset.Add((kansio, kj.Result));
+                }
+            m.EuroopanKorjaukset = ekorjaukset.ToArray();
             Laattapalvelin.S2Maailma(S2MaailmaLaatat.Polku, m.Onko, (z, x, y) =>
             {
                 var k = m.KorjausKansio(z, x, y);
                 return k == null ? null : S2MaailmaLaatat.KorjausPolkuPohja + k + "/";
+            }, (z, x, y) =>
+            {
+                var k = m.EuroopanKorjausKansio(z, x, y);
+                return k == null ? null : S2MaailmaLaatat.EuroopanKorjausPolkuPohja + k + "/";
             });
             S2MaailmaLadattu = m;
             if (S2MaailmaKaytossa) KuvanTyosto.Maailma = m;
-            Debug.Log($"MATKAKIRJA linssit: s2-maailma: {S2MaailmaLaatat.Versio} z{m.ZMin}–{m.ZMax}, {tavut.Length / 1024} kt, korjauskerrokset {string.Join(", ", System.Linq.Enumerable.Select(m.Korjaukset, k => k.Kansio))}, {kello.ElapsedMilliseconds} ms");
+            Debug.Log($"MATKAKIRJA linssit: s2-maailma: {S2MaailmaLaatat.Versio} z{m.ZMin}–{m.ZMax}, {tavut.Length / 1024} kt, korjauskerrokset {string.Join(", ", System.Linq.Enumerable.Select(m.Korjaukset, k => k.Kansio))} / Eurooppa {string.Join(", ", System.Linq.Enumerable.Select(m.EuroopanKorjaukset, k => k.Kansio))}, {kello.ElapsedMilliseconds} ms");
         }
 
         void PaivitaS2(bool kyydissa)
