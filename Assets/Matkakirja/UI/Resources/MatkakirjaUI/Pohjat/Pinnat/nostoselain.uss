@@ -429,3 +429,17 @@
 .mk-nosto__ylarivi--kategoria .mk-nosto__ylarivi-symboli {
     -unity-background-image-tint-color: var(--tk-paperi-muste-pehmea);
 }
+
+/* Kolme oikeinta samalle keskilinjalle ja samaan näkyvään korkeuteen (omistaja 6.10. 22.x; Päätoimittajan mittaus @2x: pin 33 px
+ * ja 2 pt muita ylempänä, ≡ 21 px, kaiutin 29 px). ≡ ja kaiutin piirretään paikkavarauksen kohdalle: varaus nappien korkuiseksi
+ * (34 → 38), jolloin keskikohdat osuvat samaan viivaan. Pin 20 pt (muste ~14,5 pt), viiva 2,2 (sama näkyvä paksuus kuin 22 pt:n
+ * 2,0); ≡ väljemmillä viivaväleillä (KortinLukija.ValikkoIkoni). */
+.mk-nostoselain .mk-nosto__lukijapaikka {
+    height: var(--tk-nappi-korkeus);
+}
+
+.mk-nostoselain .mk-lukija.mk-nosto__pin > .mk-ikoni {
+    width: 20px;
+    height: 20px;
+    --mk-ikoni-viiva: 2.2;
+}

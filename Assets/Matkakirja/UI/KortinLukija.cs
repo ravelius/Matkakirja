@@ -45,7 +45,7 @@ namespace Matkakirja.Natiivi
         };
         static readonly float[] Kynnykset = { 0.04f, 0.10f, 0.20f };
         // Web OHJAIN_PIIRROT (24 × 24, viiva 1,6): valikko, edellinen ja seuraava kappale.
-        const string ValikkoIkoni = "<path d=\"M6.5 8.2h11\"/><path d=\"M6.5 12h11\"/><path d=\"M6.5 15.8h11\"/>";
+        const string ValikkoIkoni = "<path d=\"M4.5 5h15M4.5 12h15M4.5 19h15\"/>";
         const string EdellinenIkoni = "<path d=\"M7.4 6.6v10.8\"/><path d=\"M17 6.8 10.2 12l6.8 5.2z\"/>";
         const string SeuraavaIkoni = "<path d=\"M16.6 6.6v10.8\"/><path d=\"M7 6.8l6.8 5.2L7 17.2z\"/>";
         /// <summary>Web KELAUS_S ja KAPPALEEN_NIMI / KAPPALEEN_ALKU (merkkiä).</summary>
@@ -125,7 +125,9 @@ namespace Matkakirja.Natiivi
                 // Mini-hampurilainen kaiuttimen vasemmalla (entisen rattaan paikalla), sama pystykeskitys.
                 ratas = Rakenne.Nappi(null, "mk-lukija mk-lukija__valikkonappi", VaihdaPaneeli, Juuri);
                 ratas.tooltip = SaadinOtsikko;
-                Rakenne.Ikoni(Ikonit.Valikko, "mk-lukija__valikkoikoni", ratas);   // juna 154: sama ☰ kuin OHJAUSNAPPI-sarjassa (ylärivi yhtenäiseksi)
+                // Juna 155 (omistaja: kolme oikeinta eri korkeuksilla): ☰ väljemmin viivavälein, jotta näkyvä korkeus on pinnin ja
+                // kaiuttimen luokkaa (~14 pt); sama 15 yksikön leveys kuin OHJAUSNAPPI-sarjan ☰:ssa.
+                Rakenne.Ikoni(ValikkoIkoni, "mk-lukija__valikkoikoni", ratas);
                 Nappi = Rakenne.Nappi(null, "mk-lukija mk-lukija--kortti", Vaihda, Juuri);
                 var kuvake = Rakenne.El("mk-kaiutin", Nappi, PickingMode.Ignore);
                 Rakenne.Ikoni(KaiutinRunko, "mk-kaiutin__osa", kuvake);
