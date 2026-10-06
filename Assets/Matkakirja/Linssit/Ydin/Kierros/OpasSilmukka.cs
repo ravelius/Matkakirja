@@ -121,6 +121,12 @@ namespace Matkakirja.Linssit.Kierros
 
         /// <summary>Tekijättömiä tai lisenssittömiä valokuvia hylätty (lokiin sovittimessa).</summary>
         public static int Hylatyt;
+        /// <summary>Tekijätietoa ei vaadita: public domain tai CC0.</summary>
+        static bool Vapaa(string lisenssi)
+        {
+            string l = lisenssi.Trim().ToLowerInvariant();
+            return l == "pd" || l.StartsWith("pd-") || l.Contains("public domain") || l.Contains("cc0") || l.Contains("cc-zero");
+        }
 
         public static OpasKuva[] Lue(IList<object> lista)
         {
@@ -136,7 +142,8 @@ namespace Matkakirja.Linssit.Kierros
                         Lisenssi = S("lisenssi"), Lahde = S("lahde") ?? S("lähde"), Selite = S("selite") };
                     // Valokuva ilman tekijää tai lisenssiä jätetään pois (CC BY vaatii tekijätiedon; Natiivi-UI 6.10.: Canal Granden
                     // kuvien lähderivi tyhjä). Havainnekuvat ovat omia, niille riittää url.
-                    if (!k.Havainnekuva && (string.IsNullOrWhiteSpace(k.Tekija) || string.IsNullOrWhiteSpace(k.Lisenssi))) { Hylatyt++; continue; }
+                    // Pelikoodari #4045: lisenssi aina; tekijä vaaditaan, paitsi vapaissa (PD, CC0).
+                    if (!k.Havainnekuva && (string.IsNullOrWhiteSpace(k.Lisenssi) || string.IsNullOrWhiteSpace(k.Tekija) && !Vapaa(k.Lisenssi))) { Hylatyt++; continue; }
                     tulos.Add(k);
                 }
             return tulos.ToArray();
