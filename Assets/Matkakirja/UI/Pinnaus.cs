@@ -246,6 +246,20 @@ namespace Matkakirja.Natiivi
                 float lev = Mathf.Max(160f, r.xMin - Tyylikirja.Vali.S - vasen);
                 float korkeus = palkki.layout.height > 0 && !float.IsNaN(palkki.layout.height) ? Mathf.Max(Tyylikirja.Nappi.Ohjaus, palkki.layout.height) : Tyylikirja.Nappi.Ohjaus;
                 float top = Mathf.Round(r.y + (r.height - korkeus) * 0.5f), oikea = Mathf.Round(isa.layout.width - r.xMin + Tyylikirja.Vali.S);
+                // Pitkä otsikko ei mahdu hakunapin viereen (pisin sana tai kaksi riviä 85 %:lla): palkki hakunapin alle, oikeat
+                // reunat tasan ja leveys turva-alueen vasempaan reunaan asti (isoisän kortti väistetään samalla tavalla).
+                if (!Mahtuu(lev))
+                {
+                    top = Mathf.Round(r.yMax + Tyylikirja.Vali.S);
+                    oikea = Mathf.Round(isa.layout.width - r.xMax);
+                    float vasen2 = Tyylikirja.Vali.L;
+                    if (mk.width > 0)
+                    {
+                        var k = isa.WorldToLocal(mk);
+                        if (k.yMax > top && k.yMin < top + korkeus) vasen2 = Mathf.Max(vasen2, k.xMax + Tyylikirja.Vali.S);
+                    }
+                    lev = Mathf.Max(160f, r.xMax - vasen2);
+                }
                 if (palkki.style.top.value.value != top) palkki.style.top = top;
                 if (palkki.style.right.value.value != oikea) palkki.style.right = oikea;
                 if (palkki.style.maxWidth.value.value != lev) palkki.style.maxWidth = lev;
@@ -263,6 +277,22 @@ namespace Matkakirja.Natiivi
         }
 
         float perusKoko;
+
+        /// <summary>Mahtuuko otsikko leveyteen: pisin sana ja enintään kaksi riviä 85 %:n kirjasimella.</summary>
+        bool Mahtuu(float kaytettava)
+        {
+            if (otsikko.panel == null || palkki.layout.width <= 0 || float.IsNaN(otsikko.layout.width) || string.IsNullOrEmpty(otsikko.text)) return true;
+            float nyt = otsikko.resolvedStyle.fontSize;
+            if (perusKoko <= 0) perusKoko = nyt;
+            float k = nyt > 0 && perusKoko > 0 ? perusKoko / nyt : 1f;
+            float kehys = palkki.layout.width - otsikko.layout.width;
+            float tila = kaytettava - kehys;
+            float koko = otsikko.MeasureTextSize(otsikko.text, 0, VisualElement.MeasureMode.Undefined, 0, VisualElement.MeasureMode.Undefined).x * k;
+            float sana = 0f;
+            foreach (var w in otsikko.text.Split(' '))
+                if (w.Length > 0) sana = Mathf.Max(sana, otsikko.MeasureTextSize(w, 0, VisualElement.MeasureMode.Undefined, 0, VisualElement.MeasureMode.Undefined).x * k);
+            return sana * 0.85f <= tila && koko * 0.85f <= 1.9f * tila;
+        }
 
         /// <summary>
         /// Omistaja 6.10. 23.0x: "otsikko pitää aina mahtua kokonaan palkkiin": ei kolmea pistettä; palkki levenee otsikon mukaan
@@ -283,6 +313,9 @@ namespace Matkakirja.Natiivi
             if (otsikko.style.fontSize != koko) otsikko.style.fontSize = koko;
             var ws = rivit ? WhiteSpace.Normal : WhiteSpace.NoWrap;
             if (otsikko.style.whiteSpace != ws) otsikko.style.whiteSpace = ws;
+            // Rivitetty otsikko saa leveyden, jotta korkeus lasketaan sillä (muuten palkki jäi yhden rivin korkuiseksi).
+            var lev = rivit ? new StyleLength(Mathf.Floor(tila)) : new StyleLength(StyleKeyword.Null);
+            if (otsikko.style.width != lev) otsikko.style.width = lev;
             if (otsikko.style.textOverflow != TextOverflow.Clip) otsikko.style.textOverflow = TextOverflow.Clip;
         }
 
