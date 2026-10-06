@@ -1325,11 +1325,25 @@ namespace Matkakirja.Natiivi
             // Vapaa lento (LS1 6.10.): enintään 6 näytettä kesken (kamera, ennakko ja kehät), muut pyydetään seuraavalla kierroksella.
             if (pinta == null || pisteKorkeudet.ContainsKey(a) || (silmukka != null && silmukka.VapaaTila && pisteNaytteet.Count >= 6) || !pisteNaytteet.Add(a)) yield break;
             float t0 = Time.realtimeSinceStartup;
-            var tehtava = pinta.SampleHeightMostDetailed(new double3(lon, lat, 0));
+            // Kehyksen maa (ei vapaa tila): keskipiste + kehä kuten Korkeus(k), jottei tornin tai katon keskipiste ehdi kehykseen
+            // ennen kohteen omaa näytettä (Eiffel-korjaus 7.10.). Vapaa lento näytteistää yhden pisteen (luotain, kehät erikseen).
+            bool kehalla = silmukka == null || !silmukka.VapaaTila;
+            var pisteet = new double3[kehalla ? 1 + OpasKuvaus.KehaPisteita : 1];
+            pisteet[0] = new double3(lon, lat, 0);
+            if (kehalla) for (int i = 0; i < OpasKuvaus.KehaPisteita; i++) { var (la, lo) = OpasKuvaus.KehaPiste(lat, lon, OpasKuvaus.KehaSade(60), i); pisteet[1 + i] = new double3(lo, la, 0); }
+            var tehtava = pinta.SampleHeightMostDetailed(pisteet);
             while (!tehtava.IsCompleted) yield return null;
             pisteNaytteet.Remove(a);
             var tulos = tehtava.IsFaulted ? null : tehtava.Result;
             bool ok = tulos?.sampleSuccess != null && tulos.sampleSuccess.Length > 0 && tulos.sampleSuccess[0];
+            if (kehalla && tulos?.sampleSuccess != null && tulos.sampleSuccess.Length == pisteet.Length)
+            {
+                var keha = new List<double>();
+                for (int i = 1; i < pisteet.Length; i++) keha.Add(tulos.sampleSuccess[i] ? tulos.longitudeLatitudeHeightPositions[i].z : double.NaN);
+                double keskus = ok ? tulos.longitudeLatitudeHeightPositions[0].z : double.NaN;
+                var (maaK, _) = OpasKuvaus.MaaJaKorkeus(keskus, keha);
+                if (!double.IsNaN(maaK)) { ok = true; tulos.longitudeLatitudeHeightPositions[0] = new double3(lon, lat, maaK); }
+            }
             // Epäonnistunut näyte (simu 17.0x: Pláka 0,1 s:ssa, arvio 45 m, vaikka Ateena ~100 m): lähin tunnettu korkeus 15 km:n
             // sisältä (sama kaupunki), vasta sitten yleisarvio.
             double vara = viimeMaa.h is double vh && KierrosLento.EtaisyysM(viimeMaa.lat, viimeMaa.lon, lat, lon) < 15000 ? vh : OpasSilmukka.MaaArvioM;
