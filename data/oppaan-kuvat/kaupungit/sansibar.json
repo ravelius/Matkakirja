@@ -1,0 +1,385 @@
+{
+ "kaupunki": "sansibar",
+ "kaupunkiQ": "Q2222874",
+ "kohteet": [
+  {
+   "q": "Q844417",
+   "nimi": "Kivikaupunki",
+   "peruste": "UNESCO",
+   "koko_m": 1500,
+   "lat": -6.16494,
+   "lon": 39.19879,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Zanzibar sultan palace.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Zanzibar_sultan_palace.jpg?width=1280",
+     "tekija": "No machine-readable author provided. Mbz1 assumed (based on copyright claims).",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Zanzibar_sultan_palace.jpg",
+     "selite": "Kivikaupungin rantajulkisivu ja kellotorni muodostavat Sansibarin kaupungin tunnetuimman näkymän.",
+     "leveys": 1536,
+     "korkeus": 1024,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Harbour at the picturesque Stone Town.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Harbour_at_the_picturesque_Stone_Town.jpg?width=1280",
+     "tekija": "Dr. Ondřej Havelka (cestovatel)",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Harbour_at_the_picturesque_Stone_Town.jpg",
+     "selite": "Vanhan kaupungin valkoiset rakennukset reunustavat satamaa turkoosin veden ääressä.",
+     "leveys": 2558,
+     "korkeus": 1279,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3748659",
+   "nimi": "Vanha linnake",
+   "peruste": "pelin nosto",
+   "koko_m": 120,
+   "lat": -6.16139,
+   "lon": 39.1892,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Old Fort Zanzibar, 2010.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Old_Fort_Zanzibar%2C_2010.jpg?width=1280",
+     "tekija": "Willem van der Horst",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Old_Fort_Zanzibar%2C_2010.jpg",
+     "selite": "Omanilaisten 1600-luvulla rakentama linnake kohoaa Kivikaupungin rannalla.",
+     "leveys": 4320,
+     "korkeus": 3240,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Old Fort in Zanzibar.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Old_Fort_in_Zanzibar.jpg?width=1280",
+     "tekija": "Eric Kilby",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Old_Fort_in_Zanzibar.jpg",
+     "selite": "Linnakkeen paksut kiviseinät ja tornit vartioivat entistä satamaa.",
+     "leveys": 8256,
+     "korkeus": 5504,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Backyard view of the Old fort in Zanzibar.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Backyard_view_of_the_Old_fort_in_Zanzibar.jpg?width=1280",
+     "tekija": "Erasmus Kamugisha",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Backyard_view_of_the_Old_fort_in_Zanzibar.jpg",
+     "selite": "Linnakkeen sisäpiha on nykyään kulttuuritapahtumien paikka.",
+     "leveys": 2000,
+     "korkeus": 1325,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1062156",
+   "nimi": "Changuun saari",
+   "peruste": "pelin nosto",
+   "koko_m": 800,
+   "lat": -6.11939,
+   "lon": 39.16557,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Isla Changuu, Tanzania, 2024-05-31, DD 05.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Isla_Changuu%2C_Tanzania%2C_2024-05-31%2C_DD_05.jpg?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Isla_Changuu%2C_Tanzania%2C_2024-05-31%2C_DD_05.jpg",
+     "selite": "Changuun eli Vankilasaari on pieni korallisaari Sansibarin kaupungin edustalla.",
+     "leveys": 8474,
+     "korkeus": 2336,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Tortuga gigante de Aldabra (Aldabrachelys gigantea), isla Changuu, Tanzania, 2024-05-31, DD 10.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tortuga_gigante_de_Aldabra_(Aldabrachelys_gigantea)%2C_isla_Changuu%2C_Tanzania%2C_2024-05-31%2C_DD_10.jpg?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tortuga_gigante_de_Aldabra_(Aldabrachelys_gigantea)%2C_isla_Changuu%2C_Tanzania%2C_2024-05-31%2C_DD_10.jpg",
+     "selite": "Saarella elää jättiläiskilpikonnia, jotka on tuotu Seychelleiltä.",
+     "leveys": 6700,
+     "korkeus": 4467,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2942370",
+   "nimi": "Pyhän Joosefin katedraali",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": -6.16279,
+   "lon": 39.1888,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Stone Town, St. Joseph Cathedral.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Stone_Town%2C_St._Joseph_Cathedral.jpg?width=1280",
+     "tekija": "David Berkowitz",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Stone_Town%2C_St._Joseph_Cathedral.jpg",
+     "selite": "Katolisen katedraalin kaksi tornia kohoavat Kivikaupungin kujien yli.",
+     "leveys": 4320,
+     "korkeus": 3240,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Main entrance to the St. Joseph Roman Catholic Cathedral ,Zanzibar.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Main_entrance_to_the_St._Joseph_Roman_Catholic_Cathedral_%2CZanzibar.jpg?width=1280",
+     "tekija": "Erasmus Kamugisha",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Main_entrance_to_the_St._Joseph_Roman_Catholic_Cathedral_%2CZanzibar.jpg",
+     "selite": "Katedraalin pääsisäänkäynti on raskas kaiverrettu portti.",
+     "leveys": 1325,
+     "korkeus": 2000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Roman Catholic church in Zanzibar.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Roman_Catholic_church_in_Zanzibar.jpg?width=1280",
+     "tekija": "Luganosamwel",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Roman_Catholic_church_in_Zanzibar.jpg",
+     "selite": "Katedraalin julkisivun kaarikuviot muistuttavat ranskalaisesta rakennustaiteesta.",
+     "leveys": 3840,
+     "korkeus": 5760,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q5222054",
+   "nimi": "Darajanin tori",
+   "peruste": "pelin nosto",
+   "koko_m": 250,
+   "lat": -6.16244,
+   "lon": 39.19371,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Darajani Market (Bazaar) Estella Market.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Darajani_Market_(Bazaar)_Estella_Market.jpg?width=1280",
+     "tekija": "Luganosamwel",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Darajani_Market_(Bazaar)_Estella_Market.jpg",
+     "selite": "Darajanin tori on Kivikaupungin pääkauppapaikka, ja sen halli on katettu punaisella katolla.",
+     "leveys": 5760,
+     "korkeus": 3840,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Darajani Market (Bazaar).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Darajani_Market_(Bazaar).jpg?width=1280",
+     "tekija": "Luganosamwel",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Darajani_Market_(Bazaar).jpg",
+     "selite": "Torin kojuja ympäröivät kangas- ja mausteostajat.",
+     "leveys": 5760,
+     "korkeus": 3840,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Darajani.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Darajani.jpg?width=1280",
+     "tekija": "Ronyyz",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Darajani.jpg",
+     "selite": "Torin vieressä katukauppiaat myyvät tuotteitaan sateenvarjojen alla.",
+     "leveys": 5472,
+     "korkeus": 3648,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3632906",
+   "nimi": "Hamamnin kylpylä",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": -6.16233,
+   "lon": 39.19098,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Door to the Hamamni, Zanzibar.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Door_to_the_Hamamni%2C_Zanzibar.jpg?width=1280",
+     "tekija": "Momadic",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Door_to_the_Hamamni%2C_Zanzibar.jpg",
+     "selite": "Hamamni on sulttaani Barghashin 1800-luvulla rakennuttama persialaistyylinen julkinen kylpylä.",
+     "leveys": 1536,
+     "korkeus": 2048,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Hamamni Baths Zanzibar 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hamamni_Baths_Zanzibar_01.jpg?width=1280",
+     "tekija": "Nassima Chahboun",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Hamamni_Baths_Zanzibar_01.jpg",
+     "selite": "Kylpylän kupoli kohoaa Kivikaupungin matalien kattojen yli.",
+     "leveys": 1848,
+     "korkeus": 2772,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q17094038",
+   "nimi": "Tippu Tipin talo",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": -6.16403,
+   "lon": 39.187,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "ZanzibarTipputip.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/ZanzibarTipputip.jpg?width=1280",
+     "tekija": "DidierTais",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:ZanzibarTipputip.jpg",
+     "selite": "Orjakauppiaana tunnetun Tippu Tipin talossa on tyypilliset sansibarilaiset parvekkeet.",
+     "leveys": 3293,
+     "korkeus": 2003,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Tippu Tip house door.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tippu_Tip_house_door.jpg?width=1280",
+     "tekija": "David Berkowitz from New York, NY, USA",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tippu_Tip_house_door.jpg",
+     "selite": "Talon kaiverrettu puuovi on tyypillinen swahilityylinen koristeaihe.",
+     "leveys": 4320,
+     "korkeus": 3240,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2549607",
+   "nimi": "Jozanin metsä",
+   "peruste": "sitelinks",
+   "koko_m": 4000,
+   "lat": -6.233,
+   "lon": 39.404,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Coastal forest at Jozani Chwaka Bay National Park, Kusini DC, South Zanzibar, Tanzania.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Coastal_forest_at_Jozani_Chwaka_Bay_National_Park%2C_Kusini_DC%2C_South_Zanzibar%2C_Tanzania.jpg?width=1280",
+     "tekija": "Mnazini",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Coastal_forest_at_Jozani_Chwaka_Bay_National_Park%2C_Kusini_DC%2C_South_Zanzibar%2C_Tanzania.jpg",
+     "selite": "Jozanin kansallispuisto suojelee Sansibarin viimeisiä rannikkometsiä.",
+     "leveys": 5712,
+     "korkeus": 4284,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Gerezanka trójbarwna.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gerezanka_tr%C3%B3jbarwna.jpg?width=1280",
+     "tekija": "Aneta p",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Gerezanka_tr%C3%B3jbarwna.jpg",
+     "selite": "Punaiset apinat ovat Jozanin metsän tunnetuimpia asukkaita.",
+     "leveys": 2323,
+     "korkeus": 3485,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q208664",
+   "nimi": "Pemban saari",
+   "peruste": "sitelinks",
+   "koko_m": 10000,
+   "lat": -5.21667,
+   "lon": 39.73333,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Pemba island, Tanzania. View from Chake Chake town center over the mangroves towards the sea.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Pemba_island%2C_Tanzania._View_from_Chake_Chake_town_center_over_the_mangroves_towards_the_sea.JPG?width=1280",
+     "tekija": "Vincent van Zeijst",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Pemba_island%2C_Tanzania._View_from_Chake_Chake_town_center_over_the_mangroves_towards_the_sea.JPG",
+     "selite": "Pemban viljelysmaat ja mangrovemetsät muodostavat Sansibarin saariston pohjoisen vihreän saaren.",
+     "leveys": 1280,
+     "korkeus": 960,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Zanzibar StoneTown.png",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Zanzibar_StoneTown.png?width=1280",
+   "tekija": "Wegmann",
+   "lisenssi": "CC BY-SA 3.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Zanzibar_StoneTown.png",
+   "selite": "Kivikaupunki työntyy niemenä Intian valtamereen, ja vanhat korttelit tiivistyvät rannalle.",
+   "leveys": 3872,
+   "korkeus": 2592,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Zanzibar City. Big Tree beach and Ferry terminal.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Zanzibar_City._Big_Tree_beach_and_Ferry_terminal.jpg?width=1280",
+   "tekija": "Наумов Андрей",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Zanzibar_City._Big_Tree_beach_and_Ferry_terminal.jpg",
+   "selite": "Satama ja Big Tree -ranta ovat Sansibarin kaupungin yhteys mantereelle ja muille saarille.",
+   "leveys": 4752,
+   "korkeus": 3168,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

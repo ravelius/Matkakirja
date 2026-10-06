@@ -95,8 +95,8 @@ async function wdHaku(sana, kieli = 'fi') {
 /** Commons-tiedostojen metatiedot (lisenssi, tekijä, mitat) otsikoilla "File:X.jpg". */
 export async function tiedot(otsikot) {
   const tulos = {};
-  for (let i = 0; i < otsikot.length; i += 40) {
-    const osa = otsikot.slice(i, i + 40);
+  for (let i = 0; i < otsikot.length; i += 15) {
+    const osa = otsikot.slice(i, i + 15);
     // eslint-disable-next-line no-await-in-loop
     const d = await json(`${CM}?action=query&format=json&titles=${encodeURIComponent(osa.join('|'))}&prop=imageinfo`
       + '&iiprop=extmetadata|url|size|mime&iiextmetadatafilter=LicenseShortName|LicenseUrl|Artist|ImageDescription|Credit|AttributionRequired|Restrictions');
