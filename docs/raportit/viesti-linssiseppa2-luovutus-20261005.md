@@ -3,7 +3,21 @@
 Edellinen: viesti-linssiseppa2-luovutus-20261004.md. Päätoimittaja local_5df52e10-10e4-4b72-9554-0049db300dfe.
 VUOROT: käännös- ja simuvuoro aina Julkaisijalta ("NYT käännös", "SIMU NYT"). Ilmoita: "KÄÄNNETTY <sha>, lukko vapaa" ja "simu vapaa".
 
-## TILA 6.10. 19.1x (uusin)
+## TILA 6.10. 21.0x (uusin)
+- Simuajot hiljaisessa vuorossa noin 21.15 (scratchpad, ketju odottaa lupaa):
+  1. aja-153s.sh: Helsinki ennen/jälkeen. Lupa: `touch scratchpad/simu-lupa-153s`.
+  2. aja-eiffel153.sh: iPad 4CE6C737, app junan 153 koe a9cae09c (eiffel-app.txt), skenaario 14. Todennetaan 14c/14f.
+  3. aja-meri.sh: meri 0/1 Kanada, Davis ja Bretagne, app 099db12b.
+  Tulokset Päätoimittajalle: merisumupari, Eiffel 14c/14f ja meripari.
+- Vapaa tila:
+  - opas-vapaa-2 ee22b18d (120/180 m, nousu 0,5) on opas-153:ssa (LS1 d4827b33).
+  - Juna 154: linssiseppa2/opas-vapaa-lataus 5683ffaf, matalan lennon vauhti latausasteen mukaan, tasaus 0,5 s. Tarvitsee käännöksen ja ennen/jälkeen-parin (14d/14e). Kova alaraja enintään 60 m vain, jos rajaus ei riitä.
+- Meriläntit: linssiseppa2/s2-meri 0f6e4e89 (worktree wt/proto-linssiseppa2-meri), BMNG:n meri S2:n väriin varjostimessa.
+  - Käännetty 099db12b, shader-virheitä 0.
+  - Karttasepän korjaus5 jää viemättä (Päätoimittaja).
+- Merisumu (153): gibs-pehmea 19814f64 on junan 153 kokeessa.
+
+## TILA 6.10. 19.1x
 - 152: S2-jatko 1354ef53 ja juliste b7a32d4a + 81cedf76 on KUITATTU (koe 7e91ce76, kuvat lokit/linssiseppa2-koe152c).
 - Vapaa tila 6fac9fe2 on mika-152:ssa.
   - Käännetty: a6b61595, app lokit/linssiseppa2-app-vapaa2-a6b61595. Eiffel-toisto on pyydetty Pelikoodarilta.
