@@ -255,7 +255,7 @@ test('worker: kaupungin aineisto mallin viestiin, tuntematon kaupunki ilman', as
   }
 });
 
-test('worker: kuvat pelin aineistosta tai Wikidatan P18 vapaalla lisenssillä, isoisä kerran istunnossa (KV)', async () => {
+test('worker: kuvat vain oppaan kuvalistasta (ei pelin aineiston sumeaa osumaa eikä P18:aa), isoisä kerran istunnossa (KV)', async () => {
   const aineisto = { kobenhavn: { nimi: 'Kööpenhamina', isoisa: { teksti: 'Tivolin teatterissa.' }, tausta: [],
     kuvat: [{ url: 'https://media/tivoli.jpg', tyyppi: 'valokuva', tekija: 'S', lisenssi: 'CC BY-SA 3.0', lahde: null, selite: null, avain: 'tivoli rutschebanen' }] } };
   const kv = new Map();
@@ -284,17 +284,16 @@ test('worker: kuvat pelin aineistosta tai Wikidatan P18 vapaalla lisenssillä, i
     }
   };
   const a = await aja('NIMI: Tivoli\nWIKIPEDIA: Tivoli Gardens\nTEKSTI: Tivoli. Isoisäsi kävi täällä.\nVAIHTOEHTO: A\nVAIHTOEHTO: B');
-  assert.deepEqual(a.data.kuvat.map((x) => x.url), ['https://media/tivoli.jpg', 'https://upload/nyhavn-800.jpg'], 'pelin oma kuva ensin, avain pois; P18 perään (lisäkuvat)');
-  assert.equal(a.data.kuvat[0].avain, undefined);
+  assert.deepEqual(a.data.kuvat, [], 'ei kuvalistaa → ei kuvia (omistaja 6.10. 20.0x)');
   assert.match(a.viesti, /Isoisän päiväkirjamerkintä/);
   const b = await aja('NIMI: Tivoli\nWIKIPEDIA: Tivoli Gardens\nTEKSTI: Tivoli taas.\nVAIHTOEHTO: A\nVAIHTOEHTO: B');
   assert.doesNotMatch(b.viesti, /Isoisän päiväkirjamerkintä/, 'isoisä jo käytetty tässä istunnossa');
   const c = await aja('NIMI: Tivoli\nWIKIPEDIA: Tivoli Gardens\nTEKSTI: Tivoli.\nVAIHTOEHTO: A\nVAIHTOEHTO: B', 'i2');
   assert.match(c.viesti, /Isoisän päiväkirjamerkintä/, 'uusi istunto');
-  aineisto.kobenhavn.kuvat = [];   // ei pelin kuvaa → Wikidatan P18
+  env.OPAS_KUVALISTA_TESTI = { kohteet: { [a.data.id]: { nimi: 'Tivoli', kuvat: [{ url: 'https://media.matkakirja.app/kuvat/x.jpg', tyyppi: 'valokuva', tekija: 'Listan kuvaaja', lisenssi: 'CC BY-SA 4.0', lahdeUrl: 'https://commons/File:X.jpg', jarjestys: 1 }] } }, kaupungit: {} };
   const d = await aja('NIMI: Tivoli\nWIKIPEDIA: Tivoli Gardens\nTEKSTI: X.\nVAIHTOEHTO: A\nVAIHTOEHTO: B');
-  assert.deepEqual(d.data.kuvat, [{ url: 'https://upload/nyhavn-800.jpg', tyyppi: 'valokuva', tekija: 'Kuvaaja', lisenssi: 'CC BY-SA 4.0',
-    lahde: 'https://commons/File:Nyhavn.jpg', selite: null }], 'P18-varakuva');
+  assert.deepEqual(d.data.kuvat.map((x) => [x.url, x.tekija, x.lahde]), [['https://media.matkakirja.app/kuvat/x.jpg', 'Listan kuvaaja', 'https://commons/File:X.jpg']],
+    'kuvalistan kuva kohteen Q:lla');
 });
 
 test('kierros: suunnitelman jäsennys, reitti lähin naapuri, seuraava nahdyt-listan mukaan, nimi fi-Wikipediasta', async () => {
