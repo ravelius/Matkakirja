@@ -240,7 +240,9 @@ namespace Matkakirja.Natiivi
             // Rummun kolo numeroiden päälle omana elementtinään (piirtojärjestys pohja → numerot → kolo); piirretyssä tilassa kolo
             // on rummun oma kehys.
             rumpuKoloKuva ??= Rakenne.El("mk-issohjaamo__rumpukolo", paneeli, PickingMode.Ignore);
-            if (ankkurit != null) { Pukeudu(rumpuKoloKuva, "rumpu-kolo"); rumpuKoloKuva.style.display = DisplayStyle.Flex; rumpuKoloKuva.BringToFront(); laajennus.BringToFront(); }
+            // Ohjaamo v3 (6.10.): ei rumpua eikä rumpu-kolo-kuvaa; kolo vain, kun ankkuri on.
+            if (ankkurit != null && ankkurit.RumpuKolo.width > 0) { Pukeudu(rumpuKoloKuva, "rumpu-kolo"); rumpuKoloKuva.style.display = DisplayStyle.Flex; rumpuKoloKuva.BringToFront(); laajennus.BringToFront(); }
+            else if (ankkurit != null) { rumpuKoloKuva.style.display = DisplayStyle.None; laajennus.BringToFront(); }
             else { rumpuKoloKuva.style.display = DisplayStyle.None; Pukeudu(rumpu, "rumpu-kolo"); }
             rumpu.EnableInClassList("mk-issohjaamo__rumpu--mekaaninen", ankkurit != null);
             // Mittarifontti kuvapaneelissa (DIN Condensed kuten kaiverrukset), muuten LCD-fontti VT323.
@@ -509,7 +511,10 @@ namespace Matkakirja.Natiivi
             Aseta(joystick, a.Sauva, s);
             // Osuma-ala sauvan laatikon ympärille: vähintään 132 pt korkea ja 18 pt yli reunojen (varsi ≥ 44 × 44 pt).
             float jw = a.Sauva.width * s, jh = a.Sauva.height * s, oh = Mathf.Max(132f, jh + 36f);
-            osuma.style.left = -18f; osuma.style.width = jw + 36f; osuma.style.top = (jh - oh) * 0.5f; osuma.style.height = oh;
+            // Ohjaamo v3 (6.10.: sauva oikealla heti kameran vieressä): osuma ei ulotu kameran laatikon päälle.
+            float vasenVara = Mathf.Clamp((a.Sauva.x - a.Kamera.xMax) * s, 0f, 18f);
+            if (a.Sauva.xMax <= a.Kamera.x) vasenVara = 18f;   // v2: sauva vasemmalla, kamera oikealla
+            osuma.style.left = -vasenVara; osuma.style.width = jw + vasenVara + 18f; osuma.style.top = (jh - oh) * 0.5f; osuma.style.height = oh;
             Aseta(lcd, a.Lcd, s);
             Aseta(kamera, a.Kamera, s);
             AseteleObjektiivi(s);

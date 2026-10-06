@@ -1,17 +1,20 @@
-# ISS-ohjaamon ohjauspaneeli v2 (Linnanrakentaja 4.10.2026)
+# ISS-ohjaamon ohjauspaneeli v3 (Linnanrakentaja 6.10.2026)
 
-Omistaja valitsi konseptin v1 klo 17.2x ("parempi kuin codexin", loki #3948). Tämä kansio sisältää tuotantokuvat
-Natiivi-UI:n jaolla. Natiivi-UI kopioi kuvat proto-gitiin (Assets/Matkakirja/UI/Resources/IssOhjaamo/, .metat hänellä).
+Omistajan palaute 6.10. klo 08.3x (Päätoimittajan välittämä): rummun laatikko pois, kaasun vipu ja asteikko leveämmiksi niin,
+että 1000× ei ole reunassa, kameranapille enemmän tilaa, LCD selvästi isommaksi ja kaikki välit äärireunat mukaan lukien yhtä
+leveiksi. Lisäys klo 08.4x: joystick oikean käden puolelle ja nopeuskahva vasemmalle.
 
-- Tekijä ja lisenssi: oma tuotanto (Blender 5 Cycles, menettelyllinen malli ja materiaalit), CC0. Ei kolmansien osapuolten kuvia.
-  Käsiohjain on tyylitelty yleistiedon pohjalta, ei kopio NASA:n kuvasta. Fontti DIN Condensed/Alternate (macOS) vain
-  stensiilimerkintöjen rasterointiin (kuvassa ei fonttitiedostoa).
-- Mitat: @3x, pohja.png 1122 × 366 px = 374 × 122 pt. Kaikki osat samasta ortokamerasta (52°), rajattuina tilojen yhteiseen
-  laatikkoon; laatikot pt:nä pohjan vasemmasta yläkulmasta ohjaamo.json:ssa. Alfa ≥ 240 → 255; varjon häntä < 20 → 0.
-- Osat: pohja (merkinnät, asteikko 1×–1000×, kaasun ura, tyhjä tumma LCD, rummun kuilu), sauva-{ei,ylos,alas,vasen,oikea}
-  (jalusta, palje, sauva, suuntavalot; kallistus 16°), kaasu-{1,10,100,1000} (vipu; ura pohjassa; pykalat = kahvan keskikohta
-  laatikon yläreunasta), kamera / kamera-painettu (kaulus, suojakaiteet, nappi 4 mm alempana), rumpu-kolo (kehys, aukko
-  läpinäkyvä; rumpu = näkyvä aukko numeroille), lcd-iso (laajennus; lcdIso = lasin sisäalue), mini-kehys (9-slice 12 pt,
-  keskellä tumma LCD-tausta).
-- Toisto: lahde/tekstuurit.py → lahde/tuotanto.py (blender -b --python tuotanto.py -- ulos.png osa:asento; osa mitat → mitat.json)
-  → lahde/jalki.py <kansio>. tarkistus-kooste.png = pohja + osat + simuloitu teksti/numero (ei peliin).
+- **Järjestys vasemmalta:** kaasu ja asteikko (1×–1000×), LCD, kameranappi, ohjaussauva. Välit 0,077 yksikköä = 9,6 pt kaikkialla, myös reunoihin.
+- **LCD:** lasi 0,92 × 0,54 (oli 0,70 × 0,46), kehys 1,01 × 0,63. Kahva 0,16 leveä (oli 0,11), ura 0,075. Asteikko alkaa 0,105 uran
+  keskeltä, ja pykälät ovat pidemmät.
+- **Tekijä ja lisenssi:** oma tuotanto (Blender 5 Cycles, menettelyllinen malli ja materiaalit), CC0. Ei kolmansien osapuolten kuvia.
+  Käsiohjain on tyylitelty yleistiedon pohjalta. Fontti DIN Condensed/Alternate (macOS) vain stensiilimerkintöjen rasterointiin
+  (kuvassa ei fonttitiedostoa).
+- **Mitat:** @3x, pohja.png 1122 × 366 px = 374 × 122 pt. Osat samasta ortokamerasta (52°), rajattuina tilojen yhteiseen laatikkoon.
+  Laatikot ovat pt:nä ohjaamo.json:ssa. Alfa ≥ 240 → 255, varjon häntä < 20 → 0.
+- **Osat:** pohja (merkinnät, asteikko, kaasun ura, tyhjä tumma LCD), sauva-{ei,ylos,alas,vasen,oikea}, kaasu-{1,10,100,1000},
+  kamera ja kamera-painettu, lcd-iso, mini-kehys. Rumpu ja rumpu-kolo on poistettu, ja ohjaamo.json:ssa ei ole rumpu/rumpuKolo-kenttiä.
+- **Uudet ankkurit (Natiivi-UI 6.10.):** sauvaKeski {x, y} on piirretyn sauvan keskipiste osuutena sauva-laatikosta. objektiivi
+  {x,y,w,h} on tyhjä pinta LAAJA/TELE-LCD-napeille kameranapin yläpuolella.
+- **Toisto:** lahde/tekstuurit.py → lahde/tuotanto.py (blender -b --python tuotanto.py -- ulos.png osa:asento; osa mitat → mitat.json)
+  → lahde/jalki.py <kansio>. tarkistus-kooste.png = pohja + osat + simuloitu LCD-teksti (ei peliin).
