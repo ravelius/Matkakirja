@@ -1,0 +1,166 @@
+{
+ "kaupunki": "kashgar",
+ "kaupunkiQ": "Q170521",
+ "pieniAlue": true,
+ "kohteet": [
+  {
+   "q": "Q1325825",
+   "nimi": "Id Kahin moskeija",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 39.47227,
+   "lon": 75.98411,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Id Kah Mosque Kashgar.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Id_Kah_Mosque_Kashgar.jpg?width=1280",
+     "tekija": "Radosław Botev",
+     "lisenssi": "CC BY 3.0 pl",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0/pl/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Id_Kah_Mosque_Kashgar.jpg",
+     "selite": "Id Kahin moskeija on Kašgarin keskustan keltainen pääpyhäkkö ja yksi Kiinan suurimmista moskeijoista.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Id Kah Mosque Kashgar Xinjiang China 新疆 喀什 喀什清真寺 - panoramio.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Id_Kah_Mosque_Kashgar_Xinjiang_China_%E6%96%B0%E7%96%86_%E5%96%80%E4%BB%80_%E5%96%80%E4%BB%80%E6%B8%85%E7%9C%9F%E5%AF%BA_-_panoramio.jpg?width=1280",
+     "tekija": "Hiroki Ogawa",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Id_Kah_Mosque_Kashgar_Xinjiang_China_%E6%96%B0%E7%96%86_%E5%96%80%E4%BB%80_%E5%96%80%E4%BB%80%E6%B8%85%E7%9C%9F%E5%AF%BA_-_panoramio.jpg",
+     "selite": "Moskeijan minareetti kohoaa torin ja puiden yläpuolelle.",
+     "leveys": 2400,
+     "korkeus": 1800,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Id Kah Mosque Kashgar Xinjiang China 新疆 喀什 喀什清真寺 - panoramio (6).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Id_Kah_Mosque_Kashgar_Xinjiang_China_%E6%96%B0%E7%96%86_%E5%96%80%E4%BB%80_%E5%96%80%E4%BB%80%E6%B8%85%E7%9C%9F%E5%AF%BA_-_panoramio_(6).jpg?width=1280",
+     "tekija": "Hiroki Ogawa",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Id_Kah_Mosque_Kashgar_Xinjiang_China_%E6%96%B0%E7%96%86_%E5%96%80%E4%BB%80_%E5%96%80%E4%BB%80%E6%B8%85%E7%9C%9F%E5%AF%BA_-_panoramio_(6).jpg",
+     "selite": "Moskeijan puiden varjostama sisäpiha on rauhallinen suoja kaupungin keskellä.",
+     "leveys": 2400,
+     "korkeus": 1800,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q617328",
+   "nimi": "Afaq Khojan mausoleumi",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 39.49077,
+   "lon": 76.02295,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Kashgar - Afaq Khoja Mausoleum.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kashgar_-_Afaq_Khoja_Mausoleum.jpg?width=1280",
+     "tekija": "Radosław Botev",
+     "lisenssi": "CC BY 3.0 pl",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0/pl/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kashgar_-_Afaq_Khoja_Mausoleum.jpg",
+     "selite": "Afaq Khojan mausoleumi on vihreäkaakeloinen sufipyhäkkö, jossa lepää saman suvun useita sukupolvia.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Kashgar - Afaq Khoja Mausoleum gate.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kashgar_-_Afaq_Khoja_Mausoleum_gate.jpg?width=1280",
+     "tekija": "Radosław Botev",
+     "lisenssi": "CC BY 3.0 pl",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0/pl/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kashgar_-_Afaq_Khoja_Mausoleum_gate.jpg",
+     "selite": "Sinisin ja vihrein laatoin koristeltu portti johtaa mausoleumin pihalle.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q85877720",
+   "nimi": "Kašgarin vanhakaupunki",
+   "peruste": "pelin nosto",
+   "koko_m": 600,
+   "lat": 39.47037,
+   "lon": 75.98914,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Kashgar Old City (crop).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kashgar_Old_City_(crop).jpg?width=1280",
+     "tekija": "Radosław Botev",
+     "lisenssi": "CC BY 3.0 pl",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0/pl/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kashgar_Old_City_(crop).jpg",
+     "selite": "Kašgarin vanhakaupunki on savitiilestä rakennettu kaupunginosa, joka on kasvanut vuosisatojen kuluessa.",
+     "leveys": 3382,
+     "korkeus": 1976,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Gate of Khan Bazaar, Ancient City of Kashi (20230923191916).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gate_of_Khan_Bazaar%2C_Ancient_City_of_Kashi_(20230923191916).jpg?width=1280",
+     "tekija": "N509FZ",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Gate_of_Khan_Bazaar%2C_Ancient_City_of_Kashi_(20230923191916).jpg",
+     "selite": "Vanhankaupungin portit johtavat basaarikujille ja käsityöläisten katuihin.",
+     "leveys": 5768,
+     "korkeus": 3845,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "2015-09-10-111321 - Blick zur Altstadt vom Kashgar.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2015-09-10-111321_-_Blick_zur_Altstadt_vom_Kashgar.jpg?width=1280",
+   "tekija": "Zossolino",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2015-09-10-111321_-_Blick_zur_Altstadt_vom_Kashgar.jpg",
+   "selite": "Kašgarin vanhakaupunki kohoaa keitaan puiden ja lammen takana.",
+   "leveys": 5842,
+   "korkeus": 2752,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Kashgar, China Bebop Drone 2015-09-13T194740+0000 18F943.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kashgar%2C_China_Bebop_Drone_2015-09-13T194740%2B0000_18F943.jpg?width=1280",
+   "tekija": "w0zny",
+   "lisenssi": "CC BY-SA 3.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kashgar%2C_China_Bebop_Drone_2015-09-13T194740%2B0000_18F943.jpg",
+   "selite": "Id Kahin aukio ja keskustan rakennukset kuvattuna ilmasta.",
+   "leveys": 1920,
+   "korkeus": 1088,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": [
+  {
+   "q": "Q5101061",
+   "nimi": "Chini-Bagh",
+   "peruste": "pelin nosto",
+   "lat": 39.47545,
+   "lon": 75.98,
+   "syy": "ei vapaata kuvaa >= 1 200 px, vain vanha karkea piirros ja valokuva ihmisjoukosta"
+  }
+ ]
+}

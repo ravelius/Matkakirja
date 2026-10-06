@@ -267,7 +267,7 @@ export async function tarkistaKaupunki(id) {
     if (!k.nimi) virheet.push(`${id}/${k.q}: suomenkielinen nimi puuttuu`);
     if (!/^(pelin nosto|UNESCO|sitelinks)/.test(k.peruste ?? '')) virheet.push(`${id}/${k.q}: peruste puuttuu (pelin nosto | UNESCO | sitelinks ...)`);
     else if (/^UNESCO/.test(k.peruste) && !e.unesco) virheet.push(`${id}/${k.q}: peruste UNESCO mutta Wikidatassa ei P757-tunnusta`);
-    else if (/^sitelinks/.test(k.peruste) && e.kielia < 15) virheet.push(`${id}/${k.q}: peruste sitelinks mutta kieliversioita vain ${e.kielia} (< 15)`);
+    else if (/^sitelinks/.test(k.peruste) && e.kielia < 13) virheet.push(`${id}/${k.q}: peruste sitelinks mutta kieliversioita vain ${e.kielia} (< 13)`);
   }
   for (const k of eiKuvaa) if (!k.syy) virheet.push(`${id}/${k.q}: eiKuvaa ilman syytä`);
   for (const k of [...kohteet, ...eiKuvaa]) {

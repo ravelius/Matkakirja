@@ -1,0 +1,310 @@
+{
+ "kaupunki": "kumasi",
+ "kaupunkiQ": "Q182059",
+ "kohteet": [
+  {
+   "q": "Q894613",
+   "nimi": "Bosumtwi-järvi",
+   "peruste": "sitelinks",
+   "koko_m": 8000,
+   "lat": 6.5055,
+   "lon": -1.40891,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Lake Bosumtwi, Ghana.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lake_Bosumtwi%2C_Ghana.jpg?width=1280",
+     "tekija": "Stig Nygaard from Copenhagen, Denmark",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Lake_Bosumtwi%2C_Ghana.jpg",
+     "selite": "Bosumtwi on meteoriitin törmäyksessä syntynyt kraatterijärvi, jota ashantit pitävät pyhänä.",
+     "leveys": 2560,
+     "korkeus": 1497,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "An Explosive Beginning for Lake Bosumtwi (154739 - 151229 lrg).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/An_Explosive_Beginning_for_Lake_Bosumtwi_(154739_-_151229_lrg).jpg?width=1280",
+     "tekija": "NASA Earth Observatory images by Michala Garrison, using Landsat data from the U.S. Geological Survey. Story by Adam Voiland.",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:An_Explosive_Beginning_for_Lake_Bosumtwi_(154739_-_151229_lrg).jpg",
+     "selite": "Ylhäältä järvi näkyy pyöreänä tummana silmänä metsän keskellä.",
+     "leveys": 2273,
+     "korkeus": 1894,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q6385318",
+   "nimi": "Kejetian tori",
+   "peruste": "pelin nosto",
+   "koko_m": 600,
+   "lat": 6.69864,
+   "lon": -1.61914,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Kejetia-Markt.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kejetia-Markt.jpg?width=1280",
+     "tekija": "Afus199620",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kejetia-Markt.jpg",
+     "selite": "Kejetian tori on yksi Länsi-Afrikan suurimmista kauppapaikoista.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Kumasi Kejetia on the left and Adehyeman stores on the right, as I've said earlier there isn't anything you can't find here to buy. In between is the busiest road from Suame roundabout entering Kejetia.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kumasi_Kejetia_on_the_left_and_Adehyeman_stores_on_the_right%2C_as_I've_said_earlier_there_isn't_anything_you_can't_find_here_to_buy._In_between_is_the_busiest_road_from_Suame_roundabout_entering_Kejetia.jpg?width=1280",
+     "tekija": "AsamoahEl",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kumasi_Kejetia_on_the_left_and_Adehyeman_stores_on_the_right%2C_as_I've_said_earlier_there_isn't_anything_you_can't_find_here_to_buy._In_between_is_the_busiest_road_from_Suame_roundabout_entering_Kejetia.jpg",
+     "selite": "Tori ympäröi vilkkaan liikenneristeyksen keskustan eteläpuolella.",
+     "leveys": 3120,
+     "korkeus": 4160,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q16267974",
+   "nimi": "Manhyian palatsimuseo",
+   "peruste": "pelin nosto",
+   "koko_m": 120,
+   "lat": 6.70679,
+   "lon": -1.61432,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "The Manhyia Gates.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/The_Manhyia_Gates.jpg?width=1280",
+     "tekija": "Tryongliph",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:The_Manhyia_Gates.jpg",
+     "selite": "Manhyian palatsi on ashanti-kuninkaan asuinpaikka, ja siellä on museo Prempeh II:n entisessä talossa.",
+     "leveys": 2171,
+     "korkeus": 3256,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "A magnificent Banyan tree at Manhyia Palace Musuem.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/A_magnificent_Banyan_tree_at_Manhyia_Palace_Musuem.jpg?width=1280",
+     "tekija": "Sadekla Wise Nutifafa",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:A_magnificent_Banyan_tree_at_Manhyia_Palace_Musuem.jpg",
+     "selite": "Palatsin pihan jättimäinen banyanpuu antaa varjoa vieraille.",
+     "leveys": 1854,
+     "korkeus": 2317,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1654025",
+   "nimi": "Kwame Nkrumahin tiede- ja teknologiayliopisto",
+   "peruste": "sitelinks",
+   "koko_m": 800,
+   "lat": 6.6849,
+   "lon": -1.57051,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "KNUST main entrance with Kwame Nkrumah Memorial Park.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/KNUST_main_entrance_with_Kwame_Nkrumah_Memorial_Park.jpg?width=1280",
+     "tekija": "ZSM",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:KNUST_main_entrance_with_Kwame_Nkrumah_Memorial_Park.jpg",
+     "selite": "Yliopiston pääsisäänkäynnin luona on Kwame Nkrumahin muistopuisto.",
+     "leveys": 2429,
+     "korkeus": 1619,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q288618",
+   "nimi": "Baba Yaran stadion",
+   "peruste": "sitelinks",
+   "koko_m": 250,
+   "lat": 6.68268,
+   "lon": -1.60511,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Kumasi924.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kumasi924.JPG?width=1280",
+     "tekija": "Ina96",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kumasi924.JPG",
+     "selite": "Baba Yaran stadion on Ghanan suurimpia ja Kumasin jalkapallon koti.",
+     "leveys": 1600,
+     "korkeus": 1200,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Baba Yara Sports Stadium in Kumasi.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Baba_Yara_Sports_Stadium_in_Kumasi.jpg?width=1280",
+     "tekija": "Michael Schubert",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Baba_Yara_Sports_Stadium_in_Kumasi.jpg",
+     "selite": "Kenttä ja juoksurata valaistuna ottelun aikana.",
+     "leveys": 3264,
+     "korkeus": 2448,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q42605973",
+   "nimi": "Kumasin linnake",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 6.69129,
+   "lon": -1.62487,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Kumasi Military Museum at Kumasi 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kumasi_Military_Museum_at_Kumasi_01.jpg?width=1280",
+     "tekija": "Celestinesucess",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kumasi_Military_Museum_at_Kumasi_01.jpg",
+     "selite": "Punainen linnoitus toimii nykyään asevoimien museona.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Fort Kumasi and Millitary Museum (13).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Fort_Kumasi_and_Millitary_Museum_(13).jpg?width=1280",
+     "tekija": "Noahalorwu",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Fort_Kumasi_and_Millitary_Museum_(13).jpg",
+     "selite": "Linnakkeen pihalla on vanhoja panssariajoneuvoja ja tykkejä.",
+     "leveys": 6000,
+     "korkeus": 3376,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q60747485",
+   "nimi": "Ramseyerin muistokirkko",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": 6.6894,
+   "lon": -1.6216,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Ramseyer Memorial Presbyterian Church 03.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ramseyer_Memorial_Presbyterian_Church_03.jpg?width=1280",
+     "tekija": "Nkansahrexford",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ramseyer_Memorial_Presbyterian_Church_03.jpg",
+     "selite": "Ramseyerin muistokirkko on kivestä rakennettu presbyteerikirkko Kumasin keskustassa.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Ramseyer Memorial Presbyterian Church 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ramseyer_Memorial_Presbyterian_Church_01.jpg?width=1280",
+     "tekija": "Nkansahrexford",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ramseyer_Memorial_Presbyterian_Church_01.jpg",
+     "selite": "Kirkon terävä torni nousee vihreän pihan yläpuolelle.",
+     "leveys": 5818,
+     "korkeus": 3879,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q18344049",
+   "nimi": "Kumasin eläintarha",
+   "peruste": "pelin nosto",
+   "koko_m": 300,
+   "lat": 6.701,
+   "lon": -1.626,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "A picture of a camel at the kumasi zoo.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/A_picture_of_a_camel_at_the_kumasi_zoo.jpg?width=1280",
+     "tekija": "David Nii Quaye",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:A_picture_of_a_camel_at_the_kumasi_zoo.jpg",
+     "selite": "Eläintarhassa asuu useita afrikkalaisia ja muita lajeja Kumasin keskustan vieressä.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Chimpazee at the Kumasi Zoo.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Chimpazee_at_the_Kumasi_Zoo.jpg?width=1280",
+     "tekija": "Oheneba ghana",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Chimpazee_at_the_Kumasi_Zoo.jpg",
+     "selite": "Simpanssit ovat eläintarhan tunnetuimpia asukkaita.",
+     "leveys": 4128,
+     "korkeus": 2322,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "View over Kejetia Market - Largest in West Africa - Kumasi - Ghana - 01 (4755555789).jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/View_over_Kejetia_Market_-_Largest_in_West_Africa_-_Kumasi_-_Ghana_-_01_(4755555789).jpg?width=1280",
+   "tekija": "Adam Jones from Kelowna, BC, Canada",
+   "lisenssi": "CC BY-SA 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:View_over_Kejetia_Market_-_Largest_in_West_Africa_-_Kumasi_-_Ghana_-_01_(4755555789).jpg",
+   "selite": "Kejetian torin peltikatot ulottuvat Kumasin keskustaan asti.",
+   "leveys": 3456,
+   "korkeus": 2304,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Luftbild Kumasi 2012 B004.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Luftbild_Kumasi_2012_B004.jpg?width=1280",
+   "tekija": "Max Froumentin",
+   "lisenssi": "CC BY 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Luftbild_Kumasi_2012_B004.jpg",
+   "selite": "Ilmasta Kumasin matalat korttelit ja punaiset tiet levittäytyvät vehreään maisemaan.",
+   "leveys": 1368,
+   "korkeus": 1824,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}
