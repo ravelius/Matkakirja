@@ -1,6 +1,7 @@
 // MAC-SYÖTE (Natiivi-UI 30.9.2026; omistaja Päätoimittajan kautta: "saako macin ipad appiin kahden sormen panoroinnin
 // karttaan ja teksteihin sekä kahden sormen pinch zoomauksen karttaan?"). Vain kun iPad-sovellus ajetaan Macilla
-// (NSProcessInfo.isiOSAppOnMac; Plugins/iOS/MatkakirjaMacSyote.mm) tai testikomento pakottaa:
+// (NSProcessInfo.isiOSAppOnMac; Plugins/iOS/MatkakirjaMacSyote.mm), natiivissa Mac-sovelluksessa (Plugins/macOS/
+// MatkakirjaMacSyote.bundle, Natiiviseppä 6.10.2026) tai testikomento pakottaa:
 //   - ohjauslevyn kahden sormen veto: kartta panoroi, tekstit (ScrollView osoittimen alla) vierivät
 //   - ohjauslevyn nipistys: kartta zoomaa osoittimen kohtaan
 //   - hiiren rulla: kartta zoomaa osoittimen kohtaan, tekstit vierivät
@@ -40,7 +41,7 @@ namespace Matkakirja.Natiivi
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
         static void Luo()
         {
-#if UNITY_IOS && !UNITY_EDITOR
+#if (UNITY_IOS || UNITY_STANDALONE_OSX) && !UNITY_EDITOR
             if (instanssi != null) return;
             var go = new GameObject("MacSyote");
             DontDestroyOnLoad(go);
@@ -69,7 +70,7 @@ namespace Matkakirja.Natiivi
 
         void Asenna()
         {
-#if UNITY_IOS && !UNITY_EDITOR
+#if (UNITY_IOS || UNITY_STANDALONE_OSX) && !UNITY_EDITOR
             kaytossa = MatkakirjaMacSyote_Asenna(pakotettu ? 1 : 0) != 0;
 #endif
             if (kaytossa) Debug.Log("MATKAKIRJA mac-syöte: tunnistimet käytössä" + (pakotettu ? " (pakotettu)" : ""));
@@ -94,7 +95,7 @@ namespace Matkakirja.Natiivi
                 if (yrityksia++ < 120 && (pakotettu || yrityksia == 1 || yrityksia % 30 == 0)) Asenna();
                 return;
             }
-#if UNITY_IOS && !UNITY_EDITOR
+#if (UNITY_IOS || UNITY_STANDALONE_OSX) && !UNITY_EDITOR
             var a = luku;
             MatkakirjaMacSyote_Lue(a);
             tapahtumia = (int)a[7];
@@ -197,10 +198,17 @@ namespace Matkakirja.Natiivi
             return "teksti " + (sv.name ?? sv.GetType().Name) + $" {sv.scrollOffset.y:0}";
         }
 
-#if UNITY_IOS && !UNITY_EDITOR
-        [System.Runtime.InteropServices.DllImport("__Internal")]
+#if (UNITY_IOS || UNITY_STANDALONE_OSX) && !UNITY_EDITOR
+        // iPad-sovellus Macilla: Plugins/iOS/MatkakirjaMacSyote.mm staattisesti (__Internal). Natiivi Mac-sovellus (Natiiviseppä
+        // 6.10.2026): sama C-rajapinta Plugins/macOS/MatkakirjaMacSyote.bundle:ssa (NSEvent-tarkkailijat, tyokalut/mac-plugarit/).
+#if UNITY_STANDALONE_OSX
+        const string Kirjasto = "MatkakirjaMacSyote";
+#else
+        const string Kirjasto = "__Internal";
+#endif
+        [System.Runtime.InteropServices.DllImport(Kirjasto)]
         static extern int MatkakirjaMacSyote_Asenna(int pakota);
-        [System.Runtime.InteropServices.DllImport("__Internal")]
+        [System.Runtime.InteropServices.DllImport(Kirjasto)]
         static extern void MatkakirjaMacSyote_Lue(float[] ulos);
 #endif
     }

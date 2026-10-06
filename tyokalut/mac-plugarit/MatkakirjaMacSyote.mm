@@ -1,0 +1,65 @@
+// NATIIVI MAC -SYÖTE (Natiiviseppä 6.10.2026; omistaja: natiivi Mac-appi). Sama C-rajapinta kuin iPad-sovelluksen
+// Plugins/iOS/MatkakirjaMacSyote.mm, jotta UI/MacSyote.cs (Natiivi-UI) toimii natiivissa Mac-sovelluksessa sellaisenaan:
+//   MatkakirjaMacSyote_Asenna(pakota) → 1, kun tarkkailijat ovat käytössä
+//   MatkakirjaMacSyote_Lue(float[8])  → [vetoX, vetoY, rullaX, rullaY, nipistys, osoitinX, osoitinY, tapahtumia]
+// (pikseleinä, origo vasen yläkulma; nipistys kertoimena, 1 = ei muutosta) ja nollaus.
+// Lähteet ovat NSEventin paikallisia tarkkailijoita (sovelluksen omat tapahtumat; tapahtuma kulkee edelleen Unitylle):
+//   - ohjauslevyn kahden sormen veto: scrollWheel, hasPreciseScrollingDeltas → veto
+//   - hiiren rulla: scrollWheel ilman tarkkoja deltoja → rulla (rivit × RIVI pistettä, kuten UIKitin askeleinen vieritys)
+//   - ohjauslevyn nipistys: magnify → nipistys *= 1 + magnification
+// Käännös: tyokalut/mac-plugarit/kaanna.sh → Assets/Plugins/macOS/MatkakirjaMacSyote.bundle (arm64).
+#import <AppKit/AppKit.h>
+
+static float mkVetoX, mkVetoY, mkRullaX, mkRullaY, mkNipistys = 1.0f, mkOsX = -1.0f, mkOsY = -1.0f;
+static int mkTapahtumia;
+static id mkTarkkailija;
+static const CGFloat RIVI = 10.0;
+
+static void mkOsoitin(NSEvent* e)
+{
+    NSWindow* w = e.window ?: [NSApp keyWindow];
+    if (w == nil) return;
+    NSView* v = w.contentView;
+    NSPoint p = [v convertPoint: e.locationInWindow fromView: nil];
+    CGFloat s = w.backingScaleFactor;
+    mkOsX = (float)(p.x * s);
+    mkOsY = (float)((v.bounds.size.height - p.y) * s);
+    mkTapahtumia++;
+}
+
+extern "C" int MatkakirjaMacSyote_Asenna(int pakota)
+{
+    (void)pakota;
+    if (mkTarkkailija != nil) return 1;
+    mkTarkkailija = [NSEvent addLocalMonitorForEventsMatchingMask: (NSEventMaskScrollWheel | NSEventMaskMagnify)
+                                                           handler: ^NSEvent* (NSEvent* e)
+    {
+        CGFloat s = (e.window ?: [NSApp keyWindow]).backingScaleFactor;
+        if (s <= 0) s = 1;
+        if (e.type == NSEventTypeMagnify)
+        {
+            if (e.magnification > -1.0) mkNipistys *= (float)(1.0 + e.magnification);
+        }
+        else if (e.hasPreciseScrollingDeltas)
+        {
+            mkVetoX += (float)(e.scrollingDeltaX * s);
+            mkVetoY += (float)(e.scrollingDeltaY * s);
+        }
+        else
+        {
+            mkRullaX += (float)(e.scrollingDeltaX * RIVI * s);
+            mkRullaY += (float)(e.scrollingDeltaY * RIVI * s);
+        }
+        mkOsoitin(e);
+        return e;
+    }];
+    return mkTarkkailija != nil ? 1 : 0;
+}
+
+extern "C" void MatkakirjaMacSyote_Lue(float* ulos)
+{
+    ulos[0] = mkVetoX; ulos[1] = mkVetoY; ulos[2] = mkRullaX; ulos[3] = mkRullaY;
+    ulos[4] = mkNipistys; ulos[5] = mkOsX; ulos[6] = mkOsY; ulos[7] = (float)mkTapahtumia;
+    mkVetoX = mkVetoY = mkRullaX = mkRullaY = 0.0f;
+    mkNipistys = 1.0f;
+}
