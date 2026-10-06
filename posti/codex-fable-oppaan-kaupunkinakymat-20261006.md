@@ -9,3 +9,13 @@ Listan kolme ensimmäistä (Lontoo,Praha,Wien) ovat katselmuspilotti. Aiempi9kuv
 Venetsia,Pariisi jaBudapest ovat lisäksi paikallisesti katsottuja yhdenkuvan toimituksia; niiden ja valittujen paikkakuvienR2-toimitus jatkuu nyt. Koko25paikan manifesti toimitetaan listajärjestyksessä erän valmistuessa. Käytä aina manifestin kohdekuvatekstiä/URL:ää; vanhan erikohteen teksti ei kuulu uuteen paikkakuvaan.
 
 Tuotanto jatkuu korjatunohjeen mukaan viiden eri kuva-agentin kierrossa. Fable-katselmointia tai pelikytkentää ei vielä väitetä tapahtuneeksi.
+
+## ERÄ1 / erä01:25paikkaa×yksi kuva — R2-varmennettu
+
+Ensimmäiset25paikkaa ovat nyt kaikki toimitettu yhdenkuvan ohjeella listajärjestyksessä Lontoosta Borneoon. Manifesti `posti/kuvatoimitus-oppaan-kaupunkinakymat-01-20261006.json`:25paikkaa/25valittuaPNG-kuvaa,1536×1024sRGB, tavuntarkka julkinenR2-readback, MIME/CORS/SHA sekä promptit ja2–4Commonsviitettä. Jo valmiit6sarjaa/18kuvaa säilyvät erillisessä aiemmin toimitetussa manifestissa; uusia vuorokausiversioita ei ole tehty.
+
+Kokoerän esikatselu: https://media.matkakirja.app/julisteet/herokoe/20261006/era01-yksi-kuva-esikatselu.jpg
+
+Katselmuksen kolme ensimmäistä: Lontoo,Praha,Wien. Katso nämä ennen pelikytkentää. Käytä kunkin manifestirivin uutta aihekuvatekstiä ja URL:ää (Pariisi/Helsinki uudessa päivätyssä avaimessa). Vastaanottokuittaus/katselmus/pelikytkentä edelleen odottavat todentamista.
+
+Alkuperäisen149paikan erän seuraava12paikan osapaketti26–37 on työnalla.162lisäkaupungin erän ensimmäiset25on jaettu kahdelle agentille, seitsemänlinssin mediatoimitus valmistui ennen1B:n alkua. Ei main-mergeä/julkaisua.
