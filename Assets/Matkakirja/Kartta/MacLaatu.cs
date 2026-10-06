@@ -11,7 +11,7 @@ namespace Matkakirja
     ///    näyttökerrointa ja käyttämättömien laattojen välimuisti. Vähäinen vapaa muisti (alle VahanVapaanGt) karkeuttaa yhden
     ///    portaan. CesiumKaupunki (LS1) lukee GoogleSse- ja Valimuisti-arvot avatessaan.
     /// 2) KUORMA (≥ 1, pehmeä): tavoite on lämmön (thermalState: fair 1,25, serious 1,6, critical 2,2; virransäästö 1,25) ja
-    ///    kehysajan maksimi. Kehysaika mitataan vain täydellä taajuudella (Ruudunpaivitys.Tila.Taysi, tavoite ≥ 60 fps; ei
+    ///    kehysajan ja muistivaran (vapaa alle 4,5 / 3 / 1,5 Gt → 1,25 / 1,6 / 2,2) maksimi. Kehysaika mitataan vain täydellä taajuudella (Ruudunpaivitys.Tila.Taysi, tavoite ≥ 60 fps; ei
     ///    käynnistyksen 20 s:n eikä latausverhon aikana, nykäys rajataan 50 ms:iin):
     ///    keskiarvo yli 25 ms (alle 40 fps, alaraja 30 lähestyy) nostaa kehyskuormaa 5 %/s, alle 18 ms laskee 2 %/s.
     ///    Kuorma seuraa tavoitetta eksponentiaalisesti (nousu 6 s, lasku 20 s), joten laatu ei hyppää. CesiumKaupunki
@@ -107,13 +107,16 @@ namespace Matkakirja
             }
 
             float lampo = ThermalState >= 3 ? 2.2f : ThermalState == 2 ? 1.6f : ThermalState == 1 || Virransaasto ? 1.25f : 1f;
-            float tavoite = Mathf.Max(lampo, kehysKuorma);
+            // Muistivara (10 min mittaus 7.10.: kaukonäkymä SSE 6:lla 9,7 Gt, palautui ~1 Gt:hen; ei vuotoa): 16 Gt:n Airilla
+            // vähäinen vapaa muisti karkeuttaa laattavalintaa ennen swappia.
+            float muisti = VapaaGt < 0 ? 1f : VapaaGt < 1.5 ? 2.2f : VapaaGt < 3.0 ? 1.6f : VapaaGt < 4.5 ? 1.25f : 1f;
+            float tavoite = Mathf.Max(Mathf.Max(lampo, muisti), kehysKuorma);
             float tau = tavoite > Kuorma ? 6f : 20f;
             Kuorma = Mathf.Lerp(Kuorma, tavoite, 1f - Mathf.Exp(-dt / tau));
             if (Mathf.Abs(Kuorma - kirjattuKuorma) >= 0.1f)
             {
                 kirjattuKuorma = Kuorma;
-                Debug.Log($"MATKAKIRJA mac-laatu: kuorma {Kuorma:F2} (thermalState {ThermalState}, virransäästö {Virransaasto}, " +
+                Debug.Log($"MATKAKIRJA mac-laatu: kuorma {Kuorma:F2} (muisti → {muisti:F2}, thermalState {ThermalState}, virransäästö {Virransaasto}, " +
                           $"kehys {kehysKa * 1000f:F1} ms → {kehysKuorma:F2}, vapaa {VapaaGt:F1} Gt)");
             }
         }
