@@ -30,7 +30,7 @@ namespace Matkakirja.Natiivi
             Jarjestys = 98,
             Ikoni = "<path d=\"M12 3a6 6 0 0 0-6 6c0 4.5 6 12 6 12s6-7.5 6-12a6 6 0 0 0-6-6zm0 8.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z\"/>",
             Valokuva = true,
-            Kesken = true,
+            Kesken = false,   // omistaja 6.10. 20.1x: matkaopas pois keskeneräisistä
             Lahde = new Lahde
             {
                 Aineisto = "Cesium ion (Google Photorealistic 3D Tiles tai World Terrain, Bing ja OSM Buildings); Wikipedia",
