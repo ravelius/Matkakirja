@@ -1276,18 +1276,30 @@ namespace Matkakirja.Natiivi
             o.Kirjaa($"opas: PCM-virta valmis {Time.realtimeSinceStartup - t0:F1} s, {virta.KirjoitettuS:F1} s ääntä ({virta.KirjoitettuS / Mathf.Max(0.1f, Time.realtimeSinceStartup - (tEka >= 0 ? tEka : t0)):F2} ×)");
         }
 
+        /// <summary>Kohteen maa ja korkeus: keskipiste + kehä (OpasKuvaus.MaaJaKorkeus; Eiffel-korjaus 7.10.).</summary>
         IEnumerator Korkeus(OpasKohde k)
         {
             var pinta = kaupunki.Pinta;
             if (pinta == null) yield break;
-            var tehtava = pinta.SampleHeightMostDetailed(new double3(k.Lon, k.Lat, 0));
+            double r = OpasKuvaus.KehaSade(k.KokoM);
+            var pisteet = new double3[1 + OpasKuvaus.KehaPisteita];
+            pisteet[0] = new double3(k.Lon, k.Lat, 0);
+            for (int i = 0; i < OpasKuvaus.KehaPisteita; i++) { var (la, lo) = OpasKuvaus.KehaPiste(k.Lat, k.Lon, r, i); pisteet[1 + i] = new double3(lo, la, 0); }
+            var tehtava = pinta.SampleHeightMostDetailed(pisteet);
             while (!tehtava.IsCompleted) yield return null;
-            if (tehtava.IsFaulted || tehtava.Result == null || tehtava.Result.sampleSuccess == null || tehtava.Result.sampleSuccess.Length == 0) yield break;
-            if (tehtava.Result.sampleSuccess[0])
-            {
-                maaKorkeudet[Avain(k)] = pisteKorkeudet[PisteAvain(k.Lat, k.Lon)] = tehtava.Result.longitudeLatitudeHeightPositions[0].z;
-                viimeMaa = (k.Lat, k.Lon, maaKorkeudet[Avain(k)]);   // varaarvo myös kohteiden näytteistä (simu 17.4x: Pláka sai 45 m)
-            }
+            var t = tehtava.IsFaulted ? null : tehtava.Result;
+            if (t == null || t.sampleSuccess == null || t.sampleSuccess.Length < pisteet.Length) yield break;
+            double H(int i) => t.sampleSuccess[i] ? t.longitudeLatitudeHeightPositions[i].z : double.NaN;
+            var keha = new List<double>();
+            for (int i = 1; i < pisteet.Length; i++) keha.Add(H(i));
+            double keskus = H(0);
+            if (double.IsNaN(keskus) && keha.TrueForAll(double.IsNaN)) yield break;
+            var (maa, korkeus) = OpasKuvaus.MaaJaKorkeus(keskus, keha);
+            maaKorkeudet[Avain(k)] = pisteKorkeudet[PisteAvain(k.Lat, k.Lon)] = maa;
+            viimeMaa = (k.Lat, k.Lon, maa);   // varaarvo myös kohteiden näytteistä (simu 17.4x: Pláka sai 45 m)
+            double vanha = k.KorkeusM;
+            if (korkeus > k.KorkeusM) k.KorkeusM = korkeus;   // workerin korkeus_m puuttuu tai on liian pieni
+            o.Kirjaa($"opas: {k.Nimi}: maa {maa:F0} m (keskus {keskus:F0}, kehä r {r:F0} m), korkeus {(vanha > 0 ? vanha.ToString("F0") : "-")} → {k.KorkeusM:F0} m");
         }
 
         /// <summary>Kohdekehyksen maa pisteeseen (silmukka.MaaTarvitaan); epäonnistuessa arvio 45 m, jottei siirto jää odottamaan.</summary>
