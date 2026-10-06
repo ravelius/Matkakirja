@@ -114,3 +114,11 @@ Brotli (haara linnanrakentaja-zstd, worktree olemassa), akustiikka #3979 (Steam 
   v39 blender 0265cd493b0728f4, peili 94a0df22044155fa. Kappelin keskustelun kohdistus aanet.js:ssä, rakenna.mjs välittää sen.
   Muiden äänten kohdistukset: _valmiit/linna-kohtaukset-v3/raaka/*-vastaus.json. Natiivin morph-tuki Siirtosepällä (siirtoseppa/faceit 55ad6594), juna 151 (16.2x: entinen "150" = 151, BUILD 150 = muistioikeuden pikkujuna).
 - Esittelyvideot (148b ja linna-149 + peili feea163c): Siirtoseppä ajaa ~15.50, minä tarkistan ruuduittain → Päätoimittaja.
+
+## Päivitys 6.10. klo 19.0x
+- OHJAAMO v3c (omistaja 18.4x "ohjainvivusto kelluu"): teleskooppijalka _valmiit/iss-ohjaamo-v3c/ (jalka-yla 53,33 × 319,67 pt,
+  jalka-ala 51 × 48,33 pt, ohjaamo.json jalka; lahde/tuotanto.py osat jalka:yla|ala). Natiivi-UI sijoitti: natiivi-ui/opas-152
+  db05decf. Stillit pelistä tulevat Natiivi-UI:lta Päätoimittajalle. Hyväksynnän jälkeen kopio _valmiit/hyvaksytyt-mallit/.
+- SIMUT TAUOLLA (Julkaisija 18.51): levyä 19 Gi, ei uusia simuja. Esineajo (#4052) tehdään Siirtosepän D5900D45:llä hänen
+  linnavuorossaan: proto-3d/tyokalut/linnanrakentaja-ajot/ajo-esineet.sh (app-183866ed, peili bba43057, mykkä).
+  Siirtoseppä ajaa esittelyn (ennen BUILD 150 ea457278 / jälkeen linna-149 + feea163c) ja Faceit-kappelin (94a0df22) äänellisinä.
