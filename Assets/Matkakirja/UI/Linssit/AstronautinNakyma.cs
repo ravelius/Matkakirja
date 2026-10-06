@@ -94,6 +94,11 @@ namespace Matkakirja.Natiivi
             if (AvaruuskavelyValikossa)
                 Taulu.LisaaRivi("avaruuskavely", "Avaruuskävely", "Ulos kaiteelle katsomaan auringonnousua",
                     () => AstroLinssi()?.Kavely?.Kaynnissa == true, () => { AstroLinssi()?.AloitaKavely(); }, AstroMoodi.Ikkuna);
+            // ÄÄNISÄÄTIMET PULUN VALIKKOON (omistaja 6.10. 08.3x: "siirrä tuon äänisäätimet pulun valikon taakse pois tuolta näytön
+            // keskivaiheilta"): kehittäjän mikseri avataan taulun Äänet-rivistä; pyöreä säätönappi on astronautin linssissä piilossa.
+            Taulu.LisaaRivi("aanet", "Äänet", "Kaiut ja taustaäänet",
+                () => false, () => UiNakymat.Hae()?.Linssit?.Mikseri?.Avaa(true),
+                nakyy: () => Asetukset.Kehittaja && MikseriPaneeli.Lahde != null);
             // Laite 29.9. kavely1: linssin avauksen automaattitaulu jäi auki kävelyn päälle (kehittäjäkomennolla aloitettu).
             Kavely.Alkoi += () => { if (Taulu.Auki) Taulu.Sulje("avaruuskavely"); };
             // PULU KYYDIN PÄÄLLÄ (web body.satelliitti-kyyti .pollo-nappi z-index 49 > kyydin kerros 48): Cupola-kehys peitti
