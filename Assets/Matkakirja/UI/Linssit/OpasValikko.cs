@@ -348,8 +348,9 @@ namespace Matkakirja.Natiivi
             bool nayta = nakyy && KrediititTiivis.AvausLatautuu && KrediititTiivis.IonLogoKuva != null;
             KrediititTiivis.IonOmaPiirto = nayta;
             if (!nayta) { if (avausIon.style.display != DisplayStyle.None) avausIon.style.display = DisplayStyle.None; return; }
-            // Cesiumin paikka: lähderivin ja Googlen logon yläpuolella.
-            AsetaIon(avausIon, KrediititTiivis.TyhjaAlaPt + KrediititTiivis.RiviPt * 1.3f + 2f + KrediititTiivis.LogoPt + 2f);
+            // Cesiumin paikka: Googlen logon yläpuolella (sen mitattu yläreuna; simu 6.10. 13.13: laskettu paikka osui logon päälle).
+            float h = avausIon.parent?.worldBound.height ?? 0f, g = KrediititTiivis.GoogleYlaOsuus;
+            AsetaIon(avausIon, g > 0f && h > 0f ? g * h + 2f : KrediititTiivis.TyhjaAlaPt + KrediititTiivis.RiviPt * 1.3f + 2f + KrediititTiivis.LogoPt + 2f);
             avausIon.BringToFront();
         }
 

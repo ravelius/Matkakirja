@@ -96,6 +96,8 @@ namespace Matkakirja.Natiivi
         static bool ionVirhe;
         /// <summary>Viimeksi tunnistettu Cesium ion -logo (Siirrytään-ruutu piirtää sen itse mustan ruudun päälle).</summary>
         public static Texture IonLogoKuva { get; private set; }
+        /// <summary>Googlen logon yläreuna osuutena ruudun korkeudesta alhaalta (oppaan oma ion-logo sen yläpuolelle); 0 = ei tiedossa.</summary>
+        public static float GoogleYlaOsuus { get; private set; }
 
         /// <summary>Testi: logot ja niiden tunnistus.</summary>
         public static string Kuvaus()
@@ -167,6 +169,8 @@ namespace Matkakirja.Natiivi
                     lapsi.style.flexShrink = 0;
                     lapsi.style.unityBackgroundScaleMode = ScaleMode.ScaleToFit;
                     lapsi.style.marginBottom = 2 * pt;
+                    if (kuva != ion && lapsi.worldBound.height > 0 && juuri.worldBound.height > 0)
+                        GoogleYlaOsuus = 1f - lapsi.worldBound.yMin / juuri.worldBound.height;
                     if (kuva.filterMode != FilterMode.Bilinear) kuva.filterMode = FilterMode.Bilinear;
                     continue;
                 }
