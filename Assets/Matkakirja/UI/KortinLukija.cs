@@ -125,7 +125,7 @@ namespace Matkakirja.Natiivi
                 // Mini-hampurilainen kaiuttimen vasemmalla (entisen rattaan paikalla), sama pystykeskitys.
                 ratas = Rakenne.Nappi(null, "mk-lukija mk-lukija__valikkonappi", VaihdaPaneeli, Juuri);
                 ratas.tooltip = SaadinOtsikko;
-                Rakenne.Ikoni(ValikkoIkoni, "mk-lukija__valikkoikoni", ratas);
+                Rakenne.Ikoni(Ikonit.Valikko, "mk-lukija__valikkoikoni", ratas);   // juna 154: sama ☰ kuin OHJAUSNAPPI-sarjassa (ylärivi yhtenäiseksi)
                 Nappi = Rakenne.Nappi(null, "mk-lukija mk-lukija--kortti", Vaihda, Juuri);
                 var kuvake = Rakenne.El("mk-kaiutin", Nappi, PickingMode.Ignore);
                 Rakenne.Ikoni(KaiutinRunko, "mk-kaiutin__osa", kuvake);
