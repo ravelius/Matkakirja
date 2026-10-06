@@ -1,0 +1,744 @@
+{
+ "kaupunki": "budapest",
+ "kaupunkiQ": "Q1781",
+ "kohteet": [
+  {
+   "q": "Q11819",
+   "nimi": "Unkarin parlamenttitalo",
+   "peruste": "pelin nosto",
+   "koko_m": 300,
+   "lat": 47.50694,
+   "lon": 19.04556,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Budapest-Parliament-0001.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Budapest-Parliament-0001.jpg?width=1280",
+     "tekija": "Source: User:Godot13 Derivative: User:MathKnight",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Budapest-Parliament-0001.jpg",
+     "selite": "Unkarin parlamenttitalo kohoaa uusgoottilaisena Tonavan Pestin puolella.",
+     "leveys": 6291,
+     "korkeus": 4653,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Budapest, Kossuth Lajos tér, Országház, Parlament, 3.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Budapest%2C_Kossuth_Lajos_t%C3%A9r%2C_Orsz%C3%A1gh%C3%A1z%2C_Parlament%2C_3.jpg?width=1280",
+     "tekija": "Random photos 1989",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Budapest%2C_Kossuth_Lajos_t%C3%A9r%2C_Orsz%C3%A1gh%C3%A1z%2C_Parlament%2C_3.jpg",
+     "selite": "Rakennuksen keskikupoli ja lukuisat tornit hallitsevat Kossuth Lajos -aukiota.",
+     "leveys": 4096,
+     "korkeus": 3072,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Budapest, Kossuth Lajos tér, Országház, Parlament, 2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Budapest%2C_Kossuth_Lajos_t%C3%A9r%2C_Orsz%C3%A1gh%C3%A1z%2C_Parlament%2C_2.jpg?width=1280",
+     "tekija": "Random photos 1989",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Budapest%2C_Kossuth_Lajos_t%C3%A9r%2C_Orsz%C3%A1gh%C3%A1z%2C_Parlament%2C_2.jpg",
+     "selite": "Kupolin ja tornien runsas koristelu on tyypillistä uusgoottilaiselle tyylille.",
+     "leveys": 3456,
+     "korkeus": 4608,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 4,
+     "tiedosto": "Budapest, Kossuth Lajos tér, Országház, Parlament, 13.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Budapest%2C_Kossuth_Lajos_t%C3%A9r%2C_Orsz%C3%A1gh%C3%A1z%2C_Parlament%2C_13.jpg?width=1280",
+     "tekija": "Random photos 1989",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Budapest%2C_Kossuth_Lajos_t%C3%A9r%2C_Orsz%C3%A1gh%C3%A1z%2C_Parlament%2C_13.jpg",
+     "selite": "Aukio ja raitiotie kiertävät parlamenttitalon edustaa.",
+     "leveys": 4160,
+     "korkeus": 3120,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q465534",
+   "nimi": "Széchenyin ketjusilta",
+   "peruste": "pelin nosto",
+   "koko_m": 380,
+   "lat": 47.49889,
+   "lon": 19.04361,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Budapest - Chain Bridge - panoramio.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Budapest_-_Chain_Bridge_-_panoramio.jpg?width=1280",
+     "tekija": "Alireza Javaheri",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Budapest_-_Chain_Bridge_-_panoramio.jpg",
+     "selite": "Ketjusilta on Budapestin vanhin pysyvä silta Tonavan yli.",
+     "leveys": 4850,
+     "korkeus": 3200,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "\"Arany Palota\" Budapest - panoramio.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%22Arany_Palota%22_Budapest_-_panoramio.jpg?width=1280",
+     "tekija": "Dewi König",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%22Arany_Palota%22_Budapest_-_panoramio.jpg",
+     "selite": "Silta yhdistää Budan ja Pestin, ja taustalla kohoaa Budan linna.",
+     "leveys": 3888,
+     "korkeus": 2205,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "19860830800NR Budapest (Ungarn) mit Kettenbrücke und Parlament.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/19860830800NR_Budapest_(Ungarn)_mit_Kettenbr%C3%BCcke_und_Parlament.jpg?width=1280",
+     "tekija": "Jörg Blobelt",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:19860830800NR_Budapest_(Ungarn)_mit_Kettenbr%C3%BCcke_und_Parlament.jpg",
+     "selite": "Sillan pylväät ja ketjut erottuvat Tonavan rannalta nähtynä.",
+     "leveys": 3159,
+     "korkeus": 1848,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q493117",
+   "nimi": "Kalastajanlinnake",
+   "peruste": "pelin nosto",
+   "koko_m": 120,
+   "lat": 47.50222,
+   "lon": 19.03472,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "03 2019 photo Paolo Villa - F0197855 - Budapest bis- Bastione dei pescatori.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/03_2019_photo_Paolo_Villa_-_F0197855_-_Budapest_bis-_Bastione_dei_pescatori.jpg?width=1280",
+     "tekija": "Paolo Villa",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:03_2019_photo_Paolo_Villa_-_F0197855_-_Budapest_bis-_Bastione_dei_pescatori.jpg",
+     "selite": "Kalastajanlinnake on uusromaaninen näköalaterassi Matiaksenkirkon vieressä.",
+     "leveys": 4928,
+     "korkeus": 3264,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "03 2019 photo Paolo Villa - F0197856 bis- Budapest - Bastione dei pescatori - Views from Fisherman's Bastion.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/03_2019_photo_Paolo_Villa_-_F0197856_bis-_Budapest_-_Bastione_dei_pescatori_-_Views_from_Fisherman's_Bastion.jpg?width=1280",
+     "tekija": "Paolo Villa",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:03_2019_photo_Paolo_Villa_-_F0197856_bis-_Budapest_-_Bastione_dei_pescatori_-_Views_from_Fisherman's_Bastion.jpg",
+     "selite": "Linnakkeen valkoiset tornit muistuttavat unkarilaisten heimojen telttoja.",
+     "leveys": 2849,
+     "korkeus": 4698,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "19860830660NR Budapest (Ungarn) Auf der Fischerbastei.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/19860830660NR_Budapest_(Ungarn)_Auf_der_Fischerbastei.jpg?width=1280",
+     "tekija": "Jörg Blobelt",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:19860830660NR_Budapest_(Ungarn)_Auf_der_Fischerbastei.jpg",
+     "selite": "Kaarevat portit ja portaat johtavat linnakkeen terasseille.",
+     "leveys": 3569,
+     "korkeus": 3591,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q493133",
+   "nimi": "Matiaksenkirkko",
+   "peruste": "sitelinks",
+   "koko_m": 100,
+   "lat": 47.50194,
+   "lon": 19.03417,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Matthias Church, Budapest, 2017.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Matthias_Church%2C_Budapest%2C_2017.jpg?width=1280",
+     "tekija": "Stefan Schäfer, Lich",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Matthias_Church%2C_Budapest%2C_2017.jpg",
+     "selite": "Matiaksenkirkko on Budan linnavuoren goottilainen kirkko, jonka katto on kirkkaiden tiilien peitossa.",
+     "leveys": 3027,
+     "korkeus": 4541,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Budapest, agosto 2024 18.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Budapest%2C_agosto_2024_18.jpg?width=1280",
+     "tekija": "TSolange",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Budapest%2C_agosto_2024_18.jpg",
+     "selite": "Kirkon värikäs laattakatto ja teräväkärkiset tornit erottuvat kaukaa.",
+     "leveys": 4240,
+     "korkeus": 2832,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Budapest, Budai Vár, Mátyás-templom, 2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Budapest%2C_Budai_V%C3%A1r%2C_M%C3%A1ty%C3%A1s-templom%2C_2.jpg?width=1280",
+     "tekija": "Christo",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Budapest%2C_Budai_V%C3%A1r%2C_M%C3%A1ty%C3%A1s-templom%2C_2.jpg",
+     "selite": "Pääportin kaaressa on veistoksin koristeltu tympanon.",
+     "leveys": 4608,
+     "korkeus": 3456,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q46313",
+   "nimi": "Budan linna",
+   "peruste": "UNESCO",
+   "koko_m": 500,
+   "lat": 47.49611,
+   "lon": 19.03972,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "20190502 Zamek w Budapeszcie 0647 1862 DxO.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20190502_Zamek_w_Budapeszcie_0647_1862_DxO.jpg?width=1280",
+     "tekija": "Jakub Hałun",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20190502_Zamek_w_Budapeszcie_0647_1862_DxO.jpg",
+     "selite": "Budan linna on Unkarin kuninkaiden entinen palatsi Tonavan yläpuolella.",
+     "leveys": 4120,
+     "korkeus": 2739,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "19860830745NR Budapest (Ungarn) Am Burgpalast.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/19860830745NR_Budapest_(Ungarn)_Am_Burgpalast.jpg?width=1280",
+     "tekija": "Jörg Blobelt",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:19860830745NR_Budapest_(Ungarn)_Am_Burgpalast.jpg",
+     "selite": "Linnan sisäpihojen rakennukset ja portit ovat barokkia ja uusbarokkia.",
+     "leveys": 3600,
+     "korkeus": 2403,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "19860830770NR Budapest (Ungarn) Am Burgpalast Habsburg Gate.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/19860830770NR_Budapest_(Ungarn)_Am_Burgpalast_Habsburg_Gate.jpg?width=1280",
+     "tekija": "Jörg Blobelt",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:19860830770NR_Budapest_(Ungarn)_Am_Burgpalast_Habsburg_Gate.jpg",
+     "selite": "Linnan porttien ja puutarhojen läpi pääsee rinteen terasseille.",
+     "leveys": 3548,
+     "korkeus": 3581,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q577122",
+   "nimi": "Gellértinvuori",
+   "peruste": "pelin nosto",
+   "koko_m": 600,
+   "lat": 47.48639,
+   "lon": 19.04583,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Gellert hill.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gellert_hill.jpg?width=1280",
+     "tekija": "kallerna",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Gellert_hill.jpg",
+     "selite": "Gellértinvuori kohoaa jyrkkänä kalliona Tonavan Budan puolella.",
+     "leveys": 5100,
+     "korkeus": 3400,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "20230421.Donau.Budapest.-045.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20230421.Donau.Budapest.-045.jpg?width=1280",
+     "tekija": "Bybbisch94, Christian Gebhardt",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20230421.Donau.Budapest.-045.jpg",
+     "selite": "Vuoren juurella on Gellért-kylpylän rakennus Tonavan rannalla.",
+     "leveys": 4624,
+     "korkeus": 3468,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "20130612 Budapest 75.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20130612_Budapest_75.jpg?width=1280",
+     "tekija": "Mark Ahsmann",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20130612_Budapest_75.jpg",
+     "selite": "Vuoren huipulla seisoo Vapaudenpatsas.",
+     "leveys": 3968,
+     "korkeus": 2976,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q299973",
+   "nimi": "Sankarien aukio",
+   "peruste": "pelin nosto",
+   "koko_m": 250,
+   "lat": 47.51528,
+   "lon": 19.07806,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Heroes Square Budapest 2010 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Heroes_Square_Budapest_2010_01.jpg?width=1280",
+     "tekija": "User:Sveter (Please credit as \"Petr Šmerkl, Wikipedia\" in case you use this outside WMF projects.)",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Heroes_Square_Budapest_2010_01.jpg",
+     "selite": "Sankarien aukio on Budapestin suuri juhlaaukio, jota hallitsee Millenniumin muistopylväs.",
+     "leveys": 5822,
+     "korkeus": 3602,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Heroes' Square (Budapest) 20180824.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Heroes'_Square_(Budapest)_20180824.jpg?width=1280",
+     "tekija": "Suicasmo",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Heroes'_Square_(Budapest)_20180824.jpg",
+     "selite": "Pylvään huipulla on arkkienkeli Gabriel ja ympärillä kaarevat pylväikköt.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "The Millennium Monument in Heroes' Square, Budapest, Hungary.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/The_Millennium_Monument_in_Heroes'_Square%2C_Budapest%2C_Hungary.jpg?width=1280",
+     "tekija": "Paul Mannix",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:The_Millennium_Monument_in_Heroes'_Square%2C_Budapest%2C_Hungary.jpg",
+     "selite": "Illalla aukion muistomerkit valaistaan.",
+     "leveys": 3872,
+     "korkeus": 2592,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q338665",
+   "nimi": "Pyhän Tapanin kirkko",
+   "peruste": "pelin nosto",
+   "koko_m": 110,
+   "lat": 47.50083,
+   "lon": 19.05389,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Budapest, Dohány utca, kilátás, 18.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Budapest%2C_Doh%C3%A1ny_utca%2C_kil%C3%A1t%C3%A1s%2C_18.jpg?width=1280",
+     "tekija": "Random photos 1989",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Budapest%2C_Doh%C3%A1ny_utca%2C_kil%C3%A1t%C3%A1s%2C_18.jpg",
+     "selite": "Pyhän Tapanin basilika on Budapestin suurin kirkko ja kaupungin hallitsevia maamerkkejä.",
+     "leveys": 4096,
+     "korkeus": 3072,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Budapest, Lipótváros, 1054 Hungary - panoramio (15).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Budapest%2C_Lip%C3%B3tv%C3%A1ros%2C_1054_Hungary_-_panoramio_(15).jpg?width=1280",
+     "tekija": "PetraP",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Budapest%2C_Lip%C3%B3tv%C3%A1ros%2C_1054_Hungary_-_panoramio_(15).jpg",
+     "selite": "Kirkon kaksi tornia ja kupoli erottuvat selvästi siluetista.",
+     "leveys": 2184,
+     "korkeus": 2448,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Budapest, Bajcsy-Zsilinszki út, kilátás, 9.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Budapest%2C_Bajcsy-Zsilinszki_%C3%BAt%2C_kil%C3%A1t%C3%A1s%2C_9.jpg?width=1280",
+     "tekija": "Random photos 1989",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Budapest%2C_Bajcsy-Zsilinszki_%C3%BAt%2C_kil%C3%A1t%C3%A1s%2C_9.jpg",
+     "selite": "Basilika kohoaa Lipótvárosin kerrostalojen ja katujen yllä.",
+     "leveys": 5408,
+     "korkeus": 3680,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q195344",
+   "nimi": "Suuri kauppahalli",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 47.48669,
+   "lon": 19.0588,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Budapest - Központi Vásárcsarnok (2).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Budapest_-_K%C3%B6zponti_V%C3%A1s%C3%A1rcsarnok_(2).jpg?width=1280",
+     "tekija": "Fred Romero from Paris, France",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Budapest_-_K%C3%B6zponti_V%C3%A1s%C3%A1rcsarnok_(2).jpg",
+     "selite": "Suuri kauppahalli on Budapestin suurin sisämarkkina, jonka julkisivua koristavat värikkäät kattotiilet.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "05327-Budapest-1904-Zentralmarkthalle-Brück & Sohn Kunstverlag.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/05327-Budapest-1904-Zentralmarkthalle-Br%C3%BCck_%26_Sohn_Kunstverlag.jpg?width=1280",
+     "tekija": "Brück & Sohn Kunstverlag Meißen",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:05327-Budapest-1904-Zentralmarkthalle-Br%C3%BCck_%26_Sohn_Kunstverlag.jpg",
+     "selite": "Halli avattiin 1890-luvulla, ja vanha postikortti näyttää sen alkuperäisen ilmeen.",
+     "leveys": 1516,
+     "korkeus": 1000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q194783",
+   "nimi": "Széchenyin kylpylä",
+   "peruste": "sitelinks",
+   "koko_m": 250,
+   "lat": 47.51833,
+   "lon": 19.08222,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "A Városliget Állatkert felőli része10.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/A_V%C3%A1rosliget_%C3%81llatkert_fel%C5%91li_r%C3%A9sze10.jpg?width=1280",
+     "tekija": "12akd",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:A_V%C3%A1rosliget_%C3%81llatkert_fel%C5%91li_r%C3%A9sze10.jpg",
+     "selite": "Széchenyin kylpylä on keltainen uusbarokkinen kylpylärakennus Városligetin puistossa.",
+     "leveys": 3264,
+     "korkeus": 2448,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "03 2019 photo Paolo Villa - F0197832 - Budapest - terme - cupole.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/03_2019_photo_Paolo_Villa_-_F0197832_-_Budapest_-_terme_-_cupole.jpg?width=1280",
+     "tekija": "Paolo Villa",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:03_2019_photo_Paolo_Villa_-_F0197832_-_Budapest_-_terme_-_cupole.jpg",
+     "selite": "Kylpylän kupoli ja siivet kohoavat puiston keskellä.",
+     "leveys": 4928,
+     "korkeus": 3264,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Almog 3 Szechenyi.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Almog_3_Szechenyi.jpg?width=1280",
+     "tekija": "Almog",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Almog_3_Szechenyi.jpg",
+     "selite": "Kylpylän pääjulkisivua koristaa kupoli.",
+     "leveys": 2048,
+     "korkeus": 1536,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q36833",
+   "nimi": "Unkarin valtionooppera",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": 47.50278,
+   "lon": 19.05833,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Hungarian State Opera House in Budapest.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hungarian_State_Opera_House_in_Budapest.jpg?width=1280",
+     "tekija": "Jeremy Oakley",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Hungarian_State_Opera_House_in_Budapest.jpg",
+     "selite": "Valtionooppera on uusrenessanssityylinen oopperatalo Andrássy-kadun varrella.",
+     "leveys": 4608,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Andrássy Christmas Lights 2025 (19).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Andr%C3%A1ssy_Christmas_Lights_2025_(19).jpg?width=1280",
+     "tekija": "Elekes Andor",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Andr%C3%A1ssy_Christmas_Lights_2025_(19).jpg",
+     "selite": "Illalla oopperan julkisivu valaistaan.",
+     "leveys": 4096,
+     "korkeus": 3072,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q754397",
+   "nimi": "Dohány-kadun synagoga",
+   "peruste": "pelin nosto",
+   "koko_m": 120,
+   "lat": 47.4959,
+   "lon": 19.0607,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "B RKL20191127009-scaled.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/B_RKL20191127009-scaled.jpg?width=1280",
+     "tekija": "Featured photo illustration by László Róka/MTVA",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:B_RKL20191127009-scaled.jpg",
+     "selite": "Dohány-kadun synagoga on Euroopan suurin synagoga ja kaupungin tunnetuimpia kirkkomaisia rakennuksia.",
+     "leveys": 2560,
+     "korkeus": 1736,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Budapest (111) (13229182885).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Budapest_(111)_(13229182885).jpg?width=1280",
+     "tekija": "xorge",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Budapest_(111)_(13229182885).jpg",
+     "selite": "Maurilaistyylisen julkisivun kaksi tornia päättyvät sipulikupoleihin.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q915195",
+   "nimi": "Vapaudensilta",
+   "peruste": "sitelinks",
+   "koko_m": 300,
+   "lat": 47.48556,
+   "lon": 19.055,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Most Svobody, Budapešť.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Most_Svobody%2C_Budape%C5%A1%C5%A5.jpg?width=1280",
+     "tekija": "Ondřej Žváček",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Most_Svobody%2C_Budape%C5%A1%C5%A5.jpg",
+     "selite": "Vapaudensilta yhdistää Budan Gellértinvuoren juuren Pestiin.",
+     "leveys": 3431,
+     "korkeus": 2145,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Budapesti Szabadság híd Pestről 2014.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Budapesti_Szabads%C3%A1g_h%C3%ADd_Pestr%C5%91l_2014.JPG?width=1280",
+     "tekija": "KovácsD",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Budapesti_Szabads%C3%A1g_h%C3%ADd_Pestr%C5%91l_2014.JPG",
+     "selite": "Sillan vihreä rautarakenne ja tornit tekevät siitä helposti tunnistettavan.",
+     "leveys": 4105,
+     "korkeus": 2313,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "20130612 Budapest 54.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20130612_Budapest_54.jpg?width=1280",
+     "tekija": "Mark Ahsmann",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20130612_Budapest_54.jpg",
+     "selite": "Silta valmistui vuonna 1896 maailmannäyttelyä varten.",
+     "leveys": 3968,
+     "korkeus": 2976,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q646140",
+   "nimi": "Gellért-kylpylä",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 47.48371,
+   "lon": 19.05097,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Budapest Gellértbad 1.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Budapest_Gell%C3%A9rtbad_1.JPG?width=1280",
+     "tekija": "Zairon",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Budapest_Gell%C3%A9rtbad_1.JPG",
+     "selite": "Gellért-kylpylä on jugend-tyylinen kylpylä- ja hotellirakennus Tonavan rannalla.",
+     "leveys": 3444,
+     "korkeus": 2586,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Budapest - Danubius Hotel Gellért (24593100118).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Budapest_-_Danubius_Hotel_Gell%C3%A9rt_(24593100118).jpg?width=1280",
+     "tekija": "Fred Romero from Paris, France",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Budapest_-_Danubius_Hotel_Gell%C3%A9rt_(24593100118).jpg",
+     "selite": "Rakennuksen julkisivua koristaa runsas kiviveistos.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Gellert baths lobby 2024.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gellert_baths_lobby_2024.jpg?width=1280",
+     "tekija": "HartOve",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Gellert_baths_lobby_2024.jpg",
+     "selite": "Kylpylän sisätilat ovat täynnä mosaiikkeja ja patsaita.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1092030",
+   "nimi": "Vajdahunyadin linna",
+   "peruste": "sitelinks",
+   "koko_m": 200,
+   "lat": 47.51528,
+   "lon": 19.08194,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "20190503 Zamek Vajdahunyad w Budapeszcie 0749 2196 DxO.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20190503_Zamek_Vajdahunyad_w_Budapeszcie_0749_2196_DxO.jpg?width=1280",
+     "tekija": "Jakub Hałun",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20190503_Zamek_Vajdahunyad_w_Budapeszcie_0749_2196_DxO.jpg",
+     "selite": "Vajdahunyadin linna on Városligetin puistossa oleva eri tyylejä yhdistelevä linnarakennus.",
+     "leveys": 5264,
+     "korkeus": 3500,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Vajdahunyad vára Budapest September 2013.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Vajdahunyad_v%C3%A1ra_Budapest_September_2013.jpg?width=1280",
+     "tekija": "Felix König",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Vajdahunyad_v%C3%A1ra_Budapest_September_2013.jpg",
+     "selite": "Linna on rakennettu jäljittelemään Unkarin historian rakennustyylejä.",
+     "leveys": 3800,
+     "korkeus": 2308,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Budapest Vajdahunyad Castle R01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Budapest_Vajdahunyad_Castle_R01.jpg?width=1280",
+     "tekija": "Marc Ryckaert (MJJR)",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Budapest_Vajdahunyad_Castle_R01.jpg",
+     "selite": "Linnan eri osat esittelevät romaanista, goottilaista ja barokkityyliä.",
+     "leveys": 3216,
+     "korkeus": 2167,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Széchenyi Chain Bridge in Budapest at night.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sz%C3%A9chenyi_Chain_Bridge_in_Budapest_at_night.jpg?width=1280",
+   "tekija": "Wilfredor",
+   "lisenssi": "CC0",
+   "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Sz%C3%A9chenyi_Chain_Bridge_in_Budapest_at_night.jpg",
+   "selite": "Illalla valaistu Budapest levittäytyy Tonavan molemmin puolin.",
+   "leveys": 3580,
+   "korkeus": 2000,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Budapest, view from Buda castle across the Danube to Pest.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Budapest%2C_view_from_Buda_castle_across_the_Danube_to_Pest.jpg?width=1280",
+   "tekija": "Dguendel",
+   "lisenssi": "CC BY 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Budapest%2C_view_from_Buda_castle_across_the_Danube_to_Pest.jpg",
+   "selite": "Tonavan Pestin puolen rantakatu ja hotellit erottuvat Budan rinteeltä katsottuna.",
+   "leveys": 4029,
+   "korkeus": 2895,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

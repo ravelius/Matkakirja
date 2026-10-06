@@ -366,6 +366,10 @@ function kokoa() {
         ...(k.aliakset?.length ? { aliakset: k.aliakset } : {}), ...(k.koko_m ? { koko_m: k.koko_m } : {}), kuvat: k.kuvat.map(kuva) };
       kuvia += k.kuvat.length;
     }
+    // Kuvattomat kohteet mukaan kohteet-osioon (kuvat: []), jotta koordinaatit ja järjestys säilyvät oppaan listassa ja kierroksella.
+    for (const k of d.eiKuvaa ?? []) {
+      kohteet[k.q] = { nimi: k.nimi, peruste: k.peruste, kaupunki: d.kaupunki, kaupunkiQ: d.kaupunkiQ, lat: k.lat, lon: k.lon, kuvat: [] };
+    }
     for (const k of d.eiKuvaa ?? []) eiKuvaa.push({ q: k.q, nimi: k.nimi, kaupunki: d.kaupunki, syy: k.syy });
   }
   const ulos = join(DATA, 'oppaan-kuvat.json');

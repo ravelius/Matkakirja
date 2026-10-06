@@ -1,0 +1,369 @@
+{
+ "kaupunki": "marseille",
+ "kaupunkiQ": "Q23482",
+ "kohteet": [
+  {
+   "q": "Q975925",
+   "nimi": "Notre-Dame de la Garde",
+   "peruste": "pelin nosto",
+   "koko_m": 120,
+   "lat": 43.28395,
+   "lon": 5.37123,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Notre-Dame de la Garde Marseille 2024.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Notre-Dame_de_la_Garde_Marseille_2024.jpg?width=1280",
+     "tekija": "kallerna",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Notre-Dame_de_la_Garde_Marseille_2024.jpg",
+     "selite": "Notre-Dame de la Garde on Marseillen kukkulan päällä kohoava pyhiinvaelluskirkko, jota kutsutaan Hyväksi Äidiksi.",
+     "leveys": 5040,
+     "korkeus": 6412,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Basilique Notre Dame Garde - Marseille VI (FR13) - 2023-07-22 - 22.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Basilique_Notre_Dame_Garde_-_Marseille_VI_(FR13)_-_2023-07-22_-_22.jpg?width=1280",
+     "tekija": "Chabe01",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Basilique_Notre_Dame_Garde_-_Marseille_VI_(FR13)_-_2023-07-22_-_22.jpg",
+     "selite": "Basilikan kupoli on koristeltu raidallisella kivellä, ja sen kellotornin huipulla seisoo kullattu Neitsyt Maria.",
+     "leveys": 2540,
+     "korkeus": 2982,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q437959",
+   "nimi": "Marseillen vanha satama",
+   "peruste": "pelin nosto",
+   "koko_m": 600,
+   "lat": 43.29472,
+   "lon": 5.37083,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Marseille vieux port pano.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Marseille_vieux_port_pano.jpg?width=1280",
+     "tekija": "Velvet",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Marseille_vieux_port_pano.jpg",
+     "selite": "Vanha satama on ollut Marseillen sydän antiikista asti, ja nykyään siinä on tuhansia huvivenepaikkoja.",
+     "leveys": 5461,
+     "korkeus": 2316,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Marseille Old Port.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Marseille_Old_Port.jpg?width=1280",
+     "tekija": "Ingo Mehling",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Marseille_Old_Port.jpg",
+     "selite": "Satamaa reunustavat kalastus- ja purjeveneet, ja taustalla kohoaa Notre-Dame de la Garde.",
+     "leveys": 5173,
+     "korkeus": 2000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Marseille Vieux Port Night.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Marseille_Vieux_Port_Night.jpg?width=1280",
+     "tekija": "Benh LIEU SONG",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Marseille_Vieux_Port_Night.jpg",
+     "selite": "Iltavalaistuksessa Fort Saint-Jean ja satama heijastuvat veteen.",
+     "leveys": 8836,
+     "korkeus": 2425,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2808698",
+   "nimi": "MuCEM",
+   "peruste": "pelin nosto",
+   "koko_m": 200,
+   "lat": 43.29694,
+   "lon": 5.36114,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Mucem et Cathédrale Sainte-Marie-Majeure de Marseille.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mucem_et_Cath%C3%A9drale_Sainte-Marie-Majeure_de_Marseille.jpg?width=1280",
+     "tekija": "Olena Ilnytska",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mucem_et_Cath%C3%A9drale_Sainte-Marie-Majeure_de_Marseille.jpg",
+     "selite": "MuCEM on Välimeren kulttuureihin keskittyvä museo, jonka verkkomainen julkisivu liittyy Fort Saint-Jeanin vanhoihin muureihin.",
+     "leveys": 5456,
+     "korkeus": 3632,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q622500",
+   "nimi": "Ifin linna",
+   "peruste": "sitelinks",
+   "koko_m": 120,
+   "lat": 43.27986,
+   "lon": 5.32514,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Château d'If @ Baie de Marseille 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ch%C3%A2teau_d'If_%40_Baie_de_Marseille_01.jpg?width=1280",
+     "tekija": "Rémih",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ch%C3%A2teau_d'If_%40_Baie_de_Marseille_01.jpg",
+     "selite": "Ifin linna on pieni saarilinnake Marseillen edustalla, ja se tunnetaan Monte Criston kreivin vankilana.",
+     "leveys": 5184,
+     "korkeus": 3888,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Château d'If-DSC 9561.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ch%C3%A2teau_d'If-DSC_9561.jpg?width=1280",
+     "tekija": "Vlad Mandyev",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ch%C3%A2teau_d'If-DSC_9561.jpg",
+     "selite": "Illan valossa linnakkeen kalkkikiviseinät hohtavat kultaisina meren yllä.",
+     "leveys": 5752,
+     "korkeus": 3455,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1419757",
+   "nimi": "Marseillen katedraali",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 43.2998,
+   "lon": 5.36493,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Marseille (France), Major Cathedral, May 2013.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Marseille_(France)%2C_Major_Cathedral%2C_May_2013.JPG?width=1280",
+     "tekija": "Philipe Alès",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Marseille_(France)%2C_Major_Cathedral%2C_May_2013.JPG",
+     "selite": "Sainte-Marie-Majeure on 1800-luvun roomalais-bysanttilaistyylinen katedraali sataman vieressä.",
+     "leveys": 4288,
+     "korkeus": 2848,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Marseille-Cathedral-June-2012.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Marseille-Cathedral-June-2012.jpg?width=1280",
+     "tekija": "Acediscovery",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Marseille-Cathedral-June-2012.jpg",
+     "selite": "Katedraalin kupolit ja raidalliset kivipinnat erottuvat meren puolelta.",
+     "leveys": 2736,
+     "korkeus": 3648,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1858504",
+   "nimi": "Saint-Victorin luostari",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": 43.29028,
+   "lon": 5.36556,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Marseille-Saint-Victor-bjs180810-01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Marseille-Saint-Victor-bjs180810-01.jpg?width=1280",
+     "tekija": "Bjs",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Marseille-Saint-Victor-bjs180810-01.jpg",
+     "selite": "Saint-Victorin linnakemainen luostarikirkko on yksi Marseillen vanhimmista kristillisistä pyhäköistä.",
+     "leveys": 4535,
+     "korkeus": 3024,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2600427",
+   "nimi": "Calanquesin kansallispuisto",
+   "peruste": "sitelinks",
+   "koko_m": 3000,
+   "lat": 43.20944,
+   "lon": 5.44917,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Calanques de Marseille. 2019(19).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Calanques_de_Marseille._2019(19).jpg?width=1280",
+     "tekija": "Inga Tomane",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Calanques_de_Marseille._2019(19).jpg",
+     "selite": "Calanques on kalkkikiviselle rannikolle syöpyneiden jyrkkien merenlahtien alue Marseillen ja Cassisin välissä.",
+     "leveys": 4903,
+     "korkeus": 3677,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Calanque de l'Erevine.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Calanque_de_l'Erevine.jpg?width=1280",
+     "tekija": "kallerna",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Calanque_de_l'Erevine.jpg",
+     "selite": "Kapea lahti ja turkoosi vesi piiloutuvat korkeiden kalliojyrkänteiden väliin.",
+     "leveys": 4100,
+     "korkeus": 5600,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1464953",
+   "nimi": "Frioulin saaret",
+   "peruste": "sitelinks",
+   "koko_m": 2000,
+   "lat": 43.27549,
+   "lon": 5.30665,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Marseille-iles-frioul.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Marseille-iles-frioul.jpg?width=1280",
+     "tekija": "No machine-readable author provided. Jddmano assumed (based on copyright claims).",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Marseille-iles-frioul.jpg",
+     "selite": "Frioulin saaristo on Marseillen edustalla oleva kalkkikivisten saarten ryhmä, johon myös Ifin linna kuuluu.",
+     "leveys": 1598,
+     "korkeus": 845,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "View-of-Marseille-Frioul-Islands-2012.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/View-of-Marseille-Frioul-Islands-2012.jpg?width=1280",
+     "tekija": "Acediscovery",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:View-of-Marseille-Frioul-Islands-2012.jpg",
+     "selite": "Kalliorannat ja kirkas meri kuuluvat saarten ja Marseillen rannikon tunnusomaisiin maisemiin.",
+     "leveys": 2736,
+     "korkeus": 3648,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q371217",
+   "nimi": "Saint-Charlesin asema",
+   "peruste": "pelin nosto",
+   "koko_m": 200,
+   "lat": 43.30306,
+   "lon": 5.38111,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Gare de Saint-Charles Marseille FRA 001.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gare_de_Saint-Charles_Marseille_FRA_001.JPG?width=1280",
+     "tekija": "ignis",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Gare_de_Saint-Charles_Marseille_FRA_001.JPG",
+     "selite": "Saint-Charlesin asema on Marseillen päärautatieasema, jonka monumentaaliset portaat johtavat kaupunkiin.",
+     "leveys": 2304,
+     "korkeus": 3072,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q202150",
+   "nimi": "Stade Vélodrome",
+   "peruste": "sitelinks",
+   "koko_m": 250,
+   "lat": 43.26924,
+   "lon": 5.39491,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Stade Vélodrome closeup.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Stade_V%C3%A9lodrome_closeup.jpg?width=1280",
+     "tekija": "Bernard Ddd",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Stade_V%C3%A9lodrome_closeup.jpg",
+     "selite": "Stade Vélodrome on Olympique de Marseillen kotistadion, jonka kaareutuva katto näkyy kauas.",
+     "leveys": 5347,
+     "korkeus": 3565,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Cabanons et Stade Vélodrome — Marseille (9615088071).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cabanons_et_Stade_V%C3%A9lodrome_%E2%80%94_Marseille_(9615088071).jpg?width=1280",
+     "tekija": "Jeanne Menjoulet from Paris, France",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cabanons_et_Stade_V%C3%A9lodrome_%E2%80%94_Marseille_(9615088071).jpg",
+     "selite": "Stadionin valkoinen katto erottuu kaupungin kattojen ja vuorten yllä.",
+     "leveys": 4752,
+     "korkeus": 3168,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Hafen von Marseille-Notre Dame de la Garde.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hafen_von_Marseille-Notre_Dame_de_la_Garde.jpg?width=1280",
+   "tekija": "Tobi 87",
+   "lisenssi": "CC BY-SA 3.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Hafen_von_Marseille-Notre_Dame_de_la_Garde.jpg",
+   "selite": "Notre-Dame de la Garden kukkulalta Marseille levittäytyy punakattoisena kaupunkina Välimeren rannalle.",
+   "leveys": 11510,
+   "korkeus": 3997,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "View of Marseille from Notre-Dame de la Garde 4.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/View_of_Marseille_from_Notre-Dame_de_la_Garde_4.jpg?width=1280",
+   "tekija": "kallerna",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:View_of_Marseille_from_Notre-Dame_de_la_Garde_4.jpg",
+   "selite": "Marseille on Ranskan toiseksi suurin kaupunki ja Välimeren tärkein satama.",
+   "leveys": 10500,
+   "korkeus": 3200,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}
