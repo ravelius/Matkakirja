@@ -1,0 +1,588 @@
+{
+ "kaupunki": "sydney",
+ "kaupunkiQ": "Q3130",
+ "kohteet": [
+  {
+   "q": "Q45178",
+   "nimi": "Sydneyn oopperatalo",
+   "peruste": "UNESCO",
+   "koko_m": 200,
+   "lat": -33.85706,
+   "lon": 151.2149,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "00 1375 Sydney Opera House (Australia).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/00_1375_Sydney_Opera_House_(Australia).jpg?width=1280",
+     "tekija": "W. Bulach",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:00_1375_Sydney_Opera_House_(Australia).jpg",
+     "selite": "Oopperatalon purjemaiset katot kohoavat Bennelongin niemellä Sydneyn sataman rannalla.",
+     "leveys": 3063,
+     "korkeus": 2000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "181021-D-SW162-2097 (31592885728).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/181021-D-SW162-2097_(31592885728).jpg?width=1280",
+     "tekija": "Chairman of the Joint Chiefs of Staff from Washington D.C, United States",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:181021-D-SW162-2097_(31592885728).jpg",
+     "selite": "Oopperatalon takana siintää Harbour Bridge, ja purjeveneet kulkevat edessä.",
+     "leveys": 3000,
+     "korkeus": 1723,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "2013AU10.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2013AU10.JPG?width=1280",
+     "tekija": "Travellers & Tinkers",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2013AU10.JPG",
+     "selite": "Rakennus erottuu keskustan pilvenpiirtäjien edessä satamaan työntyvällä niemellä.",
+     "leveys": 3950,
+     "korkeus": 2225,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 4,
+     "tiedosto": "Sydney Opera House Sails.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sydney_Opera_House_Sails.jpg?width=1280",
+     "tekija": "No machine-readable author provided. Roybb95~commonswiki assumed (based on copyright claims).",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Sydney_Opera_House_Sails.jpg",
+     "selite": "Katon kuorirakenteet on päällystetty vaaleilla laatoilla, jotka kimaltavat auringossa.",
+     "leveys": 2125,
+     "korkeus": 1405,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q54495",
+   "nimi": "Sydney Harbour Bridge",
+   "peruste": "sitelinks",
+   "koko_m": 1150,
+   "lat": -33.85223,
+   "lon": 151.21068,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "SydneyHarbourBridge1 gobeirne.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/SydneyHarbourBridge1_gobeirne.jpg?width=1280",
+     "tekija": "Photograph by Greg O'Beirne",
+     "lisenssi": "CC BY 2.5",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.5",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:SydneyHarbourBridge1_gobeirne.jpg",
+     "selite": "Teräskaarisilta ylittää Port Jacksonin ja yhdistää keskustan pohjoisrantaan.",
+     "leveys": 2958,
+     "korkeus": 1635,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Sydney harbour bridge new south wales.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sydney_harbour_bridge_new_south_wales.jpg?width=1280",
+     "tekija": "Adam.J.W.C.",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Sydney_harbour_bridge_new_south_wales.jpg",
+     "selite": "Illan valot korostavat sillan kaarta ja pylväitä.",
+     "leveys": 2599,
+     "korkeus": 1494,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q673418",
+   "nimi": "Bondi Beach",
+   "peruste": "sitelinks",
+   "koko_m": 1200,
+   "lat": -33.89111,
+   "lon": 151.27417,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "2022-10-22 Bondi Beach.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2022-10-22_Bondi_Beach.jpg?width=1280",
+     "tekija": "Maksym Kozlenko",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2022-10-22_Bondi_Beach.jpg",
+     "selite": "Bondi on Sydneyn tunnetuin ranta, jonka pitkä hiekkaranta aukeaa Tyynellemerelle.",
+     "leveys": 3874,
+     "korkeus": 2025,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "(1) Bondi Beach sunset 1.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/(1)_Bondi_Beach_sunset_1.JPG?width=1280",
+     "tekija": "Orestes654 (talk) 10:31, 30 November 2010 (UTC)",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:(1)_Bondi_Beach_sunset_1.JPG",
+     "selite": "Auringonlasku valaisee rantaa ja sen taakse nousevia rakennuksia.",
+     "leveys": 2560,
+     "korkeus": 1920,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q54489",
+   "nimi": "Sydneyn kuninkaallinen kasvitieteellinen puutarha",
+   "peruste": "sitelinks",
+   "koko_m": 1000,
+   "lat": -33.86222,
+   "lon": 151.2175,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Sydney (AU), Royal Botanic Gardens -- 2019 -- 3082.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sydney_(AU)%2C_Royal_Botanic_Gardens_--_2019_--_3082.jpg?width=1280",
+     "tekija": "Dietmar Rabich",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Sydney_(AU)%2C_Royal_Botanic_Gardens_--_2019_--_3082.jpg",
+     "selite": "Satamarannalla sijaitsevassa puutarhassa kasvaa puita ja kasveja eri puolilta maailmaa.",
+     "leveys": 6720,
+     "korkeus": 4480,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "2015-09-13 Royal Botanic Gardens, Sydney - 1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2015-09-13_Royal_Botanic_Gardens%2C_Sydney_-_1.jpg?width=1280",
+     "tekija": "Maksym Kozlenko",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2015-09-13_Royal_Botanic_Gardens%2C_Sydney_-_1.jpg",
+     "selite": "Puutarhan nurmikot ja polut ovat keskustan lähimpiä rauhallisia viheralueita.",
+     "leveys": 5184,
+     "korkeus": 3132,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q827268",
+   "nimi": "Sydney Tower",
+   "peruste": "sitelinks",
+   "koko_m": 300,
+   "lat": -33.87028,
+   "lon": 151.20889,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "SydneyAMPTower gobeirne.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/SydneyAMPTower_gobeirne.jpg?width=1280",
+     "tekija": "Photograph by Greg O'Beirne",
+     "lisenssi": "CC BY 2.5",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.5",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:SydneyAMPTower_gobeirne.jpg",
+     "selite": "Tornin kultaisen näköalakorin huipulta on näkymä yli koko kaupungin ja sataman.",
+     "leveys": 2750,
+     "korkeus": 2304,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "(1)Sydney from Centennial Park 153a.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/(1)Sydney_from_Centennial_Park_153a.jpg?width=1280",
+     "tekija": "Sardaka",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:(1)Sydney_from_Centennial_Park_153a.jpg",
+     "selite": "Torni erottuu siluettina illan taivasta vasten.",
+     "leveys": 2061,
+     "korkeus": 1512,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q54488",
+   "nimi": "Darling Harbour",
+   "peruste": "sitelinks",
+   "koko_m": 1000,
+   "lat": -33.87222,
+   "lon": 151.19917,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "2019-04-10 Sydney CBD view from Pyrmont at sunset.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2019-04-10_Sydney_CBD_view_from_Pyrmont_at_sunset.jpg?width=1280",
+     "tekija": "Maksym Kozlenko",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2019-04-10_Sydney_CBD_view_from_Pyrmont_at_sunset.jpg",
+     "selite": "Darling Harbour on keskustan länsipuolen satamalahti, jonka ympärillä on ravintoloita ja aukioita.",
+     "leveys": 3960,
+     "korkeus": 2176,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "2020-02-26 Barangaroo from Pyrmont Bridge.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2020-02-26_Barangaroo_from_Pyrmont_Bridge.jpg?width=1280",
+     "tekija": "Maksym Kozlenko",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2020-02-26_Barangaroo_from_Pyrmont_Bridge.jpg",
+     "selite": "Pyrmont Bridgeltä näkyy lahden toinen ranta ja Barangaroon uusi kaupunginosa.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q14210737",
+   "nimi": "The Rocks",
+   "peruste": "sitelinks",
+   "koko_m": 700,
+   "lat": -33.85667,
+   "lon": 151.20944,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Sydney (AU), The Rocks -- 2019 -- 2133.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sydney_(AU)%2C_The_Rocks_--_2019_--_2133.jpg?width=1280",
+     "tekija": "Dietmar Rabich",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Sydney_(AU)%2C_The_Rocks_--_2019_--_2133.jpg",
+     "selite": "The Rocks on Sydneyn vanhin kaupunginosa, jonka hiekkakivivarastot ovat satamarannalla.",
+     "leveys": 6720,
+     "korkeus": 3780,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "The rocks new south wales...jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/The_rocks_new_south_wales...jpg?width=1280",
+     "tekija": "Adam.J.W.C.",
+     "lisenssi": "CC BY-SA 2.5",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:The_rocks_new_south_wales...jpg",
+     "selite": "Kaupunginosan punatiilirakennukset ovat 1800-luvulta.",
+     "leveys": 1616,
+     "korkeus": 1327,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1092910",
+   "nimi": "Circular Quay",
+   "peruste": "sitelinks",
+   "koko_m": 500,
+   "lat": -33.861,
+   "lon": 151.211,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "\"River Cat\" Circular Quay. Sydney. (21621497176).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%22River_Cat%22_Circular_Quay._Sydney._(21621497176).jpg?width=1280",
+     "tekija": "Bernard Spragg. NZ from Christchurch, New Zealand",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%22River_Cat%22_Circular_Quay._Sydney._(21621497176).jpg",
+     "selite": "Circular Quay on Sydneyn lauttasatama, josta lähtee vuorot satamaan ja sen yli.",
+     "leveys": 3345,
+     "korkeus": 2309,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Circularkey.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Circularkey.jpg?width=1280",
+     "tekija": "Adam.J.W.C.",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Circularkey.jpg",
+     "selite": "Laiturin kävelyreitti kulkee oopperatalolle ja keskustan pilvenpiirtäjien alle.",
+     "leveys": 1979,
+     "korkeus": 1118,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q54518",
+   "nimi": "Queen Victoria Building",
+   "peruste": "sitelinks",
+   "koko_m": 120,
+   "lat": -33.8718,
+   "lon": 151.207,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "(1) Queen Victoria Building 4.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/(1)_Queen_Victoria_Building_4.JPG?width=1280",
+     "tekija": "Sardaka (talk) 08:21, 26 November 2010 (UTC)",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:(1)_Queen_Victoria_Building_4.JPG",
+     "selite": "Romaaniseen tyyliin rakennettu hiekkakivitalo on vuodelta 1898, ja sen kupolit erottuvat keskustassa.",
+     "leveys": 2560,
+     "korkeus": 1920,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "(1) Queen Victoria Building.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/(1)_Queen_Victoria_Building.JPG?width=1280",
+     "tekija": "Sardaka (talk) 08:11, 26 November 2010 (UTC)",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:(1)_Queen_Victoria_Building.JPG",
+     "selite": "Julkisivun kaarikäytävät ja koristeet ovat tuhansia kaupungin hiekkakivestä veistettyjä yksityiskohtia.",
+     "leveys": 2560,
+     "korkeus": 1920,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q971514",
+   "nimi": "Pyhän Marian katedraali",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": -33.87111,
+   "lon": 151.21333,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "(1)St Marys Cathedral.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/(1)St_Marys_Cathedral.jpg?width=1280",
+     "tekija": "Sardaka",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:(1)St_Marys_Cathedral.jpg",
+     "selite": "Gotiikkatyylinen katolinen katedraali kohoaa Hyde Parkin laidalla.",
+     "leveys": 6959,
+     "korkeus": 6029,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "St. Mary's Cathedral, Sídney-Australia42.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/St._Mary's_Cathedral%2C_S%C3%ADdney-Australia42.jpg?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:St._Mary's_Cathedral%2C_S%C3%ADdney-Australia42.jpg",
+     "selite": "Ilmasta näkyy risteyskirkon pitkä pohjakaava ja kaksi kärkitornia puiston vieressä.",
+     "leveys": 3369,
+     "korkeus": 2092,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1577600",
+   "nimi": "Hyde Park Barracks",
+   "peruste": "UNESCO",
+   "koko_m": 100,
+   "lat": -33.86961,
+   "lon": 151.21281,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "HydeParkBarracks.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/HydeParkBarracks.JPG?width=1280",
+     "tekija": "The original uploader was J Bar at English Wikipedia.",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:HydeParkBarracks.JPG",
+     "selite": "Francis Greenwayn suunnittelema tiilikasarmi rakennettiin 1819 vankien asunnoksi.",
+     "leveys": 2560,
+     "korkeus": 1920,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Barrack Blocks, Sydney, Australia.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Barrack_Blocks%2C_Sydney%2C_Australia.jpg?width=1280",
+     "tekija": "Yu LI",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Barrack_Blocks%2C_Sydney%2C_Australia.jpg",
+     "selite": "Sisäpihan rakennukset toimivat nykyään museona, joka kertoo siirtovankien elämästä.",
+     "leveys": 4108,
+     "korkeus": 2340,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1064813",
+   "nimi": "Taronga Zoo",
+   "peruste": "sitelinks",
+   "koko_m": 600,
+   "lat": -33.84333,
+   "lon": 151.24111,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Classic Sydney View (32191928597).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Classic_Sydney_View_(32191928597).jpg?width=1280",
+     "tekija": "Michael Coghlan from Adelaide, Australia",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Classic_Sydney_View_(32191928597).jpg",
+     "selite": "Eläintarhan rinteeltä avautuu näkymä sataman yli keskustaan ja Harbour Bridgelle.",
+     "leveys": 1600,
+     "korkeus": 1200,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q509716",
+   "nimi": "Manly",
+   "peruste": "sitelinks",
+   "koko_m": 1000,
+   "lat": -33.79833,
+   "lon": 151.28444,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Manly Wharf 2006.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Manly_Wharf_2006.jpg?width=1280",
+     "tekija": "AnonymousUnknown author ?",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Manly_Wharf_2006.jpg",
+     "selite": "Manlyn laituri on Circular Quayn lauttayhteyden päätepiste Pohjoisrannalla.",
+     "leveys": 1680,
+     "korkeus": 1050,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "(1)Delwood Beach-1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/(1)Delwood_Beach-1.jpg?width=1280",
+     "tekija": "Sardaka",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:(1)Delwood_Beach-1.jpg",
+     "selite": "Manlyn rantaa reunustavat norfolkinmännyt ja kalliot.",
+     "leveys": 3680,
+     "korkeus": 2456,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q14934922",
+   "nimi": "Mrs Macquarie's Chair",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": -33.85947,
+   "lon": 151.2222,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Mrs Macquarie's Chair 2013.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mrs_Macquarie's_Chair_2013.jpg?width=1280",
+     "tekija": "Mitch Ames",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mrs_Macquarie's_Chair_2013.jpg",
+     "selite": "Kallioon veistetty penkki on kuvernööri Macquarien vaimon mukaan nimetty näköalapaikka.",
+     "leveys": 3072,
+     "korkeus": 2304,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Mrs Macquarie's Chair, Mrs Macquaries Point, Sydney (483345) (9442941632).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mrs_Macquarie's_Chair%2C_Mrs_Macquaries_Point%2C_Sydney_(483345)_(9442941632).jpg?width=1280",
+     "tekija": "Robert Linsdell from St. Andrews, Canada",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mrs_Macquarie's_Chair%2C_Mrs_Macquaries_Point%2C_Sydney_(483345)_(9442941632).jpg",
+     "selite": "Hiekkakivipenkki sijaitsee Farm Coven kärjessä, ja sen vieressä on kaiverrus.",
+     "leveys": 4000,
+     "korkeus": 2248,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q856393",
+   "nimi": "Sydney Cricket Ground",
+   "peruste": "sitelinks",
+   "koko_m": 300,
+   "lat": -33.89167,
+   "lon": 151.22472,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Sydney Cricket Ground (24509044622).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sydney_Cricket_Ground_(24509044622).jpg?width=1280",
+     "tekija": "Marc Dalmulder from Hamlyn Terrace, Australia",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Sydney_Cricket_Ground_(24509044622).jpg",
+     "selite": "Stadionilla pelataan krikettiä ja jalkapalloa Moore Parkin vieressä.",
+     "leveys": 1600,
+     "korkeus": 1067,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "(1)Sydney Cricket Ground-4aa.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/(1)Sydney_Cricket_Ground-4aa.jpg?width=1280",
+     "tekija": "Sardaka",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:(1)Sydney_Cricket_Ground-4aa.jpg",
+     "selite": "Vanha punatiilinen jäsenkatsomo on stadionin historiallisin osa.",
+     "leveys": 3680,
+     "korkeus": 2456,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Sydney skyline from the north aerial 2010.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sydney_skyline_from_the_north_aerial_2010.jpg?width=1280",
+   "tekija": "Beau Giles",
+   "lisenssi": "CC BY 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Sydney_skyline_from_the_north_aerial_2010.jpg",
+   "selite": "Ilmasta näkyvät Sydneyn keskusta, oopperatalo ja Farm Coven puutarhat satamaa vasten.",
+   "leveys": 3344,
+   "korkeus": 2229,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Aerial view of Sydney Harbour.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aerial_view_of_Sydney_Harbour.jpg?width=1280",
+   "tekija": "Andy",
+   "lisenssi": "CC BY-SA 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aerial_view_of_Sydney_Harbour.jpg",
+   "selite": "Port Jackson haarautuu monin lahdin kaupungin ympäri.",
+   "leveys": 3072,
+   "korkeus": 1957,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}
