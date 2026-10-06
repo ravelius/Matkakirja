@@ -1,0 +1,539 @@
+{
+ "kaupunki": "kobenhavn",
+ "kaupunkiQ": "Q1748",
+ "kohteet": [
+  {
+   "q": "Q943946",
+   "nimi": "Nyhavn",
+   "peruste": "pelin nosto",
+   "koko_m": 250,
+   "lat": 55.67987,
+   "lon": 12.59041,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Nyhavn, Copenhagen, 20220618 1728 7354.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Nyhavn%2C_Copenhagen%2C_20220618_1728_7354.jpg?width=1280",
+     "tekija": "Jakub Hałun",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Nyhavn%2C_Copenhagen%2C_20220618_1728_7354.jpg",
+     "selite": "Nyhavnin kanavan varrella seisovat värikkäät 1600-luvun kauppiastalot.",
+     "leveys": 5860,
+     "korkeus": 3172,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "2018 - Nyhavn on sunset.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2018_-_Nyhavn_on_sunset.jpg?width=1280",
+     "tekija": "Moahim",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2018_-_Nyhavn_on_sunset.jpg",
+     "selite": "Auringonlasku värjää vanhat purjealukset ja kanavan veden.",
+     "leveys": 4040,
+     "korkeus": 2620,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q110289",
+   "nimi": "Tivoli",
+   "peruste": "pelin nosto",
+   "koko_m": 400,
+   "lat": 55.67361,
+   "lon": 12.56833,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Fountain in Tivoli Gardens, Copenhagen, 20220618 1307 7156.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Fountain_in_Tivoli_Gardens%2C_Copenhagen%2C_20220618_1307_7156.jpg?width=1280",
+     "tekija": "Jakub Hałun",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Fountain_in_Tivoli_Gardens%2C_Copenhagen%2C_20220618_1307_7156.jpg",
+     "selite": "Tivoli on vuonna 1843 avattu huvipuisto aivan Kööpenhaminan keskustassa.",
+     "leveys": 5048,
+     "korkeus": 3601,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Tivoli Gardens, Copenhagen, Denmark.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tivoli_Gardens%2C_Copenhagen%2C_Denmark.jpg?width=1280",
+     "tekija": "Junielib",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tivoli_Gardens%2C_Copenhagen%2C_Denmark.jpg",
+     "selite": "Tivolin sisäänkäynti hohtaa illalla valoissa.",
+     "leveys": 3072,
+     "korkeus": 2304,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q214619",
+   "nimi": "Pieni merenneito",
+   "peruste": "sitelinks",
+   "koko_m": 40,
+   "lat": 55.69286,
+   "lon": 12.59926,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Denmark, Copenhagen, Little Mermaid, Langelinie Promenade 150422-25.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Denmark%2C_Copenhagen%2C_Little_Mermaid%2C_Langelinie_Promenade_150422-25.jpg?width=1280",
+     "tekija": "Richardmaackphotography",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Denmark%2C_Copenhagen%2C_Little_Mermaid%2C_Langelinie_Promenade_150422-25.jpg",
+     "selite": "Pronssinen merenneito istuu kivellä Langelinien rannalla Andersenin sadun mukaan.",
+     "leveys": 3640,
+     "korkeus": 5460,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Denmark, Copenhagen, Little Mermaid, Langelinie Promenade 150422-26.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Denmark%2C_Copenhagen%2C_Little_Mermaid%2C_Langelinie_Promenade_150422-26.jpg?width=1280",
+     "tekija": "Richardmaackphotography",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Denmark%2C_Copenhagen%2C_Little_Mermaid%2C_Langelinie_Promenade_150422-26.jpg",
+     "selite": "Patsas on vuodelta 1913 ja Kööpenhaminan tunnetuin symboli.",
+     "leveys": 3640,
+     "korkeus": 5460,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q211053",
+   "nimi": "Amalienborgin linna",
+   "peruste": "pelin nosto",
+   "koko_m": 200,
+   "lat": 55.68403,
+   "lon": 12.59333,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Frederik V statue in Amalienborg Palace - DSC07144.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Frederik_V_statue_in_Amalienborg_Palace_-_DSC07144.JPG?width=1280",
+     "tekija": "Daderot",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Frederik_V_statue_in_Amalienborg_Palace_-_DSC07144.JPG",
+     "selite": "Amalienborgin aukion keskellä seisoo Fredrik V:n ratsastajapatsas.",
+     "leveys": 4320,
+     "korkeus": 3240,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Frederik V statue in Amalienborg Palace Copenhagen 2014 02.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Frederik_V_statue_in_Amalienborg_Palace_Copenhagen_2014_02.jpg?width=1280",
+     "tekija": "Julian Herzog (Website)",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Frederik_V_statue_in_Amalienborg_Palace_Copenhagen_2014_02.jpg",
+     "selite": "Neljä rokokoopalatsia ympäröivät aukiota, ja ne ovat Tanskan kuninkaallisen perheen asuntoja.",
+     "leveys": 3400,
+     "korkeus": 2258,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q206101",
+   "nimi": "Rosenborgin linna",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 55.68566,
+   "lon": 12.57748,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Rosenborg Castle in Copenhagen2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Rosenborg_Castle_in_Copenhagen2.jpg?width=1280",
+     "tekija": "Marco Almbauer",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Rosenborg_Castle_in_Copenhagen2.jpg",
+     "selite": "Rosenborgin renessanssilinna rakennettiin 1600-luvun alussa kuningas Kristian IV:n kesäasunnoksi.",
+     "leveys": 4713,
+     "korkeus": 3744,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Rosenborg Palace, Copenhagen, Denmark, 20220617 0912 6704.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Rosenborg_Palace%2C_Copenhagen%2C_Denmark%2C_20220617_0912_6704.jpg?width=1280",
+     "tekija": "Jakub Hałun",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Rosenborg_Palace%2C_Copenhagen%2C_Denmark%2C_20220617_0912_6704.jpg",
+     "selite": "Vihreä kuparikatto ja tornit tekevät linnasta helposti tunnistettavan.",
+     "leveys": 2759,
+     "korkeus": 4132,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q940733",
+   "nimi": "Christiansborgin linna",
+   "peruste": "pelin nosto",
+   "koko_m": 250,
+   "lat": 55.67583,
+   "lon": 12.57889,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Christiansborg Palace 2017-08-16.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Christiansborg_Palace_2017-08-16.jpg?width=1280",
+     "tekija": "Colin",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Christiansborg_Palace_2017-08-16.jpg",
+     "selite": "Christiansborgin linnassa istuu Tanskan parlamentti.",
+     "leveys": 9348,
+     "korkeus": 6233,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "2018 - Christiansborg from the Marble Bridge.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2018_-_Christiansborg_from_the_Marble_Bridge.jpg?width=1280",
+     "tekija": "Moahim",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2018_-_Christiansborg_from_the_Marble_Bridge.jpg",
+     "selite": "Linnan korkea torni kohoaa Slotsholmenin saarella, jota ympäröivät kanavat.",
+     "leveys": 4545,
+     "korkeus": 3000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1140534",
+   "nimi": "Rundetårn",
+   "peruste": "pelin nosto",
+   "koko_m": 40,
+   "lat": 55.68137,
+   "lon": 12.57579,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Kopenhagen (DK), Runder Turm -- 2017 -- 1438.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kopenhagen_(DK)%2C_Runder_Turm_--_2017_--_1438.jpg?width=1280",
+     "tekija": "Dietmar Rabich",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kopenhagen_(DK)%2C_Runder_Turm_--_2017_--_1438.jpg",
+     "selite": "Pyöreä torni valmistui 1600-luvulla observatorioksi.",
+     "leveys": 3648,
+     "korkeus": 5472,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Kopenhagen (DK), Runder Turm -- 2017 -- 1633.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kopenhagen_(DK)%2C_Runder_Turm_--_2017_--_1633.jpg?width=1280",
+     "tekija": "Dietmar Rabich",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kopenhagen_(DK)%2C_Runder_Turm_--_2017_--_1633.jpg",
+     "selite": "Tornin sisällä kulkee leveä kierteinen ramppi huipulle asti.",
+     "leveys": 5383,
+     "korkeus": 3589,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q29157",
+   "nimi": "Vapahtajan kirkko",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": 55.67278,
+   "lon": 12.59389,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Church tower – Church of Our Saviour, Copenhagen.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Church_tower_%E2%80%93_Church_of_Our_Saviour%2C_Copenhagen.jpg?width=1280",
+     "tekija": "OleNeitzel",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Church_tower_%E2%80%93_Church_of_Our_Saviour%2C_Copenhagen.jpg",
+     "selite": "Vapahtajan kirkon kierteinen torni on Christianshavnin tunnetuin maamerkki.",
+     "leveys": 3774,
+     "korkeus": 5661,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Climbing the 90m high Vor Frelsers Kirke spire (Church of Our Saviour) (37188404854).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Climbing_the_90m_high_Vor_Frelsers_Kirke_spire_(Church_of_Our_Saviour)_(37188404854).jpg?width=1280",
+     "tekija": "Jorge Láscar from Melbourne, Australia",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Climbing_the_90m_high_Vor_Frelsers_Kirke_spire_(Church_of_Our_Saviour)_(37188404854).jpg",
+     "selite": "Torniin voi kiivetä ulkopuolista portaikkoa pitkin.",
+     "leveys": 3680,
+     "korkeus": 5520,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1321231",
+   "nimi": "Marmorikirkko",
+   "peruste": "sitelinks",
+   "koko_m": 80,
+   "lat": 55.685,
+   "lon": 12.58944,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Marmorkirken October 2018 02.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Marmorkirken_October_2018_02.jpg?width=1280",
+     "tekija": "Arild Vågen",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Marmorkirken_October_2018_02.jpg",
+     "selite": "Marmorikirkon eli Fredrikinkirkon vihreä kupoli on yksi Pohjoismaiden suurimmista.",
+     "leveys": 4245,
+     "korkeus": 2834,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Marble church facade Copenhagen.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Marble_church_facade_Copenhagen.jpg?width=1280",
+     "tekija": "Jebulon",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Marble_church_facade_Copenhagen.jpg",
+     "selite": "Rokokootyylinen kirkko valmistui lopulta vasta 1800-luvun lopulla.",
+     "leveys": 3597,
+     "korkeus": 5669,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q221812",
+   "nimi": "Kastellet",
+   "peruste": "pelin nosto",
+   "koko_m": 400,
+   "lat": 55.69161,
+   "lon": 12.59357,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Kopenhagen (DK), Kastell von Kopenhagen, Kommandantgården -- 2017 -- 1594.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kopenhagen_(DK)%2C_Kastell_von_Kopenhagen%2C_Kommandantg%C3%A5rden_--_2017_--_1594.jpg?width=1280",
+     "tekija": "Dietmar Rabich",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kopenhagen_(DK)%2C_Kastell_von_Kopenhagen%2C_Kommandantg%C3%A5rden_--_2017_--_1594.jpg",
+     "selite": "Kastellet on tähdenmuotoinen linnake, joka on edelleen sotilaskäytössä.",
+     "leveys": 5396,
+     "korkeus": 3035,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Windmill of Kastellet (Copenhagen).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Windmill_of_Kastellet_(Copenhagen).jpg?width=1280",
+     "tekija": "Bob Collowan",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Windmill_of_Kastellet_(Copenhagen).jpg",
+     "selite": "Linnakkeen puistossa seisoo myös vanha tuulimylly.",
+     "leveys": 1952,
+     "korkeus": 3021,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q838297",
+   "nimi": "Kööpenhaminan ooppera",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 55.68194,
+   "lon": 12.60056,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Kopenhagen (DK), Opernhaus -- 2017 -- 1638.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kopenhagen_(DK)%2C_Opernhaus_--_2017_--_1638.jpg?width=1280",
+     "tekija": "Dietmar Rabich",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kopenhagen_(DK)%2C_Opernhaus_--_2017_--_1638.jpg",
+     "selite": "Operatalo kohoaa Holmenin saarella sataman rannalla, ja sen laaja katto työntyy ulos.",
+     "leveys": 4962,
+     "korkeus": 2791,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Copenhagen Opera House 2014 04.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Copenhagen_Opera_House_2014_04.jpg?width=1280",
+     "tekija": "Julian Herzog (Website)",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Copenhagen_Opera_House_2014_04.jpg",
+     "selite": "Illalla lasiseinä hehkuu veden yli.",
+     "leveys": 3400,
+     "korkeus": 1913,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q326528",
+   "nimi": "Børsen",
+   "peruste": "sitelinks",
+   "koko_m": 100,
+   "lat": 55.67549,
+   "lon": 12.58412,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Børsen Copenhagen Denmark.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/B%C3%B8rsen_Copenhagen_Denmark.jpg?width=1280",
+     "tekija": "Jebulon",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:B%C3%B8rsen_Copenhagen_Denmark.jpg",
+     "selite": "Børsenin entinen pörssirakennus tunnetaan lohikäärmeiden hännistä kiertyneestä tornistaan.",
+     "leveys": 5752,
+     "korkeus": 4156,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Børsen dragon spire roofs Copenhagen Denmark.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/B%C3%B8rsen_dragon_spire_roofs_Copenhagen_Denmark.jpg?width=1280",
+     "tekija": "Jebulon",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:B%C3%B8rsen_dragon_spire_roofs_Copenhagen_Denmark.jpg",
+     "selite": "Vihreä kuparikatto ja tiilijulkisivu kuvastavat hollantilaista renessanssia.",
+     "leveys": 4004,
+     "korkeus": 5948,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q952817",
+   "nimi": "Gefion-suihkulähde",
+   "peruste": "sitelinks",
+   "koko_m": 60,
+   "lat": 55.68931,
+   "lon": 12.59763,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Gefionspringvandet, København (02).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gefionspringvandet%2C_K%C3%B8benhavn_(02).jpg?width=1280",
+     "tekija": "Jiří Komárek",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Gefionspringvandet%2C_K%C3%B8benhavn_(02).jpg",
+     "selite": "Gefion-suihkulähteen jumalatar ajaa härkiään Kastelletin lähellä sataman rannalla.",
+     "leveys": 4310,
+     "korkeus": 2868,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Gefion Fountain - DSC07191.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gefion_Fountain_-_DSC07191.JPG?width=1280",
+     "tekija": "Daderot",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Gefion_Fountain_-_DSC07191.JPG",
+     "selite": "Pronssiset härät vetävät auraa myytin mukaisesti Seelannin saarta merestä.",
+     "leveys": 4320,
+     "korkeus": 3240,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q861363",
+   "nimi": "Christianshavn",
+   "peruste": "sitelinks",
+   "koko_m": 600,
+   "lat": 55.67361,
+   "lon": 12.59306,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Christianshavn Canal (Northeast-Facing View at East End - 02).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Christianshavn_Canal_(Northeast-Facing_View_at_East_End_-_02).jpg?width=1280",
+     "tekija": "Doyle of London",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Christianshavn_Canal_(Northeast-Facing_View_at_East_End_-_02).jpg",
+     "selite": "Christianshavn on kanavien halkoma kaupunginosa, jossa veneet ovat rannoilla.",
+     "leveys": 4592,
+     "korkeus": 3448,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Christianshavn Canal (Northeast-Facing View at East End - 01).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Christianshavn_Canal_(Northeast-Facing_View_at_East_End_-_01).jpg?width=1280",
+     "tekija": "Doyle of London",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Christianshavn_Canal_(Northeast-Facing_View_at_East_End_-_01).jpg",
+     "selite": "Värikkäät talot reunustavat kapeita vesiväyliä.",
+     "leveys": 4592,
+     "korkeus": 3448,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Panorama view on Copenhagen from Church of Our Saviour (2).jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Panorama_view_on_Copenhagen_from_Church_of_Our_Saviour_(2).jpg?width=1280",
+   "tekija": "Erwin Verbruggen from Amsterdam, The Netherlands",
+   "lisenssi": "CC BY-SA 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Panorama_view_on_Copenhagen_from_Church_of_Our_Saviour_(2).jpg",
+   "selite": "Kööpenhaminan katot ja tornit hohtavat kullanvärisessä illanvalossa.",
+   "leveys": 4096,
+   "korkeus": 2731,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Copenhagen, view from Rundetårn with Rosenborg Castle, 20220617 1004 6716.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Copenhagen%2C_view_from_Rundet%C3%A5rn_with_Rosenborg_Castle%2C_20220617_1004_6716.jpg?width=1280",
+   "tekija": "Jakub Hałun",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Copenhagen%2C_view_from_Rundet%C3%A5rn_with_Rosenborg_Castle%2C_20220617_1004_6716.jpg",
+   "selite": "Rundetårnista näkee Rosenborgin linnan ja kaupungin kattojen yli sataman suuntaan.",
+   "leveys": 5020,
+   "korkeus": 2652,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

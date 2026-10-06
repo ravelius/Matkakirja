@@ -1,0 +1,601 @@
+{
+ "kaupunki": "oslo",
+ "kaupunkiQ": "Q585",
+ "kohteet": [
+  {
+   "q": "Q863932",
+   "nimi": "Oslon kuninkaanlinna",
+   "peruste": "pelin nosto",
+   "koko_m": 200,
+   "lat": 59.91722,
+   "lon": 10.7275,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "00 7737 Royal Palace, Oslo.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/00_7737_Royal_Palace%2C_Oslo.jpg?width=1280",
+     "tekija": "W. Bulach",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:00_7737_Royal_Palace%2C_Oslo.jpg",
+     "selite": "Kuninkaanlinna on Norjan kuninkaan virallinen asuinpaikka kukkulalla Karl Johans gaten päässä.",
+     "leveys": 4350,
+     "korkeus": 2900,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "\"Die Hauptresidenz der Könige von Norwegen\". 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%22Die_Hauptresidenz_der_K%C3%B6nige_von_Norwegen%22._01.jpg?width=1280",
+     "tekija": "Holger Uwe Schmitt",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%22Die_Hauptresidenz_der_K%C3%B6nige_von_Norwegen%22._01.jpg",
+     "selite": "Linnan edessä seisoo kuningas Kaarle XIV Juhanan ratsastajapatsas.",
+     "leveys": 5906,
+     "korkeus": 3061,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1490775",
+   "nimi": "Karl Johans gate",
+   "peruste": "pelin nosto",
+   "koko_m": 300,
+   "lat": 59.91306,
+   "lon": 10.74083,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "\"Streifzug\" mit der Kamera durch Oslo. 18.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%22Streifzug%22_mit_der_Kamera_durch_Oslo._18.jpg?width=1280",
+     "tekija": "Holger Uwe Schmitt",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%22Streifzug%22_mit_der_Kamera_durch_Oslo._18.jpg",
+     "selite": "Karl Johans gate on Oslon pääkatu, joka johtaa kuninkaanlinnalle.",
+     "leveys": 5777,
+     "korkeus": 3852,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "\"Streifzug\" mit der Kamera durch Oslo. 21.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%22Streifzug%22_mit_der_Kamera_durch_Oslo._21.jpg?width=1280",
+     "tekija": "Holger Uwe Schmitt",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%22Streifzug%22_mit_der_Kamera_durch_Oslo._21.jpg",
+     "selite": "Kadun varrella on kauppoja, kahviloita ja historiallisia rakennuksia.",
+     "leveys": 5906,
+     "korkeus": 3413,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q644464",
+   "nimi": "Akershusin linnoitus",
+   "peruste": "pelin nosto",
+   "koko_m": 500,
+   "lat": 59.90661,
+   "lon": 10.73625,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "\"Am Ufer des Oslofjords liegt die Festung Akershus\" 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%22Am_Ufer_des_Oslofjords_liegt_die_Festung_Akershus%22_01.jpg?width=1280",
+     "tekija": "Holger Uwe Schmitt",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%22Am_Ufer_des_Oslofjords_liegt_die_Festung_Akershus%22_01.jpg",
+     "selite": "Akershusin linna ja linnoitus kohoavat Oslonvuonon rannalla satamaa vastapäätä.",
+     "leveys": 5906,
+     "korkeus": 3937,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "\"Am Ufer des Oslofjords liegt die Festung Akershus\" 02.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%22Am_Ufer_des_Oslofjords_liegt_die_Festung_Akershus%22_02.jpg?width=1280",
+     "tekija": "Holger Uwe Schmitt",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%22Am_Ufer_des_Oslofjords_liegt_die_Festung_Akershus%22_02.jpg",
+     "selite": "Keskiaikainen linna on suojellut kaupunkia vuosisatojen ajan.",
+     "leveys": 5906,
+     "korkeus": 3937,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q43280",
+   "nimi": "Oslon oopperatalo",
+   "peruste": "pelin nosto",
+   "koko_m": 250,
+   "lat": 59.90694,
+   "lon": 10.75361,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Full Opera by night.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Full_Opera_by_night.jpg?width=1280",
+     "tekija": "Rafał Konieczny",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Full_Opera_by_night.jpg",
+     "selite": "Oopperatalon valkoinen marmori- ja lasirakennus nousee suoraan vuonon vedestä.",
+     "leveys": 11462,
+     "korkeus": 3581,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "1 of 10 - Opera House, Oslo - NORWAY.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/1_of_10_-_Opera_House%2C_Oslo_-_NORWAY.jpg?width=1280",
+     "tekija": "Ignaz Wiradi",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:1_of_10_-_Opera_House%2C_Oslo_-_NORWAY.jpg",
+     "selite": "Rakennuksen kalteva katto toimii kävelyalueena, jolle pääsee kävelemään.",
+     "leveys": 2880,
+     "korkeus": 1908,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Let's go to the Opera.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Let's_go_to_the_Opera.jpg?width=1280",
+     "tekija": "Azediized",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Let's_go_to_the_Opera.jpg",
+     "selite": "Oopperatalo sijaitsee Bjørvikan uudessa kaupunginosassa vedenrajassa.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q373850",
+   "nimi": "Oslon kaupungintalo",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 59.91167,
+   "lon": 10.73361,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "\"Das monumentale Rathaus von Oslo\" 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%22Das_monumentale_Rathaus_von_Oslo%22_01.jpg?width=1280",
+     "tekija": "Holger Uwe Schmitt",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%22Das_monumentale_Rathaus_von_Oslo%22_01.jpg",
+     "selite": "Punatiilinen kaupungintalo kahden tornin kera on Oslon tunnetuimpia rakennuksia, ja siellä jaetaan Nobelin rauhanpalkinto.",
+     "leveys": 5906,
+     "korkeus": 2760,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "\"Das monumentale Rathaus von Oslo\" 04.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%22Das_monumentale_Rathaus_von_Oslo%22_04.jpg?width=1280",
+     "tekija": "Holger Uwe Schmitt",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%22Das_monumentale_Rathaus_von_Oslo%22_04.jpg",
+     "selite": "Rakennuksen kaksi tornia kohoavat satamakadun yläpuolelle.",
+     "leveys": 4840,
+     "korkeus": 3763,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1126911",
+   "nimi": "Vigelandin puisto",
+   "peruste": "sitelinks",
+   "koko_m": 700,
+   "lat": 59.92694,
+   "lon": 10.70111,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Vigeland Sculpture Park - Panoramic view towards the Monolith, Oslo, Norway.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Vigeland_Sculpture_Park_-_Panoramic_view_towards_the_Monolith%2C_Oslo%2C_Norway.jpg?width=1280",
+     "tekija": "Christian David",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Vigeland_Sculpture_Park_-_Panoramic_view_towards_the_Monolith%2C_Oslo%2C_Norway.jpg",
+     "selite": "Vigelandin puisto on Frogner-puiston veistospuisto, jonka keskellä kohoaa Monoliitti.",
+     "leveys": 7210,
+     "korkeus": 4056,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Vigeland Sculpture Park - Granite sculptures on the staircase, Oslo, Norway.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Vigeland_Sculpture_Park_-_Granite_sculptures_on_the_staircase%2C_Oslo%2C_Norway.jpg?width=1280",
+     "tekija": "Christian David",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Vigeland_Sculpture_Park_-_Granite_sculptures_on_the_staircase%2C_Oslo%2C_Norway.jpg",
+     "selite": "Gustav Vigelandin graniittiveistokset kuvaavat ihmiselämän vaiheita.",
+     "leveys": 6137,
+     "korkeus": 4091,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Vigeland Sculpture Park - View from the Monolith plateau towards the fountain, Oslo, Norway.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Vigeland_Sculpture_Park_-_View_from_the_Monolith_plateau_towards_the_fountain%2C_Oslo%2C_Norway.jpg?width=1280",
+     "tekija": "Christian David",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Vigeland_Sculpture_Park_-_View_from_the_Monolith_plateau_towards_the_fountain%2C_Oslo%2C_Norway.jpg",
+     "selite": "Puiston akseli johtaa Monoliitilta alas suihkulähteelle ja portille.",
+     "leveys": 6210,
+     "korkeus": 3881,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q33572",
+   "nimi": "Holmenkollbakken",
+   "peruste": "sitelinks",
+   "koko_m": 250,
+   "lat": 59.96389,
+   "lon": 10.66778,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "19-08-25-Oslo Holmenkollenbakken-RalfR.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/19-08-25-Oslo_Holmenkollenbakken-RalfR.jpg?width=1280",
+     "tekija": "Ralf Roletschek",
+     "lisenssi": "CC BY-SA 1.0 fi",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/1.0/fi/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:19-08-25-Oslo_Holmenkollenbakken-RalfR.jpg",
+     "selite": "Holmenkollenin hyppyrimäki kohoaa Oslon yllä, ja siellä on järjestetty hiihdon suurkisoja.",
+     "leveys": 3435,
+     "korkeus": 2626,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Holmenkollbakken, Ski Jump, Holmenkollen, Oslo - panoramio.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Holmenkollbakken%2C_Ski_Jump%2C_Holmenkollen%2C_Oslo_-_panoramio.jpg?width=1280",
+     "tekija": "qwesy qwesy",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Holmenkollbakken%2C_Ski_Jump%2C_Holmenkollen%2C_Oslo_-_panoramio.jpg",
+     "selite": "Mäen alla avautuu näkymä kaupunkiin ja vuonolle.",
+     "leveys": 1494,
+     "korkeus": 2329,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q961220",
+   "nimi": "Viikinkilaivamuseo",
+   "peruste": "sitelinks",
+   "koko_m": 120,
+   "lat": 59.90475,
+   "lon": 10.68444,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Vikingskipshuset november 2016.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Vikingskipshuset_november_2016.jpg?width=1280",
+     "tekija": "Peulle",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Vikingskipshuset_november_2016.jpg",
+     "selite": "Bygdøyn viikinkilaivamuseossa on esillä hyvin säilyneitä viikinkiaikaisia laivoja.",
+     "leveys": 4928,
+     "korkeus": 3264,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Oseberg Ship - Viking Ship Museum (Oslo).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Oseberg_Ship_-_Viking_Ship_Museum_(Oslo).jpg?width=1280",
+     "tekija": "Larry Lamsa",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Oseberg_Ship_-_Viking_Ship_Museum_(Oslo).jpg",
+     "selite": "Osebergin laiva on yksi maailman tunnetuimmista viikinkilaivalöydöistä.",
+     "leveys": 5584,
+     "korkeus": 3723,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q941250",
+   "nimi": "Fram-museo",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": 59.90333,
+   "lon": 10.69944,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Fram Museum in Oslo.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Fram_Museum_in_Oslo.JPG?width=1280",
+     "tekija": "Pudelek (Marcin Szala)",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Fram_Museum_in_Oslo.JPG",
+     "selite": "Fram-museo esittelee napa-alueiden tutkimusretkillä käytetyn Fram-laivan Bygdøyn niemellä.",
+     "leveys": 2592,
+     "korkeus": 1944,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "\"Die Fram wurde bei drei berühmten Polarexpeditionen eingesetzt\". 08.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%22Die_Fram_wurde_bei_drei_ber%C3%BChmten_Polarexpeditionen_eingesetzt%22._08.jpg?width=1280",
+     "tekija": "Holger Uwe Schmitt",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%22Die_Fram_wurde_bei_drei_ber%C3%BChmten_Polarexpeditionen_eingesetzt%22._08.jpg",
+     "selite": "Laiva on esillä museossa lähes kokonaisena, ja sen kansille pääsee astumaan.",
+     "leveys": 5906,
+     "korkeus": 4417,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q844926",
+   "nimi": "Munch-museo",
+   "peruste": "sitelinks",
+   "koko_m": 100,
+   "lat": 59.90575,
+   "lon": 10.75531,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Munchmuseet Oslo JUN2019.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Munchmuseet_Oslo_JUN2019.jpg?width=1280",
+     "tekija": "Annikdance",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Munchmuseet_Oslo_JUN2019.jpg",
+     "selite": "Uusi Munch-museo Bjørvikassa säilyttää Edvard Munchin maalauksia ja grafiikkaa.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "MUNCH Museum front (2020) 4.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/MUNCH_Museum_front_(2020)_4.jpg?width=1280",
+     "tekija": "Premeditated",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:MUNCH_Museum_front_(2020)_4.jpg",
+     "selite": "Rakennus kallistuu kohti vuonoa ja nousee satamaan.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1063209",
+   "nimi": "Oslon tuomiokirkko",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": 59.91232,
+   "lon": 10.74696,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "2012.11.09.Oslodomkirke.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2012.11.09.Oslodomkirke.jpg?width=1280",
+     "tekija": "Nina-no This photo was taken by Nina-no. Please credit this photo Nina Aldin Thune in the immediate vicinity of the image. Distribution: Creative Commons Kunsthistorie.com Farmasihistorie.com",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2012.11.09.Oslodomkirke.jpg",
+     "selite": "Oslon tuomiokirkko on kaupungin pääkirkko 1600-luvulta.",
+     "leveys": 3840,
+     "korkeus": 5760,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "\"Streifzug\" durch die Stadt Oslo. 03.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%22Streifzug%22_durch_die_Stadt_Oslo._03.jpg?width=1280",
+     "tekija": "Holger Uwe Schmitt",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%22Streifzug%22_durch_die_Stadt_Oslo._03.jpg",
+     "selite": "Kirkko seisoo keskustassa lähellä Karl Johans gatea.",
+     "leveys": 5906,
+     "korkeus": 2846,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q6515317",
+   "nimi": "Stortinget",
+   "peruste": "sitelinks",
+   "koko_m": 120,
+   "lat": 59.91306,
+   "lon": 10.74,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Storting building.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Storting_building.jpg?width=1280",
+     "tekija": "Christian David",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Storting_building.jpg",
+     "selite": "Stortinget on Norjan parlamentin talo, jonka keltainen julkisivu on Karl Johans gaten varrella.",
+     "leveys": 12287,
+     "korkeus": 5702,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "\"Streifzug\" mit der Kamera durch Oslo. 13.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%22Streifzug%22_mit_der_Kamera_durch_Oslo._13.jpg?width=1280",
+     "tekija": "Holger Uwe Schmitt",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%22Streifzug%22_mit_der_Kamera_durch_Oslo._13.jpg",
+     "selite": "Talon pyöreä keskiosa muodostaa rakennuksen tunnusmerkin.",
+     "leveys": 5906,
+     "korkeus": 2774,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1415972",
+   "nimi": "Kon-Tiki-museo",
+   "peruste": "sitelinks",
+   "koko_m": 100,
+   "lat": 59.90361,
+   "lon": 10.69806,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "The Kon-Tiki Museum, Oslo.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/The_Kon-Tiki_Museum%2C_Oslo.jpg?width=1280",
+     "tekija": "Grzegorz Wysocki",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:The_Kon-Tiki_Museum%2C_Oslo.jpg",
+     "selite": "Kon-Tiki-museo kertoo Thor Heyerdahlin tutkimusretkistä Bygdøyn niemellä.",
+     "leveys": 1369,
+     "korkeus": 1024,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "KonTiki Museum.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/KonTiki_Museum.jpg?width=1280",
+     "tekija": "Philip Gabrielsen",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:KonTiki_Museum.jpg",
+     "selite": "Museossa on esillä Kon-Tiki-lautta, jolla Heyerdahl purjehti Tyynenmeren yli.",
+     "leveys": 1280,
+     "korkeus": 802,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q941120",
+   "nimi": "Nobelin rauhankeskus",
+   "peruste": "sitelinks",
+   "koko_m": 80,
+   "lat": 59.91161,
+   "lon": 10.73023,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Centro Nobel Paz.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Centro_Nobel_Paz.jpg?width=1280",
+     "tekija": "Canaan",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Centro_Nobel_Paz.jpg",
+     "selite": "Nobelin rauhankeskus on entisessä rautatieasemarakennuksessa Oslon satamassa ja kertoo rauhanpalkinnosta.",
+     "leveys": 4080,
+     "korkeus": 3060,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Nobel Peace Center, 2019 (01).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Nobel_Peace_Center%2C_2019_(01).jpg?width=1280",
+     "tekija": "Bahnfrend",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Nobel_Peace_Center%2C_2019_(01).jpg",
+     "selite": "Keskus sijaitsee kaupungintalon vieressä, jossa rauhanpalkinto jaetaan.",
+     "leveys": 5262,
+     "korkeus": 3976,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3267175",
+   "nimi": "Bjørvika",
+   "peruste": "sitelinks",
+   "koko_m": 900,
+   "lat": 59.90722,
+   "lon": 10.74917,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Oslo at night.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Oslo_at_night.jpg?width=1280",
+     "tekija": "Jørn Eriksson",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Oslo_at_night.jpg",
+     "selite": "Bjørvika on Oslon uusi vuononrantakaupunginosa, jonka pilvenpiirtäjät tunnetaan nimellä Barcode.",
+     "leveys": 3876,
+     "korkeus": 2740,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "2011-05-29 Bjørvika.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2011-05-29_Bj%C3%B8rvika.jpg?width=1280",
+     "tekija": "Chell Hill",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2011-05-29_Bj%C3%B8rvika.jpg",
+     "selite": "Alueen oopperatalon valkoinen katto ja uudet rakennukset heijastuvat vuonon pintaan.",
+     "leveys": 5184,
+     "korkeus": 2393,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Barcode and Oslo Opera house seen from Ekeberg.JPG",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Barcode_and_Oslo_Opera_house_seen_from_Ekeberg.JPG?width=1280",
+   "tekija": "Helge Høifødt",
+   "lisenssi": "CC BY-SA 3.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Barcode_and_Oslo_Opera_house_seen_from_Ekeberg.JPG",
+   "selite": "Oslo nousee Oslonvuonon pohjukkaan, ja uusi Bjørvikan kaupunginosa muodostaa kaupungin siluettia.",
+   "leveys": 3872,
+   "korkeus": 2592,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "2010-10-25 Oslo.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2010-10-25_Oslo.jpg?width=1280",
+   "tekija": "Chell Hill",
+   "lisenssi": "CC BY-SA 3.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2010-10-25_Oslo.jpg",
+   "selite": "Ilmasta näkyvät Oslonvuono ja sen saaret sekä kaupungin ympäröivät metsäiset kukkulat.",
+   "leveys": 5176,
+   "korkeus": 3063,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}
