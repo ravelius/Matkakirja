@@ -18,3 +18,8 @@ TODISTUS.md: ajo a `/Users/Shared/Claude/proto-3d/lokit/todistus-juna148c-a-2026
 | Mikki, valmisluennat, Pulu aloitusruudulla, siirto yli 30 km latausruudulla, Tietoja ja lähteet, kirjoitusrivi | EI TESTATTU |
 
 Päätös VIE: Poistu → kartta ja opas OK, 0 Exception/0 kaatumista. Todentamatta jäi linnan Laituri (ensilataus) ja Liiku-nappi — pieni lisävuoro (≈3 min, linna ladattu) kattaisi ne, jos tarvitaan.
+
+## Lisävuoro 13.58–14.02 (1572C658, mykkä, b9499e74): Laituri OK, Liiku-tap EI TODENNETTU
+TODISTUS.md: `/Users/Shared/Claude/proto-3d/lokit/todistus-juna148c-c-20261006-1358/` (kopio `todistus-juna148-b9499e74-c-20261006.md`). 0 Exception, 0 VIRHE-riviä.
+- **Linna → Laituri: OK.** Linna latautui (60 s), ≡ → Huoneet → Laituri oikeilla kosketuksilla, `kuunnelma laituri alkaa`; kuvassa laituri, soutaja ja kaksi hahmoa, ei pop-up-kortteja (kortit vain napautuksesta) (`juna148-b9499e74-lisa-laituri.png`).
+- **Liiku-kuvakenappi (203,778): tap lähetetty, mutta stillissä ei näkynyt muutosta** (nappirivi ennallaan, ei listaa/kierrosta; `…-lisa-liiku-tap.png`). Joko Liiku avasi jotain, joka ehti sulkeutua, tai tap ei osunut; tarvitaan Natiivisepän kuvaus odotetusta käytöksestä (lista vs. kaupunkikierros) → HUOM, ei PASS.
