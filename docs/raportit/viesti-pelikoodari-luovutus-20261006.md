@@ -28,6 +28,8 @@ Uusi Pelikoodari: lue tämä, sitten docs/raportit/viesti-pelikoodari-aloitus.md
 
 ## Kaupunkiäänimaisema (omistaja 21.4x, Siirtoseppä soitin) — KESKEN
 - Äänikartta: tools/aanimaisema/tee-aanikartta.mjs (committoitu VAIN tähän luovutushaaraan — siirrä worktreehen
+  VALMIS 23.45: /Users/Shared/Claude/proto-3d/_valmiit/aanimaisema-vienti-20261006/aanet/aanikartta-v1/pariisi.json (120 × 120, 278 kt,
+  kirkot katkaistu 400:aan — harkitse rajaa); tarkista kerrokset kuvana ennen vientiä; LAHTEET.md (OSM ODbL) ja SHA256SUMS puuttuvat.
   ja PR). Pariisin ajo käynnissä/keskeytynyt Overpass-ruuhkaan; välimuisti /Users/Shared/Claude/proto-3d/_tyo/aanikartta-osm jatkaa.
   Muoto sovittu (aanet/aanikartta-v1/<id>.json, 13 kerrosta, base64 Uint8, lounas/askel, kirkot). Id: pariisi, venetsia, koopenhamina.
   Lisää id aineistot.js:n aanikartta-listaan vasta, kun kaupungin silmukat ovat ämpärissä (Siirtoseppä).
