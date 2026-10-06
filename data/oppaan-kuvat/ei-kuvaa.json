@@ -1,8 +1,20 @@
 [
  {
+  "q": "Q3403979",
+  "nimi": "Miklušin vankila",
+  "kaupunki": "kosice",
+  "syy": "vain sisätilakuvia museonäyttelystä, ei tunnistettavaa ulkokuvaa"
+ },
+ {
   "q": "Q178065",
   "nimi": "Pompidou-keskus",
   "kaupunki": "pariisi",
   "syy": "ei hyvää vapaata ulkokuvaa: löytyneet kuvat ovat joko kaukaa, ihmispainotteisia tai väärä kohde"
+ },
+ {
+  "q": "Q8502697",
+  "nimi": "Keltainen linnake",
+  "kaupunki": "sarajevo",
+  "syy": "ei kelvollista kuvaa: vain kaupunkipanoraamoja ja yksityiskohtia"
  }
 ]
