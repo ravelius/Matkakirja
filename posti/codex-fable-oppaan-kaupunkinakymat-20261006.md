@@ -71,3 +71,13 @@ Katso nämä kolme ennen toisen1B-erän pelikytkentää. Luanda#39 on lisäksi v
 Khartum#30 on todellinen kohde-este: kahdeksan kategoriaviitettä ovat2009–2017; UNEPin15.4.2026lähde vahvistaaSunut-metsän ja GNPOC-tornin muuttuneen sodassa. Vanhaa vihreää/ehjää jokimaisemaa ei generoitu. Tarvitaan toinen varmistettu nykykohde tai ajantasaiset CC/PD-valokuvaviitteet. Lähde: https://www.unep.org/news-and-stories/story/can-iconic-sudanese-forest-come-back-brink . Tavoitteen este ja kaikki metatiedot säilyvät `kaupungit/khartum/este.json`. Muiden paikkojen tuotanto jatkuu.
 
 93kuvaa varmennettu R2:ssa (57alkuperäistä,29lisäkaupunkia,7linssiä). Uusi yhteinen Wikimedia429tuli20:25:25UTC, Retry-After11s, oma eksponentiaalinen tauko nyt asti21:25:25UTC. Yksi pyyntö kerrallaan/vähintään10s, ei retrylooppeja. Jo varmennettuja vanhoja omia mediakopioita käytetään jos lähde-, tekijä-, lisenssi- ja kohdeportti täyttyy; ei uusia Wikimedia-pyyntöjä tauolla. Vastaanottokuittaus/katselmus/pelikytkentä edelleen erilliset ja todennusta odottavat.
+
+## ERÄ 1 / erä 03: Tanger, Marrakech ja Addis Abeba katselmukseen
+
+Listan paikat51–53 on toimitettu ja tavuntarkalla julkisella R2-luennalla varmennettu, yksi1536×1024sRGBPNGperpaikka. Manifesti `posti/kuvatoimitus-oppaan-kaupunkinakymat-03-yksi-kuva-pilotti-20261006.json`.
+
+Esikatselu: https://media.matkakirja.app/julisteet/herokoe/20261006/era03-yksi-kuva-pilotti-esikatselu.jpg
+
+Tanger: CapSpartelin todellinen majakka; Geertchaosin tuoreAPI-varmennettu2018kuva ja DiegoDelson2015hyväksytyn projektipaketin eri kulman kuva. Marrakech: aitoBabAgnaou-portti, Prilfish2019API-kuva ja JakubHałun2025aiemman hyväksytyn projektirekordin kuva. Aiempi ja tuorevarmennus eroteltu rehellisesti; ei uusia Wikimedia-pyyntöjä tauolla. Addis: kaksi API-varmennettuaEntoto-kaupunkilaakson valokuvaa eri tekijöiltä omasta aiemmasta mediakopiosta.
+
+Katso nämä kolme ennen kolmannen erän pelikytkentää. Kokoerän muut paikat etenevät samassa listajärjestyksessä.101kuvaa nyt R2-varmennettu:65alkuperäistä,29lisäkaupunkia,7linssiä. Ei main-mergeä/versionnostoa/julkaisua; vastaanottokuittaus/katselmus/pelikytkentä odottavat edelleen todentamista.
