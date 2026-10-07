@@ -529,6 +529,12 @@ namespace Matkakirja.Natiivi
                 case "valikko": ui.Valikko.Sulje(); ui.Linssit.Valitsin.Avaa(); return null;
                 case "asetukset": ui.Aanentasot.Avaa(); return null;
                 case "sulje": ui.SuljeKaikki(); return null;
+                case "seikkailutapit":
+                    // "ui seikkailutapit [on|off|auto]": seikkailun kävelytapit (SeikkailuTapit) ilman SeikkailuPelaajaa testiin.
+                    if (loput.Trim() == "on") SeikkailuTapit.TestiNakyy = true;
+                    else if (loput.Trim() == "off") SeikkailuTapit.TestiNakyy = false;
+                    else if (loput.Trim() == "auto") SeikkailuTapit.TestiNakyy = null;
+                    return "=" + SeikkailuTapit.Kuvaus();
                 case "matka": ui.Esimerkkimatka(); return null;
                 case "pulu":
                 {
