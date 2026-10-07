@@ -204,3 +204,31 @@ test('esittely_polut: Praha ja Wien poikkeavasta polusta (avaus + kierros), muut
   await oppaanEsittely({}, 'Praha', haku); await oppaanEsittely({}, 'Rooma', haku);
   assert.deepEqual(urlit, ['https://media.matkakirja.app/opas/esittely-v1b/praha.json', 'https://media.matkakirja.app/opas/esittely-v1/rooma.json']);
 });
+
+test('sana-ajat (LS1 7.10.): aani_ajat vain kun R2:ssa on <sha>.ajat.json; GET palauttaa R2:sta, puuttuva 404', async () => {
+  const { createHash } = await import('node:crypto');
+  const sha = createHash('sha256').update(`william|eleven_v4_turbo|${ESITTELY.kohteet[0].teksti}`).digest('hex').slice(0, 32);
+  const ajat = JSON.stringify({ versio: 1, teksti: ESITTELY.kohteet[0].teksti, sanat: [[0, 0.1, 0.4]] });
+  const env = ymparisto();
+  const vanhaGet = env.PUHE_R2.get;
+  env.PUHE_R2.get = async (k) => (k === `opas/${sha}.mp3` ? { body: new Uint8Array(4), text: async () => '' }
+    : k === `opas/${sha}.ajat.json` ? { body: ajat, text: async () => ajat } : vanhaGet(k));
+  const { d } = await opas(env, { toive: 'Esittele kaupunki', istunto: 'aj1' });
+  assert.equal(d.valmis, true);
+  assert.ok(String(d.aani_ajat).endsWith(`/opas/aani/${sha}.ajat.json`), `aani_ajat ${d.aani_ajat}`);
+  const g = await worker.fetch(new Request(`https://pollo.example/opas/aani/${sha}.ajat.json`), env, { waitUntil() {} });
+  assert.equal(g.status, 200); assert.deepEqual(await g.json(), JSON.parse(ajat));
+  const puuttuu = await worker.fetch(new Request(`https://pollo.example/opas/aani/${'e'.repeat(32)}.ajat.json`), env, { waitUntil() {} });
+  assert.equal(puuttuu.status, 404);
+  // Ilman ajat-tiedostoa kenttää ei ole (vanhat natiivit ja varapolku).
+  const ilman = ymparisto();
+  const g2 = ilman.PUHE_R2.get;
+  ilman.PUHE_R2.get = async (k) => (k === `opas/${sha}.mp3` ? { body: new Uint8Array(4), text: async () => '' } : g2(k));
+  const { d: d2 } = await opas(ilman, { toive: 'Esittele kaupunki', istunto: 'aj2' });
+  assert.equal('aani_ajat' in d2, false);
+});
+
+test('yksityiskohdat_polut: Pariisin luettelo v2 (Sisältökirjuri 7.10.)', async () => {
+  const { OPAS_AINEISTOT } = await import('../tools/pollo/aineistot.js');
+  assert.deepEqual(OPAS_AINEISTOT.yksityiskohdat_polut, { pariisi: 'esittely/pariisi-v2/pariisi-yksityiskohdat.json' });
+});

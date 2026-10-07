@@ -2754,6 +2754,20 @@ async function oppaanValmisAani(pyynto, env, teksti) {
     kesto_s: Math.round((vuosiluvutSanoiksi(teksti).length / OPAS_MERKKIA_SEKUNNISSA) * 10) / 10 };
 }
 
+/**
+ * SANA-AJAT (LS1 7.10.: yksityiskohtakuva ankkurisanan kohdalla): ääni-URL …/opas/aani/<sha>.mp3 → …/<sha>.ajat.json, jos
+ * R2:ssa on opas/<sha>.ajat.json ({ versio, teksti (näytön teksti), sanat: [[merkki_indeksi, alku_s, loppu_s], …] };
+ * tools/opas/tee-aaniajat.mjs kohdistuksesta). Muuten null (natiivi käyttää varapolkua).
+ */
+async function aaniAjat(env, aaniUrl) {
+  const m = /\/opas\/aani\/([0-9a-f]{32})\.mp3$/.exec(aaniUrl ?? '');
+  if (!m || !env.PUHE_R2) return null;
+  try {
+    const on = await (env.PUHE_R2.head ? env.PUHE_R2.head(`opas/${m[1]}.ajat.json`) : env.PUHE_R2.get(`opas/${m[1]}.ajat.json`));
+    return on ? aaniUrl.replace(/\.mp3$/, '.ajat.json') : null;
+  } catch { return null; }
+}
+
 /** POST: ääni-url heti (teksti KV:hen, katto lasketaan nyt) → { aani, kesto_s } tai null. */
 async function oppaanAani(pyynto, env, ctx, naytettava, kehittaja) {
   if (!naytettava) return null;
@@ -2855,9 +2869,16 @@ function kirjaaOppaanAani(env, ctx, tietue) {
 
 /** GET /opas/aani/<sha>.mp3: valmis ääni (välimuisti, R2) tai tuotetaan nyt ja palautetaan kokonaisena. */
 async function hoidaOppaanAani(pyynto, env, ctx) {
-  const m = /^\/opas\/aani\/([0-9a-f]{32})\.(mp3|pcm)$/.exec(new URL(pyynto.url).pathname);
+  const m = /^\/opas\/aani\/([0-9a-f]{32})\.(mp3|pcm|ajat\.json)$/.exec(new URL(pyynto.url).pathname);
   if (!m) return new Response('Ei löydy', { status: 404 });
   if (m[2] === 'pcm') return hoidaOppaanPcm(pyynto, env, ctx, m[1]);
+  if (m[2] === 'ajat.json') {
+    // Sanakohtaiset ajat (yksityiskohtakuvat ankkurisanan kohdalla, LS1 7.10.): vain R2:sta, ei koskaan tuoteta.
+    const olio = env.PUHE_R2 ? await env.PUHE_R2.get(`opas/${m[1]}.ajat.json`).catch(() => null) : null;
+    if (!olio) return new Response('Ei löydy', { status: 404 });
+    return new Response(olio.body, { headers: { 'content-type': 'application/json; charset=utf-8',
+      'cache-control': 'public, max-age=31536000, immutable', 'access-control-allow-origin': '*' } });
+  }
   const sha = m[1];
   const avain = `opas/${sha}.mp3`;
   const valmis = async () => {
@@ -3223,8 +3244,10 @@ async function hoidaOppaanKysymykset(pyynto, env, kors, ctx) {
   const kysymykset = omat ?? await oppaanKysymykset(env, { paikka, nimi, kaupunki });
   if (!valmis) return vastaa({ paikka, kysymykset }, kors);
   const aani = await oppaanValmisAani(pyynto, env, valmis.puhe_teksti || valmis.teksti).catch(() => null);
+  const ajat = aani?.aani ? await aaniAjat(env, aani.aani) : null;
   return vastaa({ paikka, kysymykset, kerro_lisaa_teksti: valmis.teksti, kerro_lisaa_aani: aani?.aani ?? null,
-    kerro_lisaa_aani_pcm: aani?.aani_pcm ?? null, kerro_lisaa_aani_taajuus: aani?.aani_taajuus ?? null, kerro_lisaa_kesto_s: aani?.kesto_s ?? null }, kors);
+    kerro_lisaa_aani_pcm: aani?.aani_pcm ?? null, kerro_lisaa_aani_taajuus: aani?.aani_taajuus ?? null, kerro_lisaa_kesto_s: aani?.kesto_s ?? null,
+    ...(ajat ? { kerro_lisaa_aani_ajat: ajat } : {}) }, kors);
 }
 
 /**
@@ -3638,8 +3661,10 @@ async function hoidaOpas(pyynto, env, kors, runko, ctx) {
     tulos.vaihtoehtojen_ryhmat = tulos.vaihtoehdot.map((x, i) => (tulos.tyyppi === 'pysahdys' && i === 0 ? 'syventava' : siltaRyhma(x)));
   }
   tulos.toiveen_ryhma = p.toive ? siltaRyhma(p.toive) : (seuraava ? 'kierros' : null);
+  // Sana-ajat vain valmiille esittelylle (litteä kenttä; vanhat natiivit ohittavat sen).
+  const ajat = tulos.valmis && aani?.aani ? await aaniAjat(env, aani.aani) : null;
   return vastaa({ ...tulos, aani: aani?.aani ?? null, aani_pcm: aani?.aani_pcm ?? null, aani_taajuus: aani?.aani_taajuus ?? null,
-    kesto_s: aani?.kesto_s ?? null }, kors);
+    kesto_s: aani?.kesto_s ?? null, ...(ajat ? { aani_ajat: ajat } : {}) }, kors);
 }
 
 export default {
