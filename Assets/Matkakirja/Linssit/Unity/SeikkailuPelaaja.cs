@@ -465,6 +465,22 @@ namespace Matkakirja.Natiivi
         }
         static bool tapitHaettu; static System.Reflection.PropertyInfo tapVasen, tapOikea; static System.Reflection.MethodInfo tapKatse;
 
+        /// <summary>Katseen syöte asteina ilman pelaajaa (veneessä): x kääntö oikealle, y nosto ylös — hiiri (oikea pohjassa tai lukittu),
+        /// peliohjaimen oikea sauva (140°/s), Natiivi-UI:n oikea veto (SeikkailuTapit.OtaKatse).</summary>
+        public static Vector2 KatseSyote(float dt)
+        {
+            var k = Vector2.zero;
+            var hiiri = Mouse.current;
+            if (hiiri != null && (hiiri.rightButton.isPressed || Cursor.lockState == CursorLockMode.Locked)) k += hiiri.delta.ReadValue() * HiiriAstePerPx;
+            var gp = Gamepad.current;
+            if (gp != null) { var r = gp.rightStick.ReadValue(); if (r.magnitude > (float)Kavely.KuolleAlue) k += r * (float)Kavely.KatseNopeusAsteS * dt; }
+            if (!tapitHaettu) { tapitHaettu = true; var t = typeof(SeikkailuPelaaja).Assembly.GetType("Matkakirja.Natiivi.SeikkailuTapit");
+                const System.Reflection.BindingFlags F = System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Static;
+                tapVasen = t?.GetProperty("Vasen", F); tapOikea = t?.GetProperty("Oikea", F); tapKatse = t?.GetMethod("OtaKatse", F, null, Type.EmptyTypes, null); }
+            if (tapKatse != null && tapKatse.Invoke(null, null) is Vector2 v) k += v;
+            return k;
+        }
+
         /// <summary>Pulun reunakuvan napautus (Natiivi-UI: Pulu.NapautusKaappaa) pyytää vihjettä. Palauttaa, otettiinko napautus
         /// käyttöön. Vihjeportaat (pelattavuusmalli kohta 5) tulevat tähän; siihen asti false (Natiivi-UI:n oletus jatkuu).</summary>
         public static bool PuluVihje()
