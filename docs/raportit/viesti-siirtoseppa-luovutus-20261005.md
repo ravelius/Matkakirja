@@ -1,4 +1,4 @@
-# Siirtosepän luovutus 5.–7.10.2026 — TILA 7.10. KLO 19.1x, TILINVAIHTO ~22 (Opus 5.5, high)
+# Siirtosepän luovutus 5.–7.10.2026 — TILA 7.10. KLO 20.1x, TILINVAIHTO ~22 (Opus 5.5, high)
 
 ## ALOITUSVIESTI SEURAAJALLE
 
@@ -8,14 +8,18 @@ kappeli). Lue tämä osio ja alin TILA-loki (päivän loppu), sitten CLAUDE.md j
   <haara>:refs/heads/peili/proto/<haara>`). Luovutus: tämä tiedosto haarassa siirtoseppa-luovutus (Matkakirja-siirtoseppa).
 - Haarat: **siirtoseppa/historia-h0** (kolmas persoona, junien pohja, kärki c652ba83), **siirtoseppa/historia-juna164 @ 6d2b1149**
   (kuittaus pyydetty PT:ltä; juna163 + V7 + tietokerros + v44i-merkit + nousu laiturille; pala v44j 42d49bd4),
-  **siirtoseppa/historia-fp @ 0b396d7d** (ENSIMMÄINEN PERSOONA + kädet-v1 + pelattavuusmallin vaiheet 1–2 osin, ei vielä junaan; pala v44n 190df07e).
+  **siirtoseppa/historia-fp @ 0b396d7d** (ENSIMMÄINEN PERSOONA + kädet-v1; pelattavuusmallin 8.10. työjärjestyksestä TEHTY JO 7.10. ILLALLA lähes kaikki, ks. TILA-loki; pala v44n 190df07e).
+  **siirtoseppa/historia-fp-juna @ 2f492b05** (junaehdokas: juna164 + historia-fp; yhdistä historia-fp uudelleen ennen kuittauspyyntöä).
 - TESTAUS (omistaja 7.10. 15.5x/16.0x): ennen junaa VAIN Linssit-testit/kaanna.sh + Linssit-testit/unity-tarkistus.sh; ei omia
   käännöksiä, simua, stillejä eikä savuja. Kuittaus PT:ltä yhdellä rivillä (mitä, testit, SHA) → Natiiviseppä junaan.
 - OMISTAJA 7.10. 18.5x–18.7x: KAIKKI PELIT ENSIMMÄISESSÄ PERSOONASSA (Thief-malli; ei vartaloa/peilikuvaa; kädet saavat näkyä
   hetkittäin hihoissa + hanskoissa, ei ihoa). EI HUD-mittaria (ei valokiveä): näkyvyys kuvana (SeikkailuNakyvyys) + vartijan reaktio
   + sydän. Kolmannen persoonan KAUKOKUVAT sallittu (hahmo < ~10 % kuvan korkeudesta; Foggin malli säilyy niitä varten).
-- ODOTTAA: PT:n kuittaus juna164; LR:n kadet.glb (pelaaja.kadet, kahva_oikea → SeikkailuPelaaja.Kasi-pisteeksi); PT:n
-  pelattavuusmalli docs/raportit/pelattavuusmalli-olavinlinna.md (nimeää kaukokuvat, luvut); ElevenLabs-äänet VAIN omistajan luvalla.
+- 8.10. JÄLJELLÄ: K1 (kaukokuva Pulun lentona; Pulun malli puuttuu), kiipeily (ei kiipeilymerkkejä), koko palan huonesimulaatio
+  (keittiön ajoitus), LR:n tarjotin/patapino/hiilipannu-mallit ja vartijan torkku/syo-leikkeet (kytkeytyvät nimellä), sitten
+  historia-fp-juna päivitys + 1 rivin kuittauspyyntö PT:lle. Odottaa myös: PT:n kuittaus juna164; ElevenLabs-äänet VAIN omistajan luvalla.
+- Rajapinnat NUI:lle: SeikkailuPelaaja.Napautus/PuluVihje, SeikkailuTapit.OtaKatse (luetaan), SeikkailuEsineet.Toiminto (verbi),
+  SeikkailuTallentaja.LueTiedosto + DioraamaSovitin.PelattavaPalaJatka, Tekstivahti (botti).
 - E3-käsikirjoitus: docs/raportit/kasikirjoitus-olavinlinna-kappeli-e3.md (mainissa). Arkkitehtuuri: siirtoseppa-historiamoottori-20261007.md.
 - **8.10. SITOVA TYÖOHJE: docs/raportit/pelattavuusmalli-olavinlinna.md (main #4163, 18cf4478b).** Kohta 12 = järjestys:
   1 aamupäivä kallistusvyöhykkeet, napautuskävely, automaattinen hiivintä, valitsin, portaiden pehmennys, käännössääntö (kohdat 2, 6);
@@ -569,3 +573,4 @@ Edellinen luovutus on `viesti-siirtoseppa-luovutus-20261002.md` (5.10. osiot 02.
 - 20.10: huone 1 silmät pressun alla 9d97012f; tyrmä muunnelma 1 8d38c827 (LR v44n 190df07e: tyrma-E101, merkit istuu:pelaaja-tyrma, ilmarako:tyrma, esine:avainnippu-tyrma, ovi:tyrma, ovi:tyrma-ulos; muunnelmat 2–3 merkit valmiina: istuu:tyrma-vartija, ontto:tyrma, esine:irtokivi-tyrma, ovi:tyrma-ryomi). 857/857, unity-tarkistus 0. JÄLJELLÄ: tyrmä 2–3, kappelin kiinnijäänti tyrmään (E3c), K1, kiipeily, huoneet 3–5 simulaatioon, junakuittaus.
 - 20.12: kappelin kiinnijäänti tyrmään be4f5567; tyrmän muunnelmat 2–3 + vihjekohde cea38abd. 858/858, unity-tarkistus 0. JÄLJELLÄ: K1 (kaukokuva Pulun lentona, malli), kiipeily (ei merkkejä), huoneet 3–5 simulaatioon, junakuittaus (kun PT haluaa ensimmäisen persoonan junaan).
 - 20.14: huonesimulaation ajuri (tarjotin, väistö, armo) 0b396d7d; koko palan testi odottaa keittiön ajoitusta (kokin reitti kulkee reitti:pelaaja-10/-11 kautta, 52 kiinnijääntiä tyhmällä ajurilla). historia-fp-kärki 0b396d7d, 858/858, unity-tarkistus 0.
+- 20.15: JUNAEHDOKAS ensimmäiselle persoonalle valmiina: siirtoseppa/historia-fp-juna @ 2f492b05 (= historia-juna164 + historia-fp), 865/865, unity-tarkistus 0. EI vielä kuittauspyyntöä (PT: 8.10. illan juna); riippuvuus NUI 6af3eb9f. Päivitä yhdistämällä historia-fp uudelleen ennen pyyntöä.
