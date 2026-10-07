@@ -36,6 +36,7 @@ namespace Matkakirja.Natiivi
         /// puolelle, omistajan stillit 7.10.): tyhjä (width 0), kun köyttä ei näy. Päivittyy joka kehys korin kanssa.
         /// </summary>
         public static Rect VasenKoysiNorm { get; private set; }
+        const float KoysiPuoliLeveys = 0.006f;
         /// <summary>A/B (komento `opas kori 0|1`); kaupunkitilassa oletuksena päällä tässä kokeessa.</summary>
         public static bool Paalla = true;
         /// <summary>Äänisarja (A/B): "eleven" tai "kirjasto".</summary>
@@ -326,17 +327,25 @@ namespace Matkakirja.Natiivi
             if (koysi == null) return default;
             var rr = koysi.GetComponentsInChildren<Renderer>();
             if (rr.Length == 0) return default;
-            var b = rr[0].bounds; foreach (var r in rr) b.Encapsulate(r.bounds);
+            // Köyden akseli näytteinä (NUI 13.1x: maailman AABB:n kulmat levisivät perspektiivissä ruudun reunaan → metrolinja
+            // ruudun ulkopuolelle). Jokaisen rendererin oman localBoundsin pisin akseli, 17 pistettä, vain kameran edessä ja ruudulla.
             float xmin = 1, xmax = 0, ymin = 1, ymax = 0;
-            for (int i = 0; i < 8; i++)
+            float lahin = overlay.nearClipPlane;
+            foreach (var r in rr)
             {
-                var c = b.center + Vector3.Scale(b.extents, new Vector3((i & 1) == 0 ? -1 : 1, (i & 2) == 0 ? -1 : 1, (i & 4) == 0 ? -1 : 1));
-                var v = overlay.WorldToViewportPoint(c);
-                if (v.z <= 0) continue;
-                xmin = Mathf.Min(xmin, v.x); xmax = Mathf.Max(xmax, v.x); ymin = Mathf.Min(ymin, 1 - v.y); ymax = Mathf.Max(ymax, 1 - v.y);
+                var lb = r.localBounds; var e = lb.extents;
+                Vector3 akseli = e.x >= e.y && e.x >= e.z ? new Vector3(e.x, 0, 0) : e.y >= e.z ? new Vector3(0, e.y, 0) : new Vector3(0, 0, e.z);
+                for (int i = 0; i <= 16; i++)
+                {
+                    var v = overlay.WorldToViewportPoint(r.transform.TransformPoint(lb.center + akseli * (i / 8f - 1)));
+                    if (v.z <= lahin || v.y < 0 || v.y > 1 || v.x < -0.05f || v.x > 1.05f) continue;
+                    xmin = Mathf.Min(xmin, v.x); xmax = Mathf.Max(xmax, v.x); ymin = Mathf.Min(ymin, 1 - v.y); ymax = Mathf.Max(ymax, 1 - v.y);
+                }
             }
+            if (xmax < xmin) return default;
+            xmin -= KoysiPuoliLeveys; xmax += KoysiPuoliLeveys;
             xmin = Mathf.Clamp01(xmin); xmax = Mathf.Clamp01(xmax); ymin = Mathf.Clamp01(ymin); ymax = Mathf.Clamp01(ymax);
-            return xmax > xmin && ymax > ymin ? new Rect(xmin, ymin, xmax - xmin, ymax - ymin) : default;
+            return xmax > xmin && ymax >= ymin ? new Rect(xmin, ymin, xmax - xmin, ymax - ymin) : default;
         }
 
         void Aanet(float vaakaKiihtyvyys, float pystyNopeus)

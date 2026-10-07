@@ -148,6 +148,7 @@ namespace Matkakirja.Natiivi
             else
             {
                 if (esitysAlkaa) Viimeisin.silmukka.PyynnotSeis = true;   // esitys: avaus ja opastus ensin, ei workerin kaupunkikysymystä
+                Viimeisin.silmukka.AvausEtaisyysOhitus = Kaupunkitila ? KaupunkitilaAvausM : (double?)null;
                 Viimeisin.silmukka.VaihdaPaikka(lat, lon, nimi.Trim());   // kamera lentää heti kaupungin yleiskuvaan (Natiivi-UI 6.10. 00.2x)
             }
             var v = Viimeisin;
@@ -333,6 +334,9 @@ namespace Matkakirja.Natiivi
             if (kaupunkiOdottaa) { silmukka.Paivita(Time.unscaledDeltaTime, MaaKorkeus, () => false); return; }
             kori.Kayta(Kaupunkitila && nakymaAuki, kaupunki.Kamera);   // kuumailmapallon korinäkymä (kokeilu, Päätoimittaja 7.10. 09.1x)
             IlmoitaKierros();
+            // Esilataus latauskuvan aikana: esityksen ensimmäinen kohde heti, kun kierroslista on haettu (omistaja 12.5x).
+            if (Kaupunkitila && silmukka.PyynnotSeis && silmukka.EsiKohde == null && (kierrosKohteet ?? kohteet) is List<OpasTaky> ek && ek.Count > 0 && kohteetKaupunki == Aloituskaupunki)
+            { silmukka.EsiKohde = (ek[0].Nimi, ek[0].Lat, ek[0].Lon); o.Kirjaa($"opas: esilataus ensimmäinen kohde {ek[0].Nimi}"); }
             if (esitysAlkaa && Kaupunkitila && !silmukka.Siirtymassa && kohteet != null && kohteet.Count > 0 && kohteetKaupunki == Aloituskaupunki)
             { esitysAlkaa = false; o.StartCoroutine(EsitysAvaus(KaupunkitilaId)); }
             if (jatkoVastauksenJalkeen && silmukka.KierrosKeskeytetty && silmukka.Vaihe == OpasVaihe.Odottaa && silmukka.VaiheAika > JatkoViiveS && !puhuu)
@@ -458,6 +462,8 @@ namespace Matkakirja.Natiivi
             }
         }
         public const string KerroLisaaTeksti = "Kerro lisää";
+        /// <summary>Kaupunkitilan yleiskuvan etäisyys (m; oletus 5 000): lyhyempi siirtymä ensimmäiseen kohteeseen (omistaja 12.5x).</summary>
+        public const double KaupunkitilaAvausM = 2200;
 
         // ---- ESITYKSEN AVAUS JA OPASTUS (omistaja 7.10. 10.1x / 12.4x) ----
         // Kaupunkitilan esitys: siirtymä → kaupungin avaus (opas/esittely-v1/<id>.json "avaus") → opastuslause VAIN pelaajan
@@ -468,13 +474,33 @@ namespace Matkakirja.Natiivi
         /// <summary>Ensimmäinen kuumailmapallokyyty tehty (opastus kuultu). Testi `opas opastus nollaa`.</summary>
         public static bool OpastusKuultu { get => PlayerPrefs.GetInt(OpastusKuultuAvain, 0) == 1; set { PlayerPrefs.SetInt(OpastusKuultuAvain, value ? 1 : 0); PlayerPrefs.Save(); } }
 
+        // Uudet avaukset (Pelikoodari #4141): ämpäri on muuttumaton, joten /opas/aineistot "esittely_polut" {id: polku opas/:n
+        // alta (esim. "opas/esittely-v1b/praha.json")} kertoo uuden polun; muuten opas/esittely-v1/<id>.json.
+        static Dictionary<string, string> esittelyPolut = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);
+        static void LueEsittelyPolut(object json)
+        {
+            if (json is Dictionary<string, object> j && j.TryGetValue("esittely_polut", out var ep) && ep is Dictionary<string, object> d)
+            {
+                var uusi = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);
+                foreach (var kv in d) if (kv.Value is string pol && !string.IsNullOrWhiteSpace(pol)) uusi[kv.Key] = pol.Trim();
+                esittelyPolut = uusi;
+            }
+        }
+        /// <summary>Kaupungin esittely-JSONin osoite (esittely_polut ensin, muuten esittely-v1/&lt;id&gt;.json).</summary>
+        public static string EsittelyOsoite(string kaupunkiId)
+        {
+            if (esittelyPolut.TryGetValue(kaupunkiId, out var pol))
+                return "https://media.matkakirja.app/" + (pol.StartsWith("opas/") ? pol : "opas/" + pol.TrimStart('/'));
+            return EsittelyJuuri + "esittely-v1/" + UnityWebRequest.EscapeURL(kaupunkiId) + ".json";
+        }
+
         IEnumerator EsitysAvaus(string kaupunkiId)
         {
-            o.Kirjaa($"opas: esitys alkaa ({kaupunkiId}): avaus{(OpastusKuultu ? "" : " + opastus (1. kyyti)")}");
+            o.Kirjaa($"opas: esitys alkaa ({kaupunkiId}): avaus{(OpastusKuultu ? "" : " + opastus (1. kyyti)")}{(kaupunkiId != null && esittelyPolut.ContainsKey(kaupunkiId) ? " [" + esittelyPolut[kaupunkiId] + "]" : "")}");
             if (!Testi && !string.IsNullOrEmpty(kaupunkiId))
             {
                 Dictionary<string, object> avaus = null;
-                using (var r = UnityWebRequest.Get(EsittelyJuuri + "esittely-v1/" + UnityWebRequest.EscapeURL(kaupunkiId) + ".json"))
+                using (var r = UnityWebRequest.Get(EsittelyOsoite(kaupunkiId)))
                 {
                     r.timeout = 10;
                     yield return r.SendWebRequest();
@@ -894,7 +920,9 @@ namespace Matkakirja.Natiivi
             try
             {
                 if (!System.IO.File.Exists(SallitutPolku)) return;
-                var l = OpasSallitut.Lue(MiniJson.Jasenna(System.IO.File.ReadAllText(SallitutPolku)));
+                var lj = MiniJson.Jasenna(System.IO.File.ReadAllText(SallitutPolku));
+                LueEsittelyPolut(lj);
+                var l = OpasSallitut.Lue(lj);
                 if (l.Count > 0) { AsetaSallitut(l); Debug.Log($"MATKAKIRJA linssit: opas: sallitut kaupungit levyltä {l.Count}"); }
             }
             catch (Exception) { }
@@ -979,7 +1007,9 @@ namespace Matkakirja.Natiivi
             if (r.result != UnityWebRequest.Result.Success)
             { KirjaaS($"opas: sallitut kaupungit ei latautunut ({r.responseCode}), {(sallitut != null && sallitut.Count > 0 ? $"pidetään {sallitut.Count} edellistä" : "ei rajausta")}"); yield break; }
             var teksti = r.downloadHandler.text;
-            var l = OpasSallitut.Lue(MiniJson.Jasenna(teksti));
+            var hj = MiniJson.Jasenna(teksti);
+            LueEsittelyPolut(hj);
+            var l = OpasSallitut.Lue(hj);
             if (l.Count == 0 && sallitut != null && sallitut.Count > 0) { KirjaaS($"opas: sallitut-lista tyhjä vastauksessa, pidetään {sallitut.Count} edellistä"); yield break; }
             if (l.Count > 0) try { System.IO.File.WriteAllText(SallitutPolku, teksti); } catch (Exception) { }
             KirjaaS($"opas: sallitut kaupungit {l.Count}{(l.Count == 0 ? " (ei rajausta)" : ": " + string.Join(", ", l.ConvertAll(k => k.Nimi)))}");
