@@ -8330,24 +8330,6 @@ body:not(.flight-active) .flight-overlay:not(.flight-leaving) { display: none; }
   text-align: center;
 }
 
-.start-linkki {
-  background: none;
-  border: 0;
-  padding: 0.5rem 0.7rem;
-  min-height: 0;
-  font-family: var(--font-type);
-  font-size: 0.86rem;
-  line-height: 1.4;
-  color: #d8c091;
-  text-decoration: underline;
-  text-underline-offset: 4px;
-  text-decoration-color: rgba(216, 192, 145, 0.45);
-  cursor: pointer;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.55);
-}
-
-.start-linkki:hover { color: #f2e2bb; }
-
 /*
  * APURAHAN ARVIOIJALLE (omistaja 30.9.2026): kevyt, pelin tyylinen
  * nappi Aloita seikkailu -napin alle — ohut kultareuna ja

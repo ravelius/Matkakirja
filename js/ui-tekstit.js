@@ -60,7 +60,8 @@ export const INTRO_PAIKKA = 'Heathrow, Lontoo';
 export const FLIGHT_FIRST = MAAILMA.texts.flightFirst;
 
 /*
- * PERIAATTEET-LAPPU ("Oppiminen on hauskaa", js/ui.js naytaPeriaatteet).
+ * PERIAATTEET ("Oppiminen on hauskaa"): web-lappu poistettu 7.10.2026 (omistaja); webissä käytössä enää lippurivi ja
+ * oikeudet apurahakortin lopussa (js/ui.js naytaApuraha). osat ja linkki: natiivin paketti (NUI päättää omasta lapustaan).
  * osat: väliotsikko (valinnainen) ja kappale; karki = ingressi.
  * lippurivi jatkuu pelissä lisenssin vaatimilla lipputekijöillä.
  */
