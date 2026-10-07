@@ -10,9 +10,9 @@ ja natiiviseppa-tila-20261003.md. Kytke Remote Control päälle. Kerro Julkaisij
 Juna-SHA:t vain PÄÄTOIMITTAJAN kuittauksella; käännökset Julkaisijan NYT-viestillä. EI savua/Laitetestaajaa/stillejä ennen junaa
 (omistaja 15.5x), EI roolien omia käännöksiä (16.0x), enintään 2 junaa/pv ellei omistaja pyydä.
 
-**KORJAUSJUNA TÄNÄ ILTANA (Päätoimittaja 22.1x)** — VIE-VALMISTELU TEHTY 22.4x: BUILD 163 = proto master 9457e8dae6b67474d17925029abc753578f73091
-(runko 79462cbae = 2739ded66 + LS1 fa307d150, käännös a4370623d, app lokit/natiiviseppa-app-163-79462cba; juna/b13 → 79462cba;
-aiempi BUILD 163 -merge ecb11b78 jäi historiaan, ei julkaistu). tf163-lupa VASTA Päätoimittajan kuittauksella (LS1:n reittitarkistus), sitten Mac TF -odottaja
+**KORJAUSJUNA TÄNÄ ILTANA (Päätoimittaja 22.1x)** — VIE-VALMISTELU TEHTY 22.56: BUILD 163 = proto master 062bb439af8764e00edcafb9f6acac78e085c215
+(runko d78cd0e00 = 79462cbae + LS1 d3d243595 avaustauko 2,3 s; käännös c0c4d9de5, app lokit/natiiviseppa-app-163-d78cd0e0;
+juna/b13 → d78cd0e0; aiemmat BUILD 163 -mergit ecb11b78 ja 9457e8da jäivät historiaan, ei julkaistu). tf163-lupa VASTA Päätoimittajan kuittauksella (LS1:n reittitarkistus), sitten Mac TF -odottaja
 (ALKU = kuittaushetki UTC). Alla historia: haara natiiviseppa/korjausjuna-163 (wt/proto-natiiviseppa-j144) BUILD 162 30fbc374:n
 päällä: Siirtoseppä 0bfc86e0 + LS1 71cf7b97b (KUITATTU) + LS1 4e35edbde (avausnäkymä) + LS2 2739ded66 (kaupunkipallot maailmanäkymässä) = runko **2739ded66** (Kartta 448, Peli 419,
 Linssit 862, unity 0), KÄÄNNETTY 22.37 (dd94a2766, app lokit/natiiviseppa-app-163-2739ded6; aiemmat 5a99dda77/a69df1186 ja EI julkaista aiempaa 40faaf311/bc66ba1e2,
@@ -44,17 +44,24 @@ log -1 master`, `tail -3 proto-3d/lokit/kaannospalvelu/juna.log`, `tail -5 proto
 4. Täysi BUILD 162 -SHA Julkaisijalle + Päätoimittajalle. Julkaisija ajaa TF 162:n.
 5. Mac TF 162 (lupa annettu): iOS-latauksen jälkeen `perl -e 'use POSIX; exit if fork; setsid; exec "zsh", @ARGV'
    proto-3d/lokit/natiiviseppa-skriptit/mac-tf.sh <BUILD162-sha8> 162`, tulos mac-tf-vahti.txt + gh run list proto3d-mac-testflight.
-6. JUNA 164 (ent. "163"; huomenna 8.10.; LS1-osuus jo korjausjunassa 163 (71cf7b97b ⊇ e5c4b145e, 578d1186c), KUITATTU Päätoimittaja 20.0x–21.5x; POHJA BUILD 162 30fbc374; LS1 lappu-katolle 6ad4244fc POIS):
+6. JUNA 164 (+ Päätoimittaja 23.0x: LS1 kortti-teksti 7c4122bc9 (⊇ d3d243595; tekijärivi pois, KuvaLahteet) + NUI opas-lahteet
+   8b4659e9 (⊇ 48878725, NUI:n mukaan; Päätoimittajalta kysytty kumpi); ent. "163"; huomenna 8.10.; LS1-osuus jo korjausjunassa 163 (71cf7b97b ⊇ e5c4b145e, 578d1186c), KUITATTU Päätoimittaja 20.0x–21.5x; POHJA BUILD 162 30fbc374; LS1 lappu-katolle 6ad4244fc POIS):
    LISÄKSI: LS1 kortti-teksti e5c4b145e (⊇ ee5f54a81 ⊇ e3d40e096 + cbd2b6abc; liikkeen palautus; uusi KorttiAsettelu.cs + .meta) ja Natiiviseppä kaannos-jobs 7d66739d.
    Siirtoseppä historia-valot-juna b91278bf (⊇ 463fefc7 ⊇ 2d1c133e ⊇ e4dab248 ⊇ 787f0092 ⊇ 6d23aed1; kuoren leikkaukset 16 paikkaan; kehittäjävalikon Volumetriset valot PÄÄLLÄ/POIS + Candle VFX + Volumetric Lights 2 laatutasokytkimen takana, Asset Store -paketit ENSIMMÄISTÄ KERTAA junassa; jos käännös kaatuu pakettien takia → varahaara historia-fp-juna-2 8b071c07 (⊇ 6f9ad1e5 ⊇ 9cddc246, korvaa 6d23aed1) viivyttämättä + yksi rivi Päätoimittajalle) +
    NUI-kärki seikkailu-kuvakkeet 8aa55e02 (⊇ jatka 6af3eb9f ⊇ tekstivahti ⊇ verbi ⊇ fp eb115fc3 ⊇ tietokerros cbc92a25) + LS1 äänetön
    esitys 578d1186c (korvaa 7568a39bc) + LS2 S2-kevät 08a6891a0. Pohja: BUILD 162 -master. Ajankohta sovitaan Julkaisijan kanssa.
    Muut ehdokkaat (eivät kuitattuja tähän): LS1 yksityiskohdat-haarat sisältyvät 578d1186c:hen.
-7. KÄÄNNÖSNOPEUTUS (omistaja 21.5x): proto-kaanna.sh muutettu (jobs 12 joutilaana, välitiedostot säilyvät >36 Gi, vaiheajat; varmuuskopio
+7. T7-SIMULAATTORISARJA (omistaja 23.0x, valmis 8.10. ennen ensimmäistä junaa, ALOITA vasta TF 163:n jälkeen): uusi laitesarja
+   "/Volumes/T7 4TB/Simulaattorit/Sarja" (EI vanhan 112 Gt:n Devices-kopion päälle; symlinkki ei toimi); roolien laitteet samoilla nimillä,
+   UDID-taulu + MK_SIMSET + funktio simctl (xcrun simctl --set) tiedostoon proto-3d/tyokalut/simusarja.sh; proto-kaanna.sh, aja.sh,
+   todistusajo.sh, simkosketus ja roolien skriptit käyttämään sitä (roolikohtainen ohje Postivahdin kautta); T7 puuttuu → selvä virhe,
+   EI hiljaista paluuta sisäiselle; todennus: yksi käännös asennettuna + kuvakaappaus T7-sarjasta; vanhojen sarjojen (105 + 112 Gt)
+   poisto vasta omistajan Run-rivillä päivän toimivuuden jälkeen.
+8. KÄÄNNÖSNOPEUTUS (omistaja 21.5x): proto-kaanna.sh muutettu (jobs 12 joutilaana, välitiedostot säilyvät >36 Gi, vaiheajat; varmuuskopio
    .ennen-jobs12-20261007); proto natiiviseppa/kaannos-jobs 7d66739d (aja.sh) → JUNAAN 163; Matkakirja-haara natiiviseppa/tf-jobs 93c2e7c76
    (wt/natiiviseppa-tf-jobs) → push + PR Julkaisijalle, KUN TF 162 on valmis (KUITATTU). Huomenna ensimmäisen käännöksen vaiheajat
    ennen/jälkeen yhdellä rivillä Päätoimittajalle (ennen: 7.10. junakäännökset kesto lokit/kaannospalvelu/*.log alku–KÄÄNNETTY, esim. 21:43→21:46).
-8. Muut: PR ravelius/Matkakirja#4149 (mono_crash) Julkaisijalle; Mac-ohjauslevyvika: odota omistajan Player.log (DIAGNOOSI-rivit).
+9. Muut: PR ravelius/Matkakirja#4149 (mono_crash) Julkaisijalle; Mac-ohjauslevyvika: odota omistajan Player.log (DIAGNOOSI-rivit).
 
 ## OMISTAJAN PÄÄTÖS 15.5x (SITOVA): TESTAUS KEVYEMMIN
 Ennen junaa/TF:ää vain automaattiset testit (Kartta/Peli/Linssit-testit, tarkista.sh zsh, unity-tarkistus iOS+Mac, editori) ja
