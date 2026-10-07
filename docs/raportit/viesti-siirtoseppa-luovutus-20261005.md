@@ -435,3 +435,7 @@ Edellinen luovutus on `viesti-siirtoseppa-luovutus-20261002.md` (5.10. osiot 02.
   siirtoseppa/osoitin-varmistus @ 49888505 (peilin vaihto lataa uudelleen, tyhjä osoitin uudelleen, "poikki osoitin esta 1|0"):
   Päätoimittaja kuittasi junaan 161 ehdoin (toisto vanha/uusi, virheilmoitus tilarivillä, lokit + still). Vanha toisto ketjutettu E1:n perään
   (lokit/siirtoseppa-osoitin-vanha), uusi käännös 49888505 jonossa 3. → ajo-osoitin.sh VAIHE=peili ja VAIHE=esta.
+- 14.36: E1-ajo 985c758f (lokit/siirtoseppa-vuoro-e1/): vene + soutaja + Fogg OK; viat → 08329b85 (repliikit 2D, laiturilta katse ovelle,
+  vartijan mittari hitaammin + takaa-ajo + kiinni 1,2 m, armonaika 4 s). Osoitin vanha toisto OK (lokit/siirtoseppa-osoitin-vanha).
+  Jono: osoitin 49888505 (→ vuoro-osoitin.sh, app lokit/siirtoseppa-osoitin-app) ja E1-uusinta 08329b85+NUI (→ APP=…/siirtoseppa-historia6-app
+  vuoro-e1.sh). LR:lle: tilan vene kiinnityspaikalla, piilo:tynnyrien-takana irti seinästä.
