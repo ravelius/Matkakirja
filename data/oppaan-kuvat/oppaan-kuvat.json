@@ -3413,14 +3413,11 @@
     "Q1367886",
     "Q1067075",
     "Q945753",
-    "Q116492",
-    "Q116484",
     "Q451045",
     "Q1270853",
     "Q794242",
     "Q151212",
     "Q626963",
-    "Q749950",
     "Q565455"
    ],
    "kuvat": [
@@ -4786,39 +4783,43 @@
    "kohteet": [
     "Q173527",
     "Q7798352",
-    "Q1018106",
-    "Q284463",
+    "Q636972",
+    "Q603920",
+    "Q2942217",
     "Q632418",
+    "Q3321879",
     "Q473766",
-    "Q845105",
+    "Q2707725",
+    "Q1142384",
+    "Q1928668",
     "Q1021602",
-    "Q1142384"
+    "Q2097291"
    ],
    "kuvat": [
     {
      "jarjestys": 1,
-     "tiedosto": "Gouves Kriti - panoramio - pepanos (2).jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gouves_Kriti_-_panoramio_-_pepanos_(2).jpg?width=1280",
-     "tekija": "pepanos",
+     "tiedosto": "Iraklio Luftbild 03.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Iraklio_Luftbild_03.jpg?width=1280",
+     "tekija": "Olaf Tausch",
      "lisenssi": "CC BY 3.0",
      "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Gouves_Kriti_-_panoramio_-_pepanos_(2).jpg",
-     "selite": "Kreetan pohjoisrannikko mutkittelee Iraklionin itäpuolella vuorten ja meren välissä.",
-     "leveys": 2048,
-     "korkeus": 1536,
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Iraklio_Luftbild_03.jpg",
+     "selite": "Heraklion levittyy ilmasta katsottuna Kreetan pohjoisrannikolle meren ja kukkuloiden väliin.",
+     "leveys": 4861,
+     "korkeus": 3643,
      "tarkistettu": true
     },
     {
      "jarjestys": 2,
-     "tiedosto": "Gouves Kriti - panoramio - pepanos (1).jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gouves_Kriti_-_panoramio_-_pepanos_(1).jpg?width=1280",
-     "tekija": "pepanos",
-     "lisenssi": "CC BY 3.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Gouves_Kriti_-_panoramio_-_pepanos_(1).jpg",
-     "selite": "Rantatie seuraa lahtea, jonka rannalla on lomakaupunkeja.",
-     "leveys": 2048,
-     "korkeus": 1536,
+     "tiedosto": "City walls at sunset, Heraklion, Crete, Greece julesvernex2-2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/City_walls_at_sunset%2C_Heraklion%2C_Crete%2C_Greece_julesvernex2-2.jpg?width=1280",
+     "tekija": "Jules Verne Times Two",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:City_walls_at_sunset%2C_Heraklion%2C_Crete%2C_Greece_julesvernex2-2.jpg",
+     "selite": "Heraklionin venetsialaiset muurit nousevat suoraan Kreetanmeren rannalla.",
+     "leveys": 4832,
+     "korkeus": 3211,
      "tarkistettu": true
     }
    ]
@@ -8942,35 +8943,33 @@
    "lat": 38.123,
    "lon": 13.376,
    "kohteet": [
-    "Q16990",
-    "Q199952",
-    "Q636774",
     "Q1478407",
-    "Q1233234",
-    "Q1058967",
-    "Q1303856",
-    "Q1354756",
-    "Q505617",
     "Q1034853",
-    "Q747484",
-    "Q487174",
-    "Q179883",
-    "Q692847",
-    "Q952173",
-    "Q261439"
+    "Q1473825",
+    "Q261439",
+    "Q1665695",
+    "Q1644597",
+    "Q2066497",
+    "Q745359",
+    "Q1000054",
+    "Q1303856",
+    "Q1262976",
+    "Q1478356",
+    "Q731916",
+    "Q1082173"
    ],
    "kuvat": [
     {
      "jarjestys": 1,
-     "tiedosto": "Aerial image of the coast of Taormina (view from the southeast).jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aerial_image_of_the_coast_of_Taormina_(view_from_the_southeast).jpg?width=1280",
-     "tekija": "Carsten Steger",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aerial_image_of_the_coast_of_Taormina_(view_from_the_southeast).jpg",
-     "selite": "Sisilian itärannikon vuoristoinen rantaviiva kohoaa jyrkästi Joonianmerestä.",
-     "leveys": 5568,
-     "korkeus": 3712,
+     "tiedosto": "Palermo - aerial photograph of the northern quarters with Politeama Theatre.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Palermo_-_aerial_photograph_of_the_northern_quarters_with_Politeama_Theatre.jpg?width=1280",
+     "tekija": "File:Centro_palermo_e_piazza_politeama_dall'alto.jpg: Civa61 derivative work: Memorato",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Palermo_-_aerial_photograph_of_the_northern_quarters_with_Politeama_Theatre.jpg",
+     "selite": "Palermon tiheä kortteliverkko avautuu ilmasta katsottuna Politeama-teatterin ympärillä.",
+     "leveys": 1696,
+     "korkeus": 1272,
      "tarkistettu": true
     },
     {
@@ -42635,106 +42634,6 @@
     }
    ]
   },
-  "Q116492": {
-   "nimi": "Viðey",
-   "peruste": "sitelinks",
-   "kaupunki": "islanti",
-   "kaupunkiQ": "Q189",
-   "lat": 64.16609,
-   "lon": -21.85378,
-   "koko_m": 1500,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "Hill on the Viðey island with Reykjavík harbour.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hill_on_the_Vi%C3%B0ey_island_with_Reykjav%C3%ADk_harbour.jpg?width=1280",
-     "tekija": "Slawojar",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Hill_on_the_Vi%C3%B0ey_island_with_Reykjav%C3%ADk_harbour.jpg",
-     "selite": "Viðey on nurmikkoinen saari Reykjavíkin edustalla.",
-     "leveys": 3264,
-     "korkeus": 2448,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "Viðey island shore.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Vi%C3%B0ey_island_shore.jpg?width=1280",
-     "tekija": "Slawojar",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Vi%C3%B0ey_island_shore.jpg",
-     "selite": "Viðeyn saaren kallioinen ranta avautuu kohti merta.",
-     "leveys": 3264,
-     "korkeus": 2448,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 3,
-     "tiedosto": "Panoramic view from the Viðey island.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Panoramic_view_from_the_Vi%C3%B0ey_island.jpg?width=1280",
-     "tekija": "Slawojar",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Panoramic_view_from_the_Vi%C3%B0ey_island.jpg",
-     "selite": "Viðeyn rannikkomaisemaa kohti Reykjavíkia ja Faxaflóa-lahtea.",
-     "leveys": 3232,
-     "korkeus": 1232,
-     "tarkistettu": true
-    }
-   ]
-  },
-  "Q116484": {
-   "nimi": "Imagine Peace Tower",
-   "peruste": "sitelinks",
-   "kaupunki": "islanti",
-   "kaupunkiQ": "Q189",
-   "lat": 64.16324,
-   "lon": -21.85947,
-   "koko_m": 200,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "Bright Lights, Big City (3033276536).jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bright_Lights%2C_Big_City_(3033276536).jpg?width=1280",
-     "tekija": "Helgi Halldórsson from Reykjavík, Iceland",
-     "lisenssi": "CC BY-SA 2.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bright_Lights%2C_Big_City_(3033276536).jpg",
-     "selite": "Imagine Peace Tower lähettää valopylvään yötaivaalle Viðeyn saarelta Reykjavíkin yli.",
-     "leveys": 4272,
-     "korkeus": 2722,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "Iceland - Peace Tower 40.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Iceland_-_Peace_Tower_40.jpg?width=1280",
-     "tekija": "McKay Savage from London, UK",
-     "lisenssi": "CC BY 2.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Iceland_-_Peace_Tower_40.jpg",
-     "selite": "Rauhantornin sininen valopylväs revontulten alla.",
-     "leveys": 2376,
-     "korkeus": 1584,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 3,
-     "tiedosto": "Iceland - Peace Tower 21 (6571373193).jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Iceland_-_Peace_Tower_21_(6571373193).jpg?width=1280",
-     "tekija": "McKay Savage from London, UK",
-     "lisenssi": "CC BY 2.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Iceland_-_Peace_Tower_21_(6571373193).jpg",
-     "selite": "Valopylväät nousevat Viðeyn saaren muistomerkistä.",
-     "leveys": 2376,
-     "korkeus": 1584,
-     "tarkistettu": true
-    }
-   ]
-  },
   "Q451045": {
    "nimi": "Alþingishúsið",
    "peruste": "sitelinks",
@@ -42955,56 +42854,6 @@
      "selite": "Museorakennuksen harmaa torniosa Reykjavíkin yliopiston lähellä.",
      "leveys": 4136,
      "korkeus": 2808,
-     "tarkistettu": true
-    }
-   ]
-  },
-  "Q749950": {
-   "nimi": "Elliðaár",
-   "peruste": "sitelinks",
-   "kaupunki": "islanti",
-   "kaupunkiQ": "Q189",
-   "lat": 64.11501,
-   "lon": -21.81074,
-   "koko_m": 400,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "Ellirardalur11.JPG",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ellirardalur11.JPG?width=1280",
-     "tekija": "TommyBee",
-     "lisenssi": "Public domain",
-     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ellirardalur11.JPG",
-     "selite": "Elliðaár virtaa koskina Reykjavíkin itäosan halki lupiinien reunustamana.",
-     "leveys": 3072,
-     "korkeus": 2304,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "Ellidaár.JPG",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ellida%C3%A1r.JPG?width=1280",
-     "tekija": "Bromr",
-     "lisenssi": "CC BY-SA 3.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ellida%C3%A1r.JPG",
-     "selite": "Elliðaár-joen vuolas virta kiemurtelee kosteikkoisen laakson läpi.",
-     "leveys": 3264,
-     "korkeus": 2448,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 3,
-     "tiedosto": "Ellirardalur10.JPG",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ellirardalur10.JPG?width=1280",
-     "tekija": "TommyBee",
-     "lisenssi": "Public domain",
-     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ellirardalur10.JPG",
-     "selite": "Joen kosket ja kesäinen Elliðaárdalur kaupungin kupeessa.",
-     "leveys": 3072,
-     "korkeus": 2304,
      "tarkistettu": true
     }
    ]
@@ -55482,89 +55331,165 @@
     }
    ]
   },
-  "Q1018106": {
-   "nimi": "Chersónisos",
+  "Q636972": {
+   "nimi": "Iraklionin arkeologinen museo",
    "peruste": "sitelinks",
    "kaupunki": "kreeta",
    "kaupunkiQ": "Q34374",
-   "lat": 35.3078,
-   "lon": 25.3718,
-   "koko_m": 1500,
+   "lat": 35.33917,
+   "lon": 25.1375,
+   "koko_m": 120,
    "kuvat": [
     {
      "jarjestys": 1,
-     "tiedosto": "Λιμένας Χερσονήσου 0082.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%CE%9B%CE%B9%CE%BC%CE%AD%CE%BD%CE%B1%CF%82_%CE%A7%CE%B5%CF%81%CF%83%CE%BF%CE%BD%CE%AE%CF%83%CE%BF%CF%85_0082.jpg?width=1280",
-     "tekija": "C messier",
+     "tiedosto": "Building of the Archaeological Museum of Heraklion, 061381.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Building_of_the_Archaeological_Museum_of_Heraklion%2C_061381.jpg?width=1280",
+     "tekija": "Zde",
      "lisenssi": "CC BY-SA 4.0",
      "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%CE%9B%CE%B9%CE%BC%CE%AD%CE%BD%CE%B1%CF%82_%CE%A7%CE%B5%CF%81%CF%83%CE%BF%CE%BD%CE%AE%CF%83%CE%BF%CF%85_0082.jpg",
-     "selite": "Chersónisoksen satamakaupunki on yksi Kreetan pohjoisrannikon vilkkaimpia lomakohteita.",
-     "leveys": 3936,
-     "korkeus": 2952,
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Building_of_the_Archaeological_Museum_of_Heraklion%2C_061381.jpg",
+     "selite": "Iraklionin arkeologinen museo säilyttää maailman laajimman minolaisen kulttuurin kokoelman.",
+     "leveys": 2592,
+     "korkeus": 1868,
      "tarkistettu": true
     },
     {
      "jarjestys": 2,
-     "tiedosto": "Limenas Chersonisos19.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Limenas_Chersonisos19.jpg?width=1280",
-     "tekija": "User:Nikater",
+     "tiedosto": "Bull leaping minoan fresco archmus Heraklion.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bull_leaping_minoan_fresco_archmus_Heraklion.jpg?width=1280",
+     "tekija": "Jebulon",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bull_leaping_minoan_fresco_archmus_Heraklion.jpg",
+     "selite": "Härkähyppyfresko Knossoksen palatsista on yksi museon tunnetuimmista esineistä.",
+     "leveys": 4305,
+     "korkeus": 2640,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Phaistos Disc - Heraklion Archaeological Museum by Joy of Museums.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Phaistos_Disc_-_Heraklion_Archaeological_Museum_by_Joy_of_Museums.jpg?width=1280",
+     "tekija": "Joyofmuseums",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Phaistos_Disc_-_Heraklion_Archaeological_Museum_by_Joy_of_Museums.jpg",
+     "selite": "Faistoksen levy on museon salaperäisin esine, eikä sen kuvamerkkejä ole saatu luettua.",
+     "leveys": 3129,
+     "korkeus": 2758,
+     "tarkistettu": true
+    }
+   ]
+  },
+  "Q603920": {
+   "nimi": "Koulesin linnoitus",
+   "peruste": "pelin nosto",
+   "kaupunki": "kreeta",
+   "kaupunkiQ": "Q34374",
+   "lat": 35.34457,
+   "lon": 25.13688,
+   "koko_m": 90,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "20090415 Hrakleio Krhth Limani Koules 2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20090415_Hrakleio_Krhth_Limani_Koules_2.jpg?width=1280",
+     "tekija": "Γεώργιος Γιαννόπουλος",
      "lisenssi": "CC BY-SA 3.0",
      "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Limenas_Chersonisos19.jpg",
-     "selite": "Vanhan sataman edustalla on pieni kallioinen saari, jonka päällä on muinaisia jäännöksiä.",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20090415_Hrakleio_Krhth_Limani_Koules_2.jpg",
+     "selite": "Venetsialaisten rakentama Koulesin linnoitus vartioi Heraklionin vanhan sataman suuta.",
+     "leveys": 1300,
+     "korkeus": 865,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "20090415 Hrakleio Krhth Limani Koules 1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20090415_Hrakleio_Krhth_Limani_Koules_1.jpg?width=1280",
+     "tekija": "Γεώργιος Γιαννόπουλος",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20090415_Hrakleio_Krhth_Limani_Koules_1.jpg",
+     "selite": "Linnoituksen vahvat muurit nousevat suoraan merestä kalastajaveneiden yllä.",
+     "leveys": 1300,
+     "korkeus": 858,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "202610 Koules Fortress 32.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/202610_Koules_Fortress_32.jpg?width=1280",
+     "tekija": "Jonashtand",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:202610_Koules_Fortress_32.jpg",
+     "selite": "Pitkä aallonmurtaja johtaa linnoitukselle ja on suosittu kävelyreitti.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 4,
+     "tiedosto": "202610 Koules Fortress 28.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/202610_Koules_Fortress_28.jpg?width=1280",
+     "tekija": "Jonashtand",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:202610_Koules_Fortress_28.jpg",
+     "selite": "Aallot iskevät linnoituksen perustuksiin Heraklionin satamalaiturin päässä.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  "Q2942217": {
+   "nimi": "Pyhän Menaksen tuomiokirkko",
+   "peruste": "sitelinks",
+   "kaupunki": "kreeta",
+   "kaupunkiQ": "Q34374",
+   "lat": 35.3375,
+   "lon": 25.13083,
+   "koko_m": 60,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "01.Agios Minas Kathedrale Heraklion Westfassade.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/01.Agios_Minas_Kathedrale_Heraklion_Westfassade.JPG?width=1280",
+     "tekija": "J.hagelüken",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:01.Agios_Minas_Kathedrale_Heraklion_Westfassade.JPG",
+     "selite": "Pyhän Menaksen tuomiokirkko on Heraklionin kaupunginpyhimyksen suuri 1800-luvun kirkko.",
+     "leveys": 3236,
+     "korkeus": 2427,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "23. Agios Minas Cathedral Heraklion-view from the Martinengo Bastion.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/23._Agios_Minas_Cathedral_Heraklion-view_from_the_Martinengo_Bastion.JPG?width=1280",
+     "tekija": "J.hagelüken",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:23._Agios_Minas_Cathedral_Heraklion-view_from_the_Martinengo_Bastion.JPG",
+     "selite": "Kupolit ja kellotornit kohoavat vanhan kaupungin kattojen yläpuolelle.",
      "leveys": 4000,
      "korkeus": 3000,
      "tarkistettu": true
     },
     {
      "jarjestys": 3,
-     "tiedosto": "Hersonissos night.JPG",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hersonissos_night.JPG?width=1280",
-     "tekija": "Luu",
-     "lisenssi": "Public domain",
-     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Hersonissos_night.JPG",
-     "selite": "Satamakaupungin valot heijastuvat illalla lahden tyyneen veteen.",
-     "leveys": 3888,
-     "korkeus": 2592,
-     "tarkistettu": true
-    }
-   ]
-  },
-  "Q284463": {
-   "nimi": "Mália",
-   "peruste": "sitelinks",
-   "kaupunki": "kreeta",
-   "kaupunkiQ": "Q34374",
-   "lat": 35.28361,
-   "lon": 25.4625,
-   "koko_m": 1500,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "Μάλια 0059.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%CE%9C%CE%AC%CE%BB%CE%B9%CE%B1_0059.jpg?width=1280",
-     "tekija": "C messier",
+     "tiedosto": "29.Agios Minas Cathedral Heraklion Westfassade.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/29.Agios_Minas_Cathedral_Heraklion_Westfassade.jpg?width=1280",
+     "tekija": "J.hagelüken",
      "lisenssi": "CC BY-SA 4.0",
      "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%CE%9C%CE%AC%CE%BB%CE%B9%CE%B1_0059.jpg",
-     "selite": "Mália on rantakaupunki Kreetan pohjoisrannikolla, ja sen lähellä on minolainen palatsialue.",
-     "leveys": 3516,
-     "korkeus": 2637,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "Παραλία Ποταμός, Μάλια 0030.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%CE%A0%CE%B1%CF%81%CE%B1%CE%BB%CE%AF%CE%B1_%CE%A0%CE%BF%CF%84%CE%B1%CE%BC%CF%8C%CF%82%2C_%CE%9C%CE%AC%CE%BB%CE%B9%CE%B1_0030.jpg?width=1280",
-     "tekija": "C messier",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%CE%A0%CE%B1%CF%81%CE%B1%CE%BB%CE%AF%CE%B1_%CE%A0%CE%BF%CF%84%CE%B1%CE%BC%CF%8C%CF%82%2C_%CE%9C%CE%AC%CE%BB%CE%B9%CE%B1_0030.jpg",
-     "selite": "Pitkä hiekkaranta ja matala meri reunustavat Málian rannikkoa vuorten edessä.",
-     "leveys": 4000,
-     "korkeus": 3000,
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:29.Agios_Minas_Cathedral_Heraklion_Westfassade.jpg",
+     "selite": "Kirkon länsijulkisivua koristavat kaarikäytävät ja ikkunaryhmät.",
+     "leveys": 1914,
+     "korkeus": 1439,
      "tarkistettu": true
     }
    ]
@@ -55619,6 +55544,56 @@
     }
    ]
   },
+  "Q3321879": {
+   "nimi": "Gioúchtas-vuori",
+   "peruste": "sitelinks",
+   "kaupunki": "kreeta",
+   "kaupunkiQ": "Q34374",
+   "lat": 35.23994,
+   "lon": 25.14414,
+   "koko_m": 1500,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Afendis Christos (Mount Juktas), Crete 02(js).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Afendis_Christos_(Mount_Juktas)%2C_Crete_02(js).jpg?width=1280",
+     "tekija": "Jerzy Strzelecki",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Afendis_Christos_(Mount_Juktas)%2C_Crete_02(js).jpg",
+     "selite": "Gioúchtas-vuoren huipulla on pieni valkoinen kirkko, ja alla minolaisten vuoristouhrikenttä.",
+     "leveys": 7900,
+     "korkeus": 5207,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Mt. Juktas-1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mt._Juktas-1.jpg?width=1280",
+     "tekija": "Handydad",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mt._Juktas-1.jpg",
+     "selite": "Gioúchtas kohoaa Archánesin ja Heraklionin yläpuolelle, ja sen profiilia sanotaan nukkuvan jumalan kasvoiksi.",
+     "leveys": 2020,
+     "korkeus": 1385,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Ψηλή Κορφή Γιούχτα 329.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%CE%A8%CE%B7%CE%BB%CE%AE_%CE%9A%CE%BF%CF%81%CF%86%CE%AE_%CE%93%CE%B9%CE%BF%CF%8D%CF%87%CF%84%CE%B1_329.JPG?width=1280",
+     "tekija": "C messier",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%CE%A8%CE%B7%CE%BB%CE%AE_%CE%9A%CE%BF%CF%81%CF%86%CE%AE_%CE%93%CE%B9%CE%BF%CF%8D%CF%87%CF%84%CE%B1_329.JPG",
+     "selite": "Polku nousee vuoren harjannetta pitkin huipulle.",
+     "leveys": 4104,
+     "korkeus": 3056,
+     "tarkistettu": true
+    }
+   ]
+  },
   "Q473766": {
    "nimi": "Amnisos",
    "peruste": "sitelinks",
@@ -55656,63 +55631,52 @@
     }
    ]
   },
-  "Q845105": {
-   "nimi": "Kastélli",
+  "Q2707725": {
+   "nimi": "Týlisos",
    "peruste": "sitelinks",
    "kaupunki": "kreeta",
    "kaupunkiQ": "Q34374",
-   "lat": 35.20889,
-   "lon": 25.33778,
-   "koko_m": 800,
+   "lat": 35.29583,
+   "lon": 25.01628,
+   "koko_m": 400,
    "kuvat": [
     {
      "jarjestys": 1,
-     "tiedosto": "Kastelli - Iraklio - Crete.JPG",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kastelli_-_Iraklio_-_Crete.JPG?width=1280",
-     "tekija": "Schuppi",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kastelli_-_Iraklio_-_Crete.JPG",
-     "selite": "Kastélli on Pediadan tasangon kylä, jonka yllä aukeaa maisema oliivipuiden ja vuorten yli.",
-     "leveys": 5456,
-     "korkeus": 3632,
+     "tiedosto": "Ancient Tylissos.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ancient_Tylissos.jpg?width=1280",
+     "tekija": "Shadowgate",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ancient_Tylissos.jpg",
+     "selite": "Týlisoksen minolaisten talojen jäännökset ovat mäntyjen varjossa kylän laidalla.",
+     "leveys": 3088,
+     "korkeus": 2056,
      "tarkistettu": true
     },
     {
      "jarjestys": 2,
-     "tiedosto": "Kastelli Agios Georgios 01.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kastelli_Agios_Georgios_01.jpg?width=1280",
-     "tekija": "Olaf Tausch",
-     "lisenssi": "CC BY 3.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kastelli_Agios_Georgios_01.jpg",
-     "selite": "Agios Georgiosin valkoisessa kirkossa on punainen kupoli.",
-     "leveys": 4645,
-     "korkeus": 3482,
-     "tarkistettu": true
-    }
-   ]
-  },
-  "Q1021602": {
-   "nimi": "Néa Alikarnassós",
-   "peruste": "sitelinks",
-   "kaupunki": "kreeta",
-   "kaupunkiQ": "Q34374",
-   "lat": 35.32861,
-   "lon": 25.16444,
-   "koko_m": 1200,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "Νέα Αλικαρνασσός 5799.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%CE%9D%CE%AD%CE%B1_%CE%91%CE%BB%CE%B9%CE%BA%CE%B1%CF%81%CE%BD%CE%B1%CF%83%CF%83%CF%8C%CF%82_5799.jpg?width=1280",
+     "tiedosto": "Ναός Αγίου Νικολάου, Τύλισσος 4459.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%CE%9D%CE%B1%CF%8C%CF%82_%CE%91%CE%B3%CE%AF%CE%BF%CF%85_%CE%9D%CE%B9%CE%BA%CE%BF%CE%BB%CE%AC%CE%BF%CF%85%2C_%CE%A4%CF%8D%CE%BB%CE%B9%CF%83%CF%83%CE%BF%CF%82_4459.jpg?width=1280",
      "tekija": "C messier",
      "lisenssi": "CC BY-SA 4.0",
      "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%CE%9D%CE%AD%CE%B1_%CE%91%CE%BB%CE%B9%CE%BA%CE%B1%CF%81%CE%BD%CE%B1%CF%83%CF%83%CF%8C%CF%82_5799.jpg",
-     "selite": "Néa Alikarnassós on Iraklionin länsipuolella meren rannalla, ja kaupunginosan vieressä on lentokentän kiitotie.",
-     "leveys": 3720,
-     "korkeus": 2530,
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%CE%9D%CE%B1%CF%8C%CF%82_%CE%91%CE%B3%CE%AF%CE%BF%CF%85_%CE%9D%CE%B9%CE%BA%CE%BF%CE%BB%CE%AC%CE%BF%CF%85%2C_%CE%A4%CF%8D%CE%BB%CE%B9%CF%83%CF%83%CE%BF%CF%82_4459.jpg",
+     "selite": "Pyhän Nikolaoksen kirkko kuuluu kylän keskustaan.",
+     "leveys": 4213,
+     "korkeus": 3184,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Παλιά κρήνη Τυλίσσου 4442.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%CE%A0%CE%B1%CE%BB%CE%B9%CE%AC_%CE%BA%CF%81%CE%AE%CE%BD%CE%B7_%CE%A4%CF%85%CE%BB%CE%AF%CF%83%CF%83%CE%BF%CF%85_4442.jpg?width=1280",
+     "tekija": "C messier",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%CE%A0%CE%B1%CE%BB%CE%B9%CE%AC_%CE%BA%CF%81%CE%AE%CE%BD%CE%B7_%CE%A4%CF%85%CE%BB%CE%AF%CF%83%CF%83%CE%BF%CF%85_4442.jpg",
+     "selite": "Vanha kivikaivo muistuttaa kylän vuosisataisesta historiasta.",
+     "leveys": 3442,
+     "korkeus": 3264,
      "tarkistettu": true
     }
    ]
@@ -55750,6 +55714,91 @@
      "selite": "Kentän terminaalirakennus sijaitsee aivan meren rannalla Iraklionin kupeessa.",
      "leveys": 2977,
      "korkeus": 2231,
+     "tarkistettu": true
+    }
+   ]
+  },
+  "Q1928668": {
+   "nimi": "Pankrítio-stadion",
+   "peruste": "sitelinks",
+   "kaupunki": "kreeta",
+   "kaupunkiQ": "Q34374",
+   "lat": 35.33667,
+   "lon": 25.10611,
+   "koko_m": 250,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "PankritioStadium2019.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/PankritioStadium2019.jpg?width=1280",
+     "tekija": "Ergotelis123",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:PankritioStadium2019.jpg",
+     "selite": "Pankrítio on Heraklionin suuri urheilustadion, jolla pelataan jalkapalloa ja yleisurheilua.",
+     "leveys": 4160,
+     "korkeus": 3120,
+     "tarkistettu": true
+    }
+   ]
+  },
+  "Q1021602": {
+   "nimi": "Néa Alikarnassós",
+   "peruste": "sitelinks",
+   "kaupunki": "kreeta",
+   "kaupunkiQ": "Q34374",
+   "lat": 35.32861,
+   "lon": 25.16444,
+   "koko_m": 1200,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Νέα Αλικαρνασσός 5799.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%CE%9D%CE%AD%CE%B1_%CE%91%CE%BB%CE%B9%CE%BA%CE%B1%CF%81%CE%BD%CE%B1%CF%83%CF%83%CF%8C%CF%82_5799.jpg?width=1280",
+     "tekija": "C messier",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%CE%9D%CE%AD%CE%B1_%CE%91%CE%BB%CE%B9%CE%BA%CE%B1%CF%81%CE%BD%CE%B1%CF%83%CF%83%CF%8C%CF%82_5799.jpg",
+     "selite": "Néa Alikarnassós on Iraklionin länsipuolella meren rannalla, ja kaupunginosan vieressä on lentokentän kiitotie.",
+     "leveys": 3720,
+     "korkeus": 2530,
+     "tarkistettu": true
+    }
+   ]
+  },
+  "Q2097291": {
+   "nimi": "Gázi",
+   "peruste": "sitelinks",
+   "kaupunki": "kreeta",
+   "kaupunkiQ": "Q34374",
+   "lat": 35.32528,
+   "lon": 25.06694,
+   "koko_m": 1200,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Γάζι 0017.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%CE%93%CE%AC%CE%B6%CE%B9_0017.jpg?width=1280",
+     "tekija": "C messier",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%CE%93%CE%AC%CE%B6%CE%B9_0017.jpg",
+     "selite": "Gázi on Heraklionin länsipuolella oleva kylä, jota ympäröivät pellot ja meren rannikko.",
+     "leveys": 3689,
+     "korkeus": 2459,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Gazi - panoramio (1).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gazi_-_panoramio_(1).jpg?width=1280",
+     "tekija": "Jan M",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Gazi_-_panoramio_(1).jpg",
+     "selite": "Kylän kirkon kellotorni kohoaa rantatien yläpuolelle.",
+     "leveys": 3072,
+     "korkeus": 1728,
      "tarkistettu": true
     }
    ]
@@ -93998,143 +94047,6 @@
    "lon": 103.83191,
    "kuvat": []
   },
-  "Q16990": {
-   "nimi": "Etna",
-   "peruste": "sitelinks",
-   "kaupunki": "sisilia",
-   "kaupunkiQ": "Q1460",
-   "lat": 37.75083,
-   "lon": 14.99322,
-   "koko_m": 3000,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "Mount Etna snow-toppd.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mount_Etna_snow-toppd.jpg?width=1280",
-     "tekija": "Jeanne boleyn",
-     "lisenssi": "Public domain",
-     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mount_Etna_snow-toppd.jpg",
-     "selite": "Etna on Euroopan korkein ja yksi maailman aktiivisimmista tulivuorista, ja sen huippu on talvella lumen peitossa.",
-     "leveys": 1542,
-     "korkeus": 1330,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "Etna eruption seen from the International Space Station.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Etna_eruption_seen_from_the_International_Space_Station.jpg?width=1280",
-     "tekija": "NASA",
-     "lisenssi": "Public domain",
-     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Etna_eruption_seen_from_the_International_Space_Station.jpg",
-     "selite": "Avaruudesta nähdään Etnan purkautumisen savupilvi ja laavavirrat saaren itärannalla.",
-     "leveys": 2720,
-     "korkeus": 2000,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 3,
-     "tiedosto": "Etna Volcano Paroxysmal Eruption October 26 2013 - Creative Commons by gnuckx (10491911996).jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Etna_Volcano_Paroxysmal_Eruption_October_26_2013_-_Creative_Commons_by_gnuckx_(10491911996).jpg?width=1280",
-     "tekija": "gnuckx",
-     "lisenssi": "CC BY 2.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Etna_Volcano_Paroxysmal_Eruption_October_26_2013_-_Creative_Commons_by_gnuckx_(10491911996).jpg",
-     "selite": "Etnan purkaukset lähettävät tuhkapilviä korkealle taivaalle.",
-     "leveys": 1872,
-     "korkeus": 2816,
-     "tarkistettu": true
-    }
-   ]
-  },
-  "Q199952": {
-   "nimi": "Taormina",
-   "peruste": "pelin nosto",
-   "kaupunki": "sisilia",
-   "kaupunkiQ": "Q1460",
-   "lat": 37.85179,
-   "lon": 15.28565,
-   "koko_m": 700,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "Taormina as seen from the castle overlooking the town..jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Taormina_as_seen_from_the_castle_overlooking_the_town..jpg?width=1280",
-     "tekija": "Solomonn Levi",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Taormina_as_seen_from_the_castle_overlooking_the_town..jpg",
-     "selite": "Taormina on Sisilian itärannikon vuorenrinteeseen rakennettu kaupunki, jonka alapuolella avautuu Joonianmeri.",
-     "leveys": 5645,
-     "korkeus": 3768,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "Taormina BW 2025-04-27 10-10-49.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Taormina_BW_2025-04-27_10-10-49.jpg?width=1280",
-     "tekija": "Berthold Werner",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Taormina_BW_2025-04-27_10-10-49.jpg",
-     "selite": "Kaupungin katot ja vuoristomaisema avautuvat Monte Tauron rinteeltä.",
-     "leveys": 6016,
-     "korkeus": 4000,
-     "tarkistettu": true
-    }
-   ]
-  },
-  "Q636774": {
-   "nimi": "Agrigenton temppelilaakso",
-   "peruste": "UNESCO",
-   "kaupunki": "sisilia",
-   "kaupunkiQ": "Q1460",
-   "lat": 37.28972,
-   "lon": 13.59,
-   "koko_m": 2000,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "Valle dei Templi – Temple of Concordia 2024e.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Valle_dei_Templi_%E2%80%93_Temple_of_Concordia_2024e.jpg?width=1280",
-     "tekija": "Cayambe",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Valle_dei_Templi_%E2%80%93_Temple_of_Concordia_2024e.jpg",
-     "selite": "Agrigenton temppelilaaksossa seisovat antiikin Kreikan doorilaiset temppelit lähes ehjinä.",
-     "leveys": 8256,
-     "korkeus": 2998,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "Tempio della Concordia, Valle dei Templi, Agrigento, Sicilia, Italia 2024.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tempio_della_Concordia%2C_Valle_dei_Templi%2C_Agrigento%2C_Sicilia%2C_Italia_2024.jpg?width=1280",
-     "tekija": "Sharon Hahn Darlin",
-     "lisenssi": "CC BY 2.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tempio_della_Concordia%2C_Valle_dei_Templi%2C_Agrigento%2C_Sicilia%2C_Italia_2024.jpg",
-     "selite": "Concordian temppeli on yksi parhaiten säilyneistä kreikkalaisista temppeleistä.",
-     "leveys": 3956,
-     "korkeus": 2967,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 3,
-     "tiedosto": "Valle dei Templi – towards Temple of Concordia.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Valle_dei_Templi_%E2%80%93_towards_Temple_of_Concordia.jpg?width=1280",
-     "tekija": "Cayambe",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Valle_dei_Templi_%E2%80%93_towards_Temple_of_Concordia.jpg",
-     "selite": "Vanha tie johtaa oliivipuiden lomitse kohti Concordian temppeliä.",
-     "leveys": 5880,
-     "korkeus": 3286,
-     "tarkistettu": true
-    }
-   ]
-  },
   "Q1478407": {
    "nimi": "Palermon katedraali",
    "peruste": "pelin nosto",
@@ -94142,7 +94054,7 @@
    "kaupunkiQ": "Q1460",
    "lat": 38.11444,
    "lon": 13.35611,
-   "koko_m": 150,
+   "koko_m": 200,
    "kuvat": [
     {
      "jarjestys": 1,
@@ -94185,89 +94097,376 @@
     }
    ]
   },
-  "Q1233234": {
-   "nimi": "Ortigia",
-   "peruste": "UNESCO",
+  "Q1034853": {
+   "nimi": "Palatiinikappeli",
+   "peruste": "pelin nosto",
    "kaupunki": "sisilia",
    "kaupunkiQ": "Q1460",
-   "lat": 37.061,
-   "lon": 15.2945,
-   "koko_m": 800,
+   "lat": 38.11083,
+   "lon": 13.35361,
+   "koko_m": 60,
    "kuvat": [
     {
      "jarjestys": 1,
-     "tiedosto": "Siracusa, Ortigia, Piazza Duomo.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Siracusa%2C_Ortigia%2C_Piazza_Duomo.jpg?width=1280",
-     "tekija": "Rosaria Privitera Saggio",
+     "tiedosto": "Cappella Palatina 2014.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cappella_Palatina_2014.jpg?width=1280",
+     "tekija": "Liilia Moroz",
      "lisenssi": "CC BY-SA 4.0",
      "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Siracusa%2C_Ortigia%2C_Piazza_Duomo.jpg",
-     "selite": "Ortigia on Syrakusan vanhin kaupunginosa, jonka Piazza Duomolla seisoo barokkikatedraali.",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cappella_Palatina_2014.jpg",
+     "selite": "Palermon Palatiinikappelin kullanhohtoiset mosaiikit yhdistävät bysanttilaista, arabialaista ja normannilaista taidetta.",
      "leveys": 4752,
      "korkeus": 3168,
      "tarkistettu": true
     },
     {
      "jarjestys": 2,
-     "tiedosto": "Siracusa Ortigia.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Siracusa_Ortigia.jpg?width=1280",
-     "tekija": "Yiannis Vacondios",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Siracusa_Ortigia.jpg",
-     "selite": "Illalla Piazza Duomo hohtaa lämpimänä vaaleiden kivitalojen välissä.",
-     "leveys": 4000,
-     "korkeus": 3000,
+     "tiedosto": "Cappella Palatina (38654373955).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cappella_Palatina_(38654373955).jpg?width=1280",
+     "tekija": "Andrea Schaffer from Sydney, Australia",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cappella_Palatina_(38654373955).jpg",
+     "selite": "Kappelin seinillä raamatulliset kohtaukset kimaltavat kultamosaiikkina holvikaarten välissä.",
+     "leveys": 4870,
+     "korkeus": 3502,
      "tarkistettu": true
     },
     {
      "jarjestys": 3,
-     "tiedosto": "Ortygia - Syracuse (cropped).jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ortygia_-_Syracuse_(cropped).jpg?width=1280",
-     "tekija": "Andrea Schaffer",
-     "lisenssi": "CC BY 2.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ortygia_-_Syracuse_(cropped).jpg",
-     "selite": "Saaren rannoilla vanhat muurit nousevat suoraan merestä.",
-     "leveys": 2040,
-     "korkeus": 1361,
+     "tiedosto": "2008-10-19 Palermo-Capella-Seitenschiff.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2008-10-19_Palermo-Capella-Seitenschiff.jpg?width=1280",
+     "tekija": "kabaeh49",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2008-10-19_Palermo-Capella-Seitenschiff.jpg",
+     "selite": "Kappelin sivulaivan katto on koristeltu arabialaisella puuveistoksella.",
+     "leveys": 2000,
+     "korkeus": 1333,
      "tarkistettu": true
     }
    ]
   },
-  "Q1058967": {
-   "nimi": "Syrakusan kreikkalainen teatteri",
-   "peruste": "pelin nosto",
+  "Q1473825": {
+   "nimi": "Normannien palatsi",
+   "peruste": "sitelinks",
    "kaupunki": "sisilia",
    "kaupunkiQ": "Q1460",
-   "lat": 37.07611,
-   "lon": 15.275,
-   "koko_m": 150,
+   "lat": 38.11128,
+   "lon": 13.35341,
+   "koko_m": 250,
    "kuvat": [
     {
      "jarjestys": 1,
-     "tiedosto": "Greek theater of Syracuse AvL.JPG",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Greek_theater_of_Syracuse_AvL.JPG?width=1280",
-     "tekija": "AlexanderVanLoon",
-     "lisenssi": "CC BY-SA 3.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Greek_theater_of_Syracuse_AvL.JPG",
-     "selite": "Syrakusan teatteri on kallioon louhittu antiikin kreikkalaisen ajan katsomo, jossa esitetään yhä näytelmiä.",
-     "leveys": 3648,
-     "korkeus": 2736,
+     "tiedosto": "Palais des Normands.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Palais_des_Normands.jpg?width=1280",
+     "tekija": "Jules Vaulont",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Palais_des_Normands.jpg",
+     "selite": "Normannien palatsi on Sisilian kuninkaiden entinen asuinpaikka ja nykyisin alueparlamentin koti.",
+     "leveys": 3376,
+     "korkeus": 2532,
      "tarkistettu": true
     },
     {
      "jarjestys": 2,
-     "tiedosto": "Syracusa01(js).jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Syracusa01(js).jpg?width=1280",
-     "tekija": "Jerzy Strzelecki",
+     "tiedosto": "Palermo - Palazzo dei Normanni - 2026-09-21 17-37-13 001.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Palermo_-_Palazzo_dei_Normanni_-_2026-09-21_17-37-13_001.jpg?width=1280",
+     "tekija": "Risa_G_WiCo18",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Palermo_-_Palazzo_dei_Normanni_-_2026-09-21_17-37-13_001.jpg",
+     "selite": "Palatsin julkisivun kaarikoristeet kertovat arabialais-normannilaisesta rakennustaidosta.",
+     "leveys": 4730,
+     "korkeus": 3546,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Cathedral (Palermo) 21 06 2026 40.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cathedral_(Palermo)_21_06_2026_40.jpg?width=1280",
+     "tekija": "Effems",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cathedral_(Palermo)_21_06_2026_40.jpg",
+     "selite": "Palatsi kohoaa vihreiden puistojen takaa Palermon vuoristoisen taustan edessä.",
+     "leveys": 4608,
+     "korkeus": 3456,
+     "tarkistettu": true
+    }
+   ]
+  },
+  "Q261439": {
+   "nimi": "Teatro Massimo",
+   "peruste": "sitelinks",
+   "kaupunki": "sisilia",
+   "kaupunkiQ": "Q1460",
+   "lat": 38.12028,
+   "lon": 13.35722,
+   "koko_m": 120,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Teatro Massimo Vittorio Emanuele, Palermo.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Teatro_Massimo_Vittorio_Emanuele%2C_Palermo.jpg?width=1280",
+     "tekija": "Chiara Saffioti",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Teatro_Massimo_Vittorio_Emanuele%2C_Palermo.jpg",
+     "selite": "Palermon Teatro Massimo on Italian suurin oopperatalo ja sen uusklassinen pylväikkö hallitsee aukiota.",
+     "leveys": 4592,
+     "korkeus": 3448,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Palermo - Teatro Massimo Vittorio Emanuele.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Palermo_-_Teatro_Massimo_Vittorio_Emanuele.jpg?width=1280",
+     "tekija": "Vinpao",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Palermo_-_Teatro_Massimo_Vittorio_Emanuele.jpg",
+     "selite": "Rakennuksen kupoli ja palmut kehystävät sisäänkäyntiä.",
+     "leveys": 4608,
+     "korkeus": 3072,
+     "tarkistettu": true
+    }
+   ]
+  },
+  "Q1665695": {
+   "nimi": "Quattro Canti",
+   "peruste": "sitelinks",
+   "kaupunki": "sisilia",
+   "kaupunkiQ": "Q1460",
+   "lat": 38.11568,
+   "lon": 13.36149,
+   "koko_m": 80,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Palermo 0613 2013.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Palermo_0613_2013.jpg?width=1280",
+     "tekija": "Bengt Nyman",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Palermo_0613_2013.jpg",
+     "selite": "Quattro Canti on Palermon vanhan kaupungin risteys, jonka neljä barokkijulkisivua kaartuvat kulmissa.",
+     "leveys": 7243,
+     "korkeus": 4737,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Italian building.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Italian_building.jpg?width=1280",
+     "tekija": "Jiajiami",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Italian_building.jpg",
+     "selite": "Risteyksen julkisivuja koristavat patsaat ja suihkulähteet kolmessa kerroksessa.",
+     "leveys": 1707,
+     "korkeus": 1280,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Palermo - Chiesa delle Madonna delle Grazie - 2023-09-30 18-12-49 001.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Palermo_-_Chiesa_delle_Madonna_delle_Grazie_-_2023-09-30_18-12-49_001.jpg?width=1280",
+     "tekija": "Whihazel",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Palermo_-_Chiesa_delle_Madonna_delle_Grazie_-_2023-09-30_18-12-49_001.jpg",
+     "selite": "Barokkijulkisivun koristeellinen kulma kohoaa risteyksen ylle.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  "Q1644597": {
+   "nimi": "Martoranan kirkko",
+   "peruste": "UNESCO",
+   "kaupunki": "sisilia",
+   "kaupunkiQ": "Q1460",
+   "lat": 38.11478,
+   "lon": 13.36287,
+   "koko_m": 60,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Palermo-Martorana-bjs.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Palermo-Martorana-bjs.jpg?width=1280",
+     "tekija": "Bjs",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Palermo-Martorana-bjs.jpg",
+     "selite": "Martoranan kirkko on 1100-luvun bysanttilaisvaikutteinen kirkko, jonka kellotorni on normannikautta.",
+     "leveys": 1536,
+     "korkeus": 1028,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Chiesa della Martorana - Palermo, Italia - 28 Aprile 2023.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Chiesa_della_Martorana_-_Palermo%2C_Italia_-_28_Aprile_2023.jpg?width=1280",
+     "tekija": "GiorgioGaleotti",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Chiesa_della_Martorana_-_Palermo%2C_Italia_-_28_Aprile_2023.jpg",
+     "selite": "Kirkon kellotorni ja barokkijulkisivu seisovat Piazza Bellinin laidalla.",
+     "leveys": 6000,
+     "korkeus": 9000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  "Q2066497": {
+   "nimi": "San Cataldon kirkko",
+   "peruste": "UNESCO",
+   "kaupunki": "sisilia",
+   "kaupunkiQ": "Q1460",
+   "lat": 38.11472,
+   "lon": 13.3625,
+   "koko_m": 50,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Palermo-San-Cataldo-bjs-1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Palermo-San-Cataldo-bjs-1.jpg?width=1280",
+     "tekija": "Bjs",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Palermo-San-Cataldo-bjs-1.jpg",
+     "selite": "San Cataldon kirkon kolme punaista kupolia tekevät siitä Palermon tunnetuimpia arabialais-normannilaisia rakennuksia.",
+     "leveys": 1536,
+     "korkeus": 1028,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Palermo (27244731258).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Palermo_(27244731258).jpg?width=1280",
+     "tekija": "Jorge Franganillo from Barcelona, Spain",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Palermo_(27244731258).jpg",
+     "selite": "San Cataldo seisoo Martoranan kirkon vieressä Piazza Bellinin laidalla.",
+     "leveys": 4278,
+     "korkeus": 2850,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Piazza Bellini Chiesa Martorana San Cataldo Palermo.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Piazza_Bellini_Chiesa_Martorana_San_Cataldo_Palermo.jpg?width=1280",
+     "tekija": "This Photo was taken by Wolfgang Moroder. Feel free to use my photos, but please mention me as the author and send me a message. This image is not in the public domain. Please respect the copyright protection. It may only be used according to the rules mentioned here. This specifically excludes use in social media, if applicable terms of the licenses listed here not appropriate. Please do not upload an updated image here without consultation with the Author. The author would like to make corrections only at his own source. This ensures that the changes are preserved.Please if you think that any changes should be required, please inform the author.Otherwise you can upload a new image with a new name. Please use one of the templates derivative or extract.",
      "lisenssi": "CC BY-SA 3.0",
      "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Syracusa01(js).jpg",
-     "selite": "Katsomon portaat kaartuvat rinnettä pitkin kohti ympäröivää puistoa.",
-     "leveys": 1920,
-     "korkeus": 1224,
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Piazza_Bellini_Chiesa_Martorana_San_Cataldo_Palermo.jpg",
+     "selite": "Piazza Bellinin kaksi kirkkoa edustavat kahta eri aikakautta ja tyyliä.",
+     "leveys": 14269,
+     "korkeus": 7856,
+     "tarkistettu": true
+    }
+   ]
+  },
+  "Q745359": {
+   "nimi": "San Giovanni degli Eremiti",
+   "peruste": "UNESCO",
+   "kaupunki": "sisilia",
+   "kaupunkiQ": "Q1460",
+   "lat": 38.10972,
+   "lon": 13.35472,
+   "koko_m": 70,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Palermo Chiesa di San Giovanni degli Eremiti.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Palermo_Chiesa_di_San_Giovanni_degli_Eremiti.jpg?width=1280",
+     "tekija": "Allie_Caulfield",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Palermo_Chiesa_di_San_Giovanni_degli_Eremiti.jpg",
+     "selite": "San Giovanni degli Eremitin punaiset kupolit kuuluvat Palermon arabialais-normannilaisiin maamerkkeihin.",
+     "leveys": 4592,
+     "korkeus": 3056,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Palermo Chiesa di San Giovanni degli Eremiti BW 2025-04-29 09-35-41.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Palermo_Chiesa_di_San_Giovanni_degli_Eremiti_BW_2025-04-29_09-35-41.jpg?width=1280",
+     "tekija": "Berthold Werner",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Palermo_Chiesa_di_San_Giovanni_degli_Eremiti_BW_2025-04-29_09-35-41.jpg",
+     "selite": "Luostarin kaarikäytävä ja puutarha ovat jäljellä normannikauden ajalta.",
+     "leveys": 5748,
+     "korkeus": 3917,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Palermo Chiesa di San Giovanni degli Eremiti BW 2025-04-29 09-34-11.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Palermo_Chiesa_di_San_Giovanni_degli_Eremiti_BW_2025-04-29_09-34-11.jpg?width=1280",
+     "tekija": "Berthold Werner",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Palermo_Chiesa_di_San_Giovanni_degli_Eremiti_BW_2025-04-29_09-34-11.jpg",
+     "selite": "Kirkon kellotorni ja kupolit nousevat palmujen yläpuolelle.",
+     "leveys": 3931,
+     "korkeus": 5889,
+     "tarkistettu": true
+    }
+   ]
+  },
+  "Q1000054": {
+   "nimi": "Zisan linna",
+   "peruste": "UNESCO",
+   "kaupunki": "sisilia",
+   "kaupunkiQ": "Q1460",
+   "lat": 38.11578,
+   "lon": 13.3411,
+   "koko_m": 100,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "La Zisa (Palermo)-msu-1093.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/La_Zisa_(Palermo)-msu-1093.jpg?width=1280",
+     "tekija": "Matthias Süßen",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:La_Zisa_(Palermo)-msu-1093.jpg",
+     "selite": "Zisan linna on 1100-luvun arabialais-normannilainen kesäpalatsi Palermon länsiosassa.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Palermo - Castello della Zisa - 2025-09-10 23-21-11 001.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Palermo_-_Castello_della_Zisa_-_2025-09-10_23-21-11_001.jpg?width=1280",
+     "tekija": "SilviaPen",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Palermo_-_Castello_della_Zisa_-_2025-09-10_23-21-11_001.jpg",
+     "selite": "Linnan edessä on vesiallas ja puutarha, jotka muistuttavat saaren arabiperinnöstä.",
+     "leveys": 3072,
+     "korkeus": 4080,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Castello della Zisa - panoramio.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Castello_della_Zisa_-_panoramio.jpg?width=1280",
+     "tekija": "Filippo Piazza",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Castello_della_Zisa_-_panoramio.jpg",
+     "selite": "Palatsin julkisivua kehystävät kaarikoristeet ja ylhäällä kaiverrettu kirjoitusvyö.",
+     "leveys": 1600,
+     "korkeus": 1067,
      "tarkistettu": true
     }
    ]
@@ -94279,7 +94478,7 @@
    "kaupunkiQ": "Q1460",
    "lat": 38.08186,
    "lon": 13.29207,
-   "koko_m": 120,
+   "koko_m": 150,
    "kuvat": [
     {
      "jarjestys": 1,
@@ -94322,322 +94521,163 @@
     }
    ]
   },
-  "Q1354756": {
-   "nimi": "Cefalùn katedraali",
+  "Q1262976": {
+   "nimi": "Amiraalin silta",
    "peruste": "UNESCO",
    "kaupunki": "sisilia",
    "kaupunkiQ": "Q1460",
-   "lat": 38.03984,
-   "lon": 14.02341,
+   "lat": 38.105,
+   "lon": 13.375,
    "koko_m": 100,
    "kuvat": [
     {
      "jarjestys": 1,
-     "tiedosto": "Cefalù BW 2025-05-01 13-11-30.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cefal%C3%B9_BW_2025-05-01_13-11-30.jpg?width=1280",
-     "tekija": "Berthold Werner",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cefal%C3%B9_BW_2025-05-01_13-11-30.jpg",
-     "selite": "Cefalùn katedraali on normannikuninkaiden perustama, ja sen kaksi tornia kohoavat kaupungin yläpuolella.",
-     "leveys": 5362,
-     "korkeus": 3875,
+     "tiedosto": "Palermo-Ponte-Ammiraglio-bjs2007-01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Palermo-Ponte-Ammiraglio-bjs2007-01.jpg?width=1280",
+     "tekija": "Bjs",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Palermo-Ponte-Ammiraglio-bjs2007-01.jpg",
+     "selite": "Amiraalin silta on 1100-luvun normannikauden kaarisilta, joka ylitti aikanaan Oreto-joen.",
+     "leveys": 1500,
+     "korkeus": 1000,
      "tarkistettu": true
     },
     {
      "jarjestys": 2,
-     "tiedosto": "Cefalù - Duomo di Cefalù - 2025-09-10 22-33-38 001.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cefal%C3%B9_-_Duomo_di_Cefal%C3%B9_-_2025-09-10_22-33-38_001.jpg?width=1280",
-     "tekija": "Enricopis",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cefal%C3%B9_-_Duomo_di_Cefal%C3%B9_-_2025-09-10_22-33-38_001.jpg",
-     "selite": "Ilmasta näkyy, kuinka kaupunki ja katedraali nojaavat jyrkkää kallioseinämää vasten.",
-     "leveys": 2720,
-     "korkeus": 1530,
-     "tarkistettu": true
-    }
-   ]
-  },
-  "Q505617": {
-   "nimi": "Villa Romana del Casale",
-   "peruste": "UNESCO",
-   "kaupunki": "sisilia",
-   "kaupunkiQ": "Q1460",
-   "lat": 37.36472,
-   "lon": 14.33455,
-   "koko_m": 200,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "Mosaïque de la Grande Chasse, villa de Casale.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mosa%C3%AFque_de_la_Grande_Chasse%2C_villa_de_Casale.jpg?width=1280",
-     "tekija": "Unknown authorUnknown author",
-     "lisenssi": "Public domain",
-     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mosa%C3%AFque_de_la_Grande_Chasse%2C_villa_de_Casale.jpg",
-     "selite": "Villa Romana del Casalen mosaiikit ovat antiikin roomalaisen taiteen laajimpia ja parhaiten säilyneitä.",
-     "leveys": 1702,
-     "korkeus": 2502,
+     "tiedosto": "Le pont de l'Amiral (Palerme).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Le_pont_de_l'Amiral_(Palerme).jpg?width=1280",
+     "tekija": "Jean-Pierre Dalbéra",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Le_pont_de_l'Amiral_(Palerme).jpg",
+     "selite": "Sillan terävät kaaret ovat arabialaisvaikutteista rakennustaitoa.",
+     "leveys": 1536,
+     "korkeus": 917,
      "tarkistettu": true
     },
     {
-     "jarjestys": 2,
-     "tiedosto": "Transport d'animaux exotiques, villa de Casale, Piazza Armerina, Sicile, Italie.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Transport_d'animaux_exotiques%2C_villa_de_Casale%2C_Piazza_Armerina%2C_Sicile%2C_Italie.jpg?width=1280",
-     "tekija": "Unknown authorUnknown author",
-     "lisenssi": "Public domain",
-     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Transport_d'animaux_exotiques%2C_villa_de_Casale%2C_Piazza_Armerina%2C_Sicile%2C_Italie.jpg",
-     "selite": "Mosaiikissa kuvataan villieläinten kuljetusta areenoille.",
-     "leveys": 2945,
-     "korkeus": 1072,
+     "jarjestys": 3,
+     "tiedosto": "Ponte Ammiraglio 2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ponte_Ammiraglio_2.jpg?width=1280",
+     "tekija": "BelPatty86",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ponte_Ammiraglio_2.jpg",
+     "selite": "Joki on ohjattu sillan vierestä pois, ja silta seisoo nykyisin puistomaisella nurmikolla.",
+     "leveys": 2272,
+     "korkeus": 1704,
      "tarkistettu": true
     }
    ]
   },
-  "Q1034853": {
-   "nimi": "Palatiinikappeli",
-   "peruste": "pelin nosto",
-   "kaupunki": "sisilia",
-   "kaupunkiQ": "Q1460",
-   "lat": 38.11083,
-   "lon": 13.35361,
-   "koko_m": 40,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "Cappella Palatina 2014.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cappella_Palatina_2014.jpg?width=1280",
-     "tekija": "Liilia Moroz",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cappella_Palatina_2014.jpg",
-     "selite": "Palermon Palatiinikappelin kullanhohtoiset mosaiikit yhdistävät bysanttilaista, arabialaista ja normannilaista taidetta.",
-     "leveys": 4752,
-     "korkeus": 3168,
-     "tarkistettu": true
-    }
-   ]
-  },
-  "Q747484": {
-   "nimi": "Taorminan teatteri",
-   "peruste": "pelin nosto",
-   "kaupunki": "sisilia",
-   "kaupunkiQ": "Q1460",
-   "lat": 37.85245,
-   "lon": 15.29212,
-   "koko_m": 120,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "Taormina BW 2025-04-27 10-06-34.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Taormina_BW_2025-04-27_10-06-34.jpg?width=1280",
-     "tekija": "Berthold Werner",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Taormina_BW_2025-04-27_10-06-34.jpg",
-     "selite": "Taorminan antiikin teatterin rauniot ovat tiilimuurien ja pylväiden muotoilemia.",
-     "leveys": 6161,
-     "korkeus": 4097,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "Taormina BW 2025-04-27 10-26-20.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Taormina_BW_2025-04-27_10-26-20.jpg?width=1280",
-     "tekija": "Berthold Werner",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Taormina_BW_2025-04-27_10-26-20.jpg",
-     "selite": "Teatterista avautuu näkymä Joonianmerelle ja kaukana kohoavalle Etnalle.",
-     "leveys": 6016,
-     "korkeus": 3384,
-     "tarkistettu": true
-    }
-   ]
-  },
-  "Q487174": {
-   "nimi": "Noto",
-   "peruste": "UNESCO",
-   "kaupunki": "sisilia",
-   "kaupunkiQ": "Q1460",
-   "lat": 36.88333,
-   "lon": 15.08333,
-   "koko_m": 600,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "Noto Cathedral BW 2025-04-26 11-08-40.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Noto_Cathedral_BW_2025-04-26_11-08-40.jpg?width=1280",
-     "tekija": "Berthold Werner",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Noto_Cathedral_BW_2025-04-26_11-08-40.jpg",
-     "selite": "Noto jälleenrakennettiin 1693 maanjäristyksen jälkeen harmoniseksi sisiliaisen barokin kaupungiksi.",
-     "leveys": 5919,
-     "korkeus": 4011,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "Dome of Noto Cathedral.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dome_of_Noto_Cathedral.jpg?width=1280",
-     "tekija": "Bernard Gagnon",
-     "lisenssi": "CC BY 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Dome_of_Noto_Cathedral.jpg",
-     "selite": "Katedraalin kupoli rakennettiin uudelleen sen romahdettua vuonna 1996.",
-     "leveys": 2996,
-     "korkeus": 4195,
-     "tarkistettu": true
-    }
-   ]
-  },
-  "Q179883": {
-   "nimi": "Liparisaaret",
-   "peruste": "UNESCO",
-   "kaupunki": "sisilia",
-   "kaupunkiQ": "Q1460",
-   "lat": 38.49667,
-   "lon": 14.93583,
-   "koko_m": 15000,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "Aerial image of Stromboli (view from the northeast).jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aerial_image_of_Stromboli_(view_from_the_northeast).jpg?width=1280",
-     "tekija": "Carsten Steger",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aerial_image_of_Stromboli_(view_from_the_northeast).jpg",
-     "selite": "Liparisaaret ovat tulivuoriperäinen saaristo Sisilian pohjoispuolella, ja Stromboli on yhä aktiivinen.",
-     "leveys": 5000,
-     "korkeus": 2700,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "Castello di Lipari 02.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Castello_di_Lipari_02.jpg?width=1280",
-     "tekija": "Bernard Gagnon",
-     "lisenssi": "CC BY 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Castello_di_Lipari_02.jpg",
-     "selite": "Liparin linnoitus kohoaa sataman yllä saariston pääkaupungissa.",
-     "leveys": 4491,
-     "korkeus": 2994,
-     "tarkistettu": true
-    }
-   ]
-  },
-  "Q692847": {
-   "nimi": "Segesta",
+  "Q1478356": {
+   "nimi": "Teatro Politeama",
    "peruste": "sitelinks",
    "kaupunki": "sisilia",
    "kaupunkiQ": "Q1460",
-   "lat": 37.91591,
-   "lon": 12.86359,
-   "koko_m": 400,
+   "lat": 38.125,
+   "lon": 13.35667,
+   "koko_m": 100,
    "kuvat": [
     {
      "jarjestys": 1,
-     "tiedosto": "Segesta AncientGreekTemple 0932.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Segesta_AncientGreekTemple_0932.jpg?width=1280",
-     "tekija": "Ludvig14",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Segesta_AncientGreekTemple_0932.jpg",
-     "selite": "Segestan keskeneräinen doorilainen temppeli seisoo yksinäisellä kukkulalla kauniissa maisemassa.",
-     "leveys": 5173,
-     "korkeus": 3281,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "Segesta BW 2012-10-10 17-08-52.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Segesta_BW_2012-10-10_17-08-52.jpg?width=1280",
+     "tiedosto": "Palermo Teatro Politeama BW 2012-10-09 16-44-27.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Palermo_Teatro_Politeama_BW_2012-10-09_16-44-27.jpg?width=1280",
      "tekija": "Berthold Werner",
      "lisenssi": "CC BY-SA 3.0",
      "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Segesta_BW_2012-10-10_17-08-52.jpg",
-     "selite": "Temppelin pylväät erottuvat selvästi taivasta vasten.",
-     "leveys": 3550,
-     "korkeus": 3260,
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Palermo_Teatro_Politeama_BW_2012-10-09_16-44-27.jpg",
+     "selite": "Teatro Politeamaa koristaa suuri riemukaari ja pronssinen vaunuryhmä.",
+     "leveys": 3682,
+     "korkeus": 2455,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Piazza Politeama Garibaldi-Palermo.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Piazza_Politeama_Garibaldi-Palermo.JPG?width=1280",
+     "tekija": "Hein56didden",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Piazza_Politeama_Garibaldi-Palermo.JPG",
+     "selite": "Teatterin pyöreä pylväskäytävä avautuu Piazza Politeamalle.",
+     "leveys": 2272,
+     "korkeus": 1704,
      "tarkistettu": true
     }
    ]
   },
-  "Q952173": {
-   "nimi": "Selinunte",
+  "Q731916": {
+   "nimi": "Monte Pellegrino",
    "peruste": "sitelinks",
    "kaupunki": "sisilia",
    "kaupunkiQ": "Q1460",
-   "lat": 37.58361,
-   "lon": 12.82472,
-   "koko_m": 1000,
+   "lat": 38.17,
+   "lon": 13.35139,
+   "koko_m": 1500,
    "kuvat": [
     {
      "jarjestys": 1,
-     "tiedosto": "Selinunte Temple C aerial view.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Selinunte_Temple_C_aerial_view.jpg?width=1280",
-     "tekija": "Jorre (Jochen Reinhard)",
+     "tiedosto": "Monte pellegrino.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Monte_pellegrino.jpg?width=1280",
+     "tekija": "Dedda71",
      "lisenssi": "CC BY 3.0",
      "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Selinunte_Temple_C_aerial_view.jpg",
-     "selite": "Selinunte oli antiikin kreikkalainen kaupunki Sisilian lounaisrannikolla, jonka temppelien rauniot jäivät maanjäristyksen jäljiltä.",
-     "leveys": 3375,
-     "korkeus": 2419,
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Monte_pellegrino.jpg",
+     "selite": "Monte Pellegrino kohoaa jyrkkänä kalkkikivivuorena Palermon pohjoispuolella.",
+     "leveys": 2592,
+     "korkeus": 1944,
      "tarkistettu": true
     },
     {
      "jarjestys": 2,
-     "tiedosto": "Temples A, B, and C at Selinunte sel26.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Temples_A%2C_B%2C_and_C_at_Selinunte_sel26.jpg?width=1280",
-     "tekija": "Michael Gunther",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Temples_A%2C_B%2C_and_C_at_Selinunte_sel26.jpg",
-     "selite": "Akropoliin temppelin pylväsrivi on osittain pystytetty uudelleen.",
-     "leveys": 2920,
-     "korkeus": 2035,
+     "tiedosto": "9005 Monte Pellegrino.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/9005_Monte_Pellegrino.jpg?width=1280",
+     "tekija": "Gerd Fahrenhorst",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:9005_Monte_Pellegrino.jpg",
+     "selite": "Vuori erottuu Palermon lahden yli kaupungin satamasta katsottuna.",
+     "leveys": 3762,
+     "korkeus": 1570,
      "tarkistettu": true
     }
    ]
   },
-  "Q261439": {
-   "nimi": "Teatro Massimo",
+  "Q1082173": {
+   "nimi": "Mondello",
    "peruste": "sitelinks",
    "kaupunki": "sisilia",
    "kaupunkiQ": "Q1460",
-   "lat": 38.12028,
-   "lon": 13.35722,
-   "koko_m": 120,
+   "lat": 38.19979,
+   "lon": 13.32679,
+   "koko_m": 1200,
    "kuvat": [
     {
      "jarjestys": 1,
-     "tiedosto": "Teatro Massimo Vittorio Emanuele, Palermo.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Teatro_Massimo_Vittorio_Emanuele%2C_Palermo.jpg?width=1280",
-     "tekija": "Chiara Saffioti",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Teatro_Massimo_Vittorio_Emanuele%2C_Palermo.jpg",
-     "selite": "Palermon Teatro Massimo on Italian suurin oopperatalo ja sen uusklassinen pylväikkö hallitsee aukiota.",
-     "leveys": 4592,
-     "korkeus": 3448,
+     "tiedosto": "Il golfo di Mondello.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Il_golfo_di_Mondello.jpg?width=1280",
+     "tekija": "Andrea Calcagno from PALERMO, Italia",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Il_golfo_di_Mondello.jpg",
+     "selite": "Mondellon vaalea hiekkaranta ja turkoosi meri ovat Palermon suosituin uimapaikka.",
+     "leveys": 2738,
+     "korkeus": 1740,
      "tarkistettu": true
     },
     {
      "jarjestys": 2,
-     "tiedosto": "Palermo - Teatro Massimo Vittorio Emanuele.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Palermo_-_Teatro_Massimo_Vittorio_Emanuele.jpg?width=1280",
-     "tekija": "Vinpao",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Palermo_-_Teatro_Massimo_Vittorio_Emanuele.jpg",
-     "selite": "Rakennuksen kupoli ja palmut kehystävät sisäänkäyntiä.",
-     "leveys": 4608,
-     "korkeus": 3072,
+     "tiedosto": "Mondello palermo.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mondello_palermo.jpg?width=1280",
+     "tekija": "Dedda71",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mondello_palermo.jpg",
+     "selite": "Rannan takana kohoaa Monte Pellegrinon kalliorinne.",
+     "leveys": 2592,
+     "korkeus": 1944,
      "tarkistettu": true
     }
    ]
