@@ -246,3 +246,6 @@ NUI:n osa on `natiivi-ui/sallitut-157` 0f770be2. LS2:n lista on tiedostossa `pro
     - OpasSovitin: polut /opas/aineistotista, kohteen `aani_ajat`, avauksen .ajat.json.
     - Pelikoodarin #4152 (worker-kentät) vahvistettu vanhoille appeille.
     - Korttia ei ole nähty simussa (linjaus): ulkoasu ja tekstikoko nähdään vasta TF 163:ssa.
+  - 16.5x: yksityiskohdat 8bc2a42fc kuitattu junaan 163 ja lähetetty Natiivisepälle. v2-paketti jäsentyy (67/67).
+    - Seuraava pieni erä, kun data tulee: kortin tekijäriville merkintä "Havainnekuva" riveille, joilla `havainnekuva: true` (pyydetty Sisältökirjurilta).
+    - Ulkoasua hiotaan omistajan TF 163 -palautteen mukaan.
