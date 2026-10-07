@@ -51,6 +51,11 @@ E3 mefat = väriaine, 400 miestä ei lähteessä. RSS-skannauksessa ei sivunumer
 **Giza/D lisäksi:** RAB-siiloja ~30 (ei 10), Area C Khafren, Ain Sukhna Khafre–Pepi II ja Montuhotep IV–Senusret I, E14 "Younes 2024" pois (Younes on PNAS:n kirjoittaja),
 E58–E59 luvut mallinnuksia, E61 muotit 3 kokoa, E62 40 khar = 1 922 l (+ suuri heqat = 1 941 l) vahvistui, E63 jää (Gately-kirja), E64 Roth 1991 s. 121 ei ratkaise ryhmäkokoa.
 
+**Giza-tiedosto VALMIS (commit 7d74a62):** `faktapohja-giza-kulta-aika.md` sai osion "Lähdetarkistus 7.10.2026 (sivut avattu)"
++ 27 tekstikorjausta (`[KORJATTU 7.10.]`). Tarkistettu 42 kohtaa 74:stä: vahvistui 20, korjattu 19, jää epävarmaksi 3
+(E27, E63, E64). 32 kohtaa (E16, E19, E20, E22–E26, E29–E32, E38–E52, E56, E71–E74) ei kuulunut tilaukseen, ei avattu uudelleen.
+**Jäljellä:** TARKISTAJA (sonnet) Giza-tiedostolle; KK-tarkistaja käynnissä; sitten loppuraportti.
+
 **Raporttien tärkeimmät löydökset (jotta ne säilyvät, jos kontti katoaa):**
 - KK/A: Time 9.7.1923 ("CHINA: Fire") ja 23.7.1923 ("Eunuch's Strike") ovat eri artikkelit, molemmat päiväykset oikein;
   "klo 21" ei tuettu (palo syttyi n. 0–1, hälytys 3, sammui 7, 27.6.); "yli 300 huonetta" on populaariluku (aikalaiset 100+/120/127);
