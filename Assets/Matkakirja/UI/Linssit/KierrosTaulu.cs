@@ -133,9 +133,20 @@ namespace Matkakirja.Natiivi
         /// Oppaan lyhyt ilmoitus kertojan laatikossa (PUHE TEKSTINÄ -pohja; juna 157: LS1:n torjunta "valitse kohde listasta", kun
         /// ei-sallittu-siltalause ei soinut). Oppaan chat ei aukea itsestään, joten PuluChat.Vastaa jäi näkymättömiin (simu 04.35).
         /// </summary>
-        public static void Ilmoitus(string teksti, float kestoS = 5f) { ilmoitusTeksti = teksti; ilmoitusAsti = Time.unscaledTime + kestoS; }
+        /// <summary>
+        /// Kertojan laatikon ilmoitus (torjunta ym.). Näkyy lukuajan (15 merkkiä/s), kuitenkin vähintään IlmoitusMinS; jos siirtoruutu
+        /// ("Siirrytään") on auki, ajastin alkaa vasta kun kaupunki näkyy (LS2:n löydös juna 159:ssä: alle 4 s ja ruudun päällä).
+        /// </summary>
+        public static void Ilmoitus(string teksti, float kestoS = 0f)
+        {
+            ilmoitusTeksti = teksti;
+            ilmoitusKesto = Mathf.Max(kestoS, IlmoitusMinS, (teksti?.Length ?? 0) / IlmoitusMerkkiaS);
+            ilmoitusAsti = -1f; ilmoitusOdottaa = true;
+        }
+        public const float IlmoitusMinS = 6f, IlmoitusMerkkiaS = 15f;
         static string ilmoitusTeksti;
-        static float ilmoitusAsti = -1f;
+        static float ilmoitusAsti = -1f, ilmoitusKesto;
+        static bool ilmoitusOdottaa;
 
         /// <summary>Testi `ui opasvalikko otsikko <nimi>|<alarivi>` / `pois`: pysähdyksen otsikko pysyvästi näkyviin (pitkä nimi).</summary>
         public static string Testiotsikko;
@@ -189,6 +200,7 @@ namespace Matkakirja.Natiivi
                 otsikko.style.opacity = 1f;
             }
             string teksti = s.TekstiRuudulle;
+            if (ilmoitusOdottaa && !l.Siirtymassa) { ilmoitusOdottaa = false; ilmoitusAsti = Time.unscaledTime + ilmoitusKesto; }
             bool ilmoitus = Time.unscaledTime < ilmoitusAsti;
             if (ilmoitus) teksti = ilmoitusTeksti;
             if (teksti != null && kertojaTeksti.text != teksti) kertojaTeksti.text = teksti;
