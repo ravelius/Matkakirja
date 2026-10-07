@@ -920,7 +920,7 @@ namespace Matkakirja.Natiivi
             SeikkailuVartijat.Luo(nayttamo.transform, rakennus, SeikkailuKavely.Data, nayttamo.Hahmot3D, o.Kirjaa);
             if (SeikkailuVartijat.AskelKlippi == null && rakennus.Aanet != null && rakennus.Aanet.TryGetValue("askel-kivi", out var askel) && !string.IsNullOrEmpty(askel.Tiedosto))
             {
-                using var q = UnityEngine.Networking.UnityWebRequestMultimedia.GetAudioClip(peili(paketinJuuri + askel.Tiedosto), AudioType.MPEG);
+                using var q = UnityEngine.Networking.UnityWebRequestMultimedia.GetAudioClip(AaniUrl(askel.Tiedosto), AudioType.MPEG);   // äänet rakennuksen juuressa (E1-ajo: hash-juuri 404)
                 ((UnityEngine.Networking.DownloadHandlerAudioClip)q.downloadHandler).streamAudio = false;
                 yield return q.SendWebRequest();
                 if (q.result == UnityEngine.Networking.UnityWebRequest.Result.Success) SeikkailuVartijat.AskelKlippi = UnityEngine.Networking.DownloadHandlerAudioClip.GetContent(q);
