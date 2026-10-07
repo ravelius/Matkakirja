@@ -284,3 +284,11 @@ Brotli (haara linnanrakentaja-zstd, worktree olemassa), akustiikka #3979 (Steam 
   GIZA: helmat sävytetty (helma.py TAVOITE 205,190,160), aitaus.py POHJA 19,0 + itäpää −2,8 (LS1:n Google-korkeudet),
   sfinksi_sdf → giza-v2/lahde/sfinksi-verkko.npz, sfinksi_glb → giza-v2/sfinksi-uusi (korvaa glb/sfinksi-* -symlinkit) +
   sijainnit.json korkeus_egm2008 19,0 / ellipsoidi 34,6.
+- 7.10. 12.5x: v44b PEILISSÄ eb413b52d375da8d (blender fec1729f, haara linnanrakentaja-linna-v42) → Siirtoseppä: venereitti
+  kavely/merkit.json (vene:alku/muuri/portti/laituri + nousu:laituri, osa ulkoalue; kiinnitys laiturin ulkopäässä NW-puolella
+  s 12,5 o −3,2, kierto_y 2,1272) ja veneen istuin_matkustaja (0; 0,13; −1,8) _valmiit/olavinlinna-soutu-v1/glb/vene_*.glb
+  (JSON-chunk-muokkaus, animaatio säilyi). Kappelin koillisikkuna + rautaluukku (Aspelin 1875, #4129) kappeli.js:ssä, EI vielä
+  leivottu (Päätoimittaja: seuraavan leivonnan mukana). GIZA v2: helmat 150 m (helma.py --sijainnit giza-v2/glb/sijainnit.json,
+  ulko-osa 8 m, Sfinksille helma, SISA 4 m), Sfinksi korkeus 19,0 EGM; Sfinksin väri liian tumma → sfinksi_glb.py normalisoi
+  värin sRGB 195,170,128:aan → leivonta giza-v2/sfinksi-uusi (kun valmis: korvaa glb/sfinksi-lod*.glb + sfinksi-tekstuurit,
+  tarkista mediaani ~195,170,128, ilmoita LS1:lle, joka ottaa Gizan pelikuvat Päätoimittajalle).
