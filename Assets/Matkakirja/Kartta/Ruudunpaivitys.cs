@@ -167,7 +167,8 @@ namespace Matkakirja
         // ~30 % prosessoria). Ikkuna näkyy mutta ei ole valittuna → enintään MacEiValittunaFps, ääni soi. Ikkuna ei näy
         // (toinen Space, pienennetty, peitetty, sovellus piilotettu) → MacPiilossaFps, piirto vain joka MacPiilossaPiirtovali.
         // kehys, Cesium-laattojen päivitys pysäytetty (suspendUpdate) ja kaikki ääni tauolle (AudioListener.pause: esitys ja
-        // kertoja pysähtyvät ja jatkavat samasta kohdasta). Mittaus 7.10. 13.36: pelkkä 1 fps maksoi vielä ~4 %. iOS ennallaan.
+        // kertoja pysähtyvät ja jatkavat samasta kohdasta) ja runInBackground pois (pelisilmukka seis, kun sovellus ei ole
+        // valittuna). Mittaus 7.10. 13.36: pelkkä 1 fps maksoi vielä ~4 %, 14.01 Cesium + piirtoväli ~3 %. iOS ennallaan.
         public const int MacEiValittunaFps = 10, MacPiilossaFps = 1, MacPiilossaPiirtovali = 30;
         /// <summary>Natiivi Mac: 0 = näkyy ja valittuna, 1 = näkyy, ei valittuna, 2 = piilossa.</summary>
         public static int MacIkkuna { get; private set; }
@@ -210,6 +211,10 @@ namespace Matkakirja
                     if ((tila == 2) != (MacIkkuna == 2)) MacCesium(tila == 2);
                     MacIkkuna = tila;
                     AudioListener.pause = tila == 2;
+                    // Piilossa ja ei valittuna: koko pelisilmukka seis (runInBackground pois; Rakennus asettaa oletukseksi true).
+                    // Mittaus 7.10. 14.01: 1 fps + piirtoväli 30 + Cesium seis maksoi vielä ~3 %. Palaa, kun sovellus valitaan
+                    // (Spacen vaihto valitsee kokonäytön sovelluksen); näkyvä mutta valitsematon ikkuna jatkaa 10 fps:llä.
+                    Application.runInBackground = tila != 2;
                     Debug.Log("MATKAKIRJA ruutu: Mac-ikkuna " + (tila == 2 ? $"piilossa → {MacPiilossaFps} fps, piirto joka {MacPiilossaPiirtovali}., Cesium pysäytetty ({macPysaytetyt.Count}), ääni tauolla"
                         : tila == 1 ? $"näkyy, ei valittuna → enintään {MacEiValittunaFps} fps" : "näkyy ja valittuna → täysi taajuus"));
                 }
