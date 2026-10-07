@@ -23,7 +23,8 @@ proto3d-mac-testflight.yml -f app_polku=… -f versio=1.1 -f build=161 -f lataa=
   Julkaisijan JUNAN AVAUS NYT → `git update-ref refs/heads/juna/b13 c076765c4 2309f55d…` (tarkista nykyinen juna/b13!) + juna.log,
   BUILD 161 master-merge d8b0e0fc:n päälle, SHA Julkaisijalle (hän tekee muutosloki-PR:n), Mac TF 161 Julkaisijan luvalla
   (mac-kaanna <BUILD 161 master> 1.1 161, APPSTORE=1, kopio lokit/natiiviseppa-mac-tf-161-<sha>, gh workflow run lataa=true).
-- Junaan 162: LS1 pallo-latauskuva cc6176356, NUI apuraha-kuvat 5e45d1da.
+- Junaan 162: LS1 pallo-latauskuva cc6176356, NUI apuraha-kuvat 5e45d1da (odottaa kuittausta), LS2 s2-kaudet f6e4a8495 (LS2:n mukaan
+  Päätoimittaja kuittasi 15.4x — varmista Päätoimittajalta kokoamisessa).
 
 ## TILA 15.3x
 
