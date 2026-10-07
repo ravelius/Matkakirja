@@ -2,13 +2,21 @@
 """Yhdistää osa1..osa4.json yhdeksi ja validoi ankkurit tekstiä vasten."""
 import json, sys, os, re
 
-SP = os.path.dirname(os.path.abspath(__file__))
-REPO = "/home/user/Matkakirja"
-
-AVAUS = ("Tervetuloa Pariisiin. Ylhäältä kaupunki näyttää vaalealta kiviviuhkalta, "
-         "jonka keskellä Seine kiemurtelee kahden saaren ohi. Kierros alkaa joen "
-         "keskeltä Cité-saarelta, josta Pariisi sai alkunsa ja jolla Notre-Dame on "
-         "seissyt 1100-luvulta asti.")
+KAUPUNKI = sys.argv[1]            # esim. praha
+TYO = sys.argv[2]                 # kansio, jossa osa*.json; tulos yhdistetty.json samaan
+SP = TYO
+REPO = os.environ.get("REPO", "/Users/Shared/Claude/wt/sisaltokirjuri-praha-wien-kuvat")
+AVAUSLISTA = "/Users/Shared/Claude/proto-3d/_tyo/opas-esittely/praha-wien/avaus-lista.json"
+AVAUS = None
+try:
+    for x in json.load(open(AVAUSLISTA)):
+        if x["id"] == f"{KAUPUNKI}-avaus":
+            AVAUS = x["teksti"]
+except Exception:
+    pass
+if os.environ.get("AVAUS_TEKSTI"):
+    AVAUS = os.environ["AVAUS_TEKSTI"]
+assert AVAUS, "avausteksti puuttuu (AVAUS_TEKSTI)"
 
 SALLITUT_LISENSSIT = re.compile(
     r"^(PD|Public domain|CC0|CC BY(?:-SA)?(?:[ -]\d(?:\.\d)?)?)", re.I)
@@ -17,10 +25,11 @@ KIELLETYT = re.compile(r"\bNC\b|NonCommercial|\bND\b|NoDeriv|fair ?use", re.I)
 JARJESTYS = ["kohde_id", "tekstilaji", "ankkuri", "kuvateksti", "commons_tiedosto",
              "url", "lisenssi", "tekija", "leveys", "korkeus", "tarkistettu",
              "perustelu"]
+VALINN = ["rajaus", "tarkistaja", "tarkistus"]
 
 
 def lataa_tekstit():
-    d = json.load(open(f"{REPO}/esittely-tyo/malli/pariisi.json"))
+    d = json.load(open(f"{REPO}/esittely-tyo/malli/{KAUPUNKI}.json"))
     t = {}
     for k in d["kohteet"]:
         t[(k["id"], "teksti")] = k["teksti"]
@@ -35,10 +44,10 @@ def main():
     nimet["avaus"] = "Kaupungin avaus"
     rivit, ongelmat = [], []
 
-    for n in (1, 2, 3, 4):
+    for n in (1, 2, 3, 4, 5, 6):
         p = f"{SP}/osa{n}.json"
         if not os.path.exists(p):
-            ongelmat.append(f"PUUTTUU: osa{n}.json")
+            continue
             continue
         try:
             osa = json.load(open(p))
@@ -112,7 +121,7 @@ def main():
             ongelmat.append(f"SAMA KUVA kahdesti: {f} -> {paikat}")
 
     # järjestys: kohteet pariisi.json:n järjestyksessä, avaus ensin
-    d = json.load(open(f"{REPO}/esittely-tyo/malli/pariisi.json"))
+    d = json.load(open(f"{REPO}/esittely-tyo/malli/{KAUPUNKI}.json"))
     jarj = {k["id"]: n for n, k in enumerate(d["kohteet"])}
     jarj["avaus"] = -1
     lajijarj = {"avaus": 0, "teksti": 1, "lyhyt": 2}
@@ -120,7 +129,7 @@ def main():
                               lajijarj.get(r.get("tekstilaji"), 9),
                               r.get("_alku", 0)))
 
-    ulos = [{k: r.get(k) for k in JARJESTYS} for r in rivit]
+    ulos = [{**{k: r.get(k) for k in JARJESTYS}, **{k: r[k] for k in VALINN if r.get(k) is not None}} for r in rivit]
     json.dump(ulos, open(f"{SP}/yhdistetty.json", "w"),
               ensure_ascii=False, indent=1)
 

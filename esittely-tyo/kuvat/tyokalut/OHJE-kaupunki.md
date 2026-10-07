@@ -1,4 +1,4 @@
-# YHTEINEN OHJE — Pariisin yksityiskohtakuvat
+# YHTEINEN OHJE — kaupunkiesittelyn yksityiskohtakuvat (Praha, Wien, Rooma, Lontoo, Kööpenhamina)
 
 ## Mitä tehdään
 
@@ -35,7 +35,7 @@ EI vesileimoja.
 Jokaisesta kuvasta on PAKKO:
 1. Hakea lisenssi ja tekijä Commonsin API:sta (extmetadata).
 2. **Ladata pikkukuva ja KATSOA se Read-työkalulla.** Arvioi:
-   - Näyttääkö se juuri sitä, mitä teksti sanoo? (Esim. Point zéro -ankkuriin pitää
+   - Näyttääkö se juuri sitä, mitä teksti sanoo? (Esim. pronssinen laatta -ankkuriin pitää
      näkyä pronssinen tuuliruusu kivetyksessä — EI turisti seisomassa sen päällä.)
    - Onko kohde tarkka ja tunnistettava?
    - Ei vesileimaa, ei päälle kirjoitettua tekstiä, ei kollaasia.
@@ -92,9 +92,9 @@ MatkakirjaBot/1.0 (https://github.com/ravelius/Matkakirja)
 
 ```
 curl -sS -H "User-Agent: MatkakirjaBot/1.0 (https://github.com/ravelius/Matkakirja)" \
-  -D /tmp/claude-0/-home-user-Matkakirja/92630146-fbe7-5d0f-a144-5b6e2651bae9/scratchpad/hdr.txt \
+  -D SCRATCHPAD/hdr.txt \
   -w "http=%{http_code}\n" \
-  -o /tmp/claude-0/-home-user-Matkakirja/92630146-fbe7-5d0f-a144-5b6e2651bae9/scratchpad/thumbs/NIMI.jpg "THUMB_URL"
+  -o SCRATCHPAD/thumbs/NIMI.jpg "THUMB_URL"
 file NIMI.jpg   # varmista että on JPEG/PNG eikä HTML-virhesivu
 sleep 1
 ```
@@ -109,38 +109,33 @@ selvästi "EI NÄHTY — valittu metatietojen perusteella" ja mihin tietoon vali
 perustuu. Älä merkitse mitään näkemättä `true`:ksi.
 
 ### Ankkurin tarkistus
-Lue `esittely-tyo/malli/pariisi.json` ja laske esiintymät:
+Lue kaupungin tekstit (polku tehtävässäsi, esim. `esittely-tyo/malli/praha.json`) ja laske esiintymät:
 ```
 python3 -I - <<'EOF'
 import json
-d=json.load(open('/home/user/Matkakirja/esittely-tyo/malli/pariisi.json'))
+d=json.load(open('TEKSTITIEDOSTO'))
 k={x['id']:x for x in d['kohteet']}
 # esim.
-t=k['Q243']['teksti']
+t=k['Q_ID']['teksti']
 for a in ["ankkuri1","ankkuri2"]:
     print(repr(a), t.count(a))
 EOF
 ```
 Vaadittu tulos: täsmälleen 1.
 
-## HUOM Notre-Dame (Q2981)
-
-Päätoimittaja on ilmoittanut, että Notre-Damen tekstit ovat muuttumassa:
-`teksti` alkaa sanoilla "Katedraali Notre-Dame seisoo" ja `lyhyt` sanoilla
-"Katedraalin pelasti rappiolta". Muuten tekstit ovat samat kuin tiedostossa.
-→ Älä valitse Notre-Damen ankkuria tekstin ensimmäisistä sanoista lainkaan.
-Muualta tekstistä ankkurit ovat turvallisia.
-
 ## Kaupungin avaus (tekstilaji "avaus")
 
-Avaus ei ole tiedostossa. Se kuuluu:
+Avaus ei ole kohdetiedostossa; sen teksti annetaan tehtävässäsi. kohde_id avaukselle on `avaus`.
 
-"Tervetuloa Pariisiin. Ylhäältä kaupunki näyttää vaalealta kiviviuhkalta, jonka
-keskellä Seine kiemurtelee kahden saaren ohi. Kierros alkaa joen keskeltä
-Cité-saarelta, josta Pariisi sai alkunsa ja jolla Notre-Dame on seissyt
-1100-luvulta asti."
+## PANORAAMAVAPAUS JA TEKIJÄNOIKEUS (sitova, Päätoimittaja 7.10.2026)
 
-kohde_id avaukselle on `avaus`.
+Älä valitse kuvaa, jossa pääaiheena on rakennus tai taideteos maassa, jossa ei ole panoraamavapautta
+kaupalliseen käyttöön (Ranska, Italia: varo erityisesti moderneja rakennuksia ja nykytaidetta,
+esim. rakennuksen päänäkymä, jossa suunnittelija elää tai kuoli alle 70 v sitten). Tšekki, Itävalta,
+Britannia ja Tanska sallivat julkisen paikan rakennusten kuvaamisen, mutta nykytaide ja
+sisätilojen suojatut teokset (kuvat museosta tai sisätilasta) vaativat silti harkintaa. Jos epäilet,
+kirjaa riski `perustelu`-kenttään tai valitse toinen kuva. Aikalaiskuvat, vanhat piirrokset ja
+PD-teokset ovat turvallisimpia.
 
 ## Tuloksen muoto
 
