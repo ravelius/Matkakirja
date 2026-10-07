@@ -51,7 +51,10 @@ namespace Matkakirja.Linssit.Kierros
             if (k == null) return "";
             string tekija = string.IsNullOrWhiteSpace(k.Tekija) ? "" : k.Tekija.Trim();
             string lisenssi = string.IsNullOrWhiteSpace(k.Lisenssi) ? "" : k.Lisenssi.Trim();
-            if (k.Havainnekuva) return tekija.Length > 0 ? $"Havainnekuva · {tekija}" : "Havainnekuva";
+            // Havainnekuva (Sisältökirjuri: kuvateksti päättyy "Havainnekuva.", tekijä Codex): merkintä kerran, ei tekijää.
+            if (k.Havainnekuva)
+                return (k.Kuvateksti ?? "").IndexOf("havainnekuva", StringComparison.OrdinalIgnoreCase) >= 0
+                    ? "Tekoälyllä tuotettu, ei valokuva" : "Havainnekuva · tekoälyllä tuotettu";
             if (tekija.Length == 0) return "";
             return lisenssi.Length > 0 ? $"Kuva: {tekija}, {lisenssi}" : $"Kuva: {tekija}";
         }

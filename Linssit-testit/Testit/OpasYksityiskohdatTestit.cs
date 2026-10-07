@@ -67,7 +67,9 @@ namespace Matkakirja.Linssit.Testit
             var l = OpasYksityiskohdat.Lue(Matkakirja.Peli.MiniJson.Jasenna("[{\"kohde_id\":\"Q1\",\"ankkuri\":\"a\",\"media_url\":\"u\",\"havainnekuva\":true},"
                 + "{\"kohde_id\":\"Q1\",\"ankkuri\":\"b\",\"media_url\":\"u\",\"tekija\":\"besopha\",\"lisenssi\":\"CC BY 2.0\"}]"));
             Oleta.Tosi(l[0].Havainnekuva && !l[1].Havainnekuva, "puuttuva = false");
-            Oleta.Sama("Havainnekuva", OpasYksityiskohdat.Tekijarivi(l[0]));
+            Oleta.Sama("Havainnekuva · tekoälyllä tuotettu", OpasYksityiskohdat.Tekijarivi(l[0]));
+            l[0].Kuvateksti = "Sade Pantheonin kattoaukosta. Havainnekuva."; l[0].Tekija = "Codex / ChatGPT ImageGen, Matkakirja";
+            Oleta.Sama("Tekoälyllä tuotettu, ei valokuva", OpasYksityiskohdat.Tekijarivi(l[0]), "ei kahdesti, ei Codexia");
             Oleta.Sama("Kuva: besopha, CC BY 2.0", OpasYksityiskohdat.Tekijarivi(l[1]));
         }
     
