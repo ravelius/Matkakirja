@@ -1,6 +1,6 @@
 # Linnanrakentajan luovutus 5.10.2026 klo 12.2x (Opus high)
 
-## ALOITUSVIESTI (päivitetty 7.10. klo 21.0x, tilinvaihto ~22.15–22.50)
+## ALOITUSVIESTI (päivitetty 7.10. klo 23.30, VAIHTO NYT)
 Olet Linnanrakentaja (Opus, high), checkout /Users/Shared/Claude/Matkakirja-linnanrakentaja (haara linnanrakentaja-tyo-20260929,
 vain tämä luovutus). Työhaara linnanrakentaja-linna-v42 worktreessä /Users/Shared/Claude/wt/linnanrakentaja-linna-v42 (EI vielä PR:ää).
 Lue tämä osio ja TILA LOPUSSA, sitten viimeiset päivitysrivit lopusta. Viestit: SendMessage nimellä; jos raja tai socket vaihtuu,
@@ -10,7 +10,7 @@ local_c238f4af-ae73-44e7-81f1-92848acd9217, Postivahti local_a24c43c0-8094-4141-
 kerrallaan, ehto proto-3d/tyokalut/linnanrakentaja-ajot/muisti-ok.sh (vm_stat ≥ 20 Gt, swap < 2 Gt), nice 15, ei testejä samaan
 aikaan; ei omia natiivikäännöksiä; kuittaus = peili + yksi rivi (ei stillejä). Agentit vain Opus/Sonnet.
 
-## TILA LOPUSSA (7.10. klo 21.0x)
+## TILA LOPUSSA (7.10. klo 23.30, luovutus tilinvaihtoon)
 - OMISTAJAN LINJAT: 13.3x ensimmäinen pelattava pala ensin, Giza ja Kielletty odottavat. 18.5x pelit 1. PERSOONASSA (Fogg ei näy;
   asu v2 kauko-/takakuviin; kädet kadet-v1). PELATTAVUUSMALLI mainissa: docs/raportit/pelattavuusmalli-olavinlinna.md (#4163).
 - LINNA v44s PEILISSÄ 9a89ce964b61e629 (fa389afd5; MUUTOKSET.md v44…v44s, _valmiit/olavinlinna-blender-v44). Huoneet 1–10 kävelymallissa.
@@ -345,3 +345,4 @@ Brotli (haara linnanrakentaja-zstd, worktree olemassa), akustiikka #3979 (Steam 
 - 7.10. 18.5x: v44k TYÖN ALLA: kilpilaatat (agentti, esineet-v1: tumma liuske kuten käsikirjoitus kohta 3, Tott nelijaettu, Sture 3 sjöblad) kavely/esine-kilpilaatta-*.glb + merkit esine:kilpilaatta-* (kiintea, kavely.py SA ∓ 0,21 m, y yk + 2,0); maalattu kilpi-tott.png nelijaetuksi (maalaukset.py, aja venv-rembg/bin/python); kappeli leivotaan uudelleen (scratchpad v44-kappeli-paiva/-hamara) → v44 tilat/valot + ASTC; v44/kavely = kavely-v1/v2 (85 merkkiä), hahmot/fogg.glb = asu v2 (huppu, hanskat). Käsimalli-agentti (kadet-v1) käynnissä → v44/hahmot/kadet.glb + js/dioraama/pelaaja-kadet.json.
 - 7.10. 18.52: v44k PEILISSÄ a51f1b699c598cc0 (blender a2fb2ddf, 4d59826d7) → Siirtoseppä + Päätoimittaja: kilpilaatat (liuske, Tott nelijaettu), kappeli maalauksin, Fogg asu v2. tools/dioraama/rakenna.mjs:ssä COMMITOIMATON pelaaja.kadet-lohko (odottaa käsimallia). Seuraava: käsimalli → v44l; huone 6 karkea tila.
 - 7.10. 21.5x: OMISTAJA: ei paistoja/polttoja junakäännöksen aikana (/tmp/matkakirja-kaannospalvelu.lukko) → muisti-ok.sh odottaa lukon vapautumista.
+- 7.10. 23.30: VAIHTO NYT. Ei käynnissä olevia taustaajoja, agentteja eikä paistoja. Viimeisin vienti v44s 9a89ce964b61e629 (fa389afd5), Siirtoseppä kytkenyt. Seuraavaksi: köysikiepin glb (esineet-v1) ja Päätoimittajan uudet linjaukset; PR linnanrakentaja-linna-v42 → main vasta pyynnöstä. Paistoehto muisti-ok.sh odottaa myös käännöslukon.
