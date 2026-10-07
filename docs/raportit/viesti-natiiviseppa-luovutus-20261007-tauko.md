@@ -16,7 +16,7 @@ Muisti testaus-kevyemmin-20261007.
 
 ## TILA 16.1x: TF 161 + MAC TF 161 LADATTU (iOS 37623777958, Mac 37624780571; fi.matkakirja.peli build 161 = 9572eaff).
 Omistaja 16.0x: roolit eivät tee omia käännöksiä; täysi käännös vain junalle (minä) ja TF:lle (Julkaisija).
-JUNA 162 -ehdokkaat: LS1 cc6176356 (kuitattu), NUI apuraha-kuvat **3f07c49b** (korvaa 5e45d1da; NUI:n mukaan kuitattu, ⊇ kehittaja-tf),
+JUNA 162 -ehdokkaat: LS1 pallo-latauskuva **b9f37ee8f** (korvaa cc6176356, LS1:n mukaan kuitattu), NUI apuraha-kuvat **3f07c49b** (korvaa 5e45d1da; NUI:n mukaan kuitattu, ⊇ kehittaja-tf),
 LS2 s2-kaudet f6e4a8495 (LS2:n mukaan kuitattu) — pyydetty Päätoimittajalta yhden rivin vahvistus. Kokoa BUILD 161 9572eaff:n päälle
 (wt/proto-natiiviseppa-j144, uusi haara natiiviseppa/juna-162-koe), aja automaattiset testit, yksi käännös, VIE.
 Worktree proto-natiiviseppa-ohjauslevy poistettu (mergetty); proto-natiiviseppa-kirjoitus jäi (cherry-pickatut commitit).
