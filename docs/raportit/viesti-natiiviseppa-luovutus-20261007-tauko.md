@@ -46,4 +46,7 @@ Tarkista ensin taustalla jatkuneiden ajojen tulokset (alla) ja kerro ne Julkaisi
 - **iPad FACEIT ABAB MITÄTÖN** (lokit/natiiviseppa-ipad-faceit-20261007-1248, ilmoitettu Päätoimittajalle + Siirtosepälle): A peitto-tilassa
   300/300 piirretty (16,68 ms, GPU 9,4 ms), B jäi paikallaan-tilaan (piirretty 2–108), pari 2:n poikkileikkaus aukesi 5 min viiveellä.
   Uusinta vain Päätoimittajan päätöksellä; mittauksen pitää alkaa vasta peitto-tilassa. faceit-analyysi.py regex korjattu (rivi\s+).
+  SIIRTOSEPÄN SYY: DioraamaLevyvalimuisti.SiivoaVanhat pitää vain nykyisen paketin → jokainen A↔B-vaihto lataa erot uudelleen
+  (Wi-Fi minuutteja). Uusinnassa: odota ennen "tila kappeli" lokia 'saapuminen alkaa|latausvirhe' (aikaraja 600 s) + 20 s, ja aja
+  lohkoina AABB / BBAA (yksi vaihto, ensimmäinen avaus lämmittää).
 - **Actions-ajurit** siirretty /Users/Shared/Claude/actions-runner(-2) (muisti actions-ajurit-shared-polussa).
