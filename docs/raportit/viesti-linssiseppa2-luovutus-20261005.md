@@ -17,7 +17,15 @@ Avoimet työt:
    Vauhtirajaus opas-vapaa-lataus 5683ffaf jäi pois junasta. Ei uutta työtä tähän.
 4. s2-meri 0f6e4e89 on KUITATTU junaan 154 (BMNG:n meri S2:n meriväriin).
 
-## TILA 7.10. 12.2x (uusin; Mac käynnistetty 11.55)
+## TILA 7.10. 12.5x (uusin)
+- KAUPUNKIPALLOT juna 161: proto linssiseppa2/pallo-puoli e16d100db (wt/proto-linssiseppa2-pallo-puoli, masterin b00c06f7 päällä):
+  (1) pallo kutsukortista poispäin (omistaja 12.4x Ateena; KaupunkiPalloMitat.Oikealle, peilaus, puoli kerran per kaupunki),
+  (2) vain pelaajan nykyisen maan pallot kaikilla zoomeilla (omistaja 12.5x; NostoKerros.NykyinenMaa, UiSisalto.Kaupunki.Maa).
+  Ketju scratchpad/ketju-puoli.sh: simu-lupa-p1 (toisto ennen 19ef80cc Ateena) → kaannos-lupa-p → simu-lupa-p2 (37 kaupunkia
+  iPhone + Ateena/Pariisi iPad, skenaariot puoli-kaikki.txt / puoli-ipad.txt). Yhdistelmä yövalot-161 mahdollinen (Julkaisija).
+  Tulos: lista kaupungeista, joissa puoli vaihtui (loki "kaupunkipallot: <id> oikealle"), + stillit Kreikka/Ranska → Päätoimittaja.
+
+## TILA 7.10. 12.2x
 - APURAHAKUVA LOPULLINEN: lokit/apuraha-kuvat/iss-cupola-biskaja-lopullinen-3936ab68.png (iPad 13" vaaka, ISS-jalka näkyy) → Päätoimittaja.
 - Apurahakuvat v2 lähetetty: lokit/apuraha-kuvat/iss-cupola-{lansi-eurooppa,itameri-suomi}-ipad-vaaka.png (19ef80cc, LCD ajantasainen).
 - PAIKANNIMET: proto linssiseppa2/paikannimet 4ad028d78 (worktree wt/proto-linssiseppa2-paikannimet): Resources/IssPaikat/nimet-fi.json
