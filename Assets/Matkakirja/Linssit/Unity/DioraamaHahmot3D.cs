@@ -217,8 +217,8 @@ namespace Matkakirja.Natiivi
             if (e.TilaId != PuhujanTila || Puhuja == null) { e.KatseKohde = null; return null; }
             if (e.HahmoId != Puhuja) { e.KatseKohde = null; return Puhuja; }
             if (!EleetPaalla) return EdellinenPuhuja;
-            if (e.KatseKohde != null) return e.KatseKohde;
-            if (EdellinenPuhuja != null) return EdellinenPuhuja;
+            string valittu = e.KatseKohde ?? EdellinenPuhuja;
+            if (valittu != null) return KuulijaKameranTakana(e, valittu) ? KameraKohde : valittu;
             // Ensimmäinen vuoro: lähin paikallaan oleva kuulija (sama kuin kameran puolilähikuvassa, DioraamaSovitin.PuhujaanPain).
             string lahin = null; float d2 = float.MaxValue;
             foreach (var m in esiintymat)
@@ -229,9 +229,26 @@ namespace Matkakirja.Natiivi
                 }
             // Ei paikallaan olevaa kuulijaa (keittiö: apulainen kävelee, iPhone 7.10. 06.38: kokki puhui selin): puhuja kääntyy kameraan,
             // kuten puolilähikuva (DioraamaSovitin.Puolilahikuva) asettuu kasvojen eteen.
-            return lahin ?? KameraKohde;
+            return lahin != null && !KuulijaKameranTakana(e, lahin) ? lahin : KameraKohde;
         }
         const string KameraKohde = "@kamera";
+
+        /// <summary>Kuulija kameran suunnasta katsottuna puhujan takana (yli KuulijaTakanaAst): puhujan kääntyminen kuulijaan veisi
+        /// kasvot pois kamerasta (iPad 7.10. 07.27: vesipoika puhui selin, kun kokki oli seinän puolella) → puhuja kääntyy kameraan.</summary>
+        bool KuulijaKameranTakana(Esiintyma e, string kuulija)
+        {
+            var kam = DioraamaSovitin.AktiivinenKamera;
+            if (kam == null || e.Juuri == null) return false;
+            foreach (var m in esiintymat)
+                if (m != e && m.HahmoId == kuulija && m.TilaId == e.TilaId && m.Juuri != null)
+                {
+                    var p = e.Juuri.transform.position;
+                    Vector3 k = kam.transform.position - p, h = m.Juuri.transform.position - p; k.y = h.y = 0;
+                    return k.sqrMagnitude > 0.01f && h.sqrMagnitude > 0.01f && Vector3.Angle(k, h) > KuulijaTakanaAst;
+                }
+            return false;
+        }
+        const float KuulijaTakanaAst = 110f;
         /// <summary>Puhujan pään yläpuolinen maailmanpiste (kasvokuvan ankkuri, Natiivi-UI:n pohja), tai null.</summary>
         public static Vector3? PuhujanPaa { get; private set; }
         /// <summary>Puhujan juuri ja kasvojen suunta (Unity) tältä kehykseltä: puolilähikuva seuraa myös kävelevää puhujaa (7.10.).</summary>
