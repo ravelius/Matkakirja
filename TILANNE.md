@@ -1,7 +1,24 @@
 # TILANNE: kaupunkiesittelyjen toimituksellinen tarkistus
 
 Haara `fable-esittely-tarkistus` (pohjana `pelikoodari-esittely-pilvi`).
-Pysäytetty 7.10.2026 Päätoimittajan käskystä (omistajan päätös, 5 tunnin raja). Jatketaan klo 15.00 jälkeen.
+Pysäytetty 7.10.2026 Päätoimittajan käskystä (omistajan päätös, 5 tunnin raja). Jatkettu 7.10.2026 uudessa pilvisessiossa.
+
+## JATKOSESSION TILA (päivitetään jokaisen aallon jälkeen)
+
+Toimeksianto on nyt repossa: `esittely-tyo/OHJE-toimituksellinen-tarkistus.md`.
+Verkko todettu auki tässäkin sessiossa (WebFetch toimii).
+
+Työ ajetaan neljässä aallossa, kussakin neljä opus-ali-agenttia, kaksi kaupunkia per agentti.
+Aallon jälkeen fragmenttiraportit yhdistetään `esittely-tyo/TARKISTUS-PAATOIMITTAJA.md`:hin
+ja aalto committataan + pushataan.
+
+| Aalto | Kaupungit | Tila |
+|---|---|---|
+| 1 | amsterdam, ateena / barcelona, bergen / berliini, bryssel / budapest, bukarest | käynnissä |
+| 2 | dublin, edinburgh / firenze, granada / helsinki, islanti / kosice, krakova | ei aloitettu |
+| 3 | kreeta, lissabon / ljubljana, luxemburg / madrid, marseille / oslo, sevilla | ei aloitettu |
+| 4 | sisilia, sofia / tampere, tukholma / valletta, venetsia / vilna | ei aloitettu |
+| 5 | TARKISTAJA-agentti käy koko diffin läpi | ei aloitettu |
 
 ## Mitä on tehty
 
