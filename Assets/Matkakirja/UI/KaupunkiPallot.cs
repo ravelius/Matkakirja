@@ -61,7 +61,11 @@ namespace Matkakirja.Natiivi
             this.kerros = kerros;
             // Karttamerkkien kerros kuten päät: paneelit ja kortit piirtyvät päälle; kerroksen alimmaksi.
             juuri = Rakenne.El("mk-erikoisnostot", kerros.Juuri(UiKerros.Nostot), PickingMode.Ignore);
-            juuri.SendToBack();
+            // Päällimmäiseksi (omistaja 7.10. 14.5x, Mac TF 160: "ei vain ota napsautusta vastaan tai napsautuksen ottaa elementti
+            // kuumailman pallon takana"): näkyvä pallo on aina ylin osumakohde nimiöiden, merkkien ja nappulan yllä; osuma vain
+            // kuoressa ja korissa (PalloNappi.ContainsPoint), joten pallon läpinäkyvä kehys ei sieppaa alla olevien klikkauksia.
+            juuri.BringToFront();
+            juuri.schedule.Execute(() => { if (juuri.parent != null && juuri.parent.IndexOf(juuri) != juuri.parent.childCount - 1) juuri.BringToFront(); }).Every(1000);
             juuri.style.display = DisplayStyle.None;
             OpasSovitin.SallitutVaihtui += () => listaVaihtui = true;
             juuri.schedule.Execute(Tarkista).Every(500);
@@ -100,7 +104,7 @@ namespace Matkakirja.Natiivi
                 if (string.IsNullOrEmpty(k.Id) || double.IsNaN(k.Lat) || double.IsNaN(k.Lon)) continue;
                 string id = k.Id;
                 // Kosketusnappi ilman oletusteeman ja mk-nappi-tyylejä: pallo läpinäkyvällä taustalla (kuten päät).
-                var b = new Kosketusnappi(() => Avaa(id)) { text = "" };
+                var b = new PalloNappi(() => Avaa(id)) { text = "" };
                 b.RemoveFromClassList(Button.ussClassName);
                 b.AddToClassList("mk-erikoisnosto-paa");
                 b.tooltip = k.Nimi + ": kaupunkiopas";   // vain VoiceOverille ja vihjeenä
@@ -176,7 +180,7 @@ namespace Matkakirja.Natiivi
                 if (!p.PuoliPaatetty && p == lahin && KaupunkiPalloMitat.Oikealle(q.x, q.y, kk.x, kk.y, koko) is bool oikea)
                 {
                     p.PuoliPaatetty = true;
-                    if (oikea != p.Oikea) { p.Oikea = oikea; p.Kuva.style.scale = new Scale(new Vector3(oikea ? -1f : 1f, 1f, 1f)); }
+                    if (oikea != p.Oikea) { p.Oikea = oikea; ((PalloNappi)p.Nappi).Oikea = oikea; p.Kuva.style.scale = new Scale(new Vector3(oikea ? -1f : 1f, 1f, 1f)); }
                     Debug.Log($"MATKAKIRJA kaupunkipallot: {p.Id} {(oikea ? "oikealle" : "vasemmalle")} (kortti {(kk.x < q.x ? "vasemmalla" : "oikealla")}, {kk.x - q.x:0},{kk.y - q.y:0} pt)");
                 }
                 p.Nappi.style.left = x;
@@ -236,6 +240,17 @@ namespace Matkakirja.Natiivi
                 korkeus / 1000, NostoKerros.Instanssi?.NykyinenMaa ?? "-", KaupunkiPalloMitat.Koko(korkeus), string.Join("; ", nakyvat));
         }
 
+        /// <summary>Pallon kuoren keskikohta (Nostot-paneelin pt) hiiritestiin: kuori on kuvan yläosassa kallistuspuolella.</summary>
+        public Vector2? KuorenKeskus(string id)
+        {
+            var p = pallot.FirstOrDefault(x => x.Id == id);
+            if (p == null || !p.Nakyy) return null;
+            var r = p.Nappi.worldBound;
+            float kx = p.Oikea ? 1f - PalloNappi.KuoriX : PalloNappi.KuoriX;
+            var keski = juuri.WorldToLocal(new Vector2(r.xMin + kx * r.width, r.yMin + PalloNappi.KuoriY * r.height));
+            return keski;
+        }
+
         /// <summary>Testikomento `ui kaupunkipallot napauta <id|i>`: napautus kuten sormi (avaa kaupungin oppaan).</summary>
         public string Napauta(string kohde)
         {
@@ -243,6 +258,38 @@ namespace Matkakirja.Natiivi
             if (p == null) return "kaupunkipallot: ei palloa " + kohde;
             Avaa(p.Id);
             return "kaupunkipallot: napautettu " + p.Id;
+        }
+    }
+
+    /// <summary>
+    /// Pallon nappi, jonka osuma on vain näkyvässä pallossa (omistaja 7.10. 14.5x): kuoren ellipsi ja kori (kuvan osuuksina,
+    /// Linnanrakentajan ilmapallo-v1 kehystettynä KaupunkiPalloKuva-kameralla), vähintään 44 pt. Muualla napin neliössä
+    /// klikkaus menee alla olevalle (nimiöt, merkit, nappula, kartta). Oikea = kuva peilattu oikealle kallistuvaksi.
+    /// </summary>
+    public sealed class PalloNappi : Button
+    {
+        public bool Oikea;
+        /// <summary>
+        /// Kuoren keskipiste ja säteet sekä kori napin koon osuuksina (vasemmalle kallistuva kuva). Mallista: kehys 37,9 m
+        /// (laki 36 m / 0,95), pallo 9 m ankkurin sivussa → x 0,5 − 9/37,9 = 0,26; kuori Ø 12 m, keskus 30 m → y 0,18, säde 0,16
+        /// (+ vara 0,03); kori ~13 m → y 0,63. Omistajan Ateena-kuva (Mac TF 160) täsmää: kuori 52 px, ankkuri nappulan juurella.
+        /// </summary>
+        public const float KuoriX = 0.26f, KuoriY = 0.18f, KuoriRx = 0.19f, KuoriRy = 0.19f, KoriX = 0.26f, KoriY = 0.63f, KoriR = 0.05f;
+        const float MinSade = 22f;
+
+        public PalloNappi(System.Action painettu) : base(painettu) { }
+
+        public override bool ContainsPoint(Vector2 p)
+        {
+            var r = layout;
+            if (float.IsNaN(r.width) || r.width <= 0f) return false;
+            float w = r.width, h = r.height;
+            float kx = (Oikea ? 1f - KuoriX : KuoriX) * w, ky = KuoriY * h;
+            float rx = Mathf.Max(KuoriRx * w, MinSade), ry = Mathf.Max(KuoriRy * h, MinSade);
+            float dx = (p.x - kx) / rx, dy = (p.y - ky) / ry;
+            if (dx * dx + dy * dy <= 1f) return true;
+            float bx = (Oikea ? 1f - KoriX : KoriX) * w, by = KoriY * h, br = Mathf.Max(KoriR * w, 10f);
+            return Mathf.Abs(p.x - bx) <= br && p.y >= ky && p.y <= by + br;
         }
     }
 }
