@@ -1,0 +1,378 @@
+{
+ "kaupunki": "Tampere",
+ "id": "tampere",
+ "versio": 1,
+ "kohteet": [
+  {
+   "id": "Q1190334",
+   "nimi": "Näsinneula",
+   "kuvaus": "Suomen korkein näkötorni",
+   "luokka": "torni",
+   "koko_m": 40,
+   "korkeus_m": 168,
+   "teksti": "Näsinneula nousee Särkänniemestä Näsijärven rannalta sadankuudenkymmenenkahdeksan metrin korkeuteen, ja ylhäältä se näyttää ohuelta varrelta, jonka päässä on leveä kiekko. Arkkitehti Pekka Ilveskosken suunnittelema torni avattiin vuonna 1971, ja se on yhä Suomen ja koko Pohjoismaiden korkein näkötorni. Näköalatasanteen yläpuolella on ravintola, jonka lattia pyörii niin verkkaisesti, että täysi kierros kestää neljäkymmentäviisi minuuttia. Saman aterian aikana ikkunasta ehtii nähdä Näsijärven selät pohjoisessa ja kaupungin kattojen takana Pyhäjärven etelässä.",
+   "lyhyt": "Näsinneulan hissit kulkevat kuusi metriä sekunnissa ja nousevat näköalatasanteelle sadankahdenkymmenen metrin korkeuteen noin puolessa minuutissa. Tornin juurella levittäytyy Särkänniemen huvipuisto, ja kirkkaana päivänä tasanteelta näkee kauas järvien ja metsien yli.",
+   "syventava": "Kuka suunnitteli Näsinneulan?",
+   "kysymykset": [
+    "Kuka suunnitteli Näsinneulan?",
+    "Miten ravintolan lattia saadaan pyörimään?",
+    "Kuinka nopeasti Näsinneulan hissit nousevat?",
+    "Miksi torni rakennettiin juuri Särkänniemeen?",
+    "Mitä Näsinneulan huipulta näkee kirkkaana päivänä?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Näsinneula on 168 metriä korkea, Pekka Ilveskosken suunnittelema, avattiin 1971 Särkänniemessä; Pohjoismaiden korkein näkötorni.",
+     "url": "https://en.wikipedia.org/wiki/N%C3%A4sinneula"
+    },
+    {
+     "vaite": "Pyörivä ravintola 124 metrin korkeudessa tekee täyden kierroksen 45 minuutissa; ravintolatasanne on kerroksen näköalatasanteen yläpuolella.",
+     "url": "https://en.wikipedia.org/wiki/N%C3%A4sinneula"
+    },
+    {
+     "vaite": "Näsinneula on kotimaan näkötorneista korkein; ravintolatasanne pyörii 45 minuutissa kierroksen.",
+     "url": "https://www.taloustaito.fi/vapaalla/2021/kesalomalla-korkealle--lomareissulla-kipaistaan-nakotorniin/"
+    },
+    {
+     "vaite": "Hissien nopeus 6,0 m/s, näköalatasanne 120 metrissä, matka noin puoli minuuttia.",
+     "url": "https://journal.fi/tekniikanwaiheita/article/download/63993/25301/"
+    },
+    {
+     "vaite": "Torni sijaitsee Särkänniemen huvipuistossa Näsijärven rannalla; Näsijärvi pohjoisessa ja Pyhäjärvi etelässä.",
+     "url": "https://en.wikipedia.org/wiki/Tammerkoski"
+    }
+   ]
+  },
+  {
+   "id": "Q1236638",
+   "nimi": "Tampereen tuomiokirkko",
+   "kuvaus": "Kansallisromanttinen graniittikirkko",
+   "luokka": "kirkko",
+   "koko_m": 70,
+   "korkeus_m": 64,
+   "teksti": "Tampereen tuomiokirkko näyttää ylhäältä harmaalta graniittilinnalta, jonka korkein torni yltää kuuteenkymmeneenneljään metriin. Lars Sonckin kansallisromanttiseen tyyliin suunnittelema kirkko valmistui vuonna 1907 Johanneksen kirkkona, ja tuomiokirkoksi se vihittiin vuonna 1923, kun Tampereesta tuli hiippakunnan keskus. Sisällä Hugo Simbergin freskot herättivät aikanaan kiivasta arvostelua. Eniten kohahdutti holvin korkeimpaan kohtaan punaiselle pohjalle maalattu siivekäs käärme, jolla on omena suussaan. Lehterin kaiteessa kaksitoista alastonta poikaa kantaa elämän seppelettä kohti alttaritaulua.",
+   "lyhyt": "Tampereen tuomiokirkon pohjoisen lehterin alla on Simbergin Kuoleman puutarha, jossa kuolema hoitaa kasvejaan lempeänä puutarhurina. Kirkossa on myös oma versio Haavoittuneesta enkelistä, Simbergin tunnetuimmasta aiheesta, jonka alkuperäinen maalaus on Ateneumissa.",
+   "syventava": "Mitä Simbergin käärme tarkoittaa?",
+   "kysymykset": [
+    "Miksi Simbergin käärme herätti aikanaan kohua?",
+    "Kuka maalasi tuomiokirkon alttaritaulun?",
+    "Mitä Kuoleman puutarha esittää?",
+    "Mistä kirkon harmaa graniitti on peräisin?",
+    "Miksi kirkon nimi oli ennen Johanneksen kirkko?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Kirkko valmistui 1907, korkeus 64 metriä; alkuperäinen nimi Johanneksen kirkko; vihittiin Tampereen hiippakunnan tuomiokirkoksi 1923.",
+     "url": "https://en.wikipedia.org/wiki/Tampere_Cathedral"
+    },
+    {
+     "vaite": "Lars Sonck suunnitteli kirkon kansallisromanttiseen tyyliin; graniittijulkisivu; harmaa graniitti Uudenkaupungin seudulta.",
+     "url": "https://en.wikipedia.org/wiki/Tampere_Cathedral"
+    },
+    {
+     "vaite": "Simbergin freskot herättivät aikanaan paljon arvostelua; erityisesti katon korkeimman kohdan siivekäs käärme punaisella pohjalla.",
+     "url": "https://en.wikipedia.org/wiki/Tampere_Cathedral"
+    },
+    {
+     "vaite": "Käärmeellä on omena suussaan; kaksitoista alastonta poikaa kantaa elämän seppelettä lehterin kaiteessa kohti alttaritaulua Ylösnousemus.",
+     "url": "https://ku.fi/?p=81557"
+    },
+    {
+     "vaite": "Kuoleman puutarha on pohjoisen lehterin alla; kuolema kuvataan lempeänä puutarhurina.",
+     "url": "https://ku.fi/?p=81557"
+    },
+    {
+     "vaite": "Kirkossa on versiot Haavoittuneesta enkelistä ja Kuoleman puutarhasta.",
+     "url": "https://tampereenseurakunnat.fi/en/lutheran-church-in-tampere/churches/tampere-cathedral/"
+    },
+    {
+     "vaite": "Haavoittunut enkeli on Simbergin tunnetuin teos, alkuperäinen Ateneumissa.",
+     "url": "https://serlachius.fi/?p=13634"
+    }
+   ]
+  },
+  {
+   "id": "Q222028",
+   "nimi": "Tammerkoski",
+   "kuvaus": "Kaupungin halki virtaava koski",
+   "luokka": "vesi",
+   "koko_m": 900,
+   "teksti": "Tammerkoski halkaisee Tampereen keskustan, ja ylhäältä sen vaahtoava uoma näkyy punatiilisten tehdassalien välissä. Pohjoisen Näsijärven ja eteläisen Pyhäjärven pintojen välillä on kahdeksantoista metrin korkeusero, ja koko pudotus purkautuu tähän koskeen. Kuningas Kustaa kolmas perusti kaupungin kosken partaalle vuonna 1779. Kosken edullinen voima pyöritti ensimmäisiä myllyjä ja tehtaita, ja rannoista tuli Suomen vanhimpia teollisuusalueita. Nykyään koskessa on neljä voimalaitosta ja kolme patoa, ja sen rantamaisema on yksi Suomen kansallismaisemista.",
+   "lyhyt": "Tammerkoski rantapuistoineen ja punatiilisine tehtaineen on Tampereen kansallisen kaupunkipuiston ydin, ja puisto on maan kahdestoista. Sen pinta-alasta yli kuusikymmentä prosenttia on vettä. Jo 1600-luvulla kosken rannoilla oli vilkas markkinapaikka, kauan ennen ensimmäisiä tehtaita.",
+   "syventava": "Miksi Tampere syntyi kosken rannalle?",
+   "kysymykset": [
+    "Miksi Tampere syntyi juuri kosken rannalle?",
+    "Kuinka monta voimalaitosta koskessa on?",
+    "Voiko Tammerkoskessa kalastaa?",
+    "Mihin suuntaan Tammerkosken vesi virtaa?",
+    "Mitä kansallismaisema tarkoittaa?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Näsijärven ja Pyhäjärven korkeusero 18 metriä, vesi virtaa Näsijärvestä Pyhäjärveen Tammerkosken kautta.",
+     "url": "https://en.wikipedia.org/wiki/Tammerkoski"
+    },
+    {
+     "vaite": "Koskessa on neljä voimalaitosta ja kolme patoa; Tammerkoski on kansallismaisema; rannat ovat Suomen vanhimpia teollisuusalueita ja 1600-luvulla siellä oli vilkas markkinapaikka.",
+     "url": "https://en.wikipedia.org/wiki/Tammerkoski"
+    },
+    {
+     "vaite": "Kustaa III perusti Tampereen 1.10.1779; Tammerkosken vesivoima oli tehtaiden syy.",
+     "url": "https://www.tampere.fi/en/information-on-tampere/history-tampere"
+    },
+    {
+     "vaite": "Kosken halpa voima pyöritti ensimmäisiä myllyjä ja tehtaita.",
+     "url": "https://www.tampere.fi/en/information-on-tampere/history-tampere"
+    },
+    {
+     "vaite": "Kaupunkipuistosta yli 60 prosenttia on vesialuetta.",
+     "url": "https://yle.fi/a/74-20229061"
+    },
+    {
+     "vaite": "Tampereelle perustettiin Suomen 12. kansallinen kaupunkipuisto; ytimessä Tammerkosken rantapuistot ja punatiiliset teollisuusrakennukset.",
+     "url": "https://valtioneuvosto.fi/-/1410903/suomen-12.-kansallinen-kaupunkipuisto-tampereelle"
+    }
+   ]
+  },
+  {
+   "id": "Q961917",
+   "nimi": "Särkänniemi",
+   "kuvaus": "Huvipuisto Näsijärven niemellä",
+   "luokka": "puisto",
+   "koko_m": 700,
+   "teksti": "Särkänniemi työntyy Näsijärveen keskustan luoteispuolella, ja ylhäältä niemellä erottuvat vuoristoratojen kiemurat Näsinneulan juurella. Huvipuisto avattiin vapunpäivänä 1975, ja Tampereen kaupungin omistama puisto on Helsingin Linnanmäen jälkeen Suomen toiseksi suosituin. Laitteita on yli kolmekymmentä, ja vuoristoradoista tunnetuimpia ovat käänteinen Tornado ja kiihdytysrata Hype. Niemellä toimivat myös akvaario, planetaario ja Sara Hildénin taidemuseo, jonka kokoelman tamperelainen liikenainen kokosi modernista suomalaisesta ja kansainvälisestä taiteesta. Taidemuseota on tarkoitus laajentaa nykyisellä paikallaan.",
+   "lyhyt": "Särkänniemessä käy vuosittain yli kuusisataatuhatta vierailijaa, ja niemen akvaario avattiin jo vuonna 1969, ennen huvipuistoa. Puiston delfinaario avattiin vuonna 1985 ja suljettiin vuonna 2016, jolloin sen neljä viimeistä delfiiniä siirrettiin kreikkalaiseen eläintarhaan, mikä herätti eläinoikeusjärjestöjen kovaa arvostelua.",
+   "syventava": "Kuka oli Sara Hildén?",
+   "kysymykset": [
+    "Mikä on Särkänniemen hurjin laite?",
+    "Miksi Särkänniemen delfinaario suljettiin?",
+    "Kuka oli taiteenkeräilijä Sara Hildén?",
+    "Mistä Särkänniemi on saanut nimensä?",
+    "Mitä Särkänniemen akvaariossa voi nähdä?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Huvipuisto avattiin 1.5.1975; Linnanmäen jälkeen Suomen toiseksi suosituin; yli 30 laitetta; Tornado on käänteinen vuoristorata, Hype kiihdytysrata.",
+     "url": "https://en.wikipedia.org/wiki/S%C3%A4rk%C3%A4nniemi"
+    },
+    {
+     "vaite": "Niemellä on akvaario, planetaario ja Sara Hildénin taidemuseo, joka esittelee paikallisen liikenaisen Sara Hildénin keräämää suomalaista ja kansainvälistä modernia taidetta.",
+     "url": "https://www.lonelyplanet.com/points-of-interest/sarkanniemi/462756"
+    },
+    {
+     "vaite": "Delfinaario avattiin 1985; kaupunki omistaa puiston; yli 600 000 kävijää vuodessa; akvaario avattiin 1969.",
+     "url": "https://en.wikipedia.org/wiki/S%C3%A4rk%C3%A4nniemi"
+    },
+    {
+     "vaite": "Delfinaario suljettiin 2016 ja neljä delfiiniä siirrettiin Attican eläintarhaan Kreikkaan; eläinoikeusryhmät arvostelivat siirtoa.",
+     "url": "https://endcap.eu/dolphin-transferred-to-greece-has-died/"
+    },
+    {
+     "vaite": "Sara Hildénin taidemuseo Särkänniemessä; asemakaavamuutos mahdollistaa museon peruskorjauksen ja laajennuksen nykyisellä paikallaan.",
+     "url": "https://www.tampere.fi/en/current/2026/05/05/local-detailed-plan-amendment-will-enable-sara-hilden-art-museums"
+    }
+   ]
+  },
+  {
+   "id": "Q15846380",
+   "nimi": "Finlaysonin tehdasalue",
+   "kuvaus": "Punatiilinen puuvillatehtaan alue",
+   "luokka": "rakennus",
+   "koko_m": 400,
+   "teksti": "Finlaysonin tehdasalue levittäytyy Tammerkosken länsirannalla punatiilisten tehdassalien kortteleina. Skotlantilainen James Finlayson perusti tänne tehtaan vuonna 1820, ja uusien omistajien aikana siitä kasvoi puuvillatehdas, jossa työskenteli 1900-luvun alussa yli kolmetuhatta ihmistä. Kun isoisäsi kävi täällä vuonna 1873, eräs nainen näytti hänelle katkenneen langan solmun. Isoisäsi sormissa lanka katkesi heti, mutta nainen sitoi sen katsomatta. Tuotanto kosken rannalla loppui 1990-luvun alussa, ja saleissa on nyt museoita, ravintoloita ja elokuvateatteri.",
+   "lyhyt": "Finlaysonin Plevnan kutomosalissa syttyivät maaliskuussa 1882 Pohjoismaiden ensimmäiset hehkulamput, satakaksikymmentä kappaletta, ja koko Euroopassa se oli vasta neljäs hehkulampuin valaistu rakennus. Sali sai nimensä silloisen tuoreen sotauutisen, Plevnan piirityksen, mukaan, ja nykyään siinä toimii elokuvateatteri.",
+   "syventava": "Kuka oli James Finlayson?",
+   "kysymykset": [
+    "Kuka oli skotlantilainen James Finlayson?",
+    "Millaista työ oli puuvillatehtaassa?",
+    "Miksi kutomosalin nimi on Plevna?",
+    "Miksi Finlaysonilla oli oma kirkko?",
+    "Mitä vanhoissa tehdassaleissa on nykyään?"
+   ],
+   "isoisa": true,
+   "lahteet": [
+    {
+     "vaite": "James Finlayson, skotlantilainen teollisuusmies, perusti tehtaan 1820; myi sen 1836 Nottbeckille ja Rauchille, ja siitä tuli puuvillatehdas.",
+     "url": "https://en.wikipedia.org/wiki/Finlayson_industrial_area"
+    },
+    {
+     "vaite": "Huipussaan 1900-luvun vaihteessa tehtaalla oli Tampereella yli 3100 työntekijää; tuotanto Tammerkosken varrella loppui 1990-luvun alussa.",
+     "url": "https://en.wikipedia.org/wiki/Finlayson_industrial_area"
+    },
+    {
+     "vaite": "Alue on nyt kulttuuri- ja vapaa-ajan kohde museoineen ja ravintoloineen.",
+     "url": "https://finlaysoninalue.fi/en/about-the-finlayson-area/"
+    },
+    {
+     "vaite": "Isoisän merkintä, Tampere 1873: Finlaysonilla nainen näytti katkenneen langan solmun; isoisän sormissa lanka katkesi heti, nainen sitoi sen katsomatta.",
+     "url": "kaanon:isoisan-paivakirja"
+    },
+    {
+     "vaite": "Plevnaan sytytettiin 15.3.1882 Pohjoismaiden ensimmäinen hehkulamppuvalaistus, 120 lamppua; neljäs hehkulampuin valaistu rakennus Euroopassa; nimi Plevnan piirityksestä.",
+     "url": "https://en.wikipedia.org/wiki/Plevna,_Tampere"
+    },
+    {
+     "vaite": "Plevnassa toimii nykyään elokuvateatteri; Finlaysonin kirkko rakennettiin 1879 tehtaan työläisille.",
+     "url": "https://en.wikipedia.org/wiki/Finlayson_Church"
+    }
+   ]
+  },
+  {
+   "id": "Q3533268",
+   "nimi": "Pyynikin näkötorni",
+   "kuvaus": "Graniittinen näkötorni harjun laella",
+   "luokka": "torni",
+   "koko_m": 30,
+   "korkeus_m": 26,
+   "teksti": "Pyynikin näkötorni kohoaa keskustan länsipuolella Pyynikinharjun laella, ja ylhäältä sen punagraniittinen torni erottuu metsän keskeltä. Harju syntyi jääkauden lopulla, ja sitä pidetään maailman korkeimpana soraharjuna. Ensimmäisen, puisen tornin kaupunki rakennutti tähän jo vuonna 1888, mutta se vaurioitui vuoden 1918 sodan pommituksissa. Nykyinen kaksikymmentäkuusi metriä korkea torni valmistui vuonna 1929 kaupungin sataviisikymmenvuotisjuhlan kunniaksi, ja sen huipulta avautuu näkymä kumpaankin Tampereen suureen järveen, Näsijärveen pohjoisessa ja Pyhäjärveen etelässä.",
+   "lyhyt": "Pyynikin näkötornin suunnitteli arkkitehti Vilho Kolho, ja torni muurattiin paikallisesta punaisesta graniitista. Tornin juurella toimiva kahvila on kuuluisa munkeistaan. Pyynikki rauhoitettiin luonnonsuojelualueeksi vuonna 1993, ja harjun luontopolku alkaa aivan tornin juurelta.",
+   "syventava": "Miten maailman korkein soraharju syntyi?",
+   "kysymykset": [
+    "Miten Pyynikinharju aikanaan syntyi?",
+    "Mistä Pyynikin munkit ovat tulleet kuuluisiksi?",
+    "Mitä vanhalle puiselle tornille tapahtui?",
+    "Kuka suunnitteli Pyynikin näkötornin?",
+    "Miksi harju on rauhoitettu luonnonsuojelualueeksi?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Torni on 26 metriä korkea, valmistui 1929 kaupungin 150-vuotisjuhlan kunniaksi; juurella kahvila, joka on tunnettu munkeistaan.",
+     "url": "https://visittampere.fi/en/attraction/pyynikki-observation-tower-and-cafe/"
+    },
+    {
+     "vaite": "Kolhon suunnittelema punagraniittinen torni; puinen torni 1888, vaurioitui 1918 sodan pommituksessa; huipulta näkyy Näsijärvi ja Pyhäjärvi.",
+     "url": "https://en.wikipedia.org/wiki/Pyynikki_observation_tower"
+    },
+    {
+     "vaite": "Pyynikinharju on maailman korkein soraharju; luonnonsuojelualue vuodesta 1993; luontopolku alkaa näkötornilta.",
+     "url": "https://visitfinland.com/it/prodotto/b4be37d8-2f78-4fd0-afcd-7285ec26790a/pyynikki-nature-trail"
+    },
+    {
+     "vaite": "Pyynikinharju on jääkauden aikana syntynyt maailman korkein pitkittäisharju.",
+     "url": "https://en.wikipedia.org/wiki/Pyynikki_Esker"
+    }
+   ]
+  },
+  {
+   "id": "Q17319120",
+   "nimi": "Hämeensilta",
+   "kuvaus": "Patsassilta Tammerkosken yli",
+   "luokka": "silta",
+   "koko_m": 68,
+   "teksti": "Hämeensilta vie Tampereen pääkadun, Hämeenkadun, Tammerkosken yli, ja ylhäältä sen kaiteilta erottuu neljä suurta pronssipatsasta. Wäinö Aaltonen teki ne vuonna 1929 valmistuneelle sillalle, ja ne esittävät Suomen neitoa, eränkävijää, veronkantajaa ja kauppiasta. Kukin patsas on noin neljä ja puoli metriä korkea, ja aikanaan ne olivat suurimmat Suomessa tehdyt pronssiveistokset. Kun silta peruskorjattiin 2010-luvun lopulla, patsaat otettiin talteen ja konservoitiin, ja ne palasivat paikoilleen niin, ettei sillan ilme muuttunut.",
+   "lyhyt": "Hämeensillan Suomen neito saa joka vapunaattona ylioppilaslakin päähänsä. Koski ylitettiin tällä kohdalla jo 1500-luvulla puusillalla, ja vuonna 1884 sen tilalle tuli teräsrakenteinen silta. Nykyisen sillan patsaat ovat kauppaneuvos Rafael Haarlan lahja kaupungille.",
+   "syventava": "Kuka oli Wäinö Aaltonen?",
+   "kysymykset": [
+    "Kuka oli kuvanveistäjä Wäinö Aaltonen?",
+    "Miksi Suomen neito saa lakin vappuna?",
+    "Millainen silta paikalla oli ennen?",
+    "Miksi patsaiksi valittiin juuri nämä hahmot?",
+    "Miten patsaita hoidettiin sillan remontissa?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Silta on 68 metriä pitkä, valmistui 1929, Hämeenkatu kulkee sen yli; ensimmäinen tunnettu puusilta 1500-luvulla, teräsrakenteinen 1884.",
+     "url": "https://en.wikipedia.org/wiki/H%C3%A4meensilta"
+    },
+    {
+     "vaite": "Neljä Wäinö Aaltosen veistosta: Suomen neito, Eränkävijä, Veronkantaja ja Kauppias.",
+     "url": "https://yle.fi/a/3-11567001"
+    },
+    {
+     "vaite": "Patsaat noin 4,5 metriä korkeita, aikanaan suurimmat Suomessa tehdyt pronssiveistokset; peruskorjaus 2018–2019, patsaat palautettiin niin, ettei ilme muuttunut, ja ne konservoitiin.",
+     "url": "https://visittampere.fi/en/destination/hameensilta-bridge/"
+    },
+    {
+     "vaite": "Suomen neito saa lakin vapunaattona.",
+     "url": "https://www.tampere.fi/en/current/2025/04/28/maiden-finland-sculpture-gets-her-cap-on-may-day-eve"
+    },
+    {
+     "vaite": "Patsaat lahjoitti paikallinen liikemies Rafael Haarla; noin 4,5 metriä korkeita, aikanaan suurimmat Suomessa tehdyt pronssiveistokset.",
+     "url": "https://visittampere.fi/en/destination/hameensilta-bridge/"
+    },
+    {
+     "vaite": "Patsaat kauppaneuvos Rafael Haarlan lahja Tampereen kaupungille.",
+     "url": "https://yle.fi/a/3-11567001"
+    }
+   ]
+  },
+  {
+   "id": "Q18346706",
+   "nimi": "Museokeskus Vapriikki",
+   "kuvaus": "Museokeskus vanhassa tehtaassa",
+   "luokka": "rakennus",
+   "koko_m": 200,
+   "teksti": "Museokeskus Vapriikki toimii Tampellan vanhoissa tehdastiloissa, joiden pitkä tiilihalli näkyy ylhäältä Tammerkosken partaalla. Nimi tulee ruotsin tehdasta tarkoittavasta sanasta fabrik, josta suomen kieleen muodostui vapriikki. Rakennuksen vanhimmat osat ovat 1880-luvulta, ja suurin näyttelysali on sata metriä pitkä ja kuusitoista metriä korkea. Museokeskus avattiin yleisölle vuonna 1996, ja saman katon alla toimii nykyään muun muassa Suomen jääkiekkomuseo, jonka kunniagalleriaan on vuodesta 1985 valittu ansioituneita pelaajia ja valmentajia.",
+   "lyhyt": "Museokeskus Vapriikin talo kuului Tampereen Pellava- ja Rautateollisuudelle, jonka nimi lyhennettiin 1950-luvulla Tampellaksi. Yhtiö syntyi vuonna 1861, kun kosken rannalla toimineet pellavatehdas ja konepaja yhdistettiin. Myöhemmin Tampella valmisti muun muassa paperikoneita, vetureita ja aseita.",
+   "syventava": "Mitä museoita Vapriikissa on?",
+   "kysymykset": [
+    "Mitä sana vapriikki oikeastaan tarkoittaa?",
+    "Mitä Tampella-yhtiö valmisti?",
+    "Mitä museoita Vapriikissa toimii?",
+    "Mitä Vapriikin rakennuksessa tehtiin ennen?",
+    "Miksi suurin näyttelysali on niin korkea?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Vapriikki toimii Tampellan entisissä tehdastiloissa, perustettu ja avattu yleisölle 1996.",
+     "url": "https://en.wikipedia.org/wiki/Vapriikki_Museum_Centre"
+    },
+    {
+     "vaite": "Vanhimmat osat 1880-luvulta; suurin näyttelysali sata metriä pitkä ja 16 metriä korkea; ruotsin fabrik muuttui suomen vapriikiksi.",
+     "url": "https://www.erih.net/i-want-to-go-there/museum-centre-vapriikki"
+    },
+    {
+     "vaite": "Vapriikki sijaitsee Tammerkosken varrella Tampellan entisissä tehdastiloissa.",
+     "url": "https://en.wikipedia.org/wiki/Vapriikki_Museum_Centre"
+    },
+    {
+     "vaite": "Suomen Jääkiekkomuseo toimii Vapriikissa; Hall of Fame on palkinnut pelaajia, valmentajia ym. vuodesta 1985.",
+     "url": "https://en.wikipedia.org/wiki/Finnish_Hockey_Hall_of_Fame"
+    },
+    {
+     "vaite": "Tampereen Pellava- ja Rauta-Teollisuus syntyi 1861 pellavatehtaan ja konepajan yhdistyessä; nimi lyhennettiin 1950-luvulla Tampellaksi; yhtiö valmisti paperikoneita, vetureita ja aseita.",
+     "url": "https://en.wikipedia.org/wiki/Tampella"
+    }
+   ]
+  },
+  {
+   "id": "Q41776569",
+   "nimi": "Amurin työläismuseokortteli",
+   "kuvaus": "Puutalokortteli työläisten asunnoista",
+   "luokka": "rakennus",
+   "koko_m": 100,
+   "teksti": "Amurin työläismuseokortteli on säilynyt puutalokortteli Amurin kaupunginosassa, ja ylhäältä sen matalat talot ja sisäpihat erottuvat ympäröivien kerrostalojen keskeltä. Amuria alettiin rakentaa 1860-luvulla kasvavan tehdastyöväen tarpeisiin, ja vuonna 1900 alueen puutaloissa asui noin viisituhatta ihmistä, usein niin, että kaksi tai neljä perhettä jakoi saman keittiön. Muut korttelit purettiin 1970- ja 1980-luvuilla, mutta tämä varattiin museoksi jo vuonna 1965. Viidessä asuintalossa on kolmekymmentäkaksi asuntoa, jotka on sisustettu eri vuosikymmenten tapaan vuosien 1882 ja 1973 väliltä, ja korttelissa on myös leipomo, suutarin verstas ja sauna.",
+   "lyhyt": null,
+   "syventava": "Miksi Amurin puutalot purettiin?",
+   "kysymykset": [
+    "Miksi Amurin vanhat puutalot purettiin?",
+    "Mistä Amurin nimi on peräisin?",
+    "Millaista elämä oli yhteiskeittiöissä?",
+    "Mitä korttelin kahvilassa tarjoillaan?",
+    "Ketä Amurin taloissa asui?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Amurin puutalokortteleita alettiin rakentaa 1860-luvulla kasvavan työväestön tarpeisiin.",
+     "url": "https://www.erih.net/i-want-to-go-there/amuri-museum-of-workers-housing"
+    },
+    {
+     "vaite": "Vuonna 1900 alueella asui noin 5000 ihmistä puutaloissa, joissa keittiö jaettiin kahden tai neljän perheen kesken; talot korvattiin kerrostaloilla 1970- ja 1980-luvuilla; kortteli varattiin museoksi 1965.",
+     "url": "https://www.lonelyplanet.com/points-of-interest/amurin-tyolaismuseokortteli/1186989"
+    },
+    {
+     "vaite": "Kortteli: 32 asuntoa viidessä asuintalossa, leipomo, suutari, sauna, kaksi kauppaa ja kahvila; elämää vuosilta 1882–1973.",
+     "url": "https://www.erih.net/i-want-to-go-there/site/amuri-museum-of-workers-housing"
+    }
+   ]
+  }
+ ]
+}
