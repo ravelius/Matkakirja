@@ -26,9 +26,11 @@ Tarkista ensin taustalla jatkuneiden ajojen tulokset (alla) ja kerro ne Julkaisi
   jälkeen linssi pois + 30 s). Viimeisin ajo 13.23 kaatui: devicectl "application failed to launch (error 10002, Invalid
   argument)" — todennäköisesti edellisen konsoliajon tappamisen jälkeen. 15.00 jälkeen: tarkista iPad (devicectl list devices),
   aja `perl … faceit-uusinta-ajo.sh` (Julkaisijan lupa on), tulos lokit/natiiviseppa-faceit-uusinta.txt → yksi rivi Päätoimittajalle.
-- **Juna 161 -ehdokkaat:** LS2 pallo-puoli **aa32b618b** (korvaa e16d100db), eleet-2 67728f0b, kehittaja-tf 767c70eb (todennus
-  App Store -käännöksellä; testaajakoodi Päätoimittajalta, ei repoon), kirjoitusääni 074c95a3 KUITATTU, lepo 28da7435 kuitataan
-  CPU-lukujen jälkeen.
+- **JUNA 161 KUITATUT (Päätoimittaja 13.3x, kokoa tauon jälkeen BUILD 160 d8b0e0fc:n päälle):** LS1 esitys-giza **741625b8d**
+  (ehto: Giza vain kokeilukytkimen takana), eleet-2 **67728f0b**, kirjoitusääni **074c95a3**, kehittaja-tf **767c70eb** (⊇ 270992bd),
+  kaupunkipallot **aa32b618b**, worldview-vakiot LS2:lta (SHA kysyttävä LS2:lta). EI VIELÄ: NUI pariisi-esitys (uusi SHA tauon
+  jälkeen stilleistä, EI 5c3d45e6), Macin vSync + lepo 28da7435 (CPU-luvut ensin; vSync 107fabeb on 074c95a3:ssa — jos lepo ei
+  ehdi, kysy Päätoimittajalta, meneekö 074c95a3 vSyncin kanssa). LS1 torjunnan kesto / NUI lippurivi: tarkista Päätoimittajalta.
 
 ## TILA HETI
 
