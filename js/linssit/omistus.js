@@ -22,7 +22,7 @@
 import { readStamps, stampBoard } from '../passport.js';
 import { LINSSIT } from './rekisteri.js';
 // Esittelylinssit (apurahan kortti): sama joukko kuin kehittäjätilassa ilman muuta kehittäjätilaa.
-import { esittelylinssitAuki } from '../apuraha.js';
+import { esittelylinssitAuki, esittelylinssiLista } from '../apuraha.js';
 
 /*
  * Passileimojen etuliite. Sama kuvio kuin kunniamerkinnällä
@@ -151,7 +151,11 @@ export function omistetut(game, player = game?.player) {
   for (const tunnus of player?.linssit ?? []) ulos.add(tunnus);
   // Kehittäjätila antaa vain TOIMIVAT linssit (omistaja 4.8.2026), ei
   // hiomassa olevia — ne ovat lupaus, jota ei vielä voi kokeilla.
-  if (kehittajaTila() || esittelylinssitAuki()) for (const r of LINSSIT) if (r.tila !== 'hiomassa') ulos.add(r.tunnus);
+  // Apurahan "Avaa valmiit linssit" (omistaja 7.10.2026 klo 15.0x): vain kortin listan linssit, ei kehittäjätilaa.
+  const lista = kehittajaTila() ? null : esittelylinssiLista();
+  if (kehittajaTila() || esittelylinssitAuki()) {
+    for (const r of LINSSIT) if (r.tila !== 'hiomassa' && (!lista || lista.includes(r.tunnus))) ulos.add(r.tunnus);
+  }
   return ulos;
 }
 

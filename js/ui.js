@@ -17765,8 +17765,8 @@ export class UI {
         for (const r of k.lista) ol.appendChild(html('li', null, r));
         kortti.appendChild(ol);
       }
-      if (k.nappi?.toiminto === 'esittelylinssit') {
-        // Kaikki selaimen toimivat linssit heti käyttöön ilman pisteitä (js/apuraha.js → js/linssit/omistus.js).
+      if (k.nappi?.toiminto === 'esittelylinssit' || k.nappi?.toiminto === 'valmiit-linssit') {
+        // Valmiit linssit (nappi.linssit) heti käyttöön ilman pisteitä (js/apuraha.js → js/linssit/omistus.js).
         const rivi = html('p', 'periaate-linkit');
         const b = html('button', 'ghost apuraha-toiminto');
         b.type = 'button';
@@ -17774,7 +17774,7 @@ export class UI {
         b.textContent = k.nappi.teksti;
         if (esittelylinssitAuki()) valmis();
         b.addEventListener('click', () => {
-          avaaEsittelylinssit();
+          avaaEsittelylinssit(k.nappi.linssit);
           lahetaKaynti('esittelylinssit', APURAHA_VERSIO());
           sfx.play('paper');
           valmis();

@@ -82,3 +82,25 @@ test('esittelylinssit avaavat kehittäjätilan linssijoukon ilman kehittäjätil
   assert.equal(omistetut(null, pelaaja).size, kehittaja);
   delete globalThis.localStorage;
 });
+
+test('nappi avaa valmiit linssit (omistaja 7.10.2026 klo 15.0x): sama lista webille ja natiiville, ei kehittäjälinssejä', async () => {
+  const k = raaka.kappaleet.find((x) => x.nappi?.toiminto === 'valmiit-linssit');
+  assert.equal(k.teksti, 'Nappi avaa heti kaikki valmiit linssit.');
+  assert.equal(k.nappi.teksti, 'Avaa valmiit linssit');
+  assert.ok(!/kehitteillä/.test(JSON.stringify(raaka.kappaleet)), 'ei lupausta kehitteillä olevista');
+  const { LINSSIT, KEHITTAJALINSSIT } = await import('../js/linssit/rekisteri.js');
+  const valmiit = LINSSIT.filter((r) => r.tila !== 'hiomassa' && r.tuo).map((r) => r.tunnus);
+  assert.deepEqual([...k.nappi.linssit].sort(), [...valmiit].sort(), 'lista = rekisterin valmiit linssit');
+  assert.ok(KEHITTAJALINSSIT.every((r) => !k.nappi.linssit.includes(r.tunnus)), 'kehittäjälinssit eivät kuulu valmiisiin');
+  // Omistus: lista rajaa; kehittäjätila ennallaan.
+  const varasto = new Map();
+  globalThis.localStorage = { getItem: (a) => varasto.get(a) ?? null, setItem: (a, b) => varasto.set(a, String(b)), removeItem: (a) => varasto.delete(a) };
+  try {
+    const { avaaEsittelylinssit, esittelylinssitAuki } = await import('../js/apuraha.js');
+    const { omistetut } = await import('../js/linssit/omistus.js');
+    avaaEsittelylinssit(['radio', 'vesistot']);
+    assert.equal(esittelylinssitAuki(), true);
+    const o = omistetut({ player: { linssit: [] } });
+    assert.ok(o.has('radio') && o.has('vesistot') && !o.has('topografia'), [...o].join(','));
+  } finally { delete globalThis.localStorage; }
+});
