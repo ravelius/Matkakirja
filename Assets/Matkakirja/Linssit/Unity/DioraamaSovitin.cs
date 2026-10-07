@@ -855,6 +855,25 @@ namespace Matkakirja.Natiivi
             o.Kirjaa($"poikki: vene päällä ({lahde}, {reitti.Count} pistettä, {ydin.Pituus:F0} m, {ydin.KestoS:F0} s)");
         }
 
+        /// <summary>Pelaajahahmo (rakennus.json pelaaja, Linnanrakentajan Fogg) kapselin tilalle: irrallinen hahmo pelaajan hahmosolmussa
+        /// (skin-hahmo katsoo Unityssa paikallista −z:aa → 180°), leike pelaajan liikkeestä. Henkilö syntetisoidaan rakennuksen henkilöihin.</summary>
+        void LisaaPelaajahahmo(SeikkailuPelaaja sp)
+        {
+            var pm = rakennus?.Pelaaja;
+            if (sp == null || pm == null || nayttamo?.Hahmot3D == null) return;
+            const string id = "pelaaja-hahmo";
+            rakennus.Henkilot ??= new Dictionary<string, Henkilo>();
+            rakennus.Henkilot[id] = new Henkilo { Id = id, Nimi = pm.Nimi, Malli3d = new Malli3d { Skin = new SkinMalli { Glb = pm.Glb, Leikkeet = new Dictionary<string, string>(pm.Leikkeet) } } };
+            sp.Malli = pm;
+            nayttamo.Hahmot3D.PoistaIrralliset(id);
+            nayttamo.Hahmot3D.LisaaIrrallinen(rakennus, id, sp.Hahmo, sp.Leike, Quaternion.Euler(0f, 180f, 0f));
+            var glbt = new List<string>();
+            nayttamo.Hahmot3D.IrrallistenGlb(glbt);
+            foreach (var glb in glbt) if (hahmoGlbJonossaTaiValmiit.Add(glb)) o.StartCoroutine(LataaHahmoGlb(glb));
+            sp.KapseliPiiloon();
+            o.Kirjaa($"seikkailu: pelaajahahmo {pm.Nimi} ({pm.Glb}, {pm.Leikkeet.Count} leikettä)");
+        }
+
         IEnumerator VartijatPaalle()
         {
             if (nayttamo == null || rakennus == null) { o.Kirjaa("poikki: vartijat: linssi ei auki"); yield break; }
@@ -888,7 +907,7 @@ namespace Matkakirja.Natiivi
             Physics.SyncTransforms();
             if (Physics.Raycast(alku + Vector3.up * 2f, Vector3.down, out var osuma, 30f, 1 << DioraamaNayttamo.Kerros)) alku = osuma.point + Vector3.up * 0.05f;
             else o.Kirjaa($"seikkailu: nousupaikan alla ei törmäyspintaa ({alku}) — laituri puuttuu törmäyksestä?");
-            SeikkailuPelaaja.Luo(nayttamo.transform, alku, yaw, DioraamaNayttamo.Kerros);
+            LisaaPelaajahahmo(SeikkailuPelaaja.Luo(nayttamo.transform, alku, yaw, DioraamaNayttamo.Kerros));
             o.Kirjaa($"seikkailu: vene perillä, pelaaja laiturilla ({alku}, yaw {yaw:F0}, {(nm != null ? "nousu:laituri" : "laiturin kohde")})");
         }
 
@@ -920,7 +939,7 @@ namespace Matkakirja.Natiivi
             Physics.SyncTransforms();
             if (Physics.Raycast(alku + Vector3.up * 2f, Vector3.down, out var osuma, 30f, 1 << DioraamaNayttamo.Kerros)) alku = osuma.point + Vector3.up * 0.05f;
             else o.Kirjaa($"seikkailu: aloituspaikan alla ei törmäyspintaa ({alku})");
-            SeikkailuPelaaja.Luo(nayttamo.transform, alku, yaw, DioraamaNayttamo.Kerros);
+            LisaaPelaajahahmo(SeikkailuPelaaja.Luo(nayttamo.transform, alku, yaw, DioraamaNayttamo.Kerros));
             o.Kirjaa($"poikki: kävely päällä tilassa {tid} ({alku}), kävelygeometria {(SeikkailuKavely.Ladattu ? "ladattu" : "ei (tilameshit " + tilaTormays + ")")}");
         }
 

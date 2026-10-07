@@ -37,7 +37,11 @@ namespace Matkakirja.Natiivi
             int piirretty = 0, tormays = 0;
             foreach (var osa in d.Osat.Values)
             {
-                if (!string.IsNullOrEmpty(osa.Nakyva))
+                // Tila samalla nimellä (Linnanrakentaja v44c: keittio-g102 leivottuna) piirtää huoneen itse: kävelyosan seinät olisivat päällekkäin.
+                bool tilaPiirtaa = false;
+                if (rakennus?.Tilat != null) foreach (var t in rakennus.Tilat) if (string.Equals(t.Id, osa.Id, StringComparison.OrdinalIgnoreCase)) { tilaPiirtaa = true; break; }
+                if (tilaPiirtaa) kirjaa?.Invoke($"seikkailu: {osa.Id}: tila piirtää, kävelyosan näkyvä ohitetaan");
+                if (!string.IsNullOrEmpty(osa.Nakyva) && !tilaPiirtaa)
                 {
                     byte[] b = null; yield return DioraamaLevyvalimuisti.Hae(url(juuri + osa.Nakyva), 120, t => b = t);
                     if (b != null && r3d != null && r3d.LisaaTila(rakennus, new Tila { Id = "kavely:" + osa.Id, Nimi = osa.Id, Kohdistettava = true }, b, kirjaa)) piirretty++;

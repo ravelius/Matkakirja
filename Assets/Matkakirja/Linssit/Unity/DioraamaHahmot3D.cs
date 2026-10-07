@@ -97,16 +97,16 @@ namespace Matkakirja.Natiivi
             public string KatseKohde;
             public int Siemen = int.MinValue;
             // Irrallinen hahmo (historiamoottori V2c: soutaja veneessä): vanhempi, leike ja ulkoinen kello; ei tilan paikkaa eikä eleitä.
-            public Transform Isa; public Func<(string Leike, double Aika)> IrrallinenTila; public GlbAnimaatio IrrallinenEdellinen;
+            public Transform Isa; public Func<(string Leike, double Aika)> IrrallinenTila; public GlbAnimaatio IrrallinenEdellinen; public Quaternion IrrallinenKierto = Quaternion.identity;
         }
 
         /// <summary>Irrallinen hahmo (V2c): henkilön glb, vanhempana isa (esim. veneen istuin_soutaja, ilman omaa siirtoa tai kiertoa),
         /// leike soi kellon ajasta (soutu.json: veneen ja soutajan leikkeet samasta kellosta). Glb latautuu IrrallistenGlb-listan kautta.</summary>
-        public void LisaaIrrallinen(Rakennus rakennus, string henkiloId, Transform isa, Func<(string Leike, double Aika)> tila)
+        public void LisaaIrrallinen(Rakennus rakennus, string henkiloId, Transform isa, Func<(string Leike, double Aika)> tila, Quaternion? kierto = null)
         {
             if (rakennus?.Henkilot == null || !rakennus.Henkilot.TryGetValue(henkiloId, out var henkilo) || string.IsNullOrEmpty(henkilo.Malli3d?.NatiiviGlb)) return;
             var e = new Esiintyma { TilaId = "irrallinen", HahmoId = henkiloId, Hahmo = new Hahmo { Id = henkiloId, HenkiloId = henkiloId }, Henkilo = henkilo,
-                Isa = isa, IrrallinenTila = tila };
+                Isa = isa, IrrallinenTila = tila, IrrallinenKierto = kierto ?? Quaternion.identity };
             esiintymat.Add(e);
             if (malliCache.TryGetValue(henkilo.Malli3d.NatiiviGlb, out var malli)) Rakenna(e, malli);
         }
@@ -135,7 +135,7 @@ namespace Matkakirja.Natiivi
         void PaivitaIrrallinen(Esiintyma e)
         {
             if (e.Isa == null) { if (e.Juuri.activeSelf) e.Juuri.SetActive(false); return; }
-            if (e.Juuri.transform.parent != e.Isa) { e.Juuri.transform.SetParent(e.Isa, false); e.Juuri.transform.localPosition = Vector3.zero; e.Juuri.transform.localRotation = Quaternion.identity; }
+            if (e.Juuri.transform.parent != e.Isa) { e.Juuri.transform.SetParent(e.Isa, false); e.Juuri.transform.localPosition = Vector3.zero; e.Juuri.transform.localRotation = e.IrrallinenKierto; }
             if (!e.Juuri.activeSelf) e.Juuri.SetActive(true);
             e.Nakyvissa = true;
             var (leike, aika) = e.IrrallinenTila?.Invoke() ?? ("idle", 0.0);

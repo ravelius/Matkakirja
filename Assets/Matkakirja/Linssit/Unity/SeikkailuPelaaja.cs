@@ -11,6 +11,7 @@
 // - Törmäys: LisaaTormaykset lisää MeshColliderit tilojen meshesiin, kunnes Linnanrakentajan kavely/<osa>-tormays.glb tulee.
 // Hahmo on toistaiseksi kapseli (DioraamaValaistu); Fogg-glb ja Mixamo-leikkeet kytketään, kun ne ovat paketissa.
 using System;
+using Matkakirja.Linssit.Dioraama;
 using Matkakirja.Linssit.Seikkailu;
 using Unity.Cinemachine;
 using UnityEngine;
@@ -33,6 +34,12 @@ namespace Matkakirja.Natiivi
         float pysty;
 
         public Kavely Tila => kavely;
+        public Transform Hahmo => hahmo;
+        /// <summary>Pelaajahahmon liikkeet (rakennus.json pelaaja): leike ja aika toistokertoimella; null = kapseli.</summary>
+        public PelaajaMalli Malli;
+        string leike = "idle"; double leikeAika;
+        public (string Leike, double Aika) Leike() => (leike, leikeAika);
+        public void KapseliPiiloon() { var mr = hahmo != null ? hahmo.GetComponent<MeshRenderer>() : null; if (mr != null) mr.enabled = false; }
         public CinemachineCamera Kamera => kamera;
         /// <summary>Viimeisin paikka maassa: putoaminen (laiturin reunalta veteen) palauttaa tähän.</summary>
         Vector3 viimeMaassa;
@@ -127,6 +134,7 @@ namespace Matkakirja.Natiivi
             if (cc.isGrounded && pysty < 0) pysty = -1f; else pysty += Painovoima * dt;
             cc.Move(new Vector3((float)kavely.NopeusX, pysty, (float)kavely.NopeusZ) * dt);
             hahmo.localRotation = Quaternion.Euler(0, (float)kavely.HahmoYaw, 0);
+            PaivitaLeike(dt);
             olka.rotation = Quaternion.Euler((float)kavely.KameraPitch, (float)kavely.KameraYaw, 0);
             if (cc.isGrounded) viimeMaassa = transform.position;
             else if (transform.position.y < viimeMaassa.y - 6f)
@@ -137,6 +145,19 @@ namespace Matkakirja.Natiivi
                 Debug.Log($"MATKAKIRJA seikkailu: putosi, palautus {paluu}");
                 cc.enabled = false; transform.position = paluu; cc.enabled = true; pysty = 0;
             }
+        }
+
+        /// <summary>Leike liiketavasta ja vauhdista: idle / kyykky_idle seistessä, kavely / juoksu / hiipiminen liikkeessä; toistonopeus =
+        /// toistokerroin × vauhti / tavoitenopeus (jalat eivät liu'u). Leikkeen vaihtuessa aika alusta.</summary>
+        void PaivitaLeike(float dt)
+        {
+            double v = kavely.Vauhti;
+            string uusi = v < 0.15 ? (kavely.Tapa == Liiketapa.Hiipiminen ? "kyykky_idle" : "idle")
+                : kavely.Tapa == Liiketapa.Juoksu ? "juoksu" : kavely.Tapa == Liiketapa.Hiipiminen ? "hiipiminen" : "kavely";
+            if (uusi != leike) { leike = uusi; leikeAika = 0; }
+            double kerroin = 1;
+            if (Malli != null && Malli.Liikkeet.TryGetValue(leike, out var l) && l.TavoiteMs > 0) kerroin = l.Toistokerroin * Math.Max(0.3, v / l.TavoiteMs);
+            leikeAika += dt * kerroin;
         }
 
         KavelySyote LueSyote()
