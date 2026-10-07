@@ -19,6 +19,12 @@ kirjoittavat `wip/osa1..osa4.json` ja `wip/codex1..codex4.md`. Tämän jälkeen
 ajetaan `yhdista.py`, sitten TARKISTAJA-agentti, ja lopuksi kirjoitetaan
 kolme tulostiedostoa ja poistetaan `wip/`.
 
+### Edistyminen
+
+- Ryhmä 4 VALMIS (`wip/osa4.json` 15 riviä, `wip/codex4.md` 2 tilausta). Älä tee uudelleen.
+- Ryhmät 1–3: kesken tämän kirjauksen hetkellä; jos `wip/osa<N>.json` puuttuu, aja ryhmä
+  uudelleen Sonnetilla.
+
 ### Agenttimalli: SONNET (omistajan päätös 7.10.2026)
 
 Omistaja päätti krediittien säästämiseksi, että tämä työ ajetaan **Sonnetilla**.
