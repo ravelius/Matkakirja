@@ -313,6 +313,22 @@ namespace Matkakirja.Natiivi
             return false;
         }
 
+        /// <summary>Osoittimen kaappaajat paneeleittain (hiiri ja kosketus 0; Mac-ohjauslevyn diagnostiikka 7.10.2026) tai "-".</summary>
+        public string Kaappaajat()
+        {
+            var l = new List<string>();
+            foreach (var kv in dokumentit)
+            {
+                var paneeli = kv.Value.rootVisualElement?.panel;
+                if (paneeli == null) continue;
+                foreach (int id in new[] { PointerId.mousePointerId, PointerId.touchPointerIdBase })
+                    if (paneeli.GetCapturingElement(id) is VisualElement e)
+                        l.Add($"{kv.Key}/{id}: {(string.IsNullOrEmpty(e.name) ? e.GetType().Name : e.name)}.{string.Join(".", e.GetClasses())}" +
+                              (e.panel == null ? " (irrotettu)" : ""));
+            }
+            return l.Count == 0 ? "-" : string.Join("; ", l);
+        }
+
         /// <summary>
         /// Mac-syötteen diagnostiikka (omistaja 7.10.2026, Mac TF 160: ohjauslevyn panorointi ja zoomaus lakkasivat, kunnes klikkasi
         /// karttaa): mikä elementti peittää ruudun pisteen (nimi, luokat, picking, opasiteetti, näkyvyys; kolme vanhempaa) tai null.
