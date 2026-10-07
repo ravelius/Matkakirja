@@ -27,7 +27,8 @@ Avoimet työt:
   (BUILD 161:n päällä), worktree wt/proto-linssiseppa2-e3nousu. Kellotornin komero Linnanrakentajalta: Unity (−51,0; 15,8; 5,5),
   ulos (−0,985; 0; 0,174), päälinna (−20; 15; 0) r 90, pysähdys 9 m. NousuReitti-testit 5/5, unity-tarkistus 0.
   PT KUITTASI 18.0x junaan 163; SHA lähetetty Natiivisepälle. PT: Siirtosepän E3d:n loppu kutsuu SeikkailuNousu.Aloita
-  nykyisen yksinkertaisen nousun tilalla, molemmat junaan 163 yhdessä — pyyntö Siirtosepälle lähetetty, vastaus odottaa.
+  nykyisen yksinkertaisen nousun tilalla. Siirtoseppä kuittasi rajapinnan: SeikkailuKappeli.Loppu kutsuu heijastuksella
+  (7a95377d, haarassa historia-juna164 @ 1e48174e, varanousu jos luokkaa ei ole). Kysytty PT:ltä 18.1x: 163 vai yhdessä 164:ään.
   Myöhemmin: lue merkki "nakyma:kellotorni-kaari" merkit.jsonista, kun Linnanrakentaja vie sen.
 
 ## TILA 7.10. 15.3x
