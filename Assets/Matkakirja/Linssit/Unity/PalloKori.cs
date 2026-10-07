@@ -41,7 +41,8 @@ namespace Matkakirja.Natiivi
         public static bool Paalla = true;
         /// <summary>Äänisarja (A/B): "eleven" tai "kirjasto".</summary>
         public static string AaniSarja = "eleven";
-        public const float NarinaKiihtyvyys = 1.2f, NarinaValiS = 9f, PystyRaja = 1.8f, PystyValiS = 6f, Voimakkuus = 0.55f;
+        // Omistaja 18.5x: äänet kuuluviin mutta säästeliäästi (TF 161: 0,55 jäi kaupungin äänimaiseman alle).
+        public const float NarinaKiihtyvyys = 1.2f, NarinaValiS = 7f, PystyRaja = 1.8f, PystyValiS = 6f, Voimakkuus = 0.9f;
         AudioSource aani;
         public const string MalliOsoite = "https://media.matkakirja.app/kartta/ilmapallo/v1/kori_nakyma.glb";
         static GlbMalli malli; static bool malliHaussa;

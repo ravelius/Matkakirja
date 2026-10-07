@@ -1,6 +1,6 @@
 // KUUMAILMAPALLON KORIN LIIKE (omistaja 7.10.2026 klo 09.1x, Päätoimittaja: korinäkymä kaupunkitilassa, kokeilu Prahassa).
 // Kaupunki ja horisontti pysyvät vakaina; vain kori ja köydet (oma overlay-kamera) liikkuvat:
-//  - keinunta: jatkuva hiljainen kahden sinin summa (~1°, pääjakso ~5 s), myös orbitin aikana (LS2:n Cupolan Ajelehdi-malli);
+//  - keinunta: jatkuva kahden sinin summa (~2,5°, pääjakso ~5,5 s), myös orbitin aikana (LS2:n Cupolan Ajelehdi-malli);
 //  - jousi: kun pallo kiihtyy eteen/sivulle, kori jää vastasuuntaan (enintään RajaAst) ja palaa keskelle tasaisessa
 //    liikkeessä; pysähtyessä hidastuvuus heilauttaa sen pienesti eteen, ja se asettuu (vaimennettu jousi, ominaisjakso JaksoS);
 //  - köydet seuraavat koria viiveellä (alipäästö KoysiViiveS).
@@ -12,10 +12,13 @@ namespace Matkakirja.Linssit.Kierros
 {
     public sealed class KoriLiike
     {
-        public const double KeinuntaAst = 0.7, KeinuntaJaksoS = 5.0, Keinunta2Ast = 0.3, Keinunta2JaksoS = 8.3;
-        public const double RajaAst = 2.0, JaksoS = 2.6, Vaimennus = 0.32, KoysiViiveS = 0.35;
-        /// <summary>Kiihtyvyyden vaste: kori kallistuu kuin heiluri (atan(a/g)), mutta pehmennettynä tällä kertoimella.</summary>
-        public const double Vaste = 0.6;
+        // OMISTAJA 7.10. 18.5x ("Haluan myös ne liikkeeseen reagoivat korin vastaliikkeet mukaan", Päätoimittaja: "fysiikkaa saa
+        // venyttää"): TF 161:n ~1°:n keinunta ja ≤ 2°:n vastaliike eivät erottuneet. Keinunta ~2,5°, vastaliike ≤ 5,5° pehmeällä
+        // jousella (pidempi jakso, vähemmän vaimennusta), köydet selvemmällä viiveellä.
+        public const double KeinuntaAst = 1.8, KeinuntaJaksoS = 5.5, Keinunta2Ast = 0.7, Keinunta2JaksoS = 8.3;
+        public const double RajaAst = 5.5, JaksoS = 3.0, Vaimennus = 0.26, KoysiViiveS = 0.55;
+        /// <summary>Kiihtyvyyden vaste: kori kallistuu kuin heiluri (atan(a/g)), vahvistettuna tällä kertoimella (rajana RajaAst).</summary>
+        public const double Vaste = 0.9;
         const double G = 9.81;
 
         double t, nyok, nyokV, kall, kallV;
