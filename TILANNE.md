@@ -20,10 +20,15 @@ Komento, jota agentit käyttävät:
 `curl -sS -L --max-time 60 -A "MatkakirjaFactCheck/1.0 (sami.reivinen@vvi.fi)" "<URL>"`
 (ympäristömuuttuja `NODE_USE_ENV_PROXY=1`).
 
-**Vaihe 2 käynnissä:** neljä Opus-ali-agenttia (A, B, C, D alla olevan työnjaon mukaan) ajossa
+**Vaihe 2 käynnissä:** neljä ali-agenttia (A, B, C, D alla olevan työnjaon mukaan) ajossa
 rinnakkain. Raportit kirjoitetaan session scratchpad-kansioon, ei repoon; vasta kun kaikki
 neljä ovat valmiit, tulokset liitetään faktapohjien loppuun osioksi
 "Lähdetarkistus 7.10.2026 (sivut avattu)".
+
+**MALLIPÄÄTÖS (omistaja 7.10.2026, krediittien säästö): tämä työ ajetaan Sonnet 5.5:llä.**
+Erä 1 (A–D) ehti käynnistyä Opuksella ja saa valmistua sillä; **kaikki tästä eteenpäin
+käynnistettävät ali-agentit ja TARKISTAJA-agentti ajetaan mallilla `sonnet`**. Päätös on
+CLAUDE.md:n agenttisäännön mukainen (vain Opus tai Sonnet; Fable-mallia ei koskaan agenttina).
 
 ## Mitä on tehty (vaihe 1)
 
@@ -62,8 +67,8 @@ neljä ovat valmiit, tulokset liitetään faktapohjien loppuun osioksi
 
 ## Mistä jatketaan
 
-Käynnistä sama neljän Opus-agentin erä uudelleen (enintään 4 rinnakkain), sitten erillinen
-TARKISTAJA-agentti. Agenttien työnjako oli:
+Käynnistä sama neljän agentin erä uudelleen (enintään 4 rinnakkain; malli `sonnet`,
+ks. MALLIPÄÄTÖS yllä), sitten erillinen TARKISTAJA-agentti. Agenttien työnjako oli:
 
 | Agentti | Vastuu | Keskeiset kohdat |
 |---|---|---|
