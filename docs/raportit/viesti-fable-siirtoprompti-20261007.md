@@ -5,6 +5,11 @@ Tarkempi tila: docs/raportit/viesti-fable-luovutus-20261004.md alku "TILANNE 7.1
 Päätökset: docs/raamattu-loki/paatokset-2026-09.md (grep "7.10.2026"); loki-PR #4150 (fable-loki-20261007g) Julkaisijalla.
 Kirjaamatta: scratchpad/kirjattavat-20261006.md merkin "Kirjattu #4150" jälkeen.
 
+**8.10. KLO 02.1x:** tilinvaihtoa ei tehty yöllä (omistaja nukkuu); viikko 91 %, roolit jatkavat tällä tilillä, kunnes omistaja vaihtaa
+aamulla (Postivahti hälyttää 96 %). Karttaseppä: talvi2d valmis 02.04 (yleiskuva T7/iss-eurooppa-s2/yleiskuva-talvi2d-z6.jpg) →
+talvi2e käynnissä: lumiraja vaihtoehto A (mannerilmasto 54° N lännessä → 48° N idässä) + Mezeninlahden merijää 42° E:hen, ~3–4 h,
+ei saa olla käynnissä junakäännöksen aikana.
+
 ## 1. Ensimmäinen viesti uuden tilin PÄÄTOIMITTAJA-sessioon
 
 Omistaja kirjautuu työpöytäsovellukseen uudella tilillä, avaa session kansioon /Users/Shared/Claude/Matkakirja-fable (Opus, max) ja liittää:
