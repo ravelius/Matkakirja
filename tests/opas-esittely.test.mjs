@@ -236,7 +236,7 @@ test('yksityiskohdat_polut: Pariisin luettelo v2 (Sisältökirjuri 7.10.)', asyn
   const { OPAS_AINEISTOT } = await import('../tools/pollo/aineistot.js');
   assert.deepEqual(OPAS_AINEISTOT.yksityiskohdat_polut, { pariisi: 'esittely/pariisi-v2/pariisi-yksityiskohdat.json',
     praha: 'esittely/praha-v1/praha-yksityiskohdat.json', wien: 'esittely/wien-v1/wien-yksityiskohdat.json',
-    rooma: 'esittely/rooma-v1/rooma-yksityiskohdat.json' });
+    rooma: 'esittely/rooma-v2/rooma-yksityiskohdat.json' });
 });
 
 test('äänetön esittely (omistaja 7.10. 18.2x): ei generointia, ei aani-, aani_pcm- eikä kesto_s-kenttiä; R2:n ääni soi, jos on', async () => {
