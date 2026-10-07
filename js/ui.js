@@ -17713,12 +17713,9 @@ export class UI {
     keskus.appendChild(nappi);
     portti.appendChild(keskus);
 
-    // Alareunan linkki pelin periaatteisiin.
+    // Alareuna: iOS-huomautus (apurahan esittelystä). "Oppiminen on hauskaa" -linkki poistettu (omistaja 7.10.2026
+    // klo 09.4x): sen lähde-, palaute- ja oikeustiedot ovat nyt apurahakortin lopussa.
     const alaosa = html('div', 'start-gate-alaosa');
-    const linkki = html('button', 'start-linkki', 'Oppiminen on hauskaa');
-    linkki.type = 'button';
-    linkki.addEventListener('click', () => this.naytaPeriaatteet());
-    alaosa.appendChild(linkki);
     portti.appendChild(alaosa);
 
     /*
@@ -17734,7 +17731,7 @@ export class UI {
       apuraha.addEventListener('click', () => this.naytaApuraha(esittely));
       keskus.appendChild(apuraha);
       if (esittely.webHuomautus) {
-        alaosa.insertBefore(html('p', 'start-huomautus', esittely.webHuomautus), linkki);
+        alaosa.appendChild(html('p', 'start-huomautus', esittely.webHuomautus));
       }
     });
 
@@ -17818,12 +17815,33 @@ export class UI {
       kortti.appendChild(rivi);
     }
 
+    /*
+     * Lähde-, palaute- ja oikeustiedot kortin loppuun pienellä (omistaja 7.10.2026 klo 09.4x: "Oppiminen on hauskaa"
+     * -linkki pois, apurahakortti korvaa sen tiedot). Lippukuvien tekijät: lisenssi vaatii nimeämisen, eikä niiden
+     * alle mahdu omaa lähderiviä. GitHub-linkkiä ja periaatetekstejä ei siirretty.
+     */
+    let lippurivi = null;
+    if (LIPPU_TEKIJAT.length) {
+      lippurivi = html('p', 'periaate-teksti periaate-liput');
+      lippurivi.textContent = PERIAATTEET.lippurivi
+        + `${LIPPU_TEKIJAT.map((l) => `${l.tekija} (${l.lisenssi})`).join(', ')}.`;
+      kortti.appendChild(lippurivi);
+    }
+    kortti.appendChild(this.periaatePalaute());
+    const oikeudet = html('p', 'periaate-oikeudet', PERIAATTEET.oikeudet);
+    kortti.appendChild(oikeudet);
+
     const sulje = html('button', 'ghost periaate-sulje', 'Takaisin');
     sulje.type = 'button';
     sulje.addEventListener('click', () => lappu.close());
     kortti.appendChild(sulje);
 
-    if (korttiPohjalla()) puePohjaKortiksi(kortti, { otsikko, sulje });
+    // KORTTI-pohja (peruttava ?kortti=vanha): lähde- ja oikeusrivit apurina; palautelomake pitää kenttiensä tyylit.
+    if (korttiPohjalla()) {
+      if (lippurivi) lippurivi.className = 'tk-apuri';
+      oikeudet.className = 'tk-apuri';
+      puePohjaKortiksi(kortti, { otsikko, sulje });
+    }
     lappu.addEventListener('close', () => { lappu.remove(); if (this.apurahaDialog === lappu) this.apurahaDialog = null; });
     lappu.addEventListener('click', (e) => { if (e.target === lappu) lappu.close(); });
     document.body.appendChild(lappu);
@@ -17835,85 +17853,7 @@ export class UI {
   }
 
   /**
-   * Pelin periaatteet omana ikkunanaan aloitussivulta (omistajan toive).
-   * Sisältö on tiivistys README:stä ja Raamatun perustuslaista: miksi peli
-   * on olemassa ja millä säännöillä sisältöä siihen tehdään.
-   */
-  naytaPeriaatteet() {
-    sfx.play('paper');
-    const lappu = html('dialog', 'dialog periaate-lappu');
-    const kortti = html('div', 'dialog-card');
-    lappu.appendChild(kortti);
-
-    const otsikko = html('h2', 'periaate-otsikko', PERIAATTEET.otsikko);
-    kortti.appendChild(otsikko);
-
-    // Tekstit: js/ui-tekstit.js PERIAATTEET (sama lähde natiivin paketissa).
-    for (const osa of PERIAATTEET.osat) {
-      if (osa.otsikko) {
-        const h = html('h3', 'periaate-valiotsikko');
-        h.textContent = osa.otsikko;
-        kortti.appendChild(h);
-      }
-      const p = html('p', `periaate-teksti ${osa.karki ? 'kärki' : ''}`.trim());
-      p.textContent = osa.teksti;
-      kortti.appendChild(p);
-    }
-
-    // Lippukuvat näkyvät pieninä tervehdysten vieressä, eikä niiden alle
-    // mahdu omaa lähderiviä. Valtaosa on public domainia, mutta muutaman
-    // lisenssi vaatii tekijän nimeämisen — se tehdään tässä, jotta
-    // "jokaisen kohdalla lukee kuka sen on tehnyt" pitää paikkansa.
-    if (LIPPU_TEKIJAT.length) {
-      const lippurivi = html('p', 'periaate-teksti periaate-liput');
-      lippurivi.textContent = PERIAATTEET.lippurivi
-        + `${LIPPU_TEKIJAT.map((l) => `${l.tekija} (${l.lisenssi})`).join(', ')}.`;
-      kortti.appendChild(lippurivi);
-    }
-
-    const linkit = html('p', 'periaate-linkit');
-    const gh = html('a', 'periaate-linkki', PERIAATTEET.linkki.teksti);
-    gh.href = PERIAATTEET.linkki.url;
-    gh.target = '_blank';
-    gh.rel = 'noopener';
-    linkit.appendChild(gh);
-    kortti.appendChild(linkit);
-
-    kortti.appendChild(this.periaatePalaute());
-
-    const oikeudet = html('p', 'periaate-oikeudet', PERIAATTEET.oikeudet);
-    kortti.appendChild(oikeudet);
-
-    const sulje = html('button', 'ghost periaate-sulje', 'Takaisin');
-    sulje.type = 'button';
-    sulje.addEventListener('click', () => lappu.close());
-    kortti.appendChild(sulje);
-    // KORTTI-pohja (peruttava ?kortti=vanha): kärki korostettuna, lähde- ja oikeusrivit apurina; palautelomake
-    // pitää kenttiensä tyylit (kenttäpohja odottaa omistajan päätöstä).
-    if (korttiPohjalla()) {
-      for (const e of kortti.querySelectorAll('.periaate-teksti')) {
-        e.className = e.classList.contains('periaate-liput') ? 'tk-apuri'
-          : `tk-leipa${e.classList.contains('kärki') ? ' tk-leipa--korostus' : ''}`;
-      }
-      oikeudet.className = 'tk-apuri';
-      puePohjaKortiksi(kortti, { otsikko, sulje });
-    }
-
-    lappu.addEventListener('close', () => lappu.remove());
-    lappu.addEventListener('click', (e) => { if (e.target === lappu) lappu.close(); });
-    document.body.appendChild(lappu);
-    lappu.showModal();
-    // showModal siirtää kohdistuksen ensimmäiseen napautettavaan
-    // elementtiin, joka on kortin lopussa — selain vieritti ikkunan
-    // valmiiksi alas (omistajan havainto). Kohdistus otsikkoon ja
-    // vieritys alkuun.
-    kortti.scrollTop = 0;
-    otsikko.setAttribute('tabindex', '-1');
-    otsikko.focus({ preventScroll: true });
-  }
-
-  /**
-   * Palautelohko periaateikkunan loppuun (omistajan toive). Viesti menee
+   * Palautelohko apurahakortin loppuun (alun perin periaateikkunan, omistajan toive). Viesti menee
    * ulkopuoliselle lomakepalvelulle, joka välittää sen tekijälle —
    * sähköpostiosoitetta ei ole sivulla eikä lähdekoodissa, joten
    * roskapostirobotit eivät saa sitä käsiinsä.
