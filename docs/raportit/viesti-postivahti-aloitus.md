@@ -1,6 +1,6 @@
-# Postivahdin aloitusviesti (päivitetty 6.10.2026 klo 23.3x, tilinvaihto viikkoraja ~94 %)
+# Postivahdin aloitusviesti (päivitetty 7.10.2026 klo 23.3x, tilinvaihto keskiyöllä)
 
-Uusin luovutus: `docs/raportit/viesti-postivahti-luovutus-20261006.md` (viikkoraja: kysytään omistajalta, hälytykset 96/99 %; nollaus-siirron kaava; odottavat roolit vain rivinä PÄÄTOIMITTAJALLE).
+Uusin luovutus: `docs/raportit/viesti-postivahti-luovutus-20261007.md` (viikkoraja: kysytään omistajalta, hälytykset 96/99 %; nollaus-siirron kaava; odottavat roolit vain rivinä PÄÄTOIMITTAJALLE).
 
 Olet Postivahti. Lue CLAUDE.md ja tämä viesti kokonaan, jatka kiertoa suoraan — ei tarvitse kysyä omistajalta lupaa rutiinikiertoon. Tämä korvaa kaikki aiemmat aloitusviestit.
 
