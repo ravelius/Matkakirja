@@ -47,7 +47,8 @@ export const RAKENNUS = {
   // Natiivi piirtää kuoren alle 4 km:n tason tälle korkeudelle (Olavinlinnassa järvi −7); −3 jää Jinshui-joen veden (−2)
   // alle, joten uoma ei peity, ja mallin reunojen ulkopuolella se näkyy matalana maana kuten pilotin esikatseluissa.
   ulkokuoriVesi: -3,
-  // Lähidetalji (natiivin kuorivarjostin, maski blender/ulkokuori/hybridi): R rappausseinät, G lasitetut tiilikatot,
+  // Lähidetalji (natiivin kuorivarjostin, maski blender/ulkokuori/hybridi): R ei käytössä (maskissa 0: rappauksen tahrat
+  // näkyivät seinissä läikkinä 7.10.), G lasitetut tiilikatot,
   // B harmaa tiilikiveys, A ei käytössä (sama kuin B, maskissa 0). Järjestys = _valmiit/.../hybridi/kanavat.txt.
   detaljiKanavat: ['kalkkirappaus', 'lasitettu-tiilikatto', 'harmaa-tiilikiveys', 'harmaa-tiilikiveys'],
   // Saapuminen etelästä Taihemenin yli (kuin kulkueen suunta).

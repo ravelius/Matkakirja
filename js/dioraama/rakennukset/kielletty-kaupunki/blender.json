@@ -1,7 +1,7 @@
 {
   "rakennus": "kielletty-kaupunki",
-  "hash": "e65ac532832be787",
-  "kansio": "dioraama/kielletty-kaupunki/blender/e65ac532832be787/",
+  "hash": "5ca4c4b500142453",
+  "kansio": "dioraama/kielletty-kaupunki/blender/5ca4c4b500142453/",
   "tiedostot": [
     {
       "polku": "kirjasto/materiaali/harmaa-tiilikiveys/harmaa-tiilikiveys_diff-4x4.astcm",
@@ -70,8 +70,8 @@
     },
     {
       "polku": "ulkokuori/hybridi/kuori-materiaali-2k.png",
-      "sha256": "b91fdb78b37d6b000aeacead3672ac398b7075f90bdd2256dadeb7dbe6fea12a",
-      "tavuja": 351496
+      "sha256": "dfa4796266a5f129434a27cb70152a20c5df534c35435dd58062aa796459b443",
+      "tavuja": 225068
     },
     {
       "polku": "ulkokuori/ulkokuori-2k-4x4.astcm",
