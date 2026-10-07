@@ -17,7 +17,15 @@ Avoimet työt:
    Vauhtirajaus opas-vapaa-lataus 5683ffaf jäi pois junasta. Ei uutta työtä tähän.
 4. s2-meri 0f6e4e89 on KUITATTU junaan 154 (BMNG:n meri S2:n meriväriin).
 
-## TILA 7.10. 09.3x (uusin)
+## TILA 7.10. 10.5x (uusin; Mac käynnistetään uudelleen 11.05)
+- VIE 159 kaupunkipallo OK (19ef80cc iPhone: oikea napautus → kaupunkitila Rooma, kortti ei peitä). PUUTE torjuntalaatikko < 4 s
+  (LS1/NUI), raportoitu Päätoimittajalle, Julkaisijalle ja Natiivisepälle. Stillit lokit/linssiseppa2-kaupunkipallo-159-stillit/.
+- Apurahakuva valmis: lokit/apuraha-kuvat/iss-cupola-mustameri-ipad-vaaka-{1,2}.png (iPad vaaka, Mustameri). Länsi-Eurooppa tarvittaessa.
+- Ei keskeneräisiä ajoja. Worktree wt/proto-linssiseppa2-kaupunkipallo (a04d12f7c, junassa 159) → poista, kun 159 on mainissa.
+- Ajoskriptit scratchpadissa (b02a8297): ajo-kp159.sh, kaupunkipallo.txt, apuraha-cupola.txt; kattavuus3d/ (mittaa.py, sallitut.py)
+  kopioina lokit/linssiseppa2-3d-kattavuus/.
+
+## TILA 7.10. 09.3x
 - KAUPUNKIPALLO juna 159: runko fc44bc51 sis. 44090c1a + 9718c4bd + 7f3dbefd7 (koko 84–120 pt, näkyy ≤ 2 600 km). Stillit 159koe 81409e09
   (iPhone + iPad): lokit/linssiseppa2-kaupunkipallo-159-stillit/ → Päätoimittajan kuittaus odottaa. iPad: oikea napautus → kaupunkitila OK.
   LÖYDÖS iPhone: pelaajan kaupungin kutsukortti peittää pallon → korjaus a04d12f7c (peilattu kallistus vasemmalle), ehdotettu junaan 159.
