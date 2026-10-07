@@ -15,6 +15,13 @@ Tarkista ensin taustalla jatkuneiden ajojen tulokset (alla) ja kerro ne Julkaisi
 - **Mac lepo -dev 28da7435** käännetty (lokit/natiiviseppa-mac-lepo-28da7435, Nakyvyys-symboli mukana). mac-cpu.sh jälkeen-ajo
   käynnistetty 13.34 setsid → lokit/natiiviseppa-mac-cpu/jalkeen-28da7435/cpu.txt (+ "Mac-ikkuna"-lokirivit). Tarkista ja lähetä
   luvut Päätoimittajalle (ennen A 14,8 / B 14,9 / C 15,5 %; tavoite C < 2 %). Sen jälkeen Mac-intro-kaappaus ja panorointi.
+- **LEPO-MITTAUS 13.36 (28da7435) — VIKA, EI VIELÄ PÄÄTOIMITTAJALLE:** A 3,7 / B 4,0 / C 4,4 / D 4,6 %. Lokissa vain YKSI rivi
+  "Mac-ikkuna piilossa → 1 fps" koko ajon ajan → MatkakirjaMacSyote_Nakyvyys palautti bitin 0 = 0 myös näkyvänä, joten peli oli
+  1 fps:ssä kaikissa tiloissa (A:kin). Tutki: kutsutaanko pääsäikeeltä (AppKit-ominaisuudet muualta = roskaa → dispatch_sync main
+  tai NSWindowDidChangeOcclusionStateNotification-tarkkailija, joka päivittää atomista tilaa), onko Unityn ikkuna [NSApp windows]-
+  listassa, occlusionState-arvo. Lisäksi 1 fps maksaa silti ~4 % → tavoite < 2 % vaatii myös esim. Cesiumin/taustasäikeiden
+  pysäytyksen tai OnDemandRendering-välin. Ikkuna oli eri paikassa (560,50 1440×928), joten napsautukset eivät osuneet: aseta
+  mac-cpu.sh:ssa ikkunan paikka (System Events set position/size) ennen napsautuksia. Mac TF 161:een vasta korjattuna.
 - **FACEIT-uusinta KESKEN**: ipad-faceit-aabb.sh korjattu (rivinumero ilman välilyöntejä — se hylkäsi hyvät jaksot; lämmityksen
   jälkeen linssi pois + 30 s). Viimeisin ajo 13.23 kaatui: devicectl "application failed to launch (error 10002, Invalid
   argument)" — todennäköisesti edellisen konsoliajon tappamisen jälkeen. 15.00 jälkeen: tarkista iPad (devicectl list devices),
