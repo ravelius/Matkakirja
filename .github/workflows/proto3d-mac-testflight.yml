@@ -155,8 +155,10 @@ jobs:
           plutil -lint "$oikeudet"
           allek() { codesign --force --sign "$MAC_APP_SHA1" --keychain "$AVAINNIPPU" "$@"; }
           # Sisäkkäiset Mach-O-tiedostot syvimmästä alkaen (ei pääohjelmaa), sitten kansiobundlet, lopuksi sovellus.
+          # Ei "file | grep -q" -putkea: set -e + pipefail kaataa silmukan ensimmäiseen ei-Mach-O-tiedostoon (ajo 37552105117)
+          # ja grep -q voi SIGPIPEllä hylätä oikean osuman.
           find "$app/Contents" -type f ! -path "$app/Contents/MacOS/*" -print0 \
-            | while IFS= read -r -d '' f; do file -b "$f" | grep -q "Mach-O" && echo "$f"; done \
+            | while IFS= read -r -d '' f; do case "$(file -b "$f")" in *Mach-O*) echo "$f" ;; esac; done \
             | awk '{ print length($0) "\t" $0 }' | sort -rn | cut -f2- > "$RUNNER_TEMP/macho.txt"
           echo "Sisäkkäisiä Mach-O:ita: $(wc -l < "$RUNNER_TEMP/macho.txt")"
           while IFS= read -r f; do allek "$f"; done < "$RUNNER_TEMP/macho.txt"
@@ -165,8 +167,9 @@ jobs:
             | while IFS= read -r b; do allek "$b"; done
           allek --entitlements "$oikeudet" "$app"
           codesign --verify --deep --strict --verbose=2 "$app"
-          codesign -d --entitlements - --xml "$app" | grep -q "com.apple.security.app-sandbox"
-          codesign -d -vv "$app" 2>&1 | grep -E "^(Identifier|Authority|TeamIdentifier)=" | head -4
+          codesign -d --entitlements - --xml "$app" > "$RUNNER_TEMP/oikeudet-app.xml"
+          grep "com.apple.security.app-sandbox" "$RUNNER_TEMP/oikeudet-app.xml" > /dev/null
+          codesign -d -vv "$app" 2>&1 | grep -E "^(Identifier|Authority|TeamIdentifier)=" || true
           echo "MAC_APP=$app" >> "$GITHUB_ENV"
 
       - name: Asennuspaketti
@@ -174,7 +177,7 @@ jobs:
           set -euo pipefail
           pkg="$RUNNER_TEMP/mac/Matkakirja-$VERSIO-$BUILD_NUMERO.pkg"
           productbuild --component "$MAC_APP" /Applications --sign "$MAC_ASENNIN_NIMI" --keychain "$AVAINNIPPU" "$pkg"
-          pkgutil --check-signature "$pkg" | head -5
+          pkgutil --check-signature "$pkg" > "$RUNNER_TEMP/pkg-allekirjoitus.txt"; head -5 "$RUNNER_TEMP/pkg-allekirjoitus.txt"
           du -h "$pkg"
           echo "MAC_PKG=$pkg" >> "$GITHUB_ENV"
 
