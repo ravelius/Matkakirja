@@ -2151,6 +2151,8 @@ namespace Matkakirja.Natiivi
                     else if (osat.Length > 1 && osat[1] == "seuraava") Kirjaa($"opas: seuraava → {OpasSovitin.Seuraava()}");
                     else if (osat.Length > 1 && osat[1] == "jatka") Kirjaa($"opas: jatka → {OpasSovitin.JatkaKierrosta()}");
                     else if (osat.Length > 2 && osat[1] == "kysy") Kirjaa($"opas: kysy → {OpasSovitin.Kysy(string.Join(" ", osat.Skip(2)))}");
+                    // Kartan kaupunkielementti (juna 159): opas suoraan kaupunkitilaan sallittujen listan id:llä tai nimellä.
+                    else if (osat.Length > 2 && osat[1] == "kaupunkitila") Kirjaa($"opas: kaupunkitila → {OpasSovitin.AvaaKaupunkitila(string.Join(" ", osat.Skip(2)))}");
                     else if (osat.Length > 2 && osat[1] == "liiku")
                     {
                         string arvo = string.Join(" ", osat.Skip(2));
