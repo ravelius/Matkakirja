@@ -1,4 +1,4 @@
-# Pilvisessio: loppujen 33 kaupungin esittelytekstit
+# Pilvisessio: loppujen 35 kaupungin esittelytekstit
 
 Omistaja avaa claude.ai/codessa uuden session repoon **ravelius/Matkakirja** ja liittää alla olevan viestin
 sellaisenaan. Sessio tekee tekstit; ääniä se EI tee (ne tehdään omistajan määräluvalla Macilla).
@@ -7,8 +7,8 @@ sellaisenaan. Sessio tekee tekstit; ääniä se EI tee (ne tehdään omistajan m
 
 **KOPIOITAVA ALOITUSVIESTI:**
 
-> Teet Matkakirja-pelin esigeneroidun oppaan kerrontatekstit 33 kaupungille. Aja `git fetch origin pelikoodari-esittely-pilvi && git checkout pelikoodari-esittely-pilvi`. Lue `CLAUDE.md`, `esittely-tyo/OHJE-kirjoittaja.md` ja `esittely-tyo/OHJE-tarkistaja.md` kokonaan sekä laatumalli `esittely-tyo/malli/praha.json`.
-> Kaupungit ovat kansiossa `esittely-tyo/pohja/` (33 tiedostoa). Tee jokaiselle kaupungille kaksi vaihetta, kumpikin omalla ali-agentillaan, **aina mallilla opus** (ei koskaan muuta mallia):
+> Teet Matkakirja-pelin esigeneroidun oppaan kerrontatekstit 35 kaupungille. Aja `git fetch origin pelikoodari-esittely-pilvi && git checkout pelikoodari-esittely-pilvi`. Lue `CLAUDE.md`, `esittely-tyo/OHJE-kirjoittaja.md` ja `esittely-tyo/OHJE-tarkistaja.md` kokonaan sekä laatumalli `esittely-tyo/malli/praha.json`.
+> Kaupungit ovat kansiossa `esittely-tyo/pohja/` (35 tiedostoa). Tee jokaiselle kaupungille kaksi vaihetta, kumpikin omalla ali-agentillaan, **aina mallilla opus** (ei koskaan muuta mallia):
 > 1. KIRJOITTAJA (`OHJE-kirjoittaja.md`) → `esittely-tyo/luonnos/<id>.json` + `<id>-huomiot.md`.
 > 2. TARKISTAJA (`OHJE-tarkistaja.md`, eri agentti kuin kirjoittaja) → `esittely-tyo/korjattu/<id>.json` + `<id>-muutokset.md`.
 > Kumpikin ajaa lopuksi `node tools/opas/tarkista-esittely.mjs esittely-tyo/pohja/<id>.json <tiedosto>` ja korjaa, kunnes virheitä on 0. Saat ajaa enintään 4 kaupunkia rinnakkain.
@@ -22,3 +22,4 @@ Kun sessio on valmis, Pelikoodari ajaa koneellisen tarkistuksen uudelleen Macill
 (arvio noin 316 000 merkkiä ≈ 158 000 ElevenLabs-krediittiä: 397 kohdetta + 247 kierrosversiota).
 
 Päivitys 7.10. 04.5x: mukaan Varsova ja Islanti (Reykjavik). Kreeta odottaa Sisältökirjurin uutta kohdelistaa (nykyisessä lentoasema ja esikaupunki), Sisilialle 3D-säteelle jää vain 4 kohdetta (< 6), joten se ei ole mukana.
+Päivitys 7.10. 05.3x: Kreeta (Heraklion, 13 kohdetta) ja Sisilia (Palermo, 14) mukaan Sisältökirjurin #4100:n listoilla → 35 kaupunkia.
