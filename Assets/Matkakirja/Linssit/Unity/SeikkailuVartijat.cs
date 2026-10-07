@@ -26,7 +26,7 @@ namespace Matkakirja.Natiivi
 
         sealed class V
         {
-            public Vartija Aivot; public NavMeshAgent Agentti; public string Osa;
+            public Vartija Aivot; public NavMeshAgent Agentti; public string Osa; public bool NakiViimeksi;
             public double KavelyAika; public bool Kavelee; public Vector3 Kohde = new Vector3(float.NaN, 0, 0);
             public VartijanTila EdellinenTila;
             public AudioSource Askeleet;
@@ -58,6 +58,14 @@ namespace Matkakirja.Natiivi
             if (Liekit != null) v = Liekit.Valoisuus(p.transform.position + Vector3.up * 1.0f);
             var ky = SeikkailuKynttilat.Aktiivinen;
             if (ky != null && ky.Lahella(p.transform.position)) v = ky.Valoisuus(p.transform.position + Vector3.up, p.transform.position + Vector3.up);
+            // Pelattavuusmalli 2.3: palava kynttilä kädessä paljastaa kantajansa (≥ 0,9, suojattuna ≥ 0,45); vartijan lyhty valaisee
+            // (≥ 1 − etäisyys / 4 m).
+            if (ky != null && ky.OmaKadessa) v = Math.Max(v, ky.OmaSuojattu ? 0.45 : 0.9);
+            var a = Aktiivinen;
+            if (a != null)
+                foreach (var x in a.vartijat)
+                    if (x.Agentti != null && x.Aivot.Profiili.Havaitsee && x.Aivot.Profiili.JahtaaMs > 0)
+                        v = Math.Max(v, 1 - Vector3.Distance(x.Agentti.transform.position, p.transform.position) / LyhtyM);
             return v;
         }
 
@@ -151,6 +159,12 @@ namespace Matkakirja.Natiivi
                 if (p.Tila.Vauhti > 0.3 && sade > 0) aanet.Add(new Aanilahde(pp0.x, pp0.z, sade, Askelaani.Osa(kd, pp0.x, pp0.y, -pp0.z)));
             }
             bool piilossa = p != null && Piilossa(p);
+            // Nähty piiloon meno (pelattavuusmalli 2.5): jos jonkin mittari ≥ 0,6 ja näkölinja vapaa piiloon mentäessä, piilo ei suojaa
+            // ennen kuin pelaaja lähtee siitä.
+            if (piilossa && !oliPiilossa)
+                foreach (var x in vartijat) if (x.Aivot.Mittari >= Vartija.TutkiHuippu && x.NakiViimeksi) { piiloPaljastui = true; break; }
+            if (!piilossa) piiloPaljastui = false;
+            if (piiloPaljastui) piilossa = false;
             double sydan = 0;
             if (piilossa != oliPiilossa) { kirjaa?.Invoke($"seikkailu: pelaaja {(piilossa ? "piilossa" : "esillä")}"); oliPiilossa = piilossa; }
             foreach (var v in vartijat)
@@ -175,6 +189,7 @@ namespace Matkakirja.Natiivi
                 }
                 else { s.PelaajaX = vp.x + 1000; s.PelaajaZ = vp.z; }
                 v.Aivot.Paivita(dt, s);
+                v.NakiViimeksi = s.NakolinjaVapaa && !s.Piilossa;
                 if (v.Aivot.Tila != v.EdellinenTila)
                 {
                     kirjaa?.Invoke($"seikkailu: vartija {v.Osa} {v.EdellinenTila} → {v.Aivot.Tila} (mittari {v.Aivot.Mittari:F2})");
@@ -265,7 +280,8 @@ namespace Matkakirja.Natiivi
             }
             return false;
         }
-        const float PiiloM = 0.7f, HuutoM = 20f;
+        const float PiiloM = 0.7f, HuutoM = 20f, LyhtyM = 4f;
+        bool piiloPaljastui;
         bool sydanPaalla;
 
         bool Nakolinja(Vector3 silmat, Vector3 rinta)

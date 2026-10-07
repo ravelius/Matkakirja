@@ -122,6 +122,11 @@ namespace Matkakirja.Natiivi
         }
         public static event Action<Vector3> LuukkuAani;
 
+        /// <summary>Oma kynttilä kädessä palamassa (ei asetettuna).</summary>
+        public bool OmaKadessa => ydin.OmaPalaa && OmaAsetettu == null;
+        /// <summary>Liekki suojattu kämmenellä (kyyryssä, pelattavuusmalli 2.3): valopiiri puolet, valoisuus vähintään 0,45 (muuten 0,9).</summary>
+        public bool OmaSuojattu => OmaKadessa && SeikkailuPelaaja.Aktiivinen is SeikkailuPelaaja sp && sp.Tila.Tapa == Matkakirja.Linssit.Seikkailu.Liiketapa.Hiipiminen;
+
         /// <summary>Luukku ulottuvilla: vaakaetäisyys alle LuukkuM ja luukku enintään 1,2 m käden (1 m lattiasta) yläpuolella.</summary>
         bool LuukullaOn(Vector3 c) { var v = Luukku - c; float dy = v.y; v.y = 0; return v.magnitude < LuukkuM && dy > -0.6f && dy < 1.2f; }
 
@@ -212,7 +217,8 @@ namespace Matkakirja.Natiivi
             {
                 var kasi = OmaAsetettu ?? p.Kasi.position;
                 float lepatus = 0.9f + 0.1f * Mathf.PerlinNoise(Time.time * 6f, 0.3f);
-                Shader.SetGlobalVector(IdKanto, new Vector4(kasi.x, kasi.y, kasi.z, (float)Kynttilat.OmaValoM));
+                float sade = OmaSuojattu ? (float)Kynttilat.OmaValoM * 0.5f : (float)Kynttilat.OmaValoM;   // suojattuna valopiiri 3,5 → 1,75 m
+                Shader.SetGlobalVector(IdKanto, new Vector4(kasi.x, kasi.y, kasi.z, sade));
                 Shader.SetGlobalVector(IdKantoVari, new Vector4(1f, 0.72f, 0.42f, 0.95f * lepatus));
                 if (omaValo == null)
                 {
@@ -221,7 +227,7 @@ namespace Matkakirja.Natiivi
                     omaValo.type = LightType.Point; omaValo.range = (float)Kynttilat.OmaValoM; omaValo.color = new Color(1f, 0.72f, 0.42f);
                     omaValo.shadows = LightShadows.None;
                 }
-                omaValo.transform.position = kasi; omaValo.intensity = 1.4f * lepatus; omaValo.enabled = true;
+                omaValo.transform.position = kasi; omaValo.intensity = 1.4f * lepatus * (OmaSuojattu ? 0.6f : 1f); omaValo.range = sade; omaValo.enabled = true;
                 // Näkyvä liekki kädessä (DioraamaLiekit.LuoLyhty: sama 3D-liekki kuin hahmojen lyhdyissä), joka kallistuu vedossa.
                 if (omaLiekki == null && liekitLahde != null) omaLiekki = liekitLahde.LuoLyhty(p.Kasi);
                 if (omaLiekki != null)
