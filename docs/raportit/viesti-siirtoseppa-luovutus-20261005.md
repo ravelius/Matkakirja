@@ -454,3 +454,5 @@ Edellinen luovutus on `viesti-siirtoseppa-luovutus-20261002.md` (5.10. osiot 02.
 - 16.15: E2 alkuun: 47f7ef95 SeikkailuEsineet (esine:-merkit heitettava + glb, poiminta 1,2 m, heitto 7/3,5 m/s, kolahdus pikari-1 3D +
   SeikkailuVartijat.Aani 12 m; E / peliohjain X / "poikki kavely toiminto"), 829/829. NUI:lta pyydetty toimintonappi (ToimintoPyydetty).
   Seuraavaksi: keittiön repliikit (kokki, vesipoika, vartija) tilanteisiin, juna 163.
+- 16.17: d9871e0a repliikit pelitapahtumiin (vartija epäily/etsintä/paluu/kiinni, kokki-harhautus kolahduksesta), 829/829.
+  historia-h0 kärki d9871e0a → juna 163 (kuittaus 1 rivi Päätoimittajalta, kun E2 kokonaisuus; NUI toimintonappi tulossa).
