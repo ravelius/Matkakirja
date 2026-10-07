@@ -841,7 +841,12 @@ namespace Matkakirja.Natiivi
             bool puhelin = SystemInfo.deviceModel != null && SystemInfo.deviceModel.StartsWith("iPhone");
             string polku = puhelin ? (vm.Kevyt ?? vm.Huippu) : (vm.Huippu ?? vm.Kevyt);
             linssi.KertojaPois();
-            yield return SeikkailuVene.Aloita(peili(paketinJuuri + polku), ydin, nayttamo.transform, DioraamaNayttamo.Kerros, o.Kirjaa);
+            yield return SeikkailuVene.Aloita(peili(paketinJuuri + polku), ydin, nayttamo.transform, DioraamaNayttamo.Kerros, o.Kirjaa,
+                nayttamo.Hahmot3D, rakennus, rakennus.Henkilot != null && rakennus.Henkilot.ContainsKey("soutaja-1500") ? "soutaja-1500" : null);
+            var irrallisetGlb = new List<string>();
+            nayttamo.Hahmot3D?.IrrallistenGlb(irrallisetGlb);
+            foreach (var glb in irrallisetGlb)
+                if (hahmoGlbJonossaTaiValmiit.Add(glb)) o.StartCoroutine(LataaHahmoGlb(glb));
             o.Kirjaa($"poikki: vene päällä ({lahde}, {reitti.Count} pistettä, {ydin.Pituus:F0} m, {ydin.KestoS:F0} s)");
         }
 

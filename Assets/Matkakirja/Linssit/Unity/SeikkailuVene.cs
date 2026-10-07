@@ -99,9 +99,11 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Lataa veneen glb:n (ja upotetun kuvan) ja aloittaa saapumisen hetkellä alku (Time.unscaledTimeAsDouble).</summary>
-        public static IEnumerator Aloita(string glbUrl, Venesaapuminen ydin, Transform isa, int kerros, Action<string> kirjaa)
+        public static IEnumerator Aloita(string glbUrl, Venesaapuminen ydin, Transform isa, int kerros, Action<string> kirjaa,
+            DioraamaHahmot3D hahmot = null, Rakennus rakennus = null, string soutaja = null)
         {
             Poista();
+            Hahmot = hahmot;
             byte[] b = null;
             yield return DioraamaLevyvalimuisti.Hae(glbUrl, 120, x => b = x);
             if (b == null) { kirjaa?.Invoke("seikkailu: vene ei latautunut " + glbUrl); yield break; }
@@ -117,6 +119,9 @@ namespace Matkakirja.Natiivi
             var v = new SeikkailuVene(ydin, m, kuva, isa, kerros) { Alku = Time.unscaledTimeAsDouble };
             Aktiivinen = v;
             v.Paivita(false);
+            // V2c: soutaja istuin_soutaja-solmun lapseksi, ele_soutu samasta soutukellosta (soutu.json).
+            if (soutaja != null && v.IstuinSoutaja != null && hahmot != null)
+                hahmot.LisaaIrrallinen(rakennus, soutaja, v.IstuinSoutaja, "ele_soutu", () => v.ydin.Tila(v.Aika).SoutuAika);
             kirjaa?.Invoke($"seikkailu: vene {m.Solmut.Count} solmua, soutu {(v.soutu != null ? v.soutu.Kesto.ToString("F2") + " s" : "puuttuu")}, reitti {ydin.Pituus:F0} m / {ydin.KestoS:F0} s");
         }
 
@@ -162,8 +167,11 @@ namespace Matkakirja.Natiivi
             return tila;
         }
 
+        static DioraamaHahmot3D Hahmot;
+
         public static void Poista()
         {
+            Hahmot?.PoistaIrralliset();
             var v = Aktiivinen; Aktiivinen = null;
             if (v == null) return;
             if (v.juuri != null) UnityEngine.Object.Destroy(v.juuri);

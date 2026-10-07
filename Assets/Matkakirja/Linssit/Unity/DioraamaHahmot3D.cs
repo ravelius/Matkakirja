@@ -96,6 +96,60 @@ namespace Matkakirja.Natiivi
             public double NyokkaysAlku = double.NegativeInfinity; public int NyokkaysLaskuri; public string KuulijaEle;
             public string KatseKohde;
             public int Siemen = int.MinValue;
+            // Irrallinen hahmo (historiamoottori V2c: soutaja veneessä): vanhempi, leike ja ulkoinen kello; ei tilan paikkaa eikä eleitä.
+            public Transform Isa; public string IrrallinenLeike; public Func<double> Kello;
+        }
+
+        /// <summary>Irrallinen hahmo (V2c): henkilön glb, vanhempana isa (esim. veneen istuin_soutaja, ilman omaa siirtoa tai kiertoa),
+        /// leike soi kellon ajasta (soutu.json: veneen ja soutajan leikkeet samasta kellosta). Glb latautuu IrrallistenGlb-listan kautta.</summary>
+        public void LisaaIrrallinen(Rakennus rakennus, string henkiloId, Transform isa, string leike, Func<double> kello)
+        {
+            if (rakennus?.Henkilot == null || !rakennus.Henkilot.TryGetValue(henkiloId, out var henkilo) || string.IsNullOrEmpty(henkilo.Malli3d?.NatiiviGlb)) return;
+            var e = new Esiintyma { TilaId = "irrallinen", HahmoId = henkiloId, Hahmo = new Hahmo { Id = henkiloId, HenkiloId = henkiloId }, Henkilo = henkilo,
+                Isa = isa, IrrallinenLeike = leike, Kello = kello };
+            esiintymat.Add(e);
+            if (malliCache.TryGetValue(henkilo.Malli3d.NatiiviGlb, out var malli)) Rakenna(e, malli);
+        }
+
+        /// <summary>Irrallisten hahmojen glb:t, joita ei ole vielä ladattu.</summary>
+        public void IrrallistenGlb(List<string> ulos)
+        {
+            foreach (var e in esiintymat)
+            {
+                if (e.Isa == null) continue;
+                string glb = e.Henkilo.Malli3d?.NatiiviGlb;
+                if (!string.IsNullOrEmpty(glb) && !malliCache.ContainsKey(glb) && !ulos.Contains(glb)) ulos.Add(glb);
+            }
+        }
+
+        public void PoistaIrralliset()
+        {
+            for (int i = esiintymat.Count - 1; i >= 0; i--)
+                if (esiintymat[i].Isa != null || esiintymat[i].TilaId == "irrallinen")
+                {
+                    if (esiintymat[i].Juuri != null) UnityEngine.Object.Destroy(esiintymat[i].Juuri);
+                    esiintymat.RemoveAt(i);
+                }
+        }
+
+        void PaivitaIrrallinen(Esiintyma e)
+        {
+            if (e.Isa == null) { if (e.Juuri.activeSelf) e.Juuri.SetActive(false); return; }
+            if (e.Juuri.transform.parent != e.Isa) { e.Juuri.transform.SetParent(e.Isa, false); e.Juuri.transform.localPosition = Vector3.zero; e.Juuri.transform.localRotation = Quaternion.identity; }
+            if (!e.Juuri.activeSelf) e.Juuri.SetActive(true);
+            e.Nakyvissa = true;
+            var anim = e.Malli.Glb.Animaatio(e.IrrallinenLeike);
+            var sk = e.Sekoitin;
+            if (anim == null || sk == null) return;
+            DioraamaSekoitin.Nayte(anim, (float)(e.Kello?.Invoke() ?? 0), sk.T, sk.R, sk.S);
+            foreach (var k in anim.Kanavat)
+            {
+                int i = k.Solmu; if (i < 0 || i >= e.SolmuT.Length) continue;
+                var tr = e.SolmuT[i];
+                if (k.Polku == 0) tr.localPosition = new Vector3(sk.T[i * 3], sk.T[i * 3 + 1], sk.T[i * 3 + 2]);
+                else if (k.Polku == 1) tr.localRotation = new Quaternion(sk.R[i * 4], sk.R[i * 4 + 1], sk.R[i * 4 + 2], sk.R[i * 4 + 3]);
+                else tr.localScale = new Vector3(sk.S[i * 3], sk.S[i * 3 + 1], sk.S[i * 3 + 2]);
+            }
         }
 
         /// <summary>Keskustelun puhuja (KuunnelmaKaistale.PuhuvaHahmo; DioraamaSovitin asettaa joka kehys) ja tila. Saman huoneen
@@ -688,6 +742,7 @@ namespace Matkakirja.Natiivi
             foreach (var e in esiintymat)
             {
                 if (e.Juuri == null) continue; // glb ei ole vielä latautunut — ei GameObjectia, ei mitään tehtävää.
+                if (e.TilaId == "irrallinen") { PaivitaIrrallinen(e); continue; }
                 if (!nakymaHaku.TryGetValue((e.TilaId, e.HahmoId), out var hn) || !hn.Naky)
                 {
                     if (e.Nakyvissa) { e.Juuri.SetActive(false); e.Nakyvissa = false; }
