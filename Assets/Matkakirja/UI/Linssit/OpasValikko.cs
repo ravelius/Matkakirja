@@ -556,7 +556,8 @@ namespace Matkakirja.Natiivi
             siirtymaAlku = Time.realtimeSinceStartup;
             siirtymaKerta++;
             AsetaPalloKuva(OpasSovitin.Kaupunkitila);
-            KrediititTiivis.CesiumNakyviin = true;
+            // Ion-logo vain siirtymän omana (tasavälein, omistaja 15.3x); krediittikerroksen oma logo piiloon siirtymän ajaksi
+            // (PaivitaAvausIon: IonOmaPiirto), muuten se piirtyi kiinteästi 10 pt vasemmalle krediittirivien päälle.
             AsetaSiirtymaIon();
             Debug.Log("MATKAKIRJA opas: siirtymä alkaa → " + nimi);
             siirtymaKierros?.Pause();
@@ -586,8 +587,11 @@ namespace Matkakirja.Natiivi
         void PaivitaAvausIon()
         {
             // Aloituksen aikana ei logoa (simu 15.45: ion-logo piirtyi paikkalistan päälle; Cesium ei ole vielä auki).
-            bool nayta = nakyy && !aloitus && KrediititTiivis.AvausLatautuu && KrediititTiivis.IonLogoKuva != null;
-            KrediititTiivis.IonOmaPiirto = nayta;
+            bool siirtymaAuki = siirtyma != null && siirtyma.style.display != DisplayStyle.None;
+            bool nayta = nakyy && !aloitus && !siirtymaAuki && KrediititTiivis.AvausLatautuu && KrediititTiivis.IonLogoKuva != null;
+            KrediititTiivis.IonOmaPiirto = nayta || siirtymaAuki;
+            // Siirtymän logo heti, kun Cesiumin ion-kuva on saatavilla (ensimmäisessä siirtymässä se voi tulla vasta perässä).
+            if (siirtymaAuki && siirtymaIon.style.display == DisplayStyle.None && KrediititTiivis.IonLogoKuva != null) AsetaSiirtymaIon();
             if (!nayta) { if (avausIon.style.display != DisplayStyle.None) avausIon.style.display = DisplayStyle.None; return; }
             // Cesiumin paikka: Googlen logon yläpuolella (sen mitattu yläreuna; simu 6.10. 13.13: laskettu paikka osui logon päälle).
             float h = avausIon.parent?.worldBound.height ?? 0f, g = KrediititTiivis.GoogleYlaOsuus;
