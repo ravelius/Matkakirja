@@ -210,16 +210,30 @@ namespace Matkakirja.Natiivi
             }
             kadessa = e; e.Heitetty = false; e.Kuului = false;
             e.Rb.isKinematic = true;
-            e.Go.transform.SetParent(p.Kasi, true);
             p.KasiEle("poiminta");
-            e.Go.transform.localPosition = SeikkailuPelaaja.Ensimmainen ? new Vector3(0.02f, -0.05f, 0.05f) : new Vector3(0.03f, -0.1f, 0f);
+            // Kädet-v1: esine tarttuu kahvaan otteen ruudulla (poiminta r31); ilman käsiä heti.
+            StartCoroutine(Viiveella(p.KasiTapahtuma("poiminta") ?? 0f, () =>
+            {
+                if (kadessa != e || e.Go == null || p == null) return;
+                e.Go.transform.SetParent(p.Kasi, true);
+                e.Go.transform.localPosition = p.KahvaKiinni ? Vector3.zero : SeikkailuPelaaja.Ensimmainen ? new Vector3(0.02f, -0.05f, 0.05f) : new Vector3(0.03f, -0.1f, 0f);
+            }));
             kirjaa?.Invoke($"seikkailu: poimittu {e.Id}");
             if (e.Laji == Laji.Nostettava) Nostettiin?.Invoke(e.Id);
         }
 
+        static IEnumerator Viiveella(float s, Action teko) { if (s > 0f) yield return new WaitForSeconds(s); teko(); }
+
         void Heita(SeikkailuPelaaja p)
         {
             var e = kadessa; kadessa = null;
+            p.KasiEle("heitto");
+            // Kädet-v1: esine irtoaa kahvasta ruudulla 20; ilman käsiä heti.
+            StartCoroutine(Viiveella(p.KasiTapahtuma("heitto") ?? 0f, () => { if (e.Go != null && p != null) Paasta(e, p); }));
+        }
+
+        void Paasta(Esine e, SeikkailuPelaaja p)
+        {
             e.Go.transform.SetParent(transform, true);
             e.Rb.isKinematic = false;
             var eteen = p.Hahmo.forward; eteen.y = 0; eteen.Normalize();
@@ -228,7 +242,6 @@ namespace Matkakirja.Natiivi
             if (k.sqrMagnitude > 0.5f) eteen = k;
             e.Rb.linearVelocity = eteen * HeittoEteen + Vector3.up * HeittoYlos;
             e.Rb.angularVelocity = UnityEngine.Random.insideUnitSphere * 8f;
-            p.KasiEle("heitto");
             e.Heitetty = true;
             kirjaa?.Invoke($"seikkailu: heitetty {e.Id} suuntaan {eteen}");
         }
@@ -237,13 +250,18 @@ namespace Matkakirja.Natiivi
         void Laske(SeikkailuPelaaja p)
         {
             var e = kadessa; kadessa = null;
-            e.Go.transform.SetParent(transform, true);
             p.KasiEle("laske");
             // E3 vaihe 11: alttarin lähellä kalkki ja pateeni asetetaan alttarille, liuskekivi laukkuun.
-            if (Alttari is Vector3 al && Vector3.Distance(p.transform.position, al) < 1.6f) { AsetaAlttarille(e.Id); return; }
-            e.Go.transform.position = p.transform.position + p.Hahmo.forward * 0.5f + Vector3.up * 0.9f;
-            e.Rb.isKinematic = false; e.Rb.linearVelocity = Vector3.zero; e.Heitetty = false;
-            kirjaa?.Invoke($"seikkailu: laskettu {e.Id}");
+            if (Alttari is Vector3 al && Vector3.Distance(p.transform.position, al) < 1.6f) { e.Go.transform.SetParent(transform, true); AsetaAlttarille(e.Id); return; }
+            // Kädet-v1: irrotus ruudulla 33 (esine jää käden kohdalle); ilman käsiä heti eteen.
+            StartCoroutine(Viiveella(p.KasiTapahtuma("laske") ?? 0f, () =>
+            {
+                if (e.Go == null || p == null) return;
+                e.Go.transform.SetParent(transform, true);
+                if (!p.KahvaKiinni) e.Go.transform.position = p.transform.position + p.Hahmo.forward * 0.5f + Vector3.up * 0.9f;
+                e.Rb.isKinematic = false; e.Rb.linearVelocity = Vector3.zero; e.Heitetty = false;
+                kirjaa?.Invoke($"seikkailu: laskettu {e.Id}");
+            }));
         }
 
         /// <summary>Pääalttarin paikka (SeikkailuKappeli asettaa) ja tapahtuma, kun esine asetetaan sille.</summary>

@@ -221,7 +221,7 @@ namespace Matkakirja.Natiivi
                 if (omaLiekki != null)
                 {
                     if (OmaAsetettu is Vector3 asl) { omaLiekki.transform.SetParent(transform, false); omaLiekki.transform.position = asl; }
-                    else { if (omaLiekki.transform.parent != p.Kasi) omaLiekki.transform.SetParent(p.Kasi, false); omaLiekki.transform.localPosition = Vector3.zero; }
+                    else { if (omaLiekki.transform.parent != p.Kasi) omaLiekki.transform.SetParent(p.Kasi, false); omaLiekki.transform.localPosition = p.KahvaKiinni ? new Vector3(0f, 0.13f, 0f) : Vector3.zero; }   // kädet-v1: kynttilä +Y nyrkistä
                     omaLiekki.SetActive(true);
                     var (kallistus, suunta) = Veto(kasi);
                     if (LuukkuAuki)

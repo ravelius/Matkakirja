@@ -37,7 +37,20 @@ namespace Matkakirja.Natiivi
         // Kädet (ensimmäinen persoona, omistaja 7.10. 18.7x): hihat ja hanskat näkyvät hetkittäin toiminnoissa. Perusleike kannosta
         // (kanto_idle, kyyryssä palavan kynttilän kanssa suojaus, muuten piilossa), kertaele toiminnosta (KasiEle) kestonsa ajan.
         string kasiEle; float kasiEleLoppuu; double kasiAika; string kasiPerus = "piilossa";
-        public (string Leike, double Aika) KadetLeike() => (kasiEle ?? kasiPerus, kasiAika);
+        public (string Leike, double Aika) KadetLeike()
+        {
+            string l = kasiEle ?? kasiPerus; double t = kasiAika;
+            // Pito (suojaus 15–75 silmukkana niin kauan kuin kyyristytään).
+            if (kasiEle == null && Malli?.Kadet != null && Malli.Kadet.PitoS.TryGetValue(l, out var pito) && t > pito.Alku)
+                t = pito.Alku + (t - pito.Alku) % (pito.Loppu - pito.Alku);
+            return (l, t);
+        }
+        /// <summary>Käsien solmu nimellä (Sovitin: DioraamaHahmot3D.IrrallisenSolmu); kahva_oikea → Kasi-piste, Kontaktivarjo pois.</summary>
+        public Func<string, Transform> KadetSolmu;
+        Transform kahva; float kahvaHaku;
+        public bool KahvaKiinni => kahva != null;
+        /// <summary>Käsien leikkeen tapahtumahetki (ote / irrotus) sekunteina, tai null (ei käsiä tai ei tapahtumaa).</summary>
+        public float? KasiTapahtuma(string nimi) => Malli?.Kadet != null && Malli.Kadet.Leikkeet.ContainsKey(nimi) && Malli.Kadet.TapahtumaS.TryGetValue(nimi, out var t) ? (float)t : (float?)null;
 
         /// <summary>Käsien kertaele (poiminta, laske, heitto, koputus, raapaisu, luukku, nyytti, nousu_laiturille); puuttuva ohitetaan.</summary>
         public void KasiEle(string nimi)
@@ -56,7 +69,27 @@ namespace Matkakirja.Natiivi
             if (kynttila) perus = kavely.Tapa == Liiketapa.Hiipiminen && Malli.Kadet.Leikkeet.ContainsKey("suojaus") ? "suojaus" : "kanto_idle";
             else if (SeikkailuEsineet.Aktiivinen?.Kadessa != null) perus = "kanto_idle";
             if (kasiEle != null && Time.unscaledTime >= kasiEleLoppuu) { kasiEle = null; kasiAika = 0; }
-            if (kasiEle == null && perus != kasiPerus) { kasiPerus = perus; kasiAika = 0; }
+            if (kasiEle == null && perus != kasiPerus)
+            {
+                // Siirtymät: kynttilä esiin (kanto_alku) ja pois (kanto_loppu), jos leikkeet ovat mallissa.
+                string siirto = kasiPerus == "piilossa" && perus == "kanto_idle" ? "kanto_alku" : kasiPerus != "piilossa" && perus == "piilossa" && kasiPerus != "suojaus" ? "kanto_loppu" : null;
+                kasiPerus = perus; kasiAika = 0;
+                if (siirto != null) KasiEle(siirto);
+            }
+            // Kahva (kahva_oikea): Kasi-piste käden otteeseen heti, kun kädet on rakennettu; kontaktivarjo pois (silmien korkeudella).
+            if (kahva == null && KadetSolmu != null && Time.unscaledTime > kahvaHaku)
+            {
+                kahvaHaku = Time.unscaledTime + 0.5f;
+                kahva = KadetSolmu("kahva_oikea");
+                if (kahva != null)
+                {
+                    Kasi.SetParent(kahva, false); Kasi.localPosition = Vector3.zero; Kasi.localRotation = Quaternion.identity;
+                    var kv = KadetSolmu("Kontaktivarjo"); if (kv != null) kv.gameObject.SetActive(false);
+                    foreach (var smr in olka.GetComponentsInChildren<SkinnedMeshRenderer>(true))   // kädet ovat silmien lapsina (Hahmot3D: Juuri → Isa)
+                        smr.localBounds = new Bounds(Vector3.zero, new Vector3(3f, 3f, 3f));
+                    Debug.Log("MATKAKIRJA seikkailu: kädet kiinni (kahva_oikea)");
+                }
+            }
             kasiAika += dt;
             if (kasiEle != null && Malli.Kadet.Liikkeet.TryGetValue(kasiEle, out var l)) kasiAika = Math.Min(kasiAika, l.KestoS - 1e-3);   // ei kierrä alkuun
         }
@@ -193,12 +226,23 @@ namespace Matkakirja.Natiivi
                 // Ensimmäinen persoona: kamera kulkee leikkeen juuren polkua (nousu_laiturille: y valmis ruudulla 38/73, eteen ≤ 0,25 m
                 // siihen asti, sitten loput eteen) ja painuu polvelle noustessa (notko ≤ 0,55 m), ilman vartaloa.
                 float u = Mathf.Clamp01(1f - (eleLoppuu - Time.unscaledTime) / eleKesto);
-                const float Y = 38f / 73f;
-                float fy = u < Y ? Mathf.SmoothStep(0f, 1f, u / Y) : 1f;
-                float fz = u < Y ? 0.26f * u / Y : 0.26f + 0.74f * Mathf.SmoothStep(0f, 1f, (u - Y) / (1f - Y));
-                var vaaka = new Vector3(eleSiirto.x, 0f, eleSiirto.z);
-                transform.position = eleAlku + Vector3.up * eleSiirto.y * fy + vaaka * fz;
-                eleNotko = 0.55f * Mathf.Sin(Mathf.PI * Mathf.Clamp01((u - 0.1f) / 0.8f));
+                if (Malli?.Kadet != null && Malli.Kadet.KameraPolku.TryGetValue(leike, out var kp))
+                {
+                    // Kädet-v1: silmien polku ruuduittain (glTF hahmon kehys +Z eteen, +X vasen → Unity (−x, y, z) hahmon kierrolla).
+                    float f = u * (kp.Length - 1); int i0 = Mathf.Min((int)f, kp.Length - 2); float w = f - i0;
+                    var a0 = kp[i0]; var a1 = kp[i0 + 1];
+                    var pv = new Vector3((float)-(a0[0] + (a1[0] - a0[0]) * w), (float)(a0[1] + (a1[1] - a0[1]) * w), (float)(a0[2] + (a1[2] - a0[2]) * w));
+                    transform.position = eleAlku + hahmo.rotation * pv; eleNotko = 0f;
+                }
+                else
+                {
+                    const float Y = 38f / 73f;
+                    float fy = u < Y ? Mathf.SmoothStep(0f, 1f, u / Y) : 1f;
+                    float fz = u < Y ? 0.26f * u / Y : 0.26f + 0.74f * Mathf.SmoothStep(0f, 1f, (u - Y) / (1f - Y));
+                    var vaaka = new Vector3(eleSiirto.x, 0f, eleSiirto.z);
+                    transform.position = eleAlku + Vector3.up * eleSiirto.y * fy + vaaka * fz;
+                    eleNotko = 0.55f * Mathf.Sin(Mathf.PI * Mathf.Clamp01((u - 0.1f) / 0.8f));
+                }
             }
             if (Time.unscaledTime < eleLoppuu) return true;
             eleNotko = 0f;

@@ -670,7 +670,7 @@ namespace Matkakirja.Natiivi
         /// <summary>Pelattavan palan kiinnitetty paketti (Linnanrakentajan v44g: kävely, Fogg, vene, laiturin kansi). Tuotannon osoitin
         /// (uusin.json) ei muutu: pala lukee tämän paketin testiosoittimena (sama hash-juuri ja manifest.json kuin julkaisulla, joten
         /// levyvälimuisti toimii; Päätoimittaja 7.10.: ei 250–400 Mt joka avauksella) ja palauttaa tuotannon, kun linna suljetaan.</summary>
-        public const string PelattavaPalaHash = "a51f1b699c598cc0";   // v44k (v44j + kilpilaatat kohokuvina, holvimaalaukset, Fogg-asu v2)
+        public const string PelattavaPalaHash = "45be74356f79a1c6";   // v44l (v44k + ensimmäisen persoonan kädet)
 
         void LataaUudelleen()
         {
@@ -1001,6 +1001,7 @@ namespace Matkakirja.Natiivi
                     rakennus.Henkilot[kid] = new Henkilo { Id = kid, Nimi = pm.Kadet.Nimi, Malli3d = new Malli3d { Skin = new SkinMalli { Glb = pm.Kadet.Glb, Leikkeet = new Dictionary<string, string>(pm.Kadet.Leikkeet) } } };
                     nayttamo.Hahmot3D.PoistaIrralliset(kid);
                     nayttamo.Hahmot3D.LisaaIrrallinen(rakennus, kid, sp.Silmat, sp.KadetLeike, Quaternion.Euler(0f, 180f, 0f));
+                    var h3 = nayttamo.Hahmot3D; sp.KadetSolmu = n => h3 != null ? h3.IrrallisenSolmu(kid, n) : null;
                     var kg = new List<string>(); nayttamo.Hahmot3D.IrrallistenGlb(kg);
                     foreach (var glb in kg) if (hahmoGlbJonossaTaiValmiit.Add(glb)) o.StartCoroutine(LataaHahmoGlb(glb));
                 }
