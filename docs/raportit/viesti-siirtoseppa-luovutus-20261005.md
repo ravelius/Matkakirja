@@ -478,3 +478,6 @@ Edellinen luovutus on `viesti-siirtoseppa-luovutus-20261002.md` (5.10. osiot 02.
 - 16.59: 9f4f4fce E3b voudin sääntö (Ydin VoudinKierros + 3 testiä, 835/835; hehku, askeleet holvin yllä, kiinni → pimeä kappeli).
   9a3357d67 E3c kappalaisen paluu (raapaisu/100 s, kappalainen-2/3, vartija-kiinni-1/2, tyrmä → tallennus), kivet 3 napautusta.
   Seuraavaksi E3d (ikuinen valo, luukku + virtaus, saumat viistovalosta, löytö, kalkki alttarille, drone) — odottaa LR:n merkkejä.
+- 17.02: Päätoimittaja: E3a–d OK, äänet ensin CC0 (Freesound/kyles), voudin 2 repliikkiä ja ElevenLabs-tehosteet vasta omistajan luvalla
+  (ÄLÄ generoi). Sonnet-agentti hakee 21 CC0-ääntä → proto-3d/_valmiit/olavinlinna-e3-aanet-v1/ (valmis/, raaka/, LAHTEET.md, manifest.json).
+  4695eeeb E3d osa 1: kynttilän asetus, saumat viistovalosta, kivet vasta silloin. NUI:lta kysytty paikallisaarteen kutsu löytöön.
