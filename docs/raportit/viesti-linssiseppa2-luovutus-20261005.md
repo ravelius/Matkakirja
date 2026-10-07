@@ -27,6 +27,7 @@ Avoimet työt:
 
 ## OMISTAJA 7.10. 15.5x (sitova): ennen junaa VAIN automaattiset testit + käännös; ei savuja, stillejä, iPad-mittauksia,
 ## toistoajoja; kuittaus 1 rivi (muutos, testit, SHA) → Natiiviseppä. Simu vain, jos vian syy muuten epäselvä.
+## 21.5x: raskaat poltot/paistot (kartta, Blender, ääni) eivät käynnisty junakäännöksen aikana (kaannospalvelun lukko varattu).
 ## 16.0x: EI omia käännöksiä (iOS/Mac); haaralle unity-tarkistus + testit; täysi käännös vain juna/TF; poikkeus vian selvitys + ilmoitus PT:lle.
 
 ## TILA 7.10. 18.0x (uusin)
