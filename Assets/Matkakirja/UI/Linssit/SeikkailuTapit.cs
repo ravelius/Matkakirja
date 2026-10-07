@@ -70,7 +70,7 @@ namespace Matkakirja.Natiivi
         readonly VisualElement toimintoRivi;
         readonly Button toimintoNappi;
         string toimintoTila;   // null = piilossa, "poimi" tai "heita"
-        static PropertyInfo esineetAktiivinen, esineLahin, esineKadessa;
+        static PropertyInfo esineetAktiivinen, esineLahin, esineKadessa, esineVerbi;
         static FieldInfo esineToiminto;
         static bool esineetHaettu;
 
@@ -118,9 +118,13 @@ namespace Matkakirja.Natiivi
                 esineetAktiivinen = t?.GetProperty("Aktiivinen", BindingFlags.Public | BindingFlags.Static);
                 esineLahin = t?.GetProperty("Lahin", BindingFlags.Public | BindingFlags.Instance);
                 esineKadessa = t?.GetProperty("Kadessa", BindingFlags.Public | BindingFlags.Instance);
+                esineVerbi = t?.GetProperty("Toiminto", BindingFlags.Public | BindingFlags.Instance);
                 esineToiminto = t?.GetField("ToimintoPyydetty", BindingFlags.Public | BindingFlags.Static);
             }
             if (!(esineetAktiivinen?.GetValue(null) is Object e) || e == null) return null;
+            // VALMIS VERBI (Siirtoseppä, historia-fp d1734576): SeikkailuEsineet.Toiminto ("Poimi", "Heitä", "Aseta", "Avaa" …),
+            // null = nappi piiloon. Tila on verbi sellaisenaan (VoiceOver-nimi); alla oleva tunnuskartta vain vanhalle rajapinnalle.
+            if (esineVerbi != null) return esineVerbi.GetValue(e) as string is string v && v.Length > 0 ? v : null;
             // Pyhä esine (kalkki, pateeni, liuskekivi) lasketaan, ei heitetä (Siirtoseppä E3); muut kädessä olevat heitetään.
             if (esineKadessa?.GetValue(e) is string k && k.Length > 0) return PyhaEsine(k) ? "laske" : "heita";
             // E3 (Siirtoseppä): kynttilä, koputus ja kivet omina tiloina samalla napilla (VoiceOver-nimi Toimintonimet); kuvake kuten poimi.
@@ -158,10 +162,11 @@ namespace Matkakirja.Natiivi
             toimintoTila = tila;
             toimintoRivi.style.display = tila == null ? DisplayStyle.None : DisplayStyle.Flex;
             if (tila == null) return;
-            bool heita = tila == "heita";
+            bool heita = tila == "heita" || tila == "Heitä";
             toimintoNappi.Clear();
             toimintoNappi.Add(new SvgIkoni(heita ? HeitaIkoni : PoimiIkoni));
-            toimintoNappi.tooltip = Toimintonimet.TryGetValue(tila, out var nimi) ? nimi : "Poimi";   // VoiceOver-nimi
+            // VoiceOver-nimi: valmis verbi sellaisenaan, vanhan rajapinnan tila Toimintonimistä.
+            toimintoNappi.tooltip = Toimintonimet.TryGetValue(tila, out var nimi) ? nimi : tila;
         }
 
         const float TappiAla = 40f;
