@@ -229,6 +229,26 @@ namespace Matkakirja.Natiivi
             }
         }
 
+        /// <summary>
+        /// Malli on sommiteltu vaakaruudulle (fov 60°, 16:9; Linnanrakentaja). Muulla ruudulla (simu 7.10. 10.50: iPhone pysty, köydet
+        /// kuvan ulkopuolella ja reunus 3 %): reunuksen yläreuna siirretään ReunaOsuus-korkeudelle ja köydet sisään 85 %:iin puolileveydestä.
+        /// </summary>
+        void SovitaMalli()
+        {
+            if (malliJuuri == null || perus == null) return;
+            const float Z = 0.881f, ReunaY = 1.122f, KoysiX = 0.551f;   // korin etureuna, reunuksen yläreuna ja köysien kiinnitys (m)
+            float t = Mathf.Tan(perus.fieldOfView * 0.5f * Mathf.Deg2Rad);
+            float tavoiteY = (-1f + 2f * ReunaOsuus) * t * Z;              // kameran koordinaateissa
+            malliJuuri.localPosition = new Vector3(0, -1.5f + (tavoiteY - (ReunaY - 1.5f)), 0);
+            float puoliLeveys = t * perus.aspect * Z;
+            for (int i = 0; i < malliKoydet.Count; i++)
+            {
+                var k = malliKoydet[i]; if (k == null) continue;
+                float x = Mathf.Sign(k.localPosition.x) * Mathf.Min(KoysiX, 0.85f * puoliLeveys);
+                if (!Mathf.Approximately(k.localPosition.x, x)) k.localPosition = new Vector3(x, k.localPosition.y, k.localPosition.z);
+            }
+        }
+
         void Osa(Transform v, GlbOsa osa, System.Collections.Generic.Dictionary<int, Texture2D> tekstuurit)
         {
             int n = (osa.Paikat?.Length ?? 0) / 3;
@@ -310,6 +330,7 @@ namespace Matkakirja.Natiivi
             overlay.fieldOfView = perus.fieldOfView;
             if (!Mathf.Approximately(fov, perus.fieldOfView) || !Mathf.Approximately(aspect, perus.aspect))
             { fov = perus.fieldOfView; aspect = perus.aspect; Rakenna(); }
+            SovitaMalli();
             float dt = Mathf.Max(Time.unscaledDeltaTime, 1e-3f);
             Vector3 p = perus.transform.position;
             if (historia > 0 && (p - edPaikka).magnitude > HyppyM) historia = 0;   // origon siirto tai siirtymä

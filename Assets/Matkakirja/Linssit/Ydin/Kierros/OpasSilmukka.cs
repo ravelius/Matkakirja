@@ -460,7 +460,20 @@ namespace Matkakirja.Linssit.Kierros
         /// <summary>Kierroksen kohteet järjestyksessä (metrokartta, Pariisi-kokeilu 7.10.): tyhjä, kun kierros ei ole käynnissä.</summary>
         public IReadOnlyList<(string nimi, double lat, double lon)> KierrosJono => kierrosJono;
         /// <summary>Nykyisen (viimeksi pyydetyn) kierroskohteen indeksi 0…; −1 = ei kierrosta.</summary>
-        public int KierrosNykyinen => KierrosKaynnissa || KierrosKeskeytetty ? Math.Max(0, kierrosIndeksi - 1) : -1;
+        public int KierrosNykyinen
+        {
+            get
+            {
+                if (!KierrosKaynnissa && !KierrosKeskeytetty) return -1;
+                // Simu 7.10. 10.50: esihaku kasvattaa indeksiä jo kerronnan aikana (metro näytti seuraavaa) → nykyinen kohteen mukaan.
+                var n = Nykyinen;
+                if (n != null)
+                    for (int i = 0; i < kierrosJono.Count; i++)
+                        if (string.Equals(kierrosJono[i].nimi, n.Nimi, StringComparison.OrdinalIgnoreCase)
+                            || KierrosLento.EtaisyysM(kierrosJono[i].lat, kierrosJono[i].lon, n.Lat, n.Lon) < 80) return i;
+                return Math.Max(0, kierrosIndeksi - 1);
+            }
+        }
 
         /// <summary>Liiku-listan kohde: lento heti kohteeseen (kaukana siirto), ja workerin pysähdys kohteesta pyydetään samalla.</summary>
         public void Liiku(string nimi, double lat, double lon)
