@@ -7,6 +7,16 @@ Worktreet: /Users/Shared/Claude/wt/proto-siirtoseppa-*. Käännös vain Julkaisi
 (oma UDID D5900D45 = siirtoseppa-iPad13, TYHJENNETTY 19.0x, appit asennettava uudelleen). Ei detachia simupaneelista.
 Oikeat tapit: lokit/siirtoseppa-alo/.sk (simkosketus, käännä tarvittaessa tyokalut/todistusajo/simkosketus.m).
 
+## TILA 7.10. 08.1x
+
+- **eleet-2 = b8de22c2** (käännös 0f84c1b8, lokit/siirtoseppa-eleet2-app): puolilähikuva seuraa puhujan elävää paikkaa/suuntaa,
+  lähileikkaus ≤ 1,2 m, puhujan kasvot ≤ 60° kameran suunnasta, kuulija takana → kameraan, etsinnän kimallus himmenee puolilähikuvassa,
+  savu häivytetään < 3 m. Päätoimittaja kuittasi kappelin (1344b401); 1f3a6e7c toi kappeliin taantuman (kappalainen selin) → b8de22c2
+  korjaa. Ajo ~08.30 (iPad kappeli + keittiö), sitten video Päätoimittajalle vasta oman ruututarkistuksen jälkeen. Junan 158 ehdokas.
+- **Äänimaisema/kello**: aanimaisema-157koe 1da72775 (käännös 1e0598d1, lokit/siirtoseppa-aani6-app): KelloTaso 0,6 × väistö (ei Taso),
+  soiva lyönti väistää puhetta. Ehto: puheeton +7–8 dB maiseman yli, puheen aikana puhe päällä. Ajo samassa vuorossa.
+  aanimaisema-157koe sisältää masterin (juna 156) mergen (OpasOdotusTestit.cs masterin versio).
+
 ## TILA 7.10. 07.0x
 
 - **Juna 156 VIE:ssä/TF:ssä** (36b8a852). Linnan osoitin v41 1a1857e0.
