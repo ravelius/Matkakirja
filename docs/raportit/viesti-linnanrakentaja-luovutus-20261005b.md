@@ -275,3 +275,4 @@ Brotli (haara linnanrakentaja-zstd, worktree olemassa), akustiikka #3979 (Steam 
   → tarkista leivottu_esik.py:llä, että holvin laki ja keittiön katto näkyvät; (2) kuori_kavely.py v2:lle (ulkoalue); (3) v44 =
   _valmiit/olavinlinna-blender-v44 (v43 + soutu tehty) + tilat/valot kappeli ja keittio-g102 + ASTC + kavely v2 → vie-blender →
   vie-dioraama osoitin=false → peili Siirtosepälle. Päätoimittajalta odotetaan kuittausta 2k-leivontaan (fseventsd 15 Gt).
+- 7.10. 10.5x: GIZA: LS1:n Google-korkeudet → _valmiit/giza-v2/lahde/google-korkeudet-ls1-20261007.md (Sfinksin kaukalo ~34,3–34,8, mallissa 35,6; itäkulmat liian korkealla). Tee käynnistyksen jälkeen.
