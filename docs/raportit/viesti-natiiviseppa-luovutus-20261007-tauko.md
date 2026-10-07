@@ -14,6 +14,13 @@ Ennen junaa/TF:ää vain automaattiset testit (Kartta/Peli/Linssit-testit, tarki
 käännös. EI savua, EI Laitetestaajaa, EI stillejä, EI iPad-mittauksia, EI toistoja ennen korjausta. Juna 1–2/pv, kun valmista on.
 Muisti testaus-kevyemmin-20261007.
 
+## TILA 16.1x: TF 161 + MAC TF 161 LADATTU (iOS 37623777958, Mac 37624780571; fi.matkakirja.peli build 161 = 9572eaff).
+Omistaja 16.0x: roolit eivät tee omia käännöksiä; täysi käännös vain junalle (minä) ja TF:lle (Julkaisija).
+JUNA 162 -ehdokkaat: LS1 cc6176356 (kuitattu), NUI apuraha-kuvat **3f07c49b** (korvaa 5e45d1da; NUI:n mukaan kuitattu, ⊇ kehittaja-tf),
+LS2 s2-kaudet f6e4a8495 (LS2:n mukaan kuitattu) — pyydetty Päätoimittajalta yhden rivin vahvistus. Kokoa BUILD 161 9572eaff:n päälle
+(wt/proto-natiiviseppa-j144, uusi haara natiiviseppa/juna-162-koe), aja automaattiset testit, yksi käännös, VIE.
+Worktree proto-natiiviseppa-ohjauslevy poistettu (mergetty); proto-natiiviseppa-kirjoitus jäi (cherry-pickatut commitit).
+
 ## TILA 16.0x: iOS TF 161 ladattu 15.56 (37623777958). Mac TF 161 -ketju (mac-tf-161.sh) käynnissä setsid, jonottaa lukkoa.
 PR ravelius/Matkakirja#4149 (mono_crash talteen) Julkaisijalle. Juna 162 -ehdokkaat: LS1 cc6176356, NUI 5e45d1da (kuittaus?),
 LS2 f6e4a8495 (varmista).
