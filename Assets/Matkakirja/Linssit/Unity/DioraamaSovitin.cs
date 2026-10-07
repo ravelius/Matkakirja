@@ -1114,6 +1114,31 @@ namespace Matkakirja.Natiivi
                 o.Kirjaa("poikki: timeline " + timeline.Raportti());
                 return;
             }
+            // "poikki kavely 1 [tila] | 0 | tapit lx ly kx ky s": historiamoottori V1 — pelaaja vapaaseen kävelyyn tilan kohteeseen (tai nykyiseen),
+            // törmäykset tilojen mesheistä (väliaikaiset), kamera olan yli; tapit = testisyöte s sekuntia (simulaattori ilman kosketusta).
+            if (mita == "kavely")
+            {
+                if (arvo == "0") { SeikkailuPelaaja.Poista(); o.Kirjaa("poikki: kävely pois"); return; }
+                if (arvo == "tapit" && osat.Length > 7)
+                {
+                    SeikkailuPelaaja.Testi = new Matkakirja.Linssit.Seikkailu.KavelySyote { LiikeX = Luku(osat[3]), LiikeY = Luku(osat[4]), KatseX = Luku(osat[5]), KatseY = Luku(osat[6]) };
+                    SeikkailuPelaaja.TestiLoppuu = Time.unscaledTime + (float)Luku(osat[7]);
+                    o.Kirjaa($"poikki: kävely tapit {osat[3]} {osat[4]} {osat[5]} {osat[6]} {osat[7]} s");
+                    return;
+                }
+                string tid = osat.Length > 3 ? osat[3] : Linssi?.NakymaHetkella(YdinAika, false).KohdeTila ?? "laituri";
+                var tl = rakennus?.Tila(tid);
+                if (tl == null || nayttamo == null) { o.Kirjaa($"poikki: kävely: tilaa {tid} ei löydy"); return; }
+                int tormayksia = SeikkailuPelaaja.LisaaTormaykset(nayttamo.transform);
+                var kp = tl.Kamera.Kohde;
+                var alku = DioraamaNayttamo.UnityPiste(kp);
+                if (Physics.Raycast(alku + Vector3.up * 3f, Vector3.down, out var osuma, 30f)) alku = osuma.point + Vector3.up * 0.05f;
+                // Katse lepokameran suunnasta tilaan päin (kamera pelaajan takana kuten huonekuvassa).
+                float yaw = (float)(tl.Kamera.Atsimuutti + 180.0);
+                SeikkailuPelaaja.Luo(nayttamo.transform, alku, (float)Matkakirja.Linssit.Seikkailu.Kavely.Kulma(yaw), DioraamaNayttamo.Kerros);
+                o.Kirjaa($"poikki: kävely päällä tilassa {tid} ({alku}), törmäyksiä {tormayksia}");
+                return;
+            }
             // "poikki rakennus <id>": seuraava avaus lataa rakennuksen dioraama/<id>/ (H0). Ilman arvoa kertoo nykyisen.
             if (mita == "rakennus")
             {
