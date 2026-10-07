@@ -1094,6 +1094,15 @@ namespace Matkakirja.Linssit.Testit
             Lahella(0, Math.IEEERemainder(lyLoppu.Atsimuutti - yleis.Atsimuutti, 360), "lyhyt kaari päättyy yleisnäkymään", 0.05);
         }
 
+        // Historiamoottori V0: staattiset ympäristömallit (mallit[] ja Linnanrakentajan rantakivet-kenttä).
+        [Testi] static void YmparistonMallit()
+        {
+            var r = DioraamaData.Lue(KeittioFixture.Replace("\"yleiskamera\": {", "\"ymparisto\": {\"huippu\": \"m.glb\", \"mallit\": [{\"id\": \"vene\", \"huippu\": \"v.glb\", \"kevyt\": \"vk.glb\"}], " +
+                "\"rantakivet\": {\"huippu\": \"r.glb\", \"kevyt\": \"rk.glb\"}},\n  \"yleiskamera\": {"));
+            Oleta.Sama(2, r.Ymparisto.Mallit.Count);
+            Oleta.Tosi(r.Ymparisto.Mallit[0] == ("vene", "v.glb", "vk.glb") && r.Ymparisto.Mallit[1] == ("rantakivet", "r.glb", "rk.glb"), "mallit ja rantakivet");
+        }
+
         // Rakennuskohtainen etäisyysutu (Linnanrakentaja 7.10.): valaistus.sumu {alku, loppu}; puuttuva tai virheellinen → null.
         [Testi] static void ValaistuksenSumu()
         {

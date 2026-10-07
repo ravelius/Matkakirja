@@ -556,6 +556,9 @@ namespace Matkakirja.Linssit.Dioraama
     public sealed class Ymparisto
     {
         public string Huippu, Normaali, Kevyt;
+        /// <summary>Staattiset lisämallit kanonisissa koordinaateissa (historiamoottori V0, 7.10.2026: rantakivet, myöhemmin vene ym.):
+        /// ymparisto.mallit[] { id, huippu, kevyt }; Linnanrakentajan ymparisto.rantakivet { huippu, kevyt } luetaan id:llä "rantakivet".</summary>
+        public List<(string Id, string Huippu, string Kevyt)> Mallit = new List<(string, string, string)>();
         public string OrtoHuippu, OrtoNormaali, OrtoKevyt;
         public string Puut, Puukortit, Horisontti, HorisonttiKuva;
         /// <summary>Veden syvyyskartta (8 bit, 0 = ranta): kuva, pikselin koko, metriä/arvo ja kuvan vasen yläkulma (Blender x, y).</summary>
@@ -732,6 +735,11 @@ namespace Matkakirja.Linssit.Dioraama
                     Horisontti = MiniJson.Teksti(ymp, "horisontti"), HorisonttiKuva = MiniJson.Teksti(ymp, "horisontti_kuva"),
                     SyvyysKuva = MiniJson.Teksti(syv, "kuva"),
                 };
+                foreach (var mo in MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(ymp, "mallit")))
+                    if (MiniJson.ObjektiTaiNull(mo) is Dictionary<string, object> m && !string.IsNullOrEmpty(MiniJson.Teksti(m, "huippu") ?? MiniJson.Teksti(m, "kevyt")))
+                        y.Mallit.Add((MiniJson.Teksti(m, "id") ?? "malli", MiniJson.Teksti(m, "huippu"), MiniJson.Teksti(m, "kevyt")));
+                if (MiniJson.ObjektiTaiNull(MiniJson.Kentta(ymp, "rantakivet")) is Dictionary<string, object> rk && !string.IsNullOrEmpty(MiniJson.Teksti(rk, "huippu") ?? MiniJson.Teksti(rk, "kevyt")))
+                    y.Mallit.Add(("rantakivet", MiniJson.Teksti(rk, "huippu"), MiniJson.Teksti(rk, "kevyt")));
                 if (MiniJson.Luku(syv, "pikseli_m") is double pm) y.SyvyysPikseliM = pm;
                 if (MiniJson.Luku(syv, "kerroin_m") is double km) y.SyvyysKerroinM = km;
                 var origo = MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(syv, "origo"));

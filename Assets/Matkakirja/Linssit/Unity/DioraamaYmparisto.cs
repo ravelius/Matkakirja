@@ -115,6 +115,12 @@ namespace Matkakirja.Natiivi
             if (porrastus) osat.Add(LataaMalli("maasto-esikatselu", y.Kevyt, esiOrto, url, kirjaa, oma, null, DioraamaUlkokuori.Laatu.Kevyt, esikatselu));
             else if (!string.IsNullOrEmpty(maasto)) osat.Add(LataaMalli("maasto", maasto, orto, url, kirjaa, oma, y.Maasto, taso));
             if (!string.IsNullOrEmpty(y.Horisontti)) osat.Add(LataaMalli("horisontti", y.Horisontti, y.HorisonttiKuva, url, kirjaa, oma, astc: y.HorisonttiKuvaAstc));
+            // Staattiset lisämallit (historiamoottori V0: rantakivet, vene): glb:n oma kuva, kevyt taso puhelimessa ja kevyellä laadulla.
+            foreach (var (mid, mh, mk) in y.Mallit)
+            {
+                string mp = taso == DioraamaUlkokuori.Laatu.Kevyt || puhelin ? (mk ?? mh) : (mh ?? mk);
+                if (!string.IsNullOrEmpty(mp)) osat.Add(LataaMalli("malli:" + mid, mp, null, url, kirjaa, oma, null, taso));
+            }
             if (!string.IsNullOrEmpty(y.Puut) && !string.IsNullOrEmpty(y.PuukortitTiedot ?? y.Puukortit)) osat.Add(LataaPuut(y, taso, url, kirjaa, oma));
             osat.Add(DioraamaAluskasvit.Lataa(y, taso, url, kirjaa, go.transform, luodut, () => oma == kerta));   // Linssiseppä 2, 1.10.
             if (aja == null) { foreach (var osa in osat) { yield return osa; if (oma != kerta) yield break; } }
