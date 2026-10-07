@@ -23,6 +23,14 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(ylin > 0.8, $"pysähdys eteen {ylin:F2}°");
         }
 
+        [Testi] static void PallonLennotHitaammatLyhyillaValeilla()
+        {
+            OpasSilmukka.PalloLento = false; double l0 = OpasSilmukka.LennonKesto(400), p0 = OpasSilmukka.LennonKesto(5000);
+            OpasSilmukka.PalloLento = true; double l1 = OpasSilmukka.LennonKesto(400), p1 = OpasSilmukka.LennonKesto(5000);
+            OpasSilmukka.PalloLento = false;
+            Oleta.Tosi(l1 / l0 > 1.5 && p1 / p0 < 1.2 && p1 / p0 > 1.1, $"lyhyt {l1 / l0:F2}, pitkä {p1 / p0:F2}");
+        }
+
         [Testi] static void KoydetViiveella()
         {
             var k = new KoriLiike();

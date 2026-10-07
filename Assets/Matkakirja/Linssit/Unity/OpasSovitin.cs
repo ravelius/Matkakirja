@@ -328,6 +328,7 @@ namespace Matkakirja.Natiivi
             // lento on pakotettu siirto, joka avaa kartan SiirtoAlkaa-kutsussa suoraan kohteeseen).
             if (kaupunkiOdottaa) { silmukka.Paivita(Time.unscaledDeltaTime, MaaKorkeus, () => false); return; }
             kori.Kayta(Kaupunkitila && nakymaAuki, kaupunki.Kamera);   // kuumailmapallon korinäkymä (kokeilu, Päätoimittaja 7.10. 09.1x)
+            OpasSilmukka.PalloLento = kori.Nakyy;
             // PCM: loppu = kaikki ladattu ja soitettu; varmistus: klippi pysähtyi (ei saa jäädä odottamaan ikuisesti, toisto 16.4x).
             bool pcmPysahtyi = pcmNyt != null && puhe != null && !puhe.isPlaying && Time.unscaledTime - puheAlkoi > 1f;
             bool loppui = !tauolla && (pcmNyt != null ? (puhe != null && pcmNyt.SoitettuLoppuun(puhe.timeSamples)) || pcmPysahtyi : Time.unscaledTime >= puheLoppuu && (puhe == null || !puhe.isPlaying));
@@ -1842,7 +1843,7 @@ namespace Matkakirja.Natiivi
             klipit.Clear();
             pcmVirrat.Clear(); pcmNyt = null;
             maaKorkeudet.Clear();
-            kori.Sulje();
+            kori.Sulje(); OpasSilmukka.PalloLento = false;
             AsetaKaupunkitila(null);
             Vaihtui?.Invoke(null);
         }
