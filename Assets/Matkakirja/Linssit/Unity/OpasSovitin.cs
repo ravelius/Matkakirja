@@ -510,6 +510,7 @@ namespace Matkakirja.Natiivi
             r.SetRequestHeader("x-matkakirja-natiivi", Application.identifier);
             r.SetRequestHeader("User-Agent", "Matkakirja/" + Application.version + " (" + Application.identifier + ")");
             PolloTestitunnus.Lisaa(r);
+            if (GizaKokeilu) r.SetRequestHeader("x-matkakirja-kokeilu", "giza");
             float t0 = Time.realtimeSinceStartup;
             yield return r.SendWebRequest();
             mikaLataa = false;
@@ -1109,6 +1110,7 @@ namespace Matkakirja.Natiivi
                 r.SetRequestHeader("x-matkakirja-natiivi", Application.identifier);
                 r.SetRequestHeader("User-Agent", "Matkakirja/" + Application.version + " (" + Application.identifier + ")");
                 PolloTestitunnus.Lisaa(r);
+                if (GizaKokeilu) r.SetRequestHeader("x-matkakirja-kokeilu", "giza");
                 yield return r.SendWebRequest();
                 if (silmukka == null) yield break;
                 tila += (tila.Length > 0 ? ", " : "") + polku + " " + (r.result == UnityWebRequest.Result.Success ? "ok" : r.responseCode.ToString());
@@ -1427,6 +1429,7 @@ namespace Matkakirja.Natiivi
             };
             r.SetRequestHeader("Content-Type", "application/json");
             r.SetRequestHeader("x-matkakirja-natiivi", Application.identifier);
+            if (GizaKokeilu) r.SetRequestHeader("x-matkakirja-kokeilu", "giza");   // /opas/seuraava (simu 7.10. 09.15: 403 ilman)
             PolloTestitunnus.Lisaa(r);
             r.SetRequestHeader("User-Agent", "Matkakirja/" + Application.version + " (" + Application.identifier + ")");
             string koodi = Asetukset.PolloKoodi;   // kehittäjäkoodi Keychainista kuten Pulun chatissa; ei lokiin
