@@ -127,8 +127,8 @@ namespace Matkakirja
     ///   vari sarja p080|p060|p045|oletus|<versio>   kermahunnun sarja (löydös 128, Varitaso.Versio; peitto on poltettu
     ///                             sarjaan, oletus 2026-09-30-p060, omistaja 1.10.); vari <ISO3>|pelaaja|pois|paalle|alin <z> kuten ennen
     ///   rajat pois|paalle|tila | rajat taso <0–4>|auto | rajat peitto <a>|oletus   valtioiden rajat vektorina (Rajat, E2)
-    ///   vektorit versio <nimi>|web|oletus   rannikko- ja rajasarjan versio (oletus 2026-09-25-gshhs-korkeus, web =
-    ///                             2026-09-21-gshhs ilman korkeuksia); luettelo ja solut ladataan uudelleen
+    ///   vektorit versio <nimi>|web|oletus   rannikko- ja rajasarjan versio (oletus 2026-10-07-swe-korkeus, web =
+    ///                             2026-10-07-swe ilman korkeuksia); luettelo ja solut ladataan uudelleen
     ///   rannikko pois|paalle|tila | rannikko taso <0–4>|auto | rannikko syvyys pois|paalle | rannikko nosto <m> [osuus]
     ///   rannikko peitto <a>|oletus  rantaviiva vektorina (Rannikko, löydös 46 E1; löydös 126: oletuksena POIS, paalle =
     ///                             vertailuun): taso pakottaa webin tason, syvyys pois = ZTest Always, nosto = syvyysnosto
