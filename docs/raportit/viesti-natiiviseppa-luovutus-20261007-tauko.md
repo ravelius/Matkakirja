@@ -9,6 +9,14 @@ Olet Natiiviseppä (Opus, high). Lue tämä osio, MEMORY.md ja natiiviseppa-tila
 Juna-SHA:t otetaan vain PÄÄTOIMITTAJAN suoralla kuittauksella; käännökset, simut ja iPad vain Julkaisijan NYT-viestillä.
 Tarkista ensin taustalla jatkuneiden ajojen tulokset (alla) ja kerro ne Julkaisijalle ja PÄÄTOIMITTAJALLE.
 
+## TILA 14.0x (tauko peruttu 13.47)
+
+- **Mac lepo:** 13.36-ajon "vika" oli mittausvirhe (selain peitti ikkunan → oikein "piilossa"). mac-cpu.sh korjattu (ikkuna
+  400,100 ja eteen open -a + napsautus; C = sovellus piilotettu cmd+H, koska Spacen vaihtoa ei saa automatisoitua).
+  4975a36c (Cesium suspendUpdate + piirtoväli 30 piilossa): A 16,3 / B 7,5 / C 3,0 % (TF 159 ~15 % kaikissa).
+  **755597cf** (+ runInBackground pois piilossa) Julkaisijan jonossa ~14.14 → mac-cpu.sh → luvut Päätoimittajalle.
+- **FACEIT:** 14.02-ajo: A-peili a0e53749 antaa nyt latausvirheen (12.48 toimi) → kysytty Siirtosepältä, ajo pysäytetty.
+
 ## TAUON TILA (13.34)
 
 - **Mac TF 160 LADATTU** (run 37606997700 success; app lokit/natiiviseppa-mac-tf-160-d8b0e0fc, fi.matkakirja.peli, build 160).
