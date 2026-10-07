@@ -31,6 +31,11 @@ namespace Matkakirja.Natiivi
         public const int Kerros = 16;
         /// <summary>Köydet vain, kun ruutu on vähintään tämän levyinen (leveys/korkeus): iPhone pysty ~0,46 → ei köysiä, iPad pysty 0,75 → köydet.</summary>
         public const float KoydetMinAspect = 0.6f;
+        /// <summary>
+        /// Vasemman köyden ruutuala normalisoituna (0–1, x vasemmalta, y ylhäältä; Natiivi-UI siirtää metrolinjan köyden oikealle
+        /// puolelle, omistajan stillit 7.10.): tyhjä (width 0), kun köyttä ei näy. Päivittyy joka kehys korin kanssa.
+        /// </summary>
+        public static Rect VasenKoysiNorm { get; private set; }
         /// <summary>A/B (komento `opas kori 0|1`); kaupunkitilassa oletuksena päällä tässä kokeessa.</summary>
         public static bool Paalla = true;
         /// <summary>Äänisarja (A/B): "eleven" tai "kirjasto".</summary>
@@ -87,6 +92,7 @@ namespace Matkakirja.Natiivi
             if (overlay != null) Object.Destroy(overlay.gameObject);
             foreach (var m in new[] { punos, nahka, koysi }) if (m != null) Object.Destroy(m);
             KytkeAanimaisema(false);
+            VasenKoysiNorm = default;
             malliJuuri = null; malliKori = null; malliKoydet.Clear(); malliKoysiAlku.Clear();
             overlay = null; juuri = null; perus = null; punos = nahka = koysi = null; fov = aspect = -1; aani = null;
         }
@@ -309,6 +315,30 @@ namespace Matkakirja.Natiivi
             var r = g.GetComponent<MeshRenderer>(); r.sharedMaterial = koysi; r.shadowCastingMode = ShadowCastingMode.Off; r.receiveShadows = false;
         }
 
+        /// <summary>Vasemman köyden (mallin koysi_v tai paikkamerkin vasen sylinteri) näkyvä ruutuala overlay-kameralla.</summary>
+        Rect LaskeVasenKoysi()
+        {
+            if (overlay == null || !kaytossa) return default;
+            Transform koysi = null;
+            foreach (var k in malliKoydet) if (k != null && k.gameObject.activeInHierarchy && overlay.transform.InverseTransformPoint(k.position).x < 0) koysi = k;
+            if (koysi == null && koysiKaanto != null && koysiKaanto.gameObject.activeInHierarchy)
+                foreach (Transform t in koysiKaanto) if (overlay.transform.InverseTransformPoint(t.position).x < 0) koysi = t;
+            if (koysi == null) return default;
+            var rr = koysi.GetComponentsInChildren<Renderer>();
+            if (rr.Length == 0) return default;
+            var b = rr[0].bounds; foreach (var r in rr) b.Encapsulate(r.bounds);
+            float xmin = 1, xmax = 0, ymin = 1, ymax = 0;
+            for (int i = 0; i < 8; i++)
+            {
+                var c = b.center + Vector3.Scale(b.extents, new Vector3((i & 1) == 0 ? -1 : 1, (i & 2) == 0 ? -1 : 1, (i & 4) == 0 ? -1 : 1));
+                var v = overlay.WorldToViewportPoint(c);
+                if (v.z <= 0) continue;
+                xmin = Mathf.Min(xmin, v.x); xmax = Mathf.Max(xmax, v.x); ymin = Mathf.Min(ymin, 1 - v.y); ymax = Mathf.Max(ymax, 1 - v.y);
+            }
+            xmin = Mathf.Clamp01(xmin); xmax = Mathf.Clamp01(xmax); ymin = Mathf.Clamp01(ymin); ymax = Mathf.Clamp01(ymax);
+            return xmax > xmin && ymax > ymin ? new Rect(xmin, ymin, xmax - xmin, ymax - ymin) : default;
+        }
+
         void Aanet(float vaakaKiihtyvyys, float pystyNopeus)
         {
             float nyt = Time.unscaledTime;
@@ -355,6 +385,7 @@ namespace Matkakirja.Natiivi
             var kKoysi = Quaternion.Euler((float)liike.KoysiNyokkays, 0, -(float)liike.KoysiKallistus);
             koriKaanto.localRotation = kKori; koysiKaanto.localRotation = kKoysi;
             if (malliKori != null) malliKori.localRotation = kKori * malliKoriAlku;
+            VasenKoysiNorm = LaskeVasenKoysi();
             for (int i = 0; i < malliKoydet.Count; i++) if (malliKoydet[i] != null) malliKoydet[i].localRotation = kKoysi * malliKoysiAlku[i];
         }
     }

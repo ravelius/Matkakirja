@@ -443,6 +443,8 @@ namespace Matkakirja.Natiivi
         /// </summary>
         public static event Action<int, int, float> KierrosLahtee;
         /// <summary>Nykyisen kohteen valmiit kysymykset (enintään 5; /opas/kysymykset tai pysähdyksen kysymykset).</summary>
+        /// <summary>Korin vasemman köyden ruutuala normalisoituna (0–1, y ylhäältä); tyhjä, kun köyttä ei näy (PalloKori).</summary>
+        public static Rect KoriVasenKoysiNorm => PalloKori.VasenKoysiNorm;
         public static IReadOnlyList<string> KysyKysymykset
         {
             get
