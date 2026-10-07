@@ -50,7 +50,13 @@ jobs:
       PROJEKTI: /Users/Shared/Claude/proto-3d/Matkakirja-proto
       NODE_USE_ENV_PROXY: '1'
     steps:
+      # Savukkeet (savukkeet.yml) ajaa samassa työhakemistossa non-cone-sparse-checkoutilla !/docs/, ja
+      # asetus jää .git/info/sparse-checkoutiin: ilman tätä docs/ puuttuu ja vartijan testit kaatuvat (4.10.–7.10.).
       - uses: actions/checkout@v4
+        with:
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /*
 
       - name: Homebrew polkuun
         run: echo "PATH=/opt/homebrew/bin:/opt/homebrew/sbin:$PATH" >> "$GITHUB_ENV"
