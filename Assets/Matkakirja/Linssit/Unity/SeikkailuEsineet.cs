@@ -22,6 +22,8 @@ namespace Matkakirja.Natiivi
         static readonly int IdKuva = Shader.PropertyToID("_Kuva");
         /// <summary>Kolahduksen klippi (rakennus.json aanet pikari-1); Sovitin asettaa.</summary>
         public static AudioClip KolahdusKlippi;
+        /// <summary>Kolahdus (paikka): Sovitin soittaa kokin harhautusrepliikin, jos kokki on lähellä.</summary>
+        public static event Action<Vector3> Kolahti;
         /// <summary>Testi / kosketusnappi: seuraava ruutu tekee toiminnon.</summary>
         public static bool ToimintoPyydetty;
 
@@ -147,6 +149,7 @@ namespace Matkakirja.Natiivi
             if (!e.Heitetty || e.Kuului || nopeus < 1.5f) return;
             e.Kuului = true;
             SeikkailuVartijat.Aani(kohta, KuuluuM);
+            Kolahti?.Invoke(kohta);
             if (KolahdusKlippi != null)
             {
                 var a = SeikkailuKuulija.Lahde("Kolahdus:" + e.Id, 2f, 30f);

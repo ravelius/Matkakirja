@@ -30,6 +30,7 @@ namespace Matkakirja.Natiivi
             public double KavelyAika; public bool Kavelee; public Vector3 Kohde = new Vector3(float.NaN, 0, 0);
             public VartijanTila EdellinenTila;
             public AudioSource Askeleet;
+            public float RepliikkiAsti; public int RepliikkiLaskuri;
         }
         /// <summary>Askeläänen klippi (rakennus.json aanet askel-kivi); SeikkailuVartijat.Askeleet asettaa.</summary>
         public static AudioClip AskelKlippi;
@@ -137,7 +138,12 @@ namespace Matkakirja.Natiivi
                 }
                 else { s.PelaajaX = vp.x + 1000; s.PelaajaZ = vp.z; }
                 v.Aivot.Paivita(dt, s);
-                if (v.Aivot.Tila != v.EdellinenTila) { kirjaa?.Invoke($"seikkailu: vartija {v.Osa} {v.EdellinenTila} → {v.Aivot.Tila} (mittari {v.Aivot.Mittari:F2})"); v.EdellinenTila = v.Aivot.Tila; }
+                if (v.Aivot.Tila != v.EdellinenTila)
+                {
+                    kirjaa?.Invoke($"seikkailu: vartija {v.Osa} {v.EdellinenTila} → {v.Aivot.Tila} (mittari {v.Aivot.Mittari:F2})");
+                    Repliikki(v, v.EdellinenTila, v.Aivot.Tila, s.NakolinjaVapaa && v.Aivot.Mittari > 0);
+                    v.EdellinenTila = v.Aivot.Tila;
+                }
                 if (v.Aivot.Tila == VartijanTila.Kiinni) { Kiinni(v); break; }
                 var kohde = new Vector3((float)v.Aivot.KohdeX, vp.y, (float)v.Aivot.KohdeZ);
                 if (v.Aivot.Vauhti > 0)
@@ -167,6 +173,22 @@ namespace Matkakirja.Natiivi
                 // Kävelytahti nopeuden mukaan (silmukka on mitoitettu sykliMs:iin), ei liukuvia jalkoja.
                 v.KavelyAika += v.Kavelee ? dt * (v2 / Math.Max(0.1, sykliMs)) * 1.0 : dt;
             }
+        }
+
+        /// <summary>Pystyleikkeen repliikit tilan vaihtuessa (Pelikoodarin manifest: vartija-epaily/etsinta/paluu/kiinni), 4 s tauko per vartija.</summary>
+        void Repliikki(V v, VartijanTila oli, VartijanTila nyt, bool nakee)
+        {
+            var r = SeikkailuRepliikit.Aktiivinen;
+            if (r == null || !r.Valmis || Time.unscaledTime < v.RepliikkiAsti) return;
+            string t = null; int n = ++v.RepliikkiLaskuri;
+            if (nyt == VartijanTila.Epaily) t = n % 2 == 0 ? "vartija-epaily-2" : "vartija-epaily-1";
+            else if (nyt == VartijanTila.Etsinta) t = oli == VartijanTila.Partio && !nakee ? "vartija-epaily-3" : n % 2 == 0 ? "vartija-etsinta-2" : "vartija-etsinta-1";
+            else if (nyt == VartijanTila.Partio && (oli == VartijanTila.Etsinta || oli == VartijanTila.Epaily || oli == VartijanTila.Paluu))
+                t = v.Osa == "kirkkotorni-portaat" && r.On("vartija-paluu-3") ? "vartija-paluu-3" : n % 2 == 0 ? "vartija-paluu-2" : "vartija-paluu-1";
+            else if (nyt == VartijanTila.Kiinni) t = "vartija-kiinni-1";
+            if (t == null) return;
+            double kesto = r.Soita(t, v.Agentti.transform);
+            v.RepliikkiAsti = Time.unscaledTime + (float)Math.Max(4.0, kesto + 0.5);
         }
 
         bool oliPiilossa;

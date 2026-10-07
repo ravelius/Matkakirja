@@ -483,6 +483,7 @@ namespace Matkakirja.Natiivi
             kuoriOdotusAlku = -1f; SaapumisOdotus = false; RakennusLatautuu = false; LatausVirhe = null; // näyttämö (ja sen odotuspiilotus) tuhoutuu alla
             // Historiamoottori: seikkailu pois (näyttämön lapset tuhoutuvat; globaalit kuoren leikkaukset ja kävelydata nollataan).
             SeikkailuVartijat.Poista(); SeikkailuVene.Poista(); SeikkailuPelaaja.Poista(); SeikkailuRepliikit.Poista(); SeikkailuEsineet.Poista(); SeikkailuKavely.Pura();
+            SeikkailuEsineet.Kolahti -= KokkiKuuleeKolahduksen;
             cm?.SeikkailuPois(); PelattavaPalaPyydetty = false;
             if (peiliKuvaus == PelattavaPalaPaketti)
             {
@@ -974,10 +975,29 @@ namespace Matkakirja.Natiivi
             o.Kirjaa($"seikkailu: pelaajahahmo {pm.Nimi} ({pm.Glb}, {pm.Leikkeet.Count} leikettä)");
         }
 
+        /// <summary>Henkilön ensimmäisen tilahahmon paikka Unityssa (kokki liedellä), tai null.</summary>
+        Vector3? HenkilonPaikka(string henkiloId)
+        {
+            if (rakennus?.Tilat == null) return null;
+            foreach (var t in rakennus.Tilat) if (t.Hahmot != null) foreach (var h in t.Hahmot) if (h.HenkiloId == henkiloId) return DioraamaNayttamo.UnityPiste(h.Paikka) + Vector3.up * 1.6f;
+            return null;
+        }
+
+        void KokkiKuuleeKolahduksen(Vector3 kohta)
+        {
+            var r = SeikkailuRepliikit.Aktiivinen;
+            if (r == null || !r.Valmis || Time.unscaledTime < kokkiRepliikkiAsti || HenkilonPaikka("kokki-1500") is not Vector3 kp || (kp - kohta).sqrMagnitude > 144f) return;
+            kokkiRepliikkiAsti = Time.unscaledTime + 8f;
+            r.Soita(++kokkiLaskuri % 2 == 0 ? "kokki-harhautus-1" : "kokki-harhautus-2", kp);
+        }
+        float kokkiRepliikkiAsti; int kokkiLaskuri;
+
         IEnumerator VartijatPaalle()
         {
             if (nayttamo == null || rakennus == null) { o.Kirjaa("poikki: vartijat: linssi ei auki"); yield break; }
             yield return VarmistaKavelyData();
+            SeikkailuRepliikit.Luo(nayttamo.transform, MediaJuuri + "/seikkailu/" + RakennusId + "/repliikit-v1/manifest.json", o.Kirjaa);
+            SeikkailuEsineet.Kolahti -= KokkiKuuleeKolahduksen; SeikkailuEsineet.Kolahti += KokkiKuuleeKolahduksen;
             SeikkailuVartijat.Luo(nayttamo.transform, rakennus, SeikkailuKavely.Data, nayttamo.Hahmot3D, o.Kirjaa);
             if (SeikkailuVartijat.AskelKlippi == null && rakennus.Aanet != null && rakennus.Aanet.TryGetValue("askel-kivi", out var askel) && !string.IsNullOrEmpty(askel.Tiedosto))
             {
