@@ -13,7 +13,9 @@ L = '/Users/Shared/Claude/proto-3d/_kirjasto/lahteet'
 V = '/Users/Shared/Claude/proto-3d/_kirjasto/valmiit'
 TOISTO = {'graniittilohkomuuri': 2.4, 'paanukatto': 1.2, 'tervattu-puu': 2.0, 'lankku': 2.0, 'kivilaatta': 2.0,
           'kallio': 3.0, 'kalkkirappaus': 2.5, 'tiili': 1.6, 'liuskekatto': 1.4, 'rauta': 1.0, 'kuparikatto': 2.0,
-          'vesijalki': 1.5, 'noki': 1.5, 'sammal': 2.0, 'halkeama': 2.0}
+          'vesijalki': 1.5, 'noki': 1.5, 'sammal': 2.0, 'halkeama': 2.0,
+          # Kielletty kaupunki 7.10.: 19 tiiliriviä → rivijako 0,32 m; 11 limitettyä tiiliä leveydellä → tiili 0,50 × 0,25 m
+          'lasitettu-tiilikatto': 6.0, 'harmaa-tiilikiveys': 5.5}
 m = json.load(open(f'{L}/manifest.json'))
 
 

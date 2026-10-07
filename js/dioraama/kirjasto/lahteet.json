@@ -603,6 +603,37 @@
   ],
   "keski": 0.2544
  },
+ "materiaali/harmaa-tiilikiveys": {
+  "nimi": "Pavement 04",
+  "lahde": "https://polyhaven.com/a/pavement_04",
+  "tekijat": [
+   "Jan Burghardt"
+  ],
+  "lisenssi": "CC0 1.0 (https://polyhaven.com/license)",
+  "palvelu": "Poly Haven",
+  "muokkaukset": [
+   "ARM-pakkaus (R AO, G karheus, B metalli)"
+  ],
+  "toisto_m": 5.5,
+  "tiedostot": [
+   {
+    "polku": "materiaali/harmaa-tiilikiveys/harmaa-tiilikiveys_arm.png",
+    "sha256": "5e10e55cc78a6837dbb71d0eb380f4f25d8042e17fe73769e645e576a220e419",
+    "tavuja": 7178377
+   },
+   {
+    "polku": "materiaali/harmaa-tiilikiveys/harmaa-tiilikiveys_diff.jpg",
+    "sha256": "1b23c4d027f59b7891ecad7e1c1e8a4c441063e407f7442a8dde4d7b4d7e095b",
+    "tavuja": 4059951
+   },
+   {
+    "polku": "materiaali/harmaa-tiilikiveys/harmaa-tiilikiveys_nor_gl.jpg",
+    "sha256": "267790e647bc8ef5672f5a0d1a6c2ae60955d0755211d11bcdf10e8a33f7ad75",
+    "tavuja": 2240432
+   }
+  ],
+  "keski": 0.06077
+ },
  "materiaali/kalkkirappaus": {
   "nimi": "White Rough Plaster",
   "lahde": "https://polyhaven.com/a/white_rough_plaster",
@@ -631,7 +662,8 @@
     "sha256": "75668cb16a244c3647e78fd3dd4601616a15bf59e90bb090655b19a8095da71c",
     "tavuja": 2551147
    }
-  ]
+  ],
+  "keski": 0.4921
  },
  "materiaali/kallio": {
   "nimi": "Lichen Rock",
@@ -755,6 +787,38 @@
     "tavuja": 2927156
    }
   ]
+ },
+ "materiaali/lasitettu-tiilikatto": {
+  "nimi": "Roofing Tiles 014 A",
+  "lahde": "https://ambientcg.com/a/RoofingTiles014A",
+  "tekijat": [
+   "Lennart Demes (ambientCG)"
+  ],
+  "lisenssi": "CC0 1.0 (https://docs.ambientcg.com/license/)",
+  "palvelu": "ambientCG",
+  "muokkaukset": [
+   "ARM-pakkaus (R AO, G karheus, B metalli)"
+  ],
+  "toisto_m": 6.0,
+  "huom": "Proseduraalinen (PBRProcedural); ladattu zip RoofingTiles014A_2K-JPG.zip, Opacity- ja Displacement-kartat jätetty pois.",
+  "tiedostot": [
+   {
+    "polku": "materiaali/lasitettu-tiilikatto/lasitettu-tiilikatto_arm.png",
+    "sha256": "5d9601f09cf8274ae888bec5ee056e3e86d907f7c6edf3e7a2a17c949a03c267",
+    "tavuja": 5536723
+   },
+   {
+    "polku": "materiaali/lasitettu-tiilikatto/lasitettu-tiilikatto_diff.jpg",
+    "sha256": "7ee18a179cd8ef6ba2b92e62c1197f3ae91f4c212f2e2a7676fb3d65f6dc2a7c",
+    "tavuja": 2706584
+   },
+   {
+    "polku": "materiaali/lasitettu-tiilikatto/lasitettu-tiilikatto_nor_gl.jpg",
+    "sha256": "1d0adb66d1ab9c5450c1dff3786d7aeea0d5f305a241d28521c4d3685e257dbb",
+    "tavuja": 3029975
+   }
+  ],
+  "keski": 0.15133
  },
  "materiaali/liuskekatto": {
   "nimi": "Roof Slates 03",

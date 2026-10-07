@@ -23,6 +23,8 @@ export const RAKENNUS = {
   id: 'kielletty-kaupunki',
   nimi: 'Kielletty kaupunki',
   otsikko: 'Kielletty kaupunki – Korkeimman harmonian sali',
+  // Nimiruudun alarivi (natiivissa vielä kovakoodattu "Savonlinna · 1475"; Siirtoseppä lukee tämän junan 156 jälkeen).
+  alarivi: 'Peking · 1873',
   versio: 1,
   lahteet: [
     { nimi: 'Palatsimuseo: Taihedian', osoite: 'https://www.dpm.org.cn/explore/building/236465.html' },
@@ -45,6 +47,9 @@ export const RAKENNUS = {
   // Natiivi piirtää kuoren alle 4 km:n tason tälle korkeudelle (Olavinlinnassa järvi −7); −3 jää Jinshui-joen veden (−2)
   // alle, joten uoma ei peity, ja mallin reunojen ulkopuolella se näkyy matalana maana kuten pilotin esikatseluissa.
   ulkokuoriVesi: -3,
+  // Lähidetalji (natiivin kuorivarjostin, maski blender/ulkokuori/hybridi): R rappausseinät, G lasitetut tiilikatot,
+  // B harmaa tiilikiveys, A ei käytössä (sama kuin B, maskissa 0). Järjestys = _valmiit/.../hybridi/kanavat.txt.
+  detaljiKanavat: ['kalkkirappaus', 'lasitettu-tiilikatto', 'harmaa-tiilikiveys', 'harmaa-tiilikiveys'],
   // Saapuminen etelästä Taihemenin yli (kuin kulkueen suunta).
   saapuminen: { alku: { atsimuutti: 180, etaisyys: 700, korkeus: 10 }, kesto: 6, lyhyt: 6 },
   tilat: [TILA_AUKIO],

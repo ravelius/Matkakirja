@@ -1,7 +1,7 @@
 {
   "huom": "Linnakirjasto (docs/raportit/linnakirjasto-20260930.md). Oma muuttumaton kansio tools/dioraama/vie-kirjasto.sh:lla 4.10.2026; Olavinlinnan blender-paketti kantaa yhä omat kopionsa neljästä hybridimateriaalista. Lähteet ja lisenssit: lahteet.json.",
-  "hash": "e5149473a2af9bdb",
-  "kansio": "dioraama/kirjasto/e5149473a2af9bdb/",
+  "hash": "3207f9f58c80b359",
+  "kansio": "dioraama/kirjasto/3207f9f58c80b359/",
   "sisalto": [
     "esiasetus/hamara",
     "esiasetus/paiva",
@@ -17,11 +17,13 @@
     "hahmo/vesipoika-1500",
     "hahmo/vouti-1500",
     "materiaali/graniittilohkomuuri",
+    "materiaali/harmaa-tiilikiveys",
     "materiaali/kalkkirappaus",
     "materiaali/kallio",
     "materiaali/kivilaatta",
     "materiaali/kuparikatto",
     "materiaali/lankku",
+    "materiaali/lasitettu-tiilikatto",
     "materiaali/liuskekatto",
     "materiaali/paanukatto",
     "materiaali/rauta",
@@ -181,14 +183,49 @@
       "tavuja": 3578159
     },
     {
+      "polku": "materiaali/harmaa-tiilikiveys/harmaa-tiilikiveys_arm.png",
+      "sha256": "5e10e55cc78a6837dbb71d0eb380f4f25d8042e17fe73769e645e576a220e419",
+      "tavuja": 7178377
+    },
+    {
+      "polku": "materiaali/harmaa-tiilikiveys/harmaa-tiilikiveys_diff-4x4.astcm",
+      "sha256": "7ab418685f0f59659fd790ed141946aca4241fab89c621453ebca7d97f51f908",
+      "tavuja": 5592448
+    },
+    {
+      "polku": "materiaali/harmaa-tiilikiveys/harmaa-tiilikiveys_diff.jpg",
+      "sha256": "1b23c4d027f59b7891ecad7e1c1e8a4c441063e407f7442a8dde4d7b4d7e095b",
+      "tavuja": 4059951
+    },
+    {
+      "polku": "materiaali/harmaa-tiilikiveys/harmaa-tiilikiveys_nor_gl-4x4.astcm",
+      "sha256": "cd3b16f99085209473cc95e0633930c6e1f55767c2aac66ff961efea2c1ff11f",
+      "tavuja": 5592448
+    },
+    {
+      "polku": "materiaali/harmaa-tiilikiveys/harmaa-tiilikiveys_nor_gl.jpg",
+      "sha256": "267790e647bc8ef5672f5a0d1a6c2ae60955d0755211d11bcdf10e8a33f7ad75",
+      "tavuja": 2240432
+    },
+    {
       "polku": "materiaali/kalkkirappaus/kalkkirappaus_arm.png",
       "sha256": "11a4d2b8fe4cf00f19f5d92d5ddff50ab8c2d5d29199124c64e2a03b575d3b6c",
       "tavuja": 6957484
     },
     {
+      "polku": "materiaali/kalkkirappaus/kalkkirappaus_diff-4x4.astcm",
+      "sha256": "88f4dae9c79d8f1122b59cd73c699d952c1e0c92be5772ed87e96b3d3740c24b",
+      "tavuja": 5592448
+    },
+    {
       "polku": "materiaali/kalkkirappaus/kalkkirappaus_diff.jpg",
       "sha256": "4fb1f54ac26b28b23c8f8efa708d3062684fe6122e3f001b18bcd268027fcb17",
       "tavuja": 2828405
+    },
+    {
+      "polku": "materiaali/kalkkirappaus/kalkkirappaus_nor_gl-4x4.astcm",
+      "sha256": "aa7cea6dd9dc19025313442f9a50f2cbc33b1a3eacee6c26a950518f437f3d29",
+      "tavuja": 5592448
     },
     {
       "polku": "materiaali/kalkkirappaus/kalkkirappaus_nor_gl.jpg",
@@ -274,6 +311,31 @@
       "polku": "materiaali/lankku/lankku_nor_gl.jpg",
       "sha256": "17765f0cfc94a8e38cba2e8de29de25f0b0bd7dd6e940b385ea15989751fbfe3",
       "tavuja": 2927156
+    },
+    {
+      "polku": "materiaali/lasitettu-tiilikatto/lasitettu-tiilikatto_arm.png",
+      "sha256": "5d9601f09cf8274ae888bec5ee056e3e86d907f7c6edf3e7a2a17c949a03c267",
+      "tavuja": 5536723
+    },
+    {
+      "polku": "materiaali/lasitettu-tiilikatto/lasitettu-tiilikatto_diff-4x4.astcm",
+      "sha256": "13555f4b85b9e27418eb55c493c34eddca2b63d1b9c4b639c521a908418a7e22",
+      "tavuja": 5592448
+    },
+    {
+      "polku": "materiaali/lasitettu-tiilikatto/lasitettu-tiilikatto_diff.jpg",
+      "sha256": "7ee18a179cd8ef6ba2b92e62c1197f3ae91f4c212f2e2a7676fb3d65f6dc2a7c",
+      "tavuja": 2706584
+    },
+    {
+      "polku": "materiaali/lasitettu-tiilikatto/lasitettu-tiilikatto_nor_gl-4x4.astcm",
+      "sha256": "c22f70afc0e17cdec61399fb79e4d39616604b3d2efc54b52d32530db5dc7114",
+      "tavuja": 5592448
+    },
+    {
+      "polku": "materiaali/lasitettu-tiilikatto/lasitettu-tiilikatto_nor_gl.jpg",
+      "sha256": "1d0adb66d1ab9c5450c1dff3786d7aeea0d5f305a241d28521c4d3685e257dbb",
+      "tavuja": 3029975
     },
     {
       "polku": "materiaali/liuskekatto/liuskekatto_arm.png",

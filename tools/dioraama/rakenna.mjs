@@ -355,7 +355,9 @@ export function lisaaBlender(rakennusJson, blender) {
   }
   // Hybridi-PBR (menetelmä B, Siirtosepän muoto 30.9.): maski + kirjaston 4 materiaalia maskin kanavajärjestyksessä,
   // vain jos viety blender.json:iin. Toisto metreinä kirjaston manifestista (js/dioraama/kirjasto/lahteet.json).
-  const DETALJI = ['graniittilohkomuuri', 'paanukatto', 'kivilaatta', 'kallio'];
+  // Kanavat R G B A; rakennus voi antaa omansa (detaljiKanavat, sama järjestys kuin vie-blender.sh:n hybridi/kanavat.txt).
+  const DETALJI = rakennusJson.detaljiKanavat ?? ['graniittilohkomuuri', 'paanukatto', 'kivilaatta', 'kallio'];
+  delete rakennusJson.detaljiKanavat;
   const kp = (id, k) => `kirjasto/materiaali/${id}/${id}_${k}`;
   if (on.has('ulkokuori/hybridi/kuori-materiaali-2k.png') && DETALJI.every((id) => on.has(kp(id, 'diff.jpg')) && on.has(kp(id, 'nor_gl.jpg')))) {
     const kirjasto = JSON.parse(readFileSync(new URL('../../js/dioraama/kirjasto/lahteet.json', import.meta.url), 'utf8'));

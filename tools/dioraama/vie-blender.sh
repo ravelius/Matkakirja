@@ -50,7 +50,11 @@ done
 KIRJASTO=${KIRJASTO:-/Users/Shared/Claude/proto-3d/_kirjasto/valmiit}
 if [ -f "$LAHDE/ulkokuori/hybridi/kuori-materiaali-2k.png" ]; then
   lisaa "ulkokuori/hybridi/kuori-materiaali-2k.png" "ulkokuori/hybridi/kuori-materiaali-2k.png"
-  for id in graniittilohkomuuri paanukatto kivilaatta kallio; do
+  # Kanavat R G B A: oletus Olavinlinnan neljä; rakennuskohtaiset hybridi/kanavat.txt:stä (Kielletty 7.10.2026, sama järjestys
+  # kuin rakennuksen js:n detaljiKanavat-kentässä).
+  KANAVAT=(graniittilohkomuuri paanukatto kivilaatta kallio)
+  [ -f "$LAHDE/ulkokuori/hybridi/kanavat.txt" ] && KANAVAT=($(cat "$LAHDE/ulkokuori/hybridi/kanavat.txt"))
+  for id in "${(u)KANAVAT[@]}"; do
     for k in diff.jpg nor_gl.jpg; do
       [ -f "$KIRJASTO/materiaali/$id/${id}_$k" ] || { echo "PUUTTUU: $KIRJASTO/materiaali/$id/${id}_$k" >&2; exit 1; }
       LISTA+=("kirjasto/materiaali/$id/${id}_$k|@$KIRJASTO/materiaali/$id/${id}_$k")

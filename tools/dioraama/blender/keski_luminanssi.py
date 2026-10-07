@@ -10,7 +10,8 @@ import numpy as np
 from PIL import Image
 KIRJ, YMP = sys.argv[1:3]
 JUURI = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', '..')
-DETALJI = ['graniittilohkomuuri', 'paanukatto', 'kivilaatta', 'kallio']
+DETALJI = ['graniittilohkomuuri', 'paanukatto', 'kivilaatta', 'kallio',
+           'lasitettu-tiilikatto', 'harmaa-tiilikiveys', 'kalkkirappaus']   # Kielletty kaupunki 7.10.
 
 
 def keski(polku, painot):
