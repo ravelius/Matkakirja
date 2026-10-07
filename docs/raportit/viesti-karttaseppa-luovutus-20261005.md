@@ -1,9 +1,11 @@
-# TILANNE 7.10. klo 16.1x
+# TILANNE 7.10. klo 16.2x
 
 - **WORLDVIEW TUOTANNOSSA:** #4140 mergetty 15.41 (00d33d4f), viivataso-osoitin 2026-10-07-viivat, natiivin aineistot ämpärissä (LS2 95cf8eb97 → juna 161). #4145 (Kyproksen pohjoisosa, Sisältökirjuri) mergetään perään. Worktreet poistettu.
 - **SYKSY v1 ÄMPÄRISSÄ** (57 630, 14.48), ja LS2:lle on ilmoitettu (natiivin kausivalinta).
-- **KEVÄT VALMIS 15.58** (rivit 13–17 + rengas). Kuvapari `kuvapari-kevat2-20261007.jpg` lähetetty PT:lle. Paketti `_valmiit/s2-eurooppa-kevat-vienti-20261007` on valmis (--kuiva ok).
-  Kuittauksen jälkeen: päivitä LAHTEET.md:n kuittausrivi ja pyydä Julkaisijaa viemään.
+- **KEVÄT KUITATTU 16.0x, VIENTI KÄYNNISSÄ** (Julkaisija 16.0x, 6 osaa): `_valmiit/s2-eurooppa-kevat-vienti-20261007` → `s2-eurooppa/kevat/v1/`.
+  Kun Julkaisija ilmoittaa: `aws s3 ls … kevat/v1 --recursive | wc -l` = 57 630, sitten viesti LS2:lle.
+- **Uusi linja (PT 16.0x):** kuittaus yhdellä rivillä ilman kuvaparia. Laadun yleiskuvat (saumat, pilvet) tehdään silti.
+- **TILINVAIHTO illalla 22–24:** luovutus pushattuna viimeistään 21.30. VAIHTO NYT -viestiin luovutus 10 minuutissa ja kuittaus yhdellä rivillä.
 - **TALVI2B** ajossa (PGID 43109), rivit 13–20. Valmistuttua: z5-yleiskuva (saumat + pilvilaikut) ja kuvapari PT:lle, sitten paketti `kokoa-kausi.py talvi v1 <p> "<talvi2b/laatat>:<talvi2/laatat>"`.
 - Omistaja 15.5x: natiivin testaus kevyemmin (koskee junia), karttaseppää ei muuta.
 
