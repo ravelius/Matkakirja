@@ -211,3 +211,10 @@ Brotli (haara linnanrakentaja-zstd, worktree olemassa), akustiikka #3979 (Steam 
   tyokalut/linnanrakentaja-ajot/kielletty-kuvat.sh (poikki tunnelma paiva + poikki kamera; jalustan mitat skriptissä). Simut erasettu.
   SEURAAVAT PARANNUKSET (palautteen mukaan): atlaksen tyhjien tekselien täyttö (push-pull) mustia pilkkuja vastaan, aukion/
   marmorin tarkkuustekstuuri, ympäröivät pihat maareunuksen tilalle; natiivin alarivi "Savonlinna · 1475" Siirtosepälle.
+- 7.10. 04.3x: KIELLETTY v3 (Päätoimittajan lista 03.4x, takaraja 07.30): mitat.py REUNAT v3 (OSM, osm_rakennukset.py →
+  kk-rakennukset.json) + MUURIT; kk_kaukaiset.py (320 rakennusta + 三台-jatke; < 170 m leivotaan, muut kuori_leivo kauko_kuvaa
+  näytepisteisiin); kuori_leivo: taytto() push-pull, maski_leivo() hybridi/kuori-materiaali-2k.png + kanavat.txt; kokoa:
+  katto_diff_v3 × (0,75 0,62 0,60), kiveys_v3 harmaa. vie-blender/rakenna: detaljikanavat rakennuskohtaisesti; kirjasto
+  175ec1b8683452d6 (lasitettu-tiilikatto urilla, harmaa-tiilikiveys, kalkkirappaus). Peili 938313041859d831 (blender
+  a630203a6809461e), haara linnanrakentaja-kielletty. Siirtoseppä todensi 64a89525: detalji OK, katon rivit eivät erottuneet → korjattu.
+  KUVAT: Julkaisijan vuoro ~05.15 (kielletty-kuvat.sh + kielletty-merkitse.py) → Päätoimittajalle ennen 07.30.
