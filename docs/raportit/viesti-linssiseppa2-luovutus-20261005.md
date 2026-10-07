@@ -20,7 +20,7 @@ Avoimet työt:
 ## TILA 7.10. 03.2x (uusin)
 - Sallitut 38 (Varsova pakotettu SALLITTU; Sisilia/Kreeta/Islanti mitattu Palermo/Heraklion/Reykjavík P625) → Pelikoodarin PR #4098.
   sallitut.py:ssä PAKOTA-taulu; tulokset lokit/linssiseppa2-3d-kattavuus/ (sallitut-3d.json, renkaat-tulokset.json).
-- RAJA-stillit: Päätoimittaja 03.3x: Kiova, Sarajevo, Tromssa POIS (PAKOTA); sallitut 38 lopullinen (#4098), raja-lista tyhjä.
+- RAJA-stillit: Päätoimittaja 03.3x: Kiova, Sarajevo, Tromssa POIS (PAKOTA); sallitut 38 (#4098), raja-lista tyhjä. 07.1x Varsova POIS (Googlen 404-reiät yleiskuvassa, LS1 k158) → 37; palaa LS1:n etäisyyskorjauksella.
   (vanha: Tromssa tarkka
   ~0,5 km (ehdotettu SALLITTU r 500 m tai POIS) – odottaa Päätoimittajan päätöstä; jos SALLITTU, lisää PAKOTA + rivi Pelikoodarille.
 - KAUDET (Karttaseppä 7.10. 04.xx): Euroopan S2 kausikerrokset s2-eurooppa/<syksy|talvi|kevat>/v1 (sama jako kuin v2, laatat.json + kausi).
