@@ -61,6 +61,24 @@ namespace Matkakirja.Natiivi
         static string AaniAvain(OpasKohde k) => k == null ? null : PcmKaytossa ? k.AaniAvain : (string.IsNullOrEmpty(k.Aani) ? null : k.Aani);
         /// <summary>Aloituskaupunki (komento "opas kaupunki <nimi>"); ensimmäinen pyyntö on tämä toive.</summary>
         public static string Aloituskaupunki = "Kööpenhamina";
+        /// <summary>
+        /// Kaupunki, jossa kamera nyt on (Siirtoseppä 7.10.: pelaajan toive Pariisista Venetsiaan ei vaihda Aloituskaupunkia, ja
+        /// äänimaisema soitti Pariisin karttaa Venetsiassa): sallitun kaupungin tunnus kameran paikasta (OpasSallitut), muuten
+        /// Aloituskaupungin tunnus (KaupunkiTiet.Tunnus). Äänimaisema, yövalojen kadut ja muut kaupunkikohtaiset aineistot lukevat tämän.
+        /// </summary>
+        public static string NykyinenKaupunkiId
+        {
+            get
+            {
+                if (Auki && Viimeisin.silmukka != null)
+                {
+                    var a = Viimeisin.silmukka.Asento;
+                    var k = OpasSallitut.Alue(sallitut, a.Lat, a.Lon);
+                    if (k != null) return k.Id;
+                }
+                return KaupunkiTiet.Tunnus(Aloituskaupunki);
+            }
+        }
 
         /// <summary>
         /// Koukku elokuvamaiselle kameralle (Siirtoseppä, juna 145, OpasCinemachine.cs): kutsutaan joka kehys KyydinKameraEnnen-vaiheessa
@@ -349,7 +367,7 @@ namespace Matkakirja.Natiivi
             if (silmukka.Vaihe != ennen && silmukka.Vaihe == OpasVaihe.Lentaa) OpasKorostusKuva.Piilota();
             y.Kuvaa(silmukka.Asento);
             // Yövalot v4: nykyinen kohde saa yöllä lämpimän valonheiton (KaupunkiYovalot; Päätoimittaja 22.3x "Eiffel kultaisena").
-            KaupunkiYovalot.KaupunkiId = KaupunkiTiet.Tunnus(Aloituskaupunki);
+            KaupunkiYovalot.KaupunkiId = NykyinenKaupunkiId;
             var yk = silmukka.Nykyinen; var kh = silmukka.NykyinenKehys;
             KaupunkiYovalot.Kohde = yk != null && kh != null && !yk.Kysymys ? (yk.Lat, yk.Lon, kh.MaaM, yk.KokoM) : ((double, double, double, double)?)null;
             LatausKuvaPaivita();
