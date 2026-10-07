@@ -5,7 +5,7 @@
 // mukana (Resources/KaupunkiPallo/ilmapallo_keski.bytes, 171 kt), joten pallot näkyvät heti ilman latausta.
 //
 //  - Kaikki pallot ovat samanlaisia: kuva piirretään kerran omalla ortokameralla RenderTextureen ja jaetaan napeille.
-//  - Kehys: neliö, jonka sivu on mallin korkeus / (1 − AnkkuriOsuus − 4 % yläreuna); origo (köyden pää) kuvan vaakakeskellä
+//  - Kehys: neliö, jonka sivu on mallin korkeus / (1 − AnkkuriOsuus − 2 % yläreuna); origo (köyden pää) kuvan vaakakeskellä
 //    ja KaupunkiPalloMitat.AnkkuriOsuus kuvan alareunasta. Kamera katsoo hieman ylhäältä (10°), jotta kori näkyy.
 //  - Varjostin: ajattelijapäiden AjattelijaPaa (sama valo ja sävykartoitus kuin päillä kartalla), sävykerroin 1, ei normaalikarttaa.
 //  - Oma kerros 13 kuten päät (muut kamerat eivät piirrä sitä), kaukana päistä (x −5000).
@@ -25,7 +25,7 @@ namespace Matkakirja.Natiivi
         Camera kamera;
         int piirtoKehyksia;
 
-        const float KameraKallistus = 10f, YlaVara = 0.04f;
+        const float KameraKallistus = 10f, YlaVara = 0.02f;
 
         public static KaupunkiPalloKuva Luo(int pikselit)
         {

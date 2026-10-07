@@ -4,8 +4,8 @@
 // kaupungin oppaan suoraan (LS1:n kaupunkitila). Mekanismi kuten ajattelijoiden kipsipäät (UI/Erikoisnostot.cs):
 //
 //  - Pallo on karttaobjekti: nappi liikkuu kartan mukana, kuvan alareunan keskikohta (köyden pää) kaupungin keskipisteessä.
-//  - Näkyvyys ja koko zoomin mukaan (Kartta/KaupunkiPalloMitat.cs): näkyy kameran korkeudella ≤ 1 500 km (häivytys 1 100 km:stä),
-//    koko 52 → 76 pt lähestyessä. Piilossa pallon takapuolella, ruudun ulkopuolella sekä linssin, lentopelin, kaupunkikortin,
+//  - Näkyvyys ja koko zoomin mukaan (Kartta/KaupunkiPalloMitat.cs): näkyy kameran korkeudella ≤ 2 600 km (häivytys 2 000 km:stä),
+//    koko 72 → 104 pt lähestyessä. Piilossa pallon takapuolella, ruudun ulkopuolella sekä linssin, lentopelin, kaupunkikortin,
 //    valikon ja muun kuin karttatilan aikana (kuten päät).
 //  - Malli: Linnanrakentajan kiinnitetty kuumailmapallo (ilmapallo-v1, keski). Kaikki pallot ovat samanlaisia, joten kuva
 //    piirretään kerran omalla kameralla RenderTextureen (UI/KaupunkiPalloKuva.cs) ja jaetaan kaikille napeille.
@@ -31,8 +31,8 @@ namespace Matkakirja.Natiivi
             public bool Nakyy;
         }
 
-        /// <summary>RenderTexturen sivu: suurin koko 76 pt × min(pikselisuhde, 3).</summary>
-        const int Pikselit = 228;
+        /// <summary>RenderTexturen sivu: suurin koko 104 pt × min(pikselisuhde, 3).</summary>
+        const int Pikselit = 312;
 
         readonly UiKerros kerros;
         readonly VisualElement juuri;
@@ -96,6 +96,7 @@ namespace Matkakirja.Natiivi
                 b.style.display = DisplayStyle.None;
                 juuri.Add(b);
                 var kv = Rakenne.El("mk-erikoisnosto-paa__kuva", b, PickingMode.Ignore);
+                kv.name = b.name;   // todistusajon ui-puu listaa kuvaelementit (napin nimi ei näy siellä)
                 if (kuva?.Kuva != null) kv.style.backgroundImage = new StyleBackground(Background.FromRenderTexture(kuva.Kuva));
                 pallot.Add(new Pallo { Id = id, Nimi = k.Nimi, Lat = k.Lat, Lon = k.Lon, Nappi = b, Kuva = kv });
             }
