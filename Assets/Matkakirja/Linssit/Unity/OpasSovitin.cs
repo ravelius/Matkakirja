@@ -1171,7 +1171,7 @@ namespace Matkakirja.Natiivi
         }
 
         // ---- SILTALAUSEET (juna 146; Ydin OpasSiltalauseet) ----
-        public const string SiltalauseetOsoite = "https://media.matkakirja.app/aanet/opas/siltalauseet-v1/siltalauseet.json";
+        public const string SiltalauseetOsoite = "https://media.matkakirja.app/aanet/opas/siltalauseet-v2/siltalauseet.json";   // v2 (Pelikoodari 7.10.): v1 + "ei-sallittu" (omistaja hyväksyi 09.4x)
         /// <summary>Kuittaukset-v1 (Pelikoodari 6.10.): kysymys, odotus5, odotus12, virhe; yhdistetään siltalauseisiin.</summary>
         public const string KuittauksetOsoite = "https://media.matkakirja.app/aanet/opas/kuittaukset-v1/kuittaukset.json";
         /// <summary>Kysymyksen odotusportaat (juna 150): 5 s / 12 s / 25 s, myöhäinen vastaus hylätään.</summary>
