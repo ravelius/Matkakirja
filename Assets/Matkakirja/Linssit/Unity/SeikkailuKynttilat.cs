@@ -6,6 +6,7 @@
 // - Toiminto (sama nappi kuin poiminta: SeikkailuEsineet ohjaa tänne, kun esinettä ei ole): sammuta / sytytä / puhalla oma.
 // - Valoisuus vartijoille ja kappalaiselle (SeikkailuVartijat lukee, kun pelaaja on kynttilöiden lähellä).
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using Matkakirja.Linssit.Seikkailu;
 using UnityEngine;
@@ -67,18 +68,23 @@ namespace Matkakirja.Natiivi
         public Vector3 Luukku { get; private set; }
         public Vector3 Portaikko { get; private set; }
         public bool Paikkamerkit { get; private set; }
-        Light ikuinenValoLight; AudioSource tuuli;
+        Light ikuinenValoLight, yovalo; AudioSource tuuli; Transform sarana; float saranaKulma;
+        readonly List<UnityEngine.Object> luodut = new List<UnityEngine.Object>();
+        /// <summary>Luukun avauskulma (Unity y, astetta): glTF:n negatiivinen y-kierto aukaisee sisään kappeliin.</summary>
+        public const float LuukkuAuki0 = 95f;
         public const float SytytysM = 1.0f, LuukkuM = 1.2f, LuukkuSammuuM = 1.0f, PortaikkoSammuuM = 1.2f;
 
         void AsetaPaikat()
         {
             var d = SeikkailuKavely.Data;
-            Vector3? Merkki(string n) { if (d != null) foreach (var m in d.Merkit) if (m.Nimi == n) return new Vector3((float)m.X, (float)m.Y, (float)-m.Z); return null; }
+            KavelyMerkki M(string n) { if (d != null) foreach (var m in d.Merkit) if (m.Nimi == n) return m; return null; }
+            Vector3? Merkki(string n) => M(n) is KavelyMerkki m ? new Vector3((float)m.X, (float)m.Y, (float)-m.Z) : (Vector3?)null;
             var ovi = Merkki("ovi:kappeli-alku") ?? (liekit.Count > 0 ? liekit[0].Paikka : Vector3.zero);
             // Alttari = reitin viimeinen piste (kappalainen-5), muuten liekkien keskipiste.
             Vector3 alttari = Merkki("reitti:kappalainen-5") ?? Keski();
             var keskus = (ovi + alttari) * 0.5f;
-            Portaikko = Merkki("portaikko:ylapaa") is Vector3 py ? new Vector3(ovi.x, ovi.y, ovi.z) : ovi;
+            // Veto vie kaari-oven portaikkoon (savupiippu): v44i ovi:kaari-ovi (portaikon alapää), muuten tuloovi.
+            Portaikko = Merkki("ovi:kaari-ovi") ?? ovi;
             var iv = Merkki("valo:ikuinen"); var lk = Merkki("luukku:koillinen");
             Paikkamerkit = iv == null || lk == null;
             IkuinenValo = iv ?? alttari + Vector3.up * 1.8f + (keskus - alttari).normalized * 0.6f;
@@ -87,7 +93,20 @@ namespace Matkakirja.Natiivi
             var g = new GameObject("Ikuinen valo"); g.transform.SetParent(transform, false); g.transform.position = IkuinenValo;
             ikuinenValoLight = g.AddComponent<Light>(); ikuinenValoLight.type = LightType.Point; ikuinenValoLight.range = 1.6f;
             ikuinenValoLight.intensity = 0.5f; ikuinenValoLight.color = new Color(1f, 0.6f, 0.3f); ikuinenValoLight.shadows = LightShadows.None;
-            if (liekitLahde != null) { var lt = liekitLahde.LuoLyhty(g.transform); if (lt != null) lt.transform.localPosition = Vector3.zero; }
+            if (liekitLahde != null) { var lt = liekitLahde.LuoLyhty(g.transform); if (lt != null) lt.transform.localPosition = iv != null ? Vector3.up * 0.06f : Vector3.zero; }
+            // Linnanrakentajan mallit (v44i): riippulamppu ja rautaluukku saranansa ympäri kääntyvänä.
+            if (M("valo:ikuinen") is KavelyMerkki ivm) StartCoroutine(SeikkailuEsineet.LataaMalli(ivm, transform, luodut, _ => { }, kirjaa));
+            if (M("luukku:koillinen") is KavelyMerkki lkm)
+            {
+                var sp = lkm.Sarana != null ? new Vector3((float)lkm.Sarana[0], (float)lkm.Sarana[1], (float)-lkm.Sarana[2]) : Luukku;
+                sarana = new GameObject("Luukun sarana").transform; sarana.SetParent(transform, false); sarana.position = sp;
+                StartCoroutine(SeikkailuEsineet.LataaMalli(lkm, sarana, luodut, _ => { }, kirjaa));
+            }
+            var yg = new GameObject("Yövalo luukusta"); yg.transform.SetParent(transform, false);
+            var sisaan = new Vector3(keskus.x - Luukku.x, 0f, keskus.z - Luukku.z).normalized;
+            yg.transform.position = Luukku + sisaan * 0.6f;
+            yovalo = yg.AddComponent<Light>(); yovalo.type = LightType.Point; yovalo.range = 3f; yovalo.color = new Color(0.55f, 0.65f, 0.9f);
+            yovalo.intensity = 0f; yovalo.shadows = LightShadows.None;
             kirjaa?.Invoke($"seikkailu: kappeli: ikuinen valo {IkuinenValo}, luukku {Luukku}{(Paikkamerkit ? " (paikkamerkit)" : "")}");
         }
 
@@ -102,6 +121,9 @@ namespace Matkakirja.Natiivi
             kirjaa?.Invoke($"seikkailu: luukku {(LuukkuAuki ? "auki" : "kiinni")}");
         }
         public static event Action<Vector3> LuukkuAani;
+
+        /// <summary>Luukku ulottuvilla: vaakaetäisyys alle LuukkuM ja luukku enintään 1,2 m käden (1 m lattiasta) yläpuolella.</summary>
+        bool LuukullaOn(Vector3 c) { var v = Luukku - c; float dy = v.y; v.y = 0; return v.magnitude < LuukkuM && dy > -0.6f && dy < 1.2f; }
 
         // --- E3d: kynttilän asetus alttaripöydälle seinän viereen (vaihe 6 "Saumat") ---
         /// <summary>Foggin kynttilä asetettuna (paikka) tai null (kädessä).</summary>
@@ -131,7 +153,7 @@ namespace Matkakirja.Natiivi
         public bool Toimi(SeikkailuPelaaja p)
         {
             var c = p.transform.position + Vector3.up * 1.0f;
-            if (Vector3.Distance(c, Luukku) < LuukkuM) { VaihdaLuukku(); return true; }
+            if (LuukullaOn(c)) { VaihdaLuukku(); return true; }
             if (ydin.OmaKynttila && !ydin.OmaPalaa && OmaAsetettu == null && Vector3.Distance(c + Vector3.up * 0.4f, IkuinenValo) < SytytysM + 0.6f)
             {
                 ydin.AsetaOma(true); SeikkailuAanet.Soita("sytytys", IkuinenValo, 0.7f);
@@ -160,7 +182,7 @@ namespace Matkakirja.Natiivi
         {
             if (p == null) return false;
             var c = p.transform.position + Vector3.up * 1.0f;
-            if (Vector3.Distance(c, Luukku) < LuukkuM) return true;
+            if (LuukullaOn(c)) return true;
             if (ydin.OmaKynttila && !ydin.OmaPalaa && OmaAsetettu == null && Vector3.Distance(c + Vector3.up * 0.4f, IkuinenValo) < SytytysM + 0.6f) return true;
             if (OmaAsetettu is Vector3 asp && Vector3.Distance(asp, c) < 1.2f) return true;
             if (OmaAsetettu == null && ydin.OmaPalaa && OnttoPaikka() is Vector3 op && Vector3.Distance(op, c) < 1.3f) return true;
@@ -174,6 +196,10 @@ namespace Matkakirja.Natiivi
             if (leivottu != null) leivottu.SetFloat(IdKirkkaus, kirkkausAlku * Mathf.Lerp(Himmein, 1f, (float)ydin.Osuus));
             if (ikuinenValoLight == null && liekit.Count > 0) AsetaPaikat();
             SeikkailuAanet.Silmukka("tuuli-rako", LuukkuAuki, Luukku, 0.6f);
+            // Luukku kääntyy saranallaan 0,8 s:ssa; auki kylmä sinertävä yövalo.
+            saranaKulma = Mathf.MoveTowards(saranaKulma, LuukkuAuki ? LuukkuAuki0 : 0f, LuukkuAuki0 / 0.8f * Time.deltaTime);
+            if (sarana != null) sarana.localRotation = Quaternion.Euler(0f, saranaKulma, 0f);
+            if (yovalo != null) yovalo.intensity = 0.45f * saranaKulma / LuukkuAuki0;
             var p = SeikkailuPelaaja.Aktiivinen;
             bool oma = ydin.OmaPalaa && p != null;
             if (oma)
@@ -251,6 +277,7 @@ namespace Matkakirja.Natiivi
             foreach (var l in liekit) if (l.Go != null) l.Go.SetActive(true);
             if (omaValo != null) Destroy(omaValo.gameObject);
             if (omaLiekki != null) Destroy(omaLiekki);
+            foreach (var o in luodut) if (o != null) Destroy(o);
         }
     }
 }

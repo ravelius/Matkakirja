@@ -28,6 +28,9 @@ namespace Matkakirja.Natiivi
         // E3b: voudin sääntö (VoudinKierros) — hehku portaikon yläpäässä, askeleet holvin yllä, kiinni → tallennuspiste.
         readonly VoudinKierros voudinKierros = new VoudinKierros();
         Light hehku; AudioSource voudinAskeleet; Vector3 portaikkoYla, keskus;
+        Vector3? kaariOvi, syvennys, varjo;
+        List<Vector3> paluuReitti = new List<Vector3>(), luukkuReitti = new List<Vector3>(), voudinReitti = new List<Vector3>(), laskeutuminen = new List<Vector3>();
+        readonly List<Vector3> hehkuPolku = new List<Vector3>();
         bool tavallinenAani, kovaAani; VoudinTila voudinEdellinen;
         public VoudinKierros Vouti => voudinKierros;
         Action<string> kirjaa;
@@ -46,9 +49,12 @@ namespace Matkakirja.Natiivi
             var k = go.AddComponent<SeikkailuKappeli>();
             k.kirjaa = kirjaa;
             k.ovi = U(m0);
-            var r = new SortedDictionary<string, Vector3>(StringComparer.Ordinal);
-            foreach (var m in d.Lajia("reitti")) if (m.Tunnus.StartsWith("kappalainen-", StringComparison.Ordinal) && m.Tunnus.IndexOf("paluu", StringComparison.Ordinal) < 0 && m.Tunnus.IndexOf("luukku", StringComparison.Ordinal) < 0) r[m.Tunnus] = U(m);
-            k.reitti.AddRange(r.Values);
+            k.reitti.AddRange(Reitti(d, "kappalainen-"));
+            // v44i (Linnanrakentaja): paluureitti pääovi → pulpetti, muunnelma luukulle, voudin kierros ampumakäytävässä ja laskeutuminen
+            // portaikkoa kaari-ovelle; piilot kaari-oven syvennys ja alttarin varjo. Puuttuessa vanhat paikkamerkit.
+            k.paluuReitti = Reitti(d, "kappalainen-paluu-"); k.luukkuReitti = Reitti(d, "kappalainen-luukku-");
+            k.voudinReitti = Reitti(d, "vouti-"); k.laskeutuminen = Reitti(d, "vouti-laskeutuminen-");
+            foreach (var m in d.Merkit) if (m.Nimi == "ovi:kaari-ovi") k.kaariOvi = U(m); else if (m.Nimi == "piilo:kaari-ovi") k.syvennys = U(m); else if (m.Nimi == "piilo:alttarin-varjo") k.varjo = U(m);
             k.alttari = k.reitti.Count > 0 ? k.reitti[k.reitti.Count - 1] : k.ovi;
             k.Tallennus = k.ovi;
             // Pelin hahmot: kappalainen alttarilla, vouti oven käytävässä (reitin alku).
@@ -64,6 +70,14 @@ namespace Matkakirja.Natiivi
             KavelyMerkki py = null; foreach (var m in d.Merkit) if (m.Nimi == "portaikko:ylapaa") py = m;
             k.portaikkoYla = py != null ? U(py) : k.ovi + Vector3.up * 3.0f;
             k.keskus = (k.ovi + k.alttari) * 0.5f;
+            if (k.kaariOvi == null) k.kaariOvi = k.ovi;
+            if (k.syvennys == null) k.syvennys = k.kaariOvi;
+            // Hehkun polku: portaikon yläpää → laskeutumisen loput pisteet kaari-ovelle (lyhty 1,4 m lattiasta).
+            k.hehkuPolku.Add(k.portaikkoYla);
+            int ia = k.laskeutuminen.FindIndex(q => (q - k.portaikkoYla).sqrMagnitude < 0.04f);
+            for (int i = ia + 1; ia >= 0 && i < k.laskeutuminen.Count; i++) k.hehkuPolku.Add(k.laskeutuminen[i]);
+            if (k.hehkuPolku.Count < 2) k.hehkuPolku.Add(k.kaariOvi.Value);
+            for (int i = 0; i < k.hehkuPolku.Count; i++) k.hehkuPolku[i] += Vector3.up * 1.4f;
             var hg = new GameObject("Voudin hehku"); hg.transform.SetParent(go.transform, false); hg.transform.position = k.portaikkoYla;
             k.hehku = hg.AddComponent<Light>(); k.hehku.type = LightType.Point; k.hehku.range = 3f; k.hehku.color = new Color(1f, 0.75f, 0.45f); k.hehku.intensity = 0f; k.hehku.shadows = LightShadows.None;
             k.voudinAskeleet = SeikkailuKuulija.Lahde("Voudin askeleet", 3f, 25f); k.voudinAskeleet.loop = true; k.voudinAskeleet.volume = 0.7f;
@@ -76,6 +90,41 @@ namespace Matkakirja.Natiivi
         }
 
         static Vector3 U(KavelyMerkki m) => new Vector3((float)m.X, (float)m.Y, (float)-m.Z);
+
+        /// <summary>Reitin pisteet järjestyksessä: reitti:&lt;etuliite&gt;&lt;numero&gt; (pelkkä numero, ei pidempiä nimiä kuten vouti-laskeutuminen-1).</summary>
+        static List<Vector3> Reitti(KavelyData d, string etuliite)
+        {
+            var r = new SortedDictionary<int, Vector3>();
+            foreach (var m in d.Lajia("reitti"))
+                if (m.Tunnus.StartsWith(etuliite, StringComparison.Ordinal) && int.TryParse(m.Tunnus.Substring(etuliite.Length), out int n)) r[n] = U(m);
+            return new List<Vector3>(r.Values);
+        }
+
+        /// <summary>Piste murtoviivalla osuudella u (0–1) pituuden mukaan; suljettu = viimeisestä takaisin ensimmäiseen.</summary>
+        static Vector3 Polulla(List<Vector3> l, double u, bool suljettu)
+        {
+            if (l.Count == 0) return Vector3.zero;
+            if (l.Count == 1) return l[0];
+            int n = suljettu ? l.Count : l.Count - 1; float pit = 0;
+            for (int i = 0; i < n; i++) pit += Vector3.Distance(l[i], l[(i + 1) % l.Count]);
+            float jaljella = (float)(u - Math.Floor(u)) * pit; if (!suljettu && u >= 1) return l[l.Count - 1];
+            for (int i = 0; i < n; i++)
+            {
+                var a = l[i]; var b = l[(i + 1) % l.Count]; float s = Vector3.Distance(a, b);
+                if (jaljella <= s) return Vector3.Lerp(a, b, s > 0 ? jaljella / s : 0);
+                jaljella -= s;
+            }
+            return l[suljettu ? 0 : l.Count - 1];
+        }
+
+        /// <summary>Fogg portaikossa: kaari-ovella tai laskeutumisreitin portailla (ei ampumakäytävässä, jonne pelaaja ei pääse).</summary>
+        bool Portaikossa(Vector3 p)
+        {
+            if (Vector3.Distance(p, kaariOvi.Value) < 1.0f) return true;
+            foreach (var q in laskeutuminen)
+                if (q.y < portaikkoYla.y - 0.5f && q.y > kaariOvi.Value.y + 0.5f && Vector3.Distance(p, q) < 1.5f) return true;
+            return false;
+        }
         static void KatsoKohti(Transform t, Vector3 p) { var d = p - t.position; d.y = 0; if (d.sqrMagnitude > 1e-4f) t.rotation = Quaternion.LookRotation(d); }
 
         void Update()
@@ -98,10 +147,11 @@ namespace Matkakirja.Natiivi
         void PaivitaVouti(SeikkailuPelaaja p)
         {
             var ky = SeikkailuKynttilat.Aktiivinen;
-            bool portaikossa = p != null && Vector3.Distance(p.transform.position, ovi) < 1.5f;
+            bool portaikossa = p != null && Portaikossa(p.transform.position);
+            bool syvennyksessa = p != null && Vector3.Distance(p.transform.position, syvennys.Value) < 1.0f;
             var s = new VoudinSyote
             {
-                ValoNakyy = ky != null && (ky.Ydin.Palavia > 0 || ky.Ydin.OmaPalaa && portaikossa),
+                ValoNakyy = ky != null && (ky.Ydin.Palavia > 0 || ky.Ydin.OmaPalaa && (portaikossa || syvennyksessa)),
                 TavallinenAani = tavallinenAani, KovaAani = kovaAani, FoggPortaikossa = portaikossa,
                 KappalainenHuoneessa = Nyt != Vaihe.Pimea,
             };
@@ -110,12 +160,14 @@ namespace Matkakirja.Natiivi
             // Sydämenlyönti voudin pysähtyessä, laskeutuessa ja katsoessa sekä kappalaisen paluun aikana (käsikirjoitus kohdat 3 ja 7).
             if (p != null) SeikkailuAanet.Silmukka("sydan", voudinKierros.Sydan || Nyt == Vaihe.Paluu, p.transform.position + Vector3.up * 1.2f, 0.8f);
             if (voudinKierros.Tila != voudinEdellinen) { kirjaa?.Invoke($"seikkailu: vouti {voudinEdellinen} → {voudinKierros.Tila}"); voudinEdellinen = voudinKierros.Tila; }
-            // Hehku: portaikon yläpää, laskeutuessa liukuu kaari-ovelle.
-            hehku.transform.position = Vector3.Lerp(portaikkoYla, ovi + Vector3.up * 1.6f, (float)voudinKierros.Laskeutuminen);
+            // Hehku: portaikon yläpää, laskeutuessa portaikkoa alas kaari-ovelle (laskeutumisreitti).
+            hehku.transform.position = Polulla(hehkuPolku, Math.Min(1.0, voudinKierros.Laskeutuminen), false);
             hehku.intensity = (float)voudinKierros.Hehku * 1.4f;
-            // Askeleet holvin yllä (ampumakäytävä ~lattia + 4,1 m, säde ~3,9 m), pysähtyvät pysähdyksessä ja katseessa.
+            // Askeleet holvin yllä ampumakäytävän reittiä (reitti:vouti-1…8), pysähtyvät pysähdyksessä ja katseessa.
             double a = voudinKierros.Vaihe * Math.PI * 2;
-            var ap = voudinKierros.Tila == VoudinTila.Kierros ? keskus + new Vector3((float)Math.Cos(a) * 3.9f, 4.1f, (float)Math.Sin(a) * 3.9f) : hehku.transform.position;
+            var ap = voudinKierros.Tila != VoudinTila.Kierros ? hehku.transform.position
+                : voudinReitti.Count >= 3 ? Polulla(voudinReitti, voudinKierros.Vaihe, true) + Vector3.up * 1.6f
+                : keskus + new Vector3((float)Math.Cos(a) * 3.9f, 4.1f, (float)Math.Sin(a) * 3.9f);
             SeikkailuKuulija.Aseta(voudinAskeleet, ap);
             if (voudinAskeleet.clip == null && SeikkailuVartijat.AskelKlippi != null) voudinAskeleet.clip = SeikkailuVartijat.AskelKlippi;
             bool kavelee = voudinKierros.Tila == VoudinTila.Kierros || voudinKierros.Tila == VoudinTila.Laskeutuu;
@@ -150,29 +202,46 @@ namespace Matkakirja.Natiivi
             SeikkailuAanet.Soita("avain-lukko", kappalainen.position + Vector3.up, 0.8f);   // avain kääntyy repliikin lopussa
             yield return new WaitForSeconds(1.5f);
             lyhty.intensity = 1.6f;
-            // Sisään: pulpetille (reitin puoliväli) ja takaisin; pysähtyy, nuuhkaisee, kohottaa lyhtyä.
-            var sisaan = new List<Vector3> { reunaOvi };
-            if (reitti.Count > 2) sisaan.Add(reitti[reitti.Count / 2]);
+            // Sisään: pulpetille (reitti:kappalainen-paluu-1…4) ja takaisin; luukun ollessa auki muunnelma luukulle (kappalainen-luukku-1…4,
+            // sulkee luukun) ja sieltä pulpetille. Pysähtyy, nuuhkaisee, kohottaa lyhtyä; ottaa kirjan.
+            var ky = SeikkailuKynttilat.Aktiivinen;
+            bool luukulle = ky != null && ky.LuukkuAuki && luukkuReitti.Count > 0;
+            var sisaan = new List<Vector3>(luukulle ? luukkuReitti : paluuReitti);
+            if (sisaan.Count == 0) { sisaan.Add(reunaOvi); if (reitti.Count > 2) sisaan.Add(reitti[reitti.Count / 2]); }
+            var pulpetti = paluuReitti.Count > 0 ? paluuReitti[paluuReitti.Count - 1] : sisaan[sisaan.Count - 1];
             kappalainenLeike = "kavely";
             foreach (var q in sisaan) { yield return Kavele(kappalainen, new List<Vector3> { q }, a => kappalainenAika = a); if (Nahtiinko()) { yield return KappalainenNakee(); yield break; } }
+            if (luukulle)
+            {
+                kappalainenLeike = "tyo"; yield return new WaitForSeconds(0.8f);
+                if (ky.LuukkuAuki) ky.VaihdaLuukku();
+                kappalainenLeike = "kavely";
+                yield return Kavele(kappalainen, new List<Vector3> { pulpetti }, a => kappalainenAika = a);
+                sisaan.Add(pulpetti);
+            }
             kappalainenLeike = "idle";
             for (float t = 0; t < 3f; t += Time.deltaTime) { if (Nahtiinko()) { yield return KappalainenNakee(); yield break; } yield return null; }
+            SeikkailuEsineet.Aktiivinen?.Piilota("kirja");   // kirja lähtee kappalaisen mukana
             kappalainenLeike = "kavely";
-            yield return Kavele(kappalainen, new List<Vector3> { reunaOvi, reunaOvi + (reunaOvi - alttari).normalized * 1.2f }, a => kappalainenAika = a);
+            var ulos = new List<Vector3>(sisaan); ulos.Reverse(); ulos.Add(reunaOvi); ulos.Add(reunaOvi + (reunaOvi - alttari).normalized * 1.2f);
+            foreach (var q in ulos) { yield return Kavele(kappalainen, new List<Vector3> { q }, a => kappalainenAika = a); if (Nahtiinko()) { yield return KappalainenNakee(); yield break; } }
             for (float t = 0; t < 1.2f; t += Time.deltaTime) { lyhty.intensity = Mathf.Lerp(1.6f, 0f, t / 1.2f); yield return null; }
             kappalainen.gameObject.SetActive(false);
             Nyt = Vaihe.Pimea;
             kirjaa?.Invoke("seikkailu: kappalainen lähti kirjan kanssa, ovi lukossa");
         }
 
-        /// <summary>Näkeekö kappalainen: Fogg lyhdyn valopiirissä (2,5 m) tai Foggin liekki palaa (näkyy pääovelle) muualla kuin kaari-oven syvennyksessä.</summary>
+        /// <summary>Näkeekö kappalainen: Fogg lyhdyn valopiirissä (2,5 m; alttarin varjossa kyyryssä vain 1 m) tai Foggin liekki palaa
+        /// (näkyy pääovelle) muualla kuin kaari-oven syvennyksessä.</summary>
         bool Nahtiinko()
         {
             var p = SeikkailuPelaaja.Aktiivinen; if (p == null) return false;
-            float d = Vector3.Distance(p.transform.position, kappalainen.position);
-            bool syvennyksessa = Vector3.Distance(p.transform.position, ovi) < 1.2f;
+            var pp = p.transform.position;
+            float d = Vector3.Distance(pp, kappalainen.position);
+            bool syvennyksessa = Vector3.Distance(pp, syvennys.Value) < 1.0f || Vector3.Distance(pp, kaariOvi.Value) < 0.8f;
+            bool varjossa = varjo is Vector3 v && Vector3.Distance(pp, v) < 0.7f && p.Tila.Tapa == Liiketapa.Hiipiminen;
             var ky = SeikkailuKynttilat.Aktiivinen;
-            return d < LyhtyM || ky != null && ky.Ydin.OmaPalaa && !syvennyksessa;
+            return d < (varjossa ? 1.0f : LyhtyM) || ky != null && ky.Ydin.OmaPalaa && !syvennyksessa;
         }
 
         IEnumerator KappalainenNakee()
@@ -196,7 +265,7 @@ namespace Matkakirja.Natiivi
         bool loydetty;
         void Nosto(string id)
         {
-            if (loydetty || id != "kalkki" && id != "pateeni" && id != "liuskekivi") return;
+            if (loydetty || id != "liinanyytti" && id != "kalkki" && id != "pateeni" && id != "liuskekivi") return;
             loydetty = true;
             kirjaa?.Invoke("seikkailu: löytö: kalkki, pateeni ja liuskekivi");
             var pl = SeikkailuPelaaja.Aktiivinen;
