@@ -797,7 +797,8 @@
   "lisenssi": "CC0 1.0 (https://docs.ambientcg.com/license/)",
   "palvelu": "ambientCG",
   "muokkaukset": [
-   "ARM-pakkaus (R AO, G karheus, B metalli)"
+   "ARM-pakkaus (R AO, G karheus, B metalli)",
+   "Diffuusiin tummat urat putkitiilirivien väliin normaalikartan sivukallistuksesta (luminanssin suhteellinen kontrasti 0,13 → 0,37; Kielletty kaupunki 7.10.2026: rivit eivät erottuneet)"
   ],
   "toisto_m": 6.0,
   "huom": "Proseduraalinen (PBRProcedural); ladattu zip RoofingTiles014A_2K-JPG.zip, Opacity- ja Displacement-kartat jätetty pois.",
@@ -809,8 +810,8 @@
    },
    {
     "polku": "materiaali/lasitettu-tiilikatto/lasitettu-tiilikatto_diff.jpg",
-    "sha256": "7ee18a179cd8ef6ba2b92e62c1197f3ae91f4c212f2e2a7676fb3d65f6dc2a7c",
-    "tavuja": 2706584
+    "sha256": "6a4d8cb99b0cbe103e8d0588cff2f4b9a94aecb60a9bf8f187c352ef3721f82c",
+    "tavuja": 622896
    },
    {
     "polku": "materiaali/lasitettu-tiilikatto/lasitettu-tiilikatto_nor_gl.jpg",
@@ -818,7 +819,7 @@
     "tavuja": 3029975
    }
   ],
-  "keski": 0.15133
+  "keski": 0.09585
  },
  "materiaali/liuskekatto": {
   "nimi": "Roof Slates 03",

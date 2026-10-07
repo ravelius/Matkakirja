@@ -1,7 +1,7 @@
 {
   "rakennus": "kielletty-kaupunki",
-  "hash": "96f1097b21631101",
-  "kansio": "dioraama/kielletty-kaupunki/blender/96f1097b21631101/",
+  "hash": "a630203a6809461e",
+  "kansio": "dioraama/kielletty-kaupunki/blender/a630203a6809461e/",
   "tiedostot": [
     {
       "polku": "kirjasto/materiaali/harmaa-tiilikiveys/harmaa-tiilikiveys_diff-4x4.astcm",
@@ -45,13 +45,13 @@
     },
     {
       "polku": "kirjasto/materiaali/lasitettu-tiilikatto/lasitettu-tiilikatto_diff-4x4.astcm",
-      "sha256": "13555f4b85b9e27418eb55c493c34eddca2b63d1b9c4b639c521a908418a7e22",
+      "sha256": "ca2d7a34fea288f02f7ed642a5b0a449fb07b4a8deb82b7ba2044dfacfcc5a71",
       "tavuja": 5592448
     },
     {
       "polku": "kirjasto/materiaali/lasitettu-tiilikatto/lasitettu-tiilikatto_diff.jpg",
-      "sha256": "7ee18a179cd8ef6ba2b92e62c1197f3ae91f4c212f2e2a7676fb3d65f6dc2a7c",
-      "tavuja": 2706584
+      "sha256": "6a4d8cb99b0cbe103e8d0588cff2f4b9a94aecb60a9bf8f187c352ef3721f82c",
+      "tavuja": 622896
     },
     {
       "polku": "kirjasto/materiaali/lasitettu-tiilikatto/lasitettu-tiilikatto_nor_gl-4x4.astcm",
