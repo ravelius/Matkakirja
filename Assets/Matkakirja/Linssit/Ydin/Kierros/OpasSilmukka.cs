@@ -771,7 +771,8 @@ namespace Matkakirja.Linssit.Kierros
                 // Kysymys ei liikuta kameraa: opas kysyy, ja pelaajan valinta (chat) tulee Toive-kutsuna.
                 // Omistaja (TF 144): opas odottaa pelaajan valintaa — ei oletusvaihtoehtoa eikä esihakua (siltalause täyttää odotuksen).
                 // Omistaja TF 152 (Sydney): kysymys ei katkaise puhetta — se esitetään vasta puheen ja LoppuTaukoS:n jälkeen.
-                if (PuheSoi) { lykattyKysymys = k; return; }
+                // Omistaja TF 162 (linssi → Pariisi): "Lukija aloitti jo latausikkunassa" → kysymys odottaa myös siirtymän loppuun.
+                if (PuheSoi || Siirtymassa) { lykattyKysymys = k; return; }
                 KysyNyt(k);
                 return;
             }
@@ -782,7 +783,7 @@ namespace Matkakirja.Linssit.Kierros
         /// <summary>Kertojan puhe soi (pysähdys tai pelaajan kysymyksen vastaus): workerin kysymys odottaa sen loppuun.</summary>
         public bool PuheSoi => Vaihe == OpasVaihe.Puhuu && (!aaniLoppui || hiljaS < LoppuTaukoS)
             || Vaihe == OpasVaihe.Lentaa && puheAloitettu && !aaniLoppui;
-        /// <summary>Puheen aikana tullut workerin kysymys (esitetään puheen jälkeen; pelaajan toiminta hylkää sen).</summary>
+        /// <summary>Puheen tai siirtymän aikana tullut workerin kysymys (esitetään niiden jälkeen; pelaajan toiminta hylkää sen).</summary>
         OpasKohde lykattyKysymys;
         public bool KysymysOdottaaPuhetta => lykattyKysymys != null;
         /// <summary>Pelaajan kysymyksen vastaus soi: esihaku tehdään vasta sen jälkeen (omistaja TF 152: vastaus katkesi).</summary>
@@ -826,7 +827,7 @@ namespace Matkakirja.Linssit.Kierros
             if (virhe && VirheTauko <= 0) { virhe = false; UusiPyynto(); }
             // Vastaamaton kysymys (simu 18.39: worker kysyi saman 9 kertaa): opas valitsee itse ensimmäisen vaihtoehdon.
             if (OdottaaVastausta && aaniLoppui) kysymysAika += dt;   // odotus kestää pelaajan valintaan asti (omistaja, TF 144)
-            if (lykattyKysymys != null && !PuheSoi) { var lk = lykattyKysymys; lykattyKysymys = null; KysyNyt(lk); }
+            if (lykattyKysymys != null && !PuheSoi && !Siirtymassa) { var lk = lykattyKysymys; lykattyKysymys = null; KysyNyt(lk); }
             if (esihakuPuheenJalkeen && Vaihe == OpasVaihe.Puhuu && !PuheSoi)
             {
                 esihakuPuheenJalkeen = false;

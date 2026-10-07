@@ -369,6 +369,28 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(s.OdottaaVastausta && !s.KysymysOdottaaPuhetta);
         }
 
+        [Testi] static void KysymysOdottaaSiirtymanLoppuun()
+        {
+            // Omistaja TF 162: linssi → Pariisi, workerin kysymys soi latausruudun aikana.
+            var (s, p, puhe) = Pysahdyksella();
+            double edistys = 0.2;
+            s.LatausEdistys = () => edistys;
+            int ennen = p.Count;
+            s.PakotaSiirto = true;
+            s.VaihdaPaikka(48.861, 2.351, "Pariisi");   // kaupungin valinta linssin valikosta
+            for (int i = 0; i < 6; i++) s.Paivita(0.1, _ => 5);
+            Oleta.Tosi(s.Siirtymassa && p.Count > ennen, $"siirtymä käynnissä ja pyyntö lähti ({s.Siirtymassa}, {p.Count - ennen})");
+            var kysyt = new List<string>(); s.Kysyy += k => kysyt.Add(k.Teksti);
+            s.Vastaus(p[^1].n, new OpasKohde { Kysymys = true, Teksti = "Mitä haluaisit nähdä?", Vaihtoehdot = new[] { "a", "b" } });
+            for (int i = 0; i < 30; i++) s.Paivita(0.1, _ => 5);
+            Oleta.Tosi(kysyt.Count == 0 && s.KysymysOdottaaPuhetta, $"ei kysymystä latausruudun aikana ({kysyt.Count}, {s.KysymysOdottaaPuhetta}, p {p.Count}, {s.Vaihe}, siirto {s.Siirtymassa})");
+            edistys = 1.0;
+            for (int i = 0; i < 40 && s.Siirtymassa; i++) s.Paivita(0.1, _ => 5);
+            Oleta.Tosi(!s.Siirtymassa, "siirtymä ohi");
+            for (int i = 0; i < 400 && kysyt.Count == 0; i++) { s.Paivita(0.1, _ => 5); if (s.Vaihe == OpasVaihe.Puhuu) s.AaniLoppui(); }
+            Oleta.Sama(1, kysyt.Count, "kysymys siirtymän (ja puheen) jälkeen");
+        }
+
         [Testi] static void PelaajanToimintaHylkaaLykatynKysymyksen()
         {
             var (s, p, puhe) = Pysahdyksella();
