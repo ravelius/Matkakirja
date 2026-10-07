@@ -491,3 +491,10 @@ Edellinen luovutus on `viesti-siirtoseppa-luovutus-20261002.md` (5.10. osiot 02.
 - 17.56: Päätoimittaja kuittasi historia-juna163 @ 2d19eb49 JO JUNAAN 162 (lukitus 21.15); Natiivisepälle ilmoitettu (+ NUI seikkailu-toiminto,
   LS2 linssiseppa2/e3-nousu = SeikkailuNousu, kutsutaan heijastuksella). Pelikoodari tekee tietokerros-v1 (12 korttia, kenttä lyhyt).
   2bc3ce1f3 V7 valoisuus liekeistä → juna 164.
+- 18.06: Tietokerros e140392b (SeikkailuTietokerros; NUI:n kutsut valmiina cbc92a25 natiivi-ui/seikkailu-tietokerros: TietokorttiAvautui = Pulun
+  ele utelias, NaytaTietokerros = Pulu ilo, kortisto vasta Pulua napauttamalla; tarjous päättyy kun SeikkailuPelaaja.Aktiivinen = null).
+  E3 paikkamerkit vaihdettu LR v44i:hin b4b26a87 (pala d73c80b2): luukku-glb saranalla (95°, yövalo), ikuinen valo -glb, veto kohti
+  ovi:kaari-ovi, paluureitti kappalainen-paluu-1…4 ja luukkumuunnelma (sulkee luukun), voudin askeleet vouti-1…8, hehku laskeutumisreitillä,
+  piilot kaari-oven syvennys + alttarin varjo (kyyryssä), liinanyytti avautuu (kalkki/pateeni/liuskekivi esiin), kirja lähtee kappalaisen mukana.
+  Junahaara siirtoseppa/historia-juna164 @ ad6ebba6 (juna163 + 2bc3ce1f V7 + e140392b + b4b26a87), 845/845, unity-tarkistus 0; kuittaus pyydetty.
+  JATKA TÄSTÄ: kuittaus → Natiiviseppä; sitten pulun vihjeportaat, tallennus V6, ElevenLabs-äänet vain omistajan luvalla.
