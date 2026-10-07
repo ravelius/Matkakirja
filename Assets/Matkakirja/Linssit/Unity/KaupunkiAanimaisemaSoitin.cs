@@ -163,7 +163,7 @@ namespace Matkakirja.Natiivi
             }
             suhina.Taso = (float)(mikseri.Suhina * mikseri.Kokonais);
             for (int ki = kellot.Count - 1; ki >= 0; ki--)
-                if (kellot[ki].Lahde == null) kellot.RemoveAt(ki); else kellot[ki].Lahde.volume = kellot[ki].Perus * kokonais;
+                if (kellot[ki].Lahde == null) kellot.RemoveAt(ki); else kellot[ki].Lahde.volume = kellot[ki].Perus * (float)mikseri.Kokonais;   // väistö, ei maiseman Taso-kerrointa (simu 7.10.: vain +3 dB)
             // Tasatunti: lyönnit hajautettuina kirkoittain (vain kun maisema kuuluu).
             int h = (int)Math.Floor(tunti);
             if (edellinenTunti >= 0 && h != edellinenTunti && kello != null && paalla && k.HasValue)
@@ -219,7 +219,7 @@ namespace Matkakirja.Natiivi
             float kokonais = (float)s.mikseri.Kokonais * Taso;
             foreach (var (viive, kirkko) in KaupunkiAanimaisema.TasatunninLyonnit(lyonteja, 2, 1))
                 s.StartCoroutine(s.Lyo(viive, KelloTaso * (kirkko == 0 ? 1f : 0.6f)));
-            return $"äänimaisema: kello {lyonteja} lyöntiä (taso {kokonais:F2})";
+            return $"äänimaisema: kello {lyonteja} lyöntiä (taso {KelloTaso * s.mikseri.Kokonais:F2})";
         }
 
         // KELLO VÄISTÄÄ PUHETTA (Päätoimittaja 7.10.): lyönnin taso seuraa maiseman kokonaistasoa (väistö −9 dB) koko soinnin ajan,
@@ -230,7 +230,7 @@ namespace Matkakirja.Natiivi
             yield return new WaitForSecondsRealtime((float)viive);
             if (kello == null) yield break;
             var l = gameObject.AddComponent<AudioSource>(); l.spatialBlend = 0; l.clip = kello; l.loop = false;
-            l.volume = perus * (float)mikseri.Kokonais * Taso; l.Play();
+            l.volume = perus * (float)mikseri.Kokonais; l.Play();
             kellot.Add((l, perus));
             Destroy(l, kello.length + 0.5f);
         }
