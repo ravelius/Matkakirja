@@ -101,3 +101,25 @@ export function yhteinenReuna(pov, a3a, a3b) {
   }
   return viivat.filter((v) => v.length > 1);
 }
+
+/**
+ * Admin-1 näkökulman mukaan (Päätoimittaja 7.10.2026, vaihtoehto D): admin-1-aineistosta ei ole POV-versiota.
+ * Natural Earthissa koko Pohjois-Kypros on yksi admin-1-alue (adm0_a3 CYN) ilman piirikuntia. Se liitetään
+ * Kyprokseen yhtenä alueena, jolla on maantieteellinen nimi "Kyproksen pohjoisosa". De jure -piirikuntarajoja
+ * (Kyrenia, Famagustan ja Nikosian pohjoisosat) ei ole PD- tai CC-lisenssillä saatavilla. Wikidata-viite
+ * poistetaan, jottei nimeksi tule "Pohjois-Kypros".
+ */
+export const KYPROS_POHJOINEN = 'Kyproksen pohjoisosa';
+export function nakokulmaAdmin1(ne) {
+  let n = 0;
+  for (const f of ne.features) {
+    const p = f.properties;
+    if (p.adm0_a3 !== 'CYN') continue;
+    Object.assign(p, {
+      adm0_a3: 'CYP', iso_a2: 'CY', admin: 'Cyprus', geonunit: 'Cyprus', gu_a3: 'CYP', sov_a3: 'CYP',
+      name: KYPROS_POHJOINEN, name_alt: null, wikidataid: null, iso_3166_2: 'CY-X-POHJOINEN',
+    });
+    n += 1;
+  }
+  return n;
+}
