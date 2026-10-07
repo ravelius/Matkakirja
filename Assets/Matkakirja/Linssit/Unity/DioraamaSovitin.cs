@@ -502,7 +502,7 @@ namespace Matkakirja.Natiivi
             kelloSiirto = 0;
             kuoriOdotusAlku = -1f; SaapumisOdotus = false; RakennusLatautuu = false; LatausVirhe = null; // näyttämö (ja sen odotuspiilotus) tuhoutuu alla
             // Historiamoottori: seikkailu pois (näyttämön lapset tuhoutuvat; globaalit kuoren leikkaukset ja kävelydata nollataan).
-            SeikkailuVartijat.Poista(); SeikkailuVene.Poista(); SeikkailuPelaaja.Poista(); SeikkailuRepliikit.Poista(); SeikkailuEsineet.Poista(); SeikkailuKynttilat.Poista(); SeikkailuKappeli.Poista(); SeikkailuAanet.Poista(); SeikkailuTallentaja.Poista(); SeikkailuVihjeet.Poista(); SeikkailuKavely.Pura();
+            SeikkailuVartijat.Poista(); SeikkailuVene.Poista(); SeikkailuPelaaja.Poista(); SeikkailuRepliikit.Poista(); SeikkailuEsineet.Poista(); SeikkailuKynttilat.Poista(); SeikkailuKappeli.Poista(); SeikkailuAanet.Poista(); SeikkailuTallentaja.Poista(); SeikkailuVihjeet.Poista(); SeikkailuValot.Poista(); SeikkailuKavely.Pura();
             SeikkailuEsineet.Kolahti -= KokkiKuuleeKolahduksen;
             cm?.SeikkailuPois(); PelattavaPalaPyydetty = false; KameraVapaa = false;
             if (DioraamaLevyvalimuisti.TestiOsoitin == PelattavaPalaHash)
@@ -1665,6 +1665,14 @@ namespace Matkakirja.Natiivi
             }
             // "poikki seikkailu botti [alku-N]": vianselvitys (pelattavuusmalli 11, EI ennen junaa/TF:ää) — kävelee reitti:pelaaja-N -merkit
             // napautuskävelyllä, kirjaa saapumiset, kiinnijäämiset ja ajat sekä lopuksi Natiivi-UI:n Tekstivahdin (ei näkyvää tekstiä).
+            // "poikki valot volumetriset 0|1 | liekit 0|1": laatutaso (PT 7.10.: volumetriset Mac + M-iPad, liekit kaikilla).
+            if (mita == "valot")
+            {
+                bool p1 = osat.Length <= 3 || osat[3] != "0";
+                if (arvo == "volumetriset") SeikkailuValot.Aseta(volumetriset: p1); else if (arvo == "liekit") SeikkailuValot.Aseta(liekit: p1);
+                o.Kirjaa($"poikki: valot volumetriset {SeikkailuValot.Volumetriset}, liekit {SeikkailuValot.Liekit} (seuraavasta avauksesta)");
+                return;
+            }
             if (mita == "seikkailu" && arvo == "botti")
             {
                 int alkuN = osat.Length > 3 && int.TryParse(osat[3], out int an) ? an : 1;

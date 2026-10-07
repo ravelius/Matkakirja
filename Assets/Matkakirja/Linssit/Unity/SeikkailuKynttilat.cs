@@ -43,6 +43,10 @@ namespace Matkakirja.Natiivi
             foreach (var l in k.liekit) paikat.Add((l.Paikka.x, l.Paikka.y, l.Paikka.z));
             k.ydin = new Kynttilat(paikat);
             k.leivottu = rakennus3D?.LeivottuMateriaali(tilaId);
+            // Candle VFX -liekit tilan kynttilöihin (PT 7.10.: kevyet, kaikilla laitteilla); oma 3D-liekki piiloon, sammutus kuten ennen.
+            foreach (var l in k.liekit)
+                if (l.Go != null && SeikkailuValot.Liekki(l.Go.transform, l.Go.layer) != null)
+                    foreach (var r in l.Go.GetComponents<MeshRenderer>()) r.enabled = false;
             if (k.leivottu != null && k.leivottu.HasProperty(IdKirkkaus)) k.kirkkausAlku = k.leivottu.GetFloat(IdKirkkaus);
             Aktiivinen = k;
             kirjaa?.Invoke($"seikkailu: kynttilät {tilaId}: {k.ydin.Maara} kpl, leivottu valo {(k.leivottu != null ? "kyllä" : "ei")}");
@@ -68,7 +72,7 @@ namespace Matkakirja.Natiivi
         public Vector3 Luukku { get; private set; }
         public Vector3 Portaikko { get; private set; }
         public bool Paikkamerkit { get; private set; }
-        Light ikuinenValoLight, yovalo; AudioSource tuuli; Transform sarana; float saranaKulma;
+        Light ikuinenValoLight, yovalo, saede; AudioSource tuuli; Transform sarana; float saranaKulma;
         readonly List<UnityEngine.Object> luodut = new List<UnityEngine.Object>();
         /// <summary>Luukun avauskulma (Unity y, astetta): glTF:n negatiivinen y-kierto aukaisee sisään kappeliin.</summary>
         public const float LuukkuAuki0 = 95f;
@@ -107,6 +111,9 @@ namespace Matkakirja.Natiivi
             yg.transform.position = Luukku + sisaan * 0.6f;
             yovalo = yg.AddComponent<Light>(); yovalo.type = LightType.Point; yovalo.range = 3f; yovalo.color = new Color(0.55f, 0.65f, 0.9f);
             yovalo.intensity = 0f; yovalo.shadows = LightShadows.None;
+            // Kuunsäde luukusta (volumetrinen, laatutason takana): kappeliin päin ja alas, näkyy kun luukku on auki.
+            saede = SeikkailuValot.Saede(transform, Luukku + sisaan * 0.1f, sisaan + Vector3.down * 0.7f, new Color(0.6f, 0.7f, 0.95f), 1.2f, 7f, 38f, gameObject.layer);
+            if (saede != null) saede.gameObject.SetActive(false);
             kirjaa?.Invoke($"seikkailu: kappeli: ikuinen valo {IkuinenValo}, luukku {Luukku}{(Paikkamerkit ? " (paikkamerkit)" : "")}");
         }
 
@@ -214,6 +221,8 @@ namespace Matkakirja.Natiivi
             saranaKulma = Mathf.MoveTowards(saranaKulma, LuukkuAuki ? LuukkuAuki0 : 0f, LuukkuAuki0 / 0.8f * Time.deltaTime);
             if (sarana != null) sarana.localRotation = Quaternion.Euler(0f, saranaKulma, 0f);
             if (yovalo != null) yovalo.intensity = 0.45f * saranaKulma / LuukkuAuki0;
+            if (saede != null && saede.gameObject.activeSelf != saranaKulma > 1f) saede.gameObject.SetActive(saranaKulma > 1f);
+            if (saede != null) saede.intensity = 1.2f * saranaKulma / LuukkuAuki0;
             var p = SeikkailuPelaaja.Aktiivinen;
             bool oma = ydin.OmaPalaa && p != null;
             if (oma)
