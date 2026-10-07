@@ -1,3 +1,20 @@
+# TILANNE 7.10. klo 13.1x (TAUKO 13.45–15.00)
+
+- **WORLDVIEW KUITATTU (PT 13.0x, koko _swe).** PR https://github.com/ravelius/Matkakirja/pull/4140 (haara karttaseppa-raja-worldview).
+  Vientipyyntö Julkaisijalle 13.0x:
+  1) `_valmiit/raja-worldview-vienti-20261007` (--kuiva ok).
+  2) Tuotannon `julisteet/pyramidi/pyramidi.json`:n viivataso-kenttä = `pyramidi-poltto/worldview-2026-10-07/viivataso-2026-10-07.json`.
+  3) `_valmiit/natiivi-maarajat-vienti-20261007` (.geojson-MIME puuttuu vie-paketti.sh:sta).
+  4) PR #4140:n merge vientien jälkeen.
+  LS2:lle lähetetty 13.0x vakiot junaan 161 (KorkeusVersio/WebVersio 2026-10-07-swe(-korkeus), Maaraja-polut 2026-10-07).
+  Kun Julkaisija ilmoittaa viennin valmistuneen: viesti LS2:lle, että sarjat ovat ämpärissä.
+- **SEURAAVA TYÖ (PT): admin-1 CYP.** Kyrenia omaksi alueekseen, pohjoiset osat Famagustan ja Nikosian alueisiin, Kyrenian sisältö Sisältökirjurille.
+  MAR ja SOM myöhemmin (VAIN EUROOPPA). Tarkista lisäksi, että maahaku käyttää admin-0:aa (worldview) eikä maakuntadata ohita sitä.
+  Lähteet: `tools/vienti/maakuntarajat.json.gz` (NE admin-1, CYP 5 aluetta), `tools/tee-maakuntavektorit.mjs`, `tools/krim-ukrainalle.mjs` (admin-1-malli: krimUkrainalleAdmin1).
+- **Talvi2** noin 150/169, kevät rivit 13–17 perässä (irralliset, jatkuvat tauon yli). **Syksyn vienti** Julkaisijalla (51 109 / 57 630 klo 13.0x).
+
+---
+
 # TILANNE 7.10. klo 13.0x
 
 - **WORLDVIEW-KORJAUS (PT 7.10., korkea prioriteetti), odottaa PT:n kuittausta, EI VIETY.** Juurisyy: natiivin
