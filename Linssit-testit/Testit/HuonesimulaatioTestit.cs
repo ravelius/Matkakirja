@@ -61,7 +61,7 @@ namespace Matkakirja.Linssit.Testit
         /// <summary>Ajaa reitin; palauttaa (kiinnijäämiset, aika s, varoitukset ennen kiinniottoa kunnossa).</summary>
         static (int Kiinni, double Aika, bool Varoitettu, double Sujuva) Aja(bool valossa, double maxS, int pisteita = int.MaxValue, bool tarjottimella = false)
         {
-            bool tarjotin = false, annettu = false;
+            bool tarjotin = false, annettu = false; double armo = 0;
             var d = Data(); var vartijat = Vartijat(d); var reitti = PelaajanReitti(d);
             int kaikki = reitti.Count;
             if (reitti.Count > pisteita) reitti.RemoveRange(pisteita, reitti.Count - pisteita);
@@ -97,6 +97,24 @@ namespace Matkakirja.Linssit.Testit
                     if (kauko != null) { harhautus = new List<Aanilahde> { new Aanilahde(kauko.X, kauko.Z, 12, qosa) }; heitetty = t; }
                 }
                 double vauhti = 0;
+                // Väistö: valveilla oleva vartija (ei kulkulupaa) tulee kohti alle 3 m:ssä → pelaaja perääntyy edelliseen pisteeseen.
+                bool vaisto = false;
+                if (!valossa && i > 1)
+                    foreach (var v in vartijat)
+                    {
+                        if (v.Aivot.Torkkuu || !v.Aivot.Profiili.Havaitsee || v.Aivot.Riita > 0 || tarjotin && v.Aivot.Profiili.TarjotinLupa || Math.Abs(v.Y - py) > 2) continue;
+                        double dx = px - v.X, dz = pz - v.Z; double e = Math.Abs(((Math.Atan2(dx, dz) * 180 / Math.PI - v.Aivot.Yaw) % 360 + 540) % 360 - 180);
+                        if (dx * dx + dz * dz < 9 && e < 90) vaisto = true;
+                    }
+                if (vaisto)
+                {
+                    var r0 = reitti[i - 1]; var r1 = reitti[Math.Max(0, i - 2)];
+                    var kohde = (r0.X - px) * (r0.X - px) + (r0.Z - pz) * (r0.Z - pz) < 0.04 ? r1 : r0;
+                    double dx = kohde.X - px, dz = kohde.Z - pz, dd = Math.Sqrt(dx * dx + dz * dz);
+                    if (dd > 0.05) { double a = Math.Min(dd, hiipien * dt); px += dx / dd * a; pz += dz / dd * a; vauhti = hiipien; }
+                    if (dd < 0.1 && kohde.Equals(r1) && i > 1) i--;
+                    odota = true;
+                }
                 if (!odota)
                 {
                     double dx = q.X - px, dz = q.Z - pz, dd = Math.Sqrt(dx * dx + dz * dz);
@@ -118,12 +136,13 @@ namespace Matkakirja.Linssit.Testit
                     var aanet = new List<Aanilahde>();
                     if (harhautus != null) foreach (var h in harhautus) { double r = Askelaani.Kuuluvuus(d, h.KuuluvuusM, h.Osa, Askelaani.Osa(d, v.X, v.Y, v.Z)); if (r > 0) aanet.Add(new Aanilahde(h.X, h.Z, r)); }
                     if (sade > 0) { double r = Askelaani.Kuuluvuus(d, sade, posa, Askelaani.Osa(d, v.X, v.Y, v.Z)); if (r > 0 && Math.Abs(v.Y - py) < 3) aanet.Add(new Aanilahde(px, pz, r)); }
-                    var s = new VartijanSyote { VartijaX = v.X, VartijaZ = v.Z, PelaajaX = px, PelaajaZ = pz, NakolinjaVapaa = Nakyy(d, v, px, py, pz), Valoisuus = valossa ? 1.0 : 0.25, Hiipii = !valossa && !tarjotin, PelaajaVauhti = vauhti, Aanet = aanet, Tarjotin = tarjotin };
+                    var s = new VartijanSyote { VartijaX = v.X, VartijaZ = v.Z, PelaajaX = px, PelaajaZ = pz, NakolinjaVapaa = Nakyy(d, v, px, py, pz), Piilossa = armo > 0, Valoisuus = valossa ? 1.0 : 0.25, Hiipii = !valossa && !tarjotin, PelaajaVauhti = vauhti, Aanet = aanet, Tarjotin = tarjotin };
                     v.Aivot.Paivita(dt, s);
                     if (v.Aivot.Tila == VartijanTila.Kiinni)
                     {
                         kiinni++; if (!v.Aivot.Varoitettu) varoitettu = false;
                         px = reitti[Math.Max(0, i - 1)].X; py = reitti[Math.Max(0, i - 1)].Y; pz = reitti[Math.Max(0, i - 1)].Z;   // tarkistuspisteeseen
+                        armo = 4;
                         foreach (var w in vartijat) w.Aivot.Nollaa(w.X, w.Z, valpas: true);
                         break;
                     }
@@ -135,7 +154,7 @@ namespace Matkakirja.Linssit.Testit
                     }
                 }
                 if (kiinni > 0 && valossa) break;
-                t += dt;
+                t += dt; armo -= dt;
             }
             if (i < reitti.Count) { Console.WriteLine($"      jumissa pisteessä {i + 1} ({px:F1}, {py:F1}, {pz:F1})"); foreach (var v in vartijat) Console.WriteLine($"        {v.Aivot.Profiili.Nimi} ({v.X:F1}, {v.Y:F1}, {v.Z:F1}) {v.Aivot.Tila} torkkuu {v.Aivot.Torkkuu} mittari {v.Aivot.Mittari:F2}"); }
             return (kiinni, i >= reitti.Count ? t : double.PositiveInfinity, varoitettu, sujuva);
@@ -151,8 +170,8 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(aika <= 2 * sujuva, $"varjoreitti ajassa ({aika:F0} s, sujuva {sujuva:F0} s)");
         }
 
-        // Koko pala (tarjottimella: true) jää tähän, kun ajuri osaa väistää pihan vartijaa: partio:piha kulkee 0,5 m:n päästä
-        // reitti:pelaaja-9 ja -13 -pisteistä, ja ajuri jää tarkistuspisteessä hänen tielleen (8.10. työ).
+        // Koko pala (tarjottimella: true) lisätään testiksi, kun ajuri ajoittaa keittiön: nyt pihan vartija (partio 0,5 m reitistä
+        // reitti:pelaaja-9/-13) väistyy, mutta kokki näkee oven kohdalla (pelaaja-10/-11 kokin reitillä). Tila 7.10.: 52 kiinnijääntiä.
 
         [Testi] static void ValoreittiKiinniVaroituksen()
         {
