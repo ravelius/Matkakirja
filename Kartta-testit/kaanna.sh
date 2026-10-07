@@ -29,6 +29,7 @@ LAHTEET="
 ../Assets/Matkakirja/Kartta/Deltasarja.cs
 ../Assets/Matkakirja/Kartta/ErikoismallinAlla.cs
 ../Assets/Matkakirja/Kartta/ErikoisnostoMitat.cs
+../Assets/Matkakirja/Kartta/KaupunkiPalloMitat.cs
 ../Assets/Matkakirja/Kartta/EtusivunLento.cs
 ../Assets/Matkakirja/Kartta/Geojson.cs
 ../Assets/Matkakirja/Kartta/Horisonttiusva.cs
