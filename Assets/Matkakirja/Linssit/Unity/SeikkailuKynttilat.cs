@@ -100,6 +100,7 @@ namespace Matkakirja.Natiivi
             var t = ydin.Valitse(c.x, c.y, c.z);
             if (t.Toiminto == KynttilaToiminto.Ei) return false;
             ydin.Tee(t);
+            if (t.Toiminto == KynttilaToiminto.SammutaOma || t.Toiminto == KynttilaToiminto.SammutaTilan) SeikkailuAanet.Soita("puhallus", c, 0.6f);
             kirjaa?.Invoke($"seikkailu: kynttilä {t.Toiminto} {t.Indeksi} (palavia {ydin.Palavia}/{ydin.Maara}, oma {(ydin.OmaPalaa ? "palaa" : "ei")})");
             return true;
         }

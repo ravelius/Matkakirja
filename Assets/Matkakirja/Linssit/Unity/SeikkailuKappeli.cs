@@ -106,6 +106,8 @@ namespace Matkakirja.Natiivi
             };
             tavallinenAani = kovaAani = false;
             voudinKierros.Paivita(Time.deltaTime, s);
+            // Sydämenlyönti voudin pysähtyessä, laskeutuessa ja katsoessa sekä kappalaisen paluun aikana (käsikirjoitus kohdat 3 ja 7).
+            if (p != null) SeikkailuAanet.Silmukka("sydan", voudinKierros.Sydan || Nyt == Vaihe.Paluu, p.transform.position + Vector3.up * 1.2f, 0.8f);
             if (voudinKierros.Tila != voudinEdellinen) { kirjaa?.Invoke($"seikkailu: vouti {voudinEdellinen} → {voudinKierros.Tila}"); voudinEdellinen = voudinKierros.Tila; }
             // Hehku: portaikon yläpää, laskeutuessa liukuu kaari-ovelle.
             hehku.transform.position = Vector3.Lerp(portaikkoYla, ovi + Vector3.up * 1.6f, (float)voudinKierros.Laskeutuminen);
@@ -143,7 +145,9 @@ namespace Matkakirja.Natiivi
             lyhty.enabled = true; lyhty.intensity = 0f;
             for (float t = 0; t < 2f; t += Time.deltaTime) { lyhty.intensity = Mathf.Lerp(0f, 0.8f, t / 2f); yield return null; }
             double kesto = SeikkailuRepliikit.Aktiivinen?.Soita("kappalainen-2", kappalainen) ?? 0;
-            yield return new WaitForSeconds((float)Math.Max(1.0, kesto) + 1.5f);
+            yield return new WaitForSeconds((float)Math.Max(1.0, kesto));
+            SeikkailuAanet.Soita("avain-lukko", kappalainen.position + Vector3.up, 0.8f);   // avain kääntyy repliikin lopussa
+            yield return new WaitForSeconds(1.5f);
             lyhty.intensity = 1.6f;
             // Sisään: pulpetille (reitin puoliväli) ja takaisin; pysähtyy, nuuhkaisee, kohottaa lyhtyä.
             var sisaan = new List<Vector3> { reunaOvi };
@@ -194,6 +198,8 @@ namespace Matkakirja.Natiivi
             if (loydetty || id != "kalkki" && id != "pateeni" && id != "liuskekivi") return;
             loydetty = true;
             kirjaa?.Invoke("seikkailu: löytö: kalkki, pateeni ja liuskekivi");
+            var pl = SeikkailuPelaaja.Aktiivinen;
+            if (pl != null) { SeikkailuAanet.Soita("liina-avaus", pl.transform.position + Vector3.up, 0.8f); SeikkailuAanet.Soita("hopea-kilahdus", pl.transform.position + Vector3.up * 1.1f, 0.7f); }
             var t = typeof(SeikkailuKappeli).Assembly.GetType("Matkakirja.Natiivi.SeikkailuTapit");
             var m = t?.GetMethod("NaytaLoyto", System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Static);
             if (m == null) { kirjaa?.Invoke("seikkailu: löytö: SeikkailuTapit.NaytaLoyto puuttuu"); return; }
@@ -265,6 +271,7 @@ namespace Matkakirja.Natiivi
                     kappalainenLeike = "tyo"; KatsoKohti(kappalainen, kohde);
                     yield return new WaitForSeconds(SammutusS * 0.5f);
                     ky.Ydin.Aseta(i, false);
+                    SeikkailuAanet.Soita("sammutin", kohde + Vector3.up * 1.0f, 0.7f);
                     yield return new WaitForSeconds(SammutusS * 0.5f);
                 }
             }
@@ -272,6 +279,7 @@ namespace Matkakirja.Natiivi
             kappalainenLeike = "kavely";
             var takaisin = new List<Vector3>(reitti); takaisin.Reverse();
             yield return Kavele(kappalainen, takaisin, a => kappalainenAika = a);
+            SeikkailuAanet.Soita("avain-lukko", kappalainen.position + Vector3.up, 0.8f);   // lukitsee pääoven ulkopuolelta
             for (float t = 0; t < 1.5f; t += Time.deltaTime) { lyhty.intensity = Mathf.Lerp(1.6f, 0f, t / 1.5f); yield return null; }
             kappalainen.gameObject.SetActive(false);
             Nyt = Vaihe.Pimea; pimeaAlku = Time.time;

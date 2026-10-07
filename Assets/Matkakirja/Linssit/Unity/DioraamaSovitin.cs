@@ -488,7 +488,7 @@ namespace Matkakirja.Natiivi
             kelloSiirto = 0;
             kuoriOdotusAlku = -1f; SaapumisOdotus = false; RakennusLatautuu = false; LatausVirhe = null; // näyttämö (ja sen odotuspiilotus) tuhoutuu alla
             // Historiamoottori: seikkailu pois (näyttämön lapset tuhoutuvat; globaalit kuoren leikkaukset ja kävelydata nollataan).
-            SeikkailuVartijat.Poista(); SeikkailuVene.Poista(); SeikkailuPelaaja.Poista(); SeikkailuRepliikit.Poista(); SeikkailuEsineet.Poista(); SeikkailuKynttilat.Poista(); SeikkailuKappeli.Poista(); SeikkailuKavely.Pura();
+            SeikkailuVartijat.Poista(); SeikkailuVene.Poista(); SeikkailuPelaaja.Poista(); SeikkailuRepliikit.Poista(); SeikkailuEsineet.Poista(); SeikkailuKynttilat.Poista(); SeikkailuKappeli.Poista(); SeikkailuAanet.Poista(); SeikkailuKavely.Pura();
             SeikkailuEsineet.Kolahti -= KokkiKuuleeKolahduksen;
             cm?.SeikkailuPois(); PelattavaPalaPyydetty = false;
             if (DioraamaLevyvalimuisti.TestiOsoitin == PelattavaPalaHash)
@@ -1025,6 +1025,7 @@ namespace Matkakirja.Natiivi
                 yield return q.SendWebRequest();
                 if (q.result == UnityEngine.Networking.UnityWebRequest.Result.Success) klippi = UnityEngine.Networking.DownloadHandlerAudioClip.GetContent(q);
             }
+            SeikkailuAanet.Luo(nayttamo.transform, MediaJuuri + "/seikkailu/" + RakennusId + "/aanet-e3-v1/manifest.json", o.Kirjaa);
             SeikkailuKappeli.Luo(nayttamo.transform, rakennus, nayttamo.Hahmot3D, klippi, o.Kirjaa);
             var glbt = new List<string>();
             nayttamo.Hahmot3D?.IrrallistenGlb(glbt);

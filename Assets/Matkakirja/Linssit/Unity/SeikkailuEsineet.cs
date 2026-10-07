@@ -145,6 +145,7 @@ namespace Matkakirja.Natiivi
                 {
                     // Käsikirjoitus vaihe 9: kolme napautusta veitsellä kiveä kohden; jokainen liikauttaa kiveä.
                     lahin.Napautuksia++;
+                    SeikkailuAanet.Soita("raapaisu", lahin.Go.transform.position, 0.8f, UnityEngine.Random.Range(0.92f, 1.08f));
                     Raapaistiin?.Invoke();
                     kirjaa?.Invoke($"seikkailu: raapaisu {lahin.Id} ({lahin.Napautuksia}/{IrrotusNapautukset})");
                     if (lahin.Napautuksia >= IrrotusNapautukset) StartCoroutine(Irrota(lahin));
@@ -195,9 +196,11 @@ namespace Matkakirja.Natiivi
         IEnumerator Irrota(Esine e)
         {
             e.Irrotettu = true;
+            SeikkailuAanet.Soita("kivi-irtoaa", e.Go.transform.position, 0.8f);
             var alku = e.Go.transform.position; var loppu = alku + e.Ulos * 0.3f;
             for (float t = 0; t < 1f; t += Time.deltaTime / 1.2f) { if (e.Go == null) yield break; e.Go.transform.position = Vector3.Lerp(alku, loppu, t * t * (3 - 2 * t)); yield return null; }
             e.Rb.isKinematic = false; e.Rb.linearVelocity = e.Ulos * 0.4f;
+            StartCoroutine(LaskuAani(e));
             kirjaa?.Invoke($"seikkailu: irrotettu {e.Id} (jäljellä {esineet.FindAll(x => x.Laji == Laji.Irrotettava && !x.Irrotettu).Count})");
         }
 
@@ -207,6 +210,12 @@ namespace Matkakirja.Natiivi
             foreach (var k in esineet)
                 if (k.Laji == Laji.Irrotettava && !k.Irrotettu && k.Go != null && (k.Go.transform.position - e.Go.transform.position).sqrMagnitude < 1f) return true;
             return false;
+        }
+
+        IEnumerator LaskuAani(Esine e)
+        {
+            yield return new WaitForSeconds(0.45f);
+            if (e.Go != null) SeikkailuAanet.Soita("kivi-lasku", e.Go.transform.position, 0.7f);
         }
 
         IEnumerator Liikahda(Esine e)
@@ -228,7 +237,8 @@ namespace Matkakirja.Natiivi
         void Koputa(SeikkailuPelaaja p)
         {
             var c = p.transform.position + Vector3.up * 1.2f + p.Hahmo.forward * 0.4f;
-            if (OnttoKlippi != null)
+            if (SeikkailuAanet.Aktiivinen != null && SeikkailuAanet.Aktiivinen.Valmis) SeikkailuAanet.Soita("koputus-ontto", c);
+            else if (OnttoKlippi != null)
             {
                 var a = SeikkailuKuulija.Lahde("Koputus", 1.5f, 15f); SeikkailuKuulija.Aseta(a, c);
                 a.clip = OnttoKlippi; a.pitch = 0.75f; a.Play(); Destroy(a.gameObject, OnttoKlippi.length / 0.75f + 0.2f);
@@ -243,7 +253,8 @@ namespace Matkakirja.Natiivi
             e.Kuului = true;
             SeikkailuVartijat.Aani(kohta, KuuluuM);
             Kolahti?.Invoke(kohta);
-            if (KolahdusKlippi != null)
+            if (e.Laji == Laji.Irrotettava || e.Id.StartsWith("kivi", StringComparison.Ordinal)) SeikkailuAanet.Soita("kivi-kolahdus", kohta);
+            else if (KolahdusKlippi != null)
             {
                 var a = SeikkailuKuulija.Lahde("Kolahdus:" + e.Id, 2f, 30f);
                 SeikkailuKuulija.Aseta(a, kohta);
