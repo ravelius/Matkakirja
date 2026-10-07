@@ -333,6 +333,7 @@ namespace Matkakirja.Natiivi
         public void PidaMaski()
         {
             if (auki && kamera != null && kamera.cullingMask != 1 << Kerros) kamera.cullingMask = 1 << Kerros;
+            if (auki && kamera != null) omat.Kamera(kamera.transform.position);
             Muistivahti();
             PaivitaKarkea();
             SeuraaTarkentumista();

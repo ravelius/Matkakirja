@@ -65,11 +65,12 @@ namespace Matkakirja.Natiivi
             t = new float[n * 3]; r = new float[n * 4]; s = new float[n * 3];
             soutu = malli.Animaatio("soutu");
             IstuinSoutaja = Solmu("istuin_soutaja");
-            // Kamera perässä: katse keulaan (glTF keula +z → Unityssa paikallinen −z), hieman alas.
-            var kp = Solmu("kamera_pera") ?? juuri.transform;
+            // Kamera perässä: kamera_pera-solmu on glTF-kamera (katse solmun −z:aan, solmu kierretty 180° keulaan päin); z-peilattuna
+            // Unityssa katse on solmun +z, joten paikallinen kierto on vain kallistus alas (v44b-ajo 7.10.: LookRotation(back) katsoi taakse).
+            var kp = Solmu("kamera_pera");
             var cg = new GameObject("CM vene") { layer = kerros };
-            cg.transform.SetParent(kp, false);
-            cg.transform.localRotation = Quaternion.LookRotation(Vector3.back) * Quaternion.Euler(6f, 0f, 0f);
+            cg.transform.SetParent(kp ?? juuri.transform, false);
+            cg.transform.localRotation = (kp != null ? Quaternion.identity : Quaternion.LookRotation(Vector3.back)) * Quaternion.Euler(6f, 0f, 0f);
             Kamera = cg.AddComponent<CinemachineCamera>();
             var lens = LensSettings.Default; lens.FieldOfView = 52f; lens.NearClipPlane = 0.1f; lens.FarClipPlane = 4000f;
             Kamera.Lens = lens;

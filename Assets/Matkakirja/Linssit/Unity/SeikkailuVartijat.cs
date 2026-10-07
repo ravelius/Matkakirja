@@ -29,13 +29,20 @@ namespace Matkakirja.Natiivi
             public Vartija Aivot; public NavMeshAgent Agentti; public string Osa;
             public double KavelyAika; public bool Kavelee; public Vector3 Kohde = new Vector3(float.NaN, 0, 0);
             public VartijanTila EdellinenTila;
+            public AudioSource Askeleet;
+            public float RepliikkiAsti; public int RepliikkiLaskuri;
         }
+        /// <summary>Askeläänen klippi (rakennus.json aanet askel-kivi); SeikkailuVartijat.Askeleet asettaa.</summary>
+        public static AudioClip AskelKlippi;
+        /// <summary>Tilojen liekit valoisuuden lähteenä (Sovitin asettaa).</summary>
+        public static DioraamaLiekit Liekit;
 
         readonly List<V> vartijat = new List<V>();
         NavMeshDataInstance navi; NavMeshData data;
         DioraamaHahmot3D hahmot;
         Action<string> kirjaa;
-        Vector3 tarkistus; bool tarkistusAsetettu;
+        Vector3 tarkistus; SeikkailuPelaaja tarkistusPelaaja;
+        float armoAsti = -1f; const float ArmoS = 4f;
         double sykliMs = 0.955;
 
         public int Maara => vartijat.Count;
@@ -74,7 +81,8 @@ namespace Matkakirja.Natiivi
                 ag.radius = 0.3f; ag.height = 1.8f; ag.baseOffset = 0f; ag.angularSpeed = 360f; ag.acceleration = 6f;
                 ag.stoppingDistance = 0.25f; ag.autoBraking = true; ag.speed = (float)Vartija.KavelyMs;
                 ag.obstacleAvoidanceType = ObstacleAvoidanceType.LowQualityObstacleAvoidance;
-                var v = new V { Aivot = new Vartija(pisteet), Agentti = ag, Osa = kv.Key };
+                var v = new V { Aivot = new Vartija(pisteet), Agentti = ag, Osa = kv.Key, Askeleet = SeikkailuKuulija.Lahde("Askeleet:" + kv.Key, 2f, 28f) };
+                v.Askeleet.loop = true; v.Askeleet.volume = 0.9f;
                 sv.vartijat.Add(v);
                 hahmot?.LisaaIrrallinen(rakennus, Henkilo, vg.transform, () => (v.Kavelee ? "kavely" : "idle", v.KavelyAika));
             }
@@ -108,7 +116,7 @@ namespace Matkakirja.Natiivi
         {
             float dt = Mathf.Min(Time.unscaledDeltaTime, 0.05f);
             var p = SeikkailuPelaaja.Aktiivinen;
-            if (p != null && !tarkistusAsetettu) { tarkistus = p.transform.position; tarkistusAsetettu = true; }
+            if (p != null && p != tarkistusPelaaja) { tarkistus = p.transform.position; tarkistusPelaaja = p; }   // uusi pelaaja = uusi tarkistuspiste
             var aanet = new List<Aanilahde>(jono); jono.Clear();
             if (p != null)
             {
@@ -123,16 +131,26 @@ namespace Matkakirja.Natiivi
                 var ag = v.Agentti; if (ag == null || !ag.isOnNavMesh) continue;
                 var vp = ag.transform.position;
                 var s = new VartijanSyote { VartijaX = vp.x, VartijaZ = vp.z, Valoisuus = ValoisuusOletus, Aanet = aanet };
+                // V7: valoisuus tilojen liekeistä (tulisija, soihdut, kynttilät): pimeässä nurkassa vartija näkee vain lähelle.
+                if (p != null && Liekit != null) s.Valoisuus = Liekit.Valoisuus(p.transform.position + Vector3.up * 1.0f);
+                // E3: kynttilöiden huoneessa valoisuus kynttilöistä ja omasta kynttilästä (pimeässä vartija näkee vain lähelle).
+                var ky = SeikkailuKynttilat.Aktiivinen;
+                if (p != null && ky != null && ky.Lahella(p.transform.position)) s.Valoisuus = ky.Valoisuus(p.transform.position + Vector3.up, p.transform.position + Vector3.up);
                 if (p != null)
                 {
                     var pp = p.transform.position;
                     s.PelaajaX = pp.x; s.PelaajaZ = pp.z; s.Hiipii = p.Tila.Tapa == Liiketapa.Hiipiminen;
                     s.NakolinjaVapaa = Nakolinja(vp + Vector3.up * 1.6f, pp + Vector3.up * 1.2f);
-                    s.Piilossa = piilossa;
+                    s.Piilossa = piilossa || Time.unscaledTime < armoAsti;   // armonaika tarkistuspisteen jälkeen
                 }
                 else { s.PelaajaX = vp.x + 1000; s.PelaajaZ = vp.z; }
                 v.Aivot.Paivita(dt, s);
-                if (v.Aivot.Tila != v.EdellinenTila) { kirjaa?.Invoke($"seikkailu: vartija {v.Osa} {v.EdellinenTila} → {v.Aivot.Tila} (mittari {v.Aivot.Mittari:F2})"); v.EdellinenTila = v.Aivot.Tila; }
+                if (v.Aivot.Tila != v.EdellinenTila)
+                {
+                    kirjaa?.Invoke($"seikkailu: vartija {v.Osa} {v.EdellinenTila} → {v.Aivot.Tila} (mittari {v.Aivot.Mittari:F2})");
+                    Repliikki(v, v.EdellinenTila, v.Aivot.Tila, s.NakolinjaVapaa && v.Aivot.Mittari > 0);
+                    v.EdellinenTila = v.Aivot.Tila;
+                }
                 if (v.Aivot.Tila == VartijanTila.Kiinni) { Kiinni(v); break; }
                 var kohde = new Vector3((float)v.Aivot.KohdeX, vp.y, (float)v.Aivot.KohdeZ);
                 if (v.Aivot.Vauhti > 0)
@@ -150,9 +168,34 @@ namespace Matkakirja.Natiivi
                 }
                 float v2 = new Vector2(ag.velocity.x, ag.velocity.z).magnitude;
                 v.Kavelee = v2 > 0.15f;
+                // Askeleet vartijan jaloista kuulokehyksessä (kuuluvat vasemmalta/oikealta kameran suunnasta), tahti nopeuden mukaan.
+                var aa = v.Askeleet;
+                if (aa != null)
+                {
+                    SeikkailuKuulija.Aseta(aa, ag.transform.position + Vector3.up * 0.1f);
+                    if (aa.clip == null && AskelKlippi != null) aa.clip = AskelKlippi;
+                    if (v.Kavelee && aa.clip != null) { aa.pitch = Mathf.Clamp(0.85f + 0.25f * v2, 0.85f, 1.25f); if (!aa.isPlaying) aa.Play(); }
+                    else if (aa.isPlaying) aa.Stop();
+                }
                 // Kävelytahti nopeuden mukaan (silmukka on mitoitettu sykliMs:iin), ei liukuvia jalkoja.
                 v.KavelyAika += v.Kavelee ? dt * (v2 / Math.Max(0.1, sykliMs)) * 1.0 : dt;
             }
+        }
+
+        /// <summary>Pystyleikkeen repliikit tilan vaihtuessa (Pelikoodarin manifest: vartija-epaily/etsinta/paluu/kiinni), 4 s tauko per vartija.</summary>
+        void Repliikki(V v, VartijanTila oli, VartijanTila nyt, bool nakee)
+        {
+            var r = SeikkailuRepliikit.Aktiivinen;
+            if (r == null || !r.Valmis || Time.unscaledTime < v.RepliikkiAsti) return;
+            string t = null; int n = ++v.RepliikkiLaskuri;
+            if (nyt == VartijanTila.Epaily) t = n % 2 == 0 ? "vartija-epaily-2" : "vartija-epaily-1";
+            else if (nyt == VartijanTila.Etsinta) t = oli == VartijanTila.Partio && !nakee ? "vartija-epaily-3" : n % 2 == 0 ? "vartija-etsinta-2" : "vartija-etsinta-1";
+            else if (nyt == VartijanTila.Partio && (oli == VartijanTila.Etsinta || oli == VartijanTila.Epaily || oli == VartijanTila.Paluu))
+                t = v.Osa == "kirkkotorni-portaat" && r.On("vartija-paluu-3") ? "vartija-paluu-3" : n % 2 == 0 ? "vartija-paluu-2" : "vartija-paluu-1";
+            else if (nyt == VartijanTila.Kiinni) t = "vartija-kiinni-1";
+            if (t == null) return;
+            double kesto = r.Soita(t, v.Agentti.transform);
+            v.RepliikkiAsti = Time.unscaledTime + (float)Math.Max(4.0, kesto + 0.5);
         }
 
         bool oliPiilossa;
@@ -183,6 +226,7 @@ namespace Matkakirja.Natiivi
             var p = SeikkailuPelaaja.Aktiivinen;
             kirjaa?.Invoke($"seikkailu: KIINNI ({v.Osa}), pelaaja tarkistuspisteeseen {tarkistus}");
             if (p != null) p.Siirra(tarkistus);
+            armoAsti = Time.unscaledTime + ArmoS;   // E1-ajo 7.10.: tarkistuspiste vartijan näkyvissä → kiinni uudelleen heti
             foreach (var x in vartijat) { var vp = x.Agentti.transform.position; x.Aivot.Nollaa(vp.x, vp.z); x.EdellinenTila = VartijanTila.Partio; }
         }
 
@@ -204,6 +248,7 @@ namespace Matkakirja.Natiivi
         {
             if (Aktiivinen == this) Aktiivinen = null;
             hahmot?.PoistaIrralliset(Henkilo);
+            foreach (var v in vartijat) if (v.Askeleet != null) Destroy(v.Askeleet.gameObject);
             if (navi.valid) NavMesh.RemoveNavMeshData(navi);
             if (data != null) Destroy(data);
         }

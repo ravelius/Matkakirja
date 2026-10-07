@@ -43,6 +43,10 @@ Shader "Matkakirja/Linssit/DioraamaLeivottu"
             float4 _DioraamaSumu; // x = alku (m), y = loppu (m)
             float4 _DioraamaLiekkiPisteet[8];
             float _DioraamaLiekkiMaara;
+            // Historiamoottori E3 (Siirtoseppä 7.10.): pelaajan kantokynttilä leivotussa tilassa (xyz paikka, w säde; w = 0 → pois)
+            // ja sen väri (rgb) · voimakkuus (a). Oletus nolla: ei vaikutusta esittelyyn.
+            float4 _DioraamaKantoValo;
+            float4 _DioraamaKantoVari;
 
             TEXTURE2D(_ValoAtlas); SAMPLER(sampler_ValoAtlas);
 
@@ -118,6 +122,14 @@ Shader "Matkakirja/Linssit/DioraamaLeivottu"
                 }
                 // Vähennetty liike: _DioraamaLepatus = 1 tasaisena → lepatus jää pieneksi vakiolämmöksi.
                 vari += vari * lisa * _DioraamaLepatus * half3(1.0h, 0.62h, 0.30h);
+                if (_DioraamaKantoValo.w > 0.01)
+                {
+                    // Atlaksen perusväri (leivottu valo täysillä) skaalattuna kynttilän etäisyydellä: tumma huone valaistuu lähellä.
+                    half3 pohja = SAMPLE_TEXTURE2D(_ValoAtlas, sampler_ValoAtlas, i.uv1).rgb;
+                    float kv = saturate(1.0 - distance(i.paikkaW, _DioraamaKantoValo.xyz) / _DioraamaKantoValo.w);
+                    kv *= kv;
+                    vari += pohja * (half)(kv * _DioraamaKantoVari.a) * (half3)_DioraamaKantoVari.rgb;
+                }
 
                 float etaisyys = length(_WorldSpaceCameraPos - i.paikkaW);
                 half sumu = (half)saturate((etaisyys - _DioraamaSumu.x) / max(1e-3, _DioraamaSumu.y - _DioraamaSumu.x));

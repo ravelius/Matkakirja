@@ -1378,6 +1378,7 @@ namespace Matkakirja
 
         void LateUpdate()
         {
+            if (KehysLoki) KirjaaKehys();
             if (oma == null || georeferenssi == null) return;
             double3 keskus = georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(double3.zero);
             oma.SetVector("_Keskus", georeferenssi.transform.TransformPoint((float3)keskus));

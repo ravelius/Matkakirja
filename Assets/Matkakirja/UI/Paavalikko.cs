@@ -109,6 +109,10 @@ namespace Matkakirja.Natiivi
             }, kokeet, Ikonit.Viiva["paivita"]);
             patinaNollaus.tooltip = "Paperin rae ja patina oletukseen (0 = poltettu kartta sellaisenaan).";
             Rakenne.Teksti("Rae ja patina oletukseen", "mk-kytkinrivi__nimi", patinaNollaus);
+            // Historiamoottorin pelattava pala (Päätoimittaja 7.10. 16.0x): omistaja pelaa E1:n itse TF:ssä kehittäjäkoodilla.
+            var pala = Rakenne.Nappi(null, "mk-kytkinrivi", () => { Sulje(); LinssiOhjain.AvaaPelattavaPala(); }, kokeet, Ikonit.Viiva["taikalasit"]);
+            pala.tooltip = "Olavinlinnan peliosan kokeilu: venesaapuminen, laituri, keittiö (kehittäjä).";
+            Rakenne.Teksti("Olavinlinna – pelattava pala (kokeilu)", "mk-kytkinrivi__nimi", pala);
             // Striimiääni muutti kehittäjävalikosta nostokortin säätörattaaseen pelinimellä (omistaja 27.9. klo 10.2x,
             // web #3388; KortinLukija, Striimiaani.Pelinimet).
             // Työhuone (web #kehittaja-tyohuone): Raamattu ja Kehittäjälehti kehittäjän liitteinä (Tyohuone.cs).

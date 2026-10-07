@@ -194,7 +194,13 @@ namespace Matkakirja.Natiivi
                 alarivi.text = l.Nykyinen.Alarivi ?? "";
             }
             // Opas kevyeksi (Päätoimittaja 5.10.): nimi ja alarivi häipyvät 3 s saapumisen jälkeen (omistaja 23.0x), palaavat seuraavalla pysähdyksellä.
-            otsikko.style.opacity = puhuu && l.Nykyinen != null && Time.unscaledTime - nimiAlku < NimiNakyyS ? 1f : 0f;
+            bool nimiNakyy = puhuu && l.Nykyinen != null && Time.unscaledTime - nimiAlku < NimiNakyyS;
+            // Omistaja 7.10. 21.4x ("Notre Dame tulee nyt kaksi kertaa"): kun metrolinja näkyy, erillistä otsikkoa ei ole; nimi
+            // suurenee metrolinjassa ja alarivi tulee sen alle selitteeksi samaksi ajaksi (OpasMetrolinja.Korostus).
+            bool metro = OpasMetrolinja.Alareuna > 0f;
+            OpasMetrolinja.Korostus = metro && nimiNakyy;
+            OpasMetrolinja.KorostusSelite = alarivi.text;
+            otsikko.style.opacity = nimiNakyy && !metro ? 1f : 0f;
             if (Testiotsikko != null)
             {
                 var o = Testiotsikko.Split('|');

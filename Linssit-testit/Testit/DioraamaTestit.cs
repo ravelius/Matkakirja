@@ -1107,6 +1107,18 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(r.Ymparisto.Rekvisiitta[0] == ("vene", "v.glb", "vk.glb") && r.Ymparisto.Rekvisiitta[1] == ("tynnyri", null, "t.glb"), "rekvisiitta");
         }
 
+        // Historiamoottori: pelaajahahmo (Linnanrakentaja v44c pelaaja { glb, leikkeet, liikkeet }).
+        [Testi] static void PelaajaMalliLuetaan()
+        {
+            var r = DioraamaData.Lue(KeittioFixture.Replace("\"yleiskamera\": {", "\"pelaaja\": {\"glb\": \"blender/hahmot/fogg.glb\", \"nimi\": \"fogg\", " +
+                "\"leikkeet\": {\"idle\": \"idle\", \"juoksu\": \"Jog\"}, \"liikkeet\": {\"juoksu\": {\"kesto_s\": 0.933, \"tavoite_m_s\": 3.2, \"toistokerroin\": 0.543}, " +
+                "\"nousu_laiturille\": {\"kesto_s\": 2.4, \"root_siirto\": [0, 1.28, 0.95]}}},\n  \"yleiskamera\": {"));
+            Oleta.Tosi(r.Pelaaja != null && r.Pelaaja.Glb == "blender/hahmot/fogg.glb" && r.Pelaaja.Leikkeet["juoksu"] == "Jog", "glb ja leikkeet");
+            Oleta.Tosi(Math.Abs(r.Pelaaja.Liikkeet["juoksu"].Toistokerroin - 0.543) < 1e-9 && Math.Abs(r.Pelaaja.Liikkeet["juoksu"].TavoiteMs - 3.2) < 1e-9, "liikkeet");
+            Oleta.Tosi(r.Pelaaja.JuuriSiirto.TryGetValue("nousu_laiturille", out var js) && js[1] == 1.28 && js[2] == 0.95 && !r.Pelaaja.JuuriSiirto.ContainsKey("juoksu"), "root_siirto");
+            Oleta.Tosi(DioraamaData.Lue(KeittioFixture).Pelaaja == null, "ei pelaajaa → null");
+        }
+
         // Rakennuskohtainen etäisyysutu (Linnanrakentaja 7.10.): valaistus.sumu {alku, loppu}; puuttuva tai virheellinen → null.
         [Testi] static void ValaistuksenSumu()
         {

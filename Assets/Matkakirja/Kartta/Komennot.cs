@@ -697,6 +697,8 @@ namespace Matkakirja
                     else if (o.Length > 3 && o[2] == "aloitusrata") Nappula.Aloitusrata = o[3] == "1" || o[3] == "paalle";
                     // lento v3 ilma 0|1 (v3e: siivenkärkien ja pakoputken vanat ja loppukohtauksen linnut; A/B, ei muisteta)
                     else if (o.Length > 3 && o[2] == "ilma") AloituslennonIlma.Paalla = o[3] == "1" || o[3] == "paalle";
+                    // lento v3 kehysloki 0|1 (Nappula.KehysLoki: kamera, kartan ruutuliike ja kone joka kehys)
+                    else if (o.Length > 3 && o[2] == "kehysloki") Nappula.KehysLoki = o[3] == "1" || o[3] == "paalle";
                     Debug.Log(Nappula.LentoV3Kuvaus() + $", aloitusrata {(Nappula.Aloitusrata ? 1 : 0)}, ilma {(AloituslennonIlma.Paalla ? 1 : 0)}");
                     break;
                 case "lentopeli":

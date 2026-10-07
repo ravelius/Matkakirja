@@ -191,8 +191,10 @@ namespace Matkakirja.Natiivi
             get
             {
                 float lyhyt = Mathf.Min(Juuri.layout.width, Juuri.layout.height);
-                float suhde = UiKerros.Tabletti && lyhyt > 0f && !float.IsNaN(lyhyt) ? Mathf.Max(1f, lyhyt / KuvaViiteLyhyt) : 1f;
-                return Mathf.Round(Tyylikirja.Nappi.OhjausIso * suhde);
+                // Omistaja 7.10. 21.4x ("vievät nyt liikaa huomiota"): pienemmäksi, iPadilla enintään 1,15 × (ennen ruudun suhteessa ~2 ×),
+                // puhelimella nappi.ohjaus (40) iso-koon (56) sijaan.
+                float suhde = UiKerros.Tabletti && lyhyt > 0f && !float.IsNaN(lyhyt) ? Mathf.Clamp(lyhyt / KuvaViiteLyhyt, 1f, 1.15f) : 1f;
+                return Mathf.Round((UiKerros.Tabletti ? Tyylikirja.Nappi.OhjausIso : Tyylikirja.Nappi.Ohjaus) * suhde);
             }
         }
         readonly VisualElement kuvaKortti, kuvaEl;
@@ -358,6 +360,13 @@ namespace Matkakirja.Natiivi
             kuvaKortti.style.transitionProperty = new List<StylePropertyName> { new StylePropertyName("opacity") };
             kuvaKortti.style.transitionDuration = new List<TimeValue> { new TimeValue(Tyylikirja.Kesto.Sulku / 1000f) };
             kuvaEl = Rakenne.El("mk-ohjausnappi__kuva", kuvaKortti, PickingMode.Ignore);
+            // Tummempi (omistaja 7.10. 21.4x): kuvan päälle himmennys.kevyt-kerros (tyylikirjan himmennys), numero sen päällä.
+            var kuvaHimmennys = Rakenne.El(null, kuvaKortti, PickingMode.Ignore);
+            kuvaHimmennys.style.position = Position.Absolute;
+            kuvaHimmennys.style.left = 0; kuvaHimmennys.style.right = 0; kuvaHimmennys.style.top = 0; kuvaHimmennys.style.bottom = 0;
+            kuvaHimmennys.style.backgroundColor = (Color)Tyylikirja.Himmennys.Kevyt;
+            kuvaHimmennys.style.borderTopLeftRadius = kuvaHimmennys.style.borderTopRightRadius = Tyylikirja.Kulma.Nappi;
+            kuvaHimmennys.style.borderBottomLeftRadius = kuvaHimmennys.style.borderBottomRightRadius = Tyylikirja.Kulma.Nappi;
             // Nipun kuvamäärä nostokortin kuvalaskurin pohjalla (numeropää kulmassa, vain kun kuvia on useampi).
             kuvaLaskuri = Rakenne.Teksti("", "mk-nosto__laskuri", kuvaKortti);
             kuvaLaskuri.pickingMode = PickingMode.Ignore;
@@ -394,7 +403,7 @@ namespace Matkakirja.Natiivi
             if (nakyy == this.nakyy && Juuri.style.display == (nakyy ? DisplayStyle.Flex : DisplayStyle.None)) return;
             this.nakyy = nakyy;
             Juuri.style.display = nakyy ? DisplayStyle.Flex : DisplayStyle.None;
-            if (!nakyy) Sulje();
+            if (!nakyy) { Sulje(); SiirtymaPeru(); }
             var ui = UiNakymat.Olemassa ? UiNakymat.Hae() : null;
             ui?.Chat?.OpasTila(nakyy);
             // Linssi avautuu täkyluetteloon (valikko auki täkynäkymässä); sulkeutuu valinnasta.
@@ -571,10 +580,27 @@ namespace Matkakirja.Natiivi
         {
             siirtyma = Rakenne.El("mk-astroavaus tk-teema-tumma", kerrosJuuri, PickingMode.Position);
             siirtyma.style.display = DisplayStyle.None;
-            var otsikko = Rakenne.Teksti("Siirrytään", "mk-ajattelija__vuodet", siirtyma);
-            siirtymaNimi = Rakenne.Teksti("", "mk-ajattelija__nimi", siirtyma);
-            foreach (var t in new[] { otsikko, siirtymaNimi }) { t.pickingMode = PickingMode.Ignore; t.style.unityTextAlign = TextAnchor.MiddleCenter; Kirjasimet.Aseta(t, Kirjasin.Lcd); }
-            siirtymaPalkki = new Latauspalkki(siirtyma);
+            siirtymaKuva = Rakenne.El(null, siirtyma, PickingMode.Ignore);
+            siirtymaKuva.style.position = Position.Absolute;
+            siirtymaKuva.style.left = 0; siirtymaKuva.style.right = 0; siirtymaKuva.style.top = 0; siirtymaKuva.style.bottom = 0;
+            siirtymaKuva.style.backgroundSize = new BackgroundSize(Length.Percent(100), Length.Percent(100));
+            siirtymaKuva.style.display = DisplayStyle.None;
+            // Tumma liuku leveän vaakaruudun alaosaan (4:3-rajauksesta näkyy vain kaista): kuvan oma alasävy (Tyylikirja.Kehys.Bg).
+            siirtymaLiuku = Rakenne.El(null, siirtyma, PickingMode.Ignore);
+            siirtymaLiuku.style.position = Position.Absolute;
+            siirtymaLiuku.style.left = 0; siirtymaLiuku.style.right = 0; siirtymaLiuku.style.bottom = 0;
+            siirtymaLiuku.style.height = Length.Percent(LiukuOsuus * 100f);
+            siirtymaLiuku.style.backgroundSize = new BackgroundSize(Length.Percent(100), Length.Percent(100));
+            siirtymaLiuku.style.display = DisplayStyle.None;
+            // Teksti ja palkki yhdessä kääreessä: iPadilla kääre isonnetaan 1,4-kertaiseksi (sama iPad-isonnus kuin
+            // mk-kartuscha--tabletti ja mk-maakunnat--tabletti; ei uutta tyyliä).
+            siirtymaTeksti = Rakenne.El(null, siirtyma, PickingMode.Ignore);
+            siirtymaTeksti.style.alignItems = Align.Center;
+            siirtymaTeksti.style.transformOrigin = new TransformOrigin(Length.Percent(50), Length.Percent(100));
+            // Omistaja 7.10. 15.3x: "tuon 'siirrytään' -tekstin voi ottaa kokonaan pois" → vain kaupungin nimi ja palkki.
+            siirtymaNimi = Rakenne.Teksti("", "mk-ajattelija__nimi", siirtymaTeksti);
+            siirtymaNimi.pickingMode = PickingMode.Ignore; siirtymaNimi.style.unityTextAlign = TextAnchor.MiddleCenter; Kirjasimet.Aseta(siirtymaNimi, Kirjasin.Lcd);
+            siirtymaPalkki = new Latauspalkki(siirtymaTeksti);
             // Cesium ion -logo vasemmassa alakulmassa latauksen ajan (omistaja 6.10. 12.2x): Cesiumin oma kuva muuttamattomana,
             // samassa koossa ja paikassa kuin krediiteissä (musta ruutu peittää Cesiumin krediittikerroksen).
             siirtymaIon = Rakenne.El(null, siirtyma, PickingMode.Ignore);
@@ -587,6 +613,7 @@ namespace Matkakirja.Natiivi
             avausIon.style.unityBackgroundScaleMode = ScaleMode.ScaleToFit;
             avausIon.style.display = DisplayStyle.None;
             kerrosJuuri.schedule.Execute(PaivitaAvausIon).Every(100);
+            OpasSovitin.PalloTekstuuriValmis += () => UiKerros.PaaSaikeessa(() => { if (siirtyma.style.display != DisplayStyle.None && OpasSovitin.Kaupunkitila && !palloNakyy) AsetaPalloKuva(true); });
             OpasSovitin.SiirtymaAlkaa += n => UiKerros.PaaSaikeessa(() => SiirtymaAlkaa(n));
             OpasSovitin.SiirtymaValmis += () => UiKerros.PaaSaikeessa(SiirtymaValmis);
         }
@@ -603,20 +630,45 @@ namespace Matkakirja.Natiivi
             siirtyma.style.display = DisplayStyle.Flex;
             siirtyma.BringToFront();
             siirtymaPalkki.Nayta(true);
-            KrediititTiivis.CesiumNakyviin = true;
+            siirtymaAlku = Time.realtimeSinceStartup;
+            siirtymaKerta++;
+            AsetaPalloKuva(OpasSovitin.Kaupunkitila);
+            // Ion-logo vain siirtymän omana (tasavälein, omistaja 15.3x); krediittikerroksen oma logo piiloon siirtymän ajaksi
+            // (PaivitaAvausIon: IonOmaPiirto), muuten se piirtyi kiinteästi 10 pt vasemmalle krediittirivien päälle.
             AsetaSiirtymaIon();
             Debug.Log("MATKAKIRJA opas: siirtymä alkaa → " + nimi);
             siirtymaKierros?.Pause();
-            siirtymaKierros = siirtyma.schedule.Execute(() => siirtymaPalkki.Arvo = testiEdistyminen ?? OpasSovitin.SiirtymaEdistyminen).Every(100);
+            // Varmistus (Päätoimittaja 15.4x: "peitto pois käytöstä ja tuhotaan aina, kun opas suljetaan missä vaiheessa tahansa"):
+            // jos opas ei ole enää auki millä tahansa reitillä (linssi pois, uusi peli, virhe), ruutu puretaan heti.
+            siirtymaKierros = siirtyma.schedule.Execute(() =>
+            {
+                if (testiEdistyminen == null && (!nakyy || !OpasSovitin.Auki)) { SiirtymaPeru(); return; }
+                siirtymaPalkki.Arvo = testiEdistyminen ?? OpasSovitin.SiirtymaEdistyminen;
+            }).Every(100);
         }
 
-        void AsetaSiirtymaIon() => AsetaIon(siirtymaIon, KrediititTiivis.TyhjaAlaPt);
+        // Omistaja 7.10. 15.3x: "Cesium-logon voisi sijoittaa niin, että se on yhtä paljon irti vasemmalta kuin alhaalta": sama väli
+        // ruudun vasemmasta ja alareunasta, turva-alueen sisällä (kotipalkki, vaakanäkymän Dynamic Island).
+        void AsetaSiirtymaIon()
+        {
+            // Paneelin koko (ruudun kerros on jo asetettu; siirtymä voi olla vielä display None ilman leveyttä).
+            float pw = siirtyma.panel?.visualTree.worldBound.width ?? 0f;
+            if (!(pw > 0f)) pw = siirtyma.parent?.worldBound.width ?? 0f;
+            float sk = pw > 0f && Screen.width > 0 ? pw / Screen.width : 1f / Mathf.Max(1f, UiKerros.PikseliaPisteessa);
+            var sa = Screen.safeArea;
+            float vali = Mathf.Max(sa.xMin, sa.yMin) * sk + KrediititTiivis.TyhjaSivuPt;
+            AsetaIon(siirtymaIon, vali, vali);
+            Debug.Log($"MATKAKIRJA opas: siirtymän ion-logo {vali:0} pt vasemmasta ja alhaalta (paneeli {pw:0}, turva {sa.xMin:0}/{sa.yMin:0} px)");
+        }
 
         void PaivitaAvausIon()
         {
             // Aloituksen aikana ei logoa (simu 15.45: ion-logo piirtyi paikkalistan päälle; Cesium ei ole vielä auki).
-            bool nayta = nakyy && !aloitus && KrediititTiivis.AvausLatautuu && KrediititTiivis.IonLogoKuva != null;
-            KrediititTiivis.IonOmaPiirto = nayta;
+            bool siirtymaAuki = siirtyma != null && siirtyma.style.display != DisplayStyle.None;
+            bool nayta = nakyy && !aloitus && !siirtymaAuki && KrediititTiivis.AvausLatautuu && KrediititTiivis.IonLogoKuva != null;
+            KrediititTiivis.IonOmaPiirto = nayta || siirtymaAuki;
+            // Siirtymän logo heti, kun Cesiumin ion-kuva on saatavilla (ensimmäisessä siirtymässä se voi tulla vasta perässä).
+            if (siirtymaAuki && siirtymaIon.style.display == DisplayStyle.None && KrediititTiivis.IonLogoKuva != null) AsetaSiirtymaIon();
             if (!nayta) { if (avausIon.style.display != DisplayStyle.None) avausIon.style.display = DisplayStyle.None; return; }
             // Cesiumin paikka: Googlen logon yläpuolella (sen mitattu yläreuna; simu 6.10. 13.13: laskettu paikka osui logon päälle).
             float h = avausIon.parent?.worldBound.height ?? 0f, g = KrediititTiivis.GoogleYlaOsuus;
@@ -625,7 +677,7 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Cesium ion -logo (Cesiumin oma kuva muuttamattomana) vasempaan alakulmaan krediittien koossa.</summary>
-        static void AsetaIon(VisualElement e, float ala)
+        static void AsetaIon(VisualElement e, float ala, float vasen = KrediititTiivis.TyhjaSivuPt)
         {
             var t = KrediititTiivis.IonLogoKuva;
             e.style.display = t != null && t.height > 0 ? DisplayStyle.Flex : DisplayStyle.None;
@@ -633,9 +685,89 @@ namespace Matkakirja.Natiivi
             float h = KrediititTiivis.LogoPt;
             e.style.backgroundImage = new StyleBackground(t as Texture2D);
             e.style.height = h; e.style.width = h * t.width / t.height;
-            e.style.left = KrediititTiivis.TyhjaSivuPt;   // Cesiumin krediittien tapaan ruudun alakulmasta
+            e.style.left = vasen;   // oletus Cesiumin krediittien tapaan ruudun alakulmasta
             e.style.bottom = ala;
         }
+
+        // KUUMAILMAPALLON LATAUSKUVA (Päätoimittaja 7.10. 13.5x, Codex PR #4143, data/latauskuvat/kuumailmapallo.json): kaupunkitilan
+        // siirtymän taustana havainnekuva (pallo keskellä 40–63 %, alin 25 % tummaa tekstille). Kolme rajausta R2:ssa; laite ja
+        // asento valitsevat. Ladataan välimuistiin (Documents/latauskuvat/), kun sallittujen kaupunkien lista saapuu, ja tekstuuri
+        // luetaan levyltä siirtymän alkaessa ja vapautetaan sen jälkeen. Ei kuvaa vielä → musta ruutu kuten ennen.
+        VisualElement siirtymaKuva;
+        bool palloNakyy;
+        VisualElement siirtymaLiuku, siirtymaTeksti;
+        static Texture2D liukuKuva;
+        /// <summary>Liu'un korkeus ruudusta ja kuvan yläreunan kohta leveällä vaakaruudulla (kupu ja ilma näkyviin, PT 14.5x).</summary>
+        const float LiukuOsuus = 0.5f, VaakaKuvanAlku = 0.12f, IpadIsonnus = 1.4f;
+
+        static Texture2D LiukuKuva()
+        {
+            if (liukuKuva != null) return liukuKuva;
+            const int n = 64;
+            liukuKuva = new Texture2D(1, n, TextureFormat.RGBA32, false) { wrapMode = TextureWrapMode.Clamp, filterMode = FilterMode.Bilinear, name = "pallo-liuku" };
+            Color32 bg = Tyylikirja.Kehys.Bg;
+            for (int y = 0; y < n; y++)
+            {
+                // y = 0 alareuna (tekstuurin rivi 0 on alhaalla): täysi sävy alimmassa 45 %:ssa, sitten pehmeä S ylös.
+                float u = Mathf.Clamp01((y / (float)(n - 1) - 0.45f) / 0.55f);
+                bg.a = (byte)Mathf.RoundToInt(255f * (1f - u * u * (3f - 2f * u)));
+                liukuKuva.SetPixel(0, y, bg);
+            }
+            liukuKuva.Apply(false, true);
+            return liukuKuva;
+        }
+
+        void AsetaPalloKuva(bool nayta)
+        {
+            string n = nayta ? OpasSovitin.PalloKuvaRuudulle() : null;
+            if (n == null)
+            {
+                palloNakyy = false;
+                siirtymaKuva.style.display = DisplayStyle.None;
+                siirtymaLiuku.style.display = DisplayStyle.None;
+                siirtymaTeksti.style.scale = StyleKeyword.Null;
+                siirtymaKuva.style.backgroundImage = StyleKeyword.Null;
+                siirtyma.style.justifyContent = StyleKeyword.Null; siirtymaTeksti.style.marginBottom = StyleKeyword.Null;
+                OpasSovitin.VapautaPalloTekstuuri();
+                return;
+            }
+            // Teksti ja palkki kuvan tummaan alaosaan (pallo jää keskelle näkyviin). Leveä vaakaruutu (iPhone 2,2:1) näyttää 4:3-rajauksesta
+            // vain kaistan: kohdistus 35 %:iin pitää pallon kokonaan ruudulla ja tekstin tummassa osassa (simu 14.13: 50 % leikkasi pallon).
+            siirtyma.style.justifyContent = Justify.FlexEnd;
+            var koko = siirtyma.parent?.worldBound.size ?? Vector2.one;
+            // Kääreen marginaali (ei ruudun pehmuste: absoluuttinen ion-logo mitataan ruudun reunasta).
+            siirtymaTeksti.style.marginBottom = Mathf.Max(koko.y, 1f) * 0.07f;
+            var t = OpasSovitin.PalloTekstuuri(n);
+            if (t == null) { OpasSovitin.PalloTekstuuriMuistiin(n); return; }   // valmistuessa PalloTekstuuriValmis → tänne uudelleen
+            // Kuvan paikka itse (peittävä skaala): leveällä vaakaruudulla yläreuna kohtaan VaakaKuvanAlku (kupu ilmoineen näkyviin)
+            // ja tumma liuku alaosaan tekstille; muuten keskitetty.
+            float w = Mathf.Max(koko.x, 1f), h = Mathf.Max(koko.y, 1f), kuvasuhde = t.width / (float)Mathf.Max(1, t.height);
+            float kw = Mathf.Max(w, h * kuvasuhde), kh = kw / kuvasuhde;
+            bool levea = w > h * 1.5f;
+            siirtymaKuva.style.right = StyleKeyword.Auto; siirtymaKuva.style.bottom = StyleKeyword.Auto;
+            siirtymaKuva.style.width = kw; siirtymaKuva.style.height = kh;
+            siirtymaKuva.style.left = (w - kw) * 0.5f;
+            siirtymaKuva.style.top = levea ? -VaakaKuvanAlku * kh : (h - kh) * 0.5f;
+            siirtymaLiuku.style.display = levea ? DisplayStyle.Flex : DisplayStyle.None;
+            if (levea) siirtymaLiuku.style.backgroundImage = new StyleBackground(LiukuKuva());
+            siirtymaTeksti.style.scale = UiKerros.Tabletti ? new Scale(new Vector3(IpadIsonnus, IpadIsonnus, 1f)) : (StyleScale)StyleKeyword.Null;
+            bool myohassa = siirtyma.resolvedStyle.opacity > 0.5f && Time.realtimeSinceStartup - siirtymaAlku > 0.3f;
+            siirtymaKuva.style.backgroundImage = new StyleBackground(t);
+            siirtymaKuva.style.display = DisplayStyle.Flex;
+            palloNakyy = true;
+            if (myohassa)
+            {
+                // Myöhässä saapunut kuva häivytetään esiin (ei äkillistä vaihtoa mustasta).
+                siirtymaKuva.style.opacity = 0f;
+                siirtymaKuva.style.transitionProperty = new List<StylePropertyName> { "opacity" };
+                siirtymaKuva.style.transitionDuration = new List<TimeValue> { new TimeValue(0.5f, TimeUnit.Second) };
+                siirtymaKuva.schedule.Execute(() => siirtymaKuva.style.opacity = 1f).ExecuteLater(16);
+            }
+            else siirtymaKuva.style.opacity = 1f;
+            Debug.Log($"MATKAKIRJA opas: pallon latauskuva näkyviin {n} ({t.width}×{t.height}){(myohassa ? $", myöhässä {Time.realtimeSinceStartup - siirtymaAlku:F1} s" : "")}");
+        }
+        float siirtymaAlku;
+        int siirtymaKerta;
 
         /// <summary>Kohde ladattu: musta ruutu häipyy (Cupolan häivytys) ja näkymä aukeaa.</summary>
         public void SiirtymaValmis()
@@ -645,13 +777,30 @@ namespace Matkakirja.Natiivi
             siirtymaPalkki.Arvo = 1f;
             siirtyma.AddToClassList("mk-astroavaus--haipyy");
             siirtyma.schedule.Execute(() => siirtyma.style.opacity = 0f).ExecuteLater(16);
-            siirtyma.schedule.Execute(() => { if (siirtyma.resolvedStyle.opacity < 0.01f) siirtyma.style.display = DisplayStyle.None; }).StartingIn(1200);
+            // Kertalaskuri (NUI 7.10. 15.4x): häivytyksen jälkeen piiloon aina, ellei uusi siirtymä alkanut välissä (peiton tarkistus
+            // jätti ruudun display Flexiksi, jos häivytys katkesi).
+            int kerta = siirtymaKerta;
+            siirtyma.schedule.Execute(() => { if (kerta == siirtymaKerta) { siirtyma.style.display = DisplayStyle.None; AsetaPalloKuva(false); } }).StartingIn(1200);
             testiEdistyminen = null;
             KrediititTiivis.CesiumNakyviin = false;
             Debug.Log("MATKAKIRJA opas: siirtymä valmis");
         }
 
         float? testiEdistyminen;
+
+        /// <summary>Opas suljettiin kesken siirtymän (LS2 7.10. 15.3x, 68429b27: koko ruudun siirtymä jäi poimittavaksi eikä
+        /// SiirtymaValmis tullut, kartan napautukset eivät menneet läpi): ruutu pois heti, kuva ja palkki vapaiksi.</summary>
+        void SiirtymaPeru()
+        {
+            if (siirtyma == null || siirtyma.style.display == DisplayStyle.None) return;
+            siirtymaKierros?.Pause();
+            siirtyma.RemoveFromClassList("mk-astroavaus--haipyy");
+            siirtyma.style.display = DisplayStyle.None;
+            AsetaPalloKuva(false);
+            testiEdistyminen = null;
+            KrediititTiivis.CesiumNakyviin = false;
+            Debug.Log("MATKAKIRJA opas: siirtymä peruttu (opas suljettu)");
+        }
 
         /// <summary>Mikrofoni: sanelu suoraan oppaalle (ei Pulun chattia); toinen napautus lopettaa.</summary>
         void Puhu()

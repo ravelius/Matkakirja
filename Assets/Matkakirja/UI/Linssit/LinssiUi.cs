@@ -61,6 +61,7 @@ namespace Matkakirja.Natiivi
         public readonly LentopeliNakyma Lento;
         /// <summary>Poikkileikkaus-linssin opetustaulu ja Pulu (Linnanrakentaja, DioraamaSovitin.Vaihtui).</summary>
         public readonly DioraamaTaulu Dioraama;
+        public readonly SeikkailuTapit Seikkailu;
         /// <summary>Kaupunkikierroksen näkymä (Linssiseppä 5.10.2026): avausruutu, pysähdyksen nimi ja kertojan teksti.</summary>
         public readonly KierrosTaulu Kierros;
         /// <summary>Ajattelijat-linssin valinta, kuvanäkymä, lappu ja Pulu (AjattelijatSovitin.Muuttui).</summary>
@@ -103,6 +104,8 @@ namespace Matkakirja.Natiivi
             Kierros = new KierrosTaulu(kerros);
             Ajattelija = new AjattelijaNakyma(kerros);
             Mikseri = new MikseriPaneeli(kerros);
+            // Seikkailun kävelytapit (Siirtoseppä, Olavinlinna 7.10.): näkyvät SeikkailuPelaajan ajan.
+            Seikkailu = new SeikkailuTapit(kerros, RadioKerros);
 
             // Pieni pilleri oikeassa yläkulmassa, taikalasien vasemmalla puolella.
             var turva = kerros.Turva(SulkuKerros);

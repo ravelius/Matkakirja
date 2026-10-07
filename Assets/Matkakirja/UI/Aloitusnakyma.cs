@@ -925,6 +925,7 @@ namespace Matkakirja.Natiivi
             valintaPisteet = kk.pisteet;
             valintaKierto = kierto;
             ValitseePallolla = true;
+            if (valintaMerkit != null) valintaMerkit.ValintaIlmanAjoa = true;
 
             // Verho ja arkki häipyvät (web intro-fade); pallo saa syötteen.
             juuri.style.opacity = 0f;
@@ -997,6 +998,7 @@ namespace Matkakirja.Natiivi
             }
             if (valintaMerkit != null)
             {
+                valintaMerkit.ValintaIlmanAjoa = false;
                 foreach (var id in valintaIdt) valintaMerkit.Korosta(id, null);
                 valintaMerkit.NaytaVain(null);
                 valintaMerkit.Renkaat(null);

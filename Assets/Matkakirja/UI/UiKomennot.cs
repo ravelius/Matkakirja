@@ -529,6 +529,19 @@ namespace Matkakirja.Natiivi
                 case "valikko": ui.Valikko.Sulje(); ui.Linssit.Valitsin.Avaa(); return null;
                 case "asetukset": ui.Aanentasot.Avaa(); return null;
                 case "sulje": ui.SuljeKaikki(); return null;
+                case "seikkailutapit":
+                    // "ui seikkailutapit [on|off|auto]": seikkailun kävelytapit (SeikkailuTapit) ilman SeikkailuPelaajaa testiin.
+                    if (loput.Trim() == "on") SeikkailuTapit.TestiNakyy = true;
+                    else if (loput.Trim() == "off") SeikkailuTapit.TestiNakyy = false;
+                    else if (loput.Trim() == "auto") SeikkailuTapit.TestiNakyy = null;
+                    // "ui seikkailutapit toiminto poimi|heita|laske|kynttila|koputa|irrota|nosta|pois|auto": toimintonapin tila ilman SeikkailuEsineitä.
+                    else if (loput.Trim().StartsWith("toiminto ")) SeikkailuTapit.TestiToiminto = loput.Trim().Substring(9).Trim();
+                    // "ui seikkailutapit loyto": seikkailun löytö pergamenttipohjalla (testiteksti).
+                    // "ui seikkailutapit tietokerros|tietokortti": tietokerros tarjolle (3 testikorttia) tai tietokortin merkki.
+                    else if (loput.Trim() == "tietokerros") { SeikkailuTapit.NaytaTietokerros(new[] { "Pyhä Olavi", "Kappeli", "Torni" }, new[] { "Testiteksti 1.", "Testiteksti 2.", "Testiteksti 3." }, new[] { "Lyhyt 1", null, "Lyhyt 3" }); return "=seikkailutapit: tietokerros tarjolla (napauta Pulua)"; }
+                    else if (loput.Trim() == "tietokortti") { SeikkailuTapit.TietokorttiAvautui("testi"); return "=seikkailutapit: tietokortin merkki"; }
+                    else if (loput.Trim() == "loyto") { SeikkailuTapit.NaytaLoyto("Liinanyytti", "Kalkki, pateeni ja liuskekivi kääritty liinaan."); return "=seikkailutapit: löytö näytetty"; }
+                    return "=" + SeikkailuTapit.Kuvaus();
                 case "matka": ui.Esimerkkimatka(); return null;
                 case "pulu":
                 {
@@ -924,12 +937,13 @@ namespace Matkakirja.Natiivi
                             if (ap.Nykyinen == null) return "esittelyä ei ole ladattu";
                             ap.Avaa(); return null;
                         case "loppuun": ap.VieritaLoppuun(); return null;
+                        case "nappi": return "nappi " + (ap.ToimintoNappi() ?? "ei");
                         case "kuva":
                             if (ap.Nykyinen == null) return "esittelyä ei ole ladattu";
                             ap.AvaaKokoruutu(ap.Nykyinen.Kuvat, la.Length > 1 ? int.Parse(la[1]) - 1 : 0); return null;
                         case "sulje": ap.Sulje(); return null;
                         case "linssit":
-                            return $"esittelylinssit {LinssiOhjain.EsittelylinssitAuki}, kehittäjätila {Asetukset.Kehittaja}, valittavissa: "
+                            return $"valmiit linssit {LinssiOhjain.ValmiitLinssitAuki}, kehittäjätila {Asetukset.Kehittaja}, valittavissa: "
                                 + string.Join(", ", LinssiUi.Rekisteri?.Valittavat.Select(l => l.Tiedot.Id) ?? Enumerable.Empty<string>());
                         case "tiedosto":
                         {

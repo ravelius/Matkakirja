@@ -90,6 +90,11 @@ namespace Matkakirja.Linssit.Kierros
         public IReadOnlyList<Pysahdys> Reitti => reitti;
         public Pysahdys Nykyinen => reitti[Math.Min(Indeksi, reitti.Count - 1)];
 
+        /// <summary>Äänettömän kappaleen lukuaika (Päätoimittaja 7.10. 18.2x, kaupunkiesitys ilman ääntä): merkkiä sekunnissa ja vähimmäisaika.</summary>
+        public const double LukuMerkkiaS = 14.0, LukuMinS = 6.0;
+        /// <summary>Lukuaika tekstistä: pituus / LukuMerkkiaS, vähintään LukuMinS.</summary>
+        public static double LukuKesto(string teksti) => Math.Max(LukuMinS, (teksti?.Trim().Length ?? 0) / LukuMerkkiaS);
+
         /// <summary>Pysähdyksen kesto tekstistä: sanat / puhenopeus + hengähdys, vähintään PysahdysMinS.</summary>
         public static double PysahdysKesto(string teksti)
         {

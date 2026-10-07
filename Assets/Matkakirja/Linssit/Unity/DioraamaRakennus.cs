@@ -268,6 +268,9 @@ namespace Matkakirja.Natiivi
         /// <summary>Kävelyosien pintanimet, joita rakennus.jsonin pinnoissa ei ole: lähin olemassa oleva pinta.</summary>
         static readonly Dictionary<string, string> PintaAliakset = new Dictionary<string, string> { ["laasti"] = "rappaus", ["laatta"] = "kivilattia" };
 
+        /// <summary>Historiamoottori E3: tilan leivottu materiaali (_Kirkkaus: kynttilöiden sammuminen himmentää huoneen), tai null.</summary>
+        public Material LeivottuMateriaali(string tilaId) => leivotut.TryGetValue(tilaId, out var m) ? m : null;
+
         Material MateriaaliPinnalle(Rakennus rakennus, string pintaId)
         {
             if (pintaId != null && rakennus?.Pinnat != null && !rakennus.Pinnat.ContainsKey(pintaId) && PintaAliakset.TryGetValue(pintaId, out var alias)
