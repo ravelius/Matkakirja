@@ -37,7 +37,7 @@ import {
   MAAILMAN_SUOSIKIT_KEHOTE,
 } from './kohteet.js';
 import { OPAS_AINEISTOT } from './aineistot.js';
-import { oppaanEsittely, valmisKohde, omatKohteet } from './opas-esittely.js';
+import { oppaanEsittely, valmisKohde, omatKohteet, esittelynAlku } from './opas-esittely.js';
 import { OPAS_SALLITUT, sallittuKaupunki, pisteSallittu, sallittuAluePisteelle, kokeilut, sallitutPyynnolle } from './sallitut.js';
 import { vuosiluvutSanoiksi } from './puhesanat.js';
 import { kuvalista, kohteenKuvat, kaupunginKohteet, listanKuvin, kuvaKaupunkitilassa, LUKITTU_VAHINTAAN } from './opas-kuvat.js';
@@ -3448,8 +3448,12 @@ async function hoidaOpas(pyynto, env, kors, runko, ctx) {
   // kierroksen alkuun (muu reitti lähin naapuri sen jälkeen).
   const aloitaKierros = Boolean(kierrosAvain && onKierrosToive(p.toive));
   // Lukitusta listasta kierros on valmis heti: 8 tärkeintä lyhimpänä reittinä, alku sijaintia lähimmästä (omistaja 6.10. 23.4x).
+  // Valmiin esittelyn avaus nimeää alun ("Kierros alkaa Forum Romanumilta"): reitti alkaa siitä, muuten kameraa lähimmästä.
+  const kierroksenKohteet = lukitut.slice(0, KIERROKSEN_PITUUS);
+  const alkuId = aloitaKierros && listatila && !omat ? esittelynAlku(await oppaanEsittely(env, p.kaupunki), p.kaupunki) : null;
   const listanKierros = aloitaKierros && listatila
-    ? (omat ? omat.kierros.map((id) => lukitut.find((k) => k.id === id)).filter(Boolean) : lyhinReitti(lukitut.slice(0, KIERROKSEN_PITUUS), sijainti)) : null;
+    ? (omat ? omat.kierros.map((id) => lukitut.find((k) => k.id === id)).filter(Boolean)
+      : lyhinReitti(kierroksenKohteet, sijainti, { ensimmainen: kierroksenKohteet.find((k) => k.id === alkuId) ?? null })) : null;
   const suunnittelu = aloitaKierros && !listanKierros ? (async () => {
     try {
       const suunnitelma = jasennaKierros((await kysyMallitiedot(env, {

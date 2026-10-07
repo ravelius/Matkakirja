@@ -47,6 +47,19 @@ export async function oppaanEsittely(env, kaupunki, haku = fetch, nyt = Date.now
   return data;
 }
 
+/*
+ * KIERROKSEN ALKU (omistaja 7.10.: avaus lupaa "Kierros alkaa X:stä"): kaupungin avauksen nimeämä ensimmäinen pysähdys
+ * (esittelypohjan kierroksen ensimmäinen). Ilman tätä worker aloitti kameraa lähimmästä (Rooma keskipisteestä Trevi, avaus
+ * Forum Romanum). Uusissa esittelyissä kenttä kierros: [id, …]; ämpärin muuttumattomille v1-tiedostoille taulu.
+ */
+export const ESITTELY_ALKU = Object.freeze({ pariisi: 'Q2981', rooma: 'Q180212', lontoo: 'Q41225', koopenhamina: 'Q110289' });
+
+/** Avauksen lupaama kierroksen ensimmäinen kohde (Q) tai null (ei avausta → alku kameraa lähimmästä kuten ennen). */
+export function esittelynAlku(esittely, kaupunki) {
+  if (!esittely?.avaus) return null;
+  return esittely.kierros?.[0] ?? ESITTELY_ALKU[kaupunkiId(kaupunki)] ?? null;
+}
+
 /** Kohteen valmis kerronta tunnuksella; lyhyt (kierros) jos pyydetty ja olemassa. */
 export function valmisKohde(esittely, id) {
   return esittely?.kohteet?.find((k) => k.id === id && typeof k.teksti === 'string' && k.teksti.trim()) ?? null;
