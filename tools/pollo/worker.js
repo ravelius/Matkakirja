@@ -37,7 +37,7 @@ import {
   MAAILMAN_SUOSIKIT_KEHOTE,
 } from './kohteet.js';
 import { OPAS_AINEISTOT } from './aineistot.js';
-import { OPAS_SALLITUT, sallittuKaupunki, pisteSallittu } from './sallitut.js';
+import { OPAS_SALLITUT, sallittuKaupunki, pisteSallittu, sallittuAluePisteelle } from './sallitut.js';
 import { vuosiluvutSanoiksi } from './puhesanat.js';
 import { kuvalista, kohteenKuvat, kaupunginKohteet, listanKuvin, kuvaKaupunkitilassa, LUKITTU_VAHINTAAN } from './opas-kuvat.js';
 import {
@@ -3313,8 +3313,17 @@ async function hoidaOppaanKysy(pyynto, env, kors, runko, ctx) {
       const paikka = j.kohde ? (await haeKohde(viite)) ?? (viite ? await haeKohde(null) : null) : null;
       if (paikka) {
         const ulkona = kaupunkiPiste ? etaisyysKm(kaupunkiPiste, paikka) > ULKONA_KM : false;
-        toiminto = pisteSallittu(paikka, null, env) ? { tyyppi: 'siirry', nimi: paikanNimi(paikka, j.kohde), lat: paikka.lat, lon: paikka.lon, ulkona }
-          : { tyyppi: 'ei-sallittu', nimi: paikanNimi(paikka, j.kohde) };
+        const nimi = paikanNimi(paikka, j.kohde);
+        // Kohde toisessa sallitussa kaupungissa (Päätoimittaja 7.10.: Pariisissa "vie minut Pyhän Markuksen kirkkoon"):
+        // kaupungin vaihto kuten kaupunkitoiveessa + kohde, ei kieltäytymistä. Ei-sallittu kuten ennen (esto kytkimen takana).
+        const alue = ulkona ? sallittuAluePisteelle(paikka, env) : null;
+        const nykyinen = p.kaupunki ? sallittuAluePisteelle(kaupunkiPiste, env) : null;
+        if (alue && alue.id !== nykyinen?.id) {
+          toiminto = { tyyppi: 'kaupunki', nimi: alue.nimi, id: alue.id, lat: alue.lat, lon: alue.lon, kohde: { nimi, lat: paikka.lat, lon: paikka.lon } };
+        } else {
+          toiminto = pisteSallittu(paikka, null, env) ? { tyyppi: 'siirry', nimi, lat: paikka.lat, lon: paikka.lon, ulkona }
+            : { tyyppi: 'ei-sallittu', nimi };
+        }
       }
     } else if (j.toiminto === 'kaupunki' && j.kohde) {
       const k = await kaupunginSijainti(fetch, j.kohde).catch(() => null);

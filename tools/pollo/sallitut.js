@@ -90,3 +90,13 @@ export function pisteSallittu(piste, kaupunki = null, env = null) {
   const alueet = kaupunki ? [sallittuKaupunki(kaupunki, env)].filter(Boolean) : kaikki(l);
   return alueet.some((a) => metreina(a, piste) <= a.r_m);
 }
+
+/**
+ * Sallittu alue, jonka r_m-säteellä piste on (lähin keskus), tai null. Käyttää listaa kytkimestä riippumatta: Kysyn
+ * toive toisen sallitun kaupungin kohteeseen vaihtaa kaupungin (Päätoimittaja 7.10.), vaikka esto olisi pois.
+ */
+export function sallittuAluePisteelle(piste, env = null) {
+  if (!Number.isFinite(piste?.lat) || !Number.isFinite(piste?.lon)) return null;
+  const l = env?.OPAS_SALLITUT_TESTI ?? OPAS_SALLITUT;
+  return l.sallitut.map((a) => ({ a, d: metreina(a, piste) })).filter((x) => x.d <= x.a.r_m).sort((x, y) => x.d - y.d)[0]?.a ?? null;
+}
