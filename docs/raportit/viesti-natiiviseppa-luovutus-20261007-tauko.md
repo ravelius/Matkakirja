@@ -10,7 +10,9 @@ ja natiiviseppa-tila-20261003.md. Kytke Remote Control päälle. Kerro Julkaisij
 Juna-SHA:t vain PÄÄTOIMITTAJAN kuittauksella; käännökset Julkaisijan NYT-viestillä. EI savua/Laitetestaajaa/stillejä ennen junaa
 (omistaja 15.5x), EI roolien omia käännöksiä (16.0x), enintään 2 junaa/pv ellei omistaja pyydä.
 
-**KORJAUSJUNA TÄNÄ ILTANA (Päätoimittaja 22.1x)**: haara natiiviseppa/korjausjuna-163 (wt/proto-natiiviseppa-j144) BUILD 162 30fbc374:n
+**KORJAUSJUNA TÄNÄ ILTANA (Päätoimittaja 22.1x)** — VIE-VALMISTELU TEHTY 22.38: BUILD 163 = proto master ecb11b787ac53f9e417aa3188f16b453fd891e7c
+(juna/b13 f524d89b → 2739ded6, juna.log). tf163-lupa VASTA Päätoimittajan kuittauksella (LS1:n reittitarkistus), sitten Mac TF -odottaja
+(ALKU = kuittaushetki UTC). Alla historia: haara natiiviseppa/korjausjuna-163 (wt/proto-natiiviseppa-j144) BUILD 162 30fbc374:n
 päällä: Siirtoseppä 0bfc86e0 + LS1 71cf7b97b (KUITATTU) + LS1 4e35edbde (avausnäkymä) + LS2 2739ded66 (kaupunkipallot maailmanäkymässä) = runko **2739ded66** (Kartta 448, Peli 419,
 Linssit 862, unity 0), KÄÄNNETTY 22.37 (dd94a2766, app lokit/natiiviseppa-app-163-2739ded6; aiemmat 5a99dda77/a69df1186 ja EI julkaista aiempaa 40faaf311/bc66ba1e2,
 app lokit/natiiviseppa-app-163-40faaf31; vaiheajat luo 23 s, vienti 44 s, xcodebuild 95 s -jobs 12). LS1 ottaa kuvat → Päätoimittajan
