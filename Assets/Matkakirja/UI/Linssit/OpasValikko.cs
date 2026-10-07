@@ -209,7 +209,7 @@ namespace Matkakirja.Natiivi
         float krediittiAla = 40f;
         /// <summary>Oppaan nappirivin korkeus (mk-opas-nappi 44 pt).</summary>
         const float NappiriviKorkeus = 44f;
-        float TapitAla => nappiNakyy ? krediittiAla + NappiriviKorkeus + KuvaRako : krediittiAla;
+        float TapitAla => nappiNakyy || esitysNakyy ? krediittiAla + NappiriviKorkeus + KuvaRako : krediittiAla;
         /// <summary>Ohjainrivin (‖ ›|) alareuna; tapit sen yläpuolella (PaivitaTapit).</summary>
         float ohjainAla;
         /// <summary>Tapit sisemmäs ja ylemmäs leveällä ruudulla (omistaja 6.10. 23.3x, juna 156: iPadilla peukalot eivät ulotu
@@ -336,6 +336,14 @@ namespace Matkakirja.Natiivi
             });
             mikkiNappi = OpasNappi(null, PuluChat.MikkiIkoni, Puhu, "Puhu oppaalle");
             OpasNappi(null, PuluChat.NappaimistoIkoni, Kirjoita, "Kirjoita oppaalle");
+            // KYSY AINA NÄKYVISSÄ (omistaja 7.10. 10.1x, Pariisin kaupunkiesitys): kierroksen ajan Kysy, mikrofoni ja näppäimistö
+            // keskellä alhaalla samalla nappirivin pohjalla (mk-opas-napit, LIIKU-nappipohja) väkäsen ja Liikun tilalla.
+            esitysRivi = Rakenne.El("tk-teema-harmaa mk-opas-napit", Juuri, PickingMode.Ignore);
+            esitysRivi.style.display = DisplayStyle.None;
+            esitysRivi.style.height = NappiriviKorkeus;
+            OpasNappi("Kysy", Ikonit.Puhekupla, () => Avaa(Nakyma.Kysy), "Valmiit kysymykset oppaalle", esitysRivi);
+            OpasNappi(null, PuluChat.MikkiIkoni, Puhu, "Puhu oppaalle", esitysRivi);
+            OpasNappi(null, PuluChat.NappaimistoIkoni, Kirjoita, "Kirjoita oppaalle", esitysRivi);
             kerros.JokaRuutu += PaivitaSirut;
             // Googlen ja Cesiumin krediitit (logot muuttamattomina, Googlen ehdot): sirurivi niiden yläpuolelle, tarkistus 2 × s.
             sirurivi.schedule.Execute(SovitaKrediitteihin).Every(500);
@@ -437,9 +445,14 @@ namespace Matkakirja.Natiivi
         /// puhu/kirjoita-siru; ei chatin eikä valikon ollessa auki. Häivytys --tk-kesto-sulku (200 ms).
         /// </summary>
         /// <summary>Oppaan alarivin nappi LIIKU-pohjalla: teksti (Kysy, Liiku) tai pelkkä kuvake (mikrofoni, näppäimistö), keskitettynä.</summary>
-        Button OpasNappi(string teksti, string ikoni, Action teko, string ohje)
+        VisualElement esitysRivi;
+        bool esitysNakyy;
+        /// <summary>Testi `ui opasvalikko esitys on|off|auto`: kierroksen esitysrivi ilman kierrosta.</summary>
+        bool? testiEsitys;
+
+        Button OpasNappi(string teksti, string ikoni, Action teko, string ohje, VisualElement isa = null)
         {
-            var b = Rakenne.Nappi(null, "mk-liiku__nappi mk-opas-nappi" + (teksti == null ? " mk-opas-nappi--ikoni" : ""), () => { LopetaEsittely(); AsetaRiviAuki(false); teko(); }, liuku);
+            var b = Rakenne.Nappi(null, "mk-liiku__nappi mk-opas-nappi" + (teksti == null ? " mk-opas-nappi--ikoni" : ""), () => { LopetaEsittely(); AsetaRiviAuki(false); teko(); }, isa ?? liuku);
             b.tooltip = ohje;
             Rakenne.Ikoni(ikoni, "mk-ikoni mk-opas-nappi__ikoni", b);
             if (teksti != null) Kirjasimet.Aseta(Rakenne.Teksti(teksti, "mk-nappi__teksti mk-opas-nappi__teksti", b), Kirjasin.ModerniLihava);
@@ -782,6 +795,12 @@ namespace Matkakirja.Natiivi
             // Neljä nappia näkyvät aina oppaassa, paitsi chatin tai valikon ollessa auki (vanha sirurivi ei enää näy).
             var c0 = UiNakymat.Olemassa ? UiNakymat.Hae().Chat : null;
             bool napitNakyy = c0 != null && !c0.Auki && !Auki;
+            // Kierroksen ajan esitysrivi (Kysy, mikki, näppäimistö) keskellä väkäsrivin tilalla.
+            bool esitys = napitNakyy && (testiEsitys ?? OpasSovitin.KierrosKaynnissa);
+            var ed = esitys ? DisplayStyle.Flex : DisplayStyle.None;
+            if (esitysRivi.style.display != ed) esitysRivi.style.display = ed;
+            esitysNakyy = esitys;
+            if (esitys) { esitysRivi.style.bottom = krediittiAla; napitNakyy = false; }
             if (napitNakyy != nappiNakyy)
             {
                 nappiNakyy = napitNakyy;
@@ -1756,6 +1775,9 @@ namespace Matkakirja.Natiivi
                     if (p.Length == 2) { maanosa = p[0]; maa = p[1]; }
                     Avaa(Nakyma.Kaupungit);
                     return $"opas: kaupungit {maanosa} / {maa}";
+                case "esitys":
+                    if (o.Length > 1) testiEsitys = o[1] == "on" ? true : o[1] == "off" ? false : (bool?)null;
+                    { var r = esitysRivi.worldBound; return $"opas: esitysrivi {(esitysRivi.resolvedStyle.display == DisplayStyle.Flex ? "näkyy" : "piilossa")} @ {r.xMin:0},{r.yMin:0} {r.width:0}×{r.height:0}, väkäsrivi {(nappiNakyy ? "näkyy" : "piilossa")}"; }
                 case "kaupunkitila":
                     if (o.Length > 1) testiKaupunkitila = o[1] == "on" ? true : o[1] == "off" ? false : (bool?)null;
                     return "opas: kaupunkitila " + Kaupunkitila;
