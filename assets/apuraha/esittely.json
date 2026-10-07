@@ -51,6 +51,17 @@
       }
     }
   ],
-  "kuvat": [],
+  "kuvat": [
+    {
+      "tiedosto": "assets/apuraha/iss-kupola-lansi-eurooppa.jpg",
+      "teksti": "ISS:n kupolasta: Länsi-Eurooppa",
+      "rajaus": "50% 70%"
+    },
+    {
+      "tiedosto": "assets/apuraha/olavinlinna-hamara.jpg",
+      "teksti": "Olavinlinna illan hämärässä",
+      "rajaus": "50% 55%"
+    }
+  ],
   "webHuomautus": "Selainpeli ei sisällä kaikkia ominaisuuksia. Suosittelemme iOS-sovellusta (App Store -testiversion linkki on apurahahakemuksessa)."
 }
