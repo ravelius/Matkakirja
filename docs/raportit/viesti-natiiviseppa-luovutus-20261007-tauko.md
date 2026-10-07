@@ -26,7 +26,16 @@ Tarkista ensin taustalla jatkuneiden ajojen tulokset (alla) ja kerro ne Julkaisi
   - iOS TODENNETTU 13.01 (Päätoimittajalle ilmoitettu): lokit/natiiviseppa-savu161-ennen/intro-ennen-aani.wav (a5b381a7) vs
     natiiviseppa-savu161b/intro-jalkeen-aani.wav (af5922b9), molemmat "Laita äänet päälle" + Aloita seikkailu, kaappaa 16:
     puhe kohdistuu 0,99, jälkeen 19 lyöntiä yli puheen (yläkaista > +10 dB), ennen 0. ÄÄNET PÄÄLLE TARVITAAN (pois = mykistys).
-  - Mac kesken: mac-kaanna 074c95a3 (dev) → intro-kaappaus + "Mac vSync"-lokirivi + nopea panorointi "jälkeen".
+  - Päätoimittaja KUITTASI kirjoitusäänen junaan 161. VSync + Macin lepo kuitataan Mac-todennuksen jälkeen.
+  - MACIN AUTOMAATTINEN LEPO (Päätoimittaja 13.0x, omistajan Mac TF: ~30 % CPU piilossa): **28da7435** (sama haara, 074c95a3:n
+    päällä). MatkakirjaMacSyote_Nakyvyys (occlusionState/isMiniaturized/isHidden/isActive+keyWindow) → Ruudunpaivitys.MacLepo:
+    piilossa 1 fps + AudioListener.pause, ei valittuna ≤ 10 fps (ääni soi), vSync-jakaja > 4,5 → vSyncCount 0. Lokirivi
+    "MATKAKIRJA ruutu: Mac-ikkuna …". unity-tarkistus 0 virhettä (Mac ja iOS).
+  - MAC-KÄÄNNÖS: mac-kaanna **28da7435** (dev, 1.1) Julkaisijan jonossa 15.00 jälkeen (LS1 gizan perään). Sitten
+    `zsh lokit/natiiviseppa-skriptit/mac-cpu.sh "<proto-3d/Matkakirja-proto-mac/Build/mac/Matkakirja 3D.app>" lokit/natiiviseppa-mac-cpu/jalkeen-28da7435`
+    (A valittuna, B näkyy ei valittuna = ikkunaton Tyhja.app etualalla, C kokonäyttö toisessa Spacessa, D takaisin) + intro-kaappaus
+    + nopea panorointi. ENNEN (TF 159, aloitusnäkymä): A 14,8 %, B 14,9 %, C 15,5 %, D 15,5 % (lokit/natiiviseppa-mac-cpu/ennen-159).
+    Tavoite C < 2 %. Luvut Päätoimittajalle. Huom: mac-cpu.sh:n napsautukset eivät edenneet aloitusnäkymästä (sama tila jälkeen-ajossa).
   - Mac repeämä ENNEN: TF 159 -kopiolla lokit/natiiviseppa-mac-repeama/ennen-panorointi.mov (hiiri veda 700 550 1300 550 0.25 16).
     screencapture tallentaa koostetun pinnan, joten repeämä ei näy kuvissa; juurisyy on koodissa (vSyncCount 0).
 - **Muut juna 161 -ehdokkaat (odottavat Päätoimittajan SHA-vahvistusta):** LS1 torjunnan kesto, Siirtoseppä eleet-2 **67728f0b**
@@ -34,6 +43,7 @@ Tarkista ensin taustalla jatkuneiden ajojen tulokset (alla) ja kerro ne Julkaisi
   (korvaa 270992bd ja bb05c48a; testaajatilan pois kytkentä sulkee sen avaamat esittelylinssit, apurahakortin linssit jäävät). kehittaja-tf todennetaan App Store -käännöksellä: ilman koodia ei Kehittäjä-riviä; testaajakoodilla
   (Päätoimittajalla) kaikki linssit ja vapaa liikkuminen ilman Kehittäjä-riviä; täydellä koodilla (POLLO_KEHITTAJAKOODI
   tiedostossa ~/.matkakirja-avaimet-koodaus.zsh) kaikki, myös Giza-kytkin. Koodia ei lokiin eikä viesteihin.
-- **iPad FACEIT ABAB** (00008103): taustalla `ipad-faceit-abab.sh` klo 12.48 alkaen; analyysi
-  `python3 lokit/natiiviseppa-skriptit/faceit-analyysi.py <kansio>` (raja 0,3 ms/kehys), yksi rivi Päätoimittajalle + Siirtosepälle.
+- **iPad FACEIT ABAB MITÄTÖN** (lokit/natiiviseppa-ipad-faceit-20261007-1248, ilmoitettu Päätoimittajalle + Siirtosepälle): A peitto-tilassa
+  300/300 piirretty (16,68 ms, GPU 9,4 ms), B jäi paikallaan-tilaan (piirretty 2–108), pari 2:n poikkileikkaus aukesi 5 min viiveellä.
+  Uusinta vain Päätoimittajan päätöksellä; mittauksen pitää alkaa vasta peitto-tilassa. faceit-analyysi.py regex korjattu (rivi\s+).
 - **Actions-ajurit** siirretty /Users/Shared/Claude/actions-runner(-2) (muisti actions-ajurit-shared-polussa).
