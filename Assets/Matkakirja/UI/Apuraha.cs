@@ -261,15 +261,34 @@ namespace Matkakirja.Natiivi
                     foreach (var c in kuvarivi.Children())
                         if (c.layout.width > 1f && Mathf.Abs(c.layout.height - c.layout.width * 4f / 3f) > 0.5f) c.style.height = c.layout.width * 4f / 3f;
                 });
+                // Ei tyhjää kehystä (omistaja, UI kevyt; Päätoimittaja 7.10. junan 160 still: 3. ja 4. kehys tyhjinä): kuva tulee
+                // näkyviin vasta latauduttuaan, puuttuva kuva ei koskaan; leveys jaetaan näkyvien kesken (rako 2 %).
+                kuvarivi.style.display = DisplayStyle.None;
+                // Kokoruutuselaus vain latautuneista (järjestys säilyy).
+                var ladatut = new List<Kuva>();
                 for (int i = 0; i < e.Kuvat.Count; i++)
                 {
-                    int n = i;
-                    var b = Rakenne.Nappi(null, "mk-apuraha__kuva", () => AvaaKokoruutu(e.Kuvat, n), kuvarivi);
-                    // Leveys kuvien määrän mukaan (4 kuvaa, omistaja 30.9. klo 15.06; rako 2 %).
-                    b.style.width = Length.Percent((100f - 2f * (e.Kuvat.Count - 1)) / e.Kuvat.Count);
+                    var kuva = e.Kuvat[i];
+                    Button b = null;
+                    b = Rakenne.Nappi(null, "mk-apuraha__kuva", () =>
+                    {
+                        var jarj = e.Kuvat.Where(ladatut.Contains).ToList();
+                        AvaaKokoruutu(jarj, Mathf.Max(0, jarj.IndexOf(kuva)));
+                    }, kuvarivi);
+                    b.style.display = DisplayStyle.None;
                     b.style.backgroundPositionX = new BackgroundPosition(BackgroundPositionKeyword.Left, Length.Percent(e.Kuvat[i].RajausX));
                     b.style.backgroundPositionY = new BackgroundPosition(BackgroundPositionKeyword.Top, Length.Percent(e.Kuvat[i].RajausY));
-                    Kuvat.Hae(e.Kuvat[i].Url, t => { if (t != null) b.style.backgroundImage = new StyleBackground(t); });
+                    string url = e.Kuvat[i].Url;
+                    Kuvat.Hae(url, t =>
+                    {
+                        if (t == null) { Debug.Log("MATKAKIRJA apuraha: kuva puuttuu, ei kehystä: " + url); return; }
+                        b.style.backgroundImage = new StyleBackground(t);
+                        b.style.display = DisplayStyle.Flex;
+                        ladatut.Add(kuva);
+                        kuvarivi.style.display = DisplayStyle.Flex;
+                        var nakyvat = kuvarivi.Children().Where(c => c.style.display == DisplayStyle.Flex).ToList();
+                        foreach (var c in nakyvat) c.style.width = Length.Percent((100f - 2f * (nakyvat.Count - 1)) / nakyvat.Count);
+                    });
                 }
             }
             Loppuosa(vieritys);
