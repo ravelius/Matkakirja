@@ -60,8 +60,21 @@ NUI:n osa on `natiivi-ui/sallitut-157` 0f770be2. LS2:n lista on tiedostossa `pro
 - Linssiseppä 2:n karttaelementti käyttää rajapintoja `SallitutLista`, `SallitutVaihtui` ja `LataaSallitut()`; sallittujen haku on nyt staattinen.
 - Tila päättyy oppaan Sulje-kutsussa, joten laaja Elävä opas toimii ennallaan.
 - Linnanrakentaja tekee pallon mallin, ja Linssiseppä 2 tekee sille paikkamerkin.
+- **Todennettu 09.0x** yhdistelmäkäännöksellä 7ec948289 (kaupunkipallo + Natiivi-UI + giza-valmis; loki `linssiseppa-kaupunkitila-20261007`):
+  - Pallo → kaupunkitila Lontoo; Seuraava → kierros.
+  - Näppäilty toive Pariisiin torjutaan.
 
-## Giza (omistaja 6.10. 23.35, Päätoimittajan lupa)
+## Giza (omistaja 7.10. 08.4x: "Egypti kokeeksi loppuun omilla malleilla")
+- `linssiseppa/giza-valmis` c8564358b (kaupunkitila-159:n päällä):
+  - CesiumOmatMallit hakee mallit R2:sta (`kartta/omat-mallit/uusin.json` → `giza-v1/mallit.json`).
+  - Leikkaus on oletuksena päällä; testissä sen saa pois tiedostolla `omat-mallit/leikkaus-pois`.
+  - Pöllö-pyyntöihin lisätään otsake `x-matkakirja-kokeilu: giza` vain kehityskäännöksissä (Pelikoodari #4116).
+- Vientipaketti `proto-3d/_valmiit/omat-mallit-vienti-20261007`: kuiva-ajo OK. Julkaisija vie sen, kun sanon "vie" simutodennuksen jälkeen.
+- Linssiseppä 2: Giza on sallitut-3d.json:ssa. Pelikoodari #4116: rivi sallituissa, 4 kohdetta ja kierros (vielä OPEN).
+- Simuskripti: scratchpadin `ajo-giza.sh`. Se kuvaa yleiskuvan sekä Kheopsin ja Sfinksin lähikuvat leikkauksen kanssa ja ilman.
+- Kheopsin valkoisuus: Linnanrakentaja tekee testiversiot ilman Dracoa ja COLOR_0:aa, jos kuva vahvistaa valkoisuuden.
+
+## Giza, aiempi vaihe (omistaja 6.10. 23.35)
 
 - Googlen ehdot on tarkistettu: omat 3D-objektit ovat sallittuja, kun niitä ei ole johdettu Googlen tiilistä.
 - Työkalu `tyokalut/omat_mallit_tileset.py` muuntaa Linnanrakentajan GLB:t (`_valmiit/giza-v1`) 3D Tilesiksi. Testiin tiedostot kopioidaan kansioon Documents/omat-mallit.
