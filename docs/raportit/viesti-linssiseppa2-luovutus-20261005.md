@@ -17,7 +17,19 @@ Avoimet työt:
    Vauhtirajaus opas-vapaa-lataus 5683ffaf jäi pois junasta. Ei uutta työtä tähän.
 4. s2-meri 0f6e4e89 on KUITATTU junaan 154 (BMNG:n meri S2:n meriväriin).
 
-## TILA 7.10. 12.5x (uusin)
+## TILA 7.10. 15.0x (uusin)
+- MAC-PALLOVIKA (omistaja 14.5x: Ateenan/Kreetan palloa ei voi klikata Macilla): juurisyy pallokerros SendToBack Nostot-kerroksessa
+  → nimiöt/merkit/nappula sieppaavat. Korjaus linssiseppa2/hiiri-testi 2d8da858f (juna-161-koe:n päällä): PalloNappi.ContainsPoint
+  (kuori+kori), BringToFront; testikomento ui hiiri (klikkaa|pallo|poimi|paina|vapauta), UiKerros.Poimi. Ennen-haara hiiri-160 109020012.
+  Mac-ketju scratchpad/mac-pallo.sh (setsid, odottaa kaannos-lupa-mac): mac-kaanna.sh molemmat → ditto lokit/linssiseppa2-mac-pallo/
+  → ajot (Ateena, Kreeta, Pariisi) → loki lokit/linssiseppa2-mac-pallo.log ("KLIKKAUS OSUI"/"EI osunut"), kuvat samaan kansioon.
+  Natiivisepän ohje: ~/Library/Application Support/Matkakirja/Matkakirja 3D/ komentotiedostot, EI hiiri-/näppäinautomaatiota.
+  iOS: skenaario pallo-osuma.txt (tap-kohta 0.26 0.18 kaupunkipallo-<id>) iPhone+iPad. Tulos 1 rivi + still Päätoimittajalle.
+- S2-KAUDET: linssiseppa2/s2-kaudet f6e4a8495 (masterin d8b0e0fc päällä; syksy/v1 ämpärissä 57 630/57 630): Laattapalvelin.
+  S2EuroopanKausi, Vuodenaika.S2EuroopanVersio. Skenaario s2-kaudet.txt (m10 vs m7 pari). Junaan 162 kuvaparin jälkeen.
+- Ajot kopioina lokit/linssiseppa2-3d-kattavuus/ajot/.
+
+## TILA 7.10. 12.5x
 - SWE-RAJAT (Karttaseppä 7.10., PT kuittasi): proto linssiseppa2/swe-rajat 95cf8eb97 (wt/proto-linssiseppa2-swe-rajat): Vektorikerros
   KorkeusVersio 2026-10-07-swe-korkeus / WebVersio 2026-10-07-swe, Maaraja Geojson/Maamaa 2026-10-07. 14.19 kaikki 200 (web-sarja
   vielä viennissä, vain vertailukomento) → junaan 161 Natiisepälle ilmoitettu. Todenna junan appilla: Krim ja Kypros pallolla.
