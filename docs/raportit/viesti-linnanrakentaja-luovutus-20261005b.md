@@ -1,33 +1,37 @@
 # Linnanrakentajan luovutus 5.10.2026 klo 12.2x (Opus high)
 
-## ALOITUSVIESTI (päivitetty 7.10. klo 16.3x, tilinvaihto illalla)
+## ALOITUSVIESTI (päivitetty 7.10. klo 18.5x, tilinvaihto ~22.15–22.50)
 Olet Linnanrakentaja (Opus, high), checkout /Users/Shared/Claude/Matkakirja-linnanrakentaja (haara linnanrakentaja-tyo-20260929,
 vain tämä luovutus). Työhaara linnanrakentaja-linna-v42 worktreessä /Users/Shared/Claude/wt/linnanrakentaja-linna-v42 (EI vielä PR:ää).
 Lue tämä osio ja TILA LOPUSSA, sitten viimeiset päivitysrivit lopusta. Viestit: SendMessage nimellä; jos raja tai socket vaihtuu,
 mcp__ccd_session_mgmt__send_message session id:llä: Päätoimittaja local_5df52e10-10e4-4b72-9554-0049db300dfe, Siirtoseppä
-local_86d0c984-aeeb-430d-bc85-3112f27b9437, Linssiseppä (LS1) local_771b401b-80a3-4ada-a0d9-d17c6cb9c2c4, Postivahti
-local_a24c43c0-8094-4141-b734-90b9555f5044. Säännöt: paistot yksi kerrallaan, PhysMem unused > 10 Gt (2k), ei testejä samaan aikaan;
-ei omia natiivikäännöksiä; kuittaus = peili + yksi rivi (ei stillejä).
+local_86d0c984-aeeb-430d-bc85-3112f27b9437, Linssiseppä (LS1) local_771b401b-80a3-4ada-a0d9-d17c6cb9c2c4, LS2
+local_c238f4af-ae73-44e7-81f1-92848acd9217, Postivahti local_a24c43c0-8094-4141-b734-90b9555f5044. Säännöt: paistot yksi
+kerrallaan, ehto proto-3d/tyokalut/linnanrakentaja-ajot/muisti-ok.sh (vm_stat ≥ 20 Gt, swap < 2 Gt), nice 15, ei testejä samaan
+aikaan; ei omia natiivikäännöksiä; kuittaus = peili + yksi rivi (ei stillejä). Agentit vain Opus/Sonnet.
 
-## TILA LOPUSSA (7.10. klo 16.3x)
-- OMISTAJAN LINJA 13.3x: OLAVINLINNAN PELIOSA (pystyleike laituri → keittiö → kappeli) ensin; Giza ja Kielletty odottavat.
-- LINNA v44g PEILISSÄ fd7d3e32c86ed7fb (blender 737600b4, _valmiit/olavinlinna-blender-v44): soutu, keittio-g102 (leivottu, kiviseinät,
-  tynnyrit siirretty), kappeli lähteistä (lattia 9,6, ristiholvi, koillisikkuna + suljettu luukku), kavely v2 (_valmiit/olavinlinna-kavely-v1/
-  lahde/kavely.py + kuori_kavely.py → v2/: vesiportti+laiturin kansi oikealla 41° akselilla pinta −5,9 + reunaseinät, T102, keittiö,
-  pikkupiha-kiveys, Kirkkotornin portaat E102 → kierre → Tott-kammio 3,4 → muuriportaat → kappeli 9,6; venemerkit VENE kavely.py:ssä;
-  esine:* heitettava), FOGG pelaajaksi (_valmiit/linna-hahmot/pelaaja-v1, rakennus.json pelaaja ← js/dioraama/pelaaja.json),
-  portinvartija-1500 lisaHenkilot. Siirtosepän E1-ajo toimii (vene, soutaja, Fogg, piilo, partio); viimeinen korjaus kynnys (v44g).
-- AJOTAPA: muutos → (leivonta scratchpad paistot.sh / leivo_tila.py 2k) → kopioi _valmiit/olavinlinna-blender-v44 → ASTC
-  (swift proto-3d/tyokalut/astc-mip.swift X.jpg X-4x4.astcm 4) → worktreessä `zsh tools/dioraama/vie-blender.sh --lahde <v44>` →
-  commit blender.json + push → `gh workflow run vie-dioraama.yml --ref linnanrakentaja-linna-v42 -f rakennus=olavinlinna -f kuiva=false
-  -f osoitin=false` → lokista hash → Siirtosepälle `poikki peili https://media.matkakirja.app/dioraama/olavinlinna/<hash>/`.
-  Kävelyn uudelleenajo: Blender -b -P lahde/kavely.py -- v2 ja sitten lahde/kuori_kavely.py -- <ulkokuori_huippu.glb> <v44/tilat/laituri.glb> v2.
-  Apuskriptit (tarkistussäteet, esikatselu): proto-3d/tyokalut/linnanrakentaja-ajot/scratch-20261007/.
-- JONO: Siirtosepän E1/E2-löydökset; kappelin esineet käsikirjoituksesta; portinvartijan paikka kun kohtaus lukittu; Foggin oikea
-  "nousu veneestä" vain pyynnöstä (nyt UAL Sitting_Exit). PR linnanrakentaja-linna-v42 → main kun Päätoimittaja pyytää (sisältää
-  rakenna.mjs: kavely, ymparisto.mallit, pelaaja, lisaHenkilot, kavely.esineet; reseptit-linna.mjs ristiholvi; leivo_tila.py alapinnat).
-- GIZA (odottaa): Sfinksin LOD1/2 väritekstuuri ~70 % mustaa (leivonta aukkoinen, LS1:n mittari proto-3d/tyokalut/linssiseppa-ajot/
-  glb-musta-uv.py), helmat liian vaaleat; _valmiit/giza-v2. KIELLETTY (odottaa): haara linnanrakentaja-kielletty.
+## TILA LOPUSSA (7.10. klo 18.5x)
+- OMISTAJAN LINJAT: 13.3x ensimmäinen pelattava pala (laituri → keittiö → kappeli) ensin, Giza ja Kielletty odottavat. 18.5x pelit
+  1. PERSOONASSA: Foggia ei näytetä (ei lisätyötä, ei poistoa); painopiste tilat silmänkorkeudelta. 18.7x: kauko-/takakuviin asu
+  (huppu, peittävät vaatteet, ei kasvoja) = pelaaja-v1 fogg.glb asu v2 TEHTY; 1. persoonan KÄSIMALLI hanskoin/hihoin.
+- LINNA v44k PEILISSÄ a51f1b699c598cc0 (blender a2fb2ddf, _valmiit/olavinlinna-blender-v44, MUUTOKSET.md v44…v44k), Siirtoseppä
+  kytkenyt historia-fp:hen (0656eef6). Sisältö: soutu, keittio-g102, kappeli E3 (kätkö syvennys 38,75°, kaari-ovi, ampumakäytävä,
+  ikkuna + luukku, holvimaalaukset + maalattu Tott, kilpilaatat esineinä), kavely v2 (85 merkkiä; kavely.py + kuori_kavely.py),
+  esineet (_valmiit/olavinlinna-esineet-v1/lahde/esineet.py), Fogg asu v2.
+- KESKEN: käsimalli-agentti → _valmiit/linna-hahmot/kadet-v1 (kadet.glb + kadet.json). Kun valmis: cp kadet.glb → v44/hahmot/kadet.glb,
+  kirjoita js/dioraama/pelaaja-kadet.json (leikkeet, liikkeet, kahva, kamera; Siirtosepän speksi: origo silmissä, +Z, FOV 62, near
+  0,05) ja commitoi worktreen rakenna.mjs:n pelaaja.kadet-lohko (nyt commitoimatta) → vienti v44l → peili Siirtosepälle (odottaa).
+- AJOTAPA: muutos → leivonta (scratch paistot.sh / leivo_tila.py 2k) → kopioi v44:ään → ASTC (swift proto-3d/tyokalut/astc-mip.swift
+  X.jpg X-4x4.astcm 4) → worktreessä `source ~/.zshrc; zsh tools/dioraama/vie-blender.sh --lahde <v44>` → commit blender.json + push →
+  `gh workflow run vie-dioraama.yml --ref linnanrakentaja-linna-v42 -f rakennus=olavinlinna -f kuiva=false -f osoitin=false` → hash:
+  `gh run view <id> --log | grep -oE "olavinlinna\*\* → \`dioraama/olavinlinna/[0-9a-f]{16}"` → Siirtosepälle `poikki peili
+  https://media.matkakirja.app/dioraama/olavinlinna/<hash>/`. Kävely: Blender -b -P lahde/kavely.py -- v2, sitten lahde/kuori_kavely.py --
+  _valmiit/olavinlinna-blender-v41/ulkokuori/ulkokuori_huippu.glb <v44>/tilat/laituri.glb $PWD/v2; rsync v2/ → v44/kavely/.
+  Kappelin leivontapaketti: node scratch/rakenna_kappeli.mjs <paketti>. maalaukset.py ajetaan venv-rembg/bin/python:lla.
+- JONO: (1) käsimalli v44l; (2) huone 6 karkea tila (_lahteet/olavinlinna-pohjat/HUONE6-PALATSI.md); pelattavuusmalli
+  docs/raportit/pelattavuusmalli-olavinlinna.md tulossa. PR linnanrakentaja-linna-v42 → main kun Päätoimittaja pyytää.
+- GIZA (odottaa): Sfinksin LOD1/2 väritekstuuri ~70 % mustaa (LS1:n mittari proto-3d/tyokalut/linssiseppa-ajot/glb-musta-uv.py),
+  helmat liian vaaleat; _valmiit/giza-v2. KIELLETTY (odottaa): haara linnanrakentaja-kielletty.
 
 ## Mixamo (hahmot)
 - Työkalu `tools/dioraama/blender/hahmo_mixamo.py` on haarassa `linnanrakentaja-mixamo` (worktree /Users/Shared/Claude/wt/linnanrakentaja-mixamo,
