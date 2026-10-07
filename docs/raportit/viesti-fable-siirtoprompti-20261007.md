@@ -52,6 +52,10 @@ Omistaja kirjautuu työpöytäsovellukseen uudella tilillä, avaa session kansio
 
 ## 3. Roolit (checkout /Users/Shared/Claude/…, malli, kärki vaihdossa)
 
+**LUOVUTUKSET PUSHATTU 23.3x (Postivahti):** Julkaisija 91be61ef3, Natiiviseppä 6ec8f5116, Natiivi-UI 53d76623, Linssiseppä a8e5acb5e
+(j164-videon todistusajo taustalla), Linssiseppä 2 6d4783f1d, Siirtoseppä 5778a3e5, Linnanrakentaja 943531a35, Karttaseppä c2088d725
+(talvi2d irrallaan ~02.30), Pelikoodari 60608dd2, Sisältökirjuri 79636602f, Laitetestaaja 930c5e554, Postivahti b81e87b47.
+
 | Rooli | Checkout | Malli | Kärki ja tila vaihdossa |
 |---|---|---|---|
 | Postivahti | Matkakirja-posti | Sonnet 5.5, medium | Hälytys 96/99 %; välitti 22.00-luovutusmuistutuksen; ei raskaita polttoja junakäännösten aikana (välitetty) |
