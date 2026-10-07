@@ -7,6 +7,17 @@ Worktreet: /Users/Shared/Claude/wt/proto-siirtoseppa-*. Käännös vain Julkaisi
 (oma UDID D5900D45 = siirtoseppa-iPad13, TYHJENNETTY 19.0x, appit asennettava uudelleen). Ei detachia simupaneelista.
 Oikeat tapit: lokit/siirtoseppa-alo/.sk (simkosketus, käännä tarvittaessa tyokalut/todistusajo/simkosketus.m).
 
+## TILA 7.10. 04.5x
+
+- **v41 todennettu molemmilla** (TF 154 03.10 + junan 156 koodi a5285a27 04.18–04.21: faceit-glb:t, 11 elettä, 14 reaktiota); osoitin 1a1857e0.
+- **Kielletty v3** (64a89525): kiveys näkyy, katon tiilirivit sumeat → LR. Kuvat lokit/siirtoseppa-vuoro-v41/kielletty/.
+- **Äänimaisema soi Pariisissa** (f08f28fd, lokit/siirtoseppa-vuoro-v41/aanimaisema/tallenne-aanella.mp4): −39 dB ilman puhetta,
+  väistö toimii, ei saumanotkoja. Päätoimittaja: lennoilla hiljaisuus (−inf) → korjattu **28ad5bf2** (lento jatkaa maisemaa + suhina,
+  silmukan ristihäivytys kahdella lähteellä, "aanimaisema kello [n]"). Juna 157 -ehdokas. Käännös + simu jonossa (~05.35):
+  ajo-aanimaisema.sh (Pariisi + Venetsia + Kööpenhamina + kello, KAAPPAUS 420 s). Ehto: lentojen RMS ≥ ~−45 dB, ei katkoja.
+  AUKKO: kartan tunnus Aloituskaupungista, toive ei vaihda → kysytty LS1:ltä 12053ccc:n (KaupunkiTiet.Tunnus) aikataulu.
+- **eleet-2 873f24eb** jonossa junan 156 VIE:n jälkeen (iPhone F989814A + iPad, puolilahi 0/1).
+
 ## TILA 7.10. 03.4x
 
 - **Linnan osoitin = v41 1a1857e06ec1386f** (Julkaisija 03.39; TF 154 todennettu 03.10, lokit/siirtoseppa-vuoro-v41/tf154*).
