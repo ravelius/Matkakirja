@@ -226,3 +226,4 @@ Brotli (haara linnanrakentaja-zstd, worktree olemassa), akustiikka #3979 (Steam 
   js valaistus.sumu {0.9, 3.2} (Siirtoseppä eleet-2, junan 156 jälkeen). Peili 2851289d904b2320 (blender 2a01feacece9cb55).
   Siirtoseppä ottaa ilmakuvat eleet-2-käännöksellä kielletty-kuvat.sh:lla → merkitse kielletty-merkitse.py → Päätoimittajalle (~klo 10).
 - 7.10. 06.2x: KIELLETTY v4 -kuvat Päätoimittajalla (lokit/linnanrakentaja-kielletty-v4/omistajalle/, Siirtosepän eleet-2 ed5a5e89). Utu 0,9/3,2 melko vahva → kevennys vain js-arvo + CI, jos Päätoimittaja pyytää.
+- 7.10. 07.06: KIELLETTY v4b Päätoimittajalle: sumu {2.4, 10} (js), peili 14aa3229553a885e, iPad-kuvat lokit/linnanrakentaja-kielletty-v4b/omistajalle/ (Siirtoseppä ed5a5e89). Seuraava: PR haarasta linnanrakentaja-kielletty, kun Päätoimittaja hyväksyy; worktree poistetaan mergen jälkeen.
