@@ -180,6 +180,20 @@
         "/Users/Shared/Claude/wt/pelikoodari-galleria"
       ],
       "port": 8801
+    },
+    {
+      "name": "periaatteet",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8802",
+        "--bind",
+        "127.0.0.1",
+        "--directory",
+        "/Users/Shared/Claude/wt/pelikoodari-apuraha-periaatteet"
+      ],
+      "port": 8802
     }
   ]
 }

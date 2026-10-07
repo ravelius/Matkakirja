@@ -4,14 +4,10 @@ Uusi Pelikoodari: lue tämä, sitten docs/raportit/viesti-pelikoodari-aloitus.md
 
 ## KESKEN JA SEURAAVAKSI (päivitetty 13.2x, ennen tilin 5 h taukoa; jatka klo 15 jälkeen)
 0. OMISTAJA 13.1x: KAIKKI ÄÄNET eleven_v4_turbo (halvempi; ei eroa). Esittelyt jo turbolla.
-1. Prahan ja Wienin avaukset: äänet tehty, vienti opas-esittely-vienti-20261007c AMPÄRISSÄ. #4141 (esittely_polut →
-   opas/esittely-v1b/{praha,wien}.json; LS1 vahvisti TF 159/160 ohittavat kentän) ja #4142 (/opas/liiku-kierros alkaa
-   avauksen kohteesta; #4138 kattoi vain /opas/seuraava) Julkaisijalla. DEPLOYN JÄLKEEN TODENNA: /opas/seuraava
-   "Esittele kaupunki" Praha → Kaarlensilta, Wien → Stephansdom (valmis + aani), ja /opas/liiku?kaupunki=Rooma&lat=41.89737
-   &lon=12.48703 kierros[0] = Q180212. Komennot: origin https://matkakirja.app + x-matkakirja-testi: 1 (ei generointia).
+1. Prahan ja Wienin avaukset (#4141) ja Liiku-kierroksen alku (#4142) JULKI ja todennettu 13.44.
 2. Olavinlinnan 31 repliikkiä VALMIIT: _valmiit/olavinlinna-repliikit-v1 (manifest, kooste.mp3), skripti
    proto-3d/tyokalut/pelikoodari-ajot/olavinlinna-repliikit.py. Toimitettu Siirtosepälle ja kooste Päätoimittajalle;
-   odotetaan Siirtosepän polkutoivetta, jos ämpärivienti halutaan.
+   ämpärissä seikkailu/olavinlinna/repliikit-v1 (13.21).
 3. Esittely: 6 kaupunkia tuotannossa (Pariisi, Praha, Wien, Rooma, Lontoo, Kööpenhamina). Loput 31 odottavat omistajan
    määrälupaa (ÄLÄ generoi ennen). Tekstit pilvihaarassa pelikoodari-esittely-pilvi. Lupa → korjaukset omaan haaraan
    pelikoodari-esittely, tarkistin → tee-esittelyaanet.mjs + avaukset tee-aanet-kohdistuksella.mjs --r2 → koosta-kuuntelu.mjs
