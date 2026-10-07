@@ -433,7 +433,8 @@ export function lisaaBlender(rakennusJson, blender) {
   // ymparisto.mallit[] { id, huippu, kevyt }. Rantakivikko ja kalliojalusta, myöhemmin vene. Vanha natiivi ohittaa kentän.
   const mallit = [...on.keys()].filter((p) => /^ymparisto\/mallit\/[^/]+\.glb$/.test(p) && !p.endsWith('-kevyt.glb')).sort()
     .map((p) => { const id = p.slice('ymparisto/mallit/'.length, -4); const kevyt = `ymparisto/mallit/${id}-kevyt.glb`;
-      return { id, huippu: B(p), kevyt: B(on.has(kevyt) ? kevyt : p) }; });
+      return { id, huippu: B(p), kevyt: B(on.has(kevyt) ? kevyt : p), ...(rakennusJson.ymparistoMallit?.[id] ?? {}) }; });
+  delete rakennusJson.ymparistoMallit;   // rakennuskohtaiset lisäkentät malleille, esim. vene { maailmaan: false } (Siirtoseppä 7.10.)
   if (mallit.length) { rakennusJson.ymparisto = rakennusJson.ymparisto || {}; rakennusJson.ymparisto.mallit = mallit; }
   // Vapaa kävely (omistaja 7.10. 08.4x; Linnanrakentaja + Siirtoseppä): kavely/osat.json (osien glb:t, rajat, naapurit,
   // portaalit, leikkaukset, kamera_rajat) ja kavely/merkit.json (ovi:, piilo:, esine:, partio:). Polut osat.jsonissa

@@ -43,6 +43,9 @@ const TAULU_LINNA = {
 export const RAKENNUS = {
   id: 'olavinlinna',
   nimi: 'Olavinlinna',
+  // Ympäristömallien lisäkentät id:n mukaan (rakenna.mjs → ymparisto.mallit[]): vene on rekvisiitta, jonka Timeline sijoittaa
+  // (Siirtoseppä 7.10.: maailmaan false = ei piirretä maailman origoon).
+  ymparistoMallit: { vene: { maailmaan: false } },
   otsikko: 'Olavinlinna – elävä linna',
   versio: 1,
   lahteet: [{ nimi: 'Kansallismuseo: Olavinlinnan historiaa', osoite: 'https://www.kansallismuseo.fi/fi/olavinlinna/historiaa' }],
