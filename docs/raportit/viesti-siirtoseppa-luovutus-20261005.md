@@ -400,3 +400,7 @@ Edellinen luovutus on `viesti-siirtoseppa-luovutus-20261002.md` (5.10. osiot 02.
 - 12.34: uusinta ec14e9b3 (b051b5d6+NUI) iPad: eleet-2 puolilähi OK (ei tyhjiä ruutuja, video Päätoimittajalle lokit/siirtoseppa-vuoro-h2/eleet/).
   LR v44 peili 5795bcd4039bf161 (soutu, keittio-g102, kappeli lähteistä, kävely v2 UV:llä): kävely tekstuurein, kirkkotorni pihalta.
   e3af31dd: etsinnän renkaat ja syke pois kävelytilassa. Seuraavaksi: V2 venesaapuminen (soutu.json) ja käännös e3af31dd.
+- 12.44: V2 venesaapuminen koodattu: 0a2aca06 Ydin Venesaapuminen (+3 testiä, 813/813), ed7a4516 SeikkailuVene + "poikki vene 1 [kesto]|0"
+  (reitti merkeistä vene:* / varareitti laiturin kameran suunnasta, nousu:laituri, blendi 1,6 s pelaajaan), 66f3f5bd soutaja irrallisena hahmona.
+  LR:lle pyydetty merkit vene:alku/muuri/portti/laituri (kierto_y) + nousu:laituri. Jonossa 66f3f5bd + NUI (4. Julkaisijalla);
+  vuoroskripti tyokalut/siirtoseppa-ajot/vuoro-h3.sh (ajo-vene.sh + kävely), app lokit/siirtoseppa-historia4-app.
