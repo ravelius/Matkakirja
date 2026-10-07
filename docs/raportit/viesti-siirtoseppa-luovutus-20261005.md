@@ -481,3 +481,6 @@ Edellinen luovutus on `viesti-siirtoseppa-luovutus-20261002.md` (5.10. osiot 02.
 - 17.02: Päätoimittaja: E3a–d OK, äänet ensin CC0 (Freesound/kyles), voudin 2 repliikkiä ja ElevenLabs-tehosteet vasta omistajan luvalla
   (ÄLÄ generoi). Sonnet-agentti hakee 21 CC0-ääntä → proto-3d/_valmiit/olavinlinna-e3-aanet-v1/ (valmis/, raaka/, LAHTEET.md, manifest.json).
   4695eeeb E3d osa 1: kynttilän asetus, saumat viistovalosta, kivet vasta silloin. NUI:lta kysytty paikallisaarteen kutsu löytöön.
+- 17.11: E3-äänet ämpärissä (Julkaisija 17.10): seikkailu/olavinlinna/aanet-e3-v1 (19 CC0/PD: Kenney + Commons; puuttuu pulu-siivet, sytytys;
+  Freesound-avain tyhjä → Päätoimittajalle). f64ff55fc SeikkailuAanet + kytkennät. 9049d770 löytö NUI:n NaytaLoyto-kutsulla
+  (natiivi-ui/seikkailu-toiminto f9f48082). historia-h0 kärki f64ff55fc → juna 163 (E2 + E3a–d osat; NUI-haara mukaan).
