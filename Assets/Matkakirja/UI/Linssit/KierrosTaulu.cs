@@ -163,6 +163,8 @@ namespace Matkakirja.Natiivi
             var alue = Screen.safeArea;
             var vy = RuntimePanelUtils.ScreenToPanel(paneeli, new Vector2(alue.xMin, Screen.height - alue.yMax));
             float yla = Mathf.Round(Mathf.Max(0f, vy.y) + 8f + Tyylikirja.Nappi.Ohjaus + 8f);
+            // iPhonella metrolinja on vasemmassa yläkulmassa (omistaja 12.3x): otsikko sen alle.
+            if (OpasMetrolinja.Alareuna > 0f) yla = Mathf.Max(yla, Mathf.Round(paneeli.visualTree.WorldToLocal(new Vector2(0, OpasMetrolinja.Alareuna)).y + 8f));
             float vasen = Mathf.Round(Mathf.Max(0f, vy.x) + 28f);
             if (otsikko.style.top.value.value != yla) otsikko.style.top = yla;
             if (otsikko.style.left.value.value != vasen) otsikko.style.left = vasen;
