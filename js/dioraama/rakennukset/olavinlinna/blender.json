@@ -1,7 +1,7 @@
 {
   "rakennus": "olavinlinna",
-  "hash": "59d592f4c0f42f6b",
-  "kansio": "dioraama/olavinlinna/blender/59d592f4c0f42f6b/",
+  "hash": "a2fb2ddf0b38a996",
+  "kansio": "dioraama/olavinlinna/blender/a2fb2ddf0b38a996/",
   "tiedostot": [
     {
       "polku": "hahmot/apulainen-1500-faceit.glb",
@@ -15,8 +15,8 @@
     },
     {
       "polku": "hahmot/fogg.glb",
-      "sha256": "0b9d4689a225787f339530697095fb1348a3e5c262182e78d115a6120906d821",
-      "tavuja": 2101476
+      "sha256": "8c4a8c1627776631f356879410d39302089a846c7711e040e0b6d9d032ead93e",
+      "tavuja": 1980432
     },
     {
       "polku": "hahmot/kappalainen-1500-faceit.glb",
@@ -132,6 +132,16 @@
       "polku": "kavely/esine-kauha.glb",
       "sha256": "b1106df74d4a614ae5e6bf7cc828b9e80736a6db8c88e11923ca1d47eba8c2a2",
       "tavuja": 68500
+    },
+    {
+      "polku": "kavely/esine-kilpilaatta-sture.glb",
+      "sha256": "8600b4efdd037893ad6932fabc4f00a3d759a31d74040651ac4d579eae9eb347",
+      "tavuja": 1051636
+    },
+    {
+      "polku": "kavely/esine-kilpilaatta-tott.glb",
+      "sha256": "296525648af2f72f73fb32610433b49677277c1ba0732d9195bb7f95a6dc2228",
+      "tavuja": 959428
     },
     {
       "polku": "kavely/esine-kirja.glb",
@@ -260,13 +270,13 @@
     },
     {
       "polku": "kavely/merkit.json",
-      "sha256": "e535a1697ed43d784822cedea857f6619ea420b657bd15fd164741e24e343d96",
-      "tavuja": 13593
+      "sha256": "ae3da383e677149f7d73bf7fd25197766cc6982062e68be9f2841d7fa5a51ddb",
+      "tavuja": 14245
     },
     {
       "polku": "kavely/osat.json",
-      "sha256": "d5cdeac9b0448dcb1f890c60d1bc92e2172718fa659d9b06dedf60dc3235c631",
-      "tavuja": 13165
+      "sha256": "d7df3a9f6ece00e6b63968a302ae5de807743a8e3541a12a1197d2ce234eed33",
+      "tavuja": 13226
     },
     {
       "polku": "kavely/pikkupiha-kavely.glb",
@@ -410,8 +420,8 @@
     },
     {
       "polku": "tilat/kappeli.glb",
-      "sha256": "5d46258a6336b6f11f75f02a51cdbbbddb1d18f4a7b11198cbc001c64b3a5002",
-      "tavuja": 1243556
+      "sha256": "e7b29a596afb8db4043a8fed1bcf6d6286a405fb79a6909da38ac763bc7c42a8",
+      "tavuja": 1240532
     },
     {
       "polku": "tilat/keittio-g102.glb",
@@ -570,43 +580,43 @@
     },
     {
       "polku": "valot/kappeli-2k-4x4.astcm",
-      "sha256": "54f8fa8e8fffdfdbe01580e85a5ef1bef7268475d5ae3ee089b26d46783663b5",
+      "sha256": "2484efa251ff001ae4a0055b6e1d1b727f45fffc7bdab7a8f667a50e3d10b4de",
       "tavuja": 1398144
     },
     {
       "polku": "valot/kappeli-2k.jpg",
-      "sha256": "0fbebf7d1923946caf0d072ff3a5cb75679318f134123e83bd3230d76474ac5d",
-      "tavuja": 245499
+      "sha256": "16f9cb555ba1d61aaefd15b4b2a810f02ea89a8c738b2b0c9b76622277ee19aa",
+      "tavuja": 244628
     },
     {
       "polku": "valot/kappeli-4x4.astcm",
-      "sha256": "a338d290f732fb76949181c9527f985e6480c6f6313282906aeabc127691c1b2",
+      "sha256": "4a31f568670dd9947cd6d1153711c0c07f40d4e2f4c188c231a53a775262fa72",
       "tavuja": 5592448
     },
     {
       "polku": "valot/kappeli-hamara-2k-4x4.astcm",
-      "sha256": "e04ac981028040dee457f434b518ae9f24b7faa2ad52edfde5e96311cb53e2c4",
+      "sha256": "e4d92179f351e2ed6e0a7e5fbaa926b5ca3c4acd65de1fa67ef5f5e104a5a084",
       "tavuja": 1398144
     },
     {
       "polku": "valot/kappeli-hamara-2k.jpg",
-      "sha256": "68a31ad9a1f336a4d94dc3270c271a5e6309cb5dbb8172ace93ce821056b1122",
-      "tavuja": 231038
+      "sha256": "4c462dec02e8e50492d4539e0351e17b71642523da4563714fe3b746da8dc401",
+      "tavuja": 229897
     },
     {
       "polku": "valot/kappeli-hamara-4x4.astcm",
-      "sha256": "bb6d63893fcbd380a95fecc7a9fb8e15aa2f9f83e811fed792dc07bd8875a45f",
+      "sha256": "b5b2908ba75446ec07fe01507c8ca6af63f1a987988962f15066d378afba6ace",
       "tavuja": 5592448
     },
     {
       "polku": "valot/kappeli-hamara.jpg",
-      "sha256": "31bfb589fbd3ec737a27296346b5d90a20bc74c0949779ade18772572675c8c9",
-      "tavuja": 715036
+      "sha256": "faba69554af821d36c57a9b264419d7c36b988fa38a88f9d7af901143b7c777d",
+      "tavuja": 708457
     },
     {
       "polku": "valot/kappeli.jpg",
-      "sha256": "d9bc7e8a3cc3059507f971810ba80344aae9ca5e2071169e6779f6c9a6fbf834",
-      "tavuja": 771016
+      "sha256": "ff1ee1e0320dae6f74c4590553350b938e072b666fed566fc58063cfe62b25a4",
+      "tavuja": 765425
     },
     {
       "polku": "valot/keittio-2k-4x4.astcm",
