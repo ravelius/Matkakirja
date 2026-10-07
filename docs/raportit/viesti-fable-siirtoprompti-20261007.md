@@ -18,40 +18,44 @@ Omistaja kirjautuu työpöytäsovellukseen uudella tilillä, avaa session kansio
 > tyhjennetään send_message "clear_session self" -käskyllä tai luodaan uudet), aseta mallit ja nimet, lähetä aloitusviestit, kytke Remote
 > Control kaikille ja itsellesi, ja jatka kohdan 2 jonosta. Kysy omistajalta tämän tilin viikkoraja ja kerro se Postivahdille.
 
-## 2. Tila ja jono (7.10. ilta)
+## 2. Tila ja jono (7.10. klo 23.0x)
 
-1. **TESTAUS VAIN AUTOMAATTISIN** (omistaja 15.5x, Raamattu #4150): ennen junaa ja TF:ää vain automaattiset testit ja käännös; ei savua,
-   rutiinia, kuittausstillejä, iPad-mittauksia eikä toistoajoja. Roolit eivät tee omia käännöksiä. Enintään 2 junaa päivässä (16.1x).
-   Kuittaus yhdellä rivillä (mitä muuttui, testit, SHA).
-2. **TF 161** testaajilla 16.02 (BUILD 9572eaff) + Mac TF 161. Ulkoinen ryhmä Arvioijat: 160 Applen beta-katselmoinnissa, 161 jonossa
-   (Julkaisija yrittää 10 min välein). **JUNA 162** (omistajan pyyntö: TF klo 22): runko 13c1c0269 + Siirtoseppä ef6b092d
-   (Olavinlinnan pelattava pala kehittäjävalikossa "Olavinlinna – pelattava pala (kokeilu)", kiinnitetty peili v44g) + NUI 34cf54b0
-   (seikkailutapit) + NUI 3f07c49b (apurahakortti v7 + Avaa valmiit linssit) + LS1 b9f37ee8f (latauskuva + siirtymäpeiton purku)
-   + LS2 f6e4a8495 (S2-kaudet). Omistaja testaa illalla.
-3. **AVOINNA:** Mac-ohjauslevyvika (diagnostiikka 161:ssä; omistajan Player.log-komento viestissä 16.0x); alkulento v3 (LS1: ei yötä,
-   kone näkyvissä alusta, ei nykäystä; 763 ms kehys selvityksessä); vesiportin kynnys (LR törmäys); Pariisin yksityiskohtakuvat
-   (Sisältökirjuri kokoaa paikallisesti → ämpäri + Codex); 31 kaupungin korjaukset (Pelikoodari, ei ääniä ennen omistajan pelitestiä);
-   apurahakortti v7 Pagesiin (#4147) + Laitetestaajan simutarkistus TF 160 -koodilla; talvi2b (Karttaseppä, ~21) → z5-yleiskuva saumoista
-   ja pilvistä → vienti; kevät2 vientipaketti Julkaisijalle.
-4. **PILVI:** krediitti loppui sami.reivinen-tililtä 16.1x (250 $ ~2 h:ssa). Pilveen vain rajatut tehtävät (Raamattu PILVIAJOT: KULUTUS).
-   CLI on kirjautuneena sami.reivinen@vvi.fi; jos työpöytä vaihtaa samalle tilille, CLI vaihdetaan eri tilille.
+1. **TESTAUS VAIN AUTOMAATTISIN** (omistaja 15.5x): ennen junaa vain automaattiset testit + käännös; roolit eivät käännä itse;
+   enintään 2 junaa/pv (tänään poikkeuksia omistajan pyynnöstä). POIKKEUS: kun omistaja pyytää kuvia ennen julkaisua, TF pidätetään
+   ja LS1 ottaa kuvat simulla OMISTAJAN REITILLÄ (ei testikomennolla) äänen kanssa. Opetus 7.10.: TF 162 meni rikki linssireitillä,
+   koska simukuvat otettiin testikomennolla.
+2. **TF 163** käynnistyi 23.00 (BUILD 163 = proto master 062bb439, korjausjuna: kello 0bfc86e0, kori koko oppaassa, lukija 1,19 s
+   latausikkunan jälkeen, avausnäkymä 1,1 km / 50°, kehittäjätilan kaikki pallot); vain sisäisille (lippu tf163-ei-ulkoista) —
+   ULKOINEN vasta omistajan kuittauksesta. Mac TF 163 Natiivisepältä iOS-latauksen jälkeen. TF 162 poistettu Arvioijat-ryhmästä.
+3. **JUNA 164 (8.10.)** BUILD 163:n päälle: Siirtoseppä historia-valot-juna b91278bf (vara historia-fp-juna-2 8b071c07: Olavinlinnan
+   ensimmäisen persoonan pala huoneet 1–5 + Candle VFX + Volumetric Lights 2 laatutasokytkimen takana + kehittäjävalikon kytkin),
+   NUI 8aa55e02 (seikkailu-fp + kontekstikuvakkeet käsi/kaari/liekki) + NUI 8b4659e9 (☰ Lähteet ›), LS1 7c4122bc9 (tekijärivi pois
+   kortista, KuvaLahteet), LS2 08a6891a0 (S2-kevät), Natiiviseppä 7d66739d (käännösnopeutus aja.sh). Lappu-katolle 6ad4244fc EI.
+4. **OLAVINLINNA 8.10.:** työohje docs/raportit/pelattavuusmalli-olavinlinna.md (#4163, #4165), omistaja hyväksyi 15 kohtaa (#4167,
+   Raamattu). Linnanrakentaja v44p/v44q: huoneet 6–8 + tyrmä, huone 9 kesken, huone 10 = köysilasku kalliolle, Kellobastioni
+   rajataan pois 1499-näkymistä. ElevenLabs enintään 10 000 krediittiä 8.10. (Pelikoodari, vasta tarkistetuista teksteistä).
+5. **AVOINNA:** Pelikoodarin Haiku 5.5 -uusinta ajattelu päällä (low/medium) → raportti #4176:n jatkoksi, omistajalle tulos;
+   Natiivisepän T7-simulaattorisarja (8.10. ennen ensimmäistä junaa, poistot omistajan Run-rivillä); alaikäiskohdat 4–8 omistajalle;
+   Sisältökirjurin Codex-uusinnat (Colosseum, Appia) + Lontoo 10 + Kööpenhamina 3 havainnekuvaa; orvot ämpärissä (Pompidou,
+   rooma-v1 kaksi kuvaa + json) poistoon omistajan luvalla; Volumetric Fog & Mist 2 valinnainen osto (järviusva).
+6. **PILVI:** krediitti loppui sami.reivinen-tililtä; pilveen vain rajatut tehtävät. CLI-tili tarkistetaan tilinvaihdossa.
 
 ## 3. Roolit (checkout /Users/Shared/Claude/…, malli, kärki vaihdossa)
 
 | Rooli | Checkout | Malli | Kärki ja tila vaihdossa |
 |---|---|---|---|
-| Postivahti | Matkakirja-posti | Sonnet 5.5, medium | (täydennetään) |
-| Julkaisija | Matkakirja-julkaisija | Opus, high | (täydennetään) |
-| Natiiviseppä | Matkakirja-3d-selvittaja | Opus, high | (täydennetään) |
-| Natiivi-UI | Matkakirja-natiivi-ui | Opus, high | (täydennetään) |
-| Pelikoodari | Matkakirja-pelikoodari | Opus, high | (täydennetään) |
-| Linssiseppä | Matkakirja-linssiseppa | Opus, high | (täydennetään) |
-| Linssiseppä 2 | Matkakirja-linssiseppa-2 | Opus, high | (täydennetään) |
-| Linnanrakentaja | Matkakirja-linnanrakentaja | Opus, high | (täydennetään) |
-| Siirtoseppä | Matkakirja-siirtoseppa | Opus, high | (täydennetään) |
-| Karttaseppä | Matkakirja-karttaseppa | Opus, high | (täydennetään) |
-| Sisältökirjuri | Matkakirja-sisaltokirjuri | Sonnet 5.5, high | (täydennetään) |
-| Laitetestaaja | Matkakirja-laitetestaaja | Sonnet 5.5, high | (täydennetään) |
+| Postivahti | Matkakirja-posti | Sonnet 5.5, medium | Hälytys 96/99 %; välitti 22.00-luovutusmuistutuksen; ei raskaita polttoja junakäännösten aikana (välitetty) |
+| Julkaisija | Matkakirja-julkaisija | Opus, high | TF 163 ajo 37678690889 (23.00), ulkoinen odottaa omistajaa; #4168 turvakerrokset julki; tf-lupaskripti julkaisija-tyokalut/ |
+| Natiiviseppä | Matkakirja-3d-selvittaja | Opus, high | BUILD 163 062bb439; juna 164 -lista luovutuksessa; käännösnopeutus (-jobs 12, välitiedostot) voimassa; T7-simusarja 8.10. aamulla |
+| Natiivi-UI | Matkakirja-natiivi-ui | Opus, high | Junaan 164: 8aa55e02 (seikkailu-fp-pino + kuvakkeet) ja 8b4659e9 (Lähteet ›); pariisi-otsikko a27f2e2c jo 162:ssa |
+| Pelikoodari | Matkakirja-pelikoodari | Opus, high | Haiku 5.5 -uusinta ajattelu päällä kesken; ElevenLabs 10 000 kr 8.10. Olavinlinnaan; Freesound vain API:lla (#4169) |
+| Linssiseppä | Matkakirja-linssiseppa | Opus, high | kortti-teksti 7c4122bc9 junaan 164; 163:ssa d3d243595; todistusajot omistajan reitillä äänen kanssa |
+| Linssiseppä 2 | Matkakirja-linssiseppa-2 | Opus, high | S2-kevät 08a6891a0 junaan 164; talvi tulee, kun Karttaseppä vie sen ämpäriin |
+| Linnanrakentaja | Matkakirja-linnanrakentaja | Opus, high | v44q huoneet 7–8, huone 9 kesken, huone 10 vaihtoehto A (köysilasku 295°, bastioni rajattu) |
+| Siirtoseppä | Matkakirja-siirtoseppa | Opus, high | historia-valot-juna b91278bf (vara 8b071c07) junaan 164; seuraavaksi K1, kiipeily, soihtujen hehku |
+| Karttaseppä | Matkakirja-karttaseppa | Opus, high | talvi2c-poltto käynnissä 19.09–~23 (jatkuu tilinvaihdon yli); yleiskuva + raportti yhdellä rivillä |
+| Sisältökirjuri | Matkakirja-sisaltokirjuri | Sonnet 5.5, high | 6 kaupungin yksityiskohtakuvat valmiit (Rooma v4 65, Lontoo 56, Kööpenhamina 54); Codex-uusinnat; Olavinlinnan CC0-äänilista #4170 |
+| Laitetestaaja | Matkakirja-laitetestaaja | Sonnet 5.5, high | vapaa (testaus vain automaattisin) |
 
 Aloitusviesti kullekin: "Olet <Rooli> (<malli>). Lue CLAUDE.md, Raamatun Ydinajatus kohta 2 ja docs/raportit/viesti-<rooli>-aloitus.md
 omasta haarastasi sekä sen osoittama luovutus, ja jatka. Päätoimittajan session nimi on PÄÄTOIMITTAJA (Opus, max)."

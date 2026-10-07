@@ -1,3 +1,15 @@
+# >>> TILANNE 7.10.2026 KLO 23.0x (TILINVAIHTO KESKIYÖLLÄ, viikko 89 %, konteksti 75 %) — LUE ENSIN viesti-fable-siirtoprompti-20261007.md, sitten 18.5x <<<
+
+**ILLAN KULKU:** omistaja hyväksyi Olavinlinnan 15 kohdan toteutusehdotuksen ("hyväksyn kaikki", #4167) ja osti Volumetric Lights 2:n
+(+ ilmainen Candle VFX; ladattu GUI:lla lataus-projektista, muisti asset-store-lataus-gui). Pelattavuusmalli #4163/#4165 = 8.10. työohje.
+Juna 162 (TF 22.15) oli omistajan iPadilla rikki linssireitillä → korjausjuna 163 (062bb439, TF 23.00, vain sisäisille). Omistajan
+UI-palaute toteutettu (metrolinjan otsikko, nimilappu pois, kuvakortit pienemmiksi; tekijät korteista ☰ Lähteet › -näkymään junassa 164).
+Käännösnopeutus käyttöön (simukäännös ~2–2,5 min). T7-simusarja Natiivisepälle 8.10. Haiku 5.5: ei vaihtoa (#4176), uusinta ajattelulla kesken.
+Claude for Startups: omistaja täytti hakemuksen (Console-org VVI, SMB, alle 18 kyllä). Loki #4177 (illan päätökset sanatarkasti).
+**KESKUSTELU:** /Users/Shared/Claude/keskustelut/Paatoimittaja-2026-10-07-klo-1849-2300.md.
+**OMISTAJALLE AUKI:** TF 163:n testaus ja ulkoisen ryhmän kuittaus; alaikäiskohdat 4–8; orvot ämpärissä (Pompidou, rooma-v1); Haiku-uusinnan
+tulos; T7:n vanhojen kopioiden poisto (Run-rivi, kun uusi sarja toiminut päivän); valinnainen Volumetric Fog & Mist 2.
+
 # >>> TILANNE 7.10.2026 KLO 18.5x (Päätoimittajan oma nollaus omistajan pyynnöstä, konteksti ~70 %) — LUE ENSIN, sitten 12.5x <<<
 
 **OMISTAJAN TEHTÄVÄNANTO NOLLAUKSEN JÄLKEEN (sanatarkasti 18.5x):** "tänään tärkeintä on saada kuumailmapallo valmiina illan julkaisuun niin että siitä puuttuu ainoastaan ne generoitavat äänet. sen jälkeen tavoitteena on saada joku versio olavin linnan uudesta pelistä. mutta sekään ei ole pakollinen. tärkeintä on kartoittaa mitä kaikkea tarvitset huomista pelin rakentamista varten minulta. eli pitää miettiä miten toteutat pelin ja mitä asioita mahdollisesti pitää ostaa toteutusta varten. ja mitä muuta pitäisi ottaa etukäteen huomioon jotta pelistä tulisi mahdollisimman hyvä ja pystyisit kehittämään sitä täysin omatoimisesti. mitä asioita ajattelet että minun olisi hyvä hyväksyä etukäteen pelin tyylistä ja toteutuksesta?" → Valmistele omistajalle KESKUSTELTAVA EHDOTUS: toteutustapa (ensimmäinen persoona, Thief-malli), ostot (esim. Unityn FPS-/hiiviskelypaketit, äänikirjastot, Mixamo/ActorCore-liikkeet, Freesound-tili), etukäteen hyväksyttävät tyyli- ja toteutuslinjaukset (taso, kesto, väkivallan aste, valaistus, äänet ja niiden generointikatto, kuvakkeet, kaukokuvat, tallennus, ohjaus), ja mitä omistaja voi tehdä huomenna opetuspäivän tauoilla. Omistaja on huomenna 8.10. opettamassa koko päivän: kone vapaa, kommentit tauoilla.
