@@ -520,8 +520,8 @@ esineet; seinät osien rajoista, näkölinja yksinkertaistettuna) ilman Unityä.
 | Huonesimulaatio | valoreitti | sama reitti kävellen soihdun alta: kiinni ≤ 10 s, varoitus ennen |
 | Huonesimulaatio | harhautus | heitto 6 m:n päähän: lähin hahmo kääntyy ≤ 1 s, on paikalla ≤ 5 s |
 | Huonesimulaatio | arvoitus ja jumi | kappelin vaiheet 1–11 → löytö; jokainen käsikirjoituksen väärä yritys → ei jumia; 180 s paikallaan → Pulu taso 2 kerran |
-| Junan käännös | lokiajo | simulaattorissa `poikki seikkailu botti <huone>` (UUSI) lokiväittämin: huoneet 1–5, tyrmä × 3, jatka tallennuksesta, kehysaika lokiin |
-| Junan käännös | kuva | takakuvan kulma selästä ≤ 60° joka kehyksessä; kaukokuvassa hahmo < 10 % kuvasta; seikkailussa ei näkyvää tekstiä paitsi löytö- ja tietokerrospohjissa |
+| Vain vianselvitys (ei ennen junaa/TF:ää, omistaja 7.10.) | lokiajo | simulaattorissa `poikki seikkailu botti <huone>` (UUSI) lokiväittämin: huoneet 1–5, tyrmä × 3, jatka tallennuksesta, kehysaika lokiin |
+| Vain vianselvitys (ei ennen junaa/TF:ää) | kuva | takakuvan kulma selästä ≤ 60° joka kehyksessä; kaukokuvassa hahmo < 10 % kuvasta; seikkailussa ei näkyvää tekstiä paitsi löytö- ja tietokerrospohjissa |
 
 ## 12. Työjako huomiselle (8.10.)
 
