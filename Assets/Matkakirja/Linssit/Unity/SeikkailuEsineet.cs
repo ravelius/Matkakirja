@@ -33,6 +33,8 @@ namespace Matkakirja.Natiivi
         sealed class Esine { public string Id; public GameObject Go; public Rigidbody Rb; public bool Heitetty, Kuului; public Laji Laji; public bool Irrotettu; public Vector3 Ulos; public int Napautuksia; }
         /// <summary>Veitsen raapaisu saumaan (E3c: ensimmäinen raapaisu laukaisee kappalaisen paluun).</summary>
         public static event Action Raapaistiin;
+        /// <summary>Syvennyksen esine (kalkki, pateeni, liuskekivi) nostettiin (E3 vaihe 10: löytö).</summary>
+        public static event Action<string> Nostettiin;
         public const int IrrotusNapautukset = 3;
         /// <summary>Koputuksen ääni (ontto kohta); Sovitin asettaa.</summary>
         public static AudioClip OnttoKlippi;
@@ -161,6 +163,7 @@ namespace Matkakirja.Natiivi
             e.Go.transform.SetParent(p.Hahmo, true);
             e.Go.transform.localPosition = new Vector3(0.25f, 1.05f, 0.3f);
             kirjaa?.Invoke($"seikkailu: poimittu {e.Id}");
+            if (e.Laji == Laji.Nostettava) Nostettiin?.Invoke(e.Id);
         }
 
         void Heita(SeikkailuPelaaja p)

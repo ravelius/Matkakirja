@@ -67,7 +67,7 @@ namespace Matkakirja.Natiivi
             var hg = new GameObject("Voudin hehku"); hg.transform.SetParent(go.transform, false); hg.transform.position = k.portaikkoYla;
             k.hehku = hg.AddComponent<Light>(); k.hehku.type = LightType.Point; k.hehku.range = 3f; k.hehku.color = new Color(1f, 0.75f, 0.45f); k.hehku.intensity = 0f; k.hehku.shadows = LightShadows.None;
             k.voudinAskeleet = SeikkailuKuulija.Lahde("Voudin askeleet", 3f, 25f); k.voudinAskeleet.loop = true; k.voudinAskeleet.volume = 0.7f;
-            SeikkailuEsineet.Kolahti += k.Kova; SeikkailuEsineet.Aanteli += k.Tavallinen; SeikkailuEsineet.Raapaistiin += k.Raapaisu;
+            SeikkailuEsineet.Kolahti += k.Kova; SeikkailuEsineet.Aanteli += k.Tavallinen; SeikkailuEsineet.Raapaistiin += k.Raapaisu; SeikkailuEsineet.Nostettiin += k.Nosto;
             if (keskusteluKlippi != null) { k.keskustelu = go.AddComponent<AudioSource>(); k.keskustelu.clip = keskusteluKlippi; k.keskustelu.spatialBlend = 0f; k.keskustelu.playOnAwake = false; }
             Aktiivinen = k;
             kirjaa?.Invoke($"seikkailu: kappeli valmis (reitti {k.reitti.Count} pistettä, keskustelu {(keskusteluKlippi != null ? keskusteluKlippi.length.ToString("F1") + " s" : "puuttuu")})");
@@ -187,6 +187,25 @@ namespace Matkakirja.Natiivi
             Nyt = Vaihe.Pimea;
         }
 
+        // --- E3d: löytö (vaihe 10) Natiivi-UI:n Paljastus-pohjalla (SeikkailuTapit.NaytaLoyto heijastuksella) ---
+        bool loydetty;
+        void Nosto(string id)
+        {
+            if (loydetty || id != "kalkki" && id != "pateeni" && id != "liuskekivi") return;
+            loydetty = true;
+            kirjaa?.Invoke("seikkailu: löytö: kalkki, pateeni ja liuskekivi");
+            var t = typeof(SeikkailuKappeli).Assembly.GetType("Matkakirja.Natiivi.SeikkailuTapit");
+            var m = t?.GetMethod("NaytaLoyto", System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Static);
+            if (m == null) { kirjaa?.Invoke("seikkailu: löytö: SeikkailuTapit.NaytaLoyto puuttuu"); return; }
+            try
+            {
+                m.Invoke(null, new object[] { "Kappelin kätkö",
+                    "Liinaan kääritty hopeinen kalkki ja pateeni sekä liuskekivi, johon on kaiverrettu kaksi toisiaan kohti kallistuvaa kilpeä, kaari ja pieni kello.",
+                    null, null, (Action)(() => kirjaa?.Invoke("seikkailu: löytö kuitattu (Jatka matkaa)")) });
+            }
+            catch (Exception e) { kirjaa?.Invoke("seikkailu: löytö: " + (e.InnerException?.Message ?? e.Message)); }
+        }
+
         bool nahty;
         IEnumerator Nahty(SeikkailuPelaaja p)
         {
@@ -287,7 +306,7 @@ namespace Matkakirja.Natiivi
         {
             if (Aktiivinen == this) Aktiivinen = null;
             DioraamaHahmot3D.PiilotetutTilat.Remove("kappeli");
-            SeikkailuEsineet.Kolahti -= Kova; SeikkailuEsineet.Aanteli -= Tavallinen; SeikkailuEsineet.Raapaistiin -= Raapaisu;
+            SeikkailuEsineet.Kolahti -= Kova; SeikkailuEsineet.Aanteli -= Tavallinen; SeikkailuEsineet.Raapaistiin -= Raapaisu; SeikkailuEsineet.Nostettiin -= Nosto;
             if (voudinAskeleet != null) Destroy(voudinAskeleet.gameObject);
         }
     }
