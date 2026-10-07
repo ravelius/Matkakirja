@@ -48,16 +48,45 @@ namespace Matkakirja.Natiivi
         // Vastaavuus nimellä (kirjainkoosta riippumatta) tai alle SallittuKm:n päässä keskipisteestä (nimen kirjoitusasu voi erota).
         const double SallittuKm = 25.0;
 
+        // Simu 04.35: 36 sallittua → 46 riviä (lähiöt 25 km:n sisällä) ja Kreeta puuttui (ei samannimistä asutuspaikkaa). Nyt
+        // jokaisesta sallitusta tasan yksi rivi sallitun omalla nimellä ja paikalla; maa ja maanosa samannimisestä tai lähimmästä
+        // asutuspaikasta (enintään MaaHakuKm). Tulos välimuistiin listan ja aineiston mukaan.
+        const double MaaHakuKm = 250.0;
+        static IReadOnlyList<Kaupunki> sallitutVali;
+        static object sallitutAvain, kaikkiAvain;
+
         static IReadOnlyList<Kaupunki> VainSallitut(IReadOnlyList<Kaupunki> kaikki)
         {
             var s = OpasSovitin.SallitutKaupungit;
             if (kaikki == null || s == null || s.Count == 0) return kaikki;
+            if (ReferenceEquals(s, sallitutAvain) && ReferenceEquals(kaikki, kaikkiAvain)) return sallitutVali;
             var tulos = new List<Kaupunki>();
-            foreach (var k in kaikki)
-                foreach (var t in s)
-                    if (string.Equals(k.Nimi, t.Nimi, StringComparison.OrdinalIgnoreCase) || EtaisyysKm(k.Lat, k.Lon, t.Lat, t.Lon) < SallittuKm)
-                    { tulos.Add(k); break; }
+            foreach (var t in s)
+            {
+                Kaupunki? paras = null; double lahin = double.MaxValue;
+                foreach (var k in kaikki)
+                {
+                    if (string.Equals(k.Nimi, t.Nimi, StringComparison.OrdinalIgnoreCase) && EtaisyysKm(k.Lat, k.Lon, t.Lat, t.Lon) < MaaHakuKm) { paras = k; break; }
+                    double e = EtaisyysKm(k.Lat, k.Lon, t.Lat, t.Lon);
+                    if (e < lahin && e < MaaHakuKm) { lahin = e; paras = k; }
+                }
+                if (paras is Kaupunki p) tulos.Add(new Kaupunki(t.Nimi, p.Maa, p.Maanosa, t.Lat, t.Lon, p.Vakiluku, p.Iso));
+                else Debug.Log($"MATKAKIRJA opas: sallittu {t.Nimi} ilman maata (ei asutuspaikkaa {MaaHakuKm:0} km:n sisällä)");
+            }
+            sallitutAvain = s; kaikkiAvain = kaikki; sallitutVali = tulos;
             return tulos;
+        }
+
+        /// <summary>Suosikit (täkyt) vain sallituilta alueilta (LS1 SallittuPiste; tyhjä lista = kaikki).</summary>
+        static IEnumerable<OpasTaky> SallitutTakyt() =>
+            (OpasSovitin.Takyt ?? (IReadOnlyList<OpasTaky>)Array.Empty<OpasTaky>()).Where(t => OpasSovitin.SallittuPiste(t.Lat, t.Lon));
+
+        void Torjunta(string t)
+        {
+            if (!nakyy) return;
+            var chat = UiNakymat.Hae()?.Chat;
+            Debug.Log("MATKAKIRJA opas: torjunta tekstinä (" + ((chat?.Auki ?? false) ? "chat" : "kertojan laatikko") + ")");
+            if (chat?.Auki ?? false) chat.Vastaa(t); else KierrosTaulu.Ilmoitus(t);
         }
 
         static double EtaisyysKm(double la1, double lo1, double la2, double lo2)
@@ -333,7 +362,8 @@ namespace Matkakirja.Natiivi
             // Sallitut saapuvat oppaan avauksessa (aloitusvalikko jo auki): lista uudelleen, jotta rajaamaton ei jää näkyviin.
             OpasSovitin.SallitutVaihtui += () => { if (nakyy && Auki) Rakenna(); };
             // Torjunta tekstinä (LS1 sallitut-157): "vie minut X" / Liiku / kaupunki listan ulkopuolelle, kun siltalause ei soinut.
-            OpasSovitin.TorjuntaTeksti += t => { if (nakyy) { Debug.Log("MATKAKIRJA opas: torjunta tekstinä"); UiNakymat.Hae()?.Chat?.Vastaa(t); } };
+            // Oppaan chat ei aukea itsestään (Vastaa jäi näkymättömiin): auki olevaan chattiin vastauksena, muuten kertojan laatikkoon.
+            OpasSovitin.TorjuntaTeksti += Torjunta;
             Viimeisin = this;
         }
 
@@ -1306,7 +1336,7 @@ namespace Matkakirja.Natiivi
         /// TÄKYLUETTELO: Linssivalitsimen väliotsikko ja LINSSIRIVI-pohjan rivit (kuva, nimi, koukkurivi) workerin täkyistä
         /// (OpasSovitin.Takyt; null = latautuu, päivitetään 0,5 s välein), alla "Tai valitse paikka" ja maanosat.
         /// </summary>
-        static bool OnTakyja => OpasSovitin.Takyt != null && OpasSovitin.Takyt.Count > 0;
+        static bool OnTakyja => OpasSovitin.Takyt != null && SallitutTakyt().Any();
 
 
         /// <summary>Aloitus koko ruutuna; Linssisepän varapolku (ei täkyjä → vanha alku kartalle) sulkee sen ilman valintaa.</summary>
@@ -1370,7 +1400,7 @@ namespace Matkakirja.Natiivi
             aloitusOikea = Rakenne.El("mk-opas-aloitus__sarake", valikko, PickingMode.Ignore);
             Kirjasimet.Aseta(Rakenne.Teksti("SUOSIKIT", "mk-linssivalitsin__valiotsikko", aloitusOikea), Kirjasin.ModerniLihava);
             aloitusSuosikit = Lista(aloitusOikea);
-            if (OnTakyja) foreach (var t in OpasSovitin.Takyt.Take(SuosikitMax)) TakyRivi(t, aloitusSuosikit);
+            if (OnTakyja) foreach (var t in SallitutTakyt().Take(SuosikitMax)) TakyRivi(t, aloitusSuosikit);
             else
             {
                 Kirjasimet.Aseta(Rakenne.Teksti("Suosikit latautuvat…", "mk-linssivalikko__lahde", aloitusSuosikit), Kirjasin.Moderni);
@@ -1380,7 +1410,7 @@ namespace Matkakirja.Natiivi
                 {
                     if (!aloitus || aloitusSuosikit != sarake || !OnTakyja) return;
                     sarake.Clear();
-                    foreach (var t in OpasSovitin.Takyt.Take(SuosikitMax)) TakyRivi(t, sarake);
+                    foreach (var t in SallitutTakyt().Take(SuosikitMax)) TakyRivi(t, sarake);
                 }).Every(500).Until(() => !aloitus || aloitusSuosikit != sarake || OnTakyja && sarake.childCount > 1);
             }
             AsetteleAloitus();
@@ -1408,7 +1438,7 @@ namespace Matkakirja.Natiivi
             if (OnTakyja)
             {
                 Kirjasimet.Aseta(Rakenne.Teksti("MIHIN LENNETÄÄN?", "mk-linssivalitsin__valiotsikko", rivit), Kirjasin.ModerniLihava);
-                foreach (var t in OpasSovitin.Takyt) TakyRivi(t);
+                foreach (var t in SallitutTakyt()) TakyRivi(t);
                 Kirjasimet.Aseta(Rakenne.Teksti("TAI VALITSE PAIKKA", "mk-linssivalitsin__valiotsikko", rivit), Kirjasin.ModerniLihava);
             }
             if (kaikki == null || kaikki.Count == 0) { Kirjasimet.Aseta(Rakenne.Teksti("Kaupungit latautuvat…", "mk-linssivalikko__lahde", rivit), Kirjasin.Moderni); return; }
@@ -1714,11 +1744,12 @@ namespace Matkakirja.Natiivi
                     if (p.Length == 2) { maanosa = p[0]; maa = p[1]; }
                     Avaa(Nakyma.Kaupungit);
                     return $"opas: kaupungit {maanosa} / {maa}";
-                case "torjunta": UiNakymat.Hae()?.Chat?.Vastaa(OpasSovitin.EiSallittuTeksti); return "opas: torjunta → chat";
+                case "torjunta": Torjunta(OpasSovitin.EiSallittuTeksti); return "opas: torjunta";
                 case "sallitut":
                 {
                     var kaikki = Kaupungit?.Invoke(); var vain = VainSallitut(kaikki);
-                    return $"opas: sallitut {OpasSovitin.SallitutKaupungit?.Count ?? 0} → valikossa {vain?.Count ?? 0}/{kaikki?.Count ?? 0} kaupunkia"
+                    return $"opas: sallitut {OpasSovitin.SallitutKaupungit?.Count ?? 0} → valikossa {vain?.Count ?? 0}/{kaikki?.Count ?? 0} kaupunkia, "
+                         + $"suosikit {SallitutTakyt().Count()}/{OpasSovitin.Takyt?.Count ?? 0}"
                          + (vain != null && vain.Count <= 40 ? ": " + string.Join(", ", vain.Select(k => k.Nimi)) : "");
                 }
                 default: Avaa(Nakyma.Paa); return "opas: valikko (" + (VainSallitut(Kaupungit?.Invoke())?.Count ?? 0) + " kaupunkia)";

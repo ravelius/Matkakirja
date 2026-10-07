@@ -129,6 +129,14 @@ namespace Matkakirja.Natiivi
         /// "Eiffel-torni" alkoi ☾A-napin päältä, koska kiinteä top 76 ei huomioinut Dynamic Islandin turva-aluetta ~62 pt):
         /// turva-alueen yläreuna + ryhmän väli 8 + OHJAUSNAPPI 40 + väli 8; vasen reuna turva-alueen sisään.
         /// </summary>
+        /// <summary>
+        /// Oppaan lyhyt ilmoitus kertojan laatikossa (PUHE TEKSTINÄ -pohja; juna 157: LS1:n torjunta "valitse kohde listasta", kun
+        /// ei-sallittu-siltalause ei soinut). Oppaan chat ei aukea itsestään, joten PuluChat.Vastaa jäi näkymättömiin (simu 04.35).
+        /// </summary>
+        public static void Ilmoitus(string teksti, float kestoS = 5f) { ilmoitusTeksti = teksti; ilmoitusAsti = Time.unscaledTime + kestoS; }
+        static string ilmoitusTeksti;
+        static float ilmoitusAsti = -1f;
+
         /// <summary>Testi `ui opasvalikko otsikko <nimi>|<alarivi>` / `pois`: pysähdyksen otsikko pysyvästi näkyviin (pitkä nimi).</summary>
         public static string Testiotsikko;
 
@@ -181,8 +189,10 @@ namespace Matkakirja.Natiivi
                 otsikko.style.opacity = 1f;
             }
             string teksti = s.TekstiRuudulle;
+            bool ilmoitus = Time.unscaledTime < ilmoitusAsti;
+            if (ilmoitus) teksti = ilmoitusTeksti;
             if (teksti != null && kertojaTeksti.text != teksti) kertojaTeksti.text = teksti;
-            kertojaLaatikko.EnableInClassList("mk-nakyy", teksti != null && l.VaiheAika > 0.8);
+            kertojaLaatikko.EnableInClassList("mk-nakyy", teksti != null && (ilmoitus || l.VaiheAika > 0.8));
         }
 
         void Kytke(KierrosSovitin s)
