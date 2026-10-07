@@ -2,6 +2,11 @@
  "kuvaus": "Natiivin \"Mitä uutta\" -rivit uusin ensin. Julkaisija lisää rivin jokaisesta App Store Connectiin ladatusta TestFlight-buildista: node tools/vienti/muutosloki-natiivi.mjs --versio \"1.0.0 (<CFBundleVersion>)\" --teksti \"…\" (1–3 lausetta suomeksi pelaajalle). Sisältöpäivitysten rivit tulevat automaattisesti osoittimeen (uusin.json muutos).",
  "rivit": [
   {
+   "versio": "1.1 (156)",
+   "paiva": "2026-10-07",
+   "teksti": "Linnan hahmot elehtivät puheen tahdissa, ja kuulijat nyökkäävät. Oppaassa on Seuraava-nappi, latauksen ajan näkyy kuva, iPadin ohjaimet ovat lähempänä peukaloita ja lennot ovat pehmeämmät. Eiffel-torni ja muut korkeat kohteet näkyvät kokonaan, ja illalla kaupunki valaistuu."
+  },
+  {
    "versio": "1.1 (155)",
    "paiva": "2026-10-07",
    "teksti": "Kiinnitetyn noston luenta jatkuu nyt oikeasta kohdasta, ja kiinnitetty palkki näyttää koko otsikon suurennuslasin vieressä. Noston yläriville tuli kategoriarivi ja etenemispalkki koko nostolle. Avaruudesta katsottuna pilvet ja merisumu ovat pehmeämmät."
