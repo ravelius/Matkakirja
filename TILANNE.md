@@ -2,6 +2,23 @@
 
 Pysäytetty 7.10.2026 päätoimittajan ohjeesta (omistajan 5 tunnin raja) kesken työn.
 
+## JATKOAJO 7.10.2026 — käynnissä
+
+Työ jatkuu uudessa pilvisessiossa. Verkkoyhteys Commonsiin on testattu toimivaksi
+(API-haku, pikkukuvan lataus ja kuvan katsominen `Read`-työkalulla onnistuvat).
+
+**Latauksen korjaus (tärkeä):** pikkukuva on ladattava API:n palauttamalla
+`thumburl`-osoitteella **sellaisenaan**, koko kyselymerkkijono mukaan lukien.
+Jos URL:ia muokkaa käsin (esim. vaihtaa `960px` → `640px`), palvelin vastaa
+HTTP 400 ja antaa HTML-virhesivun JPEG:n sijaan. Huomaa myös, että
+`iiurlwidth=640` palauttaa käytännössä 960 px:n pikkukuvan — se on API:n oma
+valinta, ja sitä käytetään sellaisenaan.
+
+Neljä kerääjä-agenttia (Opus) käynnistetty TILANNE.md:n ryhmäjaolla; ne
+kirjoittavat `wip/osa1..osa4.json` ja `wip/codex1..codex4.md`. Tämän jälkeen
+ajetaan `yhdista.py`, sitten TARKISTAJA-agentti, ja lopuksi kirjoitetaan
+kolme tulostiedostoa ja poistetaan `wip/`.
+
 ## Tehtävä lyhyesti
 
 Pariisin kaupunkioppaan 20 kohteen teksteistä valitaan 1–3 konkreettista
