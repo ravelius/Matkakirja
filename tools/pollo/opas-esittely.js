@@ -8,6 +8,7 @@
  */
 import { OPAS_AINEISTOT } from './aineistot.js';
 import { OPAS_OMAT } from './opas-omat.js';
+import { OPAS_SALLITUT, sallittuId } from './sallitut.js';
 
 export const ESITTELY_JUURI = 'https://media.matkakirja.app/opas/esittely-v1/';
 const MUISTI_MS = 10 * 60 * 1000;
@@ -29,7 +30,10 @@ export function omatKohteet(kaupunki, env = null) {
 
 /** Kaupungin valmis esittely tai null (ei listalla, haku epäonnistui tai muoto väärä). env.OPAS_ESITTELY_TESTI: { id: data }. */
 export async function oppaanEsittely(env, kaupunki, haku = fetch, nyt = Date.now()) {
-  const id = kaupunkiId(kaupunki);
+  // Näyttönimi ≠ tunnus (Reykjavík → islanti): sallitut-listan tunnus, jos nimen oma id ei ole indeksissä.
+  const oma = kaupunkiId(kaupunki);
+  const id = (OPAS_AINEISTOT.esittely ?? []).includes(oma) ? oma
+    : (OPAS_SALLITUT.sallitut.find((x) => sallittuId(x.nimi) === sallittuId(kaupunki))?.id ?? oma);
   if (!id) return null;
   if (env?.OPAS_ESITTELY_TESTI) return env.OPAS_ESITTELY_TESTI[id] ?? null;
   const omat = omatKohteet(kaupunki, env);
