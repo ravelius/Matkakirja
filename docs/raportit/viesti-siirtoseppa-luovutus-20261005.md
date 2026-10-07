@@ -7,6 +7,15 @@ Worktreet: /Users/Shared/Claude/wt/proto-siirtoseppa-*. Käännös vain Julkaisi
 (oma UDID D5900D45 = siirtoseppa-iPad13, TYHJENNETTY 19.0x, appit asennettava uudelleen). Ei detachia simupaneelista.
 Oikeat tapit: lokit/siirtoseppa-alo/.sk (simkosketus, käännä tarvittaessa tyokalut/todistusajo/simkosketus.m).
 
+## TILA 7.10. 03.5x
+
+- **Linnan osoitin = v41 1a1857e06ec1386f** (Julkaisija 03.39; TF 154 todennettu 03.10, lokit/siirtoseppa-vuoro-v41/tf154*).
+  Junan koodin puoli (a5285a27 = d5959026, lokit/siirtoseppa-j156-app) ajetaan simuvuorolla ~04.10: ajo-vuoro-v41.sh
+  (kappeli + keittiö eleet päällä tuotannon osoittimella, sitten äänimaisema f08f28fd = ab5407af, lokit/siirtoseppa-aani2-app).
+- **eleet-2 8b1a7836** (wt/proto-siirtoseppa-face, siirtoseppa/eleet-2): puolilähikuva puhujaan (poikki puolilahi 0|1) + puhuja
+  kääntyy kuulijaan ≤ 150°. EI käännetty. Todennus: ajo-eleet.sh KYTKIN=puolilahi, iPhone + iPad vaaka (Päätoimittaja), junan 156 jälkeen.
+- Pelikoodari: tuuli/sade ämpärissä; Venetsia + Kööpenhamina kartat (Päätoimittajan tilaus), lisää vasta Pariisin todistuksen jälkeen.
+
 ## TILA 7.10. 03.0x
 
 - **Juna 156 = siirtoseppa/eleet-1 d5959026** (Päätoimittaja kuittasi Natiivisepälle): linna-149 + FACEIT + d7c8596c faceit-kenttä
