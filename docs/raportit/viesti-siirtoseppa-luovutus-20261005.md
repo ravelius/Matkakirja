@@ -408,3 +408,15 @@ Edellinen luovutus on `viesti-siirtoseppa-luovutus-20261002.md` (5.10. osiot 02.
   venereitti vene:alku/muuri/portti/laituri (kierto_y 2,127) + nousu:laituri + istuin_matkustaja. V3: 77492715 Ydin Vartija (+4 testiä,
   817/817), a96bd209 SeikkailuVartijat (NavMesh kävelypinnoista, partio:-reitit, poikki vartijat 1|0|tila). Julkaisijan jonossa a96bd209 + NUI;
   vuoro-h3.sh (vene v44b + kävely VARTIJAT=1), app lokit/siirtoseppa-historia4-app. Päätoimittajalle V1-stillit siitä ajosta.
+
+### JATKA TÄSTÄ (tauko 13.45–15.00, tila 7.10. 13.2x)
+
+1. Proto-worktree /Users/Shared/Claude/wt/proto-siirtoseppa-face, haara siirtoseppa/historia-h0 @ a96bd209 (paikallinen, ei originia).
+   eleet-2 @ 67728f0b on Natiivisepän junassa 161.
+2. Julkaisijan jonossa historia-käännös a96bd209 + natiivi-ui/seikkailu-tapit 34cf54b0 + natiivi-ui/kuumailmapallo-160 73ed2612.
+   KÄÄNNÖS NYT → perl setsid: `PROTO_APP_KOPIO=$PWD/lokit/siirtoseppa-historia4-app nice -n 15 zsh tyokalut/proto-kaanna.sh a96bd209+34cf54b0+73ed2612`
+   (proto-3d:ssa, loki lokit/siirtoseppa-historia4-kaannos.out). Lukko vapaa → SIMU NYT → `zsh tyokalut/siirtoseppa-ajot/vuoro-h3.sh` (iPad).
+3. Vuoron jälkeen: venesaapumisen kuvat/video ruuduittain (lokit/siirtoseppa-vuoro-h3/vene), kävely + vartijat (…/kavely);
+   Päätoimittajalle 4–6 V1-stilliä (keittiö, kirkkotornin portaat, olan yli) junaan 161 kehittäjäkytkimen taakse; "simu vapaa".
+4. Seuraavat vaiheet: V4 (piiloutuminen piilo:-merkkeihin, esineen poiminta ja heitto → SeikkailuVartijat.Aani), Fogg-hahmo
+   pelaajaksi (kapselin tilalle, istuin_matkustaja veneessä), valoisuus liekeistä (V7), V5 kappelin valoarvoitus (käsikirjoitus Päätoimittajalta).
