@@ -7,7 +7,7 @@ Worktreet: /Users/Shared/Claude/wt/proto-siirtoseppa-*. Käännös vain Julkaisi
 (oma UDID D5900D45 = siirtoseppa-iPad13, TYHJENNETTY 19.0x, appit asennettava uudelleen). Ei detachia simupaneelista.
 Oikeat tapit: lokit/siirtoseppa-alo/.sk (simkosketus, käännä tarvittaessa tyokalut/todistusajo/simkosketus.m).
 
-## TILA 7.10. 09.3x
+## TILA 7.10. 09.2x
 
 - **Junaehdokkaat (Päätoimittajalle ilmoitettu):** siirtoseppa/eleet-2 **f73b387a** (puolilähikuva, kääntyminen lepokameran suunnasta,
   kimallus himmenee, savu häivytetään, alarivi + sumu datasta, huonevalintakorjaus) ja siirtoseppa/aanimaisema **d9a1c1b9**
