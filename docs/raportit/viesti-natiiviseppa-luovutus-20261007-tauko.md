@@ -9,6 +9,20 @@ Olet Natiiviseppä (Opus, high). Lue tämä osio, MEMORY.md ja natiiviseppa-tila
 Juna-SHA:t otetaan vain PÄÄTOIMITTAJAN suoralla kuittauksella; käännökset, simut ja iPad vain Julkaisijan NYT-viestillä.
 Tarkista ensin taustalla jatkuneiden ajojen tulokset (alla) ja kerro ne Julkaisijalle ja PÄÄTOIMITTAJALLE.
 
+## TAUON TILA (13.34)
+
+- **Mac TF 160 LADATTU** (run 37606997700 success; app lokit/natiiviseppa-mac-tf-160-d8b0e0fc, fi.matkakirja.peli, build 160).
+- **Mac lepo -dev 28da7435** käännetty (lokit/natiiviseppa-mac-lepo-28da7435, Nakyvyys-symboli mukana). mac-cpu.sh jälkeen-ajo
+  käynnistetty 13.34 setsid → lokit/natiiviseppa-mac-cpu/jalkeen-28da7435/cpu.txt (+ "Mac-ikkuna"-lokirivit). Tarkista ja lähetä
+  luvut Päätoimittajalle (ennen A 14,8 / B 14,9 / C 15,5 %; tavoite C < 2 %). Sen jälkeen Mac-intro-kaappaus ja panorointi.
+- **FACEIT-uusinta KESKEN**: ipad-faceit-aabb.sh korjattu (rivinumero ilman välilyöntejä — se hylkäsi hyvät jaksot; lämmityksen
+  jälkeen linssi pois + 30 s). Viimeisin ajo 13.23 kaatui: devicectl "application failed to launch (error 10002, Invalid
+  argument)" — todennäköisesti edellisen konsoliajon tappamisen jälkeen. 15.00 jälkeen: tarkista iPad (devicectl list devices),
+  aja `perl … faceit-uusinta-ajo.sh` (Julkaisijan lupa on), tulos lokit/natiiviseppa-faceit-uusinta.txt → yksi rivi Päätoimittajalle.
+- **Juna 161 -ehdokkaat:** LS2 pallo-puoli **aa32b618b** (korvaa e16d100db), eleet-2 67728f0b, kehittaja-tf 767c70eb (todennus
+  App Store -käännöksellä; testaajakoodi Päätoimittajalta, ei repoon), kirjoitusääni 074c95a3 KUITATTU, lepo 28da7435 kuitataan
+  CPU-lukujen jälkeen.
+
 ## TILA HETI
 
 - **BUILD 159 = master b00c06f7**; TF 159 ja Mac TF 159 ladattu. Mac TF -työnkulku: proto3d-mac-testflight.yml
