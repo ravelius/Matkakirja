@@ -35,7 +35,10 @@ log -1 master`, `tail -3 proto-3d/lokit/kaannospalvelu/juna.log`, `tail -5 proto
    NUI-kärki seikkailu-kuvakkeet 8aa55e02 (⊇ jatka 6af3eb9f ⊇ tekstivahti ⊇ verbi ⊇ fp eb115fc3 ⊇ tietokerros cbc92a25) + LS1 äänetön
    esitys 578d1186c (korvaa 7568a39bc) + LS2 S2-kevät 08a6891a0. Pohja: BUILD 162 -master. Ajankohta sovitaan Julkaisijan kanssa.
    Muut ehdokkaat (eivät kuitattuja tähän): LS1 yksityiskohdat-haarat sisältyvät 578d1186c:hen.
-7. Muut: PR ravelius/Matkakirja#4149 (mono_crash) Julkaisijalle; Mac-ohjauslevyvika: odota omistajan Player.log (DIAGNOOSI-rivit).
+7. KÄÄNNÖSNOPEUTUS (omistaja 21.5x): proto-kaanna.sh muutettu (jobs 12 joutilaana, välitiedostot säilyvät >36 Gi, vaiheajat; varmuuskopio
+   .ennen-jobs12-20261007); proto natiiviseppa/kaannos-jobs 7d66739d (aja.sh) → JUNAAN 163; Matkakirja-haara natiiviseppa/tf-jobs 93c2e7c76
+   (wt/natiiviseppa-tf-jobs) → push + PR, KUN TF 162 on valmis.
+8. Muut: PR ravelius/Matkakirja#4149 (mono_crash) Julkaisijalle; Mac-ohjauslevyvika: odota omistajan Player.log (DIAGNOOSI-rivit).
 
 ## OMISTAJAN PÄÄTÖS 15.5x (SITOVA): TESTAUS KEVYEMMIN
 Ennen junaa/TF:ää vain automaattiset testit (Kartta/Peli/Linssit-testit, tarkista.sh zsh, unity-tarkistus iOS+Mac, editori) ja
