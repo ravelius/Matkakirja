@@ -18,7 +18,7 @@ namespace Matkakirja.Linssit
         public const int Kerros = 17;
         /// <summary>Sisääntulo ja poistuminen (s); kortin leveys osuutena ruudun pidemmästä sivusta (enintään 80 % leveydestä).</summary>
         public const float SisaanS = 0.6f, PoisS = 0.8f, LeveysOsuus = 0.4f;
-        const float Etaisyys = 10f, Fov = 40f, KaantoAste = 14f, AlaPt = 30f, SisennysOsuus = 0.04f;
+        const float Etaisyys = 10f, Fov = 40f, KaantoAste = 14f, AlaPt = 44f, SisennysOsuus = 0.04f;
 
         readonly MonoBehaviour o;
         Camera perus, overlay;
@@ -57,6 +57,12 @@ namespace Matkakirja.Linssit
         public void Sulje()
         {
             Piilota();
+            PuraKamera();
+        }
+
+        /// <summary>Kamera, materiaali ja kortti pois (ei kosketa ladattuun kuvaan eikä käynnissä olevaan ajoon).</summary>
+        void PuraKamera()
+        {
             if (perus != null && overlay != null)
             {
                 var d = perus.GetUniversalAdditionalCameraData();
@@ -70,7 +76,9 @@ namespace Matkakirja.Linssit
         void Varmista(Camera kamera)
         {
             if (overlay != null && perus == kamera) return;
-            Sulje();
+            // JUURISYY (iPad-simu 21.32, NullReferenceException Aja-kohdassa): Sulje → Piilota tuhosi juuri ladatun kuvan ja pysäytti
+            // käynnissä olevan ajon ensimmäisellä kerralla; vain kamera puretaan.
+            PuraKamera();
             perus = kamera;
             var go = new GameObject("Yksityiskohtakortti (overlay)") { layer = Kerros };
             go.transform.SetParent(kamera.transform, false);
@@ -100,8 +108,10 @@ namespace Matkakirja.Linssit
             if (fontti != null) teksti.font = fontti;
             teksti.alignment = TextAlignmentOptions.Left;
             teksti.color = (Color)Tyylikirja.Paperi.Muste;
+            // iPad-simu 21.32: Ellipsis-tila pudotti rivit, kun automaattinen koko ei mahtunut kaistaan → rivit ylivuotavat
+            // mieluummin kuin katoavat (CC BY -maininta näkyy aina), koko sovitetaan laajalta alueelta.
             teksti.textWrappingMode = TextWrappingModes.NoWrap;
-            teksti.overflowMode = TextOverflowModes.Ellipsis;
+            teksti.overflowMode = TextOverflowModes.Overflow;
             teksti.enableAutoSizing = true;
             kortti.gameObject.SetActive(false);
         }
@@ -138,11 +148,14 @@ namespace Matkakirja.Linssit
             kortti.localScale = new Vector3(lev * yksikko, kork * yksikko, 1f);
             bool pysty = h > w * 1.2f;
             // Lepopaikka: vaakaruudulla oikealla, pystyssä keskellä yläpuolella (alarivin napit vapaana).
-            var lepo = new Vector3((pysty ? 0f : 0.22f * w) * yksikko, (pysty ? 0.12f * h : 0.06f * h) * yksikko, Etaisyys);
+            // Vaakaruudulla oikean reunan napit (tauko ja seuraava, ~0,78 × leveys alkaen) jäävät kortin oikealle puolelle
+            // (Päätoimittaja 21.4x, iPad-kuva: kortti peitti ne): oikea reuna enintään 0,74 × leveys (kääntö lähentää oikeaa reunaa).
+            float cx = pysty ? 0f : Mathf.Min(0.22f * w, 0.74f * w - 0.5f * w - 0.55f * lev);
+            var lepo = new Vector3(cx * yksikko, (pysty ? 0.12f * h : 0.06f * h) * yksikko, Etaisyys);
             var tulo = new Vector3((0.5f * w + lev) * yksikko, lepo.y, Etaisyys);
             var lahto = new Vector3(0.9f * w * yksikko, 0.9f * h * yksikko, Etaisyys * 3f);
             // Kääntö Y:n ympäri: positiivinen kulma kääntää etupinnan (−Z) vasemmalle eli oikealla olevan kortin keskustaa kohti.
-            float kaanto = KaantoAste * Mathf.Sign(lepo.x == 0f ? 1f : lepo.x) * (pysty ? 0.5f : 1f);
+            float kaanto = KaantoAste * (pysty ? 0.5f : 1f);
 
             string rivi = string.IsNullOrWhiteSpace(k.Kuvateksti) ? "" : k.Kuvateksti.Trim();
             string tekija = OpasYksityiskohdat.Tekijarivi(k);
@@ -153,8 +166,10 @@ namespace Matkakirja.Linssit
             tt.sizeDelta = new Vector2(lev - 2 * sis, alaPx);
             tt.localPosition = new Vector3(0f, -0.5f + (sis * 0.5f + alaPx * 0.5f) / kork, -0.001f);
             // Koko sovitetaan kaistaan (2 riviä: kuvateksti ja tekijä); 1 tekstiyksikkö = 1 ruutupikseli.
-            teksti.fontSizeMax = alaPx * 4f; teksti.fontSizeMin = alaPx * 0.5f;
+            teksti.fontSizeMax = alaPx * 12f; teksti.fontSizeMin = alaPx * 0.05f;
             teksti.alignment = TextAlignmentOptions.MidlineLeft;
+            teksti.ForceMeshUpdate();
+            Debug.Log($"MATKAKIRJA opas: yksityiskohtakuvan teksti {teksti.textInfo.characterCount} merkkiä, {teksti.textInfo.lineCount} riviä, koko {teksti.fontSize:F0}");
 
             Nakyy = true;
             kortti.gameObject.SetActive(true);
