@@ -1,4 +1,4 @@
-# Pelikoodarin luovutus 7.10.2026 (päivitetty klo 02.3x)
+# Pelikoodarin luovutus 7.10.2026 (päivitetty klo 05.3x)
 
 Uusi Pelikoodari: lue tämä, sitten docs/raportit/viesti-pelikoodari-aloitus.md. Edellinen: viesti-pelikoodari-luovutus-20261006.md.
 
@@ -25,3 +25,14 @@ Siirtoseppä vie). Siirtoseppä ajaa todistustallenteen (mp3-sauma: tee ogg/wav,
 
 ## Opit
 Agent isolation "remote" ajoi paikallisesti Matkakirja-fable/.claude/worktrees (11 Gt) → pysäytetty, siivottu (muisti).
+
+## Päivitys 05.3x
+- Mergetty: #4092 sallitut (esto pois, OPAS_SALLITUT_ESTO=1 vasta juna 157 TF:ssä), #4102 äänikartat Venetsia + Kööpenhamina.
+  Ämpärissä myös tuuli-01/sade-01 (Siirtoseppä). Lisää äänikarttakaupunkeja vasta Pariisin todistustallenteen + PT-kuittauksen jälkeen.
+- Auki: #4098 sallitut 38 (Varsova, Sisilia; islanti nimellä Reykjavík), #4103 kuvalista → kuvat-v4 (merge vasta kun
+  kuvat-v4/kuvat.json 200). Vientijono Julkaisijalla: opas-kuvat-vienti-20261007 (v3) → -20261007b (v4) → kartta-tiet-vienti-20261007
+  (31 sallittua; sen jälkeen indeksi-PR: tiet-listaan 31 id:tä, kartta/tiet-v1/<id>.json).
+- Pilotin äänet valmiit (71 kpl, R2 + kuuntelukoosteet _tyo/opas-esittely/aanet/kuuntelu/) → omistaja kuuntelee aamulla.
+- Pilvihaara pelikoodari-esittely-pilvi: 35 kaupunkia, OHJE-pilvi.md (omistajan claude.ai/code-sessio).
+- Siltalauseet v2 (ei-sallittu) ja muut äänet: ei maksullisia generointeja ennen omistajan kuuntelua.
+- tee-tiet.mjs välimuistiavaimeen keskipiste (esittely-haarassa) – Kreeta ajettiin ensin vanhan pisteen datalla.

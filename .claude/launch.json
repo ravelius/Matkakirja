@@ -2,6 +2,20 @@
   "version": "0.0.1",
   "configurations": [
     {
+      "name": "palaute",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8798",
+        "--bind",
+        "127.0.0.1",
+        "--directory",
+        "/Users/Shared/Claude/wt/pelikoodari-kortti-palaute"
+      ],
+      "port": 8798
+    },
+    {
       "name": "matkakirja",
       "runtimeExecutable": "python3",
       "runtimeArgs": [
@@ -138,6 +152,34 @@
         "/Users/Shared/Claude/wt/pelikoodari-luenta-aina"
       ],
       "port": 8800
+    },
+    {
+      "name": "apuraha",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8797",
+        "--bind",
+        "127.0.0.1",
+        "--directory",
+        "/Users/Shared/Claude/wt/pelikoodari-kortti-apuraha"
+      ],
+      "port": 8797
+    },
+    {
+      "name": "galleria",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8801",
+        "--bind",
+        "127.0.0.1",
+        "--directory",
+        "/Users/Shared/Claude/wt/pelikoodari-galleria"
+      ],
+      "port": 8801
     }
   ]
 }
