@@ -534,7 +534,7 @@ namespace Matkakirja.Natiivi
                     if (loput.Trim() == "on") SeikkailuTapit.TestiNakyy = true;
                     else if (loput.Trim() == "off") SeikkailuTapit.TestiNakyy = false;
                     else if (loput.Trim() == "auto") SeikkailuTapit.TestiNakyy = null;
-                    // "ui seikkailutapit toiminto poimi|heita|pois|auto": toimintonapin tila ilman SeikkailuEsineitä.
+                    // "ui seikkailutapit toiminto poimi|heita|kynttila|pois|auto": toimintonapin tila ilman SeikkailuEsineitä.
                     else if (loput.Trim().StartsWith("toiminto ")) SeikkailuTapit.TestiToiminto = loput.Trim().Substring(9).Trim();
                     return "=" + SeikkailuTapit.Kuvaus();
                 case "matka": ui.Esimerkkimatka(); return null;

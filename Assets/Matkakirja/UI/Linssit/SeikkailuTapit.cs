@@ -73,7 +73,8 @@ namespace Matkakirja.Natiivi
             return aktiivinen?.GetValue(null) is Object o && o != null;
         }
 
-        /// <summary>SeikkailuEsineet (Siirtoseppä, historia-h0): "heita" kun esine kädessä, "poimi" kun lähin esine, muuten null.</summary>
+        /// <summary>SeikkailuEsineet (Siirtoseppä, historia-h0): "heita" kun esine kädessä, "kynttila" kun lähin on kappelin kynttilä,
+        /// "poimi" kun muu lähin esine, muuten null.</summary>
         static string EsineTila()
         {
             if (!esineetHaettu)
@@ -87,7 +88,8 @@ namespace Matkakirja.Natiivi
             }
             if (!(esineetAktiivinen?.GetValue(null) is Object e) || e == null) return null;
             if (esineKadessa?.GetValue(e) is string k && k.Length > 0) return "heita";
-            if (esineLahin?.GetValue(e) is string l && l.Length > 0) return "poimi";
+            // E3 (Siirtoseppä): kappelin kynttilä (sammuta, sytytä tai puhalla oma) samalla napilla; kuvake kuten poimi.
+            if (esineLahin?.GetValue(e) is string l && l.Length > 0) return l == "kynttila" ? "kynttila" : "poimi";
             return null;
         }
 
@@ -107,7 +109,7 @@ namespace Matkakirja.Natiivi
             bool heita = tila == "heita";
             toimintoNappi.Clear();
             toimintoNappi.Add(new SvgIkoni(heita ? HeitaIkoni : PoimiIkoni));
-            toimintoNappi.tooltip = heita ? "Heitä" : "Poimi";
+            toimintoNappi.tooltip = heita ? "Heitä" : tila == "kynttila" ? "Kynttilä" : "Poimi";   // VoiceOver-nimi
         }
 
         const float TappiAla = 40f;
