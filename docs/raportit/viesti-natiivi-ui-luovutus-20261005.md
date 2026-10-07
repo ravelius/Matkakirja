@@ -17,10 +17,10 @@ huoneet 1–5. Ei uusia pohjia. Työt SeikkailuTapit.cs:ään (haara cbc92a25:n 
 2 iltapäivä: toimintonapin uudet tilat puhalla, avaa, kaada, aseta, anna tarjotin (Toimintonimet + Tila(); kysy Siirtosepältä
   Lahin-tunnukset) olemassa olevin kuvakkein.
 3 alkuilta: testi "seikkailussa ei näkyvää tekstiä" (paitsi löytö- ja tietokerrospohjat; kohta 11).
-TILA 7.10. 19.4x: vaihe 1 tehty etuajassa = natiivi-ui/seikkailu-fp 680be26a (cbc92a25:n päällä): OtaKatse() (oikean puoliskon
+TILA 7.10. 19.5x: vaihe 1 valmis ja kuittauspyyntö Päätoimittajalla = natiivi-ui/seikkailu-fp eb115fc3 (Pulun napautus →
+  tietokerros tai SeikkailuPelaaja.PuluVihje() kytketty). Kuittauksen jälkeen SHA Natiivisepälle. Aiempi: 680be26a (cbc92a25:n päällä): OtaKatse() (oikean puoliskon
   veto), oikea TAPPI testikytkin (OikeaTappi, oletus pois), napautus → SeikkailuPelaaja.Napautus(Vector2 px) (Siirtoseppä
-  historia-fp d0f26d0b). AVOIN: Pulun reunakuvan vihjekutsun nimi Siirtosepältä → kytke Pulu.NapautusKaappaa (tietokerros edelle);
-  sitten testit + kuittaus.
+  historia-fp d0f26d0b).
 Kontekstikuvakkeet (käsi, kaari, liekki) = omistajan päätettävä 13.3; toteuta VASTA kuittauksesta.
 Testaus: tarkista.sh + kaanna.sh-testit, kuittaus 1 rivillä Päätoimittajalta → SHA Natiivisepälle.
 
