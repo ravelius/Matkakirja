@@ -7,23 +7,27 @@ import { tarkistaApuraha, lataaApuraha, nollaaApuraha, APURAHA_OSOITE } from '..
 
 const raaka = JSON.parse(readFileSync(new URL(`../${APURAHA_OSOITE}`, import.meta.url), 'utf8'));
 
-test('esittely.json on kelvollinen: korostettu alkukappale + neljä kappaletta, 4–5 kuvaa, ei videota', () => {
+test('esittely.json on kelvollinen: filosofia, korostettu kehitysmuutos, pelit, ei linkkejä, enintään 3 kuvaa', () => {
   const d = tarkistaApuraha(raaka);
   assert.ok(d, 'tarkistus hylkäsi tiedoston');
   assert.equal(d.nappi, 'Apurahahakemus – katso tämä ensin');
-  assert.equal(d.kappaleet.length, 5);
-  // Omistaja 1.10.2026: ensimmäinen kappale korostettuna (kaksi ohjelmapohjaa), muut ilman korostusta.
-  assert.equal(d.kappaleet[0].korostus, true);
-  assert.match(d.kappaleet[0].teksti, /^Tärkeä muutos, jota hakemuksessa ei mainita/);
-  assert.ok(d.kappaleet.slice(1).every((k) => k.korostus === false));
-  assert.ok(d.kuvat.length >= 4 && d.kuvat.length <= 5, `kuvia ${d.kuvat.length}`);
+  // Omistaja 7.10.2026: ensin pelin filosofia, sitten korostettuna kehityksen siirto natiiviin, sitten pelit.
+  assert.equal(d.kappaleet.length, 7);
+  assert.match(d.kappaleet[0].teksti, /^Matkakirja ja unohdettu aarre on kokemuksellinen oppimispeli/);
+  assert.equal(d.kappaleet[1].korostus, true);
+  assert.match(d.kappaleet[1].teksti, /^Kehitys siirtyi syyskuussa/);
+  assert.ok(d.kappaleet.filter((k, i) => i !== 1).every((k) => k.korostus === false));
+  // Omistaja 7.10.2026: ei linkkejä; kuvat (ISS:n kupola, Olavinlinna, Kuumailmapallo) pelistä, enintään 3.
+  assert.ok(raaka.kappaleet.every((k) => !k.linkki), 'linkit poistettiin (omistaja 7.10.2026)');
+  assert.ok(d.kuvat.length <= 3, `kuvia ${d.kuvat.length}`);
   assert.equal('video' in raaka, false, 'video poistettiin (omistaja 30.9. klo 15.06)');
   for (const k of raaka.kuvat) if (k.rajaus != null) assert.match(k.rajaus, /^\d{1,3}% \d{1,3}%$/, `rajaus ${k.tiedosto}`);
   assert.ok(d.webHuomautus.startsWith('Selainpeli ei sisällä kaikkia ominaisuuksia.'));
-  // Selain saa webTekstit: ei lupauksia iOS:n kolmiulotteisista linsseistä.
+  // Selain saa webTekstit: iOS:n ominaisuudet kerrotaan iOS:n ominaisuuksina.
   const kaikki = d.kappaleet.flatMap((k) => [k.teksti ?? '', ...(k.lista ?? [])]).join(' ');
   assert.ok(!/poikkileikkaus|esittelylinsseistä/.test(kaikki), kaikki);
-  assert.ok(/vain iOS-sovelluksessa/.test(kaikki));
+  assert.ok(/Videopelit tulevat vain iOS-sovellukseen/.test(kaikki));
+  assert.ok(/Molemmat ovat vain iOS-sovelluksessa/.test(kaikki));
 });
 
 test('paikalliset kuvat ovat repossa ja tekstissä ei ole muistiinpanoja', () => {
