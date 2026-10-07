@@ -3,6 +3,9 @@
 // molemmat antavat täydet 2D-arvot: VASEN = liike (x sivulle, y eteen), OIKEA = katse (x kääntö, y nosto). Näkyvät, kun
 // SeikkailuPelaaja.Aktiivinen != null (Siirtoseppä; luetaan heijastuksella, jotta haara ei riipu hänen haarastaan), ja lukevat
 // arvot staattisina (Siirtoseppä heijastuksella kuten opas). Kuvakkeet olemassa olevista: kompassi (liike) ja silmä (katse).
+// TOIMINTONAPPI (Siirtoseppä E2, keittiön harhautus): OHJAUSNAPPI-pohjalla oikean tapin yläpuolella; poimi (lähin esine) tai heitä
+// (esine kädessä). Napautus asettaa SeikkailuEsineet.ToimintoPyydetty = true; näkyy vain, kun Aktiivinen.Lahin tai .Kadessa
+// ei ole null (heijastuksella kuten Aktiivinen). Mac/näppäimistö: E (Siirtoseppä).
 using System.Reflection;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -27,6 +30,18 @@ namespace Matkakirja.Natiivi
         static PropertyInfo aktiivinen;
         static bool haettu;
 
+        /// <summary>Poimi- ja heitä-kuvakkeet (UI-POHJAT-kysymys Päätoimittajalle 7.10. 16.4x: uudet viivaikonit vai olemassa olevat).</summary>
+        static string PoimiIkoni => Ikonit.Viiva["peukalo"];
+        static string HeitaIkoni => Ikonit.Viiva["nuoli"];
+        /// <summary>Testi `ui seikkailutapit toiminto poimi|heita|auto`: napin tila ilman SeikkailuEsineitä.</summary>
+        public static string TestiToiminto;
+        readonly VisualElement toimintoRivi;
+        readonly Button toimintoNappi;
+        string toimintoTila;   // null = piilossa, "poimi" tai "heita"
+        static PropertyInfo esineetAktiivinen, esineLahin, esineKadessa;
+        static FieldInfo esineToiminto;
+        static bool esineetHaettu;
+
         public SeikkailuTapit(UiKerros kerros, int kerrosNro)
         {
             juuri = Rakenne.El("mk-seikkailutapit", kerros.Turva(kerrosNro), PickingMode.Ignore);
@@ -36,6 +51,12 @@ namespace Matkakirja.Natiivi
             oikea = new OpasTapit.Tappi(juuri, "mk-tappi mk-tappi--oikea", Ikonit.Viiva["silma"], v => Oikea = v);
             vasen.Juuri.tooltip = "Liiku";
             oikea.Juuri.tooltip = "Katso ympärillesi";
+            toimintoRivi = Ohjausnappi.Ryhma(juuri);
+            toimintoRivi.style.top = StyleKeyword.Auto;
+            toimintoRivi.style.right = OpasTapit.Reuna + OpasTapit.Halkaisija * 0.5f - Tyylikirja.Nappi.Ohjaus * 0.5f;
+            toimintoRivi.style.bottom = TappiAla + OpasTapit.Halkaisija + 8f;
+            toimintoNappi = Ohjausnappi.Nappi(PoimiIkoni, "Poimi", PyydaToiminto, toimintoRivi);
+            toimintoRivi.style.display = DisplayStyle.None;
             kerros.JokaRuutu += Paivita;
             viimeisin = this;
         }
@@ -52,15 +73,55 @@ namespace Matkakirja.Natiivi
             return aktiivinen?.GetValue(null) is Object o && o != null;
         }
 
+        /// <summary>SeikkailuEsineet (Siirtoseppä, historia-h0): "heita" kun esine kädessä, "poimi" kun lähin esine, muuten null.</summary>
+        static string EsineTila()
+        {
+            if (!esineetHaettu)
+            {
+                esineetHaettu = true;
+                var t = typeof(SeikkailuTapit).Assembly.GetType("Matkakirja.Natiivi.SeikkailuEsineet");
+                esineetAktiivinen = t?.GetProperty("Aktiivinen", BindingFlags.Public | BindingFlags.Static);
+                esineLahin = t?.GetProperty("Lahin", BindingFlags.Public | BindingFlags.Instance);
+                esineKadessa = t?.GetProperty("Kadessa", BindingFlags.Public | BindingFlags.Instance);
+                esineToiminto = t?.GetField("ToimintoPyydetty", BindingFlags.Public | BindingFlags.Static);
+            }
+            if (!(esineetAktiivinen?.GetValue(null) is Object e) || e == null) return null;
+            if (esineKadessa?.GetValue(e) is string k && k.Length > 0) return "heita";
+            if (esineLahin?.GetValue(e) is string l && l.Length > 0) return "poimi";
+            return null;
+        }
+
+        void PyydaToiminto()
+        {
+            esineToiminto?.SetValue(null, true);
+            Debug.Log($"MATKAKIRJA seikkailutapit: toiminto ({toimintoTila ?? "-"}){(esineToiminto == null ? ", SeikkailuEsineet puuttuu" : "")}");
+        }
+
+        void PaivitaToiminto()
+        {
+            string tila = !nakyy ? null : TestiToiminto == null || TestiToiminto == "auto" ? EsineTila() : TestiToiminto == "pois" ? null : TestiToiminto;
+            if (tila == toimintoTila) return;
+            toimintoTila = tila;
+            toimintoRivi.style.display = tila == null ? DisplayStyle.None : DisplayStyle.Flex;
+            if (tila == null) return;
+            bool heita = tila == "heita";
+            toimintoNappi.Clear();
+            toimintoNappi.Add(new SvgIkoni(heita ? HeitaIkoni : PoimiIkoni));
+            toimintoNappi.tooltip = heita ? "Heitä" : "Poimi";
+        }
+
+        const float TappiAla = 40f;
+
         void Paivita()
         {
+            PaivitaToiminto();
             bool nayta = TestiNakyy ?? PelaajaAktiivinen();
             if (nayta == nakyy) return;
             nakyy = nayta;
             vasen.Nayta(nayta);
             oikea.Nayta(nayta);
             // Alareuna ja sivureuna kuten oppaan tapeilla (krediittien yläpuolella, reunasta OpasTapit.Reuna).
-            vasen.Juuri.style.bottom = 40f; oikea.Juuri.style.bottom = 40f;
+            vasen.Juuri.style.bottom = TappiAla; oikea.Juuri.style.bottom = TappiAla;
             Debug.Log("MATKAKIRJA seikkailutapit: " + (nayta ? "näkyvät" : "piilossa"));
         }
 
@@ -70,7 +131,8 @@ namespace Matkakirja.Natiivi
             if (viimeisin == null) return "seikkailutapit: ei luotu";
             Rect a = vasen.Juuri.worldBound, b = oikea.Juuri.worldBound;
             return $"seikkailutapit {(viimeisin.nakyy ? "näkyvät" : "piilossa")}, vasen {Vasen.x:0.00},{Vasen.y:0.00} @ {a.xMin:0},{a.yMin:0} {a.width:0}×{a.height:0}, "
-                 + $"oikea {Oikea.x:0.00},{Oikea.y:0.00} @ {b.xMin:0},{b.yMin:0} {b.width:0}×{b.height:0}, kosketaan {Kosketaan}";
+                 + $"oikea {Oikea.x:0.00},{Oikea.y:0.00} @ {b.xMin:0},{b.yMin:0} {b.width:0}×{b.height:0}, kosketaan {Kosketaan}, "
+                 + $"toiminto {viimeisin.toimintoTila ?? "piilossa"} @ {viimeisin.toimintoNappi.worldBound.center.x:0},{viimeisin.toimintoNappi.worldBound.center.y:0}";
         }
     }
 }
