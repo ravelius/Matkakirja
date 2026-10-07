@@ -1,19 +1,19 @@
-# TILANNE 7.10. klo 01.1x
+# TILANNE 7.10. klo 04.1x
 
 - **AJOSSA (irralliset, perl setsid):**
-  1) `kaudet/aja-syksy-A2.sh` (PGID 22563) → `s2-eurooppa-syksy-A2/` + `kausi-rengas/syksy-A2/`, valmis noin klo 4.15 (`aja-syksy-A2.out`).
-  2) `kaudet/aja-talvi2.sh` (PGID 59734) odottaa A2:n VALMIS-merkkiä ja ajaa sitten talven 169 lohkoa → `s2-eurooppa-talvi2/` (rengasta ei tehdä, kuten ei talvellakaan). Valmis noin klo 10 (`aja-talvi2.out`).
-- **Valmistuttua:** kuvaparit ennen ja jälkeen PT:lle (`kaudet/kuvapari.py`; SYA-kerrokset → syksy-A2, TAL → s2-eurooppa-talvi2/laatat).
-  Rivit: Alpit, Skandinavia, Ruotsin keskiosa, Pohjois-Lappi, Lappi, Vänern, Laatokka–Ääninen, Tukholma, Altan vuono ja Skåne.
-- **JÄRVI-korjaus (7.10.):** v2e-sääntö laski merimaskin ulkopuoliset sisäjärvet maaksi, jolloin Vänern ja Laatokka olivat mustia.
-  Korjattu `kausimosaiikki.mjs`:ään (vanha koodi `-ennen-jarvi-20261007.mjs`). Ajo A (`s2-eurooppa-syksy-sovitusA/`) on HYLÄTTY, ja A2 korvaa sen.
-  Vika koskee myös kevät- ja syksy-pohjoista (rivit 13–16); niiden uusinnasta ei ole vielä päätetty.
-- **TALVI2=1 (PT hyväksyi 7.10. 01.0x, kolme tarkennusta):**
-  1) Yli 53° N lumiset näkymät ensin, ja pikselissä lumen mediaani leveysasteliukumalla 54→57° N.
-  2) Yli 56° N sisäjärvien tummat pikselit saavat jääsävyn JAA (Laatokka ja Ääninen jäässä).
-  3) Vuonojen reunus: jää-sääntö ohitetaan S2-maalle 3 km:n päähän rannasta, ja talven rantasumennus on 0,2–1,2 km.
-  Testi 4 lohkolla: `kuvapari-talvi2-testi-20261007.jpg`.
-- **Talvi (6.10.) ja ajo A:** hylätyt kansiot poistetaan vain luvalla.
+  1) `kaudet/aja-talvi2.sh` (PGID 75430) alkoi 04.03 → `s2-eurooppa-talvi2/` (169 lohkoa, ei rengasta), valmis noin klo 10 (`aja-talvi2.out`).
+  2) `kaudet/aja-kevat-pohjoinen2.sh` (PGID 76237) odottaa talvi2:n VALMIS-merkkiä ja ajaa sitten kevään rivit 13–17 (JÄRVI) →
+     `s2-eurooppa-kevat-pohjoinen2/` + `kausi-rengas/kevat-pohjoinen2/` (PT 7.10. 02.xx). Arvio noin 2,5 h.
+- **Syksy A2 VALMIS 04.02** (`s2-eurooppa-syksy-A2/` + `kausi-rengas/syksy-A2/`), kuvapari `kuvapari-syksy-A2-20261007.jpg` lähetetty PT:lle.
+  Järvet ovat kunnossa. Tilkkuja on vielä vähän (Pohjois-Lappi 67,5° N, Ruotsin keskiosa), ja Lokka on ruskea. Ehdotettu vientiä, tilkut seuraavalle kierrokselle.
+- **TALVI2-koodi (testattu 4 + 2 lohkolla):** lumi ensin (> 53° N) ja lumen mediaani leveysasteliukumalla 54→57° N.
+  Isot järvet jäätyvät kokonaan NE-järvimaskilla (`ne_10m_lakes`; 0,9 × JAA + 0,1 × S2). Pienet järvet: tumma pikseli → JAA.
+  Jäätyviin järviin ei sumeaa vesiväriä. Vuonoissa jää-sääntö ohitetaan S2-maalle 3 km:n päähän rannasta, ja talven rantasumennus on 0,2–1,2 km.
+  Kuvat `kuvapari-talvi2-testi-20261007.jpg` ja `kuvapari-talvi2-jarvijaa-20261007.jpg`.
+- **Valmistuttua:** kuvaparit ennen ja jälkeen PT:lle (`kaudet/kuvapari.py`; sarakkeet talvi, talvi2, kevat; kevät-pohjoinen2-sarake lisättävä).
+  PT:n tarkistettavat talvi2:ssa: Tukholman z7-pystysauma, lumeton laikku vasemmassa alakulmassa ja Laatokan reuna. Jäännökset kirjataan seuraavaan kierrokseen, eivätkä ne estä vientiä.
+- PT 7.10.: junakäännökset ajavat nice 0/10, eikä karttaajoja tarvitse enää pysäyttää käännösten ajaksi.
+- Hylätyt kansiot (talvi 6.10., syksy-sovitus, syksy-sovitusA) poistetaan vain luvalla.
 
 ---
 
