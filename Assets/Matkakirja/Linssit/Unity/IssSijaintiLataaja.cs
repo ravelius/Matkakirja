@@ -17,6 +17,42 @@ namespace Matkakirja.Natiivi
     {
         static bool kaynnissa;
 
+        /// <summary>
+        /// Kiistanalaiset alueet (Päätoimittaja 7.10.): Natural Earthin admin-0 (pelin maarajat) merkitsee Krimin Venäjäksi eikä tunne
+        /// Kosovoa eikä Pohjois-Kyprosta. nimet-fi.json "alueet": [{iso, nimi, rengas [lon, lat, …]}] → pisteen maa LCD:llä ensin
+        /// renkaasta (Krim Ukraina, Kosovo, Pohjois-Kypros Kypros); maan nimi alueen nimestä, jos maata ei ole maarajoissa.
+        /// </summary>
+        static void KorjaaAlueet(IssSijainti.Aineisto a, string json)
+        {
+            if (json == null || !(Matkakirja.Peli.MiniJson.Kentta(Matkakirja.Peli.MiniJson.Jasenna(json) as Dictionary<string, object>, "alueet") is List<object> l)) return;
+            var alueet = new List<(string iso, string nimi, double[] r)>();
+            foreach (var o in l)
+                if (o is Dictionary<string, object> d && Matkakirja.Peli.MiniJson.Kentta(d, "rengas") is List<object> rr && rr.Count >= 6)
+                    alueet.Add((d["iso"] as string, d["nimi"] as string, rr.ConvertAll(v => Convert.ToDouble(v, CultureInfo.InvariantCulture)).ToArray()));
+            if (alueet.Count == 0) return;
+            var maa = a.Maa; var maanNimi = a.MaanNimi;
+            a.Maa = (lat, lon) =>
+            {
+                foreach (var (iso, nimi, r) in alueet) if (Sisalla(r, lon, lat)) return (iso, nimi);
+                return maa?.Invoke(lat, lon);
+            };
+            a.MaanNimi = iso =>
+            {
+                var n = maanNimi?.Invoke(iso);
+                if (n != null) return n;
+                foreach (var al in alueet) if (al.iso == iso) return al.nimi;
+                return null;
+            };
+        }
+
+        static bool Sisalla(double[] r, double x, double y)
+        {
+            bool c = false;
+            for (int i = 0, j = r.Length - 2; i < r.Length; j = i, i += 2)
+                if ((r[i + 1] > y) != (r[j + 1] > y) && x < (r[j] - r[i]) * (y - r[i + 1]) / (r[j + 1] - r[i + 1]) + r[i]) c = !c;
+            return c;
+        }
+
         public static IEnumerator Lataa()
         {
             if (IssSijainti.Nykyinen != null || kaynnissa) yield break;
@@ -55,18 +91,25 @@ namespace Matkakirja.Natiivi
                 var jasennys = System.Threading.Tasks.Task.Run(() =>
                 {
                     var r = new List<IssSijainti.Paikka>();
-                    var nimet = nimetJson == null ? null : Matkakirja.Peli.MiniJson.Kentta(Matkakirja.Peli.MiniJson.Jasenna(nimetJson) as Dictionary<string, object>, "nimet") as Dictionary<string, object>;
+                    var nj = nimetJson == null ? null : Matkakirja.Peli.MiniJson.Jasenna(nimetJson) as Dictionary<string, object>;
+                    var nimet = Matkakirja.Peli.MiniJson.Kentta(nj, "nimet") as Dictionary<string, object>;
+                    var maat = Matkakirja.Peli.MiniJson.Kentta(nj, "maat") as Dictionary<string, object>;
                     var juuri = Matkakirja.Peli.MiniJson.Jasenna(json) as Dictionary<string, object>;
                     if (Matkakirja.Peli.MiniJson.Kentta(juuri, "paikat") is List<object> rivit)
                         foreach (var o in rivit)
                             if (o is List<object> x && x.Count >= 5)
-                                r.Add(new IssSijainti.Paikka(nimet != null && nimet.TryGetValue((x[0] as string) + "|" + (x[3] as string), out var uusi) && uusi is string un && un.Length > 0 ? un : x[0] as string,
-                                    Convert.ToDouble(x[1], CultureInfo.InvariantCulture),
-                                    Convert.ToDouble(x[2], CultureInfo.InvariantCulture), x[3] as string, Convert.ToInt32(x[4], CultureInfo.InvariantCulture),
+                            {
+                                string avain = (x[0] as string) + "|" + (x[3] as string);
+                                r.Add(new IssSijainti.Paikka(nimet != null && nimet.TryGetValue(avain, out var uusi) && uusi is string un && un.Length > 0 ? un : x[0] as string,
+                                    Convert.ToDouble(x[1], CultureInfo.InvariantCulture), Convert.ToDouble(x[2], CultureInfo.InvariantCulture),
+                                    maat != null && maat.TryGetValue(avain, out var um) && um is string ums && ums.Length == 3 ? ums : x[3] as string,
+                                    Convert.ToInt32(x[4], CultureInfo.InvariantCulture),
                                     x.Count > 6 ? x[6] as string : null));
+                            }
                     return r;
                 });
                 while (!jasennys.IsCompleted) yield return null;
+                KorjaaAlueet(a, nimetJson);
                 if (jasennys.IsFaulted) Debug.LogWarning("MATKAKIRJA linssit: iss-sijainti: paikat: " + jasennys.Exception?.GetBaseException().Message);
                 else a.Paikat.AddRange(jasennys.Result);
                 Resources.UnloadAsset(paikatTeksti);

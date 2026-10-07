@@ -29,6 +29,38 @@ namespace Matkakirja.Linssit.Testit
             }
         }
 
+        static bool Sisalla(List<object> r, double x, double y)
+        {
+            bool c = false;
+            for (int i = 0, j = r.Count - 2; i < r.Count; j = i, i += 2)
+            {
+                double xi = System.Convert.ToDouble(r[i]), yi = System.Convert.ToDouble(r[i + 1]), xj = System.Convert.ToDouble(r[j]), yj = System.Convert.ToDouble(r[j + 1]);
+                if ((yi > y) != (yj > y) && x < (xj - xi) * (y - yi) / (yj - yi) + xi) c = !c;
+            }
+            return c;
+        }
+
+        /// <summary>Kiistanalaiset alueet (Päätoimittaja 7.10.): Krim Ukraina, Pohjois-Kypros Kypros, Kosovo; Kaliningrad ei alueissa.</summary>
+        [Testi] static void KiistanalaisetAlueetJaPaikkojenMaat()
+        {
+            var j = (Dictionary<string, object>)MiniJson.Jasenna(File.ReadAllText(Kansio + "nimet-fi.json"));
+            var maat = (Dictionary<string, object>)j["maat"];
+            foreach (var k in new[] { "Simferopol|RUS", "Sevastopol|RUS", "Kerch|RUS", "Yalta|RUS" })
+                Oleta.Tosi((maat[k] as string) == "UKR", k + " → UKR");
+            Oleta.Tosi((maat["Kyrenia|CYN"] as string) == "CYP" && (maat["Famagusta|CYN"] as string) == "CYP", "Pohjois-Kypros → CYP");
+            Oleta.Tosi(!maat.ContainsKey("Kaliningrad|RUS"), "Kaliningrad pysyy Venäjänä");
+            string Alue(double lat, double lon)
+            {
+                foreach (var o in (List<object>)j["alueet"])
+                { var d = (Dictionary<string, object>)o; if (Sisalla((List<object>)d["rengas"], lon, lat)) return (string)d["iso"]; }
+                return null;
+            }
+            Oleta.Tosi(Alue(44.95, 34.10) == "UKR" && Alue(44.6, 33.47) == "UKR" && Alue(45.37, 36.49) == "UKR", "Simferopol, Sevastopol, Kertš");
+            Oleta.Tosi(Alue(45.2, 36.9) == null && Alue(46.64, 32.6) == null, "Taman (Venäjä) ja Herson eivät Krimiä");
+            Oleta.Tosi(Alue(42.67, 21.17) == "KOS" && Alue(35.33, 33.33) == "CYP" && Alue(35.13, 33.95) == "CYP", "Priština, Kyrenia, Famagusta");
+            Oleta.Tosi(Alue(54.7, 20.5) == null && Alue(46.85, 29.64) == null && Alue(43.0, 41.0) == null, "Kaliningrad, Tiraspol, Suhumi: maarajojen mukaan");
+        }
+
         [Testi] static void TunnetutNimenmuutokset()
         {
             var n = Nimet();
