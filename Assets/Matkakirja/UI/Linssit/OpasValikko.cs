@@ -394,7 +394,7 @@ namespace Matkakirja.Natiivi
             if (nakyy == this.nakyy && Juuri.style.display == (nakyy ? DisplayStyle.Flex : DisplayStyle.None)) return;
             this.nakyy = nakyy;
             Juuri.style.display = nakyy ? DisplayStyle.Flex : DisplayStyle.None;
-            if (!nakyy) Sulje();
+            if (!nakyy) { Sulje(); SiirtymaPeru(); }
             var ui = UiNakymat.Olemassa ? UiNakymat.Hae() : null;
             ui?.Chat?.OpasTila(nakyy);
             // Linssi avautuu täkyluetteloon (valikko auki täkynäkymässä); sulkeutuu valinnasta.
@@ -690,6 +690,20 @@ namespace Matkakirja.Natiivi
         }
 
         float? testiEdistyminen;
+
+        /// <summary>Opas suljettiin kesken siirtymän (LS2 7.10. 15.3x, 68429b27: koko ruudun siirtymä jäi poimittavaksi eikä
+        /// SiirtymaValmis tullut, kartan napautukset eivät menneet läpi): ruutu pois heti, kuva ja palkki vapaiksi.</summary>
+        void SiirtymaPeru()
+        {
+            if (siirtyma == null || siirtyma.style.display == DisplayStyle.None) return;
+            siirtymaKierros?.Pause();
+            siirtyma.RemoveFromClassList("mk-astroavaus--haipyy");
+            siirtyma.style.display = DisplayStyle.None;
+            AsetaPalloKuva(false);
+            testiEdistyminen = null;
+            KrediititTiivis.CesiumNakyviin = false;
+            Debug.Log("MATKAKIRJA opas: siirtymä peruttu (opas suljettu)");
+        }
 
         /// <summary>Mikrofoni: sanelu suoraan oppaalle (ei Pulun chattia); toinen napautus lopettaa.</summary>
         void Puhu()
