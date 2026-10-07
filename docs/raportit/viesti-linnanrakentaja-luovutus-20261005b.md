@@ -245,3 +245,10 @@ Brotli (haara linnanrakentaja-zstd, worktree olemassa), akustiikka #3979 (Steam 
   53619da2, peili 51836d92, haara linnanrakentaja-linna-v42 a38bf55ca (rakenna: ymparisto.mallit[], kavely{osat,merkit}).
   Siirtoseppä tekee lukijan. AVOIN: laiturin musta rako P3 (kysytty syy), vene-agentti → v43, soutu-leike, keittiön sisältö uuteen
   huoneeseen (vanha pysyy kunnes uusi todennettu), kappelin sulkeminen, valonäytteet. Korinäkymä LS1:lle valmis (ilmapallo-v1/kori).
+- 7.10. 10.0x: LINNA v43 peilissä 3ddc05cc (blender 2e154072, haara linnanrakentaja-linna-v42 + laituri.js-otsalaudat): vene
+  ymparisto.mallit (olavinlinna-vene-v1), laituri leivottu uudelleen (kirkkaus sovitettu v19:n atlakseen kertoimella ~0,77).
+  AGENTIT KÄYNNISSÄ: keittio-g102 (worktree linna-v42: uusi keittio-g102.js + olavinlinna.js-rekisteröinti, tuotokset
+  _valmiit/olavinlinna-keittio-g102-v1, stillit Päätoimittajalle ennen vaihtoa), soutu (_valmiit/olavinlinna-soutu-v1: veneen
+  'soutu' + soutaja ele_soutu mixamo/faceit), seikkailun lähdetarkistus (_lahteet/olavinlinna-pohjat/SEIKKAILU-TARKISTUS.md:
+  Kellotornin kerrokset, komero/pakohyppy, palatsi, kappeli). JONOSSA: kappeli lähteiden mukaiseksi (7,8 m, ristiholvi,
+  ikkunaton, ampumakäytävä); Giza-v2 Sfinksi (odottaa LS1:n Google-korkeuksia), helmat pyramideille VALMIS (_valmiit/giza-v2/glb).
