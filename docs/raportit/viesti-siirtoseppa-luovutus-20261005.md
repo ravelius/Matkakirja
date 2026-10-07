@@ -456,3 +456,6 @@ Edellinen luovutus on `viesti-siirtoseppa-luovutus-20261002.md` (5.10. osiot 02.
   Seuraavaksi: keittiön repliikit (kokki, vesipoika, vartija) tilanteisiin, juna 163.
 - 16.17: d9871e0a repliikit pelitapahtumiin (vartija epäily/etsintä/paluu/kiinni, kokki-harhautus kolahduksesta), 829/829.
   historia-h0 kärki d9871e0a → juna 163 (kuittaus 1 rivi Päätoimittajalta, kun E2 kokonaisuus; NUI toimintonappi tulossa).
+- 16.18: Päätoimittaja OK ef6b092d junaan 162. Pala testiosoittimena (levyvälimuisti) historia-h0:ssa → juna 163. NUI toimintonappi
+  natiivi-ui/seikkailu-toiminto 43701b94 (kuvakkeet Päätoimittajalla). E3 käsikirjoitus kysytty Päätoimittajalta. Tilinvaihto ~24, luovutus 23.40.
+  MUISTA: Wi-Fi/mobiili ei erotella eikä "Wi-Fi suositeltava" -ohjeita (CLAUDE.md).
