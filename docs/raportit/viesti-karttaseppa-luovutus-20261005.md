@@ -1,6 +1,6 @@
-# TILANNE 7.10. klo 23.2x
+# TILANNE 7.10. klo 23.4x (TILINVAIHTO, VAIHTO NYT)
 
-- **AJOSSA: TALVI2D** (`kaudet/aja-talvi2d.sh`, PGID 68005, 23.22 alkaen, 80 lohkoa, noin 3 h) → `s2-eurooppa-talvi2d/`. Koodi: `kausimosaiikki-talvi2d-20261007.mjs`.
+- **AJOSSA: TALVI2D** (`kaudet/aja-talvi2d.sh`, PGID 68005, 23.22 alkaen, 80 lohkoa, klo 23.4x tilanne 1/80, valmis noin 02.30; tila `kaudet/aja-talvi2d.out`) → `s2-eurooppa-talvi2d/`. Koodi: `kausimosaiikki-talvi2d-20261007.mjs`.
   Talvi2c (23.15) on muuten kunnossa: porrasneliöt ovat poissa, Perämeren reiät täyttyneet, eikä pilviä näy (`yleiskuva-talvi2c-z6.jpg`).
   Vika oli Grönlannin itärannikolla: koko meri oli jäätä, ja reunat seurasivat suorakulmaisesti S2-kattavuutta. Syy: dRanta-katto 36, joten ehto `dRanta <= 90` oli aina tosi.
   Talvi2d pitää merijään (ja reikätäytön) vain alueella 9–45° E, 53–67° N (Itämeri ja Vienanmeri). x34–39 × rivit 16–19 pysyvät talvi2c:ssä (kokonaan alueen sisällä).
