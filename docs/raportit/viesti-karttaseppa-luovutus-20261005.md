@@ -1,3 +1,14 @@
+# TILANNE 7.10. klo 10.5x (Macin uudelleenkäynnistys noin 11.05)
+
+- **Talvi2 keskeytyy uudelleenkäynnistyksessä tilassa 97/169** (`s2-eurooppa-talvi2/`). Jatkuu `tila.json`:sta. Varmuuskopio `tila.varmuus.json` minuutin välein:
+  jos `tila.json` ei ole ehjä JSON, kopioi varmuus sen päälle. **Uudelleenkäynnistyksen jälkeen** (T7 kiinni, `ps`: ei omia ajoja) käynnistä molemmat perl setsid -kaavalla kansiossa `kaudet/`:
+  `aja-talvi2.sh` (ehdot täyttyvät heti → jatkaa) ja `aja-kevat-pohjoinen2.sh` (odottaa talvi2:n VALMIS-merkkiä). Talvi2:ta on jäljellä noin 3–4 h.
+- **Syksyn vienti** `s2-eurooppa/syksy/v1/` ajettiin Julkaisijan taustalla 04.0x alkaen. Varmista Julkaisijalta, että se valmistui (laatat.json 200), ja ilmoita sitten LS2:lle.
+  LS2 hyväksyi polun `s2-eurooppa/<kausi>/v1` (kaudet syksy, talvi, kevat) ja tekee natiivin kausivalinnan.
+- Talvi- ja kevätpaketit: `kaudet/kokoa-kausi.py talvi v1 …` ja `kevat v1 …` kuvaparien ja PT:n kuittauksen jälkeen.
+
+---
+
 # TILANNE 7.10. klo 04.1x
 
 - **AJOSSA (irralliset, perl setsid):**
