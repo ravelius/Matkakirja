@@ -560,7 +560,13 @@ namespace Matkakirja.Natiivi
             AsetaSiirtymaIon();
             Debug.Log("MATKAKIRJA opas: siirtymä alkaa → " + nimi);
             siirtymaKierros?.Pause();
-            siirtymaKierros = siirtyma.schedule.Execute(() => siirtymaPalkki.Arvo = testiEdistyminen ?? OpasSovitin.SiirtymaEdistyminen).Every(100);
+            // Varmistus (Päätoimittaja 15.4x: "peitto pois käytöstä ja tuhotaan aina, kun opas suljetaan missä vaiheessa tahansa"):
+            // jos opas ei ole enää auki millä tahansa reitillä (linssi pois, uusi peli, virhe), ruutu puretaan heti.
+            siirtymaKierros = siirtyma.schedule.Execute(() =>
+            {
+                if (testiEdistyminen == null && (!nakyy || !OpasSovitin.Auki)) { SiirtymaPeru(); return; }
+                siirtymaPalkki.Arvo = testiEdistyminen ?? OpasSovitin.SiirtymaEdistyminen;
+            }).Every(100);
         }
 
         // Omistaja 7.10. 15.3x: "Cesium-logon voisi sijoittaa niin, että se on yhtä paljon irti vasemmalta kuin alhaalta": sama väli
