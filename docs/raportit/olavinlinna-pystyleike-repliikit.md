@@ -48,7 +48,7 @@ varjoja) → paluu rauhaan ("kissa kai") tai kiinniotto (tyrmä). Lisäksi kiinn
 | vartija-valpas-1 | Vartija | 3–4 (yleinen) | Fogg on paennut tyrmästä; vartijat ovat minuutin valppaampia | Silmät auki! Joku pikku rotta juoksee linnassa. | Huutava, kantava, käskevä | 7 |
 | kappalainen-1 | Kappalainen | 5 Kappeli | Kappalainen sammuttaa kynttilät ennen lähtöä (Fogg kaari-oven syvennyksessä) | Yö on tullut. In manus tuas, Domine… | Hiljainen rukous, hartaan matala, latinan osa laulavasti | 7 |
 | kappalainen-2 | Kappalainen | 5 Kappeli | Kappalainen palaa hakemaan kirjaansa, lyhdyn valo näkyy oven alta | Kirjani… Jätin sen taas tänne, vanha höperö. | Mutiseva, itseironinen, oven takaa vaimeana | 7 |
-| kappalainen-3 | Kappalainen | 5 Kappeli | Epäonnistuminen: Fogg ei ehtinyt sammuttaa kynttilää tai piiloutua, ja kappalainen näkee valon tai Foggin (FABLEN PÄÄTÖS, ks. Tarkistajan muutokset) | Kuka siellä? Vartija, tänne! Kappelissa on joku! | Säikähtänyt, kova, kaikuu holvissa | 7 |
+| kappalainen-3 | Kappalainen | 5 Kappeli | Epäonnistuminen: Fogg ei ehtinyt sammuttaa kynttilää tai piiloutua, ja kappalainen näkee valon tai Foggin (PÄÄTETTY 7.10.: kappalainen-3 → vartija-kiinni-1/-2 → TYRMÄ) | Kuka siellä? Vartija, tänne! Kappelissa on joku! | Säikähtänyt, kova, kaikuu holvissa | 7 |
 
 **Määrät:** soutaja 2, portinvartija 5, kokki 6, vesipoika 1, vartijat 14 (12 yleistä tilarepliikkiä + tarjotin +
 torkkuminen), kappalainen 3. Yhteensä 31 (tilaus noin 25; lisäykset perusteltu osiossa Tarkistajan muutokset).
@@ -117,7 +117,7 @@ kaikki Sanoja-sarakkeen arvot täsmäsivät, myös uusien rivien.*
 | portinvartija-paluu-5 | "Varjoja vain… Ja sinä, kanna jo ne kalasi sisään!" (9) | Huoneen 2 epäilyllä (portinvartija-epaily-3) ja irtirepäisyllä ei ollut paluuta rauhaan; yleiset vartija-* ovat eri ääni. Repliikki palauttaa riidan, jolloin ajoitusikkuna jatkuu. |
 | kokki-epaily-5 | "Kuka siellä hiippailee? Keittiöön ei tulla ilman asiaa." (8) | Ehdotuksen huone 3 uhka "tarkkasilmäinen kokki": kokin epäily ennen tarjottimen ottamista puuttui. |
 | kokki-halytys-6 | "Vartija! Keittiössä on varas!" (4) | Kohdan 2.7 kiinniotto keittiössä: kokki ei itse vie tyrmään, joten hän huutaa pihan vartijan (vartija-kiinni-1). |
-| kappalainen-3 | "Kuka siellä? Vartija, tänne! Kappelissa on joku!" (7) | Huoneen 5 uhka (kappalainen palaa) tarvitsee epäonnistumisen repliikin; ehdotus ei kerro, mitä silloin tapahtuu. **FABLEN PÄÄTÖS:** johtaako epäonnistuminen kappelissa tyrmään vartijan kautta (tämä repliikki) vai pelkkään paluuseen tallennuspisteeseen ilman repliikkiä? Jos jälkimmäinen, kappalainen-3 poistetaan. |
+| kappalainen-3 | "Kuka siellä? Vartija, tänne! Kappelissa on joku!" (7) | Huoneen 5 uhka (kappalainen palaa) tarvitsee epäonnistumisen repliikin; ehdotus ei kerro, mitä silloin tapahtuu. **PÄÄTETTY (Päätoimittaja 7.10.2026):** epäonnistuminen kappelissa johtaa aina tyrmään: kappalainen-3 → vartija-kiinni-1 → vartija-kiinni-2 → tyrmä (E3-käsikirjoitus, pelattavuusmalli 4.1); ei paluuta ilman tyrmää, joten kappalainen-3 säilyy. |
 
 ### Tarkistettu, ei huomautettavaa
 
