@@ -874,9 +874,52 @@ namespace Matkakirja.Natiivi
             if (!Auki) return false;
             var v = Viimeisin;
             if (v.tauolla) Tauko(false);
-            bool ok = v.silmukka.OhitaKohde();
-            if (ok) { v.LatausKuvaPois("ohitus"); v.o.Kirjaa($"opas: seuraava (ohitettiin {v.silmukka.Nykyinen?.Nimi})"); }
+            var s = v.silmukka;
+            // KIERROKSEN ULKOPUOLELLA (VIE-savu 3332027d 7.10. 05.1x: Eiffel valinnasta → Seuraava → worker "odota" #4034, opas jäi
+            // paikalleen): workerin vapaa seuraava ei tule ilman pelaajan valintaa, joten Seuraava jatkaa kaupungin kohdelistan
+            // (kierros-järjestys, muuten Liiku-lista) seuraavasta näkemättömästä kohteesta kierroksena.
+            // Kierroksen viimeinen kohde (Päätoimittaja 05.2x: "viimeisen kohteen jälkeen ei jumia") lasketaan kierroksen loppumiseksi.
+            bool kierrosLopussa = s.KierrosKaynnissa && s.KierrosTieto.Item2 > 0 && s.KierrosTieto.Item1 >= s.KierrosTieto.Item2;
+            if ((!s.KierrosKaynnissa || kierrosLopussa) && !s.KierrosKeskeytetty && s.SeuraavaKaytettavissa)
+            {
+                string ohitettu = s.Nykyinen?.Nimi;
+                var jono = SeuraavatKohteet(v);
+                v.LatausKuvaPois("ohitus");
+                if (jono.Count > 0)
+                {
+                    s.AloitaKierros(jono);
+                    v.Silta(OpasSiltalauseet.Valinta, true);
+                    v.o.Kirjaa($"opas: seuraava (ohitettiin {ohitettu}) → kohdelistan kierros {jono.Count} kohdetta, ensin {jono[0].Item1}");
+                    return true;
+                }
+                // Kaikki listan kohteet nähty: pelaajan puolesta toive (worker vastaa toiveeseen pysähdyksellä, ei "odota").
+                s.Toive(SeuraavaToive);
+                v.o.Kirjaa($"opas: seuraava (ohitettiin {ohitettu}) → kohdelista käyty, toive \"{SeuraavaToive}\"");
+                return true;
+            }
+            bool ok = s.OhitaKohde();
+            if (ok) { v.LatausKuvaPois("ohitus"); v.o.Kirjaa($"opas: seuraava (ohitettiin {s.Nykyinen?.Nimi})"); }
             return ok;
+        }
+
+        /// <summary>Seuraava, kun kohdelista on käyty: toive workerille (vapaa seuraava ilman toivetta palauttaa "odota").</summary>
+        public const string SeuraavaToive = "Näytä jokin toinen kiinnostava paikka läheltä.";
+
+        /// <summary>Kaupungin kohdelista (kierros-järjestys, muuten Liiku-lista) ilman nähtyjä ja nykyistä kohdetta (Id tai alle 80 m).</summary>
+        static List<(string, double, double)> SeuraavatKohteet(OpasSovitin v)
+        {
+            var l = new List<(string, double, double)>();
+            var lahde = v.kierrosKohteet ?? v.kohteet;
+            if (lahde == null) return l;
+            var nahdyt = new HashSet<string>(v.silmukka.Nahdyt);
+            var nyt = v.silmukka.Nykyinen;
+            foreach (var t in lahde)
+            {
+                if (t.Id != null && nahdyt.Contains(t.Id)) continue;
+                if (nyt != null && (t.Id != null && t.Id == nyt.Id || KierrosLento.EtaisyysM(t.Lat, t.Lon, nyt.Lat, nyt.Lon) < 80)) continue;
+                l.Add((t.Nimi, t.Lat, t.Lon));
+            }
+            return l;
         }
 
         // ---- KUVA LATAUKSEN AJAKSI (omistaja 23.3x: "näyttää automaattisesti yhden kuvan 80% kokoisena", juna 156) ----
