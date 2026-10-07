@@ -1,0 +1,317 @@
+[
+  {
+    "indeksi": 35,
+    "kohde_id": "Q189503",
+    "tekstilaji": "teksti",
+    "commons_tiedosto": "File:Erection de l'obélisque de Louxor, place de la Concorde, le 25 octobre 1836, G.39066.jpg",
+    "verdikti": "OK",
+    "syy": "Lisenssi CC0 ja koko vastaavat APIa. Aikalaislitografia 25.10.1836, obeliski nousemassa puutelineissä, väkijoukko; osuu ankkuriin. Arkin leveät paperimarginaalit ja painettu otsikko kehyksen alla.",
+    "korjaus": "Suositus: rajaa litografian sisäkehykseen (marginaalit pois)."
+  },
+  {
+    "indeksi": 36,
+    "kohde_id": "Q189503",
+    "tekstilaji": "teksti",
+    "commons_tiedosto": "File:Exécution de Louis XVI Helman.jpg",
+    "verdikti": "OK",
+    "syy": "PD (Helman, kaiverrus). Giljotiini, sotilasrivistöt ja pylväikkörakennus selvästi näkyvissä; teloitus kaukaa, ei raaka. Painettu otsikkoteksti alareunassa on osa aikalaiskuvaa.",
+    "korjaus": null
+  },
+  {
+    "indeksi": 37,
+    "kohde_id": "Q189503",
+    "tekstilaji": "lyhyt",
+    "commons_tiedosto": "File:Paris Concorde obélisque 2.jpg",
+    "verdikti": "OK",
+    "syy": "PD, Vassil. Hieroglyfejä punertavassa graniitissa, kartussit alareunassa; pystykohde rajautuu hyvin. Ankkuri ja kuvateksti sopivat.",
+    "korjaus": null
+  },
+  {
+    "indeksi": 38,
+    "kohde_id": "Q189503",
+    "tekstilaji": "lyhyt",
+    "commons_tiedosto": "File:The remaining obelisk and the two 25m. statues of Ramses II - The entrance pylon - Luxor Temple (14259635932).jpg",
+    "verdikti": "KORJAA",
+    "syy": "Lisenssi CC BY 2.0 ok. Kuvateksti 'Kaksoisobeliski' johtaa harhaan: kuvassa on yksi jäljellä oleva Luxorin obeliski (Pariisin obeliskin kaksoisveli). Ankkuri (korkeuserotemppu) ja kuva (Luxorin pyloni) osuvat vain löyhästi. Kuva on Egyptistä (VAIN EUROOPPA -sääntö: kuva havainnollistaa Pariisin obeliskin alkuperää, omistajan harkittavaksi).",
+    "korjaus": "Kuvateksti: 'Obeliskin kaksoisveli yhä Luxorin temppelin portilla'"
+  },
+  {
+    "indeksi": 39,
+    "kohde_id": "Q178065",
+    "tekstilaji": "teksti",
+    "commons_tiedosto": "File:Paris - Centre Georges Pompidou.jpg",
+    "verdikti": "KORJAA",
+    "syy": "Lisenssi CC BY 2.0 ok. RISKI: Pompidou-keskus (Piano/Rogers/Franchini) on suojattu arkkitehtuuri, Ranskassa ei panoraamavapautta; julkisivu päänä kuvassa = keskisuuri riski. Lisäksi kuvan keskellä ja reunoilla Gérard Fromangerin näyttelyn banderollit (tekijänoikeuden alaista taidetta, Fromanger k. 2021). Ankkuri alkaa tekstin 4. sanasta (kuva ehtii liian aikaisin).",
+    "korjaus": "Rajaa kuvan yläosa/vasen osa (x<~880, y<~390 pikkukuvassa) ilman banderolleja, tai vaihda kuva; Pompidou-riski päätoimittajan/omistajan hyväksyttävä. Harkitse ankkuria myöhemmäksi (esim. 'putket, portaat ja kantavat rakenteet')."
+  },
+  {
+    "indeksi": 40,
+    "kohde_id": "Q178065",
+    "tekstilaji": "teksti",
+    "commons_tiedosto": "File:Pompidou Center Paris.jpg",
+    "verdikti": "OK",
+    "syy": "Lisenssi CC BY-SA 4.0 ok. Siniset ilmastointiputket, valkoiset raitisilmatorvet ja vihreä vesiputki näkyvät selvästi, ei banderolleja tai tekstiä. RISKI: Pompidou-keskuksen arkkitehtuuri (Piano/Rogers), Ranskassa ei panoraamavapautta; lähikuva rakenneyksityiskohdasta, riski keskisuuri-matala, omistajan hyväksyttävä.",
+    "korjaus": null
+  },
+  {
+    "indeksi": 41,
+    "kohde_id": "Q309458",
+    "tekstilaji": "teksti",
+    "commons_tiedosto": "File:Luxembourg 2017 b.jpg",
+    "verdikti": "OK",
+    "syy": "CC BY-SA 4.0 ok. Lapset työntävät vuokrapurjeveneitä altaassa, täsmälleen ankkurin perinne. Huomio: lasten kasvot tunnistettavissa (matala riski, julkinen paikka).",
+    "korjaus": null
+  },
+  {
+    "indeksi": 42,
+    "kohde_id": "Q309458",
+    "tekstilaji": "teksti",
+    "commons_tiedosto": "File:Firenze Palazzo Pitti Esterno 1.jpg",
+    "verdikti": "KORJAA",
+    "syy": "CC BY 4.0 ok. Pitti-palatsin julkisivu osuu ankkuriin. Kuvateksti 'puiston esikuva' on epätarkka: tekstin mukaan Pitti oli Luxembourgin palatsin esikuva. Vasemmassa alareunassa pieni opastekyltti.",
+    "korjaus": "Kuvateksti: 'Firenzen Pitti-palatsi, Luxembourgin palatsin esikuva'"
+  },
+  {
+    "indeksi": 43,
+    "kohde_id": "Q309458",
+    "tekstilaji": "teksti",
+    "commons_tiedosto": "File:La Liberté éclairant le Monde Jardin du Luxembourg blanc.jpg",
+    "verdikti": "OK",
+    "syy": "CC0 ok (valokuvaaja Jebulon, 2011; API:n Artist-kentässä veistäjä Bartholdi, d. 1904, PD). Pienoismalli selvästi, valkoinen tausta (taustaton). Pystykuva sopii pystysuuntaiselle patsaalle.",
+    "korjaus": "Huomio: tekijäkenttään valokuvaaja Jebulon (veistos: Bartholdi)."
+  },
+  {
+    "indeksi": 44,
+    "kohde_id": "Q188856",
+    "tekstilaji": "teksti",
+    "commons_tiedosto": "File:Fronton Panthéon Paris Dome chapiteaux.jpg",
+    "verdikti": "KORJAA",
+    "syy": "PD ok. Panthéonin julkisivu ja kirjoitus AUX GRANDS HOMMES LA PATRIE RECONNAISSANTE selvästi näkyvissä. Kuvateksti virheellinen: kirjoitus on arkkitraavissa päätykolmion alla, ei päätykolmiossa (päätykolmiossa on David d'Angersin reliefi).",
+    "korjaus": "Kuvateksti: 'Suurmiehille kiitollinen isänmaa Panthéonin julkisivulla'"
+  },
+  {
+    "indeksi": 45,
+    "kohde_id": "Q188856",
+    "tekstilaji": "teksti",
+    "commons_tiedosto": "File:Foucault pendulum at Panthéon de Paris (24466666577).jpg",
+    "verdikti": "OK",
+    "syy": "CC BY 2.0 ok. Messinkipallo, lasitaso ja marmorilattian kuvio, ei ihmisiä; osuu ankkuriin (heilurin kopio).",
+    "korjaus": null
+  },
+  {
+    "indeksi": 46,
+    "kohde_id": "Q188856",
+    "tekstilaji": "teksti",
+    "commons_tiedosto": "File:Pierre and Marie Curie.jpg",
+    "verdikti": "OK",
+    "syy": "PD ok (tuntematon valokuvaaja, noin 1904). Aikalaisvalokuva Curien laboratoriossa; ei välttämättä juuri se vuotava vaja, mutta kuvateksti ei väitä niin. Osuvuus tyydyttävä.",
+    "korjaus": null
+  },
+  {
+    "indeksi": 47,
+    "kohde_id": "Q193193",
+    "tekstilaji": "teksti",
+    "commons_tiedosto": "File:Reliquaire de la Couronne d'Épines (1862).jpg",
+    "verdikti": "KORJAA",
+    "syy": "PD ok (Tangopaso, 2015; esine 1862). Kuva: kullattu kruunun muotoinen relikvaario, Ludvig IX istuu kruunu kädessä; lasiaukoissa vain punainen sametti (itse reliikki ei näy). Kuvateksti 'pyhäinjäännösholkki' on väärä sana (holkki = hylsy).",
+    "korjaus": "Kuvateksti: 'Orjantappurakruunun relikvaario vuodelta 1862'"
+  },
+  {
+    "indeksi": 48,
+    "kohde_id": "Q193193",
+    "tekstilaji": "teksti",
+    "commons_tiedosto": "File:Santa Capilla, París, Francia, 2022-11-01, DD 80-82 HDR.jpg",
+    "verdikti": "OK",
+    "syy": "CC BY-SA 4.0 ok. Yläkappelin lasimaalaukset ja holvit, ei ihmisiä, ei tekstiä. Täsmää ankkuriin ja kuvatekstiin.",
+    "korjaus": null
+  },
+  {
+    "indeksi": 49,
+    "kohde_id": "Q188977",
+    "tekstilaji": "teksti",
+    "commons_tiedosto": "File:Le dôme des Invalides (5018601658).jpg",
+    "verdikti": "OK",
+    "syy": "CC BY 2.0 ok. Kullattu kupoli, lyhty ja risti sinistä taivasta vasten; pystykuva sopii korkeussuuntaiselle kohteelle. Ei vesileimaa.",
+    "korjaus": null
+  },
+  {
+    "indeksi": 50,
+    "kohde_id": "Q188977",
+    "tekstilaji": "teksti",
+    "commons_tiedosto": "File:Prise des armes aux Invalides 14 juillet 1789, Musée de la Révolution française - Vizille.jpg",
+    "verdikti": "OK",
+    "syy": "CC BY-SA 4.0 ok (aikalaiskaiverrus 1789, Prieur). Väkijoukko Invalidien aukiolla, kupoli taustalla. Kuvateksti 'ryöstää' voisi olla neutraalimpi mutta on hyväksyttävä.",
+    "korjaus": null
+  },
+  {
+    "indeksi": 51,
+    "kohde_id": "Q188977",
+    "tekstilaji": "teksti",
+    "commons_tiedosto": "File:Le Tombeau de l'Empereur Napoléon aux Invalides.jpg",
+    "verdikti": "OK",
+    "syy": "CC0 ok. Napoleonin punainen sarkofagi vihreällä jalustalla, voitottaret ympärillä; kuvattu ylhäältä. Teoksen tekijät (Visconti, Pradier) kuolleet >70 v.",
+    "korjaus": null
+  },
+  {
+    "indeksi": 52,
+    "kohde_id": "Q390418",
+    "tekstilaji": "teksti",
+    "commons_tiedosto": "File:Paris pont alexandre III détail et grand palais en arrière plan.JPG",
+    "verdikti": "OK",
+    "syy": "CC BY-SA 3.0 ok. Pylväs ja kullattu Renommée-pegasos (Frémiet, d. 1910, PD), taustalla Grand Palais; alareunassa proomu. Pystykuva sopii pylvääseen.",
+    "korjaus": null
+  },
+  {
+    "indeksi": 53,
+    "kohde_id": "Q390418",
+    "tekstilaji": "teksti",
+    "commons_tiedosto": "File:Le Pont Alexandre III et le Petit Palais, Exposition Universelle 1900.jpg",
+    "verdikti": "OK",
+    "syy": "PD ok (Brown University Library, albumi 1900, tekijä tuntematon). Aikalaisvalokuva sillasta maailmannäyttelyn aikaan; alareunassa pieni painettu kuvateksti.",
+    "korjaus": null
+  },
+  {
+    "indeksi": 54,
+    "kohde_id": "Q390418",
+    "tekstilaji": "teksti",
+    "commons_tiedosto": "File:Nymphes de la Neva sur le Pont Alexandre III.JPG",
+    "verdikti": "OK",
+    "syy": "CC BY-SA 3.0 ok. Nevan nymfit ja kullattu Venäjän kaksipäinen kotka; osuu ankkuriin. Veistäjä Récipon k. 1920, PD.",
+    "korjaus": null
+  },
+  {
+    "indeksi": 55,
+    "kohde_id": "Q335277",
+    "tekstilaji": "teksti",
+    "commons_tiedosto": "File:Paris 9 - Le Pont Neuf - Mascaron -191.JPG",
+    "verdikti": "OK",
+    "syy": "CC BY 3.0 ok. Pont Neufin mascaron tarkkana lähikuvana, ei vesileimaa. Pystykuva mutta kasvo rajautuu hyvin.",
+    "korjaus": null
+  },
+  {
+    "indeksi": 56,
+    "kohde_id": "Q335277",
+    "tekstilaji": "teksti",
+    "commons_tiedosto": "File:Statue of Henri IV, Pont Neuf, Paris April 2017 001.jpg",
+    "verdikti": "OK",
+    "syy": "CC BY 2.0 ok. Henrik IV:n ratsastajapatsas (1818, PD) jalustallaan; oikeassa reunassa nosturit ja mainosverho (merkityksetön).",
+    "korjaus": null
+  },
+  {
+    "indeksi": 57,
+    "kohde_id": "Q335277",
+    "tekstilaji": "teksti",
+    "commons_tiedosto": "File:Nicolas-Jean-Baptiste Raguenet, A View of Paris from the Pont Neuf - Getty Museum.jpg",
+    "verdikti": "OK",
+    "syy": "PD ok (Raguenet 1763). Vaunuja, kulkijoita ja patsas sillalla; sopii ankkuriin kaikkien säätyjen kohtauspaikka.",
+    "korjaus": null
+  },
+  {
+    "indeksi": 58,
+    "kohde_id": "Q311",
+    "tekstilaji": "teksti",
+    "commons_tiedosto": "File:Père-Lachaise - Division 47 - Avenue Frédéric Soulié 04.jpg",
+    "verdikti": "OK",
+    "syy": "CC BY-SA 4.0 ok. Mukulakivikuja ja pieniä hautakappeleita; katumainen vaikutelma. Kuvateksti kelpaa (kappelit kujan varrella).",
+    "korjaus": null
+  },
+  {
+    "indeksi": 59,
+    "kohde_id": "Q311",
+    "tekstilaji": "teksti",
+    "commons_tiedosto": "File:Gravure de la tombe de Molière au Père-Lachaise.jpg",
+    "verdikti": "OK",
+    "syy": "PD ok (Chalon, kaiverrus 1800-luvulta). MOLIERE ja LAFONTAINE -haudat vierekkäin; kuva haaleahko mutta luettava, pieniä kirjastoleimoja alareunassa.",
+    "korjaus": null
+  },
+  {
+    "indeksi": 60,
+    "kohde_id": "Q311",
+    "tekstilaji": "teksti",
+    "commons_tiedosto": "File:Cimetière du père Lachaise \"Aux morts de la Commune\" 21-28 mai 1871.jpg",
+    "verdikti": "OK",
+    "syy": "CC BY 2.0 ok. Laatta AUX MORTS DE LA COMMUNE 21-28 Mai 1871 ja tummanpunaisia ruusuja; asiallinen. Kuvassa myös Pariisin kommuunin julistetuloste (PD).",
+    "korjaus": null
+  },
+  {
+    "indeksi": 61,
+    "kohde_id": "Q898629",
+    "tekstilaji": "teksti",
+    "commons_tiedosto": "File:Paris, Place des Vosges, façade (16341604342).jpg",
+    "verdikti": "OK",
+    "syy": "CC BY 2.0 ok. Punatiilisiä taloja ja jyrkkiä liuskekattoja, osuu täsmälleen. Puun lehvästö yläreunassa on ohut.",
+    "korjaus": null
+  },
+  {
+    "indeksi": 62,
+    "kohde_id": "Q898629",
+    "tekstilaji": "teksti",
+    "commons_tiedosto": "File:Anonymous - Le \"Roman des chevaliers de la gloire\", grand carrousel donné du 5 au 7 avril 1612, à l'occasion du mariage de Louis XIII avec Anne d'Autriche, place Royale - P50 - Musée Carnavalet.jpg",
+    "verdikti": "OK",
+    "syy": "PD ok (anonyymi 1600-luvun maalaus, Carnavalet). Karuselli 1612 Place Royalella; taulun kehys näkyy reunoissa.",
+    "korjaus": null
+  },
+  {
+    "indeksi": 63,
+    "kohde_id": "Q898629",
+    "tekstilaji": "teksti",
+    "commons_tiedosto": "File:Maison de Victor Hugo Salon chinois 271220120 01.jpg",
+    "verdikti": "OK",
+    "syy": "CC0 ok. Kiinalainen salonki Maison de Victor Hugo -museossa (alun perin Juliette Drouetin talosta Guernseyltä, Hugon suunnittelema; PD). Ei ihmisiä, ei tekstiä.",
+    "korjaus": null
+  },
+  {
+    "indeksi": 64,
+    "kohde_id": "Q151030",
+    "tekstilaji": "teksti",
+    "commons_tiedosto": "File:Paris, Moulin Rouge -- 2014 -- 1220.jpg",
+    "verdikti": "OK",
+    "syy": "CC BY-SA 4.0 ok (Dietmar Rabich 2014). Punainen tuulimylly siipineen katolla, kylttejä. Pieni riski: julkisivun La Machine -mainosjuliste ja kabareen julkisivu (Ranskassa ei panoraamavapautta), matala.",
+    "korjaus": null
+  },
+  {
+    "indeksi": 65,
+    "kohde_id": "Q151030",
+    "tekstilaji": "teksti",
+    "commons_tiedosto": "File:Moulin Rouge- La Goulue MET DT11780.jpg",
+    "verdikti": "OK",
+    "syy": "CC0 ok (MET). Toulouse-Lautrecin La Goulue -juliste 1891; tekijä k. 1901, PD. Pystykuva sopii julisteelle.",
+    "korjaus": null
+  },
+  {
+    "indeksi": 66,
+    "kohde_id": "Q151030",
+    "tekstilaji": "teksti",
+    "commons_tiedosto": "File:Moulin Rouge sans ailes 01.jpg",
+    "verdikti": "OK",
+    "syy": "CC BY-SA 4.0 ok. Kuva otettu 25.4.2024 (EXIF), mylly ilman siipiä, joten 'huhtikuussa 2024' pitää paikkansa.",
+    "korjaus": null
+  },
+  {
+    "indeksi": 67,
+    "kohde_id": "Q457318",
+    "tekstilaji": "teksti",
+    "commons_tiedosto": "File:Album photographique amateur de l'Exposition Universelle de 1900 un coin du Grand Palais, Paris Musées 20230901081217.jpg",
+    "verdikti": "KORJAA",
+    "syy": "CC0 ok (Paris Musées, albumi 1900). Aikalaisvalokuva Grand Palais'n kulmasta, mutta kuva on albumisivun kahdeksankulmaisessa kehyksessä leveällä beigellä paspartuulla ja tumma reuna; heikko kontrasti, pienet hahmot.",
+    "korjaus": "Rajaa sisäkuvaan (paspartuu ja tummat reunat pois) tai vaihda kuva; kuvateksti kelpaa."
+  },
+  {
+    "indeksi": 68,
+    "kohde_id": "Q457318",
+    "tekstilaji": "teksti",
+    "commons_tiedosto": "File:Harmony Triumphing over Discord, Grand Palais 02.jpg",
+    "verdikti": "OK",
+    "syy": "CC BY 2.0 ok. Récipon'n kuparinen nelivaljakko L'Harmonie triomphant de la Discorde, Ranskan lippu ja kupolin huippu. Osuu ankkuriin.",
+    "korjaus": null
+  },
+  {
+    "indeksi": 69,
+    "kohde_id": "Q457318",
+    "tekstilaji": "teksti",
+    "commons_tiedosto": "File:Grande verrière du Grand Palais lors de l'opération La nef est à vous, juin 2018 (14).jpg",
+    "verdikti": "OK",
+    "syy": "CC BY-SA 4.0 ok. Lasi- ja teräsholvin sisäpuoli keskikupolilla, ei ihmisiä. Osuva ankkuriin (olympiakilpailut holvin alla).",
+    "korjaus": null
+  }
+]

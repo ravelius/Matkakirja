@@ -26,6 +26,7 @@ kolme tulostiedostoa ja poistetaan `wip/`.
 - Ryhmä 2 VALMIS (`wip/osa2.json` 18 riviä, `wip/codex2.md` 2 tilausta). Älä tee uudelleen.
 - Ryhmä 1 VALMIS (`wip/osa1.json` 26 riviä, `wip/codex1.md` 1 tilaus). Älä tee uudelleen.
 - yhdista.py ajettu: 70 riviä, 0 ongelmaa (kaksoiskuva Notre-Dame-palo poistettu Sainte-Chapellesta). SEURAAVAKSI: TARKISTAJA (sonnet), sitten tulostiedostot ja wip/-poisto.
+- TARKISTAJA B valmis (`wip/tarkistus_B.json`: 29 OK, 6 KORJAA, 0 HYLKAA). TARKISTAJA A kesken (`wip/tarkistus_A.json`). Korjaukset tehdään osa*.json:iin tarkistajien jälkeen.
 - (vanha rivi:) tämän kirjauksen hetkellä; jos `wip/osa<N>.json` puuttuu, aja ryhmä
   uudelleen Sonnetilla.
 
