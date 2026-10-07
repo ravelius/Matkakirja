@@ -31,14 +31,26 @@ namespace Matkakirja.Natiivi
         public readonly VisualElement Juuri;
         readonly VisualElement paneeli, joystick, napa, lcd, mini, kaasu, ura, kahva, rumpu, luvut;
         readonly VisualElement jalkaYla, jalkaAla;
+        /// <summary>Paneelin alle jäävä rako (pt), josta alkaen jalka piirretään.</summary>
+        const float JalkaRakoPt = 2f;
+        bool jalkaVaroitettu;
 
-        /// <summary>Jalka paneelin alareunan keskeltä ruudun alareunaan (pystyssä); vaakana paneeli on jo kiinni alareunassa.</summary>
+        /// <summary>
+        /// Jalka paneelin alareunan keskeltä ruudun alareunaan aina, kun paneelin ja ruudun alareunan väliin jää rakoa. Omistaja 7.10.
+        /// 10.5x, TF 159: iPadin vaakanäkymässä paneeli kelluu turva-alueen yläpuolella ilman jalkaa (ehto oli vain pystyssä, oletus
+        /// "vaakana paneeli on kiinni alareunassa" ei pidä iPadilla). Puuttuva kuva varoittaa lokiin, ei hiljaista piilotusta.
+        /// </summary>
         void AsetteleJalka()
         {
             var a = ankkurit;
             var yla = NahkaKuva("jalka-yla"); var ala = NahkaKuva("jalka-ala");
-            bool pysty = Screen.height > Screen.width;
-            bool nayta = pysty && a != null && a.JalkaYla.width > 0 && yla != null && ala != null && paneeli.layout.width > 0 && Juuri.panel != null;
+            if (NahkaKaytossa && (yla == null || ala == null) && !jalkaVaroitettu)
+            {
+                jalkaVaroitettu = true;
+                Debug.LogWarning($"MATKAKIRJA iss-ohjaamo: jalan kuva puuttuu ({(yla == null ? "jalka-yla " : "")}{(ala == null ? "jalka-ala" : "")}), Resources/{NahkaKansio}");
+            }
+            float rako = Juuri.panel != null && paneeli.worldBound.height > 0 ? Juuri.panel.visualTree.layout.height - paneeli.worldBound.yMax : 0f;
+            bool nayta = rako > JalkaRakoPt && a != null && a.JalkaYla.width > 0 && yla != null && ala != null && paneeli.layout.width > 0 && Juuri.panel != null;
             var d = nayta ? DisplayStyle.Flex : DisplayStyle.None;
             if (jalkaYla.style.display != d) { jalkaYla.style.display = d; jalkaAla.style.display = d; }
             if (!nayta) return;
@@ -1070,6 +1082,7 @@ namespace Matkakirja.Natiivi
                 + $"LCD \"{kohde.text}\" / \"{maa.text}\" ({kohde.resolvedStyle.fontSize:0} pt)"
                 + $", objektiivi {(IssKameraKuva.Laaja ? "LAAJA" : "TELE")} @ {objektiivi.worldBound.xMin:0},{objektiivi.worldBound.yMin:0} {objektiivi.worldBound.width:0}×{objektiivi.worldBound.height:0}"
                 + (segmentit.resolvedStyle.display == DisplayStyle.Flex ? $", kehitys {segmentit.Query(className: "mk-issohjaamo__segmentti--paalla").ToList().Count}/{Segmentteja}" : "")
+                + $", jalka {(jalkaYla.resolvedStyle.display == DisplayStyle.Flex ? $"näkyy {jalkaYla.worldBound.xMin:0},{jalkaYla.worldBound.yMin:0}–{jalkaAla.worldBound.yMax:0}" : "piilossa")}"
                 + (Laajennettu ? $", laajennettu: kausi {KausiNyt?.Invoke()}, vuorokausi {VuorokausiNyt?.Invoke()}" : "");
         }
 
