@@ -186,6 +186,18 @@ test('avauksen lupaama alku: kierros alkaa esittelyn kierros[0]:sta, ei kameraa 
   assert.equal((await opas(ilman, { toive: 'Esittele kaupunki', istunto: 'a2' })).d.id, 'Q100', 'ilman avausta lähin kuten ennen');
 });
 
+test('Liiku-kierros alkaa avauksen lupaamasta kohteesta (LS1 lukee kierroksen /opas/liiku-vastauksesta)', async () => {
+  const vanha = globalThis.fetch; globalThis.fetch = async () => new Response('{}');
+  try {
+    const e = ymparisto();
+    e.OPAS_ESITTELY_TESTI = { testila: { ...ESITTELY, avaus: { teksti: 'Kierros alkaa Kohteesta 5.' }, kierros: ['Q105'] } };
+    const hae = async (env) => (await (await worker.fetch(new Request('https://pollo.example/opas/liiku?kaupunki=Testil%C3%A4&lat=60&lon=25',
+      { headers: H }), env, { waitUntil() {} })).json()).kierros;
+    assert.equal((await hae(e))[0], 'Q105');
+    assert.equal((await hae(ymparisto()))[0], 'Q100', 'ilman avausta lähin kuten ennen');
+  } finally { globalThis.fetch = vanha; }
+});
+
 test('esittely_polut: Praha ja Wien poikkeavasta polusta (avaus + kierros), muut esittely-v1', async () => {
   const urlit = [];
   const haku = async (u) => { urlit.push(String(u)); return new Response(JSON.stringify(ESITTELY)); };

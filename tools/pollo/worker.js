@@ -3051,6 +3051,12 @@ const eiSallittu = (kaupunki, kors) => vastaa({ virhe: 'ei-sallittu', viesti: EI
 /** Kohdelistasta pois sallitun alueen ulkopuoliset (kaupunki annettuna sen r_m-säteeltä, muuten mistä tahansa sallitusta). */
 const sallitutKohteet = (env, tulos, kaupunki = null) => ({ ...tulos, kohteet: (tulos?.kohteet ?? []).filter((k) => pisteSallittu(k, kaupunki, env)) });
 
+/** Liiku-listan Kaupunkikierros (#4138:n jatko, LS1 7.10.): avauksen lupaamasta kohteesta, muuten sijaintia lähimmästä. */
+function liikunKierros(lukitut, alku, alkuId) {
+  const kohteet = lukitut.slice(0, KIERROKSEN_PITUUS);
+  return lyhinReitti(kohteet, alku, { ensimmainen: kohteet.find((k) => k.id === alkuId) ?? null }).map((k) => k.id);
+}
+
 async function hoidaOppaanKohteet(pyynto, env, kors, ctx) {
   const url = new URL(pyynto.url);
   const natiivit = env.POLLO_NATIIVIT ? lueLista(env.POLLO_NATIIVIT) : NATIIVIT_OLETUS;
@@ -3288,7 +3294,7 @@ async function hoidaOppaanLiiku(pyynto, env, kors) {
     const alku = Number.isFinite(lat) && Number.isFinite(lon) && !(lat === 0 && lon === 0) ? { lat, lon } : null;
     return vastaa({ kaupunki, kohteet: lukitut.map((k, i) => ({ id: k.id, nimi: k.nimi, lat: k.lat, lon: k.lon, alarivi: null,
       luokka: null, tarkeys: i + 1, kuva: k.kuvat[0] ?? null, kuvat: k.kuvat })),
-      kierros: lyhinReitti(lukitut.slice(0, KIERROKSEN_PITUUS), alku).map((k) => k.id) }, kors);
+      kierros: liikunKierros(lukitut, alku, esittelynAlku(await oppaanEsittely(env, kaupunki), kaupunki)) }, kors);
   }
   try {
     const viite = await tarkistettuSijainti(kaupunki, Number.isFinite(lat) && Number.isFinite(lon) && !(lat === 0 && lon === 0) ? { lat, lon } : null);
