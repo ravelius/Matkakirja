@@ -10,7 +10,7 @@
    "luokka": "rakennus",
    "koko_m": 230,
    "teksti": "Tukholman kuninkaanlinna on ylhäältä katsottuna lähes neliön muotoinen kivikortteli vanhankaupungin pohjoispäässä, ja sen keskellä avautuu suuri sisäpiha. Linna rakennettiin keskiaikaisen Tre Kronorin linnan paikalle, kun se oli palanut toukokuussa 1697. Arkkitehti Nicodemus Tessin nuorempi esitteli uudet piirustukset jo kuuden viikon kuluttua, mutta suuri Pohjan sota keskeytti työt, eikä Tessin elänyt näkemään linnan valmistumista vuonna 1754. Yli kuusisataa huonetta käsittävä linna on yhä kuninkaan virallinen asunto ja työpaikka. Kesällä vartionvaihto nähdään ulommalla linnanpihalla joka päivä.",
-   "lyhyt": "Tukholman kuninkaanlinnan holvikellareissa on aarrekammio, jossa säilytetään Ruotsin kruununjalokiviä, kuten Kustaa Vaasan valtakunnanmiekkaa ja Erik neljännentoista kruunua. Kuningaspari työskentelee linnassa, mutta kotinsa se on tehnyt vuodesta 1981 Drottningholmin linnaan kaupungin länsipuolelle.",
+   "lyhyt": "Tukholman kuninkaanlinnan holvikellareissa on aarrekammio, jossa säilytetään Ruotsin kruununjalokiviä, kuten Kustaa Vaasan valtakunnanmiekkaa. Siellä on myös flaamilaisen kultasepän vuonna 1561 valmistama Erik neljännentoista kruunu, jota pidetään maailman vanhimpana yhä käytössä olevana kuninkaankruununa.",
    "syventava": "Mitä linnan paikalla oli ennen?",
    "kysymykset": [
     "Mitä Tre Kronorin linnan palossa tapahtui?",
@@ -48,6 +48,10 @@
     {
      "vaite": "Kuningaspari muutti 1981 asumaan Drottningholmin linnaan.",
      "url": "https://en.wikipedia.org/wiki/Drottningholm_Palace"
+    },
+    {
+     "vaite": "Erik XIV:n kruunun teki flaamilainen kultaseppä Cornelis ver Weiden Tukholmassa 1561; se on maailman vanhin yhä kuninkaankruununa käytössä oleva kruunu; säilytetään aarrekammiossa linnan holvikellareissa.",
+     "url": "https://www.kungligaslotten.se/english/archives/the-state-regalia/2018-03-05-king-erik-xivs-crown.html"
     }
    ]
   },
@@ -58,7 +62,7 @@
    "luokka": "muu",
    "koko_m": 800,
    "teksti": "Vanhakaupunki, Gamla stan, täyttää Stadsholmenin saaren ja muutaman pienen luodon, ja sen katuverkko on säilynyt keskiajalta lähes ennallaan. Tukholman nimi esiintyy ensimmäisen kerran kahdessa kirjeessä vuonna 1252, ja kaupunki kasvoi juuri tällä saarella. Pääkatu Västerlånggatan seuraa keskiaikaisen kaupunginmuurin linjaa, ja siitä haarautuu kapeita kujia molempiin suuntiin. Kapein niistä, Mårten Trotzigs gränd, on kapeimmalta kohdaltaan vain yhdeksänkymmentä senttimetriä leveä. Kuja on saanut nimensä Wittenbergistä tulleelta kauppiaalta, joka muutti kaupunkiin vuonna 1581 ja osti kujan varrelta taloja.",
-   "lyhyt": "Vanhassakaupungissa asuu nykyään noin kolmetuhatta ihmistä. Suomalaisen kirkon takapihalla istuu Tukholman pienin julkinen muistomerkki, viisitoista senttimetriä korkea Rautapoika, joka katselee kuuta. Talvella patsaalla on usein pipo ja kaulaliina, ja ohikulkijat jättävät sille kolikoita.",
+   "lyhyt": "Vanhankaupungin Suomalaisen kirkon takapihalla istuu Tukholman pienin patsas, viisitoista senttimetriä korkea Rautapoika. Kuvanveistäjä Liss Eriksson kuvasi siinä itseään poikana, joka istui kylmissään ullakkohuoneessa kädet jalkojen ympärillä ja katseli kuuta. Talvella tukholmalaiset neulovat patsaalle pipoja ja kaulaliinoja.",
    "syventava": "Kuka oli kauppias Mårten Trotzig?",
    "kysymykset": [
     "Milloin Tukholma perustettiin?",
@@ -92,6 +96,10 @@
     {
      "vaite": "Järnpojke on 15 cm korkea, Tukholman pienin julkinen muistomerkki, Suomalaisen kirkon takana; aiheena taiteilijan lapsuusmuisto kuun katselusta; talvella pipo ja kaulaliina; ihmiset jättävät kolikoita.",
      "url": "https://en.wikipedia.org/wiki/J%C3%A4rnpojke"
+    },
+    {
+     "vaite": "Rautapoika on Liss Erikssonin lapsuusomakuva: hän istui kylmissään kädet jalkojen ympärillä ja katseli kuuta Södermalmin kodin ullakkohuoneesta; 15 cm, Tukholman pienin patsas, kirkon takana.",
+     "url": "https://www.svenskakyrkan.se/nyheter/rautapoika"
     }
    ]
   },
@@ -102,7 +110,7 @@
    "luokka": "rakennus",
    "koko_m": 120,
    "teksti": "Vasa-museon katolta kohoaa kolme mastoa, jotka näyttävät, kuinka korkealle sotalaiva Vasan alkuperäiset mastot ulottuivat. Laiva lähti neitsytmatkalleen Tukholman satamasta kymmenentenä elokuuta 1628 ja kaatui jo vajaan puolentoista kilometrin jälkeen, ja onnettomuudessa kuoli kolmekymmentä ihmistä. Laivaston insinööri Anders Franzén löysi hylyn vuonna 1956, ja vuonna 1961 se nostettiin lähes ehjänä, sillä Itämeren vähäsuolainen vesi oli pitänyt laivamadot loitolla. Noin yhdeksänkymmentäkahdeksan prosenttia laivasta on alkuperäistä. Museo avattiin vuonna 1990, ja se on Skandinavian vierailluimpia museoita.",
-   "lyhyt": "Vasa-museon laiva on koristeltu sadoilla puuveistoksilla. Alus oli rakennettu liian kapeaksi ja korkeaksi, ja kun ensimmäinen kunnon tuulenpuuska kallisti sitä, vesi ryntäsi sisään avoimista tykkiporteista. Vuonna 2024 museossa kävi yli miljoona kolmesataatuhatta ihmistä.",
+   "lyhyt": "Vasa-museon laiva oli rakennettu liian kapeaksi ja korkeaksi. Jo ennen lähtöä vara-amiraali Fleming seurasi koetta, jossa miehistö juoksi kannen poikki edestakaisin, ja keskeytti sen kolmen juoksun jälkeen, koska pelkäsi laivan kaatuvan. Neitsytmatkalla tuulenpuuska painoi avoimet tykkiportit veden alle.",
    "syventava": "Miksi Vasa kaatui heti?",
    "kysymykset": [
     "Kuka tilasi sotalaiva Vasan?",
@@ -140,6 +148,10 @@
     {
      "vaite": "Laiva oli väärin mitoitettu ja yläpainoinen; tuulenpuuskat kallistivat sitä, ja vesi ryntäsi sisään avoimista tykkiporteista.",
      "url": "https://www.military-history.org/articles/back-to-the-drawing-board-vasa.htm"
+    },
+    {
+     "vaite": "Ennen neitsytmatkaa kapteeni Söfring Hansson järjesti vara-amiraali Flemingille vakauskokeen, jossa miehet juoksivat kannen poikki; Fleming keskeytti sen kolmen juoksun jälkeen peläten laivan kaatuvan; puuska painoi alemmat tykkiportit veden alle.",
+     "url": "https://en.wikipedia.org/wiki/Vasa_(ship)"
     }
    ]
   },
@@ -150,13 +162,13 @@
    "luokka": "rakennus",
    "koko_m": 130,
    "teksti": "Tukholman kaupungintalo seisoo Kungsholmenin saaren kärjessä Riddarfjärdenin rannalla, ja sen tiilitornin huipulla kimaltavat Ruotsin kolme kruunua satakuuden metrin korkeudessa. Arkkitehti Ragnar Östbergin suunnittelemaa taloa alettiin rakentaa vuonna 1911, ja se vihittiin kesäkuussa 1923. Joka vuosi kymmenentenä joulukuuta Nobel-juhlan illallinen katetaan Siniseen saliin, joka ei ole lainkaan sininen. Seinät oli tarkoitus peittää sinisillä laatoilla, mutta Östberg ihastui punaisiin tiiliin ja jätti ne näkyviin. Illallisen jälkeen tanssitaan Kultaisessa salissa, jonka seiniä peittää yli kahdeksantoista miljoonaa kultamosaiikin palaa.",
-   "lyhyt": "Tukholman kaupungintalon tornin juurella on suuri sarkofagi, joka tehtiin kaupungin perustajana pidetylle Birger-jaarlille. Hänen jäännöksiään ei kuitenkaan koskaan saatu siirrettyä Varnhemin luostarikirkosta, joten hauta on yhä tyhjä. Kesäisin torniin pääsee kiipeämään, ja huipulta näkyy koko keskusta.",
+   "lyhyt": "Tukholman kaupungintalon tornin juurella on suuri sarkofagi, joka tehtiin kaupungin perustajana pidetylle Birger-jaarlille. Varnhemin seurakunta kieltäytyi kuitenkin luovuttamasta hänen jäännöksiään luostarikirkostaan, joten hauta on yhä tyhjä. Vuonna 2002 Varnhemin hauta avattiin, ja DNA-tutkimus vahvisti, että jaarli todella lepää siellä.",
    "syventava": "Miksi Sininen sali ei ole sininen?",
    "kysymykset": [
     "Mitä Kultaisen salin mosaiikit esittävät?",
     "Kuka oli arkkitehti Ragnar Östberg?",
     "Kuinka monta vierasta Nobel-illalliselle tulee?",
-    "Miksi Birger-jaarlin hauta on tyhjä?",
+    "Kuka oli Birger-jaarli?",
     "Mitä kaupungintalossa tehdään arkisin?"
    ],
    "isoisa": false,
@@ -186,12 +198,8 @@
      "url": "https://worldcitytrail.com/2025/02/14/stockholm-city-hall/"
     },
     {
-     "vaite": "Tornin juurella oleva Birger-jaarlin hautamuistomerkki vuodelta 1923 on tyhjä, koska jäännöksiä ei saatu siirrettyä Varnhemin luostarikirkosta.",
+     "vaite": "Kaupungintalon tornin juurelle tehty Birger-jaarlin sarkofagi on tyhjä, koska Varnhemin kirkkoneuvosto kieltäytyi luovuttamasta jäännöksiä; hauta avattiin toukokuussa 2002, ja DNA-analyysi vahvisti sen Birger-jaarlin haudaksi.",
      "url": "https://www.vastsverige.com/en/skara/varnhem/history-of-varnhem/birger-jarl--the-royal-graves/"
-    },
-    {
-     "vaite": "Torni on avoinna toukokuusta syyskuuhun; hissi osan matkaa ja loput portaita; näkymä koko keskustaan.",
-     "url": "https://stadshuset.stockholm/en/visit-stockholm-city-hall/city-hall-tower"
     }
    ]
   },
@@ -201,14 +209,14 @@
    "kuvaus": "Kuningasperheen koti Mälarenin saarella",
    "luokka": "rakennus",
    "koko_m": 600,
-   "teksti": "Drottningholmin linna seisoo Mälarenin Lovön saaren rannalla, ja sen takana jatkuu ylhäältä selvästi erottuva barokkipuutarha suorine käytävineen. Leskikuningatar Hedvig Eleonora osti kartanon vuonna 1661, mutta se paloi saman vuoden joulukuussa, ja hän pyysi Nicodemus Tessin vanhempaa suunnittelemaan tilalle uuden linnan. Vuodesta 1981 linna on ollut kuningas Kaarle kuudennentoista Kustaan ja kuningatar Silvian koti. Puiston laidalla toimii vuonna 1766 rakennettu linnanteatteri, jonka puisia näyttämökoneita käytetään yhä käsin. Koko alue kuuluu Unescon maailmanperintöluetteloon.",
-   "lyhyt": "Drottningholmin linnaan pääsee keväästä syksyyn laivalla kaupungintalon vierestä, ja matka kestää noin tunnin. Puistossa seisoo Kiinalainen paviljonki, joka kertoo aikansa eurooppalaisten innostuksesta Kaukoitään. Kuninkaallinen pari asuu linnan eteläsiivessä, ja muu linna on avoinna kävijöille.",
+   "teksti": "Kuninkaallinen Drottningholmin linna seisoo Mälarenin Lovön saaren rannalla, ja sen takana jatkuu ylhäältä selvästi erottuva barokkipuutarha suorine käytävineen. Leskikuningatar Hedvig Eleonora osti kartanon vuonna 1661, mutta se paloi saman vuoden joulukuussa, ja hän pyysi Nicodemus Tessin vanhempaa suunnittelemaan tilalle uuden linnan. Vuodesta 1981 linna on ollut kuningas Kaarle kuudennentoista Kustaan ja kuningatar Silvian koti. Puiston laidalla toimii vuonna 1766 rakennettu linnanteatteri, jonka puisia näyttämökoneita käytetään yhä käsin. Koko alue kuuluu Unescon maailmanperintöluetteloon.",
+   "lyhyt": "Kuninkaallisen Drottningholmin puiston Kiinalainen paviljonki sai alkunsa kuningas Adolf Fredrikin yllätyslahjasta, kun hän rakennutti puisen kiinalaisen linnan kuningatar Lovisa Ulrikan syntymäpäiväksi vuonna 1753. Kultaisen avaimen ojensi kiinalaiseksi mandariiniksi puettu pieni kruununprinssi Kustaa, ja lahonneen puulinnan tilalle valmistui nykyinen paviljonki vuonna 1769.",
    "syventava": "Miten vanha teatteri yhä toimii?",
    "kysymykset": [
     "Kuka oli leskikuningatar Hedvig Eleonora?",
     "Mitä linnanteatterissa esitetään nykyään?",
     "Miksi kuningaspari muutti pois kaupungista?",
-    "Mikä Kiinalainen paviljonki on?",
+    "Mitä Kiinalaisen paviljongin sisällä on?",
     "Miten näyttämökoneet toimivat ilman sähköä?"
    ],
    "isoisa": false,
@@ -222,10 +230,6 @@
      "url": "https://en.wikipedia.org/wiki/Drottningholm_Palace"
     },
     {
-     "vaite": "Barokkipuutarha ja Kiinalainen paviljonki, joka heijastaa aikansa eurooppalaista innostusta Kaukoitään.",
-     "url": "https://www.nomadotravel.app/en/attractions/drottningholm-palace"
-    },
-    {
      "vaite": "Linnanteatteri rakennettiin 1766 kuningatar Lovisa Ulrikalle; alkuperäiset puiset näyttämökoneet toimivat yhä käsivoimin.",
      "url": "https://en.wikipedia.org/wiki/Drottningholm_Palace_Theatre"
     },
@@ -234,8 +238,8 @@
      "url": "https://en.wikipedia.org/wiki/Drottningholm_Palace"
     },
     {
-     "vaite": "Laivat lähtevät Stadshuskajenilta kaupungintalon vierestä huhtikuusta lokakuuhun; matka noin tunti.",
-     "url": "https://sandinmysuitcase.com/drottningholm-palace-stockholm/"
+     "vaite": "Adolf Fredrik rakennutti puisen kiinalaisen paviljongin yllätyslahjaksi Lovisa Ulrikan syntymäpäiväksi 24.7.1753; kruununprinssi Kustaa ojensi kultaisen avaimen mandariiniksi puettuna; puurakennus lahosi, ja Adelcrantzin suunnittelema nykyinen rakennettiin 1763–1769.",
+     "url": "https://en.wikipedia.org/wiki/Chinese_Pavilion_at_Drottningholm"
     }
    ]
   },
@@ -246,7 +250,7 @@
    "luokka": "puisto",
    "koko_m": 600,
    "teksti": "Ulkoilmamuseo Skansen levittäytyy Djurgårdenin saaren kukkulalle, ja puiden lomasta erottuu ylhäältä vanhojen talojen ja pihapiirien ryhmiä. Artur Hazelius avasi museon lokakuussa 1891, kun moni pelkäsi maaseudun perinteisen elämäntavan katoavan teollistuvasta Ruotsista. Alueelle on siirretty eri puolilta maata noin sataviisikymmentä historiallista rakennusta ja maatilaa, ja Skansenista tuli malli muille Pohjois-Euroopan ulkoilmamuseoille. Museossa elää myös pohjoisen eläimiä, kuten ruskeakarhuja, susia, ilveksiä, hirviä ja ahmoja. Puinen Segloran kirkko on suosittu hääkirkko.",
-   "lyhyt": "Ulkoilmamuseon Sollidenin lavalta lähetetään kesäisin Ruotsin suosituinta yhteislauluohjelmaa, Allsång på Skansenia, jota seuraa televisiosta tavallisesti noin kaksi miljoonaa katsojaa. Sollidenin terassilta avautuu koko puiston paras näkymä veden yli kohti kaupunkia.",
+   "lyhyt": "Ulkoilmamuseossa on laulettu yhteislauluja kesäisin vuodesta 1935, jolloin ensimmäiseen Allsång på Skanseniin osallistui vain noin viisikymmentä ihmistä. Nykyään kesätiistaisin televisioitavassa ohjelmassa Sollidenin lavan edessä laulaa kerralla jopa yli kaksikymmentätuhatta ihmistä.",
    "syventava": "Kuka oli Artur Hazelius?",
    "kysymykset": [
     "Miten vanhat talot siirrettiin museoon?",
@@ -278,8 +282,12 @@
      "url": "https://www.frommers.com/destinations/stockholm/attractions/skansen"
     },
     {
-     "vaite": "Sollidenin lava on Allsång på Skansen -yhteislaulun paikka; ohjelmalla tavallisesti noin kaksi miljoonaa katsojaa; terassilta puiston paras näkymä veden yli kaupunkiin.",
-     "url": "https://www.frommers.com/destinations/stockholm/attractions/skansen"
+     "vaite": "Allsång på Skansen lähetetään Skansenin Sollidenin lavalta (Sollidenscenen).",
+     "url": "https://www.svt.se/kultur/ingrosso-tar-over-allsangsscenen"
+    },
+    {
+     "vaite": "Allsång på Skansen pidettiin ensimmäisen kerran 1935 noin 50 osallistujan kanssa; esitetään kesätiistaisin SVT:llä, jatkuu 2025 ja 2026; yleisöä noin 10 000–25 500 kerrallaan.",
+     "url": "https://en.wikipedia.org/wiki/Alls%C3%A5ng_p%C3%A5_Skansen"
     }
    ]
   },
@@ -334,8 +342,8 @@
    "luokka": "kirkko",
    "koko_m": 80,
    "korkeus_m": 90,
-   "teksti": "Riddarholmenin kirkko seisoo pienen Riddarholmenin saaren keskellä, ja sen valurautainen pitsihuippu pystytettiin, kun edellinen torni oli tuhoutunut salamaniskussa vuonna 1835. Kirkkoa alkoivat rakentaa 1200-luvun lopulla fransiskaanimunkit, joita kutsuttiin harmaiksi veljiksi kaapujensa värin vuoksi, ja se on Tukholman ainoa säilynyt keskiaikainen luostarikirkko. Tänne on haudattu Ruotsin hallitsijat Kustaa toisesta Aadolfista Kustaa viidenteen yhtä poikkeusta lukuun ottamatta: kuningatar Kristiina lepää Roomassa Pietarinkirkossa. Vuonna 2026 huippua alettiin purkaa noin kahtenatuhantena osana, jotka puhdistetaan ympäristömyrkyistä, korjataan ja kootaan takaisin paikalleen.",
-   "lyhyt": "Riddarholmenin kirkon seiniä peittävät vaakunakilvet, sillä perinteen mukaan jokaisen kuolleen Serafiimiritarikunnan ritarin vaakuna kiinnitetään kirkon seinään. Ensimmäinen tänne haudattu kuningas oli Maunu Ladonlukko. Kirkko rakennettiin lähes kokonaan tiilestä, mikä oli silloin Ruotsissa harvinaista.",
+   "teksti": "Pienen Riddarholmenin saaren keskellä seisoo Riddarholmenin kirkko, jonka valurautainen pitsihuippu pystytettiin, kun edellinen torni oli tuhoutunut salamaniskussa vuonna 1835. Kirkkoa alkoivat rakentaa 1200-luvun lopulla fransiskaanimunkit, joita kutsuttiin harmaiksi veljiksi kaapujensa värin vuoksi, ja se on Tukholman ainoa säilynyt keskiaikainen luostarikirkko. Tänne on haudattu Ruotsin hallitsijat Kustaa toisesta Aadolfista Kustaa viidenteen yhtä poikkeusta lukuun ottamatta: kuningatar Kristiina lepää Roomassa Pietarinkirkossa. Vuonna 2026 huippua alettiin purkaa noin kahtenatuhantena osana, jotka puhdistetaan ympäristömyrkyistä, korjataan ja kootaan takaisin paikalleen.",
+   "lyhyt": "Kuninkaiden hautakirkon seiniä Riddarholmenilla peittävät vaakunakilvet, sillä jokaisen kuolleen Serafiimiritarikunnan ritarin vaakuna kiinnitetään kirkon seinään. Ritarin hautajaispäivänä kirkon kellot soivat keskipäivällä taukoamatta tunnin ajan. Kirkon 1200-luvun lopulla muuratut seinät ovat Tukholman vanhimmat maanpäälliset tiilimuurit.",
    "syventava": "Miksi Kristiina on haudattu Roomaan?",
    "kysymykset": [
     "Miksi kuningatar Kristiina on haudattu Roomaan?",
@@ -355,20 +363,12 @@
      "url": "https://freedomtravel.se/en/2021/12/riddarholmskyrkan-i-stockholm"
     },
     {
-     "vaite": "Tukholman ainoa säilynyt keskiaikainen luostarikirkko.",
-     "url": "https://www.historyhit.com/locations/riddarholm-church/"
-    },
-    {
      "vaite": "Hallitsijat Kustaa II Aadolfista Kustaa V:een on haudattu kirkkoon, poikkeuksena Kristiina, joka on haudattu Pietarinkirkkoon Roomassa.",
      "url": "https://en.wikipedia.org/wiki/Riddarholmen_Church"
     },
     {
      "vaite": "Kuolleiden Serafiimiritarikunnan ritarien vaakunakilvet kiinnitetään perinteisesti kirkon seiniin.",
      "url": "https://en.wikipedia.org/wiki/Riddarholmen_Church"
-    },
-    {
-     "vaite": "Ensimmäinen kirkkoon haudattu kuningas oli Maunu Ladonlukko.",
-     "url": "https://www.kungligaslotten.se/english/royal-palaces-and-sites/the-riddarholmen-church/the-church-room.html"
     },
     {
      "vaite": "Tornin korkeus noin 90 metriä.",
@@ -379,8 +379,12 @@
      "url": "https://www.svenskbyggtidning.se/2026/09/17/korset-nere-fran-riddarholmskyrkan-nu-plockas-den-106-ton-tunga-spiran-isar/"
     },
     {
-     "vaite": "Kirkko valmistui noin 1300 lähes kokonaan tiilestä, mikä oli Ruotsissa tuolloin harvinaista.",
-     "url": "https://www.historyhit.com/locations/riddarholm-church/"
+     "vaite": "Riddarholmskyrkan on Tukholman ainoa säilynyt keskiaikainen luostarikirkko; långhus, kor ja vapenhus muurattiin tiilestä noin 1280–1300, ja ne ovat Tukholman vanhimmat maanpäälliset tiilimuurit; Serafiimisoitto kestää tunnin ja päättyy kello 13.",
+     "url": "https://sv.wikipedia.org/wiki/Riddarholmskyrkan"
+    },
+    {
+     "vaite": "Ritarin hautajaispäivänä kirkon kelloja soitetaan taukoamatta kello 12–13.",
+     "url": "https://en.wikipedia.org/wiki/Riddarholmen_Church"
     }
    ]
   },
@@ -560,7 +564,7 @@
    "kuvaus": "Laivaston entinen saari, nykyään museoita",
    "luokka": "muu",
    "koko_m": 600,
-   "teksti": "Keskustan pieni saari Skeppsholmen lepää vanhankaupungin ja Djurgårdenin välissä, ja sen länsirannalla on ylhäältä näkyvissä vanha purjelaiva af Chapman, jossa toimii retkeilymaja. 1500-luvulla saarta kutsuttiin Lustholmeniksi, koska kuninkailla oli siellä puutarhoja ja huvimajoja, mutta kun laivaston telakka siirtyi saarelle 1600-luvulla, se sai nimen Skeppsholmen eli laivojen saari. Sotilaat lähtivät vasta vuonna 1968, ja vanhoissa sotilasrakennuksissa toimivat nyt muun muassa modernin taiteen museo ja Itä-Aasian museo. Saarelle johtava takorautasilta valmistui vuonna 1861, ja sen puolivälissä kimaltavat kultaiset kruunut.",
+   "teksti": "Keskustan pieni saari Skeppsholmen lepää vanhankaupungin ja Djurgårdenin välissä, ja sen länsirannalla on ylhäältä näkyvissä vanha purjelaiva af Chapman, joka toimi retkeilymajana yli seitsemänkymmentä vuotta. 1500-luvulla saarta kutsuttiin Lustholmeniksi, koska kuninkailla oli siellä puutarhoja ja huvimajoja, mutta kun laivaston telakka siirtyi saarelle 1600-luvulla, se sai nimen Skeppsholmen eli laivojen saari. Sotilaat lähtivät vasta vuonna 1968, ja vanhoissa sotilasrakennuksissa toimivat nyt muun muassa modernin taiteen museo ja Itä-Aasian museo. Saarelle johtava takorautasilta valmistui vuonna 1861, ja sen puolivälissä kimaltavat kultaiset kruunut.",
    "lyhyt": null,
    "syventava": "Mitä modernin taiteen museossa on?",
    "kysymykset": [
@@ -577,12 +581,16 @@
      "url": "https://www.freedomtravel.se/en/2016/04/bland-skeppen-pa-skeppsholmen/"
     },
     {
-     "vaite": "Länsirannalla on täystakiloitu purjelaiva af Chapman, joka toimii retkeilymajana.",
+     "vaite": "Länsirannalla on täystakiloitu purjelaiva af Chapman.",
      "url": "https://en.wikipedia.org/wiki/Af_Chapman_(ship)"
     },
     {
      "vaite": "Skeppsholmsbron valmistui 1861, Ruotsin ensimmäinen takorautasilta; sillan puolivälissä kaksi kullattua kruunua.",
      "url": "https://en.wikipedia.org/wiki/Skeppsholmsbron"
+    },
+    {
+     "vaite": "af Chapman toimi retkeilymajana vuodesta 1949 vuoteen 2022; kesällä 2026 laivalla avattiin pop up -kahvila ja tapahtumia.",
+     "url": "https://via.tt.se/pressmeddelande/4401515/skeppet-af-chapman-oppnar-igen?lang=sv"
     }
    ]
   }

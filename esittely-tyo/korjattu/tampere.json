@@ -11,7 +11,7 @@
    "koko_m": 40,
    "korkeus_m": 168,
    "teksti": "Näsinneula nousee Särkänniemestä Näsijärven rannalta sadankuudenkymmenenkahdeksan metrin korkeuteen, ja ylhäältä se näyttää ohuelta varrelta, jonka päässä on leveä kiekko. Arkkitehti Pekka Ilveskosken suunnittelema torni avattiin vuonna 1971, ja se on yhä Suomen ja koko Pohjoismaiden korkein näkötorni. Näköalatasanteen yläpuolella on ravintola, jonka lattia pyörii niin verkkaisesti, että täysi kierros kestää neljäkymmentäviisi minuuttia. Saman aterian aikana ikkunasta ehtii nähdä Näsijärven selät pohjoisessa ja kaupungin kattojen takana Pyhäjärven etelässä.",
-   "lyhyt": "Näsinneulan hissit kulkevat kuusi metriä sekunnissa ja nousevat näköalatasanteelle sadankahdenkymmenen metrin korkeuteen noin puolessa minuutissa. Tornin juurella levittäytyy Särkänniemen huvipuisto, ja kirkkaana päivänä tasanteelta näkee kauas järvien ja metsien yli.",
+   "lyhyt": "Näsinneulan teräsbetonirunko valettiin liukuvaluna kesällä 1970, ja Unkarista tilatut rakennusmiehet saivat sen pystyyn kolmessakymmenessäkolmessa vuorokaudessa. Tornin korkeus päätettiin kokeilemalla eri korkeuksia helikopterista, ja nimen keksi kunnallisneuvos Lauri Santamäki yhdistämällä Näsijärven ja Seattlen Space Needle -tornin.",
    "syventava": "Kuka suunnitteli Näsinneulan?",
    "kysymykset": [
     "Kuka suunnitteli Näsinneulan?",
@@ -35,12 +35,12 @@
      "url": "https://www.taloustaito.fi/vapaalla/2021/kesalomalla-korkealle--lomareissulla-kipaistaan-nakotorniin/"
     },
     {
-     "vaite": "Hissien nopeus 6,0 m/s, näköalatasanne 120 metrissä, matka noin puoli minuuttia.",
-     "url": "https://journal.fi/tekniikanwaiheita/article/download/63993/25301/"
-    },
-    {
      "vaite": "Torni sijaitsee Särkänniemen huvipuistossa Näsijärven rannalla; Näsijärvi pohjoisessa ja Pyhäjärvi etelässä.",
      "url": "https://en.wikipedia.org/wiki/Tammerkoski"
+    },
+    {
+     "vaite": "Unkarista tilatut rakennusmiehet rakensivat rungon teräsbetonista 33 vuorokaudessa liukuvaluna kesäkuusta 1970; korkeus määritettiin helikopterista kokeilemalla; nimen keksi kunnallisneuvos Lauri Santamäki Näsijärven ja Seattlen Space Needlen pohjalta; hissit 6 m/s, näköalatasanne 120 m.",
+     "url": "https://fi.wikipedia.org/wiki/N%C3%A4sinneula"
     }
    ]
   },
@@ -100,14 +100,14 @@
    "luokka": "vesi",
    "koko_m": 900,
    "teksti": "Tammerkoski halkaisee Tampereen keskustan, ja ylhäältä sen vaahtoava uoma näkyy punatiilisten tehdassalien välissä. Pohjoisen Näsijärven ja eteläisen Pyhäjärven pintojen välillä on kahdeksantoista metrin korkeusero, ja koko pudotus purkautuu tähän koskeen. Kuningas Kustaa kolmas perusti kaupungin kosken partaalle vuonna 1779. Kosken edullinen voima pyöritti ensimmäisiä myllyjä ja tehtaita, ja rannoista tuli Suomen vanhimpia teollisuusalueita. Nykyään koskessa on neljä voimalaitosta ja kolme patoa, ja sen rantamaisema on yksi Suomen kansallismaisemista.",
-   "lyhyt": "Tammerkoski rantapuistoineen ja punatiilisine tehtaineen on Tampereen kansallisen kaupunkipuiston ydin, ja puisto on maan kahdestoista. Sen pinta-alasta yli kuusikymmentä prosenttia on vettä. Jo 1600-luvulla kosken rannoilla oli vilkas markkinapaikka, kauan ennen ensimmäisiä tehtaita.",
+   "lyhyt": "Tammerkoski syntyi noin seitsemäntuhatta viisisataa vuotta sitten. Sitä ennen muinaisen Näsijärven vedet virtasivat pohjoiseen ja laskivat Lapuanjoen latvojen kautta Pohjanlahteen, mutta maankohoamisen myötä vesi nousi etelässä, ja sinne syntynyt puro kalvoi hiekkaiseen maaperään vähitellen kosken.",
    "syventava": "Miksi Tampere syntyi kosken rannalle?",
    "kysymykset": [
     "Miksi Tampere syntyi juuri kosken rannalle?",
     "Kuinka monta voimalaitosta koskessa on?",
     "Voiko Tammerkoskessa kalastaa?",
     "Mihin suuntaan Tammerkosken vesi virtaa?",
-    "Mitä kansallismaisema tarkoittaa?"
+    "Milloin kosken rannoilla pidettiin markkinoita?"
    ],
    "isoisa": false,
    "lahteet": [
@@ -128,12 +128,12 @@
      "url": "https://www.tampere.fi/en/information-on-tampere/history-tampere"
     },
     {
-     "vaite": "Kaupunkipuistosta yli 60 prosenttia on vesialuetta.",
-     "url": "https://yle.fi/a/74-20229061"
+     "vaite": "Tammerkoski syntyi noin 7 500 vuotta sitten; muinais-Näsijärven vedet virtasivat alun perin pohjoiseen Lapuanjoen latvavesien kautta Pohjanlahteen; maankohoamisen myötä vesi nousi etelässä ja syntyi puro, joka syövytti hiekkaiseen maaperään kosken.",
+     "url": "https://fi.wikipedia.org/wiki/Tammerkoski"
     },
     {
-     "vaite": "Tampereelle perustettiin Suomen 12. kansallinen kaupunkipuisto; ytimessä Tammerkosken rantapuistot ja punatiiliset teollisuusrakennukset.",
-     "url": "https://valtioneuvosto.fi/-/1410903/suomen-12.-kansallinen-kaupunkipuisto-tampereelle"
+     "vaite": "Brahe määräsi 1638 Tammerkoskelle kahdet vuotuiset markkinat (kysymys).",
+     "url": "https://fi.wikipedia.org/wiki/Tammerkoski"
     }
    ]
   },
@@ -144,10 +144,10 @@
    "luokka": "puisto",
    "koko_m": 700,
    "teksti": "Särkänniemi työntyy Näsijärveen keskustan luoteispuolella, ja ylhäältä niemellä erottuvat vuoristoratojen kiemurat Näsinneulan juurella. Huvipuisto avattiin vapunpäivänä 1975, ja Tampereen kaupungin omistama puisto on Helsingin Linnanmäen jälkeen Suomen toiseksi suosituin. Laitteita on yli kolmekymmentä, ja vuoristoradoista tunnetuimpia ovat käänteinen Tornado ja kiihdytysrata Hype. Niemellä toimivat myös akvaario, planetaario ja Sara Hildénin taidemuseo, jonka kokoelman tamperelainen liikenainen kokosi modernista suomalaisesta ja kansainvälisestä taiteesta. Taidemuseota on tarkoitus laajentaa nykyisellä paikallaan.",
-   "lyhyt": "Särkänniemessä käy vuosittain yli kuusisataatuhatta vierailijaa, ja niemen akvaario avattiin jo vuonna 1969, ennen huvipuistoa. Puiston delfinaario avattiin vuonna 1985 ja suljettiin vuonna 2016, jolloin sen neljä viimeistä delfiiniä siirrettiin kreikkalaiseen eläintarhaan, mikä herätti eläinoikeusjärjestöjen kovaa arvostelua.",
+   "lyhyt": "Särkänniemen akvaario avattiin jo vuonna 1969, kuusi vuotta ennen huvipuistoa. Puiston delfinaario avattiin vuonna 1985 ja suljettiin vuonna 2016, jolloin sen neljä viimeistä delfiiniä siirrettiin kreikkalaiseen eläintarhaan, mikä herätti eläinoikeusjärjestöjen kovaa arvostelua.",
    "syventava": "Kuka oli Sara Hildén?",
    "kysymykset": [
-    "Mikä on Särkänniemen hurjin laite?",
+    "Mitä niemellä oli ennen huvipuistoa?",
     "Miksi Särkänniemen delfinaario suljettiin?",
     "Kuka oli taiteenkeräilijä Sara Hildén?",
     "Mistä Särkänniemi on saanut nimensä?",
@@ -168,12 +168,16 @@
      "url": "https://en.wikipedia.org/wiki/S%C3%A4rk%C3%A4nniemi"
     },
     {
-     "vaite": "Delfinaario suljettiin 2016 ja neljä delfiiniä siirrettiin Attican eläintarhaan Kreikkaan; eläinoikeusryhmät arvostelivat siirtoa.",
-     "url": "https://endcap.eu/dolphin-transferred-to-greece-has-died/"
+     "vaite": "Delfinaarion sulkeutuessa 2016 neljä delfiiniä (Veera, Delfi, Leevi, Eevertti) siirrettiin Attican eläintarhaan Kreikkaan; eläinoikeusryhmät arvostelivat siirtoa.",
+     "url": "https://yle.fi/a/3-11968942"
     },
     {
      "vaite": "Sara Hildénin taidemuseo Särkänniemessä; asemakaavamuutos mahdollistaa museon peruskorjauksen ja laajennuksen nykyisellä paikallaan.",
      "url": "https://www.tampere.fi/en/current/2026/05/05/local-detailed-plan-amendment-will-enable-sara-hilden-art-museums"
+    },
+    {
+     "vaite": "Ensimmäiset Särkänniemen rakennukset olivat planetaario ja akvaario, jotka avattiin 1969; huvipuisto avattiin vappuna 1975; delfinaario 1985.",
+     "url": "https://fi.wikipedia.org/wiki/S%C3%A4rk%C3%A4nniemi"
     }
    ]
   },
@@ -183,8 +187,8 @@
    "kuvaus": "Punatiilinen puuvillatehtaan alue",
    "luokka": "rakennus",
    "koko_m": 400,
-   "teksti": "Finlaysonin tehdasalue levittäytyy Tammerkosken länsirannalla punatiilisten tehdassalien kortteleina. Skotlantilainen James Finlayson perusti tänne tehtaan vuonna 1820, ja uusien omistajien aikana siitä kasvoi puuvillatehdas, jossa työskenteli 1900-luvun alussa yli kolmetuhatta ihmistä. Kun isoisäsi kävi täällä vuonna 1873, eräs nainen näytti hänelle katkenneen langan solmun. Isoisäsi sormissa lanka katkesi heti, mutta nainen sitoi sen katsomatta. Tuotanto kosken rannalla loppui 1990-luvun alussa, ja saleissa on nyt museoita, ravintoloita ja elokuvateatteri.",
-   "lyhyt": "Finlaysonin Plevnan kutomosalissa syttyivät maaliskuussa 1882 Pohjoismaiden ensimmäiset hehkulamput, satakaksikymmentä kappaletta, ja koko Euroopassa se oli vasta neljäs hehkulampuin valaistu rakennus. Sali sai nimensä silloisen tuoreen sotauutisen, Plevnan piirityksen, mukaan, ja nykyään siinä toimii elokuvateatteri.",
+   "teksti": "Finlaysonin tehdasalue levittäytyy Tammerkosken länsirannalla punatiilisten tehdassalien kortteleina. Skotlantilainen James Finlayson perusti tänne tehtaan vuonna 1820, ja uusien omistajien aikana puuvillatehdas kasvoi niin suureksi, että siellä työskenteli 1900-luvun alussa yli kolmetuhatta ihmistä. Kun isoisäsi kävi täällä vuonna 1873, eräs nainen näytti hänelle katkenneen langan solmun. Isoisäsi sormissa lanka katkesi heti, mutta nainen sitoi sen katsomatta. Tuotanto kosken rannalla loppui 1990-luvun alussa, ja saleissa on nyt museoita, ravintoloita ja elokuvateatteri.",
+   "lyhyt": "Finlaysonin Plevnan kutomosalissa syttyivät maaliskuussa 1882 Pohjoismaiden ensimmäiset hehkulamput, satakaksikymmentä kappaletta, ja koko Euroopassa se oli vasta neljäs hehkulampuin valaistu rakennus. Sali sai nimensä silloisen tuoreen sotauutisen, Plevnan piirityksen, mukaan, ja valmistuessaan se oli Pohjoismaiden suurin kutomosali.",
    "syventava": "Kuka oli James Finlayson?",
    "kysymykset": [
     "Kuka oli skotlantilainen James Finlayson?",
@@ -213,11 +217,19 @@
     },
     {
      "vaite": "Plevnaan sytytettiin 15.3.1882 Pohjoismaiden ensimmäinen hehkulamppuvalaistus, 120 lamppua; neljäs hehkulampuin valaistu rakennus Euroopassa; nimi Plevnan piirityksestä.",
-     "url": "https://en.wikipedia.org/wiki/Plevna,_Tampere"
+     "url": "https://en.wikipedia.org/wiki/James_Finlayson_(industrialist)"
     },
     {
      "vaite": "Plevnassa toimii nykyään elokuvateatteri; Finlaysonin kirkko rakennettiin 1879 tehtaan työläisille.",
      "url": "https://en.wikipedia.org/wiki/Finlayson_Church"
+    },
+    {
+     "vaite": "Plevna valmistui 1877 ja siinä oli Pohjoismaiden suurin kutomosali; Edisonin hehkulamput sytytettiin 15.3.1882; nimi Plevnan piirityksestä.",
+     "url": "https://en.wikipedia.org/wiki/Plevna,_Tampere"
+    },
+    {
+     "vaite": "Finlayson aloitti 1820 tekstiilikoneiden valmistuksella ja siirtyi puuvillan kehruuseen 1828.",
+     "url": "https://en.wikipedia.org/wiki/James_Finlayson_(industrialist)"
     }
    ]
   },
@@ -228,8 +240,8 @@
    "luokka": "torni",
    "koko_m": 30,
    "korkeus_m": 26,
-   "teksti": "Pyynikin näkötorni kohoaa keskustan länsipuolella Pyynikinharjun laella, ja ylhäältä sen punagraniittinen torni erottuu metsän keskeltä. Harju syntyi jääkauden lopulla, ja sitä pidetään maailman korkeimpana soraharjuna. Ensimmäisen, puisen tornin kaupunki rakennutti tähän jo vuonna 1888, mutta se vaurioitui vuoden 1918 sodan pommituksissa. Nykyinen kaksikymmentäkuusi metriä korkea torni valmistui vuonna 1929 kaupungin sataviisikymmenvuotisjuhlan kunniaksi, ja sen huipulta avautuu näkymä kumpaankin Tampereen suureen järveen, Näsijärveen pohjoisessa ja Pyhäjärveen etelässä.",
-   "lyhyt": "Pyynikin näkötornin suunnitteli arkkitehti Vilho Kolho, ja torni muurattiin paikallisesta punaisesta graniitista. Tornin juurella toimiva kahvila on kuuluisa munkeistaan. Pyynikki rauhoitettiin luonnonsuojelualueeksi vuonna 1993, ja harjun luontopolku alkaa aivan tornin juurelta.",
+   "teksti": "Pyynikin näkötorni kohoaa keskustan länsipuolella Pyynikinharjun laella, ja ylhäältä sen punagraniittinen torni erottuu metsän keskeltä. Harju syntyi jääkauden lopulla, ja sitä pidetään maailman korkeimpana soraharjuna. Ensimmäinen, puinen torni rakennettiin tähän jo vuonna 1888, mutta se vaurioitui vuoden 1918 sodan pommituksissa. Nykyinen kaksikymmentäkuusi metriä korkea torni valmistui vuonna 1929 kaupungin sataviisikymmenvuotisjuhlan kunniaksi, ja sen huipulta avautuu näkymä kumpaankin Tampereen suureen järveen, Näsijärveen pohjoisessa ja Pyhäjärveen etelässä.",
+   "lyhyt": "Pyynikin näkötornin vihkiäiset oli määrä pitää syyskuussa 1929, mutta ne peruttiin, kun höyrylaiva Kuru upposi Näsijärvellä ja yli sata ihmistä hukkui. Onnettomuus on yhä Suomen sisävesien pahin. Tornin juurella toimii nykyään munkeistaan kuuluisa kahvila.",
    "syventava": "Miten maailman korkein soraharju syntyi?",
    "kysymykset": [
     "Miten Pyynikinharju aikanaan syntyi?",
@@ -255,6 +267,14 @@
     {
      "vaite": "Pyynikinharju on jääkauden aikana syntynyt maailman korkein pitkittäisharju.",
      "url": "https://en.wikipedia.org/wiki/Pyynikki_Esker"
+    },
+    {
+     "vaite": "Höyrylaiva Kurun uppoamisen vuoksi tornin syyskuulle 1929 suunnitellut vihkiäiset peruttiin; Kolho oli apulaiskaupunginarkkitehti; juurella munkeistaan tunnettu Munkkikahvila.",
+     "url": "https://fi.wikipedia.org/wiki/Pyynikin_n%C3%A4k%C3%B6torni"
+    },
+    {
+     "vaite": "Kuru upposi Näsijärvellä 7.9.1929; 136 tai 138 kuollutta; Suomen sisävesien pahin onnettomuus.",
+     "url": "https://en.wikipedia.org/wiki/SS_Kuru"
     }
    ]
   },
@@ -309,7 +329,7 @@
    "luokka": "rakennus",
    "koko_m": 200,
    "teksti": "Museokeskus Vapriikki toimii Tampellan vanhoissa tehdastiloissa, joiden pitkä tiilihalli näkyy ylhäältä Tammerkosken partaalla. Nimi tulee ruotsin tehdasta tarkoittavasta sanasta fabrik, josta suomen kieleen muodostui vapriikki. Rakennuksen vanhimmat osat ovat 1880-luvulta, ja suurin näyttelysali on sata metriä pitkä ja kuusitoista metriä korkea. Museokeskus avattiin yleisölle vuonna 1996, ja saman katon alla toimii nykyään muun muassa Suomen jääkiekkomuseo, jonka kunniagalleriaan on vuodesta 1985 valittu ansioituneita pelaajia ja valmentajia.",
-   "lyhyt": "Museokeskus Vapriikin talo kuului Tampereen Pellava- ja Rautateollisuudelle, jonka nimi lyhennettiin 1950-luvulla Tampellaksi. Yhtiö syntyi vuonna 1861, kun kosken rannalla toimineet pellavatehdas ja konepaja yhdistettiin. Myöhemmin Tampella valmisti muun muassa paperikoneita, vetureita ja aseita.",
+   "lyhyt": "Museokeskus Vapriikin Suomen pelimuseo syntyi joukkorahoituksella, kun yli tuhat tukijaa lahjoitti hankkeelle vuonna 2015 yhteensä yli kahdeksankymmentäviisituhatta euroa ja peliyhtiöt kuten Supercell tukivat sitä. Museo avattiin vuonna 2017, ja samana vuonna Vapriikki valittiin yleisöäänestyksessä Suomen vuosisadan museoksi.",
    "syventava": "Mitä museoita Vapriikissa on?",
    "kysymykset": [
     "Mitä sana vapriikki oikeastaan tarkoittaa?",
@@ -339,6 +359,14 @@
     {
      "vaite": "Tampereen Pellava- ja Rauta-Teollisuus syntyi 1861 pellavatehtaan ja konepajan yhdistyessä; nimi lyhennettiin 1950-luvulla Tampellaksi; yhtiö valmisti paperikoneita, vetureita ja aseita.",
      "url": "https://en.wikipedia.org/wiki/Tampella"
+    },
+    {
+     "vaite": "Pelimuseo avattiin tammikuussa 2017; joukkorahoitus 2015 keräsi 85 860 euroa 1 120 tukijalta; Supercell, Housemarque ja Colossal Order tukivat.",
+     "url": "https://en.wikipedia.org/wiki/Finnish_Museum_of_Games"
+    },
+    {
+     "vaite": "Vapriikki valittiin 2017 itsenäisyyden satavuotisjuhlan yleisöäänestyksessä vuosisadan museoksi.",
+     "url": "https://en.wikipedia.org/wiki/Vapriikki_Museum_Centre"
     }
    ]
   },

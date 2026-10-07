@@ -1984,3 +1984,153 @@ Tarkistin: 0 virhettä, 10 huomiota (sama määrä kuin ennen: 9 × "ei ala paik
 ### Epävarmuudet Päätoimittajalle (Sevilla)
 - Maestranzan uusi kierrosversio kertoo oopperan kuolemankohtauksesta yhdellä lauseella ilman yksityiskohtia. Ooppera ei nimeä Maestranzaa, joten tekstissä lukee "Sevillan härkätaisteluareenan edustalla". Kuuntele, onko sävy sopiva.
 - Giraldillon kopion nykyinen paikka (katedraalin Prinssin portilla) jäi vahvistamatta avatulla lähteellä. Kysymyksen oletus, että kopio on olemassa, on Wikipedian mukaan tosi.
+
+## Tampere
+
+### Näsinneula — kenttä `lyhyt`
+- **Vanha:** "Näsinneulan hissit kulkevat kuusi metriä sekunnissa ja nousevat näköalatasanteelle sadankahdenkymmenen metrin korkeuteen noin puolessa minuutissa. Tornin juurella levittäytyy Särkänniemen huvipuisto, ja kirkkaana päivänä tasanteelta näkee kauas järvien ja metsien yli."
+- **Uusi:** "Näsinneulan teräsbetonirunko valettiin liukuvaluna kesällä 1970, ja Unkarista tilatut rakennusmiehet saivat sen pystyyn kolmessakymmenessäkolmessa vuorokaudessa. Tornin korkeus päätettiin kokeilemalla eri korkeuksia helikopterista, ja nimen keksi kunnallisneuvos Lauri Santamäki yhdistämällä Näsijärven ja Seattlen Space Needle -tornin."
+- **Syy:** 2 (tekninen tieto: hissin nopeus ja korkeus; toinen virke täytettä) ja 1 (huvipuisto toistui Särkänniemen kierrosversion kanssa). Tilalle rakentamis- ja nimitarina. Hissikysymys jäi, koska kierrosversio ei enää kerro sitä.
+- **Lähde:** https://fi.wikipedia.org/wiki/N%C3%A4sinneula
+
+### Tammerkoski — kenttä `lyhyt`
+- **Vanha:** "Tammerkoski rantapuistoineen ja punatiilisine tehtaineen on Tampereen kansallisen kaupunkipuiston ydin, ja puisto on maan kahdestoista. Sen pinta-alasta yli kuusikymmentä prosenttia on vettä. Jo 1600-luvulla kosken rannoilla oli vilkas markkinapaikka, kauan ennen ensimmäisiä tehtaita."
+- **Uusi:** "Tammerkoski syntyi noin seitsemäntuhatta viisisataa vuotta sitten. Sitä ennen muinaisen Näsijärven vedet virtasivat pohjoiseen ja laskivat Lapuanjoen latvojen kautta Pohjanlahteen, mutta maankohoamisen myötä vesi nousi etelässä, ja sinne syntynyt puro kalvoi hiekkaiseen maaperään vähitellen kosken."
+- **Syy:** 2 (hallintoa: kaupunkipuiston järjestysnumero ja vesipinta-alan osuus). Tilalle tarina kosken synnystä ja virtaussuunnan kääntymisestä.
+- **Lähde:** https://fi.wikipedia.org/wiki/Tammerkoski
+
+### Tammerkoski — kenttä `kysymykset`
+- **Vanha:** "Mitä kansallismaisema tarkoittaa?"
+- **Uusi:** "Milloin kosken rannoilla pidettiin markkinoita?"
+- **Syy:** 7 (yleinen kysymys, ei liity nimenomaan tähän kohteeseen). Markkinatieto jäi pois kierrosversiosta, joten se siirtyi kysymykseksi (Brahe määräsi markkinat 1638).
+- **Lähde:** https://fi.wikipedia.org/wiki/Tammerkoski
+
+### Särkänniemi — kenttä `lyhyt`
+- **Vanha:** "Särkänniemessä käy vuosittain yli kuusisataatuhatta vierailijaa, ja niemen akvaario avattiin jo vuonna 1969, ennen huvipuistoa. …"
+- **Uusi:** "Särkänniemen akvaario avattiin jo vuonna 1969, kuusi vuotta ennen huvipuistoa. …" (delfinaariovirke ennallaan)
+- **Syy:** 2 (kävijämäärä). Delfinaarion lähde vaihdettu: endcap.eu palautti virheen 500, joten tilalle Yle, joka vahvistaa neljä delfiiniä ja eläinoikeusryhmien arvostelun. Nykytila tarkistettu: akvaario, planetaario ja Sara Hildénin taidemuseo toimivat 2026 (museolla näyttely 1–4/2026, laajennus nykyisellä paikalla kaavoitteilla).
+- **Lähde:** https://fi.wikipedia.org/wiki/S%C3%A4rk%C3%A4nniemi ; https://yle.fi/a/3-11968942 ; https://sarkanniemi.fi/en
+
+### Särkänniemi — kenttä `kysymykset`
+- **Vanha:** "Mikä on Särkänniemen hurjin laite?"
+- **Uusi:** "Mitä niemellä oli ennen huvipuistoa?"
+- **Syy:** 7 (vastaus vanhenee: uusi Konect-vuoristorata avataan 2026, laitteet vaihtuvat).
+- **Lähde:** https://en.wikipedia.org/wiki/S%C3%A4rk%C3%A4nniemi
+
+### Finlaysonin tehdasalue — kenttä `teksti`
+- **Vanha:** "…ja uusien omistajien aikana siitä kasvoi puuvillatehdas, jossa työskenteli 1900-luvun alussa yli kolmetuhatta ihmistä."
+- **Uusi:** "…ja uusien omistajien aikana puuvillatehdas kasvoi niin suureksi, että siellä työskenteli 1900-luvun alussa yli kolmetuhatta ihmistä."
+- **Syy:** 3 (vivahde: Finlayson itse aloitti puuvillan kehruun jo 1828; uudet omistajat vuodesta 1836 kasvattivat tehtaan, eivät tehneet siitä puuvillatehdasta).
+- **Lähde:** https://en.wikipedia.org/wiki/James_Finlayson_(industrialist)
+
+### Finlaysonin tehdasalue — kenttä `lyhyt`
+- **Vanha:** "…Plevnan piirityksen, mukaan, ja nykyään siinä toimii elokuvateatteri."
+- **Uusi:** "…Plevnan piirityksen, mukaan, ja valmistuessaan se oli Pohjoismaiden suurin kutomosali."
+- **Syy:** 1 (elokuvateatteri toistui saman kohteen tekstissä). Lisäksi kuollut/epätarkka lähde: en.wikipedia Plevna ei mainitse "neljäs Euroopassa" eikä 120 lamppua; ne vahvistuivat James Finlaysonin artikkelista.
+- **Lähde:** https://en.wikipedia.org/wiki/Plevna,_Tampere ; https://en.wikipedia.org/wiki/James_Finlayson_(industrialist)
+
+### Pyynikin näkötorni — kenttä `teksti`
+- **Vanha:** "Ensimmäisen, puisen tornin kaupunki rakennutti tähän jo vuonna 1888"
+- **Uusi:** "Ensimmäinen, puinen torni rakennettiin tähän jo vuonna 1888"
+- **Syy:** 3 (rakennuttajaa "kaupunki" ei vahvistunut; lähteet kertovat vain vuoden ja suunnittelijan Georg Schreckin).
+- **Lähde:** https://en.wikipedia.org/wiki/Pyynikki_observation_tower
+
+### Pyynikin näkötorni — kenttä `lyhyt`
+- **Vanha:** "Pyynikin näkötornin suunnitteli arkkitehti Vilho Kolho, ja torni muurattiin paikallisesta punaisesta graniitista. Tornin juurella toimiva kahvila on kuuluisa munkeistaan. Pyynikki rauhoitettiin luonnonsuojelualueeksi vuonna 1993, ja harjun luontopolku alkaa aivan tornin juurelta."
+- **Uusi:** "Pyynikin näkötornin vihkiäiset oli määrä pitää syyskuussa 1929, mutta ne peruttiin, kun höyrylaiva Kuru upposi Näsijärvellä ja yli sata ihmistä hukkui. Onnettomuus on yhä Suomen sisävesien pahin. Tornin juurella toimii nykyään munkeistaan kuuluisa kahvila."
+- **Syy:** 2 ("suunnitteli arkkitehti Y" + rauhoituspäätös = perustietoa ja hallintoa); punagraniitti toistui myös tekstissä (1). Tilalle Kurun onnettomuus ja peruttu vihkiäinen, munkkikahvila säilyi. Kolhon tittelin ristiriita ratkesi: fi.wikipedia "apulaiskaupunginarkkitehti" (ei enää tekstissä).
+- **Lähde:** https://fi.wikipedia.org/wiki/Pyynikin_n%C3%A4k%C3%B6torni ; https://en.wikipedia.org/wiki/SS_Kuru
+
+### Museokeskus Vapriikki — kenttä `lyhyt`
+- **Vanha:** "Museokeskus Vapriikin talo kuului Tampereen Pellava- ja Rautateollisuudelle, jonka nimi lyhennettiin 1950-luvulla Tampellaksi. Yhtiö syntyi vuonna 1861, kun kosken rannalla toimineet pellavatehdas ja konepaja yhdistettiin. Myöhemmin Tampella valmisti muun muassa paperikoneita, vetureita ja aseita."
+- **Uusi:** "Museokeskus Vapriikin Suomen pelimuseo syntyi joukkorahoituksella, kun yli tuhat tukijaa lahjoitti hankkeelle vuonna 2015 yhteensä yli kahdeksankymmentäviisituhatta euroa ja peliyhtiöt kuten Supercell tukivat sitä. Museo avattiin vuonna 2017, ja samana vuonna Vapriikki valittiin yleisöäänestyksessä Suomen vuosisadan museoksi."
+- **Syy:** 2 (yhtiön nimenmuutos ja fuusio = organisaatiohistoriaa). Nykytila: pelimuseo on ollut remontissa ja avautuu uudelleen laajennettuna 10.10.2026 (vapriikki.fi), joten teksti ei väitä, mitä museossa nyt on. Tampella-kysymys jäi (oletus tosi).
+- **Lähde:** https://en.wikipedia.org/wiki/Finnish_Museum_of_Games ; https://en.wikipedia.org/wiki/Vapriikki_Museum_Centre ; https://www.vapriikki.fi/
+
+### Lähdekorjaukset ilman tekstimuutosta
+- Näsinneula: journal.fi-lähde (hissit) korvattu fi.wikipedialla.
+- Tammerkoski: kaupunkipuiston lähteet (yle, valtioneuvosto) poistettu, koska väite poistui.
+
+### Ratkaistut epävarmuudet (PILVI-RAPORTTI)
+- Tuomiokirkon seppele "kohti alttaritaulua": ku.fi sanoo "kaksitoista poikaa kantaa elämänseppelettä kohti Ylösnousemus-taulua", ja Ylösnousemus on Enckellin alttaritaulu. Väite pidetty.
+- Kosken ylitys 1500-luvulla: en.wikipedia Hämeensilta "first known bridge 16th century". Pidetty.
+- Kuoleman puutarhan paikka: fi.wikipedia sanoo "alttarin kahta puolta", ku.fi/hakutulokset "pohjoisen lehterin alla"; ei ristiriitaa (lehterin alla alttarin sivulla). Pidetty, merkitään Päätoimittajalle pieneksi epävarmuudeksi.
+- Näsinneula "Pohjoismaiden korkein näkötorni": pätee, Kaknästornet on yhä suljettu yleisöltä (Teracom ei avaa).
+
+Muut tarkistetut: avaus (36 sanaa, ilmakuva kannaksesta ja koskesta, Hämeensillan patsaat 1929 = "lähes sata vuotta" pätee), Hämeensilta (patsaat, Haarla, vapunaaton lakitus), Amuri, tuomiokirkko.
+
+## Tukholma
+
+### Tukholman kuninkaanlinna — kenttä `lyhyt`
+- **Vanha:** "…kuten Kustaa Vaasan valtakunnanmiekkaa ja Erik neljännentoista kruunua. Kuningaspari työskentelee linnassa, mutta kotinsa se on tehnyt vuodesta 1981 Drottningholmin linnaan kaupungin länsipuolelle."
+- **Uusi:** "…kuten Kustaa Vaasan valtakunnanmiekkaa. Siellä on myös flaamilaisen kultasepän vuonna 1561 valmistama Erik neljännentoista kruunu, jota pidetään maailman vanhimpana yhä käytössä olevana kuninkaankruununa."
+- **Syy:** 1 (kuninkaan asuminen Drottningholmissa vuodesta 1981 toistui Drottningholmin tekstissä ja kierrosversiossa, ja "työskentelee linnassa" avauksessa "työpaikka"). Tilalle kruunun tarina.
+- **Lähde:** https://www.kungligaslotten.se/english/archives/the-state-regalia/2018-03-05-king-erik-xivs-crown.html
+
+### Tukholman kaupungintalo — kenttä `lyhyt`
+- **Vanha:** "…Hänen jäännöksiään ei kuitenkaan koskaan saatu siirrettyä Varnhemin luostarikirkosta, joten hauta on yhä tyhjä. Kesäisin torniin pääsee kiipeämään, ja huipulta näkyy koko keskusta."
+- **Uusi:** "…Varnhemin seurakunta kieltäytyi kuitenkin luovuttamasta hänen jäännöksiään luostarikirkostaan, joten hauta on yhä tyhjä. Vuonna 2002 Varnhemin hauta avattiin, ja DNA-tutkimus vahvisti, että jaarli todella lepää siellä."
+- **Syy:** 5 (NYKYAIKA: torni on suljettu koko 2026, ja peruskorjaus kestää alkuvuodesta 2027 vuoden 2028 loppuun, stadshuset.stockholm). Lisäksi 3: "ei saatu siirrettyä" → syy oli Varnhemin kirkkoneuvoston kieltäytyminen. Lähde (tornin aukiolo) poistettu.
+- **Lähde:** https://stadshuset.stockholm/en/visit-stockholm-city-hall/city-hall-tower ; https://www.vastsverige.com/en/skara/varnhem/history-of-varnhem/birger-jarl--the-royal-graves/
+
+### Tukholman kaupungintalo — kenttä `kysymykset`
+- **Vanha:** "Miksi Birger-jaarlin hauta on tyhjä?" → **Uusi:** "Kuka oli Birger-jaarli?"
+- **Syy:** 7 (kierrosversio vastaa nyt suoraan kysymykseen; tilalle ihmiseen liittyvä kysymys).
+
+### Riddarholmenin kirkko — kenttä `teksti`
+- **Vanha:** "Riddarholmenin kirkko seisoo pienen Riddarholmenin saaren keskellä, ja sen valurautainen pitsihuippu…"
+- **Uusi:** "Pienen Riddarholmenin saaren keskellä seisoo Riddarholmenin kirkko, jonka valurautainen pitsihuippu…"
+- **Syy:** 6 (teksti alkoi ruotsinkielisellä nimellä; nyt suomenkielinen alkusana). Lähdekorjaus: "Tukholman ainoa säilynyt keskiaikainen luostarikirkko" ei löytynyt historyhit.com-sivulta, vahvistettu sv.wikipediasta ("Stockholms enda bevarade medeltida klosterkyrka").
+- **Lähde:** https://sv.wikipedia.org/wiki/Riddarholmskyrkan
+
+### Riddarholmenin kirkko — kenttä `lyhyt`
+- **Vanha:** "Riddarholmenin kirkon seiniä peittävät vaakunakilvet, sillä perinteen mukaan jokaisen kuolleen Serafiimiritarikunnan ritarin vaakuna kiinnitetään kirkon seinään. Ensimmäinen tänne haudattu kuningas oli Maunu Ladonlukko. Kirkko rakennettiin lähes kokonaan tiilestä, mikä oli silloin Ruotsissa harvinaista."
+- **Uusi:** "Kuninkaiden hautakirkon seiniä Riddarholmenilla peittävät vaakunakilvet, sillä jokaisen kuolleen Serafiimiritarikunnan ritarin vaakuna kiinnitetään kirkon seinään. Ritarin hautajaispäivänä kirkon kellot soivat keskipäivällä taukoamatta tunnin ajan. Kirkon 1200-luvun lopulla muuratut seinät ovat Tukholman vanhimmat maanpäälliset tiilimuurit."
+- **Syy:** 6 (ruotsinkielinen alkusana); 1 (hautaamisaihe toistui saman kohteen tekstissä ja kierroksella kaupungintalon ja metsähautausmaan kanssa: Maunu Ladonlukon virke pois, tilalle serafiimisoitto); 3 ("tiili harvinainen Ruotsissa" ei löytynyt mainitusta lähteestä, joten se vaihdettiin sv.wikipedian vahvistamaan väitteeseen vanhimmista tiilimuureista). PILVI-epävarmuus Maunu Ladonlukosta ratkesi: kungligaslotten.se vahvistaa, mutta sv.wikipedian mukaan vuoden 2011 analyysissä luut ajoitettiin vuosiin 1430–1520, joten virke jäi pois.
+- **Lähde:** https://sv.wikipedia.org/wiki/Riddarholmskyrkan ; https://en.wikipedia.org/wiki/Riddarholmen_Church
+
+### Gamla stan — kenttä `lyhyt`
+- **Vanha:** "Vanhassakaupungissa asuu nykyään noin kolmetuhatta ihmistä. Suomalaisen kirkon takapihalla istuu Tukholman pienin julkinen muistomerkki, viisitoista senttimetriä korkea Rautapoika, joka katselee kuuta. Talvella patsaalla on usein pipo ja kaulaliina, ja ohikulkijat jättävät sille kolikoita."
+- **Uusi:** "Vanhankaupungin Suomalaisen kirkon takapihalla istuu Tukholman pienin patsas, viisitoista senttimetriä korkea Rautapoika. Kuvanveistäjä Liss Eriksson kuvasi siinä itseään poikana, joka istui kylmissään ullakkohuoneessa kädet jalkojen ympärillä ja katseli kuuta. Talvella tukholmalaiset neulovat patsaalle pipoja ja kaulaliinoja."
+- **Syy:** 2 (asukasluku = tilastoa). Tilalle patsaan syntytarina. Kolikot siirtyivät kysymykseksi (kysymys jo olemassa).
+- **Lähde:** https://www.svenskakyrkan.se/nyheter/rautapoika ; https://en.wikipedia.org/wiki/J%C3%A4rnpojke
+
+### Vasa-museo — kenttä `lyhyt`
+- **Vanha:** "Vasa-museon laiva on koristeltu sadoilla puuveistoksilla. Alus oli rakennettu liian kapeaksi ja korkeaksi, ja kun ensimmäinen kunnon tuulenpuuska kallisti sitä, vesi ryntäsi sisään avoimista tykkiporteista. Vuonna 2024 museossa kävi yli miljoona kolmesataatuhatta ihmistä."
+- **Uusi:** "Vasa-museon laiva oli rakennettu liian kapeaksi ja korkeaksi. Jo ennen lähtöä vara-amiraali Fleming seurasi koetta, jossa miehistö juoksi kannen poikki edestakaisin, ja keskeytti sen kolmen juoksun jälkeen, koska pelkäsi laivan kaatuvan. Neitsytmatkalla tuulenpuuska painoi avoimet tykkiportit veden alle."
+- **Syy:** 2 (kävijämäärä vuodelta 2024, joka myös vanhenee). Tilalle vakauskokeen tarina.
+- **Lähde:** https://en.wikipedia.org/wiki/Vasa_(ship)
+
+### Ulkoilmamuseo Skansen — kenttä `lyhyt`
+- **Vanha:** "Ulkoilmamuseon Sollidenin lavalta lähetetään kesäisin Ruotsin suosituinta yhteislauluohjelmaa, Allsång på Skansenia, jota seuraa televisiosta tavallisesti noin kaksi miljoonaa katsojaa. Sollidenin terassilta avautuu koko puiston paras näkymä veden yli kohti kaupunkia."
+- **Uusi:** "Ulkoilmamuseossa on laulettu yhteislauluja kesäisin vuodesta 1935, jolloin ensimmäiseen Allsång på Skanseniin osallistui vain noin viisikymmentä ihmistä. Nykyään kesätiistaisin televisioitavassa ohjelmassa Sollidenin lavan edessä laulaa kerralla jopa yli kaksikymmentätuhatta ihmistä."
+- **Syy:** 2/3 (katsojaluku oli vain matkailusivulta, vaihtelee vuosittain ja "suosituin" ilman tukea; PILVI-epävarmuus). Tilalle vahvistettu alku 1935 ja yleisömäärä paikan päällä. Ohjelma jatkuu 2026.
+- **Lähde:** https://en.wikipedia.org/wiki/Alls%C3%A5ng_p%C3%A5_Skansen ; https://www.svt.se/kultur/ingrosso-tar-over-allsangsscenen
+
+### Drottningholmin linna — kenttä `teksti`
+- **Vanha:** "Drottningholmin linna seisoo Mälarenin…" → **Uusi:** "Kuninkaallinen Drottningholmin linna seisoo Mälarenin…"
+- **Syy:** 6 (ruotsinkielinen alkusana).
+
+### Drottningholmin linna — kenttä `lyhyt`
+- **Vanha:** "Drottningholmin linnaan pääsee keväästä syksyyn laivalla kaupungintalon vierestä, ja matka kestää noin tunnin. Puistossa seisoo Kiinalainen paviljonki, joka kertoo aikansa eurooppalaisten innostuksesta Kaukoitään. Kuninkaallinen pari asuu linnan eteläsiivessä, ja muu linna on avoinna kävijöille."
+- **Uusi:** "Kuninkaallisen Drottningholmin puiston Kiinalainen paviljonki sai alkunsa kuningas Adolf Fredrikin yllätyslahjasta, kun hän rakennutti puisen kiinalaisen linnan kuningatar Lovisa Ulrikan syntymäpäiväksi vuonna 1753. Kultaisen avaimen ojensi kiinalaiseksi mandariiniksi puettu pieni kruununprinssi Kustaa, ja lahonneen puulinnan tilalle valmistui nykyinen paviljonki vuonna 1769."
+- **Syy:** 2 (laivareitti ja aukiolo = käytännön tietoa), 1 (kuningasparin asuminen toistui tekstissä ja kuninkaanlinnan kierrosversiossa), 6 (ruotsinkielinen alkusana). Laivareitin ja Kiinalaisen paviljongin matkailusivulähteet poistettu.
+- **Lähde:** https://en.wikipedia.org/wiki/Chinese_Pavilion_at_Drottningholm
+
+### Drottningholmin linna — kenttä `kysymykset`
+- **Vanha:** "Mikä Kiinalainen paviljonki on?" → **Uusi:** "Mitä Kiinalaisen paviljongin sisällä on?"
+- **Syy:** 7 (kierrosversio vastaa nyt kysymykseen).
+
+### Skeppsholmen — kenttä `teksti`
+- **Vanha:** "…vanha purjelaiva af Chapman, jossa toimii retkeilymaja."
+- **Uusi:** "…vanha purjelaiva af Chapman, joka toimi retkeilymajana yli seitsemänkymmentä vuotta."
+- **Syy:** 5 (NYKYAIKA: retkeilymaja lopetti vuonna 2022; en.wikipedia on vanhentunut. Kesällä 2026 laivalla oli pop up -kahvila, ja siksi teksti ei kerro nykykäytöstä). Itä-Aasian museo avautui remontin jälkeen 19.9.2026, joten "toimivat nyt" pätee.
+- **Lähde:** https://via.tt.se/pressmeddelande/4401515/skeppet-af-chapman-oppnar-igen?lang=sv ; https://via.tt.se/pressmeddelande/4405020/sommaroppet-pa-af-chapman?lang=sv
+
+### Tarkistettu, ei muutosta
+- Avaus (36 sanaa, ilmakuva saarista ja salmista, "Tervetuloa" suomeksi). Slussen ei esiinny Tukholman aineistossa.
+- Kaknästornet: on yhä suljettu yleisöltä (ei avausta 2025–2026), teksti pätee. Globen/Avicii Arena ja SkyView pätevät. Stortorget: Nobel-museo on yhä Pörssitalossa (virallinen nimi nykyään Nobelprismuseet; "Nobel-museo" jätetty). Skogskyrkogården, Suurkirkko, Sergelin tori: ei korjattavaa.
+
+### Epävarmuudet Päätoimittajalle
+- Riddarholmen `korkeus_m` 90: huipun purku alkoi 17.9.2026, ja huippu kootaan takaisin vuoteen 2028 mennessä. Kirkko näyttää ilmasta nyt tornittomalta tai telineissä. Arvo jätettiin, koska se ei ole selvästi väärä pysyvälle äänitteelle.
+- Tarkistimen huomiot nousivat 9:stä 13:een, koska Drottningholmin ja Riddarholmenin teksti ja lyhyt alkavat nyt suomenkielisellä sanalla (tyyppi 6).
