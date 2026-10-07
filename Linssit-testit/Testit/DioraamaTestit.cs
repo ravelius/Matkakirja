@@ -1112,10 +1112,12 @@ namespace Matkakirja.Linssit.Testit
         {
             var r = DioraamaData.Lue(KeittioFixture.Replace("\"yleiskamera\": {", "\"pelaaja\": {\"glb\": \"blender/hahmot/fogg.glb\", \"nimi\": \"fogg\", " +
                 "\"leikkeet\": {\"idle\": \"idle\", \"juoksu\": \"Jog\"}, \"liikkeet\": {\"juoksu\": {\"kesto_s\": 0.933, \"tavoite_m_s\": 3.2, \"toistokerroin\": 0.543}, " +
-                "\"nousu_laiturille\": {\"kesto_s\": 2.4, \"root_siirto\": [0, 1.28, 0.95]}}},\n  \"yleiskamera\": {"));
+                "\"nousu_laiturille\": {\"kesto_s\": 2.4, \"root_siirto\": [0, 1.28, 0.95]}}, " +
+                "\"kadet\": {\"glb\": \"blender/hahmot/kadet.glb\", \"leikkeet\": {\"poiminta\": \"poiminta\"}, \"liikkeet\": {\"poiminta\": {\"kesto_s\": 0.8}}}},\n  \"yleiskamera\": {"));
             Oleta.Tosi(r.Pelaaja != null && r.Pelaaja.Glb == "blender/hahmot/fogg.glb" && r.Pelaaja.Leikkeet["juoksu"] == "Jog", "glb ja leikkeet");
             Oleta.Tosi(Math.Abs(r.Pelaaja.Liikkeet["juoksu"].Toistokerroin - 0.543) < 1e-9 && Math.Abs(r.Pelaaja.Liikkeet["juoksu"].TavoiteMs - 3.2) < 1e-9, "liikkeet");
             Oleta.Tosi(r.Pelaaja.JuuriSiirto.TryGetValue("nousu_laiturille", out var js) && js[1] == 1.28 && js[2] == 0.95 && !r.Pelaaja.JuuriSiirto.ContainsKey("juoksu"), "root_siirto");
+            Oleta.Tosi(r.Pelaaja.Kadet != null && r.Pelaaja.Kadet.Glb == "blender/hahmot/kadet.glb" && r.Pelaaja.Kadet.Liikkeet["poiminta"].KestoS == 0.8, "kädet");
             Oleta.Tosi(DioraamaData.Lue(KeittioFixture).Pelaaja == null, "ei pelaajaa → null");
         }
 

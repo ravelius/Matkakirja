@@ -153,7 +153,7 @@ namespace Matkakirja.Natiivi
         public bool Toimi(SeikkailuPelaaja p)
         {
             var c = p.transform.position + Vector3.up * 1.0f;
-            if (LuukullaOn(c)) { VaihdaLuukku(); return true; }
+            if (LuukullaOn(c)) { VaihdaLuukku(); p.KasiEle("luukku"); return true; }
             if (ydin.OmaKynttila && !ydin.OmaPalaa && OmaAsetettu == null && Vector3.Distance(c + Vector3.up * 0.4f, IkuinenValo) < SytytysM + 0.6f)
             {
                 ydin.AsetaOma(true); SeikkailuAanet.Soita("sytytys", IkuinenValo, 0.7f);

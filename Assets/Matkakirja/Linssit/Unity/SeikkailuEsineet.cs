@@ -174,6 +174,7 @@ namespace Matkakirja.Natiivi
                 {
                     // Käsikirjoitus vaihe 9: kolme napautusta veitsellä kiveä kohden; jokainen liikauttaa kiveä.
                     lahin.Napautuksia++;
+                    p.KasiEle("raapaisu");
                     SeikkailuAanet.Soita("raapaisu", lahin.Go.transform.position, 0.8f, UnityEngine.Random.Range(0.92f, 1.08f));
                     Raapaistiin?.Invoke();
                     kirjaa?.Invoke($"seikkailu: raapaisu {lahin.Id} ({lahin.Napautuksia}/{IrrotusNapautukset})");
@@ -194,12 +195,14 @@ namespace Matkakirja.Natiivi
                 e.Go.SetActive(false);
                 foreach (var x in esineet) if (Array.IndexOf(NyytinSisalto, x.Id) >= 0 && x.Go != null) x.Go.SetActive(true);
                 kirjaa?.Invoke("seikkailu: liinanyytti avattu");
+                p.KasiEle("nyytti");
                 Nostettiin?.Invoke(e.Id);
                 return;
             }
             kadessa = e; e.Heitetty = false; e.Kuului = false;
             e.Rb.isKinematic = true;
             e.Go.transform.SetParent(p.Kasi, true);
+            p.KasiEle("poiminta");
             e.Go.transform.localPosition = SeikkailuPelaaja.Ensimmainen ? new Vector3(0.02f, -0.05f, 0.05f) : new Vector3(0.03f, -0.1f, 0f);
             kirjaa?.Invoke($"seikkailu: poimittu {e.Id}");
             if (e.Laji == Laji.Nostettava) Nostettiin?.Invoke(e.Id);
@@ -216,6 +219,7 @@ namespace Matkakirja.Natiivi
             if (k.sqrMagnitude > 0.5f) eteen = k;
             e.Rb.linearVelocity = eteen * HeittoEteen + Vector3.up * HeittoYlos;
             e.Rb.angularVelocity = UnityEngine.Random.insideUnitSphere * 8f;
+            p.KasiEle("heitto");
             e.Heitetty = true;
             kirjaa?.Invoke($"seikkailu: heitetty {e.Id} suuntaan {eteen}");
         }
@@ -225,6 +229,7 @@ namespace Matkakirja.Natiivi
         {
             var e = kadessa; kadessa = null;
             e.Go.transform.SetParent(transform, true);
+            p.KasiEle("laske");
             // E3 vaihe 11: alttarin lähellä kalkki ja pateeni asetetaan alttarille, liuskekivi laukkuun.
             if (Alttari is Vector3 al && Vector3.Distance(p.transform.position, al) < 1.6f) { AsetaAlttarille(e.Id); return; }
             e.Go.transform.position = p.transform.position + p.Hahmo.forward * 0.5f + Vector3.up * 0.9f;
@@ -294,6 +299,7 @@ namespace Matkakirja.Natiivi
         void Koputa(SeikkailuPelaaja p)
         {
             var c = p.transform.position + Vector3.up * 1.2f + p.Hahmo.forward * 0.4f;
+            p.KasiEle("koputus");
             if (SeikkailuAanet.Aktiivinen != null && SeikkailuAanet.Aktiivinen.Valmis) SeikkailuAanet.Soita("koputus-ontto", c);
             else if (OnttoKlippi != null)
             {

@@ -126,6 +126,8 @@ namespace Matkakirja.Linssit.Dioraama
         public Dictionary<string, (double KestoS, double TavoiteMs, double Toistokerroin)> Liikkeet = new Dictionary<string, (double, double, double)>();
         /// <summary>Kertaeleen juuren siirto (liikkeet.&lt;nimi&gt;.root_siirto, hahmon kehyksessä glTF: y ylös, +z kasvot); esim. nousu_laiturille.</summary>
         public Dictionary<string, double[]> JuuriSiirto = new Dictionary<string, double[]>();
+        /// <summary>Ensimmäisen persoonan kädet (pelaaja.kadet { glb, leikkeet, liikkeet }; hihat ja hanskat, ei ihoa; omistaja 7.10. 18.7x).</summary>
+        public PelaajaMalli Kadet;
     }
 
     public sealed class SkinMalli
@@ -698,6 +700,21 @@ namespace Matkakirja.Linssit.Dioraama
     public static class DioraamaData
     {
         /// <summary>Jäsentää rakennus.json:n (tai vastaavan käsin kirjoitetun fixturen) Rakennus-puuksi.</summary>
+        static PelaajaMalli LuePelaajaMalli(Dictionary<string, object> pel, string oletusNimi)
+        {
+            var pm = new PelaajaMalli { Glb = MiniJson.Teksti(pel, "glb"), Nimi = MiniJson.Teksti(pel, "nimi") ?? oletusNimi };
+            foreach (var kv in MiniJson.ObjektiTaiNull(MiniJson.Kentta(pel, "leikkeet")) ?? new Dictionary<string, object>())
+                if (kv.Value is string ls) pm.Leikkeet[kv.Key] = ls;
+            foreach (var kv in MiniJson.ObjektiTaiNull(MiniJson.Kentta(pel, "liikkeet")) ?? new Dictionary<string, object>())
+                if (kv.Value is Dictionary<string, object> lo)
+                {
+                    pm.Liikkeet[kv.Key] = (MiniJson.Luku(lo, "kesto_s") ?? 1, MiniJson.Luku(lo, "tavoite_m_s") ?? 0, MiniJson.Luku(lo, "toistokerroin") ?? 1);
+                    var rs = MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(lo, "root_siirto"));
+                    if (rs.Count == 3 && rs[0] is double rx && rs[1] is double ry && rs[2] is double rz) pm.JuuriSiirto[kv.Key] = new[] { rx, ry, rz };
+                }
+            return pm;
+        }
+
         public static Rakennus Lue(string json)
         {
             var juuri = MiniJson.Objekti(MiniJson.Jasenna(json));
@@ -715,16 +732,9 @@ namespace Matkakirja.Linssit.Dioraama
             r.KavelyOsat = MiniJson.Teksti(kav, "osat"); r.KavelyMerkit = MiniJson.Teksti(kav, "merkit");
             if (MiniJson.ObjektiTaiNull(MiniJson.Kentta(juuri, "pelaaja")) is Dictionary<string, object> pel && !string.IsNullOrEmpty(MiniJson.Teksti(pel, "glb")))
             {
-                var pm = new PelaajaMalli { Glb = MiniJson.Teksti(pel, "glb"), Nimi = MiniJson.Teksti(pel, "nimi") ?? "pelaaja" };
-                foreach (var kv in MiniJson.ObjektiTaiNull(MiniJson.Kentta(pel, "leikkeet")) ?? new Dictionary<string, object>())
-                    if (kv.Value is string ls) pm.Leikkeet[kv.Key] = ls;
-                foreach (var kv in MiniJson.ObjektiTaiNull(MiniJson.Kentta(pel, "liikkeet")) ?? new Dictionary<string, object>())
-                    if (kv.Value is Dictionary<string, object> lo)
-                    {
-                        pm.Liikkeet[kv.Key] = (MiniJson.Luku(lo, "kesto_s") ?? 1, MiniJson.Luku(lo, "tavoite_m_s") ?? 0, MiniJson.Luku(lo, "toistokerroin") ?? 1);
-                        var rs = MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(lo, "root_siirto"));
-                        if (rs.Count == 3 && rs[0] is double rx && rs[1] is double ry && rs[2] is double rz) pm.JuuriSiirto[kv.Key] = new[] { rx, ry, rz };
-                    }
+                var pm = LuePelaajaMalli(pel, "pelaaja");
+                if (MiniJson.ObjektiTaiNull(MiniJson.Kentta(pel, "kadet")) is Dictionary<string, object> ka && !string.IsNullOrEmpty(MiniJson.Teksti(ka, "glb")))
+                    pm.Kadet = LuePelaajaMalli(ka, "kadet");
                 r.Pelaaja = pm;
             }
             foreach (var eo in MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(juuri, "etsinnat")))

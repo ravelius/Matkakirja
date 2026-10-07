@@ -993,7 +993,17 @@ namespace Matkakirja.Natiivi
             nayttamo.Hahmot3D.PoistaIrralliset(id);
             if (SeikkailuPelaaja.Ensimmainen)
             {
-                // Ensimmäinen persoona: ei vartaloa (omistaja 7.10. 18.5x); leikkeiden kestot (nousu) silti mallista.
+                // Ensimmäinen persoona: ei vartaloa (omistaja 7.10. 18.5x); leikkeiden kestot (nousu) silti mallista. Kädet hihoineen ja
+                // hanskoineen (18.7x) silmien lapsena, jos paketissa on pelaaja.kadet.
+                if (pm.Kadet != null)
+                {
+                    const string kid = "pelaaja-kadet";
+                    rakennus.Henkilot[kid] = new Henkilo { Id = kid, Nimi = pm.Kadet.Nimi, Malli3d = new Malli3d { Skin = new SkinMalli { Glb = pm.Kadet.Glb, Leikkeet = new Dictionary<string, string>(pm.Kadet.Leikkeet) } } };
+                    nayttamo.Hahmot3D.PoistaIrralliset(kid);
+                    nayttamo.Hahmot3D.LisaaIrrallinen(rakennus, kid, sp.Silmat, sp.KadetLeike, Quaternion.Euler(0f, 180f, 0f));
+                    var kg = new List<string>(); nayttamo.Hahmot3D.IrrallistenGlb(kg);
+                    foreach (var glb in kg) if (hahmoGlbJonossaTaiValmiit.Add(glb)) o.StartCoroutine(LataaHahmoGlb(glb));
+                }
                 o.StartCoroutine(EsineetPaalle());
                 o.Kirjaa("seikkailu: ensimmäinen persoona (ei pelaajahahmoa)");
                 return;

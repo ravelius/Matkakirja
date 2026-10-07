@@ -32,6 +32,34 @@ namespace Matkakirja.Natiivi
         /// <summary>Kantokohta: kynttilä ja poimittu esine (ensimmäisessä persoonassa kameran edessä oikealla, muuten käden korkeudella).</summary>
         public Transform Kasi { get; private set; }
         float silmaNyt = SilmaY, eleNotko;
+        public Transform Silmat => olka;
+
+        // Kädet (ensimmäinen persoona, omistaja 7.10. 18.7x): hihat ja hanskat näkyvät hetkittäin toiminnoissa. Perusleike kannosta
+        // (kanto_idle, kyyryssä palavan kynttilän kanssa suojaus, muuten piilossa), kertaele toiminnosta (KasiEle) kestonsa ajan.
+        string kasiEle; float kasiEleLoppuu; double kasiAika; string kasiPerus = "piilossa";
+        public (string Leike, double Aika) KadetLeike() => (kasiEle ?? kasiPerus, kasiAika);
+
+        /// <summary>Käsien kertaele (poiminta, laske, heitto, koputus, raapaisu, luukku, nyytti, nousu_laiturille); puuttuva ohitetaan.</summary>
+        public void KasiEle(string nimi)
+        {
+            var k = Malli?.Kadet; if (k == null || !k.Leikkeet.ContainsKey(nimi)) return;
+            kasiEle = nimi; kasiAika = 0;
+            kasiEleLoppuu = Time.unscaledTime + (float)(k.Liikkeet.TryGetValue(nimi, out var l) ? l.KestoS : 1.0);
+        }
+
+        void PaivitaKadet(float dt)
+        {
+            if (Malli?.Kadet == null) return;
+            string perus = "piilossa";
+            var ky = SeikkailuKynttilat.Aktiivinen;
+            bool kynttila = ky != null && ky.Ydin.OmaPalaa && ky.OmaAsetettu == null;
+            if (kynttila) perus = kavely.Tapa == Liiketapa.Hiipiminen && Malli.Kadet.Leikkeet.ContainsKey("suojaus") ? "suojaus" : "kanto_idle";
+            else if (SeikkailuEsineet.Aktiivinen?.Kadessa != null) perus = "kanto_idle";
+            if (kasiEle != null && Time.unscaledTime >= kasiEleLoppuu) { kasiEle = null; kasiAika = 0; }
+            if (kasiEle == null && perus != kasiPerus) { kasiPerus = perus; kasiAika = 0; }
+            kasiAika += dt;
+            if (kasiEle != null && Malli.Kadet.Liikkeet.TryGetValue(kasiEle, out var l)) kasiAika = Math.Min(kasiAika, l.KestoS - 1e-3);   // ei kierrä alkuun
+        }
         public static SeikkailuPelaaja Aktiivinen { get; private set; }
         /// <summary>Testisyöte (simulaattoriajot ilman kosketusta): liike ja katse −1…1 kunnes TestiLoppuu.</summary>
         public static KavelySyote Testi; public static float TestiLoppuu = -1f;
@@ -153,6 +181,7 @@ namespace Matkakirja.Natiivi
             eleSiirto = hahmo.rotation * juuriSiirto; eleAlku = transform.position;
             cc.enabled = false; pysty = 0; kavely.NopeusX = kavely.NopeusZ = 0;
             Debug.Log($"MATKAKIRJA seikkailu: ele {nimi} {kesto:F1} s, juurisiirto {eleSiirto}");
+            if (Ensimmainen) KasiEle(nimi);   // kämmenet kannelle (kädet-v1 samalla ajoituksella)
         }
 
         bool PaivitaEle(float dt)
@@ -203,6 +232,7 @@ namespace Matkakirja.Natiivi
         {
             float dt = Mathf.Min(Time.unscaledDeltaTime, 0.05f);
             var s = LueSyote();
+            PaivitaKadet(dt);
             if (PaivitaEle(dt))
             {
                 // Ele: vain katse kääntyy (olan yli -kamera), hahmo ja kapseli paikallaan.
