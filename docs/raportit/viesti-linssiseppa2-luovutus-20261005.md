@@ -22,7 +22,7 @@ Avoimet työt:
   Korjaus 2d8da858f + ui hiiri 5b61d14f4 junassa; -ei-lepoa (6ec5dcff4) vain testihaarassa. Still lokit/linssiseppa2-kaupunkipallo-161-stillit/osuma-161-68429b27.jpg.
 - Lisälöydös: Siirrytään-ruutu jää, jos opas suljetaan kesken siirtymän → LS1 korjaa (linssiseppa/pallo-latauskuva, SiirtymaPeru, juna 162).
   NUI pyysi: toista Ateena → linssi pois → Kreeta LS1:n korjausta vasten (skenaario pallo-osuma.txt ilman odota 25 -rivejä).
-- S2-KAUDET todennettu iPadilla (c3c9bc115): lokit/linssiseppa2-s2-kaudet/syksy-kesa-c3c9bc115.jpg → Päätoimittajan kuittaus junaan 162 odottaa
+- S2-KAUDET todennettu iPadilla (c3c9bc115): lokit/linssiseppa2-s2-kaudet/syksy-kesa-c3c9bc115.jpg → KUITATTU junaan 162 (15.4x), SHA Natiivisepälle
   (f6e4a8495). Pari ei täsmälleen samasta kohdasta (ISS liikkui); tarvittaessa uusi pari kiinteällä kellolla. Talvi/kevät taulukkoon kun ämpärissä.
 - Mac-ajotapa: lokit/linssiseppa2-3d-kattavuus/ajot/mac-pallo.sh; Mac-appi -ei-lepoa-lipulla, komennot ~/Library/Application Support/Matkakirja/Matkakirja 3D/.
 
