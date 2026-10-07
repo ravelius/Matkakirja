@@ -8,7 +8,7 @@ kappeli). Lue tämä osio ja alin TILA-loki (päivän loppu), sitten CLAUDE.md j
   <haara>:refs/heads/peili/proto/<haara>`). Luovutus: tämä tiedosto haarassa siirtoseppa-luovutus (Matkakirja-siirtoseppa).
 - Haarat: **siirtoseppa/historia-h0** (kolmas persoona, junien pohja, kärki c652ba83), **siirtoseppa/historia-juna164 @ 6d2b1149**
   (kuittaus pyydetty PT:ltä; juna163 + V7 + tietokerros + v44i-merkit + nousu laiturille; pala v44j 42d49bd4),
-  **siirtoseppa/historia-fp @ 14525cc6** (ENSIMMÄINEN PERSOONA + kädet-v1 + pelattavuusmallin vaiheet 1–2 osin, ei vielä junaan; pala v44l 45be7435).
+  **siirtoseppa/historia-fp @ d1734576** (ENSIMMÄINEN PERSOONA + kädet-v1 + pelattavuusmallin vaiheet 1–2 osin, ei vielä junaan; pala v44l 45be7435).
 - TESTAUS (omistaja 7.10. 15.5x/16.0x): ennen junaa VAIN Linssit-testit/kaanna.sh + Linssit-testit/unity-tarkistus.sh; ei omia
   käännöksiä, simua, stillejä eikä savuja. Kuittaus PT:ltä yhdellä rivillä (mitä, testit, SHA) → Natiiviseppä junaan.
 - OMISTAJA 7.10. 18.5x–18.7x: KAIKKI PELIT ENSIMMÄISESSÄ PERSOONASSA (Thief-malli; ei vartaloa/peilikuvaa; kädet saavat näkyä
@@ -549,3 +549,6 @@ Edellinen luovutus on `viesti-siirtoseppa-luovutus-20261002.md` (5.10. osiot 02.
   savel, huuto + Kutsu (20 m, ≤ 2), tyrmästä valppaana. NUI: OtaKatse luetaan, PuluVihje()-koukku (VihjePyydetty, vaihe 4 täyttää).
   844/844, unity-tarkistus 0. JÄLJELLÄ: pintojen äänekkyys (2.2) + seinäsääntö, nähty piiloon meno (2.5), oma kynttilä valoisuus 0,9/0,45
   (2.3), hahmon lyhty valaisee, irtipääsy (3.4), torkkuva vartija -profiili; sitten vaiheet 3–4.
+- 19.44: 2.2 pinnat + seinäsääntö (Askelaani, uusi Ydin-tiedosto + .meta) ja toimintoverbi NUI:lle (SeikkailuEsineet.Toiminto) d1734576.
+  RIIPPUVUUS historia-fp:lle: natiivi-ui/seikkailu-fp eb115fc3 (PuluVihje-koukku, napautus, OtaKatse; kuitattu junaan 163 parina).
+  846/846, unity-tarkistus 0. LR:lle tarvitaan: osat.json "pinta" per osa, pinta:<laji>-N -merkit, partio-merkkeihin "profiili"/"henkilo".
