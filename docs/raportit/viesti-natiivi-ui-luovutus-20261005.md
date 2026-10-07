@@ -12,7 +12,7 @@ JATKA TÄSTÄ: junaan 162 kuitattu apuraha-kuvat 3f07c49b (SHA Natiivisepälle 1
 OMISTAJA 15.5x + 16.0x: ei stillejä, savuja eikä omia iOS/Mac-käännöksiä; haaraan unity-tarkistus + kaanna.sh-testit
 (Peli/Linssit/Kartta), kuittaus 1 rivillä Päätoimittajalta → Natiivisepälle. Simukäännös vain epäselvän vian syyhyn, ilmoitus
 Päätoimittajalle ensin. Siirtymäruudun korjaus on LS1:n (pallo-latauskuva 810cda48).
-AVOIN: seikkailun toimintonappi (Siirtoseppä E2, juna 163) = natiivi-ui/seikkailu-toiminto 43701b94 (worktree
+AVOIN: seikkailun toimintonappi (Siirtoseppä E2, juna 163) = natiivi-ui/seikkailu-toiminto b651d892 (E2 poimi/heitä + E3 kynttilä; worktree
 wt/proto-natiivi-ui-seikkailutoiminto), logiikka valmis, unity-tarkistus 0. Kuvakkeet (avoin käsi = poimi, kaareva nuoli =
 heitä, uudet 24×24-viivaikonit Ikonit-kirjastoon) odottavat OMISTAJAN UI-POHJAT-vastausta Päätoimittajan kautta (illalla);
 nyt väliaikaiset Viiva["peukalo"]/Viiva["nuoli"] (SeikkailuTapit.PoimiIkoni/HeitaIkoni). Vastauksen jälkeen ikonit →
