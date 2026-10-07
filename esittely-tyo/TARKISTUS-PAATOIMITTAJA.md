@@ -970,3 +970,111 @@ Yksitoista huomiota on "ei ala paikan nimellä" (suomenkielinen etusana, äänt�
 - Faktat avattu: Jenny Geddes "tarinan mukaan" vastaa Wikipediaa ("Tradition attests"); "maailman presbyteeristen kirkkojen äitikirkko" vahvistettu.
 - Avaus: 37 sanaa, alkaa "Tervetuloa", ilmakuva (linna kalliolla, vanhakaupunki harjanteella) kunnossa.
 - Tarkistin: 0 virhettä, 14 huomiota (sama määrä kuin ennen).
+
+## Firenze
+
+### Firenzen tuomiokirkko — kenttä `lyhyt`
+- **Vanha:** "Firenzen tuomiokirkon värikäs marmorijulkisivu näyttää keskiaikaiselta, mutta se valmistui vasta vuonna 1887 arkkitehti Emilio De Fabrisin suunnitelmasta. Hän sovitti vihreän, valkoisen ja vaaleanpunaisen marmorin kirkon kylkien ja Giotton kellotornin kuvioihin, jotta kokonaisuus näyttäisi yhtenäiseltä."
+- **Uusi:** "Firenzen tuomiokirkon keskeneräinen keskiaikainen julkisivu purettiin vuonna 1587, ja uutta odotettiin lähes kolmesataa vuotta. Sillä välin paljasta seinää koristeltiin ruhtinashäihin maalauksin, ja viimeinen niistä, vuodelta 1688, näkyy haalistuneena vielä 1800-luvun valokuvissa. Nykyinen marmorijulkisivu valmistui vasta vuonna 1887."
+- **Syy:** 2 (kierrosversio oli juuri kielletty kaava "valmistui vuonna X arkkitehti Y:n suunnitelmasta" ja materiaalikuvausta). Uusi kertoo saman yllätyksen (julkisivu on 1800-luvulta) tarinana: kolmesataa vuotta paljasta seinää ja maalatut hääjulkisivut. Lähteet päivitetty.
+- **Lähde:** https://en.wikipedia.org/wiki/Florence_Cathedral ; https://it.wikipedia.org/wiki/Facciata_di_Santa_Maria_del_Fiore
+
+### Uffizin galleria — kenttä `lyhyt`
+- **Vanha:** "Uffizin galleriasta jatkuu Vasarin käytävä, joka ylittää Arnon Vanhan sillan kauppojen katolla ja päättyy Pittin palatsiin. Käytävä oli kahdeksan vuotta suljettuna korjausten takia, ja joulukuussa 2024 se avattiin taas yleisölle."
+- **Uusi:** "Uffizin gallerian kuuluisimpia saleja on Tribuna, kahdeksankulmainen aarrekammio, jonka Francesco ensimmäinen rakennutti 1580-luvun alussa. Sali kuvaa neljää alkuainetta: lattian kirjava marmori on maata, seinien punainen sametti tulta, tuulille avoin lyhty ilmaa ja kupolin lähes kuusituhatta Intian valtameren helmiäissimpukkaa vettä."
+- **Syy:** 1 + 2. Päällekkäisyys kierroksella: Pittin palatsin `lyhyt` kertoo samasta Vasarin käytävästä (Vanhasta palatsista Pittiin joen yli). Lisäksi sulkemis- ja avaamistieto oli hallintoa. Korvattu Tribunan neljän alkuaineen tarinalla. Tarkistin, ettei synny uutta päällekkäisyyttä: Buontalentin nimi jätettiin pois, koska Bobolin `lyhyt` kertoo hänen tekoluolastaan. Vanhat käytävälähteet poistettu, Tribunan lähde lisätty.
+- **Lähde:** https://uffizi.it/en/artworks/the-tribune (5780 helmiäissimpukkaa, alkuaineet, jalokivien säilytys) ; https://en.wikipedia.org/wiki/Tribuna_of_the_Uffizi (kahdeksankulmainen, Francesco I)
+
+### Uffizin galleria — kenttä `lahteet` (ei tekstimuutosta)
+- Botticellin salien lähde abcnews.com palauttaa 404:n. Vaihdettu: https://wtop.com/news/2026/06/uffizi-gallery-unveils-new-arrangement-for-botticellis-birth-of-venus-and-primavera/ (AP 16.6.2026: Venus ja Kevät viereisissä tiloissa vastakkaisilla seinillä). Teksti "vierekkäisissä saleissa" pitää paikkansa. Kullan lähdeväite tarkennettu (Wikipedia: kultaa pigmenttinä hiuksissa).
+
+### Ponte Vecchio — kenttä `teksti`
+- **Vanha:** "…mutta vuonna 1593 suurherttua Ferdinando ensimmäinen määräsi…"
+- **Uusi:** "…mutta 1500-luvun lopulla suurherttua Ferdinando ensimmäinen määräsi…"
+- **Syy:** 3. Vuosiluvusta lähteet ovat ristiriidassa: italiankielisen Wikipedian mukaan dekreetti annettiin 27.9.1594, monen matkalähteen mukaan 1593, ja englanninkielinen Wikipedia mainitsee jopa vuoden 1565 dekreetin. Ferdinando ensimmäinen ja hajuperuste (kauppa käytävän ikkunoiden alla) vahvistuvat. Siksi vuosisadan loppu. Lähde vaihdettu.
+- **Lähde:** https://it.wikipedia.org/wiki/Ponte_Vecchio ; https://aviewoncities.com/florence/ponte-vecchio
+
+### Piazza della Signoria — kenttä `lyhyt`
+- **Vanha:** "…Neptunuksen suihkulähde, Firenzen ensimmäinen julkinen suihkulähde, jota firenzeläiset alkoivat kutsua valkoiseksi jättiläiseksi. Sen piti valmistua jo vuonna 1565 Medicien prinssin Francescon häihin, mutta se paljastettiin vasta vuonna 1574."
+- **Uusi:** "…Neptunuksen suihkulähde, Firenzen ensimmäinen suuri julkinen suihkulähde, jonka marmorista merenjumalaa firenzeläiset pilkkasivat isoksi valkoiseksi. Lähde piti saada valmiiksi jo vuonna 1565 Medicien prinssin Francescon häihin, mutta kokonaan se valmistui vasta lähes kymmenen vuotta myöhemmin."
+- **Syy:** 3. (a) Lähteen mukaan "prima grande fonte pubblica" eli ensimmäinen SUURI julkinen suihkulähde. (b) Biancone tarkoittaa "isoa valkoista", ja se on pilkkanimi, joka syntyi kansan arvostelusta. "Valkoinen jättiläinen" oli väärä vivahde. (c) "Paljastettiin vasta 1574" ei pidä: italiankielisen Wikipedian mukaan Neptunuksen patsas paljastettiin jo häissä 1565 ja koko suihkulähde valmistui 1575, englanninkielisen mukaan 1574. Siksi "kokonaan se valmistui vasta lähes kymmenen vuotta myöhemmin".
+- **Lähde:** https://it.wikipedia.org/wiki/Fontana_del_Nettuno_(Firenze) ; https://en.wikipedia.org/wiki/Fountain_of_Neptune,_Florence
+
+### Piazza della Signoria — kenttä `teksti`
+- **Vanha:** "…jossa munkki Girolamo Savonarola poltettiin vuonna 1498."
+- **Uusi:** "…jossa munkki Girolamo Savonarola hirtettiin ja poltettiin vuonna 1498."
+- **Syy:** 3. Savonarola hirtettiin ennen polttamista. Lahteet-kentän väite sanoi tämän jo oikein.
+- **Lähde:** https://www.througheternity.com/travel-guide/savonarola-in-florence-visions-of-the-apocalypse (olemassa oleva lähde)
+
+### Santa Crocen basilika — kenttä `lyhyt`
+- **Vanha:** "…kirkon museosaleissa vesi nousi lähes kuuden metrin korkeuteen."
+- **Uusi:** "…kirkon museosaleissa vesi nousi yli viiden metrin korkeuteen."
+- **Syy:** 3. Santa Crocen Operan oman museosivun mukaan vesi nousi entisessä ruokasalissa (museossa) 5,2 metriin. Cimabuen krusifiksin "yli puolet" vastaa lähteen 60 prosenttia, ja sakaristoon siirto 2013 vahvistui.
+- **Lähde:** https://www.santacroceopera.it/en/places/museum/ ; https://www.santacroceopera.it/en/catalogue-of-works/cimabue-crucifix/
+
+### Santa Maria Novellan basilika — kenttä `teksti`
+- **Vanha:** "…Masaccion Pyhä kolminaisuus, ensimmäinen monumentaalinen renessanssimaalaus, jossa käytettiin keskeisperspektiiviä."
+- **Uusi:** "…Masaccion Pyhä kolminaisuus, yksi ensimmäisistä monumentaalisista renessanssimaalauksista, joissa käytettiin keskeisperspektiiviä."
+- **Syy:** 3. Superlatiivi oli liian jyrkkä: lähteen mukaan "one of the first". Maailman vanhin apteekki vahvistui ("recognised as the oldest pharmacy in the world").
+- **Lähde:** https://en.wikipedia.org/wiki/Holy_Trinity_(Masaccio) ; https://en.wikipedia.org/wiki/Officina_Profumo-Farmaceutica_di_Santa_Maria_Novella
+
+### San Miniato al Monte — kenttä `lahteet` (ei tekstimuutosta)
+- Edellisen session epävarmuus ratkaistu: gregoriaaninen laulu on vahvistettu myös iltarukouksessa (vesprat), ja vierailijat voivat osallistua. Lähde italyplanner.ai (tekoälymatkaopas) vaihdettu: https://www.firenzemadeintuscany.com/en/article/san-miniato-al-monte-il-millenario/ . Legenda ja vihkiminen 1018 vahvistettu Wikipediasta.
+
+### Palazzo Pitti — kenttä `lahteet` (ei tekstimuutosta)
+- "Rakennettiin viidessä kuukaudessa" -väitteen lähde (aviewoncities) ei vahvista viittä kuukautta. Vaihdettu https://en.wikipedia.org/wiki/Vasari_Corridor (vahvistaa viisi kuukautta 1565). Huom: Wikipedia antaa käytävän pituudeksi nyt "noin kilometrin". Teksti "yli seitsemänsataa metriä" on tosi kummallakin luvulla, joten se jätettiin ennalleen.
+
+### Tarkistettu, ei muutosta (Firenze)
+- Kierroksen kahdeksan `lyhyt`-versiota luettu peräkkäin: Uffizin käytävätoiston poiston jälkeen ei päällekkäisyyksiä (Palazzo Vecchio: suuren salin taistelukuvat, Signoria: Neptunus, Uffizi: Tribuna, Ponte Vecchio: Cellini, Pitti: käytävä, Boboli: Suuri luola, Santa Croce: tulva, tuomiokirkko: julkisivu).
+- Nykytila: La Loggia -ravintola Piazzale Michelangelolla toimii (The Florentine 23.6.2026). Vasarin käytävä on auki joulukuusta 2024. Botticellin uusi ripustus kesäkuusta 2026 on tekstissä oikein.
+- Avaus: 36 sanaa, ilmakuva (kattojen meri, kupoli, Arno), alkaa "Tervetuloa". Ei muutosta.
+- Kysymykset: kaikki kohdekohtaisia ja vanhenemattomia. Ei muutoksia.
+- Edellisen session muut epävarmuudet: Bobolin hankinta 1549 on passiivissa ja kestää. koko_m-arvot (Ponte Vecchio 100, kastekappeli 40) eivät ole selvästi vääriä, joten ne jätettiin.
+
+## Granada
+
+### Alhambra — kenttä `lyhyt`
+- **Vanha:** "Palatsilinnoitus Alhambra kuuluu Espanjan vierailluimpiin monumentteihin, ja vuonna 2024 siellä kävi yli kaksi ja puoli miljoonaa ihmistä. Kansainvälisen maineen sille toi amerikkalainen kirjailija Washington Irving, joka asui palatsissa vuonna 1829 ja kirjoitti siitä tarinakokoelman."
+- **Uusi:** "Palatsilinnoitus Alhambrassa asui vuonna 1829 kolmisen kuukautta amerikkalainen kirjailija Washington Irving, joka sai tutkia myös palatsin arkistoja. Oleskelu päättyi, kun hänet nimitettiin lähetystösihteeriksi Lontooseen. Hänen tarinakokoelmansa toi Alhambran uudelleen länsimaisen yleisön tietoon, ja huoneissa, joissa hän kirjoitti, on nykyään muistolaatta."
+- **Syy:** 2 + 5. Kävijämäärä on hallinnollista tietoa ja vanhenee vuosittain. Irvingin osuus laajennettiin tarinaksi (arkistot, lähtö Lontooseen, muistolaatta). El Debaten kävijämäärälähde poistettu.
+- **Lähde:** https://en.wikipedia.org/wiki/Tales_of_the_Alhambra
+
+### Alhambra — kenttä `kysymykset`
+- **Vanha:** "Montako kävijää palatsiin päästetään päivässä?"
+- **Uusi:** "Miksi Washington Irving asui palatsissa?"
+- **Syy:** 7. Päiväkiintiö muuttuu, joten vastaus vanhenee.
+
+### Leijonain piha — kenttä `kysymykset`
+- **Vanha:** "Kuinka moni kävijä näkee pihan päivittäin?"
+- **Uusi:** "Mitä leijonille tehtiin kunnostuksessa?"
+- **Syy:** 7. Kävijämäärä vanhenee. Uusi kysymys liittyy tekstin kunnostustarinaan (2002–2012).
+
+### Kaarle V:n palatsi — kenttä `lyhyt`
+- **Vanha:** "Kaarle viidennen palatsissa toimii nykyään kaksi museota, alakerrassa Alhambran museo ja yläkerrassa Granadan taidemuseo. Pyöreällä pihalla soittavat kesäisin suuret sinfoniaorkesterit Granadan kansainvälisellä musiikki- ja tanssijuhlalla. Pyöreän pihan toteutti Pedro Machucan poika Luis, joka jatkoi työtä isänsä jälkeen."
+- **Uusi:** "Kaarle viidennen palatsi rahoitettiin Granadan moriskeilta eli kastetuilta muslimeilta perityllä verolla, jota vastaan he saivat pitää omat tapansa. Kun moriskit nousivat kapinaan vuonna 1568 ja heidät karkotettiin, rahat loppuivat juuri ennen kuin kattopalkit ehdittiin nostaa, ja palatsi seisoi ilman kattoa 1900-luvulle asti."
+- **Syy:** 2. Kierrosversio oli perustietoa ja hallintoa (museot, festivaali). Festivaali toistui myös Generalifen tekstissä. Uusi versio kertoo ristiriidan: keisarin voittopalatsi rakennettiin voitettujen verorahoilla, ja heidän kapinansa jätti sen kattamatta.
+- **Lähde:** https://andalucia.com/cities/granada/palace-carlos-quinto.htm (moriskivero, rahoitus loppui karkotukseen ennen kattopalkkeja, kattamaton 1900-luvulle) ; https://en.wikipedia.org/wiki/Palace_of_Charles_V (1568 kapina pysäytti työt, katto 1967)
+
+### Kaarle V:n palatsi — kenttä `teksti`
+- **Vanha:** "…kun hän vietti kuherruskuukauttaan Alhambrassa Portugalin Isabellan kanssa ja nasridipalatsi tuntui ahtaalta ja kylmältä. … Rakennus jäi kuitenkin keskeneräiseksi vuosisadoiksi ja valmistui vasta 1900-luvulla."
+- **Uusi:** "…kun hän vietti kuherruskuukauttaan Alhambrassa Portugalin Isabellan kanssa ja halusi linnoitukseen uuden kuninkaallisen asunnon. … Pyöreän pihan toteutti hänen poikansa Luis, joka jatkoi työtä isänsä jälkeen."
+- **Syy:** 3 + 1. (a) "Ahtaalta ja kylmältä" ei vahvistunut. Patronaton oma sivu, joka oli väitteen lähde, sanoo vain, että keisari halusi linnoitukseen uuden kuninkaallisen asunnon (ja palatsi symboloi kristinuskon voittoa). Edellisen session epävarmuus on näin ratkaistu. Kuherruskuukausi Alhambrassa 1526 vahvistui. (b) Viimeinen virke (keskeneräinen 1900-luvulle) olisi toistanut uuden kierrosversion asian, joten se korvattiin vanhan kierrosversion varmistetulla Luis Machuca -tiedolla. Museoiden ja festivaalin lähteet poistettu, ja uudet lähteet lisätty.
+- **Lähde:** https://www.alhambra-patronato.es/en/edificios-lugares/palace-of-charles-v ; https://en.wikipedia.org/wiki/Isabella_of_Portugal ; https://en.wikipedia.org/wiki/Palace_of_Charles_V (Luis Machuca, olemassa oleva lähde)
+
+### Albayzín — kenttä `lyhyt`
+- **Vanha:** "…muurein suojatun linnoituksen. Osa muureista ja porteista on yhä pystyssä. Unesco liitti kaupunginosan Alhambran maailmanperintökohteeseen vuonna 1994."
+- **Uusi:** "…muurein suojatun linnoituksen. Kukkulan juurella Darron rannalla on yhä keskiaikainen arabialainen kylpylä, jonka tähdenmuotoisista kattoaukoista valo pääsi sisään ja höyry ulos."
+- **Syy:** 2. Unescon vuosi on hallintotietoa. Tilalle tuli konkreettinen, nähtävä yksityiskohta (El Bañuelo). Ajoitusta ei väitetty samaksi kuin zirideillä, koska kylpylä on perinteisesti ajoitettu 1000-luvulle mutta mahdollisesti myöhempi. Unesco-lähde poistettu.
+- **Lähde:** https://en.wikipedia.org/wiki/El_Ba%C3%B1uelo
+
+### Granadan katedraali — kenttä `lyhyt`
+- **Vanha:** "Granadan katedraalia rakennettiin satakahdeksankymmentäyksi vuotta, sillä peruskivi laskettiin vuonna 1523 ja työt saatiin päätökseen vasta jouluaattona 1704. Diego de Siloén suunnittelemassa kirkossa on viisi laivaa, ja sen pohjapiirroksen esikuvana olivat varhaiskristilliset hautakirkot."
+- **Uusi:** "Granadan katedraalin pyöreä pääkappeli suunniteltiin alun perin Habsburg-suvun kuninkaiden hautakirkoksi, ja sen kupoli kohoaa kahdenkymmenenkahden metrin levyisen rotundan yllä. Suunnitelma raukesi, kun Filip toinen päätti siirtää kuninkaalliset hautaukset rakennuttamaansa El Escorialin luostariin Madridin lähelle."
+- **Syy:** 2. Vuosiluvut, laivojen määrä ja pohjapiirroksen esikuva olivat teknistä perustietoa. Uusi versio kertoo hylätyn suunnitelman tarinan. Kysymys "Miksi rakentaminen kesti lähes kaksisataa vuotta?" on yhä tosi (1523–1704), ja vanha lähde säilyy.
+- **Lähde:** https://es.wikipedia.org/wiki/Catedral_de_Granada ("Concebida inicialmente como panteón para los Austrias… Felipe II decidió trasladar los enterramientos reales al Monasterio de El Escorial"; halkaisija 22 m)
+
+### Tarkistettu, ei muutosta (Granada)
+- Kierroksen kahdeksan `lyhyt`-versiota luettu peräkkäin korjausten jälkeen: Alhambra (Irving), Generalife (vesiportaat), Leijonain piha (kupolin purku 1934), Kaarle V (moriskivero), Sacromonte (lyijykirjat), Albayzín (zirit ja kylpylä), katedraali (hylätty hautakirkko), Kuninkaallinen kappeli (Isabellan kruunu ja Ferdinandin miekka). Ei päällekkäisyyksiä. Kappelin kierrosversio on esineluettelo, mutta konkreettiset kuninkaalliset esineet jäävät mieleen, ja sisältö vahvistui (Wikipedia: Botticelli ja flaamilaiset, capillarealgranada.com: kruunu, valtikka, rasia, peili, miekka). Jätettiin ennalleen.
+- Sacromonte: lyijykirjojen 1682-tuomio ja palautus Granadaan 2000 vahvistuivat (Wikipedia: Vatikaani piti niitä jo 1682 "harhaoppisina väärennöksinä", joten teksti on oikein).
+- Avaus: 38 sanaa, ilmakuva (tasanko, Sierra Nevada, kaksi kukkulaa), alkaa "Tervetuloa". Ei muutosta.
+- Epävarmuus Päätoimittajalle: Clintonin auringonlasku (Albayzínin `teksti`) on yhä "Kerrotaan"-muodossa. Virallista lähdettä ei löytynyt, mutta legendaksi merkittynä se on hyväksyttävä. Jätettiin.
