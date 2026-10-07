@@ -51,6 +51,7 @@ def main():
     p.add_argument('--ryhma', default='', help='ulkoisen ryhmän nimi (tyhjä = ainoa tai julkisen linkin ryhmä)')
     p.add_argument('--odota-min', type=int, default=45)
     p.add_argument('--vanhenna', default='', help='pilkuin erotetut CFBundleVersionit, jotka vanhennetaan ensin')
+    p.add_argument('--poista', default='', help='pilkuin erotetut CFBundleVersionit, jotka irrotetaan ulkoisesta ryhmästä (sisäisille jäävät)')
     a = p.parse_args()
 
     kid = os.environ['ASC_KEY_ID']
@@ -154,6 +155,18 @@ def main():
         if tila != 200:
             virhe('Vanhennus epäonnistui', f'{vb}: {tila}: {d}')
         kirjaa(f'Build {vb}: vanhennettu.')
+
+    # Irrotus ulkoisesta ryhmästä (Päätoimittaja 7.10.2026: TF 162 vikainen, jää vain sisäisille).
+    for pb in [x.strip() for x in a.poista.split(',') if x.strip()]:
+        tila, d = kutsu('GET', f'/v1/builds?filter[app]={app_id}&filter[version]={pb}&limit=5')
+        loydetyt = d.get('data', []) if tila == 200 else []
+        if len(loydetyt) != 1:
+            virhe('Irrotettavaa buildia ei löydy yksiselitteisesti', f'{pb}: {tila}, {len(loydetyt)} osumaa')
+        tila, d = kutsu('DELETE', f'/v1/betaGroups/{ryhma_id}/relationships/builds',
+                        {'data': [{'type': 'builds', 'id': loydetyt[0]['id']}]})
+        if tila not in (200, 204):
+            virhe('Irrotus ulkoisesta ryhmästä epäonnistui', f'{pb}: {tila}: {d}')
+        kirjaa(f'Build {pb}: irrotettu ulkoisesta ryhmästä.')
 
     if not a.build:
         return
