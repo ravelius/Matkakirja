@@ -106,6 +106,7 @@ namespace Matkakirja.Natiivi
             // Partioreitit osittain.
             // Reitti = merkin nimi ilman loppunumeroa (partio:portinvartija-1, -2 …; v44m: useampi reitti samassa osassa).
             var reitit = new SortedDictionary<string, List<KavelyMerkki>>(StringComparer.Ordinal);
+            foreach (var m in d.Lajia("istuu")) reitit["istuu-" + m.Tunnus] = new List<KavelyMerkki> { m };   // torkkuva vartija: yksi paikka
             foreach (var m in d.Lajia("partio"))
             {
                 int vi = m.Tunnus.LastIndexOf('-');
@@ -119,8 +120,9 @@ namespace Matkakirja.Natiivi
                 var eka = kv.Value.Find(x => x.Profiili != null || x.Henkilo != null) ?? kv.Value[0];
                 string henkilo = eka.Henkilo ?? Henkilo;
                 if (rakennus?.Henkilot == null || !rakennus.Henkilot.ContainsKey(henkilo)) henkilo = Henkilo;
+                bool istuu = eka.Laji == "istuu";
                 var pisteet = new List<(double X, double Z, double OdotaS)>();
-                foreach (var m in kv.Value) pisteet.Add((m.X, -m.Z, m.OdotaS > 0 ? m.OdotaS : 2.0));
+                foreach (var m in kv.Value) pisteet.Add((m.X, -m.Z, istuu ? 1e9 : m.OdotaS > 0 ? m.OdotaS : 2.0));
                 var alku = new Vector3((float)kv.Value[0].X, (float)kv.Value[0].Y, (float)-kv.Value[0].Z);
                 if (NavMesh.SamplePosition(alku, out var osuma, 3f, NavMesh.AllAreas)) alku = osuma.position;
                 else { kirjaa?.Invoke($"seikkailu: vartija {kv.Key}: alku ei NavMeshillä ({alku})"); continue; }
@@ -131,11 +133,13 @@ namespace Matkakirja.Natiivi
                 ag.radius = 0.3f; ag.height = 1.8f; ag.baseOffset = 0f; ag.angularSpeed = 360f; ag.acceleration = 6f;
                 ag.stoppingDistance = 0.25f; ag.autoBraking = true; ag.speed = (float)Vartija.KavelyMs;
                 ag.obstacleAvoidanceType = ObstacleAvoidanceType.LowQualityObstacleAvoidance;
-                var v = new V { Aivot = new Vartija(pisteet) { Profiili = VartijaProfiili.Hae(eka.Profiili) }, Agentti = ag, Osa = eka.Osa ?? kv.Key, Nimi = kv.Key, Henkilo = henkilo, Askeleet = SeikkailuKuulija.Lahde("Askeleet:" + kv.Key, 2f, 28f) };
+                double yaw0 = eka.KiertoY is double ky0 ? -ky0 * 180 / Math.PI : 0;
+                var v = new V { Aivot = new Vartija(pisteet, yaw0) { Profiili = VartijaProfiili.Hae(eka.Profiili), Torkkuu = istuu }, Agentti = ag, Osa = eka.Osa ?? kv.Key, Nimi = kv.Key, Henkilo = henkilo, Askeleet = SeikkailuKuulija.Lahde("Askeleet:" + kv.Key, 2f, 28f) };
                 foreach (var pm in d.Lajia("piilo")) v.Aivot.Piilot.Add((pm.X, -pm.Z));   // vaihe 3: piilot ja varjot etsintään
                 v.Askeleet.loop = true; v.Askeleet.volume = 0.9f;
                 sv.vartijat.Add(v);
-                hahmot?.LisaaIrrallinen(rakennus, henkilo, vg.transform, () => (v.Kavelee ? "kavely" : "idle", v.KavelyAika));
+                // Torkkuja: leikkeet torkku / syo, jos skinissä (LR pyydetty), muuten idle (Hahmot3D:n varaketju).
+                hahmot?.LisaaIrrallinen(rakennus, henkilo, vg.transform, () => (v.Aivot.Torkkuu ? (v.Aivot.Syo ? "syo" : "torkku") : v.Kavelee ? "kavely" : "idle", v.KavelyAika));
                 DioraamaHahmot3D.PiilotetutHenkilot.Add(henkilo);   // kohtauksen sama henkilö pois (ei kahta kokkia)
                 sv.henkilot.Add(henkilo);
             }

@@ -148,6 +148,26 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(!w.Irrottaudu(), "ikkunan jälkeen ei irti");
         }
 
+        [Testi] static void TorkkujaHeraaAaneenJaSyoJaksoissa()
+        {
+            var paikka = new List<(double, double, double)> { (0, 0, 9999) };
+            var v = new Vartija(paikka, yaw: 0) { Profiili = VartijaProfiili.Torkku, Torkkuu = true }; double x = 0, z = 0;
+            VartijanSyote Edessa(double vx, double vz) => new VartijanSyote { PelaajaX = 0, PelaajaZ = 3, NakolinjaVapaa = true, Valoisuus = 1 };
+            Aja(v, ref x, ref z, Edessa, 5);
+            Oleta.Tosi(v.Torkkuu && v.Tila == VartijanTila.Partio && v.Mittari == 0, "torkkuessa ei näe");
+            bool kuului = false;
+            VartijanSyote Askel(double vx, double vz) { var s = Kaukana(vx, vz); if (!kuului) { s.Aanet = new List<Aanilahde> { new Aanilahde(0, 2, 2.5) }; kuului = true; } return s; }
+            Aja(v, ref x, ref z, Askel, 1.0);
+            Oleta.Tosi(!v.Torkkuu && Math.Abs(z) < 0.01, "herää ja nousee paikallaan");
+            Aja(v, ref x, ref z, Kaukana, 1.0);
+            Oleta.Tosi(z > 0.3, $"lähtee tutkimaan ({z:F2})");
+            var w = new Vartija(paikka, yaw: 0) { Profiili = VartijaProfiili.Torkku, Torkkuu = true, Syo = true }; x = 0; z = 0;
+            Aja(w, ref x, ref z, Edessa, 5.5);
+            Oleta.Tosi(w.Mittari == 0, "pää alas: ei näe");
+            Aja(w, ref x, ref z, Edessa, 1.5);
+            Oleta.Tosi(w.Mittari > 0, "katsejaksossa näkee");
+        }
+
         [Testi] static void KokkiHuutaaEikaJahtaa()
         {
             var v = new Vartija(Reitti, yaw: 0) { Profiili = VartijaProfiili.Kokki }; double x = 0, z = 0;

@@ -25,10 +25,13 @@ namespace Matkakirja.Linssit.Seikkailu
         public static readonly VartijaProfiili Kokki = new VartijaProfiili { Nimi = "kokki", NakoM = 6, NakoKulma = 45, JahtaaMs = 0, Ottaa = false };
         public static readonly VartijaProfiili Apulainen = new VartijaProfiili { Nimi = "apulainen", NakoM = 5, NakoKulma = 45, Kuulee = false, JahtaaMs = 0, Ottaa = false };
         public static readonly VartijaProfiili Renki = new VartijaProfiili { Nimi = "renki", Havaitsee = false, Kuulee = false, JahtaaMs = 0, Ottaa = false };
+        /// <summary>Torkkuva vartija (muuriportaiden juurella): torkkuessa ei näe, kävelyn ääni herättää (nousee 1,5 s), syödessä näkee
+        /// vain katsejaksoissa (pää alas 6 s, katse 3 s); muuten kuin vartija.</summary>
+        public static readonly VartijaProfiili Torkku = new VartijaProfiili { Nimi = "torkku" };
 
         public static VartijaProfiili Hae(string nimi) => nimi switch
         {
-            "portinvartija" => Portinvartija, "kokki" => Kokki, "apulainen" => Apulainen, "renki" => Renki, "vesipoika" => Renki, _ => Vartija,
+            "portinvartija" => Portinvartija, "kokki" => Kokki, "apulainen" => Apulainen, "renki" => Renki, "vesipoika" => Renki, "torkku" => Torkku, _ => Vartija,
         };
     }
 
@@ -85,6 +88,12 @@ namespace Matkakirja.Linssit.Seikkailu
         // Irtipääsy (kohta 3.4, omistajan päätös 1 suosituksen mukaan): otteen jälkeen 1,0 s:n ikkuna, toiminto → hahmo horjahtaa ja
         // pelaaja saa 3 s etumatkan; kerran per hahmo 60 sekunnissa.
         public const double IrtiIkkunaS = 1.0, HorjahdusS = 3.0, IrtiValiS = 60;
+        public const double NousuS = 1.5, SyoAlasS = 6, SyoKatseS = 3;
+        /// <summary>Torkkuu (profiili torkku): ei näe; ääni herättää. Syö: näkee vain katsejaksoissa.</summary>
+        public bool Torkkuu, Syo;
+        double syoKello;
+        /// <summary>Syödessä katse ylhäällä (katsejakso 3 s yhdeksästä).</summary>
+        public bool SyoKatsoo => Syo && syoKello % (SyoAlasS + SyoKatseS) >= SyoAlasS;
         double kello, viimeIrti = double.NegativeInfinity, horjahdus;
         /// <summary>Aika otteesta (s), kun Tila = Kiinni.</summary>
         public double OteS { get; private set; }
@@ -126,6 +135,7 @@ namespace Matkakirja.Linssit.Seikkailu
         public double NakoVoima(in VartijanSyote s)
         {
             if (s.Piilossa || !s.NakolinjaVapaa || !Profiili.Havaitsee) return 0;
+            if (Torkkuu && !SyoKatsoo) return 0;
             double dx = s.PelaajaX - s.VartijaX, dz = s.PelaajaZ - s.VartijaZ, d = Math.Sqrt(dx * dx + dz * dz);
             double nako = Valppaus > 0 ? Math.Max(Profiili.NakoM, ValpasNakoM * Profiili.NakoM / NakoM) : Profiili.NakoM;
             double liike = s.PelaajaVauhti is double pv ? (pv < 0.15 ? 0.8 : pv > 2.5 ? 1.25 : 1.0) : 1.0;
@@ -147,6 +157,24 @@ namespace Matkakirja.Linssit.Seikkailu
             kello += dt;
             if (Tila == VartijanTila.Kiinni) { Vauhti = 0; OteS += dt; return; }
             if (horjahdus > 0) { horjahdus -= dt; Vauhti = 0; return; }
+            if (Torkkuu)
+            {
+                // Torkkuva vartija istuu: syödessä katsejaksot, ääni herättää (nousee NousuS), täysi mittari herättää jahtiin.
+                Vauhti = 0; if (Syo) syoKello += dt;
+                bool herasi = false;
+                if (s.Aanet != null)
+                    foreach (var a in s.Aanet)
+                    {
+                        double dx = a.X - s.VartijaX, dz = a.Z - s.VartijaZ;
+                        if (dx * dx + dz * dz <= a.KuuluvuusM * a.KuuluvuusM) { herasi = true; EpailyX = a.X; EpailyZ = a.Z; break; }
+                    }
+                double vk = NakoVoima(s);
+                if (vk > 0) { Mittari = Math.Min(1, Mittari + vk * dt); EpailyX = s.PelaajaX; EpailyZ = s.PelaajaZ; if (Mittari >= Raja) herasi = true; }
+                else Mittari = Math.Max(0, Mittari - MittariLaskuS * dt);
+                if (!herasi) return;
+                Torkkuu = false; Syo = false; horjahdus = NousuS; AloitaVaihe(VartijanTila.Etsinta); merkki = true; rauhaS = 0;
+                return;
+            }
             if (Valppaus > 0) Valppaus = Math.Max(0, Valppaus - dt);
             double voima = NakoVoima(s);
             double dp = Etaisyys(s.VartijaX, s.VartijaZ, s.PelaajaX, s.PelaajaZ);
@@ -218,6 +246,12 @@ namespace Matkakirja.Linssit.Seikkailu
                     Tila = VartijanTila.Partio; odotus = 0;
                     Partio(dt, s);
                     break;
+            }
+            // Torkkuja palaa paikalleen ja nukahtaa uudelleen (ei valppaana).
+            if (Profiili == VartijaProfiili.Torkku && Tila == VartijanTila.Partio && Valppaus <= 0 && reitti.Count > 0
+                && Etaisyys(s.VartijaX, s.VartijaZ, reitti[0].X, reitti[0].Z) <= PerillaM)
+            {
+                Torkkuu = true; Mittari = 0;
             }
         }
 
