@@ -1,17 +1,25 @@
-# Sisältökirjurin luovutus 7.10.2026 (päivitetty klo 16.30; tilinvaihto ~00)
+# Sisältökirjurin luovutus 7.10.2026 (päivitetty klo ~19.20; tilinvaihto 22.15–22.50)
 
-## Valmista ja mergettyä tänään
-- Oppaan kuvahaku: #4096, #4100 (236 paikkaa, 38 sallitun säteet); tools/oppaan-kuvat.mjs, peruste "kaupungin päänähtävyys".
-- Faktapohjat: Kielletty kaupunki 1873 (#4110, #4112), Giza (#4119), Olavinlinna (#4125, #4130); Olavinlinnan tietokortit lähdetarkistettu (#4129); KK 1923/Giza lähdetarkistus PR #4151 (odottaa Päätoimittajaa).
-- Kyproksen pohjoisosa (maakuntateksti + Pulu): #4145 mergetty.
-- Codex-tilaukset (claude/postilaatikko, posti/): kuumailmapallo-latauskuva, 25 sallitun kaupungin kaupunkinäkymät (A), Olavinlinnan 12 tietokorttikuvitusta (B), **fotorealismi-lisäys**, Tott-uusinta (puhujakuvat peruttu omistajan huomautuksesta), **Pariisin 8 puuttuvaa yksityiskohtakuvaa** (posti/sisaltokirjuri-codex-pariisi-yksityiskohdat-20261007.md).
-- **PARIISIN KUVAT VALMIIT**: haara `fable-pariisi-kuvat-2` (esittely-tyo/kuvat/pariisi-yksityiskohdat.json/.md, codex-tilaus-pariisi.md; 68 kuvaa, tarkistajat A1/A2/B, korjaukset), paketti viety ämpäriin `esittely/pariisi-v1/` (68 JPEG + JSON, vie-paketti 16.23, 69 tiedostoa, 0 virhettä; paketti `proto-3d/_valmiit/pariisi-yksityiskohdat-vienti-20261007`). Pelikoodari kytkee `media_url`-kentät.
-- Kaikki worktreet poistettu (wt/sisaltokirjuri-* ei jäljellä).
+## Valmista ja mergettyä/avointa tänään
+- Oppaan kuvahaku #4096, #4100 (236 paikkaa, 38 sallitun säteet). Faktapohjat (KK 1873/1923, Giza, Olavinlinna) ja Olavinlinnan tietokorttien lähdetarkistus mergetty. Kyproksen pohjoisosa #4145 mergetty. KK/Giza-lähdetarkistus #4151 mergetty.
+- Codex-tilaukset (claude/postilaatikko, posti/): kuumailmapallo-latauskuva, 25 kaupunkinäkymää (A), Olavinlinnan 12 tietokorttikuvitusta (B), fotorealismi-lisäys, Tott-uusinta (puhujakuvat peruttu), Pariisin 7 puuttuvaa (posti 50aea672f), Prahan+Wienin 5 puuttuvaa (a81de6afb). Tulokset: Codex kirjoittaa kuittaukset postilaatikkoon; välitä Päätoimittajalle (1 vertailukuva/erä), kaupunkinäkymäerät Julkaisijalle, latauskuva myös LS1:lle; yksityiskohtahavainnekuvat → uusi luetteloversio (rivit "havainnekuva": true).
+- **ESITTELYJEN YKSITYISKOHTAKUVAT (Päätoimittajan linja: paikallisesti, sonnet, ≤ 2 rinnakkain, tarkistaja eri agentti)**:
+  - Pariisi 67 kuvaa: ämpäri `esittely/pariisi-v2/pariisi-yksityiskohdat.json` (v1 vanhentunut + orpo Pompidou-kuva e96fe3107395eede.jpg: Julkaisijan/omistajan poistettava, en voi).
+  - Praha 54: `esittely/praha-v1/praha-yksityiskohdat.json`; Wien 49: `esittely/wien-v1/wien-yksityiskohdat.json` (Pelikoodari kytkee, indeksi PR #4158).
+  - PR #4160 (Pariisi+Praha+Wien tulokset ja työkalut, esittely-tyo/kuvat/) Julkaisijalla.
+- Worktreet: poistettu paitsi `wt/sisaltokirjuri-praha-wien-kuvat` (haara fable-praha-wien-kuvat, työkalut ja malli-tekstit; poista kun ei tarvita: `tools/uusi-worktree.sh --poista sisaltokirjuri-praha-wien-kuvat`).
 
-## Kesken / jonossa
-- Odotan Päätoimittajan uusia eriä. Muut esittelykaupungit: pilvityöt lopetettu (krediitit); jos Päätoimittaja haluaa ne paikallisesti, mallina Pariisin työtapa (ohje: esittely-tyo/kuvat/OHJE… haarassa fable-pariisi-kuvat historiassa; validaattori yhdista.py; Sonnet-kerääjät ja eri Sonnet-tarkistajat; kuvat Commons FilePath?width=1280 UA MatkakirjaBot, 1 req/s; rajaus + sips; vie-paketti).
-- Codex-tuloksia (A, B, latauskuva, Tott, Pariisi) odotetaan postilaatikkoon; välitä ne Päätoimittajalle (yksi vertailukuva/erä), oppaan kaupunkinäkymäerät suoraan Julkaisijalle; latauskuva myös LS1:lle.
+## KESKEN: ROOMA → LONTOO → KÖÖPENHAMINA (yksityiskohtakuvat)
+Työtapa (kopioi Praha/Wien): työkalut `esittely-tyo/kuvat/tyokalut/` (haarassa fable-praha-wien-kuvat ja PR #4160):
+1. Tekstit: `esittely-tyo/malli/<kaupunki>.json` = tuotannon `https://media.matkakirja.app/opas/esittely-v1/<id>.json` (rooma 19 kohdetta, lontoo 19, koopenhamina 14; avaustekstit proto-3d/_tyo/opas-esittely/kolme/avaus-lista.json).
+2. Kaksi Sonnet-kerääjää (esim. kohteet jaettuina) → `scratchpad/kuvat/<kaupunki>/osa1.json, osa2.json, codex1.md, codex2.md`; prompt-pohja: OHJE-kaupunki.md + panoraamavapaussääntö (Italia: ei moderneja rakennuksia/nykytaidetta; vain vanhat/PD).
+3. `python3 esittely-tyo/kuvat/tyokalut/yhdista_kaupunki.py <kaupunki> <työkansio>` (ankkurit täsmälleen kerran, ≥ 15 sanaa välein, lisenssit, kuvateksti ≤ 8 sanaa, ei kaksoiskuvaa); karsi liian lähekkäiset ankkurit.
+4. Kaksi eri Sonnet-tarkistajaa (rivit puoliksi) → tarkistus_N.json (OK/KORJAA/HYLKAA + rajaus); sovella korjaukset osa*.json:iin, aja yhdista uudelleen.
+5. `python3 …/paketoi.py <kaupunki> <työkansio> <pvm>` (lataa Commons FilePath?width=1280, UA MatkakirjaBot, rajaus sips, JPEG q85, `_valmiit/<kaupunki>-yksityiskohdat-vienti-<pvm>`), `vie-paketti.sh --kuiva` ja sitten ilman; tarkista URL 200.
+6. Codex-tilaus puuttuvista fotorealistisina (esimerkki posti/sisaltokirjuri-codex-praha-wien-yksityiskohdat-20261007.md), viesti Päätoimittajalle + Pelikoodarille + Linssisepälle (polku → yksityiskohdat_polut).
+- Rooma: 2 kerääjää ajossa 19.15 (osa1 avaus+8 kohdetta, osa2 11 kohdetta; tuloskansio `/private/tmp/claude-502/-Users-Shared-Claude-Matkakirja-sisaltokirjuri/93583568-693e-438c-bad3-8f5e77e8e28c/scratchpad/kuvat/rooma/`; jos kansio katoaa, aja kerääjät uudelleen). Lontoo ja Köpis ei aloitettu.
 
 ## Opit
-- Wikimedia 429: ≤ 6–7 rinnakkaista; lataus 1 req/s oikealla UA:lla. Skannattu PDF: macOS PDFKit/Vision-OCR; journal.fi Anubis-suojaa ei kierretä (WebFetch hakee PDF:n).
-- Viestit Päätoimittajalle send_messagella session id:llä `local_5df52e10-10e4-4b72-9554-0049db300dfe` (nimi → pidätys). Worktree poistetaan mergen jälkeen; 5 h raja/viikkoraja: pushaa luovutus ajoissa.
+- Pilvityöt lopetettu (krediitit): kaikki tutkimus paikallisesti Sonnet-agenteilla; pidä scratchpad-tulokset ajan tasalla ja pushaa tulokset haaraan.
+- Päätoimittajan linjaukset: Luxorin obeliski säilyy, Pompidou (ei FoP) pois, pikku vintiö säilyy; peli käännetään englanniksi (sinä-muoto, ei he/she: Fogg/you/they).
+- Viestit Päätoimittajalle send_messagella session id:llä `local_5df52e10-10e4-4b72-9554-0049db300dfe`.
