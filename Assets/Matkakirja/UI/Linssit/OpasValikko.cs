@@ -654,11 +654,14 @@ namespace Matkakirja.Natiivi
         {
             Vieritys();
             Kirjasimet.Aseta(Rakenne.Teksti("KYSY OPPAALTA", "mk-linssivalitsin__valiotsikko", rivit), Kirjasin.ModerniLihava);
+            // Omistaja 7.10. 10.3x: ensimmäisenä "Kerro lisää" (LS1:n KysyKysymykset tuo sen kierroksella listan kärkeen,
+            // OpasSovitin.KerroLisaaTeksti), sitten viisi valmista kysymystä ja lopuksi mikrofoni ja näppäimistö (PuhuJaKirjoita).
             if (!(KysyLista is IReadOnlyList<string> kys) || kys.Count == 0)
             {
                 Kirjasimet.Aseta(Rakenne.Teksti("Kysymykset latautuvat…", "mk-linssivalikko__lahde", rivit), Kirjasin.Moderni);
                 valikko.schedule.Execute(() => { if (Auki && nakyma == Nakyma.Kysy && KysyLista is IReadOnlyList<string> k && k.Count > 0) Rakenna(); })
                     .Every(500).Until(() => !Auki || nakyma != Nakyma.Kysy || KysyLista is IReadOnlyList<string> k2 && k2.Count > 0);
+                PuhuJaKirjoita();
                 return;
             }
             foreach (var q in kys)
@@ -677,6 +680,15 @@ namespace Matkakirja.Natiivi
                 b.tooltip = t;
                 nykyiset.Add((b, teko));
             }
+            PuhuJaKirjoita();
+        }
+
+        /// <summary>Kysy-valikon loppuun mikrofoni ja näppäimistö (omistaja 7.10. 10.3x) TOIMINTO-riveinä.</summary>
+        void PuhuJaKirjoita()
+        {
+            Viiva();
+            Komento("Puhu oppaalle", Puhu, rivit);
+            Komento("Kirjoita oppaalle", Kirjoita, rivit);
         }
 
         void RakennaLiiku()
@@ -691,14 +703,7 @@ namespace Matkakirja.Natiivi
                     .Every(500).Until(() => !Auki || nakyma != Nakyma.Liiku || OpasSovitin.Kohteet != null);
             }
             else foreach (var k in kohteet) LiikuRivi(k);
-            // Alimpana aina Kaupunkikierros (omistaja 6.10.).
-            Action kierros = () => { Sulje(); Debug.Log("MATKAKIRJA opas: kaupunkikierros"); OpasSovitin.Kaupunkikierros(); };
-            // Kaupunkikierros kiinnitettynä paneelin alareunaan, aina näkyvissä (omistaja 16.3x); lista vierii sen yläpuolella.
-            var kb = Rakenne.Nappi(null, "mk-linssivalikko__kohta mk-linssivalikko__komento", () => Rivilta(kierros), valikko);
-            kb.style.flexShrink = 0;
-            Kirjasimet.Aseta(Rakenne.Teksti("Kaupunkikierros", "mk-linssivalikko__nimi", kb), Kirjasin.ModerniLihava);
-            kb.tooltip = "Kaupunkikierros";
-            nykyiset.Add((kb, kierros));
+            // Kaupunkikierros-rivi poistettu (omistaja 7.10. 10.3x): esitys on yksi (avaus → kierros lyhyillä versioilla), ei kahdennusta.
         }
 
         void LiikuRivi(Matkakirja.Linssit.Kierros.OpasTaky t)
