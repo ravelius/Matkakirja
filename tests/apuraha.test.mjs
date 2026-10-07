@@ -13,7 +13,7 @@ test('esittely.json on kelvollinen: filosofia, korostettu kehitysmuutos, pelit, 
   assert.equal(d.nappi, 'Apurahahakemus – katso tämä ensin');
   // Omistaja 7.10.2026: ensin pelin filosofia, sitten korostettuna kehityksen siirto natiiviin, sitten Maapallo,
   // Kuumailmapallo ja ISS omina alaotsikkoinaan ja lopuksi pelit.
-  assert.equal(d.kappaleet.length, 9);
+  assert.equal(d.kappaleet.length, 8);
   assert.deepEqual(d.kappaleet.slice(2, 5).map((k) => k.otsikko), ['Maapallo', 'Kuumailmapallo', 'ISS']);
   assert.match(d.kappaleet[0].teksti, /^Matkakirja ja unohdettu aarre on kokemuksellinen oppimispeli/);
   assert.equal(d.kappaleet[1].korostus, true);
@@ -84,9 +84,12 @@ test('esittelylinssit avaavat kehittäjätilan linssijoukon ilman kehittäjätil
 });
 
 test('nappi avaa valmiit linssit (omistaja 7.10.2026 klo 15.0x): sama lista webille ja natiiville, ei kehittäjälinssejä', async () => {
-  const k = raaka.kappaleet.find((x) => x.nappi?.toiminto === 'valmiit-linssit');
+  // Oma ylätason kenttä: vanhat TF-appit (kappaleen toiminto "esittelylinssit") eivät näytä nappia eivätkä tekstiä.
+  assert.ok(raaka.kappaleet.every((x) => !x.nappi && !/linssit/i.test(x.teksti ?? '')), 'kappaleissa ei nappia eikä sen tekstiä');
+  const k = { teksti: raaka.valmiitLinssit.teksti, nappi: { linssit: raaka.valmiitLinssit.linssit } };
   assert.equal(k.teksti, 'Nappi avaa heti kaikki valmiit linssit.');
-  assert.equal(k.nappi.teksti, 'Avaa valmiit linssit');
+  assert.equal(raaka.valmiitLinssit.nappi, 'Avaa valmiit linssit');
+  assert.deepEqual(tarkistaApuraha(raaka).valmiitLinssit.linssit, raaka.valmiitLinssit.linssit);
   assert.ok(!/kehitteillä/.test(JSON.stringify(raaka.kappaleet)), 'ei lupausta kehitteillä olevista');
   const { LINSSIT, KEHITTAJALINSSIT } = await import('../js/linssit/rekisteri.js');
   const valmiit = LINSSIT.filter((r) => r.tila !== 'hiomassa' && r.tuo).map((r) => r.tunnus);

@@ -43,7 +43,17 @@ export function tarkistaApuraha(d) {
     kappaleet,
     kuvat,
     webHuomautus: typeof d.webHuomautus === 'string' ? d.webHuomautus : '',
+    // "Avaa valmiit linssit" (omistaja 7.10.2026 klo 15.0x): oma kenttä, jota vanhat TF-appit eivät lue.
+    valmiitLinssit: valmiitLinssit(d.valmiitLinssit),
   };
+}
+
+/** valmiitLinssit { teksti, nappi, valmis, linssit[] } tai null (puuttuva nappi tai tyhjä lista). */
+function valmiitLinssit(v) {
+  if (!v || typeof v.nappi !== 'string' || !Array.isArray(v.linssit)) return null;
+  const linssit = v.linssit.filter((t) => typeof t === 'string');
+  if (!linssit.length) return null;
+  return { teksti: typeof v.teksti === 'string' ? v.teksti : '', nappi: v.nappi, valmis: typeof v.valmis === 'string' ? v.valmis : v.nappi, linssit };
 }
 
 /** Lataa esittelyn kerran; epäonnistuessa null (portti näkyy ilman nappia). */

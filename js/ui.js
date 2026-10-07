@@ -17765,8 +17765,8 @@ export class UI {
         for (const r of k.lista) ol.appendChild(html('li', null, r));
         kortti.appendChild(ol);
       }
-      if (k.nappi?.toiminto === 'esittelylinssit' || k.nappi?.toiminto === 'valmiit-linssit') {
-        // Valmiit linssit (nappi.linssit) heti käyttöön ilman pisteitä (js/apuraha.js → js/linssit/omistus.js).
+      if (k.nappi?.toiminto === 'esittelylinssit') {
+        // Vanha kappalenappi: kaikki selaimen toimivat linssit heti käyttöön ilman pisteitä (js/apuraha.js → js/linssit/omistus.js).
         const rivi = html('p', 'periaate-linkit');
         const b = html('button', 'ghost apuraha-toiminto');
         b.type = 'button';
@@ -17774,7 +17774,7 @@ export class UI {
         b.textContent = k.nappi.teksti;
         if (esittelylinssitAuki()) valmis();
         b.addEventListener('click', () => {
-          avaaEsittelylinssit(k.nappi.linssit);
+          avaaEsittelylinssit();
           lahetaKaynti('esittelylinssit', APURAHA_VERSIO());
           sfx.play('paper');
           valmis();
@@ -17792,6 +17792,28 @@ export class UI {
         p.appendChild(a);
         kortti.appendChild(p);
       }
+    }
+
+    // "Avaa valmiit linssit" (omistaja 7.10.2026 klo 15.0x, esittely.json valmiitLinssit): vain listan linssit heti
+    // käyttöön ilman pisteitä ja ilman kehittäjätilaa (js/apuraha.js → js/linssit/omistus.js); sama lista natiivilla.
+    if (esittely.valmiitLinssit) {
+      const v = esittely.valmiitLinssit;
+      if (v.teksti) kortti.appendChild(html('p', 'periaate-teksti apuraha-teksti', v.teksti));
+      const rivi = html('p', 'periaate-linkit');
+      const b = html('button', 'ghost apuraha-toiminto');
+      b.type = 'button';
+      const valmis = () => { b.textContent = v.valmis; b.disabled = true; };
+      b.textContent = v.nappi;
+      if (esittelylinssitAuki()) valmis();
+      b.addEventListener('click', () => {
+        avaaEsittelylinssit(v.linssit);
+        lahetaKaynti('esittelylinssit', APURAHA_VERSIO());
+        sfx.play('paper');
+        valmis();
+        this.render?.();
+      });
+      rivi.appendChild(b);
+      kortti.appendChild(rivi);
     }
 
     if (esittely.kuvat.length) {
