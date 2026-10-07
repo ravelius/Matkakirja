@@ -66,6 +66,11 @@ namespace Matkakirja.Natiivi
         public const float PehmeaSkaala = 0.5f, Tummuus = 0.85f;
         Camera kooste;
         RenderTexture rt;
+        // ITSETARKISTUS (Päätoimittaja 19.0x: tummenemisriski ilman simua): muutaman kehyksen jälkeen GPU:lta luetaan korin
+        // tekstuurin ylin rivi (taivas: pitää olla läpinäkyvä) ja alin rivi (korin reuna: pitää peittää). Jos jompikumpi ei täsmää
+        // (alfa ei säily laitteella tai kori ei piirry tekstuuriin), palataan pysyvästi suoraan overlay-piirtoon ilman pehmennystä.
+        static bool pehmeaEiToimi;
+        int tarkistusKehys = -1; bool tarkistusKesken, tarkistettu;
         Material koosteMat;
         Transform koosteTaso;
         Transform juuri, koriKaanto, koysiKaanto;
@@ -83,7 +88,7 @@ namespace Matkakirja.Natiivi
         {
             paalla &= Paalla && kamera != null;
             if (paalla && (perus != kamera || overlay == null)) Luo(kamera);
-            if (paalla && overlay != null) VarmistaKohde();   // ruudun koko (kierto) ennen piirtoa, ei piirron sisällä
+            if (paalla && overlay != null && rt != null) { VarmistaKohde(); Itsetarkistus(); }   // ruudun koko (kierto) ennen piirtoa
             if (paalla == kaytossa) return;
             kaytossa = paalla;
             if (juuri != null) juuri.gameObject.SetActive(paalla);
@@ -121,6 +126,7 @@ namespace Matkakirja.Natiivi
             var go = new GameObject("Pallon kori (overlay)") { layer = Kerros };
             go.transform.SetParent(kamera.transform, false);
             overlay = go.AddComponent<Camera>();
+            if (pehmeaEiToimi) { SuoraTila(kamera); goto materiaalit; }
             overlay.clearFlags = CameraClearFlags.SolidColor;
             overlay.backgroundColor = Color.clear;
             overlay.cullingMask = 1 << Kerros;
@@ -151,6 +157,8 @@ namespace Matkakirja.Natiivi
             var qr = q.GetComponent<MeshRenderer>();
             qr.sharedMaterial = koosteMat; qr.shadowCastingMode = ShadowCastingMode.Off; qr.receiveShadows = false;
             koosteTaso = q.transform;
+            tarkistusKehys = Time.frameCount + 4; tarkistusKesken = false; tarkistettu = false;
+            materiaalit:
             var sh = Shader.Find("Matkakirja/Linssit/PalloKori");
             punos = Materiaali(sh, new Color(0.55f, 0.40f, 0.24f), 1, new Vector4(60, 6, 0, 0));
             nahka = Materiaali(sh, new Color(0.30f, 0.17f, 0.09f), 0, Vector4.one);
@@ -409,9 +417,58 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Kaupunkikameran lopullinen asento tässä kehyksessä: kiihtyvyys ja korin kulmat ennen piirtoa.</summary>
+        /// <summary>Suora piirto (TF 161:n tapa): korin kamera overlayna kaupunkikameran pinossa, ei tekstuuria eikä koostetta.</summary>
+        void SuoraTila(Camera kamera)
+        {
+            overlay.targetTexture = null;
+            overlay.clearFlags = CameraClearFlags.Depth;
+            overlay.cullingMask = 1 << Kerros;
+            overlay.nearClipPlane = 0.05f; overlay.farClipPlane = 20f;
+            overlay.GetUniversalAdditionalCameraData().renderType = CameraRenderType.Overlay;
+            var pd = kamera.GetUniversalAdditionalCameraData();
+            if (pd != null && kooste != null) pd.cameraStack.Remove(kooste);
+            if (pd != null && !pd.cameraStack.Contains(overlay)) pd.cameraStack.Insert(0, overlay);
+            if (kooste != null) { Object.Destroy(kooste.gameObject); kooste = null; koosteTaso = null; }
+            if (rt != null) { rt.Release(); Object.Destroy(rt); rt = null; }
+        }
+
+        void Itsetarkistus()
+        {
+            if (tarkistettu || tarkistusKesken || pehmeaEiToimi || Time.frameCount < tarkistusKehys) return;
+            if (!SystemInfo.supportsAsyncGPUReadback) { tarkistettu = true; return; }
+            tarkistusKesken = true;
+            int w = rt.width, h = rt.height, kehys = Time.frameCount;
+            // Rivit keskeltä puolet leveydestä: ylin (köydet ovat sivuilla, keskellä taivas) ja alin (korin etureuna).
+            int x0 = w / 4, lev = w / 2;
+            float? yla = null, ala = null;
+            void Valmis()
+            {
+                if (yla == null || ala == null) return;
+                tarkistusKesken = false; tarkistettu = true;
+                // Riviorientaatiosta riippumatta (GPU:n y voi olla käännetty): toisen reunan pitää olla läpinäkyvä, toisen peittää.
+                bool ok = Mathf.Min(yla.Value, ala.Value) < 0.1f && Mathf.Max(yla.Value, ala.Value) > 0.5f;
+                Debug.Log($"MATKAKIRJA kaupunki: kori pehmeä itsetarkistus {(ok ? "ok" : "EI TOIMI → suora piirto")} (ylin rivi peittää {yla:P0}, alin {ala:P0})");
+                if (!ok && perus != null && overlay != null) { pehmeaEiToimi = true; SuoraTila(perus); }
+            }
+            void Pyyda(int y, System.Action<float> tulos)
+            {
+                AsyncGPUReadback.Request(rt, 0, x0, lev, y, 1, 0, 1, TextureFormat.RGBA32, r =>
+                {
+                    if (r.hasError || rt == null) { tulos(-1f); return; }
+                    var d = r.GetData<Color32>();
+                    int peittaa = 0;
+                    for (int i = 0; i < d.Length; i++) if (d[i].a > 127) peittaa++;
+                    tulos(d.Length > 0 ? peittaa / (float)d.Length : -1f);
+                });
+            }
+            Pyyda(h - 2, v => { yla = v < 0 ? 0f : v; Valmis(); });
+            Pyyda(1, v => { ala = v < 0 ? 1f : v; Valmis(); });
+        }
+
         /// <summary>Korin tekstuuri puolikkaalla resoluutiolla (uusi, kun ruudun koko muuttuu).</summary>
         void VarmistaKohde()
         {
+            if (pehmeaEiToimi || overlay == null) return;
             int w = Mathf.Max(16, Mathf.RoundToInt(Screen.width * PehmeaSkaala)), h = Mathf.Max(16, Mathf.RoundToInt(Screen.height * PehmeaSkaala));
             if (rt != null && rt.width == w && rt.height == h) return;
             if (rt != null) { overlay.targetTexture = null; rt.Release(); Object.Destroy(rt); }
@@ -434,7 +491,7 @@ namespace Matkakirja.Natiivi
 
         void EnnenPiirtoa(ScriptableRenderContext _, Camera c)
         {
-            // Korin kamera piirtää ensin (depth perus − 1): asento ja liike lasketaan sen piirron alussa.
+            // Korin kamera piirtää ensin (depth perus − 1; suorassa tilassa pinossa perus-kameran jälkeen): asento ja liike sen alussa.
             if (c != overlay || perus == null || juuri == null) return;
             SovitaKooste();
             overlay.aspect = perus.aspect;
