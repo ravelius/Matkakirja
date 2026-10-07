@@ -13,7 +13,7 @@ JATKA TÄSTÄ (tyhjästä kontekstista): proto-git /Users/Shared/Claude/proto-3d
   sis. LS1 esitys-giza 8ff8c0be + omistajan metropalaute KUITATTU b1c53bba). Pyydetty Julkaisijalta KÄÄNNÖS + simu ~6 min →
   skriptit/vuoro-koysi.sh <app> (iPhone vaaka + iPad; kori-GLB kopioidaan Documents/pallokori/) → 2 stilliä Päätoimittajalle
   → hän kuittaa koko esityserän (metro, Kysy-rivi, kori, opastus kerran) junaan 161 → SHA Natiivisepälle.
-- JUNA 161 natiivi-ui/kehittaja-tf 270992bd (master BUILD 159): kehittäjätila koodilla myös App Storessa + TESTAAJATILA (oma koodi,
+- JUNA 161 natiivi-ui/kehittaja-tf 767c70eb (KUITATTU, SHA Natiivisepällä; master BUILD 159): kehittäjätila koodilla myös App Storessa + TESTAAJATILA (oma koodi,
   vain tiiviste Asetukset.TestaajaTiiviste; kaikki linssit + maailmatila) + versionumero → Mitä uutta → "Kehittäjätila"-nappi.
   Natiiviseppä todentaa App Store -käännöksellä Päätoimittajan SHA-vahvistuksen jälkeen. Avoin kysymys Päätoimittajalle: sulkeutuvatko
   esittelylinssit, kun testaajatila kytketään pois (nyt eivät).
