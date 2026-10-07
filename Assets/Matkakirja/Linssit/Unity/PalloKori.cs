@@ -59,6 +59,15 @@ namespace Matkakirja.Natiivi
 
         readonly KoriLiike liike = new KoriLiike();
         Camera perus, overlay;
+        // PEHMEÄ KORI (omistaja 7.10. 19.0x, kuten Cupolan ikkuna): overlay = korin oma Base-kamera puolikkaalla resoluutiolla
+        // tekstuuriin; kooste = kaupunkikameran pinon overlay (kerros KoosteKerros), joka piirtää tekstuurin PalloKoriKooste-varjostimella
+        // (sumennus ~2 näyttöpikseliä, tummennus 0,85). Kaupunki terävä; korin piirto kevenee (neljännes pikseleistä).
+        public const int KoosteKerros = 18;
+        public const float PehmeaSkaala = 0.5f, Tummuus = 0.85f;
+        Camera kooste;
+        RenderTexture rt;
+        Material koosteMat;
+        Transform koosteTaso;
         Transform juuri, koriKaanto, koysiKaanto;
         Material punos, nahka, koysi;
         float fov = -1, aspect = -1;
@@ -78,6 +87,7 @@ namespace Matkakirja.Natiivi
             kaytossa = paalla;
             if (juuri != null) juuri.gameObject.SetActive(paalla);
             if (overlay != null) overlay.enabled = paalla;
+            if (kooste != null) kooste.enabled = paalla;
             historia = 0;
             if (paalla) RenderPipelineManager.beginCameraRendering += EnnenPiirtoa;
             else RenderPipelineManager.beginCameraRendering -= EnnenPiirtoa;
@@ -86,12 +96,16 @@ namespace Matkakirja.Natiivi
         public void Sulje()
         {
             Kayta(false, null);
-            if (perus != null && overlay != null)
+            if (perus != null && kooste != null)
             {
                 var d = perus.GetUniversalAdditionalCameraData();
-                if (d != null) d.cameraStack.Remove(overlay);
+                if (d != null) d.cameraStack.Remove(kooste);
             }
-            if (overlay != null) Object.Destroy(overlay.gameObject);
+            if (overlay != null) { overlay.targetTexture = null; Object.Destroy(overlay.gameObject); }
+            if (kooste != null) Object.Destroy(kooste.gameObject);
+            if (rt != null) { rt.Release(); Object.Destroy(rt); }
+            if (koosteMat != null) Object.Destroy(koosteMat);
+            kooste = null; rt = null; koosteMat = null; koosteTaso = null;
             foreach (var m in new[] { punos, nahka, koysi }) if (m != null) Object.Destroy(m);
             KytkeAanimaisema(false);
             VasenKoysiNorm = default;
@@ -106,12 +120,36 @@ namespace Matkakirja.Natiivi
             var go = new GameObject("Pallon kori (overlay)") { layer = Kerros };
             go.transform.SetParent(kamera.transform, false);
             overlay = go.AddComponent<Camera>();
-            overlay.clearFlags = CameraClearFlags.Depth;
+            overlay.clearFlags = CameraClearFlags.SolidColor;
+            overlay.backgroundColor = Color.clear;
             overlay.cullingMask = 1 << Kerros;
             overlay.nearClipPlane = 0.05f; overlay.farClipPlane = 20f;
-            overlay.GetUniversalAdditionalCameraData().renderType = CameraRenderType.Overlay;
+            overlay.allowHDR = false; overlay.allowMSAA = false;
+            overlay.depth = kamera.depth - 1f;   // ennen kaupunkikameraa: tekstuuri valmis koosteelle
+            var od = overlay.GetUniversalAdditionalCameraData();
+            od.renderType = CameraRenderType.Base;
+            od.renderPostProcessing = false; od.antialiasing = AntialiasingMode.None;
+            od.requiresDepthTexture = false; od.requiresColorTexture = false;
+            VarmistaKohde();
+            var kg = new GameObject("Pallon kori (kooste)") { layer = KoosteKerros };
+            kg.transform.SetParent(kamera.transform, false);
+            kooste = kg.AddComponent<Camera>();
+            kooste.clearFlags = CameraClearFlags.Depth;
+            kooste.cullingMask = 1 << KoosteKerros;
+            kooste.nearClipPlane = 0.1f; kooste.farClipPlane = 5f;
+            kooste.GetUniversalAdditionalCameraData().renderType = CameraRenderType.Overlay;
             var pd = kamera.GetUniversalAdditionalCameraData();
-            if (pd != null && !pd.cameraStack.Contains(overlay)) pd.cameraStack.Add(overlay);
+            if (pd != null && !pd.cameraStack.Contains(kooste)) pd.cameraStack.Insert(0, kooste);
+            koosteMat = new Material(Resources.Load<Shader>("Varjostimet/PalloKoriKooste")) { name = "Pallon kori (kooste)" };
+            koosteMat.SetFloat("_Tummuus", Tummuus);
+            koosteMat.SetTexture("_MainTex", rt);
+            var q = GameObject.CreatePrimitive(PrimitiveType.Quad);
+            Object.Destroy(q.GetComponent<Collider>());
+            q.name = "Korin taso"; q.layer = KoosteKerros;
+            q.transform.SetParent(kg.transform, false);
+            var qr = q.GetComponent<MeshRenderer>();
+            qr.sharedMaterial = koosteMat; qr.shadowCastingMode = ShadowCastingMode.Off; qr.receiveShadows = false;
+            koosteTaso = q.transform;
             var sh = Shader.Find("Matkakirja/Linssit/PalloKori");
             punos = Materiaali(sh, new Color(0.55f, 0.40f, 0.24f), 1, new Vector4(60, 6, 0, 0));
             nahka = Materiaali(sh, new Color(0.30f, 0.17f, 0.09f), 0, Vector4.one);
@@ -370,9 +408,36 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Kaupunkikameran lopullinen asento tässä kehyksessä: kiihtyvyys ja korin kulmat ennen piirtoa.</summary>
+        /// <summary>Korin tekstuuri puolikkaalla resoluutiolla (uusi, kun ruudun koko muuttuu).</summary>
+        void VarmistaKohde()
+        {
+            int w = Mathf.Max(16, Mathf.RoundToInt(Screen.width * PehmeaSkaala)), h = Mathf.Max(16, Mathf.RoundToInt(Screen.height * PehmeaSkaala));
+            if (rt != null && rt.width == w && rt.height == h) return;
+            if (rt != null) { overlay.targetTexture = null; rt.Release(); Object.Destroy(rt); }
+            rt = new RenderTexture(w, h, 24, RenderTextureFormat.ARGB32) { name = "Pallon kori", filterMode = FilterMode.Bilinear, wrapMode = TextureWrapMode.Clamp, antiAliasing = 1 };
+            rt.Create();
+            overlay.targetTexture = rt;
+            if (koosteMat != null) koosteMat.SetTexture("_MainTex", rt);
+        }
+
+        /// <summary>Koostetaso täyttää koostekameran näkymän (fov ja kuvasuhde kaupunkikamerasta).</summary>
+        void SovitaKooste()
+        {
+            if (kooste == null || koosteTaso == null) return;
+            kooste.fieldOfView = perus.fieldOfView;
+            float k = 2f * Mathf.Tan(perus.fieldOfView * 0.5f * Mathf.Deg2Rad);
+            koosteTaso.localPosition = new Vector3(0, 0, 1f);
+            koosteTaso.localRotation = Quaternion.identity;
+            koosteTaso.localScale = new Vector3(k * perus.aspect, k, 1f);
+        }
+
         void EnnenPiirtoa(ScriptableRenderContext _, Camera c)
         {
-            if (c != perus || overlay == null || juuri == null) return;
+            // Korin kamera piirtää ensin (depth perus − 1): asento ja liike lasketaan sen piirron alussa.
+            if (c != overlay || perus == null || juuri == null) return;
+            VarmistaKohde();
+            SovitaKooste();
+            overlay.aspect = perus.aspect;
             overlay.fieldOfView = perus.fieldOfView;
             if (!Mathf.Approximately(fov, perus.fieldOfView) || !Mathf.Approximately(aspect, perus.aspect))
             { fov = perus.fieldOfView; aspect = perus.aspect; Rakenna(); }
