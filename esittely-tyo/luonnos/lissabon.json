@@ -1,0 +1,555 @@
+{
+ "kaupunki": "Lissabon",
+ "id": "lissabon",
+ "versio": 1,
+ "kohteet": [
+  {
+   "id": "Q215003",
+   "nimi": "Belémin torni",
+   "kuvaus": "Joensuuta vartioiva linnoitustorni",
+   "luokka": "torni",
+   "koko_m": 60,
+   "korkeus_m": 30,
+   "teksti": "Joensuuta vartioiva Belémin torni valmistui vuonna 1519 pienelle saarelle lähelle Tejon pohjoisrantaa. Ylhäältä näkyy veteen työntyvä bastioni, jonka ampuma-aukoista seitsemäntoista tykkiä saattoi tulittaa joelle, ja sen takana kolmenkymmenen metrin korkuinen nelikerroksinen torni. Joen puoleisella parvekkeella seisoo Neitsyt Maria lapsi sylissään, merimiesten suojelija, jonka uskottiin tuovan laivat turvallisesti kotiin. Yhden vartiotornin juurella on kiveen hakattu sarvikuonon pää. Sen esikuvana pidetään eläintä, joka saapui Intiasta Lissaboniin kuningas Manuel ensimmäisen lahjaksi vuonna 1515.",
+   "lyhyt": "Joensuun vartiotornin, Belémin tornin, suunnitteli sotilasarkkitehti Francisco de Arruda. Usein kerrotaan, että joki siirtyi pois tornin ympäriltä vuoden 1755 maanjäristyksessä, mutta torni rakennettiin alun perin pienelle saarelle rannan tuntumaan. Vuodesta 1983 se on ollut Unescon maailmanperintöä Hieronymuksen luostarin kanssa.",
+   "syventava": "Miksi tornissa on sarvikuono?",
+   "kysymykset": [
+    "Mitä sarvikuonolle lopulta tapahtui?",
+    "Kuka suunnitteli Belémin tornin?",
+    "Miksi torni rakennettiin saarelle?",
+    "Käytettiinkö tornia myös vankilana?",
+    "Mitä tornin kiveen hakatut köydet tarkoittavat?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Torni valmistui 1519 vartioimaan Tejon suuta; nelikerroksinen, 30 metriä; bastionissa seitsemäntoista tykin ampuma-aukot.",
+     "url": "kaanon:pelin-aineisto"
+    },
+    {
+     "vaite": "Torni rakennettiin pienelle saarelle Tejossa lähellä Lissabonin rantaa; väite joen siirtymisestä 1755 on virheellinen.",
+     "url": "https://en.wikipedia.org/wiki/Bel%C3%A9m_Tower"
+    },
+    {
+     "vaite": "Joen puoleisella parvekkeella on Neitsyt Maria lapsi sylissään, Onnellisen kotiinpaluun neitsyt, merimiesten suojelija.",
+     "url": "https://eraa.org/tower-bel%C3%A9m"
+    },
+    {
+     "vaite": "Vartiotornin juurella on sarvikuonon pää; esikuvana pidetään Intiasta tuotua sarvikuonoa, joka saapui Lissaboniin 1515 Manuel I:lle.",
+     "url": "https://en.wikipedia.org/wiki/Bel%C3%A9m_Tower"
+    },
+    {
+     "vaite": "Sarvikuono saapui Lissaboniin 20.5.1515.",
+     "url": "kaanon:pelin-aineisto"
+    },
+    {
+     "vaite": "Suunnittelija sotilasarkkitehti Francisco de Arruda.",
+     "url": "https://en.wikipedia.org/wiki/Bel%C3%A9m_Tower"
+    },
+    {
+     "vaite": "Unescon maailmanperintöä vuodesta 1983 yhdessä Hieronymuksen luostarin kanssa.",
+     "url": "https://en.wikipedia.org/wiki/Bel%C3%A9m_Tower"
+    }
+   ]
+  },
+  {
+   "id": "Q272781",
+   "nimi": "Hieronymuksen luostari",
+   "kuvaus": "Manueliinisen tyylin luostari",
+   "luokka": "kirkko",
+   "koko_m": 300,
+   "korkeus_m": 40,
+   "teksti": "Hieronymuksen luostari levittäytyy Belémin rannan suuntaisesti pitkänä vaaleana julkisivuna, jonka keskellä on kirkon koristeellinen eteläportaali. Kuningas Manuel ensimmäinen aloitutti rakennustyöt vuonna 1501, ja ne rahoitettiin Aasiasta, Afrikasta ja Brasiliasta tuotujen mausteiden, jalokivien ja muiden tavaroiden veroilla. Työ kesti lähes sata vuotta. Kirkon laivassa lepäävät löytöretkeilijä Vasco da Gama ja runoilija Luís de Camões, jonka eepos kertoo da Gaman ensimmäisestä Intian-matkasta. Heidän jäännöksensä siirrettiin uusiin veistettyihin hautoihin vuonna 1880.",
+   "lyhyt": "Hieronymuksen luostariin Manuel ensimmäinen asetti hieronymiittamunkit, joiden tehtävä oli rukoilla kuninkaan sielun puolesta ja auttaa satamasta lähteviä merimiehiä. Munkkien reseptistä tunnetaan nykyään munakermaleivos pastel de nata. Joulukuussa 2007 Euroopan unionin johtajat kokoontuivat luostariin allekirjoittamaan Lissabonin sopimuksen.",
+   "syventava": "Kuka oli runoilija Camões?",
+   "kysymykset": [
+    "Miksi luostari rakennettiin joen rannalle?",
+    "Kuka oli runoilija Camões?",
+    "Mitä manueliininen tyyli tarkoittaa?",
+    "Mitä munkit leipoivat luostarissa?",
+    "Mitä luostarin rakennuksissa on nykyään?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Rakennustyöt alkoivat 1501 ja kestivät noin sata vuotta; Manuel I tilasi rakennuksen, ja se rahoitettiin Aasiasta, Afrikasta ja Brasiliasta tuotujen mausteiden, jalokivien ja muiden tavaroiden veroilla.",
+     "url": "https://en.wikipedia.org/wiki/Jer%C3%B3nimos_Monastery"
+    },
+    {
+     "vaite": "Vasco da Gaman ja Camõesin jäännökset siirrettiin 1880 uusiin veistettyihin hautoihin kirkon laivaan; Camõesin eepos Luusiadit kertoo da Gaman ensimmäisestä matkasta.",
+     "url": "https://en.wikipedia.org/wiki/Jer%C3%B3nimos_Monastery"
+    },
+    {
+     "vaite": "Eteläportaali on koristeellinen sisäänkäynti, João de Castilhon työ.",
+     "url": "https://famous-historic-buildings.org.uk/jeronimos_monastery.html"
+    },
+    {
+     "vaite": "Hieronymiittamunkkien tehtävä oli rukoilla kuninkaan sielun puolesta ja auttaa lähteviä merimiehiä.",
+     "url": "https://famous-historic-buildings.org.uk/jeronimos_monastery.html"
+    },
+    {
+     "vaite": "EU:n valtion- ja hallitusten päämiehet allekirjoittivat Lissabonin sopimuksen luostarissa 13.12.2007.",
+     "url": "https://famous-historic-buildings.org.uk/jeronimos_monastery.html"
+    },
+    {
+     "vaite": "Luostarin munkit paistoivat munakermaleivoksia; resepti päätyi Pastéis de Belémille.",
+     "url": "kaanon:pelin-aineisto"
+    }
+   ]
+  },
+  {
+   "id": "Q999002",
+   "nimi": "Praça do Comércio",
+   "kuvaus": "Kauppatori Tejon rannalla",
+   "luokka": "aukio",
+   "koko_m": 200,
+   "teksti": "Kauppatori, Praça do Comércio, avautuu Tejolle sataseitsemänkymmentäviisi metriä leveänä U-kirjaimen muotoisena aukiona, jota reunustavat kolmelta sivulta keltaiset kaarikäytävien kehystämät virastotalot. Paikalla seisoi kuninkaiden Ribeiran palatsi, jonka vuoden 1755 maanjäristys tuhosi yli seitsemänkymmenentuhannen kirjan kirjastoineen, ja siksi lissabonilaiset kutsuvat aukiota yhä Palatsin pihaksi. Keskellä seisoo kuningas Joosef ensimmäisen pronssinen ratsastajapatsas, joka valettiin yhdellä kertaa vuonna 1774. Helmikuussa 1908 aukiolla ammuttiin kuningas Kaarle ensimmäinen ja kruununprinssi Luís Filipe.",
+   "lyhyt": "Kauppatorin joenpuoleiselta reunalta portaat laskeutuvat suoraan veteen, ja aikanaan vieraat nousivat niitä pitkin veneistä palatsiin. Uuden aukion suunnittelivat maanjäristyksen jälkeen Eugénio dos Santos ja Carlos Mardel, kun markiisi Pombal johti kaupungin jälleenrakennusta.",
+   "syventava": "Kuka on aukion ratsastajapatsas?",
+   "kysymykset": [
+    "Kuka on aukion keskellä ratsastava kuningas?",
+    "Miksi aukion talot on maalattu keltaisiksi?",
+    "Mitä aukion laidan rakennuksissa on nyt?",
+    "Miksi kuningas ammuttiin tällä aukiolla?",
+    "Millainen oli maanjäristyksessä tuhoutunut palatsi?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Kauppatori mittaa 175 metriä joka suuntaan ja avautuu U-kirjaimena Tejolle.",
+     "url": "kaanon:pelin-aineisto"
+    },
+    {
+     "vaite": "Aukio avautuu U-kirjaimena Tejolle; muut sivut reunustavat kaarikäytävälliset hallintorakennukset, julkisivut keltaiset.",
+     "url": "https://en.wikipedia.org/wiki/Pra%C3%A7a_do_Com%C3%A9rcio"
+    },
+    {
+     "vaite": "Paikalla seisoi Ribeiran palatsi, jonka vuoden 1755 maanjäristys tuhosi; kirjastossa yli 70 000 kirjaa; aukiota kutsutaan yhä nimellä Terreiro do Paço, palatsin piha.",
+     "url": "https://en.wikipedia.org/wiki/Pra%C3%A7a_do_Com%C3%A9rcio"
+    },
+    {
+     "vaite": "Joosef I:n pronssinen ratsastajapatsas valettiin yhdellä valulla 15.10.1774.",
+     "url": "https://questoapp.com/lisbon/places-to-visit/estatua-do-rei-d-jose-i-lisbon"
+    },
+    {
+     "vaite": "Helmikuussa 1908 aukiolla murhattiin kuningas Carlos I ja kruununprinssi Luís Filipe.",
+     "url": "https://en.wikipedia.org/wiki/Pra%C3%A7a_do_Com%C3%A9rcio"
+    },
+    {
+     "vaite": "Vieraat saapuivat veneillä rantaan ja nousivat portaita palatsiin.",
+     "url": "https://en.wikipedia.org/wiki/Pra%C3%A7a_do_Com%C3%A9rcio"
+    },
+    {
+     "vaite": "Pombal johti jälleenrakennusta; aukion suunnittelivat Eugénio dos Santos ja Carlos Mardel.",
+     "url": "https://en.wikipedia.org/wiki/Pra%C3%A7a_do_Com%C3%A9rcio"
+    }
+   ]
+  },
+  {
+   "id": "Q985517",
+   "nimi": "Alfama",
+   "kuvaus": "Lissabonin vanhin kaupunginosa",
+   "luokka": "muu",
+   "koko_m": 600,
+   "teksti": "Lissabonin vanhin kaupunginosa Alfama laskeutuu Pyhän Yrjön linnan kukkulalta Tejo-joelle sokkeloisena kujien, portaiden ja punaisten kattojen rinteenä. Nimen arvellaan tulevan arabian sanasta al-hamma, kylpylät, sillä rinteen luonnonlähteet ruokkivat aikanaan monia kylpylöitä. Kaupunginosa säästyi pahimmilta tuhoilta vuoden 1755 maanjäristyksessä ja tulipaloissa, jotka hävittivät yli neljä viidesosaa Lissabonista. Alfaman pienissä ravintoloissa ja baareissa lauletaan fadoa, Lissabonin omaa surumielistä laulua, joka liitettiin Unescon aineettoman kulttuuriperinnön luetteloon vuonna 2011.",
+   "lyhyt": "Lissabonin vanhimman kaupunginosan Alfaman jyrkillä kujilla kulkee raitiolinja kaksikymmentäkahdeksan, jonka pienet vaunut ovat peräisin 1930-luvulta. Kaupunginosan rakensivat alun perin maurit, jotka hallitsivat Lissabonia 700-luvun alusta vuoteen 1147, jolloin ristiretkeläisten tukema Afonso Henriques valtasi kaupungin.",
+   "syventava": "Mitä nimi Alfama tarkoittaa?",
+   "kysymykset": [
+    "Mitä Alfaman nimi tarkoittaa?",
+    "Miksi Alfama säästyi maanjäristykseltä?",
+    "Mistä Alfamassa kuulee fadoa?",
+    "Kuka oli ensimmäinen kuuluisa fadolaulaja?",
+    "Mistä Alfaman yltä näkee parhaiten joelle?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Alfama on Lissabonin vanhin kaupunginosa São Jorgen linnan ja Tejon välisellä rinteellä.",
+     "url": "https://bafybeiemxf5abjwjbikoz4mc3a3dla6ual3jsgpdr4cjr3oz3evfyavhwq.ipfs.4everland.io/wiki/Alfama.html"
+    },
+    {
+     "vaite": "Nimen arvellaan tulevan arabian sanasta al-hamma, kylpylät, joita oli paljon luonnonlähteiden ansiosta.",
+     "url": "https://bafybeiemxf5abjwjbikoz4mc3a3dla6ual3jsgpdr4cjr3oz3evfyavhwq.ipfs.4everland.io/wiki/Alfama.html"
+    },
+    {
+     "vaite": "Alfama säilyi vuoden 1755 maanjäristyksestä ja paloista, jotka tuhosivat yli 80 prosenttia Lissabonista.",
+     "url": "https://bafybeiemxf5abjwjbikoz4mc3a3dla6ual3jsgpdr4cjr3oz3evfyavhwq.ipfs.4everland.io/wiki/Alfama.html"
+    },
+    {
+     "vaite": "Alfaman pienissä ravintoloissa ja baareissa esitetään fadoa.",
+     "url": "kaanon:pelin-aineisto"
+    },
+    {
+     "vaite": "Fado lisättiin Unescon aineettoman kulttuuriperinnön luetteloon 27.11.2011.",
+     "url": "https://en.wikipedia.org/wiki/Fado"
+    },
+    {
+     "vaite": "Raitiolinja 28 kulkee Alfaman katuja; vaunut ovat 1930-luvulta.",
+     "url": "https://www.odysseytraveller.com/articles/alfama-portugal/"
+    },
+    {
+     "vaite": "Maurit rakensivat kaupunginosan vuodesta 711 alkaen; Afonso Henriques valtasi kaupungin 1147.",
+     "url": "https://bafybeiemxf5abjwjbikoz4mc3a3dla6ual3jsgpdr4cjr3oz3evfyavhwq.ipfs.4everland.io/wiki/Alfama.html"
+    }
+   ]
+  },
+  {
+   "id": "Q636780",
+   "nimi": "São Jorgen linna",
+   "kuvaus": "Maurien linna kaupungin yllä",
+   "luokka": "linnoitus",
+   "koko_m": 300,
+   "teksti": "Pyhän Yrjön linna eli São Jorgen linna kruunaa Lissabonin korkeimman kukkulan, ja ylhäältä sen hammasreunaiset muurit ja tornit kiertävät puiden varjostamia pihoja. Linnan ydin on maurien 1000- ja 1100-luvuilla rakentama linnoitettu hallintolinna, jonka Portugalin ensimmäinen kuningas Afonso Henriques valtasi ristiretkeläisten avulla vuonna 1147 seitsemäntoista viikon piirityksen jälkeen. Tarinan mukaan ritari Martim Moniz heittäytyi portin väliin, jotta maurit eivät saaneet sitä suljettua. Pyhimyksensä linna sai 1300-luvun lopulla, kun kuningas Juhana ensimmäinen omisti sen Englannin suojeluspyhimykselle liittolaisuuden kunniaksi.",
+   "lyhyt": "Pyhän Yrjön linna oli Portugalin kuninkaiden pääasiallinen asuinpaikka noin kolmensadan vuoden ajan. Nykyään sen pihoilla kuljeskelee riikinkukkoja, ja pimeässä kammiossa peilit ja linssit heijastavat koko kaupungin näkymän katsojien eteen reaaliajassa.",
+   "syventava": "Kuka heittäytyi linnan porttiin?",
+   "kysymykset": [
+    "Kuka oli ritari Martim Moniz?",
+    "Miksi linna nimettiin pyhän Yrjön mukaan?",
+    "Miksi linnan pihoilla on riikinkukkoja?",
+    "Miten linnan camera obscura toimii?",
+    "Kuinka kauan linnan piiritys kesti?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Linna seisoo Lissabonin korkeimmalla kukkulalla.",
+     "url": "kaanon:pelin-aineisto"
+    },
+    {
+     "vaite": "Linnan ydin on maurien 1000- ja 1100-luvuilla rakentama linnoitettu hallintolinna, alcáçova.",
+     "url": "https://en.wikipedia.org/wiki/S%C3%A3o_Jorge_Castle"
+    },
+    {
+     "vaite": "Afonso Henriques valtasi linnan 1147 pohjoiseurooppalaisten ristiretkeläisten avulla seitsemäntoista viikon piirityksen jälkeen.",
+     "url": "https://aviewoncities.com/lisbon/castelo-de-sao-jorge"
+    },
+    {
+     "vaite": "Legendan mukaan Martim Moniz esti maureja sulkemasta porttia heittäytymällä sen väliin.",
+     "url": "https://aviewoncities.com/lisbon/castelo-de-sao-jorge"
+    },
+    {
+     "vaite": "Juhana I omisti linnan pyhälle Yrjölle 1300-luvun lopulla englantilais-portugalilaisen liiton kunniaksi.",
+     "url": "https://en.wikipedia.org/wiki/S%C3%A3o_Jorge_Castle"
+    },
+    {
+     "vaite": "Linna oli kuninkaiden pääasiallinen asunto noin kolmesataa vuotta.",
+     "url": "https://aviewoncities.com/lisbon/castelo-de-sao-jorge"
+    },
+    {
+     "vaite": "Linnan alueella on paljon riikinkukkoja; camera obscura näyttää peilien ja linssien avulla kaupungin reaaliaikaisena.",
+     "url": "https://www.discover-portugal.com/most-beautiful-spots-at-castelo-de-sao-jorge"
+    }
+   ]
+  },
+  {
+   "id": "Q168001",
+   "nimi": "Santa Justan hissi",
+   "kuvaus": "Uusgoottilainen rautainen hissitorni",
+   "luokka": "torni",
+   "koko_m": 30,
+   "korkeus_m": 45,
+   "teksti": "Santa Justan hissi on neljäkymmentäviisi metriä korkea uusgoottilainen rautatorni, joka nostaa matkustajat alakaupungin kaduilta Carmon aukion tasolle. Ylhäältä erottuu tornin huipulta lähtevä kävelysilta, joka yhdistää sen mäen päälle Carmon luostarin raunioiden viereen. Hissin suunnitteli portolainen ranskalaissukuinen insinööri Raoul Mesnier du Ponsard, ja se avattiin heinäkuussa 1902. Aluksi hissiä käytti höyrykone, mutta jo vuonna 1907 se sai sähkömoottorit. Hissi rakennettiin helpottamaan jyrkkää nousua alakaupungista mäelle, ja se kuuluu yhä kaupungin liikennelaitoksen kalustoon.",
+   "lyhyt": "Santa Justan hissin rakentaminen alkoi vuonna 1900, ja se valmistui kaksi vuotta myöhemmin. Rautapitsimäisen tornin sisällä nousee kaksi kiillotettua puista hissikoria. Huipun näköalatasanteelta näkee Baixan suoran katuruudukon ja Carmon luostarin kattamattomat kaaret aivan vierestä.",
+   "syventava": "Mihin hissin kävelysilta johtaa?",
+   "kysymykset": [
+    "Kuka suunnitteli Santa Justan hissin?",
+    "Miksi hissi rakennettiin juuri tähän?",
+    "Oliko suunnittelija Gustave Eiffelin oppilas?",
+    "Miten höyryllä toimiva hissi kulki?",
+    "Mihin hissin yläpään kävelysilta vie?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Hissi on 45 metriä korkea, uusgoottilainen; suunnittelija Raoul Mesnier du Ponsard, portugalilainen ranskalaissukuinen insinööri Portosta; rakennus 1900–1902; ensin höyry, sähköön 1907.",
+     "url": "https://www.wikipedia.com/wiki/Santa_Justa_Lift"
+    },
+    {
+     "vaite": "Hissi yhdistää Baixan kadut Carmon aukioon; yläpään kävelyyhteys Largo do Carmolle.",
+     "url": "https://travel.sygic.com/en/poi/santa-justa-lift-poi:2009"
+    },
+    {
+     "vaite": "Avattiin 10.7.1902; sähkömoottorit marraskuussa 1907.",
+     "url": "https://www.theculturetrip.com/europe/portugal/articles/a-history-of-elevador-de-santa-justa-in-60-seconds"
+    },
+    {
+     "vaite": "Kaksi kiillotettua puukoria; huipulta näkymä Baixan ruudukkoon ja Carmon luostarin raunioihin.",
+     "url": "https://travel.sygic.com/en/poi/santa-justa-lift-poi:2009"
+    },
+    {
+     "vaite": "Hissi kuuluu Lissabonin liikennelaitoksen Carrisin kalustoon.",
+     "url": "https://carris.pt/en/discover/fleet/lift/"
+    }
+   ]
+  },
+  {
+   "id": "Q1133712",
+   "nimi": "Löytöretkien muistomerkki",
+   "kuvaus": "Laivan keulaa muistuttava monumentti",
+   "luokka": "muu",
+   "koko_m": 60,
+   "teksti": "Löytöretkien muistomerkki kohoaa Tejon rannalla Belémissä viisikymmentäkaksi metriä korkeana betonikeulana, joka muistuttaa lähtövalmista purjelaivaa. Keulan kärjessä seisoo prinssi Henrik Purjehtija pieni laiva kädessään, ja kaikkiaan rampeilla on kolmekymmentäkolme löytöretkien ajan hahmoa, merenkulkijoita, kartantekijöitä, munkkeja ja ristiretkeläisiä. Ensimmäinen versio rakennettiin vuonna 1940 Portugalin maailmannäyttelyyn kipsistä ja puusta, ja kivinen muistomerkki pystytettiin vuonna 1960 Henrikin kuoleman viisisatavuotismuistoksi. Sen suunnittelivat arkkitehti Cottinelli Telmo ja kuvanveistäjä Leopoldo de Almeida.",
+   "lyhyt": "Löytöretkien muistomerkin edustalle on upotettu marmorinen kompassiruusu, jonka halkaisija on viisikymmentä metriä ja jonka keskellä on maailmankartta. Sen lahjoitti Etelä-Afrikan tasavalta vuonna 1960. Muistomerkin huipulla on näköalatasanne Belémin rannan ylle.",
+   "syventava": "Kuka seisoo keulan kärjessä?",
+   "kysymykset": [
+    "Keitä muistomerkin patsaat esittävät?",
+    "Kuka oli Henrik Purjehtija?",
+    "Miksi muistomerkki on laivan muotoinen?",
+    "Mitä kompassiruusun kartta näyttää?",
+    "Miksi muistomerkki herättää keskustelua?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Viisikymmentäkaksi metriä korkea betonilaatta laivan keulan muotoinen; kolmipurjeinen lähtövalmis laiva; Henrik Purjehtija keulassa pieni alus kädessään; hahmoina merenkulkijoita, ristiretkeläisiä, munkkeja ja kartantekijöitä.",
+     "url": "https://en.wikipedia.org/wiki/Monument_of_the_Discoveries"
+    },
+    {
+     "vaite": "Rampeilla 33 hahmoa Infante Dom Henriquen johdolla; väliaikainen versio 1940 maailmannäyttelyyn kipsistä ja puurungosta; uudelleen 1960 Henrikin kuoleman 500-vuotismuistoksi; suunnittelijat Cottinelli Telmo ja Leopoldo de Almeida.",
+     "url": "https://padraodosdescobrimentos.pt/en/monument-to-the-discoveries"
+    },
+    {
+     "vaite": "Kompassiruusu vihittiin 5.8.1960, Etelä-Afrikan tasavallan lahja, halkaisija 50 metriä, marmoria, keskellä planisfääri.",
+     "url": "https://padraodosdescobrimentos.pt/en/monument-to-the-discoveries"
+    },
+    {
+     "vaite": "Vuonna 1985 sisätilat uudistettiin ja muistomerkkiin tehtiin näköalatasanne.",
+     "url": "https://padraodosdescobrimentos.pt/en/monument-to-the-discoveries"
+    }
+   ]
+  },
+  {
+   "id": "Q432290",
+   "nimi": "Lissabonin tuomiokirkko",
+   "kuvaus": "Kaupungin vanhin kirkko",
+   "luokka": "kirkko",
+   "koko_m": 100,
+   "teksti": "Lissabonin tuomiokirkko on kaupungin vanhin kirkko, ja sen rakentaminen alkoi vuonna 1147, kun kristityt olivat vallanneet kaupungin. Ylhäältä erottuu linnoitusta muistuttava julkisivu kahden tornin välissä, ja tornien välissä on suuri ruusuikkuna. Kirkko pystytettiin moskeijan paikalle, ja vuodesta 1990 kaivauksissa ristikäytävän pihalta on löytynyt roomalainen katu kauppoineen, viemäri ja moskeijan punaisia muureja. Vuoden 1755 maanjäristys tuhosi goottilaisen kuorin kuninkaallisine hautoineen, ja nykyisen asunsa kirkko sai 1900-luvun alun laajassa korjauksessa.",
+   "lyhyt": "Lissabonin tuomiokirkossa kastettiin pyhä Antonius, joka syntyi kaupungissa vuonna 1195. Hänen päiväänsä juhlitaan kesäkuussa koko kaupungin voimin: kujille kannetaan grillit, ja sardiinit syödään leipäviipaleen päältä. Antonius kuoli Padovassa, mutta Lissabon pitää häntä omana pyhimyksenään.",
+   "syventava": "Mitä ristikäytävän alta löytyi?",
+   "kysymykset": [
+    "Miksi kirkko näyttää linnoitukselta?",
+    "Kuka oli Lissabonin pyhä Antonius?",
+    "Mitä ristikäytävän kaivauksista löytyi?",
+    "Miten maanjäristys vaurioitti kirkkoa?",
+    "Kulkeeko raitiovaunu kirkon ohi?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Kaupungin vanhin kirkko; rakentaminen alkoi 1147.",
+     "url": "https://en.wikipedia.org/wiki/Lisbon_Cathedral"
+    },
+    {
+     "vaite": "Massiiviset kivimuurit ja ruusuikkuna; pyhä Antonius kastettiin kirkossa.",
+     "url": "https://en.wikipedia.org/wiki/Lisbon_Cathedral"
+    },
+    {
+     "vaite": "Kirkko rakennettiin moskeijan paikalle; ristikäytävän kaivaukset vuodesta 1990: roomalainen katu kauppoineen, viemäri, moskeijan punaisia muureja.",
+     "url": "https://en.wikipedia.org/wiki/Lisbon_Cathedral"
+    },
+    {
+     "vaite": "Vuoden 1755 maanjäristys tuhosi goottilaisen pääkappelin ja kuninkaallisen hautakappelin; 1900-luvun alun restaurointi antoi nykyasun.",
+     "url": "https://en.wikipedia.org/wiki/Lisbon_Cathedral"
+    },
+    {
+     "vaite": "Antonius syntyi Lissabonissa 1195 ja kuoli Padovassa 1231; kesäkuun juhlassa sardiinit grillataan kujilla ja syödään leivän päältä.",
+     "url": "kaanon:pelin-aineisto"
+    }
+   ]
+  },
+  {
+   "id": "Q721152",
+   "nimi": "Huhtikuun 25. päivän silta",
+   "kuvaus": "Riippusilta Tejon yli",
+   "luokka": "silta",
+   "koko_m": 2277,
+   "teksti": "Huhtikuun 25. päivän silta ylittää Tejon yli kahden kilometrin mittaisena riippusiltana, jonka punaiset pylväät tuovat mieleen San Franciscon Golden Gaten. Silta avattiin vuonna 1966, ja se nimettiin ensin diktaattori António de Oliveira Salazarin mukaan. Vuoden 1974 neilikkavallankumouksen jälkeen se sai nimensä vallankumouksen päivästä. Ylemmällä kannella kulkee kuusi autokaistaa, ja alempi rautatiekansi, joka oli suunniteltu alusta asti, valmistui vasta vuonna 1999. Joen etelärannalla sillan vieressä kohoaa Kristus Kuningas -patsas.",
+   "lyhyt": null,
+   "syventava": "Miksi sillan nimi vaihdettiin?",
+   "kysymykset": [
+    "Miksi sillan nimi vaihdettiin?",
+    "Mitä neilikkavallankumouksessa tapahtui?",
+    "Miksi silta muistuttaa Golden Gatea?",
+    "Mikä on sillan päässä seisova patsas?",
+    "Miten junat pääsevät sillan yli?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Riippusilta, kokonaispituus 2 277 metriä; kuusi autokaistaa ja kaksi raidetta; avattiin 6.8.1966 nimellä Ponte Salazar; nimettiin uudelleen 1974 neilikkavallankumouksen päivän mukaan; alempi rautatiekansi, suunniteltu alusta asti, rakennettiin 1999.",
+     "url": "https://en.wikipedia.org/wiki/25_de_Abril_Bridge"
+    },
+    {
+     "vaite": "Pylväät ovat samaa International Orange -väriä kuin Golden Gate.",
+     "url": "https://en.wikipedia.org/wiki/25_de_Abril_Bridge"
+    },
+    {
+     "vaite": "Kristus Kuningas -patsas Almadassa sillan vieressä, vihitty 1959.",
+     "url": "https://en.wikipedia.org/wiki/Christ_the_King_(Almada)"
+    }
+   ],
+   "puhe_teksti": "Huhtikuun kahdennenkymmenennenviidennen päivän silta ylittää Tejon yli kahden kilometrin mittaisena riippusiltana, jonka punaiset pylväät tuovat mieleen San Franciscon Golden Gaten. Silta avattiin vuonna 1966, ja se nimettiin ensin diktaattori António de Oliveira Salazarin mukaan. Vuoden 1974 neilikkavallankumouksen jälkeen se sai nimensä vallankumouksen päivästä. Ylemmällä kannella kulkee kuusi autokaistaa, ja alempi rautatiekansi, joka oli suunniteltu alusta asti, valmistui vasta vuonna 1999. Joen etelärannalla sillan vieressä kohoaa Kristus Kuningas -patsas."
+  },
+  {
+   "id": "Q1549270",
+   "nimi": "Rossio",
+   "kuvaus": "Lissabonin keskiaikainen pääaukio",
+   "luokka": "aukio",
+   "koko_m": 200,
+   "teksti": "Keskiajalta asti Lissabonin pääaukioihin kuulunut Rossio on ollut kansannousujen, juhlien, härkätaisteluiden ja teloitusten näyttämö. Inkvisitio toimi aukion laidalla palatsissa, jonka paikalle rakennettiin 1840-luvulla kansallisteatteri, ja ensimmäinen autodafee eli inkvisition julkinen tuomiotilaisuus pidettiin aukiolla vuonna 1540. Ylhäältä erottuu mustavalkoinen aaltokuvio, joka ladottiin kiveykseen vuonna 1848, ja sen keskeltä kohoava kuningas Pedro neljännen pylväs vuodelta 1874. Pylvään molemmin puolin on Ranskassa valetut suihkulähteet, ja aukion laidalla on uusmanueliininen rautatieasema, jonka kaksi hevosenkengän muotoista porttia erottuvat kauas.",
+   "lyhyt": null,
+   "syventava": "Kuka seisoo pylvään huipulla?",
+   "kysymykset": [
+    "Kuka on pylvään huipulla seisova kuningas?",
+    "Miksi aukion kiveys aaltoilee?",
+    "Mitä inkvisitio teki Rossiolla?",
+    "Onko patsas oikeasti Meksikon keisari?",
+    "Mikä on aukion laidan koristeellinen asema?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Rossio on ollut pääaukio keskiajalta asti; kansannousujen, juhlien, härkätaisteluiden ja teloitusten näyttämö; inkvisitio toimi Estausin palatsissa, jonka korvasi 1840-luvulla kansallisteatteri; ensimmäinen autodafee 1540; aaltokuvio 1848; Pedro IV:n pylväs 1874; Ranskasta tuodut suihkulähteet.",
+     "url": "https://en.wikipedia.org/wiki/Rossio"
+    },
+    {
+     "vaite": "Kiveys on mustaa basalttia ja valkoista kalkkikiveä.",
+     "url": "kaanon:pelin-aineisto"
+    },
+    {
+     "vaite": "Suihkulähteet valettiin Val d’Osnen valimossa Ranskassa ja asennettiin 1889.",
+     "url": "https://en.wikipedia.org/wiki/Column_of_Pedro_IV"
+    },
+    {
+     "vaite": "Rossion rautatieaseman uusmanueliinisessa julkisivussa on kaksi toisiinsa limittyvää hevosenkengän muotoista porttia.",
+     "url": "https://aviewoncities.com/lisbon/rossio"
+    }
+   ]
+  },
+  {
+   "id": "Q233737",
+   "nimi": "Vasco da Gama -silta",
+   "kuvaus": "Euroopan unionin pisin silta",
+   "luokka": "silta",
+   "koko_m": 3000,
+   "teksti": "Yli kaksitoista kilometriä pitkä Vasco da Gama -silta on Euroopan unionin pisin silta, ja ylhäältä se piirtyy matalana nauhana Tejon leveän suiston poikki. Varsinainen vinoköysisilta on alle kilometrin mittainen, ja loput ovat matalia siltaosuuksia veden yllä. Silta avattiin maaliskuussa 1998 juuri ennen maailmannäyttelyä, joka juhlisti viittäsataa vuotta da Gaman meritiestä Intiaan. Se on mitoitettu kestämään neljä ja puoli kertaa vuoden 1755 järistystä voimakkaampi maanjäristys, ja syvimmät perustuspaalut ulottuvat yhdeksänkymmentäviisi metriä merenpinnan alapuolelle.",
+   "lyhyt": null,
+   "syventava": "Miten silta kestää maanjäristyksen?",
+   "kysymykset": [
+    "Miksi silta rakennettiin niin pitkäksi?",
+    "Kuka oli Vasco da Gama?",
+    "Mitä maailmannäyttelyn alueella on nyt?",
+    "Miten silta kestää maanjäristyksen?",
+    "Miksi sillalla ei kulje junia?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Kokonaispituus 12,3 km, josta pääsilta 0,8 km ja maasillat 11,5 km; EU:n pisin silta; vinoköysisilta; avattiin 29.3.1998 juuri ennen Expo 98:aa, joka juhlisti da Gaman Intian-meritien 500-vuotisjuhlaa.",
+     "url": "https://en.wikipedia.org/wiki/Vasco_da_Gama_Bridge"
+    },
+    {
+     "vaite": "Mitoitettu kestämään 4,5 kertaa vuoden 1755 järistystä voimakkaampi maanjäristys; syvimmät paalut 95 metriä keskimerenpinnan alapuolelle.",
+     "url": "https://www.vinci-construction-projets.com/en/realisations/vasco-da-gama-bridge/"
+    }
+   ]
+  },
+  {
+   "id": "Q1470414",
+   "nimi": "Carmon luostari",
+   "kuvaus": "Kattamaton goottilainen kirkonraunio",
+   "luokka": "kirkko",
+   "koko_m": 80,
+   "teksti": "Carmon luostarin goottilaisen kirkon holvikaaret kurottuvat ylhäältä katsottuna kohti taivasta ilman kattoa. Portugalin armeijan ylipäällikkö Nuno Álvares Pereira perusti luostarin vuonna 1389, ja kirkon kivikatto romahti vuoden 1755 maanjäristyksessä. Raunioita ei rakennettu uudelleen eikä purettu, vaan ne jätettiin muistomerkiksi, ja vuodesta 1864 niissä on toiminut arkeologinen museo. Isoisäsi kävi raunioilla vuonna 1873 ja riisui ovella hattunsa vanhasta tottumuksesta, mutta kun sade alkoi, hän pani sen takaisin päähänsä.",
+   "lyhyt": null,
+   "syventava": "Miksi kattoa ei rakennettu uudelleen?",
+   "kysymykset": [
+    "Miksi kirkon kattoa ei rakennettu uudelleen?",
+    "Mitä arkeologisessa museossa on esillä?",
+    "Kuka oli Nuno Álvares Pereira?",
+    "Mitä Carmon aukiolla tapahtui vallankumouksessa?",
+    "Järjestetäänkö raunioissa konsertteja?"
+   ],
+   "isoisa": true,
+   "lahteet": [
+    {
+     "vaite": "Luostarin perusti 1389 konnetaapeli eli kuninkaan sotajoukkojen ylipäällikkö Nuno Álvares Pereira; goottilainen kirkko tuhoutui vuoden 1755 maanjäristyksessä; raunioita ei rakennettu uudelleen eikä purettu vaan ne säilytettiin muistomerkkinä; vuodesta 1864 arkeologinen museo; kattamaton kirkko.",
+     "url": "https://en.wikipedia.org/wiki/Carmo_Convent"
+    },
+    {
+     "vaite": "Karmeliittikirkon kivikatto romahti 1755 eikä sitä rakennettu enää koskaan.",
+     "url": "kaanon:pelin-aineisto"
+    },
+    {
+     "vaite": "Isoisä: Carmon kirkon katto oli sortunut 1755, rauniot säilytetty muistomerkkinä; hän riisui ovella hattunsa vanhasta tottumuksesta ja pani sen takaisin, kun sade alkoi.",
+     "url": "kaanon:isoisan-paivakirja"
+    },
+    {
+     "vaite": "Kysymys: Carmon aukion kasarmiin pakeni pääministeri Marcelo Caetano 25.4.1974.",
+     "url": "https://museudoaljube.pt/en/2023/04/25/april-25-1974"
+    }
+   ]
+  },
+  {
+   "id": "Q637590",
+   "nimi": "Rua Augustan riemukaari",
+   "kuvaus": "Kauppatorin pohjoislaidan riemukaari",
+   "luokka": "muu",
+   "koko_m": 40,
+   "teksti": "Rua Augustan riemukaari avautuu Kauppatorin pohjoislaidalta alakaupungin pääkadulle, ja ylhäältä näkyy, miten kaaren takana alkaa maanjäristyksen jälkeen viivoitettu suorien katujen ruudukko. Kaari kuului jälleenrakennuksen suunnitelmiin, mutta se valmistui vasta 1870-luvulla arkkitehti Veríssimo José da Costan piirustusten mukaan. Huipun veistosryhmä esittää Kunniaa, joka palkitsee Urheuden ja Neron, ja alempana seisovat muun muassa markiisi Pombal ja Vasco da Gama. Vuodesta 2013 kaaren huipulle on päässyt hissillä ja kierreportailla näköalatasanteelle.",
+   "lyhyt": null,
+   "syventava": "Keitä kaaren patsaat esittävät?",
+   "kysymykset": [
+    "Mitä kaaren latinankielinen kirjoitus tarkoittaa?",
+    "Keitä kaaren patsaat esittävät?",
+    "Miksi kaaren rakentaminen kesti niin kauan?",
+    "Mitä kaaren huipulta näkee?",
+    "Kuka oli markiisi Pombal?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Kaari seisoo Kauppatorin laidalla Baixan ruudukon päässä; ruudukko vedettiin 1755 järistyksen jälkeen.",
+     "url": "kaanon:pelin-aineisto"
+    },
+    {
+     "vaite": "Valmistui 1873 tai 1875; arkkitehti Veríssimo José da Costa; huipun Calmelsin ryhmä esittää Kunniaa palkitsemassa Urheutta ja Nerokkuutta; alempana Pombal, Vasco da Gama, Viriato ja Nuno Álvares Pereira.",
+     "url": "https://en.wikipedia.org/wiki/Rua_Augusta_Arch"
+    },
+    {
+     "vaite": "Vuodesta 2013 huipulle on päässyt hissillä ja kahdella kierreportaalla terassille.",
+     "url": "https://en.wikipedia.org/wiki/Rua_Augusta_Arch"
+    }
+   ]
+  },
+  {
+   "id": "Q623228",
+   "nimi": "Águas Livres -akveduktti",
+   "kuvaus": "1700-luvun vesijohto laakson yli",
+   "luokka": "muu",
+   "koko_m": 941,
+   "teksti": "Lissabonin vanha vesijohto, Águas Livres -akveduktti, ylittää Alcântaran laakson kolmenkymmenenviiden kaaren rivinä, joka on lähes kilometrin pituinen. Korkein kaari nousee kuusikymmentäviisi metriä maan yläpuolelle, ja se on yksi maailman korkeimmista kivisistä suippokaarista. Kuningas Juhana viides antoi luvan rakennustöille vuonna 1731, ja vesi alkoi virrata kaupunkiin vuonna 1748. Akveduktia ei vaurioittanut juuri lainkaan vuoden 1755 maanjäristys. Myöhemmin 1830-luvulla sillä ryösteli Diogo Alves, jonka kerrotaan heittäneen uhrinsa kaarien päältä laaksoon.",
+   "lyhyt": null,
+   "syventava": "Kuka oli Diogo Alves?",
+   "kysymykset": [
+    "Miksi Lissabon tarvitsi akveduktin?",
+    "Kuka oli Diogo Alves?",
+    "Miten akvedukti kesti maanjäristyksen?",
+    "Voiko akveduktin päällä kävellä?",
+    "Mistä akveduktin vesi tuli?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Alcântaran laakso ylitetään 35 kaarella 941 metrin matkalla; korkein kaari 65 metriä; Arco Grande yksi maailman korkeimmista kivisistä suippokaarista; selvisi 1755 maanjäristyksestä ilman merkittäviä vaurioita; Diogo Alves heitti uhrejaan akveduktilta 1836–1839.",
+     "url": "https://en.wikipedia.org/wiki/%C3%81guas_Livres_Aqueduct"
+    },
+    {
+     "vaite": "Juhana V:n lupakirja 12.5.1731; vesi alkoi kulkea kaupunkiin 1748.",
+     "url": "https://aviewoncities.com/lisbon/aguas-livres-aqueduct"
+    }
+   ]
+  }
+ ]
+}

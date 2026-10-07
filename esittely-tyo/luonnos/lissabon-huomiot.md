@@ -1,0 +1,18 @@
+# Lissabon: huomiot tarkistajalle
+
+- ISOISÄ: mainittu vain Carmon luostarissa (merkintä nimeää Carmon kirkon rauniot). Kerrottu vain merkinnän sisältö: hattu riisuttiin ovella vanhasta tottumuksesta ja pantiin takaisin, kun sade alkoi; vuosi 1873 saantöjen sallimana. Paikkarivin kuukautta ja säätä ei käytetty. Carmon luostari ei ole kierroksella, joten isoisä ei kuulu kierroksen lyhyisiin.
+- LISÄSÄÄNTÖ A/A2: Belémin torni (é), Praça do Comércio, Alfama, São Jorgen linna (ã), Rossio, Vasco da Gama -silta ja Águas Livres -akveduktti alkavat suomenkielisellä etusanalla (Joensuuta vartioiva…, Kauppatori…, Lissabonin vanhin kaupunginosa…, Pyhän Yrjön linna…, Keskiajalta asti…, Yli kaksitoista kilometriä pitkä…, Lissabonin vanha vesijohto…). Huomiot "ei ala paikan nimellä" johtuvat tästä. Santa Justan hissi, Carmon luostari ja Rua Augustan riemukaari alkavat suomeksi taivutetulla nimellä (tarkennus A), aksentteja ei ole.
+- Huhtikuun 25. päivän silta: puhe_teksti lukee nimen "Huhtikuun kahdennenkymmenennenviidennen päivän silta"; tarkista luontevuus (vaihtoehto: "huhtikuun kahdennenkymmenennenviidennen päivän").
+- Haku palautti vain otteita; Wikipedia-URL:t on merkitty, kun hakuote tuli niistä. Alfaman väitteet vahvistettiin Wikipedia-peilistä (ipfs-osoite), koska en.wikipedia ei tullut hakuun; korvaa tarvittaessa https://en.wikipedia.org/wiki/Alfama.
+- Belémin torni: sarvikuonon pään "esikuvana pidetään" Manuel I:n sarvikuonoa — Wikipedia sanoo "probably inspired". Saapumisvuosi 1515 pelin aineistosta (Wikipedia-otteessa lahjoitus 1514). Neitsyt Marian patsas parvekkeella lähteenä eraa.org.
+- Hieronymuksen luostari: "kirkon laivassa lepäävät" da Gama ja Camões (Wikipedia: tombs in the nave). Fernando Pessoa jätetty pois (vain matkailulähde). korkeus_m 40 on kameran arvio.
+- Praça do Comércio: Joosef I = José I, Kaarle I = Carlos I (suomalaiset vakiintuneet muodot). "Valettiin yhdellä kertaa 1774" lähteenä questoapp, ei Wikipedia. Lyhyen portaat (Cais das Colunas): "portaat laskeutuvat suoraan veteen" — marmoria ei väitetty.
+- São Jorgen linna: "korkein kukkula" pelin aineistosta. "Hammasreunaiset muurit" on näkymäkuvaus. Camera obscura ja riikinkukot matkailusivuilta (discover-portugal, aviewoncities).
+- Santa Justan hissi: suunnittelija "portolainen" (otteen mukaan engineer from Porto). Eiffel-oppilaisuus jätetty tekstistä pois (kiistanalainen), mutta se on kysymyksenä ilman oletusta.
+- Löytöretkien muistomerkki: 33 hahmoa — teksti olettaa luvun sisältävän Henrikin ("kaikkiaan rampeilla on kolmekymmentäkolme"); virallisen sivun sanamuoto "33 statues … led by Infante Dom Henrique" on hieman monitulkintainen, tarkista.
+- Lissabonin tuomiokirkko: ei korkeus_m-arvoa (tornien korkeutta ei vahvistettu).
+- Rossio: "kuningas Pedro neljäs" (ei suomennettu Pietariksi). Suihkulähteet asennettu 1889 (Column of Pedro IV -artikkelin otteesta), vuotta ei tekstissä.
+- Vasco da Gama -silta: koko_m rajattu 3000:aan (todellinen 12 300 m). Maanjäristys- ja paaluluvut Vinci Constructionin sivulta.
+- Rua Augustan riemukaari: valmistumisvuosi 1873 tai 1875 lähteissä, siksi "1870-luvulla".
+- Águas Livres: "yksi maailman korkeimmista kivisistä suippokaarista" (Wikipedia). Diogo Alves "kerrotaan heittäneen" — Wikipedia puhuu hänen nimiinsä luetuista rikoksista; vuodet 1836–1839 → "1830-luvulla".
+- Kysymykset: Belémin "Käytettiinkö tornia myös vankilana?" ja Santa Justan Eiffel-kysymys ovat kyllä/ei-muotoisia ilman väitettä. Vasco da Gama -sillan "Miksi sillalla ei kulje junia?" olettaa, ettei rautatietä ole (pitää paikkansa). Rua Augustan "latinankielinen kirjoitus" olettaa kaaren kirjoituksen (Virtutibus maiorum…). Muistomerkin "Miksi muistomerkki herättää keskustelua?" viittaa Estado Novo -/siirtomaakeskusteluun.

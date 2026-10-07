@@ -1,0 +1,1 @@
+Tervetuloa Lissaboniin. Ylhäältä kaupunki näyttää vaaleiden talojen ja punaisten kattojen peittämiltä kukkuloilta, jotka laskeutuvat leveän Tejo-joen rantaan. Kierros alkaa joen äärestä Kauppatorilta, joka avautuu keltaisten kaarikäytävien kehystämänä suoraan veteen ja jonka paikalla seisoi kuninkaanlinna ennen vuoden 1755 maanjäristystä.
