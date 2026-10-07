@@ -11423,3 +11423,7 @@ OMISTAJA 7.10.2026 klo 16.0x sanatarkasti: "voisiko niitä käännöksiä tehdä
 ## OMISTAJA 7.10.2026 KLO 16.1x: ENINTÄÄN KAKSI KÄÄNNÖSTÄ PÄIVÄSSÄ (7.10.2026 klo 16.03)
 
 OMISTAJA 7.10.2026 klo 16.1x sanatarkasti: "kaksi käännöstä päivässä riittää ellen itse toisin pyydä" → enintään kaksi junaa (TF-käännöstä) päivässä; tänään 159, 160 ja 161 jo tehty, joten juna 162 lähtee 8.10. aamulla (runko ja automaattiset testit illalla valmiiksi). TF 161 + Mac TF 161 ladattu 16.0x (BUILD 9572eaff).
+
+## PILVIKREDIITTI LOPPUI TOISELLA TILILLÄ (7.10.2026 klo 16.1x) (7.10.2026 klo 16.10)
+
+OMISTAJA 7.10.2026 klo 16.1x sanatarkasti: "Pilven krediitit ilmeisesti ovat loppu, joten ne kannattaa lopettaa, koska sillä tilillä ei ole enää viikko kredittejä kuin muutama prosentti." ja "Ei tuolla 250 dollarilla tainnut kovin paljoa käyttöä saada." → Pariisin kuvasessio pysäytetty viestillä; 31 kaupungin tarkistus (858df25a9) ja KK/Giza-lähdetarkistus (08ce87810) olivat jo valmiit; Pariisin loppukokoaminen Sisältökirjurille paikallisesti, 31 kaupungin korjaukset Pelikoodarille (ei ääniä), KK/Giza docs-PR Sisältökirjurilta. Raamattu PILVIAJOT: KULUTUS (vain rajatut tehtävät, --model, apulaiset sonnet enintään 2 rinnakkain).

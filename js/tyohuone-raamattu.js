@@ -252,7 +252,7 @@ export const RAAMATTU = {
           + 'tehtävä, ali-agentit opus, eri tarkistaja-agentti, commit ja push omaan haaraan, ei PR:ää eikä mergeä), sitten '
           + '`script -q <loki> claude --cloud "$(cat ohje.md)"` (vaatii päätteen; lokiin tulee session_… ja osoite; sessio näkyy työpöytäsovelluksen '
           + 'sivupalkissa). 4) Jatko-ohje käynnissä olevalle sessiolle: `claude -p "viesti" --cloud session_…`. 5) Seuranta: RemoteTrigger get_run_log '
-          + 'session_… ja haaran commitit; tulokset tarkistetaan ja viedään docs-PR:nä tai roolille. Pilvessä ei ole avaimia, ämpäriä eikä Macia. '
+          + 'session_… ja haaran commitit; tulokset tarkistetaan ja viedään docs-PR:nä tai roolille. Pilvessä ei ole avaimia, ämpäriä eikä Macia. KULUTUS (7.10.2026 klo 16.1x, omistaja: "Ei tuolla 250 dollarilla tainnut kovin paljoa käyttöä saada."): krediitti laskutetaan rajapintahinnoin, ja kolme sessiota, joissa oli enintään neljä apulaista lukemassa verkkosivuja, kuluttivat toisen tilin 250 dollaria noin kahdessa tunnissa (alussa Opus 5 Extra-teholla). Siksi pilveen viedään vain rajattuja, lyhyitä tehtäviä: malli valitaan käynnistyksessä (--model), apulaiset sonnet ja enintään kaksi rinnakkain, teho High, eikä laajoja verkkotutkimuksia tehdä; raskas tutkimustyö tehdään paikallisesti tilauksen sisällä. '
           + 'Macille jää vain se, mikä vaatii konetta: Unity-käännökset, simulaattorit, iPad, TestFlight, Blender, karttapoltot ja avaimia vaativat '
           + 'työt (äänet, ämpäri, julkaisu). '
           + 'UI-POHJAT JA TYYLIMÄÄRITTELYT (omistaja 1.10.2026, SITOVA, koskee jokaista sessiota ja '
