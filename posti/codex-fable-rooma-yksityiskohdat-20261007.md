@@ -1,51 +1,37 @@
-## 2026-10-07 — CODEX → FABLE: Rooman osatoimitus, kuusi ehdokasta ja kaksi korjaustarvetta
+# CODEX → FABLE: Rooma, yksityiskohtakuvat 7.10.2026
 
-Lähde `posti/sisaltokirjuri-codex-rooma-yksityiskohdat-20261007.md`, commit `c95ad78a20be9549c5fee0e859db1194c6e42f96`, blob `1027eaa39325d0a3f59922e3e5acb6f12a6f2029`, luettiin kokonaan. Samoin sovelletut Pariisin korjatut säännöt ja fotorealismilisäys; Praha/Wien-tilaus on luettu taustaksi.
+Korjatun tilauksen kaksi sallittua uusintaa on tehty. Uusi Appia-v2 on toimitettu R2:een; Colosseum-v2 ei läpäissyt tarkistusta ja poistetaan onnistuneesta toimituksesta. Korjattu tilaus kieltää kolmannen yrityksen.
 
-Viisi kuva-agenttia teki **kahdeksan uutta fotorealistista ehdokasta kahdeksalla built-in ImageGen -kutsulla**, yhden kutakin kohdetta kohti. Lähdekuvien pikseleitä ei annettu generaattorille. Alkuperäiset säilytettiin; lisävariantteja tai luovia jälkikorjauksia ei tehty. Rooma on erillinen Praha/Wienin avoimista päätöksistä.
+Lähde luettu kokonaan: `posti/sisaltokirjuri-codex-rooma-uusinta-colosseum-appia-20261007.md`. Lähdecommit `b508c84b3144ad2861c67a0a3d059c1ecfd78c1a`, tiedostoblob `821887157ff1ff5378b71d3c93f47af9358e9bf4`.
+Alkuperäinen osatoimitus: `686267a7dcadbd3041909b38b8305c34c61b1610`. Sen viittä hyväksyttyä kuvaa ei toimiteta uudelleen.
 
-### Kuusi PNG:tä toimitettu R2:een Fable-arviointia varten
 
-| Kohta | Kuva |
-| --- | --- |
-| 02 Q99309 | [Pantheonin oculus-sade ja viemäriaukot](https://media.matkakirja.app/julisteet/rooma-yksityiskohdat/20261007/rooma-Q99309-oculus-sade.png) |
-| 03 Q848072 | [Piazza di Spagnan tulvavene 1598, legenda](https://media.matkakirja.app/julisteet/rooma-yksityiskohdat/20261007/rooma-Q848072-tulvavene-1598.png) |
-| 04 Q848072 | [Kolme kieltopiktogrammia portailla](https://media.matkakirja.app/julisteet/rooma-yksityiskohdat/20261007/rooma-Q848072-piktogrammit-2019.png) |
-| 05 Q848072 | [Poliisin pilli-ele portailla 2019](https://media.matkakirja.app/julisteet/rooma-yksityiskohdat/20261007/rooma-Q848072-poliisin-pilli-2019.png) |
-| 06 Q185382 | [Trevin sisäänpääsyn havainnollistus 2026](https://media.matkakirja.app/julisteet/rooma-yksityiskohdat/20261007/rooma-Q185382-trevi-portti-2026.png) |
-| 07 Q914255 | [Noantri-legendan Madonna-lapsi-patsas 1535](https://media.matkakirja.app/julisteet/rooma-yksityiskohdat/20261007/rooma-Q914255-madonna-1535.png) |
+Fablen hyväksymät vanhat kohteet 02, 03, 04, 06 ja 07 säilyvät ennallaan. Hyväksyntä on kirjattu korjatusta lähdepostista; pelinäkymää ei ole tällä perusteella vahvistettu. Vanha kohde 05, poliisin pilli, on jätetty pois Fablen ohjeesta. Vanhoja kuvia ei generoitu, siirretty tai toimitettu uudelleen. Alkuperäinen kuuden kuvan osatoimitus on säilytetty paikallisesti tiedostossa previous-delivery-686267a7.json; sen vanha arviokooste ei edusta nykyistä valintaa.
 
-[Toimitettujen kuuden kuvan vertailu](https://media.matkakirja.app/julisteet/rooma-yksityiskohdat/20261007/toimitetut-6.jpg). Vertailu on tekninen kooste samoista kuvista, ei yhdeksäs generointi. Se ei sisällä pidätettyjä Colosseum- tai Appia-ehdokkaita.
+Nykyinen valinta on viisi aiemmin hyväksyttyä kuvaa ja yksi uusi Appia-v2 arvioitavaksi. Manifestin assets-lista sisältää vain uuden Appia-v2:n; previousAcceptedAssets-lista sisältää vanhat viisi hyväksyttyä kuvaa. Colosseumin molemmat yritykset ja vanha poliisin pilli eivät kuulu onnistuneeseen valintaan. Historiallisia R2-siirtoja on yhteensä seitsemän, mutta valinnassa on kuusi kuvaa.
 
-Manifesti `posti/kuvatoimitus-rooma-yksityiskohdat-20261007.json` sisältää URL:t, R2-avaimet, SHA256:t, mitat, täsmälliset kehotteet, tekstilähteet, kuvatekstit ja pääsession katselut. R2-prefix: `julisteet/rooma-yksityiskohdat/20261007/`. `assets` sisältää vain kuusi toimitettua PNG:tä.
+Colosseum-v2:n ongelmat: vain kaksi selkeää arkadiriviä, rakennuksen sivureunat rajautuvat ja lähikatsojia näkyy. Tiedosto säilytetään tarkistushistoriassa, eikä sitä ladattu R2:een. Ei kolmatta yritystä eikä uutta lupakysymystä.
 
-### Tekniset ja toimitustarkistukset
+Appia-v2 näyttää tyhjiä, pieniä ristirivejä tien molemmin puolin, lempeästi kaartuvan kivisen tien ja vaimean punaoranssin iltataivaan. Ei ihmisiä tai risteihin kiinnitettyjä hahmoja. Suurin tarkistettu risti on 41 pikseliä, konservatiivinen yläraja 44 pikseliä: alle 5 % kuvan 1024 pikselin korkeudesta. Kuva havainnollistaa aihetta abstraktisti eikä esitä teloitusta.
 
-Kaikki kahdeksan ehdokasta ovat natiivisti 1536×1024, läpinäkymättömiä RGB/sRGB-PNG-kuvia. Description ja Source: ”Havainnekuva. Tekoälyllä tuotettu, ei valokuva.” Ehdotetut kuvatekstit päättyvät ”Havainnekuva.” Peliin lähderivi ”Tekoälyllä tuotettu havainnekuva.” Alkuperäiset pikselit säilyivät; vain metatiedot ja sRGB-profiili lisättiin, lisäksi tehtiin 480-esikatselut.
+Alkuperäisen tilauksen kahdeksan generoinnin lisäksi tehtiin täsmälleen kaksi kokonaista uutta generointia, yhteensä 10/10. Molempien uusintojen kehotteet ja tarkistukset säilytetään replacement-v2-kansiossa. Uusi onnistunut Appia on natiivisti 1536 × 1024; ei rajausta, värimuokkausta tai muuta luovaa jälkikorjausta.
 
-Kaikki kahdeksan katsottiin täydessä koossa ja 480-esikatseluna. Kahdeksan eri SHA256:tä. Kuuden toimitetun PNG:n sekä vertailun HTTP 200, MIME, CORS ja tavuntarkka R2-lataus takaisin varmistettu. Tämä ei tarkoita Fablen toimituksellista hyväksyntää tai peliin kytkentää.
+## Toimitetut uudet tiedostot
 
-### Fable tarkistaa ennen käyttöä
+| Kohde | Tiedosto | Koko | R2-kuva | SHA-256 |
+|---|---|---|---|---|
+| 08 | rooma-Q189417-appia-ristit-71eaa-v2.png | 1536 × 1024 | [PNG](https://media.matkakirja.app/julisteet/rooma-yksityiskohdat/20261007/rooma-Q189417-appia-ristit-71eaa-v2.png) | `4a09172873c48f81868b92f3c90870d1c756f640aa26a5bb2baf184240a55ffb` |
 
-- **Pantheon:** oculuksen yläkaari leikkautuu pois. Sade ja lattia-aukot näkyvät; aukkojen tarkka sijainti ja sisätilan pienet rakenteet ovat havainnollisia.
-- **Piktogrammit:** täsmälleen kolme pyydettyä kuvamerkkiä, ei sanoja. Kyltti on suuri ja portaikko suoristunut; arvioi taustan paikkageometria. Tämä ei ole varmennettu virallinen kylttimalli.
-- **Poliisin pilli:** käsi suulla ja kaksi kaukaista poliisia näkyvät, mutta erillistä pilliä ei voi varmasti erottaa. Barcaccia on suuri ja havainnollinen. Arvioi, välittääkö kuva ankkurin tarkoituksen.
-- **Trevi:** portti, köysi, tyhjä lukija ja laskeutuvat askelmat näkyvät. Lukijan yläkehyksessä pieni vaalea pilkku, ei luettavaa tekstiä tai tunnistettavaa logoa. Portin ja laitteen tarkka toteutus on havainnollinen, ei kuvavarmennettu.
-- **1535:** kuvateksti ilmoittaa legendan ja Trastevere-taustan tulkinnallisuuden. Kalastajien kasvot eivät näy; patsas on verkossa ilman haloa.
+Manifesti: `posti/kuvatoimitus-rooma-yksityiskohdat-20261007.json`. Jokaisella kuvalla url, r2Key, sha256, mitat, koko generationPrompt, tekstiviitteet ja kuvateksti.
 
-### Kaksi ehdokasta pidätetty paikalliseen arviointiin
+## Tarkistus ja menetelmä
 
-- **01 Q10285 Colosseum:** etureunaan syntyi modernilta näyttävä verkkokaide. Pyydettyä kaariarkadirakennetta ei kuvasta voi todentaa ja ulkokehä leikkautuu. Ei PNG-R2-toimitusta tai automaattista pelikäyttöä.
-- **08 Q189417 Appia:** kuva on rauhallinen ja väkivallaton, mutta risteissä ei erotu tilattuja ihmishahmoja. Keskeinen sisältö jää toteutumatta. Ei PNG-R2-toimitusta tai automaattista pelikäyttöä.
+Kuvat tehtiin Codexin sisäänrakennetulla ImageGenillä tekstikehotteista. Ei Runwayta, ulkoista generointi-API:a tai lähdevalokuvan pikseleitä generaattorissa. Tekstilähteiden käytön ja saatavuuden rajoitteet on kirjattu manifestin viitteisiin. Alkuperäiset generoinnit säilytetty.
 
-Pidätetyt kuvat ovat manifestin `heldCandidates`-osiossa ilman R2-URL:ia. Paikallinen kahdeksan ehdokkaan arviokuva ja tuotantotiedot säilyvät työtilassa `output/rooma-yksityiskohdat-20261007/`.
+PNG:t ovat sRGB-profiililla varustettuja läpinäkymättömiä RGB-kuvia. PNG Description ja Source ovat täsmälleen: “Havainnekuva. Tekoälyllä tuotettu, ei valokuva.” Kuvatekstit päättyvät sanaan “Havainnekuva.”
 
-Kysyin omistajalta luvan **kahteen kokonaan uuteen korvaavaan generointiin**. Lopullinen erä pysyisi kahdeksassa kuvassa, mutta generointeja olisi kymmenen. Tilaus rajaa määräksi kahdeksan ja sanoo ”ei lisävariantteja”; vastausta ei ole saatu eikä uusia yrityksiä aloitettu.
+Pääsession tarkistus kattaa alkuperäisen kokoisen kuvan ja koko kuvan 480 pikselin esikatselun. Jokainen onnistunut uusi PNG on tarkistettu R2-takaisinluvulla: HTTP 200, image/png, pelin alkuperään sopiva CORS ja paikalliseen tiedostoon täsmälleen vastaavat tavut sekä SHA-256.
 
-### Lähderajat
+Kehotteet ja paikalliset tiedostopolut ovat manifestissa. Kehotesarja säilytetty tuotantokansion generation-prompts.json-tiedostossa sekä Rooman uusinnan replacement-v2/generation-prompts.json-tiedostossa.
 
-Trevin nykyjärjestely on vahvistettu [Roma Capitalen tiedoista](https://www.comune.roma.it/web/it/notizia/biglietto-dingresso-fontana-di-trevi.page): maksuttomuus koskee myös metropolialueen asukkaita, ei vain Rooman kunnan asukkaita. Kuvaan ei piirretty hintaa tai numeroita. [Turismo Roman Noantri-kuvaus](https://turismoroma.it/it/node/173872) kertoo legendan löytöpaikaksi Tiberin suun; tilattu Trastevere-tausta on kuvituksen tulkinta. Tulvaveneen kuvateksti ilmoittaa myös legendan eikä esitä dokumentoitua valokuvaa.
-
-Tarkat historialliset rakennus-, esine- ja tapahtumajärjestelyt perustuvat tekstilähteisiin ja ovat havainnollisia. Lähdevalokuvien käyttöä, kuvavarmennusta tai oikeudellista käyttöselvitystä ei väitetä tehdyksi.
-
-**Tila:** kuusi PNG-ehdokasta R2:ssä ja postilaatikossa Fable-arviointiin; kaksi ehdokasta pidätetty ja korjauslupa odottaa. Fablen vastaanotto, hyväksyntä, peliin kytkentä, näkyminen pelissä ja julkaisu ovat erillisiä vahvistamattomia vaiheita. Ei main-mergeä, versionnostoa tai pelin julkaisua Codexilta.
+Uusien kuvien Fable-vastaanottokuittaus, päätoimittajan hyväksyntä ja näkyvyys pelissä odottavat erillistä vahvistusta. Tämä on kuva-aineiston toimitus tarkistusta varten. Codex ei ole tehnyt main-mergeä, versionnostoa tai julkaisua.

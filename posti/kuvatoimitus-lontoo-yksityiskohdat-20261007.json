@@ -1,0 +1,783 @@
+{
+  "task": "lontoo-yksityiskohdat-20261007",
+  "deliveredAt": "2026-10-07T17:34:10.282366+00:00",
+  "source": {
+    "path": "posti/sisaltokirjuri-codex-lontoo-yksityiskohdat-20261007.md",
+    "commit": "a46d3d59aebb0f496ccf365ad0d64d5bc8918b45",
+    "blob": "9836c69d37507d22f67b21c52fcff690562cefdf"
+  },
+  "sourceReadInFull": true,
+  "imageCount": 9,
+  "generatedCandidates": 9,
+  "generationCalls": 9,
+  "generationLimit": 10,
+  "sourceImagePixelsUsed": false,
+  "referenceMethod": "Tilauksessa erikseen pyydetyt puuttuvien yksityiskohtien havainnekuvat. Faktat tekstilähteistä; valokuvapikseleitä ei syötetty generaattoriin.",
+  "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+  "editorAcceptance": false,
+  "gameIntegrated": false,
+  "published": false,
+  "sourceFactualNotes": [
+    {
+      "number": 2,
+      "status": "held-before-generation",
+      "note": "TowerBridge primary: event30Dec1952, northbasculewasjustmoving, southnearflat; brownoriginalpaint,1977red-white-blue. Source asksmodernblue-whiteandsteepflight; ownerquestionpending.",
+      "sources": [
+        "https://www.towerbridge.org.uk/stories/bus-jump",
+        "https://www.towerbridge.org.uk/stories/royal-connections-to-tower-bridge"
+      ]
+    },
+    {
+      "number": 1,
+      "note": "Parliamentprimary: predecimalpennieson shelfpendulumROD, not arbitrarypileonclockgears.",
+      "sources": [
+        "https://www.parliament.uk/globalassets/documents/commons-information-office/Big-Ben.pdf",
+        "https://www.parliament.uk/about/living-heritage/building/palace/big-ben/facts-figures/"
+      ]
+    },
+    {
+      "number": 5,
+      "note": "HRP names2014authoredinstallation; commissionexplicitlyallowsgenericoriginalflowerfieldonly. No sourcepixels, signedflows/Wave/WeepingWindow orreplicaflowerdesign. No legalclearance asserted.",
+      "sources": [
+        "https://www.hrp.org.uk/tower-of-london/history-and-stories/tower-of-london-remembers/"
+      ]
+    },
+    {
+      "number": 7,
+      "status": "resolved-before-generation",
+      "note": "October1999lift confirmed by contemporaneous AP captions10Oct (raise toward65degrees),18Oct(vertical) and27Oct(capsules awaitinginstallation). Engineeringprimary Mammoet confirmsonepiecehorizontal-to-vertical erectionmethod. No source-image pixels used.",
+      "sources": [
+        "https://visual.keystone-sda.ch/en/lightbox/-/lightbox/page/2251447/1",
+        "https://www.mammoet.com/cases/london-eye/",
+        "https://hollandia.biz/en/projecten/the-london-eye/"
+      ]
+    },
+    {
+      "number": 8,
+      "note": "Source120ADapprox; LondonMuseum modelshowsabout130largestforum. 16:9 target1536x864 peritem.",
+      "sources": [
+        "https://www.londonmuseum.org.uk/collections/v/object-452169/model-forum/"
+      ]
+    }
+  ],
+  "pendingItems": [
+    {
+      "number": 2,
+      "qid": "Q83125",
+      "id": "bussihyppy-1952",
+      "filename": "lontoo-Q83125-bussihyppy-1952.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "preflightStatus": "awaiting-human-historical-correction"
+    }
+  ],
+  "heldCandidates": [],
+  "assets": [
+    {
+      "number": 1,
+      "qid": "Q41225",
+      "id": "heilurin-pennit",
+      "filename": "lontoo-Q41225-heilurin-pennit.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "preflightStatus": "ready",
+      "file": "lontoo-Q41225-heilurin-pennit.png",
+      "r2Key": "julisteet/lontoo-yksityiskohdat/20261007/lontoo-Q41225-heilurin-pennit.png",
+      "url": "https://media.matkakirja.app/julisteet/lontoo-yksityiskohdat/20261007/lontoo-Q41225-heilurin-pennit.png",
+      "sha256": "d4f5923012584c6c7f47c3e4668a718c09e3dfca22f402787167e70ac34030df",
+      "bytes": 1761624,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "mitat": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Use case: photorealistic-natural.\nAsset type: single Matkakirja London mechanism detail, native landscape PNG 1536 x 1024 pixels, opaque sRGB, 3:2 aspect ratio.\nPrimary request: an original camera-like contemporary close view of the Victorian Great Clock pendulum coin-adjustment shelf in Elizabeth Tower, London. Generate a new image using only this text.\nDocumented mechanism placement: the entire heavy pendulum is 4.4 metres long. Only its top third is visible in the mechanism room; the lower section and its concentric steel-and-zinc-tube bob extend down into the weight shaft. The small pre-decimal pennies sit on a shelf attached to the PENDULUM ROD, and this shelf is the subject of this close image. Do not show the lower bob; it lies entirely below this tight frame.\nSubject and composition: side close-up, slightly low viewpoint, from about one metre away. The straight vertical heavy dark metal pendulum rod runs through the center of the composition and continues beyond both the top and bottom of the picture. On this rod is a small, mechanically attached, level metal shelf projecting slightly towards the camera. A modest short stack of old pre-decimal British copper pennies rests on that shelf, foreground sharp and clearly discernible. Frame the coin stack from almost edge height, viewed edgewise and obliquely, so it shows patinated copper edge layers, never a readable coin face. No word, date or numeral on any coin is visible. The shelf is fixed on the rod and is not a random gear, disconnected platform or separate coin tray. Everything has believable real large-clock scale; do not shrink the pendulum into a compact mantel or grandfather clock.\nBackground and material: huge 1850s cast-iron clock mechanism and subtle brass gear outlines softly out of focus behind the rod, hinting at a spacious tower mechanism room. Mostly dark worn but maintained metal, a little gentle oily sheen and warm brass, honest copper patina. The small coin stack is the visual emphasis.\nLighting and photographic style: warm dim practical chamber light from outside the frame, natural camera exposure, soft subdued colors, restrained realistic shadows and highlights, shallow believable depth of field. Documentary camera-shot appearance, no HDR, no excessively polished surfaces, no illustration or CGI styling, no dramatic cinematic saturation.\nStrict exclusions: no people, modern electrical wiring, electric motors, cables, sockets, displays, dials with numerals, digital meters, labels, readable inscriptions, lettering, numbers, logos, signs, text overlays, watermark, border. Do not display a round disc or other pendulum bob in this frame. No source images and no reproduction of an existing photograph's composition. One single image only.\n",
+      "viitteet": [
+        {
+          "type": "textResearchOnly",
+          "publisher": "UK Parliament / House of Commons Information Office",
+          "title": "Big Ben",
+          "url": "https://www.parliament.uk/globalassets/documents/commons-information-office/Big-Ben.pdf",
+          "notes": "November 2012 leaflet: weights including pre-decimal pennies sit on shelf on pendulum rod. Adding/removing weight fine-adjusts clock. 4.4m pendulum and 203kg bob."
+        },
+        {
+          "type": "textResearchOnly",
+          "publisher": "UK Parliament",
+          "title": "Facts and figures: Big Ben and Elizabeth Tower",
+          "url": "https://www.parliament.uk/about/living-heritage/building/palace/big-ben/facts-figures/",
+          "notes": "Pre-decimal pennies regulate clock; 4.4m pendulum, 310kg total; 203kg bob built of concentric steel/zinc tubes. Cast iron mechanism 4.7m by 1.4m."
+        },
+        {
+          "type": "textResearchOnly",
+          "publisher": "UK Parliament",
+          "title": "Big Ben Virtual Tour — Mechanism Room 2: Pendulum",
+          "url": "https://virtualtours-assets.parliament.uk/elizabeth-tower/index.html",
+          "notes": "Only text read. Top third of pendulum visible in mechanism room; rest hidden in weight shaft. Images/360 pixels not accessed. Bob mass conflicts with facts page but mass is immaterial to requested crop and absent from image/caption."
+        }
+      ],
+      "kuvateksti": "Big Benin heilurin varren kolikkohyllyllä vanhat pennit toimivat kellon hienosäätöpainoina. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/lontoo-yksityiskohdat-20261007/production/01-heilurin-pennit/lontoo-Q41225-heilurin-pennit.png",
+      "technicalChanges": [
+        "Saved project PNG at native 1536x1024 RGB dimensions; no crop or full-size resize.",
+        "Embedded standard sRGB ICC profile and exact Description/Source text.",
+        "Pixel bytes unchanged from generated original.",
+        "Made 480x320 QA preview with Lanczos downsampling only."
+      ],
+      "visualReview": {
+        "file": "lontoo-Q41225-heilurin-pennit.png",
+        "sha256": "d4f5923012584c6c7f47c3e4668a718c09e3dfca22f402787167e70ac34030df",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Kolikkopino terävänä varren hyllyllä, vain kupariset reunat näkyvissä; rattaat pehmeänä taustalla. Ei luettavaa tekstiä tai sähkölaitteita.",
+          "Alapaino jää rajauksen ulkopuolelle, kuten parlamentin mekanismihuoneen sijaintitiedot sallivat."
+        ]
+      },
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "number": 3,
+      "qid": "Q5933",
+      "id": "kruunajaistuolin-kaiverrukset",
+      "filename": "lontoo-Q5933-kruunajaistuolin-kaiverrukset.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "preflightStatus": "ready",
+      "file": "lontoo-Q5933-kruunajaistuolin-kaiverrukset.png",
+      "r2Key": "julisteet/lontoo-yksityiskohdat/20261007/lontoo-Q5933-kruunajaistuolin-kaiverrukset.png",
+      "url": "https://media.matkakirja.app/julisteet/lontoo-yksityiskohdat/20261007/lontoo-Q5933-kruunajaistuolin-kaiverrukset.png",
+      "sha256": "d35e27e71cb59ac40c37fda2e2d4e1dae9d8f4e4531b68bb85af6a21dc67eb14",
+      "bytes": 2731463,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "mitat": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Use case: photorealistic-natural.\nAsset type: single London detail illustration for Matkakirja, landscape PNG, native 1536 x 1024 pixels, 3:2 aspect ratio, opaque sRGB.\nPrimary request: an original camera-like contemporary extreme close-up of the aged oak Coronation Chair in Westminster Abbey, made around 1300, showing the back and a little side obliquely. Create a fresh image from this text alone.\nSubject and composition: tightly frame one large dark-oak back panel and the adjoining side edge at a slant, filling the entire image. The foreground old wood and scratched surface are sharply focused; the farther edge softly falls out of focus. Only a hint of the chair's medieval Gothic pointed carved ornament should enter near the upper edge. The original object is a simple, structurally heavy medieval oak chair with a tall back, not an elaborate later royal throne.\nMaterials and historical detail: extremely old dark brown oak with visible fine grain, worn rounded edges, chipped areas, varied shallow and deeper small scratched incisions accumulated over centuries. Numerous tiny uneven intersecting letter-like fragments and initial-like scratched shapes in different sizes and directions form ambiguous overlapping texture on the back panel. They must never form a readable word, personal name, date, complete phrase or digit. Break, erode, overlap and partly obscure every potential inscription. Small subdued remnants of old gilding and old painted finish survive in recesses, with almost all of the visible composition dominated by aged dark oak. This is worn, scarred furniture, not freshly cut ornamental carving.\nLighting and photographic style: warm soft natural side illumination in a quiet church interior, gentle realistic highlights on wood grain, deep but detailed brown shadows, muted colors, believable lens depth of field and natural camera exposure. It must look like an unretouched documentary close-up photographed today. No HDR, exaggerated saturation, glossy polish, artificial dramatic spotlight or cinematic color grade.\nStrict exclusions: no readable writing, no digits or dates, no names, no text overlay, no captions, no labels, logos, signs, watermark or border. No people, faces, guard ropes, glazing or glass barrier, modern objects or new decorative additions. No complete view of an ornate gilt throne, no modern carved chair, no fantasy furniture. Do not reproduce a particular existing photograph, layout or image. One single image only.\n",
+      "viitteet": [
+        {
+          "type": "textResearchOnly",
+          "publisher": "Westminster Abbey",
+          "title": "The Coronation Chair",
+          "url": "https://www.westminster-abbey.org/history/explore-our-history/the-coronation-chair",
+          "notes": "Oak chair made in 1300-1301. Back graffiti from visitors and schoolboys in 18th/19th centuries. Original paint on gilt ground."
+        },
+        {
+          "type": "textResearchOnly",
+          "publisher": "Westminster Abbey",
+          "title": "Coronation Chair prepared for historic role",
+          "url": "https://www.westminster-abbey.org/abbey-news/coronation-chair-prepared-for-historic-role",
+          "notes": "Official 1 March 2023 conservation account confirms about 1300, oak, surviving gold leaf and paint, back graffiti and chipped corner."
+        }
+      ],
+      "kuvateksti": "Westminster Abbeyn noin vuonna 1300 valmistuneen tammisen kruunajaistuolin kuluneessa pinnassa näkyy vanhojen kaiverrusten jälkiä. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/lontoo-yksityiskohdat-20261007/production/03-kruunajaistuolin-kaiverrukset/lontoo-Q5933-kruunajaistuolin-kaiverrukset.png",
+      "technicalChanges": [
+        "Saved project PNG at native 1536x1024 RGB dimensions; no crop or full-size resize.",
+        "Embedded standard sRGB ICC profile and exact Description/Source text.",
+        "Pixel bytes unchanged from generated original.",
+        "Made 480x320 QA preview with Lanczos downsampling only."
+      ],
+      "visualReview": {
+        "file": "lontoo-Q5933-kruunajaistuolin-kaiverrukset.png",
+        "sha256": "d35e27e71cb59ac40c37fda2e2d4e1dae9d8f4e4531b68bb85af6a21dc67eb14",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Kulunut tumma tammipinta, goottilaiset kaariaiheet, monet kirjainmaiset kaiverrusjäljet ja vanhan kullan/maalin rippeet.",
+          "Kirjainmaisia merkkejä voi erottaa, mutta ei luettavaa nimeä, lausetta tai numerosarjaa. Tarkka kaiverruskartta on havainnollinen."
+        ]
+      },
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "number": 4,
+      "qid": "Q173882",
+      "id": "haakulkuetta-odottavat-1981",
+      "filename": "lontoo-Q173882-haakulkuetta-odottavat-1981.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "preflightStatus": "ready",
+      "file": "lontoo-Q173882-haakulkuetta-odottavat-1981.png",
+      "r2Key": "julisteet/lontoo-yksityiskohdat/20261007/lontoo-Q173882-haakulkuetta-odottavat-1981.png",
+      "url": "https://media.matkakirja.app/julisteet/lontoo-yksityiskohdat/20261007/lontoo-Q173882-haakulkuetta-odottavat-1981.png",
+      "sha256": "dfbc704b33951729b7c2eab7d78b9da213939d144837926bb69b423d2b62efdc",
+      "bytes": 2749029,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "mitat": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Use case: historical-scene\nAsset type: Matkakirja London city-guide detail, an AI-created historical illustrative scene\nPrimary request: Generate ONE completely new photorealistic image, native 1536 x 1024 pixels (3:2 landscape), opaque RGB sRGB. Depict a sunny July 1981 day in London, with a very large distant crowd waiting for the royal wedding procession outside St Paul's Cathedral. This is an original illustration from researched historical facts, not a reconstruction of any photograph.\nScene/backdrop: Look EAST towards the cathedral from an upper-floor window on the EASTERN HALF of Ludgate Hill, elevated roughly 15 metres above the street. Frame down over the street and upwards enough to include the full western front, both western bell towers, and the large dome behind them. This is the close approach to the west steps, beyond any railway crossing further west. Period London stone and brick street facades flank the view; keep the visible skyline low.\nSubject: The genuine recognizable silhouette of Christopher Wren's St Paul's Cathedral in pale Portland stone: broad two-storey west front, paired columns, central triangular pediment, TWO separate ornate baroque west towers flanking the front, and behind them a MUCH TALLER grey lead dome on a columned cylindrical drum, topped by its stone lantern and small gilded cross. The towers have curving baroque upper stages and ogee caps with gilded finials. Maintain correct cathedral proportions and depth, not a generic domed capitol or Greek temple. The cathedral is prominent across the upper part of the picture, and its architecture remains readable.\nComposition/framing: A wide, coherent, slightly oblique elevated camera view along the short visible street approach. Dense spectators stand only along BOTH street edges, well behind simple metal police crowd barriers. The central procession route is completely empty of vehicles and people. Distant small human figures only, even at the lower image edge; no foreground portrait and no individual face detail. The crowd is varied and convincing rather than duplicated rows. Many small paper Union Jack flags and a few plain coloured triangular pennants create gentle festive detail. These national flags are expressly permitted; no writing on them. No carriage or royal wedding couple.\nPeriod details: Ordinary summer clothing plausible for 1981, muted short-sleeve shirts, blouses, simple dresses, jackets, understated trousers. No modern smartphones, selfie sticks, contemporary athleisure, helmets, modern city glass towers or modern street screens. Plain period crowd barriers.\nStyle/medium: Camera-shot appearance, realistic photographic textures and believable stone, asphalt and tiny clothing folds; fine subtle analog texture, no drawn or painted surfaces. This is a photorealistic historical illustration. Natural perspective and a normal lens, no fisheye.\nLighting/mood: Soft natural sunny summer light, pale stone with gentle shadow, slightly hazy blue sky, everyday observational photography. Muted true-to-life colour, restrained Union Jack red and blue. No HDR, no theatrical spotlight, no cinematic saturation.\nConstraints: ONE frame only; no collage, border, watermark, words, lettering, numbers, brands, logos, placards, shop signs, readable signs or legible clock numerals. No identifiable faces, celebrities, bride, groom, royals, close cameramen, present-day objects, cars, buses, horses, aircraft, weapons, injuries, blood or violence. No source image pixels are provided or used. Make an independent original composition from the textual facts above. Do not imitate a known 1981 press photograph. Do not add any image caption.",
+      "viitteet": [
+        {
+          "type": "textResearchOnly",
+          "publisher": "St Paul's Cathedral",
+          "title": "Our timeline",
+          "url": "https://www.stpauls.co.uk/our-timeline",
+          "notes": "Primary text establishes the wedding on 29 July 1981, crowds at the West doors, and the fire raid of 29 December 1940. Text notes the iconic Mason image came from Northcliffe House; its image pixels were not opened or used, and its composition was not a generation input."
+        },
+        {
+          "type": "textResearchOnly",
+          "publisher": "The Royal Household",
+          "title": "Diana, Princess of Wales",
+          "url": "https://www.royal.uk/diana-princess-wales",
+          "notes": "Text confirms St Paul's wedding on 29 July 1981 and crowds along the route. No named royal person is depicted. This illustration does not prove a count of 600000 spectators."
+        },
+        {
+          "type": "textResearchOnly",
+          "publisher": "St Paul's Cathedral",
+          "title": "The Wren Office drawings",
+          "url": "https://www.stpauls.co.uk/wren-office-drawings",
+          "notes": "Only textual architectural descriptions were used: two-storey western body, columned drum, lead-clad dome and baroque western towers. No drawings, photographs or other source pixels supplied to image generation."
+        },
+        {
+          "type": "textResearchOnly",
+          "publisher": "St Paul's Cathedral",
+          "title": "6. The western towers, c. 1685-1710",
+          "url": "https://www.stpauls.co.uk/6-western-towers-c-1685-1710",
+          "notes": "First-party indexed textual architecture describes curving baroque lantern stages, ogee caps and gilded pineapple finials. No drawing or photo pixels used."
+        },
+        {
+          "type": "textResearchOnly",
+          "publisher": "City of London Corporation",
+          "title": "St Paul's Heights Study (2015), West Sector",
+          "url": "https://www.cityoflondon.gov.uk/assets/Services-Environment/planning-protected-views-tall-buildings-st-pauls-heights-study-part-7-2015.pdf",
+          "notes": "Text-only PDF extraction: the north tower and bulk of the dome become visible toward the eastern half of Ludgate Hill. The illustrated upper-floor camera is located in that half, beyond the railway viaduct further west. Historical exact street-facade arrangement is illustrative."
+        }
+      ],
+      "kuvateksti": "Hääkulkuetta odottava väkijoukko Ludgate Hillillä St Paulin katedraalin edustalla heinäkuussa 1981. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/lontoo-yksityiskohdat-20261007/production/04-haakulkuetta-odottavat-1981/lontoo-Q173882-haakulkuetta-odottavat-1981.png",
+      "technicalChanges": [
+        "Preserved raw generated PNG locally as generation-original.png and retained original built-in output.",
+        "Embedded an sRGB ICC profile and exact Description/Source text in final PNG.",
+        "Final dimensions and RGB pixels unchanged from native generated output.",
+        "Created a separate 480 × 320 Lanczos QA preview. No creative edits, cropping, retouching or colour alteration."
+      ],
+      "visualReview": {
+        "file": "lontoo-Q173882-haakulkuetta-odottavat-1981.png",
+        "sha256": "dfbc704b33951729b7c2eab7d78b9da213939d144837926bb69b423d2b62efdc",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Yläkerroksen näkymä tyhjälle kulkuetielle, tiheä väkijoukko reunoilla ja liput; kupoli ja molemmat länsitornit näkyvät.",
+          "Ei hääparia, tunnistettavia kasvoja, ajoneuvoja tai moderneja torneja. Kuva ei todenna600000 katsojan lukua."
+        ]
+      },
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "number": 5,
+      "qid": "Q62378",
+      "id": "yleinen-unikkomeri",
+      "filename": "lontoo-Q62378-yleinen-unikkomeri.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "preflightStatus": "ready",
+      "file": "lontoo-Q62378-yleinen-unikkomeri.png",
+      "r2Key": "julisteet/lontoo-yksityiskohdat/20261007/lontoo-Q62378-yleinen-unikkomeri.png",
+      "url": "https://media.matkakirja.app/julisteet/lontoo-yksityiskohdat/20261007/lontoo-Q62378-yleinen-unikkomeri.png",
+      "sha256": "49e565654a600b6a79d0492051b7257b52d0805614d4b6bbe9db2243016850c9",
+      "bytes": 3320801,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "mitat": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Use case: historical-scene\nAsset type: one original photorealistic educational illustration for the Matkakirja London guide, Q62378, horizontal opaque PNG, native 1536 x 1024 pixels (3:2).\nPrimary request: Create an ORIGINAL generic field of red ceramic poppy-like flowers in the dry moat of the Tower of London. This is an invented explanatory image, with original flower forms and original loose field placement; it is not a documentary record or reproduction of an existing artwork or photograph.\nScene/backdrop: A quiet autumn day in a historical Tower of London setting with no recent additions. A broad, deep, dry grassy moat sits below weathered stone retaining walls and the medieval fortress curtain wall. Above the curtain wall, only the upper pale stone outline and small corner turrets of the White Tower are visible, at a credible distance and scale. Dark green trimmed lawn borders remain visible along the edges of the moat. No river water in the moat.\nSubject: A very extensive red ceramic flower field fills the foreground and recedes into the moat. Use original, modestly hand-shaped ceramic cups: smooth rounded asymmetric silhouettes, one broad low lobe opposite two shorter raised lobes, gently thickened rims, with small dark recessed centers. These are simple sculptural poppy-like cups with an uncommon original petal geometry, not replicas of any artist's flower models. They stand individually on very thin dark plant-like stems at gently varying heights. Subtle glaze glints and thick fired-clay edges distinguish ceramics from living wildflowers; no leaves, seed pods or natural flower growth. Distant heads merge into a red remembrance field.\nComposition/framing: Wide oblique view from the moat edge or a low bridge, only slightly above the flowers, looking along the dry moat. Ceramic flowers occupy the foreground and lower half, historic stone walls and the upper White Tower outline behind. Natural depth and perspective, as if photographed with a normal wide lens. Invent a loose, irregular distribution of dense patches with small uneven grass gaps; no mapped or designed flow pattern. Avoid exact count claims.\nStyle/medium: Photorealistic, camera-shot appearance, believable weathered stone, clipped grass, modest glazed ceramic reflections and fine slender stems. Clear natural material detail without a painting or rendered-game appearance.\nLighting/mood: Soft muted autumn daylight, lightly overcast, calm and reflective, restrained contrast. Muted brick-red flowers against dark green grass and pale gray-beige stone. No HDR, no cinematic lighting, no extreme saturation, no bloody red or horror atmosphere.\nConstraints: Entirely new image from this text only. Native landscape 1536 x 1024, RGB sRGB, opaque. No words, letters, digits, labels, signs, captions, logos, watermarks or frames. No people, visitors or volunteers. No cars, modern buildings, glass skyscrapers, Shard or other recent structures. No airborne or falling flowers, no flowers coming from a window, no cascades down walls, no elevated sculptural bow or metal arch, no flower-covered raised framework, no signature installation shape. Flowers stay on their individual stems rooted at ground level. Do not copy a known artwork, flower model, photograph, camera composition or specific field layout.",
+      "viitteet": [
+        {
+          "type": "textResearchOnly",
+          "publisher": "Historic Royal Palaces",
+          "title": "The Tower of London remembers",
+          "url": "https://www.hrp.org.uk/tower-of-london/history-and-stories/tower-of-london-remembers/",
+          "notes": "Primary text read 2026-10-07. Context and material only: ceramic flowers in the moat during 2014. Existing installation is authored; its design, individual models and signature sculptural elements are excluded."
+        },
+        {
+          "type": "textResearchOnly",
+          "publisher": "Historic Royal Palaces",
+          "title": "9 surprising facts about the Tower of London Moat",
+          "url": "https://www.hrp.org.uk/tower-of-london/history-and-stories/9-surprising-facts-about-the-tower-of-london-moat/",
+          "notes": "Primary text read 2026-10-07. Moat dry since nineteenth-century drainage; deep surviving basic moat shape associated with curtain walls, with grass. Used only for contextual setting geometry."
+        },
+        {
+          "type": "textResearchOnly",
+          "publisher": "Historic Royal Palaces",
+          "title": "White Tower",
+          "url": "https://www.hrp.org.uk/tower-of-london/whats-on/white-tower/",
+          "notes": "Primary text read 2026-10-07. Norman keep with thick fortified walls and tall turrets. Used only for the upper distant historical outline."
+        }
+      ],
+      "kuvateksti": "Oma tulkinta punaisista keraamisista kukista muodostetusta yleisilmeisestä muistokentästä Lontoon Towerin kuivassa vallihaudassa. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/lontoo-yksityiskohdat-20261007/production/05-yleinen-unikkomeri/lontoo-Q62378-yleinen-unikkomeri.png",
+      "technicalChanges": [
+        {
+          "operation": "preserve-original",
+          "details": "Byte-for-byte local copy of native generated PNG; generator original preserved at its original location."
+        },
+        {
+          "operation": "metadata-only",
+          "details": "Added exact PNG Description and Source label plus embedded sRGB ICC profile. Final remains native 1536x1024 RGB; pixel bytes verified identical to generator original."
+        },
+        {
+          "operation": "qa-thumbnail",
+          "details": "Created separate 480x320 PNG using Lanczos downsampling for QA; final image unresized. No creative pixel edits, cropping, compositing or retouching."
+        }
+      ],
+      "visualReview": {
+        "file": "lontoo-Q62378-yleinen-unikkomeri.png",
+        "sha256": "49e565654a600b6a79d0492051b7257b52d0805614d4b6bbe9db2243016850c9",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Punaiset keraamiset kupit, ohuet varret ja epäsäännölliset kukkaryhmät kuivassa vallihaudassa. Ei ihmisiä tai kylttejä.",
+          "Oma yleisilmeinen tulkinta; ei Wave-kaarta, seinältä vuotavaa kaskadia tai väitettä dokumentoidun installaatiokartan toisinnosta. Muuri ja tornit likimääräisiä."
+        ]
+      },
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "number": 6,
+      "qid": "Q62408",
+      "id": "churchillin-kaari",
+      "filename": "lontoo-Q62408-churchillin-kaari.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "preflightStatus": "ready",
+      "file": "lontoo-Q62408-churchillin-kaari.png",
+      "r2Key": "julisteet/lontoo-yksityiskohdat/20261007/lontoo-Q62408-churchillin-kaari.png",
+      "url": "https://media.matkakirja.app/julisteet/lontoo-yksityiskohdat/20261007/lontoo-Q62408-churchillin-kaari.png",
+      "sha256": "1d62e6d9eae8e436ca707200c0170ba73fa4e1db4bbacdc6712f84af08332eea",
+      "bytes": 2542596,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "mitat": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Use case: photorealistic-natural\nAsset type: Matkakirja city-guide detail; a newly generated photorealistic illustration, not a documentary photograph.\nCreate exactly one landscape image, native 1536 x 1024 pixels, 3:2, opaque sRGB RGB PNG. Entirely new generation from this text, no source image pixels.\nSubject and scene: A contemporary close architectural view of the Churchill Arch, the entrance from Members' Lobby to the rebuilt House of Commons chamber, London. The single Gothic pointed doorway is made from pale Caen limestone reused from the bomb-damaged original. Intentional wartime damage remains: irregular chipped and splintered stone edges, spalled surfaces, small cracks, patches of black soot darkening the pale stone, particularly around the moulded arch and jambs. It is a still-used entrance in a carefully restored building, with clean restrained neo-Gothic stone wall surfaces and dark timber doorwork immediately around it. The door opening and a dim continuation into the interior are visible behind the arch in shadow. Clearly distinguish the battered preserved arch from its tidy post-1950 surroundings.\nComposition: Camera at human eye level, facing the doorway almost frontally but slightly obliquely. The whole pointed arch and its two jambs occupy the central majority of the frame, with enough clean wall on both sides to show the material contrast. Natural architectural perspective, realistic human doorway scale, 35–50 mm photographic lens feel. Close crop omits the statues and the rest of the Lobby.\nStyle and light: Convincing camera-shot appearance, natural limestone pores and irregular old damage, restrained muted colours, warm natural practical interior light from outside the frame, gentle falloff into the doorway. Plausible shadows and exposure. No exaggerated ruin effect, no HDR, no oversaturated cinematic grading, no painting texture.\nConstraints: No people, guards, statues, portraits, plaques, inscriptions, readable or unreadable lettering, words, numbers, signs, brands, logos, watermarks, decorative image border, ropes, contemporary light fixtures close to camera, electronics or modern screens. No fantasy cathedral portal, no massive church scale, no intact glowing ornamental portal, no entire hall in ruins. Do not reproduce a photograph, painting, watercolour, or existing source composition. Depict an original text-informed architectural scene. Do not put the AI disclosure or any text into the image.",
+      "viitteet": [
+        {
+          "type": "textResearchOnly",
+          "publisher": "UK Parliament",
+          "title": "The Members’ Lobby and Churchill arch",
+          "url": "https://www.parliament.uk/about/living-heritage/building/palace/architecture/palace-s-interiors/members-lobby-churchill-arch/",
+          "notes": "Primary text establishes entrance location and preserved bomb-scarred stones. Text only; no source pixels used; statues excluded from crop."
+        },
+        {
+          "type": "textResearchOnly",
+          "publisher": "UK Parliament",
+          "title": "Commons Arch after the Bomb",
+          "url": "https://www.parliament.uk/about/living-heritage/transformingsociety/private-lives/yourcountry/collections/churchillexhibition/churchill-and-ww2/churchill-arch-bomb/",
+          "notes": "Primary catalogue prose identifies original recycled interior stone as Caen stone. Associated painting not opened or supplied; its composition not reproduced."
+        },
+        {
+          "type": "textResearchOnly",
+          "publisher": "UK Parliament",
+          "title": "Churchill and the Commons Chamber",
+          "url": "https://www.parliament.uk/about/living-heritage/building/palace/architecture/palacestructure/churchill/",
+          "notes": "Primary text confirms postwar rebuilding completed in 1950. No photograph-match claim."
+        }
+      ],
+      "kuvateksti": "Churchillin kaaren pommivauriot säilytettiin alahuoneen uudelleen rakennetun salin sisäänkäynnillä. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/lontoo-yksityiskohdat-20261007/production/06-churchillin-kaari/lontoo-Q62408-churchillin-kaari.png",
+      "technicalChanges": [
+        "Added sRGB ICC profile to untagged generated RGB PNG without transforming pixels.",
+        "Added PNG Description and Source fields with exact havainnekuva disclosure.",
+        "Created 480 x 320 QA preview by proportional Lanczos reduction.",
+        "No creative editing, retouching, cropping, recolouring or final-image resizing."
+      ],
+      "visualReview": {
+        "file": "lontoo-Q62408-churchillin-kaari.png",
+        "sha256": "1d62e6d9eae8e436ca707200c0170ba73fa4e1db4bbacdc6712f84af08332eea",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Vaurioitunut suippokaari keskellä siistiä kalkkikivi-/puuseinää, tumma jatke takana.",
+          "Ei ihmisiä, kylttejä, laattakirjoitusta tai valaisimia lähikuvassa; vaurioiden tarkka sijainti havainnollinen."
+        ]
+      },
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "number": 7,
+      "qid": "Q160659",
+      "id": "pyoran-nosto-1999",
+      "filename": "lontoo-Q160659-pyoran-nosto-1999.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "preflightStatus": "ready",
+      "file": "lontoo-Q160659-pyoran-nosto-1999.png",
+      "r2Key": "julisteet/lontoo-yksityiskohdat/20261007/lontoo-Q160659-pyoran-nosto-1999.png",
+      "url": "https://media.matkakirja.app/julisteet/lontoo-yksityiskohdat/20261007/lontoo-Q160659-pyoran-nosto-1999.png",
+      "sha256": "d57dc53bf7cdac87c0071b863cad8664c255c92fbf244024b4ebfadad6226c17",
+      "bytes": 2373834,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "mitat": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Use case: historical-scene\nAsset type: photorealistic historical illustration for the London city guide; one original image.\nPrimary request: a plausible erection phase of the London Eye in October 1999, a huge EMPTY white open-lattice steel wheel being tilted from horizontal toward vertical above the River Thames using cable strand jacks. This is an illustrative reconstruction, not a copy of any source photograph.\nStyle/medium: looks like a real unobtrusive documentary engineering photograph taken on an overcast autumn day in 1999. Natural soft light, muted restrained colours, true-scale industrial materials, small photographic imperfections, no cinematic treatment, no HDR, no drawing or CGI concept-art appearance.\nSubject and geometry: ONE continuous 135-metre-diameter wheel, an enormous thin tubular lattice rim with open triangular bracing and fine radial tension-cable spokes meeting a central axle hub. The PLANE OF THE WHEEL IS TILTED ONLY ABOUT 40 DEGREES ABOVE HORIZONTAL, still midway through erection, visibly NOT fully upright. The lower portion remains near the temporary river assembly platforms while the upper portion rises away from them. Show physically plausible tension cables and strand-jack lifting rigging and the permanent white A-frame support near the south bank. The wheel is COMPLETELY BARE: absolutely ZERO glass capsules, passenger pods, cabins, gondolas, cars, seats or closed containers anywhere along its rim.\nScene: grey Thames water in the foreground, piled temporary assembly platforms beneath the inclined wheel, low work barges and small tugboats, one large unbranded YELLOW industrial crane and a smaller unbranded WHITE crane by the works. Cranes are supporting equipment; the entire wheel is being tilted by strand-jack/cable rigging rather than dangling loose from a single crane hook. No people close to camera.\nCamera and composition: wide landscape view from the opposite northeastern river bank looking southwest, low riverbank camera about 80–150 metres from the work. Full wheel visible in the central composition with clear margins; its tilted plane must be legible as a broad foreshortened ellipse, not an upright circle simply rotated sideways in the picture. A distant subdued Palace of Westminster and Big Ben can be visible behind the works, keeping accurate late-1999 London context and no fabricated skyscrapers. Water, platforms and equipment provide credible scale. Preserve full rim, no frame-edge clipping.\nLighting: softly cloudy autumn daylight, cool grey sky, off-white painted steel, dark grey water, restrained yellow crane paint.\nConstraints: exactly one wheel, no extra rings or wheels, no gear teeth, no solid disc, no fantasy cog, no upright completed wheel. ABSOLUTELY NO CAPSULES OR PODS. No modern Shard, City Hall or later skyscrapers. No logos, brands, signs, legible text, printed letters, numbers or registration marks on ANY machinery, boat or building; no captions or labels within the image; no watermark; no border. No recognisable faces, no injuries, no violence.\nOutput: native opaque PNG, RGB sRGB, exactly 1536 x 1024 pixels, landscape 3:2. No transparency.\n",
+      "viitteet": [
+        {
+          "type": "textResearchOnly",
+          "publisher": "AP Photo / Keystone-SDA",
+          "title": "Contemporaneous London Eye photo-catalogue captions, October 1999",
+          "url": "https://visual.keystone-sda.ch/en/lightbox/-/lightbox/page/2251447/1",
+          "notes": "Root-agent preflight captured AP caption text: 10 October raising toward a 65-degree hold; 18 October vertical with capsules still to install; 27 October capsules awaiting river transport. This child read the saved textual evidence. The URL redirected during the child followup; no claim of a fresh child AP page verification. No photograph pixels used.",
+          "evidenceFile": "../../research/ap-caption-preflight.json"
+        },
+        {
+          "type": "textResearchOnly",
+          "publisher": "Mammoet",
+          "title": "London Eye project case study",
+          "url": "https://www.mammoet.com/cases/london-eye/",
+          "notes": "Primary engineering text confirms whole-wheel horizontal-to-vertical erection. Text verified in this turn; no construction image opened."
+        },
+        {
+          "type": "textResearchOnly",
+          "publisher": "Hollandia",
+          "title": "The London Eye",
+          "url": "https://hollandia.biz/en/projecten/the-london-eye/",
+          "notes": "Primary builder text identifies the South Bank structure and Hollandia design, construction and installation role. No video or image pixels used."
+        }
+      ],
+      "kuvateksti": "Lontoon silmän tyhjä teräsrengas nostovaiheessa Thamesin yllä lokakuussa 1999. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/lontoo-yksityiskohdat-20261007/production/07-pyoran-nosto-1999/lontoo-Q160659-pyoran-nosto-1999.png",
+      "technicalChanges": [
+        "Added exact PNG Description and Source text fields.",
+        "Embedded standard sRGB ICC profile.",
+        "Preserved every native RGB pixel unchanged.",
+        "Created 480px-wide proportional QA preview."
+      ],
+      "visualReview": {
+        "file": "lontoo-Q160659-pyoran-nosto-1999.png",
+        "sha256": "d57dc53bf7cdac87c0071b863cad8664c255c92fbf244024b4ebfadad6226c17",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Paljas kallistunut ristikkorengas, kaksi nosturia, vaijerit ja joen paalualustat/proomut. Ei kapseleita tai lähihahmoja.",
+          "Palatsi ja BigBen taustalla; tekninen tuentaratkaisu havainnollinen, ei työmaan mittatarkka kuva."
+        ]
+      },
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "number": 8,
+      "qid": "Q961148",
+      "id": "forum-basilika-120",
+      "filename": "lontoo-Q961148-forum-basilika-120.png",
+      "dimensions": [
+        1536,
+        864
+      ],
+      "preflightStatus": "ready",
+      "file": "lontoo-Q961148-forum-basilika-120.png",
+      "r2Key": "julisteet/lontoo-yksityiskohdat/20261007/lontoo-Q961148-forum-basilika-120.png",
+      "url": "https://media.matkakirja.app/julisteet/lontoo-yksityiskohdat/20261007/lontoo-Q961148-forum-basilika-120.png",
+      "sha256": "293ae365b6228dc275a6b538f84a1dddf5ffbb0cde0d32c474220d6808fae301",
+      "bytes": 2851519,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "mitat": [
+        1536,
+        864
+      ],
+      "generationPrompt": "Use case: historical-scene\nAsset type: photorealistic archaeological reconstruction for the London city guide; one original image.\nPrimary request: Roman Londinium's large second forum and basilica in the early second century, about AD 120–130. An ORIGINAL text-grounded reconstruction of a plausible completed complex, not a reproduction of a museum model, protected drawing or rendering.\nStyle/medium: the scene looks camera-photographed in the real world, with credible scale, natural soft warm daylight, muted colours and detailed modestly weathered clay, plaster, stone and wood. No miniature-model look, no illustration, no CGI concept-art gloss, no HDR or exaggerated cinematic colour.\nSubject and layout: a very LONG, HIGH basilica occupies the NORTH SIDE of a broad RECTANGULAR forum. The basilica runs east–west across the back of the courtyard: long raised central hall/nave with a continuous gabled roof of reddish terracotta CLAY TILES, lower side aisles, pale off-white plastered masonry walls, two horizontal levels of Roman ROUND-ARCH arcades/colonnades visible along its long SOUTH-FACING front. Clear sober Roman provincial civic architecture, not a medieval church, temple front, palace or modern market hall. A broad paved open courtyard lies SOUTH of the basilica in the foreground, enclosed by lower inward-facing porticoes and modest shop/office ranges on its eastern, western and southern sides. Natural slightly uneven grey stone paving, no ornamental modern plaza pattern. Very low surrounding Roman town buildings with clay tile roofs, pale plaster, modest exposed reddish brick and timber details.\nCamera/composition: a virtual camera about 30 metres above the SOUTH-EAST part of the courtyard looking NORTH-WEST, an oblique aerial view. Keep the basilica's ENTIRE LONG SOUTH FACADE, complete roof and both ends in clear central framing, spanning most but not all of the width with comfortable visible margins; no cropped facade ends. The open paved courtyard fills the foreground, with the portico wings giving readable perspective and spatial enclosure. Do not let tall foreground walls obscure the long basilica.\nTopography: Londinium's modest Cornhill ridge/eastern hill, low gently undulating terrain and provincial urban density, not Rome's steep hills or Italian landscape. The Thames lies SOUTH of this site, behind the camera and out of frame; NO RIVER is visible behind the NORTH-SIDE basilica. No invented northern waterfront panorama.\nLighting: soft warm clear-day daylight, restrained reddish clay roof colour, pale chalky plaster and muted stone; realistic natural shadows. No dramatic sunset, no haze effects.\nPeople: preferably no people; if any tiny distant figures are unavoidable, very small anonymous Roman civilian silhouettes far across the courtyard, no readable faces and no recognisable actors, no soldiers or marching legions.\nConstraints: no modern Leadenhall Market, glass/steel roof, modern city architecture, medieval walls, church crosses, domes, Gothic pointed arches or giant monuments. No text, inscriptions, letters, numbers, logos, signs, banners, watermarks, captions or border. Avoid copying the layout styling or pixels of any museum model/render; this is a fresh plausible reconstruction and precise decoration is not claimed as archaeologically certain.\nOutput: native opaque PNG, RGB sRGB, exactly 1536 x 864 pixels, landscape 16:9. The 16:9 ratio is essential. Generate directly at this format; no frame bands, no letterboxing.\n",
+      "viitteet": [
+        {
+          "type": "textResearchOnly",
+          "publisher": "London Museum",
+          "title": "Model forum, object 98.48",
+          "url": "https://www.londonmuseum.org.uk/collections/v/object-452169/model-forum/",
+          "notes": "Primary catalogue description places the tallest basilica on the north edge, an open forum to its south, surrounding shops/offices and the largest form about AD130. Northern midpoint is Cornhill/Gracechurch. Used only catalogue prose, never model photographs or protected pixels."
+        },
+        {
+          "type": "textResearchOnly",
+          "publisher": "Museum of London Archaeology / MOLA",
+          "title": "The archaeology of Greater London: an assessment of archaeological evidence; Roman period, The forum",
+          "url": "https://www.mola.org.uk/sites/default/files/downloads/The%20archaeology%20of%20Greater%20London%20an%20assessment%20of%20archaeological%20evidence%20for%20human%20presence%20in%20the%20area%20now%20covered%20by%20Greater%20London_Part1.pdf",
+          "notes": "Primary archaeological assessment text: expanded forum begun c AD100, completion could take 20–30 years; north basilica with nave and aisles, courtyard to south enclosed by porticoes/ranges. It discusses low eastern-hill topography. PDF text only, no screenshots or reconstruction figures used."
+        },
+        {
+          "type": "textResearchOnly",
+          "publisher": "MOLA",
+          "title": "Uncovering the heart of Roman London",
+          "url": "https://www.mola.org.uk/discoveries/news/uncovering-heart-roman-london",
+          "notes": "Primary excavation text provides Roman masonry material context and distinguishes the earlier first basilica from the later large second forum. No reconstruction drawing or excavation image pixels used."
+        }
+      ],
+      "kuvateksti": "Londiniumin forum ja basilika 100-luvun alkupuolella. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/lontoo-yksityiskohdat-20261007/production/08-forum-basilika-120/lontoo-Q961148-forum-basilika-120.png",
+      "technicalChanges": [
+        "Proportional Lanczos downscale from native 1672x941 to 1536px width; theoretical height 864.4593301435407px rounded to 864px at the integer pixel boundary. No crop, added bands or content editing.",
+        "Added exact PNG Description and Source text fields.",
+        "Embedded standard sRGB ICC profile.",
+        "Preserved native original.png and provider original.",
+        "Created 480x270 QA preview from the final file."
+      ],
+      "visualReview": {
+        "file": "lontoo-Q961148-forum-basilika-120.png",
+        "sha256": "293ae365b6228dc275a6b538f84a1dddf5ffbb0cde0d32c474220d6808fae301",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Koko pitkä kaksikerroksinen basilika, molemmat päät ja portikoin rajattu piha näkyvät. Tiilikatto, palea rappaus ja pieniä kaukohahmoja.",
+          "Ei nykyaikaista LeadenhallMarketia tai suuria sotilashahmoja; topografia ja huippudetaljit havainnollisia.",
+          "16:9 toteutettu tavallisella pienennyksellä1672x941→1536x864 kokonaispikselin pyöristyksellä, ei rajausta."
+        ]
+      },
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "number": 9,
+      "qid": "Q173882",
+      "id": "savun-katedraali-1940",
+      "filename": "lontoo-Q173882-savun-katedraali-1940.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "preflightStatus": "ready",
+      "file": "lontoo-Q173882-savun-katedraali-1940.png",
+      "r2Key": "julisteet/lontoo-yksityiskohdat/20261007/lontoo-Q173882-savun-katedraali-1940.png",
+      "url": "https://media.matkakirja.app/julisteet/lontoo-yksityiskohdat/20261007/lontoo-Q173882-savun-katedraali-1940.png",
+      "sha256": "ace1aef7dd566fff9a444b5f008d99197590d1366eb422d18acfd0ef3ce59ff4",
+      "bytes": 1880882,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "mitat": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Use case: historical-scene\nAsset type: Matkakirja London city-guide detail, an AI-created independent historical illustrative scene\nPrimary request: Generate ONE completely new photorealistic image, native 1536 x 1024 pixels (3:2 landscape), opaque RGB sRGB. Depict St Paul's Cathedral above smoke during the London bombing night in DECEMBER 1940. This must be an independently composed historical illustration, not an archival-photo recreation.\nScene/backdrop and viewpoint: A WIDE horizontal photographic view from a high industrial rooftop on the Thames SOUTH BANK, SOUTH-WEST of St Paul's, looking NORTH-EAST across the City. This independent south-bank vantage point is essential. The Thames surface is below the crop; in the lower frame we look over a broad irregular band of distant brick warehouse gables, slate and tile roof ridges, some broken and smouldering. Show the cathedral's SOUTH-WEST three-quarter aspect, set back beyond the roof band, with its long southern body extending rightwards from the west towers towards the dome. Do not flatten the building to a frontal symmetric facade. Keep the dome in the central distance, dominant but occupying a moderate fraction of the wide panorama, with ample smoky night sky on both sides.\nSubject and authentic geometry: The genuine St Paul's Cathedral, recognizable as Wren's London cathedral: grey lead-clad outer dome on a tall cylindrical colonnaded drum, substantial stone lantern and SMALL gilded cross at its apex. Its TWO western baroque towers stand LEFT of the dome in this south-west oblique view; they are lower than the dome, separated by perspective, with curved upper stages, ogee caps and small gilded finials. At least both tower tops and the dome are clearly visible above the surrounding roof line. Pale stone, plausible cathedral proportions. Avoid a US capitol, St Peter's, a Greek temple or a fantasy palace.\nSmoke and roofs: Wisps and thicker curling uneven grey smoke drift around the cathedral but leave the dome contour, lantern, cross, and tower silhouettes readable and relatively crisp. Use an original irregular smoke arrangement and an original asymmetric pattern of lower roof ridges. Some roof spaces glow from smouldering fires, a restrained warm reddish-orange practical firelight UNDER the lower smoke; small distant tongues of flame may show low among roofs. Most of the night remains grey and dark. The cathedral picks up a subtle natural reflected firelight, with no modern floodlights.\nStyle/medium: Photorealistic camera-shot appearance, believable masonry, roof texture and smoke physics, restrained optical contrast, slight natural grain; no painterly or drawn surface, no HDR, no dramatic cinematic colour grading, no oversaturated inferno. Observational wide photograph, not a monster or horror scene. A quiet disturbing historical cityscape, suitable for age 13+.\nCopyright and originality constraints: Use ONLY the factual textual description in this prompt. Do not recreate, imitate or borrow the recognizable framing, crop, smoke cloud shapes, roof arrangement, retouching, lighting design or expressive layout of Herbert Mason's iconic St Paul's photograph. In particular do not use the Northcliffe House/Fleet Street roof viewpoint. This is the independently invented south-bank scene specified above. No photographic reference pixels are supplied. Do not reproduce an existing art composition.\nAvoid: No aircraft, people, identifiable faces, bodies, casualties, wounds, blood, active violence, fireballs, explosions, vast walls of flame, spotlights or searchlight beams. No modern skyscrapers, Shard, glass city towers, 1980s tower geometries, Millennium Bridge, modern riverwalk architecture, vehicles, neon, street signage, logos, letters, numbers, text, watermark, borders or collage. No in-image caption. ONE frame only.",
+      "viitteet": [
+        {
+          "type": "textResearchOnly",
+          "publisher": "St Paul's Cathedral",
+          "title": "Our timeline",
+          "url": "https://www.stpauls.co.uk/our-timeline",
+          "notes": "Primary text establishes the wedding on 29 July 1981, crowds at the West doors, and the fire raid of 29 December 1940. Text notes the iconic Mason image came from Northcliffe House; its image pixels were not opened or used, and its composition was not a generation input."
+        },
+        {
+          "type": "textResearchOnly",
+          "publisher": "Imperial War Museums",
+          "title": "Battle of Britain and Blitz Factsheet",
+          "url": "https://www.iwm.org.uk/sites/default/files/press-release/Battle_of_Britain_and_Blitz_Factsheet.pdf",
+          "notes": "Primary indexed textual passage confirms the devastating fire attack of 29 December 1940 and St Paul's survival. Direct PDF opening returned an error; the relevant first-party passage was available through the search index. No image pixels used."
+        },
+        {
+          "type": "textResearchOnly",
+          "publisher": "St Paul's Cathedral",
+          "title": "The Wren Office drawings",
+          "url": "https://www.stpauls.co.uk/wren-office-drawings",
+          "notes": "Only textual architectural descriptions were used: two-storey western body, columned drum, lead-clad dome and baroque western towers. No drawings, photographs or other source pixels supplied to image generation."
+        },
+        {
+          "type": "textResearchOnly",
+          "publisher": "St Paul's Cathedral",
+          "title": "6. The western towers, c. 1685-1710",
+          "url": "https://www.stpauls.co.uk/6-western-towers-c-1685-1710",
+          "notes": "First-party indexed textual architecture describes curving baroque lantern stages, ogee caps and gilded pineapple finials. No drawing or photo pixels used."
+        },
+        {
+          "type": "textResearchOnly",
+          "publisher": "City of London Corporation / The Townscape Consultancy",
+          "title": "Heritage Impact Assessment - St Paul's Cathedral",
+          "url": "https://www.cityoflondon.gov.uk/assets/Services-Environment/st-pauls-heritage-impact-assessment.pdf",
+          "notes": "Text-only geometry context: dome and western towers visible from South Bank, with historic south-west views; historic South Bank was wharves and industry. Used to choose an independent elevated industrial south-bank viewpoint. No PDF images used."
+        }
+      ],
+      "kuvateksti": "St Paulin kupoli ja länsitornit kohoavat Lontoon joulukuun 1940 pommitusyön savun yläpuolelle, nähtyinä Thamesin etelärannan suunnasta. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/lontoo-yksityiskohdat-20261007/production/09-savun-katedraali-1940/lontoo-Q173882-savun-katedraali-1940.png",
+      "technicalChanges": [
+        "Preserved raw generated PNG locally as generation-original.png and retained original built-in output.",
+        "Embedded an sRGB ICC profile and exact Description/Source text in final PNG.",
+        "Final dimensions and RGB pixels unchanged from native generated output.",
+        "Created a separate 480 × 320 Lanczos QA preview. No creative edits, cropping, retouching or colour alteration."
+      ],
+      "visualReview": {
+        "file": "lontoo-Q173882-savun-katedraali-1940.png",
+        "sha256": "ace1aef7dd566fff9a444b5f008d99197590d1366eb422d18acfd0ef3ce59ff4",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Oma laaja etelärannan kuvakulma: kupoli ja länsitornit nousevat savuavien tiilikattojen yli; hillitty palovalo.",
+          "Ei ihmisvahinkoja, lentokoneita tai nykytaivaanrantaa. Tarkan savun ja kattorivien havainnollisuus kirjattu."
+        ]
+      },
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "number": 10,
+      "qid": "Q62408",
+      "id": "istuntosalin-raunio-1941",
+      "filename": "lontoo-Q62408-istuntosalin-raunio-1941.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "preflightStatus": "ready",
+      "file": "lontoo-Q62408-istuntosalin-raunio-1941.png",
+      "r2Key": "julisteet/lontoo-yksityiskohdat/20261007/lontoo-Q62408-istuntosalin-raunio-1941.png",
+      "url": "https://media.matkakirja.app/julisteet/lontoo-yksityiskohdat/20261007/lontoo-Q62408-istuntosalin-raunio-1941.png",
+      "sha256": "b327bfa35e1b09281c02ddf4c89065bd2f648bef91200d9371c7a67a2a36e673",
+      "bytes": 2864283,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "mitat": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Use case: historical-scene\nAsset type: Matkakirja city-guide detail; a newly generated photorealistic historical illustration, not a documentary photograph.\nCreate exactly one landscape image, native 1536 x 1024 pixels, 3:2, opaque sRGB RGB PNG. Entirely new generation from this text, no source image pixels.\nSubject and era: The ruined OLD Victorian House of Commons debating chamber, London, in May 1941 just after the bombing and fire of the night of 10–11 May. A quiet hollow roofless shell, viewed from inside the chamber along its long axis. This is Barry and Pugin's compact oblong debating room before the 1950 rebuilding, with intimate parliamentary proportions and opposing bench areas. It is a rectangular chamber of moderate height and length, not a vast church nave. The side wall sections have repeated pairs of narrow pointed Perpendicular Gothic windows with tracery, many panes shattered; these are the narrow windows of the old chamber rather than the broad postwar arches. Pale limestone masonry is stained with smoke and soot. Remnants of elaborately carved dark oak wall panelling and fragments of the perimeter viewing-gallery structure are badly burned. The opposing rows of wooden benches have collapsed into low heaps to left and right. The central aisle is partly visible through the debris, leading towards the battered far end. Charred timber ceiling members and roof beams lie broken across debris, with a little twisted structural ironwork. The former pitched timber-panelled ceiling and roof are gone, so a pale grey daylight sky is plainly visible above the surviving walls. A few small glass fragments among ash and stone dust, with modest lingering smoke haze.\nComposition: A human eye-level camera inside the room, looking along the long axis slightly off-centre. Wide but believable 35 mm documentary lens perspective, show both side sections and the open roof, broken timber and collapsed benches in foreground and middle distance. Keep the chamber recognisably compact and oblong, with restrained neo-Gothic detailing. Use an original spatial arrangement, not a re-creation of any surviving artwork or source photograph.\nStyle and light: Camera-shot photorealistic appearance, soft overcast daylight after a smoky morning, muted stone grey and charred brown, realistic irregular scorch marks, splintered wood, ash, dust, gentle atmospheric softness. Quiet, sober non-graphic aftermath. No flames, cinematic devastation spectacle, HDR, extreme contrast, vivid orange firelight, watercolour or painted surface.\nConstraints: No people, casualties, bodies, wounds, blood, flags, words, letters, numbers, signage, logos, brands, watermarks, border, loose printed papers, legible inscriptions, modern objects, electronics, present-day fixtures or clean surviving green benches. Do not depict the 1950 chamber destroyed again. No giant cathedral, nave, altar, intact rib-vaulted stone roof, fantasy ruin, or exaggerated ornamental church. Do not reproduce Pitchforth's watercolour or any painting, etching, photograph, or its composition. Create a new scene using historical textual architectural facts only. Do not put the AI disclosure or any text into the image.",
+      "viitteet": [
+        {
+          "type": "textResearchOnly",
+          "publisher": "UK Parliament",
+          "title": "Bomb damage",
+          "url": "https://www.parliament.uk/about/living-heritage/building/palace/architecture/palacestructure/bomb-damage/",
+          "notes": "Primary history: incendiary bombing on nights of 10 and 11 May 1941; fire destroyed Commons Chamber, ceiling collapsed and a smoking shell remained by morning. No source image pixels."
+        },
+        {
+          "type": "textResearchOnly",
+          "publisher": "UK Parliament Heritage Collections",
+          "title": "Rebuilding the Commons Chamber",
+          "url": "https://heritagecollections.parliament.uk/exhibits/rebuilding/",
+          "notes": "Primary prose confirms original oblong chamber and intimate scale retained after rebuilding. Architectural facts only; no composition of an associated artwork followed; numeric dimensions are not claimed."
+        },
+        {
+          "type": "textResearchOnly",
+          "publisher": "UK Parliament Heritage Collections",
+          "title": "Conserving Ceiling Panels from the Victorian Chamber",
+          "url": "https://heritagecollections.parliament.uk/stories/ceiling-panels/",
+          "notes": "Primary collection text and text descriptions establish carved timber panelling, raked opposing benches, perimeter gallery and former pitched wooden-panel ceiling. Textual description of ruin mentions structural ironwork. All associated photos/artworks remained unused as pixels or composition references."
+        },
+        {
+          "type": "textResearchOnly",
+          "publisher": "UK Parliament Hansard",
+          "title": "House of Commons (Rebuilding), 25 January 1945",
+          "url": "https://api.parliament.uk/historic-hansard/commons/1945/jan/25/house-of-commons-rebuilding",
+          "notes": "Contemporary parliamentary debate distinguishes old narrow paired Perpendicular Gothic windows from wide Henry VIII arches in the new design, and records retention of floor dimensions and intimate proportions. Used as primary textual evidence, no pixels."
+        }
+      ],
+      "kuvateksti": "Vanhan alahuoneen istuntosalin palanut, katoton raunio toukokuun 1941 pommitusten jälkeen. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/lontoo-yksityiskohdat-20261007/production/10-istuntosalin-raunio-1941/lontoo-Q62408-istuntosalin-raunio-1941.png",
+      "technicalChanges": [
+        "Added sRGB ICC profile to untagged generated RGB PNG without transforming pixels.",
+        "Added PNG Description and Source fields with exact havainnekuva disclosure.",
+        "Created 480 x 320 QA preview by proportional Lanczos reduction.",
+        "No creative editing, retouching, cropping, recolouring or final-image resizing."
+      ],
+      "visualReview": {
+        "file": "lontoo-Q62408-istuntosalin-raunio-1941.png",
+        "sha256": "b327bfa35e1b09281c02ddf4c89065bd2f648bef91200d9371c7a67a2a36e673",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Pitkittäisakseli katottomassa vanhassa goottilaisessa istuntosalissa, palaneet penkit/palkit, puupaneelit, nokinen kivi ja pariikkunat.",
+          "Ei ihmisiä, kirjoitusta, ruumiita tai nykytekniikkaa. Rauniojärjestely havainnollinen."
+        ]
+      },
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false
+    }
+  ],
+  "comparison": {
+    "file": "toimitetut-9.jpg",
+    "r2Key": "julisteet/lontoo-yksityiskohdat/20261007/toimitetut-9.jpg",
+    "url": "https://media.matkakirja.app/julisteet/lontoo-yksityiskohdat/20261007/toimitetut-9.jpg",
+    "sha256": "b1e3d3fa6e4a38bc4dfeb3f05eca332b5d62fcb354f8cf380dbef4feeea3a1ec",
+    "bytes": 501994,
+    "http": 200,
+    "mime": "image/jpeg",
+    "cors": "https://matkakirja.app",
+    "byteExactReadback": true
+  },
+  "deliveryStatus": "9 uutta ehdokasta toimitettu R2:een; kohde02 odottaa omistajan lähdepäätöstä eikä sitä ole generoitu.",
+  "ownerDecision": {
+    "number": 2,
+    "state": "pending",
+    "topic": "TowerBridge1952 paint/jump correction"
+  }
+}

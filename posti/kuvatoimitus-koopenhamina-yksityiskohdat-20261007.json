@@ -1,0 +1,217 @@
+{
+  "task": "koopenhamina-yksityiskohdat-20261007",
+  "deliveredAt": "2026-10-07T17:46:50.139111+00:00",
+  "source": {
+    "path": "posti/sisaltokirjuri-codex-koopenhamina-yksityiskohdat-20261007.md",
+    "commit": "6a2022a19f4162087bd29a300b3af9fbc24a932e",
+    "blob": "3dcf721b34c642f0a80fe3b67c6e2add1650b625"
+  },
+  "sourceReadInFull": true,
+  "imageCount": 2,
+  "generatedCandidates": 2,
+  "generationCalls": 2,
+  "generationLimit": 3,
+  "sourceImagePixelsUsed": false,
+  "referenceMethod": "Tilauksessa erikseen pyydetyt puuttuvien yksityiskohtien havainnekuvat. Faktat tekstilähteistä; valokuvapikseleitä ei syötetty generaattoriin.",
+  "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+  "editorAcceptance": false,
+  "gameIntegrated": false,
+  "published": false,
+  "sourceFactualNotes": [
+    {
+      "number": 1,
+      "resolution": "Emptyrock1964depictsREPAIRabsenceafterheadvandalism, notwholebodytheft. Sawblade/clotharecommissionedillustrativeprops, notverifiedrecoveredevidence. No statue/form permitted.",
+      "sources": [
+        {
+          "url": "https://kk.sites.itera.dk/apps/kk_monuments/pdf/126_0e064ab1f03ad17b.pdf",
+          "publisher": "KøbenhavnsKommune monumentsfacts",
+          "access": "indexedmunicipalPDFtext",
+          "note": "24Apr1964headcutoffandrecast."
+        },
+        {
+          "url": "https://danmarkshistorien.lex.dk/MYTE_Er_Den_Lille_Havfrue_et_dansk_nationalsymbol%3F",
+          "publisher": "AarhusUniversityhistoryseries/PhD historianMikaelFrausing",
+          "access": "articletextandphotocaptionread;pixelsnotopened",
+          "note": "Statuebroughttofoundrysamedayforrepair, originalmolds available. Caption1964workshop. No complete-bodytheftclaim."
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "resolution": "HOLD ownerformdecision beforeanyimagegen",
+      "sources": [
+        {
+          "url": "https://denkongeligesamling.dk/en/the-collection/objects/christian-iv-s-crown/",
+          "publisher": "TheRoyalDanishCollection",
+          "note": "OriginallyOPEN1596; archesadded1648andremoved1670; currentmuseumdisplayopen."
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "resolution": "Ownwidegeneralfoyerinterpretation; no closeprotectedinteriordetails, no copiedOlafurEliassonlights/PerKirkebyreliefs; obliquecameraallowswoodshellinsideandglassharborviewaside.",
+      "sources": [
+        {
+          "url": "https://www.kglteater.dk/lokaler/operaens-foyer/",
+          "publisher": "RoyalDanishTheatre",
+          "note": "OperatorfoyertextdescribeswaterfrontviewandprotectedEliassonlights; omitlightscompletely."
+        }
+      ]
+    }
+  ],
+  "pendingItems": [
+    {
+      "number": 2,
+      "qid": "Q206101",
+      "id": "christian-iv-kruunu",
+      "filename": "koopenhamina-Q206101-christian-iv-kruunu.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "preflightStatus": "awaiting-human-object-form-correction"
+    }
+  ],
+  "heldCandidates": [],
+  "assets": [
+    {
+      "number": 1,
+      "qid": "Q214619",
+      "id": "tyhja-jalusta-1964",
+      "filename": "koopenhamina-Q214619-tyhja-jalusta-1964.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "preflightStatus": "ready-repair-absence-interpretation",
+      "file": "koopenhamina-Q214619-tyhja-jalusta-1964.png",
+      "r2Key": "julisteet/koopenhamina-yksityiskohdat/20261007/koopenhamina-Q214619-tyhja-jalusta-1964.png",
+      "url": "https://media.matkakirja.app/julisteet/koopenhamina-yksityiskohdat/20261007/koopenhamina-Q214619-tyhja-jalusta-1964.png",
+      "sha256": "c84e611c299bf34dd447f95368360bbd3a2aab8f6428d405fd594f811019c355",
+      "bytes": 2132503,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "mitat": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Use case: historical-scene\nAsset type: photorealistic illustrative image for a Copenhagen city guide.\nGenerate ONE completely new image, native landscape PNG 1536 × 1024 pixels, 3:2, opaque sRGB. No input or reference image pixels.\n\nPrimary request: A quiet, cool night waterfront at Langelinie in Copenhagen around 1964, with ONLY AN EMPTY GRANITE BOULDER as the subject. This illustrates the absence of a monument during repair. It does not depict theft of an entire statue or the vandalism itself.\nScene/backdrop: Dark harbor water behind the boulder, a damp period stone promenade with a low rough stone waterfront edge in the foreground and at one side. A single tiny distant harbor light and faint diffuse city glow in hazy air, no visible modern structures or boats.\nSubject: A low irregular squat grey granite boulder at the water's edge, wet with subtle soft moonlit highlights. The top has a simple dark flat EMPTY mounting area. Above this mounting area there is only empty air. At its foot among shore stones, a small broken thin hand-hacksaw blade lies beside a modest folded cloth bundle. These are generic illustrative props, not evidence, and should be small unobtrusive details.\nStyle/medium: Camera-shot natural photorealism; credible rough wet granite grain, damp paving, dark water with restrained ordinary ripples. Low-light documentary exposure, muted cool grey and blue tones, soft moonlight. No HDR, no dramatic film grading or oversaturation.\nComposition/framing: Human eye-level camera on the promenade looking toward the boulder from approximately 15 metres away, a mild low upward impression because the rock stands above the shoreline. Landscape medium-wide frame. The boulder and its unoccupied flat top are unambiguously readable, with ample dark water and night air around it. Ground, waterfront and horizon share one coherent real camera perspective.\nAbsolute constraints: ONLY EMPTY ROCK. There must be ABSOLUTELY NO sculpture, statue, sculpture fragment, bronze body, headless torso, detached head, tail, human figure, mermaid, recognizable figurative pose, silhouette or figurative reflection anywhere in the scene. No outline or shadow may resemble a person or mermaid. The stone remains recognizably an irregular natural low granite boulder, not a humanoid shape. No people, faces, animal figures or human-shaped silhouettes. No blood, violence or action.\nAvoid: text, lettering, numbers, logos, labels, signs, watermarks, border, frame; LED lights, modern ships, cars, contemporary street furniture, modern electronics; overly cinematic or HDR lighting. Do not put a statue on the boulder. Do not insert any missing-body remnant. The top is vacant.",
+      "viitteet": [
+        {
+          "type": "textResearchOnly",
+          "publisher": "Københavns Kommune",
+          "title": "Den lille Havfrue — monumentbeskrivelse (PDF)",
+          "url": "https://kk.sites.itera.dk/apps/kk_monuments/pdf/126_0e064ab1f03ad17b.pdf",
+          "notes": "Root preflight's indexed municipal PDF text establishes head vandalism on 24 April 1964 and recasting. Full PDF open in this production subtask returned content too large; no PDF or image pixels fetched or viewed. The image does not claim the entire statue was stolen in 1964."
+        },
+        {
+          "type": "textResearchOnly",
+          "publisher": "Danmarkshistorien / Lex; ph.d. Mikael Frausing, Aarhus Universitetsforlags 100 danmarkshistorier",
+          "title": "MYTE: Er Den Lille Havfrue et dansk nationalsymbol?",
+          "url": "https://danmarkshistorien.lex.dk/MYTE_Er_Den_Lille_Havfrue_et_dansk_nationalsymbol%3F",
+          "notes": "Article text and workshop photograph caption verified in web text only. Caption states the sculpture was brought to the bronze foundry the same day for repair using original molds. No photograph pixels opened or used. Empty place is an interpretation of repair absence, not a scene of entire-body theft; blade and cloth are commissioned illustrative props with no recovered-evidence claim."
+        }
+      ],
+      "kuvateksti": "Tyhjä rantakivi Langeliniessa havainnollistaa patsaan poissaoloa vuoden 1964 korjauksen aikana. Sahanterä ja kangaskäärö ovat kuvituksellisia yksityiskohtia, eivät todennettuja löytöjä. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/koopenhamina-yksityiskohdat-20261007/production/01-tyhja-jalusta-1964/koopenhamina-Q214619-tyhja-jalusta-1964.png",
+      "technicalChanges": [
+        "Original built-in generated PNG preserved unchanged both at the built-in output path and as original-generation.png in this production folder.",
+        "Final native 1536 × 1024 RGB PNG received exact Description and Source text plus an embedded sRGB ICC profile; RGB pixel bytes verified identical to original. No crop, resize, retouching, compositing, colour grading or creative editing.",
+        "qa-preview-480.png is a technical Lanczos downsample to 480 × 320 solely for visual QA."
+      ],
+      "visualReview": {
+        "file": "koopenhamina-Q214619-tyhja-jalusta-1964.png",
+        "sha256": "c84e611c299bf34dd447f95368360bbd3a2aab8f6428d405fd594f811019c355",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Tyhjä märkä graniittilohkare ja tasainen tumma jalusta-alue, rantakivetys, pieni terä ja rypistynyt kangas, tumma satama ja kuutamo.",
+          "Ei patsasta, ihmis-/merenneitomuotoa tai figuratiivista varjoa. Korjauspoissaolon havainnollistus; rekvisiitta ei väite todennetusta löytöaineistosta.",
+          "Kamera vaikuttaa15metriä läheisemmältä ja terä on480koossa pieni; Fable arvioi rajauksen."
+        ]
+      },
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "number": 3,
+      "qid": "Q838297",
+      "id": "oopperan-vaahterakuori",
+      "filename": "koopenhamina-Q838297-oopperan-vaahterakuori.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "preflightStatus": "ready-wide-original-foyer-interpretation",
+      "file": "koopenhamina-Q838297-oopperan-vaahterakuori.png",
+      "r2Key": "julisteet/koopenhamina-yksityiskohdat/20261007/koopenhamina-Q838297-oopperan-vaahterakuori.png",
+      "url": "https://media.matkakirja.app/julisteet/koopenhamina-yksityiskohdat/20261007/koopenhamina-Q838297-oopperan-vaahterakuori.png",
+      "sha256": "a4e2855c5ebabd9f2ea5dbedaed261e9a7c7ac8bc38b4107f7d7fbd566e90a19",
+      "bytes": 1954910,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "mitat": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Use case: photorealistic-natural\nAsset type: original wide illustrative opera foyer image for a Copenhagen city guide.\nGenerate ONE completely new image, native landscape PNG 1536 × 1024 pixels, 3:2, opaque sRGB. No input or reference image pixels.\n\nPrimary request: An ORIGINAL generic spatial interpretation of a large bright contemporary waterfront opera foyer, inspired by the requested Copenhagen context. This is an own illustrative general view, not a verified photograph or a measured replica of the actual room. The key idea is a distant curved light-brown maple-clad auditorium shell inside a spacious daylit foyer, together with a glazed harbor view.\nScene/backdrop and spatial logic: ONE COHERENT OBLIQUE INTERIOR CAMERA VIEW. We stand inside the foyer on a pale stone floor. On the LEFT is a broad tall glass facade with a slim simple metal grid; through this facade harbor water is clearly OUTSIDE the building. Farther INSIDE the foyer on the RIGHT, approximately 15–25 metres from the camera, is the auditorium's continuous curved ellipsoid volume clad in pale light-brown maple. The wooden volume is anchored to the interior floor and is physically separate from the exterior water. There is open indoor walking space between glazing and wooden mass.\nSubject: The ENTIRE curved wooden auditorium shell fits comfortably within the frame, including its upper contour and lower connection with the interior floor. A smooth simple ellipsoid wooden mass, visible at a distance as a whole spatial form, with believable subtle maple grain and plain fine panel joints. Broad clear glass to the left offers natural light and a quiet blue-grey harbor outside. A pale plain ceiling and modest light stone floor complete the spacious unoccupied hall.\nStyle/medium: Camera-shot natural architectural photorealism, restrained normal camera perspective and credible material texture. Muted natural harbor daylight, pale maple warm against soft cool outdoor light. Natural shadows, modest floor reflections. No HDR, no exaggerated saturation, no cinematic grading.\nComposition/framing: Wide landscape view from human eye height at foyer floor level, looking slightly upward and obliquely across the open room. The glass waterfront facade occupies the left side and the complete distant wood shell occupies the right side with breathing room at every edge. The whole setting reads as an interior hall, with water outside the glazing. Avoid a close-up or wood texture macro view. No exact iconic photographic composition and no measured reconstruction.\nConstraints: Entirely original generic architectural details. No artwork or art objects anywhere. No recognizable Olafur Eliasson spherical or geometric light sculptures, no hanging sculptural lamps of any kind, no Per Kirkeby bronze reliefs, no bronze art, no reproductions of protected objects, no iconic bespoke furniture or stair details. Ceiling simple and free of prominent light fixtures. No people.\nAvoid: text, words, lettering, numbers, logos, labels, signage, advertisements, watermarks, border or frame; close faces, crowds; furniture focal points; grand iconic staircases; a protected interior detail close-up; spherical chandeliers; wood shell outside in harbor; water inside the hall. Keep the wooden mass INSIDE and the harbor water OUTSIDE through the LEFT glass facade.",
+      "viitteet": [
+        {
+          "type": "textResearchOnly",
+          "publisher": "Det Kongelige Teater",
+          "title": "Operaens foyer",
+          "url": "https://www.kglteater.dk/lokaler/operaens-foyer/",
+          "notes": "Operator page text verified only; establishes large waterfront foyer context and mentions Olafur Eliasson light sculptures. No source photograph pixels opened, downloaded or used. The source is contextual research, not permission for image copying. The generated wide view is an original generic interpretation; recognizable Eliasson lighting, Per Kirkeby reliefs and protected art objects are intentionally omitted."
+        }
+      ],
+      "kuvateksti": "Oma havainnollinen yleisnäkymä oopperan aulasta: vaalea vaahterapuinen salikuori on sisällä ja satamavesi näkyy lasijulkisivun takana. Tilallinen tulkinta Kööpenhaminan oopperan aiheesta, ei todennettu valokuva todellisesta huoneesta. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/koopenhamina-yksityiskohdat-20261007/production/03-oopperan-vaahterakuori/koopenhamina-Q838297-oopperan-vaahterakuori.png",
+      "technicalChanges": [
+        "Original built-in generated PNG preserved unchanged both at the built-in output path and as original-generation.png in this production folder.",
+        "Final native 1536 × 1024 RGB PNG received exact Description and Source text plus an embedded sRGB ICC profile; RGB pixel bytes verified identical to original. No crop, resize, retouching, compositing, colour grading or creative editing.",
+        "qa-preview-480.png is a technical Lanczos downsample to 480 × 320 solely for visual QA."
+      ],
+      "visualReview": {
+        "file": "koopenhamina-Q838297-oopperan-vaahterakuori.png",
+        "sha256": "a4e2855c5ebabd9f2ea5dbedaed261e9a7c7ac8bc38b4107f7d7fbd566e90a19",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Yksi laaja aula: vaahterakuori kokonaisena sisällä oikealla, satamavesi lasin ulkopuolella vasemmalla.",
+          "Ei tunnistettavia taideteoksia, valopalloja, reliefejä, ihmisiä tai kirjoitusta. Oma tilallinen tulkinta, ei mitattu kopio oikeasta sisätilasta."
+        ]
+      },
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false
+    }
+  ],
+  "comparison": {
+    "file": "toimitetut-2.jpg",
+    "r2Key": "julisteet/koopenhamina-yksityiskohdat/20261007/toimitetut-2.jpg",
+    "url": "https://media.matkakirja.app/julisteet/koopenhamina-yksityiskohdat/20261007/toimitetut-2.jpg",
+    "sha256": "6b31317861256fdfa9333929a069e94669ed4e0e622b74e836b3b11afd4fad46",
+    "bytes": 166107,
+    "http": 200,
+    "mime": "image/jpeg",
+    "cors": "https://matkakirja.app",
+    "byteExactReadback": true
+  },
+  "deliveryStatus": "2 uutta ehdokasta toimitettu R2:een; kohde02 odottaa omistajan lähdepäätöstä eikä sitä ole generoitu.",
+  "ownerDecision": {
+    "number": 2,
+    "state": "pending",
+    "topic": "ChristianIV1596 current open crown versus requested arches"
+  }
+}

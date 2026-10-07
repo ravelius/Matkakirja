@@ -1,93 +1,100 @@
 {
   "task": "rooma-yksityiskohdat-20261007",
-  "deliveredAt": "2026-10-07T16:43:03.294433+00:00",
   "source": {
+    "path": "posti/sisaltokirjuri-codex-rooma-uusinta-colosseum-appia-20261007.md",
+    "commit": "b508c84b3144ad2861c67a0a3d059c1ecfd78c1a",
+    "blob": "821887157ff1ff5378b71d3c93f47af9358e9bf4"
+  },
+  "originalSource": {
     "path": "posti/sisaltokirjuri-codex-rooma-yksityiskohdat-20261007.md",
     "commit": "c95ad78a20be9549c5fee0e859db1194c6e42f96",
     "blob": "1027eaa39325d0a3f59922e3e5acb6f12a6f2029"
   },
   "sourceReadInFull": true,
-  "imageCount": 6,
-  "generatedCandidates": 8,
-  "generationCalls": 8,
-  "generationLimit": 8,
   "sourceImagePixelsUsed": false,
-  "referenceMethod": "Tilauksessa erikseen pyydetyt puuttuvien yksityiskohtien havainnekuvat. Faktat tekstilähteistä; valokuvapikseleitä ei syötetty generaattoriin.",
-  "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
-  "editorAcceptance": false,
-  "gameIntegrated": false,
-  "published": false,
-  "sourceFactualNotes": [
-    "Trevi caption must not say onlymunicipalRome residents exempt; metropolitanresidents also exempt. No price/number drawn inimage.",
-    "No source image pixels will be passed to imagegen.",
-    "Roma independent of pending PrahaWien decisions.",
-    "Madonna discovery specificallylegend, officialsource says Tiber mouth; commissionTrasteverebackdrop interpretation, avoid documentaryfindsiteclaim."
-  ],
-  "heldCandidates": [
-    {
-      "number": 1,
-      "qid": "Q10285",
-      "id": "avajaiskisat-80",
-      "filename": "rooma-Q10285-avajaiskisat-80.png",
-      "dimensions": [
-        1536,
-        1024
-      ],
-      "file": "rooma-Q10285-avajaiskisat-80.png",
-      "sha256": "7aacb6371ffae3ea85176f9feeac0270d8a4dff18db541d079877b5c76830b0e",
-      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/rooma-yksityiskohdat-20261007/production/01-avajaiskisat-80/rooma-Q10285-avajaiskisat-80.png",
-      "visualReview": {
-        "file": "rooma-Q10285-avajaiskisat-80.png",
-        "sha256": "7aacb6371ffae3ea85176f9feeac0270d8a4dff18db541d079877b5c76830b0e",
-        "nativeViewed": true,
-        "preview480Viewed": true,
-        "approvedForDelivery": false,
-        "requiresEditorCompositionReview": false,
-        "observations": [
-          "Areena on kokonaisena soikiona, hiekka ehjä ja kolme pientä seisovaa hahmoa; velarium ja tiheä katsomo näkyvät.",
-          "Etureunan ohut verkkokaide näyttää modernilta; pyydettyä kolmen kaariarkadikerroksen rakennetta ei kuvasta voi todentaa, ja ulkokehä leikkautuu sivuilta.",
-          "Pidätetty korjausta varten; lisägenerointiin ei ole vielä omistajan lupaa."
-        ]
-      },
-      "generationPrompt": "Use case: historical-scene.\nAsset type: one commissioned photorealistic Matkakirja city-guide detail, landscape 3:2, native 1536 x 1024 pixels, opaque RGB.\nCreate an entirely NEW image from this text only. No source image, existing painting, film still, photograph or generated image is an input.\n\nScene: the Flavian Amphitheatre / Colosseum in Rome during its inaugural games in AD 80, in a quiet pause before an event. Architecture is newly completed and intact, pale ivory travertine and marble, no ruined or excavated areas. The whole sand-covered central arena and the whole densely occupied elliptical seating bowl are visible in one coherent real-camera view. The arena is an elongated ellipse, approximately 76 by 46 metres in plan, not a circle or rectangular stadium. The overall amphitheatre proportions are about 189 by 156 metres in plan. Respect a credible continuous oval, radial aisles, concentric tiers, and continuous perspective.\n\nCamera/framing: high in the upper seating, looking steeply down and diagonally across toward the imperial box on the opposite side. An extremely wide but rectilinear architectural lens, around 15 mm full-frame equivalent; aim the camera so both rounded ends of the entire sand arena and the near and far seating banks fit comfortably within the frame. The ellipse's long axis runs broadly across the landscape frame. Show the complete bowl rather than cropping one end; modest empty margin above the far rim. No close foreground heads or human figures. A small amount of near pale stone seating can establish the high viewpoint but must not obstruct the arena perimeter. The imperial box is a small architectural element opposite the camera, distinguished by plain purple-red cloth only. No recognizable portrait of Titus.\n\nArchitecture: a credible ancient Roman amphitheatre interior and complete new Colosseum envelope: three arcaded architectural orders and a solid upper attic with small rectangular openings, pale intact stone, densely packed marble seating below, a restrained upper rim gallery. Make the architecture coherent, not stacked disconnected stage sets. Timber masts with ropes around the rim support off-white linen velarium shadecloth, PARTIALLY extended over the outer seating; leave the entire arena open to the sky. A few small plain cloth pennants flutter at the rim in muted red, ochre, blue and purple. Their fabric is blank and completely unmarked.\n\nPeople: the enormous audience is made of tiny distant Roman spectators in restrained off-white, ochre and earth-colour tunics and draped cloth, filling the seating rows densely. No individual faces identifiable, no close foreground actors, no person resembling a real person or film actor. Exactly three tiny distant gladiator figures stand quietly on the middle area of the sand, naturally spaced, relaxed neutral poses, no fighting and no weapon action. They are minor scale markers, not a central character close-up.\n\nArena surface: one uninterrupted solid pale sandy oval floor with subtle foot scuffs. ALL underground infrastructure is hidden beneath the floor. Absolutely no exposed hypogeum, underground stone labyrinth, trenches, archaeological excavation, missing floor, cutaway, modern replacement decking, fencing or dividing walls on the arena.\n\nStyle: extremely convincing natural documentary-camera photograph appearance, warm gentle afternoon sunlight, realistic ambient shade beneath the velarium, muted Mediterranean colours, fine stone grain, woven linen texture, restrained atmosphere, natural highlight rolloff and optical depth. Historical reconstruction with a camera-shot appearance, not an actual photograph. No CGI or video-game render, no digital painting, no romantic nineteenth-century painting, no HDR, no dramatic cinematic grade, no bloom, no oversaturation, no exaggerated sunset.\n\nAbsolute exclusions: any lettering, inscriptions, words, numerals, SPQR, logos, eagles, imperial emblems, shields as emblems, banners with marks, signage, watermark, border or montage. No blood, injuries, corpses, animal attacks, combat, execution, spectacle violence or weapons in action. No current Rome skyline, ruined Colosseum profile, modern repairs, steel safety railings, tourists, contemporary clothing, electric lighting, cables, modern objects or modern buildings. No circular plan and no cropped arena ends.",
-      "r2Delivered": false,
-      "editorAcceptance": false,
-      "gameIntegrated": false,
-      "published": false
-    },
+  "deliveryStatus": "Uusinta: vain Appia-v2 uutena toimituksena. Viisi aiempaa kuvaa hyväksytty lähdepostin mukaan;05 poistettu,01 uusinta epäonnistui ja poistetaan.",
+  "imageCount": 1,
+  "assets": [
     {
       "number": 8,
       "qid": "Q189417",
-      "id": "appia-ristit-71eaa",
-      "filename": "rooma-Q189417-appia-ristit-71eaa.png",
+      "id": "appia-ristit-71eaa-v2",
+      "filename": "rooma-Q189417-appia-ristit-71eaa-v2.png",
       "dimensions": [
         1536,
         1024
       ],
-      "file": "rooma-Q189417-appia-ristit-71eaa.png",
-      "sha256": "5c58584bab1a0fa3d5e0bd8a849b066e1112ecd604b0df28059c2d31df0bdff0",
-      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/rooma-yksityiskohdat-20261007/production/08-appia-ristit-71eaa/rooma-Q189417-appia-ristit-71eaa.png",
+      "file": "rooma-Q189417-appia-ristit-71eaa-v2.png",
+      "r2Key": "julisteet/rooma-yksityiskohdat/20261007/rooma-Q189417-appia-ristit-71eaa-v2.png",
+      "url": "https://media.matkakirja.app/julisteet/rooma-yksityiskohdat/20261007/rooma-Q189417-appia-ristit-71eaa-v2.png",
+      "sha256": "4a09172873c48f81868b92f3c90870d1c756f640aa26a5bb2baf184240a55ffb",
+      "bytes": 2710403,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "mitat": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Use case: historical-scene\nAsset type: a commissioned Matkakirja city-guide abstract historical illustration with photorealistic camera appearance. Generate ONE whole NEW image from TEXT ONLY, landscape 3:2, native exactly 1536 x 1024 pixels, opaque RGB sRGB.\n\nScene and purpose: ancient Via Appia in the Roman Republic, 71 BCE. A quiet open countryside landscape, a gently CURVING stone-paved road receding toward the horizon, distant cypress trees, and very long rows of EMPTY plain wooden crosses along BOTH road edges in the mid-distance. The crosses are empty abstract historical markers. This image does NOT picture actual executions or human victims. There are absolutely NO HUMAN FIGURES ANYWHERE.\n\nCamera and composition: wide view at road level, ordinary natural rectilinear camera perspective. The entire lower half of the image contains ONLY irregular ancient basalt paving, low stone edging and empty grass verges. The road curves gently to the right near the distant horizon rather than running ruler-straight. Low fields and distant cypresses flank the road; no buildings.\n\nCross rows: MANY visibly separate, unmistakable but VERY SMALL plain DARK wooden crosses line BOTH distant road edges, receding in long orderly rows toward the curve. Both cross rows start only in the MID-DISTANCE above the empty foreground and remain very small. IMPORTANT native pixel scale: every cross is strictly LESS than 5% of image height, largest cross about 20–35 PIXELS tall, absolute maximum 45 pixels in a 1024-pixel-high picture. Make each distant cross just TWO DARK STROKES: one straight vertical timber and ONE short horizontal timber near its upper end, with a little vertical wood extending above the crossbar. Clear cross-shaped silhouettes, not poles, not people, not gravestones. No carvings, joinery details or body-like lumps. All crosses are entirely EMPTY, with NO person, corpse, garment, rope or body part attached. Repeated small crosses should remain readable as crosses at 480-pixel preview width.\n\nLighting and mood: soft natural red-orange evening sky, understated sunset tones fading to muted pale grey above, ordinary ambient light on grey paving and subdued green/brown grasses. Gentle quiet historical landscape, no storm, no horror, no dramatic sun disc, fire glow, theatrical silhouette or cinematic grading. Convincing photographic textures, restrained natural colours, fine basalt surfaces and atmospheric perspective. Not a painting or game render.\n\nAbsolute exclusions: NO PEOPLE ANYWHERE, including no people attached to crosses, no guards, soldiers, travellers, human shadows, figures, faces, corpses, anatomy, blood, wounds, restraints, suffering, violence or execution action. NO large or foreground cross; no cross in the entire lower half. No modern structures, towers, later tombs, vehicles, ruins, road markings, modern paving, current clothing or objects. NO letters, words, numerals, inscriptions, logos, signage, watermark, border or montage. No HDR, oversaturation, bloom, horror atmosphere, dark storm clouds or fire.\n\n",
+      "viitteet": [
+        {
+          "type": "textResearchOnly",
+          "publisher": "Appian / Loeb Classical Library 1913, hosted by University of Chicago LacusCurtius",
+          "title": "The Civil Wars, Book I, section 120",
+          "url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Appian/Civil_Wars/1*.html#120",
+          "notes": "Primary ancient account in English translation. Live text checked 7 October 2026, section 120: 6000 captured men crucified along the road from Capua to Rome. No source-image pixels used."
+        },
+        {
+          "type": "textResearchOnly",
+          "publisher": "Appian / Tufts University Perseus Digital Library",
+          "title": "The Civil Wars, Book I, chapter XIV / section 120",
+          "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0232%3Abook%3D1%3Achapter%3D14",
+          "notes": "Located by root preflight. This exact endpoint failed live access; beta section endpoint also failed. Claim confirmed instead from primary text hosted by University of Chicago. Not claimed as directly read."
+        },
+        {
+          "type": "textResearchOnly",
+          "publisher": "Appian / University of Michigan Library Digital Collections",
+          "title": "The history of Appian of Alexandria, English by J.D., Civil Wars",
+          "url": "https://quod.lib.umich.edu/e/eebo/A25723.0001.001/1%3A15?rgn=div1&view=fulltext",
+          "notes": "Root-provided endpoint attempted, returned 403. Not claimed as directly read; University of Chicago primary translation verifies the relevant account."
+        }
+      ],
+      "kuvateksti": "Via Appiaa vuonna 71 eaa. havainnollistava maisema ja tyhjien ristien rivit. Ristit ovat aiheen abstrakti historiallinen havainnollistus. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/rooma-yksityiskohdat-20261007/replacement-v2/production/08-appia-ristit-71eaa-v2/rooma-Q189417-appia-ristit-71eaa-v2.png",
+      "technicalChanges": [
+        "Preserved the generated original byte-identically in original.png and left the built-in generated original in place.",
+        "Saved native 1536x1024 opaque RGB pixels unchanged; embedded standard sRGB ICC profile with no colour remapping.",
+        "Added PNG Description and Source, each exactly: Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Created 480x320 full-frame LANCZOS technical QA preview.",
+        "No creative editing, compositing, cropping, painting, selective repair or further generation."
+      ],
       "visualReview": {
-        "file": "rooma-Q189417-appia-ristit-71eaa.png",
-        "sha256": "5c58584bab1a0fa3d5e0bd8a849b066e1112ecd604b0df28059c2d31df0bdff0",
+        "file": "rooma-Q189417-appia-ristit-71eaa-v2.png",
+        "sha256": "4a09172873c48f81868b92f3c90870d1c756f640aa26a5bb2baf184240a55ffb",
         "nativeViewed": true,
         "preview480Viewed": true,
-        "approvedForDelivery": false,
-        "requiresEditorCompositionReview": false,
+        "approvedForDelivery": true,
         "observations": [
-          "Ei verta, kidutuslähikuvia tai tunnistettavia kasvoja; pitkä tie ja kaukaiset ristit.",
-          "Risteihin kiinnittyviä ihmishahmoja ei erotu: kuvasta tulee tyhjien ristien maisema. Tilattu keskeinen sisältö puuttuu.",
-          "Pidätetty korjausta varten; lisägenerointiin ei ole vielä omistajan lupaa."
+          "Tyhjät ristirivit tien molemmin puolin, lempeästi kaartuva kivitie, punaoranssi luonnollinen iltataivas.",
+          "Ei ihmisiä, ruumiinosia tai verta. Suurin tarkistettu risti41px, konservatiivinen yläraja44px: alle5%1024pikselistä."
         ]
       },
-      "generationPrompt": "Use case: historical-scene\nAsset type: Matkakirja city-guide detail; one complete NEW non-graphic historical-education LANDSCAPE illustration, photorealistic camera appearance.\nPrimary request: The Via Appia in 71 BCE after the Spartacus rebellion. A solemn, calm, very WIDE landscape view along a straight ancient Roman military road into the Capua plain. It illustrates an ancient account of prisoners along the Rome–Capua road. The road and open countryside are the main subject.\nScene/backdrop: Roman Republic 71 BCE. Straight road built of irregular dark basalt paving stones, with low tuff curbs, empty dry grass verges and open agricultural plain. Sparse cypress trees very far away, broad muted gray sky, distant low hills only at the extreme horizon.\nStrict distance and size composition: Camera very LOW at the road's surface, natural wide 24mm photo perspective. Horizon near the upper third. At least the ENTIRE LOWER HALF of the image must be EMPTY ROAD and empty surrounding landscape. Nothing human or cross-like anywhere in this foreground. Leave the first 150 METRES of the road, verges and surrounding land completely EMPTY. The first wooden crosses start only in the FAR DISTANCE, at least 150–200 metres away, clustered in a thin visual band near the horizon. DOZENS of plain wooden CROSS silhouettes run evenly along BOTH road verges and recede toward the vanishing point. ALL crosses and attached people are tiny distant dark silhouettes. IMPORTANT scale at output 1536 x 1024: the biggest human silhouette attached to a distant cross is only about 8–12 PIXELS TALL, and no cross exceeds about 20 PIXELS TALL. Every attached human is an ADULT, clothed opaque silhouette only with NO visible anatomy, NO faces and NO body details. Only the faint distant cross-shaped forms suggest the historical account. A few even tinier Roman guards appear as neutral standing silhouettes far behind the start of the crosses, with no visible faces or detailed clothing. They are inactive. This image is suitable for a 13+ educational city guide.\nLighting/mood: low natural late-afternoon BACKLIGHT under a muted gray sky, ordinary soft shadows, solemn quiet mood, brown grass and gray basalt, subdued natural colours. No red or orange giant sun, no horror aesthetic, no gruesome hero shot, no theatrical lighting, no cinematic oversaturation.\nStyle/medium: photorealistic camera-shot appearance with believable basalt texture and physical road perspective; not a painting, illustration or CGI render. LANDSCAPE 3:2, native exactly 1536 x 1024 pixels, opaque RGB sRGB. New generation from TEXT ONLY.\nMandatory exclusions: NO foreground cross or human. NO medium-distance or large human figure. NO body close-up, anatomical detail, visible restraints, nails, wounds, injuries, blood, gore, exposed skin, nudity, torture detail, suffering facial expression, execution action, violence in progress, minors, identifiable faces, named historical portrait or recognizable actors. NO skulls or corpse pile. NO later tomb of Cecilia Metella, no towers, medieval buildings, modern ruins, modern roads, cars or objects. NO words, numerals, inscriptions, road signs, logos, watermark or frame. No source-image inputs.\n",
-      "r2Delivered": false,
       "editorAcceptance": false,
       "gameIntegrated": false,
       "published": false
     }
   ],
-  "assets": [
+  "replacementGenerationCalls": 2,
+  "previousGenerationCalls": 8,
+  "totalGenerationCalls": 10,
+  "totalGenerationLimit": 10,
+  "noThirdAttempt": true,
+  "previousDeliveryCommit": "686267a7dcadbd3041909b38b8305c34c61b1610",
+  "previousAcceptedAssets": [
     {
       "number": 2,
       "qid": "Q99309",
@@ -171,9 +178,16 @@
           "Toimitettava Fablelle rajauksen arviointiin, ei täydellisen kattoaukko-/lattiamittauksen kuittaus."
         ]
       },
-      "editorAcceptance": false,
+      "editorAcceptance": true,
       "gameIntegrated": false,
-      "published": false
+      "published": false,
+      "editorAcceptanceAtFirstDelivery": false,
+      "editorAcceptanceReported": true,
+      "editorAcceptanceEvidence": {
+        "path": "posti/sisaltokirjuri-codex-rooma-uusinta-colosseum-appia-20261007.md",
+        "commit": "b508c84b3144ad2861c67a0a3d059c1ecfd78c1a",
+        "blob": "821887157ff1ff5378b71d3c93f47af9358e9bf4"
+      }
     },
     {
       "number": 3,
@@ -250,9 +264,16 @@
           "Ei Espanjalaisia portaita, Barcacciaa tai obeliskia. Kuvateksti ilmoittaa legendan. Tarkka1598talorivi havainnollinen."
         ]
       },
-      "editorAcceptance": false,
+      "editorAcceptance": true,
       "gameIntegrated": false,
-      "published": false
+      "published": false,
+      "editorAcceptanceAtFirstDelivery": false,
+      "editorAcceptanceReported": true,
+      "editorAcceptanceEvidence": {
+        "path": "posti/sisaltokirjuri-codex-rooma-uusinta-colosseum-appia-20261007.md",
+        "commit": "b508c84b3144ad2861c67a0a3d059c1ecfd78c1a",
+        "blob": "821887157ff1ff5378b71d3c93f47af9358e9bf4"
+      }
     },
     {
       "number": 4,
@@ -323,89 +344,16 @@
           "Fable arvioi paikkageometrian ennen käyttöä; kyltti on keksitty havainnollistus, ei varmennettu virallinen kylttimalli."
         ]
       },
-      "editorAcceptance": false,
+      "editorAcceptance": true,
       "gameIntegrated": false,
-      "published": false
-    },
-    {
-      "number": 5,
-      "qid": "Q848072",
-      "id": "poliisin-pilli-2019",
-      "filename": "rooma-Q848072-poliisin-pilli-2019.png",
-      "dimensions": [
-        1536,
-        1024
-      ],
-      "file": "rooma-Q848072-poliisin-pilli-2019.png",
-      "r2Key": "julisteet/rooma-yksityiskohdat/20261007/rooma-Q848072-poliisin-pilli-2019.png",
-      "url": "https://media.matkakirja.app/julisteet/rooma-yksityiskohdat/20261007/rooma-Q848072-poliisin-pilli-2019.png",
-      "sha256": "3b7c3bb1bc0ab3cb8e3f6eb8afe354752afe7d5fe245d1bb0ff50ec673cd701a",
-      "bytes": 3134939,
-      "http": 200,
-      "mime": "image/png",
-      "cors": "https://matkakirja.app",
-      "byteExactReadback": true,
-      "mitat": [
-        1536,
-        1024
-      ],
-      "generationPrompt": "Use case: photorealistic-natural\nAsset type: Matkakirja city-guide detail, one complete new illustrative photograph-like scene.\nPrimary request: Rome, Spanish Steps in hot SUMMER 2019. A camera positioned at the TOP of the stairs looks DOWN across the changing flights and landings toward Piazza di Spagna. In the mid-distance on a landing there are EXACTLY TWO small municipal police officers in generic dark-blue uniforms, seen from behind or an obscured side angle. Each officer is about 7 percent of picture height, distant enough that no face is identifiable. One officer clearly raises a hand holding a small metal whistle to the mouth and watches a SINGLE much tinier tourist who has briefly sat on a distant stair edge. The second officer stands nearby watching. A small standing tourist group is very far below beside the plaza; the staircase is otherwise almost empty. The people are ordinary unobtrusive figures.\nScene/backdrop and geometry: The actual Spanish Steps are NOT one endless straight rectangular staircase. From the top, show broad pale travertine stairs broken into multiple short flights, a generous oval middle landing, curved concave and convex stone parapets, paired lateral flights which split and rejoin around the landings, and irregular-width sweeping lower flights. The camera looks downward so the wide winding layout remains unmistakable. At the distant FOOT of the stairs, the Barcaccia is a SMALL low BOAT-SHAPED fountain with raised prow and stern, lying in its oval shallow sunken basin. It is only a minor detail, approximately 5 percent of image width. Piazza di Spagna and warm historic Roman plaster façades are farther beyond. No view of the Trinità church because the camera faces downhill.\nComposition/framing: landscape 3:2, exactly 1536 x 1024 pixels, one complete frame. Slight downward 35mm real-camera perspective from the uppermost landing, showing several landings and the curved split flights across the whole image. Two police figures near centre mid-distance, fountain tiny below. Make the hand-to-mouth whistle gesture discernible without making officers foreground portraits.\nStyle/medium: photorealistic camera-shot appearance, naturally textured pale weathered travertine, hot summer daylight, ordinary soft warm colours, muted saturation and natural shadows. No HDR, no cinematic grading, no painting or CGI appearance.\nConstraints: EXACTLY TWO distant dark-blue uniformed generic municipal police; no additional uniformed people. No identifiable faces, no recognisable real person, no readable badges or uniform letters, no logos or brands, no guns or any other weapons, no police cars, no violent action, no blood, no crowd. All visible people tiny distant back or obscure side views. No text anywhere, no signage, no storefront lettering, no numerals, no watermarks and no frames. No current new art or recognisable modern architecture. Preserve correct broadly sinuous multi-flight staircase proportions; NOT a giant uninterrupted straight flight. Opaque RGB sRGB. This is an illustrative 2019 scene, not an authentic documentary photograph. Entirely new generation from TEXT only, no source-image inputs.\n",
-      "viitteet": [
-        {
-          "type": "textResearchOnly",
-          "publisher": "Roma Capitale / Turismo Roma",
-          "title": "The Barcaccia Fountain",
-          "url": "https://www.turismoroma.it/en/places/barcaccia-fountain",
-          "notes": "Text researched only. Dates 1626–1629, low boat-shaped fountain, historical association with flood of 1598. This source is contextual support, not source-image pixels or proof of an exact 1598 scene."
-        },
-        {
-          "type": "textResearchOnly",
-          "publisher": "Roma Capitale / Turismo Roma",
-          "title": "The Spanish Steps",
-          "url": "https://www.turismoroma.it/en/places/spanish-steps",
-          "notes": "Text researched only. Before the 1723–1726 stairs, a bare steep muddy hill separated square and Pincio. Ramps divide, wind, join and change direction. Jubilee inauguration 1725. No source images used."
-        },
-        {
-          "type": "textResearchOnly",
-          "publisher": "Sovrintendenza Capitolina ai Beni Culturali",
-          "title": "Scalinata di Trinità dei Monti",
-          "url": "https://sovraintendenzaroma.it/i_luoghi/roma_medioevale_e_moderna/beni_architettonici/scalinata_di_trinita_dei_monti",
-          "notes": "Text researched only. Built 1723–1726; continual projections and recesses, concave/convex walls and paired flights. Generated geometric details were not checked against photograph pixels."
-        },
-        {
-          "type": "textResearchOnly",
-          "publisher": "Roma Capitale",
-          "title": "Nuovo Regolamento di Polizia Urbana — 8 luglio 2019",
-          "url": "https://www.comune.roma.it/web/it/informazione-di-servizio.page?contentId=IDS366555",
-          "notes": "Official text: regulation and monetary penalties became applicable 8 July 2019. General 2019 rule context only, does not verify any particular pictogram sign, whistle scene or uniform model. Specific narrative scene comes from commissioned source01."
-        }
-      ],
-      "kuvateksti": "Kaksi poliisia valvoo Espanjalaisten portaiden istumiskieltoa kesällä 2019. Havainnekuva.",
-      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
-      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
-      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/rooma-yksityiskohdat-20261007/production/05-poliisin-pilli-2019/rooma-Q848072-poliisin-pilli-2019.png",
-      "technicalChanges": [
-        "Preserved byte-identical generated original in original.png.",
-        "Final native 1536×1024 RGB unchanged pixels; embedded standard sRGB ICC profile for unprofiled generated RGB. No colour conversion or main-image resize.",
-        "Added required Description and Source PNG text fields.",
-        "Created 480×320 LANCZOS QA preview only. No creative pixel edits."
-      ],
-      "visualReview": {
-        "file": "rooma-Q848072-poliisin-pilli-2019.png",
-        "sha256": "3b7c3bb1bc0ab3cb8e3f6eb8afe354752afe7d5fe245d1bb0ff50ec673cd701a",
-        "nativeViewed": true,
-        "preview480Viewed": true,
-        "approvedForDelivery": true,
-        "requiresEditorCompositionReview": true,
-        "observations": [
-          "Kaksi kaukaista sinistä poliisihahmoa, toisella käsi suun kohdalla; pieni istuja ja kaukainen seisova ryhmä.",
-          "Erillistä pilliä ei voi pienessä kuvassa varmistaa. Barcaccia on suurehko ja havainnollinen. Ei kasvolähikuvia, aseita tai väkivaltaa.",
-          "Fable arvioi, välittääkö käsi suulla ankkurin pilliin riittävästi."
-        ]
-      },
-      "editorAcceptance": false,
-      "gameIntegrated": false,
-      "published": false
+      "published": false,
+      "editorAcceptanceAtFirstDelivery": false,
+      "editorAcceptanceReported": true,
+      "editorAcceptanceEvidence": {
+        "path": "posti/sisaltokirjuri-codex-rooma-uusinta-colosseum-appia-20261007.md",
+        "commit": "b508c84b3144ad2861c67a0a3d059c1ecfd78c1a",
+        "blob": "821887157ff1ff5378b71d3c93f47af9358e9bf4"
+      }
     },
     {
       "number": 6,
@@ -481,9 +429,16 @@
           "Lukijan yläkehyksessä pieni vaalea pilkku; ei luettavaa tekstiä, hintaa tai tunnistettavaa logoa. Tarkka portti/laite havainnollinen."
         ]
       },
-      "editorAcceptance": false,
+      "editorAcceptance": true,
       "gameIntegrated": false,
-      "published": false
+      "published": false,
+      "editorAcceptanceAtFirstDelivery": false,
+      "editorAcceptanceReported": true,
+      "editorAcceptanceEvidence": {
+        "path": "posti/sisaltokirjuri-codex-rooma-uusinta-colosseum-appia-20261007.md",
+        "commit": "b508c84b3144ad2861c67a0a3d059c1ecfd78c1a",
+        "blob": "821887157ff1ff5378b71d3c93f47af9358e9bf4"
+      }
     },
     {
       "number": 7,
@@ -539,31 +494,75 @@
           "Kuvateksti kertoo Noantri-legendasta ja Trastevere-taustan tulkinnallisuudesta."
         ]
       },
-      "editorAcceptance": false,
+      "editorAcceptance": true,
       "gameIntegrated": false,
-      "published": false
+      "published": false,
+      "editorAcceptanceAtFirstDelivery": false,
+      "editorAcceptanceReported": true,
+      "editorAcceptanceEvidence": {
+        "path": "posti/sisaltokirjuri-codex-rooma-uusinta-colosseum-appia-20261007.md",
+        "commit": "b508c84b3144ad2861c67a0a3d059c1ecfd78c1a",
+        "blob": "821887157ff1ff5378b71d3c93f47af9358e9bf4"
+      }
     }
   ],
-  "comparison": {
-    "file": "toimitetut-6.jpg",
-    "r2Key": "julisteet/rooma-yksityiskohdat/20261007/toimitetut-6.jpg",
-    "url": "https://media.matkakirja.app/julisteet/rooma-yksityiskohdat/20261007/toimitetut-6.jpg",
-    "sha256": "1f72779da6000c04e95c81edb63c68c0a8c7908d17f7eda3014dc89478933ff3",
-    "bytes": 382660,
-    "http": 200,
-    "mime": "image/jpeg",
-    "cors": "https://matkakirja.app",
-    "byteExactReadback": true
+  "previousAcceptedNumbers": [
+    2,
+    3,
+    4,
+    6,
+    7
+  ],
+  "previousImagesRedelivered": false,
+  "excludedNumbers": [
+    1,
+    5
+  ],
+  "failedReplacements": [
+    {
+      "number": 1,
+      "qid": "Q10285",
+      "id": "avajaiskisat-80-v2",
+      "filename": "rooma-Q10285-avajaiskisat-80-v2.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/rooma-yksityiskohdat-20261007/replacement-v2/production/01-avajaiskisat-80-v2/rooma-Q10285-avajaiskisat-80-v2.png",
+      "sha256": "b8a9773069ffa45bcf562538c85808b8ccc43b8ab001feccc22d2e947835cc97",
+      "visualReview": {
+        "file": "rooma-Q10285-avajaiskisat-80-v2.png",
+        "sha256": "b8a9773069ffa45bcf562538c85808b8ccc43b8ab001feccc22d2e947835cc97",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": false,
+        "observations": [
+          "Vain kaksi selkeää arkadiriviä, sivureunat rajautuvat ja lähikatsojia; lähteen epäonnistumisehto täyttyy. Poista onnistuneesta toimituksesta, ei3.yritystä."
+        ]
+      },
+      "r2Delivered": false,
+      "removedFromSuccessfulDelivery": true,
+      "noFurtherAttemptAuthorised": true
+    }
+  ],
+  "editorAcceptanceReported": {
+    "sourceCommit": "b508c84b3144ad2861c67a0a3d059c1ecfd78c1a",
+    "acceptedNumbers": [
+      2,
+      3,
+      4,
+      6,
+      7
+    ],
+    "excludedNumbers": [
+      5
+    ],
+    "gameIntegrated": false,
+    "published": false
   },
-  "deliveryStatus": "Kuusi ehdokasta toimitettu Fable-arviointiin; Colosseum ja Appia pidätetty paikalliseen arviointiin ja korjausluvan odotukseen.",
-  "imageAgentCount": 5,
-  "ownerReplacementDecision": {
-    "state": "pending",
-    "askedForAdditionalWholeGenerations": 2,
-    "sourceGenerationLimit": 8,
-    "proposedTotalGenerations": 10,
-    "deliveredFinalImageCountWouldRemain": 8,
-    "answersReceived": false
-  },
-  "priorPrahaWienDecisions": "Separate; not changed by Rome order"
+  "editorAcceptanceOfNewV2": false,
+  "effectiveSelectedImageCount": 6,
+  "gameIntegrated": false,
+  "published": false,
+  "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
 }
