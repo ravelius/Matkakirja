@@ -1,4 +1,4 @@
-# Pelikoodarin luovutus 7.10.2026 (päivitetty klo 23.1x)
+# Pelikoodarin luovutus 7.10.2026 (päivitetty klo 23.4x, VAIHTO NYT)
 
 Uusi Pelikoodari: lue tämä, sitten docs/raportit/viesti-pelikoodari-aloitus.md. Edellinen: viesti-pelikoodari-luovutus-20261006.md.
 
@@ -39,6 +39,7 @@ Uusi Pelikoodari: lue tämä, sitten docs/raportit/viesti-pelikoodari-aloitus.md
    tarkistanut; kirjaa käyttö. Freesound-ehdokkaat: _tyo/freesound-olavinlinna/ehdokkaat.md (97 CC0).
 5. Olavinlinna: repliikit-v1 ja tietokerros-v1 ämpärissä (Siirtoseppä).
 6. Apurahakortti v7 + valmiitLinssit julki (#4146, #4147).
+6b. Taustaajoja ei ole käynnissä (Pelikoodari). Työkansiot: _tyo/haiku-vertailu, _tyo/freesound-olavinlinna, _tyo/kohdistus-pariisi (venv _tyo/venv-kohdistus).
 7. Worktreet: wt/pelikoodari-esittely (tekstit + työkalut), wt/pelikoodari-yoportti (erä-worktree). ÄLÄ KÄYTÄ Agent isolation remote.
    SendMessage-raja täynnä → varakanava mcp__ccd_session_mgmt__send_message (session_id).
 
