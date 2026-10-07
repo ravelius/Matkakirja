@@ -10,13 +10,11 @@ ja natiiviseppa-tila-20261003.md. Kytke Remote Control päälle. Kerro Julkaisij
 Juna-SHA:t vain PÄÄTOIMITTAJAN kuittauksella; käännökset Julkaisijan NYT-viestillä. EI savua/Laitetestaajaa/stillejä ennen junaa
 (omistaja 15.5x), EI roolien omia käännöksiä (16.0x), enintään 2 junaa/pv ellei omistaja pyydä.
 
-**JUNA 162 — TILA 21.39: runko 8b3ffb914 (= 31249f1c4 + LS1 yks-esilataus 54f1236b0 + kortti-teksti 5809cc78d) KÄÄNNETTY (3bb67950a, app lokit/natiiviseppa-app-162-8b3ffb91).
-TULOSSA vielä (Päätoimittaja 21.4x, omistajan kuvapalaute, tavoite SHA:t 22.30): NUI (otsikko metrolinjaan, pienemmät kuvakortit) + LS1
-(nimilappu pois kierroksella) → yhdistä, testit, käännös. TF vasta Päätoimittajan kuittauksella (tf162-lupa), muutosloki-
-sisältö lähetetty Julkaisijalle. VIE PIDÄTETTY: omistaja katsoo LS1:n iPad-vaakakuvat ~21.50 → Päätoimittajan kuittaus → vaiheet 3–5.
-VIE-vaiheissa runko = viimeisin käännetty (nyt 8b3ffb914). KUN KUITTAUS TULEE: update-ref + BUILD 162 -merge, sitten
-`echo <BUILD162 täysi SHA> > /Users/Shared/Claude/julkaisija-tyokalut/tf162-lupa` (Julkaisijan irrotettu odottaja käynnistää TF:n), viesti
-Julkaisijalle, Mac TF 162 iOS-latauksen jälkeen. Muutosloki #4171 jo mergetty.**
+**JUNA 162 VIETY 21.46: BUILD 162 = proto master 30fbc3748a19e96b369d1ae82617d181b019b570** (juna/b13 c076765c → f524d89ba, juna.log
+kirjattu; käännös 6059542ee; tf162-lupa kirjoitettu → Julkaisijan odottaja käynnisti iOS TF 162:n, ajo 18:47Z käynnissä).
+Mac TF 162: irrotettu odottaja lokit/natiiviseppa-skriptit/mac-tf-162-odottaja.sh käynnistää mac-tf.sh 30fbc374 162, kun iOS TF onnistuu;
+tila lokit/natiiviseppa-mac-tf-vahti.txt + gh run list proto3d-mac-testflight. Tarkista tulos ja ilmoita Julkaisijalle + Päätoimittajalle.
+LS1 e3d40e096 (kuvatekstin piirtojärjestys; ⊇ 0d53b5567) → JUNA 163.
 
 **JUNA 162 TÄNÄÄN (omistaja: "tee tänään yksi päivitys klo 22")** — runko natiiviseppa/juna-162-koe **31249f1c4** (wt/proto-natiiviseppa-j144),
 HYVÄKSYTTY (Päätoimittaja 16.2x + 16.4x) = BUILD 161 9572eaff + LS1 b9f37ee8f + NUI 3f07c49b + NUI 34cf54b0 + LS2 f6e4a8495 + Siirtoseppä
