@@ -295,3 +295,9 @@ Brotli (haara linnanrakentaja-zstd, worktree olemassa), akustiikka #3979 (Steam 
 - 7.10. 13.0x: GIZA v2b VALMIS ja LS1:llä (Sfinksin väri + aitauksen hiekka, helmat 150 m + sfinksi-helma). Odottaa LS1:n pelikuvia Päätoimittajalle. Ei käynnissä olevia ajoja.
 - 7.10. 13.0x: JONOSSA (Siirtoseppä, ennen v45): portinvartija-1500 henkilöihin = vartija-1500:n varianssi (eri päähine/väri, samat leikkeet idle/kavely/puhe + ele_*), mixamo-v5 + faceit-v2 -ketjulla; paikka/partio vasta kun docs/raportit/olavinlinna-pystyleike-repliikit.md:n kohtaus lukittu. Lisäksi v45:een kappelin koillisikkunan leivonta.
 - 7.10. 13.3x: OMISTAJAN PÄÄTÖS: Olavinlinnan PELIOSA (pystyleike laituri → keittiö → kappeli) ensin; vanhaan esittelyyn vain virhekorjaukset. Prioriteetit: käveltävät tilat + törmäykset, vene/laituri, keittiön ja kappelin esineet, kappelin luukku (kiinni). GIZA ja KIELLETTY ODOTTAVAT. Järjestys sovitaan Siirtosepän kanssa klo 15 jälkeen (kysytty).
+- 7.10. 13.3x: JÄRJESTYS (Siirtoseppä kuittasi) klo 15 jälkeen: (0) FOGG-1873 PELAAJAKSI (E1 laituri → keittiö, tavoite ~20.00):
+  skin-glb + leikkeet idle, kavely (~1,4 m/s), juoksu (~3,2 m/s), hiipiminen (~0,9 m/s kyykyssä), kyykky_idle (+ nousu veneestä jos
+  ehtii); 1,75 m, juuri jalkojen välissä, kasvot +Z; Mixamo/UAL (hahmo_mixamo.py-ketju, linna-hahmot/mixamo-v5 pohjana). Tarkista
+  onko Fogg-hahmoa jo (hahmot/ tai linna-hahmot/), muuten UBC-pohjasta 1873-asuun. (1) v45: kappelin koillisikkuna leivottuna,
+  portinvartija-1500, keittiön esine:savipurkki/kauha/nauris/lautanen → rakennus.json esineet{} glb:t (esineet-v1) + heitettava: true.
+  (2) törmäys/kamera-korjaukset ja (3) vene v2 Siirtosepän ajojen jälkeen.
