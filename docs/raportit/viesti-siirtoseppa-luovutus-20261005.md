@@ -484,3 +484,7 @@ Edellinen luovutus on `viesti-siirtoseppa-luovutus-20261002.md` (5.10. osiot 02.
 - 17.11: E3-äänet ämpärissä (Julkaisija 17.10): seikkailu/olavinlinna/aanet-e3-v1 (19 CC0/PD: Kenney + Commons; puuttuu pulu-siivet, sytytys;
   Freesound-avain tyhjä → Päätoimittajalle). f64ff55fc SeikkailuAanet + kytkennät. 9049d770 löytö NUI:n NaytaLoyto-kutsulla
   (natiivi-ui/seikkailu-toiminto f9f48082). historia-h0 kärki f64ff55fc → juna 163 (E2 + E3a–d osat; NUI-haara mukaan).
+- 17.54: E3d valmis 7a95377d (ikuinen valo + luukku paikkamerkein, vaihe 11, nousu: LS2 tekee SeikkailuNousu.Aloita(kamera, lahto, valmis),
+  kutsutaan heijastuksella; varanousu; DioraamaSovitin.KameraVapaa). Junahaara 163: siirtoseppa/historia-juna163 @ 2d19eb49 (historia-h0 +
+  historia-juna162), 842/842, kuittaus pyydetty; riippuvuus natiivi-ui/seikkailu-toiminto. Paikkamerkit vaihdetaan LR:n peilistä (luukku:koillinen,
+  valo:ikuinen, esine:kirja, kivi-4, portaikko:ylapaa).
