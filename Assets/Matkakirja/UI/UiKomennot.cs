@@ -536,6 +536,8 @@ namespace Matkakirja.Natiivi
                     else if (loput.Trim() == "auto") SeikkailuTapit.TestiNakyy = null;
                     // "ui seikkailutapit toiminto poimi|heita|laske|kynttila|koputa|irrota|nosta|pois|auto": toimintonapin tila ilman SeikkailuEsineitä.
                     else if (loput.Trim().StartsWith("toiminto ")) SeikkailuTapit.TestiToiminto = loput.Trim().Substring(9).Trim();
+                    // "ui seikkailutapit loyto": seikkailun löytö pergamenttipohjalla (testiteksti).
+                    else if (loput.Trim() == "loyto") { SeikkailuTapit.NaytaLoyto("Liinanyytti", "Kalkki, pateeni ja liuskekivi kääritty liinaan."); return "=seikkailutapit: löytö näytetty"; }
                     return "=" + SeikkailuTapit.Kuvaus();
                 case "matka": ui.Esimerkkimatka(); return null;
                 case "pulu":

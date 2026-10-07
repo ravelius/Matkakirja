@@ -145,6 +145,25 @@ namespace Matkakirja.Natiivi
             Debug.Log("MATKAKIRJA seikkailutapit: " + (nayta ? "näkyvät" : "piilossa"));
         }
 
+        /// <summary>
+        /// SEIKKAILUN LÖYTÖ (Siirtoseppä E3 vaihe 10, liinanyytti): pienenä aarteena olemassa olevalla paikallisaarteen pohjalla
+        /// (Paljastus, pergamenttimalli kuten matkamuisto): nimi, lyhyt teksti faktarivinä, valinnainen kuva (URL tai paketin
+        /// polku) ja valinnainen alarivi (esim. "+N tp"); ei luettelon tekstejä eikä tietokerrosta. valmis kutsutaan, kun pelaaja
+        /// sulkee ("Jatka matkaa"). Siirtoseppä kutsuu heijastuksella: Matkakirja.Natiivi.SeikkailuTapit.NaytaLoyto.
+        /// </summary>
+        public static void NaytaLoyto(string nimi, string teksti, string kuvaUrl = null, string rivi = null, System.Action valmis = null)
+        {
+            UiKerros.PaaSaikeessa(() =>
+            {
+                Debug.Log($"MATKAKIRJA seikkailutapit: löytö {nimi}");
+                UiNakymat.Hae().Paljastus.Nayta(new KysymysNaytto
+                {
+                    Oikein = true, LoytoTyyppi = "seikkailu", LoytoNimi = nimi, LoytoFakta = teksti, LoytoKuvaUrl = kuvaUrl,
+                    LoytoRivi = rivi, LoytoPergamentti = true,
+                }, valmis);
+            });
+        }
+
         /// <summary>Testi: tila, arvot ja laatikot.</summary>
         public static string Kuvaus()
         {
