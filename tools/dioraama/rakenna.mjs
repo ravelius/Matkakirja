@@ -336,6 +336,10 @@ export function lisaaBlender(rakennusJson, blender) {
   for (const [id, h] of Object.entries(rakennusJson.henkilot || {})) {
     if (!SKIN[id] || !on.has(`hahmot/${id}.glb`) || !h.malli3d) continue;
     h.malli3d = { ...h.malli3d, skin: { glb: B(`hahmot/${id}.glb`), ...SKIN[id] } };
+    // Faceit-ilmeet (morph-kohteet) omassa glb:ssä rinnalla (v41, 7.10.2026): vanha appi (TF 154) hylkää morph-glb:n
+    // ("Dioraama GLB: morph ei tuettu") ja linna jäi tyhjäksi, joten skin.glb on ilman morpheja ja vain junan 156 koodi lukee
+    // skin.faceit-kentän.
+    if (on.has(`hahmot/${id}-faceit.glb`)) h.malli3d.skin.faceit = B(`hahmot/${id}-faceit.glb`);
   }
   rakennusJson.tunnelma = 'hamara';
   rakennusJson.ulkokuori = {
