@@ -7,7 +7,7 @@ Worktreet: /Users/Shared/Claude/wt/proto-siirtoseppa-*. Käännös vain Julkaisi
 (oma UDID D5900D45 = siirtoseppa-iPad13, TYHJENNETTY 19.0x, appit asennettava uudelleen). Ei detachia simupaneelista.
 Oikeat tapit: lokit/siirtoseppa-alo/.sk (simkosketus, käännä tarvittaessa tyokalut/todistusajo/simkosketus.m).
 
-## TILA 7.10. 04.5x
+## TILA 7.10. 04.4x
 
 - **v41 todennettu molemmilla** (TF 154 03.10 + junan 156 koodi a5285a27 04.18–04.21: faceit-glb:t, 11 elettä, 14 reaktiota); osoitin 1a1857e0.
 - **Kielletty v3** (64a89525): kiveys näkyy, katon tiilirivit sumeat → LR. Kuvat lokit/siirtoseppa-vuoro-v41/kielletty/.
