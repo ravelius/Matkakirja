@@ -1,0 +1,306 @@
+{
+  "task": "praha-wien-yksityiskohdat-20261007",
+  "deliveredAt": "2026-10-07T16:08:05.468897+00:00",
+  "source": {
+    "path": "posti/sisaltokirjuri-codex-praha-wien-yksityiskohdat-20261007.md",
+    "commit": "a81de6afb2b768c929458eed7baf62d8220fe34d",
+    "blob": "e131b20ff38183d0d8edd5bc87d5c8b9c8ae44d9"
+  },
+  "sourceReadInFull": true,
+  "imageCount": 2,
+  "generatedCandidates": 4,
+  "generationCalls": 4,
+  "generationLimit": 5,
+  "fifthSlot": {
+    "state": "awaiting-human-scope-decision",
+    "qidInSource": "Q308720",
+    "subjectInSource": "Lontoon Globe-teatteri Wienin otsikon alla",
+    "generationAuthorized": false,
+    "questionPending": true
+  },
+  "referenceMethod": "Tilauksessa erikseen pyydetyt puuttuvien yksityiskohtien havainnekuvat. Faktat tekstilähteistä; valokuvapikseleitä ei syötetty generaattoriin.",
+  "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+  "editorAcceptance": false,
+  "gameIntegrated": false,
+  "published": false,
+  "sourceFactualNotes": [
+    {
+      "subject": "Klementinum",
+      "note": "CHMI detailed series page: series begins1775 but gaps continue through1783; modern-criteria gap-free since1Jan1784. Do not claim literally gap-free1775 series in caption.",
+      "source": "https://intranet.chmi.cz/historicka-data/pocasi/praha-klementinum?hl=cs-CZ"
+    },
+    {
+      "subject": "Staatsoper1945",
+      "note": "Official opera: bombing12March1945 and fireextinguished after24hours. Source says immediatelyafterfire but alsoApril-May; depict1945 destruction without false exact-month claim, flag temporal discrepancy in delivery. Keep preservedmainfront.",
+      "source": "https://www.wiener-staatsoper.at/magazin/detail/zerstoert-und-wiederaufgebaut-80-jahre-nach-den-bomben/"
+    }
+  ],
+  "heldCandidates": [
+    {
+      "number": 2,
+      "city": "praha",
+      "qid": "Q1100429",
+      "id": "saaasema-1775",
+      "filename": "praha-Q1100429-saaasema-1775.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sha256": "24688f33a68ca76cc273ec9a5c316b55df504da964a1431e8aaa54468e48d9cb",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/praha-wien-yksityiskohdat-20261007/production/02-saaasema-1775/praha-Q1100429-saaasema-1775.png",
+      "visualReview": {
+        "file": "praha-Q1100429-saaasema-1775.png",
+        "sha256": "24688f33a68ca76cc273ec9a5c316b55df504da964a1431e8aaa54468e48d9cb",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": false,
+        "observations": [
+          "Mittarien asteikoissa on numeromaisia kaiverruksia vastoin tilauksen luettavan tekstin/numeroiden kieltoa.",
+          "Ikkunasta lisätty kaupunkipanoraama ei kuulu olennaiseen tilaukseen; vuoden1775 täsmällistä siluettia ei varmennettu.",
+          "Ei hyväksytty pelikäyttöön: omistajan vastaus kahden uuden korvaavan generoinnin lupaan odottaa."
+        ]
+      },
+      "generationPrompt": "Use case: historical-scene\nAsset type: Matkakirja educational detail image, one single photorealistic historical illustration, horizontal 3:2, 1536 x 1024 pixels, opaque.\nPrimary request: A plausible late eighteenth-century weather observation worktable in the Klementinum astronomical tower in Prague, circa 1775. It must look like a restrained, naturally lit documentary photograph of period materials, while representing a historical illustration, not an exact reconstruction.\nScene/backdrop: Close wooden window ledge and a simple wooden observation table in a Baroque masonry observation room of the former Jesuit astronomical tower. Behind the instruments is a tall old wooden window with soft diffuse daylight; a small portion of a pale Baroque masonry vault is softly blurred in the background.\nSubject: Two DIFFERENT recognizable eighteenth-century liquid-in-glass instruments. The taller instrument is a straight cistern-tube MERCURY BAROMETER: a slender long VERTICAL glass tube with a visible silvery mercury column, sealed top, small mercury cistern/reservoir at its lower end, held by a simple patinated brass mount against a narrow wooden backing on the ledge. It should look physically plausible, about 80-95 cm high, with glass tube and reservoir unmistakable. It has a linear scale of tiny physical tick lines, no circular dial and no needle. The second instrument is a SEPARATE shorter long GLASS MERCURY THERMOMETER, about 25-30 cm high, a very thin silvery mercury capillary and small rounded glass bulb at bottom, supported upright on a simple narrow brass/wood stand with subtle linear calibration tick marks. These are period instruments, not modern instruments made antique.\nWorktable details: An open, aged, hand-bound observation notebook in the foreground, with hand-ruled columns and only faint abstract broken ink strokes that cannot form readable letters or numbers. A feather quill and a small unlabelled dark glass ink bottle rest beside it. No other props.\nStyle/medium: Photorealistic, quiet, restrained historical still life, realistic hand-blown glass, worn wood grain, honest metal reflections and subdued patinated brass. No painted or drawn surface.\nComposition/framing: Landscape close view from approximately one metre away, looking diagonally across the table from slightly above tabletop height. Both liquid-in-glass instruments clearly separated and fully legible as shapes, with their lower reservoirs/bulbs visible. The book lies open in front; window behind. Moderate depth of field keeps instruments and observation book sharp enough to recognize, background vault soft. The tall barometer stays comfortably within the top edge.\nLighting/mood: Soft neutral daylight from window behind and to one side. Natural modest contrast, muted warm brown wood and brass against grey pale masonry; no dramatic spotlight, no overly golden light, no sepia filter.\nText: NONE. Scale tick lines are allowed but all digits, numerals, units, letters and words are absent. Notebook marks must be faint abstract traces with no readable handwriting. Do not add labels, titles, captions or overlays.\nAvoid: Any aneroid barometer, round pressure dial, mechanical dial needle, compass, clock, modern laboratory thermometer, red liquid, electronics, wires, electricity, plastic, modern meters, people, tourists, identifiable faces, logos, text, readable numbers, watermarks, border/frame, collage, HDR, cinematic saturation, artificial glowing effects, ornate fantasy scientific apparatus.\n",
+      "r2Delivered": false,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "file": "praha-Q1100429-saaasema-1775.png"
+    },
+    {
+      "number": 3,
+      "city": "wien",
+      "qid": "Q209937",
+      "id": "ooppera-1945",
+      "filename": "wien-Q209937-ooppera-1945.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sha256": "6a834e5d3cf471c8ff01c7f0f1b2c20221509177d4a72fa381e76f1f5efe2cd1",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/praha-wien-yksityiskohdat-20261007/production/03-ooppera-1945/wien-Q209937-ooppera-1945.png",
+      "visualReview": {
+        "file": "wien-Q209937-ooppera-1945.png",
+        "sha256": "6a834e5d3cf471c8ff01c7f0f1b2c20221509177d4a72fa381e76f1f5efe2cd1",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": false,
+        "observations": [
+          "Julkisivun ylä- ja alaloggiassa kuusi kaarta, oikea pääloggia viisi. Tämä on olennainen geometrinen poikkeama.",
+          "Vuoden1945 tuhon tunnelma ja säilynyt pääjulkisivu muutoin välittyvät.",
+          "Ei hyväksytty pelikäyttöön: omistajan vastaus kahden uuden korvaavan generoinnin lupaan odottaa."
+        ]
+      },
+      "generationPrompt": "Use case: historical-scene.\nAsset type: one photorealistic historical illustration for a travel history game, landscape 3:2, exactly 1536 x 1024 pixels, opaque.\n\nPrimary request: The Vienna State Opera (Wiener Staatsoper, Opernring), seen from street level on the Ring, in the immediate aftermath of the bombing and fire of 1945. This is a newly generated historical illustration, not a reproduction of any historical photograph. Do not add any visible labeling.\n\nScene: A quiet gray spring overcast day just after the fire. Restrained documentary appearance, near-monochrome with very subtle muted stone and oxidized metal colors. Natural diffuse daylight, realistic soot, ash, damp street stones and sparse irregular fragments of masonry and charred timber. The ruin is still recognizably the real Vienna State Opera; it must not look like an invented palace or a total citywide apocalypse.\n\nHistorical architecture and damage: Preserve the ENTIRE principal neo-Renaissance front facing the Ring, including its central arcaded loggia, all five tall round-arched upper loggia bays, the low entrance arcade underneath, and the adjoining corner pavilions. Retain the original 1869 facade's real proportions, stone columns, layered horizontal cornices, and the pair of winged-horse sculptural groups above the loggia, seen only at architectural scale. Show the left corner and part of the left side wing receding in perspective. The main front and the loggia REMAIN STRUCTURALLY STANDING, mostly intact though weathered and lightly smoke-darkened; no giant hole or collapse through the main facade. The large auditorium and stage roof BEHIND this preserved front are destroyed: a visibly broken, lowered roof silhouette and partly exposed charred roof structure appear behind the front cornice and left side wing. The shell is predominantly upright. Put stronger soot and burn damage on the damaged rear core, not wholesale destruction of the protected main entrance/loggia. Only thin, restrained residual smoke and faint drifting ash rise from the damaged interior behind the facade and from damaged side openings. No roaring fire, no flames, no fireball or towering black smoke.\n\nComposition: One coherent scene. Human eye-level camera approximately 1.6 m above the Ring street, far enough away to fit the complete main facade with a small margin on both sides. Three-quarter viewpoint slightly toward the left corner, complete front still legible, modest left side wing visible. Architectural perspective has believable converging depth and near-vertical walls; a normal moderate-wide lens, not ultrawide distortion. Street foreground takes roughly the lower quarter, building takes most of the width, cloudy sky in the upper fifth. No aerial view, no dramatic low angle, no cropped front pavilion, no tight ruin close-up.\n\nStyle: Photographically believable natural textures, nuanced stone surface, quiet restrained tones, documentary photography rather than concept art. Subtle fine grain is acceptable; crisp enough that the facade geometry remains readable when reduced to a 480-pixel-wide preview. No painterly surface, no HDR, no cinematic lighting, no saturated grading or sepia tint.\n\nAvoid: No people at all. No faces, bodies, casualties or human remains. No Nazi or party symbols, flags, banners, coats of arms, political emblems, readable lettering, numbers, inscriptions, shop signs, logos, advertising, watermark, border or caption. No cars or other vehicles; no modern traffic lights, road signs, modern street lamps, bollards, fencing, outdoor cafe furniture, tourist infrastructure or electrical street clutter. No additional landmarks. No fantasy-war ruin, no ruined front loggia, no complete front collapse.",
+      "r2Delivered": false,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "file": "wien-Q209937-ooppera-1945.png"
+    }
+  ],
+  "assets": [
+    {
+      "number": 1,
+      "city": "praha",
+      "qid": "Q421678",
+      "id": "hiljainen-istuminen",
+      "filename": "praha-Q421678-hiljainen-istuminen.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "file": "praha-Q421678-hiljainen-istuminen.png",
+      "r2Key": "julisteet/praha-wien-yksityiskohdat/20261007/praha-Q421678-hiljainen-istuminen.png",
+      "url": "https://media.matkakirja.app/julisteet/praha-wien-yksityiskohdat/20261007/praha-Q421678-hiljainen-istuminen.png",
+      "sha256": "71ccbc7df7ebdcc551186b3e5ec7dd0459037064038123214c6278bdf449fcbf",
+      "bytes": 2587614,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "mitat": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Use case: historical-scene, photorealistic-natural.\nAsset type: ONE photorealistic historical detail illustration for the Matkakirja city guide, landscape 3:2, 1536 × 1024 pixels, opaque RGB/sRGB PNG. This is a present-day camera-style illustrative reconstruction, not an archival photograph.\nPrimary request: A small group of young and older adults quietly sitting at the base and steps of the REAL Ladislav Šaloun Jan Hus Monument in Prague's Old Town Square during communist Czechoslovakia, approximately late 1970s or early 1980s. Quiet sitting is their understated protest. No shouting, gestures, violence, arrests, or dramatic confrontation.\nScene/backdrop: Autumn afternoon just after rain. The Old Town Square has wet, uneven historic stone paving. In the softly gray hazy background show the Church of Our Lady before Týn, with EXACTLY TWO characteristic Gothic main towers, their steep pointed spires and small corner pinnacles, rising above the low historic buildings in front of the church. Ordinary older Prague facades; no shops, advertisements, or readable signage. No Marian Column: it was absent during this period.\nMonument geometry: Depict Šaloun's substantial 1915 stone-and-bronze Jan Hus memorial, NOT an isolated generic statue on a narrow rectangular pedestal, NOT an equestrian monument. The tall dark bronze figure of Hus in a long robe rises above a wide irregular sculptural granite base, with sculptural groups of Hussite fighters carrying a pavise and a flail and humbled exile figures. Hus looks toward the Týn church, so from this viewpoint we see his back or rear three-quarter silhouette. The main tall figure and clustered bronze groups rise organically from the broad granite structure. The granite base has broad shallow steps at its front and rear, rough sculpted stone along its sides suggesting turbulent water, and a raised upper portion supporting the bronze. Show the monument's entire tall figure and enough of its wide base and side groups to identify this actual monument. Dark weathered bronze, gray granite, coarse stone detail. Any carved inscription is only distant shallow surface texture, completely illegible; no letters.\nComposition/framing: Human eye level, approximately 1.6 m camera height, viewpoint 15–20 metres away, slightly from the side, natural 40 mm full-frame lens perspective. The monument's bronze mass and granite base occupy the RIGHT HALF. Seated people occupy the lower LEFT and CENTRE, clustered on the monument's low rear steps and at its foot; keep the people small enough to read as a quiet gathering in an architectural setting. The twin Týn towers are clearly visible in the background, to the left of or beside the monument rather than hidden behind it. Space around the group and a modest wet paving foreground. No low-angle heroic view, no drone view.\nPeople: Roughly eight fictional ordinary adults, mostly young, with two older adults. They sit quietly with backs to the camera or tiny non-identifiable side profiles; natural anatomically plausible relaxed poses, hands resting in laps or at their sides. Plain brown, gray and navy wool coats, simple period denim jeans, modest shoes, some shoulder-length 1970s hair; no logos. No face portraits, no recognisable historical people or actors. One and only one very small passive generic uniformed observer stands far away near the background buildings, watching without approaching. His uniform has no visible insignia or symbols. He is a tiny distant figure, not a focus.\nStyle/medium: Convincingly like a natural documentary camera photograph made on location. Real surface texture, physically plausible scale, natural restrained color and contrast, slight atmospheric softness at distance. Silent, tense, ordinary. Diffuse cloudy autumn light, damp paving with subtle reflections. Gray-brown muted colors. No HDR, no film-poster lighting, no cinematic color grading, no oversaturation, no sepia archival effect, no painterly surface or illustration outlines.\nConstraints: No readable text anywhere, no numbers, no logos, no signs, no placards, no flags, no party emblems, no phones or mobile devices, no modern vehicles, no advertisements, no Marian Column, no riot police, no weapons carried by living people, no violence, no arrests, no crowd rally, no present-day tourist clutter, no modern street furniture, no frame, no watermark. No supplied reference image pixels; all instructions are based on factual text research. Generate exactly one image.",
+      "viitteet": [
+        {
+          "type": "textResearchOnly",
+          "publisher": "Prague City Tourism",
+          "title": "Jan Hus Monument / Pomník mistra Jana Husa",
+          "url": "https://prague.eu/cs/objevujte/pomnik-mistra-jana-husa/",
+          "notes": "Primary city source: Šaloun's 1915 stone-and-bronze memorial, Hus looking toward Týn, fighters with pavise/flail and opposing exile group. Text only."
+        },
+        {
+          "type": "textResearchOnly",
+          "publisher": "Galerie hlavního města Prahy",
+          "title": "Restaurování Pomníku mistra Jana Husa – Technologie",
+          "url": "https://www.ghmp.cz/wp-content/uploads/2020/12/cz_10_hus_technologie.pdf",
+          "notes": "Primary monument custodian: granite base, five wide front steps and three rear steps, sculpted side blocks representing turbulent water; raised upper base bearing bronze group. Text extraction only; no PDF image pixels used."
+        },
+        {
+          "type": "textResearchOnly",
+          "publisher": "Galerie hlavního města Prahy",
+          "title": "Husův pomník a jeho konstrukce",
+          "url": "https://www.ghmp.cz/wp-content/uploads/2020/12/cz_14_hus_husuvpomnikvdatech.pdf",
+          "notes": "Primary chronology, monument completed in 1915; 1943 fire reservoir later filled in during 1960s–1970s. No reservoir shown. Text only."
+        },
+        {
+          "type": "textResearchOnly",
+          "publisher": "Prague City Tourism",
+          "title": "The Marian Column",
+          "url": "https://prague.eu/en/objevujte/the-marian-column-mariansky-sloup/",
+          "notes": "Primary city source confirms removal in 1918 and replica installation in 2020; excluded from requested 1970s/1980s scene. Text only."
+        }
+      ],
+      "kuvateksti": "Hiljaisen vastalauseen havainnollistus Jan Husin muistomerkillä kommunistiajan Prahassa. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/praha-wien-yksityiskohdat-20261007/production/01-hiljainen-istuminen/praha-Q421678-hiljainen-istuminen.png",
+      "technicalChanges": [
+        "Added exact PNG Description and Source labels and embedded an sRGB ICC profile.",
+        "Created separate 480x320 Lanczos QA preview; production pixels remain unchanged."
+      ],
+      "visualReview": {
+        "file": "praha-Q421678-hiljainen-istuminen.png",
+        "sha256": "71ccbc7df7ebdcc551186b3e5ec7dd0459037064038123214c6278bdf449fcbf",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Hiljainen istujaryhmä pääosin selin, muistomerkki oikealla ja Týnin kaksi tornia harmaalla taustalla.",
+          "Kostea kiveys, aikakauden arkivaatteet, yksi passiivinen kaukainen virkapukuinen tarkkailija; ei Mariapylvästä, kylttejä, lippuja tai tunnistettavia kasvoja.",
+          "Tilattu tapahtuman havainnollistus, ei väite dokumentoidusta yksittäisestä aikalaisvalokuvasta. Muistomerkin pienet yksityiskohdat havainnollisia."
+        ]
+      },
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "number": 4,
+      "city": "wien",
+      "qid": "Q408847",
+      "id": "rutto-1713",
+      "filename": "wien-Q408847-rutto-1713.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "file": "wien-Q408847-rutto-1713.png",
+      "r2Key": "julisteet/praha-wien-yksityiskohdat/20261007/wien-Q408847-rutto-1713.png",
+      "url": "https://media.matkakirja.app/julisteet/praha-wien-yksityiskohdat/20261007/wien-Q408847-rutto-1713.png",
+      "sha256": "b0c3bfeec45ecda5bf9947c7ac61546109d68b4bf9db229e55eb1903ee499e02",
+      "bytes": 2737235,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "mitat": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Use case: historical-scene\nAsset type: One Matkakirja educational detail illustration, photorealistic, landscape 3:2, exactly 1536 x 1024 pixels, opaque PNG.\nPrimary request: A restrained, historically plausible street scene during the plague in Vienna in 1713. Generate ONE image only. This is a text-informed historical illustration made to look like a natural documentary photograph, not a claim of an authentic photograph or an exact recorded event.\nScene/backdrop: A narrow early eighteenth-century Viennese Baroque street of modest two- and three-storey plastered masonry houses, old timber doors, restrained stone window surrounds and uneven cobbles. In the slightly misty far background, a modest early Baroque Catholic church facade of a type already present in Vienna before1713, with pale weathered plaster, restrained pilasters and a simple pediment. Anonymous historically plausible local architecture, not a grand later landmark. Keep the street human-scaled.\nSubject: Exactly FOUR central people, all seen from behind or in unrecognizable three-quarter side views, at a respectful middle distance. Two adult male carriers in plain dark knee-length early1700s wool coats, cocked felt hats, knee breeches, stockings and plain period shoes carry a fully CLOSED plain tapered wooden coffin, one man at each end, holding sturdy plain carrying handles naturally at waist height. The coffin is visible in full as a closed wooden object; show no body. Close by, one Catholic priest in a plain dark cassock and cloak with a small simple pale stole quietly gives a modest blessing gesture toward one ill adult sitting in a house doorway, fully dressed and wrapped in a coarse wool shawl, face turned down and away. The priest holds a small plain censer low in the other hand; only a faint natural thread of incense smoke, not a cloud or dramatic effect.\nAdditional requested details: A single rough, uneven, dull red cross painted directly onto ONE old timber house door, without writing and without a white plaque; it is an early-modern house marking, not a polished modern medical symbol. Two tiny distant citizens farther down the street hold plain cloth over mouth and nose; their faces are too far away to identify.\nStyle/medium: Photorealistic period reconstruction with convincing real masonry, rough wood grain, woven wool, damp cobbles and understated natural textures. No painterly, illustrated, fantasy, game-render or theatrical costume surface. No recognizable real people or named historical individuals.\nComposition/framing: Horizontal eye-level three-quarter street view, natural35mm camera perspective. The four central figures occupy roughly the middle third of image height, not a close-up. Closed coffin and carriers form the central street action; the priest and seated sick person are beside the doorway, visibly separate and readable. Some quiet empty cobbles in the foreground; buildings frame the receding street. The small church facade remains secondary and softly hazy. Natural moderate depth of field keeps the four people and coffin readable while hiding facial detail.\nLighting/mood: Grey overcast sky, soft diffuse daylight, subdued natural contrast and muted stone grey, dull brown and dark wool tones, with only the rough small red door mark adding colour. Quiet, sorrowful and ordinary, no horror imagery, no cinematic light, no HDR, no intense saturation, no sepia filter.\nText: NONE anywhere. No legible letters, numbers, inscriptions, signs, labels or captions. The painted door cross is a simple visual mark only.\nAvoid: Karlskirche in any form, its dome, its monumental Trajan-style columns or its later facade; that church was not built in1713. No Graben plague column replacing the actual street scene. No plague-beak doctor, carnival mask, dramatic fantasy plague costume, visible dead bodies, exposed corpse, gore, blood, corpse heaps, violence, skeletons, rats, dramatic fire or smoke, royal portrait, recognizable face, named historical person, modern objects, modern medical mask, vehicles, electric lamps, wires, utility boxes, asphalt, road markings, logos, flags, banners, readable text, watermark, decorative border, frame, collage, multiple panels.\n\n",
+      "viitteet": [
+        {
+          "type": "textResearchOnly",
+          "publisher": "Karlskirche / Kreuzherrenorden",
+          "title": "Heilsort Karlskirche",
+          "url": "https://www.karlskirche.at/heilsort-karlskirche/",
+          "notes": "Official text confirms plague in Vienna1713 and the22October1713 vow by CharlesVI. Establishes episode context; not a visual record of this street or the four anonymous figures. No source image pixels used."
+        },
+        {
+          "type": "textResearchOnly",
+          "publisher": "Erzdiözese Wien / Karlskirche",
+          "title": "Geschichte der Karlskirche",
+          "url": "https://www.erzdioezese-wien.at/pages/pfarren/9807/karlskirche/geschichte/article/95049.html",
+          "notes": "Official history states earthworks1715 and foundation4February1716. Therefore Karlskirche dome, columns and completed facade are excluded from the1713 scene. No source image pixels used."
+        },
+        {
+          "type": "textResearchOnly",
+          "publisher": "Wien Museum Magazin",
+          "title": "Pest und Krisenmanagement im vormodernen Wien — Der Traum der Ordnung",
+          "url": "https://magazin.wienmuseum.at/pest-und-krisenmanagement-im-vormodernen-wien",
+          "notes": "Interview with curator WernerMichaelSchwarz,22March2020. Describes early-modern infection orders, isolation and juniper fumigation of houses, and mainly discusses1679. Provides general practice/context only; not evidence of this exact1713 scene, coffin carriers, blessing, cross mark or cloth-covered faces. No illustration or photograph pixels used."
+        },
+        {
+          "type": "textResearchOnly",
+          "publisher": "Jesuitenkirche Wien",
+          "title": "Kirchenraum — Geschichte der Kirche",
+          "url": "https://jesuitenkirche-wien.at/kirchenraum/",
+          "notes": "Official church history: consecration1631; AndreaPozzo gave church its high-Baroque form1703–1705. Supports pre1713 Baroque church context. Generated backdrop is a modest anonymous plausible facade, not a claimed exact reconstruction of Jesuitenkirche or a documented street. No source image pixels used."
+        },
+        {
+          "type": "textResearchOnly",
+          "publisher": "Wien Museum",
+          "title": "Modesammlung",
+          "url": "https://www.wienmuseum.at/modesammlung",
+          "notes": "Museum text describes eighteenth-century Justeaucorps as fitted knee-length men's coats. General costume type only; collection spans broad18c and does not establish clothing worn by1713 coffin carriers. No source image pixels used."
+        },
+        {
+          "type": "textResearchOnly",
+          "publisher": "The Metropolitan Museum of Art, Costume Institute",
+          "title": "Coat,1720, American or European, C.I.39.13.77",
+          "url": "https://www.metmuseum.org/art/collection/search/108692",
+          "notes": "Catalogue text identifies a European-or-American silk coat dated1720. Nearby-period comparative clothing context only, not direct evidence for Vienna1713 working-class dark wool costume. Only catalogue text used; no pixels supplied to ImageGen."
+        },
+        {
+          "type": "textResearchOnly",
+          "publisher": "Bezirksmuseum Mariahilf / Wiener Bezirksmuseen",
+          "title": "Die öffentliche Beleuchtung in Mariahilf und die Geschichte ihrer Öl-, Gas- und Stromversorgung",
+          "url": "https://bezirksmuseen-wien.at/wp-content/uploads/2023/12/oeffentliche_beleuchtung.pdf",
+          "notes": "Museum-hosted history consulted after generation for QA only. Text places public flame street lighting in1688 and describes both suspended lanterns and later wall-mounted forms; oil-lighting period broadly1688–1850. It does not date the exact wall-mounted lantern models in this generated scene to1713. No PDF image pixels downloaded or supplied to ImageGen."
+        }
+      ],
+      "kuvateksti": "Ruttoepidemian arkea Wienissä vuonna 1713. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/praha-wien-yksityiskohdat-20261007/production/04-rutto-1713/wien-Q408847-rutto-1713.png",
+      "technicalChanges": [
+        "Preserved generated original byte-for-byte and copied original backup into production folder",
+        "Embedded standard sRGB ICC profile and exact PNG Description and Source marks; final pixel data unchanged",
+        "Created a480x320 LANCZOS QA preview only; final native1536x1024 image not resized"
+      ],
+      "visualReview": {
+        "file": "wien-Q408847-rutto-1713.png",
+        "sha256": "b0c3bfeec45ecda5bf9947c7ac61546109d68b4bf9db229e55eb1903ee499e02",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Suljettu arkku kahden kantajan käsissä, siunaava pappi ja kankaaseen kääriytynyt sairas, kaksi pientä kangasta kasvoillaan pitävää taustahahmoa.",
+          "Katutasoinen näkymä, aikakauden asut, suitsutussavu, karkea punainen risti ovessa ja vaimea harmaa valo. Ei ruumiita, verta, kirjoitusta tai nykytekniikkaa.",
+          "Taustalla ajalle sopiva barokkikirkko, ei myöhemmin rakennettua Karlskircheä. Tarkka katu ja pienet seinälyhdyt havainnollisia."
+        ]
+      },
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false
+    }
+  ],
+  "comparison": {
+    "file": "toimitetut-2.jpg",
+    "r2Key": "julisteet/praha-wien-yksityiskohdat/20261007/toimitetut-2.jpg",
+    "url": "https://media.matkakirja.app/julisteet/praha-wien-yksityiskohdat/20261007/toimitetut-2.jpg",
+    "sha256": "8b37b95e970b35fbaa930d78c109456c0407ec54ae7468943cb2119d8f2217d1",
+    "bytes": 239268,
+    "http": 200,
+    "mime": "image/jpeg",
+    "cors": "https://matkakirja.app",
+    "byteExactReadback": true
+  },
+  "deliveryStatus": "Osatoimitus: kaksi tarkistettua kuvaa, kaksi ehdokasta pidätetty korjausta varten; viides rajaus avoin.",
+  "ownerDecisionsPending": [
+    {
+      "id": "globe_scope",
+      "question": "Globe Wienin puheeseen, vain neljä kohdetta, vai puuttuva Wienin kohde?",
+      "answerReceived": false
+    },
+    {
+      "id": "replacement_budget",
+      "question": "Kaksi kokonaan uutta korvaavaa generointia viiden generoinnin rajasta poiketen?",
+      "answerReceived": false
+    }
+  ]
+}
