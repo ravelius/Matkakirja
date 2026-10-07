@@ -456,7 +456,7 @@ namespace Matkakirja.Natiivi
         void SijoitaAikaNappi()
         {
             if (float.IsNaN(Juuri.layout.width) || Juuri.layout.width <= 0) return;
-            var isa = LeveaRuutu ? aikaRyhma : ryhma;
+            var isa = ryhma;   // omistaja 14.2x: myös iPadilla oikean ryhmän riviin (metrolinja vasempaan yläkulmaan)
             if (aikaNappi.parent == isa) return;
             aikaNappi.RemoveFromHierarchy();
             isa.Insert(0, aikaNappi);
@@ -491,6 +491,13 @@ namespace Matkakirja.Natiivi
             if (LeveaRuutu && Juuri.panel != null) vasen = ReunaPt - UiKerros.Hae().Reunat(kerrosNro).x;
             metro.Kompakti = false; metro.IslandAlaY = 0f;
             if (!LeveaRuutu && Juuri.panel != null) { PuhelinMetro(nayta, w, h); return; }
+            // Omistaja 14.2x: iPadilla vasempaan yläkulmaan 6 pt reunasta, linja ja kaikki nimet köyden päällä (ei rajausta).
+            if (Juuri.panel != null)
+            {
+                metro.Keskita = false;
+                metro.Paivita(nayta, 8f, 8f + h * 0.4f, h * 0.4f, w * 0.3f, vasen);
+                return;
+            }
             metro.Paivita(nayta, yla, ala, Mathf.Max(h * 0.4f, OpasMetrolinja.VahinRivi * metro.Maara), LeveaRuutu ? w * 0.3f : w * 0.42f, vasen);
         }
 
@@ -517,14 +524,11 @@ namespace Matkakirja.Natiivi
             }
             else
             {
-                // Omistajan tarkennus 13.3x: vaakana heti Dynamic Islandin oikean reunan jälkeen (Island vasemmassa laidassa
-                // ~11–48 pt, turva-alueen vasen reuna > 0), ylhäällä; muuten ruudun laitaan.
+                // Omistaja 13.3x ja 14.2x: vaakana heti Dynamic Islandin oikean reunan jälkeen ylhäällä; nimet kokonaan köyden päällä
+                // (ei katkaisua eikä pisteiksi supistusta).
                 x = t.x > 20f ? IslandOikeaPt + KuvaRako : 14f; y = 12f;
-                korkeus = Mathf.Min(ph * 0.5f, OpasMetrolinja.AsemaValiPt * metro.Maara);
-                var koysi = OpasSovitin.KoriVasenKoysiNorm;
-                float koysiVasen = koysi.width > 0f && koysi.xMax <= 0.4f ? koysi.xMin * pw : pw * 0.3f;
-                leveys = Mathf.Max(60f, koysiVasen - x - KuvaRako);
-                metro.Kompakti = OpasMetrolinja.VahinRivi * metro.Maara > korkeus;
+                korkeus = Mathf.Min(ph * 0.6f, OpasMetrolinja.AsemaValiPt * metro.Maara);
+                leveys = pw * 0.45f;
             }
             // Juuri on turva-alueen sisällä: paikka turva-alueen koordinaateiksi (negatiivinen = ulkopuolella).
             float yJ = y - t.y, xJ = x - t.x;
