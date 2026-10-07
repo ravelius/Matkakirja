@@ -2,8 +2,8 @@
 
 Haettu 7.10.2026 Sisältökirjurin Sonnet-kerääjillä (Commons, Kenney, OpenGameArt; Freesoundia ei haettu paikallisesti, ks. alla). Kaikki valitut ja varaehdokkaat ovat **CC0 tai public domain**; CC BY / CC BY-SA / OGA-BY jätettiin pois. **Mitään ei ole kuunneltu** (valinta nimen, kuvauksen, tunnisteiden ja ffmpeg-mittausten perusteella): Pelikoodari/Laitetestaaja kuuntelee ennen käyttöä. Ei generointia, ei maksullisia palveluja. Raakatiedostot: `seikkailu/olavinlinna/aanet-fp-raaka-v1/raaka/<tiedosto>`; käsittely (leikkaus, taso, ristiinhäivytys, hiljennys) tehdään manifestia rakennettaessa kuten `aanet-e3-v1` (silmukat −23 LUFS, kerta-äänet huippu −6 dBFS).
 
-## Freesound (CC0): erillinen ehdokaslista
-Pelikoodarin haku freesound.orgin julkiselta hakusivulta (license CC0, ≤ 8 s / ympäristö ≤ 30 s): 97 ehdokasta 20 tehosteelle, `/Users/Shared/Claude/proto-3d/_tyo/freesound-olavinlinna/ehdokkaat.md` ja `ehdokkaat.json`. Ohuimmat osumat: hanska-esine, uinti, sukellus, koira-kaukaa. Latausta Freesoundista ei ole tehty (vaatii kirjautumisen); valitut ladataan tarvittaessa Actions-avaimella.
+## Freesound (CC0): vain virallista reittiä
+Pelikoodarin ehdokaslista (`proto-3d/_tyo/freesound-olavinlinna/ehdokkaat.md`, 97 ehdokasta) kerättiin skriptillä freesound.orgin /search/-sivuilta, jonka robots.txt kieltää automaattiselta haulta. **Älä käytä listaa uuden skriptihaun pohjana äläkä täydennä sitä samalla tavalla.** Listan id:t ja sivu-URLit ovat julkista tietoa: käytä niitä vain ihmisen esikuunteluun selaimessa tai Freesoundin virallisen API:n kautta Actions-avaimella. Latausta Freesoundista ei ole tehty.
 
 ## Huomio: tarkistettavaa ennen julkaisua
 - `askel-sora`: Commonsin CC0-merkintä, alkuperä Pixabay: tarkista lisenssi ennen julkaisua; varalla Fantozzin hiekka-askeleet (OpenGameArt CC0). Kuusi varianttia leikataan yhdestä sarjatiedostosta `askel-sora-sarja.ogg` (leikkeet `käsittely`-kentässä).
