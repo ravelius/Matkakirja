@@ -372,7 +372,20 @@ namespace Matkakirja.Linssit.Kierros
             AloitaSiirtoJosKaukana(matka, lat, lon, nimi);
             Vaihe = OpasVaihe.Lentaa; VaiheAika = 0;
             puheAloitettu = true; siirtyma = true;
+            UnohdaEdellinenKohde();
         }
+
+        /// <summary>
+        /// Kaupungin vaihdossa edellinen kohde ei ole enää "nykyinen" (simu 7.10. 07.08: basilikan kuvakortti ja nimilappu jäivät
+        /// Varsovan yleiskuvaan, koska yleiskuva odottaa Nykyinen-kohteen kanssa). Odottamisen uusintapyyntö käyttää sitä silti
+        /// kuten ennen (edellinen), joten pyyntörytmi ei muutu.
+        /// </summary>
+        void UnohdaEdellinenKohde()
+        {
+            if (Nykyinen == null) return;
+            edellinen = Nykyinen; Nykyinen = null;
+        }
+        OpasKohde edellinen;
 
         /// <summary>
         /// Kaupungin vaihto suoraan kohteeseen (worker #4107, Pelikoodari 7.10.): kuten VaihdaPaikka, mutta yleiskuvan sijaan siirto
@@ -383,6 +396,7 @@ namespace Matkakirja.Linssit.Kierros
             if (Torju(nimi, lat, lon)) return;
             VaihdaPaikka();
             Liiku(nimi, lat, lon);
+            if (Vaihe == OpasVaihe.Lentaa && siirto) UnohdaEdellinenKohde();
         }
 
         // ---- SIIRTO ILMAN LENTOA (omistaja 6.10. 12.0x) ----
@@ -750,7 +764,7 @@ namespace Matkakirja.Linssit.Kierros
             if (esihakuPuheenJalkeen && Vaihe == OpasVaihe.Puhuu && !PuheSoi)
             {
                 esihakuPuheenJalkeen = false;
-                if (!OdottaaVastausta && Seuraava == null && odotettu == 0 && Nykyinen != null && !Nykyinen.OdottaaValintaa && !Pysaytetty) UusiPyynto();
+                if (!OdottaaVastausta && Seuraava == null && odotettu == 0 && (Nykyinen ?? edellinen) is OpasKohde nk && !nk.OdottaaValintaa && !Pysaytetty) UusiPyynto();
             }
 
             switch (Vaihe)
@@ -934,7 +948,7 @@ namespace Matkakirja.Linssit.Kierros
             if (NykyinenKehys != null && kehysKohde != null && kehysKohde.Id != null
                 && KierrosLento.EtaisyysM(NykyinenKehys.Lat, NykyinenKehys.Lon, k.Lat, k.Lon) < 50)
             {
-                Nykyinen = k;
+                Nykyinen = k; edellinen = null;
                 Vaihe = OpasVaihe.Puhuu; VaiheAika = 0; aaniLoppui = false;
                 puheAloitettu = true; AlkaaPuhua?.Invoke(k);
                 Saapui?.Invoke(k);
@@ -943,7 +957,7 @@ namespace Matkakirja.Linssit.Kierros
             }
             var kehys = KehysKohteelle(k, maaKorkeus, out bool maaArvio, out double tulo);
             AsetaKohdeKehys(kehys, maaArvio, k, tulo);
-            Nykyinen = k;
+            Nykyinen = k; edellinen = null;
             Ohjaus.Nollaa();   // lento alkaa pelaajan kulmasta (Asento sisältää jo ohjauksen), ei hyppyä
             lahto = Asento;
             double matka = KierrosLento.EtaisyysM(lahto.Lat, lahto.Lon, k.Lat, k.Lon);

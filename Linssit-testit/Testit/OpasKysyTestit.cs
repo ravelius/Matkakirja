@@ -137,6 +137,21 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(!s2.Siirtymassa && s2.Torjuntoja == 1, "sallitun ulkopuolella torjutaan");
         }
 
+        // Simu 7.10. 07.08: basilikan kuvakortti jäi Varsovan yleiskuvaan (Nykyinen jäi edelliseen kaupunkiin).
+        [Testi] static void KaupunginVaihtoUnohtaaEdellisenKohteen()
+        {
+            var (s, p, _) = Pysahdyksella();
+            Oleta.Sama("A", s.Nykyinen?.Id);
+            s.LatausEdistys = () => 1;
+            s.VaihdaPaikka(52.231, 21.013, "Varsova");
+            Oleta.Tosi(s.Nykyinen == null, "edellinen kohde ei ole enää nykyinen");
+            for (int i = 0; i < 400 && s.Vaihe == OpasVaihe.Lentaa; i++) s.Paivita(0.1, _ => 5);
+            Oleta.Tosi(s.Vaihe == OpasVaihe.Odottaa && s.Nykyinen == null, "yleiskuva ilman vanhaa kohdetta");
+            var (s2, _, _) = Pysahdyksella();
+            s2.VaihdaPaikkaKohteeseen("Pyhän Markuksen basilika", 45.4345, 12.3397);
+            Oleta.Tosi(s2.Nykyinen == null, "kohteeseen siirryttäessä sama");
+        }
+
         [Testi] static void KaupunginSisallaLennetaan()
         {
             var (s, p, puhe) = Pysahdyksella();
