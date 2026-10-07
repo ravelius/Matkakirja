@@ -16,9 +16,9 @@ Junaan 162 KUITATTU (Päätoimittaja 18.0x) ja SHA Natiivisepälle: natiivi-ui/s
 poimi/heitä/laske/kynttilä/koputa/irrota/nosta + SeikkailuTapit.NaytaLoyto). AVOIN: omistajan ikonipäätös (avoin käsi, kaareva
 nuoli, ehkä liekki; uudet 24×24-viivaikonit) → vaihda SeikkailuTapit.PoimiIkoni/HeitaIkoni uudessa haarassa → testit →
 1 rivin kuittaus → Natiivisepälle.
-JUNA 163, kuittauspyyntö lähetetty Päätoimittajalle 18.1x: natiivi-ui/seikkailu-tietokerros cbc92a25 (sama worktree
+JUNA 163 KUITATTU 18.1x ja SHA Natiivisepälle: natiivi-ui/seikkailu-tietokerros cbc92a25 (sama worktree
 wt/proto-natiivi-ui-seikkailutoiminto, f9f48082:n päällä): TietokorttiAvautui (Pulun ele utelias), NaytaTietokerros (ele ilo,
-KORTTI-kortisto vasta Pulun napautuksesta, Pulu.NapautusKaappaa). Kuittauksen jälkeen SHA Natiivisepälle.
+KORTTI-kortisto vasta Pulun napautuksesta, Pulu.NapautusKaappaa).
 
 ## TILA 7.10. klo 15.0x
 
