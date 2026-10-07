@@ -45,6 +45,12 @@ namespace Matkakirja.Linssit.Kierros
             return l;
         }
 
+        /// <summary>
+        /// Kortin näkyvä teksti: vain kuvateksti (omistaja 7.10. 22.5x: "tekijät eivät saa näkyä näissä kuvissa, ei sovi tyyliin";
+        /// tekijä, lisenssi ja havainnekuvan merkintä jäävät dataan, Tekijarivi, ja näytetään muualla).
+        /// </summary>
+        public static string KortinTeksti(Kuva k) => string.IsNullOrWhiteSpace(k?.Kuvateksti) ? "" : k.Kuvateksti.Trim();
+
         /// <summary>Kortin alarivi: "Kuva: tekijä, lisenssi"; havainnekuvassa "Havainnekuva" (ja tekijä, jos annettu).</summary>
         public static string Tekijarivi(Kuva k)
         {

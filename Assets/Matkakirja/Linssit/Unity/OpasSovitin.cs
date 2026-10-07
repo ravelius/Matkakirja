@@ -559,6 +559,27 @@ namespace Matkakirja.Natiivi
         static readonly HashSet<string> yksLataukset = new HashSet<string>();
         static string yksPolku;
 
+        /// <summary>
+        /// Nykyisen kaupungin yksityiskohtakuvien lähteet (omistaja 7.10. 22.5x: tekijät eivät näy kortissa vaan Kuumailmapallon
+        /// ☰-valikon "Lähteet ›" -näkymässä, Natiivi-UI): Kohde = kohteen näkyvä nimi (avaus → kaupunki), tyhjä, jos ei ladattu.
+        /// </summary>
+        public static IReadOnlyList<(string Kohde, string Tekija, string Lisenssi, bool Havainnekuva)> KuvaLahteet
+        {
+            get
+            {
+                var l = new List<(string, string, string, bool)>();
+                if (yksPolku == null || !yksValimuisti.TryGetValue(yksPolku, out var kuvat) || kuvat == null) return l;
+                var t = Viimeisin?.kierrosKohteet ?? Viimeisin?.kohteet;
+                foreach (var k in kuvat)
+                {
+                    string nimi = string.Equals(k.KohdeId, "avaus", StringComparison.OrdinalIgnoreCase) ? Aloituskaupunki
+                        : t?.Find(x => string.Equals(x.Id, k.KohdeId, StringComparison.OrdinalIgnoreCase))?.Nimi;
+                    l.Add((string.IsNullOrWhiteSpace(nimi) ? k.KohdeId : nimi, k.Tekija?.Trim() ?? "", k.Lisenssi?.Trim() ?? "", k.Havainnekuva));
+                }
+                return l;
+            }
+        }
+
         /// <summary>Kaupungin luettelo välimuistiin taustalla (ei mitään, jos polkua ei ole, se on jo ladattu tai latautumassa).</summary>
         static void EsilataaYksityiskohdat(string id)
         {

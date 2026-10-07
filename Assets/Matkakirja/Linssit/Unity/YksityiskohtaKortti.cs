@@ -3,8 +3,8 @@
 // kääntyneenä; lentää oikealta sisään, pysyy OpasYksityiskohdat.NayttoS ja poistuu kaukaisuuteen oikeaan yläkulmaan (omistaja
 // 7.10. 10.2x). Koko, lepopaikka ja liike KorttiAsettelusta: levossa kortti ei peitä nappeja (Napit-laatikot OpasValikolta);
 // liikkeen aikana napit piirtyvät kortin päälle (UI Toolkitin ruutupaneelit kamerapinon jälkeen, tarkistus NapitPaalla). Oma
-// URP-overlay-kamera kerroksella 17 kaupunkikameran pinossa (kuten PalloKori). Alakaistassa kuvateksti ja tekijärivi
-// (CC BY / BY-SA vaativat maininnan). Yksi kortti kerrallaan; Piilota() vie kortin heti pois (valikko tai chat aukesi).
+// URP-overlay-kamera kerroksella 17 kaupunkikameran pinossa (kuten PalloKori). Alakaistassa vain kuvateksti (omistaja 22.5x: tekijät eivät näy kortissa).
+// CC BY / BY-SA -maininta näytetään muualla (Tekijarivi datassa). Yksi kortti kerrallaan; Piilota() vie kortin heti pois (valikko tai chat aukesi).
 using System.Collections;
 using Matkakirja.Linssit.Kierros;
 using Matkakirja.Natiivi;
@@ -160,15 +160,14 @@ namespace Matkakirja.Linssit
             float yksikko = 2f * Etaisyys * Mathf.Tan(Fov * 0.5f * Mathf.Deg2Rad) / h;
             kortti.localScale = new Vector3(lev * yksikko, kork * yksikko, 1f);
 
-            string rivi = string.IsNullOrWhiteSpace(k.Kuvateksti) ? "" : k.Kuvateksti.Trim();
-            string tekija = OpasYksityiskohdat.Tekijarivi(k);
-            teksti.text = rivi.Length > 0 && tekija.Length > 0 ? $"{rivi}\n<size=70%>{tekija}</size>" : rivi + tekija;
+            // Omistaja 22.5x: vain kuvateksti, ei tekijää eikä lisenssiä (ne näytetään muualla, Tekijarivi datassa).
+            teksti.text = OpasYksityiskohdat.KortinTeksti(k);
             // Teksti kortin paikallisissa yksiköissä (kortti 1 × 1): alakaistaan, vasemmalle sisennyksen verran.
             var tt = teksti.rectTransform;
             tt.localScale = new Vector3(1f / (lev * yksikko), 1f / (kork * yksikko), 1f) * yksikko;
             tt.sizeDelta = new Vector2(lev - 2 * sis, alaPx);
             tt.localPosition = new Vector3(0f, -0.5f + (sis * 0.5f + alaPx * 0.5f) / kork, -0.001f);
-            // Koko sovitetaan kaistaan (2 riviä: kuvateksti ja tekijä); 1 tekstiyksikkö = 1 ruutupikseli.
+            // Koko sovitetaan kaistaan (yksi rivi: kuvateksti); 1 tekstiyksikkö = 1 ruutupikseli.
             teksti.fontSizeMax = alaPx * 12f; teksti.fontSizeMin = alaPx * 0.05f;
             teksti.alignment = TextAlignmentOptions.MidlineLeft;
 
