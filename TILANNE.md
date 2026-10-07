@@ -14,8 +14,11 @@ ja aalto committataan + pushataan.
 
 | Aalto | Kaupungit | Tila |
 |---|---|---|
-| 1 | amsterdam, ateena / barcelona, bergen / berliini, bryssel / budapest, bukarest | käynnissä |
-| 2 | dublin, edinburgh / firenze, granada / helsinki, islanti / kosice, krakova | ei aloitettu |
+| 1 | amsterdam, ateena (VALMIS, commit ffaa8af) / barcelona, bergen / berliini, bryssel / budapest, bukarest | käynnissä |
+| 2 | dublin, edinburgh (käynnissä) / firenze, granada / helsinki, islanti / kosice, krakova | osin käynnissä |
+
+Agentit ajetaan liukuvasti: kun pari valmistuu, se committataan heti ja seuraava pari käynnistyy (max 4 rinnakkain).
+Valmis kaupunki = muutokset committattu JA fragmentti liitetty TARKISTUS-PAATOIMITTAJA.md:hin.
 | 3 | kreeta, lissabon / ljubljana, luxemburg / madrid, marseille / oslo, sevilla | ei aloitettu |
 | 4 | sisilia, sofia / tampere, tukholma / valletta, venetsia / vilna | ei aloitettu |
 | 5 | TARKISTAJA-agentti käy koko diffin läpi | ei aloitettu |
