@@ -322,3 +322,12 @@ haussa, mutta sisältö ei näkynyt; merkitty).
 - Päälinnan valmistumisvuosi 1485 (kortti 7): 1L.
 - Bielken käskynhaltijuus kesällä 1499 ja elokuun 1499 rajapyykit (kortti 9): 1L (en.wikipedia).
 - Vaakunalaattojen liuske, ajoitus ja Tott-yhteys (kortti 10): 1L (Härö, tiivistelmän kautta).
+
+## Päätoimittajan kuittaus (7.10.2026 klo 10.5x)
+
+Rakenne, sävy ja fiktiokortti on hyväksytty luonnoksena. Pilvi ei päässyt avaamaan lähdesivuja (verkkoesto), joten
+EPÄVARMA-kohdat tarkistetaan paikallisesti ennen kuin kortit viedään peliin. Lähteinä ovat L1 (Senaatti 2019),
+Härö 1997 ja `docs/raportit/faktapohja-olavinlinna-1500.md` (#4125, E1–E17). Tärkein tarkistettava on umpeen
+muuratut komerot (kortit 10 ja 12), koska seikkailu esittää ne totena. Lisäksi tarkistetaan keittiö eteläsiivessä
+(kortti 4: faktapohjan mukaan "ns. keittiö" = eteläsiipi, O), pääportin paikka (kortti 2) ja ikkunaton kappeli
+(faktapohja 1L, Aspelin), jonka voi palauttaa korttiin 6, jos lähde vahvistuu.
