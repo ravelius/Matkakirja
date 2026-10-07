@@ -122,6 +122,11 @@ namespace Matkakirja.Natiivi
         }
         public static event Action<Vector3> LuukkuAani;
 
+        /// <summary>Oma kynttilä kädessä palamassa (ei asetettuna).</summary>
+        public bool OmaKadessa => ydin.OmaPalaa && OmaAsetettu == null;
+        /// <summary>Liekki suojattu kämmenellä (kyyryssä, pelattavuusmalli 2.3): valopiiri puolet, valoisuus vähintään 0,45 (muuten 0,9).</summary>
+        public bool OmaSuojattu => OmaKadessa && SeikkailuPelaaja.Aktiivinen is SeikkailuPelaaja sp && sp.Tila.Tapa == Matkakirja.Linssit.Seikkailu.Liiketapa.Hiipiminen;
+
         /// <summary>Luukku ulottuvilla: vaakaetäisyys alle LuukkuM ja luukku enintään 1,2 m käden (1 m lattiasta) yläpuolella.</summary>
         bool LuukullaOn(Vector3 c) { var v = Luukku - c; float dy = v.y; v.y = 0; return v.magnitude < LuukkuM && dy > -0.6f && dy < 1.2f; }
 
@@ -130,11 +135,14 @@ namespace Matkakirja.Natiivi
         public Vector3? OmaAsetettu { get; private set; }
         public const float AsetusM = 0.9f, KasiSaumaM = 0.5f;
 
+        public static Vector3? Ontto => OnttoPaikka();
         static Vector3? OnttoPaikka()
         {
             var d = SeikkailuKavely.Data; if (d == null) return null;
-            foreach (var m in d.Lajia("ontto")) return new Vector3((float)m.X, (float)m.Y, (float)-m.Z);
-            return null;
+            // Kappelin syvennys (v44n: myös tyrmässä on ontto kohta, ontto:tyrma).
+            KavelyMerkki eka = null;
+            foreach (var m in d.Lajia("ontto")) { if (m.Tunnus == "syvennys") { eka = m; break; } if (eka == null && m.Osa != "tyrma-E101") eka = m; }
+            return eka != null ? new Vector3((float)eka.X, (float)eka.Y, (float)-eka.Z) : (Vector3?)null;
         }
 
         /// <summary>Saumat erottuvat viistovalossa: palava kynttilä asetettuna ≤ 0,9 m ontosta kohdasta tai kädessä ≤ 0,5 m (käsikirjoitus kohta 6).</summary>
@@ -145,7 +153,7 @@ namespace Matkakirja.Natiivi
                 if (!ydin.OmaPalaa || !(OnttoPaikka() is Vector3 o)) return false;
                 if (OmaAsetettu is Vector3 a) return Vector3.Distance(a, o) <= AsetusM;
                 var p = SeikkailuPelaaja.Aktiivinen;
-                return p != null && Vector3.Distance(p.Hahmo.TransformPoint(new Vector3(0.22f, 1.15f, 0.3f)), o) <= KasiSaumaM;
+                return p != null && Vector3.Distance(p.Kasi.position, o) <= KasiSaumaM;
             }
         }
 
@@ -153,7 +161,7 @@ namespace Matkakirja.Natiivi
         public bool Toimi(SeikkailuPelaaja p)
         {
             var c = p.transform.position + Vector3.up * 1.0f;
-            if (LuukullaOn(c)) { VaihdaLuukku(); return true; }
+            if (LuukullaOn(c)) { VaihdaLuukku(); p.KasiEle("luukku"); return true; }
             if (ydin.OmaKynttila && !ydin.OmaPalaa && OmaAsetettu == null && Vector3.Distance(c + Vector3.up * 0.4f, IkuinenValo) < SytytysM + 0.6f)
             {
                 ydin.AsetaOma(true); SeikkailuAanet.Soita("sytytys", IkuinenValo, 0.7f);
@@ -178,15 +186,21 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Onko toiminto tarjolla (nappi näkyviin).</summary>
-        public bool ToimintoTarjolla(SeikkailuPelaaja p)
+        public bool ToimintoTarjolla(SeikkailuPelaaja p) => ToimintoVerbi(p) != null;
+
+        /// <summary>Tarjolla olevan toiminnon verbi (Natiivi-UI:n toimintonappi): Avaa/Sulje (luukku), Sytytä (ikuisesta valosta),
+        /// Ota (asetettu kynttilä), Aseta (seinän viereen), Sammuta, Sytytä tai Puhalla (oma); null = ei toimintoa. Sama järjestys kuin Toimi.</summary>
+        public string ToimintoVerbi(SeikkailuPelaaja p)
         {
-            if (p == null) return false;
+            if (p == null) return null;
             var c = p.transform.position + Vector3.up * 1.0f;
-            if (LuukullaOn(c)) return true;
-            if (ydin.OmaKynttila && !ydin.OmaPalaa && OmaAsetettu == null && Vector3.Distance(c + Vector3.up * 0.4f, IkuinenValo) < SytytysM + 0.6f) return true;
-            if (OmaAsetettu is Vector3 asp && Vector3.Distance(asp, c) < 1.2f) return true;
-            if (OmaAsetettu == null && ydin.OmaPalaa && OnttoPaikka() is Vector3 op && Vector3.Distance(op, c) < 1.3f) return true;
-            return ydin.Valitse(c.x, c.y, c.z).Toiminto != KynttilaToiminto.Ei && (Lahella(c) || ydin.OmaPalaa);
+            if (LuukullaOn(c)) return LuukkuAuki ? "Sulje" : "Avaa";
+            if (ydin.OmaKynttila && !ydin.OmaPalaa && OmaAsetettu == null && Vector3.Distance(c + Vector3.up * 0.4f, IkuinenValo) < SytytysM + 0.6f) return "Sytytä";
+            if (OmaAsetettu is Vector3 asp && Vector3.Distance(asp, c) < 1.2f) return "Ota";
+            if (OmaAsetettu == null && ydin.OmaPalaa && OnttoPaikka() is Vector3 op && Vector3.Distance(op, c) < 1.3f) return "Aseta";
+            var t = ydin.Valitse(c.x, c.y, c.z).Toiminto;
+            if (t == KynttilaToiminto.Ei || !(Lahella(c) || ydin.OmaPalaa)) return null;
+            return t == KynttilaToiminto.SammutaOma ? "Puhalla" : t == KynttilaToiminto.SammutaTilan ? "Sammuta" : "Sytytä";
         }
 
         void Update()
@@ -204,9 +218,10 @@ namespace Matkakirja.Natiivi
             bool oma = ydin.OmaPalaa && p != null;
             if (oma)
             {
-                var kasi = OmaAsetettu ?? p.Hahmo.TransformPoint(new Vector3(0.22f, 1.15f, 0.3f));
+                var kasi = OmaAsetettu ?? p.Kasi.position;
                 float lepatus = 0.9f + 0.1f * Mathf.PerlinNoise(Time.time * 6f, 0.3f);
-                Shader.SetGlobalVector(IdKanto, new Vector4(kasi.x, kasi.y, kasi.z, (float)Kynttilat.OmaValoM));
+                float sade = OmaSuojattu ? (float)Kynttilat.OmaValoM * 0.5f : (float)Kynttilat.OmaValoM;   // suojattuna valopiiri 3,5 → 1,75 m
+                Shader.SetGlobalVector(IdKanto, new Vector4(kasi.x, kasi.y, kasi.z, sade));
                 Shader.SetGlobalVector(IdKantoVari, new Vector4(1f, 0.72f, 0.42f, 0.95f * lepatus));
                 if (omaValo == null)
                 {
@@ -215,13 +230,13 @@ namespace Matkakirja.Natiivi
                     omaValo.type = LightType.Point; omaValo.range = (float)Kynttilat.OmaValoM; omaValo.color = new Color(1f, 0.72f, 0.42f);
                     omaValo.shadows = LightShadows.None;
                 }
-                omaValo.transform.position = kasi; omaValo.intensity = 1.4f * lepatus; omaValo.enabled = true;
+                omaValo.transform.position = kasi; omaValo.intensity = 1.4f * lepatus * (OmaSuojattu ? 0.6f : 1f); omaValo.range = sade; omaValo.enabled = true;
                 // Näkyvä liekki kädessä (DioraamaLiekit.LuoLyhty: sama 3D-liekki kuin hahmojen lyhdyissä), joka kallistuu vedossa.
-                if (omaLiekki == null && liekitLahde != null) omaLiekki = liekitLahde.LuoLyhty(p.Hahmo);
+                if (omaLiekki == null && liekitLahde != null) omaLiekki = liekitLahde.LuoLyhty(p.Kasi);
                 if (omaLiekki != null)
                 {
                     if (OmaAsetettu is Vector3 asl) { omaLiekki.transform.SetParent(transform, false); omaLiekki.transform.position = asl; }
-                    else { if (omaLiekki.transform.parent != p.Hahmo) omaLiekki.transform.SetParent(p.Hahmo, false); omaLiekki.transform.localPosition = new Vector3(0.22f, 1.15f, 0.3f); }
+                    else { if (omaLiekki.transform.parent != p.Kasi) omaLiekki.transform.SetParent(p.Kasi, false); omaLiekki.transform.localPosition = p.KahvaKiinni ? new Vector3(0f, 0.13f, 0f) : Vector3.zero; }   // kädet-v1: kynttilä +Y nyrkistä
                     omaLiekki.SetActive(true);
                     var (kallistus, suunta) = Veto(kasi);
                     if (LuukkuAuki)

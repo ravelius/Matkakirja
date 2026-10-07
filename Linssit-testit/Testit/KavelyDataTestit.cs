@@ -62,6 +62,8 @@ namespace Matkakirja.Linssit.Testit
             var l = System.Linq.Enumerable.First(d.Lajia("luukku"));
             Oleta.Tosi(l.Sarana != null && l.Sarana[0] == -12.2 && l.Sarana[2] == -16.7 && l.Glb == "esine-luukku.glb", "luukun sarana");
             Oleta.Tosi(System.Linq.Enumerable.First(d.Lajia("valo")).Sarana == null, "ilman saranaa null");
+            var k = KavelyData.Lue("{\"osat\": {}}", "[{\"nimi\": \"esine:kilpilaatta-tott\", \"paikka\": [0, 0, 0], \"kiintea\": true}, {\"nimi\": \"esine:kivi-1\", \"paikka\": [0, 0, 0]}]");
+            Oleta.Tosi(System.Linq.Enumerable.First(k.Lajia("esine")).Kiintea && !System.Linq.Enumerable.Last(k.Lajia("esine")).Kiintea, "kiinteä esine");
         }
 }
 }

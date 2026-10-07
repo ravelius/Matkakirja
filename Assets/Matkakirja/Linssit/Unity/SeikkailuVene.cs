@@ -75,7 +75,17 @@ namespace Matkakirja.Natiivi
             var lens = LensSettings.Default; lens.FieldOfView = 52f; lens.NearClipPlane = 0.1f; lens.FarClipPlane = 4000f;
             Kamera.Lens = lens;
             Kamera.Priority = 0;
+            kameraGo = cg.transform; kameraPerus = cg.transform.localRotation;
+            if (SeikkailuPelaaja.Ensimmainen)
+            {
+                // Huone 1 (pelattavuusmalli 8.1): silmät pressun alla 0,7 m vedestä (kamera_pera on 1,2 m), katse ±40° vaaka, −10…+35° pysty.
+                cg.transform.localPosition += Vector3.down * 0.5f; kameraPerus = cg.transform.localRotation = (kp != null ? Quaternion.identity : Quaternion.LookRotation(Vector3.back));
+                var fl = Kamera.Lens; fl.FieldOfView = SeikkailuPelaaja.FpFov; fl.NearClipPlane = 0.05f; Kamera.Lens = fl;
+            }
         }
+
+        Transform kameraGo; Quaternion kameraPerus; float katseYaw, katsePitch;
+        public const float VeneKatseVaaka = 40f, VeneKatseAlas = -10f, VeneKatseYlos = 35f;
 
         Transform Solmu(string nimi) { for (int i = 0; i < solmut.Length; i++) if (malli.Solmut[i].Nimi == nimi) return solmut[i]; return null; }
 
@@ -131,6 +141,13 @@ namespace Matkakirja.Natiivi
         /// <summary>Asettaa veneen ja airot ajan mukaan. Palauttaa Ytimen tilan.</summary>
         public VeneTila Paivita(bool vahennettyLiike)
         {
+            if (SeikkailuPelaaja.Ensimmainen && kameraGo != null)
+            {
+                var k = SeikkailuPelaaja.KatseSyote(Time.unscaledDeltaTime);
+                katseYaw = Mathf.Clamp(katseYaw + k.x, -VeneKatseVaaka, VeneKatseVaaka);
+                katsePitch = Mathf.Clamp(katsePitch + k.y, VeneKatseAlas, VeneKatseYlos);
+                kameraGo.localRotation = kameraPerus * Quaternion.Euler(-katsePitch, katseYaw, 0f);
+            }
             double aika = Aika;
             var tila = ydin.Tila(aika);
             // Ytimen suunta glTF:ssä (x, z etelä) → Unity (x, −z); keula on Unityssa paikallinen −z.

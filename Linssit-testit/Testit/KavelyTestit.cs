@@ -48,5 +48,48 @@ namespace Matkakirja.Linssit.Testit
             Aja(k, new KavelySyote { HiiriX = 200 }, 1 / 60.0);
             Oleta.Tosi(k.KameraYaw >= -180 && k.KameraYaw < 180, $"yaw kääritty ({k.KameraYaw:F1})");
         }
+
+        [Testi] static void Kallistusvyohykkeet()
+        {
+            var k = new Kavely { Kallistusvyohykkeet = true };
+            Aja(k, new KavelySyote { LiikeY = 0.3 }, 1.0);
+            Oleta.Tosi(k.Tapa == Liiketapa.Hiipiminen && k.Vauhti > 0.1 && k.Vauhti <= Kavely.HiipiminenMs + 1e-9, $"30 % = hiivintä ({k.Vauhti:F2})");
+            Aja(k, new KavelySyote { LiikeY = 0.7 }, 1.0);
+            Oleta.Tosi(k.Tapa == Liiketapa.Kavely && k.Vauhti > Kavely.HiipiminenMs && k.Vauhti < Kavely.KavelyMs, $"70 % = kävely välillä ({k.Vauhti:F2})");
+            Aja(k, new KavelySyote { LiikeY = 1 }, 1.0);
+            Oleta.Tosi(Math.Abs(k.Vauhti - Kavely.KavelyMs) < 1e-6, "näppäin = täysi kävely");
+            var v = new Kavely();
+            Aja(v, new KavelySyote { LiikeY = 0.3 }, 1.0);
+            Oleta.Tosi(v.Tapa == Liiketapa.Kavely, "ilman vyöhykkeitä 30 % = kävely");
+        }
+
+        [Testi] static void KaannossaantoEnintaan10JaHidas()
+        {
+            var k = new Kavely { KameraYaw = 0 };
+            Aja(k, new KavelySyote { HiiriX = 0.5 }, 1 / 60.0);
+            Oleta.Tosi(!k.PyydaKaanto(40), "ohjattu juuri: ei käännöstä");
+            Aja(k, new KavelySyote(), 1.1);
+            double alku = k.KameraYaw;
+            Oleta.Tosi(k.PyydaKaanto(alku + 40), "sekunnin jälkeen käännös");
+            Aja(k, new KavelySyote(), 0.5);
+            Oleta.Tosi(k.KameraYaw - alku > 3 && k.KameraYaw - alku < 9.9, $"0,5 s: kesken ({k.KameraYaw - alku:F1})");
+            Aja(k, new KavelySyote(), 1.0);
+            Oleta.Tosi(Math.Abs(k.KameraYaw - alku - Kavely.KaantoMaxAste) < 1e-6, "enintään 10°");
+            Oleta.Tosi(k.PyydaKaanto(k.KameraYaw - 30), "uusi pyyntö");
+            Aja(k, new KavelySyote { LiikeX = 1 }, 1 / 60.0);
+            Oleta.Tosi(!k.Kaantyy, "ohjaus keskeyttää");
+        }
+
+        [Testi] static void EnsimmaisenPersoonanPystyrajat()
+        {
+            var k = new Kavely();
+            Aja(k, new KavelySyote { HiiriY = -200 }, 1 / 60.0);
+            Oleta.Sama(Kavely.PitchMax, k.KameraPitch);   // oletusrajat (olan yli)
+            k.PitchAla = -75; k.PitchYla = 75;
+            Aja(k, new KavelySyote { HiiriY = -200 }, 1 / 60.0);
+            Oleta.Sama(75.0, k.KameraPitch);
+            Aja(k, new KavelySyote { HiiriY = 400 }, 1 / 60.0);
+            Oleta.Sama(-75.0, k.KameraPitch);
+        }
     }
 }
