@@ -542,6 +542,8 @@ namespace Matkakirja.Natiivi
                     // "ui seikkailutapit oikeatappi on|off" (testikytkin) ja "veto suora|selaus" (katseen vetosuunta).
                     else if (loput.Trim().StartsWith("oikeatappi ")) SeikkailuTapit.OikeaTappi = loput.Trim().EndsWith("on");
                     else if (loput.Trim().StartsWith("veto ")) SeikkailuTapit.VetoSuora = loput.Trim().EndsWith("suora");
+                    // "ui seikkailutapit teksti": tekstivahti (seikkailussa ei näkyvää tekstiä paitsi löytö ja tietokerros).
+                    else if (loput.Trim() == "teksti") return "=seikkailutapit: teksti " + SeikkailuTapit.Tekstivahti();
                     else if (loput.Trim() == "tietokortti") { SeikkailuTapit.TietokorttiAvautui("testi"); return "=seikkailutapit: tietokortin merkki"; }
                     else if (loput.Trim() == "loyto") { SeikkailuTapit.NaytaLoyto("Liinanyytti", "Kalkki, pateeni ja liuskekivi kääritty liinaan."); return "=seikkailutapit: löytö näytetty"; }
                     return "=" + SeikkailuTapit.Kuvaus();

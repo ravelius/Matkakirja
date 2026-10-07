@@ -15,6 +15,7 @@
 // OtaKatse() joka ruutu. Oikea TAPPI on testikytkin (oletus piilossa). Lyhyt napautus maailmaan (ei UI, ei vetoa) kutsuu
 // SeikkailuPelaaja.Napautus(px) (napautuskävely tai toiminto alle 1,2 m:n esineeseen). Mac: hiiri on Siirtosepän.
 using System.Collections.Generic;
+using System.Linq;
 using System.Reflection;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -354,6 +355,42 @@ namespace Matkakirja.Natiivi
             }
             Debug.Log("MATKAKIRJA seikkailutapit: tietokerros auki");
             Rakenne.Nayta(tkHimmennys, true, 250);
+        }
+
+        /// <summary>
+        /// TEKSTIVAHTI (pelattavuusmalli kohta 11, vaihe 3): seikkailussa ei näkyvää tekstiä paitsi löytö- (Paljastus, .mk-paljastus)
+        /// ja tietokerrospohjissa. Käy UiKerroksen kaikki kerrokset: näkyvä = koko ketju display ≠ None, visibility näkyvä,
+        /// peitto > 0,01 ja laatikko ruudulla. Karttakrediitit ovat Cesiumin omassa dokumentissa (pakolliset, eivät kuulu tähän).
+        /// Palauttaa "OK" tai "VIRHE n: teksti @ polku …" (testi `ui seikkailutapit teksti`, Siirtosepän botti lokiväittämäksi).
+        /// </summary>
+        public static string Tekstivahti()
+        {
+            var ui = UiKerros.Hae();
+            var loydot = new List<string>();
+            foreach (var (nro, juuri) in ui.Juuret)
+            {
+                float w = juuri.layout.width, h = juuri.layout.height;
+                juuri.Query<TextElement>().ForEach(t =>
+                {
+                    if (string.IsNullOrWhiteSpace(t.text) || !Nakyva(t, w, h)) return;
+                    for (var e = (VisualElement)t; e != null; e = e.parent)
+                        if (e.ClassListContains("mk-paljastus") || e == tkHimmennys) return;
+                    loydot.Add($"\"{(t.text.Length > 30 ? t.text.Substring(0, 30) + "…" : t.text)}\" @ {nro}/{t.parent?.GetClasses().FirstOrDefault() ?? t.parent?.name ?? "-"}");
+                });
+            }
+            return loydot.Count == 0 ? "OK" : $"VIRHE {loydot.Count}: " + string.Join("; ", loydot.Take(12));
+        }
+
+        static bool Nakyva(VisualElement t, float w, float h)
+        {
+            var r = t.worldBound;
+            if (r.width < 1f || r.height < 1f || r.xMax <= 0f || r.yMax <= 0f || r.xMin >= w || r.yMin >= h) return false;
+            for (var e = t; e != null; e = e.parent)
+            {
+                var rs = e.resolvedStyle;
+                if (rs.display == DisplayStyle.None || rs.visibility == Visibility.Hidden || rs.opacity < 0.01f) return false;
+            }
+            return true;
         }
 
         /// <summary>Testi: tila, arvot ja laatikot.</summary>
