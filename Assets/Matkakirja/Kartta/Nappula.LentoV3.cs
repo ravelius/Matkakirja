@@ -124,6 +124,8 @@ namespace Matkakirja
         float v3ReunaLeveys = -1f;
         KarttaKerrokset.KaytavaLataus v3Kaytava;
         bool v3Esitys;
+        /// <summary>Alkulento v3: nappula piilotettiin jo odotuksessa (kone sen paikalla); V3Pois palauttaa.</summary>
+        bool v3NappulaPiilossa;
         static readonly int V3TilaId = Shader.PropertyToID("_Tila");
 
         void V3Tapahtuma(string t)
@@ -192,8 +194,8 @@ namespace Matkakirja
             if (v3Kaytava != null) { v3Kaytava.Peru(); v3Kaytava = null; }
             if (v3Kone != null && v3Kone.gameObject.activeSelf) v3Kone.gameObject.SetActive(false);
             // Nappula palaa näkyviin kuten vanhalla lennolla Kone(false): perillä se on jo kohteessa (Siirra lennon lopussa).
-            if (v3Esitys && olio != null && !kone) olio.SetActive(true);
-            v3Esitys = false;
+            if ((v3Esitys || v3NappulaPiilossa) && olio != null && !kone) olio.SetActive(true);
+            v3Esitys = v3NappulaPiilossa = false;
         }
 
         /// <summary>
@@ -263,6 +265,13 @@ namespace Matkakirja
             Debug.Log($"MATKAKIRJA kehys {++kehysNro} {Time.unscaledTime:0.0000} kam {kierto.leveys:0.00000} {kierto.pituus:0.00000} {kierto.korkeus:0} "
                       + $"{kierto.KaytettyKallistus:0.000} {kierto.suuntima:0.000} | lontoo {sp.x:0.0} {sp.y:0.0} {(sp.z > 0 ? 1 : 0)} | kone {kone} | "
                       + $"nappula {(olio != null && olio.activeInHierarchy ? 1 : 0)} | odotus {LentoV3Odotus:0.00} esitys {(v3Esitys ? 1 : 0)} | yo {Paivanvalo.Instanssi?.Paino ?? 0:0.00}");
+        }
+
+        /// <summary>Kone radan alkuun (t = 0) samoin kuin lentosilmukan ensimmäinen kehys: paikka, korkeus, siipiväli, kallistus.</summary>
+        void V3KoneRadanAlkuun(AloituslennonRata rata, Camera kamera, int siemen)
+        {
+            var kp = rata.KoneenPaikka(0);
+            V3AsetaKone(kamera, kp.Lat, kp.Lon, rata.KoneenKorkeus(0), kp.Suunta, AloituslennonRata.V3Aika(0), siemen, kp.Kallistus, rata.Siipi(0));
         }
 
         /// <summary>Lennon siemen reitistä: sama lento aina sama, eri lennot eroavat (EI MONOTONIAA).</summary>
@@ -366,6 +375,10 @@ namespace Matkakirja
                 var q0 = LennonV3.ReitinKohta(reitti, pit, 0);
                 v3Kone.gameObject.SetActive(true);
                 V3AsetaKone(kamera, q0.Lat, q0.Lon, LennonV3Kaytava.KoneenKorkeus(0, 0, maaKohteessa), q0.Suunta, 0, siemen, 0);
+                // ALKULENTO v3 (omistaja 7.10. 14.5x: "lentokone periaatteessa saisi olla alusta asti näkyvissä kartalla, ainakin
+                // pienenä, ja sitten se vain vähän suurenisi"): radalla kone on jo odotuksessa radan alkuasennossa ja -koossa
+                // (t = 0), nappula pois samalla, joten leikkauksessa ei mitään ilmesty eikä koko hyppää.
+                if (rata != null) { V3KoneRadanAlkuun(rata, kamera, siemen); if (olio != null) { olio.SetActive(false); v3NappulaPiilossa = true; } }
             }
             // Pelin lento on jo alkanut (PeliOhjain.AloitaLento ennen Lennaa): vaihe heti, jotta sen oma ajastin ei etene.
             if (!aloitus) AsetaVaihe(LennonVaihe.Nousu);
@@ -380,8 +393,9 @@ namespace Matkakirja
             int kehyksia = 0;
             while (true)
             {
-                // Esilämmitys riittää kahdella kehyksellä; sitten kone piiloon leikkaukseen asti (kaukaa se olisi mustepiste).
-                if (++kehyksia == 3 && v3Kone != null) v3Kone.gameObject.SetActive(false);
+                // Esilämmitys riittää kahdella kehyksellä; ilman rataa kone piiloon leikkaukseen asti (kaukaa se olisi mustepiste).
+                // Radalla kone pysyy näkyvissä radan alussa (alkulento v3).
+                if (++kehyksia == 3 && v3Kone != null && rata == null) v3Kone.gameObject.SetActive(false);
                 float kulunut = Time.unscaledTime - odotusAlku;
                 LentoV3Odotus = kulunut;
                 // Aloitusrata: napautusnäkymä pysyy (omistaja: ei siirtymää ennen lentoa). Kaupungin napautus käynnistää myös
@@ -392,6 +406,7 @@ namespace Matkakirja
                 {
                     var a = esikaantoS > 0f ? AloituslennonRata.Esikaanto(napautettu, napautus, math.saturate(kulunut / esikaantoS)) : napautus;
                     kierto.Kuvaa(a.Lat, a.Lon, a.EtaisyysM, a.Kallistus, a.Suuntima, a.Katse);
+                    if (v3Kone != null) V3KoneRadanAlkuun(rata, kamera, siemen);
                 }
                 syy = LennonV3Kaytava.Leikkaa(kulunut, v3Kaytava != null ? v3Kaytava.Osuus : 1f, v3Kaytava != null ? v3Kaytava.AlkuOsuus : 1f);
                 // Aloitusrata: myös Cesiumin valinta tasaantunut (ennakkokamera mukana: ohituksen lähikuvan laatat piirtoon asti),
