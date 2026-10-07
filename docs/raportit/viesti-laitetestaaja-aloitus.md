@@ -1,4 +1,8 @@
-# Laitetestaajan aloitusviesti (päivitetty 6.10.2026 illalla, tilinvaihto)
+# Laitetestaajan aloitusviesti (päivitetty 7.10.2026 illalla, tilinvaihto)
+
+## PÄIVITYS 7.10.2026 — LUE TÄMÄ ENSIN
+- **docs/raportit/viesti-laitetestaaja-luovutus-20261007.md** on uusin luovutus. Omistajan päätös 7.10. 15.5x–16.0x: Laitetestaajan rutiini ja roolien omat käännökset on poistettu käytöstä; ei ajoja ilman uutta pyyntöä Päätoimittajalta. Tulokset 155, 156, 160, 161 OK.
+
 
 ## PÄIVITYS 6.10.2026 klo 22.1x — LUE TÄMÄ ENSIN
 - **docs/raportit/viesti-laitetestaaja-luovutus-20261006.md** on uusin luovutus (tulokset TULOS 153 ja 154 OK, avoimet, käytäntö, todistusajon koordinaatit).

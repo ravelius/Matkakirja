@@ -1,8 +1,12 @@
-# Laitetestaaja: luovutus 7.10.2026 iltapäivällä (tilin 5 h:n tauko 13.45–15.00)
+# Laitetestaaja: luovutus 7.10.2026 illalla (tilinvaihto)
+
+## OMISTAJAN PÄÄTÖS 7.10. klo 15.5x–16.0x (sitova, Postivahdin kautta) — LUE ENSIN
+- **Laitetestaajan rutiini poistettu käytöstä**: ei koekäännöksen savua, ei rutiinikierroksia, ei stillejä/videoita kuittausta varten, ei iPad-mittauksia eikä toistoajoja; roolit eivät tee omia iOS/iPad/Mac-käännöksiä. Simu vain jos vian syy on muuten epäselvä (ilmoitus Päätoimittajalle etukäteen yhdellä rivillä). 15.5x-erä (apurahakortti + TF 161 -rutiini) peruttu.
+- Siis: ei ajoja ilman uutta, erillistä pyyntöä Päätoimittajalta. Vanhat ohjeet alla (ajokaava) ovat varalla, jos pyyntö tulee.
 
 ## Tila
 - Haara `laitetestaaja-savukierros-b13` (checkout /Users/Shared/Claude/Matkakirja-laitetestaaja), kaikki pushattu (kärki ks. `git log -1`). Ei käynnissä olevia ajoja. Simu 1572C658 Shutdown, sovellus poistettu; iPad 3B4CDACB ei käytetty.
-- Tulokset 7.10. (kuittaus-*-20261007.md + todistus-*): **TULOS 155 (061c8850) OK**, **156 (59f03c63) OK**, **160 (a5b381a7) OK**; kaikissa 0 Exception.
+- Tulokset 7.10. (kuittaus-*-20261007.md + todistus-*): **TULOS 155 (061c8850) OK**, **156 (59f03c63) OK**, **160 (a5b381a7) OK**, **161 (68429b27) OK**; kaikissa 0 Exception.
 - Odottaa: Julkaisijan "SIMULAATTORI NYT" -viestiä (UDID + app-polku + SHA). Tulos vuoron viimeiselle riville "TULOS <build>: OK/VIKA – …" + raportti; yksi lyhyt viesti Julkaisijalle (simu vapaa) kun hän pyytää.
 
 ## Ajokaava (toimii, ~5 min / ajo)
