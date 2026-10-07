@@ -206,3 +206,8 @@ Brotli (haara linnanrakentaja-zstd, worktree olemassa), akustiikka #3979 (Steam 
   8k-leivonta pid 8143 SIGSTOPissa TF 155:n Unity-viennin ajan (Julkaisija ilmoittaa → kill -CONT 8143). Omat simut
   D760E909 (iPhone 17 Pro) + D9AC9B91 (iPad 13 M5), kuvaus proto-3d/tyokalut/linnanrakentaja-ajot/kielletty-kuvat.sh,
   appi lokit/siirtoseppa-eleet-app (d1b6cde4); erase vuoron jälkeen.
+- 7.10. 03.35: KIELLETTY pelikuvat Päätoimittajalle: blender ab3f31e0cca9b289 (maareunus), peili e6c51afe099c29de, haara
+  linnanrakentaja-kielletty (ei PR:ää vielä). Kuvat lokit/linnanrakentaja-kielletty-0324/omistajalle/ (10 png), ajo
+  tyokalut/linnanrakentaja-ajot/kielletty-kuvat.sh (poikki tunnelma paiva + poikki kamera; jalustan mitat skriptissä). Simut erasettu.
+  SEURAAVAT PARANNUKSET (palautteen mukaan): atlaksen tyhjien tekselien täyttö (push-pull) mustia pilkkuja vastaan, aukion/
+  marmorin tarkkuustekstuuri, ympäröivät pihat maareunuksen tilalle; natiivin alarivi "Savonlinna · 1475" Siirtosepälle.
