@@ -17,7 +17,13 @@ Avoimet työt:
    Vauhtirajaus opas-vapaa-lataus 5683ffaf jäi pois junasta. Ei uutta työtä tähän.
 4. s2-meri 0f6e4e89 on KUITATTU junaan 154 (BMNG:n meri S2:n meriväriin).
 
-## TILA 7.10. 01.2x (uusin)
+## TILA 7.10. 03.1x (uusin)
+- 3D-stillit valmiit: lokit/linssiseppa2-3d-kattavuus/stillit-11d043c75/3d-luokat-helsinki-varsova-tallinna.jpg → Päätoimittaja.
+  Tallinna litteä (karkea), Varsovan keskusta näyttää kunnolliselta 3D:ltä → ehdotettu SALLITTU (päätös Päätoimittaja/omistaja).
+- Odottaa: Sisilian uusintamittaus Pelikoodarin pistekorjauksen jälkeen (renkaat kuten sallitut.py; lisää tulos sallitut-3d.json:iin).
+- Simut F2D9B022/4CE6C737 erase tehty (levy), appikopiot poistettu.
+
+## TILA 7.10. 01.2x
 - Helsinki-olkapääpari VALMIS ja lähetetty Päätoimittajalle: lokit/linssiseppa2-helsinki-olkapaa-11d043c75/ (pari + pilvet 1:1),
   kello kiinteä 21.6. 17.00.00 UTC molemmissa. Ero hienovarainen (pilvissä enemmän sävyä).
 - SALLITUT 3D-KAUPUNGIT (omistaja 7.10. 00.4x): proto-3d/lokit/linssiseppa2-3d-kattavuus/sallitut-3d.json (36 sallittua, 5 rajaa,
