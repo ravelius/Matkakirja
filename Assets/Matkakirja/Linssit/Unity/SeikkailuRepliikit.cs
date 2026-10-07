@@ -2,7 +2,7 @@
 // Pelikoodarin manifest media.matkakirja.app/seikkailu/<rakennus>/repliikit-v1/manifest.json { repliikit[] { tunnus, hahmo, huone,
 // tilanne, teksti, aani, kesto_s } }, äänet tasoitettu −17,2 dB:iin). Ei tekstiä ruudulle (omistaja: pelin aikana ei luettavaa).
 // - Manifest kerran, ääni haetaan ensimmäisellä soitolla (mp3 → PCM-klippi) ja pidetään muistissa.
-// - Soitto puhujan kohdalta 3D-äänenä (spatialBlend 0,85, lähellä täysi, 25 m:ssä hiljainen), yksi repliikki kerrallaan per puhuja.
+// - Soitto 2D-äänenä (kuten DioraamaAanet; kuulija on pallonäkymän kamerassa), yksi repliikki kerrallaan per puhuja.
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -87,7 +87,9 @@ namespace Matkakirja.Natiivi
             {
                 var g = new GameObject("Puhuja:" + avain);
                 a = g.AddComponent<AudioSource>();
-                a.spatialBlend = 0.85f; a.rolloffMode = AudioRolloffMode.Linear; a.minDistance = 3f; a.maxDistance = 25f; a.playOnAwake = false;
+                // 2D kuten DioraamaAanet: AudioListener on pallonäkymän kamerassa, ei dioraaman kamerassa (E1-ajo 7.10.: 3D-repliikit
+                // jäivät kuulumatta, puhuja > 25 m kuulijasta). Puhujan suunta ja etäisyys tulevat V7:ssä omasta vaimennuksesta.
+                a.spatialBlend = 0f; a.playOnAwake = false;
                 puhujat[avain] = a;
             }
             a.transform.SetParent(puhuja, false); a.transform.localPosition = Vector3.up * 1.6f;
