@@ -422,4 +422,4 @@ Edellinen luovutus on `viesti-siirtoseppa-luovutus-20261002.md` (5.10. osiot 02.
    pelaajaksi (kapselin tilalle, istuin_matkustaja veneessä), valoisuus liekeistä (V7), V5 kappelin valoarvoitus (käsikirjoitus Päätoimittajalta).
 5. Pelikoodarin 31 repliikkiä: proto-3d/_valmiit/olavinlinna-repliikit-v1/ (manifest.json, valmis/, ajat/; käsikirjoitus
    docs/raportit/olavinlinna-pystyleike-repliikit.md). Pyydetty vienti media.matkakirja.app/seikkailu/olavinlinna/repliikit-v1/
-   ja hahmo-id:t muotoon <hahmo>-1500; LR:ltä pyydetty portinvartija-1500. Toisto natiivissa: V4/V7 (repliikit tilanteen mukaan).
+   — ämpärissä 13.21 (63 tiedostoa, hahmo-id:t <hahmo>-1500); LR tekee portinvartija-1500:n v45:een. Toisto natiivissa: V4/V7 (repliikit tilanteen mukaan).
