@@ -669,7 +669,7 @@ namespace Matkakirja.Natiivi
         /// <summary>Pelattavan palan kiinnitetty paketti (Linnanrakentajan v44g: kävely, Fogg, vene, laiturin kansi). Tuotannon osoitin
         /// (uusin.json) ei muutu: pala lukee tämän paketin testiosoittimena (sama hash-juuri ja manifest.json kuin julkaisulla, joten
         /// levyvälimuisti toimii; Päätoimittaja 7.10.: ei 250–400 Mt joka avauksella) ja palauttaa tuotannon, kun linna suljetaan.</summary>
-        public const string PelattavaPalaHash = "d73c80b2905f1ed2";   // v44i (kappeli: luukku, ikuinen valo, nyytti, reitit, piilot)
+        public const string PelattavaPalaHash = "42d49bd4b2a86677";   // v44j (v44i + Foggin nousu_laiturille)
 
         void LataaUudelleen()
         {
@@ -1086,13 +1086,51 @@ namespace Matkakirja.Natiivi
             Physics.SyncTransforms();
             if (Physics.Raycast(alku + Vector3.up * 2f, Vector3.down, out var osuma, 30f, 1 << DioraamaNayttamo.Kerros)) alku = osuma.point + Vector3.up * 0.05f;
             else o.Kirjaa($"seikkailu: nousupaikan alla ei törmäyspintaa ({alku}) — laituri puuttuu törmäyksestä?");
-            LisaaPelaajahahmo(SeikkailuPelaaja.Luo(nayttamo.transform, alku, yaw, DioraamaNayttamo.Kerros));
+            // v44j: Fogg nousee veneestä kannelle (leike nousu_laiturille, juurisiirto root_siirto): alku veneen pohjalla kannen reunan edessä.
+            var pm = rakennus.Pelaaja;
+            bool nousuLeike = pm != null && pm.Leikkeet.ContainsKey("nousu_laiturille") && pm.JuuriSiirto.ContainsKey("nousu_laiturille");
+            Vector3 kannelle = Vector3.zero;
+            if (nousuLeike && KannenReuna(alku) is (Vector3 reuna, Vector3 eteen))
+            {
+                var js = pm.JuuriSiirto["nousu_laiturille"];
+                yaw = Mathf.Atan2(eteen.x, eteen.z) * Mathf.Rad2Deg;
+                alku = reuna - eteen * 0.55f - Vector3.up * (float)js[1];
+                kannelle = new Vector3((float)js[0], (float)js[1], (float)js[2]);
+            }
+            else nousuLeike = false;
+            var sp = SeikkailuPelaaja.Luo(nayttamo.transform, alku, yaw, DioraamaNayttamo.Kerros);
+            LisaaPelaajahahmo(sp);
+            if (nousuLeike) sp.SoitaEle("nousu_laiturille", (float)pm.Liikkeet["nousu_laiturille"].KestoS, kannelle,
+                () => o.Kirjaa($"seikkailu: Fogg kannella ({SeikkailuPelaaja.Aktiivinen?.transform.position})"));
             if (pelattavaPala)
             {
                 o.StartCoroutine(VartijatPaalle());   // pelattavassa palassa vartijat partioon heti laiturille noustessa
                 o.StartCoroutine(KappeliPaalle());   // kynttilät (Foggilla tarjottimen kynttilä mukana) + kappelin kohtaus kaari-ovella
             }
             o.Kirjaa($"seikkailu: vene perillä, pelaaja laiturilla ({alku}, yaw {yaw:F0}, {(nm != null ? "nousu:laituri" : "laiturin kohde")})");
+        }
+
+        /// <summary>Kannen reuna nousupaikan lähellä ja suunta kannelle (vaaka, Unity): säteet alas 0,4 m:n kehältä; kannen puoleisten
+        /// suuntien keskiarvo = eteen, sitten taaksepäin reunaan asti (0,05 m:n askelin, enintään 1,5 m). Null, jos kansi joka puolella tai ei missään.</summary>
+        static (Vector3 Reuna, Vector3 Eteen)? KannenReuna(Vector3 kansi)
+        {
+            bool Kansi(Vector3 p, out Vector3 osuma)
+            {
+                osuma = p;
+                if (!Physics.Raycast(p + Vector3.up * 1.5f, Vector3.down, out var h, 3f, 1 << DioraamaNayttamo.Kerros) || Mathf.Abs(h.point.y - kansi.y) > 0.2f) return false;
+                osuma = h.point; return true;
+            }
+            var summa = Vector3.zero; int n = 0;
+            for (int i = 0; i < 24; i++)
+            {
+                float a = i * Mathf.PI * 2 / 24; var d = new Vector3(Mathf.Sin(a), 0f, Mathf.Cos(a));
+                if (Kansi(kansi + d * 0.4f, out _)) { summa += d; n++; }
+            }
+            if (n == 0 || n == 24 || summa.sqrMagnitude < 0.01f) return null;
+            var eteen = summa.normalized;
+            Vector3 reuna = kansi;
+            for (float t = 0f; t <= 1.5f; t += 0.05f) { if (Kansi(kansi - eteen * t, out var q)) reuna = q; else break; }
+            return (reuna, eteen);
         }
 
         IEnumerator KavelyPaalle(string tid)

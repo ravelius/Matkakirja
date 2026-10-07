@@ -124,6 +124,8 @@ namespace Matkakirja.Linssit.Dioraama
         public string Glb, Nimi;
         public Dictionary<string, string> Leikkeet = new Dictionary<string, string>();
         public Dictionary<string, (double KestoS, double TavoiteMs, double Toistokerroin)> Liikkeet = new Dictionary<string, (double, double, double)>();
+        /// <summary>Kertaeleen juuren siirto (liikkeet.&lt;nimi&gt;.root_siirto, hahmon kehyksessä glTF: y ylös, +z kasvot); esim. nousu_laiturille.</summary>
+        public Dictionary<string, double[]> JuuriSiirto = new Dictionary<string, double[]>();
     }
 
     public sealed class SkinMalli
@@ -718,7 +720,11 @@ namespace Matkakirja.Linssit.Dioraama
                     if (kv.Value is string ls) pm.Leikkeet[kv.Key] = ls;
                 foreach (var kv in MiniJson.ObjektiTaiNull(MiniJson.Kentta(pel, "liikkeet")) ?? new Dictionary<string, object>())
                     if (kv.Value is Dictionary<string, object> lo)
+                    {
                         pm.Liikkeet[kv.Key] = (MiniJson.Luku(lo, "kesto_s") ?? 1, MiniJson.Luku(lo, "tavoite_m_s") ?? 0, MiniJson.Luku(lo, "toistokerroin") ?? 1);
+                        var rs = MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(lo, "root_siirto"));
+                        if (rs.Count == 3 && rs[0] is double rx && rs[1] is double ry && rs[2] is double rz) pm.JuuriSiirto[kv.Key] = new[] { rx, ry, rz };
+                    }
                 r.Pelaaja = pm;
             }
             foreach (var eo in MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(juuri, "etsinnat")))
