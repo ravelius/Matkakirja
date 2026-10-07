@@ -13,16 +13,14 @@ aikaan; ei omia natiivikäännöksiä; kuittaus = peili + yksi rivi (ei stillej�
 ## TILA LOPUSSA (7.10. klo 21.0x)
 - OMISTAJAN LINJAT: 13.3x ensimmäinen pelattava pala ensin, Giza ja Kielletty odottavat. 18.5x pelit 1. PERSOONASSA (Fogg ei näy;
   asu v2 kauko-/takakuviin; kädet kadet-v1). PELATTAVUUSMALLI mainissa: docs/raportit/pelattavuusmalli-olavinlinna.md (#4163).
-- LINNA v44r PEILISSÄ f13f34e21fed3e66 (d7a968228; MUUTOKSET.md v44…v44r, _valmiit/olavinlinna-blender-v44). Huoneet 1–10 kävelymallissa.
+- LINNA v44s PEILISSÄ 9a89ce964b61e629 (fa389afd5; MUUTOKSET.md v44…v44s, _valmiit/olavinlinna-blender-v44). Huoneet 1–10 kävelymallissa.
   Siirtoseppä kytkee jokaisen viennin historia-fp:hen. Huoneet 1–8 käveltävinä: laituri, keittiö, Kirkkotorni, kappeli E3,
   tyrmä E 101 (osa tyrma-E101), huone 6 palatsi (Linnantupa + voudin sali leivottu, palatsi.js), huone 7 muurikäytävä, huone 8
   muurinharja + Kellotornin otteet (osa muurikaytava). Reitti kappelista: kaari-ovi → kaariportaat (RP 6,3) → ampumakäytävä
   (rengas r 4,85, 13,4) → 165° porras pääoven ulkotasanteelle → muuriportaat → Tott-kammio → 187,5° Linnantupa; 275° → muurikäytävä.
   Törmäystesti: proto-3d/tyokalut/linnanrakentaja-ajot/scratch-20261007/reittitesti.py (Blender -b -P … -- <kavely-v1/v2>): 0 estettä.
-- KESKEN: agentti tekee esineet-v1:een avainnippu, avainrengas, esiliina, myssy, keittokulho → cp glb:t kavely-v1/v2/ + glb= merkkeihin
-  (esine:avainnippu-tyrma, esine:avainrengas, esine:esiliina, esine:myssy, esine:keittokulho) kavely.py:ssä → kavely.py + kuori_kavely.py
-  → rsync v44/kavely → vienti → Siirtosepälle. Puuttuu myös köysikiepin glb (resepti koysikieppi on dioraamassa). Samalle agentille
-  lisätty esine-arkku-komero.glb (solmut runko, kansi, kilpi-1, kilpi-2) → merkki esine:arkku-komero glb=.
+- ESINEET VALMIIT v44s: avainnippu, avainrengas, esiliina, myssy, keittokulho, arkku-komero (esineet-v1) merkeissä. Puuttuu vain
+  esine:koysikieppi-glb. Ei käynnissä olevia agentteja eikä taustaajoja.
 - HUONEET 9–10 VIETY v44r: komero (280°, tiilet, arkku + kilvet merkkeinä) ja pako (PT 21.0x vaihtoehto A: köysilasku 295°, rinne 300°,
   Kellobastioni pois vain 1499-näkymästä leikkauksilla pako-kellobastioni-1..3 + kallio; kirjattu _lahteet/olavinlinna-pohjat/
   SEIKKAILU-TARKISTUS.md loppuun). kuori_kavely.py: PAKO-alue rajaukseen ja kävelyyn (≤ 60°).
