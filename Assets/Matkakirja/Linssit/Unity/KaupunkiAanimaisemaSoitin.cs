@@ -76,6 +76,8 @@ namespace Matkakirja.Natiivi
         int edellinenTunti = -1;
         Suhina suhina;
         AudioClip kello;
+        (double KorkeusM, double NopeusMs, double Lat, double Lon)? viimeK;
+        const double SiirtymaNopeusMs = 250, LentoKorkeusM = 1500;
 
         /// <summary>Käynnistä (oppaan avaus) tai lopeta (sulku). Tila ja lähteet nollautuvat.</summary>
         public static void Kaytossa(bool paalla)
@@ -101,16 +103,26 @@ namespace Matkakirja.Natiivi
         void Update()
         {
             var k = Kamera != null ? Kamera() : OppaanKamera();
+            // OPPAAN SIIRTYMÄ (simu 7.10. 04.29: lennoilla −90 dB, lähteet vapautuivat): silta antaa siirtymän ajan null-kameran, joten
+            // pidetään viimeinen paikka ja korkeus ja annetaan siirtymänopeus → kerrokset hiljenevät mikserin nopeussäännöllä ja suhina soi.
+            // Päätoimittaja 7.10. 04.4x: lennoilla ei koskaan täyttä hiljaisuutta; lähtöpaikan maisema jatkuu ja liukuu (mikserin 2,5 s
+            // liuku) kohteen maisemaan, kun kamera palaa. Ensimmäisellä lennolla (ei lähtöpaikkaa) tuuli ja suhina lentokorkeudelta.
+            if (k.HasValue) viimeK = k;
+            else if (Kamera == null && OpasSovitin.KaupunkiNakyvissa)
+                k = viimeK.HasValue ? (viimeK.Value.KorkeusM, SiirtymaNopeusMs, viimeK.Value.Lat, viimeK.Value.Lon) : (LentoKorkeusM, SiirtymaNopeusMs, double.NaN, double.NaN);
+            bool eiPaikkaa = k.HasValue && double.IsNaN(k.Value.Lat);   // ensimmäinen lento: vain tuuli ja suhina, ei kartan reunan ääniä
+            if (eiPaikkaa) { painot = null; karttaLat = double.NaN; }
             string id = KaupunkiId != null ? KaupunkiId() : Tunnus(OpasSovitin.Aloituskaupunki);
             if (!string.IsNullOrEmpty(id) && id != karttaId && id != karttaLadataan) StartCoroutine(LataaKartta(id));
             var tila = Aanisoitin.Instanssi?.Tila;
             bool paalla = (tila?.Aanimaisema ?? Asetukset.Paalla(Kytkin.Aanimaisema)) && !(TestiMykistys.Paalla && !AaniKaappaus.Kaynnissa);
-            if (k.HasValue && (double.IsNaN(karttaLat) || Etaisyys(k.Value.Lat, k.Value.Lon, karttaLat, karttaLon) > 80))
+            if (k.HasValue && !eiPaikkaa && (double.IsNaN(karttaLat) || Etaisyys(k.Value.Lat, k.Value.Lon, karttaLat, karttaLon) > 80))
             {
                 karttaLat = k.Value.Lat; karttaLon = k.Value.Lon;
                 painot = Aanikartta != null ? Aanikartta(karttaLat, karttaLon) : kartta?.Painot(karttaLat, karttaLon);
             }
-            double tunti = k.HasValue ? Matkakirja.Linssit.Kierros.KaupunkiValo.PaikallinenTunti(DateTime.UtcNow, k.Value.Lon) : 12;
+            double tunti = k.HasValue && !eiPaikkaa ? Matkakirja.Linssit.Kierros.KaupunkiValo.PaikallinenTunti(DateTime.UtcNow, k.Value.Lon)
+                : edellinenTunti >= 0 ? edellinenTunti + 0.5 : 12;   // lennolla ilman paikkaa ei tuntia eikä lyöntejä
             mikseri.Paivita(new KaupunkiAanimaisema.Syote
             {
                 Painot = painot, KorkeusM = k?.KorkeusM ?? 100, NopeusMs = k?.NopeusMs ?? 0, Tunti = tunti,
@@ -123,8 +135,8 @@ namespace Matkakirja.Natiivi
                 var l = lahteet[i];
                 if (t > 0.001f && l == null) { Avaa(i); continue; }
                 if (l == null) continue;
-                l.volume = t;
-                if (l.TryGetComponent<AudioLowPassFilter>(out var f)) f.cutoffFrequency = (float)mikseri.Alipaasto;
+                Silmukka(i, t);
+                Alipaasto(lahteet[i]); Alipaasto(varat[i]);
                 if (t <= 0.001f) { if (hiljaaAlkaen[i] <= 0) hiljaaAlkaen[i] = Time.unscaledTime; else if (Time.unscaledTime - hiljaaAlkaen[i] > VapautusS) Vapauta(i); }
                 else hiljaaAlkaen[i] = 0;
             }
@@ -176,6 +188,17 @@ namespace Matkakirja.Natiivi
             catch (Exception e) { Debug.Log($"MATKAKIRJA äänimaisema: äänikartta {id} virheellinen: {e.Message}"); karttaId = id; }
         }
 
+        /// <summary>Testi (linssi-komento "aanimaisema kello [n]"): tasatunnin lyönnit heti (todennus ilman tunnin odotusta).</summary>
+        public static string TestiKello(int lyonteja)
+        {
+            var s = instanssi;
+            if (s == null || s.kello == null) return "äänimaisema: kello ei käytettävissä (" + (s == null ? "ei päällä" : "klippi puuttuu") + ")";
+            float kokonais = (float)s.mikseri.Kokonais * Taso;
+            foreach (var (viive, kirkko) in KaupunkiAanimaisema.TasatunninLyonnit(lyonteja, 2, 1))
+                s.StartCoroutine(s.Lyo(viive, KelloTaso * (kirkko == 0 ? 1f : 0.6f) * Math.Max(kokonais, 0.3f)));
+            return $"äänimaisema: kello {lyonteja} lyöntiä (taso {kokonais:F2})";
+        }
+
         IEnumerator Lyo(double viive, float taso)
         {
             yield return new WaitForSecondsRealtime((float)viive);
@@ -204,6 +227,7 @@ namespace Matkakirja.Natiivi
                 if (kerros != KaupunkiAanimaisema.Sade && kerros != KaupunkiAanimaisema.Tuuli) g.AddComponent<AudioLowPassFilter>().cutoffFrequency = 22000;
                 l.Play();
                 lahteet[i] = l; hiljaaAlkaen[i] = 0;
+                AvaaVara(i, url);
                 Debug.Log($"MATKAKIRJA äänimaisema: {kerros} soi ({c.length:F0} s)");
             }));
         }
@@ -211,8 +235,43 @@ namespace Matkakirja.Natiivi
         static readonly Dictionary<string, float> epaonnistunut = new Dictionary<string, float>();
         const float UusintaS = 300f;
 
+        // SILMUKAN RISTIHÄIVYTYS (Päätoimittaja 7.10. 04.4x): mp3:n kooderiviive ja täyte (~44 ms) jäisivät silmukan saumaan, ja
+        // suoratoistetun mp3:n pituus on arvio (loki 91 s, todellinen 90,04 s). Siksi toinen lähde (oma klippi samasta välimuistitiedostosta)
+        // alkaa XfAlkuS ennen arvioitua loppua kohdasta PadS (viiveen yli) ja ristihäivyttää tasatehoisesti XfS:ssä; sitten vaihto.
+        // Jos toinen klippi ei ole vielä valmis, ensimmäinen silmukoi itse (loop = true) kuten ennen.
+        readonly AudioSource[] varat = new AudioSource[KaupunkiAanimaisema.Kerrokset.Length];
+        readonly float[] xfAlku = new float[KaupunkiAanimaisema.Kerrokset.Length];
+        const float XfS = 1.2f, XfAlkuS = 2.5f, PadS = 0.06f;
+
+        void Silmukka(int i, float taso)
+        {
+            var a = lahteet[i]; var b = varat[i];
+            if (b == null || a.clip == null || a.clip.length < 3 * XfAlkuS) { a.volume = taso; return; }
+            if (!b.isPlaying && a.isPlaying && a.clip.length - a.time <= XfAlkuS) { b.time = PadS; b.Play(); xfAlku[i] = Time.unscaledTime; }
+            if (!b.isPlaying) { a.volume = taso; return; }
+            float u = Mathf.Clamp01((Time.unscaledTime - xfAlku[i]) / XfS);
+            a.volume = taso * Mathf.Cos(u * Mathf.PI * 0.5f); b.volume = taso * Mathf.Sin(u * Mathf.PI * 0.5f);
+            if (u >= 1f) { a.Stop(); a.volume = 0; lahteet[i] = b; varat[i] = a; }
+        }
+
+        void Alipaasto(AudioSource l) { if (l != null && l.TryGetComponent<AudioLowPassFilter>(out var f)) f.cutoffFrequency = (float)mikseri.Alipaasto; }
+
+        void AvaaVara(int i, string url)
+        {
+            StartCoroutine(Lataa(url, c =>
+            {
+                if (c == null || this == null || lahteet[i] == null || varat[i] != null) { if (c != null) Destroy(c); return; }
+                string kerros = KaupunkiAanimaisema.Kerrokset[i];
+                var g = new GameObject(kerros + " (vara)"); g.transform.SetParent(transform, false);
+                var l = g.AddComponent<AudioSource>(); l.clip = c; l.loop = true; l.spatialBlend = 0; l.volume = 0; l.playOnAwake = false;
+                if (kerros != KaupunkiAanimaisema.Sade && kerros != KaupunkiAanimaisema.Tuuli) g.AddComponent<AudioLowPassFilter>().cutoffFrequency = 22000;
+                varat[i] = l;
+            }));
+        }
+
         void Vapauta(int i)
         {
+            if (varat[i] != null) { var vc = varat[i].clip; Destroy(varat[i].gameObject); varat[i] = null; if (vc != null) Destroy(vc); }
             var c = lahteet[i].clip;
             Destroy(lahteet[i].gameObject); lahteet[i] = null; hiljaaAlkaen[i] = 0;
             if (c != null) Destroy(c);

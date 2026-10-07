@@ -2186,6 +2186,7 @@ namespace Matkakirja.Natiivi
                     else if (osat.Length > 2 && osat[1] == "data" && Enum.TryParse<CesiumKaupunki.Lahde>(osat[2], true, out var ld)) CesiumKaupunki.Data = ld;
                     Kirjaa(lontoo?.Tila() ?? "lontoo: ei sovitinta");
                 }
+                else if (osat[0] == "aanimaisema" && osat.Length > 1 && osat[1] == "kello") Kirjaa(KaupunkiAanimaisemaSoitin.TestiKello(osat.Length > 2 && int.TryParse(osat[2], out int kl) ? kl : 3));
                 else if (osat[0] == "poikki")
                     poikki.Komento(osat);
                 else if (osat[0] == "ajattelija")
