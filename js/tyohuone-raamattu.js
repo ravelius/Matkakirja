@@ -164,7 +164,7 @@ export const RAAMATTU = {
           + 'lähteet) tarjotaan vasta lopussa tai pyydettäessä. Olavinlinna alkaa veneellä saapumisesta alaperspektiivistä elokuvamaisesti, '
           + 'drone-näkymä vasta lopussa; pelaaja liikkuu itse linnassa, ratkaisee arvoituksen, ja palkintona on huomattava aarre. Toteutus: '
           + 'yksi yhteinen historiamoottori (liikkuminen, katselu, esineiden tutkiminen, arvoitukset, tallennus, elokuvamaiset siirtymät), '
-          + 'Olavinlinna pilottina. PELIN TUNTU (omistaja 7.10.2026 klo 09.0x, sitova): VAPAA KÄVELY ("Se on varmasti suuritöisin, mutta se '
+          + 'Olavinlinna pilottina. PELIN TUNTU (omistaja 7.10.2026 klo 08.4x, sitova): VAPAA KÄVELY ("Se on varmasti suuritöisin, mutta se '
           + 'olisi pelikokemuksena koukuttavin"); tekstuurit saavat olla sinne päin, kunhan näyttävät mahdollisimman hyvältä, mutta huoneiden '
           + 'mittasuhteet ja muut elementit ovat oikein. PELIN AIKANA EI OPETETA MITÄÄN ("koska se äkkiä saa inhoreaktion aikaan"): tavoite on '
           + 'jännittävä, hurja ja visuaalisesti näyttävä kokemus, johon pääsee heti ilman selostuksia; opastus mahdollisimman pienin vihjein, ja '
