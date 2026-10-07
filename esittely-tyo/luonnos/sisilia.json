@@ -1,0 +1,579 @@
+{
+ "kaupunki": "Sisilia",
+ "id": "sisilia",
+ "versio": 1,
+ "kohteet": [
+  {
+   "id": "Q1478407",
+   "nimi": "Palermon katedraali",
+   "kuvaus": "Palermon tuomiokirkko",
+   "luokka": "kirkko",
+   "koko_m": 130,
+   "teksti": "Palermon katedraali erottuu ylhäältä pitkänä vaaleana kirkkona, jonka katolla kohoaa suuri kupoli ja sivuilla rivi pienempiä kupoleita. Kirkko pystytettiin vuonna 1185 paikalle, jolla oli ollut bysanttilainen kirkko ja sen jälkeen moskeija, ja vuosisatojen lisäykset ovat tehneet siitä tyylien sekoituksen. Eteläisen portikon vasemmanpuoleisessa pylväässä on yhä Koraanin jae, joka on luultavasti peräisin moskeijasta. Sisällä lepää punaisessa porfyyriarkussa keisari Fredrik toinen. Arkun oli alun perin teettänyt itselleen kuningas Roger toinen, mutta Fredrik siirsi sen katedraaliin.",
+   "lyhyt": "Palermon katedraalin Pyhän Rosalian kappelissa säilytetään kaupungin suojeluspyhimyksen jäännöksiä hopeisessa arkussa, joka valmistettiin vuonna 1631. Kirkon lattiassa kulkee myös pitkä aurinkomeridiaani, jonka kuuluisa tähtitieteilijä Giuseppe Piazzi rakensi vuonna 1801 keskipäivän hetken määrittämiseen.",
+   "syventava": "Miksi pylväässä on Koraanin jae?",
+   "kysymykset": [
+    "Kuka oli keisari Fredrik toinen?",
+    "Kuka oli pyhä Rosalia?",
+    "Miksi kirkossa on niin monta eri tyyliä?",
+    "Miten katedraalin aurinkomeridiaani toimii?",
+    "Kuka suunnitteli katedraalin suuren kupolin?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Katedraali pystytettiin 1185 aiemman bysanttilaisen kirkon paikalle; tyylien kirjo johtuu pitkästä lisäysten sarjasta.",
+     "url": "kaanon:pelin-aineisto"
+    },
+    {
+     "vaite": "Paikalla ollut basilika muutettiin moskeijaksi ennen nykyistä katedraalia.",
+     "url": "https://en.wikipedia.org/wiki/Palermo_Cathedral"
+    },
+    {
+     "vaite": "Ferdinando Fuga teki suuren kupolin ja sivulaivojen pienet kupolit sekä uusklassisen sisätilan 1781–1802.",
+     "url": "https://romeartlover.it/Palermoa.html"
+    },
+    {
+     "vaite": "Eteläportikon vasemmanpuoleisessa pylväässä on Koraanin jae, luultavasti aiemmasta moskeijasta.",
+     "url": "https://assets.atlasobscura.com/places/arabic-inscription-of-palermo-cathedral"
+    },
+    {
+     "vaite": "Fredrik II lepää porfyyrisarkofagissa; Roger II teetti sarkofagit ennen 1145, ja Fredrik II siirsi ne katedraaliin.",
+     "url": "https://turismo.cittametropolitana.pa.it/the-cathedral/?lang=en"
+    },
+    {
+     "vaite": "Pyhän Rosalian kappelissa on hopeinen jäännösarkku, Mariano Smiriglion suunnittelema 1631.",
+     "url": "https://en.wikipedia.org/wiki/Palermo_Cathedral"
+    },
+    {
+     "vaite": "Katedraalin meridiaanin rakensi tähtitieteilijä Giuseppe Piazzi vuonna 1801.",
+     "url": "https://en.wikipedia.org/wiki/Palermo_Cathedral"
+    }
+   ]
+  },
+  {
+   "id": "Q1034853",
+   "nimi": "Palatiinikappeli",
+   "kuvaus": "Normannikuninkaiden kultainen palatsikappeli",
+   "luokka": "kirkko",
+   "koko_m": 35,
+   "teksti": "Palatiinikappeli on kätkössä Normannien palatsin sisällä, joten ylhäältä näkyy vain palatsin katto. Kuningas Roger toinen teetti kappelin, joka vihittiin vuonna 1140. Seinien ja kupolin kultamosaiikit tekivät bysanttilaiset mestarit, mutta laivan puukaton veistivät pohjoisafrikkalaiset käsityöläiset tippukivimäiseksi muqarnas-holviksi, jonka maalauksissa soitetaan luuttua, tanssitaan ja pelataan shakkia. Isoisäsi katseli vuonna 1873 kultaa hohtavaa kappelia, kunnes niska väsyi, ja kirjoitti, että kuninkaan nimi tunnettiin, mutta tekijöiden nimiä hän olisi kuunnellut kauemmin.",
+   "lyhyt": "Palatiinikappelin kupolissa hohtaa kultaisen taustan keskellä Kristus Pantokraattori, kaikkivaltias hallitsija. Kappelissa on myös noin seitsemänkymmentäviisi arabiankielistä kirjoitusta, jotka toivottavat kuninkaalle valtaa, vaurautta ja terveyttä, ja osassa niistä palatsia verrataan Mekan Kaabaan.",
+   "syventava": "Keitä olivat katon veistäjät?",
+   "kysymykset": [
+    "Mistä mosaiikkien tekijät tulivat Palermoon?",
+    "Mitä muqarnas tarkoittaa?",
+    "Miksi kristillisessä kappelissa on arabiaa?",
+    "Mitä Raamatun kertomuksia mosaiikeissa on?",
+    "Miksi katossa pelataan shakkia?"
+   ],
+   "isoisa": true,
+   "lahteet": [
+    {
+     "vaite": "Roger II teetti kappelin palatsin keskelle; kappeli vihittiin 1140.",
+     "url": "https://en.wikipedia.org/wiki/Cappella_Palatina"
+    },
+    {
+     "vaite": "Bysanttilaiset mestarit tekivät kultamosaiikit; kupolissa Kristus Pantokraattori.",
+     "url": "kaanon:pelin-aineisto"
+    },
+    {
+     "vaite": "Laivan muqarnas-katon tekivät pohjoisafrikkalaiset käsityöläiset puupaneeleista.",
+     "url": "https://en.wikipedia.org/wiki/Cappella_Palatina"
+    },
+    {
+     "vaite": "Katon maalauksissa on luutunsoittajia, tanssijoita ja yksi varhaisimmista shakinpelaajien kuvista.",
+     "url": "https://smarteducationunescosicilia.it/en/palermo/shapes-and-colours-of-the-wooden-ceiling"
+    },
+    {
+     "vaite": "Kupolissa on Kristus Pantokraattori.",
+     "url": "https://academytravel.com.au/blog/palermos-splendid-cappella-palatina"
+    },
+    {
+     "vaite": "Noin 75 arabiankielistä kirjoitusta toivottaa valtaa, vaurautta ja terveyttä; laattojen kirjoitukset vertaavat palatsia Kaabaan.",
+     "url": "https://en.wikipedia.org/wiki/Cappella_Palatina"
+    },
+    {
+     "vaite": "Isoisän merkintä: kappeli hohti kultaa, katseli kunnes niska väsyi, kuninkaan nimi tunnettiin, tekijöiden nimiä olisi kuunnellut kauemmin.",
+     "url": "kaanon:isoisan-paivakirja"
+    }
+   ]
+  },
+  {
+   "id": "Q1473825",
+   "nimi": "Normannien palatsi",
+   "kuvaus": "Sisilian kuninkaiden palatsi",
+   "luokka": "rakennus",
+   "koko_m": 200,
+   "teksti": "Normannien palatsi on laaja kivilinna vanhan keskustan länsilaidalla, ja sen sisäpihojen keskellä on kuuluisa Palatiinikappeli. Rakentaminen alkoi 800-luvulla arabivallan aikana, ja normannit laajensivat palatsia vuodesta 1072 alkaen; sitä pidetään Euroopan vanhimpana kuninkaallisena asuntona. Vuodesta 1946 siellä on kokoontunut Sisilian aluehallinnon parlamentti, joten palatsi on yhä vallan keskus. Palatsin Pisana-torniin perustettiin vuonna 1790 tähtitorni, josta pappi ja tähtitieteilijä Giuseppe Piazzi löysi vuoden 1801 ensimmäisenä päivänä kääpiöplaneetta Cereksen, Sisilian suojelijajumalattaren mukaan nimetyn.",
+   "lyhyt": "Normannien palatsi oli Hauteville-suvun normannikuninkaiden asunto ja myöhemmin myös keisari Fredrik toisen hallitsijanistuin. Kuninkaalliset huoneistot ovat yleisön nähtävissä silloin, kun Sisilian parlamentti ei ole koolla. Palatsi kappeleineen kuuluu Unescon maailmanperintöluetteloon.",
+   "syventava": "Miten Ceres löydettiin palatsin tornista?",
+   "kysymykset": [
+    "Kuka rakensi palatsin ensimmäisenä?",
+    "Miten Piazzi huomasi Cereksen liikkuvan?",
+    "Mitä Sisilian parlamentti päättää?",
+    "Keitä hallitsijoita palatsissa on asunut?",
+    "Miksi palatsi rakennettiin juuri tähän?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Palatsi aloitettiin 800-luvulla islamilaisen vallan aikana ja normannit laajensivat sitä vuodesta 1072; Euroopan vanhin kuninkaallinen asunto.",
+     "url": "https://en.wikipedia.org/wiki/Palazzo_dei_Normanni"
+    },
+    {
+     "vaite": "Palatsissa on Palatiinikappeli.",
+     "url": "https://en.wikipedia.org/wiki/Palazzo_dei_Normanni"
+    },
+    {
+     "vaite": "Vuodesta 1946 Sisilian aluehallinnon parlamentin istuin; kuninkaalliset huoneistot avoinna, kun parlamentti ei istu.",
+     "url": "https://en.wikipedia.org/wiki/Palazzo_dei_Normanni"
+    },
+    {
+     "vaite": "Sisilian kuninkaiden asunto ja Fredrik II:n ja Konrad IV:n keisarillinen istuin; Unescon maailmanperintöä.",
+     "url": "https://en.wikipedia.org/wiki/Palazzo_dei_Normanni"
+    },
+    {
+     "vaite": "Tähtitorni perustettiin 1790 palatsin Torre Pisanaan.",
+     "url": "https://www.media.inaf.it/2023/07/18/affresco-cerere-santa-ninfa/"
+    },
+    {
+     "vaite": "Giuseppe Piazzi, pappi ja tähtitieteilijä, löysi Cereksen 1.1.1801 Palermon tähtitornista; nimi Sisilian suojelijajumalattaren mukaan.",
+     "url": "https://en.wikipedia.org/wiki/Giuseppe_Piazzi"
+    }
+   ]
+  },
+  {
+   "id": "Q261439",
+   "nimi": "Teatro Massimo",
+   "kuvaus": "Italian suurin oopperatalo",
+   "luokka": "rakennus",
+   "koko_m": 130,
+   "teksti": "Oopperatalo Teatro Massimo on Italian suurin oopperatalo, ja ylhäältä sen tunnistaa leveästä kupolista Verdin aukion laidalla. Talon suunnitteli arkkitehti Giovanni Battista Filippo Basile, ja hänen kuoltuaan työn vei loppuun hänen poikansa Ernesto. Ooppera avattiin vuonna 1897 Verdin Falstaffilla. Vuonna 1974 talo suljettiin turvallisuusremonttia varten, mutta kustannusten paisuminen, korruptio ja poliittinen riitely venyttivät sulun kahteenkymmeneenkolmeen vuoteen, ja ovet avattiin uudelleen vasta vuonna 1997, neljä päivää ennen talon satavuotispäivää.",
+   "lyhyt": "Oopperatalo Teatro Massimon portailla kuvattiin Kummisetä-elokuvasarjan kolmannen osan loppukohtaus, jossa Michael Corleonen isälle tarkoitettu luoti osuu hänen tyttäreensä Maryyn. Avajaistensa aikaan talo oli Euroopan kolmanneksi suurin oopperatalo Pariisin ja Wienin oopperoiden jälkeen.",
+   "syventava": "Miksi oopperatalo oli kiinni niin kauan?",
+   "kysymykset": [
+    "Millainen akustiikka salissa on?",
+    "Mitä Falstaff-ooppera kertoo?",
+    "Miksi Kummisetä kuvattiin juuri täällä?",
+    "Mitä oopperatalossa esitetään nykyään?",
+    "Kuinka suuri oopperatalon näyttämö on?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Italian suurin oopperatalo, Piazza Verdillä; avajaisaikaan Euroopan kolmanneksi suurin Pariisin ja Wienin jälkeen.",
+     "url": "https://en.wikipedia.org/wiki/Teatro_Massimo"
+    },
+    {
+     "vaite": "Arkkitehti Giovanni Battista Filippo Basile; hänen kuoltuaan 1891 työtä valvoi poika Ernesto.",
+     "url": "https://en.wikipedia.org/wiki/Teatro_Massimo"
+    },
+    {
+     "vaite": "Avattiin 1897 Verdin Falstaffilla.",
+     "url": "https://en.wikipedia.org/wiki/Teatro_Massimo"
+    },
+    {
+     "vaite": "Suljettiin 1974; kustannusten ylitykset, korruptio ja poliittinen riitely pitivät sen kiinni 23 vuotta; avattiin 12.5.1997, neljä päivää ennen satavuotispäivää.",
+     "url": "https://en.wikipedia.org/wiki/Teatro_Massimo"
+    },
+    {
+     "vaite": "Kummisetä III:n loppukohtaus kuvattiin portailla; Michaelille tarkoitettu luoti tappaa tytär Maryn.",
+     "url": "https://en.wikipedia.org/wiki/The_Godfather_Part_III"
+    },
+    {
+     "vaite": "Talossa on suuri kupoli.",
+     "url": "https://palermo.for91days.com/the-teatro-massimo/"
+    }
+   ]
+  },
+  {
+   "id": "Q1665695",
+   "nimi": "Quattro Canti",
+   "kuvaus": "Vanhan Palermon barokkiristeys",
+   "luokka": "aukio",
+   "koko_m": 40,
+   "teksti": "Risteysaukio Quattro Canti eli neljä kulmaa on kohta, jossa vanhan kaupungin pääkadut Via Maqueda ja Corso Vittorio Emanuele leikkaavat toisensa. Ylhäältä aukio näyttää kahdeksankulmiolta: neljä sivua on katuja ja neljä koveria barokkijulkisivua. Kussakin julkisivussa on alimpana vuodenaikaa kuvaava suihkulähde, sen yllä Sisiliaa hallinneen espanjalaiskuninkaan patsas ja ylimpänä yksi Palermon neljästä naispyhimyksestä. Rakentaminen alkoi vuonna 1608 ja kesti vuoteen 1620, ja aukiota kutsutaan myös auringon teatteriksi, koska aurinko paistaa aina johonkin sen kulmista.",
+   "lyhyt": "Risteysaukio Quattro Canti on vanhan Palermon keskipiste, ja sen virallinen nimi on Piazza Vigliena. Kun risteys rakennettiin, kaupunki jaettiin neljään osaan, ja jokainen aukion kulma kuuluu eri kaupunginosaan: Kalsaan, Albergariaan, Seralcadiin tai Castellammareen.",
+   "syventava": "Ketkä kuninkaat patsaat esittävät?",
+   "kysymykset": [
+    "Miksi aukiota sanotaan auringon teatteriksi?",
+    "Kuka suunnitteli aukion?",
+    "Keitä ovat ylimmät pyhimyspatsaat?",
+    "Millainen kaupunginosa Kalsa on nykyään?",
+    "Miksi espanjalaiset hallitsivat Sisiliaa?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Via Maquedan ja Corso Vittorio Emanuelen risteys, vanhan kaupungin keskipiste.",
+     "url": "https://en.wikipedia.org/wiki/Quattro_Canti"
+    },
+    {
+     "vaite": "Kahdeksankulmainen: neljä sivua katuja, neljä koveraa barokkijulkisivua; alimpana vuodenaikojen suihkulähteet, sitten espanjalaiset hallitsijat, ylimpänä naispuoliset suojeluspyhimykset.",
+     "url": "https://en.wikipedia.org/wiki/Quattro_Canti"
+    },
+    {
+     "vaite": "Rakennettiin 1608–1620; suunnittelija Giulio Lasso.",
+     "url": "https://en.wikipedia.org/wiki/Quattro_Canti"
+    },
+    {
+     "vaite": "Kutsutaan auringon teatteriksi, koska aurinko paistaa aina johonkin kulmaan.",
+     "url": "https://en.wikipedia.org/wiki/Quattro_Canti"
+    },
+    {
+     "vaite": "Risteyksessä kohtaavat Kalsan, Seralcadin, Albergarian ja Castellammaren kulmat; risteys jakoi kaupungin neljään osaan.",
+     "url": "https://en.wikipedia.org/wiki/Quattro_Canti"
+    }
+   ]
+  },
+  {
+   "id": "Q1644597",
+   "nimi": "Martoranan kirkko",
+   "kuvaus": "Bysanttilaisten mosaiikkien kirkko",
+   "luokka": "kirkko",
+   "koko_m": 40,
+   "teksti": "Martoranan kirkko on pieni keskiaikainen kirkko Bellinin aukion laidalla, ja sen vieressä erottuvat ylhäältä San Cataldon kolme punaista kupolia. Kirkon rakennutti vuonna 1143 kuningas Roger toisen amiraali Yrjö Antiokialainen, joka rakasti bysanttilaista taidetta. Yhdessä mosaiikeista Kristus itse asettaa kruunun Roger toisen päähän, eikä paavi tai piispa: kuva julisti, että kuninkaan valta tuli suoraan Jumalalta. Kansanomaisen nimensä kirkko sai, kun se myöhemmin liitettiin viereiseen nunnaluostariin, jonka perustajat olivat Goffredo ja Eloisa Martorana.",
+   "lyhyt": "Martoranan kirkon nunnat tulivat kuuluisiksi marsipaanista, jota he muotoilivat aidon näköisiksi hedelmiksi; Sisiliassa niitä kutsutaan yhä martoranan hedelmiksi. Nykyään kirkko on Sisilian albaaniyhteisön hiippakunnan toinen pääkirkko, jossa messua vietetään bysanttilaisen riitin mukaan.",
+   "syventava": "Miksi Kristus kruunaa kuninkaan?",
+   "kysymykset": [
+    "Kuka oli Yrjö Antiokialainen?",
+    "Miten marsipaanihedelmät keksittiin?",
+    "Keitä ovat Sisilian albaanit?",
+    "Miksi kirkolla on kaksi nimeä?",
+    "Kuka teki kirkon mosaiikit?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Rakennettiin 1143 Roger II:n amiraalin Yrjö Antiokialaisen määräyksestä; hän rakasti bysanttilaista tyyliä.",
+     "url": "https://visitsicily.inera.it/en/?p=62825"
+    },
+    {
+     "vaite": "Mosaiikissa Kristus kruunaa Roger II:n; kuva julisti vallan tulevan suoraan Jumalalta ilman paavia.",
+     "url": "kaanon:pelin-aineisto"
+    },
+    {
+     "vaite": "Kirkko yhdistettiin Goffredon ja Eloisa Martoranan perustamaan benediktiininunnaluostariin, josta nimi Martorana.",
+     "url": "https://visitsicily.inera.it/en/?p=62825"
+    },
+    {
+     "vaite": "Kirkko on Piazza Bellinillä San Cataldon vieressä.",
+     "url": "https://en.wikipedia.org/wiki/Church_of_San_Cataldo"
+    },
+    {
+     "vaite": "Martoranan nunnat muotoilivat marsipaanista aidon näköisiä hedelmiä, frutta martorana.",
+     "url": "https://en.wikipedia.org/wiki/Frutta_martorana"
+    },
+    {
+     "vaite": "Kirkko on Piana degli Albanesin italoalbanialaisen eparkian yhteiskatedraali, liturgia bysanttilaisen riitin mukaan.",
+     "url": "https://en.wikipedia.org/wiki/Church_of_Santa_Maria_dell%27Ammiraglio"
+    }
+   ]
+  },
+  {
+   "id": "Q2066497",
+   "nimi": "San Cataldon kirkko",
+   "kuvaus": "Kolmen punaisen kupolin kirkko",
+   "luokka": "kirkko",
+   "koko_m": 25,
+   "teksti": "Punakupolinen San Cataldon kirkko on ylhäältä helppo tunnistaa: kuution muotoisen kivirakennuksen katolla on rivissä kolme pientä punaista kupolia. Kirkon perusti 1150-luvulla Maio Barilainen, kuningas Vilhelm ensimmäisen kansleri, mutta hänet murhattiin vuonna 1160, eikä rakennusta koskaan saatu valmiiksi. Siksi sisäseinät ovat yhä paljaat, vaikka lattia on koristeltu värikkäin marmorikuvioin. Ulkoseinien yläosaa kiertää pitsimäinen kivifriisi, joka kertoo arabialaisen rakennustaiteen vaikutuksesta. Sisällä laivoja erottavat pylväät ja niiden kapiteelit on otettu uudelleen käyttöön vanhemmista rakennuksista.",
+   "lyhyt": "Punakupolinen San Cataldon kirkko on kuulunut 1930-luvulta lähtien Pyhän haudan ritarikunnalle. Vuonna 2015 se liitettiin Unescon maailmanperintöluetteloon osana Palermon arabialais-normannilaisten rakennusten sarjaa, johon kuuluu yhdeksän kohdetta. Kirkko on Bellinin aukiolla aivan Martoranan kirkon vieressä.",
+   "syventava": "Miksi Maio Barilainen murhattiin?",
+   "kysymykset": [
+    "Kuka oli pyhä Cataldo?",
+    "Mikä on Pyhän haudan ritarikunta?",
+    "Miksi sisäseinät jätettiin paljaiksi?",
+    "Miksi kirkossa on kolme kupolia?",
+    "Mitä muita kohteita Unescon sarjaan kuuluu?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Kuutiomainen rakennus, jonka päällä on rivissä kolme pientä punaista kupolia.",
+     "url": "https://www.oessh.va/content/ordineequestresantosepolcro/en/nelle-luogotenenze/le-chiese-dell-ordine/la-chiesa-di-san-cataldo-a-palermo.html"
+    },
+    {
+     "vaite": "Perustaja Maio Barilainen, Vilhelm I:n emiirien emiiri eli kansleri, 1150-luvulla; murha 1160 jätti rakennuksen kesken.",
+     "url": "https://en.wikipedia.org/wiki/Church_of_San_Cataldo"
+    },
+    {
+     "vaite": "Laivoja erottavat uudelleenkäytetyt pylväät ja kapiteelit.",
+     "url": "https://www.oessh.va/content/ordineequestresantosepolcro/en/nelle-luogotenenze/le-chiese-dell-ordine/la-chiesa-di-san-cataldo-a-palermo.html"
+    },
+    {
+     "vaite": "Sisätila on paljas, mutta lattia on värikästä kosmateskimarmoria.",
+     "url": "https://en.wikipedia.org/wiki/Church_of_San_Cataldo"
+    },
+    {
+     "vaite": "Ulkoseinien ympäri kulkeva läpikuultava friisi osoittaa arabialaista vaikutusta.",
+     "url": "https://www.oessh.va/content/ordineequestresantosepolcro/en/nelle-luogotenenze/le-chiese-dell-ordine/la-chiesa-di-san-cataldo-a-palermo.html"
+    },
+    {
+     "vaite": "Kirkko on Piazza Bellinillä Martoranan vieressä.",
+     "url": "https://en.wikipedia.org/wiki/Church_of_San_Cataldo"
+    },
+    {
+     "vaite": "Kuuluu 1930-luvulta Pyhän haudan ritarikunnalle; Unescon maailmanperintöä 2015.",
+     "url": "https://en.wikipedia.org/wiki/Church_of_San_Cataldo"
+    },
+    {
+     "vaite": "Unescon kohde Arab-Norman Palermo käsittää yhdeksän rakennusta.",
+     "url": "https://en.wikipedia.org/wiki/Monreale_Cathedral"
+    }
+   ]
+  },
+  {
+   "id": "Q745359",
+   "nimi": "San Giovanni degli Eremiti",
+   "kuvaus": "Viiden punaisen kupolin kirkko",
+   "luokka": "kirkko",
+   "koko_m": 60,
+   "teksti": "Erakkojen kirkko San Giovanni degli Eremiti näkyy ylhäältä viitenä punaisena kupolina palmujen ja appelsiinipuiden keskellä. Paavi Gregorius Suuri perusti paikalle benediktiiniluostarin vuonna 581, mutta 800-luvulla saaren vallanneet muslimit tuhosivat sen ja rakensivat tilalle moskeijan. Vuonna 1132 kuningas Roger toinen vihki rakennuksen jälleen kirkoksi. Kupolien kirkas puna ei silti ole keskiaikainen: restauroija Giuseppe Patricolo löysi 1800-luvun lopulla kupoleista punaisen rappauksen kappaleita ja maalasi ne kaikki punaisiksi.",
+   "lyhyt": "Erakkojen kirkon parhaiten säilynyt osa on vanhan luostarin ristikäytävä, jonka teräväkaaria kantavat pienet kaksoispylväät kasviaihein koristeltuine kapiteeleineen. Muurien suojaamassa puutarhassa kasvaa appelsiinipuita, korkeita palmuja ja viikunakaktuksia, ja sieltä näkyvät kupolit lähietäisyydeltä.",
+   "syventava": "Kuka maalasi kupolit punaisiksi?",
+   "kysymykset": [
+    "Keitä olivat kirkon nimen erakot?",
+    "Miltä rakennus näytti moskeijana?",
+    "Kuka oli Gregorius Suuri?",
+    "Miksi muslimit hallitsivat Sisiliaa?",
+    "Mitä ristikäytävän pylväisiin on kaiverrettu?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Kirkolla on viisi punaista kupolia; puna ei ole alkuperäinen, vaan Patricolo maalasi kupolit löydettyään punaisen rappauksen palasia.",
+     "url": "https://en.wikipedia.org/wiki/San_Giovanni_degli_Eremiti"
+    },
+    {
+     "vaite": "Patricolon restaurointi 1877–1882.",
+     "url": "https://www.ancient-history-sites.com/sites/san-giovanni-degli-eremiti/"
+    },
+    {
+     "vaite": "Paavi Gregorius Suuri perusti benediktiiniluostarin 581; 800-luvulla muslimit tuhosivat sen ja rakensivat moskeijan; Roger II vihki sen kirkoksi 1132.",
+     "url": "https://en.wikipedia.org/wiki/San_Giovanni_degli_Eremiti"
+    },
+    {
+     "vaite": "Ristikäytävä on parhaiten säilynyt osa; pienet kaksoispylväät kantavat teräväkaaria; puutarhassa appelsiinipuita, palmuja ja viikunakaktuksia.",
+     "url": "https://turismo.cittametropolitana.pa.it/church-of-san-giovanni-degli-eremiti/?lang=en"
+    }
+   ]
+  },
+  {
+   "id": "Q1000054",
+   "nimi": "Zisan linna",
+   "kuvaus": "Normannikuninkaan arabialainen kesäpalatsi",
+   "luokka": "rakennus",
+   "koko_m": 40,
+   "teksti": "Zisan linna on vanhan kaupungin länsipuolella seisova suorakaiteen muotoinen kivipalatsi, jonka edustalla oli aikoinaan pitkä allas. Arabialaiset käsityöläiset aloittivat sen rakentamisen noin vuonna 1165 normannikuningas Vilhelm ensimmäiselle, ja nimi tulee arabian sanasta al-Aziza, loistava. Palatsissa oli luonnollinen ilmastointi: lähdevesi valui suihkulähdesalin uurteista rinnettä pitkin kanavaan ja altaaseen, ja viilennyt ilma johdettiin huomaamattomista aukoista asuinsiipiin. Samassa salissa on fresko, jonka hahmoja kutsutaan Zisan paholaisiksi, ja tarinan mukaan kukaan ei saa niitä laskettua kahta kertaa samaan lukuun.",
+   "lyhyt": null,
+   "syventava": "Mitä Zisan paholaiset vartioivat?",
+   "kysymykset": [
+    "Miten palatsin ilmastointi toimi?",
+    "Mitä islamilaisen taiteen museossa on?",
+    "Kuka oli kuningas Vilhelm ensimmäinen?",
+    "Miksi palatsi rakennettiin kaupungin ulkopuolelle?",
+    "Miksi paholaisia on vaikea laskea?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Rakentaminen alkoi noin 1165 arabialaisten käsityöläisten voimin Vilhelm I:lle; nimi arabian al-ʿAzīza, loistava.",
+     "url": "https://en.wikipedia.org/wiki/Zisa,_Palermo"
+    },
+    {
+     "vaite": "Julkisivun edessä oli suorakaiteen muotoinen allas; suihkulähteen vesi valui uurteista rinnettä kanavaan ja altaaseen; viilennyt ilma johdettiin asuinsiipiin aukkojen kautta.",
+     "url": "https://en.wikipedia.org/wiki/Zisa,_Palermo"
+    },
+    {
+     "vaite": "Suihkulähdesalin freskon hahmoja kutsutaan Zisan paholaisiksi; legendan mukaan niiden lukumäärää ei saa laskettua samaksi.",
+     "url": "https://www.lasiciliainrete.it/en/directory-tangibili/listing/luoghi-del-mito-e-delle-leggende-leggenda-dei-diavoli-e-del-tesoro/"
+    },
+    {
+     "vaite": "Palatsissa toimii islamilaisen taiteen museo.",
+     "url": "https://www.lasiciliainrete.it/en/directory-tangibili/listing/museo-darte-islamica/"
+    }
+   ]
+  },
+  {
+   "id": "Q1303856",
+   "nimi": "Monrealen katedraali",
+   "kuvaus": "Kultamosaiikkien katedraali Monrealessa",
+   "luokka": "kirkko",
+   "koko_m": 102,
+   "teksti": "Monrealen katedraali seisoo Palermon lounaispuolella Caputo-vuoren rinteellä, josta avautuu näkymä Conca d'Oron laaksoon ja kaupunkiin. Kuningas Vilhelm toinen aloitti rakennustyöt vuonna 1174. Sisäseinät on peitetty kultapohjaisilla mosaiikeilla, joita on yhteensä noin kuusituhatta kolmesataa neliömetriä, ja apsiksessa kohoaa yli seitsemän metriä korkea Kristus Pantokraattori. Kirkon kyljessä on neliön muotoinen ristikäytävä, jonka teräväkaaria kantaa kaksisataakaksikymmentäkahdeksan pientä, pareittain seisovaa pylvästä. Pääoven pronssiovet valmisti Bonanno Pisano, joka oli aiemmin tehnyt ovet Pisan tuomiokirkkoon.",
+   "lyhyt": null,
+   "syventava": "Mitä Monrealen mosaiikit kertovat?",
+   "kysymykset": [
+    "Kuinka paljon kultaa mosaiikkeihin käytettiin?",
+    "Miksi Vilhelm toinen rakennutti katedraalin?",
+    "Mitä pronssioviin on kuvattu?",
+    "Mitä ristikäytävän pylväisiin on kuvattu?",
+    "Onko katedraali yhä käytössä kirkkona?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Monreale on Monte Caputon rinteillä ja katsoo Conca d'Oron laaksoon; sieltä näkyy Palermo.",
+     "url": "https://en.wikipedia.org/wiki/Monreale_Cathedral"
+    },
+    {
+     "vaite": "Vilhelm II aloitti rakentamisen 1174.",
+     "url": "kaanon:pelin-aineisto"
+    },
+    {
+     "vaite": "Mosaiikkeja noin 6 300 neliömetriä; apsiksen Kristus Pantokraattori yli seitsemän metriä korkea.",
+     "url": "kaanon:pelin-aineisto"
+    },
+    {
+     "vaite": "Bonanno Pisano valmisti pronssiovet, saapuivat 1185/1186; hän oli aiemmin suunnitellut Pisan tuomiokirkon (kadonneet) pronssiovet.",
+     "url": "https://smarteducationunescosicilia.it/?p=49462"
+    },
+    {
+     "vaite": "Neliön muotoisen ristikäytävän portikkoa kiertää 228 pientä pariksi asetettua pylvästä, jotka kantavat teräväkaaria.",
+     "url": "https://romeartlover.it/Monreale.html"
+    }
+   ]
+  },
+  {
+   "id": "Q1262976",
+   "nimi": "Amiraalin silta",
+   "kuvaus": "Normannikauden kivisilta",
+   "luokka": "silta",
+   "koko_m": 75,
+   "teksti": "Amiraalin silta on keskiaikainen kivinen kaarisilta, joka ei nykyään ylitä jokea vaan pientä puistoa. Kuningas Roger toisen amiraali Yrjö Antiokialainen rakennutti sen vuonna 1131 Oreto-joen yli yhdistämään kaupungin joen takaisiin puutarhoihin. Vuonna 1938 joki käännettiin uuteen uomaan noin sadan metrin päähän, ja sillan alle kasvoi puutarha. Vuonna 1860 Garibaldin joukot ottivat sillalla yhteen Bourbonien sotilaiden kanssa, jotka puolustivat kaupungin eteläistä sisäänkäyntiä, ja taistelu ratkaisi Garibaldin pääsyn Palermoon.",
+   "lyhyt": null,
+   "syventava": "Kuka oli Yrjö Antiokialainen?",
+   "kysymykset": [
+    "Kuka oli Garibaldi?",
+    "Miksi joki käännettiin pois sillan alta?",
+    "Miten keskiaikainen silta on säilynyt?",
+    "Mitä joen takana oli normannien aikaan?",
+    "Mikä oli tuhannen miehen retkikunta?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Roger II:n amiraali Yrjö Antiokialainen rakennutti sillan 1131 Oreto-joen yli yhdistämään kaupungin joen takaisiin puutarhoihin.",
+     "url": "https://en.wikipedia.org/wiki/Ponte_dell%27Ammiraglio"
+    },
+    {
+     "vaite": "Vuodesta 1938, kun Oreto käännettiin ja kanavoitiin, silta on noin 100 metrin päässä joesta pienessä puistossa; sillan alla kasvaa puutarha.",
+     "url": "https://en.wikipedia.org/wiki/Ponte_dell%27Ammiraglio"
+    },
+    {
+     "vaite": "Vuonna 1860 Garibaldin joukot ottivat sillalla yhteen kaupungin eteläistä sisäänkäyntiä puolustaneiden Bourbon-joukkojen kanssa; taistelu ratkaisi pääsyn Palermoon.",
+     "url": "https://visitsicily.inera.it/en/?p=62817"
+    }
+   ]
+  },
+  {
+   "id": "Q1478356",
+   "nimi": "Teatro Politeama",
+   "kuvaus": "Palermon toinen suuri teatteri",
+   "luokka": "rakennus",
+   "koko_m": 100,
+   "teksti": "Pyöreä Teatro Politeama seisoo Ruggero Settimon aukion laidalla, ja sen julkisivua kiertää kaksi pylväskerrosta, alhaalla doorilaiset ja ylhäällä joonialaiset pylväät. Arkkitehti Giuseppe Damiani Almeyda haki esikuvia Pompejin ja Herculaneumin kaivauksilta. Sisäänkäynti on muotoiltu riemukaareksi, jonka huipulla seisoo Mario Rutellin pronssinen nelivaljakko, Apollonin ja Euterpen voitto. Teatteri avattiin vuonna 1874, ja juhlalliset vihkiäiset pidettiin vuonna 1891 kuningas Umberton läsnä ollessa. Vuodesta 2001 se on ollut Sisilian sinfoniaorkesterin koti.",
+   "lyhyt": null,
+   "syventava": "Mitä nelivaljakko esittää?",
+   "kysymykset": [
+    "Mitä sana politeama tarkoittaa?",
+    "Miksi teatteri on nimetty Garibaldin mukaan?",
+    "Kuka oli runotar Euterpe?",
+    "Millaisia konsertteja teatterissa on?",
+    "Miksi arkkitehti ihaili Pompejia?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Teatteri on Piazza Ruggero Settimolla; pyöreän julkisivun pylväikössä doorilaiset pylväät alhaalla ja joonialaiset ylhäällä; sisäänkäynti riemukaarena, huipulla Rutellin nelivaljakko.",
+     "url": "https://en.wikipedia.org/wiki/Teatro_Politeama,_Palermo"
+    },
+    {
+     "vaite": "Damiani Almeyda sai vaikutteita Herculaneumin ja Pompejin kaivauksista.",
+     "url": "https://www.balarm.it/luoghi/teatro-politeama-garibaldi-palermo-69"
+    },
+    {
+     "vaite": "Nelivaljakko esittää Apollonin ja Euterpen voittoa.",
+     "url": "https://www.balarm.it/luoghi/teatro-politeama-garibaldi-palermo-69"
+    },
+    {
+     "vaite": "Avattiin 1874; vihittiin 1891 kuningas Umberton läsnä ollessa; vuodesta 2001 Sisilian sinfoniaorkesterin koti.",
+     "url": "https://www.balarm.it/luoghi/teatro-politeama-garibaldi-palermo-69"
+    },
+    {
+     "vaite": "Virallinen nimi Teatro Politeama Garibaldi.",
+     "url": "https://en.wikipedia.org/wiki/Teatro_Politeama,_Palermo"
+    }
+   ]
+  },
+  {
+   "id": "Q731916",
+   "nimi": "Monte Pellegrino",
+   "kuvaus": "Palermon pohjoinen kalliovuori",
+   "luokka": "muu",
+   "koko_m": 3000,
+   "teksti": "Kalliovuori Monte Pellegrino kohoaa kuudensadankuuden metrin korkeuteen Palermon pohjoispuolella, kaupungin ja Mondellon lahden välissä. Saksalainen kirjailija Johann Wolfgang von Goethe kutsui sitä Italian-matkansa päiväkirjassa maailman kauneimmaksi niemekkeeksi. Lähellä huippua on kallion halkeamaan rakennettu Pyhän Rosalian pyhäkkö, ja sieltä pyhimyksen luut löydettiin vuonna 1624 keskellä ruttoepidemiaa. Kun luut seuraavana vuonna kannettiin juhlakulkueessa kaupungin halki, rutto laantui, ja Rosaliasta tuli Palermon kiistaton suojeluspyhimys, jota juhlitaan yhä joka heinäkuu.",
+   "lyhyt": null,
+   "syventava": "Miten Rosalian luut löydettiin?",
+   "kysymykset": [
+    "Kuka oli pyhä Rosalia?",
+    "Mitä Festino-juhlassa tapahtuu?",
+    "Mistä vuori sai nimensä?",
+    "Mitä muuta Goethe kirjoitti Sisiliasta?",
+    "Miten vuoren huipulle pääsee?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Monte Pellegrino on 606 metriä korkea; Goethe kutsui sitä Italian-matkassaan maailman kauneimmaksi niemekkeeksi.",
+     "url": "https://www.italia.it/fr/sicile/palerme/monte-pellegrino"
+    },
+    {
+     "vaite": "Mondellon lahti on Monte Pellegrinon ja Monte Gallon välissä.",
+     "url": "https://summerinitaly.com/guide/mondello"
+    },
+    {
+     "vaite": "Pyhän Rosalian pyhäkkö on kallion halkeamassa lähellä huippua; luut löydettiin 15.7.1624.",
+     "url": "https://www.balarm.it/news/i-10-belvedere-piu-belli-in-sicilia-un-tour-da-sogno-alla-scoperta-di-panorami-strepitosi-134947"
+    },
+    {
+     "vaite": "Luut kannettiin kulkueessa 9.6.1625, rutto laantui ja julistettiin päättyneeksi 15.7.1625; Rosaliasta tuli kiistaton suojeluspyhimys; Festino joka heinäkuu.",
+     "url": "https://italoamericano.org/la-santuzza-santa-rosalia/"
+    }
+   ]
+  },
+  {
+   "id": "Q1082173",
+   "nimi": "Mondello",
+   "kuvaus": "Palermon hiekkaranta ja kylpyläkylä",
+   "luokka": "vesi",
+   "koko_m": 2000,
+   "teksti": "Rantakylä Mondello kaartuu noin kahden kilometrin pituisena vaaleana hiekkarantana turkoosin veden reunassa Monte Pellegrinon ja Monte Gallon välisessä lahdessa. Vielä 1800-luvun lopulla rannikko oli malariasuota, jota käyttivät vain kalastajat, kunnes se kuivattiin 1890-luvulla ja suuri osa alueesta vuokrattiin belgialaiselle yhtiölle. Rannan edustalla seisoo merenpohjaan upotettujen paalujen varassa jugendtyylinen kylpylärakennus, jota kutsutaan Charlestoniksi. Se valmistui vuonna 1913 Palermon porvariston kylpylaitokseksi, ja sen betonipaalut kuuluvat kaupungin varhaisimpiin teräsbetonirakenteisiin.",
+   "lyhyt": null,
+   "syventava": "Miksi rakennusta kutsutaan Charlestoniksi?",
+   "kysymykset": [
+    "Milloin Mondellon rannalle kannattaa tulla?",
+    "Millainen kalastajakylä Mondello oli?",
+    "Mitä belgialainen yhtiö teki täällä?",
+    "Kuka suunnitteli kylpylärakennuksen?",
+    "Mitä Mondellossa syödään?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Noin kahden kilometrin hiekkaranta Monte Pellegrinon ja Monte Gallon välisessä lahdessa.",
+     "url": "https://thethinkingtraveller.com/italy/sicily/towns-and-cities-in-sicily/mondello"
+    },
+    {
+     "vaite": "Rannikko oli 1800-luvun loppuun malariasuota, jota käyttivät kalastajat; kuivattiin 1890-luvulla ja vuokrattiin suurelta osin belgialaiselle yhtiölle.",
+     "url": "https://en.wikipedia.org/wiki/Antico_Stabilimento_Balneare_of_Mondello"
+    },
+    {
+     "vaite": "Jugendtyylinen kylpylärakennus paalujen varassa, tunnetaan nimellä Charleston; rakennettiin 1909–1913 Palermon porvaristolle; paalut Palermon varhaisimpia teräsbetonirakenteita.",
+     "url": "https://en.wikipedia.org/wiki/Antico_Stabilimento_Balneare_of_Mondello"
+    }
+   ]
+  }
+ ]
+}
