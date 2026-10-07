@@ -117,3 +117,22 @@ NUI:n osa on `natiivi-ui/sallitut-157` 0f770be2. LS2:n lista on tiedostossa `pro
 - Mac: `linssiseppa/mac-kaupunki` c3f2ff1c (MacLaatu CesiumKaupunkiin). Natiiviseppä on mitannut sen.
 - Akropolis-kolmikon kulmavirhe johtui PalloKierron maaston raosta. Natiiviseppä teki MaastoRakoPois-kytkimen, ja kulma on todennettu identtiseksi.
 - Simulaattorit 3A3E4671, D0D2CD1E ja 903C2B91 on tyhjennetty (erase) levyn vapauttamiseksi, ja ne ovat sammutettuina.
+
+## TILANNE 10.50 (Macin uudelleenkäynnistys ~11.05)
+- Yhdistelmä `linssiseppa/esitys-giza` 045374cab sisältää:
+  - natiivi-ui/pariisi-esitys (metrolinja, Kysy-rivi, apuraha) ja pallokori
+  - Giza (opas pinta, helmatuki) sekä siltalauseet v2 ja torjunta-aika
+  - yhden esityksen + Kerro lisää (valmis teksti #4126)
+- Käännös 0bf208e9a, appi `proto-3d/lokit/linssiseppa-app-esitys-0bf208e9a/`.
+- Simuajot 10.46: Giza-pinta → `lokit/linssiseppa-gizapinta-20261007`; Pariisin stillit → `lokit/linssiseppa-esitys-20261007`. Jos ajo katkesi, aja uudelleen seuraavilla skripteillä:
+  - `proto-3d/tyokalut/linssiseppa-ajot/ajo-pinta.sh` ja `ajo-esitys.sh`
+  - ympäristö: S=<työkansio>, APP=<appi>
+  - käynnistys: touch $S/sim-nyt-pinta ja $S/sim-nyt-esitys
+  - ajo-pinta.sh kopioi giza-v2-tilesetin `$S/giza-v2-tiles`-kansiosta; pysyvä kopio on `proto-3d/_tyo/linssiseppa/`, joten kopioi se sieltä `$S`:ään ennen ajoa.
+- Kesken:
+  - Gizan pintakorkeudet Linnanrakentajalle (5 pistettä).
+  - Pariisin stillit Päätoimittajalle (iPhone pysty ja vaaka, iPad).
+  - iPad-laitemittaus (yövalot ja terävöitys ABAB, ipad-ab.sh) peruttiin uudelleenkäynnistyksen takia; uusi vuoro sovitaan Natiivisepältä.
+  - Avaus ja opastus kytketään, kun #4126 on tuotannossa.
+  - Yksityiskohtakuvat: kuvalista pilvestä klo ~11, NOSTOKORTTI-arvot NUI:lta (paperi #f5f0e2, reunus 1 pt rgba(70,51,31,.3), kulma 12 pt, sisäreuna 4 %).
+- Junaan 160 kuitattu: `linssiseppa/siltalauseet-v2` 2db2d9d9d (ilmoitettu Natiivisepälle). Lisäksi `linssiseppa/torjunta-aika-160` b3cb1a53a odottaa todennusta ja stilliä.
