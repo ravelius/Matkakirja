@@ -2134,3 +2134,159 @@ Muut tarkistetut: avaus (36 sanaa, ilmakuva kannaksesta ja koskesta, Hämeensill
 ### Epävarmuudet Päätoimittajalle
 - Riddarholmen `korkeus_m` 90: huipun purku alkoi 17.9.2026, ja huippu kootaan takaisin vuoteen 2028 mennessä. Kirkko näyttää ilmasta nyt tornittomalta tai telineissä. Arvo jätettiin, koska se ei ole selvästi väärä pysyvälle äänitteelle.
 - Tarkistimen huomiot nousivat 9:stä 13:een, koska Drottningholmin ja Riddarholmenin teksti ja lyhyt alkavat nyt suomenkielisellä sanalla (tyyppi 6).
+
+## Valletta
+
+### Pyhän Johanneksen ko-katedraali — kenttä `lyhyt`
+- **Vanha:** "Pyhän Johanneksen ko-katedraali sai nimensä vuonna 1816, kun paavin bulla nosti sen samanarvoiseksi kuin Mdinan katedraali, Maltan piispan perinteinen istuin. Caravaggio otettiin ritarikuntaan vuonna 1608, mutta saman vuoden joulukuussa hänet erotettiin siitä oman maalauksensa edessä."
+- **Uusi:** "Pyhän Johanneksen ko-katedraalin kuuluisimman maalauksen teki Caravaggio, joka saapui Maltalle vuonna 1607 Roomassa tehdyn tapon vuoksi etsittynä. Ritarikunta otti hänet jäsenekseen seuraavana kesänä, mutta jo joulukuussa hänet erotettiin poissaolevana, juuri hänen oman maalauksensa edessä."
+- **Syy:** Tyyppi 2: ensimmäinen virke oli hallintopäätös (paavin bulla ja nimen alkuperä). Tilalle Caravaggion tarina kokonaisena. Lisäksi tyyppi 3: erottaminen tapahtui poissaolevana (in absentia), koska Caravaggio oli jo paennut. Syventävä "Miksi Caravaggio pakeni Maltalta?" jää edelleen auki. Bulla-lähde poistettu, lisätty kaksi uutta.
+- **Lähde:** https://en.wikipedia.org/wiki/Caravaggio ; https://en.wikipedia.org/wiki/The_Beheading_of_Saint_John_the_Baptist_(Caravaggio)
+
+### Suurmestarin palatsi — kenttä `lyhyt`
+- **Vanha:** "Suurmestarin palatsi oli Maltan parlamentin istuin vuodesta 1921 vuoteen 2015, ja aluksi edustajat kokoontuivat palatsin seinävaatesalissa. Vuonna 1976 parlamentti siirtyi ritarikunnan entiseen asehuoneeseen, ja palatsin asekokoelma on nykyään yleisölle avoin museo."
+- **Uusi:** "Suurmestarin palatsin seinävaatesalissa riippuu kymmenen gobeliinia, jotka espanjalainen suurmestari Ramon Perellos tilasi Pariisista vuonna 1708 lahjaksi ritarikunnalle. Niissä vilisee eksoottisia eläimiä ja kasveja vasta vähän aiemmin löydetyistä maista, ja sarja on ainoa täydellisenä säilynyt, joka on kudottu alkuperäisten mallipiirrosten mukaan."
+- **Syy:** Tyyppi 2: vanha kierrosversio oli pelkkää organisaatiohistoriaa (parlamentin istuin ja salin vaihto). Tyyppi 5: seinävaatteet olivat entisöitävinä Belgiassa 2024–2026 ja palasivat saliin 2026, joten "riippuu" pitää nyt paikkansa. Kellon turkkilaiset orjahahmot (pilviraportin epävarmuus) vahvistettu Maltan kulttuuriministeriön sivulta, ja lähde vaihdettu sinne. Wikipedia vahvistaa korttelin.
+- **Lähde:** https://heritagemalta.mt/news/the-grand-masters-palace-tapestries-start-a-two-year-restoration-journey-in-belgium/ ; https://www.guidememalta.com/en/magnificent-grand-master-s-palace-tapestries-return-after-two-year-restoration ; https://culture-malta.org/grand-masters-palace-and-armoury/ ; https://en.wikipedia.org/wiki/Grandmaster%27s_Palace,_Valletta
+
+### Suurmestarin palatsi — kenttä `kysymykset`
+- **Vanha:** "Mitä seinävaatesalin seinävaatteet esittävät?" / "Kuka toimii nykyään Maltan presidenttinä?"
+- **Uusi:** "Mistä kellon kerrotaan tuodun Maltalle?" / "Kuka maalasi palatsin kattofreskot?"
+- **Syy:** Tyyppi 7: presidenttikysymyksen vastaus vanhenee. Seinävaatekysymykseen vastaa nyt kierrosversio. Kellon Rhodos-perinne ja Nasonin freskot (1724) mainitaan Wikipediassa.
+- **Lähde:** https://en.wikipedia.org/wiki/Grandmaster%27s_Palace,_Valletta
+
+### Auberge de Castille — kenttä `lyhyt`
+- **Vanha:** "Kastilian ritaritalo on paikalla jo toinen: nykyinen palatsi korvasi vuonna 1574 rakennetun talon, jossa Kastilian, Leónin ja Portugalin ritarit olivat asuneet. Pääministerin virasto muutti taloon vuonna 1972, kun pääministerinä oli Dom Mintoff."
+- **Uusi:** "Kastilian ritaritalon rakennutti suurmestari Manuel Pinto, joka johti ritarikuntaa kolmekymmentäkaksi vuotta ja koristeli Maltaa barokkirakennuksilla. Loistolla oli hintansa: Pinton velat ajoivat osaltaan ritarikunnan hänen kuolemansa jälkeen vararikkoon, ja neljännesvuosisata myöhemmin talossa toimi jo ranskalaisten miehittäjien päämaja."
+- **Syy:** Tyyppi 2: rakennushistoria ja viraston muutto ovat hallintoa. Tyyppi 1: "vuodesta 1972 pääministerin virasto" oli jo tekstissä. Uusi kertoo ihmisestä (Pinto, jonka rintakuva on tekstissä) ja käänteestä 1773 → 1798. Vararikko on muotoiltu Wikipedian mukaan ("contributed to bankrupting the Order").
+- **Lähde:** https://en.wikipedia.org/wiki/Manuel_Pinto_da_Fonseca ; https://en.wikipedia.org/wiki/Auberge_de_Castille
+
+### Auberge de Castille — kenttä `kysymykset`
+- **Vanha:** "Kuka oli suurmestari Manuel Pinto?"
+- **Uusi:** "Miksi talon katolla oli aikoinaan antenni?"
+- **Syy:** Tyyppi 7 ja 1: kierrosversio vastaa nyt Pinto-kysymykseen. Katolle rakennettiin signaaliasema antenneineen vuonna 1889.
+- **Lähde:** https://en.wikipedia.org/wiki/Auberge_de_Castille
+
+### Manoel-teatteri — kenttä `lyhyt`
+- **Vanha:** "Vallettan Manoel-teatteri on pieni, sillä salissa on vähän yli viisisataa paikkaa. Ensi-illan lavasteet suunnitteli ritarikunnan sotilasarkkitehti François Mondion, ja teatteri on saanut nimensä rakennuttajansa, portugalilaisen suurmestari António Manoel de Vilhenan mukaan."
+- **Uusi:** "Vallettan Manoel-teatterin oven yllä lukee latinaksi, että talo on rakennettu kansan kunnialliseksi huviksi. Kun kaupunkiin avattiin vuonna 1866 uusi kuninkaallinen oopperatalo, teatteri hiljeni, ja kodittomat vuokrasivat sen permantopaikkoja yösijoikseen muutamalla pennillä. Valtio otti talon haltuunsa vasta vuonna 1956."
+- **Syy:** Tyyppi 2: paikkaluku, lavastaja ja nimen alkuperä ovat perustietoa. Tyyppi 1: Vilhena rakennuttajana oli jo tekstissä. Samalla poistui epävarma paikkaluku (534/547).
+- **Lähde:** https://en.wikipedia.org/wiki/Manoel_Theatre
+
+### Piirityskello-muistomerkki — kenttä `lyhyt`
+- **Vanha:** "Piirityskello-muistomerkki muistuttaa toisen maailmansodan pitkästä piirityksestä, jolloin Saksan ja Italian ilmavoimat pommittivat Maltaa kesäkuusta 1940 marraskuuhun 1942. Pahin kuukausi oli huhtikuu 1942, jolloin pienelle saarelle pudotettiin noin kuusituhatta seitsemänsataa tonnia pommeja."
+- **Uusi:** "Piirityskello-muistomerkki katsoo satamaan, jonne elokuussa 1942 hinattiin kahden hävittäjäaluksen väliin sidottuna pahoin vaurioitunut tankkeri Ohio. Neljästätoista kauppalaivasta perille pääsi vain viisi, ja koska päivä oli Neitsyt Marian taivaaseenastumisen juhla, maltalaiset nimesivät saattueen Santa Marijan saattueeksi."
+- **Syy:** Tyyppi 2: aikaväli ja pommitonnit ovat tilastoa. Tyyppi 1: "Saksan ja Italian ilmavoimat 1940" toisti saman sotakehyksen kuin Pyhän Elmon kierrosversio. Tilalle tuli tarina.
+- **Lähde:** https://en.wikipedia.org/wiki/Operation_Pedestal
+
+### Piirityskello-muistomerkki — kenttä `kysymykset`
+- **Vanha:** "Mikä oli Pedestal-saattue?"
+- **Uusi:** "Miksi kello soi juuri keskipäivällä?"
+- **Syy:** Tyyppi 7: kierrosversio vastaa nyt saattuekysymykseen. Oletus, että kello soi keskipäivällä, on tekstissä ja lähteissä.
+- **Lähde:** https://www.guidememalta.com/en/attraction/the-siege-bell-war-memorial (olemassa oleva lähde)
+
+### Grand Harbour — kenttä `lyhyt`
+- **Vanha:** "Vallettan suursatamaan hyökkäsi heinäkuussa 1941 varhain aamulla italialainen erikoisosasto pikaveneillä ja ihmistorpedoilla. Yksi räjähdevene osui sataman suulla aallonmurtajalle vievään siltaan, jonka jänne sortui, ja uusi silta rakennettiin samaan paikkaan vasta vuonna 2012."
+- **Uusi:** "Vallettan suursataman vastarannalla Senglean niemen kärjessä seisoo pieni kivinen vartiokoju, jota kutsutaan nimellä Gardjola. Sen ikkunoiden yläpuolelle on veistetty silmä ja korva, valppauden vertauskuvat, sillä vartijan tehtävä oli tarkkailla sataman suuta."
+- **Syy:** Tyyppi 1: kierroksen kolme viimeistä kierrosversiota (Piirityskello, Grand Harbour, Pyhä Elmo) kertoivat kaikki toisesta maailmansodasta. Grand Harbour vaihdettiin ritariajan yksityiskohtaan, joka myös näkyy ylhäältä. Syventävä "Miksi aallonmurtajan ja rannan välissä on aukko?" (se nojasi vanhaan kierrosversioon) → "Miksi ritarit muuttivat Birgusta Vallettaan?" (teksti kertoo Pyhän Angelon linnakkeesta). Aallonmurtajakysymys jää kysymyksiin, ja sen oletus pitää yhä.
+- **Lähde:** https://www.visitmalta.com/en/a/info/senglea/
+
+### Pyhän Elmon linnake — kenttä `lyhyt`
+- **Vanha:** "Pyhän Elmon linnakkeen sotamuseon tärkein esine on George-risti, jonka kuningas Yrjö kuudes myönsi koko saarelle vuonna 1942. Museossa on myös Faith-niminen kaksitaso, ainoa säilynyt kolmesta hävittäjästä, jotka puolustivat saarta Italian julistettua sodan vuonna 1940."
+- **Uusi:** "Pyhän Elmon linnakkeen sotamuseossa on George-risti, jonka Yrjö kuudes myönsi koko saarelle. Siellä on myös Faith-hävittäjän runko: tarinan mukaan saarta puolusti vuonna 1940 vain kolme konetta, Faith, Hope ja Charity, mutta todellisuudessa niitä oli useampia, ja nimet keksi myöhemmin maltalainen sanomalehti."
+- **Syy:** Tyyppi 3: "kolme hävittäjää" on legenda. Hal Farin lennostolla oli käytössä kuusi Gladiatoria, ja nimet antoi kuukausia myöhemmin maltalainen sanomalehti. Legenda kerrotaan nyt legendana. Museon lähde vaihdettu (lonelyplanet nonprod → Wikipedia, kansallinen sotamuseo: George-risti esillä).
+- **Lähde:** https://en.wikipedia.org/wiki/Hal_Far_Fighter_Flight ; https://en.wikipedia.org/wiki/National_War_Museum_(Malta)
+
+### Tarkistettu, ei muutettu
+- Yläbarrakan puutarhat: kierrosversio (puutarha avattiin kansalle vasta vuonna 1800, hissi 2012, 58 metriä, alle puoli minuuttia) on vahvistettu Wikipediasta (hissi noin 23 sekuntia). Se on tarinaksi heikohko mutta ei hallintoa, joten jätettiin. Tykinlaukaukset kello 12 ja 16 vahvistettu.
+- Avaus: 37 sanaa, ilmakuva (vaalea kalkkikiviniemi kahden sataman välissä, ruutukaava, muurit), alkaa sanalla "Tervetuloa". Ei muutoksia.
+- Isoisä: vain Grand Harbourin tekstissä ja vain merkinnän sisällöllä (mustat rungot kyljittäin kuin tikkuja laatikossa). OK.
+- Pilviraportin epävarmuudet ratkaistu: palatsi täyttää korttelin (Wikipedia), orjahahmot vahvistettu (culture-malta.org), teatterin paikkaluku poistui kierrosversiosta.
+- Tarkistin: `Valletta: 8 kohdetta, 0 virhettä, 7 huomiota` (sama määrä kuin ennen).
+
+## Venetsia
+
+### Pyhän Markuksen kellotorni — kenttä `lyhyt`
+- **Vanha:** "Pyhän Markuksen kellotornin huipulla Galileo Galilei esitteli elokuussa 1609 kaukoputkeaan dogelle ja senaattoreille, jotka erottivat sen avulla kaukana merellä kulkevia laivoja. Vaikutus oli niin suuri, että Galilein palkka Padovan yliopistossa kaksinkertaistettiin."
+- **Uusi:** "Pyhän Markuksen kellotornin kellotasanteella Galileo Galilei esitteli elokuussa 1609 kaukoputkeaan Venetsian ylimyksille ja senaattoreille. Galilein mukaan he erottivat merellä purjeita, jotka näkyivät paljaalla silmällä vasta kahden tunnin kuluttua, ja senaatti antoi hänelle elinikäisen viran Padovan yliopistossa."
+- **Syy:** Tyyppi 3: dogea ei ollut tornissa. Tornissa 21.8.1609 olivat prokuraattori Priuli ja muita ylimyksiä, ja dogelle kaukoputki esiteltiin kolme päivää myöhemmin Dogen palatsin loggiasta. "Kaksinkertaistettiin" ei vahvistunut avatuista lähteistä, mutta elinikäinen virka (tuhat floriinia) vahvistui. Physicsworld-lähde (se sekoitti tapahtumat) korvattu.
+- **Lähde:** https://en.wikipedia.org/wiki/St_Mark%27s_Campanile ; https://sts-program.mit.edu/news/discovery-is-always-political-by-david-kaiser/
+
+### Pyhän Markuksen kellotorni — kenttä `kysymykset`
+- **Vanha:** "Mitä Galileo näytti tornista dogelle?"
+- **Uusi:** "Mitä Galileo näytti tornista senaattoreille?"
+- **Syy:** Tyyppi 7: kysymyksen oletus oli epätosi (doge ei ollut tornissa).
+- **Lähde:** https://en.wikipedia.org/wiki/St_Mark%27s_Campanile
+
+### Pyhän Markuksen kellotorni — kenttä `teksti`
+- **Vanha:** "…ainoa uhri oli tornin vartijan kissa, joka löytyi raunioita raivattaessa."
+- **Uusi:** "…ainoa uhri oli tornin vartijan kissa."
+- **Syy:** Tyyppi 3: kissan löytyminen raunioista nojasi yhteen lähteeseen (pilviraportin epävarmuus). Wikipedia vahvistaa vain, että vartijan kissa oli ainoa kuolonuhri. Teksti on nyt 68 sanaa.
+- **Lähde:** https://en.wikipedia.org/wiki/St_Mark%27s_Campanile
+
+### Pyhän Markuksen basilika — kenttä `teksti`
+- **Vanha:** "…vuonna 828 ja kätkivät sen sianlihan alle…"
+- **Uusi:** "…vuonna 828 ja kertomuksen mukaan kätkivät sen sianlihan alle…"
+- **Syy:** Tyyppi 3: sianlihakätkö tunnetaan keskiaikaisten kronikoiden kertomuksesta (translatio), ei todennettuna tosiasiana. Isoisän virke on ennallaan ja vastaa merkintää.
+- **Lähde:** https://en.wikipedia.org/wiki/St_Mark%27s_Basilica
+
+### Pyhän Markuksen basilika — kentät `syventava` ja `kysymykset`
+- **Vanha:** syventävä "Mistä basilikan pronssihevoset tulivat?", kysymys "Mistä pronssihevoset ovat peräisin?"
+- **Uusi:** syventävä "Mitä basilikan kultamosaiikit esittävät?", kysymys "Miksi Napoleon vei hevoset Pariisiin?"
+- **Syy:** Tyypit 1 ja 7: kierrosversio vastaa jo kysymykseen hevosten alkuperästä, joten syventävä ja kysymys toistivat sen. Syventävä liittyy nyt tekstin mosaiikkeihin. Napoleon vei hevoset vuonna 1797, ja ne palautettiin vuonna 1815.
+- **Lähde:** https://en.wikipedia.org/wiki/Horses_of_Saint_Mark
+
+### Huokausten silta — kenttä `lyhyt`
+- **Vanha:** "Huokausten sillan toisessa päässä on Uusi vankila, joka rakennettiin, koska palatsin omat sellit eivät enää riittäneet. Nykyään Dogen palatsin museokierros kulkee sillan toista käytävää pitkin vankilaan, joten saman matkan voi kulkea itse."
+- **Uusi:** "Huokausten sillasta kerrotaan nykyään romanttisempaa tarinaa kuin vankien huokauksista: pari, joka suutelee gondolissa sillan alla auringonlaskun aikaan kirkonkellojen soidessa, pysyy rakastuneena ikuisesti. Sama uskomus on vuoden 1979 elokuvan A Little Romance juonen ytimessä."
+- **Syy:** Tyyppi 2: rakentamisen syy ja museoreitti ovat hallintoa ja käytännön tietoa. Lisäksi vankila mainittiin jo tekstissä. Uusi on tarina, joka asettuu vastakohdaksi tekstin vankilegendalle. Kysymys "Voiko sillan läpi kävellä nykyään?" jää kysymyksiin.
+- **Lähde:** https://en.wikipedia.org/wiki/Bridge_of_Sighs
+
+### Santa Maria della Salute — kenttä `lyhyt`
+- **Vanha:** "Kupolikirkon Santa Maria della Saluten juhlaa vietetään yhä joka marraskuu, ja silloin Canal Granden yli rakennetaan kirkolle tilapäinen silta. Pääalttarilla on Kreetalta vuonna 1670 tuotu bysanttilainen Neitsyt Marian ikoni, ja sakaristossa on Tizianin maalauksia."
+- **Uusi:** "Kupolikirkon Santa Maria della Saluten juhlapäivänä venetsialaiset kävelevät joka marraskuu Canal Granden yli tilapäistä siltaa pitkin kirkkoon viemään kynttilän. Juhlaruokana syödään castradinaa, savustetusta lampaanlihasta ja kaalista haudutettua ruokaa, perimätiedon mukaan kiitoksena dalmatialaisille, jotka toivat kaupunkiin savulihaa ruton aikana."
+- **Syy:** Tyyppi 2: toinen virke oli inventaario (ikoni ja maalaukset). Tilalle tuli juhlan elävä yksityiskohta. Dalmatialaisten osuus kerrotaan perimätietona.
+- **Lähde:** https://1600.venezia.it/en/node/1374
+
+### Santa Maria della Salute — kenttä `kysymykset`
+- **Vanha:** "Mitä marraskuun Saluten juhlassa tapahtuu?"
+- **Uusi:** "Mikä ikoni kirkon pääalttarilla on?"
+- **Syy:** Tyyppi 7: kierrosversio vastaa nyt juhlakysymykseen. Ikoni (Mesopanditissa, vuodelta 1670) on vanhoissa lähteissä.
+- **Lähde:** https://en.wikipedia.org/wiki/Panagia_Mesopantitisa (olemassa oleva lähde)
+
+### Rialton silta — kenttä `teksti`
+- **Vanha:** "Kivisillan suunnittelusta kilpailivat muiden muassa Michelangelo ja Andrea Palladio, mutta työ annettiin…"
+- **Uusi:** "Kivisillan suunnitelmia tekivät muiden muassa Andrea Palladio ja Jacopo Sansovino, ja Michelangeloakin harkittiin, mutta työ annettiin…"
+- **Syy:** Tyyppi 3: Wikipedian mukaan suunnitelmia jättivät Sansovino, Palladio ja Vignola, ja Michelangeloa vain harkittiin. Hän ei osallistunut kilpailuun.
+- **Lähde:** https://en.wikipedia.org/wiki/Rialto_Bridge
+
+### Rialton silta — kenttä `lyhyt`
+- **Vanha:** "Rialton silta lepää noin kahdentoistatuhannen puupaalun varassa, jotka lyötiin syvälle laguunin mutaan. Vuosina 2015 ja 2016 silta kunnostettiin perusteellisesti ensimmäistä kertaa yli neljäänsataan vuoteen, ja työt tehtiin osissa, jotta silta pysyi koko ajan auki."
+- **Uusi:** "Rialton sillan yhtä kivikaarta pidettiin aikanaan niin uhkarohkeana, että arkkitehti Vincenzo Scamozzi ennusti sen sortuvan. Silta on silti seissyt jo yli neljäsataa vuotta noin kahdentoistatuhannen puupaalun varassa, jotka lyötiin syvälle laguunin mutaan."
+- **Syy:** Tyyppi 2: paalumäärä ja kunnostusurakka olivat teknistä tietoa. Paalut jäävät, mutta nyt osana tarinaa (ennuste tuhosta ja sen kumoutuminen).
+- **Lähde:** https://en.wikipedia.org/wiki/Rialto_Bridge ; https://amusementlogic.com/general-news/deep-foundations-the-example-of-venice/ (olemassa oleva paalulähde)
+
+### Canal Grande — kenttä `lyhyt`
+- **Vanha:** "Suuren kanavan, Canal Granden, ylittää nykyään neljä siltaa. Uusin on Santiago Calatravan suunnittelema teräskaari, joka avattiin syyskuussa 2008 rautatieaseman ja Piazzale Roman välille. Vanhin on Rialton silta, joka oli pitkään kanavan ainoa silta."
+- **Uusi:** "Suuren kanavan, Canal Granden, varrella seisoo palatsi Ca' Vendramin Calergi, jossa säveltäjä Richard Wagner kuoli sydänkohtaukseen helmikuussa 1883. Vuodesta 1959 palatsissa on toiminut Venetsian kasino, ja sen huoneissa on myös Wagnerille omistettu museo."
+- **Syy:** Tyyppi 1: "Rialto oli pitkään kanavan ainoa silta" toisti Rialton sillan tekstiä ("vuoteen 1854 asti ainoa paikka, josta kanavan yli pääsi kävellen"). Tyyppi 2: siltaluettelo oli perustietoa. Uusi kertoo ihmisestä ja yllättävästä nykykäytöstä. Syventävä "Mitkä neljä siltaa kanavan ylittävät?" jää.
+- **Lähde:** https://en.wikipedia.org/wiki/Ca%27_Vendramin_Calergi
+
+### Ca' d'Oro — kenttä `kysymykset`
+- **Vanha:** "Mitä palatsin taidegalleriassa on nähtävissä?"
+- **Uusi:** "Mitä taideteoksia Franchetti keräsi?"
+- **Syy:** Tyypit 5 ja 7: Galleria Giorgio Franchetti on suljettu viimeisen entisöintivaiheen ajaksi helmikuusta 2026 (avoinna vain Mantegnan kappeli ja piha), joten "nähtävissä" ei pidä nyt. Teksti ei väitä museon olevan auki, joten sitä ei muutettu.
+- **Lähde:** https://cultura.gov.it/evento/domenica-al-museo-alla-galleria-giorgio-franchetti-alla-ca-doro-1-febbraio-2026
+
+### Pyhän Markuksen tori — kenttä `lahteet`
+- Kielitekstit ennallaan. Maurien lyöntiaikojen (kaksi minuuttia ennen tasaa ja jälkeen) lähteeksi lisätty Italian virallinen matkailusivu ja Wikipedia (paljastettiin 1.2.1499, pohjoislaita).
+- **Lähde:** https://www.italia.it/es/veneto/venecia/torre-dell-orologio ; https://en.wikipedia.org/wiki/St_Mark%27s_Clocktower
+
+### Tarkistettu, ei muutettu
+- Dogen palatsi: Casanovan pako (kierrosversio) ja Falieron musta verho ovat kunnossa. koko_m 110 (pilviraportin epävarmuus) on järkevä kameramitta palatsikorttelille (julkisivut noin 70–75 metriä, kortteli noin 100 metriä), joten sitä ei muutettu.
+- Nykytila: MOSE, päiväkävijämaksu ja risteilyalusten kielto eivät esiinny missään tekstissä. Torin "korkean veden aikaan se tulvii ensimmäisenä" pitää yhä, koska MOSE nostetaan vasta noin 110 sentin ennusteella ja tori tulvii jo matalammalla vedellä. Basilikan hevosten jäljennökset parvekkeella ja alkuperäiset museossa vahvistettu. Kellotornin perustusten vahvistustyöt valmistuivat vuonna 2013. Rialton kunnostus (2015–2016) on valmis, eikä siitä enää puhuta. Kyyhkysten ruokintakielto on yhä voimassa.
+- Napoleonin "Euroopan salonki" on kerrottu "kerrotaan"-muodossa (pilviraportin epävarmuus), ja se riittää.
+- Ca' d'Oron "lahjoitti valtiolle 1916": Wikipedia sanoo "bequeathed", mutta Franchetti kuoli vasta 1920-luvulla, joten lahjoitus on oikea muoto. Jätetty ennalleen.
+- Avaus: 38 sanaa, ilmakuva (punaiset katot, saarirykelmä, Canal Granden käänteinen S), alkaa sanalla "Tervetuloa". Ei muutoksia.
+- Isoisä: vain basilikan tekstissä, merkinnän sisällöllä. OK.
+- Tarkistin: `Venetsia: 14 kohdetta, 0 virhettä, 9 huomiota` (sama määrä kuin ennen).
