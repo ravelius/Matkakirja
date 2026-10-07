@@ -499,8 +499,49 @@ namespace Matkakirja.Natiivi
                 vasen = Mathf.Max(vasen, Mathf.Round(metroKoysiVasen));
             }
             else metroKoysiVasen = 0f;
+            metro.Kompakti = false;
+            if (!LeveaRuutu && Juuri.panel != null) { PuhelinMetro(nayta, w, h); return; }
             metro.Paivita(nayta, yla, ala, Mathf.Max(h * 0.4f, OpasMetrolinja.VahinRivi * metro.Maara), LeveaRuutu ? w * 0.3f : w * 0.42f, vasen);
         }
+
+        /// <summary>
+        /// iPhone (omistaja 7.10. 13.3x): metrolinja ihan vasempaan laitaan turva-alueen ulkopuolelle, Dynamic Islandin viereen
+        /// – pystyssä vasempaan ylänurkkaan Islandin tasolle sen vasemmalle puolelle, vaakana vasempaan laitaan köyden vasemmalle
+        /// puolelle ylänurkan ja Islandin väliin. Pyöristetty kulma ei saa leikata tekstiä (KulmaVaraPt) eikä Island peittää sitä
+        /// (Island-mitat iPhonen pt:inä). Jos kaikki pysäkit eivät mahdu nimineen, nykyinen ja viereiset nimellä, muut pisteinä.
+        /// </summary>
+        void PuhelinMetro(bool nayta, float w, float h)
+        {
+            var t = UiKerros.Hae().Reunat(kerrosNro);   // turva-alueen reunat paneelin pisteinä: x vasen, y ylä, z oikea, w ala
+            float pw = Juuri.panel.visualTree.layout.width, ph = Juuri.panel.visualTree.layout.height;
+            bool pysty = ph > pw;
+            float x, y, korkeus, leveys;
+            if (pysty)
+            {
+                // Island ylhäällä keskellä (~126 × 37 pt, yläreuna ~11 pt): vasen ylänurkka Islandin tasolta alaspäin.
+                x = KulmaVaraPt; y = Mathf.Max(10f, t.y - 50f);
+                leveys = pw * 0.5f - IslandLeveysPt * 0.5f - KuvaRako - x;
+                korkeus = Mathf.Min(ph * 0.4f, OpasMetrolinja.AsemaValiPt * metro.Maara);
+            }
+            else
+            {
+                // Island vasemmassa laidassa keskellä (vaaka, turva-alueen vasen reuna > 0): kaista ylänurkasta Islandin yläreunaan.
+                x = 14f; y = KulmaVaraPt;
+                float islandYla = t.x > 20f ? ph * 0.5f - IslandLeveysPt * 0.5f - KuvaRako : ph * 0.6f;
+                korkeus = Mathf.Max(0f, islandYla - y);
+                var koysi = OpasSovitin.KoriVasenKoysiNorm;
+                float koysiVasen = koysi.width > 0f && koysi.xMax <= 0.4f ? koysi.xMin * pw : pw * 0.3f;
+                leveys = Mathf.Max(60f, koysiVasen - x - KuvaRako);
+                metro.Kompakti = OpasMetrolinja.VahinRivi * metro.Maara > korkeus;
+            }
+            // Juuri on turva-alueen sisällä: paikka turva-alueen koordinaateiksi (negatiivinen = ulkopuolella).
+            float yJ = y - t.y, xJ = x - t.x;
+            metro.Keskita = false;
+            metro.Paivita(nayta, yJ, yJ + korkeus, korkeus, leveys, xJ);
+        }
+
+        /// <summary>Pyöristetyn kulman vara (pt) ja Dynamic Islandin pituus (pt) iPhonella.</summary>
+        const float KulmaVaraPt = 22f, IslandLeveysPt = 126f;
 
         VisualElement esitysRivi;
         bool esitysNakyy;

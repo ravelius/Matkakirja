@@ -14,6 +14,9 @@ namespace Matkakirja.Natiivi
     {
         /// <summary>Asemien väli (pt), kun tilaa on; muuten linja tiivistyy enimmäiskorkeuteen.</summary>
         const float AsemaVali = 26f;
+        public const float AsemaValiPt = AsemaVali;
+        /// <summary>Kompakti (iPhone vaaka, omistaja 13.3x): vain nykyinen ja viereiset nimellä, muut pisteinä tiiviisti.</summary>
+        public bool Kompakti;
         /// <summary>Pienin rivikorkeus (pt), jolla nimi mahtuu (apuri-koko + väli).</summary>
         public const float VahinRivi = 16f;
         /// <summary>Asemien määrä (viimeksi rakennettu).</summary>
@@ -94,7 +97,8 @@ namespace Matkakirja.Natiivi
             Animoi();
             // Korkeus: asemaväli × määrä, enintään 40 % ja kaistan korkeus; keskelle kaistaa.
             float kaista = Mathf.Max(0f, ala - yla);
-            float korkeus = Mathf.Max(Mathf.Min(Mathf.Min(maksimi, kaista), AsemaVali * nimet.Count), VahinRivi * nimet.Count);
+            float korkeus = Kompakti ? Mathf.Min(kaista, 3f * VahinRivi + (nimet.Count - 3) * 10f)
+                : Mathf.Max(Mathf.Min(Mathf.Min(maksimi, kaista), AsemaVali * nimet.Count), VahinRivi * nimet.Count);
             float top = Mathf.Round(Keskita ? yla + (kaista - korkeus) * 0.5f : yla);
             if (juuri.style.top.value.value != top) juuri.style.top = top;
             if (juuri.style.height.value.value != korkeus) juuri.style.height = Mathf.Round(korkeus);
@@ -124,6 +128,9 @@ namespace Matkakirja.Natiivi
                 rivi.style.opacity = peitto;
                 var p = paikka[0];
                 if (Mathf.Abs(p.resolvedStyle.width - piste) > 0.05f) { p.style.width = piste; p.style.height = piste; p.style.borderTopLeftRadius = p.style.borderTopRightRadius = p.style.borderBottomLeftRadius = p.style.borderBottomRightRadius = piste * 0.5f; }
+                // Kompaktissa muut kuin nykyinen ja viereiset ilman nimeä (piste jää).
+                var nd = Kompakti && taso < 0.5f ? DisplayStyle.None : DisplayStyle.Flex;
+                if (nimi.style.display != nd) nimi.style.display = nd;
                 bool lihava = taso > 1.5f;
                 if (rivi.ClassListContains("mk-metrolinja__asema--nykyinen") != lihava)
                 {
