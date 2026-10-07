@@ -104,3 +104,4 @@ Päätoimittaja = "PÄÄTOIMITTAJA (Opus, max)".
   #4147 (apurahakortti valmiitLinssit) merge-odottaja → Pelikoodarille kun julki. #4150 loki-PR merge vihreänä.
   LS1 diagnostiikka-ajo (iPhone 5 min) alkulento-korjauksen käännöksen jälkeen hiljaisella hetkellä.
 - 18.1x: viety olavinlinna-e3-aanet, -tietokerros, ilmapallo-kori (glb), opas-esittely-aaneton (31). S2-kevät osa 0 uudelleen (-b).
+- 19.5x: #4156–#4162 mergetty ja Pöllö julki; S2-kevät osat 1–5 valmiit, osa 0 (-b) kesken. tf-kaynnista.sh <N> <proto SHA> <muutosloki SHA> käynnistää TF:n + ketjun.
