@@ -1,6 +1,8 @@
 // OPPAAN YKSITYISKOHTAKUVA 3D-KORTTINA (omistaja 7.10. 10.1x, Päätoimittaja 16.5x, juna 163): kuva noin 40 % ruudusta
 // NOSTOKORTTI-kehyksessä (varjostin Varjostimet/Nostokortti, värit Tyylikirja.Paperi), 3D-tasona hieman keskustaa kohti
-// kääntyneenä; lentää oikealta sisään, pysyy OpasYksityiskohdat.NayttoS ja poistuu kaukaisuuteen oikeaan yläkulmaan. Oma
+// kääntyneenä; lentää oikealta sisään, pysyy OpasYksityiskohdat.NayttoS ja poistuu kaukaisuuteen oikeaan yläkulmaan (omistaja
+// 7.10. 10.2x). Koko, lepopaikka ja liike KorttiAsettelusta: levossa kortti ei peitä nappeja (Napit-laatikot OpasValikolta);
+// liikkeen aikana napit piirtyvät kortin päälle (UI Toolkitin ruutupaneelit kamerapinon jälkeen, tarkistus NapitPaalla). Oma
 // URP-overlay-kamera kerroksella 17 kaupunkikameran pinossa (kuten PalloKori). Alakaistassa kuvateksti ja tekijärivi
 // (CC BY / BY-SA vaativat maininnan). Yksi kortti kerrallaan; Piilota() vie kortin heti pois (valikko tai chat aukesi).
 using System.Collections;
@@ -16,9 +18,11 @@ namespace Matkakirja.Linssit
     public sealed class YksityiskohtaKortti
     {
         public const int Kerros = 17;
-        /// <summary>Sisääntulo ja poistuminen (s); kortin leveys osuutena ruudun pidemmästä sivusta (enintään 80 % leveydestä).</summary>
-        public const float SisaanS = 0.6f, PoisS = 0.8f, LeveysOsuus = 0.4f;
-        const float Etaisyys = 10f, Fov = 40f, KaantoAste = 14f, AlaPt = 44f, SisennysOsuus = 0.04f;
+        /// <summary>Sisääntulo ja poistuminen (s). Koko ja paikka: KorttiAsettelu.</summary>
+        public const float SisaanS = 0.6f, PoisS = 0.8f;
+        const float Etaisyys = 10f, Fov = KorttiAsettelu.FovAste;
+        /// <summary>Näkyvien nappien ruutulaatikot (pikselit, origo vasen alakulma); OpasValikko asettaa. Kortti väistää ne.</summary>
+        public static System.Func<System.Collections.Generic.List<KorttiAsettelu.Laatikko>> Napit;
 
         readonly MonoBehaviour o;
         Camera perus, overlay;
@@ -91,7 +95,9 @@ namespace Matkakirja.Linssit
             var pd = kamera.GetUniversalAdditionalCameraData();
             if (pd != null && !pd.cameraStack.Contains(overlay)) pd.cameraStack.Add(overlay);
             var sh = Resources.Load<Shader>("Varjostimet/Nostokortti");
-            mat = new Material(sh != null ? sh : Shader.Find("Universal Render Pipeline/Unlit")) { name = "Nostokortti" };
+            // Kortti piirretään ennen tekstiä (iPad-simu 21.42: molemmat läpinäkyvien jonossa 3000, ja käännetyssä kortissa teksti
+            // lajittui etäisyydeltään tason taakse → paperi peitti kuvatekstin).
+            mat = new Material(sh != null ? sh : Shader.Find("Universal Render Pipeline/Unlit")) { name = "Nostokortti", renderQueue = 2950 };
             mat.SetColor("_Paperi", (Color)Tyylikirja.Paperi.Pinta);
             mat.SetColor("_Reuna", (Color)Tyylikirja.Paperi.Reunus);
             var q = GameObject.CreatePrimitive(PrimitiveType.Quad);
@@ -131,31 +137,28 @@ namespace Matkakirja.Linssit
             overlay.aspect = kamera.aspect;
             mat.SetTexture("_MainTex", kuva);
 
-            // Mitat pisteinä: leveys 40 % pidemmästä sivusta, enintään 80 % leveydestä; kuva-alue säilyttää kuvasuhteen.
+            // Koko, lepopaikka ja liike KorttiAsettelusta: ruutulaatikko 3D-kallistuksen jälkeen ei leikkaa näkyviä nappeja
+            // (Napit, OpasValikko) koko näkyvän liikkeen aikana; pystykuva enintään 72 % / 56 % ruudun korkeudesta.
             float w = Screen.width, h = Screen.height;
-            float lev = Mathf.Min(LeveysOsuus * Mathf.Max(w, h), 0.8f * w);
-            float sis = SisennysOsuus * lev, alaPx = AlaPt * Mathf.Max(1f, Screen.dpi > 0 ? Screen.dpi / 163f : 2f);
             float kuvasuhde = kuva.height > 0 ? (float)kuva.width / kuva.height : 1.5f;
-            float kork = (lev - 2 * sis) / kuvasuhde + 2 * sis + alaPx;
+            var napit = Napit?.Invoke();
+            NapitPaalla();
+            var asettelu = KorttiAsettelu.Laske(w, h, Screen.dpi > 0 ? Screen.dpi / 163f : 2f, kuvasuhde, napit);
+            if (!asettelu.Mahtuu)
+            {
+                Debug.Log($"MATKAKIRJA opas: yksityiskohtakuva ohitettu, ei vapaata paikkaa nappien välissä ({napit?.Count ?? 0} nappia) {k.KohdeId} \"{k.Ankkuri}\"");
+                Piilota(); yield break;
+            }
+            float lev = asettelu.Lev, kork = asettelu.Kork, sis = asettelu.Sis, alaPx = asettelu.AlaPx;
             mat.SetVector("_Koko", new Vector4(lev, kork, 0, 0));
             mat.SetFloat("_KulmaPt", 12f * lev / 320f);
             mat.SetFloat("_ReunaPt", Mathf.Max(1f, lev / 320f));
             mat.SetFloat("_SisennysPt", sis);
             mat.SetFloat("_AlaPt", alaPx);
 
-            // Ruutupikselit → overlay-kameran tasolle etäisyydellä Etaisyys.
+            // Ruutupikselit → overlay-kameran tasolle etäisyydellä Etaisyys (KorttiAsettelu.FovAste = Fov).
             float yksikko = 2f * Etaisyys * Mathf.Tan(Fov * 0.5f * Mathf.Deg2Rad) / h;
             kortti.localScale = new Vector3(lev * yksikko, kork * yksikko, 1f);
-            bool pysty = h > w * 1.2f;
-            // Lepopaikka: vaakaruudulla oikealla, pystyssä keskellä yläpuolella (alarivin napit vapaana).
-            // Vaakaruudulla oikean reunan napit (tauko ja seuraava, ~0,78 × leveys alkaen) jäävät kortin oikealle puolelle
-            // (Päätoimittaja 21.4x, iPad-kuva: kortti peitti ne): oikea reuna enintään 0,74 × leveys (kääntö lähentää oikeaa reunaa).
-            float cx = pysty ? 0f : Mathf.Min(0.22f * w, 0.74f * w - 0.5f * w - 0.55f * lev);
-            var lepo = new Vector3(cx * yksikko, (pysty ? 0.12f * h : 0.06f * h) * yksikko, Etaisyys);
-            var tulo = new Vector3((0.5f * w + lev) * yksikko, lepo.y, Etaisyys);
-            var lahto = new Vector3(0.9f * w * yksikko, 0.9f * h * yksikko, Etaisyys * 3f);
-            // Kääntö Y:n ympäri: positiivinen kulma kääntää etupinnan (−Z) vasemmalle eli oikealla olevan kortin keskustaa kohti.
-            float kaanto = KaantoAste * (pysty ? 0.5f : 1f);
 
             string rivi = string.IsNullOrWhiteSpace(k.Kuvateksti) ? "" : k.Kuvateksti.Trim();
             string tekija = OpasYksityiskohdat.Tekijarivi(k);
@@ -168,41 +171,62 @@ namespace Matkakirja.Linssit
             // Koko sovitetaan kaistaan (2 riviä: kuvateksti ja tekijä); 1 tekstiyksikkö = 1 ruutupikseli.
             teksti.fontSizeMax = alaPx * 12f; teksti.fontSizeMin = alaPx * 0.05f;
             teksti.alignment = TextAlignmentOptions.MidlineLeft;
-            teksti.ForceMeshUpdate();
-            Debug.Log($"MATKAKIRJA opas: yksityiskohtakuvan teksti {teksti.textInfo.characterCount} merkkiä, {teksti.textInfo.lineCount} riviä, koko {teksti.fontSize:F0}");
+
 
             Nakyy = true;
             kortti.gameObject.SetActive(true);
-            Debug.Log($"MATKAKIRJA opas: yksityiskohtakuva näkyviin {k.KohdeId} \"{k.Ankkuri}\" ({kuva.width}×{kuva.height})");
-            // Sisään: pehmeä hidastus.
+            teksti.ForceMeshUpdate();
+            Debug.Log($"MATKAKIRJA opas: yksityiskohtakuvan teksti {teksti.textInfo.characterCount} merkkiä, {teksti.textInfo.lineCount} riviä, koko {teksti.fontSize:F0}, jono {teksti.fontSharedMaterial?.renderQueue}/{mat.renderQueue}");
+            Debug.Log($"MATKAKIRJA opas: yksityiskohtakuva näkyviin {k.KohdeId} \"{k.Ankkuri}\" ({kuva.width}×{kuva.height}), lepo {asettelu.LepoLaatikko} ({w:0}×{h:0}, {napit?.Count ?? 0} nappia väistetty)");
+            // Sisään oikealta kaukaa pienenä, hidastuen; kasvaa lepopaikkaa lähestyessään (KorttiAsettelu.Sisaan).
             for (float t = 0f; t < SisaanS; t += Time.unscaledDeltaTime)
             {
                 if (peittaa != null && peittaa()) { Piilota(); yield break; }
-                float u = 1f - Mathf.Pow(1f - Mathf.Clamp01(t / SisaanS), 3f);
-                Aseta(Vector3.Lerp(tulo, lepo, u), Mathf.Lerp(kaanto * 2.2f, kaanto, u), 1f);
+                var (a, alfa) = KorttiAsettelu.Sisaan(asettelu, t / SisaanS);
+                Aseta(a, yksikko, alfa);
                 yield return null;
             }
-            Aseta(lepo, kaanto, 1f);
+            Aseta(asettelu.Lepo, yksikko, 1f);
             float loppu = Time.unscaledTime + (float)OpasYksityiskohdat.NayttoS - SisaanS;
             while (Time.unscaledTime < loppu)
             {
                 if (peittaa != null && peittaa()) { Piilota(); yield break; }
                 yield return null;
             }
-            // Pois: kiihtyen kauas oikeaan yläkulmaan, häivytys viimeisellä kolmanneksella.
+            // Pois: kiihtyen kauas oikeaan yläkulmaan; häivytetty ennen ensimmäistä nappikohtaa (KorttiAsettelu.PoisLoppu).
             for (float t = 0f; t < PoisS; t += Time.unscaledDeltaTime)
             {
-                float u = Mathf.Clamp01(t / PoisS), e = u * u;
-                Aseta(Vector3.Lerp(lepo, lahto, e), kaanto, 1f - Mathf.Clamp01((u - 0.66f) / 0.34f));
+                var (a, alfa) = KorttiAsettelu.Pois(asettelu, t / PoisS);
+                Aseta(a, yksikko, alfa);
                 yield return null;
             }
             Piilota();
         }
 
-        void Aseta(Vector3 paikka, float kaanto, float alfa)
+        static bool napitTarkistettu;
+
+        /// <summary>
+        /// Kerran: napit ovat kortin päällä vain, jos jokainen UI-dokumentti piirtää ruutupaneeliin (ei RenderTextureen, joka
+        /// koostettaisiin kamerapinoon). Poikkeus kirjataan lokiin.
+        /// </summary>
+        static void NapitPaalla()
         {
-            kortti.localPosition = paikka;
-            kortti.localRotation = Quaternion.Euler(0f, kaanto, 0f);
+            if (napitTarkistettu) return;
+            napitTarkistettu = true;
+            int rt = 0, kaikki = 0;
+            foreach (var d in Object.FindObjectsByType<UnityEngine.UIElements.UIDocument>(FindObjectsSortMode.None))
+            {
+                if (d == null || d.panelSettings == null) continue;
+                kaikki++;
+                if (d.panelSettings.targetTexture != null) rt++;
+            }
+            Debug.Log($"MATKAKIRJA opas: yksityiskohtakortti, napit kortin päällä: {(rt == 0 ? "kyllä" : "EI")} ({kaikki} UI-dokumenttia, {rt} tekstuuriin)");
+        }
+
+        void Aseta(KorttiAsettelu.Asento a, float yksikko, float alfa)
+        {
+            kortti.localPosition = new Vector3(a.X * a.Syvyys * yksikko, a.Y * a.Syvyys * yksikko, Etaisyys * a.Syvyys);
+            kortti.localRotation = Quaternion.Euler(0f, a.Kaanto, 0f);
             mat.SetFloat("_Alfa", alfa);
             teksti.alpha = alfa;
         }
