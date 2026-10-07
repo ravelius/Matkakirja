@@ -303,6 +303,12 @@ namespace Matkakirja.Natiivi
             Kamera.farClipPlane = ymparisto ? 16000f : 2000f;
             float sumuLoppu = ymparisto ? 9000f : Mathf.Min(d * SumuLoppuKerroin, Kamera != null ? Kamera.farClipPlane * 0.9f : 1800f);
             float sumuAlku = ymparisto ? Mathf.Max(d * 3f, 300f) : Mathf.Min(d * SumuAlkuKerroin, sumuLoppu * 0.6f);
+            // Rakennuskohtainen etäisyysutu (valaistus.sumu, kameran etäisyyden kertoimina; Kielletyn ilmakuvissa maa näkyi horisonttiin).
+            if (DioraamaSovitin.Linssi?.Rakennus?.Valaistus?.Sumu is { } rs)
+            {
+                sumuLoppu = Mathf.Min(d * (float)rs.Loppu, Kamera.farClipPlane * 0.9f);
+                sumuAlku = Mathf.Min(d * (float)rs.Alku, sumuLoppu * 0.9f);
+            }
             float h = Mathf.Clamp01((Time.unscaledTime - haivytysAlku) / haivytysKesto);
             if (h < 1f)
             {

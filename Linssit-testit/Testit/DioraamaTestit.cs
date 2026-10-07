@@ -1094,6 +1094,15 @@ namespace Matkakirja.Linssit.Testit
             Lahella(0, Math.IEEERemainder(lyLoppu.Atsimuutti - yleis.Atsimuutti, 360), "lyhyt kaari päättyy yleisnäkymään", 0.05);
         }
 
+        // Rakennuskohtainen etäisyysutu (Linnanrakentaja 7.10.): valaistus.sumu {alku, loppu}; puuttuva tai virheellinen → null.
+        [Testi] static void ValaistuksenSumu()
+        {
+            var r = DioraamaData.Lue(KeittioFixture.Replace("\"yleiskamera\": {", "\"valaistus\": {\"sumu\": {\"alku\": 0.9, \"loppu\": 3.2}},\n  \"yleiskamera\": {"));
+            Oleta.Tosi(r.Valaistus?.Sumu is { } s && Math.Abs(s.Alku - 0.9) < 1e-9 && Math.Abs(s.Loppu - 3.2) < 1e-9, "sumu luettu");
+            var v = DioraamaData.Lue(KeittioFixture.Replace("\"yleiskamera\": {", "\"valaistus\": {\"sumu\": {\"alku\": 3, \"loppu\": 1}},\n  \"yleiskamera\": {"));
+            Oleta.Tosi(v.Valaistus != null && v.Valaistus.Sumu == null, "loppu < alku → oletus");
+        }
+
         // Savu 156 (Laitetestaaja 7.10.): huonevalinta saapumiskaaren aikana katkaisee tulevan kertojan kierroksen ja vie huoneeseen.
         [Testi] static void HuonevalintaSaapumisenAikanaKatkaiseeKierroksen()
         {

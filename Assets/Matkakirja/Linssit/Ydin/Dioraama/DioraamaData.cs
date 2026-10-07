@@ -404,6 +404,9 @@ namespace Matkakirja.Linssit.Dioraama
         /// <summary>Ei koskaan null (era 2b) — LueValaistus asettaa aina joko lähteen sisalla-olion tai
         /// Sisalla:n omat oletusarvot (1, 1).</summary>
         public Sisalla Sisalla = new Sisalla();
+        /// <summary>Etäisyysutu kameran etäisyyden kertoimina (Linnanrakentaja 7.10.: valaistus.sumu {alku, loppu}, Kielletty 0,9/3,2);
+        /// null = näyttämön oletus (Olavinlinna ennallaan).</summary>
+        public (double Alku, double Loppu)? Sumu;
     }
 
     /// <summary>Koko rakennus (kohta 1: RAKENNUS + rakennuskoneen lisäykset, kohta 3).</summary>
@@ -964,6 +967,8 @@ namespace Matkakirja.Linssit.Dioraama
             var sisalla = MiniJson.ObjektiTaiNull(MiniJson.Kentta(o, "sisalla"));
             if (sisalla != null) v.Sisalla = new Sisalla { Aurinko = MiniJson.Luku(sisalla, "aurinko") ?? 1,
                 Taivas = MiniJson.Luku(sisalla, "taivas") ?? 1 };
+            var sumu = MiniJson.ObjektiTaiNull(MiniJson.Kentta(o, "sumu"));
+            if (sumu != null && MiniJson.Luku(sumu, "alku") is double sa && MiniJson.Luku(sumu, "loppu") is double sl && sa > 0 && sl > sa) v.Sumu = (sa, sl);
             return v;
         }
 
