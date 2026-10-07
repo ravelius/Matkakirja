@@ -16,6 +16,7 @@ import { join } from 'node:path';
 import { execFileSync, spawnSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
 import { vuosiluvutSanoiksi } from '../pollo/puhesanat.js';
+import { sanaAjat } from './tee-aanet-kohdistuksella.mjs';
 
 const AANI = 'oae6GCCzwoEbfc5FHdEu', MALLI = 'eleven_v4_turbo', TASO_DB = -17.2;
 const arg = (n) => { const i = process.argv.indexOf(`--${n}`); return i > 0 ? process.argv[i + 1] : null; };
@@ -37,12 +38,14 @@ async function r2Kirjoita(avain, data, tyyppi) {
   const v = await fetch(`${R2}/${avain}`, { method: 'PUT', headers: { authorization: `Bearer ${CLOUDFLARE_API_TOKEN}`, 'content-type': tyyppi }, body: data });
   if (!v.ok) throw new Error(`R2 ${avain}: ${v.status}`);
 }
+// with-timestamps (Päätoimittaja 7.10.): ääni ja merkkikohtaiset ajat samasta otosta → sanakohtainen kohdistus kuville.
 async function eleven(puhe) {
-  const v = await fetch(`https://api.elevenlabs.io/v1/text-to-speech/${AANI}?output_format=pcm_44100`, {
+  const v = await fetch(`https://api.elevenlabs.io/v1/text-to-speech/${AANI}/with-timestamps?output_format=pcm_44100`, {
     method: 'POST', headers: { 'content-type': 'application/json', 'xi-api-key': ELEVEN_API_KEY },
     body: JSON.stringify({ text: puhe, model_id: MALLI, language_code: 'fi', voice_settings: { style: 0 } }) });
   if (!v.ok) throw new Error(`ElevenLabs ${v.status}`);
-  return Buffer.from(await v.arrayBuffer());
+  const d = await v.json();
+  return { pcm: Buffer.from(d.audio_base64, 'base64'), kohdistus: d.alignment ?? d.normalized_alignment ?? null };
 }
 const ff = (args, input) => execFileSync('ffmpeg', ['-v', 'error', '-y', ...args], { input, maxBuffer: 1 << 30 });
 
@@ -63,8 +66,9 @@ if (import.meta.url === `file://${process.argv[1]}`) {
         // Yksi otto: jo tallennettu master käytetään uudelleen (keskeytynyt ajo ei generoi samaa tekstiä toiste).
         const master = join(tyo, 'master', `${sha}.wav`);
         if (!existsSync(master)) {
-          const raaka = await eleven(puhe);
+          const { pcm: raaka, kohdistus } = await eleven(puhe);
           ff(['-f', 's16le', '-ar', '44100', '-ac', '1', '-i', '-', master + '.osa.wav'], raaka);
+          if (kohdistus) writeFileSync(join(tyo, 'master', `${sha}.kohdistus.json`), JSON.stringify({ kaupunki: e.id, id: k.id, laji, puhe, sanat: sanaAjat(kohdistus) }));
           renameSync(master + '.osa.wav', master);
         }
         // Tasoitus PCM:nä: RMS → -17,2 dB (volumedetect mean_volume), alimiter huippuihin; sitten pakkaus kerran.
