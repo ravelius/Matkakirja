@@ -359,7 +359,7 @@ namespace Matkakirja.Natiivi
             {
                 kameraData.renderPostProcessing = jokinPaalla;
                 // Syvyysajo vain DoF:n tarpeeseen: Bloom ei tarvitse syvyystekstuuria.
-                kameraData.requiresDepthTexture = dofPaalla;
+                kameraData.requiresDepthTexture = dofPaalla || SeikkailuValot.Kaytossa;   // volumetriset valot tarvitsevat syvyyden
             }
         }
 

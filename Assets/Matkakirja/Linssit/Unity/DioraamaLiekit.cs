@@ -429,6 +429,7 @@ namespace Matkakirja.Natiivi
             r.sharedMaterial = liekkiMateriaali;
             r.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
             r.receiveShadows = false;
+            if (SeikkailuValot.Liekki(go.transform, DioraamaNayttamo.Kerros) != null) r.enabled = false;   // Candle VFX -liekki (PT 7.10.)
             return go;
         }
 

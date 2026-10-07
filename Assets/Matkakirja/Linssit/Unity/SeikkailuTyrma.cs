@@ -42,6 +42,8 @@ namespace Matkakirja.Natiivi
             t.ydin = new Tyrma(mu1);
             SeikkailuEsineet.Irrotettiin += t.KiviIrti; SeikkailuEsineet.Raapaistiin += t.Yritys;
             Aktiivinen = t;
+            // Kuunvalo ilmaraosta (valo:tyrma-rako): volumetrinen säde lattialle laatutason salliessa.
+            if (M("valo:tyrma-rako") is KavelyMerkki mv) SeikkailuValot.Saede(go.transform, U(mv), (t.istuin - U(mv)) + Vector3.down * 0.5f, new Color(0.62f, 0.7f, 0.85f), 0.9f, 6f, 30f, DioraamaNayttamoKerros());
             p.Siirra(t.istuin + Vector3.up * 0.05f); p.Tila.KameraYaw = p.Tila.HahmoYaw = t.katse; p.Tila.KameraPitch = 10;
             SeikkailuNakyvyys.Himmennys = 0f;
             if (SeikkailuVihjeet.Aktiivinen != null) SeikkailuVihjeet.Aktiivinen.Ydin.Tyrmassa = true;
@@ -99,6 +101,8 @@ namespace Matkakirja.Natiivi
             SeikkailuNakyvyys.Himmennys = 0f;
             Destroy(gameObject);
         }
+
+        static int DioraamaNayttamoKerros() => DioraamaNayttamo.Kerros;
 
         public static void Poista() { var a = Aktiivinen; Aktiivinen = null; if (a != null) Destroy(a.gameObject); }
         /// <summary>Pulun vihjeen kohde tyrmässä: avaimet → ovi (1), ovi (2), irtokivi → aukko (3), lopuksi käytävän pää.</summary>
