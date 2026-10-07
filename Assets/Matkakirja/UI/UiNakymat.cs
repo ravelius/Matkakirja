@@ -40,6 +40,7 @@ namespace Matkakirja.Natiivi
         public readonly OfflineTilaUi OfflineTila;
         public readonly Kartuscha Kartuscha;
         public readonly Erikoisnostot Erikoisnostot;
+        public readonly KaupunkiPallot KaupunkiPallot;
         /// <summary>Elävä kartta: heränneiden maakuntien käsialanimet kartalla (kartussin maa).</summary>
         public readonly MaakuntanimetKartalla MaakuntaNimet;
         /// <summary>Nostomerkit kartalla (Natiivisepän NostoKerros → merkit, nimiöt, napautus).</summary>
@@ -385,6 +386,7 @@ namespace Matkakirja.Natiivi
             Kartuscha.AukiMuuttui += auki => Matkavalinta?.VaistaLiiku(auki);
             MaakuntaNimet = new MaakuntanimetKartalla(kerros, Kartuscha);
             Erikoisnostot = new Erikoisnostot(kerros, Kartuscha);   // ajattelijoiden kipsipäät karttaobjekteina (kehittäjätila, web #3866)
+            KaupunkiPallot = new KaupunkiPallot(kerros);   // kaupunkiopas karttaelementtinä: kuumailmapallo sallituissa kaupungeissa (omistaja 7.10.)
             Karttaselite = new Karttaselite(kerros);
             OfflineTila = new OfflineTilaUi(kerros, Tilarivi, () => { Valikko.Sulje(); Aanentasot.Avaa(); });
             Matkakirja = new Matkakirjakortti(kerros);
