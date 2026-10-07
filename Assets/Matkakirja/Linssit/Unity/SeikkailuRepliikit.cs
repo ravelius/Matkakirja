@@ -2,7 +2,7 @@
 // Pelikoodarin manifest media.matkakirja.app/seikkailu/<rakennus>/repliikit-v1/manifest.json { repliikit[] { tunnus, hahmo, huone,
 // tilanne, teksti, aani, kesto_s } }, äänet tasoitettu −17,2 dB:iin). Ei tekstiä ruudulle (omistaja: pelin aikana ei luettavaa).
 // - Manifest kerran, ääni haetaan ensimmäisellä soitolla (mp3 → PCM-klippi) ja pidetään muistissa.
-// - Soitto 2D-äänenä (kuten DioraamaAanet; kuulija on pallonäkymän kamerassa), yksi repliikki kerrallaan per puhuja.
+// - Soitto lähietäisyyden 3D-äänenä kuulokehyksessä (SeikkailuKuulija), puhujan pään kohdalta, yksi repliikki kerrallaan per puhuja.
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -85,16 +85,23 @@ namespace Matkakirja.Natiivi
             string avain = r.Hahmo ?? "?";
             if (!puhujat.TryGetValue(avain, out var a) || a == null)
             {
-                var g = new GameObject("Puhuja:" + avain);
-                a = g.AddComponent<AudioSource>();
-                // 2D kuten DioraamaAanet: AudioListener on pallonäkymän kamerassa, ei dioraaman kamerassa (E1-ajo 7.10.: 3D-repliikit
-                // jäivät kuulumatta, puhuja > 25 m kuulijasta). Puhujan suunta ja etäisyys tulevat V7:ssä omasta vaimennuksesta.
-                a.spatialBlend = 0f; a.playOnAwake = false;
+                // Lähietäisyyden 3D kuulokehyksessä (SeikkailuKuulija: kuulija olan yli -kamerassa; E1-ajo 7.10.: pallon kuulijalla
+                // 3D-repliikit jäivät kuulumatta). Täysi taso 4 m:iin, puhuja kuuluu vasemmalta tai oikealta.
+                a = SeikkailuKuulija.Lahde("Puhuja:" + avain, 4f, 35f);
+                a.spatialBlend = 0.8f;
                 puhujat[avain] = a;
             }
-            a.transform.SetParent(puhuja, false); a.transform.localPosition = Vector3.up * 1.6f;
+            puhujaT[avain] = puhuja;
             a.Stop(); a.clip = r.Klippi; a.volume = Voimakkuus; a.Play();
             kirjaa?.Invoke($"seikkailu: repliikki {r.Tunnus} ({r.Hahmo}, {r.KestoS:F1} s)");
+        }
+
+        readonly Dictionary<string, Transform> puhujaT = new Dictionary<string, Transform>(StringComparer.Ordinal);
+
+        void LateUpdate()
+        {
+            foreach (var kv in puhujaT)
+                if (kv.Value != null && puhujat.TryGetValue(kv.Key, out var a) && a != null) SeikkailuKuulija.Aseta(a, kv.Value.position + Vector3.up * 1.6f);
         }
 
         public static void Poista() { var a = Aktiivinen; Aktiivinen = null; if (a != null) Destroy(a.gameObject); }

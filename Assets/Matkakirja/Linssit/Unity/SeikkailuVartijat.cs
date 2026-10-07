@@ -29,7 +29,10 @@ namespace Matkakirja.Natiivi
             public Vartija Aivot; public NavMeshAgent Agentti; public string Osa;
             public double KavelyAika; public bool Kavelee; public Vector3 Kohde = new Vector3(float.NaN, 0, 0);
             public VartijanTila EdellinenTila;
+            public AudioSource Askeleet;
         }
+        /// <summary>Askeläänen klippi (rakennus.json aanet askel-kivi); SeikkailuVartijat.Askeleet asettaa.</summary>
+        public static AudioClip AskelKlippi;
 
         readonly List<V> vartijat = new List<V>();
         NavMeshDataInstance navi; NavMeshData data;
@@ -75,7 +78,8 @@ namespace Matkakirja.Natiivi
                 ag.radius = 0.3f; ag.height = 1.8f; ag.baseOffset = 0f; ag.angularSpeed = 360f; ag.acceleration = 6f;
                 ag.stoppingDistance = 0.25f; ag.autoBraking = true; ag.speed = (float)Vartija.KavelyMs;
                 ag.obstacleAvoidanceType = ObstacleAvoidanceType.LowQualityObstacleAvoidance;
-                var v = new V { Aivot = new Vartija(pisteet), Agentti = ag, Osa = kv.Key };
+                var v = new V { Aivot = new Vartija(pisteet), Agentti = ag, Osa = kv.Key, Askeleet = SeikkailuKuulija.Lahde("Askeleet:" + kv.Key, 2f, 28f) };
+                v.Askeleet.loop = true; v.Askeleet.volume = 0.9f;
                 sv.vartijat.Add(v);
                 hahmot?.LisaaIrrallinen(rakennus, Henkilo, vg.transform, () => (v.Kavelee ? "kavely" : "idle", v.KavelyAika));
             }
@@ -151,6 +155,15 @@ namespace Matkakirja.Natiivi
                 }
                 float v2 = new Vector2(ag.velocity.x, ag.velocity.z).magnitude;
                 v.Kavelee = v2 > 0.15f;
+                // Askeleet vartijan jaloista kuulokehyksessä (kuuluvat vasemmalta/oikealta kameran suunnasta), tahti nopeuden mukaan.
+                var aa = v.Askeleet;
+                if (aa != null)
+                {
+                    SeikkailuKuulija.Aseta(aa, ag.transform.position + Vector3.up * 0.1f);
+                    if (aa.clip == null && AskelKlippi != null) aa.clip = AskelKlippi;
+                    if (v.Kavelee && aa.clip != null) { aa.pitch = Mathf.Clamp(0.85f + 0.25f * v2, 0.85f, 1.25f); if (!aa.isPlaying) aa.Play(); }
+                    else if (aa.isPlaying) aa.Stop();
+                }
                 // Kävelytahti nopeuden mukaan (silmukka on mitoitettu sykliMs:iin), ei liukuvia jalkoja.
                 v.KavelyAika += v.Kavelee ? dt * (v2 / Math.Max(0.1, sykliMs)) * 1.0 : dt;
             }
@@ -206,6 +219,7 @@ namespace Matkakirja.Natiivi
         {
             if (Aktiivinen == this) Aktiivinen = null;
             hahmot?.PoistaIrralliset(Henkilo);
+            foreach (var v in vartijat) if (v.Askeleet != null) Destroy(v.Askeleet.gameObject);
             if (navi.valid) NavMesh.RemoveNavMeshData(navi);
             if (data != null) Destroy(data);
         }

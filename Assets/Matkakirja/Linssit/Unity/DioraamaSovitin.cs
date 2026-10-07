@@ -403,6 +403,7 @@ namespace Matkakirja.Natiivi
                 jousi.Nollaa();
                 string tapa = (pelaaja != null ? "pelaaja " : "vene ") + cm.PaivitaPelaaja(seikkailuKamera, nayttamo.Kamera, dt);
                 if (tapa != pelaajaKameraTapa) { o.Kirjaa($"seikkailu: kamera {tapa}, {nayttamo.Kamera.transform.position}"); pelaajaKameraTapa = tapa; }
+                SeikkailuKuulija.Paivita(nayttamo.Kamera.transform);   // 3D-äänet kuulostavat aktiivisesta kamerasta
                 // Sumu ja syväterävyys: kohde 25 m päässä (veneessä linna kaukana: 120 m), ei taustan sumennusta (aukko 0).
                 var pp = seikkailuKamera.transform.position;
                 kameraAsento = new Asento(new Matkakirja.Linssit.Dioraama.V3(pp.x, pp.y, -pp.z), 0, 0, pelaaja != null ? KavelySumuM : VeneSumuM, 55, 0);
@@ -917,6 +918,14 @@ namespace Matkakirja.Natiivi
             if (nayttamo == null || rakennus == null) { o.Kirjaa("poikki: vartijat: linssi ei auki"); yield break; }
             yield return VarmistaKavelyData();
             SeikkailuVartijat.Luo(nayttamo.transform, rakennus, SeikkailuKavely.Data, nayttamo.Hahmot3D, o.Kirjaa);
+            if (SeikkailuVartijat.AskelKlippi == null && rakennus.Aanet != null && rakennus.Aanet.TryGetValue("askel-kivi", out var askel) && !string.IsNullOrEmpty(askel.Tiedosto))
+            {
+                using var q = UnityEngine.Networking.UnityWebRequestMultimedia.GetAudioClip(peili(paketinJuuri + askel.Tiedosto), AudioType.MPEG);
+                ((UnityEngine.Networking.DownloadHandlerAudioClip)q.downloadHandler).streamAudio = false;
+                yield return q.SendWebRequest();
+                if (q.result == UnityEngine.Networking.UnityWebRequest.Result.Success) SeikkailuVartijat.AskelKlippi = UnityEngine.Networking.DownloadHandlerAudioClip.GetContent(q);
+                o.Kirjaa($"seikkailu: vartijan askeleet {(SeikkailuVartijat.AskelKlippi != null ? "ladattu" : "ei latautunut")} ({askel.Tiedosto})");
+            }
             var glbt = new List<string>();
             nayttamo.Hahmot3D?.IrrallistenGlb(glbt);
             foreach (var glb in glbt) if (hahmoGlbJonossaTaiValmiit.Add(glb)) o.StartCoroutine(LataaHahmoGlb(glb));
