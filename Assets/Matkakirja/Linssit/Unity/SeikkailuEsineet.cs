@@ -233,14 +233,25 @@ namespace Matkakirja.Natiivi
         static Mesh Mesh(GlbMalli malli)
         {
             var p = new List<Vector3>(); var nr = new List<Vector3>(); var uv = new List<Vector2>(); var kol = new List<int>();
-            foreach (var s in malli.Solmut)
-                foreach (var o in s.Osat)
+            // Solmujen maailmamatriisit vanhempiketjusta (7.10.: monisolmuiset mallit, tarjotin ja patapino, kasautuivat origoon).
+            var mat = new Matrix4x4[malli.Solmut.Count]; var valmis = new bool[malli.Solmut.Count];
+            Matrix4x4 Maailma(int i)
+            {
+                if (valmis[i]) return mat[i];
+                var g = malli.Solmut[i];
+                var oma = Matrix4x4.TRS(new Vector3(g.Translation[0], g.Translation[1], g.Translation[2]), new Quaternion(g.Rotation[0], g.Rotation[1], g.Rotation[2], g.Rotation[3]), new Vector3(g.Scale[0], g.Scale[1], g.Scale[2]));
+                mat[i] = g.Vanhempi >= 0 && g.Vanhempi < malli.Solmut.Count && g.Vanhempi != i ? Maailma(g.Vanhempi) * oma : oma; valmis[i] = true;
+                return mat[i];
+            }
+            for (int si = 0; si < malli.Solmut.Count; si++)
+                foreach (var o in malli.Solmut[si].Osat)
                 {
+                    var sm = Maailma(si);
                     int a = p.Count, k = (o.Paikat?.Length ?? 0) / 3;
                     for (int i = 0; i < k; i++)
                     {
-                        p.Add(new Vector3(o.Paikat[i * 3], o.Paikat[i * 3 + 1], o.Paikat[i * 3 + 2]));
-                        nr.Add(o.Normaalit != null && o.Normaalit.Length >= (i + 1) * 3 ? new Vector3(o.Normaalit[i * 3], o.Normaalit[i * 3 + 1], o.Normaalit[i * 3 + 2]) : Vector3.up);
+                        p.Add(sm.MultiplyPoint3x4(new Vector3(o.Paikat[i * 3], o.Paikat[i * 3 + 1], o.Paikat[i * 3 + 2])));
+                        nr.Add(o.Normaalit != null && o.Normaalit.Length >= (i + 1) * 3 ? sm.MultiplyVector(new Vector3(o.Normaalit[i * 3], o.Normaalit[i * 3 + 1], o.Normaalit[i * 3 + 2])).normalized : Vector3.up);
                         uv.Add(o.Uv != null && o.Uv.Length >= (i + 1) * 2 ? new Vector2(o.Uv[i * 2], 1f - o.Uv[i * 2 + 1]) : Vector2.zero);
                     }
                     foreach (int ix in o.Kolmiot ?? Array.Empty<int>()) kol.Add(ix + a);
