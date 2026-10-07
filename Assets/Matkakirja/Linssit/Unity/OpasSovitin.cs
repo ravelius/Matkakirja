@@ -546,6 +546,7 @@ namespace Matkakirja.Natiivi
             r.SetRequestHeader("x-matkakirja-natiivi", Application.identifier);
             r.SetRequestHeader("User-Agent", "Matkakirja/" + Application.version + " (" + Application.identifier + ")");
             PolloTestitunnus.Lisaa(r);
+            if (GizaKokeilu) r.SetRequestHeader("x-matkakirja-kokeilu", "giza");
             float t0 = Time.realtimeSinceStartup;
             yield return r.SendWebRequest();
             mikaLataa = false;
@@ -905,9 +906,18 @@ namespace Matkakirja.Natiivi
             r.SetRequestHeader("User-Agent", "Matkakirja/" + Application.version + " (" + Application.identifier + ")");
             string koodi = Asetukset.PolloKoodi;
             if (!string.IsNullOrEmpty(koodi)) r.SetRequestHeader(Lukijaaani.KoodiOtsake, koodi);
+            if (GizaKokeilu) r.SetRequestHeader("x-matkakirja-kokeilu", "giza");
             PolloTestitunnus.Lisaa(r);
             return r;
         }
+
+        /// <summary>Gizan kokeilu (omistaja 7.10. 08.4x, Päätoimittaja: vain kehityskäännökset): Pöllö listaa Gizan sallituissa ja
+        /// palauttaa sen kohteet vain otsakkeella x-matkakirja-kokeilu: giza (Pelikoodari #4116). App Store -käännöksessä aina pois.</summary>
+#if MATKAKIRJA_APPSTORE
+        public static bool GizaKokeilu => false;
+#else
+        public static bool GizaKokeilu => Asetukset.Kehittaja || Linssirekisteri.Kehittajatila;
+#endif
 
         // Natiivi-UI:n nimet siirtoruudulle (tapahtumat reunoista PaivitaKamerassa).
         public static event Action<string> SiirtymaAlkaa;
@@ -1137,6 +1147,7 @@ namespace Matkakirja.Natiivi
                 r.SetRequestHeader("x-matkakirja-natiivi", Application.identifier);
                 r.SetRequestHeader("User-Agent", "Matkakirja/" + Application.version + " (" + Application.identifier + ")");
                 PolloTestitunnus.Lisaa(r);
+                if (GizaKokeilu) r.SetRequestHeader("x-matkakirja-kokeilu", "giza");
                 yield return r.SendWebRequest();
                 if (silmukka == null) yield break;
                 tila += (tila.Length > 0 ? ", " : "") + polku + " " + (r.result == UnityWebRequest.Result.Success ? "ok" : r.responseCode.ToString());
@@ -1208,7 +1219,7 @@ namespace Matkakirja.Natiivi
         }
 
         // ---- SILTALAUSEET (juna 146; Ydin OpasSiltalauseet) ----
-        public const string SiltalauseetOsoite = "https://media.matkakirja.app/aanet/opas/siltalauseet-v1/siltalauseet.json";
+        public const string SiltalauseetOsoite = "https://media.matkakirja.app/aanet/opas/siltalauseet-v2/siltalauseet.json";   // v2 (Pelikoodari 7.10.): v1 + "ei-sallittu" (omistaja hyväksyi 09.4x)
         /// <summary>Kuittaukset-v1 (Pelikoodari 6.10.): kysymys, odotus5, odotus12, virhe; yhdistetään siltalauseisiin.</summary>
         public const string KuittauksetOsoite = "https://media.matkakirja.app/aanet/opas/kuittaukset-v1/kuittaukset.json";
         /// <summary>Kysymyksen odotusportaat (juna 150): 5 s / 12 s / 25 s, myöhäinen vastaus hylätään.</summary>
@@ -1455,6 +1466,7 @@ namespace Matkakirja.Natiivi
             };
             r.SetRequestHeader("Content-Type", "application/json");
             r.SetRequestHeader("x-matkakirja-natiivi", Application.identifier);
+            if (GizaKokeilu) r.SetRequestHeader("x-matkakirja-kokeilu", "giza");   // /opas/seuraava (simu 7.10. 09.15: 403 ilman)
             PolloTestitunnus.Lisaa(r);
             r.SetRequestHeader("User-Agent", "Matkakirja/" + Application.version + " (" + Application.identifier + ")");
             string koodi = Asetukset.PolloKoodi;   // kehittäjäkoodi Keychainista kuten Pulun chatissa; ei lokiin
@@ -1558,6 +1570,26 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Kohdekehyksen maa pisteeseen (silmukka.MaaTarvitaan); epäonnistuessa arvio 45 m, jottei siirto jää odottamaan.</summary>
+        /// <summary>Testi `opas pinta lat lon [lat lon …]` (Linnanrakentaja 7.10.: Gizan maapohja): Googlen pinnan ellipsoidikorkeus
+        /// pisteissä (SampleHeightMostDetailed, yksittäiset pisteet ilman kehää) lokiin.</summary>
+        public static bool Pinta(IReadOnlyList<(double lat, double lon)> pisteet)
+        {
+            if (!Auki || Viimeisin.kaupunki.Pinta == null || pisteet.Count == 0) return false;
+            Viimeisin.o.StartCoroutine(Viimeisin.PintaNayte(pisteet));
+            return true;
+        }
+        IEnumerator PintaNayte(IReadOnlyList<(double lat, double lon)> p)
+        {
+            var q = new double3[p.Count];
+            for (int i = 0; i < p.Count; i++) q[i] = new double3(p[i].lon, p[i].lat, 0);
+            var t = kaupunki.Pinta.SampleHeightMostDetailed(q);
+            while (!t.IsCompleted) yield return null;
+            var r = t.IsFaulted ? null : t.Result;
+            for (int i = 0; i < p.Count; i++)
+                o.Kirjaa($"opas: pinta {p[i].lat.ToString("F5", System.Globalization.CultureInfo.InvariantCulture)}, {p[i].lon.ToString("F5", System.Globalization.CultureInfo.InvariantCulture)}: "
+                    + (r != null && r.sampleSuccess[i] ? $"{r.longitudeLatitudeHeightPositions[i].z:F2} m (ellipsoidi)" : "ei osumaa"));
+        }
+
         IEnumerator KorkeusPisteessa(double lat, double lon)
         {
             string a = PisteAvain(lat, lon);
