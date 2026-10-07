@@ -92,3 +92,14 @@ Päätoimittaja = "PÄÄTOIMITTAJA (Opus, max)".
   6490286bb (lokit/siirtoseppa-historia4-app). NUI köysi-stillit 13.32 kansiossa natiivi-ui-1035/pariisi-esitys (PT:lle tieto).
   **15.00 jälkeen järjestys**: KÄÄNNÖS NYT NUI pariisi-esitys 81aa5fea (+ simu 12 min, lupa iPhone 18 Pro Max 46EC73E2);
   SIMU NYT Siirtoseppä iPad 18 min ja LS1 Giza v2b 6 min (cbd5ffad7); Natiivisepän Mac TF 160 -tulos (natiiviseppa-mac-tf-vahti.txt).
+
+## 16.1x — UUDET OMISTAJAN SÄÄNNÖT JA ILTA
+- Testaus kevyemmin (15.5x) ja käännökset harvemmin (16.0x): roolit eivät käännä itse; vain juna (Natiiviseppä), TF (Julkaisija)
+  ja ilmoitettu vianselvitys. Ei savua, rutiinia, stillejä eikä toistoajoja. Max 2 TF-junaa/pv (16.1x). Säännöt: pidossa.txt.
+- TF 161: iOS ladattu 15.56 (37623777958, 1. ajo kaatui mono-virheeseen → #4149), sisäinen OK 16.02, Mac TF 161 OK.
+  Ulkoinen 422 ANOTHER_BUILD_IN_REVIEW (160 katselmoinnissa) → `julkaisija-tyokalut/ulkoinen161-uusinta.sh` setsid 10 min välein.
+- **TF 162 testaajilla ~22.00** (omistaja): Natiiviseppä lukitsee rungon 21.15 → BUILD-SHA → muutosloki-PR → TF (tf161.sh-kaavalla
+  tf162.sh) → ryhmät; Mac TF -lupa annettu etukäteen. Lukko vapaana 21.10–21.50.
+- Käynnissä: S2-kevät-vienti 6 osaa (lokit/julkaisija-vienti-s2kevat-6osa*.log) → valmis: laatat.json 200 → Karttasepälle.
+  #4147 (apurahakortti valmiitLinssit) merge-odottaja → Pelikoodarille kun julki. #4150 loki-PR merge vihreänä.
+  LS1 diagnostiikka-ajo (iPhone 5 min) alkulento-korjauksen käännöksen jälkeen hiljaisella hetkellä.
