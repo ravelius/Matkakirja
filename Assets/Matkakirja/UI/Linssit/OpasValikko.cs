@@ -1886,7 +1886,7 @@ namespace Matkakirja.Natiivi
                     // `ui opasvalikko metro <i>|auto`: testilinja Pariisin kohteilla ilman kierrosta.
                     metro.Testi = o.Length > 1 && o[1] != "auto";
                     if (metro.Testi && int.TryParse(o[1], out int mi)) metro.TestiIndeksi = mi;
-                    return "opas: " + metro.Kuvaus();
+                    { var kr = OpasSovitin.KoriVasenKoysiNorm; return "opas: " + metro.Kuvaus() + $", köysi {kr.xMin:0.000}–{kr.xMax:0.000} × {kr.yMin:0.00}–{kr.yMax:0.00}, köysiraja {metroKoysiVasen:0}"; }
                 case "esitys":
                     if (o.Length > 1) testiEsitys = o[1] == "on" ? true : o[1] == "off" ? false : (bool?)null;
                     { var r = esitysRivi.worldBound; return $"opas: esitysrivi {(esitysRivi.resolvedStyle.display == DisplayStyle.Flex ? "näkyy" : "piilossa")} @ {r.xMin:0},{r.yMin:0} {r.width:0}×{r.height:0}, väkäsrivi {(nappiNakyy ? "näkyy" : "piilossa")}"; }
