@@ -24,6 +24,9 @@ Avoimet työt:
    wt/proto-linssiseppa2-e3nousu). Kulkee samassa junassa kuin Siirtosepän kutsu 1e48174e (162 jos Natiiviseppä ehtii ennen 21.15,
    muuten 163). Ei toimia, ellei Natiiviseppä pyydä. Myöhemmin: komeron mitat merkistä "nakyma:kellotorni-kaari", kun Linnanrakentaja
    vie sen merkit.json:iin (nyt staattiset kentät SeikkailuNousu.KaariUnity jne.). Poista worktree, kun haara on masterissa.
+5. KAUPUNKIPALLOT MAAILMANÄKYMÄSSÄ (omistaja TF 162, PT 22.2x kiire): 2739ded66 (peili/proto/linssiseppa2/pallot-maailma, worktree
+   wt/proto-linssiseppa2-pallot-maailma, korjausjunan rungon 5a99dda77 päällä): Paavalikko.MaailmaNakyma → kaikkien maiden pallot
+   (KaupunkiPalloMitat.Nakyy), pelissä vain nykyinen maa. SHA Natiivisepälle + PT:lle 22.34 (korjausjuna 163 tai 164).
 
 ## OMISTAJA 7.10. 15.5x (sitova): ennen junaa VAIN automaattiset testit + käännös; ei savuja, stillejä, iPad-mittauksia,
 ## toistoajoja; kuittaus 1 rivi (muutos, testit, SHA) → Natiiviseppä. Simu vain, jos vian syy muuten epäselvä.
