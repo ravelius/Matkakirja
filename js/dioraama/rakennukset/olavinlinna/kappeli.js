@@ -6,7 +6,7 @@
 // sivualttarit 40° ja 320° (fi.wikipedia: kolme alttaria), hagioskooppirako pohjassa (3°), 12 vihkimisristiä
 // seinäkaarella sektorin ulkopuolella. EI krusifiksia (Hannes Autere 1939).
 // Mitat lähteistä (7.10.2026, _lahteet/olavinlinna-pohjat/SEIKKAILU-TARKISTUS.md kohta 4 ja sivulöydöt; V = kaksi
-// lähdettä, A = päätelty): Kirkkotornin 3. kerros (V), IKKUNATON (Maconi 1910), RISTIHOLVI (Maconi 1910), sisähalkaisija
+// lähdettä, A = päätelty): Kirkkotornin 3. kerros (V), ikkunaton lukuun ottamatta koillismuurin ahdasta luukkuikkunaa (Aspelin 1875), RISTIHOLVI (Maconi 1910), sisähalkaisija
 // noin 7,8 m (A, Maconin leikkaus), lattia +92,6 (malli 9,6, muunnos malli = NN − 83,0), holvin laki +98,2 (malli 15,2).
 // Kappelin yläosaa kiertää 8-aukkoinen ampumakäytävä +96,4…+96,9 (malli 13,4…13,9) MUURIN SISÄLLÄ: ei aukkoja huoneeseen.
 // Oma lattia on `kiekko` (y 9,0…9,4) ja holvi `kupoli` + ristiholvi (laki 5,6 m lattiasta).
@@ -94,14 +94,19 @@ for (let k = 0; k < 12; k++) {
   RISTIT.push({ resepti: 'vihkimisristi', paikka: pol(a, SEINA, 10.75), suunta: a + 180, sade: 0.26 }); // 7.10.: 0,34 → 0,26 (pienempi seinä)
 }
 
-// Hagioskooppirako (pohjaseinä 3°, kammion aukko): kivireunus laatoista. Ikkunarakoa ei ole (kappeli ikkunaton, Maconi 1910).
+// Hagioskooppirako (pohjaseinä 3°, kammion aukko) ja koillismuurin ainoa ahdas ikkuna (Aspelin 1875, Sisältökirjurin
+// lähdetarkistus #4129; Maconi 1910 ei näytä sitä): kivireunus laatoista. Ikkuna 58,7° ristien 49,4° ja 68° välissä, korkealla
+// (lattia + 1,5…2,3), suljettu rautaluukulla; valo tulee edelleen kynttilöistä.
 const REIAT = [];
 for (const h of [
   { a: 3, y: 10.05, leveys: 0.24, korkeus: 0.5 }, // hagioskooppi
+  { a: 58.7, y: LATTIA + 1.5, leveys: 0.26, korkeus: 0.8, luukku: true }, // koillisikkuna (Aspelin 1875)
 ]) {
   REIAT.push({ resepti: 'rako', paikka: pol(h.a, SEINA, h.y), suunta: h.a + 180, leveys: h.leveys, korkeus: h.korkeus });
   REIAT.push({ resepti: 'laatta', paikka: pol(h.a, SEINA - 0.13, h.y), suunta: h.a + 180, leveys: h.leveys + 0.3, syvyys: 0.3, paksuus: 0.07 });
   REIAT.push({ resepti: 'laatta', paikka: pol(h.a, SEINA - 0.13, h.y + h.korkeus + 0.07), suunta: h.a + 180, leveys: h.leveys + 0.3, syvyys: 0.3, paksuus: 0.07 });
+  // Rautaluukku kiinni (pystylevy aukon edessä; laatan paikka-y = yläreuna).
+  if (h.luukku) REIAT.push({ resepti: 'laatta', paikka: pol(h.a, SEINA - 0.035, h.y + h.korkeus), suunta: h.a + 180, leveys: h.leveys + 0.04, syvyys: 0.025, paksuus: h.korkeus, pinnat: { yla: 'rauta', sivu: 'rauta', ala: 'rauta' } });
 }
 
 // --- Hahmot: kappalainen pääalttarin ääressä (messu), vouti seurakuntalaisena penkin luona.
