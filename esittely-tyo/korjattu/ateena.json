@@ -10,14 +10,14 @@
    "luokka": "linnoitus",
    "koko_m": 300,
    "teksti": "Akropolis kohoaa kaupungin keskeltä jyrkkäseinäisenä kalliona, jonka laella marmoritemppelit erottuvat ylhäältä vaaleina harmaata kiveä vasten. Tasanne nousee noin sadanviidenkymmenen metrin korkeuteen merenpinnasta, ja sen laella on ollut linnoitus jo pronssikaudella. Nykyiset temppelit rakennettiin 400-luvulla ennen ajanlaskun alkua, kun persialaiset olivat hävittäneet vanhat. Toukokuun lopussa vuonna 1941 kaksi yhdeksäntoistavuotiasta nuorukaista, Manolis Glezos ja Apostolos Santas, kiipesi yöllä kalliolle salaista reittiä ja otti alas miehittäjien hakaristilipun. Aamulla koko kaupunki näki, että lippu oli poissa.",
-   "lyhyt": "Akropoliin lounaiskulmassa seisoo kallion pienin temppeli, Athena Niken pyhäkkö. Sen jumalankuvalla ei ollut siipiä, ja ateenalaiset selittivät, ettei Voitto siksi voisi koskaan lentää pois heidän kaupungistaan. Osmanit purkivat temppelin vuonna 1686, mutta se koottiin myöhemmin uudelleen.",
+   "lyhyt": "Akropoliin lounaiskulmassa seisoo kallion pienin temppeli, Athene Niken pyhäkkö. Sen jumalankuvalla ei ollut siipiä, ja ateenalaiset selittivät, ettei Voitto siksi voisi koskaan lentää pois heidän kaupungistaan. Osmanit purkivat temppelin vuonna 1686, mutta se koottiin myöhemmin uudelleen.",
    "syventava": "Miten pojat pääsivät kalliolle?",
    "kysymykset": [
     "Miksi Akropolis rakennettiin juuri tälle kalliolle?",
     "Mitä Manolis Glezokselle tapahtui myöhemmin?",
     "Millainen on Akropoliin porttirakennus Propylaia?",
     "Miksi Akropoliille rakennettiin hissi?",
-    "Kuinka monta vierailijaa kalliolla käy päivässä?"
+    "Miksi Akropoliilla on aina rakennustelineitä?"
    ],
    "isoisa": false,
    "lahteet": [
@@ -34,7 +34,7 @@
      "url": "https://greekcitytimes.com/2025/05/30/nazi-1941-acropolis-flag"
     },
     {
-     "vaite": "Athena Niken temppeli on Akropoliin pienin temppeli, ja se seisoo kallion lounaiskulmassa.",
+     "vaite": "Athene Niken temppeli on Akropoliin pienin temppeli, ja se seisoo kallion lounaiskulmassa.",
      "url": "https://en.wikipedia.org/wiki/Temple_of_Athena_Nike"
     },
     {
@@ -46,10 +46,10 @@
   {
    "id": "Q10288",
    "nimi": "Parthenon",
-   "kuvaus": "Athenan temppeli Akropoliilla",
+   "kuvaus": "Athenen temppeli Akropoliilla",
    "luokka": "rakennus",
    "koko_m": 70,
-   "teksti": "Parthenon on ylhäältä katsottuna pitkä pylväiden reunustama suorakaide Akropoliin korkeimmalla kohdalla, ja pylväsrivien välistä näkyy, ettei temppelillä ole enää kattoa. Se rakennettiin 400-luvulla ennen ajanlaskun alkua vajaassa kymmenessä vuodessa Athena Parthenoksen temppeliksi, ja sen suunnittelivat Iktinos ja Kallikrates Feidiaan johtaessa veistostöitä. Rakennuksessa ei juuri ole suoria viivoja: alusta kaartuu keskeltä hieman ylöspäin, ja pylväät kallistuvat aavistuksen sisäänpäin, jotta temppeli näyttäisi silmään suoralta. Vuonna 1687 venetsialaisten ammus osui ruutivarastoksi muutettuun temppeliin, ja räjähdys repi sen keskiosan auki.",
+   "teksti": "Parthenon on ylhäältä katsottuna pitkä pylväiden reunustama suorakaide Akropoliin korkeimmalla kohdalla, ja pylväsrivien välistä näkyy, ettei temppelillä ole enää kattoa. Se rakennettiin 400-luvulla ennen ajanlaskun alkua vajaassa kymmenessä vuodessa Athene Parthenoksen temppeliksi, ja sen suunnittelivat Iktinos ja Kallikrates Feidiaan johtaessa veistostöitä. Rakennuksessa ei juuri ole suoria viivoja: alusta kaartuu keskeltä hieman ylöspäin ja pylväät kallistuvat aavistuksen sisäänpäin, ja hienosäätöä on selitetty sillä, että temppeli näyttäisi silmään täysin suoralta. Vuonna 1687 venetsialaisten ammus osui ruutivarastoksi muutettuun temppeliin, ja räjähdys repi sen keskiosan auki.",
    "lyhyt": "Parthenon oli ollut vuosisatoja ensin kirkkona ja sitten moskeijana, ennen kuin räjähdys runteli sen. Suuri osa sen veistoksista on nykyään Lontoossa Brittiläisessä museossa, jonne lordi Elgin vei ne 1800-luvun alussa.",
    "syventava": "Kuka ampui Parthenonin raunioiksi?",
    "kysymykset": [
@@ -62,11 +62,11 @@
    "isoisa": false,
    "lahteet": [
     {
-     "vaite": "Parthenon rakennettiin Athena Parthenoksen temppeliksi vuosina 447–438 eaa.; suunnittelijat Iktinos ja Kallikrates, veistostöitä johti Feidias.",
+     "vaite": "Parthenon rakennettiin Athene Parthenoksen temppeliksi vuosina 447–438 eaa.; suunnittelijat Iktinos ja Kallikrates, veistostöitä johti Feidias.",
      "url": "https://en.wikipedia.org/wiki/Parthenon"
     },
     {
-     "vaite": "Stylobaatti kaartuu keskeltä ylöspäin, ja pylväät kallistuvat hieman sisäänpäin optisten harhojen korjaamiseksi; suoria viivoja on vähän.",
+     "vaite": "Stylobaatti kaartuu keskeltä ylöspäin, ja pylväät kallistuvat hieman sisäänpäin; suoria viivoja on vähän. Yleisin mutta kiistelty selitys on optisten harhojen korjaaminen, siksi teksti sanoo \"on selitetty sillä\".",
      "url": "https://www.thecollector.com/parthenon-illusion/"
     },
     {
@@ -90,7 +90,7 @@
    "luokka": "aukio",
    "koko_m": 300,
    "teksti": "Antiikin agora erottuu ylhäältä vihreänä, raunioiden ja puiden täplittämänä alueena Akropoliin luoteispuolella, ja sen itälaidalla kulkee pitkä kaksikerroksinen pylväshalli. Agora oli Ateenan tori ja kokouspaikka, jossa kauppa, politiikka ja oikeus kohtasivat. Täällä Sokrates kulki kojujen ja pylväikköjen lomassa ja esitti vastaantulijoille yhä vaikeampia kysymyksiä. Kansalaiset äänestivät myös liian vaikutusvaltaisten miesten karkottamisesta raapimalla nimen saviastian palaseen, ja torin museossa on palasia, joihin on kirjoitettu sotapäällikkö Themistokleen nimi.",
-   "lyhyt": "Antiikin agoran itälaidan pylväshalli, Attaloksen stoa, oli alun perin Pergamonin kuninkaan Attalos toisen lahja kaupungille 100-luvulla ennen ajanlaskun alkua. Amerikkalaiset arkeologit rakensivat sen uudelleen 1950-luvulla, ja nykyään siinä toimii agoran museo.",
+   "lyhyt": "Antiikin agoran pohjoislaidalla seisoi Maalattu pylväshalli eli Stoa Poikile, jonka suojissa kyproslainen Zenon opetti oppilaitaan noin kolmesataa vuotta ennen ajanlaskun alkua. Kreikan sana stoa tarkoittaa pylväshallia, ja juuri tästä hallista koko stoalaisuuden aate sai nimensä.",
    "syventava": "Mitä Sokrates kyseli torilla?",
    "kysymykset": [
     "Miksi ateenalaiset tuomitsivat Sokrateen kuolemaan?",
@@ -116,6 +116,10 @@
     {
      "vaite": "Attaloksen stoa oli Pergamonin kuninkaan Attalos II:n lahja Ateenalle.",
      "url": "https://en.wikipedia.org/wiki/Stoa_of_Attalos"
+    },
+    {
+     "vaite": "Maalattu pylväshalli Stoa Poikile seisoi agoran pohjoislaidalla; Kitionin Zenon opetti siellä noin vuodesta 300 eaa. kuolemaansa noin 262 eaa., ja hänen koulunsa sai nimen stoalaisuus hallin mukaan; halli rakennettiin 460-luvulla eaa.",
+     "url": "https://en.wikipedia.org/wiki/Stoa_Poikile"
     }
    ]
   },
@@ -126,12 +130,12 @@
    "luokka": "rakennus",
    "koko_m": 120,
    "teksti": "Olympoksen Zeuksen temppelistä on ylhäältä katsottuna jäljellä vain ryhmä jättimäisiä pylväitä laajan kivialustan laidalla. Alun perin seitsemäntoista metriä korkeita pylväitä oli sataneljä, ja temppeli oli antiikin Kreikan suurin. Rakentaminen aloitettiin 500-luvulla ennen ajanlaskun alkua, mutta temppeli valmistui vasta keisari Hadrianuksen aikana, yli kuusisataa vuotta myöhemmin. Pystyssä on nykyään viisitoista pylvästä. Kuudestoista kaatui myrskyssä vuonna 1852, ja se makaa yhä maassa kuin kumoon kaatunut pino kivikiekkoja.",
-   "lyhyt": "Olympoksen Zeuksen temppelin rakentaminen alkoi tyranni Peisistratoksen aikana, mutta työ pysähtyi perustuksiin, kun hänen sukunsa menetti vallan. Vuosisatoja myöhemmin keisari Hadrianus vihki temppelin, ja sen viereen pystytettiin hänen kunniakseen porttikaari.",
+   "lyhyt": "Olympoksen Zeuksen temppelistä on vuosisatojen varrella kadonnut pylväitä yksi kerrallaan. Rooman kenraali Sulla vei muutaman Roomaan jo ennen ajanlaskun alkua, ja vuonna 1759 kaupungin osmanihallitsija räjäytti yhden ruudilla ja poltti marmorin kalkiksi moskeijansa laastiin.",
    "syventava": "Miksi temppelin rakentaminen pysähtyi?",
    "kysymykset": [
     "Kuka aloitti temppelin rakentamisen?",
     "Millainen Zeuksen patsas temppelissä oli?",
-    "Mihin temppelin kadonneet pylväät joutuivat?",
+    "Kuka oli roomalainen kenraali Sulla?",
     "Miksi pylväät ovat korinttilaisia eikä doorilaisia?",
     "Miksi Hadrianus halusi saattaa temppelin valmiiksi?"
    ],
@@ -156,6 +160,10 @@
     {
      "vaite": "Hadrianuksen kaari pystytettiin läheisen temppelin vihkimisen yhteydessä 131 tai 132 jaa. keisarin kunniaksi.",
      "url": "https://en.wikipedia.org/wiki/Arch_of_Hadrian_(Athens)"
+    },
+    {
+     "vaite": "Sulla vei keskeneräisiä pylväitä Roomaan Capitoliumin Jupiter-temppeliin ryöstettyään Ateenan vuonna 86 eaa.; Ateenan osmanihallitsija Mustapha Agha Tzistarakis kaatoi yhden pylvään ruudilla 27.4.1759 ja käytti marmorin kalkiksi Tzistarakisin moskeijan laastiin.",
+     "url": "https://en.wikipedia.org/wiki/Temple_of_Olympian_Zeus,_Athens"
     }
    ]
   },
@@ -206,7 +214,7 @@
    "luokka": "rakennus",
    "koko_m": 30,
    "teksti": "Erekhtheion on Akropoliin pohjoisreunan temppeli, jonka eteläistä kuistia kannattaa pylväiden sijaan kuusi marmorista neitoa, karyatidia. Paikalla seisovat patsaat ovat jäljennöksiä: alkuperäisistä viisi on Akropolis-museossa, ja kuudennen lordi Elgin vei Lontooseen 1800-luvun alussa. Tarun mukaan juuri tällä kalliolla Athene ja Poseidon kiistelivät siitä, kumman suojelukseen kaupunki kuuluisi. Poseidon iski kalliosta suolaisen lähteen ja Athene kasvatti oliivipuun, ja voiton vei Athene. Temppelin länsipuolella kasvaa yhä oliivipuu, joka istutettiin 1900-luvulla pyhän puun paikalle.",
-   "lyhyt": "Erekhtheionin karyatidit eivät ole toistensa kopioita, sillä kampaukset, vaatteiden laskokset ja polven asento vaihtelevat. Museossa viisi siskoa, jotka siirrettiin sisätiloihin vuonna 1979, puhdistettiin 2010-luvulla laserilla mustasta noesta, ja vierailijat saivat seurata työtä suorana.",
+   "lyhyt": "Erekhtheionin karyatidit eivät ole toistensa kopioita: kasvot ja vaatteiden laskokset on veistetty erikseen, ja kolme seisoo oikealla, kolme vasemmalla jalalla. Hahmojen paksut, taidokkaat kampaukset eivät ole vain koristeita, vaan ne tukevat kaulaa, joka olisi muuten koko patsaan heikoin kohta.",
    "syventava": "Missä kuudes karyatidi on nyt?",
    "kysymykset": [
     "Kuka oli tarujen kuningas Erekhtheus?",
@@ -222,8 +230,12 @@
      "url": "https://en.wikipedia.org/wiki/Caryatid"
     },
     {
-     "vaite": "Elgin vei karyatidin 1800-luvun alussa; patsaat eroavat kampauksiltaan, laskoksiltaan ja polven asennoltaan; ne puhdistettiin laserilla vuosina 2011–2015 museovieraiden nähden.",
+     "vaite": "Elgin vei karyatidin 1800-luvun alussa; patsaat puhdistettiin laserilla vuosina 2011–2015 museovieraiden nähden.",
      "url": "https://resources.culturalheritage.org/conservators-converse/2014/07/08/from-the-new-york-times-acropolis-maidens-glow-anew/"
+    },
+    {
+     "vaite": "Kuusi karyatidia eivät ole samanlaisia: kasvot, asento, laskokset ja hiukset on veistetty erikseen, ja kolme vasemmanpuoleista seisoo oikealla jalalla ja kolme oikeanpuoleista vasemmalla; paksut kampaukset antavat staattisen tuen kaulalle, joka olisi muuten hahmon heikoin kohta.",
+     "url": "https://en.wikipedia.org/wiki/Caryatid"
     },
     {
      "vaite": "Taru: Athene ja Poseidon kilpailivat kaupungista; Poseidon antoi suolaisen lähteen, Athene oliivipuun, ja Athene voitti; Erekhtheion rakennettiin kiistan paikalle, ja sen edustalla kasvaa oliivipuu.",
@@ -245,8 +257,8 @@
    "kuvaus": "Akropoliin löytöjen moderni museo",
    "luokka": "rakennus",
    "koko_m": 160,
-   "teksti": "Akropolis-museo on Akropoliin etelärinteen juurella seisova lasinen ja betoninen rakennus, jonka ylin kerros on käännetty muuta taloa vinoon. Museo avattiin vuonna 2009, ja sen suunnitteli arkkitehti Bernard Tschumi. Ylimmän kerroksen lasiseinäinen Parthenon-sali on linjattu samaan suuntaan kuin itse temppeli, joka näkyy sen ikkunoista. Salissa kiertää Parthenonin veistetty friisi kokonaisuudessaan: Ateenassa säilyneiden laattojen välissä on valkoisia kipsivaloksia niistä osista, jotka lordi Elgin vei 1800-luvun alussa ja jotka ovat nykyään Lontoossa.",
-   "lyhyt": "Akropolis-museo rakennettiin arkeologisen kaivausalueen päälle, ja lasilattioiden läpi näkyy muinaisen asuinalueen raunioita, joiden kaduilla on vuodesta 2019 voinut myös kävellä. Museossa on esillä myös viisi Erekhtheionin karyatidia, ja kuudennen jalusta on jätetty tyhjäksi.",
+   "teksti": "Akropolis-museo on Akropoliin etelärinteen juurella seisova lasinen ja betoninen rakennus, jonka ylin kerros on käännetty muuta taloa vinoon. Museo avattiin vuonna 2009, ja sen suunnittelivat arkkitehdit Bernard Tschumi ja Michael Photiadis. Ylimmän kerroksen lasiseinäinen Parthenon-sali on linjattu samaan suuntaan kuin itse temppeli, joka näkyy sen ikkunoista. Salissa kiertää Parthenonin veistetty friisi kokonaisuudessaan: Ateenassa säilyneiden laattojen välissä on valkoisia kipsivaloksia niistä osista, jotka lordi Elgin vei 1800-luvun alussa ja jotka ovat nykyään Lontoossa.",
+   "lyhyt": "Akropolis-museo rakennettiin arkeologisen kaivausalueen päälle, ja lasilattioiden läpi näkyy muinaisen asuinalueen raunioita, joiden kaduilla on vuodesta 2019 voinut myös kävellä. Museossa viisi Erekhtheionin karyatidia puhdistettiin laserilla mustasta noesta museon vieraiden nähden, ja kuudennen jalusta on jätetty tyhjäksi.",
    "syventava": "Miksi osa friisistä on valkoista?",
    "kysymykset": [
     "Miksi museon rakentaminen herätti kiistaa?",
@@ -270,7 +282,7 @@
      "url": "https://en.wikipedia.org/wiki/Acropolis_Museum"
     },
     {
-     "vaite": "Museossa on viisi karyatidia, ja kuudennen paikka on tyhjä.",
+     "vaite": "Museossa on viisi karyatidia, ja kuudennen paikka on tyhjä; patsaat puhdistettiin laserilla museovieraiden nähden.",
      "url": "https://resources.culturalheritage.org/conservators-converse/?p=11119"
     },
     {
@@ -325,7 +337,7 @@
    "kuvaus": "Ateenan keskusaukio parlamentin edessä",
    "luokka": "aukio",
    "koko_m": 150,
-   "teksti": "Syntagma-aukio on Ateenan keskusaukio, ylhäältä katsottuna puiden reunustama neliö, jonka itälaidalla kohoaa vaalea parlamenttitalo. Talo rakennettiin 1830- ja 1840-lukujen taitteessa Kreikan ensimmäisen kuninkaan Otton palatsiksi, ja parlamentti on kokoontunut siellä vuodesta 1935. Sen edessä on tuntemattoman sotilaan hauta, jota vartioivat evzonit valkoisissa hameissaan ja tupsukengissään. Vartio vaihtuu tasatunnein hitaalla askelluksella, jossa jalka nousee suorana eteen. Aukion alla metroasemalla on esillä kaivauksissa löydettyjä hautoja ja pätkä muinaista vesijohtoa.",
+   "teksti": "Syntagma-aukio on Ateenan keskusaukio, ylhäältä katsottuna puiden reunustama neliö, jonka itälaidalla kohoaa vaalea parlamenttitalo. Talo rakennettiin 1830- ja 1840-lukujen taitteessa Kreikan ensimmäisen kuninkaan Otton palatsiksi, ja parlamentti on kokoontunut siellä vuodesta 1935. Sen edessä on tuntemattoman sotilaan hauta, jota vartioivat evzonit tupsukengissään. Vartio vaihtuu tasatunnein hitaalla askelluksella, jossa jalka nousee suorana eteen, ja sunnuntaisin vaihto tehdään juhlallisemmin valkoisissa laskoshameissa. Aukion alla metroasemalla on esillä kaivauksissa löydettyjä hautoja ja pätkä muinaista vesijohtoa.",
    "lyhyt": null,
    "syventava": "Miksi evzonien kengissä on tupsut?",
    "kysymykset": [
@@ -344,6 +356,10 @@
     {
      "vaite": "Evzonien asuun kuuluu valkoinen fustanella-hame ja tupsulliset tsarouhia-kengät; marssiessa jalka nousee suorana ylös.",
      "url": "https://www.athensinsider.com/evzones-behind-the-seams/"
+    },
+    {
+     "vaite": "Valkoista fustanellaa käytetään sunnuntaisin ja juhlatilaisuuksissa; maanantaista lauantaihin evzoneilla on khakinvärinen kesäasu tai musta talviasu. Vartio vaihtuu päivittäin tasatunnein, ja sunnuntaina kello yksitoista pidetään suuri vaihtoparaati.",
+     "url": "https://whyathens.com/changing-of-the-guard-hellenic-parliament/"
     },
     {
      "vaite": "Syntagman metroaseman kaivauksissa löytyi hautoja ja osa Peisistratoksen aikaista vesijohtoa, jotka ovat esillä.",

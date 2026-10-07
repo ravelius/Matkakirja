@@ -9,11 +9,11 @@
    "kuvaus": "Alankomaiden kansallinen taidemuseo",
    "luokka": "rakennus",
    "koko_m": 250,
-   "teksti": "Valtionmuseo Rijksmuseum on punatiilinen palatsi, jonka keskeltä kulkee holvikäytävä suoraan rakennuksen läpi, ja sitä pitkin pyöräilijät polkevat yhä joka päivä. Pierre Cuypersin suunnittelema museo avattiin vuonna 1885. Sen tunnetuin teos on Rembrandtin Yövartio, joka siirrettiin vuonna 1715 Amsterdamin raatihuoneeseen. Jotta valtava maalaus mahtuisi kahden pylvään väliin, sitä leikattiin kaikilta neljältä sivulta, ja vasemmasta reunasta katosi kaksi hahmoa. Leikatut palat ovat yhä kadoksissa, joten Yövartio on nykyään pienempi kuin Rembrandt sen maalasi.",
-   "lyhyt": "Valtionmuseo Rijksmuseum avattiin uudelleen huhtikuussa 2013 kymmenen vuotta kestäneen remontin jälkeen, ja avajaisia johti kuningatar Beatrix. Remontti maksoi kolmesataaseitsemänkymmentäviisi miljoonaa euroa, ja rakennusongelmat lykkäsivät avaamista kerta toisensa jälkeen. Kiistaa käytiin myös siitä, saavatko pyöräilijät käytävänsä takaisin.",
+   "teksti": "Valtionmuseo Rijksmuseum on punatiilinen palatsi, jonka keskeltä kulkee holvikäytävä suoraan rakennuksen läpi, ja sitä pitkin pyöräilijät polkevat yhä joka päivä. Pierre Cuypersin suunnittelema museo avattiin vuonna 1885. Sen tunnetuin teos on Rembrandtin Yövartio, joka siirrettiin Amsterdamin raatihuoneeseen jo vuonna 1715, kauan ennen museon avaamista. Siellä maalausta leikattiin kaikilta neljältä sivulta, ilmeisesti siksi, että valtava taulu mahtuisi kahden pylvään väliin, ja vasemmasta reunasta katosi kaksi hahmoa. Leikatut palat ovat yhä kadoksissa, joten Yövartio on nykyään pienempi kuin Rembrandt sen maalasi.",
+   "lyhyt": "Valtionmuseo Rijksmuseumin kirkollinen ulkonäkö oli tarkoituksellinen: katolinen Pierre Cuypers muokkasi hyväksyttyä suunnitelmaa hiljaa katolisempaan suuntaan ja vaihtoi renessanssin piirteitä goottilaisiin. Protestanttinen kuningas Vilhelm kolmas ei saapunut vuoden 1885 avajaisiin lainkaan vaan lähetti tilalleen ruhtinasparin.",
    "syventava": "Miksi Yövartiota leikattiin pienemmäksi?",
    "kysymykset": [
-    "Miksi museota moitittiin aikanaan liian katoliseksi?",
+    "Miksi pyörätie kulkee museon läpi?",
     "Mitä Yövartion tutkimuksissa on löydetty?",
     "Mitä Vermeerin maalauksia museossa on?",
     "Miksi Yövartioon on hyökätty monta kertaa?",
@@ -38,8 +38,12 @@
      "url": "https://en.wikipedia.org/wiki/The_Night_Watch"
     },
     {
-     "vaite": "Kymmenen vuoden ja 375 miljoonan euron remontin jälkeen kuningatar Beatrix avasi museon 13.4.2013; avaaminen viivästyi rakennusongelmien vuoksi.",
-     "url": "https://en.wikipedia.org/wiki/Rijksmuseum"
+     "vaite": "Katolinen Cuypers muokkasi hyväksyttyä suunnitelmaa hiljaa katolisemmaksi, poisti renessanssin piirteitä ja lisäsi goottilaisia; Vilhelm kolmas ei osallistunut vuoden 1885 avajaisiin vaan lähetti sijaansa ruhtinasparin Von Wied.",
+     "url": "https://www.rijksmuseum.nl/en/stories/10-things/story/cuypers-museum-building"
+    },
+    {
+     "vaite": "Syventävä: pyörätie rakennuksen läpi oli alkuperäisen toimeksiannon vaatimus, sillä museo katkaisi vanhan kaupungin ja uusien eteläisten kaupunginosien välisen kulkureitin.",
+     "url": "https://www.rijksmuseum.nl/en/stories/10-things/story/cuypers-museum-building"
     }
    ]
   },
@@ -49,8 +53,8 @@
    "kuvaus": "Anne Frankin piilopaikka ja museo",
    "luokka": "rakennus",
    "koko_m": 40,
-   "teksti": "Anne Frankin talo on 1600-luvun kanavatalo Prinsengrachtin varrella, aivan Westerkerkin tornin lähellä. Talon takaosan salaisiin huoneisiin piiloutui heinäkuussa 1942 Anne Frank perheineen natsien vainoa pakoon, ja pian heidän seuraansa tuli neljä muuta juutalaista. Piilon ovea peitti siirrettävä kirjahylly, joka on yhä paikallaan. Elokuussa 1944, yli kaksi vuotta myöhemmin, piilo paljastui ja sen asukkaat pidätettiin. Ikkunasta Anne näki suuren hevoskastanjan, jonka muuttumista vuodenaikojen mukaan hän kuvasi päiväkirjassaan; puu on kaatunut, mutta sen pistokkaita kasvaa ympäri maailmaa.",
-   "lyhyt": "Anne Frankin talon kahdeksasta piileskelijästä vain Annen isä Otto Frank selvisi sodasta. Avustaja Miep Gies oli pelastanut päiväkirjan, ja Otto julkaisi sen vuonna 1947. Talo avattiin museona vuonna 1960, ja nykyään siellä käy yli miljoona ihmistä vuodessa.",
+   "teksti": "Anne Frankin talo on 1600-luvun kanavatalo Prinsengrachtin varrella, aivan Westerkerkin tornin lähellä. Talon takaosan salaisiin huoneisiin piiloutui heinäkuussa 1942 Anne Frank perheineen natsien vainoa pakoon, ja pian heidän seuraansa tuli neljä muuta juutalaista. Piilon ovea peitti siirrettävä kirjahylly, joka on yhä paikallaan. Elokuussa 1944, yli kaksi vuotta myöhemmin, piilo paljastui ja sen asukkaat pidätettiin. Ikkunasta Anne näki suuren hevoskastanjan, jonka muuttumista vuodenaikojen mukaan hän kuvasi päiväkirjassaan; puu on kaatunut, mutta sen siemenistä kasvatettuja taimia on istutettu ympäri maailmaa.",
+   "lyhyt": "Anne Frankin talon kahdeksasta piileskelijästä vain Annen isä Otto Frank selvisi sodasta. Avustaja Miep Gies oli pelastanut päiväkirjan, ja Otto julkaisi sen vuonna 1947. Talo oli jo määrä purkaa tehtaan tieltä, mutta kansalaiskampanja pelasti sen, ja museo avattiin vuonna 1960.",
    "syventava": "Kuka pelasti Annen päiväkirjan?",
    "kysymykset": [
     "Ketkä toivat piileskelijöille ruokaa?",
@@ -82,8 +86,8 @@
      "url": "https://en.wikipedia.org/wiki/The_Diary_of_a_Young_Girl"
     },
     {
-     "vaite": "Museo avattiin vuonna 1960; kävijöitä yli 1,2 miljoonaa vuodessa (2023 ja 2024).",
-     "url": "https://en.wikipedia.org/wiki/Anne_Frank_House"
+     "vaite": "Berghausin tekstiilitehdas aikoi purkaa Prinsengrachtin kulmatalot uuden tehtaan tieltä; amsterdamilaisten komitea ja lehdistökampanja pelastivat talon, Anne Frank Stichting perustettiin 1957, ja piilopaikka avattiin yleisölle 3.5.1960.",
+     "url": "https://www.annefrank.org/en/about-us/how-it-all-began"
     }
    ]
   },
@@ -94,7 +98,7 @@
    "luokka": "rakennus",
    "koko_m": 120,
    "teksti": "Museoaukion laidalla Van Gogh -museo näkyy ylhäältä kahtena osana: suorakulmaisena päärakennuksena ja sen takana soikeana siipenä, jonka katto on titaania. Gerrit Rietveldin suunnittelema päärakennus avattiin vuonna 1973, ja japanilaisen Kisho Kurokawan siipi valmistui vuonna 1999. Museossa on maailman suurin kokoelma Vincent van Goghin maalauksia ja piirustuksia. Joulukuussa 2002 varkaat kiipesivät katolle ja veivät kaksi maalausta, jotka löytyivät vasta vuonna 2016 napolilaisen Camorra-järjestön jäsenen talosta Italiasta. Varastetut teokset olivat merinäkymä Scheveningenin rannalta ja kuva Nuenenin kirkosta.",
-   "lyhyt": "Taiteilijan nimeä kantavan Van Gogh -museon kokoelma on peräisin hänen omalta suvultaan. Veljensä Theon kuoltua leski Jo van Gogh-Bonger teki Vincentin töitä ja kirjeitä tunnetuiksi, ja heidän poikansa luovutti kokoelman säätiölle vuonna 1962.",
+   "lyhyt": "Taiteilijan nimeä kantavan Van Gogh -museon kokoelma on peräisin hänen omalta suvultaan. Kun Vincentin veli Theo kuoli, tämän leski Jo van Gogh-Bonger teki Vincentin työt ja kirjeet tunnetuiksi, ja heidän poikansa luovutti kokoelman säätiölle vuonna 1962.",
    "syventava": "Kuka teki Van Goghin tunnetuksi?",
    "kysymykset": [
     "Miksi museossa ei ole Tähtikirkasta yötä?",
@@ -134,7 +138,7 @@
    "luokka": "rakennus",
    "koko_m": 80,
    "teksti": "Amsterdamin kuninkaallinen palatsi on Dam-aukion länsilaidan massiivinen kivirakennus, jonka takapäädyn katolla pronssinen Atlas kantaa taivaanpalloa harteillaan. Se rakennettiin 1600-luvun puolivälissä Jacob van Campenin johdolla kaupungin uudeksi raatihuoneeksi. Kuninkaanlinna siitä tuli vasta vuonna 1808, kun Napoleonin veli Ludvig Bonaparte, Hollannin kuningas, muutti sinne asumaan. Ranskalaisvallan päätyttyä vuonna 1813 Oranian prinssi Vilhelm palautti rakennuksen kaupungille. Suurimman salin, Kansalaissalin, marmorilattiaan on upotettu kartat maapallon puoliskoista ja pohjoisesta tähtitaivaasta, sillä sali kuvaa koko maailmankaikkeutta.",
-   "lyhyt": "Amsterdamin kuninkaallinen palatsi seisoo kolmentoistatuhannen kuudensadanviidenkymmenenyhdeksän puupaalun varassa. Luvun muistaa helposti: ykkönen, vuoden päivien määrä ja yhdeksikkö. Nykyään palatsissa järjestetään kuningashuoneen virallisia vastaanottoja ja valtiovierailujen tilaisuuksia, ja muulloin se on avoinna yleisölle.",
+   "lyhyt": "Amsterdamin kuninkaallinen palatsi seisoo kolmentoistatuhannen kuudensadanviidenkymmenenyhdeksän puupaalun varassa. Luvun muistaa helposti: ykkönen, vuoden päivien määrä ja yhdeksikkö. Nykyään palatsissa järjestetään kuningashuoneen virallisia vastaanottoja ja valtiovierailujen tilaisuuksia, ja osan vuodesta se on avoinna yleisölle.",
    "syventava": "Kuka teki palatsista kuninkaanlinnan?",
    "kysymykset": [
     "Miksi palatsia kutsuttiin maailman kahdeksanneksi ihmeeksi?",
@@ -166,8 +170,12 @@
      "url": "https://en.wikipedia.org/wiki/Royal_Palace_of_Amsterdam"
     },
     {
-     "vaite": "Palatsia käytetään kuningashuoneen virallisiin vastaanottoihin ja valtiovierailuihin, ja se on muulloin yleisölle avoinna.",
+     "vaite": "Palatsia käytetään kuningashuoneen virallisiin vastaanottoihin ja valtiovierailuihin.",
      "url": "https://www.royal-house.nl/topics/royal-palace-amsterdam"
+    },
+    {
+     "vaite": "Palatsi on yleisölle avoinna vain osan vuodesta; vuonna 2026 kävijöille 26. kesäkuuta – 11. marraskuuta.",
+     "url": "https://www.paleisamsterdam.nl/en/"
     }
    ]
   },
@@ -178,19 +186,23 @@
    "luokka": "rakennus",
    "koko_m": 300,
    "teksti": "Amsterdamin keskusrautatieasema venyy vanhan kaupungin pohjoislaidalla pitkänä punatiilisenä julkisivuna, jonka keskellä kohoaa kaksi tornia. Oikeanpuoleisessa tornissa on kello, mutta vasemmanpuoleisen taulu näyttää tuulen suuntaa, muistona ajasta, jolloin purjelaivat laskivat aivan aseman paikalle. Asemaa rakennettiin kahdeksan vuotta, ja se avattiin lokakuussa 1889. Se rakennettiin veteen kolmelle tekosaarelle, joiden hiekka tuotiin dyyneiltä Velsenin läheltä. Perustukseksi märkään pohjaan lyötiin lähes yhdeksäntuhatta puupaalua, samaan tapaan kuin useimpien Amsterdamin vanhojen rakennusten alle.",
-   "lyhyt": "Amsterdamin keskusrautatieaseman suunnittelivat arkkitehti Pierre Cuypers ja insinööri ja arkkitehti Adolf Leonard van Gendt. Cuypers piirsi myös valtionmuseo Rijksmuseumin, ja van Gendt Concertgebouw-konserttitalon. Nykyään asema on koko Alankomaiden vierailluin suojeltu valtakunnallinen muistomerkki.",
+   "lyhyt": "Amsterdamin keskusrautatieaseman edessä olevan vesialtaan alle rakennettiin pyöräparkki, joka avattiin vuonna 2023 ja johon mahtuu lähes seitsemäntuhatta polkupyörää. Aseman takana on veden alla toinen, pienempi halli. Pyöränsä jättänyt kävelee käytävää pitkin asemalle kastumatta.",
    "syventava": "Miksi tornissa on tuuliviiri?",
    "kysymykset": [
     "Miksi asema herätti rakennusaikanaan vastustusta?",
     "Mihin aseman takaa lähtevät ilmaiset lautat vievät?",
     "Kuka on käyttänyt aseman kuninkaallista odotushuonetta?",
-    "Miksi aseman pyöräparkki on rakennettu veden alle?",
+    "Miksi asemalle tarvittiin niin suuri pyöräparkki?",
     "Mitä aseman julkisivun koristeet kuvaavat?"
    ],
    "isoisa": false,
    "lahteet": [
     {
-     "vaite": "Vasemman tornin taulu näyttää tuulen suunnan ja oikeassa on kello; tuulitaulu muistuttaa ajasta, jolloin purjelaivat laskivat aseman paikalle.",
+     "vaite": "Aseman kahdessa tornissa on kello itäisessä eli oikeanpuoleisessa ja tuulinäyttäjä läntisessä eli vasemmanpuoleisessa tornissa.",
+     "url": "https://nl.wikipedia.org/wiki/Amsterdam_Centraal"
+    },
+    {
+     "vaite": "Tuulitaulu muistuttaa ajasta, jolloin purjelaivat laskivat aseman paikalle.",
      "url": "https://aviewoncities.com/amsterdam/central-station"
     },
     {
@@ -202,19 +214,14 @@
      "url": "https://www.iamsterdam.com/en/whats-on/calendar/attractions-and-sights/sights/amsterdam-central-station"
     },
     {
-     "vaite": "Suunnittelijat Pierre Cuypers ja insinööri Adolf Leonard van Gendt; van Gendt suunnitteli Concertgebouw'n.",
-     "url": "https://en.wikipedia.org/wiki/Concertgebouw,_Amsterdam"
+     "vaite": "Stationspleinin pyöräparkki rakennettiin Open Havenfront -vesialtaan alle, siihen mahtuu lähes 7 000 pyörää, se avattiin 26.1.2023, ja se on yhdistetty maan alla metrohalliin ja asemaan, joten pyöräilijä pääsee kuivin jaloin junalle; aseman takana IJ-boulevardin veden alla on toinen, noin 4 000 pyörän halli.",
+     "url": "https://dutchcycling.nl/knowledge/cycling-news/new-underwater-bike-parking-at-amsterdam-central-station/"
     },
     {
-     "vaite": "Cuypers suunnitteli myös Rijksmuseumin.",
-     "url": "https://en.wikipedia.org/wiki/Pierre_Cuypers"
-    },
-    {
-     "vaite": "Asemalla käy enemmän vierailijoita kuin missään muussa Alankomaiden yli 60 000 valtakunnallisesta muistomerkistä.",
-     "url": "https://www.iamsterdam.com/en/whats-on/calendar/attractions-and-sights/sights/amsterdam-central-station"
+     "vaite": "Kysymys: asemalla on ollut kuninkaallinen odotushuone vuodesta 1889, ja vuonna 2018 sen sivuovet avattiin pysyvästi ja korvattiin lasilla, jotta yleisö näkee sisään.",
+     "url": "https://en.wikipedia.org/wiki/Royal_waiting_room"
     }
-   ],
-   "puhe_lyhyt": "Amsterdamin keskusrautatieaseman suunnittelivat arkkitehti Pierre Cuypers ja insinööri ja arkkitehti Adolf Leonard van Gendt. Cuypers piirsi myös valtionmuseo Rijksmuseumin, ja van Gendt Konsertgebau-konserttitalon. Nykyään asema on koko Alankomaiden vierailluin suojeltu valtakunnallinen muistomerkki."
+   ]
   },
   {
    "id": "Q478707",
@@ -223,7 +230,7 @@
    "luokka": "kanava",
    "koko_m": 2500,
    "teksti": "Amsterdamin kanaalivyöhyke näkyy ylhäältä sisäkkäisinä puolikaarina, jotka kiertävät vanhaa keskustaa. Vuonna 1613 kaupunki päätti laajentua suunnitelmallisesti, ja kaupunginpuuseppä Hendrick Staetsin suunnitelman mukaan kaivettiin kolme pääkanavaa: Herengracht, Keizersgracht ja Prinsengracht. Kanavien ansiosta kauppalaivat pääsivät laituriin suoraan kauppiaiden talojen eteen. Rantoja reunustavat kapeat kauppiastalot, joista osa kallistuu tahallaan eteenpäin. Päädyn alta työntyy nostopuu, jonka koukulla huonekalut vedetään köydellä ikkunasta sisään, ja kallistuksen ansiosta kuorma ei kolhi julkisivua. Unesco lisäsi kanaalivyöhykkeen maailmanperintöluetteloon vuonna 2010.",
-   "lyhyt": "Amsterdamin kanaalivyöhykkeen loisteliain kohta on Herengrachtin Kultainen mutka Vijzelstraatin ja Leidsestraatin välissä. Sen varrelle rikkaimmat kauppiaat ja korkeat virkamiehet rakensivat 1600-luvulla kanavien komeimmat talot, ja se oli koko uuden kaupunginosan varakkain kortteli.",
+   "lyhyt": "Amsterdamin kanaalivyöhykkeen komeimmassa kohdassa, Herengrachtin Kultaisessa mutkassa, kaupunki antoi rikkaimpien ostaa kaksi tonttia vierekkäin, joten sinne nousi kaksi kertaa muita leveämpiä kaupunkipalatseja. Nykyään niissä on enimmäkseen pankkien ja rahoituslaitosten konttoreita ja yksi pieni kissataiteen museo.",
    "syventava": "Miksi kanavatalot kallistuvat eteenpäin?",
    "kysymykset": [
     "Kuinka monta siltaa kanaalivyöhykkeellä on?",
@@ -247,12 +254,12 @@
      "url": "https://amsterdamian.com/see/amsterdam/why-dutch-houses-have-those-hooks-on-the-facades/"
     },
     {
-     "vaite": "Kultainen mutka Herengrachtilla Vijzelstraatin ja Leidsestraatin välillä oli uuden kaupungin rikkain osa; Herengracht oli rikkaiden kauppiaiden ja korkeiden virkamiesten suosiossa.",
-     "url": "https://www.amsterdamtourism.org/amsterdam-neighborhoods-guide-2/amsterdam-canal-ring-grachtengordel/"
-    },
-    {
      "vaite": "Kultainen mutka on Herengrachtilla Leidsestraatin ja Vijzelstraatin välillä; siellä asuivat kaupungin rikkaimmat asukkaat.",
      "url": "https://www.inyourpocket.com/Netherlands/Amsterdam/articles/400-years-of-canals"
+    },
+    {
+     "vaite": "Kultaisessa mutkassa ostajia kannustettiin hankkimaan kaksi tonttia ja rakentamaan kaksinkertaisen leveät kaupunkipalatsit; nykyään siellä on enimmäkseen pankkeja ja muita rahoituslaitoksia sekä pieni yksityinen museo Kattenkabinet.",
+     "url": "https://en.wikipedia.org/wiki/Gouden_Bocht"
     }
    ]
   },
@@ -263,8 +270,8 @@
    "luokka": "aukio",
    "koko_m": 200,
    "teksti": "Amsterdamin vanha keskusaukio, Dam-aukio, on kaupungin syntysija: noin vuonna 1270 Amstel-joki padottiin juuri tässä, ja pato antoi nimensä sekä aukiolle että koko kaupungille. Aukion länsilaitaa hallitsee kuninkaallinen palatsi, ja sen vieressä seisoo Uusi kirkko, jossa Alankomaiden hallitsijat ovat astuneet virkaansa vuodesta 1814 lähtien. Itälaidalla kohoaa valkoinen, kaksikymmentäkaksi metriä korkea kansallismonumentti toisen maailmansodan uhrien muistoksi. Sen takana olevan muurin syvennyksissä on uurnia, joissa on maata teloituspaikoilta ja sotahautausmailta jokaisesta silloisesta maakunnasta sekä entisestä Hollannin Itä-Intiasta, nykyisestä Indonesiasta.",
-   "lyhyt": "Amsterdamin Dam-aukiolla vietetään joka vuosi neljäntenä toukokuuta Alankomaiden kansallista muistopäivää, jolloin sodan uhreja muistetaan kansallismonumentin juurella. Kuningatar Juliana paljasti monumentin samana päivänä vuonna 1956, ja sen suunnittelivat kuvanveistäjä John Rädecker ja arkkitehti Jacobus Oud.",
-   "syventava": "Mitä uurnissa on?",
+   "lyhyt": "Amsterdamin Dam-aukiolla seisoi ennen kaupungin vaakarakennus, jossa punnittiin kauppatavarat. Kun Hollannin kuningas Ludvig Bonaparte muutti vuonna 1808 aukion laidalla olevaan palatsiin, hän valitti vaa'an peittävän näkymänsä ja määräsi sen purettavaksi. Vaaka hävisi aukiolta eikä sitä rakennettu enää uudelleen.",
+   "syventava": "Miten hallitsija vihitään virkaansa?",
    "kysymykset": [
     "Mitä Dam-aukiolla tapahtui sodan päättyessä?",
     "Miksi Alankomaiden kuningasta ei kruunata?",
@@ -283,16 +290,20 @@
      "url": "https://en.wikipedia.org/wiki/Dam_Square"
     },
     {
-     "vaite": "Kansallismonumentti on 22 metriä korkea valkoinen kivipylväs; suunnittelijat John Rädecker ja arkkitehti Jacobus Oud; paljastettiin 4.5.1956 kuningatar Julianan toimesta.",
+     "vaite": "Kansallismonumentti on 22 metriä korkea valkoinen kivipylväs, joka pystytettiin vuonna 1956.",
      "url": "https://en.wikipedia.org/wiki/National_Monument_(Amsterdam)"
+    },
+    {
+     "vaite": "Aukiolla oli vaakarakennus, joka purettiin vuonna 1808 Ludvig Bonaparten määräyksestä, kun tämä oli muuttanut kaupungintalosta muutettuun palatsiin ja valitti näkymän peittymisestä.",
+     "url": "https://en.wikipedia.org/wiki/Dam_Square"
     },
     {
      "vaite": "Uurnissa on maata toisen maailmansodan teloituspaikoilta ja sotahautausmailta jokaisesta maakunnasta; vuonna 1950 lisättiin uurna Hollannin Itä-Intiasta eli Indonesiasta.",
      "url": "https://en.wikipedia.org/wiki/National_Monument_(Amsterdam)"
     },
     {
-     "vaite": "Kansallinen muistopäivä vietetään joka vuosi 4. toukokuuta Damilla.",
-     "url": "https://en.wikipedia.org/wiki/National_Monument_(Amsterdam)"
+     "vaite": "Syventävä: Alankomaiden hallitsijat vihitään virkaansa Damin laidalla olevassa Uudessa kirkossa.",
+     "url": "https://en.wikipedia.org/wiki/Dam_Square"
     }
    ]
   },
@@ -343,7 +354,7 @@
    "luokka": "kirkko",
    "koko_m": 70,
    "korkeus_m": 85,
-   "teksti": "Läntinen kirkko, Westerkerk, kohoaa Prinsengrachtin varrella, ja sen kahdeksankymmentäviisi metriä korkea torni on Amsterdamin korkein kirkontorni. Tornin huipulla kimaltaa keisarillinen kruunu, jonka keisari Maksimilian myönsi kaupungille. Kirkko rakennettiin Hendrick de Keyserin suunnitelmien mukaan, ja se vihittiin käyttöön vuonna 1631. Rembrandt haudattiin tänne köyhänä miehenä vuonna 1669, mutta hautapaikkaa ei tiedetä, ja vain muistolaatta kertoo sen likimääräisen kohdan. Läheisessä piilopaikassaan Anne Frank kuuli usein kirkon kellojen soivan.",
+   "teksti": "Läntinen kirkko, Westerkerk, kohoaa Prinsengrachtin varrella, ja sen torni on Amsterdamin korkein kirkontorni. Tornin huipulla kimaltaa keisarillinen kruunu, jonka keisari Maksimilian myönsi kaupungille, ja vuonna 2006 kruunu palautettiin alkuperäiseen siniseen väriinsä. Kirkko rakennettiin Hendrick de Keyserin suunnitelmien mukaan, ja se vihittiin käyttöön vuonna 1631. Rembrandt haudattiin tänne köyhänä miehenä vuonna 1669, mutta hautapaikkaa ei tiedetä, ja vain muistolaatta kertoo sen likimääräisen kohdan. Läheisessä piilopaikassaan Anne Frank kuuli usein kirkon kellojen soivan.",
    "lyhyt": null,
    "syventava": "Missä Rembrandtin hauta on?",
    "kysymykset": [
@@ -356,8 +367,8 @@
    "isoisa": false,
    "lahteet": [
     {
-     "vaite": "Westertoren on 85 metriä korkea ja Amsterdamin korkein kirkontorni; huipulla Maksimilian ensimmäisen keisarillinen kruunu.",
-     "url": "https://mforamsterdam.com/westerkerk-westertoren"
+     "vaite": "Westertoren on Amsterdamin korkein kirkontorni, ja sen huipulla on Maksimilian ensimmäisen keisarillinen kruunu; kruunu maalattiin vuonna 2006 alkuperäiseen siniseen väriinsä.",
+     "url": "https://en.wikipedia.org/wiki/Westerkerk"
     },
     {
      "vaite": "Hendrick de Keyserin suunnittelema kirkko vihittiin vuonna 1631.",
@@ -515,7 +526,7 @@
    "kuvaus": "Amsterdamin suuri kaupunkipuisto",
    "luokka": "puisto",
    "koko_m": 1500,
-   "teksti": "Kaupunginpuisto Vondelpark on neljänkymmenenseitsemän hehtaarin vihreä alue lähellä museoaukiota, ja siellä käy vuosittain noin kymmenen miljoonaa ihmistä. Puisto avattiin vuonna 1865 nimellä Uusi puisto, mutta myöhemmin se nimettiin Joost van den Vondelin mukaan. Vondel oli 1600-luvun merkittävimpiä alankomaalaisia runoilijoita ja näytelmäkirjailijoita, ja hänen muistomerkkinsä pystytettiin puistoon vuonna 1867. Lampien ja nurmikoiden keskellä on myös Pablo Picasson abstrakti veistos Kala sekä alankomaalaisen Nelson Carrilhon teos Mama Baranka.",
+   "teksti": "Kaupunginpuisto Vondelpark on neljänkymmenenseitsemän hehtaarin vihreä alue lähellä museoaukiota, ja siellä käy vuosittain noin kymmenen miljoonaa ihmistä. Puisto avattiin vuonna 1865 nimellä Uusi puisto, mutta myöhemmin se nimettiin Joost van den Vondelin mukaan. Vondel oli 1600-luvun merkittävimpiä alankomaalaisia runoilijoita ja näytelmäkirjailijoita, ja hänen muistomerkkinsä pystytettiin puistoon vuonna 1867. Lampien ja nurmikoiden keskellä seisoo Pablo Picasson abstrakti betoniveistos vuodelta 1965: Picasso tarkoitti sen linnuksi, mutta amsterdamilaiset ovat aina nähneet siinä kalan. Puistossa on myös alankomaalaisen Nelson Carrilhon veistos Mama Baranka.",
    "lyhyt": null,
    "syventava": "Kuka oli Joost van den Vondel?",
    "kysymykset": [
@@ -532,8 +543,12 @@
      "url": "https://en.wikipedia.org/wiki/Vondelpark"
     },
     {
-     "vaite": "Puistossa on Picasson veistos Kala vuodelta 1965 ja Nelson Carrilhon Mama Baranka vuodelta 1985.",
+     "vaite": "Puistossa on Picasson veistos vuodelta 1965 ja Nelson Carrilhon Mama Baranka vuodelta 1985.",
      "url": "https://en.wikipedia.org/wiki/Vondelpark"
+    },
+    {
+     "vaite": "Teoksen nimi on Figure découpée l'Oiseau; Picasso tarkoitti sen linnuksi, mutta yleisö näki siinä kalan, mistä lempinimi; valkoisesta betonista toteutti Carl Nesjar puiston satavuotisjuhlaan 1965.",
+     "url": "https://stadscuratorium.nl/en/?p=3351"
     }
    ]
   },
