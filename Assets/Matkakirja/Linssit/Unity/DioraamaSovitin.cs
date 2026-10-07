@@ -385,6 +385,15 @@ namespace Matkakirja.Natiivi
             {
                 var vt = vene.Paivita(y.VahennettyLiike);
                 if (vt.Perilla && pelaaja == null && !veneLaituriin) { veneLaituriin = true; o.StartCoroutine(VeneLaituriin()); }
+                // Huone 1 (Veneyö): soutajan repliikit käsikirjoituksen ikkunoissa (soutaja-1 25–40 s, soutaja-2 40–55 s; 50 s:n matkalla 28 ja 44 s).
+                var rep = SeikkailuRepliikit.Aktiivinen;
+                if (rep != null && rep.Valmis && vene.IstuinSoutaja != null)
+                {
+                    if (veneRepliikki == 0) { rep.Esilataa("soutaja-1"); rep.Esilataa("soutaja-2"); veneRepliikki = 1; }
+                    double osuus = vene.Aika / Math.Max(1, vene.Ydin.KestoS);
+                    if (veneRepliikki == 1 && osuus >= 0.56) { rep.Soita("soutaja-1", vene.IstuinSoutaja); veneRepliikki = 2; }
+                    else if (veneRepliikki == 2 && osuus >= 0.88) { rep.Soita("soutaja-2", vene.IstuinSoutaja); veneRepliikki = 3; }
+                }
             }
             var seikkailuKamera = pelaaja != null ? pelaaja.Kamera : vene?.Kamera;
             bool cmKaytossa = cm != null && (seikkailuKamera != null || DioraamaCinemachine.Paalla && pakotettuKamera == null);
@@ -803,7 +812,7 @@ namespace Matkakirja.Natiivi
         // aloituspaikkaan: merkki "ovi:<tid>-alku"/osa tid tai tilan kamerakohde, ja pudotus lähimmälle törmäyspinnalle.
         static string kavelyKehitysJuuri;
         string pelaajaKameraTapa;
-        bool veneLaituriin;
+        bool veneLaituriin; int veneRepliikki;
         const double VeneSumuM = 120, VeneKestoS = 50;
         float himmennysAsti = -1f;
         const double KavelySumuM = 25;
@@ -825,7 +834,8 @@ namespace Matkakirja.Natiivi
             var vm = rakennus.Ymparisto?.Rekvisiitta?.Find(x => x.Id == "vene") ?? default;
             if (vm.Id == null) { o.Kirjaa("poikki: vene: rekvisiitta vene puuttuu (ymparisto.mallit, maailmaan: false)"); yield break; }
             yield return VarmistaKavelyData();
-            SeikkailuPelaaja.Poista(); SeikkailuVene.Poista(); cm?.SeikkailuPois(); veneLaituriin = false;
+            SeikkailuPelaaja.Poista(); SeikkailuVene.Poista(); cm?.SeikkailuPois(); veneLaituriin = false; veneRepliikki = 0;
+            SeikkailuRepliikit.Luo(nayttamo.transform, MediaJuuri + "/seikkailu/" + RakennusId + "/repliikit-v1/manifest.json", o.Kirjaa);
             double vesi = rakennus.Ulkokuori?.VesiY ?? 0;
             var reitti = new List<(double X, double Y, double Z)>(); double? loppuSuunta = null;
             if (SeikkailuKavely.Data != null)
