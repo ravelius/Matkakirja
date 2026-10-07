@@ -414,7 +414,7 @@ Edellinen luovutus on `viesti-siirtoseppa-luovutus-20261002.md` (5.10. osiot 02.
 1. Proto-worktree /Users/Shared/Claude/wt/proto-siirtoseppa-face, haara siirtoseppa/historia-h0 @ b8724fd8 (paikallinen, ei originia; V4 piiloutuminen mukana).
    eleet-2 @ 67728f0b on Natiivisepän junassa 161.
 2. Julkaisijan jonossa historia-käännös b8724fd8 (ilmoitettu a96bd209; kumpi tahansa käy) + natiivi-ui/seikkailu-tapit 34cf54b0 + natiivi-ui/kuumailmapallo-160 73ed2612.
-   KÄÄNNÖS NYT → perl setsid: `PROTO_APP_KOPIO=$PWD/lokit/siirtoseppa-historia4-app nice -n 15 zsh tyokalut/proto-kaanna.sh b8724fd8+34cf54b0+73ed2612`
+   KÄÄNNÖS KÄYNNISTETTY 13.28 setsid-ajona (tarkista lokit/siirtoseppa-historia4-kaannos.out: KÄÄNNETTY/VIKA; VIKA → käännä uudelleen NYT-luvalla): `PROTO_APP_KOPIO=$PWD/lokit/siirtoseppa-historia4-app nice -n 15 zsh tyokalut/proto-kaanna.sh b8724fd8+34cf54b0+73ed2612`
    (proto-3d:ssa, loki lokit/siirtoseppa-historia4-kaannos.out). Lukko vapaa → SIMU NYT → `zsh tyokalut/siirtoseppa-ajot/vuoro-h3.sh` (iPad).
 3. Vuoron jälkeen: venesaapumisen kuvat/video ruuduittain (lokit/siirtoseppa-vuoro-h3/vene), kävely + vartijat (…/kavely);
    Päätoimittajalle 4–6 V1-stilliä (keittiö, kirkkotornin portaat, olan yli) junaan 161 kehittäjäkytkimen taakse; "simu vapaa".
