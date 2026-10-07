@@ -23,6 +23,10 @@ Avoimet työt:
 - RAJA-stillit: Päätoimittaja 03.3x: Kiova, Sarajevo, Tromssa POIS (PAKOTA); sallitut 38 lopullinen (#4098), raja-lista tyhjä.
   (vanha: Tromssa tarkka
   ~0,5 km (ehdotettu SALLITTU r 500 m tai POIS) – odottaa Päätoimittajan päätöstä; jos SALLITTU, lisää PAKOTA + rivi Pelikoodarille.
+- KAUDET (Karttaseppä 7.10. 04.xx): Euroopan S2 kausikerrokset s2-eurooppa/<syksy|talvi|kevat>/v1 (sama jako kuin v2, laatat.json + kausi).
+  Syksy viennissä Julkaisijalla; talvi/kevät 7.10. päivällä. LS2 tekee natiivin kausivalinnan, kun syksy on ämpärissä:
+  Laattapalvelin.cs:401 (S2Polku + "/" + versio) ja AstronauttiKerros.S2Juuri → kauden versio (Vuodenaika.Kausi), puuttuva kausi
+  → kesä v2 (talvi nyt BMNG, Vuodenaika.S2Nakyy). Myös KuvanTyosto/IssKameraKuva käyttävät S2Juurta.
 - Pallopisteiden siirto (Sisilia, Kreeta, Islanti) kuuluu Karttasepälle/Päätoimittajalle; Venetsia jo San Marcolla pelissä.
 
 ## TILA 7.10. 03.1x
