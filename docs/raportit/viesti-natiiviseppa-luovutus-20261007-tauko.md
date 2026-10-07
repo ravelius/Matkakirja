@@ -10,6 +10,10 @@ ja natiiviseppa-tila-20261003.md. Kytke Remote Control päälle. Kerro Julkaisij
 Juna-SHA:t vain PÄÄTOIMITTAJAN kuittauksella; käännökset Julkaisijan NYT-viestillä. EI savua/Laitetestaajaa/stillejä ennen junaa
 (omistaja 15.5x), EI roolien omia käännöksiä (16.0x), enintään 2 junaa/pv ellei omistaja pyydä.
 
+**JUNA 162 — TILA 21.22: runko 31249f1c4 LUKITTU ja KÄÄNNETTY (8f93bf3e6, app lokit/natiiviseppa-app-162-31249f1c), muutosloki-
+sisältö lähetetty Julkaisijalle. VIE PIDÄTETTY: omistaja katsoo LS1:n iPad-vaakakuvat ~21.50 → Päätoimittajan kuittaus → vaiheet 3–5.
+Jos LS1 korjaa: uusi runko (31249f1c4 + korjaus), testit, uusi käännös.**
+
 **JUNA 162 TÄNÄÄN (omistaja: "tee tänään yksi päivitys klo 22")** — runko natiiviseppa/juna-162-koe **31249f1c4** (wt/proto-natiiviseppa-j144),
 HYVÄKSYTTY (Päätoimittaja 16.2x + 16.4x) = BUILD 161 9572eaff + LS1 b9f37ee8f + NUI 3f07c49b + NUI 34cf54b0 + LS2 f6e4a8495 + Siirtoseppä
 ef6b092d (⊇ 78e56088) + LS1 alkulento-v3-korjaus 19dcb1d15 + Siirtoseppä historia-juna163 2d19eb49 (⊇ ee0084ee; E2 heitto + E3 kappeli, Päätoimittaja 18.0x). + NUI seikkailu-toiminto f9f48082 (toimintonappi + löytö) + LS1 alkulento-ääni b11f5e253 (18.0x) + NUI seikkailu-tietokerros cbc92a25 + Siirtoseppä historia-juna164 6d2b1149 (⊇ 1e48174e ⊇ ad6ebba6 ⊇ 2d19eb49; E3 LR v44i -mallit, tietokerros, kaatumiskorjaus, Foggin nousu laiturille; 18.5x) + LS2 E3-nousu d75b33031 (18.2x) + LS1 äänetön esitys 7568a39bc (18.4x, omistaja: kuumailmapallo valmiiksi) + LS1 kori-pehmea 18d854a13 (⊇ kori-vahvempi 42597b009; uusi kerros 18 vapaa, tarkistettu; 19.1x). Testit 447/419/856, unity 0, kaikilla .cs:llä .meta. Testit 447/419/842, tarkista, unity iOS/Mac 0, editori ok. Testit 447/419/835, unity iOS/Mac 0. Tarkista ensin, onko jokin vaihe jo tehty (`git -C proto-3d/Matkakirja-proto
