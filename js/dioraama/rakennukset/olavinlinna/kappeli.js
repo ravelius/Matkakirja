@@ -97,16 +97,17 @@ for (let k = 0; k < 12; k++) {
 // Hagioskooppirako (pohjaseinä 3°, kammion aukko) ja koillismuurin ainoa ahdas ikkuna (Aspelin 1875, Sisältökirjurin
 // lähdetarkistus #4129; Maconi 1910 ei näytä sitä): kivireunus laatoista. Ikkuna 58,7° ristien 49,4° ja 68° välissä, korkealla
 // (lattia + 1,5…2,3), suljettu rautaluukulla; valo tulee edelleen kynttilöistä.
+const KIVI = { yla: 'kivi', sivu: 'kivi', ala: 'kivi' }; // 7.10.: kivireunus (laatan oletus yla = lankku näytti puulta)
 const REIAT = [];
 for (const h of [
   { a: 3, y: 10.05, leveys: 0.24, korkeus: 0.5 }, // hagioskooppi
   { a: 58.7, y: LATTIA + 1.5, leveys: 0.26, korkeus: 0.8, luukku: true }, // koillisikkuna (Aspelin 1875)
 ]) {
   REIAT.push({ resepti: 'rako', paikka: pol(h.a, SEINA, h.y), suunta: h.a + 180, leveys: h.leveys, korkeus: h.korkeus });
-  REIAT.push({ resepti: 'laatta', paikka: pol(h.a, SEINA - 0.13, h.y), suunta: h.a + 180, leveys: h.leveys + 0.3, syvyys: 0.3, paksuus: 0.07 });
-  REIAT.push({ resepti: 'laatta', paikka: pol(h.a, SEINA - 0.13, h.y + h.korkeus + 0.07), suunta: h.a + 180, leveys: h.leveys + 0.3, syvyys: 0.3, paksuus: 0.07 });
+  REIAT.push({ resepti: 'laatta', paikka: pol(h.a, SEINA - 0.13, h.y), suunta: h.a + 180, leveys: h.leveys + 0.3, syvyys: 0.3, paksuus: 0.07, pinnat: KIVI });
+  REIAT.push({ resepti: 'laatta', paikka: pol(h.a, SEINA - 0.13, h.y + h.korkeus + 0.07), suunta: h.a + 180, leveys: h.leveys + 0.3, syvyys: 0.3, paksuus: 0.07, pinnat: KIVI });
   // Rautaluukku kiinni (pystylevy aukon edessä; laatan paikka-y = yläreuna).
-  if (h.luukku) REIAT.push({ resepti: 'laatta', paikka: pol(h.a, SEINA - 0.035, h.y + h.korkeus), suunta: h.a + 180, leveys: h.leveys + 0.04, syvyys: 0.025, paksuus: h.korkeus, pinnat: { yla: 'rauta', sivu: 'rauta', ala: 'rauta' } });
+  if (h.luukku) REIAT.push({ resepti: 'laatta', paikka: pol(h.a, SEINA - 0.035, h.y + h.korkeus), suunta: h.a + 180, leveys: h.leveys + 0.04, syvyys: 0.025, paksuus: h.korkeus, pinnat: { yla: 'kengat', sivu: 'kengat', ala: 'kengat' } }); // tumma rauta (rauta-pinta leipoutuu ruosteeksi)
 }
 
 // --- Hahmot: kappalainen pääalttarin ääressä (messu), vouti seurakuntalaisena penkin luona.
