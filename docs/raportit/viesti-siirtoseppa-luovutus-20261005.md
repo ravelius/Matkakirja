@@ -373,3 +373,13 @@ Edellinen luovutus on `viesti-siirtoseppa-luovutus-20261002.md` (5.10. osiot 02.
 - **Todisteet:** `docs/raportit/kaappaukset/siirtoseppa-20261005/` (ei committoitu).
 
 **Huom:** levysiivous tyhjentää vanhoja lokit/*-app-kansioita (levy 97 %), joten käännä uudelleen tai käytä junan appia (lokit/juna-1.1.142-*).
+## TILA 7.10. 10.0x — V1-kävelyn ensimmäinen ajo, korjaus ea7a36e4
+
+- V1-ajo (1499a256, iPhone + iPad, lokit/siirtoseppa-kavely1/): kävelygeometria latautuu (5 osaa, 20 merkkiä), pelaaja syntyy
+  oikeaan kohtaan ja NUI:n tapit toimivat. Kaksi vikaa: (1) olan yli -kamera ei ottanut kuvaa, vaan lepokamera jäi päälle;
+  (2) vesiportilla pelaaja käveli laiturin reunalta veteen ja putosi läpi (vesi ei ole törmäys).
+- Korjaus historia-h0 ea7a36e4 (proto, paikallinen): DioraamaCinemachine.PaivitaPelaaja ajaa aivot pelaajan kameralle (prioriteetti
+  lepokameroiden yli) ja varalla kopioi kameran tilan suoraan; loki "seikkailu: kamera aivot|suora". Törmäysmeshit kaksipuolisiksi,
+  putoaminen palauttaa viimeiseen maakohtaan, aloituskatse oviaukosta osan keskelle, aloitussäde vain kerrokseen 9.
+- Julkaisijan jonoon vaihdettu ea7a36e4 + NUI 34cf54b0 + 73ed2612 (LS1:n giza-valmiin jälkeen). Samalla vuorolla: eleet-2-tarkistus,
+  apurahakuva (hämärä P1 → lokit/apuraha-kuvat/), laiturin rako LR:lle, LR v42 -peili.
