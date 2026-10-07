@@ -9,9 +9,17 @@
 // TIETOKERROS (Siirtoseppä E3, Päätoimittaja 7.10. 18.0x, olemassa olevat pohjat, ei hehkua): pelin aikana tietokortin avautuessa
 // vain Pulun ele Tunne("utelias", 0.3) ilman tekstiä; lopussa Pulun ele Tunne("ilo") ja kortisto KORTTI-pohjalla, joka EI avaudu
 // itsestään vaan vasta Pulun napautuksesta (tieto vain halutessaan). Tarjous päättyy, kun seikkailu päättyy.
+// PELATTAVUUSMALLI (docs/raportit/pelattavuusmalli-olavinlinna.md kohta 6, 8.10.): kosketuksella KATSE vedetään koko oikealla
+// puoliskolla CupolaVedon kaavalla (Input Systemin kosketukset suoraan, UI:n päältä alkava ohitetaan, 10 pt:n napautusraja):
+// 0,30°/pt vaaka, 0,22°/pt pysty, ei liukumaa, "kuin kuvaa selaisi" (sormi oikealle → katse vasemmalle); Siirtoseppä lukee
+// OtaKatse() joka ruutu. Oikea TAPPI on testikytkin (oletus piilossa). Lyhyt napautus maailmaan (ei UI, ei vetoa) kutsuu
+// SeikkailuPelaaja.Napautus(px) (napautuskävely tai toiminto alle 1,2 m:n esineeseen). Mac: hiiri on Siirtosepän.
+using System.Collections.Generic;
 using System.Reflection;
 using UnityEngine;
 using UnityEngine.UIElements;
+using Kosketus = UnityEngine.InputSystem.EnhancedTouch.Touch;
+using KosketusVaihe = UnityEngine.InputSystem.TouchPhase;
 
 namespace Matkakirja.Natiivi
 {
@@ -39,6 +47,26 @@ namespace Matkakirja.Natiivi
         /// <summary>Testi `ui seikkailutapit toiminto poimi|heita|auto`: napin tila ilman SeikkailuEsineitä.</summary>
         public static string TestiToiminto;
         readonly UiKerros kerros;
+        readonly int kerrosNro;
+
+        /// <summary>Katseen vetokertoimet (pelattavuusmalli kohta 6) ja suunta: true = kamera seuraa sormea (testi), false = selaus.</summary>
+        public static float AsteitaVaaka = 0.30f, AsteitaPysty = 0.22f;
+        public static bool VetoSuora;
+        /// <summary>Oikea TAPPI näkyvissä (testikytkin `ui seikkailutapit oikeatappi on|off`); oletus piilossa, katse vedolla.</summary>
+        public static bool OikeaTappi;
+        const float NapautusPt = 10f;   // sama raja kuin PalloKierto.napautusLiike / CupolaVeto
+        const double NapautusS = 0.35;
+
+        sealed class Sormi { public Vector2 Alku, Edellinen; public double AlkuT; public bool Ui, Veto, Oikealla; }
+        static readonly Dictionary<int, Sormi> sormet = new Dictionary<int, Sormi>();
+        static readonly HashSet<int> nahdyt = new HashSet<int>();
+        static Vector2 katseKertyma;
+        static MethodInfo pelaajaNapautus;
+        static bool napautusHaettu;
+        static string viimeNapautus = "-";
+
+        /// <summary>Katseen veto asteina edellisestä lukukerrasta (x kääntö + oikealle, y nosto + ylös); lukeminen nollaa.</summary>
+        public static Vector2 OtaKatse() { var k = katseKertyma; katseKertyma = Vector2.zero; return k; }
         readonly VisualElement toimintoRivi;
         readonly Button toimintoNappi;
         string toimintoTila;   // null = piilossa, "poimi" tai "heita"
@@ -49,6 +77,7 @@ namespace Matkakirja.Natiivi
         public SeikkailuTapit(UiKerros kerros, int kerrosNro)
         {
             this.kerros = kerros;
+            this.kerrosNro = kerrosNro;
             juuri = Rakenne.El("mk-seikkailutapit", kerros.Turva(kerrosNro), PickingMode.Ignore);
             juuri.style.position = Position.Absolute;
             juuri.style.left = 0; juuri.style.right = 0; juuri.style.top = 0; juuri.style.bottom = 0;
@@ -137,15 +166,74 @@ namespace Matkakirja.Natiivi
 
         const float TappiAla = 40f;
 
+        /// <summary>Kosketukset joka ruutu (vain seikkailussa): oikean puoliskon veto katseeksi, lyhyt napautus maailmaan.</summary>
+        void LueKosketukset()
+        {
+            if (!nakyy) { sormet.Clear(); katseKertyma = Vector2.zero; return; }
+            float lev = kerros.Juuri(kerrosNro).layout.width;
+            float k = lev > 1f && !float.IsNaN(lev) ? Screen.width / lev : 1f;   // pikseliä pisteessä
+            nahdyt.Clear();
+            foreach (var t in Kosketus.activeTouches)
+            {
+                int id = t.touchId;
+                var px = t.screenPosition;
+                nahdyt.Add(id);
+                if (t.phase == KosketusVaihe.Began || !sormet.TryGetValue(id, out var s))
+                {
+                    s = new Sormi { Alku = px, Edellinen = px, AlkuT = t.startTime, Ui = UiKerros.Peittaa(px), Oikealla = px.x >= Screen.width * 0.5f };
+                    sormet[id] = s;
+                }
+                if (!s.Ui)
+                {
+                    if (!s.Veto && ((px - s.Alku) / k).magnitude > NapautusPt) s.Veto = true;
+                    if (s.Veto && s.Oikealla && !OikeaTappi)
+                    {
+                        var d = (px - s.Edellinen) / k;   // pisteinä, y ylös (Input System)
+                        float suunta = VetoSuora ? 1f : -1f;
+                        katseKertyma += new Vector2(suunta * d.x * AsteitaVaaka, suunta * d.y * AsteitaPysty);
+                        Ruudunpaivitys.Herata();
+                    }
+                }
+                s.Edellinen = px;
+                if (t.phase == KosketusVaihe.Ended || t.phase == KosketusVaihe.Canceled)
+                {
+                    if (t.phase == KosketusVaihe.Ended && !s.Ui && !s.Veto && t.time - s.AlkuT <= NapautusS) Napauta(px);
+                    sormet.Remove(id);
+                }
+            }
+            if (sormet.Count > nahdyt.Count)
+                foreach (var id in new List<int>(sormet.Keys)) if (!nahdyt.Contains(id)) sormet.Remove(id);
+        }
+
+        /// <summary>Napautus maailmaan: SeikkailuPelaaja.Napautus(Vector2 px) (Siirtoseppä, historia-fp) heijastuksella.</summary>
+        static void Napauta(Vector2 px)
+        {
+            if (!napautusHaettu)
+            {
+                napautusHaettu = true;
+                var tp = typeof(SeikkailuTapit).Assembly.GetType("Matkakirja.Natiivi.SeikkailuPelaaja");
+                pelaajaNapautus = tp?.GetMethod("Napautus", BindingFlags.Public | BindingFlags.Static, null, new[] { typeof(Vector2) }, null);
+            }
+            object osui = pelaajaNapautus?.Invoke(null, new object[] { px });
+            viimeNapautus = $"({px.x:0}, {px.y:0}) px → {(pelaajaNapautus == null ? "ei SeikkailuPelaaja.Napautusta" : osui is bool b && b ? "maailma" : "ei osumaa")}";
+            Debug.Log("MATKAKIRJA seikkailutapit: napautus " + viimeNapautus);
+        }
+
+        bool oikeaNakyy;
+
         void Paivita()
         {
             PaivitaToiminto();
+            LueKosketukset();
+            bool oikeaNyt = nakyy && OikeaTappi;
+            if (oikeaNyt != oikeaNakyy) { oikeaNakyy = oikeaNyt; oikea.Nayta(oikeaNyt); }
             bool nayta = TestiNakyy ?? PelaajaAktiivinen();
             if (nayta == nakyy) return;
             nakyy = nayta;
             if (!nayta) PoistaTietokerros();   // seikkailu päättyi: tietokerroksen tarjous ja Pulun kaappaus pois
             vasen.Nayta(nayta);
-            oikea.Nayta(nayta);
+            oikeaNakyy = nayta && OikeaTappi;
+            oikea.Nayta(oikeaNakyy);
             // Alareuna ja sivureuna kuten oppaan tapeilla (krediittien yläpuolella, reunasta OpasTapit.Reuna).
             vasen.Juuri.style.bottom = TappiAla; oikea.Juuri.style.bottom = TappiAla;
             Debug.Log("MATKAKIRJA seikkailutapit: " + (nayta ? "näkyvät" : "piilossa"));
@@ -248,6 +336,7 @@ namespace Matkakirja.Natiivi
             Rect a = vasen.Juuri.worldBound, b = oikea.Juuri.worldBound;
             return $"seikkailutapit {(viimeisin.nakyy ? "näkyvät" : "piilossa")}, vasen {Vasen.x:0.00},{Vasen.y:0.00} @ {a.xMin:0},{a.yMin:0} {a.width:0}×{a.height:0}, "
                  + $"oikea {Oikea.x:0.00},{Oikea.y:0.00} @ {b.xMin:0},{b.yMin:0} {b.width:0}×{b.height:0}, kosketaan {Kosketaan}, "
+                 + $"oikea tappi {(OikeaTappi ? "päällä" : "piilossa (veto)")}, veto {(VetoSuora ? "suora" : "selaus")}, sormia {sormet.Count}, napautus {viimeNapautus}, "
                  + $"toiminto {viimeisin.toimintoTila ?? "piilossa"} @ {viimeisin.toimintoNappi.worldBound.center.x:0},{viimeisin.toimintoNappi.worldBound.center.y:0}";
         }
     }
