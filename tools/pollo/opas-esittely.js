@@ -39,7 +39,8 @@ export async function oppaanEsittely(env, kaupunki, haku = fetch, nyt = Date.now
   if (m && nyt - m.aika < MUISTI_MS) return m.data;
   let data = null;
   try {
-    const v = await haku(`${ESITTELY_JUURI}${id}.json`);
+    const polku = OPAS_AINEISTOT.esittely_polut?.[id];
+    const v = await haku(polku ? `https://media.matkakirja.app/${polku}` : `${ESITTELY_JUURI}${id}.json`);
     const d = v.ok ? await v.json() : null;
     data = Array.isArray(d?.kohteet) ? d : null;
   } catch { data = null; }
