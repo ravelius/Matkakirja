@@ -25,7 +25,9 @@ log -1 master`, `tail -3 proto-3d/lokit/kaannospalvelu/juna.log`, `tail -5 proto
 4. Täysi BUILD 162 -SHA Julkaisijalle + Päätoimittajalle. Julkaisija ajaa TF 162:n.
 5. Mac TF 162 (lupa annettu): iOS-latauksen jälkeen `perl -e 'use POSIX; exit if fork; setsid; exec "zsh", @ARGV'
    proto-3d/lokit/natiiviseppa-skriptit/mac-tf.sh <BUILD162-sha8> 162`, tulos mac-tf-vahti.txt + gh run list proto3d-mac-testflight.
-6. Muut: PR ravelius/Matkakirja#4149 (mono_crash) Julkaisijalle; Mac-ohjauslevyvika: odota omistajan Player.log (DIAGNOOSI-rivit).
+6. JUNA 163 -ehdokkaat: LS1 yksityiskohdat 8bc2a42fc (Pariisin yksityiskohtakuvat; 3 uutta tiedostoa .metoineen, overlay-kerros 17;
+   tarvitsee workerin #4152, muuten kuvat eivät näy) — LS1:n mukaan kuitattu, varmista Päätoimittajalta.
+7. Muut: PR ravelius/Matkakirja#4149 (mono_crash) Julkaisijalle; Mac-ohjauslevyvika: odota omistajan Player.log (DIAGNOOSI-rivit).
 
 ## OMISTAJAN PÄÄTÖS 15.5x (SITOVA): TESTAUS KEVYEMMIN
 Ennen junaa/TF:ää vain automaattiset testit (Kartta/Peli/Linssit-testit, tarkista.sh zsh, unity-tarkistus iOS+Mac, editori) ja
