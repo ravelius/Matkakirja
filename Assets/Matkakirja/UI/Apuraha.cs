@@ -149,6 +149,16 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Testi: vieritys loppuun (kuvarivi näkyviin).</summary>
+        /// <summary>Testi: toimintonappi näkyviin; palauttaa keskipisteen (pt) oikeaa napautusta varten tai null.</summary>
+        public string ToimintoNappi()
+        {
+            var b = vieritys?.Q<Button>(className: "mk-apuraha__toiminto");
+            if (b == null) return null;
+            vieritys.ScrollTo(b);
+            var r = b.worldBound;
+            return $"{r.center.x:0} {r.center.y:0} {b.Q<Label>()?.text} käytössä {b.enabledSelf}";
+        }
+
         public void VieritaLoppuun() => vieritys?.schedule.Execute(() => vieritys.scrollOffset = new Vector2(0, vieritys.contentContainer.layout.height)).StartingIn(300);
 
         // KORTIN LOPPU (omistaja 7.10. 09.4x: "Linkin voisi ottaa pois"; Päätoimittaja): aloitusportin periaate-ikkunasta siirretyt

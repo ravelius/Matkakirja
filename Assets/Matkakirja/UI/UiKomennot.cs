@@ -901,6 +901,7 @@ namespace Matkakirja.Natiivi
                             if (ap.Nykyinen == null) return "esittelyä ei ole ladattu";
                             ap.Avaa(); return null;
                         case "loppuun": ap.VieritaLoppuun(); return null;
+                        case "nappi": return "nappi " + (ap.ToimintoNappi() ?? "ei");
                         case "kuva":
                             if (ap.Nykyinen == null) return "esittelyä ei ole ladattu";
                             ap.AvaaKokoruutu(ap.Nykyinen.Kuvat, la.Length > 1 ? int.Parse(la[1]) - 1 : 0); return null;
