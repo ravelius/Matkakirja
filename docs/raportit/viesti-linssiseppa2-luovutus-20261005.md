@@ -3,7 +3,7 @@
 Edellinen: viesti-linssiseppa2-luovutus-20261004.md. Päätoimittaja local_5df52e10-10e4-4b72-9554-0049db300dfe.
 VUOROT: käännös- ja simuvuoro aina Julkaisijalta ("NYT käännös", "SIMU NYT"). Ilmoita: "KÄÄNNETTY <sha>, lukko vapaa" ja "simu vapaa".
 
-## ALOITUSVIESTI UUDELLE SESSIOLLE (tilinvaihto 7.10. ilta)
+## ALOITUSVIESTI UUDELLE SESSIOLLE (tilinvaihto 7.10. ~22.15–22.50, päivitetty 19.1x)
 Olet Linssiseppä 2 (Opus, high). Lue CLAUDE.md, tämä tiedosto (OMISTAJA- ja TILA-osiot ylhäältä alas) ja Raamatun Ydinajatus kohta 2.
 Proto-git /Users/Shared/Claude/proto-3d/Matkakirja-proto. TYÖTAPA (omistaja 7.10. 15.5x/16.0x): ei omia käännöksiä, savuja, stillejä
 eikä toistoajoja; haaralle unity-tarkistus (tyokalut/tarkista.sh) + testiajurit (Kartta-/Linssit-/Peli-testit/kaanna.sh); kuittaus
@@ -17,6 +17,10 @@ Avoimet työt:
    -hiiri (2d8da858f + ui hiiri juna 161; 6ec5dcff4 -ei-lepoa vain testihaarassa), -hiiri160 (testi, ei junaan), -paikannimet
    (59d44e87b juna 160), -swe-rajat (95cf8eb97 juna 161), -kaudet (f6e4a8495 juna 162).
 3. Siirrytään-ruutu jää peittämään, jos opas suljetaan kesken siirtymän: LS1 korjaa (linssiseppa/pallo-latauskuva, juna 162).
+4. E3-NOUSU (PT 17.5x, kuitattu 18.0x): SeikkailuNousu + NousuReitti d75b33031 (peili/proto/linssiseppa2/e3-nousu, worktree
+   wt/proto-linssiseppa2-e3nousu). Kulkee samassa junassa kuin Siirtosepän kutsu 1e48174e (162 jos Natiiviseppä ehtii ennen 21.15,
+   muuten 163). Ei toimia, ellei Natiiviseppä pyydä. Myöhemmin: komeron mitat merkistä "nakyma:kellotorni-kaari", kun Linnanrakentaja
+   vie sen merkit.json:iin (nyt staattiset kentät SeikkailuNousu.KaariUnity jne.). Poista worktree, kun haara on masterissa.
 
 ## OMISTAJA 7.10. 15.5x (sitova): ennen junaa VAIN automaattiset testit + käännös; ei savuja, stillejä, iPad-mittauksia,
 ## toistoajoja; kuittaus 1 rivi (muutos, testit, SHA) → Natiiviseppä. Simu vain, jos vian syy muuten epäselvä.
