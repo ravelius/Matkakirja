@@ -30,7 +30,7 @@ namespace Matkakirja.Natiivi
         public static Func<string> KaupunkiId;
         public const string Juuri = "https://media.matkakirja.app/aanet/";
         AaniKartta kartta; string karttaId, karttaLadataan;
-        public const float Taso = 0.55f, KelloTaso = 1f, VapautusS = 5f;   // kello: puheettomana +7–8 dB maiseman yli (Päätoimittaja 7.10.; 0,6 antoi mitaten +4–5 dB)
+        public const float Taso = 0.55f, KelloTaso = 1f, VapautusS = 5f, LyontiS = 2.0f, LyontiHaivytysS = 0.35f;   // äänitteen 2. isku alkaa ~2,4 s   // kello: puheettomana +7–8 dB maiseman yli (Päätoimittaja 7.10.; 0,6 antoi mitaten +4–5 dB)
 
         static KaupunkiAanimaisemaSoitin instanssi;
 
@@ -163,7 +163,16 @@ namespace Matkakirja.Natiivi
             }
             suhina.Taso = (float)(mikseri.Suhina * mikseri.Kokonais);
             for (int ki = kellot.Count - 1; ki >= 0; ki--)
-                if (kellot[ki].Lahde == null) kellot.RemoveAt(ki); else kellot[ki].Lahde.volume = kellot[ki].Perus * (float)mikseri.Kokonais;   // väistö, ei maiseman Taso-kerrointa (simu 7.10.: vain +3 dB)
+            {
+                var kl = kellot[ki].Lahde;
+                if (kl == null) { kellot.RemoveAt(ki); continue; }
+                // YKSI LYÖNTI (TF 162, omistaja 7.10.: "kirkon kello kumisee lakkaamatta"): kello-01.mp3 on 34 s:n äänite noin
+                // 12 lyönnistä 2,3 s:n välein, ja jokainen lyönti soitti sen kokonaan (7 lyöntiä × 3 kirkkoa = 21 päällekkäistä).
+                // Lyönnistä soitetaan vain ensimmäinen isku: LyontiS, sitten häivytys HaivytysS ja lähde pois.
+                float f = Mathf.Clamp01(1f - (kl.time - LyontiS) / LyontiHaivytysS);
+                if (f <= 0f || !kl.isPlaying) { Destroy(kl); kellot.RemoveAt(ki); continue; }
+                kl.volume = kellot[ki].Perus * (float)mikseri.Kokonais * f;   // väistö, ei maiseman Taso-kerrointa (simu 7.10.: vain +3 dB)
+            }
             // Tasatunti: lyönnit hajautettuina kirkoittain (vain kun maisema kuuluu).
             int h = (int)Math.Floor(tunti);
             if (edellinenTunti >= 0 && h != edellinenTunti && kello != null && paalla && k.HasValue)
@@ -232,7 +241,7 @@ namespace Matkakirja.Natiivi
             var l = gameObject.AddComponent<AudioSource>(); l.spatialBlend = 0; l.clip = kello; l.loop = false;
             l.volume = perus * (float)mikseri.Kokonais; l.Play();
             kellot.Add((l, perus));
-            Destroy(l, kello.length + 0.5f);
+            Destroy(l, Mathf.Min(kello.length, LyontiS + LyontiHaivytysS) + 0.5f);   // varmistus: yksi isku
         }
 
         void Avaa(int i)
