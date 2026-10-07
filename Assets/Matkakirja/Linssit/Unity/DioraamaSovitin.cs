@@ -484,7 +484,13 @@ namespace Matkakirja.Natiivi
             // Historiamoottori: seikkailu pois (näyttämön lapset tuhoutuvat; globaalit kuoren leikkaukset ja kävelydata nollataan).
             SeikkailuVartijat.Poista(); SeikkailuVene.Poista(); SeikkailuPelaaja.Poista(); SeikkailuRepliikit.Poista(); SeikkailuKavely.Pura();
             cm?.SeikkailuPois(); PelattavaPalaPyydetty = false;
-            if (peiliKuvaus == PelattavaPalaPaketti) AsetaPeili("pois");   // seuraava avaus taas tuotannosta (myös kesken latauksen suljettaessa)
+            if (peiliKuvaus == PelattavaPalaPaketti)
+            {
+                // Seuraava avaus taas tuotannosta (myös kesken latauksen suljettaessa): peili pois ja rakennus unohdetaan ilman latausta
+                // (AsetaPeili käynnistäisi latauksen kesken purun).
+                peili = s2 => s2; peiliPaalla = false; peiliHttps = false; peiliKuvaus = edellinenPeili = "pois (ämpäri)";
+                rakennus = null; latausKaynnissa = false;
+            }
             pelattavaPala = false;
             rakennus3D?.Tyhjenna(); rakennus3D = null;
             hahmot3D?.Tyhjenna(); hahmot3D = null;
