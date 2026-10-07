@@ -451,6 +451,21 @@ namespace Matkakirja.Linssit.Kierros
             SiirtoAlkaa?.Invoke(lat, lon);
         }
 
+        /// <summary>
+        /// Kaupunkitila (omistaja TF 162, Rooma kartan pallosta: "kohde on liian kaukana"): kun esityksen ensimmäinen kohde
+        /// selviää vielä siirtoruudun aikana, avausnäkymä on sen lähikuva samalla kehystyksellä kuin oppaan kohteessa (vino
+        /// kulma, kohde lähellä) eikä 2,2 km:n yläkuva. Ruudun alla, joten ei liukua; true = kohdistettiin.
+        /// </summary>
+        public bool KohdistaAvausKohteeseen(string nimi, double lat, double lon)
+        {
+            if (!Siirtymassa || !siirtyma) return false;
+            var k = new OpasKohde { Id = nimi, Nimi = nimi, Lat = lat, Lon = lon };
+            double maa = MaaPisteessa?.Invoke(lat, lon) ?? double.NaN;
+            AsetaKohdeKehys(OpasKuvaus.Kehysta(k, double.IsNaN(maa) ? 0 : maa, kohdeKehys?.Suuntima ?? Asento.Suuntima), double.IsNaN(maa), k, kohdeKehys?.Suuntima ?? Asento.Suuntima);
+            Asento = KehysAsento(kohdeKehys, 0);
+            return true;
+        }
+
         // ---- KYSY, LIIKU, KAUPUNKIKIERROS, KESKUSTELU (omistaja 6.10. 11.57) ----
         /// <summary>Kaupunkikierros käynnissä (Liiku-listan alin rivi): kohteet jonossa, opas jatkaa itse lyhyellä kerronnalla.</summary>
         public bool KierrosKaynnissa { get; private set; }

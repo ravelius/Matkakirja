@@ -371,7 +371,11 @@ namespace Matkakirja.Natiivi
             IlmoitaKierros();
             // Esilataus latauskuvan aikana: esityksen ensimmäinen kohde heti, kun kierroslista on haettu (omistaja 12.5x).
             if (Kaupunkitila && silmukka.PyynnotSeis && silmukka.EsiKohde == null && (kierrosKohteet ?? kohteet) is List<OpasTaky> ek && ek.Count > 0 && kohteetKaupunki == Aloituskaupunki)
-            { silmukka.EsiKohde = (ek[0].Nimi, ek[0].Lat, ek[0].Lon); o.Kirjaa($"opas: esilataus ensimmäinen kohde {ek[0].Nimi}"); }
+            {
+                silmukka.EsiKohde = (ek[0].Nimi, ek[0].Lat, ek[0].Lon); o.Kirjaa($"opas: esilataus ensimmäinen kohde {ek[0].Nimi}");
+                // Omistaja TF 162 (Rooma): avausnäkymä ensimmäisen kohteen lähikuvana, ei 2,2 km:n yläkuvana.
+                if (silmukka.KohdistaAvausKohteeseen(ek[0].Nimi, ek[0].Lat, ek[0].Lon)) o.Kirjaa($"opas: avausnäkymä ensimmäisen kohteen lähikuvana ({ek[0].Nimi}, {silmukka.Asento})");
+            }
             if (esitysAlkaa && Kaupunkitila && !silmukka.Siirtymassa && kohteet != null && kohteet.Count > 0 && kohteetKaupunki == Aloituskaupunki)
             { esitysAlkaa = false; o.StartCoroutine(EsitysAvaus(KaupunkitilaId)); }
             if (jatkoVastauksenJalkeen && silmukka.KierrosKeskeytetty && silmukka.Vaihe == OpasVaihe.Odottaa && silmukka.VaiheAika > JatkoViiveS && !puhuu)
