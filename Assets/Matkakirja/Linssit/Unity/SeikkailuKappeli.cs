@@ -25,6 +25,11 @@ namespace Matkakirja.Natiivi
         string kappalainenLeike = "idle", voutiLeike = "idle"; double kappalainenAika, voutiAika;
         Vector3 ovi, alttari; readonly List<Vector3> reitti = new List<Vector3>();
         AudioSource keskustelu;
+        // E3b: voudin sääntö (VoudinKierros) — hehku portaikon yläpäässä, askeleet holvin yllä, kiinni → tallennuspiste.
+        readonly VoudinKierros voudinKierros = new VoudinKierros();
+        Light hehku; AudioSource voudinAskeleet; Vector3 portaikkoYla, keskus;
+        bool tavallinenAani, kovaAani; VoudinTila voudinEdellinen;
+        public VoudinKierros Vouti => voudinKierros;
         Action<string> kirjaa;
         public Vector3 Tallennus { get; private set; }
 
@@ -56,6 +61,13 @@ namespace Matkakirja.Natiivi
             var lg = new GameObject("Lyhty"); lg.transform.SetParent(k.kappalainen, false); lg.transform.localPosition = new Vector3(0.3f, 1.0f, 0.2f);
             k.lyhty = lg.AddComponent<Light>(); k.lyhty.type = LightType.Point; k.lyhty.range = 2.5f; k.lyhty.color = new Color(1f, 0.78f, 0.5f);
             k.lyhty.intensity = 1.6f; k.lyhty.shadows = LightShadows.None; k.lyhty.enabled = false;
+            KavelyMerkki py = null; foreach (var m in d.Merkit) if (m.Nimi == "portaikko:ylapaa") py = m;
+            k.portaikkoYla = py != null ? U(py) : k.ovi + Vector3.up * 3.0f;
+            k.keskus = (k.ovi + k.alttari) * 0.5f;
+            var hg = new GameObject("Voudin hehku"); hg.transform.SetParent(go.transform, false); hg.transform.position = k.portaikkoYla;
+            k.hehku = hg.AddComponent<Light>(); k.hehku.type = LightType.Point; k.hehku.range = 3f; k.hehku.color = new Color(1f, 0.75f, 0.45f); k.hehku.intensity = 0f; k.hehku.shadows = LightShadows.None;
+            k.voudinAskeleet = SeikkailuKuulija.Lahde("Voudin askeleet", 3f, 25f); k.voudinAskeleet.loop = true; k.voudinAskeleet.volume = 0.7f;
+            SeikkailuEsineet.Kolahti += k.Kova; SeikkailuEsineet.Aanteli += k.Tavallinen;
             if (keskusteluKlippi != null) { k.keskustelu = go.AddComponent<AudioSource>(); k.keskustelu.clip = keskusteluKlippi; k.keskustelu.spatialBlend = 0f; k.keskustelu.playOnAwake = false; }
             Aktiivinen = k;
             kirjaa?.Invoke($"seikkailu: kappeli valmis (reitti {k.reitti.Count} pistettä, keskustelu {(keskusteluKlippi != null ? keskusteluKlippi.length.ToString("F1") + " s" : "puuttuu")})");
@@ -69,11 +81,49 @@ namespace Matkakirja.Natiivi
         {
             kappalainenAika += Time.deltaTime; voutiAika += Time.deltaTime;
             var p = SeikkailuPelaaja.Aktiivinen;
+            if (Nyt == Vaihe.Pimea) PaivitaVouti(p);
             if (Nyt == Vaihe.Odottaa && p != null && Vector3.Distance(p.transform.position, ovi) < AlkuM) StartCoroutine(Kohtaus());
             // Valaistuun kappeliin kohtauksen tai sammutuksen aikana (yli 2,5 m kaari-ovelta kohti alttaria): kappalainen näkee.
             if ((Nyt == Vaihe.Kohtaus || Nyt == Vaihe.Pimeys) && p != null && !nahty && Vector3.Distance(p.transform.position, ovi) > 2.5f
                 && Vector3.Distance(p.transform.position, alttari) < Vector3.Distance(ovi, alttari) + 0.5f)
                 StartCoroutine(Nahty(p));
+        }
+
+        void Kova(Vector3 p) => kovaAani = true;
+        void Tavallinen(Vector3 p) => tavallinenAani = true;
+
+        /// <summary>E3b: voudin sääntö pimeässä kappelissa (kohtauksen ja kappalaisen käynnin aikana pois).</summary>
+        void PaivitaVouti(SeikkailuPelaaja p)
+        {
+            var ky = SeikkailuKynttilat.Aktiivinen;
+            bool portaikossa = p != null && Vector3.Distance(p.transform.position, ovi) < 1.5f;
+            var s = new VoudinSyote
+            {
+                ValoNakyy = ky != null && (ky.Ydin.Palavia > 0 || ky.Ydin.OmaPalaa && portaikossa),
+                TavallinenAani = tavallinenAani, KovaAani = kovaAani, FoggPortaikossa = portaikossa,
+                KappalainenHuoneessa = Nyt != Vaihe.Pimea,
+            };
+            tavallinenAani = kovaAani = false;
+            voudinKierros.Paivita(Time.deltaTime, s);
+            if (voudinKierros.Tila != voudinEdellinen) { kirjaa?.Invoke($"seikkailu: vouti {voudinEdellinen} → {voudinKierros.Tila}"); voudinEdellinen = voudinKierros.Tila; }
+            // Hehku: portaikon yläpää, laskeutuessa liukuu kaari-ovelle.
+            hehku.transform.position = Vector3.Lerp(portaikkoYla, ovi + Vector3.up * 1.6f, (float)voudinKierros.Laskeutuminen);
+            hehku.intensity = (float)voudinKierros.Hehku * 1.4f;
+            // Askeleet holvin yllä (ampumakäytävä ~lattia + 4,1 m, säde ~3,9 m), pysähtyvät pysähdyksessä ja katseessa.
+            double a = voudinKierros.Vaihe * Math.PI * 2;
+            var ap = voudinKierros.Tila == VoudinTila.Kierros ? keskus + new Vector3((float)Math.Cos(a) * 3.9f, 4.1f, (float)Math.Sin(a) * 3.9f) : hehku.transform.position;
+            SeikkailuKuulija.Aseta(voudinAskeleet, ap);
+            if (voudinAskeleet.clip == null && SeikkailuVartijat.AskelKlippi != null) voudinAskeleet.clip = SeikkailuVartijat.AskelKlippi;
+            bool kavelee = voudinKierros.Tila == VoudinTila.Kierros || voudinKierros.Tila == VoudinTila.Laskeutuu;
+            if (kavelee && voudinAskeleet.clip != null && !voudinAskeleet.isPlaying) voudinAskeleet.Play();
+            else if (!kavelee && voudinAskeleet.isPlaying) voudinAskeleet.Stop();
+            if (voudinKierros.Tila == VoudinTila.Kiinni && p != null)
+            {
+                // Äänetön kiinniotto (vouti tarttuu olkaan) → E3c tyrmä; nyt tallennuspisteeseen "pimeä kappeli" ja valppaus.
+                kirjaa?.Invoke("seikkailu: vouti otti Foggin kiinni (tyrmä → pimeä kappeli)");
+                p.Siirra(Tallennus);
+                voudinKierros.Tyrmasta();
+            }
         }
 
         bool nahty;
@@ -176,6 +226,8 @@ namespace Matkakirja.Natiivi
         {
             if (Aktiivinen == this) Aktiivinen = null;
             DioraamaHahmot3D.PiilotetutTilat.Remove("kappeli");
+            SeikkailuEsineet.Kolahti -= Kova; SeikkailuEsineet.Aanteli -= Tavallinen;
+            if (voudinAskeleet != null) Destroy(voudinAskeleet.gameObject);
         }
     }
 }

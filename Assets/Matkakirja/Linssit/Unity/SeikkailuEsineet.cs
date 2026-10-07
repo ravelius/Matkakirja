@@ -24,6 +24,8 @@ namespace Matkakirja.Natiivi
         public static AudioClip KolahdusKlippi;
         /// <summary>Kolahdus (paikka): Sovitin soittaa kokin harhautusrepliikin, jos kokki on lähellä.</summary>
         public static event Action<Vector3> Kolahti;
+        /// <summary>Tavallinen ääni (koputus, luukku): voudin sääntö huomaa vaarahetkellä.</summary>
+        public static event Action<Vector3> Aanteli;
         /// <summary>Testi / kosketusnappi: seuraava ruutu tekee toiminnon.</summary>
         public static bool ToimintoPyydetty;
 
@@ -204,6 +206,7 @@ namespace Matkakirja.Natiivi
                 var a = SeikkailuKuulija.Lahde("Koputus", 1.5f, 15f); SeikkailuKuulija.Aseta(a, c);
                 a.clip = OnttoKlippi; a.pitch = 0.75f; a.Play(); Destroy(a.gameObject, OnttoKlippi.length / 0.75f + 0.2f);
             }
+            Aanteli?.Invoke(c);
             kirjaa?.Invoke("seikkailu: koputus kuulostaa ontolta");
         }
 
