@@ -107,6 +107,8 @@ namespace Matkakirja.Linssit.Seikkailu
         double kello, viimeIrti = double.NegativeInfinity, horjahdus;
         /// <summary>Aika otteesta (s), kun Tila = Kiinni.</summary>
         public double OteS { get; private set; }
+        /// <summary>Horjuu tai nousee (irtipääsy, torkkujan herääminen): sovitin soittaa nousu_istumasta torkkujalle.</summary>
+        public bool Horjuu => horjahdus > 0;
 
         /// <summary>Pelaaja kiertyy irti otteesta: onnistuu ikkunan aikana kerran 60 s:ssa. Hahmo horjahtaa (3 s) ja jatkaa jahtia.</summary>
         public bool Irrottaudu()
