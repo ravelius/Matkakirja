@@ -511,3 +511,6 @@ Edellinen luovutus on `viesti-siirtoseppa-luovutus-20261002.md` (5.10. osiot 02.
   WhiteBalance omassa Volumessa, paino valoisuudesta (SeikkailuVartijat.PelaajanValoisuus, sama kuin vartijoiden näkö). Omistajan tarkennus:
   kolmannen persoonan KAUKOKUVAT sallittu (hahmo < ~10 % kuvan korkeudesta: veneen saapuminen ylhäältä, siirtymät, pako, loppu, Pulun
   lento) → Foggin malli säilyy; pelattavuusmalli nimeää kohdat.
+- 18.31: Omistaja 18.7x: kädet saavat näkyä hetkittäin (hihat + hanskat, ei ihoa). Pyydetty LR:ltä kadet-v1 (työn alla, rakennus.json
+  pelaaja.kadet). Kytkentä valmiina 2ca850a0 (historia-fp): PelaajaMalli.Kadet, KasiEle/KadetLeike, eleet toiminnoista. Kun malli tulee:
+  Kasi-piste kahva_oikea-luuhun, tarkista kanto_idle/suojaus. 839/839, unity-tarkistus 0.
