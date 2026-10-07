@@ -1,7 +1,7 @@
 {
   "rakennus": "olavinlinna",
-  "hash": "e358b43eae1bfc4c",
-  "kansio": "dioraama/olavinlinna/blender/e358b43eae1bfc4c/",
+  "hash": "81ceb7fc7f822081",
+  "kansio": "dioraama/olavinlinna/blender/81ceb7fc7f822081/",
   "tiedostot": [
     {
       "polku": "hahmot/apulainen-1500-faceit.glb",
@@ -245,18 +245,18 @@
     },
     {
       "polku": "kavely/kappeli-kavely-kavely.glb",
-      "sha256": "bcdfb2a33a30c8362cf651a76df457e64da52eebd5c293dc29fccbd2ae8cdf5d",
-      "tavuja": 4800
+      "sha256": "7b7a21b873703fc4e2957fa2967f2d9ef22317bb002e974888c9b0d36cfe51b9",
+      "tavuja": 4980
     },
     {
       "polku": "kavely/kappeli-kavely-tormays.glb",
-      "sha256": "270013cea2979c347c0a60ba84993a29847bbfa1bc58f3081fa4953f8f99e037",
-      "tavuja": 13892
+      "sha256": "b30b44181e41b6a18541c63069cb0aa92cb8665518222f7e5130afacb8223356",
+      "tavuja": 15368
     },
     {
       "polku": "kavely/kappeli-kavely.glb",
-      "sha256": "6feefdb70584dd9b1a7d512c5196ed9dde37e405dd98af24425e3f6d0913b5c2",
-      "tavuja": 180260
+      "sha256": "f7ab85e20e71b4a15bbcccb9b212a3b5d99b52ba168f5364ad7c301d7f885ae1",
+      "tavuja": 194204
     },
     {
       "polku": "kavely/keittio-G102-kavely.glb",
@@ -290,13 +290,28 @@
     },
     {
       "polku": "kavely/merkit.json",
-      "sha256": "6794e7fc802d7a69c8ec987831128cf4868a3fdb53ae011886f4d51947024d6d",
-      "tavuja": 28770
+      "sha256": "27bcb2988103dbcc716f3ebd70c74d3817f57495a6410d25b41d62d4c0a0a5f9",
+      "tavuja": 36368
+    },
+    {
+      "polku": "kavely/muurikaytava-kavely.glb",
+      "sha256": "a2ebb5c3b658655073b402881b79aef597775f3b7d2536786e0b9c4e3f61663f",
+      "tavuja": 2032
+    },
+    {
+      "polku": "kavely/muurikaytava-tormays.glb",
+      "sha256": "35d177a209604796d81da3640ca84a8acb9dbb486d2c9ab1a0a05961fce08485",
+      "tavuja": 4008
+    },
+    {
+      "polku": "kavely/muurikaytava.glb",
+      "sha256": "655c344a872ef25a13642ed8fe2c8969aa41d52fdc03dd9cf85934728727e0d4",
+      "tavuja": 34072
     },
     {
       "polku": "kavely/osat.json",
-      "sha256": "ef606dd0b509834b328660553e9f0e70ee7aa8f47cc827ba5b11622264660936",
-      "tavuja": 19051
+      "sha256": "f96407a992f9ba2688bb0adc19a2db595c2abf8dad5f48fa09038f733db4d958",
+      "tavuja": 22068
     },
     {
       "polku": "kavely/palatsi-kavely.glb",
