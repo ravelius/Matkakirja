@@ -44,8 +44,9 @@ namespace Matkakirja.Natiivi
 
         // KAUPUNKIOPAS KARTTAELEMENTTINÄ (omistaja 7.10. 08.3x, Päätoimittaja; LS1:n kaupunkitila): kartan kuumailmapallo avaa yhden
         // kaupungin oppaan. Silloin ei aloitusvalintaa (täkyt / paikat) eikä ☰:n Vaihda kohde -riviä; laaja Elävä opas ennallaan.
-        /// <summary>LS1 kytkee: opas avattiin kartan elementistä yhteen kaupunkiin. Testi `ui opasvalikko kaupunkitila on|off|auto`.</summary>
-        public static Func<bool> KaupunkitilaKysely = () => false;
+        /// <summary>LS1 OpasSovitin.Kaupunkitila (linssiseppa/kaupunkitila-159): opas avattiin kartan elementistä yhteen kaupunkiin.
+        /// Testi `ui opasvalikko kaupunkitila on|off|auto`; LS1:n testi `opas kaupunkitila Praha`.</summary>
+        public static Func<bool> KaupunkitilaKysely = () => OpasSovitin.Kaupunkitila;
         static bool? testiKaupunkitila;
         static bool Kaupunkitila => testiKaupunkitila ?? (KaupunkitilaKysely?.Invoke() ?? false);
 
@@ -368,6 +369,8 @@ namespace Matkakirja.Natiivi
             OpasSovitin.LatausKuvaVaihtui += LatausKuvaVaihtui;
             // Sallitut saapuvat oppaan avauksessa (aloitusvalikko jo auki): lista uudelleen, jotta rajaamaton ei jää näkyviin.
             OpasSovitin.SallitutVaihtui += () => { if (nakyy && Auki) Rakenna(); };
+            // Kaupunkitilaan siirryttäessä mahdollinen aloitusvalinta kiinni ja ☰ ilman Vaihda kohde -riviä.
+            OpasSovitin.KaupunkitilaVaihtui += () => { if (!nakyy) return; if (Kaupunkitila && aloitus) Sulje(); else if (Auki) Rakenna(); };
             // Torjunta tekstinä (LS1 sallitut-157): "vie minut X" / Liiku / kaupunki listan ulkopuolelle, kun siltalause ei soinut.
             // Oppaan chat ei aukea itsestään (Vastaa jäi näkymättömiin): auki olevaan chattiin vastauksena, muuten kertojan laatikkoon.
             OpasSovitin.TorjuntaTeksti += Torjunta;
