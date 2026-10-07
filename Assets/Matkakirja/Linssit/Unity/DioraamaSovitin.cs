@@ -421,6 +421,10 @@ namespace Matkakirja.Natiivi
             // Lähileikkaus puolilähikuvassa: kaikki yli PuolilahiVapaaM lähempänä kameraa kuin puhuja jää piirtämättä (ei peittäjiä).
             nayttamo.LahiLeikkaus = puolilahiRinta is Vector3 pr && nayttamo.Kamera != null
                 ? Mathf.Clamp(Vector3.Distance(nayttamo.Kamera.transform.position, pr) - PuolilahiVapaaM, 0f, PuolilahiLeikkausMaxM) : 0f;   // enintään 1,2 m: kuulija ei katoa blendissä
+            // Kävely: kameran ja pelaajan väliin jäävä lähieste (pylväs, soihtu, oven pieli) jää piirtämättä (Päätoimittaja 7.10. 14.0x:
+            // pihakuvassa pylväs peitti kolmanneksen) — leikkaus 1,2 m ennen pelaajaa, ettei hahmo itse katoa.
+            if (SeikkailuPelaaja.Aktiivinen is SeikkailuPelaaja sp && nayttamo.Kamera != null)
+                nayttamo.LahiLeikkaus = Mathf.Clamp(Vector3.Distance(nayttamo.Kamera.transform.position, sp.transform.position + Vector3.up * 1.2f) - 1.6f, 0f, KavelyLahiMaxM);   // enintään 2,2 m: lattia ruudun alareunassa ei katoa
             // Rengas piilossa myös 1,5 s puolilähikuvan jälkeen: blendi takaisin lepoon on vielä lähellä kasvoja (eleet-2-ajo 7.10.: kaari kokin yllä).
             if (puolilahiRinta.HasValue) himmennysAsti = Time.unscaledTime + 1.5f;
             // Kävelytilassa ei etsinnän renkaita (v44-ajo 7.10.: renkaat kameran edessä keittiössä).
@@ -803,6 +807,7 @@ namespace Matkakirja.Natiivi
         const double VeneSumuM = 120, VeneKestoS = 50;
         float himmennysAsti = -1f;
         const double KavelySumuM = 25;
+        const float KavelyLahiMaxM = 2.2f;
         IEnumerator VarmistaKavelyData()
         {
             if (SeikkailuKavely.Ladattu) yield break;
