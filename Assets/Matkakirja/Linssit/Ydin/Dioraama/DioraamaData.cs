@@ -559,6 +559,9 @@ namespace Matkakirja.Linssit.Dioraama
         /// <summary>Staattiset lisämallit kanonisissa koordinaateissa (historiamoottori V0, 7.10.2026: rantakivet, myöhemmin vene ym.):
         /// ymparisto.mallit[] { id, huippu, kevyt }; Linnanrakentajan ymparisto.rantakivet { huippu, kevyt } luetaan id:llä "rantakivet".</summary>
         public List<(string Id, string Huippu, string Kevyt)> Mallit = new List<(string, string, string)>();
+        /// <summary>Sijoittamattomat mallit (rekvisiitta, origo omassa juuressaan; Timeline tai seikkailu sijoittaa): ymparisto.mallit[] jossa
+        /// "maailmaan": false, tai id "vene" ilman maailmaan-kenttää (Linnanrakentajan v43: vene ei ole maailmaan sijoitettu).</summary>
+        public List<(string Id, string Huippu, string Kevyt)> Rekvisiitta = new List<(string, string, string)>();
         public string OrtoHuippu, OrtoNormaali, OrtoKevyt;
         public string Puut, Puukortit, Horisontti, HorisonttiKuva;
         /// <summary>Veden syvyyskartta (8 bit, 0 = ranta): kuva, pikselin koko, metriä/arvo ja kuvan vasen yläkulma (Blender x, y).</summary>
@@ -741,7 +744,11 @@ namespace Matkakirja.Linssit.Dioraama
                 };
                 foreach (var mo in MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(ymp, "mallit")))
                     if (MiniJson.ObjektiTaiNull(mo) is Dictionary<string, object> m && !string.IsNullOrEmpty(MiniJson.Teksti(m, "huippu") ?? MiniJson.Teksti(m, "kevyt")))
-                        y.Mallit.Add((MiniJson.Teksti(m, "id") ?? "malli", MiniJson.Teksti(m, "huippu"), MiniJson.Teksti(m, "kevyt")));
+                    {
+                        var mid = MiniJson.Teksti(m, "id") ?? "malli";
+                        bool maailmaan = MiniJson.Kentta(m, "maailmaan") is bool mb ? mb : mid != "vene";
+                        (maailmaan ? y.Mallit : y.Rekvisiitta).Add((mid, MiniJson.Teksti(m, "huippu"), MiniJson.Teksti(m, "kevyt")));
+                    }
                 if (MiniJson.ObjektiTaiNull(MiniJson.Kentta(ymp, "rantakivet")) is Dictionary<string, object> rk && !string.IsNullOrEmpty(MiniJson.Teksti(rk, "huippu") ?? MiniJson.Teksti(rk, "kevyt")))
                     y.Mallit.Add(("rantakivet", MiniJson.Teksti(rk, "huippu"), MiniJson.Teksti(rk, "kevyt")));
                 if (MiniJson.Luku(syv, "pikseli_m") is double pm) y.SyvyysPikseliM = pm;
