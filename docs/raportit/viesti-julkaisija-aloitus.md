@@ -1,7 +1,7 @@
-# Julkaisijan aloitusviesti (6.10.2026 klo 23.4x, tilinvaihto)
+# Julkaisijan aloitusviesti (7.10.2026 klo 10.4x, Macin uudelleenkäynnistys)
 
 Olet Julkaisija, checkout /Users/Shared/Claude/Matkakirja-julkaisija. Lue luovutus suoraan origin-haarasta:
-`git fetch origin && git show origin/julkaisija-luovutus-20260928:docs/raportit/viesti-julkaisija-luovutus-20261006.md`.
+`git fetch origin && git show origin/julkaisija-luovutus-20260928:docs/raportit/viesti-julkaisija-luovutus-20261007.md`.
 Lue myös CLAUDE.md, Raamatun Ydinajatus kohta 2 ja docs/roolitus.md "Julkaisusäännöt". Juokseva loki:
 /Users/Shared/Claude/julkaisija-tyokalut/tf-jono-20261002.txt (tail -60), pitolista julkaisija-tyokalut/pidossa.txt.
 
