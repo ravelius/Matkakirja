@@ -547,19 +547,23 @@ namespace Matkakirja.Natiivi
                 r.timeout = 10;
                 yield return r.SendWebRequest();
                 var l = r.result == UnityWebRequest.Result.Success ? OpasYksityiskohdat.Lue(MiniJson.Jasenna(r.downloadHandler.text)) : null;
-                if (yksKaupunki == id) yksKuvat = l;
+                if (yksKaupunki == id && yksPolku == polku) yksKuvat = l;
                 o.Kirjaa($"opas: yksityiskohtakuvat {id}: {(l != null ? l.Count + " kuvaa" : "ei latautunut (" + r.responseCode + ")")} [{polku}]");
             }
             yksHaussa = false;
         }
 
+        /// <summary>Kaupungin paketti (mikä tahansa esittelykaupunki, jolla on yksityiskohdat_polut-rivi); uusi haku, kun kaupunki
+        /// tai sen polku vaihtuu (Sisältökirjurin uusi luetteloversio, ämpäri ei ylikirjoita).</summary>
         void VarmistaYksityiskohdat()
         {
             string id = YksKaupunkiId();
-            if (id == yksKaupunki) return;
-            yksKaupunki = id; yksKuvat = null;
-            if (id != null && yksPolut.TryGetValue(id, out var polku) && !Testi) o.StartCoroutine(HaeYksityiskohdat(id, polku));
+            string polku = id != null && yksPolut.TryGetValue(id, out var p) ? p : null;
+            if (id == yksKaupunki && polku == yksPolku) return;
+            yksKaupunki = id; yksPolku = polku; yksKuvat = null;
+            if (polku != null && !Testi) o.StartCoroutine(HaeYksityiskohdat(id, polku));
         }
+        static string yksPolku;
 
         static bool YksPeittaa()
         {
