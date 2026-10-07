@@ -1,3 +1,18 @@
+# TILANNE 7.10. klo 23.2x
+
+- **AJOSSA: TALVI2D** (`kaudet/aja-talvi2d.sh`, PGID 68005, 23.22 alkaen, 80 lohkoa, noin 3 h) → `s2-eurooppa-talvi2d/`. Koodi: `kausimosaiikki-talvi2d-20261007.mjs`.
+  Talvi2c (23.15) on muuten kunnossa: porrasneliöt ovat poissa, Perämeren reiät täyttyneet, eikä pilviä näy (`yleiskuva-talvi2c-z6.jpg`).
+  Vika oli Grönlannin itärannikolla: koko meri oli jäätä, ja reunat seurasivat suorakulmaisesti S2-kattavuutta. Syy: dRanta-katto 36, joten ehto `dRanta <= 90` oli aina tosi.
+  Talvi2d pitää merijään (ja reikätäytön) vain alueella 9–45° E, 53–67° N (Itämeri ja Vienanmeri). x34–39 × rivit 16–19 pysyvät talvi2c:ssä (kokonaan alueen sisällä).
+  **Lopulliset kerrokset: talvi2d → talvi2c → talvi2.** Valmistuttua:
+  1) Yleiskuva (sama skripti kuin talvi2c:lle, kerrokset yllä): tarkista Grönlanti (27_13–15), Jan Mayen, Norjan vuonot, Turun saaristo ja Perämeri.
+  2) Yksi rivi PT:lle.
+  3) Kuittauksen jälkeen `kokoa-kausi.py talvi v1 <_valmiit/s2-eurooppa-talvi-vienti-<pvm>> "<talvi2d/laatat>:<talvi2c/laatat>:<talvi2/laatat>" "<kuvaus>"`, LAHTEET.md (pohjana kevät) ja Julkaisija.
+- Syksy v1 ja kevät v1 ovat ämpärissä (LS2:lle ilmoitettu). Worldview on tuotannossa.
+- Ennen uusia polttoja: `cat /tmp/matkakirja-kaannospalvelu.lukko/kuka` (tyhjä = vapaa).
+
+---
+
 # TILANNE 7.10. klo 20.0x
 
 - **AJOSSA: TALVI2C** (`kaudet/aja-talvi2c.sh`, PGID 50483, 19.09 alkaen, noin 4 h): rivit 13–20 → `s2-eurooppa-talvi2c/`. Koodi: `kausimosaiikki-talvi2c-20261007.mjs`.
