@@ -122,3 +122,4 @@ Puuttuvat tulostiedostot:
   Tavoite 40–60 kuvaa voi jäädä vajaaksi, jolloin ero katetaan Codex-tilauksilla.
 - Ehdokaslistalla on lisenssejä (GFDL, FAL), jotka eivät kelpaa. `yhdista.py` hylkää ne,
   mutta älä poimi niitä listalta käsin.
+- pysäytetty 7.10. 16.1x, loppukokoaminen tehdään paikallisesti
