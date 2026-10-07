@@ -33,7 +33,7 @@ namespace Matkakirja.Natiivi
         public static bool Ensimmainen = true;
         /// <summary>Kantokohta: kynttilä ja poimittu esine (ensimmäisessä persoonassa kameran edessä oikealla, muuten käden korkeudella).</summary>
         public Transform Kasi { get; private set; }
-        float silmaNyt = SilmaY, eleNotko;
+        float silmaNyt = SilmaY, eleNotko, leikkausTarkistus;
         // Portaiden pehmennys (pelattavuusmalli kohta 6): silmien maailmankorkeus seuraa 0,1 s:n viiveellä, enintään 0,4 m jäljessä.
         public const float PortaatViive = 0.1f, PortaatMaxJalki = 0.4f;
         float silmaMaailma = float.NaN, silmaNopeus;
@@ -391,6 +391,7 @@ namespace Matkakirja.Natiivi
             float dt = Mathf.Min(Time.unscaledDeltaTime, 0.05f);
             var s = LueSyote();
             NapautusSyote(ref s, dt);
+            if (Time.unscaledTime > leikkausTarkistus) { leikkausTarkistus = Time.unscaledTime + 0.5f; SeikkailuKavely.PaivitaLeikkaukset(transform.position); }
             if (Otteessa) { s.LiikeX = s.LiikeY = 0; s.Juoksu = false; napautusReitti.Clear(); }
             if (PaivitaKiipeily(dt, s))
             {

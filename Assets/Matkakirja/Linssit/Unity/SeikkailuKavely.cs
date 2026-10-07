@@ -72,17 +72,39 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Kuoren leikkaukset päälle/pois (kävelytila).</summary>
-        public static void Leikkaukset(bool paalla)
+        public const int LeikkauksiaMax = 16;
+        static bool leikkauksetPaalla; static string leikkausOsa;
+
+        /// <summary>Kuoren leikkaukset kävelytilassa (enintään LeikkauksiaMax; 7.10. datassa 40, ennen otettiin vain 8 ensimmäistä,
+        /// jolloin kappelin ja portaiden leikkaukset jäivät pois). Valinta: pelaajan osa, sen naapurit, sitten lähimmät keskipisteet.</summary>
+        public static void Leikkaukset(bool paalla) { leikkauksetPaalla = paalla; leikkausOsa = null; PaivitaLeikkaukset(SeikkailuPelaaja.Aktiivinen != null ? SeikkailuPelaaja.Aktiivinen.transform.position : (Vector3?)null, true); }
+
+        /// <summary>Kutsutaan pelaajan liikkuessa (SeikkailuPelaaja, 0,5 s välein): valinta päivittyy, kun osa vaihtuu.</summary>
+        public static void PaivitaLeikkaukset(Vector3? pelaaja, bool pakota = false)
         {
-            var c = new Vector4[8]; var k = new Vector4[8]; int n = 0;
-            if (paalla && Data != null)
-                foreach (var osa in Data.Osat.Values)
-                    foreach (var l in osa.Leikkaukset)
+            var c = new Vector4[LeikkauksiaMax]; var k = new Vector4[LeikkauksiaMax]; int n = 0;
+            if (leikkauksetPaalla && Data != null)
+            {
+                string osa = pelaaja is Vector3 pp ? Matkakirja.Linssit.Seikkailu.Askelaani.Osa(Data, pp.x, pp.y, -pp.z) : null;
+                if (!pakota && osa == leikkausOsa) return;
+                leikkausOsa = osa;
+                Data.Osat.TryGetValue(osa ?? "", out var oma);
+                var kaikki = new List<(KavelyLeikkaus L, double Arvo)>();
+                foreach (var o in Data.Osat.Values)
+                    foreach (var l in o.Leikkaukset)
                     {
-                        if (n >= 8) break;
-                        c[n] = new Vector4((float)l.X, (float)l.Y, (float)l.Z, (float)l.KiertoY);
-                        k[n] = new Vector4((float)l.KokoX / 2, (float)l.KokoY / 2, (float)l.KokoZ / 2, 0); n++;
+                        double arvo = o.Id == osa ? 0 : oma != null && (oma.Naapurit.Contains(o.Id) || o.Naapurit.Contains(osa)) ? 1000 : 2000;
+                        if (pelaaja is Vector3 q) { double dx = l.X - q.x, dy = l.Y - q.y, dz = l.Z + q.z; arvo += Math.Sqrt(dx * dx + dy * dy + dz * dz); }
+                        kaikki.Add((l, arvo));
                     }
+                kaikki.Sort((a, b) => a.Arvo.CompareTo(b.Arvo));
+                foreach (var (l, _) in kaikki)
+                {
+                    if (n >= LeikkauksiaMax) break;
+                    c[n] = new Vector4((float)l.X, (float)l.Y, (float)l.Z, (float)l.KiertoY);
+                    k[n] = new Vector4((float)l.KokoX / 2, (float)l.KokoY / 2, (float)l.KokoZ / 2, 0); n++;
+                }
+            }
             Shader.SetGlobalVectorArray(IdLeikkaus, c); Shader.SetGlobalVectorArray(IdKoko, k); Shader.SetGlobalFloat(IdN, n);
         }
 
