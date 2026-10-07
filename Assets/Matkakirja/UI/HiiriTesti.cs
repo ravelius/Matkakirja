@@ -6,6 +6,7 @@
 //   ui hiiri klikkaa <x> <y>   pisteet (Nostot-paneelin koordinaatit, y alas)
 //   ui hiiri pallo <id>        pallon kuoren keskelle (KaupunkiPallot.KuorenKeskus)
 //   ui hiiri poimi <x> <y>     vain osumatesti
+//   ui hiiri paina|vapauta <x> <y>   vasen nappi pohjaan / ylös (Natiiviseppä: jumiutunut leftButton.isPressed)
 using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -33,6 +34,16 @@ namespace Matkakirja.Natiivi
             Debug.Log($"MATKAKIRJA hiiri: klikkaus ({pt.x:0},{pt.y:0}) pt = ({px.x:0},{px.y:0}) px, osumatesti: {osuma}");
             kerros.StartCoroutine(Aja(px));
             return $"hiiri: klikkaus ({pt.x:0},{pt.y:0}) pt, osuma {osuma}";
+        }
+
+        /// <summary>Vasen nappi pohjaan tai ylös pisteessä (ei klikkausta): leftButton.isPressed-tilan testi.</summary>
+        public static string Nappi(UiKerros kerros, Vector2 pt, bool alas)
+        {
+            var px = Ruutuun(kerros, pt);
+            var hiiri = Mouse.current ?? InputSystem.AddDevice<Mouse>();
+            InputSystem.QueueStateEvent(hiiri, new MouseState { position = px }.WithButton(MouseButton.Left, alas));
+            Debug.Log($"MATKAKIRJA hiiri: vasen {(alas ? "pohjaan" : "ylös")} ({px.x:0},{px.y:0}) px");
+            return $"hiiri: vasen {(alas ? "pohjaan" : "ylös")} ({pt.x:0},{pt.y:0}) pt, isPressed ennen {hiiri.leftButton.isPressed}";
         }
 
         static IEnumerator Aja(Vector2 px)
