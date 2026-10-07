@@ -25,8 +25,9 @@ Avoimet työt:
   iPhone + Ateena/Pariisi iPad, skenaariot puoli-kaikki.txt / puoli-ipad.txt). Yhdistelmä yövalot-161 mahdollinen (Julkaisija).
   12.43 toistoajo ennen tehty (lokit/todistus-puoli-ennen-19ef80cc-*): iPhonella Ateenan kortti oikealla, pallo ei peitossa (vika ei
   toistunut iPhonella; omistajan näkymä todennäköisesti iPad), mutta Sofian (BGR) pallo näkyi Kreikassa → 12.5x-sääntö korjaa.
-  Ketju (pid ketju-puoli.sh) odottaa yhä kaannos-lupa-p ja simu-lupa-p2 (tauon yli setsid). Jos Julkaisija kääntää yhdistelmän
-  (yövalot-161 + pallo), aja puoli-kaikki.txt / puoli-ipad.txt sen appilla käsin (komennot ketju-puoli.sh:ssa) ja tapa ketju.
+  Ketju lopetettu: pallo-puoli kääntyy Natiivisepän iOS-yhdistelmässä (074c95a3 + yövalot 47622521f + e16d100db, 12.47–).
+  15.00 jälkeen: Natiiviseppä lähettää appin polun, Julkaisija simuvuoron → APP=… SHA=… perl setsid scratchpad/ajo-puoli-yhd.sh
+  (kopio lokit/linssiseppa2-3d-kattavuus/ajot/), tulos lokit/linssiseppa2-puoli.log (AJO VALMIS).
   Tulos: lista kaupungeista, joissa puoli vaihtui (loki "kaupunkipallot: <id> oikealle"), + stillit Kreikka/Ranska → Päätoimittaja.
 
 ## TILA 7.10. 12.2x
