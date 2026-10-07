@@ -149,6 +149,7 @@ namespace Matkakirja.Natiivi
             {
                 if (esitysAlkaa) Viimeisin.silmukka.PyynnotSeis = true;   // esitys: avaus ja opastus ensin, ei workerin kaupunkikysymystä
                 Viimeisin.silmukka.AvausEtaisyysOhitus = Kaupunkitila ? KaupunkitilaAvausM : (double?)null;
+                Viimeisin.silmukka.AvausKallistusOhitus = Kaupunkitila ? KaupunkitilaAvausKallistus : (double?)null;
                 Viimeisin.silmukka.VaihdaPaikka(lat, lon, nimi.Trim());   // kamera lentää heti kaupungin yleiskuvaan (Natiivi-UI 6.10. 00.2x)
             }
             var v = Viimeisin;
@@ -365,11 +366,17 @@ namespace Matkakirja.Natiivi
             // Aloitusvalikko: ei kameraa eikä laattoja; silmukka etenee silti (toive tai kysymys ennen valintaa → ensimmäinen
             // lento on pakotettu siirto, joka avaa kartan SiirtoAlkaa-kutsussa suoraan kohteeseen).
             if (kaupunkiOdottaa) { silmukka.Paivita(Time.unscaledDeltaTime, MaaKorkeus, () => false); return; }
-            kori.Kayta(Kaupunkitila && nakymaAuki, kaupunki.Kamera);   // kuumailmapallon korinäkymä (kokeilu, Päätoimittaja 7.10. 09.1x)
+            // Kuumailmapallon korinäkymä (Päätoimittaja 7.10. 09.1x) koko oppaassa: omistaja TF 162 tuli linssivalikon kautta
+            // (aloitusvalikko → Pariisi, ei kaupunkitilaa) eikä nähnyt koria eikä köysiä.
+            kori.Kayta(nakymaAuki, kaupunki.Kamera);
             IlmoitaKierros();
             // Esilataus latauskuvan aikana: esityksen ensimmäinen kohde heti, kun kierroslista on haettu (omistaja 12.5x).
             if (Kaupunkitila && silmukka.PyynnotSeis && silmukka.EsiKohde == null && (kierrosKohteet ?? kohteet) is List<OpasTaky> ek && ek.Count > 0 && kohteetKaupunki == Aloituskaupunki)
-            { silmukka.EsiKohde = (ek[0].Nimi, ek[0].Lat, ek[0].Lon); o.Kirjaa($"opas: esilataus ensimmäinen kohde {ek[0].Nimi}"); }
+            {
+                silmukka.EsiKohde = (ek[0].Nimi, ek[0].Lat, ek[0].Lon); o.Kirjaa($"opas: esilataus ensimmäinen kohde {ek[0].Nimi}");
+                // Omistaja TF 162 (Rooma) / Päätoimittaja 22.4x: avausnäkymä katsoo ensimmäistä kohdetta (alakolmannes), 1,1 km / 50°.
+                if (silmukka.KohdistaAvausKohteeseen(ek[0].Nimi, ek[0].Lat, ek[0].Lon)) o.Kirjaa($"opas: avausnäkymä kohti ensimmäistä kohdetta ({ek[0].Nimi}, {silmukka.Asento})");
+            }
             if (esitysAlkaa && Kaupunkitila && !silmukka.Siirtymassa && kohteet != null && kohteet.Count > 0 && kohteetKaupunki == Aloituskaupunki)
             { esitysAlkaa = false; o.StartCoroutine(EsitysAvaus(KaupunkitilaId)); }
             if (jatkoVastauksenJalkeen && silmukka.KierrosKeskeytetty && silmukka.Vaihe == OpasVaihe.Odottaa && silmukka.VaiheAika > JatkoViiveS && !puhuu)
@@ -429,8 +436,14 @@ namespace Matkakirja.Natiivi
             var vt = silmukka.VapaaTapit;
             bool vapaaLiikkuu = silmukka.VapaaTila && (Math.Abs(vt.vx) + Math.Abs(vt.vy) + Math.Abs(vt.ox) + Math.Abs(vt.oy)) > 0.05;
             if (vapaaLiikkuu) kaupunki.Karkeaksi();
-            else if (kaupunki.KarkeaKaytossa && !silmukka.Siirtymassa && silmukka.Vaihe != OpasVaihe.Lentaa && kaupunki.Latausaste >= CesiumKaupunki.ValmisProsentti)
+            // Omistaja TF 162 (iPad, Notre-Dame möykkynä): laitteella laatat eivät kierron aikana ehkä koskaan saavuta 99 %:a, jolloin
+            // karkea valinta jäi päälle koko kerronnan ajaksi → tarkentuu viimeistään TarkennaViimeistaanS pysähdyksen alusta.
+            else if (kaupunki.KarkeaKaytossa && !silmukka.Siirtymassa && silmukka.Vaihe != OpasVaihe.Lentaa
+                && (kaupunki.Latausaste >= CesiumKaupunki.ValmisProsentti || silmukka.VaiheAika > TarkennaViimeistaanS))
+            {
+                if (kaupunki.Latausaste < CesiumKaupunki.ValmisProsentti) o.Kirjaa($"opas: tarkennus aikarajalla {silmukka.VaiheAika:F1} s, laatat {kaupunki.Latausaste:F0} %");
                 kaupunki.Tarkenna();
+            }
             if (silmukka.Vaihe != ennen) o.Kirjaa($"opas: {ennen} → {silmukka.Vaihe} {(silmukka.Nykyinen?.Nimi ?? "")}, laatat {kaupunki.Latausaste:F0} %");
             if (silmukka.Vaihe != ennen && silmukka.Vaihe == OpasVaihe.Lentaa) OpasKorostusKuva.Piilota();
             y.Kuvaa(silmukka.Asento);
@@ -497,7 +510,8 @@ namespace Matkakirja.Natiivi
         }
         public const string KerroLisaaTeksti = "Kerro lisää";
         /// <summary>Kaupunkitilan yleiskuvan etäisyys (m; oletus 5 000): lyhyempi siirtymä ensimmäiseen kohteeseen (omistaja 12.5x).</summary>
-        public const double KaupunkitilaAvausM = 2200;
+        // Päätoimittaja 22.4x (omistaja TF 162, Rooma: "kohde on liian kaukana"): puoliväli 2,2 km:n pystykuvan ja lähikuvan välillä.
+        public const double KaupunkitilaAvausM = 1100, KaupunkitilaAvausKallistus = 50;
 
         // ---- ESITYKSEN AVAUS JA OPASTUS (omistaja 7.10. 10.1x / 12.4x) ----
         // Kaupunkitilan esitys: siirtymä → kaupungin avaus (opas/esittely-v1/<id>.json "avaus") → opastuslause VAIN pelaajan
@@ -1346,6 +1360,8 @@ namespace Matkakirja.Natiivi
         public static event Action SiirtymaValmis;
         public static float SiirtymaEdistyminen => SiirtymaEdistys;
         bool siirtymaEdellinen;
+        /// <summary>Karkea laattavalinta tarkentuu pysähdyksellä viimeistään tämän ajan kuluttua, vaikka laatat eivät ole 99 %.</summary>
+        public const double TarkennaViimeistaanS = 4.0;
 
         // ---- KUVASUURENNOKSEN SUMENNUS (omistaja 12.1x): kevyt Gaussian-syväterävyys koko kuvalle ja kamera seis ----
         UnityEngine.Rendering.Volume sumennus;

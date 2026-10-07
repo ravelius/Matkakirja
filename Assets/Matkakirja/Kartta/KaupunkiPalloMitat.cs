@@ -9,7 +9,8 @@ namespace Matkakirja
     /// UI/KaupunkiPallot.cs.
     ///
     ///  - NÄKYVYYS: vain pelaajan nykyisen maan pallot kaikilla zoomeilla (omistaja 7.10. 12.5x; UI/KaupunkiPallot.cs, kuten
-    ///    kipsipäiden ErikoisnostoMitat.OmaMaa). NakyyAstiM on enää koon kaukaraja.
+    ///    kipsipäiden ErikoisnostoMitat.OmaMaa). NakyyAstiM on enää koon kaukaraja. Kehittäjän maailmanäkymässä (huntu pois,
+    ///    Paavalikko.MaailmaNakyma) kaikkien maiden pallot (omistaja TF 162, 7.10. 21.5x): <see cref="Nakyy"/>.
     ///  - KOKO ZOOMIN MUKAAN: ruudulla vakiokokoinen kuten päät, mutta kasvaa lähestyessä logaritmisesti KokoKaukaPt → KokoLahiPt
     ///    (LahiM:stä lähemmäs täysi koko). Kuoren osuus kuvasta on ~1/3 (köysi ja tuulikallistus), joten 84 pt → kuori ~28 pt (Päätoimittaja 7.10.: 1,5–2 × 44090c1a:n 17 × 37 pt).
     ///  - PAIKKA: pallon kuvan alareunan keskikohta (kori ja köysi) on kaupungin keskipisteessä; piilossa, kun piste on yli pallon
@@ -56,5 +57,9 @@ namespace Matkakirja
             if (float.IsNaN(x) || float.IsNaN(y)) return false;
             return !(pisteX < -koko || pisteY < -koko || pisteX > leveys + koko || pisteY > korkeus + koko);
         }
+
+        /// <summary>Saako pallo näkyä: kehittäjän maailmanäkymässä (huntu pois) aina, muuten vain pelaajan nykyisessä maassa.</summary>
+        public static bool Nakyy(string pallonMaa, string pelaajanMaa, bool maailmaNakyma) =>
+            maailmaNakyma || ErikoisnostoMitat.OmaMaa(pallonMaa, pelaajanMaa);
     }
 }

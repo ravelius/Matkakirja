@@ -244,6 +244,7 @@ namespace Matkakirja.Natiivi
         {
             uiKerros = kerros;
             this.kerrosNro = kerrosNro;
+            Matkakirja.Linssit.YksityiskohtaKortti.Napit = NappienLaatikot;
             kerros.TurvaMuuttui += () => { if (aloitus && Auki) AsetteleAloitus(); }; // kierto aloituksen aikana
             Juuri = Rakenne.El("mk-linnavalikko", kerros.Turva(kerrosNro), PickingMode.Ignore);
             Juuri.style.position = Position.Absolute;
@@ -1017,6 +1018,40 @@ namespace Matkakirja.Natiivi
                 if (ala.Length > 0) Kirjasimet.Aseta(Rakenne.Teksti(ala, "mk-linssirivi__lyhyt", tekstit), Kirjasin.Moderni);
                 nykyiset.Add((b, teko));
             }
+        }
+
+        /// <summary>
+        /// Näkyvät napit ja tapit ruutupikseleinä (origo vasen alakulma) yksityiskohtakortin väistöön (Päätoimittaja 7.10. 21.5x):
+        /// kaikkien UI-dokumenttien Buttonit ja mk-tappi-elementit, joiden ketju on näkyvissä; koko ruudun kokoiset (taustat) pois.
+        /// </summary>
+        static List<KorttiAsettelu.Laatikko> NappienLaatikot()
+        {
+            var l = new List<KorttiAsettelu.Laatikko>();
+            float sw = Screen.width, sh = Screen.height;
+            foreach (var doc in UnityEngine.Object.FindObjectsByType<UIDocument>(FindObjectsSortMode.None))
+            {
+                var juuri = doc != null && doc.isActiveAndEnabled ? doc.rootVisualElement : null;
+                if (juuri?.panel == null) continue;
+                float pw = juuri.panel.visualTree.layout.width, sk = pw > 0 ? sw / pw : 1f;
+                juuri.Query<VisualElement>().Where(e => e is Button || e.ClassListContains("mk-tappi")).ForEach(e =>
+                {
+                    if (!NakyvaKetju(e)) return;
+                    var r = e.worldBound;
+                    if (!(r.width > 1f && r.height > 1f) || r.width * r.height * sk * sk > 0.25f * sw * sh) return;
+                    l.Add(new KorttiAsettelu.Laatikko(r.xMin * sk, sh - r.yMax * sk, r.xMax * sk, sh - r.yMin * sk));
+                });
+            }
+            return l;
+        }
+
+        static bool NakyvaKetju(VisualElement e)
+        {
+            for (var p = e; p != null; p = p.parent)
+            {
+                var st = p.resolvedStyle;
+                if (st.display == DisplayStyle.None || st.visibility == Visibility.Hidden || st.opacity < 0.05f) return false;
+            }
+            return true;
         }
 
         static string Etaisyys(double m) => m < 1000 ? $"{Math.Round(m / 10) * 10:0} m" : $"{m / 1000:0.0} km".Replace('.', ',');

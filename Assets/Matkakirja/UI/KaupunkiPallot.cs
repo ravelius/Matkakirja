@@ -147,13 +147,14 @@ namespace Matkakirja.Natiivi
             // syttymisen ajassa kuten kipsipäillä (ErikoisnostoMitat.OmaMaa, Haivytys).
             var nk = NostoKerros.Instanssi;
             string maa = nk != null ? nk.NykyinenMaa : null;
+            bool kaikki = Paavalikko.MaailmaNakyma;   // kehittäjän maailmanäkymä (huntu pois): kaikkien maiden pallot (TF 162)
             float kesto = nk != null ? nk.syttyminenS : 0.3f;
-            if (maa != edellinenMaa)
+            if (maa != edellinenMaa || kaikki != edellinenKaikki)
             {
-                edellinenMaa = maa;
+                edellinenMaa = maa; edellinenKaikki = kaikki;
                 foreach (var x in pallot) x.PuoliPaatetty = false;   // uusi maa: puolet uudelleen pelaajan kaupungin kortin mukaan
                 Debug.Log($"MATKAKIRJA kaupunkipallot: maa {maa ?? "-"}, näkyvät: " + string.Join(", ",
-                    pallot.Where(x => ErikoisnostoMitat.OmaMaa(PallonMaa(x), maa)).Select(x => x.Id).DefaultIfEmpty("-")));
+                    pallot.Where(x => KaupunkiPalloMitat.Nakyy(PallonMaa(x), maa, kaikki)).Select(x => x.Id).DefaultIfEmpty("-")));
             }
             // Kortti kuuluu pelaajan kaupunkiin: vain korttia lähin pallo ratkaisee puolensa (simu af5922b9: Sevillan kortti käänsi
             // Granadan ja Tampereen kortti Helsingin pallon).
@@ -171,7 +172,7 @@ namespace Matkakirja.Natiivi
             }
             foreach (var p in pallot)
             {
-                bool oma = ErikoisnostoMitat.OmaMaa(PallonMaa(p), maa);
+                bool oma = KaupunkiPalloMitat.Nakyy(PallonMaa(p), maa, kaikki);
                 p.Peitto = ErikoisnostoMitat.Haivytys(p.Peitto, oma, Time.unscaledDeltaTime, kesto);
                 // Karttapiste ruudulle; false = pallon takana tai ruudun ulkopuolella. Muu maa: piilossa, kun häivytys on ohi.
                 if (p.Peitto <= 0f || !kierto.RuutuPiste(p.Lat, p.Lon, out var r)) { Nayta(p, false); continue; }
@@ -194,6 +195,7 @@ namespace Matkakirja.Natiivi
         }
 
         string edellinenMaa = "";
+        bool edellinenKaikki;
 
         /// <summary>Pallon maa: pelin kaupunkidata (sallittujen id = laudan kaupungin id), muuten lähin laudan kaupunki ≤ 0,5°.</summary>
         static string PallonMaa(Pallo p)
