@@ -274,3 +274,23 @@ NUI:n osa on `natiivi-ui/sallitut-157` 0f770be2. LS2:n lista on tiedostossa `pro
 - 19.08: korin pehmennys `linssiseppa/kori-pehmea` 18d854a13 → juna 162 Natiivisepälle (korvaa kori-vahvemman).
   - GPU-testi Editor/KoriKoosteTesti läpi: ajuri `tyokalut/linssiseppa-ajot/proto-testiajo.sh <haara> <metodi> <kansio>` käännöspalvelun lukolla, vain luvalla. Tulos `lokit/linssiseppa-koritesti-20261007`.
   - Ajonaikainen itsetarkistus palauttaa suoraan piirtoon, jos alfa ei säily.
+
+## ALOITUS SEURAAVALLE LINSSISEPÄLLE (7.10. 19.1x, tilinvaihto ~22.15–22.50)
+Rooli: Linssiseppä (LS1, Opus high). Proto-worktree `/Users/Shared/Claude/wt/proto-linssiseppa-astro-auto` (paikallinen proto-git, ei originia), roolirepo tämä checkout. Lue ensin tämän tiedoston loppuosa 15.5x alkaen.
+LINJAT (omistaja 7.10.):
+- Ei omia käännöksiä eikä simuja; kuittaukseen riittävät unity-tarkistus ja testit (Linssit-, Kartta- ja Peli-testit `sh kaanna.sh`) sekä pohjavahti.
+- Simu tai käännös vain vian selvitykseen, siitä yksi rivi Päätoimittajalle etukäteen.
+- GPU-testi vain luvalla: `proto-testiajo.sh`.
+- Kuittaus Päätoimittajalta yhdellä rivillä → SHA Natiivisepälle (uds:/tmp/cc-socks/3265.sock).
+JUNA 162 (lukitus 21.15, Natiivisepällä):
+- pallo-latauskuva b9f37ee8f
+- alkulento-v3-korjaus 19dcb1d15
+- alkulento-aani b11f5e253
+- kori-pehmea 18d854a13 (sisältää kori-vahvemman)
+JUNA 163 (Natiivisepällä): aaneton-esitys 7568a39bc (sisältää yksityiskohdat + havainnekuva + kaikki kaupungit).
+AVOINNA:
+- Omistaja testaa alkulennon ja korin TF 162:lla illalla. Jos nykäys näkyy: Natiiviseppä ajaa `lento v3 kehysloki 1` iPadilla, ja minä teen kohdennetun korjauksen.
+- Yksityiskohtakortin ulkoasu omistajan TF 163 -palautteen mukaan.
+- Prahan ja Wienin yksityiskohdat ovat datana valmiit (54/49 ankkuria OK). Pelikoodari lisää polut.
+- Giza odottaa Olavinlinnaa: Linnanrakentaja leipoo Sfinksin LOD1/2:n uudelleen (glb-musta-uv.py) ja sävyttää helmat.
+- Varsova tarkistetaan uudelleen 14.10.
