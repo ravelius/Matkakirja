@@ -387,6 +387,9 @@ namespace Matkakirja.Linssit.Testit
             edistys = 1.0;
             for (int i = 0; i < 40 && s.Siirtymassa; i++) s.Paivita(0.1, _ => 5);
             Oleta.Tosi(!s.Siirtymassa, "siirtymä ohi");
+            Oleta.Sama(0, kysyt.Count, "ei samalla ruudulla, jolla siirto päättyi (latausikkuna vielä näkyy)");
+            for (int i = 0; i < (int)(OpasSilmukka.AvausTaukoS / 0.1) - 1; i++) s.Paivita(0.1, _ => 5);
+            Oleta.Sama(0, kysyt.Count, "avaustauko ennen kysymystä kuten kertojalla");
             for (int i = 0; i < 400 && kysyt.Count == 0; i++) { s.Paivita(0.1, _ => 5); if (s.Vaihe == OpasVaihe.Puhuu) s.AaniLoppui(); }
             Oleta.Sama(1, kysyt.Count, "kysymys siirtymän (ja puheen) jälkeen");
         }
