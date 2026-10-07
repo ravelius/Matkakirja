@@ -237,3 +237,11 @@ Brotli (haara linnanrakentaja-zstd, worktree olemassa), akustiikka #3979 (Steam 
   soutaja-1500 (Sitting Idle + IK airoihin) + veneen 'soutu' 2,0 s, (d) vesiportin/muurin juuren tarkkuus P2–P3 Siirtosepän kuvista.
   GIZA: LS1 vie giza-v1:n 3D Tilesiksi; Kheops LOD0 "valkoinen" → testiversiot (ilman Dracoa / COLOR_0 leivottuna) pyynnöstä;
   giza-v2 (Sfinksin NE-nurkka DEM:llä) myöhemmin. ILMAPALLO valmis LS2:lla (keski käytössä).
+- 7.10. 09.3x: VAPAA KÄVELY (omistaja 08.4x) + KEITTIÖ ETELÄSIIPEEN G 102 (Päätoimittaja 09.3x). Tutkimus _lahteet/olavinlinna-pohjat/
+  REITTI-LAHTEET.md (Aalto-arkisto PD 1904/1910, opas 1923), piirros kohdistettu kuoreen (scratchpad pohja-muunnos.json; tornit).
+  _valmiit/olavinlinna-kavely-v1: lahde/reitti.json (V/L/A), kavely.py (vesiportti 2-osainen ovelta (−56, z 15,1), T 102, keittiö
+  G 102, Kirkkotornin portaat + kierre), kuori_kavely.py (ulkoalue törmäys/kävely kuoresta + laituri.glb), v1/ (glb:t, osat.json
+  leikkauksineen, merkit.json, esineet). olavinlinna-blender-v42 (symlinkit v41:een + ymparisto/mallit + kavely/) → blender
+  53619da2, peili 51836d92, haara linnanrakentaja-linna-v42 a38bf55ca (rakenna: ymparisto.mallit[], kavely{osat,merkit}).
+  Siirtoseppä tekee lukijan. AVOIN: laiturin musta rako P3 (kysytty syy), vene-agentti → v43, soutu-leike, keittiön sisältö uuteen
+  huoneeseen (vanha pysyy kunnes uusi todennettu), kappelin sulkeminen, valonäytteet. Korinäkymä LS1:lle valmis (ilmapallo-v1/kori).
