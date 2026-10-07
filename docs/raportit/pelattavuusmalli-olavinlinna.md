@@ -398,8 +398,11 @@ kameramuutokset (kohta 7).
 
 ### 8.2 Huoneet 6–10 vaiheittain (M)
 
-**6 Linnantupa ja voudin sali.** Kaari-ovelta kuljetaan samoja muurinsisäisiä portaita alas, joita noustiin
-huoneessa 4, Tott-kammioon ja sen eteläovesta Linnantupaan (ovi [V: L2, L15]; ei uutta salakäytävää). Palatsi
+**6 Linnantupa ja voudin sali.** Kaari-oven portaat ylös ampumakäytävälle, käytävää noin 240°:een ja voudin
+porrasta (noin 18 askelmaa, TULKINTA: käsikirjoituksen "vouti menee käytävään pääoven kautta") alas pääoven
+ulkotasanteelle (215°, 9,6), josta huoneen 4 muuriportaat alas Tott-kammioon ja sen eteläovesta Linnantupaan (ovi
+[V: L2, L15]). Lukittu pääovi kierretään ylhäältä; vouti on jo lähtenyt (E3 vaihe 10). Linnanrakentaja 7.10. 20.0x:
+kaari-ovelta ei pääse suoraan muuriportaisiin, koska niiden alempi varsi kulkee kaari-oven alla. Palatsi
 itäsiivessä [V]; Linnantupa Tott-kammion tasolla, noin 6,5 × 17 m [A]; voudin sali (nyk. Kuninkaansali, TULKINTA)
 noin 4 m ylempänä, tynnyriholvi [V], ikkunasyvennyksessä vaakunalaatta [1L] (HUONE6-PALATSI.md).
 1. Portaat alas. Viimeisellä käänteellä kuuluu syöminen ja takan rätinä, ja varjo liikkuu seinällä: huoneen 4
