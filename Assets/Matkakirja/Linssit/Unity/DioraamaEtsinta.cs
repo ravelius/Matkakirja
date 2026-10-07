@@ -26,6 +26,8 @@ namespace Matkakirja.Natiivi
         /// <summary>Etsintäkortti (otsikko, teksti) — DioraamaTaulu näyttää sen hetken.</summary>
         public static event Action<string, string> Nayta;
 
+        /// <summary>DioraamaSovitin: puolilähikuva käynnissä → kimallus himmennetään (napautettavuus säilyy).</summary>
+        public static bool Himmennys; float himmennysNyt = 1f;
         static readonly int IdKoko = Shader.PropertyToID("_Koko"), IdPeitto = Shader.PropertyToID("_Peitto"),
             IdAika = Shader.PropertyToID("_Aika"), IdVari = Shader.PropertyToID("_Vari"), IdTila = Shader.PropertyToID("_Tila");
         const float KansiS = 0.9f, SinettiS = 1.2f;
@@ -243,7 +245,9 @@ namespace Matkakirja.Natiivi
                 kimallusM.SetFloat(IdKoko, Mathf.Max(0.6f, (float)aktiivinen.Sade * 1.4f));
             }
             kimallus.SetActive(true);
-            kimallusM.SetFloat(IdPeitto, kimallusPeitto * 0.9f);
+            // Keskustelun puolilähikuvassa kimallus himmenee (Siirtoseppä 7.10.: keittiön sinettivihje oli kokin kasvojen edessä).
+            himmennysNyt = Mathf.MoveTowards(himmennysNyt, Himmennys ? 0.15f : 1f, Time.unscaledDeltaTime / 0.4f);
+            kimallusM.SetFloat(IdPeitto, kimallusPeitto * 0.9f * himmennysNyt);
             kimallusM.SetFloat(IdAika, vahennettyLiike ? 0.4f : (float)(t * 1.3 % 3600.0));
         }
 

@@ -248,7 +248,7 @@ namespace Matkakirja.Natiivi
                 }
             return false;
         }
-        const float KuulijaTakanaAst = 110f;
+        const float KuulijaTakanaAst = 110f, PuhujaKameraAst = 60f;
         /// <summary>Puhujan pään yläpuolinen maailmanpiste (kasvokuvan ankkuri, Natiivi-UI:n pohja), tai null.</summary>
         public static Vector3? PuhujanPaa { get; private set; }
         /// <summary>Puhujan juuri ja kasvojen suunta (Unity) tältä kehykseltä: puolilähikuva seuraa myös kävelevää puhujaa (7.10.).</summary>
@@ -901,6 +901,19 @@ namespace Matkakirja.Natiivi
                         if (suunta.sqrMagnitude > 0.04f) tavoite = Mathf.Clamp(Vector3.SignedAngle(oma, suunta, Vector3.up), -raja, raja);
                         break;
                     }
+            // Puhujan kasvot enintään PuhujaKameraAst kameran suunnasta (iPhone 7.10. 07.48: kokki kääntyi kuulijaan seinän puolelle ja
+            // puolilähikuva jäi selän taakse, koska kamera pysyy poikkileikkauksen avoimella puolella).
+            if (EleetPaalla && e.HahmoId == Puhuja && kohde != null && DioraamaSovitin.AktiivinenKamera != null)
+            {
+                var kd = DioraamaSovitin.AktiivinenKamera.transform.position - paikka; kd.y = 0f;
+                if (kd.sqrMagnitude > 0.04f)
+                {
+                    var halu = Quaternion.AngleAxis(tavoite, Vector3.up) * oma;
+                    float k = Mathf.Clamp(Vector3.SignedAngle(kd, halu, Vector3.up), -PuhujaKameraAst, PuhujaKameraAst);
+                    var raj = Quaternion.AngleAxis(k, Vector3.up) * kd;
+                    tavoite = Mathf.Clamp(Vector3.SignedAngle(oma, raj, Vector3.up), -PuhujanMaxKatse, PuhujanMaxKatse);
+                }
+            }
             e.KatseKulma = Mathf.MoveTowards(e.KatseKulma, tavoite, KatseNopeus * Time.unscaledDeltaTime);
             return Quaternion.AngleAxis(e.KatseKulma, Vector3.up) * oma;
         }

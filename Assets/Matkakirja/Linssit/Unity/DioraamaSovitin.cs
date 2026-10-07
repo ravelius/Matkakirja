@@ -383,6 +383,7 @@ namespace Matkakirja.Natiivi
             // Lähileikkaus puolilähikuvassa: kaikki yli PuolilahiVapaaM lähempänä kameraa kuin puhuja jää piirtämättä (ei peittäjiä).
             nayttamo.LahiLeikkaus = puolilahiRinta is Vector3 pr && nayttamo.Kamera != null
                 ? Mathf.Clamp(Vector3.Distance(nayttamo.Kamera.transform.position, pr) - PuolilahiVapaaM, 0f, PuolilahiLeikkausMaxM) : 0f;   // enintään 1,2 m: kuulija ei katoa blendissä
+            DioraamaEtsinta.Himmennys = puolilahiRinta.HasValue;
             puolilahiRinta = null;
             nayttamo.Paivita(kameraAsento, y.VahennettyLiike, t, asetaKamera: !cmKaytossa);
             hahmot3D.Paivita(rakennus, nakyma, nayttamo.Kamera, t);
