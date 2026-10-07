@@ -1,26 +1,26 @@
-# Pelikoodarin luovutus 7.10.2026 (päivitetty klo 16.1x)
+# Pelikoodarin luovutus 7.10.2026 (päivitetty klo 19.1x)
 
 Uusi Pelikoodari: lue tämä, sitten docs/raportit/viesti-pelikoodari-aloitus.md. Edellinen: viesti-pelikoodari-luovutus-20261006.md.
 
-## KESKEN JA SEURAAVAKSI (päivitetty 16.1x; tilinvaihto illalla)
-0. OMISTAJAN LINJAUKSET 7.10.: KAIKKI ÄÄNET eleven_v4_turbo (13.1x). TESTAUS KEVYESTI (15.5x): ennen junaa vain automaattiset
-   testit + käännös, ei stillejä/savuja/iPad-mittauksia kuittaukseen. EI OMIA iOS/iPad/Mac-KÄÄNNÖKSIÄ (16.0x): haaralle
-   unity-tarkistus + testit; simukäännös vain vian syyn selvitykseen, ilmoitus Päätoimittajalle etukäteen.
-1. Esittely: 6 kaupunkia tuotannossa (Pariisi, Praha, Wien, Rooma, Lontoo, Kööpenhamina), kaikilla avaus; kierros alkaa
-   avauksen kohteesta (#4138 /opas/seuraava, #4142 /opas/liiku; ESITTELY_ALKU-taulu + esittely.kierros[0]; Praha ja Wien
-   esittely_polut → opas/esittely-v1b, #4141).
-2. LOPUT 31 KAUPUNKIA: tekstit VALMIIT ja Päätoimittajan päätökset viety (haara pelikoodari-esittely 55c2af69:
-   esittely-tyo/korjattu|pohja|avaukset/<id>, TARKISTUS-PAATOIMITTAJA.md, tarkistin 0 virhettä). ÄÄNIÄ EI GENEROIDA ennen
-   omistajan lupaa (omistaja: vasta pelitestin jälkeen). Kun lupa: avaus-kenttä JSONiin avaukset/<id>.md:stä →
-   tee-esittelyaanet.mjs (turbo) + avaukset tee-aanet-kohdistuksella.mjs --r2 → koosta-kuuntelu.mjs --avaukset →
-   vientipaketti (JSONiin kierros: pohja.kierros + avaus.aani opas/esittely-v1/aanet/<id>-avaus.mp3; mallina
-   _valmiit/opas-esittely-vienti-20261007b/-c) → indeksi aineistot.js esittely. Määrä noin 31 × 12 000 mrk ≈ 186 000 krediittiä turbolla.
-3. Apurahakortti: #4146 (kuvat kappaleiden vieressä, kappale/rivi 0-pohjaisia, palaute pois APURAHA_PALAUTE=false) ja
-   #4147 (valmiitLinssit ylätasolla, 9 linssiä; TF 160 -jäsennin tarkistettu C#-ajurilla scratchpadissa) MERGETTY;
-   Pages-julkaisu tarkistettava (https://matkakirja.app/assets/apuraha/esittely.json sisältää valmiitLinssit). NUI lukee samat kentät.
-4. Olavinlinnan 31 repliikkiä ämpärissä seikkailu/olavinlinna/repliikit-v1 (Siirtoseppä).
-5. Junassa/julki: #4132 yöportti, #4133 Kysy vuosiluvut, #4134 lippurivi.
-6. Worktreet: wt/pelikoodari-esittely (tekstit), wt/pelikoodari-yoportti (yleinen erä-worktree). ÄLÄ KÄYTÄ Agent isolation remote.
+## KESKEN JA SEURAAVAKSI (päivitetty 19.1x; tilinvaihto ~24)
+0. OMISTAJAN LINJAUKSET 7.10.: KAIKKI ÄÄNET eleven_v4_turbo. TESTAUS KEVYESTI (ei stillejä/savuja kuittaukseen). EI OMIA
+   iOS/iPad/Mac-KÄÄNNÖKSIÄ. ÄÄNIÄ EI GENEROIDA ennen omistajan pelitestiä (31 kaupunkia).
+1. ESITTELY 37/37 TUOTANNOSSA: 6 äänellä (Pariisi, Praha, Wien, Rooma, Lontoo, Kööpenhamina) + 31 ÄÄNETTÖNÄ
+   (opas/esittely-aaneton-v1/<id>.json, esittely_polut, aaneton: true → worker ei generoi, äänikentät pois; #4156,
+   Reykjavík-alias #4157). TF 160/161 -jäsennin tarkistettu C#-ajurilla (scratchpad opas-cs, aja.sh): äänetön tekstinä.
+2. KUN OMISTAJA ANTAA ÄÄNILUVAN: 31 kaupunkia, 661 ottoa, 346 469 mrk ≈ 173 000 krediittiä turbolla. Lähde
+   _valmiit/opas-esittely-aaneton-vienti-20261007 (sama sisältö kuin pelikoodari-esittely 55c2af69). Aja
+   tee-esittelyaanet.mjs (with-timestamps) + avaukset tee-aanet-kohdistuksella.mjs --r2 → tee-aaniajat.mjs --r2 →
+   lopulliset JSONit polkuun opas/esittely-v1/<id>.json (aaneton pois, avaus.aani) → aineistot.js: poista esittely_polut-
+   rivit näille. Ääni soi jo ennen JSON-vaihtoa, koska worker hakee R2:sta (aaneton-polku).
+3. SANA-AJAT: kaikki 6 äänellistä kaupunkia R2:ssa (GET /opas/aani/<sha>.ajat.json, aani_ajat-kenttä #4152); Pariisi,
+   Praha ja Wien paikallisella kohdistuksella (venv _tyo/venv-kohdistus, stable-ts small; skripti
+   _tyo/kohdistus-pariisi/kohdista.py + lista2.mjs). Avausten ajat ämpärissä (opas-aaniajat-vienti-20261007).
+4. YKSITYISKOHTAKUVAT: Pariisi v2, Praha v1, Wien v1 indeksissä (#4152, #4158). Muut kaupungit kun Sisältökirjuri tuo.
+5. Olavinlinna: repliikit-v1 ja tietokerros-v1 ämpärissä (Siirtoseppä).
+6. Apurahakortti v7 + valmiitLinssit julki (#4146, #4147).
+7. Worktreet: wt/pelikoodari-esittely (tekstit + työkalut), wt/pelikoodari-yoportti (erä-worktree). ÄLÄ KÄYTÄ Agent isolation remote.
+   SendMessage-raja täynnä → varakanava mcp__ccd_session_mgmt__send_message (session_id).
 
 ## TÄNÄÄN JULKI (tärkeimmät)
 #4082 pidempi kerronta, #4089 vuosiluvut, #4086 lyhin reitti, #4084/#4090/#4102 äänikartat (Pariisi, Venetsia, Kööpenhamina)
