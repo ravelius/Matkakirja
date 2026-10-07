@@ -6,7 +6,16 @@ worktreet /Users/Shared/Claude/wt/proto-natiivi-ui-<aihe>. Käännös: lokit/nat
 Simu vain Julkaisijan "SIMU NYT" -viestistä, oma iPhone FB234D08-4693-4496-9C7A-6C7C15B03963, iPad
 AD119F7B-A2A2-43EE-8769-7326DD757F89; lopuksi sammutus ja "simu vapaa".
 
-## TILA 7.10. klo 01.3x (uusin)
+## TILA 7.10. klo 03.5x (uusin)
+
+- JUNA 156 KUITATTU → SHA natiivi-ui/opas-156 db65c7ae Natiivisepälle (käännös bca847c5). ☰-osumavika: toisto 18/20 + 19/20,
+  juurisyy ohi-napautus 40 pt worldBound → Kosketusnappi.ContainsPoint, jälkeen 20/20 + 20/20 (skriptit/osuma-156.sh, vuoro-156b.sh).
+  Otsikko turva-alueen mukaan ☾A:n alle (KierrosTaulu.AsetteleOtsikko; testi ui opasvalikko otsikko 'nimi|alarivi'). Todisteet
+  lokit/natiivi-ui-1035/opas-156/ (arkki-iphone/ipad/ipadvaaka/otsikko.jpg). Huom: iPad-vaakassa simkosketus = pystykoordinaatit.
+- JUNA 157: natiivi-ui/sallitut-157 a56d9a03 (156 + LS1 sallitut 9c4d369f + VainSallitut + TorjuntaTeksti → PuluChat.Vastaa) odottaa
+  käännös- ja simuvuoroa; testit ui opasvalikko sallitut|torjunta. Lista tyhjä, kunnes Pelikoodari julkaisee /opas/aineistot "sallitut".
+
+## TILA 7.10. klo 01.3x
 
 - JUNA 155 KUITATTU (Päätoimittaja 01.3x) → SHA natiivi-ui/ylarivi-155 73cac46a lähetetty Natiivisepälle. Käännös f84f11bf, stillit
   lokit/natiivi-ui-1035/ylarivi-155/arkki-m-{iphone,iphonevaaka,ipad,ipadvaaka}.jpg (skriptit/vuoro-155b.sh; ylarivi155.sh sulkee
