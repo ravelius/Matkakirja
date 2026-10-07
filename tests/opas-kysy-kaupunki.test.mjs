@@ -28,7 +28,10 @@ const verkko = async (u, init) => {
   }
   return new Response(JSON.stringify({ query: { pages: {} }, search: [], claims: {}, entities: {} }));
 };
+const LISTA = { kohteet: { Q48435: { nimi: 'Pyhän Markuksen basilika', kaupunki: 'venetsia', lat: 45.4346, lon: 12.3398, kuvat: [] } },
+  kaupungit: { venetsia: { nimi: 'Venetsia', kohteet: ['Q48435'], kuvat: [] } } };
 const env = (lisa = {}) => ({ ANTHROPIC_API_KEY: 'a', POLLO_ORIGINIT: 'https://matkakirja.app', POLLO_TESTITUNNUS: 'tt', OPAS_AINEISTO_TESTI: {},
+  OPAS_KUVALISTA_TESTI: LISTA,
   POLLO_KV: { get: async () => null, put: async () => {} }, PUHE_R2: { get: async () => null, put: async () => {} }, ...lisa });
 async function kysy(e, kysymys) {
   const vanha = globalThis.fetch; globalThis.fetch = verkko;
@@ -49,13 +52,15 @@ test('Pariisi → Pyhän Markuksen kirkko: kaupungin vaihto Venetsiaan + kohde',
   const { status, d } = await kysy(env(), 'Vie minut Pyhän Markuksen kirkkoon');
   assert.equal(status, 200);
   assert.equal(d.toiminto.tyyppi, 'kaupunki'); assert.equal(d.toiminto.id, 'venetsia'); assert.equal(d.toiminto.nimi, 'Venetsia');
-  assert.ok(Math.abs(d.toiminto.kohde.lat - 45.4345) < 0.001 && /Markuksen/.test(d.toiminto.kohde.nimi));
+  assert.deepEqual({ n: d.toiminto.kohde_nimi, id: d.toiminto.kohde_id, lat: d.toiminto.kohde_lat, lon: d.toiminto.kohde_lon },
+    { n: 'Pyhän Markuksen basilika', id: 'Q48435', lat: 45.4346, lon: 12.3398 }, 'kuvalistan kohde');
+  assert.equal(d.toiminto.kohde, undefined, 'ei alikenttää: TF 156/157 lukisi sen nimen kaupungiksi');
   assert.doesNotMatch(d.teksti, /ei Pariisissa/);
 });
 
 test('Pariisi → näytä Kaarlensilta: Prahaan + kohde; oma kohde pysyy siirtona', async () => {
   const k = await kysy(env(), 'Näytä Kaarlensilta');
-  assert.equal(k.d.toiminto.tyyppi, 'kaupunki'); assert.equal(k.d.toiminto.id, 'praha'); assert.ok(Math.abs(k.d.toiminto.kohde.lon - 14.4114) < 0.001);
+  assert.equal(k.d.toiminto.tyyppi, 'kaupunki'); assert.equal(k.d.toiminto.id, 'praha'); assert.ok(Math.abs(k.d.toiminto.kohde_lon - 14.4114) < 0.001); assert.equal(k.d.toiminto.nimi, 'Praha');
   const e = await kysy(env(), 'Vie minut Eiffel-tornille');
   assert.equal(e.d.toiminto.tyyppi, 'siirry'); assert.equal(e.d.toiminto.ulkona, false);
 });

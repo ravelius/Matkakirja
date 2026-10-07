@@ -3319,7 +3319,14 @@ async function hoidaOppaanKysy(pyynto, env, kors, runko, ctx) {
         const alue = ulkona ? sallittuAluePisteelle(paikka, env) : null;
         const nykyinen = p.kaupunki ? sallittuAluePisteelle(kaupunkiPiste, env) : null;
         if (alue && alue.id !== nykyinen?.id) {
-          toiminto = { tyyppi: 'kaupunki', nimi: alue.nimi, id: alue.id, lat: alue.lat, lon: alue.lon, kohde: { nimi, lat: paikka.lat, lon: paikka.lon } };
+          // Kohdekaupungin kuvalistan kohde (≤ 300 m): listan nimi ja tunnus, jotta natiivin seuraava /opas-pyyntö osuu
+          // listaan ja valmiiseen esittelyyn ("Basilica di San Marco" → "Pyhän Markuksen basilika", Q…).
+          const listalla = kaupunginKohteet(await kuvalista(env), alue.id).map((k) => ({ k, d: etaisyysKm(k, paikka) }))
+            .filter((x) => x.d <= 0.3).sort((x, y) => x.d - y.d)[0]?.k ?? null;
+          // Kohde litteinä kenttinä (LS1 7.10.): TF 156/157 lukisi alikentän nimen kaupungin nimeksi; vanhat ohittavat nämä.
+          const k = listalla ?? { nimi, id: null, lat: paikka.lat, lon: paikka.lon };
+          toiminto = { tyyppi: 'kaupunki', nimi: alue.nimi, id: alue.id, lat: alue.lat, lon: alue.lon,
+            kohde_nimi: k.nimi, kohde_id: k.id ?? null, kohde_lat: k.lat, kohde_lon: k.lon };
         } else {
           toiminto = pisteSallittu(paikka, null, env) ? { tyyppi: 'siirry', nimi, lat: paikka.lat, lon: paikka.lon, ulkona }
             : { tyyppi: 'ei-sallittu', nimi };
