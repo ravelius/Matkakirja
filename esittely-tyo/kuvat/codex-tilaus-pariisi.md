@@ -1,4 +1,4 @@
-# CODEX-TILAUS: Pariisin esittelyn puuttuvat yksityiskohtakuvat (8 havainnekuvaa)
+# CODEX-TILAUS: Pariisin esittelyn puuttuvat yksityiskohtakuvat (7 havainnekuvaa)
 
 Sisältökirjuri 7.10.2026. Pariisin kaupunkioppaan esittelyn yksityiskohtakuvat (kertojan puheen aikana sivuun lentävä kuva 4–6 s) haettiin Commonsista (PD / CC0 / CC BY / CC BY-SA);
 alla olevista ankkureista ei löytynyt kelvollista vapaata kuvaa. **VAIN EUROOPPA** (Pariisi).
@@ -10,7 +10,7 @@ alla olevista ankkureista ei löytynyt kelvollista vapaata kuvaa. **VAIN EUROOPP
 - **Merkintä "havainnekuva"** kuvan metatietoihin (PNG `Description`/`Source`: "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.") ja manifestiin; kuvateksti päättyy sanaan "Havainnekuva."
 - Muoto: PNG 1536 × 1024 (3:2) tai kuten tilauksessa mainittu, sRGB, läpinäkymätön. Tiedostonimi `pariisi-<Q>-<ankkuri-lyhenne>.png`.
 - Tekijänoikeus: ei suojattua taideteosta tunnistettavasti (ks. tilauskohtaiset "Ei saa näkyä"); Ranskassa ei panoraamavapautta.
-- Generointimäärä omistajan luvalla: 8 kuvaa; lisävariantteja ei ilman lupaa.
+- Generointimäärä omistajan luvalla: 7 kuvaa; lisävariantteja ei ilman lupaa.
 - Toimitus: R2 `julisteet/pariisi-yksityiskohdat/<pvm>/…png`, manifesti `posti/kuvatoimitus-pariisi-yksityiskohdat-<pvm>.json` (url, r2Key, sha256, mitat, generationPrompt, viitteet), kuittaus `posti/codex-fable-pariisi-yksityiskohdat-<pvm>.md`. Ei main-mergeä, versionnostoa eikä julkaisua Codexilta.
 
 ---
@@ -53,25 +53,6 @@ kelvollista kuvaa.
 
 ---
 
-## Q178065 / teksti — ankkuri: "Stravinsky-suihkulähteen värikkäät"
-
-**Mitä kuvataan:** Pompidou-keskuksen viereinen matala suihkulähdeallas, jossa kelluu
-ja pyörii kirjavia mekaanisia vesiveistoksia: mustia rautaisia koneenosia (ratas, kierre,
-kampi) ja kirkkaanvärisiä pyöreämuotoisia hahmoja (punainen huulipari, sininen kala,
-keltainen lintu). Osa hahmoista suihkuttaa vettä kaarina altaan yli, osa pyörii hitaasti.
-**Kulma ja rajaus:** Vaakakuva, silmänkorkeudelta altaan reunalta, etäisyys noin 8–12 metriä;
-allas ja 4–6 veistosta mahtuvat kuvaan, taustalla häivähdys punaisia ja sinisiä putkia
-sekä kirkon kiviseinä. Vesipisarat näkyvät valossa.
-**Aikakausi:** Nykyaika (2020-luku), kirkas päivänvalo.
-**Olennaiset yksityiskohdat:** väriläiskien ja mustien koneosien vastakohta; liike ja
-suihkuavat vesikaaret; matala allas, jonka pinta heijastaa värejä.
-**Ei saa näkyä:** tunnistettavaa kopiota Niki de Saint Phallen tai Jean Tinguelyn
-yksittäisistä veistoksista (muodot on piirrettävä omina, vapaina muunnelmina), ei
-ihmisten kasvoja lähikuvassa, ei tekstiä, ei logoja, ei vesileimaa.
-**Miksi ei vapaata kuvaa:** Stravinsky-suihkulähteen veistokset (Niki de Saint Phalle ja
-Jean Tinguely) ovat tekijänoikeuden alaisia, eikä Ranskassa ole taideteoksia koskevaa
-panoraamavapautta. Commonsissa ei siksi ole käyttökelpoista vapaasti lisensoitua
-valokuvaa veistoksista.
 
 ## Q550 / lyhyt — ankkuri: "puutarhakaduksi, jolla on vähemmän autoja"
 

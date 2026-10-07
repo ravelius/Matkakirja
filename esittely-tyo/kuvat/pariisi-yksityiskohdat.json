@@ -808,26 +808,6 @@
   "alkuperainen_korkeus": 2728
  },
  {
-  "kohde_id": "Q178065",
-  "tekstilaji": "teksti",
-  "ankkuri": "sinisissä ilmastointi",
-  "kuvateksti": "Siniset ilmastointiputket ja vihreä vesiputki",
-  "commons_tiedosto": "File:Pompidou Center Paris.jpg",
-  "url": "https://commons.wikimedia.org/wiki/File:Pompidou_Center_Paris.jpg",
-  "lisenssi": "CC BY-SA 4.0",
-  "tekija": "Igor.Zeiger.Photograher",
-  "tarkistettu": true,
-  "perustelu": "Katsoin pikkukuvan: takajulkisivun lähikuva, jossa paksut siniset ilmastointiputket nousevat seinää pitkin, oikealla kirkkaanvihreä vesiputkipaketti ja edessä valkoiset raitisilmatorvet. Värikoodi näkyy juuri niin kuin teksti sen selittää.",
-  "tarkistaja": "B",
-  "tarkistus": "OK",
-  "media_tiedosto": "esittely/pariisi-v1/kuvat/e96fe3107395eede.jpg",
-  "media_url": "https://media.matkakirja.app/esittely/pariisi-v1/kuvat/e96fe3107395eede.jpg",
-  "paketti_leveys": 1280,
-  "paketti_korkeus": 853,
-  "alkuperainen_leveys": 3898,
-  "alkuperainen_korkeus": 2599
- },
- {
   "kohde_id": "Q309458",
   "tekstilaji": "teksti",
   "ankkuri": "uittavat pienoispurjeveneitä",

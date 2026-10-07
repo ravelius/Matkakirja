@@ -2,8 +2,8 @@
 
 Sisältökirjuri 7.10.2026. Pilvi keräsi ehdokkaat (4 ryhmää, Sonnet), tarkistajat A1 ja A2 (rivit 0–34, paikallinen Sonnet) ja B (rivit 35–69, pilvi) tarkistivat jokaisen kuvan lisenssin, tekijän, osuvuuden ja laadun silmin; Sisältökirjuri sovelsi korjaukset, rajasi kuvat ja paketoi ne ämpäriin (`pariisi-yksityiskohdat-vienti-20261007`).
 
-- **68 kuvaa** (2 avaukselle, loput 19 kohteelle); kaikki PD / CC0 / CC BY / CC BY-SA, `tarkistettu: true`.
-- Pudotettu tarkistuksessa: Mitterrandin muotokuva (A1 HYLKAA: sivuhenkilö) ja Pompidou-julkisivu banderolleineen (B: Fromangerin banderollit, tekijänoikeus; jäljellä on yksi Pompidou-kuva, siniset putket).
+- **67 kuvaa** (2 avaukselle, loput 19 kohteelle); kaikki PD / CC0 / CC BY / CC BY-SA, `tarkistettu: true`.
+- Pudotettu: Mitterrandin muotokuva (A1 HYLKAA: sivuhenkilö); Pompidou-keskus kokonaan (Päätoimittaja 7.10. 16.5x: ei panoraamavapautta rakennuksille kaupalliseen käyttöön; sekä julkisivu banderolleineen että putkien lähikuva pois, ei Codex-korvaajaa samasta rakennuksesta).
 - Kuvatekstit korjattu tarkistajien mukaan (rivit: Tuileries 1883, Pei 1980, Rapp/Austerlitz, paraatijoukot, Luxorin obeliski, Pitti, Panthéon, Orjantappurakruunun relikvaario).
 - Rajaukset (osuuksina kuvan leveydestä/korkeudesta, kenttä `rajaus` [x0,y0,x1,y1]) on tehty paketin kuviin: arkistonumerot, mustat reunat, marginaalit ja etualan ajoneuvot pois.
 - Paketin kuvat: JPEG q85, enintään 1 280 px; kenttä `media_tiedosto`/`media_url` (ämpärin polku `esittely/pariisi-v1/kuvat/<sha1>.jpg`).
@@ -11,8 +11,7 @@ Sisältökirjuri 7.10.2026. Pilvi keräsi ehdokkaat (4 ryhmää, Sonnet), tarkis
 
 ## Huomioitavaa omistajalle ja Päätoimittajalle
 
-- **Luxorin obeliski (Egypti):** kuva Luxorin temppelin jäljellä olevasta obeliskista havainnollistaa Pariisin obeliskin alkuperää (VAIN EUROOPPA -linja: omistajan/Päätoimittajan harkittavaksi).
-- **Pompidou-keskus:** suojattu arkkitehtuuri (ei panoraamavapautta Ranskassa); jäljellä oleva kuva on lähikuva rakenneyksityiskohdasta (matala–keskisuuri riski).
+- **Luxorin obeliski (Egypti):** kuva säilyy (Päätoimittaja 7.10.: kuuluu Pariisin kerrontaan, ei uutta sisältöä Euroopan ulkopuolelle).
 - **Orsayn keskikäytävä:** sisätilasuunnittelu (Aulenti) suojattua, mutta pääaiheena ovat vapaat teokset (matala riski). Mortierin kuolema (Mortier-teksti): kuva ja kuvateksti oikein, mutta teksti sanoo "kaatuneen taistelussa" (Mortier kuoli Fieschin attentaatissa 1835).
 
 ## Kuvat
@@ -57,7 +56,6 @@ Sisältökirjuri 7.10.2026. Pilvi keräsi ehdokkaat (4 ryhmää, Sonnet), tarkis
 | 36 | Concorden aukio | teksti | kuningas Ludvig kuudestoista | Giljotiini Vallankumouksen aukiolla tammikuussa 1793 | [Exécution de Louis XVI Helman.jpg](https://commons.wikimedia.org/wiki/File:Exécution_de_Louis_XVI_Helman.jpg) | Public domain | Helman | B |
 | 37 | Concorden aukio | lyhyt | punaisesta graniitista faarao Ramses | Hieroglyfejä punaisessa graniitissa | [Paris Concorde obélisque 2.jpg](https://commons.wikimedia.org/wiki/File:Paris_Concorde_obélisque_2.jpg) | Public domain | Vassil | B |
 | 38 | Concorden aukio | lyhyt | näyttäisivät kaukaa yhtä korkeilta | Obeliskin kaksoisveli yhä Luxorin temppelin portilla | [The remaining obelisk and the two 25m. statues of Ramses II ](https://commons.wikimedia.org/wiki/File:The_remaining_obelisk_and_the_two_25m._statues_of_Ramses_II_-_The_entrance_pylon_-_Luxor_Temple_(14259635932).jpg) | CC BY 2.0 | Jorge Láscar | B |
-| 39 | Pompidou-keskus | teksti | sinisissä ilmastointi | Siniset ilmastointiputket ja vihreä vesiputki | [Pompidou Center Paris.jpg](https://commons.wikimedia.org/wiki/File:Pompidou_Center_Paris.jpg) | CC BY-SA 4.0 | Igor.Zeiger.Photograher | B |
 | 40 | Luxembourgin puisto | teksti | uittavat pienoispurjeveneitä | Lapset laskevat pienoispurjeveneitä altaaseen | [Luxembourg 2017 b.jpg](https://commons.wikimedia.org/wiki/File:Luxembourg_2017_b.jpg) | CC BY-SA 4.0 | Siren-Com | B |
 | 41 | Luxembourgin puisto | teksti | kotikaupunkinsa Firenzen Pitti-palatsia | Firenzen Pitti-palatsi, Luxembourgin palatsin esikuva | [Firenze Palazzo Pitti Esterno 1.jpg](https://commons.wikimedia.org/wiki/File:Firenze_Palazzo_Pitti_Esterno_1.jpg) | CC BY 4.0 | Zairon | B |
 | 42 | Luxembourgin puisto | teksti | Bartholdin pienoismalli patsaasta | Bartholdin pienoismalli Vapaudenpatsaasta | [La Liberté éclairant le Monde Jardin du Luxembourg blanc.jpg](https://commons.wikimedia.org/wiki/File:La_Liberté_éclairant_le_Monde_Jardin_du_Luxembourg_blanc.jpg) | CC0 | Frédéric Auguste Bartholdi | B |
