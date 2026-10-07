@@ -7,6 +7,18 @@ Worktreet: /Users/Shared/Claude/wt/proto-siirtoseppa-*. Käännös vain Julkaisi
 (oma UDID D5900D45 = siirtoseppa-iPad13, TYHJENNETTY 19.0x, appit asennettava uudelleen). Ei detachia simupaneelista.
 Oikeat tapit: lokit/siirtoseppa-alo/.sk (simkosketus, käännä tarvittaessa tyokalut/todistusajo/simkosketus.m).
 
+## TILA 7.10. 09.3x
+
+- **Junaehdokkaat (Päätoimittajalle ilmoitettu):** siirtoseppa/eleet-2 **f73b387a** (puolilähikuva, kääntyminen lepokameran suunnasta,
+  kimallus himmenee, savu häivytetään, alarivi + sumu datasta, huonevalintakorjaus) ja siirtoseppa/aanimaisema **d9a1c1b9**
+  (kello 1,0 = +7–8 dB, väistö, lennot, ristihäivytys, NykyinenKaupunkiId; OpasSovitin-ristiriita LS1:n kanssa → ratkaisu koehaarassa b04e63b3).
+  Todisteet lokit/siirtoseppa-vuoro-0913/{eleet,kello,vene}.
+- **Historiamoottori:** siirtoseppa/historia-h0 **3dfac891** (= eleet-2 + master + H0 + V0 mallit + V1 pelaaja olan yli + kävelygeometria:
+  KavelyData, SeikkailuKavely, kuoren leikkaukset). Ajo: yhdistelmä 3dfac891 + natiivi-ui/seikkailu-tapit 34cf54b0 + kuumailmapallo-160
+  73ed2612 (Julkaisijan jonossa), ajo-kavely.sh KAVELYDATA=file:///Users/Shared/Claude/proto-3d/_valmiit/olavinlinna-kavely-v1/v1/.
+- LR: kävely v1 _valmiit/olavinlinna-kavely-v1/v1, v42 (kavely + mallit[]) tulossa, vene + soutu tulossa; venekuvat lähetetty.
+- Levy: omat lokit siivottu (~6,4 Gt tänään).
+
 ## TILA 7.10. 08.5x — OMISTAJA: HISTORIAMOOTTORI (seikkailut maan tasalta, VAPAA KÄVELY), SIIRTOSEPPÄ JOHTAA
 
 - Arkkitehtuuri + pystyleikkeen vaiheet V0–V7 + tarpeet LR:ltä: docs/raportit/siirtoseppa-historiamoottori-20261007.md (kohta 11 =
