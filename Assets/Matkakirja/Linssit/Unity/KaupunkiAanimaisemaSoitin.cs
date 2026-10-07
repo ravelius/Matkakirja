@@ -30,7 +30,7 @@ namespace Matkakirja.Natiivi
         public static Func<string> KaupunkiId;
         public const string Juuri = "https://media.matkakirja.app/aanet/";
         AaniKartta kartta; string karttaId, karttaLadataan;
-        public const float Taso = 0.55f, KelloTaso = 0.35f, VapautusS = 5f;
+        public const float Taso = 0.55f, KelloTaso = 0.6f, VapautusS = 5f;   // kello 0,6 (Päätoimittaja 7.10.: erottuu tapahtumana)
 
         static KaupunkiAanimaisemaSoitin instanssi;
 
@@ -162,13 +162,15 @@ namespace Matkakirja.Natiivi
                 else hiljaaAlkaen[i] = 0;
             }
             suhina.Taso = (float)(mikseri.Suhina * mikseri.Kokonais);
+            for (int ki = kellot.Count - 1; ki >= 0; ki--)
+                if (kellot[ki].Lahde == null) kellot.RemoveAt(ki); else kellot[ki].Lahde.volume = kellot[ki].Perus * kokonais;
             // Tasatunti: lyönnit hajautettuina kirkoittain (vain kun maisema kuuluu).
             int h = (int)Math.Floor(tunti);
             if (edellinenTunti >= 0 && h != edellinenTunti && kello != null && paalla && k.HasValue)
             {
                 int kirkkoja = KirkkojaLahella?.Invoke(k.Value.Lat, k.Value.Lon) ?? kartta?.KirkkojaLahella(k.Value.Lat, k.Value.Lon) ?? 0;
                 foreach (var (viive, kirkko) in KaupunkiAanimaisema.TasatunninLyonnit(h, Math.Min(kirkkoja, 3), (int)(karttaLat * 1000)))
-                    StartCoroutine(Lyo(viive, KelloTaso * (kirkko == 0 ? 1f : 0.6f) * kokonais));
+                    StartCoroutine(Lyo(viive, KelloTaso * (kirkko == 0 ? 1f : 0.6f)));
             }
             edellinenTunti = h;
         }
@@ -216,14 +218,20 @@ namespace Matkakirja.Natiivi
             if (s == null || s.kello == null) return "äänimaisema: kello ei käytettävissä (" + (s == null ? "ei päällä" : "klippi puuttuu") + ")";
             float kokonais = (float)s.mikseri.Kokonais * Taso;
             foreach (var (viive, kirkko) in KaupunkiAanimaisema.TasatunninLyonnit(lyonteja, 2, 1))
-                s.StartCoroutine(s.Lyo(viive, KelloTaso * (kirkko == 0 ? 1f : 0.6f) * Math.Max(kokonais, 0.3f)));
+                s.StartCoroutine(s.Lyo(viive, KelloTaso * (kirkko == 0 ? 1f : 0.6f)));
             return $"äänimaisema: kello {lyonteja} lyöntiä (taso {kokonais:F2})";
         }
 
-        IEnumerator Lyo(double viive, float taso)
+        // KELLO VÄISTÄÄ PUHETTA (Päätoimittaja 7.10.): lyönnin taso seuraa maiseman kokonaistasoa (väistö −9 dB) koko soinnin ajan,
+        // ei vain lyöntihetkellä, joten oppaan puheen alkaessa soiva lyönti ei peitä kertojaa.
+        readonly List<(AudioSource Lahde, float Perus)> kellot = new List<(AudioSource, float)>();
+        IEnumerator Lyo(double viive, float perus)
         {
             yield return new WaitForSecondsRealtime((float)viive);
-            var l = gameObject.AddComponent<AudioSource>(); l.spatialBlend = 0; l.PlayOneShot(kello, taso);
+            if (kello == null) yield break;
+            var l = gameObject.AddComponent<AudioSource>(); l.spatialBlend = 0; l.clip = kello; l.loop = false;
+            l.volume = perus * (float)mikseri.Kokonais * Taso; l.Play();
+            kellot.Add((l, perus));
             Destroy(l, kello.length + 0.5f);
         }
 
