@@ -185,3 +185,7 @@ NUI:n osa on `natiivi-ui/sallitut-157` 0f770be2. LS2:n lista on tiedostossa `pro
     - Giza v2b.
     - Kierroksen alut.
   - NUI kuvaa köysikohdan samalla appilla.
+- 13.25:
+  - Aloitusajo cbd5ffad7 OK: Ateena ja Pariisi kylmästä, laatat 99/100 % saapuessa, ei tyhjiä. Kuvat `lokit/linssiseppa-aloitus-20261007/kuvat`. Raportoitu Päätoimittajalle; simu vapaa.
+  - NUI kuvaa köysikohdan omalla 5c3d45e6:lla 15.00 jälkeen.
+  - Klo 15:n jälkeen: Giza v2b (ajo-helma.sh v2b-tiles) ja kierroksen alut (#4142 julki).
