@@ -11,8 +11,10 @@ test('esittely.json on kelvollinen: filosofia, korostettu kehitysmuutos, pelit, 
   const d = tarkistaApuraha(raaka);
   assert.ok(d, 'tarkistus hylkäsi tiedoston');
   assert.equal(d.nappi, 'Apurahahakemus – katso tämä ensin');
-  // Omistaja 7.10.2026: ensin pelin filosofia, sitten korostettuna kehityksen siirto natiiviin, sitten pelit.
-  assert.equal(d.kappaleet.length, 7);
+  // Omistaja 7.10.2026: ensin pelin filosofia, sitten korostettuna kehityksen siirto natiiviin, sitten Maapallo,
+  // Kuumailmapallo ja ISS omina alaotsikkoinaan ja lopuksi pelit.
+  assert.equal(d.kappaleet.length, 9);
+  assert.deepEqual(d.kappaleet.slice(2, 5).map((k) => k.otsikko), ['Maapallo', 'Kuumailmapallo', 'ISS']);
   assert.match(d.kappaleet[0].teksti, /^Matkakirja ja unohdettu aarre on kokemuksellinen oppimispeli/);
   assert.equal(d.kappaleet[1].korostus, true);
   assert.match(d.kappaleet[1].teksti, /^Kehitys siirtyi syyskuussa/);
@@ -27,7 +29,7 @@ test('esittely.json on kelvollinen: filosofia, korostettu kehitysmuutos, pelit, 
   const kaikki = d.kappaleet.flatMap((k) => [k.teksti ?? '', ...(k.lista ?? [])]).join(' ');
   assert.ok(!/poikkileikkaus|esittelylinsseistä/.test(kaikki), kaikki);
   assert.ok(/Videopelit tulevat vain iOS-sovellukseen/.test(kaikki));
-  assert.ok(/Molemmat ovat vain iOS-sovelluksessa/.test(kaikki));
+  assert.equal((kaikki.match(/Vain iOS-sovelluksessa\./g) ?? []).length, 2, 'Kuumailmapallo ja ISS merkitty iOS:n ominaisuuksiksi selaimessa');
 });
 
 test('paikalliset kuvat ovat repossa ja tekstissä ei ole muistiinpanoja', () => {

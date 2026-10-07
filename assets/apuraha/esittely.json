@@ -6,16 +6,25 @@
   "alaotsikko": "Matkakirja ja unohdettu aarre · tilanne 7.10.2026",
   "kappaleet": [
     {
-      "teksti": "Matkakirja ja unohdettu aarre on kokemuksellinen oppimispeli 13 vuotta täyttäneille ja aikuisille. Pääosassa ovat koukuttavat tarinat ja pelit. Kun kiinnostus herää, peli tarjoaa faktatarkistettua tietoa, ja pelaaja voi oppia lisää kysymällä. Kaikki kerrotaan äänen ja kuvan kautta eikä oppikirjamaisena tekstinä. Tarinassa nuori Fogg seuraa isoisänsä vuoden 1873 matkapäiväkirjaa nykyajan Euroopassa ja etsii unohdettuja aarteita."
+      "teksti": "Matkakirja ja unohdettu aarre on kokemuksellinen oppimispeli 13 vuotta täyttäneille ja aikuisille. Pääosassa ovat koukuttavat tarinat ja pelit. Kun kiinnostus herää, peli tarjoaa faktatarkistettua tietoa, ja pelaaja voi oppia lisää kysymällä. Kaikki kerrotaan äänen ja kuvan kautta eikä oppikirjamaisena tekstinä."
     },
     {
       "korostus": true,
       "teksti": "Kehitys siirtyi syyskuussa selaimesta iPhonen ja iPadin sovellukseen, joka tehdään Unity-pelimoottorilla. Vain pelimoottorilla kaupunkien 3D-näkymät ja kävelyseikkailut toimivat sujuvasti myös puhelimessa. Samasta pohjasta tehdään myöhemmin Mac-, Android- ja Windows-versiot. Selainpeli matkakirja.app jatkuu suppeampana."
     },
     {
-      "otsikko": "Maapallo ja kaupungit",
-      "teksti": "ISS:n kupolasta pelaaja katsoo maapalloa avaruudesta, ohjaa asemaa ja ottaa kuvan mistä tahansa paikasta. Kuva tehdään tarkasta satelliittiaineistosta julisteeksi. Kuumailmapallolla tutustutaan Euroopan suuriin kaupunkeihin fotorealistisessa 3D:ssä. Kartan pallo vie kaupunkiin, ja opas lentää kohteelta toiselle, kertoo niistä ääneen ja vastaa kysymyksiin.",
-      "webTeksti": "ISS:n kupolasta pelaaja katsoo maapalloa avaruudesta, ohjaa asemaa ja ottaa kuvan mistä tahansa paikasta. Kuva tehdään tarkasta satelliittiaineistosta julisteeksi. Kuumailmapallolla tutustutaan Euroopan suuriin kaupunkeihin fotorealistisessa 3D:ssä. Kartan pallo vie kaupunkiin, ja opas lentää kohteelta toiselle, kertoo niistä ääneen ja vastaa kysymyksiin. Molemmat ovat vain iOS-sovelluksessa."
+      "otsikko": "Maapallo",
+      "teksti": "Nuori Fogg matkustaa todellisen maailman kartalla isoisänsä vuoden 1873 matkapäiväkirjan jäljillä ja etsii kadonneita aarteita. Kartta tarkentuu koko maapallosta kaupunkeihin."
+    },
+    {
+      "otsikko": "Kuumailmapallo",
+      "teksti": "Tietyissä kaupungeissa kartalta voi hypätä kuumailmapallon kyytiin ja tutkia kaupunkia fotorealistisessa 3D:ssä. Opas lentää kohteelta toiselle, kertoo niistä ääneen ja vastaa kysymyksiin.",
+      "webTeksti": "Tietyissä kaupungeissa kartalta voi hypätä kuumailmapallon kyytiin ja tutkia kaupunkia fotorealistisessa 3D:ssä. Opas lentää kohteelta toiselle, kertoo niistä ääneen ja vastaa kysymyksiin. Vain iOS-sovelluksessa."
+    },
+    {
+      "otsikko": "ISS",
+      "teksti": "ISS:n kupolasta katsotaan maapalloa avaruudesta. Pelaaja ohjaa asemaa ja ottaa kuvan mistä tahansa paikasta, ja kuva tehdään tarkasta satelliittiaineistosta julisteeksi.",
+      "webTeksti": "ISS:n kupolasta katsotaan maapalloa avaruudesta. Pelaaja ohjaa asemaa ja ottaa kuvan mistä tahansa paikasta, ja kuva tehdään tarkasta satelliittiaineistosta julisteeksi. Vain iOS-sovelluksessa."
     },
     {
       "otsikko": "Pelit",
