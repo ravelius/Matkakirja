@@ -499,6 +499,6 @@ Edellinen luovutus on `viesti-siirtoseppa-luovutus-20261002.md` (5.10. osiot 02.
   Junahaara siirtoseppa/historia-juna164 @ 1e48174e (juna163 + 2bc3ce1f V7 + e140392b + b4b26a87 + e2bc015d NUI:n null-ansa), 845/845, unity-tarkistus 0;
   kuittaus pyydetty. LS2:n SeikkailuNousu d75b3303 (junaan 163) sopii kutsuuni sellaisenaan.
   JATKA TÄSTÄ: kuittaus → Natiiviseppä; sitten pulun vihjeportaat, tallennus V6, ElevenLabs-äänet vain omistajan luvalla.
-- 18.3x: LR v44j (42d49bd4 = v44i + Foggin nousu_laiturille) kytketty c652ba83: Fogg aloittaa veneen pohjalta 0,55 m kannen reunasta (reuna ja
+- 18.23: LR v44j (42d49bd4 = v44i + Foggin nousu_laiturille) kytketty c652ba83: Fogg aloittaa veneen pohjalta 0,55 m kannen reunasta (reuna ja
   suunta säteillä nousu:laiturin ympäriltä), SeikkailuPelaaja.SoitaEle (kapseli paikallaan, törmäys pois, lopussa root_siirto + idle),
   PelaajaMalli.JuuriSiirto. Junahaara historia-juna164 @ 6d2b1149, 845/845, unity-tarkistus 0; kuittaus pyydetty.
