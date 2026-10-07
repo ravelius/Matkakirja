@@ -1,4 +1,4 @@
-# Sisältökirjurin luovutus 7.10.2026 (päivitetty klo ~19.55; tilinvaihto 22.15–22.50)
+# Sisältökirjurin luovutus 7.10.2026 (LOPULLINEN, VAIHTO NYT ~23.45; tilinvaihto 22.15–22.50)
 
 ## Valmista ja mergettyä/avointa tänään
 - Oppaan kuvahaku #4096, #4100 (236 paikkaa, 38 sallitun säteet). Faktapohjat (KK 1873/1923, Giza, Olavinlinna) ja Olavinlinnan tietokorttien lähdetarkistus mergetty. Kyproksen pohjoisosa #4145 mergetty. KK/Giza-lähdetarkistus #4151 mergetty.
@@ -34,3 +34,11 @@ Työtapa (kopioi Praha/Wien): työkalut `esittely-tyo/kuvat/tyokalut/` (haarassa
 - Orpo ämpäriobjektit poistettavaksi (Julkaisija/omistaja): pariisi-v1/kuvat/e96fe3107395eede.jpg + vanhat pariisi-v1/rooma-v1/rooma-v2-jsonit; rooma-v1/kuvat/1727a3f352629b36.jpg ja 2bdc72d07cdb8916.jpg.
 - Kesken: Colosseum/Appia-uusinta (Codex), sitten Rooma v5; Lontoo/Köpis/Rooma Codex-kuvat → uudet luetteloversiot (`havainnekuva: true`) kun tulevat; repliikkien sukupuolitarkistus (31 + kappeli, englanninnettavuus) ei aloitettu.
 - Worktree `wt/sisaltokirjuri-praha-wien-kuvat` (haara sisaltokirjuri-esittely-kuvat-tulokset, PR #4166) ja `wt/sisaltokirjuri-posti-praha-wien`: poista mergen jälkeen `tools/uusi-worktree.sh --poista`.
+
+## LOPULLINEN TILA (VAIHTO NYT, 7.10. ~23.45)
+- Mergattu/auki: #4166 (Rooma v4/Lontoo/Köpis tulokset + työkalut → Julkaisijan junaan), #4170 (repliikki-/käännettävyystarkistus, FP-äänilähteet, kappalainen-3 → tyrmä; Päätoimittaja mergeää). Sonnissin GDC-lataus JÄTETTY (Cloudflare-robottitarkistus; omistaja lataa itse myöhemmin).
+- Heikot äänet (uinti, sukellus, hanska-esine, savipurkki, luuta) → Pelikoodari ElevenLabs-tehosteina (omistajan 10 000 krediitin katto). Räkättirastas CC BY-SA kelpaa tekijämaininnalla (tiedostoa ei ole ladattu).
+- Odottaa Codexia: Rooma uusinta (Colosseum + Appia; posti b508c84b3; jos Appia ei onnistu, rivi pois), Lontoo 10 kuvaa (a46d3d59a), Köpis 3 kuvaa (6a2022a19). Kun tulevat: katso kuvat, valitse, tee uusi luetteloversio (lontoo-v2, koopenhamina-v2, rooma-v5: vain json, `havainnekuva: true`, kuvat esittely/<kaupunki>-v2/kuvat/ JPEG q85 1280 px; mallina rooma-v3 → v4), vie-paketti, ilmoita Päätoimittajalle (1 vertailukuva), Pelikoodarille ja Linssisepälle polku.
+- Ei taustaajoja käynnissä minun puolellani. Worktreet: wt/sisaltokirjuri-praha-wien-kuvat (haara sisaltokirjuri-esittely-kuvat-tulokset, PR #4166), wt/sisaltokirjuri-posti-praha-wien (posti), wt/sisaltokirjuri-olavinlinna-repliikit-aanet (PR #4170): poista mergen jälkeen `tools/uusi-worktree.sh --poista <nimi>`.
+- Orpoja ämpäriobjekteja poistettavaksi (Julkaisija/omistaja): pariisi-v1/kuvat/e96fe3107395eede.jpg; rooma-v1/kuvat/1727a3f352629b36.jpg, 2bdc72d07cdb8916.jpg; vanhat pariisi-v1/, rooma-v1/, rooma-v2/, rooma-v3/-jsonit (v3-kuvat jäävät: v4 käyttää niitä).
+- Seuraavaksi (jos aikaa): Olavinlinnan lisätyöt Päätoimittajan mukaan; pidä viestit Päätoimittajalle send_messagella `local_5df52e10-10e4-4b72-9554-0049db300dfe`.
