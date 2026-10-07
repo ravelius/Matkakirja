@@ -177,3 +177,11 @@ NUI:n osa on `natiivi-ui/sallitut-157` 0f770be2. LS2:n lista on tiedostossa `pro
   - Esitys-gizan kärki on 3c54439e0: esittely_polut (#4141, Praha ja Wien esittely-v1b). Proto-repolla ei ole originia, Julkaisija kääntää paikallisen haaran.
   - Pelikoodarin #4142 korjaa /opas/liiku-kierroksen alkamaan avauksen kohteesta; natiiviin ei tarvita muutosta.
   - Klo 15:n jälkeen: käännös 3c54439e0 → ajo-aloitus.sh (Ateena, Pariisi) → Giza v2b (ajo-helma.sh) → kierroksen alut.
+- 13.21 lisäykset:
+  - NUI:n havainto: metrolinja katosi iPadilla ja vaakanäkymässä, koska LaskeVasenKoysi käytti maailman AABB:n kulmia. Korjattu 741625b8d:ssa: köyden akselia näytteistetään 17 pisteellä.
+  - Esitys-giza KÄÄNNETTY cbd5ffad7 (kärki 741625b8d). Appi: `proto-3d/lokit/linssiseppa-app-esitys-741625b8d/Matkakirja3D.app`. Lukko vapautettu.
+  - Klo 15:n jälkeen tällä appilla:
+    - ajo-aloitus.sh: `S=<scratch> APP=<yllä> perl setsid zsh ajo-aloitus.sh`, sitten `touch $S/sim-nyt-aloitus` SIMU NYT -luvalla.
+    - Giza v2b.
+    - Kierroksen alut.
+  - NUI kuvaa köysikohdan samalla appilla.
