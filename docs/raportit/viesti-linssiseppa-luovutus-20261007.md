@@ -230,3 +230,11 @@ NUI:n osa on `natiivi-ui/sallitut-157` 0f770be2. LS2:n lista on tiedostossa `pro
     - nykäyksen syy: radan näyte 1 hyppäsi katsepisteessä 0,1°, korjattu 0,8 s:n sulautuksella (sulautusta ei ajettu simussa)
     - avoinna: kaksi 83 ms:n kehystä lennon alussa (kamera vielä hidas)
   - Giza odottaa (Olavinlinna ensin). Linnanrakentajan jonossa LOD1/2-leivonta ja helmojen sävy.
+- 16.3x:
+  - Alkulento 19dcb1d15 kuitattu junaan 162 (Natiivisepällä).
+  - 83 ms:n diagnostiikka (haara alkulento-v3b 4826b9ba1, käännös 40cb941b3):
+    - pitkät kehykset ovat pääsäiettä: 1. lentokehys main 190 ms, piirtosäie ja GPU alle 2 ms, joten syy ei ole varjostimissa
+    - simulla myös muita 180–280 ms:n kehyksiä lennon aikana
+  - Ehdotettu Päätoimittajalle: mittaus oikealla laitteella TF 162:n `lento v3 kehysloki 1` -komennolla ennen korjausta (juna 163).
+  - Työkalut: `tyokalut/linssiseppa-ajot/alku-kaynnista.sh` / `alku-lopeta.sh` (VIDEO=0), `mittaa-kehykset.py`.
+  - Tilinvaihto noin klo 24. Luovutus valmis viimeistään 23.40.
