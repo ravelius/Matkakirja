@@ -42,9 +42,19 @@ namespace Matkakirja.Natiivi
         static PropertyInfo aktiivinen;
         static bool haettu;
 
-        /// <summary>Poimi- ja heitä-kuvakkeet (UI-POHJAT-kysymys Päätoimittajalle 7.10. 16.4x: uudet viivaikonit vai olemassa olevat).</summary>
-        static string PoimiIkoni => Ikonit.Viiva["peukalo"];
-        static string HeitaIkoni => Ikonit.Viiva["nuoli"];
+        /// <summary>
+        /// Kontekstikuvake verbin mukaan (omistaja 7.10. 20.3x): kaari = heitä, liekki = sytytä/puhalla/sammuta, muuten käsi
+        /// (poimi, käytä, avaa, aseta, laske, ota, irrota, koputa …).
+        /// </summary>
+        static string Kuvake(string tila)
+        {
+            switch ((tila ?? "").ToLowerInvariant())
+            {
+                case "heita": case "heitä": return Ikonit.Heittokaari;
+                case "sytyta": case "sytytä": case "puhalla": case "sammuta": case "kynttila": return Ikonit.Liekki;
+                default: return Ikonit.Kasi;
+            }
+        }
         /// <summary>Testi `ui seikkailutapit toiminto poimi|heita|auto`: napin tila ilman SeikkailuEsineitä.</summary>
         public static string TestiToiminto;
         readonly UiKerros kerros;
@@ -90,7 +100,7 @@ namespace Matkakirja.Natiivi
             toimintoRivi.style.top = StyleKeyword.Auto;
             toimintoRivi.style.right = OpasTapit.Reuna + OpasTapit.Halkaisija * 0.5f - Tyylikirja.Nappi.Ohjaus * 0.5f;
             toimintoRivi.style.bottom = TappiAla + OpasTapit.Halkaisija + 8f;
-            toimintoNappi = Ohjausnappi.Nappi(PoimiIkoni, "Poimi", PyydaToiminto, toimintoRivi);
+            toimintoNappi = Ohjausnappi.Nappi(Ikonit.Kasi, "Poimi", PyydaToiminto, toimintoRivi);
             toimintoRivi.style.display = DisplayStyle.None;
             kerros.JokaRuutu += Paivita;
             viimeisin = this;
@@ -163,9 +173,8 @@ namespace Matkakirja.Natiivi
             toimintoTila = tila;
             toimintoRivi.style.display = tila == null ? DisplayStyle.None : DisplayStyle.Flex;
             if (tila == null) return;
-            bool heita = tila == "heita" || tila == "Heitä";
             toimintoNappi.Clear();
-            toimintoNappi.Add(new SvgIkoni(heita ? HeitaIkoni : PoimiIkoni));
+            toimintoNappi.Add(new SvgIkoni(Kuvake(tila)));
             // VoiceOver-nimi: valmis verbi sellaisenaan, vanhan rajapinnan tila Toimintonimistä.
             toimintoNappi.tooltip = Toimintonimet.TryGetValue(tila, out var nimi) ? nimi : tila;
         }
