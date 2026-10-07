@@ -24,3 +24,14 @@ Manifesti: `posti/kuvatoimitus-oppaan-kaupunkinakymat-sallitut-02-20261007.json`
 Ateenan Nike-temppeliin rajattu viite hylättiin ennen generointia ja korvattiin Parthenon-viitteellä. Lissabonin liian matala kamera ja Tukholman väärä vesialue sekä katkennut tornin kärki korjattiin kokonaan uusilla kuvilla. Tukholman kärki on nyt kokonaan näkyvissä, mutta yläreunan marginaali on pieni. Amsterdamin kanavalle hyväksyttiin läheinen LAHI-kuvakulma, joka rajaa laajan epävarman kaupunkipanoraaman pois. Tarkistuksen rajat näkyvät manifestissa.
 
 Katselmus ja pelikytkentä odottavat. Ei mergeä, versionnostoa tai julkaisua Codexilta.
+
+## Erä 03 toimitettu
+
+Dublin, Edinburgh, Sisilia (Palermo), Kreeta (Heraklion) ja Marseille: viisi natiivisti 1536 × 1024 fotorealistista kuvaa. Kaikkien R2-takaisinluku läpäisi HTTP 200 / MIME / CORS / tavutarkkuuden. Samat havainnekuva- ja lisenssimerkinnät kuin aiemmissa erissä.
+
+Päätoimittajan katselmukseen ensimmäiset kolme: Dublin, Edinburgh ja Palermo. Vertailukuva: https://media.matkakirja.app/julisteet/herokoe/20261007/comparison-batch03.jpg
+Manifesti: `posti/kuvatoimitus-oppaan-kaupunkinakymat-sallitut-03-20261007.json`.
+
+Edinburghin ensimmäisen kuvan keksityt linnan kirkontornit hylättiin. Toimitettu kokonaan uusi kuva rajaa näkymän oikeaan palatsiin, puolipyöreään patteriin ja linnankallioon. Kuvakulma on läheisempi, jotta laaja kaupunkipanoraama ei lisää vääriä rakennuksia. Sisilia on Palermon katedraalin eteläportiikki; Kreeta on Heraklionin Koules. Ei Taorminaa, Etnaa, Chaniaa tai Elafonisia. Marseillen sataman ja basilikan suhde on viitteisiin ankkuroitu, tarkka korttelisto on havainnollistava.
+
+Katselmus ja pelikytkentä odottavat. Ei mergeä, versionnostoa tai julkaisua Codexilta.

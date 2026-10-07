@@ -1,0 +1,1080 @@
+{
+  "sourceCommit": "9ec0418c925144f71ea5efa719e3e44a812bd2ea",
+  "sourceBlob": "cae06d7ce6c3f43f537ffa97175ac38674ebbbc5",
+  "source": "posti/sisaltokirjuri-codex-oppaan-kaupunkinakymat-sallitut-25-20261007.md",
+  "sourceReadInFull": true,
+  "date": "2026-10-07",
+  "batch": "03",
+  "cityIds": [
+    "dublin",
+    "edinburgh",
+    "sisilia",
+    "kreeta",
+    "marseille"
+  ],
+  "acceptedImages": 5,
+  "style": "photorealistic-real-camera-look",
+  "tool": "built-in image_gen",
+  "productionDimensions": [
+    1536,
+    1024
+  ],
+  "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+  "reviewFirstThree": [
+    "dublin",
+    "edinburgh",
+    "sisilia"
+  ],
+  "comparison": {
+    "file": "comparison-batch03.jpg",
+    "r2Key": "julisteet/herokoe/20261007/comparison-batch03.jpg",
+    "url": "https://media.matkakirja.app/julisteet/herokoe/20261007/comparison-batch03.jpg",
+    "sha256": "4f3608dbb26e680e778a64f440334420033b4522a0fbf2459453ffd0ce8f9a1e",
+    "bytes": 313390,
+    "http": 200,
+    "mime": "image/jpeg",
+    "cors": "https://matkakirja.app",
+    "byteExactReadback": true
+  },
+  "assets": [
+    {
+      "id": "dublin",
+      "cityName": "Dublin",
+      "subject": "Trinity Collegen etupiha",
+      "subjectCoordinatesApprox": [
+        53.34441,
+        -6.25733
+      ],
+      "center": [
+        53.33259,
+        -6.25881
+      ],
+      "radiusMetres": 15000,
+      "subjectDistanceApproxMetres": 1318,
+      "subjectRadiusPassApprox": true,
+      "coordinateProof": {
+        "method": "approved root reference plan approximate landmark point, conservative haversine distance with 500m uncertainty",
+        "coordinateUncertaintyMetres": 500,
+        "landmarkCoordinateVerifiedFromMetadata": false,
+        "caveat": "Reference camera GPS and landmark point are distinct. Conservative large margin within permitted radius."
+      },
+      "file": "hero-dublin.png",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/dublin/production/hero-dublin.png",
+      "caption": "Trinity Collegen etupiha ja Campanile Dublinissa. Havainnekuva.",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "metadataText": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "style": "photorealistic-real-camera-look",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "viitteet": [
+        {
+          "nimi": "File:Dublin - Trinity College Dublin - 20170825165318.jpg",
+          "tekija": "Oliver Gargan",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Dublin_-_Trinity_College_Dublin_-_20170825165318.jpg"
+        },
+        {
+          "nimi": "File:Front Square of Trinity College Dublin.jpg",
+          "tekija": "Adam McGrath",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Front_Square_of_Trinity_College_Dublin.jpg"
+        }
+      ],
+      "referenceMetadata": [
+        {
+          "nimi": "File:Dublin - Trinity College Dublin - 20170825165318.jpg",
+          "tekija": "Oliver Gargan",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Dublin_-_Trinity_College_Dublin_-_20170825165318.jpg",
+          "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2b/Dublin_-_Trinity_College_Dublin_-_20170825165318.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2b/Dublin_-_Trinity_College_Dublin_-_20170825165318.jpg/1280px-Dublin_-_Trinity_College_Dublin_-_20170825165318.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/dublin/references/ref-ca0d071f43c1798c.jpg",
+          "originalDimensions": [
+            5869,
+            3913
+          ],
+          "downloadDimensions": [
+            1280,
+            853
+          ],
+          "sha256": "ca0d071f43c1798cc113c0cb3f05fb65f23a4ddbf8f28461801376410e744de9",
+          "originalSha1": "e5a25b1ee38ec9eec50251957f3cf918ae6ca26c",
+          "apiPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/dublin/references/api.json",
+          "apiSha256": "d7358d5485f140feaf9f1641bf6410a9c68b86c56e3ce2b4ac323abf1f9b23a7",
+          "categories": [
+            "Category:CC-BY-SA-4.0",
+            "Category:Images from Wiki Loves Monuments 2019",
+            "Category:Images from Wiki Loves Monuments 2019 in Ireland",
+            "Category:Self-published work",
+            "Category:Trinity College Dublin",
+            "Category:Uploaded with Monumental"
+          ],
+          "metadata": {
+            "ImageDescription": "Dublin, Trinity College Dublin.",
+            "DateTimeOriginal": "2017-08-25 16:53:18"
+          },
+          "viewed": true,
+          "visualIdentityConfirmed": true
+        },
+        {
+          "nimi": "File:Front Square of Trinity College Dublin.jpg",
+          "tekija": "Adam McGrath",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Front_Square_of_Trinity_College_Dublin.jpg",
+          "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/9/95/Front_Square_of_Trinity_College_Dublin.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/95/Front_Square_of_Trinity_College_Dublin.jpg/1280px-Front_Square_of_Trinity_College_Dublin.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/dublin/references/ref-3aceaf8f37b2f736.jpg",
+          "originalDimensions": [
+            3130,
+            2075
+          ],
+          "downloadDimensions": [
+            1280,
+            849
+          ],
+          "sha256": "3aceaf8f37b2f7360630426090b88ead98b3098db7bd656c231fc0c4c6380a4d",
+          "originalSha1": "a5d294bc6ea0bf31967f213a7bff4acc15bba51f",
+          "apiPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/dublin/references/api.json",
+          "apiSha256": "d7358d5485f140feaf9f1641bf6410a9c68b86c56e3ce2b4ac323abf1f9b23a7",
+          "categories": [
+            "Category:CC-BY-SA-4.0",
+            "Category:Campanile, Trinity College, Dublin",
+            "Category:Cultural heritage monuments in Ireland",
+            "Category:Dublin in the 20th century",
+            "Category:Images from Wiki Loves Monuments 2023",
+            "Category:Images from Wiki Loves Monuments 2023 in Ireland",
+            "Category:Images from Wiki Loves Monuments missing SDC depicts",
+            "Category:Images from Wiki Loves Monuments missing SDC location of creation",
+            "Category:Self-published work",
+            "Category:Trinity College Dublin, campus",
+            "Category:Uploaded via Campaign:wlm-ie"
+          ],
+          "metadata": {
+            "ImageDescription": "Shot looks East over the Front Square of Trinity College.",
+            "DateTimeOriginal": "2023-02-15"
+          },
+          "viewed": true,
+          "visualIdentityConfirmed": true
+        }
+      ],
+      "generationPrompt": "Use case: photorealistic-natural. Generate ONE completely new photorealistic contemporary Dublin city hero, horizontal 3:2, 1536 x 1024, opaque colour image. Subject: Trinity College Dublin Front Square, its freestanding stone Campanile the dominant recognizable landmark, the real grey stone college buildings and Chapel enclosing the paved square, green lawn compartments beyond the tower. Use both supplied photographs ONLY as factual geometry references, not composition targets: image 1 establishes the Campanile, image 2 establishes square and neighbouring building placement. Render current-day scene in natural colour, bright soft late-afternoon daylight. Camera VAKIO: a drone at surrounding ROOFTOP HEIGHT about 20 metres above square, roughly midway up the Campanile, viewing EAST from the western end of Front Square with a gentle downward tilt about 15 degrees. The TOP surfaces of neighbouring roofs, the tower base ledge and broad paving are visibly seen from above; this is decisively above pedestrian height. Whole campanile including finial and its base inside frame; immediate Front Square college roofscape recedes behind, accurately placed buildings with no invented huge distant skyline. Moderate wide 35mm full-frame lens; realistic architectural proportions, photographic stone texture, natural foliage, no painterly strokes, no rendering or illustration look, no HDR, no oversaturated fantasy atmosphere. A few tiny contemporary visitors far below for scale. No prominent people, no readable text, signage, logo, watermark, frame. It is a new AI explanatory image, never a reproduction of one input photo.",
+      "generationTool": "built-in image_gen",
+      "generatedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/dublin/production/original-generated.png",
+      "nativeDimensions": [
+        1536,
+        1024
+      ],
+      "deliveryDimensions": [
+        1536,
+        1024
+      ],
+      "productionDimensions": [
+        1536,
+        1024
+      ],
+      "format": "PNG",
+      "colorMode": "RGB",
+      "colorSpace": "sRGB",
+      "opaque": true,
+      "sha256": "afd14770d679da396f826f2385155b17a610084560cc2abbb8cef08576a2f393",
+      "camera": {
+        "presetRequested": "VAKIO",
+        "presetActual": "VAKIO",
+        "downwardTiltDegreesRequested": 15,
+        "observed": "Elevated roof-height viewpoint; top roof and ledge surfaces visible; pedestrian area seen from above"
+      },
+      "timeOfDay": "soft late afternoon",
+      "referenceVisualQA": {
+        "reviewedCount": 2,
+        "modernExteriorSameSubject": true,
+        "differentCreators": true,
+        "originalLongSideAtLeast1000": true
+      },
+      "visualQA": {
+        "status": "Production agent inspected native, final and 480px preview; root QA pending",
+        "recognizableSubject": true,
+        "facts": "Campanile complete finial to base; neighbouring grey stone college roofs and courtyard lawn consistent with refs; camera elevated above paving, top roof surfaces visible",
+        "noText": true,
+        "people": "tiny everyday contemporary visitors",
+        "noStylization": true,
+        "caveat": "AI explanatory image; background roofscape approximation, not survey geometry"
+      },
+      "technicalQA": {
+        "dimensions1536x1024": true,
+        "pngRGB": true,
+        "srgbICC": true,
+        "opaque": true,
+        "metadataDescriptionAndSource": true
+      },
+      "deliveryState": "local candidate awaiting root QA; not uploaded/integrated/published",
+      "r2Key": "julisteet/herokoe/hero-dublin.png",
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-dublin.png",
+      "bytes": 3037739,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "parentQA": {
+        "reviewer": "root",
+        "sha256": "afd14770d679da396f826f2385155b17a610084560cc2abbb8cef08576a2f393",
+        "nativeViewed": true,
+        "referenceComparisonViewed": true,
+        "photorealism": true,
+        "recognisableLandmarkAndImmediateContext": true,
+        "technicalValidationAtUpload": true,
+        "approvedForDelivery": true,
+        "limitations": {
+          "status": "Production agent inspected native, final and 480px preview; root QA pending",
+          "recognizableSubject": true,
+          "facts": "Campanile complete finial to base; neighbouring grey stone college roofs and courtyard lawn consistent with refs; camera elevated above paving, top roof surfaces visible",
+          "noText": true,
+          "people": "tiny everyday contemporary visitors",
+          "noStylization": true,
+          "caveat": "AI explanatory image; background roofscape approximation, not survey geometry"
+        },
+        "cameraDecision": "low elevated view accepted"
+      },
+      "editorAcceptance": "pending",
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "edinburgh",
+      "cityName": "Edinburgh",
+      "subject": "Edinburghin linna Castle Rockilla",
+      "subjectCoordinatesApprox": [
+        55.94859,
+        -3.19991
+      ],
+      "center": [
+        55.93615,
+        -3.17025
+      ],
+      "radiusMetres": 15000,
+      "subjectDistanceApproxMetres": 2308,
+      "subjectRadiusPassApprox": true,
+      "coordinateProof": {
+        "method": "approved root reference plan approximate landmark point, conservative haversine distance with 500m uncertainty",
+        "coordinateUncertaintyMetres": 500,
+        "landmarkCoordinateVerifiedFromMetadata": false,
+        "caveat": "Reference camera GPS and landmark point are distinct. Conservative large margin within permitted radius."
+      },
+      "file": "hero-edinburgh.png",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/edinburgh/production/hero-edinburgh.png",
+      "caption": "Edinburghin linna Castle Rockilla ja sen lähiympäristö. Havainnekuva.",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "metadataText": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "style": "photorealistic-real-camera-look",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "viitteet": [
+        {
+          "nimi": "File:Edinburgh Castle from the Grassmarket.jpg",
+          "tekija": "Stephencdickson",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Edinburgh_Castle_from_the_Grassmarket.jpg"
+        },
+        {
+          "nimi": "File:Castle Rock Edinburgh.jpg",
+          "tekija": "Scglossop1",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Castle_Rock_Edinburgh.jpg"
+        }
+      ],
+      "referenceMetadata": [
+        {
+          "nimi": "File:Edinburgh Castle from the Grassmarket.jpg",
+          "tekija": "Stephencdickson",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Edinburgh_Castle_from_the_Grassmarket.jpg",
+          "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Edinburgh_Castle_from_the_Grassmarket.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/Edinburgh_Castle_from_the_Grassmarket.jpg/1280px-Edinburgh_Castle_from_the_Grassmarket.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/edinburgh/references/ref-8ff0fb02aaeb6566.jpg",
+          "originalDimensions": [
+            3088,
+            2056
+          ],
+          "downloadDimensions": [
+            1280,
+            852
+          ],
+          "sha256": "8ff0fb02aaeb656622f1aecc24250a30970c3986016fb1bfc92be1632288cba8",
+          "originalSha1": "fff7b0edfc2c84e7144a86e7b932d4cece54413c",
+          "apiPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/edinburgh/references/api.json",
+          "apiSha256": "198a7e71ac1d956ecee7aad828cd2380a076afa791608e2eb621db28a6d1ee2f",
+          "categories": [
+            "Category:CC-BY-SA-4.0",
+            "Category:Edinburgh Castle from Grassmarket",
+            "Category:Self-published work"
+          ],
+          "metadata": {
+            "ImageDescription": "Edinburgh Castle from the Grassmarket",
+            "DateTimeOriginal": "2021-08-16 14:57:42"
+          },
+          "viewed": true,
+          "visualIdentityConfirmed": true
+        },
+        {
+          "nimi": "File:Castle Rock Edinburgh.jpg",
+          "tekija": "Scglossop1",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Castle_Rock_Edinburgh.jpg",
+          "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Castle_Rock_Edinburgh.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7f/Castle_Rock_Edinburgh.jpg/1280px-Castle_Rock_Edinburgh.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/edinburgh/references/ref-5e9245988a76308b.jpg",
+          "originalDimensions": [
+            4032,
+            3024
+          ],
+          "downloadDimensions": [
+            1280,
+            960
+          ],
+          "sha256": "5e9245988a76308b29aae296225539c0f522b4f6dad601bb57e587f98b70e12f",
+          "originalSha1": "9ed4081c9776039e859ff838046763eb7f9cbff8",
+          "apiPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/edinburgh/references/api.json",
+          "apiSha256": "198a7e71ac1d956ecee7aad828cd2380a076afa791608e2eb621db28a6d1ee2f",
+          "categories": [
+            "Category:CC-BY-SA-4.0",
+            "Category:Edinburgh Castle from the north west (Princes Street Gardens)",
+            "Category:Files with coordinates missing SDC location of creation (55° N, 4° W)",
+            "Category:Photographs taken on 2021-09-15",
+            "Category:Princes Street Gardens",
+            "Category:Self-published work",
+            "Category:Uploaded with Mobile/Android"
+          ],
+          "metadata": {
+            "GPSLatitude": "55.950125",
+            "GPSLongitude": "-3.203852",
+            "GPSMapDatum": "WGS-84",
+            "ImageDescription": "A picture of Castle Rock in Edinburgh, taken from Princes Street Gardens below.",
+            "DateTimeOriginal": "15 September 2021 (according to Exif data)"
+          },
+          "viewed": true,
+          "visualIdentityConfirmed": true
+        }
+      ],
+      "generationPrompt": "Use case: photorealistic-natural. Produce a completely NEW photorealistic current-day Edinburgh Castle explanatory hero photograph. Landscape 3:2, 1536x1024, opaque. Both supplied photographs are ONLY architectural evidence, not edit targets. Their squat real castle is the binding shape constraint. Subject: the SOUTH/EAST face of the real Edinburgh Castle rising from rugged dark Castle Rock. Left main building is the compact rectangular Royal Palace, grey-brown stone, several rows of small rectangular windows, simple pitched slate roofs and low crow-stepped gables, chimney stacks. To its right is the large ROUND HALF MOON BATTERY, plain robust curved stone defensive wall. Exactly the fortress identity visible in reference 1: Royal Palace and circular battery, stepped low defensive walls down onto rock. NO church spires anywhere inside the castle. NO tall needle towers, no gothic cathedral, no fairytale turrets, no invented castle extensions. No huge city panorama or distant invented skyline; tight immediate Castle Rock context only with Grassmarket roof edges unobtrusively low in frame. Camera above nearby Grassmarket roofs about 25 metres, looking gently down about 15 degrees toward the rock and base walls while showing Palace side facade almost horizontally. Clearly see top roof slopes, low wall tops and small path below, not pedestrian view. Preserve whole Palace silhouette, whole circular battery and rock base with generous frame buffers. Fortress fills most of scene. Blue-grey soft daylight after passing clouds; professional full-frame 45mm real camera appearance, natural stone texture, foliage, restrained colours. A few tiny contemporary visitors on paths. No painting, illustration, 3D look, HDR, fantasy architecture, readable words or signs, logos, watermark, borders. The main landmark MUST stay squat and compact as references show; the highest roof elements are ordinary chimneys and crow-stepped gables, never cathedral steeples.",
+      "generationTool": "built-in image_gen",
+      "generatedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/edinburgh/production/original-generated.png",
+      "nativeDimensions": [
+        1536,
+        1024
+      ],
+      "deliveryDimensions": [
+        1536,
+        1024
+      ],
+      "productionDimensions": [
+        1536,
+        1024
+      ],
+      "format": "PNG",
+      "colorMode": "RGB",
+      "colorSpace": "sRGB",
+      "opaque": true,
+      "sha256": "e676ca307f20d0284ce42c7301300714fa5dd5ed3213b869263205940f30bf57",
+      "camera": {
+        "presetRequested": "VAKIO constrained south/east roof-height fallback authorized by root",
+        "presetActual": "LAHI relative to castle, rooftop elevated relative to Grassmarket",
+        "heightApproxMetresRequested": 25,
+        "downwardTiltDegreesRequested": 15,
+        "observed": "Foreground roof tops visible; viewpoint elevated above immediate streets but below palace midpoint on high Castle Rock",
+        "fallbackReason": "Root authorized closer slightly elevated Grassmarket roof-height view to preserve squat fortress geometry and avoid invented skyline"
+      },
+      "timeOfDay": "clear daylight after clouds",
+      "referenceVisualQA": {
+        "reviewedCount": 2,
+        "modernExteriorSameSubject": true,
+        "differentCreators": true,
+        "originalLongSideAtLeast1000": true
+      },
+      "visualQA": {
+        "status": "Production agent inspected native, final and 480px preview; root QA pending",
+        "recognizableSubject": true,
+        "facts": "Royal Palace rectangular stone fortress with crow-stepped gables and chimneys, broad round Half Moon Battery, dark natural Castle Rock. No tall needle church spires within castle. Narrow immediate context and foreground roof tops; view below palace midpoint.",
+        "noText": true,
+        "people": "tiny everyday contemporary visitors",
+        "noStylization": true,
+        "caveat": "Camera falls below castle midpoint; recognizable squat fortress preserved. Root approval pending."
+      },
+      "technicalQA": {
+        "dimensions1536x1024": true,
+        "pngRGB": true,
+        "srgbICC": true,
+        "opaque": true,
+        "metadataDescriptionAndSource": true
+      },
+      "deliveryState": "local candidate awaiting root QA; not uploaded/integrated/published",
+      "correctionHistory": {
+        "rejectedOriginal": "rejected-geometry/original-generated.png",
+        "reason": "Invented tall needle spires inside castle and skyline",
+        "wholeNewGeneration": true
+      },
+      "r2Key": "julisteet/herokoe/hero-edinburgh.png",
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-edinburgh.png",
+      "bytes": 3094142,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "parentQA": {
+        "reviewer": "root",
+        "sha256": "e676ca307f20d0284ce42c7301300714fa5dd5ed3213b869263205940f30bf57",
+        "nativeViewed": true,
+        "referenceComparisonViewed": true,
+        "photorealism": true,
+        "recognisableLandmarkAndImmediateContext": true,
+        "technicalValidationAtUpload": true,
+        "approvedForDelivery": true,
+        "limitations": {
+          "status": "Production agent inspected native, final and 480px preview; root QA pending",
+          "recognizableSubject": true,
+          "facts": "Royal Palace rectangular stone fortress with crow-stepped gables and chimneys, broad round Half Moon Battery, dark natural Castle Rock. No tall needle church spires within castle. Narrow immediate context and foreground roof tops; view below palace midpoint.",
+          "noText": true,
+          "people": "tiny everyday contemporary visitors",
+          "noStylization": true,
+          "caveat": "Camera falls below castle midpoint; recognizable squat fortress preserved. Root approval pending."
+        },
+        "cameraDecision": "Restricted LAHI relative to tall castle; low rooftop view above Grassmarket"
+      },
+      "editorAcceptance": "pending",
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "sisilia",
+      "cityName": "Sisilia",
+      "subject": "Palermon katedraalin eteläportiikki",
+      "subjectCoordinatesApprox": [
+        38.11491,
+        13.35697
+      ],
+      "center": [
+        38.0992,
+        13.34633
+      ],
+      "radiusMetres": 20000,
+      "subjectDistanceApproxMetres": 1979,
+      "subjectRadiusPassApprox": true,
+      "coordinateProof": {
+        "method": "approved root reference plan approximate landmark point, conservative haversine distance with 500m uncertainty",
+        "coordinateUncertaintyMetres": 500,
+        "landmarkCoordinateVerifiedFromMetadata": false,
+        "caveat": "Reference camera GPS and landmark point are distinct. Conservative large margin within permitted radius."
+      },
+      "file": "hero-sisilia.png",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/sisilia/production/hero-sisilia.png",
+      "caption": "Palermon katedraalin eteläportiikki ja kupoli Sisiliassa. Havainnekuva.",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "metadataText": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "style": "photorealistic-real-camera-look",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "viitteet": [
+        {
+          "nimi": "File:Palermo Cathedral BW 2025-04-29 11-14-42.jpg",
+          "tekija": "Berthold Werner",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Palermo_Cathedral_BW_2025-04-29_11-14-42.jpg"
+        },
+        {
+          "nimi": "File:Cathedral (Palermo) 04.jpg",
+          "tekija": "Derbrauni",
+          "lisenssi": "CC BY 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Cathedral_(Palermo)_04.jpg"
+        }
+      ],
+      "referenceMetadata": [
+        {
+          "nimi": "File:Palermo Cathedral BW 2025-04-29 11-14-42.jpg",
+          "tekija": "Berthold Werner",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Palermo_Cathedral_BW_2025-04-29_11-14-42.jpg",
+          "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/2/22/Palermo_Cathedral_BW_2025-04-29_11-14-42.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/Palermo_Cathedral_BW_2025-04-29_11-14-42.jpg/1280px-Palermo_Cathedral_BW_2025-04-29_11-14-42.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/sisilia/references/ref-11c1adfa13e1a69d.jpg",
+          "originalDimensions": [
+            5496,
+            3664
+          ],
+          "downloadDimensions": [
+            1280,
+            853
+          ],
+          "sha256": "11c1adfa13e1a69dab74e60862a6b052a20fa2dd860bad2941893f11657e159a",
+          "originalSha1": "d358c76f2ffd11c17a6a5117f43f4dee28b0eed8",
+          "apiPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/sisilia/references/api.json",
+          "apiSha256": "a441ebecfbb55e49ac3692c9ec209af1d27a3d71f244dbfc85c0de06481d5296",
+          "categories": [
+            "Category:CC-BY-SA-4.0",
+            "Category:Files with coordinates missing SDC location of creation",
+            "Category:Photographs by User:Berthold Werner/Italien/Sizilien",
+            "Category:Photographs by User:Berthold Werner/Themen/Kathedralen",
+            "Category:Porch of the Cathedral of Palermo",
+            "Category:Quality images",
+            "Category:Quality images by User:Berthold Werner",
+            "Category:Quality images of Palermo",
+            "Category:Self-published work"
+          ],
+          "metadata": {
+            "GPSLatitude": "38.113675",
+            "GPSLongitude": "13.356003",
+            "GPSMapDatum": "WGS-84",
+            "ImageDescription": "Italy, Sicily, Palermo, Portal and dome of the cathedral",
+            "DateTimeOriginal": "2025-04-29 11:14:42"
+          },
+          "viewed": true,
+          "visualIdentityConfirmed": true
+        },
+        {
+          "nimi": "File:Cathedral (Palermo) 04.jpg",
+          "tekija": "Derbrauni",
+          "lisenssi": "CC BY 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Cathedral_(Palermo)_04.jpg",
+          "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Cathedral_%28Palermo%29_04.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/Cathedral_%28Palermo%29_04.jpg/1280px-Cathedral_%28Palermo%29_04.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/sisilia/references/ref-2198ef7792c01f17.jpg",
+          "originalDimensions": [
+            4032,
+            2268
+          ],
+          "downloadDimensions": [
+            1280,
+            720
+          ],
+          "sha256": "2198ef7792c01f1712d7e116ad98084d3c36f4ec465fc98c1a63c4d195789f46",
+          "originalSha1": "a95cbdc14853f7e097d44bda7d0eb33d0fb2a031",
+          "apiPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/sisilia/references/api.json",
+          "apiSha256": "a441ebecfbb55e49ac3692c9ec209af1d27a3d71f244dbfc85c0de06481d5296",
+          "categories": [
+            "Category:CC-BY-4.0",
+            "Category:Files with coordinates missing SDC location of creation",
+            "Category:Photographs by User:Derbrauni",
+            "Category:Porch of the Cathedral of Palermo",
+            "Category:Self-published work"
+          ],
+          "metadata": {
+            "GPSLatitude": "38.113993",
+            "GPSLongitude": "13.356436",
+            "GPSMapDatum": "WGS-84",
+            "ImageDescription": "Cathedral (Palermo)",
+            "DateTimeOriginal": "2022-10-14 11:48:24"
+          },
+          "viewed": true,
+          "visualIdentityConfirmed": true
+        }
+      ],
+      "generationPrompt": "Use case: photorealistic-natural. Generate one completely NEW current-day Palermo city explanatory hero photograph, landscape 3:2, 1536x1024 opaque. Main subject is the Cathedral of Palermo's SOUTH PORTICO and central silver-grey DOME, grounded strictly in both supplied photographs. Warm sandy stone structure: three big pointed Gothic arches under richly carved broad triangular pediment; slender clustered decorated piers; pale central doorway; serrated shallow crenellations along low stone roof edges; large classical domed drum rising behind to right. A slender actual corner turret at right, never add fantasy spires. Cathedral subject wholly inside frame with buffer and full dome including finial, portico dominates lower-middle area. Newly composed photo from LOW ELEVATED VAKIO roof-height camera about 18 metres above Piazza, near portico midpoint, gently downward 15 degrees. Must visibly see TOP ledges and near roof surfaces and courtyard paving below, never copy street-level viewpoints of references. Immediate courtyard only, actual palms and formal planted islands, a few very small visitors below, neighbouring Palermo roof edges minimally visible. No broad invented city skyline, no Etna, no Taormina. Clear morning Mediterranean daylight, natural warm limestone and subtle sky, full-frame 40mm professional camera texture, restrained colour and exposure, realistic atmospheric light. No illustration, painterly brushstrokes, 3D render, HDR, fantasy structure, readable words/signs, logos, watermark, border. Inputs are factual architectural references ONLY, never edit targets or copied single-photo composition.",
+      "generationTool": "built-in image_gen",
+      "generatedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/sisilia/production/original-generated.png",
+      "nativeDimensions": [
+        1536,
+        1024
+      ],
+      "deliveryDimensions": [
+        1536,
+        1024
+      ],
+      "productionDimensions": [
+        1536,
+        1024
+      ],
+      "format": "PNG",
+      "colorMode": "RGB",
+      "colorSpace": "sRGB",
+      "opaque": true,
+      "sha256": "581cf0ab42d37e815ab9ae7621aa0e842d6b164f5e8d53b457b8592cc9800487",
+      "camera": {
+        "presetRequested": "VAKIO",
+        "presetActual": "VAKIO",
+        "downwardTiltDegreesRequested": 15,
+        "observed": "Elevated roof-height viewpoint; top roof and ledge surfaces visible; pedestrian area seen from above"
+      },
+      "timeOfDay": "bright morning",
+      "referenceVisualQA": {
+        "reviewedCount": 2,
+        "modernExteriorSameSubject": true,
+        "differentCreators": true,
+        "originalLongSideAtLeast1000": true
+      },
+      "visualQA": {
+        "status": "Production agent inspected native, final and 480px preview; root QA pending",
+        "recognizableSubject": true,
+        "facts": "Three pointed arches, broad triangular carved pediment, clustered decorated piers, silver-grey dome on classical drum to right, warm limestone, near courtyard planting. Roof-height view with upper ledges and paving below.",
+        "noText": true,
+        "people": "tiny everyday contemporary visitors",
+        "noStylization": true,
+        "caveat": "AI explanatory image; background roofscape approximation, not survey geometry"
+      },
+      "technicalQA": {
+        "dimensions1536x1024": true,
+        "pngRGB": true,
+        "srgbICC": true,
+        "opaque": true,
+        "metadataDescriptionAndSource": true
+      },
+      "deliveryState": "local candidate awaiting root QA; not uploaded/integrated/published",
+      "r2Key": "julisteet/herokoe/hero-sisilia.png",
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-sisilia.png",
+      "bytes": 3069126,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "parentQA": {
+        "reviewer": "root",
+        "sha256": "581cf0ab42d37e815ab9ae7621aa0e842d6b164f5e8d53b457b8592cc9800487",
+        "nativeViewed": true,
+        "referenceComparisonViewed": true,
+        "photorealism": true,
+        "recognisableLandmarkAndImmediateContext": true,
+        "technicalValidationAtUpload": true,
+        "approvedForDelivery": true,
+        "limitations": {
+          "status": "Production agent inspected native, final and 480px preview; root QA pending",
+          "recognizableSubject": true,
+          "facts": "Three pointed arches, broad triangular carved pediment, clustered decorated piers, silver-grey dome on classical drum to right, warm limestone, near courtyard planting. Roof-height view with upper ledges and paving below.",
+          "noText": true,
+          "people": "tiny everyday contemporary visitors",
+          "noStylization": true,
+          "caveat": "AI explanatory image; background roofscape approximation, not survey geometry"
+        },
+        "cameraDecision": "low elevated reference-anchored view accepted"
+      },
+      "editorAcceptance": "pending",
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "kreeta",
+      "cityName": "Kreeta",
+      "subject": "Koulesin linnoitus Heraklionin satamassa",
+      "subjectCoordinatesApprox": [
+        35.3449,
+        25.13762
+      ],
+      "center": [
+        35.31443,
+        25.13487
+      ],
+      "radiusMetres": 15000,
+      "subjectDistanceApproxMetres": 3397,
+      "subjectRadiusPassApprox": true,
+      "coordinateProof": {
+        "method": "approved root reference plan approximate landmark point, conservative haversine distance with 500m uncertainty",
+        "coordinateUncertaintyMetres": 500,
+        "landmarkCoordinateVerifiedFromMetadata": false,
+        "caveat": "Reference camera GPS and landmark point are distinct. Conservative large margin within permitted radius."
+      },
+      "file": "hero-kreeta.png",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/kreeta/production/hero-kreeta.png",
+      "caption": "Koulesin linnoitus ja kalastusveneitä Heraklionin satamassa Kreetalla. Havainnekuva.",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "metadataText": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "style": "photorealistic-real-camera-look",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "viitteet": [
+        {
+          "nimi": "File:Venetian Fortress of Koules in Heraklion, Crete 003.jpg",
+          "tekija": "Moonik",
+          "lisenssi": "CC BY-SA 3.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Venetian_Fortress_of_Koules_in_Heraklion,_Crete_003.jpg"
+        },
+        {
+          "nimi": "File:20090415 Hrakleio Krhth Limani Koules 1.jpg",
+          "tekija": "Γεώργιος Γιαννόπουλος",
+          "lisenssi": "CC BY-SA 3.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:20090415_Hrakleio_Krhth_Limani_Koules_1.jpg"
+        }
+      ],
+      "referenceMetadata": [
+        {
+          "nimi": "File:Venetian Fortress of Koules in Heraklion, Crete 003.jpg",
+          "tekija": "Moonik",
+          "lisenssi": "CC BY-SA 3.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Venetian_Fortress_of_Koules_in_Heraklion,_Crete_003.jpg",
+          "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Venetian_Fortress_of_Koules_in_Heraklion%2C_Crete_003.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ca/Venetian_Fortress_of_Koules_in_Heraklion%2C_Crete_003.jpg/1280px-Venetian_Fortress_of_Koules_in_Heraklion%2C_Crete_003.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/kreeta/references/ref-20a933daec9f3cb4.jpg",
+          "originalDimensions": [
+            4288,
+            2848
+          ],
+          "downloadDimensions": [
+            1280,
+            850
+          ],
+          "sha256": "20a933daec9f3cb4c620e6b71c2da0fb2da68c665d0c19cca907c64cecb56c27",
+          "originalSha1": "008e6c9565a8ddebd548f5ac351ffd86256864c0",
+          "apiPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/kreeta/references/api.json",
+          "apiSha256": "8e2a00db8562dda36d35666ba3df8b56324e99a176cec1c85aa9de7d1061cfe7",
+          "categories": [
+            "Category:2013 in Heraklion",
+            "Category:Battlements in Heraklion",
+            "Category:CC-BY-SA-3.0",
+            "Category:Files with coordinates missing SDC location of creation",
+            "Category:Fishing boats in Heraklion",
+            "Category:Greece photographs taken on 2013-05-09",
+            "Category:Images by Moonik",
+            "Category:Koules Fortress",
+            "Category:Port of Heraklion",
+            "Category:Quality Images by Moonik",
+            "Category:Quality images",
+            "Category:Quality images of Crete"
+          ],
+          "metadata": {
+            "GPSLatitude": "35.342925",
+            "GPSLongitude": "25.134526",
+            "GPSMapDatum": "WGS-84",
+            "ImageDescription": "Venetian Fortress of Koules in Heraklion, Crete, Greece.",
+            "DateTimeOriginal": "2013-05-09 14:03:56"
+          },
+          "viewed": true,
+          "visualIdentityConfirmed": true
+        },
+        {
+          "nimi": "File:20090415 Hrakleio Krhth Limani Koules 1.jpg",
+          "tekija": "Γεώργιος Γιαννόπουλος",
+          "lisenssi": "CC BY-SA 3.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:20090415_Hrakleio_Krhth_Limani_Koules_1.jpg",
+          "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/c/cf/20090415_Hrakleio_Krhth_Limani_Koules_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/20090415_Hrakleio_Krhth_Limani_Koules_1.jpg/1280px-20090415_Hrakleio_Krhth_Limani_Koules_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/kreeta/references/ref-da1b7ae9ec130fa8.jpg",
+          "originalDimensions": [
+            1300,
+            858
+          ],
+          "downloadDimensions": [
+            1280,
+            845
+          ],
+          "sha256": "da1b7ae9ec130fa8ad352f853beaa277cacc24c37dec21afae7393e8e92c54de",
+          "originalSha1": "01b19cd355c7344819cdc6f196f930b7317567fe",
+          "apiPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/kreeta/references/api.json",
+          "apiSha256": "8e2a00db8562dda36d35666ba3df8b56324e99a176cec1c85aa9de7d1061cfe7",
+          "categories": [
+            "Category:2009 in Heraklion",
+            "Category:April 2009 Greece photographs",
+            "Category:Battlements in Heraklion",
+            "Category:CC-BY-SA-3.0",
+            "Category:Files with coordinates missing SDC location of creation",
+            "Category:Fishing boats in Heraklion",
+            "Category:Koules Fortress",
+            "Category:Taken with Nikon D700"
+          ],
+          "metadata": {
+            "GPSLatitude": "35.342778",
+            "GPSLongitude": "25.134889",
+            "GPSMapDatum": "WGS-84",
+            "ImageDescription": "The Venetian fortress Koule (Rocca al Mare) in Heraklion, Crete",
+            "DateTimeOriginal": "2009-04-15"
+          },
+          "viewed": true,
+          "visualIdentityConfirmed": true
+        }
+      ],
+      "generationPrompt": "Use case: photorealistic-natural. Generate one completely NEW current-day Heraklion Koules fortress harbour hero photograph, landscape 3:2, 1536x1024 opaque PNG. Both supplied photographs are factual architecture references only. Main subject: real Koules Venetian fortress at mouth of Heraklion harbour, low broad sandy stone mass, rectangular taller block left, attached lower rounded bastion right, squat crenellations, small irregular rectangular and arched openings; solid plain walls, absolutely no tall towers, no castle keep or palace roof. Faithfully preserve uneven stacked pale weathered stone and exact squat two-part silhouette. New VAKIO low drone camera about 12 metres above harbour water, approximately level with middle of main fortress block, gentle 15 degree downward tilt so we see TOP of parapet and some flat rooftop, immediate pier below and boat decks. Whole fortress and low round bastion fully framed, generous margins. View from southwest near fishing-boat quay toward fortress; marina boats lie along the quay in foreground/left and open harbour water to right and behind as references show. No huge invented city panorama. Contemporary tiny walking visitors on pier; small ordinary colourful fishing boats, natural teal water and soft gentle ripples. Clear soft bright afternoon, full-frame 40mm real-camera image, stone grain and natural sky/water texture, accurate scale, realistic depth. No Chania lighthouse or harbour, no Elafonisi beach, no mountain fantasy. No paint, illustration, CGI, HDR, dramatic saturation, prominent people, readable signs/text, logos, watermark or frame.",
+      "generationTool": "built-in image_gen",
+      "generatedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/kreeta/production/original-generated.png",
+      "nativeDimensions": [
+        1536,
+        1024
+      ],
+      "deliveryDimensions": [
+        1536,
+        1024
+      ],
+      "productionDimensions": [
+        1536,
+        1024
+      ],
+      "format": "PNG",
+      "colorMode": "RGB",
+      "colorSpace": "sRGB",
+      "opaque": true,
+      "sha256": "8707837dd4b053cb213845e83ce0960ca4466468f99fa47c42b218b42d320635",
+      "camera": {
+        "presetRequested": "VAKIO",
+        "presetActual": "VAKIO low elevated",
+        "heightApproxMetresRequested": 12,
+        "heightApproxMetresObserved": 8,
+        "downwardTiltDegreesRequested": 15,
+        "observed": "Elevated over boat decks and quay, parapet top ledges visible; rooftop interior not shown"
+      },
+      "timeOfDay": "clear afternoon",
+      "referenceVisualQA": {
+        "reviewedCount": 2,
+        "modernExteriorSameSubject": true,
+        "differentCreators": true,
+        "originalLongSideAtLeast1000": true
+      },
+      "visualQA": {
+        "status": "Production agent inspected native, final and 480px preview; root QA pending",
+        "recognizableSubject": true,
+        "facts": "Squat rectangular stone block left and lower round bastion right, short crenellations, small irregular windows; boat quay left and water right. Elevated view over boat decks and pier, near parapet tops visible, no interior rooftop visible.",
+        "noText": true,
+        "people": "tiny everyday contemporary visitors",
+        "noStylization": true,
+        "caveat": "Low elevated viewpoint below fortress highest roof; no interior rooftop visible. Root camera decision pending."
+      },
+      "technicalQA": {
+        "dimensions1536x1024": true,
+        "pngRGB": true,
+        "srgbICC": true,
+        "opaque": true,
+        "metadataDescriptionAndSource": true
+      },
+      "deliveryState": "local candidate awaiting root QA; not uploaded/integrated/published",
+      "r2Key": "julisteet/herokoe/hero-kreeta.png",
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-kreeta.png",
+      "bytes": 2793215,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "parentQA": {
+        "reviewer": "root",
+        "sha256": "8707837dd4b053cb213845e83ce0960ca4466468f99fa47c42b218b42d320635",
+        "nativeViewed": true,
+        "referenceComparisonViewed": true,
+        "photorealism": true,
+        "recognisableLandmarkAndImmediateContext": true,
+        "technicalValidationAtUpload": true,
+        "approvedForDelivery": true,
+        "limitations": {
+          "status": "Production agent inspected native, final and 480px preview; root QA pending",
+          "recognizableSubject": true,
+          "facts": "Squat rectangular stone block left and lower round bastion right, short crenellations, small irregular windows; boat quay left and water right. Elevated view over boat decks and pier, near parapet tops visible, no interior rooftop visible.",
+          "noText": true,
+          "people": "tiny everyday contemporary visitors",
+          "noStylization": true,
+          "caveat": "Low elevated viewpoint below fortress highest roof; no interior rooftop visible. Root camera decision pending."
+        },
+        "cameraDecision": "low elevated reference-anchored view accepted"
+      },
+      "editorAcceptance": "pending",
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "marseille",
+      "cityName": "Marseille",
+      "subject": "Vanha satama ja Notre-Dame de la Garden kukkula",
+      "subjectCoordinatesApprox": [
+        43.2952,
+        5.3744
+      ],
+      "center": [
+        43.3089,
+        5.40263
+      ],
+      "radiusMetres": 20000,
+      "subjectDistanceApproxMetres": 2746,
+      "subjectRadiusPassApprox": true,
+      "coordinateProof": {
+        "method": "approved root reference plan approximate landmark point, conservative haversine distance with 500m uncertainty",
+        "coordinateUncertaintyMetres": 500,
+        "landmarkCoordinateVerifiedFromMetadata": false,
+        "caveat": "Reference camera GPS and landmark point are distinct. Conservative large margin within permitted radius."
+      },
+      "file": "hero-marseille.png",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/marseille/production/hero-marseille.png",
+      "caption": "Marseillen vanha satama ja Notre-Dame de la Garde kukkulallaan. Havainnekuva.",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "metadataText": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "style": "photorealistic-real-camera-look",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "viitteet": [
+        {
+          "nimi": "File:1 marseille vieux port pano.jpg",
+          "tekija": "Chensiyuan",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:1_marseille_vieux_port_pano.jpg"
+        },
+        {
+          "nimi": "File:Notre-Dame de la Garde from port Marseille 2026.JPG",
+          "tekija": "Mike is Michi",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Notre-Dame_de_la_Garde_from_port_Marseille_2026.JPG"
+        }
+      ],
+      "referenceMetadata": [
+        {
+          "nimi": "File:1 marseille vieux port pano.jpg",
+          "tekija": "Chensiyuan",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:1_marseille_vieux_port_pano.jpg",
+          "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/2/23/1_marseille_vieux_port_pano.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/1_marseille_vieux_port_pano.jpg/1280px-1_marseille_vieux_port_pano.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/marseille/references/ref-6ffbefbc6040fc73.jpg",
+          "originalDimensions": [
+            9623,
+            3444
+          ],
+          "downloadDimensions": [
+            1280,
+            458
+          ],
+          "sha256": "6ffbefbc6040fc73cc7647edddeef27cdb3506f5ff018a6e8754341105c8d351",
+          "originalSha1": "4e507699edfd6b604ece21c3ebae116354d262a0",
+          "apiPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/marseille/references/api.json",
+          "apiSha256": "5d2bf71670edddfed1610274ec0bf13f42575901b4b002ebfd531f56a78b8f8b",
+          "categories": [
+            "Category:CC-BY-SA-4.0",
+            "Category:Panoramics of Marseille",
+            "Category:Self-published work",
+            "Category:Vieux-Port (Marseille)"
+          ],
+          "metadata": {
+            "ImageDescription": "panorama of vieux port marseille",
+            "DateTimeOriginal": "2016-06-19 06:48:39"
+          },
+          "viewed": true,
+          "visualIdentityConfirmed": true
+        },
+        {
+          "nimi": "File:Notre-Dame de la Garde from port Marseille 2026.JPG",
+          "tekija": "Mike is Michi",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Notre-Dame_de_la_Garde_from_port_Marseille_2026.JPG",
+          "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/d/dd/Notre-Dame_de_la_Garde_from_port_Marseille_2026.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dd/Notre-Dame_de_la_Garde_from_port_Marseille_2026.JPG/1280px-Notre-Dame_de_la_Garde_from_port_Marseille_2026.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/marseille/references/ref-5b30b57da7e7b4a7.jpg",
+          "originalDimensions": [
+            4012,
+            5356
+          ],
+          "downloadDimensions": [
+            1280,
+            1709
+          ],
+          "sha256": "5b30b57da7e7b4a7a73fba96325ffa49610f6a9c89f7037b8c7edeee44dad930",
+          "originalSha1": "975d7423c8ad4aea890d7be6bff878195019bd68",
+          "apiPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/marseille/references/api.json",
+          "apiSha256": "5d2bf71670edddfed1610274ec0bf13f42575901b4b002ebfd531f56a78b8f8b",
+          "categories": [
+            "Category:Basilique Notre-Dame de la Garde",
+            "Category:CC-BY-SA-4.0",
+            "Category:Marseille",
+            "Category:Provence-Alpes-Côte d'Azur photographs taken on 2026-03-22",
+            "Category:Self-published work",
+            "Category:Taken on missing SDC inception"
+          ],
+          "metadata": {
+            "ImageDescription": "View of the Basilique Notre-Dame de la Garde atop its hill, seen from the port area of Marseille, France. The Romano-Byzantine basilica with its golden statue of the Virgin Mary is visible on the summit. Below, the urban skyline of Marseille with residential buildings and a medieval church tower. Overcast sky.",
+            "DateTimeOriginal": "Taken on 22 March 2026"
+          },
+          "viewed": true,
+          "visualIdentityConfirmed": true
+        }
+      ],
+      "generationPrompt": "Use case: photorealistic-natural. Produce one completely NEW present-day Marseille city explanatory hero photograph. Landscape 3:2, 1536x1024 opaque colour. Subject is VIEUX-PORT rectangular marina basin with dense orderly rows of ordinary white sailboats, the immediate city quays, and the real Notre-Dame de la Garde basilica on its rocky hill beyond the SOUTHERN shore. Both input photographs are factual references ONLY: image1 anchors the harbour shape, quays and southern hill relationship; image2 anchors basilica tower, golden statue, smaller dome and underlying bare rocky hill. Do not copy either composition. Camera VAKIO low elevated drone at surrounding north-quay ROOFTOP height about 30 metres, looking SOUTH/SOUTHEAST across the basin, gentle downward tilt about 15 degrees. Boat decks, quay street and nearby roof surfaces clearly visible below, not water-level or pedestrian view. Harbour dominates foreground and central frame, close northern quay roof edge optional unobtrusive. Across water, south waterfront row of authentic cream-white midrise apartments with red tile roofs, real rocky basilica hill behind south shore; basilica distant and modest in scale, accurate recognizable tower and statue, never placed directly at water's edge. Whole marina view and tower finial inside frame, believable distances; no gigantic church foreground, no invented castle, no Notre-Dame cathedral of Paris. Marina boat masts are fine and natural, moderate number clear foreground boats, no cloned repeated boats. Early gentle blue hour after sunset with soft pastel sky and restrained warm quay lights, natural full-frame 35mm photography, crisp believable stone/building textures, realistic darkening teal water, no HDR or excessive neon. Contemporary tiny quay pedestrians. No painting, illustration, CGI, stylization, legible text/signs, logos, watermark or borders. Accurate immediate urban context rather than invented vast skyline.",
+      "generationTool": "built-in image_gen",
+      "generatedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/marseille/production/original-generated.png",
+      "nativeDimensions": [
+        1536,
+        1024
+      ],
+      "deliveryDimensions": [
+        1536,
+        1024
+      ],
+      "productionDimensions": [
+        1536,
+        1024
+      ],
+      "format": "PNG",
+      "colorMode": "RGB",
+      "colorSpace": "sRGB",
+      "opaque": true,
+      "sha256": "51e9286ba31339c43c50af962e0256c58950c2daaea2e174379df6a9f3189b09",
+      "camera": {
+        "presetRequested": "VAKIO",
+        "presetActual": "VAKIO",
+        "downwardTiltDegreesRequested": 15,
+        "observed": "Elevated roof-height viewpoint; top roof and ledge surfaces visible; pedestrian area seen from above"
+      },
+      "timeOfDay": "early blue hour",
+      "referenceVisualQA": {
+        "reviewedCount": 2,
+        "modernExteriorSameSubject": true,
+        "differentCreators": true,
+        "originalLongSideAtLeast1000": true
+      },
+      "visualQA": {
+        "status": "Production agent inspected native, final and 480px preview; root QA pending",
+        "recognizableSubject": true,
+        "facts": "Old Port marina basin, ordered sailboat rows and south waterfront urban roofs; basilica modest on rocky hill behind waterfront, not at sea edge. Elevated foreground rooftops and boat decks visible.",
+        "noText": true,
+        "people": "tiny everyday contemporary visitors",
+        "noStylization": true,
+        "caveat": "AI explanatory image; background roofscape approximation, not survey geometry"
+      },
+      "technicalQA": {
+        "dimensions1536x1024": true,
+        "pngRGB": true,
+        "srgbICC": true,
+        "opaque": true,
+        "metadataDescriptionAndSource": true
+      },
+      "deliveryState": "local candidate awaiting root QA; not uploaded/integrated/published",
+      "r2Key": "julisteet/herokoe/hero-marseille.png",
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-marseille.png",
+      "bytes": 2809837,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "parentQA": {
+        "reviewer": "root",
+        "sha256": "51e9286ba31339c43c50af962e0256c58950c2daaea2e174379df6a9f3189b09",
+        "nativeViewed": true,
+        "referenceComparisonViewed": true,
+        "photorealism": true,
+        "recognisableLandmarkAndImmediateContext": true,
+        "technicalValidationAtUpload": true,
+        "approvedForDelivery": true,
+        "limitations": {
+          "status": "Production agent inspected native, final and 480px preview; root QA pending",
+          "recognizableSubject": true,
+          "facts": "Old Port marina basin, ordered sailboat rows and south waterfront urban roofs; basilica modest on rocky hill behind waterfront, not at sea edge. Elevated foreground rooftops and boat decks visible.",
+          "noText": true,
+          "people": "tiny everyday contemporary visitors",
+          "noStylization": true,
+          "caveat": "AI explanatory image; background roofscape approximation, not survey geometry"
+        },
+        "cameraDecision": "low elevated reference-anchored view accepted"
+      },
+      "editorAcceptance": "pending",
+      "gameIntegrated": false,
+      "published": false
+    }
+  ],
+  "editorAcceptance": "pending",
+  "gameIntegrated": false,
+  "published": false,
+  "noMergeVersionRelease": true
+}
