@@ -696,7 +696,8 @@ namespace Matkakirja.Natiivi
         (string, Asento, double, bool) Puolilahikuva((string Avain, Asento Perus, double Jaljella, bool Saapumassa) lepo, Asento p, Hahmo h, Hahmo kuulija, double lahin, string puhuja)
         {
             // Kasvojen suunta kompassiasteina (kanoninen (sin a, −cos a)): kohti lähintä kuulijaa, muuten hahmon oma suunta.
-            double kasvot = h.Suunta;
+            // Ilman paikallaan olevaa kuulijaa puhuja kääntyy kameraan (DioraamaHahmot3D.KatseenKohde "@kamera") → kasvot lepokameran suuntaan.
+            double kasvot = p.Atsimuutti;
             if (kuulija != null && lahin < KuulijaMaxM * KuulijaMaxM && lahin > 0.01)
                 kasvot = Math.Atan2(kuulija.Paikka.X - h.Paikka.X, -(kuulija.Paikka.Z - h.Paikka.Z)) * 180 / Math.PI;
             // Kamera kasvojen puolelle ±PuolilahiSivu (lepokameran puolelle), rajattuna lepokameran ympärille.

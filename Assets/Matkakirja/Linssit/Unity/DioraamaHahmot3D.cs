@@ -227,8 +227,11 @@ namespace Matkakirja.Natiivi
                     float dx = (float)(m.Hahmo.Paikka.X - e.Hahmo.Paikka.X), dz = (float)(m.Hahmo.Paikka.Z - e.Hahmo.Paikka.Z);
                     if (dx * dx + dz * dz < d2) { d2 = dx * dx + dz * dz; lahin = m.HahmoId; }
                 }
-            return lahin;
+            // Ei paikallaan olevaa kuulijaa (keittiö: apulainen kävelee, iPhone 7.10. 06.38: kokki puhui selin): puhuja kääntyy kameraan,
+            // kuten puolilähikuva (DioraamaSovitin.Puolilahikuva) asettuu kasvojen eteen.
+            return lahin ?? KameraKohde;
         }
+        const string KameraKohde = "@kamera";
         /// <summary>Puhujan pään yläpuolinen maailmanpiste (kasvokuvan ankkuri, Natiivi-UI:n pohja), tai null.</summary>
         public static Vector3? PuhujanPaa { get; private set; }
 
@@ -816,9 +819,12 @@ namespace Matkakirja.Natiivi
             var paa = e.SolmuT[e.PaaIndeksi];
             if (kohde != null && e.Hahmo.Reitti == null)
                 foreach (var m in esiintymat)
-                    if (m != e && m.TilaId == e.TilaId && m.HahmoId == kohde && m.Juuri != null && m.Nakyvissa)
+                    if (kohde == KameraKohde ? m == e && DioraamaSovitin.AktiivinenKamera != null
+                        : m != e && m.TilaId == e.TilaId && m.HahmoId == kohde && m.Juuri != null && m.Nakyvissa)
                     {
-                        var kohdePaa = m.PaaIndeksi >= 0 ? m.SolmuT[m.PaaIndeksi].position : m.Juuri.transform.position + Vector3.up * 1.55f;
+                        // Kameraan katsova puhuja (ei paikallaan olevaa kuulijaa): pää kohti kameraa, pystykulma rajattuna kuten muuten.
+                        var kohdePaa = kohde == KameraKohde ? DioraamaSovitin.AktiivinenKamera.transform.position
+                            : m.PaaIndeksi >= 0 ? m.SolmuT[m.PaaIndeksi].position : m.Juuri.transform.position + Vector3.up * 1.55f;
                         var eteen = -e.Juuri.transform.forward; // skinnatun mallin kasvot (ks. PaivitaSijainti)
                         var suunta = kohdePaa - paa.position;
                         // Pystykatse enintään PaaPystyAst (Päätoimittaja 5.10.: polvistuva kappalainen kallisti pään taakse
@@ -861,7 +867,12 @@ namespace Matkakirja.Natiivi
         {
             string kohde = KatseenKohde(e);
             float tavoite = 0f;
-            if (kohde != null)
+            if (kohde == KameraKohde && DioraamaSovitin.AktiivinenKamera != null)
+            {
+                var suunta = DioraamaSovitin.AktiivinenKamera.transform.position - paikka; suunta.y = 0f;
+                if (suunta.sqrMagnitude > 0.04f) tavoite = Mathf.Clamp(Vector3.SignedAngle(oma, suunta, Vector3.up), -PuhujanMaxKatse, PuhujanMaxKatse);
+            }
+            else if (kohde != null)
                 foreach (var m in esiintymat)
                     if (m != e && m.TilaId == e.TilaId && m.HahmoId == kohde && m.Juuri != null && m.Nakyvissa)
                     {
