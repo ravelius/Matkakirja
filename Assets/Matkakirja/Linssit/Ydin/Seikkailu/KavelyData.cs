@@ -38,6 +38,8 @@ namespace Matkakirja.Linssit.Seikkailu
     public sealed class KavelyMerkki
     {
         public string Nimi, Laji, Tunnus, Osa, Tyyppi, Glb;
+        /// <summary>partio: henkilo ja profiili (pelattavuusmalli 3.1: vartija, portinvartija, kokki, apulainen, renki).</summary>
+        public string Henkilo, Profiili;
         public double X, Y, Z, Leveys, Korkeus, Koko, OdotaS;
         /// <summary>kierto_y radiaaneina (glTF y-akselin ympäri; esim. vene:laituri = keulan suunta); null jos puuttuu.</summary>
         public double? KiertoY;
@@ -113,6 +115,7 @@ namespace Matkakirja.Linssit.Seikkailu
                 Koko = MiniJson.Luku(o, "koko") ?? 0, OdotaS = MiniJson.Luku(o, "odota_s") ?? 0, KiertoY = MiniJson.Luku(o, "kierto_y"), Heitettava = MiniJson.Kentta(o, "heitettava") is bool hb && hb, Irrotettava = MiniJson.Kentta(o, "irrotettava") is bool ib && ib,
                 Sarana = MiniJson.Kentta(o, "sarana") is object sa ? Vektori(sa) : null,
                 Kiintea = MiniJson.Kentta(o, "kiintea") is bool kb && kb,
+                Henkilo = MiniJson.Teksti(o, "henkilo"), Profiili = MiniJson.Teksti(o, "profiili"),
             };
         }
 

@@ -68,7 +68,7 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Silmukka päälle tai pois (sydän, tuuli); paikka päivitetään joka kutsulla.</summary>
-        public static void Silmukka(string tunnus, bool paalla, Vector3 paikka, float voimakkuus = 1f)
+        public static void Silmukka(string tunnus, bool paalla, Vector3 paikka, float voimakkuus = 1f, float savel = 1f)
         {
             var s = Aktiivinen; if (s == null) return;
             if (!s.silmukat.TryGetValue(tunnus, out var l) || l == null)
@@ -76,7 +76,7 @@ namespace Matkakirja.Natiivi
                 if (!paalla || !s.aanet.TryGetValue(tunnus, out var a) || a.Klippi == null) return;
                 l = SeikkailuKuulija.Lahde("Silmukka:" + tunnus, 2f, 25f); l.clip = a.Klippi; l.loop = true; s.silmukat[tunnus] = l;
             }
-            SeikkailuKuulija.Aseta(l, paikka); l.volume = voimakkuus;
+            SeikkailuKuulija.Aseta(l, paikka); l.volume = voimakkuus; l.pitch = savel;
             if (paalla && !l.isPlaying) l.Play(); else if (!paalla && l.isPlaying) l.Stop();
         }
 

@@ -435,6 +435,7 @@ namespace Matkakirja.Natiivi
                 var t = typeof(SeikkailuPelaaja).Assembly.GetType("Matkakirja.Natiivi.SeikkailuTapit");
                 const System.Reflection.BindingFlags F = System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Static;
                 tapVasen = t?.GetProperty("Vasen", F); tapOikea = t?.GetProperty("Oikea", F);
+                tapKatse = t?.GetMethod("OtaKatse", F, null, Type.EmptyTypes, null);
             }
             if (tapVasen != null && tapOikea != null)
             {
@@ -443,9 +444,22 @@ namespace Matkakirja.Natiivi
                 if (Math.Abs(o.x) + Math.Abs(o.y) > 0.05f) { s.KatseX = o.x; s.KatseY = o.y; }
                 if (v.magnitude > 0.95f) s.Juoksu = true;   // tappi reunaan = juoksu (ei erillistä nappia)
             }
+            // Oikea veto koko oikealla puoliskolla (Natiivi-UI SeikkailuTapit.OtaKatse: asteet edellisestä lukukerrasta, x + oikealle, y + ylös).
+            if (tapKatse != null && tapKatse.Invoke(null, null) is Vector2 k && k.sqrMagnitude > 0f) { s.HiiriX += k.x; s.HiiriY += k.y; }
             return s;
         }
-        static bool tapitHaettu; static System.Reflection.PropertyInfo tapVasen, tapOikea;
+        static bool tapitHaettu; static System.Reflection.PropertyInfo tapVasen, tapOikea; static System.Reflection.MethodInfo tapKatse;
+
+        /// <summary>Pulun reunakuvan napautus (Natiivi-UI: Pulu.NapautusKaappaa) pyytää vihjettä. Palauttaa, otettiinko napautus
+        /// käyttöön. Vihjeportaat (pelattavuusmalli kohta 5) tulevat tähän; siihen asti false (Natiivi-UI:n oletus jatkuu).</summary>
+        public static bool PuluVihje()
+        {
+            var p = Aktiivinen; if (p == null) return false;
+            Debug.Log("MATKAKIRJA seikkailu: Pulun vihje pyydetty");
+            return VihjePyydetty != null && VihjePyydetty();
+        }
+        /// <summary>Vihjeportaiden koukku (SeikkailuVihjeet asettaa); true = vihje annettiin.</summary>
+        public static Func<bool> VihjePyydetty;
 
         void OnDestroy() { if (Aktiivinen == this) Aktiivinen = null; }
     }
