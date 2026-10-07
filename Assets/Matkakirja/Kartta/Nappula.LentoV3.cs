@@ -239,6 +239,32 @@ namespace Matkakirja
             return paikka;
         }
 
+        // KEHYSLOKI (alkulento v3, omistaja 7.10. 14.5x: "tarkista, ettei kartta nykäise ollenkaan"): komento `lento v3 kehysloki 0|1`.
+        // Joka kehys kameran asento, Lontoon maapisteen ruutupaikka (kartan liike pikseleinä), koneen ja nappulan näkyvyys ja koneen
+        // siipiväli pikseleinä. Mittaus: suurin ruutuhyppy kehysten välillä ja hypyn muutos (nykäys) tools/-skriptillä.
+        public static bool KehysLoki;
+        int kehysNro;
+        void KirjaaKehys()
+        {
+            var kam = kierto != null ? kierto.GetComponent<Camera>() : null;
+            if (kam == null || georeferenssi == null) return;
+            var l = georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(
+                CesiumWgs84Ellipsoid.LongitudeLatitudeHeightToEarthCenteredEarthFixed(new double3(-0.4543, 51.4700, 0)));
+            var sp = kam.WorldToScreenPoint(georeferenssi.transform.TransformPoint((float3)l));
+            string kone = "-";
+            if (v3Kone != null && v3Kone.gameObject.activeInHierarchy)
+            {
+                var kt = v3Kone.transform;
+                float d = Vector3.Distance(kam.transform.position, kt.position);
+                float px = kt.lossyScale.x / Mathf.Max(1e-6f, 2f * d * Mathf.Tan(kam.fieldOfView * 0.5f * Mathf.Deg2Rad)) * Screen.height;
+                var ks = kam.WorldToScreenPoint(kt.position);
+                kone = $"{px:0.0} {ks.x:0.0} {ks.y:0.0}";
+            }
+            Debug.Log($"MATKAKIRJA kehys {++kehysNro} {Time.unscaledTime:0.0000} kam {kierto.leveys:0.00000} {kierto.pituus:0.00000} {kierto.korkeus:0} "
+                      + $"{kierto.KaytettyKallistus:0.000} {kierto.suuntima:0.000} | lontoo {sp.x:0.0} {sp.y:0.0} {(sp.z > 0 ? 1 : 0)} | kone {kone} | "
+                      + $"nappula {(olio != null && olio.activeInHierarchy ? 1 : 0)} | odotus {LentoV3Odotus:0.00} esitys {(v3Esitys ? 1 : 0)} | yo {Paivanvalo.Instanssi?.Paino ?? 0:0.00}");
+        }
+
         /// <summary>Lennon siemen reitistä: sama lento aina sama, eri lennot eroavat (EI MONOTONIAA).</summary>
         static int V3Siemen(double lat0, double lon0, double lat1, double lon1)
         {
