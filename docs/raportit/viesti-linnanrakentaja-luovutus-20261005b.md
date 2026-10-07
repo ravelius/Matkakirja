@@ -29,7 +29,13 @@ aikaan; ei omia natiivikäännöksiä; kuittaus = peili + yksi rivi (ei stillej�
   Kappelin leivontapaketti: node scratch/rakenna_kappeli.mjs <paketti>. maalaukset.py ajetaan venv-rembg/bin/python:lla.
 - JONO (Päätoimittaja 7.10. 19.4x, PELATTAVUUSMALLI mainissa #4163: docs/raportit/pelattavuusmalli-olavinlinna.md, järjestys
   kohdan 12 sarakkeesta): (1)+(2) PINNAT JA MERKIT TEHTY v44m (eb8b9c55f5c22795, kavely.py PINTA + PELI + REITTI, kaytava(komero=));
-  puuttuu: mallit esine-tarjotin/patapino/hiilipannu (esineet-v1), olki-pinnat tyrmään; (3) tyrmä E 101 karkeana; (4) huone 6:
+  (3) TYRMÄ TEHTY v44n (190df07ec22e8616, kavely.py tyrma(): osa tyrma-E101 siiven pohjoisosassa, paikka A koska eteläosassa vanha
+  keittiö-dioraama; merkit istuu:pelaaja-tyrma, ilmarako:tyrma, esine:avainnippu-tyrma, ovi:tyrma(-ulos/-ryomi), ontto:tyrma,
+  esine:irtokivi-tyrma, istuu:tyrma-vartija, pinta:olki-1, valo:tyrma-rako; ovi:tyrma kierto_y lisätty lähteeseen, EI vielä viety).
+  AGENTIT KÄYNNISSÄ 20.1x: (a) esineet-v1: tarjotin, patapino, hiilipannu (lahde/esineet.py) → kopioi glb:t kavely-v1/v2/ +
+  merkkeihin glb= (esine:tarjotin, esine:patapino, valo:hiilipannu) → vienti; (b) linna-hahmot/vartija-istuu-v1: vartija-1500(-faceit).glb
+  + leikkeet torkku, syo, nousu_istumasta (Siirtosepän pyyntö) → kopioi v44/hahmot/ → vienti → Siirtosepälle. Puuttuu vielä
+  avainnippu-malli; (4) tyrmä E 101 karkeana; (4) huone 6:
   naulakko (esiliina + myssy) Tott-kammion puolelle Linnantuvan oven viereen + takan hiillos Tott-kammioon; (5) huoneet 7–8
   (huone 7 = muurikäytävä, EI kierreporrasta; pako = köysilasku kalliolle). Huone 6:n REITTI (Päätoimittaja): kappelin kaari-ovesta
   SAMOJA muuriportaita alas Tott-kammioon ja sen ovesta Linnantupaan (L2, L15); EI uutta käytävää.
