@@ -122,11 +122,14 @@ namespace Matkakirja.Editori
             catch (Exception e) { Debug.LogWarning("MATKAKIRJA laattapaketti: lataus epäonnistui, build ilman pakettia: " + e.Message); }
         }
 
-        /// <summary>Kopioi paketin Xcode-projektin Data/Raw/:iin (StreamingAssets iOS:llä). Rakennus kutsuu PostProcessBuildissa.</summary>
-        public static void KopioiBuildiin(string xcodeProjekti)
+        /// <summary>
+        /// Kopioi paketin buildin StreamingAssetsiin: iOS:llä Xcode-projektin Data/Raw/, macOS:llä
+        /// .app/Contents/Resources/Data/StreamingAssets/ (<see cref="Rakennus.StreamingKansio"/>). Rakennus kutsuu PostProcessBuildissa.
+        /// </summary>
+        public static void KopioiBuildiin(string streaming)
         {
             string lahde = Polku;
-            string kohde = Path.Combine(xcodeProjekti, "Data", "Raw", Laattapaketti.Tiedostonimi);
+            string kohde = Path.Combine(streaming, Laattapaketti.Tiedostonimi);
             if (!File.Exists(lahde) || Environment.GetEnvironmentVariable("MATKAKIRJA_PAKETTI") == "0")
             {
                 if (File.Exists(kohde)) File.Delete(kohde);
