@@ -246,7 +246,7 @@ namespace Matkakirja.Natiivi
             }
             kimallus.SetActive(true);
             // Keskustelun puolilähikuvassa kimallus himmenee (Siirtoseppä 7.10.: keittiön sinettivihje oli kokin kasvojen edessä).
-            himmennysNyt = Mathf.MoveTowards(himmennysNyt, Himmennys ? 0.15f : 1f, Time.unscaledDeltaTime / 0.4f);
+            himmennysNyt = Mathf.MoveTowards(himmennysNyt, Himmennys ? 0f : 1f, Time.unscaledDeltaTime / 0.4f);   // Päätoimittaja 7.10.: piiloon keskustelukuvissa
             kimallusM.SetFloat(IdPeitto, kimallusPeitto * 0.9f * himmennysNyt);
             kimallusM.SetFloat(IdAika, vahennettyLiike ? 0.4f : (float)(t * 1.3 % 3600.0));
         }

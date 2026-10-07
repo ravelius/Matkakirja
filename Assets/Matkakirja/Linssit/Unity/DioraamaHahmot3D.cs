@@ -256,6 +256,9 @@ namespace Matkakirja.Natiivi
         /// <summary>Puhujan juuri ja kasvojen suunta (Unity) tältä kehykseltä: puolilähikuva seuraa myös kävelevää puhujaa (7.10.).</summary>
         public static Vector3? PuhujanJuuri { get; private set; }
         public static Vector3? PuhujanKasvot { get; private set; }
+        /// <summary>Kohdistetun huoneen (PuhujanTila) näkyvät hahmot tältä kehykseltä: id, juuri ja kasvojen suunta (Unity). Puolilähikuva
+        /// kehystää tulevan tai kävelevän puhujan elävästä paikasta ja välttää kuulijat kameran ja puhujan välissä (Päätoimittaja 7.10.).</summary>
+        public static readonly List<(string Id, Vector3 Juuri, Vector3 Kasvot)> TilanHahmot = new List<(string, Vector3, Vector3)>();
 
         readonly Transform juuri;
         readonly Dictionary<string, HenkiloMalli> malliCache = new Dictionary<string, HenkiloMalli>(StringComparer.Ordinal);
@@ -678,7 +681,7 @@ namespace Matkakirja.Natiivi
         public void Paivita(Rakennus rakennus, Nakyma nakyma, double t)
         {
             nakymaHaku.Clear();
-            PuhujanPaa = null; PuhujanJuuri = null; PuhujanKasvot = null;
+            PuhujanPaa = null; PuhujanJuuri = null; PuhujanKasvot = null; TilanHahmot.Clear();
             if (nakyma.Hahmot != null) foreach (var hn in nakyma.Hahmot) nakymaHaku[(hn.TilaId, hn.HahmoId)] = hn;
             if (EleetPaalla) AjoitaEleet(t);
 
@@ -942,6 +945,10 @@ namespace Matkakirja.Natiivi
             e.Juuri.transform.position = paikka;
             if (e.Hahmo.Reitti == null && e.Sekoitin != null) kasvot = Katse(e, paikka, kasvot);
             if (kasvot.sqrMagnitude > 1e-8f) e.Juuri.transform.rotation = Quaternion.LookRotation(kasvot, Vector3.up);
+            if (PuhujanTila != null && e.TilaId == PuhujanTila && e.Juuri != null)
+            {
+                var fk = e.Juuri.transform.forward; TilanHahmot.Add((e.HahmoId, paikka, e.Sekoitin != null ? -fk : fk));
+            }
             if (Puhuja != null && e.HahmoId == Puhuja && e.TilaId == PuhujanTila)
             {
                 PuhujanPaa = paikka + Vector3.up * 2.1f; PuhujanJuuri = paikka;
