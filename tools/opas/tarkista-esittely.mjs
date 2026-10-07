@@ -39,6 +39,8 @@ export function tarkistaEsittely(pohja, e) {
       const alku = p.nimi.split(/\s+/)[0].replace(/[^\p{L}-]/gu, '').slice(0, 5).toLowerCase();
       if (!t.toLowerCase().startsWith(alku)) huomiot.push(`${k.id}: ${kentta} ei ala paikan nimellä`);
       if (SEISOO.test(t)) v(k.id, `${kentta}: perspektiivi ("${t.match(SEISOO)[0]}")`);
+      // Ääntäminen (omistaja 7.10.): vieraskielinen nimi tekstin alussa ääntyy koko alun vieraalla kielellä.
+      if (!kentta.startsWith('puhe') && /^[^\s,.]*[éèêëàâçœôûùíóúñřšžčěůý]/i.test((kentta === 'teksti' ? k.puhe_teksti : k.puhe_lyhyt) || t)) huomiot.push(`${k.id}: ${kentta} alkaa vieraskielisellä nimellä (ääntö)`);
       if (LYHENNE.test(t)) v(k.id, `${kentta}: lyhenne ("${t.match(LYHENNE)[0]}")`);
       if (/\b[IVX]{2,}\b/.test(vuosiluvutSanoiksi((kentta === 'teksti' ? k.puhe_teksti : kentta === 'lyhyt' ? k.puhe_lyhyt : t) || t))) v(k.id, `${kentta}: roomalainen numero ääneen (lisää puhe_${kentta.replace('puhe_', '')})`);
       if (/[()[\]•]/.test(t)) v(k.id, `${kentta}: sulkeet tai luettelomerkki`);
