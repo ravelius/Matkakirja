@@ -6,6 +6,9 @@
 // TOIMINTONAPPI (Siirtoseppä E2, keittiön harhautus): OHJAUSNAPPI-pohjalla oikean tapin yläpuolella; poimi (lähin esine) tai heitä
 // (esine kädessä). Napautus asettaa SeikkailuEsineet.ToimintoPyydetty = true; näkyy vain, kun Aktiivinen.Lahin tai .Kadessa
 // ei ole null (heijastuksella kuten Aktiivinen). Mac/näppäimistö: E (Siirtoseppä).
+// TIETOKERROS (Siirtoseppä E3, Päätoimittaja 7.10. 18.0x, olemassa olevat pohjat, ei hehkua): pelin aikana tietokortin avautuessa
+// vain Pulun ele Tunne("utelias", 0.3) ilman tekstiä; lopussa Pulun ele Tunne("ilo") ja kortisto KORTTI-pohjalla, joka EI avaudu
+// itsestään vaan vasta Pulun napautuksesta (tieto vain halutessaan). Tarjous päättyy, kun seikkailu päättyy.
 using System.Reflection;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -35,6 +38,7 @@ namespace Matkakirja.Natiivi
         static string HeitaIkoni => Ikonit.Viiva["nuoli"];
         /// <summary>Testi `ui seikkailutapit toiminto poimi|heita|auto`: napin tila ilman SeikkailuEsineitä.</summary>
         public static string TestiToiminto;
+        readonly UiKerros kerros;
         readonly VisualElement toimintoRivi;
         readonly Button toimintoNappi;
         string toimintoTila;   // null = piilossa, "poimi" tai "heita"
@@ -44,6 +48,7 @@ namespace Matkakirja.Natiivi
 
         public SeikkailuTapit(UiKerros kerros, int kerrosNro)
         {
+            this.kerros = kerros;
             juuri = Rakenne.El("mk-seikkailutapit", kerros.Turva(kerrosNro), PickingMode.Ignore);
             juuri.style.position = Position.Absolute;
             juuri.style.left = 0; juuri.style.right = 0; juuri.style.top = 0; juuri.style.bottom = 0;
@@ -138,6 +143,7 @@ namespace Matkakirja.Natiivi
             bool nayta = TestiNakyy ?? PelaajaAktiivinen();
             if (nayta == nakyy) return;
             nakyy = nayta;
+            if (!nayta) PoistaTietokerros();   // seikkailu päättyi: tietokerroksen tarjous ja Pulun kaappaus pois
             vasen.Nayta(nayta);
             oikea.Nayta(nayta);
             // Alareuna ja sivureuna kuten oppaan tapeilla (krediittien yläpuolella, reunasta OpasTapit.Reuna).
@@ -162,6 +168,77 @@ namespace Matkakirja.Natiivi
                     LoytoRivi = rivi, LoytoPergamentti = true,
                 }, valmis);
             });
+        }
+
+        /// <summary>Tietokortti avautui pelin aikana (Siirtoseppä E3): vain hiljainen merkki, Pulun ele, ei tekstiä.</summary>
+        public static void TietokorttiAvautui(string lyhyt)
+        {
+            UiKerros.PaaSaikeessa(() =>
+            {
+                Debug.Log($"MATKAKIRJA seikkailutapit: tietokortti {lyhyt}");
+                Pulu.Hae().Tunne("utelias", 0.3f);
+            });
+        }
+
+        static string[] tkOtsikot, tkTekstit, tkLyhyet;
+        static VisualElement tkHimmennys;
+
+        /// <summary>
+        /// Tietokerros tarjolle (Siirtoseppä E3 vaihe 11, nousun jälkeen): Pulun ele Tunne("ilo"); kortisto avautuu vasta, kun
+        /// pelaaja napauttaa Pulua (Pulu.NapautusKaappaa). otsikot/tekstit/lyhyet samanpituiset (lyhyet voi olla null).
+        /// </summary>
+        public static void NaytaTietokerros(string[] otsikot, string[] tekstit, string[] lyhyet)
+        {
+            UiKerros.PaaSaikeessa(() =>
+            {
+                tkOtsikot = otsikot; tkTekstit = tekstit; tkLyhyet = lyhyet;
+                tkHimmennys?.RemoveFromHierarchy(); tkHimmennys = null;
+                var pulu = Pulu.Hae();
+                pulu.NapautusKaappaa = () => { if (tkOtsikot == null) return false; AvaaTietokerros(); return true; };
+                pulu.Tunne("ilo");
+                Debug.Log($"MATKAKIRJA seikkailutapit: tietokerros tarjolla, {otsikot?.Length ?? 0} korttia");
+            });
+        }
+
+        /// <summary>Tarjous pois (seikkailu päättyi): Pulun napautus palaa ennalleen.</summary>
+        static void PoistaTietokerros()
+        {
+            if (tkOtsikot == null) return;
+            tkOtsikot = tkTekstit = tkLyhyet = null;
+            Pulu.Hae().NapautusKaappaa = null;
+            if (tkHimmennys != null) { tkHimmennys.RemoveFromHierarchy(); tkHimmennys = null; }
+        }
+
+        /// <summary>Kortisto KORTTI-pohjalla (kuten apurahakortti): otsikko, kortit kapiteelein, lyhyt kursiivina, teksti; Takaisin.</summary>
+        static void AvaaTietokerros()
+        {
+            if (tkOtsikot == null || viimeisin == null) return;
+            if (tkHimmennys == null)
+            {
+                var h = Rakenne.El("mk-himmennys mk-himmennys--tumma", viimeisin.kerros.Juuri(UiKerros.Pelidialogit));
+                h.style.display = DisplayStyle.None;
+                h.RegisterCallback<PointerDownEvent>(ev => { if (ev.target == h) Rakenne.Nayta(h, false, 250); });
+                var kortti = new Kortti("mk-tietoja", pohja: true);
+                h.Add(kortti);
+                var vieritys = new ScrollView(ScrollViewMode.Vertical);
+                vieritys.AddToClassList("mk-tietoja__vieritys");
+                vieritys.verticalScrollerVisibility = ScrollerVisibility.Hidden;
+                Kirjasimet.Aseta(Rakenne.Teksti("Olavinlinna", "mk-kortti__otsikko", vieritys), Tyylikirja.Kirjain.Otsikko);
+                for (int i = 0; i < tkOtsikot.Length; i++)
+                {
+                    Kirjasimet.Aseta(Rakenne.Teksti((tkOtsikot[i] ?? "").ToUpperInvariant(), "mk-kortti__kapiteeli", vieritys), Kirjasin.Kone);
+                    string lyhyt = tkLyhyet != null && i < tkLyhyet.Length ? tkLyhyet[i] : null;
+                    if (!string.IsNullOrEmpty(lyhyt)) Kirjasimet.Aseta(Rakenne.Teksti(lyhyt, "mk-kortti__teksti", vieritys), Kirjasin.LukuKursiivi);
+                    string teksti = tkTekstit != null && i < tkTekstit.Length ? tkTekstit[i] : null;
+                    if (!string.IsNullOrEmpty(teksti)) Rakenne.Teksti(teksti, "mk-kortti__teksti", vieritys);
+                }
+                kortti.Sisus.Add(vieritys);
+                var napit = Rakenne.El("mk-kortti__napit", kortti.Sisus, PickingMode.Ignore);
+                Kirjasimet.Aseta(Rakenne.Nappi("Takaisin", "mk-nappi--toiminto", () => Rakenne.Nayta(h, false, 250), napit), Kirjasin.KoneLihava);
+                tkHimmennys = h;
+            }
+            Debug.Log("MATKAKIRJA seikkailutapit: tietokerros auki");
+            Rakenne.Nayta(tkHimmennys, true, 250);
         }
 
         /// <summary>Testi: tila, arvot ja laatikot.</summary>
