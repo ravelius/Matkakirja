@@ -17,7 +17,16 @@ Avoimet työt:
    Vauhtirajaus opas-vapaa-lataus 5683ffaf jäi pois junasta. Ei uutta työtä tähän.
 4. s2-meri 0f6e4e89 on KUITATTU junaan 154 (BMNG:n meri S2:n meriväriin).
 
-## TILA 7.10. 03.2x (uusin)
+## TILA 7.10. 09.xx (uusin)
+- KAUPUNKIOPAS KARTTAELEMENTTINÄ (Päätoimittaja/omistaja 08.3x): proto linssiseppa2/kaupunkipallo 44090c1a4 (LS1:n kaupunkitila-159
+  1be5518db päällä), worktree wt/proto-linssiseppa2-kaupunkipallo. UI/KaupunkiPallot.cs (Erikoisnostot-malli), UI/KaupunkiPalloKuva.cs
+  (Linnanrakentajan ilmapallo-v1 keski Resources/KaupunkiPallo, RT kerran), Kartta/KaupunkiPalloMitat.cs (+testit), ui kaupunkipallot.
+  Näkyy ≤ 1 500 km, koko 52→76 pt; napautus OpasSovitin.AvaaKaupunkitila(id). Tarkistus 0, Kartta-testit 447/447.
+  Ketju scratchpad(b02a8297)/ketju-kp.sh: touch kaannos-lupa-kp (KÄÄNNÖS NYT) → simu-lupa-kp (SIMU NYT) → todistusajo kaupunkipallo.txt.
+  Pelikuvat Päätoimittajalle ennen junaa. Avoin: näkyykö vain kehittäjätilassa (nyt kaikille, ui kaupunkipallot 0|1).
+- Vanhat worktreet meri ja pilvet poistettu (haarat masterissa).
+
+## TILA 7.10. 03.2x
 - Sallitut 38 (Varsova pakotettu SALLITTU; Sisilia/Kreeta/Islanti mitattu Palermo/Heraklion/Reykjavík P625) → Pelikoodarin PR #4098.
   sallitut.py:ssä PAKOTA-taulu; tulokset lokit/linssiseppa2-3d-kattavuus/ (sallitut-3d.json, renkaat-tulokset.json).
 - RAJA-stillit: Päätoimittaja 03.3x: Kiova, Sarajevo, Tromssa POIS (PAKOTA); sallitut 38 (#4098), raja-lista tyhjä. 07.1x Varsova POIS (Googlen 404-reiät yleiskuvassa, LS1 k158) → 37; palaa LS1:n etäisyyskorjauksella.
