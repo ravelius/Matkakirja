@@ -1,0 +1,343 @@
+{
+ "kaupunki": "Valletta",
+ "id": "valletta",
+ "versio": 1,
+ "kohteet": [
+  {
+   "id": "Q613619",
+   "nimi": "Pyhän Johanneksen ko-katedraali",
+   "kuvaus": "Johanniittaritarien barokkikirkko",
+   "luokka": "kirkko",
+   "koko_m": 80,
+   "teksti": "Pyhän Johanneksen ko-katedraali näyttää ylhäältä pelkistetyltä kalkkikivilaatikolta, jonka julkisivua reunustaa kaksi kellotornia. Ritarikunnan kirkon suunnitteli maltalainen arkkitehti Girolamo Cassar, ja se valmistui vuonna 1577. Sisällä vaatimattomuus kääntyy päinvastaiseksi: 1600-luvulla Mattia Preti maalasi holvin ja suunnitteli kaiverretut kiviseinät, ja lattia on noin neljänsadan ritarin värikkäistä marmorihautakivistä koottu matto. Kirkossa riippuu Caravaggion Johannes Kastajan mestaus vuodelta 1608, hänen suurin alttaritaulunsa ja ainoa teos, jonka hän koskaan signeerasi. Nimikirjoitus on maalattu Johanneksen valuneeseen vereen.",
+   "lyhyt": "Pyhän Johanneksen ko-katedraali sai nimensä vuonna 1816, kun paavin päätös nosti sen samanarvoiseksi kuin Mdinan Pyhän Paavalin katedraali, Maltan arkkipiispan virallinen istuin. Caravaggio itse otettiin Maltalla ritarikuntaan, ja hän palveli lyhyen aikaa ritarina.",
+   "syventava": "Miksi Caravaggio pakeni Maltalta?",
+   "kysymykset": [
+    "Miksi kirkkoa kutsutaan ko-katedraaliksi?",
+    "Keitä lattian hautakivien alle on haudattu?",
+    "Miksi Caravaggio joutui lähtemään Maltalta?",
+    "Mitä Caravaggion nimikirjoitus tarkalleen sanoo?",
+    "Pidetäänkö kirkossa yhä jumalanpalveluksia?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Julkisivu on pelkistetty ja manieristinen; sitä reunustaa kaksi kellotornia.",
+     "url": "https://en.wikipedia.org/wiki/St_John%27s_Co-Cathedral"
+    },
+    {
+     "vaite": "Suunnittelija Girolamo Cassar; rakennettu 1572–1577.",
+     "url": "https://en.wikipedia.org/wiki/Saint_John%27s_Co-Cathedral"
+    },
+    {
+     "vaite": "Mattia Preti maalasi holvin ja suunnitteli kaiverretut kiviseinät 1600-luvulla.",
+     "url": "https://en.wikipedia.org/wiki/Saint_John%27s_Co-Cathedral"
+    },
+    {
+     "vaite": "Lattiassa noin 400 ritarin värimarmorein upotettua hautakiveä.",
+     "url": "https://www.mta.com.mt/en/info/stjohnscocathedral"
+    },
+    {
+     "vaite": "Caravaggion Johannes Kastajan mestaus 1608 on hänen suurin alttaritaulunsa ja ainoa signeerattu teoksensa; nimi on maalattu vereen.",
+     "url": "https://en.wikipedia.org/wiki/The_Beheading_of_Saint_John_the_Baptist_(Caravaggio)"
+    },
+    {
+     "vaite": "Paavin päätöksellä 1816 kirkko nostettiin samanarvoiseksi Mdinan katedraalin, arkkipiispan istuimen, kanssa.",
+     "url": "https://en.wikipedia.org/wiki/Saint_John%27s_Co-Cathedral"
+    },
+    {
+     "vaite": "Caravaggio otettiin ritarikuntaan ja palveli lyhyen aikaa ritarina.",
+     "url": "https://en.wikipedia.org/wiki/The_Beheading_of_Saint_John_the_Baptist_(Caravaggio)"
+    }
+   ]
+  },
+  {
+   "id": "Q1368885",
+   "nimi": "Suurmestarin palatsi",
+   "kuvaus": "Suurmestarien palatsi, presidentin virasto",
+   "luokka": "rakennus",
+   "koko_m": 130,
+   "teksti": "Suurmestarin palatsi täyttää kokonaisen korttelin Vallettan keskellä, ja ylhäältä sen sisältä erottuu kaksi sisäpihaa. Toisella pihalla on suurmestari Pinton vuonna 1745 teettämä kello, jonka kelloja lyö neljä pronssihahmoa, turkkilaisia orjia esittäviä. Palatsissa asuivat ritarikunnan suurmestarit, ja nykyään siinä toimii Maltan presidentin virasto. Valtaistuinsalin seinien yläosaa kiertää kahdentoista kohtauksen maalaussarja vuoden 1565 suuresta piirityksestä. Sen maalasi italialainen Matteo Perez d'Aleccio, jonka suurmestari kutsui Maltalle vuonna 1577 kuvaamaan piirityksen vaiheet.",
+   "lyhyt": "Suurmestarin palatsi oli Maltan parlamentin istuin vuodesta 1921 vuoteen 2015, ja aluksi edustajat kokoontuivat palatsin seinävaatesalissa. Palatsin asehuoneessa on yhä ritarikunnan kokoelma panssareita ja aseita ajalta, jolloin Malta oli Välimeren sotien keskipisteessä.",
+   "syventava": "Mitä asehuoneessa on nähtävänä?",
+   "kysymykset": [
+    "Mitä seinävaatesalin seinävaatteet esittävät?",
+    "Miksi kellon hahmot esittävät orjia?",
+    "Miksi parlamentti muutti pois palatsista?",
+    "Kuka toimii nykyään Maltan presidenttinä?",
+    "Mitä piirityksen maalaussarjassa näkyy?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Palatsissa on kaksi sisäpihaa, Neptunuksen piha ja Prinssi Alfredin piha.",
+     "url": "https://www.komoot.com/highlight/5181425"
+    },
+    {
+     "vaite": "Pinto teetti 1745 kellon, jonka kelloja lyö neljä turkkilaisia orjia esittävää pronssihahmoa.",
+     "url": "https://www.komoot.com/highlight/5181425"
+    },
+    {
+     "vaite": "Palatsi on ollut Maltan presidentin virasto vuodesta 1974; aiemmin suurmestarien asunto.",
+     "url": "https://en.wikipedia.org/wiki/Grandmaster%27s_Palace,_Valletta"
+    },
+    {
+     "vaite": "Matteo Perez d'Aleccio kutsuttiin 1577 kuvaamaan suurta piiritystä; valtaistuinsalin friisissä kaksitoista jaksoa.",
+     "url": "https://artsandculture.google.com/story/mgXRIlkgkviiLg"
+    },
+    {
+     "vaite": "Parlamentin istuin 1921–2015; seinävaatesalissa 1921–1976.",
+     "url": "https://en.wikipedia.org/wiki/Grandmaster%27s_Palace,_Valletta"
+    },
+    {
+     "vaite": "Palatsin asehuoneessa on ritarikunnan aseita ja panssareita.",
+     "url": "https://en.wikipedia.org/wiki/Grandmaster%27s_Palace,_Valletta"
+    }
+   ]
+  },
+  {
+   "id": "Q7898477",
+   "nimi": "Yläbarrakan puutarhat",
+   "kuvaus": "Kaarikäytävä ja näköalaterassi sataman yllä",
+   "luokka": "puisto",
+   "koko_m": 120,
+   "teksti": "Yläbarrakan puutarhat ovat terassi Pyhän Pietarin ja Paavalin bastionin päällä, ja ylhäältä näkyy niiden kaarikäytävä suoraan sataman yllä. Italialainen ritari Flaminio Balbiani rakennutti kaaret vuonna 1661 italialaisen kielikunnan ritarien virkistyspaikaksi. Kaaret olivat alun perin katettuja, mutta katto purettiin vuoden 1775 pappien kapinan jälkeen, kertoman mukaan siksi, että salaliittolaiset olivat kokoontuneet täällä. Puutarhan alapuolella on tykkipatteri, josta ammutaan yhä joka päivä keskipäivän laukaus. Terassilta näkyvät sataman toisella puolella Kolme kaupunkia.",
+   "lyhyt": "Yläbarrakan puutarhat avattiin maltalaisille vasta vuonna 1800, kun ranskalaisten kaksi vuotta kestänyt miehitys päättyi. Rannasta puutarhoihin nousee nykyään vuonna 2012 avattu viisikymmentäkahdeksan metrin hissitorni, joka tuo matkustajat satamasta kaupunkiin alle puolessa minuutissa.",
+   "syventava": "Miksi kaarien katto purettiin?",
+   "kysymykset": [
+    "Miksi tykki ammutaan joka päivä keskipäivällä?",
+    "Kuka suurmestari käski purkaa katon?",
+    "Mitä puutarhan katupoikapatsas esittää?",
+    "Mitkä ovat sataman takana näkyvät Kolme kaupunkia?",
+    "Miksi puutarhassa on Churchillin muistomerkki?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Puutarhat ovat Pyhän Pietarin ja Paavalin bastionilla sataman yllä.",
+     "url": "https://en.wikipedia.org/wiki/Barrakka_Lift"
+    },
+    {
+     "vaite": "Kaaret rakensi 1661 italialainen ritari Flaminio Balbiani italialaisen kielikunnan ritarien virkistykseen.",
+     "url": "https://en.wikipedia.org/wiki/Upper_Barrakka_Gardens"
+    },
+    {
+     "vaite": "Katto purettiin pappien kapinan 1775 jälkeen; kerrotaan, että salaliittolaiset olivat kokoontuneet Barrakkaan.",
+     "url": "https://en.wikipedia.org/wiki/Upper_Barrakka_Gardens"
+    },
+    {
+     "vaite": "Saluting Battery puutarhan alla; keskipäivän laukaus ammutaan yhä päivittäin.",
+     "url": "https://maltainfoguide.com/upper-barakka-gardens.html"
+    },
+    {
+     "vaite": "Puutarhasta näkyvät Kolme kaupunkia.",
+     "url": "https://maltainfoguide.com/upper-barakka-gardens.html"
+    },
+    {
+     "vaite": "Puutarhat avattiin yleisölle ranskalaisten kaksivuotisen miehityksen päätyttyä 1800.",
+     "url": "https://en.wikipedia.org/wiki/Upper_Barrakka_Gardens"
+    },
+    {
+     "vaite": "Barrakan hissit avattiin 2012, ovat 58 metriä korkeat ja matka kestää noin 25 sekuntia.",
+     "url": "https://en.wikipedia.org/wiki/Barrakka_Lift"
+    }
+   ]
+  },
+  {
+   "id": "Q2499012",
+   "nimi": "Auberge de Castille",
+   "kuvaus": "Ritaritalo, pääministerin virasto",
+   "luokka": "rakennus",
+   "koko_m": 80,
+   "teksti": "Kastilian ritaritalo, Auberge de Castille, erottuu ylhäältä leveänä kalkkikivipalatsina kaupungin eteläreunalla Yläbarrakan puutarhojen vieressä. Se rakennettiin 1740-luvulla Andrea Bellin suunnitelmien mukaan ritarikunnan Kastilian, Leónin ja Portugalin kielikunnan ritareille. Kielikunnat olivat ritarikunnan kansallisia osastoja, ja jokaisella oli Vallettassa oma talonsa. Pääoven yllä on veistetty kasa aseita ja lippuja, ja kaiken huipulla portugalilaisen suurmestarin Manuel Pinton rintakuva. Brittivallan aikana talossa toimi Britannian armeijan päämaja, ja vuodesta 1972 se on ollut Maltan pääministerin virasto.",
+   "lyhyt": "Kastilian ritaritalo on paikalla jo toinen: nykyinen palatsi korvasi vuonna 1574 rakennetun talon, jossa Kastilian, Leónin ja Portugalin ritarit olivat asuneet. Pääministerin virasto muutti taloon maaliskuussa 1972, kun pääministerinä oli Dom Mintoff.",
+   "syventava": "Mitä olivat ritarikunnan kielikunnat?",
+   "kysymykset": [
+    "Mitä ritarikunnan kielikunnat olivat?",
+    "Kuka oli suurmestari Manuel Pinto?",
+    "Miksi vanha ritaritalo korvattiin uudella?",
+    "Kuka oli pääministeri Dom Mintoff?",
+    "Voiko pääministerin virastossa vierailla?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Rakennettu 1741–1744 Andrea Bellin suunnitelmin suurmestari Manuel Pinto da Fonsecan aikana Kastilian, Leónin ja Portugalin kielikunnalle.",
+     "url": "https://en.wikipedia.org/wiki/Auberge_de_Castille"
+    },
+    {
+     "vaite": "Portaalin yllä aseiden ja lippujen trofee ja Pinton rintakuva.",
+     "url": "https://primeminister.gov.mt/office-of-the-prime-minister-2/"
+    },
+    {
+     "vaite": "Brittivallan aikana Britannian armeijan päämaja; pääministerin virasto maaliskuusta 1972 Dom Mintoffin aikana.",
+     "url": "https://en.wikipedia.org/wiki/Auberge_de_Castille"
+    },
+    {
+     "vaite": "Korvasi vuonna 1574 rakennetun talon.",
+     "url": "https://en.wikipedia.org/wiki/Auberge_de_Castille"
+    },
+    {
+     "vaite": "Jokaisella kielikunnalla oli Vallettassa oma auberge-talonsa.",
+     "url": "https://en.wikipedia.org/wiki/Auberge_de_Castille"
+    },
+    {
+     "vaite": "Sijainti Yläbarrakan puutarhojen vieressä kaupungin eteläosassa.",
+     "url": "https://maltainfoguide.com/upper-barakka-gardens.html"
+    }
+   ]
+  },
+  {
+   "id": "Q1438745",
+   "nimi": "Pyhän Elmon linnake",
+   "kuvaus": "Tähtilinnake ja sotamuseo niemen kärjessä",
+   "luokka": "linnoitus",
+   "koko_m": 400,
+   "teksti": "Pyhän Elmon linnake piirtyy ylhäältä tähden muotoisena niemen kärjessä, josta se vartioi kahden sataman suuta. Ensimmäinen linnake rakennettiin vuonna 1552, ja vuoden 1565 piirityksessä sen puolustajat kestivät kaksikymmentäkahdeksan päivää ennen kuin osmanit valtasivat sen. Sitkeä puolustus vei hyökkääjiltä niin paljon aikaa ja miehiä, että koko piiritys lopulta epäonnistui. Maltan ensimmäiset sotilasuhrit toisessa maailmansodassa kuolivat täällä kesäkuussa 1940, kun pommit surmasivat kuusi maltalaista tykkimiestä. Nykyään linnakkeessa on kansallinen sotamuseo.",
+   "lyhyt": "Pyhän Elmon linnakkeen sotamuseon tärkein esine on George-risti, jonka kuningas Yrjö kuudes myönsi koko saarelle vuonna 1942. Museossa on myös Faith-niminen kaksitaso, ainoa säilynyt kolmesta hävittäjästä, jotka puolustivat saarta Italian julistettua sodan vuonna 1940.",
+   "syventava": "Miten viestit kulkivat piiritettyyn linnakkeeseen?",
+   "kysymykset": [
+    "Miten viestit kulkivat piiritettyyn linnakkeeseen?",
+    "Miksi linnake on tähden muotoinen?",
+    "Kuka oli suurmestari Jean de Valette?",
+    "Miksi koko Malta sai George-ristin?",
+    "Mitä muuta sotamuseossa voi nähdä?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Tähden muotoinen linnake rakennettiin 1552; se vartioi Grand Harbourin ja Marsamxettin suuta.",
+     "url": "https://maltainfoguide.com/in-guardia-parade.html"
+    },
+    {
+     "vaite": "Linnake kesti 28 päivää ja kaatui 23.6.1565; puolustus kulutti osmanijoukot niin, että piiritys epäonnistui.",
+     "url": "kaanon:pelin-aineisto"
+    },
+    {
+     "vaite": "Ensimmäisessä pommituksessa 11.6.1940 kuusi Royal Malta Artilleryn tykkimiestä kuoli linnakkeessa, Maltan sodan ensimmäiset sotilasuhrit.",
+     "url": "https://www.colourmytravel.com/blog/the-royal-malta-artillery-during-wwii"
+    },
+    {
+     "vaite": "Linnakkeessa on kansallinen sotamuseo, jossa George-risti ja Gloster Gladiator Faith, ainoa säilynyt kolmesta koneesta.",
+     "url": "https://mainlymuseums.com/post/1396/exploring-the-fantastic-history-of-malta-inside-fort-st-elmo-and-the-national-war-museum/"
+    },
+    {
+     "vaite": "Yrjö VI myönsi George-ristin koko saarelle 1942.",
+     "url": "kaanon:pelin-aineisto"
+    }
+   ]
+  },
+  {
+   "id": "Q220899",
+   "nimi": "Grand Harbour",
+   "kuvaus": "Vallettan suuri luonnonsatama",
+   "luokka": "vesi",
+   "koko_m": 3000,
+   "teksti": "Vallettan suursatama, Grand Harbour, on yksi Välimeren suurimmista luonnonsatamista, ja ylhäältä se näkyy syvänä lahtena, jota Valletta rajaa toisella puolella ja Kolme kaupunkia niemekkeineen toisella. Satamaa on käytetty foinikialaisten ajoista lähtien, ja sen rannoilla on telakoita, laitureita ja vuosisatojen linnoituksia. Vuonna 1873 isoisäsi kirjoitti, että satamassa makasi laivaston mustia runkoja kyljittäin kuin tikkuja laatikossa. Nykyään suurimmat alukset ovat valtavia risteilijöitä, jotka lipuvat aallonmurtajan ohi kaupungin rantaan.",
+   "lyhyt": "Vallettan suursatamaan hyökkäsi heinäkuussa 1941 italialainen osasto pikaveneillä ja ihmistorpedoilla. Yksi räjähdevene osui aallonmurtajalle vievään siltaan, joka sortui, ja uusi silta rakennettiin samaan paikkaan vasta vuonna 2012.",
+   "syventava": "Miksi aallonmurtajan ja rannan välissä on aukko?",
+   "kysymykset": [
+    "Mitkä kaupungit ovat Kolme kaupunkia?",
+    "Mikä linnake on sataman vastarannalla?",
+    "Miksi aallonmurtajan ja rannan välissä on aukko?",
+    "Milloin brittien laivasto lähti Maltalta?",
+    "Mikä on sataman maltankielinen nimi?"
+   ],
+   "isoisa": true,
+   "lahteet": [
+    {
+     "vaite": "Yksi Välimeren suurimmista luonnonsatamista; Valletta on Sciberras-niemellä sataman luoteisrannalla, Kolme kaupunkia kaakkoisrannalla.",
+     "url": "https://en.wikipedia.org/wiki/Grand_Harbour"
+    },
+    {
+     "vaite": "Satamaa on käytetty foinikialaisten ajoista; telakoita, laitureita ja linnoituksia.",
+     "url": "https://en.wikipedia.org/wiki/Grand_Harbour"
+    },
+    {
+     "vaite": "Isoisän merkintä: Grand Harbourissa kyljittäin laivaston mustia runkoja kuin tikkuja laatikossa.",
+     "url": "kaanon:isoisan-paivakirja"
+    },
+    {
+     "vaite": "Suuret risteilyalukset tulevat ja lähtevät satamasta.",
+     "url": "https://coloursofmalta.com/the-grand-harbour"
+    },
+    {
+     "vaite": "26.7.1941 italialaiset hyökkäsivät MAS- ja MT-veneillä sekä ihmistorpedoilla; MT-vene osui St Elmon siltaan, joka sortui; uusi silta 2012.",
+     "url": "https://en.wikipedia.org/wiki/St_Elmo_Bridge"
+    }
+   ]
+  },
+  {
+   "id": "Q576800",
+   "nimi": "Manoel-teatteri",
+   "kuvaus": "Ritarien aikainen barokkiteatteri",
+   "luokka": "rakennus",
+   "koko_m": 50,
+   "teksti": "Vallettan Manoel-teatteri on yksi Euroopan vanhimmista yhä toimivista teattereista. Suurmestari António Manoel de Vilhena määräsi sen rakennettavaksi vuonna 1731, ja talo valmistui kymmenessä kuukaudessa. Ensi-illassa tammikuussa 1732 esitettiin italialaisen Scipione Maffein murhenäytelmä Merope, ja kaikki näyttelijät olivat ritarikunnan omia ritareita. Soikeaa salia kiertää kolme kerrosta lehtikullalla koristeltuja puisia aitioita, ja vaaleansininen katto on maalattu näyttämään pyöreältä kupolilta. Teatteri on myös Kansainyhteisön vanhin yhä toimiva teatteri.",
+   "lyhyt": "Vallettan Manoel-teatteri on pieni, sillä salissa on vähän yli viisisataa paikkaa. Ensi-illan lavasteet suunnitteli ritarikunnan sotilasarkkitehti François Mondion, ja teatteri on saanut nimensä rakennuttajansa, suurmestari Manoel de Vilhenan mukaan.",
+   "syventava": "Mistä näytelmä Merope kertoo?",
+   "kysymykset": [
+    "Mistä Merope-näytelmä kertoo?",
+    "Miksi suurmestari halusi kaupunkiin teatterin?",
+    "Mitä teatterissa esitetään nykyään?",
+    "Kuka oli suurmestari Manoel de Vilhena?",
+    "Miten katto saatiin näyttämään kupolilta?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Vilhena määräsi rakentamisen 1731; yksi Euroopan vanhimmista toimivista teattereista ja Kansainyhteisön vanhin.",
+     "url": "https://en.wikipedia.org/wiki/Manoel_Theatre"
+    },
+    {
+     "vaite": "Valmistui kymmenessä kuukaudessa; avattiin 19.1.1732 Maffein Meropella, näyttelijöinä ritarit; lavasteet François Mondion.",
+     "url": "https://bdlbooks.com/blog/day-by-day/the-manoel-theatre/"
+    },
+    {
+     "vaite": "534 paikkaa; soikea sali, kolme kerrosta lehtikullattuja puuaitioita ja vaaleansininen kupolia jäljittelevä trompe-l'oeil-katto.",
+     "url": "https://en.wikipedia.org/wiki/Manoel_Theatre"
+    }
+   ]
+  },
+  {
+   "id": "Q110391255",
+   "nimi": "Piirityskello-muistomerkki",
+   "kuvaus": "Toisen maailmansodan muistomerkki sataman yllä",
+   "luokka": "muu",
+   "koko_m": 30,
+   "teksti": "Piirityskello-muistomerkki kohoaa sataman yllä Vallettan muureilla, ja ylhäältä erottuu avoin kivinen kellotapuli ja sen edessä matalampi jalusta. Muistomerkki vihittiin toukokuussa 1992, viisikymmentä vuotta sen jälkeen, kun Malta sai George-ristin, ja vihkijöinä olivat kuningatar Elisabet toinen ja Maltan presidentti Censu Tabone. Tapulissa riippuu kymmenen tonnin pronssikello, joka soi joka päivä keskipäivällä sodan uhrien muistoksi. Portaiden yläpäässä lepää paareilla tuntematonta sotilasta esittävä veistos. Muistomerkin suunnitteli brittiläinen kuvanveistäjä Michael Sandle.",
+   "lyhyt": "Piirityskello-muistomerkki muistuttaa toisen maailmansodan piirityksestä, jolloin Saksan ja Italian ilmavoimat pommittivat Maltaa kesäkuusta 1940 marraskuuhun 1942. Pelkästään maaliskuun ja huhtikuun 1942 lopun välillä Vallettaan pudotettiin yli kolmetuhatta tonnia pommeja.",
+   "syventava": "Kenen muistoa tuntematon sotilas kunnioittaa?",
+   "kysymykset": [
+    "Mitä kellon kylkeen on kuvattu?",
+    "Kenen muistoa tuntematon sotilas kunnioittaa?",
+    "Miksi Saksa ja Italia pommittivat Maltaa?",
+    "Mikä oli Pedestal-saattue?",
+    "Kuka on kuvanveistäjä Michael Sandle?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Michael Sandlen suunnittelema muistomerkki vihittiin toukokuussa 1992 George-ristin 50-vuotispäivänä sataman yllä.",
+     "url": "https://en.wikipedia.org/wiki/George_Cross_Island_Association"
+    },
+    {
+     "vaite": "Kymmenen tonnin pronssikellon vihkivät kuningatar Elisabet II ja presidentti Censu Tabone 29.5.1992; kello soi joka päivä keskipäivällä uhrien muistoksi.",
+     "url": "https://www.guidememalta.com/en/attraction/the-siege-bell-war-memorial"
+    },
+    {
+     "vaite": "Jalustan portaiden yläpäässä katafalkki, jolla tuntemattoman sotilaan veistos; kellossa liekehtivän Madonnan kuva.",
+     "url": "https://www.guidememalta.com/en/monuments-explained-siege-bell-memorial-valletta"
+    },
+    {
+     "vaite": "Pommitukset kesäkuusta 1940 marraskuuhun 1942; 20.3.–28.4.1942 Vallettaan 3 150 tonnia pommeja.",
+     "url": "kaanon:pelin-aineisto"
+    },
+    {
+     "vaite": "Michael Sandle on brittiläinen kuvanveistäjä.",
+     "url": "https://en.wikipedia.org/wiki/George_Cross_Island_Association"
+    }
+   ]
+  }
+ ]
+}
