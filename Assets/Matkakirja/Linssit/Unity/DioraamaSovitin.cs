@@ -666,6 +666,7 @@ namespace Matkakirja.Natiivi
                 if (d2 < lahin) { lahin = d2; kuulija = x; }
             }
             var p = lepo.Perus;
+            if (Puolilahi && DioraamaHahmot3D.EleetPaalla) return Puolilahikuva(lepo, p, h, kuulija, lahin, puhuja);
             var puhujanKeski = new Matkakirja.Linssit.Dioraama.V3(h.Paikka.X, h.Paikka.Y + HahmonKeski, h.Paikka.Z);
             var keski = puhujanKeski;
             double vali = 0;
@@ -682,6 +683,36 @@ namespace Matkakirja.Natiivi
             double etaisyys = Math.Clamp(Math.Max(korkeudesta, leveydesta), p.Etaisyys * 0.3, p.Etaisyys * 0.88);
             return (lepo.Avain + "|" + puhuja, new Asento(kohde, p.Atsimuutti, p.Korkeus, etaisyys, p.Fov, p.Aukko, p.Kierto), 0.2, false);
         }
+        /// <summary>
+        /// PUOLILÄHIKUVA (Päätoimittaja 7.10. 03.0x, omistajan linja 6.10. "kamera puhujan mukaan, rauhallisesti", ~1 s blendi, ei
+        /// leikkauksia): kamera puhujan eteen viistosti (puhuja kääntyy kuulijaan, DioraamaHahmot3D.KatseenKohde), kohde rintakehä,
+        /// näkyvissä vyötäröstä pään yläpuolelle (kasvot, kädet, FACEIT-ilmeet ja huulet). Suunta pysyy huoneen avoimella puolella
+        /// (enintään PuolilahiMaxKierto lepokamerasta, poikkileikkauksen seinät), korkeuskulma matala, pieni kierto jatkuu.
+        /// "poikki puolilahi 0|1" (A/B; pois = keskustelukuva kuten ennen).
+        /// </summary>
+        public static bool Puolilahi = true;
+        (string, Asento, double, bool) Puolilahikuva((string Avain, Asento Perus, double Jaljella, bool Saapumassa) lepo, Asento p, Hahmo h, Hahmo kuulija, double lahin, string puhuja)
+        {
+            // Kasvojen suunta kompassiasteina (kanoninen (sin a, −cos a)): kohti lähintä kuulijaa, muuten hahmon oma suunta.
+            double kasvot = h.Suunta;
+            if (kuulija != null && lahin < KuulijaMaxM * KuulijaMaxM && lahin > 0.01)
+                kasvot = Math.Atan2(kuulija.Paikka.X - h.Paikka.X, -(kuulija.Paikka.Z - h.Paikka.Z)) * 180 / Math.PI;
+            // Kamera kasvojen puolelle ±PuolilahiSivu (lepokameran puolelle), rajattuna lepokameran ympärille.
+            double ero = KiertoEro(p.Atsimuutti, kasvot);
+            double atsimuutti = kasvot - Math.Sign(ero == 0 ? 1 : ero) * PuolilahiSivu;
+            double kierto = Math.Clamp(KiertoEro(p.Atsimuutti, atsimuutti), -PuolilahiMaxKierto, PuolilahiMaxKierto);
+            atsimuutti = p.Atsimuutti + kierto;
+            var rinta = new Matkakirja.Linssit.Dioraama.V3(h.Paikka.X, h.Paikka.Y + PuolilahiKohdeY, h.Paikka.Z);
+            if (kuulija != null && lahin < KuulijaMaxM * KuulijaMaxM)
+                rinta = rinta + (new Matkakirja.Linssit.Dioraama.V3(kuulija.Paikka.X, kuulija.Paikka.Y + PuolilahiKohdeY, kuulija.Paikka.Z) - rinta) * 0.15;
+            double fov = p.Fov > 1 ? p.Fov : 40.0;
+            double etaisyys = Math.Max(PuolilahiKorkeusM / (2 * Math.Tan(fov * Math.PI / 360.0)), PuolilahiMinM);
+            double korkeus = Math.Min(p.Korkeus, PuolilahiKorkeusAst);
+            return (lepo.Avain + "|" + puhuja + "|puolilahi", new Asento(rinta, atsimuutti, korkeus, etaisyys, fov, p.Aukko, p.Kierto), 0.2, false);
+        }
+        static double KiertoEro(double a0, double a1) => ((a1 - a0 + 180) % 360 + 360) % 360 - 180;
+        const double PuolilahiSivu = 35, PuolilahiMaxKierto = 60, PuolilahiKohdeY = 1.35, PuolilahiKorkeusM = 1.5, PuolilahiMinM = 1.7,
+            PuolilahiKorkeusAst = 22;
         const double PuhujaSiirtyma = 0.9, PuhujanPaino = 0.65, HahmonKeski = 0.9, HahmonKorkeus = 1.75,
             HahmonOsuusKorkeudesta = 0.4, RuudunSuhde = 2.0, KuulijaMaxM = 4.0;
 
@@ -1082,6 +1113,13 @@ namespace Matkakirja.Natiivi
             {
                 if (arvo == "alusta") SaapuminenNahty = false;
                 o.Kirjaa($"poikki: saapuminen {(SaapuminenNahty ? "nähty (lyhyt)" : "täysi")}, osuus {(Linssi != null ? Linssi.SaapuminenOsuus(y != null ? YdinAika : 0).ToString("F2", CultureInfo.InvariantCulture) : "-")}");
+                return;
+            }
+            // "poikki puolilahi 0|1": keskustelun puolilähikuva puhujaan pois/päällä (A/B).
+            if (mita == "puolilahi")
+            {
+                if (arvo != null) Puolilahi = arvo != "0";
+                o.Kirjaa($"poikki: puolilähikuva {(Puolilahi ? "päällä" : "pois")}");
                 return;
             }
             // "poikki eleet 0|1": eleet puheen tahdissa (ajoitetut kertaeleet, nyökkäykset, katse, harhailu) pois/päällä A/B:tä varten.

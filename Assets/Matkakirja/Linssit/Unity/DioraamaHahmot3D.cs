@@ -102,7 +102,7 @@ namespace Matkakirja.Natiivi
         /// paikallaan olevat kuulijat kääntyvät kohti puhujaa (enintään ±MaxKatseAsteet omasta suunnastaan, KatseNopeus °/s),
         /// ja puhuja kääntyy kohti edellistä puhujaa. Ei keskustelua → takaisin omaan suuntaan.</summary>
         public static string Puhuja, PuhujanTila, EdellinenPuhuja;
-        const float MaxKatseAsteet = 70f, KatseNopeus = 90f;
+        const float MaxKatseAsteet = 70f, KatseNopeus = 90f, PuhujanMaxKatse = 150f;   // puhuja kääntyy kuulijaan myös työpisteeltä (7.10.)
 
         /// <summary>
         /// ELEET PUHEEN TAHDISSA (Siirtoseppä 7.10.2026; omistaja 7.10. 01.3x "linna loppuun mahdollisimman hyväksi (eleet yms.)"):
@@ -212,11 +212,22 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Keskustelukumppani, jota hahmo katsoo: kuulija → puhuja, puhuja → valittu kuulija (tai edellinen puhuja).</summary>
-        static string KatseenKohde(Esiintyma e)
+        string KatseenKohde(Esiintyma e)
         {
             if (e.TilaId != PuhujanTila || Puhuja == null) { e.KatseKohde = null; return null; }
             if (e.HahmoId != Puhuja) { e.KatseKohde = null; return Puhuja; }
-            return EleetPaalla && e.KatseKohde != null ? e.KatseKohde : EdellinenPuhuja;
+            if (!EleetPaalla) return EdellinenPuhuja;
+            if (e.KatseKohde != null) return e.KatseKohde;
+            if (EdellinenPuhuja != null) return EdellinenPuhuja;
+            // Ensimmäinen vuoro: lähin paikallaan oleva kuulija (sama kuin kameran puolilähikuvassa, DioraamaSovitin.PuhujaanPain).
+            string lahin = null; float d2 = float.MaxValue;
+            foreach (var m in esiintymat)
+                if (m != e && m.TilaId == e.TilaId && m.Juuri != null && m.Nakyvissa && m.Hahmo.Reitti == null)
+                {
+                    float dx = (float)(m.Hahmo.Paikka.X - e.Hahmo.Paikka.X), dz = (float)(m.Hahmo.Paikka.Z - e.Hahmo.Paikka.Z);
+                    if (dx * dx + dz * dz < d2) { d2 = dx * dx + dz * dz; lahin = m.HahmoId; }
+                }
+            return lahin;
         }
         /// <summary>Puhujan pään yläpuolinen maailmanpiste (kasvokuvan ankkuri, Natiivi-UI:n pohja), tai null.</summary>
         public static Vector3? PuhujanPaa { get; private set; }
@@ -855,7 +866,8 @@ namespace Matkakirja.Natiivi
                     if (m != e && m.TilaId == e.TilaId && m.HahmoId == kohde && m.Juuri != null && m.Nakyvissa)
                     {
                         var suunta = m.Juuri.transform.position - paikka; suunta.y = 0f;
-                        if (suunta.sqrMagnitude > 0.04f) tavoite = Mathf.Clamp(Vector3.SignedAngle(oma, suunta, Vector3.up), -MaxKatseAsteet, MaxKatseAsteet);
+                        float raja = EleetPaalla && e.HahmoId == Puhuja ? PuhujanMaxKatse : MaxKatseAsteet;
+                        if (suunta.sqrMagnitude > 0.04f) tavoite = Mathf.Clamp(Vector3.SignedAngle(oma, suunta, Vector3.up), -raja, raja);
                         break;
                     }
             e.KatseKulma = Mathf.MoveTowards(e.KatseKulma, tavoite, KatseNopeus * Time.unscaledDeltaTime);
