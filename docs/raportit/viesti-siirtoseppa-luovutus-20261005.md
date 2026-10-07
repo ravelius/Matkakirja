@@ -507,7 +507,7 @@ Edellinen luovutus on `viesti-siirtoseppa-luovutus-20261002.md` (5.10. osiot 02.
   silmät 1,62 m / kyyryssä 1,0 m, FOV 62, keho katseen mukana, pystykatse ±75°, Kasi-kantokohta kameran edessä (kynttilä, esineet),
   laiturille nousu kamerapolkuna, ei lähileikkausta, kytkin poikki kavely fp 0|1. 839/839, unity-tarkistus 0. Huomenna jatko
   pelattavuusmallin (docs/raportit/pelattavuusmalli-olavinlinna.md) mukaan; valoisuusosoitin (Thiefin valokivi) tarvitsee NUI-pohjan.
-- 18.4x: PT: EI valomittaria eikä HUD-osoitinta; näkyvyys kuvana → SeikkailuNakyvyys e623df71 (historia-fp): pimeässä Vignette + viileä
+- 18.30: PT: EI valomittaria eikä HUD-osoitinta; näkyvyys kuvana → SeikkailuNakyvyys e623df71 (historia-fp): pimeässä Vignette + viileä
   WhiteBalance omassa Volumessa, paino valoisuudesta (SeikkailuVartijat.PelaajanValoisuus, sama kuin vartijoiden näkö). Omistajan tarkennus:
   kolmannen persoonan KAUKOKUVAT sallittu (hahmo < ~10 % kuvan korkeudesta: veneen saapuminen ylhäältä, siirtymät, pako, loppu, Pulun
   lento) → Foggin malli säilyy; pelattavuusmalli nimeää kohdat.
