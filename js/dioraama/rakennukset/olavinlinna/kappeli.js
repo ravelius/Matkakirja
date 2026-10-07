@@ -172,6 +172,21 @@ const KAPPELI_HAHMOT = [
   },
 ];
 
+// Holvimaalausten jäänteet ja pääalttarin oikean puolen maalattu kilpi (Kansallismuseo: lehti- ja kukkakuvioita sekä vaakunoita;
+// Härö 1997: holvissa pääalttarin oikealla maalattu, todennäköisesti Tottin vaakuna). Projektorit leivo_tila.py:lle: kuva
+// (_valmiit-polku), keski (paikallinen), kompassi, tapa 'pysty' (vaakasuora heijastus kompassin suuntaan) tai 'alhaalta'
+// (pystysuora heijastus holviin), leveys/korkeus (m), syvyys (m heijastussuunnassa), voima (peitto). Kuvat:
+// _valmiit/olavinlinna-maalaukset-v1 (oma proseduraalinen työ).
+const MK = (k) => `olavinlinna-maalaukset-v1/kuvat/${k}.png`;
+const PP = (a, r, y) => [r3(CX + r * Math.sin(a * RAD)), y, r3(CZ - r * Math.cos(a * RAD))];
+const MAALAUKSET = [
+  { kuva: MK('kilpi-tott'), keski: PP(86, 3.5, 13.0), kompassi: 86, tapa: 'pysty', leveys: 0.45, korkeus: 0.56, syvyys: 0.7, voima: 0.85 },
+  { kuva: MK('holvi-lehti-1'), keski: PP(320, 1.8, 14.0), kompassi: 50, tapa: 'alhaalta', leveys: 2.4, korkeus: 1.2, syvyys: 1.6, voima: 0.8 },
+  { kuva: MK('holvi-lehti-2'), keski: PP(20, 1.9, 14.0), kompassi: 110, tapa: 'alhaalta', leveys: 2.2, korkeus: 1.1, syvyys: 1.6, voima: 0.75 },
+  { kuva: MK('holvi-lehti-3'), keski: PP(268, 2.2, 13.9), kompassi: 358, tapa: 'alhaalta', leveys: 2.0, korkeus: 1.0, syvyys: 1.6, voima: 0.7 },
+  { kuva: MK('holvi-lehti-2'), keski: PP(0, 3.6, 13.2), kompassi: 0, tapa: 'pysty', leveys: 1.6, korkeus: 0.8, syvyys: 0.7, voima: 0.7 },
+];
+
 export const TILA = {
   id: 'kappeli',
   lappujarjestys: 2,
@@ -195,6 +210,7 @@ export const TILA = {
       teksti: 'Reikä seinässä messun seuraamiseen – Suomessa harvinaista herkkua. Ja voudilta näyttää puuttuvan muutakin kuin hartautta.' },
   ],
   kohdistettava: true,
+  maalaukset: MAALAUKSET,
   // Uusi tapa (dioraama-rajapinnat-blender-20260929.md kohta 2): Kirkkotorni kuoressa mallin (−15,4, 14,6) (kartiokaton
   // huippu säteellä, 29.9. klo 21) eli glTF z −14,6; seinä ja lattia säteellä 6,6 kuoren sisäpuolella.
   // 7.10. korkeus lähteistä: lattia +92,6 NN = malli 9,6 (ennen 6,4), joten sijoitus y −3,0 → +0,2.
@@ -235,8 +251,8 @@ export const TILA = {
     { resepti: 'laatta', paikka: pol(SYV.a, SEINA + SYV.syvyys + 0.03, SYV.y1), suunta: SYV.a + 180, leveys: SYV.leveys + 0.1, syvyys: 0.05, paksuus: SYV.y1 - SYV.y0, pinnat: KIVI },
     { resepti: 'laatta', paikka: pol(SYV.a, SEINA + SYV.syvyys / 2, SYV.y1 + 0.04), suunta: SYV.a + 180, leveys: SYV.leveys + 0.1, syvyys: SYV.syvyys + 0.1, paksuus: 0.06, pinnat: KIVI },
     { resepti: 'laatta', paikka: pol(SYV.a, SEINA + SYV.syvyys / 2, SYV.y0 + 0.01), suunta: SYV.a + 180, leveys: SYV.leveys + 0.1, syvyys: SYV.syvyys + 0.1, paksuus: 0.06, pinnat: KIVI },
-    // Tottin ja Sturen kilpilaatat syvennyksen yläpuolella (Aspelin 1870-l. alttariseinällä, Härö 1997; arvoitus: "kilpien alla")
-    ...[SYV.a - 3.1, SYV.a + 3.1].map((a) => ({ resepti: 'laatta', paikka: pol(a, SEINA - 0.03, LATTIA + 2.2), suunta: a + 180, leveys: 0.3, syvyys: 0.05, paksuus: 0.38, pinnat: KIVI })),
+    // Tottin ja Sturen kilpilaatat ovat kohokuvaesineitä (esine-kilpilaatta-tott/-sture.glb, kävelymerkit), eivät leivottuja:
+    // kohokuva näkyy vain matalassa sivuvalossa (E3 vaihe 3), mikä vaatii reaaliaikaisen valon.
     // Ristiholvi (Maconi 1910): taitteet seinällä y 12,3, kennojen seinäkaaret y 13,8, laki y 15,0. Taitekulmat
     // 5° + 45°·j osuvat sektorin ruudukkoon (230° + 11,25°·i). Maalaukset (lehti- ja kukka-aiheet): holvi-pinta rappaus.
     { resepti: 'kupoli', paikka: [CX, HOLVI.lahto, CZ], suunta: 0, sade: SEINA - 0.06, korkeus: HOLVI.laki - HOLVI.lahto, paksuus: 0.3,

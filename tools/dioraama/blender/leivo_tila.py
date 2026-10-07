@@ -221,6 +221,49 @@ for o in tilan + esineet + ([] if KUORI else massa):
                 valmiit[perus] = pbr(perus, **MATERIAALIT.get(perus, dict(vari=srgb(rak.get('pinnat', {}).get(perus, {}).get('vari', '#8a8580')))))
         s.material = valmiit[perus]
 
+# --- Maalausprojektorit (kappeli 7.10.2026: holvimaalausten jäänteet ja maalattu kilpi): tila.maalaukset → rappaus-pinnan
+# perusväriin kuvan alfa × peitto × syvyysmaski. tapa 'pysty': heijastus vaakasuoraan kompassisuuntaan (normaali), 'alhaalta':
+# pystysuoraan holviin (tangentti kompassista). Kuvat _valmiit-hakemistosta (polku kenttä kuva).
+VALMIIT = '/Users/Shared/Claude/proto-3d/_valmiit'
+maalaukset = tila.get('maalaukset') or []
+if maalaukset and 'rappaus' in valmiit:
+    m = valmiit['rappaus']; nt = m.node_tree; b = next(n for n in nt.nodes if n.type == 'BSDF_PRINCIPLED')
+    pohja = b.inputs['Base Color'].links[0].from_socket if b.inputs['Base Color'].links else None
+    geo = solmu(nt, 'ShaderNodeNewGeometry', -600, 1200)
+    for i, md in enumerate(maalaukset):
+        a_ = math.radians(md.get('kompassi', 0)); c_ = Vector(bl(md['keski']))
+        if md.get('tapa') == 'alhaalta':
+            nvec, tvec, yvec = Vector((0, 0, 1)), Vector((math.cos(a_), -math.sin(a_), 0)), Vector((math.sin(a_), math.cos(a_), 0))
+        else:
+            nvec, tvec, yvec = Vector((math.sin(a_), math.cos(a_), 0)), Vector((math.cos(a_), -math.sin(a_), 0)), Vector((0, 0, 1))
+        y0 = 1400 + i * 420
+        rel = solmu(nt, 'ShaderNodeVectorMath', -400, y0); rel.operation = 'SUBTRACT'
+        nt.links.new(geo.outputs['Position'], rel.inputs[0]); rel.inputs[1].default_value = c_
+        def piste(vek, jako, siirto, y):
+            dp = solmu(nt, 'ShaderNodeVectorMath', -200, y); dp.operation = 'DOT_PRODUCT'
+            nt.links.new(rel.outputs[0], dp.inputs[0]); dp.inputs[1].default_value = vek
+            mm = solmu(nt, 'ShaderNodeMath', 0, y); mm.operation = 'MULTIPLY_ADD'
+            nt.links.new(dp.outputs['Value'], mm.inputs[0]); mm.inputs[1].default_value = 1.0 / jako; mm.inputs[2].default_value = siirto
+            return mm.outputs[0], dp.outputs['Value']
+        u_, _ = piste(tvec, md['leveys'], 0.5, y0)
+        v_, _ = piste(yvec, md['korkeus'], 0.5, y0 + 80)
+        _, syv = piste(nvec, 1.0, 0.0, y0 + 160)
+        ab = solmu(nt, 'ShaderNodeMath', 200, y0 + 160); ab.operation = 'ABSOLUTE'; nt.links.new(syv, ab.inputs[0])
+        lt = solmu(nt, 'ShaderNodeMath', 350, y0 + 160); lt.operation = 'LESS_THAN'; nt.links.new(ab.outputs[0], lt.inputs[0]); lt.inputs[1].default_value = md.get('syvyys', 0.5)
+        yh = solmu(nt, 'ShaderNodeCombineXYZ', 200, y0); nt.links.new(u_, yh.inputs['X']); nt.links.new(v_, yh.inputs['Y'])
+        kv = solmu(nt, 'ShaderNodeTexImage', 400, y0); kv.image = bpy.data.images.load(os.path.join(VALMIIT, md['kuva']), check_existing=True)
+        kv.extension = 'CLIP'; nt.links.new(yh.outputs[0], kv.inputs['Vector'])
+        k1 = solmu(nt, 'ShaderNodeMath', 650, y0 + 80); k1.operation = 'MULTIPLY'; nt.links.new(kv.outputs['Alpha'], k1.inputs[0]); nt.links.new(lt.outputs[0], k1.inputs[1])
+        k2 = solmu(nt, 'ShaderNodeMath', 800, y0 + 80); k2.operation = 'MULTIPLY'; nt.links.new(k1.outputs[0], k2.inputs[0]); k2.inputs[1].default_value = md.get('voima', 0.7)
+        mx = solmu(nt, 'ShaderNodeMix', 950, y0); mx.data_type = 'RGBA'; mx.blend_type = 'MIX'
+        nt.links.new(k2.outputs[0], mx.inputs['Factor'])
+        if pohja: nt.links.new(pohja, mx.inputs[6])
+        else: mx.inputs[6].default_value = b.inputs['Base Color'].default_value
+        nt.links.new(kv.outputs['Color'], mx.inputs[7])
+        pohja = mx.outputs[2]
+    nt.links.new(pohja, b.inputs['Base Color'])
+    print('LEIVO: maalauksia', len(maalaukset))
+
 # --- Säänkestävä puu ulkotiloissa (Päätoimittaja 1.10., v19): Poly Haven -puut (rough_wood, wood_table_worn) ovat
 # kirkkaan oransseja ja näyttivät uusilta peliaseteilta kuoren vieressä. Ulkona (tila.ulkona tai tunnelma, --saa)
 # puu harmaannutetaan aittojen hirren sävyyn (#6f6a61) ja himmennetään, ja vesirajassa (z < −6,0) se tummuu märkänä.
