@@ -11,6 +11,7 @@
  * RAJA-kaupungit Kiova, Sarajevo ja Tromssa sekä POIS-luokka eivät ole mukana.
  * /opas/aineistot palauttaa sallitut (raja: [] yhteensopivuuden vuoksi); natiivi (LS1 OpasSallitut) rajaa niillä
  * kaupunkiehdotukset, lennot ja vapaan liikkeen. Worker torjuu muut kaupungit ja r_m-säteen ulkopuoliset kohteet.
+ * Giza (omistaja 7.10. 08.4x): omat Blender-mallit, ei Googlen 3D:tä; r 1,5 km (LS1).
  * Id kuten KaupunkiTiet.Tunnus / aineistoindeksi (pienaakkoset, diakriitit pois, muut → "-").
  */
 export const OPAS_SALLITUT = Object.freeze({
@@ -52,6 +53,7 @@ export const OPAS_SALLITUT = Object.freeze({
     {"id": "luxemburg", "nimi": "Luxemburg", "lat": 49.6132, "lon": 6.12956, "r_m": 5000},
     {"id": "venetsia", "nimi": "Venetsia", "lat": 45.43566, "lon": 12.33596, "r_m": 3000},
     {"id": "sisilia", "nimi": "Sisilia", "lat": 38.0992, "lon": 13.34633, "r_m": 20000},
+    {"id": "giza", "nimi": "Gizan pyramidit", "lat": 29.9765, "lon": 31.1313, "r_m": 1500},
   ],
 });
 

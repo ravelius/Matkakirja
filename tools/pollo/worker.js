@@ -37,6 +37,7 @@ import {
   MAAILMAN_SUOSIKIT_KEHOTE,
 } from './kohteet.js';
 import { OPAS_AINEISTOT } from './aineistot.js';
+import { oppaanEsittely, valmisKohde, omatKohteet } from './opas-esittely.js';
 import { OPAS_SALLITUT, sallittuKaupunki, pisteSallittu, sallittuAluePisteelle } from './sallitut.js';
 import { vuosiluvutSanoiksi } from './puhesanat.js';
 import { kuvalista, kohteenKuvat, kaupunginKohteet, listanKuvin, kuvaKaupunkitilassa, LUKITTU_VAHINTAAN } from './opas-kuvat.js';
@@ -3248,6 +3249,12 @@ async function hoidaOppaanLiiku(pyynto, env, kors) {
   const lat = Number(url.searchParams.get('lat')), lon = Number(url.searchParams.get('lon'));
   // Lukittu kaupunki (Päätoimittaja 6.10. 20.3x): Liiku näyttää koko kohdelistan merkittävyysjärjestyksessä kuvineen.
   const kuvaLista = await kuvalista(env);
+  const omat = omatKohteet(kaupunki);
+  if (omat) {
+    return vastaa({ kaupunki, kohteet: omat.kohteet.map((k, i) => ({ id: k.id, nimi: k.nimi, lat: k.lat, lon: k.lon, alarivi: k.kuvaus ?? null,
+      luokka: k.luokka ?? null, tarkeys: i + 1, kuva: kohteenKuvat(kuvaLista, k.id)[0] ?? null, kuvat: kohteenKuvat(kuvaLista, k.id) })),
+      kierros: omat.kierros }, kors);
+  }
   const lukitut = kaupunginKohteet(kuvaLista, kaupunki).filter((k) => pisteSallittu(k, kaupunki, env));
   if (lukitut.length >= LUKITTU_VAHINTAAN) {
     // Kaupunkikierros-rivi (omistaja 6.10. 23.4x, natiivi lukee kentän junasta 156): 8 tärkeintä lyhimpänä reittinä
@@ -3393,8 +3400,10 @@ async function hoidaOpas(pyynto, env, kors, runko, ctx) {
     kuvalista(env)]);
   // KUVALISTA KAUPUNKI KERRALLAAN (omistaja 6.10. 20.0x, Päätoimittaja 20.3x; opas-kuvat.js): lukitun kaupungin pysähdykset,
   // kierros ja kuvat vain kohdelistasta ja kuvalistasta. Muut kaupungit kuten ennen, kunnes niiden lista yhdistetään.
-  const lukitut = kaupunginKohteet(kuvaLista, p.kaupunki).filter((k) => pisteSallittu(k, p.kaupunki, env));
-  const listatila = lukitut.length >= LUKITTU_VAHINTAAN;
+  // OMAT KOHTEET (omistaja 7.10. 08.4x: Giza omilla Blender-malleilla): koodissa oleva kohdelista ja kierros.
+  const omat = omatKohteet(p.kaupunki);
+  const lukitut = omat ? omat.kohteet : kaupunginKohteet(kuvaLista, p.kaupunki).filter((k) => pisteSallittu(k, p.kaupunki, env));
+  const listatila = Boolean(omat) || lukitut.length >= LUKITTU_VAHINTAAN;
   // Liiku-listan esihaku taustalla (juna 148 todistusajo: kylmä /opas/liiku ~10 s → natiivin lista jäi tyhjäksi).
   if (p.kaupunki && sijainti && typeof ctx?.waitUntil === 'function') {
     ctx.waitUntil(oppaanLiikuLista(env, p.kaupunki, sijainti).catch(() => null));
@@ -3413,7 +3422,8 @@ async function hoidaOpas(pyynto, env, kors, runko, ctx) {
   // kierroksen alkuun (muu reitti lähin naapuri sen jälkeen).
   const aloitaKierros = Boolean(kierrosAvain && onKierrosToive(p.toive));
   // Lukitusta listasta kierros on valmis heti: 8 tärkeintä lyhimpänä reittinä, alku sijaintia lähimmästä (omistaja 6.10. 23.4x).
-  const listanKierros = aloitaKierros && listatila ? lyhinReitti(lukitut.slice(0, KIERROKSEN_PITUUS), sijainti) : null;
+  const listanKierros = aloitaKierros && listatila
+    ? (omat ? omat.kierros.map((id) => lukitut.find((k) => k.id === id)).filter(Boolean) : lyhinReitti(lukitut.slice(0, KIERROKSEN_PITUUS), sijainti)) : null;
   const suunnittelu = aloitaKierros && !listanKierros ? (async () => {
     try {
       const suunnitelma = jasennaKierros((await kysyMallitiedot(env, {
@@ -3458,6 +3468,26 @@ async function hoidaOpas(pyynto, env, kors, runko, ctx) {
   let kuvaLupaus = null;
   let kuvaAlku = 0;
   let p18Lupaus = null;
+  let puheOhitus = null;
+  // ESIGENEROITU ESITTELY (omistaja 7.10.): kierroksen pysähdys tai listan kohde nimellä → valmis teksti ilman mallikutsua.
+  const valmisPaikka = seuraava?.paikka ?? (listatila && p.toive ? lukitut.find((x) => samaNimi(x.nimi, p.toive)) ?? null : null);
+  const valmis = valmisPaikka && listatila ? valmisKohde(await oppaanEsittely(env, p.kaupunki), valmisPaikka.id) : null;
+  if (valmis) {
+    const paikka = { ...valmisPaikka, lahde: valmisPaikka.lahde ?? 'kohdelista' };
+    const nimi = valmisPaikka.nimi;
+    tuloksenPaikka = { nimi, koko_m: valmis.koko_m, ...paikka };
+    tulos = { tyyppi: 'pysahdys', id: paikka.id, nimi, alarivi: valmis.kuvaus ?? null, lat: paikka.lat, lon: paikka.lon,
+      koko_m: valmis.koko_m ?? paikka.koko_m ?? 150, ...(valmis.korkeus_m ? { korkeus_m: valmis.korkeus_m } : {}),
+      ...(valmis.luokka ? { luokka: valmis.luokka } : {}), teksti: (p.lyhyt && valmis.lyhyt) || valmis.teksti, valmis: true,
+      wiki: paikka.wiki ?? null, kuva: null, vaihtoehdot: valmis.syventava ? [valmis.syventava] : [], koordinaatit: paikka.lahde,
+      ...(seuraava ? { kierros: { numero: seuraava.numero, maara: seuraava.maara } } : {}),
+      kuvat: kohteenKuvat(kuvaLista, paikka.id) };
+    // Ääntämisversio (esim. roomalaiset numerot): näytölle kirjoitusasu, ääneen puhe_*-kenttä, jos se on.
+    puheOhitus = (p.lyhyt && valmis.lyhyt ? valmis.puhe_lyhyt : valmis.puhe_teksti) || null;
+    kuvaAlku = Date.now();
+    korostusLupaus = paikanKorostus(fetch, { lat: paikka.lat, lon: paikka.lon, koko_m: tulos.koko_m, luokka: valmis.luokka,
+      reitti: [], nimi, nimet: [nimi], id: paikka.id }, sijainti, osm);
+  }
   try {
     for (let yritys = 0; yritys < 2 && !tulos; yritys += 1) {
       const vastaus = jasennaOpas((await kysyMallitiedot(env, kutsu)).teksti, seuraava?.paikka.nimi ?? null);
@@ -3535,7 +3565,7 @@ async function hoidaOpas(pyynto, env, kors, runko, ctx) {
   if (!tulos) return vastaa({ virhe: 'palvelin', viesti: 'Opas ei saanut seuraavaa paikkaa kiinni. Yritä uudelleen.' }, { status: 502, ...kors });
   // Ääni ja kuvan varahaku (Wikidatan P18) rinnakkain; pelin oma kuva voittaa.
   const [aani, korostus] = await Promise.all([
-    oppaanAani(pyynto, env, ctx, tulos.teksti, kehittaja),
+    oppaanAani(pyynto, env, ctx, puheOhitus ?? tulos.teksti, kehittaja),
     tulos.tyyppi === 'pysahdys' ? korostusLupaus : null,
   ]);
   // Lisäkuvat (P18 + Commons-luokka) pelin omien perään (omistaja 23.5x). Muun työn jälkeen odotetaan enintään

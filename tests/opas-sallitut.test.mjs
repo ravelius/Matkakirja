@@ -19,7 +19,7 @@ const env = () => ({ ANTHROPIC_API_KEY: 'a', POLLO_ORIGINIT: 'https://matkakirja
   OPAS_SALLITUT_TESTI: SALLITUT, PUHE_R2: { get: async () => null, put: async () => {}, delete: async () => {} } });
 
 test('lista: 36 sallittua, ei raja- eikä POIS-kaupunkeja; id-kaava', () => {
-  assert.equal(OPAS_SALLITUT.sallitut.length, 37);
+  assert.equal(OPAS_SALLITUT.sallitut.length, 38);
   for (const x of OPAS_SALLITUT.sallitut) assert.ok(x.id && x.nimi && Number.isFinite(x.lat) && Number.isFinite(x.lon) && x.r_m >= 1000, x.id);
   const paalla = { OPAS_SALLITUT_ESTO: '1' };
   assert.ok(sallittuKaupunki('Pariisi', paalla)); assert.ok(sallittuKaupunki('Kööpenhamina', paalla));
@@ -55,6 +55,6 @@ test('kytkin: ilman OPAS_SALLITUT_ESTO-muuttujaa ei estoa (TF 154/155), pääll�
 test('/opas/aineistot: sallitut tuotantolistasta, raja tyhjä', async () => {
   const v = await (await worker.fetch(new Request('https://pollo.example/opas/aineistot', { headers: { origin: 'https://matkakirja.app' } }),
     { POLLO_ORIGINIT: 'https://matkakirja.app' }, {})).json();
-  assert.equal(v.sallitut.length, 37); assert.deepEqual(v.raja, []);
+  assert.equal(v.sallitut.length, 38); assert.deepEqual(v.raja, []);
   assert.deepEqual(Object.keys(v.sallitut[0]).sort(), ['id', 'lat', 'lon', 'nimi', 'r_m']);
 });
