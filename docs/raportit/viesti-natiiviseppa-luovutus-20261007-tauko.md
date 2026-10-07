@@ -14,6 +14,12 @@ Ennen junaa/TF:ää vain automaattiset testit (Kartta/Peli/Linssit-testit, tarki
 käännös. EI savua, EI Laitetestaajaa, EI stillejä, EI iPad-mittauksia, EI toistoja ennen korjausta. Juna 1–2/pv, kun valmista on.
 Muisti testaus-kevyemmin-20261007.
 
+## JUNA 162 TÄNÄÄN (omistaja 16.1x: "tee tänään yksi päivitys klo 22"): runko nyt **3bc7680c1** (= baaa24445 + NUI 34cf54b0, KUITATTU).
+Siirtoseppä 78e56088 KUITATTU → hän yhdistää 3bc7680c1:n ja ratkaisee LinssiOhjain.cs:n, SHA viimeistään 21.00.
+21.15 runko lukittu → muutoslokin SISÄLTÖLISTA Julkaisijalle heti (hän tekee PR:n ennen SHA:ta) → testit → ~21.25 proto-kaanna
+(lukko vapaa 21.10 alkaen) → VIE ilman savua → update-ref juna/b13 c076765c → <runko> + juna.log → BUILD 162 master-merge →
+täysi SHA Julkaisijalle + Päätoimittajalle ~21.35 → Mac TF: `perl … lokit/natiiviseppa-skriptit/mac-tf.sh <sha8> 162` iOS-latauksen jälkeen.
+
 ## TILA 16.0x: JUNA 162 -RUNKO natiiviseppa/juna-162-koe **baaa24445** (wt/proto-natiiviseppa-j144) = BUILD 161 9572eaff + LS1 b9f37ee8f +
 NUI 3f07c49b + LS2 f6e4a8495 + Siirtoseppä a5cd9d81 (kaikki Päätoimittajan kuittaamia 16.1x). Testit 447/419/835, tarkista, unity
 iOS/Mac/App Store 0, editori ok (lokit/natiiviseppa-juna162-testit.txt).
