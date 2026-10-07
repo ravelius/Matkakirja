@@ -19,7 +19,7 @@ namespace Matkakirja.Natiivi
     {
         public static SeikkailuEsineet Aktiivinen { get; private set; }
         public const float PoimintaM = 1.2f, HeittoEteen = 7f, HeittoYlos = 3.5f, KuuluuM = 12f;
-        static readonly int IdKuva = Shader.PropertyToID("_Kuva");
+        static readonly int IdKuva = Shader.PropertyToID("_Kuva"), IdPohjaKuva = Shader.PropertyToID("_PohjaKuva"), IdTila = Shader.PropertyToID("_Tila");
         /// <summary>Kolahduksen klippi (rakennus.json aanet pikari-1); Sovitin asettaa.</summary>
         public static AudioClip KolahdusKlippi;
         /// <summary>Kolahdus (paikka): Sovitin soittaa kokin harhautusrepliikin, jos kokki on lähellä.</summary>
@@ -29,7 +29,7 @@ namespace Matkakirja.Natiivi
         /// <summary>Testi / kosketusnappi: seuraava ruutu tekee toiminnon.</summary>
         public static bool ToimintoPyydetty;
 
-        enum Laji { Heitettava, Nostettava, Irrotettava }
+        enum Laji { Heitettava, Nostettava, Irrotettava, Kiintea }
         sealed class Esine { public string Id; public GameObject Go; public Rigidbody Rb; public bool Heitetty, Kuului; public Laji Laji; public bool Irrotettu; public Vector3 Ulos; public int Napautuksia; }
         /// <summary>Veitsen raapaisu saumaan (E3c: ensimmäinen raapaisu laukaisee kappalaisen paluun).</summary>
         public static event Action Raapaistiin;
@@ -64,7 +64,7 @@ namespace Matkakirja.Natiivi
                 var sc = eg.AddComponent<SphereCollider>(); sc.center = mesh.bounds.center; sc.radius = Mathf.Max(0.04f, mesh.bounds.extents.magnitude * 0.6f);
                 var rb = eg.AddComponent<Rigidbody>(); rb.mass = 0.6f; rb.isKinematic = true; rb.interpolation = RigidbodyInterpolation.Interpolate;
                 rb.collisionDetectionMode = CollisionDetectionMode.ContinuousDynamic;
-                var laji = m.Irrotettava ? Laji.Irrotettava : m.Heitettava ? Laji.Heitettava : Laji.Nostettava;
+                var laji = m.Kiintea ? Laji.Kiintea : m.Irrotettava ? Laji.Irrotettava : m.Heitettava ? Laji.Heitettava : Laji.Nostettava;
                 // Irrotettavan ulospäin = vastakkainen kuin "suunta seinään" (kierto_y), Unityssa (sin, 0, −cos) peilattuna.
                 var ulos = m.KiertoY is double ka ? -new Vector3((float)Math.Sin(ka), 0f, (float)-Math.Cos(ka)) : Vector3.zero;
                 var e = new Esine { Id = m.Tunnus, Go = eg, Rb = rb, Laji = laji, Ulos = ulos };
@@ -102,10 +102,19 @@ namespace Matkakirja.Natiivi
                 kuva = new Texture2D(2, 2, TextureFormat.RGBA32, true, false) { name = "Esine:" + m.Tunnus };
                 if (kuva.LoadImage(malli.Kuvat[0], false)) luodut.Add(kuva); else { Destroy(kuva); kuva = null; }
             }
-            var varjostin = Shader.Find("Matkakirja/Linssit/DioraamaMaasto");
+            // DioraamaValaistu (B, maalattu): tilan pistevalot ja Foggin kynttilä valaisevat esineen (kilpilaattojen kohokuva näkyy vain
+            // matalasta sivuvalosta, v44k); vara DioraamaMaasto. Värikanavat: AO 1, ei lämpöä, B 0,5 (ei hehkua ilman värejä).
+            var valaistu = Shader.Find("Matkakirja/Linssit/DioraamaValaistu");
+            var varjostin = valaistu != null ? valaistu : Shader.Find("Matkakirja/Linssit/DioraamaMaasto");
             var mat = varjostin != null ? new Material(varjostin) { name = "Esine:" + m.Tunnus } : null;
-            if (mat != null) { if (kuva != null) mat.SetTexture(IdKuva, kuva); luodut.Add(mat); }
+            if (mat != null)
+            {
+                if (valaistu != null) { mat.SetFloat(IdTila, 1f); if (kuva != null) mat.SetTexture(IdPohjaKuva, kuva); }
+                else if (kuva != null) mat.SetTexture(IdKuva, kuva);
+                luodut.Add(mat);
+            }
             var mesh = Mesh(malli); luodut.Add(mesh);
+            if (valaistu != null) { var vc = new Color[mesh.vertexCount]; for (int i = 0; i < vc.Length; i++) vc[i] = new Color(1f, 0f, 0.5f, 1f); mesh.colors = vc; }
             eg.AddComponent<MeshFilter>().sharedMesh = mesh;
             var mr = eg.AddComponent<MeshRenderer>(); mr.sharedMaterial = mat; mr.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.On;
             valmis(eg);
@@ -149,7 +158,7 @@ namespace Matkakirja.Natiivi
             var pp = p.transform.position + Vector3.up * 0.9f;
             foreach (var e in esineet)
             {
-                if (e == kadessa || e.Go == null || !e.Go.activeSelf || e.Id == Kirja) continue;   // kirja on kappalaisen
+                if (e == kadessa || e.Go == null || !e.Go.activeSelf || e.Id == Kirja || e.Laji == Laji.Kiintea) continue;   // kirja on kappalaisen; kilpilaatat seinässä
                 if (e.Laji == Laji.Irrotettava && e.Irrotettu) continue;
                 // Saumat napautettaviksi vasta viistovalossa (käsikirjoitus kohta 6; ilman kynttilöitä aina).
                 if (e.Laji == Laji.Irrotettava && SeikkailuKynttilat.Aktiivinen is SeikkailuKynttilat kyt && !kyt.SaumatNakyvat) continue;

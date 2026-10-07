@@ -45,6 +45,8 @@ namespace Matkakirja.Linssit.Seikkailu
         public bool Heitettava;
         /// <summary>esine: irrotettava (Linnanrakentaja v44h: syvennyksen muuratut kivet).</summary>
         public bool Irrotettava;
+        /// <summary>esine: kiintea (Linnanrakentaja v44k: kilpilaatat seinässä): näkyy, ei poimittavissa.</summary>
+        public bool Kiintea;
         /// <summary>luukku: sarana (Linnanrakentaja v44i), glTF-koordinaatit; null jos puuttuu.</summary>
         public double[] Sarana;
     }
@@ -110,6 +112,7 @@ namespace Matkakirja.Linssit.Seikkailu
                 X = p[0], Y = p[1], Z = p[2], Leveys = MiniJson.Luku(o, "leveys") ?? 0, Korkeus = MiniJson.Luku(o, "korkeus") ?? 0,
                 Koko = MiniJson.Luku(o, "koko") ?? 0, OdotaS = MiniJson.Luku(o, "odota_s") ?? 0, KiertoY = MiniJson.Luku(o, "kierto_y"), Heitettava = MiniJson.Kentta(o, "heitettava") is bool hb && hb, Irrotettava = MiniJson.Kentta(o, "irrotettava") is bool ib && ib,
                 Sarana = MiniJson.Kentta(o, "sarana") is object sa ? Vektori(sa) : null,
+                Kiintea = MiniJson.Kentta(o, "kiintea") is bool kb && kb,
             };
         }
 
