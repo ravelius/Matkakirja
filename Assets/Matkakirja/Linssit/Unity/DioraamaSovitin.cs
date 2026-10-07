@@ -482,7 +482,7 @@ namespace Matkakirja.Natiivi
             kelloSiirto = 0;
             kuoriOdotusAlku = -1f; SaapumisOdotus = false; RakennusLatautuu = false; LatausVirhe = null; // näyttämö (ja sen odotuspiilotus) tuhoutuu alla
             // Historiamoottori: seikkailu pois (näyttämön lapset tuhoutuvat; globaalit kuoren leikkaukset ja kävelydata nollataan).
-            SeikkailuVartijat.Poista(); SeikkailuVene.Poista(); SeikkailuPelaaja.Poista(); SeikkailuRepliikit.Poista(); SeikkailuKavely.Pura();
+            SeikkailuVartijat.Poista(); SeikkailuVene.Poista(); SeikkailuPelaaja.Poista(); SeikkailuRepliikit.Poista(); SeikkailuEsineet.Poista(); SeikkailuKavely.Pura();
             cm?.SeikkailuPois(); PelattavaPalaPyydetty = false;
             if (peiliKuvaus == PelattavaPalaPaketti)
             {
@@ -942,6 +942,20 @@ namespace Matkakirja.Natiivi
 
         /// <summary>Pelaajahahmo (rakennus.json pelaaja, Linnanrakentajan Fogg) kapselin tilalle: irrallinen hahmo pelaajan hahmosolmussa
         /// (skin-hahmo katsoo Unityssa paikallista −z:aa → 180°), leike pelaajan liikkeestä. Henkilö syntetisoidaan rakennuksen henkilöihin.</summary>
+        /// <summary>E2: keittiön heitettävät esineet ja kolahduksen ääni (kerran per kävelydata).</summary>
+        IEnumerator EsineetPaalle()
+        {
+            if (SeikkailuEsineet.Aktiivinen != null || SeikkailuKavely.Data == null) yield break;
+            yield return SeikkailuEsineet.Lataa(SeikkailuKavely.Data, SeikkailuKavely.Juuri, peili, nayttamo.transform, o.Kirjaa);
+            if (SeikkailuEsineet.KolahdusKlippi == null && rakennus?.Aanet != null && rakennus.Aanet.TryGetValue("pikari-1", out var ko) && !string.IsNullOrEmpty(ko.Tiedosto))
+            {
+                using var q = UnityEngine.Networking.UnityWebRequestMultimedia.GetAudioClip(AaniUrl(ko.Tiedosto), AudioType.MPEG);
+                ((UnityEngine.Networking.DownloadHandlerAudioClip)q.downloadHandler).streamAudio = false;
+                yield return q.SendWebRequest();
+                if (q.result == UnityEngine.Networking.UnityWebRequest.Result.Success) SeikkailuEsineet.KolahdusKlippi = UnityEngine.Networking.DownloadHandlerAudioClip.GetContent(q);
+            }
+        }
+
         void LisaaPelaajahahmo(SeikkailuPelaaja sp)
         {
             var pm = rakennus?.Pelaaja;
@@ -956,6 +970,7 @@ namespace Matkakirja.Natiivi
             nayttamo.Hahmot3D.IrrallistenGlb(glbt);
             foreach (var glb in glbt) if (hahmoGlbJonossaTaiValmiit.Add(glb)) o.StartCoroutine(LataaHahmoGlb(glb));
             sp.KapseliPiiloon();
+            o.StartCoroutine(EsineetPaalle());
             o.Kirjaa($"seikkailu: pelaajahahmo {pm.Nimi} ({pm.Glb}, {pm.Leikkeet.Count} leikettä)");
         }
 
@@ -1457,6 +1472,7 @@ namespace Matkakirja.Natiivi
                     o.Kirjaa($"poikki: kävely tapit {osat[3]} {osat[4]} {osat[5]} {osat[6]} {osat[7]} s");
                     return;
                 }
+                if (arvo == "toiminto") { SeikkailuEsineet.ToimintoPyydetty = true; o.Kirjaa($"poikki: toiminto (lähin {SeikkailuEsineet.Aktiivinen?.Lahin ?? "-"}, kädessä {SeikkailuEsineet.Aktiivinen?.Kadessa ?? "-"})"); return; }
                 if (arvo == "data") { kavelyKehitysJuuri = osat.Length > 3 ? osat[3].TrimEnd('/') + "/" : null; o.Kirjaa($"poikki: kävelydata {kavelyKehitysJuuri ?? "paketista"}"); return; }
                 string tid = osat.Length > 3 ? osat[3] : Linssi?.NakymaHetkella(YdinAika, false).KohdeTila ?? "laituri";
                 o.StartCoroutine(KavelyPaalle(tid));

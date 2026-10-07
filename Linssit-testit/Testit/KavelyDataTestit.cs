@@ -44,5 +44,15 @@ namespace Matkakirja.Linssit.Testit
             var e = KavelyData.Lue("{\"osat\": {\"x\": 5}}", "[{\"paikka\": [1,2,3]}]");
             Oleta.Tosi(e.Osat.Count == 0 && e.Merkit.Count == 0, "rikkinäinen ohitetaan");
         }
-    }
+    
+        [Testi] static void EsineHeitettavaJaKierto()
+        {
+            var d = KavelyData.Lue("{\"osat\": {}}", "[{\"nimi\": \"esine:nauris\", \"paikka\": [1, 2, 3], \"glb\": \"esine-nauris.glb\", \"heitettava\": true}, " +
+                "{\"nimi\": \"vene:laituri\", \"paikka\": [0, -7, 0], \"kierto_y\": 2.1}, {\"nimi\": \"esine:kivi\", \"paikka\": [0, 0, 0]}]");
+            var n = System.Linq.Enumerable.First(d.Lajia("esine"));
+            Oleta.Tosi(n.Heitettava && n.Glb == "esine-nauris.glb" && n.Tunnus == "nauris", "heitettävä esine");
+            Oleta.Tosi(!System.Linq.Enumerable.Last(d.Lajia("esine")).Heitettava, "ilman kenttää ei heitettävä");
+            Oleta.Tosi(System.Linq.Enumerable.First(d.Lajia("vene")).KiertoY == 2.1, "kierto_y");
+        }
+}
 }

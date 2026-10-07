@@ -18,6 +18,8 @@ namespace Matkakirja.Natiivi
     public static class SeikkailuKavely
     {
         public static KavelyData Data { get; private set; }
+        /// <summary>osat.jsonin kansio (merkkien glb-polut, esim. esineet, ovat suhteessa tähän).</summary>
+        public static string Juuri { get; private set; }
         public static readonly List<Mesh> KavelyPinnat = new List<Mesh>();
         static readonly List<GameObject> tormaykset = new List<GameObject>();
         static readonly int IdLeikkaus = Shader.PropertyToID("_KavelyLeikkaus"), IdKoko = Shader.PropertyToID("_KavelyLeikkausKoko"),
@@ -65,7 +67,7 @@ namespace Matkakirja.Natiivi
                     if (m != null) KavelyPinnat.Add(m);
                 }
             }
-            Data = d;
+            Data = d; Juuri = juuri;
             kirjaa?.Invoke($"seikkailu: kävelygeometria {d.Osat.Count} osaa (piirretty {piirretty}, törmäyksiä {tormays}, kävelypintoja {KavelyPinnat.Count}), merkkejä {d.Merkit.Count}");
         }
 
