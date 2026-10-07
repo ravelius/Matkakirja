@@ -1,7 +1,7 @@
 {
   "rakennus": "olavinlinna",
-  "hash": "53619da2b4e68e43",
-  "kansio": "dioraama/olavinlinna/blender/53619da2b4e68e43/",
+  "hash": "2e1540722e24cff7",
+  "kansio": "dioraama/olavinlinna/blender/2e1540722e24cff7/",
   "tiedostot": [
     {
       "polku": "hahmot/apulainen-1500-faceit.glb",
@@ -330,8 +330,8 @@
     },
     {
       "polku": "tilat/laituri.glb",
-      "sha256": "38a1035d2d7142d3444a97c2677b6bc71667f55981e5f609153075bee53d985e",
-      "tavuja": 711828
+      "sha256": "aa55dbc7f1d703002e52ea14844db0628d67551c1922993870a131f71d8150c9",
+      "tavuja": 749024
     },
     {
       "polku": "tilat/muurinharja.glb",
@@ -625,43 +625,43 @@
     },
     {
       "polku": "valot/laituri-2k-4x4.astcm",
-      "sha256": "9011f0c18a61ea2f5defc63dd1992787d5496685caf588f37e4efc9244f5d76c",
-      "tavuja": 5592448
+      "sha256": "1179ceba57637c4cd15a70e4cbdff27da6d92f200176a99a0a9ce584fe62dcd3",
+      "tavuja": 1398144
     },
     {
       "polku": "valot/laituri-2k.jpg",
-      "sha256": "2a5d4b36df64148542b12300ba6d6ec1237e0c3a085da7bdfc11555155bfe596",
-      "tavuja": 687038
+      "sha256": "82a5f5d11d93d906a61447855132578407a8448e5cfadd9bb89d601073ac86fe",
+      "tavuja": 276211
     },
     {
       "polku": "valot/laituri-4x4.astcm",
-      "sha256": "a91acdb7ef5c30fc71bc03c837a8e8b209b8aa0e87efbfc2ffda0f23812a7bfb",
-      "tavuja": 9961552
-    },
-    {
-      "polku": "valot/laituri-hamara-2k-4x4.astcm",
-      "sha256": "e4fdba98346842be77ffbd976cf276d70366fdddd48409d66d8c82d5f6d3d5cf",
+      "sha256": "9965ed74c36f6452307df74e714943e295076cb889bb0650c9f39617c7513ed5",
       "tavuja": 5592448
     },
     {
+      "polku": "valot/laituri-hamara-2k-4x4.astcm",
+      "sha256": "85105447ca2cb2b6bd729c631011f3b617c6173afe128eea2279ff2352532779",
+      "tavuja": 1398144
+    },
+    {
       "polku": "valot/laituri-hamara-2k.jpg",
-      "sha256": "9a82fc9a7fdf18b2c742a707debb8469a63000ff63321ed45093ca4f45b7df9b",
-      "tavuja": 541310
+      "sha256": "5e57b7424a4eb9ccf0ec8f19d4f1423c1de5d12283ab8819ce9bbe95e0649cb0",
+      "tavuja": 208071
     },
     {
       "polku": "valot/laituri-hamara-4x4.astcm",
-      "sha256": "40286ff255700030e2133fbb0400613d879badaeb08cf4a7607a61e2185e9ea9",
-      "tavuja": 9961552
+      "sha256": "e56d2b76b864ab5fda920d98a4cebc917f0fee80ff27922f05dae89eabc9d638",
+      "tavuja": 5592448
     },
     {
       "polku": "valot/laituri-hamara.jpg",
-      "sha256": "98c159fbc2ede6b222ae6b3f1365783e4694a49b525bebeca015e95006899b30",
-      "tavuja": 1446385
+      "sha256": "dd78a506a5ba444cbd98ca0c933ce82f281e2be783396280b4871ecea1ecbe32",
+      "tavuja": 592057
     },
     {
       "polku": "valot/laituri.jpg",
-      "sha256": "e2e05a9b523e56aa4f2679366533470059d73f3e07dbca0b1b083d1ea8c8b045",
-      "tavuja": 1779127
+      "sha256": "b5a0e15f9e230ecff40ba42a6c7dc55e698be887651b23926205c102de11e7ec",
+      "tavuja": 767180
     },
     {
       "polku": "valot/muurinharja-2k-4x4.astcm",
@@ -907,6 +907,16 @@
       "polku": "ymparisto/mallit/rantakivet.glb",
       "sha256": "cc02005311d84260d665ada89fafac16516e6cc7bccaa291757e42f9ac5541be",
       "tavuja": 2783304
+    },
+    {
+      "polku": "ymparisto/mallit/vene-kevyt.glb",
+      "sha256": "170bd9b2904496edf648728537b7b90a6877dfe9d1f379c7614f39bc6a88ee7b",
+      "tavuja": 674436
+    },
+    {
+      "polku": "ymparisto/mallit/vene.glb",
+      "sha256": "196971f1c6c875621948f0a4f3eeb8fdf518a18db888443a756ab5b6374364ae",
+      "tavuja": 832620
     },
     {
       "polku": "ymparisto/puukortit-4x4.astcm",
