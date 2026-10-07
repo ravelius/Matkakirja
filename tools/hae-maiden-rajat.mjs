@@ -24,7 +24,7 @@
 // Krim ja Sevastopol Ukrainalle lähteessä (tools/krim-ukrainalle.mjs, Päätoimittaja 30.9.2026).
 import { poistaKriminRaja } from './krim-ukrainalle.mjs';
 // Worldview Suomen kannan mukaan (tools/worldview.mjs, Päätoimittaja 7.10.2026).
-import { ADMIN0_URL, LISATTAVAT_RAJAT, nakokulmanMaat, rajaviivaKelpaa, yhteinenReuna } from './worldview.mjs';
+import { ADMIN0_URL, LISATTAVAT_RAJAT, OLETUS_ADMIN0_URL, nakokulmanMaat, rajaviivaKelpaa, yhteinenReuna } from './worldview.mjs';
 import { writeFileSync } from 'node:fs';
 import { gzipSync } from 'node:zlib';
 
@@ -54,7 +54,7 @@ if (!vastaus.ok) {
 }
 const geo = await vastaus.json();
 // Näkökulma: oletusmaiden ADM0_A3 → _swe-maat (CYN, CNM → CYP), ja hylätyt viivat pois.
-const OLETUS_MAAT = valitsin('oletusmaat', 'https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_10m_admin_0_countries.geojson');
+const OLETUS_MAAT = valitsin('oletusmaat', OLETUS_ADMIN0_URL);
 const hae = async (u) => (/^https?:/.test(u) ? (await fetch(u)).json() : JSON.parse((await import('node:fs')).readFileSync(u, 'utf8')));
 const povMaat = await hae(valitsin('pov', ADMIN0_URL));
 const maat = nakokulmanMaat(await hae(OLETUS_MAAT), povMaat);

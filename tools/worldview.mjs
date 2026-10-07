@@ -24,6 +24,8 @@ export const FCLASS = 'FCLASS_SE';
 export const ADMIN0_URL = 'https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/'
   + `geojson/ne_10m_admin_0_countries_${POV}.geojson`;
 export const ADMIN0_TIEDOSTO = `ne_10m_admin_0_countries_${POV}.geojson`;
+/** Oletusaineiston (de facto) maat: vain näkökulman yhdistämien maiden tunnistukseen (nakokulmanMaat). */
+export const OLETUS_ADMIN0_URL = 'https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_10m_admin_0_countries.geojson';
 
 const HYLATYT_LUOKAT = new Set(['Unrecognized', 'Claim boundary']);
 
