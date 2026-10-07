@@ -204,6 +204,23 @@ namespace Matkakirja.Natiivi
             e.Go.SetActive(true);
         }
 
+        /// <summary>Tikkaat lähellä (kiipeily:tikkaat-*: alapää tai yläpää alle 1,0 m vaakatasossa ja 1,2 m pystyssä): (ala, ylä, suunta, ylhäältä).</summary>
+        static (Vector3 Ala, Vector3 Yla, Vector3 Suunta, bool Ylhaalta)? Tikkaat(SeikkailuPelaaja p)
+        {
+            var d = SeikkailuKavely.Data; if (d == null || p == null || p.Kiipeilee) return null;
+            var pp = p.transform.position;
+            foreach (var m in d.Lajia("kiipeily"))
+            {
+                if (m.Yla == null) continue;
+                var ala = new Vector3((float)m.X, (float)m.Y, (float)-m.Z); var yla = new Vector3((float)m.Yla[0], (float)m.Yla[1], (float)-m.Yla[2]);
+                double ky = m.KiertoY ?? 0; var suunta = new Vector3((float)Math.Sin(-ky), 0f, (float)Math.Cos(-ky));   // glTF kierto_y → Unity yaw −θ
+                bool Lahella(Vector3 q) { var v = q - pp; float dy = Mathf.Abs(v.y); v.y = 0; return v.magnitude < 1.0f && dy < 1.2f; }
+                if (Lahella(ala)) return (ala, yla, suunta, false);
+                if (Lahella(yla)) return (ala, yla, suunta, true);
+            }
+            return null;
+        }
+
         /// <summary>Esine pois näkyvistä ja poiminnasta (kappalainen vie kirjan).</summary>
         public void Piilota(string id)
         {
@@ -262,14 +279,15 @@ namespace Matkakirja.Natiivi
             // Ei esinettä lähellä eikä kädessä → toiminto kynttilöille (E3: sammuta, sytytä, puhalla oma); nappi näkyy samoin ehdoin.
             var kynttilat = SeikkailuKynttilat.Aktiivinen;
             Lahin = lahin?.Id ?? (kadessa == null && kynttilat != null && kynttilat.ToimintoTarjolla(p) ? "kynttila" : null)
-                ?? (kadessa == null && OnttoLahella(p) ? "koputa" : null);
+                ?? (kadessa == null && OnttoLahella(p) ? "koputa" : null)
+                ?? (kadessa == null && Tikkaat(p) != null ? "tikkaat" : null);
             Toiminto = kadessa != null
                 ? (SeikkailuTyrma.Aktiivinen is SeikkailuTyrma tyv && tyv.OviLahella(p) ? "Avaa"
                     : kadessa.Id == Tarjotin && SeikkailuVartijat.TarjotinVastaanottaja(p.transform.position) ? "Anna"
                     : kadessa.Laji == Laji.Heitettava ? "Heitä" : Alttari is Vector3 alt && Vector3.Distance(p.transform.position, alt) < 1.6f ? "Aseta" : "Laske")
                 : lahin != null ? (lahin.Laji == Laji.Irrotettava ? "Irrota" : lahin.Laji == Laji.Kaadettava ? "Kaada" : lahin.Id == Nyytti ? "Avaa" : "Poimi")
                 : Lahin == "kynttila" ? kynttilat.ToimintoVerbi(p)
-                : Lahin == "koputa" ? "Koputa" : null;
+                : Lahin == "koputa" ? "Koputa" : Lahin == "tikkaat" ? "Kiipeä" : null;
             bool toiminto = ToimintoPyydetty;
             ToimintoPyydetty = false;
             var kb = Keyboard.current; var gp = Gamepad.current;
@@ -302,6 +320,7 @@ namespace Matkakirja.Natiivi
             }
             else if (kynttilat != null && kynttilat.Toimi(p)) { }
             else if (OnttoLahella(p)) Koputa(p);
+            else if (Tikkaat(p) is (Vector3 tAla, Vector3 tYla, Vector3 tSuunta, bool tYlh)) p.AloitaKiipeily(tAla, tYla, tSuunta, tYlh);
         }
 
         void Poimi(SeikkailuPelaaja p, Esine e)
