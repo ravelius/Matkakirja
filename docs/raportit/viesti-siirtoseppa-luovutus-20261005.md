@@ -7,6 +7,17 @@ Worktreet: /Users/Shared/Claude/wt/proto-siirtoseppa-*. Käännös vain Julkaisi
 (oma UDID D5900D45 = siirtoseppa-iPad13, TYHJENNETTY 19.0x, appit asennettava uudelleen). Ei detachia simupaneelista.
 Oikeat tapit: lokit/siirtoseppa-alo/.sk (simkosketus, käännä tarvittaessa tyokalut/todistusajo/simkosketus.m).
 
+## TILA 7.10. 07.0x
+
+- **Juna 156 VIE:ssä/TF:ssä** (36b8a852). Linnan osoitin v41 1a1857e0.
+- **eleet-2 = cb9abbe9** (wt/proto-siirtoseppa-face): puolilähikuva + kääntyminen (+ ilman paikallaan olevaa kuulijaa kameraan, cb9abbe9
+  ajamatta) + alarivi datasta + valaistus.sumu + huonevalintakorjaus. Ajettu ed5a5e89 (=74daa410) iPhone+iPad: lokit/siirtoseppa-vuoro-eleet2/.
+  Kappeli OK, keittiössä kokki selin → cb9abbe9. Seuraava: käännös cb9abbe9 + vertailu uudelleen.
+- **Äänimaisema**: aanimaisema-157koe eaf80559 (= aanimaisema addb799b + LS1 sallitut-157; opas vaihda -testikomento). Ajo 4
+  (lokit/siirtoseppa-aanimaisema4): Pariisi + Venetsia + Kööpenhamina soivat, lennot −30 dB. Kello jäi tallenteen ulkopuolelle →
+  ajo-aanimaisema.sh korjattu (kello Notre-Damen jälkeen). Juna 157 -ehdokas; merge-pyyntö Natiivisepälle kun kello todennettu.
+- **Kielletty**: v4 (2851289d) kuvat lokit/siirtoseppa-vuoro-eleet2/kielletty/{iphone,ipad}/, v4b (14aa3229) lokit/siirtoseppa-kielletty-v4b/ipad/.
+
 ## TILA 7.10. 05.0x
 
 - **Juna 156 = siirtoseppa/linna-valinta 36b8a852** (Päätoimittaja kuittasi d5959026:n tilalle): + savu 156:n huonevalintavika
