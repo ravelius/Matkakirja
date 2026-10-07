@@ -10,7 +10,8 @@ ja natiiviseppa-tila-20261003.md. Kytke Remote Control päälle. Kerro Julkaisij
 Juna-SHA:t vain PÄÄTOIMITTAJAN kuittauksella; käännökset Julkaisijan NYT-viestillä. EI savua/Laitetestaajaa/stillejä ennen junaa
 (omistaja 15.5x), EI roolien omia käännöksiä (16.0x), enintään 2 junaa/pv ellei omistaja pyydä.
 
-**JUNA 162 VIETY 21.46: BUILD 162 = proto master 30fbc3748a19e96b369d1ae82617d181b019b570** (juna/b13 c076765c → f524d89ba, juna.log
+**JUNA 162 VALMIS: BUILD 162 = proto master 30fbc3748a19e96b369d1ae82617d181b019b570; iOS TF 162 (37669475818) ja Mac TF 162
+(37671078899, build 162) LADATTU ~22.04.** (juna/b13 c076765c → f524d89ba, juna.log
 kirjattu; käännös 6059542ee; tf162-lupa kirjoitettu → Julkaisijan odottaja käynnisti iOS TF 162:n, ajo 18:47Z käynnissä).
 Mac TF 162: irrotettu odottaja lokit/natiiviseppa-skriptit/mac-tf-162-odottaja.sh käynnistää mac-tf.sh 30fbc374 162, kun iOS TF onnistuu;
 tila lokit/natiiviseppa-mac-tf-vahti.txt + gh run list proto3d-mac-testflight. Tarkista tulos ja ilmoita Julkaisijalle + Päätoimittajalle.
