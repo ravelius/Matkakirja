@@ -28,8 +28,8 @@ aikaan; ei omia natiivikäännöksiä; kuittaus = peili + yksi rivi (ei stillej�
   _valmiit/olavinlinna-blender-v41/ulkokuori/ulkokuori_huippu.glb <v44>/tilat/laituri.glb $PWD/v2; rsync v2/ → v44/kavely/.
   Kappelin leivontapaketti: node scratch/rakenna_kappeli.mjs <paketti>. maalaukset.py ajetaan venv-rembg/bin/python:lla.
 - JONO (Päätoimittaja 7.10. 19.4x, PELATTAVUUSMALLI mainissa #4163: docs/raportit/pelattavuusmalli-olavinlinna.md, järjestys
-  kohdan 12 sarakkeesta): (1) pinnat (kohta 2.2: puu, olki, sora, vesi `pinta:`-merkkeinä kavely.py:ssä); (2) merkit (portinvartija,
-  renki, tarjotin, patapino, torkkuva vartija, porraskomero, hiilipannu, reitti:pelaaja-*); (3) tyrmä E 101 karkeana; (4) huone 6:
+  kohdan 12 sarakkeesta): (1)+(2) PINNAT JA MERKIT TEHTY v44m (eb8b9c55f5c22795, kavely.py PINTA + PELI + REITTI, kaytava(komero=));
+  puuttuu: mallit esine-tarjotin/patapino/hiilipannu (esineet-v1), olki-pinnat tyrmään; (3) tyrmä E 101 karkeana; (4) huone 6:
   naulakko (esiliina + myssy) Tott-kammion puolelle Linnantuvan oven viereen + takan hiillos Tott-kammioon; (5) huoneet 7–8
   (huone 7 = muurikäytävä, EI kierreporrasta; pako = köysilasku kalliolle). Huone 6:n REITTI (Päätoimittaja): kappelin kaari-ovesta
   SAMOJA muuriportaita alas Tott-kammioon ja sen ovesta Linnantupaan (L2, L15); EI uutta käytävää.
