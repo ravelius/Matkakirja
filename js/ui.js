@@ -198,6 +198,8 @@ import { avaaEsittelylinssit, esittelylinssitAuki, lataaApuraha } from './apurah
 import { pohjatLataaTyyli, luoPohjaGalleria } from './pohjat/pohjat.js';
 import { lahetaKaynti } from './kaynti.js';
 // Kävijälaskurin versio: sama APP_VERSION-teksti kuin versiorivillä (#app-version), luetaan sivulta.
+/** Apurahakortin Palaute ja mukaan -osio (omistaja 7.10.2026: pois apurahakierroksen ajaksi; palautus yhdellä rivillä). */
+const APURAHA_PALAUTE = false;
 const APURAHA_VERSIO = () => globalThis.document?.getElementById('app-version')?.textContent ?? '';
 import { kortinKuvalahde, taytaLahderivi } from './tekijakortti.js';
 // Tietäjätasot: matkalaukun nimikerivi ja pöllön onnittelukuplat.
@@ -2329,6 +2331,7 @@ function puePohjaKortiksi(kortti, { otsikko = null, sulje = null } = {}) {
   }
   for (const e of kortti.querySelectorAll('.apuraha-lista')) e.className = 'tk-leipa tk-lista';
   for (const e of kortti.querySelectorAll('.apuraha-toiminto')) e.className = 'tk-nappi tk-nappi--toiminto';
+  for (const e of kortti.querySelectorAll('.apuraha-upotus')) e.className = 'tk-kuva tk-kuva--upotus tk-kuva--suurennettava';
   if (sulje) sulje.className = 'tk-nappi tk-nappi--haamu tk-nappi--levea';
 }
 
@@ -17757,12 +17760,39 @@ export class UI {
     kortti.appendChild(otsikko);
     if (esittely.alaotsikko) kortti.appendChild(html('p', 'apuraha-alaotsikko', esittely.alaotsikko));
 
+    // Kaikki kuvat suurennoksen selaukseen kortin järjestyksessä (kappaleiden kuvat, sitten loppurivi).
+    const kaikkiKuvat = [...esittely.kappaleet.flatMap((k) => k.kuvat ?? []), ...esittely.kuvat];
+    const lista = kaikkiKuvat.map((k) => ({ src: k.tiedosto, caption: k.teksti || '' }));
+    const pikkukuva = (k, luokka) => {
+      const b = html('button', luokka);
+      b.type = 'button';
+      b.setAttribute('aria-label', k.teksti || `Kuva ${kaikkiKuvat.indexOf(k) + 1}`);
+      const img = html('img');
+      img.src = k.tiedosto;
+      img.alt = k.teksti || '';
+      img.loading = 'lazy';
+      // Pikkukuvan painopiste (esittely.json "rajaus", esim. radion paneeli alhaalla: "50% 90%").
+      if (typeof k.rajaus === 'string' && /^\d{1,3}% \d{1,3}%$/.test(k.rajaus)) img.style.objectPosition = k.rajaus;
+      b.appendChild(img);
+      b.addEventListener('click', () => this.openLightbox(null, k.teksti || '', k.tiedosto, lista));
+      return b;
+    };
+
     for (const k of esittely.kappaleet) {
       if (k.otsikko) kortti.appendChild(html('h3', 'periaate-valiotsikko', k.otsikko));
+      // Kuva pienenä kappaleensa vieressä (omistaja 7.10.2026 klo 14.5x, esittely.json "kappale"); teksti kiertää kuvan.
+      // Listakappaleessa "rivi" vie kuvan listan rivin viereen (Olavinlinna-rivi), muuten kappaleen alkuun.
+      const riville = (kuva) => k.lista?.length && Number.isInteger(kuva.rivi) && kuva.rivi >= 0 && kuva.rivi < k.lista.length;
+      for (const kuva of (k.kuvat ?? []).filter((x) => !riville(x))) kortti.appendChild(pikkukuva(kuva, 'apuraha-upotus'));
       if (k.teksti) kortti.appendChild(html('p', `periaate-teksti apuraha-teksti${k.korostus ? ' apuraha-teksti--korostus' : ''}`, k.teksti));
       if (k.lista?.length) {
         const ol = html('ol', 'apuraha-lista');
-        for (const r of k.lista) ol.appendChild(html('li', null, r));
+        k.lista.forEach((r, i) => {
+          const li = html('li', null);
+          for (const kuva of (k.kuvat ?? []).filter((x) => riville(x) && x.rivi === i)) li.appendChild(pikkukuva(kuva, 'apuraha-upotus'));
+          li.appendChild(document.createTextNode(r));
+          ol.appendChild(li);
+        });
         kortti.appendChild(ol);
       }
       if (k.nappi?.toiminto === 'esittelylinssit') {
@@ -17795,23 +17825,10 @@ export class UI {
     }
 
     if (esittely.kuvat.length) {
+      // Kuvat ilman kappaletta kortin loppuun riviksi kuten ennen versiota 7.
       const rivi = html('div', 'apuraha-kuvat');
       rivi.style.setProperty('--apuraha-kuvia', String(esittely.kuvat.length));
-      const lista = esittely.kuvat.map((k) => ({ src: k.tiedosto, caption: k.teksti || '' }));
-      esittely.kuvat.forEach((k, i) => {
-        const b = html('button', 'apuraha-kuva');
-        b.type = 'button';
-        b.setAttribute('aria-label', k.teksti || `Kuva ${i + 1}`);
-        const img = html('img');
-        img.src = k.tiedosto;
-        img.alt = k.teksti || '';
-        img.loading = 'lazy';
-        // Pikkukuvan painopiste (esittely.json "rajaus", esim. radion paneeli alhaalla: "50% 90%").
-        if (typeof k.rajaus === 'string' && /^\d{1,3}% \d{1,3}%$/.test(k.rajaus)) img.style.objectPosition = k.rajaus;
-        b.appendChild(img);
-        b.addEventListener('click', () => this.openLightbox(null, k.teksti || '', k.tiedosto, lista));
-        rivi.appendChild(b);
-      });
+      for (const k of esittely.kuvat) rivi.appendChild(pikkukuva(k, 'apuraha-kuva'));
       kortti.appendChild(rivi);
     }
 
@@ -17827,7 +17844,8 @@ export class UI {
         + `${LIPPU_TEKIJAT.map((l) => `${l.tekija} (${l.lisenssi})`).join(', ')}.`;
       kortti.appendChild(lippurivi);
     }
-    kortti.appendChild(this.periaatePalaute());
+    // Palaute ja mukaan -osio pois apurahakierroksen ajaksi (omistaja 7.10.2026 klo 14.5x); palautus: APURAHA_PALAUTE = true.
+    if (APURAHA_PALAUTE) kortti.appendChild(this.periaatePalaute());
     const oikeudet = html('p', 'periaate-oikeudet', PERIAATTEET.oikeudet);
     kortti.appendChild(oikeudet);
 
