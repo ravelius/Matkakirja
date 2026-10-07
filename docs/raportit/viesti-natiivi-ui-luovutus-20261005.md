@@ -16,9 +16,8 @@ palautetta koosta, säädä KorostusKoko / KuvaKoko.
 ## 7.10. klo 22.1x: KUVIEN TEKIJÄT ☰ LÄHTEET -NÄKYMÄÄN (omistaja 22.5x, Päätoimittaja hyväksyi; juna 164)
 
 natiivi-ui/opas-lahteet 48878725 (a27f2e2c:n päällä, worktree wt/proto-natiivi-ui-otsikko): oppaan ☰ "Lähteet ›" -alanäkymä
-(Kartta- ja maastoaineistot + kuvien tekijät kohteittain). ODOTTAA LS1:n OpasSovitin.KuvaLahteet-luetteloa (pyydetty 22.1x:
-IReadOnlyList<(string Kohde, string Tekija, string Lisenssi, bool Havainnekuva)>); luetaan heijastuksella. Kun LS1 vastaa:
-tarkista nimi/muoto, testit, 1 rivin kuittaus Päätoimittajalta → SHA Natiivisepälle LS1:n kortin alarivin poiston parina.
+(Kartta- ja maastoaineistot + kuvien tekijät kohteittain). LS1:n KuvaLahteet valmis (linssiseppa/kortti-teksti 7c4122bc9),
+koeyhdistäminen puhdas, testit läpi; KUITTAUSPYYNTÖ Päätoimittajalla 22.2x → kuittauksen jälkeen SHA Natiivisepälle junaan 164.
 
 ## HUOMINEN 8.10.: PELATTAVUUSMALLI (Päätoimittaja 7.10. 19.1x, main #4163 docs/raportit/pelattavuusmalli-olavinlinna.md)
 
