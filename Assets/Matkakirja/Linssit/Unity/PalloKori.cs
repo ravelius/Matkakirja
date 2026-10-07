@@ -6,6 +6,12 @@
 // pysyvät vakaina, koska vain overlay-kameran lapset kääntyvät. Kiihtyvyys kaupunkikameran paikasta (2. derivaatta,
 // alipäästö); origon siirto (siirtymä toiseen paikkaan) nollaa historian.
 // PAIKKAMERKKI: laatikot ja sylinterit PalloKori-varjostimella, kunnes Linnanrakentajan GLB (kori + 2 köyttä) tulee.
+// ÄÄNET (Päätoimittaja 7.10. 09.2x): ylhäällä lähes hiljaista; korin narina ja köysien kiristys säästeliäästi vain nopeissa
+// siirtymissä (kiihtyvyys yli NarinaKiihtyvyys, vähintään NarinaValiS välein), nousun alussa lyhyt liekin humahdus ja laskun
+// alussa kankaan huokaus. Kaupungin äänimaisema korkeuden mukaan Siirtosepän KaupunkiAanimaisemaSoitin.Kamera-Funcilla
+// (heijastus, kunnes siirtoseppa/aanimaisema on mainissa). Leikkeet Resources/Aanet/Pallokori: eleven-* (ElevenLabs-ääniefektit,
+// omistajan kokeilulupa) ja kirjasto-* (PD/CC0; lähteet proto-3d/_lahteet/pallokori-aanet/*/LAHTEET.md); A/B `opas kori aanet
+// eleven|kirjasto` (puuttuva kirjastoääni → eleven).
 // A/B: komento `opas kori 0|1`.
 using Matkakirja.Linssit.Kierros;
 using UnityEngine;
@@ -19,6 +25,12 @@ namespace Matkakirja.Natiivi
         public const int Kerros = 16;
         /// <summary>A/B (komento `opas kori 0|1`); kaupunkitilassa oletuksena päällä tässä kokeessa.</summary>
         public static bool Paalla = true;
+        /// <summary>Äänisarja (A/B): "eleven" tai "kirjasto".</summary>
+        public static string AaniSarja = "eleven";
+        public const float NarinaKiihtyvyys = 1.2f, NarinaValiS = 9f, PystyRaja = 1.8f, PystyValiS = 6f, Voimakkuus = 0.55f;
+        AudioSource aani;
+        float viimeNarina = -100f, viimeLiekki = -100f, viimeHuokaus = -100f;
+        int pystySuunta;
         /// <summary>Etäisyys kamerasta korin etureunaan (m); näkymäkulma ratkaisee koon.</summary>
         const float EtaisyysM = 0.8f;
         /// <summary>Korin reunan yläreuna ruudun alalaidasta, osuutena ruudun korkeudesta (Päätoimittaja: ~12 %).</summary>
@@ -61,7 +73,8 @@ namespace Matkakirja.Natiivi
             }
             if (overlay != null) Object.Destroy(overlay.gameObject);
             foreach (var m in new[] { punos, nahka, koysi }) if (m != null) Object.Destroy(m);
-            overlay = null; juuri = null; perus = null; punos = nahka = koysi = null; fov = aspect = -1;
+            KytkeAanimaisema(false);
+            overlay = null; juuri = null; perus = null; punos = nahka = koysi = null; fov = aspect = -1; aani = null;
         }
 
         void Luo(Camera kamera)
@@ -87,6 +100,38 @@ namespace Matkakirja.Natiivi
             koriKaanto.SetParent(juuri, false);
             koysiKaanto = new GameObject("Köysien kääntö") { layer = Kerros }.transform;
             koysiKaanto.SetParent(juuri, false);
+            aani = go.AddComponent<AudioSource>();
+            aani.playOnAwake = false; aani.spatialBlend = 0f; aani.loop = false;
+            KytkeAanimaisema(true);
+        }
+
+        static AudioClip Leike(string nimi)
+        {
+            AudioClip c = null;
+            if (AaniSarja == "kirjasto") c = Resources.Load<AudioClip>("Aanet/Pallokori/kirjasto-" + nimi);
+            return c != null ? c : Resources.Load<AudioClip>("Aanet/Pallokori/eleven-" + nimi);
+        }
+
+        void Soita(string nimi, float taso)
+        {
+            var c = Leike(nimi);
+            if (c == null || aani == null) return;
+            aani.PlayOneShot(c, Voimakkuus * taso);
+            Debug.Log($"MATKAKIRJA kaupunki: kori ääni {nimi} ({AaniSarja}, {taso:F2})");
+        }
+
+        /// <summary>Kaupungin äänimaisema seuraa korin korkeutta (Siirtosepän staattinen Func; heijastus, jotta kääntyy ilman sitä).</summary>
+        void KytkeAanimaisema(bool paalle)
+        {
+            var t = typeof(PalloKori).Assembly.GetType("Matkakirja.Natiivi.KaupunkiAanimaisemaSoitin");
+            var f = t?.GetField("Kamera", System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Static);
+            if (f == null || f.FieldType != typeof(System.Func<(double, double, double, double)?>)) return;
+            f.SetValue(null, paalle ? (System.Func<(double, double, double, double)?>)(() =>
+            {
+                if (!kaytossa || perus == null) return null;
+                double korkeus = System.Math.Max(0, perus.transform.position.y);   // origo kohteen maassa (SiirraOrigo)
+                return (korkeus, (double)edNopeus.magnitude, 0d, 0d);
+            }) : null);
         }
 
         static Material Materiaali(Shader sh, Color c, float kuvio, Vector4 toisto)
@@ -133,6 +178,26 @@ namespace Matkakirja.Natiivi
             var r = g.GetComponent<MeshRenderer>(); r.sharedMaterial = koysi; r.shadowCastingMode = ShadowCastingMode.Off; r.receiveShadows = false;
         }
 
+        void Aanet(float vaakaKiihtyvyys, float pystyNopeus)
+        {
+            float nyt = Time.unscaledTime;
+            if (historia < 2) return;
+            if (vaakaKiihtyvyys > NarinaKiihtyvyys && nyt - viimeNarina > NarinaValiS)
+            {
+                viimeNarina = nyt;
+                float taso = Mathf.Clamp01((vaakaKiihtyvyys - NarinaKiihtyvyys) / 4f) * 0.6f + 0.4f;
+                Soita("korin-narina", taso);
+                Soita("koyden-kiristys", taso * 0.7f);
+            }
+            int suunta = pystyNopeus > PystyRaja ? 1 : pystyNopeus < -PystyRaja ? -1 : 0;
+            if (suunta != 0 && suunta != pystySuunta)
+            {
+                if (suunta > 0 && nyt - viimeLiekki > PystyValiS) { viimeLiekki = nyt; Soita("liekin-humahdus", 0.8f); }
+                if (suunta < 0 && nyt - viimeHuokaus > PystyValiS) { viimeHuokaus = nyt; Soita("kankaan-huokaus", 0.7f); }
+            }
+            pystySuunta = suunta;
+        }
+
         /// <summary>Kaupunkikameran lopullinen asento tässä kehyksessä: kiihtyvyys ja korin kulmat ennen piirtoa.</summary>
         void EnnenPiirtoa(ScriptableRenderContext _, Camera c)
         {
@@ -151,7 +216,9 @@ namespace Matkakirja.Natiivi
             if (eteen.sqrMagnitude < 1e-6f) eteen = Vector3.ProjectOnPlane(perus.transform.up, Vector3.up);
             eteen.Normalize();
             Vector3 oikea = Vector3.Cross(Vector3.up, eteen);
-            liike.Paivita(dt, Vector3.Dot(kiihtyvyys, eteen), Vector3.Dot(kiihtyvyys, oikea));
+            float aEteen = Vector3.Dot(kiihtyvyys, eteen), aOikea = Vector3.Dot(kiihtyvyys, oikea);
+            liike.Paivita(dt, aEteen, aOikea);
+            Aanet(new Vector2(aEteen, aOikea).magnitude, v.y);
             koriKaanto.localRotation = Quaternion.Euler((float)liike.Nyokkays, 0, -(float)liike.Kallistus);
             koysiKaanto.localRotation = Quaternion.Euler((float)liike.KoysiNyokkays, 0, -(float)liike.KoysiKallistus);
         }
