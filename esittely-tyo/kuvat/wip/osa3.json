@@ -3,7 +3,7 @@
   "kohde_id": "Q188856",
   "tekstilaji": "teksti",
   "ankkuri": "kansakunnan suurmiesten hautapaikan",
-  "kuvateksti": "Suurmiehille kiitollinen isänmaa päätykolmion kirjoituksessa",
+  "kuvateksti": "Suurmiehille kiitollinen isänmaa Panthéonin julkisivulla",
   "commons_tiedosto": "File:Fronton Panthéon Paris Dome chapiteaux.jpg",
   "url": "https://commons.wikimedia.org/wiki/File:Fronton_Panthéon_Paris_Dome_chapiteaux.jpg",
   "lisenssi": "Public domain",
@@ -11,7 +11,9 @@
   "leveys": 5072,
   "korkeus": 3457,
   "tarkistettu": true,
-  "perustelu": "Katsoin pikkukuvan: Panthéonin päätykolmio ja kupoli alhaalta, ja arkkitraavissa lukee selvästi AUX GRANDS HOMMES LA PATRIE RECONNAISSANTE. Juuri tämä kirjoitus tekee rakennuksesta kansakunnan suurmiesten hautapaikan, joten kuva osuu ankkuriin kirjaimellisesti."
+  "perustelu": "Katsoin pikkukuvan: Panthéonin päätykolmio ja kupoli alhaalta, ja arkkitraavissa lukee selvästi AUX GRANDS HOMMES LA PATRIE RECONNAISSANTE. Juuri tämä kirjoitus tekee rakennuksesta kansakunnan suurmiesten hautapaikan, joten kuva osuu ankkuriin kirjaimellisesti.",
+  "tarkistaja": "B",
+  "tarkistus": "KORJAA"
  },
  {
   "kohde_id": "Q188856",
@@ -25,7 +27,9 @@
   "leveys": 4869,
   "korkeus": 3665,
   "tarkistettu": true,
-  "perustelu": "Katsoin pikkukuvan: lähikuva kiiltävästä messinkipallosta vaijerin päässä, alla lasinen suojataso ja marmorilattian säteittäinen kuvio. Ei turisteja edessä, joten heiluri on heti tunnistettavissa."
+  "perustelu": "Katsoin pikkukuvan: lähikuva kiiltävästä messinkipallosta vaijerin päässä, alla lasinen suojataso ja marmorilattian säteittäinen kuvio. Ei turisteja edessä, joten heiluri on heti tunnistettavissa.",
+  "tarkistaja": "B",
+  "tarkistus": "OK"
  },
  {
   "kohde_id": "Q188856",
@@ -39,13 +43,15 @@
   "leveys": 2163,
   "korkeus": 1740,
   "tarkistettu": true,
-  "perustelu": "Katsoin pikkukuvan: aikalaisvalokuva, jossa Pierre ja Marie Curie työskentelevät mittauslaitteiden ääressä karun tiiliseinän edessä. Vaatimaton tila vastaa tekstin vuotavaa laboratoriovajaa."
+  "perustelu": "Katsoin pikkukuvan: aikalaisvalokuva, jossa Pierre ja Marie Curie työskentelevät mittauslaitteiden ääressä karun tiiliseinän edessä. Vaatimaton tila vastaa tekstin vuotavaa laboratoriovajaa.",
+  "tarkistaja": "B",
+  "tarkistus": "OK"
  },
  {
   "kohde_id": "Q193193",
   "tekstilaji": "teksti",
   "ankkuri": "kappelin orjantappurakruunulle",
-  "kuvateksti": "Orjantappurakruunun pyhäinjäännösholkki vuodelta 1862",
+  "kuvateksti": "Orjantappurakruunun relikvaario vuodelta 1862",
   "commons_tiedosto": "File:Reliquaire de la Couronne d'Épines (1862).jpg",
   "url": "https://commons.wikimedia.org/wiki/File:Reliquaire_de_la_Couronne_d'Épines_(1862).jpg",
   "lisenssi": "Public domain",
@@ -53,7 +59,9 @@
   "leveys": 2112,
   "korkeus": 2816,
   "tarkistettu": true,
-  "perustelu": "Katsoin pikkukuvan: kullattu reliikkiholkki, jonka lasisylinterissä orjantappurakruunu on näkyvissä ja jalustalla istuu Ludvig yhdeksäs kruunu kädessään. Selvästi pystysuuntainen esine, rajautuu hyvin."
+  "perustelu": "Katsoin pikkukuvan: kullattu reliikkiholkki, jonka lasisylinterissä orjantappurakruunu on näkyvissä ja jalustalla istuu Ludvig yhdeksäs kruunu kädessään. Selvästi pystysuuntainen esine, rajautuu hyvin.",
+  "tarkistaja": "B",
+  "tarkistus": "KORJAA"
  },
  {
   "kohde_id": "Q193193",
@@ -67,7 +75,9 @@
   "leveys": 8567,
   "korkeus": 5711,
   "tarkistettu": true,
-  "perustelu": "Katsoin pikkukuvan: yläkappelin sisätila, jossa seinät ovat lähes kokonaan lasimaalauksia holvien väliin. Vaakakuva, ei ihmisiä eikä tekstiä, näyttää täsmälleen sen mitä teksti sanoo seinistä."
+  "perustelu": "Katsoin pikkukuvan: yläkappelin sisätila, jossa seinät ovat lähes kokonaan lasimaalauksia holvien väliin. Vaakakuva, ei ihmisiä eikä tekstiä, näyttää täsmälleen sen mitä teksti sanoo seinistä.",
+  "tarkistaja": "B",
+  "tarkistus": "OK"
  },
  {
   "kohde_id": "Q188977",
@@ -81,7 +91,9 @@
   "leveys": 2027,
   "korkeus": 3040,
   "tarkistettu": true,
-  "perustelu": "Katsoin pikkukuvan: kullattu kupoli, lyhty ja risti auringossa sinistä taivasta vasten, lehtikullan koristeet erottuvat. Pystykuva sopii, koska kohde on korkeussuuntainen; kuvassa on ohut vaalea kehysviiva, ei vesileimaa."
+  "perustelu": "Katsoin pikkukuvan: kullattu kupoli, lyhty ja risti auringossa sinistä taivasta vasten, lehtikullan koristeet erottuvat. Pystykuva sopii, koska kohde on korkeussuuntainen; kuvassa on ohut vaalea kehysviiva, ei vesileimaa.",
+  "tarkistaja": "B",
+  "tarkistus": "OK"
  },
  {
   "kohde_id": "Q188977",
@@ -95,7 +107,9 @@
   "leveys": 1117,
   "korkeus": 749,
   "tarkistettu": true,
-  "perustelu": "Katsoin pikkukuvan: aikalaiskaiverrus, jossa väkijoukko ryntää Invalidien esplanadille, taustalla laitoksen julkisivu ja kullattu kupoli. Tiiviisti rajattu, ei paperimarginaaleja eikä kuvatekstiä."
+  "perustelu": "Katsoin pikkukuvan: aikalaiskaiverrus, jossa väkijoukko ryntää Invalidien esplanadille, taustalla laitoksen julkisivu ja kullattu kupoli. Tiiviisti rajattu, ei paperimarginaaleja eikä kuvatekstiä.",
+  "tarkistaja": "B",
+  "tarkistus": "OK"
  },
  {
   "kohde_id": "Q188977",
@@ -109,7 +123,9 @@
   "leveys": 1600,
   "korkeus": 1200,
   "tarkistettu": true,
-  "perustelu": "Katsoin pikkukuvan: punaruskea sarkofagi vihreällä graniittijalustalla pyöreässä kryptassa, ympärillä valkoiset voitottaret ja seppelemosaiikki. Kuvattu ylhäältä kaiteen takaa, joten koko hautakammio hahmottuu."
+  "perustelu": "Katsoin pikkukuvan: punaruskea sarkofagi vihreällä graniittijalustalla pyöreässä kryptassa, ympärillä valkoiset voitottaret ja seppelemosaiikki. Kuvattu ylhäältä kaiteen takaa, joten koko hautakammio hahmottuu.",
+  "tarkistaja": "B",
+  "tarkistus": "OK"
  },
  {
   "kohde_id": "Q390418",
@@ -123,7 +139,9 @@
   "leveys": 1944,
   "korkeus": 2592,
   "tarkistettu": true,
-  "perustelu": "Katsoin pikkukuvan: sillan koillispylväs ja sen huipulla kullattu Renommée-pegasos, joka kimaltaa pilvistä taivasta vasten. Alareunassa näkyy joen proomuja, mutta patsas ja pylväs hallitsevat kuvaa."
+  "perustelu": "Katsoin pikkukuvan: sillan koillispylväs ja sen huipulla kullattu Renommée-pegasos, joka kimaltaa pilvistä taivasta vasten. Alareunassa näkyy joen proomuja, mutta patsas ja pylväs hallitsevat kuvaa.",
+  "tarkistaja": "B",
+  "tarkistus": "OK"
  },
  {
   "kohde_id": "Q390418",
@@ -137,7 +155,9 @@
   "leveys": 4153,
   "korkeus": 2664,
   "tarkistettu": true,
-  "perustelu": "Katsoin pikkukuvan: aikalaisvalokuva vuoden 1900 maailmannäyttelystä, matala kaari, neljä pylvästä kullattuine patsaineen ja ajan pukuihin pukeutuva väkijoukko. Alareunassa on vaalea aikalaiskuvateksti, joka jää pienessä koossa huomaamattomaksi."
+  "perustelu": "Katsoin pikkukuvan: aikalaisvalokuva vuoden 1900 maailmannäyttelystä, matala kaari, neljä pylvästä kullattuine patsaineen ja ajan pukuihin pukeutuva väkijoukko. Alareunassa on vaalea aikalaiskuvateksti, joka jää pienessä koossa huomaamattomaksi.",
+  "tarkistaja": "B",
+  "tarkistus": "OK"
  },
  {
   "kohde_id": "Q390418",
@@ -151,6 +171,8 @@
   "leveys": 4000,
   "korkeus": 2672,
   "tarkistettu": true,
-  "perustelu": "Katsoin pikkukuvan: kaaren keskikohdan pronssiryhmä, kaksi nymfiä ja niiden välissä kullattu Venäjän kaksipäinen kotka. Kirkas sininen taivas, ei häiritseviä nostureita tai ihmisiä."
+  "perustelu": "Katsoin pikkukuvan: kaaren keskikohdan pronssiryhmä, kaksi nymfiä ja niiden välissä kullattu Venäjän kaksipäinen kotka. Kirkas sininen taivas, ei häiritseviä nostureita tai ihmisiä.",
+  "tarkistaja": "B",
+  "tarkistus": "OK"
  }
 ]

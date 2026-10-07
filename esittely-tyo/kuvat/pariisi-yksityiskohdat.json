@@ -8,12 +8,16 @@
   "url": "https://commons.wikimedia.org/wiki/File:Immeuble_haussmannien_à_Paris_(52169315349).jpg",
   "lisenssi": "CC BY 2.0",
   "tekija": "besopha",
-  "leveys": 4829,
-  "korkeus": 3219,
   "tarkistettu": true,
   "perustelu": "Katsoin pikkukuvan: lähikuva haussmannilaisen talon vaaleasta kalkkikivijulkisivusta, takorautaisista parvekkeista ja erkkereistä. Näyttää sen materiaalin, josta tekstin vaalea kiviviuhka syntyy — juuri se mitä 3D-kartan yläkulmasta ei erota.",
   "tarkistaja": "A1",
-  "tarkistus": "OK"
+  "tarkistus": "OK",
+  "media_tiedosto": "esittely/pariisi-v1/kuvat/499ce92b73702a61.jpg",
+  "media_url": "https://media.matkakirja.app/esittely/pariisi-v1/kuvat/499ce92b73702a61.jpg",
+  "paketti_leveys": 1280,
+  "paketti_korkeus": 853,
+  "alkuperainen_leveys": 4829,
+  "alkuperainen_korkeus": 3219
  },
  {
   "kohde_id": "avaus",
@@ -24,12 +28,16 @@
   "url": "https://commons.wikimedia.org/wiki/File:Paris_(75004)_Cathédrale_Notre-Dame_Façade_occidentale_2015-08-02.jpg",
   "lisenssi": "CC BY 4.0",
   "tekija": "Vanessa",
-  "leveys": 2448,
-  "korkeus": 3264,
   "tarkistettu": true,
   "perustelu": "Katsoin pikkukuvan: alaviistosta otettu rajaus länsijulkisivusta, jossa näkyvät molemmat tornit, ruusuikkuna, kuningasgalleria ja portaalien veistokset. Pystykuva, mutta kohde on selvästi pystysuuntainen. Osuu ankkuriin keskiaikaisena rakennustyönä.",
   "tarkistaja": "A1",
-  "tarkistus": "OK"
+  "tarkistus": "OK",
+  "media_tiedosto": "esittely/pariisi-v1/kuvat/532a8a7922e7e87b.jpg",
+  "media_url": "https://media.matkakirja.app/esittely/pariisi-v1/kuvat/532a8a7922e7e87b.jpg",
+  "paketti_leveys": 1280,
+  "paketti_korkeus": 1707,
+  "alkuperainen_leveys": 2448,
+  "alkuperainen_korkeus": 3264
  },
  {
   "kohde_id": "Q243",
@@ -40,12 +48,16 @@
   "url": "https://commons.wikimedia.org/wiki/File:Eiffel_Tower_and_Champ_de_Mars_seen_from_Trocadéro_Palace,_Paris_Exposition,_1889.jpg",
   "lisenssi": "Public domain",
   "tekija": "Tuntematon tekijä",
-  "leveys": 3144,
-  "korkeus": 2534,
   "tarkistettu": true,
   "perustelu": "Katsoin pikkukuvan: aikalaisvalokuva Trocadérolta 1889, jossa torni seisoo näyttelypaviljonkien ja suihkulähteiden keskellä. Vaakakuva, ei vesileimaa. Aikalaiskuva historialliseen faktaan, kuten ohje vaatii.",
   "tarkistaja": "A1",
-  "tarkistus": "OK"
+  "tarkistus": "OK",
+  "media_tiedosto": "esittely/pariisi-v1/kuvat/1258c60e9f6bf7b9.jpg",
+  "media_url": "https://media.matkakirja.app/esittely/pariisi-v1/kuvat/1258c60e9f6bf7b9.jpg",
+  "paketti_leveys": 1280,
+  "paketti_korkeus": 1032,
+  "alkuperainen_leveys": 3144,
+  "alkuperainen_korkeus": 2534
  },
  {
   "kohde_id": "Q243",
@@ -56,12 +68,16 @@
   "url": "https://commons.wikimedia.org/wiki/File:Antennas_at_the_top_of_Eiffel_tower.jpg",
   "lisenssi": "CC BY-SA 3.0",
   "tekija": "Suniltg",
-  "leveys": 800,
-  "korkeus": 581,
   "tarkistettu": true,
   "perustelu": "Katsoin pikkukuvan: alhaalta ylös otettu kuva tornin huipun antennipuomeista ja lähetysantenneista taivasta vasten. Päiväkuva, ei yövalaistusta. Alkuperäinen vain 800 px leveä mutta kohde täyttää kuvan ja erottuu hyvin pienessä koossa.",
   "tarkistaja": "A1",
-  "tarkistus": "OK"
+  "tarkistus": "OK",
+  "media_tiedosto": "esittely/pariisi-v1/kuvat/3d98dcae5bb37f20.jpg",
+  "media_url": "https://media.matkakirja.app/esittely/pariisi-v1/kuvat/3d98dcae5bb37f20.jpg",
+  "paketti_leveys": 800,
+  "paketti_korkeus": 581,
+  "alkuperainen_leveys": 800,
+  "alkuperainen_korkeus": 581
  },
  {
   "kohde_id": "Q243",
@@ -72,12 +88,16 @@
   "url": "https://commons.wikimedia.org/wiki/File:Chasles,_Lavoisier,_Ampere.001_-_Torre_Eiffel.jpg",
   "lisenssi": "CC BY-SA 4.0",
   "tekija": "Fernando Losada Rodríguez",
-  "leveys": 5152,
-  "korkeus": 3864,
   "tarkistettu": true,
   "perustelu": "Katsoin pikkukuvan: kullatut nimet CHASLES, LAVOISIER ja AMPERE näkyvät kaiverrettuina juuri ensimmäisen kerroksen parvekkeen reunuksen alla, alla niitattu rautaristikko. Täsmälleen se yksityiskohta, jonka ankkuri paikantaa.",
   "tarkistaja": "A1",
-  "tarkistus": "OK"
+  "tarkistus": "OK",
+  "media_tiedosto": "esittely/pariisi-v1/kuvat/421ad2909cf9ca81.jpg",
+  "media_url": "https://media.matkakirja.app/esittely/pariisi-v1/kuvat/421ad2909cf9ca81.jpg",
+  "paketti_leveys": 1280,
+  "paketti_korkeus": 960,
+  "alkuperainen_leveys": 5152,
+  "alkuperainen_korkeus": 3864
  },
  {
   "kohde_id": "Q243",
@@ -88,12 +108,16 @@
   "url": "https://commons.wikimedia.org/wiki/File:Louis-Emile_Durandelle,_The_Eiffel_Tower_-_State_of_the_Construction,_1888.jpg",
   "lisenssi": "Public domain",
   "tekija": "Louis-Émile Durandelle",
-  "leveys": 3277,
-  "korkeus": 4169,
   "tarkistettu": true,
   "perustelu": "Katsoin pikkukuvan: Durandellen aikalaisvalokuva 23.11.1888, torni keskeneräisenä rautaritilänä, kokoamistelineet ylhäällä. Näyttää juuri ne irralliset rautaosat, joista torni koottiin. Pystykuva, mutta kohde on selvästi pystysuuntainen.",
   "tarkistaja": "A1",
-  "tarkistus": "OK"
+  "tarkistus": "OK",
+  "media_tiedosto": "esittely/pariisi-v1/kuvat/c9cf3249c22ec4d3.jpg",
+  "media_url": "https://media.matkakirja.app/esittely/pariisi-v1/kuvat/c9cf3249c22ec4d3.jpg",
+  "paketti_leveys": 1280,
+  "paketti_korkeus": 1628,
+  "alkuperainen_leveys": 3277,
+  "alkuperainen_korkeus": 4169
  },
  {
   "kohde_id": "Q243",
@@ -104,8 +128,6 @@
   "url": "https://commons.wikimedia.org/wiki/File:Travaux_de_peinture_à_la_Tour_Eiffel_(deux_peintres_au_travail)_-_btv1b532543124.jpg",
   "lisenssi": "Public domain",
   "tekija": "Agence Rol",
-  "leveys": 8668,
-  "korkeus": 6216,
   "tarkistettu": true,
   "perustelu": "Katsoin pikkukuvan: kaksi maalaria työssä tornin ristikkopalkeilla korkealla Pariisin yllä, toisella maalisanko köydessä. Vaakakuva, terävä. Negatiivin alareunassa on arkiston numerosarja, joka ei ole vesileima vaan osa alkuperäistä lasilevyä.",
   "rajaus": [
@@ -115,7 +137,13 @@
    0.965
   ],
   "tarkistaja": "A1",
-  "tarkistus": "OK"
+  "tarkistus": "OK",
+  "media_tiedosto": "esittely/pariisi-v1/kuvat/653f388fee8062ed.jpg",
+  "media_url": "https://media.matkakirja.app/esittely/pariisi-v1/kuvat/653f388fee8062ed.jpg",
+  "paketti_leveys": 1030,
+  "paketti_korkeus": 854,
+  "alkuperainen_leveys": 8668,
+  "alkuperainen_korkeus": 6216
  },
  {
   "kohde_id": "Q19675",
@@ -126,8 +154,6 @@
   "url": "https://commons.wikimedia.org/wiki/File:Ruins_of_the_Tuileries_Palace_MET_DT5936.jpg",
   "lisenssi": "CC0",
   "tekija": "Isidore Pils",
-  "leveys": 2925,
-  "korkeus": 3722,
   "tarkistettu": true,
   "perustelu": "Katsoin pikkukuvan: Pilsin aikalaisakvarelli, jossa katsotaan palaneen palatsin holvikäytävästä ulos Carrousel-riemukaarelle; katto on poissa ja seinät nokiset. Taiteilijan merkintä Les Tuileries 7 juillet 1871 on osa teosta. Aikalaiskuva paloon.",
   "rajaus": [
@@ -137,7 +163,13 @@
    0.985
   ],
   "tarkistaja": "A1",
-  "tarkistus": "OK"
+  "tarkistus": "OK",
+  "media_tiedosto": "esittely/pariisi-v1/kuvat/f8d55b0b0335d996.jpg",
+  "media_url": "https://media.matkakirja.app/esittely/pariisi-v1/kuvat/f8d55b0b0335d996.jpg",
+  "paketti_leveys": 1216,
+  "paketti_korkeus": 1596,
+  "alkuperainen_leveys": 2925,
+  "alkuperainen_korkeus": 3722
  },
  {
   "kohde_id": "Q19675",
@@ -148,12 +180,16 @@
   "url": "https://commons.wikimedia.org/wiki/File:Façade_en_ruines_des_Tuileries_sur_le_jardins_des_Tuileries,_1er_arrondissement,_Paris,_PH34622.jpg",
   "lisenssi": "CC0",
   "tekija": "Henri Emile Cimarosa Godefroy",
-  "leveys": 3000,
-  "korkeus": 2087,
   "tarkistettu": true,
   "perustelu": "Katsoin pikkukuvan: aikalaisvalokuva raunioituneesta julkisivusta juuri puutarhan puolelta — sama suunta, josta isoisä kameransa asetti. Tyhjät ikkuna-aukot, purkutikkaat ja kiviröykkiöt. Vaakakuva, ei tekstiä kuvassa.",
   "tarkistaja": "A1",
-  "tarkistus": "KORJAA"
+  "tarkistus": "KORJAA",
+  "media_tiedosto": "esittely/pariisi-v1/kuvat/4c2c41896494b64e.jpg",
+  "media_url": "https://media.matkakirja.app/esittely/pariisi-v1/kuvat/4c2c41896494b64e.jpg",
+  "paketti_leveys": 1280,
+  "paketti_korkeus": 890,
+  "alkuperainen_leveys": 3000,
+  "alkuperainen_korkeus": 2087
  },
  {
   "kohde_id": "Q19675",
@@ -164,12 +200,16 @@
   "url": "https://commons.wikimedia.org/wiki/File:Grande_allée_du_jardin_des_Tuileries,_Paris_le_5_mai_2016.jpg",
   "lisenssi": "CC BY 2.0",
   "tekija": "Guilhem Vellut",
-  "leveys": 5472,
-  "korkeus": 3648,
   "tarkistettu": true,
   "perustelu": "Katsoin pikkukuvan: suora näkymä puutarhan keskikäytävää pitkin Louvren suunnasta länteen, puut molemmin puolin ja maailmanpyörä päässä. Nykykuva, joka näyttää juuri sen aukean, jonka palatsi ennen sulki.",
   "tarkistaja": "A1",
-  "tarkistus": "OK"
+  "tarkistus": "OK",
+  "media_tiedosto": "esittely/pariisi-v1/kuvat/a5d2dfb628d8f59d.jpg",
+  "media_url": "https://media.matkakirja.app/esittely/pariisi-v1/kuvat/a5d2dfb628d8f59d.jpg",
+  "paketti_leveys": 1280,
+  "paketti_korkeus": 853,
+  "alkuperainen_leveys": 5472,
+  "alkuperainen_korkeus": 3648
  },
  {
   "kohde_id": "Q19675",
@@ -180,12 +220,16 @@
   "url": "https://commons.wikimedia.org/wiki/File:I.M._Pei_(4x5_cropped).jpg",
   "lisenssi": "Public domain",
   "tekija": "Bernard Gotfryd",
-  "leveys": 1553,
-  "korkeus": 1935,
   "tarkistettu": true,
   "perustelu": "Katsoin pikkukuvan: selkeä värikuva Peistä puhumassa, käsi arkkitehtuuripienoismallin päällä. Henkilö on tässä virkkeen ydin (pyramidin suunnittelija), ja kuva näyttää hänet työssä eikä pelkkänä muotokuvana.",
   "tarkistaja": "A1",
-  "tarkistus": "KORJAA"
+  "tarkistus": "KORJAA",
+  "media_tiedosto": "esittely/pariisi-v1/kuvat/d64a8eb8e18b8f19.jpg",
+  "media_url": "https://media.matkakirja.app/esittely/pariisi-v1/kuvat/d64a8eb8e18b8f19.jpg",
+  "paketti_leveys": 1280,
+  "paketti_korkeus": 1595,
+  "alkuperainen_leveys": 1553,
+  "alkuperainen_korkeus": 1935
  },
  {
   "kohde_id": "Q2981",
@@ -196,12 +240,16 @@
   "url": "https://commons.wikimedia.org/wiki/File:Flèche_en_feu_-_Spire_on_Fire.jpeg",
   "lisenssi": "CC BY-SA 4.0",
   "tekija": "Guillaume Levrier",
-  "leveys": 3712,
-  "korkeus": 5208,
   "tarkistettu": true,
   "perustelu": "Katsoin pikkukuvan: lähikuva palavasta tornihuipusta minuutteja ennen romahdusta, liekit lyövät läpi lyijyverhouksen. Pystykuva, mutta tornihuippu on selvästi pystysuuntainen kohde. Ei vesileimaa.",
   "tarkistaja": "A1",
-  "tarkistus": "OK"
+  "tarkistus": "OK",
+  "media_tiedosto": "esittely/pariisi-v1/kuvat/f9d325bd9551cf8a.jpg",
+  "media_url": "https://media.matkakirja.app/esittely/pariisi-v1/kuvat/f9d325bd9551cf8a.jpg",
+  "paketti_leveys": 1280,
+  "paketti_korkeus": 1796,
+  "alkuperainen_leveys": 3712,
+  "alkuperainen_korkeus": 5208
  },
  {
   "kohde_id": "Q2981",
@@ -212,12 +260,16 @@
   "url": "https://commons.wikimedia.org/wiki/File:La_charpente_de_Notre-Dame_de_Paris,_novembre_2025.jpg",
   "lisenssi": "CC BY-SA 4.0",
   "tekija": "Ibex73",
-  "leveys": 5472,
-  "korkeus": 3648,
   "tarkistettu": true,
   "perustelu": "Katsoin pikkukuvan: uudelleen rakennettu tammikattotuoli sisältä, vaaleat palkit ja niiden kirveellä veistetyt pinnat erottuvat selvästi. Vaakakuva. Osuu suoraan ankkurin kuvaamaan työtapaan.",
   "tarkistaja": "A1",
-  "tarkistus": "OK"
+  "tarkistus": "OK",
+  "media_tiedosto": "esittely/pariisi-v1/kuvat/11a09b22c1984074.jpg",
+  "media_url": "https://media.matkakirja.app/esittely/pariisi-v1/kuvat/11a09b22c1984074.jpg",
+  "paketti_leveys": 1280,
+  "paketti_korkeus": 853,
+  "alkuperainen_leveys": 5472,
+  "alkuperainen_korkeus": 3648
  },
  {
   "kohde_id": "Q2981",
@@ -228,12 +280,16 @@
   "url": "https://commons.wikimedia.org/wiki/File:Point_zéro_des_routes_de_France_à_Paris.jpg",
   "lisenssi": "CC BY-SA 4.0",
   "tekija": "Annick Bregain",
-  "leveys": 6000,
-  "korkeus": 4000,
   "tarkistettu": true,
   "perustelu": "Katsoin pikkukuvan: kahdeksansakarainen pronssinen tuuliruusu kivilaatassa, ympärillä kaiverrus POINT ZÉRO DES ROUTES DE FRANCE ja mukulakivetys. Ei turisteja päällä, kohde täyttää kuvan. Juuri ohjeen vaatima rajaus.",
   "tarkistaja": "A1",
-  "tarkistus": "OK"
+  "tarkistus": "OK",
+  "media_tiedosto": "esittely/pariisi-v1/kuvat/0034f39a3fa63589.jpg",
+  "media_url": "https://media.matkakirja.app/esittely/pariisi-v1/kuvat/0034f39a3fa63589.jpg",
+  "paketti_leveys": 1280,
+  "paketti_korkeus": 853,
+  "alkuperainen_leveys": 6000,
+  "alkuperainen_korkeus": 4000
  },
  {
   "kohde_id": "Q2981",
@@ -244,12 +300,16 @@
   "url": "https://commons.wikimedia.org/wiki/File:Notre_Dame_de_Paris_(1888)_illustr.jpg",
   "lisenssi": "Public domain",
   "tekija": "Aimé de Lemud",
-  "leveys": 1328,
-  "korkeus": 2080,
   "tarkistettu": true,
   "perustelu": "Katsoin pikkukuvan: romaanin nimiösivun kuvitus, jossa Quasimodo kurkistaa ylhäältä ja alla ovat Frollo, Esmeralda vuohineen ja Gringoire. Kuvan teksti on kaiverrettu rakennuksen tauluun eli osa itse teosta, ei päälle lisättyä. Kertoo heti, että kyse on vuoden 1831 romaanista.",
   "tarkistaja": "A1",
-  "tarkistus": "OK"
+  "tarkistus": "OK",
+  "media_tiedosto": "esittely/pariisi-v1/kuvat/981b52f5a00c29c7.jpg",
+  "media_url": "https://media.matkakirja.app/esittely/pariisi-v1/kuvat/981b52f5a00c29c7.jpg",
+  "paketti_leveys": 1280,
+  "paketti_korkeus": 2005,
+  "alkuperainen_leveys": 1328,
+  "alkuperainen_korkeus": 2080
  },
  {
   "kohde_id": "Q2981",
@@ -260,12 +320,16 @@
   "url": "https://commons.wikimedia.org/wiki/File:Chimera_Notre_Dame_Paris.jpg",
   "lisenssi": "CC BY-SA 3.0",
   "tekija": "Lupo",
-  "leveys": 993,
-  "korkeus": 1655,
   "tarkistettu": true,
   "perustelu": "Katsoin pikkukuvan: Le Stryge -khimaira leuka käsien varassa kimeerigallerian kaiteella, taustalla Pariisin katot ja Sacré-Cœur kukkulalla. Juuri se tarunomainen kiviolento, jonka Viollet-le-Duc gallerialle lisäsi.",
   "tarkistaja": "A1",
-  "tarkistus": "OK"
+  "tarkistus": "OK",
+  "media_tiedosto": "esittely/pariisi-v1/kuvat/64a287f4ec9c8d62.jpg",
+  "media_url": "https://media.matkakirja.app/esittely/pariisi-v1/kuvat/64a287f4ec9c8d62.jpg",
+  "paketti_leveys": 993,
+  "paketti_korkeus": 1655,
+  "alkuperainen_leveys": 993,
+  "alkuperainen_korkeus": 1655
  },
  {
   "kohde_id": "Q64436",
@@ -276,12 +340,16 @@
   "url": "https://commons.wikimedia.org/wiki/File:Arc_de_Triomphe_mg_6829_Oudinot_-_Davout_-_Lannes_-_Mortier.jpg",
   "lisenssi": "CC BY-SA 2.0",
   "tekija": "Rama",
-  "leveys": 860,
-  "korkeus": 792,
   "tarkistettu": true,
   "perustelu": "Katsoin pikkukuvan: lähikuva kaaren sisäseinästä, jossa nimet OUDINOT ja DAVOUST ovat ilman viivaa ja LANNES sekä MORTIER alleviivattuina. Näyttää alleviivauksen merkityksen yhdellä silmäyksellä. Pieni mutta kohde täyttää koko kuvan.",
   "tarkistaja": "A1",
-  "tarkistus": "OK"
+  "tarkistus": "OK",
+  "media_tiedosto": "esittely/pariisi-v1/kuvat/ccf72b448d90a8a8.jpg",
+  "media_url": "https://media.matkakirja.app/esittely/pariisi-v1/kuvat/ccf72b448d90a8a8.jpg",
+  "paketti_leveys": 860,
+  "paketti_korkeus": 792,
+  "alkuperainen_leveys": 860,
+  "alkuperainen_korkeus": 792
  },
  {
   "kohde_id": "Q64436",
@@ -292,12 +360,16 @@
   "url": "https://commons.wikimedia.org/wiki/File:Flamme_Arc_triomphe.jpg",
   "lisenssi": "CC0",
   "tekija": "Jebulon",
-  "leveys": 3220,
-  "korkeus": 2074,
   "tarkistettu": true,
   "perustelu": "Katsoin pikkukuvan: pronssinen liekkimalja palaa haudan kivilaatan keskellä, ympärillä seppeleitä ja kivetykseen hakattu teksti alkaa näkyä. Vaakakuva, kohde selvä ja tunnistettava.",
   "tarkistaja": "A2",
-  "tarkistus": "OK"
+  "tarkistus": "OK",
+  "media_tiedosto": "esittely/pariisi-v1/kuvat/48e61cad588b7084.jpg",
+  "media_url": "https://media.matkakirja.app/esittely/pariisi-v1/kuvat/48e61cad588b7084.jpg",
+  "paketti_leveys": 1280,
+  "paketti_korkeus": 824,
+  "alkuperainen_leveys": 3220,
+  "alkuperainen_korkeus": 2074
  },
  {
   "kohde_id": "Q64436",
@@ -308,12 +380,16 @@
   "url": "https://commons.wikimedia.org/wiki/File:Godefroy_flight.jpg",
   "lisenssi": "Public domain",
   "tekija": "Jacques Mortane",
-  "leveys": 1274,
-  "korkeus": 944,
   "tarkistettu": true,
   "perustelu": "Katsoin pikkukuvan: elokuun 1919 aikalaiskuva, jossa kaksitaso lentää keskellä riemukaaren holvia, alla raitiovaunu ja väkeä. Tilanne eikä muotokuva, kuten ohje vaatii henkilöaiheilta.",
   "tarkistaja": "A2",
-  "tarkistus": "OK"
+  "tarkistus": "OK",
+  "media_tiedosto": "esittely/pariisi-v1/kuvat/9b26ed3ab2ec0bf6.jpg",
+  "media_url": "https://media.matkakirja.app/esittely/pariisi-v1/kuvat/9b26ed3ab2ec0bf6.jpg",
+  "paketti_leveys": 1274,
+  "paketti_korkeus": 944,
+  "alkuperainen_leveys": 1274,
+  "alkuperainen_korkeus": 944
  },
  {
   "kohde_id": "Q64436",
@@ -324,12 +400,16 @@
   "url": "https://commons.wikimedia.org/wiki/File:François_Pascal_Simon_Gérard_-_La_bataille_d'Austerlitz._2_decembre_1805.jpg",
   "lisenssi": "Public domain",
   "tekija": "François Gérard",
-  "leveys": 1926,
-  "korkeus": 861,
   "tarkistettu": true,
   "perustelu": "Katsoin pikkukuvan: Gérardin aikalaismaalaus, jossa Napoleon valkoisella hevosella ottaa vastaan vallatut liput taistelukentällä. Hyvin leveä vaakakuva, joka toimii kapeana nostona. Osuu ankkuriin juuri voiton hetkenä.",
   "tarkistaja": "A2",
-  "tarkistus": "OK"
+  "tarkistus": "OK",
+  "media_tiedosto": "esittely/pariisi-v1/kuvat/52222293c7bb116a.jpg",
+  "media_url": "https://media.matkakirja.app/esittely/pariisi-v1/kuvat/52222293c7bb116a.jpg",
+  "paketti_leveys": 1280,
+  "paketti_korkeus": 572,
+  "alkuperainen_leveys": 1926,
+  "alkuperainen_korkeus": 861
  },
  {
   "kohde_id": "Q64436",
@@ -340,12 +420,16 @@
   "url": "https://commons.wikimedia.org/wiki/File:Funerailles_de_l'Empereur_Napoleon.png",
   "lisenssi": "Public domain",
   "tekija": "Paul Joseph Dumouza ja Pierre Frédéric Lehnert",
-  "leveys": 3421,
-  "korkeus": 2453,
   "tarkistettu": true,
   "perustelu": "Katsoin pikkukuvan: aikalaislitografia 15.12.1840, jossa kaaren huipulla seisoo väliaikainen patsasryhmä ja alla kulkee hautavaunu lippujen ja väkijoukon keskellä. Puhdas kuva ilman paspartuuta tai painettua kuvatekstiä.",
   "tarkistaja": "A2",
-  "tarkistus": "OK"
+  "tarkistus": "OK",
+  "media_tiedosto": "esittely/pariisi-v1/kuvat/9788e6ea3cd04f83.jpg",
+  "media_url": "https://media.matkakirja.app/esittely/pariisi-v1/kuvat/9788e6ea3cd04f83.jpg",
+  "paketti_leveys": 1280,
+  "paketti_korkeus": 918,
+  "alkuperainen_leveys": 3421,
+  "alkuperainen_korkeus": 2453
  },
  {
   "kohde_id": "Q28785",
@@ -356,12 +440,16 @@
   "url": "https://commons.wikimedia.org/wiki/File:Detail_of_Basilique_du_Sacré-Cœur_de_Montmartre_(49462523211).jpg",
   "lisenssi": "CC BY-SA 2.0",
   "tekija": "Gabriel de Andrade Fernandes",
-  "leveys": 2607,
-  "korkeus": 1955,
   "tarkistettu": true,
   "perustelu": "Katsoin pikkukuvan: lähikuva basilikan kaariaukoista, pylväistä ja kapiteeleista, joissa travertiinin kirkkaan valkoinen pinta erottuu selvästi. Vaakakuva. Näyttää juuri sen kiven, josta teksti puhuu.",
   "tarkistaja": "A2",
-  "tarkistus": "OK"
+  "tarkistus": "OK",
+  "media_tiedosto": "esittely/pariisi-v1/kuvat/05dc1d401c079f6e.jpg",
+  "media_url": "https://media.matkakirja.app/esittely/pariisi-v1/kuvat/05dc1d401c079f6e.jpg",
+  "paketti_leveys": 1280,
+  "paketti_korkeus": 960,
+  "alkuperainen_leveys": 2607,
+  "alkuperainen_korkeus": 1955
  },
  {
   "kohde_id": "Q28785",
@@ -372,8 +460,6 @@
   "url": "https://commons.wikimedia.org/wiki/File:16-10-19,_consécration_du_Sacré-Coeur_-_btv1b530304460.jpg",
   "lisenssi": "Public domain",
   "tekija": "Agence Rol",
-  "leveys": 4216,
-  "korkeus": 3068,
   "tarkistettu": true,
   "perustelu": "Katsoin pikkukuvan: 16.10.1919 otettu aikalaisvalokuva vihkiäisistä, piispat hiipoineen ja kulkue basilikan portailla, ympärillä tiivis väkijoukko. Vaakakuva. Negatiivin yläreunassa arkistonumero, ei vesileima.",
   "rajaus": [
@@ -383,7 +469,13 @@
    0.94
   ],
   "tarkistaja": "A2",
-  "tarkistus": "OK"
+  "tarkistus": "OK",
+  "media_tiedosto": "esittely/pariisi-v1/kuvat/66b81ad8c380e423.jpg",
+  "media_url": "https://media.matkakirja.app/esittely/pariisi-v1/kuvat/66b81ad8c380e423.jpg",
+  "paketti_leveys": 1280,
+  "paketti_korkeus": 819,
+  "alkuperainen_leveys": 4216,
+  "alkuperainen_korkeus": 3068
  },
  {
   "kohde_id": "Q28785",
@@ -394,12 +486,16 @@
   "url": "https://commons.wikimedia.org/wiki/File:Master_of_Sir_John_Fastolf,_Saint_Denis_Holding_His_Head_-_Getty_Museum.jpg",
   "lisenssi": "Public domain",
   "tekija": "Master of Sir John Fastolf",
-  "leveys": 1621,
-  "korkeus": 2750,
   "tarkistettu": true,
   "perustelu": "Katsoin pikkukuvan: 1400-luvun miniatyyri, jossa piispanpukuinen Dionysios kävelee kantaen hiipalla peitettyä päätään, kaksi enkeliä tukena. Värikäs ja heti luettava. Legendan kuvaus on tyylitelty, ei raaka, ja sopii 13+ kohderyhmälle.",
   "tarkistaja": "A2",
-  "tarkistus": "OK"
+  "tarkistus": "OK",
+  "media_tiedosto": "esittely/pariisi-v1/kuvat/a55d75f7336ef95f.jpg",
+  "media_url": "https://media.matkakirja.app/esittely/pariisi-v1/kuvat/a55d75f7336ef95f.jpg",
+  "paketti_leveys": 1280,
+  "paketti_korkeus": 2171,
+  "alkuperainen_leveys": 1621,
+  "alkuperainen_korkeus": 2750
  },
  {
   "kohde_id": "Q28785",
@@ -410,12 +506,16 @@
   "url": "https://commons.wikimedia.org/wiki/File:Paris_view_from_Sacre_Coeur_DSC_0371.JPG",
   "lisenssi": "CC BY-SA 3.0",
   "tekija": "Pline",
-  "leveys": 4928,
-  "korkeus": 3264,
   "tarkistettu": true,
   "perustelu": "Katsoin pikkukuvan: kuva basilikan kupolilta, etualalla sen oma valkoinen kivityö ja takana Pariisi aina kaukaiseen horisonttiin asti. Vaakakuva. Näyttää konkreettisesti sen pitkän näkyvyyden, josta ankkuri puhuu.",
   "tarkistaja": "A2",
-  "tarkistus": "OK"
+  "tarkistus": "OK",
+  "media_tiedosto": "esittely/pariisi-v1/kuvat/d363ca0765aefd5d.jpg",
+  "media_url": "https://media.matkakirja.app/esittely/pariisi-v1/kuvat/d363ca0765aefd5d.jpg",
+  "paketti_leveys": 1280,
+  "paketti_korkeus": 848,
+  "alkuperainen_leveys": 4928,
+  "alkuperainen_korkeus": 3264
  },
  {
   "kohde_id": "Q23402",
@@ -426,8 +526,6 @@
   "url": "https://commons.wikimedia.org/wiki/File:Gare_d'Orsay_vue_générale_du_hall.jpg",
   "lisenssi": "Public domain",
   "tekija": "Agence de presse Meurisse",
-  "leveys": 7000,
-  "korkeus": 5105,
   "tarkistettu": true,
   "perustelu": "Katsoin pikkukuvan: Orsayn aseman matkustajahalli vuonna 1920, kaarevan lasiholvin alla tyhjä lattia, lipunmyyntitiskit ja muutama matkustaja. Aikalaisvalokuva näyttää suoraan sen, mitä teksti sanoo rakennuksen alkuperästä rautatieasemana. Lasilevyn reunoissa näkyy arkiston numeromerkintöjä, mutta ne jäävät kuvan laidoille.",
   "rajaus": [
@@ -437,7 +535,13 @@
    0.94
   ],
   "tarkistaja": "A2",
-  "tarkistus": "OK"
+  "tarkistus": "OK",
+  "media_tiedosto": "esittely/pariisi-v1/kuvat/f153fbd39f87504f.jpg",
+  "media_url": "https://media.matkakirja.app/esittely/pariisi-v1/kuvat/f153fbd39f87504f.jpg",
+  "paketti_leveys": 1178,
+  "paketti_korkeus": 821,
+  "alkuperainen_leveys": 7000,
+  "alkuperainen_korkeus": 5105
  },
  {
   "kohde_id": "Q23402",
@@ -448,12 +552,16 @@
   "url": "https://commons.wikimedia.org/wiki/File:View_to_Montmartre,_as_seen_through_the_clock_in_the_cafeteria_of_the_Musee_d'Orsay,_1987.jpg",
   "lisenssi": "CC BY 3.0",
   "tekija": "Neworion",
-  "leveys": 1156,
-  "korkeus": 778,
   "tarkistettu": true,
   "perustelu": "Katsoin pikkukuvan: katsotaan museon suuren lasisen kellotaulun läpi ulos, osoittimet ja roomalaiset numerot siluettina, takana kattojen yli kohoaa Montmartren kukkula ja Sacré-Cœur. Juuri tekstin lopun kehotus katsoa kellotaulun läpi Montmartrelle.",
   "tarkistaja": "A2",
-  "tarkistus": "OK"
+  "tarkistus": "OK",
+  "media_tiedosto": "esittely/pariisi-v1/kuvat/7e261a4460f9ef89.jpg",
+  "media_url": "https://media.matkakirja.app/esittely/pariisi-v1/kuvat/7e261a4460f9ef89.jpg",
+  "paketti_leveys": 1156,
+  "paketti_korkeus": 778,
+  "alkuperainen_leveys": 1156,
+  "alkuperainen_korkeus": 778
  },
  {
   "kohde_id": "Q23402",
@@ -464,12 +572,16 @@
   "url": "https://commons.wikimedia.org/wiki/File:Musee_d_Orsay_main_hall_Paris_2023_dllu.jpg",
   "lisenssi": "CC BY-SA 4.0",
   "tekija": "Daniel Lu (User:dllu)",
-  "leveys": 11646,
-  "korkeus": 8615,
   "tarkistettu": true,
   "perustelu": "Katsoin pikkukuvan: museon keskikäytävä kuvattuna päästä päähän, kaareva lasiholvi yläpuolella, veistoksia rivissä entisten laiturien välissä ja asemakello perällä. Osuu suoraan ankkuriin lasiholvista ja veistoksista.",
   "tarkistaja": "A2",
-  "tarkistus": "OK"
+  "tarkistus": "OK",
+  "media_tiedosto": "esittely/pariisi-v1/kuvat/6c694b80c4c111e4.jpg",
+  "media_url": "https://media.matkakirja.app/esittely/pariisi-v1/kuvat/6c694b80c4c111e4.jpg",
+  "paketti_leveys": 1280,
+  "paketti_korkeus": 947,
+  "alkuperainen_leveys": 11646,
+  "alkuperainen_korkeus": 8615
  },
  {
   "kohde_id": "Q23402",
@@ -480,12 +592,16 @@
   "url": "https://commons.wikimedia.org/wiki/File:Restaurant_of_the_Musée_d'Orsay_(52257045593).jpg",
   "lisenssi": "CC BY-SA 2.0",
   "tekija": "Adrian Scottow",
-  "leveys": 5472,
-  "korkeus": 3648,
   "tarkistettu": true,
   "perustelu": "Katsoin pikkukuvan: entisen asemahotellin juhlasali ravintolakäytössä, kristallikruunut, kullatut stukkokoristeet, peili ja parkettilattia, pöydät katettuina. Näyttää juuri sen tilan, josta lyhyen tekstin viimeinen lause puhuu.",
   "tarkistaja": "A2",
-  "tarkistus": "OK"
+  "tarkistus": "OK",
+  "media_tiedosto": "esittely/pariisi-v1/kuvat/d5d578a8a726c9ea.jpg",
+  "media_url": "https://media.matkakirja.app/esittely/pariisi-v1/kuvat/d5d578a8a726c9ea.jpg",
+  "paketti_leveys": 1280,
+  "paketti_korkeus": 853,
+  "alkuperainen_leveys": 5472,
+  "alkuperainen_korkeus": 3648
  },
  {
   "kohde_id": "Q550",
@@ -496,8 +612,6 @@
   "url": "https://commons.wikimedia.org/wiki/File:Arc_de_Triomphe_(Paris)_-_Sunset_-_2008-05-06-20-04-40.jpg",
   "lisenssi": "CC BY-SA 3.0",
   "tekija": "Coyau",
-  "leveys": 3456,
-  "korkeus": 2304,
   "tarkistettu": true,
   "perustelu": "Katsoin pikkukuvan: Concorden aukiolta kuvattu näkymä pitkin Champs-Élysées'tä, laskeva aurinko asettuu täsmälleen Riemukaaren holviin, puurivit reunustavat katua. Näyttää akselin, jota tekstin lause seuraa; etualalla on liikennettä, mutta aihe on selvä.",
   "rajaus": [
@@ -507,7 +621,13 @@
    0.66
   ],
   "tarkistaja": "A2",
-  "tarkistus": "KORJAA"
+  "tarkistus": "KORJAA",
+  "media_tiedosto": "esittely/pariisi-v1/kuvat/31969e77e72f51a1.jpg",
+  "media_url": "https://media.matkakirja.app/esittely/pariisi-v1/kuvat/31969e77e72f51a1.jpg",
+  "paketti_leveys": 704,
+  "paketti_korkeus": 563,
+  "alkuperainen_leveys": 3456,
+  "alkuperainen_korkeus": 2304
  },
  {
   "kohde_id": "Q550",
@@ -518,8 +638,6 @@
   "url": "https://commons.wikimedia.org/wiki/File:Paris_-_Plan_de_Turgot_Champs_Elysées.jpg",
   "lisenssi": "Public domain",
   "tekija": "Michel-Étienne Turgot",
-  "leveys": 1914,
-  "korkeus": 976,
   "tarkistettu": true,
   "perustelu": "Katsoin pikkukuvan: Turgot'n Pariisin-kartan (1739) yksityiskohta, jossa Champs-Élysées näkyy suorana kujana tiheiden puurivien keskellä Tuileries'n puutarhasta länteen. Aikalaiskuva siitä, millainen Le Nôtren perustama kävelytie oli varhain.",
   "rajaus": [
@@ -529,7 +647,13 @@
    0.96
   ],
   "tarkistaja": "A2",
-  "tarkistus": "OK"
+  "tarkistus": "OK",
+  "media_tiedosto": "esittely/pariisi-v1/kuvat/fdded9358792d717.jpg",
+  "media_url": "https://media.matkakirja.app/esittely/pariisi-v1/kuvat/fdded9358792d717.jpg",
+  "paketti_leveys": 1280,
+  "paketti_korkeus": 627,
+  "alkuperainen_leveys": 1914,
+  "alkuperainen_korkeus": 976
  },
  {
   "kohde_id": "Q550",
@@ -540,12 +664,16 @@
   "url": "https://commons.wikimedia.org/wiki/File:Champs-Elysees_Bastille_Day_2013_Paris_t090858.jpg",
   "lisenssi": "CC BY 2.5",
   "tekija": "Marie-Lan Nguyen",
-  "leveys": 5000,
-  "korkeus": 3338,
   "tarkistettu": true,
   "perustelu": "Katsoin pikkukuvan: joukko-osastot asettuneina riviin Champs-Élysées'lle 14. heinäkuuta, trikolorit puissa ja Riemukaari kadun päässä. Täsmälleen ankkurin kuvaama kansallispäivän sotilasparaati.",
   "tarkistaja": "A2",
-  "tarkistus": "KORJAA"
+  "tarkistus": "KORJAA",
+  "media_tiedosto": "esittely/pariisi-v1/kuvat/3d8e92b64b351bc4.jpg",
+  "media_url": "https://media.matkakirja.app/esittely/pariisi-v1/kuvat/3d8e92b64b351bc4.jpg",
+  "paketti_leveys": 1280,
+  "paketti_korkeus": 855,
+  "alkuperainen_leveys": 5000,
+  "alkuperainen_korkeus": 3338
  },
  {
   "kohde_id": "Q550",
@@ -556,8 +684,6 @@
   "url": "https://commons.wikimedia.org/wiki/File:Les_promenades_de_Paris._Les_Champs_Elysées._QB.424.jpg",
   "lisenssi": "CC0",
   "tekija": "Charles Vernier",
-  "leveys": 5436,
-  "korkeus": 4314,
   "tarkistettu": true,
   "perustelu": "Katsoin pikkukuvan: 1800-luvun litografia Champs-Élysées'ltä, silinterihattuisia kävelijöitä, krinoliinimekkoja, ratsastajia ja vaunuja puiden ja kaasulyhdyn alla. Näyttää sen hienostuneen kävelykadun, johon lyhyt teksti viittaa. Painoksessa on alkuperäinen kuvateksti arkin alareunassa.",
   "rajaus": [
@@ -567,7 +693,13 @@
    0.8
   ],
   "tarkistaja": "A2",
-  "tarkistus": "KORJAA"
+  "tarkistus": "KORJAA",
+  "media_tiedosto": "esittely/pariisi-v1/kuvat/ffe7195250616f1b.jpg",
+  "media_url": "https://media.matkakirja.app/esittely/pariisi-v1/kuvat/ffe7195250616f1b.jpg",
+  "paketti_leveys": 992,
+  "paketti_korkeus": 671,
+  "alkuperainen_leveys": 5436,
+  "alkuperainen_korkeus": 4314
  },
  {
   "kohde_id": "Q189503",
@@ -578,12 +710,16 @@
   "url": "https://commons.wikimedia.org/wiki/File:The_pyramid_at_the_top_of_the_Obelisk_Luxor.jpg",
   "lisenssi": "CC BY-SA 4.0",
   "tekija": "Davidphenry",
-  "leveys": 3688,
-  "korkeus": 5615,
   "tarkistettu": true,
   "perustelu": "Katsoin pikkukuvan: obeliskin huippu läheltä, kullattu pyramidion kiiltää sinistä taivasta vasten ja sen alla näkyy punertavaan graniittiin hakattuja hieroglyfejä. Pystykuva, mutta kohde on pystysuuntainen ja rajautuu hyvin.",
   "tarkistaja": "A2",
-  "tarkistus": "OK"
+  "tarkistus": "OK",
+  "media_tiedosto": "esittely/pariisi-v1/kuvat/c88ac0fdc2d84fad.jpg",
+  "media_url": "https://media.matkakirja.app/esittely/pariisi-v1/kuvat/c88ac0fdc2d84fad.jpg",
+  "paketti_leveys": 1280,
+  "paketti_korkeus": 1949,
+  "alkuperainen_leveys": 3688,
+  "alkuperainen_korkeus": 5615
  },
  {
   "kohde_id": "Q189503",
@@ -594,8 +730,6 @@
   "url": "https://commons.wikimedia.org/wiki/File:Erection_de_l'obélisque_de_Louxor,_place_de_la_Concorde,_le_25_octobre_1836,_G.39066.jpg",
   "lisenssi": "CC0",
   "tekija": "Théodore Jung",
-  "leveys": 6707,
-  "korkeus": 4401,
   "tarkistettu": true,
   "perustelu": "Katsoin pikkukuvan: aikalaislitografia 25.10.1836, obeliski nousemassa vinossa valtavan puutelineen ja köysistön varassa, aukio täynnä katsojia. Aikalaiskuva juuri siitä tapahtumasta, jonka ankkuri mainitsee.",
   "rajaus": [
@@ -605,7 +739,13 @@
    0.84
   ],
   "tarkistaja": "B",
-  "tarkistus": "OK"
+  "tarkistus": "OK",
+  "media_tiedosto": "esittely/pariisi-v1/kuvat/2a7c714b34a2bec2.jpg",
+  "media_url": "https://media.matkakirja.app/esittely/pariisi-v1/kuvat/2a7c714b34a2bec2.jpg",
+  "paketti_leveys": 973,
+  "paketti_korkeus": 584,
+  "alkuperainen_leveys": 6707,
+  "alkuperainen_korkeus": 4401
  },
  {
   "kohde_id": "Q189503",
@@ -616,12 +756,16 @@
   "url": "https://commons.wikimedia.org/wiki/File:Exécution_de_Louis_XVI_Helman.jpg",
   "lisenssi": "Public domain",
   "tekija": "Helman",
-  "leveys": 1200,
-  "korkeus": 920,
   "tarkistettu": true,
   "perustelu": "Katsoin pikkukuvan: aikalaiskaiverrus 21.1.1793, giljotiini lavalla aukion laidalla, sotilasrivistöt ja väkijoukko sekä taustalla aukion pylväikkörakennus. Näyttää paikan ja tilanteen, johon Ludvig kuudestoista -ankkuri viittaa; teloitus on esitetty kaukaa, ei raa'asti.",
   "tarkistaja": "B",
-  "tarkistus": "OK"
+  "tarkistus": "OK",
+  "media_tiedosto": "esittely/pariisi-v1/kuvat/f23f4e7651e24143.jpg",
+  "media_url": "https://media.matkakirja.app/esittely/pariisi-v1/kuvat/f23f4e7651e24143.jpg",
+  "paketti_leveys": 1200,
+  "paketti_korkeus": 920,
+  "alkuperainen_leveys": 1200,
+  "alkuperainen_korkeus": 920
  },
  {
   "kohde_id": "Q189503",
@@ -632,12 +776,16 @@
   "url": "https://commons.wikimedia.org/wiki/File:Paris_Concorde_obélisque_2.jpg",
   "lisenssi": "Public domain",
   "tekija": "Vassil",
-  "leveys": 2304,
-  "korkeus": 3072,
   "tarkistettu": true,
   "perustelu": "Katsoin pikkukuvan: lähikuva obeliskin kyljestä, punertavaan graniittiin syvälle hakattuja hieroglyfejä ja alareunassa faaraon nimirenkaat. Osuu ankkurin graniittiin ja Ramses toisen nimeen.",
   "tarkistaja": "B",
-  "tarkistus": "OK"
+  "tarkistus": "OK",
+  "media_tiedosto": "esittely/pariisi-v1/kuvat/8b3369b2f8c6d75b.jpg",
+  "media_url": "https://media.matkakirja.app/esittely/pariisi-v1/kuvat/8b3369b2f8c6d75b.jpg",
+  "paketti_leveys": 1280,
+  "paketti_korkeus": 1707,
+  "alkuperainen_leveys": 2304,
+  "alkuperainen_korkeus": 3072
  },
  {
   "kohde_id": "Q189503",
@@ -648,12 +796,16 @@
   "url": "https://commons.wikimedia.org/wiki/File:The_remaining_obelisk_and_the_two_25m._statues_of_Ramses_II_-_The_entrance_pylon_-_Luxor_Temple_(14259635932).jpg",
   "lisenssi": "CC BY 2.0",
   "tekija": "Jorge Láscar",
-  "leveys": 4107,
-  "korkeus": 2728,
   "tarkistettu": true,
   "perustelu": "Katsoin pikkukuvan: Luxorin temppelin ensimmäinen pyloni valaistuna, edessä jäljelle jäänyt obeliski ja Ramses toisen istuvat kolossit. Näyttää parin toisen puoliskon paikallaan, mihin lause obeliskien korkeusvertailusta nojaa.",
   "tarkistaja": "B",
-  "tarkistus": "KORJAA"
+  "tarkistus": "KORJAA",
+  "media_tiedosto": "esittely/pariisi-v1/kuvat/5c63c6847d0a2840.jpg",
+  "media_url": "https://media.matkakirja.app/esittely/pariisi-v1/kuvat/5c63c6847d0a2840.jpg",
+  "paketti_leveys": 1280,
+  "paketti_korkeus": 850,
+  "alkuperainen_leveys": 4107,
+  "alkuperainen_korkeus": 2728
  },
  {
   "kohde_id": "Q178065",
@@ -664,12 +816,16 @@
   "url": "https://commons.wikimedia.org/wiki/File:Pompidou_Center_Paris.jpg",
   "lisenssi": "CC BY-SA 4.0",
   "tekija": "Igor.Zeiger.Photograher",
-  "leveys": 3898,
-  "korkeus": 2599,
   "tarkistettu": true,
   "perustelu": "Katsoin pikkukuvan: takajulkisivun lähikuva, jossa paksut siniset ilmastointiputket nousevat seinää pitkin, oikealla kirkkaanvihreä vesiputkipaketti ja edessä valkoiset raitisilmatorvet. Värikoodi näkyy juuri niin kuin teksti sen selittää.",
   "tarkistaja": "B",
-  "tarkistus": "OK"
+  "tarkistus": "OK",
+  "media_tiedosto": "esittely/pariisi-v1/kuvat/e96fe3107395eede.jpg",
+  "media_url": "https://media.matkakirja.app/esittely/pariisi-v1/kuvat/e96fe3107395eede.jpg",
+  "paketti_leveys": 1280,
+  "paketti_korkeus": 853,
+  "alkuperainen_leveys": 3898,
+  "alkuperainen_korkeus": 2599
  },
  {
   "kohde_id": "Q309458",
@@ -680,12 +836,16 @@
   "url": "https://commons.wikimedia.org/wiki/File:Luxembourg_2017_b.jpg",
   "lisenssi": "CC BY-SA 4.0",
   "tekija": "Siren-Com",
-  "leveys": 4695,
-  "korkeus": 3201,
   "tarkistettu": true,
   "perustelu": "Katsoin pikkukuvan: lapset kurottavat altaan reunalla työntämässä kepillä vuokrattuja pienoispurjeveneitä vesille, veneissä värikkäät purjeet ja maatunnukset. Täsmälleen ankkurin kuvaama perinne.",
   "tarkistaja": "B",
-  "tarkistus": "OK"
+  "tarkistus": "OK",
+  "media_tiedosto": "esittely/pariisi-v1/kuvat/644823d688b397b0.jpg",
+  "media_url": "https://media.matkakirja.app/esittely/pariisi-v1/kuvat/644823d688b397b0.jpg",
+  "paketti_leveys": 1280,
+  "paketti_korkeus": 873,
+  "alkuperainen_leveys": 4695,
+  "alkuperainen_korkeus": 3201
  },
  {
   "kohde_id": "Q309458",
@@ -696,12 +856,16 @@
   "url": "https://commons.wikimedia.org/wiki/File:Firenze_Palazzo_Pitti_Esterno_1.jpg",
   "lisenssi": "CC BY 4.0",
   "tekija": "Zairon",
-  "leveys": 5090,
-  "korkeus": 3452,
   "tarkistettu": true,
   "perustelu": "Katsoin pikkukuvan: Pitti-palatsin koko julkisivu aukiolta, karkeasti louhittu kiviverhous ja kolme kerrosta kaari-ikkunoita. Näyttää esikuvan, jota Maria de' Medici halusi jäljitellä. Vasemmassa alakulmassa on pieni opastekyltti.",
   "tarkistaja": "B",
-  "tarkistus": "KORJAA"
+  "tarkistus": "KORJAA",
+  "media_tiedosto": "esittely/pariisi-v1/kuvat/94b28ed4485578b6.jpg",
+  "media_url": "https://media.matkakirja.app/esittely/pariisi-v1/kuvat/94b28ed4485578b6.jpg",
+  "paketti_leveys": 1280,
+  "paketti_korkeus": 868,
+  "alkuperainen_leveys": 5090,
+  "alkuperainen_korkeus": 3452
  },
  {
   "kohde_id": "Q309458",
@@ -712,12 +876,16 @@
   "url": "https://commons.wikimedia.org/wiki/File:La_Liberté_éclairant_le_Monde_Jardin_du_Luxembourg_blanc.jpg",
   "lisenssi": "CC0",
   "tekija": "Frédéric Auguste Bartholdi",
-  "leveys": 2000,
-  "korkeus": 3228,
   "tarkistettu": true,
   "perustelu": "Katsoin pikkukuvan: Bartholdin pronssinen pienoismalli Vapaudenpatsaasta jalustallaan, soihtu ylhäällä ja laattataulu kädessä, kuva irrotettu valkoiselle taustalle. Pystykuva, mutta kohde on selvästi pystysuuntainen ja rajautuu puhtaasti.",
   "tarkistaja": "B",
-  "tarkistus": "OK"
+  "tarkistus": "OK",
+  "media_tiedosto": "esittely/pariisi-v1/kuvat/8e32f0b3b40632ce.jpg",
+  "media_url": "https://media.matkakirja.app/esittely/pariisi-v1/kuvat/8e32f0b3b40632ce.jpg",
+  "paketti_leveys": 1280,
+  "paketti_korkeus": 2066,
+  "alkuperainen_leveys": 2000,
+  "alkuperainen_korkeus": 3228
  },
  {
   "kohde_id": "Q188856",
@@ -728,12 +896,16 @@
   "url": "https://commons.wikimedia.org/wiki/File:Fronton_Panthéon_Paris_Dome_chapiteaux.jpg",
   "lisenssi": "Public domain",
   "tekija": "Jebulon",
-  "leveys": 5072,
-  "korkeus": 3457,
   "tarkistettu": true,
   "perustelu": "Katsoin pikkukuvan: Panthéonin päätykolmio ja kupoli alhaalta, ja arkkitraavissa lukee selvästi AUX GRANDS HOMMES LA PATRIE RECONNAISSANTE. Juuri tämä kirjoitus tekee rakennuksesta kansakunnan suurmiesten hautapaikan, joten kuva osuu ankkuriin kirjaimellisesti.",
   "tarkistaja": "B",
-  "tarkistus": "KORJAA"
+  "tarkistus": "KORJAA",
+  "media_tiedosto": "esittely/pariisi-v1/kuvat/37a79716672a2dac.jpg",
+  "media_url": "https://media.matkakirja.app/esittely/pariisi-v1/kuvat/37a79716672a2dac.jpg",
+  "paketti_leveys": 1280,
+  "paketti_korkeus": 872,
+  "alkuperainen_leveys": 5072,
+  "alkuperainen_korkeus": 3457
  },
  {
   "kohde_id": "Q188856",
@@ -744,12 +916,16 @@
   "url": "https://commons.wikimedia.org/wiki/File:Foucault_pendulum_at_Panthéon_de_Paris_(24466666577).jpg",
   "lisenssi": "CC BY 2.0",
   "tekija": "xiquinhosilva",
-  "leveys": 4869,
-  "korkeus": 3665,
   "tarkistettu": true,
   "perustelu": "Katsoin pikkukuvan: lähikuva kiiltävästä messinkipallosta vaijerin päässä, alla lasinen suojataso ja marmorilattian säteittäinen kuvio. Ei turisteja edessä, joten heiluri on heti tunnistettavissa.",
   "tarkistaja": "B",
-  "tarkistus": "OK"
+  "tarkistus": "OK",
+  "media_tiedosto": "esittely/pariisi-v1/kuvat/beb575ac9a2f29b5.jpg",
+  "media_url": "https://media.matkakirja.app/esittely/pariisi-v1/kuvat/beb575ac9a2f29b5.jpg",
+  "paketti_leveys": 1280,
+  "paketti_korkeus": 963,
+  "alkuperainen_leveys": 4869,
+  "alkuperainen_korkeus": 3665
  },
  {
   "kohde_id": "Q188856",
@@ -760,12 +936,16 @@
   "url": "https://commons.wikimedia.org/wiki/File:Pierre_and_Marie_Curie.jpg",
   "lisenssi": "Public domain",
   "tekija": "Tuntematon valokuvaaja",
-  "leveys": 2163,
-  "korkeus": 1740,
   "tarkistettu": true,
   "perustelu": "Katsoin pikkukuvan: aikalaisvalokuva, jossa Pierre ja Marie Curie työskentelevät mittauslaitteiden ääressä karun tiiliseinän edessä. Vaatimaton tila vastaa tekstin vuotavaa laboratoriovajaa.",
   "tarkistaja": "B",
-  "tarkistus": "OK"
+  "tarkistus": "OK",
+  "media_tiedosto": "esittely/pariisi-v1/kuvat/1af26f9fb869f05c.jpg",
+  "media_url": "https://media.matkakirja.app/esittely/pariisi-v1/kuvat/1af26f9fb869f05c.jpg",
+  "paketti_leveys": 1280,
+  "paketti_korkeus": 1030,
+  "alkuperainen_leveys": 2163,
+  "alkuperainen_korkeus": 1740
  },
  {
   "kohde_id": "Q193193",
@@ -776,12 +956,16 @@
   "url": "https://commons.wikimedia.org/wiki/File:Reliquaire_de_la_Couronne_d'Épines_(1862).jpg",
   "lisenssi": "Public domain",
   "tekija": "Tangopaso",
-  "leveys": 2112,
-  "korkeus": 2816,
   "tarkistettu": true,
   "perustelu": "Katsoin pikkukuvan: kullattu reliikkiholkki, jonka lasisylinterissä orjantappurakruunu on näkyvissä ja jalustalla istuu Ludvig yhdeksäs kruunu kädessään. Selvästi pystysuuntainen esine, rajautuu hyvin.",
   "tarkistaja": "B",
-  "tarkistus": "KORJAA"
+  "tarkistus": "KORJAA",
+  "media_tiedosto": "esittely/pariisi-v1/kuvat/2e63128d5b7c5b61.jpg",
+  "media_url": "https://media.matkakirja.app/esittely/pariisi-v1/kuvat/2e63128d5b7c5b61.jpg",
+  "paketti_leveys": 1280,
+  "paketti_korkeus": 1707,
+  "alkuperainen_leveys": 2112,
+  "alkuperainen_korkeus": 2816
  },
  {
   "kohde_id": "Q193193",
@@ -792,12 +976,16 @@
   "url": "https://commons.wikimedia.org/wiki/File:Santa_Capilla,_París,_Francia,_2022-11-01,_DD_80-82_HDR.jpg",
   "lisenssi": "CC BY-SA 4.0",
   "tekija": "Diego Delso",
-  "leveys": 8567,
-  "korkeus": 5711,
   "tarkistettu": true,
   "perustelu": "Katsoin pikkukuvan: yläkappelin sisätila, jossa seinät ovat lähes kokonaan lasimaalauksia holvien väliin. Vaakakuva, ei ihmisiä eikä tekstiä, näyttää täsmälleen sen mitä teksti sanoo seinistä.",
   "tarkistaja": "B",
-  "tarkistus": "OK"
+  "tarkistus": "OK",
+  "media_tiedosto": "esittely/pariisi-v1/kuvat/3ef18d32c1d2f137.jpg",
+  "media_url": "https://media.matkakirja.app/esittely/pariisi-v1/kuvat/3ef18d32c1d2f137.jpg",
+  "paketti_leveys": 1280,
+  "paketti_korkeus": 853,
+  "alkuperainen_leveys": 8567,
+  "alkuperainen_korkeus": 5711
  },
  {
   "kohde_id": "Q188977",
@@ -808,12 +996,16 @@
   "url": "https://commons.wikimedia.org/wiki/File:Le_dôme_des_Invalides_(5018601658).jpg",
   "lisenssi": "CC BY 2.0",
   "tekija": "Jean-Pierre Dalbéra",
-  "leveys": 2027,
-  "korkeus": 3040,
   "tarkistettu": true,
   "perustelu": "Katsoin pikkukuvan: kullattu kupoli, lyhty ja risti auringossa sinistä taivasta vasten, lehtikullan koristeet erottuvat. Pystykuva sopii, koska kohde on korkeussuuntainen; kuvassa on ohut vaalea kehysviiva, ei vesileimaa.",
   "tarkistaja": "B",
-  "tarkistus": "OK"
+  "tarkistus": "OK",
+  "media_tiedosto": "esittely/pariisi-v1/kuvat/3f712a35271d8153.jpg",
+  "media_url": "https://media.matkakirja.app/esittely/pariisi-v1/kuvat/3f712a35271d8153.jpg",
+  "paketti_leveys": 1280,
+  "paketti_korkeus": 1920,
+  "alkuperainen_leveys": 2027,
+  "alkuperainen_korkeus": 3040
  },
  {
   "kohde_id": "Q188977",
@@ -824,12 +1016,16 @@
   "url": "https://commons.wikimedia.org/wiki/File:Prise_des_armes_aux_Invalides_14_juillet_1789,_Musée_de_la_Révolution_française_-_Vizille.jpg",
   "lisenssi": "CC BY-SA 4.0",
   "tekija": "Jean-Louis Prieur",
-  "leveys": 1117,
-  "korkeus": 749,
   "tarkistettu": true,
   "perustelu": "Katsoin pikkukuvan: aikalaiskaiverrus, jossa väkijoukko ryntää Invalidien esplanadille, taustalla laitoksen julkisivu ja kullattu kupoli. Tiiviisti rajattu, ei paperimarginaaleja eikä kuvatekstiä.",
   "tarkistaja": "B",
-  "tarkistus": "OK"
+  "tarkistus": "OK",
+  "media_tiedosto": "esittely/pariisi-v1/kuvat/7b15e6e87bfe817b.jpg",
+  "media_url": "https://media.matkakirja.app/esittely/pariisi-v1/kuvat/7b15e6e87bfe817b.jpg",
+  "paketti_leveys": 1117,
+  "paketti_korkeus": 749,
+  "alkuperainen_leveys": 1117,
+  "alkuperainen_korkeus": 749
  },
  {
   "kohde_id": "Q188977",
@@ -840,12 +1036,16 @@
   "url": "https://commons.wikimedia.org/wiki/File:Le_Tombeau_de_l'Empereur_Napoléon_aux_Invalides.jpg",
   "lisenssi": "CC0",
   "tekija": "Lililederf",
-  "leveys": 1600,
-  "korkeus": 1200,
   "tarkistettu": true,
   "perustelu": "Katsoin pikkukuvan: punaruskea sarkofagi vihreällä graniittijalustalla pyöreässä kryptassa, ympärillä valkoiset voitottaret ja seppelemosaiikki. Kuvattu ylhäältä kaiteen takaa, joten koko hautakammio hahmottuu.",
   "tarkistaja": "B",
-  "tarkistus": "OK"
+  "tarkistus": "OK",
+  "media_tiedosto": "esittely/pariisi-v1/kuvat/8c5d1cf9dea5f857.jpg",
+  "media_url": "https://media.matkakirja.app/esittely/pariisi-v1/kuvat/8c5d1cf9dea5f857.jpg",
+  "paketti_leveys": 1280,
+  "paketti_korkeus": 960,
+  "alkuperainen_leveys": 1600,
+  "alkuperainen_korkeus": 1200
  },
  {
   "kohde_id": "Q390418",
@@ -856,12 +1056,16 @@
   "url": "https://commons.wikimedia.org/wiki/File:Paris_pont_alexandre_III_détail_et_grand_palais_en_arrière_plan.JPG",
   "lisenssi": "CC BY-SA 3.0",
   "tekija": "Thesupermat",
-  "leveys": 1944,
-  "korkeus": 2592,
   "tarkistettu": true,
   "perustelu": "Katsoin pikkukuvan: sillan koillispylväs ja sen huipulla kullattu Renommée-pegasos, joka kimaltaa pilvistä taivasta vasten. Alareunassa näkyy joen proomuja, mutta patsas ja pylväs hallitsevat kuvaa.",
   "tarkistaja": "B",
-  "tarkistus": "OK"
+  "tarkistus": "OK",
+  "media_tiedosto": "esittely/pariisi-v1/kuvat/f1b9fdaf3f46ccb8.jpg",
+  "media_url": "https://media.matkakirja.app/esittely/pariisi-v1/kuvat/f1b9fdaf3f46ccb8.jpg",
+  "paketti_leveys": 1280,
+  "paketti_korkeus": 1707,
+  "alkuperainen_leveys": 1944,
+  "alkuperainen_korkeus": 2592
  },
  {
   "kohde_id": "Q390418",
@@ -872,12 +1076,16 @@
   "url": "https://commons.wikimedia.org/wiki/File:Le_Pont_Alexandre_III_et_le_Petit_Palais,_Exposition_Universelle_1900.jpg",
   "lisenssi": "Public domain",
   "tekija": "Tuntematon valokuvaaja",
-  "leveys": 4153,
-  "korkeus": 2664,
   "tarkistettu": true,
   "perustelu": "Katsoin pikkukuvan: aikalaisvalokuva vuoden 1900 maailmannäyttelystä, matala kaari, neljä pylvästä kullattuine patsaineen ja ajan pukuihin pukeutuva väkijoukko. Alareunassa on vaalea aikalaiskuvateksti, joka jää pienessä koossa huomaamattomaksi.",
   "tarkistaja": "B",
-  "tarkistus": "OK"
+  "tarkistus": "OK",
+  "media_tiedosto": "esittely/pariisi-v1/kuvat/36f83dff29bd3691.jpg",
+  "media_url": "https://media.matkakirja.app/esittely/pariisi-v1/kuvat/36f83dff29bd3691.jpg",
+  "paketti_leveys": 1280,
+  "paketti_korkeus": 821,
+  "alkuperainen_leveys": 4153,
+  "alkuperainen_korkeus": 2664
  },
  {
   "kohde_id": "Q390418",
@@ -888,12 +1096,16 @@
   "url": "https://commons.wikimedia.org/wiki/File:Nymphes_de_la_Neva_sur_le_Pont_Alexandre_III.JPG",
   "lisenssi": "CC BY-SA 3.0",
   "tekija": "Lystopad",
-  "leveys": 4000,
-  "korkeus": 2672,
   "tarkistettu": true,
   "perustelu": "Katsoin pikkukuvan: kaaren keskikohdan pronssiryhmä, kaksi nymfiä ja niiden välissä kullattu Venäjän kaksipäinen kotka. Kirkas sininen taivas, ei häiritseviä nostureita tai ihmisiä.",
   "tarkistaja": "B",
-  "tarkistus": "OK"
+  "tarkistus": "OK",
+  "media_tiedosto": "esittely/pariisi-v1/kuvat/830def4b3bb14f08.jpg",
+  "media_url": "https://media.matkakirja.app/esittely/pariisi-v1/kuvat/830def4b3bb14f08.jpg",
+  "paketti_leveys": 1280,
+  "paketti_korkeus": 855,
+  "alkuperainen_leveys": 4000,
+  "alkuperainen_korkeus": 2672
  },
  {
   "kohde_id": "Q335277",
@@ -904,12 +1116,16 @@
   "url": "https://commons.wikimedia.org/wiki/File:Paris_9_-_Le_Pont_Neuf_-_Mascaron_-191.JPG",
   "lisenssi": "CC BY 3.0",
   "tekija": "MOSSOT",
-  "leveys": 2736,
-  "korkeus": 3648,
   "tarkistettu": true,
   "perustelu": "Katsoin pikkukuvan: lähikuva sillan kaarenkannan kivinaamasta, parrakas irvistävä naamio seppelepäähineessä, kuvattu sivuvalossa vanhasta sillasta itsestään. Juuri tätä vanhinta siltaa ei näe ylhäältä kartasta; naamiot ovat sen tunnetuin yksityiskohta. Pystykuva, mutta aihe on selvästi pystysuuntainen kasvo ja rajautuu neliöksi hyvin.",
   "tarkistaja": "B",
-  "tarkistus": "OK"
+  "tarkistus": "OK",
+  "media_tiedosto": "esittely/pariisi-v1/kuvat/253ad73e14016ee6.jpg",
+  "media_url": "https://media.matkakirja.app/esittely/pariisi-v1/kuvat/253ad73e14016ee6.jpg",
+  "paketti_leveys": 1280,
+  "paketti_korkeus": 1707,
+  "alkuperainen_leveys": 2736,
+  "alkuperainen_korkeus": 3648
  },
  {
   "kohde_id": "Q335277",
@@ -920,12 +1136,16 @@
   "url": "https://commons.wikimedia.org/wiki/File:Statue_of_Henri_IV,_Pont_Neuf,_Paris_April_2017_001.jpg",
   "lisenssi": "CC BY 2.0",
   "tekija": "Guilhem Vellut from Paris, France",
-  "leveys": 5472,
-  "korkeus": 3648,
   "tarkistettu": true,
   "perustelu": "Katsoin pikkukuvan: pronssinen ratsastajapatsas valkealla jalustalla aidan ympäröimänä, kuvattuna sillan kivetykseltä Cité-saaren kärjessä. Vaakakuva, patsas erottuu taivasta vasten. Oikeassa laidassa näkyy työmaanosturi ja mainosverho, mutta ne jäävät reunaan eivätkä peitä kohdetta.",
   "tarkistaja": "B",
-  "tarkistus": "OK"
+  "tarkistus": "OK",
+  "media_tiedosto": "esittely/pariisi-v1/kuvat/bba8e07d94d39b88.jpg",
+  "media_url": "https://media.matkakirja.app/esittely/pariisi-v1/kuvat/bba8e07d94d39b88.jpg",
+  "paketti_leveys": 1280,
+  "paketti_korkeus": 853,
+  "alkuperainen_leveys": 5472,
+  "alkuperainen_korkeus": 3648
  },
  {
   "kohde_id": "Q335277",
@@ -936,12 +1156,16 @@
   "url": "https://commons.wikimedia.org/wiki/File:Nicolas-Jean-Baptiste_Raguenet,_A_View_of_Paris_from_the_Pont_Neuf_-_Getty_Museum.jpg",
   "lisenssi": "Public domain",
   "tekija": "Nicolas-Jean-Baptiste Raguenet",
-  "leveys": 5037,
-  "korkeus": 2738,
   "tarkistettu": true,
   "perustelu": "Katsoin pikkukuvan: aikalaismaalaus (1763) sillalta, etualalla punainen ja keltainen vaunu, ratsastajia, nunnia, kauppiaita ja hienostoväkeä sekaisin, taustalla Henrik IV:n patsas ja Louvre. Näyttää täsmälleen sen, että silta oli kaikkien säätyjen kohtauspaikka. Leveä vaakakuva.",
   "tarkistaja": "B",
-  "tarkistus": "OK"
+  "tarkistus": "OK",
+  "media_tiedosto": "esittely/pariisi-v1/kuvat/dd1ad0083f234001.jpg",
+  "media_url": "https://media.matkakirja.app/esittely/pariisi-v1/kuvat/dd1ad0083f234001.jpg",
+  "paketti_leveys": 1280,
+  "paketti_korkeus": 696,
+  "alkuperainen_leveys": 5037,
+  "alkuperainen_korkeus": 2738
  },
  {
   "kohde_id": "Q311",
@@ -952,12 +1176,16 @@
   "url": "https://commons.wikimedia.org/wiki/File:P%C3%A8re-Lachaise_-_Division_47_-_Avenue_Fr%C3%A9d%C3%A9ric_Souli%C3%A9_04.jpg",
   "lisenssi": "CC BY-SA 4.0",
   "tekija": "Pierre-Yves Beaudouin",
-  "leveys": 5760,
-  "korkeus": 3840,
   "tarkistettu": true,
   "perustelu": "Katsoin pikkukuvan: etualalla mukulakivetty kuja reunakivineen, sen varrella pieniä hautakappeleita kuin talorivi, puut yllä. Juuri tämä katumainen vaikutelma on tekstin vertauskuva eikä näy ylhäältä. Vaakakuva, hyvä syvyys.",
   "tarkistaja": "B",
-  "tarkistus": "OK"
+  "tarkistus": "OK",
+  "media_tiedosto": "esittely/pariisi-v1/kuvat/8869f3d890a43483.jpg",
+  "media_url": "https://media.matkakirja.app/esittely/pariisi-v1/kuvat/8869f3d890a43483.jpg",
+  "paketti_leveys": 1280,
+  "paketti_korkeus": 853,
+  "alkuperainen_leveys": 5760,
+  "alkuperainen_korkeus": 3840
  },
  {
   "kohde_id": "Q311",
@@ -968,12 +1196,16 @@
   "url": "https://commons.wikimedia.org/wiki/File:Gravure_de_la_tombe_de_Moli%C3%A8re_au_P%C3%A8re-Lachaise.jpg",
   "lisenssi": "Public domain",
   "tekija": "John James Chalon",
-  "leveys": 2147,
-  "korkeus": 1409,
   "tarkistettu": true,
   "perustelu": "Katsoin pikkukuvan: 1800-luvun kaiverrus, jossa oikealla sarkofagihauta tekstillä MOLIERE ja sen vieressä LAFONTAINE, edessä aikalaispukuisia vierailijoita. Kattaa tekstin molemmat nimet ja siirron 1817 sekä suosion kasvun. Alareunassa pieni kirjastoleima, muuten puhdas vaakakuva.",
   "tarkistaja": "B",
-  "tarkistus": "OK"
+  "tarkistus": "OK",
+  "media_tiedosto": "esittely/pariisi-v1/kuvat/25009c5548a8eae5.jpg",
+  "media_url": "https://media.matkakirja.app/esittely/pariisi-v1/kuvat/25009c5548a8eae5.jpg",
+  "paketti_leveys": 1280,
+  "paketti_korkeus": 840,
+  "alkuperainen_leveys": 2147,
+  "alkuperainen_korkeus": 1409
  },
  {
   "kohde_id": "Q311",
@@ -984,12 +1216,16 @@
   "url": "https://commons.wikimedia.org/wiki/File:Cimeti%C3%A8re_du_p%C3%A8re_Lachaise_%22Aux_morts_de_la_Commune%22_21-28_mai_1871.jpg",
   "lisenssi": "CC BY 2.0",
   "tekija": "Jeanne Menj",
-  "leveys": 4288,
-  "korkeus": 3216,
   "tarkistettu": true,
   "perustelu": "Katsoin pikkukuvan: hautausmaan kivimuuri, siinä laatta AUX MORTS DE LA COMMUNE 21-28 Mai 1871 ja muurin juurella rivi punaisia ruusuja. Teksti on osa muistomerkkiä, ei kuvaan lisättyä. Vaakakuva, tunnistettava ja asiallinen tapa esittää teloituspaikka.",
   "tarkistaja": "B",
-  "tarkistus": "OK"
+  "tarkistus": "OK",
+  "media_tiedosto": "esittely/pariisi-v1/kuvat/cfe8d3abbc8a1691.jpg",
+  "media_url": "https://media.matkakirja.app/esittely/pariisi-v1/kuvat/cfe8d3abbc8a1691.jpg",
+  "paketti_leveys": 1280,
+  "paketti_korkeus": 960,
+  "alkuperainen_leveys": 4288,
+  "alkuperainen_korkeus": 3216
  },
  {
   "kohde_id": "Q898629",
@@ -1000,12 +1236,16 @@
   "url": "https://commons.wikimedia.org/wiki/File:Paris,_Place_des_Vosges,_fa%C3%A7ade_(16341604342).jpg",
   "lisenssi": "CC BY 2.0",
   "tekija": "Jeanne Menjoulet from Paris, France",
-  "leveys": 3957,
-  "korkeus": 2678,
   "tarkistettu": true,
   "perustelu": "Katsoin pikkukuvan: yhtenäinen rivi punatiilisiä, vaalein kivikaistoin jäsennettyjä taloja, jyrkät liuskekatot ja kattoikkunat, alhaalla kaarikäytävä. Vastaa ankkurin sanat sanasta sanaan. Vaakakuva, aurinkoinen ja terävä.",
   "tarkistaja": "B",
-  "tarkistus": "OK"
+  "tarkistus": "OK",
+  "media_tiedosto": "esittely/pariisi-v1/kuvat/b1a7e76b50b36159.jpg",
+  "media_url": "https://media.matkakirja.app/esittely/pariisi-v1/kuvat/b1a7e76b50b36159.jpg",
+  "paketti_leveys": 1280,
+  "paketti_korkeus": 866,
+  "alkuperainen_leveys": 3957,
+  "alkuperainen_korkeus": 2678
  },
  {
   "kohde_id": "Q898629",
@@ -1016,12 +1256,16 @@
   "url": "https://commons.wikimedia.org/wiki/File:Anonymous_-_Le_%22Roman_des_chevaliers_de_la_gloire%22,_grand_carrousel_donn%C3%A9_du_5_au_7_avril_1612,_%C3%A0_l'occasion_du_mariage_de_Louis_XIII_avec_Anne_d'Autriche,_place_Royale_-_P50_-_Mus%C3%A9e_Carnavalet.jpg",
   "lisenssi": "Public domain",
   "tekija": "anonymous",
-  "leveys": 4974,
-  "korkeus": 3250,
   "tarkistettu": true,
   "perustelu": "Katsoin pikkukuvan: aikalaismaalaus huhtikuun 1612 karusellista, aukio täynnä ratsastajia, vaunuja ja katsomoita, ympärillä aukion punatiiliset paviljongit. Juuri tekstin kuvaama ratsastusnäytös. Vaakakuva; reunoissa näkyy taulun kehys.",
   "tarkistaja": "B",
-  "tarkistus": "OK"
+  "tarkistus": "OK",
+  "media_tiedosto": "esittely/pariisi-v1/kuvat/e01a2ad6b845a737.jpg",
+  "media_url": "https://media.matkakirja.app/esittely/pariisi-v1/kuvat/e01a2ad6b845a737.jpg",
+  "paketti_leveys": 1280,
+  "paketti_korkeus": 836,
+  "alkuperainen_leveys": 4974,
+  "alkuperainen_korkeus": 3250
  },
  {
   "kohde_id": "Q898629",
@@ -1032,12 +1276,16 @@
   "url": "https://commons.wikimedia.org/wiki/File:Maison_de_Victor_Hugo_Salon_chinois_271220120_01.jpg",
   "lisenssi": "CC0",
   "tekija": "Vassil",
-  "leveys": 4235,
-  "korkeus": 2994,
   "tarkistettu": true,
   "perustelu": "Katsoin pikkukuvan: Maison de Victor Hugo -museon kiinalainen salonki, Hugon itsensä maalaamat ja kaivertamat paneelit, posliinilautasseinä ja mustaksi lakattu takka. Näyttää konkreettisesti, millainen aukion laidan koti on nyt museona. Vaakakuva, ei tekstiä eikä vesileimaa.",
   "tarkistaja": "B",
-  "tarkistus": "OK"
+  "tarkistus": "OK",
+  "media_tiedosto": "esittely/pariisi-v1/kuvat/5c3d222a010693ad.jpg",
+  "media_url": "https://media.matkakirja.app/esittely/pariisi-v1/kuvat/5c3d222a010693ad.jpg",
+  "paketti_leveys": 1280,
+  "paketti_korkeus": 905,
+  "alkuperainen_leveys": 4235,
+  "alkuperainen_korkeus": 2994
  },
  {
   "kohde_id": "Q151030",
@@ -1048,12 +1296,16 @@
   "url": "https://commons.wikimedia.org/wiki/File:Paris,_Moulin_Rouge_--_2014_--_1220.jpg",
   "lisenssi": "CC BY-SA 4.0",
   "tekija": "Dietmar Rabich",
-  "leveys": 3736,
-  "korkeus": 3648,
   "tarkistettu": true,
   "perustelu": "Katsoin pikkukuvan: punainen tuulimylly siipineen seisoo rakennuksen katolla, alla MOULIN ROUGE -kyltti ja sisäänkäynti, kuvattu bulevardilta vinosti. Lähes neliö, toimii pienessä koossa. Kyltit ovat rakennuksen omia, eivät kuvaan lisättyjä.",
   "tarkistaja": "B",
-  "tarkistus": "OK"
+  "tarkistus": "OK",
+  "media_tiedosto": "esittely/pariisi-v1/kuvat/c0a64998db10713b.jpg",
+  "media_url": "https://media.matkakirja.app/esittely/pariisi-v1/kuvat/c0a64998db10713b.jpg",
+  "paketti_leveys": 1280,
+  "paketti_korkeus": 1250,
+  "alkuperainen_leveys": 3736,
+  "alkuperainen_korkeus": 3648
  },
  {
   "kohde_id": "Q151030",
@@ -1064,12 +1316,16 @@
   "url": "https://commons.wikimedia.org/wiki/File:Moulin_Rouge-_La_Goulue_MET_DT11780.jpg",
   "lisenssi": "CC0",
   "tekija": "Henri de Toulouse-Lautrec",
-  "leveys": 2314,
-  "korkeus": 3722,
   "tarkistettu": true,
   "perustelu": "Katsoin pikkukuvan: alkuperäinen vuoden 1891 litografiajuliste, jossa La Goulue tanssii cancania valkoisissa alushameissa, edessä Valentin le Désossé ja takana yleisön siluetit. Tekijä kuoli 1901, teos on vapaa (MET: CC0). Pystykuva, mutta juliste on luonnostaan pystysuuntainen ja rajautuu täydellisesti.",
   "tarkistaja": "B",
-  "tarkistus": "OK"
+  "tarkistus": "OK",
+  "media_tiedosto": "esittely/pariisi-v1/kuvat/79721a04b68ac144.jpg",
+  "media_url": "https://media.matkakirja.app/esittely/pariisi-v1/kuvat/79721a04b68ac144.jpg",
+  "paketti_leveys": 1280,
+  "paketti_korkeus": 2059,
+  "alkuperainen_leveys": 2314,
+  "alkuperainen_korkeus": 3722
  },
  {
   "kohde_id": "Q151030",
@@ -1080,12 +1336,16 @@
   "url": "https://commons.wikimedia.org/wiki/File:Moulin_Rouge_sans_ailes_01.jpg",
   "lisenssi": "CC BY-SA 4.0",
   "tekija": "FreCha",
-  "leveys": 6045,
-  "korkeus": 4019,
   "tarkistettu": true,
   "perustelu": "Katsoin pikkukuvan: sama mylly katolla mutta ilman siipiä, pelkkä punainen torni jäljellä, ja julkisivun kyltistä on pudonnut kirjaimia. Juuri tekstin kuvaama huhtikuun 2024 tilanne. Vaakakuva, sama kuvakulma kuin ensimmäisessä kuvassa, joten ero näkyy heti.",
   "tarkistaja": "B",
-  "tarkistus": "OK"
+  "tarkistus": "OK",
+  "media_tiedosto": "esittely/pariisi-v1/kuvat/a3c91261a36ccf8e.jpg",
+  "media_url": "https://media.matkakirja.app/esittely/pariisi-v1/kuvat/a3c91261a36ccf8e.jpg",
+  "paketti_leveys": 1280,
+  "paketti_korkeus": 851,
+  "alkuperainen_leveys": 6045,
+  "alkuperainen_korkeus": 4019
  },
  {
   "kohde_id": "Q457318",
@@ -1096,8 +1356,6 @@
   "url": "https://commons.wikimedia.org/wiki/File:Album_photographique_amateur_de_l'Exposition_Universelle_de_1900_un_coin_du_Grand_Palais,_Paris_Mus%C3%A9es_20230901081217.jpg",
   "lisenssi": "CC0",
   "tekija": "Anonyme, photographe",
-  "leveys": 5096,
-  "korkeus": 3900,
   "tarkistettu": true,
   "perustelu": "Katsoin pikkukuvan: vuonna 1900 otettu amatöörivalokuva Grand Palais'n kulmasta, pylväikkö ja lasikatto näkyvissä, edessä aikalaispukuisia näyttelyvieraita. Historialliseen faktaan aikalaiskuva, kuten ohje vaatii. Vaakakuva; kuva on liimattu albumilehdelle, joten reunoilla on vaalea paspartuu.",
   "rajaus": [
@@ -1107,7 +1365,13 @@
    0.89
   ],
   "tarkistaja": "B",
-  "tarkistus": "KORJAA"
+  "tarkistus": "KORJAA",
+  "media_tiedosto": "esittely/pariisi-v1/kuvat/2958d7e0a69f4583.jpg",
+  "media_url": "https://media.matkakirja.app/esittely/pariisi-v1/kuvat/2958d7e0a69f4583.jpg",
+  "paketti_leveys": 922,
+  "paketti_korkeus": 755,
+  "alkuperainen_leveys": 5096,
+  "alkuperainen_korkeus": 3900
  },
  {
   "kohde_id": "Q457318",
@@ -1118,12 +1382,16 @@
   "url": "https://commons.wikimedia.org/wiki/File:Harmony_Triumphing_over_Discord,_Grand_Palais_02.jpg",
   "lisenssi": "CC BY 2.0",
   "tekija": "Jean-Pierre Dalbéra from Paris, France",
-  "leveys": 1794,
-  "korkeus": 1194,
   "tarkistettu": true,
   "perustelu": "Katsoin pikkukuvan: Georges Réciponin kuparinen nelivaljakko L'Harmonie triomphant de la Discorde julkisivun päässä, neljä takajaloilleen nousevaa hevosta ja käsi ojossa seisova hahmo, taustalla taivas ja lasikaton reuna. Täsmälleen tekstin mainitsema sopusoinnun voitto riidasta. Vaakakuva.",
   "tarkistaja": "B",
-  "tarkistus": "OK"
+  "tarkistus": "OK",
+  "media_tiedosto": "esittely/pariisi-v1/kuvat/383a74280019be21.jpg",
+  "media_url": "https://media.matkakirja.app/esittely/pariisi-v1/kuvat/383a74280019be21.jpg",
+  "paketti_leveys": 1280,
+  "paketti_korkeus": 852,
+  "alkuperainen_leveys": 1794,
+  "alkuperainen_korkeus": 1194
  },
  {
   "kohde_id": "Q457318",
@@ -1134,11 +1402,15 @@
   "url": "https://commons.wikimedia.org/wiki/File:Grande_verri%C3%A8re_du_Grand_Palais_lors_de_l'op%C3%A9ration_La_nef_est_%C3%A0_vous,_juin_2018_(14).jpg",
   "lisenssi": "CC BY-SA 4.0",
   "tekija": "Ibex73",
-  "leveys": 4896,
-  "korkeus": 2752,
   "tarkistettu": true,
   "perustelu": "Katsoin pikkukuvan: suuren hallin lasi- ja teräsholvi alhaalta kuvattuna, vihreäksi maalattu ristikkorakenne ja keskuskupoli säteineen täyttävät koko kuvan. Näyttää sen tilan, jonka alla olympiakilpailut käytiin, eikä kattoa näe sisältä kartasta. Leveä vaakakuva.",
   "tarkistaja": "B",
-  "tarkistus": "OK"
+  "tarkistus": "OK",
+  "media_tiedosto": "esittely/pariisi-v1/kuvat/c3f0fbec3cac82ce.jpg",
+  "media_url": "https://media.matkakirja.app/esittely/pariisi-v1/kuvat/c3f0fbec3cac82ce.jpg",
+  "paketti_leveys": 1280,
+  "paketti_korkeus": 719,
+  "alkuperainen_leveys": 4896,
+  "alkuperainen_korkeus": 2752
  }
 ]

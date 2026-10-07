@@ -11,7 +11,15 @@
   "leveys": 7000,
   "korkeus": 5105,
   "tarkistettu": true,
-  "perustelu": "Katsoin pikkukuvan: Orsayn aseman matkustajahalli vuonna 1920, kaarevan lasiholvin alla tyhjä lattia, lipunmyyntitiskit ja muutama matkustaja. Aikalaisvalokuva näyttää suoraan sen, mitä teksti sanoo rakennuksen alkuperästä rautatieasemana. Lasilevyn reunoissa näkyy arkiston numeromerkintöjä, mutta ne jäävät kuvan laidoille."
+  "perustelu": "Katsoin pikkukuvan: Orsayn aseman matkustajahalli vuonna 1920, kaarevan lasiholvin alla tyhjä lattia, lipunmyyntitiskit ja muutama matkustaja. Aikalaisvalokuva näyttää suoraan sen, mitä teksti sanoo rakennuksen alkuperästä rautatieasemana. Lasilevyn reunoissa näkyy arkiston numeromerkintöjä, mutta ne jäävät kuvan laidoille.",
+  "rajaus": [
+   0.08,
+   0.06,
+   1,
+   0.94
+  ],
+  "tarkistaja": "A2",
+  "tarkistus": "OK"
  },
  {
   "kohde_id": "Q23402",
@@ -25,7 +33,9 @@
   "leveys": 1156,
   "korkeus": 778,
   "tarkistettu": true,
-  "perustelu": "Katsoin pikkukuvan: katsotaan museon suuren lasisen kellotaulun läpi ulos, osoittimet ja roomalaiset numerot siluettina, takana kattojen yli kohoaa Montmartren kukkula ja Sacré-Cœur. Juuri tekstin lopun kehotus katsoa kellotaulun läpi Montmartrelle."
+  "perustelu": "Katsoin pikkukuvan: katsotaan museon suuren lasisen kellotaulun läpi ulos, osoittimet ja roomalaiset numerot siluettina, takana kattojen yli kohoaa Montmartren kukkula ja Sacré-Cœur. Juuri tekstin lopun kehotus katsoa kellotaulun läpi Montmartrelle.",
+  "tarkistaja": "A2",
+  "tarkistus": "OK"
  },
  {
   "kohde_id": "Q23402",
@@ -39,7 +49,9 @@
   "leveys": 11646,
   "korkeus": 8615,
   "tarkistettu": true,
-  "perustelu": "Katsoin pikkukuvan: museon keskikäytävä kuvattuna päästä päähän, kaareva lasiholvi yläpuolella, veistoksia rivissä entisten laiturien välissä ja asemakello perällä. Osuu suoraan ankkuriin lasiholvista ja veistoksista."
+  "perustelu": "Katsoin pikkukuvan: museon keskikäytävä kuvattuna päästä päähän, kaareva lasiholvi yläpuolella, veistoksia rivissä entisten laiturien välissä ja asemakello perällä. Osuu suoraan ankkuriin lasiholvista ja veistoksista.",
+  "tarkistaja": "A2",
+  "tarkistus": "OK"
  },
  {
   "kohde_id": "Q23402",
@@ -53,7 +65,9 @@
   "leveys": 5472,
   "korkeus": 3648,
   "tarkistettu": true,
-  "perustelu": "Katsoin pikkukuvan: entisen asemahotellin juhlasali ravintolakäytössä, kristallikruunut, kullatut stukkokoristeet, peili ja parkettilattia, pöydät katettuina. Näyttää juuri sen tilan, josta lyhyen tekstin viimeinen lause puhuu."
+  "perustelu": "Katsoin pikkukuvan: entisen asemahotellin juhlasali ravintolakäytössä, kristallikruunut, kullatut stukkokoristeet, peili ja parkettilattia, pöydät katettuina. Näyttää juuri sen tilan, josta lyhyen tekstin viimeinen lause puhuu.",
+  "tarkistaja": "A2",
+  "tarkistus": "OK"
  },
  {
   "kohde_id": "Q550",
@@ -67,7 +81,15 @@
   "leveys": 3456,
   "korkeus": 2304,
   "tarkistettu": true,
-  "perustelu": "Katsoin pikkukuvan: Concorden aukiolta kuvattu näkymä pitkin Champs-Élysées'tä, laskeva aurinko asettuu täsmälleen Riemukaaren holviin, puurivit reunustavat katua. Näyttää akselin, jota tekstin lause seuraa; etualalla on liikennettä, mutta aihe on selvä."
+  "perustelu": "Katsoin pikkukuvan: Concorden aukiolta kuvattu näkymä pitkin Champs-Élysées'tä, laskeva aurinko asettuu täsmälleen Riemukaaren holviin, puurivit reunustavat katua. Näyttää akselin, jota tekstin lause seuraa; etualalla on liikennettä, mutta aihe on selvä.",
+  "rajaus": [
+   0.15,
+   0,
+   0.7,
+   0.66
+  ],
+  "tarkistaja": "A2",
+  "tarkistus": "KORJAA"
  },
  {
   "kohde_id": "Q550",
@@ -81,13 +103,21 @@
   "leveys": 1914,
   "korkeus": 976,
   "tarkistettu": true,
-  "perustelu": "Katsoin pikkukuvan: Turgot'n Pariisin-kartan (1739) yksityiskohta, jossa Champs-Élysées näkyy suorana kujana tiheiden puurivien keskellä Tuileries'n puutarhasta länteen. Aikalaiskuva siitä, millainen Le Nôtren perustama kävelytie oli varhain."
+  "perustelu": "Katsoin pikkukuvan: Turgot'n Pariisin-kartan (1739) yksityiskohta, jossa Champs-Élysées näkyy suorana kujana tiheiden puurivien keskellä Tuileries'n puutarhasta länteen. Aikalaiskuva siitä, millainen Le Nôtren perustama kävelytie oli varhain.",
+  "rajaus": [
+   0,
+   0,
+   1,
+   0.96
+  ],
+  "tarkistaja": "A2",
+  "tarkistus": "OK"
  },
  {
   "kohde_id": "Q550",
   "tekstilaji": "teksti",
   "ankkuri": "kansallispäivän sotilasparaati",
-  "kuvateksti": "Kansallispäivän paraati Riemukaarta kohti",
+  "kuvateksti": "Paraatijoukot Champs-Élysées'llä, taustalla Riemukaari",
   "commons_tiedosto": "File:Champs-Elysees Bastille Day 2013 Paris t090858.jpg",
   "url": "https://commons.wikimedia.org/wiki/File:Champs-Elysees_Bastille_Day_2013_Paris_t090858.jpg",
   "lisenssi": "CC BY 2.5",
@@ -95,7 +125,9 @@
   "leveys": 5000,
   "korkeus": 3338,
   "tarkistettu": true,
-  "perustelu": "Katsoin pikkukuvan: joukko-osastot asettuneina riviin Champs-Élysées'lle 14. heinäkuuta, trikolorit puissa ja Riemukaari kadun päässä. Täsmälleen ankkurin kuvaama kansallispäivän sotilasparaati."
+  "perustelu": "Katsoin pikkukuvan: joukko-osastot asettuneina riviin Champs-Élysées'lle 14. heinäkuuta, trikolorit puissa ja Riemukaari kadun päässä. Täsmälleen ankkurin kuvaama kansallispäivän sotilasparaati.",
+  "tarkistaja": "A2",
+  "tarkistus": "KORJAA"
  },
  {
   "kohde_id": "Q550",
@@ -109,7 +141,15 @@
   "leveys": 5436,
   "korkeus": 4314,
   "tarkistettu": true,
-  "perustelu": "Katsoin pikkukuvan: 1800-luvun litografia Champs-Élysées'ltä, silinterihattuisia kävelijöitä, krinoliinimekkoja, ratsastajia ja vaunuja puiden ja kaasulyhdyn alla. Näyttää sen hienostuneen kävelykadun, johon lyhyt teksti viittaa. Painoksessa on alkuperäinen kuvateksti arkin alareunassa."
+  "perustelu": "Katsoin pikkukuvan: 1800-luvun litografia Champs-Élysées'ltä, silinterihattuisia kävelijöitä, krinoliinimekkoja, ratsastajia ja vaunuja puiden ja kaasulyhdyn alla. Näyttää sen hienostuneen kävelykadun, johon lyhyt teksti viittaa. Painoksessa on alkuperäinen kuvateksti arkin alareunassa.",
+  "rajaus": [
+   0.115,
+   0.14,
+   0.89,
+   0.8
+  ],
+  "tarkistaja": "A2",
+  "tarkistus": "KORJAA"
  },
  {
   "kohde_id": "Q189503",
@@ -123,7 +163,9 @@
   "leveys": 3688,
   "korkeus": 5615,
   "tarkistettu": true,
-  "perustelu": "Katsoin pikkukuvan: obeliskin huippu läheltä, kullattu pyramidion kiiltää sinistä taivasta vasten ja sen alla näkyy punertavaan graniittiin hakattuja hieroglyfejä. Pystykuva, mutta kohde on pystysuuntainen ja rajautuu hyvin."
+  "perustelu": "Katsoin pikkukuvan: obeliskin huippu läheltä, kullattu pyramidion kiiltää sinistä taivasta vasten ja sen alla näkyy punertavaan graniittiin hakattuja hieroglyfejä. Pystykuva, mutta kohde on pystysuuntainen ja rajautuu hyvin.",
+  "tarkistaja": "A2",
+  "tarkistus": "OK"
  },
  {
   "kohde_id": "Q189503",
@@ -137,7 +179,15 @@
   "leveys": 6707,
   "korkeus": 4401,
   "tarkistettu": true,
-  "perustelu": "Katsoin pikkukuvan: aikalaislitografia 25.10.1836, obeliski nousemassa vinossa valtavan puutelineen ja köysistön varassa, aukio täynnä katsojia. Aikalaiskuva juuri siitä tapahtumasta, jonka ankkuri mainitsee."
+  "perustelu": "Katsoin pikkukuvan: aikalaislitografia 25.10.1836, obeliski nousemassa vinossa valtavan puutelineen ja köysistön varassa, aukio täynnä katsojia. Aikalaiskuva juuri siitä tapahtumasta, jonka ankkuri mainitsee.",
+  "tarkistaja": "B",
+  "tarkistus": "OK",
+  "rajaus": [
+   0.13,
+   0.145,
+   0.89,
+   0.84
+  ]
  },
  {
   "kohde_id": "Q189503",
@@ -151,7 +201,9 @@
   "leveys": 1200,
   "korkeus": 920,
   "tarkistettu": true,
-  "perustelu": "Katsoin pikkukuvan: aikalaiskaiverrus 21.1.1793, giljotiini lavalla aukion laidalla, sotilasrivistöt ja väkijoukko sekä taustalla aukion pylväikkörakennus. Näyttää paikan ja tilanteen, johon Ludvig kuudestoista -ankkuri viittaa; teloitus on esitetty kaukaa, ei raa'asti."
+  "perustelu": "Katsoin pikkukuvan: aikalaiskaiverrus 21.1.1793, giljotiini lavalla aukion laidalla, sotilasrivistöt ja väkijoukko sekä taustalla aukion pylväikkörakennus. Näyttää paikan ja tilanteen, johon Ludvig kuudestoista -ankkuri viittaa; teloitus on esitetty kaukaa, ei raa'asti.",
+  "tarkistaja": "B",
+  "tarkistus": "OK"
  },
  {
   "kohde_id": "Q189503",
@@ -165,13 +217,15 @@
   "leveys": 2304,
   "korkeus": 3072,
   "tarkistettu": true,
-  "perustelu": "Katsoin pikkukuvan: lähikuva obeliskin kyljestä, punertavaan graniittiin syvälle hakattuja hieroglyfejä ja alareunassa faaraon nimirenkaat. Osuu ankkurin graniittiin ja Ramses toisen nimeen."
+  "perustelu": "Katsoin pikkukuvan: lähikuva obeliskin kyljestä, punertavaan graniittiin syvälle hakattuja hieroglyfejä ja alareunassa faaraon nimirenkaat. Osuu ankkurin graniittiin ja Ramses toisen nimeen.",
+  "tarkistaja": "B",
+  "tarkistus": "OK"
  },
  {
   "kohde_id": "Q189503",
   "tekstilaji": "lyhyt",
   "ankkuri": "näyttäisivät kaukaa yhtä korkeilta",
-  "kuvateksti": "Kaksoisobeliski yhä Luxorin temppelin portilla",
+  "kuvateksti": "Obeliskin kaksoisveli yhä Luxorin temppelin portilla",
   "commons_tiedosto": "File:The remaining obelisk and the two 25m. statues of Ramses II - The entrance pylon - Luxor Temple (14259635932).jpg",
   "url": "https://commons.wikimedia.org/wiki/File:The_remaining_obelisk_and_the_two_25m._statues_of_Ramses_II_-_The_entrance_pylon_-_Luxor_Temple_(14259635932).jpg",
   "lisenssi": "CC BY 2.0",
@@ -179,21 +233,9 @@
   "leveys": 4107,
   "korkeus": 2728,
   "tarkistettu": true,
-  "perustelu": "Katsoin pikkukuvan: Luxorin temppelin ensimmäinen pyloni valaistuna, edessä jäljelle jäänyt obeliski ja Ramses toisen istuvat kolossit. Näyttää parin toisen puoliskon paikallaan, mihin lause obeliskien korkeusvertailusta nojaa."
- },
- {
-  "kohde_id": "Q178065",
-  "tekstilaji": "teksti",
-  "ankkuri": "nurin käännetyltä tehtaalta",
-  "kuvateksti": "Portaat ja putket rakennuksen ulkoseinällä",
-  "commons_tiedosto": "File:Paris - Centre Georges Pompidou.jpg",
-  "url": "https://commons.wikimedia.org/wiki/File:Paris_-_Centre_Georges_Pompidou.jpg",
-  "lisenssi": "CC BY 2.0",
-  "tekija": "Fred Romero",
-  "leveys": 5184,
-  "korkeus": 3456,
-  "tarkistettu": true,
-  "perustelu": "Katsoin pikkukuvan: Pompidou-keskuksen aukionpuoleinen julkisivu, punainen lasiputkeen suljettu rullaporrasjono kiipeää vinottain ylös, ja teräsristikot sekä putkistot ovat seinän ulkopuolella. Näyttää tehdasmaisen, nurin käännetyn rakenteen. Julkisivulla roikkuu näyttelybanderolli."
+  "perustelu": "Katsoin pikkukuvan: Luxorin temppelin ensimmäinen pyloni valaistuna, edessä jäljelle jäänyt obeliski ja Ramses toisen istuvat kolossit. Näyttää parin toisen puoliskon paikallaan, mihin lause obeliskien korkeusvertailusta nojaa.",
+  "tarkistaja": "B",
+  "tarkistus": "KORJAA"
  },
  {
   "kohde_id": "Q178065",
@@ -207,7 +249,9 @@
   "leveys": 3898,
   "korkeus": 2599,
   "tarkistettu": true,
-  "perustelu": "Katsoin pikkukuvan: takajulkisivun lähikuva, jossa paksut siniset ilmastointiputket nousevat seinää pitkin, oikealla kirkkaanvihreä vesiputkipaketti ja edessä valkoiset raitisilmatorvet. Värikoodi näkyy juuri niin kuin teksti sen selittää."
+  "perustelu": "Katsoin pikkukuvan: takajulkisivun lähikuva, jossa paksut siniset ilmastointiputket nousevat seinää pitkin, oikealla kirkkaanvihreä vesiputkipaketti ja edessä valkoiset raitisilmatorvet. Värikoodi näkyy juuri niin kuin teksti sen selittää.",
+  "tarkistaja": "B",
+  "tarkistus": "OK"
  },
  {
   "kohde_id": "Q309458",
@@ -221,13 +265,15 @@
   "leveys": 4695,
   "korkeus": 3201,
   "tarkistettu": true,
-  "perustelu": "Katsoin pikkukuvan: lapset kurottavat altaan reunalla työntämässä kepillä vuokrattuja pienoispurjeveneitä vesille, veneissä värikkäät purjeet ja maatunnukset. Täsmälleen ankkurin kuvaama perinne."
+  "perustelu": "Katsoin pikkukuvan: lapset kurottavat altaan reunalla työntämässä kepillä vuokrattuja pienoispurjeveneitä vesille, veneissä värikkäät purjeet ja maatunnukset. Täsmälleen ankkurin kuvaama perinne.",
+  "tarkistaja": "B",
+  "tarkistus": "OK"
  },
  {
   "kohde_id": "Q309458",
   "tekstilaji": "teksti",
   "ankkuri": "kotikaupunkinsa Firenzen Pitti-palatsia",
-  "kuvateksti": "Firenzen Pitti-palatsi, puiston esikuva",
+  "kuvateksti": "Firenzen Pitti-palatsi, Luxembourgin palatsin esikuva",
   "commons_tiedosto": "File:Firenze Palazzo Pitti Esterno 1.jpg",
   "url": "https://commons.wikimedia.org/wiki/File:Firenze_Palazzo_Pitti_Esterno_1.jpg",
   "lisenssi": "CC BY 4.0",
@@ -235,7 +281,9 @@
   "leveys": 5090,
   "korkeus": 3452,
   "tarkistettu": true,
-  "perustelu": "Katsoin pikkukuvan: Pitti-palatsin koko julkisivu aukiolta, karkeasti louhittu kiviverhous ja kolme kerrosta kaari-ikkunoita. Näyttää esikuvan, jota Maria de' Medici halusi jäljitellä. Vasemmassa alakulmassa on pieni opastekyltti."
+  "perustelu": "Katsoin pikkukuvan: Pitti-palatsin koko julkisivu aukiolta, karkeasti louhittu kiviverhous ja kolme kerrosta kaari-ikkunoita. Näyttää esikuvan, jota Maria de' Medici halusi jäljitellä. Vasemmassa alakulmassa on pieni opastekyltti.",
+  "tarkistaja": "B",
+  "tarkistus": "KORJAA"
  },
  {
   "kohde_id": "Q309458",
@@ -249,6 +297,8 @@
   "leveys": 2000,
   "korkeus": 3228,
   "tarkistettu": true,
-  "perustelu": "Katsoin pikkukuvan: Bartholdin pronssinen pienoismalli Vapaudenpatsaasta jalustallaan, soihtu ylhäällä ja laattataulu kädessä, kuva irrotettu valkoiselle taustalle. Pystykuva, mutta kohde on selvästi pystysuuntainen ja rajautuu puhtaasti."
+  "perustelu": "Katsoin pikkukuvan: Bartholdin pronssinen pienoismalli Vapaudenpatsaasta jalustallaan, soihtu ylhäällä ja laattataulu kädessä, kuva irrotettu valkoiselle taustalle. Pystykuva, mutta kohde on selvästi pystysuuntainen ja rajautuu puhtaasti.",
+  "tarkistaja": "B",
+  "tarkistus": "OK"
  }
 ]

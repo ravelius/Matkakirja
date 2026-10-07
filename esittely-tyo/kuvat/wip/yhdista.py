@@ -3,7 +3,7 @@
 import json, sys, os, re
 
 SP = os.path.dirname(os.path.abspath(__file__))
-REPO = "/home/user/Matkakirja"
+REPO = "/Users/Shared/Claude/wt/sisaltokirjuri-pariisi-kokoaminen"
 
 AVAUS = ("Tervetuloa Pariisiin. Ylhäältä kaupunki näyttää vaalealta kiviviuhkalta, "
          "jonka keskellä Seine kiemurtelee kahden saaren ohi. Kierros alkaa joen "
@@ -120,7 +120,7 @@ def main():
                               lajijarj.get(r.get("tekstilaji"), 9),
                               r.get("_alku", 0)))
 
-    ulos = [{k: r.get(k) for k in JARJESTYS} for r in rivit]
+    ulos = [{**{k: r.get(k) for k in JARJESTYS}, **{k: r[k] for k in ("rajaus", "tarkistaja", "tarkistus") if r.get(k) is not None}} for r in rivit]
     json.dump(ulos, open(f"{SP}/yhdistetty.json", "w"),
               ensure_ascii=False, indent=1)
 
