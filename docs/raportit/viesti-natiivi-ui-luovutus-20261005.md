@@ -6,7 +6,7 @@ worktreet /Users/Shared/Claude/wt/proto-natiivi-ui-<aihe>. Käännös: lokit/nat
 Simu vain Julkaisijan "SIMU NYT" -viestistä, oma iPhone FB234D08-4693-4496-9C7A-6C7C15B03963, iPad
 AD119F7B-A2A2-43EE-8769-7326DD757F89; lopuksi sammutus ja "simu vapaa".
 
-## TILA 7.10. klo 10.4x (uusin)
+## TILA 7.10. klo 10.3x (uusin)
 
 - JUNA 160 natiivi-ui/apuraha-periaate 0261750e (kuumailmapallo-160 73ed2612 päällä): Elävä opas → Kuumailmapallo (KUITATTU),
   portin linkki pois (KUITATTU), apurahakortin loppuun lippurivi + palautelohko + © (odottaa: lippurivin rivitys 583fb158 ja ei tyhjiä
