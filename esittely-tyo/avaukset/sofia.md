@@ -1,0 +1,1 @@
+Tervetuloa Sofiaan. Ylhäältä kaupunki levittäytyy laajaan, joka puolelta vuorten ympäröimään laaksoon, ja sen eteläreunalla Vitoša-vuori nousee aivan viimeisten korttelien takaa. Kierros alkaa keskustan kultaisten kupolien luota Aleksanteri Nevskin katedraalilta, joka on yksi maailman suurimmista ortodoksisista kirkoista.
