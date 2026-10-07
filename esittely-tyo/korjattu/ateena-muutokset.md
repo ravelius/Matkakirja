@@ -37,3 +37,6 @@ Muutettu 6 kysymystä:
 - Tuulien torni: "Mikä oli roomalainen tori tornin vieressä?" → "Mitä roomalaisella torilla myytiin?" (outo muotoilu).
 
 Epävarmuudet: Likavittoksen mäntyjen istuttaja ja pääsiäisyön kulkue on jätetty yleistiedon varaan (metsitys 1800-luvun lopulla on tunnettu); "Oliko odeionilla alun perin katto?" on avoin kysymys.
+
+## Orkestroijan jälkikorjaus
+- Sýntagman aukio, teksti: alku "Sýntagman aukio" → "Syntagma-aukio" (suomen vakiintunut kirjoitusasu ilman aksenttia), jotta puhesynteesi ei äännä alkua vieraalla kielellä (tarkistimen ääntöhuomio).
