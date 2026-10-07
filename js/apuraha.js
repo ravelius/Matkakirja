@@ -48,7 +48,17 @@ export function tarkistaApuraha(d) {
     kappaleet,
     kuvat,
     webHuomautus: typeof d.webHuomautus === 'string' ? d.webHuomautus : '',
+    // "Avaa valmiit linssit" (omistaja 7.10.2026 klo 15.0x): oma kenttä, jota vanhat TF-appit eivät lue.
+    valmiitLinssit: valmiitLinssit(d.valmiitLinssit),
   };
+}
+
+/** valmiitLinssit { teksti, nappi, valmis, linssit[] } tai null (puuttuva nappi tai tyhjä lista). */
+function valmiitLinssit(v) {
+  if (!v || typeof v.nappi !== 'string' || !Array.isArray(v.linssit)) return null;
+  const linssit = v.linssit.filter((t) => typeof t === 'string');
+  if (!linssit.length) return null;
+  return { teksti: typeof v.teksti === 'string' ? v.teksti : '', nappi: v.nappi, valmis: typeof v.valmis === 'string' ? v.valmis : v.nappi, linssit };
 }
 
 /** Lataa esittelyn kerran; epäonnistuessa null (portti näkyy ilman nappia). */
@@ -74,14 +84,32 @@ const ESITTELYLINSSIT_AVAIN = 'matkakirja-esittelylinssit';
 
 export function esittelylinssitAuki() {
   try {
-    return globalThis.localStorage?.getItem(ESITTELYLINSSIT_AVAIN) === '1';
+    const arvo = globalThis.localStorage?.getItem(ESITTELYLINSSIT_AVAIN);
+    return arvo === '1' || Boolean(arvo?.startsWith('['));
   } catch {
     return false; // yksityinen selaus
   }
 }
 
-export function avaaEsittelylinssit() {
-  try { globalThis.localStorage?.setItem(ESITTELYLINSSIT_AVAIN, '1'); } catch { /* yksityinen selaus */ }
+/**
+ * Avaa esittelylinssit. lista (esittely.json nappi.linssit, omistaja 7.10.2026 klo 15.0x "valmiit linssit"): vain
+ * nämä tunnukset; ilman listaa vanha tapa (kaikki rekisterin toimivat linssit).
+ */
+export function avaaEsittelylinssit(lista = null) {
+  const arvo = Array.isArray(lista) && lista.length ? JSON.stringify(lista.filter((t) => typeof t === 'string')) : '1';
+  try { globalThis.localStorage?.setItem(ESITTELYLINSSIT_AVAIN, arvo); } catch { /* yksityinen selaus */ }
+}
+
+/** Avattujen esittelylinssien lista tai null (ei listaa: kaikki toimivat). */
+export function esittelylinssiLista() {
+  try {
+    const arvo = globalThis.localStorage?.getItem(ESITTELYLINSSIT_AVAIN);
+    if (!arvo || arvo === '1') return null;
+    const l = JSON.parse(arvo);
+    return Array.isArray(l) ? l : null;
+  } catch {
+    return null;
+  }
 }
 
 /** Testeille: seuraava lataaApuraha hakee uudelleen. */
