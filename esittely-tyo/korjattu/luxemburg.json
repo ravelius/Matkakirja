@@ -1,326 +1,326 @@
 {
- "kaupunki": "Luxemburg",
- "id": "luxemburg",
- "versio": 1,
- "kohteet": [
-  {
-   "id": "Q1348719",
-   "nimi": "Notre Damen katedraali",
-   "kuvaus": "Luxemburgin katolinen tuomiokirkko",
-   "luokka": "kirkko",
-   "koko_m": 90,
-   "korkeus_m": 40,
-   "teksti": "Luxemburgin Notre Damen katedraali erottuu ylhäältä kolmesta tornistaan, joista kaksi suippoa tornia kohoaa neljäänkymmeneen metriin. Kirkko rakennettiin alun perin jesuiittojen kirkoksi, ja sen peruskivi laskettiin vuonna 1613. Katedraaliksi se korotettiin vasta vuonna 1870, kun Luxemburg sai oman hiippakunnan. Kun kirkkoa laajennettiin 1930-luvulla, se sai poikkilaivan, kaksi uutta tornia ja kryptan. Kryptassa lepäävät Böömin kuningas Juhana Sokea, joka oli myös Luxemburgin kreivi, sekä suurherttuan suvun vainajia.",
-   "lyhyt": "Luxemburgin Notre Damen katedraalissa säilytetään puista Neitsyt Marian patsasta, jota kutsutaan murheellisten lohduttajaksi. Jesuiittakoulun oppilaat kantoivat sitä kulkueessa jo vuonna 1624. Nykyään pyhiinvaeltajat tulevat patsaan luo joka kevät kahden viikon ajan, ja lopuksi se kannetaan kulkueessa kaupungin katujen halki.",
-   "syventava": "Kuka oli Böömin kuningas Juhana Sokea?",
-   "kysymykset": [
-    "Miksi jesuiitat rakensivat tämän kirkon?",
-    "Miksi kirkkoa laajennettiin viime vuosisadalla?",
-    "Keitä suurherttuan suvusta on haudattu kryptaan?",
-    "Miten Juhana Sokea menetti näkönsä?",
-    "Milloin oktaavipyhiinvaellus järjestetään?"
-   ],
-   "isoisa": false,
-   "lahteet": [
+  "kaupunki": "Luxemburg",
+  "id": "luxemburg",
+  "versio": 1,
+  "kohteet": [
     {
-     "vaite": "Katedraalissa on kolme tornia, joista kaksi on 40 metriä korkeita; itä- ja keskitorni lisättiin laajennuksessa 1935–1938, jolloin rakennettiin myös krypta.",
-     "url": "https://en.wikipedia.org/wiki/Notre-Dame_Cathedral,_Luxembourg"
+      "id": "Q1348719",
+      "nimi": "Notre Damen katedraali",
+      "kuvaus": "Luxemburgin katolinen tuomiokirkko",
+      "luokka": "kirkko",
+      "koko_m": 90,
+      "korkeus_m": 40,
+      "teksti": "Luxemburgin Notre Damen katedraali erottuu ylhäältä kolmesta tornistaan, joista kaksi suippoa tornia kohoaa neljäänkymmeneen metriin. Kirkko rakennettiin alun perin jesuiittojen kirkoksi, ja sen peruskivi laskettiin vuonna 1613. Katedraaliksi se korotettiin vasta vuonna 1870, kun Luxemburg sai oman hiippakunnan. Kun kirkkoa laajennettiin 1930-luvulla, se sai poikkilaivan, kaksi uutta tornia ja kryptan. Kryptassa lepäävät Böömin kuningas Juhana Sokea, joka oli myös Luxemburgin kreivi, sekä suurherttuan suvun vainajia.",
+      "lyhyt": "Luxemburgin Notre Damen katedraalissa säilytetään puista Neitsyt Marian patsasta, jota kutsutaan murheellisten lohduttajaksi. Jesuiittakoulun oppilaat kantoivat sitä kulkueessa jo vuonna 1624. Nykyään pyhiinvaeltajat tulevat patsaan luo joka kevät kahden viikon ajan, ja lopuksi se kannetaan kulkueessa kaupungin katujen halki.",
+      "syventava": "Kuka oli Böömin kuningas Juhana Sokea?",
+      "kysymykset": [
+        "Miksi jesuiitat rakensivat tämän kirkon?",
+        "Miksi kirkkoa laajennettiin viime vuosisadalla?",
+        "Keitä suurherttuan suvusta on haudattu kryptaan?",
+        "Miten Juhana Sokea menetti näkönsä?",
+        "Milloin oktaavipyhiinvaellus järjestetään?"
+      ],
+      "isoisa": false,
+      "lahteet": [
+        {
+          "vaite": "Katedraalissa on kolme tornia, joista kaksi on 40 metriä korkeita; itä- ja keskitorni lisättiin laajennuksessa 1935–1938, jolloin rakennettiin myös krypta.",
+          "url": "https://en.wikipedia.org/wiki/Notre-Dame_Cathedral,_Luxembourg"
+        },
+        {
+          "vaite": "Alun perin jesuiittojen kirkko; peruskivi laskettiin 1613.",
+          "url": "https://en.wikipedia.org/wiki/Notre-Dame_Cathedral,_Luxembourg"
+        },
+        {
+          "vaite": "Paavi Pius IX korotti Luxemburgin hiippakunnaksi 27.6.1870, ja kirkosta tuli katedraali.",
+          "url": "https://en.wikipedia.org/wiki/Notre-Dame_Cathedral,_Luxembourg"
+        },
+        {
+          "vaite": "Kryptassa lepäävät Böömin kuningas ja Luxemburgin kreivi Juhana Sokea sekä suurherttuan suvun jäseniä.",
+          "url": "https://www.visitluxembourg.com/place/cathedrale-notre-dame"
+        },
+        {
+          "vaite": "Suomenkielinen nimiasu Juhana (Luxemburgilainen), lisänimi Sokea.",
+          "url": "https://fi.wikipedia.org/wiki/Juhana_Luxemburgilainen"
+        },
+        {
+          "vaite": "Puinen Marian patsas Consolatrix Afflictorum; jesuiittakollegion oppilaat kantoivat sitä kulkueessa 1624; patsas on katedraalissa, ja pyhiinvaeltajat tulevat sen luo kahden viikon ajan pääsiäisen jälkeen.",
+          "url": "https://en.wikipedia.org/wiki/Our_Lady_of_Luxembourg"
+        },
+        {
+          "vaite": "Oktaavin päätöskulkueessa patsas kannetaan kaupungin keskustan katujen halki.",
+          "url": "https://chronicle.lu/category/religion-churches/55042-luxembourgs-400th-octave-celebrated-with-closing-mass-procession"
+        }
+      ]
     },
     {
-     "vaite": "Alun perin jesuiittojen kirkko; peruskivi laskettiin 1613.",
-     "url": "https://en.wikipedia.org/wiki/Notre-Dame_Cathedral,_Luxembourg"
+      "id": "Q1205254",
+      "nimi": "Suurherttuan palatsi",
+      "kuvaus": "Suurherttuan virka-asunto vanhassakaupungissa",
+      "luokka": "rakennus",
+      "koko_m": 60,
+      "teksti": "Suurherttuan palatsi on kapea rakennus vanhankaupungin kujien keskellä, ja sen koristeellinen julkisivu pikkutorneineen ja parvekkeineen edustaa flaamilaista renessanssia. Talo ei ollut alun perin palatsi, vaan se toimi vuodesta 1572 Luxemburgin kaupungintalona. Edellinen kaupungintalo oli tuhoutunut vuonna 1554, kun salama sytytti kirkon ullakolle varastoidun ruudin ja räjähdys hävitti suuren osan kaupunkia. Vasta vuonna 1890 rakennus varattiin kokonaan suurherttuan perheelle. Palatsin oven edessä vartioi nykyään Luxemburgin armeijan sotilas, ja aivan vieressä toimii maan parlamentti.",
+      "lyhyt": "Suurherttuan palatsissa asui vuodesta 1817 käskynhaltija, sillä Luxemburgin suurherttuat olivat silloin Alankomaiden kuninkaita ja asuivat muualla. Nykyään palatsissa majoittuvat valtiovierailulla olevat ulkomaiset valtionpäämiehet, ja suurherttuan jouluaaton puhe lähetetään joka vuosi palatsin Keltaisesta salista.",
+      "syventava": "Miksi suurherttua ei asunut palatsissa?",
+      "kysymykset": [
+        "Asuuko suurherttua nykyään palatsissa?",
+        "Miksi kaupungintalosta tehtiin palatsi?",
+        "Mitä palatsin juhlasaleissa tapahtuu?",
+        "Miksi palatsin edessä on vartija?",
+        "Miltä suurherttuan työhuone näyttää?"
+      ],
+      "isoisa": false,
+      "lahteet": [
+        {
+          "vaite": "Palatsi on flaamilaisen renessanssin rakennus, julkisivussa pikkutorneja ja parvekkeita.",
+          "url": "https://www.frommers.com/destinations/luxembourg-city/attractions/palais-grand-ducal-palace-of-the-grand-dukes"
+        },
+        {
+          "vaite": "Rakennus oli Luxemburgin kaupungintalo 1572–1795; aiempi rakennus tuhoutui suurelta osin ruutiräjähdyksessä 1554.",
+          "url": "https://en.wikipedia.org/wiki/Grand_Ducal_Palace,_Luxembourg"
+        },
+        {
+          "vaite": "Vuonna 1554 salama räjäytti kirkon ullakolle varastoidun ruudin, ja tulipalot tuhosivat suuren osan kaupunkia.",
+          "url": "https://en.wikipedia.org/wiki/List_of_explosions"
+        },
+        {
+          "vaite": "Vuodesta 1890 Nassau-Weilburgin suvun noustua valtaan palatsi varattiin yksinomaan suurherttuan perheelle.",
+          "url": "https://en.wikipedia.org/wiki/Grand_Ducal_Palace,_Luxembourg"
+        },
+        {
+          "vaite": "Vuodesta 1966 Luxemburgin armeijan sotilaat vartioivat palatsia; vieressä on edustajainhuone.",
+          "url": "https://en.wikipedia.org/wiki/Grand_Ducal_Palace,_Luxembourg"
+        },
+        {
+          "vaite": "Vuodesta 1817 rakennuksessa asui käskynhaltija, hollantilaisten suurherttuoiden edustaja.",
+          "url": "https://en.wikipedia.org/wiki/Grand_Ducal_Palace,_Luxembourg"
+        },
+        {
+          "vaite": "Valtiovierailulla olevat ulkomaiset valtionpäämiehet majoitetaan palatsiin; suurherttuan joulupuhe lähetetään jouluaattona Keltaisesta salista.",
+          "url": "https://en.wikipedia.org/wiki/Grand_Ducal_Palace,_Luxembourg"
+        },
+        {
+          "vaite": "Vuonna 1554 salama iski fransiskaanikirkkoon, jonka ullakolle oli varastoitu ruutitynnyreitä; räjähdys ja tulipalot tuhosivat suuren osan kaupunkia, ja uusi kaupungintalo rakennettiin 1572.",
+          "url": "https://en.wikipedia.org/wiki/Timeline_of_Luxembourg_City"
+        }
+      ]
     },
     {
-     "vaite": "Paavi Pius IX korotti Luxemburgin hiippakunnaksi 27.6.1870, ja kirkosta tuli katedraali.",
-     "url": "https://en.wikipedia.org/wiki/Notre-Dame_Cathedral,_Luxembourg"
+      "id": "Q365643",
+      "nimi": "Adolphe-silta",
+      "kuvaus": "Kivikaarisilta Pétrussen laakson yllä",
+      "luokka": "silta",
+      "koko_m": 153,
+      "teksti": "Luxemburgin Adolphe-silta ylittää Pétrussen laakson suurella kivikaarella noin neljänkymmenenkahden metrin korkeudella. Sen suunnittelivat ranskalainen insinööri Paul Séjourné ja luxemburgilainen Albert Rodange, ja valmistuessaan vuonna 1903 sen lähes kahdeksankymmentäviisi metriä leveä pääkaari oli maailman suurin kivikaari. Silta sai nimensä suurherttua Adolphen mukaan, mutta luxemburgilaiset kutsuvat sitä yhä Uudeksi sillaksi, vaikka se on yli satavuotias. Nimi juontuu siitä, että laakson yli kulki jo vanhempi silta. Vuoden 2020 joulukuusta lähtien sillan yläkannella on kulkenut raitiovaunu.",
+      "lyhyt": "Luxemburgin Adolphe-sillan kannen alle ripustettiin vuonna 2018 erillinen pyörä- ja kävelysilta. Sataviisikymmentäneljä metriä pitkä ja neljä metriä leveä kaista roikkuu ohuiden vaijerien varassa, joten pyöräilijät ylittävät laakson sillan kahden rinnakkaisen kivikaaren välissä.",
+      "syventava": "Mikä oli laakson vanhempi silta?",
+      "kysymykset": [
+        "Miksi siltaa kutsutaan Uudeksi sillaksi?",
+        "Kuka oli suurherttua Adolphe?",
+        "Miten näin suuri kivikaari rakennettiin?",
+        "Miksi sillan alle ripustettiin pyörätie?",
+        "Mistä kivestä silta on tehty?"
+      ],
+      "isoisa": false,
+      "lahteet": [
+        {
+          "vaite": "Kaksoiskaari ylittää Pétrussen laakson 42 metrin korkeudella; sillan pituus 153 metriä.",
+          "url": "https://www.luxembourg-city.com/en/place/monument/adolphe-bridge"
+        },
+        {
+          "vaite": "Suunnittelijat Paul Séjourné ja Albert Rodange; rakennettiin 1900–1903; 84,65 metrin pääkaari oli valmistuessaan maailman suurin kivikaari.",
+          "url": "https://en.wikipedia.org/wiki/Adolphe_Bridge"
+        },
+        {
+          "vaite": "Nimetty suurherttua Adolphen mukaan; tunnetaan Uutena siltana (Nei Bréck), koska vanhempi Passerelle eli Vanha silta rakennettiin laakson yli 1859–1861.",
+          "url": "https://en.wikipedia.org/wiki/Passerelle_(Luxembourg)"
+        },
+        {
+          "vaite": "Joulukuusta 2020 sillan yläkannella on kulkenut raitiovaunu.",
+          "url": "https://en.wikipedia.org/wiki/Adolphe_Bridge"
+        },
+        {
+          "vaite": "Alakansi avattiin 2018, se on 154 metriä pitkä ja kantaa pyörä- ja kävelytietä; se riippuu vaijereista sillan kannen alla.",
+          "url": "https://en.wikipedia.org/wiki/Adolphe_Bridge"
+        },
+        {
+          "vaite": "Pyörätie riippuu teräsvaijerien varassa sillan kahden kaaririvin välisessä tilassa.",
+          "url": "https://www.dezeen.com/2019/05/24/passerelle-pont-adolphe-cycle-path-luxembourg-christian-bauer/amp/"
+        },
+        {
+          "vaite": "Sillan alle ripustettu pyörä- ja kävelysilta on 154 metriä pitkä ja 4 metriä leveä.",
+          "url": "https://world-architects.com/fr/projects/view/passerelle-pont-adolphe"
+        }
+      ]
     },
     {
-     "vaite": "Kryptassa lepäävät Böömin kuningas ja Luxemburgin kreivi Juhana Sokea sekä suurherttuan suvun jäseniä.",
-     "url": "https://www.visitluxembourg.com/place/cathedrale-notre-dame"
+      "id": "Q125561209",
+      "nimi": "Bockin kasematit",
+      "kuvaus": "Kallioon louhitut linnoituskäytävät",
+      "luokka": "linnoitus",
+      "koko_m": 250,
+      "teksti": "Bockin kasematit on louhittu kallioniemeen, joka työntyy vanhankaupungin itäkulmasta Alzette-joen mutkaan ja jonka laella olleen linnoituksen kreivi Siegfried hankki itselleen vuonna 963. Espanjalaiset alkoivat kaivaa kallioon ensimmäisiä käytäviä vuonna 1644, ja 1700-luvulla käytävissä oli jo kaksikymmentäviisi tykkiasemaa ja tilaa tuhannelle kahdellesadalle sotilaalle. Isoisäsi kirjoitti vuonna 1873, että Bockin käytävissä kaikui iskuvasaroita, kun kalliota purettiin kivi kiveltä. Toisen maailmansodan aikana käytävät olivat pommisuoja, johon mahtui jopa kolmekymmentäviisituhatta ihmistä.",
+      "lyhyt": "Bockin kalliota ja vanhaakaupunkia yhdistää itävaltalaisten vuonna 1735 rakentama kaksikerroksinen Linnasilta, jonka voi ylittää neljää reittiä: tietä, kaarikäytävää, kierreportaita ja tunnelia. Linnoitusten purkamisen jälkeen kaupungin alle jäi silti seitsemäntoista kilometriä käytäviä, koska niitä ei voitu tuhota vahingoittamatta taloja niiden yläpuolella.",
+      "syventava": "Miksi linnoitus piti purkaa?",
+      "kysymykset": [
+        "Miksi linnoitus määrättiin purettavaksi?",
+        "Mitä Siegfriedin linnasta on jäljellä?",
+        "Miten käytävät louhittiin kallioon?",
+        "Kuinka syvälle kallioon käytävät ulottuvat?",
+        "Miten käytäviä käytettiin sodan aikana?"
+      ],
+      "isoisa": true,
+      "lahteet": [
+        {
+          "vaite": "Bock on kallioniemi yläkaupungin itäkulmassa; kreivi Siegfried rakensi sinne Lucilinburhucin linnan vuonna 963.",
+          "url": "https://en.wikipedia.org/wiki/Bock_(Luxembourg)"
+        },
+        {
+          "vaite": "Ensimmäiset maanalaiset käytävät kaivettiin espanjalaisvallan aikana 1644.",
+          "url": "https://www.luxembourg-city.com/en/things-to-do/sights/underground"
+        },
+        {
+          "vaite": "Isoisän merkintä: Bockin käytävissä kaikuu iskuvasaroita; kallio on purettava kivi kiveltä.",
+          "url": "kaanon:isoisan-paivakirja"
+        },
+        {
+          "vaite": "Toisessa maailmansodassa kasematit olivat pommisuoja, johon mahtui jopa 35 000 ihmistä; yleisölle avattiin 1933.",
+          "url": "https://luxtoday.lu/en/knowledge/luxembourg-casemates"
+        },
+        {
+          "vaite": "Alkuperäisestä 23 kilometristä jäi purkamisen jälkeen 17 kilometriä; verkostoa ei voitu tuhota vahingoittamatta kaupunkia.",
+          "url": "https://www.luxembourg-city.com/en/things-to-do/sights/underground"
+        },
+        {
+          "vaite": "Siegfried hankki vaihtokaupalla Bockin kalliolla olleen linnoituksen Lucilinburhuc; kauppakirja allekirjoitettiin 7.4.963. Neipperg laajensi käytäviä 1744: kaksikymmentäviisi tykkiasemaa, kasarmitila jopa 1 200 sotilaalle. Itävaltalaisten 1735 rakentama kaksikerroksinen Linnasilta tarjoaa neljä kulkureittiä: tie, yläkaarien käytävä, pääkaaren kierreportaat ja tunneli.",
+          "url": "https://en.wikipedia.org/wiki/Bock_(Luxembourg)"
+        }
+      ]
     },
     {
-     "vaite": "Suomenkielinen nimiasu Juhana (Luxemburgilainen), lisänimi Sokea.",
-     "url": "https://fi.wikipedia.org/wiki/Juhana_Luxemburgilainen"
+      "id": "Q359872",
+      "nimi": "Guillaume II:n aukio",
+      "kuvaus": "Vanhankaupungin keskusaukio",
+      "luokka": "aukio",
+      "koko_m": 150,
+      "teksti": "Luxemburgin vanhankaupungin keskusaukio, Guillaume II:n aukio, jakautuu ylhäältä kahteen osaan: länsipäätä hallitsee kaupungintalo ja itäpäätä ratsastajapatsas. Patsas esittää Vilhelm toista, joka oli Alankomaiden kuningas ja samalla Luxemburgin suurherttua, ja se pystytettiin aukiolle vuonna 1884. Vilhelm toinen antoi vuonna 1848 Luxemburgille sen ensimmäisen parlamentaarisen perustuslain. Paikalla seisoi ennen fransiskaaniluostari, ja siksi paikalliset kutsuvat aukiota yhä Knuedleriksi eli solmuksi munkkien vyön solmun mukaan. Aukiolla pidetään toria ja ulkoilmatapahtumia.",
+      "lyhyt": "Luxemburgin keskusaukion, Guillaume II:n aukion, ratsastajapatsaasta on tarkka kopio Haagissa. Kun Haagin oma Vilhelm toisen patsas jouduttiin siirtämään uuden kadun tieltä, rahat eivät riittäneet uuteen taideteokseen, joten vuonna 1924 valettiin kopio Luxemburgin patsaasta, vaikka viisitoista taiteilijajärjestöä vaati kilpailua.",
+      "syventava": "Mitä Knuedler tarkoittaa?",
+      "kysymykset": [
+        "Miksi aukiota kutsutaan Knuedleriksi?",
+        "Mitä luostarille tapahtui?",
+        "Kuka oli kuningas Vilhelm toinen?",
+        "Mitä aukiolla myydään toripäivinä?",
+        "Kuka veisti aukion ratsastajapatsaan?"
+      ],
+      "isoisa": false,
+      "lahteet": [
+        {
+          "vaite": "Aukion länsiosaa hallitsee kaupungintalo, itäosaa Vilhelm II:n ratsastajapatsas, jonka mukaan aukio on nimetty.",
+          "url": "https://en.wikipedia.org/wiki/Place_Guillaume_II"
+        },
+        {
+          "vaite": "Patsas pystytettiin 1884; Vilhelm II hallitsi 1840–1849 ja antoi 1848 ensimmäisen parlamentaarisen perustuslain.",
+          "url": "https://luxembourg-city.com/en/place/monument/equestrian-statue-of-william-ii"
+        },
+        {
+          "vaite": "Paikalla oli fransiskaaniluostari; puhekielen nimi Knuedler tulee luxemburgin sanasta solmu, fransiskaanien vyön solmu.",
+          "url": "https://en.wikipedia.org/wiki/Place_Guillaume_II"
+        },
+        {
+          "vaite": "Aukiolla pidetään toreja ja ulkoilmatapahtumia.",
+          "url": "https://worldcitytrail.com/2025/01/07/place-guillaume-ii-in-luxembourg/"
+        },
+        {
+          "vaite": "Ratsastajan teki Antonin Mercié, hevosen Victor Peter; jalustassa Oranje-Nassaun, Luxemburgin ja kahdentoista kantonin vaakunat; tarkka jäljennös Haagissa.",
+          "url": "https://luxembourg-city.com/en/place/monument/equestrian-statue-of-william-ii"
+        },
+        {
+          "vaite": "Mercién ja Peterin ratsastajapatsas pystytettiin Luxemburgiin 1884; Haagin Buitenhofille paljastettiin siitä kopio 16.9.1924, kun Haagin vuoden 1854 patsas siirrettiin leveän kadun rakentamisen tieltä Tilburgiin; budjettisyistä valettiin kopio, mitä viisitoista taiteilijajärjestöä vastusti vaatien kilpailua.",
+          "url": "https://bkdh.nl/en/kunstwerken/ruiterstandbeeld-van-koning-willem-ii/"
+        }
+      ],
+      "puhe_teksti": "Luxemburgin vanhankaupungin keskusaukio, Guillaume toisen aukio, jakautuu ylhäältä kahteen osaan: länsipäätä hallitsee kaupungintalo ja itäpäätä ratsastajapatsas. Patsas esittää Vilhelm toista, joka oli Alankomaiden kuningas ja samalla Luxemburgin suurherttua, ja se pystytettiin aukiolle vuonna 1884. Vilhelm toinen antoi vuonna 1848 Luxemburgille sen ensimmäisen parlamentaarisen perustuslain. Paikalla seisoi ennen fransiskaaniluostari, ja siksi paikalliset kutsuvat aukiota yhä Knuedleriksi eli solmuksi munkkien vyön solmun mukaan. Aukiolla pidetään toria ja ulkoilmatapahtumia.",
+      "puhe_lyhyt": "Luxemburgin keskusaukion, Guillaume toisen aukion, ratsastajapatsaasta on tarkka kopio Haagissa. Kun Haagin oma Vilhelm toisen patsas jouduttiin siirtämään uuden kadun tieltä, rahat eivät riittäneet uuteen taideteokseen, joten vuonna 1924 valettiin kopio Luxemburgin patsaasta, vaikka viisitoista taiteilijajärjestöä vaati kilpailua."
     },
     {
-     "vaite": "Puinen Marian patsas Consolatrix Afflictorum; jesuiittakollegion oppilaat kantoivat sitä kulkueessa 1624; patsas on katedraalissa, ja pyhiinvaeltajat tulevat sen luo kahden viikon ajan pääsiäisen jälkeen.",
-     "url": "https://en.wikipedia.org/wiki/Our_Lady_of_Luxembourg"
+      "id": "Q950660",
+      "nimi": "Pétrusse",
+      "kuvaus": "Joki ja puistolaakso",
+      "luokka": "vesi",
+      "koko_m": 1500,
+      "teksti": "Luxemburgin pieni Pétrusse-joki on uurtanut vanhankaupungin eteläpuolelle syvän laakson, jonka pohjalla on puisto kävelyteineen ja leikkipaikkoineen. Joki ohjattiin 1930-luvulla suoraan betonikouruun, koska jätevedet olivat pilanneet veden ja uhkasivat ihmisten terveyttä. Kourussa vesieläimet eivät viihtyneet, joten betonia on nyt purettu: vesi saa jälleen mutkitella, ja rannoille on palannut kasvillisuutta. Ensimmäinen vaihe valmistui vuoden 2024 lopussa, ja työ jatkuu. Lähes kolmetoista kilometriä pitkä joki laskee Alzetteen Grundin kaupunginosassa.",
+      "lyhyt": "Luxemburgin Pétrusse-laakson reunalla, Perustuslain aukiolla, kohoaa obeliskin huipulla kultainen naishahmo, Gëlle Fra. Saksalaiset miehittäjät purkivat muistomerkin vuonna 1940, ja patsas oli kateissa neljäkymmentä vuotta, kunnes se löytyi vuonna 1980 piilotettuna kansallisen jalkapallostadionin pääkatsomon alta.",
+      "syventava": "Kuka piilotti Kultaisen naisen?",
+      "kysymykset": [
+        "Miksi joki pantiin betonikouruun?",
+        "Mitä eläimiä joessa elää nykyään?",
+        "Keitä Kultainen nainen kunnioittaa?",
+        "Miksi laakso on niin syvä?",
+        "Mihin Pétrussen vesi lopulta virtaa?"
+      ],
+      "isoisa": false,
+      "lahteet": [
+        {
+          "vaite": "Pétrussen laaksossa on kävelyteitä, pyöräteitä ja leikkipaikkoja.",
+          "url": "https://en.paperjam.lu/article/next-phase-of-ecological-redevelopment-of-petrusse-valley-begins"
+        },
+        {
+          "vaite": "Joki kanavoitiin 1930-luvulla, koska jätteet saastuttivat sen ja uhkasivat terveyttä; suora betonikouru esti vesieliöstön.",
+          "url": "https://www.vdl.lu/en/node/199814"
+        },
+        {
+          "vaite": "Betonipohja on poistettu, joki mutkittelee ja rantakasvillisuus on palannut; ensimmäinen vaihe valmistui vuoden 2024 lopussa, toinen alkoi.",
+          "url": "https://en.paperjam.lu/article/next-phase-of-ecological-redevelopment-of-petrusse-valley-begins"
+        },
+        {
+          "vaite": "Joki on 12,8 km pitkä ja laskee Alzetteen Grundissa.",
+          "url": "https://www.vdl.lu/en/node/199814"
+        },
+        {
+          "vaite": "Gëlle Fra seisoo Perustuslain aukiolla obeliskin huipulla; saksalaiset purkivat muistomerkin 21.10.1940; patsas oli kateissa tammikuuhun 1980, jolloin se löytyi piilotettuna kansallisen jalkapallostadionin pääkatsomon alta; muistomerkki on omistettu liittoutuneiden armeijoissa palvelleille luxemburgilaisille vapaaehtoisille.",
+          "url": "https://en.wikipedia.org/wiki/G%C3%ABlle_Fra"
+        }
+      ]
     },
     {
-     "vaite": "Oktaavin päätöskulkueessa patsas kannetaan kaupungin keskustan katujen halki.",
-     "url": "https://chronicle.lu/category/religion-churches/55042-luxembourgs-400th-octave-celebrated-with-closing-mass-procession"
+      "id": "Q585990",
+      "nimi": "Thüngenin linnake",
+      "kuvaus": "Kolmitorninen linnake Kirchbergissä",
+      "luokka": "linnoitus",
+      "koko_m": 200,
+      "teksti": "Thüngenin linnake erottuu ylhäältä Kirchbergin ylängön reunalla kolmena pyöreänä tornina, joista jokaisen huipulla on kivinen tammenterho. Siksi luxemburgilaiset kutsuvat linnaketta Kolmeksi terhoksi, omalla kielellään Dräi Eechelen. Itävaltalaiset rakensivat sen vuonna 1732 vahvistamaan kaupungin linnoitusta, ja nimensä se sai sotapäällikkö Adam Sigmund von Thüngenin mukaan. Kun linnoitukset purettiin vuoden 1867 Lontoon sopimuksen jälkeen, jäljelle jäivät vain tornit ja perustukset. Linnake rakennettiin uudelleen 1990-luvulla, ja vuodesta 2012 siinä on toiminut museo.",
+      "lyhyt": "Thüngenin linnakkeen vieressä on modernin taiteen museo Mudam, joka avattiin vuonna 2006. Sen suunnitteli arkkitehti Ieoh Ming Pei, joka tunnetaan myös Louvren lasipyramidista, ja museon kattoikkunat muistuttavat linnakkeen kolmea tornia. Molempia ympäröi Kolmen terhon puisto.",
+      "syventava": "Kuka oli Adam Sigmund von Thüngen?",
+      "kysymykset": [
+        "Miksi torneissa on tammenterhot?",
+        "Mitä linnakkeen museossa näytetään?",
+        "Miksi Luxemburgia kutsuttiin Pohjoisen Gibraltariksi?",
+        "Millaista taidetta Mudamissa on?",
+        "Miten linnake rakennettiin uudelleen?"
+      ],
+      "isoisa": false,
+      "lahteet": [
+        {
+          "vaite": "Linnake on Kirchbergissä Dräi Eechelen -puistossa; kolmen tornin huipulla on tammenterho, ja siksi sitä kutsutaan nimellä Dräi Eechelen.",
+          "url": "https://en.wikipedia.org/wiki/Fort_Th%C3%BCngen"
+        },
+        {
+          "vaite": "Rakennettiin 1732–1733, nimetty sotapäällikkö Adam Sigmund von Thüngenin mukaan; Itävallan viranomaiset päättivät vahvistuksesta 1732.",
+          "url": "https://en.wikipedia.org/wiki/Fort_Th%C3%BCngen"
+        },
+        {
+          "vaite": "Vuoden 1867 Lontoon sopimuksen jälkeen linnake purettiin, jäljelle jäivät tornit ja perustukset; rekonstruoitiin 1990-luvulla ja avattiin 2012 Musée Dräi Eechelen -museona.",
+          "url": "https://en.wikipedia.org/wiki/Fort_Th%C3%BCngen"
+        },
+        {
+          "vaite": "Mudam avattiin 2006 vanhan Thüngenin linnakkeen paikalle, suunnittelija Ieoh Ming Pei; kattoikkunat muistuttavat Kolmen terhon torneja; museo yhdistettiin Dräi Eechelen -puistossa linnakkeeseen.",
+          "url": "https://en.wikipedia.org/wiki/MUDAM"
+        },
+        {
+          "vaite": "Ieoh Ming Pei suunnitteli Louvren lasipyramidin.",
+          "url": "https://en.wikipedia.org/wiki/I._M._Pei"
+        }
+      ]
     }
-   ]
-  },
-  {
-   "id": "Q1205254",
-   "nimi": "Suurherttuan palatsi",
-   "kuvaus": "Suurherttuan virka-asunto vanhassakaupungissa",
-   "luokka": "rakennus",
-   "koko_m": 60,
-   "teksti": "Suurherttuan palatsi on kapea rakennus vanhankaupungin kujien keskellä, ja sen koristeellinen julkisivu pikkutorneineen ja parvekkeineen edustaa flaamilaista renessanssia. Talo ei ollut alun perin palatsi, vaan se toimi vuodesta 1572 Luxemburgin kaupungintalona. Edellinen kaupungintalo oli tuhoutunut vuonna 1554, kun salama sytytti kirkon ullakolle varastoidun ruudin ja räjähdys hävitti suuren osan kaupunkia. Vasta vuonna 1890 rakennus varattiin kokonaan suurherttuan perheelle. Palatsin oven edessä vartioi nykyään Luxemburgin armeijan sotilas, ja aivan vieressä toimii maan parlamentti.",
-   "lyhyt": "Suurherttuan palatsissa asui vuodesta 1817 käskynhaltija, sillä Luxemburgin suurherttuat olivat silloin Alankomaiden kuninkaita ja asuivat muualla. Nykyään palatsi on suurherttuan virka-asunto, ja kesäisin opastetuilla kierroksilla pääsee näkemään esimerkiksi suurherttuan työhuoneen ja ruokasalin.",
-   "syventava": "Miksi suurherttua ei asunut palatsissa?",
-   "kysymykset": [
-    "Asuuko suurherttua nykyään palatsissa?",
-    "Miksi kaupungintalosta tehtiin palatsi?",
-    "Mitä palatsin juhlasaleissa tapahtuu?",
-    "Miksi palatsin edessä on vartija?",
-    "Miltä suurherttuan työhuone näyttää?"
-   ],
-   "isoisa": false,
-   "lahteet": [
-    {
-     "vaite": "Palatsi on flaamilaisen renessanssin rakennus, julkisivussa pikkutorneja ja parvekkeita.",
-     "url": "https://www.frommers.com/destinations/luxembourg-city/attractions/palais-grand-ducal-palace-of-the-grand-dukes"
-    },
-    {
-     "vaite": "Rakennus oli Luxemburgin kaupungintalo 1572–1795; aiempi rakennus tuhoutui suurelta osin ruutiräjähdyksessä 1554.",
-     "url": "https://en.wikipedia.org/wiki/Grand_Ducal_Palace,_Luxembourg"
-    },
-    {
-     "vaite": "Vuonna 1554 salama räjäytti kirkon ullakolle varastoidun ruudin, ja tulipalot tuhosivat suuren osan kaupunkia.",
-     "url": "https://en.wikipedia.org/wiki/List_of_explosions"
-    },
-    {
-     "vaite": "Vuodesta 1890 Nassau-Weilburgin suvun noustua valtaan palatsi varattiin yksinomaan suurherttuan perheelle.",
-     "url": "https://en.wikipedia.org/wiki/Grand_Ducal_Palace,_Luxembourg"
-    },
-    {
-     "vaite": "Vuodesta 1966 Luxemburgin armeijan sotilaat vartioivat palatsia; vieressä on edustajainhuone.",
-     "url": "https://en.wikipedia.org/wiki/Grand_Ducal_Palace,_Luxembourg"
-    },
-    {
-     "vaite": "Vuodesta 1817 rakennuksessa asui käskynhaltija, hollantilaisten suurherttuoiden edustaja.",
-     "url": "https://en.wikipedia.org/wiki/Grand_Ducal_Palace,_Luxembourg"
-    },
-    {
-     "vaite": "Kesän opastetuilla kierroksilla nähdään muun muassa suurherttuan työhuone ja ruokasali.",
-     "url": "https://en.paperjam.lu/article/this-summer-the-grand-ducal-palace-opens-its-doors-to-visitors"
-    }
-   ]
-  },
-  {
-   "id": "Q365643",
-   "nimi": "Adolphe-silta",
-   "kuvaus": "Kivikaarisilta Pétrussen laakson yllä",
-   "luokka": "silta",
-   "koko_m": 153,
-   "teksti": "Luxemburgin Adolphe-silta ylittää Pétrussen laakson suurella kivikaarella noin neljänkymmenenkahden metrin korkeudella. Sen suunnittelivat ranskalainen insinööri Paul Séjourné ja luxemburgilainen Albert Rodange, ja valmistuessaan vuonna 1903 sen lähes kahdeksankymmentäviisi metriä leveä pääkaari oli maailman suurin kivikaari. Silta sai nimensä suurherttua Adolphen mukaan, mutta luxemburgilaiset kutsuvat sitä yhä Uudeksi sillaksi, vaikka se on yli satavuotias. Nimi juontuu siitä, että laakson yli kulki jo vanhempi silta. Vuoden 2020 joulukuusta lähtien sillan yläkannella on kulkenut raitiovaunu.",
-   "lyhyt": "Luxemburgin Adolphe-sillan kannen alle ripustettiin vuonna 2018 erillinen pyörä- ja kävelysilta. Sataviisikymmentäneljä metriä pitkä ja neljä metriä leveä kaista roikkuu ohuiden vaijerien varassa, joten pyöräilijät ylittävät laakson sillan kahden rinnakkaisen kivikaaren välissä.",
-   "syventava": "Mikä oli laakson vanhempi silta?",
-   "kysymykset": [
-    "Miksi siltaa kutsutaan Uudeksi sillaksi?",
-    "Kuka oli suurherttua Adolphe?",
-    "Miten näin suuri kivikaari rakennettiin?",
-    "Miksi sillan alle ripustettiin pyörätie?",
-    "Mistä kivestä silta on tehty?"
-   ],
-   "isoisa": false,
-   "lahteet": [
-    {
-     "vaite": "Kaksoiskaari ylittää Pétrussen laakson 42 metrin korkeudella; sillan pituus 153 metriä.",
-     "url": "https://www.luxembourg-city.com/en/place/monument/adolphe-bridge"
-    },
-    {
-     "vaite": "Suunnittelijat Paul Séjourné ja Albert Rodange; rakennettiin 1900–1903; 84,65 metrin pääkaari oli valmistuessaan maailman suurin kivikaari.",
-     "url": "https://en.wikipedia.org/wiki/Adolphe_Bridge"
-    },
-    {
-     "vaite": "Nimetty suurherttua Adolphen mukaan; tunnetaan Uutena siltana (Nei Bréck), koska vanhempi Passerelle eli Vanha silta rakennettiin laakson yli 1859–1861.",
-     "url": "https://en.wikipedia.org/wiki/Passerelle_(Luxembourg)"
-    },
-    {
-     "vaite": "Joulukuusta 2020 sillan yläkannella on kulkenut raitiovaunu.",
-     "url": "https://en.wikipedia.org/wiki/Adolphe_Bridge"
-    },
-    {
-     "vaite": "Alakansi avattiin 2018, se on 154 metriä pitkä ja kantaa pyörä- ja kävelytietä; se riippuu vaijereista sillan kannen alla.",
-     "url": "https://en.wikipedia.org/wiki/Adolphe_Bridge"
-    },
-    {
-     "vaite": "Pyörätie riippuu teräsvaijerien varassa sillan kahden kaaririvin välisessä tilassa.",
-     "url": "https://www.dezeen.com/2019/05/24/passerelle-pont-adolphe-cycle-path-luxembourg-christian-bauer/amp/"
-    },
-    {
-     "vaite": "Sillan alle ripustettu pyörä- ja kävelysilta on 154 metriä pitkä ja 4 metriä leveä.",
-     "url": "https://world-architects.com/fr/projects/view/passerelle-pont-adolphe"
-    }
-   ]
-  },
-  {
-   "id": "Q125561209",
-   "nimi": "Bockin kasematit",
-   "kuvaus": "Kallioon louhitut linnoituskäytävät",
-   "luokka": "linnoitus",
-   "koko_m": 250,
-   "teksti": "Bockin kasematit on louhittu kallioniemeen, joka työntyy vanhankaupungin itäkulmasta Alzette-joen mutkaan ja jonka laelle kreivi Siegfried rakensi linnansa vuonna 963. Espanjalaiset alkoivat kaivaa kallioon ensimmäisiä käytäviä vuonna 1644, ja 1700-luvulla kallion uumeniin mahtui jo viisikymmentä tykkiä ja tuhannen kahdensadan miehen varuskunta. Isoisäsi kirjoitti vuonna 1873, että Bockin käytävissä kaikui iskuvasaroita, kun kalliota purettiin kivi kiveltä. Toisen maailmansodan aikana käytävät olivat pommisuoja, johon mahtui jopa kolmekymmentäviisituhatta ihmistä.",
-   "lyhyt": "Bockin kasematit avattiin yleisölle vuonna 1933, ja vuodesta 1994 ne ovat kuuluneet Unescon maailmanperintöön. Linnoitusten purkamisen jälkeen kaupungin alla on yhä seitsemäntoista kilometriä käytäviä, koska niitä ei voitu tuhota vahingoittamatta taloja niiden yläpuolella.",
-   "syventava": "Miksi linnoitus piti purkaa?",
-   "kysymykset": [
-    "Miksi linnoitus määrättiin purettavaksi?",
-    "Mitä Siegfriedin linnasta on jäljellä?",
-    "Miten käytävät louhittiin kallioon?",
-    "Kuinka syvälle kallioon käytävät ulottuvat?",
-    "Miten käytäviä käytettiin sodan aikana?"
-   ],
-   "isoisa": true,
-   "lahteet": [
-    {
-     "vaite": "Bock on kallioniemi yläkaupungin itäkulmassa; kreivi Siegfried rakensi sinne Lucilinburhucin linnan vuonna 963.",
-     "url": "https://en.wikipedia.org/wiki/Bock_(Luxembourg)"
-    },
-    {
-     "vaite": "Ensimmäiset maanalaiset käytävät kaivettiin espanjalaisvallan aikana 1644; niihin mahtui 50 tykkiä ja 1 200 miehen varuskunta.",
-     "url": "https://luxtoday.lu/en/knowledge/luxembourg-casemates"
-    },
-    {
-     "vaite": "1700-luvun lisäykset 1737–1746 (tykit ja varuskunta).",
-     "url": "https://showcaves.com/english/lu/subterranea/Bock.html"
-    },
-    {
-     "vaite": "Isoisän merkintä: Bockin käytävissä kaikuu iskuvasaroita; kallio on purettava kivi kiveltä.",
-     "url": "kaanon:isoisan-paivakirja"
-    },
-    {
-     "vaite": "Toisessa maailmansodassa kasematit olivat pommisuoja, johon mahtui jopa 35 000 ihmistä; yleisölle avattiin 1933.",
-     "url": "https://luxtoday.lu/en/knowledge/luxembourg-casemates"
-    },
-    {
-     "vaite": "Bockin ja Pétrussen kasematit maailmanperintökohteeksi 1994.",
-     "url": "https://www.historyhit.com/locations/bock-casemates/"
-    },
-    {
-     "vaite": "Alkuperäisestä 23 kilometristä jäi purkamisen jälkeen 17 kilometriä; verkostoa ei voitu tuhota vahingoittamatta kaupunkia.",
-     "url": "https://www.luxembourg-city.com/en/things-to-do/sights/underground"
-    }
-   ]
-  },
-  {
-   "id": "Q359872",
-   "nimi": "Guillaume II:n aukio",
-   "kuvaus": "Vanhankaupungin keskusaukio",
-   "luokka": "aukio",
-   "koko_m": 150,
-   "teksti": "Luxemburgin vanhankaupungin keskusaukio, Guillaume II:n aukio, jakautuu ylhäältä kahteen osaan: länsipäätä hallitsee kaupungintalo ja itäpäätä ratsastajapatsas. Patsas esittää Vilhelm toista, joka oli Alankomaiden kuningas ja samalla Luxemburgin suurherttua, ja se pystytettiin aukiolle vuonna 1884. Vilhelm toinen antoi vuonna 1848 Luxemburgille sen ensimmäisen parlamentaarisen perustuslain. Paikalla seisoi ennen fransiskaaniluostari, ja siksi paikalliset kutsuvat aukiota yhä Knuedleriksi eli solmuksi munkkien vyön solmun mukaan. Aukiolla pidetään toria ja ulkoilmatapahtumia.",
-   "lyhyt": "Luxemburgin keskusaukion, Guillaume II:n aukion, ratsastajapatsaan teki ranskalainen kuvanveistäjä Antonin Mercié, ja hevosen veisti Victor Peter. Jalustaa koristavat Oranje-Nassaun suvun ja Luxemburgin vaakunat sekä maan kahdentoista kantonin vaakunat. Tarkka jäljennös patsaasta seisoo Haagissa.",
-   "syventava": "Mitä Knuedler tarkoittaa?",
-   "kysymykset": [
-    "Miksi aukiota kutsutaan Knuedleriksi?",
-    "Mitä luostarille tapahtui?",
-    "Kuka oli kuningas Vilhelm toinen?",
-    "Mitä aukiolla myydään toripäivinä?",
-    "Miksi patsaasta on kopio Haagissa?"
-   ],
-   "isoisa": false,
-   "lahteet": [
-    {
-     "vaite": "Aukion länsiosaa hallitsee kaupungintalo, itäosaa Vilhelm II:n ratsastajapatsas, jonka mukaan aukio on nimetty.",
-     "url": "https://en.wikipedia.org/wiki/Place_Guillaume_II"
-    },
-    {
-     "vaite": "Patsas pystytettiin 1884; Vilhelm II hallitsi 1840–1849 ja antoi 1848 ensimmäisen parlamentaarisen perustuslain.",
-     "url": "https://luxembourg-city.com/en/place/monument/equestrian-statue-of-william-ii"
-    },
-    {
-     "vaite": "Paikalla oli fransiskaaniluostari; puhekielen nimi Knuedler tulee luxemburgin sanasta solmu, fransiskaanien vyön solmu.",
-     "url": "https://en.wikipedia.org/wiki/Place_Guillaume_II"
-    },
-    {
-     "vaite": "Aukiolla pidetään toreja ja ulkoilmatapahtumia.",
-     "url": "https://worldcitytrail.com/2025/01/07/place-guillaume-ii-in-luxembourg/"
-    },
-    {
-     "vaite": "Ratsastajan teki Antonin Mercié, hevosen Victor Peter; jalustassa Oranje-Nassaun, Luxemburgin ja kahdentoista kantonin vaakunat; tarkka jäljennös Haagissa.",
-     "url": "https://luxembourg-city.com/en/place/monument/equestrian-statue-of-william-ii"
-    }
-   ],
-   "puhe_teksti": "Luxemburgin vanhankaupungin keskusaukio, Guillaume toisen aukio, jakautuu ylhäältä kahteen osaan: länsipäätä hallitsee kaupungintalo ja itäpäätä ratsastajapatsas. Patsas esittää Vilhelm toista, joka oli Alankomaiden kuningas ja samalla Luxemburgin suurherttua, ja se pystytettiin aukiolle vuonna 1884. Vilhelm toinen antoi vuonna 1848 Luxemburgille sen ensimmäisen parlamentaarisen perustuslain. Paikalla seisoi ennen fransiskaaniluostari, ja siksi paikalliset kutsuvat aukiota yhä Knuedleriksi eli solmuksi munkkien vyön solmun mukaan. Aukiolla pidetään toria ja ulkoilmatapahtumia.",
-   "puhe_lyhyt": "Luxemburgin keskusaukion, Guillaume toisen aukion, ratsastajapatsaan teki ranskalainen kuvanveistäjä Antonin Mercié, ja hevosen veisti Victor Peter. Jalustaa koristavat Oranje-Nassaun suvun ja Luxemburgin vaakunat sekä maan kahdentoista kantonin vaakunat. Tarkka jäljennös patsaasta seisoo Haagissa."
-  },
-  {
-   "id": "Q950660",
-   "nimi": "Pétrusse",
-   "kuvaus": "Joki ja puistolaakso",
-   "luokka": "vesi",
-   "koko_m": 1500,
-   "teksti": "Luxemburgin pieni Pétrusse-joki on uurtanut vanhankaupungin eteläpuolelle syvän laakson, jonka pohjalla on puisto kävelyteineen ja leikkipaikkoineen. Joki ohjattiin 1930-luvulla suoraan betonikouruun, koska jätevedet olivat pilanneet veden ja uhkasivat ihmisten terveyttä. Kourussa vesieläimet eivät viihtyneet, joten betonia on nyt purettu: vesi saa jälleen mutkitella, ja rannoille on palannut kasvillisuutta. Ensimmäinen vaihe valmistui vuoden 2024 lopussa, ja työ jatkuu. Lähes kolmetoista kilometriä pitkä joki laskee Alzetteen Grundin kaupunginosassa.",
-   "lyhyt": "Luxemburgin Pétrusse-joen laakso oli aikoinaan osa linnoitusta. Sen reunalla Perustuslain aukion alla kulkevat Pétrussen kasematit, ja aukio on espanjalaisten vuonna 1644 rakentaman bastionin laella. Aukiolla kohoaa myös kaatuneiden muistomerkki, Kultainen nainen.",
-   "syventava": "Mitä Pétrussen kasemateissa on?",
-   "kysymykset": [
-    "Miksi joki pantiin betonikouruun?",
-    "Mitä eläimiä joessa elää nykyään?",
-    "Keitä Kultainen nainen kunnioittaa?",
-    "Miksi laakso on niin syvä?",
-    "Mihin Pétrussen vesi lopulta virtaa?"
-   ],
-   "isoisa": false,
-   "lahteet": [
-    {
-     "vaite": "Pétrussen laaksossa on kävelyteitä, pyöräteitä ja leikkipaikkoja.",
-     "url": "https://en.paperjam.lu/article/next-phase-of-ecological-redevelopment-of-petrusse-valley-begins"
-    },
-    {
-     "vaite": "Joki kanavoitiin 1930-luvulla, koska jätteet saastuttivat sen ja uhkasivat terveyttä; suora betonikouru esti vesieliöstön.",
-     "url": "https://www.vdl.lu/en/node/199814"
-    },
-    {
-     "vaite": "Betonipohja on poistettu, joki mutkittelee ja rantakasvillisuus on palannut; ensimmäinen vaihe valmistui vuoden 2024 lopussa, toinen alkoi.",
-     "url": "https://en.paperjam.lu/article/next-phase-of-ecological-redevelopment-of-petrusse-valley-begins"
-    },
-    {
-     "vaite": "Joki on 12,8 km pitkä ja laskee Alzetteen Grundissa.",
-     "url": "https://www.vdl.lu/en/node/199814"
-    },
-    {
-     "vaite": "Perustuslain aukio on espanjalaisten 1644 rakentaman Beckin bastionin laella, ja sen alla ovat Pétrussen kasematit; aukiolla on 1923 pystytetty Gëlle Fra, kaatuneiden muistomerkki.",
-     "url": "https://luxembourg-city.com/en/place/monument/place-de-la-constitution"
-    },
-    {
-     "vaite": "Gëlle Fra muistaa sodissa kaatuneita luxemburgilaisia.",
-     "url": "https://www.visitluxembourg.com/place/gelle-fra-memorial"
-    }
-   ]
-  },
-  {
-   "id": "Q585990",
-   "nimi": "Thüngenin linnake",
-   "kuvaus": "Kolmitorninen linnake Kirchbergissä",
-   "luokka": "linnoitus",
-   "koko_m": 200,
-   "teksti": "Thüngenin linnake erottuu ylhäältä Kirchbergin ylängön reunalla kolmena pyöreänä tornina, joista jokaisen huipulla on kivinen tammenterho. Siksi luxemburgilaiset kutsuvat linnaketta Kolmeksi terhoksi, omalla kielellään Dräi Eechelen. Itävaltalaiset rakensivat sen vuonna 1732 vahvistamaan kaupungin linnoitusta, ja nimensä se sai sotapäällikkö Adam Sigmund von Thüngenin mukaan. Kun linnoitukset purettiin vuoden 1867 Lontoon sopimuksen jälkeen, jäljelle jäivät vain tornit ja perustukset. Linnake rakennettiin uudelleen 1990-luvulla, ja vuodesta 2012 siinä on toiminut museo.",
-   "lyhyt": "Thüngenin linnakkeen vieressä on modernin taiteen museo Mudam, joka avattiin vuonna 2006. Sen suunnitteli arkkitehti Ieoh Ming Pei, joka tunnetaan myös Louvren lasipyramidista, ja museon kattoikkunat muistuttavat linnakkeen kolmea tornia. Molempia ympäröi Kolmen terhon puisto.",
-   "syventava": "Kuka oli Adam Sigmund von Thüngen?",
-   "kysymykset": [
-    "Miksi torneissa on tammenterhot?",
-    "Mitä linnakkeen museossa näytetään?",
-    "Miksi Luxemburgia kutsuttiin Pohjoisen Gibraltariksi?",
-    "Millaista taidetta Mudamissa on?",
-    "Miten linnake rakennettiin uudelleen?"
-   ],
-   "isoisa": false,
-   "lahteet": [
-    {
-     "vaite": "Linnake on Kirchbergissä Dräi Eechelen -puistossa; kolmen tornin huipulla on tammenterho, ja siksi sitä kutsutaan nimellä Dräi Eechelen.",
-     "url": "https://en.wikipedia.org/wiki/Fort_Th%C3%BCngen"
-    },
-    {
-     "vaite": "Rakennettiin 1732–1733, nimetty sotapäällikkö Adam Sigmund von Thüngenin mukaan; Itävallan viranomaiset päättivät vahvistuksesta 1732.",
-     "url": "https://en.wikipedia.org/wiki/Fort_Th%C3%BCngen"
-    },
-    {
-     "vaite": "Vuoden 1867 Lontoon sopimuksen jälkeen linnake purettiin, jäljelle jäivät tornit ja perustukset; rekonstruoitiin 1990-luvulla ja avattiin 2012 Musée Dräi Eechelen -museona.",
-     "url": "https://en.wikipedia.org/wiki/Fort_Th%C3%BCngen"
-    },
-    {
-     "vaite": "Mudam avattiin 2006 vanhan Thüngenin linnakkeen paikalle, suunnittelija Ieoh Ming Pei; kattoikkunat muistuttavat Kolmen terhon torneja; museo yhdistettiin Dräi Eechelen -puistossa linnakkeeseen.",
-     "url": "https://en.wikipedia.org/wiki/MUDAM"
-    },
-    {
-     "vaite": "Ieoh Ming Pei suunnitteli Louvren lasipyramidin.",
-     "url": "https://en.wikipedia.org/wiki/I._M._Pei"
-    }
-   ]
-  }
- ]
+  ]
 }

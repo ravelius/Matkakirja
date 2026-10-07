@@ -1303,3 +1303,106 @@ Yksitoista huomiota on "ei ala paikan nimellä" (suomenkielinen etusana, äänt�
 - Lissabon, Santa Justa: jos hissi avataan uudelleen, teksti pysyy totena, mutta Päätoimittaja voi halutessaan lisätä tiedon uudelleenavaamisesta.
 - Kreeta, Koules: Cousteaun löydöt ovat varmasti olleet esillä linnoituksessa (2016), mutta niiden nykyistä esillä oloa ei voitu varmistaa. Siksi teksti ei enää väitä niitä esillä oleviksi.
 - Kreeta, Pyhä Menas: pommin putoamispäiväksi yksi hakuote antoi 23.5.1941, mutta avatut lähteet kertovat vain vuoden, joten käytettiin vuotta 1941.
+
+## Ljubljana
+
+### Prešerenin aukio — kenttä `lyhyt`
+- **Vanha:** "Ljubljanan Prešerenin aukion patsaan veisti Ivan Zajec, ja jalustan suunnitteli arkkitehti Max Fabiani. Runottaren herättämä kohu ratkaistiin lopulta istuttamalla koivuja, jotka peittivät alastoman hahmon kirkon ovelta katsottuna. Kohu täytti viikkokausia sanomalehtien palstat."
+- **Uusi:** "Ljubljanan Prešerenin aukion runoilija on Slovenialle niin tärkeä, että hänen kuolinpäivänsä kahdeksas helmikuuta on maan kulttuuripäivä ja yleinen vapaapäivä. Hänen maljarunonsa Zdravljica seitsemäs säkeistö on Slovenian kansallislaulu, joka toivottaa elämää kaikille kansoille, jotka odottavat päivää, jolloin riita karkotetaan maailmasta."
+- **Syy:** Tyyppi 3 (legenda tosiasiana): koivujen istuttaminen runottaren peittämiseksi on matkailutarina. en-wikin Prešeren Monument -artikkeli ei mainitse koivuja lainkaan, ja Prešeren Square -artikkelin mukaan kolme koivua istutettiin merkitsemään Ljubljanan "energiakeskusta"; edellisen tarkistajan lähde (en-wiki) ei tue väitettä, eikä RTV:n artikkeli kerro kohun ratkaisusta. Lisäksi tyyppi 1 ja 2: lyhyt jatkoi tekstin kohua ("Runottaren herättämä kohu" edellytti tekstin kuulemista) ja alkoi tekijätiedoilla. Korvattu tarinalla runoilijan merkityksestä (Prešerenin päivä, kansallislaulu).
+- **Lähde:** https://en.wikipedia.org/wiki/Pre%C5%A1eren_Square ; https://en.wikipedia.org/wiki/Pre%C5%A1eren_Day ; https://en.wikipedia.org/wiki/National_anthem_of_Slovenia ; https://en.wikipedia.org/wiki/Zdravljica
+
+### Ljubljanan tuomiokirkko — kenttä `lyhyt`
+- **Vanha:** "Ljubljanan tuomiokirkon paikalla seisoi ennen vanhempi kirkko, joka tuhoisan tulipalon jälkeen vuonna 1361 rakennettiin uudelleen goottilaiseksi. Nykyisen kirkon sisätiloja peittävät Giulio Quaglion barokkifreskot, ja eteläoven kuusi piispaa kertovat hiippakunnan historiasta."
+- **Uusi:** "Ljubljanan tuomiokirkon eteläseinällä on vuodelta 1826 aurinkokello, jonka latinankielinen tunnuslause muistuttaa ohikulkijaa: ette tiedä päivää ettekä hetkeä. Kellotorneissa riippuu yhä Slovenian toiseksi vanhin kirkonkello, joka valettiin vuonna 1326, lähes neljä vuosisataa ennen nykyistä kirkkoa."
+- **Syy:** Tyyppi 2: rakennushistoriaa ja luettelo, josta ei jää mitään mieleen. Lisäksi tyyppi 3: en-wikin mukaan sivuoven (Ljubljanan oven) reliefit ovat 1900-luvun piispojen muotokuvia, eivät "hiippakunnan historia". Quaglio mainitaan jo tekstissä (harhakupoli).
+- **Lähde:** https://en.wikipedia.org/wiki/Ljubljana_Cathedral
+
+### Lohikäärmesilta — kenttä `teksti`
+- **Vanha:** "Rakenteen suunnitteli professori Josef Melan, ja lohikäärmeet, kaiteet ja lyhdyt piirsi Otto Wagnerin oppilas, dalmatialainen arkkitehti Jurij Zaninović."
+- **Uusi:** "Rakenne perustui insinööri Josef Melanin patentoimaan järjestelmään, ja lohikäärmeet ja kaiteet piirsi Otto Wagnerin oppilas, arkkitehti Jurij Zaninović."
+- **Syy:** Tyyppi 3 (kuka suunnitteli): en-wikin mukaan silta rakennettiin wieniläisen Pittel+Brausewetterin suunnitelmin Melanin patentin ("Melanin järjestelmä") pohjalta; Melan ei ollut sillan suunnittelija. Lyhdyt ja "dalmatialainen" poistettu, koska avattu lähde ei mainitse niitä (Zaninović suunnitteli kaiteet ja kuparilevyiset lohikäärmeet). Ratkaisee PILVI-RAPORTIN epävarmuuden "Melanin rooli". Lohikäärmeiden kuparilevy vahvistui samasta lähteestä (ei muutosta).
+- **Lähde:** https://en.wikipedia.org/wiki/Dragon_Bridge_(Ljubljana)
+
+### Ljubljanan linna — kenttä `lyhyt`
+- **Vanha:** "Ljubljanan linna sai nykyisen ulkoasunsa 1400-luvun perusteellisessa uudistuksessa, ja suurin osa sen rakennuksista on 1500- ja 1600-luvuilta. Vuosisatojen ajan linna oli Krainin herrojen pääpaikka. Nykyään linnan pihoilla ja saleissa järjestetään konsertteja, näyttelyitä ja häitä."
+- **Uusi:** "Ljubljanan linnasta piti tulla kaupunginmuseo, mutta suunnitelma jäi toteutumatta, ja kaupunki asutti linnaan sen sijaan köyhiä perheitä. Vanhojen muurien sisällä asuttiin aina vuoteen 1963, jolloin alettiin valmistella kunnostusta, joka teki linnasta nykyisen kulttuurikeskuksen."
+- **Syy:** Tyyppi 2: pelkkää perustietoa (rakennuskaudet, omistajat, tapahtumatyypit). Korvattu tarinalla, joka jatkaa tekstin vuoden 1905 ostoa toistamatta sitä.
+- **Lähde:** https://en.wikipedia.org/wiki/Ljubljana_Castle
+
+### Tivolin puisto — kenttä `lyhyt`
+- **Vanha:** "Tivolin puistossa toimii kesäisin ulkoilmakirjasto, josta voi lainata kirjoja, sarjakuvia ja lehtiä monella kielellä maksutta. Puiston kasvihuoneessa, jota hoitaa Ljubljanan kasvitieteellinen puutarha, kasvaa trooppisia kasveja, ja Cekinin kartanossa toimii Slovenian nykyhistorian museo."
+- **Uusi:** "Tivolin puiston linnan edessä vartioi neljä valurautaista koiraa, jotka valettiin vuonna 1864 määriläisessä valimossa. Koirilta puuttuvat kielet, ja kaupungilla huhuttiin, että kuvanveistäjä Anton Fernkorn ei kestänyt häpeää ja riisti henkensä. Tarina on perätön, eikä Fernkorn edes tehnyt koiria."
+- **Syy:** Tyyppi 2: palveluluettelo (kirjasto, kasvihuone, museo), joka vanhenee helposti ja toistaa kysymyksen "Mitä puiston kartanoissa on nykyään?". Uusi tarina on merkitty huhuksi ja kumotuksi kuten lähde.
+- **Lähde:** https://en.wikipedia.org/wiki/Tivoli_City_Park
+
+### Križanke — kenttä `teksti`
+- **Vanha:** "…vanhankaupungin eteläpuolella, ja sen eteläisen pihan voi kattaa suurella siirrettävällä katoksella." / "Ulkoilmateatteriin mahtuu yli kolmetuhatta katsojaa."
+- **Uusi:** "…vanhankaupungin eteläpuolella, ja pihojen keskeltä erottuu barokkikirkon aaltoileva kupoli." / "Rock-konserteissa kesäteatteriin mahtuu seisomaan yli kolmetuhatta kuulijaa."
+- **Syy:** Tyyppi 5 (nykytila): siirrettävä kangaskatto romahti märän lumen alla huhtikuussa 2016, ja vuodesta 2022 kesäteatteria on kattanut kiinteä katto, joten se ei ole enää ulkoilmateatteri eikä katos ole siirrettävä. Kapasiteetti: Festival Ljubljanan mukaan 1 226 istumapaikkaa ja 3 400 seisomapaikkaa; edellisen tarkistajan "3500" ei löydy nykyisestä en-wikistä. Katto siirretty lyhyeen (ks. alla), joten tekstin ilmakuva vaihdettu kirkon kupoliin. Edellisen tarkistajan lähde ljubljanafestival.si/en/krizanke-en/krizanke-history palauttaa 404; sen väitteet (1228, 1945, Plečnik 1952, kahdeksankymppinen Plečnik) vahvistettiin en-wikistä ja hakuotteista, ja url vaihdettiin en-wikiin.
+- **Lähde:** https://www.ljubljanafestival.si/en/premises-rental/summer-theatre/ ; https://n1info.si/novice/slovenija/avditorij-krizank-pod-novo-streho-pomembna-a-polemicna-resitev/ ; https://en.wikipedia.org/wiki/Kri%C5%BEanke
+
+### Križanke — kenttä `lyhyt`
+- **Vanha:** "Entisen luostarin Križanken viehättävin piha on Pirunpiha, jonka seiniä Plečnik koristi sgraffitoin ja keskiaikaisen böömiläisen taiteen innoittamin reliefihahmoin. Barokkikirkko valmistui vuonna 1715, ja nykyään pihoilla soivat klassinen musiikki, jazz ja rock."
+- **Uusi:** "Entisen luostarin Križanken kesäteatteria suojasi 1960-luvun alusta kevyt kangaskatto, jonka sai vedettyä auki tai kiinni sään mukaan. Huhtikuussa 2016 odottamaton märkä lumi painoi sen alas puolessatoista tunnissa. Vuonna 2022 tilalle tuli kiinteä, läpikuultava katto, ja konsertit tähtitaivaan alla jäivät historiaan."
+- **Syy:** Tyyppi 1: sgraffitot kerrottiin sekä lyhyessä että tekstissä. Tyyppi 5: uusi tarina kertoo samalla katon muutoksen oikein. Huom.: visitljubljana.com puhuu yhä "suuresta liukukatosta" — vanhentunut sivu; Festival Ljubljanan oma vuokraussivu sanoo "fixed roof".
+- **Lähde:** https://n1info.si/novice/slovenija/avditorij-krizank-pod-novo-streho-pomembna-a-polemicna-resitev/ ; https://www.rtvslo.si/kultura/dediscina/krizanke-bodo-ze-aprila-prvic-uporabile-novo-streho/614890 ; https://www.ljubljanafestival.si/en/premises-rental/summer-theatre/
+
+### Muut tarkistukset (ei muutosta)
+- Julija Primic (PILVI-epävarmuus): en-wikin mukaan perhe muutti 1822 Teatterikadulle, nykyiselle Wolfovalle kadulle, ja patsas katsoo ikkunaa, jossa hän asui; reliefi on talossa, jota Prešeren katsoo. Teksti pitää. Lähde lisätty: https://en.wikipedia.org/wiki/Julija_Primic
+- Kolmoissillan kaiteet (PILVI-epävarmuus): en-wiki "The balustrades with 642 balusters are made of concrete" — teksti pitää.
+- Lohikäärmeiden materiaali: kuparilevy (en-wiki) — pitää.
+- Teurastajien sillan lukot: visitljubljana.com kuvaa ne yhä, poistosta ei tietoa — lyhyt pitää.
+- Nebotičnik: kattokahvila ja näköalaterassi yhä auki (2026) — pitää. Kaupungintalo, Plečnikin tori, Kolmoissilta: väitteet vahvistuivat.
+- Avaus: 37 sanaa, ilmakuva (punaiset katot, linnavuori, joki), alkaa "Tervetuloa" — ei korjattavaa.
+- Kysymykset: ei muutoksia; "Miksi pihaa kutsutaan Pirunpihaksi?" jätetty, vaikka Pirunpiha ei enää ole lyhyessä (piha on olemassa).
+
+## Luxemburg
+
+### Guillaume II:n aukio — kenttä `lyhyt` (ja `puhe_lyhyt` samoin, "Guillaume toisen")
+- **Vanha:** "Luxemburgin keskusaukion, Guillaume II:n aukion, ratsastajapatsaan teki ranskalainen kuvanveistäjä Antonin Mercié, ja hevosen veisti Victor Peter. Jalustaa koristavat Oranje-Nassaun suvun ja Luxemburgin vaakunat sekä maan kahdentoista kantonin vaakunat. Tarkka jäljennös patsaasta seisoo Haagissa."
+- **Uusi:** "Luxemburgin keskusaukion, Guillaume II:n aukion, ratsastajapatsaasta on tarkka kopio Haagissa. Kun Haagin oma Vilhelm toisen patsas jouduttiin siirtämään uuden kadun tieltä, rahat eivät riittäneet uuteen taideteokseen, joten vuonna 1924 valettiin kopio Luxemburgin patsaasta, vaikka viisitoista taiteilijajärjestöä vaati kilpailua."
+- **Syy:** Tyyppi 2: tekijä- ja vaakunaluettelo on perustietoa. Kerrottu tarina kopion synnystä (Luxemburgin patsas on alkuperäinen 1884, Haagin kopio 1924).
+- **Lähde:** https://bkdh.nl/en/kunstwerken/ruiterstandbeeld-van-koning-willem-ii/ ; https://luxembourg-city.com/en/place/monument/equestrian-statue-of-william-ii
+
+### Guillaume II:n aukio — kenttä `kysymykset`
+- **Vanha:** "Miksi patsaasta on kopio Haagissa?"
+- **Uusi:** "Kuka veisti aukion ratsastajapatsaan?"
+- **Syy:** Tyyppi 7: uusi lyhyt vastaa vanhaan kysymykseen; tekijätieto siirtyi kysymykseksi.
+- **Lähde:** https://luxembourg-city.com/en/place/monument/equestrian-statue-of-william-ii
+
+### Bockin kasematit — kenttä `teksti`
+- **Vanha:** "…ja jonka laelle kreivi Siegfried rakensi linnansa vuonna 963." / "…ja 1700-luvulla kallion uumeniin mahtui jo viisikymmentä tykkiä ja tuhannen kahdensadan miehen varuskunta."
+- **Uusi:** "…ja jonka laella olleen linnoituksen kreivi Siegfried hankki itselleen vuonna 963." / "…ja 1700-luvulla käytävissä oli jo kaksikymmentäviisi tykkiasemaa ja tilaa tuhannelle kahdellesadalle sotilaalle."
+- **Syy:** Tyyppi 3. (a) Vuosi 963 on kauppakirjan vuosi: Siegfried hankki vaihtokaupalla Bockilla jo olleen linnoituksen ("castellum quod dicitur Lucilinburhuc"), eli hän ei rakentanut linnaa vuonna 963. (b) PILVI-epävarmuus ratkaistu: en-wikin mukaan Bockin kasemateissa oli Neippergin 1744 laajennuksen jälkeen 25 tykkiasemaa ja kasarmitila jopa 1 200 sotilaalle. Luku "viisikymmentä tykkiä" koski luxtoday-sivulla ilmeisesti laajempaa kokonaisuutta.
+- **Lähde:** https://en.wikipedia.org/wiki/Bock_(Luxembourg)
+
+### Bockin kasematit — kenttä `lyhyt`
+- **Vanha:** "Bockin kasematit avattiin yleisölle vuonna 1933, ja vuodesta 1994 ne ovat kuuluneet Unescon maailmanperintöön. Linnoitusten purkamisen jälkeen kaupungin alle on yhä seitsemäntoista kilometriä käytäviä, koska niitä ei voitu tuhota vahingoittamatta taloja niiden yläpuolella."
+- **Uusi:** "Bockin kalliota ja vanhaakaupunkia yhdistää itävaltalaisten vuonna 1735 rakentama kaksikerroksinen Linnasilta, jonka voi ylittää neljää reittiä: tietä, kaarikäytävää, kierreportaita ja tunnelia. Linnoitusten purkamisen jälkeen kaupungin alle jäi silti seitsemäntoista kilometriä käytäviä, koska niitä ei voitu tuhota vahingoittamatta taloja niiden yläpuolella."
+- **Syy:** Tyyppi 2: avaamisvuosi ja Unesco-merkintä ovat hallinnollista perustietoa. Ne korvattiin ilmasta näkyvällä Linnasillan yksityiskohdalla. Tarina 17 kilometristä säilyi. Nykytila tarkistettu: kasematit ovat auki 2026.
+- **Lähde:** https://en.wikipedia.org/wiki/Bock_(Luxembourg) ; https://www.luxembourg-city.com/en/things-to-do/sights/underground
+
+### Suurherttuan palatsi — kenttä `lyhyt`
+- **Vanha:** "…Nykyään palatsi on suurherttuan virka-asunto, ja kesäisin opastetuilla kierroksilla pääsee näkemään esimerkiksi suurherttuan työhuoneen ja ruokasalin."
+- **Uusi:** "…Nykyään palatsissa majoittuvat valtiovierailulla olevat ulkomaiset valtionpäämiehet, ja suurherttuan jouluaaton puhe lähetetään joka vuosi palatsin Keltaisesta salista."
+- **Syy:** Tyyppi 2 ja 5: kävijäpalvelutieto vanhenee helposti. En-wikin mukaan kierroksia järjestetään vain "useimpina vuosina", ja vallanvaihto (suurherttua Henri luopui vallasta lokakuussa 2025) tekee kesäaukiolosta epävarman. Korvattu pysyvällä yksityiskohdalla. Ensimmäinen virke (käskynhaltija vuodesta 1817) säilyi.
+- **Lähde:** https://en.wikipedia.org/wiki/Grand_Ducal_Palace,_Luxembourg
+
+### Suurherttuan palatsi — kenttä `lahteet` (ei tekstimuutosta)
+- 1554 räjähdys ("salama sytytti kirkon ullakolle varastoidun ruudin") vahvistettu: List of explosions ("barrels of gunpowder stored in a church attic") ja Timeline of Luxembourg City (fransiskaanikirkko; uusi kaupungintalo 1572). Lisätty lähde https://en.wikipedia.org/wiki/Timeline_of_Luxembourg_City
+
+### Pétrusse — kentät `lyhyt` ja `syventava`
+- **Vanha:** "Luxemburgin Pétrusse-joen laakso oli aikoinaan osa linnoitusta. Sen reunalla Perustuslain aukion alla kulkevat Pétrussen kasematit, ja aukio on espanjalaisten vuonna 1644 rakentaman bastionin laella. Aukiolla kohoaa myös kaatuneiden muistomerkki, Kultainen nainen." / syventava "Mitä Pétrussen kasemateissa on?"
+- **Uusi:** "Luxemburgin Pétrusse-laakson reunalla, Perustuslain aukiolla, kohoaa obeliskin huipulla kultainen naishahmo, Gëlle Fra. Saksalaiset miehittäjät purkivat muistomerkin vuonna 1940, ja patsas oli kateissa neljäkymmentä vuotta, kunnes se löytyi vuonna 1980 piilotettuna kansallisen jalkapallostadionin pääkatsomon alta." / syventava "Kuka piilotti Kultaisen naisen?"
+- **Syy:** Tyyppi 2: linnoitustopografia ja luettelo. Tyyppi 1: kasematit ovat jo Bockin kohteen aihe. Tyyppi 3: muistomerkki on en-wikin mukaan omistettu liittoutuneiden armeijoissa vapaaehtoisina palvelleille luxemburgilaisille, joten pelkkä "kaatuneiden muistomerkki" oli epätarkka. Syventava vaihdettu, koska kasematit eivät ole enää lyhyessä eivätkä tekstissä. Avattu lähde kertoo patsaan löytyneen piilotettuna, mutta ei sitä, kuka sen kätki, joten kysymys herättää uteliaisuutta ja sen oletus on tosi (live-vastaus voi kertoa tarkemmin).
+- **Lähde:** https://en.wikipedia.org/wiki/G%C3%ABlle_Fra
+
+### Muut tarkistukset (ei muutosta)
+- "Murheellisten lohduttaja" (PILVI-epävarmuus): vahvistettu Loreton litanian suomenkielisestä tekstistä ("Syntisten turva, Murheellisten lohduttaja, Kristittyjen auttaja") — https://opusdei.org/fi-fi/article/loreton-litania/ . Katedraalin lyhyen väitteet (kulkue 8.12.1624, kahden viikon oktaavi) vahvistettu: https://en.wikipedia.org/wiki/Our_Lady_of_Luxembourg
+- Katedraalin teksti (1613, 1870, laajennus 1935–1938, keskitorni kolmannes muiden korkeudesta, Juhana Sokea kryptassa) vahvistettu: https://en.wikipedia.org/wiki/Notre-Dame_Cathedral,_Luxembourg
+- Guillaume II:n aukion patsaan vuosi 1884 vahvistettu (bkdh.nl). En-wikin Place Guillaume II -artikkeli väittää patsaan paljastetun 1844, mikä on ilmeinen virhe Wikipediassa (Vilhelm II kuoli 1849), joten tekstin 1884 jätettiin ennalleen. Knuedler-nimen selitys on lähteissä tosiasia, ei kansanetymologia.
+- Thüngenin linnake: 1732–1733, Thüngen, 1867, rekonstruktio 1990-luvulla, museo 2012 vahvistettu (en-wiki Fort Thüngen).
+- Pétrussen ennallistaminen: ensimmäinen vaihe valmistui vuoden 2024 lopussa, ja toinen vaihe kestää keväästä 2025 noin kaksi ja puoli vuotta, joten "työ jatkuu" pitää vuonna 2026 (paperjam.lu / hakuote). **Päätoimittajalle:** virke vanhenee noin vuonna 2028.
+- Teemat: Bockin ja Pétrussen lyhyet eivät enää kerro molemmat kasemateista.
+- Avaus: 36 sanaa, ilmakuva (kallioniemi, rotkot, sillat), alkaa "Tervetuloa" — ei korjattavaa.
