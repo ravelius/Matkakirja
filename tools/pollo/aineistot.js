@@ -3,7 +3,8 @@
  * kaupunkien tiedostot ovat jo ämpärissä. Ämpärin objektit ovat muuttumattomia ja CDN välimuistittaa myös 404:n,
  * joten natiivi hakee tiedoston vain listatuille id:ille.
  *   tiet:       media.matkakirja.app/kartta/tiet-v1/<id>.json tai tiet_polut[id] (yövalot, Linssiseppä)
- *   esittely:   media.matkakirja.app/opas/esittely-v1/<id>.json (esigeneroitu kerronta; worker tarjoaa valmiin, natiivi ei hae)
+ *   esittely:   media.matkakirja.app/opas/esittely-v1/<id>.json tai esittely_polut[id] (esigeneroitu kerronta; worker tarjoaa
+ *               valmiin, natiivi lukee avauksen)
  *   aanikartta: media.matkakirja.app/aanet/aanikartta-v1/<id>.json (kaupunkiäänimaisema, Siirtoseppä; lisätään vasta,
  *               kun kaupungin silmukat ovat ämpärissä)
  * Id: kaupungin nimi pienaakkosin, ä/å → a, ö/ø → o, é → e, välit ja muut merkit → "-" (pariisi, koopenhamina).
@@ -23,4 +24,7 @@ export const OPAS_AINEISTOT = Object.freeze({
   aanikartta: ['pariisi', 'venetsia', 'koopenhamina'],   // pariisi 7.10. 00.30 (-20261006); venetsia + koopenhamina 03.30 (-20261007b); silmukat aanimaisema-v1
   // Esigeneroitu oppaan esittely (opas/esittely-v1/<id>.json, worker lukee itse; opas-esittely.js). 7.10.: pilotti; erä 2 (Rooma, Lontoo, Kööpenhamina) omistajan kuuntelun jälkeen.
   esittely: ['pariisi', 'praha', 'wien', 'rooma', 'lontoo', 'koopenhamina'],
+  // Poikkeavat esittelypolut (ämpäri muuttumaton): Praha ja Wien avauksen ja kierros-kentän kanssa 7.10. (-20261007c).
+  // Worker ja natiivi käyttävät tätä polkua, jos id on tässä, muuten opas/esittely-v1/<id>.json.
+  esittely_polut: { praha: 'opas/esittely-v1b/praha.json', wien: 'opas/esittely-v1b/wien.json' },
 });
