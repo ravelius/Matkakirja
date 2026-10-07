@@ -1,87 +1,152 @@
 {
   "rakennus": "kielletty-kaupunki",
-  "hash": "ab3f31e0cca9b289",
-  "kansio": "dioraama/kielletty-kaupunki/blender/ab3f31e0cca9b289/",
+  "hash": "96f1097b21631101",
+  "kansio": "dioraama/kielletty-kaupunki/blender/96f1097b21631101/",
   "tiedostot": [
+    {
+      "polku": "kirjasto/materiaali/harmaa-tiilikiveys/harmaa-tiilikiveys_diff-4x4.astcm",
+      "sha256": "7ab418685f0f59659fd790ed141946aca4241fab89c621453ebca7d97f51f908",
+      "tavuja": 5592448
+    },
+    {
+      "polku": "kirjasto/materiaali/harmaa-tiilikiveys/harmaa-tiilikiveys_diff.jpg",
+      "sha256": "1b23c4d027f59b7891ecad7e1c1e8a4c441063e407f7442a8dde4d7b4d7e095b",
+      "tavuja": 4059951
+    },
+    {
+      "polku": "kirjasto/materiaali/harmaa-tiilikiveys/harmaa-tiilikiveys_nor_gl-4x4.astcm",
+      "sha256": "cd3b16f99085209473cc95e0633930c6e1f55767c2aac66ff961efea2c1ff11f",
+      "tavuja": 5592448
+    },
+    {
+      "polku": "kirjasto/materiaali/harmaa-tiilikiveys/harmaa-tiilikiveys_nor_gl.jpg",
+      "sha256": "267790e647bc8ef5672f5a0d1a6c2ae60955d0755211d11bcdf10e8a33f7ad75",
+      "tavuja": 2240432
+    },
+    {
+      "polku": "kirjasto/materiaali/kalkkirappaus/kalkkirappaus_diff-4x4.astcm",
+      "sha256": "88f4dae9c79d8f1122b59cd73c699d952c1e0c92be5772ed87e96b3d3740c24b",
+      "tavuja": 5592448
+    },
+    {
+      "polku": "kirjasto/materiaali/kalkkirappaus/kalkkirappaus_diff.jpg",
+      "sha256": "4fb1f54ac26b28b23c8f8efa708d3062684fe6122e3f001b18bcd268027fcb17",
+      "tavuja": 2828405
+    },
+    {
+      "polku": "kirjasto/materiaali/kalkkirappaus/kalkkirappaus_nor_gl-4x4.astcm",
+      "sha256": "aa7cea6dd9dc19025313442f9a50f2cbc33b1a3eacee6c26a950518f437f3d29",
+      "tavuja": 5592448
+    },
+    {
+      "polku": "kirjasto/materiaali/kalkkirappaus/kalkkirappaus_nor_gl.jpg",
+      "sha256": "75668cb16a244c3647e78fd3dd4601616a15bf59e90bb090655b19a8095da71c",
+      "tavuja": 2551147
+    },
+    {
+      "polku": "kirjasto/materiaali/lasitettu-tiilikatto/lasitettu-tiilikatto_diff-4x4.astcm",
+      "sha256": "13555f4b85b9e27418eb55c493c34eddca2b63d1b9c4b639c521a908418a7e22",
+      "tavuja": 5592448
+    },
+    {
+      "polku": "kirjasto/materiaali/lasitettu-tiilikatto/lasitettu-tiilikatto_diff.jpg",
+      "sha256": "7ee18a179cd8ef6ba2b92e62c1197f3ae91f4c212f2e2a7676fb3d65f6dc2a7c",
+      "tavuja": 2706584
+    },
+    {
+      "polku": "kirjasto/materiaali/lasitettu-tiilikatto/lasitettu-tiilikatto_nor_gl-4x4.astcm",
+      "sha256": "c22f70afc0e17cdec61399fb79e4d39616604b3d2efc54b52d32530db5dc7114",
+      "tavuja": 5592448
+    },
+    {
+      "polku": "kirjasto/materiaali/lasitettu-tiilikatto/lasitettu-tiilikatto_nor_gl.jpg",
+      "sha256": "1d0adb66d1ab9c5450c1dff3786d7aeea0d5f305a241d28521c4d3685e257dbb",
+      "tavuja": 3029975
+    },
     {
       "polku": "tilat/aukio.glb",
       "sha256": "1e5011cda568dd4d7e2c185476b38813ab7d00214b7216283cfd34390fe20858",
       "tavuja": 1600
     },
     {
+      "polku": "ulkokuori/hybridi/kuori-materiaali-2k.png",
+      "sha256": "b91fdb78b37d6b000aeacead3672ac398b7075f90bdd2256dadeb7dbe6fea12a",
+      "tavuja": 351496
+    },
+    {
       "polku": "ulkokuori/ulkokuori-2k-4x4.astcm",
-      "sha256": "3576701f7f2db1af8f12837d8391bea1dd82f6d7acdcaeb6ab98390cb56cf309",
+      "sha256": "8cf7519abef50d7701967b38b2a6b3731ea317885df8489e05af408a929e42fb",
       "tavuja": 5592448
     },
     {
       "polku": "ulkokuori/ulkokuori-2k.jpg",
-      "sha256": "9d677e0822a0bbb8c2c9eb1fd35ea42a9031022c2a3267a69bfe1b8514281dfb",
-      "tavuja": 1157785
+      "sha256": "1b51e7b3c6289ff0eaadeadae42fca9e6244de697473585b5c614b50ccecb86f",
+      "tavuja": 1110158
     },
     {
       "polku": "ulkokuori/ulkokuori-4k-4x4.astcm",
-      "sha256": "3eb4f80ce1e540d43fc9432ea5cca7d2c9741f20509597acc132e904f519f4f9",
+      "sha256": "e5ab38a1b5262e5d297f8ccd3fdbb39f90614d45ca6407cad68f3ad8d92ea661",
       "tavuja": 22369664
     },
     {
       "polku": "ulkokuori/ulkokuori-4k.jpg",
-      "sha256": "1f4db67921888b2bb80da0399fb8b6a9e2e12898dcc35d24c37112d20cde670a",
-      "tavuja": 4229624
+      "sha256": "f4375f0b650350a38aca1c339fe799e2228bfed2999d36fa4e67164183d8f71e",
+      "tavuja": 3608381
     },
     {
       "polku": "ulkokuori/ulkokuori-8k-4x4.astcm",
-      "sha256": "322d00cb95cfb857821e7fd2ffa8519bcc62a4ceaa0808acebd5a4180f6d4810",
+      "sha256": "6a3ae4dd1c105faf8806869c1b15ce4cc447b4db689a17d2007fc3790037cb66",
       "tavuja": 89478528
     },
     {
       "polku": "ulkokuori/ulkokuori-8k.jpg",
-      "sha256": "680e4fdd2ec4aa58bce83596c9d7ea2a390492c2007d071a1748b610ffe2dd89",
-      "tavuja": 15446746
+      "sha256": "44321799fdea3dcf0b99b3f2079a3b3cec45702497b6a0701000f7a71f6937db",
+      "tavuja": 12380193
     },
     {
       "polku": "ulkokuori/ulkokuori-hamara-2k-4x4.astcm",
-      "sha256": "f2a2ec54259f6a66934975e9a2a198bd33d46d6746ac80f44e54f347f32b3402",
+      "sha256": "0c9ddb9617cf531883bcdfc76c775d136e2b9f1a7fc85961ae0ef1cbd537bbae",
       "tavuja": 5592448
     },
     {
       "polku": "ulkokuori/ulkokuori-hamara-2k.jpg",
-      "sha256": "e0c47e59508a0cf7f534b344fa9cd2e29cb917f5f010eb7b8660835fd4d26b72",
-      "tavuja": 997401
+      "sha256": "feebc5b3f063b0d3e8de39fe2906bc2d5f8a2dd937773be80168cf5061e9be38",
+      "tavuja": 948652
     },
     {
       "polku": "ulkokuori/ulkokuori-hamara-4k-4x4.astcm",
-      "sha256": "f52b8bd1071b06a1ac61d5ce22c676fcbd26f26aabfdc65a63530db462d46cce",
+      "sha256": "fc97877e8c895bad968cb71de8a7a5a662568695140436332248c6e24e7e0a8f",
       "tavuja": 22369664
     },
     {
       "polku": "ulkokuori/ulkokuori-hamara-4k.jpg",
-      "sha256": "851386e6bd7dd7a174d56a17e9bcfe1424529117f1e47148f2aacb8ff83a8ff4",
-      "tavuja": 3640564
+      "sha256": "5f5cc92619e01b893ee0e4e908be4655444a0ccd1bd81ddce9ad7bf185a8c4c0",
+      "tavuja": 3070660
     },
     {
       "polku": "ulkokuori/ulkokuori-hamara-8k-4x4.astcm",
-      "sha256": "6cf3c0ab784e9fb38345a6fb9e4609d7f1ad0fa74f5e1805639525726789da0a",
+      "sha256": "30d60ffacaa7906f76da10fb038e2c5298ff31f427c778090858678072054c81",
       "tavuja": 89478528
     },
     {
       "polku": "ulkokuori/ulkokuori-hamara-8k.jpg",
-      "sha256": "3d12e65cdaf8149ce821105a50cba1d19ad6985ff6ae68554c109d9edea1930e",
-      "tavuja": 13323837
+      "sha256": "0e71fb4a38e9a3852a9ce57849bcd39b9c227fc8a62778a118eb360a62847fa3",
+      "tavuja": 10531505
     },
     {
       "polku": "ulkokuori/ulkokuori_huippu.glb",
-      "sha256": "c9e7b671c917cbdeeefece052ce18cc03ed22d674adec2d9750de125f08e9cce",
-      "tavuja": 71886188
+      "sha256": "e8e2de1e11fe8902830a0f16686367bcdb934fe4d8bbb5c4719b2ca4b6a498c9",
+      "tavuja": 86883636
     },
     {
       "polku": "ulkokuori/ulkokuori_kevyt.glb",
-      "sha256": "80a4c77e12582e23c0b29ab2bad5e122acb4b1802c89b9e451ca5962438b0bf6",
-      "tavuja": 13020384
+      "sha256": "41bc7dfc75bbf2977d31cedc21d412c0bfe56870a1b4c66e580836b560e5bf50",
+      "tavuja": 13224532
     },
     {
       "polku": "ulkokuori/ulkokuori_normaali.glb",
-      "sha256": "e41bfad443d4665104e033c0ec0898dc6e0a6b650c4ae84af6c7903c1d4c6a7b",
-      "tavuja": 34794752
+      "sha256": "bb1b51327e7611bbd926ca5b8096c9bc2306340a9bce939dd72356bb401bbc60",
+      "tavuja": 34190792
     }
   ]
 }
