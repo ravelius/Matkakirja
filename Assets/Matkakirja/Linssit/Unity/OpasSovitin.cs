@@ -96,7 +96,14 @@ namespace Matkakirja.Natiivi
         public static bool VaihdaKaupunki(string nimi, double lat, double lon, string iso)
         {
             if (!Auki || string.IsNullOrWhiteSpace(nimi)) return false;
-            (lat, lon) = Keskusta(lat, lon);   // Natural Earth -piste → kaupungin keskusta (Wikidata P625)
+            // Sallitut kaupungit (omistaja 7.10. 00.4x): vain listan kaupungit; keskipiste listalta (hyvän 3D:n alueen keskus).
+            if (sallitut != null && sallitut.Count > 0)
+            {
+                var sk = OpasSallitut.Nimella(sallitut, nimi) ?? OpasSallitut.Sisalla(sallitut, lat, lon);
+                if (sk == null) { Viimeisin.o.Kirjaa($"opas: kaupunki {nimi} ei ole sallittujen listalla, ei vaihdeta"); Viimeisin.Torjunta(); return false; }
+                lat = sk.Lat; lon = sk.Lon;
+            }
+            else (lat, lon) = Keskusta(lat, lon);   // Natural Earth -piste → kaupungin keskusta (Wikidata P625)
             Aloituskaupunki = nimi.Trim();
             Viimeisin.pakotettuSijainti = (lat, lon);
             AloitusKeskusta = (lat, lon);
@@ -191,6 +198,14 @@ namespace Matkakirja.Natiivi
             silmukka.Hiljenna += Hiljenna;
             silmukka.Kysyy += Kysyy;
             silmukka.LentoAlkaa += LentoAlkoi;
+            silmukka.Torjuttu += (n, pelaajalta) =>
+            {
+                o.Kirjaa($"opas: {n} on sallitun 3D-alueen ulkopuolella, ei lennetä{(pelaajalta ? " (siltalause)" : "")}");
+                if (pelaajalta) Torjunta();
+            };
+            if (sallitut == null) LueSallitutLevylta();
+            if (sallitut != null) silmukka.Sallitut = sallitut;
+            if (sallitut == null || Time.realtimeSinceStartup - sallitutHaettu > SallitutUusintaS) o.StartCoroutine(HaeSallitut());
             // Siirto ilman lentoa (omistaja 6.10. 12.0x): origo heti kohteeseen, latausaste kohdekameran laatoista.
             silmukka.SiirtoAlkaa += (la, lo) => { if (kaupunkiOdottaa && !AvaaKaupunki(la, lo, silmukka.SiirtoNimi)) return; kaupunki.YritaGoogleUudelleen(); kaupunki.Karkeaksi(); kaupunki.SiirraOrigo(la, lo, MaaPisteessa(la, lo) is double m && !double.IsNaN(m) ? m : 45); o.Kirjaa($"opas: siirrytään {silmukka.SiirtoNimi} ({la:F3}, {lo:F3})"); };
             silmukka.LatausEdistys = () => kaupunki.Latausaste / 100.0;
@@ -495,6 +510,7 @@ namespace Matkakirja.Natiivi
         {
             if (!Auki || t == null || string.IsNullOrEmpty(t.Nimi)) return false;
             var v = Viimeisin;
+            if (!SallittuPiste(t.Lat, t.Lon)) { v.o.Kirjaa($"opas: liiku {t.Nimi} → sallitun 3D-alueen ulkopuolella, ei lennetä"); v.Torjunta(); return false; }
             if (v.tauolla) Tauko(false);
             v.o.Kirjaa($"opas: liiku {t.Nimi}");
             v.silmukka.Liiku(t.Nimi, t.Lat, t.Lon);
@@ -671,6 +687,58 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Liiku-lista kaupungin vaihtuessa (ja avauksessa): GET /opas/liiku?kaupunki=…</summary>
+        // ---- SALLITUT KAUPUNGIT (omistaja 7.10. 00.4x; LS2:n lista Pöllön /opas/aineistot "sallitut", juna 157) ----
+        static List<OpasSallitut.Kaupunki> sallitut;
+        static float sallitutHaettu = -1e9f;
+        const float SallitutUusintaS = 600f;
+        static List<OpasTaky> sallitutTakyt = new List<OpasTaky>();
+        /// <summary>Aloitusvalikon kaupunkiehdotukset (Natiivi-UI): vain sallitut kaupungit, Id = kaupungin tunnus. Tyhjä, kunnes
+        /// lista on haettu tai jos palvelin ei vielä palauta sitä (silloin ei rajausta).</summary>
+        public static IReadOnlyList<OpasTaky> SallitutKaupungit => sallitutTakyt;
+        public static event Action SallitutVaihtui;
+        /// <summary>Saako pisteeseen lentää (Kysy, Liiku, vapaa liike); lista tyhjä = kyllä.</summary>
+        public static bool SallittuPiste(double lat, double lon) => OpasSallitut.Sallittu(sallitut, lat, lon);
+        /// <summary>Sallittu kaupunki, jonka alueella piste on (vapaan liikkeen rajaus: OpasSallitut.Rajaa); null = ei rajausta tai ulkona.</summary>
+        public static OpasSallitut.Kaupunki SallittuKaupunki(double lat, double lon) => OpasSallitut.Sisalla(sallitut, lat, lon);
+
+        // Viimeisin saatu lista säilyy (Päätoimittaja 7.10. 01.1x: hetkellinen verkkokatko ei saa avata kaikkia kaupunkeja): levylle
+        // Documents/opas-sallitut.json; epäonnistunut haku tai tyhjä vastaus ei korvaa olemassa olevaa listaa.
+        static string SallitutPolku => System.IO.Path.Combine(Application.persistentDataPath, "opas-sallitut.json");
+
+        static void LueSallitutLevylta()
+        {
+            try
+            {
+                if (!System.IO.File.Exists(SallitutPolku)) return;
+                var l = OpasSallitut.Lue(MiniJson.Jasenna(System.IO.File.ReadAllText(SallitutPolku)));
+                if (l.Count > 0) { AsetaSallitut(l); Debug.Log($"MATKAKIRJA linssit: opas: sallitut kaupungit levyltä {l.Count}"); }
+            }
+            catch (Exception) { }
+        }
+
+        static void AsetaSallitut(List<OpasSallitut.Kaupunki> l)
+        {
+            sallitut = l;
+            sallitutTakyt = l.ConvertAll(k => new OpasTaky { Id = k.Id, Nimi = k.Nimi, Kaupunki = k.Nimi, Lat = k.Lat, Lon = k.Lon });
+            if (Viimeisin != null && Viimeisin.silmukka != null) Viimeisin.silmukka.Sallitut = l;
+            SallitutVaihtui?.Invoke();
+        }
+
+        IEnumerator HaeSallitut()
+        {
+            sallitutHaettu = Time.realtimeSinceStartup;
+            using var r = Pyynto("/opas/aineistot");
+            yield return r.SendWebRequest();
+            if (r.result != UnityWebRequest.Result.Success)
+            { o.Kirjaa($"opas: sallitut kaupungit ei latautunut ({r.responseCode}), {(sallitut != null && sallitut.Count > 0 ? $"pidetään {sallitut.Count} edellistä" : "ei rajausta")}"); yield break; }
+            var teksti = r.downloadHandler.text;
+            var l = OpasSallitut.Lue(MiniJson.Jasenna(teksti));
+            if (l.Count == 0 && sallitut != null && sallitut.Count > 0) { o.Kirjaa($"opas: sallitut-lista tyhjä vastauksessa, pidetään {sallitut.Count} edellistä"); yield break; }
+            if (l.Count > 0) try { System.IO.File.WriteAllText(SallitutPolku, teksti); } catch (Exception) { }
+            o.Kirjaa($"opas: sallitut kaupungit {l.Count}{(l.Count == 0 ? " (ei rajausta)" : ": " + string.Join(", ", l.ConvertAll(k => k.Nimi)))}");
+            AsetaSallitut(l);
+        }
+
         void PaivitaKohteet()
         {
             if (Testi || string.IsNullOrEmpty(Aloituskaupunki) || kohteetKaupunki == Aloituskaupunki) return;
@@ -975,17 +1043,25 @@ namespace Matkakirja.Natiivi
 
         /// <summary>Lause ryhmästä heti (ei toistoa istunnossa); pelaajan valinnasta käynnistää myös 6 s:n odotus-lauseen ajastimen.
         /// Ei soi, jos Kertoja on pois tai kerronta jo soi.</summary>
-        void Silta(string ryhma, bool pelaajalta)
+        bool Silta(string ryhma, bool pelaajalta)
         {
             if (pelaajalta) pelaajanToimi = Time.unscaledTime;
-            if (silmukka != null && silmukka.Siirtymassa) return;   // kertoja odottaa näkymän aukeamista (omistaja 12.0x)
-            if (siltalauseet == null || silta == null || !Asetukset.Paalla(Kytkin.Kertoja) || puhuu || silta.isPlaying) return;
-            bool eiVaraa = ryhma == OpasSiltalauseet.Odotus || ryhma == OpasSiltalauseet.Odotus5 || ryhma == OpasSiltalauseet.Odotus12 || ryhma == OpasSiltalauseet.Virhe;
+            if (silmukka != null && silmukka.Siirtymassa) return false;   // kertoja odottaa näkymän aukeamista (omistaja 12.0x)
+            if (siltalauseet == null || silta == null || !Asetukset.Paalla(Kytkin.Kertoja) || puhuu || silta.isPlaying) return false;
+            bool eiVaraa = ryhma == OpasSiltalauseet.Odotus || ryhma == OpasSiltalauseet.Odotus5 || ryhma == OpasSiltalauseet.Odotus12 || ryhma == OpasSiltalauseet.Virhe
+                || ryhma == OpasSiltalauseet.EiSallittu;
             var l = siltalauseet.Valitse(ryhma, eiVaraa ? null : OpasSiltalauseet.Kuittaus, x => siltaKlipit.ContainsKey(x.Url));
-            if (l == null) return;
+            if (l == null) return false;
             silta.clip = siltaKlipit[l.Url]; silta.volume = 1f; silta.Play();
             o.Kirjaa($"opas: siltalause {l.Id} ({ryhma}) \"{l.Teksti}\"");
+            return true;
         }
+
+        /// <summary>Torjunnan teksti Pulun chattiin (Natiivi-UI: PuluChat.Vastaa), kun siltalause ei soinut (ei ryhmää, kertoja pois
+        /// tai toinen ääni soi); puhuttua ei näytetä tekstinä (PUHE ÄÄNENÄ, EI KUPLINA).</summary>
+        public static event Action<string> TorjuntaTeksti;
+        public const string EiSallittuTeksti = "Sitä paikkaa ei ole vielä kuvattu tarpeeksi tarkasti. Valitse kohde listasta.";
+        void Torjunta() { if (!Silta(OpasSiltalauseet.EiSallittu, true)) TorjuntaTeksti?.Invoke(EiSallittuTeksti); }
 
         /// <summary>Kierroksen siirtymä: automaattinen lento soittaa "kierros" (yli 20 km "lento"); toiveen lento soitti jo valinnasta.</summary>
         void LentoAlkoi(OpasKohde k, double matkaM, bool toiveesta)
