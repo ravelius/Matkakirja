@@ -1,0 +1,605 @@
+{
+ "kaupunki": "Dublin",
+ "id": "dublin",
+ "versio": 1,
+ "kohteet": [
+  {
+   "id": "Q258464",
+   "nimi": "Trinity College",
+   "kuvaus": "Irlannin vanhin yliopisto",
+   "luokka": "rakennus",
+   "koko_m": 400,
+   "teksti": "Dublinin yliopiston Trinity College näkyy ylhäältä harmaiden kivitalojen ympäröimien sisäpihojen ja nurmikenttien sarjana keskellä kaupunkia. Etupihan keskellä kohoaa kellotorni, jonka alta opiskelijat eivät kulje kellon soidessa, sillä silloin heidän uskotaan reputtavan kaikki tenttinsä. Kuningatar Elisabet ensimmäinen perusti yliopiston vuonna 1592. Vanhan kirjaston Pitkä sali on kuusikymmentäviisi metriä pitkä, ja sen tynnyriholvi rakennettiin vuonna 1860, kun kirjahyllyille tarvittiin lisää tilaa. Samassa rakennuksessa säilytetään Kellsin kirjaa, keskiaikaista koristeltua evankeliumikirjaa, joka tuli yliopistolle vuonna 1661.",
+   "lyhyt": "Dublinin yliopiston Trinity Collegessa fyysikko Erwin Schrödinger piti helmikuussa 1943 kolme yleisöluentoa. Saliin mahtui sataviisikymmentä kuulijaa, mutta tulijoita oli neljäsataa, joten luennot pidettiin kahteen kertaan. Niistä syntynyt kirja Mitä elämä on? johdatti myöhemmin Watsonin ja Crickin perintöaineksen jäljille.",
+   "syventava": "Miksi kellotornin alta ei kuljeta?",
+   "kysymykset": [
+    "Mitä Kellsin kirjan sivuilla on kuvattu?",
+    "Ketkä kuuluisat kirjailijat ovat opiskelleet täällä?",
+    "Miksi kuningatar perusti yliopiston Dubliniin?",
+    "Mitä Pitkän salin marmoririntakuvat esittävät?",
+    "Miksi vanhaa kirjastoa kunnostetaan nyt?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Trinity College on Irlannin vanhin yliopisto, jonka kuningatar Elisabet I perusti vuonna 1592.",
+     "url": "https://www.britannica.com/print/article/172754"
+    },
+    {
+     "vaite": "Kellotorni seisoo etupihan keskellä; uskomuksen mukaan opiskelija, joka kulkee sen alta kellon soidessa, reputtaa kaikki tenttinsä.",
+     "url": "https://www.irishcentral.com/travel/best-of-ireland/top-superstitions-and-secrets-surrounding-trinity-college-dublin"
+    },
+    {
+     "vaite": "Pitkä sali on 65 metriä pitkä.",
+     "url": "https://en.wikipedia.org/wiki/Library_of_Trinity_College_Dublin"
+    },
+    {
+     "vaite": "Vuonna 1860 kattoa korotettiin, jotta nykyinen tynnyriholvi ja ylägallerian kirjahyllyt saatiin rakennettua.",
+     "url": "https://en.wikipedia.org/wiki/The_Old_Library,_Trinity_College_Dublin"
+    },
+    {
+     "vaite": "Kellsin kirja on vanhassa kirjastossa ja tuli yliopistolle vuonna 1661.",
+     "url": "https://en.wikipedia.org/wiki/Library_of_Trinity_College_Dublin"
+    },
+    {
+     "vaite": "Schrödinger piti helmikuussa 1943 Trinity Collegessa kolme yleisöluentoa; kuulijoita noin 400, saliin mahtui noin 150, joten luennot toistettiin.",
+     "url": "https://en.wikipedia.org/wiki/What_Is_Life%3F"
+    },
+    {
+     "vaite": "Luennoista syntynyt kirja What Is Life? innoitti Watsonia ja Crickiä DNA-tutkimukseen.",
+     "url": "https://en.wikipedia.org/wiki/What_Is_Life%3F"
+    }
+   ]
+  },
+  {
+   "id": "Q261012",
+   "nimi": "Guinness Storehouse",
+   "kuvaus": "Guinnessin oluen museo",
+   "luokka": "rakennus",
+   "koko_m": 100,
+   "teksti": "Panimomuseo Guinness Storehouse toimii seitsemänkerroksisessa panimon käymislaitoksessa, joka rakennettiin vuonna 1902. Talon keskellä on tuopin muotoinen lasinen valopiha, ja sen pohjalla on lattiaan upotettuna Arthur Guinnessin vuokrasopimus yhdeksäksituhanneksi vuodeksi. Isoisäsi kirjoitti vuonna 1873, että sellainen sopimus vaatii uskoa olueen tai janoon. Panimon portilla hän kysyi tynnyreitä kärryille vierittävältä mieheltä, loppuuko työ koskaan, mutta mies vain katsoi häntä pitkään ja vieritti seuraavan tynnyrin. Ylimmän kerroksen lasiseinäisestä baarista näkyy koko kaupunki.",
+   "lyhyt": "Panimomuseo Guinness Storehouse avattiin vuonna 2000, ja siitä on tullut Irlannin suosituin maksullinen nähtävyys. Arthur Guinness vuokrasi käyttämättömän panimon vuonna 1759 neljänkymmenenviiden punnan vuosivuokralla, mutta yhtiö osti tontin myöhemmin omakseen, joten sopimus raukesi.",
+   "syventava": "Miksi vuokrasopimus raukesi?",
+   "kysymykset": [
+    "Miksi Guinness-olut on niin tummaa?",
+    "Kuka oli panimon perustaja Arthur Guinness?",
+    "Paljonko panimossa tehdään olutta nykyään?",
+    "Mitä Guinnessin logon harppu tarkoittaa?",
+    "Mitä baarin ikkunoista näkee kirkkaalla säällä?"
+   ],
+   "isoisa": true,
+   "lahteet": [
+    {
+     "vaite": "Rakennus valmistui vuonna 1902 panimon käymislaitokseksi; museossa on seitsemän kerrosta tuopin muotoisen lasisen valopihan ympärillä.",
+     "url": "https://en.wikipedia.org/wiki/Guinness_Storehouse"
+    },
+    {
+     "vaite": "Arthur Guinnessin vuokrasopimus yhdeksäksituhanneksi vuodeksi on esillä lasin alla pohjakerroksen lattiassa valopihan pohjalla.",
+     "url": "https://en.wikipedia.org/wiki/Guinness_Storehouse"
+    },
+    {
+     "vaite": "Isoisän merkintä: vuokrasopimus yhdeksäksituhanneksi vuodeksi vaatii uskoa olueen tai janoon; portilla mies vieritti tynnyreitä kärryille, ja kun isoisä kysyi, loppuuko työ koskaan, mies katsoi pitkään ja vieritti seuraavan tynnyrin.",
+     "url": "kaanon:isoisan-paivakirja"
+    },
+    {
+     "vaite": "Ylimmän kerroksen Gravity Bar on lasiseinäinen baari, josta näkee kaupungin joka suuntaan.",
+     "url": "https://en.wikipedia.org/wiki/Guinness_Storehouse"
+    },
+    {
+     "vaite": "Museo avattiin vuonna 2000, ja se on Irlannin suosituin maksullinen nähtävyys.",
+     "url": "https://en.wikipedia.org/wiki/Guinness_Storehouse"
+    },
+    {
+     "vaite": "Arthur Guinness vuokrasi käyttämättömän panimon vuonna 1759 45 punnan vuosivuokralla; yhtiö osti tontin myöhemmin, ja sopimus raukesi.",
+     "url": "kaanon:pelin-aineisto"
+    }
+   ]
+  },
+  {
+   "id": "Q742767",
+   "nimi": "Dublinin linna",
+   "kuvaus": "Brittivallan entinen keskus",
+   "luokka": "linnoitus",
+   "koko_m": 250,
+   "teksti": "Dublinin linnan puutarhassa näkyy ylhäältä pyöreä nurmikenttä, jonka poikki kiemurtelevat kivetyt käytävät muodostavat kelttiläisen solmukuvion. Nurmi toimii myös helikopterien laskeutumispaikkana, ja se on lähellä mustaa lampea, iiriksi dubh linn, joka antoi kaupungille nimensä. Viikingit pitivät lammessa laivojaan ja perustivat sen rannalle kauppapaikan. Linnasta hallittiin Irlantia yli seitsemänsataa vuotta, kunnes se luovutettiin tammikuussa 1922 Michael Collinsin johtamalle väliaikaiselle hallitukselle. Nykyään linnan juhlahuoneistossa pidetään valtion juhlaillallisia ja presidenttien virkaanastujaiset.",
+   "lyhyt": "Dublinin linnan keskiaikaisesta linnasta seisoo täydessä korkeudessaan enää pyöreä Arkistotorni. Suurin osa linnasta tuhoutui tulipalossa vuonna 1684 ja rakennettiin uudelleen seuraavina vuosikymmeninä. Linnan alueella toimii myös Chester Beattyn kirjasto, jossa on varhaisia Raamatun käsikirjoituksia ja vanhoja Koraaneja.",
+   "syventava": "Miten linna luovutettiin irlantilaisille?",
+   "kysymykset": [
+    "Millainen viikinkien Dublin oli?",
+    "Kuka oli Michael Collins?",
+    "Miksi linnan pihaan laskeutuu helikoptereita?",
+    "Mitä linnan alla olevista kaivauksista löytyi?",
+    "Kuka keräsi Chester Beattyn kirjaston aarteet?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Dubh Linn -puutarhan käytävät muodostavat ylhäältä kelttiläisen solmukuvion; pyöreä nurmi toimii helikopterien laskeutumispaikkana.",
+     "url": "https://www.inyourpocket.com/ireland/dublin/venues/the-dubh-linn-gardens"
+    },
+    {
+     "vaite": "Linna rakennettiin mustan lammen eli Dubh Linnin äärelle, joka antoi Dublinille nimen; viikingit pitivät siellä laivojaan.",
+     "url": "https://en.wikipedia.org/wiki/Dublin_Castle"
+    },
+    {
+     "vaite": "Linna rakennettiin vuodesta 1204 alkaen ja oli brittihallinnon keskus vuoteen 1922; se luovutettiin 16.1.1922 Michael Collinsin johtamalle väliaikaiselle hallitukselle.",
+     "url": "https://en.wikipedia.org/wiki/Dublin_Castle"
+    },
+    {
+     "vaite": "Juhlahuoneistossa pidetään presidenttien virkaanastujaiset ja valtion juhlaillalliset.",
+     "url": "https://www.claytonhotels.com/blog/dublin-castle-tour/"
+    },
+    {
+     "vaite": "Alkuperäisestä linnasta vain Record Tower eli Arkistotorni on yhä täydessä korkeudessaan; tulipalo vuonna 1684 tuhosi suuren osan, ja loput rakennettiin uudelleen seuraavina vuosikymmeninä.",
+     "url": "https://strollingguides.co.uk/books/dublin/places/dublincastle.php"
+    },
+    {
+     "vaite": "Chester Beattyn kirjasto on linnan alueella; kokoelmassa on varhaisia Raamatun käsikirjoituksia ja Koraaneja.",
+     "url": "https://www.frommers.com/destinations/dublin/attractions/chester-beatty-library"
+    },
+    {
+     "vaite": "Viikingit perustivat lammen rannalle kauppapaikan.",
+     "url": "https://www.inyourpocket.com/ireland/dublin/venues/the-dubh-linn-gardens"
+    }
+   ]
+  },
+  {
+   "id": "Q846365",
+   "nimi": "Pyhän Patrickin katedraali",
+   "kuvaus": "Irlannin suurin kirkko",
+   "luokka": "kirkko",
+   "koko_m": 91,
+   "teksti": "Pyhän Patrickin katedraali on ulkomitoiltaan yhdeksänkymmentäyksi metriä pitkä ja Irlannin suurin kirkko. Ylhäältä näkyy kirkon vieressä nurmikkoinen puisto, jossa pyhän Patrickin kerrotaan kastaneen ensimmäisiä kristittyjä vanhan lähteen vedellä. Gulliverin retket kirjoittanut Jonathan Swift oli katedraalin dekaani yli kolmekymmentä vuotta, ja hänet on haudattu kirkon lattiaan. Pohjoisessa poikkilaivassa on vanha ovi, johon vuonna 1492 leikattiin aukko, kun riitaisen suvun päämies Gerald FitzGerald halusi työntää siitä kätensä ja tarjota sovintoa vihamiehilleen.",
+   "lyhyt": "Pyhän Patrickin katedraali oli 1800-luvun alussa niin rapistunut, että purkamista pidettiin halvempana kuin korjaamista. Arthur Guinnessin pojanpoika Benjamin Lee Guinness pelasti kirkon ja kunnosti sen omilla rahoillaan 1860-luvulla. Katedraalin laulajia esiintyi myös Händelin Messiaan ensiesityksessä vuonna 1742.",
+   "syventava": "Miksi oveen leikattiin aukko?",
+   "kysymykset": [
+    "Kuka oli pyhä Patrick?",
+    "Miksi Dublinissa on kaksi katedraalia?",
+    "Mitä Swift kirjoitti omaan hautakirjoitukseensa?",
+    "Pelkäsivätkö vihamiehet, että käsi katkaistaan?",
+    "Pidetäänkö kirkossa yhä jumalanpalveluksia?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Katedraali on ulkoa 91 metriä pitkä ja Irlannin suurin kirkko.",
+     "url": "kaanon:pelin-aineisto"
+    },
+    {
+     "vaite": "Viereinen puisto on perimätiedon mukaan paikka, jossa pyhä Patrick kastoi ensimmäisiä kristittyjä vanhan lähteen vedellä.",
+     "url": "https://en.wikipedia.org/wiki/St_Patrick%27s_Cathedral,_Dublin"
+    },
+    {
+     "vaite": "Jonathan Swift oli dekaanina 1713–1745 ja on haudattu katedraalin lattiaan.",
+     "url": "https://www.visitdublin.com/see-do/details/st-patrick-s-cathedral-2"
+    },
+    {
+     "vaite": "Vuonna 1492 Gerald FitzGerald leikkautti oveen aukon ja ojensi siitä kätensä sovinnon merkiksi kapitulitaloon paenneille Butlereille; ovi on esillä pohjoisessa poikkilaivassa.",
+     "url": "https://www.stpatrickscathedral.ie/the-door-of-reconciliation/"
+    },
+    {
+     "vaite": "1800-luvun alussa kirkko oli niin rapistunut, että purkamista pidettiin halvempana; Benjamin Lee Guinness, Arthur Guinnessin pojanpoika, kunnosti sen omalla kustannuksellaan 1860–1865.",
+     "url": "https://www.stpatrickscathedral.ie/the-guinness-restoration/"
+    },
+    {
+     "vaite": "Messiaan ensiesityksessä 13.4.1742 Dublinissa lauloi kuorolaisia Pyhän Patrickin ja Christ Churchin katedraaleista.",
+     "url": "https://dailyinfo.co.uk/feature/12945/messiah"
+    }
+   ]
+  },
+  {
+   "id": "Q1034624",
+   "nimi": "Ha'penny-silta",
+   "kuvaus": "Valurautainen kävelysilta Liffeyn yli",
+   "luokka": "silta",
+   "koko_m": 43,
+   "teksti": "Valkoinen Ha'penny-silta kaartuu Liffeyn yli matalana valurautaisena kaarena, jonka pituus on neljäkymmentäkolme metriä. Se avattiin vuonna 1816, ja sen osat valettiin Englannissa Coalbrookdalessa. Ennen siltaa joen yli kulki William Walshin seitsemän lauttaa, ja kun ne rapistuivat, Walshia käskettiin joko korjaamaan ne tai rakentamaan silta. Walsh valitsi sillan, ja vastineeksi hän sai periä jokaiselta ylittäjältä puolen pennyn maksun, joten sillan päissä oli kääntöportit. Maksu poistui vasta vuonna 1919.",
+   "lyhyt": "Valkoisen Ha'penny-sillan virallinen nimi on Liffey Bridge, mutta avattaessa se nimettiin Dublinissa syntyneen Wellingtonin herttuan mukaan. Yli sadankahdeksankymmenen vuoden ajan se oli kaupungin ainoa jalankulkusilta joen yli, kunnes Millennium Bridge avattiin vuonna 1999.",
+   "syventava": "Kuka keräsi puolen pennyn siltamaksun?",
+   "kysymykset": [
+    "Paljonko puoli pennyä oli silloin rahaa?",
+    "Miksi rakkauslukot poistettiin sillalta?",
+    "Kuka oli Dublinissa syntynyt Wellingtonin herttua?",
+    "Miksi silta on maalattu valkoiseksi?",
+    "Montako siltaa Liffeyn yli nykyään kulkee?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Silta avattiin 1816, sen valurautainen 43 metrin kaari valettiin Coalbrookdalessa, ja puolen pennyn maksua perittiin vuoteen 1919.",
+     "url": "kaanon:pelin-aineisto"
+    },
+    {
+     "vaite": "Sillan avaaminen 1816 ja maksun poistuminen 1919; kunnostuksessa 2001 silta sai alkuperäisen valkoisen värinsä.",
+     "url": "https://en.wikipedia.org/wiki/Ha%27penny_Bridge"
+    },
+    {
+     "vaite": "Ennen siltaa William Walshilla oli seitsemän lauttaa; hänen piti korjata ne tai rakentaa silta, ja hän valitsi sillan ja sai periä puolen pennyn maksun; sillan päissä oli kääntöportit.",
+     "url": "https://en.wikipedia.org/wiki/Ha%27penny_Bridge"
+    },
+    {
+     "vaite": "Silta nimettiin alun perin Dublinissa syntyneen Wellingtonin herttuan mukaan; virallinen nimi on Liffey Bridge.",
+     "url": "https://en.wikipedia.org/wiki/Ha%27penny_Bridge"
+    },
+    {
+     "vaite": "Silta oli yli 180 vuotta kaupungin ainoa jalankulkusilta Liffeyn yli, kunnes Millennium Bridge avattiin 1999.",
+     "url": "https://en.wikipedia.org/wiki/Ha%27penny_Bridge"
+    }
+   ]
+  },
+  {
+   "id": "Q1067803",
+   "nimi": "Christ Church -katedraali",
+   "kuvaus": "Dublinin vanhin katedraali",
+   "luokka": "kirkko",
+   "koko_m": 100,
+   "teksti": "Dublinin vanhin katedraali, Christ Church, seisoo vanhan kaupungin mäellä, ja ylhäältä näkyy, kuinka sen länsipäästä kaartuu katettu kivisilta kadun yli entiseen synodisaliin. Viikinkikuningas Sigtrygg Silkkiparta perusti kirkon noin vuonna 1030, ja nykyinen kivikirkko aloitettiin normannien valloituksen jälkeen 1170-luvulla. Kirkon alla on Irlannin ja Britannian suurin krypta, jonka lasivitriinissä ovat kissan ja rotan muumiot: tarinan mukaan kissa ajoi rottaa takaa urkupilliin, ja kumpikin jäi sinne jumiin. James Joyce mainitsee parin romaanissaan Finnegans Wake.",
+   "lyhyt": "Dublinin vanhin katedraali, Christ Church, oli 1800-luvulla rapistumassa, kunnes viskintislaaja Henry Roe maksoi sen kunnostuksen yksin. Työt kestivät vuodesta 1871 vuoteen 1878. Entisessä synodisalissa toimii nykyään keskiajan Dublinista kertova museo Dublinia.",
+   "syventava": "Miten kissa ja rotta muumioituivat?",
+   "kysymykset": [
+    "Kuka oli viikinkikuningas Sigtrygg Silkkiparta?",
+    "Kuka oli kirkossa haudattu Strongbow?",
+    "Miksi krypta on niin suuri?",
+    "Mitä Dublinia-museossa voi nähdä?",
+    "Kumpi Dublinin katedraaleista on vanhempi?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Christ Church on Dublinin kahdesta keskiaikaisesta katedraalista vanhempi; länsipäästä kulkee katettu kivisilta entiseen synodisaliin, jossa toimii Dublinia-museo.",
+     "url": "https://en.wikipedia.org/wiki/Christ_Church_Cathedral,_Dublin"
+    },
+    {
+     "vaite": "Kirkon perustivat noin vuonna 1030 viikinkikuningas Sigtrygg Silkkiparta ja piispa Dúnán; kivikirkon rakentaminen alkoi normannien valloituksen jälkeen vuodesta 1171.",
+     "url": "https://www.atlasobscura.com/places/christ-church-cathedral-dublin"
+    },
+    {
+     "vaite": "Kryptassa on lasin takana kissan ja rotan muumiot; tarinan mukaan kissa ajoi rottaa urkupilliin ja molemmat jäivät jumiin; Joyce mainitsee ne Finnegans Wakessa.",
+     "url": "https://www.atlasobscura.com/places/christ-church-cathedral-dublin"
+    },
+    {
+     "vaite": "Viskintislaaja Henry Roe maksoi yksin kunnostuksen vuosina 1871–1878.",
+     "url": "https://www.igp-web.com/IGPArchives/ire/dublin/cemeteries/christ-church-cath.html"
+    },
+    {
+     "vaite": "Krypta on Irlannin ja Britannian suurin ja peräisin 1170-luvulta.",
+     "url": "https://www.atlasobscura.com/places/christ-church-cathedral-dublin"
+    }
+   ]
+  },
+  {
+   "id": "Q1134365",
+   "nimi": "Spire",
+   "kuvaus": "Teräsneula O'Connell Streetillä",
+   "luokka": "torni",
+   "koko_m": 120,
+   "korkeus_m": 120,
+   "teksti": "Teräksinen neulamonumentti Spire nousee O'Connell Streetin keskeltä satakaksikymmentä metriä korkeana, ja ylhäältä katsottuna se kutistuu ohueksi pisteeksi kadun keskellä. Juurestaan kolmen metrin levyinen neula kapenee huipulla viidentoista senttimetrin paksuiseksi. Pimeällä huippu loistaa sisältä, kun valodiodien valo pääsee ulos tuhansista pienistä rei'istä. Samalla paikalla seisoi amiraali Nelsonin pylväs, kunnes tasavaltalaiset räjäyttivät sen yöllä vuonna 1966. Neula valmistui vuonna 2003, ja dublinilaiset ovat keksineet sille liudan pilkkanimiä.",
+   "lyhyt": "Teräsneula Spire on koottu kahdeksasta ontosta ruostumattoman teräksen kartiosta. Kovalla tuulella huippu saa heilua puolitoista metriä, ja huojuntaa vaimentaa kaksi värähtelynvaimenninta. Suunnitelma valittiin vuonna 1998 järjestetyssä kilpailussa, jonka voitti brittiarkkitehti Ian Ritchien ehdotus.",
+   "syventava": "Miksi Nelsonin pylväs räjäytettiin?",
+   "kysymykset": [
+    "Mitä pilkkanimiä dublinilaiset keksivät neulalle?",
+    "Kuka suunnitteli tämän teräsneulan?",
+    "Mihin Nelsonin patsaan pää päätyi?",
+    "Miksi kadun nimi vaihdettiin O'Connell Streetiksi?",
+    "Miten neula pysyy pystyssä kovassa tuulessa?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Spire on 120 metriä korkea ruostumattomasta teräksestä tehty neula O'Connell Streetillä; valmistui 21.1.2003.",
+     "url": "https://en.wikipedia.org/wiki/Spire_of_Dublin"
+    },
+    {
+     "vaite": "Halkaisija on juuressa kolme metriä ja huipulla 15 senttimetriä; rakenne on kahdeksasta ontosta kartio-osasta; huipun valaisee sisäinen valonlähde.",
+     "url": "https://en.wikipedia.org/wiki/Spire_of_Dublin"
+    },
+    {
+     "vaite": "Huipun valodiodien valo loistaa tuhansista pienistä rei'istä; neulalla on useita pilkkanimiä; se voi heilua tuulessa puolitoista metriä.",
+     "url": "https://www.theirishroadtrip.com/the-spire-dublin/"
+    },
+    {
+     "vaite": "Rakenteessa on kaksi viritettyä massavaimenninta huojunnan vaimentamiseksi.",
+     "url": "https://en.wikipedia.org/wiki/Spire_of_Dublin"
+    },
+    {
+     "vaite": "Nelsonin pylväs seisoi samalla paikalla, kunnes tasavaltalaiset räjäyttivät sen yöllä maaliskuussa 1966.",
+     "url": "https://en.wikipedia.org/wiki/Nelson%27s_Pillar"
+    },
+    {
+     "vaite": "Spire pystytettiin vuonna 1998 järjestetyn suunnittelukilpailun pohjalta.",
+     "url": "kaanon:pelin-aineisto"
+    },
+    {
+     "vaite": "Monumentin suunnitteli Ian Ritchie Architects.",
+     "url": "https://en.wikipedia.org/wiki/Spire_of_Dublin"
+    }
+   ]
+  },
+  {
+   "id": "Q1049842",
+   "nimi": "Kilmainhamin vankila",
+   "kuvaus": "Entinen vankila, nykyään museo",
+   "luokka": "rakennus",
+   "koko_m": 150,
+   "teksti": "Kilmainhamin vankila avattiin vuonna 1796, ja ylhäältä erottuvat sen harmaat siivet ja muurien ympäröimät pihat. Vuonna 1862 valmistunut itäsiipi rakennettiin niin, että vartija saattoi valvoa vankeja yhdestä keskipisteestä, mutta vangit eivät tienneet, milloin heitä katsottiin. Pääsiäiskapinan johtajista neljätoista ammuttiin toukokuussa 1916 vankilan kivenmurskauspihalla. Yksi heistä, Joseph Plunkett, vihittiin morsiamensa Grace Giffordin kanssa vankilan kappelissa vain muutamaa tuntia ennen teloitustaan. Vankila suljettiin vuonna 1924, ja myöhemmin vapaaehtoiset kunnostivat sen museoksi.",
+   "lyhyt": "Kilmainhamin vankila on näytellyt elokuvissa englantilaista vankilaa, muun muassa elokuvissa Isän nimeen ja The Italian Job. Vapaaehtoiset aloittivat rapistuneen vankilan kunnostuksen vuonna 1960, ja työ päättyi vuonna 1971, kun kappelin alttari oli rakennettu uudelleen.",
+   "syventava": "Missä Plunkett ja Gifford vihittiin?",
+   "kysymykset": [
+    "Keitä pääsiäiskapinan johtajat olivat?",
+    "Miksi teloitukset käänsivät kansan kapinallisten puolelle?",
+    "Millaisissa oloissa vangit täällä elivät?",
+    "Mitä Grace Giffordille tapahtui myöhemmin?",
+    "Miksi vankila päätettiin säilyttää museona?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Vankila avattiin 1796 ja suljettiin lopullisesti 1924; itäsiipi valmistui 1862 panoptikon-periaatteella, jossa vankeja valvottiin keskipisteestä heidän tietämättään.",
+     "url": "https://kilmainhamtales.ie/kilmainham-gaol.php"
+    },
+    {
+     "vaite": "Kilmainhamin vankilassa teloitettiin neljätoista miestä toukokuussa 1916 kivenmurskauspihalla.",
+     "url": "https://centuryireland.rte.ie/centuryireland/articles/14-men-executed-in-kilmainham-gaol"
+    },
+    {
+     "vaite": "Grace Gifford ja Joseph Plunkett vihittiin vankilan kappelissa 3.5.1916 muutamaa tuntia ennen Plunkettin teloitusta.",
+     "url": "https://en.wikipedia.org/wiki/Grace_Gifford"
+    },
+    {
+     "vaite": "Vankila oli hylättynä vuoteen 1960, jolloin vapaaehtoiset alkoivat kunnostaa sitä museoksi; työ valmistui 1971 kappelin alttarin jälleenrakennukseen.",
+     "url": "https://thebignote.com/2018/12/01/the-easter-rising-part-eleven-kilmainham-gaol/"
+    },
+    {
+     "vaite": "Vankilaa on käytetty elokuvissa Isän nimeen ja The Italian Job, joissa se esitti englantilaista vankilaa.",
+     "url": "https://strollingguides.co.uk/books/dublin/places/kilmainham.php"
+    }
+   ]
+  },
+  {
+   "id": "Q1339254",
+   "nimi": "Dublinin pääpostitalo",
+   "kuvaus": "Pääsiäiskapinan päämaja",
+   "luokka": "rakennus",
+   "koko_m": 100,
+   "teksti": "Dublinin pääpostitalo seisoo O'Connell Streetin varrella, ja sen julkisivun kuudessa pylväässä näkyy yhä luodinjälkiä. Talo avattiin vuonna 1818, ja pääsiäisenä 1916 se oli kapinallisten päämaja. Talon edustalla Patrick Pearse luki ääneen Irlannin tasavallan julistuksen. Taisteluissa rakennus paloi niin, että vain graniittinen julkisivu jäi pystyyn, ja se rakennettiin uudelleen vasta vuonna 1929. Sisällä on Oliver Sheppardin veistos kuolevasta tarusankari Cú Chulainnista, ja talossa toimii yhä posti sekä kapinasta kertova museo.",
+   "lyhyt": null,
+   "syventava": "Mitä tasavallan julistuksessa luvattiin?",
+   "kysymykset": [
+    "Kuka oli Patrick Pearse?",
+    "Miksi kapinalliset valitsivat päämajakseen postin?",
+    "Kuinka kauan kapinalliset pitivät postitaloa?",
+    "Kuka oli tarusankari Cú Chulainn?",
+    "Mitä kapinasta kertovassa museossa näkee?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Postitalo avattiin 6.1.1818; julkisivussa on kuuden ionialaisen pylvään portiikki, jonka pylväissä on yhä luodinjälkiä.",
+     "url": "https://en.wikipedia.org/wiki/General_Post_Office,_Dublin"
+    },
+    {
+     "vaite": "Postitalo oli pääsiäiskapinan johtajien päämaja, ja sen edustalla Patrick Pearse luki tasavallan julistuksen 24.4.1916.",
+     "url": "https://en.wikipedia.org/wiki/General_Post_Office,_Dublin"
+    },
+    {
+     "vaite": "Rakennus paloi kapinassa graniittijulkisivua lukuun ottamatta ja rakennettiin uudelleen vasta 1929.",
+     "url": "https://en.wikipedia.org/wiki/General_Post_Office,_Dublin"
+    },
+    {
+     "vaite": "Rakennuksessa on Oliver Sheppardin veistos kuolevasta Cú Chulainnista.",
+     "url": "https://en.wikipedia.org/wiki/General_Post_Office,_Dublin"
+    },
+    {
+     "vaite": "Talossa toimii GPO Witness History -museo, joka kertoo pääsiäiskapinasta.",
+     "url": "https://www.visitdublin.com/see-do/details/general-post-office"
+    }
+   ]
+  },
+  {
+   "id": "Q1193916",
+   "nimi": "Samuel Beckettin silta",
+   "kuvaus": "Harpun muotoinen kääntösilta",
+   "luokka": "silta",
+   "koko_m": 120,
+   "teksti": "Harpun muotoinen Samuel Beckettin silta ylittää Liffeyn satama-alueella, ja ylhäältä näkyy, kuinka sen kaareva pylväs nojaa eteenpäin kuin kyljelleen kaadettu harppu. Kolmekymmentäyksi vaijeria muodostaa harpun kielet, ja harppu on ollut Irlannin tunnus jo 1200-luvulta. Silta voi kääntyä yhdeksänkymmentä astetta, jotta laivat pääsevät ohi. Santiago Calatravan suunnittelema teräsrakenne valmistettiin Rotterdamissa ja kuljetettiin meritse Dubliniin toukokuussa 2009. Silta avattiin saman vuoden joulukuussa, ja se kantaa Dublinissa syntyneen, kirjallisuuden Nobel-palkinnon saaneen näytelmäkirjailijan nimeä.",
+   "lyhyt": null,
+   "syventava": "Miksi silta on harpun muotoinen?",
+   "kysymykset": [
+    "Kuka oli kirjailija Samuel Beckett?",
+    "Kuinka usein silta käännetään auki?",
+    "Mitä muita siltoja Calatrava on suunnitellut?",
+    "Miksi Irlannin tunnus on harppu?",
+    "Miten silta kuljetettiin Alankomaista Dubliniin?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Santiago Calatravan suunnittelema vinoköysisilta, jossa on kolmekymmentäyksi vaijeria yhdestä kaarevasta pylväästä; muoto muistuttaa kyljelleen kaadettua harppua; silta kääntyy 90 astetta laivoja varten; avattiin 10.12.2009.",
+     "url": "https://en.wikipedia.org/wiki/Samuel_Beckett_Bridge"
+    },
+    {
+     "vaite": "Teräsrakenteen valmisti Hollandia Rotterdamissa, ja se kuljetettiin Dubliniin toukokuussa 2009.",
+     "url": "https://en.wikipedia.org/wiki/Samuel_Beckett_Bridge"
+    },
+    {
+     "vaite": "Harppu on ollut Irlannin tunnus 1200-luvulta.",
+     "url": "kaanon:pelin-aineisto"
+    },
+    {
+     "vaite": "Samuel Beckett syntyi Dublinin Foxrockissa ja sai kirjallisuuden Nobel-palkinnon 1969.",
+     "url": "https://en.wikipedia.org/wiki/Samuel_Beckett"
+    },
+    {
+     "vaite": "Silta avattiin jalankulkijoille 10.12.2009.",
+     "url": "https://en.wikipedia.org/wiki/Samuel_Beckett_Bridge"
+    }
+   ]
+  },
+  {
+   "id": "Q2300561",
+   "nimi": "Custom House",
+   "kuvaus": "Gandonin tullitalo Liffeyn rannalla",
+   "luokka": "rakennus",
+   "koko_m": 120,
+   "teksti": "Tullitalo Custom House levittäytyy Liffeyn pohjoisrannalla pitkänä vaaleana julkisivuna, jonka keskeltä nousee kuparikupoli ja sen huipulla Kauppaa esittävä patsas. Arkkitehti James Gandon rakennutti talon suolle, ja se valmistui vuonna 1791. Ikkunoiden ja kaarten lakikivissä on neljätoista veistettyä päätä, jotka esittävät kolmeatoista Irlannin pääjokea ja Atlanttia. Toukokuussa 1921 tasavaltalaiset polttivat talon, ja kupoli romahti. Se muurattiin uudelleen tummemmasta kalkkikivestä kuin muu talo, joten ero erottuu yhä.",
+   "lyhyt": null,
+   "syventava": "Ketä jokipäät esittävät?",
+   "kysymykset": [
+    "Miksi tullitalo rakennettiin juuri suolle?",
+    "Miksi tasavaltalaiset polttivat talon?",
+    "Mitä tullitalossa tehdään nykyään?",
+    "Kuka veisti jokia esittävät päät?",
+    "Kuka oli arkkitehti James Gandon?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "James Gandonin suunnittelema tullitalo valmistui 1791; se rakennettiin suolle.",
+     "url": "kaanon:pelin-aineisto"
+    },
+    {
+     "vaite": "Kuparikupolin huipulla on Kauppaa esittävä patsas.",
+     "url": "https://audiala.com/en/ireland/dublin/the-custom-house"
+    },
+    {
+     "vaite": "Edward Smythin neljätoista lakikiveen veistettyä päätä esittävät kolmeatoista Irlannin pääjokea ja Atlanttia.",
+     "url": "https://en.wikipedia.org/wiki/Edward_Smyth_(sculptor)"
+    },
+    {
+     "vaite": "IRA miehitti ja poltti tullitalon 25.5.1921.",
+     "url": "https://en.wikipedia.org/wiki/Burning_of_the_Custom_House"
+    },
+    {
+     "vaite": "Palossa kupoli romahti, ja se muurattiin uudelleen tummemmasta Ardbraccanin kalkkikivestä kuin muu Portlandin kivestä tehty talo.",
+     "url": "kaanon:pelin-aineisto"
+    }
+   ]
+  },
+  {
+   "id": "Q377937",
+   "nimi": "Phoenix Park",
+   "kuvaus": "Muurin ympäröimä suurpuisto",
+   "luokka": "puisto",
+   "koko_m": 3000,
+   "teksti": "Dublinin suuri puisto Phoenix Park levittäytyy kaupungin länsilaidalla seitsemänsadanseitsemän hehtaarin laajuisena, ja sitä kiertää yksitoista kilometriä pitkä muuri. Ylhäältä erottuu Wellingtonin muistomerkki, kuusikymmentäkaksi metriä korkea obeliski, joka on Euroopan korkein. Puiston nimi ei viittaa feenikslintuun vaan iirin sanoihin fionn uisce, kirkas vesi. Ormonden herttua perusti puiston kuninkaalliseksi peura-aitaukseksi 1660-luvulla, ja nurmilla laiduntaa yhä noin kuudensadan kuusipeuran villi lauma. Puistossa ovat myös presidentin virka-asunto ja vuonna 1831 avattu eläintarha.",
+   "lyhyt": null,
+   "syventava": "Mistä puiston peurat ovat peräisin?",
+   "kysymykset": [
+    "Saako puiston peuroja ruokkia?",
+    "Kuka asuu presidentin virka-asunnossa nyt?",
+    "Miksi puistoon pystytettiin suuri valkoinen risti?",
+    "Mitä eläintarhan leijonista on kerrottu?",
+    "Miksi Wellingtonille rakennettiin obeliski?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Puiston yksitoista kilometriä pitkä muuri ympäröi 707 hehtaaria; puistossa on presidentin virka-asunto.",
+     "url": "https://en.wikipedia.org/wiki/Phoenix_Park"
+    },
+    {
+     "vaite": "Wellingtonin muistomerkki on 62 metriä korkea obeliski.",
+     "url": "https://en.wikipedia.org/wiki/Phoenix_Park"
+    },
+    {
+     "vaite": "Obeliski on Euroopan korkein.",
+     "url": "kaanon:pelin-aineisto"
+    },
+    {
+     "vaite": "Nimi tulee iirin sanoista fionn uisce, kirkas vesi.",
+     "url": "https://www.logainm.ie/en/themes/125"
+    },
+    {
+     "vaite": "Ormonden herttua perusti puiston kuninkaalliseksi peura-aitaukseksi 1662; noin 600 kuusipeuran villi lauma polveutuu osin 1660-luvun peuroista.",
+     "url": "https://phoenixpark.ie/?p=362"
+    },
+    {
+     "vaite": "Eläintarha avattiin yleisölle 1.9.1831.",
+     "url": "https://en.wikipedia.org/wiki/Dublin_Zoo"
+    }
+   ]
+  },
+  {
+   "id": "Q1432605",
+   "nimi": "St Stephen's Green",
+   "kuvaus": "Keskustan viktoriaaninen puisto",
+   "luokka": "puisto",
+   "koko_m": 550,
+   "teksti": "Puisto St Stephen's Green on keskustan suorakaiteen muotoinen viheralue, noin viisisataaviisikymmentä metriä pitkä, ja Grafton Streetin kulmassa sen pääsisäänkäyntinä on kivinen riemukaari. Lordi Ardilaun, Guinnessin panimosuvun jäsen, osti puiston, maisemoi sen ja avasi sen yleisölle vuonna 1880, ja hänen patsaansa istuu yhä puistossa. Pääsiäiskapinan aikana 1916 kapinalliset kaivoivat puistoon juoksuhautoja kreivitär Markieviczin valvonnassa. Kerrotaan, että kumpikin osapuoli suostui kahdesti päivässä tulitaukoon, jotta lampien sorsat ja joutsenet saatiin ruokittua.",
+   "puhe_teksti": "Puisto Saint Stephen's Green on keskustan suorakaiteen muotoinen viheralue, noin viisisataaviisikymmentä metriä pitkä, ja Grafton Streetin kulmassa sen pääsisäänkäyntinä on kivinen riemukaari. Lordi Ardilaun, Guinnessin panimosuvun jäsen, osti puiston, maisemoi sen ja avasi sen yleisölle vuonna 1880, ja hänen patsaansa istuu yhä puistossa. Pääsiäiskapinan aikana 1916 kapinalliset kaivoivat puistoon juoksuhautoja kreivitär Markieviczin valvonnassa. Kerrotaan, että kumpikin osapuoli suostui kahdesti päivässä tulitaukoon, jotta lampien sorsat ja joutsenet saatiin ruokittua.",
+   "lyhyt": null,
+   "syventava": "Miksi taistelijat pitivät tulitaukoja?",
+   "kysymykset": [
+    "Kuka oli kreivitär Markievicz?",
+    "Ketä riemukaarella muistetaan?",
+    "Miksi puisto oli aiemmin suljettu yleisöltä?",
+    "Mitä patsaita puistossa on?",
+    "Mitä Grafton Streetillä on nykyään?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Puisto on suunnilleen suorakaiteen muotoinen, noin 550 × 450 metriä; pääsisäänkäynti Grafton Streetiltä Fusiliers' Archin kautta.",
+     "url": "https://www.theaou.org/resources/st-stephens-green"
+    },
+    {
+     "vaite": "Lordi Ardilaun osti, maisemoi ja lahjoitti puiston, joka avattiin yleisölle 27.7.1880.",
+     "url": "https://en.wikipedia.org/wiki/Arthur_Guinness,_1st_Baron_Ardilaun"
+    },
+    {
+     "vaite": "Lordi Ardilaun oli Guinnessin panimosukua (Arthur Edward Guinness).",
+     "url": "https://en.wikipedia.org/wiki/Arthur_Guinness,_1st_Baron_Ardilaun"
+    },
+    {
+     "vaite": "Vuonna 1916 kapinalliset kaivoivat puistoon juoksuhautoja Markieviczin valvonnassa.",
+     "url": "https://maritaconlonmckenna.com/2016/03/27/st-stephens-green/"
+    },
+    {
+     "vaite": "Kerrotun mukaan osapuolet sopivat kahdesti päivässä tulitauosta, jotta lintuja voitiin ruokkia.",
+     "url": "https://maritaconlonmckenna.com/2016/03/27/st-stephens-green/"
+    },
+    {
+     "vaite": "Puistossa on lordi Ardilaunin muistomerkki eli istuva patsas.",
+     "url": "https://www.buildingsofireland.ie/buildings-search/building/50100266/lord-ardilaun-memorial-saint-stephens-green-dublin-2-dublin"
+    }
+   ]
+  },
+  {
+   "id": "Q920229",
+   "nimi": "Temple Bar",
+   "kuvaus": "Mukulakivikatujen kulttuurikortteli",
+   "luokka": "muu",
+   "koko_m": 400,
+   "teksti": "Kaupunginosa Temple Bar on Liffeyn etelärannan kapeiden mukulakivikatujen sokkelo, jonka keskiaikainen katuverkko on säilynyt. Nimensä se sai 1600-luvulla eläneeltä Sir William Templeltä, Trinity Collegen johtajalta, jonka puutarha ulottui täällä joen rantaan. 1980-luvulla korttelit oli tarkoitus purkaa linja-autoaseman tieltä, ja sillä välin alueelle muutti taiteilijoita ja pieniä yrityksiä. Asukkaiden ja kauppiaiden protestit kaatoivat asemahankkeen, ja nyt Temple Bar on kaupungin kulttuurikortteli. Lauantaisin Meeting House Squarella on ruokatori.",
+   "lyhyt": null,
+   "syventava": "Miksi linja-autoasemaa ei rakennettu?",
+   "kysymykset": [
+    "Miksi Temple Barissa on niin paljon pubeja?",
+    "Mitä elokuvateatterissa näytetään?",
+    "Missä kuulee parhaiten irlantilaista musiikkia?",
+    "Mitä lauantain ruokatorilla myydään?",
+    "Kuka oli Sir William Temple?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Temple Bar on Liffeyn etelärannalla; keskiaikainen katuverkko ja kapeat mukulakivikadut ovat säilyneet.",
+     "url": "https://en.wikipedia.org/wiki/Temple_Bar,_Dublin"
+    },
+    {
+     "vaite": "Nimi tulee 1600-luvun Trinity Collegen johtajalta Sir William Templeltä, jonka puutarha oli joen rannassa.",
+     "url": "https://en.wikipedia.org/wiki/Temple_Bar,_Dublin"
+    },
+    {
+     "vaite": "1980-luvulla alueelle suunniteltiin linja-autoasemaa, ja alueelle muutti pieniä yrityksiä; An Taiscen, asukkaiden ja kauppiaiden protestit kaatoivat hankkeen, ja alue kehitettiin kulttuurikortteliksi.",
+     "url": "https://en.wikipedia.org/wiki/Temple_Bar,_Dublin"
+    },
+    {
+     "vaite": "Meeting House Squarella on ruokatori joka lauantai.",
+     "url": "https://dublintown.ie/business/meeting-house-square"
+    }
+   ]
+  }
+ ]
+}
