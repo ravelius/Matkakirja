@@ -252,3 +252,8 @@ Brotli (haara linnanrakentaja-zstd, worktree olemassa), akustiikka #3979 (Steam 
   'soutu' + soutaja ele_soutu mixamo/faceit), seikkailun lähdetarkistus (_lahteet/olavinlinna-pohjat/SEIKKAILU-TARKISTUS.md:
   Kellotornin kerrokset, komero/pakohyppy, palatsi, kappeli). JONOSSA: kappeli lähteiden mukaiseksi (7,8 m, ristiholvi,
   ikkunaton, ampumakäytävä); Giza-v2 Sfinksi (odottaa LS1:n Google-korkeuksia), helmat pyramideille VALMIS (_valmiit/giza-v2/glb).
+- 7.10. 10.2x: SEIKKAILU-TARKISTUS.md valmis (Päätoimittajalle raportoitu). KORKEUSMUUNNOS (A, 3 tapaa): malli = abs − 83,0 m.
+  → KAPPELIN LATTIA mallissa ~9,6 (nyt tila 6,4: 3,2 m liian alhaalla), Kirkkotornin alin kerros (Tott-kammio +86,4) = 3,4.
+  Lähteiden reitti torniin: pikkupiha → itäsiipi (E 102 / portaat) → Linnantupa (+86,4) → Kirkkotornin pohjakerros (ovi) →
+  porras kappeliin (+92,6). TODO kappelikorjaus: kappeli.js sijoitus y +3,2, Ø 7,8 m, ristiholvi ~11,8 m alimmasta, ikkunaton,
+  ampumakäytävä +96,5 (malli 13,5); kavely reitti.json kirkkotorni_alin 3,4 ja kappeli 9,6, portaat itäsiiven kautta (A).
