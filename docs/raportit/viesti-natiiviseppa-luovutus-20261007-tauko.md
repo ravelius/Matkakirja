@@ -63,7 +63,12 @@ log -1 master`, `tail -3 proto-3d/lokit/kaannospalvelu/juna.log`, `tail -5 proto
    poisto vasta omistajan Run-rivillä päivän toimivuuden jälkeen.
    VALMISTELTU 23.0x: proto-3d/tyokalut/simusarja.sh (MK_SIMSET, simctl, mk_udid; `zsh simusarja.sh luo` luo laitteet T7-sarjaan
    ja kirjoittaa simusarja-udid.tsv) + simusarja-laitteet-sisainen-20261007.tsv (26 laitetta: nimi, tyyppi, runtime, vanha UDID). EI VIELÄ
-   AJETTU. Seuraavaksi: luo → työkalut (proto-kaanna.sh SIMS-UDID:t, aja.sh, todistusajo.sh, simkosketus, roolien skriptit) → todennus.
+   AJETTU.
+   23.16 TULOS: `zsh simusarja.sh luo` EPÄONNISTUI kaikilla 26:lla — CoreSimulatorService (koodaus) ei saa kirjoittaa T7:lle (CoreSimulator.log
+   NSCocoaErrorDomain 513 "You don’t have permission to save the file … in the folder Sarja"; POSIX-oikeudet ok → macOS-tietosuoja).
+   Tarvitaan OMISTAJAN asetus: Täysi levyn käyttöoikeus CoreSimulatorService.xpc:lle (Päätoimittajalle kerrottu), sitten CoreSimulatorService
+   uudelleen ja luo uudelleen. Sarja tyhjä, ei jäänteitä; simusarja.sh hylkää nyt virhetekstit (vain UDID kelpaa). Työkaluja EI vaihdettu
+   (Päätoimittaja: vaihto, todennus ja roolien ohje 8.10. aamulla ennen junaa 164). Seuraavaksi: luo → työkalut (proto-kaanna.sh SIMS-UDID:t, aja.sh, todistusajo.sh, simkosketus, roolien skriptit) → todennus.
    T7: /Volumes/T7 4TB, 1,5 Ti vapaana.
 8. KÄÄNNÖSNOPEUTUS (omistaja 21.5x): proto-kaanna.sh muutettu (jobs 12 joutilaana, välitiedostot säilyvät >36 Gi, vaiheajat; varmuuskopio
    .ennen-jobs12-20261007); proto natiiviseppa/kaannos-jobs 7d66739d (aja.sh) → JUNAAN 163; Matkakirja-haara natiiviseppa/tf-jobs 93c2e7c76
