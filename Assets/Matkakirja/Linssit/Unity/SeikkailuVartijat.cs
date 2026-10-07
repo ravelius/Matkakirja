@@ -76,6 +76,11 @@ namespace Matkakirja.Natiivi
         DioraamaHahmot3D hahmot;
         Action<string> kirjaa;
         Vector3 tarkistus; SeikkailuPelaaja tarkistusPelaaja;
+        string pelaajanOsa; float osaTarkistus;
+        /// <summary>Viimeisimmän tarkistuspisteen osa ja tapahtuma (V6 tallennus kuuntelee).</summary>
+        public static string TarkistusOsa;
+        public static event Action<string, Vector3> Tarkistuspiste;
+        public Vector3 Tarkistus => tarkistus;
         float armoAsti = -1f; const float ArmoS = 4f;
         double sykliMs = 0.955;
 
@@ -153,6 +158,23 @@ namespace Matkakirja.Natiivi
             var p = SeikkailuPelaaja.Aktiivinen;
             if (ote != null) return;   // kiinnijäänti käynnissä (Ote-kulku)
             if (p != null && p != tarkistusPelaaja) { tarkistus = p.transform.position; tarkistusPelaaja = p; }   // uusi pelaaja = uusi tarkistuspiste
+            // Tarkistuspisteet portaaleista (pelattavuusmalli 4.3): kynnyksen ylitys uuteen kävelyosaan, kun kukaan ei epäile.
+            if (p != null && Time.unscaledTime > osaTarkistus)
+            {
+                osaTarkistus = Time.unscaledTime + 0.25f;
+                var pp1 = p.transform.position;
+                string osaNyt = Askelaani.Osa(SeikkailuKavely.Data, pp1.x, pp1.y, -pp1.z);
+                if (osaNyt != null && osaNyt != pelaajanOsa)
+                {
+                    if (pelaajanOsa != null && !Vaara(pp1, 0f) && !p.Eleessa && !p.Otteessa)
+                    {
+                        tarkistus = pp1; TarkistusOsa = osaNyt;
+                        kirjaa?.Invoke($"seikkailu: tarkistuspiste {pelaajanOsa} → {osaNyt} ({pp1})");
+                        Tarkistuspiste?.Invoke(osaNyt, pp1);
+                    }
+                    pelaajanOsa = osaNyt;
+                }
+            }
             var aanet = new List<Aanilahde>(jono); jono.Clear();
             if (p != null)
             {
