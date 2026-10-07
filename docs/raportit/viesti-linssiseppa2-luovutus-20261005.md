@@ -17,7 +17,15 @@ Avoimet työt:
    Vauhtirajaus opas-vapaa-lataus 5683ffaf jäi pois junasta. Ei uutta työtä tähän.
 4. s2-meri 0f6e4e89 on KUITATTU junaan 154 (BMNG:n meri S2:n meriväriin).
 
-## TILA 7.10. 09.xx (uusin)
+## TILA 7.10. 09.3x (uusin)
+- KAUPUNKIPALLO juna 159: runko fc44bc51 sis. 44090c1a + 9718c4bd + 7f3dbefd7 (koko 84–120 pt, näkyy ≤ 2 600 km). Stillit 159koe 81409e09
+  (iPhone + iPad): lokit/linssiseppa2-kaupunkipallo-159-stillit/ → Päätoimittajan kuittaus odottaa. iPad: oikea napautus → kaupunkitila OK.
+  LÖYDÖS iPhone: pelaajan kaupungin kutsukortti peittää pallon → korjaus a04d12f7c (peilattu kallistus vasemmalle), ehdotettu junaan 159.
+- Giza sallituissa (sallitut.py LISAA, omistajan poikkeus; Pöllö näyttää vain kokeiluotsakkeella). Sallitut 38 (37 + Giza).
+- LS1 kysyi Cupolan liikkeen mallia korinäkymään → IssKyytiNakyma.Ajelehdi + ErikoisnostoMitat.Heilahda.
+- Appikopiot poistettu (7ec948289); omia appeja lokit/:ssa ei ole.
+
+## TILA 7.10. 09.xx
 - KAUPUNKIOPAS KARTTAELEMENTTINÄ (Päätoimittaja/omistaja 08.3x): proto linssiseppa2/kaupunkipallo 44090c1a4 (LS1:n kaupunkitila-159
   1be5518db päällä), worktree wt/proto-linssiseppa2-kaupunkipallo. UI/KaupunkiPallot.cs (Erikoisnostot-malli), UI/KaupunkiPalloKuva.cs
   (Linnanrakentajan ilmapallo-v1 keski Resources/KaupunkiPallo, RT kerran), Kartta/KaupunkiPalloMitat.cs (+testit), ui kaupunkipallot.
