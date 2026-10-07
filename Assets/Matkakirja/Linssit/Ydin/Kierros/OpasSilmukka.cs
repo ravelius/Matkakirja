@@ -374,6 +374,17 @@ namespace Matkakirja.Linssit.Kierros
             puheAloitettu = true; siirtyma = true;
         }
 
+        /// <summary>
+        /// Kaupungin vaihto suoraan kohteeseen (worker #4107, Pelikoodari 7.10.): kuten VaihdaPaikka, mutta yleiskuvan sijaan siirto
+        /// vie kohteeseen ja workerin pysähdys pyydetään siitä (Liiku). Kohde sallitun alueen ulkopuolella torjutaan kuten Liiku.
+        /// </summary>
+        public void VaihdaPaikkaKohteeseen(string nimi, double lat, double lon)
+        {
+            if (Torju(nimi, lat, lon)) return;
+            VaihdaPaikka();
+            Liiku(nimi, lat, lon);
+        }
+
         // ---- SIIRTO ILMAN LENTOA (omistaja 6.10. 12.0x) ----
         /// <summary>Kaupungin rajan arvio: tätä pidemmälle ei lennetä, vaan siirrytään latausruudun kautta.</summary>
         public const double SiirtoRajaM = 30000, SiirtoValmis = 0.95, SiirtoMinS = 1.0, SiirtoMaxS = 25;

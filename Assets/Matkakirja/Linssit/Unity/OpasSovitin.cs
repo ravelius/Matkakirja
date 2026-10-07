@@ -111,23 +111,39 @@ namespace Matkakirja.Natiivi
         public static bool VaihdaKaupunki(string nimi, double lat, double lon) => VaihdaKaupunki(nimi, lat, lon, null);
 
         /// <summary>Kuten yllä, maan ISO-koodilla (samannimiset kaupungit, esim. Jerusalem IL/PS); nimi sanotaan Williamin äänellä.</summary>
-        public static bool VaihdaKaupunki(string nimi, double lat, double lon, string iso)
+        public static bool VaihdaKaupunki(string nimi, double lat, double lon, string iso) => VaihdaKaupunki(nimi, lat, lon, iso, null, double.NaN, double.NaN);
+
+        /// <summary>Kuten yllä, ja kohde samassa kaupungissa (worker #4107): siirto vie suoraan kohteeseen yleiskuvan sijaan.
+        /// Kohde ilman sijaintia tai toisessa kaupungissa ohitetaan (yleiskuva).</summary>
+        public static bool VaihdaKaupunki(string nimi, double lat, double lon, string iso, string kohde, double kLat, double kLon)
         {
             if (!Auki || string.IsNullOrWhiteSpace(nimi)) return false;
             // Sallitut kaupungit (omistaja 7.10. 00.4x): vain listan kaupungit; keskipiste listalta (hyvän 3D:n alueen keskus).
+            bool kohteella = !string.IsNullOrWhiteSpace(kohde) && !double.IsNaN(kLat) && !double.IsNaN(kLon);
             if (sallitut != null && sallitut.Count > 0)
             {
                 var sk = OpasSallitut.Nimella(sallitut, nimi) ?? OpasSallitut.Sisalla(sallitut, lat, lon);
                 if (sk == null) { Viimeisin.o.Kirjaa($"opas: kaupunki {nimi} ei ole sallittujen listalla, ei vaihdeta"); Viimeisin.Torjunta(); return false; }
                 lat = sk.Lat; lon = sk.Lon;
+                if (kohteella && OpasSallitut.Sisalla(sallitut, kLat, kLon) != sk) kohteella = false;
             }
-            else (lat, lon) = Keskusta(lat, lon);   // Natural Earth -piste → kaupungin keskusta (Wikidata P625)
+            else
+            {
+                (lat, lon) = Keskusta(lat, lon);   // Natural Earth -piste → kaupungin keskusta (Wikidata P625)
+                if (kohteella && KierrosLento.EtaisyysM(lat, lon, kLat, kLon) > OpasSilmukka.SiirtoRajaM) kohteella = false;
+            }
+            if (!kohteella && !string.IsNullOrWhiteSpace(kohde)) Viimeisin.o.Kirjaa($"opas: kohde {kohde} ei ole kaupungissa {nimi} tai sijainti puuttuu → yleiskuva");
             Aloituskaupunki = nimi.Trim();
             Viimeisin.pakotettuSijainti = (lat, lon);
             AloitusKeskusta = (lat, lon);
             Viimeisin.o.Kirjaa($"opas: kaupunki vaihtuu → {Aloituskaupunki} ({lat:F3}, {lon:F3})");
             if (!Viimeisin.AvaaKaupunki(lat, lon, Aloituskaupunki)) return false;
-            Viimeisin.silmukka.VaihdaPaikka(lat, lon, nimi.Trim());   // kamera lentää heti kaupungin yleiskuvaan (Natiivi-UI 6.10. 00.2x)
+            if (kohteella)
+            {
+                Viimeisin.o.Kirjaa($"opas: kaupungin vaihto suoraan kohteeseen {kohde} ({kLat:F4}, {kLon:F4})");
+                Viimeisin.silmukka.VaihdaPaikkaKohteeseen(kohde.Trim(), kLat, kLon);
+            }
+            else Viimeisin.silmukka.VaihdaPaikka(lat, lon, nimi.Trim());   // kamera lentää heti kaupungin yleiskuvaan (Natiivi-UI 6.10. 00.2x)
             var v = Viimeisin;
             if (!v.SanoNimi(nimiaanet?.Kaupungille(iso, nimi))) v.Silta(OpasSiltalauseet.Kaupunki, true);
             return true;
@@ -636,7 +652,7 @@ namespace Matkakirja.Natiivi
                     break;
                 }
                 case OpasToiminto.Kaupunki:
-                    if (!double.IsNaN(v.ToimintoLat)) { SoitaKuittaus(v); VaihdaKaupunki(v.ToimintoNimi, v.ToimintoLat, v.ToimintoLon); }
+                    if (!double.IsNaN(v.ToimintoLat)) { SoitaKuittaus(v); VaihdaKaupunki(v.ToimintoNimi, v.ToimintoLat, v.ToimintoLon, null, v.KohdeNimi, v.KohdeLat, v.KohdeLon); }
                     break;
                 case OpasToiminto.Kierros: SoitaKuittaus(v); Kaupunkikierros(); break;
                 case OpasToiminto.Tauko: Tauko(true); break;

@@ -19,6 +19,10 @@ namespace Matkakirja.Linssit.Kierros
         public string ToimintoNimi, ToimintoId;
         public double ToimintoLat = double.NaN, ToimintoLon = double.NaN;
         public OpasKohde ToimintoKohde;
+        /// <summary>Kaupunki-toiminnon kohde toisessa kaupungissa (worker #4107: "vie minut Pyhän Markuksen kirkkoon" Pariisista →
+        /// Venetsia + basilika): nimi ja sijainti; NaN = ei kohdetta (laskeudutaan kaupungin yleiskuvaan).</summary>
+        public string KohdeNimi;
+        public double KohdeLat = double.NaN, KohdeLon = double.NaN;
 
         public static OpasKysyVastaus Lue(IDictionary<string, object> j)
         {
@@ -46,6 +50,12 @@ namespace Matkakirja.Linssit.Kierros
             if (td != null)
             {
                 var sisa = td.TryGetValue("kohde", out var kx) && kx is IDictionary<string, object> kd ? kd : td;
+                // Kaupunki + kohde (#4107): kaupunki on toiminnon omissa kentissä, kohde alikentässä.
+                if (v.Toiminto == OpasToiminto.Kaupunki && sisa != td)
+                {
+                    v.KohdeNimi = S(sisa, "nimi"); v.KohdeLat = D(sisa, "lat", double.NaN); v.KohdeLon = D(sisa, "lon", double.NaN);
+                    sisa = td;
+                }
                 v.ToimintoNimi = S(sisa, "nimi"); v.ToimintoId = S(sisa, "id");
                 v.ToimintoLat = D(sisa, "lat", double.NaN); v.ToimintoLon = D(sisa, "lon", double.NaN);
                 if (sisa != td) v.ToimintoKohde = OpasKohde.Lue(sisa);
