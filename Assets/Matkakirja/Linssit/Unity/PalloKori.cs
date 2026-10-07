@@ -81,6 +81,9 @@ namespace Matkakirja.Natiivi
         bool kaytossa;
 
         public bool Nakyy => kaytossa && juuri != null && juuri.gameObject.activeSelf;
+        /// <summary>Testi (Editori KoriKoosteTesti): korin oma kamera ja koostekamera.</summary>
+        public Camera KoriKamera => overlay;
+        public Camera KoosteKamera => kooste;
         public KoriLiike Liike => liike;
 
         /// <summary>Joka kehys oppaasta: kaytossa = kaupunkitila ja näkymä auki.</summary>
@@ -469,7 +472,10 @@ namespace Matkakirja.Natiivi
         void VarmistaKohde()
         {
             if (pehmeaEiToimi || overlay == null) return;
-            int w = Mathf.Max(16, Mathf.RoundToInt(Screen.width * PehmeaSkaala)), h = Mathf.Max(16, Mathf.RoundToInt(Screen.height * PehmeaSkaala));
+            // Kohteen koko: kaupunkikameran oma tekstuuri (testi) tai ruutu.
+            int sw = perus != null && perus.targetTexture != null ? perus.targetTexture.width : Screen.width;
+            int sh = perus != null && perus.targetTexture != null ? perus.targetTexture.height : Screen.height;
+            int w = Mathf.Max(16, Mathf.RoundToInt(sw * PehmeaSkaala)), h = Mathf.Max(16, Mathf.RoundToInt(sh * PehmeaSkaala));
             if (rt != null && rt.width == w && rt.height == h) return;
             if (rt != null) { overlay.targetTexture = null; rt.Release(); Object.Destroy(rt); }
             rt = new RenderTexture(w, h, 24, RenderTextureFormat.ARGB32) { name = "Pallon kori", filterMode = FilterMode.Bilinear, wrapMode = TextureWrapMode.Clamp, antiAliasing = 1 };
