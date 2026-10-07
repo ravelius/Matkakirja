@@ -14,10 +14,9 @@ Tarkista ensin taustalla jatkuneiden ajojen tulokset (alla) ja kerro ne Julkaisi
 - **BUILD 159 = master b00c06f7**; TF 159 ja Mac TF 159 ladattu. Mac TF -työnkulku: proto3d-mac-testflight.yml
   (`mac-kaanna.sh <SHA> 1.1 <build>` MATKAKIRJA_APPSTORE=1 + MATKAKIRJA_BUNDLE_ID=fi.matkakirja.peli, kopio
   lokit/natiiviseppa-mac-tf-<build>-<sha>, lataus vasta Julkaisijan luvalla).
-- **JUNA 160:** runko natiiviseppa/juna-160-koe **2309f55d** (b00c06f7 + 264ef4e8 + 2db2d9d9 + NUI 7f262261 + NUI d277c738 +
-  LS2 59d44e87), VAHVISTETTU. Koekäännös a5b381a7, savu OK. Odottaa: Laitetestaajan rutiini → VIE (Päätoimittaja) →
-  JUNAN AVAUS NYT (Julkaisija) → `git update-ref refs/heads/juna/b13 2309f55d <vanha>` + juna.log, BUILD 160 master-merge,
-  muutosloki-PR Päätoimittajan tekstillä, TF 160 + Mac TF 160.
+- **BUILD 160 = proto master d8b0e0fc** (12.5x: juna/b13 603cfd8a → 2309f55d, juna.log kirjattu). Julkaisija tekee
+  muutosloki-PR:n ja TF 160:n; Mac TF 160 (`mac-kaanna.sh d8b0e0fc 1.1 160`, APPSTORE=1) vasta Julkaisijan luvalla.
+  Mac-kaanna 074c95a3 (dev) vasta NUI pariisi-esityksen jälkeen Julkaisijan uudella KÄÄNNÖS NYT -viestillä.
 - **JUNA 161 -korjaukset:** haara natiiviseppa/juna161-korjaukset **074c95a3** (wt/proto-natiiviseppa-kirjoitus) =
   kirjoituskoneääni f222e5eb (Aloitusnakyma soittaa Tehoste("pen") sanoittain, kuten webin KIRJOITUSRYTMI; iOS + Mac) +
   Mac vSync 107fabeb (Ruudunpaivitys: Macilla vSyncCount = näyttö/fps, oli 0 → repeämä) + lokirivi "MATKAKIRJA ruutu: Mac vSync".
