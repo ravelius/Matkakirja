@@ -13,6 +13,13 @@
    "teksti": "Stephansdom erottuu ylhäältä heti jyrkästä ja kirjavasta katostaan, johon on ladottu noin kaksisataakolmekymmentätuhatta lasitettua tiiltä. Eteläiselle lappeelle tiilistä on koottu kaksipäinen kotka, ja pohjoispuolella näkyvät Wienin ja Itävallan vaakunat. Vuonna 1945 läheisistä liikkeistä alkanut tulipalo levisi kirkkoon ja tuhosi katon puisen kehikon, joten uusi katto rakennettiin teräksen varaan. Samassa palossa särkyi kirkon suuri kello Pummerin, joka oli valettu osittain tykeistä, jotka oli saatu osmaneilta sotasaaliiksi 1600-luvun lopulla. Sirpaleet sulatettiin mukaan uuden Pummerinin metalliin.",
    "lyhyt": "Stephansdom on Wienin tuomiokirkko, ja sen etelätorni valmistui jo vuonna 1433. Satakolmekymmentäkuusi metriä korkea torni oli vuosisatojen ajan Euroopan korkeimpia rakennuksia, ja yhä se kohoaa korkealle vanhan kaupungin kattojen yläpuolelle.",
    "syventava": "Kuinka korkea on etelätorni?",
+   "kysymykset": [
+    "Miksi kirkon pohjoistorni jäi keskeneräiseksi?",
+    "Mitä kirkon alla olevissa katakombeissa on?",
+    "Kuka kurkistaa ikkunasta saarnatuolin juurella?",
+    "Mitä pääoven vieressä olevat rautatangot mittasivat?",
+    "Kuinka monta porrasta etelätorniin pitää kiivetä?"
+   ],
    "isoisa": false,
    "lahteet": [
     {
@@ -50,6 +57,13 @@
    "teksti": "Schönbrunnin linna oli Habsburgien kesäasunto, ja ylhäältä sen puisto avautuu pitkänä akselina linnan takaa kohti mäen laella seisovaa Gloriettea. Puistossa on maailman vanhin yhä toimiva eläintarha, jonka Maria Teresian puoliso Frans Stefan esitteli vieraille kesällä 1752. Eläintarhan keskelle valmistui vuonna 1759 kahdeksankulmainen paviljonki keisariperheen aamiaishuoneeksi. Sen ympärille sommiteltiin kakunpalojen tapaan kaksitoista yhtä suurta tarhaa, joten pöydän äärestä näki eläimiä joka suuntaan. Paviljongissa on toiminut ravintola vuodesta 1949, ja keisarillisella aamiaispaikalla voi yhä syödä.",
    "lyhyt": "Schönbrunnin linnassa on yli tuhat neljäsataa huonetta, ja sitä kutsutaan joskus Itävallan Versailles'ksi. Arkkitehti Johann Bernhard Fischer von Erlach suunnitteli paikalle vuonna 1688 linnan, joka olisi ylittänyt Versailles'n loistossa, mutta suunnitelma oli liian kallis toteuttaa.",
    "syventava": "Mikä on Gloriette?",
+   "kysymykset": [
+    "Mistä lähteestä linna on saanut nimensä?",
+    "Miten kuusivuotias Mozart päätyi soittamaan linnaan?",
+    "Miksi linnan julkisivu on keltainen?",
+    "Missä huoneessa viimeinen keisari luopui vallasta?",
+    "Mitä puiston suuressa palmuhuoneessa kasvaa?"
+   ],
    "isoisa": false,
    "lahteet": [
     {
@@ -83,6 +97,13 @@
    "teksti": "Hofburg ei ole yksi palatsi vaan kokonainen kortteli siipiä ja sisäpihoja. Se kasvoi kuudessasadassa vuodessa, kun hallitsija toisensa jälkeen rakensi oman lisäyksensä. Vuodesta 1946 lähtien yhdessä sen siivessä on työskennellyt Itävallan liittopresidentti. Ylhäältä erottuu Heldenplatz, jonka laidalla kaartuu Neue Burgin julkisivu: sille piti rakentaa peilikuva aukion toiselle puolelle, mutta kustannukset kasvoivat ja suunnitelma jäi kesken. Palatsin omassa maneesissa voi yhä katsoa Espanjalaisen ratsastuskoulun orien aamuharjoituksia.",
    "lyhyt": "Hofburg oli Habsburgien talviasunto, ja kesäksi hovi muutti Schönbrunnin linnaan. Palatsin vanhimmat osat ovat 1200-luvulta, ja nykyään siellä toimii useita museoita sekä Itävallan kansalliskirjasto, jonka barokkisessa loistosalissa on sotapäällikkö Eugen Savoijilaisen kirjakokoelma.",
    "syventava": "Mikä on Espanjalainen ratsastuskoulu?",
+   "kysymykset": [
+    "Mitä aarteita keisarillisessa aarrekammiossa on?",
+    "Milloin Wienin poikakuoroa voi kuulla palatsin kappelissa?",
+    "Miksi Neue Burgin parveke herättää yhä tunteita?",
+    "Millaista keisarinna Elisabetin arki oli palatsissa?",
+    "Keitä Heldenplatzin ratsastajapatsaat esittävät?"
+   ],
    "isoisa": false,
    "lahteet": [
     {
@@ -120,6 +141,13 @@
    "teksti": "Belvedere on oikeastaan kaksi palatsia, ja ylhäältä niiden välissä näkyy pengerretty barokkipuutarha, joka laskeutuu rinnettä alas. Palatsit rakennutti 1700-luvun alussa kesäasunnokseen sotapäällikkö Eugen Savoijilainen, ja Ylä-Belvederessä on nykyään taidemuseo, jonka tunnetuin teos on Gustav Klimtin Suudelma. Saman palatsin marmorisalissa allekirjoitettiin vuonna 1955 valtiosopimus, joka palautti Itävallan itsenäisyyden. Ulkoministeri Leopold Figl sanoi kuuluisat sanansa ”Itävalta on vapaa” juuri salissa, ei parvekkeella, jolta hän näytti sopimusta puutarhaan kerääntyneelle väkijoukolle.",
    "lyhyt": "Belvedere tarkoittaa italiaksi kaunista näköalaa. Ylempi palatsi on noin kaksikymmentäkolme metriä alempaa palatsia korkeammalla, ja puutarha viettää sen edestä kohti vanhaa kaupunkia. Molemmat palatsit suunnitteli barokkiarkkitehti Johann Lucas von Hildebrandt.",
    "syventava": "Kuka oli Eugen Savoijilainen?",
+   "kysymykset": [
+    "Miksi Klimtin Suudelmassa on niin paljon kultaa?",
+    "Kuka asui Ylä-Belvederessä ennen Sarajevon laukauksia?",
+    "Millaisia eläimiä Eugen piti palatsinsa tarhassa?",
+    "Miksi puutarhaa vartioivat kiviset sfinksit?",
+    "Mitä Ala-Belvederessä on nykyään nähtävillä?"
+   ],
    "isoisa": false,
    "lahteet": [
     {
@@ -154,6 +182,13 @@
    "teksti": "Wienin Riesenrad seisoo Praterin huvipuiston sisäänkäynnin luona, ja ylhäältä näkee, ettei sen kehä ole ympyrä vaan kolmikymmenkulmio. Alun perin jokaisessa kulmassa riippui vaunu. Ratas paloi vuonna 1945, ja kun se avattiin uudelleen vuonna 1947, takaisin ripustettiin vain viisitoista vaunua, joten ne roikkuvat yhä joka toisessa kulmassa. Ratas pystytettiin vuonna 1897 keisari Frans Joosefin viisikymmenvuotisen hallituskauden kunniaksi, eikä sitä vielä ollut, kun Praterissa pidettiin maailmannäyttely vuonna 1873. Siellä isoisäsi näki koneen, joka painoi sanomalehteä.",
    "lyhyt": "Wienin Riesenrad on lähes kuusikymmentäviisi metriä korkea, ja sen kehä kulkee alle kolmea kilometriä tunnissa, hitaammin kuin ihminen kävelee. Ratas tuli maailmankuuluksi vuonna 1949 elokuvasta Kolmas mies, jonka päähenkilöt kohtaavat rattaan vaunussa.",
    "syventava": "Mitä maailmannäyttelyssä nähtiin?",
+   "kysymykset": [
+    "Kuka rattaan rakensi ja mistä hän oli kotoisin?",
+    "Miksi ratas oli vähällä joutua purettavaksi?",
+    "Voiko rattaan vaunussa syödä illallisen?",
+    "Miksi Praterista tuli koko kansan huvipuisto?",
+    "Mitä muuta Praterissa on rattaan lisäksi?"
+   ],
    "isoisa": true,
    "lahteet": [
     {
@@ -199,6 +234,13 @@
    "teksti": "Wienin valtionooppera oli ensimmäinen niistä loistorakennuksista, jotka nousivat Ringin varrelle, ja se avattiin vuonna 1869. Kesken rakennustöiden kadun pintaa nostettiin metrillä, jolloin talo näytti painuneen maahan, ja pilkkaajat vertasivat sitä uponneeseen aarrearkkuun. Kumpikaan arkkitehti, Eduard van der Nüll tai August Sicard von Sicardsburg, ei ehtinyt nähdä avajaisia. Pommitus sytytti oopperan palamaan vuonna 1945, ja vasta kymmenen vuotta myöhemmin talo avattiin uudelleen Beethovenin Fideliolla. Kerran vuodessa permannon tuolirivit poistetaan, ja tilalle rakennetaan näyttämön tasoinen tanssilattia oopperatanssiaisia varten.",
    "lyhyt": "Wienin valtionooppera avattiin keväällä 1869 Mozartin Don Giovannilla. Talon editse kaartaa Ring, puretun kaupunginmuurin paikalle rakennettu kehäkatu, jota raitiovaunut kulkevat yhä, ja sen varrelle nousivat myöhemmin kaupungin muut suuret julkiset rakennukset.",
    "syventava": "Mitä oopperatanssiaisissa tapahtuu?",
+   "kysymykset": [
+    "Miten Gustav Mahler muutti oopperan tapoja?",
+    "Miksi oopperassa esitetään lähes joka ilta eri teos?",
+    "Kuinka halvalla oopperaan pääsee seisomapaikalle?",
+    "Mitkä osat talosta säästyivät pommitukselta?",
+    "Miksi esityksiä näytetään ulkona isolta näytöltä?"
+   ],
    "isoisa": false,
    "lahteet": [
     {
@@ -237,6 +279,13 @@
    "teksti": "Wienin raatihuoneen keskitornin huipulla seisoo Rathausmann, kuparinen ritari lippu kädessään. Keisari Frans Joosef oli toivonut, ettei torni nousisi läheisen Votivkirchen yli, joten arkkitehti Friedrich von Schmidt teki tornista metrin matalamman. Sitten hän nosti huipulle ritarin ja ylitti rajan sittenkin. Ritari tehtiin kuparilevystä, johon oli sulatettu venäläisiä kolikoita, ja sen kopio seisoo raatihuoneen puistossa, jossa hahmon näkee läheltä. Rakennuksen edessä levittäytyy Rathausplatz, jolla on marras- ja joulukuussa kaupungin suuret joulumarkkinat.",
    "lyhyt": "Wienin raatihuone rakennettiin 1870- ja 1880-luvuilla uusgoottilaiseen tyyliin, ja siinä työskentelee nykyään kaupungin pormestari. Talon edustan aukiolle jäädytetään tammi- ja helmikuuksi suuri luistelurata, ja kesäisin samalla aukiolla näytetään elokuvia ulkona.",
    "syventava": "Kuka teki tornin ritarin?",
+   "kysymykset": [
+    "Kuinka iso tornin huipun ritari oikeastaan on?",
+    "Miksi raatihuone rakennettiin goottilaiseksi?",
+    "Miksi talossa kokoontuu myös osavaltion parlamentti?",
+    "Pääseekö raatihuoneeseen opastetulle kierrokselle?",
+    "Mitä raatihuoneen paikalla oli ennen sen rakentamista?"
+   ],
    "isoisa": false,
    "lahteet": [
     {
@@ -270,6 +319,13 @@
    "teksti": "Itävallan parlamenttitalo muistuttaa pylväineen kreikkalaista temppeliä, ja niin oli tarkoituskin, sillä antiikin Kreikka yhdistettiin demokratian ihanteeseen. Talon suunnitteli 1870-luvulla Ringin varrelle tanskalaissyntyinen Theophil Hansen, joka oli työskennellyt aiemmin Ateenassa. Pääsisäänkäynnin edessä seisoo suihkulähteen huipulla viisauden jumalatar Pallas Athene kullattu kypärä päässään ja voitonjumalatar Nike oikeassa kädessään. Vuonna 2023 päättyneessä peruskorjauksessa kansallisneuvoston istuntosaliin tehtiin suuri lasikatto, jonka läpi saliin tulee päivänvaloa. Korjauksen ajan parlamentti kokoontui Hofburgin suuressa Redoutensaalissa.",
    "lyhyt": "Itävallan parlamenttitalossa kokoontuvat kansallisneuvosto ja liittoneuvosto. Talo valmistui vuonna 1883 keisarikunnan valtakunnanneuvostolle, ja tasavallan parlamentti peri sen vuoden 1918 jälkeen. Istuntoja voi seurata lasitetulta yleisölehteriltä, ja opastetuilla kierroksilla näkee talon muitakin saleja.",
    "syventava": "Miksi Athene seisoo parlamentin edessä?",
+   "kysymykset": [
+    "Mitä parlamentin katon pronssiset valjakot esittävät?",
+    "Mihin keisarikunnan vanhaa istuntosalia käytetään nyt?",
+    "Milloin parlamenttiin valittiin ensimmäiset naiset?",
+    "Mitä parlamentin vierailijakeskuksessa voi tehdä?",
+    "Miten talo selvisi sodan pommituksista?"
+   ],
    "isoisa": false,
    "lahteet": [
     {
@@ -308,6 +364,13 @@
    "teksti": "Karlskirchen julkisivua reunustaa kaksi valtavaa pylvästä, joiden esikuvana on Rooman Trajanuksen pylväs. Niiden kierteiset reliefit kertovat pyhän Carlo Borromeon elämästä. Keisari Kaarle kuudes, Maria Teresian isä, lupasi vuonna 1713 Wieniä koetelleen ruton vuoksi rakentaa kirkon tälle pyhimykselle, jota kunnioitettiin ruttoon sairastuneiden parantajana. Ylhäältä kirkon edessä näkyy soikea allas, jossa on brittiläisen kuvanveistäjän Henry Mooren pronssiveistos. Veistos herätti aluksi vastustusta, mutta Moore itse kutsui sitä barokkiveistokseksi barokkikirkolle.",
    "lyhyt": null,
    "syventava": "Kuka oli Carlo Borromeo?",
+   "kysymykset": [
+    "Miksi arkkitehdin poika viimeisteli kirkon?",
+    "Mitä kupolin freskoissa on kuvattu?",
+    "Miksi aukion Otto Wagnerin paviljongit ovat kuuluisia?",
+    "Millaisia konsertteja kirkossa järjestetään?",
+    "Miksi kirkossa yhdistyy niin monta eri tyyliä?"
+   ],
    "isoisa": false,
    "lahteet": [
     {
@@ -345,6 +408,13 @@
    "teksti": "Wienin taidehistoriallinen museo ja vastapäinen luonnontieteellinen museo ovat lähes samanlaiset palatsit, jotka katsovat toisiaan Maria Teresian aukion yli. Molemmat avattiin 1800-luvun lopulla, ja aukion keskellä on keisarinnan suuri muistomerkki. Kokoelmat ovat Habsburgien vuosisatojen aikana keräämiä, ja täällä on maailman suurin kokoelma Pieter Bruegel vanhemman maalauksia, muun muassa Baabelin torni ja Metsästäjät lumessa. Pääportaikon pylväiden ja kaarten väliin maalasi kuvia myös nuori Gustav Klimt yhdessä veljensä Ernstin kanssa.",
    "lyhyt": null,
    "syventava": "Mitä Baabelin tornissa kuvataan?",
+   "kysymykset": [
+    "Millainen kahvila museon kupolisalissa on?",
+    "Kuka varasti museosta Cellinin kultaisen suola-astian?",
+    "Kuka Habsburgeista keräsi taidetta innokkaimmin?",
+    "Mitä museon egyptiläisellä osastolla on?",
+    "Mikä kuuluisa pikkupatsas on vastapäisessä museossa?"
+   ],
    "isoisa": false,
    "lahteet": [
     {
@@ -374,6 +444,13 @@
    "teksti": "Burgtheater on Itävallan kansallisteatteri, ja ylhäältä erottuu Ringiä kohti kaartuva keskiosa, jonka molemmilla puolilla on portaikkosiivet. Nykyinen talo avattiin vuonna 1888, mutta salin akustiikkaa moitittiin, ja katsomo rakennettiin uudelleen vuonna 1897. Portaikkojen kattoihin Gustav Klimt maalasi muun muassa Lontoon Globe-teatterin, jonka näyttämöllä esitetään Romeoa ja Juliaa. Teatterin edeltäjä toimi Hofburgin kupeessa, ja siellä kantaesitettiin vuonna 1786 Mozartin Figaron häät. Yleisö vaati niin monta numeroa uudelleen, että keisari Joosef toinen kielsi toistamasta useamman laulajan numeroita.",
    "lyhyt": null,
    "syventava": "Miksi keisari kielsi Figaron näytelmän?",
+   "kysymykset": [
+    "Miksi näyttelijät eivät saaneet kumartaa yleisölle?",
+    "Mitä teatterille tapahtui sodan lopussa?",
+    "Kuka johtaa teatteria nykyään?",
+    "Kuinka monta katsojaa teatterin saliin mahtuu?",
+    "Miksi uuden salin akustiikka epäonnistui?"
+   ],
    "isoisa": false,
    "lahteet": [
     {
@@ -404,6 +481,13 @@
    "teksti": "Votivkirchen pitsimäiset kaksoistornit kohoavat Ringin laidalla yliopiston vieressä, ja kirkon edessä levittäytyy Sigmund Freudin mukaan nimetty puisto. Kirkko on kiitoslahja: vuonna 1853 unkarilainen kansallismielinen János Libényi hyökkäsi nuoren keisari Frans Joosefin kimppuun, mutta isku kimposi keisarin jäykän kauluksen paksusta kultakirjailusta. Keisarin veli Maksimilian, myöhemmin Meksikon keisari, keräsi kirkkoa varten lahjoituksia koko valtakunnasta, ja suunnittelijaksi valittiin vasta kaksikymmentäkuusivuotias Heinrich von Ferstel. Pehmeä valkoinen hiekkakivi rapautuu ilmansaasteiden vuoksi, joten kirkkoa korjataan lähes jatkuvasti.",
    "lyhyt": null,
    "syventava": "Mitä Maksimilianille tapahtui Meksikossa?",
+   "kysymykset": [
+    "Miksi kirkko toimi aikoinaan varuskunnan kirkkona?",
+    "Mitä keisaria puukottaneelle miehelle tapahtui?",
+    "Kenen sotapäällikön hauta kirkossa on?",
+    "Miksi kirkon edustan puisto on nimetty Freudille?",
+    "Kuinka korkeat kirkon pitsimäiset tornit ovat?"
+   ],
    "isoisa": false,
    "lahteet": [
     {
@@ -437,6 +521,13 @@
    "teksti": "Hundertwasserhausin katoilla ja terasseilla kasvaa nurmea ja noin kaksisataaviisikymmentä puuta ja pensasta, ja joidenkin puiden oksat työntyvät ulos suoraan asuntojen ikkunoista. Taiteilija Friedensreich Hundertwasser ideoi talon, joka valmistui 1980-luvulla kaupungin vuokrataloksi. Julkisivu on kirjava ja epäsäännöllinen, ja sisällä lattiatkin aaltoilevat. Hundertwasser ei ottanut työstään palkkiota, koska piti palkkiona jo sitä, ettei paikalle noussut mitään rumaa. Kun tulet paikalle, muista, että talossa asutaan, eikä sisätiloihin pääse vapaasti.",
    "lyhyt": null,
    "syventava": "Kuka oli Friedensreich Hundertwasser?",
+   "kysymykset": [
+    "Miksi talon tekijyydestä riideltiin oikeudessa?",
+    "Miksi taiteilija vihasi suoria viivoja?",
+    "Kuinka monta asuntoa talossa on?",
+    "Mitä talon vastapäätä on nähtävillä?",
+    "Miksi sama taiteilija koristi jätteenpolttolaitoksen?"
+   ],
    "isoisa": false,
    "lahteet": [
     {
