@@ -603,6 +603,8 @@ namespace Matkakirja.Natiivi
             PaivitaKuukaudenPintaBmng(kyydissa);
             PaivitaS2(kyydissa);
             KarttaKerrokset.Instanssi?.LinssinVarakartta(kyydissa && KyydinVarakartta);
+            // BMNG:n meri S2:n meriväriin koko kyydin ajan, kun BMNG on paikassa 1 (Päätoimittaja 6.10.: Labradorinmeren läntit).
+            KarttaKerrokset.Instanssi?.KyydinMeri(kyydissa && kuukausiLisatty > 0 && !KyydinMeriPois);
             // Reliefi palaa vasta, kun BMNG ja S2 ovat poissa (kyydin loppu tai BMNG puuttuu ämpäristä): paikka 1 on silloin vapaa.
             if (reliefPoissa && kuukausiLisatty < 0 && !s2Lisatty)
             {
@@ -613,6 +615,9 @@ namespace Matkakirja.Natiivi
                 Debug.Log("MATKAKIRJA linssit: kyydin pinta: reliefi palautettu");
             }
         }
+
+        /// <summary>A/B: `astro kyyti meri 0|1` (BMNG:n meri S2:n väriin; oletus päällä).</summary>
+        public static bool KyydinMeriPois;
 
         void PaivitaKuukaudenPintaBmng(bool kyydissa)
         {
@@ -1052,6 +1057,7 @@ namespace Matkakirja.Natiivi
             Matkakirja.Linssit.Kyytipino.AsetaS2Savy();
             AsetaS2Reuna(false);
             KarttaKerrokset.Instanssi?.LinssinVarakartta(false);
+            KarttaKerrokset.Instanssi?.KyydinMeri(false);
         }
 
         void OnDestroy()
@@ -1061,6 +1067,7 @@ namespace Matkakirja.Natiivi
             Matkakirja.Linssit.Kyytipino.S2 = false;
             Matkakirja.Linssit.Kyytipino.AsetaS2Savy();
             AsetaS2Reuna(false);
+            KarttaKerrokset.Instanssi?.KyydinMeri(false);
             if (kuukausiLisatty >= 0) KarttaKerrokset.Instanssi?.PoistaRasteri(KuukausiKerros);
             if (s2Lisatty) { KarttaKerrokset.Instanssi?.PoistaRasteri(S2Kerros); KarttaKerrokset.Instanssi?.PallonValimuisti(null); }
             if (kierto != null) kierto.Napautettu -= Napautus;

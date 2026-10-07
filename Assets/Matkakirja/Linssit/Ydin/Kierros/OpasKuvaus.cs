@@ -11,6 +11,7 @@
 //     kallistus 30° pystystä ja etäisyys ≥ 1,5 × kehys (ei matalaa liukua karkeiden laattojen yllä, TF 144 -palaute), katse
 //     lentosuuntaan ja lopuksi kohteeseen. Yli 20 km: OpasSilmukka.Lennossa (isoympyrä).
 using System;
+using System.Collections.Generic;
 
 namespace Matkakirja.Linssit.Kierros
 {
@@ -35,12 +36,9 @@ namespace Matkakirja.Linssit.Kierros
         // rakennus ja torni yksityiskohtaan lähemmäs (×LahemmasOsuus, hieman viistommin), ja sama orbit jatkuu sieltä.
         public const double KiertoAsteS = 0.9, KiertoAlkuS = 3, DollyOsuus = 0.07, DollyAikaS = 25;
         public const double VaiheS = 13, SiirtoS = 4, SiirtoKulma = 150, LahemmasOsuus = 0.7, LahemmasKallistus = 4, SiirtoUlosOsuus = 0.15;
-        // Lento
-        // TF 144 -palaute (omistaja 6.10.: "mätkähtää lopuksi maahan"; Linssisepän toisto 00.04: lennon lopussa matala viisto liuku
-        // karkean laattamassan yllä): lento korkealla ja jyrkkänä (LentoKallistus pystystä, etäisyys ≥ KorkeusKerroin × kehys)
-        // viimeiseen neljännekseen asti; vasta silloin lasku ja kääntö kehyksen viistoon kulmaan lähes pystysuunnassa.
-        public const double NousuLoppu = 0.25, LaskuAlku = 0.75, KaariOsuus = 0.35, KaariMinM = 250, KaariMaxM = 1600;
-        public const double LentoKallistus = 30, KorkeusKerroin = 1.5;
+        // Lento (juna 156, omistaja 23.4x / Päätoimittaja): pehmeä kaari matkan mukaan (ks. Lennossa). Aiempi TF 144 -linja "korkealla
+        // ja jyrkkänä viimeiseen neljännekseen" kumottu; "ei mätkähdystä" hoituu sin²-kummulla (pystynopeus 0 laskussa).
+        public const double LahiKaariOsuus = 0.3, KaariOsuus = 0.22, KaariMaxM = 1200, MinKorkeusM = 150, KeskiJyrkennys = 10;
         public const double LahiRajaM = 20000;
 
         /// <summary>Luokka workerin kentästä ("katu" | "kanava" | "aukio" | "rakennus" | "torni" | "linnoitus" | "puisto" |
@@ -78,11 +76,15 @@ namespace Matkakirja.Linssit.Kierros
                     et = Rajaa(tiukka, RakennusEtMinM, RakennusEtMaxM);
                     kall = RakennusKallistus; nosto = Rajaa((korkeus > 0 ? korkeus : koko * 0.3) * 0.45, 5, 70); break;
             }
+            // KORKEA KOHDE (Päätoimittaja 7.10. 04.3x: Eiffelin huippu leikkautui, Liikun jälkeen kolmannes tornista yli reunan):
+            // etäisyys pystysuuntaisen näkökentän mukaan niin, että juuri ja huippu mahtuvat kuvaan marginaalilla.
+            double minEt = 0;
+            if (korkeus >= KorkeaRajaM) { minEt = KorkeaEtaisyys(korkeus, kall, nosto, 50); et = Math.Max(et, minEt); }   // pienin mahtuva: lähemmäs-vaihe saa mennä siihen asti
             nosto -= KatseAlasOsuus * et;   // kohde hieman keskikohdan yläpuolelle (sirut eivät peitä)
             return new Pysahdys
             {
                 Id = k.Id ?? k.Nimi, Nimi = k.Nimi, Alarivi = k.Alarivi, Teksti = k.Teksti, Lat = k.Lat, Lon = k.Lon, MaaM = maaM, NostoM = nosto,
-                Suuntima = KierrosLento.Kiedo(tulosuunta + SivuKulma), Kallistus = kall, EtaisyysM = et,
+                Suuntima = KierrosLento.Kiedo(tulosuunta + SivuKulma), Kallistus = kall, EtaisyysM = et, MinEtM = minEt,
             };
         }
 
@@ -106,34 +108,141 @@ namespace Matkakirja.Linssit.Kierros
             // Lähennys ei vie kameraa rakennukseen: vähintään RakennusEtMinM tai kehyksen oma etäisyys, jos se on pienempi
             // (kattoraja hoitaa lisäksi OpasOhjaus.Sovella).
             if (lahemmas) et = Math.Max(et, Math.Min(p.EtaisyysM, RakennusEtMinM));
+            if (p.MinEtM > 0) et = Math.Max(et, p.MinEtM);   // korkea kohde: koko kohde kuvassa myös lähemmäs-vaiheessa ja dollyssa
             return new Kuvakulma(p.Lat, p.Lon, et, kall, KierrosLento.Kiedo(p.Suuntima + kierto + lisaSuunta), p.KatseKorkeusM);
         }
 
-        /// <summary>Lento a → b osuudella t (0…1): nousu – liuku – lasku, katse lentosuuntaan ja lopuksi kohteeseen.</summary>
+        /// <summary>
+        /// Lento a → b osuudella t (0…1). PEHMEÄ KAARI (omistaja 6.10. 23.4x: "kamera liikkuu välillä turhan nopeasti ja tekee turhan
+        /// ylhäällä käyviä liikkeitä … kamera-ajot pehmeämmiksi"; Päätoimittaja kumosi "korkea kaari ripeästi" -linjan, "ei mätkähdystä"
+        /// pysyy): yksi kumpu h = sin²(πt) (pystynopeus nolla lähdössä ja laskussa), korkeus suhteessa matkaan (KaariOsuus × matka
+        /// pystysuunnassa, lähikohteisiin 0,3), vähintään MinKorkeusM kohteen yläpuolella kesken lennon, kallistus liukuu a → b
+        /// hieman jyrkempänä keskellä, sijainti ease-in-out (smootherstep). Katse lentosuuntaan keskellä, lopuksi kohteeseen.
+        /// </summary>
         public static Kuvakulma Lennossa(Kuvakulma a, Kuvakulma b, double t)
         {
             t = Math.Max(0, Math.Min(1, t));
             double matka = KierrosLento.EtaisyysM(a.Lat, a.Lon, b.Lat, b.Lon);
             if (matka >= LahiRajaM) return OpasSilmukka.Lennossa(a, b, t);
-            double s = KierrosLento.Smootherstep(t);
-            // Nousu (0…NousuLoppu) ja lasku (LaskuAlku…1) pehmeästi; välissä korkea ja jyrkkä liuku.
-            double ylos = KierrosLento.Smootherstep(Math.Min(1, t / NousuLoppu));
-            double alas = KierrosLento.Smootherstep(Math.Max(0, (t - LaskuAlku) / (1 - LaskuAlku)));
-            double h = ylos * (1 - alas);
+            double s = Eteneminen(t, matka);
+            double sp = Math.Sin(Math.PI * t), h = sp * sp;
             double L(double x, double y) => x + (y - x) * s;
-            // Korkeus: vähintään KorkeusKerroin × suurempi kehysetäisyys tai kaari matkan mukaan (kumpi suurempi).
+            double kall = L(a.Kallistus, b.Kallistus) - KeskiJyrkennys * h;
+            double cosK = Math.Max(0.25, Math.Cos(kall * Math.PI / 180));
             double perus = L(a.EtaisyysM, b.EtaisyysM);
-            double huippu = Math.Max(KorkeusKerroin * Math.Max(a.EtaisyysM, b.EtaisyysM), perus + Rajaa(KaariOsuus * matka, matka < 50 ? 0 : KaariMinM, KaariMaxM));
-            double et = perus + (huippu - perus) * h;
-            // Kallistus: lähtökulmasta jyrkkään (LentoKallistus) nousun aikana, jyrkästä kohteen kulmaan laskun aikana.
-            double kall = a.Kallistus + (LentoKallistus - a.Kallistus) * ylos;
-            kall += (b.Kallistus - kall) * alas;
-            // Katse: alku → lentosuunta (0…1/3) → kohteen kehyssuunta (2/3…1); hyvin lyhyellä matkalla suoraan a → b.
+            double nousu = Rajaa((matka < 1000 ? LahiKaariOsuus : KaariOsuus) * matka, 0, KaariMaxM);   // pystysuunnassa (m)
+            double et = perus + nousu / cosK * h;
+            et = Math.Max(et, perus + (MinKorkeusM / cosK - perus) * h);   // kesken lennon vähintään MinKorkeusM kohteen yläpuolella
             double lento = matka < 50 ? b.Suuntima : OpasSilmukka.Suunta(a.Lat, a.Lon, b.Lat, b.Lon);
             double w1 = KierrosLento.Smootherstep(Math.Min(1, t * 3)), w2 = KierrosLento.Smootherstep(Math.Max(0, t * 3 - 2));
             double suunta = KierrosLento.Kiedo(a.Suuntima + KierrosLento.Kiedo(lento - a.Suuntima) * w1);
             suunta = KierrosLento.Kiedo(suunta + KierrosLento.Kiedo(b.Suuntima - suunta) * w2);
             return new Kuvakulma(L(a.Lat, b.Lat), L(a.Lon, b.Lon), et, kall, suunta, L(a.KatseKorkeusM, b.KatseKorkeusM));
+        }
+
+        /// <summary>Kameran paikka (m) paikallisessa ENU:ssa pisteestä (lat0, lon0): katsekohde − katsesuunta × etäisyys.</summary>
+        public static (double e, double n, double u) KameraPaikka(Kuvakulma k, double lat0, double lon0)
+        {
+            const double R = 6371000, A = Math.PI / 180;
+            double te = (k.Lon - lon0) * R * Math.Cos(lat0 * A) * A, tn = (k.Lat - lat0) * R * A;
+            double kl = k.Kallistus * A, sm = k.Suuntima * A;
+            return (te - Math.Sin(kl) * Math.Sin(sm) * k.EtaisyysM, tn - Math.Sin(kl) * Math.Cos(sm) * k.EtaisyysM, k.KatseKorkeusM + Math.Cos(kl) * k.EtaisyysM);
+        }
+
+        /// <summary>
+        /// LENTOMITTARI (Päätoimittaja 23.4x: "suurin kiihtyvyys ja suurin pystynopeus laskussa, ennen ja jälkeen"): lento a → b
+        /// keston kestoS aikana näytteistettynä tasavälein (ei kehysaikojen kohinaa): suurin kiihtyvyys (m/s²) ja suurin
+        /// laskunopeus (m/s, alaspäin positiivinen) kameran paikasta. rata = lentofunktio (oletus Lennossa).
+        /// </summary>
+        public static (double kiihtyvyys, double lasku) Mittari(Kuvakulma a, Kuvakulma b, double kestoS, Func<Kuvakulma, Kuvakulma, double, Kuvakulma> rata = null)
+        {
+            rata ??= Lennossa;
+            const int N = 400;
+            double dt = kestoS / N, maxA = 0, maxL = 0;
+            (double e, double n, double u) P(int i) => KameraPaikka(rata(a, b, (double)i / N), a.Lat, a.Lon);
+            var p0 = P(0); var p1 = P(1);
+            for (int i = 2; i <= N; i++)
+            {
+                var p2 = P(i);
+                double ae = (p2.e - 2 * p1.e + p0.e) / (dt * dt), an = (p2.n - 2 * p1.n + p0.n) / (dt * dt), au = (p2.u - 2 * p1.u + p0.u) / (dt * dt);
+                maxA = Math.Max(maxA, Math.Sqrt(ae * ae + an * an + au * au));
+                maxL = Math.Max(maxL, -(p2.u - p1.u) / dt);
+                p0 = p1; p1 = p2;
+            }
+            return (maxA, maxL);
+        }
+
+        /// <summary>
+        /// Eteneminen 0…1 ajan osuudesta: pehmeä kiihdytys, tasainen matkavauhti ja pehmeä jarrutus (nopeus nousee ja laskee
+        /// smoothstep-rampilla, joten nopeus ja kiihtyvyys ovat jatkuvia). Lyhyellä matkalla ramppi on puolet lennosta (S-käyrä),
+        /// pitkällä (≥ 2 km) neljännes, jolloin keskellä on tasainen vauhti (Päätoimittaja 23.4x).
+        /// </summary>
+        public static double Eteneminen(double t, double matkaM)
+        {
+            t = Math.Max(0, Math.Min(1, t));
+            double a = matkaM >= 2000 ? 0.25 : matkaM <= 500 ? 0.5 : 0.5 - 0.25 * (matkaM - 500) / 1500;
+            double kokonais = 1 - a;   // a·½ + (1 − 2a) + a·½
+            double x = t < a ? a * SmoothstepIntegraali(t / a)
+                : t > 1 - a ? kokonais - a * SmoothstepIntegraali((1 - t) / a)
+                : a * 0.5 + (t - a);
+            return x / kokonais;
+        }
+
+        /// <summary>Korkea kohde (m): tätä korkeammalle kehys lasketaan pystysuuntaisesta näkökentästä; yläraja KorkeaEtMaxM.</summary>
+        public const double KorkeaRajaM = 60, KorkeaEtMaxM = 1200, KorkeaMarginaaliAst = 4;
+
+        /// <summary>
+        /// Pienin etäisyys (≥ etAlku, ≤ KorkeaEtMaxM), jolla korkeusM:n kohde kohteen kohdalla näkyy kokonaan: kamera katsoo
+        /// kallistuksella (pystysuorasta) pisteeseen nostoPerus − KatseAlasOsuus·et maasta, ja huipun ja juuren kulma katseakselista
+        /// on enintään KuvaPystyAst/2 − KorkeaMarginaaliAst. Askel 3 %.
+        /// </summary>
+        public static double KorkeaEtaisyys(double korkeusM, double kallistus, double nostoPerus, double etAlku)
+        {
+            double puoli = KuvaPystyAst / 2 - KorkeaMarginaaliAst, akseli = 90 - kallistus;   // katseen painuma vaakatasosta (°)
+            double s = Math.Sin(kallistus * Math.PI / 180), c = Math.Cos(kallistus * Math.PI / 180);
+            bool Mahtuu(double et)
+            {
+                double katse = nostoPerus - KatseAlasOsuus * et, silma = katse + et * c, vaaka = et * s;
+                double Kulma(double z) => akseli - Math.Atan2(silma - z, vaaka) * 180 / Math.PI;   // + = katseakselin yläpuolella
+                return Kulma(korkeusM) <= puoli && Kulma(0) >= -puoli;
+            }
+            double e = Math.Max(1, etAlku);
+            while (e < KorkeaEtMaxM && !Mahtuu(e)) e *= 1.03;
+            return Math.Min(e, KorkeaEtMaxM);
+        }
+
+        // ---- MAA JA KORKEUS NÄYTTEISTÄ (Päätoimittaja 7.10. 02.0x, juna 156 VIE-este: Eiffelin pysähdyksellä kamera tornin sisällä).
+        // Juurisyy: maa näytteistettiin kohteen keskipisteestä (SampleHeightMostDetailed), ja tornissa ja katoissa säde osui
+        // rakenteeseen (Eiffel ~190 m, Sydneyn oopperatalo 73 m katto), jolloin kehys rakennettiin latvaan. Maa otetaan nyt kehältä
+        // kohteen ympäriltä: MEDIAANI 8 pisteestä (Päätoimittaja 02.1x: rinteessä matalin piste on selvästi jalkaa alempana, ja
+        // yksittäinen kuoppa tai naapurin katto ei siirrä mediaania), ja puuttuva korkeus arvioidaan
+        // keskipisteen ja maan erotuksesta (workerin korkeus_m tulee mallilta eikä ole aina mukana). ----
+        public const int KehaPisteita = 8;
+        public const double KorkeusArvioMinM = 20;
+
+        /// <summary>Kehän säde (m) kohteen koosta, 35–60 m: lähellä jalkaa (simu 7.10. 03.5x: Akropoliksen 220 m:n kehä osui
+        /// kukkulan rinteeseen, maa 191 → 130 m). Tornissa 60 m osuu jalkojen väliseen maahan tai jalustan viereen.</summary>
+        public static double KehaSade(double kokoM) => Rajaa(0.6 * Math.Max(10, kokoM), 35, 60);
+
+        /// <summary>Kehän piste i (0…KehaPisteita−1) kohteen ympärillä.</summary>
+        public static (double lat, double lon) KehaPiste(double lat, double lon, double sadeM, int i)
+        {
+            double a = 2 * Math.PI * i / KehaPisteita;
+            return (lat + sadeM * Math.Cos(a) / 111195.0, lon + sadeM * Math.Sin(a) / (111195.0 * Math.Max(0.01, Math.Cos(lat * Math.PI / 180))));
+        }
+
+        /// <summary>Maa = min(keskus, kehän mediaani); korkeus = keskus − maa, jos vähintään KorkeusArvioMinM, muuten 0.
+        /// NaN-näytteet ohitetaan; ei yhtään kehänäytettä → keskus (vanha käytös).</summary>
+        public static (double maa, double korkeus) MaaJaKorkeus(double keskus, IReadOnlyList<double> keha)
+        {
+            var l = new List<double>();
+            if (keha != null) foreach (var h in keha) if (!double.IsNaN(h)) l.Add(h);
+            if (l.Count == 0) return (keskus, 0);
+            l.Sort();
+            double maa = l.Count % 2 == 1 ? l[l.Count / 2] : 0.5 * (l[l.Count / 2 - 1] + l[l.Count / 2]);
+            if (!double.IsNaN(keskus)) maa = Math.Min(maa, keskus);
+            double korkeus = double.IsNaN(keskus) ? 0 : keskus - maa;
+            return (maa, korkeus >= KorkeusArvioMinM ? korkeus : 0);
         }
 
         static double Rajaa(double x, double min, double max) => Math.Max(min, Math.Min(max, x));

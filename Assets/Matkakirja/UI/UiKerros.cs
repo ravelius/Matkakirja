@@ -204,6 +204,7 @@ namespace Matkakirja.Natiivi
             get
             {
                 if (SystemInfo.deviceModel.StartsWith("iPad", StringComparison.Ordinal)) return true;
+                if (Mac) return true;   // natiivi Mac: iPadin asettelut ja koot (Natiivi-UI, juna 152)
                 if (!Application.isMobilePlatform) return false;
                 float pitka = Mathf.Max(Screen.width, Screen.height), lyhyt = Mathf.Max(1, Mathf.Min(Screen.width, Screen.height));
                 return pitka / lyhyt < 1.6f;
@@ -215,6 +216,19 @@ namespace Matkakirja.Natiivi
         /// CSS-px, viiteruutu teki siitä 648 × 298 ja UI:sta ~35 % webiä suuremman), editorissa viiteruutu.
         /// Testikomennolla pakotettavissa (piste | viite).
         /// </summary>
+        /// <summary>Natiivi Mac-sovellus (ei editori, ei iPad-sovellus Macilla).</summary>
+        public static bool Mac
+        {
+            get
+            {
+#if UNITY_STANDALONE_OSX && !UNITY_EDITOR
+                return true;
+#else
+                return false;
+#endif
+            }
+        }
+
         public static bool Pisteskaala
         {
             get
@@ -233,6 +247,8 @@ namespace Matkakirja.Natiivi
         {
             get
             {
+                // Natiivi Mac: ikkunan näytön backingScaleFactor (Retina 2, muuten 1; Natiiviseppä f3a80d8e), ei Screen.dpi:tä.
+                if (Mac) return MacSyote.Skaala;
                 if (Tabletti) return Screen.dpi > 0 ? Mathf.Max(1f, Mathf.Round(Screen.dpi / 132f)) : 2f;
                 return Mathf.Min(Screen.width, Screen.height) >= 1000 ? 3f : 2f;
             }
@@ -357,9 +373,33 @@ namespace Matkakirja.Natiivi
         public event Action KameranJalkeen;
         internal void AjaKameranJalkeen() => KameranJalkeen?.Invoke();
 
+        /// <summary>Natiivi Mac: ikkunan pienin koko pisteinä (Päätoimittaja 7.10.2026 Natiivi-UI:n Mac v1 -löydöksestä: 960 × 640).</summary>
+        public const int MacMinLeveys = 960, MacMinKorkeus = 640;
+        float macIkkunaTarkistus;
+
+        /// <summary>
+        /// Mac-ikkuna (0,5 s välein): minimikoko ja vihreän napin kokonäyttö AppKitissa (MacSyote.Ikkuna), ei Screen.SetResolutionia.
+        /// Mac v1 -löydös 7.10.: SetResolution(2048 × 1400) tallentui Unityn näyttöasetuksiin, kokonäyttö käytti sitä ja vaihtoi
+        /// näytön tilaksi 2560 × 1440, joka jäi päälle sulkemisen jälkeen. Kokonäyttö pidetään siksi aina näytön omassa
+        /// resoluutiossa ikkunatyyppisenä (FullScreenWindow), ei koskaan yksinoikeudellisena.
+        /// </summary>
+        void PidaMacIkkuna()
+        {
+            if (!Mac || Time.unscaledTime < macIkkunaTarkistus) return;
+            macIkkunaTarkistus = Time.unscaledTime + 0.5f;
+            MacSyote.Ikkuna(MacMinLeveys, MacMinKorkeus);
+            if (Screen.fullScreenMode == FullScreenMode.Windowed || Screen.fullScreenMode == FullScreenMode.MaximizedWindow) return;
+            int w = Display.main.systemWidth, h = Display.main.systemHeight;
+            if (Screen.fullScreenMode == FullScreenMode.FullScreenWindow && (w <= 0 || (Screen.width == w && Screen.height == h))) return;
+            Debug.Log($"MATKAKIRJA ui: Mac-kokonäyttö {Screen.fullScreenMode} {Screen.width}×{Screen.height} → FullScreenWindow {w}×{h}");
+            if (w > 0 && h > 0) Screen.SetResolution(w, h, FullScreenMode.FullScreenWindow);
+            else Screen.fullScreenMode = FullScreenMode.FullScreenWindow;
+        }
+
         void Update()
         {
             PaivitaTurvaalueet();
+            PidaMacIkkuna();
             JokaRuutu?.Invoke();
             while (true)
             {

@@ -22,6 +22,9 @@ namespace Matkakirja.Linssit.Kierros
         public double Lat, Lon, MaaM, NostoM;
         /// <summary>Kameran katsesuunta asteina pohjoisesta, kallistus asteina pystysuorasta (90 = vaaka) ja etäisyys (m).</summary>
         public double Suuntima, Kallistus, EtaisyysM;
+        /// <summary>Korkean kohteen vähimmäisetäisyys (m), jolla koko kohde mahtuu kuvaan (OpasKuvaus.KorkeaEtaisyys); 0 = ei rajaa.
+        /// Pysähdyksen lähemmäs-vaihe ja dolly eivät mene tätä lähemmäs.</summary>
+        public double MinEtM;
         public double KatseKorkeusM => MaaM + NostoM;
 
         public static Pysahdys P(string id, string nimi, string alarivi, double lat, double lon, double maa, double nosto,

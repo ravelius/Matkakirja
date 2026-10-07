@@ -323,6 +323,13 @@ namespace Matkakirja.Linssit.Dioraama
         readonly List<double> kertojaOhitukset = new List<double>();
         public const double KertojaLentoMin = 1.2, KertojaLentoMax = 2.5, KertojaTekstiOsuus = 0.6;
 
+        /// <summary>
+        /// Saapumiskaari päättyy kertojan 1. jakson lepoon (Saapuminen.Loppu == "kertoja"): vain ensimmäisellä kierroksella
+        /// (ei uusinnassa eikä lyhyellä käynnillä, jolloin kierros ei ala itsestään). Silloin 1. jaksolla ei ole omaa lentoa.
+        /// </summary>
+        bool SaapuuKertojaan => Rakennus?.Saapuminen?.Loppu == "kertoja" && Rakennus.Kertoja != null && Rakennus.Kertoja.Count > 0
+            && !kertojaVainUusintana && kertojaAlku < 0;
+
         double KertojaAlku => kertojaAlku >= 0 ? kertojaAlku
             : tapahtumat.Count > 0 ? tapahtumat[0].Hetki + tapahtumat[0].Kesto : double.PositiveInfinity;
 
@@ -332,6 +339,9 @@ namespace Matkakirja.Linssit.Dioraama
         /// <summary>Onko linnalla kierros, joka ei ole käynnissä (UI:n uusintanappi näkyy).</summary>
         public bool KertojaUusittavissa(double t) => Auki && Rakennus?.Kertoja != null && Rakennus.Kertoja.Count > 0
             && t >= KertojaAlku && !Kierros(t, false).Kaynnissa;
+
+        /// <summary>Saapumiskaaren loppuasento: yleisnäkymä tai (Loppu "kertoja") 1. jakson lepo.</summary>
+        Asento SaapumisenKohde(bool pysty) => SaapuuKertojaan ? JaksonAsento(Rakennus.Kertoja[0], pysty) : AsentoFor(null, pysty);
 
         /// <summary>Uusinta (↻-nappi): kierros alusta nykyisestä kamerasta; aiemmat jaksojen ohitukset unohtuvat.</summary>
         public void KertojaUudelleen(double t)
@@ -374,16 +384,20 @@ namespace Matkakirja.Linssit.Dioraama
             if (kertojaVainUusintana && kertojaAlku < 0) return (false, default, -1, null, 0, 0);
             double s = KertojaAlku;
             if (t < s || double.IsInfinity(s)) return (false, default, -1, null, 0, 0);
-            // Huoneen kohdistus kierroksen alun jälkeen katkaisee kierroksen.
-            foreach (var e in tapahtumat) if (e.Hetki > s && e.Hetki <= t) return (false, default, -1, null, 0, 0);
-            var edellinen = AsentoFor(kertojaAlku >= 0 ? kertojaLahto : null, pysty);
+            // Huoneen kohdistus kierroksen alun jälkeen katkaisee kierroksen. Savu 156 (Laitetestaaja 7.10.): valikon huonevalinta jo
+            // SAAPUMISKAAREN aikana (ennen ensimmäisen kierroksen alkua) katkaisee myös sen, muuten kierros alkoi kaaren lopussa ja
+            // ohitti valinnan (valikko sulkeutui, ei siirtoa). Uusinnan (↻) alkua edeltävät kohdistukset eivät katkaise uusintaa.
+            for (int i = 1; i < tapahtumat.Count; i++)
+                if (tapahtumat[i].Hetki <= t && (tapahtumat[i].Hetki > s || kertojaAlku < 0)) return (false, default, -1, null, 0, 0);
+            bool suoraan = SaapuuKertojaan;
+            var edellinen = suoraan ? JaksonAsento(jaksot[0], pysty) : AsentoFor(kertojaAlku >= 0 ? kertojaLahto : null, pysty);
             double kursori = s;
             int ohitus = 0; // kukin napautus päättää täsmälleen yhden jakson
             while (ohitus < kertojaOhitukset.Count && kertojaOhitukset[ohitus] < s) ohitus++;
             for (int j = 0; j < jaksot.Count; j++)
             {
                 var kohde = JaksonAsento(jaksot[j], pysty);
-                double lento = KertojaLento(edellinen, kohde), loppu = kursori + lento + JaksonKesto(jaksot[j]);
+                double lento = suoraan && j == 0 ? 0 : KertojaLento(edellinen, kohde), loppu = kursori + lento + JaksonKesto(jaksot[j]);
                 if (ohitus < kertojaOhitukset.Count && kertojaOhitukset[ohitus] < loppu) loppu = Math.Max(kursori, kertojaOhitukset[ohitus++]);
                 if (t < loppu)
                 {
@@ -422,7 +436,8 @@ namespace Matkakirja.Linssit.Dioraama
             double s = KertojaAlku;
             if (t < s || double.IsInfinity(s)) return false;
             foreach (var e in tapahtumat) if (e.Hetki > s && e.Hetki <= t) return false;
-            var edellinen = AsentoFor(kertojaAlku >= 0 ? kertojaLahto : null, pysty);
+            bool suoraan = SaapuuKertojaan;
+            var edellinen = suoraan ? JaksonAsento(jaksot[0], pysty) : AsentoFor(kertojaAlku >= 0 ? kertojaLahto : null, pysty);
             double kursori = s;
             int ohitus = 0;
             while (ohitus < kertojaOhitukset.Count && kertojaOhitukset[ohitus] < s) ohitus++;
@@ -430,7 +445,7 @@ namespace Matkakirja.Linssit.Dioraama
             for (int j = 0; j < jaksot.Count; j++)
             {
                 var kohde = JaksonAsento(jaksot[j], pysty);
-                double lento = KertojaLento(edellinen, kohde), jLoppu = kursori + lento + JaksonKesto(jaksot[j]);
+                double lento = suoraan && j == 0 ? 0 : KertojaLento(edellinen, kohde), jLoppu = kursori + lento + JaksonKesto(jaksot[j]);
                 if (ohitus < kertojaOhitukset.Count && kertojaOhitukset[ohitus] < jLoppu) jLoppu = Math.Max(kursori, kertojaOhitukset[ohitus++]);
                 alut.Add(kursori); lennot.Add(lento); loput.Add(jLoppu);
                 double uLoppu = lento > 0 ? (jLoppu - kursori) / lento : 1;
@@ -603,7 +618,7 @@ namespace Matkakirja.Linssit.Dioraama
 
             Asento kamera;
             if (i == 0 && Rakennus.Saapuminen != null && tapahtuma.Kesto > 0 && t < tapahtuma.Hetki + tapahtuma.Kesto)
-                kamera = Kameraliike.SiirtymaAsento(SaapumisAsento(pysty), p1, SaapuminenOsuus(t));
+                kamera = Kameraliike.SiirtymaAsento(SaapumisAsento(pysty), SaapumisenKohde(pysty), SaapuminenOsuus(t));
             else if (i == 0 || tapahtuma.Kesto <= 0 || t >= tapahtuma.Hetki + tapahtuma.Kesto)
             {
                 // Levossa (ei kesken siirtymää): leijunta saa ajelehtia VAIN tässä haarassa, ei kaarilennon aikana,

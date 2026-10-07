@@ -268,6 +268,192 @@
     height: var(--tk-nappi-ohjaus-kuvake);
 }
 
-.mk-nostoselain__auto.mk-valittu {
+/* JUNA 154 (omistaja 6.10. 20.4x–20.5x, Päätoimittaja: "liian levoton … osa mustalla ja osa toisella värillä"): ylärivi
+ * rauhalliseksi vain tyylikirjan arvoilla.
+ *   YKSI VÄRI: sulka, ‹ ›, NOSTOT ▾, AUTO, pin, ≡ ja kaiutin paperin musteella (--tk-paperi-muste); ei kultaa kuvakkeissa
+ *   eikä tekstissä.
+ *   AUTO: ei kehystä; päällä kulta-kuulto-tausta, tumma teksti ja pieni piste; pois päältä ei taustaa eikä pistettä;
+ *   kulma.nappi, korkeus nappi.korkeus.
+ *   VAHVISTUS: ‹ › ja ≡ viiva 2,1 (pinnin optinen paino); sulka, pin ja kaiutin optisesti samankorkuisiksi (muste ~15 pt).
+ *   NOSTOT- ja AUTO-tekstin harvennus puoleen, ettei rivi näytä erilliseltä otsikolta. Ryhmien (‹ NOSTOT › | AUTO | pin ≡
+ *   kaiutin) väli hieman isompi kuin ryhmän sisällä. Osuma-alat 44 pt (Kosketusnappi). */
+.mk-nostoselain,
+.mk-nostoselain .mk-nosto__ylarivi,
+.mk-nostoselain .mk-nostoselain__askel,
+.mk-nostoselain .mk-nostoselain__avaaja,
+.mk-nostoselain .mk-nostoselain__avaajaikoni,
+.mk-nostoselain .mk-nostoselain__auto,
+.mk-nostoselain .mk-nostoselain__auto.mk-valittu,
+.mk-nostoselain .mk-lukija.mk-nosto__pin,
+.mk-nostoselain .mk-lukija.mk-nosto__pin.mk-valittu,
+.mk-nosto__lukija .mk-lukija,
+.mk-nosto__lukija .mk-lukija.mk-lukee,
+.mk-nosto__lukija .mk-lukija__valikkonappi,
+.mk-nosto__lukija .mk-lukija__valikkonappi.mk-valittu {
+    color: var(--tk-paperi-muste);
+}
+
+.mk-nostoselain .mk-nosto__ylarivi-symboli {
+    -unity-background-image-tint-color: var(--tk-paperi-muste);
+    background-size: 15.7px 15.7px; /* sulan muste 94/96 → ~15,4 pt = pinnin muste (16,8/24 × 22) */
+}
+
+.mk-nostoselain .mk-lukija.mk-nosto__pin.mk-valittu {
+    -unity-background-image-tint-color: var(--tk-paperi-muste);
+}
+
+.mk-nostoselain .mk-nostoselain__askel > .mk-ikoni {
+    width: var(--tk-nappi-ohjaus-kuvake);
+    height: var(--tk-nappi-ohjaus-kuvake);
+    --mk-ikoni-viiva: 2.1;
+}
+
+.mk-nosto__lukija .mk-lukija__valikkoikoni {
+    --mk-ikoni-viiva: 2;
+}
+
+/* Pin (stillit 154: viiva 4 px @3x vs ≡ 5 px): 2,0 tasaa painon. */
+.mk-nostoselain .mk-lukija.mk-nosto__pin > .mk-ikoni {
+    --mk-ikoni-viiva: 2;
+}
+
+/* Kaiutin (Päätoimittaja 21.0x: rivin suurin): 22 pt ja pinnin viiva 2,0, jottei se ole pinniä raskaampi. */
+.mk-nosto__lukija .mk-lukija--kortti > .mk-kaiutin,
+.mk-nosto__lukija .mk-lukija--kortti .mk-kaiutin__osa {
+    width: var(--tk-nappi-ohjaus-kuvake);
+    height: var(--tk-nappi-ohjaus-kuvake);
+}
+
+.mk-nosto__lukija .mk-lukija--kortti .mk-kaiutin__osa {
+    --mk-ikoni-viiva: 2;
+}
+
+.mk-nostoselain .mk-nostoselain__avaaja > Label,
+.mk-nostoselain .mk-nostoselain__autoteksti {
+    letter-spacing: 6.98px; /* puolet .mk-nosto__ylarivi-harvennuksesta (13,97) */
+}
+
+.mk-nostoselain .mk-nostoselain__auto {
+    border-width: 0;
+    border-radius: var(--tk-kulma-nappi);
+    background-color: initial;
+}
+
+.mk-nostoselain .mk-nostoselain__auto.mk-valittu {
     background-color: var(--kulta-kuulto);
+}
+
+.mk-nostoselain .mk-nostoselain__auto > .mk-nostoselain__autopiste {
+    display: none;
+}
+
+/* Omistaja 6.10. 21.3x (k2-stillit): "Ota auto napista piste pois ja madalla vähän taustaväriä ja keskitä se auto tekstin
+ * taakse": ei pistettä, tausta 26 pt (AUTO-pohjan alkuperäinen korkeus) keskellä riviä, sivuväli vali-m molemmin puolin.
+ * Tila (8 pt) otetaan ›:n ja AUTO:n väliltä: ›-napin oma reunus antaa näkyvän välin. Osuma-ala 44 pt (Kosketusnappi). */
+.mk-nostoselain .mk-nostoselain__auto.mk-valittu > .mk-nostoselain__autopiste {
+    display: none;
+}
+
+.mk-nostoselain .mk-nostoselain__auto {
+    height: 26px;
+    min-height: 26px;
+    align-self: center;
+    padding: 0 var(--tk-vali-m);
+    flex-shrink: 0;
+}
+
+.mk-nostoselain__sivu--oikea > .mk-nostoselain__auto {
+    margin-left: 0;
+}
+
+.mk-nostoselain__sivu--oikea > .mk-nostoselain__auto {
+    margin-right: var(--tk-vali-s);
+}
+
+/* LEVEYSBUDJETTI (omistaja TF 154 6.10. 22.x, iPadin vaakapaneeli "Noston yläpalkki vielä sekaisin": TEKNIIKKA-teksti vei tilan
+ * ja › meni AUTO:n päälle): kategoria ylärivillä aina vain kuvakkeena (kuten pystykortissa); osat eivät kutistu; Nostoselain
+ * tiivistää rivin portaittain, jos osat menisivät päällekkäin (tiivis1: askelnapit kapeat, tiivis2: harvennus pois ja pienemmät
+ * välit). */
+.mk-nostoselain .mk-nostoselain__sivu .mk-nosto__ylarivi-teksti {
+    display: none;
+}
+
+.mk-nostoselain .mk-nostoselain__askel,
+.mk-nostoselain .mk-nostoselain__avaaja,
+.mk-nostoselain .mk-lukija.mk-nosto__pin,
+.mk-nostoselain .mk-nosto__ylarivi-symboli {
+    flex-shrink: 0;
+}
+
+.mk-nostoselain--tiivis1 .mk-nostoselain__askel {
+    width: 26px;
+}
+
+.mk-nostoselain--tiivis2 .mk-nostoselain__avaaja > Label,
+.mk-nostoselain--tiivis2 .mk-nostoselain__autoteksti {
+    letter-spacing: 0;
+}
+
+.mk-nostoselain.mk-nostoselain--tiivis2 .mk-nostoselain__auto {
+    padding: 0 var(--tk-vali-s);
+}
+
+.mk-nostoselain--tiivis2 .mk-nostoselain__sivu--oikea > .mk-nostoselain__auto,
+.mk-nostoselain--tiivis2 .mk-nostoselain__sivu--oikea > .mk-lukija,
+.mk-nostoselain--tiivis2 .mk-nostoselain__sivu--oikea > .mk-nosto__lukijapaikka {
+    margin-right: 0;
+    margin-left: var(--tk-vali-xs);
+}
+
+/* JUNA 155 (omistaja 6.10. 22.x): selaimen rivi ilman kategoriaa ~8 pt vetokahvan alle (kortin yläreuna 22 − 2 = 20; kahva
+ * päättyy 13 pt:ssä); kategoria omana rivinään otsikon yläpuolella NOSTOT-tekstin tyylillä toissijaisella musteella,
+ * otsikkoon ~5 pt. Sama asettelu kaikissa leveyksissä. */
+.mk-nostoselain {
+    margin-top: -2px;
+}
+
+.mk-nosto__ylarivi.mk-nosto__ylarivi--kategoria {
+    flex-direction: row;
+    align-items: center;
+    margin: 0 0 5px 0;
+    letter-spacing: 6.98px; /* NOSTOT-tekstin harvennus */
+    color: var(--tk-paperi-muste-pehmea);
+}
+
+.mk-nosto__ylarivi--kategoria .mk-nosto__ylarivi-teksti {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.mk-nosto__ylarivi--kategoria .mk-nosto__ylarivi-symboli {
+    -unity-background-image-tint-color: var(--tk-paperi-muste-pehmea);
+}
+
+/* Kolme oikeinta samalle keskilinjalle ja samaan näkyvään korkeuteen (omistaja 6.10. 22.x; Päätoimittajan mittaus @2x: pin 33 px
+ * ja 2 pt muita ylempänä, ≡ 21 px, kaiutin 29 px). ≡ ja kaiutin piirretään paikkavarauksen kohdalle: varaus nappien korkuiseksi
+ * (34 → 38), jolloin keskikohdat osuvat samaan viivaan. Pin 20 pt (muste ~14,5 pt), viiva 2,2 (sama näkyvä paksuus kuin 22 pt:n
+ * 2,0); ≡ väljemmillä viivaväleillä (KortinLukija.ValikkoIkoni). */
+.mk-nostoselain .mk-nosto__lukijapaikka {
+    height: var(--tk-nappi-korkeus);
+}
+
+.mk-nostoselain .mk-lukija.mk-nosto__pin > .mk-ikoni {
+    width: 20px;
+    height: 20px;
+    --mk-ikoni-viiva: 2.2;
+}
+
+/* Kolmas porras: askelnapit nappi.ohjaus-kuvakkeen levyisiksi ja avaajan sivuvälit pois (kirjasinkoko pysyy tyylikirjan). */
+.mk-nostoselain--tiivis3 .mk-nostoselain__askel {
+    width: var(--tk-nappi-ohjaus-kuvake);
+}
+
+.mk-nostoselain--tiivis3 .mk-nostoselain__avaaja {
+    padding: 0;
+}
+
+/* Tiivistysporras 4 (juna 155, iPhonen vaakakortti 304 pt, MAAKUNNAT: › ja AUTO päällekkäin portaalla 3): avaajan ▾ pois. */
+.mk-nostoselain--tiivis4 .mk-nostoselain__avaajaikoni {
+    display: none;
 }

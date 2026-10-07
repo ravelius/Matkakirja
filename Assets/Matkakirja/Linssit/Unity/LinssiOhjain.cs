@@ -1926,6 +1926,7 @@ namespace Matkakirja.Natiivi
                             Matkakirja.Linssit.Kyytipino.AsetaS2Savy();
                             Kirjaa("astro " + Matkakirja.Linssit.Kyytipino.Tila());
                         }
+                        else if (a == "meri" && osat.Length > 3) { AstronauttiKerros.KyydinMeriPois = osat[3] == "0"; Kirjaa($"astro meri {(AstronauttiKerros.KyydinMeriPois ? "BMNG" : "S2-väri")} (seuraavalla tietorivillä)"); }
                         else if (a == "valotus" && osat.Length > 3) { Matkakirja.Linssit.Kyytipino.Valotus = (float)Luku(osat[3]); Kirjaa("astro " + Matkakirja.Linssit.Kyytipino.Tila()); }
                         else if (a == "bloom" && osat.Length > 3) { Matkakirja.Linssit.Kyytipino.BloomPois = osat[3] == "0"; Kirjaa("astro " + Matkakirja.Linssit.Kyytipino.Tila()); }
                         else if (a == "filmi" && osat.Length > 3) { Matkakirja.Linssit.Kyytipino.Filmi = osat[3] != "0"; Kirjaa("astro " + Matkakirja.Linssit.Kyytipino.Tila()); }   // ISS-kamera
@@ -2000,6 +2001,7 @@ namespace Matkakirja.Natiivi
                             else if (osat.Length > 4 && osat[3] == "ilmavoima") { Matkakirja.Natiivi.IssKameraKuva.JulisteIlmanVoima = (float)Luku(osat[4]); Kirjaa($"astro kyyti kuvaa ilmavoima {Matkakirja.Natiivi.IssKameraKuva.JulisteIlmanVoima:0.0}"); }
                             else if (osat.Length > 4 && osat[3] == "kupolakehys") { Matkakirja.Natiivi.IssJuliste.KupolaKehys = osat[4] != "0"; Kirjaa($"astro kyyti kuvaa kupolakehys {(Matkakirja.Natiivi.IssJuliste.KupolaKehys ? "päällä" : "pois")}, valmis {Matkakirja.Natiivi.IssJuliste.KehysValmis}"); }
                             else if (osat.Length > 4 && osat[3] == "kehitys") { Matkakirja.Natiivi.IssKameraKuva.Kehitys = osat[4] != "0"; Kirjaa($"astro kyyti kuvaa kehitys {(Matkakirja.Natiivi.IssKameraKuva.Kehitys ? "päällä" : "pois")}"); }
+                            else if (osat.Length > 4 && osat[3] == "olkapaa") { Matkakirja.Natiivi.IssKameraKuva.ValotusOlkapaa = osat[4] != "0"; Kirjaa($"astro kyyti kuvaa olkapaa {(Matkakirja.Natiivi.IssKameraKuva.ValotusOlkapaa ? "päällä" : "pois")}"); }
                             else if (osat.Length > 4 && osat[3] == "julistebudjetti") { Matkakirja.Natiivi.IssKameraKuva.JulisteBudjettiMt = Luku(osat[4]); Kirjaa("astro kyyti kuvaa julistebudjetti: " + osat[4] + " Mt"); }
                             else if (osat.Length > 4 && osat[3] == "budjetti") { Matkakirja.Natiivi.IssKameraKuva.BudjettiMt = Luku(osat[4]); Kirjaa("astro kyyti kuvaa budjetti: " + osat[4] + " Mt"); }
                             else if (osat.Length > 4 && osat[3] == "valotus")
@@ -2146,6 +2148,7 @@ namespace Matkakirja.Natiivi
                     else if (osat.Length > 1 && osat[1] == "testi429") OpasSovitin.TestiGoogle429();
                     else if (osat.Length > 1 && osat[1] == "kierros") Kirjaa($"opas: kierros → {OpasSovitin.Kaupunkikierros()}");
                     else if (osat.Length > 1 && osat[1] == "lopeta") Kirjaa($"opas: lopeta → {OpasSovitin.LopetaKierros()}");
+                    else if (osat.Length > 1 && osat[1] == "seuraava") Kirjaa($"opas: seuraava → {OpasSovitin.Seuraava()}");
                     else if (osat.Length > 1 && osat[1] == "jatka") Kirjaa($"opas: jatka → {OpasSovitin.JatkaKierrosta()}");
                     else if (osat.Length > 2 && osat[1] == "kysy") Kirjaa($"opas: kysy → {OpasSovitin.Kysy(string.Join(" ", osat.Skip(2)))}");
                     else if (osat.Length > 2 && osat[1] == "liiku")
