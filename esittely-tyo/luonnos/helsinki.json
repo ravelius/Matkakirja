@@ -1,0 +1,600 @@
+{
+ "kaupunki": "Helsinki",
+ "id": "helsinki",
+ "versio": 1,
+ "kohteet": [
+  {
+   "id": "Q738015",
+   "nimi": "Helsingin tuomiokirkko",
+   "kuvaus": "Engelin valkoinen tuomiokirkko",
+   "luokka": "kirkko",
+   "koko_m": 80,
+   "korkeus_m": 62,
+   "teksti": "Helsingin tuomiokirkko nousee Senaatintorin pohjoislaidalla valkoisena ristinä, jonka keskeltä kohoaa vihreä kupoli ja kulmista neljä pienempää. Katon harjoilla ja kulmissa seisoo kaksitoista ihmistä suurempaa apostolia, jotka valettiin sinkistä Berliinissä 1840-luvulla, ja ne ovat yksi maailman suurimmista yhtenäisistä sinkkiveistosten kokoelmista. Isoisäsi kirjoitti vuonna 1873, että kirkon apostolit katsoivat merelle. Kirkon piirsi Carl Ludvig Engel, mutta se valmistui vasta vuonna 1852, kaksitoista vuotta arkkitehdin kuoleman jälkeen. Kirkon edestä leveät portaat laskeutuvat suoraan Senaatintorille.",
+   "lyhyt": "Helsingin tuomiokirkko on kuusikymmentäkaksi metriä korkea, ja sen kupoli on näkynyt merelle jo purjelaivojen ajoista. Keisari Nikolai ensimmäisen mukaan se oli Nikolainkirkko vuoteen 1917 asti, sitten Suurkirkko, ja tuomiokirkoksi se nimettiin vasta vuonna 1959.",
+   "syventava": "Keitä katon apostolit esittävät?",
+   "kysymykset": [
+    "Keitä katon kaksitoista apostolia esittävät?",
+    "Miksi kirkko on niin valkoinen?",
+    "Kuka oli Carl Ludvig Engel?",
+    "Mitä kirkon kryptassa nykyään tehdään?",
+    "Miksi kirkkoa kutsuttiin ennen Nikolainkirkoksi?"
+   ],
+   "isoisa": true,
+   "lahteet": [
+    {
+     "vaite": "Kirkossa on vihreä pääkupoli ja neljä pienempää kupolia.",
+     "url": "https://www.myhelsinki.fi/fi/places/helsingin-tuomiokirkko/"
+    },
+    {
+     "vaite": "Kaksitoista ihmistä suurempaa sinkkistä apostolipatsasta katon harjoilla ja kulmissa; valettu Berliinissä 1845–1847; yksi maailman suurimmista yhtenäisistä sinkkiveistoskokoelmista.",
+     "url": "https://en.wikipedia.org/wiki/Helsinki_Cathedral"
+    },
+    {
+     "vaite": "Isoisän merkintä: kirkon apostolit katsoivat merelle (Helsingfors 1873).",
+     "url": "kaanon:isoisan-paivakirja"
+    },
+    {
+     "vaite": "Engel suunnitteli kirkon; valmistui 1852; Engel kuoli 1840, eli kaksitoista vuotta ennen valmistumista.",
+     "url": "https://en.wikipedia.org/wiki/Helsinki_Cathedral"
+    },
+    {
+     "vaite": "Kirkon edessä on leveät portaat Senaatintorille.",
+     "url": "https://www.myhelsinki.fi/fi/places/helsingin-tuomiokirkko/"
+    },
+    {
+     "vaite": "Kirkon korkeus on 62 metriä.",
+     "url": "https://www.myhelsinki.fi/fi/places/helsingin-tuomiokirkko/"
+    },
+    {
+     "vaite": "Kirkosta tuli merelle näkyvä Helsingin tunnus jo purjelaivojen aikana.",
+     "url": "kaanon:pelin-aineisto"
+    },
+    {
+     "vaite": "Nimetty Nikolai I:n mukaan Nikolainkirkoksi; itsenäistymisen 1917 jälkeen Suurkirkko; tuomiokirkko 1959 Helsingin hiippakunnan synnyttyä.",
+     "url": "https://en.wikipedia.org/wiki/Helsinki_Cathedral"
+    }
+   ]
+  },
+  {
+   "id": "Q1292442",
+   "nimi": "Suomenlinna",
+   "kuvaus": "Saarille rakennettu merilinnoitus",
+   "luokka": "linnoitus",
+   "koko_m": 1500,
+   "teksti": "Suomenlinna levittäytyy Helsingin edustalle saariryhmänä, jonka rannoilla kiertävät harmaat bastionit ja vallit. Ruotsi alkoi rakentaa merilinnoitusta vuonna 1748 Augustin Ehrensvärdin johdolla, ja vuoteen 1918 asti sitä kutsuttiin Viaporiksi. Ehrensvärd on haudattu Susisaaren linnanpihalle keskelle omaa linnoitustaan. Eteläisimmän saaren rannassa seisoo Kuninkaanportti, joka rakennettiin kohtaan, johon kuningas Aadolf Fredrik ankkuroi laivansa tullessaan tarkastamaan töitä. Nykyään Suomenlinna on Unescon maailmanperintökohde ja kaupunginosa, jossa asuu noin kahdeksansataa ihmistä.",
+   "lyhyt": "Suomenlinnaan pääsee Kauppatorilta lautalla ympäri vuoden tavallisella joukkoliikennelipulla. Saarten kirkko rakennettiin alun perin ortodoksiseksi, ja sen torni on samalla majakka, ja sen valo välähtää neljä kertaa peräkkäin: se on morseaakkosten H, niin kuin Helsinki.",
+   "syventava": "Miksi Viapori sai uuden nimen?",
+   "kysymykset": [
+    "Miksi linnoitus rakennettiin saarille?",
+    "Kuka oli Augustin Ehrensvärd?",
+    "Millaista on asua Suomenlinnassa nykyään?",
+    "Mitä Kuninkaanportilla tapahtui?",
+    "Miksi Viapori nimettiin Suomenlinnaksi?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Linnoitus koostuu kahdeksasta saaresta, joista kuusi on linnoitettu; bastionilinnoitus.",
+     "url": "https://en.wikipedia.org/wiki/Suomenlinna"
+    },
+    {
+     "vaite": "Rakentaminen alkoi 1748 Augustin Ehrensvärdin johdolla; nimi Viapori vuoteen 1918.",
+     "url": "kaanon:pelin-aineisto"
+    },
+    {
+     "vaite": "Viapori nimettiin Suomenlinnaksi 1918.",
+     "url": "https://en.wikipedia.org/wiki/Suomenlinna"
+    },
+    {
+     "vaite": "Ehrensvärd on haudattu Susisaaren linnanpihalle (haudattu 1783).",
+     "url": "https://en.wikipedia.org/wiki/Ehrensv%C3%A4rd_grave"
+    },
+    {
+     "vaite": "Kuninkaanportti on eteläisimmällä saarella; rakennettiin 1753–1754 kohtaan, johon kuningas Aadolf Fredrik ankkuroi laivansa tullessaan tarkastamaan töitä.",
+     "url": "https://en.wikipedia.org/wiki/Kuninkaanportti"
+    },
+    {
+     "vaite": "Unescon maailmanperintökohde 1991.",
+     "url": "https://en.wikipedia.org/wiki/Suomenlinna"
+    },
+    {
+     "vaite": "Asukkaita noin 800.",
+     "url": "https://finestresullarte.info/en/museums/a-museum-in-which-800-people-live-suomenlinna-fortress-in-helsinki"
+    },
+    {
+     "vaite": "Lautta Kauppatorilta kulkee ympäri vuoden ja kuuluu joukkoliikenteeseen.",
+     "url": "kaanon:pelin-aineisto"
+    },
+    {
+     "vaite": "Kirkon tornissa on majakka, joka välähtää neljä kertaa peräkkäin, morseaakkosten H kuin Helsinki.",
+     "url": "https://finnisharchitecture.fi/suomenlinna-church/"
+    },
+    {
+     "vaite": "Kirkko rakennettiin ortodoksiseksi kirkoksi 1854 ja muutettiin luterilaiseksi 1919.",
+     "url": "https://finnisharchitecture.fi/suomenlinna-church/"
+    }
+   ]
+  },
+  {
+   "id": "Q1355001",
+   "nimi": "Uspenskin katedraali",
+   "kuvaus": "Katajanokan ortodoksinen pääkirkko",
+   "luokka": "kirkko",
+   "koko_m": 70,
+   "teksti": "Uspenskin katedraali kohoaa Katajanokan kalliolla punatiilisenä, ja sen katolla kimaltaa kolmetoista kullattua sipulikupolia, jotka kuvaavat Kristusta ja kahtatoista apostolia. Tiilet tuotiin proomuilla Ahvenanmaalta Bomarsundin linnoituksesta, joka hävitettiin Krimin sodassa, ja niitä kului seitsemänsataatuhatta. Kirkko vihittiin vuonna 1868, ja se on Länsi-Euroopan suurin ortodoksinen kirkko. Vuonna 2010 kirkosta varastettiin ihmeitätekevänä pidetty Kozeltšanin Jumalanäidin ikoni. Seuraavana talvena varas kertoi poliisille kätköpaikan, ja maan alta löytynyt ikoni korjattiin ja palautettiin kirkkoon.",
+   "lyhyt": "Uspenskin katedraalin suunnitteli venäläinen arkkitehti Aleksei Gornostajev, mutta hän kuoli vuonna 1862, ennen kuin työt pääsivät alkuun. Sisällä katse kiinnittyy runsaaseen ikonostaasiin, jossa evankelistat reunustavat ehtoollista ja taivaaseenastumista esittäviä kuvia.",
+   "syventava": "Mistä katedraalin tiilet tuotiin?",
+   "kysymykset": [
+    "Mistä katedraalin punaiset tiilet tuotiin?",
+    "Miksi kupoleja on juuri kolmetoista?",
+    "Kuka varasti ikonin ja miten se löytyi?",
+    "Miksi Helsinkiin rakennettiin ortodoksinen katedraali?",
+    "Voiko katedraalissa käydä jumalanpalveluksessa?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Punatiilinen kirkko Katajanokan kalliolla; kolmetoista kullattua sipulikupolia kuvaa Kristusta ja kahtatoista apostolia.",
+     "url": "https://en.wikipedia.org/wiki/Uspenski_Cathedral"
+    },
+    {
+     "vaite": "Seitsemänsataatuhatta tiiltä tuotiin proomuilla Krimin sodassa puretusta Bomarsundin linnoituksesta Ahvenanmaalta.",
+     "url": "https://en.wikipedia.org/wiki/Uspenski_Cathedral"
+    },
+    {
+     "vaite": "Vihittiin 25.10.1868; Länsi-Euroopan suurin ortodoksinen kirkko.",
+     "url": "https://en.wikipedia.org/wiki/Uspenski_Cathedral"
+    },
+    {
+     "vaite": "Kozeltšanin Jumalanäidin ihmeitätekevä ikoni varastettiin kesäkuussa 2010; helmikuussa 2011 varas kertoi poliisille kätkön, ikoni oli ollut maan ja lumen alla, se korjattiin ja palautettiin 2011.",
+     "url": "https://johnsanidopoulos.com/2011/08/theotokos-of-kozeltshan-icon-restored.html?m=1"
+    },
+    {
+     "vaite": "Suunnittelija Aleksei Gornostajev kuoli 1862; kirkko rakennettiin hänen kuolemansa jälkeen 1862–1868.",
+     "url": "https://en.wikipedia.org/wiki/Uspenski_Cathedral"
+    },
+    {
+     "vaite": "Ikonostaasissa evankelistat reunustavat ehtoollista ja taivaaseenastumista esittäviä kuvia.",
+     "url": "https://www.lonelyplanet.com/points-of-interest/uspenski-cathedral/1185226"
+    }
+   ]
+  },
+  {
+   "id": "Q1329554",
+   "nimi": "Senaatintori",
+   "kuvaus": "Engelin empireaukio",
+   "luokka": "aukio",
+   "koko_m": 170,
+   "teksti": "Senaatintori on Carl Ludvig Engelin suunnittelema empireaukio, jota reunustavat tuomiokirkko pohjoisessa, valtioneuvoston linna idässä ja yliopiston päärakennus lännessä. Aukio määrättiin uuden pääkaupungin pääaukioksi vuonna 1812 Johan Albrecht Ehrenströmin asemakaavassa. Keskellä seisoo Walter Runebergin veistämä keisari Aleksanteri toisen patsas vuodelta 1894. Se pystytettiin muistoksi siitä, että keisari kutsui Suomen valtiopäivät jälleen koolle vuonna 1863 ja antoi maalle lisää itsehallintoa. Jalustalla keisaria ympäröivät lakia, kulttuuria ja talonpoikia kuvaavat hahmot.",
+   "lyhyt": "Senaatintorin kaakkoiskulmassa seisoo Sederholmin talo, Helsingin vanhin kivitalo vuodelta 1757. Se rakennettiin yli puoli vuosisataa ennen kuin Helsingistä tehtiin pääkaupunki, joten se on vanhempi kuin koko Engelin empirekeskusta, joka nousi 1800-luvulla sen ympärille.",
+   "syventava": "Miksi aukiolla on keisarin patsas?",
+   "kysymykset": [
+    "Miksi aukiolla on Venäjän keisarin patsas?",
+    "Mitkä rakennukset aukiota reunustavat?",
+    "Mikä on Helsingin vanhin kivitalo?",
+    "Mitä Senaatintorilla tapahtuu nykyään?",
+    "Miksi Helsingistä tehtiin pääkaupunki?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Senaatintori esittelee Engelin arkkitehtuuria; reunoilla tuomiokirkko, valtioneuvoston linna ja yliopiston päärakennus.",
+     "url": "https://en.wikipedia.org/wiki/Senate_Square,_Helsinki"
+    },
+    {
+     "vaite": "Aukio määrättiin pääaukioksi 1812 Ehrenströmin asemakaavassa.",
+     "url": "kaanon:pelin-aineisto"
+    },
+    {
+     "vaite": "Walter Runebergin Aleksanteri II:n patsas pystytettiin 1894 muistoksi valtiopäivien palauttamisesta 1863 ja autonomiaa lisänneistä uudistuksista; jalustalla lakia, kulttuuria ja talonpoikia kuvaavat hahmot.",
+     "url": "https://en.wikipedia.org/wiki/Senate_Square,_Helsinki"
+    },
+    {
+     "vaite": "Sederholmin talo aukion kaakkoiskulmassa on Helsingin vanhin kivitalo vuodelta 1757.",
+     "url": "https://en.wikipedia.org/wiki/Senate_Square,_Helsinki"
+    },
+    {
+     "vaite": "Helsinki tuli pääkaupungiksi 1812, ja Engelin empirekeskus rakennettiin sen jälkeen.",
+     "url": "kaanon:pelin-aineisto"
+    }
+   ]
+  },
+  {
+   "id": "Q541933",
+   "nimi": "Kauppatori",
+   "kuvaus": "Eteläsataman tori",
+   "luokka": "aukio",
+   "koko_m": 200,
+   "teksti": "Kauppatori avautuu Eteläsataman rantaan, ja sitä reunustavat toisella puolella Esplanadin puisto ja toisella presidentinlinna. Torin keskellä seisoo punagraniittinen obeliski, Keisarinnankivi, Helsingin vanhin julkinen muistomerkki, jonka Engel piirsi vuonna 1835 keisarinna Aleksandran ensimmäisen vierailun muistoksi. Kesällä torilta ostetaan herneitä ja mansikoita, ja lokakuussa rantaan saapuvat kalastajat myymään silakkaa suoraan veneistään. Silakkamarkkinoita on pidetty joka vuosi vuodesta 1743. Rannasta lähtee myös lautta Suomenlinnaan, ja se kulkee ympäri vuoden.",
+   "lyhyt": "Kauppatorin laidalla Esplanadin päässä seisoo Ville Vallgrenin Havis Amanda -suihkulähde vuodelta 1908. Vapun aattona opiskelijat pesevät patsaan saippualla ja painavat sen päähän valkoisen ylioppilaslakin, ja tapa on jatkunut vuodesta 1921.",
+   "syventava": "Miksi torilla myydään silakkaa veneistä?",
+   "kysymykset": [
+    "Miksi silakkamarkkinat ovat juuri lokakuussa?",
+    "Kenen vierailua Keisarinnankivi muistaa?",
+    "Mitä torilta kannattaa maistaa nykyään?",
+    "Miksi Havis Amandalle laitetaan lakki?",
+    "Mistä Suomenlinnan lautta lähtee?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Suomenlinnan lautta lähtee Kauppatorilta ja kulkee ympäri vuoden.",
+     "url": "kaanon:pelin-aineisto"
+    },
+    {
+     "vaite": "Tori on Eteläsataman rannassa; sitä reunustavat Esplanadin puisto ja presidentinlinna.",
+     "url": "https://www.myhelsinki.fi/en/see-and-do/sights/market-square"
+    },
+    {
+     "vaite": "Keisarinnankivi on Engelin punagraniittinen obeliski, Helsingin vanhin julkinen muistomerkki, pystytetty 1835 keisarinna Aleksandran ensimmäisen vierailun muistoksi.",
+     "url": "https://www.myhelsinki.fi/en/see-and-do/sights/market-square"
+    },
+    {
+     "vaite": "Kesällä herneitä ja mansikoita, lokakuussa silakkaa suoraan veneistä; silakkamarkkinat joka vuosi vuodesta 1743.",
+     "url": "kaanon:pelin-aineisto"
+    },
+    {
+     "vaite": "Havis Amanda, Ville Vallgren 1908, torin länsilaidalla Esplanadin vieressä.",
+     "url": "https://www.myhelsinki.fi/en/see-and-do/sights/market-square"
+    },
+    {
+     "vaite": "Vapun aattona opiskelijat pesevät patsaan ja laittavat sille ylioppilaslakin; tapa vuodesta 1921.",
+     "url": "https://finland.fi/?p=67790"
+    }
+   ]
+  },
+  {
+   "id": "Q1132809",
+   "nimi": "Temppeliaukion kirkko",
+   "kuvaus": "Kallioon louhittu kirkko",
+   "luokka": "kirkko",
+   "koko_m": 60,
+   "teksti": "Temppeliaukion kirkko näkyy ylhäältä vain matalana kalliokumpareena, jonka keskellä hohtaa kuparinen kupoli. Veljekset Timo ja Tuomo Suomalainen louhivat kirkon kallion sisään sen sijaan, että olisivat rakentaneet sen päälle, ja kirkko avattiin vuonna 1969. Kupolin halkaisija on kaksikymmentäneljä metriä, ja sen pintaan on kierretty kuparilankaa kaksikymmentäkaksi kilometriä. Seinät jätettiin karkeaksi kiveksi kapellimestari Paavo Berglundin neuvosta, koska rosoinen pinta parantaa akustiikkaa. Nykyään kirkossa pidetään yli neljäsataa esitystä vuodessa.",
+   "lyhyt": "Temppeliaukion kirkon kupolin ja kallioseinän välissä kulkee kapea ikkunanauha, josta päivänvalo valuu saliin. Alttari on sijoitettu jääkaudella syntyneen kallionhalkeaman eteen, ja halkeama heijastaa ääntä, joten musiikki kaikuu kivessä kuin kanjonissa.",
+   "syventava": "Miksi kirkon seinät jätettiin karkeiksi?",
+   "kysymykset": [
+    "Miksi kirkko louhittiin kallion sisään?",
+    "Keitä olivat veljekset Suomalainen?",
+    "Miksi kirkossa pidetään niin paljon konsertteja?",
+    "Mistä kupolin kupari on peräisin?",
+    "Miten päivänvalo pääsee kallion sisään?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Veljekset Timo ja Tuomo Suomalainen suunnittelivat kirkon; avattiin 1969; louhittiin kallion sisään.",
+     "url": "https://en.wikipedia.org/wiki/Temppeliaukio_Church"
+    },
+    {
+     "vaite": "Kupolin halkaisija 24 metriä; kupolissa 22 kilometriä kuparilankaa; seinät jätettiin karkeiksi Paavo Berglundin neuvosta akustiikan vuoksi; yli 400 esitystä vuodessa.",
+     "url": "https://www.koreajoongangdaily.com/opinion/rock-and-refuge-finlands-temppeliaukio-church-blends-nature-and-faith/11974203"
+    },
+    {
+     "vaite": "Kapeat kattoikkunat palkkien välissä päästävät päivänvalon sisään; alttari jääkaudella syntyneen halkeaman edessä heijastaa ääntä kuin kanjonissa.",
+     "url": "https://www.koreajoongangdaily.com/opinion/rock-and-refuge-finlands-temppeliaukio-church-blends-nature-and-faith/11974203"
+    }
+   ]
+  },
+  {
+   "id": "Q1044613",
+   "nimi": "Helsingin päärautatieasema",
+   "kuvaus": "Eliel Saarisen graniittiasema",
+   "luokka": "rakennus",
+   "koko_m": 200,
+   "teksti": "Helsingin päärautatieasema erottuu ylhäältä graniittisena kokonaisuutena, jonka laidalta kohoaa lähes viisikymmentä metriä korkea kellotorni. Asemarakennuksen suunnitteli Eliel Saarinen, työt alkoivat vuonna 1905, ja asema valmistui vuonna 1919. Pääovea vartioi neljä graniittista lyhdynkantajaa, joiden käsissä pallolamput syttyvät illalla. Emil Wikström veisti ne vuonna 1914 saman kipsimallin mukaan, joten kaikki neljä ovat sama mies. Nykyään hahmot tunnetaan Kivimiehinä, ja niille on puettu muun muassa jääkiekkomaajoukkueen pelipaidat ja kasvomaskit.",
+   "lyhyt": "Helsingin päärautatieaseman kautta kulkee arviolta kaksisataatuhatta matkustajaa päivässä, joten se on Suomen vilkkain rakennus. Arkkitehti Eliel Saarisen ehdotus valittiin aikanaan kahdenkymmenenyhden kilpailuehdotuksen joukosta, ja koko massiivinen rakennus verhoiltiin suomalaisella graniitilla.",
+   "syventava": "Kuka oli kivimiesten malli?",
+   "kysymykset": [
+    "Kuka oli lyhdynkantajien malli?",
+    "Miksi kaikki neljä kivimiestä ovat samannäköisiä?",
+    "Mitä kivimiehille on puettu vuosien varrella?",
+    "Kuka oli arkkitehti Eliel Saarinen?",
+    "Kuinka korkea aseman kellotorni on?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Kellotorni on 48,5 metriä korkea (noin viisikymmentä metriä).",
+     "url": "https://buffaloah.com/a/virtual/fin/hel/rail/ext.html"
+    },
+    {
+     "vaite": "Eliel Saarisen suunnittelema asema; rakentaminen alkoi 1905; avattiin 1919; graniittiverhous.",
+     "url": "https://www.myhelsinki.fi/en/see-and-do/sights/helsinki-central-railway-station"
+    },
+    {
+     "vaite": "Neljä Emil Wikströmin graniittista lyhdynkantajaa pallolamppuineen pääoven molemmin puolin; lamput valaistu iltaisin.",
+     "url": "https://www.myhelsinki.fi/en/see-and-do/sights/helsinki-central-railway-station"
+    },
+    {
+     "vaite": "Wikström veisti hahmot 1914 saman kipsimallin mukaan; VR:n kampanjan Kivimiehet; puettu jääkiekkomaajoukkueen pelipaitoihin ja kasvomaskeihin.",
+     "url": "kaanon:pelin-aineisto"
+    },
+    {
+     "vaite": "Noin 200 000 matkustajaa päivässä, Suomen vilkkain rakennus; Saarinen valittiin 21 ehdotuksen joukosta; suomalainen graniitti.",
+     "url": "https://www.myhelsinki.fi/en/see-and-do/sights/helsinki-central-railway-station"
+    }
+   ]
+  },
+  {
+   "id": "Q18659999",
+   "nimi": "Oodi",
+   "kuvaus": "Helsingin keskustakirjasto",
+   "luokka": "rakennus",
+   "koko_m": 150,
+   "teksti": "Oodi on Kansalaistorin laidalla kaartuva keskustakirjasto, jonka julkisivu on verhoiltu suomalaisella kuusilaudalla. Se avattiin itsenäisyyspäivän aattona vuonna 2018, ja se oli valtion ja Helsingin lahja Suomen satavuotisjuhlaan. Ylin kerros on kirjataivaaksi kutsuttu avara lukusali, jonka aaltoilevassa katossa on pyöreitä kattoikkunoita. Toisessa kerroksessa voi kirjojen lisäksi käyttää ompelukoneita, kolmiulotteisia tulostimia ja äänitysstudioita, ja talossa on myös elokuvateatteri ja kahvila. Pian valmistumisensa jälkeen Oodi valittiin maailman parhaaksi uudeksi yleiseksi kirjastoksi.",
+   "lyhyt": "Oodin ylimmän kerroksen laaja terassi katsoo suoraan aukion yli eduskuntatalon portaille. Paikka valittiin tarkoituksella: kirjasto ja kansanedustajat ovat aukion eri puolilla vastakkain, ja kirjastolain mukaan kirjastojen tehtävä on edistää sivistystä, demokratiaa ja sananvapautta.",
+   "syventava": "Mitä Oodissa voi tehdä kirjojen lisäksi?",
+   "kysymykset": [
+    "Miksi kirjasto rakennettiin eduskuntataloa vastapäätä?",
+    "Mitä Oodissa voi tehdä kirjojen lisäksi?",
+    "Miksi kirjaston nimi on Oodi?",
+    "Kuka Oodin suunnitteli?",
+    "Miksi ylintä kerrosta kutsutaan kirjataivaaksi?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Oodi on Kansalaistorin laidalla; julkisivu on verhoiltu suomalaisella kuusilaudalla, joka kaartuu katokseksi.",
+     "url": "https://worldarchitecture.org/architecture-news/epghp/ala-architects-cloudlike-oodi-helsinki-central-library-is-stretched-with-wooden-volume.html"
+    },
+    {
+     "vaite": "Avattiin 5.12.2018 itsenäisyyspäivän aattona; valtion ja Helsingin lahja satavuotiaalle Suomelle.",
+     "url": "https://valtioneuvosto.fi/-/1410845/uuden-ajan-kirjasto-oodi-aukeaa-itsenaisyyspaivan-aattona"
+    },
+    {
+     "vaite": "Ylin kerros on kirjataivas, avara lukusali aaltoilevan katon alla pyöreine kattoikkunoineen.",
+     "url": "https://www.dezeen.com/2019/01/10/helsinki-central-library-oodi-ala-architects/"
+    },
+    {
+     "vaite": "Toisessa kerroksessa ompelukoneet, 3D-tulostimet ja äänitysstudiot.",
+     "url": "https://www.myhelsinki.fi/fi/vieraile/helsingin-upeimmat-kirjastot/"
+    },
+    {
+     "vaite": "Rakennuksessa on elokuvateatteri ja kahvila.",
+     "url": "https://www.hel.fi/fi/kulttuuri-ja-vapaa-aika/kirjaston-kumppanuudet"
+    },
+    {
+     "vaite": "Valittiin pian valmistumisen jälkeen maailman parhaaksi uudeksi yleiseksi kirjastoksi.",
+     "url": "kaanon:pelin-aineisto"
+    },
+    {
+     "vaite": "Terassilta katsotaan suoraan aukion yli eduskuntatalon portaille; sijainti symboloi hallinnon ja kansan suhdetta ja kirjastolain tehtävää edistää elinikäistä oppimista, kansalaisuutta, demokratiaa ja sananvapautta.",
+     "url": "https://worldarchitecture.org/architecture-news/epghp/ala-architects-cloudlike-oodi-helsinki-central-library-is-stretched-with-wooden-volume.html"
+    }
+   ]
+  },
+  {
+   "id": "Q1633361",
+   "nimi": "Kiasma",
+   "kuvaus": "Nykytaiteen museo",
+   "luokka": "rakennus",
+   "koko_m": 130,
+   "teksti": "Kiasma on nykytaiteen museo, jonka kaareva siipi kiertyy suoran rakennusosan rinnalle ja risteää sen kanssa. Amerikkalainen arkkitehti Steven Holl voitti suunnittelukilpailun vuonna 1993 yli viidensadan ehdotuksen joukosta. Ehdotuksen nimi oli kreikan sana chiasma, joka tarkoittaa ristikkäin menevää kohtaa, ja suomalaistettu Kiasma jäi koko museon nimeksi. Museo avattiin toukokuussa 1998. Rakennus herätti aikanaan kiivasta vastustusta muun muassa siksi, että se nousi aivan marsalkka Mannerheimin ratsastajapatsaan viereen.",
+   "lyhyt": null,
+   "syventava": "Miksi Kiasma herätti vastustusta?",
+   "kysymykset": [
+    "Miksi Kiasma herätti aikanaan vastustusta?",
+    "Mitä nimi Kiasma tarkoittaa?",
+    "Kuka oli arkkitehti Steven Holl?",
+    "Millaista taidetta Kiasmassa on nyt esillä?",
+    "Kenen ratsastajapatsas seisoo museon vieressä?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Hollin ehdotus yhdistää suoran ja kaarevan rakennusosan, jotka risteävät.",
+     "url": "https://en.wikipedia.org/wiki/Kiasma"
+    },
+    {
+     "vaite": "Steven Hollin ehdotus Chiasma valittiin 516 ehdotuksen joukosta 1993; nimi tarkoittaa risteyskohtaa, suomalaistettiin Kiasmaksi ja siitä tuli museon nimi.",
+     "url": "https://en.wikipedia.org/wiki/Kiasma"
+    },
+    {
+     "vaite": "Museo avattiin toukokuussa 1998.",
+     "url": "https://en.wikipedia.org/wiki/Kiasma"
+    },
+    {
+     "vaite": "Rakennus oli kiistanalainen muun muassa Mannerheimin ratsastajapatsaan läheisyyden vuoksi.",
+     "url": "https://en.wikipedia.org/wiki/Kiasma"
+    }
+   ]
+  },
+  {
+   "id": "Q2744984",
+   "nimi": "Eduskuntatalo",
+   "kuvaus": "Suomen eduskunnan istuntotalo",
+   "luokka": "rakennus",
+   "koko_m": 120,
+   "teksti": "Eduskuntatalo kohoaa Mannerheimintien varrella Arkadianmäellä punertavana graniittimassana, jonka julkisivua rytmittää neljätoista korinttilaista pylvästä. Johan Sigfrid Sirénin suunnittelemaa taloa alettiin rakentaa vuonna 1926, ja se vihittiin käyttöön maaliskuussa 1931. Hienojakoinen punertava graniitti on peräisin Kalvolasta, ja siitä on tehty myös pylväiden yläosat. Talon sydän on pyöreä täysistuntosali, jossa istuu kaksisataa kansanedustajaa. Vuonna 2018 aukion toiselle puolelle valmistui keskustakirjasto Oodi, ja kirjaston terassilta näkee suoraan eduskunnan portaille.",
+   "lyhyt": null,
+   "syventava": "Miksi Oodi rakennettiin eduskuntaa vastapäätä?",
+   "kysymykset": [
+    "Miksi täysistuntosali on pyöreä?",
+    "Kuka oli arkkitehti Johan Sigfrid Sirén?",
+    "Voiko eduskunnan istuntoja seurata paikan päällä?",
+    "Mistä talon punertava graniitti on peräisin?",
+    "Missä eduskunta kokoontui ennen tätä taloa?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Talo sijaitsee Mannerheimintiellä Arkadianmäellä; Sirén suunnitteli; rakennettiin 1926–1931; vihittiin 7.3.1931; keskellä pyöreä täysistuntosali.",
+     "url": "https://finnisharchitecture.fi/parliament-house/"
+    },
+    {
+     "vaite": "Neljätoista korinttilaista pylvästä; pylväiden kapiteelit punaista Kalvolan graniittia; julkisivu hienojakoista punertavaa Kalvolan graniittia.",
+     "url": "https://en.wikipedia.org/wiki/Parliament_House,_Helsinki"
+    },
+    {
+     "vaite": "Eduskunnassa on kaksisataa kansanedustajaa.",
+     "url": "https://en.wikipedia.org/wiki/Parliament_of_Finland"
+    },
+    {
+     "vaite": "Oodi avattiin 2018 Kansalaistorin laidalle eduskuntatalon vastapäätä; terassilta näkee eduskunnan portaille.",
+     "url": "https://worldarchitecture.org/architecture-news/epghp/ala-architects-cloudlike-oodi-helsinki-central-library-is-stretched-with-wooden-volume.html"
+    }
+   ]
+  },
+  {
+   "id": "Q332219",
+   "nimi": "Helsingin olympiastadion",
+   "kuvaus": "Vuoden 1952 olympialaisten stadion",
+   "luokka": "rakennus",
+   "koko_m": 250,
+   "teksti": "Helsingin olympiastadion erottuu ylhäältä valkoisena soikiona, jonka laidalta nousee kapea, valkoinen torni. Torni on seitsemänkymmentäkaksi metriä ja seitsemänkymmentäyksi senttiä korkea, täsmälleen yhtä pitkä kuin Matti Järvisen keihäänheitto, jolla hän voitti olympiakultaa vuonna 1932. Vuoden 1952 kesäolympialaisten avajaisissa Paavo Nurmi sytytti stadionilla tulen, ja tornin huipulla pääsoihdun sytytti Hannes Kolehmainen. Silloin katsomoon mahtui yli seitsemänkymmentätuhatta ihmistä. Stadion peruskorjattiin perusteellisesti neljän vuoden ajan, ja se avautui uudelleen vuonna 2020.",
+   "lyhyt": null,
+   "syventava": "Miksi torni on juuri sen korkuinen?",
+   "kysymykset": [
+    "Miksi tornin korkeus on juuri tuo?",
+    "Kuka oli juoksija Paavo Nurmi?",
+    "Pääseekö stadionin tornin huipulle nykyään?",
+    "Mitä stadionilla järjestetään nykyään?",
+    "Miksi olympialaiset pidettiin aikanaan Helsingissä?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Tornin korkeus 72,71 metriä, Matti Järvisen vuoden 1932 olympiavoittoheiton pituus.",
+     "url": "https://en.wikipedia.org/wiki/Helsinki_Olympic_Stadium"
+    },
+    {
+     "vaite": "Paavo Nurmi sytytti tulen stadionilla 19.7.1952; Hannes Kolehmainen sytytti pääsoihdun tornin huipulla.",
+     "url": "https://olympics.com/en/olympic-games/helsinki-1952/torch-relay"
+    },
+    {
+     "vaite": "Vuoden 1952 olympialaisissa yli 70 000 katsomopaikkaa.",
+     "url": "https://en.wikipedia.org/wiki/Helsinki_Olympic_Stadium"
+    },
+    {
+     "vaite": "Viimeisin peruskorjaus 2016–2020 eli neljä vuotta.",
+     "url": "https://en.wikipedia.org/wiki/Helsinki_Olympic_Stadium"
+    }
+   ]
+  },
+  {
+   "id": "Q1635596",
+   "nimi": "Linnanmäki",
+   "kuvaus": "Helsingin huvipuisto",
+   "luokka": "puisto",
+   "koko_m": 400,
+   "teksti": "Linnanmäki on huvipuisto vanhalla vesitornimäellä, ja ylhäältä laitteiden joukosta erottuu puisen Vuoristoradan ristikko. Puisto avattiin vuonna 1950 ja Vuoristorata seuraavana kesänä, jolloin se oli Pohjoismaiden suurin vuoristorata. Se on yksi maailman harvoista radoista, joilla junan vauhtia hidastetaan käsin, sillä jokaisen junan takaosassa istuu korotetulla paikalla jarrumestari. Ensimmäiset jarrumestarit olivat entisiä lentäjiä, jotka hakivat työtä lehti-ilmoituksen perusteella. Huvipuiston omistaa Lasten Päivän Säätiö, ja tuotto jaetaan lastensuojelujärjestöille.",
+   "lyhyt": null,
+   "syventava": "Miksi Vuoristoradalla on jarrumestari?",
+   "kysymykset": [
+    "Miksi Vuoristoradan junaa jarrutetaan käsin?",
+    "Keitä olivat ensimmäiset jarrumestarit?",
+    "Mihin huvipuiston tuotto käytetään?",
+    "Mikä on Linnanmäen uusin laite?",
+    "Miksi mäellä oli ennen vesitorni?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Huvipuisto avattiin 1950 vanhalle vesitornimäelle; Vuoristorata 13.7.1951; jarrumestari junan takaosassa; omistaja Lasten Päivän Säätiö, tuotto lastensuojelujärjestöille.",
+     "url": "kaanon:pelin-aineisto"
+    },
+    {
+     "vaite": "Vuoristorata oli avattaessa Pohjoismaiden suurin vuoristorata.",
+     "url": "https://en.wikipedia.org/wiki/Vuoristorata"
+    },
+    {
+     "vaite": "Jarrumestari istuu korotetulla paikalla joka junassa; ensimmäiset olivat entisiä lentäjiä, jotka hakivat lehti-ilmoituksen perusteella.",
+     "url": "https://www.linnanmaki.fi/en/history-of-vuoristorata/"
+    }
+   ]
+  },
+  {
+   "id": "Q2584017",
+   "nimi": "Sibelius-monumentti",
+   "kuvaus": "Teräsputkista tehty muistomerkki",
+   "luokka": "muu",
+   "koko_m": 30,
+   "teksti": "Sibelius-monumentti seisoo Töölössä Sibeliuksen puistossa, ja ylhäältä se näkyy hopeisena putkiryppäänä puiden keskellä. Eila Hiltusen teos koostuu yli kuudestasadasta haponkestävästä teräsputkesta ja painaa kaksikymmentäneljä tonnia, ja korkeutta sillä on kahdeksan ja puoli metriä. Se paljastettiin syyskuussa 1967, kymmenen vuotta säveltäjän kuoleman jälkeen, ja sen nimi on Passio Musicae. Kilpailu muistomerkistä oli kiivas, sillä abstraktin ja esittävän taiteen kannattajat ottivat siinä yhteen. Riita ratkaistiin lisäämällä putkien viereen Sibeliuksen kasvot.",
+   "lyhyt": null,
+   "syventava": "Miksi viereen lisättiin Sibeliuksen kasvot?",
+   "kysymykset": [
+    "Miksi muistomerkki on tehty teräsputkista?",
+    "Miksi viereen lisättiin Sibeliuksen kasvot?",
+    "Kuka oli kuvanveistäjä Eila Hiltunen?",
+    "Soiko muistomerkki tuulessa?",
+    "Mitä Sibeliuksen musiikkia kannattaa kuunnella ensin?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Muistomerkki on Sibeliuksen puistossa Töölössä; Sibelius kuoli 1957; paljastettiin 7.9.1967.",
+     "url": "https://en.wikipedia.org/wiki/Sibelius_Monument"
+    },
+    {
+     "vaite": "Yli 600 haponkestävää teräsputkea, paino 24 tonnia; korkeus 8,5 metriä; nimi Passio Musicae; kiistanalainen kilpailu abstraktin ja esittävän taiteen välillä ratkaistiin lisäämällä Sibeliuksen rintakuva.",
+     "url": "https://en.wikipedia.org/wiki/Sibelius_Monument"
+    }
+   ]
+  },
+  {
+   "id": "Q1418136",
+   "nimi": "Suomen kansallismuseo",
+   "kuvaus": "Kansallisromanttinen historiamuseo",
+   "luokka": "rakennus",
+   "koko_m": 120,
+   "teksti": "Suomen kansallismuseo nousee Mannerheimintien varrella kuin keskiaikainen kivikirkko, ja sen kapea torni on viisikymmentäkahdeksan metriä korkea. Rakennuksen piirsi arkkitehtitoimisto Gesellius, Lindgren ja Saarinen, ja vaikka talo valmistui jo vuonna 1910, museo avattiin yleisölle vasta vuonna 1916. Talon muodot lainaavat Suomen keskiaikaisia kirkkoja ja linnoja, ja se edustaa kansallisromantiikkaa. Aulan holvikatossa ovat Akseli Gallen-Kallelan Kalevala-aiheiset freskot vuodelta 1928. Niissä taotaan ja puolustetaan Sampoa, kynnetään kyistä peltoa ja pyydetään suurta haukea.",
+   "lyhyt": null,
+   "syventava": "Mitä aulan freskot kertovat?",
+   "kysymykset": [
+    "Mitä aulan holvikaton freskot esittävät?",
+    "Miksi museo muistuttaa keskiaikaista kirkkoa?",
+    "Mikä on museon vanhin esine?",
+    "Keitä olivat Gesellius, Lindgren ja Saarinen?",
+    "Mitä Sampo Kalevalassa tarkoittaa?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Gesellius, Lindgren ja Saarinen suunnittelivat; rakennettiin 1905–1910, avattiin yleisölle 1916; torni 58 metriä; muodot lainaavat keskiaikaisia kirkkoja ja linnoja; kansallisromantiikkaa.",
+     "url": "https://en.wikipedia.org/wiki/National_Museum_of_Finland"
+    },
+    {
+     "vaite": "Aulan holveissa Gallen-Kallelan Kalevala-freskot vuodelta 1928: Sammon taonta, Sammon puolustus, Ilmarinen kyntää kyisen pellon ja Iso hauki.",
+     "url": "https://en.wikipedia.org/wiki/National_Museum_of_Finland"
+    },
+    {
+     "vaite": "Museo sijaitsee Mannerheimintien varrella.",
+     "url": "https://www.kansallismuseo.fi/en/kansallismuseo/historiaa"
+    }
+   ]
+  },
+  {
+   "id": "Q754507",
+   "nimi": "Ateneum",
+   "kuvaus": "Kansallisgallerian taidemuseo",
+   "luokka": "rakennus",
+   "koko_m": 100,
+   "teksti": "Ateneum on Rautatientorin laidalla seisova taidemuseo, jonka julkisivu kertoo talon alkuperäisen tarkoituksen. Pääoven yllä ovat Rafaelin, Pheidiaan ja Bramanten rintakuvat, ja keskellä neljä naishahmoa kannattelee päätykolmiota: ne kuvaavat arkkitehtuuria, geometriaa, maalaustaidetta ja kuvanveistoa. Theodor Höijerin suunnittelema rakennus valmistui vuonna 1887 taidekoulujen ja kokoelmien yhteiseksi kodiksi. Museossa on Vincent van Goghin maalaus Katu Auvers-sur-Oisessa. Kun se tuli Ateneumiin vuonna 1903, Ateneumista tuli maailman ensimmäinen museo, jonka kokoelmissa oli van Gogh.",
+   "lyhyt": null,
+   "syventava": "Miten van Gogh päätyi Helsinkiin?",
+   "kysymykset": [
+    "Miten van Goghin maalaus päätyi Helsinkiin?",
+    "Keitä julkisivun rintakuvat esittävät?",
+    "Mikä on Ateneumin tunnetuin suomalainen maalaus?",
+    "Mitä Ateneumissa oli ennen taidemuseota?",
+    "Mitä julkisivun latinankielinen teksti tarkoittaa?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Theodor Höijer suunnitteli, valmistui 1887; pääoven yllä Rafael, Pheidias ja Bramante; neljä karyatidia kuvaavat arkkitehtuuria, geometriaa, maalaustaidetta ja kuvanveistoa; rakennettiin taidekoulujen ja kokoelmien taloksi.",
+     "url": "https://www.finnisharchitecture.fi/projects/ateneum-art-museum"
+    },
+    {
+     "vaite": "Van Goghin Katu Auvers-sur-Oisessa tuli Ateneumiin 1903, ja se oli maailman ensimmäinen museokokoelma, jossa oli van Gogh.",
+     "url": "https://en.wikipedia.com/wiki/Ateneum"
+    },
+    {
+     "vaite": "Ateneum sijaitsee Rautatientorin laidalla.",
+     "url": "https://www.myhelsinki.fi/en/see-and-do/sights/helsinki-central-railway-station"
+    }
+   ]
+  }
+ ]
+}
