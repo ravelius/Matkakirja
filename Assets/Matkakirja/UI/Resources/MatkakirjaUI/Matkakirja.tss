@@ -19,6 +19,7 @@
 @import url("Pohjat/ohjausnappi.uss");
 @import url("Pohjat/galleria.uss");
 @import url("Pohjat/iss-ohjaamo.uss");
+@import url("Pohjat/metrolinja.uss");
 @import url("Pohjat/Pinnat/dialogit.uss");
 @import url("Pohjat/Pinnat/lautapeli.uss");
 @import url("Pohjat/Pinnat/maakuntakortti.uss");

@@ -152,6 +152,32 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(s2.Nykyinen == null, "kohteeseen siirryttäessä sama");
         }
 
+        // Omistaja 7.10. 10.3x "yksi esitys + Kerro lisää": kierroksella Kerro lisää keskeyttää, pyytää pitkän tekstin, JATKA seuraavasta.
+        [Testi] static void KerroLisaaKierroksella()
+        {
+            var (s, p, _) = Pysahdyksella();
+            s.AloitaKierros(new List<(string, double, double)> { ("K1", 55.6761, 12.5683), ("K2", 55.6800, 12.5800), ("K3", 55.6850, 12.5900) });
+            Oleta.Tosi(s.KierrosKaynnissa);
+            int n = p.Count;
+            Oleta.Tosi(s.KerroLisaa());
+            Oleta.Tosi(s.KierrosKeskeytetty && !s.KierrosKaynnissa && s.PitkaPyynto, "keskeytetty ja pitkä pyyntö");
+            Oleta.Tosi(p.Count > n && p[^1].t.Contains("kerro lisää"), "toive kerro lisää");
+            Oleta.Tosi(s.JatkaKierrosta() && s.KierrosKaynnissa, "jatko");
+        }
+
+        // Omistaja 7.10. 12.4x: esityksen avaus ja opastus ensin, ei workerin kaupunkikysymystä niiden päälle.
+        [Testi] static void EsityksenAvausPysayttaaPyynnot()
+        {
+            var (s, p, _) = Pysahdyksella();
+            s.PyynnotSeis = true;
+            int n = p.Count;
+            s.VaihdaPaikka(48.8566, 2.3522, "Pariisi");
+            for (int i = 0; i < 100; i++) s.Paivita(0.1, _ => 5);
+            Oleta.Sama(n, p.Count, "ei pyyntöjä avauksen aikana");
+            s.AloitaKierros(new List<(string, double, double)> { ("Notre-Dame", 48.853, 2.3499), ("Louvre", 48.8606, 2.3376) });
+            Oleta.Tosi(!s.PyynnotSeis && p.Count > n, "kierros purkaa ja pyytää");
+        }
+
         [Testi] static void KaupunginSisallaLennetaan()
         {
             var (s, p, puhe) = Pysahdyksella();

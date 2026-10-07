@@ -36,6 +36,12 @@ namespace Matkakirja.Natiivi
         /// <summary>Lukon pitäjät (testikomentojen tilaraporttiin).</summary>
         public static int Omistajia => omistajat.Count;
 
+        /// <summary>Lukon pitäjien tyypit (Mac-ohjauslevyn diagnostiikka 7.10.2026).</summary>
+        public static string Kuvaus
+        {
+            get { var l = new List<string>(); foreach (var o in omistajat) l.Add(o == null ? "null" : o.GetType().Name); return string.Join(", ", l); }
+        }
+
         /// <summary>Estää pallon syötteen, kunnes sama omistaja kutsuu Vapauta. Toistuva kutsu ei kasvata lukkoa.</summary>
         public static void Esta(object omistaja)
         {

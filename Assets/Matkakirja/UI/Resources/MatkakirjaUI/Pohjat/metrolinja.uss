@@ -1,0 +1,60 @@
+/* METROLINJA-pohja (omistaja 7.10.2026 klo 10.2x, Päätoimittajan kortti; Pariisin kaupunkiesitys): kierroksen eteneminen pystyviivana.
+ * Omistaja 12.3x: EI taustaväriä; teksti, pisteet ja viiva oppaan otsikon valkoisella (harmaan teeman --tk-korostus) ja samalla
+ * varjolla ja ääriviivalla (koodista, Tyylikirja.Himmennys kuten KierrosTaulun otsikko), jotta erottuu vaaleaa ja tummaa karttaa
+ * vasten. Porrastus nykyinen > viereiset > muut (koko, paino, peitto) koodista; vaihto pehmeästi ~1 s kuumailmapallon lähtiessä.
+ * iPhonella vasen yläkulma, iPadilla vasen reuna keskellä; korkeus enintään 40 %. Pitkä nimi yhdelle riville (…). VAIN --tk-*. */
+.mk-metrolinja {
+    position: absolute;
+    padding: 0;   /* ei taustaa (omistaja 12.3x) → ei sisäreunusta; nimet saavat koko leveyden */
+    justify-content: space-between;
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: var(--tk-kesto-sulku);
+}
+
+.mk-metrolinja.mk-metrolinja--nakyy {
+    opacity: 1;
+}
+
+.mk-metrolinja__viiva,
+.mk-metrolinja__kuljettu {
+    position: absolute;
+    width: 2px;
+    background-color: var(--tk-korostus);
+    opacity: 0.45;
+}
+
+.mk-metrolinja__kuljettu {
+    opacity: 1;
+}
+
+.mk-metrolinja__asema {
+    flex-direction: row;
+    align-items: center;
+    min-height: 0;
+}
+
+.mk-metrolinja__paikka {
+    width: 12px;
+    height: 12px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.mk-metrolinja__piste {
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+    background-color: var(--tk-korostus);
+}
+
+.mk-metrolinja__nimi {
+    margin-left: var(--tk-vali-s);
+    font-size: var(--tk-koko-kapiteeli);
+    color: var(--tk-korostus);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex-shrink: 1;
+}
