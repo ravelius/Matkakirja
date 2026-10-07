@@ -64,7 +64,10 @@ NUI:n osa on `natiivi-ui/sallitut-157` 0f770be2. LS2:n lista on tiedostossa `pro
 - `linssiseppa/cozy-kaupunki` a010dc9a + 44b590d7: KaupunkiSaa (`#if COZY_URP`, oletuksena pois, Documents/kaupunki-saa.txt) ja kevennys `tyokalut/cozy_kevenna.py`, jolla appi kasvaa +68 Mt.
 - Siirtosepän `siirtoseppa/cozy-linna` 24eacd5a on tämän päällä.
 - Koe on kirjattu (`linssiseppa-cozy-20261007`). Vaihtoehto A (taivas ja pilvet) toimii, mutta oletusprofiili ei kelpaa: tarvitaan pehmeät pilvet ja ilmaperspektiivi horisonttiin. Sumu (B) on liian tiheä ja pitää sitoa korkeuteen. Sade ei näkynyt (selvitä partikkelit).
-- Seuraavaksi: kaupunkiprofiili kansioon Assets/Matkakirja/Saa/kaupunki.
+- Kaupunkiprofiili: `linssiseppa/cozy-profiili` ffba56f81 (cozy-kaupunki + master).
+  - Ilmaperspektiivi kirjoitetaan COZYn sumushaderin muuttujiin LateUpdatessa: utu kasvaa etäisyyden mukaan, ja näkyvyys asetetaan "utu"-arvolla km:nä.
+  - Pilvityyli on soft. Sadepartikkelit siirretään kaupunkikameran kerrokselle.
+  - Koeskripti on scratchpadin `ajo-cozy2.sh`; Julkaisija on jonottanut sen (~08.30).
 
 ## Muut
 
