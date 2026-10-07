@@ -18,7 +18,7 @@ huoneet 1–5. Ei uusia pohjia. Työt SeikkailuTapit.cs:ään (haara cbc92a25:n 
   Lahin-tunnukset) olemassa olevin kuvakkein.
 3 alkuilta: testi "seikkailussa ei näkyvää tekstiä" (paitsi löytö- ja tietokerrospohjat; kohta 11).
 TILA 7.10. 19.5x: vaihe 1 KUITATTU junaan 163 ja SHA Natiivisepälle = natiivi-ui/seikkailu-fp eb115fc3 (sisältää cbc92a25) (Pulun napautus →
-  tietokerros tai SeikkailuPelaaja.PuluVihje() kytketty). Seuraavaksi vaihe 2 (toimintonapin uudet tilat). Aiempi: 680be26a (cbc92a25:n päällä): OtaKatse() (oikean puoliskon
+  tietokerros tai SeikkailuPelaaja.PuluVihje() kytketty). VAIHE 2 kuittauksessa: natiivi-ui/seikkailu-verbi 754f090b (verbi SeikkailuEsineet.Toiminto). Seuraavaksi vaihe 3 (testi: ei näkyvää tekstiä). Aiempi: 680be26a (cbc92a25:n päällä): OtaKatse() (oikean puoliskon
   veto), oikea TAPPI testikytkin (OikeaTappi, oletus pois), napautus → SeikkailuPelaaja.Napautus(Vector2 px) (Siirtoseppä
   historia-fp d0f26d0b).
 Kontekstikuvakkeet (käsi, kaari, liekki) = omistajan päätettävä 13.3; toteuta VASTA kuittauksesta.
