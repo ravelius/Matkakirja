@@ -12,7 +12,8 @@
 //    piirretään kerran omalla kameralla RenderTextureen (UI/KaupunkiPalloKuva.cs) ja jaetaan kaikille napeille.
 //  - Puoli (omistaja 7.10. 12.4x: "Kreikassa kuumailmapallo jää Ateenan nostokortin taakse"): pallo kallistuu oletuksena vasemmalle;
 //    jos pelaajan kaupungin kutsukortti (Kutsuminiatyyri) on pisteen lähellä vasemmalla, pallo peilataan oikealle. Kortin paikka on
-//    lukittu kaupunkia kohden, joten puoli päätetään kerran (KaupunkiPalloMitat.Oikealle) eikä vaihdu zoomatessa.
+//    lukittu kaupunkia kohden, joten puoli päätetään kerran (KaupunkiPalloMitat.Oikealle) eikä vaihdu zoomatessa; vain korttia
+//    lähin pallo, ja maan vaihtuessa puolet päätetään uudelleen.
 //  - Tyylit: olemassa oleva ERIKOISNOSTOT-pohja (mk-erikoisnosto-paa, __kuva); nimi vain VoiceOverille.
 //  - Napautus: OpasSovitin.AvaaKaupunkitila(id) (LS1:n kaupunkitila, juna 159); lista OpasSovitin.SallitutLista / LataaSallitut. Pulu väistää palloa (Pulu.Alareuna, NakyvaAlueet).
 using System.Collections.Generic;
@@ -146,8 +147,23 @@ namespace Matkakirja.Natiivi
             if (maa != edellinenMaa)
             {
                 edellinenMaa = maa;
+                foreach (var x in pallot) x.PuoliPaatetty = false;   // uusi maa: puolet uudelleen pelaajan kaupungin kortin mukaan
                 Debug.Log($"MATKAKIRJA kaupunkipallot: maa {maa ?? "-"}, näkyvät: " + string.Join(", ",
                     pallot.Where(x => ErikoisnostoMitat.OmaMaa(PallonMaa(x), maa)).Select(x => x.Id).DefaultIfEmpty("-")));
+            }
+            // Kortti kuuluu pelaajan kaupunkiin: vain korttia lähin pallo ratkaisee puolensa (simu af5922b9: Sevillan kortti käänsi
+            // Granadan ja Tampereen kortti Helsingin pallon).
+            Pallo lahin = null;
+            if (!float.IsNaN(kk.x))
+            {
+                float pd = float.MaxValue;
+                foreach (var p in pallot)
+                    if (p.Peitto > 0f && kierto.RuutuPiste(p.Lat, p.Lon, out var rp))
+                    {
+                        var qp = juuri.WorldToLocal(RuntimePanelUtils.ScreenToPanel(juuri.panel, new Vector2(rp.x, Screen.height - rp.y)));
+                        float d = (qp - kk).sqrMagnitude;
+                        if (d < pd) { pd = d; lahin = p; }
+                    }
             }
             foreach (var p in pallot)
             {
@@ -157,7 +173,7 @@ namespace Matkakirja.Natiivi
                 if (p.Peitto <= 0f || !kierto.RuutuPiste(p.Lat, p.Lon, out var r)) { Nayta(p, false); continue; }
                 var q = juuri.WorldToLocal(RuntimePanelUtils.ScreenToPanel(juuri.panel, new Vector2(r.x, Screen.height - r.y)));
                 if (!KaupunkiPalloMitat.Ruutupaikka(q.x, q.y, koko, W, H, out float x, out float y)) { Nayta(p, false); continue; }
-                if (!p.PuoliPaatetty && KaupunkiPalloMitat.Oikealle(q.x, q.y, kk.x, kk.y, koko) is bool oikea)
+                if (!p.PuoliPaatetty && p == lahin && KaupunkiPalloMitat.Oikealle(q.x, q.y, kk.x, kk.y, koko) is bool oikea)
                 {
                     p.PuoliPaatetty = true;
                     if (oikea != p.Oikea) { p.Oikea = oikea; p.Kuva.style.scale = new Scale(new Vector3(oikea ? -1f : 1f, 1f, 1f)); }
