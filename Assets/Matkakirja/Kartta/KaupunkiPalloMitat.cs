@@ -11,14 +11,14 @@ namespace Matkakirja
     ///  - NÄKYVYYS ZOOMIN MUKAAN: pallot näkyvät, kun kameran korkeus on enintään NakyyAstiM (maan tasolta lähemmäs; kartan aloitusnäkymä ~1 500 km, simu 7.10.), ja
     ///    häivyttyvät HaipyyAlkaenM:stä alkaen; koko Euroopan näkymä (~6 500 km) ei täyty palloista (niukkuus).
     ///  - KOKO ZOOMIN MUKAAN: ruudulla vakiokokoinen kuten päät, mutta kasvaa lähestyessä logaritmisesti KokoKaukaPt → KokoLahiPt
-    ///    (LahiM:stä lähemmäs täysi koko). Kuoren osuus kuvasta on ~1/3 (köysi ja tuulikallistus), joten 72 pt → kuori ~24 pt.
+    ///    (LahiM:stä lähemmäs täysi koko). Kuoren osuus kuvasta on ~1/3 (köysi ja tuulikallistus), joten 84 pt → kuori ~28 pt (Päätoimittaja 7.10.: 1,5–2 × 44090c1a:n 17 × 37 pt).
     ///  - PAIKKA: pallon kuvan alareunan keskikohta (kori ja köysi) on kaupungin keskipisteessä; piilossa, kun piste on yli pallon
     ///    verran ruudun ulkopuolella. Ruudun koordinaatit, y alas.
     /// </summary>
     public static class KaupunkiPalloMitat
     {
         public const double NakyyAstiM = 2_600_000, HaipyyAlkaenM = 2_000_000, LahiM = 60_000;
-        public const float KokoKaukaPt = 72f, KokoLahiPt = 104f;
+        public const float KokoKaukaPt = 84f, KokoLahiPt = 120f;
         /// <summary>Kuvan pystysuunnassa köyden pää (kiinnityspiste) on näin korkealla kuvan alareunasta (osuus koosta).</summary>
         public const float AnkkuriOsuus = 0.03f;
 

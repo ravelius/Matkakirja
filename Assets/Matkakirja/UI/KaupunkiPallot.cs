@@ -5,7 +5,7 @@
 //
 //  - Pallo on karttaobjekti: nappi liikkuu kartan mukana, kuvan alareunan keskikohta (köyden pää) kaupungin keskipisteessä.
 //  - Näkyvyys ja koko zoomin mukaan (Kartta/KaupunkiPalloMitat.cs): näkyy kameran korkeudella ≤ 2 600 km (häivytys 2 000 km:stä),
-//    koko 72 → 104 pt lähestyessä. Piilossa pallon takapuolella, ruudun ulkopuolella sekä linssin, lentopelin, kaupunkikortin,
+//    koko 84 → 120 pt lähestyessä (osuma-ala = nappi ≥ 44 × 44 pt). Piilossa pallon takapuolella, ruudun ulkopuolella sekä linssin, lentopelin, kaupunkikortin,
 //    valikon ja muun kuin karttatilan aikana (kuten päät).
 //  - Malli: Linnanrakentajan kiinnitetty kuumailmapallo (ilmapallo-v1, keski). Kaikki pallot ovat samanlaisia, joten kuva
 //    piirretään kerran omalla kameralla RenderTextureen (UI/KaupunkiPalloKuva.cs) ja jaetaan kaikille napeille.
@@ -31,8 +31,8 @@ namespace Matkakirja.Natiivi
             public bool Nakyy;
         }
 
-        /// <summary>RenderTexturen sivu: suurin koko 104 pt × min(pikselisuhde, 3).</summary>
-        const int Pikselit = 312;
+        /// <summary>RenderTexturen sivu: suurin koko 120 pt × min(pikselisuhde, 3).</summary>
+        const int Pikselit = 360;
 
         readonly UiKerros kerros;
         readonly VisualElement juuri;
