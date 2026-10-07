@@ -175,3 +175,13 @@ test('esittely-indeksi: pilotti pariisi, praha, wien (vienti 7.10.)', async () =
   const { OPAS_AINEISTOT } = await import('../tools/pollo/aineistot.js');
   assert.deepEqual(OPAS_AINEISTOT.esittely, ['pariisi', 'praha', 'wien', 'rooma', 'lontoo', 'koopenhamina']);
 });
+
+test('avauksen lupaama alku: kierros alkaa esittelyn kierros[0]:sta, ei kameraa lähimmästä (Rooma: Forum, ei Trevi)', async () => {
+  const env = ymparisto();
+  env.OPAS_ESITTELY_TESTI = { testila: { ...ESITTELY, avaus: { teksti: 'Kierros alkaa Kohteesta 5.' }, kierros: ['Q105'] } };
+  const { d, malli } = await opas(env, { toive: 'Esittele kaupunki', istunto: 'a1' });
+  assert.equal(malli, 0); assert.equal(d.id, 'Q105'); assert.deepEqual(d.kierros, { numero: 1, maara: 8 });
+  const ilman = ymparisto();
+  ilman.OPAS_ESITTELY_TESTI = { testila: { ...ESITTELY, kierros: ['Q105'] } };
+  assert.equal((await opas(ilman, { toive: 'Esittele kaupunki', istunto: 'a2' })).d.id, 'Q100', 'ilman avausta lähin kuten ennen');
+});
