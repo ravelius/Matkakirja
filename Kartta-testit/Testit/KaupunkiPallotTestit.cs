@@ -1,4 +1,4 @@
-// KAUPUNKIOPAS KARTTAELEMENTTINÄ (Kartta/KaupunkiPalloMitat.cs): näkyvyys ja koko zoomin mukaan, pallon kiinnityspiste.
+// KAUPUNKIOPAS KARTTAELEMENTTINÄ (Kartta/KaupunkiPalloMitat.cs): koko zoomin mukaan, pallon kiinnityspiste, puoli kortista poispäin.
 using System;
 using Matkakirja;
 
@@ -7,18 +7,6 @@ namespace Matkakirja.Kartta.Testit
     static class KaupunkiPallotTestit
     {
         static bool Lahella(double a, double b, double tol = 1e-4) => Math.Abs(a - b) <= tol;
-
-        [Testi]
-        static void NakyvyysZoominMukaan()
-        {
-            Oleta.Tosi(KaupunkiPalloMitat.Peitto(20_000_000) == 0f, "koko pallo: piilossa");
-            Oleta.Tosi(KaupunkiPalloMitat.Peitto(KaupunkiPalloMitat.NakyyAstiM) == 0f, "raja: piilossa");
-            Oleta.Tosi(KaupunkiPalloMitat.Peitto(KaupunkiPalloMitat.HaipyyAlkaenM) == 1f, "häivytyksen alku: täysi");
-            Oleta.Tosi(KaupunkiPalloMitat.Peitto(5_000) == 1f, "kaupungin yllä: täysi");
-            double puoli = (KaupunkiPalloMitat.NakyyAstiM + KaupunkiPalloMitat.HaipyyAlkaenM) / 2;
-            Oleta.Tosi(Lahella(KaupunkiPalloMitat.Peitto(puoli), 0.5, 1e-5), "häivytys lineaarinen");
-            Oleta.Tosi(KaupunkiPalloMitat.Peitto(double.NaN) == 0f, "NaN: piilossa");
-        }
 
         [Testi]
         static void KokoKasvaaLahestyessa()

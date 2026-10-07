@@ -8,8 +8,8 @@ namespace Matkakirja
     /// (ErikoisnostoMitat). Puhdas geometria (ei UnityEngineä), testit Kartta-testit/Testit/KaupunkiPallotTestit.cs; käyttö
     /// UI/KaupunkiPallot.cs.
     ///
-    ///  - NÄKYVYYS ZOOMIN MUKAAN: pallot näkyvät, kun kameran korkeus on enintään NakyyAstiM (maan tasolta lähemmäs; kartan aloitusnäkymä ~1 500 km, simu 7.10.), ja
-    ///    häivyttyvät HaipyyAlkaenM:stä alkaen; koko Euroopan näkymä (~6 500 km) ei täyty palloista (niukkuus).
+    ///  - NÄKYVYYS: vain pelaajan nykyisen maan pallot kaikilla zoomeilla (omistaja 7.10. 12.5x; UI/KaupunkiPallot.cs, kuten
+    ///    kipsipäiden ErikoisnostoMitat.OmaMaa). NakyyAstiM on enää koon kaukaraja.
     ///  - KOKO ZOOMIN MUKAAN: ruudulla vakiokokoinen kuten päät, mutta kasvaa lähestyessä logaritmisesti KokoKaukaPt → KokoLahiPt
     ///    (LahiM:stä lähemmäs täysi koko). Kuoren osuus kuvasta on ~1/3 (köysi ja tuulikallistus), joten 84 pt → kuori ~28 pt (Päätoimittaja 7.10.: 1,5–2 × 44090c1a:n 17 × 37 pt).
     ///  - PAIKKA: pallon kuvan alareunan keskikohta (kori ja köysi) on kaupungin keskipisteessä; piilossa, kun piste on yli pallon
@@ -17,18 +17,10 @@ namespace Matkakirja
     /// </summary>
     public static class KaupunkiPalloMitat
     {
-        public const double NakyyAstiM = 2_600_000, HaipyyAlkaenM = 2_000_000, LahiM = 60_000;
+        public const double NakyyAstiM = 2_600_000, LahiM = 60_000;
         public const float KokoKaukaPt = 84f, KokoLahiPt = 120f;
         /// <summary>Kuvan pystysuunnassa köyden pää (kiinnityspiste) on näin korkealla kuvan alareunasta (osuus koosta).</summary>
         public const float AnkkuriOsuus = 0.03f;
-
-        /// <summary>Peitto 0…1 kameran korkeudesta (m): 1 HaipyyAlkaenM:iin asti, lineaarisesti 0:aan NakyyAstiM:ssä.</summary>
-        public static float Peitto(double korkeusM)
-        {
-            if (double.IsNaN(korkeusM) || korkeusM >= NakyyAstiM) return 0f;
-            if (korkeusM <= HaipyyAlkaenM) return 1f;
-            return (float)((NakyyAstiM - korkeusM) / (NakyyAstiM - HaipyyAlkaenM));
-        }
 
         /// <summary>Pallon koko ruutupisteinä kameran korkeudesta: log-interpolointi NakyyAstiM (kauka) → LahiM (lähi).</summary>
         public static float Koko(double korkeusM)
