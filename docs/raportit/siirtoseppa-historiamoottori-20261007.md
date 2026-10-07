@@ -152,3 +152,16 @@ luettavampia ilman opastusta, mikä sopii linjaan "ei opeteta"). Päätös omist
   paljastaa jotain) on valinnainen arvoituksen osa. Linnanrakentajan v45: kapea syvennys, luukku kiinni.
 - **V1 tehty koodina:** siirtoseppa/historia-h0 cf5a4379 (Ydin Seikkailu.Kavely + SeikkailuPelaaja, poikki kavely). Kosketustapit
   täysillä 2D-arvoilla pyydetään Natiivi-UI:lta TAPPI-pohjalla.
+
+## 12. OMISTAJAN PÄÄTÖS 7.10. 13.3x: PELIOSA ENSIN — työjärjestys
+
+Olavinlinnassa vain pystyleike (laituri → keittiö → kappeli). Esittelykierroksen kohtaukset jäädytetty (vain virhekorjaukset; vesipoika
+selin ja ilmeiden hionta jäävät). Kohtausten hahmot, äänet, eleet ja kasvot pelin huoneisiin; 31 repliikkiä (seikkailu/olavinlinna/
+repliikit-v1/manifest.json) huoneisiin 1–5; kappelin rautaluukku kiinni.
+
+| Järjestys | Välietappi | Sisältö | Arvio |
+|---|---|---|---|
+| E1 | Laituri → keittiö pelattavana (simuvideo) | V2 vene + soutajan repliikit (huone 1), V1 kävely, V3 vartija partiossa, V4 piiloutuminen; Fogg-hahmo kapselin tilalle | 7.10. ~20 |
+| E2 | Keittiön harhautus | V4 poiminta ja heitto (esine:*), vartijan etsintä äänen luo, keittiön repliikit (kokki, vesipoika), kiinni → tarkistuspiste | 8.10. ~12 |
+| E3 | Kappeli | V5 valoarvoitus kynttilöillä ja soihduilla (käsikirjoitus), kappalaisen repliikit, muuriportaat Tott-kammion kautta | 8.10. ~20 |
+| E4 | Pystyleike kokonaan | V6 tallennus tarkistuspisteisiin, V7 äänet (askeleet pinnoittain), valoisuus liekeistä, iPhone/iPad-suorituskyky, video omistajalle | 9.10. |
