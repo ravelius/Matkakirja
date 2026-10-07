@@ -8,6 +8,12 @@ AD119F7B-A2A2-43EE-8769-7326DD757F89; lopuksi sammutus ja "simu vapaa".
 
 ## TILA 7.10. klo 10.3x (uusin)
 
+- ISS-JALKA (omistaja 10.5x, TF 159 iPad vaaka): natiivi-ui/iss-jalka 7f262261 (master BUILD 159 päällä, wt/proto-natiivi-ui-issjalka):
+  jalka aina kun paneelin alle jää rakoa (ennen vain pysty), varoitus lokiin puuttuvasta kuvasta. Odottaa käännöstä + skriptit/
+  vuoro-issjalka.sh <app> (iPhone pysty/vaaka, iPad vaaka/pysty) → stillit Päätoimittajalle ennen junaa.
+- Pariisi: pariisi-esitys 6c153435 (vaakametro tapin oikealle). Juna 160 todennus LS1:n appilla linssiseppa-app-esitys-0bf208e9a
+  (skriptit/lippurivi.sh, sis. kuvarivi-testi). Mac käynnistetään uudelleen ~11.05; herätys Päätoimittajalta.
+
 - JUNA 160 natiivi-ui/apuraha-periaate 0261750e (kuumailmapallo-160 73ed2612 päällä): Elävä opas → Kuumailmapallo (KUITATTU),
   portin linkki pois (KUITATTU), apurahakortin loppuun lippurivi + palautelohko + © (odottaa: lippurivin rivitys 583fb158 ja ei tyhjiä
   kuvakehyksiä 0261750e → käännös ~11.15 + skriptit/lippurivi.sh, testiesittely skriptit/apuraha-testi.json). Todisteet apuraha-160/.
