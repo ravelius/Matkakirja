@@ -1877,7 +1877,8 @@ namespace Matkakirja.Natiivi
                 if (havainne) osat.Add("Tekoälyllä tuotettu havainnekuva");
                 else { if (tekija.Length > 0) osat.Add(tekija); if (lisenssi.Length > 0) osat.Add(lisenssi); }
                 string rivi = string.Join(" · ", osat);
-                if (osat.Count > 1 && !tulos.Contains(rivi)) tulos.Add(rivi);
+                // Havainnekuva näkyy aina (tekijä usein tyhjä, LS1); muu kuva vain, jos tekijä tai lisenssi on annettu.
+                if ((havainne || osat.Count > 1) && !tulos.Contains(rivi)) tulos.Add(rivi);
             }
             return tulos;
         }
