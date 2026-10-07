@@ -10,7 +10,7 @@ kappeli). Lue tämä osio ja alin TILA-loki (päivän loppu), sitten CLAUDE.md j
   (kuittaus pyydetty PT:ltä; juna163 + V7 + tietokerros + v44i-merkit + nousu laiturille; pala v44j 42d49bd4),
   **siirtoseppa/historia-fp @ 7d1a7c6b** (ENSIMMÄINEN PERSOONA + kädet-v1; pelattavuusmallin 8.10. työjärjestyksestä TEHTY JO 7.10. ILLALLA lähes kaikki, ks. TILA-loki; pala v44p a727471e).
   **siirtoseppa/historia-fp-juna @ 6d23aed1** KUITATTU JUNAAN 163 (PT 20.4x; NUI 8aa55e02).
-  **siirtoseppa/historia-valot @ 5716b2cc** (KEHITYSKÄRKI: valot + kytkin + tikkaat + v44q) ja **siirtoseppa/historia-valot-juna @ 2d1c133e** JUNAAN 163 (e4dab248 kuitattu + leikkauskorjaus, kuittaus pyydetty; varahaara ilman paketteja siirtoseppa/historia-fp-juna-2 @ 9cddc246).
+  **siirtoseppa/historia-valot @ 5716b2cc** (KEHITYSKÄRKI: valot + kytkin + tikkaat + v44q) ja **siirtoseppa/historia-valot-juna @ 2d1c133e** KUITATTU JUNAAN 163 (e4dab248 + leikkauskorjaus; varahaara ilman paketteja siirtoseppa/historia-fp-juna-2 @ 9cddc246).
 - TESTAUS (omistaja 7.10. 15.5x/16.0x): ennen junaa VAIN Linssit-testit/kaanna.sh + Linssit-testit/unity-tarkistus.sh; ei omia
   käännöksiä, simua, stillejä eikä savuja. Kuittaus PT:ltä yhdellä rivillä (mitä, testit, SHA) → Natiiviseppä junaan.
 - OMISTAJA 7.10. 18.5x–18.7x: KAIKKI PELIT ENSIMMÄISESSÄ PERSOONASSA (Thief-malli; ei vartaloa/peilikuvaa; kädet saavat näkyä
@@ -589,3 +589,4 @@ Edellinen luovutus on `viesti-siirtoseppa-luovutus-20261002.md` (5.10. osiot 02.
 - 20.47: KUITATTU junaan 163 (PT): historia-valot-juna korvaa 6d23aed1:n; ehto kehittäjävalikon Volumetriset valot -kytkin → tehty 7a480787, junakärki nyt siirtoseppa/historia-valot-juna @ e4dab248 (PT:lle ilmoitettu). Varasuunnitelma: jos käännös kaatuu pakettien takia, Natiiviseppä käyttää 6d23aed1:tä.
 - 20.52: LR v44q (676840af: huoneet 7–8 muurikäytävä, tikkaat harjalle, harja, ote:kellotorni-1…10, tuuli:puuska; kaari-oven portaat r 6,3) kehityshaaraan + tikkaiden kiipeily ae878c9a (historia-valot). EI junassa 163 (siellä v44p). Ote-kiipeily (ulkoseinä, takakuva), köysi, lukitut ovet ja huone 6–8 logiikka = M-osa.
 - 21.06: KORJAUS kuoren leikkauksiin (8 → 16, valinta osan mukaan) 5716b2cc; junakärki siirtoseppa/historia-valot-juna @ 2d1c133e, varahaara siirtoseppa/historia-fp-juna-2 @ 9cddc246 (korvaa 6d23aed1); kuittaus pyydetty PT:ltä. LR v44r (f13f34e2: huoneet 9–10, komero, arkku, köysilasku, pako; bastionin leikkaukset vain seikkailussa = kävelytilan leikkaukset) ei vielä hashissa.
+- 21.06: KUITATTU junaan 163: historia-valot-juna @ 2d1c133e, vara historia-fp-juna-2 @ 9cddc246 (PT ilmoitti Natiivisepälle).
