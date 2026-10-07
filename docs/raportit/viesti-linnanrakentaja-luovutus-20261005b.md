@@ -307,3 +307,4 @@ Brotli (haara linnanrakentaja-zstd, worktree olemassa), akustiikka #3979 (Steam 
   seinät taka: 'kivi' (V1-stillit 3–4), kappelin ikkuna → paistot.sh (2k, muisti > 10 Gt) → v44: tilat/valot kappeli + keittio-g102
   + ASTC + kavely v2 → vie-blender → dispatch → Siirtosepälle. GIZA JONOSSA (odottaa omistajaa): LS1 mittasi LOD1/2 väritekstuurin
   67–70 % mustaa (leivonta aukkoinen: cage/ray + täyttö), helmat liian vaaleat/keltaiset (harmaammaksi + reunahäivytys).
+  (LS1: mittaus proto-3d/tyokalut/linssiseppa-ajot/glb-musta-uv.py; kaukoreiät LS1 korjasi itse, helmoja ei kasvateta.)
