@@ -632,6 +632,8 @@ namespace Matkakirja.Linssit.Dioraama
         public string Id, Nimi, Otsikko;
         /// <summary>Nimiruudun alarivi (Linnanrakentaja 7.10.: "Peking · 1873"); null = DioraamaSovitin.SaapumisAlarivi.</summary>
         public string Alarivi;
+        /// <summary>Historiamoottorin kävelygeometria (kavely { osat, merkit }, polut paketin juuresta); null = ei kävelytilaa.</summary>
+        public string KavelyOsat, KavelyMerkit;
         public int Versio;
         public Asento YleisVaaka, YleisPysty;
         public V3 PuluLaskeutuminen;
@@ -694,6 +696,8 @@ namespace Matkakirja.Linssit.Dioraama
             r.Tunnelma = MiniJson.Teksti(juuri, "tunnelma");
             r.Nimilaput = MiniJson.Totuus(juuri, "nimilaput", true);
             r.Alarivi = MiniJson.Teksti(juuri, "alarivi");
+            var kav = MiniJson.ObjektiTaiNull(MiniJson.Kentta(juuri, "kavely"));
+            r.KavelyOsat = MiniJson.Teksti(kav, "osat"); r.KavelyMerkit = MiniJson.Teksti(kav, "merkit");
             foreach (var eo in MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(juuri, "etsinnat")))
             {
                 var e = MiniJson.ObjektiTaiNull(eo);

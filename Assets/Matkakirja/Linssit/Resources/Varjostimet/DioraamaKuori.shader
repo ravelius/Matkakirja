@@ -49,6 +49,24 @@ Shader "Matkakirja/Linssit/DioraamaKuori"
             TEXTURE2D(_DetaljiNor0); TEXTURE2D(_DetaljiNor1); TEXTURE2D(_DetaljiNor2); TEXTURE2D(_DetaljiNor3);
             SAMPLER(sampler_linear_repeat);
             float4 _DioraamaLeikkausMin, _DioraamaLeikkausMax, _DioraamaLeikkausKamera;
+            // Historiamoottorin kävelytila (SeikkailuKavely, Linnanrakentajan osat.json leikkaukset): enintään 8 kierrettyä särmiötä
+            // glTF-koordinaateissa (z etelä = −Unity z): xyz keskipiste, w kierto y-akselin ympäri (rad); Koko.xyz = puolikoko.
+            float4 _KavelyLeikkaus[8], _KavelyLeikkausKoko[8];
+            float _KavelyLeikkausN;
+            bool KavelyLeikattu(float3 pU)
+            {
+                float3 p = float3(pU.x, pU.y, -pU.z);
+                for (int k = 0; k < 8; k++)
+                {
+                    if (k >= (int)_KavelyLeikkausN) break;
+                    float3 d = p - _KavelyLeikkaus[k].xyz;
+                    float c = cos(-_KavelyLeikkaus[k].w), sn = sin(-_KavelyLeikkaus[k].w);
+                    float lx = c * d.x - sn * d.z, lz = sn * d.x + c * d.z;
+                    float3 h = _KavelyLeikkausKoko[k].xyz;
+                    if (abs(lx) <= h.x && abs(d.y) <= h.y && abs(lz) <= h.z) return true;
+                }
+                return false;
+            }
 
             // Onko p leikkaustilavuudessa, kun laatikkoa kasvatetaan marginaalilla m? Säde p:stä kameran vastaiseen
             // vaakasuuntaan (−d) osuu laatikkoon matkalla [0, L] ⇔ p kuuluu laatikon kameraa kohti venytettyyn jatkeeseen.
@@ -153,6 +171,7 @@ Shader "Matkakirja/Linssit/DioraamaKuori"
             {
                 half3 vari = SAMPLE_TEXTURE2D(_Kuva, sampler_Kuva, i.uv).rgb * _Kirkkaus;
                 vari = Detalji(vari, i.uv, i.paikkaW, i.normaaliW);
+                if (_KavelyLeikkausN > 0.5 && KavelyLeikattu(i.paikkaW)) discard;
                 if (_DioraamaLeikkausMin.w > 0.001)
                 {
                     if (Leikkauksessa(i.paikkaW, 0)) discard;

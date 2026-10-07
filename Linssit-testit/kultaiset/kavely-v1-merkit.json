@@ -1,0 +1,226 @@
+[
+ {
+  "nimi": "ovi:vesiportti-alku",
+  "paikka": [
+   -56.3,
+   -5.95,
+   15.4
+  ],
+  "leveys": 2.4,
+  "korkeus": 2.6,
+  "osa": "vesiportti"
+ },
+ {
+  "nimi": "ovi:vesiportti-loppu",
+  "paikka": [
+   -53.7,
+   -5.85,
+   12.5
+  ],
+  "leveys": 2.4,
+  "korkeus": 2.6,
+  "osa": "vesiportti"
+ },
+ {
+  "nimi": "ovi:vesiportti-2-alku",
+  "paikka": [
+   -54.3,
+   -5.85,
+   12.2
+  ],
+  "leveys": 2.4,
+  "korkeus": 2.6,
+  "osa": "vesiportti"
+ },
+ {
+  "nimi": "ovi:vesiportti-2-loppu",
+  "paikka": [
+   -41.0,
+   -5.6,
+   21.6
+  ],
+  "leveys": 2.4,
+  "korkeus": 2.6,
+  "osa": "vesiportti"
+ },
+ {
+  "nimi": "ovi:porttikaytava-T102-alku",
+  "paikka": [
+   -32.6,
+   -5.6,
+   20.0
+  ],
+  "leveys": 4.3,
+  "korkeus": 2.6,
+  "osa": "porttikaytava-T102"
+ },
+ {
+  "nimi": "ovi:porttikaytava-T102-loppu",
+  "paikka": [
+   -26.1,
+   -2.74,
+   10.6
+  ],
+  "leveys": 1.9,
+  "korkeus": 2.6,
+  "osa": "porttikaytava-T102"
+ },
+ {
+  "nimi": "ovi:keittio-piha",
+  "paikka": [
+   -21.5,
+   -2.65,
+   10.6
+  ],
+  "leveys": 1.1,
+  "korkeus": 2.0,
+  "osa": "keittio-G102"
+ },
+ {
+  "nimi": "piilo:poydan-alla",
+  "paikka": [
+   -20.0,
+   -2.65,
+   12.6
+  ],
+  "tyyppi": "kyykky",
+  "koko": [
+   1.6,
+   1.0,
+   0.9
+  ],
+  "osa": "keittio-G102"
+ },
+ {
+  "nimi": "piilo:tynnyrien-takana",
+  "paikka": [
+   -15.6,
+   -2.65,
+   14.2
+  ],
+  "tyyppi": "kyykky",
+  "koko": [
+   1.0,
+   1.1,
+   0.9
+  ],
+  "osa": "keittio-G102"
+ },
+ {
+  "nimi": "piilo:uunin-vieressa",
+  "paikka": [
+   -23.8,
+   -2.65,
+   13.9
+  ],
+  "tyyppi": "seisova",
+  "koko": [
+   0.8,
+   1.9,
+   0.7
+  ],
+  "osa": "keittio-G102"
+ },
+ {
+  "nimi": "esine:savipurkki",
+  "paikka": [
+   -21.0,
+   -1.75,
+   12.6
+  ],
+  "glb": "esine-savipurkki.glb",
+  "osa": "keittio-G102"
+ },
+ {
+  "nimi": "esine:kauha",
+  "paikka": [
+   -22.8,
+   -1.65,
+   13.4
+  ],
+  "glb": "esine-kauha.glb",
+  "osa": "keittio-G102"
+ },
+ {
+  "nimi": "esine:omena",
+  "paikka": [
+   -19.2,
+   -1.7,
+   12.4
+  ],
+  "glb": "esine-omena.glb",
+  "osa": "keittio-G102"
+ },
+ {
+  "nimi": "esine:lautanen",
+  "paikka": [
+   -20.4,
+   -1.73,
+   12.8
+  ],
+  "glb": "esine-lautanen.glb",
+  "osa": "keittio-G102"
+ },
+ {
+  "nimi": "partio:keittio-1",
+  "paikka": [
+   -17.5,
+   -2.65,
+   11.6
+  ],
+  "odota_s": 4,
+  "osa": "keittio-G102"
+ },
+ {
+  "nimi": "partio:keittio-2",
+  "paikka": [
+   -22.6,
+   -2.65,
+   11.6
+  ],
+  "odota_s": 3,
+  "osa": "keittio-G102"
+ },
+ {
+  "nimi": "ovi:kirkkotorni-piha",
+  "paikka": [
+   -20.6,
+   -2.74,
+   -3.4
+  ],
+  "leveys": 1.05,
+  "korkeus": 1.95,
+  "osa": "kirkkotorni-portaat"
+ },
+ {
+  "nimi": "ovi:kappeli-porras",
+  "paikka": [
+   -19.493,
+   6.4,
+   -10.007
+  ],
+  "leveys": 1.0,
+  "korkeus": 1.9,
+  "osa": "kirkkotorni-portaat"
+ },
+ {
+  "nimi": "partio:piha-1",
+  "paikka": [
+   -21.0,
+   -2.74,
+   7.0
+  ],
+  "odota_s": 5,
+  "osa": "kirkkotorni-portaat"
+ },
+ {
+  "nimi": "partio:piha-2",
+  "paikka": [
+   -17.0,
+   -2.74,
+   9.5
+  ],
+  "odota_s": 3,
+  "osa": "kirkkotorni-portaat"
+ }
+]

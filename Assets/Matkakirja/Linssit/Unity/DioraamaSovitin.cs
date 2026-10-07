@@ -759,6 +759,34 @@ namespace Matkakirja.Natiivi
             return (lepo.Avain + "|" + puhuja + "|puolilahi", new Asento(rinta, atsimuutti, korkeus, etaisyys, fov, p.Aukko, p.Kierto), 0.2, false);
         }
         static double KiertoEro(double a0, double a1) => ((a1 - a0 + 180) % 360 + 360) % 360 - 180;
+        // HISTORIAMOOTTORI: kävelytila. Kävelygeometria (Linnanrakentajan kavely { osat, merkit } tai kehitysjuuri), sitten pelaaja
+        // aloituspaikkaan: merkki "ovi:<tid>-alku"/osa tid tai tilan kamerakohde, ja pudotus lähimmälle törmäyspinnalle.
+        static string kavelyKehitysJuuri;
+        IEnumerator KavelyPaalle(string tid)
+        {
+            if (nayttamo == null || rakennus == null) { o.Kirjaa("poikki: kävely: linssi ei auki"); yield break; }
+            if (!SeikkailuKavely.Ladattu)
+            {
+                string osatUrl = kavelyKehitysJuuri != null ? kavelyKehitysJuuri + "osat.json" : !string.IsNullOrEmpty(rakennus.KavelyOsat) ? paketinJuuri + rakennus.KavelyOsat : null;
+                string merkitUrl = kavelyKehitysJuuri != null ? kavelyKehitysJuuri + "merkit.json" : !string.IsNullOrEmpty(rakennus.KavelyMerkit) ? paketinJuuri + rakennus.KavelyMerkit : null;
+                if (osatUrl != null) yield return SeikkailuKavely.Lataa(osatUrl, merkitUrl, peili, rakennus3D, rakennus, nayttamo.transform, o.Kirjaa);
+            }
+            int tilaTormays = SeikkailuKavely.Ladattu ? 0 : SeikkailuPelaaja.LisaaTormaykset(nayttamo.transform);   // vara: tilameshit
+            SeikkailuKavely.Leikkaukset(true);
+            Vector3 alku; float yaw;
+            var m = SeikkailuKavely.Data == null ? null : System.Linq.Enumerable.FirstOrDefault(SeikkailuKavely.Data.Merkit, x => x.Laji == "ovi" && (x.Osa == tid || x.Tunnus.StartsWith(tid, StringComparison.Ordinal)));
+            if (m != null) { alku = new Vector3((float)m.X, (float)m.Y, (float)-m.Z); yaw = 0f; }
+            else
+            {
+                var tl = rakennus.Tila(tid);
+                if (tl == null) { o.Kirjaa($"poikki: kävely: tilaa tai osaa {tid} ei löydy"); yield break; }
+                alku = DioraamaNayttamo.UnityPiste(tl.Kamera.Kohde); yaw = (float)Matkakirja.Linssit.Seikkailu.Kavely.Kulma(tl.Kamera.Atsimuutti + 180.0);
+            }
+            if (Physics.Raycast(alku + Vector3.up * 2f, Vector3.down, out var osuma, 30f)) alku = osuma.point + Vector3.up * 0.05f;
+            SeikkailuPelaaja.Luo(nayttamo.transform, alku, yaw, DioraamaNayttamo.Kerros);
+            o.Kirjaa($"poikki: kävely päällä tilassa {tid} ({alku}), kävelygeometria {(SeikkailuKavely.Ladattu ? "ladattu" : "ei (tilameshit " + tilaTormays + ")")}");
+        }
+
         Vector3? puolilahiRinta;
         const float PuolilahiVapaaM = 0.9f, PuolilahiLeikkausMaxM = 1.2f;
         const double PuolilahiSivu = 35, PuolilahiMaxKierto = 60, PuolilahiKohdeY = 1.35, PuolilahiKorkeusM = 1.5, PuolilahiMinM = 1.7,
@@ -1118,7 +1146,7 @@ namespace Matkakirja.Natiivi
             // törmäykset tilojen mesheistä (väliaikaiset), kamera olan yli; tapit = testisyöte s sekuntia (simulaattori ilman kosketusta).
             if (mita == "kavely")
             {
-                if (arvo == "0") { SeikkailuPelaaja.Poista(); o.Kirjaa("poikki: kävely pois"); return; }
+                if (arvo == "0") { SeikkailuPelaaja.Poista(); SeikkailuKavely.Leikkaukset(false); o.Kirjaa("poikki: kävely pois"); return; }
                 if (arvo == "tapit" && osat.Length > 7)
                 {
                     SeikkailuPelaaja.Testi = new Matkakirja.Linssit.Seikkailu.KavelySyote { LiikeX = Luku(osat[3]), LiikeY = Luku(osat[4]), KatseX = Luku(osat[5]), KatseY = Luku(osat[6]) };
@@ -1126,7 +1154,14 @@ namespace Matkakirja.Natiivi
                     o.Kirjaa($"poikki: kävely tapit {osat[3]} {osat[4]} {osat[5]} {osat[6]} {osat[7]} s");
                     return;
                 }
+                if (arvo == "data") { kavelyKehitysJuuri = osat.Length > 3 ? osat[3].TrimEnd('/') + "/" : null; o.Kirjaa($"poikki: kävelydata {kavelyKehitysJuuri ?? "paketista"}"); return; }
                 string tid = osat.Length > 3 ? osat[3] : Linssi?.NakymaHetkella(YdinAika, false).KohdeTila ?? "laituri";
+                o.StartCoroutine(KavelyPaalle(tid));
+                return;
+            }
+            if (mita == "kavely-vanha")
+            {
+                string tid = osat.Length > 3 ? osat[3] : "laituri";
                 var tl = rakennus?.Tila(tid);
                 if (tl == null || nayttamo == null) { o.Kirjaa($"poikki: kävely: tilaa {tid} ei löydy"); return; }
                 int tormayksia = SeikkailuPelaaja.LisaaTormaykset(nayttamo.transform);
