@@ -1,0 +1,344 @@
+{
+ "kaupunki": "Košice",
+ "id": "kosice",
+ "versio": 1,
+ "kohteet": [
+  {
+   "id": "Q569428",
+   "nimi": "Pyhän Elisabetin katedraali",
+   "kuvaus": "Slovakian suurin kirkko",
+   "luokka": "kirkko",
+   "koko_m": 80,
+   "korkeus_m": 59,
+   "teksti": "Pyhän Elisabetin katedraali on Slovakian suurin kirkko ja yksi Euroopan itäisimmistä goottilaisista tuomiokirkoista, ja ylhäältä sen kirjava tiilikatto erottuu pääkadun keskeltä kuin suomuinen selkä. Kirkko alkoi nousta noin vuoden 1380 palon jälkeen, ja sen katsotaan valmistuneen vuonna 1508. Kryptassa lepää Unkarin ruhtinas Ferenc Rákóczi, joka johti vapaussotaa Habsburgeja vastaan ja jonka jäänteet tuotiin maanpaosta Turkista vuonna 1906. Isoisäsi kirjoitti vuonna 1873, että kirkko on niin suuri, että kaupunki tuntuu rakennetun sen ympärille.",
+   "lyhyt": "Pyhän Elisabetin katedraalin pohjoistorni kohoaa noin kuuteenkymmeneen metriin, ja sen kapeita kiviportaita pääsee näköalatasanteelle. Pohjoisen sisäänkäynnin yllä on veistetty kuva viimeisestä tuomiosta ja kahdentoista apostolin patsaat. Kirkkoon mahtuu yli viisituhatta ihmistä.",
+   "syventava": "Kuka oli Ferenc Rákóczi?",
+   "kysymykset": [
+    "Miksi kirkko on omistettu pyhälle Elisabetille?",
+    "Kuka Ferenc Rákóczi oli ja miksi hän kuoli Turkissa?",
+    "Miksi kirkon katto on niin kirjava?",
+    "Voiko tuomiokirkon torniin kiivetä nykyään?",
+    "Mitä pohjoisen portin veistoksessa näkyy?"
+   ],
+   "isoisa": true,
+   "lahteet": [
+    {
+     "vaite": "Slovakian suurin kirkko ja yksi Euroopan itäisimmistä goottilaisista katedraaleista.",
+     "url": "https://en.wikipedia.org/wiki/Cathedral_of_St._Elizabeth"
+    },
+    {
+     "vaite": "Katossa on värikkäät tiilet, jotka tuovat mieleen suomuisen lohikäärmeen; viisiväriset lasitetut kattotiilet tulivat 1877–1896 restauroinnissa.",
+     "url": "https://www.lonelyplanet.com/points-of-interest/cathedral-of-st-elizabeth/477624"
+    },
+    {
+     "vaite": "Rakentaminen alkoi noin 1380 palon jälkeen; kirkko valmistui 1508.",
+     "url": "https://en.wikipedia.org/wiki/Cathedral_of_St._Elizabeth"
+    },
+    {
+     "vaite": "Ferenc II Rákóczin ja maanpakotovereiden jäänteet tuotiin Turkista ja sijoitettiin kryptaan 29.10.1906; hän johti Habsburgien vastaista vapaussotaa.",
+     "url": "https://en.wikipedia.org/wiki/Francis_II_R%C3%A1k%C3%B3czi"
+    },
+    {
+     "vaite": "Isoisän merkintä: tuomiokirkko on niin suuri, että kaupunki tuntuu rakennetun sen ympärille.",
+     "url": "kaanon:isoisan-paivakirja"
+    },
+    {
+     "vaite": "Pohjoistorni on 59–60 metriä korkea; kapeita kiviportaita pääsee näköalapaikalle.",
+     "url": "https://www.lonelyplanet.com/points-of-interest/cathedral-of-st-elizabeth/477624"
+    },
+    {
+     "vaite": "Pohjoisportaalissa on viimeisen tuomion reliefi ja kahdentoista apostolin veistokset.",
+     "url": "https://slovakia.travel/en/st-elisabeth-minster-kosice"
+    },
+    {
+     "vaite": "Kirkkoon mahtuu yli 5 000 ihmistä.",
+     "url": "https://www.esn.sk/node/203"
+    }
+   ]
+  },
+  {
+   "id": "Q133708",
+   "nimi": "Košicen kansallisteatteri",
+   "kuvaus": "Uusbarokkinen teatteri pääkadulla",
+   "luokka": "rakennus",
+   "koko_m": 70,
+   "teksti": "Kansallisteatteri seisoo Košicen pääkadun keskellä tuomiokirkon pohjoispuolella laulavan suihkulähteen puiston takana, ja ylhäältä sen uusbarokkirakennuksen kupoli erottuu kattojen keskeltä. Talo rakennettiin arkkitehti Adolf Langin suunnitelmien mukaan, ja kaupunkilaiset juhlivat teatterin avajaisia syyskuussa 1899. Salin kattoon on maalattu kohtauksia Shakespearen näytelmistä, muun muassa Othellosta ja Romeosta ja Juliasta. Teatterissa on kolme osastoa: draama, ooppera ja baletti. Keväällä 2023 talo palasi vanhaan nimeensä, kun valtionteatterista tuli jälleen kansallisteatteri.",
+   "lyhyt": "Kansallisteatterin näyttämö on muodoltaan lyyran mallinen, ja sisätiloja koristaa runsas stukkityö. Katon maalauksissa nähdään myös Kuningas Lear ja Kesäyön uni. Julkisivuja koristavat teatteriaiheiset veistosryhmät, ja kupolin yllä kohoaa aamunkoittoa esittävä patsas.",
+   "syventava": "Mitä katon maalauksissa näkyy?",
+   "kysymykset": [
+    "Kuka maalasi salin kattokuvat?",
+    "Kuka oli arkkitehti Adolf Lang?",
+    "Mitä teatterissa esitetään nykyään?",
+    "Miksi teatteri vaihtoi nimeään?",
+    "Miksi katossa on juuri Shakespearen näytelmiä?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Teatteri on Košicen keskustassa pääkadun varrella.",
+     "url": "https://en.wikipedia.org/wiki/National_Theatre_Ko%C5%A1ice"
+    },
+    {
+     "vaite": "Uusbarokkirakennus tehtiin Adolf Langin suunnitelmien mukaan (TASR: rakennettu 1897–1899); juhlalliset avajaiset 28.9.1899.",
+     "url": "https://www.teraz.sk/kultura/kosice-divadlo-narodne-historia/97912-clanok.html"
+    },
+    {
+     "vaite": "Katossa on kohtauksia Othellosta, Romeosta ja Juliasta, Kuningas Learista ja Kesäyön unesta; näyttämö on lyyran mallinen ja sisätiloissa runsaasti stukkia.",
+     "url": "https://en.wikipedia.org/wiki/National_Theatre_Ko%C5%A1ice"
+    },
+    {
+     "vaite": "Teatterissa on draama, ooppera ja baletti.",
+     "url": "https://kosiceregion.com/en/poi/state-theater-in-kosice"
+    },
+    {
+     "vaite": "Štátne divadlo Košice palasi aiempaan nimeensä Národné divadlo Košice 1.5.2023.",
+     "url": "https://sita.sk/statne-divadlo-kosice-zmenilo-svoj-nazov-od-1-maja-posobi-pod-nazvom-narodne-divadlo-kosice/"
+    },
+    {
+     "vaite": "Julkisivuilla on teatteriaiheisia veistosryhmiä, ja kupolin yllä on aamunkoittoa symboloiva patsas.",
+     "url": "https://www.teraz.sk/kultura/kosice-divadlo-narodne-historia/97912-clanok.html"
+    },
+    {
+     "vaite": "Laulava suihkulähde on puistossa teatterin ja tuomiokirkon välissä.",
+     "url": "https://www.kamnavylet.sk/en/attraction/singing-fountain-and-carillon"
+    }
+   ]
+  },
+  {
+   "id": "Q787510",
+   "nimi": "Hlavná-katu",
+   "kuvaus": "Košicen pitkä pääkatu",
+   "luokka": "katu",
+   "koko_m": 1200,
+   "teksti": "Pääkatu eli Hlavná halkoo Košicen vanhankaupungin pohjoisesta etelään runsaan kilometrin mittaisena, ja ylhäältä sen leveä, karan muotoinen keskiosa näyttää pitkältä torilta. Keskiajalla se olikin tori, ja muoto on säilynyt nykypäiviin. Vuonna 1984 kadusta tuli koko Tšekkoslovakian ensimmäinen laaja jalankulkualue, ja pormestari Rudolf Schuster haki mallin saksalaisesta Wuppertalista. Kadun pohjoisosassa Neitsyt Marian patsas seisoo neljätoista metriä korkean ruttopylvään huipulla. Pylväs pystytettiin vuonna 1723 keskiaikaisen hirsipuun paikalle kiitokseksi siitä, että ruttoepidemia oli päättynyt.",
+   "lyhyt": "Pääkadun varrella on suurin osa kaupungin tärkeimmistä historiallisista kohteista. Joulukuussa 2002 kadulle paljastettiin yli kolmen metrin korkuinen pronssinen vaakunapatsas. Se muistuttaa, että kuningas Ludvig Suuri myönsi Košicelle vuonna 1369 vaakunan ensimmäisenä kaupunkina Euroopassa.",
+   "syventava": "Miksi ruttopylväs pystytettiin?",
+   "kysymykset": [
+    "Miksi pääkatu on keskeltä niin leveä?",
+    "Kuka oli pormestari Rudolf Schuster?",
+    "Millaisia kahviloita pääkadulla on nykyään?",
+    "Ketkä pyhimykset seisovat ruttopylvään juurella?",
+    "Miksi Košice sai ensimmäisenä oman vaakunan?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Hlavná ulica on Košicen keskeinen katu, pituus 1 200 metriä, linssin muotoinen; suurin osa tärkeimmistä historiallisista kohteista on sen varrella.",
+     "url": "https://en.wikipedia.org/wiki/Hlavn%C3%A1_ulica"
+    },
+    {
+     "vaite": "Vuonna 1984 katu muuttui Tšekkoslovakian ensimmäiseksi laajaksi jalankulkualueeksi; pormestari Rudolf Schuster sai innoituksen Wuppertalista.",
+     "url": "https://en.wikipedia.org/wiki/Hlavn%C3%A1_ulica"
+    },
+    {
+     "vaite": "Ruttopylväs eli Immaculata on 14 metriä korkea, huipulla Neitsyt Maria; pystytetty 1723 keskiaikaisen hirsipuun paikalle kiitokseksi vuosien 1709–1710 ruttoepidemian päättymisestä.",
+     "url": "https://en.wikipedia.org/wiki/Plague_Column,_Ko%C5%A1ice"
+    },
+    {
+     "vaite": "Immaculatan kohdalla katu jakautuu, ja sieltä se jatkuu pohjoiseen.",
+     "url": "https://www.bestslovakiatours.com/?p=230"
+    },
+    {
+     "vaite": "Košice sai Euroopan ensimmäisenä kaupunkina oman vaakunan 1369 kuningas Ludvig I Suurelta; pronssinen vaakunapatsas paljastettiin Hlavná-kadulla 8.12.2002. Patsas on 310 senttimetriä korkea.",
+     "url": "https://www.kosice.sk/city/the-arms-of-kosice-city"
+    },
+    {
+     "vaite": "Pronssinen vaakunapatsas on 310 cm korkea ja paljastettiin joulukuussa 2002.",
+     "url": "https://slovakia.travel/en/the-memorial-of-the-coat-of-arms-of-kosice"
+    }
+   ]
+  },
+  {
+   "id": "Q1753933",
+   "nimi": "Urbanin torni",
+   "kuvaus": "Renessanssiajan kellotorni",
+   "luokka": "torni",
+   "koko_m": 30,
+   "teksti": "Urbanin torni seisoo tuomiokirkon vieressä omana rakennuksenaan, ja ylhäältä sen kellotornin pyramidikatto erottuu katedraalin katon rinnalla. Torni rakennettiin 1500-luvulla, ja sen ulkoseiniin on muurattu kolmekymmentäkuusi vanhaa hautakiveä 1300- ja 1400-luvuilta. Tornin kello valettiin vuonna 1557, se painoi seitsemän tonnia ja sai nimensä viinitarhurien suojeluspyhimyksen Urbanuksen mukaan. Vuonna 1966 tulipalo vaurioitti tornia ja tuhosi kellon. Korjattu kello asetettiin näytteille tornin eteen, ja torni avattiin uudelleen vuonna 1971.",
+   "lyhyt": "Urbanin tornin alkuperäisen kellon valoi olomoucilainen kellonvalaja Franciscus Illenfeld. Kolme vuosikymmentä palon jälkeen kaupungin terästehtaan työntekijät valmistivat vuonna 1996 kellosta jäljennöksen, joka ripustettiin torniin. Seinien hautakivistä vanhin on peräisin Rooman valtakunnan ajalta, 300-luvulta.",
+   "syventava": "Miten kello tuhoutui vuonna 1966?",
+   "kysymykset": [
+    "Miksi kellotorni rakennettiin erilleen kirkosta?",
+    "Mistä seinien vanhat hautakivet ovat peräisin?",
+    "Kuka oli pyhä Urbanus?",
+    "Mitä tornissa on nykyään?",
+    "Miksi torni syttyi palamaan?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Urbanin torni on tuomiokirkon vieressä oleva renessanssin kellotorni, jossa on pyramidikatto; rakennettu 1500-luvulla.",
+     "url": "https://en.wikipedia.org/wiki/St._Urban_Tower"
+    },
+    {
+     "vaite": "Ulkoseiniin on muurattu 36 hautakiveä 1300- ja 1400-luvuilta.",
+     "url": "https://en.wikipedia.org/wiki/St._Urban_Tower"
+    },
+    {
+     "vaite": "Kellon valoi Franciscus Illenfeld Olomoucista 1557; paino seitsemän tonnia.",
+     "url": "https://en.wikipedia.org/wiki/St._Urban_Tower"
+    },
+    {
+     "vaite": "Kello on pyhitetty viinitarhurien suojeluspyhimykselle Urbanukselle.",
+     "url": "https://en.wikipedia.org/wiki/St._Urban_Tower"
+    },
+    {
+     "vaite": "Vuonna 1966 tulipalo vaurioitti tornia ja tuhosi kellon; torni avattiin uudelleen 1971; korjattu kello on tornin edessä, ja VSŽ:n työntekijöiden 1996 tekemä jäljennös on tornissa; yksi hautakivistä on Rooman ajalta 300-luvulta.",
+     "url": "https://en.wikipedia.org/wiki/St._Urban_Tower"
+    }
+   ]
+  },
+  {
+   "id": "Q3076009",
+   "nimi": "Laulava suihkulähde",
+   "kuvaus": "Musiikin tahdissa tanssiva suihkulähde",
+   "luokka": "muu",
+   "koko_m": 40,
+   "teksti": "Laulava suihkulähde on tuomiokirkon ja kansallisteatterin välisessä puistossa keskellä pääkatua, ja illalla sen valaistu vesi näkyy ylhäältä kirkkaana läikkänä puiden keskellä. Sen vesisuihkut ja värivalot liikkuvat musiikin tahdissa, ja lähdettä pidetään entisen Tšekkoslovakian vanhimpana laatuaan. Lähde rakennettiin vuonna 1986 kuvanveistäjä Peter Scerankan suunnitelmien mukaan, ja paikallisen terästehtaan verstaat valmistivat sen ensimmäiset venttiilit. Kun lähde lähes neljäkymmentä vuotta myöhemmin uudistettiin, terästehtaan säätiö lahjoitti työhön miljoona euroa. Lähteen yhteydessä on kahdenkymmenenkahden kellon kellopeli, ja jokainen kello edustaa yhtä kaupungin kahdestakymmenestäkahdesta kaupunginosasta.",
+   "lyhyt": "Laulava suihkulähde otettiin uudelleen käyttöön huhtikuussa 2024 sen historian suurimman uudistuksen jälkeen. Nyt siinä on neljäkymmentäkolme pumppua ja seitsemänsataaviisikymmentä suutinta, ja keskimmäinen suihku nousee kahdenkymmenenneljän metrin korkeuteen. Suihkujen muodostamaan vesiverhoon voidaan heijastaa myös kansallisteatterin esityksiä.",
+   "syventava": "Miten vesi tietää musiikin tahdin?",
+   "kysymykset": [
+    "Kuka suunnitteli laulavan suihkulähteen?",
+    "Millaista musiikkia suihkulähde soittaa?",
+    "Miksi kellopelissä on juuri kaksikymmentäkaksi kelloa?",
+    "Mihin suihkulähteen tekoälyä käytetään?",
+    "Milloin suihkulähteen esityksiä voi nähdä?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Laulava suihkulähde on puistossa valtionteatterin ja tuomiokirkon välissä; suihkut ja valot reagoivat musiikkiin; 1986 rakennettu lähde on entisen Tšekkoslovakian vanhin laulava suihkulähde.",
+     "url": "https://www.kamnavylet.sk/en/attraction/singing-fountain-and-carillon"
+    },
+    {
+     "vaite": "Suihkulähteen suunnitteli košicelainen kuvanveistäjä Peter Sceranka.",
+     "url": "https://kupi.com/en-ae/explore/slovakia/kosice/singing-fountain"
+    },
+    {
+     "vaite": "VSŽ:n verstaat valmistivat vuonna 1986 ensimmäiset venttiilit; U. S. Steel Košicen säätiö antoi uudistukseen miljoona euroa.",
+     "url": "https://www.usske.sk/en/article/kosice-steel-again-helped-make-the-city-alive"
+    },
+    {
+     "vaite": "Kellopelissä on 22 kelloa, jotka symboloivat kaupungin 22 kaupunginosaa.",
+     "url": "https://www.kamnavylet.sk/en/attraction/singing-fountain-and-carillon"
+    },
+    {
+     "vaite": "Lähde otettiin uudelleen käyttöön huhtikuussa 2024 historiansa suurimman uudistuksen jälkeen; 43 pumppua, 750 suutinta, keskisuihku 24 metriä.",
+     "url": "https://enrsi.stvr.sk/articles/news/361472/fountain-in-kosice-city-centre-sings-again"
+    },
+    {
+     "vaite": "Uudistettu lähde mahdollistaa heijastuksen vesiverhoon ja lähetykset kansallisteatterista.",
+     "url": "https://usske.sk/en/article/the-fountain-also-lives-thanks-to-metallurgists"
+    }
+   ]
+  },
+  {
+   "id": "Q3360878",
+   "nimi": "Jakabin palatsi",
+   "kuvaus": "Uusgoottilainen pikkulinna",
+   "luokka": "rakennus",
+   "koko_m": 40,
+   "teksti": "Jakabin palatsi näyttää ylhäältä pieneltä uusgoottilaiselta linnalta torneineen ja vihertävine kattoineen vanhankaupungin itälaidalla Mlynská-kadun varrella. Rakennusurakoitsijaveljekset Árpád ja Géza Jakab rakensivat sen omaksi kodikseen vuonna 1899 isältään perimälleen tontille entisen kaupunginmuurin ulkopuolelle. Vuoteen 1968 asti talo seisoi myllypuron rannalla kuin linna vallihautansa takana. Keväällä 1945 palatsi oli lyhyen aikaa Tšekkoslovakian presidentin Edvard Benešin asuinpaikka. Myöhemmin kaupunki kiisteli talon omistuksesta yli kaksikymmentä vuotta, eikä palatsia voitu sinä aikana avata yleisölle.",
+   "lyhyt": "Jakabin palatsin rakentajien suvun yritys oli tuomiokirkon suuren korjauksen pääurakoitsija. Siksi talon puutarhaan päätyi kirkosta poistettuja keskiaikaisia kiviveistoksia, kuten osia kivikaiteesta, tukipilareita ja pala portaalia. Jakabit asuivat palatsissa vuoteen 1908, jolloin sen osti Hugo Barkányi.",
+   "syventava": "Miksi presidentti asui palatsissa?",
+   "kysymykset": [
+    "Keitä Jakabin veljekset olivat?",
+    "Miksi tuomiokirkosta poistettiin vanhoja kiviä?",
+    "Minne myllypuro katosi palatsin vierestä?",
+    "Voiko palatsiin päästä sisälle?",
+    "Miksi Beneš asui Košicessa sodan lopussa?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Uusgoottilainen palatsi muistuttaa pientä linnaa; tornit ja vihertävät katot.",
+     "url": "https://www.kamnavylet.sk/en/attraction/jakab-s-palace"
+    },
+    {
+     "vaite": "Palatsi on Mlynská- ja Štefánikova-katujen kulmassa; kaupunki kiisteli omistuksesta yli 20 vuotta eikä voinut avata taloa yleisölle 21 vuoteen; Hugo Barkányi osti palatsin rakentajalta 1908.",
+     "url": "https://spectator.sme.sk/politics-and-society/c/kosice-loses-fight-for-important-monument"
+    },
+    {
+     "vaite": "Urakoitsijaveljekset Árpád ja Géza Jakab rakensivat palatsin omaksi kodikseen 1899 isältä perimälleen tontille entisen kaupunginmuurin ulkopuolelle Malomárok-myllypuron rannalle; Jakabien yritys oli tuomiokirkon korjauksen pääurakoitsija, ja kivikaiteen osia, tukipilareita ja pala portaalia päätyi talon puutarhaan.",
+     "url": "https://library.hungaricana.hu/hu/view/SZAK_KOHI_Kenyee_1998/?pg=236"
+    },
+    {
+     "vaite": "Vuoteen 1968 asti rakennus seisoi Mlynský náhon -myllypuron rannalla; huhti–toukokuussa 1945 palatsi oli Tšekkoslovakian presidentin asuinpaikka.",
+     "url": "https://www.kosice.sk/city/jacabs-palace"
+    }
+   ]
+  },
+  {
+   "id": "Q1186439",
+   "nimi": "Itä-Slovakian museo",
+   "kuvaus": "Museo ja Košicen kulta-aarre",
+   "luokka": "rakennus",
+   "koko_m": 60,
+   "teksti": "Itä-Slovakian museo on yksi Slovakian vanhimmista museoista, ja sen päärakennus seisoo Rauhanmaratonin aukion laidalla vanhankaupungin pohjoispäässä. Talo valmistui vuonna 1901 arkkitehti Ödön Lechnerin suunnitelmien mukaan, ja se oli kaupungin ensimmäinen varta vasten museoksi suunniteltu rakennus. Julkisivua koristavat Perseuksen ja Vulcanuksen veistokset. Museon alle rakennetussa holvissa on esillä Košicen kulta-aarre, kaksituhatta yhdeksänsataakaksikymmentä kultarahaa, jotka löydettiin elokuussa 1935 rakennustöissä pääkadun varrella olevan talon kellarista. Se on suurin Slovakiasta koskaan löydetty kulta-aarre.",
+   "lyhyt": "Itä-Slovakian museo perustettiin Ylä-Unkarin museona, ja vuonna 1906 se nimettiin Ferenc Rákóczin mukaan, kun ruhtinas oli haudattu uudelleen tuomiokirkkoon. Aukio museon edessä on nimetty Euroopan vanhimman maratonin mukaan, jota on juostu vuodesta 1924.",
+   "syventava": "Kuka kätki kultarahat kellariin?",
+   "kysymykset": [
+    "Miksi kulta-aarre oli piilotettu kellariin?",
+    "Kuka arkkitehti Ödön Lechner oli?",
+    "Mitä muuta museossa voi nähdä?",
+    "Miksi julkisivussa on Perseus ja Vulcanus?",
+    "Miksi aukio on nimetty maratonin mukaan?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Museo on yksi Slovakian vanhimmista; sijainti Rauhanmaratonin aukiolla.",
+     "url": "https://en.wikipedia.org/wiki/East_Slovak_Museum"
+    },
+    {
+     "vaite": "Rakennus tehtiin 1899–1901 Ödön Lechnerin suunnitelmien mukaan; kaupungin ensimmäinen museoksi suunniteltu rakennus; julkisivussa Perseuksen ja Vulcanuksen veistokset.",
+     "url": "https://en.wikipedia.org/wiki/East_Slovak_Museum"
+    },
+    {
+     "vaite": "Aarre löydettiin 24.8.1935 rakennustöissä talon kellarista osoitteessa Hlavná 68; 2 920 kultarahaa; suurin Slovakiasta löydetty kulta-aarre; museon alle rakennettiin sitä varten holvi 1969.",
+     "url": "https://en.wikipedia.org/wiki/Ko%C5%A1ice_gold_treasure"
+    },
+    {
+     "vaite": "Museo perustettiin Ylä-Unkarin museona ja nimettiin 1906 Rákóczin mukaan hänen uudelleenhautauksensa yhteydessä.",
+     "url": "https://en.wikipedia.org/wiki/East_Slovak_Museum"
+    },
+    {
+     "vaite": "Košicen rauhanmaraton on juostu vuodesta 1924 ja on Euroopan vanhin maraton.",
+     "url": "https://en.wikipedia.org/wiki/Ko%C5%A1ice_Peace_Marathon"
+    }
+   ]
+  },
+  {
+   "id": "Q3403979",
+   "nimi": "Miklušin vankila",
+   "kuvaus": "Entinen vankila ja kidutuskammio",
+   "luokka": "rakennus",
+   "koko_m": 30,
+   "teksti": "Kaupungin vanha vankila, Miklušin vankila, koostuu kahdesta goottilaisesta porvaristalosta, jotka rakennettiin 1200- ja 1300-lukujen vaihteessa. Talot yhdistettiin 1600-luvun alussa kaupungin vankilaksi ja kidutuskammioksi, ja vankilana rakennus toimi 1900-luvun alkuun asti. Tarinan mukaan vankila sai nimensä pyöveli Miklušilta, mutta todellisuudessa nimi tulee vankilanhoitaja Miklóssylta, joka johti vankilaa lähes neljäkymmentä vuotta 1800-luvun jälkipuoliskolla. Nykyään rakennus kuuluu Itä-Slovakian museolle, joka korjaa sitä ja rakentaa siihen uuden näyttelyn vankeuden ja tuomioiden historiasta. Työn on määrä valmistua kesällä 2027.",
+   "lyhyt": "Vanhan vankilan, Miklušin vankilan, talot mainitaan vankilana ensimmäisen kerran vuonna 1618, juuri ennen kuin Gábor Bethlenin joukot valtasivat kaupungin. Vuodesta 1872 rakennus oli kaupungin poliisin vankila. Museon kierrokseen on kuulunut pyövelin asunto, jossa on esillä mestaajien miekkoja.",
+   "syventava": "Kuka oli vankilanhoitaja Miklóssy?",
+   "kysymykset": [
+    "Millaisia rangaistuksia vankilassa annettiin?",
+    "Miksi tarina pyöveli Miklušista syntyi?",
+    "Miksi vankilaan tehtiin kidutuskammio?",
+    "Millainen uusi näyttely vankilaan tulee?",
+    "Ketä vankilassa pidettiin vangittuna?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Vankila koostuu kahdesta goottilaisesta porvaristalosta 1200- ja 1300-lukujen vaihteesta; 1600-luvun alussa yhdistettiin vankilaksi ja kidutuskammioksi; ensimmäinen maininta vankilana 1618 juuri ennen Gábor Bethlenin valtausta; vuodesta 1872 kaupungin poliisin vankila; vankilakäyttö päättyi 1909–1911.",
+     "url": "https://medievalheritage.eu/en/main-page/heritage/slovakia/kosice-prison-of-miklusz/"
+    },
+    {
+     "vaite": "Nimi ei tule pyöveli Miklušista vaan vankilanhoitaja Francis Miklóssysta, joka hoiti vankilaa 1861–1899; pyövelin asunnossa esillä mestaajien miekkoja.",
+     "url": "https://www.kamnavylet.sk/en/attraction/miklus-s-prison-and-executioner-s-apartment"
+    },
+    {
+     "vaite": "Itä-Slovakian museo korjaa vankilan ja tekee uuden näyttelyn vankeuden ja tuomioiden historiasta; valmistuminen kesällä 2027.",
+     "url": "https://www.teraz.sk/regiony/vychodoslovenske-muzeum-chce-obnovit/732218-clanok.html"
+    }
+   ]
+  }
+ ]
+}
