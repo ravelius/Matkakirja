@@ -573,10 +573,14 @@ namespace Matkakirja.Natiivi
         // ruudun vasemmasta ja alareunasta, turva-alueen sisällä (kotipalkki, vaakanäkymän Dynamic Island).
         void AsetaSiirtymaIon()
         {
-            float pw = siirtyma.parent?.worldBound.width ?? 0f;
-            float sk = pw > 0f && Screen.width > 0 ? pw / Screen.width : 0f;
-            float vali = Mathf.Max(Screen.safeArea.xMin * sk, Screen.safeArea.yMin * sk) + KrediititTiivis.TyhjaSivuPt;
+            // Paneelin koko (ruudun kerros on jo asetettu; siirtymä voi olla vielä display None ilman leveyttä).
+            float pw = siirtyma.panel?.visualTree.worldBound.width ?? 0f;
+            if (!(pw > 0f)) pw = siirtyma.parent?.worldBound.width ?? 0f;
+            float sk = pw > 0f && Screen.width > 0 ? pw / Screen.width : 1f / Mathf.Max(1f, UiKerros.PikseliaPisteessa);
+            var sa = Screen.safeArea;
+            float vali = Mathf.Max(sa.xMin, sa.yMin) * sk + KrediititTiivis.TyhjaSivuPt;
             AsetaIon(siirtymaIon, vali, vali);
+            Debug.Log($"MATKAKIRJA opas: siirtymän ion-logo {vali:0} pt vasemmasta ja alhaalta (paneeli {pw:0}, turva {sa.xMin:0}/{sa.yMin:0} px)");
         }
 
         void PaivitaAvausIon()
@@ -642,7 +646,7 @@ namespace Matkakirja.Natiivi
                 siirtymaLiuku.style.display = DisplayStyle.None;
                 siirtymaTeksti.style.scale = StyleKeyword.Null;
                 siirtymaKuva.style.backgroundImage = StyleKeyword.Null;
-                siirtyma.style.justifyContent = StyleKeyword.Null; siirtyma.style.paddingBottom = StyleKeyword.Null;
+                siirtyma.style.justifyContent = StyleKeyword.Null; siirtymaTeksti.style.marginBottom = StyleKeyword.Null;
                 OpasSovitin.VapautaPalloTekstuuri();
                 return;
             }
@@ -650,7 +654,8 @@ namespace Matkakirja.Natiivi
             // vain kaistan: kohdistus 35 %:iin pitää pallon kokonaan ruudulla ja tekstin tummassa osassa (simu 14.13: 50 % leikkasi pallon).
             siirtyma.style.justifyContent = Justify.FlexEnd;
             var koko = siirtyma.parent?.worldBound.size ?? Vector2.one;
-            siirtyma.style.paddingBottom = Mathf.Max(koko.y, 1f) * 0.07f;
+            // Kääreen marginaali (ei ruudun pehmuste: absoluuttinen ion-logo mitataan ruudun reunasta).
+            siirtymaTeksti.style.marginBottom = Mathf.Max(koko.y, 1f) * 0.07f;
             var t = OpasSovitin.PalloTekstuuri(n);
             if (t == null) { OpasSovitin.PalloTekstuuriMuistiin(n); return; }   // valmistuessa PalloTekstuuriValmis → tänne uudelleen
             // Kuvan paikka itse (peittävä skaala): leveällä vaakaruudulla yläreuna kohtaan VaakaKuvanAlku (kupu ilmoineen näkyviin)
