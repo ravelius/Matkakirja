@@ -108,7 +108,8 @@ def main():
             shutil.copyfile(helma, os.path.join(kansio, 'helma.glb'))
             hl, hh, hk = glb_tiedot(helma)
             bl = [min(lo[i], hl[i]) for i in range(3)]; bh = [max(hi[i], hh[i]) for i in range(3)]
-            juuri = {'boundingVolume': {'box': laatikko(bl, bh)}, 'geometricError': juuri['geometricError'], 'refine': 'ADD',
+            # Tyhjä juuri tarkennetaan aina (virhe 10 000): muuten kaukaa (5 km) piirrettäisiin vain sisällötön juuri (simu 7.10. 10.51).
+            juuri = {'boundingVolume': {'box': laatikko(bl, bh)}, 'geometricError': 10000.0, 'refine': 'ADD',
                      'children': [juuri, {'boundingVolume': {'box': laatikko(hl, hh)}, 'geometricError': 0.0, 'content': {'uri': 'helma.glb'}}]}
             print(f'{kid}: helma {hk} kolmiota')
         juuri['transform'] = enu_matriisi(k['lat'], k['lon'], h)
