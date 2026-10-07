@@ -6,14 +6,16 @@ KAUPUNKI = sys.argv[1]            # esim. praha
 TYO = sys.argv[2]                 # kansio, jossa osa*.json; tulos yhdistetty.json samaan
 SP = TYO
 REPO = os.environ.get("REPO", "/Users/Shared/Claude/wt/sisaltokirjuri-praha-wien-kuvat")
-AVAUSLISTA = "/Users/Shared/Claude/proto-3d/_tyo/opas-esittely/praha-wien/avaus-lista.json"
+AVAUSLISTAT = ["/Users/Shared/Claude/proto-3d/_tyo/opas-esittely/praha-wien/avaus-lista.json",
+               "/Users/Shared/Claude/proto-3d/_tyo/opas-esittely/kolme/avaus-lista.json"]
 AVAUS = None
-try:
-    for x in json.load(open(AVAUSLISTA)):
-        if x["id"] == f"{KAUPUNKI}-avaus":
-            AVAUS = x["teksti"]
-except Exception:
-    pass
+for AVAUSLISTA in AVAUSLISTAT:
+    try:
+        for x in json.load(open(AVAUSLISTA)):
+            if x["id"] == f"{KAUPUNKI}-avaus":
+                AVAUS = x["teksti"]
+    except Exception:
+        pass
 if os.environ.get("AVAUS_TEKSTI"):
     AVAUS = os.environ["AVAUS_TEKSTI"]
 assert AVAUS, "avausteksti puuttuu (AVAUS_TEKSTI)"
