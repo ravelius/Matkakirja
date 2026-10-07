@@ -496,5 +496,6 @@ Edellinen luovutus on `viesti-siirtoseppa-luovutus-20261002.md` (5.10. osiot 02.
   E3 paikkamerkit vaihdettu LR v44i:hin b4b26a87 (pala d73c80b2): luukku-glb saranalla (95°, yövalo), ikuinen valo -glb, veto kohti
   ovi:kaari-ovi, paluureitti kappalainen-paluu-1…4 ja luukkumuunnelma (sulkee luukun), voudin askeleet vouti-1…8, hehku laskeutumisreitillä,
   piilot kaari-oven syvennys + alttarin varjo (kyyryssä), liinanyytti avautuu (kalkki/pateeni/liuskekivi esiin), kirja lähtee kappalaisen mukana.
-  Junahaara siirtoseppa/historia-juna164 @ ad6ebba6 (juna163 + 2bc3ce1f V7 + e140392b + b4b26a87), 845/845, unity-tarkistus 0; kuittaus pyydetty.
+  Junahaara siirtoseppa/historia-juna164 @ 1e48174e (juna163 + 2bc3ce1f V7 + e140392b + b4b26a87 + e2bc015d NUI:n null-ansa), 845/845, unity-tarkistus 0;
+  kuittaus pyydetty. LS2:n SeikkailuNousu d75b3303 (junaan 163) sopii kutsuuni sellaisenaan.
   JATKA TÄSTÄ: kuittaus → Natiiviseppä; sitten pulun vihjeportaat, tallennus V6, ElevenLabs-äänet vain omistajan luvalla.
