@@ -1,3 +1,12 @@
+# TILANNE 7.10. klo 12.0x (uudelleenkäynnistyksen jälkeen)
+
+- **AJOSSA:** `kaudet/aja-talvi2.sh` (PGID 4645) jatkoi 11.56 tilasta 120/169. `aja-kevat-pohjoinen2.sh` (PGID 4649) odottaa sen VALMIS-merkkiä.
+  Varmuuskopio `s2-eurooppa-talvi2/tila.varmuus.json` minuutin välein.
+- **Syksyn vienti KESKEN:** ämpärissä 50 505 / 57 630 (osat 2/6 ja 3/6 puuttuvat lokista). Julkaisijaa pyydetty 12.0x ajamaan vie-paketti uudelleen.
+  Valmistuttua: tarkista määrä (`aws s3 ls … syksy/v1 --recursive | wc -l` = 57 630), sitten viesti LS2:lle (natiivin kausivalinta).
+
+---
+
 # TILANNE 7.10. klo 10.5x (Macin uudelleenkäynnistys noin 11.05)
 
 - **Talvi2 keskeytyy uudelleenkäynnistyksessä tilassa 97/169** (`s2-eurooppa-talvi2/`). Jatkuu `tila.json`:sta. Varmuuskopio `tila.varmuus.json` minuutin välein:
