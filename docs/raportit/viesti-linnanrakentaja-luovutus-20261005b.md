@@ -229,3 +229,11 @@ Brotli (haara linnanrakentaja-zstd, worktree olemassa), akustiikka #3979 (Steam 
 - 7.10. 07.06: KIELLETTY v4b Päätoimittajalle: sumu {2.4, 10} (js), peili 14aa3229553a885e, iPad-kuvat lokit/linnanrakentaja-kielletty-v4b/omistajalle/ (Siirtoseppä ed5a5e89). Seuraava: PR haarasta linnanrakentaja-kielletty, kun Päätoimittaja hyväksyy; worktree poistetaan mergen jälkeen.
 - 7.10. 07.1x: KIELLETTY v4b KUITATTU (Päätoimittaja): 4 kuvaa omistajan aamuyhteenvetoon. PR linnanrakentaja-kielletty vasta omistajan kuitattua hetken (1873) ja suunnan; osoitin/pelaajajakelu omistajan päätöksellä. Linna ensin.
 - 7.10. 08.4x: ILMAPALLO (kaupunkiopas karttaelementiksi, omistajan päätös 08.3x): _valmiit/ilmapallo-v1 (lahde/ilmapallo.py, glb/ilmapallo_{lahi,keski,kauko}.glb 7618/2842/772 kolmiota, paletti Tyylikirja, LAHTEET.md). LS2:lla sijoitettavana; muutospyynnöt (pivot koriin, ilman köyttä, mittakaava) LS2:lta.
+- 7.10. 09.xx: OMISTAJAN LINJA (08.5x): Olavinlinna silmänkorkeudelta pilotti → Giza oppaaseen → Kielletty kevyemmin. Venesaapuminen
+  Siirtosepän (reitti x −340 z 130 → laituri; P1 120 m, P2 40 m, P3 8 m; silmä y −5,8). Minun: (a) vene (Opus-agentti,
+  _valmiit/olavinlinna-vene-v1: keula +Z, airo_v/airo_o, peramela, kamera_pera, istuin_soutaja), (b) rantakivet VALMIS
+  _valmiit/olavinlinna-rantakivet-v1 (lahde/rantakivet.py: kalliojalusta peittää kuoren vesirajan sirpalevyön + 270 lohkaretta,
+  Poly Haven rock_surface CC0), odottaa Siirtosepän kenttänimeä → v42 (vie-blender + rakenna ymparisto.rantakivet), (c) soutu-leike
+  soutaja-1500 (Sitting Idle + IK airoihin) + veneen 'soutu' 2,0 s, (d) vesiportin/muurin juuren tarkkuus P2–P3 Siirtosepän kuvista.
+  GIZA: LS1 vie giza-v1:n 3D Tilesiksi; Kheops LOD0 "valkoinen" → testiversiot (ilman Dracoa / COLOR_0 leivottuna) pyynnöstä;
+  giza-v2 (Sfinksin NE-nurkka DEM:llä) myöhemmin. ILMAPALLO valmis LS2:lla (keski käytössä).
