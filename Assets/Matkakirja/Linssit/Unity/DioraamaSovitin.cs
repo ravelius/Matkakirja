@@ -561,6 +561,23 @@ namespace Matkakirja.Natiivi
                 // Sisältövarasto (4.10.): sama istunnon osoitin kuin esilatauksella, ja manifesti ennen ensimmäistä hakua.
                 string osoitin = null;
                 yield return DioraamaLevyvalimuisti.LueOsoitin(AmpariJuuri, pv => osoitin = pv);
+                // Natiiviseppä 7.10. (FACEIT ABAB): osoitin jäi tyhjäksi → paketti luettiin hashittomasta juuresta (404 kaikelle, "odotettiin
+                // 0,1 s"). Tyhjä osoitin haetaan vielä kerran suoraan uusin.jsonista; hashittomasta juuresta ei koskaan ladata.
+                if (string.IsNullOrEmpty(osoitin))
+                {
+                    o.Kirjaa("poikki: osoitin tyhjä, uusin.json uudelleen");
+                    string u2 = null;
+                    yield return HaeTeksti(AmpariJuuri + "uusin.json?t=" + DateTime.UtcNow.Ticks, t => u2 = t);
+                    try { if (u2 != null && Matkakirja.Peli.MiniJson.Jasenna(u2) is Dictionary<string, object> uo && uo.TryGetValue("polku", out var up)) osoitin = up as string; }
+                    catch (Exception e) { o.Kirjaa("poikki: uusin.json: " + e.Message); }
+                    if (string.IsNullOrEmpty(osoitin))
+                    {
+                        latausKaynnissa = false;
+                        o.Kirjaa("poikki: linnan osoitinta ei saatu (uusin.json), ei ladata hashittomasta juuresta");
+                        LatausVirhe = "Linnaa ei saatu ladattua. Tarkista verkkoyhteys.";
+                        yield break;
+                    }
+                }
                 if (!string.IsNullOrEmpty(osoitin))
                 {
                     paketinJuuri = AmpariJuuri + osoitin.TrimEnd('/') + "/";
