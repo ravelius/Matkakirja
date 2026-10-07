@@ -225,6 +225,9 @@ jobs:
       # Vienti kirjoittaa ProjectSettingsiin bundleVersionin, buildNumberin
       # ja iPhoneSdkVersionin sekä koskee Materiaaleihin: palautus aina.
       - name: Unity-vienti Build/yo
+        # PRIORITEETTI (Päätoimittaja 7.10.2026, TF 155: Unity nice 19:llä ja taustapoltot nice 15:llä → Burst AOT nälkiintyi
+        # ja unity-vahti tappoi viennin): junan Unity-vienti ja arkistointi nice 10:llä, alle taustapolttojen 15.
+        shell: nice -n 10 bash --noprofile --norc -eo pipefail {0}
         if: env.VIE_UNITYSTA == 'true' && env.OHITA != '1'
         working-directory: ${{ env.PROJEKTI }}
         env:
@@ -627,6 +630,9 @@ jobs:
       # vain Unity-iPhone-target lukee — UnityFramework ei tue profiilia.
       # --keychain rajaa codesignin tähän nippuun. Hakulistaa ei vaihdeta.
       - name: Arkistoi ja allekirjoita
+        # PRIORITEETTI (Päätoimittaja 7.10.2026, TF 155: Unity nice 19:llä ja taustapoltot nice 15:llä → Burst AOT nälkiintyi
+        # ja unity-vahti tappoi viennin): junan Unity-vienti ja arkistointi nice 10:llä, alle taustapolttojen 15.
+        shell: nice -n 10 bash --noprofile --norc -eo pipefail {0}
         if: env.OHITA != '1'
         working-directory: ${{ env.PROJEKTI }}
         env:
