@@ -1,7 +1,7 @@
 {
   "rakennus": "olavinlinna",
-  "hash": "f5aca698339c06aa",
-  "kansio": "dioraama/olavinlinna/blender/f5aca698339c06aa/",
+  "hash": "4f408bae7fea344d",
+  "kansio": "dioraama/olavinlinna/blender/4f408bae7fea344d/",
   "tiedostot": [
     {
       "polku": "hahmot/apulainen-1500-faceit.glb",
@@ -95,13 +95,13 @@
     },
     {
       "polku": "hahmot/vartija-1500-faceit.glb",
-      "sha256": "2f71bb3bd050c576a94030f4012109ef4f83c3c8248b658f091f0ca861b990bb",
-      "tavuja": 2878740
+      "sha256": "b2bf47d72d15f35116d1470829ef6be4db42a9b0d6fe0b0c8a28e3199bdaa7b4",
+      "tavuja": 3377792
     },
     {
       "polku": "hahmot/vartija-1500.glb",
-      "sha256": "3ca01ac90b979cf674edacb15cb435fa8dc543d2970a474f59e03df8d1fce16f",
-      "tavuja": 2256132
+      "sha256": "fb395a159766357ac7a40c81547161feb924f8d1f5be5da38d19efe29cf02a05",
+      "tavuja": 2755184
     },
     {
       "polku": "hahmot/vesipoika-1500-faceit.glb",
@@ -230,18 +230,18 @@
     },
     {
       "polku": "kavely/kappeli-kavely-kavely.glb",
-      "sha256": "bbd4a8df59bd7f350d155a18b8fbe87e7ad917663cc5f8db4cf855f7ae890ecf",
-      "tavuja": 4620
+      "sha256": "bcdfb2a33a30c8362cf651a76df457e64da52eebd5c293dc29fccbd2ae8cdf5d",
+      "tavuja": 4800
     },
     {
       "polku": "kavely/kappeli-kavely-tormays.glb",
-      "sha256": "7c6f28de4152b0cf980bb924fdf4d20bc5038245d51ac9dd3dea1efdb1531b52",
-      "tavuja": 12728
+      "sha256": "270013cea2979c347c0a60ba84993a29847bbfa1bc58f3081fa4953f8f99e037",
+      "tavuja": 13892
     },
     {
       "polku": "kavely/kappeli-kavely.glb",
-      "sha256": "41a7bcfb10c289f5e3558856ef13c83ed62ee9ffdaee638b36ee4479f6f57a4f",
-      "tavuja": 168280
+      "sha256": "6feefdb70584dd9b1a7d512c5196ed9dde37e405dd98af24425e3f6d0913b5c2",
+      "tavuja": 180260
     },
     {
       "polku": "kavely/keittio-G102-kavely.glb",
@@ -265,23 +265,38 @@
     },
     {
       "polku": "kavely/kirkkotorni-portaat-tormays.glb",
-      "sha256": "31ceacbe13576a38287eab3c2de625e3ee26adc0de34959b23497d854196a519",
-      "tavuja": 20740
+      "sha256": "a9eea17cd58245b6f115cc20477158d75713a41ae5cb7779887593d419074270",
+      "tavuja": 21700
     },
     {
       "polku": "kavely/kirkkotorni-portaat.glb",
-      "sha256": "08967f10096d70c4e28ba19b34cf03b5baff4a71519a83ba5639f04e2676c42a",
-      "tavuja": 105188
+      "sha256": "4b7a173e17267861dc1410098e873c9fd0cf2bdff2440856ebf07b100f93170e",
+      "tavuja": 111892
     },
     {
       "polku": "kavely/merkit.json",
-      "sha256": "f503e2d496876aa42f01be915baca6612b02fd605d9238879238629d790d32c5",
-      "tavuja": 23328
+      "sha256": "e2739a8548b0231d9aa0742d1c76e0f7a43898efad6c0ffbae7c6a6a6b15f157",
+      "tavuja": 28615
     },
     {
       "polku": "kavely/osat.json",
-      "sha256": "5eefdaa84d4d332744b355f0428be9365d1bc2c20f9a4ae6c5f84271c2b1b9f2",
-      "tavuja": 15167
+      "sha256": "ef606dd0b509834b328660553e9f0e70ee7aa8f47cc827ba5b11622264660936",
+      "tavuja": 19051
+    },
+    {
+      "polku": "kavely/palatsi-kavely.glb",
+      "sha256": "d63da2df5fbaeb1f95f948a137b770ea4d34f66381908c49de40bfe7d3345ae3",
+      "tavuja": 2088
+    },
+    {
+      "polku": "kavely/palatsi-tormays.glb",
+      "sha256": "04afa407807b1126dbf3d2a75fb04cf36b93e11327f76643de2fd798f4082763",
+      "tavuja": 12224
+    },
+    {
+      "polku": "kavely/palatsi.glb",
+      "sha256": "673bada0ac735e8dc0d6f85ace48078c1eac15bd371b6343e47b2ef0e65f8391",
+      "tavuja": 31612
     },
     {
       "polku": "kavely/pikkupiha-kavely.glb",
@@ -335,8 +350,8 @@
     },
     {
       "polku": "kavely/ulkoalue-tormays.glb",
-      "sha256": "de5a632ea3dbc5c11967d544554a3104927ca7fd32ddfc8d82731bb0c89bad43",
-      "tavuja": 115760
+      "sha256": "1853e2ff32af4da1036ceee4b3d23fb9d5f70d127effd1a69c89ff9d40d14091",
+      "tavuja": 115112
     },
     {
       "polku": "kavely/vesiportti-kavely.glb",
@@ -469,6 +484,11 @@
       "tavuja": 749024
     },
     {
+      "polku": "tilat/linnantupa.glb",
+      "sha256": "672d1c3834bc239bc5ec3032a62b0c89245034a9b341ef656e897c0cff074a28",
+      "tavuja": 393444
+    },
+    {
       "polku": "tilat/muurinharja.glb",
       "sha256": "00461e5050b106ae7a3bd6b1afd16b4c82cd75a3f12dc2a7557a5dbd2139de2c",
       "tavuja": 1197340
@@ -477,6 +497,11 @@
       "polku": "tilat/tunnelma.glb",
       "sha256": "ad84786c04ff34dfe2b30b7eb213f79389b85ea876a32ad596ade89f4eb4c57b",
       "tavuja": 972452
+    },
+    {
+      "polku": "tilat/voudin-sali.glb",
+      "sha256": "3a718046a9b10fabbb083a34df05a1966b1cbd0f9f519d96ecb41dc14f0fa8eb",
+      "tavuja": 563000
     },
     {
       "polku": "ulkokuori/hybridi/kuori-materiaali-2k.png",
@@ -839,6 +864,46 @@
       "tavuja": 767180
     },
     {
+      "polku": "valot/linnantupa-2k-4x4.astcm",
+      "sha256": "d305239255744600864e0e95b9508395e26e3fc9fe841104dd1937e14ae57ab2",
+      "tavuja": 1398144
+    },
+    {
+      "polku": "valot/linnantupa-2k.jpg",
+      "sha256": "95d0591a5bbd3301ab31a804def8e8d91876f7e72a3767868d2837d5fdb92e82",
+      "tavuja": 220230
+    },
+    {
+      "polku": "valot/linnantupa-4x4.astcm",
+      "sha256": "fe8ca69a2f60b6e42ac98f633df64b6ee86e97ff1de2066a9f03d474ae84318a",
+      "tavuja": 5592448
+    },
+    {
+      "polku": "valot/linnantupa-hamara-2k-4x4.astcm",
+      "sha256": "df6a5cf59024d6fd9ebc362faa148feaf697d443e901092e584ee3f2a869c86b",
+      "tavuja": 1398144
+    },
+    {
+      "polku": "valot/linnantupa-hamara-2k.jpg",
+      "sha256": "23f38d1060b6a0eba9afad302782b65558cd2c79909e45af70f3f7dca097d8d4",
+      "tavuja": 205947
+    },
+    {
+      "polku": "valot/linnantupa-hamara-4x4.astcm",
+      "sha256": "b47f8ff7f6bccaa522cbd7d94dd7e57077dfb88a92ab6788f969d85873e9887f",
+      "tavuja": 5592448
+    },
+    {
+      "polku": "valot/linnantupa-hamara.jpg",
+      "sha256": "86731f7a6fce174ab6c0d55c75b6281c39c67d93ef9b42f002b7c7553ae2c3e5",
+      "tavuja": 699182
+    },
+    {
+      "polku": "valot/linnantupa.jpg",
+      "sha256": "b2c0a76b12eff59953244008a0b8a4ad276bc33b90431c900add1fdd3827a5a3",
+      "tavuja": 739322
+    },
+    {
       "polku": "valot/muurinharja-2k-4x4.astcm",
       "sha256": "779db12e2731ed14a892ee0d65eaad6b89dbd71346e1fabdec7d05062faf59bc",
       "tavuja": 5592448
@@ -897,6 +962,46 @@
       "polku": "valot/tunnelma.jpg",
       "sha256": "4481c06ee157842a00319dcc020889528c1302968d778c14bcdf366af85b0f76",
       "tavuja": 1113317
+    },
+    {
+      "polku": "valot/voudin-sali-2k-4x4.astcm",
+      "sha256": "a1855cd2c5be71dc752e6ad222a492b324de0e762482436d94b3a4b014344b74",
+      "tavuja": 1398144
+    },
+    {
+      "polku": "valot/voudin-sali-2k.jpg",
+      "sha256": "b135f79ffa81bffc34b412ff5e79a0ec4cae5ba83d5350d966c1c329fad24a21",
+      "tavuja": 240155
+    },
+    {
+      "polku": "valot/voudin-sali-4x4.astcm",
+      "sha256": "535cacedbe774ef182c9c3860e474c4e7f042e7945ecd48bb1ba38f0225568e3",
+      "tavuja": 5592448
+    },
+    {
+      "polku": "valot/voudin-sali-hamara-2k-4x4.astcm",
+      "sha256": "ebeb4c2b3b8e54dc011aef971269b9a8643ddd7b3fcd36a92e7d638e607a7a7d",
+      "tavuja": 1398144
+    },
+    {
+      "polku": "valot/voudin-sali-hamara-2k.jpg",
+      "sha256": "2a2951ad586e6a8f1675c33466efd26c4efe9ae9523ae36033905bdd02db84e1",
+      "tavuja": 203798
+    },
+    {
+      "polku": "valot/voudin-sali-hamara-4x4.astcm",
+      "sha256": "769a46c7fb63e4895ebbdc5aa35249eff1f5061ce8d31ed4eb7003b1dddf23b7",
+      "tavuja": 5592448
+    },
+    {
+      "polku": "valot/voudin-sali-hamara.jpg",
+      "sha256": "2cc5f1d5f9547f6702b87e94ec2d3e20342a32b8849deafaad1d677971d62079",
+      "tavuja": 720512
+    },
+    {
+      "polku": "valot/voudin-sali.jpg",
+      "sha256": "9bffeb88307be62f40951ed3790fc90e8325f2f426feb6540770b2cadedcd933",
+      "tavuja": 833943
     },
     {
       "polku": "ymparisto/aluskasvit-4x4.astcm",
