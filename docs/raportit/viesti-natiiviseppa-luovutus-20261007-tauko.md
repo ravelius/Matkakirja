@@ -48,7 +48,8 @@ log -1 master`, `tail -3 proto-3d/lokit/kaannospalvelu/juna.log`, `tail -5 proto
 4. Täysi BUILD 162 -SHA Julkaisijalle + Päätoimittajalle. Julkaisija ajaa TF 162:n.
 5. Mac TF 162 (lupa annettu): iOS-latauksen jälkeen `perl -e 'use POSIX; exit if fork; setsid; exec "zsh", @ARGV'
    proto-3d/lokit/natiiviseppa-skriptit/mac-tf.sh <BUILD162-sha8> 162`, tulos mac-tf-vahti.txt + gh run list proto3d-mac-testflight.
-6. JUNA 164 (+ Päätoimittaja 23.0x: LS1 kortti-teksti 7c4122bc9 (⊇ d3d243595; tekijärivi pois, KuvaLahteet) + NUI opas-lahteet
+6. JUNA 164 (LS1:n kokonaishaara linssiseppa/juna-164 4020d4b59 simukäännetty 23.28 → 08188463f, app lokit/natiiviseppa-app-164koe-4020d4b5;
+   HUOM 4020d4b59 EI ole BUILD 163:n päällä → pyydetty LS1:ltä yhdistämään 062bb439; + Päätoimittaja 23.0x: LS1 kortti-teksti 7c4122bc9 (⊇ d3d243595; tekijärivi pois, KuvaLahteet) + NUI opas-lahteet
    8b4659e9 (⊇ 48878725; Päätoimittaja vahvisti 8b4659e9); ent. "163"; huomenna 8.10.; LS1-osuus jo korjausjunassa 163 (71cf7b97b ⊇ e5c4b145e, 578d1186c), KUITATTU Päätoimittaja 20.0x–21.5x; POHJA BUILD 162 30fbc374; LS1 lappu-katolle 6ad4244fc POIS):
    LISÄKSI: LS1 kortti-teksti e5c4b145e (⊇ ee5f54a81 ⊇ e3d40e096 + cbd2b6abc; liikkeen palautus; uusi KorttiAsettelu.cs + .meta) ja Natiiviseppä kaannos-jobs 7d66739d.
    Siirtoseppä historia-valot-juna b91278bf (⊇ 463fefc7 ⊇ 2d1c133e ⊇ e4dab248 ⊇ 787f0092 ⊇ 6d23aed1; kuoren leikkaukset 16 paikkaan; kehittäjävalikon Volumetriset valot PÄÄLLÄ/POIS + Candle VFX + Volumetric Lights 2 laatutasokytkimen takana, Asset Store -paketit ENSIMMÄISTÄ KERTAA junassa; jos käännös kaatuu pakettien takia → varahaara historia-fp-juna-2 8b071c07 (⊇ 6f9ad1e5 ⊇ 9cddc246, korvaa 6d23aed1) viivyttämättä + yksi rivi Päätoimittajalle) +
@@ -68,7 +69,10 @@ log -1 master`, `tail -3 proto-3d/lokit/kaannospalvelu/juna.log`, `tail -5 proto
    NSCocoaErrorDomain 513 "You don’t have permission to save the file … in the folder Sarja"; POSIX-oikeudet ok → macOS-tietosuoja).
    Tarvitaan OMISTAJAN asetus: Täysi levyn käyttöoikeus CoreSimulatorService.xpc:lle (Päätoimittajalle kerrottu), sitten CoreSimulatorService
    uudelleen ja luo uudelleen. Sarja tyhjä, ei jäänteitä; simusarja.sh hylkää nyt virhetekstit (vain UDID kelpaa). Työkaluja EI vaihdettu
-   (Päätoimittaja: vaihto, todennus ja roolien ohje 8.10. aamulla ennen junaa 164). Seuraavaksi: luo → työkalut (proto-kaanna.sh SIMS-UDID:t, aja.sh, todistusajo.sh, simkosketus, roolien skriptit) → todennus.
+   (Päätoimittaja: vaihto, todennus ja roolien ohje 8.10. aamulla ennen junaa 164).
+   23.28 KORJATTU: omistaja antoi CoreSimulatorService.xpc:lle täyden levyn käyttöoikeuden, palvelu käynnistetty uudelleen → KAIKKI 26 LAITETTA
+   LUOTU T7-sarjaan, UDID-taulu proto-3d/tyokalut/simusarja-udid.tsv (natiiviseppa-iPhone = CDA479DE-8554-450B-B75B-A4B56EFF122A).
+   Seuraavaksi (8.10. aamulla): työkalut (proto-kaanna.sh SIMS-UDID:t, aja.sh, todistusajo.sh, simkosketus, roolien skriptit) → todennus.
    T7: /Volumes/T7 4TB, 1,5 Ti vapaana.
 8. KÄÄNNÖSNOPEUTUS (omistaja 21.5x): proto-kaanna.sh muutettu (jobs 12 joutilaana, välitiedostot säilyvät >36 Gi, vaiheajat; varmuuskopio
    .ennen-jobs12-20261007); proto natiiviseppa/kaannos-jobs 7d66739d (aja.sh) → JUNAAN 163; Matkakirja-haara natiiviseppa/tf-jobs 93c2e7c76
