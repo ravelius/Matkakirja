@@ -524,7 +524,7 @@ namespace Matkakirja.Natiivi
             avausIon.style.unityBackgroundScaleMode = ScaleMode.ScaleToFit;
             avausIon.style.display = DisplayStyle.None;
             kerrosJuuri.schedule.Execute(PaivitaAvausIon).Every(100);
-            OpasSovitin.PalloKuvaLadattu += () => UiKerros.PaaSaikeessa(() => { if (siirtyma.style.display != DisplayStyle.None && OpasSovitin.Kaupunkitila && palloKuva == null) AsetaPalloKuva(true); });
+            OpasSovitin.PalloTekstuuriValmis += () => UiKerros.PaaSaikeessa(() => { if (siirtyma.style.display != DisplayStyle.None && OpasSovitin.Kaupunkitila && !palloNakyy) AsetaPalloKuva(true); });
             OpasSovitin.SiirtymaAlkaa += n => UiKerros.PaaSaikeessa(() => SiirtymaAlkaa(n));
             OpasSovitin.SiirtymaValmis += () => UiKerros.PaaSaikeessa(SiirtymaValmis);
         }
@@ -541,6 +541,7 @@ namespace Matkakirja.Natiivi
             siirtyma.style.display = DisplayStyle.Flex;
             siirtyma.BringToFront();
             siirtymaPalkki.Nayta(true);
+            siirtymaAlku = Time.realtimeSinceStartup;
             AsetaPalloKuva(OpasSovitin.Kaupunkitila);
             KrediititTiivis.CesiumNakyviin = true;
             AsetaSiirtymaIon();
@@ -581,20 +582,18 @@ namespace Matkakirja.Natiivi
         // asento valitsevat. Ladataan välimuistiin (Documents/latauskuvat/), kun sallittujen kaupunkien lista saapuu, ja tekstuuri
         // luetaan levyltä siirtymän alkaessa ja vapautetaan sen jälkeen. Ei kuvaa vielä → musta ruutu kuten ennen.
         VisualElement siirtymaKuva;
-        Texture2D palloKuva;
-        string palloKuvaNimi;
-        bool palloKuvaAvautuu;
+        bool palloNakyy;
 
         void AsetaPalloKuva(bool nayta)
         {
             string n = nayta ? OpasSovitin.PalloKuvaRuudulle() : null;
-            if (n != null && !System.IO.File.Exists(OpasSovitin.PalloKuvaPolku(n))) { OpasSovitin.HaePalloKuva(n); n = null; }
             if (n == null)
             {
+                palloNakyy = false;
                 siirtymaKuva.style.display = DisplayStyle.None;
                 siirtymaKuva.style.backgroundImage = StyleKeyword.Null;
                 siirtyma.style.justifyContent = StyleKeyword.Null; siirtyma.style.paddingBottom = StyleKeyword.Null;
-                if (palloKuva != null) { UnityEngine.Object.Destroy(palloKuva); palloKuva = null; palloKuvaNimi = null; }
+                OpasSovitin.VapautaPalloTekstuuri();
                 return;
             }
             // Teksti ja palkki kuvan tummaan alaosaan (pallo jää keskelle näkyviin). Leveä vaakaruutu (iPhone 2,2:1) näyttää 4:3-rajauksesta
@@ -604,24 +603,24 @@ namespace Matkakirja.Natiivi
             siirtyma.style.paddingBottom = Mathf.Max(koko.y, 1f) * 0.07f;
             siirtymaKuva.style.backgroundPositionY = koko.x > koko.y * 1.5f
                 ? new BackgroundPosition(BackgroundPositionKeyword.Top, Length.Percent(35)) : new BackgroundPosition(BackgroundPositionKeyword.Center);
-            if (palloKuva != null && palloKuvaNimi == n) { siirtymaKuva.style.display = DisplayStyle.Flex; return; }
-            if (palloKuvaAvautuu) return;
-            palloKuvaAvautuu = true;
-            var r = UnityEngine.Networking.UnityWebRequestTexture.GetTexture("file://" + OpasSovitin.PalloKuvaPolku(n), true);
-            r.SendWebRequest().completed += _ =>
+            var t = OpasSovitin.PalloTekstuuri(n);
+            if (t == null) { OpasSovitin.PalloTekstuuriMuistiin(n); return; }   // valmistuessa PalloTekstuuriValmis → tänne uudelleen
+            bool myohassa = siirtyma.resolvedStyle.opacity > 0.5f && Time.realtimeSinceStartup - siirtymaAlku > 0.3f;
+            siirtymaKuva.style.backgroundImage = new StyleBackground(t);
+            siirtymaKuva.style.display = DisplayStyle.Flex;
+            palloNakyy = true;
+            if (myohassa)
             {
-                palloKuvaAvautuu = false;
-                var t = r.result == UnityEngine.Networking.UnityWebRequest.Result.Success ? UnityEngine.Networking.DownloadHandlerTexture.GetContent(r) : null;
-                r.Dispose();
-                if (t == null) { Debug.Log("MATKAKIRJA opas: pallon latauskuva ei auennut " + n); return; }
-                if (siirtyma.style.display == DisplayStyle.None || !OpasSovitin.Kaupunkitila) { UnityEngine.Object.Destroy(t); return; }
-                if (palloKuva != null) UnityEngine.Object.Destroy(palloKuva);
-                palloKuva = t; palloKuvaNimi = n;
-                siirtymaKuva.style.backgroundImage = new StyleBackground(t);
-                siirtymaKuva.style.display = DisplayStyle.Flex;
-                Debug.Log($"MATKAKIRJA opas: pallon latauskuva näkyviin {n} ({t.width}×{t.height})");
-            };
+                // Myöhässä saapunut kuva häivytetään esiin (ei äkillistä vaihtoa mustasta).
+                siirtymaKuva.style.opacity = 0f;
+                siirtymaKuva.style.transitionProperty = new List<StylePropertyName> { "opacity" };
+                siirtymaKuva.style.transitionDuration = new List<TimeValue> { new TimeValue(0.5f, TimeUnit.Second) };
+                siirtymaKuva.schedule.Execute(() => siirtymaKuva.style.opacity = 1f).ExecuteLater(16);
+            }
+            else siirtymaKuva.style.opacity = 1f;
+            Debug.Log($"MATKAKIRJA opas: pallon latauskuva näkyviin {n} ({t.width}×{t.height}){(myohassa ? $", myöhässä {Time.realtimeSinceStartup - siirtymaAlku:F1} s" : "")}");
         }
+        float siirtymaAlku;
 
         /// <summary>Kohde ladattu: musta ruutu häipyy (Cupolan häivytys) ja näkymä aukeaa.</summary>
         public void SiirtymaValmis()
