@@ -1,0 +1,584 @@
+{
+  "kaupunki": "Bryssel",
+  "id": "bryssel",
+  "versio": 1,
+  "kohteet": [
+    {
+      "id": "Q215429",
+      "nimi": "Grand-Place",
+      "kuvaus": "Brysselin vanha keskusaukio",
+      "luokka": "aukio",
+      "koko_m": 110,
+      "teksti": "Brysselin keskusaukio Grand-Place näkyy ylhäältä kokonaan kivettynä suorakaiteena, jota reunustavat kapeat kiltatalot kullattuine päätyineen ja kaupungintalon korkea torni. Elokuussa 1695 Ranskan armeija pommitti kaupunkia, ja suurin osa aukion taloista tuhoutui; pystyyn jäivät vain kaupungintalon julkisivu ja torni sekä muutama kiviseinä. Killat rakensivat talonsa nopeasti uudelleen, ja nyt kivestä. Isoisäsi kirjoitti vuonna 1873, että kullatut kiltatalot kiilsivät sateen jälkeen kuin avattu korulipas. Joka toinen elokuu aukion keskelle levitetään valtava kukkamatto, johon tarvitaan yli puoli miljoonaa begoniaa.",
+      "lyhyt": "Brysselin keskusaukiolla Grand-Placella asui aikoinaan kirjailija Victor Hugo, peräti kahdessa eri talossa. Karl Marx taas juhli uutta vuotta 1848 aukion Joutsen-nimisessä talossa ja opetti sen takahuoneessa työläisiä. Aukio on ollut Unescon maailmanperintökohde vuodesta 1998.",
+      "syventava": "Mitä aukiolle tapahtui vuonna 1695?",
+      "kysymykset": [
+        "Miksi Ranska pommitti Brysseliä?",
+        "Mitä kiltataloissa tehtiin ennen vanhaan?",
+        "Miksi talojen päädyt on kullattu?",
+        "Mitä aukiolla tapahtuu jouluna?",
+        "Missä talossa Victor Hugo asui?"
+      ],
+      "isoisa": true,
+      "lahteet": [
+        {
+          "vaite": "Aukio on kokonaan kivetty, ja sitä reunustavat kiltatalot, kaupungintalo ja Kuninkaan talo.",
+          "url": "https://en.wikipedia.org/wiki/Grand-Place"
+        },
+        {
+          "vaite": "Ranskan armeija Villeroin johdolla aloitti Brysselin pommituksen 13.8.1695; suurin osa aukiosta tuhoutui, vain kaupungintalon julkisivu ja torni sekä joitakin kiviseiniä kestivät.",
+          "url": "https://en.wikipedia.org/wiki/Grand-Place"
+        },
+        {
+          "vaite": "Killat rakensivat talot nopeasti uudelleen, nyt kivestä.",
+          "url": "https://www.brussels.be/grand-place-brussels"
+        },
+        {
+          "vaite": "Isoisän merkintä: Grand-Placen kullatut kiltatalot kiiltävät sateen jälkeen kuin avattu korulipas.",
+          "url": "kaanon:isoisan-paivakirja"
+        },
+        {
+          "vaite": "Joka parillinen vuosi elokuussa aukiolle tehdään kukkamatto, jossa on yli 500 000 begoniaa.",
+          "url": "https://www.brussels.be/grand-place-brussels"
+        },
+        {
+          "vaite": "Victor Hugo asui kahdessa Grand-Placen talossa; Karl Marx juhli uutta vuotta 1848 Le Cygne -talossa ja opetti sen takahuoneessa työläisiä.",
+          "url": "https://brusselstimes.com/50850/the-10-most-famous-emigres-to-call-brussels-home"
+        },
+        {
+          "vaite": "Unescon maailmanperintökohde vuodesta 1998.",
+          "url": "https://en.wikipedia.org/wiki/Grand-Place"
+        }
+      ]
+    },
+    {
+      "id": "Q180901",
+      "nimi": "Atomium",
+      "kuvaus": "Maailmannäyttelyn teräksinen rautakide",
+      "luokka": "muu",
+      "koko_m": 100,
+      "teksti": "Maamerkki Atomium kohoaa Heyselin ylängöllä satakaksi metriä korkeana, ja ylhäältä sen yhdeksän kiiltävää teräspalloa näyttävät jättimäiseltä molekyylimallilta. Rakennelma esittää rautakiteen alkeiskoppia satakuusikymmentäviisi miljardia kertaa suurennettuna, ja se tehtiin vuoden 1958 maailmannäyttelyyn. Insinööri André Waterkeyn ja arkkitehdit André ja Jean Polak suunnittelivat sen seisomaan vain näyttelyn kuusi kuukautta, mutta suosio pelasti sen purkamiselta. Keskimmäisen putken hissi oli valmistuessaan Euroopan nopein, ja se vie ylimpään palloon, jossa on näköalatasanne ja ravintola.",
+      "lyhyt": "Maamerkki Atomium oli 1990-luvun lopulla niin huonossa kunnossa, että se oli vähällä joutua puretuksi. Kunnostuksessa, joka valmistui vuonna 2006, pallojen alkuperäinen alumiinipinta vaihdettiin ruostumattomaan teräkseen, joka kestää syöpymistä paremmin ja eristää ääntä.",
+      "syventava": "Miksi Atomiumia ei purettu?",
+      "kysymykset": [
+        "Mitä Atomiumin palloissa on sisällä?",
+        "Miksi juuri rautakide valittiin malliksi?",
+        "Kuka keksi rakentaa jättimäisen atomin?",
+        "Mitä muuta maailmannäyttelystä on jäljellä?",
+        "Pääseekö kaikkiin palloihin sisälle?"
+      ],
+      "isoisa": false,
+      "lahteet": [
+        {
+          "vaite": "Atomium on 102 metriä korkea ja sijaitsee Heyselin ylängöllä Laekenissa; yhdeksän palloa, pinnoitettu ruostumattomalla teräksellä.",
+          "url": "https://en.wikipedia.org/wiki/Atomium"
+        },
+        {
+          "vaite": "Muoto esittää rautakiteen alkeiskoppia 165 miljardia kertaa suurennettuna; rakennettu vuoden 1958 maailmannäyttelyyn.",
+          "url": "https://en.wikipedia.org/wiki/Atomium"
+        },
+        {
+          "vaite": "Suunnittelijat insinööri André Waterkeyn ja arkkitehdit André ja Jean Polak.",
+          "url": "https://en.wikipedia.org/wiki/Atomium"
+        },
+        {
+          "vaite": "Atomiumin oli tarkoitus seistä kuusi kuukautta näyttelyn ajan; suosio esti purkamisen.",
+          "url": "https://en.wikipedia.org/wiki/Atomium"
+        },
+        {
+          "vaite": "Keskiputken hissi oli rakennusaikanaan Euroopan nopein; ylimmässä pallossa näköalatasanne ja ravintola.",
+          "url": "https://en.wikipedia.org/wiki/Atomium"
+        },
+        {
+          "vaite": "Atomium oli 1990-luvun lopulla lähellä purkamista; kunnostuksessa 2004–2006 alumiini vaihdettiin ruostumattomaan teräkseen, joka kestää korroosiota paremmin ja eristää ääntä.",
+          "url": "https://atomium.be/restoration_of_the_atomium"
+        }
+      ]
+    },
+    {
+      "id": "Q152072",
+      "nimi": "Manneken Pis",
+      "kuvaus": "Brysselin pieni pronssipoika",
+      "luokka": "muu",
+      "koko_m": 20,
+      "teksti": "Pronssipoika Manneken Pis on niin pieni, että ylhäältä sen paikan tunnistaa lähinnä kadunkulmaan kerääntyneestä väkijoukosta, sillä patsas on vain viisikymmentäviisi ja puoli senttiä korkea. Alaston poika virtsaa suihkulähteen altaaseen, ja nykyisen hahmon veisti kuvanveistäjä Jérôme Duquesnoy vanhempi vuonna 1619. Patsas on varastettu ja rikottu monta kertaa, joten kulmassa seisoo kopio vuodelta 1965, ja alkuperäinen on Brysselin kaupunginmuseossa. Kun Ranskan kuninkaan Ludvig viidennentoista sotilaat yrittivät viedä patsaan, kuningas lahjoitti pojalle anteeksipyynnöksi asun vuonna 1747.",
+      "lyhyt": "Pronssipojalla, Manneken Pisillä, on oma vaatekaappi: kokoelmassa on yli tuhat asua, ja joka vuosi niitä tulee parikymmentä lisää. Asut ovat esillä läheisessä museossa, mutta poliittisia, uskonnollisia ja mainosasuja poika ei pue ylleen.",
+      "syventava": "Miksi Ranskan kuningas lahjoitti asun?",
+      "kysymykset": [
+        "Miksi poika virtsaa suihkulähteeseen?",
+        "Kuka päättää, mitä asua poika käyttää?",
+        "Miksi patsas on varastettu niin monesti?",
+        "Onko pojalla kaupungissa sisaruksia?",
+        "Mikä on pojan vanhin säilynyt asu?"
+      ],
+      "isoisa": false,
+      "lahteet": [
+        {
+          "vaite": "Patsas on 55,5 senttiä korkea pronssinen suihkulähdeveistos; Jérôme Duquesnoy vanhempi teki sen vuonna 1619.",
+          "url": "https://en.wikipedia.org/wiki/Manneken_Pis"
+        },
+        {
+          "vaite": "Patsas on varastettu tai vahingoitettu useasti; vuodesta 1965 paikalla on kopio ja alkuperäinen Brysselin kaupunginmuseossa.",
+          "url": "https://en.wikipedia.org/wiki/Manneken_Pis"
+        },
+        {
+          "vaite": "Ludvig XV lahjoitti asun vuonna 1747 anteeksipyynnöksi, kun hänen sotilaansa yrittivät varastaa patsaan.",
+          "url": "https://www.brusselsmuseums.be/en/garderobe-mannekenpis"
+        },
+        {
+          "vaite": "Vaatekaapissa oli vuoden 2023 lopussa 1141 asua; uusia tulee 20–30 vuodessa; ei poliittisia, uskonnollisia eikä kaupallisia asuja.",
+          "url": "https://www.brussels.be/node/59695"
+        },
+        {
+          "vaite": "GardeRobe MannekenPis -museo on aivan suihkulähteen lähellä.",
+          "url": "https://www.brusselsmuseums.be/en/garderobe-mannekenpis"
+        }
+      ]
+    },
+    {
+      "id": "Q635307",
+      "nimi": "Kuninkaanpalatsi",
+      "kuvaus": "Belgian kuninkaan virkapalatsi",
+      "luokka": "rakennus",
+      "koko_m": 160,
+      "teksti": "Kuninkaanpalatsi rajaa Brysselin puistoa pitkänä vaaleana julkisivuna, joka on puolitoista kertaa niin pitkä kuin Lontoon Buckinghamin palatsin. Se on Belgian kuninkaan virallinen palatsi ja työpaikka, mutta kuningasperhe asuu Laekenin linnassa. Katolla liehuva lippu kertoo, että kuningas on Belgiassa. Peilisalin kattoon taiteilija Jan Fabre avustajineen kiinnitti yli puolitoista miljoonaa jalokuoriaisen kuorta, ja teoksen tilasi kuningatar Paola vuonna 2002. Neljän vuoden kunnostuksen jälkeen palatsi avattiin taas yleisölle kesällä 2026.",
+      "lyhyt": "Kuninkaanpalatsin paikalla seisoi ennen Coudenbergin palatsi, joka paloi helmikuussa 1731, kun käskynhaltijattaren huoneessa kynttilät jäivät sammuttamatta. Raunioiden päälle rakennettiin myöhemmin Kuninkaallinen aukio, ja vanhan palatsin kellareihin pääsee nyt maan alle museon kautta.",
+      "syventava": "Mistä katon koristeet tehtiin?",
+      "kysymykset": [
+        "Miksi kuningas ei asu palatsissa?",
+        "Mitä palatsissa nykyään tehdään?",
+        "Miksi kattoon laitettiin kuoriaisia?",
+        "Kuka rakennutti nykyisen palatsin?",
+        "Milloin palatsiin pääsee sisälle?"
+      ],
+      "isoisa": false,
+      "lahteet": [
+        {
+          "vaite": "Palatsin julkisivu on viisikymmentä prosenttia pidempi kuin Buckinghamin palatsin.",
+          "url": "https://unofficialroyalty.com/the-royal-palace-of-brussels"
+        },
+        {
+          "vaite": "Palatsi on kuninkaan virallinen palatsi ja työpaikka; kuningasperhe asuu Laekenin linnassa.",
+          "url": "kaanon:pelin-aineisto"
+        },
+        {
+          "vaite": "Lippu liehuu palatsin yllä, kun hallitsija on Belgiassa.",
+          "url": "https://en.wikipedia.org/wiki/Flag_of_Belgium"
+        },
+        {
+          "vaite": "Jan Fabren teos Heaven of Delight peilisalin katossa: yli 1,6 miljoonaa jalokuoriaista, kuningatar Paolan tilaama 2002.",
+          "url": "https://garagemca.org/en/catalogue/L10672"
+        },
+        {
+          "vaite": "Palatsi avautui yleisölle heinäkuussa 2026 ensimmäistä kertaa sitten vuoden 2022 julkisivujen ja ikkunoiden kunnostuksen jälkeen.",
+          "url": "https://www.brusselstimes.com/2213053/royal-palace-in-brussels-reopens-to-public-for-first-time-since-2022"
+        },
+        {
+          "vaite": "Coudenbergin palatsi paloi 3.2.1731; tuli syttyi käskynhaltijatar Maria Elisabetin huoneistossa, kun kynttilät jäivät sammuttamatta; Place Royale rakennettiin raunioiden päälle; raunioihin pääsee BELvue-museon kautta.",
+          "url": "https://en.wikipedia.org/wiki/Palace_of_Coudenberg"
+        }
+      ]
+    },
+    {
+      "id": "Q269654",
+      "nimi": "Pyhän Mikaelin ja Pyhän Gudulan katedraali",
+      "kuvaus": "Belgian kansallinen katedraali",
+      "luokka": "kirkko",
+      "koko_m": 110,
+      "korkeus_m": 64,
+      "teksti": "Pyhän Mikaelin ja Pyhän Gudulan katedraali erottuu ylhäältä kahdesta vaaleasta, kuusikymmentäneljä metriä korkeasta tornistaan. Kirkko on omistettu Brysselin suojeluspyhimyksille, ja sen nykyinen goottilainen asu valmistui pääosin 1500-luvulla. Lattiaan upotettujen lasien läpi näkyy 1000-luvun romaanisen kirkon jäänteitä, jotka kaivettiin esiin 1930- ja 1980-luvuilla. Barokkisaarnatuolissa, jonka Hendrik Frans Verbruggen veisti vuonna 1699, Aatami ja Eeva karkotetaan paratiisista. Belgian kansallisena kirkkona katedraalissa vietetään kuninkaallisia häitä, valtiollisia hautajaisia ja muita juhlamenoja.",
+      "lyhyt": "Pyhän Mikaelin ja Pyhän Gudulan katedraali sai katedraalin aseman vasta vuonna 1962. Siellä vihittiin joulukuussa 1999 kruununprinssi Philippe ja Mathilde, joista tuli vuonna 2013 Belgian kuningas ja kuningatar. Eteläisessä tornissa soi neljänkymmenenyhdeksän kellon kellopeli.",
+      "syventava": "Mitä saarnatuolin veistokset esittävät?",
+      "kysymykset": [
+        "Kuka oli Pyhä Gudula?",
+        "Miksi Pyhä Mikael on Brysselin suojelija?",
+        "Mitä romaanisesta kirkosta löydettiin?",
+        "Miten saarnatuoli veistettiin?",
+        "Miksi kirkosta tuli katedraali niin myöhään?"
+      ],
+      "isoisa": false,
+      "lahteet": [
+        {
+          "vaite": "Tornit ovat kumpikin 64 metriä korkeat.",
+          "url": "https://en.wikipedia.org/wiki/Cathedral_of_St._Michael_and_St._Gudula"
+        },
+        {
+          "vaite": "Omistettu Brysselin suojeluspyhimyksille Pyhälle Mikaelille ja Pyhälle Gudulalle; goottilainen asu pääosin valmis 1500-luvulla.",
+          "url": "https://en.wikipedia.org/wiki/Cathedral_of_St._Michael_and_St._Gudula"
+        },
+        {
+          "vaite": "1000-luvun romaanisen kirkon osia kaivettiin esiin 1937 ja 1987–1988; ne näkyvät lattian lasien läpi.",
+          "url": "https://havecamerawilltravel.com/field-notes/cathedral-michael-gudula-brussels/"
+        },
+        {
+          "vaite": "Hendrik Frans Verbruggenin barokkisaarnatuoli vuodelta 1699 kuvaa Aatamin ja Eevan karkotusta paratiisista.",
+          "url": "https://traveltoeat.com/cathedrale-saints-michel-et-gudule-brussels/"
+        },
+        {
+          "vaite": "Kansallisena kirkkona siellä vietetään kuninkaallisia häitä, valtiollisia hautajaisia ja muita virallisia tilaisuuksia.",
+          "url": "https://en.wikipedia.org/wiki/Cathedral_of_St._Michael_and_St._Gudula"
+        },
+        {
+          "vaite": "Katedraalin asema vuonna 1962.",
+          "url": "https://en.wikipedia.org/wiki/Cathedral_of_St._Michael_and_St._Gudula"
+        },
+        {
+          "vaite": "Philippe ja Mathilde vihittiin katedraalissa 4.12.1999; he nousivat kuninkaaksi ja kuningattareksi 2013.",
+          "url": "https://en.wikipedia.org/wiki/Wedding_of_Prince_Philippe_and_Mathilde_d%27Udekem_d%27Acoz"
+        },
+        {
+          "vaite": "Eteläisessä tornissa on 49 kellon kellopeli.",
+          "url": "https://en.wikipedia.org/wiki/List_of_carillons_in_Belgium"
+        }
+      ]
+    },
+    {
+      "id": "Q1255327",
+      "nimi": "Brysselin kaupungintalo",
+      "kuvaus": "Goottilainen raatihuone Grand-Placella",
+      "luokka": "rakennus",
+      "koko_m": 70,
+      "teksti": "Brysselin kaupungintalo hallitsee Grand-Placen eteläsivua, ja sen yhdeksänkymmentäkuusi metriä korkea, pitsimäiseksi koristeltu torni näkyy kauas yli vanhan keskustan kattojen. Tornin huipulla seisoo kullattu Pyhä Mikael, Brysselin suojeluspyhimys, joka surmaa lohikäärmettä ja toimii samalla tuuliviirinä. Rakennus valmistui 1400-luvulla, ja tornin viimeisteli hovin arkkitehti Jan van Ruysbroeck. Julkisivu on epäsymmetrinen, ja legendan mukaan arkkitehti hyppäsi siksi tornista kuolemaansa. Todellisuudessa talo rakennettiin kahdessa vaiheessa: ensin itäsiipi ja sitten pidempi länsisiipi.",
+      "lyhyt": "Brysselin kaupungintalo oli vuoden 1695 pommituksessa tykkien päämaali. Tuli tuhosi sen sisätilat, arkiston ja taidekokoelmat, mutta kivinen julkisivu ja torni kestivät. Nykyäänkin talo on Brysselin kaupunginhallinnon istuin, ja sen juhlasaleissa vietetään yhä tilaisuuksia.",
+      "syventava": "Miksi julkisivu on epäsymmetrinen?",
+      "kysymykset": [
+        "Mitä kaupungintalon sisällä on nähtävää?",
+        "Pääseekö kaupungintalon tornin huipulle?",
+        "Miksi Pyhä Mikael surmaa lohikäärmettä?",
+        "Kuka oli arkkitehti Jan van Ruysbroeck?",
+        "Mitä patsaat julkisivussa esittävät?"
+      ],
+      "isoisa": false,
+      "lahteet": [
+        {
+          "vaite": "Torni on 96 metriä korkea; huipulla kullattu Pyhä Mikael surmaamassa lohikäärmettä; Mikael on Brysselin suojeluspyhimys.",
+          "url": "https://en.wikipedia.org/wiki/Brussels_Town_Hall"
+        },
+        {
+          "vaite": "Patsas toimii tuuliviirinä.",
+          "url": "https://en.wikipedia.org/wiki/Brussels_Town_Hall"
+        },
+        {
+          "vaite": "Rakennettu 1401–1455; tornin viimeisteli hovin arkkitehti Jan van Ruysbroeck.",
+          "url": "https://en.wikipedia.org/wiki/Brussels_Town_Hall"
+        },
+        {
+          "vaite": "Legendan mukaan epäsymmetria ajoi arkkitehdin hyppäämään tornista; todellisuudessa ensin rakennettiin itäsiipi ja myöhemmin pidempi länsisiipi.",
+          "url": "https://en.wikipedia.org/wiki/Brussels_Town_Hall"
+        },
+        {
+          "vaite": "Vuoden 1695 pommituksessa kaupungintalo oli tykistön päämaali; tuli tuhosi sisätilat, arkiston ja taidekokoelmat, mutta kivikuori säilyi.",
+          "url": "https://en.wikipedia.org/wiki/Brussels_Town_Hall"
+        },
+        {
+          "vaite": "Kaupungintalo on Brysselin kaupungin hallinnon istuin, ja siellä järjestetään yhä tilaisuuksia.",
+          "url": "https://en.wikipedia.org/wiki/Brussels_Town_Hall"
+        }
+      ]
+    },
+    {
+      "id": "Q850537",
+      "nimi": "Oikeuspalatsi",
+      "kuvaus": "1800-luvun jättimäinen oikeustalo",
+      "luokka": "rakennus",
+      "koko_m": 170,
+      "teksti": "Oikeuspalatsi täyttää ylhäältä katsottuna kokonaisen korttelin ylä- ja alakaupungin rajalla, ja sen kupoli kohoaa sadanneljän metrin korkeuteen. Arkkitehti Joseph Poelaertin suunnittelemaa palatsia rakennettiin vuodesta 1866 vuoteen 1883, ja sitä pidetään 1800-luvun suurimpana rakennuksena. Sen tieltä purettiin osa Marollesin kaupunginosaa, ja pakkomuutot tekivät sanasta arkkitehti yhden Brysselin pahimmista haukkumasanoista. Poelaert ei nähnyt työtään valmiina, sillä hän kuoli vuonna 1879. Palatsin edustalta kulkee nykyään ilmainen julkinen hissi alas Marollesiin.",
+      "lyhyt": "Oikeuspalatsin julkisivua alettiin kunnostaa vuonna 1984, ja telineistä tuli vuosikymmeniksi osa kaupunkikuvaa. Vasta vuonna 2026 etujulkisivu näkyi ilman telineitä ensimmäistä kertaa yli neljäänkymmeneen vuoteen. Julkisivujen on määrä valmistua vuoteen 2030 mennessä, kun Belgia täyttää kaksisataa vuotta.",
+      "syventava": "Miksi arkkitehti on Brysselissä haukkumasana?",
+      "kysymykset": [
+        "Miksi oikeuspalatsista tehtiin näin suuri?",
+        "Mitä Marollesin asukkaille tapahtui?",
+        "Miksi kunnostus on kestänyt niin kauan?",
+        "Mitä kupolille tapahtui sodan lopussa?",
+        "Käsitelläänkö palatsissa yhä oikeusjuttuja?"
+      ],
+      "isoisa": false,
+      "lahteet": [
+        {
+          "vaite": "Kupoli on 104 metriä korkea.",
+          "url": "https://en.wikipedia.org/wiki/Palace_of_Justice,_Brussels"
+        },
+        {
+          "vaite": "Joseph Poelaert suunnitteli palatsin; rakennettiin 1866–1883; maineeltaan 1800-luvun suurin rakennus.",
+          "url": "https://en.wikipedia.org/wiki/Palace_of_Justice,_Brussels"
+        },
+        {
+          "vaite": "Osa Marollesia purettiin, ja pakkosiirtojen vuoksi sanasta arkkitehti tuli yksi Brysselin pahimmista haukkumasanoista.",
+          "url": "https://en.wikipedia.org/wiki/Palace_of_Justice,_Brussels"
+        },
+        {
+          "vaite": "Poelaert kuoli 3.11.1879; palatsi vihittiin 1883.",
+          "url": "https://en.wikipedia.org/wiki/Joseph_Poelaert"
+        },
+        {
+          "vaite": "Poelaertin hissit yhdistävät Place Poelaertin ja Marollesin; ne avattiin 2002 ja ovat ilmaisia.",
+          "url": "https://en.wikipedia.org/wiki/Place_Poelaert"
+        },
+        {
+          "vaite": "Kunnostustyöt alkoivat 1984.",
+          "url": "kaanon:pelin-aineisto"
+        },
+        {
+          "vaite": "Etujulkisivu näkyi elokuussa 2026 ilman telineitä ensimmäistä kertaa yli 40 vuoteen.",
+          "url": "https://www.vrt.be/vrtnws/en/2026/08/28/facade-of-justice-palace-visible-for-first-time-in-40-years-vid/"
+        },
+        {
+          "vaite": "Julkisivujen kunnostuksen on määrä valmistua 2030, kun Belgia juhlii 200 vuoden itsenäisyyttä.",
+          "url": "https://www.belganewsagency.eu/restoration-of-brussels-palace-of-justice-facade-reaches-milestone"
+        }
+      ]
+    },
+    {
+      "id": "Q1491935",
+      "nimi": "Saint-Hubertin kauppakäytävät",
+      "kuvaus": "Lasikattoiset 1800-luvun kauppakäytävät",
+      "luokka": "katu",
+      "koko_m": 213,
+      "teksti": "Lasikattoiset Saint-Hubertin kauppakäytävät erottuvat ylhäältä kapeana, kaksisataakolmetoista metriä pitkänä lasinauhana vanhan keskustan kattojen keskellä. Arkkitehti Jean-Pierre Cluysenaar suunnitteli ne, ja käytävät avattiin vuonna 1847, parikymmentä vuotta ennen Milanon kuuluisaa galleriaa. Ne rakennettiin ahtaiden ja hämärien kujien paikalle, ja kokonaisuuteen kuuluvat Kuninkaan, Kuningattaren ja Ruhtinaiden galleria. Sisäänkäynnin yllä lukee latinaksi Omnia omnibus, kaikkea kaikille, ja käytävät olivatkin auki jokaiselle. Suklaatalo Neuhaus avasi ensimmäisen myymälänsä käytäville vuonna 1857 ja toimii siellä yhä.",
+      "lyhyt": "Lasikattoisilla Saint-Hubertin kauppakäytävillä nähtiin maaliskuussa 1896 Belgian ensimmäinen julkinen elokuvanäytös, kun veljesten Lumière liikkuvat kuvat tulivat tuoreeltaan Pariisista. Näytös pidettiin sanomalehti La Chroniquen tiloissa. Käytävillä toimii yhä teatteri sekä kirjakauppoja, suklaapuoteja ja kahviloita.",
+      "syventava": "Mikä oli käytävien esikuva?",
+      "kysymykset": [
+        "Miksi Brysseliin rakennettiin katettu katu?",
+        "Mitä käytävien paikalla oli ennen?",
+        "Kuka keksi suklaakonvehdin käytävillä?",
+        "Mitä elokuvanäytöksessä näytettiin?",
+        "Miten lasikatto on kestänyt näin kauan?"
+      ],
+      "isoisa": false,
+      "lahteet": [
+        {
+          "vaite": "Kolme lasikattoista kauppakäytävää, yhteensä 213 metriä; avattiin kesäkuussa 1847; arkkitehti Jean-Pierre Cluysenaar.",
+          "url": "https://en.wikipedia.org/wiki/Royal_Saint-Hubert_Galleries"
+        },
+        {
+          "vaite": "Käytävät edelsivät noin kahdella vuosikymmenellä Milanon Galleria Vittorio Emanuele II:ta.",
+          "url": "https://en.wikipedia.org/wiki/Royal_Saint-Hubert_Galleries"
+        },
+        {
+          "vaite": "Kuninkaan, Kuningattaren ja Ruhtinaiden galleria.",
+          "url": "https://en.wikipedia.org/wiki/Royal_Saint-Hubert_Galleries"
+        },
+        {
+          "vaite": "Sisäänkäynnin yllä lukee Omnia omnibus, kaikkea kaikille.",
+          "url": "https://en.wikipedia.org/wiki/Royal_Saint-Hubert_Galleries"
+        },
+        {
+          "vaite": "Jean Neuhaus avasi ensimmäisen myymälän käytävillä vuonna 1857, ja yritys toimii siellä yhä.",
+          "url": "https://en.wikipedia.org/wiki/Neuhaus_(chocolatier)"
+        },
+        {
+          "vaite": "1.3.1896 käytävillä La Chroniquen tiloissa järjestettiin Lumièren elokuvien ensimmäinen julkinen näytös Belgiassa, pian Pariisin jälkeen.",
+          "url": "https://brusselstimes.com/391742/hidden-belgium-the-first-film-screening-in-belgium"
+        },
+        {
+          "vaite": "Käytävillä toimii Théâtre des Galeries sekä kirjakauppoja, suklaapuoteja ja kahviloita.",
+          "url": "https://en.wikipedia.org/wiki/Royal_Saint-Hubert_Galleries"
+        },
+        {
+          "vaite": "Käytävät korvasivat hämärien kujien vyyhdin, ja niitä pidetään Euroopan ensimmäisinä aidosti julkisina katettuina kauppakujina.",
+          "url": "kaanon:pelin-aineisto"
+        }
+      ]
+    },
+    {
+      "id": "Q1101790",
+      "nimi": "Cinquantenaire",
+      "kuvaus": "Riemukaaren puisto ja museot",
+      "luokka": "puisto",
+      "koko_m": 600,
+      "teksti": "Juhlapuisto Cinquantenaire levittäytyy Euroopan kortteleiden itäpäähän kolmenkymmenen hehtaarin laajuisena, ja ylhäältä sen U-kirjaimen muotoisen rakennusryhmän keskeltä erottuu riemukaari. Kaaren huipulla on pronssinen nelivaljakko, joka kuvaa Brabantin maakuntaa, ja kaari valmistui vuonna 1905. Rakennukset pystytettiin alun perin vuoden 1880 näyttelyyn, joka juhlisti Belgian vallankumouksen viisikymmenvuotispäivää. Nyt niissä toimivat sotahistoriallinen museo, automuseo Autoworld sekä taide- ja historiamuseo. Puiston laidalla oleva Brysselin suuri moskeija rakennettiin vuonna 1897 maailmannäyttelyn itämaiseksi paviljongiksi.",
+      "lyhyt": null,
+      "syventava": "Mitä riemukaaren huipulta näkee?",
+      "kysymykset": [
+        "Kuka halusi Brysseliin riemukaaren?",
+        "Pääseekö riemukaaren katolle?",
+        "Mitä automuseossa on esillä?",
+        "Miksi näyttelypaviljongista tuli moskeija?",
+        "Mitä puistossa tehdään nykyään?"
+      ],
+      "isoisa": false,
+      "lahteet": [
+        {
+          "vaite": "Puisto on 30 hehtaarin laajuinen Euroopan kortteleiden itäisimmässä osassa; U-muotoinen rakennuskokonaisuus.",
+          "url": "https://en.wikipedia.org/wiki/Cinquantenaire"
+        },
+        {
+          "vaite": "Riemukaari pystytettiin 1905; huipulla pronssinen nelivaljakko, joka symboloi Brabantin maakuntaa.",
+          "url": "https://en.wikipedia.org/wiki/Cinquantenaire"
+        },
+        {
+          "vaite": "Rakennukset tehtiin vuoden 1880 kansallisnäyttelyyn Belgian vallankumouksen 50-vuotisjuhlaksi.",
+          "url": "https://en.wikipedia.org/wiki/Cinquantenaire"
+        },
+        {
+          "vaite": "Puistossa ovat sotahistoriallinen museo, Autoworld ja taide- ja historiamuseo.",
+          "url": "https://en.wikipedia.org/wiki/Cinquantenaire"
+        },
+        {
+          "vaite": "Brysselin suuri moskeija rakennettiin 1897 näyttelyn itämaiseksi paviljongiksi.",
+          "url": "https://en.wikipedia.org/wiki/Great_Mosque_of_Brussels"
+        }
+      ]
+    },
+    {
+      "id": "Q1865794",
+      "nimi": "Mont des Arts",
+      "kuvaus": "Puutarha ylä- ja alakaupungin välissä",
+      "luokka": "puisto",
+      "koko_m": 250,
+      "teksti": "Taiteiden kukkula, Mont des Arts, laskeutuu yläkaupungista alakaupunkiin portaina ja geometrisena puutarhana, jonka pensasaitojen ja nurmikenttien kuviot erottuvat ylhäältä selvästi. Kuningas Leopold toinen osti alueen 1800-luvun lopulla tehdäkseen siitä taiteiden kaupunginosan, ja sen tieltä purettiin tiheään asuttu Saint-Rochin kortteli. Nykyisen puutarhan suunnitteli maisema-arkkitehti René Pechère vuoden 1958 maailmannäyttelyyn. Alueen kaarikäytävän kellossa kahdentoista hahmon kulkue ja kellopeli kertovat Brysselin historiasta, ja portailta avautuu yksi keskustan tunnetuimmista näkymistä, suoraan kaupungintalon tornille.",
+      "lyhyt": null,
+      "syventava": "Keitä kellon hahmot esittävät?",
+      "kysymykset": [
+        "Miksi Leopold toinen halusi taiteiden kukkulan?",
+        "Mitä kukkulan rakennuksissa on nykyään?",
+        "Kuka ratsastaa patsaassa rinteen alapäässä?",
+        "Mitä purettu Saint-Rochin kortteli oli?",
+        "Miksi puutarha on niin geometrinen?"
+      ],
+      "isoisa": false,
+      "lahteet": [
+        {
+          "vaite": "Mont des Arts yhdistää ylä- ja alakaupungin; geometrinen puutarha.",
+          "url": "kaanon:pelin-aineisto"
+        },
+        {
+          "vaite": "Leopold II osti koko kaupunginosan 1800-luvun lopulla taiteiden kortteliksi; Saint-Rochin kortteli purettiin.",
+          "url": "https://en.wikipedia.org/wiki/Mont_des_Arts"
+        },
+        {
+          "vaite": "René Pechère suunnitteli puutarhan vuoden 1958 maailmannäyttelyyn.",
+          "url": "https://en.wikipedia.org/wiki/Mont_des_Arts"
+        },
+        {
+          "vaite": "Mont des Artsin kellossa on kaksitoista Brysselin historiaa ja kansanperinnettä kuvaavaa hahmoa ja kellopeli.",
+          "url": "https://belgiqueinsolite.com/en/guide/mont-des-arts-carillon/"
+        },
+        {
+          "vaite": "Mont des Artsilta avautuu näkymä kaupungintalon tornille.",
+          "url": "https://en.wikipedia.org/wiki/Mont_des_Arts"
+        }
+      ]
+    },
+    {
+      "id": "Q28485845",
+      "nimi": "Brysselin pörssi",
+      "kuvaus": "Entinen pörssitalo, nyt olutmuseo",
+      "luokka": "rakennus",
+      "koko_m": 70,
+      "teksti": "Brysselin pörssi seisoo Anspachin bulevardin varrella leveänä, pylväikköisenä palatsina, jonka edusta on nykyään jalankulkijoiden aluetta. Arkkitehti Léon-Pierre Suys suunnitteli rakennuksen, joka valmistui vuonna 1873 entisen voitorin paikalle pian sen jälkeen, kun Senne-joki oli peitetty bulevardien alle. Koristeluun osallistui myös Auguste Rodin, joka veisti yhdessä Antoine van Rasbourgin kanssa neljä naishahmoa rakennuksen sisäpäätyyn. Viimeiset meklarit lähtivät talosta vuonna 2015, ja vuodesta 2023 yläkerroksissa on toiminut olutmuseo Belgian Beer World.",
+      "lyhyt": null,
+      "syventava": "Mitä Rodinin naishahmot esittävät?",
+      "kysymykset": [
+        "Miksi pörssistä tehtiin olutmuseo?",
+        "Mitä pörssin vierestä on kaivettu esiin?",
+        "Miksi Senne-joki peitettiin?",
+        "Missä Brysselin pörssi toimii nykyään?",
+        "Miksi Belgiassa on niin paljon oluita?"
+      ],
+      "isoisa": false,
+      "lahteet": [
+        {
+          "vaite": "Pörssipalatsi valmistui 1873; arkkitehti Léon-Pierre Suys; rakennettiin entisen voitorin paikalle.",
+          "url": "https://en.wikipedia.org/wiki/Bourse_Palace"
+        },
+        {
+          "vaite": "Pörssiaukio syntyi Senne-joen peittämisen jälkeen 1867–1871.",
+          "url": "https://en.wikipedia.org/wiki/Place_de_la_Bourse,_Brussels"
+        },
+        {
+          "vaite": "Auguste Rodin ja Antoine van Rasbourg veistivät sisäpäätyyn neljä karyatidia.",
+          "url": "https://en.wikipedia.org/wiki/Bourse_Palace"
+        },
+        {
+          "vaite": "Anspachin bulevardi muutettiin jalankulkualueeksi pörssin edessä 2015; viimeiset meklarit lähtivät 2015.",
+          "url": "https://the-low-countries.com/article/renovated-brussels-bourse-turns-to-booze"
+        },
+        {
+          "vaite": "Vuodesta 2023 yläkerroksissa on Belgian Beer World -museo.",
+          "url": "https://en.wikipedia.org/wiki/Bourse_Palace"
+        }
+      ]
+    },
+    {
+      "id": "Q821009",
+      "nimi": "Berlaymont",
+      "kuvaus": "Euroopan komission päämaja",
+      "luokka": "rakennus",
+      "koko_m": 150,
+      "teksti": "Euroopan komission päämaja Berlaymont näkyy ylhäältä ristinä, jonka neljä siipeä haarautuvat keskiosasta Robert Schumanin liikenneympyrän laidalla. Rakennus on nimetty Berlaymontin naisluostarin mukaan, joka aiemmin toimi samalla paikalla, ja sen omaleimainen muoto on päätynyt myös komission tunnukseen. Rakenteista löytyi asbestia, ja talo kunnostettiin perusteellisesti vuodesta 1991 vuoteen 2004. Uusi julkisivu tehtiin liikkuvista lasisäleistä, jotka kääntyvät auringon mukaan ja vaimentavat kadun melua. Komission puheenjohtajan työhuone on kolmannessatoista kerroksessa.",
+      "lyhyt": null,
+      "syventava": "Miksi Berlaymont kunnostettiin niin pitkään?",
+      "kysymykset": [
+        "Mitä Euroopan komissio tekee?",
+        "Kuka suunnitteli Berlaymontin?",
+        "Mitä luostarille tapahtui?",
+        "Missä komissio toimi kunnostuksen aikana?",
+        "Pääseekö Berlaymontiin vierailulle?"
+      ],
+      "isoisa": false,
+      "lahteet": [
+        {
+          "vaite": "Ristinmuotoinen torni, jonka neljä siipeä haarautuvat keskiosasta; Robert Schumanin liikenneympyrän laidalla; Euroopan komission päämaja.",
+          "url": "https://en.wikipedia.org/wiki/Berlaymont_building"
+        },
+        {
+          "vaite": "Nimetty Berlaymontin naisten luostarin mukaan; muoto on käytössä komission tunnuksessa.",
+          "url": "https://en.wikipedia.org/wiki/Berlaymont_building"
+        },
+        {
+          "vaite": "Asbestin vuoksi rakennus kunnostettiin 1991–2004.",
+          "url": "https://en.wikipedia.org/wiki/Berlaymont_building"
+        },
+        {
+          "vaite": "Uusi julkisivu on liikkuvaa lasia, joka kääntyy auringon mukaan ja vaimentaa kadun melua.",
+          "url": "https://en.wikipedia.org/wiki/Berlaymont_building"
+        },
+        {
+          "vaite": "Puheenjohtajan työhuone on 13. kerroksessa.",
+          "url": "https://en.wikipedia.org/wiki/Berlaymont_building"
+        }
+      ]
+    },
+    {
+      "id": "Q1067006",
+      "nimi": "Mini-Europe",
+      "kuvaus": "Euroopan rakennukset pienoiskoossa",
+      "luokka": "puisto",
+      "koko_m": 160,
+      "teksti": "Pienoispuisto Mini-Europe levittäytyy Atomiumin juurella, ja ylhäältä sen pienoismallit näyttävät kokonaiselta maanosalta yhden puiston sisällä. Puistossa on noin kolmesataaviisikymmentä rakennusta noin kahdeksastakymmenestä kaupungista, kaikki mittakaavassa yksi kahteenkymmeneenviiteen. Puiston avasi vuonna 1989 silloinen prinssi Philippe. Osa malleista liikkuu: junat kulkevat, myllyt pyörivät ja Vesuvius purkautuu, ja Lontoon Big Benin pienoismallista kuuluvat samat tutut kellonlyönnit kuin esikuvasta. Suomea edustaa Savonlinnan Olavinlinna, jonka rakentaminen alkoi vuonna 1475 itärajan puolustukseksi.",
+      "lyhyt": null,
+      "syventava": "Mitkä maat ovat mukana puistossa?",
+      "kysymykset": [
+        "Kuinka kauan yhden mallin tekeminen kestää?",
+        "Kuka maksaa uudet pienoismallit?",
+        "Mikä on puiston suurin pienoismalli?",
+        "Miten mallit kestävät talven ulkona?",
+        "Miksi puisto rakennettiin Atomiumin viereen?"
+      ],
+      "isoisa": false,
+      "lahteet": [
+        {
+          "vaite": "Mini-Europe on Bruparckissa Atomiumin juurella; avattiin 1989; noin 350 rakennusta noin 80 kaupungista mittakaavassa 1:25.",
+          "url": "https://en.wikipedia.org/wiki/Mini-Europe"
+        },
+        {
+          "vaite": "Puiston avasi silloinen prinssi Philippe vuonna 1989.",
+          "url": "https://en.wikipedia.org/wiki/Mini-Europe"
+        },
+        {
+          "vaite": "Liikkuvia malleja: junat, myllyt, purkautuva Vesuvius.",
+          "url": "https://en.wikipedia.org/wiki/Mini-Europe"
+        },
+        {
+          "vaite": "Suomea edustaa Olavinlinna, joka rakennettiin 1475 osaksi itärajan puolustusta.",
+          "url": "https://davidjkent-writer.com/?p=1922"
+        },
+        {
+          "vaite": "Big Benin pienoismallissa kuuluvat sen tunnetut kellonlyönnit.",
+          "url": "https://davidjkent-writer.com/?p=1922"
+        }
+      ]
+    }
+  ]
+}
