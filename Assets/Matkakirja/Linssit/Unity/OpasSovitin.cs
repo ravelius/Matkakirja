@@ -966,6 +966,88 @@ namespace Matkakirja.Natiivi
             sallitutTakyt = l.ConvertAll(k => new OpasTaky { Id = k.Id, Nimi = k.Nimi, Kaupunki = k.Nimi, Lat = k.Lat, Lon = k.Lon });
             if (Viimeisin != null && Viimeisin.silmukka != null) Viimeisin.silmukka.Sallitut = SilmukanSallitut;
             SallitutVaihtui?.Invoke();
+            PalloKuvatEsiin();
+        }
+
+        // KUUMAILMAPALLON LATAUSKUVA (Päätoimittaja 7.10. 13.5x, Codex PR #4143): kaupunkitilan siirtymän tausta (Natiivi-UI:n
+        // OpasValikko piirtää). Laitteen rajaukset ladataan välimuistiin Documents/latauskuvat/, kun sallittujen lista saapuu
+        // (kartta), jotta kuva on valmiina jo ensimmäisessä siirtymässä (simu 14.15: iPadilla 2 s mustaa ilman esilatausta).
+        const string PalloKuvaJuuri = "https://media.matkakirja.app/julisteet/latauskuva-kuumailmapallo/20261007/";
+        static readonly string[] PalloKuvat = { "latauskuva-pallo-iphone.png", "latauskuva-pallo-ipad-pysty.png", "latauskuva-pallo-ipad-vaaka.png" };
+        static readonly HashSet<string> palloHaussa = new HashSet<string>();
+        public static string PalloKuvaPolku(string n) => System.IO.Path.Combine(Application.persistentDataPath, "latauskuvat", n);
+        static bool PalloIpad => Mathf.Min(Screen.width, Screen.height) / Mathf.Max(Mathf.Max(Screen.width, Screen.height), 1f) >= 0.6f;
+        /// <summary>Ruudun rajaus: iPhone pysty, iPad pysty tai vaaka (myös iPhone vaaka).</summary>
+        public static string PalloKuvaRuudulle() => Screen.width > Screen.height ? PalloKuvat[2] : PalloIpad ? PalloKuvat[1] : PalloKuvat[0];
+
+        static void PalloKuvatEsiin()
+        {
+            if (sallitut == null || sallitut.Count == 0) return;
+            HaePalloKuva(PalloIpad ? PalloKuvat[1] : PalloKuvat[0]);
+            HaePalloKuva(PalloKuvat[2]);
+            if (!Auki) PalloTekstuuriMuistiin();
+        }
+
+        // Purettu tekstuuri valmiiksi muistiin kartalla (Cesium kiinni, muistia vapaana): simu 14.24 iPad 2048×2732 PNG:n
+        // purku vei siirtymän alussa ~4 s Cesiumin käynnistyksen rinnalla. Vapautetaan siirtymän jälkeen (UI), uudelleen kun
+        // kaupunkitila päättyy (takaisin kartalle).
+        static Texture2D palloTekstuuri; static string palloTekstuuriNimi, palloPyydetty; static bool palloPurussa;
+        /// <summary>Tekstuuri purettu muistiin (pääsäikeessä).</summary>
+        public static event Action PalloTekstuuriValmis;
+        /// <summary>Muistissa oleva purettu rajaus, jos se on <paramref name="n"/>; muuten null.</summary>
+        public static Texture2D PalloTekstuuri(string n) => palloTekstuuri != null && palloTekstuuriNimi == n ? palloTekstuuri : null;
+
+        /// <summary>Purkaa rajauksen (oletus: ruudun) muistiin; puuttuva tiedosto ladataan ensin ja puretaan sitten.</summary>
+        public static void PalloTekstuuriMuistiin(string n = null)
+        {
+            n ??= PalloKuvaRuudulle();
+            if (PalloTekstuuri(n) != null) { PalloTekstuuriValmis?.Invoke(); return; }
+            palloPyydetty = n;
+            if (!System.IO.File.Exists(PalloKuvaPolku(n))) { HaePalloKuva(n); return; }
+            if (palloPurussa) return;
+            palloPurussa = true;
+            float alku = Time.realtimeSinceStartup;
+            var r = UnityWebRequestTexture.GetTexture("file://" + PalloKuvaPolku(n), true);
+            r.SendWebRequest().completed += _ =>
+            {
+                palloPurussa = false;
+                var t = r.result == UnityWebRequest.Result.Success ? DownloadHandlerTexture.GetContent(r) : null;
+                r.Dispose();
+                if (t == null) { KirjaaS("opas: pallon latauskuva ei auennut " + n); return; }
+                if (palloTekstuuri != null) UnityEngine.Object.Destroy(palloTekstuuri);
+                palloTekstuuri = t; palloTekstuuriNimi = n;
+                KirjaaS($"opas: pallon latauskuva muistissa {n} ({t.width}×{t.height}, {Time.realtimeSinceStartup - alku:F1} s)");
+                if (palloPyydetty != null && palloPyydetty != n) { var m = palloPyydetty; palloPyydetty = null; PalloTekstuuriMuistiin(m); return; }
+                palloPyydetty = null;
+                PalloTekstuuriValmis?.Invoke();
+            };
+        }
+
+        /// <summary>Siirtymän jälkeen: tekstuuri pois muistista.</summary>
+        public static void VapautaPalloTekstuuri()
+        {
+            palloPyydetty = null;
+            if (palloTekstuuri == null) return;
+            UnityEngine.Object.Destroy(palloTekstuuri); palloTekstuuri = null; palloTekstuuriNimi = null;
+        }
+
+        public static void HaePalloKuva(string n)
+        {
+            string polku = PalloKuvaPolku(n);
+            if (System.IO.File.Exists(polku) || !palloHaussa.Add(n)) return;
+            try { System.IO.Directory.CreateDirectory(System.IO.Path.GetDirectoryName(polku)); } catch (Exception) { palloHaussa.Remove(n); return; }
+            var r = UnityWebRequest.Get(PalloKuvaJuuri + n);
+            r.downloadHandler = new DownloadHandlerFile(polku + ".osa") { removeFileOnAbort = true };
+            r.timeout = 60;
+            r.SendWebRequest().completed += _ =>
+            {
+                bool ok = r.result == UnityWebRequest.Result.Success;
+                r.Dispose();
+                try { if (ok) System.IO.File.Move(polku + ".osa", polku); else System.IO.File.Delete(polku + ".osa"); } catch (Exception) { ok = false; }
+                palloHaussa.Remove(n);
+                KirjaaS($"opas: pallon latauskuva {n} {(ok ? "välimuistiin" : "ei latautunut")}");
+                if (ok && (palloPyydetty == n || (!Auki && n == PalloKuvaRuudulle()))) PalloTekstuuriMuistiin(n);
+            };
         }
 
         static void KirjaaS(string t) => Debug.Log("MATKAKIRJA linssit: " + t);
@@ -1006,6 +1088,7 @@ namespace Matkakirja.Natiivi
             kaupunkitila = k;
             if (Viimeisin != null && Viimeisin.silmukka != null) Viimeisin.silmukka.Sallitut = SilmukanSallitut;
             KirjaaS(k != null ? $"opas: kaupunkitila {k.Nimi} ({k.Id})" : "opas: kaupunkitila päättyi");
+            if (k == null) PalloTekstuuriMuistiin();   // takaisin kartalle: seuraavan siirtymän kuva valmiiksi
             KaupunkitilaVaihtui?.Invoke();
         }
 

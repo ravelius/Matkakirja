@@ -86,6 +86,21 @@ namespace Matkakirja.Linssit
         string avattu;   // avattujen kohteiden id:t (Paivita avaa uudelleen vain, jos joukko vaihtuu)
         Transform vanhempi0; int kerros0;
 
+        // KAUKOSÄÄNTÖ (simu 7.10. 14.05, Giza v2b): 2,5 ja 5 km:stä leikkausmaski osui karkeilla Googlen tiilillä sivuun (suurten
+        // kolmioiden yli interpoloitu maskikoordinaatti) ja jätti valkoisia reikiä helmojen ulkopuolelle; 1,4 km:stä tarkka. Kaukana
+        // maski pois (Googlen ja oma malli ovat siellä samannäköiset), lähellä takaisin; väli estää vilkkumisen rajalla.
+        public const float LeikkausPoisM = 2200f, LeikkausTakaisinM = 1800f;
+
+        /// <summary>Joka kehys (CesiumKaupunki.PidaMaski): kameran etäisyys lähimpään omaan malliin ohjaa leikkausta.</summary>
+        public void Kamera(Vector3 kamera)
+        {
+            if (leikkaus == null || mallit.Count == 0) return;
+            float d = float.MaxValue;
+            foreach (var m in mallit) if (m.polygoni != null) d = Mathf.Min(d, (m.polygoni.transform.position - kamera).magnitude);
+            if (leikkaus.enabled && d > LeikkausPoisM) { leikkaus.enabled = false; kirjaa?.Invoke($"omat mallit: leikkaus pois kaukaa ({d:F0} m)"); }
+            else if (!leikkaus.enabled && d < LeikkausTakaisinM) { leikkaus.enabled = true; kirjaa?.Invoke($"omat mallit: leikkaus päälle ({d:F0} m)"); }
+        }
+
         /// <summary>Kaupungin origo siirtyi (oppaan siirtymä toiseen kaupunkiin): avaa uudelleen vain, jos lähellä olevat vaihtuivat.</summary>
         public void Paivita(double lat, double lon)
         {
@@ -191,7 +206,7 @@ namespace Matkakirja.Linssit
             {
                 leikkaus.materialKey = "Clipping";
                 leikkaus.polygons = lista;
-                leikkaus.Refresh();
+                if (leikkaus.enabled) leikkaus.Refresh();   // kaukana pois: OnEnable lisää uudet polygonit, kun kamera palaa
                 kirjaa?.Invoke($"omat mallit: {k.Id} ladattu, Googlen tiilet leikattu {lista.Count} alueelta");
                 // Diagnostiikka (simu 7.10. 01.07: koko Googlen tileset katosi): polygonin ensimmäinen ja kolmas solmu
                 // maailmasta → tilesetin paikallinen → ECEF → lat/lon, kuten CesiumCartographicPolygon.GetCartographicPoints.
