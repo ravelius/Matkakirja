@@ -11435,3 +11435,7 @@ OMISTAJA 7.10.2026 klo 18.5x sanatarkasti: "Heidän on pakko tehdä kaikki pelit
 ## OMISTAJA 7.10.2026 KLO 18.6x: KOLMAS PERSOONA VAIN KAUKOKUVINA (7.10.2026 klo 18.26)
 
 OMISTAJA 7.10.2026 klo 18.6x sanatarkasti: "Pelissä voi olla kolmannen persoonan kohtauksia, mutta vain silloin, kun henkilö näkyy tarpeeksi kaukaa ja pääasiassa on ympäristön näyttäminen vaikka lintuperspektiivistä, mikä kyllä sopisi kerronnallisesti vielä tehostamaan peliä." → Foggin malli säilyy kaukokuvia varten (hahmo alle ~10 % kuvan korkeudesta, ei lähikuvia), lintuperspektiivi mahdollisesti Pulun lennon kautta; pelaaminen ensimmäisessä persoonassa.
+
+## OMISTAJA 7.10.2026 KLO 18.6x: KÄDET HANSKOISSA, PUHUTTELU SINÄ, KÄÄNNETTÄVYYS (7.10.2026 klo 18.30)
+
+OMISTAJA 7.10.2026 klo 18.6x sanatarkasti: "Pelaajan kädet voivat kyllä näkyä nopeasti pelissä, koska ne on mahdollista pukea roolivaatteisiin ja vielä hanskoihin, jolloin on vaikea sanoa, onko kyseessä mies vai nainen. Ja peli pitää lähtökohtaisesti miettiä siltä kannalta, että se käännetään myös englanniksi, joten voidaan käyttää ilmausta sinä, jos pelaajaa puhutellaan." → historia-fp: kädet hetkittäin hanskoissa (Linnanrakentaja käsimalli); Sisältökirjuri tarkistaa Olavinlinnan repliikit ja käsikirjoitukset sukupuolittavien sanojen varalta. Siirtoseppä historia-fp e623df71: näkyvyys kuvan reunojen tummumisena (ei mittaria).
