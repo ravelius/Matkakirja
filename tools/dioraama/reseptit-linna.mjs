@@ -322,7 +322,71 @@ function kuoriRuudukko({ a, h, sade, k0, k1, n, M, sisaan }) {
   return ruudukko;
 }
 
+/**
+ * Ristiholvi pyöreän huoneen päälle (kupoli + `ristiholvi: { kulma, nousu }`, Linnanrakentaja 7.10.2026): korkeus
+ * y = y0 + h·(1 − u²·(1 − nousu·t)), u = r/a, t = |sin 2(k − kulma)|; `reuna` (m) = vaakalaippa seinän sisään, jottei
+ * jyrkkä reuna leikkaa seinää sahalaitaisesti. Harjanteet (ristiholvin taitteet) kulmissa
+ * kulma + 90·j laskeutuvat seinälle korkeudelle 0, kennot välissä seinän kohdalla nousu·h (seinäkaaret). Normaalit
+ * erotuksista; taitesarakkeilla yksipuoliset, jotta taite näkyy terävänä. `kulma` kannattaa osua ruudukon sarakkeelle.
+ */
+function ristiRuudukko({ a, h, y0, k0, k1, n, M: M0, R, sisaan }) {
+  const g0 = R.kulma ?? k0, L = R.nousu ?? 0.5, reuna = R.reuna ?? 0;
+  // Rivit (säde, korkeuden u): reunalaippa (vaaka, säde a + reuna) seinän sisään, sitten u = 1 … 0.
+  const rivit = [...(reuna > 0 ? [[a + reuna, 1]] : []), ...Array.from({ length: M0 + 1 }, (_, m) => [a * (1 - m / M0), 1 - m / M0])];
+  const M = rivit.length - 1;
+  const P = [];
+  for (let m = 0; m <= M; m++) {
+    const [r, u] = rivit[m], rivi = [];
+    for (let i = 0; i <= n; i++) {
+      const kk = k0 + (k1 - k0) * i / n;
+      const t = Math.abs(Math.sin(2 * (kk - g0) * RAD));
+      rivi.push({ p: kaaripiste([0, 0], r, kk, y0 + h * (1 - u * u * (1 - L * t))), kk });
+    }
+    P.push(rivi);
+  }
+  const taite = (kk) => { const d = (((kk - g0) % 90) + 90) % 90; return Math.min(d, 90 - d) < 1e-6; };
+  const ero = (q, r) => [q[0] - r[0], q[1] - r[1], q[2] - r[2]];
+  const normaali = (m, i, puoli) => {
+    const dm = ero(P[Math.min(m + 1, M)][i].p, P[Math.max(m - 1, 0)][i].p);
+    const ia = taite(P[m][i].kk) && puoli > 0 ? i : Math.max(i - 1, 0);
+    const ib = taite(P[m][i].kk) && puoli < 0 ? i : Math.min(i + 1, n);
+    let dk = ero(P[m][ib].p, P[m][ia].p);
+    if (m === M || Math.hypot(...dk) < 1e-9) dk = [Math.cos(P[m][i].kk * RAD), 0, -Math.sin(P[m][i].kk * RAD)];
+    let v = [dm[1] * dk[2] - dm[2] * dk[1], dm[2] * dk[0] - dm[0] * dk[2], dm[0] * dk[1] - dm[1] * dk[0]];
+    const l = Math.hypot(...v) || 1; v = v.map((c) => c / l);
+    if (m === M) v = [0, 1, 0];
+    const s = (v[1] < 0) === sisaan ? 1 : -1;
+    return v.map((c) => s * c);
+  };
+  let G = [];
+  const matka = new Array(n + 1).fill(0);
+  for (let m = 0; m <= M; m++) {
+    if (m > 0) for (let i = 0; i <= n; i++) matka[i] += Math.hypot(...ero(P[m][i].p, P[m - 1][i].p));
+    G.push(P[m].map((q, i) => ({ p: q.p, kk: q.kk, m, i, uv: [q.kk * RAD * a, matka[i]] })));
+  }
+  // Kolmiot suoraan: solun kulmapisteiden normaali solun puolelta (taitteessa eri normaali kummallekin puolelle).
+  const k = [];
+  for (let m = 0; m < M; m++) {
+    for (let i = 0; i < n; i++) {
+      const v = [[m, i, 1], [m, i + 1, -1], [m + 1, i + 1, -1], [m + 1, i, 1]]
+        .map(([mm, ii, pp]) => ({ p: G[mm][ii].p, n: normaali(mm, ii, pp), uv: G[mm][ii].uv }));
+      k.push([v[0], v[1], v[2]], [v[0], v[2], v[3]]);
+    }
+  }
+  return { kolmiot: k, reuna: G };
+}
+
 function ruudukonKolmiot(G, rooli, sisaan) {
+  if (G.kolmiot) {
+    // ristiRuudukko: kierto normaalin mukaan (kolmion pintanormaali samaan suuntaan kuin kärkien keskinormaali).
+    return G.kolmiot.map(([a, b, c]) => {
+      const t = { p: [a.p, b.p, c.p], n: [a.n, b.n, c.n], uv_m: [a.uv, b.uv, c.uv], rooli };
+      const e1 = [b.p[0] - a.p[0], b.p[1] - a.p[1], b.p[2] - a.p[2]], e2 = [c.p[0] - a.p[0], c.p[1] - a.p[1], c.p[2] - a.p[2]];
+      const f = [e1[1] * e2[2] - e1[2] * e2[1], e1[2] * e2[0] - e1[0] * e2[2], e1[0] * e2[1] - e1[1] * e2[0]];
+      const nn = [0, 1, 2].map((j) => a.n[j] + b.n[j] + c.n[j]);
+      return f[0] * nn[0] + f[1] * nn[1] + f[2] * nn[2] < 0 ? kaanna(t) : t;
+    });
+  }
   const k = [];
   const kolmiotKarjilla = (a, b, c) => {
     const t = { p: [a.p, b.p, c.p], n: [a.n, b.n, c.n], uv_m: [a.uv, b.uv, c.uv], rooli };
@@ -350,14 +414,18 @@ export function kupoli(param) {
   const segmentit = param.segmentit ?? 24, paksuus = Math.min(param.paksuus ?? 0.25, sade * 0.5, korkeus * 0.5);
   const { k0, k1, alkuL, loppuL } = sektori(param.auki, param.suunta);
   const n = Math.max(1, Math.ceil(segmentit * (k1 - k0) / 360)), M = param.renkaat ?? 6;
-  const ulko = kuoriRuudukko({ a: sade, h: korkeus, sade, k0, k1, n, M, sisaan: false });
-  const sisa = kuoriRuudukko({ a: sade - paksuus, h: korkeus - paksuus, sade, k0, k1, n, M, sisaan: true });
+  const R = param.ristiholvi;
+  const ulko = R ? ristiRuudukko({ a: sade, h: korkeus, y0: paksuus, k0, k1, n, M, R, sisaan: false })
+    : kuoriRuudukko({ a: sade, h: korkeus, sade, k0, k1, n, M, sisaan: false });
+  const sisa = R ? ristiRuudukko({ a: sade, h: korkeus, y0: 0, k0, k1, n, M, R, sisaan: true })
+    : kuoriRuudukko({ a: sade - paksuus, h: korkeus - paksuus, sade, k0, k1, n, M, sisaan: true });
   const k = [...ruudukonKolmiot(ulko, 'ulko', false), ...ruudukonKolmiot(sisa, 'holvi', true)];
   if (param.auki) {
+    const U = ulko.reuna ?? ulko, S = sisa.reuna ?? sisa;
     const leikkaa = (i, s, kulma) => {
       const t = tangentti(kulma);
-      for (let m = 0; m < M; m++) {
-        k.push(...nelioSuuntaan(ulko[m][i].p, ulko[m + 1][i].p, sisa[m + 1][i].p, sisa[m][i].p,
+      for (let m = 0; m < U.length - 1; m++) {
+        k.push(...nelioSuuntaan(U[m][i].p, U[m + 1][i].p, S[m + 1][i].p, S[m][i].p,
           'leikkaus', [t[0] * s, 0, t[2] * s]));
       }
     };
