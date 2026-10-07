@@ -763,6 +763,20 @@ jobs:
       # Avainnippu ($HOME/Library/Keychains/matkakirja-testflight.keychain-db)
       # on pysyvä eikä sitä poisteta — varmenne ja yksityinen avain
       # säilyvät seuraavaa ajoa varten (ks. "Pysyvä avainnippu" -vaihe).
+      # VÄLITUOTTEIDEN SIIVOUS (Päätoimittaja 7.10.2026 klo 09.1x: levy laski 14 Gi 16 minuutissa, kova raja 30 Gi).
+      # Ajon lopuksi, vain kun tämä ajo piti käännöspalvelun lukkoa (muuten toinen käännös voi käyttää kansioita):
+      # Build/yo (Unity-vienti, ~2,4 Gt), xcodebuild-arkiston oletus-DerivedData Unity-iPhone-* (~6 Gt) ja arkisto/IPA
+      # RUNNER_TEMPista. Ladattu build on App Store Connectissa; proto-kaanna.sh säilyttää simulaattorin .app:n.
+      - name: Siivoa välituotteet
+        if: always() && env.LUKKO_OMA == '1'
+        working-directory: ${{ env.PROJEKTI }}
+        run: |
+          ennen=$(df -g /Users/Shared | awk 'NR==2 {print $4}')
+          [ "${VIENTI_KANSIO:-yo}" = "yo" ] && rm -rf Build/yo || true
+          rm -rf "$HOME"/Library/Developer/Xcode/DerivedData/Unity-iPhone-* || true
+          rm -rf "$RUNNER_TEMP/proto3d.xcarchive" "$RUNNER_TEMP/ipa" || true
+          echo "Siivous: vapaana ${ennen} Gi → $(df -g /Users/Shared | awk 'NR==2 {print $4}') Gi"
+
       - name: Vapauta käännöspalvelun lukko
         if: always() && env.LUKKO_OMA == '1'
         run: |
