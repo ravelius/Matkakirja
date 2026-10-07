@@ -238,6 +238,10 @@ namespace Matkakirja
         /// (proto-komennot) napautus näyttää naapurireitit kuten ennen.
         /// </summary>
         public bool PeliOhjaaReitit { get; set; }
+        /// <summary>Alkulento v3 (omistaja 7.10. 14.5x: "tarkista, ettei kartta nykäise ollenkaan"): aloituskaupungin valinnassa
+        /// napautus vain ilmoittaa kaupungin (Aloitusnakyma käynnistää aloituslennon); ei kamera-ajoa kohti kaupunkia, jonka
+        /// lennon odotus katkaisi seuraavassa kehyksessä (kamera ehti liikahtaa ja pysähtyi).</summary>
+        public bool ValintaIlmanAjoa { get; set; }
 
         /// <summary>Kaupungin maa (ISO3) tai null.</summary>
         public string KaupunginMaa(string id)
@@ -901,6 +905,7 @@ namespace Matkakirja
         {
             kortti?.Piilota();
             kierto.IlmoitaKaupunki(k.id);
+            if (ValintaIlmanAjoa) return;
             var r = PeliOhjaaReitit ? null : reitit;
             if (r != null)
             {
