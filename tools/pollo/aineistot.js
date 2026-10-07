@@ -68,5 +68,8 @@ export const OPAS_AINEISTOT = Object.freeze({
     vilna: 'opas/esittely-aaneton-v1/vilna.json',
   },
   // Yksityiskohtakuvat (Sisältökirjuri 7.10.; natiivi lentää kuvan sivuun ankkurisanan kohdalla): luettelo media-juuresta.
-  yksityiskohdat_polut: { pariisi: 'esittely/pariisi-v2/pariisi-yksityiskohdat.json' },
+  yksityiskohdat_polut: {
+    pariisi: 'esittely/pariisi-v2/pariisi-yksityiskohdat.json',
+    praha: 'esittely/praha-v1/praha-yksityiskohdat.json', wien: 'esittely/wien-v1/wien-yksityiskohdat.json',
+  },
 });
