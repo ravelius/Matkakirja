@@ -10,7 +10,7 @@
    "luokka": "linnoitus",
    "koko_m": 300,
    "teksti": "Wawelin linna kohoaa kalkkikivikukkulan laella Veikselin rannalla, ja ylhäältä sen keskeltä erottuu suuri sisäpiha, jota kaarikäytävät kehystävät. Kuningas Sigismund Vanha rakennutti goottilaisesta linnasta renessanssipalatsin 1500-luvun alkupuolella, ja työtä johtivat italialaiset arkkitehdit. Vuoden 1795 jaon jälkeen kukkula joutui Itävallalle, jonka sotilaat muuttivat linnan kasarmiksi ja muurasivat kaarikäytävät umpeen. Vasta vuonna 1905 keisari Frans Joosef käski joukkonsa lähtemään. Kunnostus rahoitettiin keräyksellä, ja lahjoittajien nimet kaiverrettiin tiiliin, joista muurattiin muuri pohjoisen portin lähelle.",
-   "lyhyt": "Wawelin linnan kuuluisimpia aarteita on kuningas Sigismund Augustin kuvakudoskokoelma, joka kudottiin Brysselissä 1500-luvun puolivälissä. Se on suurin koskaan yhden hallitsijan tilaama kuvakudoskokoelma. Linna on Puolan vierailluin taidemuseo, ja vuonna 2025 siellä kävi lähes kolme ja puoli miljoonaa ihmistä.",
+   "lyhyt": "Wawelin linnan Päiden saliksi kutsutun huoneen katossa on kolmekymmentä lehmuspuusta veistettyä päätä, eikä yksikään niistä ole samanlainen. Yhden naisen suu on peitetty siteellä. Tarinan mukaan pää huomautti kerran latinaksi kuningas Sigismund Augustille, että tämän tuomio oli epäoikeudenmukainen.",
    "syventava": "Miksi linnasta tehtiin kasarmi?",
    "kysymykset": [
     "Ketkä kuninkaat asuivat Wawelin linnassa?",
@@ -34,12 +34,12 @@
      "url": "https://wawel.krakow.pl/en/exhibition-constant/wawel-recovered-1"
     },
     {
-     "vaite": "Sigismund August tilasi kuvakudokset Brysselistä 1550–1560; suurin koskaan yhden hallitsijan tilaama kokoelma.",
-     "url": "https://wawel.krakow.pl/en/textiles"
+     "vaite": "Sala Poselskaa kutsutaan Päiden saliksi; katon kasettien kolmestakymmenestä lehmuspuisesta päästä yksikään ei ole samanlainen; yhden naisen suu on peitetty siteellä, ja legendan mukaan pää puhui kuningas Sigismund Augustin epäoikeudenmukaisesta tuomiosta.",
+     "url": "https://wawel.krakow.pl/images/upload/blog/infografiki/pdf/legenda-o-glowie-2.pdf"
     },
     {
-     "vaite": "Vuonna 2025 yli 3,47 miljoonaa kävijää; Puolan vierailluin taidemuseo.",
-     "url": "https://en.wikipedia.org/wiki/Wawel_Castle"
+     "vaite": "Alun perin päitä oli 194, ja niistä on säilynyt 30; ne veisti Sebastian Tauerbachin verstas noin 1540.",
+     "url": "https://pl.wikipedia.org/wiki/G%C5%82owy_wawelskie"
     }
    ]
   },
@@ -87,7 +87,7 @@
    "koko_m": 90,
    "korkeus_m": 82,
    "teksti": "Mariankirkko kohoaa pääaukion laidalla, ja ylhäältä sen kaksi tornia näkyvät selvästi eriparisina. Korkeampi, yli kahdeksankymmentä metriä korkea torni on ollut kaupungin vartiotorni, ja sen huipulta soitetaan joka tunti torvella hejnał-sävelmä, joka katkeaa kesken. Perimätiedon mukaan nuoli osui torvensoittajaan juuri, kun tämä varoitti kaupunkia hyökkäyksestä. Sävelmä soitetaan neljään ilmansuuntaan, ja keskipäivän soitto lähetetään suorana radiossa koko Puolaan. Soitto kuuluu ympäri vuorokauden joka päivä, joten se ei jää väliin yhtenäkään yönä.",
-   "lyhyt": "Mariankirkon pääalttarin takana on Veit Stossin veistämä alttarikaappi, maailman suurin goottilainen alttaritaulu. Se on kolmetoista metriä korkea ja yksitoista metriä leveä. Kuvanveistäjä työsti sitä vuodesta 1477 vuoteen 1489, ja siinä on yli kaksisataa maalattua ja kullattua hahmoa.",
+   "lyhyt": "Mariankirkon pääalttarina on Veit Stossin 1400-luvun lopulla veistämä alttaritaulu. Puolalaiset purkivat sen osiin juuri ennen toista maailmansotaa ja piilottivat eri puolille maata, mutta saksalaiset löysivät laatikot ja veivät ne Nürnbergin linnan kellariin. Alttaritaulu palasi Krakovaan vuonna 1946.",
    "syventava": "Miksi torvisoitto katkeaa kesken?",
    "kysymykset": [
     "Miksi kirkon tornit ovat eri korkuiset?",
@@ -107,7 +107,7 @@
      "url": "https://culture.pl/en/article/the-hejnal-trumpet-call-of-krakow-fact-vs-fiction"
     },
     {
-     "vaite": "Veit Stossin alttaritaulu veistettiin 1477–1489; yli 200 hahmoa; maailman suurin goottilainen alttaritaulu; avattuna noin 13 metriä korkea ja 11 metriä leveä.",
+     "vaite": "Veit Stossin alttaritaulu veistettiin 1477–1489; puolalaiset purkivat sen ja hajasijoittivat osat muutamaa viikkoa ennen sodan syttymistä, natsit löysivät laatikot ja veivät osat Nürnbergin linnan kellariin; alttaritaulu palasi Puolaan 1946.",
      "url": "https://en.wikipedia.org/wiki/Veit_Stoss_altarpiece_in_Krak%C3%B3w"
     }
    ]
@@ -119,7 +119,7 @@
    "luokka": "rakennus",
    "koko_m": 108,
    "teksti": "Kangashalli Sukiennice on satakahdeksan metriä pitkä rakennus keskellä pääaukiota, ja ylhäältä sen kattoa kiertää koristeellinen renessanssikaide. Halli syntyi noin vuonna 1300, kun kaksi kivistä kojuriviä katettiin yhteisen katon alle. Vuoden 1555 palon jälkeen se rakennettiin uudelleen renessanssityyliin, ja kaiteen irvinaamat suunnitteli luultavasti kuvanveistäjä Santi Gucci. Krakova oli kauppareittien risteys: halliin tuotiin idästä mausteita, silkkiä ja nahkaa, ja täältä lähti kangasta, lyijyä ja suolaa. Pohjakerroksen holvikäytävässä myydään yhä käsitöitä ja matkamuistoja.",
-   "lyhyt": "Kangashalli Sukiennicen yläkertaan perustettiin vuonna 1879 Puolan ensimmäinen kansallismuseo. Nykyään siellä on 1800-luvun puolalaisen maalaustaiteen galleria, jossa on esillä muun muassa Jan Matejkon, Henryk Siemiradzkin, Jacek Malczewskin ja Józef Chełmońskin teoksia.",
+   "lyhyt": "Kangashalli Sukiennicen yläkertaan perustettiin vuonna 1879 Krakovan kansallismuseo. Sen ensimmäinen teos oli Henryk Siemiradzkin valtava maalaus Neron soihdut, jonka taiteilija lahjoitti kaupungille. Pian lahjoituksia alkoi virrata myös aatelisilta ja muilta taiteilijoilta, ja nykyään yläkerrassa on 1800-luvun puolalaisen maalaustaiteen galleria.",
    "syventava": "Kuka suunnitteli kaiteen irvinaamat?",
    "kysymykset": [
     "Mitä hallissa myytiin keskiajalla?",
@@ -143,7 +143,7 @@
      "url": "https://www.lonelyplanet.com/points-of-interest/cloth-hall/1115072"
     },
     {
-     "vaite": "Vuonna 1879 yläkertaan perustettiin Puolan ensimmäinen kansallismuseo; 1800-luvun puolalaisen taiteen galleria, mm. Matejko, Siemiradzki, Chełmoński. Kokoelmassa myös Jacek Malczewski.",
+     "vaite": "Kansallismuseo perustettiin 7.10.1879 Sukiennicen yläkertaan; ensimmäinen lahja oli Henryk Siemiradzkin monumentaalinen maalaus Neron soihdut, ja kokoelma kasvoi aateliston ja taiteilijoiden lahjoituksin; yläkerrassa on 1800-luvun puolalaisen taiteen galleria.",
      "url": "https://en.wikipedia.org/wiki/Sukiennice_Museum"
     }
    ]
@@ -195,7 +195,7 @@
    "luokka": "linnoitus",
    "koko_m": 30,
    "teksti": "Barbakaani on pyöreä tiililinnake Florianin portin edustalla, ja ylhäältä se näyttää paksulta renkaalta, jonka muurin harjalla kohoaa seitsemän pientä tornia. Kuningas Jan Olbracht rakennutti sen vuosina 1498 ja 1499, kun hän oli kärsinyt tappion moldavialaisille ja pelkäsi turkkilaisten hyökkäystä. Yli kolmen metrin paksuisissa muureissa on sata kolmekymmentä ampuma-aukkoa. Linnaketta ympäröi aikoinaan vallihauta, ja sen yli kulkeva silta yhdisti linnakkeen porttiin. Barbakaani oli etuvartio, joka suojasi kaupungin pohjoista pääporttia, ja se on yksi Euroopan suurimmista säilyneistä keskiaikaisista puolustusrakennelmista.",
-   "lyhyt": "Barbakaani välttyi purkamiselta 1800-luvun alussa, kun lähes kaikki Krakovan linnoitukset hajotettiin ja niiden paikalle tehtiin Plantyn puisto. Sisältä linnakkeen halkaisija on runsaat kaksikymmentäneljä metriä, ja se suojasi aikanaan kuninkaallisen tien alkupäätä.",
+   "lyhyt": "Barbakaanin itäseinän muistolaatta kertoo krakovalaisesta porvarista Marcin Oracewiczista. Hän puolusti kaupunkia venäläisiä vastaan Barin konfederaation aikana 1700-luvulla, ja tarinan mukaan hän ampui venäläisen everstin Paninin, kun oli ladannut aseensa luodin sijaan takkinsa napilla.",
    "syventava": "Miksi kuningas pelkäsi turkkilaisia?",
    "kysymykset": [
     "Miksi linnake rakennettiin pyöreäksi?",
@@ -215,8 +215,8 @@
      "url": "https://en.wikipedia.org/wiki/Moldavian_campaign_(1497%E2%80%931499)"
     },
     {
-     "vaite": "Linnoitukset purettiin 1800-luvun alussa ja tilalle tehtiin Plantyn puisto; Barbakaani ja Florianin portti säästettiin 1817; suojasi kuninkaallisen tien alkupäätä.",
-     "url": "https://en.wikipedia.org/wiki/Planty_Park_(Krak%C3%B3w)"
+     "vaite": "Itäseinän laatta muistaa krakovalaista porvaria Marcin Oracewiczia, joka Barin konfederaation aikana puolusti kaupunkia venäläisiä vastaan ja legendan mukaan ampui eversti Paninin czamara-takin napilla luodin sijaan.",
+     "url": "https://en.wikipedia.org/wiki/Krak%C3%B3w_Barbican"
     }
    ]
   },
@@ -228,7 +228,7 @@
    "koko_m": 40,
    "korkeus_m": 34,
    "teksti": "Florianin portti on kolmekymmentäkolme ja puoli metriä korkea goottilainen porttitorni vanhankaupungin pohjoislaidalla, ja ylhäältä sen kummallekin puolelle jatkuu lyhyt pätkä vanhaa kaupunginmuuria. Keskiajalla kaupunkiin johti kahdeksan porttia, mutta vain tämä säilyi, kun muurit purettiin 1800-luvulla. Yliopiston professori Feliks Radwański sai vuonna 1817 Krakovan vapaakaupungin senaatin säästämään portin ja sen edustan Barbakaanin. Portilta alkoi kuninkaallinen tie, jota hallitsijat, kruunajaiskulkueet ja ulkomaiset lähettiläät kulkivat pääaukion kautta Wawelin linnaan.",
-   "lyhyt": "Florianin portin viereen jäi pätkä keskiaikaista kaupunginmuuria ja kaksi pienempää puolustustornia. Muurin kylkeen ripustetaan nykyään maalauksia, joita taiteilijat myyvät ohikulkijoille, ja portin alta Florianinkatu johtaa suoraan pääaukiolle, samaa reittiä kuin kruunajaiskulkueet aikanaan.",
+   "lyhyt": "Florianin portin viereisen muurin kylkeen ripustetaan nykyään maalauksia, joita taiteilijat myyvät ohikulkijoille. Portin pohjoisseinän kivisen kotkan veisti vuonna 1882 Zygmunt Langman taidemaalari Jan Matejkon suunnitelman mukaan, ja eteläseinää koristaa 1700-luvulta peräisin oleva pyhän Florianin reliefi.",
    "syventava": "Kuka pelasti portin purkamiselta?",
    "kysymykset": [
     "Miksi Krakovan muurit purettiin?",
@@ -250,6 +250,10 @@
     {
      "vaite": "Kuninkaallista tietä kulkivat hallitsijat, ulkomaiset lähettiläät ja kruunajaiskulkueet portilta pääaukion kautta Waweliin.",
      "url": "https://en.wikipedia.org/wiki/St._Florian%27s_Gate"
+    },
+    {
+     "vaite": "Pohjoispuolen kivikotkan veisti 1882 Zygmunt Langman Jan Matejkon suunnitelman mukaan; eteläpuolella on 1700-luvun pyhän Florianin reliefi; viereisellä muurilla myydään taidetta.",
+     "url": "https://en.wikipedia.org/wiki/St._Florian%27s_Gate"
     }
    ]
   },
@@ -259,8 +263,8 @@
    "kuvaus": "Historiallinen juutalaiskaupunginosa",
    "luokka": "muu",
    "koko_m": 1200,
-   "teksti": "Kaupunginosa Kazimierz levittäytyy vanhankaupungin eteläpuolella, ja ylhäältä sen kapeiden katujen keskeltä erottuu leveä, aukiomainen Szeroka-katu. Kuningas Kasimir Suuri julisti alueen vuonna 1335 uudeksi kaupungiksi, joka sai hänen nimensä, ja itsenäinen se oli 1800-luvun alkuun asti. Vuosisatojen ajan Kazimierzissa elivät rinnakkain puolalainen ja juutalainen kulttuuri. Szeroka-kadulla seisoo Puolan vanhin synagoga, joka on toiminut juutalaisen historian ja kulttuurin museona vuodesta 1961. Samalla kadulla Steven Spielberg kuvasi kohtauksia elokuvaan Schindlerin lista.",
-   "lyhyt": "Kaupunginosa Kazimierzin Uuden torin keskellä on pyöreä halli, jonka ikkunoista myydään zapiekankaa, puolikkaasta patongista tehtyä lämmintä voileipää. Kaupunginosan Vanha synagoga on yksi maailman vain kahdesta säilyneestä goottilaisesta synagogasta, ja se rakennettiin 1500-luvun alussa.",
+   "teksti": "Kaupunginosa Kazimierz levittäytyy vanhankaupungin eteläpuolella, ja ylhäältä sen kapeiden katujen keskeltä erottuu leveä, aukiomainen Szeroka-katu. Kuningas Kasimir Suuri julisti alueen vuonna 1335 uudeksi kaupungiksi, joka sai hänen nimensä, ja itsenäinen se oli 1800-luvun alkuun asti. Vuosisatojen ajan Kazimierzissa elivät rinnakkain puolalainen ja juutalainen kulttuuri. Szeroka-kadulla seisoo Puolan vanhin synagoga, joka on toiminut juutalaisen historian ja kulttuurin museona vuodesta 1958. Samalla kadulla Steven Spielberg kuvasi kohtauksia elokuvaan Schindlerin lista.",
+   "lyhyt": "Kaupunginosa Kazimierzin Uuden torin keskellä on pyöreä halli, jonka ikkunoista myydään zapiekankaa, puolikkaasta patongista tehtyä lämmintä voileipää. Halli valmistui vuonna 1900 katetuksi kauppahalliksi, ja vuodesta 1927 sen osassa toimi rituaalinen siipikarjateurastamo aina saksalaisten miehitykseen asti.",
    "syventava": "Mitä Kazimierzissa kuvattiin elokuvaan?",
    "kysymykset": [
     "Miksi Kazimierz oli aikoinaan oma kaupunkinsa?",
@@ -276,7 +280,7 @@
      "url": "https://en.wikipedia.org/wiki/Kazimierz"
     },
     {
-     "vaite": "Vanha synagoga Szeroka-kadulla on Puolan vanhin synagoga, museona vuodesta 1961, yksi kahdesta säilyneestä goottilaisesta synagogasta. Rakennettu 1500-luvun alussa.",
+     "vaite": "Vanha synagoga Szeroka-kadulla on Puolan vanhin säilynyt synagogarakennus; se on toiminut Krakovan historiallisen museon osastona vuodesta 1958.",
      "url": "https://en.wikipedia.org/wiki/Old_Synagogue_(Krak%C3%B3w)"
     },
     {
@@ -286,6 +290,14 @@
     {
      "vaite": "Uuden torin pyöreän hallin, Okrąglakin, ikkunoista myydään zapiekankaa.",
      "url": "https://cafebabel.com/en/article/zapiekanka-not-a-polish-kebab-5ae005cdf723b35a145df937/"
+    },
+    {
+     "vaite": "Uuden torin pyöreä halli Okrąglak rakennettiin 1899–1900 katetuksi kauppahalliksi; vuodesta 1927 sen osassa toimi rituaalinen siipikarjateurastamo, joka lakkautettiin miehityksen aikana.",
+     "url": "https://krakow.pl/instcbi/1362/inst/8124/2396/Plac-Nowy.html"
+    },
+    {
+     "vaite": "Vanhan synagogan museo-osasto on toiminut vuodesta 1958, ja se on avoinna.",
+     "url": "https://krakow.pl/instcbi/15664/inst/11541/981/Muzeum-Krakowa-Stara-Synagoga.html"
     }
    ]
   },

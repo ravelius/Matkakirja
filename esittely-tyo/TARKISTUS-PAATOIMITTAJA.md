@@ -1406,3 +1406,159 @@ Yksitoista huomiota on "ei ala paikan nimellä" (suomenkielinen etusana, äänt�
 - Pétrussen ennallistaminen: ensimmäinen vaihe valmistui vuoden 2024 lopussa, ja toinen vaihe kestää keväästä 2025 noin kaksi ja puoli vuotta, joten "työ jatkuu" pitää vuonna 2026 (paperjam.lu / hakuote). **Päätoimittajalle:** virke vanhenee noin vuonna 2028.
 - Teemat: Bockin ja Pétrussen lyhyet eivät enää kerro molemmat kasemateista.
 - Avaus: 36 sanaa, ilmakuva (kallioniemi, rotkot, sillat), alkaa "Tervetuloa" — ei korjattavaa.
+
+## Košice
+
+### Pyhän Elisabetin katedraali — kenttä `lyhyt`
+- **Vanha:** "Pyhän Elisabetin katedraalin pohjoistorni kohoaa noin kuuteenkymmeneen metriin, ja sen kapeita kiviportaita pääsee näköalatasanteelle. Pohjoisen sisäänkäynnin yllä on veistetty kuva viimeisestä tuomiosta ja kahdentoista apostolin patsaat. Kirkkoon mahtuu yli viisituhatta ihmistä."
+- **Uusi:** "Pyhän Elisabetin katedraalin seinällä on vesikouru, jota kutsutaan juopuneeksi naiseksi, ja kansantarinan mukaan se esittää rakennusmestarin viinaan menevää vaimoa. Toinen tarina kertoo, että rakentajat kätkivät kirkkoon onton kiven. Kukaan ei tiedä sen paikkaa, mutta jos kivi katoaa, koko kirkko sortuu."
+- **Syy:** Tyyppi 2. Vanha versio oli pelkkää perustietoa: tornin korkeus, portaali ja kävijämäärä. Uusi kertoo kaksi kirkon omaa kansantarinaa, ja ne on esitetty tarinoina eikä tosiasioina. Tornin, portaalin ja kävijämäärän lähteet poistettiin.
+- **Lähde:** https://en.wikipedia.org/wiki/Cathedral_of_St._Elizabeth (osio Legends: "gargoyle of the drunk woman… master builder's alcoholic wife", "hollow stone… Were the stone to be lost, the whole cathedral would fall")
+
+### Košicen kansallisteatteri — kenttä `lyhyt`
+- **Vanha:** "Kansallisteatterin näyttämö on muodoltaan lyyran mallinen, ja sisätiloja koristaa runsas stukkityö. Katon maalauksissa nähdään myös Kuningas Lear ja Kesäyön uni. Julkisivuja koristavat teatteriaiheiset veistosryhmät, ja kupolin yllä kohoaa aamunkoittoa esittävä patsas."
+- **Uusi:** "Kansallisteatteri rakennettiin keskiaikaisen raatihuoneen paikalle. Kaupungin edellinen kivinen teatteri oli avattu vuonna 1788, mutta se suljettiin turvallisuussyistä vuonna 1894. Syyskuussa 1924 talon uusi slovakialainen teatteri aloitti Ján Chalupkan komedialla Kocúrkovo, joka pilkkaa pikkukaupungin ahdasmielisyyttä."
+- **Syy:** Tyypit 1 ja 2. Lyhyt jatkoi saman kohteen tekstin Shakespeare-kattomaalauksia ("myös Kuningas Lear…"), ja se oli pelkkää sisustuksen kuvailua. Veistosryhmiä ja aamunkoittopatsasta ei myöskään löytynyt avatusta TASR-lähteestä, joten niiden lähde poistettiin. Uusi versio kertoo talon historiasta.
+- **Lähde:** https://www.teraz.sk/kultura/kosice-divadlo-narodne-historia/97912-clanok.html ("na mieste niekdajšej stredovekej radnice", 1788, "V roku 1894 budovu z bezpečnostných dôvodov uzavreli", "Prvou premiérou novej divadelnej scény bola 13. septembra 1924 hra od Jána Chalupku Kocúrkovo"); https://en.wikipedia.org/wiki/J%C3%A1n_Chalupka (komedia, satiiri paikallispatriotismista ja ahtaista elämänpäämääristä)
+
+### Hlavná-katu — kenttä `lyhyt`
+- **Vanha:** "Pääkadun varrella on suurin osa kaupungin tärkeimmistä historiallisista kohteista. Joulukuussa 2002 kadulle paljastettiin yli kolmen metrin korkuinen pronssinen vaakunapatsas. Se muistuttaa, että kuningas Ludvig Suuri myönsi Košicelle vuonna 1369 vaakunan ensimmäisenä kaupunkina Euroopassa."
+- **Uusi:** "Pääkadun eteläosassa seisoo yli kolmen metrin korkuinen pronssienkeli, joka kannattelee kaupungin vaakunaa. Patsas paljastettiin joulukuussa 2002 muistoksi siitä, että kuningas Ludvig Suuri antoi Košicelle vuonna 1369 vaakunakirjeen ensimmäisenä kaupunkina Euroopassa. Vuoteen 1502 mennessä kaupunki oli saanut vaakunakirjeen neljältä eri hallitsijalta."
+- **Syy:** Tyypit 2 ja 3. Täytevirke ("suurin osa kohteista") korvattiin näkyvällä yksityiskohdalla, eli patsas on enkeli, joka pitää vaakunaa. Vivahde tarkennettiin lähteen mukaiseksi: Košice sai ensimmäisenä kuninkaallisen vaakunakirjeen (royal warrant). Lisäksi kerrotaan neljästä vaakunakirjeestä.
+- **Lähde:** https://slovakia.travel/en/the-memorial-of-the-coat-of-arms-of-kosice ; https://www.kosice.sk/city/the-arms-of-kosice-city
+
+### Laulava suihkulähde — kenttä `teksti`
+- **Vanha:** "…ja lähdettä pidetään entisen Tšekkoslovakian vanhimpana laatuaan."
+- **Uusi:** "…ja se on yksi entisen Tšekkoslovakian ensimmäisistä laulavista suihkulähteistä."
+- **Syy:** Tyyppi 3, superlatiivi. Myös Mariánské Lázněn laulava suihkulähde valmistui vuonna 1986 ja soi ensimmäisen kerran samana vuonna. Tšekkiläisen hakutuloksen mukaan se soi jo 30.4.1986, ja Košicen lähde avattiin 1.5.1986, joten "vanhin" ei kestä.
+- **Lähde:** https://www.kudyznudy.cz/aktuality/jedte-do-marianskych-lazni-na-podzimni-slavnosti-a ; https://www.kamnavylet.sk/en/attraction/singing-fountain-and-carillon (sivun kommenteissakin kiistetään "vanhin")
+
+### Laulava suihkulähde — kenttä `lyhyt`
+- **Vanha:** "Laulava suihkulähde otettiin uudelleen käyttöön huhtikuussa 2024 sen historian suurimman uudistuksen jälkeen. Nyt siinä on neljäkymmentäkolme pumppua ja seitsemänsataaviisikymmentä suutinta, ja keskimmäinen suihku nousee kahdenkymmenenneljän metrin korkeuteen. Suihkujen muodostamaan vesiverhoon voidaan heijastaa myös kansallisteatterin esityksiä."
+- **Uusi:** "Laulavan suihkulähteen idean toi Košiceen vuonna 1986 pormestari Rudolf Schuster, joka nousi myöhemmin Slovakian presidentiksi. Nykyään uudistetun lähteen keskimmäinen suihku nousee kahdenkymmenenneljän metrin korkeuteen, ja suihkujen vesiverhoon voidaan heijastaa kansallisteatterin esityksiä."
+- **Syy:** Tyypit 2 ja 1. Pumppujen ja suuttimien määrä on teknistä tietoa, ja ne korvattiin ihmisellä. Myös uudistusta korostava aloitus poistettiin, koska saman kohteen teksti kertoo jo uudistuksesta.
+- **Lähde:** https://sita.sk/spievajuca-fontana-v-kosiciach-je-opat-v-prevadzke-podla-primatora-je-najmodernejsiou-v-europe-a-jedina-s-umelou-inteligenciou-videofoto/ (Schuster "priniesol myšlienku… v roku 1986", 24 m) ; https://en.wikipedia.org/wiki/Rudolf_Schuster ; https://enrsi.stvr.sk/articles/news/361472/fountain-in-kosice-city-centre-sings-again (vesisumuun heijastetut teatteriesitykset)
+
+### Laulava suihkulähde — kenttä `kysymykset`
+- **Vanha:** "Mihin suihkulähteen tekoälyä käytetään?"
+- **Uusi:** "Mitä suihkulähteen uudistuksessa muutettiin?"
+- **Syy:** Tyyppi 7. Tekoäly on vain pormestarin mainoslause ("ainoa tekoälyllä"), eikä mikään lähde kerro, mitä se tekee. Oletuksen todenperäisyys oli siis epävarma.
+- **Lähde:** sama sita.sk-artikkeli
+
+### Laulava suihkulähde — kenttä `lahteet`
+- Suunnittelija Peter Sceranka vahvistettiin Košicen virallisen matkailuorganisaation sivulta. Tämä ratkaisee PILVI-RAPORTIN epävarmuuden. Kupi.com-lähde (403) korvattiin osoitteella https://visitkosice.org/en/namapke/refresh-yourself-at-the-fountains-of-kosice-part-1 ("Košice sculptor Petr Sceranka").
+- U. S. Steel Košicen sivusto on siirtynyt Nippon Steelin alle (usske.sk ohjaa uuteen osoitteeseen). URLit päivitettiin osoitteisiin https://www.sk.nipponsteel.com/en/article/kosice-steel-again-helped-make-the-city-alive (venttiilit 1986, miljoona euroa) ja https://www.sk.nipponsteel.com/en/article/the-fountain-also-lives-thanks-to-metallurgists. Tekstin "terästehtaan säätiö" pysyy oikeana.
+
+### Jakabin palatsi — kenttä `teksti`
+- **Vanha:** "Myöhemmin kaupunki kiisteli talon omistuksesta yli kaksikymmentä vuotta, eikä palatsia voitu sinä aikana avata yleisölle."
+- **Uusi:** "Myöhemmin talon omistuksesta on käyty oikeutta yli kaksikymmentä vuotta, ja kiistan vuoksi palatsi on pysynyt pitkään suljettuna."
+- **Syy:** Tyyppi 5. Imperfekti antoi ymmärtää, että kiista on ohi. Kiista jatkuu kuitenkin edelleen: maaliskuussa 2025 korkein oikeus kumosi aluetuomioistuimen vuoden 2021–2022 päätöksen, jossa talo annettiin perillisille, ja palautti asian uudelleen käsiteltäväksi. Palatsi on suljettu. Uusi muotoilu ei vanhene, vaikka kiista ratkeaisi.
+- **Lähde:** https://www.kosice.sk/clanok/najvyssi-sud-priblizil-jakabov-palac-kosicanom-rozhodne-krajsky-sud (7.3.2025)
+
+### Jakabin palatsi — kenttä `lahteet`
+- Rakentajat ratkaistu (PILVI-RAPORTIN epävarmuus): unkarilainen perintörekisteri vahvistaa veljekset Árpád ja Géza Jakabin, ja kaupungin sivu nimeää ensimmäiseksi omistajaksi Árpád Jakabin. "Peter Jakab" esiintyy vain matkailusivuilla. Teksti pysyi ennallaan.
+- Spectatorin URL (maksumuuri, ei avattavissa) ja Hungaricana (403) korvattiin osoitteilla https://hunektar.sk/en/records/jakab-palota (veljekset, tuomiokirkon kiviveistokset, myllypuro kuivattu 1968, myynti Barkányille 1908) ja https://www.kosice.sk/city/jacabs-palace (tuomiokirkon kivet, presidentin asuinpaikka huhti–toukokuussa 1945).
+
+### Itä-Slovakian museo — kenttä `teksti`
+- **Vanha:** "Talo valmistui vuonna 1901 arkkitehti Ödön Lechnerin suunnitelmien mukaan,"
+- **Uusi:** "Talo valmistui vuonna 1901 budapestilaisen arkkitehdin suunnitelmien mukaan,"
+- **Syy:** Tyyppi 3. Arkkitehdin nimi ei kestänyt tarkistusta. Explorecarpathia nimeää Lechner Ödönin, mutta unkarilainen perintörekisteri hunektar.sk nimeää budapestilaisen Lechner Jenőn. Unkarinkielisen Wikipedian Lechner Ödönin teosluettelossa ei ole mitään Kassassa, eikä en- tai sk-Wikipedia nimeä arkkitehtia. Kaikki lähteet ovat yhtä mieltä vain siitä, että arkkitehti oli budapestilainen.
+- **Lähde:** https://hunektar.sk/en/records/felso-magyarorszagi-rakoczi-muzeum ; https://www.explorecarpathia.eu/en/hungary/kassa-kosice/former-museum-of-upper-hungary-now-east-slovakian-museum ; https://hu.wikipedia.org/wiki/Lechner_%C3%96d%C3%B6n
+
+### Itä-Slovakian museo — kenttä `kysymykset`
+- **Vanha:** "Kuka arkkitehti Ödön Lechner oli?"
+- **Uusi:** "Kuka suunnitteli museon päärakennuksen?"
+- **Syy:** Tyyppi 7. Kysymyksen oletus (Lechner Ödön arkkitehtina) on epävarma.
+- **Lähde:** kuten yllä
+
+### Itä-Slovakian museo — kenttä `lyhyt`
+- **Vanha:** "Itä-Slovakian museo perustettiin Ylä-Unkarin museona, ja vuonna 1906 se nimettiin Ferenc Rákóczin mukaan, kun ruhtinas oli haudattu uudelleen tuomiokirkkoon. Aukio museon edessä on nimetty Euroopan vanhimman maratonin mukaan, jota on juostu vuodesta 1924."
+- **Uusi:** "Itä-Slovakian museo sai vuonna 1906 Ferenc Rákóczin nimen, kun ruhtinaan jäänteet tuotiin Košiceen ja museo järjesti hänen muistoesineistään näyttävän näyttelyn. Aukio museon edessä on nimetty Euroopan vanhimman maratonin mukaan, jonka ensimmäiset juoksijat lähtivät vuonna 1924 Turňan linnanraunioiden juurelta."
+- **Syy:** Tyyppi 2. Vanha versio kertoi organisaation nimenmuutoksista. Uusi kertoo tapahtumasta, eli ruhtinaan muistoesineiden näyttelystä, ja ensimmäisen maratonin yllättävästä lähtöpaikasta.
+- **Lähde:** https://hunektar.sk/en/records/felso-magyarorszagi-rakoczi-muzeum ("a spectacular exhibition of the prince's relics was organized and the institution was renamed") ; https://en.wikipedia.org/wiki/Ko%C5%A1ice_Peace_Marathon ("began beneath the ruins of Turňa Castle")
+
+### Itä-Slovakian museo — kenttä `lahteet`
+- Holvia koskeva väite "holvi rakennettiin 1969" ei löytynyt Wikipediasta. Lähteeksi päivitettiin, että aarre on museon holviosastolla (Wikipedia, Košice gold treasure). Tekstin "museon alle rakennetussa holvissa" säilyi, koska holviosaston olemassaolo vahvistui.
+
+### Miklušin vankila — kenttä `teksti`
+- **Vanha:** "…kahdesta goottilaisesta porvaristalosta, jotka rakennettiin 1200- ja 1300-lukujen vaihteessa." / "…vankilanhoitaja Miklóssylta, joka johti vankilaa lähes neljäkymmentä vuotta 1800-luvun jälkipuoliskolla."
+- **Uusi:** "…kahdesta goottilaisesta porvaristalosta, joista vanhempi rakennettiin 1200- ja 1300-lukujen vaihteessa." / "…vankilanhoitaja Miklóssylta, joka hoiti vankilaa 1800-luvun jälkipuoliskolla."
+- **Syy:** Tyyppi 3. Medievalheritage.eu:n mukaan vain itäinen talo on 1200- ja 1300-lukujen vaihteesta, ja läntinen on 1400-luvun alkupuoliskolta. "Lähes neljäkymmentä vuotta" (1861–1899) ei vahvistunut mistään avatusta lähteestä. TASR ja tutkimus kertovat vain, että Miklóssy hoiti vankilaa 1800-luvun jälkipuoliskolla, ja hänet tunnetaan lähteistä 1860-luvulta alkaen.
+- **Lähde:** https://medievalheritage.eu/en/main-page/heritage/slovakia/kosice-prison-of-miklusz/ ; https://www.teraz.sk/regiony/miklusovu-vaznicu-caka-rozsiahla-obn/871232-clanok.html
+
+### Miklušin vankila — kenttä `lyhyt`
+- **Vanha:** "…juuri ennen kuin Gábor Bethlenin joukot valtasivat kaupungin. Vuodesta 1872 rakennus oli kaupungin poliisin vankila. Museon kierrokseen on kuulunut pyövelin asunto, jossa on esillä mestaajien miekkoja."
+- **Uusi:** "…juuri ennen kuin Gábor Bethlenin joukot valtasivat kaupungin. Pyövelin asunto rakennettiin vankilan viereen luultavasti 1600-luvun jälkipuoliskolla, ja myöhemmin se liitettiin suoraan vankilaan. Museossa on ollut esillä Košicen pyövelien alkuperäisiä miekkoja."
+- **Syy:** Tyypit 2 ja 5. Poliisivankila 1872 on hallinnollinen tieto, eikä sitä löytynyt avatuista lähteistä. Lisäksi lauseessa "on kuulunut… jossa on esillä" aikamuodot olivat ristiriidassa, koska museo on suljettu korjauksen ajaksi. Uusi muoto ei vanhene.
+- **Lähde:** https://www.kamnavylet.sk/en/attraction/miklus-s-prison-and-executioner-s-apartment ("probably built in the second half of the 17th century… later connected", "original swords of Košice executioners")
+
+### Miklušin vankila — kenttä `kysymykset`
+- **Vanha:** "Ketä vankilassa pidettiin vangittuna?"
+- **Uusi:** "Keitä vankilaan suljettiin?"
+- **Syy:** Tyyppi 6. Vanhassa muodossa oli toisto (vankilassa – vangittuna) ja yksikkö "ketä".
+- **Lähde:** —
+
+### Miklušin vankila — kenttä `lahteet`
+- Valmistuminen kesällä 2027 ei näkynyt vanhassa teraz.sk-lähteessä (elokuu 2023). Se korvattiin TASR:n 14.4.2025 artikkelilla ("približne v júni 2027"), joka on linkitetty yllä. Tekstin "kesällä 2027" pitää paikkansa.
+
+### Ei muutettu, tarkistettu
+- Urbanin torni: Wikipedia vahvisti kaikki väitteet (36 hautakiveä, roomalainen 300-luvulta, Illenfeld 1557, palo 1966, avattiin uudelleen 1971, VSŽ:n jäljennös 1996, vaurioitunut kello tornin edessä).
+- Hlavná-kadun teksti: Wikipedia vahvisti ruttopylvään (14 m, 1723, hirsipuun paikka, rutto 1709–1710) ja jalankulkualueen (1984, Schuster, Wuppertal). Ruttopylvään sijainti "kadun pohjoisosassa" on ratkaistu: katu haarautuu pohjoisessa Immaculatan kohdalla (Wikipedia, Plague Column). Teatterin nimen palautus 1.5.2023 ja sen aiempi nimi Národné divadlo 1946–1955 vahvistuivat (sita.sk, teraz.sk).
+- Kulta-aarteen tiedot (24.8.1935, Hlavná 68, 2 920 kolikkoa, suurin Slovakiasta löydetty) vahvistuivat, samoin museon avoinna olo.
+- Avaus: 37 sanaa, alkaa sanalla "Tervetuloa" ja käyttää ilmasta nähtävää kuvaa (Hornádin laakso, kukkulat, punaiset katot, pääkatu). Ei muutoksia.
+
+## Krakova
+
+### Wawelin linna — kenttä `lyhyt`
+- **Vanha:** "Wawelin linnan kuuluisimpia aarteita on kuningas Sigismund Augustin kuvakudoskokoelma, joka kudottiin Brysselissä 1500-luvun puolivälissä. Se on suurin koskaan yhden hallitsijan tilaama kuvakudoskokoelma. Linna on Puolan vierailluin taidemuseo, ja vuonna 2025 siellä kävi lähes kolme ja puoli miljoonaa ihmistä."
+- **Uusi:** "Wawelin linnan Päiden saliksi kutsutun huoneen katossa on kolmekymmentä lehmuspuusta veistettyä päätä, eikä yksikään niistä ole samanlainen. Yhden naisen suu on peitetty siteellä. Tarinan mukaan pää huomautti kerran latinaksi kuningas Sigismund Augustille, että tämän tuomio oli epäoikeudenmukainen."
+- **Syy:** Tyypit 2 ja 7/5. Kävijämäärä on ohjeessa nimenomaan kielletty, ja se vanhenee vuosittain. Kuvakudosten superlatiivi oli perustietoa. Kokeilin ensin kuvakudosten sotapakotarinaa (Kanada 1939–1961), mutta se olisi toistanut Mariankirkon uuden alttaritaulutarinan rakennetta (aarre pakoon toista maailmansotaa). Siksi tilalle valittiin Wawelin päiden legenda.
+- **Lähde:** https://wawel.krakow.pl/images/upload/blog/infografiki/pdf/legenda-o-glowie-2.pdf (Wawelin linnan oma aineisto: "Sala pod Głowami", "Żadna z trzydziestu… głów nie jest tam taka sama", "dlaczego jedna z nich ma zakryte usta", "KOBIETA Z PODWIKĄ NA USTACH", kuningas Zygmunt August, "niesprawiedliwy wyrok", "W jakim języku odezwała się głowa?") ; https://pl.wikipedia.org/wiki/G%C5%82owy_wawelskie (194 alkuperäistä, 30 säilynyttä)
+
+### Mariankirkko — kenttä `lyhyt`
+- **Vanha:** "Mariankirkon pääalttarin takana on Veit Stossin veistämä alttarikaappi, maailman suurin goottilainen alttaritaulu. Se on kolmetoista metriä korkea ja yksitoista metriä leveä. Kuvanveistäjä työsti sitä vuodesta 1477 vuoteen 1489, ja siinä on yli kaksisataa maalattua ja kullattua hahmoa."
+- **Uusi:** "Mariankirkon pääalttarina on Veit Stossin 1400-luvun lopulla veistämä alttaritaulu. Puolalaiset purkivat sen osiin juuri ennen toista maailmansotaa ja piilottivat eri puolille maata, mutta saksalaiset löysivät laatikot ja veivät ne Nürnbergin linnan kellariin. Alttaritaulu palasi Krakovaan vuonna 1946."
+- **Syy:** Tyypit 2 ja 3. Vanha versio oli luettelo mitoista, vuosista ja hahmojen määrästä. Superlatiivia "maailman suurin goottilainen alttaritaulu" ei löytynyt alttaritaulun eikä basilikan Wikipedia-artikkelista. Uusi versio kertoo taulun vaiheista sodassa.
+- **Lähde:** https://en.wikipedia.org/wiki/Veit_Stoss_altarpiece_in_Krak%C3%B3w ("A few weeks prior to the outbreak… disassembled", "basement of the Nuremberg Castle", "returned to Poland in 1946")
+
+### Sukiennice (kauppahalli) — kenttä `lyhyt`
+- **Vanha:** "Kangashalli Sukiennicen yläkertaan perustettiin vuonna 1879 Puolan ensimmäinen kansallismuseo. Nykyään siellä on 1800-luvun puolalaisen maalaustaiteen galleria, jossa on esillä muun muassa Jan Matejkon, Henryk Siemiradzkin, Jacek Malczewskin ja Józef Chełmońskin teoksia."
+- **Uusi:** "Kangashalli Sukiennicen yläkertaan perustettiin vuonna 1879 Krakovan kansallismuseo. Sen ensimmäinen teos oli Henryk Siemiradzkin valtava maalaus Neron soihdut, jonka taiteilija lahjoitti kaupungille. Pian lahjoituksia alkoi virrata myös aatelisilta ja muilta taiteilijoilta, ja nykyään yläkerrassa on 1800-luvun puolalaisen maalaustaiteen galleria."
+- **Syy:** Tyypit 2 ja 3. Nimiluettelo korvattiin museon syntytarinalla. Väite "Puolan ensimmäinen kansallismuseo" ei löytynyt Sukiennice Museum- eikä National Museum in Kraków -artikkelista, joten se muutettiin muotoon "Krakovan kansallismuseo".
+- **Lähde:** https://en.wikipedia.org/wiki/Sukiennice_Museum ("established on October 7, 1879", Siemiradzki "offered his monumental painting called Nero's Torches as gift to the city", lahjoitukset aatelisilta ja taiteilijoilta) ; https://en.wikipedia.org/wiki/National_Museum,_Krak%C3%B3w
+
+### Kazimierz — kenttä `lyhyt`
+- **Vanha:** "…puolikkaasta patongista tehtyä lämmintä voileipää. Kaupunginosan Vanha synagoga on yksi maailman vain kahdesta säilyneestä goottilaisesta synagogasta, ja se rakennettiin 1500-luvun alussa."
+- **Uusi:** "…puolikkaasta patongista tehtyä lämmintä voileipää. Halli valmistui vuonna 1900 katetuksi kauppahalliksi, ja vuodesta 1927 sen osassa toimi rituaalinen siipikarjateurastamo aina saksalaisten miehitykseen asti."
+- **Syy:** Tyypit 1 ja 3. Saman kohteen teksti kertoo jo Vanhasta synagogasta. Lisäksi Wikipedia ei vahvista väitettä "yksi kahdesta goottilaisesta synagogasta", ja rakennusajaksi se antaa 1407–1570 eikä "1500-luvun alkua". Tilalle kerrotaan saman pyöreän hallin oma historia.
+- **Lähde:** https://krakow.pl/instcbi/1362/inst/8124/2396/Plac-Nowy.html (rakennettu 1899–1900 katetuksi kauppahalliksi, "Od 1927 r. w jego części działała rytualna rzeźnia drobiu, zlikwidowana podczas okupacji") ; https://en.wikipedia.org/wiki/Old_Synagogue_(Krak%C3%B3w)
+
+### Kazimierz — kenttä `teksti`
+- **Vanha:** "…joka on toiminut juutalaisen historian ja kulttuurin museona vuodesta 1961."
+- **Uusi:** "…joka on toiminut juutalaisen historian ja kulttuurin museona vuodesta 1958."
+- **Syy:** Tyyppi 3. Kaupungin virallinen sivu ("Oddział muzealny działa tu od 1958 r.") ja Wikipedia ("Since 1958") antavat vuoden 1958. Muzeum Krakowan sivu vahvistaa, että synagoga on nyt avoinna (tyyppi 5).
+- **Lähde:** https://krakow.pl/instcbi/15664/inst/11541/981/Muzeum-Krakowa-Stara-Synagoga.html ; https://muzeumkrakowa.pl/oddzialy/stara-synagoga
+
+### Florianin portti — kenttä `lyhyt`
+- **Vanha:** "Florianin portin viereen jäi pätkä keskiaikaista kaupunginmuuria ja kaksi pienempää puolustustornia. Muurin kylkeen ripustetaan nykyään maalauksia, joita taiteilijat myyvät ohikulkijoille, ja portin alta Florianinkatu johtaa suoraan pääaukiolle, samaa reittiä kuin kruunajaiskulkueet aikanaan."
+- **Uusi:** "Florianin portin viereisen muurin kylkeen ripustetaan nykyään maalauksia, joita taiteilijat myyvät ohikulkijoille. Portin pohjoisseinän kivisen kotkan veisti vuonna 1882 Zygmunt Langman taidemaalari Jan Matejkon suunnitelman mukaan, ja eteläseinää koristaa 1700-luvulta peräisin oleva pyhän Florianin reliefi."
+- **Syy:** Tyyppi 1. Muurinpätkä toisti saman kohteen tekstiä ("lyhyt pätkä vanhaa kaupunginmuuria"), ja kruunajaiskulkueiden reitti toisti sekä tekstiä että Barbakaanin lyhyttä ("kuninkaallisen tien alkupää"). Tilalle tuli portin oma näkyvä yksityiskohta.
+- **Lähde:** https://en.wikipedia.org/wiki/St._Florian%27s_Gate ("a stone eagle that was carved in 1882 by Zygmunt Langman, based on a design by painter Jan Matejko", "an 18th-century bas-relief of St. Florian", viereisillä muureilla myytävää taidetta)
+
+### Barbaakani — kenttä `lyhyt`
+- **Vanha:** "Barbakaani välttyi purkamiselta 1800-luvun alussa, kun lähes kaikki Krakovan linnoitukset hajotettiin ja niiden paikalle tehtiin Plantyn puisto. Sisältä linnakkeen halkaisija on runsaat kaksikymmentäneljä metriä, ja se suojasi aikanaan kuninkaallisen tien alkupäätä."
+- **Uusi:** "Barbakaanin itäseinän muistolaatta kertoo krakovalaisesta porvarista Marcin Oracewiczista. Hän puolusti kaupunkia venäläisiä vastaan Barin konfederaation aikana 1700-luvulla, ja tarinan mukaan hän ampui venäläisen everstin Paninin, kun oli ladannut aseensa luodin sijaan takkinsa napilla."
+- **Syy:** Tyypit 1 ja 2. Kuninkaallinen tie toistui Florianin portin lyhyessä, ja purkamiselta pelastuminen toistui Florianin portin tekstissä. Halkaisija on teknistä tietoa. Uusi versio kertoo ihmisestä, ja nappilegenda on merkitty tarinaksi. Plantyn puiston lähde poistettiin tarpeettomana. `nimi` säilyi pohjan mukaisena ("Barbaakani"), mutta tekstissä käytetään oikeaa muotoa Barbakaani.
+- **Lähde:** https://en.wikipedia.org/wiki/Krak%C3%B3w_Barbican ("On its eastern wall, a tablet commemorates the feat of a Kraków burgher, Marcin Oracewicz… shot their Colonel Panin, according to a legend, using a czamara button instead of a bullet")
+
+### Ei muutettu, tarkistettu
+- Wawelin katedraalin lyhyt (Sigismundin kello) ja Rynek Głównyn lyhyt (Mickiewicz ja szopka-kilpailu) ovat tarinoita eivätkä päällekkäisiä. Kierroksen kahdeksan lyhyttä luettiin peräkkäin korjausten jälkeen: päiden legenda, Sigismundin kello, Okrąglak, szopka, kansallismuseon synty, alttaritaulun sotavaiheet, Matejkon kotka ja Oracewiczin nappi.
+- Mariankirkon torni (PILVI-RAPORTIN epävarmuus): Wikipedian basilika-artikkelissa kirkon korkeus on 80 m ja korkeamman tornin vanhassa lähteessä 82 m, joten tekstin "yli kahdeksankymmentä metriä" ja korkeus_m 82 jäivät ennalleen. Hejnał soi Wikipedian mukaan ympäri vuorokauden joka päivä, ja keskipäivän soitto lähetetään Polskie Radio Jedynkassa.
+- Raatihuoneen tornin rakennusaika on 1300-luvun loppu (Wikipedia), joten "1300-luvun raatihuoneesta" pitää paikkansa. Collegium Maiusin kellon soittoajat 9, 11, 13, 15 ja 17 ja hahmot vahvistettiin maius.uj.edu.pl:stä.
+- Jan Olbracht: suomenkielistä vakiintunutta nimeä ei edelleenkään löytynyt (fi-Wikipedian sivuja ei ole kummallakaan muodolla), joten puolalainen muoto jäi.
+- Avaus: 37 sanaa, alkaa sanalla "Tervetuloa" ja käyttää ilmasta nähtävää kuvaa (soikea vanhakaupunki, puistorengas, tori, Wawelin kukkula Veikselin mutkassa). Ei muutoksia.
+
+### Epävarmuudet Päätoimittajalle
+- Košice, Itä-Slovakian museo: arkkitehti on Lechner Ödön tai Lechner Jenő, ja lähteet ovat ristiriidassa. Tekstissä on "budapestilainen arkkitehti". Jos Päätoimittaja löytää ratkaisevan lähteen, nimi voidaan palauttaa.
+- Krakova, Wawelin päät: Wawelin oma aineisto vahvistaa siteellä peitetyn naisen pään, kuningas Sigismund Augustin ja epäoikeudenmukaisen tuomion. Kielen se vahvistaa vain kysymyksenä ("Missä kielessä pää puhui? Onko kieli yhä käytössä?"). Latinankieliset sanat "Rex Auguste, iudica iuste" esiintyvät Wawelia lainaavassa hakuotteessa, jota en saanut avattua. "Latinaksi" on siksi hyvin todennäköinen mutta ei sanatarkasti lähteestä.
+- Krakova, Barbakaani: vakiintunutta suomenkielistä nimeä Jan Olbrachtille ei löytynyt.
