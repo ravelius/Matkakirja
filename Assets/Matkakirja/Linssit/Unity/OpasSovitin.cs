@@ -623,8 +623,8 @@ namespace Matkakirja.Natiivi
 
         IEnumerator YksAja(string kohdeId, string teksti, string ajatUrl, double kestoS, Func<double> aika, Func<bool> kaynnissa)
         {
-            float raja = Time.unscaledTime + 3f;
-            while (yksHaussa && Time.unscaledTime < raja) yield return null;
+            float raja = Time.unscaledTime + 12f;
+            while (yksHaussa && Time.unscaledTime < raja && kaynnissa()) yield return null;
             if (yksKuvat == null || yksKuvat.Count == 0) yield break;
             List<(int, double)> ajat = null;
             if (!string.IsNullOrEmpty(ajatUrl))
@@ -642,6 +642,7 @@ namespace Matkakirja.Natiivi
             foreach (var (kuva, t) in lista)
             {
                 // Kuva lähtee ~0,35 s ennen ankkuria (lataus ja sisääntulo), kun klippi yhä soi.
+                if (aika() > t + 1.0) continue;   // luettelo tai ajat tulivat myöhässä: ankkuri jo ohi, ei kuvaa väärään kohtaan
                 while (kaynnissa() && aika() < t - 0.35) yield return null;
                 if (!kaynnissa()) yield break;
                 if (YksPeittaa() || kaupunki?.Kamera == null) continue;
@@ -668,6 +669,9 @@ namespace Matkakirja.Natiivi
 
         IEnumerator EsitysAvaus(string kaupunkiId)
         {
+            // Yksityiskohtaluettelo esiin heti (iPad-simu 7.10. 21.24: avauksen kuva jäi pois, kun luettelo latautui vasta
+            // avauksen soidessa ja ajoitus odotti 3 s).
+            VarmistaYksityiskohdat();
             o.Kirjaa($"opas: esitys alkaa ({kaupunkiId}): avaus{(OpastusKuultu ? "" : " + opastus (1. kyyti)")}{(kaupunkiId != null && esittelyPolut.ContainsKey(kaupunkiId) ? " [" + esittelyPolut[kaupunkiId] + "]" : "")}");
             if (!Testi && !string.IsNullOrEmpty(kaupunkiId))
             {
