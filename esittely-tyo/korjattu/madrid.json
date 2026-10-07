@@ -9,7 +9,7 @@
    "kuvaus": "Euroopan suurin kuninkaanlinna",
    "luokka": "rakennus",
    "koko_m": 200,
-   "teksti": "Kuninkaanlinna on Madridin länsilaidan jyrkänteellä valtava neliö, jonka harmaasta graniitista ja valkoisesta kalkkikivestä tehdyt siivet kiertävät sisäpihaa. Samalla paikalla seisoi vanhan maurilaislinnoituksen pohjalle rakennettu linna, joka paloi jouluaattona 1734. Kuningas Filip viides halusi tilalle palatsin, joka ei voisi palaa, ja se rakennettiin kivestä ja tiiliholveista ilman puuta. Yli kolmellatuhannella neljälläsadalla huoneellaan se on pinta-alaltaan Euroopan suurin kuninkaanlinna. Kuningasperhe asuu nykyään pienemmässä Zarzuelan palatsissa, ja tätä linnaa käytetään valtiollisiin juhlatilaisuuksiin.",
+   "teksti": "Kuninkaanlinna on Madridin länsilaidan jyrkänteellä valtava neliö, jonka harmaasta graniitista ja valkoisesta kalkkikivestä tehdyt siivet kiertävät sisäpihaa. Samalla paikalla seisoi vanhan maurilaislinnoituksen pohjalle rakennettu linna, joka paloi jouluaattona 1734. Kuningas Filip viides halusi tilalle tulenkestävän palatsin, joten se muurattiin kivestä ja tiilestä holvikatoin, ja puuta käytettiin vain ovissa, ikkunoissa ja katon rakenteissa. Yli kolmellatuhannella neljälläsadalla huoneellaan se on pinta-alaltaan Euroopan suurin kuninkaanlinna. Kuningasperhe asuu nykyään pienemmässä Zarzuelan palatsissa, ja tätä linnaa käytetään valtiollisiin juhlatilaisuuksiin.",
    "lyhyt": "Kuninkaanlinnan rakentaminen alkoi vuonna 1738, ja ensimmäisenä kuninkaana siihen muutti Kaarle kolmas vuonna 1764. Vanhan linnan palossa vuonna 1734 Velázquezin Las Meninas pelastettiin heittämällä se ikkunasta, ja nykyään maalaus on Prado-museossa.",
    "syventava": "Mitä vanhan linnan palossa menetettiin?",
    "kysymykset": [
@@ -26,8 +26,8 @@
      "url": "https://en.wikipedia.org/wiki/Royal_Palace_of_Madrid"
     },
     {
-     "vaite": "Filip V halusi tulenkestävän palatsin kalkkikivestä ja graniitista; rakennettiin kivestä ja tiiliholveista ilman puuta; harmaan graniitin ja valkoisen kalkkikiven kontrasti.",
-     "url": "https://aviewoncities.com/madrid/royal-palace"
+     "vaite": "Tulipalojen estämiseksi uusi palatsi muurattiin kokonaan kivestä ja tiilestä holvikatoin, ja puuta käytettiin vain puusepäntöissä ja vesikaton rakenteissa.",
+     "url": "https://es.wikipedia.org/wiki/Palacio_Real_de_Madrid"
     },
     {
      "vaite": "Linna rakennettiin maurilaislinnoituksen paikalle ja perustuksille.",
@@ -44,6 +44,10 @@
     {
      "vaite": "Las Meninas on nykyään Prado-museossa.",
      "url": "https://en.wikipedia.org/wiki/Museo_del_Prado"
+    },
+    {
+     "vaite": "Pääjulkisivussa harmaa graniitti ja valkoinen kalkkikivi; 135 000 m², 3 418 huonetta, Euroopan suurin kuninkaanlinna.",
+     "url": "https://en.wikipedia.org/wiki/Royal_Palace_of_Madrid"
     }
    ]
   },
@@ -54,7 +58,7 @@
    "luokka": "rakennus",
    "koko_m": 200,
    "teksti": "Prado-museo on pitkä ja matala uusklassinen palatsi Paseo del Pradon puistokadun varrella. Sen pääsisäänkäynnin edessä istuu pronssinen Diego Velázquez, ja pohjoispäädyn edessä seisoo Francisco de Goya. Arkkitehti Juan de Villanueva suunnitteli talon vuonna 1785 luonnontieteelliselle kokoelmalle, mutta taidemuseona se avattiin vuonna 1819. Tunnetuimpia teoksia on Velázquezin Las Meninas, jossa maalari kuvasi itsensä maalaamassa kuningasperhettä. Kuninkaan ja kuningattaren kasvot näkyvät vain takaseinän peilistä, ja tutkijat kiistelevät yhä, kenen silmin kohtausta katsotaan.",
-   "lyhyt": "Prado-museon kokoelmiin kuuluvat Goyan synkät mustat maalaukset, jotka hän maalasi alun perin talonsa seiniin. Paroni Émile d’Erlanger lahjoitti ne museolle vuonna 1881. Las Meninasissa Velázquezin rinnassa näkyvä ritarikunnan risti lisättiin kuvaan vasta vuoden 1659 jälkeen.",
+   "lyhyt": "Prado-museon kokoelmiin kuuluvat Goyan synkät mustat maalaukset, jotka hän maalasi alun perin talonsa seiniin. Paroni Émile d’Erlanger siirrätti ne vuodesta 1874 alkaen seiniltä kankaalle ja aikoi myydä ne Pariisin maailmannäyttelyssä, mutta lahjoitti ne lopulta Espanjan valtiolle vuonna 1881.",
    "syventava": "Kenen silmin Las Meninasia katsotaan?",
    "kysymykset": [
     "Mitä Goyan mustat maalaukset esittävät?",
@@ -90,8 +94,8 @@
      "url": "https://en.wikipedia.org/wiki/Black_Paintings"
     },
     {
-     "vaite": "Santiagon ritarikunnan risti lisättiin vuoden 1659 jälkeen.",
-     "url": "https://en.wikipedia.org/wiki/Las_Meninas"
+     "vaite": "Maalaukset siirrettiin seiniltä kankaalle vuodesta 1874 alkaen paroni Émile d’Erlangerin tilauksesta; hän aikoi myydä ne Pariisin maailmannäyttelyssä 1878, mutta lahjoitti ne Espanjan valtiolle 1881; nykyään Pradossa.",
+     "url": "https://en.wikipedia.org/wiki/Black_Paintings"
     }
    ]
   },
@@ -106,7 +110,7 @@
    "syventava": "Mitä aukiolla järjestettiin ennen?",
    "kysymykset": [
     "Mitä Leipomotalon julkisivumaalaukset esittävät?",
-    "Miksi Filip kolmannen patsas kaadettiin?",
+    "Mitä Filip kolmannen patsaan sisältä löytyi?",
     "Millaiset joulumarkkinat aukiolla pidetään?",
     "Mikä on aukion kuuluisin välipala?",
     "Mitä nimiä aukiolla on ollut historiansa aikana?"
@@ -132,6 +136,14 @@
     {
      "vaite": "Patsaan tekivät 1616 Giambologna ja Pietro Tacca; se siirrettiin 1848 Casa de Campolta aukiolle.",
      "url": "https://aviewoncities.com/madrid/plaza-mayor"
+    },
+    {
+     "vaite": "Aukiolla pidettiin autodafeita, härkätaisteluja ja San Isidron autuaaksi julistamisen juhla.",
+     "url": "https://es.wikipedia.org/wiki/Plaza_Mayor_de_Madrid"
+    },
+    {
+     "vaite": "Patsas siirrettiin Casa de Campolta aukiolle 1848 Isabel II:n määräyksestä.",
+     "url": "https://en.wikipedia.org/wiki/Plaza_Mayor,_Madrid"
     }
    ]
   },
@@ -142,12 +154,12 @@
    "luokka": "puisto",
    "koko_m": 1400,
    "teksti": "Retiron puisto on keskustan itälaidalla laaja vihreä alue, jonka pohjoisosassa kimaltaa suorakaiteen muotoinen lampi soutuveneineen ja rannalla kuningas Alfonso kahdennentoista muistomerkin pylväskaari. Kuningas Filip neljäs rakennutti tänne 1630-luvulla huvipalatsin, ja lammella näyteltiin hovin iloksi meritaisteluja. Puisto kuului kuninkaalliselle suvulle vuoteen 1868, jolloin siitä tuli kaupungin puisto. Isoisäsi valmistautui vuonna 1873 näyttämään portilla käyntikorttinsa, mutta vartija viittasi hänet sisään katsomatta nimeä, ja lammen rannalla eväänsä penkille levittänyt mies teki hänelle tilaa.",
-   "lyhyt": "Retiron puiston lasinen Kristallipalatsi rakennettiin vuonna 1887 Filippiinien kasveja esittelevän näyttelyn kasvihuoneeksi, ja nykyään siinä on taidenäyttelyitä. Isoisäsi kirjoitti vuonna 1873, että kuningattaren entinen puisto kuului nyt kaupungille ja että tähän seuraan pääsi ilman esittelyä.",
+   "lyhyt": "Retiron puiston lasinen Kristallipalatsi koottiin vuonna 1887 valmiista osista vain viidessä kuukaudessa Filippiinien kasveja esittelevää näyttelyä varten. Puiston suihkulähteellä seisoo Ricardo Bellverin Langennut enkeli, joka on kuuluisa harvinaisena paholaista esittävänä veistoksena, ja suihkulähteen kerrotaan olevan kuudensadankuudenkymmenenkuuden metrin korkeudella.",
    "syventava": "Mitä meritaisteluja lammella näyteltiin?",
    "kysymykset": [
     "Miksi puistossa on paholaista esittävä patsas?",
     "Kuka oli kuningas Alfonso kahdestoista?",
-    "Mitä Kristallipalatsissa on nyt esillä?",
+    "Mistä Kristallipalatsi sai mallinsa?",
     "Mistä puiston nimi Buen Retiro tulee?",
     "Mitä Filip neljännen huvipalatsista on jäljellä?"
    ],
@@ -166,12 +178,20 @@
      "url": "https://www.barcelo.com/guia-turismo/en/spain/madrid/things-to-do/parque-retiro-madrid/"
     },
     {
-     "vaite": "Kristallipalatsi rakennettiin 1887 Filippiinien kasvinäyttelyn kasvihuoneeksi; nykyään Reina Sofían väliaikaisten näyttelyiden tila.",
+     "vaite": "Kristallipalatsi rakennettiin 1887 Filippiinien näyttelyä varten esivalmistetuista osista vain viidessä kuukaudessa Lontoon Kristallipalatsin tapaan; se on suljettu restaurointia varten vuoteen 2027.",
      "url": "https://museoreinasofia.es/en/museo/architectural-heritage/palacio-velazquez-palacio-cristal"
     },
     {
-     "vaite": "Isoisän merkintä 1873: Retiron portilla hän valmistautui näyttämään käyntikorttinsa, vartija viittasi sisään katsomatta nimeä; kuningattaren entinen puisto kuului nyt kaupungille; lammen rannalla eväitään levittänyt mies teki hänelle tilaa penkillä.",
+     "vaite": "Isoisän merkintä 1873: Retiron portilla hän valmistautui näyttämään käyntikorttinsa, vartija viittasi sisään katsomatta nimeä; lammen rannalla eväänsä penkille levittänyt mies teki hänelle tilaa.",
      "url": "kaanon:isoisan-paivakirja"
+    },
+    {
+     "vaite": "Palacio de Cristal on suljettu korjaustöiden vuoksi vuoteen 2027.",
+     "url": "https://www.timeout.es/madrid/es/noticias/el-palacio-de-cristal-del-retiro-estara-cerrado-por-obras-hasta-2027-082124"
+    },
+    {
+     "vaite": "Ricardo Bellverin Langennut enkeli (1877, pronssi 1878), Miltonin Kadotetun paratiisin innoittama; maineena ainoa merkittävä paholaiselle omistettu veistos; suihkulähde 666 metrin korkeudella merenpinnasta.",
+     "url": "https://en.wikipedia.org/wiki/Fountain_of_the_Fallen_Angel"
     }
    ]
   },
@@ -182,7 +202,7 @@
    "luokka": "aukio",
    "koko_m": 200,
    "teksti": "Auringonportin aukio, Puerta del Sol, on puoliympyrän muotoinen tori, jonka eteläsivulla seisoo vanha postitalo kellotorneineen. Talon edessä kiveyksessä on nollakilometrin laatta, josta Espanjan valtateiden etäisyydet lasketaan. Nimi tulee 1400-luvun kaupunginmuurin portista, joka oli käännetty itään ja koristettu nousevalla auringolla. Uudenvuodenyönä tori täyttyy väestä, ja kun tornin kello lyö puoltayötä, jokaisella lyönnillä syödään yksi viinirypäle, kaikkiaan kaksitoista. Valtion televisio on näyttänyt kellon lyönnit suorana lähetyksenä vuodesta 1962.",
-   "lyhyt": "Auringonportin aukion postitalo valmistui vuonna 1768, ja nykyään siinä on Madridin itsehallintoalueen presidentin virasto. Aukion laidalla seisoo vuodelta 1967 oleva patsas, jossa karhu kurkottaa mansikkapuuhun, sillä sama aihe on Madridin vaakunassa.",
+   "lyhyt": "Auringonportin aukion kattojen yllä loistaa sherrymerkki Tío Pepen neonmainos, joka palasi aukiolle vuonna 2014, kun yli viisikymmentätuhatta ihmistä oli allekirjoittanut vetoomuksen sen puolesta. Aukion laidalla seisoo vuodelta 1967 oleva patsas, jossa karhu kurkottaa mansikkapuuhun, sillä sama aihe on Madridin vaakunassa.",
    "syventava": "Kuka rakensi tornin kuuluisan kellon?",
    "kysymykset": [
     "Mistä kahdentoista rypäleen perinne alkoi?",
@@ -208,6 +228,14 @@
     {
      "vaite": "Karhun ja mansikkapuun patsas vuodelta 1967 kuvaa Madridin vaakunaa.",
      "url": "https://www.introducingmadrid.com/puerta-del-sol"
+    },
+    {
+     "vaite": "Tío Pepen mainos nostettiin aukiolle 1935; se purettiin 2011 talon uudistuksen vuoksi, ja yli 50 000 allekirjoituksen kampanjan jälkeen se asennettiin 2014 aukion numeroon 11.",
+     "url": "https://www.miradormadrid.com/?p=2995"
+    },
+    {
+     "vaite": "Tío Pepen mainos palasi aukiolle 2014 uuteen paikkaan.",
+     "url": "https://donquijote.org/blog/tio-pepe-and-schweppes-two-iconic-madrid-brands"
     }
    ]
   },
@@ -217,7 +245,7 @@
    "kuvaus": "Madridin kuuluisin liikekatu",
    "luokka": "katu",
    "koko_m": 1300,
-   "teksti": "Pääkatu Gran Vía halkoo keskustaa leveänä kivikanjonina Alcalá-kadulta Espanjan aukiolle. Kuningas Alfonso kolmastoista löi vuonna 1910 hakulla ensimmäisen iskun purettavaan taloon, ja kadun viimeinen osa valmistui vuonna 1929. Samana vuonna valmistui kadun varren Telefónican talo, joka oli silloin Euroopan korkein pilvenpiirtäjä. Sisällissodan aikana kaupunkia piirittänyt Francon armeija tulitti taloa tykeillään, koska tasavaltalaiset tarkkailivat tornista rintamaa. Kadun itäpäässä, Alcalá-kadun kulmassa, Metrópolis-talon kupolin huipulla seisoo siivekäs voitonjumalatar.",
+   "teksti": "Pääkatu Gran Vía halkoo keskustaa leveänä kivikanjonina Alcalá-kadulta Espanjan aukiolle. Kuningas Alfonso kolmastoista löi vuonna 1910 hakulla ensimmäisen iskun purettavaan taloon, ja kadun viimeinen osa valmistui vuonna 1929. Samana vuonna valmistui kadun varren Telefónican talo, joka oli silloin Euroopan korkein pilvenpiirtäjä. Sisällissodan aikana kaupunkia piirittänyt Francon armeija tulitti taloa tykeillään, koska tasavaltalaiset tarkkailivat tornista rintamaa. Talosta lähettivät sodan aikana juttujaan myös ulkomaiset kirjeenvaihtajat, kuten Ernest Hemingway ja Antoine de Saint-Exupéry.",
    "lyhyt": "Pääkadun Gran Vían teattereiden ja elokuvatalojen vuoksi sitä on kutsuttu Madridin Broadwayksi. Metrópolis-talon kupolille nostettiin vuonna 1977 kuusi metriä korkea pronssinen voitonjumalatar, kun edellinen omistaja vei vanhan feeniks-linnun veistoksen mukanaan.",
    "syventava": "Mitä kadun paikalta purettiin?",
    "kysymykset": [
@@ -248,6 +276,10 @@
     {
      "vaite": "Voitonjumalatar on kuusi metriä korkea pronssiveistos, asennettu kupolille 11.10.1977; edellinen omistaja La Unión y el Fénix vei Ganymedes ja feeniks -veistoksen mukanaan talon myynnin jälkeen 1972.",
      "url": "https://en.wikipedia.org/wiki/Victoria_Alada_(Madrid)"
+    },
+    {
+     "vaite": "Telefónican talo oli valmistuessaan Euroopan korkein pilvenpiirtäjä; tasavaltalaiset käyttivät sitä tähystyspaikkana, ja siitä tuli pommitusten kohde; Hemingway, Dos Passos ja Saint-Exupéry lähettivät raporttinsa talosta.",
+     "url": "https://en.wikipedia.org/wiki/Telef%C3%B3nica_Building"
     }
    ]
   },
@@ -299,7 +331,7 @@
    "koko_m": 105,
    "korkeus_m": 73,
    "teksti": "Almudenan katedraali seisoo kuninkaanlinnaa vastapäätä, ja sen vaalea julkisivu ja kupoli on sovitettu linnan uusklassiseen tyyliin. Kirkko on poikkeuksellisesti suunnattu pohjoisesta etelään, jotta pääjulkisivu katsoisi linnaa kohti. Rakentaminen alkoi vuonna 1883, mutta valmista tuli vasta yli sata vuotta myöhemmin, ja paavi Johannes Paavali toinen vihki katedraalin vuonna 1993. Nimi tulee Neitsyt Marian kuvasta, joka legendan mukaan kätkettiin kaupunginmuuriin ja löytyi, kun muurin osa sortui vuonna 1085. Vuonna 2004 kirkossa vihittiin kruununprinssi Felipe ja Letizia Ortiz, nykyinen kuningaspari.",
-   "lyhyt": "Almudenan katedraalin vanhin osa on uusromaaninen krypta, joka avattiin jo vuonna 1911. Kirkkosali on sen sijaan uusgoottilainen, ja alttarin takaisen kaaren värikkäät maalaukset, Kiko Argüellon vuonna 2004 valmistuneet työt, herättivät valmistuttuaan kiistaa.",
+   "lyhyt": "Almudenan katedraalin vanhin osa on uusromaaninen krypta, joka avattiin jo vuonna 1911. Kirkkosali on sen sijaan uusgoottilainen, ja alttarin takaisen kaaren värikkäät maalaukset, Kiko Argüellon vuonna 2004 valmistuneet työt, herättivät heti kiistaa.",
    "syventava": "Miksi rakentaminen kesti yli sata vuotta?",
    "kysymykset": [
     "Miksi Madrid sai oman katedraalin näin myöhään?",
@@ -484,7 +516,7 @@
    "kysymykset": [
     "Miksi areena muistuttaa maurilaista arkkitehtuuria?",
     "Kuka oli Madridin suojeluspyhimys Isidor?",
-    "Onko härkätaistelut kielletty osassa Espanjaa?",
+    "Onko härkätaistelu kielletty jossain päin Espanjaa?",
     "Mitä areenan museossa on esillä?",
     "Mitä muuta areenalla järjestetään?"
    ],

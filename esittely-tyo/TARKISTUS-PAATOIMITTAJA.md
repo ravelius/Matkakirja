@@ -1562,3 +1562,123 @@ Yksitoista huomiota on "ei ala paikan nimellä" (suomenkielinen etusana, äänt�
 - Košice, Itä-Slovakian museo: arkkitehti on Lechner Ödön tai Lechner Jenő, ja lähteet ovat ristiriidassa. Tekstissä on "budapestilainen arkkitehti". Jos Päätoimittaja löytää ratkaisevan lähteen, nimi voidaan palauttaa.
 - Krakova, Wawelin päät: Wawelin oma aineisto vahvistaa siteellä peitetyn naisen pään, kuningas Sigismund Augustin ja epäoikeudenmukaisen tuomion. Kielen se vahvistaa vain kysymyksenä ("Missä kielessä pää puhui? Onko kieli yhä käytössä?"). Latinankieliset sanat "Rex Auguste, iudica iuste" esiintyvät Wawelia lainaavassa hakuotteessa, jota en saanut avattua. "Latinaksi" on siksi hyvin todennäköinen mutta ei sanatarkasti lähteestä.
 - Krakova, Barbakaani: vakiintunutta suomenkielistä nimeä Jan Olbrachtille ei löytynyt.
+
+## Madrid
+
+Tarkistin: 0 virhettä, 13 huomiota (12 × "ei ala paikan nimellä" suomenkielisen etusanan takia, 1 × "avaus puuttuu"), sama määrä kuin ennen.
+
+### Retiron puisto — kenttä `lyhyt`
+- **Vanha:** "Retiron puiston lasinen Kristallipalatsi rakennettiin vuonna 1887 Filippiinien kasveja esittelevän näyttelyn kasvihuoneeksi, ja nykyään siinä on taidenäyttelyitä. Isoisäsi kirjoitti vuonna 1873, että kuningattaren entinen puisto kuului nyt kaupungille ja että tähän seuraan pääsi ilman esittelyä."
+- **Uusi:** "Retiron puiston lasinen Kristallipalatsi koottiin vuonna 1887 valmiista osista vain viidessä kuukaudessa Filippiinien kasveja esittelevää näyttelyä varten. Puiston suihkulähteellä seisoo Ricardo Bellverin Langennut enkeli, joka on kuuluisa harvinaisena paholaista esittävänä veistoksena, ja suihkulähteen kerrotaan olevan kuudensadankuudenkymmenenkuuden metrin korkeudella."
+- **Syy:** Tyyppi 5: Kristallipalatsi on ollut suljettuna restauroinnin vuoksi vuodesta 2024, ja sulku jatkuu vuoteen 2027, joten "nykyään siinä on taidenäyttelyitä" ei pidä. Uusi muotoilu ei väitä mitään nykytilasta. Tyyppi 1: isoisä mainittiin sekä tekstissä että lyhyessä, ja lyhyen "puisto kuului nyt kaupungille" toisti tekstin virkkeen "vuoteen 1868, jolloin siitä tuli kaupungin puisto". Isoisä jää vain tekstiin (kuten Pariisin mallin Louvressa), ja sielläkin vain merkinnän sisällöllä (käyntikortti, vartija viittasi sisään katsomatta nimeä, mies teki tilaa penkillä). Isoisää ei mainita missään muussa kohteessa. 666 metriä on muotoiltu "kerrotaan"-sanalla.
+- **Lähde:** https://www.timeout.es/madrid/es/noticias/el-palacio-de-cristal-del-retiro-estara-cerrado-por-obras-hasta-2027-082124 ; https://www.timeout.es/madrid/es/noticias/el-arte-vuelve-a-este-icono-centenario-del-parque-de-el-retiro-011025 ; https://museoreinasofia.es/en/museo/architectural-heritage/palacio-velazquez-palacio-cristal (viisi kuukautta, esivalmisteinen) ; https://en.wikipedia.org/wiki/Fountain_of_the_Fallen_Angel
+
+### Retiron puisto — kenttä `kysymykset`
+- **Vanha:** "Mitä Kristallipalatsissa on nyt esillä?"
+- **Uusi:** "Mistä Kristallipalatsi sai mallinsa?"
+- **Syy:** Tyyppi 7: vastaus vanhenee (rakennus on suljettu vuoteen 2027). Uusi kysymys koskee Lontoon Kristallipalatsia mallina, ja museon sivu vahvistaa sen.
+- **Lähde:** https://museoreinasofia.es/en/museo/architectural-heritage/palacio-velazquez-palacio-cristal
+
+### Prado-museo — kenttä `lyhyt`
+- **Vanha:** "… Paroni Émile d’Erlanger lahjoitti ne museolle vuonna 1881. Las Meninasissa Velázquezin rinnassa näkyvä ritarikunnan risti lisättiin kuvaan vasta vuoden 1659 jälkeen."
+- **Uusi:** "Prado-museon kokoelmiin kuuluvat Goyan synkät mustat maalaukset, jotka hän maalasi alun perin talonsa seiniin. Paroni Émile d’Erlanger siirrätti ne vuodesta 1874 alkaen seiniltä kankaalle ja aikoi myydä ne Pariisin maailmannäyttelyssä, mutta lahjoitti ne lopulta Espanjan valtiolle vuonna 1881."
+- **Syy:** Tyyppi 1: Las Meninas toistui kierroksella kahdesti (Prado-lyhyt ja Kuninkaanlinna-lyhyt), ja lisäksi Pradon teksti kertoo Las Meninasista. Tyyppi 3: d’Erlanger lahjoitti maalaukset Espanjan valtiolle, ei museolle.
+- **Lähde:** https://en.wikipedia.org/wiki/Black_Paintings
+
+### Kuninkaanlinna — kenttä `teksti`
+- **Vanha:** "Kuningas Filip viides halusi tilalle palatsin, joka ei voisi palaa, ja se rakennettiin kivestä ja tiiliholveista ilman puuta."
+- **Uusi:** "Kuningas Filip viides halusi tilalle tulenkestävän palatsin, joten se muurattiin kivestä ja tiilestä holvikatoin, ja puuta käytettiin vain ovissa, ikkunoissa ja katon rakenteissa."
+- **Syy:** Tyyppi 3, ja samalla ratkaistu edellisen tarkistajan epävarmuus, joka nojasi matkailusivuun. Espanjankielisen Wikipedian mukaan puuta käytettiin vähän mutta ei ollenkaan "ilman puuta": puusepäntöissä ja vesikaton rakenteissa sitä oli.
+- **Lähde:** https://es.wikipedia.org/wiki/Palacio_Real_de_Madrid ; https://en.wikipedia.org/wiki/Royal_Palace_of_Madrid (Las Meninas heitettiin ikkunasta, 1738, 1764, suurin kuninkaanlinna: vahvistettu)
+
+### Puerta del Sol — kenttä `lyhyt`
+- **Vanha:** "Auringonportin aukion postitalo valmistui vuonna 1768, ja nykyään siinä on Madridin itsehallintoalueen presidentin virasto. Aukion laidalla seisoo …"
+- **Uusi:** "Auringonportin aukion kattojen yllä loistaa sherrymerkki Tío Pepen neonmainos, joka palasi aukiolle vuonna 2014, kun yli viisikymmentätuhatta ihmistä oli allekirjoittanut vetoomuksen sen puolesta. Aukion laidalla seisoo vuodelta 1967 oleva patsas, jossa karhu kurkottaa mansikkapuuhun, sillä sama aihe on Madridin vaakunassa."
+- **Syy:** Tyyppi 2: valmistumisvuosi ja virasto ovat hallintotietoa. Ne korvattiin tarinalla (mainos purettiin 2011, kansalaiskampanja keräsi yli 50 000 nimeä, ja mainos palasi 2014 aukion numeroon 11). Karhupatsas säilyi.
+- **Lähde:** https://www.miradormadrid.com/?p=2995 ; https://donquijote.org/blog/tio-pepe-and-schweppes-two-iconic-madrid-brands
+
+### Gran Vía — kenttä `teksti`
+- **Vanha:** "Kadun itäpäässä, Alcalá-kadun kulmassa, Metrópolis-talon kupolin huipulla seisoo siivekäs voitonjumalatar."
+- **Uusi:** "Talosta lähettivät sodan aikana juttujaan myös ulkomaiset kirjeenvaihtajat, kuten Ernest Hemingway ja Antoine de Saint-Exupéry."
+- **Syy:** Tyyppi 1: saman kohteen lyhyt kertoo voitonjumalattaresta. Tekstin edellinen virke käsittelee Telefónican taloa, joten uusi virke jatkaa sitä.
+- **Lähde:** https://en.wikipedia.org/wiki/Telef%C3%B3nica_Building (vahvistaa myös "Euroopan korkein pilvenpiirtäjä" ja tähystyspaikan)
+
+### Plaza Mayor — kenttä `kysymykset`
+- **Vanha:** "Miksi Filip kolmannen patsas kaadettiin?"
+- **Uusi:** "Mitä Filip kolmannen patsaan sisältä löytyi?"
+- **Syy:** Tyyppi 7 ja 3 (oletus ei ollut tosi): patsasta ei kaadettu. Vuonna 1931 hevosen suuhun pantiin räjähde, ja korjauksessa onton patsaan sisältä löytyi satojen loukkuun jääneiden lintujen luita. Lisäksi lyhyen "autuaaksi julistamisia" vahvistettiin (San Isidron autuaaksi julistus) ja lähteet lisättiin.
+- **Lähde:** https://www.miradormadrid.com/?p=2072 ; https://es.wikipedia.org/wiki/Plaza_Mayor_de_Madrid ; https://en.wikipedia.org/wiki/Plaza_Mayor,_Madrid
+
+### Almudenan katedraali — kenttä `lyhyt`
+- **Vanha:** "… Kiko Argüellon vuonna 2004 valmistuneet työt, herättivät valmistuttuaan kiistaa."
+- **Uusi:** "… Kiko Argüellon vuonna 2004 valmistuneet työt, herättivät heti kiistaa."
+- **Syy:** Tyyppi 6: "valmistuneet … valmistuttuaan" toisti saman sanan.
+- **Lähde:** ei uutta faktaa.
+
+### Las Ventasin härkätaisteluareena — kenttä `kysymykset`
+- **Vanha:** "Onko härkätaistelut kielletty osassa Espanjaa?"
+- **Uusi:** "Onko härkätaistelu kielletty jossain päin Espanjaa?"
+- **Syy:** Tyyppi 6: kongruenssivirhe ("Onko … härkätaistelut").
+- **Lähde:** ei uutta faktaa.
+
+### Ratkaistut epävarmuudet (PILVI-RAPORTTI)
+- Kuninkaanlinna "ilman puuta": korjattu, ks. yllä.
+- Metrópolis-talon voitonjumalatar 1975/1977: englanninkielisen Wikipedian Gran Vía -artikkelissa lukee 1975, mutta Victoria Alada -artikkeli antaa tarkan asennuspäivän 11.10.1977. 1977 jää lyhyeen (https://en.wikipedia.org/wiki/Victoria_Alada_(Madrid)).
+- Isoisä-lyhyen syy-yhteystulkinta: isoisä on poistettu lyhyestä kokonaan, ja tekstissä on vain merkinnän sisältö.
+
+### Tarkistettu ilman muutoksia
+Cibeleen aukio (kultaholvi 35 m vahvistettu, Forbes España), Plaza Mayorin teksti ja lyhyt, Kuninkaanlinnan lyhyt (Las Meninas heitettiin ikkunasta: Wikipedia), Almudenan teksti, avaus (36 sanaa, alkaa "Tervetuloa", ilmasta nähtävä kuva: punaruskeat katot ja linna jyrkänteellä).
+
+## Marseille
+
+Tarkistin: 0 virhettä, 6 huomiota (5 × "ei ala paikan nimellä", 1 × "avaus puuttuu"), sama määrä kuin ennen.
+
+### Notre-Dame de la Garde — kenttä `lyhyt`
+- **Vanha:** "Basilika Notre-Dame de la Garde on Henri-Jacques Espérandieun suunnittelema, ja hän sai tehtävän vasta vähän yli kaksikymmentävuotiaana. Kirkossa on kaksi kerrosta: alhaalla kallioon louhittu romaaninen krypta ja sen päällä mosaiikein koristeltu yläkirkko."
+- **Uusi:** "Basilika Notre-Dame de la Garden kellotornissa riippuu yli kahdeksantuhatta kiloa painava suurkello Marie Joséphine. Kun se vuonna 1845 vedettiin kaupungista mäelle, kuusitoista hevosta ei riittänyt, vaan rinteeseen valjastettiin kaikkiaan kaksikymmentäkuusi hevosta, ja nousu kesti kolme päivää."
+- **Syy:** Tyyppi 1: Espérandieu oli aiheena kahdessa kierroksen lyhyessä (Notre-Dame de la Garde ja katedraali). Tyyppi 2: kerrosrakenne on perustietoa. Espérandieu jää katedraalin lyhyeen. Samalla poistui edellisen tarkistajan epävarmuus Espérandieun iästä.
+- **Lähde:** https://en.wikipedia.org/wiki/Notre-Dame_de_la_Garde ; https://www.marseille.fr/culture/patrimoine-culturel/notre-dame-de-la-garde (suurkello 8 234 kg nyt basilikassa)
+
+### Marseillen katedraali — kenttä `teksti`
+- **Vanha:** "Peruskiven laski keisari Napoleon kolmas vuonna 1852, ja …"
+- **Uusi:** "Peruskiven laski vuonna 1852 Louis-Napoléon Bonaparte, josta tuli saman vuoden lopulla keisari Napoleon kolmas, ja …"
+- **Syy:** Tyyppi 3 (titteli): peruskivi laskettiin 26.9.1852, ja silloin Louis-Napoléon oli vielä prinssipresidentti. Keisarikunta julistettiin joulukuussa 1852.
+- **Lähde:** https://fr.wikipedia.org/wiki/Cath%C3%A9drale_Sainte-Marie-Majeure_de_Marseille
+
+### Marseillen katedraali — kenttä `lyhyt`
+- **Vanha:** "Marseillen katedraalin vihreä raitakivi tuotiin Firenzestä asti. Kirkkoon mahtuu kolmetuhatta ihmistä, ja se seisoo paikalla, jolla Marseillen katedraalit ovat sijainneet 400-luvulta lähtien. Sen suunnittelivat arkkitehdit Léon Vaudoyer ja Henri-Jacques Espérandieu, joista jälkimmäinen piirsi myös Notre-Dame de la Garden."
+- **Uusi:** "Marseillen katedraalin vihreä raitakivi tuotiin Firenzestä asti. Kun arkkitehti Léon Vaudoyer kuoli vuonna 1872, työtä jatkoi Henri-Jacques Espérandieu, protestanttiperheen poika, joka oli jo piirtänyt kaupungille toisen suuren katolisen kirkon, Notre-Dame de la Garden."
+- **Syy:** Tyyppi 2: lyhyt oli luettelo (paikkamäärä, sijainti, arkkitehdit). Nyt siinä on ihminen ja ristiriita: protestantti suunnitteli kaupungin kaksi suurta katolista kirkkoa. Tyyppi 1: Espérandieu mainitaan kierroksella enää vain tässä.
+- **Lähde:** https://en.wikipedia.org/wiki/Henri-Jacques_Esp%C3%A9randieu ; https://fr.wikipedia.org/wiki/Cath%C3%A9drale_Sainte-Marie-Majeure_de_Marseille (pierre verte de Florence)
+
+### MuCEM — kenttä `lyhyt`
+- **Vanha:** "Euroopan ja Välimeren sivilisaatioiden museossa, MuCEMissa, kaksi ulkoluiskaa nousee katolle asti, ja betoniverkon aukoista avautuu näkymä linnakkeelle ja avomerelle. Vuodesta 2013 vuoteen 2016 museon alueella kävi kahdeksan ja puoli miljoonaa ihmistä."
+- **Uusi:** "Euroopan ja Välimeren sivilisaatioiden museon, MuCEMin, kokoelmat tulivat Pariisista: niiden ytimenä on vuonna 2005 suljetun kansallisen kansanperinnemuseon aineisto. Kaikkiaan kokoelmissa on nykyään noin miljoona esinettä, kirjaa, valokuvaa, julistetta, postikorttia ja äänitettä."
+- **Syy:** Tyyppi 2: kävijämäärä ja luiskien kuvaus. Lisäksi betoniverkko oli jo tekstissä (tyyppi 1). Uusi lyhyt kertoo yllätyksen: pariisilainen kansallismuseo muutti Marseilleen.
+- **Lähde:** https://fr.wikipedia.org/wiki/Mus%C3%A9e_des_Civilisations_de_l%27Europe_et_de_la_M%C3%A9diterran%C3%A9e
+
+### Calanquesin kansallispuisto — kenttä `lyhyt`
+- **Vanha:** "Calanquesin kansallispuiston tunnetuimpia kalliolahtia ovat Sugiton, Sormiou ja Morgiou, ja kaikkiaan jyrkkien kalkkikivikallioiden reunustamia lahtia on rannikolla kaksikymmentäkahdeksan. Puisto on Ranskan kymmenes kansallispuisto, ja maalla ja merellä siellä käy vuosittain yli kaksi miljoonaa ihmistä."
+- **Uusi:** "Calanquesin kansallispuiston kapeat kalliolahdet ovat laaksoja, joita joet kovertivat ja luolien sortumat avasivat kalkkikiveen meren ollessa nykyistä paljon alempana. Kun jääkausi päättyi ja meren pinta nousi, vesi täytti laaksot, ja niin syntyivät muun muassa Sugitonin, Sormioun ja Morgioun lahdet."
+- **Syy:** Tyyppi 2: lyhyt oli luettelo, järjestysnumero ja kävijämäärä. Kävijämäärä oli myös edellisen tarkistajan epävarmuus, ja nyt se on poistettu. Uusi lyhyt kertoo, miten lahdet syntyivät. Tekstin Cosquer-tarinaa se ei toista.
+- **Lähde:** https://en.wikipedia.org/wiki/Calanque
+
+### Calanquesin kansallispuisto — kenttä `kysymykset`
+- **Vanha:** "Miten kalliolahdet ovat syntyneet?"
+- **Uusi:** "Mistä sana calanque on peräisin?"
+- **Syy:** Tyyppi 7: lyhyt vastaa nyt jo vanhaan kysymykseen.
+- **Lähde:** ei faktaväitettä.
+
+### Ifin linna — kenttä `lahteet`
+- Lyhyen sarvikuonotarina on vahvistettu ja lähde lisätty. Ranskankielisen Wikipedian mukaan Provencen historioitsijat kertovat, että laiva pysähtyi saarelle 23.1.1516 ja Frans I kävi saarella 24.1.1516. Matkallaan hän huomasi, että rannikko oli huonosti puolustettu. Tekstiin ei tehty muutoksia. https://fr.wikipedia.org/wiki/Ch%C3%A2teau_d%27If
+
+### MuCEM — kenttä `lahteet`
+- Tekstin mainitsema Cosquer Méditerranée on vuonna 2026 avoinna, ja lähde on lisätty. https://www.marseille-tourisme.com/decouvrez-marseille/culture-et-patrimoine/cosquer-mediterranee-marseille-2eme-fr-3520089/
+
+### Ratkaistut ja jätetyt epävarmuudet
+- Espérandieun ikä: väite poistui Notre-Dame de la Garden lyhyestä. Englanninkielinen Wikipedia vahvistaa 23 vuotta, mutta sitä ei enää tarvita.
+- Calanquesin kävijämäärä: poistettu.
+- Isoisän liitos vanhaan satamaan ("Marseillen satamassa") jää Päätoimittajalle rajatapauksena. Teksti kertoo vain merkinnän sisällön, ja tervan, kalan ja suolaveden "haju" on lievä tulkinta merkinnän sanoista "seurasivat majataloon". Muutosta ei tehty.
+
+### Tarkistettu ilman muutoksia
+Saint-Victorin luostari (kynttilänpäivän kulkue), vanha satama (teksti, lyhyt ja peilikatos), Frioulin saaret, Ifin linnan teksti, Saint-Charlesin asema, Stade Vélodrome, avaus (38 sanaa, alkaa "Tervetuloa", ilmasta nähtävä amfiteatterikuva).
