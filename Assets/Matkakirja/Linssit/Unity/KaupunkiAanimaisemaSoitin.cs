@@ -55,6 +55,26 @@ namespace Matkakirja.Natiivi
             return k.HasValue ? (k.Value.korkeusM, k.Value.nopeusMs, k.Value.lat, k.Value.lon) : ((double, double, double, double)?)null;
         }
 
+        // NYKYINEN KAUPUNKI (LS1 7.10.: OpasSovitin.NykyinenKaupunkiId, juna 157 linssiseppa/sallitut-157): sallitun kaupungin tunnus
+        // kameran paikasta (toive Pariisista Venetsiaan vaihtaa sen), muuten Aloituskaupungin tunnus. Luetaan heijastuksella, kunnes
+        // LS1:n haara on samassa rungossa (ilman sitä Aloituskaupunki kuten ennen).
+        static System.Reflection.MemberInfo nykyinenJasen; static bool nykyinenHaettu;
+        static string NykyinenKaupunki()
+        {
+            if (!nykyinenHaettu)
+            {
+                nykyinenHaettu = true;
+                const System.Reflection.BindingFlags Lipat = System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Static;
+                nykyinenJasen = (System.Reflection.MemberInfo)typeof(OpasSovitin).GetProperty("NykyinenKaupunkiId", Lipat) ?? typeof(OpasSovitin).GetField("NykyinenKaupunkiId", Lipat);
+            }
+            return nykyinenJasen switch
+            {
+                System.Reflection.PropertyInfo pi => pi.GetValue(null) as string,
+                System.Reflection.FieldInfo fi => fi.GetValue(null) as string,
+                _ => null,
+            };
+        }
+
         /// <summary>Kaupungin tunnus äänikartalle nimestä (Kööpenhamina → koopenhamina): pienet kirjaimet, ä/å → a, ö → o, välit → -.</summary>
         public static string Tunnus(string nimi)
         {
@@ -112,7 +132,8 @@ namespace Matkakirja.Natiivi
                 k = viimeK.HasValue ? (viimeK.Value.KorkeusM, SiirtymaNopeusMs, viimeK.Value.Lat, viimeK.Value.Lon) : (LentoKorkeusM, SiirtymaNopeusMs, double.NaN, double.NaN);
             bool eiPaikkaa = k.HasValue && double.IsNaN(k.Value.Lat);   // ensimmäinen lento: vain tuuli ja suhina, ei kartan reunan ääniä
             if (eiPaikkaa) { painot = null; karttaLat = double.NaN; }
-            string id = KaupunkiId != null ? KaupunkiId() : Tunnus(OpasSovitin.Aloituskaupunki);
+            string nyk = KaupunkiId == null ? NykyinenKaupunki() : null;
+            string id = KaupunkiId != null ? KaupunkiId() : !string.IsNullOrEmpty(nyk) ? nyk : Tunnus(OpasSovitin.Aloituskaupunki);
             if (!string.IsNullOrEmpty(id) && id != karttaId && id != karttaLadataan) StartCoroutine(LataaKartta(id));
             var tila = Aanisoitin.Instanssi?.Tila;
             bool paalla = (tila?.Aanimaisema ?? Asetukset.Paalla(Kytkin.Aanimaisema)) && !(TestiMykistys.Paalla && !AaniKaappaus.Kaynnissa);
