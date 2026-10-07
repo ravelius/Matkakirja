@@ -404,3 +404,7 @@ Edellinen luovutus on `viesti-siirtoseppa-luovutus-20261002.md` (5.10. osiot 02.
   (reitti merkeistä vene:* / varareitti laiturin kameran suunnasta, nousu:laituri, blendi 1,6 s pelaajaan), 66f3f5bd soutaja irrallisena hahmona.
   LR:lle pyydetty merkit vene:alku/muuri/portti/laituri (kierto_y) + nousu:laituri. Jonossa 66f3f5bd + NUI (4. Julkaisijalla);
   vuoroskripti tyokalut/siirtoseppa-ajot/vuoro-h3.sh (ajo-vene.sh + kävely), app lokit/siirtoseppa-historia4-app.
+- 12.52: eleet-2 junaan 161 (Natiiviseppä otti vastaan): siirtoseppa/eleet-2 @ 67728f0b (b051b5d6 poimittu). LR v44b eb413b52d375da8d:
+  venereitti vene:alku/muuri/portti/laituri (kierto_y 2,127) + nousu:laituri + istuin_matkustaja. V3: 77492715 Ydin Vartija (+4 testiä,
+  817/817), a96bd209 SeikkailuVartijat (NavMesh kävelypinnoista, partio:-reitit, poikki vartijat 1|0|tila). Julkaisijan jonossa a96bd209 + NUI;
+  vuoro-h3.sh (vene v44b + kävely VARTIJAT=1), app lokit/siirtoseppa-historia4-app. Päätoimittajalle V1-stillit siitä ajosta.
