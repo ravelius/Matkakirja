@@ -30,6 +30,29 @@ namespace Matkakirja.Natiivi
         /// <summary>Paneelin ja mininäytön yhteinen juuri (turva-alueen alareunaan keskelle).</summary>
         public readonly VisualElement Juuri;
         readonly VisualElement paneeli, joystick, napa, lcd, mini, kaasu, ura, kahva, rumpu, luvut;
+        readonly VisualElement jalkaYla, jalkaAla;
+
+        /// <summary>Jalka paneelin alareunan keskeltä ruudun alareunaan (pystyssä); vaakana paneeli on jo kiinni alareunassa.</summary>
+        void AsetteleJalka()
+        {
+            var a = ankkurit;
+            var yla = NahkaKuva("jalka-yla"); var ala = NahkaKuva("jalka-ala");
+            bool pysty = Screen.height > Screen.width;
+            bool nayta = pysty && a != null && a.JalkaYla.width > 0 && yla != null && ala != null && paneeli.layout.width > 0 && Juuri.panel != null;
+            var d = nayta ? DisplayStyle.Flex : DisplayStyle.None;
+            if (jalkaYla.style.display != d) { jalkaYla.style.display = d; jalkaAla.style.display = d; }
+            if (!nayta) return;
+            float s = paneeli.layout.width / a.Koko.width;
+            float kx = paneeli.layout.x + a.JalkaYla.x * s;
+            jalkaYla.style.backgroundImage = new StyleBackground(yla);
+            jalkaYla.style.width = a.JalkaYla.width * s; jalkaYla.style.height = a.JalkaYla.height * s;
+            jalkaYla.style.left = kx - a.JalkaYla.width * s * 0.5f; jalkaYla.style.top = paneeli.layout.y + a.JalkaYla.y * s;
+            // Alaosa ruudun alareunaan: Juuren alareunasta (turva-alueen sisällä) paneelin juuren alareunaan.
+            float ruutuAla = Juuri.panel.visualTree.layout.height - Juuri.worldBound.yMax;
+            jalkaAla.style.backgroundImage = new StyleBackground(ala);
+            jalkaAla.style.width = a.JalkaAla.width * s; jalkaAla.style.height = a.JalkaAla.height * s;
+            jalkaAla.style.left = kx - a.JalkaAla.width * s * 0.5f; jalkaAla.style.bottom = -ruutuAla;
+        }
         readonly VisualElement[] varret = new VisualElement[5];
         readonly Label kohde, maa, miniTeksti, rumpuA, rumpuB;
         readonly Button kamera;
@@ -113,7 +136,13 @@ namespace Matkakirja.Natiivi
             this.linssi = linssi;
             this.kuvaa = kuvaa;
             Juuri = Rakenne.El("mk-issohjaamo", isa, PickingMode.Ignore);
+            // TELESKOOPPIJALKA (v3c, omistaja 6.10. 18.4x "ohjainvivusto kelluu ilmassa"): paneelin alle, yläosa alimpana,
+            // alaosa sen päällä ja paneeli molempien päällä; vain pystyasennossa (AsetteleJalka).
+            jalkaYla = Rakenne.El(null, Juuri, PickingMode.Ignore);
+            jalkaAla = Rakenne.El(null, Juuri, PickingMode.Ignore);
+            foreach (var j in new[] { jalkaYla, jalkaAla }) { j.style.position = Position.Absolute; j.style.display = DisplayStyle.None; j.style.unityBackgroundScaleMode = ScaleMode.StretchToFill; }
             paneeli = Rakenne.El("mk-issohjaamo__paneeli tk-teema-tumma", Juuri);
+            paneeli.RegisterCallback<GeometryChangedEvent>(_ => AsetteleJalka());
             // Napautukset paneelissa eivät valu palloon (ei pienennä eikä vaihda kyydin tilaa).
             paneeli.RegisterCallback<PointerDownEvent>(e => e.StopPropagation());
 
@@ -488,7 +517,7 @@ namespace Matkakirja.Natiivi
         // valinnainen "sauvaKeski":{x,y} piirretyn sauvan keskipiste osuutena sauvan laatikosta (oletus 0.36, 0.5)}. Paneeli skaalautuu
         // leveyden mukaan (korkeus koon suhteessa) ja osat sijoitetaan ankkureihin; ilman tiedostoa piirretty asettelu kuten ennen.
 
-        sealed class Ankkurit { public Rect Koko, Sauva, Lcd, Kamera, Rumpu, RumpuKolo, Kaasu, LcdIso, LcdIsoKuva; public float[] Pykalat; public float MiniSlice; public Rect Objektiivi; public Vector2? SauvaKeski; public Vector2? Ura; }
+        sealed class Ankkurit { public Rect Koko, Sauva, Lcd, Kamera, Rumpu, RumpuKolo, Kaasu, LcdIso, LcdIsoKuva; public float[] Pykalat; public float MiniSlice; public Rect Objektiivi; public Vector2? SauvaKeski; public Vector2? Ura; public Rect JalkaYla, JalkaAla; }
         Ankkurit ankkurit;
 
         static Rect LueRect(Dictionary<string, object> o, string avain)
@@ -522,6 +551,9 @@ namespace Matkakirja.Natiivi
                 var ura = Rakenne.Olio(MiniJson.Kentta(Rakenne.Olio(MiniJson.Kentta(o, "kaasu")), "ura"));
                 if (ura != null && MiniJson.Kentta(ura, "yla") is object uy && MiniJson.Kentta(ura, "ala") is object ua)
                     a.Ura = new Vector2(Convert.ToSingle(uy, System.Globalization.CultureInfo.InvariantCulture), Convert.ToSingle(ua, System.Globalization.CultureInfo.InvariantCulture));
+                // v3c (Linnanrakentaja 6.10. 18.4x): teleskooppijalka; yla {x,y} = yläreunan keskikohta, ala vain koko.
+                var jalka = Rakenne.Olio(MiniJson.Kentta(o, "jalka"));
+                if (jalka != null) { a.JalkaYla = LueRect(jalka, "yla"); a.JalkaAla = LueRect(jalka, "ala"); }
                 var p = Rakenne.Lista(MiniJson.Kentta(Rakenne.Olio(MiniJson.Kentta(o, "kaasu")), "pykalat"));
                 if (p != null && p.Count == Kertoimet.Length) { a.Pykalat = new float[p.Count]; for (int i = 0; i < p.Count; i++) a.Pykalat[i] = Convert.ToSingle(p[i]); }
                 return a.Koko.width > 0 && a.Koko.height > 0 ? a : null;

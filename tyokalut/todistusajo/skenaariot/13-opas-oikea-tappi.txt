@@ -1,0 +1,39 @@
+# 13 Oppaan oikean tapin vaakasuunta (omistaja 6.10. TF 149 iPad: "oikeanpuoleinen joystick toimii väärinpäin panoroitaessa
+# vasemmalle ja oikealle"; LS2 f55cf1ce juna 151). OIKEA kosketus tappiin (veto-kohta; `opas tapit` ohittaa käännön, ei kelpaa).
+# Odotus korjauksen jälkeen: tappi oikealle → näkymä panoroi oikealle (kuvan sisältö liukuu VASEMMALLE), tappi vasemmalle
+# → sisältö liukuu OIKEALLE. Ilman ääntä (testiotsake). Kuvat 13a/13b ja 13c/13d verrataan pareittain.
+linssi opas testiotsake 1
+oleta 5 opas: -- testiotsake päällä
+linssi linssi opas
+oleta 30 opas: auki -- elävä opas aukesi
+oleta 30 opas: täkyt [1-9] -- täkyt workerilta
+nakyy 20 SUOSIKIT -- täkynäkymä (juna 153: otsikot VALITSE PAIKKA / SUOSIKIT)
+tap-teksti mk-linssirivi__nimi
+oleta 90 opas: saapui -- 1. kohde saapui
+oleta 30 opas: vastaus [0-9]+ -- kohteen vastaus
+odota 4
+ui opasvalikko tapit
+oleta 5 tapit näkyy -- tapit näkyvissä
+video-alku 13-tapit
+kuva 13a-ennen-oikea Ennen: oikea tappi levossa
+veto-kohta 0.5 0.5 0.95 0.5 3 mk-tappi--oikea
+kuva 13b-oikea-oikealle Oikea tappi OIKEALLE 3 s (odotus: sisältö liukui vasemmalle)
+odota 2
+kuva 13c-ennen-vasen Ennen: oikea tappi levossa
+veto-kohta 0.5 0.5 0.05 0.5 3 mk-tappi--oikea
+kuva 13d-oikea-vasemmalle Oikea tappi VASEMMALLE 3 s (odotus: sisältö liukui oikealle)
+# Vasen tappi: eteen (ylös) = lähemmäs, taakse = kauemmas (LS2).
+veto-kohta 0.5 0.5 0.5 0.05 2 mk-tappi--vasen
+kuva 13e-vasen-eteen Vasen tappi ETEEN 2 s (odotus: lähemmäs)
+veto-kohta 0.5 0.5 0.5 0.95 2 mk-tappi--vasen
+kuva 13f-vasen-taakse Vasen tappi TAAKSE 2 s (odotus: kauemmas)
+# Yhden sormen veto keskeltä oikealle (sormen mukana: maisema liukuu oikealle).
+veto 400 600 650 600 1.0
+kuva 13g-veto-oikealle Yhden sormen veto oikealle
+# >>> ELE NIPISTYS ULOS ((516,550)+(516,650) → (516,450)+(516,750)) ja KIERTO ((466,600)+(566,600) → (486,550)+(546,650)) 25 s ikkunassa
+odota 25
+kuva 13h-eleet Nipistys ja kierto jälkeen
+video-loppu
+linssi linssi pois
+odota 2
+ei-testattu oikean tapin pystysuunta (ennallaan f55cf1ce:ssä)

@@ -18,7 +18,47 @@ namespace Matkakirja.Linssit.Kierros
     public sealed class OpasSiltalauseet
     {
         /// <summary>Ryhmät (Pelikoodari): kuittaus, ruoka, moderni, vihrea, vesi, vanha, lento, kierros, syventava, kaupunki, aloitus, odotus.</summary>
-        public const string Kuittaus = "kuittaus", Kaupunki = "kaupunki", Kierros = "kierros", Lento = "lento", Aloitus = "aloitus", Odotus = "odotus";
+        public const string Kuittaus = "kuittaus", Kaupunki = "kaupunki", Kierros = "kierros", Lento = "lento", Aloitus = "aloitus", Odotus = "odotus",
+            Syventava = "syventava";
+        /// <summary>Kuittaukset-v1 (Pelikoodari 6.10., omistaja hyväksyi): kysymyksen kuittaus (52 neutraalia) ja odotusportaat.</summary>
+        public const string KysymysRyhma = "kysymys", Odotus5 = "odotus5", Odotus12 = "odotus12", Virhe = "virhe";
+        /// <summary>Sallitun 3D-alueen ulkopuolinen toive (Päätoimittaja 7.10. 01.0x: "valitse kohde listasta"; Pelikoodari generoi).</summary>
+        public const string EiSallittu = "ei-sallittu";
+
+        // TILANTEEN MUKAAN (omistaja 6.10. 14.3x "välilauseet eivät täsmää pyyntöön", Päätoimittaja hyväksyi taulukon, juna 150):
+        // näennäisryhmät rajaavat aineiston ryhmiä lauseittain, eikä niillä ole vararyhmää (väärä lause on pahempi kuin hiljaisuus).
+        /// <summary>Kysymys (Kysy-lista, kysyvä mikki/näppäin): vain kysymykseen sopivat syventävät lauseet; kamera ei liiku.</summary>
+        public const string Kysymys = "@kysymys";
+        /// <summary>Valinta listasta (täky, Liiku): kuittaus ilman vapaan toiveen lauseita.</summary>
+        public const string Valinta = "@valinta";
+        /// <summary>Odotus ilman lentoa: odotus ilman "perillä"-lauseita.</summary>
+        public const string OdotusPaikalla = "@odotus-paikalla";
+        public static readonly string[] KysymysLauseet = { "Hyvä kysymys.", "Tästä on kiinnostava tarina.", "Kerron mielelläni lisää.", "Katsotaan tarkemmin." };
+        public static readonly string[] VapaanToiveenLauseet = { "Tiedän juuri oikean paikan.", "Hyvä, minulla on sinulle jotain.", "Hyvä toive, se onnistuu.", "Mainio ajatus." };
+        public static readonly string[] LennonOdotukset = { "Melkein perillä.", "Kohta ollaan siellä." };
+
+        static bool On(string[] lista, string teksti) => teksti != null && Array.IndexOf(lista, teksti.Trim()) >= 0;
+
+        /// <summary>Näennäisryhmä → aineiston ryhmä ja lauseehto; tavallinen ryhmä sellaisenaan (ehto null).</summary>
+        public static (string ryhma, Func<Siltalause, bool> ehto) Rajaus(string ryhma) => ryhma switch
+        {
+            Kysymys => (Syventava, l => On(KysymysLauseet, l.Teksti)),
+            Valinta => (Kuittaus, l => !On(VapaanToiveenLauseet, l.Teksti)),
+            OdotusPaikalla => (Odotus, l => !On(LennonOdotukset, l.Teksti)),
+            _ => (ryhma, null),
+        };
+
+        /// <summary>Mikin tai näppäimistön teksti on kysymys (kysymysmerkki tai kysyvä alku); muuten toive tai käsky.</summary>
+        public static bool OnKysymys(string teksti)
+        {
+            if (string.IsNullOrWhiteSpace(teksti)) return false;
+            string t = teksti.Trim().ToLowerInvariant();
+            if (t.EndsWith("?")) return true;
+            foreach (var a in new[] { "mikä", "mitä", "mitkä", "kuka", "ketkä", "keitä", "miksi", "milloin", "missä", "mistä", "mihin", "miten",
+                "kuinka", "montako", "paljonko", "onko", "oliko", "voiko", "saako", "kerro", "kertoisitko", "tiedätkö", "millainen", "minkä" })
+                if (t == a || t.StartsWith(a + " ") || t.StartsWith(a + ",")) return true;
+            return false;
+        }
 
         readonly Dictionary<string, List<Siltalause>> ryhmat = new Dictionary<string, List<Siltalause>>(StringComparer.Ordinal);
         readonly HashSet<string> kaytetyt = new HashSet<string>(StringComparer.Ordinal);
@@ -27,6 +67,19 @@ namespace Matkakirja.Linssit.Kierros
         public OpasSiltalauseet(int siemen = 0) { satunnainen = siemen == 0 ? new Random() : new Random(siemen); }
 
         public int Maara { get; private set; }
+
+        /// <summary>Toisen aineiston ryhmät tähän (kuittaukset-v1 siltalauseiden rinnalle); samanniminen ryhmä korvautuu.</summary>
+        public void Yhdista(OpasSiltalauseet muut)
+        {
+            if (muut == null) return;
+            foreach (var kv in muut.ryhmat)
+            {
+                if (ryhmat.TryGetValue(kv.Key, out var vanha)) Maara -= vanha.Count;
+                ryhmat[kv.Key] = kv.Value; Maara += kv.Value.Count;
+            }
+        }
+
+        public bool OnRyhma(string ryhma) => ryhma != null && ryhmat.ContainsKey(ryhma);
 
         public IEnumerable<Siltalause> Kaikki()
         {
@@ -62,6 +115,11 @@ namespace Matkakirja.Linssit.Kierros
         /// </summary>
         public Siltalause Valitse(string ryhma, string vara = Kuittaus, Func<Siltalause, bool> saatavilla = null)
         {
+            // Kysymykseen kuittaukset-v1:n oma ryhmä, kun se on ladattu; muuten syventävien kysymyslauseiden rajaus.
+            if (ryhma == Kysymys && ryhmat.ContainsKey(KysymysRyhma)) return Ryhmasta(KysymysRyhma, saatavilla);
+            var (aineisto, ehto) = Rajaus(ryhma);
+            if (ehto != null)   // näennäisryhmä: ei vararyhmää
+                return Ryhmasta(aineisto, l => ehto(l) && (saatavilla == null || saatavilla(l)));
             return Ryhmasta(ryhma, saatavilla) ?? (vara != null && vara != ryhma ? Ryhmasta(vara, saatavilla) : null);
         }
 
@@ -100,6 +158,8 @@ namespace Matkakirja.Linssit.Kierros
     {
         public string Id, Nimi, Koukku, Kaupunki, Iso2, Alarivi, KuvaUrl, KuvaTekija, KuvaLisenssi;
         public double Lat, Lon;
+        /// <summary>Etäisyys katsepisteestä (GET /opas/lahella "etaisyys_m"; muuten NaN).</summary>
+        public double EtaisyysM = double.NaN;
 
         /// <summary>{"paiva", "kohteet": [{id, nimi, koukku, kaupunki, maa, lat, lon, alarivi, kuva: {url, tekija, lisenssi} | null}]}</summary>
         public static List<OpasTaky> Lue(Dictionary<string, object> j)
@@ -112,12 +172,25 @@ namespace Matkakirja.Linssit.Kierros
                 string S(Dictionary<string, object> dd, string k) => dd != null && dd.TryGetValue(k, out var v) ? v as string : null;
                 double D(string k) => d.TryGetValue(k, out var v) && v != null ? Convert.ToDouble(v, System.Globalization.CultureInfo.InvariantCulture) : double.NaN;
                 var t = new OpasTaky { Id = S(d, "id"), Nimi = S(d, "nimi"), Koukku = S(d, "koukku"), Kaupunki = S(d, "kaupunki"), Iso2 = S(d, "iso") ?? S(d, "maa"),
-                    Alarivi = S(d, "alarivi"), Lat = D("lat"), Lon = D("lon") };
+                    Alarivi = S(d, "alarivi"), Lat = D("lat"), Lon = D("lon"), EtaisyysM = D("etaisyys_m") };
                 if (d.TryGetValue("kuva", out var ku) && ku is Dictionary<string, object> kd) { t.KuvaUrl = S(kd, "url"); t.KuvaTekija = S(kd, "tekija"); t.KuvaLisenssi = S(kd, "lisenssi"); }
                 if (string.IsNullOrEmpty(t.Nimi) || double.IsNaN(t.Lat) || double.IsNaN(t.Lon) || Math.Abs(t.Lat) > 90 || Math.Abs(t.Lon) > 180) continue;
                 r.Add(t);
             }
             return r;
+        }
+
+        /// <summary>Kaupunkikierroksen järjestys (Pelikoodari #4086, omistaja 6.10. 23.4x lyhin reitti): /opas/liiku "kierros": [id, …]
+        /// reittijärjestyksessä. Kohteet, joiden id on kierroksessa, siinä järjestyksessä (tuntemattomat id:t ohitetaan); ilman
+        /// kenttää tai yhtään osumaa koko lista sellaisenaan (tärkeysjärjestys).</summary>
+        public static List<OpasTaky> Kierros(Dictionary<string, object> j, List<OpasTaky> kohteet)
+        {
+            if (kohteet == null) return new List<OpasTaky>();
+            if (j == null || !j.TryGetValue("kierros", out var ki) || !(ki is IList<object> ids)) return new List<OpasTaky>(kohteet);
+            var r = new List<OpasTaky>();
+            foreach (var x in ids)
+                if (x is string id && kohteet.Find(t => t.Id == id) is OpasTaky t && !r.Contains(t)) r.Add(t);
+            return r.Count > 0 ? r : new List<OpasTaky>(kohteet);
         }
     }
 }

@@ -13,6 +13,22 @@
     align-items: center;
 }
 
+/* Vasemman yläkulman ryhmä (oppaan vuorokaudenaika, omistaja 6.10. 18.5x). */
+.mk-ohjausryhma.mk-ohjausryhma--vasen {
+    right: auto;
+    left: var(--tk-vali-s);
+}
+
+/* Pieni tilamerkki napin oikeassa alakulmassa (vuorokaudenajan "A" = automaattinen). */
+.mk-ohjausnappi__merkki {
+    position: absolute;
+    right: var(--tk-vali-xs);
+    bottom: 0;
+    font-size: var(--tk-koko-kapiteeli);
+    -unity-font-style: bold;
+    color: var(--tk-muste);
+}
+
 .mk-ohjausnappi {
     width: var(--tk-nappi-ohjaus);
     height: var(--tk-nappi-ohjaus);

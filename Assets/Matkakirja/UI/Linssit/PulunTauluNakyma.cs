@@ -367,11 +367,20 @@ namespace Matkakirja.Natiivi
                 Debug.Log($"MATKAKIRJA pulun taulu: paikka {paikka} → {valittu.Nimi} (h {h:0}), {++paikanVaihtoja}. vaihto");
             paikka = valittu.Nimi;
             ala = valittu.Ala;
-            paneeli.style.bottom = valittu.Ala;
+            // OHJAAMO LATTIANA (Päätoimittaja 6.10. 11.3x, vaakakuva: Poistu-rivi LAAJA-napin päällä): taulun alareuna aina
+            // ohjaamopaneelin yläreunan yläpuolelle; matalalla ruudulla rivit vierittyvät (maxHeight alla), paneeli jää näkyviin.
+            var ohj = astro.Kyyti?.OhjaamoLaatikko ?? default;
+            if (ohj.height > 0f)
+            {
+                float ohjYla = juuri.WorldToLocal(new Vector2(ohj.xMin, ohj.yMin)).y;
+                float lattia = Mathf.Round(H - ohjYla + PulunTaulu.RakoPt);
+                if (ala < lattia) { ala = lattia; if (!vainYlos) Debug.Log($"MATKAKIRJA pulun taulu: ohjaamon yläpuolelle (ala {ala:0})"); }
+            }
+            paneeli.style.bottom = ala;
             paneeli.style.right = valittu.Oikea ?? PulunTaulu.OikeaReuna;
             // Yläreuna ei koskaan ylaMinin yläpuolelle (linssin ✕:n alle): ennen raja salli 12 pt:n ja vaakana taulun oma ✕ osui
             // linssin ✕:n viereen. Yli jäävät rivit vierittyvät.
-            paneeli.style.maxHeight = Mathf.Max(44f, H - valittu.Ala - ylaMin);
+            paneeli.style.maxHeight = Mathf.Max(44f, H - ala - ylaMin);
         }
 
         float RivienKorkeus()

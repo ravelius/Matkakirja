@@ -40,7 +40,10 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(raati.EtaisyysM > 140 && raati.EtaisyysM < 230, $"Raatihuone {raati.EtaisyysM:F0} m");
             Oleta.Sama(OpasKuvaus.RakennusEtMinM, OpasKuvaus.Kehysta(K(8, 4), 5, 0, "patsas").EtaisyysM, "patsas vähimmäisetäisyydellä");
             var nyhavn = OpasKuvaus.Kehysta(K(250, 15), 5, 0, "kanava");
-            Oleta.Tosi(nyhavn.EtaisyysM > 300 && nyhavn.EtaisyysM <= 350, $"Nyhavn {nyhavn.EtaisyysM:F0} m");
+            Oleta.Tosi(nyhavn.EtaisyysM > 250 && nyhavn.EtaisyysM <= 350, $"Nyhavn {nyhavn.EtaisyysM:F0} m");
+            // TF 149 (omistaja: "turhan kaukaa"): pieni rakennus (40 m) lähempänä kuin ennen (150 m), kohde ~puolet kuvasta.
+            var pieni = OpasKuvaus.Kehysta(K(40, 15), 5, 0, "rakennus");
+            Oleta.Tosi(pieni.EtaisyysM < 120, $"pieni rakennus {pieni.EtaisyysM:F0} m");
         }
 
         [Testi] static void PysahdysAlkaaKehyksestaJaKiertaaHitaasti()
@@ -92,15 +95,18 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(Math.Abs(alku.EtaisyysM - a.EtaisyysM) < 1e-6 && Ero(alku.Suuntima, a.Suuntima) < 1e-6 && Math.Abs(alku.Kallistus - a.Kallistus) < 1e-6, "alku = a");
             Oleta.Tosi(Math.Abs(loppu.EtaisyysM - b.EtaisyysM) < 1e-6 && Ero(loppu.Suuntima, b.Suuntima) < 1e-6 && Math.Abs(loppu.Lat - b.Lat) < 1e-12, "loppu = b");
             var keski = OpasKuvaus.Lennossa(a, b, 0.5);
-            Oleta.Tosi(keski.EtaisyysM > Math.Max(a.EtaisyysM, b.EtaisyysM) + 200, $"liu'ussa ylempänä ({keski.EtaisyysM:F0} m)");
-            // Liuku: korkeus lähes tasainen välillä 0,35–0,65.
-            Oleta.Tosi(Math.Abs(OpasKuvaus.Lennossa(a, b, 0.35).EtaisyysM - OpasKuvaus.Lennossa(a, b, 0.65).EtaisyysM) < 40, "tasanne");
-            // Liu'ussa korkealla ja jyrkkänä (TF 144: ei matalaa viistoa liukua).
-            Oleta.Tosi(Math.Abs(keski.Kallistus - OpasKuvaus.LentoKallistus) < 1e-6, $"liuku jyrkkä ({keski.Kallistus:F1}°)");
-            Oleta.Tosi(keski.EtaisyysM >= OpasKuvaus.KorkeusKerroin * Math.Max(a.EtaisyysM, b.EtaisyysM) - 1e-6, $"liuku korkealla ({keski.EtaisyysM:F0} m)");
-            // Lasku viimeisellä neljänneksellä: 80 %:ssa vielä selvästi kohdetta korkeammalla ja jyrkempi kuin kohde.
-            var lasku = OpasKuvaus.Lennossa(a, b, 0.8);
-            Oleta.Tosi(lasku.EtaisyysM > b.EtaisyysM * 1.2 && lasku.Kallistus < b.Kallistus, $"lasku alkaa myöhään ({lasku.EtaisyysM:F0} m, {lasku.Kallistus:F1}°)");
+            double matka = KierrosLento.EtaisyysM(a.Lat, a.Lon, b.Lat, b.Lon);
+            double korkeus(Kuvakulma k) => k.EtaisyysM * Math.Cos(k.Kallistus * Math.PI / 180);
+            // Juna 156 (omistaja 23.4x): kumpu matkan mukaan (~0,22 × 1,4 km pystyyn), ei korkeaa tasannetta, vähintään 150 m.
+            double lisa = korkeus(keski) - korkeus(new Kuvakulma(0, 0, (a.EtaisyysM + b.EtaisyysM) / 2, (a.Kallistus + b.Kallistus) / 2, 0, 0));
+            Oleta.Tosi(lisa > 0.15 * matka && lisa < 0.35 * matka, $"kumpu matkan mukaan ({lisa:F0} m / {matka:F0} m)");
+            Oleta.Tosi(korkeus(keski) >= OpasKuvaus.MinKorkeusM - 1, $"vähintään 150 m ({korkeus(keski):F0} m)");
+            // Pehmeä lasku: viimeisellä 5 %:lla korkeus muuttuu vähän (pystynopeus → 0).
+            Oleta.Tosi(Math.Abs(korkeus(OpasKuvaus.Lennossa(a, b, 0.97)) - korkeus(loppu)) < 15, "ei mätkähdystä");
+            // Lähikohde 300 m: matala kaari (~0,3 × matka), silti ≥ 150 m kohteen yläpuolella keskellä.
+            var c = new Kuvakulma(55.6784, 12.5925, 250, 74, 200, 8);
+            var kc = OpasKuvaus.Lennossa(b, c, 0.5);
+            Oleta.Tosi(korkeus(kc) >= OpasKuvaus.MinKorkeusM - 1 && korkeus(kc) < 250, $"lähilento matala ({korkeus(kc):F0} m)");
             // Katse lentosuuntaan keskellä.
             double lento = OpasSilmukka.Suunta(a.Lat, a.Lon, b.Lat, b.Lon);
             Oleta.Tosi(Ero(keski.Suuntima, lento) < 1, $"keskellä katse lentosuuntaan ({keski.Suuntima:F1} vs {lento:F1})");

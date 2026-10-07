@@ -1774,6 +1774,27 @@ namespace Matkakirja
         double2 maastoNaytePaikka;    // (lat, lon)
         bool maastoNayteOn;
         float seuraavaMaasto;
+        bool maastoRakoPois;
+
+        /// <summary>
+        /// MAASTON RAKO POIS (LS1:n löydös 7.10.2026, opas koe-156): kaupunkinäkymä (CesiumKaupunki, Googlen todelliset
+        /// korkeudet) asettaa tämän avatessaan ja palauttaa sulkiessaan. Pallon oman tilesetin näyte × KorkeusKerroin nosti
+        /// muuten minimisilmää väärin, ja istunnosta toiseen säilynyt näyte antoi samasta komennosta eri kallistuksen
+        /// (22°/24,9°/33,9°). Päällä ollessa ei näytteistetä eikä rajata; oppaalla on oma törmäysraja Googlen pinnasta.
+        /// Kytkentä hylkää vanhan näytteen, joten seuraava rajaus käyttää aina tuoretta.
+        /// </summary>
+        public bool MaastoRakoPois
+        {
+            get => maastoRakoPois;
+            set
+            {
+                if (maastoRakoPois == value) return;
+                maastoRakoPois = value;
+                maastoNayteOn = false;
+                maastoKysely = null;
+                seuraavaMaasto = 0f;
+            }
+        }
 
         /// <summary>
         /// PIIRRETYN maaston korkeus (m, ellipsoidista) viimeisimmästä näytteestä, jos se on 30 km:n sisällä; muuten 0.
@@ -1782,7 +1803,7 @@ namespace Matkakirja
         /// </summary>
         double MaastoKohdassa(double lat, double lon)
         {
-            if (!maastoNayteOn) return 0.0;
+            if (!maastoNayteOn || maastoRakoPois) return 0.0;
             if (ReittiGeometria.Kulma(lat, lon, maastoNaytePaikka.x, maastoNaytePaikka.y) > 30.0 / 111.2) return 0.0;
             return math.max(0.0, KorkeusKerroin.Sovita(maastoNayte));
         }
@@ -1802,7 +1823,7 @@ namespace Matkakirja
                     maastoNayteOn = true;
                 }
             }
-            if (Time.unscaledTime < seuraavaMaasto) return;
+            if (maastoRakoPois || Time.unscaledTime < seuraavaMaasto) return;
             if (silmanKorkeus > KorkeusKerroin.Sovita(maastonKatto) + KameraEleet.VahimmaisRako(korkeus) + 3000.0) return;
             if (maastoPallo == null && georeferenssi != null) maastoPallo = georeferenssi.GetComponentInChildren<Cesium3DTileset>();
             if (maastoPallo == null || maastoPallo.tilesetSource != CesiumDataSource.FromUrl) { maastoNayteOn = false; return; }
@@ -1866,7 +1887,7 @@ namespace Matkakirja
             double3 silmaLlh = CesiumWgs84Ellipsoid.EarthCenteredEarthFixedToLongitudeLatitudeHeight(silma);
             double maasto = MaastoKohdassa(silmaLlh.y, silmaLlh.x);
             double minSilma = maasto + KameraEleet.VahimmaisRako(etaisyys);
-            if (silmaLlh.z < minSilma)
+            if (!maastoRakoPois && silmaLlh.z < minSilma)
             {
                 double sade = math.length(kohde) - katseKorkeus;
                 double virhe = KameraEleet.SilmanKorkeus(katseKorkeus, etaisyys, kaytetty, sade) - silmaLlh.z;

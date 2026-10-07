@@ -1,12 +1,12 @@
 // TYYLIKIRJA — generoitu tiedostosta tyylikirja/tyylikirja.json (webin repo, node tools/tyylikirja.mjs --natiivi).
-// ÄLÄ MUOKKAA KÄSIN. lähde 0df885514511. Pohjat ja säännöt: docs/raportit/ui-pohjat-kartoitus-20261001.md.
+// ÄLÄ MUOKKAA KÄSIN. lähde 030de31bc824. Pohjat ja säännöt: docs/raportit/ui-pohjat-kartoitus-20261001.md.
 using UnityEngine;
 
 namespace Matkakirja.Natiivi
 {
     public static class Tyylikirja
     {
-        public const string Lahde = "0df885514511";
+        public const string Lahde = "030de31bc824";
 
         public static class Kehys
         {
@@ -19,6 +19,7 @@ namespace Matkakirja.Natiivi
             public static readonly Color32 Accent = new Color32(217, 161, 59, 255);
             public static readonly Color32 AccentDark = new Color32(138, 97, 20, 255);
             public static readonly Color32 Kulta = new Color32(234, 184, 78, 255);
+            public static readonly Color32 KultaKuulto = new Color32(234, 184, 78, 102);
             public static readonly Color32 Danger = new Color32(255, 155, 138, 255);
             public static readonly Color32 RiviTausta = new Color32(53, 39, 26, 140);
             public static readonly Color32 OverlayCard = new Color32(46, 33, 20, 224);

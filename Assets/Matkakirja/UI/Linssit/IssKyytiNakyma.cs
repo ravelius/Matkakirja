@@ -125,6 +125,9 @@ namespace Matkakirja.Natiivi
         /// </summary>
         public static bool Ohjaamo = true;
         readonly IssOhjaamo ohjaamo;
+        /// <summary>Ohjaamopaneelin näkyvä laatikko ruudulla (worldBound) tai tyhjä, kun paneeli ei näy (Pulun taulun väistö, juna 148).</summary>
+        public Rect OhjaamoLaatikko => Ohjaamo && ohjaamo != null && ohjaamo.Juuri.panel != null
+            && ohjaamo.Juuri.resolvedStyle.display == DisplayStyle.Flex ? ohjaamo.Nakyva : default;
         /// <summary>Kytkinpöytä käytössä (ei ohjaamoa): pöydän omat mitat (YlaReuna, Suuri, Nakyva) ja kohdelista pöydän yllä.</summary>
         static bool KytkinKaytossa => Kytkinpoyta && !Ohjaamo;
 
@@ -242,7 +245,9 @@ namespace Matkakirja.Natiivi
         /// </summary>
         public static float IkkunanSuurennos;
         // Omistaja 2.10. 21.3x "kamera zoomaa enemmän sisäänpäin, jolloin ikkuna kasvaa": +20 % (2,0 / 1,25 / 1,45 / 1,25 →).
-        public const float IkkunaPuhelinVaaka = 2.4f, IkkunaPuhelinPysty = 1.5f, IkkunaTablettiVaaka = 1.75f, IkkunaTablettiPysty = 1.5f;
+        // Omistaja 6.10. 08.35: "iPadilla ikkunaa tai sen reunoja voisi näkyä hieman enemmän. iPhonella nykyinen zoomitaso on hyvä"
+        // → iPad −13 % (pysty 1,5 → 1,3, vaaka 1,75 → 1,52), iPhone ennallaan.
+        public const float IkkunaPuhelinVaaka = 2.4f, IkkunaPuhelinPysty = 1.5f, IkkunaTablettiVaaka = 1.52f, IkkunaTablettiPysty = 1.3f;
         static float IkkunanOletus(float w, float h, bool ipad) =>
             w > h ? (ipad ? IkkunaTablettiVaaka : IkkunaPuhelinVaaka) : (ipad ? IkkunaTablettiPysty : IkkunaPuhelinPysty);
         /// <summary>Kuvan reunan vara (pt) keskitetyssä rajauksessa: ajelehdus 3,5–4 pt + kallistus ja skaala.</summary>

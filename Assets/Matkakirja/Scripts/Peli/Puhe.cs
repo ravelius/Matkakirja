@@ -449,6 +449,18 @@ namespace Matkakirja.Natiivi
         /// [long-pause] väliotsikon edellä); vain puhepyyntöön, säilö omaan lohkoonsa (kertoja-t1).</param>
         /// <param name="lohko">säilölohko (web lueAaneen sailio), oletuksena persoonan lohko (Lukijaaani.OletusLohko); esim.
         /// astronautin kuvaselite astro-selite kuten webissä (Linssiseppä 29.9.2026).</param>
+        /// <summary>
+        /// Pinnatun luennan seuraava pala (Natiivi-UI 6.10., omistaja 23.0x: pinnatun noston luenta katkesi 1. palan jälkeen,
+        /// koska seuraava pala on pelaajan pyytämä luenta ja korvasi pinnauksen): saman omistajan jatko ei korvaa pinnausta.
+        /// Muuten kuin Lue(pyynnosta: true).
+        /// </summary>
+        public bool LueJatkona(string omistaja, string teksti, string persoona, Action loppu, string loppuTagi)
+        {
+            if (omistaja == null || Pinnattu != omistaja) return Lue(teksti, persoona, 0, loppu, pyynnosta: true, loppuTagi: loppuTagi);
+            soiPyynnosta = true;
+            return Syntetisoi(teksti, persoona, TagiLohko(Lukijaaani.OletusLohko(persoona), loppuTagi), true, 0, loppu, loppuTagi);
+        }
+
         public bool Lue(string teksti, string persoona = "merkinnat", float viiveS = 0, Action loppu = null, bool pyynnosta = false,
             string loppuTagi = null, string lohko = null)
         {

@@ -60,7 +60,16 @@ namespace Matkakirja.Natiivi
         /// </summary>
         // Päätoimittaja 4.10. (maailmakamera): usva neutraaliksi sinivalkoiseksi; simu a10a2777 A/B: Rayleigh-kerros 1,5, sinisyys 1,3, utu 1,2
         // ja syvänsininen hehku 1,5 tekivät COG-kuvista violetteja (Sahara, Grand Canyon) → Rayleigh 1, sinisyys 1, utu 0,8, ei syvää hehkua.
-        const float KaariVoima = 6f, KaariHr = 1f, KaariSini = 1f, KaariUtu = 0.8f, KaariYdin = 1f, KaariSyva = 0f;
+        // Omistaja 6.10.: "Voisiko tuon ilmakehän halon värjätä voimakkaammin siniseksi"; Päätoimittaja 65fe6316: paksu ylivalottunut
+        // valkoinen vyö ja sinertävä maa → sinisyys ennallaan (1; se sinersi myös maan utua ja teki Viron punaruskeista magentaa),
+        // ytimen kerroin 0,55 (valkoinen viiva ohuemmaksi) ja syvänsininen hehku 1,5 (vain taivasta vasten, 5–45 km).
+        // Omistajan viite 6.10. (Cupola-kuva): ei valkoista vyötä, ohut vaaleansininen–syaani reuna ja laaja pehmeä sininen mustaan
+        // → kaarivoima 4, ydin 0,3 (maan utu reunalla ~1,8×, ei 5×), syvänsininen 3; valojen katto pitää sävyn (A/B 13.1x).
+        // A/B 13388aa7 (Helsinki 14.1x): kolmesta paras voima 3, ydin 0,25, syvä 2,5 (ohuin valkoinen); valkoinen vyö jäi silti.
+        // 6.10. 14.3x: halo piirretään 2D-gradienttina (Halo); sironta jää alle himmeänä: ei syvänsinistä varjostimessa, ja maan
+        // reunan utu kertoimella 2 · 0,25 · 1,5 = 0,75 (ei valkoista vyötä).
+        // Utu 1,25: sinertävä ilmaperspektiivi voimistuu reunaa kohti (Päätoimittaja 6.10., omistajan viite).
+        const float KaariVoima = 1f, KaariHr = 1f, KaariSini = 1f, KaariUtu = 1.25f, KaariYdin = 1f, KaariSyva = 0f;
 
         static bool KaariOletuksissa() => Avaruus.KuvanKaariVoima == 1f && Avaruus.KuvanHrKerroin == 1f && Avaruus.KuvanSiniKerroin == 1f
             && Avaruus.KuvanUtuKerroin == 1f && Avaruus.KuvanKaariYdin == 1f && Avaruus.KuvanKaariSyva == 0f;
@@ -218,6 +227,18 @@ namespace Matkakirja.Natiivi
 #else
         public static long VapaaMuistiMt() => -1;
 #endif
+
+        /// <summary>
+        /// MUISTIOIKEUDEN TODISTE (Päätoimittaja 6.10.2026, juna 149.1: increased-memory-limit): käynnistyksessä lokiin
+        /// os_proc_available_memory() eli muisti jetsam-rajaan asti, ennen ja jälkeen oikeuden samalla laitteella vertailtavaksi.
+        /// </summary>
+        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
+        static void KirjaaKaynnistysMuisti()
+        {
+            long vapaa = VapaaMuistiMt();
+            if (vapaa >= 0)
+                Debug.Log($"MATKAKIRJA muisti: käynnistys, vapaa jetsam-rajaan {vapaa} Mt, laite {SystemInfo.deviceModel}, RAM {SystemInfo.systemMemorySize} Mt");
+        }
 
         /// <summary>
         /// Kuvan leveys vapaan muistin mukaan (Natiivisepän ehto 2.10.2026: iPad 00008103 4096 × 5120 → phys_footprint +1,9 Gt ja
@@ -669,6 +690,19 @@ namespace Matkakirja.Natiivi
                 var (az, korkeus) = AurinkoPisteessa(utc, naytteet.Average(n => n.Lat), naytteet.Average(n => n.Lon));
                 var kentta = new Pilvikentta { MaaOsuus = ty.MaaOsuus, AurinkoAz = az, AurinkoKorkeus = korkeus }.Kalibroi();
                 ty.Pilvet = kentta;
+                // Kirkas alue pääkohteen ympärillä (omistaja 6.10.: pilvet sivuille, pääkohde ei peity): ~26 % kuvan leveydestä
+                // täysin kirkas, vaimennus 54 %:iin asti (maan pinnalla kohteen etäisyydellä).
+                if (IssJuliste.Kaytossa)
+                {
+                    var kesk = naytteet.OrderBy(q => Math.Abs(q.Sx - 24) + Math.Abs(q.Sy - 18)).First();
+                    var (kLat, kLon) = kohdePiste ?? (kesk.Lat, kesk.Lon);
+                    var kpE = Kuvasuunnitelma.Ecef(kLat, kLon);
+                    double dKm = Math.Sqrt(Math.Pow(kk.Paikka.x - kpE.x, 2) + Math.Pow(kk.Paikka.y - kpE.y, 2) + Math.Pow(kk.Paikka.z - kpE.z, 2)) / 1000;
+                    double vaaka = 2 * Math.Atan(Math.Tan(kk.PystykenttaAst * Math.PI / 360) * W / H);
+                    double leveysKm = 2 * dKm * Math.Tan(vaaka / 2);
+                    ty.SelkeaAlue = (kLat, kLon, 0.13 * leveysKm, 0.27 * leveysKm);
+                    Loki($"selkeä alue: ({kLat:0.00}, {kLon:0.00}) {0.13 * leveysKm:0}–{0.27 * leveysKm:0} km");
+                }
                 // Päivän todelliset pilvet GIBS:stä, selkein 7 päivästä (omistaja 5.10. klo 15.5x); ei dataa → Pilvikenttä.
                 string kuvanLahde = "Contains modified Copernicus Sentinel data", pilviTieto = "pilvikenttä";
                 if (GibsPilvetPaalla)
@@ -683,13 +717,23 @@ namespace Matkakirja.Natiivi
                     double raja = mp[mp.Count / 2];
                     var lahi = naytteet.Where(x => x.MetriaPikseli <= raja).ToList();
                     double lw = lahi.Min(x => x.LonMin), ls = lahi.Min(x => x.LatMin), le = lahi.Max(x => x.LonMax), ln = lahi.Max(x => x.LatMax);
-                    GibsPilvet tarkka = null;
-                    int zKoko = GibsPilvet.TasoAlueelle(w, s, e, nn);
-                    if (zKoko < GibsPilvet.Z - 1 && GibsPilvet.TasoAlueelle(lw, ls, le, ln) > zKoko)
-                        yield return HaeGibs(lw, ls, le, ln, x => tarkka = x);
-                    yield return HaeGibs(w, s, e, nn, x => gp = x, tarkka?.Paiva);
-                    if (gp != null && tarkka != null && tarkka.Taso > gp.Taso) gp.Tarkka = tarkka;
-                    else if (gp == null && tarkka != null) gp = tarkka;
+                    // Päivä valitaan koko alueen karkealta tasolta lähialueen pilvisyyden mukaan; lähialue sitten vain sille päivälle
+                    // tarkemmalta tasolta (2048 px → z8–9; Päätoimittaja 6.10.: z5 + z7 oli litteitä laikkuja ja laattasaumoja).
+                    yield return HaeGibs(w, s, e, nn, x => gp = x, null, 1024, (lw, ls, le, ln));
+                    // Koko alue valitulta päivältä tarkemmin (2048 px → z6; ca48b99e: z5 oli kaukana maitomainen kerros). Pysyvän
+                    // valkoisen poisto jää karkealle (yksi päivä); lähialue alla vielä tarkemmin.
+                    if (gp != null && GibsPilvet.TasoAlueelle(w, s, e, nn, 2048) > gp.Taso)
+                    {
+                        GibsPilvet koko = null;
+                        yield return HaeGibs(w, s, e, nn, x => koko = x, gp.Paiva, 2048);
+                        if (koko != null && koko.Taso > gp.Taso) gp = koko;
+                    }
+                    if (gp != null && GibsPilvet.TasoAlueelle(lw, ls, le, ln, 2048) > gp.Taso)
+                    {
+                        GibsPilvet tarkka = null;
+                        yield return HaeGibs(lw, ls, le, ln, x => tarkka = x, gp.Paiva, 2048);
+                        if (tarkka != null && tarkka.Taso > gp.Taso) gp.Tarkka = tarkka;
+                    }
                     if (gp != null)
                     {
                         gp.Aseta(az, korkeus, kentta);
@@ -798,7 +842,10 @@ namespace Matkakirja.Natiivi
                     kuva.LoadRawTextureData(lukija.GetData<byte>()); kuva.Apply(false);
                     if (Avaruus.KuvanNousu > 0.01f) Heijastukset(kuva, kamera, W, H, Avaruus.KuvanNousu);
                     Valota(kuva);
+                    Kehita(kuva);
                     Kontrasti(kuva, KuvanKontrasti);
+                    ValojenKatto(kuva);
+                    Halo(kuva, kk);
                     byte[] j = null;
                     if (k == 0 && IssJuliste.Kaytossa)
                     {
@@ -924,7 +971,8 @@ namespace Matkakirja.Natiivi
                 var tyot = Task.Run(() => System.Threading.Tasks.Parallel.ForEach(lista, rinnakkain, l =>
                 {
                     var rgba = pl.Piirra(l.z, l.x, l.y);
-                    if (gp != null) KuvanTyosto.PiirraPilvet(gp, l.z, l.x, l.y, rgba, true);
+                    if (gp != null) KuvanTyosto.PiirraPilvet(gp, l.z, l.x, l.y, rgba, true,
+                        IssJuliste.Kaytossa ? (p.Lat, p.Lon, 0.13 * p.KokoM / 1000, 0.27 * p.KokoM / 1000) : ((double, double, double, double)?)null);
                     var kaanto = new byte[rgba.Length];   // EncodeArrayToPNG: rivi 0 alin
                     for (int y = 0; y < 256; y++) Buffer.BlockCopy(rgba, y * 1024, kaanto, (255 - y) * 1024, 1024);
                     var png = ImageConversion.EncodeArrayToPNG(kaanto, UnityEngine.Experimental.Rendering.GraphicsFormat.R8G8B8A8_SRGB, 256, 256);
@@ -967,7 +1015,9 @@ namespace Matkakirja.Natiivi
                 var kuva = new Texture2D(W, H, TextureFormat.RGBA32, false);
                 kuva.LoadRawTextureData(lukija.GetData<byte>()); kuva.Apply(false);
                 Valota(kuva);
+                Kehita(kuva);
                 Kontrasti(kuva, KuvanKontrasti);
+                ValojenKatto(kuva);
                 byte[] jpg = null;
                 if (IssJuliste.Kaytossa)
                 {
@@ -1031,6 +1081,7 @@ namespace Matkakirja.Natiivi
         /// nosteta harmaaksi), kirkkaita kuvia ei tummenneta. Testikomento `astro kyyti kuvaa valotus <tavoite> [max]`.
         /// </summary>
         public static float ValotusTavoite = 0.36f, ValotusMax = 1.8f;
+        public static bool ValotusOlkapaa = true;
 
         /// <summary>
         /// KUVAN PARANNUS (Päätoimittaja 6.10., omistaja: "kuvaa oli paranneltu"; juliste E v2:n jälkikäsittely juliste-jalki.py 1.10.):
@@ -1055,21 +1106,79 @@ namespace Matkakirja.Natiivi
             kuva.Apply(false);
         }
 
+        /// <summary>Julisteen Cupola-kehys ladataan valmiiksi (kuvan koko riippuu sen aukosta).</summary>
+        void Start() => StartCoroutine(IssJuliste.EsilataaKehys());
+
+        /// <summary>A/B `astro kyyti kuvaa kehitys 0|1`: Kuvankasittely.Kehita (omistaja 6.10.: sinisempi, enemmän wow-efektiä).</summary>
+        public static bool Kehitys = true;
+
+        /// <summary>A/B `astro kyyti kuvaa halo 0|1`: ilmakehän reuna 2D-gradienttina (Kuvankasittely.Halo).</summary>
+        public static bool Halo2D = true;
+
+        /// <summary>Horisontti sarakkeittain kameran geometriasta (ensimmäinen maahan osuva rivi ylhäältä, binäärihaku) ja halo.</summary>
+        static void Halo(Texture2D kuva, KuvaKamera kk)
+        {
+            if (!Halo2D || !IssJuliste.Kaytossa) return;
+            int W = kuva.width, H = kuva.height;
+            double tv = Math.Tan(kk.PystykenttaAst * Math.PI / 360), th = tv * W / H;
+            var raja = new float[W]; int loydetty = 0;
+            for (int x = 0; x < W; x++)
+            {
+                double u = (2 * (x + 0.5) / W - 1) * th;
+                bool Osuu(double yy)
+                {
+                    double v = (1 - 2 * yy / H) * tv;
+                    var d = (kk.Katse.x + u * kk.Oikea.x + v * kk.Ylos.x, kk.Katse.y + u * kk.Oikea.y + v * kk.Ylos.y, kk.Katse.z + u * kk.Oikea.z + v * kk.Ylos.z);
+                    return Kuvasuunnitelma.Osuma(kk.Paikka, d) != null;
+                }
+                if (Osuu(0) || !Osuu(H)) { raja[x] = -1; continue; }
+                double lo = 0, hi = H;
+                for (int k = 0; k < 24; k++) { double m = (lo + hi) / 2; if (Osuu(m)) hi = m; else lo = m; }
+                raja[x] = (float)hi; loydetty++;
+            }
+            if (loydetty == 0) return;
+            var data = kuva.GetPixelData<byte>(0); var t = data.ToArray();
+            Kuvankasittely.Halo(t, W, H, raja, true);
+            data.CopyFrom(t); kuva.Apply(false);
+            Loki($"halo: horisontti {loydetty}/{W} sarakkeessa");
+        }
+
+        static void ValojenKatto(Texture2D kuva)
+        {
+            if (!Kehitys) return;
+            var data = kuva.GetPixelData<byte>(0); var t = data.ToArray();
+            Kuvankasittely.ValojenKatto(t);
+            data.CopyFrom(t); kuva.Apply(false);
+        }
+
+        static void Kehita(Texture2D kuva)
+        {
+            if (!Kehitys) return;
+            var kello = System.Diagnostics.Stopwatch.StartNew();
+            var data = kuva.GetPixelData<byte>(0); var t = data.ToArray();
+            Kuvankasittely.Kehita(t, kuva.width, kuva.height);
+            data.CopyFrom(t); kuva.Apply(false);
+            Loki($"kehitys: paikallinen kontrasti, sinisyys, hehku {kello.ElapsedMilliseconds} ms");
+        }
+
         static void Valota(Texture2D kuva)
         {
             var px = kuva.GetPixelData<Color32>(0);
             double summa = 0; int n = 0;
-            for (int i = 0; i < px.Length; i += 37) { var c = px[i]; summa += 0.2126 * c.r + 0.7152 * c.g + 0.0722 * c.b; n++; }
+            int tayt = 0;   // jo renderöinnissä leikkautuneet (kirkkain kanava 255): olkapää ei palauta niitä
+            for (int i = 0; i < px.Length; i += 37)
+            {
+                var c = px[i]; summa += 0.2126 * c.r + 0.7152 * c.g + 0.0722 * c.b; n++;
+                if (Math.Max(c.r, Math.Max(c.g, c.b)) >= 254) tayt++;
+            }
             double keski = n > 0 ? summa / n / 255.0 : 1;
             float k = (float)Math.Max(1.0, Math.Min(ValotusMax, ValotusTavoite / Math.Max(0.01, keski)));
-            Loki($"valotus: keskikirkkaus {keski:0.000}, kerroin {k:0.00}");
+            Loki($"valotus: keskikirkkaus {keski:0.000}, kerroin {k:0.00}, renderissä leikattu {100.0 * tayt / Math.Max(1, n):0.0} %");
             if (k <= 1.01f) return;
-            for (int i = 0; i < px.Length; i++)
-            {
-                var c = px[i];
-                px[i] = new Color32((byte)Math.Min(255, c.r * k + 0.5f), (byte)Math.Min(255, c.g * k + 0.5f), (byte)Math.Min(255, c.b * k + 0.5f), c.a);
-            }
-            kuva.Apply(false);
+            var data = kuva.GetPixelData<byte>(0); var t = data.ToArray();
+            // Pehmeä olkapää: pilvikannen sävyt eivät leikkaudu 255:een; A/B `astro kyyti kuvaa olkapaa 0|1` (0 = suora kerto).
+            Kuvankasittely.Valota(t, k, ValotusOlkapaa ? 160f : 255f);
+            data.CopyFrom(t); kuva.Apply(false);
         }
 
         /// <summary>Range-haut enintään Rinnakkain kerrallaan, purku säikeissä; tila: [0] saatu, [1] virheet.</summary>
@@ -1081,17 +1190,28 @@ namespace Matkakirja.Natiivi
         /// kerros kerrallaan kaikille päiville rinnakkain: seuraava kerros (SNPP → NOAA-20 → Terra → Aqua) vain päiville, joilla
         /// edellisistä jäi aukkoja. Tyhjä ruutu on 1665 tavun musta JPEG.
         /// </summary>
-        IEnumerator HaeGibs(double w, double s, double e, double n, Action<GibsPilvet> valmis, DateTime? paiva = null)
+        /// <param name="paiva">Pakotettu päivä (tarkka lähialue: vain se päivä haetaan, ei pysyvän valkoisen poistoa).</param>
+        /// <param name="maxPx">Alueen enimmäisleveys pikseleinä tason valintaan (tarkka lähialue 2048 → z8–9).</param>
+        /// <param name="paino">Selkeimmän päivän valinta tämän alueen (w, s, e, n) pilvisyydestä.</param>
+        IEnumerator HaeGibs(double w, double s, double e, double n, Action<GibsPilvet> valmis, DateTime? paiva = null, int maxPx = 1024,
+            (double w, double s, double e, double n)? paino = null)
         {
-            int z = GibsPilvet.TasoAlueelle(w, s, e, n);
+            int z = GibsPilvet.TasoAlueelle(w, s, e, n, maxPx);
             var (fx0, fy0) = GibsPilvet.Pikseli(n, w, z); var (fx1, fy1) = GibsPilvet.Pikseli(s, e, z);
             int x0 = (int)Math.Floor(fx0), y0 = (int)Math.Floor(fy0), W = (int)Math.Ceiling(fx1) - x0, H = (int)Math.Ceiling(fy1) - y0;
             if (W <= 0 || H <= 0) { valmis(null); yield break; }
             int R = GibsPilvet.Ruutu, tx0 = x0 / R, ty0 = y0 / R, tx1 = (x0 + W - 1) / R, ty1 = (y0 + H - 1) / R;
             var kello = System.Diagnostics.Stopwatch.StartNew();
-            var tanaan = DateTime.UtcNow.Date;
+            // Pilvet kuvan hetkeltä (pelin kello; Helsinki vedoksen valossa 21.6. sai lokakuun pilvet), tulevaisuudessa tältä päivältä.
+            var tanaan = IssNyt.Kello().Date; if (tanaan > DateTime.UtcNow.Date) tanaan = DateTime.UtcNow.Date;
+            // Selkein ±7 vrk kuvan päivästä (Päätoimittaja 6.10.: "kesäkuun selkein päivä ±7 vrk samalla valolla"); tulevaisuus pois.
             var paivat = new List<(DateTime paiva, byte[][] kerrokset)>();
-            for (int d = 1; d <= 7; d++) paivat.Add((tanaan.AddDays(-d), new byte[GibsPilvet.Kerrokset.Length][]));
+            if (paiva.HasValue) paivat.Add((paiva.Value.Date, new byte[GibsPilvet.Kerrokset.Length][]));
+            else for (int d = -7; d <= 7; d++)
+                {
+                    var pv = tanaan.AddDays(d);
+                    if (pv < DateTime.UtcNow.Date) paivat.Add((pv, new byte[GibsPilvet.Kerrokset.Length][]));
+                }
             long tavut = 0; int pyyntoja = 0;
             for (int k = 0; k < GibsPilvet.Kerrokset.Length; k++)
             {
@@ -1132,7 +1252,13 @@ namespace Matkakirja.Natiivi
                     }
                 }
             }
-            var t = Task.Run(() => GibsPilvet.Kokoa(x0, y0, W, H, paivat, z, paiva));
+            (int, int, int, int)? painoAlue = null;
+            if (paino is (double, double, double, double) pa)
+            {
+                var (px0, py0) = GibsPilvet.Pikseli(pa.n, pa.w, z); var (px1, py1) = GibsPilvet.Pikseli(pa.s, pa.e, z);
+                painoAlue = ((int)px0 - x0, (int)py0 - y0, (int)Math.Ceiling(px1) - x0, (int)Math.Ceiling(py1) - y0);
+            }
+            var t = Task.Run(() => GibsPilvet.Kokoa(x0, y0, W, H, paivat, z, paiva, painoAlue));
             while (!t.IsCompleted) yield return null;
             var g = t.IsFaulted ? null : t.Result;
             Loki($"gibs: z{z} {W}×{H} px, {pyyntoja} ruutua {tavut / 1e3:0} kt, {kello.ElapsedMilliseconds / 1000.0:0.0} s → "
@@ -1292,12 +1418,12 @@ namespace Matkakirja.Natiivi
             var (k, maa) = IssSijainti.Nimet(a, lat, lon);
             if (!string.IsNullOrEmpty(paikka)) k = paikka;
             if (string.IsNullOrEmpty(maa)) return k;   // merellä
-            for (int r = 10; r <= 40; r += 10)
-                for (int i = 0; i < 12; i++)
+            for (int r = 0; r <= 40; r += 10)
+                for (int i = 0; i < (r == 0 ? 1 : 12); i++)
                 {
                     IssKuvakulma.Kohde(lat, lon, i * 30, r / 111.2, out double mla, out double mlo, out _);
-                    var (m, mm) = IssSijainti.Nimet(a, mla, mlo);
-                    if (string.IsNullOrEmpty(mm) && !string.IsNullOrEmpty(m)) return $"{k} · {m}";
+                    var m = IssSijainti.Merialue(a, mla, mlo);
+                    if (!string.IsNullOrEmpty(m)) return $"{k} · {m}";
                 }
             return k == maa ? k : $"{k} · {maa}";
         }

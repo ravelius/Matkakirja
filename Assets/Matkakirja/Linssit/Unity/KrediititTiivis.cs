@@ -7,6 +7,7 @@
 // riviinsä. Logot (kuvaelementit) jäävät paikalleen muuttamattomina; sisältöä ei muuteta eikä poisteta. Pakettiin (com.cesium.unity)
 // ei kosketa.
 using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using CesiumForUnity;
@@ -37,7 +38,6 @@ namespace Matkakirja.Natiivi
         /// </summary>
         public static bool OsmNakyvissa;
         public const string OsmTeksti = "© OpenStreetMap contributors";
-        static Label osm;
 
         static VisualElement lahteet, lista;
         static Label tiivis;
@@ -58,6 +58,8 @@ namespace Matkakirja.Natiivi
         public const float KaikkiS = 6f;
         /// <summary>Datalähderivin kirjainkoko (pt; omistaja 6.10. 12.4x "pienemmällä fontilla": 9 → 7).</summary>
         public const float RiviPt = 7f;
+        /// <summary>Lähderivin näkyvä leveys osuutena ruudun leveydestä (omistaja 6.10. 13.2x).</summary>
+        public const float RiviOsuus = 0.40f;
 
         /// <summary>☰ Tietoja ja lähteet: koko lista rivitettynä ja Cesium ion -logo hetkeksi.</summary>
         /// <summary>Koko lista auki (oppaan sirut eivät nouse sen yläpuolelle).</summary>
@@ -94,24 +96,63 @@ namespace Matkakirja.Natiivi
             return null;
         }
         static bool ionVirhe;
+        static Texture2D googleLogo;
+        static bool googleHaettu;
+        /// <summary>Googlen virallinen Google Maps -logo, ääriviivallinen versio kartan päälle (null = ei pakettia).</summary>
+        static Texture2D GoogleLogo
+        {
+            get
+            {
+                if (!googleHaettu) { googleHaettu = true; googleLogo = Resources.Load<Texture2D>("Krediitit/GoogleMaps_Logo_WithDarkOutline_4x"); }
+                return googleLogo;
+            }
+        }
         /// <summary>Viimeksi tunnistettu Cesium ion -logo (Siirrytään-ruutu piirtää sen itse mustan ruudun päälle).</summary>
         public static Texture IonLogoKuva { get; private set; }
+        /// <summary>Googlen logon yläreuna osuutena ruudun korkeudesta alhaalta (oppaan oma ion-logo sen yläpuolelle); 0 = ei tiedossa.</summary>
+        public static float GoogleYlaOsuus { get; private set; }
 
         /// <summary>Testi: logot ja niiden tunnistus.</summary>
-        public static string Kuvaus()
+        /// <summary>
+        /// Testi (Päätoimittaja 6.10. 20.2x): oma lähderivi vastaa Cesiumin krediittipuuta täsmälleen (kaikki tarjoajat samassa
+        /// järjestyksessä; OSM lisäksi, kun se on päällä) ja Google-logo on näkyvissä, kun Cesiumilla on Google-kuva.
+        /// </summary>
+        public static string Vertaa()
         {
             var cs = CesiumCreditSystem.GetDefaultCreditSystem();
             var on = cs != null ? cs.GetComponent<UIDocument>()?.rootVisualElement?.Q("OnScreenCredits") : null;
-            if (on == null) return "krediitit: ei ruutukrediittejä";
+            if (on == null || lista == null) return "vertailu: ei krediittejä";
             var ion = IonLogo(cs);
-            var osat = on.Children().Select(c =>
+            var odotettu = new List<string>(); bool google = false;
+            foreach (var c in on.Children())
             {
                 var t = c.style.backgroundImage.value.texture;
-                if (t != null) return $"kuva {t.width}×{t.height} ({(t == ion ? "Cesium ion" : "Google")}, {(c.resolvedStyle.display == DisplayStyle.None ? "piilossa" : "näkyy")}, {c.worldBound.width:0}×{c.worldBound.height:0})";
-                return c is Label l ? $"\"{l.text}\"" : c.name;
-            });
-            return "krediitit: " + string.Join(" | ", osat) + (lahteet != null ? $" | lähteet {lista?.childCount} kpl, {(Time.unscaledTime < kaikkiAsti ? "kaikki" : "rivi")}, {lahteet.worldBound.width:0}×{lahteet.worldBound.height:0}" : "");
+                if (!(c is Label) && t != null && t.height > 0) { if (t != ion) google = true; continue; }
+                if (c is Label l && !string.IsNullOrWhiteSpace(l.text) && !l.text.Contains("Data Attribution")) odotettu.Add(l.text.Replace("<u>", "").Replace("</u>", ""));
+            }
+            if (OsmNakyvissa) odotettu.Add(OsmTeksti);
+            var omat = lista.Children().OfType<Label>().Select(x => x.text).ToList();
+            bool sama = omat.SequenceEqual(odotettu) && tiivis.text == string.Join(" ", odotettu);
+            bool logo = !google || googleEl.resolvedStyle.display != DisplayStyle.None;
+            return $"vertailu: {(sama && logo ? "OK" : "ERO")} – Cesium {odotettu.Count} tekstiä, omat {omat.Count}, Google-kuva {(google ? "on" : "ei")}, oma logo {(googleEl.resolvedStyle.display != DisplayStyle.None ? "näkyy" : "piilossa")}"
+                   + (sama ? "" : $" | ero: [{string.Join(" ¦ ", odotettu.Except(omat))}] vs [{string.Join(" ¦ ", omat.Except(odotettu))}]");
         }
+
+        public static string Kuvaus()
+        {
+            if (oma == null) return "krediitit: ei vielä rakennettu";
+            string L(VisualElement e, string n) => e.resolvedStyle.display == DisplayStyle.None ? n + " piilossa" : $"{n} näkyy {e.worldBound.width:0}×{e.worldBound.height:0}";
+            return $"krediitit (omat): {L(googleEl, "Google")} | {L(ionEl, "Cesium ion")} | lähteet {lista?.childCount} kpl, {(Time.unscaledTime < kaikkiAsti ? "kaikki" : "rivi")}, {lahteet.worldBound.width:0}×{lahteet.worldBound.height:0}";
+        }
+
+        /// <summary>Kerran kehyksessä kaupunkinäkymän ajan (paalla = näkymä auki).</summary>
+        // OMAT KOPIOT (omistaja 6.10. 19.4x: "räpsyy matkaoppaan päällä … Google Maps -teksti … ja sen alla oleva pitkä tekstirivi"):
+        // Cesium rakentaa OnScreenCreditsin uudelleen krediittien muuttuessa, ja uudet elementit piirtyivät yhden ruudun omassa
+        // koossaan ennen tätä käsittelyä. Nyt Cesiumin puu on aina piilossa, ja logo, ion-logo ja lähderivi ovat omia elementtejä,
+        // jotka päivitetään vain, kun sisältö oikeasti muuttuu (avain); leveys on kiinteä ja rivi leikataan.
+        static VisualElement oma, googleEl, ionEl;
+        static string sisaltoAvain;
+        static readonly List<string> tekstit = new List<string>();
 
         /// <summary>Kerran kehyksessä kaupunkinäkymän ajan (paalla = näkymä auki).</summary>
         public static void Paivita(bool paalla)
@@ -120,78 +161,92 @@ namespace Matkakirja.Natiivi
             var juuri = cs != null ? cs.GetComponent<UIDocument>()?.rootVisualElement : null;
             var on = juuri?.Q("OnScreenCredits");
             if (on == null) return;
-            if (!paalla)
+            // Cesiumin oma ruutukrediittipuu ei piirry koskaan (ei edes uudelleenrakennuksen ruudulla).
+            if (on.style.display != DisplayStyle.None) on.style.display = DisplayStyle.None;
+            if (oma == null)
             {
-                if (osm != null && osm.parent != null) osm.RemoveFromHierarchy();
-                return;
-            }
-            float pt = YksikkoaPerPt(juuri);
-            on.style.flexDirection = FlexDirection.Column;
-            on.style.alignItems = Align.FlexStart;
-            on.style.paddingTop = TyhjaSivuPt * pt; on.style.paddingBottom = TyhjaAlaPt * pt; on.style.paddingLeft = TyhjaSivuPt * pt;
-            if (lahteet == null)
-            {
-                // Päätoimittaja 6.10. 12.4x: rivi ei saa valua oikean reunan yli → yksi tekstirivi, joka katkeaa "…":llä 10 dp:n
-                // marginaaliin; Cesiumin omat tekstit (lista) näkyvät rivitettyinä napautuksesta.
+                oma = new VisualElement { name = "MatkakirjaKrediitit", pickingMode = PickingMode.Ignore };
+                oma.style.position = Position.Absolute;
+                oma.style.flexDirection = FlexDirection.Column;
+                oma.style.alignItems = Align.FlexStart;
+                ionEl = new VisualElement { name = "MatkakirjaIon", pickingMode = PickingMode.Ignore };
+                googleEl = new VisualElement { name = "MatkakirjaGoogle", pickingMode = PickingMode.Ignore };
+                foreach (var e in new[] { ionEl, googleEl }) { e.style.unityBackgroundScaleMode = ScaleMode.ScaleToFit; e.style.flexShrink = 0; oma.Add(e); }
                 lahteet = new VisualElement { name = "MatkakirjaDatalahteet", pickingMode = PickingMode.Position };
                 tiivis = Riviin(new Label { name = "MatkakirjaLahdeRivi" });
                 tiivis.style.whiteSpace = WhiteSpace.NoWrap;
                 tiivis.style.overflow = Overflow.Hidden;
                 tiivis.style.textOverflow = TextOverflow.Ellipsis;
-                tiivis.style.flexShrink = 1;
                 lahteet.Add(tiivis);
                 lista = new VisualElement { name = "MatkakirjaLahdeLista", pickingMode = PickingMode.Ignore };
                 lista.style.flexDirection = FlexDirection.Row;
                 lista.style.flexWrap = Wrap.Wrap;
+                // Koko lista luettavaksi kartan päällä: tumma himmennyspohja (tyylikirjan Himmennys.Tumma).
+                lista.style.backgroundColor = (Color)Tyylikirja.Himmennys.Tumma;
+                lista.style.paddingLeft = lista.style.paddingRight = lista.style.paddingTop = lista.style.paddingBottom = 4;
+                lista.style.borderTopLeftRadius = lista.style.borderTopRightRadius = lista.style.borderBottomLeftRadius = lista.style.borderBottomRightRadius = 4;
                 lista.style.alignItems = Align.Center;
                 lahteet.Add(lista);
                 lahteet.AddManipulator(new Clickable(() => kaikkiAsti = Time.unscaledTime < kaikkiAsti ? -1f : Time.unscaledTime + KaikkiS));
+                oma.Add(lahteet);
             }
-            // Cesium rakentaa puun uudelleen krediittien muuttuessa: rivi takaisin logon alle ja uudet tekstit riviin.
-            if (lahteet.parent != on) { lahteet.RemoveFromHierarchy(); on.Add(lahteet); }
+            if (oma.parent != juuri) { oma.RemoveFromHierarchy(); juuri.Add(oma); }
+            var nd = paalla ? DisplayStyle.Flex : DisplayStyle.None;
+            if (oma.style.display != nd) oma.style.display = nd;
+            if (!paalla) return;
+            float pt = YksikkoaPerPt(juuri);
+            oma.style.left = TyhjaSivuPt * pt; oma.style.bottom = TyhjaAlaPt * pt;
+
+            // Sisältö Cesiumin piilotetusta puusta: kuvat (Google / ion) ja tekstit; päivitys vain avaimen muuttuessa.
             var ion = IonLogo(cs);
             if (ion != null) IonLogoKuva = ion;
-            bool cesium = CesiumNakyviin || (AvausLatautuu && !IonOmaPiirto) || Time.unscaledTime < cesiumAsti;
-            foreach (var lapsi in on.Children().ToList())
+            Texture google = null;
+            tekstit.Clear();
+            foreach (var c in on.Children())
             {
-                if (lapsi == lahteet) continue;
-                // Kuvalogot jäävät muuttamattomina: koko policyn rajoihin (kuvasuhde säilyy, terävä, ei kutistumista).
-                var kuva = lapsi.style.backgroundImage.value.texture;
-                if (!(lapsi is Label) && kuva != null && kuva.height > 0)
-                {
-                    bool nayta = kuva != ion || cesium;
-                    lapsi.style.display = nayta ? DisplayStyle.Flex : DisplayStyle.None;
-                    if (!nayta) continue;
-                    float h = LogoPt * pt;
-                    lapsi.style.height = h; lapsi.style.width = h * kuva.width / kuva.height;
-                    lapsi.style.flexShrink = 0;
-                    lapsi.style.unityBackgroundScaleMode = ScaleMode.ScaleToFit;
-                    lapsi.style.marginBottom = 2 * pt;
-                    if (kuva.filterMode != FilterMode.Bilinear) kuva.filterMode = FilterMode.Bilinear;
-                    continue;
-                }
-                if (!(lapsi is Label l)) continue;
-                if (l.text != null && l.text.Contains("Data Attribution")) { l.style.display = DisplayStyle.None; continue; }
-                l.RemoveFromHierarchy();
-                lista.Add(Riviin(l));
+                var t = c.style.backgroundImage.value.texture;
+                if (!(c is Label) && t != null && t.height > 0) { if (t != ion) google = t; continue; }
+                if (c is Label l && !string.IsNullOrWhiteSpace(l.text) && !l.text.Contains("Data Attribution"))
+                    tekstit.Add(l.text.Replace("<u>", "").Replace("</u>", ""));
             }
-            if (OsmNakyvissa) { osm ??= Riviin(new Label(OsmTeksti) { name = "MatkakirjaOsm" }); if (osm.parent != lista) { osm.RemoveFromHierarchy(); lista.Add(osm); } }
-            else if (osm != null && osm.parent != null) osm.RemoveFromHierarchy();
-            // Yksi rivi 10 dp:n marginaalein, katkeaa "…":llä; napautus näyttää listan rivitettynä.
+            if (OsmNakyvissa) tekstit.Add(OsmTeksti);
+            string avain = (google != null ? "G" : "-") + string.Join("\n", tekstit);
+            if (avain != sisaltoAvain)
+            {
+                sisaltoAvain = avain;
+                lista.Clear();
+                foreach (var t in tekstit) lista.Add(Riviin(new Label(t)));
+                tiivis.text = string.Join(" ", tekstit);
+            }
+            // Logot: Googlen virallinen ääriviivallinen logo (Resources/Krediitit/LAHTEET.md) tai Cesiumin oma; 16 dp, kuvasuhde.
+            var gk = google != null ? (Texture)GoogleLogo ?? google : null;
+            AsetaLogo(googleEl, gk, pt);
+            bool cesium = CesiumNakyviin || (AvausLatautuu && !IonOmaPiirto) || Time.unscaledTime < cesiumAsti;
+            AsetaLogo(ionEl, cesium ? ion : null, pt);
+            if (googleEl.worldBound.height > 0 && juuri.worldBound.height > 0)
+                GoogleYlaOsuus = 1f - googleEl.worldBound.yMin / juuri.worldBound.height;
+
+            // Yksi rivi kiinteällä leveydellä (~40 % ruudusta), leikataan "…":llä; napautus näyttää listan rivitettynä.
             bool kaikki = Time.unscaledTime < kaikkiAsti;
             float lev = juuri.worldBound.width - 2 * TyhjaSivuPt * pt;
-            tiivis.style.width = lev; lista.style.width = lev;
-            tiivis.style.display = kaikki ? DisplayStyle.None : DisplayStyle.Flex;
-            lista.style.display = kaikki ? DisplayStyle.Flex : DisplayStyle.None;
-            int avain = lista.childCount;
-            foreach (var c in lista.Children()) if (c is Label cl && cl.text != null) avain = avain * 31 + cl.text.Length;
-            if (avain != tiivisAvain)
-            {
-                tiivisAvain = avain;
-                tiivis.text = string.Join(" ", lista.Children().OfType<Label>().Select(x => x.text).Where(x => !string.IsNullOrWhiteSpace(x)));
-            }
+            float rivi = Mathf.Min(lev, juuri.worldBound.width * RiviOsuus);
+            if (Mathf.Abs(tiivis.resolvedStyle.width - rivi) > 0.5f) tiivis.style.width = rivi;
+            if (Mathf.Abs(lista.resolvedStyle.width - lev) > 0.5f) lista.style.width = lev;
+            var td = kaikki ? DisplayStyle.None : DisplayStyle.Flex;
+            if (tiivis.style.display != td) { tiivis.style.display = td; lista.style.display = kaikki ? DisplayStyle.Flex : DisplayStyle.None; }
             foreach (var t in lahteet.Query<Label>().ToList())
                 if (Mathf.Abs(t.resolvedStyle.fontSize - RiviPt * pt) > 0.5f) t.style.fontSize = RiviPt * pt;
+        }
+
+        static void AsetaLogo(VisualElement e, Texture t, float pt)
+        {
+            if (t == null || t.height <= 0) { if (e.style.display != DisplayStyle.None) e.style.display = DisplayStyle.None; return; }
+            if (e.style.display != DisplayStyle.Flex) e.style.display = DisplayStyle.Flex;
+            if (e.style.backgroundImage.value.texture != t) e.style.backgroundImage = new StyleBackground(t as Texture2D);
+            float h = LogoPt * pt;
+            e.style.height = h; e.style.width = h * t.width / t.height;
+            e.style.marginBottom = 2 * pt;
+            if (t.filterMode != FilterMode.Bilinear) t.filterMode = FilterMode.Bilinear;
         }
 
         /// <summary>Lähdeteksti riviin: kevein moderni, vaalea, ei alleviivausta; napautus riville (koko lista), ei Cesiumin linkkeihin.</summary>

@@ -19,6 +19,11 @@ namespace Matkakirja
 #if UNITY_IOS && !UNITY_EDITOR
         [DllImport("__Internal")] static extern int MatkakirjaLampo_Tila();
         [DllImport("__Internal")] static extern int MatkakirjaLampo_Virransaasto();
+#elif UNITY_STANDALONE_OSX && !UNITY_EDITOR
+        // Natiivi Mac (Natiiviseppä 7.10.2026, MacBook Air ilman tuuletinta): NSProcessInfo.thermalState ja Low Power Mode
+        // MatkakirjaMacSyote.bundlesta (MacLaatu.LueLaite), samat tasot ja reaktiot kuin iOS:llä.
+        static int MatkakirjaLampo_Tila() { MacLaatu.LueLaite(); return MacLaatu.ThermalState; }
+        static int MatkakirjaLampo_Virransaasto() => MacLaatu.Virransaasto ? 1 : 0;
 #else
         static int MatkakirjaLampo_Tila() => 0;
         static int MatkakirjaLampo_Virransaasto() => 0;

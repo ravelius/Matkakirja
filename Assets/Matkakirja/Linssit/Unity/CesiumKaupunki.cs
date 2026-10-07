@@ -30,6 +30,213 @@ namespace Matkakirja.Natiivi
         /// </summary>
         public const long MaastoValimuisti = 128L << 20, RakennusValimuisti = 192L << 20, GoogleValimuisti = 256L << 20;
         public const float GoogleSseMin = 16f;
+        /// <summary>
+        /// SSE NÄYTÖN KORKEUDEN MUKAAN (omistajan iPad Pro kaatui 6.10. kahdesti oppaan kohteen latauksessa): Cesiumin näyttövirhe on
+        /// pikseleinä näkymän korkeudesta, joten iPad Pro 13" (2064 px vaaka) tarkentaa 1,7× syvemmälle ja lataa ~3× laattoja kuin
+        /// iPhone (1206 px), jolla muistikatto mitattiin. SSE kerrotaan lyhyen sivun suhteella viitekorkeuteen (ei koskaan alle 1):
+        /// sama kulmatarkkuus ja laattamäärä kuin iPhonella.
+        /// </summary>
+        public const float ViiteKorkeusPx = 1206f;
+        /// <summary>Näytön kerroin (iPhone-vastaava laattamäärä): iPad Pro 13" 1,71, iPhone 1.</summary>
+        public static float NayttoKerroin => Mathf.Max(1f, Mathf.Min(Screen.width, Screen.height) / ViiteKorkeusPx);
+        /// <summary>Käytössä oleva kerroin: avauksessa vapaan muistin mukaan valittu (ValitseKerroin), muuten näytön kerroin.</summary>
+        public static float SseKerroin => kerroin > 0f ? kerroin : NayttoKerroin;
+        static float kerroin = -1f;
+
+        // ---- KAKSIVAIHEINEN TARKKUUS (Päätoimittaja 6.10. 19.3x, juna 153: TF 151 ajaa omistajan iPad Prolla kertoimella ~1,0, ja
+        // simussa 1,00 latautui ~3× hitaammin kuin 1,71) ----
+        // Tilesetin SSE on tavoitetarkkuudella (kerroin ≥ AlarajaKerroin), mutta lennon, siirron ja saapumisen ajan laatat
+        // valitaan KARKEALLA kameralla, jonka pikselikorkeus on kerroin/NayttoKerroin pääkamerasta (näyttövirhe ∝ pikselikorkeus,
+        // ks. Kartta/LiikeLaatat.cs: sama valinta kuin SSE × NayttoKerroin ILMAN tilesetin uudelleenluontia). Kun laatat ≥ 99 % ja
+        // kamera on paikallaan (sovitin: Tarkenna), valinta siirtyy pääkameraan ja lisätarkkuus tulee tarkentumisena.
+        public const float AlarajaKerroin = 1.3f;
+
+        // ---- MAC-LAATU (Natiiviseppä 7.10. 01.3x, natiiviseppa/mac MacLaatu; omistajan MacBook Air M4 16 Gt) ----
+        // Macilla tarkkuus tulee MacLaatu-profiilista (fyysinen ja vapaa muisti), ei näytön koosta eikä alarajakertoimesta;
+        // välimuisti profiilista; kuorma (lämpö, kehysaika) > KuormaRaja → laatat valitaan karkealla kameralla pikselikertoimella
+        // 1/Kuorma myös levossa, ilman tilesetin uudelleenluontia.
+#if UNITY_STANDALONE_OSX
+        static bool Mac => Matkakirja.MacLaatu.Kaytossa;
+        static float MacKuorma => Mac ? Mathf.Max(1f, Matkakirja.MacLaatu.Kuorma) : 1f;
+        static long GoogleValimuistiNyt => Mac && Matkakirja.MacLaatu.Valimuisti > 0 ? Matkakirja.MacLaatu.Valimuisti : GoogleValimuisti;
+#else
+        static bool Mac => false;
+        static float MacKuorma => 1f;
+        static long GoogleValimuistiNyt => GoogleValimuisti;
+#endif
+        public const float KuormaRaja = 1.05f, KuormaPois = 1.02f;
+        bool kuormaValinta;
+        Camera karkea;
+        bool karkeaKaytossa;
+        float karkeaAlku = -1f, tarkkaAlku = -1f;
+        /// <summary>Karkean kameran pikselikerroin (1 = ei karkeaa vaihetta, iPhone).</summary>
+        float KarkeaSkaala => Mathf.Clamp(Mathf.Min(Mac ? 1f : SseKerroin / NayttoKerroin, 1f / MacKuorma), 0.2f, 1f);
+        public bool KarkeaKaytossa => karkeaKaytossa;
+
+        /// <summary>Lennon, siirron tai avauksen alussa: laatat karkealla kameralla (saapuminen yhtä nopea kuin 1,71:llä).</summary>
+        public void Karkeaksi()
+        {
+            if (!auki || hallinta == null || kamera == null || KarkeaSkaala >= 0.999f || karkeaKaytossa) return;
+            if (karkea == null)
+            {
+                karkea = new GameObject("Kaupunki karkea valinta").AddComponent<Camera>();
+                karkea.transform.SetParent(kamera.transform, false);
+                karkea.enabled = false; karkea.cullingMask = 0;
+            }
+            if (!hallinta.additionalCameras.Contains(karkea)) hallinta.additionalCameras.Add(karkea);
+            hallinta.useMainCamera = false;
+            karkeaKaytossa = true; karkeaAlku = Time.realtimeSinceStartup; tarkkaAlku = -1f;
+            PaivitaKarkea();
+            kirjaa($"kaupunki: tarkkuus karkea (valinta {NayttoKerroin:F2}, tavoite {SseKerroin:F2}, pikselit ×{KarkeaSkaala:F2})");
+        }
+
+        /// <summary>Laatat ≥ 99 % ja kamera paikallaan: valinta pääkameraan (tarkentuu tavoitekertoimeen).</summary>
+        public void Tarkenna()
+        {
+            if (!karkeaKaytossa || hallinta == null) return;
+            if (MacKuorma > KuormaRaja) kuormaValinta = true;   // Mac kuormassa: valinta jää karkealle (1/Kuorma)
+            else
+            {
+                if (karkea != null) hallinta.additionalCameras.Remove(karkea);
+                hallinta.useMainCamera = true;
+            }
+            karkeaKaytossa = false; tarkkaAlku = Time.realtimeSinceStartup; tarkkaLaski = false;
+            kirjaa($"kaupunki: tarkkuus tarkentuu → {SseKerroin:F2} ({(karkeaAlku > 0 ? Time.realtimeSinceStartup - karkeaAlku : 0):F1} s karkeana)");
+        }
+
+        void PaivitaKarkea()
+        {
+            PaivitaKuormaValinta();
+            if (!(karkeaKaytossa || kuormaValinta) || karkea == null || kamera == null) return;
+            karkea.fieldOfView = kamera.fieldOfView;
+            karkea.nearClipPlane = kamera.nearClipPlane; karkea.farClipPlane = kamera.farClipPlane;
+            var r0 = kamera.pixelRect; float sk = KarkeaSkaala;
+            karkea.pixelRect = new Rect(r0.x, r0.y, Mathf.Max(8f, r0.width * sk), Mathf.Max(8f, r0.height * sk));
+            karkea.aspect = kamera.aspect;
+        }
+
+        /// <summary>Mac levossa: kuorma yli KuormaRajan → laattavalinta karkealle kameralle (1/Kuorma), alle KuormaPoisin → pääkameraan.</summary>
+        void PaivitaKuormaValinta()
+        {
+            if (!Mac || !auki || hallinta == null || kamera == null || karkeaKaytossa) return;
+            float k = MacKuorma;
+            if (!kuormaValinta && k > KuormaRaja)
+            {
+                if (karkea == null)
+                {
+                    karkea = new GameObject("Kaupunki karkea valinta").AddComponent<Camera>();
+                    karkea.transform.SetParent(kamera.transform, false);
+                    karkea.enabled = false; karkea.cullingMask = 0;
+                }
+                if (!hallinta.additionalCameras.Contains(karkea)) hallinta.additionalCameras.Add(karkea);
+                hallinta.useMainCamera = false;
+                kuormaValinta = true;
+                kirjaa($"kaupunki: Mac-kuorma {k:F2} → laattavalinta karkealla (pikselit ×{KarkeaSkaala:F2}), profiili {MacProfiili}");
+            }
+            else if (kuormaValinta && k < KuormaPois)
+            {
+                if (karkea != null) hallinta.additionalCameras.Remove(karkea);
+                hallinta.useMainCamera = true;
+                kuormaValinta = false;
+                kirjaa($"kaupunki: Mac-kuorma {k:F2} → laattavalinta pääkameraan");
+            }
+        }
+
+#if UNITY_STANDALONE_OSX
+        static string MacProfiili => Mac ? $"{Matkakirja.MacLaatu.Profiili} (SSE {Matkakirja.MacLaatu.GoogleSse:F0}, välimuisti {Matkakirja.MacLaatu.Valimuisti >> 20} Mt, kuorma {Matkakirja.MacLaatu.Kuorma:F2})" : "-";
+#else
+        static string MacProfiili => "-";
+#endif
+
+        /// <summary>Tarkentumisen jälkeen 99 %:iin kulunut aika lokiin kerran (latausajan mittaus).</summary>
+        bool tarkkaLaski;
+        void SeuraaTarkentumista()
+        {
+            if (tarkkaAlku < 0) return;
+            // Mittaus vasta, kun uudet laatat ovat ehtineet pudottaa latausasteen (simu 19.4x: "99 % 0,0 s" samassa kehyksessä).
+            if (Latausaste < ValmisProsentti) { tarkkaLaski = true; return; }
+            if (!tarkkaLaski && Time.realtimeSinceStartup - tarkkaAlku < 3f) return;
+            tarkkaLaski = false;
+            kirjaa($"kaupunki: tarkentunut {SseKerroin:F2}:een, 99 % {Time.realtimeSinceStartup - tarkkaAlku:F1} s:ssa");
+            tarkkaAlku = -1f;
+        }
+
+        /// <summary>
+        /// TARKKUUS MUISTIN MUKAAN (Päätoimittaja 6.10. 16.2x, omistaja: "näkyykö grafiikka nyt huonompana"): kerroin valitaan
+        /// kaupungin avautuessa os_proc_available_memory():n mukaan niin, että kaupungin arvioidun huipun jälkeen vapaata jää
+        /// vähintään MarginaaliGt (muistioikeudella vara on suurempi → tarkempi kuva), aina välillä 1…NayttoKerroin.
+        /// Kaupungin muistin kasvu kertoimella k ≈ KaupunkiGt × (NayttoKerroin / k)^Eksponentti, missä KaupunkiGt on laitteen
+        /// kasvu iPhone-vastaavalla laattamäärällä (simu 6.10.: Akropolis 1,3 Gt × laitekerroin 1,85 ≈ 2,4 Gt) ja eksponentti
+        /// laattojen ja tekstuurien mitattu riippuvuus (1396 → 743 laattaa, 1450 → 942 Mt kertoimella 1,71). Hätävahti: jos
+        /// vapaa muisti laskee alle HataGt:n näkymän aikana, kerroin nousee kerran ×1,3 (laatat latautuvat uudelleen, ei kaatumista).
+        /// </summary>
+        public const double MarginaaliGt = 1.5, KaupunkiGt = 2.4, Eksponentti = 0.8, HataGt = 0.7;
+
+        /// <summary>Prosessin vapaa muisti ennen jetsam-rajaa (tavua); −1 = ei tiedossa (editori, simu palauttaa 0).</summary>
+        public static long VapaaMuisti()
+        {
+            // VAIN TESTIKÄYTTÖÖN (Päätoimittaja 6.10. 17.1x: still-pari simulla, kehityskäännös ei saa muistioikeutta):
+            // Documents/kaupunki-vapaa-muisti.txt "7.0" = vapaa muisti 7 Gt (simu palauttaa muuten 0 → ei tiedossa).
+            try
+            {
+                var p = Path.Combine(Application.persistentDataPath, "kaupunki-vapaa-muisti.txt");
+                if (File.Exists(p) && double.TryParse(File.ReadAllText(p).Trim(), System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out var gt) && gt > 0)
+                    return (long)(gt * 1e9);
+            }
+            catch (Exception) { }
+#if UNITY_IOS && !UNITY_EDITOR
+            long v = (long)os_proc_available_memory();
+            return v > 0 ? v : -1;
+#else
+            return -1;
+#endif
+        }
+#if UNITY_IOS && !UNITY_EDITOR
+        [System.Runtime.InteropServices.DllImport("__Internal")] static extern System.UIntPtr os_proc_available_memory();
+#endif
+
+        /// <summary>Kerroin vapaasta muistista (Gt) ja näytön kertoimesta; vapaa ≤ 0 = ei tiedossa → näytön kerroin.</summary>
+        public static float KerroinMuistille(double vapaaGt, float naytto)
+        {
+            if (naytto <= 1f || vapaaGt <= 0) return Mathf.Max(1f, naytto);
+            double budjetti = vapaaGt - MarginaaliGt;
+            if (budjetti <= 0.1) return naytto;
+            double k = naytto * System.Math.Pow(KaupunkiGt / budjetti, 1.0 / Eksponentti);
+            return Mathf.Clamp((float)k, 1f, naytto);
+        }
+
+        /// <summary>Kehittäjän kuvapari: Documents/kaupunki-sse-kerroin.txt pakottaa kertoimen (esim. 1.71 = nykyinen, 1 = täysi).</summary>
+        static float PakotettuKerroin()
+        {
+            try
+            {
+                var p = Path.Combine(Application.persistentDataPath, "kaupunki-sse-kerroin.txt");
+                if (File.Exists(p) && float.TryParse(File.ReadAllText(p).Trim(), System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out var v) && v >= 1f) return v;
+            }
+            catch (Exception) { }
+            return -1f;
+        }
+
+        float muistiTarkistettu, muistiKirjattu;
+        bool hataKaytetty;
+        long minVapaa = long.MaxValue;
+
+        /// <summary>Kerran 2 s:ssa näkymän aikana: vapaa muisti alle HataGt → kerroin ×1,3 kerran (Cesium lataa laatat uudelleen).</summary>
+        void Muistivahti()
+        {
+            if (!auki || maasto == null || Time.realtimeSinceStartup - muistiTarkistettu < 2f) return;
+            muistiTarkistettu = Time.realtimeSinceStartup;
+            long v = VapaaMuisti();
+            if (v > 0 && v < minVapaa) minVapaa = v;
+            // Laitemittaus (Päätoimittaja: huippu ja vapaa muisti ennen/jälkeen): vapaa nyt ja pienin 15 s välein.
+            if (v > 0 && Time.realtimeSinceStartup - muistiKirjattu > 15f)
+            { muistiKirjattu = Time.realtimeSinceStartup; kirjaa($"kaupunki: vapaa muisti {v / 1e9:F2} Gt (pienin {minVapaa / 1e9:F2} Gt), kerroin {SseKerroin:F2}, laatat {Latausaste:F0} %"); }
+            if (hataKaytetty || v <= 0 || v / 1e9 >= HataGt) return;
+            hataKaytetty = true;
+            kerroin = SseKerroin * 1.3f;
+            maasto.maximumScreenSpaceError = (Kaytossa == Lahde.Google ? GoogleSse : MaastoSse) * kerroin;
+            kirjaa($"kaupunki: MUISTIHÄTÄ vapaa {v / 1e9:F2} Gt → kerroin {kerroin:F2}, SSE {maasto.maximumScreenSpaceError:F1}");
+        }
         public const long GoogleAsset = 2275207;
         public const uint Rinnakkain = 12;   // 8 → 12 (omistaja TF 144: nopeampi lento, saapuessa laatat 68 %)
         /// <summary>Laattojen valmiusraja (%): ComputeLoadProgress on arvio, joten 100 ei aina täyty.</summary>
@@ -59,6 +266,9 @@ namespace Matkakirja.Natiivi
         Camera esikamera, kamera;
         CesiumCameraManager hallinta;
         CesiumGeoreference georef;
+        CesiumOmatMallit omat;
+        /// <summary>Omat mallit (Giza-pilotti): tekijärivi CesiumOmatMallit.Tekijat.</summary>
+        public CesiumOmatMallit OmatMallit => omat;
         double3 vanhaOrigo;
         Cesium3DTileset palloTileset;
         Pohjapallolaskenta.Tila pohjaTila;
@@ -67,7 +277,7 @@ namespace Matkakirja.Natiivi
         Color vanhaTausta;
         string tunnus;
 
-        public CesiumKaupunki(PalloKierto kierto, Action<string> kirjaa) { this.kierto = kierto; this.kirjaa = kirjaa; }
+        public CesiumKaupunki(PalloKierto kierto, Action<string> kirjaa) { this.kierto = kierto; this.kirjaa = kirjaa; omat = new CesiumOmatMallit(kirjaa); }
 
         /// <summary>
         /// KUVANLAADUN KOUKUT (Siirtoseppä 5.10., kaupunkikuvan parannukset junaan 144): Avattu kutsutaan, kun näkymä ja tilesetit
@@ -123,6 +333,9 @@ namespace Matkakirja.Natiivi
         public void PidaMaski()
         {
             if (auki && kamera != null && kamera.cullingMask != 1 << Kerros) kamera.cullingMask = 1 << Kerros;
+            Muistivahti();
+            PaivitaKarkea();
+            SeuraaTarkentumista();
         }
         public Cesium3DTileset Rakennukset => rakennukset;
 
@@ -130,6 +343,8 @@ namespace Matkakirja.Natiivi
         public Lahde Kaytossa { get; private set; }
         public string Virhe { get; private set; }
         public CesiumGeoreference Georef => georef;
+        /// <summary>Georeferenssin origo lokiin (kiinteän kameran vertailu).</summary>
+        public string OrigoTeksti => georef == null ? "-" : $"{georef.latitude:F5}, {georef.longitude:F5}, {georef.height:F0} m, skaala {georef.transform.localScale.x:F4}";
         /// <summary>Tileset korkeuden näytteenottoon (Google tai maasto).</summary>
         public Cesium3DTileset Pinta => maasto;
         /// <summary>Laattojen latausaste 0–100 (pienempi kahdesta tilesetistä).</summary>
@@ -187,6 +402,19 @@ namespace Matkakirja.Natiivi
             if (georef == null || kamera == null) { Virhe = "pallon kamera puuttuu"; return false; }
             auki = true;
             avausAika = Time.realtimeSinceStartup;
+            googleUusinnat = 0;
+            // Tarkkuus muistin mukaan ennen tilesettien luontia (LuoTileset käyttää SseKerrointa).
+            long vapaa = VapaaMuisti();
+            float pakotettu = PakotettuKerroin();
+            // Tavoite muistista, alaraja AlarajaKerroin (Päätoimittaja: jos 1,0 ei näytä paremmalta kuin 1,3, 1,3 jää); pakotus ohittaa.
+            kerroin = pakotettu > 0 ? pakotettu : Mathf.Min(NayttoKerroin, Mathf.Max(AlarajaKerroin, KerroinMuistille(vapaa / 1e9, NayttoKerroin)));
+#if UNITY_STANDALONE_OSX
+            // Mac: profiilin SSE suoraan (ei näyttö- eikä alarajakerrointa); GoogleSseMin-lattia skaalautuu samalla kertoimella.
+            if (Mac && pakotettu <= 0 && Matkakirja.MacLaatu.GoogleSse > 0) kerroin = Matkakirja.MacLaatu.GoogleSse / GoogleSse;
+#endif
+            karkeaKaytossa = false; kuormaValinta = false; tarkkaAlku = -1f;
+            hataKaytetty = false; muistiTarkistettu = 0f; muistiKirjattu = 0f; minVapaa = long.MaxValue;
+            kirjaa($"kaupunki: muisti vapaa {(vapaa > 0 ? (vapaa / 1e9).ToString("F2") + " Gt" : "ei tiedossa")}, näyttö {Screen.width}×{Screen.height} (kerroin {NayttoKerroin:F2}) → SSE-kerroin {kerroin:F2}{(pakotettu > 0 ? " (pakotettu)" : "")}{(Mac ? $", Mac-profiili {MacProfiili}" : "")}");
 
             // Pallon tileset: ei SetActivea (pallo on samassa oliossa kuin georeferenssi → SetOrigin heitti "Initialize"-poikkeuksen, simu 18.0x).
             palloTileset = KarttaKerrokset.Instanssi != null ? KarttaKerrokset.Instanssi.pallo : null;
@@ -211,6 +439,10 @@ namespace Matkakirja.Natiivi
             // pallo näkyi pelkkänä pergamenttina horisontin alla (Laitetestaaja 5.10., juna 144 e95826b4, toistettu simulla 22.11).
             vanhaAsento = (kierto.leveys, kierto.pituus, kierto.korkeus, kierto.kallistus, kierto.suuntima, kierto.katseKorkeus);
             asentoTalteen = true;
+            // Pallon maaston rako pois kaupunkinäkymän ajaksi (Natiiviseppä 18a9e4d3, LS1:n juurisyy 7.10. 01.0x): pallon tilesetin
+            // näyte × korkeuskerroin 2 nosti oppaan kameraa väärin (sama kiinteä kamera 22° / 24,9° / 33,9°); oppaan oma törmäysraja
+            // Googlen pinnasta (OpasOhjaus, lähiluotain) on ainoa raja.
+            if (kierto != null) kierto.MaastoRakoPois = true;
             SiirraOrigo(origoLat, origoLon, origoKorkeus);
 
             juuri = new GameObject("Cesium-kaupunki");
@@ -233,6 +465,7 @@ namespace Matkakirja.Natiivi
         {
             Kaytossa = data;
             if (hallinta != null && esikamera != null) hallinta.additionalCameras.Remove(esikamera);
+            omat.Sulje();
             if (maasto != null) UnityEngine.Object.Destroy(maasto.gameObject);
             if (rakennukset != null) UnityEngine.Object.Destroy(rakennukset.gameObject);
             maasto = null; rakennukset = null;
@@ -243,7 +476,7 @@ namespace Matkakirja.Natiivi
                 maasto.url = KarttaKerrokset.Instanssi != null && KarttaKerrokset.Instanssi.pallo != null ? KarttaKerrokset.Instanssi.pallo.url : null;
             }
             else if (data == Lahde.Google)
-                maasto = LuoTileset("Kaupunki Google 3D", GoogleAsset, GoogleSse, GoogleValimuisti);
+                maasto = LuoTileset("Kaupunki Google 3D", GoogleAsset, GoogleSse, GoogleValimuistiNyt);
             else
             {
                 maasto = LuoTileset("Kaupunki maasto", 1, MaastoSse, MaastoValimuisti);
@@ -257,15 +490,19 @@ namespace Matkakirja.Natiivi
             hallinta = CesiumCameraManager.GetOrCreate(maasto.gameObject);
             if (hallinta != null && !hallinta.additionalCameras.Contains(esikamera)) hallinta.additionalCameras.Add(esikamera);
             kirjaa("kaupunki: data " + data);
+            // Omat mallit (Giza-pilotti 7.10.): vain Googlen datalla, leikkaus Googlen tilesetiin (CesiumOmatMallit).
+            if (data == Lahde.Google && georef != null) omat.Avaa(juuri.transform, maasto, georef.latitude, georef.longitude, Kerros);
+            if (auki) { karkeaKaytossa = false; Karkeaksi(); }   // uusi data (avaus tai Google/ion-vaihto): saapuminen karkeana
             if (auki) Avattu?.Invoke(this);
             // Muistikatto kuvanlaadun koukun jälkeen: Googlen SSE ei alle GoogleSseMin:n (asetin luo tilesetin uudelleen vain jos muuttuu).
-            if (data == Lahde.Google && maasto != null && maasto.maximumScreenSpaceError < GoogleSseMin)
+            float sseMin = GoogleSseMin * SseKerroin;
+            if (data == Lahde.Google && maasto != null && maasto.maximumScreenSpaceError < sseMin - 0.01f)
             {
-                kirjaa($"kaupunki: Google-SSE {maasto.maximumScreenSpaceError:F0} → {GoogleSseMin:F0} (muistikatto)");
-                maasto.maximumScreenSpaceError = GoogleSseMin;
+                kirjaa($"kaupunki: Google-SSE {maasto.maximumScreenSpaceError:F0} → {sseMin:F1} (muistikatto, näyttö {Screen.width}×{Screen.height}, kerroin {SseKerroin:F2})");
+                maasto.maximumScreenSpaceError = sseMin;
             }
-            if (maasto != null && maasto.maximumCachedBytes > (data == Lahde.Google ? GoogleValimuisti : MaastoValimuisti))
-                maasto.maximumCachedBytes = data == Lahde.Google ? GoogleValimuisti : MaastoValimuisti;
+            if (maasto != null && maasto.maximumCachedBytes > (data == Lahde.Google ? GoogleValimuistiNyt : MaastoValimuisti))
+                maasto.maximumCachedBytes = data == Lahde.Google ? GoogleValimuistiNyt : MaastoValimuisti;
         }
 
         Cesium3DTileset LuoTileset(string nimi, long asset, float sse, long valimuisti)
@@ -278,7 +515,7 @@ namespace Matkakirja.Natiivi
             t.tilesetSource = CesiumDataSource.FromCesiumIon;
             t.ionAssetID = asset;
             t.ionAccessToken = tunnus;
-            t.maximumScreenSpaceError = sse;
+            t.maximumScreenSpaceError = sse * SseKerroin;   // iso näyttö: sama laattamäärä kuin iPhonella
             t.maximumCachedBytes = valimuisti;
             t.maximumSimultaneousTileLoads = Rinnakkain;
             t.preloadAncestors = true;
@@ -295,11 +532,52 @@ namespace Matkakirja.Natiivi
             if (!auki || d.tileset == null || d.tileset != maasto) return;
             // Viesti voi sisältää osoitteen: ei kirjata sellaisenaan (tunnus kyselyparametrissa).
             kirjaa($"kaupunki: tilesetin lataus epäonnistui ({Kaytossa}, tyyppi {d.type}, HTTP {d.httpStatusCode})");
+            Virhe429TaiMuu(d.httpStatusCode);
+        }
+
+        /// <summary>Testikomento "opas testi429" (Päätoimittaja 6.10. 18.0x): käsitellään kuin Googlen root-pyyntö olisi saanut 429:n.</summary>
+        public void TestiVirhe429()
+        {
+            if (!auki) return;
+            kirjaa($"kaupunki: TESTI 429 ({Kaytossa})");
+            Virhe429TaiMuu(429);
+        }
+
+        /// <summary>
+        /// Ion-varalla (Google epäonnistui) uusi Google-yritys seuraavan kohteen lennon tai siirron alussa (Päätoimittaja: "yritä
+        /// Googlea uudelleen seuraavassa kohteessa"); laatat latautuvat lennon aikana.
+        /// </summary>
+        public void YritaGoogleUudelleen()
+        {
+            if (!auki || Data != Lahde.Google || Kaytossa != Lahde.Ion || vaihtoJonossa) return;
+            // Kesken kaupungin vain yksi yritys: uusi 429 palaa heti ion-varaan (uusintojen tauot näkyisivät tyhjänä kaupunkina).
+            googleUusinnat = GoogleUusintoja;
+            kirjaa("kaupunki: ion-varalla, Google uudelleen seuraavassa kohteessa");
+            LuoData(Lahde.Google);
+        }
+
+        void Virhe429TaiMuu(long http)
+        {
             // Ei tuhota tilesetiä sen omassa virhekutsussa (simu 18.20: sovellus pysähtyi heti "data Ion" -rivin jälkeen):
             // vaihto seuraavaan kehykseen.
+            // GOOGLE 429 (6.10. 17.43: "3D Tiles root requests per minute" Cesium ionin jaetussa Google-projektissa, ajoittainen
+            // maailmanlaajuinen ruuhka): uusi yritys GoogleUusintoja kertaa kasvavalla tauolla ennen ion-varaa (valkoiset OSM-talot).
+            if (Kaytossa == Lahde.Google && !vaihtoJonossa && http == 429 && googleUusinnat < GoogleUusintoja)
+            { vaihtoJonossa = true; kierto.StartCoroutine(UusiGoogle(GoogleUusintaS[googleUusinnat++])); return; }
             if (Kaytossa == Lahde.Google && !vaihtoJonossa) { vaihtoJonossa = true; kierto.StartCoroutine(VaihdaIoniin()); }
         }
         bool vaihtoJonossa;
+        public const int GoogleUusintoja = 3;
+        static readonly float[] GoogleUusintaS = { 3f, 5f, 8f };
+        int googleUusinnat;
+
+        System.Collections.IEnumerator UusiGoogle(float s)
+        {
+            kirjaa($"kaupunki: Google 429, uusi yritys {googleUusinnat}/{GoogleUusintoja} {s:F0} s:n päästä");
+            yield return new WaitForSecondsRealtime(s);
+            vaihtoJonossa = false;
+            if (auki && Kaytossa == Lahde.Google) LuoData(Lahde.Google);
+        }
 
         System.Collections.IEnumerator VaihdaIoniin()
         {
@@ -345,6 +623,17 @@ namespace Matkakirja.Natiivi
             georef.Initialize();
             georef.SetOriginLongitudeLatitudeHeight(lon, lat, korkeus);
             PaivitaKorkeusKerroin();
+            if (auki && Kaytossa == Lahde.Google) omat.Paivita(lat, lon);
+        }
+
+        /// <summary>Paikallinen ylös-suunta Unityn maailmassa pisteessä p (ellipsoidin normaali; oppaan lähiluotain).</summary>
+        public Vector3 Ylos(Vector3 p)
+        {
+            if (georef == null) return Vector3.up;
+            var gt = georef.transform;
+            double3 ecef = georef.TransformUnityPositionToEarthCenteredEarthFixed((float3)gt.InverseTransformPoint(p));
+            double3 n = math.normalize(CesiumWgs84Ellipsoid.GeodeticSurfaceNormal(ecef));
+            return ((Vector3)gt.TransformDirection((float3)georef.TransformEarthCenteredEarthFixedDirectionToUnity(n))).normalized;
         }
 
         /// <summary>
@@ -358,6 +647,15 @@ namespace Matkakirja.Natiivi
             if (georef != null) Matkakirja.KorkeusKerroin.Aseta(Matkakirja.KorkeusKerroin.Arvo, georef);
         }
 
+        // ESILATAUKSEN EHTORAJAT (Päätoimittaja 7.10.2026 klo 00.4x, Googlen ehtojen tarkistus; ÄLÄ LÖYSENNÄ ilman uutta tarkistusta):
+        // Map Tiles API -ohjeet: "must not pre-fetch, index, store, or cache any Content except under the limited conditions
+        // stated in the terms"; yleisehdot 3.2.3(a) kieltävät esilatauksen "for use outside the Services". Sallittu on sama kuin
+        // Cesiumin oma toiminta (CesiumJS preloadFlightDestinations, oletus true; Unityssä additionalCameras):
+        //   1. esikamera vain reitin SEURAAVAAN pysähdykseen, joka näytetään noin minuutin sisällä; ei varastoa useasta kohteesta,
+        //   2. EsikameraPois heti, kun suunnitelma muuttuu (toive, Seuraava, kierroksen loppu),
+        //   3. ei offline-käyttöä eikä omaa laattatallennusta; levylle vain Cesium Nativen HTTP-välimuisti, joka noudattaa
+        //      Googlen otsakkeita ("your client must respect the max-age value"; laatat: private, max-age=14400, must-revalidate,
+        //      ETag → If-None-Match). CesiumRuntimeSettings 1024/1000 rajaa vain koon, ei pidennä säilytysaikaa.
         /// <summary>Esilatauskamera kuvakulmaan: sama laskenta kuin PalloKierto (kohde, suuntima, kallistus pystystä, etäisyys).</summary>
         public void AsetaEsikamera(Kuvakulma k)
         {
@@ -382,7 +680,9 @@ namespace Matkakirja.Natiivi
                 esikamera.aspect = kamera.aspect;
                 esikamera.nearClipPlane = kamera.nearClipPlane;
                 esikamera.farClipPlane = kamera.farClipPlane;
-                esikamera.pixelRect = kamera.pixelRect;
+                // Esilataus samalla valinnalla kuin karkea vaihe (lennon kohde ei lataa tavoitetarkkuutta etukäteen).
+                var r0 = kamera.pixelRect; float sk = karkeaKaytossa ? KarkeaSkaala : 1f;
+                esikamera.pixelRect = new Rect(r0.x, r0.y, Mathf.Max(8f, r0.width * sk), Mathf.Max(8f, r0.height * sk));
             }
         }
 
@@ -413,10 +713,16 @@ namespace Matkakirja.Natiivi
             Cesium3DTileset.OnCesium3DTilesetLoadFailure -= LatausVirhe;
             avausAika = -1f; AsetaAvausLatautuu(false);
             if (hallinta != null && esikamera != null) hallinta.additionalCameras.Remove(esikamera);
+            if (hallinta != null && karkea != null) hallinta.additionalCameras.Remove(karkea);
+            if (hallinta != null) hallinta.useMainCamera = true;
+            if (karkea != null) UnityEngine.Object.Destroy(karkea.gameObject);
+            karkea = null; karkeaKaytossa = false; kuormaValinta = false; tarkkaAlku = -1f;
+            omat.Sulje();
             if (juuri != null) UnityEngine.Object.Destroy(juuri);
             juuri = null; maasto = null; rakennukset = null; esikamera = null; hallinta = null;
             KarttaKerrokset.RuutukrediititNakyviin = false;
             PallonViivat(true);
+            if (kierto != null) kierto.MaastoRakoPois = false;
             if (georef != null && georef.isActiveAndEnabled) { georef.Initialize(); georef.SetOriginLongitudeLatitudeHeight(vanhaOrigo.x, vanhaOrigo.y, vanhaOrigo.z); PaivitaKorkeusKerroin(); }
             if (asentoTalteen && kierto != null)
             {

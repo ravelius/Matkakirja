@@ -10,6 +10,8 @@
 //             laskurilla (TUMMA lappu "Seuraava: <nimi> 3 s · Pysäytä"). Sama asetus kuin lehden jatkuva luenta
 //             (PlayerPrefs matkakirja-lukija-auto, web localStorage sama avain).
 // Kaupungit eivät ole listalla (niiden valo avaa kaupungin, ei nostoa); näkymätön (NostonMuste.Nakyy false) ei ole.
+// MAAKUNNAT (omistaja 6.10. 13.0x): maakunta avautuu samaan nostokorttiin, ja selain näyttää silloin maan kaikki maakunnat
+// (MuuLista: "<MAA> · MAAKUNNAT", yksi siru); ‹ › ja AUTO pysyvät maakuntien sisällä, eikä nostoista päästä maakuntiin.
 // Testikomennot Nostokortti.Testaa-nimillä: selain, selain-seuraava, selain-edellinen, selain-siru:<aihe>, selain-rivi:<n>,
 // auto, auto-pois, siirto, pysayta.
 using System;
@@ -36,14 +38,29 @@ namespace Matkakirja.Natiivi
         readonly VisualElement kortti, rivi, paneeli, siruRivi, lappu, palkki;
         readonly ScrollView sirut, lista;
         readonly Button edellinen, seuraava, avaaja, pysayta;
-        readonly Label otsikko, lappuNimi, lappuAika;
+        readonly Label otsikko, lappuNimi, lappuAika, avaajaTeksti;
         readonly Action<string> avaa;
         readonly Action autoVaihtui;
         Button autoNappi;
+        /// <summary>AUTO-kytkin (oikean ryhmän ensimmäinen; Nostokortti.SiirraYlarivi ei poista sitä).</summary>
+        public Button AutoNappi => autoNappi;
         readonly List<NostoKerros.Nosto> jarjestys = new List<NostoKerros.Nosto>();
         string nykyinen, maa, aihe;
         IVisualElementScheduledItem siirtoAjo;
         float siirtoAlku;
+
+        /// <summary>Muu kuin nostojen lista (maakunnat): otsikko, sirun nimi ja rivit (tunnus, nimi) järjestyksessä.</summary>
+        public sealed class Lista
+        {
+            public string Otsikko, Siru, Avaaja;
+            public List<(string Id, string Nimi)> Rivit = new List<(string, string)>();
+            /// <summary>Rivi luettu (✓ ja himmennys kuten luetulla nostolla); null = ei merkintää.</summary>
+            public Func<string, bool> Luettu;
+        }
+        /// <summary>Valon tunnuksesta muu lista (null = nostojen lista maan mukaan).</summary>
+        public Func<string, Lista> MuuLista;
+        Lista muu;
+        const string MuuAihe = "muu";
 
         public bool PaneeliAuki { get; private set; }
         /// <summary>Kortin pystyvieritys (Kosketusvieritys) vierittää paneelin listaa, kun paneeli on auki.</summary>
@@ -70,6 +87,46 @@ namespace Matkakirja.Natiivi
         /// jossa pitkä kategoria lyhenee …-merkillä).</summary>
         const float KapeaRivi = 360f;
 
+        /// <summary>Ylärivin tiivistys 0–3 (1: askelnapit kapeat, 2: lisäksi AUTO ja NOSTOT ilman harvennusta, ryhmävälit pienemmiksi,
+        /// 3: askelnapit 22 pt ja avaajan sivuvälit pois, 4: avaajan ▾ pois; juna 155 iPhonen vaakakortti 304 pt: MAAKUNNAT-rivillä
+        /// › ja AUTO jäivät portaalla 3 päällekkäin −11 pt, ▾ vapauttaa ~15 pt; avaaja aukeaa yhä napautuksesta).</summary>
+        int tiivis;
+        float tiivisLeveys;
+
+        /// <summary>Pienin väli (pt) peräkkäisten ylärivin osien välillä (negatiivinen = päällekkäin); testit ja loki.</summary>
+        public float PieninVali()
+        {
+            var osat = new List<VisualElement>();
+            foreach (var c in Vasen.Children()) if (c.resolvedStyle.display != DisplayStyle.None && c.worldBound.width > 0) osat.Add(c);
+            osat.Add(edellinen); osat.Add(avaaja); osat.Add(seuraava);
+            foreach (var c in Oikea.Children()) if (c.resolvedStyle.display != DisplayStyle.None && c.worldBound.width > 0) osat.Add(c);
+            float pienin = float.MaxValue;
+            for (int i = 0; i + 1 < osat.Count; i++) pienin = Mathf.Min(pienin, osat[i + 1].worldBound.xMin - osat[i].worldBound.xMax);
+            // Oikean reunan osa ei saa mennä rivin yli.
+            if (osat.Count > 0) pienin = Mathf.Min(pienin, rivi.worldBound.xMax - osat[osat.Count - 1].worldBound.xMax);
+            return pienin == float.MaxValue ? 0f : pienin;
+        }
+
+        void TarkistaLeveys()
+        {
+            if (rivi.panel == null || rivi.resolvedStyle.display == DisplayStyle.None) return;
+            float lev = rivi.layout.width;
+            if (float.IsNaN(lev) || lev <= 0) return;
+            float vali = PieninVali();
+            int ennen = tiivis;
+            if (vali < -0.5f && tiivis < 4) { tiivis++; tiivisLeveys = lev; }
+            else if (tiivis > 0 && lev > tiivisLeveys + 40f) tiivis = 0;   // rivi leveni selvästi: takaisin väljäksi ja uusi tarkistus
+            if (tiivis == ennen) return;
+            rivi.EnableInClassList("mk-nostoselain--tiivis1", tiivis >= 1);
+            rivi.EnableInClassList("mk-nostoselain--tiivis2", tiivis >= 2);
+            rivi.EnableInClassList("mk-nostoselain--tiivis3", tiivis >= 3);
+            rivi.EnableInClassList("mk-nostoselain--tiivis4", tiivis >= 4);
+            Debug.Log($"MATKAKIRJA nostoselain: ylärivi tiivis {tiivis} (pienin väli {vali:0.0} pt, leveys {lev:0} pt)");
+        }
+
+        /// <summary>Testi: ylärivin leveys, tiivistys ja pienin väli.</summary>
+        public string YlariviKuvaus() => $"ylärivi {rivi.layout.width:0} pt, tiivis {tiivis}, pienin väli {PieninVali():0.0} pt";
+
         public Nostoselain(VisualElement kortti, VisualElement ennen, Action<string> avaa, Action autoVaihtui)
         {
             this.kortti = kortti;
@@ -87,6 +144,7 @@ namespace Matkakirja.Natiivi
             // Nostopaneelin ylärivi (omistaja 2.10. klo 13.53): ‹ NOSTOT ▾ › ja AUTO samalla rivillä HISTORIA-kapiteelin
             // kirjasimella, molemmat kevyinä suorakulmioina (ei ovaalia; web #3849 AUTO:n malli).
             avaaja = Rakenne.Nappi("NOSTOT", "mk-nostoselain__avaaja", VaihdaPaneeli, rivi);
+            avaajaTeksti = avaaja.Q<Label>();
             // ▾ piirroksena (Kone-kirjasimesta puuttuu merkki: laitteella neliö).
             Rakenne.Ikoni("<path class=\"taytto\" d=\"M7.5 10h9L12 15z\"/>", "mk-nostoselain__avaajaikoni", avaaja);
             seuraava = Rakenne.Nappi(null, "mk-nostoselain__askel", () => Askel(1), rivi, Ikonit.NuoliOikea);
@@ -95,6 +153,12 @@ namespace Matkakirja.Natiivi
             // Puhelimella rivi ei mahdu kokonaan (5fc4be80: HISTORIA katkesi ja ≡ meni päälle): kapealla kategoriasta vain symboli.
             // Luokka riippuu vain kortin leveydestä (ei rivin sisällöstä), joten asettelu ei kierrä.
             rivi.RegisterCallback<GeometryChangedEvent>(e => rivi.EnableInClassList("mk-nostoselain--kapea", e.newRect.width < KapeaRivi));
+            // LEVEYSBUDJETTI (omistaja TF 154 6.10. 22.x, iPadin vaakapaneeli: "Noston yläpalkki vielä sekaisin", › AUTO-tekstin
+            // päällä): osat eivät kutistu eivätkä mene päällekkäin; jos jokin väli jää negatiiviseksi, rivi tiivistyy portaittain.
+            rivi.RegisterCallback<GeometryChangedEvent>(_ => rivi.schedule.Execute(TarkistaLeveys));
+            // Rivin leveys ei muutu, kun avaajan teksti (NOSTOT → MAAKUNNAT) tai oikean ryhmän sisältö vaihtuu: tarkistus myös niistä.
+            avaaja.RegisterCallback<GeometryChangedEvent>(_ => rivi.schedule.Execute(TarkistaLeveys));
+            Oikea.RegisterCallback<GeometryChangedEvent>(_ => rivi.schedule.Execute(TarkistaLeveys));
             edellinen.tooltip = "Edellinen nosto";
             seuraava.tooltip = "Seuraava nosto";
             Kirjasimet.Aseta(avaaja, Kirjasin.Kone);
@@ -146,7 +210,8 @@ namespace Matkakirja.Natiivi
             Rakenne.El("mk-nostoselain__autopiste", autoNappi, PickingMode.Ignore);
             Kirjasimet.Aseta(Rakenne.Teksti("AUTO", "mk-nostoselain__autoteksti", autoNappi), Kirjasin.Kone);
             autoNappi.tooltip = "Auto: lukee avautuvat nostot ja siirtyy seuraavaan";
-            rivi.Insert(rivi.IndexOf(seuraava) + 1, autoNappi); // NOSTOT-ryhmän viereen keskelle (omistaja 18.4x)
+            // Juna 153 (omistaja 6.10. 19.2x, Kronborg): AUTO oikean ryhmän alkuun (AUTO, pin, ≡, kaiutin tasaväleillä).
+            Oikea.Insert(0, autoNappi);
             PaivitaAuto();
         }
 
@@ -165,10 +230,30 @@ namespace Matkakirja.Natiivi
         {
             LopetaSiirto();
             nykyinen = valoId;
+            jarjestys.Clear();
+            muu = valoId != null ? MuuLista?.Invoke(valoId) : null;
+            string avaajaUusi = muu?.Avaaja ?? "NOSTOT";
+            if (avaajaTeksti.text != avaajaUusi)
+            {
+                avaajaTeksti.text = avaajaUusi;
+                // Uusi teksti: leveysbudjetti alusta (GeometryChanged tiivistää uudelleen tarvittaessa).
+                tiivis = 0;
+                rivi.RemoveFromClassList("mk-nostoselain--tiivis1"); rivi.RemoveFromClassList("mk-nostoselain--tiivis2"); rivi.RemoveFromClassList("mk-nostoselain--tiivis3");
+                rivi.RemoveFromClassList("mk-nostoselain--tiivis4");
+            }
+            if (muu != null)
+            {
+                foreach (var r in muu.Rivit) jarjestys.Add(new NostoKerros.Nosto { Id = r.Id, Nimi = r.Nimi, Aihe = MuuAihe });
+                aihe = MuuAihe;
+                rivi.style.display = jarjestys.Count > 0 ? DisplayStyle.Flex : DisplayStyle.None;
+                PaivitaAskeleet();
+                PaivitaAuto();
+                if (PaneeliAuki) RakennaPaneeli();
+                return;
+            }
             var k = NostoKerros.Instanssi;
             var n = k?.NostoIdlla(valoId);
             maa = n?.Maa ?? k?.NykyinenMaa;
-            jarjestys.Clear();
             if (k != null && maa != null)
             {
                 var mukana = k.MaanNostot(maa).Where(Mukaan).ToList();
@@ -185,7 +270,8 @@ namespace Matkakirja.Natiivi
             x.Id != null && x.Aihe != null && x.Aihe != "kaupungit" && x.Aihe != "kaikki" && x.Aihe != "ei"
             && (PeliOhjain.Instanssi == null || PeliOhjain.Instanssi.NostonMuste(x.Id).Nakyy);
 
-        static bool Luettu(NostoKerros.Nosto x) => PeliOhjain.Instanssi != null && PeliOhjain.Instanssi.NostonMuste(x.Id).Loydetty;
+        bool Luettu(NostoKerros.Nosto x) => muu != null ? muu.Luettu?.Invoke(x.Id) ?? false
+            : PeliOhjain.Instanssi != null && PeliOhjain.Instanssi.NostonMuste(x.Id).Loydetty;
 
         static string Nimi(NostoKerros.Nosto x) => x.Nimi ?? x.Nimio ?? x.Id;
 
@@ -227,7 +313,8 @@ namespace Matkakirja.Natiivi
             nykyinen = x.Id;
             aihe = x.Aihe;
             PaivitaAskeleet();
-            var kierto = UnityEngine.Object.FindAnyObjectByType<PalloKierto>();
+            // Maakunnat: kartta siirtyy valinnan mukana (avaa → Maakunnat), ei lentoa nostokoordinaatteihin.
+            var kierto = muu != null ? null : UnityEngine.Object.FindAnyObjectByType<PalloKierto>();
             kierto?.Aja(x.OmaLat, x.OmaLon, 0, LentoS, null);
             avaa?.Invoke(x.Id);
         }
@@ -266,10 +353,16 @@ namespace Matkakirja.Natiivi
         void RakennaPaneeli()
         {
             var nimi = UiSisalto.Maa(maa)?.Nimi ?? maa ?? "";
-            otsikko.text = (nimi + " · Nostot").ToUpperInvariant();
+            otsikko.text = muu != null ? muu.Otsikko.ToUpperInvariant() : (nimi + " · Nostot").ToUpperInvariant();
             siruRivi.Clear();
             Button valittu = null;
-            foreach (var r in NostoMerkit.Jarjestys)
+            if (muu != null)
+            {
+                var (ml, mk) = Maarat(MuuAihe);
+                valittu = Rakenne.Nappi($"{muu.Siru} ({ml}/{mk})", "mk-nostoselain__siru mk-valittu", () => { }, siruRivi);
+                Kirjasimet.Aseta(valittu, Kirjasin.KoneBold);
+            }
+            else foreach (var r in NostoMerkit.Jarjestys)
             {
                 var (l, k) = Maarat(r.Id);
                 if (k == 0) continue;
@@ -364,6 +457,7 @@ namespace Matkakirja.Natiivi
         public string Testaa(string nappi)
         {
             if (nappi == "selain") { VaihdaPaneeli(); return null; }
+            if (nappi == "selain-ylarivi") return YlariviKuvaus();   // ui nosto <id> selain-ylarivi: leveysbudjetti lokiin
             if (nappi == "selain-seuraava") return Askel(1) ? null : "ei seuraavaa nostoa";
             if (nappi == "selain-edellinen") return Askel(-1) ? null : "ei edellistä nostoa";
             if (nappi == "auto") { AsetaAuto(true); return null; }

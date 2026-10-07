@@ -6,7 +6,7 @@
 // Kuva edellä kahdessa vaiheessa (js/nostokuva.js): 1) pelkkä kuva, lyhyt kuvateksti ja
 // LISÄÄ; 2) koko kortti (kuvasarja ‹ › ja laskuri, teksti kappaleittain, lajin lohkot).
 // Kuvaton kortti aukeaa suoraan vaiheeseen 2. Kuvan napautus vaiheessa 2 avaa suurennoksen
-// (pitkä selite ja lähderivi). Sulkeminen: napautus kortin ohi tai kortin tekstiin/pohjaan (löydös 133: ei ✕-nappia).
+// (pitkä selite ja lähderivi). Sulkeminen: napautus kortin ohi, kahvan veto alas tai Esc (ei ✕-nappia; tekstin napautus ei sulje, omistaja 6.10.).
 //
 //   skandaali  nimiö LISÄLEHTI, "paikka · vuosi" kaksoisviivojen välissä, otsikko, ingressi,
 //              kuvat, teksti, minivisa (+50, Kaupat.Minitehtava(iso, "skandaali:<id>"))
@@ -57,6 +57,36 @@ namespace Matkakirja.Natiivi
         string pinId;
         bool pienennetaan;
         string PinOmistaja => nosto?.Id == null ? null : "nosto:" + nosto.Id;
+        static string PinOmistajaNostolle(Nosto n) => n?.Id == null ? null : "nosto:" + n.Id;
+
+        /// <summary>
+        /// PINNATTU TILA PYSYY (omistaja 6.10. 23.0x: "nosto saisi pysyä pienennettynä vaikka klikkaisin toista nostoa kartalla.
+        /// Luenta vain siirtyisi siihen"): pinnattu nosto on palkkina ja kortti kiinni → kartalta valittu tai AUTOn seuraava nosto
+        /// ei avaa korttia, vaan palkki ja luenta vaihtuvat siihen; ensimmäinen kuva näkyy palkin alla 3 s (Pinnaus.NaytaKuva).
+        /// </summary>
+        bool Taustatila => !Auki && Pinnaus.Pienena && !Pinnaus.Vaisto && Pinnaus.Nykyinen?.Omistaja != null
+                           && Pinnaus.Nykyinen.Omistaja.StartsWith("nosto:", StringComparison.Ordinal);
+
+        void NaytaTaustalla(Nosto n)
+        {
+            nosto = n;
+            pinId = null;
+            lukija.Aseta(LuennanTekstit(n), "Kuuntele: " + (n.Otsikko ?? ""), PinOmistajaNostolle(n));
+            selain.Paivita(valo);
+            lukija.Paina();        // pelaajan luenta: korvaa edellisen pinnatun
+            VaihdaPin();           // uusi nosto pinnatuksi …
+            Pinnaus.Pienenna();    // … ja heti palkiksi
+            lukija.Pysayta();      // ketju taustalle (jatkuu, kunnes pinnaus vaihtuu tai luettu loppuun)
+            Pinnaus.NaytaKuva(n.Kuvat.Count > 0 ? n.Kuvat[0].Lahde : null);
+            Debug.Log($"MATKAKIRJA ui pinnaus: palkki vaihtui nostoon {n.Id} (kortti kiinni)");
+        }
+
+        /// <summary>Taustalla luettu nosto loppui: AUTO siirtyy seuraavaan palkkina (kortti pysyy kiinni).</summary>
+        void TaustaLoppui(string omistaja)
+        {
+            if (!Nostoselain.Auto || !Taustatila || Pinnaus.Nykyinen.Omistaja != omistaja) return;
+            if (!selain.Askel(1)) Debug.Log("MATKAKIRJA ui pinnaus: AUTO – ei seuraavaa nostoa");
+        }
         /// <summary>Tämä kortti näyttää pinnatun noston täysikokoisena.</summary>
         bool PinNakyvissa => Auki && Pinnaus.Nykyinen != null && Pinnaus.Nykyinen.Omistaja == PinOmistaja && !Pinnaus.Pienena;
 
@@ -107,7 +137,8 @@ namespace Matkakirja.Natiivi
         readonly VisualElement kahva, kahvaAlue;
         bool laajennettu, kahvaVeto;
         Vector2 kahvaAlku;
-        const float KahvaVyohyke = 28f, KahvaYlos = 20f, KahvaAlas = 40f;
+        // Vyöhyke 20 pt (juna 155: selaimen rivi nousi ~8 pt kahvan alle; ennen 28 pt, joka olisi peittänyt nappien yläosan).
+        const float KahvaVyohyke = 20f, KahvaYlos = 20f, KahvaAlas = 40f;
         const float HeroSuhde = 0.5f; // tyylikirja mitat.kuva.hero-kortti 2:1
 
         Nosto nosto;
@@ -116,6 +147,17 @@ namespace Matkakirja.Natiivi
         readonly Dictionary<string, Action> napit = new Dictionary<string, Action>();
 
         public bool Auki { get; private set; }
+
+        // MAAKUNTA NOSTOKORTTINA (omistaja 6.10. 13.0x, Päätoimittaja: vaihtoehto b): maakunta avautuu tähän korttiin valolla
+        // "maakunta:ISO:tunnus". Pienenä kuva, koko ensimmäinen kappale nostotekstin koossa ja LISÄÄ; suurena samat napit kuin
+        // nostossa (‹ MAAKUNNAT ›, AUTO, kaiutin, pin, Kysy). Sisällön ja maan maakuntalistan antaa Maakunnat.
+        public const string MaakuntaEtuliite = "maakunta:";
+        public static Func<string, Nosto> MaakuntaNosto;
+        public static Func<string, Nostoselain.Lista> MaakuntaLista;
+        /// <summary>Kortti näyttää maakuntaa.</summary>
+        public bool MaakuntaAuki => Auki && valo != null && valo.StartsWith(MaakuntaEtuliite, StringComparison.Ordinal);
+        /// <summary>Minikartan suurennos (sama kuin entisessä maakuntakortissa).</summary>
+        readonly MinikartanSuurennos minikartta;
 
         /// <summary>
         /// Jokainen näkyvä avaus (valon id; myös toinen avaus ja lisäkaupungin kortti), toisin kuin
@@ -142,7 +184,13 @@ namespace Matkakirja.Natiivi
             kerros = Rakenne.El("mk-himmennys mk-nosto__kerros", ui.Juuri(UiKerros.Valikot));
             kerros.style.display = DisplayStyle.None;
             // Kohde poimitaan itse (Poimi): vanhentunut kohde kortin kohdalla ei sulje korttia himmennyksestä.
-            kerros.RegisterCallback<PointerDownEvent>(e => { if (e.target == kerros && Poimi(e.position, kerros) == kerros) Sulje(); });
+            kerros.RegisterCallback<PointerDownEvent>(e =>
+            {
+                if (e.target != kerros || Poimi(e.position, kerros) != kerros) return;
+                // Pinnattu palkki himmennyksen alla: napautus palauttaa pinnatun heti (ei vain sulje tätä korttia).
+                if (Pinnaus.OsuuPalkkiin(e.position)) { e.StopPropagation(); Sulje(); Pinnaus.Palauta(); return; }
+                Sulje();
+            });
             kortti = Rakenne.El("mk-nosto", kerros);
             // Osuma-ala kortin yläpuolelle (savuke 110): poimittava kaista, jonka painallus tulee kortille (EleAlkoi).
             kahvaAlue = Rakenne.El("mk-vetokahva mk-nosto__vetoalue", kortti);
@@ -157,6 +205,7 @@ namespace Matkakirja.Natiivi
                 loppui: LuentaLoppui);
             selain = new Nostoselain(kortti, sisus, id => Avaa(id), AutoVaihtui);
             selain.LisaaAuto();
+            selain.MuuLista = id => id.StartsWith(MaakuntaEtuliite, StringComparison.Ordinal) ? MaakuntaLista?.Invoke(id) : null;
             // PIN-KUVAKE (omistaja 5.10.2026 klo 23.3x): ylärivillä kaiuttimen kokoisena (mk-lukija 34 pt), pinnattuna korostettu.
             pinNappi = Rakenne.Nappi(null, "mk-lukija mk-nosto__pin", VaihdaPin, null, Ikonit.Viiva["pin"]);
             pinNappi.tooltip = "Pinnaa";
@@ -170,6 +219,7 @@ namespace Matkakirja.Natiivi
                 VaihdaPin();
             }, TrickleDown.TrickleDown);
             Pinnaus.Muuttui += PaivitaPin;
+            KortinLukija.TaustaLoppui += TaustaLoppui;
             lukija.Juuri.RegisterCallback<GeometryChangedEvent>(_ => SijoitaLukija());
             // Napit näkyvät heti (omistaja 28.9.2026, TF 1.0.34, Korintin kanava): kiinni kortissa, ei vierityksessä.
             sisus.verticalScroller.valueChanged += _ => SijoitaLukija();
@@ -203,6 +253,7 @@ namespace Matkakirja.Natiivi
 
             suurennos = new Kuvasuurennos(ui.Juuri(UiKerros.Valikot)) { Tayteen = true, Kokoruutu = true }; // löydökset 102 ja 150
             suurennos.AukiMuuttui += Pehmenna;
+            minikartta = new MinikartanSuurennos(ui.Juuri(UiKerros.Valikot));
         }
 
         // Löydös 132 (omistaja, build 16): kuva kokoruudulle → tausta pehmenee tummennuksen lisäksi. Kartta on jo
@@ -261,6 +312,14 @@ namespace Matkakirja.Natiivi
         System.Collections.IEnumerator AvaaReitti(string valoId, int v, Action<bool> jalkeen)
         {
             // Verkko-odotus: kortti on piilossa, kunnes data on jäsennetty (löydös 104).
+            if (valoId != null && valoId.StartsWith(MaakuntaEtuliite, StringComparison.Ordinal))
+            {
+                var m = MaakuntaNosto?.Invoke(valoId);
+                if (m != null) { napit.Clear(); valo = valoId; Nayta(m); MittaaAvaus(valoId, v); }
+                else Debug.Log("MATKAKIRJA ui nostot: ei maakuntaa " + valoId);
+                jalkeen?.Invoke(m != null);
+                yield break;
+            }
             var odotus = VerkkoOdotus.Alku("nosto", valoId);
             Lisakaupunki lk = null;
             yield return NostoSisalto.HaeLisakaupunki(valoId, x => lk = x);
@@ -281,6 +340,12 @@ namespace Matkakirja.Natiivi
             VerkkoOdotus.Loppu(odotus, v != versio ? "ohitettu" : n == null ? "ei sisältöä" : null);
             if (v != versio) yield break;
             if (n == null) Debug.Log("MATKAKIRJA ui nostot: ei sisältöä valolle " + valoId);
+            else if (Taustatila)
+            {
+                // Pinnattu nosto palkkina: sama nosto avaa koko kortin, toinen vaihtaa palkin ja luennan (kortti pysyy kiinni).
+                if (Pinnaus.Nykyinen.Omistaja == PinOmistajaNostolle(n)) Pinnaus.Palauta();
+                else { valo = valoId; NaytaTaustalla(n); KirjaaLoyto(valoId); }
+            }
             else { valo = valoId; Nayta(n); MittaaAvaus(valoId, v); KirjaaLoyto(valoId); }
             jalkeen?.Invoke(n != null);
         }
@@ -308,6 +373,7 @@ namespace Matkakirja.Natiivi
                 // Kaiutin (luennan mittaus): kuin napautus, ei kortin oma nappi.
                 if (nappi == "kaiutin") { lukija.Paina(); tulos?.Invoke(null); return; }
                 if (nappi == "valikko") { lukija.AvaaValikko(); tulos?.Invoke(null); return; }
+                if (nappi == "kartta-pois") { minikartta.Sulje(false); tulos?.Invoke(null); return; }
                 if (napit.TryGetValue(nappi, out var a)) { a(); tulos?.Invoke(null); }
                 else tulos?.Invoke("kortilla ei ole nappia " + nappi + " (on: " + string.Join(", ", napit.Keys) + ")");
             }
@@ -366,6 +432,7 @@ namespace Matkakirja.Natiivi
             kahvaVeto = false;
             lukija.Pysayta();
             selain.Sulje();
+            minikartta.Sulje(true);
             SuljeVisa();
             Puhe.Instanssi?.PeruEsihaku(alunEsihaku);
             alunEsihaku = null;
@@ -386,7 +453,9 @@ namespace Matkakirja.Natiivi
             Mitoita();
             // Kohdekortti (omistaja 1.10.2026 kokeiluun, loki f344f1034): suoraan koko korttiin ilman kuva edellä -vaihetta.
             // AUTO: suoraan koko korttiin ja luentaan (kuva edellä -vaihe ohitetaan).
-            if (n.Kuvat.Count > 0 && n.Laji != NostoLaji.Kohde && !Nostoselain.Auto) Vaihe1(); else Vaihe2();
+            // Pinnatun noston palautus suoraan koko korttiin: luenta kiinnittyy takaisin samaan kohtaan (KortinLukija.Aseta).
+            bool pinnattu = Puhe.Instanssi?.Pinnattu != null && Puhe.Instanssi.Pinnattu == PinOmistajaNostolle(n);
+            if (n.Kuvat.Count > 0 && n.Laji != NostoLaji.Kohde && !Nostoselain.Auto && !pinnattu) Vaihe1(); else Vaihe2();
             AvaaKerros();
             EsihaeLuennanAlku(n);
             selain.Paivita(valo);
@@ -576,11 +645,7 @@ namespace Matkakirja.Natiivi
             eleAlku = e.position;
             eleAika = Time.unscaledTime * 1000f;
             selainSulki = !kahvaVeto && selain.OhiPainallus(e.position);
-            // Painalluksen kohde päätetään alussa: nappi (LISÄÄ, lukijan kaiutin/valikko), kenttä, kuva tai linkki ei sulje korttia,
-            // vaikka napin toiminto muuttaa asettelua ja nostosta syntyvä ClickEvent osuu sen jälkeen korttiin (1.0.39-savuke,
-            // Laitetestaaja: lukijan napautus sulki kortin; LISÄÄ-napautus sulki kortin FB234D08:lla).
             var kohde = Poimi(e.position, e.target as VisualElement);
-            alkuValitsee = kahvaVeto || Valitseva(kohde);
             // 1.0.40 (mitattu FB234D08): UI Toolkit antaa kosketukselle kohteeksi välimuistissa olevan "osoittimen alla" -elementin,
             // kun kosketus osuu samaan pisteeseen kuin edellinen. Kaiuttimen napautus sai kohteeksi kortin (edellinen kosketus
             // ennen asettelun muutosta), vaikka pisteessä on nappi: kortti sulkeutui eikä luenta alkanut (omistaja iPadilla:
@@ -606,19 +671,7 @@ namespace Matkakirja.Natiivi
         /// <summary>Nappi tai kuvakehys, jonka kohdalla painallus alkoi mutta jonka tapahtuma meni vanhentuneelle kohteelle.</summary>
         VisualElement ohitettu;
 
-        bool alkuValitsee;
-
-        bool Valitseva(VisualElement kohde)
-        {
-            for (var v = kohde; v != null && v != kortti; v = v.parent)
-            {
-                if (v is Button || v is TextField || v.ClassListContains("mk-nosto__kuvakehys") || v.ClassListContains("mk-nosto__lukija")) return true;
-                if (v is TextElement te && te.text != null && te.text.Contains("<link=")) return true;
-            }
-            return false;
-        }
-
-        /// <summary>Napautus kortin tekstiin tai pohjaan sulkee (web avaaFokuskohde); painikkeet, kuvat ja linkit valitsevat.</summary>
+        /// <summary>Napautus korttiin: vanhentuneelle kohteelle mennyt napin/kuvan painallus painetaan; teksti ja pohja eivät sulje.</summary>
         void NapautusKorttiin(ClickEvent e)
         {
             var ohi = ohitettu;
@@ -633,11 +686,8 @@ namespace Matkakirja.Natiivi
                 else using (var c = ClickEvent.GetPooled()) { c.target = ohi; ohi.SendEvent(c); }
                 return;
             }
-            if (alkuValitsee || Valitseva(kohde)) return;
-            bool pohja = kohde == kortti || kohde == sisus || kohde == sisus.contentContainer || kohde == sisus.contentViewport || kohde is TextElement;
-            if (!pohja) return;
-            Aanet.PulunTehoste("paper");
-            Sulje();
+            // Omistaja 6.10.2026 ("jos nostossa painaa nostotekstin päältä, koko nosto häviää näkyvistä. korjaa tämä asap"):
+            // tekstin tai pohjan napautus ei enää sulje (kumoaa löydöksen 133). Sulku: ohinapautus, kahvan veto alas ja Esc.
         }
 
         void AvaaKerros()
@@ -724,10 +774,17 @@ namespace Matkakirja.Natiivi
             kortti.AddToClassList("mk-nosto--esittely");
             var k = nosto.Kuvat[0];
             var kuva = Kuvakehys(sisus, k, Vaihe2, suhde: HeroSuhde);
+            // Maakunta (omistaja 6.10. 13.0x): otsikko ja koko ensimmäinen kappale nostotekstin koossa kuvan alla, sitten LISÄÄ.
+            if (nosto.Laji == NostoLaji.Maakunta)
+            {
+                Kirjasimet.Aseta(Rakenne.Teksti(nosto.Otsikko ?? "", "mk-nosto__otsikko", sisus), Kirjasin.LukuLihava);
+                var eka = Kappaleet(nosto.Teksti).FirstOrDefault();
+                if (!string.IsNullOrEmpty(eka)) Rakenne.Teksti(Riviva(eka), "mk-nosto__teksti", sisus);
+            }
             var alarivi = Rakenne.El("mk-nosto__esittelyrivi", sisus, PickingMode.Ignore);
             // Web .nostokuva-selite keskitettynä ja .nostokuva-lisaa sen alla keskellä (mitattu 24.9. b11); lähde vain suurennoksessa.
             // Web nostokuvaAloita: kuvatekstiLyhyt(kuva), eläintäyn vakioselite vasta karusellissa (pariteetti b12-2 #27).
-            Kuvateksti(alarivi, k.LyhytVara ? "" : k.Lyhyt ?? nosto.Otsikko ?? "", k);
+            if (nosto.Laji != NostoLaji.Maakunta) Kuvateksti(alarivi, k.LyhytVara ? "" : k.Lyhyt ?? nosto.Otsikko ?? "", k);
             var lisaa = Rakenne.Nappi("LISÄÄ", "mk-nosto__lisaa", Vaihe2, alarivi);
             Kirjasimet.Aseta(lisaa, Kirjasin.Kone);
         }
@@ -763,7 +820,8 @@ namespace Matkakirja.Natiivi
                 : n.Laji == NostoLaji.Elain ? "Kuuntele eläinkortti"
                 : n.Laji == NostoLaji.Takynosto ? "Kuuntele kortti"
                 : n.Laji == NostoLaji.Syvennys ? "Kuuntele tarina"
-                : "Kuuntele hetki");
+                : n.Laji == NostoLaji.Maakunta ? "Kuuntele: " + (n.Otsikko ?? "")
+                : "Kuuntele hetki", PinOmistajaNostolle(n));
 
             // Löydös 133: kaiutin ylärivin oikeaan päähän (oikean yläkulman ✕ ja sen viereinen kaiutin poistuivat).
             // NAPIT NÄKYVÄT HETI (omistaja 28.9.2026, TF 1.0.34: "käyttäjän pitää vierittää lappua hieman alaspäin, jotta
@@ -819,7 +877,10 @@ namespace Matkakirja.Natiivi
             // Web lehtipalstaKotelo: pitkä teksti kahdelle palstalle, kun sen oma leveys ≥ 600 (iPadin kuvakortti).
             // Säilyneen ihmekohteen nykykuva kelluu tekstin (ensimmäisen palstan) oikealla (web piirraKohdeTeksti).
             bool pitka = Lehtipalstat.OnPitka(n.Teksti, kappaleet.Count);
-            if (n.Nykykuva != null)
+            if (n.Kylkikartta != null)
+                Lehtipalstat.Luo(sisus, kappaleet, RiviValiAlku, "mk-nosto__teksti", Kirjasin.Luku, Linkit, Kylkikartta(n.Kylkikartta), palstoita: false,
+                    kylkiOsuus: MinikartanSuurennos.KylkiOsuus, kylkiKatto: MinikartanSuurennos.KylkiKatto);
+            else if (n.Nykykuva != null)
                 Lehtipalstat.Luo(sisus, kappaleet, RiviValiAlku, "mk-nosto__teksti", Kirjasin.Luku, Linkit, Nykykuva(n.Nykykuva), pitka);
             else if (pitka)
                 Lehtipalstat.Luo(sisus, kappaleet, RiviValiAlku, "mk-nosto__teksti", Kirjasin.Luku, Linkit);
@@ -837,6 +898,7 @@ namespace Matkakirja.Natiivi
                 if (n.KohdeId != null) Kohdenappi(sisus, n);
                 KysyPululta(sisus, n);
             }
+            if (n.Laji == NostoLaji.Maakunta) MaakunnanToiminnot(n);
             if (n.Laji == NostoLaji.Kohde)
             {
                 // Kysymykset ja kierros siirtyivät alareunan toimintoriville (Kysy · Visa · Kierros · Lehti).
@@ -877,10 +939,12 @@ namespace Matkakirja.Natiivi
             // Edellisen kortin ylärivi pois sivuilta.
             foreach (var paikka in new[] { selain.Vasen, selain.Oikea })
                 for (int i = paikka.childCount - 1; i >= 0; i--)
-                    if (paikka[i] != ylarivi && paikka[i] != lukijaPaikka && paikka[i] != pinNappi) paikka.RemoveAt(i);
+                    if (paikka[i] != ylarivi && paikka[i] != lukijaPaikka && paikka[i] != pinNappi && paikka[i] != selain.AutoNappi) paikka.RemoveAt(i);
             if (ylarivi == null || lukijaPaikka == null || !selain.Nakyvissa) { if (ylarivi != null) ylarivi.Add(pinNappi); return; }
-            selain.Oikea.Insert(0, pinNappi); // pin ennen ≡:tä ja kaiutinta
-            selain.Vasen.Add(ylarivi);       // kategoria (symboli ja nimi) vasemmalle
+            selain.Oikea.Insert(selain.AutoNappi != null && selain.AutoNappi.parent == selain.Oikea ? selain.Oikea.IndexOf(selain.AutoNappi) + 1 : 0, pinNappi); // AUTO, pin, ≡, kaiutin
+            // Juna 155 (omistaja 6.10. 22.x: "kategorian voisi siirtää omalle rivilleen otsikon läheisyyteen sen yläpuolelle ja
+            // nämä napit vähän ylemmäs"): kategoria (symboli ja nimi) jää kortin sisältöön otsikon yläpuolelle omaksi rivikseen.
+            ylarivi.AddToClassList("mk-nosto__ylarivi--kategoria");
             selain.Oikea.Add(lukijaPaikka);  // ≡ ja kaiutin oikeaan reunaan
         }
 
@@ -1017,6 +1081,36 @@ namespace Matkakirja.Natiivi
                 napit["leikekirja"] = napit["lehti"]; // testikomento ui leikekirja
             }
             if (toimintorivi.childCount == 0) PoistaToimintorivi();
+        }
+
+        /// <summary>Maakunnan toimintorivi (entinen maakuntakortti): Kysy avaa Pulun chatin valmiine vastauksineen (ei mallikutsua).</summary>
+        void MaakunnanToiminnot(Nosto n)
+        {
+            if (n.ValmiitKysymykset.Count == 0) return;
+            toimintorivi = Rakenne.El("mk-nosto__toiminnot", kortti, PickingMode.Ignore);
+            kortti.AddToClassList("mk-nosto--toiminnot");
+            Action kysy = () => { lukija.Pysayta(); UiNakymat.Hae()?.Chat.AvaaValmiilla(n.PuluAihe, n.ValmiitKysymykset); };
+            var b = Rakenne.Nappi("Kysy", "mk-nosto__toiminto", kysy, toimintorivi);
+            Kirjasimet.Aseta(b, Kirjasin.KoneLihava);
+            napit["kysy"] = kysy;
+        }
+
+        /// <summary>Maakunnan minikartta tekstin kyljessä (Lehtipalstat-kylkikuva); napautus suurentaa sen ruudun keskelle.</summary>
+        VisualElement Kylkikartta(Texture2D kartta)
+        {
+            var kylki = Rakenne.El("mk-maakuntaKortti__kartta", null);
+            kylki.style.backgroundImage = new StyleBackground(kartta);
+            float suhde = kartta.height / (float)kartta.width;
+            kylki.RegisterCallback<GeometryChangedEvent>(e =>
+            {
+                float h = Mathf.Round(e.newRect.width * suhde);
+                if (e.newRect.width > 0 && Mathf.Abs(kylki.resolvedStyle.height - h) > 0.5f) kylki.style.height = h;
+            });
+            kylki.tooltip = "Suurenna kartta";
+            Action avaa = () => minikartta.Avaa(kylki, kartta);
+            kylki.RegisterCallback<ClickEvent>(e => { e.StopPropagation(); avaa(); });
+            napit["kartta"] = avaa;
+            return kylki;
         }
 
         void KysyPululta(VisualElement isa, Nosto n)
@@ -1256,6 +1350,9 @@ namespace Matkakirja.Natiivi
             var lohko = Rakenne.El("mk-nosto__kuvasarja", isa, PickingMode.Ignore);
             var kehysPaikka = Rakenne.El("mk-nosto__kuvapaikka", lohko, PickingMode.Ignore);
             var teksti = Kuvateksti(lohko, "", null); // web .nostokuva-selite: Iowan pysty, keskitetty
+            // TEKIJÄRIVI SUUREN KORTIN KUVAN ALLE (Päätoimittaja 6.10. 16.25, löydös 150: ei kokoruudussa, Commons-tekijärivi
+            // korttiin; CC BY-SA vaatii nimeämisen): kaikille nostoille ja maakunnille, sama pohja kuin lisäkaupungin herokuvassa.
+            var lahde = Rakenne.Teksti("", "mk-kansikuva__lahde", lohko);
             Label laskuri = null;
             void Nayta(int i)
             {
@@ -1267,6 +1364,8 @@ namespace Matkakirja.Natiivi
                 var kehys = Kuvakehys(kehysPaikka, k, () => Suurenna(kohta), suhde: HeroSuhde,
                     puuttui: kuvat.Count == 1 ? () => lohko.style.display = DisplayStyle.None : (Action)null);
                 AsetaKuvateksti(teksti, k.Lyhyt, k);
+                lahde.text = k.LahdeRivi ?? "";
+                lahde.style.display = string.IsNullOrEmpty(k.LahdeRivi) ? DisplayStyle.None : DisplayStyle.Flex;
                 if (kuvat.Count > 1)
                 {
                     laskuri = Rakenne.Teksti($"{kuvaIndeksi + 1} / {kuvat.Count}", "mk-nosto__laskuri", kehys);
@@ -1276,6 +1375,7 @@ namespace Matkakirja.Natiivi
             // Löydös 34: reunanapautus ja pyyhkäisy selaavat (ei nuolia), keskiosa suurentaa.
             new KuvaSelaus(kehysPaikka, () => kuvat.Count, s => Nayta(kuvaIndeksi + s), () => kehysPaikka.childCount > 0 ? kehysPaikka[0] : kehysPaikka);
             Nayta(kuvaIndeksi);
+            napit["suurenna"] = () => Suurenna(kuvaIndeksi); // testi: kuvasuurennos tekijärivin kanssa
         }
 
         // --- "Havainnekuva"-merkintä (web js/havainnekuva.js lisaaHavainnekuvaMerkki, css/fokusnosto.css

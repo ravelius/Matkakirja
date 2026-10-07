@@ -585,13 +585,11 @@ namespace Matkakirja.Editori
             Aloitusruutu();
         }
 
-        /// <summary>LaunchScreenin logo: sama tiedosto, jonka Aloitusverho näyttää pelin ensimmäisissä kehyksissä.</summary>
-        public const string AloitusLogo = "Assets/Matkakirja/Kartta/Resources/" + Matkakirja.Aloitusverho.LogoPolku + ".png";
-
         /// <summary>
-        /// ALOITUSRUUTU (omistajan löydös 75, build 13): Unityn "Made with Unity" -ruutu pois (sallittu Unity 6:ssa kaikilla
-        /// lisensseillä) ja iOS:n LaunchScreen pergamenttina logon kanssa (kuva ja tausta, logon leveys
-        /// Aloitusverho.LogonOsuus ruudusta). Aloitusverho jatkaa samaa kuvaa pelin puolella, kunnes pallo on ladattu.
+        /// ALOITUSRUUTU: Unityn "Made with Unity" -ruutu pois (sallittu Unity 6:ssa kaikilla lisensseillä) ja iOS:n
+        /// LaunchScreen MUSTANA ilman logoa iPhonella ja iPadilla (omistaja 6.10.2026: "todella rakeinen matkakirjan logo, joka
+        /// ei mahdu edes näytölle kokonaan" → "mustaksi ruuduksi alussa"; aiemmin löydös 75 pergamentti + logo). Unityn
+        /// ensimmäinen ruutu (Aloitusverho, Natiivi-UI) jatkaa samalla mustalla, joten siirtymässä ei välähdä.
         /// Asetetaan joka viennissä (simulaattori, laite, TestFlight ja App Store), jotta batchmode-vienti ei nojaa
         /// ProjectSettingsin tallennettuun arvoon.
         /// </summary>
@@ -599,24 +597,16 @@ namespace Matkakirja.Editori
         {
             PlayerSettings.SplashScreen.show = false;
             PlayerSettings.SplashScreen.showUnityLogo = false;
-            var tex = AssetDatabase.LoadAssetAtPath<Texture2D>(AloitusLogo);
-            if (tex == null) throw new Exception("Aloitusruudun logoa ei löydy: " + AloitusLogo);
             PlayerSettings.iOS.SetiPhoneLaunchScreenType(iOSLaunchScreenType.ImageAndBackgroundRelative);
             PlayerSettings.iOS.SetiPadLaunchScreenType(iOSLaunchScreenType.ImageAndBackgroundRelative);
-            PlayerSettings.iOS.SetLaunchScreenImage(tex, iOSLaunchScreenImageType.iPhonePortraitImage);
-            PlayerSettings.iOS.SetLaunchScreenImage(tex, iOSLaunchScreenImageType.iPhoneLandscapeImage);
-            PlayerSettings.iOS.SetLaunchScreenImage(tex, iOSLaunchScreenImageType.iPadImage);
+            PlayerSettings.iOS.SetLaunchScreenImage(null, iOSLaunchScreenImageType.iPhonePortraitImage);
+            PlayerSettings.iOS.SetLaunchScreenImage(null, iOSLaunchScreenImageType.iPhoneLandscapeImage);
+            PlayerSettings.iOS.SetLaunchScreenImage(null, iOSLaunchScreenImageType.iPadImage);
             var asetukset = new SerializedObject(Unsupported.GetSerializedAssetInterfaceSingleton("PlayerSettings"));
-            float osuus = Matkakirja.Aloitusverho.LogonOsuus * 100f;
             foreach (var nimi in new[] { "iOSLaunchScreenBackgroundColor", "iOSLaunchScreeniPadBackgroundColor" })
             {
                 var p = asetukset.FindProperty(nimi);
-                if (p != null) p.colorValue = Matkakirja.Aloitusverho.Pergamentti;
-            }
-            foreach (var nimi in new[] { "iOSLaunchScreenFillPct", "iOSLaunchScreeniPadFillPct" })
-            {
-                var p = asetukset.FindProperty(nimi);
-                if (p != null) p.floatValue = osuus;
+                if (p != null) p.colorValue = Color.black;
             }
             asetukset.ApplyModifiedPropertiesWithoutUndo();
         }
@@ -653,7 +643,7 @@ namespace Matkakirja.Editori
             Debug.Log("MATKAKIRJA: editorin Burst-asetus palautettu kaatuneen käännöksen jäljiltä");
         }
 
-        static void Kaanna(string kansio, BuildOptions lisat = BuildOptions.None)
+        static void Kaanna(string kansio, BuildOptions lisat = BuildOptions.None, BuildTarget kohde = BuildTarget.iOS)
         {
             if (!File.Exists(PalloKohtaus)) LuoPallo();
             // Laattapaketti (pallon kaukonäkymä, löydös 80): ladataan ämpäristä, jos puuttuu tai sarjat vaihtuivat;
@@ -665,7 +655,7 @@ namespace Matkakirja.Editori
             {
                 scenes = new[] { PalloKohtaus },
                 locationPathName = kansio,
-                target = BuildTarget.iOS,
+                target = kohde,
                 options = lisat,
             };
             // Release-käännös oletuksena: Development-tila hidastaa ja näyttää kehityskonsolin.
@@ -787,6 +777,115 @@ namespace Matkakirja.Editori
         static bool TestFlightVienti;
 
         /// <summary>
+        /// NATIIVI MAC (omistaja 6.10.2026: "tehdään seuraavaksi natiivi mac appi … ei tehdä jokaista julkaisun kääntöä
+        /// sille. vain joka kolmas tai tarpeen mukaan"): macOS-sovellus MATKAKIRJA_KANSIO/Matkakirja 3D.app
+        /// (oletus Build/mac). Ajetaan omassa projektikopiossa (-buildTarget StandaloneOSX), ei käännöspalvelun
+        /// iOS-kopiossa: alustan vaihto tuo kaikki assetit uudelleen. Ympäristömuuttujat:
+        ///   MATKAKIRJA_BUNDLE_ID  (oletus app.matkakirja.proto3d; TestFlight-Mac = iOS:n sama ID, universal purchase)
+        ///   MATKAKIRJA_VERSIO / MATKAKIRJA_BUILD  CFBundleShortVersionString / CFBundleVersion (oletus 0.1.0 / 1)
+        ///   MATKAKIRJA_IL2CPP     1 = IL2CPP (vaatii Hubin Mac Build Support (IL2CPP) -moduulin), muuten Mono
+        ///   MATKAKIRJA_APPSTORE   1 = App Store -käännös (määrite MATKAKIRJA_APPSTORE; kuittitarkistus aina pois)
+        /// Vain Apple silicon (arm64): linnan ASTC-tekstuurit ja laattapaketti nojaavat ASTC-tukeen, jota Intel-Maceissa ei ole.
+        /// Allekirjoitus, sandbox-oikeudet ja lähetys ovat erillinen vaihe (Julkaisija), kuten iOS:n arkistointi.
+        /// </summary>
+        public static void MacOS()
+        {
+            string Ymp(string nimi, string oletus) =>
+                string.IsNullOrEmpty(Environment.GetEnvironmentVariable(nimi)) ? oletus : Environment.GetEnvironmentVariable(nimi);
+            var kohde = UnityEditor.Build.NamedBuildTarget.Standalone;
+            PlayerSettings.companyName = "Matkakirja";
+            PlayerSettings.productName = "Matkakirja 3D";
+            PlayerSettings.SetApplicationIdentifier(kohde, Ymp("MATKAKIRJA_BUNDLE_ID", "app.matkakirja.proto3d"));
+            PlayerSettings.SetScriptingBackend(kohde,
+                Ymp("MATKAKIRJA_IL2CPP", "0") == "1" ? ScriptingImplementation.IL2CPP : ScriptingImplementation.Mono2x);
+            PlayerSettings.bundleVersion = Ymp("MATKAKIRJA_VERSIO", "0.1.0");
+            PlayerSettings.macOS.buildNumber = Ymp("MATKAKIRJA_BUILD", "1");
+            // Ikkuna: muutettava koko, oletus 1440×900; käyttöliittymän skaalaus ja minimikoko ovat Natiivi-UI:n (PanelSettings).
+            PlayerSettings.fullScreenMode = FullScreenMode.Windowed;
+            PlayerSettings.defaultScreenWidth = 1440;
+            PlayerSettings.defaultScreenHeight = 900;
+            PlayerSettings.resizableWindow = true;
+            PlayerSettings.runInBackground = true;
+            PlayerSettings.SplashScreen.show = false;
+            PlayerSettings.SplashScreen.showUnityLogo = false;
+            var kuvake = AssetDatabase.LoadAssetAtPath<Texture2D>(KuvakeTiedosto);
+            if (kuvake == null) throw new Exception("Kuvaketta ei löydy: " + KuvakeTiedosto);
+            PlayerSettings.SetIcons(kohde, new[] { kuvake }, IconKind.Any);
+            AsetaMacArkkitehtuuri("ARM64");
+            bool appStore = Ymp("MATKAKIRJA_APPSTORE", "0") == "1";
+            // Kuittitarkistus pois myös App Store -käännöksessä: Unity lopettaa ilman kuittia (exit 173), eikä tarkistusta
+            // vaadita; App Store -käännös = vain määrite MATKAKIRJA_APPSTORE (kehittäjätila ja testikomennot pois).
+            PlayerSettings.useMacAppStoreValidation = false;
+            string maaritteet = PlayerSettings.GetScriptingDefineSymbols(kohde);
+            if (appStore) PlayerSettings.SetScriptingDefineSymbols(kohde, (maaritteet + ";MATKAKIRJA_APPSTORE").Trim(';'));
+            string kansio = Ymp("MATKAKIRJA_KANSIO", "Build/mac");
+            try { Kaanna(Path.Combine(kansio, "Matkakirja 3D.app"), BuildOptions.None, BuildTarget.StandaloneOSX); }
+            finally { if (appStore) PlayerSettings.SetScriptingDefineSymbols(kohde, maaritteet); }
+            MacKuvake(Path.Combine(kansio, "Matkakirja 3D.app"));
+            Debug.Log($"MATKAKIRJA: Mac-vienti {PlayerSettings.GetApplicationIdentifier(kohde)} {PlayerSettings.bundleVersion} " +
+                      $"({PlayerSettings.macOS.buildNumber}), {PlayerSettings.GetScriptingBackend(kohde)}");
+        }
+
+        /// <summary>
+        /// Mac-kuvake (Mac TF 1.1 (155) 7.10.2026: App Store Connect hylkäsi, koska ICNS 512 pt @2x puuttui — Unity ei kirjoittanut
+        /// PlayerIcon.icns:ää lainkaan, vaikka Info.plist viittaa siihen). Kuvake-1024.png → iconset (16–512 pt, @1x ja @2x) → iconutil
+        /// → Contents/Resources/PlayerIcon.icns. Käännös tapahtuu aina Macilla (sips ja iconutil kuuluvat macOS:ään).
+        /// </summary>
+        static void MacKuvake(string app)
+        {
+            string lahde = Path.GetFullPath(KuvakeTiedosto);
+            string joukko = Path.Combine(Path.GetTempPath(), "matkakirja-mac-kuvake.iconset");
+            if (Directory.Exists(joukko)) Directory.Delete(joukko, true);
+            Directory.CreateDirectory(joukko);
+            void Aja(string ohjelma, string args)
+            {
+                var p = System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo(ohjelma, args)
+                    { UseShellExecute = false, RedirectStandardOutput = true, RedirectStandardError = true });
+                p.WaitForExit();
+                if (p.ExitCode != 0) throw new Exception($"Mac-kuvake: {ohjelma} {args} → {p.ExitCode}: {p.StandardError.ReadToEnd()}");
+            }
+            foreach (int k in new[] { 16, 32, 128, 256, 512 })
+            {
+                Aja("/usr/bin/sips", $"-z {k} {k} \"{lahde}\" --out \"{Path.Combine(joukko, $"icon_{k}x{k}.png")}\"");
+                Aja("/usr/bin/sips", $"-z {k * 2} {k * 2} \"{lahde}\" --out \"{Path.Combine(joukko, $"icon_{k}x{k}@2x.png")}\"");
+            }
+            string icns = Path.Combine(app, "Contents", "Resources", "PlayerIcon.icns");
+            Aja("/usr/bin/iconutil", $"-c icns -o \"{icns}\" \"{joukko}\"");
+            Directory.Delete(joukko, true);
+            Debug.Log($"MATKAKIRJA: Mac-kuvake {icns} ({new FileInfo(icns).Length / 1024} kt, 16–1024 px)");
+        }
+
+        /// <summary>
+        /// UserBuildSettings.architecture (UnityEditor.OSXStandalone, Mac-moduulin laajennus) heijastuksella, jotta
+        /// iOS-käännöspalvelu kääntää tämän ilman Mac-moduulin viittausta. Nimi on OSArchitecture-arvo (ARM64, x64, x64ARM64).
+        /// </summary>
+        static void AsetaMacArkkitehtuuri(string nimi)
+        {
+            var asetukset = AppDomain.CurrentDomain.GetAssemblies()
+                .Select(a => a.GetType("UnityEditor.OSXStandalone.UserBuildSettings", false)).FirstOrDefault(t => t != null);
+            var ominaisuus = asetukset?.GetProperty("architecture",
+                System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Static);
+            if (ominaisuus == null) { Debug.LogWarning("MATKAKIRJA: Mac-arkkitehtuuria ei voi asettaa (UserBuildSettings puuttuu)"); return; }
+            try { ominaisuus.SetValue(null, Enum.Parse(ominaisuus.PropertyType, nimi, true)); }
+            catch (ArgumentException)
+            {
+                throw new Exception($"Mac-arkkitehtuuria {nimi} ei ole ({string.Join(", ", Enum.GetNames(ominaisuus.PropertyType))})");
+            }
+            Debug.Log("MATKAKIRJA: Mac-arkkitehtuuri " + ominaisuus.GetValue(null));
+        }
+
+        /// <summary>
+        /// Buildin StreamingAssets-kansio PostProcessBuildissa: iOS:llä Xcode-projektin Data/Raw/, macOS:llä
+        /// .app/Contents/Resources/Data/StreamingAssets/. Muilla alustoilla null.
+        /// </summary>
+        public static string StreamingKansio(BuildTarget kohde, string polku) => kohde switch
+        {
+            BuildTarget.iOS => Path.Combine(polku, "Data", "Raw"),
+            BuildTarget.StandaloneOSX => Path.Combine(polku, "Contents", "Resources", "Data", "StreamingAssets"),
+            _ => null,
+        };
+
+        /// <summary>
         /// Build-numero (PlayerSettings.iOS.buildNumber = CFBundleVersion) Xcode-projektin
         /// StreamingAssetsiin (Data/Raw/rakennus.txt): BuildNumeroSilta lukee sen Natiivi-UI:n
         /// "Peli päivittyi" -vertailuun. Ei kirjoita repoon.
@@ -794,10 +893,11 @@ namespace Matkakirja.Editori
         [UnityEditor.Callbacks.PostProcessBuild(180)]
         static void BuildNumeroTiedostoon(BuildTarget kohde, string polku)
         {
-            if (kohde != BuildTarget.iOS) return;
-            string kansio = Path.Combine(polku, "Data", "Raw");
+            string kansio = StreamingKansio(kohde, polku);
+            if (kansio == null) return;
             Directory.CreateDirectory(kansio);
-            File.WriteAllText(Path.Combine(kansio, "rakennus.txt"), PlayerSettings.iOS.buildNumber ?? "");
+            File.WriteAllText(Path.Combine(kansio, "rakennus.txt"),
+                (kohde == BuildTarget.StandaloneOSX ? PlayerSettings.macOS.buildNumber : PlayerSettings.iOS.buildNumber) ?? "");
             // Käännöksen commit (Data/Raw/kaannos.txt): .app-kopion tarkistus vertaa sitä käännöspalvelun KÄÄNNETTY-SHA:han
             // (1.10.2026: juna 93:n kopioksi päätyi simulaattoriin takaisin asennettu 92 ja savuke ajettiin väärällä binäärillä).
             File.WriteAllText(Path.Combine(kansio, "kaannos.txt"), KaannoksenCommit());
@@ -830,9 +930,10 @@ namespace Matkakirja.Editori
         [UnityEditor.Callbacks.PostProcessBuild(185)]
         static void KopioiLaattapaketti(BuildTarget kohde, string polku)
         {
-            if (kohde != BuildTarget.iOS) return;
-            LaattapakettiRakennus.KopioiBuildiin(polku);
-            TilannekuvaRakennus.KopioiBuildiin(polku);
+            string streaming = StreamingKansio(kohde, polku);
+            if (streaming == null) return;
+            LaattapakettiRakennus.KopioiBuildiin(streaming);
+            TilannekuvaRakennus.KopioiBuildiin(streaming);
         }
 
         /// <summary>Laattapalvelin (127.0.0.1) vaatii ATS-poikkeuksen paikalliselle verkolle.</summary>
@@ -880,6 +981,88 @@ namespace Matkakirja.Editori
             projekti.AddFrameworkToProject(kehys, "Photos.framework", false);
             projekti.SetBuildProperty(kehys, "SWIFT_VERSION", "5.0");
             projekti.WriteToFile(projektiPolku);
+        }
+
+        /// <summary>Laitekäännösten oikeustiedosto Xcode-projektissa (Unity-iPhone-kohteen CODE_SIGN_ENTITLEMENTS).</summary>
+        const string OikeusTiedosto = "Unity-iPhone/Matkakirja.entitlements";
+
+        /// <summary>
+        /// MUISTIKATTO (omistajan iPad Pro iPad17,1 6.10.2026: opas kaatui jetsamiin, per-process-limit 5,36 Gt;
+        /// lokit/JetsamEvent-2026-10-06-143323.ips): com.apple.developer.kernel.increased-memory-limit nostaa iPadOS:n
+        /// prosessikohtaista muistirajaa laitteilla, joilla muistia on enemmän (Cesiumin oma katto on Linssisepän).
+        /// Vain laitekäännöksiin (simulaattoria ei allekirjoiteta). App ID:llä pitää olla sama capability (Increased Memory
+        /// Limit; Developer-portaali tai ASC-API bundleIdCapabilities INCREASED_MEMORY_LIMIT), muuten allekirjoitus hylkää profiilin.
+        /// </summary>
+        [UnityEditor.Callbacks.PostProcessBuild(196)]
+        static void MuistiOikeus(BuildTarget kohde, string polku)
+        {
+            if (kohde != BuildTarget.iOS || PlayerSettings.iOS.sdkVersion != iOSSdkVersion.DeviceSDK) return;
+            // Kehityskäännös (fi.matkakirja.peli.kehitys) allekirjoitetaan tiimin wildcard-profiililla "iOS Team Provisioning
+            // Profile: *", johon oikeutta ei voi lisätä (laitekäännös 6.10. 17.10: "doesn't include the Increased Memory Limit
+            // capability"). Oikeus vain TestFlight- ja App Store -käännöksiin (fi.matkakirja.peli, capability portaalissa).
+            if (PlayerSettings.GetApplicationIdentifier(UnityEditor.Build.NamedBuildTarget.iOS) == LaiteBundleId)
+            {
+                Debug.Log("MATKAKIRJA: oikeus increased-memory-limit ohitettu kehityskäännöksessä (" + LaiteBundleId + ")");
+                return;
+            }
+            string tPolku = Path.Combine(polku, OikeusTiedosto);
+            var oikeudet = new UnityEditor.iOS.Xcode.PlistDocument();
+            if (File.Exists(tPolku)) oikeudet.ReadFromFile(tPolku);
+            oikeudet.root.SetBoolean("com.apple.developer.kernel.increased-memory-limit", true);
+            Directory.CreateDirectory(Path.GetDirectoryName(tPolku));
+            oikeudet.WriteToFile(tPolku);
+            string projektiPolku = UnityEditor.iOS.Xcode.PBXProject.GetPBXProjectPath(polku);
+            var projekti = new UnityEditor.iOS.Xcode.PBXProject();
+            projekti.ReadFromFile(projektiPolku);
+            if (projekti.FindFileGuidByProjectPath(OikeusTiedosto) == null) projekti.AddFile(OikeusTiedosto, OikeusTiedosto);
+            projekti.SetBuildProperty(projekti.GetUnityMainTargetGuid(), "CODE_SIGN_ENTITLEMENTS", OikeusTiedosto);
+            projekti.WriteToFile(projektiPolku);
+            Debug.Log("MATKAKIRJA: oikeus increased-memory-limit → " + OikeusTiedosto);
+        }
+
+        /// <summary>
+        /// MUSTA LAUNCHSCREEN varmistettuna (6.10.2026: iPad-laitekäännöksen LaunchScreen-iPad/-iPhone.storyboardien
+        /// backgroundColor oli valkoinen 1,1,1, vaikka Aloitusruutu asettaa värin PlayerSettingsiin, ja kylmäkäynnistyksessä näkyi
+        /// harmaa ruutu ennen Aloitusverhoa). Unityn generoimien storyboardien taustaväri kirjoitetaan mustaksi viennin jälkeen.
+        /// JÄTTILOGO (6.10.2026 ilta, omistajan TF-iPhone): storyboardissa oli yhä imageView (scaleAspectFill, 1×1 #231F20 -kuva)
+        /// ja iOS näytti päivityksen jälkeen välimuistista vanhan samannimisen käynnistysruudun (ruskea logo aspect-fillinä,
+        /// ~10× liian suuri). Siksi imageView, sen rajoitteet ja kuvaresurssi poistetaan, ja storyboardit nimetään uudelleen
+        /// (LaunchScreen-Musta-*): uusi nimi Info.plistin UILaunchStoryboardName*-avaimissa pakottaa iOS:n rakentamaan
+        /// käynnistysruudun uudelleen.
+        /// </summary>
+        [UnityEditor.Callbacks.PostProcessBuild(197)]
+        static void MustaLaunchScreen(BuildTarget kohde, string polku)
+        {
+            if (kohde != BuildTarget.iOS) return;
+            var re = System.Text.RegularExpressions.RegexOptions.Singleline;
+            string pbxPolku = Path.Combine(polku, "Unity-iPhone.xcodeproj", "project.pbxproj");
+            string pbx = File.Exists(pbxPolku) ? File.ReadAllText(pbxPolku) : null;
+            var plistPolku = Path.Combine(polku, "Info.plist");
+            var plist = new UnityEditor.iOS.Xcode.PlistDocument();
+            plist.ReadFromFile(plistPolku);
+            foreach (var laite in new[] { "iPhone", "iPad" })
+            {
+                string vanha = $"LaunchScreen-{laite}", uusiNimi = $"LaunchScreen-Musta-{laite}";
+                string sb = Path.Combine(polku, vanha + ".storyboard"), kohdeSb = Path.Combine(polku, uusiNimi + ".storyboard");
+                if (!File.Exists(sb)) { Debug.LogWarning($"MATKAKIRJA: {vanha}.storyboard puuttuu viennistä"); continue; }
+                string teksti = File.ReadAllText(sb);
+                string uusi = System.Text.RegularExpressions.Regex.Replace(teksti,
+                    "<color key=\"backgroundColor\"[^>]*/>",
+                    "<color key=\"backgroundColor\" red=\"0\" green=\"0\" blue=\"0\" alpha=\"1\" colorSpace=\"custom\" customColorSpace=\"sRGB\"/>");
+                uusi = System.Text.RegularExpressions.Regex.Replace(uusi, @"\s*<subviews>.*?</subviews>", "", re);
+                uusi = System.Text.RegularExpressions.Regex.Replace(uusi, @"\s*<constraints>.*?</constraints>", "", re);
+                uusi = System.Text.RegularExpressions.Regex.Replace(uusi, @"\s*<resources>.*?</resources>", "", re);
+                if (File.Exists(kohdeSb)) File.Delete(kohdeSb);
+                File.WriteAllText(kohdeSb, uusi);
+                File.Delete(sb);
+                if (pbx != null) pbx = pbx.Replace(vanha + ".storyboard", uusiNimi + ".storyboard");
+                foreach (var avain in laite == "iPad" ? new[] { "UILaunchStoryboardName~ipad" }
+                                                       : new[] { "UILaunchStoryboardName", "UILaunchStoryboardName~iphone", "UILaunchStoryboardName~ipod" })
+                    plist.root.SetString(avain, uusiNimi);
+                Debug.Log($"MATKAKIRJA: {uusiNimi}.storyboard: tausta musta, ei kuvaa ({(uusi.Contains("imageView") ? "VIKA: imageView jäi" : "ok")})");
+            }
+            if (pbx != null) File.WriteAllText(pbxPolku, pbx);
+            plist.WriteToFile(plistPolku);
         }
 
         [UnityEditor.Callbacks.PostProcessBuild(200)]

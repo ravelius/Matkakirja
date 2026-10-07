@@ -565,6 +565,7 @@ namespace Matkakirja.Natiivi
         /// </summary>
         void NollaaMuistit()
         {
+            Tilarivi.PiilotaPysyva(); // kartan valintavihje ei jää uuteen peliin
             Karttaselite.Nollaa();
             Matkalaukku.Nollaa();
             Chat.Nollaa();
@@ -622,9 +623,10 @@ namespace Matkakirja.Natiivi
             o.AloituslentoAlkoi += _ => UiKerros.PaaSaikeessa(() => { if (!Aloitus.Lennolla) Aloitus.LentoKirjoitus(); AloituslentoPiilo(true); });
             // Löydös 23: lennon ajaksi kaikki muu piiloon (Nousu … Perilla, myös aloituslento).
             o.LennonVaiheMuuttui += (v, _) => UiKerros.PaaSaikeessa(() => LentoPiilo(v != LennonVaihe.Perilla));
-            // Pöllön valintavihje nopan jälkeen (Pelikoodari: 15 s ilman valintaa, kerran vaiheessa).
-            o.ValintavihjeAika += t => UiKerros.PaaSaikeessa(() => Pulu.NaytaVihje(t));
-            o.ValintavihjePois += () => UiKerros.PaaSaikeessa(Pulu.PiilotaVihje);
+            // Pöllön valintavihje nopan jälkeen (Pelikoodari: 15 s ilman valintaa, kerran vaiheessa). Ei Pulun kuplana kartalla
+            // (Päätoimittaja 6.10.2026): pysyvä ilmoitusrivi, kunnes pelaaja toimii (ValintavihjePois).
+            o.ValintavihjeAika += t => UiKerros.PaaSaikeessa(() => Tilarivi.PysyvaViesti(t));
+            o.ValintavihjePois += () => UiKerros.PaaSaikeessa(Tilarivi.PiilotaPysyva);
             o.AloituslentoPaattyi += _ => UiKerros.PaaSaikeessa(() => { AloituslentoPerilla(); Aloitus.AloituslentoPaattyi(); });
             // C16: Livian tuurauspaljastus (ensimmäinen saapuminen koskaan) tai saapumisen ohjekuplat aloituslennon jälkeen.
             LivianPaljastus.Kytke(o);
@@ -872,6 +874,7 @@ namespace Matkakirja.Natiivi
         {
             if (Aloitus.Auki) return;
             SuljeKaikki();
+            Tilarivi.PiilotaPysyva();
             Aloitus.Nayta(id => Aloita(o, id), o.Lahtokaupungit(), o.TallennusOn ? () => { var v = o.Jatka(); if (v != null) Tilarivi.Viesti(v); } : (System.Action)null);
         }
 
@@ -903,7 +906,7 @@ namespace Matkakirja.Natiivi
         {
             // Linssitila (Pelikoodari 1.10.2026) ja maakuntakortin Pulun kysymys (omistajan kortti 30.9.2026 klo 22.5x):
             // chat nousee kortin / linssin yläkerroksen päälle.
-            bool p = Chat.Auki && (Nostokortti.Auki || MaakuntaKortti.JokinAuki || Chat.Linssissa);
+            bool p = Chat.Auki && (Nostokortti.Auki || Chat.Linssissa);
             if (p == chatNostonPaalla) return;
             chatNostonPaalla = p;
             PulunKerros();

@@ -409,6 +409,21 @@ namespace Matkakirja
             PaivitaLennonVarjostin();
         }
         bool linssiVara;
+
+        /// <summary>
+        /// KYYDIN MERI S2:N VÄRIIN (Linssiseppä 2, 6.10.2026, Päätoimittaja: Labradorinmeren S2-meriruudut erottuivat BMNG:n lähes
+        /// mustasta merestä vaaleina suorakulmioina): ISS-kyydissä BMNG:n (paikka 1) tumma sinertävä meri värjätään paikan 2
+        /// sekoituksessa S2:n MERI-väriin (48, 64, 85), joten raja ei synny; maa, merijää ja jäätiköt eivät värjäydy (tee_tileset.py).
+        /// Kulkee _s2MeriVari-globaalissa (a = 2), kun Sentinelin lennon meri ei ole käytössä. AstronauttiKerros kytkee.
+        /// </summary>
+        public void KyydinMeri(bool paalla)
+        {
+            if (kyydinMeri == paalla) return;
+            kyydinMeri = paalla;
+            PaivitaLennonVarjostin();
+        }
+        bool kyydinMeri;
+        public static Color KyydinMeriVari = new Color32(48, 64, 85, 255);
         static readonly int Rasteri1Id = Shader.PropertyToID("_overlayTexture_1"), Rasteri2Id = Shader.PropertyToID("_overlayTexture_2");
         static readonly int Skaala1Id = Shader.PropertyToID("_overlayTranslationAndScale_1"), Skaala2Id = Shader.PropertyToID("_overlayTranslationAndScale_2");
         /// <summary>Viimeisimmän LataamattomatLaatat-kutsun karkeat laatat: rasteri on esivanhemman (UV-skaala &lt; 1), ei laatan oma.</summary>
@@ -457,8 +472,10 @@ namespace Matkakirja
 
         void PaivitaLennonVarjostin()
         {
-            Color v = QualitySettings.activeColorSpace == ColorSpace.Linear ? S2MeriVari.linear : S2MeriVari;
-            Shader.SetGlobalVector(S2MeriVariId, new Vector4(v.r, v.g, v.b, 1f));
+            bool meriKyyti = kyydinMeri && sentinel == null;
+            Color mv = meriKyyti ? KyydinMeriVari : S2MeriVari;
+            Color v = QualitySettings.activeColorSpace == ColorSpace.Linear ? mv.linear : mv;
+            Shader.SetGlobalVector(S2MeriVariId, new Vector4(v.r, v.g, v.b, meriKyyti ? 2f : 1f));
             Shader.SetGlobalFloat(S2MeriKynnysId, sentinel != null ? (LentoTestiS2 ? -1f : S2MeriKynnys) : 0f);
             bool varaKaytossa = satelliittiLento || linssiVara;
             bool vara = varaKaytossa && varaKartta != null && varaKarttaAvain == SatelliittiAvain();

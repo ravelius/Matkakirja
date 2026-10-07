@@ -54,7 +54,7 @@ namespace Matkakirja.Linssit.IssKamera
         public readonly int X0, Y0, W, H, Taso;
         /// <summary>Pilven alfa ja kirkkaus 0…255 (W × H).</summary>
         public readonly byte[] Alfa, Kirkkaus;
-        public double AurinkoAz = 180, AurinkoKorkeus = 45, VarjonVoima = 0.35;
+        public double AurinkoAz = 180, AurinkoKorkeus = 45, VarjonVoima = 0.5;
         /// <summary>Lähikuvan reunarakenne (400 mm): kohina Pilvikentästä; null = maskin pehmeä reuna.</summary>
         public Pilvikentta Yksityiskohta;
         /// <summary>Valittu päivä ja sen keskialfa (lokiin).</summary>
@@ -99,15 +99,18 @@ namespace Matkakirja.Linssit.IssKamera
         {
             int mn = Math.Min(r, Math.Min(g, b)), mx = Math.Max(r, Math.Max(g, b));
             double s = mn - 2.0 * Math.Max(0, r - b) - 0.3 * (mx - mn);
-            return Askel(110, 170, s);
+            // Leveämpi siirtymä (Päätoimittaja 6.10.: ohuet reunat läpikuultaviksi, ei kynnysmaskia).
+            return Askel(90, 195, s);
         }
 
         /// <summary>
         /// Selkein päivä: paivat[d][k] = kerroksen k (Kerrokset-järjestys) RGB-mosaiikki (W × H × 3) tai null (ei haettu / ei
         /// dataa). Palauttaa pilvet tai null, jos millään päivällä ei ole dataa.
         /// </summary>
+        /// <param name="painoAlue">Selkeimmän päivän valinta vain tältä alueelta (pikseleinä tämän ruudukon sisällä, x0 y0 x1 y1):
+        /// laajan kuvan lähialue (Päätoimittaja 6.10.: Helsingin ja Suomenlahden pitää näkyä).</param>
         public static GibsPilvet Kokoa(int x0, int y0, int w, int h, IReadOnlyList<(DateTime paiva, byte[][] kerrokset)> paivat, int taso = Z,
-            DateTime? pakotettu = null)
+            DateTime? pakotettu = null, (int x0, int y0, int x1, int y1)? painoAlue = null)
         {
             int n = w * h, D = paivat.Count;
             var alfat = new float[D][]; var kirk = new byte[D][]; var osuus = new double[D]; var keski = new double[D];
@@ -116,7 +119,7 @@ namespace Matkakirja.Linssit.IssKamera
                 var kk = paivat[d].kerrokset;
                 var kelvot = new bool[kk.Length][];
                 for (int k = 0; k < kk.Length; k++) if (kk[k] != null) kelvot[k] = Kelvot(kk[k], w, h);
-                var a = new float[n]; var b = new byte[n]; int ok = 0; double summa = 0;
+                var a = new float[n]; var b = new byte[n]; int ok = 0, okP = 0; double summa = 0, summaP = 0;
                 for (int i = 0; i < n; i++)
                 {
                     a[i] = -1;
@@ -125,12 +128,19 @@ namespace Matkakirja.Linssit.IssKamera
                         if (kk[k] == null || !kelvot[k][i]) continue;
                         byte r = kk[k][i * 3], g = kk[k][i * 3 + 1], bl = kk[k][i * 3 + 2];
                         a[i] = (float)MaskiAlfa(r, g, bl);
-                        b[i] = (byte)Math.Round(255 * Math.Max(0.70, Math.Min(1.0, 0.70 + 0.30 * ((0.3 * r + 0.55 * g + 0.15 * bl) - 150) / 90)));
+                        // Sävy GIBS:n omasta kirkkaudesta (0,55…1): pilven sisälle tekstuuri (Päätoimittaja 6.10.). Venytys 165…245
+                        // (juliste 7e91ce76 Suomenlahti: pilvikansi on GIBS:ssä 208…235, vanha 120…240 jätti sen tasavalkoiseksi).
+                        b[i] = (byte)Math.Round(255 * Math.Max(0.45, Math.Min(1.0, 0.45 + 0.55 * ((0.3 * r + 0.55 * g + 0.15 * bl) - 165) / 80)));
                         break;
                     }
-                    if (a[i] >= 0) { ok++; summa += a[i]; }
+                    if (a[i] >= 0)
+                    {
+                        ok++; summa += a[i];
+                        if (painoAlue is (int, int, int, int) pa) { int px = i % w, py = i / w; if (px >= pa.x0 && px < pa.x1 && py >= pa.y0 && py < pa.y1) { okP++; summaP += a[i]; } }
+                    }
                 }
-                alfat[d] = a; kirk[d] = b; osuus[d] = (double)ok / n; keski[d] = ok > 0 ? summa / ok : 1;
+                alfat[d] = a; kirk[d] = b; osuus[d] = (double)ok / n;
+                keski[d] = okP > 0 ? summaP / okP : ok > 0 ? summa / ok : 1;
             }
             int paras = -1;
             for (int pass = 0; pass < 2 && paras < 0; pass++)
@@ -154,7 +164,8 @@ namespace Matkakirja.Linssit.IssKamera
                 alfa[i] = (byte)Math.Round(255 * v); s2 += v;
             }
             // Kirkkaus kolmesti sumennettuna (esikatselu Helsinki: VIIRS-kuvan juovat näkyivät pilvikannessa vaakaraitoina).
-            return new GibsPilvet(x0, y0, w, h, Sumenna(Sumenna(alfa, w, h), w, h), Sumenna(Sumenna(Sumenna(kirk[paras], w, h), w, h), w, h), taso) { Paiva = paivat[paras].paiva, Peitto = s2 / n };
+            // Kirkkaus kahdesti sumennettuna (VIIRS-juovat pois, sisäinen tekstuuri jää; ennen kolmesti → tasavalkoinen).
+            return new GibsPilvet(x0, y0, w, h, Sumenna(Sumenna(alfa, w, h), w, h), Sumenna(Sumenna(kirk[paras], w, h), w, h), taso) { Paiva = paivat[paras].paiva, Peitto = s2 / n };
         }
 
         /// <summary>Kelvot pikselit: max(R,G,B) > 1, ja nodatasta vähintään 3 px (JPEG-särö ratavälin reunalla).</summary>
@@ -246,8 +257,28 @@ namespace Matkakirja.Linssit.IssKamera
         (double alfa, double kirkkaus) OmaLahi(double lat, double lon, double pikseliM)
         {
             var (gx, gy) = Pikseli(lat, lon, Taso);
-            double a = Arvo(Alfa, gx, gy), k = Math.Max(0.70, Arvo(Kirkkaus, gx, gy));
-            if (Yksityiskohta == null || a <= 0.01) return (a, k);
+            double a = Arvo(Alfa, gx, gy), k = Math.Max(0.45, Arvo(Kirkkaus, gx, gy));
+            if (a <= 0.01) return (a, k);
+            // Laaja kuva (kuvan pikseli > 100 m; juliste 65fe6316: litteät terävärajaiset läntit): ei fraktaaliterävöintiä, vaan
+            // pehmeä alfa GIBS-tiheydestä ja sävy auringon suunnasta koko pilven alalla (aurinkoa kohti kirkkaampi, varjopuoli tummempi).
+            if (pikseliM > 100)
+            {
+                double azL = AurinkoAz * Math.PI / 180, sx = Math.Sin(azL), sy = -Math.Cos(azL);
+                double kohtiL = Arvo(Alfa, gx + sx * 1.5, gy + sy * 1.5);
+                double valoL = Math.Max(-0.14, Math.Min(0.06, -0.7 * (kohtiL - a)));
+                // Pinnanmuoto pilvikannen sisällä (Päätoimittaja 6.10. ilta, juliste 7e91ce76: merisumu tasainen valkoinen läntti):
+                // GIBS-kirkkaus korkeuskenttänä, aurinkoa kohti laskeva rinne valaistu ja poispäin varjossa.
+                double kohtiK = Arvo(Kirkkaus, gx + sx, gy + sy), takaK = Arvo(Kirkkaus, gx - sx, gy - sy);
+                double kuvio = Askel(0.2, 0.7, a) * Math.Max(-0.20, Math.Min(0.14, 2.6 * (takaK - kohtiK)));
+                // Sulkareuna (Päätoimittaja 6.10.: keskiosan pilvet teräväreunaisia; ilta: pehmeä reuna, ei tasaista maskia): alfa
+                // painotettuna keskiarvona kolmelta kehältä (0,8, 1,8 ja 3 px; juliste noin 2 kuvapikseliä → 5–6).
+                double r1 = Arvo(Alfa, gx + 0.8, gy) + Arvo(Alfa, gx - 0.8, gy) + Arvo(Alfa, gx, gy + 0.8) + Arvo(Alfa, gx, gy - 0.8);
+                double r2 = Arvo(Alfa, gx + 1.3, gy + 1.3) + Arvo(Alfa, gx - 1.3, gy + 1.3) + Arvo(Alfa, gx + 1.3, gy - 1.3) + Arvo(Alfa, gx - 1.3, gy - 1.3);
+                double r3 = Arvo(Alfa, gx + 3, gy) + Arvo(Alfa, gx - 3, gy) + Arvo(Alfa, gx, gy + 3) + Arvo(Alfa, gx, gy - 3);
+                double ka = (2 * a + r1 + 0.75 * r2 + 0.5 * r3) / 11;
+                return (Askel(0.0, 1.0, ka) * (0.7 + 0.3 * ka), Math.Max(0.42, Math.Min(1.0, k * (0.93 + 0.07 * a) + valoL + kuvio)));
+            }
+            if (Yksityiskohta == null) return (a, k);
             // GIBS-maski (~150–300 m/px) on kuvassa sumea möykky (simu 8eea083c Amazonia): reuna terävöitetään fraktaalikohinalla,
             // jonka asteikko seuraa maskin pikseliä (kumpupilven kukkakaalireuna), ja aurinkoa kohti oleva puoli on kirkkaampi.
             double m = PikseliM(lat, Taso); var y = Yksityiskohta;

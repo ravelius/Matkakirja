@@ -180,14 +180,14 @@
 }
 
 .mk-liiku__nappi.mk-opas-nappi {
-    height: 44px;
+    height: var(--tk-nappi-korkeus); /* omistaja 6.10. 19.5x: nappi.korkeus 38 pt */
     min-width: 88px;
     margin: 0 4px;
     padding: 0 14px;
     border-width: 1px;
     border-radius: var(--tk-kulma-nappi);
     border-color: var(--tk-reunus);
-    background-color: var(--tk-pinta-peitto);
+    background-color: var(--tk-pinta); /* omistaja 6.10. 16.3x: läpinäkyvämpi lasi (harmaan lasiteeman pinta, ei peittävä) */
     color: var(--tk-korostus);
     flex-direction: row;
     justify-content: center;
@@ -200,8 +200,8 @@
 }
 
 .mk-liiku__nappi.mk-opas-nappi--ikoni {
-    min-width: 44px;
-    width: 44px;
+    min-width: var(--tk-nappi-korkeus);
+    width: var(--tk-nappi-korkeus);
     padding: 0;
 }
 
@@ -211,10 +211,11 @@
     height: 20px;
     flex-shrink: 0;
     align-self: center;
+    margin-right: 0; /* .mk-nappi > .mk-ikoni 7 px siirsi mikin ja näppäimistön vasemmalle (stillit 154: ~3 pt) */
 }
 
 .mk-liiku__nappi.mk-opas-nappi .mk-nappi__teksti.mk-opas-nappi__teksti {
-    margin: 0 0 0 6px;
+    margin: 0 0 0 var(--tk-vali-s);
     padding: 0;
     font-size: var(--tk-koko-leipa);
     letter-spacing: 0;
@@ -234,4 +235,137 @@
     border-radius: var(--tk-kulma-nappi);
     border-color: var(--tk-reunus);
     background-color: var(--tk-pinta-peitto);
+}
+
+/* OPPAAN ALOITUS ILMAN KARTTAA (omistaja 6.10.2026 13.4x; OpasValikko.aloitus): sama linssivalikko koko ruutuna TUMMALLA
+ * teemalla (lasin muuttujat tumman teeman arvoiksi, tekstit vaaleina), kaksi saraketta: paikat ja suosikit (LINSSIRIVI).
+ * Puhelimella pystyssä (--pino) paikat ylhäällä ja suosikit alla. */
+.mk-linssivalikko.mk-linssivalikko--pohja.mk-opas-aloitus {
+    --tk-lasi-pinta: var(--tk-tumma-pinta);
+    --tk-lasi-muste: var(--tk-tumma-muste);
+    --tk-lasi-muste-pehmea: var(--tk-tumma-muste-pehmea);
+    --tk-lasi-reunus: var(--tk-tumma-reunus);
+    --tk-lasi-korostus: var(--tk-tumma-korostus);
+    position: absolute;
+    flex-direction: row;
+    max-width: none;
+    border-width: 0;
+    border-radius: 0;
+    background-color: var(--tk-tumma-pinta);
+}
+
+/* Sama tarkkuus kuin yllä (kolme luokkaa + pino), muuten rivi voittaa (simu 16.08: puhelin jäi kahdelle sarakkeelle). */
+.mk-linssivalikko.mk-linssivalikko--pohja.mk-opas-aloitus.mk-opas-aloitus--pino {
+    flex-direction: column;
+}
+
+.mk-opas-aloitus__sarake {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+    margin: 0 var(--tk-vali-s);
+}
+
+.mk-opas-aloitus--pino .mk-opas-aloitus__sarake {
+    margin: 0 0 var(--tk-vali-m) 0;
+}
+
+.mk-opas-aloitus--pino .mk-opas-aloitus__sarake--paikat {
+    flex-grow: 0;
+    flex-basis: auto;
+}
+
+.mk-opas-aloitus__lista {
+    flex-shrink: 1;
+}
+
+.mk-opas-aloitus .mk-linssivalitsin__valiotsikko,
+.mk-opas-aloitus .mk-linssirivi__lyhyt {
+    color: var(--tk-tumma-muste-pehmea);
+}
+
+.mk-opas-aloitus .mk-linssirivi__nimi {
+    color: var(--tk-tumma-muste);
+}
+
+/* Oppaan listat harmaalla lasilla (omistaja 6.10. 16.3x): otsikot valkoisina, tarkennukset vaaleina mutta himmeämpinä. */
+.tk-teema-harmaa.mk-linssivalikko--pohja .mk-linssirivi__nimi {
+    color: var(--tk-harmaa-korostus);
+}
+
+.tk-teema-harmaa.mk-linssivalikko--pohja .mk-linssirivi__lyhyt,
+.tk-teema-harmaa.mk-linssivalikko--pohja .mk-linssivalitsin__valiotsikko {
+    color: var(--tk-harmaa-muste-pehmea);
+}
+
+/* Oppaan vapaa tila (juna 152): pieni tähtäin ruudun keskelle (katsepiste = keskikohdan maapiste, Mikä tämä on?). */
+.mk-opas-tahtain {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: var(--tk-vali-xl);
+    height: var(--tk-vali-xl);
+    translate: -50% -50%;
+    color: var(--tk-harmaa-korostus);
+}
+
+.mk-opas-tahtain > .mk-ikoni.mk-opas-tahtain__ikoni {
+    width: 100%;
+    height: 100%;
+}
+
+/* VÄKÄNEN (omistaja 6.10.2026 klo 19.5x, Päätoimittaja): neljä nappia OHJAUSNAPPI-väkäsen › alla vasemmassa reunassa; liuku
+ * esiin väkäsestä oikealle --tk-kesto-liuku (240 ms), ikkuna leikkaa. Napit nappi.korkeus (38 pt) samalla keskilinjalla
+ * tasavälein. Paikka ja korkeus koodista. VAIN --tk-*-tokenit. */
+.mk-opas-napit.mk-opas-napit--vakanen {
+    right: auto;
+    justify-content: flex-start;
+}
+
+.mk-opas-napit--vakanen > .mk-ohjausnappi {
+    margin: 0;
+}
+
+.mk-opas-napit__ikkuna {
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+    overflow: hidden;
+}
+
+.mk-opas-napit__liuku {
+    flex-direction: row;
+    align-items: center;
+    padding-left: var(--tk-vali-xs);
+    translate: -100% 0;
+    opacity: 0;
+    transition-property: translate, opacity;
+    transition-duration: 0.24s, 0.24s; /* --tk-kesto-liuku */
+}
+
+.mk-opas-napit--auki .mk-opas-napit__liuku {
+    translate: 0 0;
+    opacity: 1;
+}
+
+/* Kuvanappi: OHJAUSNAPPI-iso ilman kehystä, kuva täyttää neliön kulma.nappi-pyöristyksellä; nipun kuvamäärä kulmassa. */
+.mk-ohjausnappi.mk-ohjausnappi--iso.mk-ohjausnappi--kuva {
+    margin: 0;
+    padding: 0;
+    border-width: 0;
+    overflow: hidden;
+}
+
+.mk-ohjausnappi__kuva {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    -unity-background-scale-mode: scale-and-crop;
+}
+
+.mk-ohjausnappi--kuva > .mk-nosto__laskuri {
+    right: var(--tk-vali-xs);
+    bottom: var(--tk-vali-xs);
 }

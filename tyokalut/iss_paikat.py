@@ -80,8 +80,14 @@ def main():
                        maanosat.get(maa) or maanosat.get(r.get("SOV_A3", ""), ""),
                        puhdas(r.get("TIMEZONE", "") or "")])
     paikat.sort(key=lambda p: (p[3], -p[4]))
-    ulos = {"lahde": "Natural Earth 5.1.2 10m populated places (public domain)", "paikat": paikat}
     polku = "Assets/Matkakirja/Linssit/Resources/IssPaikat/paikat.json"
+    # Natiivi-UI:n maanimet-taulu (elävän oppaan maiden suomenkieliset nimet) säilyy ennallaan uudelleenajossa.
+    try:
+        with open(polku, encoding="utf-8") as f: vanha = json.load(f)
+    except (OSError, ValueError): vanha = {}
+    ulos = {"lahde": "Natural Earth 5.1.2 10m populated places (public domain)"}
+    if "maanimet" in vanha: ulos["maanimet"] = vanha["maanimet"]
+    ulos["paikat"] = paikat
     with open(polku, "w", encoding="utf-8") as f:
         json.dump(ulos, f, ensure_ascii=False, separators=(",", ":"))
     print(f"{len(paikat)} paikkaa → {polku}")

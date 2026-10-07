@@ -31,7 +31,8 @@ namespace Matkakirja.Natiivi
         /// <summary>Pinnaus vaihtui (ikkunat päivittävät pin-kuvakkeensa ja himmennyksensä).</summary>
         public static event Action Muuttui;
 
-        readonly VisualElement palkki, taytto, raita;
+        readonly VisualElement palkki, taytto, raita, kuva;
+        int kuvaVersio;
         readonly Label otsikko;
         readonly Button tauko;
         PalloKierto kierto;
@@ -50,8 +51,17 @@ namespace Matkakirja.Natiivi
             tauko.tooltip = "Tauko";
             raita = Rakenne.El("mk-edistyminen mk-pinpalkki__edistyminen", palkki, PickingMode.Ignore);
             taytto = Rakenne.El("mk-edistyminen__taytto", raita, PickingMode.Ignore);
+            // Uuden noston ensimmäinen kuva palkin alla 3 s (omistaja 6.10. 23.0x), palkin levyisenä ilman kehystä ja tekstiä.
+            kuva = Rakenne.El("mk-pinpalkki__kuva", turva, PickingMode.Ignore);
+            kuva.style.display = DisplayStyle.None;
             Puhe.PinnattuMuuttui += PuheMuuttui;
-            Puhe.Edistyminen += (aika, kesto) => taytto.style.width = Length.Percent(kesto > 0f ? Mathf.Clamp01(aika / kesto) * 100f : 0f);
+            // Omistaja 6.10. 23.0x: "tilapalkki saisi näyttää koko noston pituutta ei kappaleen": kortin luennalla koko
+            // luennan eteneminen (KortinLukija.KokoEdistyminen), muuten (Pulun chat) soivan palan.
+            Puhe.Edistyminen += (aika, kesto) =>
+            {
+                float osa = KortinLukija.KokoEdistyminen(aika, kesto) ?? (kesto > 0f ? Mathf.Clamp01(aika / kesto) : 0f);
+                taytto.style.width = Length.Percent(osa * 100f);
+            };
             kerros.JokaRuutu += Paivita;
             Ylapalkki.PalkkiPiilossaMuuttui += Asettele;
             kerros.TurvaMuuttui += Asettele;
@@ -120,6 +130,13 @@ namespace Matkakirja.Natiivi
             Muuttui?.Invoke();
         }
 
+        /// <summary>
+        /// Piste (paneelin koordinaatit) osuu näkyvään palkkiin. Ylempi kerros (toinen kortti himmennyksineen) kysyy tätä, ettei
+        /// palkin napautus vain sulje sitä (junan 148b video 6.10.: ensimmäinen napautus sulki toisen kortin, vasta toinen palautti).
+        /// </summary>
+        public static bool OsuuPalkkiin(Vector2 p) =>
+            Viimeisin != null && Pienena && Viimeisin.palkki.resolvedStyle.display != DisplayStyle.None && Viimeisin.palkki.worldBound.Contains(p);
+
         /// <summary>Palkin napautus: pinnattu ikkuna takaisin.</summary>
         public static void Palauta()
         {
@@ -146,8 +163,55 @@ namespace Matkakirja.Natiivi
             Muuttui?.Invoke();
         }
 
+        /// <summary>
+        /// Uuden pinnatun noston ensimmäinen kuva palkin alle 3 s:ksi, sitten häivytys (--tk-kesto-sulku 200 ms). null = ei kuvaa
+        /// (mitään ei näytetä). Leveys palkin, korkeus kuvan suhteesta; kulmat kulma.nappi, ei kehystä eikä tekstiä.
+        /// </summary>
+        public static void NaytaKuva(string url)
+        {
+            var p = Viimeisin;
+            if (p == null) return;
+            int v = ++p.kuvaVersio;
+            p.kuva.style.display = DisplayStyle.None;
+            p.kuva.style.opacity = 0f;
+            if (string.IsNullOrEmpty(url)) return;
+            NostoSisalto.HaeKuva(url, t =>
+            {
+                if (v != p.kuvaVersio || t == null || !Pienena || p.palkki.resolvedStyle.display == DisplayStyle.None) return;
+                p.kuva.style.backgroundImage = new StyleBackground(t);
+                float suhde = t.width > 0 ? (float)t.height / t.width : 2f / 3f;
+                // Palkki voi olla vielä avautumassa (Ponnahdus): paikka seuraavassa kehyksessä, kun sen asettelu on valmis.
+                p.kuva.schedule.Execute(() =>
+                {
+                    if (v != p.kuvaVersio) return;
+                    p.SijoitaKuva(suhde);
+                    p.kuva.style.display = DisplayStyle.Flex;
+                    p.kuva.schedule.Execute(() => { if (v == p.kuvaVersio) p.kuva.style.opacity = 1f; });
+                }).StartingIn(50);
+                p.kuva.schedule.Execute(() =>
+                {
+                    if (v != p.kuvaVersio) return;
+                    p.kuva.style.opacity = 0f;
+                    p.kuva.schedule.Execute(() => { if (v == p.kuvaVersio) p.kuva.style.display = DisplayStyle.None; }).StartingIn(Tyylikirja.Kesto.Sulku);
+                }).StartingIn(3000);
+                Debug.Log("MATKAKIRJA ui pinnaus: ensimmäinen kuva 3 s");
+            });
+        }
+
+        void SijoitaKuva(float suhde)
+        {
+            var isa = palkki.parent;
+            if (isa == null || palkki.layout.width <= 0) return;
+            var r = palkki.layout;
+            kuva.style.left = r.xMin;
+            kuva.style.top = r.yMax + Tyylikirja.Vali.Xs;
+            kuva.style.width = r.width;
+            kuva.style.height = Mathf.Round(r.width * Mathf.Clamp(suhde, 0.4f, 1f));
+        }
+
         void NaytaPalkki(bool nayta)
         {
+            if (!nayta) { kuvaVersio++; kuva.style.display = DisplayStyle.None; }
             if (nayta)
             {
                 otsikko.text = Nykyinen?.Otsikko ?? "";
@@ -158,11 +222,101 @@ namespace Matkakirja.Natiivi
             else if (palkki.style.display != DisplayStyle.None) Ponnahdus.Sulje(palkki);
         }
 
-        /// <summary>Oikeaan yläreunaan nappien alle (Karttaselitteen ja linssiselitteen kaava: varaus + 8 + 40 + 8).</summary>
+        /// <summary>
+        /// Omistaja 6.10. 23.0x: "Pinnattu nosto saisi olla suurennuslasin kanssa samalla rivillä sen vasemmalla puolella" –
+        /// hakunapin (Karttaselite.LinssitNappi) riville pystykeskitettynä, oikea reuna 8 pt napin vasemmalla, korkeus
+        /// nappi.ohjaus; leveys joustaa isoisän kortin oikeaan reunaan + 8 pt asti (160–260 pt), otsikko katkeaa …:lla.
+        /// Ilman näkyvää hakunappia entinen paikka nappien alla (varaus + 8 + 40 + 8).
+        /// </summary>
         void Asettele()
         {
+            var ui = UiNakymat.Olemassa ? UiNakymat.Hae() : null;
+            var n = ui?.Karttaselite?.LinssitNappi;
+            var isa = palkki.parent;
+            if (n != null && isa != null && n.resolvedStyle.display != DisplayStyle.None && n.worldBound.width > 0 && isa.layout.width > 0)
+            {
+                var r = isa.WorldToLocal(n.worldBound);
+                float vasen = Tyylikirja.Vali.L;
+                var mk = ui.Matkakirja != null ? ui.Matkakirja.Rajat : Rect.zero;
+                if (mk.width > 0)
+                {
+                    var k = isa.WorldToLocal(mk);
+                    if (k.yMax > r.yMin && k.yMin < r.yMax) vasen = Mathf.Max(vasen, k.xMax + Tyylikirja.Vali.S);
+                }
+                float lev = Mathf.Max(160f, r.xMin - Tyylikirja.Vali.S - vasen);
+                float korkeus = palkki.layout.height > 0 && !float.IsNaN(palkki.layout.height) ? Mathf.Max(Tyylikirja.Nappi.Ohjaus, palkki.layout.height) : Tyylikirja.Nappi.Ohjaus;
+                float top = Mathf.Round(r.y + (r.height - korkeus) * 0.5f), oikea = Mathf.Round(isa.layout.width - r.xMin + Tyylikirja.Vali.S);
+                // Pitkä otsikko ei mahdu hakunapin viereen (pisin sana tai kaksi riviä 85 %:lla): palkki hakunapin alle, oikeat
+                // reunat tasan ja leveys turva-alueen vasempaan reunaan asti (isoisän kortti väistetään samalla tavalla).
+                if (!Mahtuu(lev))
+                {
+                    top = Mathf.Round(r.yMax + Tyylikirja.Vali.S);
+                    oikea = Mathf.Round(isa.layout.width - r.xMax);
+                    float vasen2 = Tyylikirja.Vali.L;
+                    if (mk.width > 0)
+                    {
+                        var k = isa.WorldToLocal(mk);
+                        if (k.yMax > top && k.yMin < top + korkeus) vasen2 = Mathf.Max(vasen2, k.xMax + Tyylikirja.Vali.S);
+                    }
+                    lev = Mathf.Max(160f, r.xMax - vasen2);
+                }
+                if (palkki.style.top.value.value != top) palkki.style.top = top;
+                if (palkki.style.right.value.value != oikea) palkki.style.right = oikea;
+                if (palkki.style.maxWidth.value.value != lev) palkki.style.maxWidth = lev;
+                if (palkki.style.minHeight.value.value != Tyylikirja.Nappi.Ohjaus) palkki.style.minHeight = Tyylikirja.Nappi.Ohjaus;
+                SovitaOtsikko(lev);
+                return;
+            }
             palkki.style.top = Ylapalkki.Varaus + 8f + 40f + 8f;
-            palkki.style.right = Ylapalkki.Piilossa ? 10f + 40f + 8f : 10f;
+            float oik = Ylapalkki.Piilossa ? 10f + 40f + 8f : 10f;
+            palkki.style.right = oik;
+            float vapaa = isa != null && isa.layout.width > 0 ? isa.layout.width - oik - Tyylikirja.Vali.L : 260f;
+            palkki.style.maxWidth = vapaa;
+            palkki.style.minHeight = StyleKeyword.Null;
+            SovitaOtsikko(vapaa);
+        }
+
+        float perusKoko;
+
+        /// <summary>Mahtuuko otsikko leveyteen: pisin sana ja enintään kaksi riviä 85 %:n kirjasimella.</summary>
+        bool Mahtuu(float kaytettava)
+        {
+            if (otsikko.panel == null || palkki.layout.width <= 0 || float.IsNaN(otsikko.layout.width) || string.IsNullOrEmpty(otsikko.text)) return true;
+            float nyt = otsikko.resolvedStyle.fontSize;
+            if (perusKoko <= 0) perusKoko = nyt;
+            float k = nyt > 0 && perusKoko > 0 ? perusKoko / nyt : 1f;
+            float kehys = palkki.layout.width - otsikko.layout.width;
+            float tila = kaytettava - kehys;
+            float koko = otsikko.MeasureTextSize(otsikko.text, 0, VisualElement.MeasureMode.Undefined, 0, VisualElement.MeasureMode.Undefined).x * k;
+            float sana = 0f;
+            foreach (var w in otsikko.text.Split(' '))
+                if (w.Length > 0) sana = Mathf.Max(sana, otsikko.MeasureTextSize(w, 0, VisualElement.MeasureMode.Undefined, 0, VisualElement.MeasureMode.Undefined).x * k);
+            return sana * 0.85f <= tila && koko * 0.85f <= 1.9f * tila;
+        }
+
+        /// <summary>
+        /// Omistaja 6.10. 23.0x: "otsikko pitää aina mahtua kokonaan palkkiin": ei kolmea pistettä; palkki levenee otsikon mukaan
+        /// käytettävään tilaan asti, sitten kirjasin enintään 85 %:iin ja lopuksi toinen rivi.
+        /// </summary>
+        void SovitaOtsikko(float kaytettava)
+        {
+            if (otsikko.panel == null || palkki.layout.width <= 0 || float.IsNaN(otsikko.layout.width) || string.IsNullOrEmpty(otsikko.text)) return;
+            float nyt = otsikko.resolvedStyle.fontSize;
+            if (perusKoko <= 0 && otsikko.style.fontSize.keyword != StyleKeyword.Undefined) perusKoko = nyt;
+            if (perusKoko <= 0) perusKoko = nyt;
+            float kehys = palkki.layout.width - otsikko.layout.width;
+            float w = otsikko.MeasureTextSize(otsikko.text, 0, VisualElement.MeasureMode.Undefined, 0, VisualElement.MeasureMode.Undefined).x;
+            if (nyt > 0 && perusKoko > 0) w *= perusKoko / nyt;   // mitta peruskoossa
+            float tila = kaytettava - kehys;
+            bool pieni = w > tila, rivit = w * 0.85f > tila;
+            var koko = pieni ? new StyleLength(Mathf.Round(perusKoko * 0.85f * 10f) / 10f) : new StyleLength(StyleKeyword.Null);
+            if (otsikko.style.fontSize != koko) otsikko.style.fontSize = koko;
+            var ws = rivit ? WhiteSpace.Normal : WhiteSpace.NoWrap;
+            if (otsikko.style.whiteSpace != ws) otsikko.style.whiteSpace = ws;
+            // Rivitetty otsikko saa leveyden, jotta korkeus lasketaan sillä (muuten palkki jäi yhden rivin korkuiseksi).
+            var lev = rivit ? new StyleLength(Mathf.Floor(tila)) : new StyleLength(StyleKeyword.Null);
+            if (otsikko.style.width != lev) otsikko.style.width = lev;
+            if (otsikko.style.textOverflow != TextOverflow.Clip) otsikko.style.textOverflow = TextOverflow.Clip;
         }
 
         void VaihdaTauko()
@@ -174,6 +328,7 @@ namespace Matkakirja.Natiivi
 
         void Paivita()
         {
+            if (palkki.style.display != DisplayStyle.None) Asettele();   // hakunappi voi siirtyä (selitenappi, kierto)
             if (kierto == null)
             {
                 kierto = UnityEngine.Object.FindAnyObjectByType<PalloKierto>();
