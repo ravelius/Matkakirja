@@ -249,3 +249,5 @@ NUI:n osa on `natiivi-ui/sallitut-157` 0f770be2. LS2:n lista on tiedostossa `pro
   - 16.5x: yksityiskohdat 8bc2a42fc kuitattu junaan 163 ja lähetetty Natiivisepälle. v2-paketti jäsentyy (67/67).
     - Seuraava pieni erä, kun data tulee: kortin tekijäriville merkintä "Havainnekuva" riveille, joilla `havainnekuva: true` (pyydetty Sisältökirjurilta).
     - Ulkoasua hiotaan omistajan TF 163 -palautteen mukaan.
+  - Havainnekuva valmiina: `linssiseppa/yksityiskohdat-havainnekuva` 917c32912 (yksityiskohdat + 1). Kenttä `havainnekuva` (oletus false), alarivi "Havainnekuva". Testit 838.
+    - Kuittaus pyydetään, kun Sisältökirjurin v3 (7 havainnekuvaa) on valmis.
