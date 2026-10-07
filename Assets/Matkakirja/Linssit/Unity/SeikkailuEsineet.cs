@@ -43,6 +43,9 @@ namespace Matkakirja.Natiivi
         Esine kadessa;
         Action<string> kirjaa;
         public string Lahin { get; private set; }
+        /// <summary>Toimintonapin verbi (Natiivi-UI lukee suoraan; pelattavuusmalli 6): Poimi, Heitä, Laske, Aseta, Irrota, Avaa, Koputa
+        /// sekä kynttilän ja luukun verbit (SeikkailuKynttilat.ToimintoVerbi); null = ei toimintoa (nappi piiloon).</summary>
+        public string Toiminto { get; private set; }
         public string Kadessa => kadessa?.Id;
 
         public static IEnumerator Lataa(KavelyData d, string juuri, Func<string, string> url, Transform isa, Action<string> kirjaa)
@@ -178,6 +181,11 @@ namespace Matkakirja.Natiivi
             var kynttilat = SeikkailuKynttilat.Aktiivinen;
             Lahin = lahin?.Id ?? (kadessa == null && kynttilat != null && kynttilat.ToimintoTarjolla(p) ? "kynttila" : null)
                 ?? (kadessa == null && OnttoLahella(p) ? "koputa" : null);
+            Toiminto = kadessa != null
+                ? (kadessa.Laji == Laji.Heitettava ? "Heitä" : Alttari is Vector3 alt && Vector3.Distance(p.transform.position, alt) < 1.6f ? "Aseta" : "Laske")
+                : lahin != null ? (lahin.Laji == Laji.Irrotettava ? "Irrota" : lahin.Id == Nyytti ? "Avaa" : "Poimi")
+                : Lahin == "kynttila" ? kynttilat.ToimintoVerbi(p)
+                : Lahin == "koputa" ? "Koputa" : null;
             bool toiminto = ToimintoPyydetty;
             ToimintoPyydetty = false;
             var kb = Keyboard.current; var gp = Gamepad.current;

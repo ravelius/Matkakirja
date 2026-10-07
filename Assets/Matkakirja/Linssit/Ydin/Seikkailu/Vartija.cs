@@ -36,7 +36,9 @@ namespace Matkakirja.Linssit.Seikkailu
     public readonly struct Aanilahde
     {
         public readonly double X, Z, KuuluvuusM;
-        public Aanilahde(double x, double z, double kuuluvuusM) { X = x; Z = z; KuuluvuusM = kuuluvuusM; }
+        /// <summary>Kävelyosa, jossa ääni syntyi (seinäsääntö, Askelaani.Kuuluvuus); null = ei tiedossa.</summary>
+        public readonly string Osa;
+        public Aanilahde(double x, double z, double kuuluvuusM, string osa = null) { X = x; Z = z; KuuluvuusM = kuuluvuusM; Osa = osa; }
     }
 
     /// <summary>Yhden kehyksen havaintosyöte sovittimelta.</summary>

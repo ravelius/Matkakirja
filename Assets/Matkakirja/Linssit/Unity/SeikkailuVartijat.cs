@@ -22,7 +22,7 @@ namespace Matkakirja.Natiivi
         public const double ValoisuusOletus = 0.7, JuoksuKuuluuM = 6, KavelyKuuluuM = 2.5, KavelyKestoS = 1.333;   // skin.kavely_kesto_s (Linnanrakentaja)
         static readonly List<Aanilahde> jono = new List<Aanilahde>();
         /// <summary>Heitetty esine tms. (Unity x, z): kuuluu vartijoille seuraavalla ruudulla.</summary>
-        public static void Aani(Vector3 paikka, double kuuluvuusM) => jono.Add(new Aanilahde(paikka.x, paikka.z, kuuluvuusM));
+        public static void Aani(Vector3 paikka, double kuuluvuusM) => jono.Add(new Aanilahde(paikka.x, paikka.z, kuuluvuusM, Askelaani.Osa(SeikkailuKavely.Data, paikka.x, paikka.y, -paikka.z)));
 
         sealed class V
         {
@@ -145,9 +145,10 @@ namespace Matkakirja.Natiivi
             var aanet = new List<Aanilahde>(jono); jono.Clear();
             if (p != null)
             {
-                double vauhti = p.Tila.Vauhti;
-                if (vauhti > 0.3 && p.Tila.Tapa != Liiketapa.Hiipiminen)
-                    aanet.Add(new Aanilahde(p.transform.position.x, p.transform.position.z, p.Tila.Tapa == Liiketapa.Juoksu ? JuoksuKuuluuM : KavelyKuuluuM));
+                // Askeleet pinnan mukaan (pelattavuusmalli 2.2: kivi 0 / 2,5 / 6 m, puu 1 / 3,5 / 8 m, ...), osa seinäsääntöä varten.
+                var pp0 = p.transform.position; var kd = SeikkailuKavely.Data;
+                double sade = Askelaani.Sade(Askelaani.Pinta(kd, pp0.x, pp0.y, -pp0.z), p.Tila.Tapa);
+                if (p.Tila.Vauhti > 0.3 && sade > 0) aanet.Add(new Aanilahde(pp0.x, pp0.z, sade, Askelaani.Osa(kd, pp0.x, pp0.y, -pp0.z)));
             }
             bool piilossa = p != null && Piilossa(p);
             double sydan = 0;
@@ -156,7 +157,15 @@ namespace Matkakirja.Natiivi
             {
                 var ag = v.Agentti; if (ag == null || !ag.isOnNavMesh) continue;
                 var vp = ag.transform.position;
-                var s = new VartijanSyote { VartijaX = vp.x, VartijaZ = vp.z, Valoisuus = PelaajanValoisuus(p), Aanet = aanet, PelaajaVauhti = p != null ? p.Tila.Vauhti : (double?)null };
+                // Seinäsääntö: oma osa täysi säde, naapuriosa puolet, muu ei kuulu.
+                var kuuluvat = aanet;
+                if (aanet.Count > 0)
+                {
+                    string vosa = Askelaani.Osa(SeikkailuKavely.Data, vp.x, vp.y, -vp.z);
+                    kuuluvat = new List<Aanilahde>(aanet.Count);
+                    foreach (var a in aanet) { double r = Askelaani.Kuuluvuus(SeikkailuKavely.Data, a.KuuluvuusM, a.Osa, vosa); if (r > 0) kuuluvat.Add(new Aanilahde(a.X, a.Z, r, a.Osa)); }
+                }
+                var s = new VartijanSyote { VartijaX = vp.x, VartijaZ = vp.z, Valoisuus = PelaajanValoisuus(p), Aanet = kuuluvat, PelaajaVauhti = p != null ? p.Tila.Vauhti : (double?)null };
                 if (p != null)
                 {
                     var pp = p.transform.position;

@@ -178,15 +178,21 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Onko toiminto tarjolla (nappi näkyviin).</summary>
-        public bool ToimintoTarjolla(SeikkailuPelaaja p)
+        public bool ToimintoTarjolla(SeikkailuPelaaja p) => ToimintoVerbi(p) != null;
+
+        /// <summary>Tarjolla olevan toiminnon verbi (Natiivi-UI:n toimintonappi): Avaa/Sulje (luukku), Sytytä (ikuisesta valosta),
+        /// Ota (asetettu kynttilä), Aseta (seinän viereen), Sammuta, Sytytä tai Puhalla (oma); null = ei toimintoa. Sama järjestys kuin Toimi.</summary>
+        public string ToimintoVerbi(SeikkailuPelaaja p)
         {
-            if (p == null) return false;
+            if (p == null) return null;
             var c = p.transform.position + Vector3.up * 1.0f;
-            if (LuukullaOn(c)) return true;
-            if (ydin.OmaKynttila && !ydin.OmaPalaa && OmaAsetettu == null && Vector3.Distance(c + Vector3.up * 0.4f, IkuinenValo) < SytytysM + 0.6f) return true;
-            if (OmaAsetettu is Vector3 asp && Vector3.Distance(asp, c) < 1.2f) return true;
-            if (OmaAsetettu == null && ydin.OmaPalaa && OnttoPaikka() is Vector3 op && Vector3.Distance(op, c) < 1.3f) return true;
-            return ydin.Valitse(c.x, c.y, c.z).Toiminto != KynttilaToiminto.Ei && (Lahella(c) || ydin.OmaPalaa);
+            if (LuukullaOn(c)) return LuukkuAuki ? "Sulje" : "Avaa";
+            if (ydin.OmaKynttila && !ydin.OmaPalaa && OmaAsetettu == null && Vector3.Distance(c + Vector3.up * 0.4f, IkuinenValo) < SytytysM + 0.6f) return "Sytytä";
+            if (OmaAsetettu is Vector3 asp && Vector3.Distance(asp, c) < 1.2f) return "Ota";
+            if (OmaAsetettu == null && ydin.OmaPalaa && OnttoPaikka() is Vector3 op && Vector3.Distance(op, c) < 1.3f) return "Aseta";
+            var t = ydin.Valitse(c.x, c.y, c.z).Toiminto;
+            if (t == KynttilaToiminto.Ei || !(Lahella(c) || ydin.OmaPalaa)) return null;
+            return t == KynttilaToiminto.SammutaOma ? "Puhalla" : t == KynttilaToiminto.SammutaTilan ? "Sammuta" : "Sytytä";
         }
 
         void Update()
