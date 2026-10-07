@@ -25,7 +25,7 @@ namespace Matkakirja.Natiivi
         public const string Osoite = Sivusto + "assets/apuraha/esittely.json";
         const string Muisti = "matkakirja-apuraha-esittely";
 
-        public sealed class Kappale { public int Numero; public string Otsikko, Teksti, LinkkiTeksti, LinkkiUrl, NappiTeksti, NappiValmis, Toiminto; public bool Korostus; public List<string> Lista = new List<string>(), NappiLinssit = new List<string>(); }
+        public sealed class Kappale { public int Numero; public string Otsikko, Teksti, LinkkiTeksti, LinkkiUrl; public bool Korostus; public List<string> Lista = new List<string>(); }
         /// <summary>Kappale = esittely.json:n kappaleet-taulukon 0-pohjainen indeksi alkuperäisessä järjestyksessä (versio 7, omistaja
         /// 7.10. 14.5x; Pelikoodari): kuva pienenä kappaleen alussa (tekstin tai ensimmäisen listarivin vieressä); Rivi = listakappaleen
         /// 0-pohjainen listarivi, jonka viereen kuva tulee (sama kuin web). −1 tai osumaton kappale = kortin lopun kuvarivi.</summary>
@@ -35,6 +35,9 @@ namespace Matkakirja.Natiivi
             public string Nappi, Otsikko, Alaotsikko;
             public List<Kappale> Kappaleet = new List<Kappale>();
             public List<Kuva> Kuvat = new List<Kuva>();
+            /// <summary>Ylätason valmiitLinssit (v7, Pelikoodari #4147): teksti + nappi kappaleiden jälkeen; null = ei osiota.</summary>
+            public string ValmiitTeksti, ValmiitNappi, ValmiitValmis;
+            public List<string> ValmiitLinssit = new List<string>();
         }
 
         /// <summary>Sama tarkistus kuin webin tarkistaApuraha: puuttuva nappi, otsikko tai kappalelista = null.</summary>
@@ -62,13 +65,7 @@ namespace Matkakirja.Natiivi
                 var linkki = Rakenne.Olio(o.TryGetValue("linkki", out var li) ? li : null);
                 k.LinkkiUrl = S(linkki, "url");
                 k.LinkkiTeksti = S(linkki, "teksti") ?? k.LinkkiUrl;
-                var nappi = Rakenne.Olio(o.TryGetValue("nappi", out var nv) ? nv : null);
-                k.NappiTeksti = S(nappi, "teksti");
-                k.NappiValmis = S(nappi, "valmis") ?? k.NappiTeksti;
-                k.Toiminto = S(nappi, "toiminto");
-                var nl = Rakenne.Lista(nappi != null && nappi.TryGetValue("linssit", out var nlv) ? nlv : null);
-                if (nl != null) foreach (var t in nl) if (t is string ts && ts.Length > 0) k.NappiLinssit.Add(ts);
-                if (k.Otsikko != null || k.Teksti != null || k.Lista.Count > 0 || k.NappiTeksti != null) e.Kappaleet.Add(k);
+                if (k.Otsikko != null || k.Teksti != null || k.Lista.Count > 0 || k.LinkkiUrl != null) e.Kappaleet.Add(k);
             }
             var kuvat = Rakenne.Lista(d.TryGetValue("kuvat", out var kuv) ? kuv : null);
             if (kuvat != null)
@@ -85,6 +82,14 @@ namespace Matkakirja.Natiivi
                     if (o.TryGetValue("rivi", out var rv) && rv != null && int.TryParse(System.Convert.ToString(rv, System.Globalization.CultureInfo.InvariantCulture), out int rn)) kuva.Rivi = rn;
                     e.Kuvat.Add(kuva);
                 }
+            // VALMIIT LINSSIT (omistaja 7.10. 15.0x): ylätasolla, jotta vanha appi (TF 159/160) ei näytä kuollutta nappia.
+            var vl = Rakenne.Olio(d.TryGetValue("valmiitLinssit", out var vlv) ? vlv : null);
+            if (vl != null)
+            {
+                e.ValmiitTeksti = S(vl, "teksti"); e.ValmiitNappi = S(vl, "nappi"); e.ValmiitValmis = S(vl, "valmis") ?? e.ValmiitNappi;
+                var vll = Rakenne.Lista(vl.TryGetValue("linssit", out var vlt) ? vlt : null);
+                if (vll != null) foreach (var t in vll) if (t is string ts && ts.Length > 0) e.ValmiitLinssit.Add(ts);
+            }
             return e;
         }
 
@@ -322,27 +327,29 @@ namespace Matkakirja.Natiivi
                     Rakenne.Teksti(k.Lista[i], "mk-kortti__teksti mk-apuraha__riviteksti", rivi);
                     sijoitetut.AddRange(tama);
                 }
-                // VALMIIT LINSSIT (omistaja 7.10. 15.0x): vain julkaistut linssit heti (lista esittely.json:sta, sama kuin webissä).
-                // Vanha "esittelylinssit" (kaikki, myös kehitteillä olevat) poistettiin: sillä toiminnolla nappia ei näytetä.
-                if (k.Toiminto == "valmiit-linssit" && k.NappiTeksti != null && k.NappiLinssit.Count > 0)
-                {
-                    Button b = null;
-                    void Valmis() { b.Q<Label>().text = k.NappiValmis; b.SetEnabled(false); }
-                    b = Rakenne.Nappi(k.NappiTeksti, "mk-nappi--toiminto mk-apuraha__toiminto", () =>
-                    {
-                        LinssiOhjain.AvaaValmiitLinssit(k.NappiLinssit);
-                        Kaynti.Laheta("esittelylinssit");   // workerin tapahtumanimi ennallaan (käyntilaskuri)
-                        Debug.Log($"MATKAKIRJA apuraha: valmiit linssit auki ({string.Join(", ", k.NappiLinssit)}), valittavissa {LinssiUi.Rekisteri?.Valittavat.Count ?? -1}");
-                        Valmis();
-                    }, vieritys);
-                    Kirjasimet.Aseta(b, Kirjasin.KoneLihava);
-                    if (LinssiOhjain.ValmiitLinssitAuki) Valmis();
-                }
+                // Kappaleen toimintonappi (vanha "esittelylinssit": kaikki linssit) poistettiin (omistaja 7.10. 15.0x): ei näytetä.
                 if (k.LinkkiUrl != null)
                 {
                     var url = k.LinkkiUrl;
                     Kirjasimet.Aseta(Rakenne.Nappi(k.LinkkiTeksti, "mk-lehti__linkki mk-apuraha__linkki", () => Application.OpenURL(url), vieritys), Kirjasin.Kone);
                 }
+            }
+            // VALMIIT LINSSIT (omistaja 7.10. 15.0x): teksti + nappi kappaleiden jälkeen; avaa vain listan (julkaistut) linssit
+            // ilman pisteitä, kehittäjätilaan ei kosketa. Ilman nappia tai listaa (v6) osiota ei näytetä.
+            if (e.ValmiitNappi != null && e.ValmiitLinssit.Count > 0)
+            {
+                if (e.ValmiitTeksti != null) Rakenne.Teksti(e.ValmiitTeksti, "mk-kortti__teksti mk-apuraha__teksti", vieritys);
+                Button b = null;
+                void Valmis() { b.Q<Label>().text = e.ValmiitValmis; b.SetEnabled(false); }
+                b = Rakenne.Nappi(e.ValmiitNappi, "mk-nappi--toiminto mk-apuraha__toiminto", () =>
+                {
+                    LinssiOhjain.AvaaValmiitLinssit(e.ValmiitLinssit);
+                    Kaynti.Laheta("esittelylinssit");   // workerin tapahtumanimi ennallaan (käyntilaskuri)
+                    Debug.Log($"MATKAKIRJA apuraha: valmiit linssit auki ({string.Join(", ", e.ValmiitLinssit)}), valittavissa {LinssiUi.Rekisteri?.Valittavat.Count ?? -1}");
+                    Valmis();
+                }, vieritys);
+                Kirjasimet.Aseta(b, Kirjasin.KoneLihava);
+                if (LinssiOhjain.ValmiitLinssitAuki) Valmis();
             }
             var loppukuvat = e.Kuvat.Except(sijoitetut).ToList();
             if (loppukuvat.Count > 0)
