@@ -13,7 +13,7 @@ aikaan; ei omia natiivikäännöksiä; kuittaus = peili + yksi rivi (ei stillej�
 ## TILA LOPUSSA (7.10. klo 21.0x)
 - OMISTAJAN LINJAT: 13.3x ensimmäinen pelattava pala ensin, Giza ja Kielletty odottavat. 18.5x pelit 1. PERSOONASSA (Fogg ei näy;
   asu v2 kauko-/takakuviin; kädet kadet-v1). PELATTAVUUSMALLI mainissa: docs/raportit/pelattavuusmalli-olavinlinna.md (#4163).
-- LINNA v44q (MUUTOKSET.md v44…v44q, _valmiit/olavinlinna-blender-v44; peili-hash v44q lokista tai luovutuksen loppuriviltä).
+- LINNA v44q PEILISSÄ 676840af54bbbcd5 (d0f2b9dcc; MUUTOKSET.md v44…v44q, _valmiit/olavinlinna-blender-v44).
   Siirtoseppä kytkee jokaisen viennin historia-fp:hen. Huoneet 1–8 käveltävinä: laituri, keittiö, Kirkkotorni, kappeli E3,
   tyrmä E 101 (osa tyrma-E101), huone 6 palatsi (Linnantupa + voudin sali leivottu, palatsi.js), huone 7 muurikäytävä, huone 8
   muurinharja + Kellotornin otteet (osa muurikaytava). Reitti kappelista: kaari-ovi → kaariportaat (RP 6,3) → ampumakäytävä
@@ -21,7 +21,12 @@ aikaan; ei omia natiivikäännöksiä; kuittaus = peili + yksi rivi (ei stillej�
   Törmäystesti: proto-3d/tyokalut/linnanrakentaja-ajot/scratch-20261007/reittitesti.py (Blender -b -P … -- <kavely-v1/v2>): 0 estettä.
 - KESKEN: agentti tekee esineet-v1:een avainnippu, avainrengas, esiliina, myssy, keittokulho → cp glb:t kavely-v1/v2/ + glb= merkkeihin
   (esine:avainnippu-tyrma, esine:avainrengas, esine:esiliina, esine:myssy, esine:keittokulho) kavely.py:ssä → kavely.py + kuori_kavely.py
-  → rsync v44/kavely → vienti → Siirtosepälle. Puuttuu myös köysikiepin glb (resepti koysikieppi on dioraamassa).
+  → rsync v44/kavely → vienti → Siirtosepälle. Puuttuu myös köysikiepin glb (resepti koysikieppi on dioraamassa). Samalle agentille
+  lisätty esine-arkku-komero.glb (solmut runko, kansi, kilpi-1, kilpi-2) → merkki esine:arkku-komero glb=.
+- HUONE 9 LÄHTEESSÄ (EI vielä viety, tulee seuraavaan vientiin esineiden kanssa): komero:kellotorni (280°, kynnys 14,8, leikkaus +
+  törmäys), tiili:komero-1..6, esine:arkku-komero, kilpi:arkku-1/2, valo:kuu-komero, koysi:krampi-komero.
+- HUONE 10 KYSYTTY PT:ltä 20.5x: köysilaskun paikka (280° alla 1790-l. Kellobastioni kuoressa; suositus laskeutuminen ~295°
+  paljaalle kalliolle, rinne 300° veteen r ~25, TULKINTA) vai 1499-kallion mallinnus. Odottaa vastausta.
 - AJOTAPA: muutos → leivonta (scratch paistot.sh / leivo_tila.py 2k) → kopioi v44:ään → ASTC (swift proto-3d/tyokalut/astc-mip.swift
   X.jpg X-4x4.astcm 4) → worktreessä `source ~/.zshrc; zsh tools/dioraama/vie-blender.sh --lahde <v44>` → commit blender.json + push →
   `gh workflow run vie-dioraama.yml --ref linnanrakentaja-linna-v42 -f rakennus=olavinlinna -f kuiva=false -f osoitin=false` → hash:
