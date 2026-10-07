@@ -21,6 +21,10 @@ Avoimet työt:
 - VIE 159 kaupunkipallo OK (19ef80cc iPhone: oikea napautus → kaupunkitila Rooma, kortti ei peitä). PUUTE torjuntalaatikko < 4 s
   (LS1/NUI), raportoitu Päätoimittajalle, Julkaisijalle ja Natiivisepälle. Stillit lokit/linssiseppa2-kaupunkipallo-159-stillit/.
 - Apurahakuva valmis: lokit/apuraha-kuvat/iss-cupola-mustameri-ipad-vaaka-{1,2}.png (iPad vaaka, Mustameri). Länsi-Eurooppa tarvittaessa.
+- AVOIN (Päätoimittaja 10.49): (1) LCD:n SIJAINTI-nimet vanhentuneita (Illichivsk → Tšornomorsk, Dnipropetrovsk → Dnipro,
+  Kirovohrad → Kropyvnytskyi): lähde Resources/IssPaikat/paikat.json (NE 5.1.2). Korjaus omana eränä Wikidatasta (fi-nimike /
+  nykyinen nimi suomal. translitteroinnilla), muutoslista Päätoimittajalle, EI junaan ilman kuittausta. (2) Uusi apurahakuva,
+  2 vaihtoehtoa: Länsi-Eurooppa ja Itämeri/Suomi päivällä, iPad vaaka, täysi res., ei kehittäjäpeitteitä, LCD:ssä ajantasainen nimi.
 - Ei keskeneräisiä ajoja. Worktree wt/proto-linssiseppa2-kaupunkipallo (a04d12f7c, junassa 159) → poista, kun 159 on mainissa.
 - Ajoskriptit scratchpadissa (b02a8297): ajo-kp159.sh, kaupunkipallo.txt, apuraha-cupola.txt; kattavuus3d/ (mittaa.py, sallitut.py)
   kopioina lokit/linssiseppa2-3d-kattavuus/.
