@@ -2603,3 +2603,130 @@ teloitus mainitaan, sitä ei kuvata, eli sävy on sopiva.
 5. **Berliini, Voitonpylväs (vanha teksti):** "yli sadantuhannen hengen yleisölle". Obaman vuoden 2008 yleisöksi
    arvioidaan yleensä noin kaksisataatuhatta. Väite on teknisesti tosi mutta vähättelevä. En muuttanut, koska kenttää ei
    muutettu tässä tarkistuksessa.
+
+Tarkistaja B: kosice–tukholma (14 kaupunkia).
+
+# Toisen lukijan tarkistus (tarkistaja B): kosice–tukholma, 14 kaupunkia
+
+Tarkistettu jokainen muutettu kenttä: `git diff 9710c46`, kenttätasolla JSON-vertailuna (Ljubljanan ja Luxemburgin suuri diff on pääosin muotoilua; sisältömuutokset käytiin kentittäin). Kaikkien muutettujen `teksti`- ja `lyhyt`-kenttien numerot, sulkeet, vuosivälit, perspektiivi, isoisä ja roomalaiset numerot tarkistettiin myös koneellisesti; poikkeamia ei löytynyt. Avauksiin ei ollut tehty muutoksia. Tarkistin: 0 virhettä kaikissa 14 kaupungissa.
+
+## Košice
+- Hyväksytty sellaisenaan.
+- Avatut lähteet: en.wikipedia Cathedral_of_St._Elizabeth (juopuneen naisen vesikouru ja ontto kivi: tukee), teraz.sk teatterihistoria (raatihuoneen paikka, kivinen teatteri 1788, suljettiin 1894 turvallisuussyistä, Kocúrkovo 13.9.1924: tukee).
+- Lisäksi luettu: Hlavná-kadun vaakunaenkeli, suihkulähteen Schuster-lyhyt ja museon Rákóczi-lyhyt. Lyhyet eivät toista toisiaan. Rákóczin jäänteiden tuonti 1906 mainitaan myös katedraalin tekstissä, mutta ei toisessa lyhyessä, joten sitä ei korjattu.
+
+## Krakova
+
+### Florianin portti — kenttä `kysymykset` (TARKISTAJAN KORJAUS)
+- **Vanha:** "Ketkä myyvät maalauksia muurin vieressä?"
+- **Uusi:** "Miksi valkoinen kotka on Puolan tunnus?"
+- **Syy:** Tyyppi 1/7: uuden lyhyen ensimmäinen virke vastaa kysymykseen suoraan ("taiteilijat myyvät ohikulkijoille"). Uusi kysymys liittyy lyhyen kotkareliefiin, ja sen oletus on tosi.
+- **Lähde:** https://en.wikipedia.org/wiki/St._Florian%27s_Gate (kotka pohjoisseinällä)
+
+- Avatut lähteet: en.wikipedia Old_Synagogue (museo vuodesta 1958: tukee), krakow.pl Plac Nowy (Okrąglak 1899–1900, siipikarjateurastamo vuodesta 1927: tukee), en.wikipedia Veit_Stoss_altarpiece (purku ja hajasijoitus, Nürnbergin linnan kellari, paluu 1946: tukee), Krakow_Barbican (Oracewicz ja nappi: tukee), St._Florian's_Gate (Langman 1882, Matejko, 1700-luvun reliefi: tukee), Sukiennice_Museum (7.10.1879, Neron soihdut: tukee).
+- Wawelin päiden legenda: wawel.krakow.pl:n PDF on liian suuri avattavaksi, ja pl.wikipedia ei mainitse legendaa. Haku löysi kaksi versiota: pää esti väärän tuomion, tai pää huomautti jo annetusta väärästä tuomiosta. Lyhyen muotoilu vastaa jälkimmäistä, joten muutosta ei tehty.
+
+## Kreeta
+
+### Koulesin linnoitus — kenttä `kysymykset` (TARKISTAJAN KORJAUS)
+- **Vanha:** "Mitä Cousteau löysi Dian saaren hylyistä?"
+- **Uusi:** "Miksi Cousteau etsi Atlantista Kreetan vesiltä?"
+- **Syy:** Tyyppi 1/7: uusi lyhyt vastaa kysymykseen suoraan ("hylyistä nostetut amforat ja tykit"). Uusi kysymys jatkaa lyhyen Atlantis-aihetta, ja sen oletus on tosi.
+- **Lähde:** https://www.cretanbeaches.com/en/islands-and-islets-around-crete/dia-island (lyhyen olemassa oleva lähde)
+
+- Avatut lähteet: cretanbeaches Kazantzakis-sivu (Kreetan arkkipiispa Eugenios toimitti hautajaiset, kiihkoilijat polttivat kirjoja kirkon ulkopuolella: tukee), gomega.gr Dia (seitsemän meripeninkulmaa eli noin kolmetoista kilometriä, Cousteau 1976, löydöt Koulesiin: tukee; "tykit" ei mainita tällä sivulla, mutta väite oli jo vanhassa lyhyessä).
+
+## Lissabon
+- Hyväksytty sellaisenaan.
+- Avatut lähteet: rfm.pt (Santa Justa suljettu syyskuusta 2025 Glórian onnettomuuden jälkeen, kuusitoista kuollutta, avaamispäivää ei ole: tukee), en.wikipedia Belém_Tower (antautuminen 1580 muutaman tunnin jälkeen, vankila vuoteen 1830, Mikael I ja liberaalit: tukee).
+- Nykyaika: Santa Justan teksti kertoo sulkemisen menneenä tapahtumana ("suljettiin"), joten se pysyy totena, vaikka hissi avattaisiin. Hyväksytty.
+
+## Ljubljana
+
+### Tivolin puisto — kenttä `lyhyt` (TARKISTAJAN KORJAUS)
+- **Vanha:** "… Tarina on perätön, eikä Fernkorn edes tehnyt koiria."
+- **Uusi:** "… Tarina on perätön, eikä edes Fernkornin tekijyydestä ole varmuutta."
+- **Syy:** Tyyppi 3 (vivahde): lähteen mukaan koirat liitettiin vanhoissa kirjoissa Fernkorniin, ja ne suunnittelivat itävaltalaiset kuvanveistäjät määriläisessä valimossa. Lähde ei sano suoraan, ettei Fernkorn tehnyt niitä.
+- **Lähde:** https://en.wikipedia.org/wiki/Tivoli_City_Park
+
+### Ljubljanan linna — kenttä `kysymykset` (TARKISTAJAN KORJAUS)
+- **Vanha:** "Miksi pormestari halusi kaupungin ostavan linnan?"
+- **Uusi:** "Mitä linnan Pyhän Yrjön kappelissa on?"
+- **Syy:** Tyyppi 1/7: uusi lyhyt vastaa kysymykseen suoraan (kaupunginmuseoksi). Pyhän Yrjön kappeli on linnassa, joten oletus on tosi.
+- **Lähde:** ei uutta väitettä (kysymys)
+
+- Avatut lähteet: n1info.si (Marinčekin kangaskatto, märkä lumi huhtikuussa 2016, puolitoista tuntia, kiinteä katto 2022: tukee), en.wikipedia Tivoli_City_Park (katso yllä).
+- Sävy: Tivolin "riisti henkensä" mainitsee perättömän huhun itsemurhasta. Sitä ei kuvata, joten se on hyväksyttävä.
+
+## Luxemburg
+- Hyväksytty sellaisenaan.
+- Avatut lähteet: bkdh.nl (Haagin kopio 16.9.1924, rahat eivät riittäneet, viisitoista taiteilijajärjestöä vastusti: tukee), en.wikipedia Gëlle_Fra (purku 21.10.1940, löytyi tammikuussa 1980 stadionin pääkatsomon alta: tukee).
+- Huomio: `syventava` "Kuka piilotti Kultaisen naisen?" Piilottajaa ei tiedetä, mutta oletus siitä, että patsas piilotettiin, on tosi. Jätetty ennalleen.
+
+## Madrid
+- Hyväksytty sellaisenaan.
+- Avatut lähteet: miradormadrid.com (Tío Pepe 1935, purku noin 2011, yli 50 000 allekirjoitusta, paluu 2014 numeroon 11: tukee). museoreinasofia.es palautti 403-virheen, joten tarkistin Kristallipalatsin viiden kuukauden rakennusajan haulla, jonka useat lähteet vahvistivat, ja en.wikipedian Palacio_de_Cristal-sivulta (vuoden 1887 Filippiinien näyttely, kasvihuone).
+- Isoisä: Retiron tekstissä, merkinnän sisällöllä, vain yhdessä kohteessa. Kunnossa.
+- Huomio: Pradon kysymys "Miten Las Meninas pelastettiin tulipalosta?" saa vastauksen kuninkaanlinnan lyhyestä (heitettiin ikkunasta). Kumpikaan kenttä ei muuttunut tässä erässä, joten tätä ei korjattu.
+
+## Marseille
+
+### MuCEM — kenttä `lyhyt` (TARKISTAJAN KORJAUS)
+- **Vanha:** "… Kaikkiaan kokoelmissa on nykyään noin miljoona esinettä, kirjaa, valokuvaa, julistetta, postikorttia ja äänitettä."
+- **Uusi:** "… Sen perusti vuonna 1937 museomies Georges Henri Rivière, jonka tutkijat kiersivät Ranskan maaseutua keräämässä arkisia esineitä ja perinteitä."
+- **Syy:** Tyyppi 2 ja kieli. Uusi toinen virke oli kuuden sanan luettelo ja kokoelman kappalemäärä, siis inventaariotietoa. Korvasin sen ihmisellä ja tarinalla. Lisäsin `lahteet`-kenttään uuden väitteen.
+- **Lähde:** https://fr.wikipedia.org/wiki/Georges_Henri_Rivi%C3%A8re (perusti museon 1937, valtion kenttätutkimukset) ja https://fr.wikipedia.org/wiki/Mus%C3%A9e_des_Civilisations_de_l%27Europe_et_de_la_M%C3%A9diterran%C3%A9e (MNATP:n kokoelmat, suljettiin 2005)
+
+- Muut lyhyet (Notre-Damen kello, katedraali, Calanques) luettu, eivätkä ne toista toisiaan.
+
+## Oslo
+- Hyväksytty sellaisenaan.
+- Avatut lähteet: sciencenorway.no (Oseberg siirrettiin 10.9.2025 noin sata metriä kattokiskoa pitkin, näytteillä vuodesta 1926, noin 549 miljoonaa kruunua: tukee), snl.no Holmenkollrennene (Olav nuorimpien sarjassa 1922 ja 1923, seitsemänkymmentäkaksi kisaa: tukee), nobelpeacecenter.org (Harald avasi 11.6.2005, Maathai paikalla, Mandela kaksi päivää aiemmin: tukee; myös kysymykselle "Mitä Mandela sanoi…" löytyy vastaus). Satakaksikymmentätuhatta katsojaa vuonna 1952 ei näy snl:ssä tarkkana lukuna, mutta haku vahvistaa sen yleisesti käytetyksi luvuksi, ja väite oli jo vanhassa lyhyessä.
+
+## Sevilla
+- Hyväksytty sellaisenaan.
+- Avatut lähteet: visitasevilla.es (Carmen-patsas areenaa vastapäätä Paseo Colónin toisella puolella: tukee). Carmenin kuolema on oopperan juonta Wikipedian Carmen-artikkelin mukaan.
+- Sävy, Maestranzan lyhyt: "Carmen kuolee mustasukkaisen Don Josén käsissä" mainitsee kuoleman ilman väkivallan kuvausta (puukotusta ei mainita), ja se on yleisesti tunnettu oopperan loppu. Sopii kohderyhmälle 13+, joten hyväksytty.
+
+## Sisilia
+- Hyväksytty sellaisenaan.
+- Avatut lähteet: balarm.it (kuninkaallinen posti 1787, postitalo kätki kirkon 1800-luvun alussa, Patricolo vapautti sen 1882–1885: tukee), en.wikipedia San_Giovanni_degli_Eremiti (arabiaikainen vesisäiliö ristikäytävässä, Gregorius Suuri perimätietona, Roger II noin 1136: tukee).
+
+## Sofia
+
+### Sofian yliopisto — kenttä `lyhyt` (TARKISTAJAN KORJAUS)
+- **Vanha:** "Sofian yliopiston opiskelijat buuasivat tammikuussa 1907 ruhtinas Ferdinandille uuden kansallisteatterin avajaisissa."
+- **Uusi:** "Sofian yliopiston opiskelijat ottivat ruhtinas Ferdinandin vastaan paheksuvin huudoin uuden kansallisteatterin avajaisissa tammikuussa 1907."
+- **Syy:** Tyyppi 6, sävy ja kieli: "buuasivat" on puhekielinen laina, joka sopii huonosti pysyvään opastekstiin. Uusi muotoilu on neutraali ja kertoo saman asian.
+- **Lähde:** https://en.wikipedia.org/wiki/Sofia_University (booed, yliopisto suljettiin kuudeksi kuukaudeksi, kaikki opettajat erotettiin)
+
+### Banja Bashin moskeija — kenttä `kysymykset` (TARKISTAJAN KORJAUS)
+- **Vanha:** "Miksi muut Sofian moskeijat tuhottiin?"
+- **Uusi:** "Miksi moskeijan vieressä on lähdevesihanoja?"
+- **Syy:** Tyyppi 7: edellinen tarkistaja lisäsi kysymyksen "Miten tämä moskeija säästyi, kun muut tuhottiin?", jolloin kaksi kysymystä kysyi samaa. Lisäksi lyhyt vastaa jo tuhoamiseen (venäläiset sotilasinsinöörit 1878). Uuden kysymyksen oletus tulee kohteen omasta tekstistä.
+- **Lähde:** ei uutta väitettä (kysymys)
+
+- Avattu lisäksi: en.wikipedia National_Palace_of_Culture (avattiin 31.3.1981, joten "muutama kuukausi ennen Živkovan kuolemaa heinäkuussa 1981" pitää).
+
+## Tampere
+- Hyväksytty sellaisenaan.
+- Avatut lähteet: fi.wikipedia Näsinneula (unkarilaiset rakennusmiehet, liukuvalu 33 vuorokaudessa kesäkuusta 1970, korkeus kokeiltiin helikopterista, Santamäki ja Space Needle: tukee), en.wikipedia Finnish_Museum_of_Games (85 860 euroa 1 120 tukijalta 2015, avattiin tammikuussa 2017, Supercell: tukee). Särkänniemen akvaarion nykytila tarkistettiin haulla: akvaario toimii, joten kysymyksen oletus pitää.
+- Huomio: Vapriikin lyhyt on rahoitustiedon (joukkorahoituksen summat) rajalla, mutta siinä on tarina ja yllätys, joten se on hyväksytty.
+
+## Tukholma
+
+### Gamla stan — kenttä `lyhyt` (TARKISTAJAN KORJAUS)
+- **Vanha:** "Talvella tukholmalaiset neulovat patsaalle pipoja ja kaulaliinoja."
+- **Uusi:** "Talvella pojalla on usein päässään pipo ja kaulassaan kaulaliina."
+- **Syy:** Tyyppi 3: lähteet eivät tue väitettä, että tukholmalaiset neulovat vaatteet. Ne kertovat vain, että patsaalla on talvella pipo ja kaulaliina. Lisätty lähde.
+- **Lähde:** https://en.wikipedia.org/wiki/J%C3%A4rnpojke ("In winter, the little boy is also to be found wearing a winter hat and scarf"); svenskakyrkan.se/nyheter/rautapoika ei mainitse vaatteita.
+
+- Avatut lähteet: kungligaslotten.se (Erik XIV:n kruunu, Cornelis ver Weiden 1561, maailman vanhin yhä käytössä oleva kuninkaankruunu: tukee), svenskakyrkan.se Rautapoika (omakuva, viisitoista senttiä, Tukholman pienin patsas: tukee).
+
+## Päätoimittajalle
+1. **Košice, Miklušin vankila, `teksti`** (ei muutettu tässä erässä): "Työn on määrä valmistua kesällä 2027" ja kysymys "Millainen uusi näyttely vankilaan tulee?" vanhenevat, kun museo avataan. Tekstiä ei voi kirjoittaa nyt niin, että se olisi sekä tosi että pysyvä. Ehdotus: poista viimeinen virke (teksti pysyy 4–5 virkkeessä ja yli 65 sanassa) tai äänitä kohde uudelleen avaamisen jälkeen.
+2. **Luxemburg, Pétrusse, `teksti`** (ei muutettu tässä erässä): "Ensimmäinen vaihe valmistui vuoden 2024 lopussa, ja työ jatkuu." vanhenee, kun työ valmistuu. Sama ratkaisu kuin edellä.
+3. **Lissabon, Santa Justan hissi, `teksti`:** sulkeminen kerrotaan menneenä tapahtumana, joten teksti pysyy totena. Päätettävä: halutaanko äänitteeseen Glórian onnettomuus kuudentoista kuolonuhrin mainintoineen?
+4. **Sevilla, Maestranza:** Carmenin kuolema mainitaan ilman kuvausta, ja olen hyväksynyt sen. Lopullinen sävyarvio on ihmisen päätös.
+5. **Krakova, Wawel:** päiden legendasta on kaksi versiota (pää esti väärän tuomion, tai pää huomautti jo annetusta). Lyhyt käyttää jälkimmäistä. Muutosta ei tehty.
+6. **Madrid:** Pradon kysymys Las Meninasin pelastamisesta saa vastauksen kuninkaanlinnan lyhyestä. Kumpikaan kenttä ei muuttunut tässä erässä.

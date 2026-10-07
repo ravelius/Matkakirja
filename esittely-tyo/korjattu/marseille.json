@@ -103,7 +103,7 @@
    "luokka": "rakennus",
    "koko_m": 200,
    "teksti": "Euroopan ja Välimeren sivilisaatioiden museo, MuCEM, seisoo vanhan sataman suulla entisellä laiturilla suurena kuutiona. Sen seiniä peittää tumma, pitsimäinen verkko kuituvahvisteista betonia, joka siivilöi Välimeren valoa sisätiloihin. Rudy Ricciottin ja Roland Cartan suunnittelema museo avattiin vuonna 2013. Katolta kulkee kapea mustan betonin silta yhdeksäntoista metrin korkeudessa vanhaan Saint-Jeanin linnakkeeseen, joka kuuluu nykyään museoon. Viereisessä rakennuksessa on vuonna 2022 avattu jäljennös Cosquerin luolasta, jonka alkuperäiseen suuaukkoon pääsee vain sukeltamalla.",
-   "lyhyt": "Euroopan ja Välimeren sivilisaatioiden museon, MuCEMin, kokoelmat tulivat Pariisista: niiden ytimenä on vuonna 2005 suljetun kansallisen kansanperinnemuseon aineisto. Kaikkiaan kokoelmissa on nykyään noin miljoona esinettä, kirjaa, valokuvaa, julistetta, postikorttia ja äänitettä.",
+   "lyhyt": "Euroopan ja Välimeren sivilisaatioiden museon, MuCEMin, kokoelmat tulivat Pariisista: niiden ytimenä on vuonna 2005 suljetun kansallisen kansanperinnemuseon aineisto. Sen perusti vuonna 1937 museomies Georges Henri Rivière, jonka tutkijat kiersivät Ranskan maaseutua keräämässä arkisia esineitä ja perinteitä.",
    "syventava": "Mitä Cosquerin luolan seinillä on?",
    "kysymykset": [
     "Mitä museossa on esillä?",
@@ -145,6 +145,10 @@
     {
      "vaite": "Cosquer Méditerranée on avoinna vuonna 2026 Villa Méditerranéessa.",
      "url": "https://www.marseille-tourisme.com/decouvrez-marseille/culture-et-patrimoine/cosquer-mediterranee-marseille-2eme-fr-3520089/"
+    },
+    {
+     "vaite": "Kansallisen kansanperinnemuseon (MNATP) perusti vuonna 1937 Georges Henri Rivière, joka johti sitä vuoteen 1967; museon aineistoa koottiin valtion järjestämillä maaseudun kenttätutkimuksilla.",
+     "url": "https://fr.wikipedia.org/wiki/Georges_Henri_Rivi%C3%A8re"
     }
    ]
   },

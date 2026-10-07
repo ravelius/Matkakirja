@@ -17,7 +17,7 @@
         "Miksi linnan tornista ammuttiin tykillä?",
         "Millainen näkymä näkötornista avautuu?",
         "Mitä linnassa voi tehdä nykyään?",
-        "Miksi pormestari halusi kaupungin ostavan linnan?"
+        "Mitä linnan Pyhän Yrjön kappelissa on?"
       ],
       "isoisa": true,
       "lahteet": [
@@ -282,7 +282,7 @@
       "luokka": "puisto",
       "koko_m": 2000,
       "teksti": "Tivolin puisto on Ljubljanan suurin puisto, ja se ulottuu keskustan länsilaidalta metsäisille rinteille. Sen suunnitteli ranskalainen insinööri Jean Blanchard vuonna 1813, kun Ljubljana oli Ranskan Illyrian maakuntien pääkaupunki. Puiston halki kulkee Jože Plečnikin suunnittelema Jakopičin kävelykatu, jota reunustavat lehmukset ja lyhdyt ja joka on nimetty impressionistimaalari Rihard Jakopičin mukaan. Kävelykadun varrella pidetään suurikokoisten valokuvien ulkonäyttelyitä. Sen päässä seisoo Tivolin linna, jossa toimii kansainvälinen graafisen taiteen keskus.",
-      "lyhyt": "Tivolin puiston linnan edessä vartioi neljä valurautaista koiraa, jotka valettiin vuonna 1864 määriläisessä valimossa. Koirilta puuttuvat kielet, ja kaupungilla huhuttiin, että kuvanveistäjä Anton Fernkorn ei kestänyt häpeää ja riisti henkensä. Tarina on perätön, eikä Fernkorn edes tehnyt koiria.",
+      "lyhyt": "Tivolin puiston linnan edessä vartioi neljä valurautaista koiraa, jotka valettiin vuonna 1864 määriläisessä valimossa. Koirilta puuttuvat kielet, ja kaupungilla huhuttiin, että kuvanveistäjä Anton Fernkorn ei kestänyt häpeää ja riisti henkensä. Tarina on perätön, eikä edes Fernkornin tekijyydestä ole varmuutta.",
       "syventava": "Mitkä olivat Illyrian maakunnat?",
       "kysymykset": [
         "Miksi puistoa kutsutaan Tivoliksi?",

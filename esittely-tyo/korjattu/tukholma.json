@@ -62,7 +62,7 @@
    "luokka": "muu",
    "koko_m": 800,
    "teksti": "Vanhakaupunki, Gamla stan, täyttää Stadsholmenin saaren ja muutaman pienen luodon, ja sen katuverkko on säilynyt keskiajalta lähes ennallaan. Tukholman nimi esiintyy ensimmäisen kerran kahdessa kirjeessä vuonna 1252, ja kaupunki kasvoi juuri tällä saarella. Pääkatu Västerlånggatan seuraa keskiaikaisen kaupunginmuurin linjaa, ja siitä haarautuu kapeita kujia molempiin suuntiin. Kapein niistä, Mårten Trotzigs gränd, on kapeimmalta kohdaltaan vain yhdeksänkymmentä senttimetriä leveä. Kuja on saanut nimensä Wittenbergistä tulleelta kauppiaalta, joka muutti kaupunkiin vuonna 1581 ja osti kujan varrelta taloja.",
-   "lyhyt": "Vanhankaupungin Suomalaisen kirkon takapihalla istuu Tukholman pienin patsas, viisitoista senttimetriä korkea Rautapoika. Kuvanveistäjä Liss Eriksson kuvasi siinä itseään poikana, joka istui kylmissään ullakkohuoneessa kädet jalkojen ympärillä ja katseli kuuta. Talvella tukholmalaiset neulovat patsaalle pipoja ja kaulaliinoja.",
+   "lyhyt": "Vanhankaupungin Suomalaisen kirkon takapihalla istuu Tukholman pienin patsas, viisitoista senttimetriä korkea Rautapoika. Kuvanveistäjä Liss Eriksson kuvasi siinä itseään poikana, joka istui kylmissään ullakkohuoneessa kädet jalkojen ympärillä ja katseli kuuta. Talvella pojalla on usein päässään pipo ja kaulassaan kaulaliina.",
    "syventava": "Kuka oli kauppias Mårten Trotzig?",
    "kysymykset": [
     "Milloin Tukholma perustettiin?",
@@ -100,6 +100,10 @@
     {
      "vaite": "Rautapoika on Liss Erikssonin lapsuusomakuva: hän istui kylmissään kädet jalkojen ympärillä ja katseli kuuta Södermalmin kodin ullakkohuoneesta; 15 cm, Tukholman pienin patsas, kirkon takana.",
      "url": "https://www.svenskakyrkan.se/nyheter/rautapoika"
+    },
+    {
+     "vaite": "Talvella Rautapojalla on usein pipo ja kaulaliina.",
+     "url": "https://en.wikipedia.org/wiki/J%C3%A4rnpojke"
     }
    ]
   },
