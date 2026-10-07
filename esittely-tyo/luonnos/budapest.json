@@ -1,0 +1,665 @@
+{
+ "kaupunki": "Budapest",
+ "id": "budapest",
+ "versio": 1,
+ "kohteet": [
+  {
+   "id": "Q11819",
+   "nimi": "Unkarin parlamenttitalo",
+   "kuvaus": "Unkarin uusgoottilainen parlamenttitalo",
+   "luokka": "rakennus",
+   "koko_m": 268,
+   "teksti": "Unkarin parlamenttitalo venyy Tonavan Pestin puoleisella rannalla kahdensadankuudenkymmenenkahdeksan metrin mittaisena uusgoottilaisena palatsina, jonka keskeltä kupoli nousee yhdeksänkymmenenkuuden metrin korkeuteen. Luku on valittu tarkoituksella: se muistuttaa vuodesta 896, jolloin unkarilaiset saapuivat nykyiseen kotimaahansa. Talon suunnitteli arkkitehti Imre Steindl, jonka johdolla työt alkoivat vuonna 1885. Hän sokeutui ennen työn valmistumista ja kuoli vuonna 1902, samana vuonna kun rakennus otettiin käyttöön. Lopullisesti talo valmistui vuonna 1904, ja se on yhä Unkarin suurin rakennus.",
+   "lyhyt": "Unkarin parlamenttitalon kupolisalissa on säilytetty vuodesta 2000 lähtien Unkarin pyhää kruunua ja muita kruunajaisesineitä, ja niitä vartioi vuorokauden ympäri armeijan kruunukaarti. Korkeutensa rakennus jakaa vain yhden toisen kanssa: Pyhän Tapanin kirkon kupoli on täsmälleen yhtä korkea.",
+   "syventava": "Miksi kupoli on yhdeksänkymmentäkuusi metriä?",
+   "kysymykset": [
+    "Kuka suunnitteli Unkarin parlamenttitalon?",
+    "Miksi arkkitehti ei nähnyt taloaan valmiina?",
+    "Mitä kupolisalissa säilytetään?",
+    "Kokoontuuko Unkarin parlamentti yhä täällä?",
+    "Miksi talo rakennettiin goottilaiseen tyyliin?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Rakennus on 268 metriä pitkä, kupoli 96 metriä korkea, uusgoottilainen.",
+     "url": "https://en.wikipedia.org/wiki/Hungarian_Parliament_Building"
+    },
+    {
+     "vaite": "Korkeus 96 metriä viittaa vuoteen 896, unkarilaisten maahantuloon.",
+     "url": "kaanon:pelin-aineisto"
+    },
+    {
+     "vaite": "Rakennustyöt alkoivat 1885.",
+     "url": "https://en.wikipedia.org/wiki/Hungarian_Parliament_Building"
+    },
+    {
+     "vaite": "Imre Steindl suunnitteli talon, sokeutui ennen valmistumista ja kuoli vuonna 1902; talo avattiin 1902 ja valmistui 1904.",
+     "url": "https://en.wikipedia.org/wiki/Imre_Steindl"
+    },
+    {
+     "vaite": "Parlamenttitalo on Unkarin suurin rakennus.",
+     "url": "kaanon:pelin-aineisto"
+    },
+    {
+     "vaite": "Pyhä kruunu ja kruunajaisesineet ovat olleet kupolisalissa 1.1.2000 lähtien, kruunukaartin vartioimina ympäri vuorokauden.",
+     "url": "https://en.wikipedia.org/wiki/Hungarian_Parliament_Building"
+    },
+    {
+     "vaite": "Parlamentti ja Pyhän Tapanin basilika ovat molemmat 96 metriä korkeita, Budapestin korkeimmat.",
+     "url": "https://en.wikipedia.org/wiki/Hungarian_Parliament_Building"
+    }
+   ]
+  },
+  {
+   "id": "Q465534",
+   "nimi": "Széchenyin ketjusilta",
+   "kuvaus": "Tonavan ensimmäinen pysyvä silta",
+   "luokka": "silta",
+   "koko_m": 375,
+   "teksti": "Ketjusilta, koko nimeltään Széchenyin ketjusilta, oli ensimmäinen pysyvä silta Tonavan yli Budan ja Pestin välillä, ja sen kumpaakin päätä vartioivat kivileijonat. Kreivi István Széchenyi päätti rakennuttaa sillan, kun hän ei vuonna 1820 päässyt joen yli isänsä hautajaisiin. Silta valmistui vuonna 1849, ja siltamaksu koski kaikkia, myös aatelisia. Isoisäsi kirjoitti vuonna 1873, että maksu perittiin häneltä vielä sittenkin, kun Buda ja Pest oli liitetty yhdeksi kaupungiksi. Kun hän huomautti pysyvänsä samassa kaupungissa, maksunkerääjä nyökkäsi ja piti kättään ojossa.",
+   "lyhyt": "Ketjusillan räjäyttivät vetäytyvät saksalaiset joukot vuonna 1945, ja uudelleen rakennettu silta avattiin vuonna 1949, tasan sata vuotta ensimmäisten avajaisten jälkeen. Vuonna 2023 valmistuneen korjauksen jälkeen yksityisautot eivät ole saaneet ajaa sillalle, mutta jalankulkijat, pyöräilijät, bussit ja taksit pääsevät yli.",
+   "syventava": "Onko sillan kivileijonilla kielet?",
+   "kysymykset": [
+    "Kuka suunnitteli Ketjusillan?",
+    "Miten silta tuhoutui toisessa maailmansodassa?",
+    "Miksi aatelistenkin piti maksaa siltamaksu?",
+    "Kuka oli kreivi István Széchenyi?",
+    "Miksi autot eivät saa enää ajaa sillalle?"
+   ],
+   "isoisa": true,
+   "lahteet": [
+    {
+     "vaite": "Ketjusilta valmistui 1849 ensimmäisenä pysyvänä siltana Tonavan yli Budan ja Pestin välillä; kivileijonat sillan päissä.",
+     "url": "kaanon:pelin-aineisto"
+    },
+    {
+     "vaite": "Silta on 375 metriä pitkä; leijonat veisti János Marschalkó.",
+     "url": "https://www.budapest.com/en/locations/chain-bridge"
+    },
+    {
+     "vaite": "Vuonna 1820 Széchenyi ei päässyt joen yli isänsä hautajaisiin, mikä sai hänet ajamaan pysyvää siltaa.",
+     "url": "https://en.wikipedia.org/wiki/Sz%C3%A9chenyi_Chain_Bridge"
+    },
+    {
+     "vaite": "Ketjusillalla kaikkien, myös aatelisten, piti maksaa ylitysmaksu; maksu poistui 1918.",
+     "url": "https://dailynewshungary.com/hungarians-hated-chain-bridge-decades/"
+    },
+    {
+     "vaite": "Isoisän merkintä: Buda, Pest ja Óbuda liitettiin yhteen; Ketjusillalla perittiin yhä maksu; hän huomautti pysyvänsä samassa kaupungissa; maksunkerääjä nyökkäsi ja piti kätensä ojossa.",
+     "url": "kaanon:isoisan-paivakirja"
+    },
+    {
+     "vaite": "Saksalaiset joukot räjäyttivät sillan 1945; uudelleen rakennettu silta avattiin 1949, sata vuotta ensimmäisten avajaisten jälkeen.",
+     "url": "https://aviewoncities.com/budapest/chain-bridge"
+    },
+    {
+     "vaite": "Elokuussa 2023 valmistuneen korjauksen jälkeen sillalla saavat kulkea bussit, taksit, moottoripyörät, pyörät ja jalankulkijat, mutta ei yksityisautot.",
+     "url": "https://telex.hu/english/2023/08/04/renovation-of-the-chain-bridge-completed-now-pedestrians-can-also-use-the-newly-car-free-bridge"
+    }
+   ]
+  },
+  {
+   "id": "Q493117",
+   "nimi": "Kalastajanlinnake",
+   "kuvaus": "Linnamäen näköalaterassi ja tornit",
+   "luokka": "muu",
+   "koko_m": 140,
+   "teksti": "Kalastajanlinnake kiertää Budan linnamäen itäreunaa valkoisena näköalaterassina, jonka seitsemän suippokattoista tornia muistuttavat unkarilaisten seitsemästä heimosta. Arkkitehti Frigyes Schulek rakennutti sen uusromaaniseen tyyliin vanhan kaupunginmuurin päälle, ja se valmistui vuonna 1902. Linnake ei ole koskaan puolustanut ketään, vaan se tehtiin näköalapaikaksi Matiaksenkirkon viereen. Nimensä se sai keskiajan kalastajien killalta, jonka tehtävä oli puolustaa juuri tätä muurin osuutta. Terassin ja kirkon välissä ratsastaa pronssinen Pyhä Tapani, Unkarin ensimmäinen kuningas, jalustalla vuodelta 1906.",
+   "lyhyt": "Kalastajanlinnakkeen terasseilta näkyy Tonavan yli suoraan parlamenttitaloon. Linnakkeen ja viereisen Matiaksenkirkon nykyinen ilme on saman miehen käsialaa: arkkitehti Frigyes Schulek johti 1800-luvun lopulla myös kirkon uudistamista ja palautti sen goottilaiseen asuun.",
+   "syventava": "Miksi kalastajat puolustivat juuri tätä muuria?",
+   "kysymykset": [
+    "Miksi linnakkeessa on juuri seitsemän tornia?",
+    "Puolustettiinko linnaketta koskaan sodassa?",
+    "Kuka oli arkkitehti Frigyes Schulek?",
+    "Kuka ratsastaa patsaana linnakkeen vieressä?",
+    "Miksi linnake rakennettiin uusromaaniseen tyyliin?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Seitsemän tornia vastaavat unkarilaisten seitsemää heimoa; terassi valmistui 1902 Matiaksenkirkon viereen, ei koskaan puolustusrakennelma.",
+     "url": "kaanon:pelin-aineisto"
+    },
+    {
+     "vaite": "Frigyes Schulek rakennutti linnakkeen uusromaaniseen tyyliin Budan linnanmuurin osuuden päälle vuosina 1895–1902.",
+     "url": "https://en.wikipedia.org/wiki/Fisherman%27s_Bastion"
+    },
+    {
+     "vaite": "Kalastajien kilta vastasi keskiajalla tämän muuriosuuden puolustamisesta.",
+     "url": "https://en.wikipedia.org/wiki/Fisherman%27s_Bastion"
+    },
+    {
+     "vaite": "Linnakkeen ja Matiaksenkirkon välissä on Tapani I:n ratsastajapatsas vuodelta 1906.",
+     "url": "https://en.wikipedia.org/wiki/Fisherman%27s_Bastion"
+    },
+    {
+     "vaite": "Tapani I oli Unkarin ensimmäinen kuningas.",
+     "url": "https://en.wikipedia.org/wiki/Stephen_I_of_Hungary"
+    },
+    {
+     "vaite": "Frigyes Schulek johti Matiaksenkirkon jälleenrakennusta ja piti varhaisgotiikkaa sen ihannetyylinä.",
+     "url": "https://en.wikipedia.org/wiki/Matthias_Church"
+    }
+   ]
+  },
+  {
+   "id": "Q493133",
+   "nimi": "Matiaksenkirkko",
+   "kuvaus": "Budan linnamäen goottilainen kirkko",
+   "luokka": "kirkko",
+   "koko_m": 90,
+   "korkeus_m": 78,
+   "teksti": "Matiaksenkirkon katto erottuu linnamäeltä kauas, sillä se on katettu oransseilla, vihreillä ja valkoisilla Zsolnay-tiilillä timanttikuvioin. Kirkko on saanut kansanomaisen nimensä kuningas Matias Corvinukselta, jonka häät vietettiin täällä. Kun osmanit valtasivat Budan vuonna 1541, kirkosta tehtiin kaupungin päämoskeija, ja moskeijana se toimi lähes puolitoista vuosisataa, kunnes kristityt joukot valtasivat Budan takaisin vuonna 1686. Vuonna 1867 täällä kruunattiin keisari Frans Joosef ja keisarinna Elisabet Unkarin kuninkaaksi ja kuningattareksi, ja Ferenc Liszt sävelsi tilaisuuteen kruunajaismessun, joka kantaesitettiin kirkossa.",
+   "lyhyt": "Matiaksenkirkon nykyinen ulkoasu on peräisin 1800-luvun lopulta, jolloin arkkitehti Frigyes Schulek uudisti sen varhaisgoottilaiseen tyyliin, jota hän piti rakennukselle ihanteellisena. Kellotorni nousee noin seitsemänkymmenenkahdeksan metrin korkeuteen ja on linnamäen korkein rakennelma.",
+   "syventava": "Miksi kirkko oli välillä moskeija?",
+   "kysymykset": [
+    "Miksi kirkko on nimetty kuningas Matiaksen mukaan?",
+    "Miltä kirkko näyttää sisältä?",
+    "Miten kirkko selvisi osmanien vallan ajasta?",
+    "Mistä kirkon kirjavat kattotiilet tulevat?",
+    "Millainen oli Frans Joosefin kruunajaispäivä?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Katto on katettu timanttikuvioisilla Zsolnay-tiilillä oranssin, vihreän ja valkoisen sävyissä.",
+     "url": "https://famous-historic-buildings.org.uk/matthias-church-budapest.html"
+    },
+    {
+     "vaite": "Kirkossa vietettiin kuningas Matias Corvinuksen häät, ja kirkko on saanut häneltä kansanomaisen nimensä.",
+     "url": "https://famous-historic-buildings.org.uk/matthias-church-budapest.html"
+    },
+    {
+     "vaite": "Kristityt joukot valtasivat Budan takaisin vuoden 1686 piirityksessä.",
+     "url": "https://en.wikipedia.org/wiki/Medieval_Royal_Palace_(Buda_Castle)"
+    },
+    {
+     "vaite": "Osmanit valtasivat Budan 1541 ja tekivät kirkosta kaupungin päämoskeijan.",
+     "url": "https://en.wikipedia.org/wiki/Matthias_Church"
+    },
+    {
+     "vaite": "Frans Joosef ja Elisabet kruunattiin Unkarin kuninkaaksi ja kuningattareksi kirkossa 8.6.1867; Lisztin kruunajaismessu sävellettiin ja kantaesitettiin tilaisuudessa.",
+     "url": "https://en.wikipedia.org/wiki/Matthias_Church"
+    },
+    {
+     "vaite": "Frigyes Schulek uudisti kirkon pitäen varhaisgotiikkaa sen ihannetyylinä.",
+     "url": "https://en.wikipedia.org/wiki/Matthias_Church"
+    },
+    {
+     "vaite": "Kellotorni on 78,16 metriä korkea ja mäen korkein rakennelma.",
+     "url": "https://famous-historic-buildings.org.uk/matthias-church-budapest.html"
+    }
+   ]
+  },
+  {
+   "id": "Q46313",
+   "nimi": "Budan linna",
+   "kuvaus": "Unkarin kuninkaiden palatsi",
+   "luokka": "linnoitus",
+   "koko_m": 400,
+   "teksti": "Budan linna peittää linnamäen eteläkärjen pitkänä palatsina, jonka kupoli näkyy Tonavan yli koko keskustaan. Kuninkaiden asuinpaikka on tuhoutunut ja noussut uudelleen monta kertaa: vuoden 1686 piirityksessä keskiaikainen palatsi raunioitui, ja helmikuussa 1945 taistelut hävittivät sen paikalle 1700-luvulla rakennetun barokkipalatsin lähes kokonaan. Jälleenrakennus alkoi vuonna 1958, ja palatsiin muuttivat Unkarin kansallisgalleria, Budapestin historiamuseo ja Széchényin kansalliskirjasto. Köysiradan yläaseman lähellä istuu pronssinen turullintu siivet levällään, unkarilaisten tarujen suojelijalintu.",
+   "lyhyt": "Budan linnamäelle on noussut köysirata vuodesta 1870. Avatessaan se oli Euroopan toinen laatuaan Pariisin jälkeen, ja yhä se kuljettaa matkustajia joen rannasta mäelle. Palatsin pohjoispuolella seisoo Sándorin palatsi, jossa on Unkarin presidentin virka-asunto ja työhuone.",
+   "syventava": "Mikä on tarujen turullintu?",
+   "kysymykset": [
+    "Ketkä kuninkaat asuivat Budan linnassa?",
+    "Mitä kansallisgalleriassa on nähtävänä?",
+    "Miksi linna on tuhoutunut niin monta kertaa?",
+    "Mitä turullintu merkitsee unkarilaisille?",
+    "Miten linnamäelle pääsee köysiradalla?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Palatsi sijaitsee linnamäen eteläkärjessä, on ollut olemassa 1200-luvulta ja tuhoutunut ja rakennettu uudelleen useasti.",
+     "url": "https://en.wikipedia.org/wiki/Buda_Castle"
+    },
+    {
+     "vaite": "Keskiaikainen palatsi tuhoutui vuoden 1686 piirityksessä.",
+     "url": "https://en.wikipedia.org/wiki/Medieval_Royal_Palace_(Buda_Castle)"
+    },
+    {
+     "vaite": "Maria Teresian aikana palatsi rakennettiin uudelleen, valmis 1770.",
+     "url": "https://en.wikipedia.org/wiki/Medieval_Royal_Palace_(Buda_Castle)"
+    },
+    {
+     "vaite": "Helmikuussa 1945 palatsi tuhoutui jälleen lähes täysin; jälleenrakennus alkoi 1958.",
+     "url": "https://www.budapest.com/en/locations/buda-castle"
+    },
+    {
+     "vaite": "Linnassa toimivat Unkarin kansallisgalleria, Budapestin historiamuseo ja Széchényin kansalliskirjasto.",
+     "url": "https://en.wikipedia.org/wiki/Buda_Castle"
+    },
+    {
+     "vaite": "Turul-patsas köysiradan yläaseman luona; turul on unkarilaisten myyttinen suojelijalintu.",
+     "url": "https://justbudapest.com/the-turul-statue-budapest/"
+    },
+    {
+     "vaite": "Köysirata avattiin 2.3.1870, toisena Euroopassa Pariisin jälkeen.",
+     "url": "https://oszk.hu/en/news/buda-castle-funicular-was-inaugurated-150-years-ago"
+    },
+    {
+     "vaite": "Sándorin palatsi linnan pohjoispuolella on Unkarin presidentin virka-asunto ja toimisto.",
+     "url": "https://en.wikipedia.org/wiki/Buda_Castle"
+    }
+   ]
+  },
+  {
+   "id": "Q577122",
+   "nimi": "Gellértinvuori",
+   "kuvaus": "Tonavan rannan näköalavuori",
+   "luokka": "puisto",
+   "koko_m": 900,
+   "teksti": "Gellértinvuori nousee jyrkkänä Tonavan Budan puoleiselta rannalta kahdensadankolmenkymmenenviiden metrin korkeuteen merenpinnasta, ja sen laella seisoo neljätoista metriä korkea pronssinen naishahmo palmunlehvä kohotettuna. Vapaudenpatsas pystytettiin vuonna 1947 muistoksi siitä, kun neuvostojoukot ajoivat saksalaiset Unkarista, ja sen takana levittäytyy Habsburgien vuonna 1851 rakennuttama linnoitus, Citadella. Vuori on saanut nimensä piispa Gellértiltä, joka surmattiin pakanakapinassa vuonna 1046: legendan mukaan hänet suljettiin tynnyriin ja vieritettiin rinnettä alas. Joen puoleisella rinteellä piispan kaksitoistametrinen patsas kohottaa ristiä tekoputouksen yllä.",
+   "lyhyt": "Gellértinvuoren Citadella oli suljettuna yksitoista vuotta ja avautui uudelleen keväällä 2026. Linnoituksen sisällä on nyt vapaasti avoin puisto ja näköalaterasseja, ja läntisessä tykkitornissa kerrotaan unkarilaisten vapaustaisteluista näyttelyssä nimeltä Vapauden linnake.",
+   "syventava": "Miksi Habsburgit rakensivat linnoituksen vuorelle?",
+   "kysymykset": [
+    "Kuka oli piispa Gellért?",
+    "Mitä vapaudenpatsas alun perin juhlisti?",
+    "Miksi Habsburgit rakensivat Citadellan?",
+    "Mitä vuoren luolakirkossa on?",
+    "Miksi vuoren juurella on lämpimiä lähteitä?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Vapaudenpatsas on neljätoista metriä korkea pronssinen naishahmo, joka kohottaa palmunlehvää; pystytetty 1947.",
+     "url": "https://budappest.com/the-tragic-history-behind-budapests-iconic-statue-of-liberty/"
+    },
+    {
+     "vaite": "Vuori on 235 metriä korkea; vapaudenpatsas pystytettiin 1947 neuvostojoukkojen natseilta vapauttaman Unkarin muistoksi.",
+     "url": "https://en.wikipedia.org/wiki/Gell%C3%A9rt_Hill"
+    },
+    {
+     "vaite": "Habsburgit rakennuttivat Citadellan vuonna 1851.",
+     "url": "https://en.wikipedia.org/wiki/Gell%C3%A9rt_Hill"
+    },
+    {
+     "vaite": "Vuori on nimetty Pyhän Gellértin mukaan, joka surmattiin pakanakapinassa 1046; hänet laitettiin tynnyriin ja vieritettiin mäeltä alas.",
+     "url": "https://en.wikipedia.org/wiki/Gell%C3%A9rt_Hill"
+    },
+    {
+     "vaite": "Gellértin muistomerkki on kaksitoista metriä korkea, piispa kohottaa ristiä, alla tekoputous.",
+     "url": "https://aviewoncities.com/budapest/gellert-monument"
+    },
+    {
+     "vaite": "Citadella avattiin yksitoista vuoden sulun jälkeen pääsiäisenä 5.4.2026; sisällä vapaasti avoin puisto ja näköalaterassit, läntisessä tykkitornissa näyttely Szabadság Bástyája eli Vapauden linnake.",
+     "url": "https://budappest.com/budapests-citadella-returns-the-untold-story-behind-11-years-of-closure/"
+    }
+   ]
+  },
+  {
+   "id": "Q299973",
+   "nimi": "Sankarien aukio",
+   "kuvaus": "Tuhatvuotismuistomerkin aukio",
+   "luokka": "aukio",
+   "koko_m": 250,
+   "teksti": "Sankarien aukio avautuu Andrássynkadun päässä kaupunginpuiston laidalla, ja sen keskeltä nousee kolmekymmentäkuusi metriä korkea pylväs, jonka huipulla seisoo arkkienkeli Gabriel. Legendan mukaan enkeli ilmestyi Tapanille unessa ja tarjosi hänelle Unkarin kruunua, ja patsaskin pitää kruunua oikeassa kädessään. Pylvään juurella ratsastavat Árpádin johtamat seitsemän heimopäällikköä, ja taustan kaarevissa pylväskäytävissä seisoo kuninkaiden ja kansallissankarien patsaita. Muistomerkkiä alettiin rakentaa vuonna 1896 Unkarin tuhatvuotisjuhlaksi, mutta se valmistui vasta vuonna 1929. Aukion laidoilla seisovat Taidemuseo ja Taidehalli.",
+   "lyhyt": "Sankarien aukiolle kokoontui kesäkuussa 1989 satoja tuhansia ihmisiä, kun vuoden 1956 kansannousun pääministeri Imre Nagy ja neljä hänen toveriaan haudattiin uudelleen. Arkut asetettiin näyttelyhallin portaille, ja niiden vieressä oli tyhjä arkku tuntemattoman vallankumouksellisen muistoksi.",
+   "syventava": "Keitä olivat seitsemän heimopäällikköä?",
+   "kysymykset": [
+    "Kuka oli heimopäällikkö Árpád?",
+    "Miksi muistomerkin rakentaminen kesti niin kauan?",
+    "Mitä aukion laidan taidemuseossa on?",
+    "Onko aukion muistokiven alle haudattu ketään?",
+    "Miksi Imre Nagy haudattiin uudelleen?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Aukio on Andrássynkadun päässä kaupunginpuiston vieressä; siellä ovat Taidemuseo ja Taidehalli.",
+     "url": "https://en.wikipedia.org/wiki/Heroes%27_Square_(Budapest)"
+    },
+    {
+     "vaite": "Pylväs on 36 metriä korkea, huipulla arkkienkeli Gabriel kruunu oikeassa kädessään; legendan mukaan enkeli tarjosi Tapanille unessa Unkarin kruunua.",
+     "url": "https://en.wikipedia.org/wiki/Heroes%27_Square_(Budapest)"
+    },
+    {
+     "vaite": "Muistomerkki esittää seitsemää heimopäällikköä ja muita kansallisia johtajia.",
+     "url": "kaanon:pelin-aineisto"
+    },
+    {
+     "vaite": "Seitsemän heimopäällikön johtaja on Árpád.",
+     "url": "https://www.budapestbylocals.com/heroes-square.html"
+    },
+    {
+     "vaite": "Rakentaminen alkoi 1896 ja valmistui 1929.",
+     "url": "https://en.wikipedia.org/wiki/Heroes%27_Square_(Budapest)"
+    },
+    {
+     "vaite": "Imre Nagy ja neljä toveria haudattiin uudelleen 16.6.1989; arkut olivat näyttelyhallin portailla, mukana tyhjä arkku tuntemattoman vallankumouksellisen muistoksi; läsnä satoja tuhansia.",
+     "url": "https://BBJ.HU/budapest/culture/history/30-years-of-freedom-the-re-burial-of-imre-nagy-the-point-of-no-return-for-communism-in-hungary"
+    }
+   ]
+  },
+  {
+   "id": "Q338665",
+   "nimi": "Pyhän Tapanin kirkko",
+   "kuvaus": "Budapestin suurin kirkko, basilika",
+   "luokka": "kirkko",
+   "koko_m": 90,
+   "korkeus_m": 96,
+   "teksti": "Pyhän Tapanin kirkon kupoli nousee Pestin kattojen yli yhdeksänkymmenenkuuden metrin korkeuteen, täsmälleen yhtä korkealle kuin parlamenttitalo, eikä mikään rakennus Budapestissa saa nykyään olla tätä korkeampi. Rakentamisen aloitti arkkitehti József Hild, ja hänen kuoltuaan vuonna 1867 työ siirtyi Miklós Yblille. Jo seuraavan vuoden tammikuussa keskeneräinen kupoli romahti, ja Ybl joutui piirtämään sen uudelleen, mutta hänkään ei elänyt näkemään kirkon vihkimistä vuonna 1905. Yhdessä sivukappelissa säilytetään Unkarin tärkeintä pyhäinjäännöstä, kuningas Tapanin oikeaa kättä.",
+   "lyhyt": "Pyhän Tapanin kirkko on nimetty Unkarin ensimmäisen kuninkaan mukaan. Kirkko vihittiin vuonna 1905, ja seuraavan vuoden joulukuussa keisari Frans Joosef asetti paikalleen viimeisen kiven. Kupolin ja parlamentin yhtäläisen korkeuden sanotaan kuvaavan kirkon ja valtion tasapainoa.",
+   "syventava": "Miten kuninkaan käsi päätyi kirkkoon?",
+   "kysymykset": [
+    "Kuka oli kuningas Pyhä Tapani?",
+    "Miksi kirkon kupoli romahti kesken töiden?",
+    "Miten pyhäinjäännös on säilynyt tähän päivään?",
+    "Voiko kirkon kupolin ympärille kiivetä?",
+    "Miksi kirkkoa kutsutaan basilikaksi?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Kupoli on 96 metriä korkea, yhtä korkea kuin parlamentti, eikä mikään rakennus Budapestissa saa nykymääräysten mukaan ylittää 96 metriä.",
+     "url": "https://aviewoncities.com/budapest/st-stephens-basilica"
+    },
+    {
+     "vaite": "Hild kuoli 1867 ja Ybl jatkoi työtä.",
+     "url": "https://aviewoncities.com/budapest/st-stephens-basilica"
+    },
+    {
+     "vaite": "Kupoli romahti 22.1.1868, ja Ybl joutui laatimaan uudet suunnitelmat; Ybl kuoli 1891 ja työ vietiin loppuun hänen suunnitelmiensa mukaan.",
+     "url": "https://aviewoncities.com/budapest/st-stephens-basilica"
+    },
+    {
+     "vaite": "Kirkon ja valtion tasapaino ilmenee kahden korkeimman rakennuksen yhtäläisessä korkeudessa.",
+     "url": "https://aviewoncities.com/budapest/st-stephens-basilica"
+    },
+    {
+     "vaite": "Kirkko vihittiin 1905, ja 8.12.1906 Frans Joosef asetti viimeisen kiven.",
+     "url": "https://aviewoncities.com/budapest/st-stephens-basilica"
+    },
+    {
+     "vaite": "Sivukappelissa säilytetään Pyhän Tapanin oikeaa kättä, maan tärkeintä pyhäinjäännöstä.",
+     "url": "https://welovebudapest.com/en/article/2013/06/25/iconic-buildings-of-budapest-the-basilica"
+    },
+    {
+     "vaite": "Tapani I oli Unkarin ensimmäinen kuningas.",
+     "url": "https://en.wikipedia.org/wiki/Stephen_I_of_Hungary"
+    }
+   ]
+  },
+  {
+   "id": "Q195344",
+   "nimi": "Suuri kauppahalli",
+   "kuvaus": "Budapestin vanhin katettu kauppahalli",
+   "luokka": "rakennus",
+   "koko_m": 150,
+   "teksti": "Suuri kauppahalli on Budapestin suurin ja vanhin katettu kauppahalli, ja ylhäältä sen tunnistaa Pécsin Zsolnay-tehtaan kirjavista kattotiilistä. Samu Peczin suunnittelema halli vihittiin vuonna 1897, ja pinta-alaa sillä on kymmenentuhatta neliömetriä kolmessa kerroksessa. Kadun tasolla myydään lihaa, leipää ja mausteita, ja paprikaa saa makeasta tuliseen; alakerrassa ovat kalakauppiaat ja suolakurkut. Vuonna 1984 hallissa kävi Britannian pääministeri Margaret Thatcher, joka katseli hunajaa, valkosipulia ja paprikaa, kieltäytyi lahjoista ja maksoi ostoksensa itse.",
+   "lyhyt": null,
+   "syventava": "Miten paprika tuli Unkariin?",
+   "kysymykset": [
+    "Mitä unkarilaista kannattaa maistaa hallissa?",
+    "Miksi paprika on niin tärkeä Unkarissa?",
+    "Kuka oli hallin arkkitehti Samu Pecz?",
+    "Mitä hallin ylemmässä kerroksessa myydään?",
+    "Mikä ero on gulassilla ja pörköltillä?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Halli on Budapestin suurin ja vanhin katettu kauppahalli; Samu Pecz suunnitteli, avajaiset 15.2.1897; katossa Pécsin Zsolnay-tiilet.",
+     "url": "https://en.wikipedia.org/wiki/Great_Market_Hall"
+    },
+    {
+     "vaite": "Pinta-ala 10 000 neliötä kolmessa kerroksessa.",
+     "url": "kaanon:pelin-aineisto"
+    },
+    {
+     "vaite": "Kadun tasolla liha, leipä ja mausteet, alimmassa kerroksessa kalakauppiaat ja suolakurkut; paprikaa makeasta tuliseen.",
+     "url": "kaanon:pelin-aineisto"
+    },
+    {
+     "vaite": "Margaret Thatcher kävi hallissa helmikuussa 1984, tutustui hunajaan, valkosipuliin ja paprikaan, kieltäytyi lahjoista ja maksoi itse.",
+     "url": "https://budappest.com/margaret-thatcher-and-budapest-the-iron-ladys-historic-visit-and-lasting-tribute/"
+    }
+   ]
+  },
+  {
+   "id": "Q194783",
+   "nimi": "Széchenyin kylpylä",
+   "kuvaus": "Kaupunginpuiston suuri lämpökylpylä",
+   "luokka": "rakennus",
+   "koko_m": 250,
+   "teksti": "Kaupunginpuiston Széchenyin kylpylä on Euroopan suurin lääkinnällinen kylpylä, ja ylhäältä sen keltaisten uusbarokkisiipien keskellä höyryävät ulkoaltaat. Győző Cziglerin suunnittelema kylpylä avattiin vuonna 1913. Sen vesi nousee kahdesta lähteestä seitsemänkymmenenneljän ja seitsemänkymmenenseitsemän asteen lämpöisenä, joten altaisiin se jäähdytetään. Kahdeksastatoista altaasta kolme on ulkona, ja niissä pelataan shakkia: pelaajat seisovat lämpimässä vedessä lautojensa ääressä ja siirtävät nappuloita märin sormin. Vakiopelaajat tulevat paikalle myös talvella, kun altaista nousee höyryä pakkasilmaan.",
+   "lyhyt": null,
+   "syventava": "Mistä lähteiden vesi saa lämpönsä?",
+   "kysymykset": [
+    "Miksi Budapestin alla on niin paljon lähteitä?",
+    "Ketkä ulkoaltaan shakkipöydillä pelaavat?",
+    "Miksi lähdevesi jäähdytetään ennen altaita?",
+    "Mitä kylpylän sisäaltaissa on?",
+    "Kenen mukaan kylpylä on nimetty?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Euroopan suurin lääkinnällinen kylpylä kaupunginpuistossa; Győző Cziglerin suunnittelema uusbarokkirakennus avattiin 1913; vesi kahdesta lähteestä, 74 ja 77 astetta.",
+     "url": "https://en.wikipedia.org/wiki/Sz%C3%A9chenyi_thermal_bath"
+    },
+    {
+     "vaite": "Vesi jäähdytetään altaisiin.",
+     "url": "kaanon:pelin-aineisto"
+    },
+    {
+     "vaite": "Altaita on 18, kolme ulkona ja viisitoista sisällä.",
+     "url": "https://en.wikipedia.org/wiki/Sz%C3%A9chenyi_thermal_bath"
+    },
+    {
+     "vaite": "Keltainen uusbarokkijulkisivu.",
+     "url": "https://visithungary.com/articles/interesting-facts-that-few-people-know-about-budapests-iconic-thermal-bath"
+    },
+    {
+     "vaite": "Ulkoaltaassa pelataan shakkia vedessä seisten; vakiopelaajat tulevat myös talvella, kun altaista nousee höyryä.",
+     "url": "kaanon:pelin-aineisto"
+    },
+    {
+     "vaite": "Talvella ulkoaltaista nousee höyryä kylmään ilmaan.",
+     "url": "https://www.budapest-trip.com/guides/outdoor-baths-in-winter/"
+    }
+   ]
+  },
+  {
+   "id": "Q36833",
+   "nimi": "Unkarin valtionooppera",
+   "kuvaus": "Ybl:n uusrenessanssinen oopperatalo",
+   "luokka": "rakennus",
+   "koko_m": 130,
+   "teksti": "Unkarin valtionooppera seisoo Andrássynkadun varrella uusrenessanssipalatsina, jonka suunnitteli arkkitehti Miklós Ybl. Rakennustyöt alkoivat vuonna 1875, ja kustannukset jakoivat kaupunki ja keisari Frans Joosef, jolla oli yksi ehto: talon piti olla pienempi kuin Wienin ooppera. Niinpä katsomossa on noin tuhat paikkaa, selvästi vähemmän kuin Wienissä. Ooppera avattiin vuonna 1884, ja muutamaa vuotta myöhemmin sen johtajaksi tuli säveltäjä Gustav Mahler. Lähes viisi vuotta kestäneen korjauksen jälkeen talo avautui uudelleen keväällä 2022.",
+   "lyhyt": null,
+   "syventava": "Miksi Mahler lähti Budapestista?",
+   "kysymykset": [
+    "Miksi ooppera ei saanut olla Wienin oopperaa isompi?",
+    "Mitä Gustav Mahler teki Budapestissa?",
+    "Miltä oopperan katsomo näyttää sisältä?",
+    "Mitä oopperassa esitetään nykyään?",
+    "Kuka oli arkkitehti Miklós Ybl?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Miklós Ybl suunnitteli uusrenessanssitalon Andrássynkadulle; avattiin 27.9.1884; Mahler oli johtajana 1887–1891.",
+     "url": "https://en.wikipedia.org/wiki/Hungarian_State_Opera_House"
+    },
+    {
+     "vaite": "Rakennustyöt alkoivat 1875, rahoittajina kaupunki ja Frans Joosef.",
+     "url": "https://en.wikipedia.org/wiki/Hungarian_State_Opera_House"
+    },
+    {
+     "vaite": "Frans Joosefin ehto rahoitukselle oli, että talo on Wienin oopperaa pienempi; noin tuhat paikkaa.",
+     "url": "https://accidentallywesanderson.com/?p=87045"
+    },
+    {
+     "vaite": "Ooppera avattiin uudelleen 12.3.2022 lähes viisi vuotta kestäneen korjauksen jälkeen.",
+     "url": "https://www.budapesttimes.hu/arts/opera-house-to-reopen-on-march-12/"
+    }
+   ]
+  },
+  {
+   "id": "Q754397",
+   "nimi": "Dohány-kadun synagoga",
+   "kuvaus": "Euroopan suurin synagoga",
+   "luokka": "rakennus",
+   "koko_m": 75,
+   "teksti": "Suuri synagoga eli Dohány-kadun synagoga on Euroopan suurin synagoga, ja ylhäältä sen tunnistaa kahdesta sipulikupolisesta tornista. Maurilaistyylinen rakennus valmistui vuonna 1859, ja sen saliin mahtuu noin kolmetuhatta istujaa. Synagoga rakennettiin reformijuutalaisen yhteisön tarpeisiin, ja siksi salissa on urut, joilla ovat soittaneet sekä Ferenc Liszt että Camille Saint-Saëns. Takapihalla, joukkohaudan päällä, seisoo Imre Vargan hopeanhohtoinen metallinen itkupaju, jonka lehtiin on kaiverrettu holokaustin uhrien nimiä. Muistomerkin rahoitti näyttelijä Tony Curtis unkarilaissyntyisen isänsä muistoksi.",
+   "lyhyt": null,
+   "syventava": "Kuka syntyi synagogan naapuritalossa?",
+   "kysymykset": [
+    "Miksi synagogassa on urut?",
+    "Kuka oli Theodor Herzl?",
+    "Miksi synagogan pihalla on hautoja?",
+    "Miksi synagoga rakennettiin maurilaistyyliin?",
+    "Miten synagoga selvisi toisesta maailmansodasta?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Euroopan suurin synagoga, noin 3 000 paikkaa, maurilaistyyli, rakennettu 1854–1859.",
+     "url": "https://en.wikipedia.org/wiki/Doh%C3%A1ny_Street_Synagogue"
+    },
+    {
+     "vaite": "Kaksi sipulikupolista tornia.",
+     "url": "kaanon:pelin-aineisto"
+    },
+    {
+     "vaite": "Synagoga rakennettiin reformijuutalaisen liikkeen tarpeisiin, siksi urut.",
+     "url": "kaanon:pelin-aineisto"
+    },
+    {
+     "vaite": "Urut; Liszt ja Saint-Saëns ovat soittaneet niillä.",
+     "url": "kaanon:pelin-aineisto"
+    },
+    {
+     "vaite": "Imre Vargan vuoden 1991 metallinen itkupaju takapihalla, lehdissä holokaustin uhrien nimiä; rahoittaja Tony Curtis unkarilaissyntyisen isänsä Emanuel Schwartzin muistoksi.",
+     "url": "https://www.atlasobscura.com/places/holocaust-tree-of-life-memorial"
+    },
+    {
+     "vaite": "Muistomerkki on joukkohaudan päällä.",
+     "url": "kaanon:pelin-aineisto"
+    },
+    {
+     "vaite": "Juutalainen museo on rakennettu Theodor Herzlin syntymäkodin paikalle synagogan viereen.",
+     "url": "https://www.historyhit.com/locations/dohany-synagogue/"
+    }
+   ]
+  },
+  {
+   "id": "Q915195",
+   "nimi": "Vapaudensilta",
+   "kuvaus": "Turullintujen koristama vihreä silta",
+   "luokka": "silta",
+   "koko_m": 333,
+   "teksti": "Vapaudensilta ylittää Tonavan Gellértinvuoren juurelta Pestin puolen kauppahallille, ja sen vihreiden terästornien huipuilla levittävät siipiään pronssiset turullinnut. Silta avattiin vuonna 1896 Unkarin tuhatvuotisjuhlan kunniaksi nimellä Frans Joosefin silta, ja keisari löi itse viimeisen, hopeisen niitin Pestin puoleiseen tukeen, jossa tapahtumasta kertoo muistolaatta. Kesällä 2016 silta suljettiin autoilta korjaustöiden takia, ja budapestilaiset valtasivat sen piknikeille ja joogatunneille. Seuraavina kesinä silta suljettiin liikenteeltä muutamiksi viikonlopuiksi samaa ajanvietettä varten.",
+   "lyhyt": null,
+   "syventava": "Miksi silta sai uuden nimen?",
+   "kysymykset": [
+    "Miten budapestilaiset viettävät kesää sillalla?",
+    "Mikä on sillan torneissa istuva turullintu?",
+    "Mitä hopeiselle niitille tapahtui?",
+    "Kulkevatko raitiovaunut sillan yli?",
+    "Miksi silta piti rakentaa uudelleen sodan jälkeen?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Silta avattiin 1896 tuhatvuotisjuhlaan nimellä Ferenc József híd; Frans Joosef asetti viimeisen hopeisen niitin Pestin puoleiseen tukeen.",
+     "url": "https://en.wikipedia.org/wiki/Liberty_Bridge_(Budapest)"
+    },
+    {
+     "vaite": "Silta yhdistää Gellértin aukion ja kauppahallin edustan Fővám-aukion.",
+     "url": "https://en.wikipedia.org/wiki/Liberty_Bridge_(Budapest)"
+    },
+    {
+     "vaite": "Muistolaatta tuessa kertoo keisarin niitistä.",
+     "url": "https://en.wikipedia.org/wiki/Liberty_Bridge_(Budapest)"
+    },
+    {
+     "vaite": "Neljän tornin huipuilla turullintupatsaat; vihreäksi maalattu teräsrakenne.",
+     "url": "https://aviewoncities.com/budapest/freedom-bridge"
+    },
+    {
+     "vaite": "Kesällä 2016 silta suljettiin autoilta korjausten vuoksi, ja asukkaat valtasivat sen piknikeille ja joogalle; seuraavina kesinä silta suljettiin autoilta tiettyinä viikonloppuina.",
+     "url": "https://welovebudapest.com/en/article/2018/04/16/liberty-bridge-to-host-more-communal-picnics-this-summer/"
+    }
+   ]
+  },
+  {
+   "id": "Q646140",
+   "nimi": "Gellért-kylpylä",
+   "kuvaus": "Jugendtyylinen lämpökylpylä",
+   "luokka": "rakennus",
+   "koko_m": 150,
+   "teksti": "Jugendtyylinen Gellért-kylpylä seisoo Gellértinvuoren juurella Vapaudensillan Budan puoleisessa päässä, ja sen hallien seiniä peittävät vihreänä ja sinisenä hohtavat Zsolnay-tehtaan keraamiset laatat. Kylpylä valmistui vuonna 1918, ja vuonna 1927 sen ulkoalueelle rakennettiin aaltoallas, jota pidetään maailman ensimmäisenä. Toisen maailmansodan pommitukset tuhosivat naisten kylpyhallin Zsolnay-julkisivun, mutta se entisöitiin vuonna 2008. Lokakuussa 2025 kylpylä suljettiin perusteellista korjausta varten, sillä edellinen suuri remontti oli tehty 1970-luvulla ja rakenteissa oli havaittu vaurioita. Töiden on määrä valmistua vuonna 2028.",
+   "lyhyt": null,
+   "syventava": "Miten aaltoallas sai aaltonsa?",
+   "kysymykset": [
+    "Milloin kylpylä avataan taas yleisölle?",
+    "Miten maailman ensimmäinen aaltoallas toimi?",
+    "Kuka oli piispa, jonka mukaan kylpylä on nimetty?",
+    "Mitä kylpylän naapurihotellille tapahtuu?",
+    "Miksi Zsolnay-laatat ovat niin kuuluisia?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Kylpylä rakennettiin jugendtyyliin 1912–1918; aaltoallas 1927, maailman ensimmäinen; Zsolnay-laatoitus.",
+     "url": "https://www.spasbudapest.com/20180824-gellert-bath-is-100-years-old"
+    },
+    {
+     "vaite": "Toisessa maailmansodassa pommitus tuhosi naisten kylpyhallin Zsolnay-pyrograniittijulkisivun; entisöity 2008.",
+     "url": "https://www.spasbudapest.com/20180824-gellert-bath-is-100-years-old"
+    },
+    {
+     "vaite": "Kylpylä Gellértinvuoren juurella Vapaudensillan Budan päässä.",
+     "url": "https://en.wikipedia.org/wiki/Hotel_Gell%C3%A9rt"
+    },
+    {
+     "vaite": "Vihreänä ja sinisenä hohtavat Zsolnay-laatat jugendhallissa.",
+     "url": "https://hungaryunlocked.com/gellert-thermal-bath-relaxing-in-elegance-enjoy-the-art-nouveau-architecture-and-soothing-waters-of-this-famous-thermal-bath/"
+    },
+    {
+     "vaite": "Kylpylä suljettiin 1.10.2025 korjaukseen; edellinen täysremontti 1970-luvulla; rakenteellisia ongelmia; valmistuminen arviolta 2028.",
+     "url": "https://welovebudapest.com/cikk/2025/09/30/gellert-furdo-zaras-felujitas-2025/"
+    }
+   ]
+  },
+  {
+   "id": "Q1092030",
+   "nimi": "Vajdahunyadin linna",
+   "kuvaus": "Tuhatvuotisnäyttelyn satulinna",
+   "luokka": "linnoitus",
+   "koko_m": 200,
+   "teksti": "Kaupunginpuiston Vajdahunyadin linna kohoaa lammen ympäröimänä, ja sen torneissa ja siivissä sekoittuvat romaaninen, goottilainen, renessanssi ja barokki. Arkkitehti Ignác Alpár suunnitteli sen vuoden 1896 tuhatvuotisnäyttelyyn esittelemään Unkarin rakennustaiteen historiaa, ja yksi osista jäljittelee Transilvanian Hunyadin linnaa. Alun perin linna tehtiin pahvista ja puusta, mutta se tuli niin suosituksi, että se rakennettiin uudelleen kivestä ja tiilestä 1900-luvun alussa. Pihalla istuu Miklós Ligetin pronssinen Anonymus, kronikoitsija, jonka kasvot jäävät hupun varjoon, koska hänen nimeään ei tiedä kukaan.",
+   "lyhyt": null,
+   "syventava": "Miksi patsaan kynä kiiltää?",
+   "kysymykset": [
+    "Mitä maatalousmuseossa on nähtävänä?",
+    "Kuka oli nimetön kronikoitsija Anonymus?",
+    "Miksi patsaan kynää kosketetaan?",
+    "Voiko linnan lammella luistella talvella?",
+    "Miksi linna tehtiin aluksi pahvista?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Ignác Alpárin suunnittelema linna rakennettiin 1896 tuhatvuotisnäyttelyyn, alun perin pahvista ja puusta, ja rakennettiin suosion vuoksi uudelleen kivestä ja tiilestä 1904–1908; edustaa Unkarin rakennustaiteen eri tyylejä; osin Transilvanian Hunyadin linnan jäljitelmä.",
+     "url": "https://en.wikipedia.org/wiki/Vajdahunyad_Castle"
+    },
+    {
+     "vaite": "Linnan ympärillä kaupunginpuiston lampi, jolla soudetaan kesällä ja luistellaan talvella.",
+     "url": "https://en.wikipedia.org/wiki/Vajdahunyad_Castle"
+    },
+    {
+     "vaite": "Miklós Ligetin vuoden 1903 Anonymus-patsas linnan pihalla, kasvot hupun varjossa; kynän koskettamisen uskotaan tuovan onnea.",
+     "url": "https://budappest.com/the-hidden-secret-of-the-hooded-figure-120-years-of-luck-and-mystery-in-budapests-city-park/"
+    },
+    {
+     "vaite": "Kronikoitsijan nimeä ei tiedetä.",
+     "url": "kaanon:pelin-aineisto"
+    }
+   ]
+  }
+ ]
+}
