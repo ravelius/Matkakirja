@@ -42,6 +42,13 @@ namespace Matkakirja.Natiivi
 
         static List<Kaupunki> luettu;
 
+        // KAUPUNKIOPAS KARTTAELEMENTTINÄ (omistaja 7.10. 08.3x, Päätoimittaja; LS1:n kaupunkitila): kartan kuumailmapallo avaa yhden
+        // kaupungin oppaan. Silloin ei aloitusvalintaa (täkyt / paikat) eikä ☰:n Vaihda kohde -riviä; laaja Elävä opas ennallaan.
+        /// <summary>LS1 kytkee: opas avattiin kartan elementistä yhteen kaupunkiin. Testi `ui opasvalikko kaupunkitila on|off|auto`.</summary>
+        public static Func<bool> KaupunkitilaKysely = () => false;
+        static bool? testiKaupunkitila;
+        static bool Kaupunkitila => testiKaupunkitila ?? (KaupunkitilaKysely?.Invoke() ?? false);
+
         // SALLITUT KAUPUNGIT (omistaja 7.10. 00.4x, Päätoimittaja: vapaa haku pois, pelaajat vain hyvän 3D:n kaupunkeihin; juna 157):
         // Vaihda kohde ja aloitusvalikon paikat näyttävät vain LS1:n OpasSovitin.SallitutKaupungit-listan kaupungit (maanosa › maa ›
         // kaupunki karsiutuu niiden mukaan). Tyhjä lista = palvelin ei vielä palauta kenttää → ei rajausta (vanha lista varalla).
@@ -380,14 +387,15 @@ namespace Matkakirja.Natiivi
             // Varapolku (Päätoimittaja 6.10. 00.2x, junan 146 VIE-ehto): valikko avautuu vain, kun täkyjä on; jos ne eivät tule
             // (GET /opas/kohteet puuttuu tai epäonnistuu) 4 s:ssa, opas avautuu kuten ennen ilman valikkoa.
             // Linssisepän avausvalikko (juna 149): opas auki ilman paikkaa ja ilman karttaa → aloitus heti (suosikit täyttyvät perässä).
-            if (nakyy && OpasSovitin.Avausvalikko) AvaaAloitus();
+            if (nakyy && Kaupunkitila) Debug.Log("MATKAKIRJA opas: kaupunkitila, ei aloitusvalintaa");
+            else if (nakyy && OpasSovitin.Avausvalikko) AvaaAloitus();
             else if (nakyy && OpasSovitin.TakyAvaus)
             {
                 float raja = Time.realtimeSinceStartup + 4f;
                 IVisualElementScheduledItem odotus = null;
                 odotus = Juuri.schedule.Execute(() =>
                 {
-                    if (!this.nakyy || Auki) { odotus.Pause(); return; }
+                    if (!this.nakyy || Auki || Kaupunkitila) { odotus.Pause(); return; }
                     if (OnTakyja || OpasSovitin.Avausvalikko) { odotus.Pause(); AvaaAloitus(); return; }
                     if (OpasSovitin.Takyt != null || Time.realtimeSinceStartup > raja)
                     {
@@ -1178,7 +1186,8 @@ namespace Matkakirja.Natiivi
             {
                 case Nakyma.Paa:
                     // Päätoimittaja 5.10. klo 20.4x: pään kolme riviä samalla TOIMINTO-rivipohjalla (kultareunus), Vaihda kohde ›-merkillä.
-                    Alanakyma("Vaihda kohde", () => Avaa(Nakyma.Takyt), toiminto: true);
+                    // Kaupunkitilassa (kartan kuumailmapallo avasi yhden kaupungin oppaan) ei kohteen vaihtoa (omistaja 7.10. 08.3x).
+                    if (!Kaupunkitila) Alanakyma("Vaihda kohde", () => Avaa(Nakyma.Takyt), toiminto: true);
                     // Tauko ja kuvat valikon riveinä, tila tekstissä (omistaja 6.10. 12.1x).
                     Komento(KuvatPaalla ? "Kuvat: päällä" : "Kuvat: pois", VaihdaKuvat);
                     Komento("Näytä teksti", NaytaTeksti);
@@ -1744,6 +1753,9 @@ namespace Matkakirja.Natiivi
                     if (p.Length == 2) { maanosa = p[0]; maa = p[1]; }
                     Avaa(Nakyma.Kaupungit);
                     return $"opas: kaupungit {maanosa} / {maa}";
+                case "kaupunkitila":
+                    if (o.Length > 1) testiKaupunkitila = o[1] == "on" ? true : o[1] == "off" ? false : (bool?)null;
+                    return "opas: kaupunkitila " + Kaupunkitila;
                 case "torjunta": Torjunta(OpasSovitin.EiSallittuTeksti); return "opas: torjunta";
                 case "sallitut":
                 {
