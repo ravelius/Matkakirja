@@ -19,8 +19,8 @@ Avoimet työt:
 
 ## TILA 7.10. 12.5x (uusin)
 - SWE-RAJAT (Karttaseppä 7.10., PT kuittasi): proto linssiseppa2/swe-rajat 95cf8eb97 (wt/proto-linssiseppa2-swe-rajat): Vektorikerros
-  KorkeusVersio 2026-10-07-swe-korkeus / WebVersio 2026-10-07-swe, Maaraja Geojson/Maamaa 2026-10-07. Junaan (161) VASTA kun
-  Karttaseppä/Julkaisija ilmoittaa sarjojen olevan ämpärissä → SHA Natiivisepälle.
+  KorkeusVersio 2026-10-07-swe-korkeus / WebVersio 2026-10-07-swe, Maaraja Geojson/Maamaa 2026-10-07. 14.19 kaikki 200 (web-sarja
+  vielä viennissä, vain vertailukomento) → junaan 161 Natiisepälle ilmoitettu. Todenna junan appilla: Krim ja Kypros pallolla.
 - PALLO 161 TEHTY 13.2x: simu af5922b9 OK (oma maa, puoli; 13 kaupunkia oikealle), stillit lokit/linssiseppa2-kaupunkipallo-161-stillit/
   → Päätoimittaja. Löydös (toisen kaupungin kortti käänsi naapuripallon) korjattu aa32b618b → Natiivisepälle junaan 161
   e16d100db:n tilalle. Todenna aa32b618b junan 161 käännöksellä (esim. sevilla + tampere: vain oma pallo päättää).
