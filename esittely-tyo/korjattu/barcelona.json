@@ -11,7 +11,7 @@
    "koko_m": 150,
    "korkeus_m": 172,
    "teksti": "Pyhän perheen kirkko Sagrada Família kohoaa Eixamplen korttelien keskeltä kivisenä tornimetsänä, jonka keskimmäinen, Jeesukselle omistettu torni ulottuu sataseitsemänkymmentäkahden ja puolen metrin korkeuteen. Se on maailman korkein kirkko, ja helmikuussa 2026 tornin huipulle nostettiin ristin viimeinen osa. Rakentaminen alkoi vuonna 1882, ja seuraavana vuonna työn johtoon tuli Antoni Gaudí, joka omistautui kirkolle loppuelämänsä. Kesäkuussa 1926 hänen päälleen ajoi raitiovaunu, ja nuhjuisesti pukeutunutta vanhaa miestä luultiin kerjäläiseksi. Gaudí kuoli kolme päivää myöhemmin, ja hänet on haudattu kirkon kryptaan.",
-   "lyhyt": "Pyhän perheen kirkon vihki käyttöön paavi Benedictus kuudestoista vuonna 2010, ja samalla hän julisti sen basilikaksi. Gaudín kuollessa rakennuksesta oli valmiina alle neljännes. Keskitorni on nyt valmis, mutta pääjulkisivu, Kunnian julkisivu, on yhä rakenteilla.",
+   "lyhyt": "Pyhän perheen kirkon keskitornin Gaudí mitoitti tarkoituksella matalammaksi kuin Montjuïcin kukkula, sillä ihmiskäden työ ei hänen mielestään saanut nousta Jumalan luoman yli. Kesäkuussa 2026 paavi Leo neljästoista vihki valmistuneen tornin Gaudín kuoleman satavuotispäivänä. Kirkon pääjulkisivu on yhä rakenteilla.",
    "syventava": "Miksi Gaudíta luultiin kerjäläiseksi?",
    "kysymykset": [
     "Milloin koko kirkon arvioidaan valmistuvan?",
@@ -35,8 +35,12 @@
      "url": "https://mentalfloss.com/article/72482/gaudis-accidental-death-why-great-architect-was-mistaken-beggar"
     },
     {
-     "vaite": "Benedictus XVI vihki kirkon ja julisti sen basilikaksi 7.11.2010.",
+     "vaite": "Gaudí mitoitti Jeesuksen tornin matalammaksi kuin Montjuïcin kukkula, koska ihmisen tekemä työ ei saanut ylittää Jumalan luomaa.",
      "url": "https://en.wikipedia.org/wiki/Sagrada_Fam%C3%ADlia"
+    },
+    {
+     "vaite": "Paavi Leo neljästoista vihki valmistuneen Jeesuksen tornin 10.6.2026, tarkalleen sata vuotta Gaudín kuolemasta.",
+     "url": "https://www.catalannews.com/popes-visit/item/pope-leo-xiv-popemobil-barcelona-june-10-2026"
     },
     {
      "vaite": "Kunnian julkisivu eli pääjulkisivu on yhä rakenteilla (arvio 2030-luvun puoliväli).",
@@ -51,7 +55,7 @@
    "luokka": "rakennus",
    "koko_m": 40,
    "teksti": "Kerrostalo Casa Batllón tunnistaa Passeig de Gràcian varrella kaarevasta katosta, joka on katettu hohtavilla kaakeleilla kuin lohikäärmeen suomuilla. Katon vieressä nousee pieni torni, jonka ristiä on tulkittu pyhän Yrjänän keihääksi lohikäärmeen selässä. Tekstiilitehtailija Josep Batlló antoi Antoni Gaudín muuttaa tavallisen vanhan talonsa sellaiseksi, ettei toista samanlaista olisi. Alakerran pylväät muistuttavat luita ja parvekkeiden kaiteet kallonpaloja, joten talo sai lempinimen luutalo. Julkisivua peittää rikotuista laatoista ladottu mosaiikki, jonka värit vaihtuvat kullanoranssista vihreänsiniseen.",
-   "lyhyt": "Luutaloksi kutsuttu Casa Batlló rakennettiin alun perin jo vuonna 1877, ja vuonna 1904 Gaudí ryhtyi muokkaamaan sitä uuteen asuun. Suoria linjoja talossa ei ole juuri lainkaan. Nykyään talo on museo ja osa Unescon maailmanperintöä.",
+   "lyhyt": "Luutaloksi kutsuttu Casa Batlló oli vuonna 1906 ehdolla Barcelonan kaupungin vuotuiseksi parhaaksi rakennukseksi, mutta palkinto meni toiselle talolle. Omistaja oli ensin halunnut purkaa paikalla olleen vanhan talon kokonaan, ja Gaudí sai hänet tyytymään muutostöihin. Nykyään talossa on museo.",
    "syventava": "Kuka oli pyhä Yrjänä?",
    "kysymykset": [
     "Miksi korttelia kutsutaan Eripuran kortteliksi?",
@@ -71,12 +75,16 @@
      "url": "https://en.wikipedia.org/wiki/Casa_Batll%C3%B3"
     },
     {
-     "vaite": "Alakerran kivipylväät muistuttavat luita, parvekkeiden kaiteet kalloja; suora linja on julkisivusta hävitetty.",
+     "vaite": "Alakerran kivipylväät muistuttavat luita ja parvekkeiden kaiteet kalloja.",
      "url": "https://www.studiomatrx.org/architecture-canon/casa-batllo"
     },
     {
      "vaite": "Talo on museo ja Unescon maailmanperintökohde vuodesta 2005.",
      "url": "https://www.studiomatrx.org/architecture-canon/casa-batllo"
+    },
+    {
+     "vaite": "Josep Batlló halusi alun perin purkaa vanhan rakennuksen, mutta Gaudí vakuutti, että muutostyö riittää; kaupunki valitsi Casa Batllón ehdokkaaksi vuoden 1906 parhaaksi rakennukseksi, mutta palkinto meni toiselle.",
+     "url": "https://en.wikipedia.org/wiki/Casa_Batll%C3%B3"
     }
    ]
   },
@@ -87,7 +95,7 @@
    "luokka": "puisto",
    "koko_m": 700,
    "teksti": "Güellin puiston tunnistaa ylhäältä kukkulan rinteellä levittäytyvästä laajasta terassista, jota kiertää aaltoileva, värikkäillä keramiikan sirpaleilla päällystetty penkki. Terassin alla on toriksi tarkoitettu pylväshalli, jonka kahdeksankymmentäkuusi pylvästä johtavat sadeveden maanalaiseen säiliöön. Teollisuusmies Eusebi Güell suunnitteli rinteelle kuudenkymmenen ylellisen talon asuinaluetta, mutta paikka oli liian kaukana keskustasta, ja vain kaksi taloa rakennettiin. Toiseen niistä muutti Antoni Gaudí isänsä ja veljentyttärensä kanssa, ja hän asui siellä vuodesta 1906 vuoteen 1925.",
-   "lyhyt": "Güellin puiston kuvatuin hahmo on värikäs mosaiikkilisko, jota kutsutaan lohikäärmeeksi ja joka lepää pääsisäänkäynniltä nousevalla portaikolla. Pylväshallin katon mosaiikit teki Gaudín työtoveri Josep Maria Jujol. Gaudín entinen koti puistossa on nykyään museo.",
+   "lyhyt": "Güellin puiston kuvatuin hahmo on värikäs mosaiikkilisko, jota kutsutaan lohikäärmeeksi ja joka lepää pääsisäänkäynniltä nousevalla portaikolla. Se ei ole pelkkä koriste, sillä eläimen suu on maanalaisen vesisäiliön ylivuotoaukko. Gaudín entinen koti puistossa on nykyään museo.",
    "syventava": "Miksi asuinalueesta tuli puisto?",
    "kysymykset": [
     "Kuka asui puistossa Gaudín naapurina?",
@@ -103,7 +111,7 @@
      "url": "https://en.wikipedia.org/wiki/Park_G%C3%BCell"
     },
     {
-     "vaite": "Pylväshallissa on 86 pylvästä, se oli tarkoitettu toriksi, pylväiden sisällä kulkeva johto vie sadeveden maanalaiseen säiliöön; katon keramiikan teki Jujol.",
+     "vaite": "Pylväshallissa on 86 pylvästä, se oli tarkoitettu toriksi, pylväiden sisällä kulkeva johto vie sadeveden maanalaiseen säiliöön, ja säiliön ylivuotoaukko on portaikon lohikäärmeen suu; katon keramiikan teki Jujol.",
      "url": "https://parkguell.barcelona/en/park-guell/emblematic-features/hypostyle-room"
     },
     {
@@ -127,7 +135,7 @@
    "luokka": "rakennus",
    "koko_m": 85,
    "teksti": "Kerrostalo Casa Milà kaartuu Passeig de Gràcian kulmassa aaltoilevana kivimuurina, ja sen katolla seisoo ryhmä kypärää muistuttavia savupiippuja. Runoilija Pere Gimferrer kutsui kattoa soturien puutarhaksi, koska piiput näyttävät vartioivan portaiden uloskäyntejä. Antoni Gaudí suunnitteli talon Pere Milàlle ja tämän vaimolle Roser Segimonille 1900-luvun alussa, ja ulkonäkönsä vuoksi talo sai lempinimen La Pedrera eli kivilouhos. Talon runko on rautaa ja kiveä, joten kalkkikivinen julkisivu kantaa vain itsensä, eikä kerroksissa tarvita kantavia seiniä.",
-   "lyhyt": "Kivilouhokseksi kutsutun Casa Milàn varsinainen omistaja oli Roser Segimon, joka asui talossa kuolemaansa saakka vuoteen 1964. Vuonna 1984 talo liitettiin Unescon maailmanperintöluetteloon, ja nykyään siellä toimii näyttelyitä ja vierailuja järjestävä säätiö.",
+   "lyhyt": "Asuintalo Casa Milàn emäntä Roser Segimon valitti Gaudílle, ettei talossa ollut yhtään suoraa seinää, jota vasten hänen Steinway-pianonsa olisi mahtunut. Gaudí vastasi, että soittakoon sitten viulua. Arkkitehdin kuoltua Segimon hävitti talosta suurimman osan Gaudín suunnittelemista huonekaluista.",
    "syventava": "Miksi taloa kutsuttiin kivilouhokseksi?",
    "kysymykset": [
     "Miksi Gaudí riitaantui Milàn perheen kanssa?",
@@ -143,8 +151,12 @@
      "url": "https://www.lonelyplanet.com/pois/374869"
     },
     {
-     "vaite": "Roser Segimon omisti talon ja asui siinä kuolemaansa 1964 asti.",
-     "url": "https://www.lonelyplanet.com/pois/374869"
+     "vaite": "Segimon valitti, ettei talossa ollut suoraa seinää hänen Steinway-pianolleen, ja Gaudí vastasi, että soittakoon sitten viulua; Gaudín kuoltua 1926 Segimon hävitti suurimman osan hänen suunnittelemistaan huonekaluista ja sisusti pääkerroksen Ludvig kuudennentoista tyyliin.",
+     "url": "https://en.wikipedia.org/wiki/Casa_Mil%C3%A0"
+    },
+    {
+     "vaite": "Tarkennus omistussuhteeseen: Milà ja Segimon olivat talon yhteisomistajat; Milàn kuoltua 1940 Segimon myi talon 1946 Josep Ballvé i Pelliséelle mutta asui pääkerroksessa kuolemaansa 1964 asti.",
+     "url": "https://en.wikipedia.org/wiki/Casa_Mil%C3%A0"
     },
     {
      "vaite": "Kypäräpäiset soturisavupiiput; kalkkikivijulkisivu ei kanna kuormaa vaan riippuu rauta- ja kivirungosta; Passeig de Gràcian ja Carrer de Provençan kulma.",
@@ -163,7 +175,7 @@
    "luokka": "katu",
    "koko_m": 1200,
    "teksti": "Kävelykatu La Rambla halkoo vanhaa kaupunkia puiden varjostamana kaistana Katalonian aukiolta Kolumbuksen muistomerkille sataman laidalle, ja matkaa kertyy reilu kilometri. Kadun nimi tulee arabian hiekkaa tarkoittavasta sanasta, sillä paikalla kulki aikoinaan sadevesien uoma. Yläpäässä on Canaletesin suihkukaivo, ja sanotaan, että joka juo sen vettä, palaa vielä Barcelonaan. Kadun puolivälissä katukiveykseen on upotettu Joan Mirón pyöreä mosaiikki, jonka keltaiset, siniset ja punaiset muodot paljastettiin vuonna 1976.",
-   "lyhyt": "Kävelykatu La Rambla erottaa Goottilaisen korttelin ja Ravalin kaupunginosat toisistaan. Jalkapalloseura Barcelonan kannattajat ovat kokoontuneet Canaletesin suihkukaivolle juhlimaan voittoja 1930-luvulta lähtien. Perinne alkoi, kun läheinen sanomalehti ripusti otteluiden tulokset ikkunaansa.",
+   "lyhyt": "Kävelykatu La Rambla erottaa Goottilaisen korttelin ja Ravalin kaupunginosat toisistaan. Jalkapalloseura Barcelonan kannattajat ovat kokoontuneet Canaletesin suihkukaivolle juhlimaan voittoja 1930-luvulta lähtien. Perinne alkoi, kun viereisen urheilulehden toimituksen eteen kirjoitettiin päivän tulokset liitutaululle.",
    "syventava": "Miksi kannattajat juhlivat Canaletesilla?",
    "kysymykset": [
     "Miksi katu jakautuu viiteen eri nimiseen osaan?",
@@ -183,16 +195,20 @@
      "url": "https://en.wikipedia.org/wiki/La_Rambla,_Barcelona"
     },
     {
-     "vaite": "Canaletesin kaivon vettä juonut palaa Barcelonaan.",
-     "url": "https://en.wikipedia.com/wiki/Ramblas"
+     "vaite": "Canaletesin kaivon vettä juonut palaa Barcelonaan; nykyinen kaivo rakennettiin 1892.",
+     "url": "https://en.wikipedia.org/wiki/Font_de_Canaletes"
     },
     {
      "vaite": "Mirón pyöreä mosaiikki Pla de l'Osissa, keltainen, sininen ja punainen, vihittiin 23.12.1976.",
      "url": "https://www.amicsdelarambla.cat/en/turismo-detalle/miros-mosaic-at-pla-de-los"
     },
     {
-     "vaite": "Barçan kannattajat kokoontuneet Canaletesille 1930-luvulta; perinne alkoi, kun La Rambla -lehti ripusti tulokset ikkunaan.",
+     "vaite": "Jalkapallokannattajat ovat kokoontuneet Canaletesille 1930-luvulta lähtien.",
      "url": "https://en.wikipedia.org/wiki/Font_de_Canaletes"
+    },
+    {
+     "vaite": "Urheilulehti La Ramblan toimitus sijaitsi kaivon vieressä, ja päivän tulokset kirjoitettiin liitutaululle toimituksen eteen; siitä perinne alkoi.",
+     "url": "https://bid.barcelonaturisme.com/wv3/en/page/1213/canaletes-fountain.html"
     }
    ]
   },
@@ -243,8 +259,8 @@
    "kuvaus": "Katalaanin modernismin konserttitalo",
    "luokka": "rakennus",
    "koko_m": 60,
-   "teksti": "Konserttitalo Palau de la Música Catalana on puristunut vanhan kaupungin kapeiden katujen väliin, ja sen tiilijulkisivussa kukkivat mosaiikit ja veistokset. Arkkitehti Lluís Domènech i Montaner suunnitteli talon barcelonalaiselle Orfeó Català -kuorolle, ja se valmistui vuonna 1908. Salin katossa on valtava lasimaalausikkuna, jonka keskeltä riippuu alaspäin kullanhohtoinen kupu kuin aurinko. Se on Euroopan ainoa konserttisali, jota päivisin valaisee pelkkä luonnonvalo, ja vuonna 1997 siitä tuli maailman ainoa Unescon maailmanperintökohteeksi nimetty konserttisali.",
-   "lyhyt": "Konserttitalo Palau de la Música Catalanan lavan takaseinällä on kahdeksantoista muusaa, joiden ylävartalot ovat veistoksia ja alavartalot mosaiikkia, ja jokainen soittaa eri soitinta. Kattoikkunan lasimaalauksen suunnitteli Antoni Rigalt, ja saliin mahtuu noin kaksituhatta kaksisataa kuulijaa.",
+   "teksti": "Konserttitalo Palau de la Música Catalana on puristunut vanhan kaupungin kapeiden katujen väliin, ja sen tiilijulkisivussa kukkivat mosaiikit ja veistokset. Arkkitehti Lluís Domènech i Montaner suunnitteli talon barcelonalaiselle Orfeó Català -kuorolle, ja se valmistui vuonna 1908. Salin katossa on valtava lasimaalausikkuna, jonka keskeltä riippuu alaspäin kullanhohtoinen kupu kuin aurinko. Päiväsaikaan salia ei tarvitse valaista sähköllä lainkaan, ja vuonna 1997 siitä tuli maailman ainoa Unescon maailmanperintökohteeksi nimetty konserttisali.",
+   "lyhyt": "Konserttitalo Palau de la Música Catalanan lavan takaseinällä on kahdeksantoista muusaa, joiden ylävartalot ovat veistoksia ja alavartalot mosaiikkia, ja jokainen soittaa eri soitinta. Lavan oikealla puolella seinästä ratsastavat ulos Wagnerin valkyyriat, ja niiden alapuolella on Beethovenin rintakuva.",
    "syventava": "Mikä on Orfeó Català -kuoro?",
    "kysymykset": [
     "Mitä julkisivun kulman veistosryhmä esittää?",
@@ -260,7 +276,11 @@
      "url": "https://en.wikipedia.org/wiki/Palau_de_la_M%C3%BAsica_Catalana"
     },
     {
-     "vaite": "Antoni Rigaltin lasimaalauskattoikkuna, keskellä alaspäin riippuva kullanvärinen kupu kuin aurinko; noin 2 200 paikkaa; Euroopan ainoa päivisin pelkällä luonnonvalolla valaistu auditorio.",
+     "vaite": "Antoni Rigaltin lasimaalauskattoikkuna, keskellä alaspäin riippuva kullanvärinen kupu kuin aurinko; lasiseinät ja kattoikkuna tuovat saliin päivänvalon, joten sähkövaloa ei päivisin tarvita.",
+     "url": "https://en.wikipedia.org/wiki/Palau_de_la_M%C3%BAsica_Catalana"
+    },
+    {
+     "vaite": "Lavan kaaren oikealla puolella on Valkyyrioiden ratsastus ja sen alla Beethovenin rintakuva; vasemmalla kansanmusiikki ja Anselm Clavén rintakuva.",
      "url": "https://en.wikipedia.org/wiki/Palau_de_la_M%C3%BAsica_Catalana"
     },
     {
@@ -272,8 +292,8 @@
      "url": "https://en.wikipedia.org/wiki/Palau_de_la_M%C3%BAsica_Catalana"
     },
     {
-     "vaite": "Euroopan ainoa konserttisali, jota päivisin valaisee kokonaan luonnonvalo; noin 2 200 paikkaa; 18 muusaa eri soittimineen.",
-     "url": "https://worldheritagesite.org/community/ming_9734/palau-de-la-musica-catalana-hospital-de-sant-pau"
+     "vaite": "Tarkistamaton superlatiivi: väite Euroopan ainoasta pelkällä päivänvalolla valaistusta konserttisalista esiintyy vain toissijaisissa lähteissä, ei Palaun omilla sivuilla, joten se on jätetty tekstistä pois.",
+     "url": "https://www.palaumusica.cat/en/the-palau-de-la-musica-catalana-the-only-concert-hall-in-the-world-recognised-by-unesco_1653219"
     },
     {
      "vaite": "Lavan kahdeksantoista muusan ylävartalot veisti Eusebi Arnau ja alavartalojen mosaiikin teki Lluís Bru; kukin soittaa eri soitinta.",
@@ -288,7 +308,7 @@
    "luokka": "muu",
    "koko_m": 40,
    "teksti": "Riemukaari Arc de Triomf on punatiilinen portti leveän Passeig de Lluís Companysin kävelybulevardin päässä, ja bulevardi jatkuu siitä Ciutadellan puistoon. Kaari rakennettiin vuoden 1888 maailmannäyttelyn pääsisäänkäynniksi, ja se on lähes kolmenkymmenen metrin korkuinen. Arkkitehti Josep Vilaseca i Casanovas koristi sen uusmudejar-tyylisin aihein, jotka tuovat mieleen Espanjan maurilaisen rakennusperinteen. Etupuolen friisin nimi on Barcelona toivottaa kansakunnat tervetulleiksi, sillä kaari ei juhli sotavoittoa vaan maailmannäyttelyyn osallistuneita maita.",
-   "lyhyt": "Riemukaari Arc de Triomf vihittiin toukokuussa 1888. Etupuolen friisin veisti Josep Reynés, ja takapuolen Palkinto-nimisen kivireliefin teki Josep Llimona. Itse maailmannäyttely pidettiin Ciutadellan puistossa, joka sai nykyisen asunsa juuri näyttelyä varten.",
+   "lyhyt": "Riemukaari Arc de Triomfin kahteen pylvääseen on veistetty kivisiä lepakoita. Lepakko oli 1200-luvulla Aragonian kuninkaan tunnus ja onnenmerkki, ja se on yhä Valencian kaupungin vaakunassa. Katalonian modernistiset arkkitehdit suosivat tällaisia eläinaiheita rakennustensa koristeissa.",
    "syventava": "Mitä Ciutadellan puistossa on?",
    "kysymykset": [
     "Mitä Ciutadellan puiston paikalla oli ennen?",
@@ -314,6 +334,14 @@
     {
      "vaite": "Ciutadellan puiston nykyinen asu on vuoden 1888 maailmannäyttelyn tulosta; näyttely pidettiin puistossa.",
      "url": "https://en.wikipedia.org/wiki/1888_Barcelona_Universal_Exposition"
+    },
+    {
+     "vaite": "Pylväisiin on veistetty kivisiä lepakoita, jotka viittaavat kuningas Jaime ensimmäisen tunnukseen.",
+     "url": "https://en.wikipedia.org/wiki/Arc_de_Triomf"
+    },
+    {
+     "vaite": "Lepakko oli kuningas Jaime ensimmäisen (1213–1276) tunnus ja onnenmerkki, ja se on yhä Valencian vaakunassa; eläinaiheet toistuivat katalaanien modernismissa.",
+     "url": "https://barcelona.de/en/barcelona-arc-de-triomf.html"
     }
    ]
   },
@@ -323,7 +351,7 @@
    "kuvaus": "La Ramblan kuuluisa kauppahalli",
    "luokka": "rakennus",
    "koko_m": 100,
-   "teksti": "Kauppahalli La Boqueria avautuu La Ramblan länsilaidalle, ja ylhäältä sen erottaa laajasta metallikatosta, joka valmistui vuonna 1914. Ensimmäinen maininta paikan torikaupasta on vuodelta 1217, jolloin vanhan kaupunginportin lähelle pystytettiin pöytiä lihan myyntiä varten. Hallin virallinen nimi on Sant Josepin tori, koska se rakennettiin vuonna 1835 palaneen paljasjalkakarmeliittojen luostarin paikalle. Kun peruskivi laskettiin Pyhän Joosefin päivänä vuonna 1840, sen alle kätkettiin kultaa ja kolikoita tuomaan torille vaurautta.",
+   "teksti": "Kauppahalli La Boqueria avautuu La Ramblan länsilaidalle, ja ylhäältä sen erottaa laajasta metallikatosta, joka valmistui vuonna 1914. Ensimmäinen maininta paikan torikaupasta on vuodelta 1217, jolloin vanhan kaupunginportin lähelle pystytettiin pöytiä lihan myyntiä varten. Hallin virallinen nimi on Sant Josepin tori, koska se rakennettiin vuonna 1835 palaneen paljasjalkakarmeliittojen luostarin paikalle. Peruskivi laskettiin Pyhän Joosefin päivänä vuonna 1840, mutta kauppiaat suojasivat tavaransa säältä omin väliaikaisin katoksin aina metallikaton valmistumiseen asti.",
    "lyhyt": null,
    "syventava": "Miksi luostari paloi vuonna 1835?",
    "kysymykset": [
@@ -340,8 +368,12 @@
      "url": "https://en.wikipedia.org/wiki/La_Boqueria"
     },
     {
-     "vaite": "Paljasjalkakarmeliittojen Sant Josepin luostari vaurioitui luostarien poltoissa 25.7.1835; peruskivi Pyhän Joosefin päivänä 1840, alle kultaa ja kolikoita; virallinen nimi Mercat de Sant Josep.",
+     "vaite": "Paljasjalkakarmeliittojen Sant Josepin luostari tuhoutui tulipalossa 1835, ja kauppiaat siirtyivät sen tontille 1836; virallinen nimi Mercat de Sant Josep.",
      "url": "https://www.amicsdelarambla.cat/en/turismo-detalle/la-boqueria-market"
+    },
+    {
+     "vaite": "Peruskivi laskettiin 19.3.1840 eli Pyhän Joosefin päivänä; metallikatto valmistui 1914 ja päätti ajan, jona kauppiaat joutuivat suojaamaan tavaransa säältä väliaikaisin katoksin.",
+     "url": "https://www.boqueria.barcelona/history"
     }
    ]
   },
@@ -416,7 +448,7 @@
    "kuvaus": "Sataman yllä kohoava kukkula",
    "luokka": "muu",
    "koko_m": 2000,
-   "teksti": "Sataman yllä kohoava Montjuïc on Barcelonan vihreä kotikukkula, jonka laella seisoo 1700-luvulla nykyiseen asuunsa rakennettu linnoitus. Rinteille rakennettiin vuoden 1929 maailmannäyttely, ja vuoden 1992 olympialaisissa kukkulan olympiastadion oli kisojen keskus. Linnan tornissa ranskalainen tähtitieteilijä Pierre Méchain määritti Barcelonan tarkan sijainnin vuosina 1792 ja 1793. Mittaus kuului Dunkerquesta Barcelonaan ulottuneeseen meridiaanikaareen, jonka avulla laskettiin metrin alkuperäinen pituus, kymmenmiljoonasosa matkasta pohjoisnavalta päiväntasaajalle. Ranskan ja Espanjan välisen sodan sytyttyä Méchain joutui jäämään Barcelonaan.",
+   "teksti": "Sataman yllä kohoava Montjuïc on Barcelonan vihreä kotikukkula, jonka laella seisoo 1700-luvulla nykyiseen asuunsa rakennettu linnoitus. Rinteille rakennettiin vuoden 1929 maailmannäyttely, ja vuoden 1992 olympialaisissa kukkulan olympiastadion oli kisojen keskus. Linnan tornissa ranskalainen tähtitieteilijä Pierre Méchain määritti Barcelonan tarkan sijainnin vuosina 1792 ja 1793. Mittaus kuului Dunkerquesta Barcelonaan ulottuneeseen meridiaanikaareen, jonka avulla laskettiin metrin alkuperäinen pituus, kymmenmiljoonasosa matkasta pohjoisnavalta päiväntasaajalle. Kun Ranska ja Espanja joutuivat sotaan vuonna 1793, linnoitus otettiin sotilaskäyttöön, ja Méchain jatkoi havaintojaan majatalonsa huoneesta.",
    "lyhyt": null,
    "syventava": "Miten metrin pituus mitattiin?",
    "kysymykset": [
@@ -437,8 +469,12 @@
      "url": "https://www.hmdb.org/m.asp?m=202156"
     },
     {
-     "vaite": "Dunkerque–Barcelona-kaari, metrin määritelmä; sodan sytyttyä 1793 Méchain ei voinut palata Ranskaan vaan jäi Barcelonaan.",
+     "vaite": "Dunkerque–Barcelona-kaari ja metrin määritelmä kymmenmiljoonasosana pohjoisnavan ja päiväntasaajan välimatkasta; Montjuïcin linnoitus oli mittauksen eteläinen päätepiste.",
      "url": "https://en.wikipedia.org/wiki/Arc_measurement_of_Delambre_and_M%C3%A9chain"
+    },
+    {
+     "vaite": "Maaliskuussa 1793 syttyneen Ranskan ja Espanjan sodan takia Méchain joutui luopumaan Montjuïcista, joka tarvittiin sotilaskäyttöön, eikä päässyt sinne takaisin, vaan mittasi leveysasteen majatalostaan.",
+     "url": "https://mathshistory.st-andrews.ac.uk/Biographies/Mechain/"
     },
     {
      "vaite": "Vuoden 1929 maailmannäyttely Montjuïcilla; vuoden 1992 olympialaisten päästadion.",
@@ -484,7 +520,7 @@
    "kuvaus": "Gaudín ensimmäinen talo",
    "luokka": "rakennus",
    "koko_m": 30,
-   "teksti": "Huvila Casa Vicens erottuu Gràcian kaupunginosan kattojen keskeltä punaisen tiilen ja värikkäiden kaakeliruutujen kirjomana. Se oli Antoni Gaudín ensimmäinen talo, ja hän suunnitteli sen kolmekymmentäyksivuotiaana pörssimeklari Manel Vicens i Montanerin kesäasunnoksi. Talo valmistui vuonna 1885, ja sen kaakeleissa toistuu samettikukan kuvio, kun taas takorautaiset aidat muistuttavat palmunlehtiä. Talo oli yksityiskotina koko historiansa, ja yleisölle se avattiin ensimmäistä kertaa museona vuonna 2017 kahden vuoden kunnostuksen jälkeen.",
+   "teksti": "Huvila Casa Vicens erottuu Gràcian kaupunginosan kattojen keskeltä punaisen tiilen ja värikkäiden kaakeliruutujen kirjomana. Se oli Antoni Gaudín ensimmäinen merkittävä talo, ja hän suunnitteli sen pörssimeklari Manel Vicens i Montanerin kesäasunnoksi vasta valmistuneena arkkitehtina. Talo valmistui vuonna 1885, ja sen kaakeleissa toistuu samettikukan kuvio, kun taas takorautaiset aidat muistuttavat palmunlehtiä. Talo oli yksityiskotina koko historiansa, ja yleisölle se avattiin ensimmäistä kertaa museona vuonna 2017 kahden vuoden kunnostuksen jälkeen.",
    "lyhyt": null,
    "syventava": "Kuka oli Manel Vicens i Montaner?",
    "kysymykset": [
@@ -501,8 +537,12 @@
      "url": "https://en.wikipedia.org/wiki/Casa_Vicens"
     },
     {
-     "vaite": "Kaakeleissa samettikukkakuvio, takorautaiset aidat palmunlehtiä; Gaudí oli 31-vuotias; itämaisen taiteen vaikutus.",
+     "vaite": "Kaakeleissa samettikukkakuvio ja takorautaisissa aidoissa palmunlehtiaiheita; itämaisen taiteen vaikutus.",
      "url": "https://mymodernmet.com/casa-vicens-gaudi-museum/"
+    },
+    {
+     "vaite": "Gaudí valmistui arkkitehdiksi 1878 ja sai Vicensin tilauksen samana vuonna; iäksi on lähteissä esitetty sekä 26 että 31 vuotta, joten tarkka ikä on jätetty pois.",
+     "url": "https://en.wikipedia.org/wiki/Casa_Vicens"
     }
    ]
   },

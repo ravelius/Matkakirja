@@ -10,7 +10,7 @@
    "luokka": "rakennus",
    "koko_m": 300,
    "teksti": "Bergenin vanha laituri, Bryggen, näkyy ylhäältä Vågen-lahden itärannalla tiheänä rivinä kapeita, harjakattoisia puutaloja, joiden päädyt kääntyvät satamaan päin. Hansaliitto perusti tänne kontorinsa noin vuonna 1350, ja saksalaiset kauppiaat varastoivat taloissa Pohjois-Norjan kuivattua kalaa ja Euroopasta tuotua viljaa. Laituri on palanut monta kertaa, mutta se on aina rakennettu uudelleen vanhan mallin mukaan. Vuoden 1955 palon jälkeisistä kaivauksista löytyi noin kuusisataaseitsemänkymmentä keskiaikaista riimukirjoitusta, ja yhdessä puupuikossa joku pyytää: rakkaani, suutele minua.",
-   "lyhyt": "Bergenin vanhasta laiturista, Bryggenistä, on säilynyt kuusikymmentäkaksi rakennusta, ja se on ollut Unescon maailmanperintökohde vuodesta 1979. Hansaliitolla oli ulkomailla neljä kontoria, ja Bryggen on niistä ainoa, joka on säilynyt meidän päiviimme.",
+   "lyhyt": "Bergenin vanhaa laituria, Bryggeniä, kutsuttiin 1300-luvulta lähtien Tyskebryggeniksi eli saksalaisten laituriksi. Toukokuussa 1945, heti Saksan miehityksen päätyttyä, kaupunginvaltuusto päätti, että virallinen nimi on vastedes pelkkä Bryggen. Hansaliiton neljästä ulkomaisesta kontorista Bryggen on ainoa säilynyt.",
    "syventava": "Mitä riimupuikkoihin kirjoitettiin?",
    "kysymykset": [
     "Miksi hansakauppiaiden piti pysyä naimattomina?",
@@ -42,8 +42,16 @@
      "url": "https://en.wikipedia.org/wiki/Bryggen_inscriptions"
     },
     {
-     "vaite": "Säilyneitä rakennuksia on 62; Unescon maailmanperintöluettelossa vuodesta 1979.",
-     "url": "https://en.wikipedia.org/wiki/Bryggen"
+     "vaite": "Unescon maailmanperintöluettelossa vuodesta 1979; suojeltuja rakennuksia 61 (aiempi tekstiin merkitty 62 ei löytynyt enää lähteistä, joten luku on jätetty pois).",
+     "url": "https://no.wikipedia.org/wiki/Bryggen_i_Bergen"
+    },
+    {
+     "vaite": "Bryggeniä kutsuttiin Tyskebryggeniksi eli saksalaisten laituriksi 1300-luvulta lähtien; kaupunginvaltuusto päätti 25.5.1945, että virallinen nimi on vastedes Bryggen.",
+     "url": "https://no.wikipedia.org/wiki/Bryggen_i_Bergen"
+    },
+    {
+     "vaite": "Nimi Tyskebryggen oli käytössä 1300-luvulta, ja saksalaisviittaukset poistettiin paikannimistä toisen maailmansodan ja miehityksen jälkeen; nimen palauttamista esitettiin 2011, mutta valtuusto hylkäsi sen.",
+     "url": "https://www.thelocal.no/20111018/bergen-votes-down-german-wharf-name-change"
     },
     {
      "vaite": "Hansaliitolla oli neljä ulkomaista kontoria, ja Bryggen on ainoa säilynyt.",
@@ -58,7 +66,7 @@
    "luokka": "linnoitus",
    "koko_m": 400,
    "teksti": "Bergenhusin linnakkeen muurien sisällä Vågen-lahden suulla erottuu ylhäältä kaksi harmaata kivirakennusta: harjakattoinen Haakonin sali ja sen vieressä Rosenkrantzin torni. Kuningas Haakon Haakoninpojan 1200-luvun puolivälissä rakennuttama sali on Norjan suurin keskiaikainen maallinen rakennus, mutta 1700-luvulle tultaessa sen tehtävä oli jo unohtunut. Vasta vuonna 1840 osoitettiin, että kyseessä oli kuninkaan juhlasali. Huhtikuussa 1944 satamassa räjähti räjähdysaineita lastattu laiva, ja tulipalo tuhosi salin puisen katon. Sali korjattiin ja avattiin uudelleen vuonna 1961, tasan seitsemänsataa vuotta ensimmäisen käyttönsä jälkeen.",
-   "lyhyt": "Bergenhusin linnake menetti 1800-luvulla puolustustehtävänsä, mutta armeija piti sen hallinnollisena tukikohtanaan, ja siellä palvelee yhä noin sataviisikymmentä sotilasta. Rosenkrantzin torni sai nykyisen muotonsa 1560-luvulla, kun lääninherra Erik Rosenkrantz korotti sitä kolmella kerroksella.",
+   "lyhyt": "Bergenhusin linnakkeen Rosenkrantzin torni sai 1560-luvulla kolme tehtävää yhtä aikaa, sillä pohjakerrokseen tuli tyrmä, keskikerroksiin lääninherran asunto ja ylimmälle tasolle tykkiasemat. Työn tekivät skotlantilaiset kivenhakkaajat, ja tornin ydin on lähes kolmesataa vuotta vanhempi kuninkaan asuintorni.",
    "syventava": "Miksi salin tehtävä unohtui?",
    "kysymykset": [
     "Kuka oli kuningas Haakon Haakoninpoika?",
@@ -94,8 +102,8 @@
      "url": "https://en.wikipedia.org/wiki/Bergenhus_Fortress"
     },
     {
-     "vaite": "Lääninherra Erik Rosenkrantz lisäsi torniin 1560-luvulla kolme kerrosta.",
-     "url": "https://www.forsvarsbygg.no/en/festningene/bergenhus-fortress/bergenhus-fortress-walking-route"
+     "vaite": "Rosenkrantzin tornin vanhin osa on kuningas Maunu Lainparantajan ajan asuintorni 1270-luvulta; sitä muutettiin noin 1520 ja laajennettiin 1560-luvulla lääninherra Erik Rosenkrantzin palveluksessa olleiden skotlantilaisten kivenhakkaajien työnä. Pohjakerroksessa oli tyrmiä, ylempänä lääninherran asuintilat ja ylimmällä tasolla tykkiasemat.",
+     "url": "https://en.wikipedia.org/wiki/Rosenkrantz_Tower"
     }
    ]
   },
@@ -106,7 +114,7 @@
    "luokka": "muu",
    "koko_m": 1500,
    "teksti": "Kaupunkivuori Fløyen nousee suoraan Bergenin keskustan takaa, ja ylhäältä sen rinteellä erottuu köysiradan yläasema noin kolmensadankahdenkymmenen metrin korkeudessa. Vuoren korkein kohta on noin neljäsataa metriä merenpinnan yläpuolella, ja se on yksi niistä seitsemästä vuoresta, jotka kehystävät kaupungin keskustaa. Yläasemalta lähtee merkitty polku peikkometsään, jonka asukkaiden sanotaan muuttuvan auringonvalossa kiveksi. Rinteillä laiduntaa myös pieni kashmirvuohien lauma, jonka tehtävä on raivata vuorelta pensaikkoa, ja eläimet pysyvät alueellaan virtuaalisen aidan avulla.",
-   "lyhyt": "Kaupunkivuori Fløyenin ja Bergenin korkeimman vuoren Ulrikenin välillä kulkee Vidden-reitti, noin kolmentoista kilometrin vaellus avoimen ylängön poikki. Reitti on suositeltavaa kulkea Ulrikenilta Fløyenille, koska silloin vaellus alkaa korkeammalta ja alas kaupunkiin pääsee lopuksi köysiradalla.",
+   "lyhyt": "Kaupunkivuori Fløyenilta kaupunkiin laskeutuvat tiet ja polut valaistaan talvikuukausina, ja silloin bergeniläiset laskevat niitä pitkin pulkalla alas rinnettä. Kesällä samoilla poluilla kuljetaan jalan, ja vuoren laella olevalta Skomakerdiket-lammelta voi lainata kanootin.",
    "syventava": "Kuka raivaa Fløyenin rinteitä?",
    "kysymykset": [
     "Mistä Fløyen on saanut nimensä?",
@@ -134,12 +142,12 @@
      "url": "https://floyen.no/en/activities/meet-our-goats"
     },
     {
-     "vaite": "Vidden-reitti yhdistää Ulrikenin ja Fløyenin, noin 13 kilometriä; suositeltu suunta Ulrikenilta Fløyenille ja alas köysiradalla.",
-     "url": "https://ulriken643.no/en/blog/vidden-turen-slik-gar-du-fra-ulriken-til-floyen"
+     "vaite": "Fløyenilta kaupunkiin laskeutuvat tiet ja polut valaistaan talvikuukausina, ja niitä pitkin lasketaan pulkalla.",
+     "url": "https://en.wikipedia.org/wiki/Fl%C3%B8yen"
     },
     {
-     "vaite": "Ulriken on seitsemästä vuoresta korkein.",
-     "url": "https://en.wikipedia.org/wiki/Ulriken"
+     "vaite": "Skomakerdiketillä on kanootteja lainattavaksi, nuotio- ja grillipaikka sekä Trollbu-taukotupa, ja talvella kaupunki mittaa lammen jään.",
+     "url": "https://www.bergen.kommune.no/hvaskjer/tema/byfjellene/turinformasjon/floyen"
     }
    ]
   },
@@ -149,8 +157,8 @@
    "kuvaus": "Köysirata keskustasta Fløyenille",
    "luokka": "muu",
    "koko_m": 900,
-   "teksti": "Köysirata Fløibanen piirtyy ylhäältä kapeana kaistana Bergenin keskustasta talojen ja metsän läpi Fløyenin rinnettä ylös. Rata avattiin tammikuussa 1918, se on kahdeksansataaneljäkymmentäkahdeksan metriä pitkä ja nousee kolmesataakaksi metriä. Radalla kulkee kaksi vaunua, punainen Rødhette eli Punahilkka ja sininen Blåmann, ja kumpaankin mahtuu satakaksikymmentä matkustajaa. Nykyiset vaunut ovat radan viides sukupolvi, ja ne otettiin käyttöön vuonna 2022. Rata on yksi Norjan suosituimmista nähtävyyksistä, ja vuonna 2018 sillä tehtiin yli kaksi miljoonaa matkaa.",
-   "lyhyt": "Köysirata Fløibanenin nykyiset vaunut rakennettiin Sveitsissä. Ne suunnitteli erityisesti tätä rataa varten teollinen muotoilija Espen Thorup, ja edeltäjiensä tavoin niissä on suuret ikkunat ja lasikatto, joten matkustajat näkevät vuoren rinteen ja kaupungin.",
+   "teksti": "Köysirata Fløibanen piirtyy ylhäältä kapeana kaistana Bergenin keskustasta talojen ja metsän läpi Fløyenin rinnettä ylös. Rata avattiin tammikuussa 1918, se on kahdeksansataaneljäkymmentäkahdeksan metriä pitkä ja nousee kolmesataakaksi metriä. Radalla kulkee kaksi vaunua, punainen Rødhette eli Punahilkka ja sininen Blåmann, ja kumpaankin mahtuu satakaksikymmentä matkustajaa. Nykyiset vaunut ovat radan viides sukupolvi, ja ne otettiin käyttöön vuonna 2022. Rata on yksi Norjan suosituimmista nähtävyyksistä, ja sillä tehdään lähes kaksi miljoonaa matkaa vuodessa.",
+   "lyhyt": "Köysirata Fløibanenia käyttivät sotavuosina saksalaiset miehitysjoukot tavaran ja väen kuljettamiseen. Miehityksen päätyttyä vaunut maalattiin toinen punaiseksi ja toinen siniseksi, ja yhdessä valkoisen ala-aseman kanssa ne muodostavat Norjan lipun värit. Samoja värejä on käytetty siitä asti.",
    "syventava": "Miksi vaunu on nimeltään Punahilkka?",
    "kysymykset": [
     "Kenen idea oli rakentaa rata vuorelle?",
@@ -174,11 +182,15 @@
      "url": "https://v3.floyen.no/en/floibanen/history"
     },
     {
-     "vaite": "Fløibanen on yksi Norjan vierailluimmista nähtävyyksistä; vuonna 2018 matkoja tehtiin 2 023 786.",
+     "vaite": "Fløibanen on yksi Norjan vierailluimmista nähtävyyksistä ja kuljettaa lähes kaksi miljoonaa matkustajaa vuodessa; aiempi tekstissä ollut luku oli vuodelta 2018, joten se vaihdettiin vuositasoon.",
      "url": "https://en.wikipedia.org/wiki/Fl%C3%B8ibanen"
     },
     {
      "vaite": "Uusissa vaunuissa on edeltäjien tavoin suuret ikkunat ja lasikatto.",
+     "url": "https://en.wikipedia.org/wiki/Fl%C3%B8ibanen"
+    },
+    {
+     "vaite": "Saksalaiset miehitysjoukot käyttivät rataa toisen maailmansodan aikana tarvikkeiden ja henkilöstön kuljetukseen; miehityksen päätyttyä vaunut maalattiin punaiseksi ja siniseksi, ja yhdessä valkoisen ala-aseman kanssa värit muodostavat Norjan lipun. Samoja värejä on käytetty siitä asti.",
      "url": "https://en.wikipedia.org/wiki/Fl%C3%B8ibanen"
     }
    ]
@@ -190,7 +202,7 @@
    "luokka": "kirkko",
    "koko_m": 60,
    "teksti": "Mariankirkko on Bergenin vanhin yhä pystyssä oleva rakennus, ja ylhäältä sen tunnistaa Bryggenin takaa kahdesta korkeasta, neliskulmaisesta tornista. Romaaninen kivibasilika vaurioitui kaupungin suurpaloissa vuosina 1198 ja 1248, mutta sitä on käytetty kirkkona keskeytyksettä keskiajalta asti. Hansakaudella kirkko oli saksalaisten kauppiaiden kirkko, ja bergeniläiset kutsuvat sitä yhä usein saksalaisten kirkoksi. Kirkon sisällä on 1600-luvulla tehty barokkityylinen saarnatuoli. Kirkkoa kunnostettiin viisi vuotta, ja se avattiin uudelleen vuonna 2015.",
-   "lyhyt": "Mariankirkko on ainoa norjalainen seurakuntakirkko, jonka länsipäässä kohoaa kaksi tornia. Kirkkoa alettiin rakentaa 1130- tai 1140-luvulla, ja sen arvellaan valmistuneen noin vuonna 1180. Viimeinen saksankielinen jumalanpalvelus pidettiin siellä vuonna 1868.",
+   "lyhyt": "Mariankirkko säilyi Bergenin muiden keskiaikaisten kirkkojen rapistuessa, ja syy oli raha. Saksalaiset kauppiaat ottivat kirkon haltuunsa vuonna 1408 ja sisustivat sen rikkaasti. Pääalttarin kaappi tuotiin Lyypekistä 1400-luvulla, ja sitä pidetään maan hienoimpana keskiaikaisena alttarikaappina.",
    "syventava": "Miksi kirkkoa kutsutaan saksalaisten kirkoksi?",
    "kysymykset": [
     "Mikä kirkossa muuttui uskonpuhdistuksen jälkeen?",
@@ -222,12 +234,12 @@
      "url": "https://www.visitnorway.com/listings/st-marys-church/15411/"
     },
     {
-     "vaite": "Mariakirken on Norjan ainoa seurakuntakirkko, jonka edessä on kaksi länsitornia.",
+     "vaite": "Kahden länsitornin julkisivu on Norjassa ainutlaatuinen; kirkko on vuolukivestä; viimeinen saksankielinen jumalanpalvelus pidettiin 1868; 1400-luvun alttarikaappi tuotiin Lyypekistä ja sitä pidetään Norjan hienoimpana keskiaikaisena alttarikaappina.",
      "url": "https://snl.no/Mariakirken_-_Bergen"
     },
     {
-     "vaite": "Viimeinen saksankielinen jumalanpalvelus pidettiin vuonna 1868.",
-     "url": "https://snl.no/Mariakirken_-_Bergen"
+     "vaite": "Saksalaiset kauppiaat ottivat kirkon haltuunsa vuonna 1408, ja koska se kuului vauraille saksalaisille, se koristeltiin rikkaasti eikä rapistunut kuten kaupungin muut kirkot; saksalainen seurakunta jatkui vuoteen 1874.",
+     "url": "https://en.wikipedia.org/wiki/St_Mary%27s_Church,_Bergen"
     }
    ]
   },
@@ -238,7 +250,7 @@
    "luokka": "kirkko",
    "koko_m": 70,
    "teksti": "Bergenin tuomiokirkko erottuu ylhäältä keskustan kortteleista länsipään tornin ansiosta, joka sai nykyisen muotonsa 1600-luvun tulipalojen jälkeen. Kirkon alku on noin vuonna 1150 rakennettu pieni Pyhän Olavin kivikirkko, jonka ympärille fransiskaanit rakensivat luostarinsa 1200-luvulla. Ulkoseinässä on yhä kiinni tykinkuula vuoden 1665 meritaistelusta, jossa Englannin ja Alankomaiden laivastot ottivat yhteen kaupungin satamassa. Isoisäsi näki kuulan vuonna 1873 ja kertoi oppaalle palvelleensa itse laivastossa, mutta vakuutti, että hänellä oli mukanaan vain lyijykynä.",
-   "lyhyt": "Bergenin tuomiokirkko oli vuonna 1814 vaalikirkko, yksi yli kolmestasadasta äänestyspaikasta, kun Norjassa valittiin edustajia Eidsvollin kansalliskokoukseen. Arkkitehdit Christian Christie ja Peter Andreas Blix poistivat 1880-luvulla kirkon rokokoosisustuksen ja palauttivat sisätiloille keskiaikaisen asun.",
+   "lyhyt": "Bergenin tuomiokirkko mainitaan ensimmäisen kerran kirjallisissa lähteissä vuonna 1181. Silloin talonpoikien päällikkö Jon Kutiza kävi Bergenissä kuningas Sverren kimppuun, ja osa Sverren miehistä pakeni kirkon suojaan. Kirkon ensimmäiset urut hankittiin vuonna 1549, ja nykyinen soitin on järjestyksessä viides.",
    "syventava": "Miksi satamassa taisteltiin vuonna 1665?",
    "kysymykset": [
     "Kuka oli Pyhä Olavi, jolle kirkko on omistettu?",
@@ -266,11 +278,15 @@
      "url": "kaanon:isoisan-paivakirja"
     },
     {
-     "vaite": "Vuonna 1814 kirkko oli vaalikirkko ja yli kolmensadan muun seurakuntakirkon tavoin äänestyspaikka kansalliskokouksen vaaleissa.",
+     "vaite": "1880-luvun korjauksen johtivat Christian Christie ja Peter Andreas Blix; rokokoosisustus poistettiin ja sisätilat palautettiin keskiaikaiseen asuun.",
      "url": "https://en.wikipedia.org/wiki/Bergen_Cathedral"
     },
     {
-     "vaite": "1880-luvun korjauksen johtivat Christian Christie ja Peter Andreas Blix; rokokoosisustus poistettiin ja sisätilat palautettiin keskiaikaiseen asuun.",
+     "vaite": "Vanhin kirjallinen maininta kirkosta on vuodelta 1181, jolloin talonpoikien päällikkö Jon Kutiza hyökkäsi kuningas Sverren kimppuun Bergenissä ja Sverren miehiä pakeni silloin Olavinkirkoksi kutsuttuun kirkkoon.",
+     "url": "https://en.wikipedia.org/wiki/Bergen_Cathedral"
+    },
+    {
+     "vaite": "Ensimmäiset tunnetut urut asennettiin 1549, ja nykyiset vuoden 1997 Rieger-urut ovat kirkon viidennet.",
      "url": "https://en.wikipedia.org/wiki/Bergen_Cathedral"
     }
    ]
@@ -282,7 +298,7 @@
    "luokka": "kirkko",
    "koko_m": 30,
    "teksti": "Fantoftin sauvakirkko kohoaa Bergenin eteläosassa metsän keskellä, ja ylhäältä sen porrastetuilla katoilla erottuvat lohikäärmeenpäät. Alkuperäinen kirkko rakennettiin 1100-luvulla Sognissa sijaitsevaan Fortuniin, ja vuonna 1883 konsuli Fredrik Georg Gade siirrätti sen Fantoftin tilalleen perheensä kappeliksi. Kesäkuussa 1992 kirkko tuhoutui tuhopoltossa, joka aloitti norjalaisen black metal -piirin kirkkopolttojen sarjan. Uusi, alkuperäisen mukaan rakennettu kirkko valmistui vuonna 1997. Vanhasta kirkosta ovat jäljellä vain alttarin risti ja seinään upotettu toivekivi.",
-   "lyhyt": "Fantoftin sauvakirkko sai lohikäärmeenpäänsä ja veistetyt porttinsa Borgundin sauvakirkon mallista, kun konsuli Gaden puusepät pystyttivät sen uudelleen. Vuodesta 1997 lähtien kirkkoa on ympäröinyt aita, jonka tehtävä on suojata sitä uusilta tuhopoltoilta.",
+   "lyhyt": "Fantoftin sauvakirkon kaltaisia puukirkkoja rakennettiin Norjassa keskiajalla arvioiden mukaan tuhat tai jopa kaksi tuhatta. Niistä on jäljellä kaksikymmentäkahdeksan, eikä Fantoft ole niiden joukossa, koska alkuperäinen tuhoutui. Vuodesta 1997 kirkkoa on ympäröinyt aita suojaamassa sitä uusilta tuhopoltoilta.",
    "syventava": "Kuka siirsi kirkon Bergeniin?",
    "kysymykset": [
     "Mistä sauvakirkko on saanut nimensä?",
@@ -310,8 +326,12 @@
      "url": "https://en.wikipedia.org/wiki/Fantoft_Stave_Church"
     },
     {
-     "vaite": "Gaden puusepät lainasivat koristeelliset yksityiskohdat, lohikäärmepäädyt ja veistetyt portaalit, Borgundin sauvakirkosta.",
-     "url": "https://thehiddennorth.com/how-to-get-to-fantoft-stave-church/"
+     "vaite": "Norjassa rakennettiin keskiajalla arviolta tuhat, joidenkin arvioiden mukaan jopa kaksi tuhatta sauvakirkkoa; niistä on pystyssä 28 historiallista sauvakirkkoa, joihin Fantoft ei kuulu, koska nykyinen rakennus on jälleenrakennus.",
+     "url": "https://en.wikipedia.org/wiki/Stave_church"
+    },
+    {
+     "vaite": "Alkuperäinen kirkko oli purkutuomion alla, koska Fortuniin rakennettiin uusi kirkko vuonna 1879; Gade osti sen ja siirsi osina Fanaan 1883. Väite Borgundin sauvakirkosta otettuna mallina löytyi vain matkailusivuilta, joten se on poistettu.",
+     "url": "https://en.wikipedia.org/wiki/Fantoft_Stave_Church"
     },
     {
      "vaite": "Vuodesta 1997 kirkkoa on suojannut aita tuhopolttojen varalta.",
@@ -326,7 +346,7 @@
    "luokka": "rakennus",
    "koko_m": 300,
    "teksti": "Säveltäjä Edvard Griegin koti Troldhaugen on puuhuvila Nordåsvannet-järven rannalla Bergenin eteläosassa, ja nimi tarkoittaa peikkokukkulaa. Edvard ja hänen vaimonsa Nina asuivat talossa yli kaksikymmentä vuotta, ja Grieg sävelsi pienessä majassa aivan järven rannalla. Kun Grieg kuoli vuonna 1907, hänen tuhkauurninsa muurattiin järveen viettävän kallion kylkeen. Ninan tuhka laskettiin samaan kalliohautaan vuonna 1936. Talon lähellä on matala, nurmikattoinen Troldsalen-konserttisali, jossa on kaksisataa paikkaa ja jossa järjestetään konsertteja kesällä ja syksyllä.",
-   "lyhyt": "Säveltäjä Griegin kodin Troldhaugenin suunnitteli hänen serkkunsa, arkkitehti Schak Bull, joka suunnitteli myös kalliohaudan, jonka kiveen on kaiverrettu Griegin nimi tyylitellyin riimukirjaimin. Talo avattiin museoksi vuonna 1928, ja nykyään huvila, säveltäjänmaja ja hauta muodostavat Edvard Griegin museon.",
+   "lyhyt": "Säveltäjä Griegin kodin Troldhaugenin säveltäjänmajan pöydälle jäi lappu aina, kun Grieg lähti matkalle. Siinä hän pyysi mahdollisia murtautujia jättämään nuotit rauhaan, koska niistä ei olisi kenellekään muulle hyötyä. Griegin onnenkalut, sammakko, peikko ja possu, kulkivat matkoilla hänen mukanaan.",
    "syventava": "Miksi Grieg haudattiin kallioon?",
    "kysymykset": [
     "Mitä Grieg sävelsi järven rannan majassa?",
@@ -362,8 +382,16 @@
      "url": "https://en.wikipedia.org/wiki/Troldhaugen"
     },
     {
-     "vaite": "Kokonaisuuteen kuuluvat Edvard Griegin museo, huvila, säveltäjänmaja ja hauta.",
-     "url": "https://en.wikipedia.org/wiki/Troldhaugen"
+     "vaite": "Nykytila 7.10.2026: Griegin huvila on ollut suljettuna perusteelliseen kunnostukseen 15.8.2025 lähtien ja avautuu uudelleen kesällä 2027; puisto, säveltäjänmaja, hauta, kahvila ja päivittäiset konsertit ovat avoinna. Siksi väite 'nykyään huvila, säveltäjänmaja ja hauta muodostavat museon' on poistettu.",
+     "url": "https://www.kodebergen.no/en/about-us/visit-troldhaugen-this-summer"
+    },
+    {
+     "vaite": "Grieg jätti aina lähtiessään säveltäjänmajaan lapun mahdollisille murtautujille ja pyysi heitä jättämään nuotit rauhaan, koska niistä ei olisi kenellekään muulle hyötyä.",
+     "url": "https://csmonitor.com/2000/1031/p21s1.html"
+    },
+    {
+     "vaite": "Griegin onnenkalut, sammakko, peikko ja possu, kulkivat kertoman mukaan hänen mukanaan matkoilla; museo avautui 1928 Nina Griegin suureksi iloksi.",
+     "url": "https://www.kodebergen.no/en/collections/the-collection-at-troldhaugen"
     },
     {
      "vaite": "Talo on tyypillinen 1800-luvun puuhuvila Nordåsvannetin rannalla.",
@@ -413,7 +441,7 @@
    "kuvaus": "Bergenin korkein kaupunkivuori",
    "luokka": "muu",
    "koko_m": 2000,
-   "teksti": "Bergenin korkein kaupunkivuori, Ulriken, kohoaa kuusisataaneljäkymmentäkolme metriä merenpinnan yläpuolelle, ja ylhäältä sen huipun tunnistaa televisiomastosta. Se on korkein niistä seitsemästä vuoresta, jotka ympäröivät kaupunkia. Huipulle nousee köysirata Ulriksbanen, jonka rakensi sveitsiläinen yhtiö ja joka avattiin vuonna 1961. Huipulla on ravintola, ja sieltä lähtee Vidden-reitti avoimen ylängön poikki Fløyenille. Vaellus kestää neljästä kuuteen tuntia, eikä se vaadi kiipeilytaitoja, mutta sää ja tuuli voivat ylängöllä muuttua hyvin nopeasti.",
+   "teksti": "Bergenin korkein kaupunkivuori, Ulriken, kohoaa kuusisataaneljäkymmentäkolme metriä merenpinnan yläpuolelle, ja ylhäältä sen huipun tunnistaa televisiomastosta. Se on korkein niistä seitsemästä vuoresta, jotka ympäröivät kaupunkia. Huipulle nousee köysirata Ulriksbanen, jonka sveitsiläinen yhtiö rakensi vuonna 1961 ja jonka vaunut uusittiin vuonna 2021. Huipulla on ravintola, ja sieltä lähtee Vidden-reitti avoimen ylängön poikki Fløyenille. Vaellus kestää neljästä kuuteen tuntia, eikä se vaadi kiipeilytaitoja, mutta sää ja tuuli voivat ylängöllä muuttua hyvin nopeasti.",
    "lyhyt": null,
    "syventava": "Mihin Vidden-reitti päättyy?",
    "kysymykset": [
@@ -430,8 +458,12 @@
      "url": "https://en.wikipedia.org/wiki/Ulriken"
     },
     {
-     "vaite": "Ulriksbanen avattiin 1961, rakentajana sveitsiläinen yhtiö; yläasema televisiomaston luona, huipulla ravintola.",
+     "vaite": "Ulriksbanen avattiin 1961, rakentajana sveitsiläinen yhtiö; lokakuussa 2021 avattiin uusi vaunu ja laajennettu Skyskraperen-ravintola nimellä Ulriken643.",
      "url": "https://en.wikipedia.org/wiki/Ulriksbanen"
+    },
+    {
+     "vaite": "Huipulla on televisiomasto ja ravintola.",
+     "url": "https://en.wikipedia.org/wiki/Ulriken"
     },
     {
      "vaite": "Vidden-reitti Ulrikenilta Fløyenille kestää neljästä kuuteen tuntia, ei vaadi kiipeilyä, sää voi muuttua nopeasti.",
@@ -445,7 +477,7 @@
    "kuvaus": "Kirkko Nordnesin niemellä",
    "luokka": "kirkko",
    "koko_m": 60,
-   "teksti": "Uusi kirkko, Nykirken, on valkoinen kivinen ristikirkko Nordnesin niemellä Vågen-lahden länsirannalla, vinosti vastapäätä Bergenhusin linnaketta. Nimensä kirkko sai siitä, että se oli aikanaan kaupungin seurakuntakirkoista nuorin. Ensimmäinen kirkko rakennettiin vuonna 1621 arkkipiispan 1300-luvulla rakennetun kivitalon raunioille, mutta se paloi jo kahden vuoden kuluttua, ja nykyinen rakennus on 1760-luvulta. Huhtikuussa 1944 satamassa räjähtänyt laiva sytytti kirkon jälleen tuleen. Seurakunta toivoi uutta kirkkoa keskeisemmälle paikalle, mutta viranomaiset vaativat vanhan korjaamista, ja kirkko vihittiin uudelleen vuonna 1956.",
+   "teksti": "Uusi kirkko, Nykirken, on valkoinen kivinen ristikirkko Nordnesin niemellä Vågen-lahden länsirannalla, vinosti vastapäätä Bergenhusin linnaketta. Nimensä kirkko sai siitä, että se oli aikanaan kaupungin seurakuntakirkoista nuorin. Ensimmäinen kirkko rakennettiin vuonna 1621 arkkipiispan 1300-luvulla rakennetun kivitalon raunioille, mutta se paloi jo kahden vuoden kuluttua, ja nykyinen rakennus on 1760-luvulta. Huhtikuussa 1944 satamassa räjähtänyt laiva sytytti kirkon jälleen tuleen, ja seurakunta toivoi uutta kirkkoa keskeisemmälle paikalle, mutta viranomaiset vaativat vanhan korjaamista. Kirkko vihittiin uudelleen vuonna 1956, ja vuodesta 2002 seurakunta on kutsunut sitä lasten tuomiokirkoksi.",
    "lyhyt": null,
    "syventava": "Mikä laiva räjähti satamassa 1944?",
    "kysymykset": [
@@ -472,6 +504,10 @@
     {
      "vaite": "Ensimmäinen kirkko rakennettiin 1621 Strandenin seurakuntakirkoksi, ja se sai nimen Nykirken, koska se oli kaupungin seurakuntakirkoista nuorin.",
      "url": "https://lokalhistoriewiki.no/wiki/Nykirken_i_Bergen"
+    },
+    {
+     "vaite": "Nykirken on yhä säännöllisessä käytössä, ja vuodesta 2002 sitä on painotettu lasten kirkkona; seurakunta kutsuu sitä lasten tuomiokirkoksi.",
+     "url": "https://en.wikipedia.org/wiki/Nykirken"
     }
    ]
   }

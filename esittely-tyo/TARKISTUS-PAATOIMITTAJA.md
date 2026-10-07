@@ -650,3 +650,230 @@ tilalle löytyi vahvistettuja tarinoita.
 - **Yliopiston keskuskirjaston käsikirjoitukset.** Useat lähteet sanovat, että palossa tuhoutui myös Eminescun, Maiorescun ja Caragialen käsikirjoituksia, mutta en saanut noita sivuja auki (HTTP 429), joten nimet jäivät pois. Jos Päätoimittaja haluaa nimet mukaan, ne on helppo lisätä yhdellä vahvistuksella.
 - **Puiston nimenmuutosvuosi.** Romaniankieliset lähteet eivät sano, milloin "Parcul I. V. Stalin" palasi Herăstrăuksi; englanninkielinen Wikipedia sanoo 1956. Teksti ei enää lukitse nimenmuutoksen vuotta.
 - **CEC-palatsin peruskiven päivä.** Englanninkielinen Wikipedia sanoo 8.6.1897, romanialainen uutislähde 8.7.1897 kuningas Kaarle ensimmäisen ja kuningatar Elisabetin läsnä ollessa. Teksti ei mainitse päivää, joten ristiriita ei vaikuta mihinkään.
+
+# Toimituksellinen tarkistus: Barcelona ja Bergen
+
+Tarkistaja: toimituksellinen passi 7.10.2026. Verkko auki, kaikki alla mainitut
+lähteet avattu WebFetchillä (tai WebSearchillä vahvistettu ja sen jälkeen avattu).
+
+## Barcelona
+
+Kierrosjärjestys luettiin läpi kuin pelaaja kuulee sen: Palau de la Música, Arc de
+Triomf, katedraali, La Rambla, Casa Batlló, Casa Milà, Sagrada Família, Güellin puisto.
+Viidestä kahdeksasta kierrosversiosta löytyi löydöstyyppi 2 (hallintoa tai pelkkiä
+tekijätietoja) ja kolmessa myös päällekkäisyys oman `teksti`-kentän kanssa.
+
+### Sagrada Família — kenttä `lyhyt`
+- **Vanha:** "Pyhän perheen kirkon vihki käyttöön paavi Benedictus kuudestoista vuonna 2010, ja samalla hän julisti sen basilikaksi. Gaudín kuollessa rakennuksesta oli valmiina alle neljännes. Keskitorni on nyt valmis, mutta pääjulkisivu, Kunnian julkisivu, on yhä rakenteilla."
+- **Uusi:** "Pyhän perheen kirkon keskitornin Gaudí mitoitti tarkoituksella matalammaksi kuin Montjuïcin kukkula, sillä ihmiskäden työ ei hänen mielestään saanut nousta Jumalan luoman yli. Kesäkuussa 2026 paavi Leo neljästoista vihki valmistuneen tornin Gaudín kuoleman satavuotispäivänä. Kirkon pääjulkisivu on yhä rakenteilla."
+- **Syy:** Löydöstyyppi 2 ja 5. Vanha kierrosversio oli kirkollista hallintoa (vihkiminen, basilikaksi julistaminen) eikä jäänyt mieleen. Lisäksi aineistosta puuttui kaupungin tuorein tapahtuma: paavi vihki valmistuneen keskitornin 10.6.2026, tarkalleen sata vuotta Gaudín kuolemasta. Uusi versio kertoo yllättävän syyn tornin korkeudelle (ja sitoo sen Montjuïciin, joka on sama kaupungin toinen kohde) sekä nykytilan. Tornin korkeus ja helmikuun 2026 risti jäävät `teksti`-kenttään, joten päällekkäisyyttä ei tule.
+- **Lähde:** https://en.wikipedia.org/wiki/Sagrada_Fam%C3%ADlia ja https://www.catalannews.com/popes-visit/item/pope-leo-xiv-popemobil-barcelona-june-10-2026
+
+### Sagrada Família — kenttä `lahteet`
+- **Vanha:** "Benedictus XVI vihki kirkon ja julisti sen basilikaksi 7.11.2010."
+- **Uusi:** kaksi merkintää: Gaudín mitoitusperuste (Montjuïc) ja paavin vihkiminen 10.6.2026.
+- **Syy:** Löydöstyyppi 3. Lähteet vastaavat nyt tekstissä esitettyjä väitteitä.
+- **Lähde:** kuten yllä.
+
+### Casa Batlló — kenttä `lyhyt`
+- **Vanha:** "Luutaloksi kutsuttu Casa Batlló rakennettiin alun perin jo vuonna 1877, ja vuonna 1904 Gaudí ryhtyi muokkaamaan sitä uuteen asuun. Suoria linjoja talossa ei ole juuri lainkaan. Nykyään talo on museo ja osa Unescon maailmanperintöä."
+- **Uusi:** "Luutaloksi kutsuttu Casa Batlló oli vuonna 1906 ehdolla Barcelonan kaupungin vuotuiseksi parhaaksi rakennukseksi, mutta palkinto meni toiselle talolle. Omistaja oli ensin halunnut purkaa paikalla olleen vanhan talon kokonaan, ja Gaudí sai hänet tyytymään muutostöihin. Nykyään talossa on museo."
+- **Syy:** Löydöstyyppi 2 ja 1. Vanha versio oli kolme hallinnollista perustietoa peräkkäin (rakennusvuosi, muutosvuosi, Unesco), eikä siinä ollut mitään muistiin jäävää. Lisäksi "luutalo" ja Gaudín muutostyö kerrottiin jo `teksti`-kentässä, ja Unesco-maininta toistui Casa Milàn kierrosversiossa. Uusi versio kertoo ristiriidan (kilpailussa häviäminen) ja ihmisen päätöksen (purkaminen vaihtui muutostyöhön). Samalla poistui edellisen tarkistajan epävarmaksi merkitsemä "suoria linjoja ei ole juuri lainkaan", jolle lähde puhui vain julkisivusta.
+- **Lähde:** https://en.wikipedia.org/wiki/Casa_Batll%C3%B3
+
+### Güellin puisto — kenttä `lyhyt`
+- **Vanha:** "… Pylväshallin katon mosaiikit teki Gaudín työtoveri Josep Maria Jujol. Gaudín entinen koti puistossa on nykyään museo."
+- **Uusi:** "… Se ei ole pelkkä koriste, sillä eläimen suu on maanalaisen vesisäiliön ylivuotoaukko. Gaudín entinen koti puistossa on nykyään museo."
+- **Syy:** Löydöstyyppi 2. Keskimmäinen virke oli pelkkä tekijätieto. Tilalle tuli lähteen vahvistama yllätys: portaikon lohikäärme on vesijärjestelmän osa, ja sen suu on pylväshallin alla olevan säiliön ylivuotoaukko. Ensimmäinen virke (mosaiikkilisko) ja viimeinen (talomuseo) jäivät ennalleen.
+- **Lähde:** https://parkguell.barcelona/en/park-guell/emblematic-features/hypostyle-room
+
+### Casa Milà — kenttä `lyhyt`
+- **Vanha:** "Kivilouhokseksi kutsutun Casa Milàn varsinainen omistaja oli Roser Segimon, joka asui talossa kuolemaansa saakka vuoteen 1964. Vuonna 1984 talo liitettiin Unescon maailmanperintöluetteloon, ja nykyään siellä toimii näyttelyitä ja vierailuja järjestävä säätiö."
+- **Uusi:** "Asuintalo Casa Milàn emäntä Roser Segimon valitti Gaudílle, ettei talossa ollut yhtään suoraa seinää, jota vasten hänen Steinway-pianonsa olisi mahtunut. Gaudí vastasi, että soittakoon sitten viulua. Arkkitehdin kuoltua Segimon hävitti talosta suurimman osan Gaudín suunnittelemista huonekaluista."
+- **Syy:** Löydöstyyppi 3 JA 2. Faktavirhe omistussuhteessa: Segimon ei ollut talon "varsinainen omistaja" vaan yhteisomistaja miehensä Pere Milàn kanssa, ja Milàn kuoltua 1940 hän **myi talon vuonna 1946** Josep Ballvé i Pelliséelle — hän vain asui pääkerroksessa kuolemaansa 1964 asti. Lisäksi vanha versio oli pelkkää hallintoa (omistus, Unesco-vuosi, säätiö) ja "kivilouhos" toistui sekä `teksti`-kentästä että `syventava`-kentästä. Uusi versio on dokumentoitu kohtaus talon emännän ja arkkitehdin välillä.
+- **Lähde:** https://en.wikipedia.org/wiki/Casa_Mil%C3%A0
+
+### Casa Milà — kenttä `lahteet`
+- **Vanha:** "Roser Segimon omisti talon ja asui siinä kuolemaansa 1964 asti." (lonelyplanet.com)
+- **Uusi:** kaksi merkintää: pianokohtaus ja huonekalujen hävittäminen sekä erillinen tarkennus omistussuhteesta (yhteisomistus, myynti 1946, asuminen 1964 asti).
+- **Syy:** Löydöstyyppi 3. Vanha lähdemerkintä toisti saman virheellisen omistusväitteen.
+- **Lähde:** https://en.wikipedia.org/wiki/Casa_Mil%C3%A0
+
+### La Rambla — kenttä `lyhyt`
+- **Vanha:** "… Perinne alkoi, kun läheinen sanomalehti ripusti otteluiden tulokset ikkunaansa."
+- **Uusi:** "… Perinne alkoi, kun viereisen urheilulehden toimituksen eteen kirjoitettiin päivän tulokset liitutaululle."
+- **Syy:** Löydöstyyppi 3 (vivahde). Tulokset eivät olleet lehden ikkunassa vaan ne kirjoitettiin liitutaululle toimituksen eteen kadulle; kyse oli nimenomaan urheilulehdestä nimeltä La Rambla.
+- **Lähde:** https://bid.barcelonaturisme.com/wv3/en/page/1213/canaletes-fountain.html
+
+### La Rambla — kenttä `lahteet`
+- **Vanha:** Canaletesin kaivon legendan url oli `https://en.wikipedia.com/wiki/Ramblas` (rikkinäinen: `.com`, ei `.org`, eikä sellaista artikkelia ole).
+- **Uusi:** `https://en.wikipedia.org/wiki/Font_de_Canaletes`, joka vahvistaa legendan sanatarkasti; lisäksi kannattajaperinteen liitutaulu sai oman lähteen (barcelonaturisme) ja en.wikipedia jäi vahvistamaan vain 1930-luvun alun.
+- **Syy:** Löydöstyyppi 3. Vanha url ei auennut, eikä en.wikipedian Font de Canaletes -artikkeli tue lehti-väitettä ollenkaan.
+- **Lähde:** https://en.wikipedia.org/wiki/Font_de_Canaletes ja https://bid.barcelonaturisme.com/wv3/en/page/1213/canaletes-fountain.html
+
+### Palau de la Música Catalana — kenttä `teksti`
+- **Vanha:** "Se on Euroopan ainoa konserttisali, jota päivisin valaisee pelkkä luonnonvalo, ja vuonna 1997 siitä tuli maailman ainoa Unescon maailmanperintökohteeksi nimetty konserttisali."
+- **Uusi:** "Päiväsaikaan salia ei tarvitse valaista sähköllä lainkaan, ja vuonna 1997 siitä tuli maailman ainoa Unescon maailmanperintökohteeksi nimetty konserttisali."
+- **Syy:** Löydöstyyppi 3 (superlatiivi). Tämä oli edellisen tarkistajan jättämä epävarmuus, ja se on nyt ratkaistu: Palaun oma sivusto vahvistaa Unesco-superlatiivin sanatarkasti ("the only concert hall in the world to be declared a World Heritage Site"), mutta EI väitettä Euroopan ainoasta luonnonvalolla valaistusta salista. Kyseinen väite löytyy vain matkailusivuilta. Väitteen tarkistuva sisältö (päivisin ei tarvita sähkövaloa) jäi tekstiin; koko Euroopan kattava ainutlaatuisuus poistettiin. Unesco-superlatiivi jäi, koska sillä on ensisijainen lähde.
+- **Lähde:** https://www.palaumusica.cat/en/the-palau-de-la-musica-catalana-the-only-concert-hall-in-the-world-recognised-by-unesco_1653219
+
+### Palau de la Música Catalana — kenttä `lyhyt`
+- **Vanha:** "… Kattoikkunan lasimaalauksen suunnitteli Antoni Rigalt, ja saliin mahtuu noin kaksituhatta kaksisataa kuulijaa."
+- **Uusi:** "… Lavan oikealla puolella seinästä ratsastavat ulos Wagnerin valkyyriat, ja niiden alapuolella on Beethovenin rintakuva."
+- **Syy:** Löydöstyyppi 1 ja 2. Kattoikkuna kerrottiin jo `teksti`-kentässä, ja paikkaluku on tylsä tekninen tieto. Tilalle tuli konkreettinen nähtävä yksityiskohta samasta seinästä, josta muusat jo kertoivat: lavan kaaren oikealla laidalla on Valkyyrioiden ratsastus ja sen alla Beethovenin rintakuva. Muusavirke jäi ennalleen, koska se on hyvä.
+- **Lähde:** https://en.wikipedia.org/wiki/Palau_de_la_M%C3%BAsica_Catalana
+
+### Arc de Triomf — kenttä `lyhyt`
+- **Vanha:** "Riemukaari Arc de Triomf vihittiin toukokuussa 1888. Etupuolen friisin veisti Josep Reynés, ja takapuolen Palkinto-nimisen kivireliefin teki Josep Llimona. Itse maailmannäyttely pidettiin Ciutadellan puistossa, joka sai nykyisen asunsa juuri näyttelyä varten."
+- **Uusi:** "Riemukaari Arc de Triomfin kahteen pylvääseen on veistetty kivisiä lepakoita. Lepakko oli 1200-luvulla Aragonian kuninkaan tunnus ja onnenmerkki, ja se on yhä Valencian kaupungin vaakunassa. Katalonian modernistiset arkkitehdit suosivat tällaisia eläinaiheita rakennustensa koristeissa."
+- **Syy:** Löydöstyyppi 2, ja selvimmin koko kaupungissa: vanha versio oli vihkimispäivä ja kaksi veistäjän nimeä, eli pelkkiä tekijätietoja, eikä siitä jäänyt mieleen mitään. Lisäksi etupuolen friisi kerrottiin jo `teksti`-kentässä (löydöstyyppi 1). Uusi versio on yksityiskohta, jonka voi itse etsiä kaaresta, ja sen selitys. Kaaren vaakunoita ei käytetty, koska ne ovat kohteen `kysymykset`-listalla; FC Barcelonan ensimmäistä vaakunaa (jossa lepakko myös oli) ei käytetty, koska La Ramblan kierrosversio kertoo jo jalkapalloseurasta.
+- **Lähde:** https://en.wikipedia.org/wiki/Arc_de_Triomf ja https://barcelona.de/en/barcelona-arc-de-triomf.html
+
+### La Boqueria — kenttä `teksti`
+- **Vanha:** "Kun peruskivi laskettiin Pyhän Joosefin päivänä vuonna 1840, sen alle kätkettiin kultaa ja kolikoita tuomaan torille vaurautta."
+- **Uusi:** "Peruskivi laskettiin Pyhän Joosefin päivänä vuonna 1840, mutta kauppiaat suojasivat tavaransa säältä omin väliaikaisin katoksin aina metallikaton valmistumiseen asti."
+- **Syy:** Löydöstyyppi 3. Kulta- ja kolikkoväitteelle oli merkitty lähteeksi amicsdelarambla.cat, mutta sivulla ei esiinny sanoja gold, ounce, coins, first stone eikä wealth. Väitettä ei löytynyt myöskään en.wikipediasta, torin omilta sivuilta (boqueria.barcelona), barcelona.comilta eikä beteve.catilta — eli mistään sivusta, jonka sain auki. Vaihdoin sen torin omien sivujen vahvistamaan tietoon: peruskivi 19.3.1840 ja vuoden 1914 metallikatto päätti ajan, jona kauppiaat joutuivat suojaamaan tavaransa väliaikaisin katoksin.
+- **Lähde:** https://www.boqueria.barcelona/history ja https://www.amicsdelarambla.cat/en/turismo-detalle/la-boqueria-market
+
+### Montjuïc — kenttä `teksti`
+- **Vanha:** "Ranskan ja Espanjan välisen sodan sytyttyä Méchain joutui jäämään Barcelonaan."
+- **Uusi:** "Kun Ranska ja Espanja joutuivat sotaan vuonna 1793, linnoitus otettiin sotilaskäyttöön, ja Méchain jatkoi havaintojaan majatalonsa huoneesta."
+- **Syy:** Löydöstyyppi 3 (syy-yhteys ja vivahde). Sota ei ensisijaisesti pitänyt Méchainia Barcelonassa vaan ajoi hänet pois Montjuïcilta: linnoitus tarvittiin sotilaskäyttöön maaliskuussa 1793, eikä hän päässyt sinne enää takaisin, vaan mittasi leveysasteen majatalostaan. Juuri nämä majatalomittaukset erosivat linnan tuloksista ja vaivasivat häntä loppuelämänsä.
+- **Lähde:** https://mathshistory.st-andrews.ac.uk/Biographies/Mechain/
+
+### Casa Vicens — kenttä `teksti`
+- **Vanha:** "Se oli Antoni Gaudín ensimmäinen talo, ja hän suunnitteli sen kolmekymmentäyksivuotiaana pörssimeklari Manel Vicens i Montanerin kesäasunnoksi."
+- **Uusi:** "Se oli Antoni Gaudín ensimmäinen merkittävä talo, ja hän suunnitteli sen pörssimeklari Manel Vicens i Montanerin kesäasunnoksi vasta valmistuneena arkkitehtina."
+- **Syy:** Löydöstyyppi 3. Ikä oli ristiriitainen: englanninkielinen Wikipedia sanoo Gaudín saaneen tilauksen vuonna 1878 ja olleen silloin noin 26-vuotias, kun taas mymodernmet.com sanoo 31-vuotias (eli vuoden 1883 rakennustöiden alku). Koska tarkka ikä riippuu siitä, lasketaanko tilaus vai rakentaminen, ikä on jätetty pois ja tilalle on pantu varmistettu asia: Gaudí valmistui arkkitehdiksi vuonna 1878 ja sai Vicensin tilauksen samana vuonna.
+- **Lähde:** https://en.wikipedia.org/wiki/Casa_Vicens ja https://en.wikipedia.org/wiki/Antoni_Gaud%C3%AD
+
+### Barcelona — tarkistettu, ei muutettu
+- **Avaus** (40 sanaa, alkaa sanalla "Tervetuloa"): kuva on aidosti ilmasta nähtävä (meren ja vuorten väli, kahdeksankulmaisten kortteleiden ruudukko, Sagrada Famílian tornit). Eixamplen korttelit todella ovat kahdeksankulmaisia, koska neliön neljä kulmaa on viistetty. Avauksen "jonka salia valaisee päivisin pelkkä luonnonvalo" ei sisällä superlatiivia, joten se on nyt yhdenmukainen korjatun Palau-tekstin kanssa. Ei muutosta.
+- **Katedraalin** kierrosversio (tanssiva kananmuna, ou com balla) on juuri sellainen tarina, jota löydöstyyppi 2 hakee; jätettiin rauhaan. Keskitornin 70 metriä ja valmistuminen 1913, kolmetoista hanhea ja Eulalian ikä vahvistettiin: https://en.wikipedia.org/wiki/Barcelona_Cathedral
+- **Barcelona-paviljonki:** Kolben veistoksen suomennos oli edellisen tarkistajan epävarmuus. Ratkaistu: en.wikipedia antaa teoksen nimeksi "Alba (Dawn)", eli "Aamunkoitto" on oikea, ja veistos on nimenomaan pienemmässä altaassa, kuten tekstissä sanotaan. Ei muutosta. https://en.wikipedia.org/wiki/Barcelona_Pavilion
+- **Torre Glòries:** nykytila tarkistettu, Mirador ja Saracenon Cloud Cities ovat yhä avoinna (yli 300 000 kävijää vuoteen 2025). Kysymyksen "Kuka on kiivennyt tornin seinää ylös?" oletus on tosi: Alain Robert on kiivennyt tornin useita kertoja, viimeksi poikansa kanssa 2022. https://en.wikipedia.org/wiki/Torre_Gl%C3%B2ries
+- **Casa Milàn katto:** harkittiin, onko "kypärää muistuttavia savupiippuja" ja "piiput näyttävät vartioivan portaiden uloskäyntejä" oikein. On: en.wikipedia kutsuu niitä "six skylights/staircase exits" ja selittää Gimferrerin nimityksen juuri sillä, että piiput näyttävät suojaavan niitä. Ei muutosta.
+- **Palau Güell:** harkittiin kupolin tähtitaivasta. Katalaaninkielinen Wikipedia vahvistaa, että pienet aukot päästävät läpi päivänvalon, joten tekstin väite kestää; englanninkielinen Wikipedia lisää, että iltaisin aukkojen taakse ripustettiin ulkopuolelta lyhtyjä. Koska kyse ei ole virheestä vaan lisätiedosta, teksti jätettiin ennalleen. Rakennusvuodet 1886–1890, kupoli 17,5 metriä ja kaksikymmentä savupiippua vahvistettiin: https://www.lapedrera.com/en/work-antoni-gaudi/palau-guell/ ja https://ca.wikipedia.org/wiki/Palau_G%C3%BCell
+- **Sant Pau -sairaala:** Pau Gil oli Pariisissa asunut katalaanipankkiiri, kuoli 1896, testamentti määräsi perinnön uuden sairaalan rakentamiseen, hoitotoiminta siirtyi pois syksyllä 2009, paviljongit yhdistetään maanalaisin käytävin. Kaikki vahvistui. https://santpaubarcelona.org/en/recinte-modernista/historia/
+- **Güellin puisto:** kuusikymmentä tonttia, vain kaksi taloa, Gaudí muutti 1906 isänsä ja veljentyttärensä kanssa — vahvistettu. https://en.wikipedia.org/wiki/Park_G%C3%BCell
+- **La Rambla:** Mirón mosaiikin vuosi on ristiriitainen (en.wikipedia 1971, paikallinen lähde vihkiminen 23.12.1976). Teksti sanoo "paljastettiin vuonna 1976", mikä vastaa vihkimistä, joten se jätettiin. https://www.amicsdelarambla.cat/en/turismo-detalle/miros-mosaic-at-pla-de-los
+- **Isoisä:** ei mainintaa yhdessäkään kohteessa, koska pohjan merkintä (ihmistorni "Barcelonan laidalla") ei liity mihinkään kohteeseen. Oikea ratkaisu, ei muutosta.
+
+### Barcelona — epävarmuudet Päätoimittajalle
+- La Boquerian kulta ja kolikot peruskiven alla: väite on todellinen ja laajalti toistettu (hakukone löytää sen sanatarkasti), mutta en saanut auki yhtään sivua, jolla se on. Jos Päätoimittaja löytää sille avattavan lähteen, yksityiskohta kannattaa palauttaa — se oli tekstin paras kuva.
+- Palaun luonnonvalosuperlatiivi: poistin sen tekstistä, vaikka pelin aineisto esittää sen. Jos omistaja haluaa aineiston mukaisen muotoilun takaisin, se on Päätoimittajan päätös; väitteen sisältö (ei sähkövaloa päivisin) on joka tapauksessa tallella.
+- Arc de Triomfin lepakon "onnenmerkki" on barcelona.de-sivun sanamuoto ("his lucky charm"); en.wikipedia sanoo vain "emblem". Jos Päätoimittaja haluaa tiukemman muotoilun, "onnenmerkki" voi pudota pois (kierrosversio pysyy silloin 30 sanassa, eli yhä rajoissa).
+- Casa Vicensin "kahden vuoden kunnostuksen jälkeen" nojaa yhä mymodernmet.com-lähteeseen; MoraBanc osti talon 2014 ja museo avattiin marraskuussa 2017, joten kunnostus kesti pikemminkin kaksi–kolme vuotta. Jätin ennalleen, koska väite ei ole väärä.
+
+### Barcelona — koneellinen tarkistus
+`Barcelona: 15 kohdetta, 0 virhettä, 19 huomiota, puhetta 12262 merkkiä`
+Kaikki 18 "ei ala paikan nimellä" -huomiota johtuvat suomenkielisestä etusanasta (ääntämissääntö), ja yhdeksästoista on "avaus puuttuu" (avaus on erillisessä tiedostossa). Huomioiden määrä ei kasvanut: ennen passia nimialkuhuomioita oli samat 18.
+
+## Bergen
+
+Kierrosjärjestys luettiin läpi kuin pelaaja kuulee sen: Bryggen, Bergenhusin linnake,
+Mariankirkko, Fløibanen, Bergenin tuomiokirkko, Fløyen, Fantoftin sauvakirkko, Troldhaugen.
+Kaikki kahdeksan kierrosversiota osuivat löydöstyyppiin 2: ne olivat vuosilukuja, rakennusmääriä,
+Unesco-merkintöjä, tekijätietoja tai reittiohjeita, eikä yhdestäkään jäänyt mieleen tarinaa.
+Lisäksi kaupungista löytyi kolme nykytilavirhettä (löydöstyyppi 5), joista yksi on vakava.
+
+### Troldhaugen — kenttä `lyhyt`
+- **Vanha:** "Säveltäjä Griegin kodin Troldhaugenin suunnitteli hänen serkkunsa, arkkitehti Schak Bull, joka suunnitteli myös kalliohaudan, jonka kiveen on kaiverrettu Griegin nimi tyylitellyin riimukirjaimin. Talo avattiin museoksi vuonna 1928, ja nykyään huvila, säveltäjänmaja ja hauta muodostavat Edvard Griegin museon."
+- **Uusi:** "Säveltäjä Griegin kodin Troldhaugenin säveltäjänmajan pöydälle jäi lappu aina, kun Grieg lähti matkalle. Siinä hän pyysi mahdollisia murtautujia jättämään nuotit rauhaan, koska niistä ei olisi kenellekään muulle hyötyä. Griegin onnenkalut, sammakko, peikko ja possu, kulkivat matkoilla hänen mukanaan."
+- **Syy:** Löydöstyyppi 5 ja 2, ja tämä on passin vakavin löytö. **Griegin huvila on suljettu.** Se sulkeutui 15.8.2025 perusteelliseen kunnostukseen, ja museon oma sivusto kertoo nyt, että se avautuu uudelleen kesällä 2027. Vanha kierrosversio väitti, että "nykyään huvila, säveltäjänmaja ja hauta muodostavat Edvard Griegin museon" — tätä ei voi lukea ääneen pysyvälle äänitteelle. Avoinna ovat puisto, säveltäjänmaja, hauta, kahvila ja päivittäiset konsertit. Koska avautumisajankohta vaihtelee lähteissä (fib.no sanoo kesä 2026, museo itse kesä 2027), kirjoitin kierrosversion niin ettei se vanhene: siinä ei oteta kantaa siihen, mitä on auki. Samalla korjautui löydöstyyppi 2: vanha versio oli pelkkiä tekijätietoja ja museovuosi, nyt siinä on dokumentoitu tarina Griegin lapusta murtautujille sekä hänen onnenkalunsa.
+- **Lähde:** https://www.kodebergen.no/en/about-us/visit-troldhaugen-this-summer , https://csmonitor.com/2000/1031/p21s1.html ja https://www.kodebergen.no/en/collections/the-collection-at-troldhaugen
+
+### Troldhaugen — kenttä `lahteet`
+- **Vanha:** "Kokonaisuuteen kuuluvat Edvard Griegin museo, huvila, säveltäjänmaja ja hauta."
+- **Uusi:** nykytilamerkintä huvilan sulkemisesta ja avautumisesta, lapun lähde ja onnenkalujen lähde.
+- **Syy:** Löydöstyyppi 5. Lähde dokumentoi nyt, miksi väite poistettiin.
+- **Lähde:** kuten yllä.
+
+### Ulriken — kenttä `teksti`
+- **Vanha:** "Huipulle nousee köysirata Ulriksbanen, jonka rakensi sveitsiläinen yhtiö ja joka avattiin vuonna 1961."
+- **Uusi:** "Huipulle nousee köysirata Ulriksbanen, jonka sveitsiläinen yhtiö rakensi vuonna 1961 ja jonka vaunut uusittiin vuonna 2021."
+- **Syy:** Löydöstyyppi 5. Teksti antoi ymmärtää, että huipulle nousee vuoden 1961 köysirata. Todellisuudessa lokakuussa 2021 avattiin uusi vaunu ja laajennettu Skyskraperen-ravintola nimellä Ulriken643. Vanha muotoilu olisi vanhentunut heti.
+- **Lähde:** https://en.wikipedia.org/wiki/Ulriksbanen
+
+### Fløibanen — kenttä `teksti`
+- **Vanha:** "Rata on yksi Norjan suosituimmista nähtävyyksistä, ja vuonna 2018 sillä tehtiin yli kaksi miljoonaa matkaa."
+- **Uusi:** "Rata on yksi Norjan suosituimmista nähtävyyksistä, ja sillä tehdään lähes kaksi miljoonaa matkaa vuodessa."
+- **Syy:** Löydöstyyppi 5. Kahdeksan vuotta vanha kävijäluku vanhenee joka vuosi. Englanninkielinen Wikipedia kertoo nykyään vuositason ("nearly two million passengers annually"), joka ei vanhene samalla tavalla.
+- **Lähde:** https://en.wikipedia.org/wiki/Fl%C3%B8ibanen
+
+### Fløibanen — kenttä `lyhyt`
+- **Vanha:** "Köysirata Fløibanenin nykyiset vaunut rakennettiin Sveitsissä. Ne suunnitteli erityisesti tätä rataa varten teollinen muotoilija Espen Thorup, ja edeltäjiensä tavoin niissä on suuret ikkunat ja lasikatto, joten matkustajat näkevät vuoren rinteen ja kaupungin."
+- **Uusi:** "Köysirata Fløibanenia käyttivät sotavuosina saksalaiset miehitysjoukot tavaran ja väen kuljettamiseen. Miehityksen päätyttyä vaunut maalattiin toinen punaiseksi ja toinen siniseksi, ja yhdessä valkoisen ala-aseman kanssa ne muodostavat Norjan lipun värit. Samoja värejä on käytetty siitä asti."
+- **Syy:** Löydöstyyppi 2. Vanha versio oli valmistusmaa, muotoilijan nimi ja ikkunoiden kuvaus, eli pelkkää teknistä tietoa. Uusi versio kertoo, miksi vaunut ovat juuri punainen ja sininen: miehitysvuosina saksalaiset joukot kuluttivat radan kuljetuksillaan, ja miehityksen päätyttyä vaunut maalattiin niin, että ne yhdessä valkoisen ala-aseman kanssa muodostavat Norjan lipun. Värit näkyvät edelleen kaikille, jotka katsovat rataa. Kierrosversio ei vastaa `syventava`-kenttään ("Miksi vaunu on nimeltään Punahilkka?") eikä kysymykseen Blåmannin nimestä, koska ne koskevat nimiä, ei värejä.
+- **Lähde:** https://en.wikipedia.org/wiki/Fl%C3%B8ibanen
+
+### Bryggen — kenttä `lyhyt`
+- **Vanha:** "Bergenin vanhasta laiturista, Bryggenistä, on säilynyt kuusikymmentäkaksi rakennusta, ja se on ollut Unescon maailmanperintökohde vuodesta 1979. Hansaliitolla oli ulkomailla neljä kontoria, ja Bryggen on niistä ainoa, joka on säilynyt meidän päiviimme."
+- **Uusi:** "Bergenin vanhaa laituria, Bryggeniä, kutsuttiin 1300-luvulta lähtien Tyskebryggeniksi eli saksalaisten laituriksi. Toukokuussa 1945, heti Saksan miehityksen päätyttyä, kaupunginvaltuusto päätti, että virallinen nimi on vastedes pelkkä Bryggen. Hansaliiton neljästä ulkomaisesta kontorista Bryggen on ainoa säilynyt."
+- **Syy:** Löydöstyyppi 2 JA 3. Vanha versio oli rakennusmäärä ja Unesco-vuosi, eli juuri sitä hallinnollista tietoa, jota kierrosversioon ei kuulu. Lisäksi luku kuusikymmentäkaksi ei kestänyt tarkistusta: englanninkielinen Wikipedia ei enää mainitse mitään lukua, ja norjankielinen sanoo 61 suojeltua rakennusta. Luku on siksi poistettu. Tilalle tuli tarina, jonka päivämäärä on tarkistettu: laituria kutsuttiin Tyskebryggeniksi 1300-luvulta lähtien, ja kaupunginvaltuusto päätti 25.5.1945, heti miehityksen päätyttyä, että nimi on vastedes pelkkä Bryggen. Hansaliiton kontorin säilyminen jäi viimeiseksi virkkeeksi, koska se on kohteen ydinasia.
+- **Lähde:** https://no.wikipedia.org/wiki/Bryggen_i_Bergen ja https://www.thelocal.no/20111018/bergen-votes-down-german-wharf-name-change
+
+### Bryggen — kenttä `lahteet`
+- **Vanha:** "Säilyneitä rakennuksia on 62; Unescon maailmanperintöluettelossa vuodesta 1979." (en.wikipedia)
+- **Uusi:** kolme merkintää: Unesco 1979 ja 61 suojeltua rakennusta perusteluna luvun poistolle, nimenmuutos 25.5.1945, ja nimen historia sekä vuoden 2011 ehdotus.
+- **Syy:** Löydöstyyppi 3. Vanha lähde ei enää tue lukua 62.
+- **Lähde:** kuten yllä.
+
+### Bergenhusin linnake — kenttä `lyhyt`
+- **Vanha:** "Bergenhusin linnake menetti 1800-luvulla puolustustehtävänsä, mutta armeija piti sen hallinnollisena tukikohtanaan, ja siellä palvelee yhä noin sataviisikymmentä sotilasta. Rosenkrantzin torni sai nykyisen muotonsa 1560-luvulla, kun lääninherra Erik Rosenkrantz korotti sitä kolmella kerroksella."
+- **Uusi:** "Bergenhusin linnakkeen Rosenkrantzin torni sai 1560-luvulla kolme tehtävää yhtä aikaa, sillä pohjakerrokseen tuli tyrmä, keskikerroksiin lääninherran asunto ja ylimmälle tasolle tykkiasemat. Työn tekivät skotlantilaiset kivenhakkaajat, ja tornin ydin on lähes kolmesataa vuotta vanhempi kuninkaan asuintorni."
+- **Syy:** Löydöstyyppi 2. Vanha versio oli organisaatiomuutos ("menetti puolustustehtävänsä", "hallinnollinen tukikohta"), henkilöstömäärä ja kerrosluku — juuri ohjeen kieltämää hallintoa. Tarkistuksessa selvisi kiinnostavampi ja vahvistettu asia: torni on kolme rakennusta sisäkkäin, sen ydin on 1270-luvun kuninkaallinen asuintorni, ja 1560-luvun laajennuksen teki Erik Rosenkrantzin palveluksessa ollut skotlantilainen kivenhakkaajajoukko. Yhdessä rakennuksessa oli samaan aikaan tyrmä, lääninherran koti ja tykkiasemat.
+- **Lähde:** https://en.wikipedia.org/wiki/Rosenkrantz_Tower
+
+### Mariankirkko — kenttä `lyhyt`
+- **Vanha:** "Mariankirkko on ainoa norjalainen seurakuntakirkko, jonka länsipäässä kohoaa kaksi tornia. Kirkkoa alettiin rakentaa 1130- tai 1140-luvulla, ja sen arvellaan valmistuneen noin vuonna 1180. Viimeinen saksankielinen jumalanpalvelus pidettiin siellä vuonna 1868."
+- **Uusi:** "Mariankirkko säilyi Bergenin muiden keskiaikaisten kirkkojen rapistuessa, ja syy oli raha. Saksalaiset kauppiaat ottivat kirkon haltuunsa vuonna 1408 ja sisustivat sen rikkaasti. Pääalttarin kaappi tuotiin Lyypekistä 1400-luvulla, ja sitä pidetään maan hienoimpana keskiaikaisena alttarikaappina."
+- **Syy:** Löydöstyyppi 1, 2 ja 7. Kaksi tornia kerrottiin jo `teksti`-kentässä ("ylhäältä sen tunnistaa … kahdesta korkeasta, neliskulmaisesta tornista"), ja mikä pahempaa, kierrosversio vastasi kohteen omaan kysymykseen "Miksi kirkon länsipäässä on kaksi tornia?". Rakennusvuodet olivat pelkkää hallintoa. Tilalle tuli syy-yhteys, joka on tarina: kirkko säilyi, koska se kuului rikkaille saksalaisille kauppiaille, jotka ottivat sen haltuunsa vuonna 1408 ja koristelivat sen, kun kaupungin muut keskiaikaiset kirkot rapistuivat. Lisäksi yksi konkreettinen esine, Lyypekistä tuotu alttarikaappi, joka herättää uteliaisuuden kohteen kysymykseen "Mitä keskiaikaisessa alttarikaapissa kuvataan?" vastaamatta siihen.
+- **Lähde:** https://en.wikipedia.org/wiki/St_Mary%27s_Church,_Bergen ja https://snl.no/Mariakirken_-_Bergen
+
+### Bergenin tuomiokirkko — kenttä `lyhyt`
+- **Vanha:** "Bergenin tuomiokirkko oli vuonna 1814 vaalikirkko, yksi yli kolmestasadasta äänestyspaikasta, kun Norjassa valittiin edustajia Eidsvollin kansalliskokoukseen. Arkkitehdit Christian Christie ja Peter Andreas Blix poistivat 1880-luvulla kirkon rokokoosisustuksen ja palauttivat sisätiloille keskiaikaisen asun."
+- **Uusi:** "Bergenin tuomiokirkko mainitaan ensimmäisen kerran kirjallisissa lähteissä vuonna 1181. Silloin talonpoikien päällikkö Jon Kutiza kävi Bergenissä kuningas Sverren kimppuun, ja osa Sverren miehistä pakeni kirkon suojaan. Kirkon ensimmäiset urut hankittiin vuonna 1549, ja nykyinen soitin on järjestyksessä viides."
+- **Syy:** Löydöstyyppi 2. Vanha versio oli hallintoa kahdesti: vaalijärjestely, joka päti yli kolmeensataan muuhun kirkkoon (eli ei erottanut tätä kohdetta mistään — sama fakta päti myös Mariankirkkoon), ja kahden arkkitehdin nimet. Uusi versio on dokumentoitu kohtaus Sverren saagasta: kirkon ensimmäinen esiintyminen historiassa on se, että sinne paettiin hyökkäystä. Urkujen ikäjatkumo vuodesta 1549 antaa lopuksi konkreettisen mittakaavan.
+- **Lähde:** https://en.wikipedia.org/wiki/Bergen_Cathedral
+
+### Fløyen — kenttä `lyhyt`
+- **Vanha:** "Kaupunkivuori Fløyenin ja Bergenin korkeimman vuoren Ulrikenin välillä kulkee Vidden-reitti, noin kolmentoista kilometrin vaellus avoimen ylängön poikki. Reitti on suositeltavaa kulkea Ulrikenilta Fløyenille, koska silloin vaellus alkaa korkeammalta ja alas kaupunkiin pääsee lopuksi köysiradalla."
+- **Uusi:** "Kaupunkivuori Fløyenilta kaupunkiin laskeutuvat tiet ja polut valaistaan talvikuukausina, ja silloin bergeniläiset laskevat niitä pitkin pulkalla alas rinnettä. Kesällä samoilla poluilla kuljetaan jalan, ja vuoren laella olevalta Skomakerdiket-lammelta voi lainata kanootin."
+- **Syy:** Löydöstyyppi 1 ja 2. Vidden-reitti kerrotaan jo Ulrikenin `teksti`-kentässä samoilla tiedoilla (avoin ylänkö, Fløyenille, matka-aika), joten sama asia oli kaupungin aineistossa kahdesti. Toinen virke oli pelkkää reittiohjetta. Uusi versio on kaupunkilaisten oma käyttö vuoresta ja näkyy ylhäältä: koko rinne on talvella valaistu ja sitä lasketaan pulkalla alas kaupunkiin.
+- **Lähde:** https://en.wikipedia.org/wiki/Fl%C3%B8yen ja https://www.bergen.kommune.no/hvaskjer/tema/byfjellene/turinformasjon/floyen
+
+### Fantoftin sauvakirkko — kenttä `lyhyt`
+- **Vanha:** "Fantoftin sauvakirkko sai lohikäärmeenpäänsä ja veistetyt porttinsa Borgundin sauvakirkon mallista, kun konsuli Gaden puusepät pystyttivät sen uudelleen. Vuodesta 1997 lähtien kirkkoa on ympäröinyt aita, jonka tehtävä on suojata sitä uusilta tuhopoltoilta."
+- **Uusi:** "Fantoftin sauvakirkon kaltaisia puukirkkoja rakennettiin Norjassa keskiajalla arvioiden mukaan tuhat tai jopa kaksi tuhatta. Niistä on jäljellä kaksikymmentäkahdeksan, eikä Fantoft ole niiden joukossa, koska alkuperäinen tuhoutui. Vuodesta 1997 kirkkoa on ympäröinyt aita suojaamassa sitä uusilta tuhopoltoilta."
+- **Syy:** Löydöstyyppi 3, 1 ja 7. Borgund-esikuva oli edellisen tarkistajan merkitsemä epävarmuus, ja se on nyt ratkaistu: englanninkielinen Wikipedia ei mainitse Borgundia lainkaan, ja väite löytyy vain matkailusivuilta, joten se on poistettu. Samalla korjautuivat lohikäärmeenpäiden toisto `teksti`-kentän kanssa ja se, että kierrosversio vastasi kohteen omaan kysymykseen "Miksi kirkon katoilla on lohikäärmeenpäitä?". Tilalle tuli vahvistettu ja yllättävä mittakaava: keskiajan Norjaan rakennettiin arviolta tuhat tai jopa kaksi tuhatta sauvakirkkoa, niistä on pystyssä kaksikymmentäkahdeksan, eikä Fantoft ole niiden joukossa.
+- **Lähde:** https://en.wikipedia.org/wiki/Stave_church ja https://en.wikipedia.org/wiki/Fantoft_Stave_Church
+
+### Nykirken — kenttä `teksti`
+- **Vanha:** "Huhtikuussa 1944 satamassa räjähtänyt laiva sytytti kirkon jälleen tuleen. Seurakunta toivoi uutta kirkkoa keskeisemmälle paikalle, mutta viranomaiset vaativat vanhan korjaamista, ja kirkko vihittiin uudelleen vuonna 1956."
+- **Uusi:** "Huhtikuussa 1944 satamassa räjähtänyt laiva sytytti kirkon jälleen tuleen, ja seurakunta toivoi uutta kirkkoa keskeisemmälle paikalle, mutta viranomaiset vaativat vanhan korjaamista. Kirkko vihittiin uudelleen vuonna 1956, ja vuodesta 2002 seurakunta on kutsunut sitä lasten tuomiokirkoksi."
+- **Syy:** Löydöstyyppi 5. Koko kappale oli historiaa eikä kertonut lainkaan, mikä rakennus on nyt. Kirkko on yhä säännöllisessä käytössä, ja vuodesta 2002 sitä on painotettu lasten kirkkona; seurakunta kutsuu sitä lasten tuomiokirkoksi. Virkerakenne säilyi viidessä virkkeessä yhdistämällä kaksi vanhaa virkettä.
+- **Lähde:** https://en.wikipedia.org/wiki/Nykirken
+
+### Bergen — tarkistettu, ei muutettu
+- **Avaus** (36 sanaa, alkaa sanalla "Tervetuloa"): kuva on aidosti ilmasta nähtävä (kattojen kirjo seitsemän vuoren sylissä, vuonolta työntyvä Vågen-lahti), ja ensimmäinen kohde Bryggen mainitaan. Väite puutalojen rivin nousemisesta jokaisen palon jälkeen samalle paikalle vahvistui Unescon kuvauksesta. Ei muutosta.
+- **Grieghallen:** kaikki tarkistettu ja oikein — valmistui 1978, tanskalainen Knud Munk, 1500 paikkaa, filharmonikkojen koti, orkesteri perustettu 1765, Grieg johti 1880–1882, Euroviisut 1986, festivaalin päänäyttämö. Nykytila: ei remonttisulkua. Grieg Quarter -laajennusta odotetaan vuoteen 2031, mutta se ei muuta nykytilaa. Ei muutosta. https://en.wikipedia.org/wiki/Grieg_Hall
+- **Ulriken:** televisiomasto ja ravintola huipulla vahvistettiin, 643 metriä ja asema seitsemän vuoren korkeimpana vahvistettiin. https://en.wikipedia.org/wiki/Ulriken
+- **Bergenhusin salin** vuodet tarkistettiin: uudelleenavaus 1961 on tasan 700 vuotta ensimmäisestä käytöstä vuonna 1261, joten virke pitää. Ei muutosta.
+- **Bryggenin riimukirjoitukset** (noin 670 kappaletta, "rakkaani, suutele minua") vahvistettiin, samoin kaivausten alku vuoden 1955 palosta. https://en.wikipedia.org/wiki/Bryggen_inscriptions
+- **Mariankirkon** vuolukivi, 1600-luvun barokkisaarnatuoli, palot 1198 ja 1248 sekä viiden vuoden kunnostus ja avaus 2015 vahvistettiin.
+- **Fantoftin** alkuperäinen kirkko noin 1150 Fortunissa, siirto osina 1883, tuhopoltto 6.6.1992 ja aita vuodesta 1997 vahvistettiin.
+- **Isoisä:** mainitaan vain Bergenin tuomiokirkossa ja vain päiväkirjamerkinnän sisällöllä (tykinkuula, laivastopalvelus, lyijykynä). Oikein, ei muutosta.
+
+### Bergen — epävarmuudet Päätoimittajalle
+- **Troldhaugenin huvila:** omistajan päätettävä, halutaanko äänitteeseen maininta sulkemisesta. Nyt teksti ei väitä huvilan olevan auki eikä kiinni. Museon oma sivu sanoo kesä 2027, festivaalin sivu kesä 2026 — kun oikea päivä on tiedossa, kohteeseen voi halutessa lisätä nykytilan.
+- **Bryggenin kontorin perustamisvuosi:** teksti sanoo "noin vuonna 1350". Unescon kuvaus sanoo 1350, norjankielinen Wikipedia sanoo saksalaisen kontorin toimineen 1360–1754. "Noin" kattaa haarukan, joten jätin sen, mutta jos halutaan täsmällinen luku, se on syytä päättää erikseen.
+- **Bryggenin rakennusmäärä:** 62 poistui, koska lähde ei enää tue sitä. Norjankielinen Wikipedia sanoo 61 suojeltua rakennusta. Jos luku halutaan takaisin, 61 on dokumentoitu.
+- **Fantoftin jälleenrakennusvuosi:** teksti sanoo 1997 ja aita "vuodesta 1997". Englanninkielinen Wikipedia sanoo jälleenrakennuksen kestäneen kuusi vuotta vuoden 1992 palon jälkeen, mikä viittaisi vuoteen 1998. En muuttanut vuotta, koska muut lähteet sanovat 1997, mutta ristiriita kannattaa tietää.
+- **Mariankirkon saksankieliset jumalanpalvelukset:** snl.no sanoo viimeisen olleen 1868, englanninkielinen Wikipedia sanoo saarnoja pidetyn saksaksi ensimmäisen maailmansodan jälkeenkin. Poistin väitteen kierrosversiosta tätä ratkaisematta; snl on luotettavampi, mutta jos luku halutaan tekstiin, ristiriita on olemassa.
+- **Troldhaugenin asumisaika:** teksti sanoo Griegien asuneen talossa yli kaksikymmentä vuotta. Se on totta vuosiluvuilla 1885–1907, mutta englanninkielinen Wikipedia tarkentaa, että he asuivat siellä pääosin kesät. Jätin ennalleen.
+- **Griegin onnenkalut:** museon oma sivu sanoo "are said to have been brought with him on his travels", eli kyse on perimätiedosta. Kirjoitin kierrosversioon "kulkivat matkoilla hänen mukanaan"; jos Päätoimittaja haluaa, siihen voi lisätä varauksen.
+
+### Bergen — koneellinen tarkistus
+`Bergen: 11 kohdetta, 0 virhettä, 12 huomiota, puhetta 10041 merkkiä`
+Yksitoista huomiota on "ei ala paikan nimellä" (suomenkielinen etusana, ääntämissääntö) ja kahdestoista "avaus puuttuu" (avaus on erillisessä tiedostossa). Nimialkuhuomioiden määrä on sama kuin ennen passia.
