@@ -150,3 +150,20 @@ kaikki Sanoja-sarakkeen arvot täsmäsivät, myös uusien rivien.*
 3. **Huoneen 4 eteläovi:** Keskushallin valmis keskustelu vaimennettuna vai pelkkä hälinä (osio Valmiit kohtaukset).
 4. **Pieni jatkuvuushuomio:** portinvartija-riita-1 sanoo kalojen olevan myöhässä, mutta valmiissa keittiökohtauksessa
    padoissa on jo kalaa. Toimii, jos lasti on huomiseksi; muutosta ei tehty.
+
+## Päätoimittajan päätökset (7.10.2026 klo 10.5x)
+
+1. **kappalainen-3 säilyy.** Jos pelaaja jää kiinni kappelissa, vartija vie hänet tyrmään. Tämä on omistajan
+   linja 7.10. klo 08.5x: kiinnijääminen johtaa tyrmään eikä kuolemaan.
+2. **Tyrmä on pystyleikkeessä äänetön.** Pako onnistuu ilman sanoja (Pulu, vesipojan ovi, irtokivi). Tyrmän neljä
+   repliikkiä kuuluvat myöhempään osaan, kuten ehdotuksen kohdassa 5.
+3. **Huone 4, eteläovi:** oven takaa kuuluu vain Linnantuvan vaimea hälinä. Keskushallin valmis keskustelu
+   säästetään huoneeseen 6.
+4. **Kappelikohtauksen latinalainen alku ("Dominus vobiscum…") jätetään ennalleen.** Äänet on hyväksytty 5.10., ja
+   linja on sama kuin oppaan vieraskielisissä aluissa (omistaja 7.10.: niitä ei uusita).
+5. **Kertoja ei puhu pelin aikana.** Kertojan jaksot ovat vain tietokerroksessa (ehdotuksen kohta 5 ja omistajan
+   linja: pelin aikana ei opeteta).
+6. **Jatkuvuushuomio (kalalasti) ei vaadi muutosta:** lasti on huomiseksi.
+7. **Määrä:** repliikkejä on 31, vaikka lupa koski noin 25:tä. Generointi aloitetaan vasta, kun omistaja on
+   hyväksynyt määrän 31. Uusille hahmoäänille (portinvartija, vartija) valitaan äänet hyväksytystä äänipankista
+   (eleven_v4, ei fi-merkittyjä ääniä).
