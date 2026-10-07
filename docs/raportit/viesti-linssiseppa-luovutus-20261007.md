@@ -257,3 +257,6 @@ NUI:n osa on `natiivi-ui/sallitut-157` 0f770be2. LS2:n lista on tiedostossa `pro
 - 18.0x: molemmat kuitattu ja lähetetty Natiivisepälle.
   - alkulento-aani b11f5e253 → juna 162 (omistaja testaa alkulennon klo 22).
   - yksityiskohdat-havainnekuva c2884bc97 → juna 163.
+- 18.1x: kuumailmapallon tila raportoitu Päätoimittajalle.
+  - Korimalli puuttui R2:sta (404), TF:ssä paikkamerkki. Vientipaketti `_valmiit/ilmapallo-kori-vienti-20261007` → kartta/ilmapallo/v1/kori_nakyma.glb. Päätoimittaja kuittasi, vienti pyydetty Julkaisijalta.
+  - Äänet: ElevenLabs on oletus (suositus), komento vain kehittäjille.
