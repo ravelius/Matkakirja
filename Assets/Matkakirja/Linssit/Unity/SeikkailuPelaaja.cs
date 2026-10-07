@@ -39,7 +39,8 @@ namespace Matkakirja.Natiivi
         public PelaajaMalli Malli;
         string leike = "idle"; double leikeAika;
         public (string Leike, double Aika) Leike() => (leike, leikeAika);
-        public void KapseliPiiloon() { var mr = hahmo != null ? hahmo.GetComponent<MeshRenderer>() : null; if (mr != null) mr.enabled = false; }
+        GameObject kapseli;
+        public void KapseliPiiloon() { if (kapseli != null) kapseli.GetComponent<MeshRenderer>().enabled = false; }
         public CinemachineCamera Kamera => kamera;
         /// <summary>Viimeisin paikka maassa: putoaminen (laiturin reunalta veteen) palauttaa tähän.</summary>
         Vector3 viimeMaassa;
@@ -58,14 +59,18 @@ namespace Matkakirja.Natiivi
             p.kavely.KameraYaw = p.kavely.HahmoYaw = yaw;
             p.viimeMaassa = paikka;
             // Hahmo (väliaikainen kapseli; Fogg-glb myöhemmin).
+            // Hahmosolmu (kääntö, skaalaamaton: Fogg, kynttilä ja esineet sen lapsina) ja kapseli sen lapsena (7.10.: Fogg peri kapselin
+            // skaalan 0,6 / 0,875 / 0,6 ja oli kapea ja 1,58 m).
+            var hs = new GameObject("hahmo") { layer = kerros, tag = "Player" };
+            hs.transform.SetParent(go.transform, false);
             var h = GameObject.CreatePrimitive(PrimitiveType.Capsule);
             Destroy(h.GetComponent<Collider>());
-            h.name = "hahmo"; h.layer = kerros; h.tag = "Player";
-            h.transform.SetParent(go.transform, false);
+            h.name = "kapseli"; h.layer = kerros; h.tag = "Player";
+            h.transform.SetParent(hs.transform, false);
             h.transform.localPosition = new Vector3(0, Korkeus / 2, 0); h.transform.localScale = new Vector3(Sade * 2, Korkeus / 2, Sade * 2);
             var sh = Resources.Load<Shader>("Varjostimet/DioraamaValaistu");
             if (sh != null) h.GetComponent<MeshRenderer>().sharedMaterial = new Material(sh) { color = new Color(0.55f, 0.35f, 0.2f) };
-            p.hahmo = h.transform;
+            p.hahmo = hs.transform; p.kapseli = h;
             // Olkapiste ja kamera.
             p.olka = new GameObject("olka").transform;
             p.olka.SetParent(go.transform, false);
