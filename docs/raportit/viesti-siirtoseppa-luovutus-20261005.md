@@ -467,3 +467,6 @@ Edellinen luovutus on `viesti-siirtoseppa-luovutus-20261002.md` (5.10. osiot 02.
   (Natiivisepälle, kuittaus pyydetty). E3: 867f3b69 oma kynttilä näkyväksi liekiksi + veto kallistaa. LR:n kappelin merkit ~1 h:
   kätkö sivualttarin syvennys (0,52×0,60×0,55, kilpien alla), merkit ovi:kappeli-alku, piilo:kaari-ovi, veto:/ontto:syvennys,
   esine:kivi-1..3 (irrotettava), kalkki/pateeni/liuskekivi, reitti:kappalainen-1..5.
+- 16.52: LR v44h 87e023c69817a28d (kappeli: syvennys, kivet, kalkki/pateeni/liuskekivi, reitti:kappalainen-1..5). 64ba0459 kivet irrotettaviksi,
+  syvennyksen esineet nostettaviksi kivien jälkeen, koputus ("koputa", väliaikainen ääni ovi-puu 0,75), esineiden kierto_y.
+  ebdf06e0 pelattava pala → v44h. Puuttuu E3:sta: kappalaisen kohtaus (reitti, kynttilöiden sammutus, paluu lyhdyllä) käsikirjoituksen mukaan.
