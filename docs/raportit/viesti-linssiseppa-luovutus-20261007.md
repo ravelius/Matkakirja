@@ -72,7 +72,27 @@ NUI:n osa on `natiivi-ui/sallitut-157` 0f770be2. LS2:n lista on tiedostossa `pro
 - Vientipaketti `proto-3d/_valmiit/omat-mallit-vienti-20261007`: kuiva-ajo OK. Julkaisija vie sen, kun sanon "vie" simutodennuksen jälkeen.
 - Linssiseppä 2: Giza on sallitut-3d.json:ssa. Pelikoodari #4116: rivi sallituissa, 4 kohdetta ja kierros (vielä OPEN).
 - Simuskripti: scratchpadin `ajo-giza.sh`. Se kuvaa yleiskuvan sekä Kheopsin ja Sfinksin lähikuvat leikkauksen kanssa ja ilman.
-- Kheopsin valkoisuus: Linnanrakentaja tekee testiversiot ilman Dracoa ja COLOR_0:aa, jos kuva vahvistaa valkoisuuden.
+- **Simu 09.33** (käännös 8331af502, `linssiseppa-giza-20261007`): mallit ovat oikeassa paikassa ja koossa (kohdakkain Googlen pyramidien kanssa); Kheopsin "valkoisuus" on leikkausreikä.
+  - Avoinna: valkoinen tausta reiän reunassa. Kaukaa reikä paisuu karkean maskin vuoksi; maski on tarkennettu (96ecd4efe).
+  - Avoinna: Sfinksin aitaus on tumma, noin 10 m liian korkealla ja reiästä sivussa.
+  - Linnanrakentaja tekee giza-v2:n tänään iltapäivällä (Olavinlinnan jälkeen): `<kohde>-helma.glb` (maapohjahelma 70 m, 1 m Googlen alla) ja Sfinksin korjauksen. Työkalu tukee helmaa (1914e10c4).
+  - Vientiä EI vielä. Seuraavaksi: tileset v2 → simu → kuvat Päätoimittajalle → "vie" Julkaisijalle.
+
+## Kuumailmapallon korinäkymä (omistaja 7.10. 09.1x, ei junaan ennen Päätoimittajan kuittausta)
+- `linssiseppa/pallokori` b3601c81e (kaupunkitila-159:n päällä):
+  - Ydin KoriLiike: keinunta ~1° / 5 s, jousi ≤ 2° kiihdytyksissä, köydet viiveellä; testit KoriLiikeTestit.
+  - PalloKori: URP-overlay-kamera, kerros 16. Linnanrakentajan kori_nakyma.glb (_valmiit/ilmapallo-v1/kori, R2-polku `kartta/ilmapallo/v1/`, ei vielä viety) tai paikkamerkki.
+  - Komennot: `opas kori 0|1` ja `opas kori aanet eleven|kirjasto`.
+  - Lennot pallotilassa hitaammin lyhyillä väleillä (1,6×), pitkillä 1,15×.
+- Äänet Resources/Aanet/Pallokori:
+  - ElevenLabs: 4 ääntä, 120 krediittiä (katto 10 000).
+  - Commons PD: liekki. Lähteet `proto-3d/_lahteet/pallokori-aanet/*/LAHTEET.md`.
+  - Freesound odottaa omistajan uutta avainta (nykyinen 401).
+  - Kaupungin äänimaisema seuraa korkeutta Siirtosepän `KaupunkiAanimaisemaSoitin.Kamera`-Funcilla (heijastus).
+- Puuttuu: simuvideo natiivikaappauksella äänen kanssa (A/V mitattuna), stillit iPhonesta ja iPadista, ElevenLabs- ja kirjastoäänten vertailu.
+
+## iPad-laitemittaus (Natiivisepän vuoro, Release 603cfd8a)
+- `proto-3d/tyokalut/linssiseppa-ajot/ipad-ab.sh` (KYTKIN=yovalot|terava): ensin yövalot, sitten terävöitys. Tulokset rivinä Päätoimittajalle.
 
 ## Giza, aiempi vaihe (omistaja 6.10. 23.35)
 
