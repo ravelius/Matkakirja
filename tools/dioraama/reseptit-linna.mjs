@@ -435,6 +435,32 @@ export function kupoli(param) {
   return puhdista(k);
 }
 
+/**
+ * Tynnyriholvi (Linnanrakentaja 7.10.2026, voudin sali): holvi suorakaiteen huoneen päälle. Akseli w-suunnassa
+ * (w −pituus/2…+pituus/2), jänne u ±leveys/2, sisäpinta puoliellipsi y = nousu·sin θ (θ 0…π) ja ulkopinta
+ * paksuuden verran ulompana. Roolit: 'holvi' (sisä, normaali akselia kohti), 'ulko' (ulkopinta ja päiden
+ * renkaat). paadyt: true tekee päätyseinien puoliellipsin (rooli 'paaty', normaali huoneeseen). Ei uv_m:ää
+ * (rakennuskone projisoi).
+ */
+export function tynnyriholvi(param) {
+  const L = param.pituus, a = param.leveys / 2, h = param.nousu, t = param.paksuus ?? 0.3, n = param.segmentit ?? 16;
+  const w0 = -L / 2, w1 = L / 2;
+  const sisa = (i) => { const th = Math.PI * i / n; return [-a * Math.cos(th), h * Math.sin(th)]; };
+  const ulko = (i) => { const th = Math.PI * i / n; return [-(a + t) * Math.cos(th), (h + t) * Math.sin(th)]; };
+  const k = [];
+  for (let i = 0; i < n; i++) {
+    const [ua, ya] = sisa(i), [ub, yb] = sisa(i + 1), um = (ua + ub) / 2, ym = (ya + yb) / 2;
+    k.push(...nelioSuuntaan([ua, ya, w0], [ub, yb, w0], [ub, yb, w1], [ua, ya, w1], 'holvi', [-um / (a * a), -ym / (h * h), 0]));
+    const [oa, pa] = ulko(i), [ob, pb] = ulko(i + 1), om = (oa + ob) / 2, pm = (pa + pb) / 2;
+    k.push(...nelioSuuntaan([oa, pa, w0], [ob, pb, w0], [ob, pb, w1], [oa, pa, w1], 'ulko', [om, pm, 0]));
+    for (const [w, s] of [[w0, -1], [w1, 1]]) {
+      k.push(...nelioSuuntaan([ua, ya, w], [ub, yb, w], [ob, pb, w], [oa, pa, w], 'ulko', [0, 0, s]));
+      if (param.paadyt) k.push(...nelioSuuntaan([0, 0, w], [ua, ya, w], [ub, yb, w], [0, 0, w], 'paaty', [0, 0, -s]));
+    }
+  }
+  return puhdista(k);
+}
+
 // Rooli → oletuspinta. Instanssin oma `pinnat`-kenttä (reseptit.mjs:n sijoita) ohittaa nämä.
 export const OLETUSPINNAT = {
   kiekko: { yla: 'lankku', ala: 'rappaus', sivu: 'leikkaus', leikkaus: 'leikkaus' },
@@ -446,6 +472,7 @@ export const OLETUSPINNAT = {
   lippu: { salko: 'puu', lippu: 'lippu' },
   rako: { aukko: 'aukko' },
   kupoli: { holvi: 'rappaus', ulko: 'kivi', leikkaus: 'leikkaus' },
+  tynnyriholvi: { holvi: 'rappaus', ulko: 'kivi', paaty: 'rappaus' },
 };
 
-export const RESEPTIT = { kiekko, kierreportaat, sakarat, paalu, laiturikansi, vene, lippu, rako, kupoli };
+export const RESEPTIT = { kiekko, kierreportaat, sakarat, paalu, laiturikansi, vene, lippu, rako, kupoli, tynnyriholvi };

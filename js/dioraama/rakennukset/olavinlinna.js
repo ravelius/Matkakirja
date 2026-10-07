@@ -26,6 +26,7 @@ import { TILA as TILA_KEITTIO } from './olavinlinna/keittio.js';
 // Keittiö G 102 (7.10.2026): uusi keittiö lähteiden mukaiseen eteläsiipeen, kohdistettava: false natiivin todennukseen asti.
 import { TILA as TILA_KEITTIO_G102 } from './olavinlinna/keittio-g102.js';
 import { TILA as TILA_TUNNELMA } from './olavinlinna/tunnelma.js';
+import { TILA_LINNANTUPA, TILA_VOUDIN_SALI } from './olavinlinna/palatsi.js';
 import { kohtauksetV3 } from './olavinlinna/kohtaukset-v3.js';
 
 // ---------------------------------------------------------------------------
@@ -143,5 +144,6 @@ export const RAKENNUS = {
   tilat: [
     TILA_MASSA, TILA_LAITURI, TILA_FATABUURI, TILA_KIERREPORTAAT, TILA_MUURINHARJA,
     TILA_KAPPELI, TILA_KESKUSHALLI, TILA_KEITTIO, TILA_TUNNELMA, TILA_KEITTIO_G102,
+    TILA_LINNANTUPA, TILA_VOUDIN_SALI,
   ].map(kohtauksetV3), // kohtaukset v3 (5.10.): kertoja + keskustelu, käsikirjoitus pulu-lenna + taulu (olavinlinna/kohtaukset-v3.js)
 };
