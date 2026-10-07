@@ -95,3 +95,46 @@ Saapuminen (Timeline) ─▶ Tutki ◀──▶ Katsele ◀──▶ Esine
 1. Liikkuminen: pisteet vai vapaa (H3 tuo A/B-videon samasta reitistä).
 2. Kamera: ensimmäinen persoona vai olan yli (pelaajahahmo Fogg näkyvissä)?
 3. Vihjeiden ajoitus: kuinka nopeasti portaat avautuvat (esim. 60 s / 120 s / 180 s)?
+
+---
+
+## 11. PÄIVITYS: omistajan päätös 7.10. klo 08.4x — VAPAA KÄVELY ensisijainen (Raamattu #4115)
+
+"Koukuttavin, vaikka suuritöisin." Pisteestä pisteeseen ei tehdä nyt (kohdan 3 Pisteet-toteutus jää rajapinnan taakse). Pelin aikana
+ei opeteta eikä ole luettavaa; joka huoneessa yksi pääteko (vähän tappelua, enimmäkseen oveluutta, hiiviskelyä ja reaktiota).
+**Pystyleike:** Olavinlinna Laituri → Keittiö → Kappeli, ~10 min: venesaapuminen, hiiviskely vartijan ohi, harhautus ja
+piiloutuminen keittiössä, valoarvoitus kappelissa. Tarina ja arvoitus Päätoimittajalta.
+
+### Moottorin osat ja arvio (Siirtoseppä, Opus-agenttiparvi rinnakkain; päivät = työpäiviä, kalenterissa rinnakkain lyhyempi)
+
+| Vaihe | Sisältö | Arvio | Riippuu |
+|---|---|---|---|
+| V0 | H0 rakennus-id → juuri (tehty 680d9b49), `ymparisto.mallit[]` staattisille glb:ille (rantakivet, vene) | 0,5 pv | — |
+| V1 | Pelaaja: CharacterController + Cinemachine (1. persoona tai olan yli), ohjaus Input Systemillä: vasen TAPPI liike / oikea veto katse, Mac näppäimistö + hiiri, peliohjain; törmäys MeshCollidereilla, portaat ja rampit | 1,5 pv | törmäysmallit |
+| V2 | Venesaapuminen Timeline + Cinemachine (vene, soutu, kamera perästä), loppu blendinä pelaajan ohjaukseen laiturilla | 1 pv | vene, soutu |
+| V3 | Vartija-AI: NavMesh (ajon aikana tilojen käveltävistä pinnoista, AI Navigation 2.0.14), partioreitti datasta, näkökartio (säde + valoisuus), kuulo (askeleet, heitot), epäily → etsintä → paluu, kiinnijäänti → tarkistuspiste | 2 pv | NavMesh-pinnat, vartijan leikkeet |
+| V4 | Vuorovaikutus ja konteksti-animaatiot: poimi/heitä (harhautus), piiloudu (tynnyri, kaappi, varjo), kiipeä merkityt reunat, ovet; Mixamo-leikkeet UAL-luurankoon | 1,5 pv | leikkeet, merkityt tyhjät |
+| V5 | Arvoitustila + kappelin valoarvoitus (Päätoimittajan käsikirjoitus) | 1 pv | käsikirjoitus, esineet |
+| V6 | Tallennus tarkistuspisteisiin + jatka | 0,5 pv | — |
+| V7 | Pystyleikkeen viimeistely: äänet (askeleet pinnoittain, vartijan repliikit), valaistus hiiviskelyyn, iPhone/iPad-suorituskyky (A/B), video | 1,5 pv | kaikki |
+
+Yhteensä ~9–10 työpäivää; V1, V2 ja V3 voivat kulkea rinnakkain agenteilla, kun data on olemassa.
+
+### Linnanrakentajalta tarvitaan (järjestyksessä)
+
+1. **Yhtenäinen kävelygeometria Laituri → Keittiö → Kappeli** 1:1: tilat ovat nyt erillisiä poikkileikkauksia. Tarvitaan yhdistävät
+   käytävät, portaat ja oviaukot, katot ja ehjät seinät silmänkorkeudelta katsottuna (poikkileikkauksen avoin puoli suljettu).
+2. **Törmäys- ja kävelypinnat** per tila: kevyt collider-mesh (oma solmu `tormays`) ja käveltävä pinta NavMeshille (`kavely`).
+3. **Pelaajahahmo** (jos olan yli): Fogg UAL-luurankoon. **Leikkeet** (Mixamo sallittu): idle, kävely, juoksu, hiipiminen
+   (kävely ja idle), kiipeä reunalle, piiloudu sisään ja ulos, poimi, heitä, kurkista. **Vartijalle:** partio, etsi (katselee),
+   hälytys, juoksu, kiinniotto.
+4. **Merkityt tyhjät:** `piilo:<id>`, `kiipea:<id>` (reunan alku ja loppu), `esine:<id>` (heitettävä), `ovi:<id>`, vartijan
+   `partio:<id>` -pisteet ja odotusajat.
+5. **Hiiviskelyn valo:** pimeät alueet leivottuun valoon ja valomäärän näytteet (light probes), jotta näkyvyys = valoisuus.
+6. **Vene + rantakivet + soutu** (työn alla), kappelin valoarvoituksen esineet käsikirjoituksen tultua.
+
+### Päätös vielä: kamera
+
+Ensimmäinen persoona on kevyempi (ei pelaajahahmoa, ei kontekstianimaatioita pelaajalle) ja immersiivinen; olan yli näyttää
+hiiviskelyn ja kiipeilyn paremmin ja on lajityypin tavallisin. Suositus pystyleikkeeseen: **olan yli** (hiiviskely ja kiipeily
+luettavampia ilman opastusta, mikä sopii linjaan "ei opeteta"). Päätös omistajalle.
