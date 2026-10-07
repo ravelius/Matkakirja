@@ -11419,3 +11419,7 @@ Omistaja 7.10.2026 klo 12.4x sanatarkasti: "Lontoo, Kööpenhamina ja Rooma. Oik
 ## OMISTAJA 7.10.2026 KLO 16.0x: KÄÄNNÖKSET HARVEMMIN (7.10.2026 klo 16.02)
 
 OMISTAJA 7.10.2026 klo 16.0x sanatarkasti: "voisiko niitä käännöksiä tehdä vain harvemmin?" → Päätoimittaja (jatkoa testauspäätökseen 15.5x): roolit eivät enää tee omia iOS-, iPad- tai Mac-käännöksiään; haaran tarkistukseen riittävät unity-tarkistus ja automaattiset testit; täysi käännös vain junalle (1–2/pv) ja TF:lle; simulaattorikäännös vain vian syyn selvittämiseen. Välitetty kaikille rooleille Postivahdin kautta. Lisäksi 16.0x: Siirtosepän historia-juna162 a5cd9d81 (E1 kehittäjäkomentojen takana) kuitattu junaan 162, kehittäjävalikkoon rivi 'Olavinlinna – pelattava pala (kokeilu)' korvaa E1-videon; Karttasepän kevät2 kuitattu vientiin.
+
+## OMISTAJA 7.10.2026 KLO 16.1x: ENINTÄÄN KAKSI KÄÄNNÖSTÄ PÄIVÄSSÄ (7.10.2026 klo 16.03)
+
+OMISTAJA 7.10.2026 klo 16.1x sanatarkasti: "kaksi käännöstä päivässä riittää ellen itse toisin pyydä" → enintään kaksi junaa (TF-käännöstä) päivässä; tänään 159, 160 ja 161 jo tehty, joten juna 162 lähtee 8.10. aamulla (runko ja automaattiset testit illalla valmiiksi). TF 161 + Mac TF 161 ladattu 16.0x (BUILD 9572eaff).
