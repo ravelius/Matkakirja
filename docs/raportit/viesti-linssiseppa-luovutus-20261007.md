@@ -41,7 +41,7 @@ NUI:n osa on `natiivi-ui/sallitut-157` 0f770be2. LS2:n lista on tiedostossa `pro
 
 ## Juna 158 (valmis, odottaa simuvuoroa)
 
-`linssiseppa/kaupunki-kohde-158` 7f62abb8c, joka on sallitut-157:n päällä. Testit 784/784, unity-tarkistus 0 virhettä.
+`linssiseppa/kaupunki-kohde-158` **294763907**, joka on sallitut-157:n päällä. Workerin muoto on litteä: kohde_nimi, kohde_lat ja kohde_lon. Alikenttä "kohde" rikkoisi TF 156/157 -appit, koska ne ottavat sen nimen kaupungin nimeksi. Worker #4107 on pidossa, kunnes muoto on todennettu vanhalla e2d89273-appilla. Testit 784/784, unity-tarkistus 0 virhettä.
 - d4bda0f5f, worker #4107: toiminnossa kaupunki + kohde { nimi, lat, lon } siirto vie suoraan kohteeseen (`OpasSilmukka.VaihdaPaikkaKohteeseen`). Jos kohde on toisessa kaupungissa tai siltä puuttuu sijainti, laskeudutaan yleiskuvaan. Samalla korjattu jäsennys: kaupungin nimi luetaan toiminnosta eikä kohteesta.
 - 7f62abb8c, Päätoimittajan käsky: `LokiSuodatin` (Unity) ja `LokiPeitto` (Ydin) peittävät avainparametrien arvot muotoon *** kaikista Debug.Log-riveistä, Cesiumin natiivit rivit mukaan lukien.
 - Simulla todennetaan kolme asiaa: Venetsia-toive Pariisista, key=*** konsolissa ja Varsovan 404-reiän toisto. KÄÄNNÖS- ja SIMU-vuoro on pyydetty Julkaisijalta.
