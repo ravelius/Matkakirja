@@ -1,66 +1,56 @@
 {
-  "_ohje": "Apurahan arvioijan esittelykortti: YKSI lähde webille (js/apuraha.js) ja natiiville (Apuraha.cs lukee https://matkakirja.app/assets/apuraha/esittely.json). Päätoimittaja päivittää tekstin vain tähän; natiivi näkee muutoksen ilman TF-buildia heti Pages-julkaisun jälkeen. Kuvat: tiedosto on polku sivuston juuresta (assets/…) tai täysi https-osoite. Kappaleen nappi {teksti, toiminto: \"esittelylinssit\"} avaa kaikki toimivat linssit ilman pisteitä (web: selaimen linssit; natiivi: kaikki kehittäjätilan linssit, myös kokeilut) ilman muuta kehittäjätilaa. webTeksti: kappaleen tai listarivin ({teksti, webTeksti}) selainversio; natiivi näyttää teksti-kentän. Kuvarivi: 4 kuvaa (omistaja 30.9. klo 15.06: 1 karttanäkymä + 3 linssiä), sarakkeet mukautuvat määrään. Ei videota. Korostus: \"korostus\": true = kappale lihavoituna samassa koossa (web .apuraha-teksti--korostus, natiivi lihavoitu). Kuvan rajaus: \"rajaus\": \"x% y%\" = pikkukuvan painopiste (web object-position, natiivi taustan sijainti); oletus keskeltä ylhäältä (50% 20%).",
-  "versio": 5,
+  "_ohje": "Apurahan arvioijan esittelykortti: YKSI lähde webille (js/apuraha.js) ja natiiville (Apuraha.cs lukee https://matkakirja.app/assets/apuraha/esittely.json). Päätoimittaja päivittää tekstin vain tähän; natiivi näkee muutoksen ilman TF-buildia heti Pages-julkaisun jälkeen. Kuvat: tiedosto on polku sivuston juuresta (assets/…) tai täysi https-osoite. Kappaleen nappi {teksti, toiminto: \"esittelylinssit\"} avaa kaikki toimivat linssit ilman pisteitä (web: selaimen linssit; natiivi: kaikki kehittäjätilan linssit, myös kokeilut) ilman muuta kehittäjätilaa. webTeksti: kappaleen tai listarivin ({teksti, webTeksti}) selainversio; natiivi näyttää teksti-kentän. Versio 6 (omistaja 7.10.2026): lyhyt teksti ilman linkkejä; kuvat (enintään 3: ISS:n kupola, Olavinlinna, Kuumailmapallo) lisätään pelistä tekstin julkaisun jälkeen, ja kuvarivi näkyy vain, jos kuvia on. Apurahaprosessin jälkeen kortista muokataan neutraalimpi pelin esittely. Ei videota. Korostus: \"korostus\": true = kappale lihavoituna samassa koossa (web .apuraha-teksti--korostus, natiivi lihavoitu). Kuvan rajaus: \"rajaus\": \"x% y%\" = pikkukuvan painopiste (web object-position, natiivi taustan sijainti); oletus keskeltä ylhäältä (50% 20%).",
+  "versio": 6,
   "nappi": "Apurahahakemus – katso tämä ensin",
   "otsikko": "Apurahan arvioijalle",
-  "alaotsikko": "Matkakirja ja unohdettu aarre · tilanne 1.10.2026",
+  "alaotsikko": "Matkakirja ja unohdettu aarre · tilanne 7.10.2026",
   "kappaleet": [
     {
+      "teksti": "Matkakirja ja unohdettu aarre on kokemuksellinen oppimispeli 13 vuotta täyttäneille ja aikuisille. Pääosassa ovat koukuttavat tarinat ja pelit. Kun kiinnostus herää, peli tarjoaa faktatarkistettua tietoa, ja pelaaja voi oppia lisää kysymällä. Kaikki kerrotaan äänen ja kuvan kautta eikä oppikirjamaisena tekstinä."
+    },
+    {
       "korostus": true,
-      "teksti": "Tärkeä muutos, jota hakemuksessa ei mainita: pelin kehitys on jaettu kahteen erilliseen ohjelmapohjaan. Unity-pelimoottorilla tehty uusi sovellus on jo olemassa iPhonelle ja iPadille, ja sitä voi kokeilla testiversiona hakemuksen linkistä. Unity mahdollistaa paremman 3D-grafiikan, ja samasta pohjasta tulevat myöhemmin myös Mac-, Android- ja Windows-versiot. Selainpeli osoitteessa matkakirja.app jatkuu ja pysyy mukana, mutta siihen ei tule kaikkia ominaisuuksia."
+      "teksti": "Kehitys siirtyi syyskuussa selaimesta iPhonen ja iPadin sovellukseen, joka tehdään Unity-pelimoottorilla. Vain pelimoottorilla kaupunkien 3D-näkymät ja kävelyseikkailut toimivat sujuvasti myös puhelimessa. Samasta pohjasta tehdään myöhemmin Mac-, Android- ja Windows-versiot. Selainpeli matkakirja.app jatkuu suppeampana."
     },
     {
-      "teksti": "Matkakirja ja unohdettu aarre on suomenkielinen seikkailupeli 13 vuotta täyttäneille ja aikuisille. Nuori Fogg seuraa isoisänsä vuoden 1873 matkapäiväkirjaa halki nykyajan Euroopan ja etsii kadonneen luettelon unohdettuja aarteita. Maailmasta oppii matkustamalla: jokaisella kaupungilla on oma matkakirjansa, kartan nostot johdattavat nähtävyyksiin ja tarinoihin, ja isoisän ääni lukee matkakirjan ääneen."
+      "otsikko": "Maapallo",
+      "teksti": "Nuori Fogg matkustaa todellisen maailman kartalla isoisänsä vuoden 1873 matkapäiväkirjan jäljillä ja etsii kadonneita aarteita. Kartta tarkentuu koko maapallosta kaupunkeihin."
     },
     {
-      "otsikko": "Kokeile kolmessa minuutissa",
+      "otsikko": "Kuumailmapallo",
+      "teksti": "Tietyissä kaupungeissa kartalta voi hypätä kuumailmapallon kyytiin ja tutkia kaupunkia fotorealistisessa 3D:ssä. Opas lentää kohteelta toiselle, kertoo niistä ääneen ja vastaa kysymyksiin.",
+      "webTeksti": "Tietyissä kaupungeissa kartalta voi hypätä kuumailmapallon kyytiin ja tutkia kaupunkia fotorealistisessa 3D:ssä. Opas lentää kohteelta toiselle, kertoo niistä ääneen ja vastaa kysymyksiin. Vain iOS-sovelluksessa."
+    },
+    {
+      "otsikko": "ISS",
+      "teksti": "ISS:n kupolasta katsotaan maapalloa avaruudesta. Pelaaja ohjaa asemaa ja ottaa kuvan mistä tahansa paikasta, ja kuva tehdään tarkasta satelliittiaineistosta julisteeksi.",
+      "webTeksti": "ISS:n kupolasta katsotaan maapalloa avaruudesta. Pelaaja ohjaa asemaa ja ottaa kuvan mistä tahansa paikasta, ja kuva tehdään tarkasta satelliittiaineistosta julisteeksi. Vain iOS-sovelluksessa."
+    },
+    {
+      "otsikko": "Pelit",
+      "teksti": "Peliin on suunniteltu kahdenlaisia pelejä: lautapelejä ja videopelejä. Videopeleissä pelaaja, joka muuten liikkuu nykyajassa, astuu historian hetkeen. Videopelit tulevat vain iOS-sovellukseen."
+    },
+    {
+      "otsikko": "Työn alla",
       "lista": [
-        "Aloita uusi matka ja valitse ensimmäinen kohde. Perillä avautuu isoisän matkakirja, ja isoisä lukee sen ääneen.",
-        "Napauta kartalta nostoa: kuva ja lyhyt tarina nähtävyydestä.",
-        "Kysy Pulu-kyyhkyltä kaupungista mitä tahansa. Vastaus tulee noin puolessa minuutissa.",
-        {
-          "teksti": "Kokeile linssejä: ne näyttävät maailman eri aiheen kautta, esimerkiksi astronautin kamera, maailman radiot ja Olavinlinnan poikkileikkaus. Jos linssilista on tyhjä, tämän kortin nappi \"Avaa esittelylinssit\" avaa kaikki, myös kehitteillä olevat.",
-          "webTeksti": "Kokeile linssejä: ne näyttävät maailman eri aiheen kautta, esimerkiksi maailman radiot ja ihmisen matka. Jos linssilista on tyhjä, tämän kortin nappi \"Avaa esittelylinssit\" avaa kaikki. Kolmiulotteiset linssit ovat vain iOS-sovelluksessa."
-        }
-      ],
+        "Lautapelit: Euroopan perinteiset pelit, kuten Mylly ja Tavli, joita pelataan tietokonetta tai kaveria vastaan.",
+        "Olavinlinna, noin vuosi 1500, on ensimmäinen videopeli. Saavut yöllä veneellä linnan alle, hiivit vartijoiden ohi, ratkaiset arvoituksen ja löydät aarteen.",
+        "Kielletty kaupunki, Peking 1923: viimeisen keisarin palatsista katoaa aarteita, ja kesäkuun yönä osa palatsista syttyy palamaan.",
+        "Gizan pyramidit, noin 2560 eaa.: Suuren pyramidin rakennustyömaa faarao Khufun aikaan."
+      ]
+    },
+    {
+      "teksti": "Videopeleissä ei opeteta mitään pelin aikana. Pelaaja liikkuu vapaasti, ja paikat, esineet ja henkilöt ovat todellisia. Jos kiinnostus herää, historiaa voi tutkia pelin ohessa tai sen jälkeen."
+    },
+    {
+      "teksti": "Nappi avaa kaikki linssit, myös kehitteillä olevat.",
       "nappi": {
         "teksti": "Avaa esittelylinssit",
         "valmis": "Esittelylinssit avattu",
         "toiminto": "esittelylinssit"
       }
-    },
-    {
-      "otsikko": "Missä mennään",
-      "teksti": "Kehitys tapahtuu nyt iOS-sovelluksessa, joka rakennettiin syyskuussa uudelleen natiivina. Kartta on pelin oma, itse poltettu, ja se tarkentuu koko maapallolta kaupunkitasolle. Uusi testiversio ilmestyy lähes päivittäin, ja tämä testiryhmä saa aina uusimman. Sisältöä on 266 kaupungista ja 117 maasta; työn alla on Euroopan viimeistely. Seuraavaksi tulevat ensimmäiset Euroopan perinteiset pelit ja kolmiulotteiset kohteet; ensimmäisen, Olavinlinnan, voi jo kokeilla esittelylinsseistä.",
-      "webTeksti": "Kehitys tapahtuu nyt iOS-sovelluksessa, joka rakennettiin syyskuussa uudelleen natiivina. Kartta on pelin oma, itse poltettu, ja se tarkentuu koko maapallolta kaupunkitasolle. Uusi testiversio ilmestyy lähes päivittäin, ja tämä testiryhmä saa aina uusimman. Sisältöä on 266 kaupungista ja 117 maasta; työn alla on Euroopan viimeistely. Seuraavaksi tulevat ensimmäiset Euroopan perinteiset pelit ja kolmiulotteiset kohteet; ensimmäistä, Olavinlinnaa, voi jo kokeilla iOS-sovelluksessa."
-    },
-    {
-      "otsikko": "Keskeneräisyys ja lisätiedot",
-      "teksti": "Testiversio on keskeneräinen, joten siinä voi näkyä kokeiluja ja paikkamerkkejä. Selainpeli osoitteessa matkakirja.app on suppeampi versio. Koko tilannekatsaus osa-alueittain on projektisivulla.",
-      "linkki": {
-        "teksti": "Projektisivu",
-        "url": "https://matkakirja.app/projekti.html"
-      }
     }
   ],
-  "kuvat": [
-    {
-      "tiedosto": "assets/apuraha/1-kartta.jpg",
-      "teksti": "Käsin piirretty kartta: Kreikka nostoineen"
-    },
-    {
-      "tiedosto": "assets/apuraha/2-astronautin-kamera.jpg",
-      "teksti": "Astronautin kamera: maapallo avaruudesta"
-    },
-    {
-      "tiedosto": "assets/apuraha/3-olavinlinna.jpg",
-      "teksti": "Olavinlinna aukileikattuna iltavalaistuksessa"
-    },
-    {
-      "tiedosto": "assets/apuraha/4-radio.jpg",
-      "teksti": "Radiolinssi: Ateenan asema soi",
-      "rajaus": "50% 90%"
-    }
-  ],
+  "kuvat": [],
   "webHuomautus": "Selainpeli ei sisällä kaikkia ominaisuuksia. Suosittelemme iOS-sovellusta (App Store -testiversion linkki on apurahahakemuksessa)."
 }
