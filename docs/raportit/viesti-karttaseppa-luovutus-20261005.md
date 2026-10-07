@@ -1,3 +1,17 @@
+# TILANNE 7.10. klo 14.5x
+
+- **AJOSSA (irralliset):**
+  1) `kaudet/aja-talvi2b.sh` (PGID 43109, 14.45 alkaen, noin 6 h): rivit 13–20 → `s2-eurooppa-talvi2b/`.
+  2) `aja-kevat-pohjoinen2.sh` (PGID 4649, 13.46 alkaen): rivit 13–17 → `s2-eurooppa-kevat-pohjoinen2/` + `kausi-rengas/kevat-pohjoinen2`.
+- **Talvi2b, PT 13.5x:** Perämeren jää säilyy, mutta reiät täytetään ja reuna liukuu MERI-väriin. Värmlandin tumma ruutu korjataan ottamalla pohjoisessa pikseliin kirkkain luminäkymä, tai kirkkain näkymä jos lumikuvaa ei ole.
+  Koodi: `kausimosaiikki-talvi2b-20261007.mjs` (kopio; talvi2-versio on `-talvi2-20261007.mjs`).
+  Valmistuttua: z5-yleiskuva koko Euroopasta (saumahaku) + kuvapari PT:lle (`kuvapari.py`, sarake: kerrokset talvi2b → talvi2), PT kuittaa → `kokoa-kausi.py talvi v1 <paketti> "<talvi2b/laatat>:<talvi2/laatat>"`.
+- **Worldview:** natiivin aineistot ovat ämpärissä (korkeus 1 531/1 531, geojsonit 200, maakunnat 2026-10-07a). Natiiviseppä/LS2: 95cf8eb97 junaan 161.
+  Raja-paketin webosa on vielä viennissä. PR #4140:n merge ja viivatason osoitinvaihto tulevat Julkaisijalta. --paivita-commit fab6701c0 on tehty.
+- **CYP:** linja D tehty. PT:lle kerrottu, että C:n lisenssiä ei löytynyt.
+
+---
+
 # TILANNE 7.10. klo 14.xx
 
 - **Worldview + CYP admin-1 VALMIIT, viennit Julkaisijalla.** PR #4140 (haara karttaseppa-raja-worldview, kärki ab0e9d136). Paketit:
