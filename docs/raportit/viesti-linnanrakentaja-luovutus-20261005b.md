@@ -277,3 +277,10 @@ Brotli (haara linnanrakentaja-zstd, worktree olemassa), akustiikka #3979 (Steam 
   vie-dioraama osoitin=false → peili Siirtosepälle. Päätoimittajalta odotetaan kuittausta 2k-leivontaan (fseventsd 15 Gt).
 - 7.10. 10.5x: GIZA: LS1:n Google-korkeudet → _valmiit/giza-v2/lahde/google-korkeudet-ls1-20261007.md (Sfinksin kaukalo ~34,3–34,8, mallissa 35,6; itäkulmat liian korkealla). Tee käynnistyksen jälkeen.
 - 7.10. 11.0x: PÄÄTOIMITTAJA KUITTASI keittio-g102 ja kappelin; leivonta 2k (paistot.sh: RESO 2048, RAJA_GT 10, /usr/bin/time -l mittaa huipun), yksi kerrallaan, ei testejä samaan aikaan, VASTA HERÄTYSVIESTIN JÄLKEEN. Uudet stillit (katto + holvin laki) Päätoimittajalle → v44 → peili Siirtosepälle.
+- 7.10. 12.3x: LINNA v44 PEILISSÄ 5795bcd4039bf161 (blender c57db7df35c39a39, haara linnanrakentaja-linna-v42 c4be712f9) →
+  Siirtoseppä. Leivonnat 2k (huiput 8,7–13,1 Gt). Kävely v2 korjattu Siirtosepän v43-huomioista (kavely.py: E 102 -käytävä
+  pikkupihalta kierreportaalle, UV:t laatikkoprojektiona, pinnat rappaus/kivilattia, kappelin lattia+seinä törmäykseen;
+  kuori_kavely.py: toistuva DECIMATE + pienimmät saarekkeet pois → 9 708). Stillit proto-3d/lokit/linnanrakentaja-v44/.
+  GIZA: helmat sävytetty (helma.py TAVOITE 205,190,160), aitaus.py POHJA 19,0 + itäpää −2,8 (LS1:n Google-korkeudet),
+  sfinksi_sdf → giza-v2/lahde/sfinksi-verkko.npz, sfinksi_glb → giza-v2/sfinksi-uusi (korvaa glb/sfinksi-* -symlinkit) +
+  sijainnit.json korkeus_egm2008 19,0 / ellipsoidi 34,6.
