@@ -164,7 +164,13 @@ export const RAAMATTU = {
           + 'lähteet) tarjotaan vasta lopussa tai pyydettäessä. Olavinlinna alkaa veneellä saapumisesta alaperspektiivistä elokuvamaisesti, '
           + 'drone-näkymä vasta lopussa; pelaaja liikkuu itse linnassa, ratkaisee arvoituksen, ja palkintona on huomattava aarre. Toteutus: '
           + 'yksi yhteinen historiamoottori (liikkuminen, katselu, esineiden tutkiminen, arvoitukset, tallennus, elokuvamaiset siirtymät), '
-          + 'Olavinlinna pilottina; liikkumistavan (pisteestä pisteeseen vai vapaa) päättää omistaja.',
+          + 'Olavinlinna pilottina. PELIN TUNTU (omistaja 7.10.2026 klo 09.0x, sitova): VAPAA KÄVELY ("Se on varmasti suuritöisin, mutta se '
+          + 'olisi pelikokemuksena koukuttavin"); tekstuurit saavat olla sinne päin, kunhan näyttävät mahdollisimman hyvältä, mutta huoneiden '
+          + 'mittasuhteet ja muut elementit ovat oikein. PELIN AIKANA EI OPETETA MITÄÄN ("koska se äkkiä saa inhoreaktion aikaan"): tavoite on '
+          + 'jännittävä, hurja ja visuaalisesti näyttävä kokemus, johon pääsee heti ilman selostuksia; opastus mahdollisimman pienin vihjein, ja '
+          + 'tehtävä ymmärretään heti. Joka huoneessa on tekemistä (ratkaisut haetaan muiden pelien toimivista esimerkeistä); vähän tappelua saa '
+          + 'olla, mutta tarvitaan myös oveluutta, reaktiota ja muita taitoja. Opettava anti on, että paikka tulee visuaalisesti tutuksi; '
+          + 'tarinoita ja tietoa saa halutessaan pelin aikana tai sen jälkeen, mutta mitään oppimiseen liittyvää ei ole pakko tehdä.',
         'PELIT, TALOUS JA LUENTA (omistaja 27.9.2026 klo 09.2x–10.4x, sitova; ideat '
           + 'omistajan 12-vuotiaalta tyttäreltä): 1) PELIT ovat yhtä merkittävä osa kuin '
           + 'linssit — oma kehittämissivu docs/pelikatalogi.md (+ pelikatalogi.html) samalla '
