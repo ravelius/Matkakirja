@@ -669,7 +669,7 @@ namespace Matkakirja.Natiivi
         /// <summary>Pelattavan palan kiinnitetty paketti (Linnanrakentajan v44g: kävely, Fogg, vene, laiturin kansi). Tuotannon osoitin
         /// (uusin.json) ei muutu: pala lukee tämän paketin testiosoittimena (sama hash-juuri ja manifest.json kuin julkaisulla, joten
         /// levyvälimuisti toimii; Päätoimittaja 7.10.: ei 250–400 Mt joka avauksella) ja palauttaa tuotannon, kun linna suljetaan.</summary>
-        public const string PelattavaPalaHash = "87e023c69817a28d";   // v44h (kappeli: syvennys, kivet, kalkki)
+        public const string PelattavaPalaHash = "d73c80b2905f1ed2";   // v44i (kappeli: luukku, ikuinen valo, nyytti, reitit, piilot)
 
         void LataaUudelleen()
         {
@@ -927,6 +927,7 @@ namespace Matkakirja.Natiivi
             yield return VarmistaKavelyData();
             SeikkailuPelaaja.Poista(); SeikkailuVene.Poista(); cm?.SeikkailuPois(); veneLaituriin = false; veneRepliikki = 0;
             SeikkailuRepliikit.Luo(nayttamo.transform, MediaJuuri + "/seikkailu/" + RakennusId + "/repliikit-v1/manifest.json", o.Kirjaa);
+            SeikkailuTietokerros.Luo(nayttamo.transform, MediaJuuri + "/seikkailu/" + RakennusId + "/tietokerros-v1/tietokerros.json", RakennusId, o.Kirjaa);
             double vesi = rakennus.Ulkokuori?.VesiY ?? 0;
             var reitti = new List<(double X, double Y, double Z)>(); double? loppuSuunta = null;
             if (SeikkailuKavely.Data != null)
@@ -1047,6 +1048,7 @@ namespace Matkakirja.Natiivi
             yield return VarmistaKavelyData();
             SeikkailuRepliikit.Luo(nayttamo.transform, MediaJuuri + "/seikkailu/" + RakennusId + "/repliikit-v1/manifest.json", o.Kirjaa);
             SeikkailuEsineet.Kolahti -= KokkiKuuleeKolahduksen; SeikkailuEsineet.Kolahti += KokkiKuuleeKolahduksen;
+            SeikkailuVartijat.Liekit = nayttamo.Liekit;
             SeikkailuVartijat.Luo(nayttamo.transform, rakennus, SeikkailuKavely.Data, nayttamo.Hahmot3D, o.Kirjaa);
             if (SeikkailuVartijat.AskelKlippi == null && rakennus.Aanet != null && rakennus.Aanet.TryGetValue("askel-kivi", out var askel) && !string.IsNullOrEmpty(askel.Tiedosto))
             {

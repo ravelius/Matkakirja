@@ -53,31 +53,14 @@ namespace Matkakirja.Natiivi
             go.transform.SetParent(isa, false);
             var se = go.AddComponent<SeikkailuEsineet>();
             se.kirjaa = kirjaa; Aktiivinen = se;
-            var varjostin = Shader.Find("Matkakirja/Linssit/DioraamaMaasto");
+            malliJuuri = juuri; malliUrl = url;
             foreach (var m in d.Lajia("esine"))
             {
                 if (string.IsNullOrEmpty(m.Glb)) continue;
-                byte[] b = null;
-                yield return DioraamaLevyvalimuisti.Hae(url(juuri + m.Glb), 60, t => b = t);
-                if (b == null || se == null) continue;
-                GlbMalli malli;
-                try { malli = DioraamaGlb.Lue(b, true); } catch (Exception ex) { kirjaa?.Invoke($"seikkailu: esine {m.Tunnus} glb virhe: {ex.Message}"); continue; }
-                var eg = new GameObject("Esine:" + m.Tunnus) { layer = DioraamaNayttamo.Kerros };
-                eg.transform.SetParent(go.transform, false);
-                eg.transform.position = new Vector3((float)m.X, (float)m.Y, (float)-m.Z);
-                // kierto_y (glTF, rad) → Unity: z-peilaus kääntää kiertosuunnan.
-                if (m.KiertoY is double ky) eg.transform.rotation = Quaternion.Euler(0f, (float)(-ky * 180 / Math.PI), 0f);
-                Texture2D kuva = null;
-                if (malli.Kuvat.Count > 0 && malli.Kuvat[0] != null)
-                {
-                    kuva = new Texture2D(2, 2, TextureFormat.RGBA32, true, false) { name = "Esine:" + m.Tunnus };
-                    if (kuva.LoadImage(malli.Kuvat[0], false)) se.luodut.Add(kuva); else { Destroy(kuva); kuva = null; }
-                }
-                var mat = varjostin != null ? new Material(varjostin) { name = "Esine:" + m.Tunnus } : null;
-                if (mat != null) { if (kuva != null) mat.SetTexture(IdKuva, kuva); se.luodut.Add(mat); }
-                var mesh = Mesh(malli); se.luodut.Add(mesh);
-                eg.AddComponent<MeshFilter>().sharedMesh = mesh;
-                var mr = eg.AddComponent<MeshRenderer>(); mr.sharedMaterial = mat; mr.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.On;
+                GameObject eg = null;
+                yield return LataaMalli(m, go.transform, se.luodut, g => eg = g, kirjaa);
+                if (eg == null || se == null) continue;
+                var mesh = eg.GetComponent<MeshFilter>().sharedMesh;
                 var sc = eg.AddComponent<SphereCollider>(); sc.center = mesh.bounds.center; sc.radius = Mathf.Max(0.04f, mesh.bounds.extents.magnitude * 0.6f);
                 var rb = eg.AddComponent<Rigidbody>(); rb.mass = 0.6f; rb.isKinematic = true; rb.interpolation = RigidbodyInterpolation.Interpolate;
                 rb.collisionDetectionMode = CollisionDetectionMode.ContinuousDynamic;
@@ -88,7 +71,53 @@ namespace Matkakirja.Natiivi
                 eg.AddComponent<Osuma>().Kun = (nopeus, kohta) => se.Osui(e, nopeus, kohta);
                 se.esineet.Add(e);
             }
+            // Liinanyytin sisältö (kalkki, pateeni, liuskekivi) näkyy vasta, kun nyytti avataan (E3 vaihe 10).
+            if (se.esineet.Exists(x => x.Id == Nyytti)) foreach (var x in se.esineet) if (Array.IndexOf(NyytinSisalto, x.Id) >= 0) x.Go.SetActive(false);
             kirjaa?.Invoke($"seikkailu: esineet {se.esineet.Count} ({string.Join(", ", se.esineet.ConvertAll(x => x.Id))})");
+        }
+
+        public const string Nyytti = "liinanyytti", Kirja = "kirja";
+        static readonly string[] NyytinSisalto = { "kalkki", "pateeni", "liuskekivi" };
+        static string malliJuuri; static Func<string, string> malliUrl;
+
+        /// <summary>Merkin glb-malli (Linnanrakentajan kavely-kansio) maailmaan merkin paikkaan ja kiertoon DioraamaMaasto-varjostimella;
+        /// myös kappelin luukku ja ikuinen valo (SeikkailuKynttilat). Odottaa enintään 30 s, että esineiden lataus on asettanut juuren.</summary>
+        public static IEnumerator LataaMalli(KavelyMerkki m, Transform isa, List<UnityEngine.Object> luodut, Action<GameObject> valmis, Action<string> kirjaa)
+        {
+            for (float t = 0; malliUrl == null && t < 30f; t += Time.unscaledDeltaTime) yield return null;
+            if (malliUrl == null || string.IsNullOrEmpty(m.Glb)) yield break;
+            byte[] b = null;
+            yield return DioraamaLevyvalimuisti.Hae(malliUrl(malliJuuri + m.Glb), 60, t => b = t);
+            if (b == null || isa == null) yield break;
+            GlbMalli malli;
+            try { malli = DioraamaGlb.Lue(b, true); } catch (Exception ex) { kirjaa?.Invoke($"seikkailu: malli {m.Nimi} glb virhe: {ex.Message}"); yield break; }
+            var eg = new GameObject("Esine:" + m.Tunnus) { layer = DioraamaNayttamo.Kerros };
+            eg.transform.SetParent(isa, false);
+            eg.transform.position = new Vector3((float)m.X, (float)m.Y, (float)-m.Z);
+            // kierto_y (glTF, rad) → Unity: z-peilaus kääntää kiertosuunnan.
+            if (m.KiertoY is double ky) eg.transform.rotation = Quaternion.Euler(0f, (float)(-ky * 180 / Math.PI), 0f);
+            Texture2D kuva = null;
+            if (malli.Kuvat.Count > 0 && malli.Kuvat[0] != null)
+            {
+                kuva = new Texture2D(2, 2, TextureFormat.RGBA32, true, false) { name = "Esine:" + m.Tunnus };
+                if (kuva.LoadImage(malli.Kuvat[0], false)) luodut.Add(kuva); else { Destroy(kuva); kuva = null; }
+            }
+            var varjostin = Shader.Find("Matkakirja/Linssit/DioraamaMaasto");
+            var mat = varjostin != null ? new Material(varjostin) { name = "Esine:" + m.Tunnus } : null;
+            if (mat != null) { if (kuva != null) mat.SetTexture(IdKuva, kuva); luodut.Add(mat); }
+            var mesh = Mesh(malli); luodut.Add(mesh);
+            eg.AddComponent<MeshFilter>().sharedMesh = mesh;
+            var mr = eg.AddComponent<MeshRenderer>(); mr.sharedMaterial = mat; mr.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.On;
+            valmis(eg);
+        }
+
+        /// <summary>Esine pois näkyvistä ja poiminnasta (kappalainen vie kirjan).</summary>
+        public void Piilota(string id)
+        {
+            var e = esineet.Find(x => x.Id == id); if (e == null || e.Go == null) return;
+            if (kadessa == e) kadessa = null;
+            e.Go.SetActive(false);
+            kirjaa?.Invoke($"seikkailu: {id} pois");
         }
 
         static Mesh Mesh(GlbMalli malli)
@@ -120,7 +149,7 @@ namespace Matkakirja.Natiivi
             var pp = p.transform.position + Vector3.up * 0.9f;
             foreach (var e in esineet)
             {
-                if (e == kadessa || e.Go == null) continue;
+                if (e == kadessa || e.Go == null || !e.Go.activeSelf || e.Id == Kirja) continue;   // kirja on kappalaisen
                 if (e.Laji == Laji.Irrotettava && e.Irrotettu) continue;
                 // Saumat napautettaviksi vasta viistovalossa (käsikirjoitus kohta 6; ilman kynttilöitä aina).
                 if (e.Laji == Laji.Irrotettava && SeikkailuKynttilat.Aktiivinen is SeikkailuKynttilat kyt && !kyt.SaumatNakyvat) continue;
@@ -159,6 +188,15 @@ namespace Matkakirja.Natiivi
 
         void Poimi(SeikkailuPelaaja p, Esine e)
         {
+            if (e.Id == Nyytti)
+            {
+                // Fogg avaa nyytin: liina pois, kalkki, pateeni ja liuskekivi esiin syvennyksen pohjalle.
+                e.Go.SetActive(false);
+                foreach (var x in esineet) if (Array.IndexOf(NyytinSisalto, x.Id) >= 0 && x.Go != null) x.Go.SetActive(true);
+                kirjaa?.Invoke("seikkailu: liinanyytti avattu");
+                Nostettiin?.Invoke(e.Id);
+                return;
+            }
             kadessa = e; e.Heitetty = false; e.Kuului = false;
             e.Rb.isKinematic = true;
             e.Go.transform.SetParent(p.Hahmo, true);
