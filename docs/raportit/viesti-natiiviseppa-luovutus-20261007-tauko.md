@@ -10,18 +10,18 @@ ja natiiviseppa-tila-20261003.md. Kytke Remote Control päälle. Kerro Julkaisij
 Juna-SHA:t vain PÄÄTOIMITTAJAN kuittauksella; käännökset Julkaisijan NYT-viestillä. EI savua/Laitetestaajaa/stillejä ennen junaa
 (omistaja 15.5x), EI roolien omia käännöksiä (16.0x), enintään 2 junaa/pv ellei omistaja pyydä.
 
-**JUNA 162 TÄNÄÄN (omistaja: "tee tänään yksi päivitys klo 22")** — runko natiiviseppa/juna-162-koe **124c993be** (wt/proto-natiiviseppa-j144),
+**JUNA 162 TÄNÄÄN (omistaja: "tee tänään yksi päivitys klo 22")** — runko natiiviseppa/juna-162-koe **a9c368492** (wt/proto-natiiviseppa-j144),
 HYVÄKSYTTY (Päätoimittaja 16.2x + 16.4x) = BUILD 161 9572eaff + LS1 b9f37ee8f + NUI 3f07c49b + NUI 34cf54b0 + LS2 f6e4a8495 + Siirtoseppä
-ef6b092d (⊇ 78e56088) + LS1 alkulento-v3-korjaus 19dcb1d15 + Siirtoseppä historia-juna163 2d19eb49 (⊇ ee0084ee; E2 heitto + E3 kappeli, Päätoimittaja 18.0x). ODOTTAA: NUI seikkailu-toiminto (toimintonappi; kärki f9f480820, SHA NUI:lta ennen 21.00) — jos ei tule tai testit kaatuvat, juna ilman sitä. Testit 447/419/835, unity iOS/Mac 0. Tarkista ensin, onko jokin vaihe jo tehty (`git -C proto-3d/Matkakirja-proto
+ef6b092d (⊇ 78e56088) + LS1 alkulento-v3-korjaus 19dcb1d15 + Siirtoseppä historia-juna163 2d19eb49 (⊇ ee0084ee; E2 heitto + E3 kappeli, Päätoimittaja 18.0x). + NUI seikkailu-toiminto f9f48082 (toimintonappi + löytö). Testit 447/419/842, tarkista, unity iOS/Mac 0, editori ok. Testit 447/419/835, unity iOS/Mac 0. Tarkista ensin, onko jokin vaihe jo tehty (`git -C proto-3d/Matkakirja-proto
 log -1 master`, `tail -3 proto-3d/lokit/kaannospalvelu/juna.log`, `tail -5 proto-3d/lokit/natiiviseppa-mac-tf-vahti.txt`).
 1. 21.15 runko lukittu → muutoslokin SISÄLTÖLISTA Julkaisijalle heti: apurahakortti v7 kuvineen + Valmiit linssit -nappi (9 linssiä
    ilman kehittäjätilaa); kuumailmapallon latauskuva kaupunkiin siirryttäessä; ISS-kyydin Euroopan satelliittikuva vuodenajan mukaan
-   (syksy); aloituslento: ei yöpuolta, kone näkyy heti, pehmeä kameran aloitus; kehittäjävalikkoon "Olavinlinna – pelattava pala (kokeilu)" (Fogg, vene, kävely, vartijat; puhelimen ohjaustapit).
-2. Lukko vapaa 21.10 alkaen: `cd proto-3d && PROTO_APP_KOPIO=lokit/natiiviseppa-app-162-13c1c026 zsh tyokalut/proto-kaanna.sh 124c993be` (app-kopio …-162-124c993b)
+   (syksy); aloituslento: ei yöpuolta, kone näkyy heti, pehmeä kameran aloitus; kehittäjävalikkoon "Olavinlinna – pelattava pala (kokeilu)" laiturilta kappeliin (Fogg, vene, kävely, vartijat, heitto, kappeli; puhelimen ohjaustapit ja toimintonappi).
+2. Lukko vapaa 21.10 alkaen: `cd proto-3d && PROTO_APP_KOPIO=lokit/natiiviseppa-app-162-13c1c026 zsh tyokalut/proto-kaanna.sh a9c368492` (app-kopio …-162-a9c36849)
    (EI savua). Tulos KÄÄNNETTY → "lukko vapaa" Julkaisijalle.
-3. VIE (Päätoimittaja hyväksyi): `git update-ref refs/heads/juna/b13 124c993be… c076765c4…` (täydet SHA:t, tarkista nykyinen
+3. VIE (Päätoimittaja hyväksyi): `git update-ref refs/heads/juna/b13 a9c368492… c076765c4…` (täydet SHA:t, tarkista nykyinen
    juna/b13 = c076765c) + juna.log-rivi (malli edelliset natiiviseppa-rivit), proto-masterissa `git merge --no-ff juna/b13 -m "BUILD 162
-   (TF 1.1 (162)): merge juna/b13 124c993b BUILD 161:n masterin 9572eaff päälle"` + Co-Authored-By, `git diff --quiet 124c993be HEAD`.
+   (TF 1.1 (162)): merge juna/b13 a9c36849 BUILD 161:n masterin 9572eaff päälle"` + Co-Authored-By, `git diff --quiet a9c368492 HEAD`.
 4. Täysi BUILD 162 -SHA Julkaisijalle + Päätoimittajalle. Julkaisija ajaa TF 162:n.
 5. Mac TF 162 (lupa annettu): iOS-latauksen jälkeen `perl -e 'use POSIX; exit if fork; setsid; exec "zsh", @ARGV'
    proto-3d/lokit/natiiviseppa-skriptit/mac-tf.sh <BUILD162-sha8> 162`, tulos mac-tf-vahti.txt + gh run list proto3d-mac-testflight.
