@@ -35,7 +35,13 @@ aikaan; ei omia natiivikäännöksiä; kuittaus = peili + yksi rivi (ei stillej�
   AGENTIT KÄYNNISSÄ 20.1x: (a) esineet-v1: tarjotin, patapino, hiilipannu (lahde/esineet.py) → kopioi glb:t kavely-v1/v2/ +
   merkkeihin glb= (esine:tarjotin, esine:patapino, valo:hiilipannu) → vienti; (b) linna-hahmot/vartija-istuu-v1: vartija-1500(-faceit).glb
   + leikkeet torkku, syo, nousu_istumasta (Siirtosepän pyyntö) → kopioi v44/hahmot/ → vienti → Siirtosepälle. Puuttuu vielä
-  avainnippu-malli; (4) tyrmä E 101 karkeana; (4) huone 6:
+  avainnippu-malli; (4) HUONE 6 KÄVELY TEHTY lähteessä (EI vielä viety, tulossa v44o): Päätoimittajan reitti 20.3x (TULKINTA):
+  kaari-ovi → kaariportaat ylös → ampumakäytävä (30° suu avattu, raja poistettu) → 165° muurinsisäinen porras alas pääoven
+  ulkotasanteelle 215° → muuriportaat alas Tott-kammioon → eteläovi 187,5° → käytävä → Linnantupa (osa palatsi) → länsiseinän
+  porras → voudin sali. Tott-kammioon naulakko (esine:esiliina, esine:myssy) ja takka (valo:tott-takka). kaytava(avoin=, avoin_k=)
+  avaa liitosten sisäseinät (törmäystesti scratch reittitesti.py: molemmat reitit 0 vikaa). Palatsin tilat leivotaan
+  (scratch rakenna_palatsi.mjs → palatsi-paketti → leivo_tila 2k paiva+hamara) → v44 tilat/valot + ASTC → v44o; palatsi.js
+  kohdistettava false; (5) tyrmä E 101 karkeana; (4) huone 6:
   naulakko (esiliina + myssy) Tott-kammion puolelle Linnantuvan oven viereen + takan hiillos Tott-kammioon; (5) huoneet 7–8
   (huone 7 = muurikäytävä, EI kierreporrasta; pako = köysilasku kalliolle). Huone 6:n REITTI (Päätoimittaja): kappelin kaari-ovesta
   SAMOJA muuriportaita alas Tott-kammioon ja sen ovesta Linnantupaan (L2, L15); EI uutta käytävää.
