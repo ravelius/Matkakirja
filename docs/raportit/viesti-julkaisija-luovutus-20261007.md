@@ -6,10 +6,11 @@
   Muutosloki #4139 merge 8b888c8d. TF-ajo 37603976295. Ryhmäketju irrotettuna (setsid): `julkaisija-tyokalut/tf160.sh`,
   loki `julkaisija-tyokalut/tf160-ketju.log` (TF → vienti ⊇ 8b888c8d → sisäinen → ulkoinen). Tarkista loki herätessä; jos
   ketju kuoli, jatka käsin. Kun TF ladattu: Mac TF 160 -lupa Natiivisepälle + rivi Päätoimittajalle (increased-memory-limit-luku).
-- **Käännösjono 15.00 jälkeen** (katso tf-jono-lokin loppu, mitä ehti): NUI pariisi-esitys HEAD (stillit Päätoimittajalle,
-  iPad + iPhone vaaka 6 min) → LS1 esitys-giza 5a0478f55 → Natiiviseppä mac-kaanna 074c95a3 (dev) → Siirtoseppä historia
-  b8724fd8 + 34cf54b0 + 73ed2612 (simu iPad 18 min).
-- **Simujono 15.00 jälkeen**: LS1 (yövalot-toisto af5922b95-yhdistelmällä 6 min, aloitus Ateena+Pariisi 8 min, Giza v2b 6 min,
+- **Käännösjono 15.00 jälkeen** (tarkista tf-jono-lokin loppu): 1) NUI natiivi-ui/pariisi-esitys 5c3d45e6 (köysivarmistus +
+  LS1 741625b8; stillit Päätoimittajalle junan 161 kuittaukseen, simu ~6 min) → 2) Natiiviseppä mac-kaanna 28da7435 (dev;
+  sitten Mac-CPU-mittaus, ei simuja) → 3) Siirtoseppä historia b8724fd8 + 34cf54b0 + 73ed2612 (simu iPad 18 min).
+  LS1 esitys-giza 741625b8d kääntyi 13.17–~13.30 (tarkista lokit/kaannospalvelu).
+- **Simujono 15.00 jälkeen**: LS1 (yövalot OK 13.16; aloitus Ateena+Pariisi 8 min, Giza v2b 6 min,
   yksi kerrallaan), Siirtoseppä iPad 18 min. LS2:n pallo-simut af5922b95:llä ajettiin ~12.55–13.20 (setsid, jatkuu tauon yli).
 - **Juna 161 -ehdokkaat**: iOS-koeyhdistelmä af5922b95 = Natiiviseppä 074c95a3 (kirjoitusääni + Mac vSync) + LS1 yövalot
   47622521f + LS2 pallo e16d100db, appi proto-3d/lokit/natiiviseppa-juna161-koe/. Natiiviseppä kokoaa rungon Päätoimittajan kuittauksilla.
@@ -70,3 +71,11 @@ Päätoimittaja = "PÄÄTOIMITTAJA (Opus, max)".
 - Linnaosoitin tuotannossa **1a1857e06ec1386f** (v41, 03.39). Kielletty kaupunki: peilit vain kokeiluun, ei osoitinta.
 - Varsova pois (Googlen 3D-reiät); Giza vain kokeiluotsakkeella.
 - Omat worktreet: ei jäljellä.
+- **13.2x lisäykset**: TF 160 LADATTU 13.16 (increased-memory-limit 1); Mac TF 160 -lupa annettu Natiivisepälle. #4138 julki
+  13.08, #4135 Pages julki 13.06. Opas-esittely-vienti-20261007c viety 13.12; #4141 (LS1 vahvisti yhteensopivuuden) ja #4142
+  merge + Pöllö taustalla → tarkista `gh pr view 4141/4142`, ilmoita Pelikoodarille. Worldview-vienti (Karttaseppä, PT kuittasi):
+  `julkaisija-tyokalut/vie-worldview-20261007.sh` setsid, loki proto-3d/lokit/julkaisija-vienti-worldview-20261007.log → kun
+  "VALMIS 0": pyramidi.json viivataso-kenttä = pyramidi-poltto/worldview-2026-10-07/viivataso-2026-10-07.json (osoitinvaihto,
+  PT kuitannut; lataa julisteet/pyramidi/pyramidi.json, muuta vain viivataso, varmuuskopio, lataa, tarkista ?t=), sitten
+  merge #4140 ja ilmoita Karttasepälle. LS1 yövalot-161 OK af5922b95:llä; LS2 pallo-simut OK. Natiiviseppä iPad FACEIT ABBA
+  (luvattu setsid-ajona). NUI köysikorjaus ei vielä toiminut (metrolinja katosi).
