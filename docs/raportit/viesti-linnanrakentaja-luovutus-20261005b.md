@@ -199,3 +199,10 @@ Brotli (haara linnanrakentaja-zstd, worktree olemassa), akustiikka #3979 (Steam 
   vie-dioraama osoitin=false → peili 89707f601722ed7a: `poikki peili https://media.matkakirja.app/dioraama/kielletty-kaupunki/89707f601722ed7a/`.
   SEURAAVA: Siirtoseppä todentaa → ilmoita Julkaisijalle (kuvavuoro ~25 min jonossa, ~04.00) → kuvat (ilma, aukio, portaat;
   iPhone + iPad) Päätoimittajalle → PR vasta kuvien jälkeen. Tiedossa: aukion tiilet sumeat maan tasolta (yksi 8k-atlas).
+- 7.10. 03.2x: LINNA v41 (#4093, e8e7b3520): v40:n morph-glb:t rikkoivat TF 154:n → _valmiit/olavinlinna-blender-v41: hahmot/<id>.glb
+  = mixamo-v5 (ei morpheja), <id>-faceit.glb = faceit-v2; rakenna.mjs malli3d.skin.faceit. blender abcdfb635107f271, peili
+  1a1857e06ec1386f; Siirtoseppä todensi TF 154:llä (10/10 hahmoa). Osoitin Julkaisijalle junan d5959026-todennuksen jälkeen.
+  KIELLETTY: maareunus (kuori_leivo.py maareunus(), 4 km aukion UV-pisteellä, z −0,25) koska natiivin vesitaso näkyi järvenä;
+  8k-leivonta pid 8143 SIGSTOPissa TF 155:n Unity-viennin ajan (Julkaisija ilmoittaa → kill -CONT 8143). Omat simut
+  D760E909 (iPhone 17 Pro) + D9AC9B91 (iPad 13 M5), kuvaus proto-3d/tyokalut/linnanrakentaja-ajot/kielletty-kuvat.sh,
+  appi lokit/siirtoseppa-eleet-app (d1b6cde4); erase vuoron jälkeen.
