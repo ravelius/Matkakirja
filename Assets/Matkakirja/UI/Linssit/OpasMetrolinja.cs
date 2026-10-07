@@ -11,6 +11,10 @@ namespace Matkakirja.Natiivi
     {
         /// <summary>Asemien väli (pt), kun tilaa on; muuten linja tiivistyy enimmäiskorkeuteen.</summary>
         const float AsemaVali = 26f;
+        /// <summary>Pienin rivikorkeus (pt), jolla nimi mahtuu (apuri-koko + väli).</summary>
+        public const float VahinRivi = 16f;
+        /// <summary>Asemien määrä (viimeksi rakennettu).</summary>
+        public int Maara => asemat.Count;
         readonly VisualElement juuri, viiva, kuljettu;
         readonly List<(VisualElement Rivi, Label Nimi, VisualElement Paikka)> asemat = new List<(VisualElement, Label, VisualElement)>();
         bool nakyy, likainen = true;
@@ -44,7 +48,7 @@ namespace Matkakirja.Natiivi
         int Indeksi => Testi ? Mathf.Clamp(TestiIndeksi, 0, TestiNimet.Length - 1) : OpasSovitin.KierrosIndeksi;
 
         /// <summary>Joka ruudulla: näkyvyys, pystykaista (yla…ala paneelin pisteinä), enimmäiskorkeus ja nimien enimmäisleveys.</summary>
-        public void Paivita(bool nayta, float yla, float ala, float maksimi, float maksimiLeveys)
+        public void Paivita(bool nayta, float yla, float ala, float maksimi, float maksimiLeveys, float vasen)
         {
             var nimet = nayta ? Nimet() : null;
             nayta = nayta && nimet != null && nimet.Count > 1;
@@ -64,11 +68,11 @@ namespace Matkakirja.Natiivi
             if (i != naytettyIndeksi) Korosta(i);
             // Korkeus: asemaväli × määrä, enintään 40 % ja kaistan korkeus; keskelle kaistaa.
             float kaista = Mathf.Max(0f, ala - yla);
-            float korkeus = Mathf.Min(Mathf.Min(maksimi, kaista), AsemaVali * nimet.Count);
+            float korkeus = Mathf.Max(Mathf.Min(Mathf.Min(maksimi, kaista), AsemaVali * nimet.Count), VahinRivi * nimet.Count);
             float top = Mathf.Round(yla + (kaista - korkeus) * 0.5f);
             if (juuri.style.top.value.value != top) juuri.style.top = top;
             if (juuri.style.height.value.value != korkeus) juuri.style.height = Mathf.Round(korkeus);
-            if (juuri.style.left.value.value != OpasTapit.Reuna) juuri.style.left = OpasTapit.Reuna;
+            if (juuri.style.left.value.value != vasen) juuri.style.left = vasen;
             if (juuri.style.maxWidth.value.value != maksimiLeveys) juuri.style.maxWidth = Mathf.Round(maksimiLeveys);
         }
 

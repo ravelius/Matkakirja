@@ -462,7 +462,15 @@ namespace Matkakirja.Natiivi
             if (float.IsNaN(h) || h <= 0) return;
             float yla = 8f + Tyylikirja.Nappi.Ohjaus + 8f + 57f + 8f;
             float ala = tapit.Nakyy ? h - (tapit.Ala + OpasTapit.Halkaisija + KuvaRako) : h - (TapitAla + KuvaRako);
-            metro.Paivita(nayta, yla, ala, h * 0.4f, LeveaRuutu ? w * 0.3f : w * 0.42f);
+            float vasen = OpasTapit.Reuna;
+            // Matala ruutu (iPhone vaaka, LS1:n still 7.10.: 8 asemaa ~45 pt:n kaistassa, nimet litistyivät): linja vasemman tapin
+            // oikealle puolelle, jolloin kaista ulottuu esitysriviin asti.
+            if (ala - yla < OpasMetrolinja.VahinRivi * metro.Maara && tapit.Nakyy)
+            {
+                vasen = OpasTapit.Reuna + OpasTapit.Halkaisija + KuvaRako;
+                ala = h - (TapitAla + KuvaRako);
+            }
+            metro.Paivita(nayta, yla, ala, Mathf.Max(h * 0.4f, OpasMetrolinja.VahinRivi * metro.Maara), LeveaRuutu ? w * 0.3f : w * 0.42f, vasen);
         }
 
         VisualElement esitysRivi;
