@@ -18,6 +18,12 @@ namespace Matkakirja.Linssit.Iss
         /// <summary>Kauden edustava BMNG-kuukausi (1–12).</summary>
         public static int Kuukausi(int kausi) => edustava[((kausi % 4) + 4) % 4];
 
+        /// <summary>
+        /// Kauden Euroopan S2-mosaiikin versio (Karttaseppä 7.10.2026: s2-eurooppa/<kausi>/v1, sama jako kuin kesän v2):
+        /// syksy "syksy/v1"; null = kesän v2 (kevät ja talvi tulevat, kun ne ovat ämpärissä).
+        /// </summary>
+        public static string S2EuroopanVersio(int kausi) => ((kausi % 4) + 4) % 4 == Syksy ? "syksy/v1" : null;
+
         /// <summary>Näkyykö Euroopan S2-mosaiikki tällä kaudella (lumettomat kaudet).</summary>
         public static bool S2Nakyy(int kausi) => kausi != Talvi;
     }
