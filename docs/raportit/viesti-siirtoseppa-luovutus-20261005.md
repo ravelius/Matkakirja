@@ -7,7 +7,7 @@ Worktreet: /Users/Shared/Claude/wt/proto-siirtoseppa-*. Käännös vain Julkaisi
 (oma UDID D5900D45 = siirtoseppa-iPad13, TYHJENNETTY 19.0x, appit asennettava uudelleen). Ei detachia simupaneelista.
 Oikeat tapit: lokit/siirtoseppa-alo/.sk (simkosketus, käännä tarvittaessa tyokalut/todistusajo/simkosketus.m).
 
-## TILA 7.10. 03.5x
+## TILA 7.10. 03.4x
 
 - **Linnan osoitin = v41 1a1857e06ec1386f** (Julkaisija 03.39; TF 154 todennettu 03.10, lokit/siirtoseppa-vuoro-v41/tf154*).
   Junan koodin puoli (a5285a27 = d5959026, lokit/siirtoseppa-j156-app) ajetaan simuvuorolla ~04.10: ajo-vuoro-v41.sh
