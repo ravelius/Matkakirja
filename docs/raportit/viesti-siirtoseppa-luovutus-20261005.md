@@ -7,6 +7,20 @@ Worktreet: /Users/Shared/Claude/wt/proto-siirtoseppa-*. Käännös vain Julkaisi
 (oma UDID D5900D45 = siirtoseppa-iPad13, TYHJENNETTY 19.0x, appit asennettava uudelleen). Ei detachia simupaneelista.
 Oikeat tapit: lokit/siirtoseppa-alo/.sk (simkosketus, käännä tarvittaessa tyokalut/todistusajo/simkosketus.m).
 
+## TILA 7.10. 03.1x
+
+- **Juna 156 = siirtoseppa/eleet-1 d5959026** (Päätoimittaja kuittasi Natiivisepälle): linna-149 + FACEIT + d7c8596c faceit-kenttä
+  (malli3d.skin.faceit, NatiiviGlb faceit → skin.glb) + eleet ca44be90. Ehto: savu tuotannon peilillä a0e53749.
+- **LR v40 dfab929f ESTETTY osoittimelta**: TF 154 → hahmot puuttuvat ("morph ei tuettu"). LR tekee v41:n (skin.glb ilman morphia,
+  <id>-faceit.glb kenttään skin.faceit) → todennus TF 154 + junan koodi (ajo-vuoro-0258.sh:n kaava) ennen osoitinvaihtoa.
+- **Eleiden koe** OK (lokit/siirtoseppa-vuoro-0258/eleet/<huone>-vertailu.mp4), Päätoimittaja kuittasi. SEURAAVA (junan 156 jälkeen):
+  kamera puhujan puolilähikuvaan (rauhallinen ~1 s blendi, pieni orbit jatkuu), puhuja kääntyy kuulijaan myös työsilmukassa (kokki),
+  todennus iPhone + iPad vaaka, huulet/ilmeet ruuduittain.
+- **Kielletty kaupunki** (LR peili 89707f60) aukeaa junan koodilla (kuvat lokit/siirtoseppa-vuoro-0258/kielletty/); alarivi kovakoodattu.
+- **Äänimaisema**: 1. ajo epäonnistui (opas jäi aloitusvalikkoon → ajo-aanimaisema.sh korjattu: "opas toive Eiffel-torni Pariisissa").
+  2. ajo paljasti viat: aineistoindeksi 403 ilman natiivin otsakkeita + tuuli-01 404 joka kehys → korjattu ab5407af (EI käännetty).
+  Pelikoodarilta pyydetty tuuli-01 ja sade-01. Tarvitaan käännös ab5407af + 15 min simua.
+
 ## TILA 7.10. 01.5x — OMISTAJA 01.3x: "LINNA LOPPUUN MAHDOLLISIMMAN HYVÄKSI (ELEET YMS.)", SIIRTOSEPPÄ VETÄÄ
 
 - Lista (Päätoimittaja hyväksyi järjestyksen): docs/raportit/siirtoseppa-linna-valmiiksi-20261007.md. 1 eleet (minä), 2 kohdistus
