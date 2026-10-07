@@ -14,7 +14,7 @@ ja aalto committataan + pushataan.
 
 | Aalto | Kaupungit | Tila |
 |---|---|---|
-| 1 | amsterdam, ateena (VALMIS) / barcelona, bergen / berliini, bryssel (VALMIS) / budapest, bukarest | käynnissä |
+| 1 | amsterdam, ateena (VALMIS) / barcelona, bergen / berliini, bryssel (VALMIS) / budapest, bukarest (VALMIS) | käynnissä |
 | 2 | dublin, edinburgh (käynnissä) / firenze, granada / helsinki, islanti / kosice, krakova | osin käynnissä |
 
 Agentit ajetaan liukuvasti: kun pari valmistuu, se committataan heti ja seuraava pari käynnistyy (max 4 rinnakkain).

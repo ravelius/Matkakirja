@@ -440,3 +440,213 @@ Ei korjattavaa. Tarkistettu: 35 sanaa, alkaa suomenkielisellä sanalla, kuva on 
 - **Oikeuspalatsin hissi:** "ilmainen julkinen hissi alas Marollesiin" pitää (kaksi hissiä, käytössä vuodesta 2002, maksuttomia), vaikka ne ovat kärsineet toistuvista vioista. Ei muutoksia.
 - **Grand-Placen kierrosversion Unesco-virke:** harkitsin sen vaihtamista tarinaan (löydöstyyppi 2), mutta kierrosversiossa on jo kaksi ihmistarinaa, ja vuosiluku kertoo pelaajalle, miksi aukio on suojeltu. Jätetty.
 - **Epävarmuus Päätoimittajalle:** Pyhän Mikaelin katedraalin kellopeli on 49 kelloa, mutta Wikipedian mukaan vain seitsemän niistä soi varsinaisina kelloina. Kierrosversio sanoo "neljänkymmenenyhdeksän kellon kellopeli", mikä on kellopelistä puhuttaessa oikein, mutta jos tarkkuutta halutaan, virke voi täsmentää, että soittokelloja on seitsemän.
+
+# Toimituksellinen tarkistus: Budapest ja Bukarest
+
+Tarkistaja: toimituksellinen passi 7.10.2026. Verkko auki, kaikki alla mainitut lähteet avattu WebFetchillä
+(WebSearch vain lähteiden löytämiseen). Löydöstyyppi 4 (avauksen kierroslause) ohitettu ohjeen mukaan.
+
+## Budapest
+
+Tarkistin: **0 virhettä, 9 huomiota** (sama määrä kuin ennen passia; kaikki huomiot ovat
+"ei ala paikan nimellä" suomenkielisen etusanan takia sekä "avaus puuttuu").
+Muutoksia: **13** (kuusi `lyhyt`-kenttää, kaksi `teksti`-kenttää, yksi `syventava`, kaksi `kysymykset`-korjausta,
+lisäksi lähdekorjauksia). Avaukseen ei muutoksia.
+
+### Sankarien aukio — kenttä `teksti`
+- **Vanha:** "Sankarien aukio avautuu Andrássynkadun päässä kaupunginpuiston laidalla, ja sen keskeltä nousee kolmekymmentäkuusi metriä korkea pylväs, **jonka huipulla seisoo arkkienkeli Gabriel. Legendan mukaan enkeli ilmestyi Tapanille unessa ja tarjosi hänelle Unkarin kruunua**, ja patsaskin pitää kruunua oikeassa kädessään. Pylvään juurella ratsastavat Árpádin johtamat seitsemän heimopäällikköä, ja taustan kaarevissa pylväskäytävissä seisoo kuninkaiden ja kansallissankarien patsaita. Muistomerkkiä alettiin rakentaa vuonna 1896 Unkarin tuhatvuotisjuhlaksi, mutta se valmistui vasta vuonna 1929. Aukion laidoilla seisovat Taidemuseo ja Taidehalli."
+- **Uusi:** "Sankarien aukio avautuu Andrássynkadun päässä kaupunginpuiston laidalla, ja sen keskeltä nousee kolmekymmentäkuusi metriä korkea pylväs, jonka huipulle arkkienkeli Gabrielin patsas nostettiin vuonna 1901. Legendan mukaan enkeli ilmestyi unessa paavi Sylvester toiselle ja käski lähettää kruunun Tapanille, ja patsas pitää samaa kruunua oikeassa kädessään. Syksyllä 2024 patsas laskettiin alas kunnostettavaksi, ja jalustan alta löytyi lasiastia, johon oli kätketty kirjerulla ja kahdeksan kolikkoa. Pylvään juurella ratsastavat Árpádin johtamat seitsemän heimopäällikköä, ja taustan pylväskäytävissä seisoo kuninkaiden ja kansallissankarien patsaita. Muistomerkkiä alettiin rakentaa vuonna 1896 tuhatvuotisjuhlaksi, mutta se valmistui vasta vuonna 1929."
+- **Syy:** Kaksi löydöstä samassa virkkeessä. (5) NYKYAIKA, passin vakavin löydös: **Gabrielin patsas EI ole tällä hetkellä pylvään huipulla.** Se laskettiin alas syksyllä 2024 ensimmäisen kerran yli 120 vuoteen, koska kunto oli hengenvaarallinen, ja myös pylvästä korjataan. Maaliskuussa 2026 tavoite oli palautus vuoden 2026 loppuun; viimeisimmät tiedot sanovat, että palautus siirtyy seuraavaan vuoteen. Teksti sanoi preesensissä, että enkeli seisoo huipulla — väärin lokakuussa 2026. Uusi muotoilu kertoo vain pysyviä tosiasioita (nostettiin 1901, laskettiin 2024 kunnostettavaksi), joten se ei vanhene kumpaankaan suuntaan. (3) FAKTOJEN VIVAHDE: legendassa arkkienkeli ilmestyi **paavi Sylvester toisen** unessa ja antoi hänelle kruunun pian saapuvan kansan johtajalle — ei Tapanille, jolle enkeli olisi "tarjonnut kruunua". Lisäksi aikakapselilöytö korvaa poistetun museoluettelon konkreettisella yksityiskohdalla; sanamäärä 72 → 88 (raja 65–90), virkkeitä yhä 5.
+- **Lähde:** https://nepszava.hu/3296473_gabriel-arkangyal ; https://www.origo.hu/itthon/2026/03/gabriel-arkangyal-szobra-alol-idokapszula-hosok-tere ; https://budappest.hu/budapest-hosok-tere-gabriel-arkangyal-tortenete/ ; https://en.wikipedia.org/wiki/Heroes%27_Square_(Budapest)
+
+### Sankarien aukio — kenttä `kysymykset` (3.)
+- **Vanha:** "Mitä aukion laidan taidemuseossa on?"
+- **Uusi:** "Miksi Gabrielin patsas laskettiin alas?"
+- **Syy:** (7) Vanha kysymys kysyi käytännössä "mitä näyttelyssä on nyt", mikä on ohjeessa nimenomaan kielletty, eikä museo esiinny enää tekstissä. Uuden kysymyksen oletus on tosi ja vastaus pysyvä, ja se antaa pelaajalle väylän nykytilaan (patsas on kunnostuksessa).
+- **Lähde:** https://nepszava.hu/3296473_gabriel-arkangyal
+
+### Gellért-kylpylä — kenttä `teksti`
+- **Vanha:** "…ja vuonna 1927 sen ulkoalueelle rakennettiin aaltoallas, **jota pidetään maailman ensimmäisenä**."
+- **Uusi:** "…ja vuonna 1927 sen ulkoalueelle rakennettiin aaltoallas, **yksi maailman ensimmäisistä**."
+- **Syy:** (3) Superlatiivi ei kestä tarkistusta. Matkailusivut toistavat väitettä, mutta Radebeulin Bilzbadiin asennettiin Undosa-aaltokone jo 1912, ja se oli ensimmäinen maalle rakennettu julkinen aaltoallas; englanninkielinen Wikipedia kutsuu Gellértin allasta nimenomaan "another early public wave pool". Edellinen tarkistaja hyväksyi väitteen hakuotteiden perusteella.
+- **Lähde:** https://en.wikipedia.org/wiki/Wave_pool ; https://de.wikipedia.org/wiki/Bilz-Bad ; https://en.wikipedia.org/wiki/Gell%C3%A9rt_Baths
+
+### Gellért-kylpylä — kenttä `kysymykset` (2.)
+- **Vanha:** "Miten maailman ensimmäinen aaltoallas toimi?"
+- **Uusi:** "Miten kylpylän aaltokone sai aallot liikkeelle?"
+- **Syy:** (7) Kysymyksen oletus oli epätosi samasta syystä kuin yllä. Kysymys on yhä tästä kohteesta ja vastaus pysyvä.
+- **Lähde:** https://en.wikipedia.org/wiki/Wave_pool
+
+### Kalastajanlinnake — kenttä `lyhyt`
+- **Vanha:** "Kalastajanlinnakkeen terasseilta näkyy Tonavan yli suoraan parlamenttitaloon. Linnakkeen ja viereisen Matiaksenkirkon nykyinen ilme on saman miehen käsialaa: arkkitehti Frigyes Schulek johti 1800-luvun lopulla myös kirkon uudistamista ja palautti sen goottilaiseen asuun."
+- **Uusi:** "Kalastajanlinnake vaurioitui pahoin toisen maailmansodan lopun taisteluissa, ja sen korjaustyötä johti vuosina 1947 ja 1948 János Schulek, linnakkeen suunnitelleen Frigyes Schulekin poika. Viimeiset työt valmistuivat vasta vuonna 1953, ja terasseilta aukeaa jälleen näkymä Tonavan yli parlamenttitaloon."
+- **Syy:** (1) PÄÄLLEKKÄISYYS: tämä ja Matiaksenkirkon `lyhyt` kertoivat kierroksella peräkkäisissä pysähdyksissä (4. ja 5.) saman asian — Schulek uudisti Matiaksenkirkon goottilaiseen asuun 1800-luvun lopulla. Lisäksi (2) kierrosversio oli arkkitehti- ja tyylitietoa, ei tarinaa. Uusi versio kertoo tarinan, joka ei toistu missään muussa kohteessa: pojan johtama isänsä työn korjaus. Näköalavirke säilyi.
+- **Lähde:** https://hu.wikipedia.org/wiki/Hal%C3%A1szb%C3%A1stya ("A helyreállítást 1947-48-ban az építő Schulek Frigyes fia, Schulek János vezette"; jatkotyöt Bors László johdolla 1953 asti)
+
+### Kalastajanlinnake — kenttä `teksti` (kaksi vivahdetta)
+- **Vanha:** "…jonka seitsemän suippokattoista tornia muistuttavat unkarilaisten **seitsemästä heimosta**. … Nimensä se sai **keskiajan kalastajien killalta, jonka tehtävä oli puolustaa** juuri tätä muurin osuutta."
+- **Uusi:** "…jonka seitsemän suippokattoista tornia muistuttavat unkarilaisten **seitsemästä heimopäälliköstä**. … Nimensä se sai **alapuolella sijainneesta kalastajien kaupunginosasta, jonka kilta puolusti tarpeen tullen** juuri tätä muurin osuutta."
+- **Syy:** (3) Kaksi vivahdetta. Tornit symboloivat seitsemää **heimopäällikköä** (hét honfoglaló vezér) — niin sanoo myös kohteen oma lähderivi, jonka kanssa teksti oli ristiriidassa. Nimi tulee todennäköisemmin linnakkeen alapuolisesta Halászváros-kaupunginosasta kuin killasta, ja killan **tehtävä** oli kalakauppa; muuria se puolusti tarpeen tullen.
+- **Lähde:** https://hu.wikipedia.org/wiki/Hal%C3%A1szb%C3%A1stya
+
+### Matiaksenkirkko — kenttä `lyhyt`
+- **Vanha:** "Matiaksenkirkon nykyinen ulkoasu on peräisin 1800-luvun lopulta, jolloin arkkitehti Frigyes Schulek uudisti sen varhaisgoottilaiseen tyyliin, jota hän piti rakennukselle ihanteellisena. Kellotorni nousee noin seitsemänkymmenenkahdeksan metrin korkeuteen ja on linnamäen korkein rakennelma."
+- **Uusi:** "Matiaksenkirkosta kerrotaan legenda: kun kristityt joukot piirittivät Budaa, tykinkuula mursi kirkon seinän ja sen takaa paljastui vanha Marian patsas. Patsas ilmestyi moskeijassa rukoilevien osmanien eteen, heidän taistelutahtonsa romahti, ja kaupunki kaatui samana päivänä."
+- **Syy:** (2) Kierrosversio oli täsmälleen sitä, mitä ohje kieltää: "uudisti arkkitehti X tyyliin Y" ja korkeusmitta. Tästä ei jää mieleen mitään. Uusi versio on kirkon tunnetuin tarina, ja se on kirjoitettu legendaksi ("kerrotaan legenda"), ei tosiasiaksi (löydöstyyppi 3: legendan ja tosiasian ero). Vuosilukua 1686 ei toisteta, koska `teksti` kertoo sen — näin lyhyt ja teksti eivät kerro samaa.
+- **Lähde:** https://en.wikipedia.org/wiki/Matthias_Church ("an old votive Madonna statue was hidden behind the wall… the morale of the Muslim garrison collapsed and the city fell on the same day")
+
+### Budan linna — kenttä `lyhyt`
+- **Vanha:** "Budan linnamäelle on noussut köysirata vuodesta 1870. Avatessaan se oli Euroopan toinen laatuaan Lyonin jälkeen, ja yhä se kuljettaa matkustajia joen rannasta mäelle. Palatsin pohjoispuolella seisoo Sándorin palatsi, jossa on Unkarin presidentin virka-asunto ja työhuone."
+- **Uusi:** "Budan linnan länsipihalla on suihkulähde, joka esittää kuningas Matiaksen metsästysretkeä. Tarun mukaan kuningas kulki metsällä tuntemattomana ja rakastui talonpoikaistyttöön, kauniiseen Ilonkaan. Kun tyttö näki hänet kuninkaan asussa ja ymmärsi rakkauden mahdottomaksi, hän kuoli suruun."
+- **Syy:** (3) Vivahde oli väärä: "on noussut köysirata vuodesta 1870… ja yhä se kuljettaa" väittää yhtäjaksoista toimintaa, mutta pommit tuhosivat vaunut ja asemat toisessa maailmansodassa, rata purettiin ja se avattiin uudelleen vasta vuonna 1986 — yli neljäkymmentä vuotta myöhemmin. Lisäksi (2) viimeinen virke oli puhdasta hallintoa (presidentin virka-asunto ja työhuone). Korvaava tarina on kierroksen kannalta myös parempi: kierroksella oli kolme peräkkäistä "sota tuhosi, sitten korjattiin" -versiota, ja tämä poisti yhden. Köysiradan oikaistu tieto jäi lähderiville.
+- **Lähde:** https://en.wikipedia.org/wiki/Budapest_Castle_Hill_Funicular (tuhoutuminen ja uudelleenavaus 1986) ; https://en.wikipedia.org/wiki/Matthias_Fountain (Stróbl ja Hauszmann 1904; Vörösmartyn balladin Szép Ilonka)
+
+### Unkarin parlamenttitalo — kenttä `lyhyt`
+- **Vanha:** "Unkarin parlamenttitalon kupolisalissa on säilytetty vuodesta 2000 lähtien Unkarin pyhää kruunua ja muita kruunajaisesineitä, ja niitä vartioi vuorokauden ympäri armeijan kruunukaarti. **Kupoli on täsmälleen yhtä korkea kuin Pyhän Tapanin kirkon kupoli.**"
+- **Uusi:** "Unkarin parlamenttitalon kupolisalissa on säilytetty vuodesta 2000 lähtien Unkarin pyhää kruunua, ja sitä vartioi vuorokauden ympäri armeijan kruunukaarti. Kruunun huipulla oleva risti on vinossa, luultavasti siksi että se taittui 1600-luvulla, kun kruunu suljettiin hätäisesti rautaiseen arkkuun. Vinoutta ei ole oikaistu."
+- **Syy:** (1) PÄÄLLEKKÄISYYS: yhdeksänkymmenenkuuden metrin yhtäläinen korkeus esiintyi kierroksella kolme kertaa — parlamentin `lyhyt`, Pyhän Tapanin kirkon `teksti` ja saman kirkon `lyhyt`. Jätin faktan sinne, minne se kuuluu (kirkon `teksti`), ja korvasin sen täällä yksityiskohdalla, joka jää mieleen ja jatkaa saman virkkeen kruunuaihetta.
+- **Lähde:** https://en.wikipedia.org/wiki/Holy_Crown_of_Hungary ("The cross was knocked crooked during the 17th century… possibly by the top of the iron chest… being hastily closed… The cross has since been left in this slanted position")
+
+### Unkarin parlamenttitalo — kenttä `syventava`
+- **Vanha:** "Miksi kupoli on yhdeksänkymmentäkuusi metriä?"
+- **Uusi:** "Miten pyhä kruunu palasi Unkariin?"
+- **Syy:** (1) `teksti` vastasi tähän syventävään kysymykseen jo itse ("Luku on valittu tarkoituksella: se muistuttaa vuodesta 896"), joten opas olisi toistanut itseään. Uuden kysymyksen oletus on tosi: kruunu palautettiin Yhdysvalloista Unkariin tammikuussa 1978.
+- **Lähde:** https://en.wikipedia.org/wiki/Holy_Crown_of_Hungary
+
+### Pyhän Tapanin kirkko — kenttä `lyhyt`
+- **Vanha:** "Pyhän Tapanin kirkko on nimetty Unkarin ensimmäisen kuninkaan mukaan. Kirkko vihittiin vuonna 1905, ja seuraavana vuonna sen viimeinen kivi asetettiin paikalleen keisari Frans Joosefin läsnä ollessa. **Kupolin ja parlamentin yhtäläisen korkeuden sanotaan kuvaavan kirkon ja valtion tasapainoa.**"
+- **Uusi:** "Pyhän Tapanin kirkon suuren kellon vei Saksan armeija toukokuussa 1944 sotatarvikkeiksi. Vuonna 1990 saksalaiset lahjoittivat kirkolle uuden kellon, joka valettiin Passaussa ja painaa yli yhdeksän tonnia; se on Unkarin suurin kello."
+- **Syy:** (1) Sama kohde kertoi `teksti`- ja `lyhyt`-kentässä saman asian (kupolit yhtä korkeat), mikä on ohjeessa erikseen kielletty, ja ensimmäinen virke oli pelkkää perustietoa. (2) Uusi versio on tarina, jossa on käänne: saksalaiset veivät kellon sotatarvikkeiksi ja saksalaiset lahjoittivat uuden.
+- **Lähde:** https://pestbuda.hu/en/cikk/20200821_the_bells_of_saint_stephen_s_basilica_hungarian_and_german_masterpieces (Hősök- eli Szent Imre -kello 7 945 kg vietiin 20.5.1944; Szent István -kello 9 250 kg, Perner, Passau, vihitty 20.8.1990, Unkarin suurin)
+
+### Lähdekorjaukset (ei tekstimuutosta)
+- **Matiaksenkirkko:** tornin korkeuden lähde `famous-historic-buildings.org.uk` → `https://hu.wikipedia.org/wiki/Budav%C3%A1ri_Nagyboldogasszony-templom`, joka sanoo tarkasti "A Mátyás-torony teljes magassága a templom padozatától 78,16 méter". **Tämä ratkaisee PILVI-RAPORTIN epävarmuuden "Matiaksenkirkon torni 78/80 m": 78 on oikea**, ja matkailusivujen 80 metriä on pyöristys. Tekstin "noin seitsemänkymmentäkahdeksan metriä" ja `korkeus_m` 78 jäivät ennalleen.
+- **Kalastajanlinnake, Budan linna, Pyhän Tapanin kirkko, Sankarien aukio, Gellért-kylpylä:** lähderivit päivitetty vastaamaan muuttuneita väitteitä, kaikki itse avatuista osoitteista.
+
+### Tarkistettu ja jätetty ennalleen (ei korjattavaa)
+- **Gellért-kylpylä, remontti (korkean riskin kohta):** kylpylä suljettiin 1.10.2025 ja virallinen tavoite on avautuminen 2028; rahoituspäätös oli heinäkuussa 2026 yhä avoin, joten aikataulu voi venyä. Tekstin muotoilu "avautua aikaisintaan vuonna 2028" pitää paikkansa eikä vanhene, joten se jäi ennalleen. Lähde: https://en.wikipedia.org/wiki/Gell%C3%A9rt_Baths
+- **Budan linna, kansallisgalleria ja kansalliskirjasto (korkean riskin kohta):** Városligetin uusi galleriahanke peruttiin kesäkuussa 2026, uutta paikkaa ei ole päätetty, ja **sekä kansallisgalleria että Széchényin kansalliskirjasto ovat yhä Budan linnassa**. Tekstin "nykyään palatsissa toimivat…" on oikein lokakuussa 2026. **PILVI-RAPORTIN epävarmuus ratkaistu toistaiseksi.** Lähteet: https://en.wikipedia.org/wiki/National_Sz%C3%A9ch%C3%A9nyi_Library ; https://www.theartnewspaper.com/2026/09/08/hungary-new-government-scraps-national-gallery-plans
+- **Gellértinvuori, Citadella:** avautui pääsiäisenä 5.4.2026 yhdentoista vuoden sulun jälkeen; puisto ja näköalaterassit maksutta avoinna, läntisessä tykkitornissa näyttely "A Szabadság Bástyája". Kierrosversio on oikein.
+- **Matiaksenkirkko, Matias Corvinuksen häät:** molemmat häät (Katariina Podiebradilainen 1463, Beatrice Napolilainen 1476) pidettiin tässä kirkossa — oikein. Lisztin kruunajaismessu kantaesitettiin kruunajaisissa 1867 — oikein.
+- **Pyhän Tapanin kirkko, kupolin romahdus:** 22.1.1868 vahvistui hu.wikipediasta; englanninkielisen Wikipedian "1858" on virhe. Tekstin aikajana (Hild kuoli 1867, kupoli romahti seuraavan vuoden tammikuussa) on oikein.
+- **Dohány-kadun synagoga, Tony Curtis:** "Muistomerkin rahoitti näyttelijä Tony Curtis unkarilaissyntyisen isänsä muistoksi" vahvistui ("paid for by the late American actor Tony Curtis for his Hungarian-born father Emanuel Schwartz"), joten pelin aineiston heikompi muotoilu "tuki osaltaan" ei ollut syy muuttaa tekstiä.
+- **Gellért-kylpylä, naapurihotelli:** kysymyksen "Mitä kylpylän naapurihotellille tapahtuu?" oletus on tosi — Hotel Gellért suljettiin 1.12.2021 ja avautuu Mandarin Oriental Gellertinä vuonna 2027.
+- **Vapaudensilta:** sillan kesäiset autottomat viikonloput kerrotaan imperfektissä, joten teksti ei väitä mitään nykytilasta väärin; syyskuussa 2026 silta suljettiin autoilta kaupungin autottomana viikonloppuna, eli perinne jatkuu.
+- **Unkarin valtionooppera:** avautui 12.3.2022 lähes viiden vuoden korjauksen jälkeen, Mahler johtajana 1888–1891 — oikein.
+- **Avaus (avaukset/budapest.md):** ei muutoksia. 37 sanaa, alkaa suomenkielisellä sanalla "Tervetuloa", kuva on aidosti ilmasta nähtävä (Tonava kahden puolen, Budan kukkulat, Pestin kattojen meri), ja kierroksen ensimmäinen kohde Gellértinvuori vastaa pohjan `kierros`-listaa.
+- **Kierroksen kahdeksan `lyhyt`-versiota luettiin peräkkäin** passin alussa ja uudelleen muutosten jälkeen. Loput päällekkäisyydet (turullintu esiintyy sekä Budan linnan että Vapaudensillan `teksti`-kentässä, mutta Vapaudensilta ei ole kierroksella) jätettiin.
+
+### Epävarmuudet Päätoimittajalle
+- **Gabrielin patsas:** uusi muotoilu kestää sekä nykytilan että palautuksen, mutta jos patsas nousee takaisin, kaupunkiin kannattaa jossain vaiheessa palauttaa virke siitä, että enkeli seisoo huipulla. Palautus siirtyi maaliskuun 2026 tavoitteesta ("vuoden loppuun") seuraavaan vuoteen.
+- **Kierroksen sotateema:** kolmen kierrospysähdyksen (Ketjusilta, Kalastajanlinnake, Pyhän Tapanin kirkko) `lyhyt` sijoittuu toiseen maailmansotaan, vaikka jokainen kertoo eri tarinan (silta avattiin uudelleen tasan sata vuotta myöhemmin; poika johti isänsä työn korjausta; kello vietiin ja saksalaiset lahjoittivat uuden). Poistin yhden neljästä vaihtamalla Budan linnan version. Jos Päätoimittaja haluaa vielä vähemmän, Kalastajanlinnakkeen versio on helpoin vaihtaa (vaihtoehto: Schulekin leveä porras korvasi ahtaan ja pimeän jesuiittaportaan, joka oli siihen asti ainoa tie linnamäelle).
+- **Gellért-kylpylän avautuminen** voi siirtyä vuoteen 2029 tai myöhemmäksi rahoituspäätöksen takia; teksti ei lukitse vuotta.
+- **Nagyn hautajaisten väkimäärä** jää muotoon "satoja tuhansia" (arviot 200 000–250 000).
+- **Pyhän Tapanin kirkon päätöskivi:** hu.wikipedia vahvistaa päivän 8.12.1906, jota edellinen tarkistaja ei saanut varmistettua. Tieto ei ole enää tekstissä, mutta se on käytettävissä, jos sitä halutaan takaisin.
+
+## Bukarest
+
+Tarkistin: **0 virhettä, 7 huomiota** (sama määrä kuin ennen passia; kuusi "ei ala paikan nimellä" ja "avaus puuttuu").
+Muutoksia: **14** (seitsemän `lyhyt`-kenttää, kolme `teksti`-kenttää, yksi `kuvaus`, kaksi `kysymykset`-korjausta,
+lisäksi lähdekorjauksia). Avaukseen ei muutoksia.
+
+Yleishavainto Päätoimittajalle: Bukarestin kierrosversiot olivat järjestelmällisesti löydöstyypin 2 vastaisia.
+Edellinen (pilvi)sessio ei päässyt verkkoon, joten se poisti värikkäät mutta vahvistamattomat väitteet ja korvasi ne
+varmoilla hallinnollisilla tiedoilla: perustamisvuosilla, arkkitehtien ja seurojen nimillä, pinta-aloilla ja
+avaamisvuosilla. Seitsemästä kierrosversiosta kahdeksasta ei jäänyt mieleen mitään. Nyt verkko oli auki, joten
+tilalle löytyi vahvistettuja tarinoita.
+
+### Herăstrău-puisto — kenttä `teksti`
+- **Vanha:** "Toisen maailmansodan jälkeen puisto nimettiin Stalinin mukaan, ja sen sisäänkäynnille pystytettiin Stalinin patsas; **vuonna 1956 patsas kaadettiin** ja puisto nimettiin järven mukaan."
+- **Uusi:** "Toisen maailmansodan jälkeen puisto nimettiin Stalinin mukaan, ja sen sisäänkäynnille nousi vuonna 1951 yhdeksän metriä korkea pronssinen Stalin; patsas purettiin yhdessä yössä maaliskuussa 1962, ja samalla paikalla seisoo nyt Charles de Gaullen patsas."
+- **Syy:** (3) PILVI-RAPORTIN epävarmuus "Stalinin patsaan vuodet ristiriidassa" **ratkaistu, ja vanha tieto oli väärä.** Patsas paljastettiin vuonna 1951 ja purettiin yöllä maaliskuussa 1962 — ei vuonna 1956. Englanninkielinen Wikipedia niputtaa patsaan purun ja puiston nimenmuutoksen samaan vuoteen 1956; romaniankielinen Wikipedia käsittelee patsasta omassa artikkelissaan ja antaa vuodet 1951 ja 1962, samoin puiston artikkeli ("erected in 1951 and demolished in 1962"). Vuosi 1956 koskee nimenmuutosta, ei patsasta. Lisäsin Charles de Gaullen patsaan, joka seisoo nyt samalla paikalla — nykyajan ankkuri samaan virkkeeseen. Sanamäärä 77 → 88 (raja 65–90), virkkeitä yhä 5.
+- **Lähde:** https://ro.wikipedia.org/wiki/Statuia_lui_Stalin_din_Bucure%C8%99ti ; https://ro.wikipedia.org/wiki/Parcul_Her%C4%83str%C4%83u ; https://en.wikipedia.org/wiki/King_Michael_I_Park
+
+### Romanian patriarkaalinen katedraali — kenttä `teksti` (kaksi löydöstä)
+- **Vanha:** "…ja ylhäältä sen katolla erottuu **kolme kupolia ja neljä tornia**. … Vuodesta 1925, jolloin Romanian ortodoksinen kirkko sai oman patriarkan, **kirkko on ollut sen pääkirkko**."
+- **Uusi:** "…ja ylhäältä sen katolta kohoaa **neljä monikulmaista tornia**. … Vuodesta 1925, jolloin Romanian ortodoksinen kirkko sai oman patriarkan, **se on ollut patriarkan istuinkirkko**."
+- **Syy:** (3) PILVI-RAPORTIN epävarmuus "katedraalin kolme kupolia ja neljä tornia (yksi lähde)" **ratkaistu, ja vanha tieto oli väärä.** Bukarestin arkkipiispakunnan oma sivu sanoo: "În elevaţie prezintă aceleaşi patru turle prismatice ca şi ctitoria lui Neagoe Basarab de la Argeş" — neljä monikulmaista tornia, samat kuin esikuvassa Curtea de Argeșissa. Ei kolmea kupolia ja neljää tornia; inyourpocket oli väärässä. (5) NYKYAIKA: sana "pääkirkko" ei enää pidä paikkaansa yksiselitteisesti, koska Romanian uusi kansalliskatedraali vihittiin lokakuussa 2025 ja se rakennettiin nimenomaan patriarkaatin katedraaliksi; se on myös maailman suurin ortodoksinen kirkko. Vanha kirkko on edelleen nimeltään Catedrala Patriarhală ja patriarkan istuinkirkko, joten tarkka sana korvasi epätarkan. Lokakuun pyhiinvaellus tarkistettiin erikseen: pyhän Demetrios Uuden reliikit ovat yhä tässä kirkossa hopeisessa arkussa, ja pyhiinvaellus pidetään täällä, joten tekstin viimeinen virke on oikein.
+- **Lähde:** https://arhiepiscopiabucurestilor.ro/exarhat/manastiri/catedrala-patriarhala ; https://ro.wikipedia.org/wiki/Catedrala_Patriarhal%C4%83_din_Bucure%C8%99ti ; https://en.wikipedia.org/wiki/National_Cathedral_of_Romania
+
+### Romanian patriarkaalinen katedraali — kenttä `kuvaus`
+- **Vanha:** "Romanian ortodoksisen kirkon pääkirkko"
+- **Uusi:** "Patriarkan istuinkirkko mäen laella"
+- **Syy:** (5) Sama NYKYAIKA-peruste kuin yllä: kuvaus oli ristiriidassa uuden kansalliskatedraalin kanssa.
+- **Lähde:** https://en.wikipedia.org/wiki/National_Cathedral_of_Romania
+
+### Romanian patriarkaalinen katedraali — kenttä `lyhyt`
+- **Vanha:** "Romanian patriarkaalisen katedraalin vieressä on patriarkaatin palatsi, joka valmistui vuonna 1907 kansanedustajien istuntotaloksi, ja se oli Romanian ensimmäinen teräsbetonirakennus. Parlamentti kokoontui siellä vuoteen 1997, jolloin talo siirtyi kirkolle. Kirkon kellotornin rakennutti ruhtinas Constantin Brâncoveanu vuonna 1698."
+- **Uusi:** "Romanian patriarkaalisen katedraalin hopeisessa arkussa ovat pyhän Demetrios Uuden luut. Venäläinen kenraali Saltikov aikoi lähettää ne Venäjälle vuonna 1774, mutta romanialaisen Hagi Dimitrien pyynnöstä hän antoi ne Valakialle. Pyhimyksen oikean käden kenraali kuitenkin vei Kiovaan."
+- **Syy:** (2) Vanha versio oli kokonaan hallintoa ja tekniikkaa — valmistumisvuosi, rakennusmateriaali, parlamentin muutto, kellotornin tilaaja — eikä se edes kertonut kirkosta vaan naapuritalosta. Uusi versio on reliikkien tulotarina, jossa on ihminen, ristiriita ja käänne, ja se liittyy suoraan siihen, mitä kirkossa yhä on.
+- **Lähde:** https://ro.wikipedia.org/wiki/Sf%C3%A2ntul_Dimitrie_cel_Nou ; https://arhiepiscopiabucurestilor.ro/exarhat/manastiri/catedrala-patriarhala (reliikit tuotiin hopeisessa arkussa Basarabin kylästä 13.7.1774)
+
+### Romanian patriarkaalinen katedraali — kenttä `kysymykset` (1.)
+- **Vanha:** "Kuka oli pyhä Demetrios Uusi?"
+- **Uusi:** "Miksi Demetrios on Bukarestin suojelija?"
+- **Syy:** (7) Kysymys oli sanasta sanaan sama kuin `syventava`-kenttä, mikä on ohjeessa erikseen kielletty. Uusi kysymys koskee samaa pyhimystä mutta eri asiaa, ja sen oletus on tosi.
+- **Lähde:** https://basilica.ro/en/celebrations-of-saint-demetrius-the-new-begin-at-patriarchal-cathedral-in-bucharest/
+
+### Vallankumouksen aukio — kenttä `lyhyt`
+- **Vanha:** "Vallankumouksen aukion nimi oli vuoteen 1989 asti Palatsiaukio, sillä sen laidalla on entinen kuninkaanlinna. **Joulukuun 1989 taisteluissa linnassa toiminut taidemuseo kärsi pahoin, ja yli tuhat taideteosta vaurioitui tai tuhoutui.** Aukion muistomerkki on omistettu vallankumouksen uhreille."
+- **Uusi:** "Vallankumouksen aukion laidalla, taidemuseota vastapäätä, on yliopiston keskuskirjasto, joka syttyi palamaan joulukuun 1989 taisteluissa. Tulessa tuhoutui yli puoli miljoonaa kirjaa ja lähes neljätuhatta käsikirjoitusta. Kirjasto korjattiin ja avattiin uudelleen vuonna 2001."
+- **Syy:** (1) PÄÄLLEKKÄISYYS: tämä kierrosversio kertoi täsmälleen saman asian kuin seuraavan pysähdyksen (Romanian kansallinen taidemuseo, kierroksen 6.) `teksti`: museo kärsi joulukuussa 1989 ja yli tuhat teosta vaurioitui tai tuhoutui. Pysähdykset ovat kierroksella peräkkäin. Lisäksi viimeinen virke toisti oman `teksti`-kentän muistomerkkiä. Uusi versio kertoo saman päivän toisen menetyksen samalta aukiolta, josta kohteen `teksti` ei kerro mitään.
+- **Lähde:** https://en.wikipedia.org/wiki/Central_University_Library,_Bucharest ("over 500,000 books, along with 3,700 manuscripts, were burnt"; avattiin uudelleen 20.11.2001; sijaitsee taidemuseota vastapäätä). Hakuotteissa mainittiin myös Eminescun, Maiorescun ja Caragialen käsikirjoitukset, mutta en saanut lähdettä auki, joten jätin nimet pois.
+
+### Romanian kansallinen taidemuseo — kenttä `lyhyt`
+- **Vanha:** "Romanian kansallisen taidemuseon eurooppalaisen taiteen galleria on linnan Kretzulescun siivessä, ja sen noin kolmesataa teosta esittelevät Euroopan taidekouluja 1300-luvulta 1800-luvulle. Linnan uudelleenrakentamisen käynnisti kuningas Kaarle toinen. Museon keskiaikaisen taiteen kokoelma avattiin uudelleen keväällä 2002."
+- **Uusi:** "Romanian kansallisen taidemuseon eurooppalainen kokoelma oli alun perin kuningas Kaarle ensimmäisen oma. Hänen keräämiensä teosten joukossa on Rembrandtin, El Grecon ja Rubensin maalauksia, ja museon romanialaisessa kokoelmassa on Constantin Brâncușin veistoksia."
+- **Syy:** (2) Vanha versio oli kokoelmaluetteloa ja hallintoa: siipi, teosmäärä, vuosiluvut, kuka käynnisti rakennustyöt. (1) Lisäksi se toisti kohteen oman `teksti`-kentän avaamisvuosia. Uudessa versiossa on yksi yllätys: Bukarestin maailmanluokan vanhan taiteen kokoelma on yhden kuninkaan oma kokoelma.
+- **Lähde:** https://en.wikipedia.org/wiki/National_Museum_of_Art_of_Romania ("The European Museum Art Gallery reopened in 2000 with 214 works of art from the collection of King Carol I", El Greco, Rembrandt, Bruegel, Rubens; Brâncuși ja Paciurea romanialaisessa kokoelmassa)
+
+### Romanian kansallinen taidemuseo — kenttä `kysymykset` (1.)
+- **Vanha:** "Mitkä taideteokset tuhoutuivat vallankumouksessa?"
+- **Uusi:** "Mikä on museon kuuluisin maalaus?"
+- **Syy:** (7) Kysymys toisti `syventava`-kentän ("Mitkä teokset tuhoutuivat vuonna 1989?") lähes sanasta sanaan. Uuden kysymyksen oletus on tosi ja vastaus pysyvä.
+- **Lähde:** https://en.wikipedia.org/wiki/National_Museum_of_Art_of_Romania
+
+### Romanian ateneum — kenttä `lyhyt`
+- **Vanha:** "Romanian ateneumin rakennutti vuonna 1865 perustettu Romanian ateneumin kulttuuriseura tontille, joka oli kuulunut Văcărescun suvulle. Vaikka talo avattiin vuonna 1888, rakennustyöt jatkuivat vielä vuoteen 1897 asti. Seuran perustajiin kuuluivat muun muassa Constantin Esarcu ja Nicolae Kretzulescu."
+- **Uusi:** "Romanian ateneumin tontille oli alettu rakentaa ratsastusseuran maneesia, mutta työ keskeytyi, ja ympyränmuotoinen perustus jäi paikalleen. Konserttitalo suunniteltiin sen päälle sellaisenaan, ja siksi sali on pyöreä ja sen kattona on kupoli."
+- **Syy:** (2) Vanha versio oli oppikirjaesimerkki kielletystä muodosta: seuran perustamisvuosi, tontin aiempi omistaja, rakennusvuodet ja perustajien nimet. Uusi versio vastaa siihen, mitä kohteen `teksti` herättää — miksi konserttitalo on pyöreä — ja vastaus on yllättävä: talo seisoo kesken jääneen ratsastusmaneesin ympyränmuotoisen perustuksen päällä.
+- **Lähde:** https://ro.wikipedia.org/wiki/Ateneul_Rom%C3%A2n ("planurile clădirii au fost concepute de arhitectul francez Albert Galleron, în așa fel încât să se poată folosi fundația deja turnată a manejului început de «Societatea Equestra Română»") ; https://www.secretromania.com/romanian-athenaeum-bucharest/ (vahvistus: perustus pakotti pyöreän muodon ja kupolin)
+
+### Riemukaari — kenttä `lyhyt`
+- **Vanha:** "Riemukaaren julkisivujen veistokset ovat romanialaisten kuvanveistäjien, muun muassa Ion Jalean ja Dimitrie Paciurean, käsialaa. Kaaren sisältä portaat johtavat katolle näköalaterassille. Kaari on rakennettu Transilvanian Devasta louhitusta graniitista. Arkkitehti Petre Antonescu suunnitteli sekä vuoden 1922 väliaikaisen kaaren että nykyisen."
+- **Uusi:** "Riemukaaren eteläsivulla olivat kuningas Ferdinandin ja kuningatar Marian kuvat, mutta kommunistihallinto poisti ne ja asetti tilalle kaksi suurta kivikukkaa. Vuoden 1989 jälkeen kukat purettiin ja paikoille nousivat pronssiset medaljongit, mutta kuninkaan puheita ei ole kaiverrettu takaisin kaaren kylkiin."
+- **Syy:** (2) Vanha versio oli neljä irrallista teknistä tietoa peräkkäin: veistäjien nimet, portaat, kivilaji, arkkitehti. Mitään ei jää mieleen. Uusi versio on tarina, jossa on ristiriita ja keskeneräinen loppu: kuninkaalliset poistettiin, kivikukat tulivat tilalle, kasvot palasivat mutta tekstit eivät.
+- **Lähde:** https://agerpres.ro/documentare/2023/05/11/atunci-i-acum-arcul-de-triumf--1106293 (Alexandru Călinescun efigiat poistettiin, tilalle "două mari flori de piatră"; vuoden 1989 jälkeen pronssimedaljongit; kaksi Ferdinandin julistusta poistettiin kaaren sivuilta eikä niitä ole palautettu)
+
+### CEC-palatsi — kenttä `lyhyt`
+- **Vanha:** "Säästöpankin palatsin rakentaminen alkoi kesäkuussa 1897, ja työmaata valvoi romanialainen arkkitehti Ion Socolescu. Julkisivua koristavat kaupan jumalan Merkuriuksen ja maanviljelyksen jumalattaren Demeterin patsaat. Tontilla seisoneen luostarikirkon oli aikoinaan kunnostanut ruhtinas Constantin Brâncoveanu."
+- **Uusi:** "Säästöpankin palatsin ovella seisovat kaupan jumala Merkurius ja maanviljelyksen jumalatar Demeter. Talo selvisi toisen maailmansodan pommituksista ja vuoden 1977 maanjäristyksestä vahingoittumatta, ja se on yksi harvoista Bukarestin vanhoista taloista, jota ei ole juuri muutettu avajaisten jälkeen."
+- **Syy:** (2) Vanha versio alkoi rakennustöiden aloituskuukaudella ja työmaavalvojan nimellä. (1) Lisäksi viimeinen virke kertoi majatalon elättämästä luostarista, mikä toisti kierroksen ensimmäisen pysähdyksen (Stavropoleos) `teksti`-kentän aiheen. Uusi versio sanoo saman kaupungissa, joka on purettu uudelleen ja uudelleen: tämä talo kesti pommitukset ja vuoden 1977 maanjäristyksen eikä ole juuri muuttunut.
+- **Lähde:** https://stirileprotv.ro/stiri/travel/palatul-cec-unul-dintre-simbolurile-bucurestiului-istoricul-si-curiozitati-despre-emblematica-cladire-de-pe-calea-victoriei.html ("A rezistat impecabil cutremurelor, inclusiv celui din anul 1977… şi a scăpat neatinsă chiar şi în timpul bombardamentelor din Al Doilea Război Mondial"; "una dintre puţinele clădiri vechi din Bucureşti care a rămas aproape neschimbată din anul inaugurării"; patsaat: Athanasie Constantinescu, Demeter ja Merkurius)
+
+### Romanian parlamenttitalo — kenttä `lyhyt`
+- **Vanha:** "…talo painaa noin neljä miljoonaa tonnia. **Lattiaa on kolmesataakuusikymmentäviisituhatta neliömetriä** ja huoneita yli tuhat, mutta suurin osa niistä on yhä tyhjillään. **Maan päällä talossa on kaksitoista kerrosta.**"
+- **Uusi:** "…talo painaa noin neljä miljoonaa tonnia. Huoneita on yli tuhat, mutta suurin osa niistä on yhä tyhjillään. Maan alle rakennettiin kahdeksan kerrosta, ja syvimmässä on ydinpommisuoja, josta johtaa tunneleita valtion virastoihin."
+- **Syy:** (2) Ohje kieltää kierrosversiossa nimenomaan pinta-alat, ja kerrosluku oli pelkkää täytettä. Paino ja tyhjät huoneet jäivät, koska ne jäävät mieleen; tilalle tuli yksityiskohta, joka jää vielä paremmin: kahdeksan maanalaista kerrosta, syvimmässä ydinpommisuoja ja kahdenkymmenen kilometrin tunneliverkko valtion virastoihin.
+- **Lähde:** https://en.wikipedia.org/wiki/Palace_of_the_Parliament ("The building has eight underground levels, the deepest housing a nuclear bunker, linked to main state institutions by 20 km of tunnels")
+
+### Vanha ruhtinaanhovi — kenttä `teksti`
+- **Vanha:** "Arkeologiset kaivaukset alkoivat vuonna 1953, ja **nykyään aluetta hoitaa Bukarestin kaupunginmuseo**."
+- **Uusi:** "Arkeologiset kaivaukset alkoivat vuonna 1953, ja aluetta hoitaa Bukarestin kaupunginmuseo, **mutta rauniot suljettiin yleisöltä vuonna 2015 korjausta varten**."
+- **Syy:** (5) NYKYAIKA, oma löydös jota PILVI-RAPORTTI ei tuntenut. Vanha virke antoi ymmärtää, että paikalla on toimiva museokohde. Kaupunginmuseon oma sivu sanoo: "The Old Princely Court is currently closed to the public for maintenance work on the archaeological site", ja vanhempi ilmoitus samalla sivulla: suljettu yleisöltä 18.11.2015 lähtien vahvistus- ja entisöintitöiden vuoksi. Museo toimi vuoteen 2015, ja toukokuussa 2026 Bukarestin pormestari allekirjoitti vasta rakennusluvan rakenteiden tukemiseen. Muotoilin virkkeen menneeksi tapahtumaksi ("suljettiin vuonna 2015"), joten se pysyy totena myös silloin, kun rauniot aikanaan avataan. Sanamäärä 74 → 81.
+- **Lähde:** https://muzeulbucurestiului.ro/en/the-old-princely-court-museum.html ; https://www.digi24.ro/stiri/actualitate/social/palatul-voievodal-curtea-veche-din-bucuresti-intra-in-reabilitare-ciucu-a-semnat-autorizatia-de-construire-pentru-punerea-in-siguranta-3780323
+
+### Tarkistettu ja jätetty ennalleen (ei korjattavaa)
+- **Cișmigiun puutarha, Kirjailijoiden rotunda:** PILVI-RAPORTIN epävarmuus "Rotundan Eminescu/Caragiale" **ratkaistu: molemmat ovat oikein.** Rotundassa on kahdentoista kirjailijan rintakuvat, ja nimilistassa ovat sekä Mihai Eminescu että Ion Luca Caragiale (samoin Ion Creangă, jonka edellinen tarkistaja vaihtoi pois tarpeettomasti). Teksti jäi ennalleen. Lähde: https://en.wikipedia.org/wiki/Ci%C8%99migiu_Gardens
+- **Cișmigiun puutarha, luistinrata:** "talvella se muuttuu luistinradaksi" vahvistui romaniankielisestä Wikipediasta sanatarkasti ("Iarna, lacul este secat și se transformă într-un imens patinoar"), eli järvi tyhjennetään ja sen tilalle tulee rata; rata oli auki myös kaudella 2025 ja 2026. Järven mitat 1,3 kilometriä ja 50 metriä vahvistuivat samasta lähteestä. Lähde: https://ro.wikipedia.org/wiki/Lacul_Ci%C8%99migiu
+- **Pyhä Demetrios Uusi:** PILVI-RAPORTIN epävarmuus suomenkielisestä asusta jää Päätoimittajalle, mutta sisältö vahvistui: hän on Bukarestin suojeluspyhimys, reliikit tuotiin 13.7.1774, juhlapäivä 27. lokakuuta ja pyhiinvaellus pidetään tässä kirkossa myös uuden kansalliskatedraalin vihkimisen jälkeen.
+- **Vanha ruhtinaanhovi, Vlad kolmas:** "rakennutti tänne asuinpalatsin" ja syyskuun 1459 asiakirja vahvistuivat ("built as a palace or residence during the rule of Vlad III Dracula in 1459"; 20.9.1459 slaavinkielinen asiakirja, jossa mainitaan Bukarestin linnoitus). Hovin kirkko 1559, Mircea Paimen, vahvistui.
+- **Romanian parlamenttitalo:** maailman painavin rakennus, noin 4 098 500 tonnia, yli tuhat huonetta, joista noin 70 prosenttia tyhjillään — kaikki vahvistui.
+- **CEC-palatsi, nykytila:** talo on yhä CEC Bankin pääkonttori eikä ole säännöllisesti yleisölle avoinna, joten tekstin viimeinen virke on oikein.
+- **Avaus (avaukset/bukarest.md):** ei muutoksia. 39 sanaa, alkaa suomenkielisellä sanalla, kuva on ilmasta nähtävä (tasanko, suoristettu Dâmbovița, parlamenttitalon kivimassa), ja kierroksen ensimmäinen kohde Stavropoleoksen kirkko vastaa pohjan `kierros`-listaa; kirkko on vuodelta 1724, eli 1700-luvun alkua.
+- **Stavropoleoksen kirkon kierrosversio** jätettiin ennalleen: nunnien kirjojen ja ikonien entisöinti ja lasi-ikonien maalaus on konkreettinen ja jää mieleen, joten se läpäisee löydöstyyppi kahden testin.
+- **Kierroksen kahdeksan `lyhyt`-versiota luettiin peräkkäin** passin alussa ja uudelleen muutosten jälkeen.
+
+### Epävarmuudet Päätoimittajalle
+- **Uusi kansalliskatedraali.** Vihittiin lokakuussa 2025 ja se on maailman suurin ortodoksinen kirkko, 120 metriä korkea. Se ei ole pohjan kohdelistalla, mutta se on nyt Bukarestin näkyvimpiä rakennuksia ilmasta ja aivan parlamenttitalon vieressä. Jos omistaja haluaa, se kannattaa lisätä pohjaan omana kohteena; en lisännyt kohteita, koska ohje kieltää sen. Patriarkaalisen katedraalin kysymys "Miten tämä kirkko eroaa uudesta katedraalista?" kattaa asian toistaiseksi.
+- **Vanha ruhtinaanhovi** on yhä suljettu, ja korjaustyöt olivat toukokuussa 2026 vasta aloittamassa. Jos se avataan, kohteen viimeinen virke kannattaa päivittää.
+- **Yliopiston keskuskirjaston käsikirjoitukset.** Useat lähteet sanovat, että palossa tuhoutui myös Eminescun, Maiorescun ja Caragialen käsikirjoituksia, mutta en saanut noita sivuja auki (HTTP 429), joten nimet jäivät pois. Jos Päätoimittaja haluaa nimet mukaan, ne on helppo lisätä yhdellä vahvistuksella.
+- **Puiston nimenmuutosvuosi.** Romaniankieliset lähteet eivät sano, milloin "Parcul I. V. Stalin" palasi Herăstrăuksi; englanninkielinen Wikipedia sanoo 1956. Teksti ei enää lukitse nimenmuutoksen vuotta.
+- **CEC-palatsin peruskiven päivä.** Englanninkielinen Wikipedia sanoo 8.6.1897, romanialainen uutislähde 8.7.1897 kuningas Kaarle ensimmäisen ja kuningatar Elisabetin läsnä ollessa. Teksti ei mainitse päivää, joten ristiriita ei vaikuta mihinkään.
