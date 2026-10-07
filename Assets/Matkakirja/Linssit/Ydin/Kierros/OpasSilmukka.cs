@@ -325,22 +325,22 @@ namespace Matkakirja.Linssit.Kierros
             double km = matkaM / 1000.0;
             double s = km < 10 ? 3.0 + 2.2 * Math.Sqrt(km) : 10.0 + 4.0 * Math.Log10(km / 10.0);
             if (!PalloLento) return Math.Max(LentoMinS, Math.Min(LentoMaxS, s));
-            // Omistaja TF 163 (23.2x): "pallo liikkuu vieläkin aivan liian nopeasti ja äkkinäisesti" → kesto ×PalloHidastus
-            // (huippunopeus puoleen), vähintään PalloLentoMinS, jolloin kiihdytys ja jarrutus kestävät ≥ 4 s (Eteneminen: a ≥ 0,25 → ≥ 4,25 s).
-            s *= PalloKerroin(km) * PalloHidastus;
-            return Math.Max(PalloLentoMinS, Math.Min(LentoMaxS * PalloKerroinLyhyt * PalloHidastus, s));
+            // Omistajan tarkennus 23.4x: "pallolla voi olla sama huippunopeus" → kesto kuten TF 163:ssa (PalloKerroin); pehmeys
+            // tulee S-käyristä (OpasKuvaus.Lennossa: suunta etenemisen mukaan, ei kääntymistä paikallaan).
+            s *= PalloKerroin(km);
+            return Math.Max(LentoMinS, Math.Min(LentoMaxS * PalloKerroinLyhyt, s));
         }
 
-        /// <summary>Pallolennon hidastus (omistaja TF 163) ja lyhin kesto; suunnan muutos enintään PalloKaantoAstS.</summary>
-        public const double PalloHidastus = 2.0, PalloLentoMinS = 17, PalloKaantoAstS = 10;
+        /// <summary>Pallolennon suunnan muutos enintään PalloKaantoAstS (Päätoimittaja 23.2x).</summary>
+        public const double PalloKaantoAstS = 10;
 
         /// <summary>
         /// Pallolennon saapumissuunta: kohteen kehys katsoo enintään niin paljon nykyisestä suunnasta poispäin, että suunta kääntyy
-        /// koko lennon ajan pehmeästi (smootherstep, huippu 1,875 × keskiarvo) enintään PalloKaantoAstS asteen sekuntinopeudella.
+        /// koko lennon ajan etenemisen mukana (huippu enintään 2 × keskiarvo) enintään PalloKaantoAstS asteen sekuntinopeudella.
         /// </summary>
         public static double PalloTulosuunta(double nykyinen, double lentosuunta, double kestoS)
         {
-            double max = PalloKaantoAstS * kestoS / 1.875;
+            double max = PalloKaantoAstS * kestoS / 2.0;   // kääntö etenemisen mukana: huippunopeus 2 × keskiarvo (Eteneminen, a = 0,5)
             double d = KierrosLento.Kiedo(lentosuunta - nykyinen);
             return KierrosLento.Kiedo(nykyinen + Math.Max(-max, Math.Min(max, d)));
         }

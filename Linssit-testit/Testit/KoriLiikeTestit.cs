@@ -24,48 +24,55 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(ylin > 3.0, $"jarrutus eteen {ylin:F2}°");
         }
 
-        [Testi] static void PallonLennotHitaitaJaPehmeita()
+        [Testi] static void PallonLennotSKayrinJaKaantyminenVainLiikkeessa()
         {
-            // Omistaja TF 163 (23.2x): "pallo liikkuu vieläkin aivan liian nopeasti ja äkkinäisesti" → huippunopeus noin puoleen,
-            // kiihdytys ja jarrutus ≥ 4 s, kääntyminen ≤ 10°/s (pahin tapaus: lähtösuunta vastakkainen lentosuuntaan).
+            // Omistaja 23.4x: "pallolla voi olla sama huippunopeus, mutta nopeat käännökset heti kun kohde vaihtuu toiseksi,
+            // ennen kuin siirtyminen alkaa, ovat kaikkein epärealistisimpia. kaikki kiihdytykset on tärkeä tehdä S-käyriä mukaillen."
+            // Pahin tapaus: lähtösuunta vastakkainen lentosuuntaan (kamera katsoo etelään, lento pohjoiseen). Näytteet 20 ms:n välein:
+            // ensimmäinen ja viimeinen kiihtyvyysnäyte ovat 0–40 ms:n keskiarvoja, joten "nollasta" = alle 8 % huipusta.
             foreach (double m in new[] { 300.0, 800, 1500, 3000, 6000 })
             {
-                OpasSilmukka.PalloLento = false;
-                double vanha = OpasSilmukka.LennonKesto(m) * OpasSilmukka.PalloKerroin(m / 1000);   // TF 163:n pallokesto
-                var (vVanha, _, _) = Mittaa(m, vanha, false);
                 OpasSilmukka.PalloLento = true;
                 double T = OpasSilmukka.LennonKesto(m);
-                var (v, kiihdytysS, kaantoAstS) = Mittaa(m, T, true);
+                var r = Mittaa(m, T);
                 OpasSilmukka.PalloLento = false;
-                Oleta.Tosi(T >= OpasSilmukka.PalloLentoMinS, $"{m} m: kesto {T:F1} s");
-                Oleta.Tosi(v <= 0.55 * vVanha, $"{m} m: huippunopeus {v:F0} m/s (oli {vVanha:F0})");
-                Oleta.Tosi(kiihdytysS >= 3.95, $"{m} m: kiihdytys {kiihdytysS:F1} s");
-                Oleta.Tosi(kaantoAstS <= 10.2, $"{m} m: kääntyminen {kaantoAstS:F1}°/s");
+                double vanha = OpasSilmukka.LennonKesto(m) * OpasSilmukka.PalloKerroin(m / 1000);
+                Oleta.Tosi(Math.Abs(T - Math.Max(OpasSilmukka.LentoMinS, Math.Min(OpasSilmukka.LentoMaxS * OpasSilmukka.PalloKerroinLyhyt, vanha))) < 1e-9,
+                    $"{m} m: sama kesto ja huippunopeus kuin TF 163 ({T:F1} s)");
+                Oleta.Tosi(r.kaannosEnnenLiiketta < 0.5, $"{m} m: ei kääntymistä paikallaan ({r.kaannosEnnenLiiketta:F2}° ennen 1 %:n etenemistä)");
+                Oleta.Tosi(r.kaanto <= 10.2, $"{m} m: kääntyminen {r.kaanto:F1}°/s");
+                Oleta.Tosi(r.alkuKiihtyvyys < 0.08 * r.maksKiihtyvyys && r.loppuKiihtyvyys < 0.08 * r.maksKiihtyvyys,
+                    $"{m} m: kiihtyvyys alkaa ja loppuu nollasta (S-käyrä): alku {r.alkuKiihtyvyys:F1}, loppu {r.loppuKiihtyvyys:F1}, maks {r.maksKiihtyvyys:F1} m/s²");
+                Oleta.Tosi(r.kiihtyvyysHyppy < 0.08 * r.maksKiihtyvyys, $"{m} m: kiihtyvyys jatkuva (suurin hyppy {r.kiihtyvyysHyppy:F2} m/s² / 20 ms)");
+                Oleta.Tosi(r.kaantoAlku < 0.5 && r.kaantoLoppu < 0.5, $"{m} m: kääntönopeus alkaa ja loppuu nollasta ({r.kaantoAlku:F2}, {r.kaantoLoppu:F2} °/s)");
             }
         }
 
-        /// <summary>Lento pohjoiseen m metriä kestolla T: katsepisteen huippunopeus (m/s), aika huippunopeuteen (s) ja suurin
-        /// kääntönopeus (°/s), kun kamera katsoo lähtiessä etelään (180°).</summary>
-        static (double v, double kiihdytys, double kaanto) Mittaa(double m, double T, bool pallo)
+        /// <summary>Lento pohjoiseen m metriä kestolla T, kamera katsoo lähtiessä etelään (180°).</summary>
+        static (double kaanto, double kaannosEnnenLiiketta, double alkuKiihtyvyys, double loppuKiihtyvyys, double maksKiihtyvyys,
+            double kiihtyvyysHyppy, double kaantoAlku, double kaantoLoppu) Mittaa(double m, double T)
         {
             double lat0 = 48.85, lon0 = 2.35, lat1 = lat0 + m / 111320.0;
-            double tulo = pallo ? OpasSilmukka.PalloTulosuunta(180, 0, T) : 0;
             var a = new Kuvakulma(lat0, lon0, 800, 55, 180);
-            var b = new Kuvakulma(lat1, lon0, 800, 55, tulo);
+            var b = new Kuvakulma(lat1, lon0, 800, 55, OpasSilmukka.PalloTulosuunta(180, 0, T));
             const double dt = 0.02;
-            var ed = OpasKuvaus.Lennossa(a, b, 0);
-            double vMax = 0, tMax = 0, kMax = 0;
-            var nopeudet = new List<(double t, double v)>();
-            for (double t = dt; t <= T + 1e-9; t += dt)
+            var p = new List<Kuvakulma>();
+            for (double t = 0; t <= T + 1e-9; t += dt) p.Add(OpasKuvaus.Lennossa(a, b, t / T));
+            int n = p.Count;
+            var v = new double[n - 1]; var w = new double[n - 1];
+            for (int i = 0; i < n - 1; i++)
             {
-                var k = OpasKuvaus.Lennossa(a, b, t / T);
-                double v = KierrosLento.EtaisyysM(ed.Lat, ed.Lon, k.Lat, k.Lon) / dt;
-                double w = Math.Abs(KierrosLento.Kiedo(k.Suuntima - ed.Suuntima)) / dt;
-                nopeudet.Add((t, v)); if (v > vMax) vMax = v; if (w > kMax) kMax = w;
-                ed = k;
+                v[i] = KierrosLento.EtaisyysM(p[i].Lat, p[i].Lon, p[i + 1].Lat, p[i + 1].Lon) / dt;
+                w[i] = Math.Abs(KierrosLento.Kiedo(p[i + 1].Suuntima - p[i].Suuntima)) / dt;
             }
-            foreach (var (t, v) in nopeudet) if (v >= 0.995 * vMax) { tMax = t; break; }
-            return (vMax, tMax, kMax);
+            var acc = new double[n - 2];
+            for (int i = 0; i < n - 2; i++) acc[i] = (v[i + 1] - v[i]) / dt;
+            double maksA = 0, hyppy = 0, kaanto = 0, ennen = 0;
+            for (int i = 0; i < acc.Length; i++) { maksA = Math.Max(maksA, Math.Abs(acc[i])); if (i > 0) hyppy = Math.Max(hyppy, Math.Abs(acc[i] - acc[i - 1])); }
+            for (int i = 0; i < w.Length; i++) kaanto = Math.Max(kaanto, w[i]);
+            for (int i = 0; i < n && KierrosLento.EtaisyysM(lat0, lon0, p[i].Lat, p[i].Lon) < 0.01 * m; i++)
+                ennen = Math.Max(ennen, Math.Abs(KierrosLento.Kiedo(p[i].Suuntima - 180)));
+            return (kaanto, ennen, Math.Abs(acc[0]), Math.Abs(acc[acc.Length - 1]), maksA, hyppy, w[0], w[w.Length - 1]);
         }
 
         [Testi] static void KoydetViiveella()

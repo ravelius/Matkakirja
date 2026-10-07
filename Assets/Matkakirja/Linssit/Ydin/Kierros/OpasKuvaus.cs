@@ -135,9 +135,10 @@ namespace Matkakirja.Linssit.Kierros
             et = Math.Max(et, perus + (MinKorkeusM / cosK - perus) * h);   // kesken lennon vähintään MinKorkeusM kohteen yläpuolella
             double suunta;
             if (OpasSilmukka.PalloLento)
-                // Pallo (omistaja TF 163: "liian nopeasti ja äkkinäisesti"): suunta kääntyy koko lennon ajan pehmeästi lähdöstä
-                // saapumiskehykseen (PalloTulosuunta rajaa kulman), ei ensin lentosuuntaan ja lopussa takaisin.
-                suunta = KierrosLento.Kiedo(a.Suuntima + KierrosLento.Kiedo(b.Suuntima - a.Suuntima) * KierrosLento.Smootherstep(t));
+                // Pallo (omistaja 23.4x: "nopeat käännökset heti kun kohde vaihtuu, ennen kuin siirtyminen alkaa, ovat kaikkein
+                // epärealistisimpia; kaikki kiihdytykset S-käyriä mukaillen"): suunta kääntyy suoraan etenemisen mukana (s, ei aika t),
+                // joten paikallaan ei käännytä, ja kääntönopeus seuraa lentonopeuden S-käyrää (alkaa ja loppuu nollasta, huippu 2Δ/T).
+                suunta = KierrosLento.Kiedo(a.Suuntima + KierrosLento.Kiedo(b.Suuntima - a.Suuntima) * s);
             else
             {
                 double lento = matka < 50 ? b.Suuntima : OpasSilmukka.Suunta(a.Lat, a.Lon, b.Lat, b.Lon);
