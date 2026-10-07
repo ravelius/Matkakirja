@@ -27,8 +27,9 @@ namespace Matkakirja.Natiivi
 
         public sealed class Kappale { public int Numero; public string Otsikko, Teksti, LinkkiTeksti, LinkkiUrl, NappiTeksti, NappiValmis, Toiminto; public bool Korostus; public List<string> Lista = new List<string>(); }
         /// <summary>Kappale = esittely.json:n kappaleet-taulukon 0-pohjainen indeksi alkuperäisessä järjestyksessä (versio 7, omistaja
-        /// 7.10. 14.5x; Pelikoodari): kuva pienenä kappaleen vieressä; −1 tai osumaton indeksi = kortin lopun kuvarivi.</summary>
-        public sealed class Kuva { public string Url, Teksti; public int Kappale = -1; public float RajausX = 50f, RajausY = 20f; }
+        /// 7.10. 14.5x; Pelikoodari): kuva pienenä kappaleen alussa (tekstin tai ensimmäisen listarivin vieressä); Rivi = listakappaleen
+        /// 0-pohjainen listarivi, jonka viereen kuva tulee (sama kuin web). −1 tai osumaton kappale = kortin lopun kuvarivi.</summary>
+        public sealed class Kuva { public string Url, Teksti; public int Kappale = -1, Rivi = -1; public float RajausX = 50f, RajausY = 20f; }
         public sealed class Esittely
         {
             public string Nappi, Otsikko, Alaotsikko;
@@ -79,6 +80,7 @@ namespace Matkakirja.Natiivi
                     var m = System.Text.RegularExpressions.Regex.Match(S(o, "rajaus") ?? "", @"^(\d{1,3})% (\d{1,3})%$");
                     if (m.Success) { kuva.RajausX = float.Parse(m.Groups[1].Value); kuva.RajausY = float.Parse(m.Groups[2].Value); }
                     if (o.TryGetValue("kappale", out var kp) && kp != null && int.TryParse(System.Convert.ToString(kp, System.Globalization.CultureInfo.InvariantCulture), out int kn)) kuva.Kappale = kn;
+                    if (o.TryGetValue("rivi", out var rv) && rv != null && int.TryParse(System.Convert.ToString(rv, System.Globalization.CultureInfo.InvariantCulture), out int rn)) kuva.Rivi = rn;
                     e.Kuvat.Add(kuva);
                 }
             return e;
@@ -212,6 +214,21 @@ namespace Matkakirja.Natiivi
             return "apuraha: palautelohko";
         }
 
+        /// <summary>Kuvat sisällön (kappaleteksti tai listarivi) oikealle puolelle: palauttaa rivin, johon sisältö lisätään ja siirretään
+        /// ensimmäiseksi; ilman kuvia isä sellaisenaan. Sarake näkyviin vasta kuvan latauduttua (ei tyhjää saraketta).</summary>
+        VisualElement KuvienViereen(Esittely e, List<Kuva> kuvat, VisualElement isa, List<Kuva> ladatut)
+        {
+            if (kuvat.Count == 0) return isa;
+            var rivi = Rakenne.El("mk-apuraha__rivi", isa, PickingMode.Ignore);
+            rivi.style.alignItems = Align.FlexStart;
+            var sarake = Rakenne.El("mk-apuraha__kappalekuvat", rivi, PickingMode.Ignore);
+            sarake.style.width = Length.Percent(KappaleKuvaOsuus); sarake.style.flexShrink = 0;
+            sarake.style.marginLeft = 8;
+            sarake.style.display = DisplayStyle.None;
+            foreach (var kuva in kuvat) KuvaNappi(e, kuva, sarake, ladatut, 100f);
+            return rivi;
+        }
+
         /// <summary>Kappaleen kuvasarakkeen leveys (% kortin sisäleveydestä; omistaja 14.5x "aika pienellä").</summary>
         const float KappaleKuvaOsuus = 33f;
         readonly List<Kuva> ladatut = new List<Kuva>();
@@ -264,32 +281,34 @@ namespace Matkakirja.Natiivi
             Kirjasimet.Aseta(o, Tyylikirja.Kirjain.Otsikko); // KORTTI-pohja: otsikko kuten muissa korteissa
             if (e.Alaotsikko.Length > 0)
                 Kirjasimet.Aseta(Rakenne.Teksti(e.Alaotsikko, "mk-apuraha__alaotsikko", vieritys), Kirjasin.LukuKursiivi);
+            var sijoitetut = new List<Kuva>();
             foreach (var k in e.Kappaleet)
             {
                 if (k.Otsikko != null) Kirjasimet.Aseta(Rakenne.Teksti(k.Otsikko.ToUpperInvariant(), "mk-apuraha__valiotsikko", vieritys), Kirjasin.Kone);
                 // KUVAT TEKSTIN YHTEYDESSÄ (omistaja 7.10. 14.5x): kappaleen kuvat pienenä (~kolmannes kortista) tekstin vieressä.
+                // Rivi = listarivin viereen; muuten kappaleen alkuun (teksti, tai ilman tekstiä ensimmäinen listarivi) kuten webissä.
                 var omat = e.Kuvat.Where(x => x.Kappale == k.Numero).ToList();
+                var riviKuvat = omat.Where(x => x.Rivi >= 0 && x.Rivi < k.Lista.Count).ToList();
+                var alkuKuvat = omat.Except(riviKuvat).ToList();
+                var ekaRivi = new List<Kuva>();
+                if (k.Teksti == null && k.Lista.Count > 0) { ekaRivi.AddRange(alkuKuvat); alkuKuvat.Clear(); }
                 if (k.Teksti != null)
                 {
-                    VisualElement isa = vieritys;
-                    if (omat.Count > 0) { isa = Rakenne.El("mk-apuraha__rivi", vieritys, PickingMode.Ignore); isa.style.alignItems = Align.FlexStart; }
+                    var isa = KuvienViereen(e, alkuKuvat, vieritys, ladatut);
                     var t = Rakenne.Teksti(k.Teksti, "mk-kortti__teksti mk-apuraha__teksti", isa);
-                    if (omat.Count > 0) { t.style.flexGrow = 1; t.style.flexShrink = 1; }
+                    if (isa != vieritys) { t.style.flexGrow = 1; t.style.flexShrink = 1; t.SendToBack(); }
                     if (k.Korostus) Kirjasimet.Aseta(t, Kirjasin.LukuLihava);
-                    if (omat.Count > 0)
-                    {
-                        var sarake = Rakenne.El("mk-apuraha__kappalekuvat", isa, PickingMode.Ignore);
-                        sarake.style.width = Length.Percent(KappaleKuvaOsuus); sarake.style.flexShrink = 0;
-                        sarake.style.marginLeft = 8;
-                        sarake.style.display = DisplayStyle.None;   // näkyviin vasta kuvan latauduttua (ei tyhjää saraketta)
-                        foreach (var kv2 in omat) KuvaNappi(e, kv2, sarake, ladatut, 100f);
-                    }
+                    sijoitetut.AddRange(alkuKuvat);
                 }
                 for (int i = 0; i < k.Lista.Count; i++)
                 {
-                    var rivi = Rakenne.El("mk-apuraha__rivi", vieritys, PickingMode.Ignore);
+                    var tama = riviKuvat.Where(x => x.Rivi == i).Concat(i == 0 ? ekaRivi : Enumerable.Empty<Kuva>()).ToList();
+                    var isa = KuvienViereen(e, tama, vieritys, ladatut);
+                    var rivi = Rakenne.El("mk-apuraha__rivi", isa, PickingMode.Ignore);
+                    if (isa != vieritys) { rivi.style.flexGrow = 1; rivi.style.flexShrink = 1; rivi.SendToBack(); }
                     Rakenne.Teksti($"{i + 1}.", "mk-kortti__teksti mk-apuraha__numero", rivi);
                     Rakenne.Teksti(k.Lista[i], "mk-kortti__teksti mk-apuraha__riviteksti", rivi);
+                    sijoitetut.AddRange(tama);
                 }
                 if (k.Toiminto == "esittelylinssit" && k.NappiTeksti != null)
                 {
@@ -312,7 +331,7 @@ namespace Matkakirja.Natiivi
                     Kirjasimet.Aseta(Rakenne.Nappi(k.LinkkiTeksti, "mk-lehti__linkki mk-apuraha__linkki", () => Application.OpenURL(url), vieritys), Kirjasin.Kone);
                 }
             }
-            var loppukuvat = e.Kuvat.Where(x => x.Kappale < 0 || !e.Kappaleet.Any(k => k.Numero == x.Kappale && k.Teksti != null)).ToList();
+            var loppukuvat = e.Kuvat.Except(sijoitetut).ToList();
             if (loppukuvat.Count > 0)
             {
                 var kuvarivi = Rakenne.El("mk-apuraha__kuvat", vieritys, PickingMode.Ignore);
