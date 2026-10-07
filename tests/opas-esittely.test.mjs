@@ -141,7 +141,32 @@ test('/opas/kysymykset: valmiin esittelyn kohde → 5 valmista kysymystä ja Ker
     assert.deepEqual(d.kysymykset, k0.kysymykset); assert.equal(malli, 0, 'valmiit kysymykset ilman mallia');
     assert.equal(d.kerro_lisaa_teksti, k0.teksti); assert.ok('kerro_lisaa_aani' in d && 'kerro_lisaa_kesto_s' in d);
     assert.equal(d.kerro_lisaa, undefined, 'ei alikenttää (#4107: vanhat natiivit)');
+    assert.equal(d.kerro_lisaa_aani, null, 'ei esigeneroitua ääntä → null');
     const ilman = await hae('Q999');
     assert.equal(ilman.kerro_lisaa_teksti, undefined); assert.ok(ilman.kysymykset.length > 0);
+  } finally { globalThis.fetch = vanha; }
+});
+
+test('Kerro lisää: ei maksullista generointia – ääni vain R2:sta, muuten null; tekstiä ei tallenneta', async () => {
+  const { createHash } = await import('node:crypto');
+  const e = ymparisto(); const kirjoitukset = [];
+  const vanhaPut = e.PUHE_R2.put; e.PUHE_R2.put = async (k, v) => { kirjoitukset.push(k); return vanhaPut(k, v); };
+  e.ELEVEN_API_KEY = 'e';
+  let eleven = 0;
+  const vanha = globalThis.fetch;
+  globalThis.fetch = async (u) => { if (String(u).includes('elevenlabs')) eleven += 1;
+    return new Response(JSON.stringify({ content: [{ type: 'text', text: 'A?\nB?\nC?\nD?\nE?\nF?' }], stop_reason: 'end_turn' })); };
+  try {
+    const hae = () => worker.fetch(new Request('https://pollo.example/opas/kysymykset?paikka=Q101&nimi=Kohde&kaupunki=Testil%C3%A4', { headers: H }), e, { waitUntil() {} }).then((v) => v.json());
+    const a = await hae();
+    assert.equal(a.kerro_lisaa_aani, null); assert.equal(a.kerro_lisaa_aani_pcm, null);
+    assert.ok(!kirjoitukset.some((k) => k.startsWith('opas/teksti/')), 'tekstiä ei tallenneta → GET ei voi generoida');
+    const sha = createHash('sha256').update(`william|eleven_v4_turbo|${ESITTELY.kohteet[1].teksti}`).digest('hex').slice(0, 32);
+    await vanhaPut(`opas/${sha}.mp3`, 'mp3');
+    const b = await hae();
+    assert.ok(String(b.kerro_lisaa_aani).endsWith(`/opas/aani/${sha}.mp3`)); assert.equal(b.kerro_lisaa_aani_pcm, null);
+    const g = await worker.fetch(new Request(`https://pollo.example/opas/aani/${'f'.repeat(32)}.mp3`), e, { waitUntil() {} });
+    assert.equal(g.status, 404, 'tuntematon sha ei generoi');
+    assert.equal(eleven, 0, 'ElevenLabsia ei kutsuttu');
   } finally { globalThis.fetch = vanha; }
 });
