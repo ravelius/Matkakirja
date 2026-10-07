@@ -49,7 +49,7 @@ NUI:n osa on `natiivi-ui/sallitut-157` 0f770be2. LS2:n lista on tiedostossa `pro
   - Lokissa 21 riviä key=***, AIza-avaimia 0.
 - eebfb3eee: kaupungin vaihto unohtaa edellisen kohteen (`UnohdaEdellinenKohde`), joten kuvakortti ja nimilappu eivät jää uuteen kaupunkiin. Odotuksen uusintapyyntö käyttää yhä edellistä kohdetta. Simussa OK 07.3x (Pariisi → Krakova).
 - Varsova: Päätoimittaja päätti (a): Varsova on poistettu sallituista (LS2:n json 37, Pelikoodarin #4109).
-- (b) ei onnistunut: reikä tuli kaikilla etäisyyksillä 5 000–1 500 m, ja 404-tiiliä oli 38 (`linssiseppa-varsova-b-20261007`). Ehdotettu uusintatarkistus noin viikon päästä. (c) ei nyt.
+- (b) ei onnistunut: reikä tuli kaikilla etäisyyksillä 5 000–1 500 m, ja 404-tiiliä oli 38 (`linssiseppa-varsova-b-20261007`). **Jonossa: tarkistus 14.10.2026** (Päätoimittaja) yhdellä ajolla. Jos kahdella käynnillä ei tule 404:ää, Varsova palaa listalle (LS2 ja Pelikoodari palauttavat rivin). (c) ei nyt.
 
 ## Giza (omistaja 6.10. 23.35, Päätoimittajan lupa)
 
