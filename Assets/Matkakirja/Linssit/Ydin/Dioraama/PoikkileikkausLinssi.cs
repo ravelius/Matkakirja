@@ -384,8 +384,11 @@ namespace Matkakirja.Linssit.Dioraama
             if (kertojaVainUusintana && kertojaAlku < 0) return (false, default, -1, null, 0, 0);
             double s = KertojaAlku;
             if (t < s || double.IsInfinity(s)) return (false, default, -1, null, 0, 0);
-            // Huoneen kohdistus kierroksen alun jälkeen katkaisee kierroksen.
-            foreach (var e in tapahtumat) if (e.Hetki > s && e.Hetki <= t) return (false, default, -1, null, 0, 0);
+            // Huoneen kohdistus kierroksen alun jälkeen katkaisee kierroksen. Savu 156 (Laitetestaaja 7.10.): valikon huonevalinta jo
+            // SAAPUMISKAAREN aikana (ennen ensimmäisen kierroksen alkua) katkaisee myös sen, muuten kierros alkoi kaaren lopussa ja
+            // ohitti valinnan (valikko sulkeutui, ei siirtoa). Uusinnan (↻) alkua edeltävät kohdistukset eivät katkaise uusintaa.
+            for (int i = 1; i < tapahtumat.Count; i++)
+                if (tapahtumat[i].Hetki <= t && (tapahtumat[i].Hetki > s || kertojaAlku < 0)) return (false, default, -1, null, 0, 0);
             bool suoraan = SaapuuKertojaan;
             var edellinen = suoraan ? JaksonAsento(jaksot[0], pysty) : AsentoFor(kertojaAlku >= 0 ? kertojaLahto : null, pysty);
             double kursori = s;
