@@ -251,6 +251,10 @@ export async function kokoaKuvalista({ sisalto = null, ulos = null, loki = conso
     for (const [id, kk] of Object.entries(s.kaupungit ?? {})) {
       const t = (tulos.kaupungit[id] ??= { nimi: kk.nimi ?? id, Q: kk.Q ?? null, lat: kk.lat ?? null, lon: kk.lon ?? null, kohteet: [], kuvat: [] });
       if (Array.isArray(kk.kohteet)) t.kohteet = kk.kohteet;
+      if (t.lat == null || t.lon == null) {
+        const sp = OPAS_SALLITUT.sallitut.find((x) => x.id === id || x.id === sallittuId(t.nimi ?? '')) ?? PALLON_KAUPUNKIPISTEET[id] ?? null;
+        if (sp) Object.assign(t, { lat: sp.lat, lon: sp.lon });
+      }
     }
     loki(`Sisältökirjurin kohteita ${Object.keys(s.kohteet ?? {}).length}, ladattu ${ladattu} kuvaa`);
   }
