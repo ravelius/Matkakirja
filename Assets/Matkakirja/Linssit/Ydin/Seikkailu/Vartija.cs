@@ -17,12 +17,14 @@ namespace Matkakirja.Linssit.Seikkailu
         public string Nimi = "vartija";
         public double NakoM = 10, NakoKulma = 55;
         public bool Havaitsee = true, Kuulee = true, Ottaa = true;
+        /// <summary>Tarjotin on kulkulupa (pelattavuusmalli 2.4/8.1): kävelijää tarjotin kädessä ei epäillä. Kokki epäilee silti.</summary>
+        public bool TarjotinLupa = true;
         /// <summary>Jahtinopeus m/s; 0 = ei jahtaa (kokki huutaa paikaltaan, apulainen).</summary>
         public double JahtaaMs = 2.2;
 
         public static readonly VartijaProfiili Vartija = new VartijaProfiili();
         public static readonly VartijaProfiili Portinvartija = new VartijaProfiili { Nimi = "portinvartija" };
-        public static readonly VartijaProfiili Kokki = new VartijaProfiili { Nimi = "kokki", NakoM = 6, NakoKulma = 45, JahtaaMs = 0, Ottaa = false };
+        public static readonly VartijaProfiili Kokki = new VartijaProfiili { Nimi = "kokki", NakoM = 6, NakoKulma = 45, JahtaaMs = 0, Ottaa = false, TarjotinLupa = false };
         public static readonly VartijaProfiili Apulainen = new VartijaProfiili { Nimi = "apulainen", NakoM = 5, NakoKulma = 45, Kuulee = false, JahtaaMs = 0, Ottaa = false };
         public static readonly VartijaProfiili Renki = new VartijaProfiili { Nimi = "renki", Havaitsee = false, Kuulee = false, JahtaaMs = 0, Ottaa = false };
         /// <summary>Torkkuva vartija (muuriportaiden juurella): torkkuessa ei näe, kävelyn ääni herättää (nousee 1,5 s), syödessä näkee
@@ -56,6 +58,8 @@ namespace Matkakirja.Linssit.Seikkailu
         public List<Aanilahde> Aanet;
         /// <summary>Pelaajan vauhti m/s (liikekerroin: paikallaan × 0,8, kävellen × 1, juosten × 1,25); null = ei tiedossa (× 1).</summary>
         public double? PelaajaVauhti;
+        /// <summary>Pelaajalla tarjotin kädessä (kulkulupa: ei epäilyä, jos ei juokse eikä kyyristele).</summary>
+        public bool Tarjotin;
     }
 
     public sealed class Vartija
@@ -142,6 +146,7 @@ namespace Matkakirja.Linssit.Seikkailu
         {
             if (s.Piilossa || !s.NakolinjaVapaa || !Profiili.Havaitsee) return 0;
             if (Torkkuu && !SyoKatsoo) return 0;
+            if (s.Tarjotin && Profiili.TarjotinLupa && !s.Hiipii && (s.PelaajaVauhti ?? 0) < 2.5 && Tila != VartijanTila.Halytys) return 0;
             double dx = s.PelaajaX - s.VartijaX, dz = s.PelaajaZ - s.VartijaZ, d = Math.Sqrt(dx * dx + dz * dz);
             double nako = Riita > 0 ? RiitaNakoM : Valppaus > 0 ? Math.Max(Profiili.NakoM, ValpasNakoM * Profiili.NakoM / NakoM) : Profiili.NakoM;
             double liike = s.PelaajaVauhti is double pv ? (pv < 0.15 ? 0.8 : pv > 2.5 ? 1.25 : 1.0) : 1.0;

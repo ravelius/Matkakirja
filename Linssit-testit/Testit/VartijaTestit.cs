@@ -168,6 +168,17 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(w.Mittari > 0, "katsejaksossa näkee");
         }
 
+        [Testi] static void TarjotinOnKulkulupa()
+        {
+            var v = new Vartija(Reitti, yaw: 0);
+            var s = new VartijanSyote { VartijaX = 0, VartijaZ = 0, PelaajaX = 0, PelaajaZ = 3, NakolinjaVapaa = true, Valoisuus = 1, Tarjotin = true, PelaajaVauhti = 1.2 };
+            Oleta.Sama(0.0, v.NakoVoima(s));
+            s.Hiipii = true; Oleta.Tosi(v.NakoVoima(s) > 0, "kyyristelijä tarjottimen kanssa epäilyttää");
+            s.Hiipii = false; s.PelaajaVauhti = 3.2; Oleta.Tosi(v.NakoVoima(s) > 0, "juoksija epäilyttää");
+            var k = new Vartija(Reitti, yaw: 0) { Profiili = VartijaProfiili.Kokki }; s.PelaajaVauhti = 1.2;
+            Oleta.Tosi(k.NakoVoima(s) > 0, "kokki epäilee tarjottimen viejää");
+        }
+
         [Testi] static void KokkiHuutaaEikaJahtaa()
         {
             var v = new Vartija(Reitti, yaw: 0) { Profiili = VartijaProfiili.Kokki }; double x = 0, z = 0;

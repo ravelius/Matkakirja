@@ -53,6 +53,9 @@ namespace Matkakirja.Linssit.Seikkailu
         public bool Irrotettava;
         /// <summary>esine: kiintea (Linnanrakentaja v44k: kilpilaatat seinässä): näkyy, ei poimittavissa.</summary>
         public bool Kiintea;
+        /// <summary>esine: kannettava (tarjotin, molemmat kädet) ja kaadettava (patapino) sekä äänen kuuluvuus aani_m (v44m).</summary>
+        public bool Kannettava, Kaadettava;
+        public double AaniM;
         /// <summary>luukku: sarana (Linnanrakentaja v44i), glTF-koordinaatit; null jos puuttuu.</summary>
         public double[] Sarana;
     }
@@ -119,6 +122,7 @@ namespace Matkakirja.Linssit.Seikkailu
                 Koko = MiniJson.Luku(o, "koko") ?? 0, OdotaS = MiniJson.Luku(o, "odota_s") ?? 0, KiertoY = MiniJson.Luku(o, "kierto_y"), Heitettava = MiniJson.Kentta(o, "heitettava") is bool hb && hb, Irrotettava = MiniJson.Kentta(o, "irrotettava") is bool ib && ib,
                 Sarana = MiniJson.Kentta(o, "sarana") is object sa ? Vektori(sa) : null,
                 Kiintea = MiniJson.Kentta(o, "kiintea") is bool kb && kb,
+                Kannettava = MiniJson.Kentta(o, "kannettava") is bool kab && kab, Kaadettava = MiniJson.Kentta(o, "kaadettava") is bool kdb && kdb, AaniM = MiniJson.Luku(o, "aani_m") ?? 0,
                 Henkilo = MiniJson.Teksti(o, "henkilo"), Profiili = MiniJson.Teksti(o, "profiili"),
                 KokoV = MiniJson.Kentta(o, "koko") is List<object> kl && kl.Count == 3 ? Vektori(kl) : null,
             };

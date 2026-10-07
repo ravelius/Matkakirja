@@ -53,6 +53,30 @@ namespace Matkakirja.Natiivi
             return false;
         }
 
+        /// <summary>Torkkuva vartija alle 1,6 m:n päässä ja vielä ilman eväitä (toimintonapin verbi "Anna").</summary>
+        public static bool TarjotinVastaanottaja(Vector3 p)
+        {
+            var a = Aktiivinen; if (a == null) return false;
+            foreach (var v in a.vartijat)
+                if (v.Aivot.Profiili == VartijaProfiili.Torkku && v.Aivot.Torkkuu && !v.Aivot.Syo && v.Agentti != null && (v.Agentti.transform.position - p).sqrMagnitude < 1.6f * 1.6f) return true;
+            return false;
+        }
+
+        /// <summary>Tarjotin torkkuvalle vartijalle: herää eväisiin (vartija-tarjotin-1) ja jää syömään (näkee vain katsejaksoissa).</summary>
+        public static bool AnnaTarjotin(Vector3 p)
+        {
+            var a = Aktiivinen; if (a == null) return false;
+            foreach (var v in a.vartijat)
+                if (v.Aivot.Profiili == VartijaProfiili.Torkku && v.Aivot.Torkkuu && !v.Aivot.Syo && v.Agentti != null && (v.Agentti.transform.position - p).sqrMagnitude < 1.6f * 1.6f)
+                {
+                    v.Aivot.Syo = true;
+                    var r = SeikkailuRepliikit.Aktiivinen; if (r != null && r.Valmis) r.Soita("vartija-tarjotin-1", v.Agentti.transform);
+                    a.kirjaa?.Invoke("seikkailu: torkkuva vartija sai eväät");
+                    return true;
+                }
+            return false;
+        }
+
         public static double PelaajanValoisuus(SeikkailuPelaaja p)
         {
             if (p == null) return ValoisuusOletus;
@@ -224,7 +248,8 @@ namespace Matkakirja.Natiivi
                     kuuluvat = new List<Aanilahde>(aanet.Count);
                     foreach (var a in aanet) { double r = Askelaani.Kuuluvuus(SeikkailuKavely.Data, a.KuuluvuusM, a.Osa, vosa); if (r > 0) kuuluvat.Add(new Aanilahde(a.X, a.Z, r, a.Osa)); }
                 }
-                var s = new VartijanSyote { VartijaX = vp.x, VartijaZ = vp.z, Valoisuus = PelaajanValoisuus(p), Aanet = kuuluvat, PelaajaVauhti = p != null ? p.Tila.Vauhti : (double?)null };
+                var s = new VartijanSyote { VartijaX = vp.x, VartijaZ = vp.z, Valoisuus = PelaajanValoisuus(p), Aanet = kuuluvat, PelaajaVauhti = p != null ? p.Tila.Vauhti : (double?)null,
+                    Tarjotin = SeikkailuEsineet.Aktiivinen?.Kadessa == SeikkailuEsineet.Tarjotin };
                 if (p != null)
                 {
                     var pp = p.transform.position;
