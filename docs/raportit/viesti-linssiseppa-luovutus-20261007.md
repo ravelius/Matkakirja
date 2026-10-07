@@ -200,3 +200,11 @@ NUI:n osa on `natiivi-ui/sallitut-157` 0f770be2. LS2:n lista on tiedostossa `pro
     - Linnanrakentaja korjaa nämä vasta, kun Päätoimittaja avaa Gizan uudelleen (omistaja: Olavinlinna ensin).
   - Kaukoreiät korjattu omalla puolella: esitys-giza 1abecc5ce, leikkaus pois yli 2,2 km:stä ja takaisin alle 1,8 km:ssä. Ei vielä todennettu simussa.
   - Kierroksen alut (#4138 + #4142) todennettu julkisesta Pöllöstä.
+- 14.5x:
+  - Latauskuva d229919a7 OK, raportoitu Päätoimittajalle kuittaukseen: `lokit/linssiseppa-pallokuva-20261007/omistajalle/latauskuva-kolme-nakymaa.png`. Haara pallo-latauskuva cc2d381ed.
+  - Gizan kaukosääntö toimii (ei valkoisia reikiä). 2,5 km:stä Googlen Khefren näkyy osin.
+  - UUSI: alkulento v3 (omistaja 14.5x via Päätoimittaja; ei yötä, kone näkyy alusta, ei nykäystä; video ja mittaus Päätoimittajalle; juna 162).
+    - Haara `linssiseppa/alkulento-v3` 8be4e3831 = BUILD 160 + kehysloki (`lento v3 kehysloki 1`). Toistokäännös jonossa.
+    - `linssiseppa/alkulento-v3-korjaus` eeb46378b: Paivanvalo `Pakota ?? false` ja kone radan alussa odotuksesta asti, nappula pois.
+    - Nykäyksen syy selviää toistoajosta. Ehdokkaat: esikääntö, KaupunkiMerkit.ValitseKaupunki-ajo napautuksessa ja leikkauskehyksen muutokset (usva, reitit, LentoKarkeaSse).
+    - Mittaus: `tyokalut/linssiseppa-ajot/mittaa-kehykset.py konsoli.log`.
