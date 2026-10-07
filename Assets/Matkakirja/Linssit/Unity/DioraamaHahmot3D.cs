@@ -234,6 +234,9 @@ namespace Matkakirja.Natiivi
         const string KameraKohde = "@kamera";
         /// <summary>Puhujan pään yläpuolinen maailmanpiste (kasvokuvan ankkuri, Natiivi-UI:n pohja), tai null.</summary>
         public static Vector3? PuhujanPaa { get; private set; }
+        /// <summary>Puhujan juuri ja kasvojen suunta (Unity) tältä kehykseltä: puolilähikuva seuraa myös kävelevää puhujaa (7.10.).</summary>
+        public static Vector3? PuhujanJuuri { get; private set; }
+        public static Vector3? PuhujanKasvot { get; private set; }
 
         readonly Transform juuri;
         readonly Dictionary<string, HenkiloMalli> malliCache = new Dictionary<string, HenkiloMalli>(StringComparer.Ordinal);
@@ -656,7 +659,7 @@ namespace Matkakirja.Natiivi
         public void Paivita(Rakennus rakennus, Nakyma nakyma, double t)
         {
             nakymaHaku.Clear();
-            PuhujanPaa = null;
+            PuhujanPaa = null; PuhujanJuuri = null; PuhujanKasvot = null;
             if (nakyma.Hahmot != null) foreach (var hn in nakyma.Hahmot) nakymaHaku[(hn.TilaId, hn.HahmoId)] = hn;
             if (EleetPaalla) AjoitaEleet(t);
 
@@ -907,7 +910,11 @@ namespace Matkakirja.Natiivi
             e.Juuri.transform.position = paikka;
             if (e.Hahmo.Reitti == null && e.Sekoitin != null) kasvot = Katse(e, paikka, kasvot);
             if (kasvot.sqrMagnitude > 1e-8f) e.Juuri.transform.rotation = Quaternion.LookRotation(kasvot, Vector3.up);
-            if (Puhuja != null && e.HahmoId == Puhuja && e.TilaId == PuhujanTila) PuhujanPaa = paikka + Vector3.up * 2.1f;
+            if (Puhuja != null && e.HahmoId == Puhuja && e.TilaId == PuhujanTila)
+            {
+                PuhujanPaa = paikka + Vector3.up * 2.1f; PuhujanJuuri = paikka;
+                var f = e.Juuri.transform.forward; PuhujanKasvot = e.Sekoitin != null ? -f : f;   // skinnattu malli katsoo −Z:aan
+            }
         }
 
         /// <summary>Nivelen (rx,ry,rz) [asteina, JS:n THREE 'XYZ'] -> Unity-paikallinen kvaternio peilattuna.

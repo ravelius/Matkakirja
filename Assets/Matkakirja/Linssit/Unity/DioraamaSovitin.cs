@@ -380,6 +380,10 @@ namespace Matkakirja.Natiivi
             }
             // t mukaan (era 2): DioraamaNayttamo.Paivita antaa sen liekkinäkymälle (DioraamaLiekit.Paivita, ruutu
             // ajasta) -- nayttamo-kentän kommentti kutsui juuri tätä ("Sovitin voi jatkossa antaa Ydin-ajan tähän").
+            // Lähileikkaus puolilähikuvassa: kaikki yli PuolilahiVapaaM lähempänä kameraa kuin puhuja jää piirtämättä (ei peittäjiä).
+            nayttamo.LahiLeikkaus = puolilahiRinta is Vector3 pr && nayttamo.Kamera != null
+                ? Mathf.Clamp(Vector3.Distance(nayttamo.Kamera.transform.position, pr) - PuolilahiVapaaM, 0f, PuolilahiLeikkausMaxM) : 0f;   // enintään 1,2 m: kuulija ei katoa blendissä
+            puolilahiRinta = null;
             nayttamo.Paivita(kameraAsento, y.VahennettyLiike, t, asetaKamera: !cmKaytossa);
             hahmot3D.Paivita(rakennus, nakyma, nayttamo.Kamera, t);
             // era 2b kohta 4 (ali-agentti P4b): 3D-pienoisfiguurit -- SAMAAN kohtaan kuin vanha 2D-hahmot3D
@@ -656,7 +660,19 @@ namespace Matkakirja.Natiivi
             if (puhuja == null || lepo.Jaljella > 0 || tila == null || lepo.Avain != "tila:" + tila || rakennus?.Tila(tila) is not Tila t) return lepo;
             Hahmo h = null;
             foreach (var x in t.Hahmot) if (x.Id == puhuja) { h = x; break; }
-            if (h == null || h.Reitti != null) return lepo;
+            if (h == null) return lepo;
+            if (Puolilahi && DioraamaHahmot3D.EleetPaalla)
+            {
+                Hahmo lk = null; double ld = double.MaxValue;
+                foreach (var x in t.Hahmot)
+                {
+                    if (x == h || x.Reitti != null) continue;
+                    double dx = x.Paikka.X - h.Paikka.X, dz = x.Paikka.Z - h.Paikka.Z;
+                    if (dx * dx + dz * dz < ld) { ld = dx * dx + dz * dz; lk = x; }
+                }
+                return Puolilahikuva(lepo, lepo.Perus, h, lk, ld, puhuja);
+            }
+            if (h.Reitti != null) return lepo;
             // KESKUSTELUKUVA (Päätoimittaja 5.10. 15.3x: eleet näkyviin puhelimella): kuulijaksi lähin paikallaan oleva hahmo;
             // kohde puhujan ja kuulijan väliin puhujaa painottaen ja etäisyys niin, että hahmo täyttää ~40 % ruudun korkeudesta
             // ja molemmat mahtuvat leveyssuunnassa. Rajat: enintään 0,88 × huoneen lepoetäisyys, vähintään 0,3 ×.
@@ -668,7 +684,6 @@ namespace Matkakirja.Natiivi
                 if (d2 < lahin) { lahin = d2; kuulija = x; }
             }
             var p = lepo.Perus;
-            if (Puolilahi && DioraamaHahmot3D.EleetPaalla) return Puolilahikuva(lepo, p, h, kuulija, lahin, puhuja);
             var puhujanKeski = new Matkakirja.Linssit.Dioraama.V3(h.Paikka.X, h.Paikka.Y + HahmonKeski, h.Paikka.Z);
             var keski = puhujanKeski;
             double vali = 0;
@@ -701,19 +716,28 @@ namespace Matkakirja.Natiivi
             if (kuulija != null && lahin < KuulijaMaxM * KuulijaMaxM && lahin > 0.01)
                 kasvot = Math.Atan2(kuulija.Paikka.X - h.Paikka.X, -(kuulija.Paikka.Z - h.Paikka.Z)) * 180 / Math.PI;
             // Kamera kasvojen puolelle ±PuolilahiSivu (lepokameran puolelle), rajattuna lepokameran ympärille.
+            // RAJAUS (Päätoimittaja 7.10.: vouti jäi reunaan, kuvassa tyhjiä penkkejä): kun tämä on soiva puhuja, kohde ja kasvot tulevat
+            // hahmon tämän hetken paikasta ja suunnasta (kävelevä vouti, kuulijaan kääntynyt puhuja), ei datan lähtöpaikasta.
+            var hx = h.Paikka;
+            if (DioraamaHahmot3D.Puhuja == puhuja && DioraamaHahmot3D.PuhujanJuuri is Vector3 uj && DioraamaHahmot3D.PuhujanKasvot is Vector3 uk)
+            {
+                hx = new Matkakirja.Linssit.Dioraama.V3(uj.x, uj.y, -uj.z);   // UnityPiste peilaa z:n
+                if (new Vector2(uk.x, uk.z).sqrMagnitude > 1e-4f) kasvot = Math.Atan2(uk.x, uk.z) * 180 / Math.PI;
+            }
             double ero = KiertoEro(p.Atsimuutti, kasvot);
             double atsimuutti = kasvot - Math.Sign(ero == 0 ? 1 : ero) * PuolilahiSivu;
             double kierto = Math.Clamp(KiertoEro(p.Atsimuutti, atsimuutti), -PuolilahiMaxKierto, PuolilahiMaxKierto);
             atsimuutti = p.Atsimuutti + kierto;
-            var rinta = new Matkakirja.Linssit.Dioraama.V3(h.Paikka.X, h.Paikka.Y + PuolilahiKohdeY, h.Paikka.Z);
-            if (kuulija != null && lahin < KuulijaMaxM * KuulijaMaxM)
-                rinta = rinta + (new Matkakirja.Linssit.Dioraama.V3(kuulija.Paikka.X, kuulija.Paikka.Y + PuolilahiKohdeY, kuulija.Paikka.Z) - rinta) * 0.15;
+            var rinta = new Matkakirja.Linssit.Dioraama.V3(hx.X, hx.Y + PuolilahiKohdeY, hx.Z);   // puhuja keskelle (ei kuulijaan päin)
+            puolilahiRinta = DioraamaNayttamo.UnityPiste(rinta);
             double fov = p.Fov > 1 ? p.Fov : 40.0;
             double etaisyys = Math.Max(PuolilahiKorkeusM / (2 * Math.Tan(fov * Math.PI / 360.0)), PuolilahiMinM);
             double korkeus = Math.Min(p.Korkeus, PuolilahiKorkeusAst);
             return (lepo.Avain + "|" + puhuja + "|puolilahi", new Asento(rinta, atsimuutti, korkeus, etaisyys, fov, p.Aukko, p.Kierto), 0.2, false);
         }
         static double KiertoEro(double a0, double a1) => ((a1 - a0 + 180) % 360 + 360) % 360 - 180;
+        Vector3? puolilahiRinta;
+        const float PuolilahiVapaaM = 0.9f, PuolilahiLeikkausMaxM = 1.2f;
         const double PuolilahiSivu = 35, PuolilahiMaxKierto = 60, PuolilahiKohdeY = 1.35, PuolilahiKorkeusM = 1.5, PuolilahiMinM = 1.7,
             PuolilahiKorkeusAst = 22;
         const double PuhujaSiirtyma = 0.9, PuhujanPaino = 0.65, HahmonKeski = 0.9, HahmonKorkeus = 1.75,
