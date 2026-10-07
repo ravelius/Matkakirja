@@ -36,6 +36,7 @@ namespace Matkakirja.Natiivi
         DioraamaHahmot3D hahmot;
         Action<string> kirjaa;
         Vector3 tarkistus; SeikkailuPelaaja tarkistusPelaaja;
+        float armoAsti = -1f; const float ArmoS = 4f;
         double sykliMs = 0.955;
 
         public int Maara => vartijat.Count;
@@ -128,7 +129,7 @@ namespace Matkakirja.Natiivi
                     var pp = p.transform.position;
                     s.PelaajaX = pp.x; s.PelaajaZ = pp.z; s.Hiipii = p.Tila.Tapa == Liiketapa.Hiipiminen;
                     s.NakolinjaVapaa = Nakolinja(vp + Vector3.up * 1.6f, pp + Vector3.up * 1.2f);
-                    s.Piilossa = piilossa;
+                    s.Piilossa = piilossa || Time.unscaledTime < armoAsti;   // armonaika tarkistuspisteen jälkeen
                 }
                 else { s.PelaajaX = vp.x + 1000; s.PelaajaZ = vp.z; }
                 v.Aivot.Paivita(dt, s);
@@ -183,6 +184,7 @@ namespace Matkakirja.Natiivi
             var p = SeikkailuPelaaja.Aktiivinen;
             kirjaa?.Invoke($"seikkailu: KIINNI ({v.Osa}), pelaaja tarkistuspisteeseen {tarkistus}");
             if (p != null) p.Siirra(tarkistus);
+            armoAsti = Time.unscaledTime + ArmoS;   // E1-ajo 7.10.: tarkistuspiste vartijan näkyvissä → kiinni uudelleen heti
             foreach (var x in vartijat) { var vp = x.Agentti.transform.position; x.Aivot.Nollaa(vp.x, vp.z); x.EdellinenTila = VartijanTila.Partio; }
         }
 

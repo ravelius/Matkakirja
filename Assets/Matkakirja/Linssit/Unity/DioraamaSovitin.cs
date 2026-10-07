@@ -933,13 +933,13 @@ namespace Matkakirja.Natiivi
             if (nm != null) alku = new Vector3((float)nm.X, (float)nm.Y, (float)-nm.Z);
             else if (lt != null) alku = DioraamaNayttamo.UnityPiste(lt.Kamera.Kohde);
             else { o.Kirjaa("seikkailu: vene perillä, ei nousupaikkaa"); yield break; }
-            if (v != null)
+            // Katse vesiportin oveen (E1-ajo 7.10.: veneestä poispäin katsova pelaaja käveli kannen reunalta veteen); varalla keulan suunta.
+            var ovi = SeikkailuKavely.Data == null ? null : System.Linq.Enumerable.FirstOrDefault(SeikkailuKavely.Data.Merkit, x => x.Nimi == "ovi:vesiportti-alku");
+            if (ovi != null) { var kohti = new Vector3((float)ovi.X, alku.y, (float)-ovi.Z) - alku; if (kohti.sqrMagnitude > 0.25f) yaw = Mathf.Atan2(kohti.x, kohti.z) * Mathf.Rad2Deg; }
+            else if (v != null)
             {
                 var vt = v.Ydin.Tila(v.Ydin.KestoS);
-                var d = new Vector3((float)vt.SuuntaX, 0, (float)-vt.SuuntaZ);
-                var kohti = alku - new Vector3((float)vt.X, alku.y, (float)-vt.Z);
-                var suunta = kohti.sqrMagnitude > 0.25f ? kohti : d;
-                yaw = Mathf.Atan2(suunta.x, suunta.z) * Mathf.Rad2Deg;
+                yaw = Mathf.Atan2((float)vt.SuuntaX, (float)-vt.SuuntaZ) * Mathf.Rad2Deg;
             }
             SeikkailuKavely.Leikkaukset(true);
             Physics.SyncTransforms();

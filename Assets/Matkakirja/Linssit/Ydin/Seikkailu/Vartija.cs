@@ -32,7 +32,7 @@ namespace Matkakirja.Linssit.Seikkailu
 
     public sealed class Vartija
     {
-        public const double NakoKulma = 55, NakoM = 10, LahiM = 2.0, EpailyRaja = 0.3, MittariLaskuS = 0.25;
+        public const double NakoKulma = 55, NakoM = 10, LahiM = 2.0, EpailyRaja = 0.3, MittariLaskuS = 0.25, KiinniM = 1.2;
         public const double EtsintaKatseluS = 6, EpailyUnohdusS = 2.0, PerillaM = 0.6, KavelyMs = 1.2, KiireMs = 2.2, KaantoAsteS = 160;
 
         readonly List<(double X, double Z, double OdotaS)> reitti;
@@ -72,7 +72,9 @@ namespace Matkakirja.Linssit.Seikkailu
             if (ero > NakoKulma && !lahella) return 0;
             double keskelle = ero <= NakoKulma ? 1 - 0.5 * ero / NakoKulma : 0.35;
             double lahelle = 1 - d / ulottuma;
-            return (0.6 + 2.4 * lahelle) * keskelle;        // kaukaa reunalta ~0,3/s, läheltä edestä ~3/s
+            // E1-ajo 7.10.: 3 m:stä kiinni 0,3 s:ssa ei jättänyt reaktioaikaa. Nyt kaukaa reunalta ~0,1/s, läheltä edestä ~0,85/s
+            // (epäily ~0,35 s, täysi ~1,2 s), sitten takaa-ajo (Etsinta pelaajaan) ja kiinni vasta KiinniM:n päässä.
+            return (0.2 + 0.65 * lahelle) * keskelle;
         }
 
         public void Paivita(double dt, VartijanSyote s)
@@ -81,7 +83,12 @@ namespace Matkakirja.Linssit.Seikkailu
             double voima = NakoVoima(s);
             if (voima > 0) { Mittari = Math.Min(1, Mittari + voima * dt); EpailyX = s.PelaajaX; EpailyZ = s.PelaajaZ; rauhaS = 0; }
             else { Mittari = Math.Max(0, Mittari - MittariLaskuS * dt); rauhaS += dt; }
-            if (Mittari >= 1) { Tila = VartijanTila.Kiinni; Vauhti = 0; return; }
+            if (Mittari >= 1 && voima > 0)
+            {
+                double dk = Etaisyys(s.VartijaX, s.VartijaZ, s.PelaajaX, s.PelaajaZ);
+                if (dk <= KiinniM) { Tila = VartijanTila.Kiinni; Vauhti = 0; return; }
+                Tila = VartijanTila.Etsinta; katseluS = 0;   // takaa-ajo: kohti pelaajaa kiireellä (EpailyX/Z = pelaajan paikka)
+            }
             // Kuulo: kuuluva ääni vie etsintään (harhautus), ellei vartija jo näe pelaajaa.
             if (s.Aanet != null && voima <= 0)
                 foreach (var a in s.Aanet)
