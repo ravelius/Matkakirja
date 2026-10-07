@@ -554,6 +554,7 @@ namespace Matkakirja.Natiivi
             siirtyma.BringToFront();
             siirtymaPalkki.Nayta(true);
             siirtymaAlku = Time.realtimeSinceStartup;
+            siirtymaKerta++;
             AsetaPalloKuva(OpasSovitin.Kaupunkitila);
             KrediititTiivis.CesiumNakyviin = true;
             AsetaSiirtymaIon();
@@ -674,6 +675,7 @@ namespace Matkakirja.Natiivi
             Debug.Log($"MATKAKIRJA opas: pallon latauskuva näkyviin {n} ({t.width}×{t.height}){(myohassa ? $", myöhässä {Time.realtimeSinceStartup - siirtymaAlku:F1} s" : "")}");
         }
         float siirtymaAlku;
+        int siirtymaKerta;
 
         /// <summary>Kohde ladattu: musta ruutu häipyy (Cupolan häivytys) ja näkymä aukeaa.</summary>
         public void SiirtymaValmis()
@@ -683,7 +685,10 @@ namespace Matkakirja.Natiivi
             siirtymaPalkki.Arvo = 1f;
             siirtyma.AddToClassList("mk-astroavaus--haipyy");
             siirtyma.schedule.Execute(() => siirtyma.style.opacity = 0f).ExecuteLater(16);
-            siirtyma.schedule.Execute(() => { if (siirtyma.resolvedStyle.opacity < 0.01f) { siirtyma.style.display = DisplayStyle.None; AsetaPalloKuva(false); } }).StartingIn(1200);
+            // Kertalaskuri (NUI 7.10. 15.4x): häivytyksen jälkeen piiloon aina, ellei uusi siirtymä alkanut välissä (peiton tarkistus
+            // jätti ruudun display Flexiksi, jos häivytys katkesi).
+            int kerta = siirtymaKerta;
+            siirtyma.schedule.Execute(() => { if (kerta == siirtymaKerta) { siirtyma.style.display = DisplayStyle.None; AsetaPalloKuva(false); } }).StartingIn(1200);
             testiEdistyminen = null;
             KrediititTiivis.CesiumNakyviin = false;
             Debug.Log("MATKAKIRJA opas: siirtymä valmis");
