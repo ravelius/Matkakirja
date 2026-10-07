@@ -165,9 +165,10 @@ namespace Matkakirja
 
         // MAC: AUTOMAATTINEN LEPO (omistaja 7.10.2026 13.0x, Mac TF: kokonäytön ikkuna toisessa Spacessa, ei valittuna, piti
         // ~30 % prosessoria). Ikkuna näkyy mutta ei ole valittuna → enintään MacEiValittunaFps, ääni soi. Ikkuna ei näy
-        // (toinen Space, pienennetty, peitetty, sovellus piilotettu) → MacPiilossaFps ja kaikki ääni tauolle (AudioListener.pause:
-        // esitys ja kertoja pysähtyvät ja jatkavat samasta kohdasta). iOS ennallaan.
-        public const int MacEiValittunaFps = 10, MacPiilossaFps = 1;
+        // (toinen Space, pienennetty, peitetty, sovellus piilotettu) → MacPiilossaFps, piirto vain joka MacPiilossaPiirtovali.
+        // kehys, Cesium-laattojen päivitys pysäytetty (suspendUpdate) ja kaikki ääni tauolle (AudioListener.pause: esitys ja
+        // kertoja pysähtyvät ja jatkavat samasta kohdasta). Mittaus 7.10. 13.36: pelkkä 1 fps maksoi vielä ~4 %. iOS ennallaan.
+        public const int MacEiValittunaFps = 10, MacPiilossaFps = 1, MacPiilossaPiirtovali = 30;
         /// <summary>Natiivi Mac: 0 = näkyy ja valittuna, 1 = näkyy, ei valittuna, 2 = piilossa.</summary>
         public static int MacIkkuna { get; private set; }
 #if UNITY_STANDALONE_OSX && !UNITY_EDITOR
@@ -175,7 +176,27 @@ namespace Matkakirja
         static extern int MatkakirjaMacSyote_Nakyvyys();
         float macLuettu;
 
-        int MacLepo(int fps)
+        readonly List<(CesiumForUnity.Cesium3DTileset t, bool oli)> macPysaytetyt = new List<(CesiumForUnity.Cesium3DTileset, bool)>();
+
+        void MacCesium(bool pysayta)
+        {
+            if (pysayta)
+            {
+                macPysaytetyt.Clear();
+                foreach (var t in FindObjectsByType<CesiumForUnity.Cesium3DTileset>(FindObjectsSortMode.None))
+                {
+                    macPysaytetyt.Add((t, t.suspendUpdate));
+                    t.suspendUpdate = true;
+                }
+            }
+            else
+            {
+                foreach (var (t, oli) in macPysaytetyt) if (t != null) t.suspendUpdate = oli;
+                macPysaytetyt.Clear();
+            }
+        }
+
+        int MacLepo(int fps, ref int vali)
         {
             if (Time.unscaledTime >= macLuettu)
             {
@@ -186,12 +207,14 @@ namespace Matkakirja
                 int tila = (n & 1) == 0 ? 2 : (n & 2) == 0 ? 1 : 0;
                 if (tila != MacIkkuna)
                 {
+                    if ((tila == 2) != (MacIkkuna == 2)) MacCesium(tila == 2);
                     MacIkkuna = tila;
                     AudioListener.pause = tila == 2;
-                    Debug.Log("MATKAKIRJA ruutu: Mac-ikkuna " + (tila == 2 ? $"piilossa → {MacPiilossaFps} fps, ääni tauolla"
+                    Debug.Log("MATKAKIRJA ruutu: Mac-ikkuna " + (tila == 2 ? $"piilossa → {MacPiilossaFps} fps, piirto joka {MacPiilossaPiirtovali}., Cesium pysäytetty ({macPysaytetyt.Count}), ääni tauolla"
                         : tila == 1 ? $"näkyy, ei valittuna → enintään {MacEiValittunaFps} fps" : "näkyy ja valittuna → täysi taajuus"));
                 }
             }
+            if (MacIkkuna == 2) vali = MacPiilossaPiirtovali;
             return MacIkkuna == 2 ? MacPiilossaFps : MacIkkuna == 1 ? Math.Min(fps, MacEiValittunaFps) : fps;
         }
 #endif
@@ -246,7 +269,7 @@ namespace Matkakirja
             int fps = Math.Min(uusi == Tila.Taysi ? taysi : uusi == Tila.Kerros ? kerrosFps : LepoFps, katto);
             int vali = uusi == Tila.Paikallaan ? PaikallaanVali : 1;
 #if UNITY_STANDALONE_OSX && !UNITY_EDITOR
-            fps = MacLepo(fps);
+            fps = MacLepo(fps, ref vali);
 #endif
             if (Application.targetFrameRate != fps) Application.targetFrameRate = fps;
 #if UNITY_STANDALONE_OSX && !UNITY_EDITOR
