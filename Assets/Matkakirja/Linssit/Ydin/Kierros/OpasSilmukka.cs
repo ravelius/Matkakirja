@@ -380,7 +380,7 @@ namespace Matkakirja.Linssit.Kierros
             // Sama 5 km:n yläkuva kuin avauksessa (Päätoimittaja 6.10. 00.4x: Amsterdam laskeutui matalaan viistoon kuvaan).
             double maa = MaaPisteessa?.Invoke(lat, lon) ?? double.NaN;
             AsetaKohdeKehys(new Pysahdys { Lat = lat, Lon = lon, MaaM = double.IsNaN(maa) ? 0 : maa, NostoM = 0, Suuntima = KierrosLento.Kiedo(Suunta(Asento.Lat, Asento.Lon, lat, lon)),
-                Kallistus = AvausKallistus, EtaisyysM = AvausEtaisyysOhitus ?? AvausEtaisyysM }, double.IsNaN(maa), null, 0);
+                Kallistus = AvausKallistusOhitus ?? AvausKallistus, EtaisyysM = AvausEtaisyysOhitus ?? AvausEtaisyysM }, double.IsNaN(maa), null, 0);
             Ohjaus.Nollaa();
             lahto = Asento;
             double matka = KierrosLento.EtaisyysM(lahto.Lat, lahto.Lon, lat, lon);
@@ -451,17 +451,26 @@ namespace Matkakirja.Linssit.Kierros
             SiirtoAlkaa?.Invoke(lat, lon);
         }
 
+        /// <summary>Kaupunkitilan avausnäkymässä ensimmäinen kohde näkyy kuvan alakolmanneksessa: katsepiste on näin monta
+        /// osuutta etäisyydestä kohteen takana katsesuunnassa (1,1 km / 50°, pystykenttä ~40°: kohde ~1/6 kuvan korkeudesta keskeltä alas).</summary>
+        public const double AvausKatseEteenOsuus = 0.18;
+
         /// <summary>
-        /// Kaupunkitila (omistaja TF 162, Rooma kartan pallosta: "kohde on liian kaukana"): kun esityksen ensimmäinen kohde
-        /// selviää vielä siirtoruudun aikana, avausnäkymä on sen lähikuva samalla kehystyksellä kuin oppaan kohteessa (vino
-        /// kulma, kohde lähellä) eikä 2,2 km:n yläkuva. Ruudun alla, joten ei liukua; true = kohdistettiin.
+        /// Kaupunkitila (omistaja TF 162, Rooma kartan pallosta: "kohde on liian kaukana"; Päätoimittaja 22.4x: avausnäkymä
+        /// puoliväliin, ei lähikuvaa, koska avausteksti kuvaa kaupunkia ylhäältä): kun esityksen ensimmäinen kohde selviää vielä
+        /// siirtoruudun aikana, avausnäkymän kehys (etäisyys ja kallistus ennallaan, AvausEtaisyysOhitus/AvausKallistusOhitus)
+        /// katsoo kohti kohdetta niin, että se on kuvan alakolmanneksessa ja vanha kaupunki ympärillä. Kierroksen alku lentää
+        /// tästä pehmeästi kohteen kehykseen. Ruudun alla, joten ei liukua; true = kohdistettiin.
         /// </summary>
         public bool KohdistaAvausKohteeseen(string nimi, double lat, double lon)
         {
-            if (!Siirtymassa || !siirtyma) return false;
-            var k = new OpasKohde { Id = nimi, Nimi = nimi, Lat = lat, Lon = lon };
-            double maa = MaaPisteessa?.Invoke(lat, lon) ?? double.NaN;
-            AsetaKohdeKehys(OpasKuvaus.Kehysta(k, double.IsNaN(maa) ? 0 : maa, kohdeKehys?.Suuntima ?? Asento.Suuntima), double.IsNaN(maa), k, kohdeKehys?.Suuntima ?? Asento.Suuntima);
+            if (!Siirtymassa || !siirtyma || kohdeKehys == null) return false;
+            double et = kohdeKehys.EtaisyysM, suunta = kohdeKehys.Suuntima * Math.PI / 180, d = AvausKatseEteenOsuus * et;
+            double kLat = lat + d * Math.Cos(suunta) / 111320.0;
+            double kLon = lon + d * Math.Sin(suunta) / (111320.0 * Math.Cos(lat * Math.PI / 180));
+            double maa = MaaPisteessa?.Invoke(kLat, kLon) ?? double.NaN;
+            AsetaKohdeKehys(new Pysahdys { Lat = kLat, Lon = kLon, MaaM = double.IsNaN(maa) ? 0 : maa, NostoM = 0, Suuntima = kohdeKehys.Suuntima,
+                Kallistus = kohdeKehys.Kallistus, EtaisyysM = et }, double.IsNaN(maa), null, 0);
             Asento = KehysAsento(kohdeKehys, 0);
             return true;
         }
@@ -952,6 +961,8 @@ namespace Matkakirja.Linssit.Kierros
         /// <summary>Kaupunkitilan aloitus (omistaja 7.10. 12.5x, Ateena TF 159: lähizoomin laatat puuttuivat): yleiskuvan etäisyys
         /// (lyhyempi siirtymä lähikuvaan); null = AvausEtaisyysM.</summary>
         public double? AvausEtaisyysOhitus;
+        /// <summary>Kaupunkitilan avausnäkymän kallistus (Päätoimittaja 22.4x: ~50°, ei 25°:n pystykuvaa); null = AvausKallistus.</summary>
+        public double? AvausKallistusOhitus;
         /// <summary>Esityksen ensimmäinen kohde: latauskuvan ja avauksen aikana esikamera esilataa sen lähikuvan, ja siirtoruutu
         /// aukeaa vasta, kun myös ne laatat ovat valmiit (latausaste kattaa kaikki kamerat). Kierroksen alku tyhjentää.</summary>
         public (string nimi, double lat, double lon)? EsiKohde;

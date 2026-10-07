@@ -149,6 +149,7 @@ namespace Matkakirja.Natiivi
             {
                 if (esitysAlkaa) Viimeisin.silmukka.PyynnotSeis = true;   // esitys: avaus ja opastus ensin, ei workerin kaupunkikysymystä
                 Viimeisin.silmukka.AvausEtaisyysOhitus = Kaupunkitila ? KaupunkitilaAvausM : (double?)null;
+                Viimeisin.silmukka.AvausKallistusOhitus = Kaupunkitila ? KaupunkitilaAvausKallistus : (double?)null;
                 Viimeisin.silmukka.VaihdaPaikka(lat, lon, nimi.Trim());   // kamera lentää heti kaupungin yleiskuvaan (Natiivi-UI 6.10. 00.2x)
             }
             var v = Viimeisin;
@@ -373,8 +374,8 @@ namespace Matkakirja.Natiivi
             if (Kaupunkitila && silmukka.PyynnotSeis && silmukka.EsiKohde == null && (kierrosKohteet ?? kohteet) is List<OpasTaky> ek && ek.Count > 0 && kohteetKaupunki == Aloituskaupunki)
             {
                 silmukka.EsiKohde = (ek[0].Nimi, ek[0].Lat, ek[0].Lon); o.Kirjaa($"opas: esilataus ensimmäinen kohde {ek[0].Nimi}");
-                // Omistaja TF 162 (Rooma): avausnäkymä ensimmäisen kohteen lähikuvana, ei 2,2 km:n yläkuvana.
-                if (silmukka.KohdistaAvausKohteeseen(ek[0].Nimi, ek[0].Lat, ek[0].Lon)) o.Kirjaa($"opas: avausnäkymä ensimmäisen kohteen lähikuvana ({ek[0].Nimi}, {silmukka.Asento})");
+                // Omistaja TF 162 (Rooma) / Päätoimittaja 22.4x: avausnäkymä katsoo ensimmäistä kohdetta (alakolmannes), 1,1 km / 50°.
+                if (silmukka.KohdistaAvausKohteeseen(ek[0].Nimi, ek[0].Lat, ek[0].Lon)) o.Kirjaa($"opas: avausnäkymä kohti ensimmäistä kohdetta ({ek[0].Nimi}, {silmukka.Asento})");
             }
             if (esitysAlkaa && Kaupunkitila && !silmukka.Siirtymassa && kohteet != null && kohteet.Count > 0 && kohteetKaupunki == Aloituskaupunki)
             { esitysAlkaa = false; o.StartCoroutine(EsitysAvaus(KaupunkitilaId)); }
@@ -509,7 +510,8 @@ namespace Matkakirja.Natiivi
         }
         public const string KerroLisaaTeksti = "Kerro lisää";
         /// <summary>Kaupunkitilan yleiskuvan etäisyys (m; oletus 5 000): lyhyempi siirtymä ensimmäiseen kohteeseen (omistaja 12.5x).</summary>
-        public const double KaupunkitilaAvausM = 2200;
+        // Päätoimittaja 22.4x (omistaja TF 162, Rooma: "kohde on liian kaukana"): puoliväli 2,2 km:n pystykuvan ja lähikuvan välillä.
+        public const double KaupunkitilaAvausM = 1100, KaupunkitilaAvausKallistus = 50;
 
         // ---- ESITYKSEN AVAUS JA OPASTUS (omistaja 7.10. 10.1x / 12.4x) ----
         // Kaupunkitilan esitys: siirtymä → kaupungin avaus (opas/esittely-v1/<id>.json "avaus") → opastuslause VAIN pelaajan
