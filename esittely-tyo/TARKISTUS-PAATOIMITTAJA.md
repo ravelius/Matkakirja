@@ -2730,3 +2730,118 @@ Tarkistettu jokainen muutettu kenttä: `git diff 9710c46`, kenttätasolla JSON-v
 4. **Sevilla, Maestranza:** Carmenin kuolema mainitaan ilman kuvausta, ja olen hyväksynyt sen. Lopullinen sävyarvio on ihmisen päätös.
 5. **Krakova, Wawel:** päiden legendasta on kaksi versiota (pää esti väärän tuomion, tai pää huomautti jo annetusta). Lyhyt käyttää jälkimmäistä. Muutosta ei tehty.
 6. **Madrid:** Pradon kysymys Las Meninasin pelastamisesta saa vastauksen kuninkaanlinnan lyhyestä. Kumpikaan kenttä ei muuttunut tässä erässä.
+
+Tarkistaja C: valletta, venetsia, vilna sekä Bergenin kierrosversioiden päällekkäisyys.
+
+# Toinen lukija (tarkistaja C): valletta, venetsia, vilna + Bergenin rajattu tehtävä
+
+Menetelmä: kenttäkohtainen vertailu `git show 9710c46:esittely-tyo/korjattu/<id>.json` ↔ nykyinen tiedosto. Luin
+jokaisen muuttuneen `teksti`-, `lyhyt`-, `syventava`-, `kysymykset`-, `puhe_*`- ja `lahteet`-kentän. Luin kahdeksan
+`lyhyt`-versiota kierrosjärjestyksessä avauksen ja saman kohteen `teksti`- ja kysymyskenttien kanssa. Avasin lähteet
+WebFetchillä tai Wikipedian raakatekstinä.
+
+Yhteensä 6 tarkistajan korjausta: Valletta 0, Venetsia 0, Vilna 5 (neljä kohdetta), Bergen 1 (tilattu tehtävä).
+Tarkistin: kaikissa neljässä kaupungissa 0 virhettä, huomioiden määrä ennallaan.
+
+## Valletta
+- Hyväksytty sellaisenaan.
+- Tarkistettu (avattu): gobeliinit, eli Perellos, Gobelins 1708, gioia eli lahja, eksoottinen kasvisto ja eläimistö,
+  "ainoa täydellinen alkuperäisten kartonkien mukaan kudottu sarja", kymmenen suurta seinävaatetta (heritagemalta.mt,
+  vahvistaa). Paluu saliin 2026 (guidememalta.com 25.6.2026: entisöinti valmis, sarja esillä seinävaatesalissa,
+  vahvistaa). Myös "riippuu" pitää siis paikkansa. Kellon Rhodos-perinne "kerrotaan"-muodossa ja Nasonin kattofreskot
+  1724 (en.wikipedia, vahvistaa). Manoel-teatterin latinankielinen kirjoitus, yömaja "a few pennies a night" ja
+  pakkolunastus 1956 (en.wikipedia, vahvistaa). Pinto 32 vuotta, velat ja barokki, ranskalaisten päämaja 1798 ja
+  signaaliasema antenneineen 1889 (en.wikipedia, vahvistaa). Hal Farin kuusi Gladiatoria, sanomalehden antamat nimet ja
+  Faithin runko museossa (vahvistaa). Ohio hinattiin Ledburyn ja Pennin väliin sidottuna, viisi neljästätoista
+  kauppalaivasta pääsi perille, ja 15.8. oli taivaaseenastumisen juhla (en.wikipedia Operation Pedestal, vahvistaa).
+  Gardjolan silmä ja korva (visitmalta.com, vahvistaa).
+- Säännöt ja kysymykset: ei huomautettavaa. Uusien kysymysten oletukset ovat tosia.
+- Pieni huomio, ei korjattu: kierroksen kohteet 2 (Yläbarrakka: "ranskalaisten miehitys päättyi") ja 3 (Castille:
+  "ranskalaisten miehittäjien päämaja") mainitsevat molemmat ranskalaisten miehityksen. Kyse on sivulauseista eri
+  tarinoissa, ei samasta anekdootista.
+
+## Venetsia
+- Hyväksytty sellaisenaan.
+- Tarkistettu (avattu): Galileo-korjaus. MIT:n sivu vahvistaa, että paikalla oli "numerous gentlemen and senators",
+  että purjeet näkyivät paljaalla silmällä vasta "two hours or more" myöhemmin ja että Galileo sai elinikäisen viran
+  tuhannen floriinin palkalla. Dogen poisto on oikein. Ca' d'Oro: cultura.gov.it vahvistaa, että museo suljettiin
+  helmikuussa 2026 viimeisen entisöintivaiheen ajaksi ja että auki ovat vain Mantegnan kappeli ja piha. Teksti ei väitä
+  museon olevan auki, ja uusi kysymys "Mitä taideteoksia Franchetti keräsi?" ei vanhene. Saluten juhla 21.11.,
+  kynttilä, votiivisilta ja dalmatialaisten savulampaanliha ruton aikana (1600.venezia.it, vahvistaa). Castradinan kaali
+  (it.wikipedia Castradina: verza, vahvistaa). Wagner kuoli Ca' Vendramin Calergissa 13.2.1883, kasino on toiminut siellä
+  vuodesta 1959 ja Wagner-museo on palatsissa (en.wikipedia, vahvistaa). Haulla ei löytynyt tietoa kasinon muutosta.
+  Huokausten sillan suudelmalegenda ja A Little Romance (en.wikipedia, vahvistaa).
+- Säännöt ja kysymykset: ei huomautettavaa. "Miksi Napoleon vei hevoset Pariisiin?" ei toista kierrosversiota.
+
+## Vilna
+
+### Vilnan vanhakaupunki — kenttä `lyhyt` (TARKISTAJAN KORJAUS)
+- **Vanha:** "…Natsit tuhosivat sen sodassa, ja neuvostovalta purki rauniot… Viime vuosina arkeologit ovat kaivaneet…"
+- **Uusi:** "…Natsit ryöstivät ja polttivat sen sodassa, ja neuvostovalta purki rauniot… Vuodesta 2016 lähtien arkeologit ovat kaivaneet…"
+- **Syy:** Tyyppi 3, vivahde: Wikipedian mukaan natsit "looted, burned, and partly destroyed", ja lopullisen tuhon teki
+  neuvostovalta. Tyyppi 5: "viime vuosina" vanhenee pysyvässä äänitteessä, kun taas "vuodesta 2016 lähtien" ei vanhene
+  (kaivaukset alkoivat 2016, ja bima julkistettiin 2018). Pituus 40 sanaa. `lahteet` päivitetty.
+- **Lähde:** https://en.wikipedia.org/wiki/Great_Synagogue_of_Vilna
+
+### Gediminasin torni — kenttä `lahteet` (TARKISTAJAN KORJAUS, teksti ennallaan)
+- **Vanha:** raitojen repiminen merkitty lähteeseen tv3.lt/trispalvei-90
+- **Uusi:** tv3.lt tukee vain vuoden 1988 lipunnostoa. Raitojen repimiselle on lisätty lähteeksi Liettuan kansallismuseon
+  (tornin ylläpitäjä) englanninkielinen sivu.
+- **Syy:** Tyyppi 3: tv3.lt-artikkeli ei mainitse bolševikkeja eikä raitoja (luettu kokonaan). Kansallismuseon sivu
+  aukesi suoralla haulla: "On January 1, 1919, Lithuanian volunteers led by officer Kazys Škirpa raised the tricolor flag
+  atop the tower for the first time. … on January 6, Bolshevik forces seized Vilnius and tore off the yellow and green
+  stripes." Väite on nyt varmistettu, joten virke säilyy.
+- **Lähde:** https://lnm.lt/en/news/gediminas-tower-how-well-do-you-know-the-history-of-this-national-symbol/
+
+### Pyhän Annan kirkko — kenttä `lyhyt` (TARKISTAJAN KORJAUS)
+- **Vanha:** "…Annalle ja kaupungissa käyville saksalaisille katolilaisille."
+- **Uusi:** "…Annalle ja kaupungissa käyville katolilaisille."
+- **Syy:** Tyyppi 3: Wikipedia merkitsi syyskuussa 2026 saksalaiset lähteettömiksi ("citation needed"), eikä muuta
+  lähdettä löytynyt. Varmistettu osa jää. 41 sanaa.
+- **Lähde:** https://en.wikipedia.org/wiki/Church_of_St._Anne,_Vilnius
+
+### Pyhän Pietarin ja Pyhän Paavalin kirkko — kenttä `lyhyt` (TARKISTAJAN KORJAUS)
+- **Vanha:** "…kirkon raunioihin hetmani Pac kerrotaan piiloutuneen vuonna 1662…"
+- **Uusi:** "…kirkon raunioihin tuleva hetmani Pac kerrotaan piiloutuneen vuonna 1662…"
+- **Syy:** Tyyppi 3, titteli: Pac nimitettiin kenttähetmaniksi vasta 1663 ja suurhetmaniksi 1667. Vuonna 1662 hän ei
+  ollut hetmani, ja samassa virkkeessä Gosiewski on oikein kenttähetmani.
+- **Lähde:** https://en.wikipedia.org/wiki/Micha%C5%82_Kazimierz_Pac
+
+- Muut tarkistetut (avattu): Užupisin yli viisisataa suurlähettilästä, kolibrit, kadulla viheltäminen ja Dalai-laman
+  puu 2018 (en.wikipedia, vahvistaa). Oma valuutta (OCA Magazine: "issued currency", vahvistaa). Aamuportin luodinreikä
+  oikeassa hihassa 1702 ja legenda rautaportista pääsiäislauantaina (vahvistaa). Tähtitorni: valosaaste, havainnot
+  Molėtaissa ja "continues scientific research" (vahvistaa). Tuomiokirkon holvi löytyi, kun insinöörit kaivoivat lattian
+  alle tutkiakseen tulvan jälkeen perustuksia (LRT, vahvistaa). Pacin piiloutuminen 1662 "It is said" ja Annan kirkon
+  puukirkko 1419 sekä sivutornit 2009 (vahvistaa). Kolme ristiä 1649 ja Užupisin kongruenssi "pykälää on" ovat kunnossa.
+- Kieli: "Dalai-lama" kirjoitetaan Kielitoimiston mukaan "dalai-lama", mutta se ei vaikuta ääneen luettuna, joten jätin.
+- Päällekkäisyys uudelleen luettuna: ei toistoja.
+- Tarkistin: `Vilna: 10 kohdetta, 0 virhettä, 3 huomiota`.
+
+## Bergen
+
+### Fløibanen — kenttä `lyhyt` (TARKISTAJAN KORJAUS, tilattu tehtävä)
+- **Vanha:** "Köysirata Fløibanenia käyttivät sotavuosina saksalaiset miehitysjoukot tavaran ja väen kuljettamiseen. Miehityksen päätyttyä vaunut maalattiin toinen punaiseksi ja toinen siniseksi, ja yhdessä valkoisen ala-aseman kanssa ne muodostavat Norjan lipun värit. Samoja värejä on käytetty siitä asti."
+- **Uusi:** "Köysirata Fløibanen juuttui keväällä 1986 kesken matkan, kun signaalijohto putosi alas. Kyydissä oli toimittajien kanssa kolmetoistavuotias belgialainen Sandra Kim, ja matkustajat joutuivat kiipeämään tikkailla ulos ja laskeutumaan radan viertä kulkevia kapeita portaita. Muutamaa päivää myöhemmin Kim voitti Bergenissä Euroviisut."
+- **Syy:** Tyyppi 1. Bryggenin (kohde 1) ja Fløibanenin (kohde 4) kierrosversiot kertoivat molemmat miehityksen
+  päättymisestä. Vaihdoin Fløibanenin, koska:
+  - sen värit toistivat myös saman kohteen tekstiä (punainen Rødhette ja sininen Blåmann)
+  - no.wikipedian mukaan vaunut saivat sinisen ja punaisen värinsä "tidlig på 1950-tallet", mikä on ristiriidassa
+    vanhan väitteen "miehityksen päätyttyä" kanssa (tyyppi 3)
+  - Bryggenin nimitarina on kaupungin oma ja liittyy suoraan kohteeseen.
+
+  Uusi tarina ei toista avausta, muita kierrosversioita, Fløibanenin tekstiä eikä kysymyksiä. Vanha lähde-entry on
+  poistettu ja kaksi uutta lisätty. 39 sanaa ja 3 virkettä. Alkusana "Köysirata" on suomenkielinen, ja
+  "kolmetoistavuotias" on kirjoitettu sanoin.
+- **Lähde:** https://no.wikipedia.org/wiki/Fl%C3%B8ibanen ("Sammen med en del pressefolk tok hun Fløibanen noen dager før finalen, da en signalledning falt ned … Passasjerene måtte klatre ut ved hjelp av stiger og ta seg ned på den smale trappen langs skinnegangen.") ; https://en.wikipedia.org/wiki/Sandra_Kim (13 vuotta, voitto Bergenissä 1986)
+- Muuhun Bergenissä ei koskettu. Tarkistin: `Bergen: 11 kohdetta, 0 virhettä, 12 huomiota`.
+
+## Päätoimittajalle
+1. **Vilna, Gediminasin lippu:** raitojen repiminen 6.1.1919 on nyt varmistettu kansallismuseon omalta sivulta.
+   Edellisen agentin lähde (tv3.lt) ei tukenut väitettä lainkaan. Kansallismuseo sanoo myös "for the first time", mutta
+   agentti poisti sanat "ensimmäisen kerran" VLE:n ristiriidan vuoksi. Varovainen muoto on edelleen hyvä.
+2. **Bergen, Fløibanenin värit:** en.wikipedian "miehityksen jälkeen" ja no.wikipedian "1950-luvun alussa" ovat
+   ristiriidassa. Väite on nyt poistettu kierrosversiosta, joten asia ei enää koske tekstiä.
+3. **Valletta:** ranskalaisten miehitys vilahtaa kierroksen peräkkäisissä kohteissa 2 ja 3 (sivulauseina). Jätin ennalleen.
+4. **Prosessihuomio:** ajoin vahingossa `git stash` -komennon tarkistinsilmukassa ja palautin muutokset heti
+   `git stash pop` -komennolla. Stashissa olivat vain omat bergen- ja vilna-muutokseni. Ne on tarkistettu ehjiksi, eikä
+   muiden tiedostoihin koskettu.

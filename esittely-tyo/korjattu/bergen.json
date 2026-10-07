@@ -158,7 +158,7 @@
    "luokka": "muu",
    "koko_m": 900,
    "teksti": "Köysirata Fløibanen piirtyy ylhäältä kapeana kaistana Bergenin keskustasta talojen ja metsän läpi Fløyenin rinnettä ylös. Rata avattiin tammikuussa 1918, se on kahdeksansataaneljäkymmentäkahdeksan metriä pitkä ja nousee kolmesataakaksi metriä. Radalla kulkee kaksi vaunua, punainen Rødhette eli Punahilkka ja sininen Blåmann, ja kumpaankin mahtuu satakaksikymmentä matkustajaa. Nykyiset vaunut ovat radan viides sukupolvi, ja ne otettiin käyttöön vuonna 2022. Rata on yksi Norjan suosituimmista nähtävyyksistä, ja sillä tehdään lähes kaksi miljoonaa matkaa vuodessa.",
-   "lyhyt": "Köysirata Fløibanenia käyttivät sotavuosina saksalaiset miehitysjoukot tavaran ja väen kuljettamiseen. Miehityksen päätyttyä vaunut maalattiin toinen punaiseksi ja toinen siniseksi, ja yhdessä valkoisen ala-aseman kanssa ne muodostavat Norjan lipun värit. Samoja värejä on käytetty siitä asti.",
+   "lyhyt": "Köysirata Fløibanen juuttui keväällä 1986 kesken matkan, kun signaalijohto putosi alas. Kyydissä oli toimittajien kanssa kolmetoistavuotias belgialainen Sandra Kim, ja matkustajat joutuivat kiipeämään tikkailla ulos ja laskeutumaan radan viertä kulkevia kapeita portaita. Muutamaa päivää myöhemmin Kim voitti Bergenissä Euroviisut.",
    "syventava": "Miksi vaunu on nimeltään Punahilkka?",
    "kysymykset": [
     "Kenen idea oli rakentaa rata vuorelle?",
@@ -190,8 +190,12 @@
      "url": "https://en.wikipedia.org/wiki/Fl%C3%B8ibanen"
     },
     {
-     "vaite": "Saksalaiset miehitysjoukot käyttivät rataa toisen maailmansodan aikana tarvikkeiden ja henkilöstön kuljetukseen; miehityksen päätyttyä vaunut maalattiin punaiseksi ja siniseksi, ja yhdessä valkoisen ala-aseman kanssa värit muodostavat Norjan lipun. Samoja värejä on käytetty siitä asti.",
-     "url": "https://en.wikipedia.org/wiki/Fl%C3%B8ibanen"
+     "vaite": "Muutamaa päivää ennen vuoden 1986 Euroviisujen finaalia Sandra Kim ja joukko toimittajia matkusti Fløibanenilla, kun signaalijohto putosi ja vaunu jäi jumiin ennen toiseksi viimeistä pysäkkiä; matkustajat kiipesivät tikkailla ulos ja laskeutuivat radan viertä kulkevia kapeita portaita.",
+     "url": "https://no.wikipedia.org/wiki/Fl%C3%B8ibanen"
+    },
+    {
+     "vaite": "Belgialainen Sandra Kim voitti vuoden 1986 Euroviisut Bergenissä kolmetoistavuotiaana kappaleella J'aime la vie.",
+     "url": "https://en.wikipedia.org/wiki/Sandra_Kim"
     }
    ]
   },

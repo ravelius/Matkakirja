@@ -10,7 +10,7 @@
    "luokka": "muu",
    "koko_m": 2000,
    "teksti": "Vilnan vanhakaupunki näkyy ylhäältä kaartuvien katujen, punaisten kattojen ja kirkontornien verkkona, jonka pinta-ala on yli kolme ja puoli neliökilometriä. Se on yksi Pohjois-Euroopan suurimmista säilyneistä keskiaikaisista kaupunginosista, ja Unesco otti sen maailmanperintöluetteloon vuonna 1994. Vanhin ja koristeellisin katu on Linnankatu, liettuaksi Pilies, joka syntyi linnaan johtaneen tien paikalle. Sitä pitkin kulkivat aikoinaan kuninkaat, paavin lähettiläät ja vieraiden maiden suurlähettiläät matkallaan linnaan. Kadun varrella goottilaiset, renessanssiajan ja barokkiajan talot seisovat yhä rinnakkain.",
-   "lyhyt": "Vilnan vanhassakaupungissa seisoi yli kolmesataa vuotta Suuri synagoga, juutalaisen Vilnan sydän. Natsit tuhosivat sen sodassa, ja neuvostovalta purki rauniot ja rakensi paikalle päiväkodin ja koulun. Viime vuosina arkeologit ovat kaivaneet maan alta esiin rukoussalin lattian ja barokkityylisen lukukorokkeen.",
+   "lyhyt": "Vilnan vanhassakaupungissa seisoi yli kolmesataa vuotta Suuri synagoga, juutalaisen Vilnan sydän. Natsit ryöstivät ja polttivat sen sodassa, ja neuvostovalta purki rauniot ja rakensi paikalle päiväkodin ja koulun. Vuodesta 2016 lähtien arkeologit ovat kaivaneet maan alta esiin rukoussalin lattian ja barokkityylisen lukukorokkeen.",
    "syventava": "Ketkä kulkivat Linnankatua pitkin?",
    "kysymykset": [
     "Miksi vanhankaupungin kadut kiemurtelevat?",
@@ -34,7 +34,7 @@
      "url": "https://www.govilnius.lt/pilies-street"
     },
     {
-     "vaite": "Suuri synagoga valmistui 1633 ja toimi vuoteen 1941, jolloin natsit tuhosivat sen; neuvostovalta purki sen 1955–1957 ja rakensi paikalle päiväkodin ja koulun; kaivauksissa on paljastettu rukoussali terrazzolattioineen ja barokkinen bima.",
+     "vaite": "Suuri synagoga valmistui 1633 ja toimi vuoteen 1941; natsit ryöstivät, polttivat ja osittain tuhosivat sen sodassa; neuvostovalta purki rauniot 1955–1957 ja rakensi paikalle päiväkodin ja koulun; kaivaukset alkoivat 2016, ja niissä on paljastettu rukoussali terrazzolattioineen ja barokkinen bima (julkistettu 2018).",
      "url": "https://en.wikipedia.org/wiki/Great_Synagogue_of_Vilna"
     }
    ]
@@ -76,8 +76,12 @@
      "url": "https://vilniusgo.lt/atsinaujines-gedimino-pilies-bokstas-ka-verta-pamatyti/"
     },
     {
-     "vaite": "Kolmivärinen lippu nostettiin torniin 1.1.1919; bolševikit valtasivat Vilnan 6.1. ja repivät lipusta keltaisen ja vihreän raidan (Liettuan kansallismuseo); lippu nostettiin uudelleen 7.10.1988.",
+     "vaite": "Lippu nostettiin uudelleen Gediminasin torniin 7.10.1988.",
      "url": "https://www.tv3.lt/naujiena/lietuva/trispalvei-90-n193469"
+    },
+    {
+     "vaite": "Liettuan kansallismuseo (tornin ylläpitäjä): 1.1.1919 vapaaehtoiset nostivat kolmivärisen lipun tornin huipulle; 6.1. bolševikit valtasivat Vilnan ja repivät lipusta keltaisen ja vihreän raidan.",
+     "url": "https://lnm.lt/en/news/gediminas-tower-how-well-do-you-know-the-history-of-this-national-symbol/"
     }
    ]
   },
@@ -181,7 +185,7 @@
    "luokka": "kirkko",
    "koko_m": 40,
    "teksti": "Pyhän Annan kirkko on pieni punatiilinen kirkko, jonka julkisivua kruunaa kaksi pitsimäistä tornia. Se valmistui noin vuonna 1500, ja sen rakentamiseen käytettiin kolmeakymmentäkolmea erilaista tiiltä. Kirkkoa pidetään entisen Puolan ja Liettuan valtioliiton alueen komeimpana liekehtivän gotiikan esimerkkinä, ja sen takana seisovat bernardiinien kirkko ja luostari. Legendan mukaan Napoleon ihastui kirkkoon vuonna 1812 niin, että olisi halunnut kantaa sen kämmenellään Pariisiin. Todellisuudessa hänen perääntyvät sotilaansa tekivät kirkosta varaston ja polttivat sen penkit ja rippituolit.",
-   "lyhyt": "Pyhän Annan kirkon paikalla seisoi ensin puukirkko, joka rakennettiin Vytautas Suuren ensimmäiselle puolisolle Annalle ja kaupungissa käyville saksalaisille katolilaisille. Puukirkko paloi vuonna 1419. Nykyisen tiilikirkon ulkoasu on säilynyt lähes muuttumattomana, mutta julkisivun pienet sivutornit puuttuivat pitkään ja rakennettiin uudelleen vasta vuonna 2009.",
+   "lyhyt": "Pyhän Annan kirkon paikalla seisoi ensin puukirkko, joka rakennettiin Vytautas Suuren ensimmäiselle puolisolle Annalle ja kaupungissa käyville katolilaisille. Puukirkko paloi vuonna 1419. Nykyisen tiilikirkon ulkoasu on säilynyt lähes muuttumattomana, mutta julkisivun pienet sivutornit puuttuivat pitkään ja rakennettiin uudelleen vasta vuonna 2009.",
    "syventava": "Mitä Napoleon sanoi kirkosta?",
    "kysymykset": [
     "Miksi kirkon rakentamiseen tarvittiin niin monta tiiltä?",
@@ -213,7 +217,7 @@
      "url": "https://www.ldkistorija.lt/?p=8428"
     },
     {
-     "vaite": "Ensimmäinen, puinen kirkko rakennettiin Vytautas Suuren ensimmäiselle puolisolle Annalle ja kaupungissa käyville katolisille saksalaisille, ja se paloi 1419; tiilikirkon ulkoasu on säilynyt lähes muuttumattomana; pitkään puuttuneet sivutornit rakennettiin uudelleen 2009.",
+     "vaite": "Ensimmäinen, puinen kirkko rakennettiin Vytautas Suuren ensimmäiselle puolisolle Annalle ja kaupungissa käyville katolilaisille (saksalaisten mainitseminen on Wikipediassa merkitty lähteettömäksi, joten jätetty pois), ja se paloi 1419; tiilikirkon ulkoasu on säilynyt lähes muuttumattomana; pitkään puuttuneet sivutornit rakennettiin uudelleen 2009.",
      "url": "https://en.wikipedia.org/wiki/Church_of_St._Anne,_Vilnius"
     }
    ]
@@ -321,7 +325,7 @@
    "luokka": "kirkko",
    "koko_m": 70,
    "teksti": "Pyhän Pietarin ja Pyhän Paavalin kirkko seisoo Antakalnisin kaupunginosassa vanhankaupungin koillispuolella, ja ylhäältä sen kaksi tornia ja kupoli erottuvat selvästi ympäröivistä puista. Kirkon rakennutti hetmani Michał Kazimierz Pac kiitokseksi siitä, että moskovalaiset oli karkotettu Vilnasta kuuden vuoden miehityksen jälkeen. Sisällä seiniä ja holveja peittää noin kaksituhatta stukkohahmoa, jotka veisti italialainen Giovanni Pietro Perti. Pac kuoli vuonna 1682 ennen kirkon valmistumista. Hänet haudattiin kirkon oven kynnyksen alle, ja hautakivessä lukee latinaksi: tässä lepää syntinen.",
-   "lyhyt": "Pyhän Pietarin ja Pyhän Paavalin kirkon raunioihin hetmani Pac kerrotaan piiloutuneen vuonna 1662, kun kapinoivat sotilaat yrittivät surmata hänet. Samat sotilaat tappoivat myöhemmin kenttähetmani Wincenty Gosiewskin. Pac selvisi ja päätti rakentaa tuhoutuneen kirkon uudelleen.",
+   "lyhyt": "Pyhän Pietarin ja Pyhän Paavalin kirkon raunioihin tuleva hetmani Pac kerrotaan piiloutuneen vuonna 1662, kun kapinoivat sotilaat yrittivät surmata hänet. Samat sotilaat tappoivat myöhemmin kenttähetmani Wincenty Gosiewskin. Pac selvisi ja päätti rakentaa tuhoutuneen kirkon uudelleen.",
    "syventava": "Miksi Pac haudattiin kynnyksen alle?",
    "kysymykset": [
     "Mitä kaikkea stukkohahmot esittävät?",
@@ -351,6 +355,10 @@
     {
      "vaite": "Kerrotaan, että Pac innostui rakentamaan kirkon uudelleen, kun hän oli 1662 piiloutunut sen raunioihin ja välttänyt kapinoivat sotilaat, jotka myöhemmin surmasivat kenttähetmani Wincenty Gosiewskin; sodissa 1655–1661 kirkko tuhoutui.",
      "url": "https://en.wikipedia.org/wiki/Church_of_St._Peter_and_St._Paul,_Vilnius"
+    },
+    {
+     "vaite": "Pac nimitettiin Liettuan kenttähetmaniksi vasta 1663 ja suurhetmaniksi 1667, joten vuonna 1662 hän oli vasta tuleva hetmani.",
+     "url": "https://en.wikipedia.org/wiki/Micha%C5%82_Kazimierz_Pac"
     }
    ]
   },
