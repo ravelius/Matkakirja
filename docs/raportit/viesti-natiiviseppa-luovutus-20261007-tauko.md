@@ -10,9 +10,11 @@ ja natiiviseppa-tila-20261003.md. Kytke Remote Control päälle. Kerro Julkaisij
 Juna-SHA:t vain PÄÄTOIMITTAJAN kuittauksella; käännökset Julkaisijan NYT-viestillä. EI savua/Laitetestaajaa/stillejä ennen junaa
 (omistaja 15.5x), EI roolien omia käännöksiä (16.0x), enintään 2 junaa/pv ellei omistaja pyydä.
 
-**JUNA 162 — TILA 21.22: runko 31249f1c4 LUKITTU ja KÄÄNNETTY (8f93bf3e6, app lokit/natiiviseppa-app-162-31249f1c), muutosloki-
+**JUNA 162 — TILA 21.30: runko f34360ea7 (= 31249f1c4 + LS1 yks-esilataus 54f1236b0) KÄÄNNETTY (be8491e01, app lokit/natiiviseppa-app-162-f34360ea), muutosloki-
 sisältö lähetetty Julkaisijalle. VIE PIDÄTETTY: omistaja katsoo LS1:n iPad-vaakakuvat ~21.50 → Päätoimittajan kuittaus → vaiheet 3–5.
-Jos LS1 korjaa: uusi runko (31249f1c4 + korjaus), testit, uusi käännös.**
+VIE-vaiheissa runko = f34360ea7 (ei 31249f1c4/13c1c0269). KUN KUITTAUS TULEE: update-ref + BUILD 162 -merge, sitten
+`echo <BUILD162 täysi SHA> > /Users/Shared/Claude/julkaisija-tyokalut/tf162-lupa` (Julkaisijan irrotettu odottaja käynnistää TF:n), viesti
+Julkaisijalle, Mac TF 162 iOS-latauksen jälkeen. Muutosloki #4171 jo mergetty.**
 
 **JUNA 162 TÄNÄÄN (omistaja: "tee tänään yksi päivitys klo 22")** — runko natiiviseppa/juna-162-koe **31249f1c4** (wt/proto-natiiviseppa-j144),
 HYVÄKSYTTY (Päätoimittaja 16.2x + 16.4x) = BUILD 161 9572eaff + LS1 b9f37ee8f + NUI 3f07c49b + NUI 34cf54b0 + LS2 f6e4a8495 + Siirtoseppä
@@ -29,7 +31,7 @@ log -1 master`, `tail -3 proto-3d/lokit/kaannospalvelu/juna.log`, `tail -5 proto
 4. Täysi BUILD 162 -SHA Julkaisijalle + Päätoimittajalle. Julkaisija ajaa TF 162:n.
 5. Mac TF 162 (lupa annettu): iOS-latauksen jälkeen `perl -e 'use POSIX; exit if fork; setsid; exec "zsh", @ARGV'
    proto-3d/lokit/natiiviseppa-skriptit/mac-tf.sh <BUILD162-sha8> 162`, tulos mac-tf-vahti.txt + gh run list proto3d-mac-testflight.
-6. JUNA 163 (huomenna 8.10., KUITATTU Päätoimittaja 20.0x): Siirtoseppä historia-valot-juna 2d1c133e (⊇ e4dab248 ⊇ 787f0092 ⊇ 6d23aed1; kuoren leikkaukset 16 paikkaan; kehittäjävalikon Volumetriset valot PÄÄLLÄ/POIS + Candle VFX + Volumetric Lights 2 laatutasokytkimen takana, Asset Store -paketit ENSIMMÄISTÄ KERTAA junassa; jos käännös kaatuu pakettien takia → varahaara historia-fp-juna-2 9cddc246 (korvaa 6d23aed1) viivyttämättä + yksi rivi Päätoimittajalle) +
+6. JUNA 163 (huomenna 8.10., KUITATTU Päätoimittaja 20.0x; lisäksi LS1 lappu-katolle 6ad4244fc, LS1:n mukaan kuitattu): Siirtoseppä historia-valot-juna 2d1c133e (⊇ e4dab248 ⊇ 787f0092 ⊇ 6d23aed1; kuoren leikkaukset 16 paikkaan; kehittäjävalikon Volumetriset valot PÄÄLLÄ/POIS + Candle VFX + Volumetric Lights 2 laatutasokytkimen takana, Asset Store -paketit ENSIMMÄISTÄ KERTAA junassa; jos käännös kaatuu pakettien takia → varahaara historia-fp-juna-2 9cddc246 (korvaa 6d23aed1) viivyttämättä + yksi rivi Päätoimittajalle) +
    NUI-kärki seikkailu-kuvakkeet 8aa55e02 (⊇ jatka 6af3eb9f ⊇ tekstivahti ⊇ verbi ⊇ fp eb115fc3 ⊇ tietokerros cbc92a25) + LS1 äänetön
    esitys 578d1186c (korvaa 7568a39bc) + LS2 S2-kevät 08a6891a0. Pohja: BUILD 162 -master. Ajankohta sovitaan Julkaisijan kanssa.
    Muut ehdokkaat (eivät kuitattuja tähän): LS1 yksityiskohdat-haarat sisältyvät 578d1186c:hen.
