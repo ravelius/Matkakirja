@@ -16,12 +16,13 @@ ja aalto committataan + pushataan.
 |---|---|---|
 | 1 | amsterdam, ateena (VALMIS) / barcelona, bergen (VALMIS) / berliini, bryssel (VALMIS) / budapest, bukarest (VALMIS) | VALMIS |
 | 2 | dublin, edinburgh (VALMIS) / firenze, granada (käynnissä) / helsinki, islanti (käynnissä) / kosice, krakova (käynnissä) | käynnissä |
-
-Agentit ajetaan liukuvasti: kun pari valmistuu, se committataan heti ja seuraava pari käynnistyy (max 4 rinnakkain).
-Valmis kaupunki = muutokset committattu JA fragmentti liitetty TARKISTUS-PAATOIMITTAJA.md:hin.
 | 3 | kreeta, lissabon (käynnissä) / ljubljana, luxemburg / madrid, marseille / oslo, sevilla | osin käynnissä |
 | 4 | sisilia, sofia / tampere, tukholma / valletta, venetsia / vilna | ei aloitettu |
 | 5 | TARKISTAJA-agentti käy koko diffin läpi | ei aloitettu |
+
+Agentit ajetaan liukuvasti: kun pari valmistuu, se committataan heti ja seuraava pari käynnistyy (max 4 rinnakkain).
+Valmis kaupunki = muutokset committattu JA fragmentti liitetty TARKISTUS-PAATOIMITTAJA.md:hin.
+Katkon jälkeen: "käynnissä"-merkityt parit aloitetaan alusta (tiedostot `git checkout` -palautetaan ensin).
 
 ## Mitä on tehty
 
