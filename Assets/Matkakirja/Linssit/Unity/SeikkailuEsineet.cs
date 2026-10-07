@@ -120,6 +120,8 @@ namespace Matkakirja.Natiivi
             {
                 if (e == kadessa || e.Go == null) continue;
                 if (e.Laji == Laji.Irrotettava && e.Irrotettu) continue;
+                // Saumat napautettaviksi vasta viistovalossa (käsikirjoitus kohta 6; ilman kynttilöitä aina).
+                if (e.Laji == Laji.Irrotettava && SeikkailuKynttilat.Aktiivinen is SeikkailuKynttilat kyt && !kyt.SaumatNakyvat) continue;
                 if (e.Laji == Laji.Nostettava && Muurattu(e)) continue;   // syvennyksen esineet vasta, kun lähimmät kivet on irrotettu
                 float d = (e.Go.transform.position - pp).sqrMagnitude;
                 if (d < pd) { pd = d; lahin = e; }

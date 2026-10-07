@@ -60,10 +60,43 @@ namespace Matkakirja.Natiivi
 
         public double Valoisuus(Vector3 p, Vector3? oma) => ydin.Valoisuus(p.x, p.y, p.z, oma is Vector3 o ? (o.x, o.y, o.z) : ((double, double, double)?)null);
 
+        // --- E3d: kynttilän asetus alttaripöydälle seinän viereen (vaihe 6 "Saumat") ---
+        /// <summary>Foggin kynttilä asetettuna (paikka) tai null (kädessä).</summary>
+        public Vector3? OmaAsetettu { get; private set; }
+        public const float AsetusM = 0.9f, KasiSaumaM = 0.5f;
+
+        static Vector3? OnttoPaikka()
+        {
+            var d = SeikkailuKavely.Data; if (d == null) return null;
+            foreach (var m in d.Lajia("ontto")) return new Vector3((float)m.X, (float)m.Y, (float)-m.Z);
+            return null;
+        }
+
+        /// <summary>Saumat erottuvat viistovalossa: palava kynttilä asetettuna ≤ 0,9 m ontosta kohdasta tai kädessä ≤ 0,5 m (käsikirjoitus kohta 6).</summary>
+        public bool SaumatNakyvat
+        {
+            get
+            {
+                if (!ydin.OmaPalaa || !(OnttoPaikka() is Vector3 o)) return false;
+                if (OmaAsetettu is Vector3 a) return Vector3.Distance(a, o) <= AsetusM;
+                var p = SeikkailuPelaaja.Aktiivinen;
+                return p != null && Vector3.Distance(p.Hahmo.TransformPoint(new Vector3(0.22f, 1.15f, 0.3f)), o) <= KasiSaumaM;
+            }
+        }
+
         /// <summary>Toiminto pelaajan kohdalla (SeikkailuEsineet ohjaa tänne). Palauttaa, tehtiinkö jotain.</summary>
         public bool Toimi(SeikkailuPelaaja p)
         {
             var c = p.transform.position + Vector3.up * 1.0f;
+            // Asetettu kynttilä lähellä → takaisin käteen; palava oma kynttilä ontolla kohdalla → asetetaan pöydälle seinän viereen.
+            if (OmaAsetettu is Vector3 asp && Vector3.Distance(asp, c) < 1.2f) { OmaAsetettu = null; kirjaa?.Invoke("seikkailu: kynttilä otettu käteen"); return true; }
+            if (OmaAsetettu == null && ydin.OmaPalaa && OnttoPaikka() is Vector3 op && Vector3.Distance(op, c) < 1.3f)
+            {
+                var seinaan = op - c; seinaan.y = 0;
+                OmaAsetettu = op - seinaan.normalized * 0.15f + Vector3.down * 0.25f;
+                kirjaa?.Invoke($"seikkailu: kynttilä asetettu seinän viereen (saumat {(SaumatNakyvat ? "näkyvät" : "eivät näy")})");
+                return true;
+            }
             var t = ydin.Valitse(c.x, c.y, c.z);
             if (t.Toiminto == KynttilaToiminto.Ei) return false;
             ydin.Tee(t);
@@ -76,6 +109,8 @@ namespace Matkakirja.Natiivi
         {
             if (p == null) return false;
             var c = p.transform.position + Vector3.up * 1.0f;
+            if (OmaAsetettu is Vector3 asp && Vector3.Distance(asp, c) < 1.2f) return true;
+            if (OmaAsetettu == null && ydin.OmaPalaa && OnttoPaikka() is Vector3 op && Vector3.Distance(op, c) < 1.3f) return true;
             return ydin.Valitse(c.x, c.y, c.z).Toiminto != KynttilaToiminto.Ei && (Lahella(c) || ydin.OmaPalaa);
         }
 
@@ -88,7 +123,7 @@ namespace Matkakirja.Natiivi
             bool oma = ydin.OmaPalaa && p != null;
             if (oma)
             {
-                var kasi = p.Hahmo.TransformPoint(new Vector3(0.22f, 1.15f, 0.3f));
+                var kasi = OmaAsetettu ?? p.Hahmo.TransformPoint(new Vector3(0.22f, 1.15f, 0.3f));
                 float lepatus = 0.9f + 0.1f * Mathf.PerlinNoise(Time.time * 6f, 0.3f);
                 Shader.SetGlobalVector(IdKanto, new Vector4(kasi.x, kasi.y, kasi.z, (float)Kynttilat.OmaValoM));
                 Shader.SetGlobalVector(IdKantoVari, new Vector4(1f, 0.72f, 0.42f, 0.95f * lepatus));
@@ -104,8 +139,8 @@ namespace Matkakirja.Natiivi
                 if (omaLiekki == null && liekitLahde != null) omaLiekki = liekitLahde.LuoLyhty(p.Hahmo);
                 if (omaLiekki != null)
                 {
-                    if (omaLiekki.transform.parent != p.Hahmo) omaLiekki.transform.SetParent(p.Hahmo, false);
-                    omaLiekki.transform.localPosition = new Vector3(0.22f, 1.15f, 0.3f);
+                    if (OmaAsetettu is Vector3 asl) { omaLiekki.transform.SetParent(transform, false); omaLiekki.transform.position = asl; }
+                    else { if (omaLiekki.transform.parent != p.Hahmo) omaLiekki.transform.SetParent(p.Hahmo, false); omaLiekki.transform.localPosition = new Vector3(0.22f, 1.15f, 0.3f); }
                     omaLiekki.SetActive(true);
                     var (kallistus, suunta) = Veto(kasi);
                     // Veto (ehdotus huone 5: "kilpien alla liekki kallistuu seinää kohti"): kallistus kohti seinää, värinä vedossa.
