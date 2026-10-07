@@ -427,3 +427,7 @@ Edellinen luovutus on `viesti-siirtoseppa-luovutus-20261002.md` (5.10. osiot 02.
   (LR korjasi), vartija pihalla partio→epäily→kiinni OK, keittiön NavMesh puuttui (→ bfd67992 kaksipuoliset kävelypinnat). V1-stillit
   lokit/siirtoseppa-v1-stillit/ Päätoimittajalle; junahaara siirtoseppa/historia-juna161 @ 526c9373 (b8724fd8 + eleet-2). historia-h0 kärki bfd67992.
   LR tuo Fogg-pelaajan (rakennus.json pelaaja) + laiturin kannen seuraavaan peiliin.
+- 14.17: Päätoimittaja kuittasi historia-juna161 @ 526c9373 junaan 161 (korvaa eleet-2:n). Hänen 3 korjaustaan d33bb582 (olan yli FOV 60 / 4,5 m /
+  olka 1,45, lähileikkaus ≤ 2,2 m, täytevalo). LR v44c c8a45400570196fe: Fogg (rakennus.json pelaaja) + laiturin kansi. d915022a Fogg pelaajaksi
+  (PelaajaMalli Ytimeen + testi, 818/818), 465a8388 SeikkailuRepliikit (soutaja-1/2 venematkalla), a7fc94f4 testikomennot (tapit hiipii|juoksu,
+  kavely siirra <merkki>). Jonossa a7fc94f4 + NUI; vuoro-e1.sh → ajo-e1.sh (äänellinen E1-video kahdessa osassa), app lokit/siirtoseppa-historia5-app.
