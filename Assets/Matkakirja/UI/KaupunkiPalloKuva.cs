@@ -1,7 +1,7 @@
 // KAUPUNKIPALLON KUVA (Linssiseppä 2, 7.10.2026; UI/KaupunkiPallot.cs näyttää sen jokaisen sallitun kaupungin napissa).
 // Malli: Linnanrakentajan kiinnitetty kuumailmapallo (_valmiit/ilmapallo-v1/glb/ilmapallo_keski.glb, 2 842 kolmiota, oma työ,
 // lähteet _valmiit/ilmapallo-v1/LAHTEET.md): yksi verkko, yksi materiaali (64 px palettilaatat Tyylikirjan väreistä), mitat
-// metreinä (kuori Ø 12 m, laki 36 m), +Y ylös, origo ankkuripaalun juuressa, pallo kallistuu tuulessa +X:ään. Sovelluksen
+// metreinä (kuori Ø 12 m, laki 36 m), +Y ylös, origo ankkuripaalun juuressa, pallo kallistuu tuulessa +X:ään (kuvassa peilattuna vasemmalle). Sovelluksen
 // mukana (Resources/KaupunkiPallo/ilmapallo_keski.bytes, 171 kt), joten pallot näkyvät heti ilman latausta.
 //
 //  - Kaikki pallot ovat samanlaisia: kuva piirretään kerran omalla ortokameralla RenderTextureen ja jaetaan napeille.
@@ -76,6 +76,10 @@ namespace Matkakirja.Natiivi
             juuri.transform.position = new Vector3(-5000f, -5000f, 0f);
             var malli = new GameObject("Malli") { layer = AjattelijaPaat.Kerros };
             malli.transform.SetParent(juuri.transform, false);
+            // Peilattu x: pallo kallistuu vasemmalle, poispäin pelaajan kaupungin kutsukortista, joka avautuu nastan oikealle
+            // puolelle ja peitti oikealle kallistuvan pallon (simu 81409e09 Rooma: napautus osui korttiin). Negatiivinen skaala
+            // kääntää kolmioiden kierron, ja Unity vaihtaa culling-suunnan automaattisesti.
+            malli.transform.localScale = new Vector3(-1f, 1f, 1f);
             malli.AddComponent<MeshFilter>().sharedMesh = verkko;
             var r = malli.AddComponent<MeshRenderer>();
             r.sharedMaterial = mat;
