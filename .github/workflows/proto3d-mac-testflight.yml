@@ -1,0 +1,223 @@
+# NATIIVI MAC TESTFLIGHTIIN (omistaja kortilla 7.10.2026 klo 01.0x: "Kyllä, kaikki"; Natiiviseppä).
+# Natiivisepän valmis Mac-käännös (tyokalut/mac-kaanna.sh, MATKAKIRJA_BUNDLE_ID=fi.matkakirja.peli,
+# MATKAKIRJA_APPSTORE=1) allekirjoitetaan Mac App Store -jakeluun ja lähetetään samaan Matkakirja-tietueeseen
+# kuin iOS (universal purchase; App ID on UNIVERSAL). Ajo vain Julkaisijan vuorolla (workflow_dispatch).
+#
+# 1) Tili (tools/testflight/mac-valmistele.py, idempotentti): macOS-alusta tietueeseen, MAC_APP_DISTRIBUTION-
+#    ja MAC_INSTALLER_DISTRIBUTION-identiteetit pysyvään avainnippuun, MAC_APP_STORE-profiili.
+# 2) Allekirjoitus kopioon: versiot, ITSAppUsesNonExemptEncryption, embedded.provisionprofile, sisäkkäiset
+#    Mach-O:t (dylib, Burst, Cesium, plugarit, Mono) sisältä ulos ilman oikeuksia, lopuksi sovellus
+#    sandbox-oikeuksilla (verkko asiakas + palvelin: pelin oma laattapalvelin 127.0.0.1).
+# 3) productbuild .pkg asennin-identiteetillä → altool --type macos (vain kun lataa = true).
+# Sama concurrency-ryhmä kuin proto3d-testflight.yml: molemmat käyttävät samaa avainnippua.
+
+name: proto-3d Mac TestFlight
+
+on:
+  workflow_dispatch:
+    inputs:
+      app_polku:
+        description: 'Valmis Mac-käännös (Natiivisepän mac-kaanna.sh)'
+        default: '/Users/Shared/Claude/proto-3d/Matkakirja-proto-mac/Build/mac/Matkakirja 3D.app'
+      versio:
+        description: 'CFBundleShortVersionString (sama kuin iOS-junan versio)'
+        default: '1.1'
+      build:
+        description: 'CFBundleVersion (macOS-alustan oma laskuri, kasvava)'
+        required: true
+      lataa:
+        description: 'Lähetä TestFlightiin (false = vain tili, allekirjoitus ja .pkg-tarkistus)'
+        type: boolean
+        default: false
+      sisainen_ryhma:
+        description: 'Build sisäiselle testiryhmälle käsittelyn jälkeen'
+        type: boolean
+        default: true
+
+permissions:
+  contents: read
+
+concurrency:
+  group: proto3d-testflight
+  cancel-in-progress: false
+
+# NICE-OLETUS (omistaja 28.9.2026 klo 11.2x, Raamattu #3527).
+defaults:
+  run:
+    shell: nice -n 15 bash --noprofile --norc -eo pipefail {0}
+
+env:
+  BUNDLE_ID: fi.matkakirja.peli
+  APP_POLKU: ${{ inputs.app_polku }}
+  VERSIO: ${{ inputs.versio }}
+  BUILD_NUMERO: ${{ inputs.build }}
+
+jobs:
+  mac:
+    name: Mac TestFlight
+    runs-on: [self-hosted, macOS, ARM64, testit]
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Tarkista käännös
+        run: |
+          set -euo pipefail
+          test -d "$APP_POLKU" || { echo "::error title=Käännös puuttuu::$APP_POLKU"; exit 1; }
+          bid=$(/usr/libexec/PlistBuddy -c "Print :CFBundleIdentifier" "$APP_POLKU/Contents/Info.plist")
+          if [ "$bid" != "$BUNDLE_ID" ]; then
+            echo "::error title=Väärä bundle id::$bid ≠ $BUNDLE_ID (käännä MATKAKIRJA_BUNDLE_ID=$BUNDLE_ID MATKAKIRJA_APPSTORE=1)"
+            exit 1
+          fi
+          [[ "$BUILD_NUMERO" =~ ^[0-9]+(\.[0-9]+)*$ ]] || { echo "::error::build '$BUILD_NUMERO' ei ole numero"; exit 1; }
+          lipo -archs "$APP_POLKU/Contents/MacOS/"* | tee /dev/stderr | grep -q arm64
+
+      - name: Pura App Store Connect -avain
+        env:
+          ASC_KEY_P8: ${{ secrets.ASC_KEY_P8 }}
+        run: |
+          set -euo pipefail
+          hakemisto="$RUNNER_TEMP/asc"
+          mkdir -p "$hakemisto"; chmod 700 "$hakemisto"
+          polku="$hakemisto/AuthKey.p8"
+          if [[ "$ASC_KEY_P8" == *"BEGIN PRIVATE KEY"* ]]; then
+            printf '%s\n' "$ASC_KEY_P8" > "$polku"
+          else
+            printf '%s' "$ASC_KEY_P8" | openssl base64 -d -A -out "$polku"
+          fi
+          chmod 600 "$polku"
+          grep -q "BEGIN PRIVATE KEY" "$polku" || { echo "::error title=Avain ei purkautunut::ASC_KEY_P8"; exit 1; }
+          echo "ASC_AVAIN_POLKU=$polku" >> "$GITHUB_ENV"
+
+      # Sama pysyvä avainnippu kuin proto3d-testflight.yml (hakulistan kärkeen vain ajon ajaksi).
+      - name: Pysyvä avainnippu
+        env:
+          NIPPU_SALASANA: ${{ secrets.PROTO3D_KEYCHAIN_PASSWORD }}
+        run: |
+          set -euo pipefail
+          nippu="$HOME/Library/Keychains/matkakirja-testflight.keychain-db"
+          [ -f "$nippu" ] || security create-keychain -p "$NIPPU_SALASANA" "$nippu"
+          security unlock-keychain -p "$NIPPU_SALASANA" "$nippu"
+          security set-keychain-settings -lut 21600 "$nippu"
+          nykyiset=$(security list-keychains -d user | sed 's/"//g' | grep -vF "$nippu" || true)
+          security list-keychains -d user -s "$nippu" $nykyiset
+          echo "AVAINNIPPU=$nippu" >> "$GITHUB_ENV"
+
+      - name: Apple-luottamusketju avainnippuun
+        run: |
+          set -euo pipefail
+          for nimi in AppleWWDRCAG3 AppleWWDRCAG4 AppleWWDRCAG5 AppleWWDRCAG6 AppleRootCA-G2 AppleRootCA-G3; do
+            if curl -fsSL -o "$RUNNER_TEMP/$nimi.cer" "https://www.apple.com/certificateauthority/$nimi.cer"; then
+              tulos=$(security import "$RUNNER_TEMP/$nimi.cer" -k "$AVAINNIPPU" 2>&1) || case "$tulos" in
+                *"already exists"*) ;; *) echo "::warning::$nimi: $tulos" ;; esac
+            else
+              echo "::warning::$nimi.cer ei latautunut"
+            fi
+          done
+
+      - name: Tili (macOS-alusta, identiteetit, profiili)
+        env:
+          ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
+          ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
+          TEAM_ID: ${{ secrets.TEAM_ID }}
+          NIPPU_SALASANA: ${{ secrets.PROTO3D_KEYCHAIN_PASSWORD }}
+        run: |
+          set -euo pipefail
+          python3 -m pip install --quiet --break-system-packages "pyjwt[crypto]==2.9.0"
+          python3 tools/testflight/mac-valmistele.py --bundle-id "$BUNDLE_ID" --versio "$VERSIO" \
+            --profiili "$RUNNER_TEMP/mac.provisionprofile"
+
+      - name: Allekirjoita
+        run: |
+          set -euo pipefail
+          kohde="$RUNNER_TEMP/mac"; rm -rf "$kohde"; mkdir -p "$kohde"
+          app="$kohde/Matkakirja 3D.app"
+          ditto "$APP_POLKU" "$app"
+          xattr -cr "$app"
+          plist="$app/Contents/Info.plist"
+          /usr/libexec/PlistBuddy -c "Set :CFBundleVersion $BUILD_NUMERO" "$plist"
+          /usr/libexec/PlistBuddy -c "Set :CFBundleShortVersionString $VERSIO" "$plist"
+          /usr/libexec/PlistBuddy -c "Delete :ITSAppUsesNonExemptEncryption" "$plist" 2>/dev/null || true
+          /usr/libexec/PlistBuddy -c "Add :ITSAppUsesNonExemptEncryption bool false" "$plist"
+          cp "$MAC_PROFIILI" "$app/Contents/embedded.provisionprofile"
+          oikeudet="$RUNNER_TEMP/mac.entitlements"
+          cat > "$oikeudet" <<EOF
+          <?xml version="1.0" encoding="UTF-8"?>
+          <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+          <plist version="1.0"><dict>
+            <key>com.apple.application-identifier</key><string>$TEAM_ID_PROFIILISTA.$BUNDLE_ID</string>
+            <key>com.apple.developer.team-identifier</key><string>$TEAM_ID_PROFIILISTA</string>
+            <key>com.apple.security.app-sandbox</key><true/>
+            <key>com.apple.security.network.client</key><true/>
+            <key>com.apple.security.network.server</key><true/>
+          </dict></plist>
+          EOF
+          plutil -lint "$oikeudet"
+          allek() { codesign --force --sign "$MAC_APP_SHA1" --keychain "$AVAINNIPPU" "$@"; }
+          # Sisäkkäiset Mach-O-tiedostot syvimmästä alkaen (ei pääohjelmaa), sitten kansiobundlet, lopuksi sovellus.
+          find "$app/Contents" -type f ! -path "$app/Contents/MacOS/*" -print0 \
+            | while IFS= read -r -d '' f; do file -b "$f" | grep -q "Mach-O" && echo "$f"; done \
+            | awk '{ print length($0) "\t" $0 }' | sort -rn | cut -f2- > "$RUNNER_TEMP/macho.txt"
+          echo "Sisäkkäisiä Mach-O:ita: $(wc -l < "$RUNNER_TEMP/macho.txt")"
+          while IFS= read -r f; do allek "$f"; done < "$RUNNER_TEMP/macho.txt"
+          find "$app/Contents" -type d \( -name "*.bundle" -o -name "*.framework" \) \
+            | awk '{ print length($0) "\t" $0 }' | sort -rn | cut -f2- \
+            | while IFS= read -r b; do allek "$b"; done
+          allek --entitlements "$oikeudet" "$app"
+          codesign --verify --deep --strict --verbose=2 "$app"
+          codesign -d --entitlements - --xml "$app" | grep -q "com.apple.security.app-sandbox"
+          codesign -d -vv "$app" 2>&1 | grep -E "^(Identifier|Authority|TeamIdentifier)=" | head -4
+          echo "MAC_APP=$app" >> "$GITHUB_ENV"
+
+      - name: Asennuspaketti
+        run: |
+          set -euo pipefail
+          pkg="$RUNNER_TEMP/mac/Matkakirja-$VERSIO-$BUILD_NUMERO.pkg"
+          productbuild --component "$MAC_APP" /Applications --sign "$MAC_ASENNIN_NIMI" --keychain "$AVAINNIPPU" "$pkg"
+          pkgutil --check-signature "$pkg" | head -5
+          du -h "$pkg"
+          echo "MAC_PKG=$pkg" >> "$GITHUB_ENV"
+
+      - name: Lähetä TestFlightiin
+        if: inputs.lataa
+        env:
+          ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
+          ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
+        run: |
+          set -euo pipefail
+          mkdir -p "$HOME/.appstoreconnect/private_keys"
+          cp "$ASC_AVAIN_POLKU" "$HOME/.appstoreconnect/private_keys/AuthKey_${ASC_KEY_ID}.p8"
+          xcrun altool --upload-app --type macos --file "$MAC_PKG" --apiKey "$ASC_KEY_ID" --apiIssuer "$ASC_ISSUER_ID"
+
+      - name: Build sisäiselle testiryhmälle
+        if: inputs.lataa && inputs.sisainen_ryhma
+        env:
+          ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
+          ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
+          TESTAAJA: ${{ secrets.TESTFLIGHT_TESTAAJA }}
+        run: |
+          set -euo pipefail
+          python3 tools/testflight/sisainen-ryhma.py --bundle-id "$BUNDLE_ID" --build "$BUILD_NUMERO" --alusta MAC_OS
+
+      - name: Kerro mitä tehtiin
+        if: success()
+        run: |
+          {
+            echo "## proto-3d Mac TestFlight"
+            echo
+            echo "- Bundle id **$BUNDLE_ID**, versio **$VERSIO**, build **$BUILD_NUMERO**"
+            echo "- Lähde: \`$APP_POLKU\`"
+            echo "- Lähetetty: **${{ inputs.lataa }}**"
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Siivoa avaimet ja kopio
+        if: always()
+        run: |
+          rm -rf "$RUNNER_TEMP/asc" "$HOME/.appstoreconnect/private_keys" "$RUNNER_TEMP/mac" || true
+          rm -f "$RUNNER_TEMP"/*.key "$RUNNER_TEMP"/*.csr "$RUNNER_TEMP"/*.cer "$RUNNER_TEMP/mac.provisionprofile" || true
+          nippu="$HOME/Library/Keychains/matkakirja-testflight.keychain-db"
+          jaljelle=$(security list-keychains -d user | sed 's/"//g' | grep -vF "$nippu" || true)
+          [ -z "$jaljelle" ] || security list-keychains -d user -s $jaljelle || echo "::warning::hakulistan palautus epaonnistui"
+          if security default-keychain -d user | grep -qF "$nippu"; then
+            security default-keychain -d user -s "$HOME/Library/Keychains/login.keychain-db" || true
+          fi
