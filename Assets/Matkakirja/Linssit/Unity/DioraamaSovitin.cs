@@ -552,6 +552,17 @@ namespace Matkakirja.Natiivi
             ladatutValoAtlakset.Clear();
         }
 
+        string edellinenPeili = "pois (ämpäri)";
+
+        void LataaUudelleen()
+        {
+            rakennus = null; latausKaynnissa = false;
+            NollaaNakymanLataukset();
+            rakennus3D?.Tyhjenna(); hahmot3D?.Tyhjenna(); nayttamo?.Hahmot3D?.Tyhjenna(); nayttamo?.Liekit?.Tyhjenna();
+            nayttamo?.Savu?.Tyhjenna(); nayttamo?.Ikkunat?.Tyhjenna(); nayttamo?.Ulkokuori?.Tyhjenna(); nayttamo?.Ymparisto?.Tyhjenna(); nayttamo?.Lokit?.Tyhjenna(); // Olavinlinna: ei tuplia
+            if (avoinna) { latausKaynnissa = true; o.StartCoroutine(LataaRakennus()); }
+        }
+
         IEnumerator LataaRakennus()
         {
             string uusin = null;
@@ -1063,6 +1074,10 @@ namespace Matkakirja.Natiivi
                     peiliKuvaus = uusiJuuri;
                 }
                 o.Kirjaa("poikki: peili " + peiliKuvaus);
+                // Natiiviseppä 7.10. (FACEIT ABAB): "peili pois" A-peilin jälkeen käytti muistissa olevaa rakennusta, jonka juuri oli
+                // hashiton (peilissä ei ole uusin.jsonia) → kaikki 404. Peilin vaihto lataa rakennuksen uudelleen seuraavassa avauksessa.
+                if (peiliKuvaus != edellinenPeili && rakennus != null) { LataaUudelleen(); o.Kirjaa("poikki: peili vaihtui, rakennus ladataan uudelleen"); }
+                edellinenPeili = peiliKuvaus;
                 return;
             }
             // "poikki osoitin <hash>|pois" (sisältövarasto 4.10.): testiosoitin uusin.jsonin tilalle seuraavaan lataukseen
@@ -1195,16 +1210,7 @@ namespace Matkakirja.Natiivi
                 o.Kirjaa("poikki: " + (uk != null ? uk.Kuvaus() : "kuori ei käytössä (näyttämö puuttuu)"));
                 return;
             }
-            if (mita == "lataa")
-            {
-                rakennus = null; latausKaynnissa = false;
-                NollaaNakymanLataukset();
-                rakennus3D?.Tyhjenna(); hahmot3D?.Tyhjenna(); nayttamo?.Hahmot3D?.Tyhjenna(); nayttamo?.Liekit?.Tyhjenna();
-                nayttamo?.Savu?.Tyhjenna(); nayttamo?.Ikkunat?.Tyhjenna(); nayttamo?.Ulkokuori?.Tyhjenna(); nayttamo?.Ymparisto?.Tyhjenna(); nayttamo?.Lokit?.Tyhjenna(); // Olavinlinna: ei tuplia
-                if (avoinna) { latausKaynnissa = true; o.StartCoroutine(LataaRakennus()); }
-                o.Kirjaa("poikki: lataa uudelleen");
-                return;
-            }
+            if (mita == "lataa") { LataaUudelleen(); o.Kirjaa("poikki: lataa uudelleen"); return; }
             if (mita == "avainsana")
             {
                 // Testi ennen dataa: poikki avainsana <jakso> <t_s> <vuosi|-> <sanat…> (lisää jakson avainsanoihin).
