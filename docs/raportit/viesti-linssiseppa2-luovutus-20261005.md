@@ -18,6 +18,7 @@ Avoimet työt:
 4. s2-meri 0f6e4e89 on KUITATTU junaan 154 (BMNG:n meri S2:n meriväriin).
 
 ## TILA 7.10. 12.2x (uusin; Mac käynnistetty 11.55)
+- APURAHAKUVA LOPULLINEN: lokit/apuraha-kuvat/iss-cupola-biskaja-lopullinen-3936ab68.png (iPad 13" vaaka, ISS-jalka näkyy) → Päätoimittaja.
 - Apurahakuvat v2 lähetetty: lokit/apuraha-kuvat/iss-cupola-{lansi-eurooppa,itameri-suomi}-ipad-vaaka.png (19ef80cc, LCD ajantasainen).
 - PAIKANNIMET: proto linssiseppa2/paikannimet 4ad028d78 (worktree wt/proto-linssiseppa2-paikannimet): Resources/IssPaikat/nimet-fi.json
   (337 Euroopan paikkaa, Wikidata fi + SFS 4900), IssSijaintiLataaja lukee (vain LCD), IssNimetTestit. Muutoslista
