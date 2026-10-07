@@ -470,3 +470,8 @@ Edellinen luovutus on `viesti-siirtoseppa-luovutus-20261002.md` (5.10. osiot 02.
 - 16.52: LR v44h 87e023c69817a28d (kappeli: syvennys, kivet, kalkki/pateeni/liuskekivi, reitti:kappalainen-1..5). 64ba0459 kivet irrotettaviksi,
   syvennyksen esineet nostettaviksi kivien jälkeen, koputus ("koputa", väliaikainen ääni ovi-puu 0,75), esineiden kierto_y.
   ebdf06e0 pelattava pala → v44h. Puuttuu E3:sta: kappalaisen kohtaus (reitti, kynttilöiden sammutus, paluu lyhdyllä) käsikirjoituksen mukaan.
+- 16.56: E3-käsikirjoitus mainissa (docs/raportit/kasikirjoitus-olavinlinna-kappeli-e3.md). Suunnitelma Päätoimittajalle: E3a tänään,
+  E3b voudin sääntö, E3c kappalaisen paluu + tyrmä, E3d luukku/ikuinen valo/saumat/4 kiveä/löytö/drone (8.10.). bc6e58a6 E3a valmis koodina
+  (SeikkailuKappeli + PiilotetutTilat, "poikki kappeli 1|0|tila"; pelattavassa palassa automaattisesti). LR:lle pyydetty luukku, 4. kivi,
+  ikuinen valo, kirja, piilo:alttarin-varjo, portaikko:ylapaa, ovi:paaovi, paluureitit; LR tekee seinäpalan 95–230° kävelyosaan.
+  Omistajan lupa äänille kysytty Päätoimittajalta (PUUTTUU-lista). NUI: toimintonapin tilat valmiit (natiivi-ui/seikkailu-toiminto 2ecf2518).
