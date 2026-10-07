@@ -32,6 +32,19 @@ test('esittely.json on kelvollinen: filosofia, korostettu kehitysmuutos, pelit, 
   assert.equal((kaikki.match(/Vain iOS-sovelluksessa\./g) ?? []).length, 2, 'Kuumailmapallo ja ISS merkitty iOS:n ominaisuuksiksi selaimessa');
 });
 
+test('kuvat kappaleensa vieressä (versio 7): ISS-kupola ISS-kappaleeseen, Olavinlinna Työn alla -kappaleeseen', () => {
+  const d = tarkistaApuraha(raaka);
+  assert.equal(raaka.versio, 7);
+  const kohta = (nimi) => d.kappaleet.find((k) => k.otsikko === nimi).kuvat.map((k) => k.tiedosto);
+  assert.deepEqual(kohta('ISS'), ['assets/apuraha/iss-kupola-lansi-eurooppa.jpg']);
+  assert.deepEqual(kohta('Työn alla'), ['assets/apuraha/olavinlinna-hamara.jpg']);
+  assert.equal(raaka.kuvat.find((k) => k.tiedosto.includes('olavinlinna')).rivi, 1, 'Olavinlinna-rivin viereen');
+  assert.equal(d.kuvat.length, 0, 'kaikilla kuvilla on kappale, loppuriviä ei ole');
+  for (const k of raaka.kuvat) assert.ok(Number.isInteger(k.kappale) && raaka.kappaleet[k.kappale], `kappale ${k.tiedosto}`);
+  const ilman = tarkistaApuraha({ ...raaka, kuvat: [{ tiedosto: 'a.jpg' }, { tiedosto: 'b.jpg', kappale: 99 }] });
+  assert.equal(ilman.kuvat.length, 2, 'ilman kelvollista kappaletta kortin loppuun');
+});
+
 test('paikalliset kuvat ovat repossa ja tekstissä ei ole muistiinpanoja', () => {
   for (const k of raaka.kuvat) {
     if (k.tiedosto.startsWith('https://')) continue;

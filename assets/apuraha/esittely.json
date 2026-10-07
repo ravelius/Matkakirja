@@ -1,6 +1,6 @@
 {
-  "_ohje": "Apurahan arvioijan esittelykortti: YKSI lähde webille (js/apuraha.js) ja natiiville (Apuraha.cs lukee https://matkakirja.app/assets/apuraha/esittely.json). Päätoimittaja päivittää tekstin vain tähän; natiivi näkee muutoksen ilman TF-buildia heti Pages-julkaisun jälkeen. Kuvat: tiedosto on polku sivuston juuresta (assets/…) tai täysi https-osoite. Kappaleen nappi {teksti, toiminto: \"esittelylinssit\"} avaa kaikki toimivat linssit ilman pisteitä (web: selaimen linssit; natiivi: kaikki kehittäjätilan linssit, myös kokeilut) ilman muuta kehittäjätilaa. webTeksti: kappaleen tai listarivin ({teksti, webTeksti}) selainversio; natiivi näyttää teksti-kentän. Versio 6 (omistaja 7.10.2026): lyhyt teksti ilman linkkejä; kuvat (enintään 3: ISS:n kupola, Olavinlinna, Kuumailmapallo) lisätään pelistä tekstin julkaisun jälkeen, ja kuvarivi näkyy vain, jos kuvia on. Apurahaprosessin jälkeen kortista muokataan neutraalimpi pelin esittely. Ei videota. Korostus: \"korostus\": true = kappale lihavoituna samassa koossa (web .apuraha-teksti--korostus, natiivi lihavoitu). Kuvan rajaus: \"rajaus\": \"x% y%\" = pikkukuvan painopiste (web object-position, natiivi taustan sijainti); oletus keskeltä ylhäältä (50% 20%).",
-  "versio": 6,
+  "_ohje": "Apurahan arvioijan esittelykortti: YKSI lähde webille (js/apuraha.js) ja natiiville (Apuraha.cs lukee https://matkakirja.app/assets/apuraha/esittely.json). Päätoimittaja päivittää tekstin vain tähän; natiivi näkee muutoksen ilman TF-buildia heti Pages-julkaisun jälkeen. Kuvat: tiedosto on polku sivuston juuresta (assets/…) tai täysi https-osoite. Kappaleen nappi {teksti, toiminto: \"esittelylinssit\"} avaa kaikki toimivat linssit ilman pisteitä (web: selaimen linssit; natiivi: kaikki kehittäjätilan linssit, myös kokeilut) ilman muuta kehittäjätilaa. webTeksti: kappaleen tai listarivin ({teksti, webTeksti}) selainversio; natiivi näyttää teksti-kentän. Versio 6 (omistaja 7.10.2026): lyhyt teksti ilman linkkejä; kuvat (enintään 3: ISS:n kupola, Olavinlinna, Kuumailmapallo) lisätään pelistä tekstin julkaisun jälkeen, ja kuvarivi näkyy vain, jos kuvia on. Apurahaprosessin jälkeen kortista muokataan neutraalimpi pelin esittely. Ei videota. Korostus: \"korostus\": true = kappale lihavoituna samassa koossa (web .apuraha-teksti--korostus, natiivi lihavoitu). Kuvan paikka: \"kappale\": n = 0-pohjainen kappaleindeksi (kappaleet[n]); kuva näkyy pienenä (noin kolmannes kortin leveydestä) oman kappaleensa vieressä, napautus suurentaa (omistaja 7.10.2026, versio 7); ilman kenttää kuva kortin lopussa. Listakappaleessa \"rivi\": m (0-pohjainen) vie kuvan listan rivin m viereen (Olavinlinna-rivi); ilman sitä kappaleen alkuun. Kuvan rajaus: \"rajaus\": \"x% y%\" = pikkukuvan painopiste (web object-position, natiivi taustan sijainti); oletus keskeltä ylhäältä (50% 20%).",
+  "versio": 7,
   "nappi": "Apurahahakemus – katso tämä ensin",
   "otsikko": "Apurahan arvioijalle",
   "alaotsikko": "Matkakirja ja unohdettu aarre · tilanne 7.10.2026",
@@ -55,12 +55,15 @@
     {
       "tiedosto": "assets/apuraha/iss-kupola-lansi-eurooppa.jpg",
       "teksti": "ISS:n kupolasta: Länsi-Eurooppa",
-      "rajaus": "50% 70%"
+      "rajaus": "50% 70%",
+      "kappale": 4
     },
     {
       "tiedosto": "assets/apuraha/olavinlinna-hamara.jpg",
       "teksti": "Olavinlinna illan hämärässä",
-      "rajaus": "50% 55%"
+      "rajaus": "50% 55%",
+      "kappale": 6,
+      "rivi": 1
     }
   ],
   "webHuomautus": "Selainpeli ei sisällä kaikkia ominaisuuksia. Suosittelemme iOS-sovellusta (App Store -testiversion linkki on apurahahakemuksessa)."

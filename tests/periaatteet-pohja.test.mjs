@@ -14,11 +14,14 @@ test('aloitusportilla ei "Oppiminen on hauskaa" -linkkiä eikä periaateikkunaa'
   assert.match(UI, /alaosa\.appendChild\(html\('p', 'start-huomautus', esittely\.webHuomautus\)\)/);
 });
 
-test('apurahakortin lopussa lipputekijät, palaute ja oikeudet ennen Takaisin-nappia; pohjalla apurina', () => {
+test('apurahakortin lopussa lipputekijät, (palaute kytkimen takana) ja oikeudet ennen Takaisin-nappia; pohjalla apurina', () => {
   const r = runko('naytaApuraha');
   const lippu = r.indexOf('PERIAATTEET.lippurivi'), palaute = r.indexOf('this.periaatePalaute()'),
     oikeus = r.indexOf('PERIAATTEET.oikeudet'), sulje = r.indexOf("'Takaisin'");
   assert.ok(lippu > 0 && lippu < palaute && palaute < oikeus && oikeus < sulje, 'järjestys: liput, palaute, oikeudet, Takaisin');
+  // Omistaja 7.10.2026 klo 14.5x: Palaute ja mukaan -osio pois apurahakierroksen ajaksi, palautus yhdellä rivillä.
+  assert.match(r, /if \(APURAHA_PALAUTE\) kortti\.appendChild\(this\.periaatePalaute\(\)\)/);
+  assert.match(UI, /\nconst APURAHA_PALAUTE = false;\n/);
   assert.match(r, /LIPPU_TEKIJAT\.map\(\(l\) => `\$\{l\.tekija\} \(\$\{l\.lisenssi\}\)`\)/);
   assert.doesNotMatch(r, /PERIAATTEET\.linkki|PERIAATTEET\.osat/, 'GitHub-linkkiä ja periaatetekstejä ei siirretä');
   const pue = r.indexOf('puePohjaKortiksi(kortti, { otsikko, sulje })');
