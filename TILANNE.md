@@ -18,7 +18,7 @@ ja aalto committataan + pushataan.
 | 2 | dublin, edinburgh (VALMIS) / firenze, granada (VALMIS) / helsinki, islanti (VALMIS) / kosice, krakova (VALMIS) | VALMIS |
 | 3 | kreeta, lissabon (VALMIS) / ljubljana, luxemburg (VALMIS) / madrid, marseille (VALMIS) / oslo, sevilla (VALMIS) | VALMIS |
 | 4 | sisilia, sofia (VALMIS) / tampere, tukholma (VALMIS) / valletta, venetsia (VALMIS) / vilna (VALMIS) | VALMIS |
-| 5 | TARKISTAJA A (amsterdam–islanti) ja B (kosice–tukholma) käynnissä; C (valletta, venetsia, vilna) kun ne valmistuvat | käynnissä |
+| 5 | TARKISTAJA A (amsterdam–islanti) VALMIS; B (kosice–tukholma) käynnissä; C (valletta, venetsia, vilna + Bergenin päällekkäisyys) käynnissä | käynnissä |
 
 Agentit ajetaan liukuvasti: kun pari valmistuu, se committataan heti ja seuraava pari käynnistyy (max 4 rinnakkain).
 Valmis kaupunki = muutokset committattu JA fragmentti liitetty TARKISTUS-PAATOIMITTAJA.md:hin.
