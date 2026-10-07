@@ -1,4 +1,4 @@
-// Kuumailmapallon kori (Päätoimittaja 7.10. 09.1x): keinunta ~1°, jousi vastasuuntaan ≤ 2°, pysähdyksessä heilahdus eteen.
+// Kuumailmapallon kori (Päätoimittaja 7.10. 09.1x, vahvistettu 18.5x): keinunta ~2,5°, jousi vastasuuntaan ≤ 5,5°, pysähdyksessä heilahdus eteen.
 using System;
 using Matkakirja.Linssit.Kierros;
 
@@ -10,7 +10,7 @@ namespace Matkakirja.Linssit.Testit
         {
             var k = new KoriLiike(); double maks = 0, min = 0;
             for (int i = 0; i < 600; i++) { k.Paivita(1 / 30.0, 0, 0); maks = Math.Max(maks, k.Kallistus); min = Math.Min(min, k.Kallistus); }
-            Oleta.Tosi(maks > 0.5 && maks <= 1.1 && min < -0.5, $"keinunta {min:F2}…{maks:F2}°");
+            Oleta.Tosi(maks > 1.8 && maks <= 2.6 && min < -1.8, $"keinunta {min:F2}…{maks:F2}°");
         }
 
         [Testi] static void KiihdytysTaaksePysahdysEteen()
@@ -19,8 +19,8 @@ namespace Matkakirja.Linssit.Testit
             for (int i = 0; i < 60; i++) { k.Paivita(1 / 30.0, 3, 0); alin = Math.Min(alin, k.Nyokkays); }   // 2 s kiihdytys eteen
             for (int i = 0; i < 90; i++) k.Paivita(1 / 30.0, 0, 0);                                         // tasainen liike: palaa
             for (int i = 0; i < 30; i++) { k.Paivita(1 / 30.0, -3, 0); ylin = Math.Max(ylin, k.Nyokkays); } // jarrutus
-            Oleta.Tosi(alin < -1.0 && alin >= -2.0 - KoriLiike.KeinuntaAst, $"kiihdytys taakse {alin:F2}°");
-            Oleta.Tosi(ylin > 0.8, $"pysähdys eteen {ylin:F2}°");
+            Oleta.Tosi(alin < -4.0 && alin >= -KoriLiike.RajaAst - KoriLiike.KeinuntaAst, $"kiihdytys taakse {alin:F2}°");
+            Oleta.Tosi(ylin > 3.0, $"jarrutus eteen {ylin:F2}°");
         }
 
         [Testi] static void PallonLennotHitaammatLyhyillaValeilla()
