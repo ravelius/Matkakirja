@@ -192,8 +192,9 @@ namespace Matkakirja.Linssit.Kierros
         public const int KehaPisteita = 8;
         public const double KorkeusArvioMinM = 20;
 
-        /// <summary>Kehän säde (m) kohteen koosta: jalanjäljen ulkopuolelle mutta lähelle (35–220 m).</summary>
-        public static double KehaSade(double kokoM) => Rajaa(0.6 * Math.Max(10, kokoM), 35, 220);
+        /// <summary>Kehän säde (m) kohteen koosta, 35–60 m: lähellä jalkaa (simu 7.10. 03.5x: Akropoliksen 220 m:n kehä osui
+        /// kukkulan rinteeseen, maa 191 → 130 m). Tornissa 60 m osuu jalkojen väliseen maahan tai jalustan viereen.</summary>
+        public static double KehaSade(double kokoM) => Rajaa(0.6 * Math.Max(10, kokoM), 35, 60);
 
         /// <summary>Kehän piste i (0…KehaPisteita−1) kohteen ympärillä.</summary>
         public static (double lat, double lon) KehaPiste(double lat, double lon, double sadeM, int i)

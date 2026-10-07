@@ -36,7 +36,8 @@ namespace Matkakirja.Linssit.Testit
             var korkea = OpasKuvaus.Kehysta(new OpasKohde { Nimi = "Eiffel", Lat = 48.8583, Lon = 2.2945, KokoM = 125, KorkeusM = 300, Luokka = "torni" }, 77, 0);
             Oleta.Tosi(korkea.EtaisyysM > 2 * matala.EtaisyysM, $"korkeus kaukaa: {matala.EtaisyysM:F0} → {korkea.EtaisyysM:F0} m");
             double sade = OpasKuvaus.KehaSade(125);
-            Oleta.Tosi(sade > 62 && sade < 100, $"kehä jalanjäljen ulkopuolella ({sade:F0} m)");
+            Oleta.Tosi(sade >= 35 && sade <= 60, $"kehä lähellä jalkaa ({sade:F0} m)");
+            Oleta.Sama(60.0, OpasKuvaus.KehaSade(400), "iso kohde (Akropolis): kehä ei rinteeseen");
             var p = OpasKuvaus.KehaPiste(48.8583, 2.2945, sade, 2);
             Oleta.Tosi(Math.Abs(KierrosLento.EtaisyysM(48.8583, 2.2945, p.lat, p.lon) - sade) < 1, "kehäpiste säteellä");
         }
