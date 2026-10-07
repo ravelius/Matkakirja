@@ -16,7 +16,7 @@
   **LÄHDEONGELMA (13.0x):** NE admin-1:ssä Pohjois-Kypros on yksi alue ilman piirikuntia. geoBoundaries gbOpen (OSM) on ODbL, gbAuthoritative on UN SALB.
   Ensin etsitään Kyproksen avoin data (CC BY 4.0, Department of Lands and Surveys); data.gov.cy:n CKAN-API ei vastannut.
   Lähteet: `tools/vienti/maakuntarajat.json.gz` (NE admin-1, CYP 5 aluetta), `tools/tee-maakuntavektorit.mjs`, `tools/krim-ukrainalle.mjs` (admin-1-malli: krimUkrainalleAdmin1).
-- **Talvi2** noin 150/169, kevät rivit 13–17 perässä (irralliset, jatkuvat tauon yli). **Syksyn vienti** Julkaisijalla (51 109 / 57 630 klo 13.0x).
+- **Talvi2 VALMIS 13.46** (169/169, `s2-eurooppa-talvi2/`): seuraavaksi ennen–jälkeen-kuvapari PT:lle (`kaudet/kuvapari.py nyt,talvi,talvi2 …`, rivit tukholma, laatokka, alta, skane, skandi, alpit), ja tarkista Tukholman sauma, lumeton laikku ja Laatokan reuna. Kevät rivit 13–17 alkoi 13.46 (irralliset, jatkuvat tauon yli). **Syksyn vienti** Julkaisijalla (51 109 / 57 630 klo 13.0x).
 
 ---
 
