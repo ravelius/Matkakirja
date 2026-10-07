@@ -9,6 +9,17 @@ Olet Natiiviseppä (Opus, high). Lue tämä osio, MEMORY.md ja natiiviseppa-tila
 Juna-SHA:t otetaan vain PÄÄTOIMITTAJAN suoralla kuittauksella; käännökset, simut ja iPad vain Julkaisijan NYT-viestillä.
 Tarkista ensin taustalla jatkuneiden ajojen tulokset (alla) ja kerro ne Julkaisijalle ja PÄÄTOIMITTAJALLE.
 
+## TILA 15.0x
+
+- **MAC-OHJAUSLEVYVIKA (omistaja, Mac TF 160: panorointi/zoomaus lakkaa, kunnes klikkaa karttaa):** haara natiiviseppa/mac-ohjauslevy
+  **84f44457** (wt/proto-natiiviseppa-ohjauslevy, BUILD 160:n päällä): diagnostiikka (ele UI:lle → peittäjä; kartta estetty → SyoteLukko-
+  omistajat/EleetMuualla) + testikomennot ui mac paikka / ui mac hiiri pohjaan|irti. Toisto lokit/natiiviseppa-skriptit/mac-ohjauslevy-
+  toisto.sh (vain komentotiedostot): EI toistunut (jumiutunut nappi, lukko, peitto → kartta ottaa eleet). Havainto: maan panoraja
+  (laatikko × 1,3, loitonnuksen katto) pysäyttää reunalla ilman palautetta. Kysytty Päätoimittajalta omistajan tarkennus (kaikki
+  suunnat? aktiivinen ohjelma?). Epäily 2: ei-aktiivinen appi (klikkaus aktivoi) — ei testattavissa ilman fokuksen viemistä omistajalta.
+  Appin käynnistys vie omistajan fokuksen → ei Mac-ajoja hänen käyttäessään konetta.
+- LS2: Ateenan pallon klikkaus (eri vika), haara linssiseppa2/hiiri-testi 2d8da858f (KaupunkiPallot.cs + testikomento), merge-tree puhdas.
+
 ## TILA 14.2x
 
 - **JUNA 161 -ESIRUNKO natiiviseppa/juna-161-koe ea1a60e73** (c4fbdd6f5 + LS2 swe-rajat 95cf8eb97 14.2x, maarajat 200 todennettu;
