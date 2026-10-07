@@ -6,7 +6,23 @@ worktreet /Users/Shared/Claude/wt/proto-natiivi-ui-<aihe>. Käännös: lokit/nat
 Simu vain Julkaisijan "SIMU NYT" -viestistä, oma iPhone FB234D08-4693-4496-9C7A-6C7C15B03963, iPad
 AD119F7B-A2A2-43EE-8769-7326DD757F89; lopuksi sammutus ja "simu vapaa".
 
-## TILA 7.10. klo 10.3x (uusin)
+## TILA 7.10. klo 13.0x (uusin, TAUKO 13.45–15.00)
+
+JATKA TÄSTÄ (tyhjästä kontekstista): proto-git /Users/Shared/Claude/proto-3d/Matkakirja-proto, skriptit lokit/natiivi-ui-1035/skriptit.
+- AVOIN 1 (kiireellisin): KÖYSIKORJAUS natiivi-ui/pariisi-esitys a0f15e7e (metrolinja korin köyden oikealle, LS1 KoriVasenKoysiNorm;
+  sis. LS1 esitys-giza 8ff8c0be + omistajan metropalaute KUITATTU b1c53bba). Pyydetty Julkaisijalta KÄÄNNÖS + simu ~6 min →
+  skriptit/vuoro-koysi.sh <app> (iPhone vaaka + iPad; kori-GLB kopioidaan Documents/pallokori/) → 2 stilliä Päätoimittajalle
+  → hän kuittaa koko esityserän (metro, Kysy-rivi, kori, opastus kerran) junaan 161 → SHA Natiivisepälle.
+- JUNA 161 natiivi-ui/kehittaja-tf 270992bd (master BUILD 159): kehittäjätila koodilla myös App Storessa + TESTAAJATILA (oma koodi,
+  vain tiiviste Asetukset.TestaajaTiiviste; kaikki linssit + maailmatila) + versionumero → Mitä uutta → "Kehittäjätila"-nappi.
+  Natiiviseppä todentaa App Store -käännöksellä Päätoimittajan SHA-vahvistuksen jälkeen. Avoin kysymys Päätoimittajalle: sulkeutuvatko
+  esittelylinssit, kun testaajatila kytketään pois (nyt eivät).
+- JUNA 160 lähetetty Natiivisepälle: iss-jalka 7f262261 + apuraha-periaate d277c738 (kuitattu). Lippurivin web-korjaus PR #4134 (Pelikoodari).
+- Juna 157b eb6f860f, 159 kaupunkiopas cf5e31b8 lähetetty. Seikkailutapit 34cf54b0 odottaa Päätoimittajan kuittausta Siirtosepän kuvista.
+- Näyttö 2560×1440 on omistajan oikea asetus (ei mainita).
+- Työkalut: skriptit/simkosketus (oikea tap), skriptit/hiiri (Mac CGEvent), arkki.py; kaanna-kopioi.sh <haara> vain KÄÄNNÖS NYT -viestistä.
+
+## TILA 7.10. klo 10.3x
 
 - ISS-JALKA (omistaja 10.5x, TF 159 iPad vaaka): natiivi-ui/iss-jalka 7f262261 (master BUILD 159 päällä, wt/proto-natiivi-ui-issjalka):
   jalka aina kun paneelin alle jää rakoa (ennen vain pysty), varoitus lokiin puuttuvasta kuvasta. Odottaa käännöstä + skriptit/
