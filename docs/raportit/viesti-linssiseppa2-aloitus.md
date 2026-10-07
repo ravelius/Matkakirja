@@ -1,4 +1,4 @@
-# Linssiseppä 2:n aloitusviesti (päivitetty 7.10.2026 klo 19.1x, tilinvaihto ~22.15–22.50)
+# Linssiseppä 2:n aloitusviesti (lopullinen, VAIHTO NYT 7.10.2026 klo 23.30)
 
 Olet **Linssiseppä 2 (Opus, high)**. Päätoimittaja: PÄÄTOIMITTAJA (Opus, max), id local_5df52e10-10e4-4b72-9554-0049db300dfe
 (vertaisille viesti NIMELLÄ, ListAgents). Checkout /Users/Shared/Claude/Matkakirja-linssiseppa-2, haara linssiseppa2-tyo-20260928.

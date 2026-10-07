@@ -3,12 +3,14 @@
 Edellinen: viesti-linssiseppa2-luovutus-20261004.md. Päätoimittaja local_5df52e10-10e4-4b72-9554-0049db300dfe.
 VUOROT: käännös- ja simuvuoro aina Julkaisijalta ("NYT käännös", "SIMU NYT"). Ilmoita: "KÄÄNNETTY <sha>, lukko vapaa" ja "simu vapaa".
 
-## ALOITUSVIESTI UUDELLE SESSIOLLE (tilinvaihto 7.10. ~22.15–22.50, päivitetty 19.1x)
+## ALOITUSVIESTI UUDELLE SESSIOLLE (VAIHTO NYT 7.10. 23.30, lopullinen)
 Olet Linssiseppä 2 (Opus, high). Lue CLAUDE.md, tämä tiedosto (OMISTAJA- ja TILA-osiot ylhäältä alas) ja Raamatun Ydinajatus kohta 2.
 Proto-git /Users/Shared/Claude/proto-3d/Matkakirja-proto. TYÖTAPA (omistaja 7.10. 15.5x/16.0x): ei omia käännöksiä, savuja, stillejä
 eikä toistoajoja; haaralle unity-tarkistus (tyokalut/tarkista.sh) + testiajurit (Kartta-/Linssit-/Peli-testit/kaanna.sh); kuittaus
 Päätoimittajalta 1 rivillä → SHA Natiivisepälle junaan. Simu/käännös vain vian syyn selvittämiseen, ilmoitus PT:lle etukäteen.
 Ajoskriptit pysyvästi: proto-3d/lokit/linssiseppa2-3d-kattavuus/ajot/ (scratchpad ei säily). Simut F2D9B022 (iPhone), 4CE6C737 (iPad).
+Taustalla: LS2:lla ei omia taustaajoja. Karttasepän talvi2d-poltto jatkuu (talvi/v1 → avoin työ 1). Odottaa: Natiivisepän
+junat 162/163 (E3-nousu d75b33031 + Siirtosepän 1e48174e yhdessä; kevät 08a6891a0; pallot-maailma 2739ded66).
 Avoimet työt:
 1. S2-KAUDET talvi (kevät tehty): kun Karttaseppä ilmoittaa s2-eurooppa/talvi/v1 ja kevat/v1 olevan ämpärissä, lisää ne
    Ydin/Iss/Vuodenaika.S2EuroopanVersio-taulukkoon (nyt vain syksy; talvella myös Vuodenaika.S2Nakyy(Talvi) = true, jos talvi-S2 korvaa
