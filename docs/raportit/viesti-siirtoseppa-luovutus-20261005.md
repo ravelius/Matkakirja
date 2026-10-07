@@ -443,3 +443,6 @@ Edellinen luovutus on `viesti-siirtoseppa-luovutus-20261002.md` (5.10. osiot 02.
   Osoitinvarmistus 49888505 toistot OK (lokit/siirtoseppa-osoitin-toisto/) → merge-pyyntö Natiivisepälle junaan 161.
   E1-uusinta f5882d8c (35ea7ca1): repliikit kuuluvat (+13 dB), piilo toimii, askeleet URL-vika → 186e35e6, kynnyksellä putoaminen → LR.
   Junaehdokas 162: siirtoseppa/historia-juna162 @ a5cd9d81 (historia-h0 186e35e6 + historia-juna161), kuittaus pyydetty Päätoimittajalta.
+- 16.05: Päätoimittaja kuittasi juna 162. Kehittäjävalikkoon "Olavinlinna – pelattava pala (kokeilu)" (b47f31d4: LinssiOhjain.AvaaPelattavaPala
+  → DioraamaSovitin.PelattavaPalaPyydetty → VenePaalle; laiturilla vartijat; Sulje purkaa seikkailun). Merge-pyyntö Natiivisepälle:
+  siirtoseppa/historia-juna162 @ 78e56088 (+ riippuvuus natiivi-ui/seikkailu-tapit 34cf54b0). historia-h0 kärki b47f31d4.
