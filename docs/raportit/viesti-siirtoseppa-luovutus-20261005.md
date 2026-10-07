@@ -423,3 +423,7 @@ Edellinen luovutus on `viesti-siirtoseppa-luovutus-20261002.md` (5.10. osiot 02.
 5. Pelikoodarin 31 repliikkiä: proto-3d/_valmiit/olavinlinna-repliikit-v1/ (manifest.json, valmis/, ajat/; käsikirjoitus
    docs/raportit/olavinlinna-pystyleike-repliikit.md). Pyydetty vienti media.matkakirja.app/seikkailu/olavinlinna/repliikit-v1/
    — ämpärissä 13.21 (63 tiedostoa, hahmo-id:t <hahmo>-1500); LR tekee portinvartija-1500:n v45:een. Toisto natiivissa: V4/V7 (repliikit tilanteen mukaan).
+- 14.05: vuoro-h3 6490286b ajettu (lokit/siirtoseppa-vuoro-h3/): vene merkeillä OK (kamera taakse → 47773a32), laiturin kansi puuttui törmäyksestä
+  (LR korjasi), vartija pihalla partio→epäily→kiinni OK, keittiön NavMesh puuttui (→ bfd67992 kaksipuoliset kävelypinnat). V1-stillit
+  lokit/siirtoseppa-v1-stillit/ Päätoimittajalle; junahaara siirtoseppa/historia-juna161 @ 526c9373 (b8724fd8 + eleet-2). historia-h0 kärki bfd67992.
+  LR tuo Fogg-pelaajan (rakennus.json pelaaja) + laiturin kannen seuraavaan peiliin.
