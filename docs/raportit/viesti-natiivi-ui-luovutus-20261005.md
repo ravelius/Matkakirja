@@ -22,7 +22,7 @@ AD119F7B-A2A2-43EE-8769-7326DD757F89; lopuksi sammutus ja "simu vapaa".
   Liikun Kaupunkikierros pois. LS1 kokoaa yhdistelmän linssiseppa/esitys-giza ja ottaa omistajan stillit.
 - SEIKKAILUTAPIT natiivi-ui/seikkailu-tapit 34cf54b0: todennettu Siirtosepän V1-ajossa; Päätoimittaja kuittaa hänen kuvistaan, junaan
   vain historia-h0:n kanssa kehittäjäkytkimen takana → SHA Natiivisepälle kuittauksen jälkeen.
-- Juna 159 kaupunkiopas cf5e31b8 lähetetty. Näyttö yhä 2560×1440 (omistaja).
+- Juna 159 kaupunkiopas cf5e31b8 lähetetty. Näyttö 2560×1440 on omistajan OIKEA asetus (12.0x), ei palauteta eikä mainita.
 
 ## TILA 7.10. klo 09.0x
 
@@ -39,7 +39,7 @@ AD119F7B-A2A2-43EE-8769-7326DD757F89; lopuksi sammutus ja "simu vapaa".
   arkki-157b.jpg). Korjattu simun 04.35 löydökset: nimitörmäykset (Granada NIC, Dublin USA, Barcelona VEN → Amerikat valikossa),
   lähiöt (46 → 36 riviä), suosikit vain sallituilta alueilta, torjunta kertojan laatikkoon. "Islanti › Islanti" korjataan datassa
   (Pelikoodari #4098 → Reykjavík). Kaikki junat 155–157 lähetetty; seuraavaksi lepo / Päätoimittajan uudet erät.
-- Mac v2 6f849fc8 OK. NÄYTTÖ yhä 2560×1440 (v1:n jäljiltä) → omistaja palauttaa Järjestelmäasetuksista (ei itse).
+- Mac v2 6f849fc8 OK. Näyttö 2560×1440 on omistajan oikea asetus (12.0x); ei pyydetä muutosta.
 
 ## TILA 7.10. klo 03.5x
 
