@@ -24,7 +24,9 @@ kolme tulostiedostoa ja poistetaan `wip/`.
 - Ryhmä 4 VALMIS (`wip/osa4.json` 15 riviä, `wip/codex4.md` 2 tilausta). Älä tee uudelleen.
 - Ryhmä 3 VALMIS (`wip/osa3.json` 12 riviä, `wip/codex3.md` 3 tilausta; Garnier 0 kuvaa). Älä tee uudelleen.
 - Ryhmä 2 VALMIS (`wip/osa2.json` 18 riviä, `wip/codex2.md` 2 tilausta). Älä tee uudelleen.
-- Ryhmä 1: kesken tämän kirjauksen hetkellä; jos `wip/osa<N>.json` puuttuu, aja ryhmä
+- Ryhmä 1 VALMIS (`wip/osa1.json` 26 riviä, `wip/codex1.md` 1 tilaus). Älä tee uudelleen.
+- SEURAAVAKSI: `python3 esittely-tyo/kuvat/wip/yhdista.py`, sitten TARKISTAJA (sonnet), sitten tulostiedostot.
+- (vanha rivi:) tämän kirjauksen hetkellä; jos `wip/osa<N>.json` puuttuu, aja ryhmä
   uudelleen Sonnetilla.
 
 ### Agenttimalli: SONNET (omistajan päätös 7.10.2026)
