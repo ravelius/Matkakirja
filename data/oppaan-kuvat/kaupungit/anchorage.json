@@ -1,0 +1,317 @@
+{
+ "kaupunki": "anchorage",
+ "kaupunkiQ": "Q39450",
+ "kohteet": [
+  {
+   "q": "Q4752732",
+   "nimi": "Anchorage Museum",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 61.2161,
+   "lon": -149.885,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Anchorage Museum at Rasmuson Center 2014.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Anchorage_Museum_at_Rasmuson_Center_2014.jpg?width=1280",
+     "tekija": "Bernt Rostad",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Anchorage_Museum_at_Rasmuson_Center_2014.jpg",
+     "selite": "Anchorage Museum esittelee Alaskan taidetta, historiaa ja alkuperäiskansojen kulttuuria.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Anchorage Museum 2007.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Anchorage_Museum_2007.jpg?width=1280",
+     "tekija": "Harvey Barrison",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Anchorage_Museum_2007.jpg",
+     "selite": "Museon vanhempi osa on tiilenvärinen rakennus Anchoragen keskustassa.",
+     "leveys": 3872,
+     "korkeus": 2592,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1089367",
+   "nimi": "Chugach-vuoret",
+   "peruste": "sitelinks",
+   "koko_m": 8000,
+   "lat": 61.17,
+   "lon": -145.33,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "20140903-FS-Chugach-CT-003.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20140903-FS-Chugach-CT-003.jpg?width=1280",
+     "tekija": "Forest Service, USDA",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20140903-FS-Chugach-CT-003.jpg",
+     "selite": "Chugach-vuorten metsäiset rinteet kohoavat valtatien vierestä Anchoragen itäpuolella.",
+     "leveys": 2048,
+     "korkeus": 1536,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "\"Campsite Above the Clouds.\" Chugach Mountains, Alaska (5433948195).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%22Campsite_Above_the_Clouds.%22_Chugach_Mountains%2C_Alaska_(5433948195).jpg?width=1280",
+     "tekija": "Paxson Woelber",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%22Campsite_Above_the_Clouds.%22_Chugach_Mountains%2C_Alaska_(5433948195).jpg",
+     "selite": "Pilvien yläpuolella Chugach-vuorten harjanteilla voi leiriytyä kesäyönä.",
+     "leveys": 3072,
+     "korkeus": 1317,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1089333",
+   "nimi": "Chugachin osavaltionpuisto",
+   "peruste": "sitelinks",
+   "koko_m": 8000,
+   "lat": 61.05194,
+   "lon": -149.79694,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Eklutna Lake from Twin Peaks trail.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Eklutna_Lake_from_Twin_Peaks_trail.jpg?width=1280",
+     "tekija": "Frank K. from Anchorage, Alaska, USA",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Eklutna_Lake_from_Twin_Peaks_trail.jpg",
+     "selite": "Eklutna-järvi levittäytyy lumihuippuisten vuorten väliin Chugachin osavaltionpuistossa.",
+     "leveys": 3504,
+     "korkeus": 2224,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q4752714",
+   "nimi": "Anchoragen rautatieasema",
+   "peruste": "pelin nosto",
+   "koko_m": 120,
+   "lat": 61.2217,
+   "lon": -149.891,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Anchorage Station.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Anchorage_Station.jpg?width=1280",
+     "tekija": "Len Turner from Lufkin, TX, USA",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Anchorage_Station.jpg",
+     "selite": "Alaskan rautatien asema Anchoragessa on kaupungin perustamisen aikainen lähtöpaikka.",
+     "leveys": 2048,
+     "korkeus": 1360,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Anchorage Station 2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Anchorage_Station_2.jpg?width=1280",
+     "tekija": "Andrei Taranchenko from New York City, U.S.A.",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Anchorage_Station_2.jpg",
+     "selite": "Valkoinen asemarakennus seisoo Ship Creekin rannan tuntumassa.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q4708511",
+   "nimi": "Alaska Center for the Performing Arts",
+   "peruste": "pelin nosto",
+   "koko_m": 120,
+   "lat": 61.2171,
+   "lon": -149.894,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Alaska Center for the Performing Arts. Anchorage, Alaska.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Alaska_Center_for_the_Performing_Arts._Anchorage%2C_Alaska.jpg?width=1280",
+     "tekija": "Paxson Woelber",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Alaska_Center_for_the_Performing_Arts._Anchorage%2C_Alaska.jpg",
+     "selite": "Esittävien taiteiden keskus kohoaa lumisena Anchoragen keskustassa.",
+     "leveys": 2700,
+     "korkeus": 1800,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q5253133",
+   "nimi": "Delaney Park Strip",
+   "peruste": "pelin nosto",
+   "koko_m": 1000,
+   "lat": 61.2133,
+   "lon": -149.902,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Delaney Park ENBLA02.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Delaney_Park_ENBLA02.jpg?width=1280",
+     "tekija": "Enrico Blasutto",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Delaney_Park_ENBLA02.jpg",
+     "selite": "Delaney Park Strip on pitkä vihreä nauha Anchoragen keskustan eteläpuolella.",
+     "leveys": 8552,
+     "korkeus": 1766,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q20712669",
+   "nimi": "Wendlerin talo",
+   "peruste": "pelin nosto",
+   "koko_m": 40,
+   "lat": 61.22417,
+   "lon": -149.87194,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "WENDLER BUILDING.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/WENDLER_BUILDING.jpg?width=1280",
+     "tekija": "JERRYE & ROY KLOTZ MD",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:WENDLER_BUILDING.jpg",
+     "selite": "Wendlerin talo on valkoinen kulmatalo, jossa on punainen torninhuippu.",
+     "leveys": 5284,
+     "korkeus": 3564,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q7105860",
+   "nimi": "Oscar Andersonin talo",
+   "peruste": "pelin nosto",
+   "koko_m": 40,
+   "lat": 61.2186,
+   "lon": -149.906,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Oscar Anderson House.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Oscar_Anderson_House.jpg?width=1280",
+     "tekija": "61north",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Oscar_Anderson_House.jpg",
+     "selite": "Oscar Andersonin talo on Anchoragen vanhimpia asuintaloja ja nykyään museo.",
+     "leveys": 3303,
+     "korkeus": 2847,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q4752726",
+   "nimi": "Anchoragen vanha hautausmaa",
+   "peruste": "pelin nosto",
+   "koko_m": 250,
+   "lat": 61.2152,
+   "lon": -149.876,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Anchorage Memorial Park Cemetery.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Anchorage_Memorial_Park_Cemetery.jpg?width=1280",
+     "tekija": "Dmadeo",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Anchorage_Memorial_Park_Cemetery.jpg",
+     "selite": "Vanha hautausmaa on keskustan viheralue, jonne on haudattu kaupungin varhaisia asukkaita.",
+     "leveys": 4608,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Anchorage Memorial Park Cemetery - 5731599869.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Anchorage_Memorial_Park_Cemetery_-_5731599869.jpg?width=1280",
+     "tekija": "Jason Riedy",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Anchorage_Memorial_Park_Cemetery_-_5731599869.jpg",
+     "selite": "Hautausmaalla on muistomerkki Alaskan pioneereille.",
+     "leveys": 3648,
+     "korkeus": 2736,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q767753",
+   "nimi": "Anchoragen kansainvälinen lentoasema",
+   "peruste": "sitelinks",
+   "koko_m": 3000,
+   "lat": 61.1742,
+   "lon": -149.998,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Anchorage International Airport and Cook Inlet.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Anchorage_International_Airport_and_Cook_Inlet.jpg?width=1280",
+     "tekija": "Frank K. from Anchorage, Alaska, USA",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Anchorage_International_Airport_and_Cook_Inlet.jpg",
+     "selite": "Lentoasema on tärkeä rahtilentojen solmukohta Cookinlahden rannalla.",
+     "leveys": 2272,
+     "korkeus": 1325,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Anchorage and Mile High Peak.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Anchorage_and_Mile_High_Peak.jpg?width=1280",
+   "tekija": "Luke Jones",
+   "lisenssi": "CC BY 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Anchorage_and_Mile_High_Peak.jpg",
+   "selite": "Anchoragen keskustan korkeat rakennukset ja lumihuippuiset Chugach-vuoret.",
+   "leveys": 3531,
+   "korkeus": 2075,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Anchorage, Alaska skyline.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Anchorage%2C_Alaska_skyline.jpg?width=1280",
+   "tekija": "Quintin Soloviev",
+   "lisenssi": "CC BY 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Anchorage%2C_Alaska_skyline.jpg",
+   "selite": "Anchoragen keskusta ilmasta katsottuna vuorten alla.",
+   "leveys": 7496,
+   "korkeus": 4998,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

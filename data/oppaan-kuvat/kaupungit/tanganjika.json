@@ -1,0 +1,277 @@
+{
+ "kaupunki": "tanganjika",
+ "kaupunkiQ": "Q5511",
+ "kohteet": [
+  {
+   "q": "Q526169",
+   "nimi": "Ujiji",
+   "peruste": "sitelinks",
+   "koko_m": 2500,
+   "lat": -4.91667,
+   "lon": 29.68333,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Mango Row, Kagera Ward, Kigoma-Ujiji.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mango_Row%2C_Kagera_Ward%2C_Kigoma-Ujiji.jpg?width=1280",
+     "tekija": "Halidtz",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mango_Row%2C_Kagera_Ward%2C_Kigoma-Ujiji.jpg",
+     "selite": "Ujijin mangopuukuja muistuttaa kauppakylästä, jossa Livingstone ja Stanley tapasivat vuonna 1871.",
+     "leveys": 3356,
+     "korkeus": 3014,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Burton and Speke Monument in Ujiji.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Burton_and_Speke_Monument_in_Ujiji.jpg?width=1280",
+     "tekija": "Caligula",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Burton_and_Speke_Monument_in_Ujiji.jpg",
+     "selite": "Muistolaatta kertoo, että Burton ja Speke saapuivat Ujijiin Tanganjikajärven rannalle vuonna 1858.",
+     "leveys": 4608,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Livingstone Memorial, Tanzania.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Livingstone_Memorial%2C_Tanzania.jpg?width=1280",
+     "tekija": "Peter A Levey",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Livingstone_Memorial%2C_Tanzania.jpg",
+     "selite": "Muistomerkki merkitsee paikkaa, jossa Stanley sanoi löytäneensä Livingstonen Ujijissa.",
+     "leveys": 1280,
+     "korkeus": 851,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q244509",
+   "nimi": "Kigoma",
+   "peruste": "sitelinks",
+   "koko_m": 3000,
+   "lat": -4.88333,
+   "lon": 29.63333,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Kigoma Habor, Kigoma Ward.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kigoma_Habor%2C_Kigoma_Ward.jpg?width=1280",
+     "tekija": "Halidtz",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kigoma_Habor%2C_Kigoma_Ward.jpg",
+     "selite": "Kigoman satama on Tanganjikajärven tärkein Tansanian puoleinen satama ja rautatien päätepiste.",
+     "leveys": 3883,
+     "korkeus": 2912,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Kigoma Railway Station, Kigoma Ward.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kigoma_Railway_Station%2C_Kigoma_Ward.jpg?width=1280",
+     "tekija": "Halidtz",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kigoma_Railway_Station%2C_Kigoma_Ward.jpg",
+     "selite": "Saksalaisten rakentama rautatieasema on edelleen kaupungin keskeisiä rakennuksia.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "MV.Liemba.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/MV.Liemba.jpg?width=1280",
+     "tekija": "Erasmus Kamugisha",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:MV.Liemba.jpg",
+     "selite": "Liemba on Tanganjikajärven vanha höyrylaiva, joka rakennettiin ensimmäisen maailmansodan aikaan ja liikennöi yhä Kigomasta.",
+     "leveys": 2000,
+     "korkeus": 1275,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q856665",
+   "nimi": "Gomben kansallispuisto",
+   "peruste": "sitelinks",
+   "koko_m": 6000,
+   "lat": -4.66667,
+   "lon": 29.63333,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Entrance to Gombe Stream National Park.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Entrance_to_Gombe_Stream_National_Park.jpg?width=1280",
+     "tekija": "fabulousfabs",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Entrance_to_Gombe_Stream_National_Park.jpg",
+     "selite": "Pieni portti avaa tien sademetsään, jossa Jane Goodall tutki simpansseja vuodesta 1960.",
+     "leveys": 3648,
+     "korkeus": 2736,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Chimps in Gombe.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Chimps_in_Gombe.jpg?width=1280",
+     "tekija": "Cethuyghe",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Chimps_in_Gombe.jpg",
+     "selite": "Gomben simpanssit elävät kukkulaisessa metsässä Tanganjikajärven rannalla.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Lake Tanganyika at Gombe Stream National Park.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lake_Tanganyika_at_Gombe_Stream_National_Park.jpg?width=1280",
+     "tekija": "fabulousfabs",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Lake_Tanganyika_at_Gombe_Stream_National_Park.jpg",
+     "selite": "Puiston kivikkoiset rannat laskeutuvat suoraan Tanganjikajärveen.",
+     "leveys": 3648,
+     "korkeus": 2736,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1478367",
+   "nimi": "Mahalen kansallispuisto",
+   "peruste": "sitelinks",
+   "koko_m": 10000,
+   "lat": -6.26667,
+   "lon": 29.93333,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Adult male chimps in mahale.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Adult_male_chimps_in_mahale.jpg?width=1280",
+     "tekija": "Caelio",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Adult_male_chimps_in_mahale.jpg",
+     "selite": "Mahalen vuoristometsässä elää suuri simpanssiyhteisö, jota on tutkittu vuosikymmeniä.",
+     "leveys": 3038,
+     "korkeus": 2363,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3854",
+   "nimi": "Bujumbura",
+   "peruste": "sitelinks",
+   "koko_m": 3000,
+   "lat": -3.3825,
+   "lon": 29.36111,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Cathédrale Regina Mundi de Bujumbura, 2024-3.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cath%C3%A9drale_Regina_Mundi_de_Bujumbura%2C_2024-3.jpg?width=1280",
+     "tekija": "Edouard mhg",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cath%C3%A9drale_Regina_Mundi_de_Bujumbura%2C_2024-3.jpg",
+     "selite": "Burundin entisen pääkaupungin Regina Mundi -katedraalin torni kohoaa avoimen kadun päässä.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Cathédrale Regina Mundi de Bujumbura, 2006.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cath%C3%A9drale_Regina_Mundi_de_Bujumbura%2C_2006.jpg?width=1280",
+     "tekija": "Unknown authorUnknown author",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cath%C3%A9drale_Regina_Mundi_de_Bujumbura%2C_2006.jpg",
+     "selite": "Bujumbura on Burundin suurin kaupunki, ja se sijaitsee Tanganjikajärven pohjoisrannalla.",
+     "leveys": 3072,
+     "korkeus": 2304,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q923687",
+   "nimi": "Uvira",
+   "peruste": "sitelinks",
+   "koko_m": 2500,
+   "lat": -3.4044,
+   "lon": 29.1379,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Houses Tanganyika Lake.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Houses_Tanganyika_Lake.jpg?width=1280",
+     "tekija": "Abdoulma",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Houses_Tanganyika_Lake.jpg",
+     "selite": "Uviran talot nousevat Tanganjikajärven pohjoispään rinteelle Kongon puolella.",
+     "leveys": 4032,
+     "korkeus": 1960,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Lac Tanganyika, Uvira, Uvira Territory, DR Congo.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lac_Tanganyika%2C_Uvira%2C_Uvira_Territory%2C_DR_Congo.jpg?width=1280",
+     "tekija": "EdwinAlden.1995",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Lac_Tanganyika%2C_Uvira%2C_Uvira_Territory%2C_DR_Congo.jpg",
+     "selite": "Uviran ranta avautuu järvelle, jonka takana kohoavat Burundin vuoret.",
+     "leveys": 1284,
+     "korkeus": 947,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Lake Tanganyika.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lake_Tanganyika.jpg?width=1280",
+   "tekija": "Orrling",
+   "lisenssi": "CC BY-SA 3.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Lake_Tanganyika.jpg",
+   "selite": "Tanganjikajärvi on maailman toiseksi syvin järvi, ja sen rantaa reunustavat vihreät rinteet.",
+   "leveys": 3264,
+   "korkeus": 2448,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Les eaux bleues du lac Tanganyika.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Les_eaux_bleues_du_lac_Tanganyika.jpg?width=1280",
+   "tekija": "Ntahonsigaye",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Les_eaux_bleues_du_lac_Tanganyika.jpg",
+   "selite": "Järven kirkas sininen vesi jatkuu horisonttiin asti Tansanian, Burundin, Kongon ja Sambian rajalla.",
+   "leveys": 4160,
+   "korkeus": 1872,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

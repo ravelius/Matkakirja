@@ -1,0 +1,555 @@
+{
+ "kaupunki": "hanoi",
+ "kaupunkiQ": "Q1858",
+ "kohteet": [
+  {
+   "q": "Q206219",
+   "nimi": "Thăng Longin keisarillinen linnoitus",
+   "peruste": "UNESCO",
+   "koko_m": 600,
+   "lat": 21.0325,
+   "lon": 105.83972,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Thăng Long Imperial Citadel (32451244358).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Th%C4%83ng_Long_Imperial_Citadel_(32451244358).jpg?width=1280",
+     "tekija": "Isabell Schulz",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Th%C4%83ng_Long_Imperial_Citadel_(32451244358).jpg",
+     "selite": "Thăng Longin linnoitus oli Vietnamin kuninkaiden hallintokeskus yli tuhat vuotta.",
+     "leveys": 5472,
+     "korkeus": 3648,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Central Sector of the Imperial Citadel of Thang Long - Hanoi.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Central_Sector_of_the_Imperial_Citadel_of_Thang_Long_-_Hanoi.jpg?width=1280",
+     "tekija": "katiebordner",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Central_Sector_of_the_Imperial_Citadel_of_Thang_Long_-_Hanoi.jpg",
+     "selite": "Linnoituksen keskiosan portti ja kivimuurit kuuluvat UNESCOn maailmanperintöön.",
+     "leveys": 6000,
+     "korkeus": 3244,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Central Sector of the Imperial Citadel of Thang Long - Hanoi (26246667851).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Central_Sector_of_the_Imperial_Citadel_of_Thang_Long_-_Hanoi_(26246667851).jpg?width=1280",
+     "tekija": "katiebordner",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Central_Sector_of_the_Imperial_Citadel_of_Thang_Long_-_Hanoi_(26246667851).jpg",
+     "selite": "Keltainen pylväspaviljonki kohoaa linnoituksen muurin yllä.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1202019",
+   "nimi": "Kirjallisuuden temppeli",
+   "peruste": "sitelinks",
+   "koko_m": 200,
+   "lat": 21.02861,
+   "lon": 105.83556,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Main gate of the Temple of Literature, Hanoi, Vietnam, 20240123 0929 3068.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Main_gate_of_the_Temple_of_Literature%2C_Hanoi%2C_Vietnam%2C_20240123_0929_3068.jpg?width=1280",
+     "tekija": "Jakub Hałun",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Main_gate_of_the_Temple_of_Literature%2C_Hanoi%2C_Vietnam%2C_20240123_0929_3068.jpg",
+     "selite": "Kirjallisuuden temppeli oli Vietnamin ensimmäinen yliopisto, perustettu vuonna 1070.",
+     "leveys": 5568,
+     "korkeus": 3716,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Constellation of Literature pavilion, Temple of Literature, Hanoi, Vietnam, 20240123 0939 3103.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Constellation_of_Literature_pavilion%2C_Temple_of_Literature%2C_Hanoi%2C_Vietnam%2C_20240123_0939_3103.jpg?width=1280",
+     "tekija": "Jakub Hałun",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Constellation_of_Literature_pavilion%2C_Temple_of_Literature%2C_Hanoi%2C_Vietnam%2C_20240123_0939_3103.jpg",
+     "selite": "Kirjallisuuden tähtikuvion paviljonki on temppelin tunnetuin yksityiskohta.",
+     "leveys": 2880,
+     "korkeus": 4314,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Dai Trung gate, Temple of Literature, Hanoi, Vietnam, 20240123 0929 3066.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dai_Trung_gate%2C_Temple_of_Literature%2C_Hanoi%2C_Vietnam%2C_20240123_0929_3066.jpg?width=1280",
+     "tekija": "Jakub Hałun",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Dai_Trung_gate%2C_Temple_of_Literature%2C_Hanoi%2C_Vietnam%2C_20240123_0929_3066.jpg",
+     "selite": "Temppelin sisäiset portit ja puutarhat johtavat kohti vanhoja luentosaleja.",
+     "leveys": 5860,
+     "korkeus": 3913,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1151254",
+   "nimi": "Hoàn Kiếm -järvi",
+   "peruste": "sitelinks",
+   "koko_m": 500,
+   "lat": 21.02889,
+   "lon": 105.8525,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Hoan Kiem Lake, Turtle Tower, Daytime (20231223) (53489228584).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hoan_Kiem_Lake%2C_Turtle_Tower%2C_Daytime_(20231223)_(53489228584).jpg?width=1280",
+     "tekija": "Takeshi Aida from Hong Kong, Hong Kong",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Hoan_Kiem_Lake%2C_Turtle_Tower%2C_Daytime_(20231223)_(53489228584).jpg",
+     "selite": "Hoàn Kiếm -järven keskellä seisoo Kilpikonnatorni, ja järvi on Hanoin vanhan ytimen sydän.",
+     "leveys": 7128,
+     "korkeus": 4752,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Hanoi - Turtle Tower (Tháp Rùa), Hoàn Kiếm Lake.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hanoi_-_Turtle_Tower_(Th%C3%A1p_R%C3%B9a)%2C_Ho%C3%A0n_Ki%E1%BA%BFm_Lake.jpg?width=1280",
+     "tekija": "P. Hughes",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Hanoi_-_Turtle_Tower_(Th%C3%A1p_R%C3%B9a)%2C_Ho%C3%A0n_Ki%E1%BA%BFm_Lake.jpg",
+     "selite": "Järven rannalta Kilpikonnatorni peilautuu tyyneen veteen.",
+     "leveys": 3974,
+     "korkeus": 2672,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q874234",
+   "nimi": "Ho Chi Minhin mausoleumi",
+   "peruste": "sitelinks",
+   "koko_m": 200,
+   "lat": 21.03667,
+   "lon": 105.83472,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Hanoi Vietnam Mausoleum-of-Ho-Chi-Minh-03.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hanoi_Vietnam_Mausoleum-of-Ho-Chi-Minh-03.jpg?width=1280",
+     "tekija": "CEphoto, Uwe Aranas",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Hanoi_Vietnam_Mausoleum-of-Ho-Chi-Minh-03.jpg",
+     "selite": "Ho Chi Minhin mausoleumi on Ba Đìnhin aukion laidalla seisova harmaa muistomerkki.",
+     "leveys": 3349,
+     "korkeus": 2233,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Hanoi Vietnam Mausoleum-of-Ho-Chi-Minh-01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hanoi_Vietnam_Mausoleum-of-Ho-Chi-Minh-01.jpg?width=1280",
+     "tekija": "CEphoto, Uwe Aranas",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Hanoi_Vietnam_Mausoleum-of-Ho-Chi-Minh-01.jpg",
+     "selite": "Mausoleumia ympäröivät hoidetut nurmikot ja palmut.",
+     "leveys": 2270,
+     "korkeus": 1513,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Ho chi minh mausoleum.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ho_chi_minh_mausoleum.jpg?width=1280",
+     "tekija": "Gregor Dodson",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ho_chi_minh_mausoleum.jpg",
+     "selite": "Pylväikkö ja kolmikerroksinen jalusta tekevät rakennuksesta arvokkaan ja ankaran.",
+     "leveys": 3024,
+     "korkeus": 1998,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1186292",
+   "nimi": "Yhden pilarin pagodi",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": 21.03574,
+   "lon": 105.83343,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "One Pillar Pagoda, Hanoi (1345321938).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/One_Pillar_Pagoda%2C_Hanoi_(1345321938).jpg?width=1280",
+     "tekija": "thalling55",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:One_Pillar_Pagoda%2C_Hanoi_(1345321938).jpg",
+     "selite": "Yhden pilarin pagodi lepää yhden pylvään varassa lootuslammen keskellä.",
+     "leveys": 2592,
+     "korkeus": 1944,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "One Pillar Pagoda, Hanoi (1344430777).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/One_Pillar_Pagoda%2C_Hanoi_(1344430777).jpg?width=1280",
+     "tekija": "thalling55",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:One_Pillar_Pagoda%2C_Hanoi_(1344430777).jpg",
+     "selite": "Kapea portaikko johtaa pienelle puupaviljongille.",
+     "leveys": 1944,
+     "korkeus": 2592,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "One Pillar Pagoda, Hanoi, Vietnam, 20240123 1122 3222.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/One_Pillar_Pagoda%2C_Hanoi%2C_Vietnam%2C_20240123_1122_3222.jpg?width=1280",
+     "tekija": "Jakub Hałun",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:One_Pillar_Pagoda%2C_Hanoi%2C_Vietnam%2C_20240123_1122_3222.jpg",
+     "selite": "Pagodin ruskea kattorakenne erottuu lammen reunalla.",
+     "leveys": 3904,
+     "korkeus": 4685,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1923783",
+   "nimi": "Pyhän Joosefin katedraali",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": 21.0286,
+   "lon": 105.849,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Hanoi sjc.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hanoi_sjc.jpg?width=1280",
+     "tekija": "Bonjin/凡人[ラナ]",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Hanoi_sjc.jpg",
+     "selite": "Pyhän Joosefin katedraali on uusgoottilainen kirkko Hanoin vanhassa kaupunginosassa.",
+     "leveys": 2552,
+     "korkeus": 2848,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "St Joseph Cathedral, Hanoi 2023.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/St_Joseph_Cathedral%2C_Hanoi_2023.jpg?width=1280",
+     "tekija": "Greenknight dv",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:St_Joseph_Cathedral%2C_Hanoi_2023.jpg",
+     "selite": "Katedraalin kaksi tornia kohoavat tummuneen kiven yllä.",
+     "leveys": 3024,
+     "korkeus": 4032,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "St Joseph Cathedral Hanoi 2025-10-26.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/St_Joseph_Cathedral_Hanoi_2025-10-26.jpg?width=1280",
+     "tekija": "LMP 2001",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:St_Joseph_Cathedral_Hanoi_2025-10-26.jpg",
+     "selite": "Kirkko on ranskalaisen siirtomaa-ajan perintöä Hanoin kaduilla.",
+     "leveys": 4284,
+     "korkeus": 5712,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2670019",
+   "nimi": "Long Biênin silta",
+   "peruste": "pelin nosto",
+   "koko_m": 500,
+   "lat": 21.04333,
+   "lon": 105.85889,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Long-bien-bridge-3371615.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Long-bien-bridge-3371615.jpg?width=1280",
+     "tekija": "Quangpraha",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Long-bien-bridge-3371615.jpg",
+     "selite": "Long Biênin silta on ranskalaisten rakentama terässilta Punaisen joen yli.",
+     "leveys": 3600,
+     "korkeus": 2400,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Long Bien Bridge 3796092037 9c2b2a236a.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Long_Bien_Bridge_3796092037_9c2b2a236a.jpg?width=1280",
+     "tekija": "Tuabiht Rellahcs",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Long_Bien_Bridge_3796092037_9c2b2a236a.jpg",
+     "selite": "Sillan ruosteiset teräsristikot kantavat yhä junia ja mopoja.",
+     "leveys": 4416,
+     "korkeus": 3312,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1186043",
+   "nimi": "Hanoin oopperatalo",
+   "peruste": "sitelinks",
+   "koko_m": 100,
+   "lat": 21.02417,
+   "lon": 105.85778,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Hanoi Opera House, 24 December 2016.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hanoi_Opera_House%2C_24_December_2016.jpg?width=1280",
+     "tekija": "xiquinhosilva",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Hanoi_Opera_House%2C_24_December_2016.jpg",
+     "selite": "Hanoin oopperatalo on ranskalaisen siirtomaa-ajan keltainen uusrenessanssirakennus.",
+     "leveys": 3000,
+     "korkeus": 2006,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Hanoi Opera House (1346056183).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hanoi_Opera_House_(1346056183).jpg?width=1280",
+     "tekija": "thalling55",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Hanoi_Opera_House_(1346056183).jpg",
+     "selite": "Oopperatalon palmut ja kupoli erottuvat kaupungin keskustassa.",
+     "leveys": 2592,
+     "korkeus": 1944,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1359941",
+   "nimi": "Hỏa Lòn vankila",
+   "peruste": "sitelinks",
+   "koko_m": 100,
+   "lat": 21.02528,
+   "lon": 105.84639,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Hoa Lo Prison aka \"Hanoi Hilton\" (11827025123).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hoa_Lo_Prison_aka_%22Hanoi_Hilton%22_(11827025123).jpg?width=1280",
+     "tekija": "Clay Gilliland",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Hoa_Lo_Prison_aka_%22Hanoi_Hilton%22_(11827025123).jpg",
+     "selite": "Hỏa Lòn vankila rakennettiin ranskalaisten aikana ja siitä tuli myöhemmin sotamuseo.",
+     "leveys": 4608,
+     "korkeus": 2592,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Hoa Lo Prison (Maison Centrale), Hanoi (6923115824).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hoa_Lo_Prison_(Maison_Centrale)%2C_Hanoi_(6923115824).jpg?width=1280",
+     "tekija": "David McKelvey from Brisbane, Australia",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Hoa_Lo_Prison_(Maison_Centrale)%2C_Hanoi_(6923115824).jpg",
+     "selite": "Portin ranskankielinen kirjoitus muistuttaa vankilan siirtomaa-ajan alkuperästä.",
+     "leveys": 3216,
+     "korkeus": 1809,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3517494",
+   "nimi": "Ngọc Sơnin temppeli",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": 21.03069,
+   "lon": 105.85239,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Hanoi - Ngoc Son Temple.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hanoi_-_Ngoc_Son_Temple.jpg?width=1280",
+     "tekija": "P. Hughes",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Hanoi_-_Ngoc_Son_Temple.jpg",
+     "selite": "Ngọc Sơnin temppeli seisoo pienellä saarella Hoàn Kiếm -järvessä.",
+     "leveys": 2971,
+     "korkeus": 2377,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "The Huc Bridge 2018.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/The_Huc_Bridge_2018.jpg?width=1280",
+     "tekija": "Christophe95",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:The_Huc_Bridge_2018.jpg",
+     "selite": "Punainen Thê Húc -silta yhdistää temppelisaaren rantaan.",
+     "leveys": 5184,
+     "korkeus": 3888,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Ngoc Son Temple, Hanoi (15) (37780892234).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ngoc_Son_Temple%2C_Hanoi_(15)_(37780892234).jpg?width=1280",
+     "tekija": "Richard Mortel from Riyadh, Saudi Arabia",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ngoc_Son_Temple%2C_Hanoi_(15)_(37780892234).jpg",
+     "selite": "Temppelin punaiset pylväät ja kattokoristeet ovat tyypillistä vietnamilaista arkkitehtuuria.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q864752",
+   "nimi": "Hanoin lippulinna",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": 21.03256,
+   "lon": 105.83977,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Cot Co Hanoi vietnam2011 - panoramio.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cot_Co_Hanoi_vietnam2011_-_panoramio.jpg?width=1280",
+     "tekija": "trungydang",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cot_Co_Hanoi_vietnam2011_-_panoramio.jpg",
+     "selite": "Lippulinna on Hanoin vanhan linnoituksen kolmiportainen torni, jonka huipulla liehuu lippu.",
+     "leveys": 2560,
+     "korkeus": 1920,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1094375",
+   "nimi": "Đồng Xuânin tori",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 21.03816,
+   "lon": 105.85003,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Dong Xuan market.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dong_Xuan_market.jpg?width=1280",
+     "tekija": "Juliana Ng from Singapore",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Dong_Xuan_market.jpg",
+     "selite": "Đồng Xuân on Hanoin vanhankaupungin suurin katettu kauppahalli.",
+     "leveys": 2272,
+     "korkeus": 1704,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Another look at the Dong Xuan Market in the Hanoi old quarter (31454085665).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Another_look_at_the_Dong_Xuan_Market_in_the_Hanoi_old_quarter_(31454085665).jpg?width=1280",
+     "tekija": "shankar s. from Dubai, united arab emirates",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Another_look_at_the_Dong_Xuan_Market_in_the_Hanoi_old_quarter_(31454085665).jpg",
+     "selite": "Hallin kaareva julkisivu avautuu vilkkaalle vanhankaupungin kadulle.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2234574",
+   "nimi": "Ba Đìnhin aukio",
+   "peruste": "sitelinks",
+   "koko_m": 400,
+   "lat": 21.03667,
+   "lon": 105.83583,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Hanoi, Vietnam, Ba Dinh Square.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hanoi%2C_Vietnam%2C_Ba_Dinh_Square.jpg?width=1280",
+     "tekija": "Vyacheslav Argenberg",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Hanoi%2C_Vietnam%2C_Ba_Dinh_Square.jpg",
+     "selite": "Ba Đìnhin aukio on laaja seremoniaalinen nurmiaukio, jonka päässä seisoo mausoleumi.",
+     "leveys": 3984,
+     "korkeus": 2656,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Hanoi Skyline - NKS.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hanoi_Skyline_-_NKS.jpg?width=1280",
+   "tekija": "NKSTTSSHNVN",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Hanoi_Skyline_-_NKS.jpg",
+   "selite": "Hanoin uusi puoli kohoaa Punaisen joen takana Nhật Tânin sillan päässä.",
+   "leveys": 5959,
+   "korkeus": 3352,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Hanoi skyline with Ba Vi Mountain.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hanoi_skyline_with_Ba_Vi_Mountain.jpg?width=1280",
+   "tekija": "Quangnlnhe182394",
+   "lisenssi": "CC0",
+   "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Hanoi_skyline_with_Ba_Vi_Mountain.jpg",
+   "selite": "Hanoin pilvenpiirtäjät hohtavat illalla Ba Vì -vuoren siluetin edessä.",
+   "leveys": 2048,
+   "korkeus": 1093,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

@@ -1,0 +1,617 @@
+{
+ "kaupunki": "isfahan",
+ "kaupunkiQ": "Q42053",
+ "kohteet": [
+  {
+   "q": "Q4519",
+   "nimi": "Naqsh-e Jahanin aukio",
+   "peruste": "UNESCO",
+   "koko_m": 600,
+   "lat": 32.65822,
+   "lon": 51.67733,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Naqsh-e Jahan Square from the gheisariye Vault.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Naqsh-e_Jahan_Square_from_the_gheisariye_Vault.jpg?width=1280",
+     "tekija": "Amir Pashaei",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Naqsh-e_Jahan_Square_from_the_gheisariye_Vault.jpg",
+     "selite": "Naqsh-e Jahanin aukio on safavidien Isfahanin sydän, jota reunustavat moskeijat, palatsi ja basaarin portti.",
+     "leveys": 8689,
+     "korkeus": 5290,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "04میدان نقش جهان.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/04%D9%85%DB%8C%D8%AF%D8%A7%D9%86_%D9%86%D9%82%D8%B4_%D8%AC%D9%87%D8%A7%D9%86.jpg?width=1280",
+     "tekija": "Ehsan11111",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:04%D9%85%DB%8C%D8%AF%D8%A7%D9%86_%D9%86%D9%82%D8%B4_%D8%AC%D9%87%D8%A7%D9%86.jpg",
+     "selite": "Aukion itälaidalla Sheikh Lotfollahin moskeijan kupoli hohtaa auringonlaskussa.",
+     "leveys": 5376,
+     "korkeus": 3024,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "(میدان امام خمینی(نقش جهان.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/(%D9%85%DB%8C%D8%AF%D8%A7%D9%86_%D8%A7%D9%85%D8%A7%D9%85_%D8%AE%D9%85%DB%8C%D9%86%DB%8C(%D9%86%D9%82%D8%B4_%D8%AC%D9%87%D8%A7%D9%86.jpg?width=1280",
+     "tekija": "Alirezafatemi",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:(%D9%85%DB%8C%D8%AF%D8%A7%D9%86_%D8%A7%D9%85%D8%A7%D9%85_%D8%AE%D9%85%DB%8C%D9%86%DB%8C(%D9%86%D9%82%D8%B4_%D8%AC%D9%87%D8%A7%D9%86.jpg",
+     "selite": "Aukiota kiertävät kaksikerroksiset kaarikäytävät, joiden kauppoja on pidetty satoja vuosia.",
+     "leveys": 5152,
+     "korkeus": 3864,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 4,
+     "tiedosto": "Naghsh-e Jahan Square.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Naghsh-e_Jahan_Square.jpg?width=1280",
+     "tekija": "Arosha-photo(Reza Sobhani)",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Naghsh-e_Jahan_Square.jpg",
+     "selite": "Aukio on yksi maailman suurimmista kaupunkiaukioista.",
+     "leveys": 5906,
+     "korkeus": 1687,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q643098",
+   "nimi": "Shahin moskeija",
+   "peruste": "pelin nosto",
+   "koko_m": 200,
+   "lat": 32.65481,
+   "lon": 51.67778,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "\"Shah(Imam)\" mosque.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%22Shah(Imam)%22_mosque.jpg?width=1280",
+     "tekija": "Mojde fr",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%22Shah(Imam)%22_mosque.jpg",
+     "selite": "Shahin moskeijan sisäpinnat on peitetty sinisillä ja turkoosinsävyisillä laatoilla.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "1 (62) (Copy).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/1_(62)_(Copy).jpg?width=1280",
+     "tekija": "BahmanRaf",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:1_(62)_(Copy).jpg",
+     "selite": "Moskeijan holvatut iwanit ja pylväät hohtavat laattakoristeita.",
+     "leveys": 1558,
+     "korkeus": 1039,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "03-mqshah-r.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/03-mqshah-r.jpg?width=1280",
+     "tekija": "BashirBorhani",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:03-mqshah-r.jpg",
+     "selite": "Moskeijan kupolin sisäpuolta koristaa lukuisia pieniä laattoja ja kaiverrettuja kukkia.",
+     "leveys": 3670,
+     "korkeus": 5505,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1256501",
+   "nimi": "Isfahanin Jameh-moskeija",
+   "peruste": "UNESCO",
+   "koko_m": 250,
+   "lat": 32.66972,
+   "lon": 51.68528,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "20180301124354 IMG 4179And6more Interior 3.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20180301124354_IMG_4179And6more_Interior_3.jpg?width=1280",
+     "tekija": "Hamidespanani",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20180301124354_IMG_4179And6more_Interior_3.jpg",
+     "selite": "Perjantaimoskeijan neljän iwanin piha on peräisin useammalta vuosisadalta ja Iranin vanhimpia.",
+     "leveys": 5975,
+     "korkeus": 3980,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "(Group 0)-DSC 4587 DSC 4589-3 images.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/(Group_0)-DSC_4587_DSC_4589-3_images.jpg?width=1280",
+     "tekija": "Ali.Alirezaei666",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:(Group_0)-DSC_4587_DSC_4589-3_images.jpg",
+     "selite": "Moskeijan tiilikupolit edustavat seldžukkien arkkitehtuuria.",
+     "leveys": 5051,
+     "korkeus": 4434,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": ".مسجد جامع اصفهان.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/.%D9%85%D8%B3%D8%AC%D8%AF_%D8%AC%D8%A7%D9%85%D8%B9_%D8%A7%D8%B5%D9%81%D9%87%D8%A7%D9%86.jpg?width=1280",
+     "tekija": "Sana aliakbari",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:.%D9%85%D8%B3%D8%AC%D8%AF_%D8%AC%D8%A7%D9%85%D8%B9_%D8%A7%D8%B5%D9%81%D9%87%D8%A7%D9%86.jpg",
+     "selite": "Moskeijan sisällä paksut tiilipylväät kannattavat holveja.",
+     "leveys": 4000,
+     "korkeus": 6000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q856356",
+   "nimi": "Sheikh Lotfollahin moskeija",
+   "peruste": "sitelinks",
+   "koko_m": 80,
+   "lat": 32.65745,
+   "lon": 51.67853,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "03میدان نقش جهان.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/03%D9%85%DB%8C%D8%AF%D8%A7%D9%86_%D9%86%D9%82%D8%B4_%D8%AC%D9%87%D8%A7%D9%86.jpg?width=1280",
+     "tekija": "Ehsan11111",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:03%D9%85%DB%8C%D8%AF%D8%A7%D9%86_%D9%86%D9%82%D8%B4_%D8%AC%D9%87%D8%A7%D9%86.jpg",
+     "selite": "Sheikh Lotfollahin moskeijan kupoli seisoo Naqsh-e Jahanin aukion itälaidalla.",
+     "leveys": 5376,
+     "korkeus": 3024,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "20190604095759LotfOllah.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20190604095759LotfOllah.jpg?width=1280",
+     "tekija": "Najaf777",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20190604095759LotfOllah.jpg",
+     "selite": "Moskeijan kermanvärinen kupoli heijastuu aukion suihkulähteisiin.",
+     "leveys": 4128,
+     "korkeus": 3096,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "\"Sheykh Lotfolah\" mosque entrance.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%22Sheykh_Lotfolah%22_mosque_entrance.jpg?width=1280",
+     "tekija": "Mojde fr",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%22Sheykh_Lotfolah%22_mosque_entrance.jpg",
+     "selite": "Moskeijan sisäänkäynnin laattaseinät ovat sinisiä ja kultaisia.",
+     "leveys": 4000,
+     "korkeus": 6000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2429287",
+   "nimi": "Ali Qapun palatsi",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": 32.65714,
+   "lon": 51.67667,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Alighapodibajizahra.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Alighapodibajizahra.jpg?width=1280",
+     "tekija": "Zahradibaji",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Alighapodibajizahra.jpg",
+     "selite": "Ali Qapun palatsin korkea pylväskuisti avautuu Naqsh-e Jahanin aukion länsilaidalla.",
+     "leveys": 5424,
+     "korkeus": 3648,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "11عالی قاپو.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/11%D8%B9%D8%A7%D9%84%DB%8C_%D9%82%D8%A7%D9%BE%D9%88.jpg?width=1280",
+     "tekija": "Mohammadfattahi",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:11%D8%B9%D8%A7%D9%84%DB%8C_%D9%82%D8%A7%D9%BE%D9%88.jpg",
+     "selite": "Palatsi kohoaa aukion kaarikäytävien yläpuolelle.",
+     "leveys": 5107,
+     "korkeus": 2990,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "00000-Isfahan-Iman-Square (3443626817).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/00000-Isfahan-Iman-Square_(3443626817).jpg?width=1280",
+     "tekija": "xiquinhosilva",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:00000-Isfahan-Iman-Square_(3443626817).jpg",
+     "selite": "Ali Qapun edessä on vesiallas ja kuvioidut kaarikäytävät.",
+     "leveys": 3000,
+     "korkeus": 2013,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q16566",
+   "nimi": "Chehel Sotunin palatsi",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 32.65736,
+   "lon": 51.67181,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Chehelsotun1.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Chehelsotun1.JPG?width=1280",
+     "tekija": "Zenith210 (talk) (Uploads)",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Chehelsotun1.JPG",
+     "selite": "Chehel Sotunin eli Neljänkymmenen pylvään palatsi heijastuu pitkään altaaseen, joka kaksinkertaistaa pylväät.",
+     "leveys": 3872,
+     "korkeus": 2592,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "20180927mohsenesmailyyy.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20180927mohsenesmailyyy.jpg?width=1280",
+     "tekija": "Mohsrnesmaile",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20180927mohsenesmailyyy.jpg",
+     "selite": "Palatsin pylväskuisti ja puutarha olivat safavid-hovin vastaanottotilat.",
+     "leveys": 4128,
+     "korkeus": 3096,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q667674",
+   "nimi": "Si-o-se Polin silta",
+   "peruste": "sitelinks",
+   "koko_m": 300,
+   "lat": 32.64487,
+   "lon": 51.66759,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Si-o-se-pol Bridge, Isfahan, Iran.png",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Si-o-se-pol_Bridge%2C_Isfahan%2C_Iran.png?width=1280",
+     "tekija": "Corina Möller",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Si-o-se-pol_Bridge%2C_Isfahan%2C_Iran.png",
+     "selite": "Si-o-se Polin silta ylittää Zayandeh-joen kolmellakymmenelläkolmella kaarella.",
+     "leveys": 4608,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "33 Pol (1).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/33_Pol_(1).jpg?width=1280",
+     "tekija": "Meraj Amani",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:33_Pol_(1).jpg",
+     "selite": "Siltaa kutsutaan myös Kolmenkymmenenkolmen kaaren sillaksi.",
+     "leveys": 5472,
+     "korkeus": 3648,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "33 Bridges 3.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/33_Bridges_3.jpg?width=1280",
+     "tekija": "Arosha-photo (Reza Sobhani )",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:33_Bridges_3.jpg",
+     "selite": "Kaksikerroksisen sillan kaarikäytävät toimivat kävelyteinä.",
+     "leveys": 4724,
+     "korkeus": 2344,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1740490",
+   "nimi": "Khaju-silta",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 32.63667,
+   "lon": 51.68333,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Pole Kahjoo 1.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Pole_Kahjoo_1.JPG?width=1280",
+     "tekija": "درفش کاویانی",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Pole_Kahjoo_1.JPG",
+     "selite": "Khaju-silta on safavid-ajalta, ja sen kaarten alla joki virtaa padon portaiden yli.",
+     "leveys": 2592,
+     "korkeus": 1944,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "2013-05-25-0089Khajoobridge-Isfahan.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2013-05-25-0089Khajoobridge-Isfahan.jpg?width=1280",
+     "tekija": "Hossein Doagoo",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2013-05-25-0089Khajoobridge-Isfahan.jpg",
+     "selite": "Siltakäytävät heijastuvat tyynestä vedestä.",
+     "leveys": 2592,
+     "korkeus": 1944,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "20200113 003022 پل خواجو.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20200113_003022_%D9%BE%D9%84_%D8%AE%D9%88%D8%A7%D8%AC%D9%88.jpg?width=1280",
+     "tekija": "Leilaalibeigi",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20200113_003022_%D9%BE%D9%84_%D8%AE%D9%88%D8%A7%D8%AC%D9%88.jpg",
+     "selite": "Sillan kaarikäytävät toimivat kokoontumispaikkoina.",
+     "leveys": 3024,
+     "korkeus": 4032,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1398856",
+   "nimi": "Vankin katedraali",
+   "peruste": "sitelinks",
+   "koko_m": 100,
+   "lat": 32.63489,
+   "lon": 51.65575,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "کلیسای وانک. عکس Rasool AB.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%DA%A9%D9%84%DB%8C%D8%B3%D8%A7%DB%8C_%D9%88%D8%A7%D9%86%DA%A9._%D8%B9%DA%A9%D8%B3_Rasool_AB.JPG?width=1280",
+     "tekija": "Rasool abbasi17",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%DA%A9%D9%84%DB%8C%D8%B3%D8%A7%DB%8C_%D9%88%D8%A7%D9%86%DA%A9._%D8%B9%DA%A9%D8%B3_Rasool_AB.JPG",
+     "selite": "Vankin armenialainen katedraali on rakennettu 1600-luvulla Uudessa Julfassa.",
+     "leveys": 1200,
+     "korkeus": 929,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "03کلیسای وانگ.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/03%DA%A9%D9%84%DB%8C%D8%B3%D8%A7%DB%8C_%D9%88%D8%A7%D9%86%DA%AF.jpg?width=1280",
+     "tekija": "Shahin.eh",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:03%DA%A9%D9%84%DB%8C%D8%B3%D8%A7%DB%8C_%D9%88%D8%A7%D9%86%DA%AF.jpg",
+     "selite": "Katedraalin kellotorni ja kupoli erottuvat Uuden Julfan armenialaiskorttelin yllä.",
+     "leveys": 1200,
+     "korkeus": 900,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1314130",
+   "nimi": "Hasht Behesht -palatsi",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": 32.65336,
+   "lon": 51.67014,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "کاخ هشت بهشت 01+.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%DA%A9%D8%A7%D8%AE_%D9%87%D8%B4%D8%AA_%D8%A8%D9%87%D8%B4%D8%AA_01%2B.jpg?width=1280",
+     "tekija": "Ermac Kiyani",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%DA%A9%D8%A7%D8%AE_%D9%87%D8%B4%D8%AA_%D8%A8%D9%87%D8%B4%D8%AA_01%2B.jpg",
+     "selite": "Hasht Behesht eli Kahdeksan paratiisia on safavidien kahdeksankulmainen puutarhapaviljonki.",
+     "leveys": 4608,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "(((نمایی از هشت بهشت اصفهان=hasht behesht -e - Isfahan))) - panoramio.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/(((%D9%86%D9%85%D8%A7%DB%8C%DB%8C_%D8%A7%D8%B2_%D9%87%D8%B4%D8%AA_%D8%A8%D9%87%D8%B4%D8%AA_%D8%A7%D8%B5%D9%81%D9%87%D8%A7%D9%86%3Dhasht_behesht_-e_-_Isfahan)))_-_panoramio.jpg?width=1280",
+     "tekija": "auoob farabi",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:(((%D9%86%D9%85%D8%A7%DB%8C%DB%8C_%D8%A7%D8%B2_%D9%87%D8%B4%D8%AA_%D8%A8%D9%87%D8%B4%D8%AA_%D8%A7%D8%B5%D9%81%D9%87%D8%A7%D9%86%3Dhasht_behesht_-e_-_Isfahan)))_-_panoramio.jpg",
+     "selite": "Paviljongin edessä on pitkä vesiallas ja syksyn värit.",
+     "leveys": 4320,
+     "korkeus": 3240,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "20180919 232139 HDR.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20180919_232139_HDR.jpg?width=1280",
+     "tekija": "20محمود صالحی",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20180919_232139_HDR.jpg",
+     "selite": "Palatsi on valaistu iltaisin.",
+     "leveys": 3264,
+     "korkeus": 2176,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q959459",
+   "nimi": "Monar Jonban",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": 32.65045,
+   "lon": 51.59415,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Menar-e-jomban esfahan.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Menar-e-jomban_esfahan.jpg?width=1280",
+     "tekija": "Fabienkhan",
+     "lisenssi": "CC BY-SA 2.5",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Menar-e-jomban_esfahan.jpg",
+     "selite": "Monar Jonbanin eli Heiluvien minareettien mausoleumin kaksi minareettia ovat pitkät ja ohuet.",
+     "leveys": 1704,
+     "korkeus": 2272,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Iran 2007 238 Manar Jomban Isfahan (1731926143).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Iran_2007_238_Manar_Jomban_Isfahan_(1731926143).jpg?width=1280",
+     "tekija": "DAVID HOLT from London, England",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Iran_2007_238_Manar_Jomban_Isfahan_(1731926143).jpg",
+     "selite": "Toisen minareetin liikuttaminen saa toisenkin heilumaan.",
+     "leveys": 1600,
+     "korkeus": 1200,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2754230",
+   "nimi": "Isfahanin basaari",
+   "peruste": "pelin nosto",
+   "koko_m": 600,
+   "lat": 32.66056,
+   "lon": 51.67628,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Esfahan bazaar entrance.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Esfahan_bazaar_entrance.jpg?width=1280",
+     "tekija": "Fabienkhan",
+     "lisenssi": "CC BY-SA 2.5",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Esfahan_bazaar_entrance.jpg",
+     "selite": "Isfahanin basaarin Qeysarien portti avautuu Naqsh-e Jahanin aukion pohjalaidalla.",
+     "leveys": 2010,
+     "korkeus": 1293,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q5067540",
+   "nimi": "Chahar Baghin koulu",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": 32.65167,
+   "lon": 51.66917,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Chaharbagh School مدرسه چهار باغ اصفهان 25.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Chaharbagh_School_%D9%85%D8%AF%D8%B1%D8%B3%D9%87_%DA%86%D9%87%D8%A7%D8%B1_%D8%A8%D8%A7%D8%BA_%D8%A7%D8%B5%D9%81%D9%87%D8%A7%D9%86_25.jpg?width=1280",
+     "tekija": "Mostafameraji",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Chaharbagh_School_%D9%85%D8%AF%D8%B1%D8%B3%D9%87_%DA%86%D9%87%D8%A7%D8%B1_%D8%A8%D8%A7%D8%BA_%D8%A7%D8%B5%D9%81%D9%87%D8%A7%D9%86_25.jpg",
+     "selite": "Chahar Baghin koulun turkoosi kupoli ja minareetit erottuvat Chahar Bagh -kadun varrella.",
+     "leveys": 4752,
+     "korkeus": 3168,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1711781",
+   "nimi": "Uusi Julfa",
+   "peruste": "sitelinks",
+   "koko_m": 800,
+   "lat": 32.63633,
+   "lon": 51.65571,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Vank Cathedral courtyard.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Vank_Cathedral_courtyard.jpg?width=1280",
+     "tekija": "Thomas",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Vank_Cathedral_courtyard.jpg",
+     "selite": "Uusi Julfa on armenialaisten 1600-luvulla perustama kaupunginosa Zayandeh-joen eteläpuolella.",
+     "leveys": 1200,
+     "korkeus": 712,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Panorama of Naqsh-i Jahan Square, Isfahan at blue hour (2019, edited).jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Panorama_of_Naqsh-i_Jahan_Square%2C_Isfahan_at_blue_hour_(2019%2C_edited).jpg?width=1280",
+   "tekija": "Original: Zahra gharaati Derivative work: Aristeas",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Panorama_of_Naqsh-i_Jahan_Square%2C_Isfahan_at_blue_hour_(2019%2C_edited).jpg",
+   "selite": "Isfahanin Naqsh-e Jahanin aukio valaistuna sinisenä hetkenä.",
+   "leveys": 17386,
+   "korkeus": 3477,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Isfahan skyline 201312 17.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Isfahan_skyline_201312_17.jpg?width=1280",
+   "tekija": "Franco Pecchio from Milano, Italy",
+   "lisenssi": "CC BY 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Isfahan_skyline_201312_17.jpg",
+   "selite": "Isfahan levittäytyy aavikon reunalle, ja kaukana kohoavat vuoret.",
+   "leveys": 1600,
+   "korkeus": 1200,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

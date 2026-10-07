@@ -1,0 +1,362 @@
+{
+ "kaupunki": "addisabeba",
+ "kaupunkiQ": "Q3624",
+ "kohteet": [
+  {
+   "q": "Q641447",
+   "nimi": "Pyhän Yrjön katedraali",
+   "peruste": "sitelinks",
+   "koko_m": 100,
+   "lat": 9.03669,
+   "lon": 38.75142,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Addis abeba, cattedrale di san giorgio, esterno 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Addis_abeba%2C_cattedrale_di_san_giorgio%2C_esterno_01.jpg?width=1280",
+     "tekija": "Sailko",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Addis_abeba%2C_cattedrale_di_san_giorgio%2C_esterno_01.jpg",
+     "selite": "Italialaisten 1900-luvun alussa rakentama kahdeksankulmainen kupolikirkko muistuttaa Adwan voitosta.",
+     "leveys": 4568,
+     "korkeus": 2896,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Addis abeba, cattedrale di san giorgio, esterno 07.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Addis_abeba%2C_cattedrale_di_san_giorgio%2C_esterno_07.jpg?width=1280",
+     "tekija": "Sailko",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Addis_abeba%2C_cattedrale_di_san_giorgio%2C_esterno_07.jpg",
+     "selite": "Kirkon hopeinen kupoli ja risti kohoavat ympäröivän puiston yläpuolelle.",
+     "leveys": 3216,
+     "korkeus": 2682,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Addis abeba, cattedrale di san giorgio, interno, affreschi degli anni '50 sulla battaglia di adua e conseguenze 02.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Addis_abeba%2C_cattedrale_di_san_giorgio%2C_interno%2C_affreschi_degli_anni_'50_sulla_battaglia_di_adua_e_conseguenze_02.jpg?width=1280",
+     "tekija": "Sailko",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Addis_abeba%2C_cattedrale_di_san_giorgio%2C_interno%2C_affreschi_degli_anni_'50_sulla_battaglia_di_adua_e_conseguenze_02.jpg",
+     "selite": "Sisällä seinämaalaukset kertovat Adwan taistelusta ja sen seurauksista.",
+     "leveys": 5472,
+     "korkeus": 3648,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2652168",
+   "nimi": "Etiopian kansallismuseo",
+   "peruste": "sitelinks",
+   "koko_m": 120,
+   "lat": 9.03833,
+   "lon": 38.7619,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Ethiopian National Museum in Addis Ababa.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ethiopian_National_Museum_in_Addis_Ababa.jpg?width=1280",
+     "tekija": "Ninaras",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ethiopian_National_Museum_in_Addis_Ababa.jpg",
+     "selite": "Museon kokoelmat ulottuvat ihmiskunnan varhaisimmista vaiheista keisarikunnan aikaan.",
+     "leveys": 2999,
+     "korkeus": 1999,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Addis-Abeba-Musée national d'Ethiopie (1).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Addis-Abeba-Mus%C3%A9e_national_d'Ethiopie_(1).jpg?width=1280",
+     "tekija": "Ji-Elle",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Addis-Abeba-Mus%C3%A9e_national_d'Ethiopie_(1).jpg",
+     "selite": "Museon sisääntulohalli avautuu usean kerroksen läpi.",
+     "leveys": 4320,
+     "korkeus": 3240,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Coronas de emperadores etíopes, museo nacional de Etiopía, Adís Abeba, Etiopía, 2024-01-19, DD 18.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Coronas_de_emperadores_et%C3%ADopes%2C_museo_nacional_de_Etiop%C3%ADa%2C_Ad%C3%ADs_Abeba%2C_Etiop%C3%ADa%2C_2024-01-19%2C_DD_18.jpg?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Coronas_de_emperadores_et%C3%ADopes%2C_museo_nacional_de_Etiop%C3%ADa%2C_Ad%C3%ADs_Abeba%2C_Etiop%C3%ADa%2C_2024-01-19%2C_DD_18.jpg",
+     "selite": "Vitriinissä esitellään Etiopian keisarien kruunuja.",
+     "leveys": 8207,
+     "korkeus": 4890,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2671162",
+   "nimi": "Entoto",
+   "peruste": "sitelinks",
+   "koko_m": 3000,
+   "lat": 9.11556,
+   "lon": 38.77222,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Addis Abeba from mount Entoto.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Addis_Abeba_from_mount_Entoto.jpg?width=1280",
+     "tekija": "EyobedK",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Addis_Abeba_from_mount_Entoto.jpg",
+     "selite": "Entoton rinteiltä koko kaupunki levittäytyy laaksoon vuorten väliin.",
+     "leveys": 2592,
+     "korkeus": 1944,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Addis Ababa from Entoto Mountains.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Addis_Ababa_from_Entoto_Mountains.jpg?width=1280",
+     "tekija": "Ninaras",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Addis_Ababa_from_Entoto_Mountains.jpg",
+     "selite": "Kaupungin tornit erottuvat metsäisten kukkuloiden takaa.",
+     "leveys": 3164,
+     "korkeus": 1896,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Addis Abeba-Collines d'Entoto (2).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Addis_Abeba-Collines_d'Entoto_(2).jpg?width=1280",
+     "tekija": "Ji-Elle",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Addis_Abeba-Collines_d'Entoto_(2).jpg",
+     "selite": "Entoton rinteitä peittävät eukalyptusmetsät.",
+     "leveys": 4320,
+     "korkeus": 3240,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2599114",
+   "nimi": "Pyhän Kolminaisuuden katedraali",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 9.0308,
+   "lon": 38.76656,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Addis abeba, chiesa della trinità, esterno 02.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Addis_abeba%2C_chiesa_della_trinit%C3%A0%2C_esterno_02.jpg?width=1280",
+     "tekija": "Sailko",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Addis_abeba%2C_chiesa_della_trinit%C3%A0%2C_esterno_02.jpg",
+     "selite": "Etiopian ortodoksisen kirkon suuri katedraali on rakennettu keisari Haile Selassien aikana.",
+     "leveys": 4806,
+     "korkeus": 3648,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Addis abeba, chiesa della trinità, esterno 05.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Addis_abeba%2C_chiesa_della_trinit%C3%A0%2C_esterno_05.jpg?width=1280",
+     "tekija": "Sailko",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Addis_abeba%2C_chiesa_della_trinit%C3%A0%2C_esterno_05.jpg",
+     "selite": "Katedraalin kupolit ja kellotornit hohtavat keltaisina.",
+     "leveys": 5472,
+     "korkeus": 3648,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Addis Cathedral (211234871).jpeg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Addis_Cathedral_(211234871).jpeg?width=1280",
+     "tekija": "Francisco Anzola",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Addis_Cathedral_(211234871).jpeg",
+     "selite": "Iltavalaistu julkisivu kirkon pääportin edessä.",
+     "leveys": 2048,
+     "korkeus": 1537,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2920069",
+   "nimi": "Merkato",
+   "peruste": "pelin nosto",
+   "koko_m": 1500,
+   "lat": 9.03056,
+   "lon": 38.7389,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Addis Mercato, Adís Abeba, Etiopía, 2024-01-19, DD 26.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Addis_Mercato%2C_Ad%C3%ADs_Abeba%2C_Etiop%C3%ADa%2C_2024-01-19%2C_DD_26.jpg?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Addis_Mercato%2C_Ad%C3%ADs_Abeba%2C_Etiop%C3%ADa%2C_2024-01-19%2C_DD_26.jpg",
+     "selite": "Merkato on Afrikan suurimpiin kuuluva ulkotori, jossa kauppaa käydään peltikattojen alla.",
+     "leveys": 8077,
+     "korkeus": 5385,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Addis Mercato, Adís Abeba, Etiopía, 2024-01-19, DD 32.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Addis_Mercato%2C_Ad%C3%ADs_Abeba%2C_Etiop%C3%ADa%2C_2024-01-19%2C_DD_32.jpg?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Addis_Mercato%2C_Ad%C3%ADs_Abeba%2C_Etiop%C3%ADa%2C_2024-01-19%2C_DD_32.jpg",
+     "selite": "Torikojujen peltikatot ulottuvat horisonttiin asti.",
+     "leveys": 7018,
+     "korkeus": 4679,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1238770",
+   "nimi": "Addis Abeban yliopisto",
+   "peruste": "sitelinks",
+   "koko_m": 600,
+   "lat": 9.04661,
+   "lon": 38.75874,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Parco dell'università di addis abeba, 09.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Parco_dell'universit%C3%A0_di_addis_abeba%2C_09.jpg?width=1280",
+     "tekija": "Sailko",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Parco_dell'universit%C3%A0_di_addis_abeba%2C_09.jpg",
+     "selite": "Yliopiston vanha portti avaa tien entiseen keisarilliseen palatsialueeseen.",
+     "leveys": 4520,
+     "korkeus": 3504,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "2 Faculty Of Pharmacy Sports and Assembly Hall View from East to West.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2_Faculty_Of_Pharmacy_Sports_and_Assembly_Hall_View_from_East_to_West.jpg?width=1280",
+     "tekija": "The Chroniclers",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2_Faculty_Of_Pharmacy_Sports_and_Assembly_Hall_View_from_East_to_West.jpg",
+     "selite": "Modernistinen kampusrakennus edustaa 1960-luvun etiopialaista arkkitehtuuria.",
+     "leveys": 4988,
+     "korkeus": 3456,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q582193",
+   "nimi": "Hager Fikir -teatteri",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": 9.03769,
+   "lon": 38.7545,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "HagerFikirTheatre.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/HagerFikirTheatre.jpg?width=1280",
+     "tekija": "Steffen Wurzel",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:HagerFikirTheatre.jpg",
+     "selite": "Hager Fikir on yksi Afrikan vanhimmista yhä toimivista teattereista.",
+     "leveys": 1280,
+     "korkeus": 960,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q582018",
+   "nimi": "Etiopian kansallisteatteri",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": 9.01611,
+   "lon": 38.7519,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Ethiopian National Theater 2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ethiopian_National_Theater_2.jpg?width=1280",
+     "tekija": "Lenege",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ethiopian_National_Theater_2.jpg",
+     "selite": "Teatterin 1900-luvun puolivälin julkisivu ja katettu kulkukäytävä näkyvät kadun puolelta.",
+     "leveys": 1280,
+     "korkeus": 591,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Ethiopian National Theatre.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ethiopian_National_Theatre.jpg?width=1280",
+     "tekija": "By LuckyInWaco",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ethiopian_National_Theatre.jpg",
+     "selite": "Rakennuksessa esiintyivät etiopialaisen jazzin ja musiikin tekijät.",
+     "leveys": 2448,
+     "korkeus": 3264,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Addis Ababa skyline.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Addis_Ababa_skyline.jpg?width=1280",
+   "tekija": "Simfan34",
+   "lisenssi": "CC BY-SA 3.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Addis_Ababa_skyline.jpg",
+   "selite": "Keskustan tornit nousevat vehreän rinteen takaa vuorten edessä.",
+   "leveys": 3264,
+   "korkeus": 2448,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Vista de Adís Abeba desde el monte Entoto, Etiopía, 2024-01-19, DD 07.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Vista_de_Ad%C3%ADs_Abeba_desde_el_monte_Entoto%2C_Etiop%C3%ADa%2C_2024-01-19%2C_DD_07.jpg?width=1280",
+   "tekija": "Diego Delso",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Vista_de_Ad%C3%ADs_Abeba_desde_el_monte_Entoto%2C_Etiop%C3%ADa%2C_2024-01-19%2C_DD_07.jpg",
+   "selite": "Kaupunki täyttää laakson tornitaloja myöten Entoton rinteeltä nähtynä.",
+   "leveys": 8557,
+   "korkeus": 3924,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

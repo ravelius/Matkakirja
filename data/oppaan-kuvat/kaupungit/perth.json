@@ -1,0 +1,513 @@
+{
+ "kaupunki": "perth",
+ "kaupunkiQ": "Q3183",
+ "kohteet": [
+  {
+   "q": "Q1137387",
+   "nimi": "Swan River",
+   "peruste": "sitelinks",
+   "koko_m": 1500,
+   "lat": -31.94722,
+   "lon": 115.91611,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "SwanRiverEastFremantle gobeirne.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/SwanRiverEastFremantle_gobeirne.jpg?width=1280",
+     "tekija": "Photograph by Greg O'Beirne",
+     "lisenssi": "CC BY 2.5",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.5",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:SwanRiverEastFremantle_gobeirne.jpg",
+     "selite": "Swan River mutkittelee Perthin halki, ja keskustan tornit näkyvät joen yli.",
+     "leveys": 1944,
+     "korkeus": 687,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "View of Perth and Perth Stadium down the Swan River from Rivervale, Western Australia, October 2023 04.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/View_of_Perth_and_Perth_Stadium_down_the_Swan_River_from_Rivervale%2C_Western_Australia%2C_October_2023_04.jpg?width=1280",
+     "tekija": "Calistemon",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:View_of_Perth_and_Perth_Stadium_down_the_Swan_River_from_Rivervale%2C_Western_Australia%2C_October_2023_04.jpg",
+     "selite": "Joen leveä vesi laajenee keskustan kohdalla Perth Waterin vesialueeksi.",
+     "leveys": 4608,
+     "korkeus": 2592,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q585317",
+   "nimi": "Rottnest Island",
+   "peruste": "sitelinks",
+   "koko_m": 11000,
+   "lat": -32.005,
+   "lon": 115.515,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Rottnest Geordie & Longreach settlements.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Rottnest_Geordie_%26_Longreach_settlements.jpg?width=1280",
+     "tekija": "Mark",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Rottnest_Geordie_%26_Longreach_settlements.jpg",
+     "selite": "Rottnest on Perthin edustan saari, jossa on hiekkarantoja ja suolajärviä.",
+     "leveys": 2560,
+     "korkeus": 1512,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Rottnest Basin and Lighthouse SMC 2005.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Rottnest_Basin_and_Lighthouse_SMC_2005.jpg?width=1280",
+     "tekija": "SeanMack",
+     "lisenssi": "CC BY 2.5",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.5",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Rottnest_Basin_and_Lighthouse_SMC_2005.jpg",
+     "selite": "Rannalla kohoaa majakka, ja saaren rannat ovat vaaleaa hiekkaa.",
+     "leveys": 3000,
+     "korkeus": 2400,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3495894",
+   "nimi": "Kings Park",
+   "peruste": "pelin nosto",
+   "koko_m": 1500,
+   "lat": -31.96213,
+   "lon": 115.83171,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Skyline of Perth seen from Kings Park, October 2023 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Skyline_of_Perth_seen_from_Kings_Park%2C_October_2023_01.jpg?width=1280",
+     "tekija": "Calistemon",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Skyline_of_Perth_seen_from_Kings_Park%2C_October_2023_01.jpg",
+     "selite": "Kings Parkin kukkulalta avautuu näkymä keskustan pilvenpiirtäjiin ja joelle.",
+     "leveys": 4608,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Old Swan Brewery, Perth skyline, Narrows Bridge and South Perth, seen from Kings Park, October 2023 02.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Old_Swan_Brewery%2C_Perth_skyline%2C_Narrows_Bridge_and_South_Perth%2C_seen_from_Kings_Park%2C_October_2023_02.jpg?width=1280",
+     "tekija": "Calistemon",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Old_Swan_Brewery%2C_Perth_skyline%2C_Narrows_Bridge_and_South_Perth%2C_seen_from_Kings_Park%2C_October_2023_02.jpg",
+     "selite": "Puiston rinteeltä näkyvät Narrowsin silta ja etelärannan kaupunginosat.",
+     "leveys": 4608,
+     "korkeus": 3456,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q7170896",
+   "nimi": "Perth Stadium",
+   "peruste": "sitelinks",
+   "koko_m": 300,
+   "lat": -31.9511,
+   "lon": 115.8891,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Perth Stadium opening 210118 gnangarra-12.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Perth_Stadium_opening_210118_gnangarra-12.jpg?width=1280",
+     "tekija": "Gnangarra",
+     "lisenssi": "CC BY 2.5 au",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.5/au/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Perth_Stadium_opening_210118_gnangarra-12.jpg",
+     "selite": "Perth Stadium eli Optus Stadium on Swan Riverin rannalle rakennettu monitoimistadion.",
+     "leveys": 7360,
+     "korkeus": 4912,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "View of Perth and Perth Stadium down the Swan River from Rivervale, Western Australia, October 2023 02.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/View_of_Perth_and_Perth_Stadium_down_the_Swan_River_from_Rivervale%2C_Western_Australia%2C_October_2023_02.jpg?width=1280",
+     "tekija": "Calistemon",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:View_of_Perth_and_Perth_Stadium_down_the_Swan_River_from_Rivervale%2C_Western_Australia%2C_October_2023_02.jpg",
+     "selite": "Stadion erottuu joen yli kaupungin tornien vierestä.",
+     "leveys": 4608,
+     "korkeus": 3456,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q917524",
+   "nimi": "Perth Mint",
+   "peruste": "pelin nosto",
+   "koko_m": 120,
+   "lat": -31.95728,
+   "lon": 115.86918,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Perth Mint, WA, 2023.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Perth_Mint%2C_WA%2C_2023.jpg?width=1280",
+     "tekija": "Chris Olszewski",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Perth_Mint%2C_WA%2C_2023.jpg",
+     "selite": "Kultarahapaja rakennettiin 1890-luvun kultakuumeen aikaan Hay Streetin päähän.",
+     "leveys": 3685,
+     "korkeus": 2304,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "2025-01-29-perth-mint-01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2025-01-29-perth-mint-01.jpg?width=1280",
+     "tekija": "Elrondil",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2025-01-29-perth-mint-01.jpg",
+     "selite": "Vanhan rahapajan julkisivu on hiekkakivestä ja punaista tiiltä.",
+     "leveys": 4032,
+     "korkeus": 2268,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3089169",
+   "nimi": "Fremantle Prison",
+   "peruste": "UNESCO",
+   "koko_m": 250,
+   "lat": -32.05501,
+   "lon": 115.75349,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Freo prison WMAU gnangarra-131.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Freo_prison_WMAU_gnangarra-131.jpg?width=1280",
+     "tekija": "Gnangarra",
+     "lisenssi": "CC BY 2.5 au",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.5/au/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Freo_prison_WMAU_gnangarra-131.jpg",
+     "selite": "Vaalea vankilarakennus kohoaa Fremantlen kukkulalla, ja se on rakennettu siirtovangeilla.",
+     "leveys": 4928,
+     "korkeus": 3264,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Church wing - panoramio.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Church_wing_-_panoramio.jpg?width=1280",
+     "tekija": "Stephen Edmonds",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Church_wing_-_panoramio.jpg",
+     "selite": "Vankilan kirkkosiipi on rakennettu paikallisesta kalkkikivestä.",
+     "leveys": 1892,
+     "korkeus": 1200,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q7653429",
+   "nimi": "Swan Bells",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": -31.9589,
+   "lon": 115.85824,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "00 1633 Swan Bell Tower in Perth, Australia.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/00_1633_Swan_Bell_Tower_in_Perth%2C_Australia.jpg?width=1280",
+     "tekija": "W. Bulach",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:00_1633_Swan_Bell_Tower_in_Perth%2C_Australia.jpg",
+     "selite": "Lasinen kellotorni kohoaa Barrack Squarella Swan Riverin rannalla.",
+     "leveys": 4500,
+     "korkeus": 3000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "00 1602 Perth Western Australia - Bell Tower.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/00_1602_Perth_Western_Australia_-_Bell_Tower.jpg?width=1280",
+     "tekija": "W. Bulach",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:00_1602_Perth_Western_Australia_-_Bell_Tower.jpg",
+     "selite": "Tornin kärki on kuin purjeet joen yllä.",
+     "leveys": 1600,
+     "korkeus": 2400,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2942506",
+   "nimi": "Pyhän Marian katedraali",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": -31.95537,
+   "lon": 115.86644,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "17 July 2018 - Saint Mary's Cathedral, Victoria Square, Perth, Western Australia.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/17_July_2018_-_Saint_Mary's_Cathedral%2C_Victoria_Square%2C_Perth%2C_Western_Australia.jpg?width=1280",
+     "tekija": "aussiejeff from Wodonga, VIC, Australia",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:17_July_2018_-_Saint_Mary's_Cathedral%2C_Victoria_Square%2C_Perth%2C_Western_Australia.jpg",
+     "selite": "Vanha kivikatedraali ja moderni lisäosa seisovat Victoria Squarella.",
+     "leveys": 5184,
+     "korkeus": 3888,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "AUS Perth, Central Business District, Saint Marys Cathedral 002.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/AUS_Perth%2C_Central_Business_District%2C_Saint_Marys_Cathedral_002.jpg?width=1280",
+     "tekija": "-wuppertaler",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:AUS_Perth%2C_Central_Business_District%2C_Saint_Marys_Cathedral_002.jpg",
+     "selite": "Katedraalin goottilaiset tornit erottuvat sinisen taivaan edessä.",
+     "leveys": 3997,
+     "korkeus": 2997,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q7593121",
+   "nimi": "Pyhän Yrjön katedraali",
+   "peruste": "pelin nosto",
+   "koko_m": 120,
+   "lat": -31.95575,
+   "lon": 115.86129,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "St George's Cathedral, view form the south west.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/St_George's_Cathedral%2C_view_form_the_south_west.jpg?width=1280",
+     "tekija": "Michal Lewi",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:St_George's_Cathedral%2C_view_form_the_south_west.jpg",
+     "selite": "Anglikaaninen katedraali on punatiilinen ja sijaitsee Cathedral Squarella.",
+     "leveys": 4088,
+     "korkeus": 2470,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "AUS Perth, Central Business District, Saint Georges Cathedral 001.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/AUS_Perth%2C_Central_Business_District%2C_Saint_Georges_Cathedral_001.jpg?width=1280",
+     "tekija": "-wuppertaler",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:AUS_Perth%2C_Central_Business_District%2C_Saint_Georges_Cathedral_001.jpg",
+     "selite": "Katedraalin tiiliseinät ja kolmiomaiset päädyt on kuvattu nurmikolta.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q7170899",
+   "nimi": "Perthin kaupungintalo",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": -31.95492,
+   "lon": 115.86048,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Perth Town Hall - Perth.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Perth_Town_Hall_-_Perth.jpg?width=1280",
+     "tekija": "JJ Harrison (https://www.jjharrison.com.au/)",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Perth_Town_Hall_-_Perth.jpg",
+     "selite": "Kaupungintalon kellotorni kohoaa tiilirakennuksen yli.",
+     "leveys": 2500,
+     "korkeus": 3464,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "AUS Perth, Central Business District, Perth Town Hall 001.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/AUS_Perth%2C_Central_Business_District%2C_Perth_Town_Hall_001.jpg?width=1280",
+     "tekija": "-wuppertaler",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:AUS_Perth%2C_Central_Business_District%2C_Perth_Town_Hall_001.jpg",
+     "selite": "Vanha tiilinen talo seisoo uuden lasitornin vieressä.",
+     "leveys": 3024,
+     "korkeus": 3779,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3567483",
+   "nimi": "Länsi-Australian museo",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": -31.94963,
+   "lon": 115.8624,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Boola bardip 151120 gnangarra-101.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Boola_bardip_151120_gnangarra-101.jpg?width=1280",
+     "tekija": "Gnangarra",
+     "lisenssi": "CC BY 2.5 au",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.5/au/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Boola_bardip_151120_gnangarra-101.jpg",
+     "selite": "Museon vanha tiilirakennus ja uusi moderni siipi on liitetty toisiinsa.",
+     "leveys": 7360,
+     "korkeus": 4912,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q5363395",
+   "nimi": "Elizabeth Quay",
+   "peruste": "pelin nosto",
+   "koko_m": 300,
+   "lat": -31.9575,
+   "lon": 115.857,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Elizabeth Quay February 2016 (cropped).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Elizabeth_Quay_February_2016_(cropped).jpg?width=1280",
+     "tekija": "Samuel Wiki",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Elizabeth_Quay_February_2016_(cropped).jpg",
+     "selite": "Elizabeth Quay on Swan Riverin rantaan rakennettu lahti keskustan edessä.",
+     "leveys": 16243,
+     "korkeus": 10828,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "AUS Perth, Central Business District, Elizabeth Quay 030.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/AUS_Perth%2C_Central_Business_District%2C_Elizabeth_Quay_030.jpg?width=1280",
+     "tekija": "-wuppertaler",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:AUS_Perth%2C_Central_Business_District%2C_Elizabeth_Quay_030.jpg",
+     "selite": "Lahden takaa kohoavat keskustan pilvenpiirtäjät.",
+     "leveys": 3963,
+     "korkeus": 2972,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q14935851",
+   "nimi": "London Court",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": -31.95481,
+   "lon": 115.85895,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "AUS Perth, Central Business District, Hay Street Mall 003.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/AUS_Perth%2C_Central_Business_District%2C_Hay_Street_Mall_003.jpg?width=1280",
+     "tekija": "-wuppertaler",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:AUS_Perth%2C_Central_Business_District%2C_Hay_Street_Mall_003.jpg",
+     "selite": "Tudor-tyylinen kauppakuja on rakennettu 1930-luvulla Hay Streetin ja St Georges Terracen väliin.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "AUS Perth, Central Business District, London Court 001.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/AUS_Perth%2C_Central_Business_District%2C_London_Court_001.jpg?width=1280",
+     "tekija": "-wuppertaler",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:AUS_Perth%2C_Central_Business_District%2C_London_Court_001.jpg",
+     "selite": "Kellotorni ja kaiverretut puuosat koristavat kujan päätä.",
+     "leveys": 3963,
+     "korkeus": 2972,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q5772098",
+   "nimi": "His Majesty's Theatre",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": -31.95308,
+   "lon": 115.85444,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "His majesty's gn1104231.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/His_majesty's_gn1104231.jpg?width=1280",
+     "tekija": "Gnangcomapp",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:His_majesty's_gn1104231.jpg",
+     "selite": "Vuonna 1904 valmistunut valkoinen teatterirakennus seisoo Hay Streetin ja King Streetin kulmassa.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Perth (AU), View from Kings Park -- 2019 -- 0435-42.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Perth_(AU)%2C_View_from_Kings_Park_--_2019_--_0435-42.jpg?width=1280",
+   "tekija": "Dietmar Rabich",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Perth_(AU)%2C_View_from_Kings_Park_--_2019_--_0435-42.jpg",
+   "selite": "Perthin keskustan tornit nousevat Swan Riverin rannalle Kings Parkin kukkulalta nähtynä.",
+   "leveys": 14626,
+   "korkeus": 4104,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Aerial - 2017-01-09 Perth skyline, Ascot.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aerial_-_2017-01-09_Perth_skyline%2C_Ascot.jpg?width=1280",
+   "tekija": "Orderinchaos",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aerial_-_2017-01-09_Perth_skyline%2C_Ascot.jpg",
+   "selite": "Ilmasta näkyvät keskusta ja joki, joka kiertää kaupunkia.",
+   "leveys": 3264,
+   "korkeus": 2448,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

@@ -1,0 +1,396 @@
+{
+ "kaupunki": "izmir",
+ "kaupunkiQ": "Q35997",
+ "jarjestys": [
+  "Q3696052",
+  "Q6386921",
+  "Q2827071",
+  "Q4803558",
+  "Q4810717",
+  "Q5772358",
+  "Q6067386",
+  "Q48816032",
+  "Q7404289"
+ ],
+ "kohteet": [
+  {
+   "q": "Q3696052",
+   "nimi": "İzmirin kellotorni",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": 38.41886,
+   "lon": 27.12867,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Izmir square clock tower.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Izmir_square_clock_tower.jpg?width=1280",
+     "tekija": "User:Sailko",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Izmir_square_clock_tower.jpg",
+     "selite": "İzmirin kellotorni seisoo Konakin aukiolla ja on kaupungin tunnetuin maamerkki.",
+     "leveys": 2736,
+     "korkeus": 2736,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "İzmir Saat Kulesi - Geri planda Yalı Camii ve Hükumet Konağı.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%C4%B0zmir_Saat_Kulesi_-_Geri_planda_Yal%C4%B1_Camii_ve_H%C3%BCkumet_Kona%C4%9F%C4%B1.jpg?width=1280",
+     "tekija": "Ozlmktv",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%C4%B0zmir_Saat_Kulesi_-_Geri_planda_Yal%C4%B1_Camii_ve_H%C3%BCkumet_Kona%C4%9F%C4%B1.jpg",
+     "selite": "Torni kohoaa Konakin aukiolla Yalı-moskeijan ja valtion rakennusten vieressä.",
+     "leveys": 3060,
+     "korkeus": 4080,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "İzmir Clock Tower, 2026 02.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%C4%B0zmir_Clock_Tower%2C_2026_02.jpg?width=1280",
+     "tekija": "Koray",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%C4%B0zmir_Clock_Tower%2C_2026_02.jpg",
+     "selite": "Kellotorni valmistui ottomaanien ajalla 1900-luvun alussa.",
+     "leveys": 3223,
+     "korkeus": 5610,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 4,
+     "tiedosto": "Izmir Clock Tower at night February 2024.jpeg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Izmir_Clock_Tower_at_night_February_2024.jpeg?width=1280",
+     "tekija": "Furkan Akkurt",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Izmir_Clock_Tower_at_night_February_2024.jpeg",
+     "selite": "Kellotorni valaistaan iltaisin, ja se erottuu Konakin aukion palmujen keskeltä.",
+     "leveys": 1920,
+     "korkeus": 2560,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q6386921",
+   "nimi": "Kemeraltın basaari",
+   "peruste": "pelin nosto",
+   "koko_m": 600,
+   "lat": 38.41833,
+   "lon": 27.13222,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Balıkçılar Meydanı - Kemeraltı.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bal%C4%B1k%C3%A7%C4%B1lar_Meydan%C4%B1_-_Kemeralt%C4%B1.jpg?width=1280",
+     "tekija": "Satirdan kahraman",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bal%C4%B1k%C3%A7%C4%B1lar_Meydan%C4%B1_-_Kemeralt%C4%B1.jpg",
+     "selite": "Kemeraltı on İzmirin vanha basaarialue, jonka kujilla on kauppoja, kahviloita ja karavaanisaraita.",
+     "leveys": 11840,
+     "korkeus": 5328,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Balikli Kadin statue Kemeralti Izmir 2024.jpeg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Balikli_Kadin_statue_Kemeralti_Izmir_2024.jpeg?width=1280",
+     "tekija": "Furkan Akkurt",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Balikli_Kadin_statue_Kemeralti_Izmir_2024.jpeg",
+     "selite": "Balıklı Kadın -patsas seisoo Kemeraltın basaarin laidalla.",
+     "leveys": 1920,
+     "korkeus": 2560,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2827071",
+   "nimi": "Smyrnan agora",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 38.41889,
+   "lon": 27.13778,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Agora 0047.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Agora_0047.jpg?width=1280",
+     "tekija": "seynaeve rené",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Agora_0047.jpg",
+     "selite": "Smyrnan agora oli antiikin kaupungin tori, jonka pylväät ja holvit ovat osin säilyneet.",
+     "leveys": 3264,
+     "korkeus": 2448,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Agora of Smyrna, built during the Hellenistic era at the base of Pagos Hill and totally rebuilt under Marcus Aurelius after the destructive 178 AD earthquake, Izmir, Turkey (18699947915).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Agora_of_Smyrna%2C_built_during_the_Hellenistic_era_at_the_base_of_Pagos_Hill_and_totally_rebuilt_under_Marcus_Aurelius_after_the_destructive_178_AD_earthquake%2C_Izmir%2C_Turkey_(18699947915).jpg?width=1280",
+     "tekija": "Carole Raddato from FRANKFURT, Germany",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Agora_of_Smyrna%2C_built_during_the_Hellenistic_era_at_the_base_of_Pagos_Hill_and_totally_rebuilt_under_Marcus_Aurelius_after_the_destructive_178_AD_earthquake%2C_Izmir%2C_Turkey_(18699947915).jpg",
+     "selite": "Agora rakennettiin uudelleen Marcus Aureliuksen aikana maanjäristyksen jälkeen.",
+     "leveys": 4928,
+     "korkeus": 3264,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Agora of Smyrna, built during the Hellenistic era at the base of Pagos Hill and totally rebuilt under Marcus Aurelius after the destructive 178 AD earthquake, Izmir, Turkey (18511982670).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Agora_of_Smyrna%2C_built_during_the_Hellenistic_era_at_the_base_of_Pagos_Hill_and_totally_rebuilt_under_Marcus_Aurelius_after_the_destructive_178_AD_earthquake%2C_Izmir%2C_Turkey_(18511982670).jpg?width=1280",
+     "tekija": "Carole Raddato from FRANKFURT, Germany",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Agora_of_Smyrna%2C_built_during_the_Hellenistic_era_at_the_base_of_Pagos_Hill_and_totally_rebuilt_under_Marcus_Aurelius_after_the_destructive_178_AD_earthquake%2C_Izmir%2C_Turkey_(18511982670).jpg",
+     "selite": "Agoran rauniopuistossa näkyy marmorileijonia ja portaita Pagos-kukkulan juurella.",
+     "leveys": 4928,
+     "korkeus": 3264,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q4803558",
+   "nimi": "Asansör",
+   "peruste": "pelin nosto",
+   "koko_m": 40,
+   "lat": 38.4088,
+   "lon": 27.11749,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Asansor ust kisim.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Asansor_ust_kisim.JPG?width=1280",
+     "tekija": "Yabancı",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Asansor_ust_kisim.JPG",
+     "selite": "Asansör on tiilinen hissitorni, joka nostaa kadun rinteelle ja tarjoaa näkymän lahdelle.",
+     "leveys": 3072,
+     "korkeus": 2304,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Asansor asagidan.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Asansor_asagidan.JPG?width=1280",
+     "tekija": "Yabancı",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Asansor_asagidan.JPG",
+     "selite": "Hissitornin juurella katu jatkuu kalliorinteen ylös.",
+     "leveys": 2304,
+     "korkeus": 3072,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q4810717",
+   "nimi": "Kadifekale",
+   "peruste": "pelin nosto",
+   "koko_m": 400,
+   "lat": 38.41389,
+   "lon": 27.14583,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Izmir Kadifekale entrance 5676.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Izmir_Kadifekale_entrance_5676.jpg?width=1280",
+     "tekija": "Dosseman",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Izmir_Kadifekale_entrance_5676.jpg",
+     "selite": "Kadifekalen linnan muurit kohoavat Pagos-kukkulalla İzmirin yllä.",
+     "leveys": 3008,
+     "korkeus": 2000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Gate of Kadifekale.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gate_of_Kadifekale.jpg?width=1280",
+     "tekija": "Georges Jansoone JoJan",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Gate_of_Kadifekale.jpg",
+     "selite": "Linnan portti ja tornit sijaitsevat kaupunkia hallitsevalla kukkulalla.",
+     "leveys": 2048,
+     "korkeus": 1536,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Izmir Kadifekale exterior 5675.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Izmir_Kadifekale_exterior_5675.jpg?width=1280",
+     "tekija": "Dosseman",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Izmir_Kadifekale_exterior_5675.jpg",
+     "selite": "Muurin paksut kivirakenteet ovat peräisin antiikin ja keskiajan ajoilta.",
+     "leveys": 3008,
+     "korkeus": 2000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q5772358",
+   "nimi": "Hisarin moskeija",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": 38.42147,
+   "lon": 27.13358,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Hisar Mosque (October 2018).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hisar_Mosque_(October_2018).jpg?width=1280",
+     "tekija": "Francisco Anzola",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Hisar_Mosque_(October_2018).jpg",
+     "selite": "Hisarin moskeija on İzmirin vanhin ja suurin moskeija, joka sijaitsee Kemeraltın sydämessä.",
+     "leveys": 5814,
+     "korkeus": 3905,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q6067386",
+   "nimi": "Kültürpark",
+   "peruste": "pelin nosto",
+   "koko_m": 600,
+   "lat": 38.42778,
+   "lon": 27.14472,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Aerial view of the Kültürpark of the town of Izmir 007.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aerial_view_of_the_K%C3%BClt%C3%BCrpark_of_the_town_of_Izmir_007.jpg?width=1280",
+     "tekija": "Dosseman",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aerial_view_of_the_K%C3%BClt%C3%BCrpark_of_the_town_of_Izmir_007.jpg",
+     "selite": "Kültürpark on İzmirin keskustan suuri puisto, jossa pidetään vuosittain kansainväliset messut.",
+     "leveys": 6400,
+     "korkeus": 4063,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "İzmir International Fair from Kadifekale.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%C4%B0zmir_International_Fair_from_Kadifekale.JPG?width=1280",
+     "tekija": "Nedim Ardoğa",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%C4%B0zmir_International_Fair_from_Kadifekale.JPG",
+     "selite": "Messualueen hallit näkyvät Kadifekalen rinteeltä kaupungin keskustassa.",
+     "leveys": 2013,
+     "korkeus": 1191,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q48816032",
+   "nimi": "Atatürkin naamio",
+   "peruste": "sitelinks",
+   "koko_m": 200,
+   "lat": 38.40606,
+   "lon": 27.14581,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "AtaturkinIzmir.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/AtaturkinIzmir.jpg?width=1280",
+     "tekija": "Ed Kohler from Minneapolis, USA",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:AtaturkinIzmir.jpg",
+     "selite": "Atatürkin naamio on kallioon veistetty valtava muotokuva İzmirin kukkulalla.",
+     "leveys": 3648,
+     "korkeus": 2736,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Ataturk in Izmir.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ataturk_in_Izmir.jpg?width=1280",
+     "tekija": "Ed Kohler",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ataturk_in_Izmir.jpg",
+     "selite": "Muotokuva näkyy kauas kaupungin ylle nousevalla kallioseinämällä.",
+     "leveys": 2791,
+     "korkeus": 1581,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q7404289",
+   "nimi": "Salepçioğlun moskeija",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": 38.41694,
+   "lon": 27.1325,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Salepçioğlu Mosque, October 2018.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Salep%C3%A7io%C4%9Flu_Mosque%2C_October_2018.jpg?width=1280",
+     "tekija": "BSRF",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Salep%C3%A7io%C4%9Flu_Mosque%2C_October_2018.jpg",
+     "selite": "Salepçioğlun moskeija on ottomaanien ajan lopun moskeija Kemeraltin lähellä.",
+     "leveys": 3024,
+     "korkeus": 4032,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Izmir aerial.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Izmir_aerial.jpg?width=1280",
+   "tekija": "Coderenius",
+   "lisenssi": "CC BY 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Izmir_aerial.jpg",
+   "selite": "İzmir levittäytyy Egeanmeren lahden ympärille, ja kaupungin satama näkyy ilmasta.",
+   "leveys": 3164,
+   "korkeus": 2851,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Izmir 2012.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Izmir_2012.jpg?width=1280",
+   "tekija": "Haluxjason",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Izmir_2012.jpg",
+   "selite": "İzmirin keskusta ja lahti näkyvät Kadifekalen kukkulalta.",
+   "leveys": 3072,
+   "korkeus": 2304,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

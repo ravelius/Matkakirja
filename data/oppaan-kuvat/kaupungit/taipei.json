@@ -1,0 +1,503 @@
+{
+ "kaupunki": "taipei",
+ "kaupunkiQ": "Q1867",
+ "kohteet": [
+  {
+   "q": "Q83101",
+   "nimi": "Taipei 101",
+   "peruste": "pelin nosto",
+   "koko_m": 250,
+   "lat": 25.03361,
+   "lon": 121.56472,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Taipei 101 from Xiangshan 20250731.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Taipei_101_from_Xiangshan_20250731.jpg?width=1280",
+     "tekija": "User:Sinsyuan",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Taipei_101_from_Xiangshan_20250731.jpg",
+     "selite": "Taipei 101 nousi 2004 maailman korkeimmaksi rakennukseksi ja hallitsee kaupungin siluettia.",
+     "leveys": 2252,
+     "korkeus": 4000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "City In The Mountains (111776447).jpeg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/City_In_The_Mountains_(111776447).jpeg?width=1280",
+     "tekija": "Bear Hsiung",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:City_In_The_Mountains_(111776447).jpeg",
+     "selite": "Torni loistaa illalla Taipein altaan keskellä vuorten ympäröimänä.",
+     "leveys": 2048,
+     "korkeus": 1152,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "101 Tower (Taipei), 2005.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/101_Tower_(Taipei)%2C_2005.jpg?width=1280",
+     "tekija": "Unknown authorUnknown author",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:101_Tower_(Taipei)%2C_2005.jpg",
+     "selite": "Tornin kahdeksan porrastettua osaa on muotoiltu bambun nivelten ja pagodin mukaan.",
+     "leveys": 2560,
+     "korkeus": 1920,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q540794",
+   "nimi": "Chiang Kai-shek -muistosali",
+   "peruste": "pelin nosto",
+   "koko_m": 400,
+   "lat": 25.03444,
+   "lon": 121.52167,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Chiang Kai-shek memorial amk.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Chiang_Kai-shek_memorial_amk.jpg?width=1280",
+     "tekija": "AngMoKio",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Chiang_Kai-shek_memorial_amk.jpg",
+     "selite": "Valkoinen muistosali sinisine kattoineen seisoo laajan aukion päässä Taipein keskustassa.",
+     "leveys": 2900,
+     "korkeus": 1933,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Chiang Kai Shek Memorial Hall (54874998414).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Chiang_Kai_Shek_Memorial_Hall_(54874998414).jpg?width=1280",
+     "tekija": "Max Bates",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Chiang_Kai_Shek_Memorial_Hall_(54874998414).jpg",
+     "selite": "Muistosalia ympäröi puutarha ja laaja juhlaaukio.",
+     "leveys": 4608,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Chiang Kai-shek Memorial Hall gateway by night.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Chiang_Kai-shek_Memorial_Hall_gateway_by_night.jpg?width=1280",
+     "tekija": "WikiLaurent",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Chiang_Kai-shek_Memorial_Hall_gateway_by_night.jpg",
+     "selite": "Aukion portti ja kaksi perinteistä salia valaistuina illalla.",
+     "leveys": 3264,
+     "korkeus": 2448,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q706761",
+   "nimi": "Lungshan-temppeli",
+   "peruste": "pelin nosto",
+   "koko_m": 120,
+   "lat": 25.03722,
+   "lon": 121.4999,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "台北市艋舺龍山寺.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%E5%8F%B0%E5%8C%97%E5%B8%82%E8%89%8B%E8%88%BA%E9%BE%8D%E5%B1%B1%E5%AF%BA.jpg?width=1280",
+     "tekija": "Goranq",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%E5%8F%B0%E5%8C%97%E5%B8%82%E8%89%8B%E8%88%BA%E9%BE%8D%E5%B1%B1%E5%AF%BA.jpg",
+     "selite": "Lungshan-temppeli on Bangkan vanhimpia temppeleitä ja yhä aktiivinen rukouspaikka.",
+     "leveys": 3651,
+     "korkeus": 2434,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "2008-03-08 Bangka Lungshan Temple 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2008-03-08_Bangka_Lungshan_Temple_01.jpg?width=1280",
+     "tekija": "bizmac",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2008-03-08_Bangka_Lungshan_Temple_01.jpg",
+     "selite": "Temppelin pääsali ja sen runsaasti koristellut räystäät sisäpihan puolelta katsottuna.",
+     "leveys": 3888,
+     "korkeus": 2592,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q55601",
+   "nimi": "Presidentinlinna",
+   "peruste": "pelin nosto",
+   "koko_m": 200,
+   "lat": 25.04001,
+   "lon": 121.51195,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Taipei Taiwan Presidential-Office-Building-01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Taipei_Taiwan_Presidential-Office-Building-01.jpg?width=1280",
+     "tekija": "CEphoto, Uwe Aranas",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Taipei_Taiwan_Presidential-Office-Building-01.jpg",
+     "selite": "Japanin hallintokauden virastotalo, jonka punatiilisestä rungosta nousee korkea torni.",
+     "leveys": 5201,
+     "korkeus": 2957,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "04.20 歡迎貝里斯新任大使碧坎蒂進府小軍禮 (51126699108).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/04.20_%E6%AD%A1%E8%BF%8E%E8%B2%9D%E9%87%8C%E6%96%AF%E6%96%B0%E4%BB%BB%E5%A4%A7%E4%BD%BF%E7%A2%A7%E5%9D%8E%E8%92%82%E9%80%B2%E5%BA%9C%E5%B0%8F%E8%BB%8D%E7%A6%AE_(51126699108).jpg?width=1280",
+     "tekija": "總統府",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:04.20_%E6%AD%A1%E8%BF%8E%E8%B2%9D%E9%87%8C%E6%96%AF%E6%96%B0%E4%BB%BB%E5%A4%A7%E4%BD%BF%E7%A2%A7%E5%9D%8E%E8%92%82%E9%80%B2%E5%BA%9C%E5%B0%8F%E8%BB%8D%E7%A6%AE_(51126699108).jpg",
+     "selite": "Rakennuksen kaarikäytävät ja palmuilla reunustettu piha ovat tunnistettava osa keskustaa.",
+     "leveys": 2508,
+     "korkeus": 1672,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q540668",
+   "nimi": "Kansallinen palatsimuseo",
+   "peruste": "sitelinks",
+   "koko_m": 300,
+   "lat": 25.10222,
+   "lon": 121.54861,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "NationalPalace MuseumFrontView.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/NationalPalace_MuseumFrontView.jpg?width=1280",
+     "tekija": "Peellden",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:NationalPalace_MuseumFrontView.jpg",
+     "selite": "Museo säilyttää keisarillisen Kiinan aarteita metsäisen vuorenrinteen juurella Shilinissä.",
+     "leveys": 1504,
+     "korkeus": 1000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "202001 國立故宮博物院 冬 夕景.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/202001_%E5%9C%8B%E7%AB%8B%E6%95%85%E5%AE%AE%E5%8D%9A%E7%89%A9%E9%99%A2_%E5%86%AC_%E5%A4%95%E6%99%AF.jpg?width=1280",
+     "tekija": "Tslai",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:202001_%E5%9C%8B%E7%AB%8B%E6%95%85%E5%AE%AE%E5%8D%9A%E7%89%A9%E9%99%A2_%E5%86%AC_%E5%A4%95%E6%99%AF.jpg",
+     "selite": "Museon portaat ja siivet kylpevät illan valossa.",
+     "leveys": 4096,
+     "korkeus": 2731,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q6726554",
+   "nimi": "Pohjoisportti",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": 25.04772,
+   "lon": 121.51121,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "2022台北承恩門風景.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2022%E5%8F%B0%E5%8C%97%E6%89%BF%E6%81%A9%E9%96%80%E9%A2%A8%E6%99%AF.jpg?width=1280",
+     "tekija": "JackTsai96272",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2022%E5%8F%B0%E5%8C%97%E6%89%BF%E6%81%A9%E9%96%80%E9%A2%A8%E6%99%AF.jpg",
+     "selite": "Pohjoisportti on yksi Taipein kaupunginmuurin portteja ja nousee nyt vilkkaan liikenteen keskelle.",
+     "leveys": 4160,
+     "korkeus": 3120,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Beimen the North Gate of Taipei City.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Beimen_the_North_Gate_of_Taipei_City.jpg?width=1280",
+     "tekija": "Unknown authorUnknown author",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Beimen_the_North_Gate_of_Taipei_City.jpg",
+     "selite": "Vanha kuva portista, jonka punainen torni ja kivijalka ovat säilyneet.",
+     "leveys": 1728,
+     "korkeus": 1181,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q5276412",
+   "nimi": "Dihua-katu",
+   "peruste": "pelin nosto",
+   "koko_m": 250,
+   "lat": 25.06655,
+   "lon": 121.50995,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Buildings along Dihua Street 07.23 (2).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Buildings_along_Dihua_Street_07.23_(2).jpg?width=1280",
+     "tekija": "This Photo was taken by Supanut Arunoprayote. Feel free to use any of my images, but please mention me as the author and may send me a message. (สามารถใช้ภาพได้อิสระ แต่กรุณาใส่เครดิตผู้ถ่ายและอาจส่งข้อความบอกกล่าวด้วย) Please do not upload an updated image here without consultation with the Author. The author would like to make corrections only at his own source. This ensures that the changes are preserved.Please if you think that any changes should be required, please inform the author.Otherwise you can upload a new image with a new name. Please use one of the templates derivative or extract.",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Buildings_along_Dihua_Street_07.23_(2).jpg",
+     "selite": "Dihua-kadun koristeelliset kauppatalot ovat muistoja teekauppiaiden ja rohdoskauppiaiden ajasta.",
+     "leveys": 6643,
+     "korkeus": 4429,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "2010-06-22 Dihua Street.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2010-06-22_Dihua_Street.jpg?width=1280",
+     "tekija": "tomscoffin",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2010-06-22_Dihua_Street.jpg",
+     "selite": "Katu on vanhaa Taipeita, jossa myydään kuivattuja elintarvikkeita ja perinteisiä rohtoja.",
+     "leveys": 3488,
+     "korkeus": 2322,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "2017-10-23 Dihua Street at night.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2017-10-23_Dihua_Street_at_night.jpg?width=1280",
+     "tekija": "eugene_o",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2017-10-23_Dihua_Street_at_night.jpg",
+     "selite": "Dihua-katu illalla, kun kuivaruokakauppojen kyltit valaisevat kadun.",
+     "leveys": 3840,
+     "korkeus": 2552,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q699348",
+   "nimi": "Baoan-temppeli",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": 25.07318,
+   "lon": 121.51556,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "大龍峒保安宮20171210 1 (2).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%E5%A4%A7%E9%BE%8D%E5%B3%92%E4%BF%9D%E5%AE%89%E5%AE%AE20171210_1_(2).jpg?width=1280",
+     "tekija": "林高志",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%E5%A4%A7%E9%BE%8D%E5%B3%92%E4%BF%9D%E5%AE%89%E5%AE%AE20171210_1_(2).jpg",
+     "selite": "Baoan-temppeli Dalongdongissa on koristeellinen taolainen temppeli, jonka kattoharjoja peittävät pienoisveistokset.",
+     "leveys": 4079,
+     "korkeus": 2305,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "2008-02-05 Taipei Bao-an Temple.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2008-02-05_Taipei_Bao-an_Temple.jpg?width=1280",
+     "tekija": "Pascal Terjan",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2008-02-05_Taipei_Bao-an_Temple.jpg",
+     "selite": "Temppelin pääsali piha-aukion päästä katsottuna.",
+     "leveys": 3906,
+     "korkeus": 2602,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "2008-02-05 roof decoration of the Taipei Bao-an Temple.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2008-02-05_roof_decoration_of_the_Taipei_Bao-an_Temple.jpg?width=1280",
+     "tekija": "Pascal Terjan",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2008-02-05_roof_decoration_of_the_Taipei_Bao-an_Temple.jpg",
+     "selite": "Kattoharjan värikkäät hahmot ja koristeet ovat temppelin tunnuspiirre.",
+     "leveys": 3906,
+     "korkeus": 2602,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q7304386",
+   "nimi": "Punainen talo",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": 25.04214,
+   "lon": 121.50628,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Bangkah Taipei - Red House Theater - facade (2025) - img 07.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bangkah_Taipei_-_Red_House_Theater_-_facade_(2025)_-_img_07.jpg?width=1280",
+     "tekija": "Chainwit.",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bangkah_Taipei_-_Red_House_Theater_-_facade_(2025)_-_img_07.jpg",
+     "selite": "Punatiilinen kahdeksankulmainen Punainen talo on Ximendingin historiallinen teatteri.",
+     "leveys": 3023,
+     "korkeus": 2267,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Bangkah Taipei - Red House Theater - facade (2025) - img 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bangkah_Taipei_-_Red_House_Theater_-_facade_(2025)_-_img_01.jpg?width=1280",
+     "tekija": "Chainwit.",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bangkah_Taipei_-_Red_House_Theater_-_facade_(2025)_-_img_01.jpg",
+     "selite": "Talon pyöreä julkisivu ja sen punatiili erottuvat ympäröivistä rakennuksista.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q10899202",
+   "nimi": "Bopiliaon vanha kortteli",
+   "peruste": "pelin nosto",
+   "koko_m": 120,
+   "lat": 25.03639,
+   "lon": 121.50139,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "2019 剝皮寮歷史建築群.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2019_%E5%89%9D%E7%9A%AE%E5%AF%AE%E6%AD%B7%E5%8F%B2%E5%BB%BA%E7%AF%89%E7%BE%A4.jpg?width=1280",
+     "tekija": "Vic Lin",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2019_%E5%89%9D%E7%9A%AE%E5%AF%AE%E6%AD%B7%E5%8F%B2%E5%BB%BA%E7%AF%89%E7%BE%A4.jpg",
+     "selite": "Bopiliaon vanha kortteli on säilyttänyt Qing-ajan kapeat kauppakujat ja punatiilitalot.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q10914190",
+   "nimi": "Kasvitieteellinen puutarha",
+   "peruste": "pelin nosto",
+   "koko_m": 250,
+   "lat": 25.0323,
+   "lon": 121.51,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Taipei Botanical Garden Greenhouse.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Taipei_Botanical_Garden_Greenhouse.jpg?width=1280",
+     "tekija": "Meiguoren",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Taipei_Botanical_Garden_Greenhouse.jpg",
+     "selite": "Taipein kasvitieteellinen puutarha on keskustan vehreä keidas, jonka kasvihuone muistuttaa kupolia.",
+     "leveys": 1280,
+     "korkeus": 853,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q700588",
+   "nimi": "Taipein rautatieasema",
+   "peruste": "sitelinks",
+   "koko_m": 250,
+   "lat": 25.04778,
+   "lon": 121.51722,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Taipei main station exterior 2018.png",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Taipei_main_station_exterior_2018.png?width=1280",
+     "tekija": "User:Stck w",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Taipei_main_station_exterior_2018.png",
+     "selite": "Taipein päärautatieasema on Taiwanin tärkein liikenteen solmukohta ja rakennettu perinteisen palatsin tyyliin.",
+     "leveys": 3879,
+     "korkeus": 2825,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q591131",
+   "nimi": "Taipein eläintarha",
+   "peruste": "sitelinks",
+   "koko_m": 600,
+   "lat": 25.0026,
+   "lon": 121.582,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Taipei Zoo Entrance.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Taipei_Zoo_Entrance.jpg?width=1280",
+     "tekija": "Yu tptw",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Taipei_Zoo_Entrance.jpg",
+     "selite": "Taipein eläintarha sijaitsee Muzhan kukkuloilla kaupungin eteläosassa.",
+     "leveys": 2207,
+     "korkeus": 1349,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Taipei Taiwan Taipei-101-Tower-01.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Taipei_Taiwan_Taipei-101-Tower-01.jpg?width=1280",
+   "tekija": "CEphoto, Uwe Aranas",
+   "lisenssi": "CC BY-SA 3.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Taipei_Taiwan_Taipei-101-Tower-01.jpg",
+   "selite": "Taipein siluetti nousee Taipein altaan reunoilta, ja Taipei 101 hallitsee kaupunkia.",
+   "leveys": 5760,
+   "korkeus": 3840,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Taipei Skyline 2016.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Taipei_Skyline_2016.jpg?width=1280",
+   "tekija": "Sinchen.Lin",
+   "lisenssi": "CC BY 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Taipei_Skyline_2016.jpg",
+   "selite": "Pilvenpiirtäjät nousevat vuorten ympäröimästä altaasta.",
+   "leveys": 6016,
+   "korkeus": 4016,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

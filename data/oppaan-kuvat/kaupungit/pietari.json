@@ -1,0 +1,741 @@
+{
+ "kaupunki": "pietari",
+ "kaupunkiQ": "Q656",
+ "kohteet": [
+  {
+   "q": "Q182147",
+   "nimi": "Talvipalatsi",
+   "peruste": "pelin nosto",
+   "koko_m": 250,
+   "lat": 59.94028,
+   "lon": 30.31389,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Winter Palace-2025-09-msu---2707.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Winter_Palace-2025-09-msu---2707.jpg?width=1280",
+     "tekija": "Matthias Süßen",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Winter_Palace-2025-09-msu---2707.jpg",
+     "selite": "Talvipalatsi on turkoosinvalkoinen barokkipalatsi, joka oli Venäjän keisarien virallinen asunto.",
+     "leveys": 4339,
+     "korkeus": 2893,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Winter Palace-2025-09-msu---2712.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Winter_Palace-2025-09-msu---2712.jpg?width=1280",
+     "tekija": "Matthias Süßen",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Winter_Palace-2025-09-msu---2712.jpg",
+     "selite": "Palatsin pitkä julkisivu avautuu Palatsiaukiolle.",
+     "leveys": 5184,
+     "korkeus": 2916,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "RUS-2016-Aerial-SPB-Winter Palace (crop).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/RUS-2016-Aerial-SPB-Winter_Palace_(crop).jpg?width=1280",
+     "tekija": "Godot13",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:RUS-2016-Aerial-SPB-Winter_Palace_(crop).jpg",
+     "selite": "Ilmasta palatsin nelikulmainen rakennus sulkee sisäänsä suuren sisäpihan.",
+     "leveys": 4420,
+     "korkeus": 2623,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q132783",
+   "nimi": "Eremitaaši",
+   "peruste": "sitelinks",
+   "koko_m": 400,
+   "lat": 59.94056,
+   "lon": 30.31361,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "The ensemble of the Winter Palace and the Hermitage. Winter Groove.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/The_ensemble_of_the_Winter_Palace_and_the_Hermitage._Winter_Groove.jpg?width=1280",
+     "tekija": "Александр Байдуков",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:The_ensemble_of_the_Winter_Palace_and_the_Hermitage._Winter_Groove.jpg",
+     "selite": "Eremitaašin museorakennukset muodostavat Nevan rannalle yhtenäisen palatsikokonaisuuden.",
+     "leveys": 7360,
+     "korkeus": 4912,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Hermitage West facade Saint Petersburg central wing.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hermitage_West_facade_Saint_Petersburg_central_wing.jpg?width=1280",
+     "tekija": "This Photo was taken by Wolfgang Moroder. Feel free to use my photos, but please mention me as the author and send me a message. This image is not in the public domain. Please respect the copyright protection. It may only be used according to the rules mentioned here. This specifically excludes use in social media, if applicable terms of the licenses listed here not appropriate. Please do not upload an updated image here without consultation with the Author. The author would like to make corrections only at his own source. This ensures that the changes are preserved.Please if you think that any changes should be required, please inform the author.Otherwise you can upload a new image with a new name. Please use one of the templates derivative or extract.",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Hermitage_West_facade_Saint_Petersburg_central_wing.jpg",
+     "selite": "Eremitaašin länsijulkisivu on koristeltu kullatuin yksityiskohdin.",
+     "leveys": 6000,
+     "korkeus": 4004,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Hermitage West facade Saint Petersburg N wing.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hermitage_West_facade_Saint_Petersburg_N_wing.jpg?width=1280",
+     "tekija": "This Photo was taken by Wolfgang Moroder. Feel free to use my photos, but please mention me as the author and send me a message. This image is not in the public domain. Please respect the copyright protection. It may only be used according to the rules mentioned here. This specifically excludes use in social media, if applicable terms of the licenses listed here not appropriate. Please do not upload an updated image here without consultation with the Author. The author would like to make corrections only at his own source. This ensures that the changes are preserved.Please if you think that any changes should be required, please inform the author.Otherwise you can upload a new image with a new name. Please use one of the templates derivative or extract.",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Hermitage_West_facade_Saint_Petersburg_N_wing.jpg",
+     "selite": "Museon rakennukset reunustavat Nevan rantaa pitkänä jonona.",
+     "leveys": 7360,
+     "korkeus": 4912,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q215208",
+   "nimi": "Verikirkko",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": 59.94,
+   "lon": 30.32861,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "View of the Church of the Savior on Blood from the Griboedov Canal.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/View_of_the_Church_of_the_Savior_on_Blood_from_the_Griboedov_Canal.jpg?width=1280",
+     "tekija": "This Photo was taken by Wolfgang Moroder. Feel free to use my photos, but please mention me as the author and send me a message. This image is not in the public domain. Please respect the copyright protection. It may only be used according to the rules mentioned here. This specifically excludes use in social media, if applicable terms of the licenses listed here not appropriate. Please do not upload an updated image here without consultation with the Author. The author would like to make corrections only at his own source. This ensures that the changes are preserved.Please if you think that any changes should be required, please inform the author.Otherwise you can upload a new image with a new name. Please use one of the templates derivative or extract.",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:View_of_the_Church_of_the_Savior_on_Blood_from_the_Griboedov_Canal.jpg",
+     "selite": "Verikirkko kohoaa Gribojedovin kanavan varrelle sipulikupoleineen paikalle, jossa keisari Aleksanteri II haavoittui.",
+     "leveys": 6000,
+     "korkeus": 4004,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Собор Воскресения Христова 1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%A1%D0%BE%D0%B1%D0%BE%D1%80_%D0%92%D0%BE%D1%81%D0%BA%D1%80%D0%B5%D1%81%D0%B5%D0%BD%D0%B8%D1%8F_%D0%A5%D1%80%D0%B8%D1%81%D1%82%D0%BE%D0%B2%D0%B0_1.jpg?width=1280",
+     "tekija": "AndreyWi",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%D0%A1%D0%BE%D0%B1%D0%BE%D1%80_%D0%92%D0%BE%D1%81%D0%BA%D1%80%D0%B5%D1%81%D0%B5%D0%BD%D0%B8%D1%8F_%D0%A5%D1%80%D0%B8%D1%81%D1%82%D0%BE%D0%B2%D0%B0_1.jpg",
+     "selite": "Kirkon rakennus on koristeltu värikkäin kupolein venäläiseen tyyliin.",
+     "leveys": 2492,
+     "korkeus": 3738,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Church of Our Savior on Spilled Blood (St. Petersburg, 2003).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Church_of_Our_Savior_on_Spilled_Blood_(St._Petersburg%2C_2003).jpg?width=1280",
+     "tekija": "Godot13",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Church_of_Our_Savior_on_Spilled_Blood_(St._Petersburg%2C_2003).jpg",
+     "selite": "Kupolien ja julkisivun koristelu on tehty emalilla ja mosaiikeilla.",
+     "leveys": 3765,
+     "korkeus": 3975,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 4,
+     "tiedosto": "View from the Kazansky Bridge Church of the Savior on Blood.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/View_from_the_Kazansky_Bridge_Church_of_the_Savior_on_Blood.jpg?width=1280",
+     "tekija": "This Photo was taken by Wolfgang Moroder. Feel free to use my photos, but please mention me as the author and send me a message. This image is not in the public domain. Please respect the copyright protection. It may only be used according to the rules mentioned here. This specifically excludes use in social media, if applicable terms of the licenses listed here not appropriate. Please do not upload an updated image here without consultation with the Author. The author would like to make corrections only at his own source. This ensures that the changes are preserved.Please if you think that any changes should be required, please inform the author.Otherwise you can upload a new image with a new name. Please use one of the templates derivative or extract.",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:View_from_the_Kazansky_Bridge_Church_of_the_Savior_on_Blood.jpg",
+     "selite": "Kanavalta kirkko erottuu kaupungin keskustan taloista.",
+     "leveys": 7360,
+     "korkeus": 4912,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q215423",
+   "nimi": "Iisakinkirkko",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 59.93405,
+   "lon": 30.30595,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Saint Isaac's Cathedral in SPB.jpeg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Saint_Isaac's_Cathedral_in_SPB.jpeg?width=1280",
+     "tekija": "Florstein (Telegram:WikiPhoto.Space)",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Saint_Isaac's_Cathedral_in_SPB.jpeg",
+     "selite": "Iisakinkirkon kullattu kupoli hallitsee Pietarin keskustan siluettia.",
+     "leveys": 3600,
+     "korkeus": 2384,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Saint Isaacs cathedral Southern facade.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Saint_Isaacs_cathedral_Southern_facade.jpg?width=1280",
+     "tekija": "This Photo was taken by Wolfgang Moroder. Feel free to use my photos, but please mention me as the author and send me a message. This image is not in the public domain. Please respect the copyright protection. It may only be used according to the rules mentioned here. This specifically excludes use in social media, if applicable terms of the licenses listed here not appropriate. Please do not upload an updated image here without consultation with the Author. The author would like to make corrections only at his own source. This ensures that the changes are preserved.Please if you think that any changes should be required, please inform the author.Otherwise you can upload a new image with a new name. Please use one of the templates derivative or extract.",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Saint_Isaacs_cathedral_Southern_facade.jpg",
+     "selite": "Katedraalin graniittipylväät kantavat kolmiopäätyä.",
+     "leveys": 6500,
+     "korkeus": 4338,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Spb 06-2012 English Embankment 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Spb_06-2012_English_Embankment_01.jpg?width=1280",
+     "tekija": "A.Savin",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Spb_06-2012_English_Embankment_01.jpg",
+     "selite": "Kupoli näkyy Nevan toiselta rannalta kaukaa pitkänä rantakatuna.",
+     "leveys": 4373,
+     "korkeus": 2209,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 4,
+     "tiedosto": "Saint Isaac's Cathedral Sept. 2012 Interior.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Saint_Isaac's_Cathedral_Sept._2012_Interior.jpg?width=1280",
+     "tekija": "Ximeg",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Saint_Isaac's_Cathedral_Sept._2012_Interior.jpg",
+     "selite": "Katedraalin sisätila on koristeltu marmorilla, mosaiikeilla ja kullalla.",
+     "leveys": 9216,
+     "korkeus": 4303,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q38646",
+   "nimi": "Pietari-Paavalin linnoitus",
+   "peruste": "pelin nosto",
+   "koko_m": 700,
+   "lat": 59.95,
+   "lon": 30.31667,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "RUS-2016-Aerial-SPB-Peter and Paul Fortress 02.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/RUS-2016-Aerial-SPB-Peter_and_Paul_Fortress_02.jpg?width=1280",
+     "tekija": "Godot13",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:RUS-2016-Aerial-SPB-Peter_and_Paul_Fortress_02.jpg",
+     "selite": "Pietari-Paavalin linnoitus perustettiin Jänissaarelle Pietarin kaupungin alkupisteeksi.",
+     "leveys": 6723,
+     "korkeus": 3847,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Peter & Paul fortress in SPB 03.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Peter_%26_Paul_fortress_in_SPB_03.jpg?width=1280",
+     "tekija": "Florstein (Telegram:WikiPhoto.Space)",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Peter_%26_Paul_fortress_in_SPB_03.jpg",
+     "selite": "Linnoituksen muurien takaa nousee katedraalin kullattu torni.",
+     "leveys": 3600,
+     "korkeus": 2384,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "RUS-2016-Aerial-SPB-Peter and Paul Fortress 03 (partial).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/RUS-2016-Aerial-SPB-Peter_and_Paul_Fortress_03_(partial).jpg?width=1280",
+     "tekija": "Godot13",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:RUS-2016-Aerial-SPB-Peter_and_Paul_Fortress_03_(partial).jpg",
+     "selite": "Linnoituksen bastionit kaartuvat Nevan rannalle.",
+     "leveys": 5062,
+     "korkeus": 3375,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q672444",
+   "nimi": "Vaskiratsastaja",
+   "peruste": "pelin nosto",
+   "koko_m": 40,
+   "lat": 59.93656,
+   "lon": 30.30217,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "The Bronze Horseman (St. Petersburg, Russia).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/The_Bronze_Horseman_(St._Petersburg%2C_Russia).jpg?width=1280",
+     "tekija": "Godot13",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:The_Bronze_Horseman_(St._Petersburg%2C_Russia).jpg",
+     "selite": "Vaskiratsastaja on Pietari Suuren ratsastajapatsas Senaatintorilla.",
+     "leveys": 4072,
+     "korkeus": 2976,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Bronze Horseman.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bronze_Horseman.jpg?width=1280",
+     "tekija": "Florstein (Telegram:WikiPhoto.Space)",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bronze_Horseman.jpg",
+     "selite": "Patsas seisoo valtavan graniittilohkareen päällä Nevan rannalla.",
+     "leveys": 3200,
+     "korkeus": 2119,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "RUS-2016-SPB-Bronze Horseman 03.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/RUS-2016-SPB-Bronze_Horseman_03.jpg?width=1280",
+     "tekija": "Godot13",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:RUS-2016-SPB-Bronze_Horseman_03.jpg",
+     "selite": "Patsaan jalustalla on tekstit Pietari I ja Katariina II.",
+     "leveys": 6438,
+     "korkeus": 4292,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q404571",
+   "nimi": "Kazanin katedraali",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 59.93423,
+   "lon": 30.32459,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Kazan Cathedral Saint Petersburg.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kazan_Cathedral_Saint_Petersburg.jpg?width=1280",
+     "tekija": "This Photo was taken by Wolfgang Moroder. Feel free to use my photos, but please mention me as the author and send me a message. This image is not in the public domain. Please respect the copyright protection. It may only be used according to the rules mentioned here. This specifically excludes use in social media, if applicable terms of the licenses listed here not appropriate. Please do not upload an updated image here without consultation with the Author. The author would like to make corrections only at his own source. This ensures that the changes are preserved.Please if you think that any changes should be required, please inform the author.Otherwise you can upload a new image with a new name. Please use one of the templates derivative or extract.",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kazan_Cathedral_Saint_Petersburg.jpg",
+     "selite": "Kazanin katedraalin kaareva pylväikkö avautuu Nevski prospektille.",
+     "leveys": 7500,
+     "korkeus": 3390,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Kazan Cathedral Exterior.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kazan_Cathedral_Exterior.jpg?width=1280",
+     "tekija": "Perituss",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kazan_Cathedral_Exterior.jpg",
+     "selite": "Katedraalin kupoli kohoaa pylväikön takaa.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1132624",
+   "nimi": "Palatsiaukio",
+   "peruste": "sitelinks",
+   "koko_m": 350,
+   "lat": 59.93903,
+   "lon": 30.31578,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "00 0048 Palace Square in Saint Petersburg (Russia).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/00_0048_Palace_Square_in_Saint_Petersburg_(Russia).jpg?width=1280",
+     "tekija": "W. Bulach",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:00_0048_Palace_Square_in_Saint_Petersburg_(Russia).jpg",
+     "selite": "Palatsiaukio on Pietarin keskeinen aukio Talvipalatsin ja kenraalikunnan rakennuksen välissä.",
+     "leveys": 3300,
+     "korkeus": 2200,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Palace Square in the moring, Saint Petersburg, Russia.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Palace_Square_in_the_moring%2C_Saint_Petersburg%2C_Russia.jpg?width=1280",
+     "tekija": "Vyacheslav Argenberg",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Palace_Square_in_the_moring%2C_Saint_Petersburg%2C_Russia.jpg",
+     "selite": "Aukion keskellä seisoo Aleksanterin pylväs.",
+     "leveys": 3072,
+     "korkeus": 2048,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Palace Square at night, Saint Petersburg, Russia.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Palace_Square_at_night%2C_Saint_Petersburg%2C_Russia.jpg?width=1280",
+     "tekija": "Vyacheslav Argenberg",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Palace_Square_at_night%2C_Saint_Petersburg%2C_Russia.jpg",
+     "selite": "Kenraalikunnan rakennuksen kaareva julkisivu valaistaan iltaisin.",
+     "leveys": 3072,
+     "korkeus": 2048,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q907366",
+   "nimi": "Aleksanterin pylväs",
+   "peruste": "sitelinks",
+   "koko_m": 60,
+   "lat": 59.93917,
+   "lon": 30.31583,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Alexander column.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Alexander_column.jpg?width=1280",
+     "tekija": "Anders98en",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Alexander_column.jpg",
+     "selite": "Aleksanterin pylväs seisoo Palatsiaukiolla Talvipalatsia vastapäätä.",
+     "leveys": 3371,
+     "korkeus": 2693,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "00 0047 Alexander Column on Palace Square in Saint Petersburg.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/00_0047_Alexander_Column_on_Palace_Square_in_Saint_Petersburg.jpg?width=1280",
+     "tekija": "W. Bulach",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:00_0047_Alexander_Column_on_Palace_Square_in_Saint_Petersburg.jpg",
+     "selite": "Pylvään huipulla on ristiä kantava enkeli.",
+     "leveys": 2133,
+     "korkeus": 3200,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q382500",
+   "nimi": "Nevski prospekti",
+   "peruste": "sitelinks",
+   "koko_m": 400,
+   "lat": 59.93667,
+   "lon": 30.315,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Nevsky Prospekt 20240912 114912 MP.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Nevsky_Prospekt_20240912_114912_MP.jpg?width=1280",
+     "tekija": "Vasilii Martynov",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Nevsky_Prospekt_20240912_114912_MP.jpg",
+     "selite": "Nevski prospekti on Pietarin pääkatu, joka alkaa Admiraliteetin luota.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Nevsky Prospect 2013-07 1374957640.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Nevsky_Prospect_2013-07_1374957640.JPG?width=1280",
+     "tekija": "Artyom Svetlov",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Nevsky_Prospect_2013-07_1374957640.JPG",
+     "selite": "Kadun päässä erottuu Admiraliteetin kultainen torni.",
+     "leveys": 3936,
+     "korkeus": 2624,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q207028",
+   "nimi": "Mariinski-teatteri",
+   "peruste": "pelin nosto",
+   "koko_m": 120,
+   "lat": 59.92556,
+   "lon": 30.29611,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Санкт-Петербург, Мариинский театр, фасад (edited version).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3%2C_%D0%9C%D0%B0%D1%80%D0%B8%D0%B8%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D1%82%D0%B5%D0%B0%D1%82%D1%80%2C_%D1%84%D0%B0%D1%81%D0%B0%D0%B4_(edited_version).jpg?width=1280",
+     "tekija": "Nikolai Bulykin",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3%2C_%D0%9C%D0%B0%D1%80%D0%B8%D0%B8%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D1%82%D0%B5%D0%B0%D1%82%D1%80%2C_%D1%84%D0%B0%D1%81%D0%B0%D0%B4_(edited_version).jpg",
+     "selite": "Mariinski-teatteri on tunnettu ooppera- ja balettitalo Pietarissa.",
+     "leveys": 4974,
+     "korkeus": 3725,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Spb 06-2012 MariinskyTheatre.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Spb_06-2012_MariinskyTheatre.jpg?width=1280",
+     "tekija": "A.Savin",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Spb_06-2012_MariinskyTheatre.jpg",
+     "selite": "Teatterin vihreä julkisivu on 1800-luvun puolivälistä.",
+     "leveys": 2859,
+     "korkeus": 2110,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "20240524 Mariinsky Theatre main building 18.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20240524_Mariinsky_Theatre_main_building_18.jpg?width=1280",
+     "tekija": "Sergey A. Demidov",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20240524_Mariinsky_Theatre_main_building_18.jpg",
+     "selite": "Salin parvekkeet ja kultaiset koristeet muodostavat teatterin tunnelman.",
+     "leveys": 1920,
+     "korkeus": 1080,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q736587",
+   "nimi": "Pietari-Paavalin katedraali",
+   "peruste": "sitelinks",
+   "koko_m": 120,
+   "lat": 59.95028,
+   "lon": 30.31667,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Saint Peter and Paul Cathedral in Saint Petersburg main facade.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Saint_Peter_and_Paul_Cathedral_in_Saint_Petersburg_main_facade.jpg?width=1280",
+     "tekija": "This Photo was taken by Wolfgang Moroder. Feel free to use my photos, but please mention me as the author and send me a message. This image is not in the public domain. Please respect the copyright protection. It may only be used according to the rules mentioned here. This specifically excludes use in social media, if applicable terms of the licenses listed here not appropriate. Please do not upload an updated image here without consultation with the Author. The author would like to make corrections only at his own source. This ensures that the changes are preserved.Please if you think that any changes should be required, please inform the author.Otherwise you can upload a new image with a new name. Please use one of the templates derivative or extract.",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Saint_Peter_and_Paul_Cathedral_in_Saint_Petersburg_main_facade.jpg",
+     "selite": "Katedraalin kultainen torni on yksi Pietarin korkeimmista rakennelmista.",
+     "leveys": 2486,
+     "korkeus": 5000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "RUS-2016-Aerial-SPB-Peter and Paul Cathedral.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/RUS-2016-Aerial-SPB-Peter_and_Paul_Cathedral.jpg?width=1280",
+     "tekija": "Godot13",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:RUS-2016-Aerial-SPB-Peter_and_Paul_Cathedral.jpg",
+     "selite": "Katedraali sijaitsee linnoituksen keskellä, ja sinne on haudattu useimmat Romanovit.",
+     "leveys": 5625,
+     "korkeus": 3750,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q737377",
+   "nimi": "Singerin talo",
+   "peruste": "sitelinks",
+   "koko_m": 60,
+   "lat": 59.93583,
+   "lon": 30.32556,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Singer House SPB 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Singer_House_SPB_01.jpg?width=1280",
+     "tekija": "Florstein (Telegram:WikiPhoto.Space)",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Singer_House_SPB_01.jpg",
+     "selite": "Singerin talo on jugend-tyylinen rakennus Nevski prospektilla, jonka päällä on lasikupoli.",
+     "leveys": 3700,
+     "korkeus": 2450,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Санкт-Петербург, Невский 28.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3%2C_%D0%9D%D0%B5%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_28.jpg?width=1280",
+     "tekija": "Nikolai Bulykin",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3%2C_%D0%9D%D0%B5%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_28.jpg",
+     "selite": "Rakennus seisoo Gribojedovin kanavan kulmassa.",
+     "leveys": 5226,
+     "korkeus": 3914,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1277585",
+   "nimi": "Kunstkamera",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 59.94167,
+   "lon": 30.30444,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Kunstkamera SPB.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kunstkamera_SPB.jpg?width=1280",
+     "tekija": "Florstein (Telegram:WikiPhoto.Space)",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kunstkamera_SPB.jpg",
+     "selite": "Kunstkamera on Pietari Suuren perustama kaupungin ensimmäinen museo.",
+     "leveys": 4200,
+     "korkeus": 2782,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "2018 Kunstkamera building 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2018_Kunstkamera_building_01.jpg?width=1280",
+     "tekija": "Andrey Korzun",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2018_Kunstkamera_building_01.jpg",
+     "selite": "Rakennus seisoo Vasilinsaaren rannalla Nevan äärellä.",
+     "leveys": 4498,
+     "korkeus": 3558,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q946428",
+   "nimi": "Aleksanteri Nevskin luostari",
+   "peruste": "sitelinks",
+   "koko_m": 400,
+   "lat": 59.92108,
+   "lon": 30.38852,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "RUS-2016-Aerial-SPB-Alexander Nevsky Lavra.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/RUS-2016-Aerial-SPB-Alexander_Nevsky_Lavra.jpg?width=1280",
+     "tekija": "Godot13",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:RUS-2016-Aerial-SPB-Alexander_Nevsky_Lavra.jpg",
+     "selite": "Aleksanteri Nevskin luostari on tärkeä ortodoksinen luostarialue Nevski prospektin päässä.",
+     "leveys": 6423,
+     "korkeus": 4282,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Holy Trinity Cathedral of Alexander Nevsky Lavra in SPB (01).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Holy_Trinity_Cathedral_of_Alexander_Nevsky_Lavra_in_SPB_(01).jpg?width=1280",
+     "tekija": "Pavlikhin",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Holy_Trinity_Cathedral_of_Alexander_Nevsky_Lavra_in_SPB_(01).jpg",
+     "selite": "Luostarin pääkirkko on Pyhän Kolminaisuuden katedraali.",
+     "leveys": 5413,
+     "korkeus": 3758,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q17489369",
+   "nimi": "Fabergé-museo",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": 59.9347,
+   "lon": 30.3429,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Fabergé Museum in St. Petersburg 01.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Faberg%C3%A9_Museum_in_St._Petersburg_01.JPG?width=1280",
+     "tekija": "Ninaras",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Faberg%C3%A9_Museum_in_St._Petersburg_01.JPG",
+     "selite": "Fabergé-museo toimii Šuvalovin palatsissa Fontankan rannalla.",
+     "leveys": 2598,
+     "korkeus": 1732,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "St. Petersburg IMG 8482 Fabergé Museum, St. Petersburg (26708580638).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/St._Petersburg_IMG_8482_Faberg%C3%A9_Museum%2C_St._Petersburg_(26708580638).jpg?width=1280",
+     "tekija": "Ninara from Helsinki, Finland",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:St._Petersburg_IMG_8482_Faberg%C3%A9_Museum%2C_St._Petersburg_(26708580638).jpg",
+     "selite": "Palatsi valaistaan talvi-iltana Fontankan rannalla.",
+     "leveys": 3241,
+     "korkeus": 1851,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Panorama of Saint Petersburg from Palace Bridge.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Panorama_of_Saint_Petersburg_from_Palace_Bridge.jpg?width=1280",
+   "tekija": "Panther",
+   "lisenssi": "CC BY-SA 3.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Panorama_of_Saint_Petersburg_from_Palace_Bridge.jpg",
+   "selite": "Nevan rannat ja Pietarin keskustan rakennukset avautuvat Palatsisillalta katsottuna.",
+   "leveys": 11562,
+   "korkeus": 1950,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Saint Petersburg Hermitage from Neva 03.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Saint_Petersburg_Hermitage_from_Neva_03.jpg?width=1280",
+   "tekija": "Ad Meskens",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Saint_Petersburg_Hermitage_from_Neva_03.jpg",
+   "selite": "Nevalta Pietarin keskustan Talvipalatsi ja Eremitaaši erottuvat pitkänä rantajulkisivuna.",
+   "leveys": 5100,
+   "korkeus": 2132,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

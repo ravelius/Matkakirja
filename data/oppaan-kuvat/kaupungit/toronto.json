@@ -1,0 +1,539 @@
+{
+ "kaupunki": "toronto",
+ "kaupunkiQ": "Q172",
+ "kohteet": [
+  {
+   "q": "Q134883",
+   "nimi": "CN Tower",
+   "peruste": "sitelinks",
+   "koko_m": 200,
+   "lat": 43.64275,
+   "lon": -79.38715,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Toronto - ON - Toronto Harbourfront7.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Toronto_-_ON_-_Toronto_Harbourfront7.jpg?width=1280",
+     "tekija": "Wladyslaw",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Toronto_-_ON_-_Toronto_Harbourfront7.jpg",
+     "selite": "CN Tower on Toronton satama-alueen yllä kohoava tietoliikenne- ja näköalatorni.",
+     "leveys": 2434,
+     "korkeus": 3834,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Toronto - ON - CN Tower bei Nacht2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Toronto_-_ON_-_CN_Tower_bei_Nacht2.jpg?width=1280",
+     "tekija": "Wladyslaw, Correction of perspective distortion: Niabot",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Toronto_-_ON_-_CN_Tower_bei_Nacht2.jpg",
+     "selite": "Illalla torni valaistaan keskustan siluetin yllä.",
+     "leveys": 2848,
+     "korkeus": 4288,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "CN Tower, Toronto, Canada (Unsplash DJ kOgH5u0o).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/CN_Tower%2C_Toronto%2C_Canada_(Unsplash_DJ_kOgH5u0o).jpg?width=1280",
+     "tekija": "Scott Webb scottwebb",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:CN_Tower%2C_Toronto%2C_Canada_(Unsplash_DJ_kOgH5u0o).jpg",
+     "selite": "Alhaalta katsottuna runko kapenee pilviin kohti näköalatasannetta.",
+     "leveys": 5582,
+     "korkeus": 3721,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1046446",
+   "nimi": "Casa Loma",
+   "peruste": "sitelinks",
+   "koko_m": 120,
+   "lat": 43.67812,
+   "lon": -79.40934,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Casa Loma in Toronto 08 2025.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Casa_Loma_in_Toronto_08_2025.jpg?width=1280",
+     "tekija": "Dpalma01",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Casa_Loma_in_Toronto_08_2025.jpg",
+     "selite": "Casa Loma on keskiaikaista linnaa jäljittelevä kartano kukkulan päällä Torontossa.",
+     "leveys": 3220,
+     "korkeus": 2302,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Casa Loma 2022.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Casa_Loma_2022.jpg?width=1280",
+     "tekija": "Evelyncyuzu",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Casa_Loma_2022.jpg",
+     "selite": "Linnan tornit ja kivijulkisivu nousevat pihan yläpuolelle.",
+     "leveys": 4030,
+     "korkeus": 2877,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q649250",
+   "nimi": "Ontarion kuninkaallinen museo",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 43.66757,
+   "lon": -79.39468,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Royal Ontario Museum in Fall 2021.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Royal_Ontario_Museum_in_Fall_2021.jpg?width=1280",
+     "tekija": "Maksim Sokolov (Maxergon)",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Royal_Ontario_Museum_in_Fall_2021.jpg",
+     "selite": "Ontarion kuninkaallisen museon vanha kivisiipi ja lasista rakennettu kristallilaajennus kohtaavat Bloor Streetillä.",
+     "leveys": 9197,
+     "korkeus": 5632,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Exterior of the Michael Lee-Chin Crystal, September 2008.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Exterior_of_the_Michael_Lee-Chin_Crystal%2C_September_2008.jpg?width=1280",
+     "tekija": "– Wladyslaw [Disk.]",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Exterior_of_the_Michael_Lee-Chin_Crystal%2C_September_2008.jpg",
+     "selite": "Daniel Libeskindin kristalliosa on kulmikasta lasia ja alumiinia.",
+     "leveys": 1881,
+     "korkeus": 1691,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q670250",
+   "nimi": "Ontarion taidegalleria",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 43.65361,
+   "lon": -79.39278,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Frank Gehry Art Gallery of Ontario Toronto, Canada.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Frank_Gehry_Art_Gallery_of_Ontario_Toronto%2C_Canada.jpg?width=1280",
+     "tekija": "dimitri",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Frank_Gehry_Art_Gallery_of_Ontario_Toronto%2C_Canada.jpg",
+     "selite": "Ontarion taidegalleria on Frank Gehryn laajentama museo, jonka julkisivua kehystää lasi ja puu.",
+     "leveys": 8579,
+     "korkeus": 1927,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Art Gallery of Ontario overlooking Grange.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Art_Gallery_of_Ontario_overlooking_Grange.jpg?width=1280",
+     "tekija": "Jamie from Toronto, ON",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Art_Gallery_of_Ontario_overlooking_Grange.jpg",
+     "selite": "Galleria avautuu Grange Parkin laidalle sinisen julkisivun kera.",
+     "leveys": 1200,
+     "korkeus": 900,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1093941",
+   "nimi": "Toronton kaupungintalo",
+   "peruste": "pelin nosto",
+   "koko_m": 200,
+   "lat": 43.65333,
+   "lon": -79.38389,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Toronto - ON - Rathaus und Nathan Phillips Square.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Toronto_-_ON_-_Rathaus_und_Nathan_Phillips_Square.jpg?width=1280",
+     "tekija": "Taxiarchos228",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Toronto_-_ON_-_Rathaus_und_Nathan_Phillips_Square.jpg",
+     "selite": "Toronton uusi kaupungintalo koostuu kahdesta kaarevasta tornista Nathan Phillips Squaren laidalla.",
+     "leveys": 5832,
+     "korkeus": 2928,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "A view from Toronto City Hall on May 21, 2022.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/A_view_from_Toronto_City_Hall_on_May_21%2C_2022.jpg?width=1280",
+     "tekija": "Maksim Sokolov (maxergon.com)",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:A_view_from_Toronto_City_Hall_on_May_21%2C_2022.jpg",
+     "selite": "Aukion toisella puolella on vanha kaupungintalo kellotorneineen.",
+     "leveys": 9504,
+     "korkeus": 6336,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q76318",
+   "nimi": "Rogers Centre",
+   "peruste": "sitelinks",
+   "koko_m": 250,
+   "lat": 43.64139,
+   "lon": -79.38917,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Rogers Centre.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Rogers_Centre.jpg?width=1280",
+     "tekija": "Fabian Roudra Baroi",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Rogers_Centre.jpg",
+     "selite": "Rogers Centre on stadion, jonka katto voidaan avata ja sulkea.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Toronto - ON - Rogers Centre (Nacht).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Toronto_-_ON_-_Rogers_Centre_(Nacht).jpg?width=1280",
+     "tekija": "Wladyslaw",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Toronto_-_ON_-_Rogers_Centre_(Nacht).jpg",
+     "selite": "Illalla stadionin kupoli hohtaa sinisenä CN Towerin vieressä.",
+     "leveys": 3746,
+     "korkeus": 2173,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q248110",
+   "nimi": "Toronton saaret",
+   "peruste": "sitelinks",
+   "koko_m": 4000,
+   "lat": 43.62083,
+   "lon": -79.37861,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Toronto Islands, Toronto, Ontario (29920011511).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Toronto_Islands%2C_Toronto%2C_Ontario_(29920011511).jpg?width=1280",
+     "tekija": "Ken Lund from Reno, Nevada, USA",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Toronto_Islands%2C_Toronto%2C_Ontario_(29920011511).jpg",
+     "selite": "Toronton saaret ovat Ontario-järven niemi ja saaristo aivan keskustan edessä.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Centre Island Beach aka Manitou Beach, Toronto Islands 2026.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Centre_Island_Beach_aka_Manitou_Beach%2C_Toronto_Islands_2026.jpg?width=1280",
+     "tekija": "Chicken4War",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Centre_Island_Beach_aka_Manitou_Beach%2C_Toronto_Islands_2026.jpg",
+     "selite": "Centre Islandin hiekkaranta on suosittu kesäpaikka kaupunkilaisille.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q934422",
+   "nimi": "Distillery District",
+   "peruste": "pelin nosto",
+   "koko_m": 400,
+   "lat": 43.6506,
+   "lon": -79.3597,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Distillery District, looking northeast 2026.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Distillery_District%2C_looking_northeast_2026.jpg?width=1280",
+     "tekija": "Chicken4War",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Distillery_District%2C_looking_northeast_2026.jpg",
+     "selite": "Distillery District on vanhan viskitehtaan tiilirakennuksista syntynyt kävelykortteli.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Toronto's Distillery District in 2014 (13955526085).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Toronto's_Distillery_District_in_2014_(13955526085).jpg?width=1280",
+     "tekija": "Daniel Thornton",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Toronto's_Distillery_District_in_2014_(13955526085).jpg",
+     "selite": "Punatiiliset tehdasrakennukset ovat nyt kahviloita ja taidegallerioita.",
+     "leveys": 3000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q204083",
+   "nimi": "Fort York",
+   "peruste": "pelin nosto",
+   "koko_m": 300,
+   "lat": 43.63889,
+   "lon": -79.40361,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Fort York east blockhouse 3.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Fort_York_east_blockhouse_3.jpg?width=1280",
+     "tekija": "Secondarywaltz",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Fort_York_east_blockhouse_3.jpg",
+     "selite": "Fort Yorkin itäinen puolustusmaja on osa vanhaa linnaketta, jonka ympärille kaupunki syntyi.",
+     "leveys": 1600,
+     "korkeus": 1200,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Fort York blockhouse, east end of fort - panoramio.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Fort_York_blockhouse%2C_east_end_of_fort_-_panoramio.jpg?width=1280",
+     "tekija": "Stephen Allen",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Fort_York_blockhouse%2C_east_end_of_fort_-_panoramio.jpg",
+     "selite": "Valkoiset puutiilirakennukset seisovat nurmikon keskellä lähellä uusia tornitaloja.",
+     "leveys": 2048,
+     "korkeus": 1536,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3195260",
+   "nimi": "Kensingtonin tori",
+   "peruste": "pelin nosto",
+   "koko_m": 300,
+   "lat": 43.65477,
+   "lon": -79.40068,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Kensington Market Toronto August 2017 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kensington_Market_Toronto_August_2017_01.jpg?width=1280",
+     "tekija": "Arild Vågen",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kensington_Market_Toronto_August_2017_01.jpg",
+     "selite": "Kensington Market on värikäs kauppa- ja katuruokakaupunginosa Torontossa.",
+     "leveys": 5748,
+     "korkeus": 3233,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Buildings in Kensington Market, Toronto 2026.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Buildings_in_Kensington_Market%2C_Toronto_2026.jpg?width=1280",
+     "tekija": "Chicken4War",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Buildings_in_Kensington_Market%2C_Toronto_2026.jpg",
+     "selite": "Katujen varrella on pieniä kauppoja ja graffitein koristettuja taloja.",
+     "leveys": 5759,
+     "korkeus": 3926,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3551334",
+   "nimi": "University College",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 43.6629,
+   "lon": -79.39569,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Toronto University College 1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Toronto_University_College_1.jpg?width=1280",
+     "tekija": "GoginkLobabi",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Toronto_University_College_1.jpg",
+     "selite": "University College on Toronton yliopiston vanhin rakennus, ja sen romaaninen julkisivu avautuu nurmikentälle.",
+     "leveys": 4160,
+     "korkeus": 2336,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "University College Portal (University of Toronto).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/University_College_Portal_(University_of_Toronto).jpg?width=1280",
+     "tekija": "Maksim Sokolov (maxergon.com)",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:University_College_Portal_(University_of_Toronto).jpg",
+     "selite": "Portaalin koristeellinen kaari on esimerkki rakennuksen kivityöstä.",
+     "leveys": 3835,
+     "korkeus": 5752,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1136687",
+   "nimi": "Hockey Hall of Fame",
+   "peruste": "sitelinks",
+   "koko_m": 80,
+   "lat": 43.64694,
+   "lon": -79.37722,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Hockey Hall of Fame in Toronto.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hockey_Hall_of_Fame_in_Toronto.jpg?width=1280",
+     "tekija": "Dpalma01",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Hockey_Hall_of_Fame_in_Toronto.jpg",
+     "selite": "Jääkiekkomuseo toimii vanhassa pankkirakennuksessa, jonka julkisivu on koristeellista kiveä.",
+     "leveys": 3498,
+     "korkeus": 2587,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Hockey Hall of Fame, Toronto, Ontario, 2025-08-25.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hockey_Hall_of_Fame%2C_Toronto%2C_Ontario%2C_2025-08-25.jpg?width=1280",
+     "tekija": "Chris Woodrich",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Hockey_Hall_of_Fame%2C_Toronto%2C_Ontario%2C_2025-08-25.jpg",
+     "selite": "Rakennus erottuu lasitorneista Front Streetin ja Yongen kulmassa.",
+     "leveys": 5396,
+     "korkeus": 3854,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q511316",
+   "nimi": "Union Station",
+   "peruste": "pelin nosto",
+   "koko_m": 250,
+   "lat": 43.64528,
+   "lon": -79.38056,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Toronto ON Union-Station Great-Hall 2019-04-01 (2).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Toronto_ON_Union-Station_Great-Hall_2019-04-01_(2).jpg?width=1280",
+     "tekija": "Milan Suvajac",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Toronto_ON_Union-Station_Great-Hall_2019-04-01_(2).jpg",
+     "selite": "Union Stationin Great Hall on rautatieaseman suuri kivinen odotussali.",
+     "leveys": 4288,
+     "korkeus": 2848,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Toronto ON Union-Station Great-Hall 2019-04-01 (6).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Toronto_ON_Union-Station_Great-Hall_2019-04-01_(6).jpg?width=1280",
+     "tekija": "Milan Suvajac",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Toronto_ON_Union-Station_Great-Hall_2019-04-01_(6).jpg",
+     "selite": "Salin korkeat ikkunat ja kello ovat aseman tunnusmerkkejä.",
+     "leveys": 4288,
+     "korkeus": 2848,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q5360073",
+   "nimi": "Elgin ja Winter Garden -teatterit",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": 43.6531,
+   "lon": -79.3792,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Elgin Theatre Toronto 18078451842.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Elgin_Theatre_Toronto_18078451842.jpg?width=1280",
+     "tekija": "Amanda N Sherrington",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Elgin_Theatre_Toronto_18078451842.jpg",
+     "selite": "Elgin-teatteri on kullalla koristeltu katsomo, joka kuuluu Yongen kadun kahden päällekkäisen teatterin pariin.",
+     "leveys": 4948,
+     "korkeus": 2867,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Toronto - ON - Toronto Skyline2.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Toronto_-_ON_-_Toronto_Skyline2.jpg?width=1280",
+   "tekija": "Taxiarchos228",
+   "lisenssi": "CC BY-SA 3.0",
+   "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Toronto_-_ON_-_Toronto_Skyline2.jpg",
+   "selite": "Toronton keskusta ja CN Tower kohoavat Ontario-järven rannalla.",
+   "leveys": 3638,
+   "korkeus": 2452,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Toronto Skyline from the Toronto Islands Airport Ferry.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Toronto_Skyline_from_the_Toronto_Islands_Airport_Ferry.jpg?width=1280",
+   "tekija": "elPadawan",
+   "lisenssi": "CC BY-SA 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Toronto_Skyline_from_the_Toronto_Islands_Airport_Ferry.jpg",
+   "selite": "Lautalta katsottuna satama ja keskustan tornit näkyvät veden takana.",
+   "leveys": 3648,
+   "korkeus": 2736,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

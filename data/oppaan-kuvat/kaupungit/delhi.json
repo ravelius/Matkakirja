@@ -1,0 +1,669 @@
+{
+ "kaupunki": "delhi",
+ "kaupunkiQ": "Q1353",
+ "kohteet": [
+  {
+   "q": "Q45957",
+   "nimi": "Punainen linnoitus",
+   "peruste": "UNESCO",
+   "koko_m": 700,
+   "lat": 28.65583,
+   "lon": 77.24028,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Lahori Gate (Red Fort), Delhi, India (2017).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lahori_Gate_(Red_Fort)%2C_Delhi%2C_India_(2017).jpg?width=1280",
+     "tekija": "Lucky181993",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Lahori_Gate_(Red_Fort)%2C_Delhi%2C_India_(2017).jpg",
+     "selite": "Lahorin portti on linnoituksen pääsisäänkäynti, jonka edessä Intian pääministeri pitää itsenäisyyspäivän puheen.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Lahori Gate, Red Fort, Delhi - Lit up at night.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lahori_Gate%2C_Red_Fort%2C_Delhi_-_Lit_up_at_night.jpg?width=1280",
+     "tekija": "Ronakshah1990",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Lahori_Gate%2C_Red_Fort%2C_Delhi_-_Lit_up_at_night.jpg",
+     "selite": "Linnoituksen muurit ja Lahorin portti valaistaan iltaisin.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Delhi, India, Interiors of Red Fort, Mughal architecture.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Delhi%2C_India%2C_Interiors_of_Red_Fort%2C_Mughal_architecture.jpg?width=1280",
+     "tekija": "Vyacheslav Argenberg",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Delhi%2C_India%2C_Interiors_of_Red_Fort%2C_Mughal_architecture.jpg",
+     "selite": "Linnoituksen sisällä mogulien hovirakennusten holvikaaret ja pilarit ovat punaista hiekkakiveä ja marmoria.",
+     "leveys": 3072,
+     "korkeus": 2048,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q189648",
+   "nimi": "Humayunin mausoleumi",
+   "peruste": "UNESCO",
+   "koko_m": 300,
+   "lat": 28.59326,
+   "lon": 77.2506,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Humayun Tomb UNESCO world heritage site.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Humayun_Tomb_UNESCO_world_heritage_site.jpg?width=1280",
+     "tekija": "Anshrastogi1",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Humayun_Tomb_UNESCO_world_heritage_site.jpg",
+     "selite": "Humayunin hauta on ensimmäinen puutarhahauta Intiassa ja Taj Mahalin tärkeä esikuva.",
+     "leveys": 1280,
+     "korkeus": 960,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Angular picture of Humayun Tomb.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Angular_picture_of_Humayun_Tomb.jpg?width=1280",
+     "tekija": "Anshrastogi1",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Angular_picture_of_Humayun_Tomb.jpg",
+     "selite": "Punaista hiekkakiveä ja valkoista marmoria yhdistävä mausoleumi nousee korkealle jalustalle.",
+     "leveys": 1280,
+     "korkeus": 960,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Approach to Humayun's tomb.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Approach_to_Humayun's_tomb.jpg?width=1280",
+     "tekija": "Sudipta Maulik",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Approach_to_Humayun's_tomb.jpg",
+     "selite": "Mausoleumia ympäröi suuri neliöpohjainen puutarha, joka on jaettu kanaviksi ja kävelyteiksi.",
+     "leveys": 4500,
+     "korkeus": 3000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q187635",
+   "nimi": "Qutb Minar",
+   "peruste": "sitelinks",
+   "koko_m": 200,
+   "aliakset": [
+    "Q1074330"
+   ],
+   "lat": 28.52435,
+   "lon": 77.18525,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "A Potrait view of Qutub Minar.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/A_Potrait_view_of_Qutub_Minar.jpg?width=1280",
+     "tekija": "IM3847",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:A_Potrait_view_of_Qutub_Minar.jpg",
+     "selite": "Qutb Minar on Delhin sulttaanikunnan aikainen tiiliminareetti ja yksi maailman korkeimmista.",
+     "leveys": 3264,
+     "korkeus": 2448,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Qutab Minar in Delhi.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Qutab_Minar_in_Delhi.jpg?width=1280",
+     "tekija": "Jan Kranendonk (https://www.jankranendonk.nl)",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Qutab_Minar_in_Delhi.jpg",
+     "selite": "Minareetin ympärillä on Qutbin kompleksin raunioita ja holvikaaria.",
+     "leveys": 2776,
+     "korkeus": 1824,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Panorama of qutub complex.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Panorama_of_qutub_complex.jpg?width=1280",
+     "tekija": "Sabaaya",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Panorama_of_qutub_complex.jpg",
+     "selite": "Qutbin kompleksi on yksi Delhin vanhimmista islamilaisista rakennusryhmistä.",
+     "leveys": 3745,
+     "korkeus": 1532,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 4,
+     "tiedosto": "Husn-e-azal.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Husn-e-azal.jpg?width=1280",
+     "tekija": "Ksheera Piraati",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Husn-e-azal.jpg",
+     "selite": "Minareetin pinnan koristeena on kaiverrettuja koraanijakeita ja geometrisia kuvioita.",
+     "leveys": 1296,
+     "korkeus": 864,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q233678",
+   "nimi": "Jama Masjid",
+   "peruste": "pelin nosto",
+   "koko_m": 250,
+   "lat": 28.65083,
+   "lon": 77.23306,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "20191203 Wielki Meczet w Delhi 0700 6459 DxO.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20191203_Wielki_Meczet_w_Delhi_0700_6459_DxO.jpg?width=1280",
+     "tekija": "Jakub Hałun",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20191203_Wielki_Meczet_w_Delhi_0700_6459_DxO.jpg",
+     "selite": "Jama Masjid on Intian suurimpia moskeijoita, ja sen kaksi minarettia kohoavat vanhan Delhin ylle.",
+     "leveys": 5605,
+     "korkeus": 3726,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "20191203 Wielki Meczet w Delhi 0706 6463 DxO.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20191203_Wielki_Meczet_w_Delhi_0706_6463_DxO.jpg?width=1280",
+     "tekija": "Jakub Hałun",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20191203_Wielki_Meczet_w_Delhi_0706_6463_DxO.jpg",
+     "selite": "Moskeijan valkoiset ja mustaraidalliset kupolit kohoavat punahiekkakivisten seinien yläpuolelle.",
+     "leveys": 5632,
+     "korkeus": 3532,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "20191203 Wschodnia brama Wielkiego Meczetu w Delhi 0712 6475 DxO.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20191203_Wschodnia_brama_Wielkiego_Meczetu_w_Delhi_0712_6475_DxO.jpg?width=1280",
+     "tekija": "Jakub Hałun",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20191203_Wschodnia_brama_Wielkiego_Meczetu_w_Delhi_0712_6475_DxO.jpg",
+     "selite": "Moskeijan laaja sisäpiha ja portti, jonka kautta rukoilijat tulevat sisään.",
+     "leveys": 4762,
+     "korkeus": 3166,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 4,
+     "tiedosto": "Jama Masjid during Sunset.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Jama_Masjid_during_Sunset.jpg?width=1280",
+     "tekija": "Sreejit Ghosh",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Jama_Masjid_during_Sunset.jpg",
+     "selite": "Jama Masjidin siluetti piirtyy auringonlaskua vasten Shahjahanabadin yllä.",
+     "leveys": 2364,
+     "korkeus": 1330,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q245347",
+   "nimi": "India Gate",
+   "peruste": "sitelinks",
+   "koko_m": 120,
+   "lat": 28.61286,
+   "lon": 77.22931,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "India Gate (28499552612).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/India_Gate_(28499552612).jpg?width=1280",
+     "tekija": "Ashwin Kumar from Bangalore, India",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:India_Gate_(28499552612).jpg",
+     "selite": "India Gate on ensimmäisessä maailmansodassa kaatuneiden intialaissotilaiden muistomerkki.",
+     "leveys": 4928,
+     "korkeus": 3264,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "India Gate - Full view.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/India_Gate_-_Full_view.jpg?width=1280",
+     "tekija": "Vinayakaprabhu",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:India_Gate_-_Full_view.jpg",
+     "selite": "Muistomerkki seisoo Kartavya Pathin päässä Uuden Delhin seremoniallisella akselilla.",
+     "leveys": 5184,
+     "korkeus": 3888,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "India Gate (157857267).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/India_Gate_(157857267).jpg?width=1280",
+     "tekija": "Chaitanya Bhagwat",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:India_Gate_(157857267).jpg",
+     "selite": "Portin edessä on pitkä vesiallas ja nurmikkoa, jossa delhiläiset viettävät iltoja.",
+     "leveys": 2048,
+     "korkeus": 1365,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 4,
+     "tiedosto": "India Gate (sculptures on sides).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/India_Gate_(sculptures_on_sides).jpg?width=1280",
+     "tekija": "AKS.9955",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:India_Gate_(sculptures_on_sides).jpg",
+     "selite": "Portin yläosassa ja kupeissa on kivikoristeita ja kaiverrettuja nimiä.",
+     "leveys": 4965,
+     "korkeus": 3311,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q940843",
+   "nimi": "Lootustemppeli",
+   "peruste": "sitelinks",
+   "koko_m": 120,
+   "lat": 28.55333,
+   "lon": 77.2586,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Lotus Temple-Panoroma-Visit During WCI 2016- IMG 6471.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lotus_Temple-Panoroma-Visit_During_WCI_2016-_IMG_6471.jpg?width=1280",
+     "tekija": "Bijay chaurasia",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Lotus_Temple-Panoroma-Visit_During_WCI_2016-_IMG_6471.jpg",
+     "selite": "Lootustemppeli on bahai-uskon pyhäkkö, jonka marmorikuoret muodostavat avautuvan lootuksen.",
+     "leveys": 7929,
+     "korkeus": 4324,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "The Lotus temple in Delhi, India (11).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/The_Lotus_temple_in_Delhi%2C_India_(11).jpg?width=1280",
+     "tekija": "Shagil Kannur",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:The_Lotus_temple_in_Delhi%2C_India_(11).jpg",
+     "selite": "Rakennuksen yhdeksän ulkonevaa terälehteä on verhoiltu valkoisella marmorilla.",
+     "leveys": 4176,
+     "korkeus": 2784,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "A view of Lotus Temple, Kalkaji, Delhi.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/A_view_of_Lotus_Temple%2C_Kalkaji%2C_Delhi.jpg?width=1280",
+     "tekija": "Abuh98",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:A_view_of_Lotus_Temple%2C_Kalkaji%2C_Delhi.jpg",
+     "selite": "Temppeliä ympäröivät puutarhat ja nurmikot, joissa vierailijat kävelevät.",
+     "leveys": 1800,
+     "korkeus": 2188,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3236763",
+   "nimi": "Chandni Chowk",
+   "peruste": "pelin nosto",
+   "koko_m": 600,
+   "lat": 28.65596,
+   "lon": 77.23392,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Chandni Chowk, Old Delhi, India - September 2014.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Chandni_Chowk%2C_Old_Delhi%2C_India_-_September_2014.jpg?width=1280",
+     "tekija": "Rickard Törnblad",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Chandni_Chowk%2C_Old_Delhi%2C_India_-_September_2014.jpg",
+     "selite": "Chandni Chowk on Vanhan Delhin pääkatu, joka johtaa Punaiselta linnoitukselta länteen.",
+     "leveys": 4128,
+     "korkeus": 2322,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "View of Chandni Chowk, Old Delhi, India - September 2014.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/View_of_Chandni_Chowk%2C_Old_Delhi%2C_India_-_September_2014.jpg?width=1280",
+     "tekija": "Rickard Törnblad",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:View_of_Chandni_Chowk%2C_Old_Delhi%2C_India_-_September_2014.jpg",
+     "selite": "Kadun varrella tiheät kauppakujat ja vanhat talot muodostavat Delhin vilkkaimman basaarialueen.",
+     "leveys": 4128,
+     "korkeus": 2322,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q677555",
+   "nimi": "Rashtrapati Bhavan",
+   "peruste": "sitelinks",
+   "koko_m": 600,
+   "lat": 28.61434,
+   "lon": 77.1998,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Rashtrapati Bhavan-2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Rashtrapati_Bhavan-2.jpg?width=1280",
+     "tekija": "This image was produced by me, David Castor (user:dcastor). The pictures I submit to the Wikipedia Project are released to the public domain. This gives you the right to use them in any way you like, without any kind of notification. This said, I would still appreciate to be mentioned as the originator whenever you think it complies well with your use of the picture. A message to me about how it has been used would also be welcome. You are obviously not required to respond to these wishes of mine, just in a friendly manner encouraged to. (All my photos are placed in Category:Images by David Castor or a subcategory thereof.)",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Rashtrapati_Bhavan-2.jpg",
+     "selite": "Rashtrapati Bhavan on Intian presidentin virka-asunto, jota edeltää korkea Jaipur-pylväs.",
+     "leveys": 2982,
+     "korkeus": 2030,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Back of Rashtrapati Bhavan, New Delhi.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Back_of_Rashtrapati_Bhavan%2C_New_Delhi.jpg?width=1280",
+     "tekija": "Tamjeed Ahmed",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Back_of_Rashtrapati_Bhavan%2C_New_Delhi.jpg",
+     "selite": "Rakennuksen takana avautuu Mogulpuutarhojen tunnettu puutarhakokonaisuus.",
+     "leveys": 2936,
+     "korkeus": 2582,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1849858",
+   "nimi": "Akshardham",
+   "peruste": "sitelinks",
+   "koko_m": 300,
+   "lat": 28.6125,
+   "lon": 77.2773,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Delhi Akshardham Temple.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Delhi_Akshardham_Temple.JPG?width=1280",
+     "tekija": "Balurbala",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Delhi_Akshardham_Temple.JPG",
+     "selite": "Akshardham on 2000-luvun alussa valmistunut hindutemppelikompleksi Jamunan rannalla.",
+     "leveys": 4307,
+     "korkeus": 2498,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q375624",
+   "nimi": "Safdarjungin hauta",
+   "peruste": "sitelinks",
+   "koko_m": 250,
+   "lat": 28.58929,
+   "lon": 77.21061,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "PXL 20231130 040034562 Safdarjung Tomb, Delhi 20.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/PXL_20231130_040034562_Safdarjung_Tomb%2C_Delhi_20.jpg?width=1280",
+     "tekija": "Sourabh.biswas003",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:PXL_20231130_040034562_Safdarjung_Tomb%2C_Delhi_20.jpg",
+     "selite": "Safdarjungin hauta on yksi viimeisistä Mogulien puutarhahaudoista Delhissä.",
+     "leveys": 4080,
+     "korkeus": 3072,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Safdarjung 24 14.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Safdarjung_24_14.jpg?width=1280",
+     "tekija": "Rangan Datta Wiki",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Safdarjung_24_14.jpg",
+     "selite": "Hautarakennuksen kupoleja ja ympäröivän puutarhan muureja.",
+     "leveys": 4642,
+     "korkeus": 3075,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1151529",
+   "nimi": "Purana Qila",
+   "peruste": "sitelinks",
+   "koko_m": 700,
+   "lat": 28.60944,
+   "lon": 77.24417,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Purana Qila, Delhi 3.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Purana_Qila%2C_Delhi_3.jpg?width=1280",
+     "tekija": "Slyronit",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Purana_Qila%2C_Delhi_3.jpg",
+     "selite": "Purana Qilan Qila-i-Kuhna-moskeija on säilynyt linnoituksen keskeisimpänä rakennuksena.",
+     "leveys": 6026,
+     "korkeus": 3996,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Purana Qila, Delhi 2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Purana_Qila%2C_Delhi_2.jpg?width=1280",
+     "tekija": "Slyronit",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Purana_Qila%2C_Delhi_2.jpg",
+     "selite": "Sher Mandal on linnoituksen alueella oleva kahdeksankulmainen punahiekkakivinen paviljonki.",
+     "leveys": 6012,
+     "korkeus": 3992,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2985076",
+   "nimi": "Lodhin puutarha",
+   "peruste": "sitelinks",
+   "koko_m": 600,
+   "lat": 28.59444,
+   "lon": 77.22,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Tomb of Mohammed Shah (Lodhi Garden).JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tomb_of_Mohammed_Shah_(Lodhi_Garden).JPG?width=1280",
+     "tekija": "Lucido22",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tomb_of_Mohammed_Shah_(Lodhi_Garden).JPG",
+     "selite": "Lodhin puutarhan hautamonumentit ovat 1400- ja 1500-luvun sulttaanien aikaisia.",
+     "leveys": 4546,
+     "korkeus": 3030,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Lodhi Garden Tomb 2019.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lodhi_Garden_Tomb_2019.jpg?width=1280",
+     "tekija": "Tarun Kumar Sambhariya",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Lodhi_Garden_Tomb_2019.jpg",
+     "selite": "Puutarhan kupolihaudat ovat suosittu kävelykohde Delhin keskustassa.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1210083",
+   "nimi": "Raj Ghat",
+   "peruste": "sitelinks",
+   "koko_m": 300,
+   "lat": 28.64055,
+   "lon": 77.24943,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Raj Ghat – Memorial of Mahatma Gandhi.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Raj_Ghat_%E2%80%93_Memorial_of_Mahatma_Gandhi.jpg?width=1280",
+     "tekija": "Mbigul",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Raj_Ghat_%E2%80%93_Memorial_of_Mahatma_Gandhi.jpg",
+     "selite": "Raj Ghat on Mahatma Gandhin polttopaikan muistomerkki Jamunan rannalla.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Mahatma Gandhi memorial in Raj Ghat (54350002978).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mahatma_Gandhi_memorial_in_Raj_Ghat_(54350002978).jpg?width=1280",
+     "tekija": "Mustang Joe",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mahatma_Gandhi_memorial_in_Raj_Ghat_(54350002978).jpg",
+     "selite": "Musta marmorilaatta on aina koristeltu kukkaseppeleillä.",
+     "leveys": 6016,
+     "korkeus": 4016,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2045115",
+   "nimi": "Jantar Mantar",
+   "peruste": "sitelinks",
+   "koko_m": 100,
+   "lat": 28.62711,
+   "lon": 77.21648,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Jantar Mantar New Delhi.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Jantar_Mantar_New_Delhi.jpg?width=1280",
+     "tekija": "Subeesh Balan സുഭീഷ് ബാലൻ",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Jantar_Mantar_New_Delhi.jpg",
+     "selite": "Delhin Jantar Mantar on 1700-luvun tähtitieteellinen observatorio, jossa on suuria kivisiä mittalaitteita.",
+     "leveys": 3648,
+     "korkeus": 2736,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2511605",
+   "nimi": "Tughlaqabadin linnake",
+   "peruste": "sitelinks",
+   "koko_m": 1000,
+   "lat": 28.51461,
+   "lon": 77.25997,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "A King's View.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/A_King's_View.JPG?width=1280",
+     "tekija": "Shannon.Mathew",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:A_King's_View.JPG",
+     "selite": "Tughlaqabadin linnoituksen rauniot on rakennettu Delhin sulttaanikunnan aikana.",
+     "leveys": 4898,
+     "korkeus": 3265,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Outside view of Tughlaqabad Fort in Tughlakabad 05.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Outside_view_of_Tughlaqabad_Fort_in_Tughlakabad_05.jpg?width=1280",
+     "tekija": "Pinakpani",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Outside_view_of_Tughlaqabad_Fort_in_Tughlakabad_05.jpg",
+     "selite": "Linnoituksen paksut louhikiviset muurit kallistuvat vinosti sisäänpäin.",
+     "leveys": 4128,
+     "korkeus": 2322,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Delhi skyline (1580799275).jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Delhi_skyline_(1580799275).jpg?width=1280",
+   "tekija": "Francisco Anzola",
+   "lisenssi": "CC BY 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Delhi_skyline_(1580799275).jpg",
+   "selite": "Vanhan Delhin kattojen ja talojen sekainen merimaisema.",
+   "leveys": 1889,
+   "korkeus": 1408,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Skyline of Cannaught Place, New Delhi.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Skyline_of_Cannaught_Place%2C_New_Delhi.jpg?width=1280",
+   "tekija": "Whoeverblocksmeisamotherfu*ker",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Skyline_of_Cannaught_Place%2C_New_Delhi.jpg",
+   "selite": "Uuden Delhin Connaught Placen korkeat rakennukset kohoavat sumuisen kaupungin ylle.",
+   "leveys": 1300,
+   "korkeus": 866,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

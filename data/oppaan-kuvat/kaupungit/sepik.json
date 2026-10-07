@@ -1,0 +1,157 @@
+{
+ "kaupunki": "sepik",
+ "kaupunkiQ": "Q848308",
+ "pieniAlue": true,
+ "kohteet": [
+  {
+   "q": "Q848308",
+   "nimi": "Sepik-joki",
+   "peruste": "sitelinks",
+   "koko_m": 3000,
+   "lat": -3.84233,
+   "lon": 144.53888,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Sepik River IMG 2197.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sepik_River_IMG_2197.jpg?width=1280",
+     "tekija": "David Bacon",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Sepik_River_IMG_2197.jpg",
+     "selite": "Sepik-joen sivuhaara kiemurtelee banaanipuiden ja paalutalojen ohi.",
+     "leveys": 2816,
+     "korkeus": 2112,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Sepik River IMG 2097.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sepik_River_IMG_2097.jpg?width=1280",
+     "tekija": "David Bacon",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Sepik_River_IMG_2097.jpg",
+     "selite": "Joen rannalla lepäävät kaivetut kanootit, joilla kuljetaan kylästä toiseen.",
+     "leveys": 2816,
+     "korkeus": 2112,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Sepik River IMG 2119.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sepik_River_IMG_2119.jpg?width=1280",
+     "tekija": "David Bacon",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Sepik_River_IMG_2119.jpg",
+     "selite": "Jättipuu varjostaa jokirantaa, jonka kyläläiset rakentavat tulvia varten korkealle.",
+     "leveys": 2816,
+     "korkeus": 2112,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 4,
+     "tiedosto": "Sepik River IMG 2225.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sepik_River_IMG_2225.jpg?width=1280",
+     "tekija": "David Bacon",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Sepik_River_IMG_2225.jpg",
+     "selite": "Aurinko laskee Sepikin laajan joenmutkan ja rantaruohikon taakse.",
+     "leveys": 2816,
+     "korkeus": 2112,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q690880",
+   "nimi": "Itä-Sepik",
+   "peruste": "sitelinks",
+   "koko_m": 3000,
+   "lat": -4.33333,
+   "lon": 143.25,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Men's house in Tambunum village, Sepik River, Papua New Guinea (side view).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Men's_house_in_Tambunum_village%2C_Sepik_River%2C_Papua_New_Guinea_(side_view).jpg?width=1280",
+     "tekija": "Eksilverman",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Men's_house_in_Tambunum_village%2C_Sepik_River%2C_Papua_New_Guinea_(side_view).jpg",
+     "selite": "Tambunumin miestentalo on Sepikin kylien suurin ja koristeltu rakennus.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Chambri Lake.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Chambri_Lake.jpg?width=1280",
+     "tekija": "Weli'mi'nakwan",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Chambri_Lake.jpg",
+     "selite": "Chambrijärven rannalta avautuu näkymä laajalle matalalle vesialueelle ja vuorelle.",
+     "leveys": 1280,
+     "korkeus": 960,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Men's house in Tambunum village, Sepik River, Papua New Guinea (close up of spirit face).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Men's_house_in_Tambunum_village%2C_Sepik_River%2C_Papua_New_Guinea_(close_up_of_spirit_face).jpg?width=1280",
+     "tekija": "Eksilverman",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Men's_house_in_Tambunum_village%2C_Sepik_River%2C_Papua_New_Guinea_(close_up_of_spirit_face).jpg",
+     "selite": "Talon päätyyn on veistetty esi-isän hengen kasvot.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1017763",
+   "nimi": "Wewak",
+   "peruste": "sitelinks",
+   "koko_m": 800,
+   "lat": -3.55,
+   "lon": 143.63333,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Wewak MG 3646.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Wewak_MG_3646.jpg?width=1280",
+     "tekija": "David Bacon",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Wewak_MG_3646.jpg",
+     "selite": "Wewak on Itä-Sepikin maakunnan pääkaupunki ja satamakaupunki Bismarckinmeren rannalla.",
+     "leveys": 2048,
+     "korkeus": 1536,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Sepik River IMG 2117.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sepik_River_IMG_2117.jpg?width=1280",
+   "tekija": "David Bacon",
+   "lisenssi": "CC BY 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Sepik_River_IMG_2117.jpg",
+   "selite": "Sepik-joen rannalla kylän olkikattoiset talot nousevat suoraan vedestä.",
+   "leveys": 2816,
+   "korkeus": 2112,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

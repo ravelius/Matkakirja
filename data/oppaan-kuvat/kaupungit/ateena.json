@@ -1,0 +1,679 @@
+{
+ "kaupunki": "ateena",
+ "kaupunkiQ": "Q1524",
+ "kohteet": [
+  {
+   "q": "Q131013",
+   "nimi": "Akropolis",
+   "peruste": "UNESCO",
+   "koko_m": 400,
+   "lat": 37.97167,
+   "lon": 23.72611,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Attica 06-13 Athens 50 View from Philopappos - Acropolis Hill.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Attica_06-13_Athens_50_View_from_Philopappos_-_Acropolis_Hill.jpg?width=1280",
+     "tekija": "A.Savin",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Attica_06-13_Athens_50_View_from_Philopappos_-_Acropolis_Hill.jpg",
+     "selite": "Akropolis on Ateenan keskellä kohoava kalliolinna, jolla antiikin Ateenan tärkeimmät temppelit sijaitsevat.",
+     "leveys": 5000,
+     "korkeus": 3125,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "The Acropolis of Athens from the Pnyx on March 2, 2020.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/The_Acropolis_of_Athens_from_the_Pnyx_on_March_2%2C_2020.jpg?width=1280",
+     "tekija": "George E. Koronaios",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:The_Acropolis_of_Athens_from_the_Pnyx_on_March_2%2C_2020.jpg",
+     "selite": "Illan hämärässä valaistu linnavuori näkyy kauas Pnyx-kukkulalle.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "+ 1987 wurde die Akropolis Athens Teil des UNESCO-Welterbes. 08.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%2B_1987_wurde_die_Akropolis_Athens_Teil_des_UNESCO-Welterbes._08.jpg?width=1280",
+     "tekija": "Holger Uwe Schmitt",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%2B_1987_wurde_die_Akropolis_Athens_Teil_des_UNESCO-Welterbes._08.jpg",
+     "selite": "Propylaia-portti on Akropolikselle johtava monumentaalinen sisäänkäynti.",
+     "leveys": 5906,
+     "korkeus": 3434,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q10288",
+   "nimi": "Parthenon",
+   "peruste": "UNESCO",
+   "koko_m": 120,
+   "lat": 37.97153,
+   "lon": 23.7266,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "1010 Parthenon of the Acropolis of Athens Photo by Giles Laurent.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/1010_Parthenon_of_the_Acropolis_of_Athens_Photo_by_Giles_Laurent.jpg?width=1280",
+     "tekija": "Giles Laurent",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:1010_Parthenon_of_the_Acropolis_of_Athens_Photo_by_Giles_Laurent.jpg",
+     "selite": "Parthenon on jumalatar Athenelle omistettu doorilainen marmoritemppeli, joka rakennettiin antiikin kulta-aikana.",
+     "leveys": 8640,
+     "korkeus": 5760,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "1026 Parthenon of the Acropolis of Athens Photo by Giles Laurent.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/1026_Parthenon_of_the_Acropolis_of_Athens_Photo_by_Giles_Laurent.jpg?width=1280",
+     "tekija": "Giles Laurent",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:1026_Parthenon_of_the_Acropolis_of_Athens_Photo_by_Giles_Laurent.jpg",
+     "selite": "Temppelin pitkät pylväsrivit ovat antiikin arkkitehtuurin tunnetuin esikuva.",
+     "leveys": 8640,
+     "korkeus": 5760,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "+ 1987 wurde die Akropolis Athens Teil des UNESCO-Welterbes. 37.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%2B_1987_wurde_die_Akropolis_Athens_Teil_des_UNESCO-Welterbes._37.jpg?width=1280",
+     "tekija": "Holger Uwe Schmitt",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%2B_1987_wurde_die_Akropolis_Athens_Teil_des_UNESCO-Welterbes._37.jpg",
+     "selite": "Temppelin friisin reliefit kuvaavat jumalia ja ihmisiä.",
+     "leveys": 4724,
+     "korkeus": 3149,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q395367",
+   "nimi": "Antiikin agora",
+   "peruste": "pelin nosto",
+   "koko_m": 300,
+   "lat": 37.975,
+   "lon": 23.7225,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Attica 06-13 Athens 22 View from Acropolis Hill - Museum of Ancient Agora.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Attica_06-13_Athens_22_View_from_Acropolis_Hill_-_Museum_of_Ancient_Agora.jpg?width=1280",
+     "tekija": "A.Savin",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Attica_06-13_Athens_22_View_from_Acropolis_Hill_-_Museum_of_Ancient_Agora.jpg",
+     "selite": "Agora oli antiikin Ateenan tori ja yhteiskuntaelämän keskus, ja sen laidalla on rekonstruoitu Attaloksen stoa.",
+     "leveys": 4498,
+     "korkeus": 3345,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "View of the Acropolis of Athens from the Temple of Hephaestus, 20240531 1425 9748.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/View_of_the_Acropolis_of_Athens_from_the_Temple_of_Hephaestus%2C_20240531_1425_9748.jpg?width=1280",
+     "tekija": "Jakub Hałun",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:View_of_the_Acropolis_of_Athens_from_the_Temple_of_Hephaestus%2C_20240531_1425_9748.jpg",
+     "selite": "Agoran raunioilta näkee ylös Akropolikselle.",
+     "leveys": 4820,
+     "korkeus": 3218,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Stoa of Attalos, Ancient Agora, Athens, Greece (3966275331).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Stoa_of_Attalos%2C_Ancient_Agora%2C_Athens%2C_Greece_(3966275331).jpg?width=1280",
+     "tekija": "Tilemahos Efthimiadis from Athens, Greece",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Stoa_of_Attalos%2C_Ancient_Agora%2C_Athens%2C_Greece_(3966275331).jpg",
+     "selite": "Rekonstruoitu pylväskäytävä toimii nykyään agoran museona.",
+     "leveys": 2414,
+     "korkeus": 1812,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1123019",
+   "nimi": "Olympoksen Zeuksen temppeli",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 37.96937,
+   "lon": 23.73308,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Temple Of Olympian Zeus - Olympieion (retouched).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Temple_Of_Olympian_Zeus_-_Olympieion_(retouched).jpg?width=1280",
+     "tekija": "No machine-readable author provided. Chrisfl assumed (based on copyright claims). Retouched by AM",
+     "lisenssi": "CC BY-SA 2.5",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Temple_Of_Olympian_Zeus_-_Olympieion_(retouched).jpg",
+     "selite": "Zeuksen temppeli on valtava korinttilaisten pylväiden jäänne, jonka rakentaminen kesti vuosisatoja.",
+     "leveys": 3167,
+     "korkeus": 2279,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Temple of Zeus Olympian, Athens, Greece.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Temple_of_Zeus_Olympian%2C_Athens%2C_Greece.jpg?width=1280",
+     "tekija": "Jebulon",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Temple_of_Zeus_Olympian%2C_Athens%2C_Greece.jpg",
+     "selite": "Illan valossa jäljellä olevat pylväät hehkuvat kultaisina.",
+     "leveys": 4547,
+     "korkeus": 3026,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Three columns, Temple of Zeus Olympian, Athens, Greece.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Three_columns%2C_Temple_of_Zeus_Olympian%2C_Athens%2C_Greece.jpg?width=1280",
+     "tekija": "Jebulon",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Three_columns%2C_Temple_of_Zeus_Olympian%2C_Athens%2C_Greece.jpg",
+     "selite": "Yksi kaatuneista pylväistä makaa yhä maassa temppelin vieressä.",
+     "leveys": 4592,
+     "korkeus": 3056,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q208811",
+   "nimi": "Kallimarmaro (Panathinaïkó-stadion)",
+   "peruste": "pelin nosto",
+   "koko_m": 300,
+   "lat": 37.96833,
+   "lon": 23.74111,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Panathenaic Stadium, Athens, 20240601 1013 0058.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Panathenaic_Stadium%2C_Athens%2C_20240601_1013_0058.jpg?width=1280",
+     "tekija": "Jakub Hałun",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Panathenaic_Stadium%2C_Athens%2C_20240601_1013_0058.jpg",
+     "selite": "Panathinaïkó-stadion on kokonaan marmorista rakennettu stadion, jossa pidettiin vuoden 1896 ensimmäiset nykyolympialaiset.",
+     "leveys": 6035,
+     "korkeus": 4016,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Panathenaic stadium, Pangrati borrough, from Acropolis, Athens, Greece.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Panathenaic_stadium%2C_Pangrati_borrough%2C_from_Acropolis%2C_Athens%2C_Greece.jpg?width=1280",
+     "tekija": "Jebulon",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Panathenaic_stadium%2C_Pangrati_borrough%2C_from_Acropolis%2C_Athens%2C_Greece.jpg",
+     "selite": "Hevosenkengän muotoinen stadion lepää puiden ympäröimänä kaupungin keskellä.",
+     "leveys": 4591,
+     "korkeus": 2529,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q242741",
+   "nimi": "Erekhtheion",
+   "peruste": "UNESCO",
+   "koko_m": 60,
+   "lat": 37.97208,
+   "lon": 23.72653,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Porch of the Caryatids, Erechtheion, Acropolis of Athens, From Southeast.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Porch_of_the_Caryatids%2C_Erechtheion%2C_Acropolis_of_Athens%2C_From_Southeast.jpg?width=1280",
+     "tekija": "Coolcaesar",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Porch_of_the_Caryatids%2C_Erechtheion%2C_Acropolis_of_Athens%2C_From_Southeast.jpg",
+     "selite": "Erekhtheionin kuuluisa kuisti on kantatidien eli patsasnaisten kannattelema.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "2016-08-03 Greece, Athens, Acropolis, Erechtheion DSC 9880 DxO 2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2016-08-03_Greece%2C_Athens%2C_Acropolis%2C_Erechtheion_DSC_9880_DxO_2.jpg?width=1280",
+     "tekija": "Laurens R. Krol",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2016-08-03_Greece%2C_Athens%2C_Acropolis%2C_Erechtheion_DSC_9880_DxO_2.jpg",
+     "selite": "Ioonilainen temppeli sijaitsee Akropolin pohjoisreunalla Parthenonin vieressä.",
+     "leveys": 4183,
+     "korkeus": 2778,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "The Caryatids of the Erechtheion on the Acropolis of Athens.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/The_Caryatids_of_the_Erechtheion_on_the_Acropolis_of_Athens.jpg?width=1280",
+     "tekija": "George E. Koronaios",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:The_Caryatids_of_the_Erechtheion_on_the_Acropolis_of_Athens.jpg",
+     "selite": "Temppeli on omistettu Athenelle ja Poseidonille.",
+     "leveys": 2679,
+     "korkeus": 3985,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q421084",
+   "nimi": "Akropolis-museo",
+   "peruste": "pelin nosto",
+   "koko_m": 120,
+   "lat": 37.96842,
+   "lon": 23.72847,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "New Acropolis Museum building in Athens, Greece.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/New_Acropolis_Museum_building_in_Athens%2C_Greece.jpg?width=1280",
+     "tekija": "philip.mallis",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:New_Acropolis_Museum_building_in_Athens%2C_Greece.jpg",
+     "selite": "Akropolis-museo on lasi- ja betonirakennus Akropolin juurella, ja siellä säilytetään linnavuoren veistoksia.",
+     "leveys": 3856,
+     "korkeus": 2265,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q756824",
+   "nimi": "Hefaistoksen temppeli",
+   "peruste": "sitelinks",
+   "koko_m": 60,
+   "lat": 37.97562,
+   "lon": 23.72139,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Hephaistos temple 2006.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hephaistos_temple_2006.jpg?width=1280",
+     "tekija": "Tommi Nikkilä",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Hephaistos_temple_2006.jpg",
+     "selite": "Hefaistoksen temppeli on yksi parhaiten säilyneistä antiikin kreikkalaisista temppeleistä.",
+     "leveys": 2048,
+     "korkeus": 1536,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Temple of Hephaestus from ancient agora Athens.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Temple_of_Hephaestus_from_ancient_agora_Athens.jpg?width=1280",
+     "tekija": "Jebulon",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Temple_of_Hephaestus_from_ancient_agora_Athens.jpg",
+     "selite": "Temppeli kohoaa agoran laidalla Kolonoksen kukkulalla.",
+     "leveys": 4536,
+     "korkeus": 3019,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Hephaisteion, Athens, Greece, 20240531 1427 9753.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hephaisteion%2C_Athens%2C_Greece%2C_20240531_1427_9753.jpg?width=1280",
+     "tekija": "Jakub Hałun",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Hephaisteion%2C_Athens%2C_Greece%2C_20240531_1427_9753.jpg",
+     "selite": "Doorilaisen temppelin pylväät ja päätykolmio ovat lähes ehjät.",
+     "leveys": 3791,
+     "korkeus": 3361,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1137997",
+   "nimi": "Sýntagman aukio",
+   "peruste": "pelin nosto",
+   "koko_m": 200,
+   "lat": 37.97556,
+   "lon": 23.73472,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Lascar Hellenic Parliament Building and Tomb of the Unknown Soldier (4517147363).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lascar_Hellenic_Parliament_Building_and_Tomb_of_the_Unknown_Soldier_(4517147363).jpg?width=1280",
+     "tekija": "Jorge Láscar from Australia",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Lascar_Hellenic_Parliament_Building_and_Tomb_of_the_Unknown_Soldier_(4517147363).jpg",
+     "selite": "Sýntagman aukio on Ateenan keskeinen aukio, jonka reunalla on Kreikan parlamenttitalo.",
+     "leveys": 3216,
+     "korkeus": 2136,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Syntagma square 2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Syntagma_square_2.jpg?width=1280",
+     "tekija": "Nettadi",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Syntagma_square_2.jpg",
+     "selite": "Entinen kuninkaanlinna toimii nykyään parlamentin istuntotalona.",
+     "leveys": 3648,
+     "korkeus": 2736,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Greek Parliament and fountain.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Greek_Parliament_and_fountain.jpg?width=1280",
+     "tekija": "Annatsach",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Greek_Parliament_and_fountain.jpg",
+     "selite": "Illalla aukion suihkulähteet valaistaan.",
+     "leveys": 4403,
+     "korkeus": 2880,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1357713",
+   "nimi": "Likavittos",
+   "peruste": "pelin nosto",
+   "koko_m": 500,
+   "lat": 37.98306,
+   "lon": 23.74694,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Chapel of Saint George(crop).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Chapel_of_Saint_George(crop).jpg?width=1280",
+     "tekija": "Pierre Camateros",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Chapel_of_Saint_George(crop).jpg",
+     "selite": "Likavittos on Ateenan korkein kukkula, jonka huipulla on pieni Pyhän Yrjön kappeli.",
+     "leveys": 1901,
+     "korkeus": 1521,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Lascar St George church at the top of Mount Lycabettus and Athens on the background (4517096061).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lascar_St_George_church_at_the_top_of_Mount_Lycabettus_and_Athens_on_the_background_(4517096061).jpg?width=1280",
+     "tekija": "Jorge Láscar from Australia",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Lascar_St_George_church_at_the_top_of_Mount_Lycabettus_and_Athens_on_the_background_(4517096061).jpg",
+     "selite": "Huipulta avautuu näkymä koko kaupungin yli.",
+     "leveys": 3216,
+     "korkeus": 2136,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Temple of saint george (Lycabettus).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Temple_of_saint_george_(Lycabettus).jpg?width=1280",
+     "tekija": "Nina1009",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Temple_of_saint_george_(Lycabettus).jpg",
+     "selite": "Valkoinen kappeli hohtaa iltavalossa kukkulan päällä.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1231816",
+   "nimi": "Pláka",
+   "peruste": "sitelinks",
+   "koko_m": 500,
+   "lat": 37.97222,
+   "lon": 23.73056,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Plaka district-Athens 22.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Plaka_district-Athens_22.JPG?width=1280",
+     "tekija": "Spyrosdrakopoulos",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Plaka_district-Athens_22.JPG",
+     "selite": "Pláka on Akropolin juurella sijaitseva Ateenan vanhin asuinalue kapeine kujineen.",
+     "leveys": 3776,
+     "korkeus": 2520,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Carrer del barri de Plaka, Atenes.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Carrer_del_barri_de_Plaka%2C_Atenes.JPG?width=1280",
+     "tekija": "Joanbanjo",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Carrer_del_barri_de_Plaka%2C_Atenes.JPG",
+     "selite": "Kaupunginosan värikkäät uusklassiset talot muodostavat tunnelmallisia katuja.",
+     "leveys": 3664,
+     "korkeus": 2748,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Building in Plaka, Athens, Greece.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Building_in_Plaka%2C_Athens%2C_Greece.jpg?width=1280",
+     "tekija": "Julian Lupyan",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Building_in_Plaka%2C_Athens%2C_Greece.jpg",
+     "selite": "Siniset ikkunaluukut ja kukkaparvekkeet ovat tyypillisiä kreikkalaisia yksityiskohtia.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1328165",
+   "nimi": "Herodes Atticuksen odeion",
+   "peruste": "sitelinks",
+   "koko_m": 100,
+   "lat": 37.97084,
+   "lon": 23.72452,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Odeon of Herodes Atticus 2019.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Odeon_of_Herodes_Atticus_2019.jpg?width=1280",
+     "tekija": "Thodorisv",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Odeon_of_Herodes_Atticus_2019.jpg",
+     "selite": "Herodes Atticuksen odeion on Akropolin etelärinteellä sijaitseva roomalaisaikainen teatteri, jossa järjestetään yhä konsertteja.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Wall Theatre Herodes Atticus Acropolis Athens Greece.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Wall_Theatre_Herodes_Atticus_Acropolis_Athens_Greece.jpg?width=1280",
+     "tekija": "Jebulon",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Wall_Theatre_Herodes_Atticus_Acropolis_Athens_Greece.jpg",
+     "selite": "Teatterin kaaripäällysteinen seinä on säilynyt hyvin 100-luvulta.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q372717",
+   "nimi": "Tuulien torni",
+   "peruste": "sitelinks",
+   "koko_m": 50,
+   "lat": 37.97418,
+   "lon": 23.727,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Tower of the Winds, Roman Agora, Athens, Greece.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tower_of_the_Winds%2C_Roman_Agora%2C_Athens%2C_Greece.jpg?width=1280",
+     "tekija": "Jebulon",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tower_of_the_Winds%2C_Roman_Agora%2C_Athens%2C_Greece.jpg",
+     "selite": "Tuulien torni on antiikin kahdeksankulmainen marmoritorni, joka toimi aikoinaan vesikellona ja tuulimittarina.",
+     "leveys": 3885,
+     "korkeus": 5827,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Roman Agora with Tower of the Winds, Athens, 225204.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Roman_Agora_with_Tower_of_the_Winds%2C_Athens%2C_225204.jpg?width=1280",
+     "tekija": "Zde",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Roman_Agora_with_Tower_of_the_Winds%2C_Athens%2C_225204.jpg",
+     "selite": "Torni seisoo roomalaisen agoran raunioiden laidalla Pláka-kaupunginosan vieressä.",
+     "leveys": 6048,
+     "korkeus": 4024,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1567576",
+   "nimi": "Hadrianuksen kaari",
+   "peruste": "sitelinks",
+   "koko_m": 50,
+   "lat": 37.97017,
+   "lon": 23.732,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Attica 06-13 Athens 24 Arch of Hadrian.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Attica_06-13_Athens_24_Arch_of_Hadrian.jpg?width=1280",
+     "tekija": "A.Savin",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Attica_06-13_Athens_24_Arch_of_Hadrian.jpg",
+     "selite": "Hadrianuksen kaari on roomalainen riemukaari, joka erotti vanhan Ateenan keisarin rakentamasta uudesta kaupunginosasta.",
+     "leveys": 3373,
+     "korkeus": 3961,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Athen Arch of Hadrian BW 2017-10-09 16-52-13.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Athen_Arch_of_Hadrian_BW_2017-10-09_16-52-13.jpg?width=1280",
+     "tekija": "Berthold Werner",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Athen_Arch_of_Hadrian_BW_2017-10-09_16-52-13.jpg",
+     "selite": "Kaaren takaa näkyy Zeuksen temppelin suuntaan.",
+     "leveys": 3506,
+     "korkeus": 4732,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1227044",
+   "nimi": "Dionysoksen teatteri",
+   "peruste": "sitelinks",
+   "koko_m": 120,
+   "lat": 37.9704,
+   "lon": 23.72778,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Theatre of Dionysus Acropolis Athens Greece.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Theatre_of_Dionysus_Acropolis_Athens_Greece.jpg?width=1280",
+     "tekija": "Jebulon",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Theatre_of_Dionysus_Acropolis_Athens_Greece.jpg",
+     "selite": "Dionysoksen teatteri Akropolin rinteellä on maailman vanhimpia teattereita, jossa esitettiin antiikin näytelmiä.",
+     "leveys": 4592,
+     "korkeus": 3056,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Theatre of Dionysus, Athens, 20240531 1339 9703.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Theatre_of_Dionysus%2C_Athens%2C_20240531_1339_9703.jpg?width=1280",
+     "tekija": "Jakub Hałun",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Theatre_of_Dionysus%2C_Athens%2C_20240531_1339_9703.jpg",
+     "selite": "Marmoriset penkkirivit nousevat rinteeseen.",
+     "leveys": 5819,
+     "korkeus": 3872,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Sunset over Athens, viewed from the Propylaea, 2024.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sunset_over_Athens%2C_viewed_from_the_Propylaea%2C_2024.jpg?width=1280",
+   "tekija": "Julian Lupyan",
+   "lisenssi": "CC0",
+   "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Sunset_over_Athens%2C_viewed_from_the_Propylaea%2C_2024.jpg",
+   "selite": "Ateena levittäytyy vuorten ympäröimässä laaksossa, ja auringonlasku värjää horisontin.",
+   "leveys": 5766,
+   "korkeus": 3644,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "View of the Acropolis of Athens from the Panathenaic Stadium, 20240601 1007 0049.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/View_of_the_Acropolis_of_Athens_from_the_Panathenaic_Stadium%2C_20240601_1007_0049.jpg?width=1280",
+   "tekija": "Jakub Hałun",
+   "lisenssi": "CC BY 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:View_of_the_Acropolis_of_Athens_from_the_Panathenaic_Stadium%2C_20240601_1007_0049.jpg",
+   "selite": "Akropolis on Ateenan siluetin tunnetuin tuntomerkki ja näkyy kaupunkiin kaikkialle.",
+   "leveys": 4094,
+   "korkeus": 2733,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

@@ -1,0 +1,506 @@
+{
+ "kaupunki": "tallinna",
+ "kaupunkiQ": "Q1770",
+ "kohteet": [
+  {
+   "q": "Q726803",
+   "nimi": "Tallinnan vanhakaupunki",
+   "peruste": "UNESCO",
+   "koko_m": 900,
+   "lat": 59.43722,
+   "lon": 24.74528,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Tallinna vanalinn päikesetõusu ajal.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tallinna_vanalinn_p%C3%A4ikeset%C3%B5usu_ajal.jpg?width=1280",
+     "tekija": "Hendrik Mändla",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tallinna_vanalinn_p%C3%A4ikeset%C3%B5usu_ajal.jpg",
+     "selite": "Tallinnan vanhakaupunki on yksi Pohjois-Euroopan parhaiten säilyneitä keskiaikaisia kaupunkeja.",
+     "leveys": 5701,
+     "korkeus": 3806,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Old Town of Tallinn, Tallinn, Estonia - panoramio (58).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Old_Town_of_Tallinn%2C_Tallinn%2C_Estonia_-_panoramio_(58).jpg?width=1280",
+     "tekija": "Ben Bender",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Old_Town_of_Tallinn%2C_Tallinn%2C_Estonia_-_panoramio_(58).jpg",
+     "selite": "Kaupunkimuurin punakattoiset tornit ja Olevisten kirkon torni muodostavat tunnistettavan siluetin.",
+     "leveys": 2048,
+     "korkeus": 1375,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Tallinn Old Town Skyline (52432521369).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tallinn_Old_Town_Skyline_(52432521369).jpg?width=1280",
+     "tekija": "William John Gauthier from Denmark",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tallinn_Old_Town_Skyline_(52432521369).jpg",
+     "selite": "Syksyisessä näkymässä erottuvat Nevskin katedraalin kupolit ja kirkontornit.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q568214",
+   "nimi": "Aleksanteri Nevskin katedraali",
+   "peruste": "sitelinks",
+   "koko_m": 100,
+   "lat": 59.43583,
+   "lon": 24.73944,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Alexander Nevsky Cathedral, Tallinn.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Alexander_Nevsky_Cathedral%2C_Tallinn.jpg?width=1280",
+     "tekija": "kallerna",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Alexander_Nevsky_Cathedral%2C_Tallinn.jpg",
+     "selite": "Venäläistyylinen ortodoksikatedraali kohoaa Toompean mäellä mustine sipulikupoleineen.",
+     "leveys": 3225,
+     "korkeus": 3050,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Catedral de Alejandro Nevsky, Tallin, Estonia, 2012-08-11, DD 46.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Catedral_de_Alejandro_Nevsky%2C_Tallin%2C_Estonia%2C_2012-08-11%2C_DD_46.JPG?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Catedral_de_Alejandro_Nevsky%2C_Tallin%2C_Estonia%2C_2012-08-11%2C_DD_46.JPG",
+     "selite": "Katedraali rakennettiin 1890-luvulla, kun Viro kuului Venäjän keisarikuntaan.",
+     "leveys": 4829,
+     "korkeus": 3253,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q859010",
+   "nimi": "Toompean linna",
+   "peruste": "sitelinks",
+   "koko_m": 250,
+   "lat": 59.43556,
+   "lon": 24.73722,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Gobierno de Estonia, Tallinn, Estonia, 2012-08-05, DD 02.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gobierno_de_Estonia%2C_Tallinn%2C_Estonia%2C_2012-08-05%2C_DD_02.JPG?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Gobierno_de_Estonia%2C_Tallinn%2C_Estonia%2C_2012-08-05%2C_DD_02.JPG",
+     "selite": "Toompean linnan vaaleanpunainen barokkisiipi toimii nykyään Viron parlamenttina.",
+     "leveys": 5324,
+     "korkeus": 2326,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Toompea loss 2014.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Toompea_loss_2014.jpg?width=1280",
+     "tekija": "Abrget47j",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Toompea_loss_2014.jpg",
+     "selite": "Linnan keskiaikainen Pitkä Hermanni -torni vartioi mäen reunaa.",
+     "leveys": 6000,
+     "korkeus": 3334,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1070298",
+   "nimi": "Raatihuoneentori",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 59.43722,
+   "lon": 24.74528,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Raekoja plats Tallinn 2015.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Raekoja_plats_Tallinn_2015.jpg?width=1280",
+     "tekija": "Cayambe",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Raekoja_plats_Tallinn_2015.jpg",
+     "selite": "Raatihuoneentori on vanhankaupungin keskusaukio, jota reunustavat kaupunkilaisten talot.",
+     "leveys": 6541,
+     "korkeus": 3915,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Raekoja plats 1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Raekoja_plats_1.jpg?width=1280",
+     "tekija": "kallerna",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Raekoja_plats_1.jpg",
+     "selite": "Ylhäältä aukion terassit ja kattomeri erottuvat selvästi.",
+     "leveys": 7000,
+     "korkeus": 2750,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Tallinn - Town Hall Square (Raekoja plats).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tallinn_-_Town_Hall_Square_(Raekoja_plats).jpg?width=1280",
+     "tekija": "Pudelek (Marcin Szala)",
+     "lisenssi": "CC BY-SA 3.0 ee",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/ee/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tallinn_-_Town_Hall_Square_(Raekoja_plats).jpg",
+     "selite": "Kivetyllä aukiolla on järjestetty markkinoita ja joulukuusen juhlia vuosisatojen ajan.",
+     "leveys": 2895,
+     "korkeus": 1402,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q904057",
+   "nimi": "Tallinnan raatihuone",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": 59.437,
+   "lon": 24.74531,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Tallinna Raekoda 11-06-2013.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tallinna_Raekoda_11-06-2013.jpg?width=1280",
+     "tekija": "Ivar Leidus",
+     "lisenssi": "CC BY-SA 3.0 ee",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/ee/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tallinna_Raekoda_11-06-2013.jpg",
+     "selite": "Goottilainen raatihuone on Pohjois-Euroopan vanhimpia säilyneitä raatihuoneita.",
+     "leveys": 6491,
+     "korkeus": 4486,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Ayuntamiento, vistas panorámicas desde Toompea, Tallin, Estonia, 2012-08-05, DD 21.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ayuntamiento%2C_vistas_panor%C3%A1micas_desde_Toompea%2C_Tallin%2C_Estonia%2C_2012-08-05%2C_DD_21.JPG?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ayuntamiento%2C_vistas_panor%C3%A1micas_desde_Toompea%2C_Tallin%2C_Estonia%2C_2012-08-05%2C_DD_21.JPG",
+     "selite": "Raatihuoneen torni kohoaa illan valoissa uusien pilvenpiirtäjien edessä.",
+     "leveys": 4670,
+     "korkeus": 2921,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q834511",
+   "nimi": "Olevisten kirkko",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": 59.44139,
+   "lon": 24.74778,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Iglesia de San Olaf, Tallinn, Estonia, 2012-08-05, DD 16.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Iglesia_de_San_Olaf%2C_Tallinn%2C_Estonia%2C_2012-08-05%2C_DD_16.JPG?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Iglesia_de_San_Olaf%2C_Tallinn%2C_Estonia%2C_2012-08-05%2C_DD_16.JPG",
+     "selite": "Olevisten kirkon korkea torni oli aikoinaan maailman korkein rakennus.",
+     "leveys": 1731,
+     "korkeus": 4419,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Iglesia de San Olaf, Tallinn, Estonia, 2012-08-05, DD 19.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Iglesia_de_San_Olaf%2C_Tallinn%2C_Estonia%2C_2012-08-05%2C_DD_19.JPG?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Iglesia_de_San_Olaf%2C_Tallinn%2C_Estonia%2C_2012-08-05%2C_DD_19.JPG",
+     "selite": "Kirkon kapea huippu erottuu kaukaa vanhankaupungin yllä.",
+     "leveys": 3104,
+     "korkeus": 5454,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q282994",
+   "nimi": "Paksu Margareeta",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": 59.44258,
+   "lon": 24.74954,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Paks Margareeta õhtul.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Paks_Margareeta_%C3%B5htul.jpg?width=1280",
+     "tekija": "HartOve",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Paks_Margareeta_%C3%B5htul.jpg",
+     "selite": "Paksu Margareeta on pyöreä tykkitorni, joka vartioi merenpuoleista muuria.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Tallinn-bymur-Fat Margaret.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tallinn-bymur-Fat_Margaret.jpg?width=1280",
+     "tekija": "Gunnar Bach Pedersen",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tallinn-bymur-Fat_Margaret.jpg",
+     "selite": "Tornin paksut seinät kuuluvat Tallinnan kaupunkimuurin vahvimpiin osiin.",
+     "leveys": 3872,
+     "korkeus": 2592,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q12378759",
+   "nimi": "Virun portti",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": 59.43657,
+   "lon": 24.75027,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Puerta de Viru, Tallinn, Estonia, 2012-08-05, DD 11.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Puerta_de_Viru%2C_Tallinn%2C_Estonia%2C_2012-08-05%2C_DD_11.JPG?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Puerta_de_Viru%2C_Tallinn%2C_Estonia%2C_2012-08-05%2C_DD_11.JPG",
+     "selite": "Virun portin kaksi tornia merkitsevät vanhankaupungin pääsisäänkäyntiä.",
+     "leveys": 4884,
+     "korkeus": 3068,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Viru Gate 2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Viru_Gate_2.jpg?width=1280",
+     "tekija": "kallerna",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Viru_Gate_2.jpg",
+     "selite": "Portista alkaa vilkas ostoskatu vanhaankaupunkiin.",
+     "leveys": 4000,
+     "korkeus": 2480,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q914562",
+   "nimi": "Kiek in de Kök",
+   "peruste": "pelin nosto",
+   "koko_m": 50,
+   "lat": 59.43475,
+   "lon": 24.74125,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Kiek in de Kök, Tallin, Estonia, 2012-08-05, DD 01.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kiek_in_de_K%C3%B6k%2C_Tallin%2C_Estonia%2C_2012-08-05%2C_DD_01.JPG?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kiek_in_de_K%C3%B6k%2C_Tallin%2C_Estonia%2C_2012-08-05%2C_DD_01.JPG",
+     "selite": "Kiek in de Kök on paksu tykkitorni, jonka nimi tarkoittaa keittiöön kurkistajaa.",
+     "leveys": 2963,
+     "korkeus": 4574,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Kiek in de Kök entrance.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kiek_in_de_K%C3%B6k_entrance.jpg?width=1280",
+     "tekija": "Nord68",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kiek_in_de_K%C3%B6k_entrance.jpg",
+     "selite": "Tornin juurella on museon sisäänkäynti kaupunkimuurin vieressä.",
+     "leveys": 3696,
+     "korkeus": 2448,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q7722735",
+   "nimi": "Kadriorgin palatsi",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 59.43852,
+   "lon": 24.791,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Palacio de Kadriorg, Tallinn, Estonia, 2012-08-12, DD 01.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Palacio_de_Kadriorg%2C_Tallinn%2C_Estonia%2C_2012-08-12%2C_DD_01.JPG?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Palacio_de_Kadriorg%2C_Tallinn%2C_Estonia%2C_2012-08-12%2C_DD_01.JPG",
+     "selite": "Pietari Suuren rakennuttama barokkipalatsi seisoo Kadriorgin puistossa.",
+     "leveys": 5222,
+     "korkeus": 3020,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Kadriorg Palace 20180807-3.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kadriorg_Palace_20180807-3.jpg?width=1280",
+     "tekija": "Suicasmo",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kadriorg_Palace_20180807-3.jpg",
+     "selite": "Palatsin edessä on muotopuutarha kukkaistutuksineen ja suihkukaivoineen.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Kadriorg Palace Tallinn Estonia.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kadriorg_Palace_Tallinn_Estonia.jpg?width=1280",
+     "tekija": "Rafael J Buendia",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kadriorg_Palace_Tallinn_Estonia.jpg",
+     "selite": "Talvella palatsin punaiset ja valkoiset julkisivut loistavat lumen keskellä.",
+     "leveys": 1920,
+     "korkeus": 1080,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1365010",
+   "nimi": "Tallinnan televisiotorni",
+   "peruste": "sitelinks",
+   "koko_m": 80,
+   "lat": 59.47111,
+   "lon": 24.8875,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Tallin TV tower.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tallin_TV_tower.jpg?width=1280",
+     "tekija": "Marmuras",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tallin_TV_tower.jpg",
+     "selite": "Televisiotorni valmistui vuoden 1980 olympiapurjehdusta varten.",
+     "leveys": 2448,
+     "korkeus": 3264,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Tallinn TV Tower 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tallinn_TV_Tower_01.jpg?width=1280",
+     "tekija": "Erko",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tallinn_TV_Tower_01.jpg",
+     "selite": "Yli 300 metriä korkea torni kohoaa Pirita-puiston metsästä.",
+     "leveys": 4000,
+     "korkeus": 6000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1253709",
+   "nimi": "Tallinnan laululava",
+   "peruste": "pelin nosto",
+   "koko_m": 300,
+   "lat": 59.44474,
+   "lon": 24.80567,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Tallinn Song Festival Grounds, Tallinn, Estonia, 2012-08-12, DD 13.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tallinn_Song_Festival_Grounds%2C_Tallinn%2C_Estonia%2C_2012-08-12%2C_DD_13.JPG?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tallinn_Song_Festival_Grounds%2C_Tallinn%2C_Estonia%2C_2012-08-12%2C_DD_13.JPG",
+     "selite": "Laululavan valtava kaari kokoaa yleisölaulujuhlien yhteislaulun.",
+     "leveys": 5051,
+     "korkeus": 3359,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Tallinn Song Festival Grounds, Tallinn, Estonia, 2012-08-12, DD 09.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tallinn_Song_Festival_Grounds%2C_Tallinn%2C_Estonia%2C_2012-08-12%2C_DD_09.JPG?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tallinn_Song_Festival_Grounds%2C_Tallinn%2C_Estonia%2C_2012-08-12%2C_DD_09.JPG",
+     "selite": "Edessä levittäytyy laaja nurmikko, jolle mahtuu kymmeniä tuhansia kuulijoita.",
+     "leveys": 5420,
+     "korkeus": 2730,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Aerial view of Tallinn 03.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aerial_view_of_Tallinn_03.jpg?width=1280",
+   "tekija": "Ad Meskens",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aerial_view_of_Tallinn_03.jpg",
+   "selite": "Tallinna avautuu Itämeren rannalle, ja vanhankaupungin tornit nousevat kattojen yläpuolelle.",
+   "leveys": 4895,
+   "korkeus": 3069,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Aerial view of Tallinn 04.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aerial_view_of_Tallinn_04.jpg?width=1280",
+   "tekija": "Ad Meskens",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aerial_view_of_Tallinn_04.jpg",
+   "selite": "Satamassa seisovat suuret matkustajalaivat modernin keskustan edessä.",
+   "leveys": 4807,
+   "korkeus": 3228,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

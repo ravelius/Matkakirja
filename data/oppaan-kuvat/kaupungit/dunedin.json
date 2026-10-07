@@ -1,0 +1,404 @@
+{
+ "kaupunki": "dunedin",
+ "kaupunkiQ": "Q133073",
+ "kohteet": [
+  {
+   "q": "Q800694",
+   "nimi": "Dunedinin rautatieasema",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": -45.87528,
+   "lon": 170.50889,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Dunedin Railway Station Full Exterior.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dunedin_Railway_Station_Full_Exterior.jpg?width=1280",
+     "tekija": "Antilived",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Dunedin_Railway_Station_Full_Exterior.jpg",
+     "selite": "Rautatieaseman flaamilaistyylinen julkisivu on koristeltu tummalla basaltilla ja vaalealla kalkkikivellä.",
+     "leveys": 3615,
+     "korkeus": 1800,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "00 1513 Dunedin (New Zealand) - Railway Station.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/00_1513_Dunedin_(New_Zealand)_-_Railway_Station.jpg?width=1280",
+     "tekija": "W. Bulach",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:00_1513_Dunedin_(New_Zealand)_-_Railway_Station.jpg",
+     "selite": "Aseman tornit ja punaiset katot ovat Dunedinin tunnetuimpia rakennuksia.",
+     "leveys": 3900,
+     "korkeus": 2600,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "00 1512 Dunedin (New Zealand) railway station.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/00_1512_Dunedin_(New_Zealand)_railway_station.jpg?width=1280",
+     "tekija": "W. Bulach",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:00_1512_Dunedin_(New_Zealand)_railway_station.jpg",
+     "selite": "Kellotorni kohoaa aseman keskiosasta sinistä taivasta vasten.",
+     "leveys": 1867,
+     "korkeus": 2800,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1759455",
+   "nimi": "Larnachin linna",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": -45.86166,
+   "lon": 170.62721,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Larnach Castle and fountain.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Larnach_Castle_and_fountain.jpg?width=1280",
+     "tekija": "Pseudopanax at English Wikipedia",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Larnach_Castle_and_fountain.jpg",
+     "selite": "Larnach Castle on Uuden-Seelannin ainoa linna, ja sen edustalla on suihkulähdelampi.",
+     "leveys": 4896,
+     "korkeus": 3264,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Castillo de Larnach-Dunedin-Nueva Zelanda09.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Castillo_de_Larnach-Dunedin-Nueva_Zelanda09.JPG?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Castillo_de_Larnach-Dunedin-Nueva_Zelanda09.JPG",
+     "selite": "Linna seisoo Otagon niemimaan rinteellä ja sen verannat on koristeltu rautakoristeilla.",
+     "leveys": 3888,
+     "korkeus": 2592,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Castle Larnach Exterior 1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Castle_Larnach_Exterior_1.jpg?width=1280",
+     "tekija": "Donovan Govan.",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Castle_Larnach_Exterior_1.jpg",
+     "selite": "Linnan hiekkakivijulkisivu valaistaan illalla keltaiseksi.",
+     "leveys": 2272,
+     "korkeus": 1704,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q804877",
+   "nimi": "Baldwin Street",
+   "peruste": "sitelinks",
+   "koko_m": 400,
+   "lat": -45.84944,
+   "lon": 170.53472,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "At the Bottom of Baldwin Street Dunedin (30746731174).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/At_the_Bottom_of_Baldwin_Street_Dunedin_(30746731174).jpg?width=1280",
+     "tekija": "Tony Hisgett from Birmingham, UK",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:At_the_Bottom_of_Baldwin_Street_Dunedin_(30746731174).jpg",
+     "selite": "Baldwin Street on tunnetusti maailman jyrkimpiä asuinkatuja.",
+     "leveys": 3456,
+     "korkeus": 3781,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Baldwin St 47.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Baldwin_St_47.JPG?width=1280",
+     "tekija": "Schwede66",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Baldwin_St_47.JPG",
+     "selite": "Katu nousee jyrkästi kukkulan rinteelle North East Valleyn asuinalueella.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1419311",
+   "nimi": "Otagon ensimmäinen kirkko",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": -45.87602,
+   "lon": 170.50475,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "First Church of Otago in afternoon light.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/First_Church_of_Otago_in_afternoon_light.jpg?width=1280",
+     "tekija": "Pseudopanax at English Wikipedia",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:First_Church_of_Otago_in_afternoon_light.jpg",
+     "selite": "Vaalean kalkkikiven valkoinen kirkontorni nousee Moray Placen kukkulalla.",
+     "leveys": 2160,
+     "korkeus": 3000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "First Church - panoramio (1).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/First_Church_-_panoramio_(1).jpg?width=1280",
+     "tekija": "jokertrekker",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:First_Church_-_panoramio_(1).jpg",
+     "selite": "Gotiikkatyylinen kirkko on skotlantilaisten uudisasukkaiden perustaman Dunedinin hengellinen sydän.",
+     "leveys": 3648,
+     "korkeus": 2736,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1431259",
+   "nimi": "Toitū Otagon uudisasukasmuseo",
+   "peruste": "pelin nosto",
+   "koko_m": 200,
+   "lat": -45.8775,
+   "lon": 170.506,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Toitu Otago Settlers Museum main wing.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Toitu_Otago_Settlers_Museum_main_wing.jpg?width=1280",
+     "tekija": "Tony Hisgett from Birmingham, UK",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Toitu_Otago_Settlers_Museum_main_wing.jpg",
+     "selite": "Museon vanha tiilirakennus kertoo Otagon uudisasukkaista ja kultaryntäyksestä.",
+     "leveys": 4922,
+     "korkeus": 2327,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Otago Early Settlers Museum.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Otago_Early_Settlers_Museum.jpg?width=1280",
+     "tekija": "Pakoire",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Otago_Early_Settlers_Museum.jpg",
+     "selite": "Museon uusi lasinen siipi liittyy vanhaan rautatieaseman viereiseen rakennukseen.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q5314964",
+   "nimi": "Dunedinin kasvitieteellinen puutarha",
+   "peruste": "pelin nosto",
+   "koko_m": 400,
+   "lat": -45.8577,
+   "lon": 170.521,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Dunedin Botanic Gardens Spring 2008.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dunedin_Botanic_Gardens_Spring_2008.jpg?width=1280",
+     "tekija": "Benchill",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Dunedin_Botanic_Gardens_Spring_2008.jpg",
+     "selite": "Puutarhan lasihuone ja lampi ovat Uuden-Seelannin vanhimman kasvitieteellisen puutarhan vehreää keskustaa.",
+     "leveys": 1536,
+     "korkeus": 2048,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1201513",
+   "nimi": "Otagon yliopisto",
+   "peruste": "sitelinks",
+   "koko_m": 250,
+   "lat": -45.86556,
+   "lon": 170.51389,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "University of Otago.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/University_of_Otago.jpg?width=1280",
+     "tekija": "Ulrich Lange, Dunedin, New Zealand",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:University_of_Otago.jpg",
+     "selite": "Otagon yliopiston kellotorni hallitsee kampuksen kivirakennusta Leith-joen rannalla.",
+     "leveys": 2048,
+     "korkeus": 1536,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q5314967",
+   "nimi": "Dunedinin kiinalainen puutarha",
+   "peruste": "pelin nosto",
+   "koko_m": 120,
+   "lat": -45.87826,
+   "lon": 170.50551,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Heart of the Lake Pavilion and rock mountain in Dunedin Chinese Garden.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Heart_of_the_Lake_Pavilion_and_rock_mountain_in_Dunedin_Chinese_Garden.jpg?width=1280",
+     "tekija": "Pseudopanax at English Wikipedia",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Heart_of_the_Lake_Pavilion_and_rock_mountain_in_Dunedin_Chinese_Garden.jpg",
+     "selite": "Kiinalaisen puutarhan paviljonki ja kalliovuori heijastuvat lampeen.",
+     "leveys": 4896,
+     "korkeus": 3264,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Archway, Dunedin Chinese Garden.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Archway%2C_Dunedin_Chinese_Garden.jpg?width=1280",
+     "tekija": "Paul Carmona",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Archway%2C_Dunedin_Chinese_Garden.jpg",
+     "selite": "Kaarisilta ja kalliot muodostavat Lan Yuan -puutarhan perinteisen kiinalaisen maiseman.",
+     "leveys": 2048,
+     "korkeus": 1365,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2067638",
+   "nimi": "Taiaroa Head",
+   "peruste": "pelin nosto",
+   "koko_m": 600,
+   "lat": -45.7748,
+   "lon": 170.728,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Dunedin - Taiaroa Head 4.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dunedin_-_Taiaroa_Head_4.jpg?width=1280",
+     "tekija": "eyeintim",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Dunedin_-_Taiaroa_Head_4.jpg",
+     "selite": "Taiaroa Headin kallioniemessä pesii maailman ainoa mantereen kuninkaallisten albatrossien pesäpaikka.",
+     "leveys": 3072,
+     "korkeus": 2304,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Aramoana.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aramoana.jpg?width=1280",
+     "tekija": "Benchill",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aramoana.jpg",
+     "selite": "Otagon satamalahti aukeaa kohti Aramoanaa ja Taiaroa Headin niemeä.",
+     "leveys": 1659,
+     "korkeus": 1245,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q43849",
+   "nimi": "Otagon niemimaa",
+   "peruste": "sitelinks",
+   "koko_m": 8000,
+   "lat": -45.85833,
+   "lon": 170.65,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Cape Saunders Otago Peninsula.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cape_Saunders_Otago_Peninsula.jpg?width=1280",
+     "tekija": "Ulrich Lange, Dunedin, New Zealand",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cape_Saunders_Otago_Peninsula.jpg",
+     "selite": "Otagon niemimaan hiekkarannat ja kukkulat avautuvat Tyynellemerelle.",
+     "leveys": 2560,
+     "korkeus": 1344,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Boat Trip off Otago Peninsula, South Island3.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Boat_Trip_off_Otago_Peninsula%2C_South_Island3.jpg?width=1280",
+     "tekija": "sussexbirder",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Boat_Trip_off_Otago_Peninsula%2C_South_Island3.jpg",
+     "selite": "Niemimaan rannikon kalliot ja luolat ovat lintujen ja hylkeiden asuinsijoja.",
+     "leveys": 4608,
+     "korkeus": 3456,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Dunedin City Centre from Roslyn.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dunedin_City_Centre_from_Roslyn.jpg?width=1280",
+   "tekija": "ChristchurchHistorian",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Dunedin_City_Centre_from_Roslyn.jpg",
+   "selite": "Dunedinin keskusta levittäytyy Otagon satamalahden rannalle kukkuloiden alle.",
+   "leveys": 1280,
+   "korkeus": 960,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Dunedin and the Otago Peninsula, Otago, New Zealand, 12th. Dec. 2010 - Flickr - PhillipC.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dunedin_and_the_Otago_Peninsula%2C_Otago%2C_New_Zealand%2C_12th._Dec._2010_-_Flickr_-_PhillipC.jpg?width=1280",
+   "tekija": "Phillip Capper from Wellington, New Zealand",
+   "lisenssi": "CC BY 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Dunedin_and_the_Otago_Peninsula%2C_Otago%2C_New_Zealand%2C_12th._Dec._2010_-_Flickr_-_PhillipC.jpg",
+   "selite": "Dunedin ja Otagon niemimaa ilmasta katsottuna, satamalahti keskellä.",
+   "leveys": 4288,
+   "korkeus": 2848,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": [
+  {
+   "q": "Q7108347",
+   "nimi": "Otagon museo",
+   "peruste": "pelin nosto",
+   "lat": -45.8657,
+   "lon": 170.511,
+   "syy": "ei vapaata ulkokuvaa >= 1200 px (vain esine- ja luentokuvia)"
+  }
+ ]
+}
