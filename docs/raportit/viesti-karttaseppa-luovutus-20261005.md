@@ -8,6 +8,7 @@
   2) Yksi rivi PT:lle, kuittauksen jälkeen `kokoa-kausi.py talvi v1 <_valmiit/s2-eurooppa-talvi-vienti-<pvm>> "<talvi2c/laatat>:<talvi2/laatat>" "<kuvaus>"`, LAHTEET.md (pohjana kevät) ja Julkaisija.
 - **KEVÄT v1 ÄMPÄRISSÄ** 20.02 (57 630 tarkistettu), ja LS2:lle on ilmoitettu. Syksy ja kevät ovat valmiit; jäljellä on talvi.
 - Worldview on tuotannossa, ja syksy v1 on ämpärissä (LS2:lle ilmoitettu).
+- **Omistaja 21.5x:** raskaat poltot eivät käynnisty junakäännöksen aikana. Ennen uutta polttoa tarkista `cat /tmp/matkakirja-kaannospalvelu.lukko/kuka` (tyhjä = vapaa). Käynnissä olevaa ajoa ei keskeytetä.
 
 ---
 
