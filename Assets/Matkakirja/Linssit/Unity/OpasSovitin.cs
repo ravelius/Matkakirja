@@ -251,7 +251,9 @@ namespace Matkakirja.Natiivi
                 return;
             }
             nakymaAuki = true;
-            KytkeNimilappu(true);
+            // Omistaja 7.10. 21.4x: "Notre Damen kyltti kartalla ei ole oikealla kohdalla, kannattaa ottaa pois kokonaan kun on tuo
+            // pilvi kuitenkin kohteen ympärillä" → kierroksen kohteiden nimilappu pois, korostus riittää.
+            KytkeNimilappu(false);
             istunto = Guid.NewGuid().ToString("N");
             testiIndeksi = 0;
             if (kierto != null) SyoteLukko.Esta(this);
