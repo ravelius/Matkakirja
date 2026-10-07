@@ -38,7 +38,7 @@ import {
 } from './kohteet.js';
 import { OPAS_AINEISTOT } from './aineistot.js';
 import { oppaanEsittely, valmisKohde, omatKohteet } from './opas-esittely.js';
-import { OPAS_SALLITUT, sallittuKaupunki, pisteSallittu, sallittuAluePisteelle } from './sallitut.js';
+import { OPAS_SALLITUT, sallittuKaupunki, pisteSallittu, sallittuAluePisteelle, kokeilut, sallitutPyynnolle } from './sallitut.js';
 import { vuosiluvutSanoiksi } from './puhesanat.js';
 import { kuvalista, kohteenKuvat, kaupunginKohteet, listanKuvin, kuvaKaupunkitilassa, LUKITTU_VAHINTAAN } from './opas-kuvat.js';
 import {
@@ -3249,7 +3249,7 @@ async function hoidaOppaanLiiku(pyynto, env, kors) {
   const lat = Number(url.searchParams.get('lat')), lon = Number(url.searchParams.get('lon'));
   // Lukittu kaupunki (Päätoimittaja 6.10. 20.3x): Liiku näyttää koko kohdelistan merkittävyysjärjestyksessä kuvineen.
   const kuvaLista = await kuvalista(env);
-  const omat = omatKohteet(kaupunki);
+  const omat = omatKohteet(kaupunki, env);
   if (omat) {
     return vastaa({ kaupunki, kohteet: omat.kohteet.map((k, i) => ({ id: k.id, nimi: k.nimi, lat: k.lat, lon: k.lon, alarivi: k.kuvaus ?? null,
       luokka: k.luokka ?? null, tarkeys: i + 1, kuva: kohteenKuvat(kuvaLista, k.id)[0] ?? null, kuvat: kohteenKuvat(kuvaLista, k.id) })),
@@ -3401,7 +3401,7 @@ async function hoidaOpas(pyynto, env, kors, runko, ctx) {
   // KUVALISTA KAUPUNKI KERRALLAAN (omistaja 6.10. 20.0x, Päätoimittaja 20.3x; opas-kuvat.js): lukitun kaupungin pysähdykset,
   // kierros ja kuvat vain kohdelistasta ja kuvalistasta. Muut kaupungit kuten ennen, kunnes niiden lista yhdistetään.
   // OMAT KOHTEET (omistaja 7.10. 08.4x: Giza omilla Blender-malleilla): koodissa oleva kohdelista ja kierros.
-  const omat = omatKohteet(p.kaupunki);
+  const omat = omatKohteet(p.kaupunki, env);
   const lukitut = omat ? omat.kohteet : kaupunginKohteet(kuvaLista, p.kaupunki).filter((k) => pisteSallittu(k, p.kaupunki, env));
   const listatila = Boolean(omat) || lukitut.length >= LUKITTU_VAHINTAAN;
   // Liiku-listan esihaku taustalla (juna 148 todistusajo: kylmä /opas/liiku ~10 s → natiivin lista jäi tyhjäksi).
@@ -3609,6 +3609,9 @@ async function hoidaOpas(pyynto, env, kors, runko, ctx) {
 export default {
   async fetch(pyynto, env, ctx) {
     const alkuMs = Date.now();
+    // Kokeilukohteet vain kehityskäännöksille (x-matkakirja-kokeilu: giza; Päätoimittaja 7.10.).
+    const kokeilu = kokeilut(pyynto.headers.get('x-matkakirja-kokeilu'));
+    if (kokeilu.length) env = { ...env, OPAS_KOKEILU: kokeilu };
     const sallitut = lueLista(env.POLLO_ORIGINIT);
     const origin = pyynto.headers.get('origin');
     const kors = { origin, sallitut };
@@ -3629,7 +3632,7 @@ export default {
     if (pyynto.method === 'GET' && new URL(pyynto.url).pathname === '/opas/aineistot') {
       // Staattisten aineistojen indeksi (aineistot.js); lyhyt välimuisti, jotta uusi kaupunki näkyy pian viennin jälkeen.
       if (!oppaanAsiakas(pyynto, kors, env)) return new Response('Origin ei ole sallittu', { status: 403 });
-      const v = vastaa({ ...OPAS_AINEISTOT, sallitut: OPAS_SALLITUT.sallitut, raja: [] }, kors);
+      const v = vastaa({ ...OPAS_AINEISTOT, sallitut: sallitutPyynnolle(env), raja: [] }, kors);
       v.headers.set('cache-control', 'public, max-age=300');
       return v;
     }

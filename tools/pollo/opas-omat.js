@@ -8,6 +8,7 @@
 export const OPAS_OMAT = Object.freeze({
   giza: {
     nimi: 'Gizan pyramidit',
+    kokeilu: true,   // vain otsakkeella x-matkakirja-kokeilu: giza (Päätoimittaja 7.10. 08.5x)
     // LS1: Sfinksi → Khefren → Mykerinos → Kheops.
     kierros: ['Q130958', 'Q208358', 'Q238623', 'Q37200'],
     // Kerronta (teksti, lyhyt, syventava) lisätään Opus-kirjoittajan ja -tarkistajan jälkeen; ilman sitä live-malli kertoo.

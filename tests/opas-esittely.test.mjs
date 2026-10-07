@@ -84,17 +84,27 @@ test('puhe_teksti: näytölle kirjoitusasu, äänen tunniste ääntämisversiost
   assert.ok(String(d.aani).includes(sha), `ääni ${d.aani}`);
 });
 
-test('omat kohteet (Giza): Liiku kierros LS1:n järjestyksessä, sallittu alue', async () => {
+test('omat kohteet (Giza): vain kokeilu-otsakkeella; Liiku kierros LS1:n järjestyksessä', async () => {
   const { omatKohteet } = await import('../tools/pollo/opas-esittely.js');
-  const { sallittuKaupunki } = await import('../tools/pollo/sallitut.js');
-  assert.deepEqual(omatKohteet('Gizan pyramidit').kierros, ['Q130958', 'Q208358', 'Q238623', 'Q37200']);
-  assert.equal(omatKohteet('giza').kohteet.length, 4);
-  assert.equal(sallittuKaupunki('Gizan pyramidit', { OPAS_SALLITUT_ESTO: '1' })?.id, 'giza');
+  const { sallittuKaupunki, sallitutPyynnolle } = await import('../tools/pollo/sallitut.js');
+  const kok = { OPAS_KOKEILU: ['giza'], OPAS_SALLITUT_ESTO: '1' };
+  assert.equal(omatKohteet('Gizan pyramidit'), null, 'TF-appit eivät näe Gizaa');
+  assert.equal(sallittuKaupunki('Gizan pyramidit', { OPAS_SALLITUT_ESTO: '1' }), null);
+  assert.ok(!sallitutPyynnolle({}).some((x) => x.id === 'giza'));
+  assert.deepEqual(omatKohteet('Gizan pyramidit', kok).kierros, ['Q130958', 'Q208358', 'Q238623', 'Q37200']);
+  assert.equal(sallittuKaupunki('Gizan pyramidit', kok)?.id, 'giza');
+  assert.ok(sallitutPyynnolle(kok).some((x) => x.id === 'giza'));
   const vanha = globalThis.fetch; globalThis.fetch = async () => new Response('{}');
   try {
     const e = { ...ymparisto(), OPAS_ESITTELY_TESTI: undefined, OPAS_SALLITUT_ESTO: '1' };
-    const d = await (await worker.fetch(new Request('https://pollo.example/opas/liiku?kaupunki=Gizan%20pyramidit', { headers: H }), e, {})).json();
+    const ilman = await worker.fetch(new Request('https://pollo.example/opas/liiku?kaupunki=Gizan%20pyramidit', { headers: H }), e, {});
+    assert.equal(ilman.status, 403, 'ilman otsaketta ei-sallittu');
+    const d = await (await worker.fetch(new Request('https://pollo.example/opas/liiku?kaupunki=Gizan%20pyramidit',
+      { headers: { ...H, 'x-matkakirja-kokeilu': 'giza' } }), e, {})).json();
     assert.deepEqual(d.kierros, ['Q130958', 'Q208358', 'Q238623', 'Q37200']);
     assert.deepEqual(d.kohteet.map((k) => k.nimi), ['Gizan suuri sfinksi', 'Khefrenin pyramidi', 'Mykerinoksen pyramidi', 'Kheopsin pyramidi']);
+    const a = await (await worker.fetch(new Request('https://pollo.example/opas/aineistot', { headers: { origin: 'https://matkakirja.app', 'x-matkakirja-kokeilu': 'giza' } }),
+      { POLLO_ORIGINIT: 'https://matkakirja.app' }, {})).json();
+    assert.ok(a.sallitut.some((x) => x.id === 'giza'));
   } finally { globalThis.fetch = vanha; }
 });

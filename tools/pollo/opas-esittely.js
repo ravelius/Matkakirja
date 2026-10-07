@@ -20,9 +20,10 @@ export const kaupunkiId = (nimi) => String(nimi ?? '').toLowerCase().normalize('
 export function tyhjennaEsittelyt() { muisti.clear(); }
 
 /** Omat kohteet (opas-omat.js) kaupungin nimellä tai tunnuksella ("Gizan pyramidit" / giza) tai null. */
-export function omatKohteet(kaupunki) {
+export function omatKohteet(kaupunki, env = null) {
   const id = kaupunkiId(kaupunki);
-  const [, o] = Object.entries(OPAS_OMAT).find(([k, v]) => k === id || kaupunkiId(v.nimi) === id) ?? [];
+  const [avain, o] = Object.entries(OPAS_OMAT).find(([k, v]) => k === id || kaupunkiId(v.nimi) === id) ?? [];
+  if (o?.kokeilu && !(env?.OPAS_KOKEILU ?? []).includes(avain)) return null;
   return o?.kohteet?.length ? o : null;
 }
 
@@ -31,7 +32,7 @@ export async function oppaanEsittely(env, kaupunki, haku = fetch, nyt = Date.now
   const id = kaupunkiId(kaupunki);
   if (!id) return null;
   if (env?.OPAS_ESITTELY_TESTI) return env.OPAS_ESITTELY_TESTI[id] ?? null;
-  const omat = omatKohteet(kaupunki);
+  const omat = omatKohteet(kaupunki, env);
   if (omat) return omat;
   if (!(OPAS_AINEISTOT.esittely ?? []).includes(id)) return null;
   const m = muisti.get(id);

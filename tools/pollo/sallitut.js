@@ -11,7 +11,6 @@
  * RAJA-kaupungit Kiova, Sarajevo ja Tromssa sekä POIS-luokka eivät ole mukana.
  * /opas/aineistot palauttaa sallitut (raja: [] yhteensopivuuden vuoksi); natiivi (LS1 OpasSallitut) rajaa niillä
  * kaupunkiehdotukset, lennot ja vapaan liikkeen. Worker torjuu muut kaupungit ja r_m-säteen ulkopuoliset kohteet.
- * Giza (omistaja 7.10. 08.4x): omat Blender-mallit, ei Googlen 3D:tä; r 1,5 km (LS1).
  * Id kuten KaupunkiTiet.Tunnus / aineistoindeksi (pienaakkoset, diakriitit pois, muut → "-").
  */
 export const OPAS_SALLITUT = Object.freeze({
@@ -53,9 +52,22 @@ export const OPAS_SALLITUT = Object.freeze({
     {"id": "luxemburg", "nimi": "Luxemburg", "lat": 49.6132, "lon": 6.12956, "r_m": 5000},
     {"id": "venetsia", "nimi": "Venetsia", "lat": 45.43566, "lon": 12.33596, "r_m": 3000},
     {"id": "sisilia", "nimi": "Sisilia", "lat": 38.0992, "lon": 13.34633, "r_m": 20000},
-    {"id": "giza", "nimi": "Gizan pyramidit", "lat": 29.9765, "lon": 31.1313, "r_m": 1500},
   ],
 });
+
+/*
+ * KOKEILUKOHTEET (Päätoimittaja 7.10. 08.5x): vain kehityskäännöksille, jotka lähettävät otsakkeen
+ * x-matkakirja-kokeilu: <id>[,<id>] (worker siirtää sen env.OPAS_KOKEILU-listaksi). TF-appit eivät näe näitä.
+ * Giza: omat Blender-mallit (omistaja 08.4x), TF 157/158:ssa mallit pois päältä → ei tuotannon listalle.
+ */
+export const OPAS_SALLITUT_KOKEILU = Object.freeze({
+  giza: { id: 'giza', nimi: 'Gizan pyramidit', lat: 29.9765, lon: 31.1313, r_m: 1500 },
+});
+/** Pyynnön kokeilukohteet: otsakkeen id:t, jotka ovat kokeilulistalla. */
+export const kokeilut = (otsake) => String(otsake ?? '').split(',').map((x) => x.trim().toLowerCase()).filter((x) => OPAS_SALLITUT_KOKEILU[x]);
+const kokeilussa = (env) => (env?.OPAS_KOKEILU ?? []).map((x) => OPAS_SALLITUT_KOKEILU[x]).filter(Boolean);
+/** Sallitut tälle pyynnölle (/opas/aineistot): tuotannon lista + pyynnön kokeilukohteet. */
+export const sallitutPyynnolle = (env) => [...OPAS_SALLITUT.sallitut, ...kokeilussa(env)];
 
 /** Kaupungin id nimestä (sama kaava kuin aineistoindeksissä). */
 export const sallittuId = (nimi) => String(nimi ?? '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '')
@@ -66,7 +78,8 @@ export const sallittuId = (nimi) => String(nimi ?? '').toLowerCase().normalize('
  * suodatus, Kysyn ei-sallittu) on päällä vain, kun env.OPAS_SALLITUT_ESTO = '1' — TF 154/155 eivät vielä lue listaa
  * (natiivi junassa 157). Testi voi antaa oman listan env.OPAS_SALLITUT_TESTI ({ sallitut }), jolloin esto on päällä.
  */
-const lista = (env) => env?.OPAS_SALLITUT_TESTI ?? (String(env?.OPAS_SALLITUT_ESTO ?? '') === '1' ? OPAS_SALLITUT : null);
+const perus = (env) => env?.OPAS_SALLITUT_TESTI ?? (String(env?.OPAS_SALLITUT_ESTO ?? '') === '1' ? OPAS_SALLITUT : null);
+const lista = (env) => { const l = perus(env); return l && kokeilussa(env).length ? { sallitut: [...l.sallitut, ...kokeilussa(env)] } : l; };
 const kaikki = (l) => l.sallitut;
 const metreina = (a, b) => {
   const r = Math.PI / 180, dLat = (b.lat - a.lat) * r, dLon = (b.lon - a.lon) * r;
@@ -99,6 +112,6 @@ export function pisteSallittu(piste, kaupunki = null, env = null) {
  */
 export function sallittuAluePisteelle(piste, env = null) {
   if (!Number.isFinite(piste?.lat) || !Number.isFinite(piste?.lon)) return null;
-  const l = env?.OPAS_SALLITUT_TESTI ?? OPAS_SALLITUT;
+  const l = { sallitut: [...(env?.OPAS_SALLITUT_TESTI ?? OPAS_SALLITUT).sallitut, ...kokeilussa(env)] };
   return l.sallitut.map((a) => ({ a, d: metreina(a, piste) })).filter((x) => x.d <= x.a.r_m).sort((x, y) => x.d - y.d)[0]?.a ?? null;
 }
