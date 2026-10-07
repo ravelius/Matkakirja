@@ -14,10 +14,21 @@ HTTP 400 ja antaa HTML-virhesivun JPEG:n sijaan. Huomaa myös, että
 `iiurlwidth=640` palauttaa käytännössä 960 px:n pikkukuvan — se on API:n oma
 valinta, ja sitä käytetään sellaisenaan.
 
-Neljä kerääjä-agenttia (Opus) käynnistetty TILANNE.md:n ryhmäjaolla; ne
+Neljä kerääjä-agenttia käynnistetty TILANNE.md:n ryhmäjaolla; ne
 kirjoittavat `wip/osa1..osa4.json` ja `wip/codex1..codex4.md`. Tämän jälkeen
 ajetaan `yhdista.py`, sitten TARKISTAJA-agentti, ja lopuksi kirjoitetaan
 kolme tulostiedostoa ja poistetaan `wip/`.
+
+### Agenttimalli: SONNET (omistajan päätös 7.10.2026)
+
+Omistaja päätti krediittien säästämiseksi, että tämä työ ajetaan **Sonnetilla**.
+Kaikki tästä eteenpäin käynnistettävät ali-agentit ja TARKISTAJA-agentti ajetaan
+mallilla `sonnet`. Ensimmäinen neljän kerääjän erä oli jo käynnistetty Opuksella
+ja sai omistajan luvalla ajaa loppuun; jos jokin niistä on ajettava uudelleen,
+uusinta tehdään Sonnetilla.
+
+Tämä on CLAUDE.md:n agenttisäännön mukaista: sääntö vaatii Opuksen tai Sonnetin,
+ja Sonnet kelpaa.
 
 ## Tehtävä lyhyesti
 
