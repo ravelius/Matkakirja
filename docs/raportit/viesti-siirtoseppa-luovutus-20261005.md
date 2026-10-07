@@ -409,7 +409,7 @@ Edellinen luovutus on `viesti-siirtoseppa-luovutus-20261002.md` (5.10. osiot 02.
   817/817), a96bd209 SeikkailuVartijat (NavMesh kävelypinnoista, partio:-reitit, poikki vartijat 1|0|tila). Julkaisijan jonossa a96bd209 + NUI;
   vuoro-h3.sh (vene v44b + kävely VARTIJAT=1), app lokit/siirtoseppa-historia4-app. Päätoimittajalle V1-stillit siitä ajosta.
 
-### JATKA TÄSTÄ (tauko 13.45–15.00, tila 7.10. 13.2x)
+### JATKA TÄSTÄ (tauko 13.45–15.00, tila 7.10. 12.5x)
 
 1. Proto-worktree /Users/Shared/Claude/wt/proto-siirtoseppa-face, haara siirtoseppa/historia-h0 @ a96bd209 (paikallinen, ei originia).
    eleet-2 @ 67728f0b on Natiivisepän junassa 161.
