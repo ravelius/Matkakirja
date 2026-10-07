@@ -145,7 +145,11 @@ namespace Matkakirja.Natiivi
                 Viimeisin.o.Kirjaa($"opas: kaupungin vaihto suoraan kohteeseen {kohde} ({kLat:F4}, {kLon:F4})");
                 Viimeisin.silmukka.VaihdaPaikkaKohteeseen(kohde.Trim(), kLat, kLon);
             }
-            else Viimeisin.silmukka.VaihdaPaikka(lat, lon, nimi.Trim());   // kamera lentää heti kaupungin yleiskuvaan (Natiivi-UI 6.10. 00.2x)
+            else
+            {
+                if (esitysAlkaa) Viimeisin.silmukka.PyynnotSeis = true;   // esitys: avaus ja opastus ensin, ei workerin kaupunkikysymystä
+                Viimeisin.silmukka.VaihdaPaikka(lat, lon, nimi.Trim());   // kamera lentää heti kaupungin yleiskuvaan (Natiivi-UI 6.10. 00.2x)
+            }
             var v = Viimeisin;
             if (!v.SanoNimi(nimiaanet?.Kaupungille(iso, nimi))) v.Silta(OpasSiltalauseet.Kaupunki, true);
             return true;
@@ -330,7 +334,7 @@ namespace Matkakirja.Natiivi
             kori.Kayta(Kaupunkitila && nakymaAuki, kaupunki.Kamera);   // kuumailmapallon korinäkymä (kokeilu, Päätoimittaja 7.10. 09.1x)
             IlmoitaKierros();
             if (esitysAlkaa && Kaupunkitila && !silmukka.Siirtymassa && kohteet != null && kohteet.Count > 0 && kohteetKaupunki == Aloituskaupunki)
-            { esitysAlkaa = false; o.Kirjaa("opas: esitys alkaa (kaupunkikierros)"); Kaupunkikierros(); }
+            { esitysAlkaa = false; o.StartCoroutine(EsitysAvaus(KaupunkitilaId)); }
             if (jatkoVastauksenJalkeen && silmukka.KierrosKeskeytetty && silmukka.Vaihe == OpasVaihe.Odottaa && silmukka.VaiheAika > JatkoViiveS && !puhuu)
             { jatkoVastauksenJalkeen = false; o.Kirjaa("opas: kierros jatkuu vastauksen jälkeen"); JatkaKierrosta(); }
             OpasSilmukka.PalloLento = kori.Nakyy;
@@ -439,6 +443,8 @@ namespace Matkakirja.Natiivi
         /// </summary>
         public static event Action<int, int, float> KierrosLahtee;
         /// <summary>Nykyisen kohteen valmiit kysymykset (enintään 5; /opas/kysymykset tai pysähdyksen kysymykset).</summary>
+        /// <summary>Korin vasemman köyden ruutuala normalisoituna (0–1, y ylhäältä); tyhjä, kun köyttä ei näy (PalloKori).</summary>
+        public static Rect KoriVasenKoysiNorm => PalloKori.VasenKoysiNorm;
         public static IReadOnlyList<string> KysyKysymykset
         {
             get
@@ -452,6 +458,65 @@ namespace Matkakirja.Natiivi
             }
         }
         public const string KerroLisaaTeksti = "Kerro lisää";
+
+        // ---- ESITYKSEN AVAUS JA OPASTUS (omistaja 7.10. 10.1x / 12.4x) ----
+        // Kaupunkitilan esitys: siirtymä → kaupungin avaus (opas/esittely-v1/<id>.json "avaus") → opastuslause VAIN pelaajan
+        // ensimmäisellä kuumailmapallokyydillä (opas/yleiset-v1.json "opastus"[0]; lippu PlayerPrefs, pysyvä) → kaupunkikierros.
+        // Kamera kiertää yleiskuvaa avauksen ajan; workerin pyynnöt seis (OpasSilmukka.PyynnotSeis), kunnes kierros alkaa.
+        public const string EsittelyJuuri = "https://media.matkakirja.app/opas/";
+        public const string OpastusKuultuAvain = "matkakirja-pallo-opastus-kuultu";
+        /// <summary>Ensimmäinen kuumailmapallokyyty tehty (opastus kuultu). Testi `opas opastus nollaa`.</summary>
+        public static bool OpastusKuultu { get => PlayerPrefs.GetInt(OpastusKuultuAvain, 0) == 1; set { PlayerPrefs.SetInt(OpastusKuultuAvain, value ? 1 : 0); PlayerPrefs.Save(); } }
+
+        IEnumerator EsitysAvaus(string kaupunkiId)
+        {
+            o.Kirjaa($"opas: esitys alkaa ({kaupunkiId}): avaus{(OpastusKuultu ? "" : " + opastus (1. kyyti)")}");
+            if (!Testi && !string.IsNullOrEmpty(kaupunkiId))
+            {
+                Dictionary<string, object> avaus = null;
+                using (var r = UnityWebRequest.Get(EsittelyJuuri + "esittely-v1/" + UnityWebRequest.EscapeURL(kaupunkiId) + ".json"))
+                {
+                    r.timeout = 10;
+                    yield return r.SendWebRequest();
+                    if (r.result == UnityWebRequest.Result.Success && MiniJson.Jasenna(r.downloadHandler.text) is Dictionary<string, object> j)
+                        avaus = j.TryGetValue("avaus", out var a) ? a as Dictionary<string, object> : null;
+                }
+                if (avaus != null && avaus.TryGetValue("aani", out var au) && au is string url) yield return SoitaJaOdota(url, "avaus");
+                if (!OpastusKuultu && silmukka != null && Kaupunkitila)
+                {
+                    string ourl = null;
+                    using (var r = UnityWebRequest.Get(EsittelyJuuri + "yleiset-v1.json"))
+                    {
+                        r.timeout = 10;
+                        yield return r.SendWebRequest();
+                        if (r.result == UnityWebRequest.Result.Success && MiniJson.Jasenna(r.downloadHandler.text) is Dictionary<string, object> j
+                            && j.TryGetValue("opastus", out var ol) && ol is IList<object> l && l.Count > 0 && l[0] is Dictionary<string, object> o0
+                            && o0.TryGetValue("aani", out var ou)) ourl = ou as string;
+                    }
+                    if (ourl != null) { yield return SoitaJaOdota(ourl, "opastus"); OpastusKuultu = true; }
+                }
+            }
+            if (silmukka == null || !Kaupunkitila) yield break;
+            o.Kirjaa("opas: esitys: kaupunkikierros");
+            Kaupunkikierros();
+            if (silmukka != null) silmukka.PyynnotSeis = false;   // kierroksen ulkopuolella (tyhjä lista) pyynnöt taas sallittu
+        }
+
+        /// <summary>Esityksen puhe (avaus, opastus) siltalauseiden kanavalla; odottaa loppuun (ei kertojaa päälle).</summary>
+        IEnumerator SoitaJaOdota(string url, string mika)
+        {
+            if (silta == null || !Asetukset.Paalla(Kytkin.Kertoja)) yield break;
+            using var p = UnityWebRequestMultimedia.GetAudioClip(url, AudioType.MPEG);
+            p.timeout = 15;
+            float t0 = Time.realtimeSinceStartup;
+            yield return p.SendWebRequest();
+            if (p.result != UnityWebRequest.Result.Success || silmukka == null) { o.Kirjaa($"opas: esitys {mika} ei latautunut ({p.responseCode})"); yield break; }
+            var klippi = DownloadHandlerAudioClip.GetContent(p);
+            silta.clip = klippi; silta.volume = 1f; silta.Play();
+            o.Kirjaa($"opas: esitys {mika} soi ({klippi.length:F1} s, lataus {Time.realtimeSinceStartup - t0:F1} s)");
+            float loppu = Time.realtimeSinceStartup + klippi.length + 0.6f;
+            while (Time.realtimeSinceStartup < loppu && silmukka != null && Kaupunkitila) yield return null;
+        }
         /// <summary>Kaupunkitilan avaus aloittaa esityksen (kaupunkikierros) heti, kun kohdelista on haettu ja siirtymä ohi.</summary>
         static bool esitysAlkaa;
         bool kerroLisaaOdottaa;
