@@ -6,7 +6,21 @@ worktreet /Users/Shared/Claude/wt/proto-natiivi-ui-<aihe>. Käännös: lokit/nat
 Simu vain Julkaisijan "SIMU NYT" -viestistä, oma iPhone FB234D08-4693-4496-9C7A-6C7C15B03963, iPad
 AD119F7B-A2A2-43EE-8769-7326DD757F89; lopuksi sammutus ja "simu vapaa".
 
-## TILA 7.10. klo 16.0x (uusin)
+## HUOMINEN 8.10.: PELATTAVUUSMALLI (Päätoimittaja 7.10. 19.1x, main #4163 docs/raportit/pelattavuusmalli-olavinlinna.md)
+
+Lue kohdat 6 (ohjaus laitteittain) ja 12 (Natiivi-UI-sarake). Tavoite illan junaan: Olavinlinnan 1. persoonan pala
+huoneet 1–5. Ei uusia pohjia. Työt SeikkailuTapit.cs:ään (haara cbc92a25:n päälle, worktree wt/proto-natiivi-ui-seikkailutoiminto):
+1 aamupäivä: OIKEA VETO koko oikealla puoliskolla olemassa olevalla veto-pohjalla (0,30°/pt vaaka, 0,22°/pt pysty, ei
+  liukumaa) → SeikkailuTapit.Oikea-arvon tilalle/rinnalle (sovi Siirtosepän kanssa luettava rajapinta); oikea TAPPI jää
+  testikytkimeksi (oletus pois). NAPAUTUS MAAILMAAN (lattia = napautuskävely, esine < 1,2 m = toiminto) ja PULUN
+  REUNAKUVAN napautus (vihje) kytketään Siirtosepän luokkiin heijastuksella (Pulu.NapautusKaappaa on jo olemassa).
+2 iltapäivä: toimintonapin uudet tilat puhalla, avaa, kaada, aseta, anna tarjotin (Toimintonimet + Tila(); kysy Siirtosepältä
+  Lahin-tunnukset) olemassa olevin kuvakkein.
+3 alkuilta: testi "seikkailussa ei näkyvää tekstiä" (paitsi löytö- ja tietokerrospohjat; kohta 11).
+Kontekstikuvakkeet (käsi, kaari, liekki) = omistajan päätettävä 13.3; toteuta VASTA kuittauksesta.
+Testaus: tarkista.sh + kaanna.sh-testit, kuittaus 1 rivillä Päätoimittajalta → SHA Natiivisepälle.
+
+## TILA 7.10. klo 16.0x
 
 JATKA TÄSTÄ: junaan 162 kuitattu apuraha-kuvat 3f07c49b (SHA Natiivisepälle 16.0x) ja seikkailu-tapit 34cf54b0 (16.2x, Päätoimittaja ilmoitti); metro 89d98b7e junassa 161.
 OMISTAJA 15.5x + 16.0x: ei stillejä, savuja eikä omia iOS/Mac-käännöksiä; haaraan unity-tarkistus + kaanna.sh-testit

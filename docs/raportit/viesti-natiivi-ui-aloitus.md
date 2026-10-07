@@ -12,4 +12,5 @@ savuja eikä toistoajoja. Simukäännös vain jos vian syy muuten epäselvä: en
 vuoro. Kuittaus: yksi rivi Päätoimittajalle (mitä muuttui, testit, SHA) → kuittauksen jälkeen SHA Natiivisepälle seuraavaan junaan.
 
 Tila 7.10. 16.4x: seikkailu-toiminto f9f48082 junassa 162; avoimet: omistajan ikonipäätös (seikkailu-tietokerros cbc92a25 kuitattu junaan 163) (ks. luovutus). Junassa 161 metro 89d98b7e; junassa 162 apuraha-kuvat 3f07c49b ja seikkailu-tapit 34cf54b0.
+HUOMINEN 8.10.: pelattavuusmalli (luovutuksen ylin osio HUOMINEN 8.10.).
 UI-POHJAT: vain olemassa olevat pohjat; puuttuva → Päätoimittaja.
