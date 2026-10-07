@@ -1824,3 +1824,163 @@ Tarkistin: `Sofia: 10 kohdetta, 0 virhettä, 3 huomiota` (sama kuin ennen).
 ### Epävarmuudet Päätoimittajalle
 - Sofian yliopisto: "buuasivat" perustuu en.wikipedian sanaan "booed". Bg.wikipedia puhuu ruhtinasta vastustaneesta mielenosoituksesta. Ilmaisu on tavallinen, mutta sävyn voi halutessaan muuttaa.
 - Rotunda: lause "Serdica on minun Roomani" on esitetty muodossa "kerrotaan sanoneen", koska alkuperäistä antiikin lähdettä ei mainita.
+
+## Oslo
+
+Tarkistin: 0 virhettä, 7 huomiota (sama määrä kuin ennen: 6 × "ei ala paikan nimellä" suomenkielisen etusanan takia, 1 × "avaus puuttuu" koska avaus on omassa tiedostossaan). Avaus (avaukset/oslo.md) tarkistettu: 36 sanaa, alkaa "Tervetuloa", ilmakuva (vuonon perukka, metsäiset kukkulat) — ei muutoksia.
+
+### Oslon kuninkaanlinna — kenttä `lyhyt`
+- **Vanha:** "Oslon kuninkaanlinnassa on sataseitsemänkymmentäkolme huonetta, ja kesäisin osaan niistä pääsee opastetulla kierroksella. Kansallispäivänä seitsemästoista toukokuuta kuninkaallinen perhe tervehtii linnan parvekkeelta lasten kulkuetta, ja tavan aloitti kuningas Haakon seitsemäs vuonna 1906."
+- **Uusi:** "Oslon kuninkaanlinnan rakennustyöt pysähtyivät vuonna 1827, kun rahat loppuivat ja suurkäräjät kieltäytyivät lisärahoista vastalauseena kuninkaalle. Siksi arkkitehti Hans Linstow piirsi halvemman linnan ilman ulkonevia siipiä. Kansallispäivänä kuninkaallinen perhe tervehtii parvekkeelta lasten kulkuetta, ja tavan aloitti kuningas Haakon seitsemäs."
+- **Syy:** Tyyppi 2. Huonemäärä ja opastetut kierrokset ovat perustietoa. Ne korvattiin tarinalla siitä, miten suurkäräjät pysäyttivät rahoituksen ja linnasta tuli suunniteltua vaatimattomampi. Parvekeperinne säilyi.
+- **Lähde:** https://en.wikipedia.org/wiki/Royal_Palace,_Oslo
+
+### Oslon kuninkaanlinna — kenttä `teksti`
+- **Vanha:** "Linnaa alettiin rakentaa vuonna 1825 Hans Linstowin piirustusten mukaan, mutta kuningas Kaarle Juhana ei ehtinyt asua siinä,"
+- **Uusi:** "Kuningas Kaarle Juhana laski linnan peruskiven vuonna 1825, mutta hän ei ehtinyt asua siinä,"
+- **Syy:** Tyyppi 3. Työmaa alkoi jo 1824, ja vuonna 1825 laskettiin peruskivi. Linstow siirtyi kierrosversioon, joten hän ei enää toistu tekstissä (tyyppi 1).
+- **Lähde:** https://en.wikipedia.org/wiki/Royal_Palace,_Oslo
+
+### Karl Johans gate — kenttä `lyhyt`
+- **Vanha:** "Oslon pääkadun Grand Hotel avattiin vuonna 1874, ja rauhanpalkinnon saaja majoittuu perinteisesti sen Nobel-sviitissä. Kadun nimi juontaa kuninkaasta, joka tunnetaan Ruotsissa nimellä Kaarle neljästoista Juhana ja joka oli alun perin ranskalainen marsalkka Jean Bernadotte."
+- **Uusi:** "Oslon pääkatu kantaa nimeä mieheltä, joka pakotti Norjan unioniin Ruotsin kanssa. Ranskalaissyntyinen kruununprinssi Kaarle Juhana voitti norjalaiset vuonna 1814 alle kolme viikkoa kestäneessä sodassa, mutta hyväksyi silti heidän juuri säätämänsä perustuslain. Ruotsia tai norjaa hän ei koskaan oppinut kunnolla."
+- **Syy:** Tyyppi 1. Grand Hotel ja rauhanpalkinnon saaja toistivat saman kohteen tekstiä (soihtukulkue Grand Hotelin eteen, parveke). Avausvuosi oli lisäksi pelkkää perustietoa (tyyppi 2). Uusi versio kertoo ristiriidasta: pääkatu on nimetty miehen mukaan, joka voitti Norjan sodassa mutta hyväksyi sen perustuslain.
+- **Lähde:** https://en.wikipedia.org/wiki/Charles_XIV_John
+
+### Karl Johans gate — kenttä `kysymykset`
+- **Vanha:** "Kuinka monta lasta kansallispäivän kulkueessa on?"
+- **Uusi:** "Miksi soihtukulkue päättyy Grand Hotelin eteen?"
+- **Syy:** Tyyppi 7. Vastaus vaihtuu joka vuosi.
+- **Lähde:** —
+
+### Oslon oopperatalo — kenttä `lyhyt`
+- **Vanha:** "Oslon oopperatalo on suurin Norjaan rakennettu kulttuurirakennus sitten Nidarosin tuomiokirkon. Pääsalissa on tuhat kolmesataakuusikymmentäneljä istumapaikkaa, ja salia ympäröi tammella verhoiltu seinä. Vedessä kelluva veistos She Lies on Monica Bonvicinin tulkinta Caspar David Friedrichin maalauksesta Jäämeri."
+- **Uusi:** "Oslon oopperatalon katon marmori ei ole tasaista, sillä taiteilijat Kristian Blystad, Jorunn Sannes ja Kalle Grude suunnittelivat siihen kuvion, joka ei toista itseään. Pinnassa on koholla olevia kohtia, erikoisia leikkauksia ja eri tavoin työstettyjä laattoja. Näyttämötornin alumiinilevyjen kuviot taas pohjautuvat vanhoihin kudontamalleihin."
+- **Syy:** Tyyppi 1, koska She Lies on myös saman kohteen tekstissä. Tyyppi 2, koska superlatiivi ja istumapaikkojen määrä ovat perustietoa. Uusi versio kertoo yksityiskohdan, jonka näkee katolla kävellessä.
+- **Lähde:** https://en.wikipedia.org/wiki/Oslo_Opera_House ; https://www.dezeen.com/2008/04/09/opera-house-oslo-by-snohetta-2/
+
+### Oslon kaupungintalo — kenttä `lyhyt`
+- **Vanha (2. virke):** "Talossa työskentelevät kaupunginvaltuusto ja kaupungin hallinto, ja sen suureen saliin pääsee tutustumaan maksutta."
+- **Uusi (2. virke):** "Talon ulkoseinillä on Dagfin Werenskioldin värikkäitä reliefejä, joiden aiheet on poimittu muinaisnorjalaisista Edda-runoista."
+- **Syy:** Tyyppi 2. Hallintotieto ja pääsymaksu vaihdettiin näkyvään taideyksityiskohtaan. Tähtitieteellinen kello säilyi.
+- **Lähde:** https://en.wikipedia.org/wiki/Oslo_City_Hall
+
+### Vigelandin puisto — kenttä `lyhyt`
+- **Vanha:** "Vuonna 1921 kaupunki antoi Gustav Vigelandille suuren ateljeen, ja hän lupasi vastineeksi kaupungille kaikki teoksensa."
+- **Uusi:** "Vuonna 1921 kaupunki sitoutui rakentamaan Gustav Vigelandille suuren ateljeen, ja vastineeksi hän lupasi kaupungille kaikki teoksensa."
+- **Syy:** Tyyppi 3. Vuonna 1921 tehtiin sopimus ja rakentaminen alkoi. Ateljee ei ollut vielä valmis annettavaksi.
+- **Lähde:** https://en.wikipedia.org/wiki/Vigeland_Museum
+
+### Holmenkollbakken — kenttä `lyhyt`
+- **Vanha:** "Hyppyrimäki Holmenkollbakken oli vuoden 1952 talviolympialaisten areena, ja suurmäen kilpailua seurasi silloin satakaksikymmentätuhatta katsojaa. Holmenkollenin hiihtojuhlat ovat kuuluneet vuodesta 1980 lähtien mäkihypyn maailmancupiin. Mäen katsomoihin ja rinteille mahtuu nykyään seitsemänkymmentätuhatta katsojaa."
+- **Uusi:** "Hyppyrimäki Holmenkollbakken on nähnyt tulevan kuninkaankin hyppäämässä, sillä kruununprinssi Olav kilpaili täällä nuorimpien sarjassa vuosina 1922 ja 1923. Kaikkiaan hän oli mukana seitsemässäkymmenessäkahdessa Holmenkollenin kisassa hyppääjänä tai katsojana. Vuoden 1952 olympialaisissa mäkikilpailua seurasi satakaksikymmentätuhatta katsojaa."
+- **Syy:** Tyyppi 2. Maailmancup-vuosi ja katsomokapasiteetti ovat hallinto- ja tilastotietoa. Ne korvattiin tarinalla kruununprinssi Olavista mäkihyppääjänä. Olympialaisten yleisöennätys säilyi.
+- **Lähde:** https://snl.no/Holmenkollrennene ; https://holmenkollen.com/en/historien-om-bakken/
+
+### Viikinkilaivamuseo — kenttä `kysymykset`
+- **Vanha:** "Mitä laivoja uuteen museoon tulee?" / "Milloin uusi museo avataan yleisölle?"
+- **Uusi:** "Mitä laivoja uuteen museoon siirrettiin?" / "Miksi laivat piti siirtää uuteen museoon?"
+- **Syy:** Tyyppi 7 ja 5. Laivat on jo siirretty (Oseberg 10.9.2025, Gokstad 29.10.2025, Tune 24.2.2026). Avajaiskysymyksen oletus vanhenee, kun museo avataan (suunnitelma: marraskuu 2027).
+- **Lähde:** https://www.tu.no/artikler/norges-forste-vikingskipfunn-flyttes-til-nytt-museum/568644 ; https://snl.no/Vikingtidsmuseet
+
+### Viikinkilaivamuseo — kenttä `lahteet`
+- Kuolleet lähteet (tu.no/nyhetsstudio/88519 → 404, lokalhistoriewiki → 503) vaihdettiin avattuihin lähteisiin. Lyhyen version väitteet tarkistettiin: tärinältä suojattu laatikko, sata metriä, kymmenen vuoden suunnittelu, lähes puoli miljardia ja ensimmäinen siirto 99 vuoteen (tv4.se/TT), katon nosturirata (sciencenorway). Tekstiä ei muutettu. Nykytila tarkistettiin: vanha talo suljettiin 2021, ja kaikki kolme laivaa siirrettiin vuosina 2025 ja 2026.
+- **Lähde:** https://www.tv4.se/artikel/tt-250910-vikingaskepp1-3f4aa926/vikingaskepp-flyttas-for-halv-miljard ; https://www.sciencenorway.no/viking-age-archaeology-culture/final-voyage-for-the-viking-ships/2492239
+
+### Fram-museo — kenttä `teksti`
+- **Vanha:** "kuin yhdelläkään muulla laivalla"
+- **Uusi:** "kuin yhdelläkään muulla puulaivalla"
+- **Syy:** Tyyppi 3. Ennätys koskee puulaivoja. Nykyiset jäänmurtajat ovat käyneet pohjoisnavalla, joten väite "kaikista laivoista" on väärä.
+- **Lähde:** https://frammuseum.no/polar-ship/fram/ ; https://www.oslo-spirit.com/guides/fram-museum/
+
+### Nobelin rauhankeskus — kenttä `teksti`
+- **Vanha:** "Keskus avattiin kesäkuussa 2005, ja avajaisvieraina olivat Nelson Mandela ja tuore rauhanpalkinnon saaja Wangari Maathai. Näyttelyt kertovat Alfred Nobelista, rauhanpalkinnon saajista ja heidän työstään, ja joka vuosi keskus esittelee uusimman palkitun omassa näyttelyssään."
+- **Uusi:** "Kuningas Harald avasi keskuksen kesäkuussa 2005, kun edellisen vuoden rauhanpalkinnon saaja Wangari Maathai oli paikalla, ja Nelson Mandela oli käynyt tutustumassa siihen jo kaksi päivää aiemmin. Näyttelyt kertovat Alfred Nobelista, rauhanpalkinnon saajista ja heidän työstään rauhan hyväksi."
+- **Syy:** Tyyppi 3, koska Mandela ei ollut avajaisvieras: hän kävi keskuksessa kaksi päivää ennen avajaisia (keskuksen oma sivu ja Equinorin avajaisuutinen 11.6.2005). Maathai sai palkinnon 2004, joten "tuore" tarkennettiin. Tyyppi 5, koska keskus uusii perusnäyttelyään vuodesta 2025 syksyyn 2027 ja on osittain suljettu 8.9.2026 alkaen. Joulukuun 2026 näyttely on valokuvanäyttely 125 vuoden rauhanpalkinnoista, ei uusimman palkitun näyttely. Väite vuosittaisesta palkitun näyttelystä poistettiin, jotta äänite ei vanhene.
+- **Lähde:** https://www.nobelpeacecenter.org/en/news/nobel-peace-prize-laureates-home-away-from-home ; https://www.equinor.com/en/news/archive/2005/06/11/NobelCenterAPeaceBridge.html ; https://www.nobelpeacecenter.org/en/visit/opening-hours
+
+### Nobelin rauhankeskus — kenttä `kysymykset`
+- **Vanha:** "Mitä keskuksen näyttelyissä on nähtävänä?"
+- **Uusi:** "Mitä Mandela sanoi käydessään keskuksessa?"
+- **Syy:** Tyyppi 7. Kysymys koski nykyisiä näyttelyjä, jotka ovat juuri uusittavina. Uusi kysymys liittyy tähän kohteeseen, ja sen vastaus ei vanhene (Mandela kiitti Norjaa, vaikka häntä oli kielletty puhumasta).
+- **Lähde:** https://www.nobelpeacecenter.org/en/news/nobel-peace-prize-laureates-home-away-from-home
+
+### Tarkistettu, ei muutosta (Oslo)
+- Akershus: vastarintamuseo ja puolustusvoimien museo toimivat yhä (Forsvarsbygg), Quisling ja vuosi 1940 ovat oikein. Kuninkaanlinnan vartionvaihto kello 13.30 ja parvekeperinne pitävät paikkansa.
+- Munch-museo (Bjørvika 2021, Tracey Eminin Äiti), Kon-Tiki-museo (avoinna, uusi näyttely avattu, Ra II esillä) ja Kollensvevet (toiminnassa 2026, 361 metriä) ovat ajan tasalla.
+- Tuomiokirkon pronssiovet: Oslo byleksikon ja kirken.no kertovat vuorisaarnasta (autuaaksijulistukset). SNL mainitsee ehtoollisaiheet. Teksti jätettiin ennalleen enemmistölähteiden mukaan.
+- Spikersuppan nimi tulee naulatehtaasta, joka rahoitti altaan: Wikipedia sanoo nimen olevan leikillinen lempinimi, ja teksti sanoo samoin.
+- Kierroksen kahdeksan lyhyttä versiota luettiin peräkkäin muutosten jälkeen, eikä niissä ole enää päällekkäisiä aiheita.
+
+### Epävarmuudet Päätoimittajalle (Oslo)
+- Viikinkilaivamuseon teksti kertoo siirroista yhdellä virkkeellä ("siirrettiin … vuosina 2025 ja 2026"), ja kierrosversio kertoo Osebergin siirron tarinan. Näkökulmat ovat eri, ja tekstin virke on nykytilan kehys, joten jätin molemmat. Päätä, onko tämä liian lähellä tyypin 1 päällekkäisyyttä.
+- Viikinkiajan museo avautuu suunnitelman mukaan marraskuussa 2027, mutta tu.no kertoi rahoitusvajeesta (noin 200 miljoonaa kruunua). Avausvuotta ei siksi kirjoitettu tekstiin.
+- Tuomiokirkon pronssiovien aihe: SNL (ehtoollinen) ja Oslo byleksikon (vuorisaarna) ovat ristiriidassa.
+
+## Sevilla
+
+Tarkistin: 0 virhettä, 10 huomiota (sama määrä kuin ennen: 9 × "ei ala paikan nimellä" suomenkielisen etusanan takia, 1 × "avaus puuttuu"). Avaus (avaukset/sevilla.md) tarkistettu: 38 sanaa, alkaa "Tervetuloa", ilmakuva (vaaleat talot, sisäpihat, Guadalquivir, katedraalin torni) — ei muutoksia.
+
+### Sevillan katedraali — kenttä `lyhyt`
+- **Vanha:** "Sevillan katedraalin kupoli on romahtanut kahdesti, ensin vuonna 1511 pian kirkon valmistumisen jälkeen ja uudelleen vuonna 1888. Vuonna 1987 Unesco liitti katedraalin maailmanperintöluetteloon yhdessä viereisen kuninkaanlinnan ja Intian arkiston kanssa."
+- **Uusi:** "Sevillan katedraalin tuomiokapitulin kerrotaan päättäneen vuonna 1401 rakentaa niin kauniin ja suuren kirkon, että sen nähneet pitäisivät rakentajia hulluina. Pöytäkirjaan merkittiin vaatimattomammin kirkko, jolle ei ole vertaista. Kupoli romahti myöhemmin kahdesti, vuosina 1511 ja 1888."
+- **Syy:** Tyyppi 2. Unesco-merkintä on hallinnollista perustietoa. Tilalle tuli tunnettu "hulluina pitävät" -lausuma, joka on merkitty perimätiedoksi ("kerrotaan"), ja sen rinnalle se, mitä pöytäkirjaan todella kirjattiin (tyyppi 3: legendan ja tosiasian ero). Kupolin romahdukset säilyivät.
+- **Lähde:** https://en.wikipedia.org/wiki/Seville_Cathedral
+
+### Giralda — kenttä `lyhyt`
+- **Vanha (3. virke):** "Nykyinen tuuliviiripatsas on yli kolme metriä korkea ja painaa jalustoineen yli tonnin."
+- **Uusi (3. virke):** "Nykyinen pronssipatsas, lippua kantava nainen, kuvaa kristillistä uskoa, mutta sen esikuvana oli luultavasti antiikin jumalatar Pallas Athene."
+- **Syy:** Tyyppi 2. Korkeus ja paino vaihdettiin ristiriitaan: minareetin huipulla kristillistä uskoa kuvaava patsas, jonka esikuva on pakanajumalatar. Mittatiedotkin olivat epävarmat, sillä Wikipedia sanoo neljä metriä ja 1 500 kiloa, IAPH 3,5 metriä ja 1 300 kiloa.
+- **Lähde:** https://en.wikipedia.org/wiki/Giralda
+
+### Giralda — kenttä `kysymykset`
+- **Vanha:** "Mitä huipun Giraldillo-patsas esittää?"
+- **Uusi:** "Missä Giraldillon kopio nykyään on?"
+- **Syy:** Tyyppi 7 ja 1. Kierrosversio vastaa nyt vanhaan kysymykseen. Uusi kysymys perustuu siihen, että alkuperäinen patsas oli kunnostettavana 1999–2005 ja huipulla oli sillä aikaa kopio.
+- **Lähde:** https://en.wikipedia.org/wiki/Giralda
+
+### Torre del Oro — kenttä `teksti`
+- **Vanha:** "Kultaa siinä ei ole koskaan ollut, vaan nimi tulee hohteesta, jonka laastin, kalkin ja puristetun heinän seos loi."
+- **Uusi:** "Nimi tulee todennäköisimmin kultaisesta hohteesta, jonka laastin, kalkin ja puristetun heinän seos loi, eikä tornissa säilytetty Amerikan kultaa, kuten usein kerrotaan."
+- **Syy:** Tyyppi 3. Nimelle on useita selityksiä, ja kultainen hohde on niistä todennäköisin (vuoden 2005 restauroinnin tulos). Myös kaakeliteoria ja Pedro I:n aarrekertomus ovat olemassa. Väite "kultaa ei koskaan" oli liian ehdoton, sillä Pedro I:n kullan ja hopean säilyttäminen tornissa on legendaa mutta ei kumottu. Kumottu on vain väite Amerikan kullasta, joka säilytettiin Casa de la Contrataciónissa.
+- **Lähde:** https://es.wikipedia.org/wiki/Torre_del_Oro
+
+### Torre del Oro — kenttä `lyhyt`
+- **Vanha:** "…kappeli, aatelisten vankila, ruutivarasto ja satamaviranomaisten toimisto…"
+- **Uusi:** "…kappeli, aatelisten vankila ja satamakapteenin virasto…"
+- **Syy:** Tyyppi 3. Ruutivarastoa ei löytynyt yhdestäkään avatusta lähteestä (es.wikipedia, hoteles.net, hispanopedia). Se mainittiin vain hakuotteessa, joten se poistettiin. Muut käyttötarkoitukset vahvistuivat: kappeli 1271, vankila 1400-luvun alussa, laivaston satamakapteenin virasto 1870 ja merenkulkumuseo vuodesta 1944. Museo toimii yhä (palvelulupaus vuosille 2026–2029).
+- **Lähde:** https://es.wikipedia.org/wiki/Torre_del_Oro
+
+### Intian arkisto — kenttä `lyhyt`
+- **Vanha:** "Intian arkiston rakentaminen alkoi vuonna 1584, ja kauppiaat ottivat talon käyttöön vuonna 1598. Nykyään hyllymetrejä on noin kahdeksan kilometriä, ja asiakirjat kattavat yli kolme vuosisataa Tulimaasta Yhdysvaltain eteläosiin ja Filippiineille."
+- **Uusi:** "Intian arkiston kätköissä on Kristoffer Kolumbuksen omakätisiä papereita ja paavi Aleksanteri kuudennen bulla vuodelta 1493, jolla paavi antoi Espanjalle kaikki maat napalta navalle vedetyn rajalinjan länsipuolelta. Arkiston kartoista näkee, miten Amerikan siirtomaakaupungit suunniteltiin."
+- **Syy:** Tyyppi 2, koska rakennusvuodet ja hyllymetrit ovat perustietoa. Hyllymetreistä oli myös ristiriita: Wikipedia sanoo nykyään yhdeksän kilometriä. Tyyppi 1, koska aineiston laajuus toistui tekstin "kahdeksankymmentä miljoonaa sivua" -virkkeen kanssa. Bullan sisältö on muotoiltu tarkasti: bulla antoi Espanjalle maat rajalinjan länsi- ja eteläpuolelta, eikä se vielä "jakanut maailmaa Portugalin kanssa", sillä jako tuli vasta Tordesillasin sopimuksessa 1494.
+- **Lähde:** https://en.wikipedia.org/wiki/General_Archive_of_the_Indies ; https://en.wikipedia.org/wiki/Inter_caetera
+
+### Metropol Parasol — kenttä `teksti`
+- **Vanha:** "ja sitä pidetään maailman suurimpana puurakenteena"
+- **Uusi:** "ja sitä mainostetaan maailman suurimpana puurakenteena"
+- **Syy:** Tyyppi 3. Superlatiivi on markkinointiväite ("marketed as the world's largest wooden structure"), ei riippumaton luokitus.
+- **Lähde:** https://en.wikipedia.org/wiki/Metropol_Parasol
+
+### Maestranzan areena — kenttä `lyhyt`
+- **Vanha:** "Maestranzan areenaan mahtuu noin kaksitoistatuhatta katsojaa, ja sen rakentamista johtivat aluksi arkkitehdit Francisco Sánchez de Aragón ja Vicente de San Martín. Huhtikuun markkinajuhlan aikaan siellä järjestetään yksi maailman tunnetuimmista härkätaistelusarjoista, ja areenaan kuuluu myös museo ja pieni kappeli."
+- **Uusi:** "Maestranzan areenaa vastapäätä, rantakadun toisella puolella, seisoo patsas sikarityttö Carmenista. Georges Bizet'n oopperassa Carmen kuolee mustasukkaisen Don Josén käsissä Sevillan härkätaisteluareenan edustalla samaan aikaan, kun yleisö hurraa sisällä härkätaistelija Escamillolle."
+- **Syy:** Tyyppi 2. Katsojamäärä, arkkitehtien nimet, museo ja kappeli ovat perustietoa, ja kapasiteetista oli lisäksi ristiriita (es.wikipedia 11 500, en.wikipedia 12 000). Uusi versio kertoo areenan tunnetuimman kulttuuriyhteyden. Kuolema mainitaan yksityiskohditta.
+- **Lähde:** https://visitasevilla.es/en/?p=32858 ; https://en.wikipedia.org/wiki/Carmen
+
+### Maestranzan areena — kenttä `teksti`
+- **Vanha:** "Rakennus on kolmenkymmenen erimittaisen sivun monikulmio, koska sitä rakennettiin katkonaisesti vuodesta 1761 vuoteen 1881."
+- **Uusi:** "Rakennus on kolmenkymmenen erimittaisen sivun monikulmio, ja sitä rakennettiin katkonaisesti vuodesta 1761 vuoteen 1881."
+- **Syy:** Tyyppi 3. Syy-yhteys ei ole varma. Hakuotteen mukaan CSIC:n tutkimus (Informes de la Construcción 2018) toteaa, ettei epäsäännölliselle muodolle ole löydetty vakuuttavaa perustelua, ja selitystä etsitään rakennushistoriasta. Artikkelia ei saatu auki (503), joten syy-yhteys poistettiin eikä sitä korvattu uudella väitteellä.
+- **Lähde:** https://en.wikipedia.org/wiki/Maestranza_(Seville) (rakennusvaiheet, 1786 kielto pysäytti työt)
+
+### Tarkistettu, ei muutosta (Sevilla)
+- Plaza de España: Lawrence of Arabiassa aukio esitti Allenbyn päämajaa Kairossa (andaluciadestinodecine.com), Kloonien hyökkäyksessä Naboon Theediä. Rakennuksessa on yhä valtion virastoja. Kaupunginjohtajan vuoden 2024 ehdotus aidata aukio ja periä pääsymaksu ei ole toteutunut, eikä teksti väitä aukiosta mitään sellaista, mikä muuttuisi.
+- Alcázar, Trianan silta, Casa de Pilatos ja Alamillon silta: ei vanhentuneita nykytilaväitteitä eikä vivahdevirheitä. Casa de Pilatos -tekstissä on jo "Perimätiedon mukaan".
+- Metropol Parasolin kierrosversio (hinta 50 → noin 100 miljoonaa euroa, esikuvina katedraalin holvit ja fiikuspuut) vahvistui Wikipediasta, joten pilviraportin epävarmuus on ratkaistu. Versio jätettiin, koska se kertoo ristiriidasta (suunnitelma, jota ei voinut rakentaa) eikä ole pelkkä luku.
+- Kierroksen kahdeksan lyhyttä versiota luettiin peräkkäin muutosten jälkeen, eikä niissä ole päällekkäisiä aiheita.
+
+### Epävarmuudet Päätoimittajalle (Sevilla)
+- Maestranzan uusi kierrosversio kertoo oopperan kuolemankohtauksesta yhdellä lauseella ilman yksityiskohtia. Ooppera ei nimeä Maestranzaa, joten tekstissä lukee "Sevillan härkätaisteluareenan edustalla". Kuuntele, onko sävy sopiva.
+- Giraldillon kopion nykyinen paikka (katedraalin Prinssin portilla) jäi vahvistamatta avatulla lähteellä. Kysymyksen oletus, että kopio on olemassa, on Wikipedian mukaan tosi.

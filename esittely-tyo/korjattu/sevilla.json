@@ -11,7 +11,7 @@
    "koko_m": 140,
    "korkeus_m": 42,
    "teksti": "Sevillan katedraali täyttää ylhäältä katsottuna kokonaisen korttelin, ja sen kyljessä on appelsiinipuiden piha, joka kuului aikoinaan kaupungin suurmoskeijaan. Kirkon rakentaminen moskeijan paikalle alkoi vuonna 1402, ja valmistuttuaan se ohitti Hagia Sofian maailman suurimpana katedraalina. Sisällä neljä Espanjan vanhoja kuningaskuntia edustavaa airutta kantaa olkapäillään Kristoffer Kolumbuksen arkkua. Löytöretkeilijän luut vaelsivat Espanjan ja Karibian välillä lähes neljä vuosisataa, ennen kuin ne tuotiin Havannasta Sevillaan vuonna 1898, kun Espanja menetti Kuban. Vuonna 2006 julkaistu DNA-tutkimus osoitti, että ainakin osa haudan luista on todella Kolumbuksen.",
-   "lyhyt": "Sevillan katedraalin kupoli on romahtanut kahdesti, ensin vuonna 1511 pian kirkon valmistumisen jälkeen ja uudelleen vuonna 1888. Vuonna 1987 Unesco liitti katedraalin maailmanperintöluetteloon yhdessä viereisen kuninkaanlinnan ja Intian arkiston kanssa.",
+   "lyhyt": "Sevillan katedraalin tuomiokapitulin kerrotaan päättäneen vuonna 1401 rakentaa niin kauniin ja suuren kirkon, että sen nähneet pitäisivät rakentajia hulluina. Pöytäkirjaan merkittiin vaatimattomammin kirkko, jolle ei ole vertaista. Kupoli romahti myöhemmin kahdesti, vuosina 1511 ja 1888.",
    "syventava": "Miksi Kolumbuksen luut vaelsivat?",
    "kysymykset": [
     "Miksi moskeija purettiin kirkon tieltä?",
@@ -51,7 +51,7 @@
      "url": "https://en.wikipedia.org/wiki/Seville_Cathedral"
     },
     {
-     "vaite": "Unesco liitti katedraalin, Alcázarin ja Intian arkiston maailmanperintöluetteloon 1987.",
+     "vaite": "Lausuma \"rakennetaan niin kaunis ja suuri kirkko, että sen valmiina nähneet pitävät meitä hulluina\" on suullista perimätietoa; 8.7.1401 pöytäkirjaan kirjattiin kirkko, \"niin hyvä, ettei sille ole vertaista\"; lyhty romahti 1511 ja kupoli 1888.",
      "url": "https://en.wikipedia.org/wiki/Seville_Cathedral"
     }
    ]
@@ -64,10 +64,10 @@
    "koko_m": 40,
    "korkeus_m": 104,
    "teksti": "Kellotorni Giralda kohoaa katedraalin kyljestä sadanneljän metrin korkeuteen, ja sen huipulla kääntyy pronssinen tuuliviiri Giraldillo. Torni sai nimensä tästä viiristä, sillä espanjan verbi girar tarkoittaa kääntymistä. Alaosa rakennettiin 1100-luvun lopulla almohadien suurmoskeijan minareetiksi, ja työ keskeytyi neljäksi vuodeksi, kun arkkitehti ja kalifi kuolivat. Minareetin esikuvana oli Marrakeshin Koutoubia-moskeijan torni. Renessanssiaikainen kellotapuli lisättiin huipulle 1500-luvulla. Sisällä ei ole portaita vaan kolmekymmentäviisi loivaa ramppia, jotka tehtiin niin leveiksi, että niitä pitkin pääsivät ylös kuormajuhdatkin.",
-   "lyhyt": "Kellotorni Giraldan huippuun nostettiin vuonna 1198 neljä metallipalloa muistoksi voitosta Kastilian kuninkaasta. Maanjäristys pudotti ne 1300-luvulla, ja tilalle tuli risti ja kello. Nykyinen tuuliviiripatsas on yli kolme metriä korkea ja painaa jalustoineen yli tonnin.",
+   "lyhyt": "Kellotorni Giraldan huippuun nostettiin vuonna 1198 neljä metallipalloa muistoksi voitosta Kastilian kuninkaasta. Maanjäristys pudotti ne 1300-luvulla, ja tilalle tuli risti ja kello. Nykyinen pronssipatsas, lippua kantava nainen, kuvaa kristillistä uskoa, mutta sen esikuvana oli luultavasti antiikin jumalatar Pallas Athene.",
    "syventava": "Miksi torniin tehtiin rampit portaiden sijaan?",
    "kysymykset": [
-    "Mitä huipun Giraldillo-patsas esittää?",
+    "Missä Giraldillon kopio nykyään on?",
     "Kuka suunnitteli tornin renessanssiosan?",
     "Miksi minareettia ei purettu moskeijan mukana?",
     "Montako kelloa tornissa nykyään on?",
@@ -110,6 +110,10 @@
     {
      "vaite": "Pallot putosivat 1300-luvun maanjäristyksessä (1356 tai 1365), ja tilalle tuli risti ja kello.",
      "url": "https://structurae.net/en/structures/giralda"
+    },
+    {
+     "vaite": "Giraldillo esittää lippua kantavaa naista; esikuvana luultavasti Pallas Athene, mutta se kuvaa kristillistä uskoa; alkuperäinen poistettiin kunnostukseen 1999 ja tilalle pantiin kopio, alkuperäinen palasi 2005.",
+     "url": "https://en.wikipedia.org/wiki/Giralda"
     }
    ]
   },
@@ -224,8 +228,8 @@
    "luokka": "torni",
    "koko_m": 30,
    "korkeus_m": 36,
-   "teksti": "Kultatorni, Torre del Oro, seisoo Guadalquivirin itärannalla, ja sen kaksi alinta kerrosta ovat kaksitoistakulmaisia, ylin pyöreä ja kupolin kruunaama. Almohadikuvernööri rakennutti tornin vuosina 1220 ja 1221 valvomaan jokiliikennettä. Kultaa siinä ei ole koskaan ollut, vaan nimi tulee hohteesta, jonka laastin, kalkin ja puristetun heinän seos loi. Tornista kulki joen poikki ketju, jolla vuonna 1248 yritettiin sulkea joki Kastilian laivastolta. Laivasto mursi silti joen puolustuksen, ja kaupunki antautui saman vuoden marraskuussa.",
-   "lyhyt": "Kultatornin ylin, pyöreä kerros rakennettiin vasta 1700-luvulla, kun Lissabonin maanjäristys oli vaurioittanut vanhaa huippua. Vuosisatojen mittaan torni on ollut kappeli, aatelisten vankila, ruutivarasto ja satamaviranomaisten toimisto, ja nykyään siinä on pieni merenkulkumuseo ja näköalaterassi.",
+   "teksti": "Kultatorni, Torre del Oro, seisoo Guadalquivirin itärannalla, ja sen kaksi alinta kerrosta ovat kaksitoistakulmaisia, ylin pyöreä ja kupolin kruunaama. Almohadikuvernööri rakennutti tornin vuosina 1220 ja 1221 valvomaan jokiliikennettä. Nimi tulee todennäköisimmin kultaisesta hohteesta, jonka laastin, kalkin ja puristetun heinän seos loi, eikä tornissa säilytetty Amerikan kultaa, kuten usein kerrotaan. Tornista kulki joen poikki ketju, jolla vuonna 1248 yritettiin sulkea joki Kastilian laivastolta. Laivasto mursi silti joen puolustuksen, ja kaupunki antautui saman vuoden marraskuussa.",
+   "lyhyt": "Kultatornin ylin, pyöreä kerros rakennettiin vasta 1700-luvulla, kun Lissabonin maanjäristys oli vaurioittanut vanhaa huippua. Vuosisatojen mittaan torni on ollut kappeli, aatelisten vankila ja satamakapteenin virasto, ja nykyään siinä on pieni merenkulkumuseo ja näköalaterassi.",
    "syventava": "Mihin joen poikki kulkeva ketju kiinnittyi?",
    "kysymykset": [
     "Kuka oli tornin rakennuttanut kuvernööri?",
@@ -245,7 +249,7 @@
      "url": "https://en.wikipedia.org/wiki/Torre_del_Oro"
     },
     {
-     "vaite": "Nimi tulee laastin, kalkin ja puristetun heinän seoksen kultaisesta hohteesta; kultaa ei ole ollut.",
+     "vaite": "Nimi selitetään kultaisella hohteella, jonka laastin, kalkin ja puristetun heinän seos loi.",
      "url": "https://en.wikipedia.org/wiki/Torre_del_Oro"
     },
     {
@@ -261,8 +265,12 @@
      "url": "https://en.wikipedia.org/wiki/Torre_del_Oro"
     },
     {
-     "vaite": "Torni on ollut kappeli, aatelisten vankila, ruutivarasto ja satama- ja laivastoviranomaisten toimisto; nykyään merenkulkumuseo ja näköalaterassi.",
-     "url": "https://www.andalucia.org/en/sevilla-visitas-torre-del-oro-museo-naval"
+     "vaite": "Tornissa oli kappeli (1271), se oli 1400-luvun alussa aatelisten vankila ja vuodesta 1870 laivaston satamakapteenin virasto; merenkulkumuseo vuodesta 1944.",
+     "url": "https://es.wikipedia.org/wiki/Torre_del_Oro"
+    },
+    {
+     "vaite": "Nimen teorioita on useita: vuoden 2005 restauroinnin jälkeen nimi selitettiin kalkkilaastin ja puristetun oljen kultaisella hohteella; Pedro I:n aarrekertomus on enemmän legendaa; väite Amerikan kullan säilyttämisestä tornissa on väärä, kulta säilytettiin Casa de la Contratación -virastossa.",
+     "url": "https://es.wikipedia.org/wiki/Torre_del_Oro"
     }
    ]
   },
@@ -273,7 +281,7 @@
    "luokka": "rakennus",
    "koko_m": 60,
    "teksti": "Intian arkisto on katedraalin ja kuninkaanlinnan välissä seisova kaksikerroksinen kivitalo, jonka keskellä on avoin sisäpiha. Arkkitehti Juan de Herrera suunnitteli sen kuningas Filip toisen aikana kauppiaiden pörssiksi, sillä kauppiaat olivat siihen asti tehneet kauppojaan katedraalin portailla ja sadepäivinä jopa kirkon sisällä. Arkistoksi talo muuttui vuonna 1785 kuningas Kaarle kolmannen päätöksellä. Intioiksi espanjalaiset kutsuivat Amerikan alueitaan, ja tänne koottiin niiden hallinnon asiakirjat, joita on noin kahdeksankymmentä miljoonaa sivua.",
-   "lyhyt": "Intian arkiston rakentaminen alkoi vuonna 1584, ja kauppiaat ottivat talon käyttöön vuonna 1598. Nykyään hyllymetrejä on noin kahdeksan kilometriä, ja asiakirjat kattavat yli kolme vuosisataa Tulimaasta Yhdysvaltain eteläosiin ja Filippiineille.",
+   "lyhyt": "Intian arkiston kätköissä on Kristoffer Kolumbuksen omakätisiä papereita ja paavi Aleksanteri kuudennen bulla vuodelta 1493, jolla paavi antoi Espanjalle kaikki maat napalta navalle vedetyn rajalinjan länsipuolelta. Arkiston kartoista näkee, miten Amerikan siirtomaakaupungit suunniteltiin.",
    "syventava": "Miksi Amerikkaa kutsuttiin Intioiksi?",
    "kysymykset": [
     "Voiko kuka tahansa tutkia arkiston papereita?",
@@ -303,6 +311,14 @@
     {
      "vaite": "Arkisto, katedraali ja Alcázar muodostavat yhden Unescon maailmanperintökohteen.",
      "url": "https://en.wikipedia.org/wiki/Seville_Cathedral"
+    },
+    {
+     "vaite": "Arkistossa on mm. Kolumbuksen omakätisiä asiakirjoja, paavi Aleksanteri VI:n bulla Inter caetera ja Espanjan Amerikan kaupunkien karttoja.",
+     "url": "https://en.wikipedia.org/wiki/General_Archive_of_the_Indies"
+    },
+    {
+     "vaite": "Inter caetera 4.5.1493 antoi katolisille hallitsijoille kaikki maat napalta navalle vedetyn linjan länsi- ja eteläpuolelta, sata leguaa Azoreista tai Kap Verdestä.",
+     "url": "https://en.wikipedia.org/wiki/Inter_caetera"
     }
    ]
   },
@@ -312,7 +328,7 @@
    "kuvaus": "Sienimäinen puinen katosrakennelma",
    "luokka": "rakennus",
    "koko_m": 150,
-   "teksti": "Puurakennelma Metropol Parasol peittää Encarnaciónin aukion kuuden jättimäisen sienen muotoisena katoksena, ja sevillalaiset kutsuvat sitä nimellä Las Setas eli sienet. Saksalaisen arkkitehdin Jürgen Mayerin suunnittelema rakennelma valmistui vuonna 2011, ja sitä pidetään maailman suurimpana puurakenteena. Puu on suomalaista viilupuuta, joka on suojattu säältä polyuretaanipinnoitteella. Katosten päällä kiertää kävelyreitti, josta näkee vanhankaupungin kattojen yli. Kellarissa on museo, jossa näkyvät rakennustöissä löytyneet roomalaisajan ja maurien aikaiset rauniot.",
+   "teksti": "Puurakennelma Metropol Parasol peittää Encarnaciónin aukion kuuden jättimäisen sienen muotoisena katoksena, ja sevillalaiset kutsuvat sitä nimellä Las Setas eli sienet. Saksalaisen arkkitehdin Jürgen Mayerin suunnittelema rakennelma valmistui vuonna 2011, ja sitä mainostetaan maailman suurimpana puurakenteena. Puu on suomalaista viilupuuta, joka on suojattu säältä polyuretaanipinnoitteella. Katosten päällä kiertää kävelyreitti, josta näkee vanhankaupungin kattojen yli. Kellarissa on museo, jossa näkyvät rakennustöissä löytyneet roomalaisajan ja maurien aikaiset rauniot.",
    "lyhyt": "Sienikatoksen, Metropol Parasolin, rakentaminen alkoi vuonna 2005, ja sen piti maksaa viisikymmentä miljoonaa euroa. Suunnitelma osoittautui sellaisenaan toteuttamiskelvottomaksi, ja hinta nousi noin sataan miljoonaan. Muodon esikuvina olivat katedraalin holvit ja läheisen aukion fiikuspuut.",
    "syventava": "Mitä aukion alta löytyi?",
    "kysymykset": [
@@ -356,8 +372,8 @@
    "kuvaus": "Sevillan vanha härkätaisteluareena",
    "luokka": "rakennus",
    "koko_m": 120,
-   "teksti": "Maestranzan areena on yksi Espanjan vanhimmista härkätaisteluareenoista, ja ylhäältä katsottuna sen muoto paljastaa erikoisuuden: kehä ei ole ympyrä vaan epäsäännöllinen soikio. Rakennus on kolmenkymmenen erimittaisen sivun monikulmio, koska sitä rakennettiin katkonaisesti vuodesta 1761 vuoteen 1881. Areenan omistaa Sevillan kuninkaallinen ratsastajaveljeskunta, aatelisten yhteisö, joka perustettiin kouluttamaan ratsumiehiä armeijalle. Areenan pääportti on nimeltään Prinssin portti, ja matadorille on suurin kunnia tulla kannetuksi siitä ulos yleisön olkapäillä onnistuneen esityksen jälkeen.",
-   "lyhyt": "Maestranzan areenaan mahtuu noin kaksitoistatuhatta katsojaa, ja sen rakentamista johtivat aluksi arkkitehdit Francisco Sánchez de Aragón ja Vicente de San Martín. Huhtikuun markkinajuhlan aikaan siellä järjestetään yksi maailman tunnetuimmista härkätaistelusarjoista, ja areenaan kuuluu myös museo ja pieni kappeli.",
+   "teksti": "Maestranzan areena on yksi Espanjan vanhimmista härkätaisteluareenoista, ja ylhäältä katsottuna sen muoto paljastaa erikoisuuden: kehä ei ole ympyrä vaan epäsäännöllinen soikio. Rakennus on kolmenkymmenen erimittaisen sivun monikulmio, ja sitä rakennettiin katkonaisesti vuodesta 1761 vuoteen 1881. Areenan omistaa Sevillan kuninkaallinen ratsastajaveljeskunta, aatelisten yhteisö, joka perustettiin kouluttamaan ratsumiehiä armeijalle. Areenan pääportti on nimeltään Prinssin portti, ja matadorille on suurin kunnia tulla kannetuksi siitä ulos yleisön olkapäillä onnistuneen esityksen jälkeen.",
+   "lyhyt": "Maestranzan areenaa vastapäätä, rantakadun toisella puolella, seisoo patsas sikarityttö Carmenista. Georges Bizet'n oopperassa Carmen kuolee mustasukkaisen Don Josén käsissä Sevillan härkätaisteluareenan edustalla samaan aikaan, kun yleisö hurraa sisällä härkätaistelija Escamillolle.",
    "syventava": "Miksi areenaa rakennettiin yli sata vuotta?",
    "kysymykset": [
     "Miksi härkätaistelut herättävät vastustusta?",
@@ -373,7 +389,7 @@
      "url": "https://www.afar.com/places/plaza-de-toros-de-la-real-maestranza-de-caballeria-de-sevilla-seville"
     },
     {
-     "vaite": "Rakennus on epäsäännöllinen monikulmio, jossa on 30 erimittaista sivua; ylhäältä näkyy soikea, epäsäännöllinen muoto.",
+     "vaite": "Rakennus on epäsäännöllinen monikulmio, jossa on 30 erimittaista sivua.",
      "url": "https://en.wikipedia.org/wiki/Maestranza_(Seville)"
     },
     {
@@ -381,20 +397,16 @@
      "url": "https://www.frommers.com/destinations/seville/attractions/real-plaza-de-toros"
     },
     {
-     "vaite": "Rakentamista johtivat alkuvaiheessa Francisco Sánchez de Aragón sekä Pedro ja Vicente de San Martín.",
-     "url": "https://en.wikipedia.org/wiki/Maestranza_(Seville)"
-    },
-    {
      "vaite": "Pääportti on Puerta del Príncipe; voittajamatadorit kannetaan siitä ulos yleisön olkapäillä, mikä on alan suurin kunnia.",
      "url": "https://andalucia.org/en/sevilla-visitas-bullring-of-the-real-maestranza-de-caballeria-de-sevilla"
     },
     {
-     "vaite": "Areenaan mahtuu noin 12 000 katsojaa; huhtikuun Sevillan markkinoiden aikana siellä on yksi maailman tunnetuimmista härkätaistelujuhlista.",
-     "url": "https://www.afar.com/places/plaza-de-toros-de-la-real-maestranza-de-caballeria-de-sevilla-seville"
+     "vaite": "Bizet'n oopperan Carmen-sikarityttöä esittävä patsas on Maestranzan areenan edessä Paseo Colónin toisella puolella.",
+     "url": "https://visitasevilla.es/en/?p=32858"
     },
     {
-     "vaite": "Areenassa on museo ja pieni kappeli.",
-     "url": "https://www.frommers.com/destinations/seville/attractions/real-plaza-de-toros"
+     "vaite": "Carmenin neljäs näytös sijoittuu Sevillan aukiolle areenan edustalle; Don José puukottaa Carmenin, kun yleisö hurraa Escamillolle.",
+     "url": "https://en.wikipedia.org/wiki/Carmen"
     }
    ]
   },
