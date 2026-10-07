@@ -32,10 +32,9 @@ aikaan; ei omia natiivikäännöksiä; kuittaus = peili + yksi rivi (ei stillej�
   (3) TYRMÄ TEHTY v44n (190df07ec22e8616, kavely.py tyrma(): osa tyrma-E101 siiven pohjoisosassa, paikka A koska eteläosassa vanha
   keittiö-dioraama; merkit istuu:pelaaja-tyrma, ilmarako:tyrma, esine:avainnippu-tyrma, ovi:tyrma(-ulos/-ryomi), ontto:tyrma,
   esine:irtokivi-tyrma, istuu:tyrma-vartija, pinta:olki-1, valo:tyrma-rako; ovi:tyrma kierto_y lisätty lähteeseen, EI vielä viety).
-  AGENTIT KÄYNNISSÄ 20.1x: (a) esineet-v1: tarjotin, patapino, hiilipannu (lahde/esineet.py) → kopioi glb:t kavely-v1/v2/ +
-  merkkeihin glb= (esine:tarjotin, esine:patapino, valo:hiilipannu) → vienti; (b) linna-hahmot/vartija-istuu-v1: vartija-1500(-faceit).glb
-  + leikkeet torkku, syo, nousu_istumasta (Siirtosepän pyyntö) → kopioi v44/hahmot/ → vienti → Siirtosepälle. Puuttuu vielä
-  avainnippu-malli; (4) HUONE 6 KÄVELY TEHTY lähteessä (EI vielä viety, tulossa v44o): Päätoimittajan reitti 20.3x (TULKINTA):
+  TEHTY v44p (a727471eac2cc946, 1d894529f): esine-tarjotin/patapino/hiilipannu (esineet-v1) merkkeihin; vartija-istuu-v1 (torkku, syo,
+  nousu_istumasta; v44/hahmot/vartija-1500(-faceit).glb symlinkit sinne). Puuttuu: mallit avainnippu, esiliina, myssy, keittokulho,
+  avainrengas; (4) HUONE 6 KÄVELY TEHTY lähteessä (VIETY v44o 9256c9c5be8870c3 / v44p): Päätoimittajan reitti 20.3x (TULKINTA):
   kaari-ovi → kaariportaat ylös → ampumakäytävä (30° suu avattu, raja poistettu) → 165° muurinsisäinen porras alas pääoven
   ulkotasanteelle 215° → muuriportaat alas Tott-kammioon → eteläovi 187,5° → käytävä → Linnantupa (osa palatsi) → länsiseinän
   porras → voudin sali. Tott-kammioon naulakko (esine:esiliina, esine:myssy) ja takka (valo:tott-takka). kaytava(avoin=, avoin_k=)
