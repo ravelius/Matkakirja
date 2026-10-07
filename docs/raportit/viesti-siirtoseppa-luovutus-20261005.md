@@ -17,7 +17,14 @@ kappeli). Lue tämä osio ja alin TILA-loki (päivän loppu), sitten CLAUDE.md j
 - ODOTTAA: PT:n kuittaus juna164; LR:n kadet.glb (pelaaja.kadet, kahva_oikea → SeikkailuPelaaja.Kasi-pisteeksi); PT:n
   pelattavuusmalli docs/raportit/pelattavuusmalli-olavinlinna.md (nimeää kaukokuvat, luvut); ElevenLabs-äänet VAIN omistajan luvalla.
 - E3-käsikirjoitus: docs/raportit/kasikirjoitus-olavinlinna-kappeli-e3.md (mainissa). Arkkitehtuuri: siirtoseppa-historiamoottori-20261007.md.
-- Seuraavaksi: pelattavuusmallin mukaiset FP-muutokset, kädet, kaukokuvat (veneen saapuminen ylhäältä ym.), Pulun vihjeportaat, V6 tallennus.
+- **8.10. SITOVA TYÖOHJE: docs/raportit/pelattavuusmalli-olavinlinna.md (main #4163, 18cf4478b).** Kohta 12 = järjestys:
+  1 aamupäivä kallistusvyöhykkeet, napautuskävely, automaattinen hiivintä, valitsin, portaiden pehmennys, käännössääntö (kohdat 2, 6);
+  2 iltapäivä Vartija-lisäykset ja profiilit (kohta 3); 3 alkuilta kappeli ensimmäiseen persoonaan (7), tyrmä muunnelma 1, tarkistuspisteet
+  portaaleista; 4 ilta V6 tallennus, vihjeportaat, huone 1 pressun alla + K1, tarjotin ja riidan ikkuna → testit → junakuittaus 1 rivillä.
+  TAVOITE illan junaan huoneet 1–5 ensimmäisessä persoonassa. Arvot = historia-fp:n NYK-vakiot, UUSI samoihin luokkiin. Testaus kohta 11
+  (Ydin + huonesimulaatio ilman Unityä); simu vain vianselvitykseen. Kohdan 13 omistajan päätettävät toteutetaan suositusten mukaan.
+  Jos aika loppuu, pois tässä järjestyksessä: K1, renki, portinvartija, torkkuva vartija (EI varoitussääntö, tyrmä, kappeli, tallennus).
+- Kädet v44l on jo kytketty (2b88ec9a).
 
 ## TILA 7.10. 09.2x
 
