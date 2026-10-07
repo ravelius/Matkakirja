@@ -1,0 +1,577 @@
+{
+ "kaupunki": "Venetsia",
+ "id": "venetsia",
+ "versio": 1,
+ "kohteet": [
+  {
+   "id": "Q217527",
+   "nimi": "Pyhän Markuksen tori",
+   "kuvaus": "Venetsian pääaukio",
+   "luokka": "aukio",
+   "koko_m": 180,
+   "teksti": "Pyhän Markuksen tori on Venetsian tunnetuin aukio, pitkä kivetty suorakulmio, jonka itäpäässä kohoavat basilikan kupolit ja jota muilta sivuilta reunustavat yhtenäiset pylväskäytävät. Napoleonin kerrotaan kutsuneen toria Euroopan hienoimmaksi saliksi. Pylväskäytävän alla toimii yhä Caffè Florian, joka avasi ovensa vuonna 1720 ja on aukion vanhin kahvila. Tori on kaupungin matalin kohta, joten korkean veden aikaan se tulvii ensimmäisenä. Kyyhkysten ruokkiminen aukiolla on ollut kiellettyä vuodesta 2008, koska linnut vaurioittivat marmoria ja kiveystä.",
+   "lyhyt": "Pyhän Markuksen torin pohjoislaidalla on vuonna 1499 paljastettu kellotaulutorni, jonka huipulla kaksi pronssista jättiläistä lyö kelloa vasaroillaan. Hahmoja kutsutaan maureiksi. Vanhempi, parrakas hahmo lyö tunnit kaksi minuuttia ennen tasaa ja nuorempi kaksi minuuttia sen jälkeen.",
+   "syventava": "Miksi kyyhkysiä ei saa ruokkia?",
+   "kysymykset": [
+    "Kuka kutsui toria Euroopan hienoimmaksi saliksi?",
+    "Miksi kyyhkysten ruokkiminen kiellettiin?",
+    "Mikä on Caffè Florianin tarina?",
+    "Miksi tori tulvii ensimmäisenä?",
+    "Miten kellotaulutornin maurit lyövät tunnit?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Napoleon kutsui toria Euroopan hienoimmaksi saliksi (the finest drawing-room in Europe).",
+     "url": "https://www.frommers.com/destinations/venice/attractions/piazza-san-marco"
+    },
+    {
+     "vaite": "Caffè Florian on aukion vanhin kahvila; Floriano Francesconi avasi sen Procuratie Nuoven pylväskäytävän alle vuonna 1720.",
+     "url": "https://www.frommers.com/destinations/venice/attractions/piazza-san-marco"
+    },
+    {
+     "vaite": "Basilika aukion itäpäässä, pylväskäytävät Procuratie Vecchie, Procuratie Nuove ja Napoleonin siipi muilla sivuilla.",
+     "url": "https://en.wikipedia.org/wiki/Piazza_San_Marco"
+    },
+    {
+     "vaite": "Tori on Venetsian matalin kohta ja tulvii korkean veden aikaan ensimmäisenä.",
+     "url": "https://www.introducingvenice.com/piazza-san-marco"
+    },
+    {
+     "vaite": "Kyyhkysten ruokkiminen kiellettiin torilla toukokuussa 2008; syynä marmoripatsaiden, julkisivujen ja kiveyksen vauriot; rikkojaa uhkaa sakko.",
+     "url": "https://www.stripes.com/news/2008-05-02/venice-makes-feeding-st-marks-pigeons-illegal-1983852.html"
+    },
+    {
+     "vaite": "Torre dell'Orologio paljastettiin 1.2.1499; kaksi pronssista mauria lyö kelloa vasaroilla, vanhempi parrakas kaksi minuuttia ennen tasaa ja nuorempi kaksi minuuttia jälkeen.",
+     "url": "https://www.hnn.us/article/37611"
+    },
+    {
+     "vaite": "Vanhemman ja nuoremman maurin lyöntiajat.",
+     "url": "https://imagesofvenice.com/?p=9982"
+    }
+   ]
+  },
+  {
+   "id": "Q309243",
+   "nimi": "Canal Grande",
+   "kuvaus": "Venetsian pääkanava",
+   "luokka": "kanava",
+   "koko_m": 3000,
+   "teksti": "Suuri kanava, Canal Grande, halkaisee Venetsian valtavana käänteisenä S-kirjaimena rautatieaseman edustalta Pyhän Markuksen altaaseen. Se on noin neljän kilometrin pituinen ja kolmestakymmenestä yhdeksäänkymmeneen metriä leveä, ja sen rantoja reunustaa yli sataseitsemänkymmentä rakennusta, enimmäkseen 1200-luvun ja 1700-luvun väliltä. Monen palatsin ovelta astutaan kadun sijasta suoraan veneeseen, sillä kanava on kaupungin pääkatu. Joka syyskuun ensimmäisenä sunnuntaina kanavalla soudetaan historiallinen regatta, jonka kulkueessa nähdään vanhoja veneitä jäljitteleviä aluksia.",
+   "lyhyt": "Suuren kanavan, Canal Granden, ylittää nykyään neljä siltaa. Uusin on Santiago Calatravan suunnittelema lasiportainen teräskaari, joka avattiin syyskuussa 2008 rautatieaseman ja Piazzale Roman välille. Vanhin on Rialton silta, joka oli pitkään kanavan ainoa ylityspaikka.",
+   "syventava": "Mitkä neljä siltaa kanavan ylittävät?",
+   "kysymykset": [
+    "Miksi kanava kiemurtelee kuin S-kirjain?",
+    "Mitä syyskuun historiallisessa regatassa tapahtuu?",
+    "Mikä on kanavan vanhin palatsi?",
+    "Kuinka syvä Canal Grande on?",
+    "Miten kanavan yli pääsee ilman siltaa?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Kanava kulkee rautatieaseman läheltä Pyhän Markuksen altaaseen suurena käänteisenä S-kirjaimena; pituus 3,8 kilometriä, leveys 30–90 metriä; rannoilla yli 170 rakennusta, enimmäkseen 1200–1700-luvuilta.",
+     "url": "https://en.wikipedia.org/wiki/Grand_Canal_(Venice)"
+    },
+    {
+     "vaite": "Canal Granden varrella talon ovelta astutaan kadun sijasta suoraan veneeseen.",
+     "url": "kaanon:pelin-aineisto"
+    },
+    {
+     "vaite": "Historiallinen regatta, Regata Storica, soudetaan joka vuosi syyskuun ensimmäisenä sunnuntaina; kulkueessa 1400-luvun veneiden jäljennöksiä.",
+     "url": "https://www.pilotguides.com/?p=5948"
+    },
+    {
+     "vaite": "Ponte della Costituzione on kanavan neljäs silta, Santiago Calatravan suunnittelema lasiportainen teräskaari rautatieaseman ja Piazzale Roman välillä, avattu yleisölle 11.9.2008.",
+     "url": "https://en.wikipedia.org/wiki/Ponte_della_Costituzione"
+    },
+    {
+     "vaite": "Rialton silta oli ainoa tapa kävellä kanavan yli vuoteen 1854 asti.",
+     "url": "https://en.wikipedia.org/wiki/Rialto_Bridge"
+    }
+   ]
+  },
+  {
+   "id": "Q189883",
+   "nimi": "Dogen palatsi",
+   "kuvaus": "Venetsian tasavallan hallintopalatsi",
+   "luokka": "rakennus",
+   "koko_m": 110,
+   "teksti": "Dogen palatsi on goottilainen palatsi laguunin rannassa, ja sen julkisivussa valkoinen istrialainen kivi ja vaaleanpunainen veronalainen marmori muodostavat ruutukuvion kahden kevyen pylväskäytävän yllä. Palatsi oli vuosisatojen ajan Venetsian tasavallan hallinnon keskus ja dogen asunto. Suuren neuvoston salissa on Tintoretton Paratiisi, yksi maailman suurimmista kankaalle maalatuista öljyvärimaalauksista. Saman salin seinää kiertää dogejen muotokuvien rivi, mutta Marino Falieron kohdalla on vain maalattu musta verho, sillä hänet mestattiin vallankaappausyrityksestä vuonna 1355.",
+   "lyhyt": "Dogen palatsin lyijykaton alla olivat vankisellit, joista Giacomo Casanova pakeni vuonna 1756. Hän kaivoi tiensä katolle, laskeutui ullakolle ja kulki koko palatsin halki, kunnes vartija luuli häntä vahingossa sisään lukituksi virkamieheksi ja päästi hänet ulos.",
+   "syventava": "Miksi Marino Faliero mestattiin?",
+   "kysymykset": [
+    "Mitä Marino Faliero yritti tehdä?",
+    "Miten Casanova pakeni palatsin vankilasta?",
+    "Kuinka suuri Tintoretton Paratiisi on?",
+    "Mihin palatsin leijonansuita käytettiin?",
+    "Miksi palatsi korjattiin palon jälkeen goottilaisena?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Goottilainen palatsi; julkisivun kuviossa valkoista istrialaista kiveä ja vaaleanpunaista Veronan marmoria kaksinkertaisen pylväskäytävän yllä.",
+     "url": "https://en.wikipedia.org/wiki/Doge%27s_Palace"
+    },
+    {
+     "vaite": "Palatsi oli dogen asunto ja Venetsian tasavallan hallinnon keskus.",
+     "url": "https://en.wikipedia.org/wiki/Doge%27s_Palace"
+    },
+    {
+     "vaite": "Tintoretton Il Paradiso, 22 x 9 metriä, hallitsee Suuren neuvoston salia ja on yksi maailman suurimmista kankaalle maalatuista maalauksista.",
+     "url": "https://en.wikipedia.org/wiki/Il_Paradiso"
+    },
+    {
+     "vaite": "Marino Falieron muotokuvan paikalla on vain maalattu musta verho; hänet mestattiin vuonna 1355 vallankaappausyrityksestä.",
+     "url": "https://walksofitaly.com/blog/venice/doge-of-venice-marino-faliero"
+    },
+    {
+     "vaite": "Casanova pakeni Piombi-vankilasta lyijykaton alta 31.10.–1.11.1756 yöllä: kaivoi lankkujen läpi, nousi katolle, laskeutui ullakolle, kulki palatsin läpi, ja vartija luuli häntä sisään lukituksi virkamieheksi ja päästi ulos.",
+     "url": "https://en.wikipedia.org/wiki/Piombi"
+    },
+    {
+     "vaite": "Vuoden 1577 palon jälkeen palatsi korjattiin alkuperäiseen goottilaiseen tyyliin, vaikka Palladio ehdotti uusklassista; leijonansuut olivat ilmiantolaatikoita.",
+     "url": "https://en.wikipedia.org/wiki/Doge%27s_Palace"
+    }
+   ]
+  },
+  {
+   "id": "Q172988",
+   "nimi": "Pyhän Markuksen basilika",
+   "kuvaus": "Viisikupolinen bysanttilainen tuomiokirkko",
+   "luokka": "kirkko",
+   "koko_m": 77,
+   "korkeus_m": 43,
+   "teksti": "Pyhän Markuksen basilika näkyy ylhäältä viiden kupolin ryhmänä, joka on aseteltu kreikkalaisen ristin muotoon. Venetsialaiset kauppiaat toivat evankelista Markuksen ruumiin Aleksandriasta vuonna 828 ja kätkivät sen sianlihan alle, jotta muslimivartijat eivät tutkisi kuormaa. Isoisäsi kuuli tarinan täällä oppaalta vuonna 1873 kultaisia mosaiikkeja katsellen ja tuumi, että hänen laivastossaan sellaisesta olisi seurannut kuulustelu, mutta Venetsiassa siitä rakennettiin kirkko. Mosaiikkeja on yli kahdeksantuhatta neliömetriä, ja kullan vuoksi basilikaa kutsutaan kultaiseksi kirkoksi.",
+   "lyhyt": "Pyhän Markuksen basilikan pääportaalin yllä seisoo neljä pronssihevosta, jotka tuotiin ryöstösaaliina Konstantinopolista vuonna 1204. Parvekkeella ovat nykyään jäljennökset, sillä alkuperäiset siirrettiin vuonna 1982 suojaan basilikan museoon. Ennen Venetsiaa hevoset olivat seisseet pitkään Konstantinopolin kilparadalla.",
+   "syventava": "Mistä basilikan pronssihevoset tulivat?",
+   "kysymykset": [
+    "Miten Markuksen ruumis salakuljetettiin Venetsiaan?",
+    "Mistä pronssihevoset ovat peräisin?",
+    "Mikä on kultainen alttaritaulu Pala d'Oro?",
+    "Miksi kirkossa on viisi kupolia?",
+    "Milloin basilikasta tuli tuomiokirkko?"
+   ],
+   "isoisa": true,
+   "lahteet": [
+    {
+     "vaite": "Kreikkalaisen ristin muotoinen pohja, viisi kupolia; pituus 76,5 metriä, kupolin ulkokorkeus 43 metriä.",
+     "url": "https://en.wikipedia.org/wiki/St_Mark%27s_Basilica"
+    },
+    {
+     "vaite": "Kaksi venetsialaista kauppiasta toi Markuksen ruumiin Aleksandriasta vuonna 828 ja kätki sen sianlihan alle muslimivartijoiden ohi.",
+     "url": "https://reliquarian.com/2012/12/27/saint-mark-patron-saint-of-venice/"
+    },
+    {
+     "vaite": "Isoisän merkintä 1873: opas kertoi San Marcon kirkossa, että ruumis tuotiin Egyptistä sianlihan alla eikä muslimivartijoiden tutkittu koria; hän katseli kultaisia mosaiikkeja; hänen laivastossaan tästä olisi seurannut kuulustelu, Venetsiassa oli rakennettu kirkko.",
+     "url": "kaanon:isoisan-paivakirja"
+    },
+    {
+     "vaite": "Mosaiikkeja on yli 8000 neliömetriä kultalehtitesseroin; kirkkoa kutsutaan nimellä Chiesa d'Oro, kultainen kirkko.",
+     "url": "https://www.lonelyplanet.com/pois/1097875"
+    },
+    {
+     "vaite": "Pronssihevoset tuotiin Konstantinopolista 1204 neljännen ristiretken saaliina; alkuperäiset siirrettiin museoon 1982, parvekkeella ovat jäljennökset.",
+     "url": "https://aviewoncities.com/venice/st-marks-basilica"
+    },
+    {
+     "vaite": "Hevoset seisovat pääportaalin yllä.",
+     "url": "kaanon:pelin-aineisto"
+    },
+    {
+     "vaite": "Hevoset olivat pitkään esillä Konstantinopolin hippodromilla.",
+     "url": "https://aviewoncities.com/venice/st-marks-basilica"
+    }
+   ]
+  },
+  {
+   "id": "Q52505",
+   "nimi": "Rialton silta",
+   "kuvaus": "Canal Granden vanhin silta",
+   "luokka": "silta",
+   "koko_m": 48,
+   "teksti": "Rialton silta kaartuu Canal Granden yli yhtenä kivikaarena, jonka päällä kulkee kaksi riviä pieniä myymälöitä. Paikalla oli aiemmin puusilta, joka romahti vuonna 1444, kun väkijoukko ryntäsi sille katsomaan Ferraran markiisin häitä. Kivisillan suunnittelusta kilpailivat muiden muassa Michelangelo ja Andrea Palladio, mutta työ annettiin Antonio da Pontelle, jonka sukunimi tarkoittaa siltaa, ja silta valmistui vuonna 1591. Aina vuoteen 1854 asti se oli ainoa paikka, josta kanavan yli pääsi kävellen.",
+   "lyhyt": "Rialton silta lepää noin kahdentoistatuhannen lepänrungon varassa, jotka lyötiin syvälle laguunin mutaan. Vuosina 2015 ja 2016 silta kunnostettiin perusteellisesti ensimmäistä kertaa yli neljäänsataan vuoteen, ja työt tehtiin osissa, jotta silta pysyi koko ajan auki.",
+   "syventava": "Miksi vanha puusilta romahti?",
+   "kysymykset": [
+    "Miksi vanha puusilta romahti?",
+    "Kuka oli sillan rakentaja Antonio da Ponte?",
+    "Mitä sillan myymälöissä myydään?",
+    "Ketkä muut halusivat suunnitella sillan?",
+    "Mitä Rialton torilla myydään nykyään?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Yksi kivikaari, jonka päällä kaksi myymäläriviä.",
+     "url": "kaanon:pelin-aineisto"
+    },
+    {
+     "vaite": "Puusilta romahti vuonna 1444 väkijoukon alla, joka ryntäsi katsomaan Ferraran markiisin häitä.",
+     "url": "https://en.wikipedia.org/wiki/Rialto_Bridge"
+    },
+    {
+     "vaite": "Michelangelo, Palladio ja Sansovino olivat ehdokkaiden joukossa, mutta Antonio da Ponte voitti; silta rakennettiin 1588–1591.",
+     "url": "https://www.summerinitaly.com/guide/rialto-bridge"
+    },
+    {
+     "vaite": "Silta oli ainoa tapa kävellä Canal Granden yli vuoteen 1854 asti, jolloin Accademian silta valmistui.",
+     "url": "https://www.summerinitaly.com/guide/rialto-bridge"
+    },
+    {
+     "vaite": "Sillan perustuksina on noin 12 000 lepänrunkoa.",
+     "url": "https://beruehrungspunkte.de/en/article-rialto-bridge-connection-between-san-polo-and-san-marco-veniceclassics-1"
+    },
+    {
+     "vaite": "Ensimmäinen perusteellinen restaurointi yli 400 vuoteen alkoi toukokuussa 2015, kesti 18 kuukautta ja tehtiin osissa, jotta silta pysyi auki.",
+     "url": "https://theartnewspaper.com/news/exemplary-rialto-bridge-restoration-project-finishes-on-time"
+    },
+    {
+     "vaite": "Sillan pituus noin 48 metriä, aukko 28,8 metriä.",
+     "url": "https://en.wikipedia.org/wiki/Rialto_Bridge"
+    }
+   ]
+  },
+  {
+   "id": "Q52531",
+   "nimi": "Santa Maria della Salute",
+   "kuvaus": "Ruton jälkeen rakennettu kupolikirkko",
+   "luokka": "kirkko",
+   "koko_m": 70,
+   "teksti": "Kupolikirkko Santa Maria della Salute kohoaa Canal Granden suulla valkoisena kahdeksankulmiona, jonka valtavaa kupolia tukevat kotiloa muistuttavat kierteiset tuet. Venetsian senaatti lupasi kirkon Neitsyt Marialle vuonna 1630, kun rutto oli jo tappanut noin kolmanneksen kaupungin asukkaista. Arkkitehti Baldassare Longhena työskenteli sen parissa yli viisikymmentä vuotta, mutta kirkko vihittiin vasta hänen kuolemansa jälkeen vuonna 1687. Raskas rakennus lepää yli miljoonan laguunin mutaan lyödyn puupaalun varassa, eikä puu lahoa hapettomassa mudassa.",
+   "lyhyt": "Kupolikirkon Santa Maria della Saluten juhlaa vietetään yhä joka marraskuu, ja silloin Canal Granden yli rakennetaan kirkolle tilapäinen silta. Pääalttarilla on Kreetalta vuonna 1670 tuotu bysanttilainen Neitsyt Marian ikoni, ja sakaristossa on Tizianin maalauksia.",
+   "syventava": "Miten kirkko pysyy pystyssä mudassa?",
+   "kysymykset": [
+    "Miksi kirkko luvattiin juuri Neitsyt Marialle?",
+    "Kuka oli arkkitehti Baldassare Longhena?",
+    "Miten raskas kirkko pysyy pystyssä mudassa?",
+    "Mitä marraskuun Saluten juhlassa tapahtuu?",
+    "Mitä Tizianin maalauksia sakaristossa on?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Valkoinen istrialaisesta kivestä tehty kahdeksankulmio, valtava kupoli ja kotilomaiset koristetuet; kirkko on Canal Granden ja Giudeccan kanavan yhtymäkohdassa.",
+     "url": "https://en.wikipedia.org/wiki/Santa_Maria_della_Salute"
+    },
+    {
+     "vaite": "Senaatti päätti kirkosta vuonna 1630 ruton tapettua noin kolmanneksen asukkaista; Longhena työskenteli sen parissa yli 50 vuotta; vihittiin 9.11.1687 hänen kuolemansa jälkeen.",
+     "url": "https://en.wikipedia.org/wiki/Santa_Maria_della_Salute"
+    },
+    {
+     "vaite": "Kirkon runko lepää yli miljoonan puupaalun varassa. Hapettomassa mudassa puu ei lahoa.",
+     "url": "kaanon:pelin-aineisto"
+    },
+    {
+     "vaite": "Festa della Salute vietetään joka vuosi 21. marraskuuta, ja Canal Granden yli rakennetaan tilapäinen silta.",
+     "url": "https://en.wikipedia.org/wiki/Santa_Maria_della_Salute"
+    },
+    {
+     "vaite": "Pääalttarin bysanttilainen ikoni Mesopanditissa tuotiin Kreetan Kandiasta 1669 ja saapui Venetsiaan 1670; sakaristossa on useita Tizianin maalauksia.",
+     "url": "https://en.wikipedia.org/wiki/Panagia_Mesopantitisa"
+    }
+   ]
+  },
+  {
+   "id": "Q52517",
+   "nimi": "Huokausten silta",
+   "kuvaus": "Palatsin ja vankilan välinen silta",
+   "luokka": "silta",
+   "koko_m": 20,
+   "teksti": "Huokausten silta on valkoisesta istrialaisesta kalkkikivestä rakennettu umpinainen silta, joka ylittää kapean kanavan Dogen palatsin ja vankilan välillä. Se rakennettiin pian vuoden 1600 jälkeen, ja sen suunnitteli Antonio Contin, Rialton sillan suunnittelijan veljenpoika. Sillan sisällä kulkee kaksi väliseinän erottamaa käytävää, jotta tuomitut vangit eivät kohtaisi niitä, joita vasta vietiin oikeuteen. Nimen kerrotaan olevan peräisin 1800-luvulta englantilaiselta runoilijalta lordi Byronilta, ja tarinan mukaan vangit huokailivat nähdessään kaupungin ristikkoikkunoista viimeisen kerran.",
+   "lyhyt": "Huokausten sillan toisessa päässä on Uusi vankila, joka rakennettiin, koska palatsin omat sellit eivät enää riittäneet. Nykyään Dogen palatsin museokierros kulkee sillan toista käytävää pitkin vankilaan, joten saman matkan voi kulkea itse.",
+   "syventava": "Miksi sillassa on kaksi käytävää?",
+   "kysymykset": [
+    "Miksi sillalla on niin surullinen nimi?",
+    "Keitä vankeja sillan yli kuljetettiin?",
+    "Voiko sillan läpi kävellä nykyään?",
+    "Miksi sillassa on kaksi erillistä käytävää?",
+    "Millaiset olot Uudessa vankilassa olivat?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Valkoisesta istrialaisesta kalkkikivestä tehty umpinainen silta Rio di Palazzon yli Dogen palatsin ja Uuden vankilan välillä; rakennettu 1600–1603; suunnittelija Antonio Contin, Antonio da Ponten veljenpoika.",
+     "url": "https://en.wikipedia.org/wiki/Bridge_of_Sighs"
+    },
+    {
+     "vaite": "Sisällä kaksi väliseinän erottamaa käytävää, jotta tuomitut eivät kohtaisi oikeuteen vietäviä.",
+     "url": "https://hotelarcadia.net/exhibition/bridge-of-sighs-venice-story/"
+    },
+    {
+     "vaite": "Nimen kerrotaan tulevan lordi Byronilta 1800-luvulla; vangit huokailivat nähdessään Venetsian viimeisen kerran ikkunasta.",
+     "url": "https://en.wikipedia.org/wiki/Bridge_of_Sighs"
+    },
+    {
+     "vaite": "Uusi vankila rakennettiin, koska palatsin vankilat olivat riittämättömät; museokierros kulkee sillan toista käytävää pitkin Uuteen vankilaan.",
+     "url": "https://venicewelcome.com/info/monuments_of_venice/the-bridge-of-sighs-and-the-new-prisons.htm"
+    }
+   ]
+  },
+  {
+   "id": "Q754194",
+   "nimi": "Pyhän Markuksen kellotorni",
+   "kuvaus": "Torin korkea tiilinen kampanile",
+   "luokka": "torni",
+   "koko_m": 40,
+   "korkeus_m": 99,
+   "teksti": "Pyhän Markuksen kellotorni on aukion korkein rakennus, lähes satametrinen tiilitorni, jonka terävän kärjen huipulla seisoo kultainen arkkienkeli Gabriel. Eräänä heinäkuun aamuna vuonna 1902 vanha torni sortui yhtäkkiä kasaksi tiiliä keskelle kaupunkia, vaikka sen juurella oli vartijoita ja työmiehiä. Kukaan ei kuollut, ja ainoa uhri oli tornin vartijan kissa, joka löytyi raunioita raivattaessa. Torni päätettiin rakentaa uudelleen samanlaisena ja samalle paikalle, ja uusi torni vihittiin Pyhän Markuksen päivänä vuonna 1912.",
+   "lyhyt": "Pyhän Markuksen kellotornin huipulla Galileo Galilei esitteli elokuussa 1609 kaukoputkeaan dogelle ja senaattoreille, jotka erottivat sen avulla kaukana merellä kulkevia laivoja. Vaikutus oli niin suuri, että Galilein palkka Padovan yliopistossa kaksinkertaistettiin.",
+   "syventava": "Miksi kellotorni sortui vuonna 1902?",
+   "kysymykset": [
+    "Miksi vanha kellotorni sortui yhtäkkiä?",
+    "Mitä Galileo näytti tornista dogelle?",
+    "Kuka on tornin huipun kultainen enkeli?",
+    "Miten torni rakennettiin uudelleen?",
+    "Millainen näköala tornin huipulta avautuu?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Torni on 98,6 metriä korkea tiilitorni, jonka huipulla on arkkienkeli Gabrielin patsas.",
+     "url": "https://italyheaven.co.uk/?p=5731"
+    },
+    {
+     "vaite": "Torni sortui 14.7.1902 aamulla; ainoa uhri oli vartijan kissa, joka löytyi raunioita raivattaessa. Tornin juurella oli vartijoita ja työmiehiä, mutta muita uhreja ei ollut.",
+     "url": "https://roderickconwaymorris.com/Articles/407.html"
+    },
+    {
+     "vaite": "Torni rakennettiin uudelleen samanlaisena samalle paikalle ja vihittiin Pyhän Markuksen päivänä 25.4.1912.",
+     "url": "https://www.basilicasanmarco.it/en/?p=3174"
+    },
+    {
+     "vaite": "Galileo esitteli kaukoputken 25.8.1609 doge Leonardo Donatolle ja senaattoreille kampanilen huipulla; he näkivät kaukaisia laivoja; Galilein palkka kaksinkertaistettiin ja hän sai elinikäisen viran Padovan yliopistossa.",
+     "url": "https://physicsworld.com/a/the-day-galileo-brought-astron/"
+    }
+   ]
+  },
+  {
+   "id": "Q713558",
+   "nimi": "San Giorgio Maggiore",
+   "kuvaus": "Palladion kirkko omalla saarellaan",
+   "luokka": "kirkko",
+   "koko_m": 90,
+   "teksti": "Saarikirkko San Giorgio Maggiore seisoo omalla pikkusaarellaan Pyhän Markuksen altaan toisella puolella, ja sen valkoinen julkisivu näkyy suoraan Dogen palatsin edustalta. Kirkon suunnitteli Andrea Palladio, ja rakennustyö alkoi vuonna 1566 ja valmistui vasta vuonna 1610. Viereisessä benediktiiniluostarissa valittiin vuonna 1800 paavi Pius seitsemäs, ja se oli viimeinen kerta, kun konklaavi pidettiin muualla kuin Sikstuksen kappelissa. Kirkossa on Tintoretton Viimeinen ehtoollinen, ja kellotornista avautuu yksi Venetsian parhaista näköaloista.",
+   "lyhyt": null,
+   "syventava": "Miksi paavi valittiin Venetsiassa?",
+   "kysymykset": [
+    "Miksi paavi valittiin Venetsiassa eikä Roomassa?",
+    "Kuka oli arkkitehti Andrea Palladio?",
+    "Miltä Venetsia näyttää kellotornista?",
+    "Mitä Tintoretton Viimeisessä ehtoollisessa näkyy?",
+    "Asuuko saaren luostarissa yhä munkkeja?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Benediktiinikirkko samannimisellä saarella; suunnittelija Andrea Palladio; rakennettu 1566–1610.",
+     "url": "https://en.wikipedia.org/wiki/San_Giorgio_Maggiore_(church),_Venice"
+    },
+    {
+     "vaite": "Konklaavi pidettiin San Giorgio Maggioren benediktiiniluostarissa; Pius VII valittiin 14.3.1800; viimeinen konklaavi muualla kuin Sikstuksen kappelissa.",
+     "url": "https://www.seevenice.it/en/when-a-pope-was-elected-in-venice-a-venetian-conclave/"
+    },
+    {
+     "vaite": "Tintoretton Viimeinen ehtoollinen, 1592–1594, on kirkossa.",
+     "url": "https://en.wikipedia.org/wiki/Last_Supper_(Tintoretto)"
+    },
+    {
+     "vaite": "Kellotornista avautuu yksi Venetsian parhaista näköaloista.",
+     "url": "https://en.venezia.net/venice-church-of-san-giorgio-maggiore.html"
+    },
+    {
+     "vaite": "Saari sijaitsee Pyhän Markuksen altaan toisella puolella torin ja Dogen palatsin edustalla.",
+     "url": "https://en.wikipedia.org/wiki/San_Giorgio_Maggiore"
+    }
+   ]
+  },
+  {
+   "id": "Q52437",
+   "nimi": "Murano",
+   "kuvaus": "Lasinpuhaltajien saari laguunissa",
+   "luokka": "muu",
+   "koko_m": 1500,
+   "teksti": "Muranon saari on oikeastaan seitsemän siltojen toisiinsa liittämän saaren ryhmä Venetsian pohjoispuolella laguunissa. Vuonna 1291 tasavalta määräsi lasinpuhaltajat siirtämään uuninsa tänne, koska kuumat uunit olivat palovaara kaupungissa, jonka talot olivat suureksi osaksi puuta. Mestarit saivat erikoisoikeuksia, mutta tasavallasta heidän ei ollut lupa lähteä, sillä lasin valmistus oli valtionsalaisuus. Saaren vanhan kirkon alttarin takana riippuu yli metrin mittaisia luita, joiden on kerrottu kuuluneen pyhän Donatuksen surmaamalle lohikäärmeelle, mutta todennäköisesti ne ovat valaan kylkiluita.",
+   "lyhyt": null,
+   "syventava": "Miksi lasin valmistus oli salaista?",
+   "kysymykset": [
+    "Miksi lasin valmistus oli valtionsalaisuus?",
+    "Miten Muranon lasi puhalletaan?",
+    "Mitä saaren lasimuseossa on esillä?",
+    "Pakeniko joku lasinpuhaltaja tasavallasta?",
+    "Kuka oli lohikäärmeen surmannut Donatus?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Murano koostuu seitsemästä siltojen yhdistämästä saaresta Venetsian pohjoispuolella laguunissa.",
+     "url": "https://Www.wikipedia.org/wiki/Murano"
+    },
+    {
+     "vaite": "Vuoden 1291 laki siirsi lasinvalmistuksen Muranoon palovaaran vuoksi.",
+     "url": "https://en.wikipedia.org/wiki/Venetian_glass"
+    },
+    {
+     "vaite": "Lasinpuhaltajat saivat erikoisoikeuksia, mutta tasavallasta ei ollut lupa lähteä; valmistustapa oli valtionsalaisuus; kaupungin talot olivat suureksi osaksi puuta.",
+     "url": "kaanon:pelin-aineisto"
+    },
+    {
+     "vaite": "Santa Maria e San Donaton alttarin takana on yli metrin mittaisia luita, joiden sanotaan kuuluneen pyhän Donatuksen surmaamalle lohikäärmeelle; tutkimusten mukaan ne ovat todennäköisesti valaan luita.",
+     "url": "https://en.wikipedia.org/wiki/Santa_Maria_e_San_Donato"
+    },
+    {
+     "vaite": "Luut ovat yli metrin mittaisia ja valaan kylkiluita.",
+     "url": "https://aleteia.org/2019/01/24/a-church-in-italy-preserves-both-the-remains-of-a-saintly-dragon-slayer-and-those-of-the-dragon-he-slayed"
+    }
+   ]
+  },
+  {
+   "id": "Q223942",
+   "nimi": "La Fenicen oopperatalo",
+   "kuvaus": "Venetsian kuuluisa oopperatalo",
+   "luokka": "rakennus",
+   "koko_m": 70,
+   "teksti": "Oopperatalo La Fenice on pienen aukion laidalla tiheän korttelin keskellä, ja ylhäältä sen erottaa ympäröiviä taloja suuremmasta katosta. Nimi tarkoittaa Feniks-lintua, sillä talo rakennettiin 1790-luvulla seurueelle, jonka edellinen teatteri oli palanut. Nimi osoittautui enteeksi: talo tuhoutui tulipalossa vuonna 1836 ja uudelleen vuonna 1996, jolloin kaksi sähkömiestä sytytti sen tahallaan välttääkseen korjaustöiden viivästyssakot. Täällä kantaesitettiin Verdin Rigoletto ja La traviata, ja jälleenrakennettu talo avattiin joulukuussa 2003.",
+   "lyhyt": null,
+   "syventava": "Kuka sytytti oopperatalon palamaan?",
+   "kysymykset": [
+    "Miksi oopperatalo on palanut niin monta kertaa?",
+    "Mitä Verdin oopperoita täällä kantaesitettiin?",
+    "Miten oopperatalo rakennettiin uudelleen?",
+    "Mitä tuhopolttajille tapahtui?",
+    "Millainen oopperatalo on sisältä?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Nimi La Fenice, Feniks, annettiin 1790-luvulla, koska seurueen edellinen teatteri oli palanut.",
+     "url": "https://en.wikipedia.org/wiki/La_Fenice"
+    },
+    {
+     "vaite": "Tulipalo tuhosi talon 13.12.1836; kaksi sähkömiestä sytytti sen tahallaan 29.1.1996, koska heidän yritystään uhkasivat viivästyssakot.",
+     "url": "https://en.wikipedia.org/wiki/La_Fenice"
+    },
+    {
+     "vaite": "Talo avattiin uudelleen 14.12.2003.",
+     "url": "https://interlude.hk/rise-of-the-phoenix-la-fenice/"
+    },
+    {
+     "vaite": "Verdin Attilan, Rigoletton, La traviatan ja Simon Boccanegran kantaesitykset olivat La Fenicessä.",
+     "url": "https://en.wikipedia.org/wiki/La_Fenice"
+    },
+    {
+     "vaite": "Oopperatalo on Campo San Fantinin laidalla.",
+     "url": "https://en.wikipedia.org/wiki/La_Fenice"
+    }
+   ]
+  },
+  {
+   "id": "Q1262248",
+   "nimi": "Arsenaali",
+   "kuvaus": "Venetsian tasavallan vanha telakka",
+   "luokka": "muu",
+   "koko_m": 1000,
+   "teksti": "Arsenaali on muurien ympäröimä vanha telakka kaupungin itäosassa, ja ylhäältä sen suorakulmaiset vesialtaat erottuvat selvästi talojen keskeltä. Täällä rakennettiin tasavallan laivasto, ja dogen mukaan telakka työllisti 1400-luvun alussa kuusitoistatuhatta miestä. Kun Ranskan kuningas Henrik kolmas vieraili Venetsiassa vuonna 1574, työmiesten kerrotaan koonneen kokonaisen kaleerin hänen juhla-ateriansa aikana. Pääportin vieressä vartioi marmorileijona, jonka Francesco Morosini toi Ateenan Pireuksesta vuonna 1687 ja jonka kylkiin skandinaavit olivat kaivertaneet riimukirjoituksia jo 1000-luvulla.",
+   "lyhyt": null,
+   "syventava": "Kuka kaiversi riimut leijonaan?",
+   "kysymykset": [
+    "Miten kaleeri ehdittiin koota yhden aterian aikana?",
+    "Mitä leijonan riimukirjoituksissa lukee?",
+    "Mitä Arsenaalissa tehdään nykyään?",
+    "Miksi Dante mainitsi Arsenaalin Helvetissä?",
+    "Kuinka monta leijonaa portilla vartioi?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Arsenaali on tasavallan muurien ympäröimä telakka kaupungin itäosassa.",
+     "url": "https://en.wikipedia.org/wiki/Venetian_Arsenal"
+    },
+    {
+     "vaite": "Doge Mocenigon viimeisen puheen mukaan vuonna 1423 Arsenaali työllisti 16 000 miestä.",
+     "url": "https://en.wikipedia.org/wiki/Venetian_Arsenal"
+    },
+    {
+     "vaite": "Henrik III vieraili 1574; kaleeri valmistui valtionjuhlan alkuruoan ja jälkiruoan välillä.",
+     "url": "https://www.worldhistory.org/article/2776/arsenale/"
+    },
+    {
+     "vaite": "Pireuksen leijona on yksi Arsenaalin neljästä leijonasta; Francesco Morosini ryösti sen 1687; kyljissä 1000-luvulla skandinaavien kaivertamat riimukirjoitukset.",
+     "url": "https://en.wikipedia.org/wiki/Piraeus_Lion"
+    },
+    {
+     "vaite": "Dante mainitsee Arsenaalin kiehuvan pikin Helvetissä.",
+     "url": "https://www.worldhistory.org/article/2776/arsenale/"
+    }
+   ]
+  },
+  {
+   "id": "Q820872",
+   "nimi": "Ca' d'Oro",
+   "kuvaus": "Goottilainen palatsi Canal Grandella",
+   "luokka": "rakennus",
+   "koko_m": 30,
+   "teksti": "Kultainen talo, Ca' d'Oro, on Canal Granden varrella seisova goottilainen palatsi, jonka pitsimäisen kivijulkisivun koristeet olivat alun perin runsaasti kullattuja. Se rakennettiin 1400-luvulla Marino Contarinille, ja sen suunnittelivat Giovanni Bon ja hänen poikansa Bartolomeo. Paroni Giorgio Franchetti osti palatsin vuonna 1894, valvoi itse sen kunnostusta ja testamenttasi sen taidekokoelmineen valtiolle vuonna 1916. Kokoelman tunnetuin teos on Andrea Mantegnan Pyhä Sebastian, jolle Franchetti suunnitteli oman marmorilla verhotun kappelin.",
+   "lyhyt": null,
+   "syventava": "Kuka testamenttasi palatsin valtiolle?",
+   "kysymykset": [
+    "Miksi palatsia kutsutaan kultaiseksi taloksi?",
+    "Kuka oli paroni Giorgio Franchetti?",
+    "Mitä palatsin taidegalleriassa on nähtävissä?",
+    "Miksi Mantegnan maalaus sai oman kappelin?",
+    "Kuka oli palatsin rakennuttaja Marino Contarini?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Nimi tulee julkisivun alkuperäisestä runsaasta kultauksesta; rakennettu Marino Contarinille 1400-luvulla; arkkitehdit Giovanni Bon ja poika Bartolomeo Bon.",
+     "url": "https://en.wikipedia.org/wiki/Ca%27_d%27Oro"
+    },
+    {
+     "vaite": "Paroni Giorgio Franchetti osti palatsin 1894, valvoi kunnostusta ja testamenttasi sen valtiolle 1916.",
+     "url": "https://en.wikipedia.org/wiki/Ca%27_d%27Oro"
+    },
+    {
+     "vaite": "Mantegnan Pyhä Sebastian on esillä Franchettin itse suunnittelemassa marmorilla verhotussa kappelissa.",
+     "url": "https://en.wikipedia.org/wiki/Saint_Sebastian_(Mantegna)"
+    }
+   ]
+  },
+  {
+   "id": "Q830807",
+   "nimi": "Il Redentore",
+   "kuvaus": "Palladion ruttokirkko Giudeccalla",
+   "luokka": "kirkko",
+   "koko_m": 70,
+   "teksti": "Lunastajan kirkko, Il Redentore, hallitsee Giudeccan saaren rantaa valkoisella julkisivullaan ja suurella kupolillaan, jonka huipulla seisoo Lunastajan eli Kristuksen patsas. Venetsian senaatti tilasi kirkon Andrea Palladiolta kiitokseksi rutosta, joka tappoi vuosina 1575 ja 1576 noin neljäkymmentäkuusituhatta ihmistä. Kirkko vihittiin vuonna 1592 ja annettiin kapusiinimunkkien hoitoon, ja heidän mieltymyksensä vuoksi ulkoasu tehtiin pelkistetyksi. Joka heinäkuun kolmantena viikonloppuna Giudeccan kanavan yli rakennetaan kirkolle ponttonisilta, ja lauantaina keskiyön lähestyessä laguunilla ammutaan suuri ilotulitus.",
+   "lyhyt": null,
+   "syventava": "Miksi kirkolle rakennetaan joka kesä silta?",
+   "kysymykset": [
+    "Miksi kirkolle rakennetaan joka kesä silta?",
+    "Kuinka pahasti rutto koetteli Venetsiaa?",
+    "Miksi kapusiinit halusivat yksinkertaisen kirkon?",
+    "Milloin ensimmäinen ponttonisilta rakennettiin?",
+    "Mitä Lunastajan juhlan yönä tapahtuu?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Kirkko hallitsee Giudeccan saaren siluettia Giudeccan kanavan rannalla; valkoinen julkisivu, suuri kupoli, jonka huipulla Kristus Lunastajan patsas.",
+     "url": "https://en.wikipedia.org/wiki/Il_Redentore"
+    },
+    {
+     "vaite": "Senaatti tilasi kirkon Palladiolta kiitokseksi vuosien 1575–1576 rutosta, jossa kuoli noin 46 000 ihmistä; vihittiin 1592.",
+     "url": "https://en.wikipedia.org/wiki/Il_Redentore"
+    },
+    {
+     "vaite": "Kirkko annettiin kapusiinien hoitoon; Palladio käytti valkoista rappausta ja istrialaista kiveä kapusiinien yksinkertaisemman tyylin mieltymyksen vuoksi.",
+     "url": "https://www.italyheaven.co.uk/?p=5792"
+    },
+    {
+     "vaite": "Heinäkuun kolmannen sunnuntain viikonloppuna Zatterelta kirkolle rakennetaan ponttonisilta; ilotulitus kohti keskiyötä; ensimmäinen silta 1577.",
+     "url": "https://en.wikipedia.org/wiki/Il_Redentore"
+    }
+   ]
+  }
+ ]
+}
