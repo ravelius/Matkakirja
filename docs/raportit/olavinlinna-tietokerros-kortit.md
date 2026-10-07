@@ -48,48 +48,50 @@ myöhempiä.
 ### 2. Päälinna ja portti
 
 Keskiajan päälinna kohosi luodon korkeimmalle, läntiselle osalle. Kolmea tornia yhdisti kehämuuri, ja idässä
-oli matalampi esilinna. Arkeologisen selvityksen mukaan pääportti oli ilmeisesti päälinnan läntisessä
-kehämuurissa. Linnaa muutettiin ja vahvistettiin myöhemmin monta kertaa, 1500-luvulta 1700-luvulle. Siksi
+oli matalampi esilinna. Arkeologisen selvityksen mukaan pääportti oli päälinnan läntisessä kehämuurissa,
+länsirannalla. Linnaa muutettiin ja vahvistettiin myöhemmin monta kertaa, 1500-luvulta 1700-luvulle. Siksi
 keskiaikaisen portin tarkkaa ulkoasua ei tunneta. Pelin portti on tulkinta.
 
 - Lähteet:
   - https://www.kyppi.fi/palveluikkuna/rapea/read/asp/r_kohde_det.aspx?KOHDE_ID=200076 (päälinna saaren länsiosassa, kolme tornia ja kehämuuri, matalampi esilinna idässä; muutokset 1500–1700-luvuilla)
   - https://www.kyppi.fi/palveluikkuna/mjreki/read/asp/r_kohde_det.aspx?KOHDE_ID=1000019735 (päälinna saaren korkeimmalla, läntisellä osalla)
-  - https://www.senaatti.fi/app/uploads/2019/12/978-952-7062-85-2_2019_Arkkitehtitoimisto-Hanna-Lyytinen_Olavinlinnan-arkeologinen-selvitys_s.pdf (pääportin paikka; ehdotuksen viite L1 s. 33, 60; PDF:ää ei voitu avata eikä tieto näkynyt hakutiivistelmissä)
-- Varmuus: päälinnan ja esilinnan sijainti sekä myöhemmät muutokset **V**; pääportin paikka **EPÄVARMA** (vain
-  ehdotuksen viittaus L1:een, ei vahvistettu); keskiaikainen ulkoasu **EPÄVARMA** (ei tunneta).
+  - https://www.senaatti.fi/app/uploads/2019/12/978-952-7062-85-2_2019_Arkkitehtitoimisto-Hanna-Lyytinen_Olavinlinnan-arkeologinen-selvitys_s.pdf (pääportin paikka: s. 33 "Linnan pääportti sijaitsi läntisessä kehämuurissa", s. 211 "Länsirannalla on sijainnut linnan pääportti ja Tallisaaresta johtanut silta jo keskiajalla", s. 60 porttikäytävän koillispää on keskiaikaista läntistä kehämuuria; luettu 7.10.)
+- Varmuus: päälinnan ja esilinnan sijainti sekä myöhemmät muutokset **V**; pääportin paikka **1L** (Senaatti 2019,
+  kolme kohtaa samassa lähteessä; vahvistettu lähdetarkistuksessa 7.10.); keskiaikainen ulkoasu **EPÄVARMA** (ei tunneta).
 - Sanamäärä: 45
 
 ### 3. Pikkupiha ja perustamistaulu
 
 Pikkupiha on päälinnan pieni sisäpiha. Linnan salin ulkoseinään perustaja pani kivitaulun. Siinä luki
 suunnilleen näin: "Herran vuonna 1475 rakensin minä, Eerik Akselinpoika, Lagnön ritari, tämän linnan Jumalan
-kunniaksi ja pyhän kristinuskon vahvistukseksi." Kirjoituksen alla olivat Tottin ja hänen puolisonsa vaakunat.
-Taulun myöhemmät vaiheet ovat epävarmoja.
+kunniaksi ja pyhän kristinuskon vahvistukseksi." Kirjoituksen alla olivat Tottin ja Sturen sukujen vaakunat.
+Taulu tuhoutui linnanpalossa 1631, mutta sanamuoto on säilynyt.
 
 - Lähteet:
   - https://savonhistoria.fi/vuoteen-1533/16-olavinlinnan-suojassa/ (kivitaulu salin ulkoseinässä, kirjoituksen sisältö, vaakunat kirjoituksen alla)
   - https://www.kansallismuseo.fi/fi/olavinlinna/historiaa (perustaja ja vuosi 1475; palasi samoissa hakutuloksissa)
-  - https://journal.fi/fennoscandiaarchaeologica/article/download/126668/76486/265830 (Härö 1997; ehdotuksen mukaan taulu tuhoutui 1631, ei voitu lukea eikä vahvistaa)
-- Varmuus: taulu, kirjoitus ja vaakunat **1L** (Savon historia; hakutiivistelmät toistivat saman lähteen);
-  taulun kohtalo **EPÄVARMA** (tulipalo 1631 ei löytynyt yhdestäkään hakutuloksesta, siksi poistettu)
-- Sanamäärä: 45
+  - https://journal.fi/fennoscandiaarchaeologica/article/download/126668/76486/265830 (Härö 1997 s. 43, alaviite 9: teksti tuhoutui 1631 palossa, sanamuoto säilyneestä muistiinpanosta, vaakunat Sture ja Tott; s. 34: laatat 8–11 Kuninkaansalin ulkoseinällä oletettavasti tämä taulu; luettu 7.10.)
+  - https://www.gutenberg.org/cache/epub/65639/pg65639.txt (Aspelin 1875: taulu "ennen suurta linnanpaloa kesäkuun 2. p. 1631" käytävän seinässä Kuninkaansalin kohdalla; kirjoitus ja Sturen ja Tottin vaakunat)
+- Varmuus: taulu, kirjoitus, vaakunat (Sture ja Tott) ja tuho 1631 **V** (Härö 1997 + Aspelin 1875; tarkistettu
+  7.10.). Korjaus: vaakunat ovat Sturen ja Tottin, eivät "Tottin ja puolison". Taulun tarkka paikka (Kuninkaansalin
+  ulkoseinä vs. käytävän seinä) 1L, Härön mukaan "oletettavasti".
+- Sanamäärä: 48
 
 ### 4. Keittiö ja ruoka
 
-Linnassa laitettiin ruokaa vuosisatojen mittaan monessa paikassa. Varsinainen keittiö oli pienellä linnanpihalla,
-ja sen tulisijan perustus on yhä jäljellä. Ruoka keitettiin avotulella isoissa padoissa ja kattiloissa. Kalaa ja
-kasviksia syötiin paljon, sillä kalapäiviä oli noin kaksisataa vuodessa. Arkeologisen selvityksen mukaan keittiö
-oli päälinnan eteläsiivessä.
+Linnassa laitettiin ruokaa vuosisatojen mittaan monessa paikassa. Varsinainen keittiö oli pienellä linnanpihalla.
+Ruoka keitettiin avotulella isoissa padoissa ja kattiloissa. Kalaa ja kasviksia syötiin paljon, sillä kalapäiviä
+oli noin kaksisataa vuodessa. Arkeologisen selvityksen mukaan päälinnan eteläsiivessä oli keittiöksi tulkittu
+rakennus, joka purettiin 1720-luvulla.
 
 - Lähteet:
   - https://yle.fi/a/3-6618420 (Olavinlinnan keittiöhistoria avotulesta automaattiuuneihin: ruokaa monessa paikassa, keittiö pienellä linnanpihalla, tulisijan perustus, padat ja kattilat, kala ja kasvikset, noin 200 kalapäivää)
   - https://www.apu.fi/artikkelit/suomen-keskiaikaiset-kivilinnat-66-olavinlinna (palasi samassa haussa keittiöaiheesta; sisältöä ei näkynyt tiivistelmässä)
-  - https://www.senaatti.fi/app/uploads/2019/12/978-952-7062-85-2_2019_Arkkitehtitoimisto-Hanna-Lyytinen_Olavinlinnan-arkeologinen-selvitys_s.pdf (eteläsiipi; ehdotuksen viite L1 s. 33–38, PDF:ää ei voitu avata)
-- Varmuus: keittiö pihalla, padat ja kalapäivät **1L** (Yle); eteläsiipi **EPÄVARMA** (vain ehdotuksen viittaus
-  L1:een, ei näkynyt haussa; kortti nimeää lähteen). Eteläsiiven purku ja ruokailupaikat (Linnantupa, sali)
-  poistettiin, koska niitä ei löytynyt haussa.
-- Sanamäärä: 44
+  - https://www.senaatti.fi/app/uploads/2019/12/978-952-7062-85-2_2019_Arkkitehtitoimisto-Hanna-Lyytinen_Olavinlinnan-arkeologinen-selvitys_s.pdf (s. 33: päälinnan eteläsiipi G 102 purettiin 1720-luvulla; s. 34: Maconin kaivauksissa 1924 "keittiöksi tulkittu rakennus (G 102)"; luettu 7.10.)
+- Varmuus: keittiö pihalla, padat ja kalapäivät **1L** (Yle; kalapäivien luku vaihtelee lähteittäin, ks. faktapohja
+  E7); keittiöksi **tulkittu** eteläsiipi ja purku 1720-luvulla **1L** (Senaatti 2019 s. 33–34, vahvistettu
+  7.10.). Tulisijan perustus poistettu kortista: sitä ei mainita Senaatin selvityksessä eikä Aspelinissa, vain Ylessä.
+- Sanamäärä: 42
 
 ### 5. Kirkkotorni ja Tottin kamari
 
@@ -116,16 +118,18 @@ takka, ja sieltä on ovi Linnantupaan. Tarinan mukaan huoneessa kummittelee harm
 Kappeli on Kirkkotornin kolmannessa kerroksessa, ja siellä pidetään yhä toimituksia. Seiniä kiertää kaksitoista
 vihkiristiä. Kappelissa on kolme alttaria ja harvinainen hagioskooppi. Sen pienestä aukosta sairaat tai syntisiksi
 katsotut seurasivat messua viereisestä kammiosta. Holvissa näkyy maalausten jäänteitä: lehtiä, kukkia ja
-vaakunoita. Kappeli mainitaan vuonna 1499. Yksi lähde sijoittaa sen kuitenkin Kellotorniin.
+vaakunoita. Ikkunana on vain ahdas, rautaluukulla suljettava aukko, joten valo tuli kynttilöistä. Kappeli
+mainitaan vuonna 1499. Yksi lähde sijoittaa sen kuitenkin Kellotorniin.
 
 - Lähteet:
   - https://www.kansallismuseo.fi/fi/olavinlinna/pyha-olavi (Kirkkotorni, 12 vihkiristiä, kolme alttaria, hagioskooppi, maalaukset, käyttö nykyään)
   - https://en.wikipedia.org/wiki/Olavinlinna (kolmas kerros, maalausten jäänteet, hagioskooppi)
   - https://savonhistoria.fi/vuoteen-1533/16-olavinlinnan-suojassa/ (mainitaan 1499; sijoittaa kappelin Kellotornin kolmanteen kerrokseen)
+  - https://www.gutenberg.org/cache/epub/65639/pg65639.txt (Aspelin 1875: "ahtaasta rautaisella luukulla varustetusta akkunasta kappelin koillisessa muurissa päivän säde niukasti pyhää huonetta valaisi. Kappeli siis näkyy olleen kokonaan kynttilöiden valaistava"; luettu 7.10.)
 - Varmuus: **V** (sijainti Kirkkotornissa, ristit, alttarit, hagioskooppi, maalaukset); maininta 1499 **1L**;
-  sijainti **ristiriita** (Savon historia: Kellotorni). Ehdotuksen "ikkunaton kappeli" ja kahdeksan aukon
-  ampumakäytävä eivät löytyneet hausta, joten ne jätettiin kortista pois (**EPÄVARMA**).
-- Sanamäärä: 50
+  sijainti **ristiriita** (Savon historia: Kellotorni); ikkuna ja kynttilävalo **1L** (Aspelin 1875). Kappeli ei ole
+  ikkunaton (korjaus faktapohjan "ikkunaton"-sanaan). Kahdeksan aukon ampumakäytävä jää pois (ei lähdettä).
+- Sanamäärä: 61
 
 ---
 
@@ -182,20 +186,21 @@ hoiti Viipurin linnaa itse kaksi vuotta.
 
 ### 10. Vaakunalaatat ja umpeen muuratut komerot
 
-Linnan muureissa on poikkeuksellisen paljon vaakunalaattoja. Ne veistettiin paikallisesta liuskekivestä linnan
-työmaalla noin 1475–1483, ja kaikki tunnistetut laatat liittyvät Tottin sukuun. Kirkkotornin ulkomuurissa on
-Tottin vaakuna ja Kellotornin seinässä Tottin ja Sturen liittovaakuna. Erään tutkimuksen mukaan kahdessa tornissa
-on laattojen välissä komero, joka oli muurattu umpeen tiilillä. Tiilet poistettiin restauroinnissa.
+Linnan muureissa on poikkeuksellisen paljon vaakunalaattoja, kolmetoista, joista kolmessa vaakuna vielä erottuu. Ne
+veistettiin paikallisesta amfiboliittiliuskeesta linnan työmaalla noin 1475–1483, ja kaikki tunnistetut laatat liittyvät
+Tottin sukuun. Kirkkotornin ulkomuurissa on Tottin vaakuna ja Kellotornissa Tottin ja Sturen liittovaakuna. Erään
+tutkimuksen mukaan kummassakin tornissa on laattojen välissä komero, joka oli muurattu umpeen tiilillä. Tiilet
+poistettiin restauroinnissa.
 
 - Lähteet:
-  - https://journal.fi/fennoscandiaarchaeologica/article/download/126668/76486/265830 (Härö 1997: liuske, työmaa noin 1475–1483, poikkeuksellinen määrä, kaikki tunnistetut laatat Tottin sukuun — näkyi hakutiivistelmässä; komerot vain ehdotuksen faktataulukon mukaan)
+  - https://journal.fi/fennoscandiaarchaeologica/article/download/126668/76486/265830 (Härö 1997, Fennoscandia archaeologica XIV, luettu 7.10.: s. 31 liuske, työmaa noin 1475–1483, kaikki tunnistetut laatat Tottin sukuun; s. 33–35 laattaluettelo 1–13, vain 1–3 tunnistettavia; s. 35–36 tummanharmaa liuske = amfiboliitti; s. 34–35 ja Abb. 5 komerot: Kellotornissa 195×85×56 cm, tiilillä umpeen muurattu, tiilet poistettu restauroinnissa; Kirkkotornissa laattojen 4 ja 5 välissä, tiilet poistettu 1966; s. 36 komeron tarkoitusta ei tiedetä)
   - https://www.finna.fi/Record/museovirasto.F4E4E7AFDBCB04762785DFA03E123446 ja https://www.finna.fi/Record/museovirasto.692B1FD24361F15FB1AA6E00A3346FF2 (Aspelinin 1875 kuvat: Tott-suvun vaakuna Kirkkotornin ulkomuurissa)
   - https://savonhistoria.fi/vuoteen-1533/16-olavinlinnan-suojassa/ (Sturen ja Tottin vaakunalaatta Kellotornin seinässä; hakutiivistelmän mukaan)
-- Varmuus: laattojen määrä ja liuske, ajoitus ja Tott-yhteys **1L** (vain Härö, tiivistelmän kautta); Kirkkotornin
-  ja Kellotornin vaakunat **V** (Finna + Savon historia); umpeen muuratut komerot **EPÄVARMA** (vain ehdotuksen
-  viittaus Häröön, ei näkynyt haussa; kortti nimeää lähteen "erään tutkimuksen"). Laattojen lukumäärä 13
-  jätettiin pois, koska se löytyi vain ehdotuksesta, ei hausta (**EPÄVARMA**).
-- Sanamäärä: 50
+- Varmuus: laattojen määrä (13, joista 3 tunnistettavaa), amfiboliittiliuske, ajoitus, Tott-yhteys ja umpeen
+  muuratut komerot **1L** (Härö 1997, luettu kokonaisuudessaan 7.10.; vahvistettu); Kirkkotornin ja Kellotornin
+  vaakunat **V** (Finna + Savon historia + Härö). Komeron käyttötarkoitusta ei väitetä (Härö s. 36: ei tiedetä).
+  Härön tekstissä komeron laattanumerot ovat keskenään ristiriitaiset, siksi "laattojen välissä" ilman numeroita.
+- Sanamäärä: 55
 
 ### 11. Aarnivalkea kansanuskossa
 
@@ -217,14 +222,14 @@ itiöillä. Aarnin luettelon nimikään ei ole sattumaa.
 Keksittyä oli paljon. Kappelin kalkin ja linnan hopean kätkeminen vuonna 1495 on fiktiota. Samoin keksittyjä ovat
 liuskekiven kuva, arkun kilpilukko, uuden herran inventaario ja voudin etsintä. Soutajan näkemä aarnivalkea, tarjotin, tyrmä
 kellarissa, kiipeilyreitti ja köysi ovat pelin keksintöjä. Pelin vouti on nimetön keksitty hahmo. Totta ovat
-vaakunalaatat ja kappeli, ja komerot perustuvat tutkimukseen. Fogg ja Pulu eivät tietenkään olleet paikalla.
+vaakunalaatat, niiden väliset komerot ja kappeli. Fogg ja Pulu eivät tietenkään olleet paikalla.
 
 - Pohja: `docs/raportit/ehdotus-olavinlinna-seikkailu.md` kohdat 2.1 ("FIKTIO"), 2.8 ("Mikä oli keksittyä?") ja
   faktataulukon jälkeinen lista "FIKTIO ja TULKINTA".
 - Lisäksi pelin tulkintoja, joita kortti ei luettele mutta jotka voi lisätä tarvittaessa: voudin sali Kuninkaansalissa,
   puolustuskäytävä pohjoismuurilla ja pässi pikkupihalla.
 - Varmuus: ei koske (fiktion luettelo).
-- Sanamäärä: 60
+- Sanamäärä: 59
 
 ---
 
@@ -238,12 +243,12 @@ vaakunalaatat ja kappeli, ja komerot perustuvat tutkimukseen. Fogg ja Pulu eivä
    mainitsemaa "päinvastaista" nimeämistä ei havaittu; sivua ei voitu avata. Kortti 5 kertoo epävarmuuden.
 3. **Päälinnan valmistuminen:** 1485 (en.wikipedia, 1L); ehdotuksen 1483 (Kyppi) ei näkynyt haussa. Kortti 7
    sanoo "1480-luvulla".
-4. **Perustamistaulun kohtalo (tuho 1631):** ei löytynyt hausta; poistettu, kortti 3 sanoo vaiheiden olevan epävarmoja.
-5. **Ikkunaton kappeli ja kahdeksan aukon ampumakäytävä:** ei löytynyt hausta; jätetty pois korteista.
-6. **Laattojen määrä 13:** ei löytynyt hausta; jätetty pois.
-7. **Umpeen muuratut komerot:** vain ehdotuksen viittaus Härö 1997:ään (EPÄVARMA); kortti 10 sanoo "erään tutkimuksen mukaan".
-8. **Keittiö eteläsiivessä:** vain ehdotuksen viittaus Senaatti 2019:ään (EPÄVARMA); purku ja ruokailupaikat poistettu.
-9. **Keskiaikainen pääportti:** paikka vain ehdotuksen viittaus L1:een (EPÄVARMA), ulkoasu tuntematon.
+4. **Perustamistaulun kohtalo (tuho 1631):** VAHVISTETTU lähdetarkistuksessa 7.10. (Härö 1997 s. 43 alaviite 9 + Aspelin 1875); vaakunat Sturen ja Tottin; kortti 3 päivitetty.
+5. **Ikkunaton kappeli:** KORJATTU 7.10.: kappelissa oli vain ahdas rautaluukulla suljettava ikkuna (Aspelin 1875), valo kynttilöistä; kortti 6 päivitetty. Kahdeksan aukon ampumakäytävä: ei lähdettä, jätetty pois.
+6. **Laattojen määrä 13:** VAHVISTETTU 7.10. (Härö 1997 s. 33–35; 3 tunnistettavaa); kortti 10 päivitetty.
+7. **Umpeen muuratut komerot:** VAHVISTETTU 7.10. (Härö 1997 s. 34–35, Abb. 5; Kirkkotornin komeron tiilet poistettu 1966); käyttötarkoitusta ei tiedetä eikä kortti sitä väitä; laattanumerot Härön tekstissä ristiriitaiset, kortti ilman numeroita.
+8. **Keittiö eteläsiivessä:** VAHVISTETTU "keittiöksi tulkittuna" 7.10. (Senaatti 2019 s. 33–34: G 102 purettu 1720-luvulla, Maconi 1924); tulisijan perustus poistettu (vain Yle).
+9. **Keskiaikainen pääportti:** paikka VAHVISTETTU 7.10. (Senaatti 2019 s. 33, 60, 211: läntinen kehämuuri, länsiranta, silta Tallisaareen jo keskiajalla); "ilmeisesti" poistettu kortista 2; ulkoasu tuntematon (tulkinta).
 10. **Takan kilvet Tottin kamarissa:** ei löytynyt hausta; poistettu kortista 5.
 
 ---
@@ -311,17 +316,19 @@ Senaatti 2019 -selvitystä ja vuoden 1923 opasta ei luettu. Jokainen lähderivin
 aiheesta, paitsi sv.wikipedia (esiintyi Olofsborg-haussa; jätetty vain lisätietoriville) ja Senaatin PDF (esiintyi
 haussa, mutta sisältö ei näkynyt; merkitty).
 
-**Jäljelle jääneet epävarmat kohdat**
+**Jäljelle jääneet epävarmat kohdat (päivitetty lähdetarkistuksessa 7.10.2026)**
 
-- Pääportin paikka läntisessä kehämuurissa (kortti 2): EPÄVARMA, vain L1.
-- Keittiö eteläsiivessä (kortti 4): EPÄVARMA, vain L1.
-- Umpeen muuratut komerot kahdessa tornissa (kortit 10 ja 12): EPÄVARMA, vain Härö 1997 ehdotuksen mukaan. Tämä on
-  seikkailun keskeinen "totta"-väite, joten se kannattaa varmistaa Häröstä ennen julkaisua.
-- Perustamistaulun kohtalo (kortti 3): ei tietoa.
+Vahvistettu paikallisesti (ks. `olavinlinna-tietokerros-lahdetarkistus.md`): pääportin paikka (kortti 2), keittiöksi tulkittu
+eteläsiipi (kortti 4), perustamistaulun tuho 1631 (kortti 3), komerot sekä laattojen määrä, amfiboliittiliuske ja
+ajoitus (kortit 10 ja 12), kappelin ahdas ikkuna (kortti 6, korjaus).
+
+- Komeroiden tarkoitus: ei tiedossa (Härö 1997 s. 36); kortit eivät väitä sitä. Laattanumerot Härön tekstissä ristiriitaiset.
+- Pääportin ulkoasu keskiajalla (kortti 2): tulkinta. Keittiön tarkka ajoitus ja tulisija (kortti 4): ei lähdettä.
 - Kirkkotornin keskiaikainen nimi (kortti 5) ja kappelin torni (kortti 6): lähteet ristiriidassa, kortit kertovat sen.
 - Päälinnan valmistumisvuosi 1485 (kortti 7): 1L.
 - Bielken käskynhaltijuus kesällä 1499 ja elokuun 1499 rajapyykit (kortti 9): 1L (en.wikipedia).
-- Vaakunalaattojen liuske, ajoitus ja Tott-yhteys (kortti 10): 1L (Härö, tiivistelmän kautta).
+- Komero- ja laattatiedot nojaavat yhteen lähteeseen (Härö 1997, OCR-luettu skannaus); keittiö ja pääportti yhteen lähteeseen
+  (Senaatti 2019).
 
 ## Päätoimittajan kuittaus (7.10.2026 klo 10.5x)
 
