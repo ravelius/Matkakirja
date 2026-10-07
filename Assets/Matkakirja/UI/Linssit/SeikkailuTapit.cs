@@ -230,7 +230,9 @@ namespace Matkakirja.Natiivi
             bool nayta = TestiNakyy ?? PelaajaAktiivinen();
             if (nayta == nakyy) return;
             nakyy = nayta;
-            if (!nayta) PoistaTietokerros();   // seikkailu päättyi: tietokerroksen tarjous ja Pulun kaappaus pois
+            if (!nayta) PoistaTietokerros();   // seikkailu päättyi: tietokerroksen tarjous pois
+            // Pulun napautus seikkailun ajan: tietokerros tai vihje (PuluKaappaa); muulloin Pulun oma (chat).
+            Pulu.Hae().NapautusKaappaa = nayta ? PuluKaappaa : (System.Func<bool>)null;
             vasen.Nayta(nayta);
             oikeaNakyy = nayta && OikeaTappi;
             oikea.Nayta(oikeaNakyy);
@@ -282,10 +284,31 @@ namespace Matkakirja.Natiivi
                 tkOtsikot = otsikot; tkTekstit = tekstit; tkLyhyet = lyhyet;
                 tkHimmennys?.RemoveFromHierarchy(); tkHimmennys = null;
                 var pulu = Pulu.Hae();
-                pulu.NapautusKaappaa = () => { if (tkOtsikot == null) return false; AvaaTietokerros(); return true; };
+                pulu.NapautusKaappaa = PuluKaappaa;
                 pulu.Tunne("ilo");
                 Debug.Log($"MATKAKIRJA seikkailutapit: tietokerros tarjolla, {otsikot?.Length ?? 0} korttia");
             });
+        }
+
+        static MethodInfo puluVihje;
+        static bool vihjeHaettu;
+
+        /// <summary>
+        /// Pulun reunakuvan napautus seikkailussa: tietokerroksen tarjous edelle, muuten SeikkailuPelaaja.PuluVihje() (Siirtoseppä,
+        /// vihjeportaat; false = ei vihjettä → Pulun tavallinen napautus).
+        /// </summary>
+        static bool PuluKaappaa()
+        {
+            if (tkOtsikot != null) { AvaaTietokerros(); return true; }
+            if (!vihjeHaettu)
+            {
+                vihjeHaettu = true;
+                var tp = typeof(SeikkailuTapit).Assembly.GetType("Matkakirja.Natiivi.SeikkailuPelaaja");
+                puluVihje = tp?.GetMethod("PuluVihje", BindingFlags.Public | BindingFlags.Static, null, System.Type.EmptyTypes, null);
+            }
+            bool kaytetty = puluVihje?.Invoke(null, null) is bool b && b;
+            Debug.Log("MATKAKIRJA seikkailutapit: Pulun napautus → " + (kaytetty ? "vihje" : "ei vihjettä"));
+            return kaytetty;
         }
 
         /// <summary>Tarjous pois (seikkailu päättyi): Pulun napautus palaa ennalleen.</summary>
@@ -293,7 +316,6 @@ namespace Matkakirja.Natiivi
         {
             if (tkOtsikot == null) return;
             tkOtsikot = tkTekstit = tkLyhyet = null;
-            Pulu.Hae().NapautusKaappaa = null;
             if (tkHimmennys != null) { tkHimmennys.RemoveFromHierarchy(); tkHimmennys = null; }
         }
 
