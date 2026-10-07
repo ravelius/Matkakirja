@@ -1064,6 +1064,55 @@ namespace Matkakirja.Linssit.Testit
         // 3) PoikkileikkausLinssi: saapuminen, käsikirjoitus, pulu, napautus, toistettavuus
         // ═══════════════════════════════════════════════════════════════════
 
+        // Saapuminen.loppu "kertoja" (Linnanrakentaja 6.10.2026): kaari päättyy suoraan 1. jakson lepoon, 1. jaksolla ei lentoa
+        // (ei kaari → yleis → järveltä -hyppyä); lyhyellä käynnillä kaari päättyy yleisnäkymään kuten ennen.
+        [Testi] static void SaapumisKaariPaattyyKertojanJaksoon()
+        {
+            string json = KeittioFixture.Replace("\"yleiskamera\": {",
+                "\"saapuminen\": {\"alku\": {\"atsimuutti\": 200, \"etaisyys\": 600, \"korkeus\": 8}, \"kesto\": 10, \"lyhyt\": 6, \"loppu\": \"kertoja\"},\n" +
+                "  \"kertoja\": {\"jaksot\": [{\"id\": \"j1\", \"teksti\": \"Yksi.\", \"kesto_s\": 3, \"kamera\": {\"kohde\": [0, 0, 0], \"atsimuutti\": 230, \"korkeus\": 10, \"etaisyys\": 230}}," +
+                "{\"id\": \"j2\", \"teksti\": \"Kaksi.\", \"kesto_s\": 3, \"kamera\": {\"kohde\": [0, 0, 0], \"atsimuutti\": 160, \"korkeus\": 8, \"etaisyys\": 260}}]},\n  \"yleiskamera\": {");
+            var rak = DioraamaData.Lue(json);
+            Oleta.Sama("kertoja", rak.Saapuminen.Loppu);
+            var l = new PoikkileikkausLinssi();
+            l.Avaa(rak, 0, false);
+            var loppuKaari = l.NakymaHetkella(10 - 1e-4, pysty: false).Kamera;
+            Lahella(230, loppuKaari.Atsimuutti, "kaari päättyy 1. jakson atsimuuttiin", 0.05);
+            Lahella(230, loppuKaari.Etaisyys, "kaari päättyy 1. jakson etäisyyteen", 0.05);
+            var alkuJakso = l.NakymaHetkella(10 + 1e-4, pysty: false).Kamera;
+            Lahella(230, alkuJakso.Atsimuutti, "jakso 1 alkaa samasta asennosta (ei hyppyä)", 0.05);
+            Lahella(10, alkuJakso.Korkeus, "jakso 1 korkeus", 0.05);
+            var alut = new List<double>(); var lennot = new List<double>(); var loput = new List<double>();
+            Oleta.Tosi(l.KertojanAikataulu(10.1, false, alut, lennot, loput, out _, out _, out _), "kierros käynnissä");
+            Lahella(0, lennot[0], "1. jaksolla ei lentoa");
+            Oleta.Tosi(lennot[1] > 0, "2. jaksolla lento");
+            // Lyhyt käynti: kierros ei ala itsestään, kaari päättyy yleisnäkymään.
+            var ly = new PoikkileikkausLinssi();
+            ly.Avaa(rak, 0, true);
+            var yleis = ly.NakymaHetkella(100, pysty: false).Kamera;
+            var lyLoppu = ly.NakymaHetkella(6 - 1e-4, pysty: false).Kamera;
+            Lahella(0, Math.IEEERemainder(lyLoppu.Atsimuutti - yleis.Atsimuutti, 360), "lyhyt kaari päättyy yleisnäkymään", 0.05);
+        }
+
+        // Jakson nimet ja kuva (Linnanrakentaja 6.10.2026): nimet[{teksti, paikka, alku_s, kesto_s?}], kuva{tiedosto, alku_s, ...}.
+        [Testi] static void KertojanJaksonNimetJaKuva()
+        {
+            string json = KeittioFixture.Replace("\"yleiskamera\": {", "\"kertoja\": {\"jaksot\": [{\"id\": \"tornit\", \"teksti\": \"Tornit.\", " +
+                "\"kamera\": {\"kohde\": [0, 0, 0], \"atsimuutti\": 157, \"korkeus\": 8, \"etaisyys\": 260}, " +
+                "\"nimet\": [{\"teksti\": \"Kirkkotorni\", \"paikka\": [1, 30, 2], \"alku_s\": 8.48}, {\"teksti\": \"Kellotorni\", \"paikka\": [5, 28, 4], \"alku_s\": 9.68, \"kesto_s\": 2}], " +
+                "\"kuva\": {\"tiedosto\": \"perustaja.jpg\", \"alku_s\": 4, \"lahde\": \"Wikimedia\", \"tekija\": \"X\"}}]},\n  \"yleiskamera\": {");
+            var j = DioraamaData.Lue(json).Kertoja[0];
+            Oleta.Sama(2, j.Nimet.Count);
+            Oleta.Sama("Kirkkotorni", j.Nimet[0].Teksti);
+            Lahella(8.48, j.Nimet[0].Alku, "alku_s");
+            Lahella(3, j.Nimet[0].Kesto, "kesto oletus 3 s");
+            Lahella(2, j.Nimet[1].Kesto, "kesto_s");
+            LahellaV3(new V3(1, 30, 2), j.Nimet[0].Paikka, "paikka");
+            Oleta.Sama("perustaja.jpg", j.Kuva?.Tiedosto);
+            Lahella(4, j.Kuva.Alku, "kuvan alku");
+            Lahella(6, j.Kuva.Kesto, "kuvan kesto oletus 6 s");
+        }
+
         // Elävä linna (Siirtoseppä 29.9.): saapumiskaari, ohitus napautuksella, lyhyt toinen käynti, lyhyt tilalento, elava-kenttä.
         [Testi] static void ElavaLinnaSaapuminenJaElava()
         {
