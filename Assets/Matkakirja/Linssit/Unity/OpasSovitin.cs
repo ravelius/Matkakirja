@@ -25,7 +25,7 @@ namespace Matkakirja.Natiivi
         public static readonly LinssiTiedot OpasTiedot = new LinssiTiedot
         {
             Id = "opas",
-            Nimi = "Elävä opas",
+            Nimi = "Kuumailmapallo",   // omistaja 7.10. 09.1x: näkyvä nimi (valikko, otsikot, VoiceOver); id "opas" ennallaan
             Lyhyt = "Opas lentää kanssasi minne haluat ja kertoo paikoista.",
             Jarjestys = 98,
             Ikoni = "<path d=\"M12 3a6 6 0 0 0-6 6c0 4.5 6 12 6 12s6-7.5 6-12a6 6 0 0 0-6-6zm0 8.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z\"/>",
@@ -41,7 +41,7 @@ namespace Matkakirja.Natiivi
         };
 
         /// <summary>Avausruudun tekstit (KierrosTaulu).</summary>
-        public const string Otsikko = "ELÄVÄ OPAS", Alaotsikko = "KERRO, MITÄ HALUAT NÄHDÄ";
+        public const string Otsikko = "KUUMAILMAPALLO", Alaotsikko = "KERRO, MITÄ HALUAT NÄHDÄ";
         /// <summary>Workerin polku ja aikaraja (s).</summary>
         public const string Polku = "/opas/seuraava";
         public const int AikarajaS = 30;
@@ -124,6 +124,8 @@ namespace Matkakirja.Natiivi
             {
                 var sk = OpasSallitut.Nimella(sallitut, nimi) ?? OpasSallitut.Sisalla(sallitut, lat, lon);
                 if (sk == null) { Viimeisin.o.Kirjaa($"opas: kaupunki {nimi} ei ole sallittujen listalla, ei vaihdeta"); Viimeisin.Torjunta(); return false; }
+                if (kaupunkitila != null && sk.Id != kaupunkitila.Id)
+                { Viimeisin.o.Kirjaa($"opas: kaupunkitila {kaupunkitila.Nimi}: {nimi} on toinen kaupunki, ei vaihdeta"); Viimeisin.Torjunta(); return false; }
                 lat = sk.Lat; lon = sk.Lon;
                 if (kohteella && OpasSallitut.Sisalla(sallitut, kLat, kLon) != sk) kohteella = false;
             }
@@ -157,6 +159,37 @@ namespace Matkakirja.Natiivi
             return false;
         }
         (double lat, double lon)? pakotettuSijainti;
+
+        // ---- KAUPUNKIÄÄNIMAISEMA (Siirtoseppä, PÄÄTOIMITTAJA 6.10. 21.4x; pilotti Pariisi, Venetsia, Kööpenhamina) ----
+        // Tila luettavaksi ilman riippuvuutta soittimen luokkaan: KaupunkiAanimaisemaSoitin lukee nämä joka kehys.
+        /// <summary>Kaupunkinäkymä näkyy (opas auki, kartta avattu valinnasta, ei virhettä).</summary>
+        public static bool KaupunkiNakyvissa => Auki && !Viimeisin.kaupunkiOdottaa && Viimeisin.nakymaAuki;
+        /// <summary>Kertoja (William) tai siltalause soi oppaan omista AudioSourceista (ei Aanisoittimen kautta): äänimaisema väistää.
+        /// (KertojaPuhuu on vain kappale; Natiivi-UI:n vastaussirut.)</summary>
+        public static bool OpasAaniSoi => Auki && (Viimeisin.puhuu || (Viimeisin.silta != null && Viimeisin.silta.isPlaying));
+        /// <summary>Kamera: korkeus maasta (m), todellinen nopeus (m/s, pehmennetty), nykyisen kohteen lat/lon; null, kun kaupunkia
+        /// ei näytetä tai siirtoruutu on päällä.</summary>
+        public static (double korkeusM, double nopeusMs, double lat, double lon)? KaupunkiKamera =>
+            KaupunkiNakyvissa && !Viimeisin.silmukka.Siirtymassa ? Viimeisin.kameraTila : null;
+        (double korkeusM, double nopeusMs, double lat, double lon)? kameraTila;
+        double3? edellinenEcef;
+
+        void PaivitaKameraTila()
+        {
+            var kam = kaupunki.Kamera; var g = kaupunki.Georef;
+            if (kam == null || g == null || silmukka.Siirtymassa) { kameraTila = null; edellinenEcef = null; return; }
+            var p = kam.transform.position;
+            var ecef = g.TransformUnityPositionToEarthCenteredEarthFixed(new double3(p.x, p.y, p.z));
+            var llh = CesiumForUnity.CesiumWgs84Ellipsoid.EarthCenteredEarthFixedToLongitudeLatitudeHeight(ecef);
+            double dt = Math.Max(1e-3, Time.unscaledDeltaTime);
+            double v = edellinenEcef is double3 e ? math.length(ecef - e) / dt : 0;
+            if (v > 3000) v = 0;   // siirto tai origon vaihto: ei äkkinopeutta
+            double vanha = kameraTila?.nopeusMs ?? v;
+            double maa = viimeMaa.h is double vh && KierrosLento.EtaisyysM(viimeMaa.lat, viimeMaa.lon, llh.y, llh.x) < 15000 ? vh : OpasSilmukka.MaaArvioM;
+            var k = silmukka.Nykyinen;
+            kameraTila = (Math.Max(0, llh.z - maa), vanha + (v - vanha) * Math.Min(1, dt / 0.3), k?.Lat ?? llh.y, k?.Lon ?? llh.x);
+            edellinenEcef = ecef;
+        }
         /// <summary>Valitun kaupungin keskusta (kaupunki, täky tai avaus): pyyntöjen sijainti, kunnes kamera on kaupungissa (TF 152).
         /// Staattinen kuten Aloituskaupunki, jotta nimi ja paikka vaihtuvat aina yhdessä.</summary>
         public static (double lat, double lon) AloitusKeskusta = (KoopenhaminaTesti.Alku.Lat, KoopenhaminaTesti.Alku.Lon);
@@ -238,8 +271,8 @@ namespace Matkakirja.Natiivi
                 if (pelaajalta) Torjunta();
             };
             if (sallitut == null) LueSallitutLevylta();
-            if (sallitut != null) silmukka.Sallitut = sallitut;
-            if (sallitut == null || Time.realtimeSinceStartup - sallitutHaettu > SallitutUusintaS) o.StartCoroutine(HaeSallitut());
+            silmukka.Sallitut = SilmukanSallitut;
+            if (!sallitutHaussa && (sallitut == null || Time.realtimeSinceStartup - sallitutHaettu > SallitutUusintaS)) o.StartCoroutine(HaeSallitutKerran());
             // Siirto ilman lentoa (omistaja 6.10. 12.0x): origo heti kohteeseen, latausaste kohdekameran laatoista.
             silmukka.SiirtoAlkaa += (la, lo) => { if (kaupunkiOdottaa && !AvaaKaupunki(la, lo, silmukka.SiirtoNimi)) return; kaupunki.YritaGoogleUudelleen(); kaupunki.Karkeaksi(); kaupunki.SiirraOrigo(la, lo, MaaPisteessa(la, lo) is double m && !double.IsNaN(m) ? m : 45); o.Kirjaa($"opas: siirrytään {silmukka.SiirtoNimi} ({la:F3}, {lo:F3})"); };
             silmukka.LatausEdistys = () => kaupunki.Latausaste / 100.0;
@@ -258,7 +291,8 @@ namespace Matkakirja.Natiivi
             if (o.GetComponent<KyydinKameraEnnen>() == null) o.gameObject.AddComponent<KyydinKameraEnnen>();
             KyydinKameraEnnen.Ajo = PaivitaKamera;
             // TÄKYAVAUS (omistaja TF 144): kun UI näyttää täkyluettelon (TakyAvaus), opas ei pyydä mitään ennen pelaajan valintaa.
-            if (TakyAvaus && !Testi) { takyt = null; o.StartCoroutine(LataaTakyt()); }
+            if (kaupunkitila != null) { takyt = null; VaihdaKaupunki(kaupunkitila.Nimi, kaupunkitila.Lat, kaupunkitila.Lon); }
+            else if (TakyAvaus && !Testi) { takyt = null; o.StartCoroutine(LataaTakyt()); }
             else silmukka.Aloita(Aloituskaupunki);
             PaivitaKamera();
             Vaihtui?.Invoke(this);
@@ -382,6 +416,7 @@ namespace Matkakirja.Natiivi
             if (silmukka.Vaihe != ennen) o.Kirjaa($"opas: {ennen} → {silmukka.Vaihe} {(silmukka.Nykyinen?.Nimi ?? "")}, laatat {kaupunki.Latausaste:F0} %");
             if (silmukka.Vaihe != ennen && silmukka.Vaihe == OpasVaihe.Lentaa) OpasKorostusKuva.Piilota();
             y.Kuvaa(silmukka.Asento);
+            PaivitaKameraTila();
             // Yövalot v4: nykyinen kohde saa yöllä lämpimän valonheiton (KaupunkiYovalot; Päätoimittaja 22.3x "Eiffel kultaisena").
             KaupunkiYovalot.KaupunkiId = NykyinenKaupunkiId;
             var yk = silmukka.Nykyinen; var kh = silmukka.NykyinenKehys;
@@ -754,22 +789,84 @@ namespace Matkakirja.Natiivi
         {
             sallitut = l;
             sallitutTakyt = l.ConvertAll(k => new OpasTaky { Id = k.Id, Nimi = k.Nimi, Kaupunki = k.Nimi, Lat = k.Lat, Lon = k.Lon });
-            if (Viimeisin != null && Viimeisin.silmukka != null) Viimeisin.silmukka.Sallitut = l;
+            if (Viimeisin != null && Viimeisin.silmukka != null) Viimeisin.silmukka.Sallitut = SilmukanSallitut;
             SallitutVaihtui?.Invoke();
         }
 
-        IEnumerator HaeSallitut()
+        static void KirjaaS(string t) => Debug.Log("MATKAKIRJA linssit: " + t);
+
+        /// <summary>Sallitut kaupungit (Pöllön /opas/aineistot "sallitut"; LS2:n karttaelementit): tyhjä, kunnes haettu tai levyltä
+        /// luettu. Muutos: SallitutVaihtui.</summary>
+        public static IReadOnlyList<OpasSallitut.Kaupunki> SallitutLista => (IReadOnlyList<OpasSallitut.Kaupunki>)sallitut ?? Array.Empty<OpasSallitut.Kaupunki>();
+
+        /// <summary>Lista ilman oppaan avausta (kartta): levyltä heti ja palvelimelta, jos edellisestä hausta on yli 10 min.</summary>
+        public static void LataaSallitut()
+        {
+            if (sallitut == null) LueSallitutLevylta();
+            var lo = LinssiOhjain.Instanssi;
+            if (lo != null && !sallitutHaussa && (sallitut == null || Time.realtimeSinceStartup - sallitutHaettu > SallitutUusintaS))
+                lo.StartCoroutine(HaeSallitutKerran());
+        }
+        static bool sallitutHaussa;
+        static IEnumerator HaeSallitutKerran() { sallitutHaussa = true; try { yield return HaeSallitut(); } finally { sallitutHaussa = false; } }
+
+        // ---- KAUPUNKITILA (omistaja 7.10. 08.3x, Päätoimittaja: kaupunkiopas karttaelementtinä, juna 159) ----
+        // Kartan kaupunkielementti (LS2, kuumailmapallo) avaa oppaan suoraan yhteen sallittuun kaupunkiin ilman aloitusvalintaa.
+        // Kaupunkitilassa Kysy, Liiku ja Seuraava toimivat vain sen kaupungin alueella: silmukan sallittu alue on vain tämä
+        // kaupunki, ja kaupungin vaihto (valikko, "vie minut X", workerin kaupunki-toiminto #4107) torjutaan nykyisellä
+        // torjuntatekstillä ilman lentoa. Linssivalikon Elävä opas (laaja) toimii ennallaan: tila päättyy oppaan sulkeutuessa.
+        static OpasSallitut.Kaupunki kaupunkitila;
+        /// <summary>Kaupunkitilan kaupungin tunnus (sallittujen listan id); null = laaja opas.</summary>
+        public static string KaupunkitilaId => kaupunkitila?.Id;
+        /// <summary>Opas avattiin kartan kaupunkielementistä yhteen kaupunkiin (Natiivi-UI: ei aloitusvalintaa eikä Vaihda kohde -riviä).</summary>
+        public static bool Kaupunkitila => kaupunkitila != null;
+        /// <summary>Kaupunkitila alkoi tai päättyi.</summary>
+        public static event Action KaupunkitilaVaihtui;
+        static IReadOnlyList<OpasSallitut.Kaupunki> SilmukanSallitut =>
+            kaupunkitila != null ? new[] { kaupunkitila } : (IReadOnlyList<OpasSallitut.Kaupunki>)sallitut ?? Array.Empty<OpasSallitut.Kaupunki>();
+
+        static void AsetaKaupunkitila(OpasSallitut.Kaupunki k)
+        {
+            if (kaupunkitila == k) return;
+            kaupunkitila = k;
+            if (Viimeisin != null && Viimeisin.silmukka != null) Viimeisin.silmukka.Sallitut = SilmukanSallitut;
+            KirjaaS(k != null ? $"opas: kaupunkitila {k.Nimi} ({k.Id})" : "opas: kaupunkitila päättyi");
+            KaupunkitilaVaihtui?.Invoke();
+        }
+
+        /// <summary>
+        /// Kartan kaupunkielementti: oppaan linssi auki suoraan kaupunkiin <paramref name="kaupunkiId"/> (sallittujen listan id tai
+        /// nimi) kaupunkitilassa. Jos opas on jo auki, se siirtyy kaupunkiin ja jää kaupunkitilaan. false = tuntematon kaupunki
+        /// (lista ei vielä haettu tai kaupunki ei sallittu) tai linssejä ei ole.
+        /// </summary>
+        public static bool AvaaKaupunkitila(string kaupunkiId)
+        {
+            if (string.IsNullOrWhiteSpace(kaupunkiId)) return false;
+            if (sallitut == null) LueSallitutLevylta();
+            var k = sallitut?.Find(x => string.Equals(x.Id, kaupunkiId, StringComparison.OrdinalIgnoreCase)) ?? OpasSallitut.Nimella(sallitut, kaupunkiId);
+            if (k == null) { KirjaaS($"opas: kaupunkitila {kaupunkiId}: ei sallittujen listalla ({sallitut?.Count ?? 0})"); return false; }
+            var rek = LinssiOhjain.Rekisteri;
+            if (rek == null) return false;
+            AsetaKaupunkitila(k);
+            Aloituskaupunki = k.Nimi; AloitusKeskusta = (k.Lat, k.Lon);
+            if (Auki) return VaihdaKaupunki(k.Nimi, k.Lat, k.Lon);
+            rek.Valitse(OpasTiedot.Id);
+            return true;
+        }
+
+
+        static IEnumerator HaeSallitut()
         {
             sallitutHaettu = Time.realtimeSinceStartup;
             using var r = Pyynto("/opas/aineistot");
             yield return r.SendWebRequest();
             if (r.result != UnityWebRequest.Result.Success)
-            { o.Kirjaa($"opas: sallitut kaupungit ei latautunut ({r.responseCode}), {(sallitut != null && sallitut.Count > 0 ? $"pidetään {sallitut.Count} edellistä" : "ei rajausta")}"); yield break; }
+            { KirjaaS($"opas: sallitut kaupungit ei latautunut ({r.responseCode}), {(sallitut != null && sallitut.Count > 0 ? $"pidetään {sallitut.Count} edellistä" : "ei rajausta")}"); yield break; }
             var teksti = r.downloadHandler.text;
             var l = OpasSallitut.Lue(MiniJson.Jasenna(teksti));
-            if (l.Count == 0 && sallitut != null && sallitut.Count > 0) { o.Kirjaa($"opas: sallitut-lista tyhjä vastauksessa, pidetään {sallitut.Count} edellistä"); yield break; }
+            if (l.Count == 0 && sallitut != null && sallitut.Count > 0) { KirjaaS($"opas: sallitut-lista tyhjä vastauksessa, pidetään {sallitut.Count} edellistä"); yield break; }
             if (l.Count > 0) try { System.IO.File.WriteAllText(SallitutPolku, teksti); } catch (Exception) { }
-            o.Kirjaa($"opas: sallitut kaupungit {l.Count}{(l.Count == 0 ? " (ei rajausta)" : ": " + string.Join(", ", l.ConvertAll(k => k.Nimi)))}");
+            KirjaaS($"opas: sallitut kaupungit {l.Count}{(l.Count == 0 ? " (ei rajausta)" : ": " + string.Join(", ", l.ConvertAll(k => k.Nimi)))}");
             AsetaSallitut(l);
         }
 
@@ -793,7 +890,7 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Pöllö-pyyntö natiiviotsakkein (GET, tai POST jos body).</summary>
-        UnityWebRequest Pyynto(string polku, string body = null)
+        static UnityWebRequest Pyynto(string polku, string body = null)
         {
             var r = body == null ? UnityWebRequest.Get(PuluChat.Palvelin + polku)
                 : new UnityWebRequest(PuluChat.Palvelin + polku, "POST") { uploadHandler = new UploadHandlerRaw(Encoding.UTF8.GetBytes(body)), downloadHandler = new DownloadHandlerBuffer() };
@@ -1106,7 +1203,7 @@ namespace Matkakirja.Natiivi
         }
 
         // ---- SILTALAUSEET (juna 146; Ydin OpasSiltalauseet) ----
-        public const string SiltalauseetOsoite = "https://media.matkakirja.app/aanet/opas/siltalauseet-v1/siltalauseet.json";
+        public const string SiltalauseetOsoite = "https://media.matkakirja.app/aanet/opas/siltalauseet-v2/siltalauseet.json";   // v2 (Pelikoodari 7.10.): v1 + "ei-sallittu" (omistaja hyväksyi 09.4x)
         /// <summary>Kuittaukset-v1 (Pelikoodari 6.10.): kysymys, odotus5, odotus12, virhe; yhdistetään siltalauseisiin.</summary>
         public const string KuittauksetOsoite = "https://media.matkakirja.app/aanet/opas/kuittaukset-v1/kuittaukset.json";
         /// <summary>Kysymyksen odotusportaat (juna 150): 5 s / 12 s / 25 s, myöhäinen vastaus hylätään.</summary>
@@ -1775,6 +1872,7 @@ namespace Matkakirja.Natiivi
             klipit.Clear();
             pcmVirrat.Clear(); pcmNyt = null;
             maaKorkeudet.Clear();
+            AsetaKaupunkitila(null);
             Vaihtui?.Invoke(null);
         }
     }

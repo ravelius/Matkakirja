@@ -125,7 +125,7 @@
 //   ui palaute [palaute|ehdotus|kuvavinkki|pro|periaate|kuvapalaute]
 //                                             palaute- ja ehdotuslomake AUKI ILMAN LÄHETYSTÄ: palaute (oletus) =
 //                                             "Kerro mitä huomasit" kuten hampurilaisesta; ehdotus/kuvavinkki/pro
-//                                             vierittää (ja avaa väkäsen); periaate = aloitusportin periaatteet
+//                                             vierittää (ja avaa väkäsen); periaate = apurahakortin loppu (palautelohko)
 //                                             palautelohkon kohdalla; kuvapalaute = havainnekuvan palaute
 //                                             minipopupissa keksityllä kuvalla. Lähetys vain napista käsin.
 //   ui haku <kysymys>                         pulun paikallisen haun katkelmat (leima + pisteet)
@@ -869,8 +869,7 @@ namespace Matkakirja.Natiivi
                         case "ehdotus": case "kuvavinkki": case "pro": ui.Palaute.Avaa(loput); return null;
                         case "periaate":
                             ui.Aloitus.Testaa("portti", id => ui.Tilarivi.Viesti("Lähtö: " + id));
-                            ui.Aloitus.AvaaPeriaatteet();
-                            return null;
+                            return "=" + ui.Aloitus.Apuraha.AvaaPalaute();   // 7.10.: palautelohko apurahakortin lopussa
                         case "kuvapalaute":
                             Kuvavinkki.AvaaKuvapalaute("kuvat/havainne/esimerkki.jpg", "Havainnekuva: esimerkki (testikomento)", PalauteLomake.EhdotusSivu(""));
                             return null;
@@ -1277,6 +1276,14 @@ namespace Matkakirja.Natiivi
                     if (en[0] == "kipsi" && en.Length > 3)
                         return "=" + ui.Erikoisnostot.Saato(en[0], float.Parse(en[1], CultureInfo.InvariantCulture), float.Parse(en[2], CultureInfo.InvariantCulture), float.Parse(en[3], CultureInfo.InvariantCulture));
                     return "=" + ui.Erikoisnostot.Tila();
+                }
+                case "kaupunkipallot":
+                {
+                    // "ui kaupunkipallot [tila|0|1|napauta <id|i>]": kaupunkioppaan kuumailmapallot kartalla (omistaja 7.10.).
+                    var kp = loput.Split(' ');
+                    if (kp[0] == "0" || kp[0] == "1") { KaupunkiPallot.Paalla = kp[0] == "1"; return "=" + ui.KaupunkiPallot.Tila(); }
+                    if (kp[0] == "napauta") return "=" + ui.KaupunkiPallot.Napauta(kp.Length > 1 ? kp[1] : "0");
+                    return "=" + ui.KaupunkiPallot.Tila();
                 }
                 case "linssitnappi":
                 {

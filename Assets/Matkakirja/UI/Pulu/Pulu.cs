@@ -149,6 +149,11 @@ namespace Matkakirja.Natiivi
                 foreach (var paa in ui.Erikoisnostot.NakyvaAlueet())
                     if (paa.xMax > alue.worldBound.xMin && paa.xMin < alue.worldBound.xMax && paa.yMax > alue.worldBound.yMin - 40f)
                         korkein = Mathf.Max(korkein, alue.panel.visualTree.layout.height - paa.yMin + 8f);
+            // Kaupunkioppaan kuumailmapallo (omistaja 7.10.): sama väistö kuin kipsipäällä.
+            if (ui.KaupunkiPallot != null && alue.panel != null && alue.worldBound.width > 0)
+                foreach (var pa in ui.KaupunkiPallot.NakyvaAlueet())
+                    if (pa.xMax > alue.worldBound.xMin && pa.xMin < alue.worldBound.xMax && pa.yMax > alue.worldBound.yMin - 40f)
+                        korkein = Mathf.Max(korkein, alue.panel.visualTree.layout.height - pa.yMin + 8f);
             // Maapallon vuosi -linssin paneeli alareunassa: sama hyppy sen yläpuolelle.
             var vuosi = ui.Linssit?.Vuosi?.Paneeli;
             if (vuosi != null && vuosi.panel != null && ui.Linssit.Vuosi.Nakyvissa && vuosi.worldBound.height > 0)

@@ -2151,6 +2151,8 @@ namespace Matkakirja.Natiivi
                     else if (osat.Length > 1 && osat[1] == "seuraava") Kirjaa($"opas: seuraava → {OpasSovitin.Seuraava()}");
                     else if (osat.Length > 1 && osat[1] == "jatka") Kirjaa($"opas: jatka → {OpasSovitin.JatkaKierrosta()}");
                     else if (osat.Length > 2 && osat[1] == "kysy") Kirjaa($"opas: kysy → {OpasSovitin.Kysy(string.Join(" ", osat.Skip(2)))}");
+                    // Kartan kaupunkielementti (juna 159): opas suoraan kaupunkitilaan sallittujen listan id:llä tai nimellä.
+                    else if (osat.Length > 2 && osat[1] == "kaupunkitila") Kirjaa($"opas: kaupunkitila → {OpasSovitin.AvaaKaupunkitila(string.Join(" ", osat.Skip(2)))}");
                     else if (osat.Length > 2 && osat[1] == "liiku")
                     {
                         string arvo = string.Join(" ", osat.Skip(2));
@@ -2178,6 +2180,9 @@ namespace Matkakirja.Natiivi
                         OpasSovitin.TestiVapaa(vvx, vvy, vox, voy, (float)vs);
                     else if (osat.Length > 1 && osat[1] == "vapaa") Kirjaa("opas " + (OpasSovitin.VapaanTila ?? "vapaa: ei vapaassa tilassa"));
                     else if (osat.Length > 1 && osat[1] == "muisti") Kirjaa(opas?.Muisti() ?? "opas: ei sovitinta");
+                    // "opas vaihda <lat> <lon> <nimi>": kaupungin vaihto kuten valikosta (OpasSovitin.VaihdaKaupunki; äänimaiseman todennus 7.10.).
+                    else if (osat.Length > 4 && osat[1] == "vaihda" && LukuOk(osat[2], out double vla) && LukuOk(osat[3], out double vlo))
+                        Kirjaa($"opas: vaihda → {(OpasSovitin.VaihdaKaupunki(string.Join(" ", osat.Skip(4)), vla, vlo) ? "ok" : "ei otettu")}");
                     else if (osat.Length > 2 && osat[1] == "kaupunki") OpasSovitin.Aloituskaupunki = string.Join(" ", osat.Skip(2));
                     else if (osat.Length > 2 && osat[1] == "toive") OpasSovitin.Toive(string.Join(" ", osat.Skip(2)));
                     else if (osat.Length > 2 && osat[1] == "data" && Enum.TryParse<CesiumKaupunki.Lahde>(osat[2], true, out var od)) CesiumKaupunki.Data = od;
@@ -2189,6 +2194,7 @@ namespace Matkakirja.Natiivi
                     else if (osat.Length > 2 && osat[1] == "data" && Enum.TryParse<CesiumKaupunki.Lahde>(osat[2], true, out var ld)) CesiumKaupunki.Data = ld;
                     Kirjaa(lontoo?.Tila() ?? "lontoo: ei sovitinta");
                 }
+                else if (osat[0] == "aanimaisema" && osat.Length > 1 && osat[1] == "kello") Kirjaa(KaupunkiAanimaisemaSoitin.TestiKello(osat.Length > 2 && int.TryParse(osat[2], out int kl) ? kl : 3));
                 else if (osat[0] == "poikki")
                     poikki.Komento(osat);
                 else if (osat[0] == "ajattelija")
