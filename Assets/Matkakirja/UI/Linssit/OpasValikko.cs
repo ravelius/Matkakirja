@@ -524,9 +524,7 @@ namespace Matkakirja.Natiivi
             avausIon.style.unityBackgroundScaleMode = ScaleMode.ScaleToFit;
             avausIon.style.display = DisplayStyle.None;
             kerrosJuuri.schedule.Execute(PaivitaAvausIon).Every(100);
-            OpasSovitin.SallitutVaihtui += () => UiKerros.PaaSaikeessa(PalloKuvatEsiin);
-            PalloKuvaLadattu += () => { if (siirtyma.style.display != DisplayStyle.None && OpasSovitin.Kaupunkitila && palloKuva == null) AsetaPalloKuva(true); };
-            kerrosJuuri.schedule.Execute(PalloKuvatEsiin).ExecuteLater(2000);
+            OpasSovitin.PalloKuvaLadattu += () => UiKerros.PaaSaikeessa(() => { if (siirtyma.style.display != DisplayStyle.None && OpasSovitin.Kaupunkitila && palloKuva == null) AsetaPalloKuva(true); });
             OpasSovitin.SiirtymaAlkaa += n => UiKerros.PaaSaikeessa(() => SiirtymaAlkaa(n));
             OpasSovitin.SiirtymaValmis += () => UiKerros.PaaSaikeessa(SiirtymaValmis);
         }
@@ -585,50 +583,12 @@ namespace Matkakirja.Natiivi
         VisualElement siirtymaKuva;
         Texture2D palloKuva;
         string palloKuvaNimi;
-        const string PalloKuvaJuuri = "https://media.matkakirja.app/julisteet/latauskuva-kuumailmapallo/20261007/";
-        static readonly string[] PalloKuvat = { "latauskuva-pallo-iphone.png", "latauskuva-pallo-ipad-pysty.png", "latauskuva-pallo-ipad-vaaka.png" };
-        static readonly HashSet<string> palloHaussa = new HashSet<string>();
-        static event Action PalloKuvaLadattu;
-        static string PalloKuvaPolku(string n) => System.IO.Path.Combine(Application.persistentDataPath, "latauskuvat", n);
-
-        static string PalloKuvaRuudulle()
-        {
-            float w = Screen.width, h = Screen.height;
-            if (w > h) return PalloKuvat[2];
-            return w / Mathf.Max(h, 1f) >= 0.6f ? PalloKuvat[1] : PalloKuvat[0];
-        }
-
-        /// <summary>Molemmat tämän laitteen rajaukset (pysty + vaaka) välimuistiin taustalla.</summary>
-        void PalloKuvatEsiin()
-        {
-            if (OpasSovitin.SallitutLista.Count == 0) return;
-            bool ipad = Mathf.Min(Screen.width, Screen.height) / Mathf.Max(Mathf.Max(Screen.width, Screen.height), 1f) >= 0.6f;
-            foreach (var n in new[] { ipad ? PalloKuvat[1] : PalloKuvat[0], PalloKuvat[2] }) HaePalloKuva(n);
-        }
-
-        static void HaePalloKuva(string n)
-        {
-            string polku = PalloKuvaPolku(n);
-            if (System.IO.File.Exists(polku) || !palloHaussa.Add(n)) return;
-            try { System.IO.Directory.CreateDirectory(System.IO.Path.GetDirectoryName(polku)); } catch (Exception) { palloHaussa.Remove(n); return; }
-            var r = UnityEngine.Networking.UnityWebRequest.Get(PalloKuvaJuuri + n);
-            r.downloadHandler = new UnityEngine.Networking.DownloadHandlerFile(polku + ".osa") { removeFileOnAbort = true };
-            r.timeout = 60;
-            r.SendWebRequest().completed += _ =>
-            {
-                bool ok = r.result == UnityEngine.Networking.UnityWebRequest.Result.Success;
-                r.Dispose();
-                try { if (ok) System.IO.File.Move(polku + ".osa", polku); else System.IO.File.Delete(polku + ".osa"); } catch (Exception) { ok = false; }
-                palloHaussa.Remove(n);
-                Debug.Log($"MATKAKIRJA opas: pallon latauskuva {n} {(ok ? "välimuistiin" : "ei latautunut")}");
-                if (ok) PalloKuvaLadattu?.Invoke();
-            };
-        }
+        bool palloKuvaAvautuu;
 
         void AsetaPalloKuva(bool nayta)
         {
-            string n = nayta ? PalloKuvaRuudulle() : null;
-            if (n != null && !System.IO.File.Exists(PalloKuvaPolku(n))) { HaePalloKuva(n); n = null; }
+            string n = nayta ? OpasSovitin.PalloKuvaRuudulle() : null;
+            if (n != null && !System.IO.File.Exists(OpasSovitin.PalloKuvaPolku(n))) { OpasSovitin.HaePalloKuva(n); n = null; }
             if (n == null)
             {
                 siirtymaKuva.style.display = DisplayStyle.None;
@@ -637,13 +597,20 @@ namespace Matkakirja.Natiivi
                 if (palloKuva != null) { UnityEngine.Object.Destroy(palloKuva); palloKuva = null; palloKuvaNimi = null; }
                 return;
             }
-            // Teksti ja palkki kuvan tummaan alaosaan (pallo jää keskelle näkyviin).
+            // Teksti ja palkki kuvan tummaan alaosaan (pallo jää keskelle näkyviin). Leveä vaakaruutu (iPhone 2,2:1) näyttää 4:3-rajauksesta
+            // vain kaistan: kohdistus 35 %:iin pitää pallon kokonaan ruudulla ja tekstin tummassa osassa (simu 14.13: 50 % leikkasi pallon).
             siirtyma.style.justifyContent = Justify.FlexEnd;
-            siirtyma.style.paddingBottom = Mathf.Max(siirtyma.parent?.worldBound.height ?? 0f, 1f) * 0.07f;
+            var koko = siirtyma.parent?.worldBound.size ?? Vector2.one;
+            siirtyma.style.paddingBottom = Mathf.Max(koko.y, 1f) * 0.07f;
+            siirtymaKuva.style.backgroundPositionY = koko.x > koko.y * 1.5f
+                ? new BackgroundPosition(BackgroundPositionKeyword.Top, Length.Percent(35)) : new BackgroundPosition(BackgroundPositionKeyword.Center);
             if (palloKuva != null && palloKuvaNimi == n) { siirtymaKuva.style.display = DisplayStyle.Flex; return; }
-            var r = UnityEngine.Networking.UnityWebRequestTexture.GetTexture("file://" + PalloKuvaPolku(n), true);
+            if (palloKuvaAvautuu) return;
+            palloKuvaAvautuu = true;
+            var r = UnityEngine.Networking.UnityWebRequestTexture.GetTexture("file://" + OpasSovitin.PalloKuvaPolku(n), true);
             r.SendWebRequest().completed += _ =>
             {
+                palloKuvaAvautuu = false;
                 var t = r.result == UnityEngine.Networking.UnityWebRequest.Result.Success ? UnityEngine.Networking.DownloadHandlerTexture.GetContent(r) : null;
                 r.Dispose();
                 if (t == null) { Debug.Log("MATKAKIRJA opas: pallon latauskuva ei auennut " + n); return; }

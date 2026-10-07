@@ -934,6 +934,46 @@ namespace Matkakirja.Natiivi
             sallitutTakyt = l.ConvertAll(k => new OpasTaky { Id = k.Id, Nimi = k.Nimi, Kaupunki = k.Nimi, Lat = k.Lat, Lon = k.Lon });
             if (Viimeisin != null && Viimeisin.silmukka != null) Viimeisin.silmukka.Sallitut = SilmukanSallitut;
             SallitutVaihtui?.Invoke();
+            PalloKuvatEsiin();
+        }
+
+        // KUUMAILMAPALLON LATAUSKUVA (Päätoimittaja 7.10. 13.5x, Codex PR #4143): kaupunkitilan siirtymän tausta (Natiivi-UI:n
+        // OpasValikko piirtää). Laitteen rajaukset ladataan välimuistiin Documents/latauskuvat/, kun sallittujen lista saapuu
+        // (kartta), jotta kuva on valmiina jo ensimmäisessä siirtymässä (simu 14.15: iPadilla 2 s mustaa ilman esilatausta).
+        const string PalloKuvaJuuri = "https://media.matkakirja.app/julisteet/latauskuva-kuumailmapallo/20261007/";
+        static readonly string[] PalloKuvat = { "latauskuva-pallo-iphone.png", "latauskuva-pallo-ipad-pysty.png", "latauskuva-pallo-ipad-vaaka.png" };
+        static readonly HashSet<string> palloHaussa = new HashSet<string>();
+        /// <summary>Rajaus ladattu välimuistiin (pääsäikeessä).</summary>
+        public static event Action PalloKuvaLadattu;
+        public static string PalloKuvaPolku(string n) => System.IO.Path.Combine(Application.persistentDataPath, "latauskuvat", n);
+        static bool PalloIpad => Mathf.Min(Screen.width, Screen.height) / Mathf.Max(Mathf.Max(Screen.width, Screen.height), 1f) >= 0.6f;
+        /// <summary>Ruudun rajaus: iPhone pysty, iPad pysty tai vaaka (myös iPhone vaaka).</summary>
+        public static string PalloKuvaRuudulle() => Screen.width > Screen.height ? PalloKuvat[2] : PalloIpad ? PalloKuvat[1] : PalloKuvat[0];
+
+        static void PalloKuvatEsiin()
+        {
+            if (sallitut == null || sallitut.Count == 0) return;
+            HaePalloKuva(PalloIpad ? PalloKuvat[1] : PalloKuvat[0]);
+            HaePalloKuva(PalloKuvat[2]);
+        }
+
+        public static void HaePalloKuva(string n)
+        {
+            string polku = PalloKuvaPolku(n);
+            if (System.IO.File.Exists(polku) || !palloHaussa.Add(n)) return;
+            try { System.IO.Directory.CreateDirectory(System.IO.Path.GetDirectoryName(polku)); } catch (Exception) { palloHaussa.Remove(n); return; }
+            var r = UnityWebRequest.Get(PalloKuvaJuuri + n);
+            r.downloadHandler = new DownloadHandlerFile(polku + ".osa") { removeFileOnAbort = true };
+            r.timeout = 60;
+            r.SendWebRequest().completed += _ =>
+            {
+                bool ok = r.result == UnityWebRequest.Result.Success;
+                r.Dispose();
+                try { if (ok) System.IO.File.Move(polku + ".osa", polku); else System.IO.File.Delete(polku + ".osa"); } catch (Exception) { ok = false; }
+                palloHaussa.Remove(n);
+                KirjaaS($"opas: pallon latauskuva {n} {(ok ? "välimuistiin" : "ei latautunut")}");
+                if (ok) PalloKuvaLadattu?.Invoke();
+            };
         }
 
         static void KirjaaS(string t) => Debug.Log("MATKAKIRJA linssit: " + t);
