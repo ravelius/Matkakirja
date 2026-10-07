@@ -26,7 +26,11 @@ export function tarkistaApuraha(d) {
   if (typeof d.otsikko !== 'string' || !Array.isArray(d.kappaleet)) return null;
   // Selainversio: webTeksti korvaa tekstin (kappale tai listarivi {teksti, webTeksti}).
   const web = (x) => (x && typeof x === 'object' ? (x.webTeksti ?? x.teksti) : x);
+  const kaikkiKuvat = (Array.isArray(d.kuvat) ? d.kuvat : []).filter((k) => k && typeof k.tiedosto === 'string');
+  // Kuva kappaleensa viereen (omistaja 7.10.2026, versio 7): "kappale" = 0-pohjainen indeksi alkuperäiseen listaan.
+  const kappaleenKuvat = (i) => kaikkiKuvat.filter((k) => k.kappale === i);
   const kappaleet = d.kappaleet
+    .map((k, i) => (k && typeof k === 'object' ? { ...k, kuvat: kappaleenKuvat(i) } : k))
     .filter((k) => k && (k.teksti || k.lista?.length || k.otsikko || k.nappi))
     .map((k) => ({
       ...k,
@@ -35,7 +39,8 @@ export function tarkistaApuraha(d) {
       korostus: k.korostus === true,
       lista: Array.isArray(k.lista) ? k.lista.map(web).filter((r) => typeof r === 'string') : k.lista,
     }));
-  const kuvat = (Array.isArray(d.kuvat) ? d.kuvat : []).filter((k) => k && typeof k.tiedosto === 'string');
+  // Kuvat ilman kelvollista kappaletta kortin loppuun kuvariviksi kuten ennen.
+  const kuvat = kaikkiKuvat.filter((k) => !kappaleet.some((x) => x.kuvat.includes(k)));
   return {
     nappi: d.nappi.trim(),
     otsikko: d.otsikko,
