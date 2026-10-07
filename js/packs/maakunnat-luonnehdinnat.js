@@ -11116,6 +11116,21 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
    *   Nicosia   — Kykkos Monastery (Nikosian piiri, Troodos, Luukkaan
    *               maalaamaksi kerrottu ikoni)
    *   Paphos    — Petra tou Romiou (Afroditen syntymäpaikka tarussa)
+   * Kyproksen pohjoisosa (Sisältökirjuri 7.10.2026; Päätoimittajan
+   * worldview-linjaus: alue kuuluu Kyprokseen, maantieteellinen nimi, ei
+   * valtionimeä): Kyrenian (Girne) rannikko, Kyrenian vuoret, Karpasian
+   * niemimaa sekä Famagustan ja Nikosian pohjoisosat. Lähteet
+   * (en-Wikipedia ym., tarkistettu 7.10.2026):
+   *   Kyrenian linna — Kyrenia Castle (bysanttilainen 600-luku, venetsialainen
+   *                    1500-luku; Kyrenian haaksirikko, noin 294 eaa.)
+   *   Linnat         — Saint Hilarion, Buffavento, Kantara (bysanttilaiset
+   *                    1000-luvulta, "protective axis")
+   *   Bellapais      — Bellapais Abbey (kanonikkien luostari, 1200-luku)
+   *   Karpasia       — The Karpaz Peninsula (noin 70 km; Apostolos Andreas;
+   *                    Kultaranta/Nangomi, merikilpikonnien pesimäranta)
+   *   Famagusta      — Lala Mustafa Pasha Mosque (rak. 1298–n. 1400,
+   *                    katedraali 1328, moskeija 1571)
+   *   Nikosia        — Selimiye Mosque (Pyhän Sofian katedraali, perustus 1209)
    */
   CYP: {
     Famagusta: {
@@ -11137,6 +11152,10 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     Paphos: {
       lyhyt: 'Paphosin rannikolla Petra tou Romioun kallio on tarun mukaan paikka, jossa Afrodite nousi merenvaahdosta.',
       pitka: "Paphosin Kato Pafosin arkeologinen puisto kuuluu Unescon maailmanperintöön vuodesta 1980, ja sen roomalaisten huviloiden lattiamosaiikit löytyivät vuonna 1962, kun maanviljelijä kynsi peltoaan. Dionysoksen talon mosaiikit peittävät 556 neliömetriä. Kuninkaiden hautojen kallioon hakattuja hautakammioita on osin 300-luvulta eaa., vaikka yhtään kuningasta ei niihin haudattu. Paphos oli vuoden 2017 Euroopan kulttuuripääkaupunki yhdessä Aarhusin kanssa, ja Paphos Aphrodite -festivaali on tuonut oopperaa keskiaikaisen linnan aukiolle vuodesta 1999.",
+    },
+    "Kyproksen pohjoisosa": {
+      lyhyt: 'Kyrenian vuorten harjalla kohoavat Pyhän Hilarionin, Buffaventon ja Kantaran linnat, ja rannikolla Kyrenian linnan museossa on esillä antiikin haaksirikko.',
+      pitka: "Kyproksen pohjoisosa ulottuu Kyrenian eli Girnen rannikolta Kyrenian vuorten yli Karpasian niemimaalle sekä Famagustan ja Nikosian pohjoisosiin. Kyrenian satamaa vartioi linna, jonka bysanttilaiset rakensivat 600-luvulla ja venetsialaiset vahvistivat 1500-luvulla; sen museossa on esillä noin vuonna 294 eaa. uponnut kreikkalainen kauppalaiva. Vuorten harjalla ovat Pyhän Hilarionin, Buffaventon ja Kantaran linnat, joita bysanttilaiset alkoivat linnoittaa 1000-luvulta alkaen. Bellapaisin luostarin goottilaiset rauniot ovat 1200-luvulta. Karpasian niemimaa on noin 70 kilometriä pitkä, ja sen kärjen lähellä ovat Apostolos Andreaksen luostari sekä Kultaranta, jonka hiekalla pesii merikilpikonnia. Famagustassa Lala Mustafa Pashan moskeija on entinen Pyhän Nikolaoksen katedraali, ja Pohjois-Nikosiassa Selimiye-moskeija on entinen Pyhän Sofian katedraali.",
     },
   },
   /*
