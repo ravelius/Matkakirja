@@ -1,0 +1,1 @@
+Tervetuloa Lontooseen. Ylhäältä kaupunki on loputon kattojen, tornien ja vihreiden puistojen kenttä, jonka halki Thames kiemurtelee leveinä mutkina itään kohti merta. Kierros alkaa joen pohjoisrannalta Westminsteristä, jossa Big Ben on lyönyt tunteja parlamenttitalon kellotornissa vuodesta 1859.

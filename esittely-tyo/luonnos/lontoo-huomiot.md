@@ -1,0 +1,25 @@
+# Lontoo – huomiot tarkistajalle
+
+- Tarkistin: 0 virhettä, 16 huomiota. Niistä 15 on "ei ala paikan nimellä" LISÄSÄÄNNÖN A takia (alkusanat: "Westminsterin kellotorni, jota sanotaan yleisesti Big Beniksi", "Nostosilta Tower Bridge", "Pyhän Paavalin katedraali eli St Paulin katedraali", "Brittiläinen museo, British Museum", "Taidemuseo Tate Modern", "Kasvitieteellinen puutarha Kew Gardens", "Pilvenpiirtäjä The Shard", "Jalankulkusilta Millennium Bridge", "Luonnontieteellinen museo Natural History Museum", "Katettu kauppakuja Leadenhall Market", "Teeklipperi Cutty Sark"); 1 on "avaus puuttuu" (avaus on tiedostossa avaukset/lontoo.md). Ääntöhuomioita 0.
+- Westminster Abbey alkaa "Westminsterin luostarikirkko, Westminster Abbey" ja Trafalgar Square "Trafalgarin aukion" (suomeksi taivutettu nimi, tarkistin hyväksyy).
+- St Paulin katedraali: puhe_teksti lisätty, jotta "St" luetaan "Saint". Lyhyt alkaa "Pyhän Paavalin katedraalissa" ilman St-muotoa.
+- Isoisä: EI mainintaa. Merkintä kertoo maanalaisesta höyryjunasta ja herra Grimshaw'sta laiturilla; mikään pohjan 19 kohteesta ei ole metro tai asema, joten ISOISÄ-tarkennuksen mukaan ei mainita.
+- Big Ben: korkeus 96 m (parliament.uk 315 jalkaa). Kellon paino 13,7 t → "yli kolmetoista tonnia". "Kello soi ensimmäisen kerran vuonna 1859" – lähteen mukaan heinäkuu 1859; halkesi syyskuussa. koko_m 30 arvio (tornin pohja noin 12 m, nostettu kameraa varten).
+- Tower Bridge: "Joulukuun lopussa 1952" = 30.12.1952. Lasilattiat 42 m → "yli neljänkymmenen metrin". "Satoja kertoja vuodessa" pelin aineistosta (towerbridge.org.uk mainitsee keskimäärin 2–3 avausta päivässä, mikä on sopusoinnussa).
+- Buckingham: lippukäytäntö royal.uk:sta (kuninkaallinen lippu kun kuningas paikalla, muulloin Union Flag). Itäjulkisivu portlandinkiveä = kalkkikiveä.
+- Lontoon silmä: kapselit "edustavat kaupunginosia" (32 boroughia) Wikipedian mukaan. Ulokerakenne (A-runko vain toisella puolella) yleistietoa; lähteenä theunfinishedcity.co.uk – tarkista.
+- Westminster Abbey: länsitornit valmistuivat 1745 Hawksmoorin suunnitelmien mukaan (Hawksmoor kuoli 1736, joten tekstissä ei sanota hänen johtaneen työtä). Peter Abbottin yö tuolissa (1800) Wikipedian Coronation Chair -artikkelista; tekstissä ei nimeä.
+- Lontoon Tower: "maailman vanhin yhä elossa oleva sotilasseremonia" = "sanotaan" (lähde: "said to be"). Unikkoja 888 246 → "lähes yhdeksänsataatuhatta".
+- St Paul: korkeus_m 111 (Britannica: risti lähes 112 m; yleisesti 111 m). Kuiskausgallerian kuvaus yleinen; lähde Atlas Obscura.
+- Westminsterin palatsi: Churchillin kaari "säilytettiin vaurioituneena muistutukseksi" – lähde: "retained as a reminder". koko_m 300 arvio (palatsin julkisivu joelle noin 266 m).
+- British Museum: Sloanen kokoelma "jätettiin testamentissa kansakunnalle korvausta vastaan" (20 000 puntaa perillisille). Lasikatto: "Norman Fosterin toimisto" = Foster and Partners.
+- Tate Modern: piipun "jätettiin matalammaksi" kuin St Paulin kupoli – lähde Londoncouncils-sivu, ei Wikipedia.
+- Kew: pagodi 1761–1762 → "1760-luvun alussa". Lohikäärmeiden katoaminen 1780-luvulla (hrp.org.uk).
+- The Shard: 309,6 m → "lähes kolmensadankymmenen metrin"; korkeus_m 310. "Kulttuuriperintövirasto" = English Heritage. Avausvuosi 2012 (virallinen avaus 5.7.2012, näköalatasanne yleisölle 2013).
+- Greenwich: porttikello (Shepherd Gate Clock) "näytti ensimmäisenä Greenwichin aikaa suoraan yleisölle" – lähde hmdb.org.
+- Natural History Museum: "elävät lajit länsisiivessä, sukupuuttoon kuolleet itäsiivessä" ja Owenin rooli – lähde accidentallywesanderson.com (ja Wikipediassa sama jako); tarkista.
+- Kensington: Dianan asuminen palatsissa Wikipedian mukaan; vuosia ei kerrottu. Patsas esittää 18-vuotiasta Viktoriaa → "nuoren Viktorian patsas".
+- Leadenhall: roomalaisen basilikan kaari löytyi 1881 rakennustöissä (memoirsofametrogirl-blogi, ei Wikipedia) – tarkista. Elokuvakohtaus: halli esitti Charing Cross Roadia (Time Out).
+- Cutty Sark: "maailman ainoa säilynyt teeklipperi" (Channel 4: "last surviving tea clipper"). koko_m 90 arvio (laivan pituus noin 85 m).
+- Kysymykset: oletukset yleistiedosta; tarkistettaviksi erityisesti "Mikä on maailman harvinaisin kasvi täällä?" (Kew, Encephalartos woodii), "Miksi tornin huippu jätettiin avoimeksi?" (Shardin huippu on avoin), "Miksi yläkäytävät olivat aikanaan suljettuina?" (Tower Bridge 1910–1982), "Miksi kellarit tarkastetaan yhä ennen avajaisia?" (seremoniallinen tarkastus).
+- Avaus 36 sanaa.

@@ -1,0 +1,791 @@
+{
+ "kaupunki": "Lontoo",
+ "id": "lontoo",
+ "versio": 1,
+ "kohteet": [
+  {
+   "id": "Q41225",
+   "nimi": "Big Ben",
+   "kuvaus": "Parlamenttitalon kellotorni",
+   "luokka": "torni",
+   "koko_m": 30,
+   "korkeus_m": 96,
+   "teksti": "Westminsterin kellotorni, jota sanotaan yleisesti Big Beniksi, kohoaa parlamenttitalon pohjoispäässä Thamesin rannalla. Oikeastaan Big Ben on tornin suurin kello, joka painaa yli kolmetoista tonnia. Kello soi ensimmäisen kerran vuonna 1859, mutta halkesi jo samana syksynä ja vaikeni neljäksi vuodeksi, kunnes sitä käännettiin ja sille tehtiin kevyempi vasara. Kellokoneiston heiluria säädetään yhä lisäämällä tai poistamalla vanhoja pennin kolikoita. Vuonna 2012 torni nimettiin Elisabetin torniksi kuningatar Elisabet toisen timanttisen juhlavuoden kunniaksi.",
+   "lyhyt": "Westminsterin kellotornia korjattiin telineiden sisällä vuodesta 2017 vuoteen 2022. Korjaajat löysivät mustan maalin alta alkuperäisen värin, tumman preussinsinisen, ja nyt kellotaulut ja viisarit ovat taas sinisiä ja kultaisia kuten 1800-luvulla.",
+   "syventava": "Miksi kellotaulut maalattiin aikoinaan mustiksi?",
+   "kysymykset": [
+    "Kenen mukaan Big Ben -kello on nimetty?",
+    "Kuinka monta porrasta tornin huipulle on?",
+    "Miksi kello halkesi heti ensimmäisenä syksynä?",
+    "Milloin Big Ben on vaiennut kokonaan?",
+    "Kuinka suuria kellotaulut ovat läheltä katsottuna?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Torni on noin 96 metriä korkea (315 jalkaa).",
+     "url": "https://www.parliament.uk/bigbenconservation"
+    },
+    {
+     "vaite": "Big Ben on tornin suuri kello; se painaa 13,7 tonnia.",
+     "url": "https://en.wikipedia.org/wiki/Big_Ben"
+    },
+    {
+     "vaite": "Kello soi ensimmäisen kerran heinäkuussa 1859, halkesi syyskuussa 1859 ja oli hiljaa neljä vuotta; 1863 kelloa käännettiin ja vasaraa kevennettiin.",
+     "url": "https://www.malaymail.com/news/life/2017/08/21/big-ben-a-british-icon-in-facts-and-figures/1447175"
+    },
+    {
+     "vaite": "Heiluria säädetään lisäämällä tai poistamalla vanhoja pennin kolikoita.",
+     "url": "https://www.politicshome.com/thehouse/article/roundtheclock-keeping-big-ben-ticking"
+    },
+    {
+     "vaite": "Torni nimettiin Elisabetin torniksi vuonna 2012 Elisabet II:n timanttisen juhlavuoden kunniaksi.",
+     "url": "https://www.history.com/articles/how-did-big-ben-get-its-name"
+    },
+    {
+     "vaite": "Torni oli telineissä 2017–2022 laajassa korjauksessa.",
+     "url": "https://www.parliament.uk/bigbenconservation"
+    },
+    {
+     "vaite": "Kellotaulut, viisarit ja numerot maalattiin mustiksi 1930-luvulla; restauroinnissa palautettiin alkuperäinen preussinsininen ja kulta.",
+     "url": "https://webtest.parliament.uk/mps-lords-and-offices/offices/commons/media-relations-group/news/elizabeth-tower-clock-dials-to-change-colour-following-repair-work"
+    }
+   ]
+  },
+  {
+   "id": "Q83125",
+   "nimi": "Tower Bridge",
+   "kuvaus": "Thamesin kuuluisa nostosilta",
+   "luokka": "silta",
+   "koko_m": 290,
+   "teksti": "Nostosilta Tower Bridge ylittää Thamesin Lontoon Towerin vieressä, ja ylhäältä sen kaksi kivitornia ja niiden välissä kulkevat yläkäytävät erottuvat selvästi. Sillan suunnitteli Horace Jones ja rakensi John Wolfe Barry, ja Walesin prinssi vihki sen käyttöön kesäkuussa 1894. Joulukuun lopussa 1952 bussinkuljettaja Albert Gunter huomasi ajavansa nousevalle sillanpuoliskolle, painoi kaasun pohjaan ja hyppäsi raon yli. Kaikki matkustajat selvisivät, ja vain kuljettajan jalka murtui. Nykyään yläkäytävien lasilattioiden läpi voi katsoa yli neljänkymmenen metrin korkeudesta alas jokeen.",
+   "lyhyt": "Nostosilta Tower Bridgen puoliskoja nostettiin aluksi höyryn ja paineveden voimalla, ja kattiloita lämmitettiin vuorotyönä ympäri vuorokauden. Vuonna 1976 tilalle tuli sähkökäyttöinen öljyhydrauliikka. Ensimmäisenä vuonna silta avautui yli kuusituhatta kertaa, nykyään keskimäärin noin kahdeksansataa kertaa vuodessa.",
+   "syventava": "Kuka hyppäsi bussilla sillan yli?",
+   "kysymykset": [
+    "Miksi Lontooseen rakennettiin juuri nostosilta?",
+    "Kuka päättää, milloin silta avataan?",
+    "Mitä sillan konehuoneessa on nykyään nähtävänä?",
+    "Miksi yläkäytävät olivat aikanaan suljettuina?",
+    "Onko silta koskaan jäänyt jumiin auki?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Silta on 290 metriä pitkä, siinä on kaksi tornia ja niitä yhdistävät yläkäytävät.",
+     "url": "https://en.wikipedia.org/wiki/Tower_Bridge"
+    },
+    {
+     "vaite": "Suunnittelija Horace Jones, rakentaja John Wolfe Barry, Walesin prinssi vihki käyttöön 30.6.1894.",
+     "url": "https://en.wikipedia.org/wiki/Tower_Bridge"
+    },
+    {
+     "vaite": "30.12.1952 kuljettaja Albert Gunter hyppäsi bussilla nousevan sillanpuoliskon yli; kaikki matkustajat pääsivät yli, ainoa loukkaantunut oli Gunter, jonka jalka murtui.",
+     "url": "https://www.towerbridge.org.uk/stories/bus-jump"
+    },
+    {
+     "vaite": "Yläkäytävien lasilattiat ovat 42 metrin korkeudella joen yllä.",
+     "url": "https://www.glassonline.com/?p=18461"
+    },
+    {
+     "vaite": "Ennen vuotta 1976 siltaa nostettiin vedellä ja höyryllä, kattiloita lämmitettiin vuoroissa ympäri vuorokauden; 1976 valmistui sähkökäyttöinen öljyhydraulinen järjestelmä.",
+     "url": "https://www.towerbridge.org.uk/stories/how-does-tower-bridge-work"
+    },
+    {
+     "vaite": "Ensimmäisenä vuonna silta avautui yli 6000 kertaa.",
+     "url": "https://www.towerbridge.org.uk/stories/how-does-tower-bridge-work"
+    },
+    {
+     "vaite": "Nykyään silta avautuu keskimäärin noin 800 kertaa vuodessa.",
+     "url": "https://www.towerbridge.org.uk/stories/how-does-tower-bridge-work"
+    }
+   ]
+  },
+  {
+   "id": "Q42182",
+   "nimi": "Buckinghamin palatsi",
+   "kuvaus": "Hallitsijan virka-asunto Lontoossa",
+   "luokka": "rakennus",
+   "koko_m": 300,
+   "teksti": "Buckinghamin palatsi on hallitsijan virka-asunto Lontoossa, ja ylhäältä sen takana avautuu kaupungin suurin yksityinen puutarha. Kuningatar Viktoria muutti palatsiin ensimmäisenä hallitsijana noustuaan valtaistuimelle vuonna 1837. Tutun itäjulkisivunsa palatsi sai vasta vuonna 1913, kun arkkitehti Aston Webb päällysti itäsiiven uudelleen kalkkikivellä edustan Viktorian muistomerkin taustaksi. Katolla liehuva lippu kertoo, onko kuningas kotona: kuninkaallinen lippu nousee salkoon, kun hän on palatsissa, ja muulloin salossa liehuu Britannian lippu.",
+   "lyhyt": "Buckinghamin palatsin puutarhan keskellä on 1800-luvulla kaivettu järvi, jonka vesi tuli aluksi Hyde Parkin Serpentine-järven ylivuotona. Joka kesä puutarhassa pidetään kolme kuninkaallista puutarhajuhlaa, ja kuhunkin kutsutaan noin kahdeksantuhatta vierasta.",
+   "syventava": "Kuka asui palatsissa ennen kuninkaallisia?",
+   "kysymykset": [
+    "Kuka palatsin alun perin rakennutti?",
+    "Mitä vartionvaihdossa oikein tapahtuu?",
+    "Kuinka monta huonetta palatsissa on?",
+    "Pääseekö palatsin sisälle katsomaan?",
+    "Miksi kuninkaallinen perhe tulee parvekkeelle?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Puutarha on Lontoon suurin yksityinen puutarha.",
+     "url": "https://www.rct.uk/visit/buckingham-palace/buckingham-palace-garden"
+    },
+    {
+     "vaite": "Kuningatar Viktoria oli ensimmäinen palatsissa asunut hallitsija; hän muutti sinne valtaan noustuaan 1837.",
+     "url": "https://en.wikipedia.org/wiki/Buckingham_Palace"
+    },
+    {
+     "vaite": "Blore rakensi itäsiiven 1840-luvulla; Aston Webb päällysti sen portlandinkivellä (kalkkikiveä) 1913 Viktorian muistomerkin taustaksi.",
+     "url": "https://en.wikipedia.org/wiki/Buckingham_Palace"
+    },
+    {
+     "vaite": "Kuninkaallinen lippu liehuu, kun kuningas on palatsissa; muulloin Britannian lippu.",
+     "url": "https://www.royal.uk/royal-standard"
+    },
+    {
+     "vaite": "Puutarhan järvi kaivettiin 1800-luvulla, ja sitä syötti aluksi Hyde Parkin Serpentinen ylivuoto.",
+     "url": "https://www.rct.uk/visit/buckingham-palace/buckingham-palace-garden"
+    },
+    {
+     "vaite": "Kesäisin Buckinghamin palatsissa pidetään perinteisesti kolme puutarhajuhlaa, kussakin noin 8 000 vierasta.",
+     "url": "https://royal.uk/garden-parties"
+    }
+   ]
+  },
+  {
+   "id": "Q160659",
+   "nimi": "Lontoon silmä",
+   "kuvaus": "Maailmanpyörä Thamesin etelärannalla",
+   "luokka": "muu",
+   "koko_m": 135,
+   "teksti": "Lontoon silmä on Thamesin etelärannalla seisova maailmanpyörä, joka kohoaa sadankolmenkymmenenviiden metrin korkeuteen. Sen kehälle on kiinnitetty kolmekymmentäkaksi munanmuotoista lasikoppia, joista jokainen edustaa yhtä Lontoon kaupunginosaa, ja yksi kierros kestää noin puoli tuntia. Pyörää kannattelee vain toiselta puolelta vino tukirakenne, ja ylhäältä sen ohuet vaijeripinnat muistuttavat polkupyörän pyörää. Pyörän suunnitteli arkkitehtipariskunta Julia Barfield ja David Marks. Pääministeri Tony Blair vihki sen vuoden 1999 viimeisenä päivänä, ja maksavat matkustajat pääsivät kyytiin maaliskuussa 2000.",
+   "lyhyt": "Lontoon silmän piti alun perin seistä joen rannalla vain viisi vuotta. Hakemus pysyvästä luvasta jätettiin Lambethin kaupunginosalle joulukuussa 2001, ja kesällä 2002 kaupunginosan valtuusto hyväksyi sen, joten pyörä sai jäädä paikalleen.",
+   "syventava": "Miksi pyörän piti olla väliaikainen?",
+   "kysymykset": [
+    "Miten näin suuri pyörä pystytettiin paikalleen?",
+    "Mitä huipulta näkee kirkkaalla säällä?",
+    "Pysähtyykö pyörä, kun matkustajat nousevat?",
+    "Miksi pyörä rakennettiin juuri tähän kohtaan?",
+    "Voiko lasikopissa järjestää juhlat?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Pyörä on 135 metriä korkea, ja siinä on 32 kapselia.",
+     "url": "https://en.wikipedia.org/wiki/London_Eye"
+    },
+    {
+     "vaite": "Kapselit ovat munanmuotoisia, ja jokainen edustaa yhtä Lontoon kaupunginosaa.",
+     "url": "https://en.wikipedia.org/wiki/London_Eye"
+    },
+    {
+     "vaite": "Kierros kestää noin 30 minuuttia.",
+     "url": "https://en.wikipedia.org/wiki/London_Eye"
+    },
+    {
+     "vaite": "Pyörää kannattaa A-runko vain toiselta puolelta; se toimii kuin polkupyörän pyörä vaijeripinnoineen.",
+     "url": "https://en.wikipedia.org/wiki/London_Eye"
+    },
+    {
+     "vaite": "Suunnittelijat olivat aviopari Julia Barfield ja David Marks.",
+     "url": "https://en.wikipedia.org/wiki/London_Eye"
+    },
+    {
+     "vaite": "Tony Blair avasi pyörän 31.12.1999; maksavat matkustajat pääsivät kyytiin 9.3.2000.",
+     "url": "https://en.wikipedia.org/wiki/London_Eye"
+    },
+    {
+     "vaite": "Pyörällä oli alun perin viiden vuoden väliaikainen lupa; hakemus pysyvästä asemasta jätettiin Lambethille joulukuussa 2001 ja hyväksyttiin heinäkuussa 2002.",
+     "url": "https://en.wikipedia.org/wiki/London_Eye"
+    }
+   ]
+  },
+  {
+   "id": "Q5933",
+   "nimi": "Westminster Abbey",
+   "kuvaus": "Kruunajaiskirkko Westminsterissä",
+   "luokka": "kirkko",
+   "koko_m": 160,
+   "teksti": "Westminsterin luostarikirkko, Westminster Abbey, seisoo parlamenttitalon vieressä, ja ylhäältä sen länsipäässä erottuu kaksi tornia, jotka valmistuivat vuonna 1745 Nicholas Hawksmoorin suunnitelmien mukaan. Kirkossa on kruunattu lähes kaikki maan hallitsijat vuodesta 1066 lähtien, viimeksi Kaarle kolmas vuonna 2023. Täällä on haudattuna myös Isaac Newton. Kirkon lattiassa on Tuntemattoman sotilaan hauta, johon ensimmäisessä maailmansodassa kaatunut nimetön brittisotilas haudattiin marraskuussa 1920. Se on kirkon ainoa hauta, jonka päälle ei saa astua.",
+   "lyhyt": "Westminsterin luostarikirkon kruunajaistuoli veistettiin tammesta noin vuonna 1300 kuningas Edvard ensimmäisen tilauksesta. Koulupojat ja matkailijat kaiversivat siihen 1700- ja 1800-luvuilla nimiään, ja yksi kaivertajista ilmoitti nukkuneensa tuolissa yön heinäkuussa 1800.",
+   "syventava": "Kuka nukkui yön kruunajaistuolissa?",
+   "kysymykset": [
+    "Miksi kirkkoa kutsutaan luostarikirkoksi?",
+    "Mikä on kirkon runoilijoiden nurkkaus?",
+    "Mistä tuntematon sotilas tuotiin tänne?",
+    "Keitä kuninkaallisia on vihitty tässä kirkossa?",
+    "Miksi Edvard Tunnustaja on haudattu tänne?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Länsitornit valmistuivat 1745 Nicholas Hawksmoorin suunnitelmien mukaan (Hawksmoor kuoli 1736, työn viimeisteli John James).",
+     "url": "https://en.wikipedia.org/wiki/John_James_(architect)"
+    },
+    {
+     "vaite": "Westminster Abbeyssa on kruunattu hallitsijat vuodesta 1066 (kruunaamattomia Edvard viidettä ja Edvard kahdeksatta lukuun ottamatta).",
+     "url": "https://en.wikipedia.org/wiki/Burials_and_memorials_in_Westminster_Abbey"
+    },
+    {
+     "vaite": "Kaarle III kruunattiin Westminster Abbeyssa vuonna 2023.",
+     "url": "https://www.wsoctv.com/news/trending/king-charles-coronation-what-you-need-know-about-westminster-abbey/WDE65AP7EBEIVCBA3DPWLPTMI4/"
+    },
+    {
+     "vaite": "Isaac Newton on haudattu Westminster Abbeyhin.",
+     "url": "https://en.wikipedia.org/wiki/Westminster_Abbey"
+    },
+    {
+     "vaite": "Tuntematon sotilas haudattiin 11.11.1920; se on kirkon ainoa hauta, jonka päällä ei saa kävellä.",
+     "url": "https://en.wikipedia.org/wiki/Tomb_of_the_Unknown_Warrior"
+    },
+    {
+     "vaite": "Kruunajaistuoli veistettiin tammesta 1297–1300 Edward I:n tilauksesta.",
+     "url": "https://en.wikipedia.org/wiki/Coronation_Chair"
+    },
+    {
+     "vaite": "Westminsterin koulun pojat ja matkailijat kaiversivat tuoliin nimiään 1700- ja 1800-luvuilla; yksi kaiverrus kuuluu \"P Abbott slept in this chair 5,6 July 1800\".",
+     "url": "https://exploring-london.com/2023/03/06/wheres-londons-oldest-chair/"
+    }
+   ]
+  },
+  {
+   "id": "Q62378",
+   "nimi": "Lontoon Tower",
+   "kuvaus": "Keskiaikainen linnoitus Thamesin rannalla",
+   "luokka": "linnoitus",
+   "koko_m": 300,
+   "teksti": "Lontoon Tower on Thamesin pohjoisrannalla seisova linnoitus, jonka keskellä nousee vaalea Valkoinen torni. Linnoituksen perusti Vilhelm Valloittaja Englannin valloituksen jälkeen 1000-luvulla. Sen nurmikoilla elää korppeja, sillä tarinan mukaan valtakunta kaatuu, jos korpit lähtevät, ja paikalla on pidettävä aina vähintään kuusi lintua. Historioitsijat eivät kuitenkaan ole löytäneet todisteita korppien vaalimisesta ennen 1800-luvun loppua. Joka ilta vartijat, niin sanotut beefeaterit, sulkevat portit avainseremoniassa, jota sanotaan maailman vanhimmaksi yhä jatkuvaksi sotilasseremoniaksi.",
+   "lyhyt": "Lontoon Towerin vallihauta täyttyi syksyllä 2014 punaisista unikoista. Keraamisia kukkia oli lähes yhdeksänsataatuhatta, yksi jokaista ensimmäisessä maailmansodassa kaatunutta brittiläistä ja siirtomaiden sotilasta kohden, ja niiden myynnin tuotto jaettiin kuudelle järjestölle.",
+   "syventava": "Miksi Towerissa pidetään korppeja?",
+   "kysymykset": [
+    "Missä kruununjalokiviä säilytetään?",
+    "Ketä Towerissa on pidetty vankina?",
+    "Asuvatko vartijat yhä linnoituksen sisällä?",
+    "Miksi Valkoista tornia sanotaan valkoiseksi?",
+    "Mitä korpit syövät ja kuka niistä huolehtii?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Linnoituksen perusti Vilhelm Valloittaja vuoden 1066 jälkeen.",
+     "url": "https://en.wikipedia.org/wiki/Tower_of_London"
+    },
+    {
+     "vaite": "Tarinan mukaan valtakunta kaatuu, jos korpit lähtevät; vähintään kuusi korppia on pidettävä paikalla.",
+     "url": "https://en.wikipedia.org/wiki/Ravens_of_the_Tower_of_London"
+    },
+    {
+     "vaite": "Historioitsijat eivät ole löytäneet todisteita korppien vaalimisesta ennen 1800-luvun loppua.",
+     "url": "https://en.wikipedia.org/wiki/Ravens_of_the_Tower_of_London"
+    },
+    {
+     "vaite": "Avainseremonia pidetään joka ilta, ja sitä sanotaan maailman vanhimmaksi yhä jatkuvaksi sotilasseremoniaksi; vartijoita kutsutaan beefeatereiksi.",
+     "url": "https://en.wikipedia.org/wiki/Ceremony_of_the_Keys_(London)"
+    },
+    {
+     "vaite": "Vuonna 2014 vallihaudassa oli 888 246 keraamista unikkoa, yksi kutakin kaatunutta brittiläistä tai siirtomaiden sotilasta kohden; tuotto jaettiin kuudelle sotilaiden hyväntekeväisyysjärjestölle.",
+     "url": "https://en.wikipedia.org/wiki/Blood_Swept_Lands_and_Seas_of_Red"
+    }
+   ]
+  },
+  {
+   "id": "Q173882",
+   "nimi": "St Paulin katedraali",
+   "kuvaus": "Christopher Wrenin kupolikatedraali",
+   "luokka": "kirkko",
+   "koko_m": 170,
+   "korkeus_m": 111,
+   "teksti": "Pyhän Paavalin katedraali eli St Paulin katedraali erottuu ylhäältä Cityn kattojen keskeltä suuren kupolinsa ansiosta. Christopher Wren rakensi sen vuoden 1666 suurpalon raunioille, ja kirkko valmistui vuonna 1710. Kupolin sisäkehää kiertää kuiskausgalleria, jossa seinän vierellä kuiskatut sanat kuuluvat selvästi kupolin toiselle puolelle. Joulukuun lopussa 1940 valokuvaaja Herbert Mason kuvasi pommitusten savusta kohoavan kupolin, ja kuvasta tuli Lontoon sitkeyden symboli. Wren on haudattu kryptaan, ja hänen muistolauseensa kehottaa etsimään hänen muistomerkkiään katsomalla ympärilleen.",
+   "lyhyt": "Pyhän Paavalin katedraalissa vihittiin heinäkuussa 1981 prinssi Charles ja lady Diana Spencer. Häitä seurasi televisiosta arviolta seitsemänsataaviisikymmentä miljoonaa ihmistä, ja Lontoon kaduilla kulkuetta oli katsomassa noin kuusisataatuhatta ihmistä.",
+   "syventava": "Miksi kuiskaus kuuluu kupolin poikki?",
+   "kysymykset": [
+    "Millainen oli suurpalossa tuhoutunut vanha kirkko?",
+    "Miten kupoli säästyi pommituksilta sodassa?",
+    "Kuinka monta porrasta kupolin huipulle on?",
+    "Keitä muita kuuluisuuksia kryptaan on haudattu?",
+    "Miksi Wren rakensi kupolin eikä tornia?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Kupolin ristin huippu on noin 111–112 metrin korkeudella.",
+     "url": "https://www.britannica.com/print/article/517978"
+    },
+    {
+     "vaite": "Wrenin suunnittelema kupoli valmistui 1710; katedraali korvasi Lontoon suurpalossa tuhoutuneen kirkon.",
+     "url": "https://www.atlasobscura.com/places/whispering-gallery-at-st-paul-s-cathedral"
+    },
+    {
+     "vaite": "Suurpalo oli vuonna 1666.",
+     "url": "https://en.wikipedia.org/wiki/Great_Fire_of_London"
+    },
+    {
+     "vaite": "Kuiskausgalleriassa kuiskatut sanat kuuluvat selvästi kupolin toiselle puolelle.",
+     "url": "https://www.atlasobscura.com/places/whispering-gallery-at-st-paul-s-cathedral"
+    },
+    {
+     "vaite": "Herbert Mason otti kuvan St Paul’s Survives 29.–30.12.1940 ilmahyökkäyksen aikana; siitä tuli brittiläisen sitkeyden symboli.",
+     "url": "https://en.wikipedia.org/wiki/St_Paul%27s_Survives"
+    },
+    {
+     "vaite": "Wren on haudattu kryptaan; muistokirjoitus \"Lector, si monumentum requiris, circumspice\".",
+     "url": "https://www.atlasobscura.com/places/whispering-gallery-at-st-paul-s-cathedral"
+    },
+    {
+     "vaite": "Prinssi Charles ja lady Diana vihittiin St Paulin katedraalissa 29.7.1981; arviolta 750 miljoonaa televisiokatsojaa, noin 600 000 ihmistä kaduilla.",
+     "url": "https://en.wikipedia.org/wiki/Wedding_of_Prince_Charles_and_Lady_Diana_Spencer"
+    }
+   ],
+   "puhe_teksti": "Pyhän Paavalin katedraali eli Saint Paulin katedraali erottuu ylhäältä Cityn kattojen keskeltä suuren kupolinsa ansiosta. Christopher Wren rakensi sen vuoden 1666 suurpalon raunioille, ja kirkko valmistui vuonna 1710. Kupolin sisäkehää kiertää kuiskausgalleria, jossa seinän vierellä kuiskatut sanat kuuluvat selvästi kupolin toiselle puolelle. Joulukuun lopussa 1940 valokuvaaja Herbert Mason kuvasi pommitusten savusta kohoavan kupolin, ja kuvasta tuli Lontoon sitkeyden symboli. Wren on haudattu kryptaan, ja hänen muistolauseensa kehottaa etsimään hänen muistomerkkiään katsomalla ympärilleen."
+  },
+  {
+   "id": "Q62408",
+   "nimi": "Westminsterin palatsi",
+   "kuvaus": "Britannian parlamenttitalo",
+   "luokka": "rakennus",
+   "koko_m": 300,
+   "teksti": "Westminsterin palatsissa kokoontuvat Britannian parlamentin molemmat huoneet, ja ylhäältä rakennus näkyy pitkänä goottilaisena rivinä Thamesin rannalla. Charles Barry ja Augustus Pugin suunnittelivat nykyisen palatsin, kun vanha oli tuhoutunut tulipalossa vuonna 1834. Palosta selvisi keskiaikainen sali, Westminster Hall, jonka rakentaminen aloitettiin jo vuonna 1097. Palatsin lounaispäässä kohoaa lähes satametrinen Viktorian torni. Vuonna 1605 katoliset salaliittolaiset vuokrasivat ylähuoneen alla olevan kellarin, ja Guy Fawkes yllätettiin vartioimasta ruutitynnyreitä juuri ennen parlamentin avajaisia.",
+   "lyhyt": "Westminsterin palatsin alahuoneen istuntosali tuhoutui pommituksessa toukokuussa 1941. Giles Gilbert Scott rakensi salin uudelleen vuoteen 1950 mennessä, ja Winston Churchillin toiveesta salin oven vaurioitunut kivikaari säilytettiin muistutukseksi. Sitä kutsutaan Churchillin kaareksi.",
+   "syventava": "Miten ruutisalaliitto paljastui?",
+   "kysymykset": [
+    "Miksi vanha palatsi syttyi tuleen?",
+    "Miksi alahuoneen penkit ovat vihreitä?",
+    "Pääseekö parlamenttiin seuraamaan istuntoa?",
+    "Miksi palatsi pitää korjata perusteellisesti?",
+    "Miksi kellarit tarkastetaan yhä ennen avajaisia?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Palatsissa kokoontuvat parlamentin molemmat kamarit; Barry ja Pugin suunnittelivat sen vuoden 1834 palon jälkeen.",
+     "url": "https://en.wikipedia.org/wiki/Palace_of_Westminster"
+    },
+    {
+     "vaite": "Westminster Hallin rakentaminen alkoi 1097, ja se säästyi vuoden 1834 palolta.",
+     "url": "https://webtest.parliament.uk/globalassets/documents/commons-information-office/westminster-hall.pdf"
+    },
+    {
+     "vaite": "Viktorian torni on 98,5 metriä korkea palatsin lounaispäässä.",
+     "url": "https://en.wikipedia.org/wiki/Palace_of_Westminster"
+    },
+    {
+     "vaite": "Vuonna 1605 katoliset salaliittolaiset vuokrasivat kellarin ylähuoneen alta; Guy Fawkes löydettiin vartioimasta ruutitynnyreitä ennen parlamentin avajaisia.",
+     "url": "https://en.wikipedia.org/wiki/Palace_of_Westminster"
+    },
+    {
+     "vaite": "Alahuoneen sali tuhoutui 10.–11.5.1941; Giles Gilbert Scott rakensi sen uudelleen vuoteen 1950; Churchillin toiveesta pommin vaurioittama kaari säilytettiin, ja sitä kutsutaan Churchillin kaareksi.",
+     "url": "https://historyofparliament.com/2021/05/10/the-blitz-and-rebuilding-of-the-house-of-commons-chamber/"
+    }
+   ]
+  },
+  {
+   "id": "Q129143",
+   "nimi": "Trafalgar Square",
+   "kuvaus": "Nelsonin pylvään aukio",
+   "luokka": "aukio",
+   "koko_m": 120,
+   "teksti": "Trafalgarin aukion keskeltä nousee yli viisikymmentä metriä korkea Nelsonin pylväs, joka muistuttaa Trafalgarin meritaistelussa vuonna 1805 kaatuneesta amiraali Horatio Nelsonista. Pylvään juurella vartioi neljä pronssileijonaa, jotka suunnitteli taiteilija Edwin Landseer ja jotka lisättiin paikalleen vasta vuonna 1867. Aukion neljännelle jalustalle oli tarkoitus nostaa kuningas Vilhelm neljännen patsas, mutta rahat loppuivat. Nykyään jalustalla vaihtuvat nykytaiteen teokset. Joka joulu aukiolle pystytetään Oslon lahjoittama kuusi kiitokseksi Britannian tuesta toisen maailmansodan aikana.",
+   "lyhyt": null,
+   "syventava": "Mitä neljännellä jalustalla on nyt?",
+   "kysymykset": [
+    "Kuka oli amiraali Horatio Nelson?",
+    "Mitä aukion laidalla olevassa museossa on?",
+    "Miksi aukiolla oli ennen niin paljon kyyhkysiä?",
+    "Miksi leijonat valmistuivat niin myöhään?",
+    "Miksi aukio on nimetty meritaistelun mukaan?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Nelsonin pylväs on 51,59 metriä korkea jalustasta hatun huippuun.",
+     "url": "https://en.wikipedia.org/wiki/Nelson%27s_Column"
+    },
+    {
+     "vaite": "Pylväs muistuttaa amiraali Nelsonista, joka kaatui Trafalgarin taistelussa 1805.",
+     "url": "https://en.wikipedia.org/wiki/Nelson%27s_Column"
+    },
+    {
+     "vaite": "Edwin Landseerin suunnittelemat neljä pronssileijonaa lisättiin 1867.",
+     "url": "https://en.wikipedia.org/wiki/Nelson%27s_Column"
+    },
+    {
+     "vaite": "Neljäs jalusta oli tarkoitettu Vilhelm IV:n patsaalle, mutta rahat eivät riittäneet; nyt siinä on vaihtuvia nykytaiteen teoksia.",
+     "url": "https://en.wikipedia.org/wiki/Fourth_plinth"
+    },
+    {
+     "vaite": "Oslo on lahjoittanut joulukuusen vuodesta 1947 kiitokseksi Britannian tuesta toisen maailmansodan aikana.",
+     "url": "https://en.wikipedia.org/wiki/Trafalgar_Square_Christmas_tree"
+    }
+   ]
+  },
+  {
+   "id": "Q6373",
+   "nimi": "British Museum",
+   "kuvaus": "Maailmanhistorian museo Bloomsburyssa",
+   "luokka": "rakennus",
+   "koko_m": 250,
+   "teksti": "Brittiläinen museo, British Museum, perustettiin vuonna 1753, kun lääkäri ja keräilijä Hans Sloane oli jättänyt testamentissaan yli seitsemänkymmentätuhatta esinettä kansakunnalle korvausta vastaan. Ylhäältä museon keskellä erottuu aaltoileva lasikatto, jonka alle vanha sisäpiha katettiin Norman Fosterin toimiston suunnitelmin vuonna 2000. Syntyi Euroopan suurin katettu aukio, ja sen keskellä on pyöreä lukusali, jossa Karl Marx kirjoitti Pääomaa päivästä toiseen. Museon kuuluisimpia aarteita on Rosettan kivi, jonka tekstin avulla egyptiläiset hieroglyfit opittiin lukemaan 1820-luvulla.",
+   "lyhyt": null,
+   "syventava": "Miten Rosettan kivi auttoi hieroglyfien tulkinnassa?",
+   "kysymykset": [
+    "Miksi museoon pääsee ilmaiseksi?",
+    "Mitä Parthenonin veistoksille kuuluu nyt?",
+    "Kuka oli keräilijä Hans Sloane?",
+    "Mitä egyptiläisiä muumioita museossa on?",
+    "Miksi jotkin maat vaativat esineitään takaisin?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Parlamentin laki perusti museon 7.6.1753 Hans Sloanen testamentin pohjalta; hän keräsi yli 71 000 esinettä ja jätti ne kansakunnalle 20 000 punnan korvausta vastaan.",
+     "url": "https://historyofinformation.com/detail.php?entryid=53"
+    },
+    {
+     "vaite": "Suuri sisäpiha katettiin lasikatolla Foster and Partnersin suunnitelmin; avattiin 6.12.2000; Euroopan suurin katettu julkinen aukio.",
+     "url": "https://en.wikipedia.org/wiki/Queen_Elizabeth_II_Great_Court"
+    },
+    {
+     "vaite": "Aukion keskellä on pyöreä lukusali.",
+     "url": "https://en.wikipedia.org/wiki/Queen_Elizabeth_II_Great_Court"
+    },
+    {
+     "vaite": "Karl Marx työskenteli lukusalissa päivittäin kirjoittaessaan Pääomaa.",
+     "url": "https://secretldn.com/reading-room-british-museum/"
+    },
+    {
+     "vaite": "Rosettan kiven tekstin tulkinta vuonna 1822 avasi hieroglyfien lukemisen.",
+     "url": "https://en.wikipedia.org/wiki/Rosetta_Stone"
+    }
+   ]
+  },
+  {
+   "id": "Q193375",
+   "nimi": "Tate Modern",
+   "kuvaus": "Nykytaiteen museo entisessä voimalassa",
+   "luokka": "rakennus",
+   "koko_m": 200,
+   "teksti": "Taidemuseo Tate Modern toimii Thamesin etelärannalla entisessä Banksiden voimalassa, jonka suunnitteli Giles Gilbert Scott. Rakennuksen keskeltä nousee yhdeksänkymmentäyhdeksän metriä korkea piippu, joka jätettiin matalammaksi kuin joen toisella puolella seisovan Pyhän Paavalin katedraalin kupoli. Sveitsiläiset arkkitehdit Herzog ja de Meuron muuttivat voimalan museoksi, joka avattiin toukokuussa 2000. Entinen turbiinihalli on yli sataviisikymmentä metriä pitkä ja kolmekymmentäviisi metriä korkea näyttelytila. Vuonna 2016 valmistunut Blavatnik-rakennus kasvatti näyttelytilaa kuudellakymmenellä prosentilla.",
+   "lyhyt": null,
+   "syventava": "Mitä turbiinihallissa on nyt esillä?",
+   "kysymykset": [
+    "Milloin voimala lopetti sähkön tuotannon?",
+    "Miksi museoon pääsee ilmaiseksi?",
+    "Kenen taiteilijoiden töitä täällä on?",
+    "Mitä museon näköalatasanteelta näkee?",
+    "Miksi voimalasta tehtiin juuri taidemuseo?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Banksiden voimalan suunnitteli Giles Gilbert Scott; piippu on 99 metriä korkea ja matalampi kuin St Paulin kupoli.",
+     "url": "https://iris.londoncouncils.gov.uk/en/tate-modern-history.html"
+    },
+    {
+     "vaite": "Herzog & de Meuron muuttivat voimalan museoksi, joka avattiin toukokuussa 2000.",
+     "url": "https://iris.londoncouncils.gov.uk/en/tate-modern-history.html"
+    },
+    {
+     "vaite": "Turbiinihalli on 35 metriä korkea ja 152 metriä pitkä.",
+     "url": "https://en.wikipedia.org/wiki/Tate_Modern"
+    },
+    {
+     "vaite": "Blavatnik-rakennus avattiin 2016 ja kasvatti näyttelytilaa 60 prosenttia.",
+     "url": "https://iris.londoncouncils.gov.uk/en/tate-modern-history.html"
+    }
+   ]
+  },
+  {
+   "id": "Q188617",
+   "nimi": "Kew Gardens",
+   "kuvaus": "Kuninkaallinen kasvitieteellinen puutarha",
+   "luokka": "puisto",
+   "koko_m": 1500,
+   "teksti": "Kasvitieteellinen puutarha Kew Gardens levittäytyy Thamesin varrella Lontoon länsilaidalla, ja se on kuulunut Unescon maailmanperintöluetteloon vuodesta 2003. Ylhäältä erottuvat suuret viktoriaaniset lasitalot, Decimus Burtonin ja Richard Turnerin 1840-luvulla rakentama Palmuhuone ja kaksi kertaa suurempi Lauhkean vyöhykkeen talo, maailman suurin säilynyt viktoriaaninen lasitalo. Puutarhassa kohoaa myös kymmenkerroksinen, viisikymmentä metriä korkea pagodi, jonka William Chambers rakensi 1760-luvun alussa prinsessa Augustalle. Sen katoilta 1780-luvulla kadonneet kahdeksankymmentä puista lohikäärmettä palautettiin paikoilleen vuonna 2018.",
+   "lyhyt": null,
+   "syventava": "Miksi pagodin lohikäärmeet katosivat?",
+   "kysymykset": [
+    "Kasvaako täällä luonnosta jo kadonneita kasveja?",
+    "Mikä on puiden latvoissa kulkeva kävelysilta?",
+    "Kuka oli puutarhan perustanut prinsessa Augusta?",
+    "Pääseekö pagodin huipulle kiipeämään?",
+    "Miksi Palmuhuone rakennettiin raudasta?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Kew Gardens merkittiin Unescon maailmanperintöluetteloon 2003.",
+     "url": "https://en.wikipedia.org/wiki/Kew_Gardens"
+    },
+    {
+     "vaite": "Palmuhuoneen rakensivat Decimus Burton ja Richard Turner 1844–1848.",
+     "url": "https://en.wikipedia.org/wiki/Kew_Gardens"
+    },
+    {
+     "vaite": "Lauhkean vyöhykkeen talo on maailman suurin viktoriaaninen lasitalo, Burtonin suunnittelema, kaksi kertaa Palmuhuoneen kokoinen.",
+     "url": "https://www.smithsonianmag.com/smart-news/worlds-largest-glasshouse-reopens-after-five-year-restoration-180968958/"
+    },
+    {
+     "vaite": "Suuren pagodin rakensi William Chambers 1761–1762 prinsessa Augustalle; kymmenen kerrosta, 50 metriä.",
+     "url": "https://en.wikipedia.org/wiki/Great_Pagoda,_Kew_Gardens"
+    },
+    {
+     "vaite": "Kahdeksankymmentä puista lohikäärmettä katosi 1780-luvulla, ja ne palautettiin vuonna 2018.",
+     "url": "https://www.hrp.org.uk/kew-palace/whats-on/the-great-pagoda/how-we-brought-dragons-back-to-kew/"
+    }
+   ]
+  },
+  {
+   "id": "Q18536",
+   "nimi": "The Shard",
+   "kuvaus": "Britannian korkein pilvenpiirtäjä",
+   "luokka": "torni",
+   "koko_m": 70,
+   "korkeus_m": 310,
+   "teksti": "Pilvenpiirtäjä The Shard on Britannian korkein rakennus, ja sen lasinen, kapeneva kärki nousee lähes kolmensadankymmenen metrin korkeuteen Thamesin etelärannalla. Rakennuksen suunnitteli italialainen Renzo Piano, joka sai vaikutteita viereisistä rautateistä, Canaletton maalaamista Lontoon kirkontorneista ja purjelaivojen mastoista. Julkisivua peittää noin yksitoistatuhatta lasipaneelia. Nimi on peräisin arvostelusta: kulttuuriperintöjärjestö English Heritage sanoi, että torni olisi kuin lasinsiru historiallisen Lontoon sydämessä. Torni avattiin vuonna 2012, ja sen ylin näköalatasanne on kahdensadanneljänkymmenenneljän metrin korkeudessa.",
+   "lyhyt": null,
+   "syventava": "Miksi tornia kutsutaan lasinsiruksi?",
+   "kysymykset": [
+    "Mitä tornin kerroksissa on toimistojen lisäksi?",
+    "Kuinka pitkälle näköalatasanteelta näkee?",
+    "Miksi tornin huippu jätettiin avoimeksi?",
+    "Kuka tornin rakentamisen rahoitti?",
+    "Huojuuko näin korkea torni tuulessa?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "The Shard on 309,6 metriä korkea ja Britannian korkein rakennus.",
+     "url": "https://en.wikipedia.org/wiki/The_Shard"
+    },
+    {
+     "vaite": "Renzo Piano sai vaikutteita viereisistä rautateistä, Canaletton maalaamista Lontoon torneista ja purjelaivojen mastoista.",
+     "url": "https://en.wikipedia.org/wiki/The_Shard"
+    },
+    {
+     "vaite": "Julkisivussa on noin 11 000 lasipaneelia.",
+     "url": "https://en.wikipedia.org/wiki/The_Shard"
+    },
+    {
+     "vaite": "English Heritage arvosteli, että rakennus olisi \"a shard of glass through the heart of historic London\", mistä rakennus sai nimensä.",
+     "url": "https://en.wikipedia.org/wiki/The_Shard"
+    },
+    {
+     "vaite": "Torni avattiin 5.7.2012; näköalakerros 72. kerroksessa 244 metrin korkeudella.",
+     "url": "https://en.wikipedia.org/wiki/The_Shard"
+    }
+   ]
+  },
+  {
+   "id": "Q192988",
+   "nimi": "Greenwichin kuninkaallinen observatorio",
+   "kuvaus": "Nollameridiaanin observatorio",
+   "luokka": "rakennus",
+   "koko_m": 150,
+   "teksti": "Greenwichin kuninkaallinen observatorio seisoo Greenwichin puiston kukkulalla, ja sen kautta kulkee nollameridiaani, josta maapallon pituusasteet lasketaan. Kuningas Kaarle toinen tilasi observatorion Christopher Wreniltä vuonna 1675, ja päärakennus nimettiin myöhemmin ensimmäisen kuninkaallisen tähtitieteilijän John Flamsteedin mukaan. Päärakennuksen katolla oleva punainen aikapallo otettiin käyttöön vuonna 1833, jotta Thamesin laivat voisivat tarkistaa kellonsa, ja se pudotetaan yhä joka päivä kello yksi iltapäivällä. Portin vieressä on vuonna 1852 asennettu kellotaulu, joka luultavasti näytti ensimmäisenä Greenwichin aikaa suoraan yleisölle.",
+   "lyhyt": null,
+   "syventava": "Miksi nollameridiaani kulkee juuri Greenwichin kautta?",
+   "kysymykset": [
+    "Miksi portin kellossa on kaksikymmentäneljä tuntia?",
+    "Kuka oli tähtitieteilijä John Flamsteed?",
+    "Miten pituusasteen mittaus auttoi merenkulkijoita?",
+    "Tutkitaanko observatoriossa yhä tähtiä?",
+    "Miksi aikapallo pudotetaan juuri kello yksi?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Observatorio on maailman nollameridiaanin historiallinen paikka; pituusaste 0.",
+     "url": "https://www.royalparks.org.uk/visit/parks/greenwich-park/royal-observatory"
+    },
+    {
+     "vaite": "Kaarle II tilasi observatorion Christopher Wreniltä vuonna 1675; Flamsteed House nimettiin ensimmäisen kuninkaallisen tähtitieteilijän John Flamsteedin mukaan.",
+     "url": "https://www.rmg.co.uk/royal-observatory/history"
+    },
+    {
+     "vaite": "Punainen aikapallo Flamsteed Housen katolla otettiin käyttöön 1833 Thamesin merenkulkijoiden aikamerkiksi ja pudotetaan kello 13.",
+     "url": "https://www.rmg.co.uk/stories/time/greenwich-time-ball-one-time-all"
+    },
+    {
+     "vaite": "Shepherdin porttikello asennettiin 1852, ja se oli luultavasti ensimmäinen kello, joka näytti Greenwichin aikaa yleisölle.",
+     "url": "https://en.wikipedia.org/wiki/Shepherd_Gate_Clock"
+    }
+   ]
+  },
+  {
+   "id": "Q44057",
+   "nimi": "Millennium Bridge",
+   "kuvaus": "Teräksinen jalankulkusilta Thamesin yli",
+   "luokka": "silta",
+   "koko_m": 330,
+   "teksti": "Jalankulkusilta Millennium Bridge ylittää Thamesin Pyhän Paavalin katedraalin ja Tate Modernin välillä, ja ylhäältä se näyttää ohuelta teräsviivalta joen yllä. Silta avattiin kesäkuussa 2000, mutta se suljettiin jo kaksi päivää myöhemmin, kun kansi alkoi heilua sivusuunnassa. Kävelijät tahdistivat huomaamattaan askeleensa liikkeeseen, mikä vain voimisti heiluntaa. Lontoolaiset ristivät sen heiluvaksi sillaksi, ja vaimentimien asentamiseen kului kaksi vuotta. Elokuvassa Harry Potter ja puoliverinen prinssi kuolonsyöjät vääntävät sillan kappaleiksi.",
+   "lyhyt": null,
+   "syventava": "Miksi silta alkoi heilua?",
+   "kysymykset": [
+    "Kuka sillan suunnitteli?",
+    "Miksi silta on niin matala ja litteä?",
+    "Heiluuko silta vielä nykyään?",
+    "Miksi Lontooseen tehtiin silta vuosituhannen kunniaksi?",
+    "Mitä sillalta näkee katedraalin suuntaan?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Silta kulkee St Paulin katedraalin ja Tate Modernin välillä.",
+     "url": "https://freetoursbyfoot.com/the-millennium-bridge/"
+    },
+    {
+     "vaite": "Silta avattiin 10.6.2000 ja suljettiin kaksi päivää myöhemmin heilumisen takia; vaimentimet asennettiin, ja silta avattiin uudelleen 2002.",
+     "url": "https://www.londonmuseum.org.uk/collections/london-stories/london-millennium-bridge/"
+    },
+    {
+     "vaite": "Jalankulkijat tahdistivat askeleensa heiluntaan, mikä voimisti liikettä; lempinimi Wobbly Bridge.",
+     "url": "https://freetoursbyfoot.com/the-millennium-bridge/"
+    },
+    {
+     "vaite": "Elokuvassa Harry Potter ja puoliverinen prinssi kuolonsyöjät tuhoavat sillan.",
+     "url": "https://freetoursbyfoot.com/the-millennium-bridge/"
+    }
+   ]
+  },
+  {
+   "id": "Q309388",
+   "nimi": "Natural History Museum",
+   "kuvaus": "Luonnontieteellinen museo Kensingtonissa",
+   "luokka": "rakennus",
+   "koko_m": 230,
+   "teksti": "Luonnontieteellinen museo Natural History Museum avattiin vuonna 1881 Etelä-Kensingtonissa, ja ylhäältä sen pitkä julkisivu torneineen erottuu kadun varrelta. Arkkitehti Alfred Waterhouse päällysti talon terrakottalaatoilla, joiden kohokuvissa elävät lajit ovat läntisessä siivessä ja sukupuuttoon kuolleet itäisessä. Jakoa vaati museon puuhamies Richard Owen, joka vastusti Darwinin ajatusta lajien polveutumisesta. Päähallin katosta riippuu vuodesta 2017 lähtien sinivalaan luuranko, jota kutsutaan Hopeksi eli Toivoksi. Se on kaksikymmentäviisi metriä pitkä ja korvasi diplodokuksen kipsivalun.",
+   "lyhyt": null,
+   "syventava": "Mihin diplodokus Dippy päätyi?",
+   "kysymykset": [
+    "Mistä sinivalaan luuranko on peräisin?",
+    "Miksi Richard Owen vastusti Darwinia?",
+    "Mitä dinosauruksia museossa on esillä?",
+    "Kuinka monta näytettä museon kokoelmissa on?",
+    "Miksi museo rakennettiin kuin katedraali?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Alfred Waterhousen suunnittelema museo avattiin 1881; terrakottalaattojen reliefeissä elävät lajit ovat länsisiivessä ja sukupuuttoon kuolleet itäsiivessä.",
+     "url": "https://accidentallywesanderson.com/places/natural-history-museum/"
+    },
+    {
+     "vaite": "Jako elävien ja sukupuuttoon kuolleiden lajien kesken tehtiin Owenin pyynnöstä; hän vastusti Darwinin teoriaa.",
+     "url": "https://accidentallywesanderson.com/places/natural-history-museum/"
+    },
+    {
+     "vaite": "Sinivalaan luuranko Hope siirrettiin Hintze Halliin 2017 diplodokuksen valoksen Dippyn tilalle; pituus 25,2 metriä.",
+     "url": "https://en.wikipedia.org/wiki/Hope_(whale)"
+    }
+   ]
+  },
+  {
+   "id": "Q207385",
+   "nimi": "Kensingtonin palatsi",
+   "kuvaus": "Kuninkaallinen palatsi Kensingtonin puistossa",
+   "luokka": "rakennus",
+   "koko_m": 200,
+   "teksti": "Kensingtonin palatsi seisoo Kensingtonin puutarhojen länsilaidalla. Kuningas Vilhelm kolmas ja kuningatar Maria toinen ostivat silloisen Nottingham Housen vuonna 1689, ja Christopher Wren laajensi sen palatsiksi. Täällä syntyi toukokuussa 1819 tuleva kuningatar Viktoria, joka asui palatsissa valtaistuimelle nousuunsa asti vuonna 1837. Palatsin puistossa istuu nuoren Viktorian patsas, jonka veisti hänen tyttärensä prinsessa Louise. Myöhemmin palatsissa asui Walesin prinsessa Diana, ja vuonna 2021 hänen patsaansa paljastettiin palatsin upotetussa puutarhassa.",
+   "lyhyt": null,
+   "syventava": "Kuka veisti kuningatar Viktorian patsaan?",
+   "kysymykset": [
+    "Kuka kuninkaallisista asuu palatsissa nyt?",
+    "Mitä palatsin näyttelyissä voi nähdä?",
+    "Millainen oli Viktorian lapsuus palatsissa?",
+    "Miksi Vilhelm kolmas halusi asua Kensingtonissa?",
+    "Mikä on palatsin upotettu puutarha?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Vilhelm III ja Maria II ostivat Nottingham Housen 1689; Christopher Wren laajensi sitä.",
+     "url": "https://en.wikipedia.org/wiki/Kensington_Palace"
+    },
+    {
+     "vaite": "Viktoria syntyi palatsissa toukokuussa 1819 ja asui siellä valtaistuimelle nousuunsa 1837 asti.",
+     "url": "https://en.wikipedia.org/wiki/Statue_of_Queen_Victoria,_Kensington_Palace"
+    },
+    {
+     "vaite": "Patsaan veisti Viktorian tytär prinsessa Louise; se esittää 18-vuotiasta Viktoriaa ja pystytettiin 1893.",
+     "url": "https://en.wikipedia.org/wiki/Statue_of_Queen_Victoria,_Kensington_Palace"
+    },
+    {
+     "vaite": "Palatsissa on asunut Walesin prinsessa Diana.",
+     "url": "https://en.wikipedia.org/wiki/Kensington_Palace"
+    },
+    {
+     "vaite": "Dianan patsas paljastettiin 2021 palatsin upotetussa puutarhassa.",
+     "url": "https://en.wikipedia.org/wiki/Kensington_Palace"
+    }
+   ]
+  },
+  {
+   "id": "Q961148",
+   "nimi": "Leadenhall Market",
+   "kuvaus": "Viktoriaaninen katettu kauppakuja",
+   "luokka": "rakennus",
+   "koko_m": 120,
+   "teksti": "Katettu kauppakuja Leadenhall Market sijaitsee Cityn finanssikorttelien keskellä, ja ylhäältä sen lasikatot kiiltävät kapeiden kujien yllä. Paikalla käytiin kauppaa jo 1300-luvun alussa, jolloin siipikarjan myyjät kokoontuivat tänne. Nykyisen hallin maalattuine kattoineen ja mukulakivikäytävineen suunnitteli Horace Jones vuonna 1881, ja rakennustöissä maan alta löytyi osa roomalaista basilikaa. Basilika kuului forumiin, joka oli Alppien pohjoispuolen suurin. Elokuvassa Harry Potter ja viisasten kivi halli esitti katua, jota pitkin Harry ja Hagrid kulkivat Vuotavaan noidankattilaan.",
+   "lyhyt": null,
+   "syventava": "Mitä roomalaisesta forumista on jäljellä?",
+   "kysymykset": [
+    "Mitä hallissa myydään nykyään?",
+    "Mitä muuta Horace Jones suunnitteli Lontooseen?",
+    "Kuka oli pormestari Dick Whittington?",
+    "Miksi hallin katto on maalattu niin värikkääksi?",
+    "Millainen roomalainen Lontoo oli tällä kohtaa?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Vuoteen 1321 mennessä paikka tunnettiin siipikarjan myyjien kohtauspaikkana.",
+     "url": "https://www.ianvisits.co.uk/blog/2021/01/14/its-the-700th-anniversary-of-leadenhall-market/"
+    },
+    {
+     "vaite": "Nykyisen hallin maalattuine kattoineen ja mukulakivikatuineen suunnitteli Horace Jones vuonna 1881.",
+     "url": "https://en.wikipedia.org/wiki/Leadenhall_Market"
+    },
+    {
+     "vaite": "Horace Jonesin kaivaukset 1881–1882 paljastivat osan roomalaista basilikaa; forum oli Alppien pohjoispuolen suurin.",
+     "url": "https://leadenhallmarket.co.uk/?p=200"
+    },
+    {
+     "vaite": "Elokuvassa Harry Potter ja viisasten kivi halli esitti katua, jota pitkin Harry ja Hagrid kulkevat Vuotavaan noidankattilaan.",
+     "url": "https://www.timeout.com/london/news/london-on-screen-the-leaky-cauldron-from-harry-potter-and-the-philosophers-stone-070318"
+    }
+   ]
+  },
+  {
+   "id": "Q171255",
+   "nimi": "Cutty Sark",
+   "kuvaus": "Säilynyt teeklipperi Greenwichissä",
+   "luokka": "muu",
+   "koko_m": 90,
+   "teksti": "Teeklipperi Cutty Sark laskettiin vesille Skotlannin Dumbartonissa vuonna 1869, ja se on maailman ainoa säilynyt teeklipperi. Laiva on seissyt Greenwichissä kuivatelakassa vuodesta 1954. Nimensä se sai Robert Burnsin runosta, jossa noita Nannieta kutsutaan hänen lyhyen paitansa mukaan, ja sama Nannie on laivan keulakuvana. Toukokuussa 2007 korjaustöiden aikana laivassa syttyi tulipalo. Restauroinnissa runko nostettiin kolme metriä telakan pohjan yläpuolelle, joten nykyään kävijät pääsevät kulkemaan laivan alla.",
+   "lyhyt": null,
+   "syventava": "Kuinka nopeasti laiva purjehti Australiasta?",
+   "kysymykset": [
+    "Miksi teetä kuljetettiin kilpaa Kiinasta?",
+    "Mitä laivalla kuljetettiin teen jälkeen?",
+    "Miten tulipalo laivassa sai alkunsa?",
+    "Kuinka suuri miehistö laivassa purjehti?",
+    "Miksi höyrylaivat syrjäyttivät klipperit?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Laiva laskettiin vesille Dumbartonissa 1869; se on maailman viimeinen säilynyt teeklipperi.",
+     "url": "https://www.channel4.com/news/cutty-sark-re-opens-five-years-after-fire"
+    },
+    {
+     "vaite": "Laiva siirrettiin Greenwichin kuivatelakkaan 1954.",
+     "url": "https://en.wikipedia.org/wiki/Cutty_Sark"
+    },
+    {
+     "vaite": "Nimi viittaa Robert Burnsin runon Tam o’ Shanter noita Nannien lempinimeen lyhyestä paidasta; Nannie on myös keulakuva.",
+     "url": "https://en.wikipedia.org/wiki/Cutty_Sark"
+    },
+    {
+     "vaite": "Laivassa syttyi tulipalo toukokuussa 2007 restauroinnin aikana.",
+     "url": "https://www.channel4.com/news/cutty-sark-re-opens-five-years-after-fire"
+    },
+    {
+     "vaite": "Laiva nostettiin kolme metriä kuivatelakan yläpuolelle, jotta kävijät voivat kulkea sen alla; avattiin uudelleen 2012.",
+     "url": "https://www.channel4.com/news/cutty-sark-re-opens-five-years-after-fire"
+    }
+   ]
+  }
+ ]
+}
