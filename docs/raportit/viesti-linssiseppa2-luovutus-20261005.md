@@ -22,7 +22,14 @@ Avoimet työt:
 ## toistoajoja; kuittaus 1 rivi (muutos, testit, SHA) → Natiiviseppä. Simu vain, jos vian syy muuten epäselvä.
 ## 16.0x: EI omia käännöksiä (iOS/Mac); haaralle unity-tarkistus + testit; täysi käännös vain juna/TF; poikkeus vian selvitys + ilmoitus PT:lle.
 
-## TILA 7.10. 15.3x (uusin)
+## TILA 7.10. 18.0x (uusin)
+- E3:n loppu (PT 17.5x, juna 163): SeikkailuNousu + NousuReitti, haara peili/proto/linssiseppa2/e3-nousu kärki d75b33031
+  (BUILD 161:n päällä), worktree wt/proto-linssiseppa2-e3nousu. Kellotornin komero Linnanrakentajalta: Unity (−51,0; 15,8; 5,5),
+  ulos (−0,985; 0; 0,174), päälinna (−20; 15; 0) r 90, pysähdys 9 m. NousuReitti-testit 5/5, unity-tarkistus 0.
+  Kuittauspyyntö PT:lle 18.0x → kuittauksen jälkeen SHA Natiiviseppälle. Rajapinta kerrottu Siirtosepälle.
+  Myöhemmin: lue merkki "nakyma:kellotorni-kaari" merkit.jsonista, kun Linnanrakentaja vie sen.
+
+## TILA 7.10. 15.3x
 - JUNA 161 pallon klikkaus TODENNETTU (68429b27, Natiivisepän koeappi): iPhone Ateena, iPad Kreeta+Pariisi, Mac Ateena (oma 6ec5dcff).
   Korjaus 2d8da858f + ui hiiri 5b61d14f4 junassa; -ei-lepoa (6ec5dcff4) vain testihaarassa. Still lokit/linssiseppa2-kaupunkipallo-161-stillit/osuma-161-68429b27.jpg.
 - Lisälöydös: Siirrytään-ruutu jää, jos opas suljetaan kesken siirtymän → LS1 korjaa (linssiseppa/pallo-latauskuva, SiirtymaPeru, juna 162).
