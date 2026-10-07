@@ -191,8 +191,10 @@ namespace Matkakirja.Natiivi
             get
             {
                 float lyhyt = Mathf.Min(Juuri.layout.width, Juuri.layout.height);
-                float suhde = UiKerros.Tabletti && lyhyt > 0f && !float.IsNaN(lyhyt) ? Mathf.Max(1f, lyhyt / KuvaViiteLyhyt) : 1f;
-                return Mathf.Round(Tyylikirja.Nappi.OhjausIso * suhde);
+                // Omistaja 7.10. 21.4x ("vievät nyt liikaa huomiota"): pienemmäksi, iPadilla enintään 1,15 × (ennen ruudun suhteessa ~2 ×),
+                // puhelimella nappi.ohjaus (40) iso-koon (56) sijaan.
+                float suhde = UiKerros.Tabletti && lyhyt > 0f && !float.IsNaN(lyhyt) ? Mathf.Clamp(lyhyt / KuvaViiteLyhyt, 1f, 1.15f) : 1f;
+                return Mathf.Round((UiKerros.Tabletti ? Tyylikirja.Nappi.OhjausIso : Tyylikirja.Nappi.Ohjaus) * suhde);
             }
         }
         readonly VisualElement kuvaKortti, kuvaEl;
@@ -358,6 +360,13 @@ namespace Matkakirja.Natiivi
             kuvaKortti.style.transitionProperty = new List<StylePropertyName> { new StylePropertyName("opacity") };
             kuvaKortti.style.transitionDuration = new List<TimeValue> { new TimeValue(Tyylikirja.Kesto.Sulku / 1000f) };
             kuvaEl = Rakenne.El("mk-ohjausnappi__kuva", kuvaKortti, PickingMode.Ignore);
+            // Tummempi (omistaja 7.10. 21.4x): kuvan päälle himmennys.kevyt-kerros (tyylikirjan himmennys), numero sen päällä.
+            var kuvaHimmennys = Rakenne.El(null, kuvaKortti, PickingMode.Ignore);
+            kuvaHimmennys.style.position = Position.Absolute;
+            kuvaHimmennys.style.left = 0; kuvaHimmennys.style.right = 0; kuvaHimmennys.style.top = 0; kuvaHimmennys.style.bottom = 0;
+            kuvaHimmennys.style.backgroundColor = (Color)Tyylikirja.Himmennys.Kevyt;
+            kuvaHimmennys.style.borderTopLeftRadius = kuvaHimmennys.style.borderTopRightRadius = Tyylikirja.Kulma.Nappi;
+            kuvaHimmennys.style.borderBottomLeftRadius = kuvaHimmennys.style.borderBottomRightRadius = Tyylikirja.Kulma.Nappi;
             // Nipun kuvamäärä nostokortin kuvalaskurin pohjalla (numeropää kulmassa, vain kun kuvia on useampi).
             kuvaLaskuri = Rakenne.Teksti("", "mk-nosto__laskuri", kuvaKortti);
             kuvaLaskuri.pickingMode = PickingMode.Ignore;

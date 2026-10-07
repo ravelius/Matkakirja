@@ -33,6 +33,19 @@ namespace Matkakirja.Natiivi
         float vaihtoAlku = -10f;
         float[] alkuTaso = new float[0], nytTaso = new float[0];
         const float Vaihto = 1f;
+        /// <summary>
+        /// KOHDEOTSIKKO METROLINJAAN (omistaja 7.10. 21.4x: "Notre Dame tulee nyt kaksi kertaa"): KierrosTaulu asettaa Korostus
+        /// niin kauan kuin erillinen otsikko ennen näkyi (~3 s saapumisesta); nykyisen aseman nimi suurenee otsikon kokoon
+        /// (KorostusKoko) ja sen alle tulee selite (KorostusSelite). Korostuksen päättyessä nimi pienenee ja selite häipyy yhtä aikaa.
+        /// </summary>
+        public static bool Korostus;
+        public static string KorostusSelite;
+        const float KorostusKoko = 44f;   // KierrosTaulun kohdeotsikon koko (nimi 44 pt)
+        const float KorostusVaihto = 0.6f;
+        float korostusTaso;
+        Label selite;
+        int seliteAsema = -1;
+
         /// <summary>Metrolinjan alareuna paneelin pisteinä (iPhonella otsikko sen alle); 0 = ei näy.</summary>
         public static float Alareuna { get; private set; }
 
@@ -92,7 +105,7 @@ namespace Matkakirja.Natiivi
                     juuri.schedule.Execute(() => { if (!nakyy) juuri.style.display = DisplayStyle.None; }).StartingIn(Tyylikirja.Kesto.Sulku);
                 }
             }
-            if (!nayta) return;
+            if (!nayta) { korostusTaso = 0f; return; }
             if (likainen || nimet.Count != asemat.Count) Rakenna(nimet);
             int i = Indeksi;
             // Saapuminen ilman lähtötapahtumaa (tai lähtö jäi väliin): sama siirtymä indeksin muuttuessa.
@@ -102,6 +115,9 @@ namespace Matkakirja.Natiivi
             float kaista = Mathf.Max(0f, ala - yla);
             float korkeus = Kompakti ? Mathf.Min(kaista, 3f * VahinRivi + (nimet.Count - 3) * 10f)
                 : Mathf.Max(Mathf.Min(Mathf.Min(maksimi, kaista), AsemaVali * nimet.Count), VahinRivi * nimet.Count);
+            // Korostettu nimi ja selite vievät lisätilaa (nimen kasvu + selitteen rivit), jotta muut asemat eivät litisty.
+            if (korostusTaso > 0.001f && selite != null)
+                korkeus = Mathf.Min(kaista, korkeus + korostusTaso * ((KorostusKoko - Tyylikirja.Koko.Valiotsikko) + Mathf.Max(0f, selite.layout.height)));
             float top = Mathf.Round(Keskita ? yla + (kaista - korkeus) * 0.5f : yla);
             if (juuri.style.top.value.value != top) juuri.style.top = top;
             if (juuri.style.height.value.value != korkeus) juuri.style.height = Mathf.Round(korkeus);
@@ -118,6 +134,11 @@ namespace Matkakirja.Natiivi
             if (nytTaso.Length != n) { nytTaso = new float[n]; alkuTaso = new float[n]; for (int k = 0; k < n; k++) nytTaso[k] = alkuTaso[k] = Taso(k, kohde); }
             float t = Mathf.Clamp01((Time.unscaledTime - vaihtoAlku) / Vaihto);
             float e = t * t * (3f - 2f * t);
+            // Korostus (kohdeotsikko metrolinjassa): taso 0 → 1 pehmeästi; nimi ja selite samassa tahdissa.
+            bool korostus = Korostus && kohde >= 0 && kohde < n;
+            korostusTaso = Mathf.MoveTowards(korostusTaso, korostus ? 1f : 0f, Time.unscaledDeltaTime / KorostusVaihto);
+            float kt = korostusTaso * korostusTaso * (3f - 2f * korostusTaso);
+            PaivitaSelite(korostus, kt);
             for (int k = 0; k < n; k++)
             {
                 float taso = Mathf.Lerp(alkuTaso.Length == n ? alkuTaso[k] : 0f, Taso(k, kohde), e);
@@ -127,6 +148,10 @@ namespace Matkakirja.Natiivi
                 float koko = taso < 1f ? Mathf.Lerp(Tyylikirja.Koko.Kapiteeli, Tyylikirja.Koko.Apuri, taso) : Mathf.Lerp(Tyylikirja.Koko.Apuri, Tyylikirja.Koko.Valiotsikko, taso - 1f);
                 float peitto = taso < 1f ? Mathf.Lerp(0.6f, 0.85f, taso) : Mathf.Lerp(0.85f, 1f, taso - 1f);
                 float piste = taso < 1f ? Mathf.Lerp(6f, 8f, taso) : Mathf.Lerp(8f, 12f, taso - 1f);
+                if (k == kohde && kt > 0f) koko = Mathf.Lerp(koko, KorostusKoko, kt);
+                // Korostettu nimi rivittyy (otsikon koko ei mahdu kapeaan linjaan yhdelle riville); muuten yksi rivi ellipsillä.
+                var ws = k == kohde && kt > 0f ? WhiteSpace.Normal : WhiteSpace.NoWrap;
+                if (nimi.style.whiteSpace != ws) nimi.style.whiteSpace = ws;
                 if (Mathf.Abs(nimi.resolvedStyle.fontSize - koko) > 0.05f) nimi.style.fontSize = koko;
                 rivi.style.opacity = peitto;
                 var p = paikka[0];
@@ -148,6 +173,21 @@ namespace Matkakirja.Natiivi
             Alareuna = nakyy ? juuri.worldBound.yMax : 0f;
         }
 
+        /// <summary>Selite korostetun aseman nimen alle (sama nimen pohja, apuri-koko, rivittyy); peitto korostustason mukaan.</summary>
+        void PaivitaSelite(bool korostus, float kt)
+        {
+            if (selite == null) return;
+            if (korostus && seliteAsema != kohde)
+            {
+                seliteAsema = kohde;
+                asemat[kohde].Nimi.parent.Add(selite);
+            }
+            if (korostus && selite.text != (KorostusSelite ?? "")) selite.text = KorostusSelite ?? "";
+            var d = kt > 0.001f && !string.IsNullOrEmpty(selite.text) ? DisplayStyle.Flex : DisplayStyle.None;
+            if (selite.style.display != d) selite.style.display = d;
+            selite.style.opacity = kt;
+        }
+
         void Rakenna(IReadOnlyList<string> nimet)
         {
             likainen = false;
@@ -158,7 +198,11 @@ namespace Matkakirja.Natiivi
                 var rivi = Rakenne.El("mk-metrolinja__asema", juuri, PickingMode.Ignore);
                 var paikka = Rakenne.El("mk-metrolinja__paikka", rivi, PickingMode.Ignore);
                 Rakenne.El("mk-metrolinja__piste", paikka, PickingMode.Ignore);
-                var nimi = Rakenne.Teksti(n, "mk-metrolinja__nimi", rivi);
+                // Nimi ja (korostettuna) selite pystysarakkeessa pisteen oikealla puolella.
+                var sarake = Rakenne.El(null, rivi, PickingMode.Ignore);
+                sarake.style.flexDirection = FlexDirection.Column;
+                sarake.style.flexShrink = 1;
+                var nimi = Rakenne.Teksti(n, "mk-metrolinja__nimi", sarake);
                 Kirjasimet.Aseta(nimi, Kirjasin.Moderni);
                 // Oppaan otsikon varjo ja ääriviiva (KierrosTaulu): erottuu ilman taustaa vaaleaa ja tummaa karttaa vasten.
                 nimi.style.textShadow = new TextShadow { offset = new Vector2(0, 2), blurRadius = 14, color = Tyylikirja.Himmennys.Kuva };
@@ -168,6 +212,16 @@ namespace Matkakirja.Natiivi
             }
             naytettyIndeksi = -2;
             nytTaso = new float[0];
+            selite = Rakenne.Teksti("", "mk-metrolinja__nimi", null);
+            Kirjasimet.Aseta(selite, Kirjasin.Moderni);
+            selite.style.fontSize = Tyylikirja.Koko.Apuri + 2f;
+            selite.style.whiteSpace = WhiteSpace.Normal;
+            selite.style.textOverflow = TextOverflow.Clip;
+            selite.style.textShadow = new TextShadow { offset = new Vector2(0, 2), blurRadius = 14, color = Tyylikirja.Himmennys.Kuva };
+            selite.style.unityTextOutlineWidth = 0.8f;
+            selite.style.unityTextOutlineColor = (Color)Tyylikirja.Himmennys.Tumma;
+            selite.style.display = DisplayStyle.None;
+            seliteAsema = -1;
         }
 
         /// <summary>Viiva ensimmäisen ja viimeisen aseman pisteiden keskeltä; kuljettu osuus nykyiseen asti.</summary>
