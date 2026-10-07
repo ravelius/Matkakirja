@@ -97,16 +97,16 @@ namespace Matkakirja.Natiivi
             public string KatseKohde;
             public int Siemen = int.MinValue;
             // Irrallinen hahmo (historiamoottori V2c: soutaja veneessä): vanhempi, leike ja ulkoinen kello; ei tilan paikkaa eikä eleitä.
-            public Transform Isa; public string IrrallinenLeike; public Func<double> Kello;
+            public Transform Isa; public Func<(string Leike, double Aika)> IrrallinenTila; public GlbAnimaatio IrrallinenEdellinen;
         }
 
         /// <summary>Irrallinen hahmo (V2c): henkilön glb, vanhempana isa (esim. veneen istuin_soutaja, ilman omaa siirtoa tai kiertoa),
         /// leike soi kellon ajasta (soutu.json: veneen ja soutajan leikkeet samasta kellosta). Glb latautuu IrrallistenGlb-listan kautta.</summary>
-        public void LisaaIrrallinen(Rakennus rakennus, string henkiloId, Transform isa, string leike, Func<double> kello)
+        public void LisaaIrrallinen(Rakennus rakennus, string henkiloId, Transform isa, Func<(string Leike, double Aika)> tila)
         {
             if (rakennus?.Henkilot == null || !rakennus.Henkilot.TryGetValue(henkiloId, out var henkilo) || string.IsNullOrEmpty(henkilo.Malli3d?.NatiiviGlb)) return;
             var e = new Esiintyma { TilaId = "irrallinen", HahmoId = henkiloId, Hahmo = new Hahmo { Id = henkiloId, HenkiloId = henkiloId }, Henkilo = henkilo,
-                Isa = isa, IrrallinenLeike = leike, Kello = kello };
+                Isa = isa, IrrallinenTila = tila };
             esiintymat.Add(e);
             if (malliCache.TryGetValue(henkilo.Malli3d.NatiiviGlb, out var malli)) Rakenna(e, malli);
         }
@@ -122,10 +122,10 @@ namespace Matkakirja.Natiivi
             }
         }
 
-        public void PoistaIrralliset()
+        public void PoistaIrralliset(string henkiloId = null)
         {
             for (int i = esiintymat.Count - 1; i >= 0; i--)
-                if (esiintymat[i].Isa != null || esiintymat[i].TilaId == "irrallinen")
+                if (esiintymat[i].TilaId == "irrallinen" && (henkiloId == null || esiintymat[i].HahmoId == henkiloId))
                 {
                     if (esiintymat[i].Juuri != null) UnityEngine.Object.Destroy(esiintymat[i].Juuri);
                     esiintymat.RemoveAt(i);
@@ -138,10 +138,16 @@ namespace Matkakirja.Natiivi
             if (e.Juuri.transform.parent != e.Isa) { e.Juuri.transform.SetParent(e.Isa, false); e.Juuri.transform.localPosition = Vector3.zero; e.Juuri.transform.localRotation = Quaternion.identity; }
             if (!e.Juuri.activeSelf) e.Juuri.SetActive(true);
             e.Nakyvissa = true;
-            var anim = e.Malli.Glb.Animaatio(e.IrrallinenLeike);
+            var (leike, aika) = e.IrrallinenTila?.Invoke() ?? ("idle", 0.0);
+            // Leike glb:n nimellä (ele_soutu) tai silmukan nimellä skin.leikkeet-taulun kautta (vartija: idle, kavely); aika kiertää.
+            var anim = e.Malli.Glb.Animaatio(leike) ?? e.Malli.Glb.Animaatio(Leike(e.Henkilo.Malli3d?.Skin, leike)) ?? e.Malli.Glb.Animaatio("idle");
             var sk = e.Sekoitin;
             if (anim == null || sk == null) return;
-            DioraamaSekoitin.Nayte(anim, (float)(e.Kello?.Invoke() ?? 0), sk.T, sk.R, sk.S);
+            if (anim != e.IrrallinenEdellinen && e.IrrallinenEdellinen != null)
+                foreach (var k in e.IrrallinenEdellinen.Kanavat) { int i = k.Solmu; var g = e.Malli.Glb.Solmut[i];
+                    Array.Copy(g.Translation, 0, sk.T, i * 3, 3); Array.Copy(g.Rotation, 0, sk.R, i * 4, 4); Array.Copy(g.Scale, 0, sk.S, i * 3, 3); }
+            e.IrrallinenEdellinen = anim;
+            DioraamaSekoitin.Nayte(anim, anim.Kesto > 0 ? (float)(aika % anim.Kesto) : 0f, sk.T, sk.R, sk.S);
             foreach (var k in anim.Kanavat)
             {
                 int i = k.Solmu; if (i < 0 || i >= e.SolmuT.Length) continue;

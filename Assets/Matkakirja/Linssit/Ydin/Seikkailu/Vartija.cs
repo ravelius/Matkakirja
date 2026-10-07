@@ -12,10 +12,10 @@ namespace Matkakirja.Linssit.Seikkailu
     public enum VartijanTila { Partio, Epaily, Etsinta, Paluu, Kiinni }
 
     /// <summary>Ääni maailmassa (heitetty esine, juoksuaskel): paikka ja kuuluvuus metreinä (kuuluu, jos etäisyys ≤ kuuluvuus).</summary>
-    public readonly struct Aani
+    public readonly struct Aanilahde
     {
         public readonly double X, Z, KuuluvuusM;
-        public Aani(double x, double z, double kuuluvuusM) { X = x; Z = z; KuuluvuusM = kuuluvuusM; }
+        public Aanilahde(double x, double z, double kuuluvuusM) { X = x; Z = z; KuuluvuusM = kuuluvuusM; }
     }
 
     /// <summary>Yhden kehyksen havaintosyöte sovittimelta.</summary>
@@ -27,7 +27,7 @@ namespace Matkakirja.Linssit.Seikkailu
         /// <summary>Pelaajan valoisuus 0 (pimeä) … 1 (soihdun valossa).</summary>
         public double Valoisuus;
         public bool Hiipii, Piilossa;
-        public List<Aani> Aanet;
+        public List<Aanilahde> Aanet;
     }
 
     public sealed class Vartija

@@ -121,7 +121,7 @@ namespace Matkakirja.Natiivi
             v.Paivita(false);
             // V2c: soutaja istuin_soutaja-solmun lapseksi, ele_soutu samasta soutukellosta (soutu.json).
             if (soutaja != null && v.IstuinSoutaja != null && hahmot != null)
-                hahmot.LisaaIrrallinen(rakennus, soutaja, v.IstuinSoutaja, "ele_soutu", () => v.ydin.Tila(v.Aika).SoutuAika);
+                hahmot.LisaaIrrallinen(rakennus, soutaja, v.IstuinSoutaja, () => ("ele_soutu", v.ydin.Tila(v.Aika).SoutuAika));
             kirjaa?.Invoke($"seikkailu: vene {m.Solmut.Count} solmua, soutu {(v.soutu != null ? v.soutu.Kesto.ToString("F2") + " s" : "puuttuu")}, reitti {ydin.Pituus:F0} m / {ydin.KestoS:F0} s");
         }
 
@@ -171,7 +171,7 @@ namespace Matkakirja.Natiivi
 
         public static void Poista()
         {
-            Hahmot?.PoistaIrralliset();
+            Hahmot?.PoistaIrralliset("soutaja-1500");
             var v = Aktiivinen; Aktiivinen = null;
             if (v == null) return;
             if (v.juuri != null) UnityEngine.Object.Destroy(v.juuri);

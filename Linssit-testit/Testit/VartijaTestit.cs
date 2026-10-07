@@ -66,7 +66,7 @@ namespace Matkakirja.Linssit.Testit
             VartijanSyote Heitto(double vx, double vz)
             {
                 var s = Kaukana(vx, vz);
-                if (!heitetty) { s.Aanet = new List<Aani> { new Aani(6, 2, 12) }; heitetty = true; }
+                if (!heitetty) { s.Aanet = new List<Aanilahde> { new Aanilahde(6, 2, 12) }; heitetty = true; }
                 return s;
             }
             Aja(v, ref x, ref z, Heitto, 0.1);
@@ -75,7 +75,7 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(Math.Abs(x - 6) < 0.7 && Math.Abs(z - 2) < 0.7, $"vartija meni äänen luo ({x:F1}, {z:F1})");
             Aja(v, ref x, ref z, Kaukana, Vartija.EtsintaKatseluS + 1);
             Oleta.Sama(VartijanTila.Partio, v.Tila);
-            var kaukoAani = new VartijanSyote { NakolinjaVapaa = false, Aanet = new List<Aani> { new Aani(40, 40, 5) } };
+            var kaukoAani = new VartijanSyote { NakolinjaVapaa = false, Aanet = new List<Aanilahde> { new Aanilahde(40, 40, 5) } };
             var v2 = new Vartija(Reitti); kaukoAani.VartijaX = 0; kaukoAani.VartijaZ = 0; v2.Paivita(0.1, kaukoAani);
             Oleta.Sama(VartijanTila.Partio, v2.Tila);
         }

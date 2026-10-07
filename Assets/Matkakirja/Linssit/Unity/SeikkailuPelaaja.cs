@@ -79,6 +79,13 @@ namespace Matkakirja.Natiivi
             return p;
         }
 
+        /// <summary>Siirto (tarkistuspiste, kiinnijäänti): CharacterController pois siirron ajaksi.</summary>
+        public void Siirra(Vector3 paikka)
+        {
+            cc.enabled = false; transform.position = paikka; cc.enabled = true; pysty = 0; viimeMaassa = paikka;
+            kavely.NopeusX = kavely.NopeusZ = 0;
+        }
+
         public static void Poista()
         {
             if (Aktiivinen != null) Destroy(Aktiivinen.gameObject);

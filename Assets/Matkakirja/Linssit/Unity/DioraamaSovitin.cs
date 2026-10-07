@@ -850,6 +850,16 @@ namespace Matkakirja.Natiivi
             o.Kirjaa($"poikki: vene päällä ({lahde}, {reitti.Count} pistettä, {ydin.Pituus:F0} m, {ydin.KestoS:F0} s)");
         }
 
+        IEnumerator VartijatPaalle()
+        {
+            if (nayttamo == null || rakennus == null) { o.Kirjaa("poikki: vartijat: linssi ei auki"); yield break; }
+            yield return VarmistaKavelyData();
+            SeikkailuVartijat.Luo(nayttamo.transform, rakennus, SeikkailuKavely.Data, nayttamo.Hahmot3D, o.Kirjaa);
+            var glbt = new List<string>();
+            nayttamo.Hahmot3D?.IrrallistenGlb(glbt);
+            foreach (var glb in glbt) if (hahmoGlbJonossaTaiValmiit.Add(glb)) o.StartCoroutine(LataaHahmoGlb(glb));
+        }
+
         IEnumerator VeneLaituriin()
         {
             yield return VarmistaKavelyData();
@@ -1309,7 +1319,7 @@ namespace Matkakirja.Natiivi
             // törmäykset tilojen mesheistä (väliaikaiset), kamera olan yli; tapit = testisyöte s sekuntia (simulaattori ilman kosketusta).
             if (mita == "kavely")
             {
-                if (arvo == "0") { SeikkailuPelaaja.Poista(); SeikkailuVene.Poista(); SeikkailuKavely.Leikkaukset(false); cm?.SeikkailuPois(); o.Kirjaa("poikki: kävely pois"); return; }
+                if (arvo == "0") { SeikkailuPelaaja.Poista(); SeikkailuVene.Poista(); SeikkailuVartijat.Poista(); SeikkailuKavely.Leikkaukset(false); cm?.SeikkailuPois(); o.Kirjaa("poikki: kävely pois"); return; }
                 if (arvo == "tapit" && osat.Length > 7)
                 {
                     SeikkailuPelaaja.Testi = new Matkakirja.Linssit.Seikkailu.KavelySyote { LiikeX = Luku(osat[3]), LiikeY = Luku(osat[4]), KatseX = Luku(osat[5]), KatseY = Luku(osat[6]) };
@@ -1322,10 +1332,18 @@ namespace Matkakirja.Natiivi
                 o.StartCoroutine(KavelyPaalle(tid));
                 return;
             }
+            // "poikki vartijat 1 | 0 | tila": historiamoottori V3 — vartijat partioreiteille (merkit partio:*), NavMesh kävelypinnoista.
+            if (mita == "vartijat")
+            {
+                if (arvo == "0") { SeikkailuVartijat.Poista(); o.Kirjaa("poikki: vartijat pois"); return; }
+                if (arvo == "tila") { o.Kirjaa("poikki: " + (SeikkailuVartijat.Aktiivinen?.Raportti() ?? "vartijat pois")); return; }
+                o.StartCoroutine(VartijatPaalle());
+                return;
+            }
             // "poikki vene 1 [kesto_s] | 0": historiamoottori V2 — venesaapuminen laituriin, sitten vapaa kävely.
             if (mita == "vene")
             {
-                if (arvo == "0") { SeikkailuVene.Poista(); SeikkailuPelaaja.Poista(); SeikkailuKavely.Leikkaukset(false); cm?.SeikkailuPois(); o.Kirjaa("poikki: vene pois"); return; }
+                if (arvo == "0") { SeikkailuVene.Poista(); SeikkailuPelaaja.Poista(); SeikkailuVartijat.Poista(); SeikkailuKavely.Leikkaukset(false); cm?.SeikkailuPois(); o.Kirjaa("poikki: vene pois"); return; }
                 o.StartCoroutine(VenePaalle(osat.Length > 3 ? Luku(osat[3]) : VeneKestoS));
                 return;
             }
