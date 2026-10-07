@@ -72,6 +72,12 @@ log -1 master`, `tail -3 proto-3d/lokit/kaannospalvelu/juna.log`, `tail -5 proto
    (Päätoimittaja: vaihto, todennus ja roolien ohje 8.10. aamulla ennen junaa 164).
    23.28 KORJATTU: omistaja antoi CoreSimulatorService.xpc:lle täyden levyn käyttöoikeuden, palvelu käynnistetty uudelleen → KAIKKI 26 LAITETTA
    LUOTU T7-sarjaan, UDID-taulu proto-3d/tyokalut/simusarja-udid.tsv (natiiviseppa-iPhone = CDA479DE-8554-450B-B75B-A4B56EFF122A).
+   23.30 TODENNUSYRITYS: `simctl boot` T7-sarjan natiiviseppa-iPhone (CDA479DE…) KAATUI: "Failed to start launchd_sim: could not bind to
+   session" (NSPOSIXErrorDomain 60). Selvitä aamulla ennen työkaluvaihtoa (mahdollisesti Simulator.app/launchd_sim vs. ulkoinen levy tai
+   palvelun tila uudelleenkäynnistyksen jälkeen; kokeile ensin oletussarjan simun boot, sitten T7). Lisäksi ratkaistava: MCP-simulaattorityökalu
+   ja Simulator.app näkevät vain oletussarjan (oikeat napautukset!). Työkaluja EI muutettu (kaikki vanhassa sarjassa, yhtenäinen tila).
+   Inventaario: proto-3d/tyokalut/proto-kaanna.sh, Matkakirja-proto/aja.sh, tyokalut/palvelu/{proto-kaanna,siivoa-pariteettisimut}.sh,
+   tyokalut/todistusajo/{sarja,todistusajo}.sh + 234 lokit/*-skriptit (kiinteät UDID:t) + junavahti (asentaa 1572C658/3B4CDACB/C1D5E34C/993F8873).
    Seuraavaksi (8.10. aamulla): työkalut (proto-kaanna.sh SIMS-UDID:t, aja.sh, todistusajo.sh, simkosketus, roolien skriptit) → todennus.
    T7: /Volumes/T7 4TB, 1,5 Ti vapaana.
 8. KÄÄNNÖSNOPEUTUS (omistaja 21.5x): proto-kaanna.sh muutettu (jobs 12 joutilaana, välitiedostot säilyvät >36 Gi, vaiheajat; varmuuskopio
