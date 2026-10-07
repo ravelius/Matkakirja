@@ -11,7 +11,7 @@ Tarkista ensin taustalla jatkuneiden ajojen tulokset (alla) ja kerro ne Julkaisi
 
 ## TILA 15.3x
 
-- **JUNA 161 -RUNKO 012faf6b6** (Päätoimittaja vahvisti 15.1x NUI 89d98b7e + Siirtoseppä 49888505, korvaa 227529f3; EI apuraha-kuvat
+- **JUNA 161 -RUNKO c076765c4** (= 012faf6b6 + LS2 2d8da858f pallojen klikkaus + ui hiiri; testit 419/833, unity 0). Aiempi: **012faf6b6** (Päätoimittaja vahvisti 15.1x NUI 89d98b7e + Siirtoseppä 49888505, korvaa 227529f3; EI apuraha-kuvat
   5e45d1da → 162). Testit 447/419/833, tarkista, unity iOS/Mac 0, editori ok. KÄÄNNÖS NYT + SIMULAATTORI NYT pyydetty Julkaisijalta.
   LS2 pallojen klikkaus ja LS1:n kuitattavat vain jos ehtivät ennen koekäännöstä, muuten 162.
 
