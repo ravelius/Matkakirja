@@ -12,7 +12,7 @@ JATKA TÄSTÄ (tyhjästä kontekstista): proto-git /Users/Shared/Claude/proto-3d
 - 13.2x: köysikorjauksen still dd49fff5 EPÄONNISTUI (metrolinja katosi: LS1 KoriVasenKoysiNorm AABB liian leveä). Varmistus
   7239f7f5 (vain xMax ≤ 0,4 ja leveys ≤ 0,2). Pyydetty LS1:ltä tarkempi laskenta akselista → tauon jälkeen merge LS1:n kärki,
   KÄÄNNÖS NYT, skriptit/vuoro-koysi.sh, katso metrolinja näkyy köyden oikealla → 2 stilliä Päätoimittajalle.
-- AVOIN 1 (kiireellisin): KÖYSIKORJAUS natiivi-ui/pariisi-esitys 5c3d45e6 (= 7239f7f5 + LS1 741625b8 tarkka köysi; jonossa Julkaisijalla tauon jälkeen) (metrolinja korin köyden oikealle, LS1 KoriVasenKoysiNorm;
+- AVOIN 1 (kiireellisin): KÖYSIKORJAUS natiivi-ui/pariisi-esitys 5c3d45e6 (= 7239f7f5 + LS1 741625b8 tarkka köysi). 13.24 IRROTETTU KETJU skriptit/ketju-koysi.sh: käännös + vuoro-koysi.sh → katso lokit/natiivi-ui-1035/ketju-koysi.log ja pariisi-esitys/koysi-*.png; ilmoita Julkaisijalle lukko/simu vapaa jos ei vielä (metrolinja korin köyden oikealle, LS1 KoriVasenKoysiNorm;
   sis. LS1 esitys-giza 8ff8c0be + omistajan metropalaute KUITATTU b1c53bba). Pyydetty Julkaisijalta KÄÄNNÖS + simu ~6 min →
   skriptit/vuoro-koysi.sh <app> (iPhone vaaka + iPad; kori-GLB kopioidaan Documents/pallokori/) → 2 stilliä Päätoimittajalle
   → hän kuittaa koko esityserän (metro, Kysy-rivi, kori, opastus kerran) junaan 161 → SHA Natiivisepälle.
