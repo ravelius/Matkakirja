@@ -10,6 +10,7 @@ kappeli). Lue tämä osio ja alin TILA-loki (päivän loppu), sitten CLAUDE.md j
   (kuittaus pyydetty PT:ltä; juna163 + V7 + tietokerros + v44i-merkit + nousu laiturille; pala v44j 42d49bd4),
   **siirtoseppa/historia-fp @ 7d1a7c6b** (ENSIMMÄINEN PERSOONA + kädet-v1; pelattavuusmallin 8.10. työjärjestyksestä TEHTY JO 7.10. ILLALLA lähes kaikki, ks. TILA-loki; pala v44p a727471e).
   **siirtoseppa/historia-fp-juna @ 6d23aed1** KUITATTU JUNAAN 163 (PT 20.4x; NUI 8aa55e02).
+  **siirtoseppa/historia-valot @ e60936e2** (valot) ja **siirtoseppa/historia-valot-juna @ 787f0092** (= fp-juna + valot; kuittaus pyydetty junaan 163).
 - TESTAUS (omistaja 7.10. 15.5x/16.0x): ennen junaa VAIN Linssit-testit/kaanna.sh + Linssit-testit/unity-tarkistus.sh; ei omia
   käännöksiä, simua, stillejä eikä savuja. Kuittaus PT:ltä yhdellä rivillä (mitä, testit, SHA) → Natiiviseppä junaan.
 - OMISTAJA 7.10. 18.5x–18.7x: KAIKKI PELIT ENSIMMÄISESSÄ PERSOONASSA (Thief-malli; ei vartaloa/peilikuvaa; kädet saavat näkyä
@@ -584,3 +585,4 @@ Edellinen luovutus on `viesti-siirtoseppa-luovutus-20261002.md` (5.10. osiot 02.
   LR v44p (a727471e) kytketty 7d1a7c6b: vartijan torkku/syo/nousu_istumasta, tarjotin/patapino/hiilipannu-mallit. Huone 6 (palatsi,
   Tott-kammion naulakko, linnaväki, vouti) on datassa, ei vielä koodissa (M-osa). syo→nousu-ristihäivytys puuttuu (Hahmot3D irrallinen).
 - 20.41: KUITATTU junaan 163: siirtoseppa/historia-fp-juna @ 6d23aed1 (PT; NUI-kärki 8aa55e02 ⊇ 6af3eb9f, kuvakkeet verbin mukaan). Seuraavat: valot (PT 20.4x: laatutasokytkin, volumetriset oletuksena Mac + M-sarjan iPad, iPhone pois; Candle VFX -liekit kaikilla), K1, kiipeily.
+- 20.45: VALOT: siirtoseppa/historia-valot @ e60936e2 (historia-fp + paketit 3ee905f8 cherry-pickinä + SeikkailuValot: Candle VFX -liekit kaikkiin lyhtyihin ja kappelin kynttilöihin, volumetriset kuunsäteet luukusta ja tyrmän raosta laatutason takana, Resources/Seikkailu/SeikkailuVfx.asset käsin kirjoitettu YAML). Junahaara siirtoseppa/historia-valot-juna @ 787f0092 (= historia-fp-juna + valot), 865/865, unity-tarkistus 0, VL runtime+editori erilliskäännös 0; kuittaus pyydetty junaan 163. Puuttuu: soihtujen volumetrinen hehku.
