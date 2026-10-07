@@ -73,7 +73,10 @@ log -1 master`, `tail -3 proto-3d/lokit/kaannospalvelu/juna.log`, `tail -5 proto
    23.28 KORJATTU: omistaja antoi CoreSimulatorService.xpc:lle täyden levyn käyttöoikeuden, palvelu käynnistetty uudelleen → KAIKKI 26 LAITETTA
    LUOTU T7-sarjaan, UDID-taulu proto-3d/tyokalut/simusarja-udid.tsv (natiiviseppa-iPhone = CDA479DE-8554-450B-B75B-A4B56EFF122A).
    23.30 TODENNUSYRITYS: `simctl boot` T7-sarjan natiiviseppa-iPhone (CDA479DE…) KAATUI: "Failed to start launchd_sim: could not bind to
-   session" (NSPOSIXErrorDomain 60). Selvitä aamulla ennen työkaluvaihtoa (mahdollisesti Simulator.app/launchd_sim vs. ulkoinen levy tai
+   session" (NSPOSIXErrorDomain 60). SYY LÖYTYI 23.4x: macOS kysyi "SimulatorTrampoline.xpc haluaa käyttää irrotettavan taltion
+   tiedostoja" (omistaja ei saanut napsautettua; pyytäjä pid 72602 suljettu) → omistajalle ohje: Täysi levyn käyttöoikeus myös
+   /Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/XPCServices/SimulatorTrampoline.xpc (koodaus-käyttäjällä),
+   sitten boot-todennus uudelleen. Selvitä aamulla ennen työkaluvaihtoa (mahdollisesti Simulator.app/launchd_sim vs. ulkoinen levy tai
    palvelun tila uudelleenkäynnistyksen jälkeen; kokeile ensin oletussarjan simun boot, sitten T7). Lisäksi ratkaistava: MCP-simulaattorityökalu
    ja Simulator.app näkevät vain oletussarjan (oikeat napautukset!). Työkaluja EI muutettu (kaikki vanhassa sarjassa, yhtenäinen tila).
    Inventaario: proto-3d/tyokalut/proto-kaanna.sh, Matkakirja-proto/aja.sh, tyokalut/palvelu/{proto-kaanna,siivoa-pariteettisimut}.sh,
