@@ -1,0 +1,539 @@
+{
+ "kaupunki": "Kreeta",
+ "id": "kreeta",
+ "versio": 1,
+ "kohteet": [
+  {
+   "id": "Q173527",
+   "nimi": "Knossos",
+   "kuvaus": "Minolainen palatsi",
+   "luokka": "muu",
+   "koko_m": 300,
+   "teksti": "Knossos erottuu ylhäältä vaaleana kivimuurien sokkelona, jonka keskellä avautuu laaja keskuspiha. Kukkulalla asuttiin jo noin yhdeksäntuhatta vuotta sitten, ja myöhemmin siitä kasvoi minolaisen sivilisaation suurin keskus. Palatsissa on tunnistettu noin kahdeksansataa huonetta, ja sen sokkeloisuus on yhdistetty taruun labyrintista ja Minotauroksesta. Paikan löysi vuonna 1878 kreetalainen kauppias Minos Kalokairinos, mutta brittiarkeologi Arthur Evans osti koko alueen ja aloitti suuret kaivaukset vuonna 1900. Evans jälleenrakensi osia palatsista betonilla, ja myöhemmät arkeologit ovat arvostelleet ratkaisua mielivaltaiseksi.",
+   "lyhyt": "Knossoksen raunioista löytyi paljon savitauluja, joiden kirjoitusta kukaan ei osannut lukea. Vuonna 1952 arkkitehti Michael Ventris osoitti, että niin sanottu lineaari-B oli kreikkaa, yli viisisataa vuotta vanhempaa kuin Homeroksen kieli.",
+   "syventava": "Kuka oli Minotauros?",
+   "kysymykset": [
+    "Miksi palatsia sanotaan labyrintiksi?",
+    "Kuka oli kuningas Minos?",
+    "Miksi Evans käytti jälleenrakennuksessa betonia?",
+    "Miten Knossoksen palatsi tuhoutui?",
+    "Mitä Knossoksen savitauluihin oli kirjoitettu?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Kephalan kukkulalla oli pysyvä asutus noin 7000 eaa. alkaen eli noin 9 000 vuotta sitten.",
+     "url": "https://en.wikipedia.org/wiki/Knossos"
+    },
+    {
+     "vaite": "Knossos oli minolaisen sivilisaation suurin keskus.",
+     "url": "kaanon:pelin-aineisto"
+    },
+    {
+     "vaite": "Palatsissa on dokumentoitu 800 huonetta; paikka liitetään Theseuksen ja Minotauroksen taruun.",
+     "url": "https://www.newworldencyclopedia.org/entry/Cnossus"
+    },
+    {
+     "vaite": "Minos Kalokairinos löysi paikan 1878; Arthur Evans osti alueen 16.3.1900 ja aloitti laajat kaivaukset.",
+     "url": "https://en.wikipedia.org/wiki/Modern_history_of_Knossos"
+    },
+    {
+     "vaite": "Evans restauroi palatsia betonilla; nykyarkeologit pitävät tekniikkaa mielivaltaisena ja vahingollisena.",
+     "url": "https://www.newworldencyclopedia.org/entry/Cnossus"
+    },
+    {
+     "vaite": "Evans löysi Knossoksesta paljon savitauluja kahdella tuntemattomalla kirjoituksella, lineaari-A:lla ja lineaari-B:llä.",
+     "url": "https://www.h2g2.com/edited_entry/4596735"
+    },
+    {
+     "vaite": "Michael Ventris, arkkitehti, osoitti 1952, että lineaari-B on arkaaista kreikkaa, yli 500 vuotta vanhempaa kuin Homeroksen kreikka.",
+     "url": "https://en.wikipedia.org/wiki/Michael_Ventris"
+    }
+   ]
+  },
+  {
+   "id": "Q7798352",
+   "nimi": "Knossoksen valtaistuinsali",
+   "kuvaus": "Euroopan vanhimman valtaistuimen huone",
+   "luokka": "rakennus",
+   "koko_m": 30,
+   "teksti": "Knossoksen valtaistuinsali on palatsin länsisiivessä, aivan suuren keskuspihan laidalla. Sen pohjoisseinää vasten on yhä alkuperäisellä paikallaan alabasterista veistetty istuin, jota pidetään Euroopan vanhimpana valtaistuimena. Istuimen kummallekin puolelle on maalattu makaava griffiini, ja vastapäätä on porrastettu syvennys, jonka Arthur Evans tulkitsi puhdistusmenojen altaaksi. Evans löysi huoneen kaivausten ensimmäisenä vuonna 1900 ja uskoi, että tuolilla istui pappikuningas. Huone sai lopullisen muotonsa vasta palatsin viimeisellä kaudella, ja moni tutkija pitää sitä ennemmin uskonnollisten menojen tilana kuin hallitsijan istuinsalina.",
+   "lyhyt": "Knossoksen valtaistuimesta on tehty puinen jäljennös, jonka Kreikan hallitus lahjoitti vuonna 1913 Haagin rauhanpalatsiin oikeudenmukaisena tuomarina pidetyn Minos-kuninkaan muistoksi. Samassa palatsissa toimii nykyään Kansainvälinen tuomioistuin.",
+   "syventava": "Miksi jäljennös päätyi Haagiin?",
+   "kysymykset": [
+    "Kuka istui valtaistuimella?",
+    "Mitä griffiinit merkitsivät minolaisille?",
+    "Mihin altaan syvennystä käytettiin?",
+    "Ovatko seinien griffiinit alkuperäisiä?",
+    "Miksi Evans uskoi pappikuninkaaseen?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Huone on palatsin keskellä, keskuspihan länsipuolella.",
+     "url": "https://en.wikipedia.org/wiki/Throne_Room,_Knossos"
+    },
+    {
+     "vaite": "Pohjoisseinällä on alabasteri-istuin, jonka kummallakin puolella griffiinit; vastapäätä allasalue, jonka Evans tulkitsi puhdistusaltaaksi.",
+     "url": "https://en.wikipedia.org/wiki/Throne_Room,_Knossos"
+    },
+    {
+     "vaite": "Istuinta pidetään Egeanmeren alueen ja Euroopan vanhimpana kivisenä valtaistuimena; se on yhä paikallaan.",
+     "url": "https://en.wikipedia.org/wiki/Throne_Room,_Knossos"
+    },
+    {
+     "vaite": "Evans löysi huoneen vuonna 1900 kaivausten ensimmäisessä vaiheessa ja piti istuinta pappikuninkaan istuimena.",
+     "url": "https://en.wikipedia.org/wiki/Throne_Room,_Knossos"
+    },
+    {
+     "vaite": "Huone sai lopullisen muotonsa palatsin viimeisellä asutuskaudella 1450 eaa. jälkeen; nykytutkijat epäilevät kulttikäyttöä.",
+     "url": "https://en.wikipedia.org/wiki/Throne_Room,_Knossos"
+    },
+    {
+     "vaite": "Kreikan hallitus lahjoitti 1913 jäljennöksen Minoksen valtaistuimesta rauhanpalatsiin Minoksen muistoksi oikeudenmukaisena tuomarina; rauhanpalatsi on Kansainvälisen tuomioistuimen kotipaikka vuodesta 1945.",
+     "url": "https://www.icj-cij.org/node/40841"
+    }
+   ]
+  },
+  {
+   "id": "Q636972",
+   "nimi": "Iraklionin arkeologinen museo",
+   "kuvaus": "Minolaisen taiteen aarrekammio",
+   "luokka": "rakennus",
+   "koko_m": 120,
+   "teksti": "Iraklionin arkeologinen museo on matala, kulmikas rakennus keskellä kaupunkia, ja sen kokoelma kattaa yli viisituhatta vuotta Kreetan historiaa. Arkkitehti Patroklos Karantinos suunnitteli sen 1930-luvulla järeäksi ja maanjäristyksiä kestäväksi, ja rakennus selvisi myös vuoden 1941 pommituksista. Museossa ovat Knossoksen kuuluisat seinämaalaukset, kuten liljaprinssin kohokuva ja härkähyppyfresko. Täällä on myös Faistoksen levy, savikiekko, jonka kummallekin puolelle on painettu leimasimilla kuvamerkkejä kierteeksi. Kymmenistä yrityksistä huolimatta kukaan ei ole onnistunut lukemaan sen kirjoitusta.",
+   "lyhyt": "Iraklionin arkeologisen museon härkähyppyfreskossa nuori heittää voltin juoksevan härän selän yli. Vaaleiksi maalatut hahmot ovat naisia ja tumma mies, sillä minolaiset merkitsivät sukupuolen värillä. Tutkijat kiistelevät yhä, oliko hyppy urheilua vai uskonnollinen meno.",
+   "syventava": "Mistä Faistoksen levy löydettiin?",
+   "kysymykset": [
+    "Mitä liljaprinssin päässä on?",
+    "Kuka oli liljaprinssi?",
+    "Miksi museo rakennettiin kestämään maanjäristyksiä?",
+    "Mikä on museon vanhin esine?",
+    "Hyppäsikö kukaan oikeasti härän yli?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Kokoelma kattaa yli 5 500 vuotta neoliittiselta kaudelta Rooman aikaan; minolainen kokoelma on ainutlaatuinen.",
+     "url": "https://en.wikipedia.org/wiki/Heraklion_Archaeological_Museum"
+    },
+    {
+     "vaite": "Rakennuksen suunnitteli Patroklos Karantinos, se rakennettiin 1937–1940, ja se kesti sekä luonnonmullistukset että Saksan hyökkäyksen pommitukset 1941; maanjäristyksiä kestävä modernistinen rakennus.",
+     "url": "https://en.wikipedia.org/wiki/Heraklion_Archaeological_Museum"
+    },
+    {
+     "vaite": "Museossa ovat Knossoksen härkähyppyfresko ja liljaprinssin kohokuvafresko.",
+     "url": "https://ancient-greece.org/?p=10331"
+    },
+    {
+     "vaite": "Faistoksen levyn molemmille puolille on painettu leimasimilla merkit spiraaliksi; kirjoitusta ei ole tulkittu lukuisista yrityksistä huolimatta.",
+     "url": "https://ancient-greece.org/?p=10331"
+    },
+    {
+     "vaite": "Kymmenet tutkijat ovat esittäneet ratkaisuja, mutta mikään ei ole saanut laajaa hyväksyntää.",
+     "url": "kaanon:pelin-aineisto"
+    },
+    {
+     "vaite": "Härkähyppyfreskossa hahmo hyppää härän selän yli; vaaleat hahmot ovat naisia ja tumma mies, minolainen tapa merkitä sukupuoli värillä.",
+     "url": "kaanon:pelin-aineisto"
+    },
+    {
+     "vaite": "Tutkijat kiistelevät, oliko härkähyppy urheilua, uskonnon meno vai molempia.",
+     "url": "kaanon:pelin-aineisto"
+    }
+   ]
+  },
+  {
+   "id": "Q603920",
+   "nimi": "Koulesin linnoitus",
+   "kuvaus": "Venetsialainen satamalinnoitus",
+   "luokka": "linnoitus",
+   "koko_m": 90,
+   "teksti": "Koulesin linnoitus seisoo Heraklionin vanhan sataman suulla aallonmurtajan päässä, ja ylhäältä sen paksut muurit näyttävät kiviseltä laatikolta meren laidalla. Venetsialaiset purkivat vanhan satamatornin vuonna 1523 ja rakensivat tilalle linnoituksen, joka valmistui vuonna 1540. Kolmeen ulkoseinään on kaiverrettu marmorinen Pyhän Markuksen leijona, Venetsian tunnus. Aallonmurtajaa levennettiin upottamalla sen pohjoispuolelle vanhoja laivoja, jotka oli lastattu Dian saarelta tuodulla kivellä. Linnoitus avattiin uudelleen vuonna 2016 kuuden vuoden korjausten jälkeen, ja kierros sen sisällä päättyy katolle, josta näkyy yli kaupungin ja meren.",
+   "lyhyt": "Koulesin linnoitus puolusti kaupunkia ottomaanien piirityksessä, joka kesti yli kaksikymmentäyksi vuotta. Nykyään sen saleissa on esillä amforia ja tykkejä, jotka meritutkija Jacques Cousteau nosti Dian saaren edustan hylyistä vuonna 1976.",
+   "syventava": "Miksi leijona oli Venetsian tunnus?",
+   "kysymykset": [
+    "Kuinka monta laivaa aallonmurtajaan upotettiin?",
+    "Kuka voitti Heraklionin pitkän piirityksen?",
+    "Mitä Cousteau löysi Dian saaren hylyistä?",
+    "Miksi linnoitusta kutsutaan nimellä Koules?",
+    "Millaisia huoneita linnoituksen sisällä on?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Linnoitus on vanhan sataman suulla läntisen aallonmurtajan päällä.",
+     "url": "https://en.wikipedia.org/wiki/Koules_Fortress"
+    },
+    {
+     "vaite": "Satamatorni purettiin 1523 ja korvattiin Koulesilla, jonka työt jatkuivat vuoteen 1540.",
+     "url": "https://explorecrete.com/heraklion/en17-heraklion-koules"
+    },
+    {
+     "vaite": "Kolmessa seinässä on marmoriset Pyhän Markuksen leijonan kohokuvat, Venetsian tunnus.",
+     "url": "https://explorecrete.com/heraklion/en17-heraklion-koules"
+    },
+    {
+     "vaite": "Vanhoja laivoja täytettiin Dian saaren kivellä ja upotettiin aallonmurtajan pohjoispuolelle tilan laajentamiseksi.",
+     "url": "https://explorecrete.com/heraklion/en17-heraklion-koules"
+    },
+    {
+     "vaite": "Linnoitus avattiin uudelleen elokuussa 2016 kuuden vuoden restauroinnin jälkeen; käynti päättyy katolle, josta on näkymä mereen ja kaupunkiin.",
+     "url": "https://www.lonelyplanet.com/points-of-interest/koules-fortress/446281"
+    },
+    {
+     "vaite": "Heraklionin piiritys kesti 1648–1669, 21 vuotta ja yli neljä kuukautta.",
+     "url": "https://en.wikipedia.org/wiki/Siege_of_Candia"
+    },
+    {
+     "vaite": "Näyttelyssä on amforia, venetsialaisia tykkejä ja muita löytöjä, jotka Jacques Cousteau nosti Dian saaren hylyistä 1976.",
+     "url": "https://www.lonelyplanet.com/points-of-interest/koules-fortress/446281"
+    }
+   ]
+  },
+  {
+   "id": "Q2942217",
+   "nimi": "Pyhän Menaksen tuomiokirkko",
+   "kuvaus": "Kreetan suurin kirkko",
+   "luokka": "kirkko",
+   "koko_m": 70,
+   "teksti": "Pyhän Menaksen tuomiokirkko kohoaa vanhankaupungin keskellä suurena ristikirkkona, jonka kupoli lepää korkealla jalustalla ja jonka kahdessa kulmassa on kellotorni. Se on Kreetan suurin kirkko ja arkkipiispan istuin, ja sinne mahtuu kahdeksantuhatta ihmistä. Viereisessä pienessä Pyhän Menaksen kirkossa pääsiäisenä vuonna 1826 kristittyjä odotti ulkona verilöylyä suunnitteleva joukko. Ratsain saapunut upseeri sai joukon luopumaan aikeestaan, ja kristityt uskoivat hänen olleen itse pyhä Menas. Siitä lähtien pyhimys on kuvattu ratsastavana sotilaana, ja hänestä tuli Heraklionin suojeluspyhimys.",
+   "lyhyt": "Pyhän Menaksen tuomiokirkon peruskivi muurattiin vuonna 1862, mutta työt keskeytyivät Kreetan kapinan ajaksi, ja kirkko vihittiin vasta vuonna 1895. Sen ikonostaasi ja piispanistuin on tehty Tinoksen saaren valkoisesta ja vihreästä marmorista.",
+   "syventava": "Kuka oli pyhä Menas?",
+   "kysymykset": [
+    "Miten Menaksen juhlaa vietetään kaupungissa?",
+    "Miksi rakentaminen keskeytyi kapinan ajaksi?",
+    "Miksi vieressä seisoo pienempi samanniminen kirkko?",
+    "Mitä ikonostaasin ikoneissa kuvataan?",
+    "Kuka suunnitteli tuomiokirkon?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Kirkko on ristikupolikirkko, jonka kupoli lepää korkealla jalustalla; kaksi kellotornia koillis- ja lounaiskulmissa.",
+     "url": "https://en.wikipedia.org/wiki/Agios_Minas_Cathedral"
+    },
+    {
+     "vaite": "Kreetan suurin kirkko ja Kreetan arkkipiispan istuin; vetää 8 000 ihmistä.",
+     "url": "https://en.wikipedia.org/wiki/Agios_Minas_Cathedral"
+    },
+    {
+     "vaite": "Pääsiäisenä 1826 kristityt olivat pienessä Pyhän Menaksen kirkossa, kun muslimijoukko valmistautui verilöylyyn; ratsain ilmestynyt upseeri sai heidät luopumaan, ja kristityt uskoivat sen olleen pyhä Menas; siitä lähtien hänet kuvataan ratsain ja hän on kaupungin suojeluspyhimys.",
+     "url": "https://explorecrete.com/heraklion/en08-heraklion-saint-minas"
+    },
+    {
+     "vaite": "Pieni vanha Pyhän Menaksen kirkko seisoo tuomiokirkon vieressä.",
+     "url": "https://religious.incrediblecrete.gr/en/metropolitan-church-of-agios-minas/"
+    },
+    {
+     "vaite": "Peruskivi 1862, työt keskeytyivät kapinan 1866–1869 aikana, valmistui 1895.",
+     "url": "https://en.wikipedia.org/wiki/Agios_Minas_Cathedral"
+    },
+    {
+     "vaite": "Ikonostaasi ja piispanistuin on tehty Tinoksen valkoisesta ja vihreästä marmorista.",
+     "url": "https://en.wikipedia.org/wiki/Agios_Minas_Cathedral"
+    }
+   ]
+  },
+  {
+   "id": "Q4426010",
+   "nimi": "Pyhän Tituksen kirkko",
+   "kuvaus": "Kirkko, joka oli välillä moskeija",
+   "luokka": "kirkko",
+   "koko_m": 40,
+   "teksti": "Pyhän Tituksen kirkko on vaalea kupolikirkko Heraklionin vanhassa keskustassa, ja sama paikka on ollut vuorotellen kirkko ja moskeija. Titus oli apostoli Paavalin oppilas ja Kreetan ensimmäinen piispa. Ottomaanien aikana kirkosta tehtiin moskeija ja kellotornista minareetti. Kun maanjäristys vuonna 1856 tuhosi rakennuksen lähes kokonaan, sen tilalle rakennettiin vuonna 1869 uusi moskeija, joka on nykyinen kirkko. Minareetti purettiin vuonna 1920, ja vuonna 1925 rakennus vihittiin taas kirkoksi.",
+   "lyhyt": "Pyhän Tituksen kirkon sivukappelissa säilytetään hopeisessa lippaassa pyhimyksen pääkalloa. Venetsialaiset veivät pyhäinjäännökset Venetsiaan, kun kaupunki kukistui vuonna 1669, ja kallo palautettiin Kreetalle vasta vuonna 1966.",
+   "syventava": "Miksi rakennus vaihtoi uskontoa?",
+   "kysymykset": [
+    "Kuka oli Titus?",
+    "Miksi kirkosta tehtiin moskeija?",
+    "Missä muut Tituksen jäännökset ovat nyt?",
+    "Miksi minareetti purettiin?",
+    "Miltä kirkko näyttää sisältä?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Titus oli apostoli Paavalin oppilas ja Kreetan ensimmäinen piispa.",
+     "url": "https://en.wikipedia.org/wiki/Saint_Titus_Cathedral"
+    },
+    {
+     "vaite": "Ottomaanien aikana kirkosta tehtiin moskeija ja kellotornista minareetti.",
+     "url": "https://en.wikipedia.org/wiki/Saint_Titus_Cathedral"
+    },
+    {
+     "vaite": "Vuoden 1856 maanjäristys tuhosi rakennuksen; nykyinen rakennus rakennettiin 1869 moskeijaksi; minareetti purettiin 1920; 1925 muutettiin kirkoksi.",
+     "url": "https://en.wikipedia.org/wiki/Saint_Titus_Cathedral"
+    },
+    {
+     "vaite": "Pyhän Tituksen pää säilytetään hopeisessa lippaassa sivukappelissa; venetsialaiset veivät jäännökset Venetsiaan 1669; pää palautettiin 15.5.1966.",
+     "url": "https://en.wikipedia.org/wiki/Saint_Titus"
+    }
+   ]
+  },
+  {
+   "id": "Q15616490",
+   "nimi": "Morosinin suihkulähde",
+   "kuvaus": "Leijonien venetsialainen suihkulähde",
+   "luokka": "muu",
+   "koko_m": 40,
+   "teksti": "Morosinin suihkulähde on Leijonien aukion keskellä, ja ylhäältä sen marmoriallas erottuu kahvilapöytien ja ohikulkijoiden keskeltä. Allasta kannattelee neljä marmorileijonaa, joiden mukaan heraklionilaiset kutsuvat lähdettä yksinkertaisesti Leijoniksi. Venetsian kenraalikuvernööri Francesco Morosini rakennutti sen vuonna 1628 uuden vesijohdon päätepisteeksi, ja lähteestä sai yli tuhat tynnyrillistä vettä päivässä. Se vihittiin Pyhän Markuksen päivänä, Venetsian suojeluspyhimyksen juhlana. Altaan keskellä seisoi alun perin Poseidonin marmoripatsas, mutta se tuhoutui ottomaanien aikana.",
+   "lyhyt": "Morosinin suihkulähteen aukiolle tulevat aamun lautalla saapuneet matkailijat syömään bougatsaa, kermatäytteistä piirakkaa, ennen kuin kaupunki herää. Iltaisin aukio on nuorten kohtaamispaikka, ja sen laidalla on venetsialainen Pyhän Markuksen basilika, jossa järjestetään näyttelyitä.",
+   "syventava": "Miten vesi tuotiin kaupunkiin?",
+   "kysymykset": [
+    "Miten Poseidonin patsas tuhoutui?",
+    "Mitä altaan kohokuvat esittävät?",
+    "Kuka oli Francesco Morosini?",
+    "Mistä lähteen vesi tuli?",
+    "Toimiiko suihkulähde yhä?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Lähde on Eleftheriou Venizelou -aukion eli Leijonien aukion keskellä; neljä leijonaa kannattelee pääallasta; kansan suussa Leijonat.",
+     "url": "https://en.wikipedia.org/wiki/Lions_Square"
+    },
+    {
+     "vaite": "Lähteen rakennutti 1628 kenraaliprovveditore Francesco Morosini vesijohdon päätteeksi; se antoi yli 1 000 tynnyriä vettä päivässä.",
+     "url": "https://en.wikipedia.org/wiki/Lions_Square"
+    },
+    {
+     "vaite": "Lähde vihittiin 25.4.1628 Pyhän Markuksen, Venetsian suojeluspyhimyksen, juhlana.",
+     "url": "https://www.destinationcrete.gr/monuments/morosini-fountain-heraklion/"
+    },
+    {
+     "vaite": "Keskellä oli alun perin Poseidonin marmoripatsas, joka tuhoutui turkkilaisvallan aikana.",
+     "url": "https://www.destinationcrete.gr/monuments/morosini-fountain-heraklion/"
+    },
+    {
+     "vaite": "Aamulla lautalla saapuvat syövät aukiolla bougatsaa; illalla nuorten kohtaamispaikka; aukion laidalla Pyhän Markuksen basilika, jossa näyttelyitä.",
+     "url": "https://en.wikipedia.org/wiki/Lions_Square"
+    }
+   ]
+  },
+  {
+   "id": "Q20127741",
+   "nimi": "Heraklionin venetsialaiset muurit",
+   "kuvaus": "Vanhankaupungin bastionimuurit",
+   "luokka": "linnoitus",
+   "koko_m": 1500,
+   "teksti": "Heraklionin venetsialaiset muurit kiertävät koko vanhaa kaupunkia, ja ylhäältä niiden seitsemän bastionia piirtyvät kärkevinä ulokkeina kaupungin laitaan. Rakentaminen alkoi vuonna 1462 ja kesti yli sata vuotta, ja suunnittelijoihin kuului venetsialainen linnoitusarkkitehti Michele Sanmicheli. Muurit kestivät ottomaanien piirityksen, joka alkoi vuonna 1648 ja päättyi kaupungin antautumiseen vasta vuonna 1669. Suurimman bastionin, Martinengon, sisälle mahtuu nykyään kokonainen jalkapallokenttä. Muurien päällä kulkee puistomainen kävelyreitti, ja vallihaudassa urheillaan ja pidetään kesäteatteria.",
+   "lyhyt": "Heraklionin venetsialaisille muureille, Martinengon bastionin laelle, haudattiin vuonna 1957 kirjailija Nikos Kazantzakis, kun ortodoksinen kirkko oli kieltäytynyt hautaamasta häntä hautausmaalle. Hautakivessä lukee: En toivo mitään, en pelkää mitään, olen vapaa.",
+   "syventava": "Miten muurit kestivät näin kauan?",
+   "kysymykset": [
+    "Miksi piiritys kesti yli kaksikymmentä vuotta?",
+    "Kuka oli Nikos Kazantzakis?",
+    "Miten muurit suojasivat tykeiltä?",
+    "Kuinka monta porttia muureissa on?",
+    "Mitä vallihaudassa tehdään nykyään?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Muureissa on seitsemän bastionia.",
+     "url": "https://www.visitgreece.gr/en/experiences/nature/culture/venetian-walls-of-heraklion"
+    },
+    {
+     "vaite": "Rakentaminen alkoi 1462 ja kesti yli sata vuotta; suunnittelijoina Michele Sanmicheli ja Giulio Savorgnan.",
+     "url": "https://thisiscrete.gr/en/fortresses/heraklion-venetian-walls-338"
+    },
+    {
+     "vaite": "Kandian piiritys kesti 1.5.1648–27.9.1669.",
+     "url": "https://en.wikipedia.org/wiki/Siege_of_Candia"
+    },
+    {
+     "vaite": "Martinengo on suurin bastioni; sen sisällä on jalkapallokenttä, joka vie vain 60 prosenttia sen pinta-alasta.",
+     "url": "https://cretanbeaches.com/en/cities-and-towns-in-crete/heraklion-city/the-castle-of-candia"
+    },
+    {
+     "vaite": "Muurien päällä kulkee vihreä kävelyreitti; vallihaudassa urheillaan ja siellä on puutarhateattereita.",
+     "url": "https://visitheraklion.eu/en/walk-around-the-venetian-fort-walls/"
+    },
+    {
+     "vaite": "Kazantzakis kuoli 1957; kirkko kieltäytyi hautaamasta hänet hautausmaalle; hänet haudattiin Martinengon bastionille; epitafi Toivon en mitään, en pelkää mitään, olen vapaa.",
+     "url": "https://www.geotour.gr/people/nikos-kazantzakis"
+    }
+   ]
+  },
+  {
+   "id": "Q632418",
+   "nimi": "Archánes",
+   "kuvaus": "Viinikaupunki vuoren juurella",
+   "luokka": "muu",
+   "koko_m": 1200,
+   "teksti": "Viinitarhojen ja oliivilehtojen keskellä noin kuusitoista kilometriä Heraklionista etelään on Archánesin pikkukaupunki, joka on kasvanut pyhän Gioúchtas-vuoren juurelle. Sen kunnostetut kujat ja vanhat talot ovat tuoneet palkinnon yhtenä Euroopan parhaiten entistetyistä kylistä. Nykyisen kaupungin kohdalla oli minolaisaikana palatsi, ja täältä on löydetty maailman vanhin tunnettu viinipuristin. Vuonna 1979 arkeologit Giannis ja Efi Sakellarakis kaivoivat läheiseltä rinteeltä Anemospilian pyhäkön, jonka alttarilla makasi nuoren miehen luuranko pronssiveitsi vieressään. Kaivajat tulkitsivat löydön maanjäristyksen keskeyttämäksi ihmisuhriksi, mutta tulkinnasta kiistellään yhä.",
+   "lyhyt": null,
+   "syventava": "Mitä Anemospilian pyhäkössä tapahtui?",
+   "kysymykset": [
+    "Mitä viiniä Archánesissa tehdään nykyään?",
+    "Kuka asui Archánesin minolaisessa palatsissa?",
+    "Mitä Fournin hautausmaalta löydettiin?",
+    "Miksi ihmisuhrin tulkinnasta kiistellään?",
+    "Miten kylä kunnostettiin?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Archanes on noin 16 kilometriä Heraklionista etelään; talous perustuu rypäleisiin ja oliiveihin; maailman vanhin viinipuristin on löydetty sieltä.",
+     "url": "https://en.wikipedia.org/wiki/Archanes"
+    },
+    {
+     "vaite": "Archanes on Giouhtas-vuoren juurella; palkittu Euroopan toiseksi parhaiten entistettynä kylänä.",
+     "url": "https://cretetravel.com/guide/archanes/"
+    },
+    {
+     "vaite": "Nykyisen kaupungin kohdalla kukoisti minolainen kaupunki palatseineen.",
+     "url": "https://www.destinationcrete.gr/archaeological-sites-crete/archanes-yuktas/"
+    },
+    {
+     "vaite": "Giannis ja Efi Sakellarakis löysivät 1979 Anemospilian pyhäkön; alttarilla nuoren miehen luut ja pronssiveitsi; tulkittiin maanjäristyksen keskeyttämäksi ihmisuhriksi; tulkinta kiistetty.",
+     "url": "https://www.cretanbeaches.com/en/history-of-crete/archaeological-sites-in-crete/minoan-times-palaces-and-sites/anemospilia-sanctuary-arhanes"
+    },
+    {
+     "vaite": "Tulkintaa ihmisuhrista on kiistetty.",
+     "url": "https://www.thecollector.com/human-sacrifice-minoan-crete/"
+    }
+   ]
+  },
+  {
+   "id": "Q3321879",
+   "nimi": "Gioúchtas-vuori",
+   "kuvaus": "Vuori, jossa Zeus nukkuu",
+   "luokka": "muu",
+   "koko_m": 3000,
+   "teksti": "Kaupungin eteläpuolella kohoava Gioúchtas-vuori nousee kahdeksaansataanyhteentoista metriin, ja sen pitkänomainen harjanne muistuttaa makaavan ihmisen kasvoja. Paikallisen tarun mukaan ne ovat jumalten isän Zeuksen kasvot, ja myöhempi perimätieto sijoitti vuorelle myös Zeuksen haudan. Minolaiset rakensivat huipulle yhden aikansa tärkeimmistä huippupyhäköistä, ja sinne johti muinainen tie Archánesista. Vuoren toisella huipulla seisoo Afentis Christoksen kirkko. Vuoren pohjoisrinteeltä on löydetty myös Anemospilian pyhäkkö, joka tuhoutui maanjäristyksessä muutama vuosikymmen rakentamisensa jälkeen.",
+   "lyhyt": null,
+   "syventava": "Miksi Zeuksen hauta olisi Kreetalla?",
+   "kysymykset": [
+    "Mitä huippupyhäkköön uhrattiin?",
+    "Miksi minolaiset palvoivat vuorenhuippuja?",
+    "Näkyykö vuoren profiili Heraklionin keskustasta?",
+    "Kenelle Afentis Christoksen kirkko on omistettu?",
+    "Miten muut kreikkalaiset suhtautuivat Zeuksen hautaan?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Juktas on Heraklionin takamaassa ja 811 metriä korkea; tarun mukaan vuori on nukkuvan Zeuksen kasvot; minolainen huippupyhäkkö; Afentis Christoksen kirkko toisella huipulla.",
+     "url": "https://en.wikipedia.org/wiki/Mount_Juktas"
+    },
+    {
+     "vaite": "Huippupyhäkön paikka on myöhemmässä perimätiedossa liitetty Zeuksen hautaan.",
+     "url": "https://digi.ub.uni-heidelberg.de/diglit/cook1914bd1/0226"
+    },
+    {
+     "vaite": "Archanesista johti muinaisia teitä Juktakselle.",
+     "url": "https://en.wikipedia.org/wiki/Archanes"
+    },
+    {
+     "vaite": "Anemospilian pyhäkkö on Juktaksen pohjoisrinteellä; rakennettu 1600-luvulla eaa. ja tuhoutui maanjäristyksessä muutama vuosikymmen myöhemmin.",
+     "url": "https://www.cretanbeaches.com/en/history-of-crete/archaeological-sites-in-crete/minoan-times-palaces-and-sites/anemospilia-sanctuary-arhanes"
+    }
+   ]
+  },
+  {
+   "id": "Q473766",
+   "nimi": "Amnisos",
+   "kuvaus": "Knossoksen muinainen satama",
+   "luokka": "muu",
+   "koko_m": 400,
+   "teksti": "Muinainen Amnisos oli pronssikaudella Knossoksen satama, ja sen rauniot näkyvät ylhäältä matalina kivijalkoina Heraklionin itäpuolisen rannan tuntumassa. Lähellä on Eileithyian luola, jonka Odysseus mainitsee Homeroksen Odysseiassa. Arkeologi Spyridon Marinatos kaivoi paikalta vuonna 1932 kaksikerroksisen huvilan, joka sai nimensä Liljojen taloksi ainoan kunnostettavissa olleen freskon mukaan. Seinämaalauksessa kasvaa ruukuissa punaisia ja valkoisia liljoja, minttua, iiriksiä ja papyrusta. Marinatos huomasi myös, että järeät kivilohkareet olivat siirtyneet paikoiltaan meren tuoman hohkakiven ja hiekan keskellä, ja päätteli Theran tulivuorenpurkauksen nostattaneen tänne tuhoisan hyökyaallon.",
+   "lyhyt": null,
+   "syventava": "Tuhosiko tulivuori minolaiset?",
+   "kysymykset": [
+    "Kuka oli jumalatar Eileithyia?",
+    "Mitä Odysseus kertoo Amnisoksesta?",
+    "Miksi Knossos tarvitsi oman sataman?",
+    "Kuinka kaukana Thera on Kreetasta?",
+    "Voiko Amnisoksen rannalla uida nykyään?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Amnisos oli pronssikautinen asutus Kreetan pohjoisrannalla ja Knossoksen satama.",
+     "url": "https://en.wikipedia.org/wiki/Amnisos"
+    },
+    {
+     "vaite": "Odysseus mainitsee luolan Odysseiassa; Strabon mainitsee Eileithyian temppelin.",
+     "url": "https://en.wikipedia.org/wiki/Amnisos"
+    },
+    {
+     "vaite": "Spyridon Marinatos kaivoi 1932 kaksikerroksisen huvilan ja Liljojen talon, joka sai nimensä ainoasta restauroitavissa olleesta freskosta; freskossa ruukuissa punaisia ja valkoisia liljoja, minttua, iiriksiä ja papyrusta.",
+     "url": "https://en.wikipedia.org/wiki/Amnisos"
+    },
+    {
+     "vaite": "Marinatos havaitsi siirtyneitä kivilohkareita ja meren tuomaa hohkakiveä ja hiekkaa ja päätteli Theran purkauksen aiheuttaneen tsunamin.",
+     "url": "https://en.wikipedia.org/wiki/Amnisos"
+    }
+   ]
+  },
+  {
+   "id": "Q2707725",
+   "nimi": "Týlisos",
+   "kuvaus": "Minolaisten huviloiden kylä",
+   "luokka": "muu",
+   "koko_m": 600,
+   "teksti": "Vuoriston juurella noin kuusitoista kilometriä Heraklionista länteen on Týlisoksen kylä, jonka pohjoislaidalla erottuu ylhäältä kolmen minolaisen kartanon kivipohjat. Kaivaukset alkoivat vuonna 1912, kun maasta oli sattumalta löytynyt kolme suurta pronssista kattilaa, joiden kaltaisia ei tunneta muualta Egeanmeren alueelta. Arkeologi Iosif Chatzidakis paljasti kartanot, joiden arkkitehtuuri muistuttaa Knossoksen palatsia. Paikalta löytyi myös rapattu vesisäiliö ja saviputkista tehty vesijohto, joka toi veden asutukseen. Týlisos vartioi tietä, joka johti Knossoksesta läntiseen Kreetaan ja Idan vuorille.",
+   "lyhyt": null,
+   "syventava": "Mihin minolaiset käyttivät pronssikattiloita?",
+   "kysymykset": [
+    "Kuka asui Týlisoksen kartanoissa?",
+    "Mitä Týlisoksen savitauluihin kirjoitettiin?",
+    "Miksi kartanot rakennettiin juuri tähän?",
+    "Mitä vesisäiliöllä tehtiin?",
+    "Mihin Týlisoksen pronssiveistos päätyi?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Týlisos on 16 kilometriä Heraklionista länteen Psiloritiksen itärinteiden lähellä; kolme kartanoa; sijainti Knossoksesta Länsi-Kreetaan ja Idan vuorelle johtaneen tien varrella.",
+     "url": "https://www.cretanbeaches.com/en/history-of-crete/archaeological-sites-in-crete/minoan-times-palaces-and-sites/ancient-tylissos-palace"
+    },
+    {
+     "vaite": "Kaivaukset aloitti 1912 Iosif Chatzidakis kolmen suuren pronssikattilan sattumanvaraisen löydön jälkeen; kattilat ainutlaatuisia koko Egeanmeren alueella.",
+     "url": "https://www.destinationcrete.gr/archaeological-sites-crete/tylissos/"
+    },
+    {
+     "vaite": "Kolme kartanoa nykyisen kylän pohjoispuolella; arkkitehtuuri muistuttaa Knossosta.",
+     "url": "https://www.destinationcrete.gr/archaeological-sites-crete/tylissos/"
+    },
+    {
+     "vaite": "Paikalla on rapattu vesisäiliö ja savputkista tehty vesijohto.",
+     "url": "https://en.wikipedia.org/wiki/Tylissos"
+    }
+   ]
+  },
+  {
+   "id": "Q2097291",
+   "nimi": "Gázi",
+   "kuvaus": "Heraklionin läntinen esikaupunki",
+   "luokka": "muu",
+   "koko_m": 2500,
+   "teksti": "Rannikolla kuusi kilometriä Heraklionista länteen leviää Gázi, tiheä esikaupunki, joka on kasvanut ylhäältä katsottuna lähes kiinni Heraklioniin. Siellä asuu noin kuusitoistatuhatta ihmistä, ja se on Malevizin kunnan hallinnollinen keskus. Vuonna 1936 arkeologi Spyridon Marinatos löysi täältä maanalaisesta pyhäköstä noin seitsemänkymmenen sentin korkuisen savipatsaan, joka tunnetaan unikkojumalattarena. Sen nostetuissa käsissä on jumaluuden ilmestymisen ele, ja kruunua koristaa kolme oopiumunikon siemenkotaa. Patsas on nykyään Iraklionin arkeologisessa museossa.",
+   "lyhyt": null,
+   "syventava": "Käyttivätkö minolaiset oopiumia?",
+   "kysymykset": [
+    "Miksi jumalattarella on unikot päässään?",
+    "Mitä muuta Gázin pyhäköstä löydettiin?",
+    "Miten Gázi on kasvanut viime vuosikymmeninä?",
+    "Mistä Gázi on saanut nimensä?",
+    "Onko Gázissa hyviä uimarantoja?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Gázi on läntinen esikaupunki 6 kilometriä Heraklionista länteen pohjoisrannikolla; Malevizin kunnan keskus; 16 256 asukasta (2021).",
+     "url": "https://en.wikipedia.org/wiki/Gazi,_Crete"
+    },
+    {
+     "vaite": "Marinatos löysi 1936 noin 28 tuuman korkuisen unikkojumalattaren maanalaisesta kulttikammiosta Gázista; kruunussa kolme unikon siemenkodan muotoista neulaa; nyt Heraklionin arkeologisessa museossa.",
+     "url": "https://library.biblicalarchaeology.org/?p=111340"
+    },
+    {
+     "vaite": "Kohotetut kädet avoimin kämmenin ovat jumalattaren ilmestymisen ele; päässä oopiumunikon siemenkotia.",
+     "url": "https://en.wikipedia.org/wiki/Poppy_goddess"
+    }
+   ]
+  }
+ ]
+}
