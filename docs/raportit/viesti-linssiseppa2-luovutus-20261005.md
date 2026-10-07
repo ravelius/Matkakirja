@@ -17,7 +17,15 @@ Avoimet työt:
    Vauhtirajaus opas-vapaa-lataus 5683ffaf jäi pois junasta. Ei uutta työtä tähän.
 4. s2-meri 0f6e4e89 on KUITATTU junaan 154 (BMNG:n meri S2:n meriväriin).
 
-## TILA 7.10. 15.0x (uusin)
+## TILA 7.10. 15.3x (uusin)
+- JUNA 161 pallon klikkaus TODENNETTU (68429b27, Natiivisepän koeappi): iPhone Ateena, iPad Kreeta+Pariisi, Mac Ateena (oma 6ec5dcff).
+  Korjaus 2d8da858f + ui hiiri 5b61d14f4 junassa; -ei-lepoa (6ec5dcff4) vain testihaarassa. Still lokit/linssiseppa2-kaupunkipallo-161-stillit/osuma-161-68429b27.jpg.
+- Lisälöydös: Siirrytään-ruutu jää, jos opas suljetaan kesken siirtymän → LS1 korjaa (linssiseppa/pallo-latauskuva, SiirtymaPeru, juna 162).
+  NUI pyysi: toista Ateena → linssi pois → Kreeta LS1:n korjausta vasten (skenaario pallo-osuma.txt ilman odota 25 -rivejä).
+- Odottaa: iOS-yhdistelmä hiiri-testi+s2-kaudet (ketju-ios-osuma.sh, kaannos-lupa-ios/simu-lupa-ios) → S2-kaudet-kuvapari junaan 162.
+- Mac-ajotapa: lokit/linssiseppa2-3d-kattavuus/ajot/mac-pallo.sh; Mac-appi -ei-lepoa-lipulla, komennot ~/Library/Application Support/Matkakirja/Matkakirja 3D/.
+
+## TILA 7.10. 15.0x
 - MAC-PALLOVIKA (omistaja 14.5x: Ateenan/Kreetan palloa ei voi klikata Macilla): juurisyy pallokerros SendToBack Nostot-kerroksessa
   → nimiöt/merkit/nappula sieppaavat. Korjaus linssiseppa2/hiiri-testi 2d8da858f (juna-161-koe:n päällä): PalloNappi.ContainsPoint
   (kuori+kori), BringToFront; testikomento ui hiiri (klikkaa|pallo|poimi|paina|vapauta), UiKerros.Poimi. Ennen-haara hiiri-160 109020012.
