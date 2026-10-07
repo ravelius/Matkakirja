@@ -125,7 +125,7 @@
 //   ui palaute [palaute|ehdotus|kuvavinkki|pro|periaate|kuvapalaute]
 //                                             palaute- ja ehdotuslomake AUKI ILMAN LÄHETYSTÄ: palaute (oletus) =
 //                                             "Kerro mitä huomasit" kuten hampurilaisesta; ehdotus/kuvavinkki/pro
-//                                             vierittää (ja avaa väkäsen); periaate = aloitusportin periaatteet
+//                                             vierittää (ja avaa väkäsen); periaate = apurahakortin loppu (palautelohko)
 //                                             palautelohkon kohdalla; kuvapalaute = havainnekuvan palaute
 //                                             minipopupissa keksityllä kuvalla. Lähetys vain napista käsin.
 //   ui haku <kysymys>                         pulun paikallisen haun katkelmat (leima + pisteet)
@@ -869,8 +869,7 @@ namespace Matkakirja.Natiivi
                         case "ehdotus": case "kuvavinkki": case "pro": ui.Palaute.Avaa(loput); return null;
                         case "periaate":
                             ui.Aloitus.Testaa("portti", id => ui.Tilarivi.Viesti("Lähtö: " + id));
-                            ui.Aloitus.AvaaPeriaatteet();
-                            return null;
+                            return "=" + ui.Aloitus.Apuraha.AvaaPalaute();   // 7.10.: palautelohko apurahakortin lopussa
                         case "kuvapalaute":
                             Kuvavinkki.AvaaKuvapalaute("kuvat/havainne/esimerkki.jpg", "Havainnekuva: esimerkki (testikomento)", PalauteLomake.EhdotusSivu(""));
                             return null;

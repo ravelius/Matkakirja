@@ -11,6 +11,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Matkakirja.Peli;
 using UnityEngine;
 using UnityEngine.Networking;
@@ -141,6 +142,66 @@ namespace Matkakirja.Natiivi
         /// <summary>Testi: vieritys loppuun (kuvarivi näkyviin).</summary>
         public void VieritaLoppuun() => vieritys?.schedule.Execute(() => vieritys.scrollOffset = new Vector2(0, vieritys.contentContainer.layout.height)).StartingIn(300);
 
+        // KORTIN LOPPU (omistaja 7.10. 09.4x: "Linkin voisi ottaa pois"; Päätoimittaja): aloitusportin periaate-ikkunasta siirretyt
+        // lippurivi lippukuvien tekijöineen (Commonsin CC BY/BY-SA vaatii nimeämisen), palautelohko (PalauteLomake.PeriaateLohko) ja
+        // ©-rivi; GitHub-linkki ja periaatetekstit jäävät pois. Pohjat: pieni oikeusrivi (.mk-aloitus__oikeudet, Kirjain.Apuri) ja
+        // palautteen lohko sellaisenaan. Lippurivin alku paketin ui-tekstit PERIAATTEET.lippurivi (Aloitusnakyma), tekijät
+        // moduulit/js/packs/lippu-tekijat.json (web js/packs/lippu-tekijat.js, tools/lisaa-tekijat.mjs).
+        public static string Lippurivi = "Lippukuvat ovat Wikimedia Commonsista. Näiden tekijät lisenssi käskee nimetä: ";
+        const string Oikeudet = "© Visuaaliviestinnän Instituutti Tampere Oy";
+        static List<(string Tekija, string Lisenssi)> lippuTekijat;
+        Label lippuEl;
+        VisualElement palaute;
+
+        void Loppuosa(VisualElement isa)
+        {
+            lippuEl = Rakenne.Teksti("", "mk-aloitus__oikeudet", isa);
+            Kirjasimet.Aseta(lippuEl, Tyylikirja.Kirjain.Apuri);
+            lippuEl.style.display = DisplayStyle.None;
+            PaivitaLippurivi();
+            if (lippuTekijat == null) UiKerros.Hae().StartCoroutine(LataaLippuTekijat());
+            palaute = PalauteLomake.PeriaateLohko(isa, UiKerros.Traileri);
+            Kirjasimet.Aseta(Rakenne.Teksti(Oikeudet, "mk-aloitus__oikeudet", isa), Tyylikirja.Kirjain.Apuri);
+        }
+
+        void PaivitaLippurivi()
+        {
+            if (lippuEl == null) return;
+            bool on = lippuTekijat != null && lippuTekijat.Count > 0;
+            lippuEl.style.display = on ? DisplayStyle.Flex : DisplayStyle.None;
+            if (on) lippuEl.text = Lippurivi + string.Join(", ", lippuTekijat.Select(l => $"{l.Tekija} ({l.Lisenssi})")) + ".";
+        }
+
+        System.Collections.IEnumerator LataaLippuTekijat()
+        {
+            string json = null;
+            yield return Sisalto.HaePaketista("moduulit/js/packs/lippu-tekijat.json", t => json = t, true);
+            var lista = new List<(string, string)>();
+            try
+            {
+                var v = Rakenne.Olio(MiniJson.Kentta(Rakenne.Olio(MiniJson.Jasenna(json ?? "{}")), "exportit"));
+                var x = MiniJson.Kentta(v, "LIPPU_TEKIJAT");
+                if (Rakenne.Olio(x) is Dictionary<string, object> o) x = MiniJson.Kentta(o, "arvo") ?? x;
+                if (x is List<object> l)
+                    foreach (var y in l)
+                        if (Rakenne.Olio(y) is Dictionary<string, object> d && MiniJson.Teksti(d, "tekija") is string te)
+                            lista.Add((te, MiniJson.Teksti(d, "lisenssi") ?? ""));
+            }
+            catch (Exception e) { Debug.LogWarning("MATKAKIRJA apuraha: lippu-tekijat: " + e.Message); }
+            lippuTekijat = lista;
+            Debug.Log($"MATKAKIRJA apuraha: lippukuvien tekijät {lista.Count}");
+            PaivitaLippurivi();
+        }
+
+        /// <summary>Testi (ui palaute periaate): kortti auki ja vieritys palautelohkoon.</summary>
+        public string AvaaPalaute()
+        {
+            Avaa();
+            if (palaute == null || vieritys == null) return "apuraha: esittely ei ladattu";
+            Rakenne.Vierita(vieritys, palaute, 350);
+            return "apuraha: palautelohko";
+        }
+
         VisualElement Rakenna(Esittely e)
         {
             var h = Rakenne.El("mk-himmennys mk-himmennys--tumma", juuri);
@@ -210,6 +271,7 @@ namespace Matkakirja.Natiivi
                     Kuvat.Hae(e.Kuvat[i].Url, t => { if (t != null) b.style.backgroundImage = new StyleBackground(t); });
                 }
             }
+            Loppuosa(vieritys);
             kortti.Sisus.Add(vieritys);
             var napit = Rakenne.El("mk-kortti__napit", kortti.Sisus, PickingMode.Ignore);
             Kirjasimet.Aseta(Rakenne.Nappi("Takaisin", "mk-nappi--toiminto", Sulje, napit), Kirjasin.KoneLihava);

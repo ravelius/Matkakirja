@@ -7,7 +7,7 @@
 //                Laitetestaajan ensikokemus 23.9.: pelkkä pyörivä pallo ei kertonut pelistä
 //                mitään. Kehystetty nappi "Laita äänet päälle 🔈" (laittaa Äänimaiseman
 //                päälle ja kuittaa "Äänet päällä"), kultainen "Aloita seikkailu",
-//                alhaalla linkki "Oppiminen on hauskaa" (periaatteet).
+//                (linkki "Oppiminen on hauskaa" poistettu 7.10.: apurahakortti on ainoa tietolinkki).
 //                Tallennettu matka (PeliOhjain.TallennusOn): "Jatka matkaa" (kulta) ja
 //                "Uusi matka" (haamu) — webissä tallennus jatkuu ilman porttia.
 // ALOITUSKAAVA (omistaja 24.9.2026 klo 16.1x, Raamattu "AVAUSTEKSTI ALOITUSNÄYTÖLLE JA LENNON KAMERAREITTI",
@@ -86,7 +86,7 @@ namespace Matkakirja.Natiivi
             (new Regex("[,;:—–]$"), 300, 160),
         };
 
-        readonly VisualElement juuri, portti, intro, arkki, valinta, valintaLista, periaatteet;
+        readonly VisualElement juuri, portti, intro, arkki, valinta, valintaLista;
         readonly Label paikka, runko;
         readonly Button valintaNappi, aloitaNappi, jatkaNappi;
         readonly System.Random arpa = new System.Random();
@@ -237,12 +237,11 @@ namespace Matkakirja.Natiivi
             Apuraha.Ladattu += PaivitaApurahaNappi;
             // Nimetön kävijälaskuri (Kaynti.cs): kerran käynnistyksessä.
             Kaynti.Laheta("avaus");
-            var linkki = porttiLinkki = Rakenne.Nappi("Oppiminen on hauskaa", "mk-aloitus__linkki", () => Rakenne.Nayta(periaatteet, true, 250), portti);
-            Kirjasimet.Aseta(linkki, Kirjasin.Kone);
+            // "Oppiminen on hauskaa" -linkki pois (omistaja 7.10. 09.4x): apurahakortti on ainoa tietolinkki; lippu-, palaute- ja
+            // ©-rivi ovat kortin lopussa (Apuraha.Loppuosa).
             portti.RegisterCallback<GeometryChangedEvent>(_ => SovitaKeskus());
             keskus.RegisterCallback<GeometryChangedEvent>(_ => SovitaKeskus());
 
-            periaatteet = Periaatteet(juuri);
 
             // 4 OHITA (löydös 83): lennon ajan alareunassa, turva-alueen sisällä, kaistaleen yläpuolella.
             ohitaNappi = Rakenne.Nappi("Ohita", "mk-aloitus__ohita", Ohita, kerros.Turva(UiKerros.Traileri));
@@ -349,16 +348,7 @@ namespace Matkakirja.Natiivi
         string introText = IntroText, introPaikka = IntroPaikka, introValinta = IntroValinta, lentoTeksti = LentoTeksti;
         /// <summary>Kirjoituskoneen nykyinen teksti (avaus tai lennon rivi).</summary>
         string teksti = "";
-        Label valintaOtsikko, periaateOtsikko;
-        ScrollView periaateVieritys;
-        VisualElement periaateLinkki, periaatePalaute;
-
-        /// <summary>Testikomento (ui palaute periaate): periaatteet auki ja vieritys palautelohkoon.</summary>
-        public void AvaaPeriaatteet()
-        {
-            Rakenne.Nayta(periaatteet, true, 250);
-            Rakenne.Vierita(periaateVieritys, periaatePalaute, 350);
-        }
+        Label valintaOtsikko;
 
         /// <summary>Tekstit paketista (moduulit/js/ui-tekstit.json); puuttuva moduuli = koodin vara.</summary>
         System.Collections.IEnumerator LataaTekstit()
@@ -385,30 +375,10 @@ namespace Matkakirja.Natiivi
                 if (ff is string ffs && ffs.Length > 0) lentoTeksti = ffs;
                 valintaNappi.Q<Label>().text = introValinta.ToUpperInvariant();
                 valintaOtsikko.text = introValinta;
+                // Periaatteista jää vain lippurivi (apurahakortin loppu, omistaja 7.10. 09.4x).
                 var p = Rakenne.Olio(MiniJson.Kentta(v, "PERIAATTEET"));
                 if (p != null && Rakenne.Olio(MiniJson.Kentta(p, "arvo")) is Dictionary<string, object> pa) p = pa;
-                if (p != null && MiniJson.Kentta(p, "osat") is List<object> osat && osat.Count > 0)
-                {
-                    periaateOtsikko.text = MiniJson.Teksti(p, "otsikko") ?? periaateOtsikko.text;
-                    periaateVieritys.Clear();
-                    bool karki = true;
-                    foreach (var x in osat)
-                    {
-                        var o = Rakenne.Olio(x);
-                        if (o == null) continue;
-                        if (MiniJson.Teksti(o, "otsikko") is string ot)
-                            Kirjasimet.Aseta(Rakenne.Teksti(ot.ToUpperInvariant(), "mk-tietoja__otsikko", periaateVieritys), Kirjasin.Kone);
-                        if (MiniJson.Teksti(o, "teksti") is string te)
-                        {
-                            var l = Rakenne.Teksti(te, "mk-kortti__teksti mk-aloitus__periaate", periaateVieritys);
-                            if (karki) { karki = false; Kirjasimet.Aseta(l, Kirjasin.LukuLihava); } // kärki korostuksena (web #3800)
-                        }
-                    }
-                    // Linkki ja palautelohko säilyvät paketin tekstien jälkeen (web: ennen oikeusriviä).
-                    if (periaateLinkki != null) periaateVieritys.Add(periaateLinkki);
-                    if (periaatePalaute != null) periaateVieritys.Add(periaatePalaute);
-                    if (MiniJson.Teksti(p, "oikeudet") is string oik) Rakenne.Teksti(oik, "mk-kortti__teksti mk-aloitus__periaate", periaateVieritys);
-                }
+                if (p != null && MiniJson.Teksti(p, "lippurivi") is string lr) Apuraha.Lippurivi = lr;
             }
             catch (Exception e) { Debug.LogWarning("MATKAKIRJA ui aloitus: ui-tekstit: " + e.Message); }
         }
@@ -1071,75 +1041,6 @@ namespace Matkakirja.Natiivi
             if (!(v > 0f)) return 0;
             float ph = juuri.panel != null ? juuri.panel.visualTree.layout.height : float.NaN;
             return v * (!float.IsNaN(ph) && ph > 0f ? Screen.height / (double)ph : PalloKierto.Pistekerroin);
-        }
-
-        // --- periaatteet (web naytaPeriaatteet, sanasta sanaan) ------------------------
-
-        VisualElement Periaatteet(VisualElement isa)
-        {
-            var h = Rakenne.El("mk-himmennys mk-himmennys--tumma", isa);
-            h.style.display = DisplayStyle.None;
-            h.RegisterCallback<PointerDownEvent>(e => { if (e.target == h) Rakenne.Nayta(h, false, 250); });
-            var kortti = new Kortti("mk-tietoja mk-periaatteet", pohja: true); // KORTTI-pohja (web #3800)
-            h.Add(kortti);
-            var o = Rakenne.Teksti("Oppiminen on hauskaa", "mk-kortti__otsikko", kortti.Sisus);
-            Kirjasimet.Aseta(o, Tyylikirja.Kirjain.Otsikko);
-            periaateOtsikko = o;
-            var v = new ScrollView(ScrollViewMode.Vertical);
-            periaateVieritys = v;
-            v.AddToClassList("mk-tietoja__vieritys");
-            v.verticalScrollerVisibility = ScrollerVisibility.Hidden;
-            kortti.Sisus.Add(v);
-            // Kärki (ensimmäinen kappale) korostuksena (web #3800); väliotsikot kapiteeleja (USS .mk-periaatteet).
-            bool karki = true;
-            void K(string t) { var l = Rakenne.Teksti(t, "mk-kortti__teksti mk-aloitus__periaate", v); if (karki) { karki = false; Kirjasimet.Aseta(l, Kirjasin.LukuLihava); } }
-            void O(string t) { var l = Rakenne.Teksti(t.ToUpperInvariant(), "mk-tietoja__otsikko", v); Kirjasimet.Aseta(l, Kirjasin.Kone); }
-            K("Matkakirja ja unohdettu aarre on seikkailupeli, jonka sivutuotteena opitaan — "
-                + "ei oppikirja, johon on liimattu noppa. Pelin pitää olla "
-                + "koukuttava ensin; tieto tarttuu matkassa.");
-            O("Mitä pelissä opitaan");
-            K("Maiden arkea ja kulttuuria, maantiedettä ja historiaa, "
-                + "geopolitiikkaa ja poliittista tilannetta — ja ennen kaikkea sitä, "
-                + "että maailma on suurempi kuin oma ympäristö. Jokaisella "
-                + "pysähdyksellä on jotain katsottavaa: valokuva silloin ja nyt, "
-                + "maan tunnusluvut, kaupungin musiikkia ja ruokaa.");
-            O("Kaksi ääntä");
-            K("Isoisän päiväkirja vuodelta 1873 ja nuoren Foggin havainto "
-                + "tänään. Vanha ääni loistaa siinä, mikä ei ole muuttunut, ja on "
-                + "toivottoman vanhentunut nimissä ja rajoissa.");
-            O("Totuus ja lähteet");
-            K("Jokainen väittämä on tarkistettavissa. Epävarmaa ei väitetä "
-                + "eikä kiistanalaista esitetä varmana. Politiikka ja historia "
-                + "kuvataan, ei tuomita: kerrotaan mitä on ja miksi.");
-            O("Tekoäly apuna, ihminen päättää");
-            K("Tekoäly auttaa sisällön kokoamisessa: havainnekuvat luodaan "
-                + "avoimesti lisensoiduista aineistoista ja merkitään havainnekuviksi, "
-                + "ja tekstit kirjoitetaan lähteistä uudelleen yhtenäiseen asuun. "
-                + "Jokaisen sisällön tarkistaa ja hyväksyy ihminen.");
-            O("Kunnioitus");
-            K("Jokainen maa kuvataan asukkaidensa silmin — ei stereotypioita, "
-                + "ei pilkkaa eikä säälittelyä, ei pelkkiä turistikliseitä. "
-                + "Vaikeita aiheita ei kaunistella eikä kauhistella.");
-            O("Avointa ja ilmaista");
-            K("Peli on toistaiseksi ilmainen, ja sen lähdekoodi on "
-                + "kaikkien luettavissa. Peliä tekee tamperelainen "
-                + "Visuaaliviestinnän Instituutti (VVI). "
-                + "Kuvat, äänet ja tiedot tulevat avoimista "
-                + "lähteistä, ja jokaisen kohdalla lukee mistä se on ja kuka sen "
-                + "on tehnyt. Peli itse on tekijänsä omaisuutta: sitä saa pelata "
-                + "ja lähdekoodia lukea vapaasti, mutta julkaisuun tai omaan "
-                + "tuotteeseen tarvitaan lupa.");
-            // Web periaate-linkit ja -oikeudet (ui.js naytaPeriaatteet).
-            var gh = Rakenne.Nappi("Pelin GitHub-sivu", "mk-lehti__linkki mk-aloitus__periaatelinkki", () => Application.OpenURL("https://github.com/ravelius/Matkakirja"), v);
-            Kirjasimet.Aseta(gh, Kirjasin.Kone);
-            periaateLinkki = gh;
-            // Web periaatePalaute: palautelohko linkin jälkeen (lomake: PalauteLomake.cs).
-            periaatePalaute = PalauteLomake.PeriaateLohko(v, UiKerros.Traileri);
-            Kirjasimet.Aseta(Rakenne.Teksti("© Visuaaliviestinnän Instituutti Tampere Oy", "mk-aloitus__oikeudet", v), Tyylikirja.Kirjain.Apuri);
-            var napit = Rakenne.El("mk-kortti__napit", kortti.Sisus, PickingMode.Ignore);
-            var sulje = Rakenne.Nappi("Takaisin", "mk-nappi--toiminto", () => Rakenne.Nayta(h, false, 250), napit);
-            Kirjasimet.Aseta(sulje, Kirjasin.KoneLihava);
-            return h;
         }
 
         // --- testi ---------------------------------------------------------------------
