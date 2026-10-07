@@ -1,7 +1,7 @@
 {
   "rakennus": "olavinlinna",
-  "hash": "abcdfb635107f271",
-  "kansio": "dioraama/olavinlinna/blender/abcdfb635107f271/",
+  "hash": "53619da2b4e68e43",
+  "kansio": "dioraama/olavinlinna/blender/53619da2b4e68e43/",
   "tiedostot": [
     {
       "polku": "hahmot/apulainen-1500-faceit.glb",
@@ -112,6 +112,116 @@
       "polku": "hahmot/vouti-1500.glb",
       "sha256": "204ffd40b4882180c53a69b7a5ff67c67e0e94d9c35c745eb5b4e277ca13268a",
       "tavuja": 2505524
+    },
+    {
+      "polku": "kavely/esine-kauha.glb",
+      "sha256": "b1106df74d4a614ae5e6bf7cc828b9e80736a6db8c88e11923ca1d47eba8c2a2",
+      "tavuja": 68500
+    },
+    {
+      "polku": "kavely/esine-kuppi.glb",
+      "sha256": "f023bb3c5ea60c66b553674e500b018f46c11a18e91ae5e6c0bd96042654af8d",
+      "tavuja": 103936
+    },
+    {
+      "polku": "kavely/esine-lautanen.glb",
+      "sha256": "f1a131c8a4e5e5658cb774b598d267470cbb6f5882c5f80540d58f09293ba795",
+      "tavuja": 65176
+    },
+    {
+      "polku": "kavely/esine-leipa.glb",
+      "sha256": "788d9247f0c21dbd4eadea51093ab4ffcf72338af0131a9131bfa6f94b5b0150",
+      "tavuja": 60388
+    },
+    {
+      "polku": "kavely/esine-omena.glb",
+      "sha256": "797f65c8f69b518371ac34eec31e5fe7a80530a7df892302f056c8e171b44046",
+      "tavuja": 87452
+    },
+    {
+      "polku": "kavely/esine-savipurkki.glb",
+      "sha256": "7fc5c90b5085adc36cd1a9a4906a5862f8bc6445219b150058d96838ac799477",
+      "tavuja": 112148
+    },
+    {
+      "polku": "kavely/keittio-G102-kavely.glb",
+      "sha256": "f988bc45eaaf0952bf45665606d6cf22ae5d6c4886218012eadc1fbb9bc3b1da",
+      "tavuja": 1796
+    },
+    {
+      "polku": "kavely/keittio-G102-tormays.glb",
+      "sha256": "c1d7a3845125999ba94b17a08ae4612f617a8a9eb311b924d3b435f4018fdac6",
+      "tavuja": 3812
+    },
+    {
+      "polku": "kavely/keittio-G102.glb",
+      "sha256": "a35114d1bdb70243f8e8b2d7b83523ecca260e3a2b51c4e469e1f30bd9d67ceb",
+      "tavuja": 17836
+    },
+    {
+      "polku": "kavely/kirkkotorni-portaat-kavely.glb",
+      "sha256": "e903015abd308906fb09f7cf203e3bc88bfabb705bd400d32b057fdd5ee698e3",
+      "tavuja": 3972
+    },
+    {
+      "polku": "kavely/kirkkotorni-portaat-tormays.glb",
+      "sha256": "395b244502a2cbfd5840af92a0fb7bee6eb1985238baf5ebd6cbc389b8b20d70",
+      "tavuja": 13312
+    },
+    {
+      "polku": "kavely/kirkkotorni-portaat.glb",
+      "sha256": "2426c8a429fa4872254b0449c747d0c58ab0ced14770e395e508eea8994b9fdb",
+      "tavuja": 41500
+    },
+    {
+      "polku": "kavely/merkit.json",
+      "sha256": "4aaa37f0f06172927bf284cc3ac591ccf541587fbbbdc849a1b362f075b9d7af",
+      "tavuja": 2920
+    },
+    {
+      "polku": "kavely/osat.json",
+      "sha256": "fe99519cf752781d95c04e21e230fc2504a7040a93552d2401f3d61185b2c79b",
+      "tavuja": 7068
+    },
+    {
+      "polku": "kavely/porttikaytava-T102-kavely.glb",
+      "sha256": "400966983d52bf56b70ffecdc6f75cbebdbe71b1cb141f00ffbc01fe55544427",
+      "tavuja": 2248
+    },
+    {
+      "polku": "kavely/porttikaytava-T102-tormays.glb",
+      "sha256": "2c6e1698d958fd47e9a19a1c4c0732511d3918abb488fee55e4ea830dd407549",
+      "tavuja": 8116
+    },
+    {
+      "polku": "kavely/porttikaytava-T102.glb",
+      "sha256": "9ec13fac287912b91b296d1e194b8163bd2d78b481d87144f26b535ea4228a7a",
+      "tavuja": 26660
+    },
+    {
+      "polku": "kavely/ulkoalue-kavely.glb",
+      "sha256": "42757797e7f8cf6748096ef29dc7d2d829b62858bc53fdf2a5ca0ccbc03afeeb",
+      "tavuja": 206180
+    },
+    {
+      "polku": "kavely/ulkoalue-tormays.glb",
+      "sha256": "189467bd91b6b10fbfb4a75caeeda87fc931e3e3d47c71f978e654b9dd2ec6c6",
+      "tavuja": 127748
+    },
+    {
+      "polku": "kavely/vesiportti-kavely.glb",
+      "sha256": "1d610d9ad16be7567490b74dd9a7e6d2b89cbeb91d63d929accce3584b2b0de1",
+      "tavuja": 2628
+    },
+    {
+      "polku": "kavely/vesiportti-tormays.glb",
+      "sha256": "ac8e2f69960f5854eff88dd42bae398dc75c1efd0f91f93054dd8e255676c98f",
+      "tavuja": 13116
+    },
+    {
+      "polku": "kavely/vesiportti.glb",
+      "sha256": "3129d1c91c1ac593a1f792014e77e624510a3270f1102df5fab70222382db8d4",
+      "tavuja": 41152
     },
     {
       "polku": "kirjasto/materiaali/graniittilohkomuuri/graniittilohkomuuri_diff-4x4.astcm",
@@ -787,6 +897,16 @@
       "polku": "ymparisto/maasto/mossy_rock_nor_gl_1k.jpg",
       "sha256": "232cdd6a9fdfd01bb8bb1f8f604c53dbca79fa0d3d7995edf85c9945757aa8df",
       "tavuja": 995727
+    },
+    {
+      "polku": "ymparisto/mallit/rantakivet-kevyt.glb",
+      "sha256": "06d5e0ade5e730474815deb826c7f00889320820d4e14047f701fae6f53ae413",
+      "tavuja": 1887984
+    },
+    {
+      "polku": "ymparisto/mallit/rantakivet.glb",
+      "sha256": "cc02005311d84260d665ada89fafac16516e6cc7bccaa291757e42f9ac5541be",
+      "tavuja": 2783304
     },
     {
       "polku": "ymparisto/puukortit-4x4.astcm",

@@ -429,6 +429,18 @@ export function lisaaBlender(rakennusJson, blender) {
     if (ya.taivas) { astc(ya, 'taivas_astc', 'taivas-2k-4x4.astcm'); astc(ya, 'taivas_hamara_astc', 'taivas-hamara-2k-4x4.astcm'); }
     astc(ya.aluskasvit, 'atlas_astc', 'aluskasvit-4x4.astcm'); astc(ya.aluskasvit, 'atlas_hamara_astc', 'aluskasvit-hamara-4x4.astcm');
   }
+  // Staattiset ympäristömallit (Siirtoseppä 7.10., natiivi historia-h0): ymparisto/mallit/<id>.glb (+ <id>-kevyt.glb) →
+  // ymparisto.mallit[] { id, huippu, kevyt }. Rantakivikko ja kalliojalusta, myöhemmin vene. Vanha natiivi ohittaa kentän.
+  const mallit = [...on.keys()].filter((p) => /^ymparisto\/mallit\/[^/]+\.glb$/.test(p) && !p.endsWith('-kevyt.glb')).sort()
+    .map((p) => { const id = p.slice('ymparisto/mallit/'.length, -4); const kevyt = `ymparisto/mallit/${id}-kevyt.glb`;
+      return { id, huippu: B(p), kevyt: B(on.has(kevyt) ? kevyt : p) }; });
+  if (mallit.length) { rakennusJson.ymparisto = rakennusJson.ymparisto || {}; rakennusJson.ymparisto.mallit = mallit; }
+  // Vapaa kävely (omistaja 7.10. 08.4x; Linnanrakentaja + Siirtoseppä): kavely/osat.json (osien glb:t, rajat, naapurit,
+  // portaalit, leikkaukset, kamera_rajat) ja kavely/merkit.json (ovi:, piilo:, esine:, partio:). Polut osat.jsonissa
+  // suhteessa kavely/-kansioon. Vain jos viety; vanha natiivi ohittaa kentän.
+  if (on.has('kavely/osat.json') && on.has('kavely/merkit.json')) {
+    rakennusJson.kavely = { osat: B('kavely/osat.json'), merkit: B('kavely/merkit.json') };
+  }
   const atlas = (id, v) => ({
     tiedosto: B(`valot/${id}${v}.jpg`), puoli: B(`valot/${id}${v}-2k.jpg`),
     astc: B(`valot/${id}${v}-4x4.astcm`), astcPuoli: B(`valot/${id}${v}-2k-4x4.astcm`),
