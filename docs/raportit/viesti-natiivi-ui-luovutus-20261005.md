@@ -6,7 +6,19 @@ worktreet /Users/Shared/Claude/wt/proto-natiivi-ui-<aihe>. Käännös: lokit/nat
 Simu vain Julkaisijan "SIMU NYT" -viestistä, oma iPhone FB234D08-4693-4496-9C7A-6C7C15B03963, iPad
 AD119F7B-A2A2-43EE-8769-7326DD757F89; lopuksi sammutus ja "simu vapaa".
 
-## TILA 7.10. klo 09.0x (uusin)
+## TILA 7.10. klo 10.4x (uusin)
+
+- JUNA 160 natiivi-ui/apuraha-periaate 0261750e (kuumailmapallo-160 73ed2612 päällä): Elävä opas → Kuumailmapallo (KUITATTU),
+  portin linkki pois (KUITATTU), apurahakortin loppuun lippurivi + palautelohko + © (odottaa: lippurivin rivitys 583fb158 ja ei tyhjiä
+  kuvakehyksiä 0261750e → käännös ~11.15 + skriptit/lippurivi.sh, testiesittely skriptit/apuraha-testi.json). Todisteet apuraha-160/.
+- PARIISIN KAUPUNKIESITYS natiivi-ui/pariisi-esitys 8a50da76 (apuraha + LS1 pallokori): Kysy-rivi kierroksen ajan (esitysRivi),
+  METROLINJA-pohja (Pohjat/metrolinja.uss + OpasMetrolinja, omistaja hyväksyi 10.2x), Kysy = LS1 KysyKysymykset + Puhu/Kirjoita,
+  Liikun Kaupunkikierros pois. LS1 kokoaa yhdistelmän linssiseppa/esitys-giza ja ottaa omistajan stillit.
+- SEIKKAILUTAPIT natiivi-ui/seikkailu-tapit 34cf54b0: todennettu Siirtosepän V1-ajossa; Päätoimittaja kuittaa hänen kuvistaan, junaan
+  vain historia-h0:n kanssa kehittäjäkytkimen takana → SHA Natiivisepälle kuittauksen jälkeen.
+- Juna 159 kaupunkiopas cf5e31b8 lähetetty. Näyttö yhä 2560×1440 (omistaja).
+
+## TILA 7.10. klo 09.0x
 
 - JUNA 157: Natiivisepän VIE-runkoon fdc7828c konflikti OpasOdotusTestit.cs → natiivi-ui/sallitut-157b eb6f860f (molemmat testit,
   Linssit-testit 796/796) lähetetty Natiivisepälle.
