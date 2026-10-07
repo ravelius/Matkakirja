@@ -31,10 +31,12 @@ namespace Matkakirja
         /// "vektorit versio &lt;nimi&gt;|web|oletus" (<see cref="AsetaVersio"/>).
         /// </summary>
         public const string OletusVersio = KorkeusVersio;
-        /// <summary>Rajakorkeussarja (tools/maasto/vie-rajakorkeudet.mjs).</summary>
-        public const string KorkeusVersio = "2026-09-25-gshhs-korkeus";
+        /// <summary>Rajakorkeussarja (tools/maasto/vie-rajakorkeudet.mjs). 2026-10-07-swe (Karttaseppä, Päätoimittajan kuittaus 7.10.):
+        /// Natural Earth _swe-näkökulma: Krimin kannas pois (Kertšinsalmen raja jää), koko Kypros CYP:tä (Vihreä linja pois,
+        /// tukikohdat jäävät), Länsi-Sahara erillään Marokosta; 2026-09-25-sarja oli tehty ennen 30.9. Krim-korjausta.</summary>
+        public const string KorkeusVersio = "2026-10-07-swe-korkeus";
         /// <summary>Webin sarja ilman korkeuksia (js/pallovektorit.js PALLOVEKTORIT_VERSIO).</summary>
-        public const string WebVersio = "2026-09-21-gshhs";
+        public const string WebVersio = "2026-10-07-swe";
         /// <summary>Käytössä oleva sarja (ajossa vaihdettava komennolla).</summary>
         public static string Versio { get; private set; } = OletusVersio;
         /// <summary>Aineiston kansio ämpärissä (ilman juurta).</summary>
