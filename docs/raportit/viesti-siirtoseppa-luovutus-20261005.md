@@ -8,7 +8,7 @@ kappeli). Lue tämä osio ja alin TILA-loki (päivän loppu), sitten CLAUDE.md j
   <haara>:refs/heads/peili/proto/<haara>`). Luovutus: tämä tiedosto haarassa siirtoseppa-luovutus (Matkakirja-siirtoseppa).
 - Haarat: **siirtoseppa/historia-h0** (kolmas persoona, junien pohja, kärki c652ba83), **siirtoseppa/historia-juna164 @ 6d2b1149**
   (kuittaus pyydetty PT:ltä; juna163 + V7 + tietokerros + v44i-merkit + nousu laiturille; pala v44j 42d49bd4),
-  **siirtoseppa/historia-fp @ 204aa370** (ENSIMMÄINEN PERSOONA + kädet-v1 + pelattavuusmallin vaiheet 1–2 osin, ei vielä junaan; pala v44l 45be7435).
+  **siirtoseppa/historia-fp @ 6aed2877** (ENSIMMÄINEN PERSOONA + kädet-v1 + pelattavuusmallin vaiheet 1–2 osin, ei vielä junaan; pala v44l 45be7435).
 - TESTAUS (omistaja 7.10. 15.5x/16.0x): ennen junaa VAIN Linssit-testit/kaanna.sh + Linssit-testit/unity-tarkistus.sh; ei omia
   käännöksiä, simua, stillejä eikä savuja. Kuittaus PT:ltä yhdellä rivillä (mitä, testit, SHA) → Natiiviseppä junaan.
 - OMISTAJA 7.10. 18.5x–18.7x: KAIKKI PELIT ENSIMMÄISESSÄ PERSOONASSA (Thief-malli; ei vartaloa/peilikuvaa; kädet saavat näkyä
@@ -554,3 +554,4 @@ Edellinen luovutus on `viesti-siirtoseppa-luovutus-20261002.md` (5.10. osiot 02.
   846/846, unity-tarkistus 0. LR:lle tarvitaan: osat.json "pinta" per osa, pinta:<laji>-N -merkit, partio-merkkeihin "profiili"/"henkilo".
 - 19.45: 2.3 oma kynttilä + suojaus + vartijan lyhty, 2.5 nähty piiloon meno 124503bd. historia-fp-kärki 124503bd, riippuvuus NUI 754f090b.
 - 19.47: 3.4 irtipääsy + 4.1 ote/himmennys 204aa370 (847/847, unity-tarkistus 0). NUI Tekstivahti() → botin lokiväittämiin (vaihe 3).
+- 19.50: 4.3 tarkistuspisteet portaaleista ee0029ec; V6 tallennus 6aed2877 (SeikkailuTallennus + SeikkailuTallentaja; jatko vain PelattavaPalaJatka-pyynnöstä, NUI:lle kerrottu, pohja PT:n päätös). 849/849, unity-tarkistus 0. JÄLJELLÄ huomiselle: tyrmä (LR E 101), vihjeportaat (kohta 5, PuluVihje-koukku valmis), huone 1 pressun alla + K1, tarjotin + riidan ikkuna, torkkuva vartija, kiipeily, botti + huonesimulaatio (kohta 11), anteeksianto 4.2.
