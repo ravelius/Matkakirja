@@ -28,7 +28,7 @@ namespace Matkakirja.Natiivi
 
         sealed class V
         {
-            public Vartija Aivot; public NavMeshAgent Agentti; public string Osa, Nimi, Henkilo; public bool NakiViimeksi;
+            public Vartija Aivot; public NavMeshAgent Agentti; public string Osa, Nimi, Henkilo, Leike; public bool NakiViimeksi;
             public double KavelyAika; public bool Kavelee; public Vector3 Kohde = new Vector3(float.NaN, 0, 0);
             public VartijanTila EdellinenTila;
             public AudioSource Askeleet;
@@ -163,7 +163,7 @@ namespace Matkakirja.Natiivi
                 v.Askeleet.loop = true; v.Askeleet.volume = 0.9f;
                 sv.vartijat.Add(v);
                 // Torkkuja: leikkeet torkku / syo, jos skinissä (LR pyydetty), muuten idle (Hahmot3D:n varaketju).
-                hahmot?.LisaaIrrallinen(rakennus, henkilo, vg.transform, () => (v.Aivot.Torkkuu ? (v.Aivot.Syo ? "syo" : "torkku") : v.Kavelee ? "kavely" : "idle", v.KavelyAika));
+                hahmot?.LisaaIrrallinen(rakennus, henkilo, vg.transform, () => (v.Leike ?? "idle", v.KavelyAika));
                 DioraamaHahmot3D.PiilotetutHenkilot.Add(henkilo);   // kohtauksen sama henkilö pois (ei kahta kokkia)
                 sv.henkilot.Add(henkilo);
             }
@@ -306,6 +306,9 @@ namespace Matkakirja.Natiivi
                     else if (aa.isPlaying) aa.Stop();
                 }
                 // Kävelytahti nopeuden mukaan (silmukka on mitoitettu sykliMs:iin), ei liukuvia jalkoja.
+                // Leike tilasta (torkku / syo / nousu_istumasta v44p); vaihtuessa aika alusta (nousu ei silmukka).
+                string leike = v.Aivot.Torkkuu ? (v.Aivot.Syo ? "syo" : "torkku") : v.Aivot.Horjuu && v.Aivot.Profiili == VartijaProfiili.Torkku ? "nousu_istumasta" : v.Kavelee ? "kavely" : "idle";
+                if (leike != v.Leike) { v.Leike = leike; v.KavelyAika = 0; }
                 v.KavelyAika += v.Kavelee ? dt * (v2 / Math.Max(0.1, sykliMs)) * 1.0 : dt;
             }
             // Sydän (kohta 3.4): vahvin vaara kaikista hahmoista; tempo 70 → 120 sävelkorkeutena, voimakkuus mukana. Kappelin sääntö ohjaa
