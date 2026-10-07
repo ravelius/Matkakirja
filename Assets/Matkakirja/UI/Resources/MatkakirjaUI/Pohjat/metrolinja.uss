@@ -1,12 +1,11 @@
 /* METROLINJA-pohja (omistaja 7.10.2026 klo 10.2x, Päätoimittajan kortti; Pariisin kaupunkiesitys): kierroksen eteneminen pystyviivana.
- * Kaikki asemat nimineen himmeinä (--tk-reunus), nykyinen tummana ja lihavoituna (--tk-korostus, Ø 12 pt piste pinnan reunalla);
- * kuljettu osuus viivasta --tk-korostus (EDISTYMINEN-tokenit), harmaa lasi isännän tk-teemasta. Vasen reuna keskellä, korkeus
- * enintään 40 % ruudusta (paikka ja korkeus koodista, OpasMetrolinja). Puhelimella pitkä nimi yhdelle riville (…). VAIN --tk-*. */
+ * Omistaja 12.3x: EI taustaväriä; teksti, pisteet ja viiva oppaan otsikon valkoisella (harmaan teeman --tk-korostus) ja samalla
+ * varjolla ja ääriviivalla (koodista, Tyylikirja.Himmennys kuten KierrosTaulun otsikko), jotta erottuu vaaleaa ja tummaa karttaa
+ * vasten. Porrastus nykyinen > viereiset > muut (koko, paino, peitto) koodista; vaihto pehmeästi ~1 s kuumailmapallon lähtiessä.
+ * iPhonella vasen yläkulma, iPadilla vasen reuna keskellä; korkeus enintään 40 %. Pitkä nimi yhdelle riville (…). VAIN --tk-*. */
 .mk-metrolinja {
     position: absolute;
     padding: var(--tk-vali-s) var(--tk-vali-m) var(--tk-vali-s) var(--tk-vali-s);
-    border-radius: var(--tk-kulma-kortti);
-    background-color: var(--tk-pinta-peitto);
     justify-content: space-between;
     opacity: 0;
     transition-property: opacity;
@@ -21,11 +20,12 @@
 .mk-metrolinja__kuljettu {
     position: absolute;
     width: 2px;
-    background-color: var(--tk-reunus);
+    background-color: var(--tk-korostus);
+    opacity: 0.45;
 }
 
 .mk-metrolinja__kuljettu {
-    background-color: var(--tk-korostus);
+    opacity: 1;
 }
 
 .mk-metrolinja__asema {
@@ -46,28 +46,15 @@
     width: 8px;
     height: 8px;
     border-radius: 4px;
-    background-color: var(--tk-reunus);
-}
-
-.mk-metrolinja__asema--nykyinen .mk-metrolinja__piste {
-    width: 12px;
-    height: 12px;
-    border-radius: 6px;
-    border-width: 2px;
-    border-color: var(--tk-pinta);
     background-color: var(--tk-korostus);
 }
 
 .mk-metrolinja__nimi {
     margin-left: var(--tk-vali-s);
-    font-size: var(--tk-koko-apuri);
-    color: var(--tk-reunus);
+    font-size: var(--tk-koko-kapiteeli);
+    color: var(--tk-korostus);
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     flex-shrink: 1;
-}
-
-.mk-metrolinja__asema--nykyinen .mk-metrolinja__nimi {
-    color: var(--tk-korostus);
 }

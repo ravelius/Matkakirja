@@ -264,7 +264,7 @@ namespace Matkakirja.Natiivi
             kuvaNappi.style.display = DisplayStyle.None;
             nappi = Ohjausnappi.Nappi(Ikonit.Valikko, "Valikko", () => { Debug.Log("MATKAKIRJA opas: ☰ " + (Auki ? "kiinni" : "auki")); if (Auki) Sulje(); else Avaa(Nakyma.Paa); }, ryhma);
             // VUOROKAUDENAIKA (omistaja 6.10. 18.5x): OHJAUSNAPPI vasempaan yläkulmaan; kuvake = voimassa oleva tila, A = automaattinen.
-            var aikaRyhma = Ohjausnappi.Ryhma(Juuri);
+            aikaRyhma = Ohjausnappi.Ryhma(Juuri);
             aikaRyhma.AddToClassList("mk-ohjausryhma--vasen");
             aikaNappi = Ohjausnappi.Nappi(Ikonit.Viiva["paiva"], "Vuorokaudenaika", () => { if (Auki && nakyma == Nakyma.Aika) Sulje(); else Avaa(Nakyma.Aika); }, aikaRyhma);
 
@@ -449,6 +449,17 @@ namespace Matkakirja.Natiivi
         /// </summary>
         /// <summary>Oppaan alarivin nappi LIIKU-pohjalla: teksti (Kysy, Liiku) tai pelkkä kuvake (mikrofoni, näppäimistö), keskitettynä.</summary>
         OpasMetrolinja metro;
+        VisualElement aikaRyhma;
+
+        /// <summary>Vuorokausinappi: iPhonella oikean yläkulman ryhmään ■ ≡ -nappien vasemmalle (omistaja 12.3x), iPadilla vasemmalle.</summary>
+        void SijoitaAikaNappi()
+        {
+            if (float.IsNaN(Juuri.layout.width) || Juuri.layout.width <= 0) return;
+            var isa = LeveaRuutu ? aikaRyhma : ryhma;
+            if (aikaNappi.parent == isa) return;
+            aikaNappi.RemoveFromHierarchy();
+            isa.Insert(0, aikaNappi);
+        }
 
         /// <summary>
         /// Metrolinja kierroksen ajan (ei valikon tai chatin aikana) vasempaan reunaan keskelle: kaistaan otsikon (☾A:n alla, ~57 pt)
@@ -460,7 +471,11 @@ namespace Matkakirja.Natiivi
             bool nayta = nakyy && !Auki && !(chat?.Auki ?? false) && (metro.Testi || OpasSovitin.KierrosIndeksi >= 0);
             float h = Juuri.layout.height, w = Juuri.layout.width;
             if (float.IsNaN(h) || h <= 0) return;
-            float yla = 8f + Tyylikirja.Nappi.Ohjaus + 8f + 57f + 8f;
+            // Omistaja 12.3x: iPhonella (pysty ja vaaka) vasempaan yläkulmaan, vuorokausinappi oikean ryhmän riviin; iPadilla
+            // vasen reuna keskellä otsikon ja tappien välissä kuten ennen.
+            SijoitaAikaNappi();
+            metro.Keskita = LeveaRuutu;
+            float yla = LeveaRuutu ? 8f + Tyylikirja.Nappi.Ohjaus + 8f + 57f + 8f : 8f;
             float ala = tapit.Nakyy ? h - (tapit.Ala + OpasTapit.Halkaisija + KuvaRako) : h - (TapitAla + KuvaRako);
             float vasen = OpasTapit.Reuna;
             // Matala ruutu (iPhone vaaka, LS1:n still 7.10.: 8 asemaa ~45 pt:n kaistassa, nimet litistyivät): linja vasemman tapin
