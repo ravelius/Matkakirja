@@ -1,4 +1,4 @@
-# Linssisepän luovutus 7.10.2026 klo 04.3x
+# Linssisepän luovutus 7.10.2026 klo 04.5x
 
 Rooli: Linssiseppä (Opus, high). Proto-worktree: `/Users/Shared/Claude/wt/proto-linssiseppa-astro-auto`, jonka haarat ovat paikallisia proto-gitissä.
 Tarkistus jokaisessa haarassa: `Linssit-testit/kaanna.sh` ja `Linssit-testit/unity-tarkistus.sh`. COZY-haaroille `unity-tarkistus` ajetaan COZY-dll:n
@@ -6,7 +6,7 @@ kanssa: scratchpadin `kaanna-cozy.sh` → `MATKAKIRJA_KIRJASTOT=…/kirjastot-co
 
 ## Juna 156: odottaa Päätoimittajan kuittausta Natiivisepälle
 
-Haara `linssiseppa/juna-156` **26ea7f73e** (käännös 4b0d67431) sisältää:
+Haara `linssiseppa/juna-156` **6b35811e7** (käännös 08725ed0a, Päätoimittajan kuittaus pyydetty 04.4x) sisältää:
 - master BUILD 154
 - `esilataus-156`: esilataus, latauskuva, Seuraava, pehmeät lennot, kierros-kenttä #4086 ja esikameran Googlen ehtorajat kommenttina
 - `yovalot-154`: yövalot v5 sekä tiet_polut ja tiet-v2
@@ -20,16 +20,16 @@ Kuittaukset:
 - Eiffelin VIE-este on korjattu ja todennettu (`linssiseppa-eiffel2-20261007/kuvat/stillit-2x2.png`).
   - Juurisyy: Kerro lisää -oikotie (sama paikka alle 50 m) jätti valinnan tai Liikun arviokohteen katukehyksen (143 m) workerin oikealle kohteelle.
   - Lisäksi maa otetaan nyt kehän mediaanista (r 35–60 m) eikä keskipisteestä, joka osui torniin tai kattoon.
-- Eiffelin huippu leikkautuu yläreunasta, koska etäisyyden yläraja on 600 m. Tämä ei estä junaa, ja säätö tehdään vain, jos Päätoimittaja sitä pyytää.
+- Korkea kohde (≥ 60 m) mahtuu kokonaan kuvaan. Etäisyys lasketaan pystynäkökentästä, yläraja on 1 200 m, ja lähemmäs-vaihe ja dolly eivät mene pienintä mahtuvaa etäisyyttä lähemmäs. Eiffel kehystetään 854 m:stä; todennus: `linssiseppa-eiffel3-20261007/kuvat/stillit-2x2.png`.
 
 ## Juna 157 (valmis, odottaa junaa)
 
-`linssiseppa/sallitut-157` 9c4d369f (omistaja 7.10. 00.4x, vain sallitut kaupungit):
+`linssiseppa/sallitut-157` a9dc543ec (sisältää juna-156:n ja NykyinenKaupunkiId:n Siirtosepän äänimaisemalle) (omistaja 7.10. 00.4x, vain sallitut kaupungit):
 - OpasSallitut lukee listan /opas/aineistot-vastauksen kentästä `sallitut`, ja viimeisin lista säilyy levyllä.
 - Pelaajan kohde sallitun alueen ulkopuolella torjutaan siltalauseella `ei-sallittu`. Jos ääni ei soi, NUI:n TorjuntaTeksti näyttää tekstin.
 - Vapaa lento pysähtyy pehmeästi alueen reunaan.
 
-NUI:n osa on `natiivi-ui/sallitut-157` 0f770be2. LS2:n lista on tiedostossa `proto-3d/lokit/linssiseppa2-3d-kattavuus/sallitut-3d.json`: 36 sallittua ja 5 RAJA-kaupunkia, joista RAJA torjutaan (Päätoimittaja). Pelikoodari tarjoilee listan ja generoi `ei-sallittu`-lauseet; Päätoimittaja hyväksyy tekstin. Ennen junaa haara rebasetaan juna-156:n päälle, jotta Eiffel-korjaukset ovat mukana.
+NUI:n osa on `natiivi-ui/sallitut-157` 0f770be2. LS2:n lista on tiedostossa `proto-3d/lokit/linssiseppa2-3d-kattavuus/sallitut-3d.json`: 36 sallittua ja 5 RAJA-kaupunkia, joista RAJA torjutaan (Päätoimittaja). Pelikoodari tarjoilee listan ja generoi `ei-sallittu`-lauseet; Päätoimittaja hyväksyy tekstin. Haaraan on jo mergetty juna-156 6b35811e7.
 
 ## Giza (omistaja 6.10. 23.35, Päätoimittajan lupa)
 
