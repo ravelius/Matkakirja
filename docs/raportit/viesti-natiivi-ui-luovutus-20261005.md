@@ -11,7 +11,12 @@ AD119F7B-A2A2-43EE-8769-7326DD757F89; lopuksi sammutus ja "simu vapaa".
 JATKA TÄSTÄ: junaan 162 kuitattu apuraha-kuvat 3f07c49b (SHA Natiivisepälle 16.0x) ja seikkailu-tapit 34cf54b0 (16.2x, Päätoimittaja ilmoitti); metro 89d98b7e junassa 161.
 OMISTAJA 15.5x + 16.0x: ei stillejä, savuja eikä omia iOS/Mac-käännöksiä; haaraan unity-tarkistus + kaanna.sh-testit
 (Peli/Linssit/Kartta), kuittaus 1 rivillä Päätoimittajalta → Natiivisepälle. Simukäännös vain epäselvän vian syyhyn, ilmoitus
-Päätoimittajalle ensin. Siirtymäruudun korjaus on LS1:n (pallo-latauskuva 810cda48). Ei avoimia eriä; odota seuraavaa tehtävää.
+Päätoimittajalle ensin. Siirtymäruudun korjaus on LS1:n (pallo-latauskuva 810cda48).
+AVOIN: seikkailun toimintonappi (Siirtoseppä E2, juna 163) = natiivi-ui/seikkailu-toiminto 43701b94 (worktree
+wt/proto-natiivi-ui-seikkailutoiminto), logiikka valmis, unity-tarkistus 0. Kuvakkeet (avoin käsi = poimi, kaareva nuoli =
+heitä, uudet 24×24-viivaikonit Ikonit-kirjastoon) odottavat OMISTAJAN UI-POHJAT-vastausta Päätoimittajan kautta (illalla);
+nyt väliaikaiset Viiva["peukalo"]/Viiva["nuoli"] (SeikkailuTapit.PoimiIkoni/HeitaIkoni). Vastauksen jälkeen ikonit →
+testit → 1 rivin kuittaus Päätoimittajalta → SHA Natiivisepälle.
 
 ## TILA 7.10. klo 15.0x
 
