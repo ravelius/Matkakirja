@@ -9,7 +9,10 @@ AD119F7B-A2A2-43EE-8769-7326DD757F89; lopuksi sammutus ja "simu vapaa".
 ## TILA 7.10. klo 13.0x (uusin, TAUKO 13.45–15.00)
 
 JATKA TÄSTÄ (tyhjästä kontekstista): proto-git /Users/Shared/Claude/proto-3d/Matkakirja-proto, skriptit lokit/natiivi-ui-1035/skriptit.
-- AVOIN 1 (kiireellisin): KÖYSIKORJAUS natiivi-ui/pariisi-esitys a0f15e7e (metrolinja korin köyden oikealle, LS1 KoriVasenKoysiNorm;
+- 13.2x: köysikorjauksen still dd49fff5 EPÄONNISTUI (metrolinja katosi: LS1 KoriVasenKoysiNorm AABB liian leveä). Varmistus
+  7239f7f5 (vain xMax ≤ 0,4 ja leveys ≤ 0,2). Pyydetty LS1:ltä tarkempi laskenta akselista → tauon jälkeen merge LS1:n kärki,
+  KÄÄNNÖS NYT, skriptit/vuoro-koysi.sh, katso metrolinja näkyy köyden oikealla → 2 stilliä Päätoimittajalle.
+- AVOIN 1 (kiireellisin): KÖYSIKORJAUS natiivi-ui/pariisi-esitys 7239f7f5 (ennen a0f15e7e) (metrolinja korin köyden oikealle, LS1 KoriVasenKoysiNorm;
   sis. LS1 esitys-giza 8ff8c0be + omistajan metropalaute KUITATTU b1c53bba). Pyydetty Julkaisijalta KÄÄNNÖS + simu ~6 min →
   skriptit/vuoro-koysi.sh <app> (iPhone vaaka + iPad; kori-GLB kopioidaan Documents/pallokori/) → 2 stilliä Päätoimittajalle
   → hän kuittaa koko esityserän (metro, Kysy-rivi, kori, opastus kerran) junaan 161 → SHA Natiivisepälle.
