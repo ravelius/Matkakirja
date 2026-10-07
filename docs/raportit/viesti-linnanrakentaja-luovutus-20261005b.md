@@ -18,9 +18,8 @@ aikaan; ei omia natiivikäännöksiä; kuittaus = peili + yksi rivi (ei stillej�
   kytkenyt historia-fp:hen (0656eef6). Sisältö: soutu, keittio-g102, kappeli E3 (kätkö syvennys 38,75°, kaari-ovi, ampumakäytävä,
   ikkuna + luukku, holvimaalaukset + maalattu Tott, kilpilaatat esineinä), kavely v2 (85 merkkiä; kavely.py + kuori_kavely.py),
   esineet (_valmiit/olavinlinna-esineet-v1/lahde/esineet.py), Fogg asu v2.
-- KESKEN: käsimalli-agentti → _valmiit/linna-hahmot/kadet-v1 (kadet.glb + kadet.json). Kun valmis: cp kadet.glb → v44/hahmot/kadet.glb,
-  kirjoita js/dioraama/pelaaja-kadet.json (leikkeet, liikkeet, kahva, kamera; Siirtosepän speksi: origo silmissä, +Z, FOV 62, near
-  0,05) ja commitoi worktreen rakenna.mjs:n pelaaja.kadet-lohko (nyt commitoimatta) → vienti v44l → peili Siirtosepälle (odottaa).
+- v44l PEILISSÄ 45be74356f79a1c6 (blender 10bcc690, 0a0b65e67): 1. persoonan kädet (_valmiit/linna-hahmot/kadet-v1, lahde/aja.sh;
+  Mixamo-leikkeet lahde/mixamo_kadet.sh) → v44/hahmot/kadet.glb + js/dioraama/pelaaja-kadet.json → rakennus.json pelaaja.kadet.
 - AJOTAPA: muutos → leivonta (scratch paistot.sh / leivo_tila.py 2k) → kopioi v44:ään → ASTC (swift proto-3d/tyokalut/astc-mip.swift
   X.jpg X-4x4.astcm 4) → worktreessä `source ~/.zshrc; zsh tools/dioraama/vie-blender.sh --lahde <v44>` → commit blender.json + push →
   `gh workflow run vie-dioraama.yml --ref linnanrakentaja-linna-v42 -f rakennus=olavinlinna -f kuiva=false -f osoitin=false` → hash:
@@ -28,7 +27,7 @@ aikaan; ei omia natiivikäännöksiä; kuittaus = peili + yksi rivi (ei stillej�
   https://media.matkakirja.app/dioraama/olavinlinna/<hash>/`. Kävely: Blender -b -P lahde/kavely.py -- v2, sitten lahde/kuori_kavely.py --
   _valmiit/olavinlinna-blender-v41/ulkokuori/ulkokuori_huippu.glb <v44>/tilat/laituri.glb $PWD/v2; rsync v2/ → v44/kavely/.
   Kappelin leivontapaketti: node scratch/rakenna_kappeli.mjs <paketti>. maalaukset.py ajetaan venv-rembg/bin/python:lla.
-- JONO: (1) käsimalli v44l; (2) huone 6 karkea tila (_lahteet/olavinlinna-pohjat/HUONE6-PALATSI.md); pelattavuusmalli
+- JONO: (1) Siirtosepän palaute v44k/v44l; (2) huone 6 karkea tila (_lahteet/olavinlinna-pohjat/HUONE6-PALATSI.md); pelattavuusmalli
   docs/raportit/pelattavuusmalli-olavinlinna.md tulossa. PR linnanrakentaja-linna-v42 → main kun Päätoimittaja pyytää.
 - GIZA (odottaa): Sfinksin LOD1/2 väritekstuuri ~70 % mustaa (LS1:n mittari proto-3d/tyokalut/linssiseppa-ajot/glb-musta-uv.py),
   helmat liian vaaleat; _valmiit/giza-v2. KIELLETTY (odottaa): haara linnanrakentaja-kielletty.
