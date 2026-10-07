@@ -380,6 +380,21 @@ namespace Matkakirja.Natiivi
 
         /// <summary>Tilan glb:n liekki:-solmut ovat sen liekit (Linnanrakentaja 2.10.2026: sama liekki piirtyi kahdesti, rakennus.json:n
         /// tila.Liekit-listasta ja solmusta). DioraamaSovitin kutsuu tätä, kun tilan glb:ssä on liekki:-solmuja: tilan JSON-liekit pois.</summary>
+        /// <summary>Historiamoottori V7: valoisuus 0…1 pisteessä kaikista näkyvistä (aktiivisista) liekeistä: lähin liekki
+        /// lineaarisesti säteeseen (tulisija ja soihtu 6 m, kynttilä 3 m koon mukaan), alaraja perusvalo.</summary>
+        public float Valoisuus(Vector3 p, float perus = 0.25f)
+        {
+            float v = perus;
+            foreach (var e in esiintymat)
+            {
+                if (e.Go == null || !e.Go.activeInHierarchy) continue;
+                float sade = Mathf.Clamp(2.5f + 2.5f * (float)e.Paikka.Koko, 2.5f, 6f);
+                float d = Vector3.Distance(e.Go.transform.position, p);
+                if (d < sade) v = Mathf.Max(v, 1f - d / sade);
+            }
+            return Mathf.Clamp01(v);
+        }
+
         /// <summary>Historiamoottori E3: tilan liekkien GameObjectit ja paikat (kynttilöiden sammutus ja sytytys).</summary>
         public List<(GameObject Go, Vector3 Paikka)> TilanLiekit(string tilaId)
         {

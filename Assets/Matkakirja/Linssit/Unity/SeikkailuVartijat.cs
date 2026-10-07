@@ -34,6 +34,8 @@ namespace Matkakirja.Natiivi
         }
         /// <summary>Askeläänen klippi (rakennus.json aanet askel-kivi); SeikkailuVartijat.Askeleet asettaa.</summary>
         public static AudioClip AskelKlippi;
+        /// <summary>Tilojen liekit valoisuuden lähteenä (Sovitin asettaa).</summary>
+        public static DioraamaLiekit Liekit;
 
         readonly List<V> vartijat = new List<V>();
         NavMeshDataInstance navi; NavMeshData data;
@@ -129,6 +131,8 @@ namespace Matkakirja.Natiivi
                 var ag = v.Agentti; if (ag == null || !ag.isOnNavMesh) continue;
                 var vp = ag.transform.position;
                 var s = new VartijanSyote { VartijaX = vp.x, VartijaZ = vp.z, Valoisuus = ValoisuusOletus, Aanet = aanet };
+                // V7: valoisuus tilojen liekeistä (tulisija, soihdut, kynttilät): pimeässä nurkassa vartija näkee vain lähelle.
+                if (p != null && Liekit != null) s.Valoisuus = Liekit.Valoisuus(p.transform.position + Vector3.up * 1.0f);
                 // E3: kynttilöiden huoneessa valoisuus kynttilöistä ja omasta kynttilästä (pimeässä vartija näkee vain lähelle).
                 var ky = SeikkailuKynttilat.Aktiivinen;
                 if (p != null && ky != null && ky.Lahella(p.transform.position)) s.Valoisuus = ky.Valoisuus(p.transform.position + Vector3.up, p.transform.position + Vector3.up);
