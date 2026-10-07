@@ -389,8 +389,13 @@ namespace Matkakirja.Natiivi
             if (PelattavaPalaPyydetty && rakennus != null && nayttamo != null && cm != null && SeikkailuVene.Aktiivinen == null && SeikkailuPelaaja.Aktiivinen == null)
             {
                 PelattavaPalaPyydetty = false; pelattavaPala = true;
-                o.StartCoroutine(VenePaalle(VeneKestoS));
-                o.Kirjaa("seikkailu: pelattava pala käynnistyy");
+                // V6: jatko tallennuksesta vain pyynnöstä (Natiivi-UI "Jatka"); muuten aina alusta (veneyö).
+                var jatka = PelattavaPalaJatka ? SeikkailuTallentaja.LueTiedosto("olavinlinna", PelattavaPalaHash) : null;
+                PelattavaPalaJatka = false;
+                SeikkailuTallentaja.Luo(nayttamo.transform, "olavinlinna", PelattavaPalaHash, jatka, o.Kirjaa);
+                if (jatka != null && jatka.OnTarkistus) o.StartCoroutine(JatkaTallennuksesta(jatka));
+                else o.StartCoroutine(VenePaalle(VeneKestoS));
+                o.Kirjaa($"seikkailu: pelattava pala käynnistyy{(jatka != null ? " (jatko tallennuksesta)" : "")}");
             }
             var pelaaja = cm != null ? SeikkailuPelaaja.Aktiivinen : null;
             var vene = cm != null ? SeikkailuVene.Aktiivinen : null;
@@ -496,7 +501,7 @@ namespace Matkakirja.Natiivi
             kelloSiirto = 0;
             kuoriOdotusAlku = -1f; SaapumisOdotus = false; RakennusLatautuu = false; LatausVirhe = null; // näyttämö (ja sen odotuspiilotus) tuhoutuu alla
             // Historiamoottori: seikkailu pois (näyttämön lapset tuhoutuvat; globaalit kuoren leikkaukset ja kävelydata nollataan).
-            SeikkailuVartijat.Poista(); SeikkailuVene.Poista(); SeikkailuPelaaja.Poista(); SeikkailuRepliikit.Poista(); SeikkailuEsineet.Poista(); SeikkailuKynttilat.Poista(); SeikkailuKappeli.Poista(); SeikkailuAanet.Poista(); SeikkailuKavely.Pura();
+            SeikkailuVartijat.Poista(); SeikkailuVene.Poista(); SeikkailuPelaaja.Poista(); SeikkailuRepliikit.Poista(); SeikkailuEsineet.Poista(); SeikkailuKynttilat.Poista(); SeikkailuKappeli.Poista(); SeikkailuAanet.Poista(); SeikkailuTallentaja.Poista(); SeikkailuKavely.Pura();
             SeikkailuEsineet.Kolahti -= KokkiKuuleeKolahduksen;
             cm?.SeikkailuPois(); PelattavaPalaPyydetty = false; KameraVapaa = false;
             if (DioraamaLevyvalimuisti.TestiOsoitin == PelattavaPalaHash)
@@ -901,6 +906,25 @@ namespace Matkakirja.Natiivi
         string pelaajaKameraTapa;
         /// <summary>Kehittäjävalikon pelattava pala (LinssiOhjain.AvaaPelattavaPala): käynnistyy, kun Olavinlinna on ladattu.</summary>
         public static bool PelattavaPalaPyydetty;
+        /// <summary>Pelattava pala jatkuu tallennuksesta (Natiivi-UI:n Jatka; SeikkailuTallentaja.LueTiedosto kertoo, onko jatkettavaa).</summary>
+        public static bool PelattavaPalaJatka;
+
+        /// <summary>V6 jatko: pelaaja viimeisimpään tarkistuspisteeseen ilman saapumista, armoaika 4 s, vartijat ja kappeli kuten laiturilta.</summary>
+        IEnumerator JatkaTallennuksesta(Matkakirja.Linssit.Seikkailu.SeikkailuTallennus t)
+        {
+            yield return VarmistaKavelyData();
+            if (nayttamo == null || rakennus == null) yield break;
+            SeikkailuKavely.Leikkaukset(true);
+            Physics.SyncTransforms();
+            var alku = new Vector3((float)t.X, (float)t.Y, (float)t.Z);
+            if (Physics.Raycast(alku + Vector3.up * 1.5f, Vector3.down, out var osuma, 4f, 1 << DioraamaNayttamo.Kerros)) alku = osuma.point + Vector3.up * 0.05f;
+            var sp = SeikkailuPelaaja.Luo(nayttamo.transform, alku, 0f, DioraamaNayttamo.Kerros);
+            LisaaPelaajahahmo(sp);
+            SeikkailuVartijat.AlkuArmo = true;
+            o.StartCoroutine(VartijatPaalle());
+            o.StartCoroutine(KappeliPaalle());
+            o.Kirjaa($"seikkailu: jatko tarkistuspisteestä {t.TarkistusOsa} ({alku}), kulunut {t.KulunutS:F0} s");
+        }
         /// <summary>Kamera ulkoisen ohjauksen vallassa (E3 loppu: SeikkailuNousu); Sovitin ei kirjoita kameraan.</summary>
         public static bool KameraVapaa;
         bool pelattavaPala;

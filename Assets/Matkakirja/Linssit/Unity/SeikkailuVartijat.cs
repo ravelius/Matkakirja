@@ -80,6 +80,10 @@ namespace Matkakirja.Natiivi
         /// <summary>Viimeisimmän tarkistuspisteen osa ja tapahtuma (V6 tallennus kuuntelee).</summary>
         public static string TarkistusOsa;
         public static event Action<string, Vector3> Tarkistuspiste;
+        /// <summary>Kiinnijäänti (osa, jossa pelaaja oli): V6 tallennus laskee huoneittain.</summary>
+        public static event Action<string> Kiinnijaatiin;
+        /// <summary>Seuraava Luo antaa armonajan heti (jatko tallennuksesta, pelattavuusmalli 4.3).</summary>
+        public static bool AlkuArmo;
         public Vector3 Tarkistus => tarkistus;
         float armoAsti = -1f; const float ArmoS = 4f;
         double sykliMs = 0.955;
@@ -127,6 +131,7 @@ namespace Matkakirja.Natiivi
                 hahmot?.LisaaIrrallinen(rakennus, Henkilo, vg.transform, () => (v.Kavelee ? "kavely" : "idle", v.KavelyAika));
             }
             Aktiivinen = sv;
+            if (AlkuArmo) { AlkuArmo = false; sv.armoAsti = Time.unscaledTime + ArmoS; }
             kirjaa?.Invoke($"seikkailu: vartijat {sv.vartijat.Count} ({string.Join(", ", reitit.Keys)}), NavMesh {(sv.data != null ? "valmis" : "puuttuu")}");
             return sv;
         }
@@ -358,6 +363,7 @@ namespace Matkakirja.Natiivi
         {
             var p = SeikkailuPelaaja.Aktiivinen;
             kirjaa?.Invoke($"seikkailu: KIINNI ({v.Osa}), pelaaja tarkistuspisteeseen {tarkistus}");
+            if (p != null) Kiinnijaatiin?.Invoke(Askelaani.Osa(SeikkailuKavely.Data, p.transform.position.x, p.transform.position.y, -p.transform.position.z));
             if (p != null) p.Siirra(tarkistus);
             armoAsti = Time.unscaledTime + ArmoS;   // E1-ajo 7.10.: tarkistuspiste vartijan näkyvissä → kiinni uudelleen heti
             foreach (var x in vartijat) { var vp = x.Agentti.transform.position; x.Aivot.Nollaa(vp.x, vp.z, valpas: true); x.EdellinenTila = VartijanTila.Partio; }   // tyrmästä palatessa valppaus 60 s
