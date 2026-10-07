@@ -265,3 +265,6 @@ NUI:n osa on `natiivi-ui/sallitut-157` 0f770be2. LS2:n lista on tiedostossa `pro
     - Kappale ilman ääntä: LukuKesto 14 merkkiä/s, väh. 6 s. Chat aukeaa itsestään, ja kuvat ajoitetaan lukuajasta.
     - Avaus tekstinä.
     - Muoto sovittu Pelikoodarin kanssa: ei ääni- tai kestokenttiä, esittely-aaneton-v1 esittely_polut-kentän kautta.
+- 18.3x: äänetön esitys 7568a39bc kuitattu junaan 163 ja lähetetty Natiivisepälle (korvaa c2884bc97:n ja 8bc2a42fc:n).
+  - Junien 162/163 haarani: pallo-latauskuva b9f37ee8f (162), alkulento-v3-korjaus 19dcb1d15 (162), alkulento-aani b11f5e253 (162), aaneton-esitys 7568a39bc (163). Kaikki yhdistyvät keskenään puhtaasti.
+  - GitHubin häiriö: pushaa vasta, kun Julkaisija ilmoittaa sen toimivan.
