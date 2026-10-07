@@ -92,6 +92,7 @@ namespace Matkakirja.Natiivi
                 b.RemoveFromClassList(Button.ussClassName);
                 b.AddToClassList("mk-erikoisnosto-paa");
                 b.tooltip = k.Nimi + ": kaupunkiopas";   // vain VoiceOverille ja vihjeenä
+                b.name = "kaupunkipallo-" + id;   // todistusajon haku (tap-teksti kaupunkipallo-<id>)
                 b.style.display = DisplayStyle.None;
                 juuri.Add(b);
                 var kv = Rakenne.El("mk-erikoisnosto-paa__kuva", b, PickingMode.Ignore);
