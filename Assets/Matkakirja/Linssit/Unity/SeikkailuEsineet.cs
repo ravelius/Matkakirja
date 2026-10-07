@@ -109,7 +109,9 @@ namespace Matkakirja.Natiivi
                 float d = (e.Go.transform.position - pp).sqrMagnitude;
                 if (d < pd) { pd = d; lahin = e; }
             }
-            Lahin = lahin?.Id;
+            // Ei esinettä lähellä eikä kädessä → toiminto kynttilöille (E3: sammuta, sytytä, puhalla oma); nappi näkyy samoin ehdoin.
+            var kynttilat = SeikkailuKynttilat.Aktiivinen;
+            Lahin = lahin?.Id ?? (kadessa == null && kynttilat != null && kynttilat.ToimintoTarjolla(p) ? "kynttila" : null);
             bool toiminto = ToimintoPyydetty;
             ToimintoPyydetty = false;
             var kb = Keyboard.current; var gp = Gamepad.current;
@@ -118,6 +120,7 @@ namespace Matkakirja.Natiivi
             if (!toiminto) return;
             if (kadessa != null) Heita(p);
             else if (lahin != null) Poimi(p, lahin);
+            else kynttilat?.Toimi(p);
         }
 
         void Poimi(SeikkailuPelaaja p, Esine e)

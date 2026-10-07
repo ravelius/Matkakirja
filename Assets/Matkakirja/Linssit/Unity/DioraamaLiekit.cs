@@ -380,6 +380,14 @@ namespace Matkakirja.Natiivi
 
         /// <summary>Tilan glb:n liekki:-solmut ovat sen liekit (Linnanrakentaja 2.10.2026: sama liekki piirtyi kahdesti, rakennus.json:n
         /// tila.Liekit-listasta ja solmusta). DioraamaSovitin kutsuu tätä, kun tilan glb:ssä on liekki:-solmuja: tilan JSON-liekit pois.</summary>
+        /// <summary>Historiamoottori E3: tilan liekkien GameObjectit ja paikat (kynttilöiden sammutus ja sytytys).</summary>
+        public List<(GameObject Go, Vector3 Paikka)> TilanLiekit(string tilaId)
+        {
+            var l = new List<(GameObject, Vector3)>();
+            foreach (var e in esiintymat) if (e.TilaId == tilaId && e.Go != null) l.Add((e.Go, e.Go.transform.position));
+            return l;
+        }
+
         public int PoistaJsonLiekit(string tilaId)
         {
             return esiintymat.RemoveAll(e =>

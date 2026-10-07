@@ -488,7 +488,7 @@ namespace Matkakirja.Natiivi
             kelloSiirto = 0;
             kuoriOdotusAlku = -1f; SaapumisOdotus = false; RakennusLatautuu = false; LatausVirhe = null; // näyttämö (ja sen odotuspiilotus) tuhoutuu alla
             // Historiamoottori: seikkailu pois (näyttämön lapset tuhoutuvat; globaalit kuoren leikkaukset ja kävelydata nollataan).
-            SeikkailuVartijat.Poista(); SeikkailuVene.Poista(); SeikkailuPelaaja.Poista(); SeikkailuRepliikit.Poista(); SeikkailuEsineet.Poista(); SeikkailuKavely.Pura();
+            SeikkailuVartijat.Poista(); SeikkailuVene.Poista(); SeikkailuPelaaja.Poista(); SeikkailuRepliikit.Poista(); SeikkailuEsineet.Poista(); SeikkailuKynttilat.Poista(); SeikkailuKavely.Pura();
             SeikkailuEsineet.Kolahti -= KokkiKuuleeKolahduksen;
             cm?.SeikkailuPois(); PelattavaPalaPyydetty = false;
             if (DioraamaLevyvalimuisti.TestiOsoitin == PelattavaPalaHash)
@@ -1042,7 +1042,15 @@ namespace Matkakirja.Natiivi
             if (Physics.Raycast(alku + Vector3.up * 2f, Vector3.down, out var osuma, 30f, 1 << DioraamaNayttamo.Kerros)) alku = osuma.point + Vector3.up * 0.05f;
             else o.Kirjaa($"seikkailu: nousupaikan alla ei törmäyspintaa ({alku}) — laituri puuttuu törmäyksestä?");
             LisaaPelaajahahmo(SeikkailuPelaaja.Luo(nayttamo.transform, alku, yaw, DioraamaNayttamo.Kerros));
-            if (pelattavaPala) o.StartCoroutine(VartijatPaalle());   // pelattavassa palassa vartijat partioon heti laiturille noustessa
+            if (pelattavaPala)
+            {
+                o.StartCoroutine(VartijatPaalle());   // pelattavassa palassa vartijat partioon heti laiturille noustessa
+                if (SeikkailuKynttilat.Aktiivinen == null && rakennus.Tila("kappeli") != null)
+                {
+                    var ky = SeikkailuKynttilat.Luo(nayttamo.transform, "kappeli", nayttamo.Liekit, rakennus3D, o.Kirjaa);
+                    if (ky != null) ky.Ydin.OmaKynttila = true;   // tarjottimen kynttilä (huone 4) ennen tarjotin-kohtausta: Foggilla on kynttilä mukana
+                }
+            }
             o.Kirjaa($"seikkailu: vene perillä, pelaaja laiturilla ({alku}, yaw {yaw:F0}, {(nm != null ? "nousu:laituri" : "laiturin kohde")})");
         }
 
@@ -1510,6 +1518,18 @@ namespace Matkakirja.Natiivi
                 if (arvo == "0") { SeikkailuVartijat.Poista(); o.Kirjaa("poikki: vartijat pois"); return; }
                 if (arvo == "tila") { o.Kirjaa("poikki: " + (SeikkailuVartijat.Aktiivinen?.Raportti() ?? "vartijat pois")); return; }
                 o.StartCoroutine(VartijatPaalle());
+                return;
+            }
+            // "poikki kynttilat 1 [tila] | 0 | sammuta | oma 0|1 | tila": E3 kappelin kynttilät (oletustila kappeli).
+            if (mita == "kynttilat" || mita == "kynttilät")
+            {
+                var ky = SeikkailuKynttilat.Aktiivinen;
+                if (arvo == "0") SeikkailuKynttilat.Poista();
+                else if (arvo == "sammuta") ky?.Ydin.SammutaKaikki();
+                else if (arvo == "oma" && ky != null) { ky.Ydin.OmaKynttila = true; ky.Ydin.AsetaOma(osat.Length > 3 && osat[3] == "1"); }
+                else if (arvo != "tila") SeikkailuKynttilat.Luo(nayttamo.transform, osat.Length > 3 ? osat[3] : "kappeli", nayttamo.Liekit, rakennus3D, o.Kirjaa);
+                ky = SeikkailuKynttilat.Aktiivinen;
+                o.Kirjaa("poikki: kynttilät " + (ky == null ? "pois" : $"{ky.TilaId} palavia {ky.Ydin.Palavia}/{ky.Ydin.Maara}, oma {(ky.Ydin.OmaPalaa ? "palaa" : ky.Ydin.OmaKynttila ? "sammunut" : "ei")}"));
                 return;
             }
             // "poikki vene 1 [kesto_s] | 0": historiamoottori V2 — venesaapuminen laituriin, sitten vapaa kävely.

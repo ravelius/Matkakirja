@@ -129,6 +129,9 @@ namespace Matkakirja.Natiivi
                 var ag = v.Agentti; if (ag == null || !ag.isOnNavMesh) continue;
                 var vp = ag.transform.position;
                 var s = new VartijanSyote { VartijaX = vp.x, VartijaZ = vp.z, Valoisuus = ValoisuusOletus, Aanet = aanet };
+                // E3: kynttilöiden huoneessa valoisuus kynttilöistä ja omasta kynttilästä (pimeässä vartija näkee vain lähelle).
+                var ky = SeikkailuKynttilat.Aktiivinen;
+                if (p != null && ky != null && ky.Lahella(p.transform.position)) s.Valoisuus = ky.Valoisuus(p.transform.position + Vector3.up, p.transform.position + Vector3.up);
                 if (p != null)
                 {
                     var pp = p.transform.position;
