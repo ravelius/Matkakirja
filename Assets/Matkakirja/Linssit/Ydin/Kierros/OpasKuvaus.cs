@@ -97,7 +97,8 @@ namespace Matkakirja.Linssit.Kierros
             double kierto = t < KiertoAlkuS
                 ? KiertoAsteS * KiertoAlkuS * SmoothstepIntegraali(t / KiertoAlkuS)
                 : KiertoAsteS * (KiertoAlkuS * 0.5 + (t - KiertoAlkuS));
-            double dolly = 1 - DollyOsuus * (1 - Math.Exp(-t / DollyAikaS));
+            // Dolly S-käyränä (omistaja 23.4x): nopeus alkaa nollasta (1 − e^(−(t/τ)²)), ei täydellä nopeudella saapumishetkellä.
+            double dolly = 1 - DollyOsuus * (1 - Math.Exp(-(t / DollyAikaS) * (t / DollyAikaS)));
             // Toinen kehys: siirtolento VaiheS → VaiheS + SiirtoS (smootherstep), kaarena hieman ulos (ei läpi kohteen).
             double s = t <= VaiheS ? 0 : t >= VaiheS + SiirtoS ? 1 : KierrosLento.Smootherstep((t - VaiheS) / SiirtoS);
             bool lahemmas = Math.Abs(p.Kallistus - RakennusKallistus) < 0.5;   // rakennus/torni: yksityiskohta lähempää
@@ -257,6 +258,25 @@ namespace Matkakirja.Linssit.Kierros
         static double Rajaa(double x, double min, double max) => Math.Max(min, Math.Min(max, x));
 
         /// <summary>∫₀ˣ smoothstep(u) du = x³ − x⁴/2 (x ∈ 0…1; x = 1 → 0,5).</summary>
-        static double SmoothstepIntegraali(double x) => x * x * x - 0.5 * x * x * x * x;
+        /// <summary>∫₀ˣ smoothstep (0 ≤ x ≤ 1; arvo 0,5, kun x = 1): S-käyrän mukaan kiihtyvän liikkeen kuljettu osuus.</summary>
+        public static double SmoothstepIntegraali(double x) => x * x * x - 0.5 * x * x * x * x;
+
+        /// <summary>Pysähdyksen kierron nopeus (°/s) ajassa aikaS saapumisesta (S-käyrä KiertoAlkuS:ssa täyteen).</summary>
+        public static double KiertoNopeus(double aikaS)
+        {
+            double x = Math.Max(0, Math.Min(1, aikaS / KiertoAlkuS));
+            return KiertoAsteS * x * x * (3 - 2 * x);
+        }
+
+        /// <summary>
+        /// Kierron jatko lennon alussa (omistaja 23.4x: "kaikki kiihdytykset S-käyriä mukaillen"): lähtöhetken kiertonopeus nopeus
+        /// hiipuu S-käyrää pitkin KiertoAlkuS:ssa nollaan. Palauttaa kulman (°) suhteessa lopulliseen jatkoon (nopeus × KiertoAlkuS / 2):
+        /// alussa −nopeus·R/2, R:n jälkeen 0, joten lähtöasentoa siirretään +nopeus·R/2 ja kulma on jatkuva molemmissa päissä.
+        /// </summary>
+        public static double KierronHiipuminen(double nopeus, double aikaS)
+        {
+            double r = KiertoAlkuS, x = Math.Max(0, Math.Min(1, aikaS / r));
+            return nopeus * r * (x - SmoothstepIntegraali(x) - 0.5);
+        }
     }
 }

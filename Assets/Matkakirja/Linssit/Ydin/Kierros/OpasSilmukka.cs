@@ -926,6 +926,9 @@ namespace Matkakirja.Linssit.Kierros
                     kehysVaihto = Math.Min(1, kehysVaihto + Math.Max(0, dt) / KehysVaihtoS);
                     double t = Math.Min(1, VaiheAika / LentoKestoS);
                     Asento = OpasKuvaus.Lennossa(lahto, KohdeAsento(), t);
+                    if (kiertoJatko > 0 && VaiheAika < OpasKuvaus.KiertoAlkuS)
+                        Asento = new Kuvakulma(Asento.Lat, Asento.Lon, Asento.EtaisyysM, Asento.Kallistus,
+                            KierrosLento.Kiedo(Asento.Suuntima + OpasKuvaus.KierronHiipuminen(kiertoJatko, VaiheAika)), Asento.KatseKorkeusM);
                     // Puhe alkaa PuheEnnenS ennen saapumista, kuitenkin aikaisintaan PuheAikaisinS nousun jälkeen (simu 19.54: tauko ~5 s → ≤ 3 s).
                     if (!puheAloitettu && VaiheAika >= Math.Max(PuheAikaisinS, LentoKestoS - PuheEnnenS)) { puheAloitettu = true; aaniLoppui = false; AlkaaPuhua?.Invoke(Nykyinen); }
                     // Saapuminen odottaa laattoja enintään SaapumisOdotusS (simu 18.39: saapuessa laatat 28–45 %).
@@ -1062,6 +1065,9 @@ namespace Matkakirja.Linssit.Kierros
             Asento = Ohjaus.Sovella(OpasKuvaus.Pysahdyksella(NykyinenKehys, kierto), NykyinenKehys.MaaM);
         }
 
+        /// <summary>Lähtöhetken kiertonopeus (°/s), joka hiipuu lennon alussa (OpasKuvaus.KierronHiipuminen).</summary>
+        double kiertoJatko;
+
         bool aaniLoppuiTaiAlku() => Vaihe == OpasVaihe.Alku || aaniLoppui;
         Kuvakulma? alkuAsento;
 
@@ -1085,8 +1091,14 @@ namespace Matkakirja.Linssit.Kierros
             var kehys = KehysKohteelle(k, maaKorkeus, out bool maaArvio, out double tulo);
             AsetaKohdeKehys(kehys, maaArvio, k, tulo);
             Nykyinen = k; edellinen = null;
+            // Pysähdyksen kierto hiipuu lennon alussa S-käyränä (ei pysähdy kerralla): lähtöhetken nopeus talteen.
+            kiertoJatko = (Vaihe == OpasVaihe.Puhuu || Vaihe == OpasVaihe.Odottaa) && NykyinenKehys != null && !Ohjaus.Aktiivinen && !KameraSeis
+                ? OpasKuvaus.KiertoNopeus(kierto) : 0;
             Ohjaus.Nollaa();   // lento alkaa pelaajan kulmasta (Asento sisältää jo ohjauksen), ei hyppyä
             lahto = Asento;
+            if (kiertoJatko > 0)
+                lahto = new Kuvakulma(lahto.Lat, lahto.Lon, lahto.EtaisyysM, lahto.Kallistus,
+                    KierrosLento.Kiedo(lahto.Suuntima + kiertoJatko * OpasKuvaus.KiertoAlkuS * 0.5), lahto.KatseKorkeusM);
             double matka = KierrosLento.EtaisyysM(lahto.Lat, lahto.Lon, k.Lat, k.Lon);
             LentoKestoS = LennonKesto(matka);
             AloitaSiirtoJosKaukana(matka, k.Lat, k.Lon, k.Nimi);
