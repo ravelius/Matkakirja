@@ -11,6 +11,7 @@
 //     kallistus 30° pystystä ja etäisyys ≥ 1,5 × kehys (ei matalaa liukua karkeiden laattojen yllä, TF 144 -palaute), katse
 //     lentosuuntaan ja lopuksi kohteeseen. Yli 20 km: OpasSilmukka.Lennossa (isoympyrä).
 using System;
+using System.Collections.Generic;
 
 namespace Matkakirja.Linssit.Kierros
 {
@@ -75,11 +76,15 @@ namespace Matkakirja.Linssit.Kierros
                     et = Rajaa(tiukka, RakennusEtMinM, RakennusEtMaxM);
                     kall = RakennusKallistus; nosto = Rajaa((korkeus > 0 ? korkeus : koko * 0.3) * 0.45, 5, 70); break;
             }
+            // KORKEA KOHDE (Päätoimittaja 7.10. 04.3x: Eiffelin huippu leikkautui, Liikun jälkeen kolmannes tornista yli reunan):
+            // etäisyys pystysuuntaisen näkökentän mukaan niin, että juuri ja huippu mahtuvat kuvaan marginaalilla.
+            double minEt = 0;
+            if (korkeus >= KorkeaRajaM) { minEt = KorkeaEtaisyys(korkeus, kall, nosto, 50); et = Math.Max(et, minEt); }   // pienin mahtuva: lähemmäs-vaihe saa mennä siihen asti
             nosto -= KatseAlasOsuus * et;   // kohde hieman keskikohdan yläpuolelle (sirut eivät peitä)
             return new Pysahdys
             {
                 Id = k.Id ?? k.Nimi, Nimi = k.Nimi, Alarivi = k.Alarivi, Teksti = k.Teksti, Lat = k.Lat, Lon = k.Lon, MaaM = maaM, NostoM = nosto,
-                Suuntima = KierrosLento.Kiedo(tulosuunta + SivuKulma), Kallistus = kall, EtaisyysM = et,
+                Suuntima = KierrosLento.Kiedo(tulosuunta + SivuKulma), Kallistus = kall, EtaisyysM = et, MinEtM = minEt,
             };
         }
 
@@ -103,6 +108,7 @@ namespace Matkakirja.Linssit.Kierros
             // Lähennys ei vie kameraa rakennukseen: vähintään RakennusEtMinM tai kehyksen oma etäisyys, jos se on pienempi
             // (kattoraja hoitaa lisäksi OpasOhjaus.Sovella).
             if (lahemmas) et = Math.Max(et, Math.Min(p.EtaisyysM, RakennusEtMinM));
+            if (p.MinEtM > 0) et = Math.Max(et, p.MinEtM);   // korkea kohde: koko kohde kuvassa myös lähemmäs-vaiheessa ja dollyssa
             return new Kuvakulma(p.Lat, p.Lon, et, kall, KierrosLento.Kiedo(p.Suuntima + kierto + lisaSuunta), p.KatseKorkeusM);
         }
 
@@ -180,6 +186,63 @@ namespace Matkakirja.Linssit.Kierros
                 : t > 1 - a ? kokonais - a * SmoothstepIntegraali((1 - t) / a)
                 : a * 0.5 + (t - a);
             return x / kokonais;
+        }
+
+        /// <summary>Korkea kohde (m): tätä korkeammalle kehys lasketaan pystysuuntaisesta näkökentästä; yläraja KorkeaEtMaxM.</summary>
+        public const double KorkeaRajaM = 60, KorkeaEtMaxM = 1200, KorkeaMarginaaliAst = 4;
+
+        /// <summary>
+        /// Pienin etäisyys (≥ etAlku, ≤ KorkeaEtMaxM), jolla korkeusM:n kohde kohteen kohdalla näkyy kokonaan: kamera katsoo
+        /// kallistuksella (pystysuorasta) pisteeseen nostoPerus − KatseAlasOsuus·et maasta, ja huipun ja juuren kulma katseakselista
+        /// on enintään KuvaPystyAst/2 − KorkeaMarginaaliAst. Askel 3 %.
+        /// </summary>
+        public static double KorkeaEtaisyys(double korkeusM, double kallistus, double nostoPerus, double etAlku)
+        {
+            double puoli = KuvaPystyAst / 2 - KorkeaMarginaaliAst, akseli = 90 - kallistus;   // katseen painuma vaakatasosta (°)
+            double s = Math.Sin(kallistus * Math.PI / 180), c = Math.Cos(kallistus * Math.PI / 180);
+            bool Mahtuu(double et)
+            {
+                double katse = nostoPerus - KatseAlasOsuus * et, silma = katse + et * c, vaaka = et * s;
+                double Kulma(double z) => akseli - Math.Atan2(silma - z, vaaka) * 180 / Math.PI;   // + = katseakselin yläpuolella
+                return Kulma(korkeusM) <= puoli && Kulma(0) >= -puoli;
+            }
+            double e = Math.Max(1, etAlku);
+            while (e < KorkeaEtMaxM && !Mahtuu(e)) e *= 1.03;
+            return Math.Min(e, KorkeaEtMaxM);
+        }
+
+        // ---- MAA JA KORKEUS NÄYTTEISTÄ (Päätoimittaja 7.10. 02.0x, juna 156 VIE-este: Eiffelin pysähdyksellä kamera tornin sisällä).
+        // Juurisyy: maa näytteistettiin kohteen keskipisteestä (SampleHeightMostDetailed), ja tornissa ja katoissa säde osui
+        // rakenteeseen (Eiffel ~190 m, Sydneyn oopperatalo 73 m katto), jolloin kehys rakennettiin latvaan. Maa otetaan nyt kehältä
+        // kohteen ympäriltä: MEDIAANI 8 pisteestä (Päätoimittaja 02.1x: rinteessä matalin piste on selvästi jalkaa alempana, ja
+        // yksittäinen kuoppa tai naapurin katto ei siirrä mediaania), ja puuttuva korkeus arvioidaan
+        // keskipisteen ja maan erotuksesta (workerin korkeus_m tulee mallilta eikä ole aina mukana). ----
+        public const int KehaPisteita = 8;
+        public const double KorkeusArvioMinM = 20;
+
+        /// <summary>Kehän säde (m) kohteen koosta, 35–60 m: lähellä jalkaa (simu 7.10. 03.5x: Akropoliksen 220 m:n kehä osui
+        /// kukkulan rinteeseen, maa 191 → 130 m). Tornissa 60 m osuu jalkojen väliseen maahan tai jalustan viereen.</summary>
+        public static double KehaSade(double kokoM) => Rajaa(0.6 * Math.Max(10, kokoM), 35, 60);
+
+        /// <summary>Kehän piste i (0…KehaPisteita−1) kohteen ympärillä.</summary>
+        public static (double lat, double lon) KehaPiste(double lat, double lon, double sadeM, int i)
+        {
+            double a = 2 * Math.PI * i / KehaPisteita;
+            return (lat + sadeM * Math.Cos(a) / 111195.0, lon + sadeM * Math.Sin(a) / (111195.0 * Math.Max(0.01, Math.Cos(lat * Math.PI / 180))));
+        }
+
+        /// <summary>Maa = min(keskus, kehän mediaani); korkeus = keskus − maa, jos vähintään KorkeusArvioMinM, muuten 0.
+        /// NaN-näytteet ohitetaan; ei yhtään kehänäytettä → keskus (vanha käytös).</summary>
+        public static (double maa, double korkeus) MaaJaKorkeus(double keskus, IReadOnlyList<double> keha)
+        {
+            var l = new List<double>();
+            if (keha != null) foreach (var h in keha) if (!double.IsNaN(h)) l.Add(h);
+            if (l.Count == 0) return (keskus, 0);
+            l.Sort();
+            double maa = l.Count % 2 == 1 ? l[l.Count / 2] : 0.5 * (l[l.Count / 2 - 1] + l[l.Count / 2]);
+            if (!double.IsNaN(keskus)) maa = Math.Min(maa, keskus);
+            double korkeus = double.IsNaN(keskus) ? 0 : keskus - maa;
+            return (maa, korkeus >= KorkeusArvioMinM ? korkeus : 0);
         }
 
         static double Rajaa(double x, double min, double max) => Math.Max(min, Math.Min(max, x));

@@ -1352,18 +1352,30 @@ namespace Matkakirja.Natiivi
             o.Kirjaa($"opas: PCM-virta valmis {Time.realtimeSinceStartup - t0:F1} s, {virta.KirjoitettuS:F1} s ääntä ({virta.KirjoitettuS / Mathf.Max(0.1f, Time.realtimeSinceStartup - (tEka >= 0 ? tEka : t0)):F2} ×)");
         }
 
+        /// <summary>Kohteen maa ja korkeus: keskipiste + kehä (OpasKuvaus.MaaJaKorkeus; Eiffel-korjaus 7.10.).</summary>
         IEnumerator Korkeus(OpasKohde k)
         {
             var pinta = kaupunki.Pinta;
             if (pinta == null) yield break;
-            var tehtava = pinta.SampleHeightMostDetailed(new double3(k.Lon, k.Lat, 0));
+            double r = OpasKuvaus.KehaSade(k.KokoM);
+            var pisteet = new double3[1 + OpasKuvaus.KehaPisteita];
+            pisteet[0] = new double3(k.Lon, k.Lat, 0);
+            for (int i = 0; i < OpasKuvaus.KehaPisteita; i++) { var (la, lo) = OpasKuvaus.KehaPiste(k.Lat, k.Lon, r, i); pisteet[1 + i] = new double3(lo, la, 0); }
+            var tehtava = pinta.SampleHeightMostDetailed(pisteet);
             while (!tehtava.IsCompleted) yield return null;
-            if (tehtava.IsFaulted || tehtava.Result == null || tehtava.Result.sampleSuccess == null || tehtava.Result.sampleSuccess.Length == 0) yield break;
-            if (tehtava.Result.sampleSuccess[0])
-            {
-                maaKorkeudet[Avain(k)] = pisteKorkeudet[PisteAvain(k.Lat, k.Lon)] = tehtava.Result.longitudeLatitudeHeightPositions[0].z;
-                viimeMaa = (k.Lat, k.Lon, maaKorkeudet[Avain(k)]);   // varaarvo myös kohteiden näytteistä (simu 17.4x: Pláka sai 45 m)
-            }
+            var t = tehtava.IsFaulted ? null : tehtava.Result;
+            if (t == null || t.sampleSuccess == null || t.sampleSuccess.Length < pisteet.Length) yield break;
+            double H(int i) => t.sampleSuccess[i] ? t.longitudeLatitudeHeightPositions[i].z : double.NaN;
+            var keha = new List<double>();
+            for (int i = 1; i < pisteet.Length; i++) keha.Add(H(i));
+            double keskus = H(0);
+            if (double.IsNaN(keskus) && keha.TrueForAll(double.IsNaN)) yield break;
+            var (maa, korkeus) = OpasKuvaus.MaaJaKorkeus(keskus, keha);
+            maaKorkeudet[Avain(k)] = pisteKorkeudet[PisteAvain(k.Lat, k.Lon)] = maa;
+            viimeMaa = (k.Lat, k.Lon, maa);   // varaarvo myös kohteiden näytteistä (simu 17.4x: Pláka sai 45 m)
+            double vanha = k.KorkeusM;
+            if (korkeus > k.KorkeusM) k.KorkeusM = korkeus;   // workerin korkeus_m puuttuu tai on liian pieni
+            o.Kirjaa($"opas: {k.Nimi}: maa {maa:F0} m (keskus {keskus:F0}, kehä r {r:F0} m), korkeus {(vanha > 0 ? vanha.ToString("F0") : "-")} → {k.KorkeusM:F0} m");
         }
 
         /// <summary>Kohdekehyksen maa pisteeseen (silmukka.MaaTarvitaan); epäonnistuessa arvio 45 m, jottei siirto jää odottamaan.</summary>
@@ -1389,11 +1401,25 @@ namespace Matkakirja.Natiivi
             // Vapaa lento (LS1 6.10.): enintään 6 näytettä kesken (kamera, ennakko ja kehät), muut pyydetään seuraavalla kierroksella.
             if (pinta == null || pisteKorkeudet.ContainsKey(a) || (silmukka != null && silmukka.VapaaTila && pisteNaytteet.Count >= 6) || !pisteNaytteet.Add(a)) yield break;
             float t0 = Time.realtimeSinceStartup;
-            var tehtava = pinta.SampleHeightMostDetailed(new double3(lon, lat, 0));
+            // Kehyksen maa (ei vapaa tila): keskipiste + kehä kuten Korkeus(k), jottei tornin tai katon keskipiste ehdi kehykseen
+            // ennen kohteen omaa näytettä (Eiffel-korjaus 7.10.). Vapaa lento näytteistää yhden pisteen (luotain, kehät erikseen).
+            bool kehalla = silmukka == null || !silmukka.VapaaTila;
+            var pisteet = new double3[kehalla ? 1 + OpasKuvaus.KehaPisteita : 1];
+            pisteet[0] = new double3(lon, lat, 0);
+            if (kehalla) for (int i = 0; i < OpasKuvaus.KehaPisteita; i++) { var (la, lo) = OpasKuvaus.KehaPiste(lat, lon, OpasKuvaus.KehaSade(60), i); pisteet[1 + i] = new double3(lo, la, 0); }
+            var tehtava = pinta.SampleHeightMostDetailed(pisteet);
             while (!tehtava.IsCompleted) yield return null;
             pisteNaytteet.Remove(a);
             var tulos = tehtava.IsFaulted ? null : tehtava.Result;
             bool ok = tulos?.sampleSuccess != null && tulos.sampleSuccess.Length > 0 && tulos.sampleSuccess[0];
+            if (kehalla && tulos?.sampleSuccess != null && tulos.sampleSuccess.Length == pisteet.Length)
+            {
+                var keha = new List<double>();
+                for (int i = 1; i < pisteet.Length; i++) keha.Add(tulos.sampleSuccess[i] ? tulos.longitudeLatitudeHeightPositions[i].z : double.NaN);
+                double keskus = ok ? tulos.longitudeLatitudeHeightPositions[0].z : double.NaN;
+                var (maaK, _) = OpasKuvaus.MaaJaKorkeus(keskus, keha);
+                if (!double.IsNaN(maaK)) { ok = true; tulos.longitudeLatitudeHeightPositions[0] = new double3(lon, lat, maaK); }
+            }
             // Epäonnistunut näyte (simu 17.0x: Pláka 0,1 s:ssa, arvio 45 m, vaikka Ateena ~100 m): lähin tunnettu korkeus 15 km:n
             // sisältä (sama kaupunki), vasta sitten yleisarvio.
             double vara = viimeMaa.h is double vh && KierrosLento.EtaisyysM(viimeMaa.lat, viimeMaa.lon, lat, lon) < 15000 ? vh : OpasSilmukka.MaaArvioM;
@@ -1417,6 +1443,20 @@ namespace Matkakirja.Natiivi
         }
 
         // ── Saapuminen ja puhe ───────────────────────────────────────────────
+        /// <summary>Kehys ja kameran todellinen paikka lokiin (Eiffel-korjauksen todennus 7.10.: silmän korkeus maasta, etäisyys kohteesta).</summary>
+        void KameraLoki(OpasKohde k, string milloin)
+        {
+            var kam = kierto != null ? kierto.GetComponent<Camera>() : null;
+            var g = kaupunki.Georef; var kh = silmukka?.NykyinenKehys;
+            if (kam == null || g == null || kh == null) return;
+            var llh = CesiumForUnity.CesiumWgs84Ellipsoid.EarthCenteredEarthFixedToLongitudeLatitudeHeight(
+                g.TransformUnityPositionToEarthCenteredEarthFixed((double3)(float3)kam.transform.position));
+            double vaaka = KierrosLento.EtaisyysM(llh.y, llh.x, k.Lat, k.Lon);
+            o.Kirjaa($"opas: kamera {milloin} {k.Nimi}: kehys et {kh.EtaisyysM:F0} m, kallistus {kh.Kallistus:F0}°, maa {kh.MaaM:F0}, nosto {kh.NostoM:F0}, korkeus_m {k.KorkeusM:F0}, koko {k.KokoM:F0} " +
+                $"| silmä {llh.z - kh.MaaM:F0} m maasta, {vaaka:F0} m kohteesta, kallistus käytössä {kierto.KaytettyKallistus:F0}°");
+        }
+        IEnumerator KameraLokiMyohemmin(OpasKohde k, float s) { yield return new WaitForSecondsRealtime(s); if (silmukka?.Nykyinen == k) KameraLoki(k, $"{s:F0} s"); }
+
         void Saapui(OpasKohde k)
         {
             kaupunki.SiirraOrigo(k.Lat, k.Lon, MaaKorkeus(k) is double m && !double.IsNaN(m) ? m : 45);
@@ -1425,6 +1465,7 @@ namespace Matkakirja.Natiivi
             saapumisia++;
             o.StartCoroutine(Siivoa());
             o.Kirjaa($"opas: saapui {k.Nimi} ({k.Lat:F4}, {k.Lon:F4}), ääni {(puhuu ? "soi" : "ei")}, laatat {kaupunki.Latausaste:F0} %");
+            KameraLoki(k, "saapuessa"); o.StartCoroutine(KameraLokiMyohemmin(k, 6f));
             saapumisAika = Time.realtimeSinceStartup;
             if (kaupunki.Latausaste < LatausKuvaRaja && k.Kuvat != null && k.Kuvat.Length > 0 && !k.Kysymys)
             {
