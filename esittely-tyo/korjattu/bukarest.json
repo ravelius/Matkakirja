@@ -162,7 +162,7 @@
    "luokka": "rakennus",
    "koko_m": 150,
    "teksti": "Romanian kansallinen taidemuseo toimii entisessä kuninkaanlinnassa, jonka pitkä vaalea julkisivu reunustaa Vallankumouksen aukiota. Nykyinen linna rakennettiin 1930-luvulla, kun tulipalo oli vuonna 1926 tuhonnut edellisen palatsin keskiosan. Monarkian lakkauttamisen jälkeen vuonna 1948 linnasta tehtiin taidemuseo. Joulukuun 1989 taisteluissa luodit ja tulipalot vaurioittivat suurinta osaa rakennuksesta, ja yli tuhat teosta kärsi tai tuhoutui. Museo avattiin osittain uudelleen vuonna 2000, ja nykyään sen keskiaikaisen taiteen kokoelmassa on aarteita luostareista, jotka purettiin Ceaușescun aikana.",
-   "lyhyt": "Romanian kansallisen taidemuseon eurooppalainen kokoelma oli alun perin kuningas Kaarle ensimmäisen oma. Hänen keräämiensä teosten joukossa on Rembrandtin, El Grecon ja Rubensin maalauksia, ja museon romanialaisessa kokoelmassa on Constantin Brâncușin veistoksia.",
+   "lyhyt": "Romanian kansallisen taidemuseon eurooppalaisen kokoelman pohjana on kuningas Kaarle ensimmäisen oma kokoelma. Hänen keräämiensä teosten joukossa on Rembrandtin, El Grecon ja Rubensin maalauksia, ja museon romanialaisessa kokoelmassa on Constantin Brâncușin veistoksia.",
    "syventava": "Mitkä teokset tuhoutuivat vuonna 1989?",
    "kysymykset": [
     "Mikä on museon kuuluisin maalaus?",
@@ -270,7 +270,7 @@
    "luokka": "muu",
    "koko_m": 40,
    "teksti": "Riemukaari seisoo liikenneympyrän keskellä Kiseleffin valtatiellä kaupungin pohjoisosassa, lähellä kuningas Mikael ensimmäisen puistoa. Kaksikymmentäseitsemän metriä korkea graniittikaari vihittiin vuonna 1936 ensimmäisen maailmansodan voiton muistoksi, ja sen esikuvana oli Pariisin riemukaari. Samalle paikalle pystytettiin jo vuonna 1878 kiireellä puinen kaari, jonka alta itsenäisyyssodasta palanneet joukot marssivat. Vuonna 1922 tilalle tuli betonirunkoinen ja kipsipintainen kaari, joka purettiin nykyisen tieltä. Romanian kansallispäivänä joulukuun ensimmäisenä päivänä kaaren ali kulkee sotilasparaati.",
-   "lyhyt": "Riemukaaren eteläsivulla olivat kuningas Ferdinandin ja kuningatar Marian kuvat, mutta kommunistihallinto poisti ne ja asetti tilalle kaksi suurta kivikukkaa. Vuoden 1989 jälkeen kukat purettiin ja paikoille nousivat pronssiset medaljongit, mutta kuninkaan puheita ei ole kaiverrettu takaisin kaaren kylkiin.",
+   "lyhyt": "Riemukaaren eteläsivulla olivat kuningas Ferdinandin ja kuningatar Marian kuvat, mutta kommunistihallinto poisti ne ja asetti tilalle kaksi suurta kivikukkaa. Vuoden 1989 jälkeen kukat purettiin ja paikoille nousivat pronssiset medaljongit, ja vuonna 2016 kaaren kylkiin palasivat myös kuninkaan poistetut julistukset.",
    "syventava": "Miksi ensimmäinen kaari tehtiin puusta?",
    "kysymykset": [
     "Minkä voiton muistoksi kaari rakennettiin?",
@@ -310,7 +310,7 @@
      "url": "https://structurae.net/en/structures/arcul-de-triumf"
     },
     {
-     "vaite": "Kommunistihallinto poisti eteläjulkisivulta Alexandru Călinescun veistämät kuningas Ferdinandin ja kuningatar Marian efigiat ja korvasi ne kahdella suurella kivikukalla; vuoden 1989 jälkeen kukat purettiin ja tilalle tulivat pronssimedaljongit, mutta kaaren sivuilta poistettuja Ferdinandin julistuksia ei ole kaiverrettu takaisin.",
+     "vaite": "Kommunistihallinto poisti eteläjulkisivulta Alexandru Călinescun veistämät kuningas Ferdinandin ja kuningatar Marian efigiat ja korvasi ne kahdella suurella kivikukalla; vuoden 1989 jälkeen kukat purettiin ja tilalle tulivat pronssimedaljongit; kommunistit poistivat myös kaaren sivuilta Ferdinandin julistusten tekstit.",
      "url": "https://agerpres.ro/documentare/2023/05/11/atunci-i-acum-arcul-de-triumf--1106293"
     },
     {
@@ -320,6 +320,10 @@
     {
      "vaite": "Petre Antonescu suunnitteli vuoden 1922 kaaren ja nykyisen, 1936 vihityn kaaren.",
      "url": "https://en.wikipedia.org/wiki/Arcul_de_Triumf"
+    },
+    {
+     "vaite": "Kommunistit poistivat kaaren sivuilta kuningas Ferdinandin kahden julistuksen tekstit; ne palasivat kaareen kunnostuksessa, jonka jälkeen kaupunki vihki kaaren 28.11.2016 (Au reapărut şi mesajele de război şi de victorie ale suveranului Unirii). Aiempi väite, ettei tekstejä ole palautettu, oli virheellinen.",
+     "url": "https://www.puterea.ro/arcul-de-triumf-din-bucuresti-are-o-poveste-spectaculoasapovestea-arcului-de-triumf/"
     }
    ]
   },
@@ -478,7 +482,7 @@
    "kuvaus": "Järvipuisto kaupungin pohjoisosassa",
    "luokka": "puisto",
    "koko_m": 1600,
-   "teksti": "Kuningas Mikael ensimmäisen puisto, jota kutsutaan yhä yleisesti Herăstrău-puistoksi, on sadankahdeksankymmenenseitsemän hehtaarin laajuinen, ja ylhäältä sen keskellä kimaltaa Herăstrău-järvi. Paikalla oli soita, jotka kuivattiin 1930-luvun alussa, ja puisto avattiin vuonna 1936. Toisen maailmansodan jälkeen puisto nimettiin Stalinin mukaan, ja sen sisäänkäynnille nousi vuonna 1951 yhdeksän metriä korkea pronssinen Stalin; patsas purettiin yhdessä yössä maaliskuussa 1962, ja samalla paikalla seisoo nyt Charles de Gaullen patsas. Joulukuussa 2017 se sai nykyisen nimensä Romanian viimeisen kuninkaan, Mikael ensimmäisen, kuoltua. Järvellä soudetaan ja purjehditaan, ja puistossa on Ruusujen saari ja japanilainen puutarha.",
+   "teksti": "Kuningas Mikael ensimmäisen puisto, jota kutsutaan yhä yleisesti Herăstrău-puistoksi, on sadankahdeksankymmenenseitsemän hehtaarin laajuinen, ja ylhäältä sen keskellä kimaltaa Herăstrău-järvi. Paikalla oli soita, jotka kuivattiin 1930-luvun alussa, ja puisto avattiin vuonna 1936. Toisen maailmansodan jälkeen puisto nimettiin Stalinin mukaan, ja sen sisäänkäynnille nousi vuonna 1951 yhdeksän metriä korkea pronssinen Stalin; patsas purettiin yhdessä yössä maaliskuussa 1962, ja samalla paikalla seisoo nyt Charles de Gaullen patsas. Joulukuussa 2017 puisto sai nykyisen nimensä Romanian viimeisen kuninkaan, Mikael ensimmäisen, kuoltua. Järvellä soudetaan ja purjehditaan, ja puistossa on Ruusujen saari ja japanilainen puutarha.",
    "lyhyt": null,
    "syventava": "Kuka oli kuningas Mikael ensimmäinen?",
    "kysymykset": [

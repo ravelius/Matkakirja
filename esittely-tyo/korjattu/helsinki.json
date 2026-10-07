@@ -11,7 +11,7 @@
    "koko_m": 80,
    "korkeus_m": 62,
    "teksti": "Helsingin tuomiokirkko nousee Senaatintorin pohjoislaidalla valkoisena ristinä, jonka keskeltä kohoaa vihreä kupoli ja kulmista neljä pienempää. Katon harjoilla ja kulmissa seisoo kaksitoista ihmistä suurempaa apostolia, jotka valettiin sinkistä Berliinissä 1840-luvulla, ja ne ovat yksi maailman suurimmista yhtenäisistä sinkkiveistosten kokoelmista. Isoisäsi kirjoitti vuonna 1873, että kirkon apostolit katsoivat merelle. Rakennuksen piirsi Carl Ludvig Engel, mutta se valmistui vasta vuonna 1852, kaksitoista vuotta arkkitehdin kuoleman jälkeen. Kirkon edestä leveät portaat laskeutuvat suoraan Senaatintorille.",
-   "lyhyt": "Helsingin tuomiokirkon neljä pientä kulmatornia lisäsi Engelin apulainen Ernst Lohrmann, koska kirkon rakennetta pelättiin liian heikoksi ja päätorni tarvitsi tukea. Raskaita kelloja ei uskallettu nostaa kupoliin, joten Lohrmann piirsi portaiden reunoille erillisen kellotapulin ja sen pariksi kappelin.",
+   "lyhyt": "Helsingin tuomiokirkon neljä pientä kulmatornia lisäsi Engelin seuraaja Ernst Lohrmann, koska kirkon rakennetta pelättiin liian heikoksi ja päätorni tarvitsi tukea. Raskaita kelloja ei uskallettu nostaa kupoliin, joten Lohrmann piirsi portaiden reunoille erillisen kellotapulin ja sen pariksi kappelin.",
    "syventava": "Keitä katon apostolit esittävät?",
    "kysymykset": [
     "Kuka veisti katon apostolipatsaat?",
@@ -53,6 +53,10 @@
     {
      "vaite": "Ernst Lohrmann lisäsi neljä pientä kupolia ja suunnitteli portaiden sivuille kellotapulin ja kappelin.",
      "url": "https://en.wikipedia.org/wiki/Helsinki_Cathedral"
+    },
+    {
+     "vaite": "Lohrmann toimi Carl Ludvig Engelin jälkeen intendentinkonttorin päällikkönä; hän tuli Suomeen vasta Engelin kuoleman (1840) jälkeen, joten hän oli Engelin seuraaja eikä apulainen.",
+     "url": "https://fi.wikipedia.org/wiki/Ernst_Lohrmann"
     }
    ]
   },

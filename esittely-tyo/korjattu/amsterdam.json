@@ -230,7 +230,7 @@
    "luokka": "kanava",
    "koko_m": 2500,
    "teksti": "Amsterdamin kanaalivyöhyke näkyy ylhäältä sisäkkäisinä puolikaarina, jotka kiertävät vanhaa keskustaa. Vuonna 1613 kaupunki päätti laajentua suunnitelmallisesti, ja kaupunginpuuseppä Hendrick Staetsin suunnitelman mukaan kaivettiin kolme pääkanavaa: Herengracht, Keizersgracht ja Prinsengracht. Kanavien ansiosta kauppalaivat pääsivät laituriin suoraan kauppiaiden talojen eteen. Rantoja reunustavat kapeat kauppiastalot, joista osa kallistuu tahallaan eteenpäin. Päädyn alta työntyy nostopuu, jonka koukulla huonekalut vedetään köydellä ikkunasta sisään, ja kallistuksen ansiosta kuorma ei kolhi julkisivua. Unesco lisäsi kanaalivyöhykkeen maailmanperintöluetteloon vuonna 2010.",
-   "lyhyt": "Amsterdamin kanaalivyöhykkeen komeimmassa kohdassa, Herengrachtin Kultaisessa mutkassa, kaupunki antoi rikkaimpien ostaa kaksi tonttia vierekkäin, joten sinne nousi kaksi kertaa muita leveämpiä kaupunkipalatseja. Nykyään niissä on enimmäkseen pankkien ja rahoituslaitosten konttoreita ja yksi pieni kissataiteen museo.",
+   "lyhyt": "Amsterdamin kanaalivyöhykkeen komeimmassa kohdassa, Herengrachtin Kultaisessa mutkassa, ostajia kannustettiin hankkimaan kaksi tonttia vierekkäin, joten sinne nousi kaksi kertaa muita leveämpiä kaupunkipalatseja. Nykyään niissä on enimmäkseen pankkien ja rahoituslaitosten konttoreita ja yksi pieni kissataiteen museo.",
    "syventava": "Miksi kanavatalot kallistuvat eteenpäin?",
    "kysymykset": [
     "Kuinka monta siltaa kanaalivyöhykkeellä on?",
@@ -270,8 +270,8 @@
    "luokka": "aukio",
    "koko_m": 200,
    "teksti": "Amsterdamin vanha keskusaukio, Dam-aukio, on kaupungin syntysija: noin vuonna 1270 Amstel-joki padottiin juuri tässä, ja pato antoi nimensä sekä aukiolle että koko kaupungille. Aukion länsilaitaa hallitsee kuninkaallinen palatsi, ja sen vieressä seisoo Uusi kirkko, jossa Alankomaiden hallitsijat ovat astuneet virkaansa vuodesta 1814 lähtien. Itälaidalla kohoaa valkoinen, kaksikymmentäkaksi metriä korkea kansallismonumentti toisen maailmansodan uhrien muistoksi. Sen takana olevan muurin syvennyksissä on uurnia, joissa on maata teloituspaikoilta ja sotahautausmailta jokaisesta silloisesta maakunnasta sekä entisestä Hollannin Itä-Intiasta, nykyisestä Indonesiasta.",
-   "lyhyt": "Amsterdamin Dam-aukiolla seisoi ennen kaupungin vaakarakennus, jossa punnittiin kauppatavarat. Kun Hollannin kuningas Ludvig Bonaparte muutti vuonna 1808 aukion laidalla olevaan palatsiin, hän valitti vaa'an peittävän näkymänsä ja määräsi sen purettavaksi. Vaaka hävisi aukiolta eikä sitä rakennettu enää uudelleen.",
-   "syventava": "Miten hallitsija vihitään virkaansa?",
+   "lyhyt": "Amsterdamin Dam-aukiolla seisoi ennen kaupungin vaakarakennus, jossa punnittiin kauppatavarat. Kun Hollannin kuningas Ludvig Bonaparte muutti vuonna 1808 aukion laidalla olevaan palatsiin, hän valitti rakennuksen peittävän näkymänsä ja määräsi sen purettavaksi. Vaakaa ei rakennettu aukiolle enää uudelleen.",
+   "syventava": "Miten hallitsija astuu virkaansa?",
    "kysymykset": [
     "Mitä Dam-aukiolla tapahtui sodan päättyessä?",
     "Miksi Alankomaiden kuningasta ei kruunata?",
@@ -302,7 +302,7 @@
      "url": "https://en.wikipedia.org/wiki/National_Monument_(Amsterdam)"
     },
     {
-     "vaite": "Syventävä: Alankomaiden hallitsijat vihitään virkaansa Damin laidalla olevassa Uudessa kirkossa.",
+     "vaite": "Syventävä: Alankomaiden hallitsijat astuvat virkaansa Damin laidalla olevassa Uudessa kirkossa.",
      "url": "https://en.wikipedia.org/wiki/Dam_Square"
     }
    ]

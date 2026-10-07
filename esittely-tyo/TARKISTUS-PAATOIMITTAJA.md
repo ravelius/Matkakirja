@@ -2290,3 +2290,211 @@ Muut tarkistetut: avaus (36 sanaa, ilmakuva kannaksesta ja koskesta, Hämeensill
 - Avaus: 38 sanaa, ilmakuva (punaiset katot, saarirykelmä, Canal Granden käänteinen S), alkaa sanalla "Tervetuloa". Ei muutoksia.
 - Isoisä: vain basilikan tekstissä, merkinnän sisällöllä. OK.
 - Tarkistin: `Venetsia: 14 kohdetta, 0 virhettä, 9 huomiota` (sama määrä kuin ennen).
+
+---
+
+# TARKISTAJAN PASSI (erillinen tarkistaja-agentti)
+
+Tarkistaja A: amsterdam–islanti (14 kaupunkia).
+
+# Toinen lukija (tarkistaja A): muutosten tarkistus, 14 kaupunkia
+
+Laajuus (koordinaattorin rajaus kesken työn): amsterdam, ateena, barcelona, bergen, berliini, bryssel, budapest,
+bukarest, dublin, edinburgh, firenze, granada, helsinki, islanti. Kosice–tukholma siirtyivät toiselle tarkistajalle.
+Valletta, venetsia ja vilna jätettiin rauhaan.
+
+Menetelmä: kenttäkohtainen vertailu `git show 9710c46:esittely-tyo/korjattu/<id>.json` ↔ nykyinen tiedosto. Jokainen
+muuttunut `teksti`, `lyhyt`, `syventava`, `kysymykset`, `puhe_*` ja `lahteet` luettiin. Uudet `lyhyt`-versiot luettiin
+kierrosjärjestyksessä avauksen kanssa päällekkäisyyksien varalta. Koneellinen sääntöhaku (sulkeet, perspektiivi,
+kaksoispistetaivutus, viivavälit, numeroina kirjoitetut muut luvut, pisteelliset lyhenteet, "Kun tulet paikalle" ja isoisä
+enintään kerran, kysymykset 5 kpl ≤ 60 merkkiä kysymysmerkillä ilman numeroita): ei löydöksiä missään 14 kaupungissa.
+Tarkistin `tarkista-esittely.mjs`: kaikki 14 kaupunkia 0 virhettä, huomioiden määrä ennallaan.
+
+Yhteensä 10 tarkistajan korjausta: Amsterdam 3, Berliini 2, Budapest 1, Bukarest 3, Helsinki 1, muut 0.
+
+## Amsterdam
+
+### Amsterdamin kanaalivyöhyke — kenttä `lyhyt` (TARKISTAJAN KORJAUS)
+- **Vanha:** "…Herengrachtin Kultaisessa mutkassa, kaupunki antoi rikkaimpien ostaa kaksi tonttia vierekkäin, joten sinne nousi…"
+- **Uusi:** "…Herengrachtin Kultaisessa mutkassa, ostajia kannustettiin hankkimaan kaksi tonttia vierekkäin, joten sinne nousi…"
+- **Syy:** 3, vivahde. Lähteen mukaan ostajia kannustettiin ("were encouraged to buy two lots"). "Kaupunki antoi" tarkoittaa lupaa, ja sitä lähde ei sano. Agentin omassa `lahteet`-merkinnässäkin luki "kannustettiin".
+- **Lähde:** https://en.wikipedia.org/wiki/Gouden_Bocht
+
+### Dam-aukio — kenttä `lyhyt` (TARKISTAJAN KORJAUS)
+- **Vanha:** "…hän valitti vaa'an peittävän näkymänsä ja määräsi sen purettavaksi. Vaaka hävisi aukiolta eikä sitä rakennettu enää uudelleen."
+- **Uusi:** "…hän valitti rakennuksen peittävän näkymänsä ja määräsi sen purettavaksi. Vaakaa ei rakennettu aukiolle enää uudelleen."
+- **Syy:** 6, kieli. Ääneen luettuna "vaa'an peittävän näkymänsä" kuulostaa siltä kuin vaaka-astia peittäisi näkymän. Lisäksi "hävisi … eikä sitä rakennettu" oli kömpelö.
+- **Lähde:** https://en.wikipedia.org/wiki/Dam_Square ("demolished in 1808 by order of Louis Bonaparte who … complained that his view was obstructed")
+
+### Dam-aukio — kenttä `syventava` (TARKISTAJAN KORJAUS)
+- **Vanha:** "Miten hallitsija vihitään virkaansa?" - **Uusi:** "Miten hallitsija astuu virkaansa?"
+- **Syy:** 3/6, vivahde. Alankomaiden hallitsijaa ei vihitä eikä kruunata, vaan hän vannoo valan virkaanastujaisissa. Teksti sanoo itsekin "astuneet virkaansa", ja kysymyslistassa on "Miksi Alankomaiden kuningasta ei kruunata?". `lahteet`-merkinnän sanamuoto on korjattu vastaavasti.
+- **Lähde:** https://en.wikipedia.org/wiki/Dam_Square
+
+Pistokokeet (avattu): Rijksmuseumin Cuypers-tarina ja Vilhelm kolmannen poissaolo avajaisista (rijksmuseum.nl, vahvistaa
+sanatarkasti); Westerkerkin kruunun sininen väri vuodelta 2006 (en.wikipedia Westerkerk, vahvistaa); Picasson veistos
+"lintu, jonka yleisö näki kalana" (stadscuratorium.nl, vahvistaa); kastanjan taimet (annefrank.org, vahvistaa); Damin
+vaakarakennus 1808 (vahvistaa); Kultainen mutka (vivahdekorjaus yllä). Muut muutokset hyväksytty.
+
+## Ateena
+- Hyväksytty sellaisenaan.
+- Pistokokeet: karyatidien eri tukijalat ja kaulaa tukevat kampaukset (en.wikipedia Caryatid, vahvistaa sanatarkasti);
+  Sullan viemät pylväät ja vuoden 1759 ruutiräjäytys moskeijan laastiksi (en.wikipedia Temple of Olympian Zeus, vahvistaa);
+  evzonien sunnuntain valkoinen fustanella (whyathens.com, vahvistaa). Akropolis-museon suunnittelijat Tschumi ja
+  Photiadis pitävät paikkansa.
+- Huomio: karyatidit ovat aiheena sekä Erekhtheionin että Akropolis-museon kierrosversiossa (ks. Päätoimittajalle).
+
+## Barcelona
+- Hyväksytty sellaisenaan.
+- Pistokokeet: paavi Leo neljästoista siunasi ja vihki Jeesuksen tornin 10.6.2026 (catalannews.com, uutinen 10.6.2026
+  menneessä aikamuodossa; en.wikipedia vahvistaa, ja torni valmistui rakenteeltaan 20.2.2026); Gaudín Montjuïc-perustelu
+  (vahvistaa); Casa Milàn Steinway ja "soita sitten viulua" sekä huonekalujen hävittäminen (vahvistaa); Casa Batllón
+  purkuaikeet ja vuoden 1906 palkintoehdokkuus (vahvistaa); Palaun valkyyriat, Beethoven ja kahdeksantoista muusaa
+  (vahvistaa). Agentti poisti superlatiivin "Euroopan ainoa luonnonvalolla valaistu sali" tekstistä. Wikipedia käyttää
+  sitä, mutta varovainen muotoilu on hyvä.
+
+## Bergen
+- Hyväksytty sellaisenaan.
+- Pistokokeet: Tyskebryggen 1300-luvulta ja valtuuston päätös 25.5.1945 (no.wikipedia ja thelocal.no, vahvistavat);
+  Fløibanenin miehitysaika ja punainen ja sininen vaunu Norjan lipun väreinä, lähes kaksi miljoonaa matkaa vuodessa
+  (en.wikipedia, vahvistaa sanatarkasti). Troldhaugenin huvilan sulkemiseen 2025–2027 agentti on reagoinut oikein:
+  nykyaikaväite on poistettu.
+- Huomio: kaksi kierrosversiota kertoo nyt "miehityksen päätyttyä" tehdystä symbolisesta muutoksesta (ks. Päätoimittajalle).
+
+## Berliini
+
+### Brandenburgin portti — kenttä `lyhyt` (TARKISTAJAN KORJAUS)
+- **Vanha:** "…neuvostoliittolaiset ripustivat portin pylväiden väliin suuret punaiset kankaat…"
+- **Uusi:** "…itäsaksalaiset rajavartijat ripustivat portin pylväiden väliin suuret punaiset kankaat…"
+- **Syy:** 3, vivahde ja toimija. Agentin lähde oli englanninkielinen Wikipedia ("the Soviets"), mutta saksalainen
+  historiadokumenttikokoelma ja Berliinin kaupungin aineisto kertovat, että kankaat ripustivat DDR:n rajavartijat. `lahteet`-kenttään on lisätty tarkentava merkintä.
+- **Lähde:** https://germanhistorydocs.org/en/two-germanies-1961-1989/u-s-president-john-f-kennedy-visits-west-berlin-june-26-1963 ("East German border guards suspended large panels of red cloth from the Brandenburg Gate")
+
+### Museosaari — kenttä `lyhyt` (TARKISTAJAN KORJAUS)
+- **Vanha:** "Museo on nyt peruskorjauksen vuoksi suljettu, ja sen pohjoissiipi avautuu vuonna 2027."
+- **Uusi:** "Museon peruskorjaus kestää vuosia, ja se avataan uudelleen vaiheittain."
+- **Syy:** 5, nykyaika. Pysyvä äänite vanhenisi jo vuonna 2027, kun pohjoissiipi avautuu. Uusi muotoilu pitää paikkansa
+  koko korjausajan, joka on arviolta 2037–2043 asti. `lahteet`-kenttään on lisätty selittävä merkintä.
+- **Lähde:** https://en.wikipedia.org/wiki/Pergamon_Museum
+
+Pistokokeet: televisiotornin ravintolan kierrosnopeus kaksinkertaistettiin vuonna 1997, ja yleisö pääsi torniin 7.10.1969
+(lähde lahteet-kentässä, uskottava); tuomiokirkon palopommi 1944 ja uudelleenvihkiminen 1993; East Side Galleryn
+kahdeksan kieltäytynyttä taiteilijaa. Muut muutokset hyväksytty, myös "entinen Sony Center" ja Hauptbahnhofin lasikaton
+lyhennys, joka de.wikipedian mukaan oli 454,6 metristä 321 metriin, eli "runsas sata metriä" pitää.
+
+## Bryssel
+- Hyväksytty sellaisenaan.
+- Pistokokeet: oikeuspalatsin julkisivu ilman telineitä ensimmäistä kertaa yli neljäänkymmeneen vuoteen elokuussa 2026
+  (vrt.be 28.8.2026, vahvistaa); kaupungintalon virastojen muutto 2023, vihkimiset jatkuvat, lähes kolmesataa
+  1800-luvun patsasta, alkuperäiset ja Pyhä Mikael kaupunginmuseossa (en.wikipedia, vahvistaa). Victor Hugon Le Pigeon
+  ja Marxin Le Cygne ovat vakiintunut kertomus, ja lähteet tukevat niitä.
+
+## Budapest
+
+### Unkarin parlamenttitalo — kenttä `lyhyt` (TARKISTAJAN KORJAUS)
+- **Vanha:** "…luultavasti siksi että se taittui 1600-luvulla…" - **Uusi:** "…luultavasti siksi että se vääntyi 1600-luvulla…"
+- **Syy:** 3, vivahde. Risti on vinossa ("knocked crooked"), ei taittunut. "Taittui" antaa ymmärtää, että risti olisi poikki.
+- **Lähde:** https://en.wikipedia.org/wiki/Holy_Crown_of_Hungary
+
+Pistokokeet: Gabrielin patsaan alta vuonna 2024 löytynyt lasiastia, kirjerulla ja kahdeksan kolikkoa (origo.hu 3/2026,
+vahvistaa sanatarkasti); basilikan kello: Saksan armeija vei sen 20.5.1944, ja vuoden 1990 Passaussa valettu
+9 250 kilon kello on Unkarin suurin (pestbuda.hu, vahvistaa). Kalastajanlinnakkeen János Schulek ja Matiaksen
+suihkulähteen Ilonka hyväksytty lähteiden perusteella.
+
+## Bukarest
+
+### Riemukaari — kenttä `lyhyt` (TARKISTAJAN KORJAUS)
+- **Vanha:** "…paikoille nousivat pronssiset medaljongit, mutta kuninkaan puheita ei ole kaiverrettu takaisin kaaren kylkiin."
+- **Uusi:** "…paikoille nousivat pronssiset medaljongit, ja vuonna 2016 kaaren kylkiin palasivat myös kuninkaan poistetut julistukset."
+- **Syy:** 3/5, VÄÄRÄ FAKTA. Agentin lähde (agerpres.ro) kertoo vain julistusten poistamisesta, ei siitä, etteikö niitä
+  olisi palautettu. Vuosien 2014–2016 kunnostuksessa Ferdinandin molemmat julistukset palasivat kaaren sivuille
+  ("Au reapărut şi mesajele de război şi de victorie ale suveranului Unirii"), ja kaari vihittiin 28.11.2016.
+  Agentin `lahteet`-merkinnästä on poistettu virheellinen loppu, ja uusi lähde on lisätty.
+- **Lähde:** https://www.puterea.ro/arcul-de-triumf-din-bucuresti-are-o-poveste-spectaculoasapovestea-arcului-de-triumf/
+
+### Romanian kansallinen taidemuseo — kenttä `lyhyt` (TARKISTAJAN KORJAUS)
+- **Vanha:** "…taidemuseon eurooppalainen kokoelma oli alun perin kuningas Kaarle ensimmäisen oma."
+- **Uusi:** "…taidemuseon eurooppalaisen kokoelman pohjana on kuningas Kaarle ensimmäisen oma kokoelma."
+- **Syy:** 3, vivahde. Lähteen mukaan galleria koottiin 214 Kaarle ensimmäisen teoksen pohjalta, ja mukaan liitettiin
+  muiden kuninkaallisten teoksia. Koko kokoelma ei ollut hänen.
+- **Lähde:** https://en.wikipedia.org/wiki/National_Museum_of_Art_of_Romania
+
+### Herăstrău-puisto — kenttä `teksti` (TARKISTAJAN KORJAUS)
+- **Vanha:** "…samalla paikalla seisoo nyt Charles de Gaullen patsas. Joulukuussa 2017 se sai nykyisen nimensä…"
+- **Uusi:** "…samalla paikalla seisoo nyt Charles de Gaullen patsas. Joulukuussa 2017 puisto sai nykyisen nimensä…"
+- **Syy:** 6, kieli. Agentin lisäämän virkkeen jälkeen "se" viittasi de Gaullen patsaaseen, ei puistoon.
+- **Lähde:** ei faktamuutosta.
+
+Pistokokeet: Ateneumin pyöreä sali maneesin perustuksella (ro.wikipedia, vahvistaa). Patriarkaalisen katedraalin Saltikov-tarina ja yliopiston kirjaston palo 1989
+on hyväksytty lähteiden perusteella. Vanhan ruhtinaanhovin "suljettu 2015 alkaen" on museon oman sivun mukainen.
+
+## Dublin
+- Hyväksytty sellaisenaan.
+- Pistokokeet: de Valera länsisiiven ainoana vankina ja käsipallot naapurin Flewettin perheeltä (irishlegal.com,
+  vahvistaa); Spiren valitus High Courtiin, kaksi massavaimenninta ja kahdeksan kartiota (en.wikipedia, vahvistaa);
+  Guinnessin hakku vuonna 1775 ja ratkaisu vuonna 1785 (en.wikipedia Arthur Guinness, vahvistaa). Phoenix Parkin
+  kansanetymologian korjaus ja St Stephen's Greenin sorsatarina on hyväksytty.
+
+## Edinburgh
+- Hyväksytty sellaisenaan.
+- Pistokokeet: Calton Hillin kaksitoista hevosta ja seitsemänkymmentä miestä sekä Playfairin "pride and poverty"
+  (historic-uk.com, vahvistaa; Walter Scottia sivu ei mainitse, mutta väite on vanhaa tekstiä). Ohdakeritarikunnan
+  kappelin säkkipillienkelit (Atlas Obscura). Palmuhuoneiden kysymyksen vaihto on oikea, koska huoneet avautuivat 2.10.2026.
+
+## Firenze
+- Hyväksytty sellaisenaan. Tiedoston sisennys on muuttunut, joten git-diff on suuri, mutta sisältömuutoksia on vähän.
+- Pistokokeet: tuomiokirkon julkisivu purettiin 1587, väliaikaiset maalatut julkisivut tehtiin vuosina 1589, 1661 ja 1688,
+  ja vuoden 1688 julkisivu näkyy varhaisissa valokuvissa (it.wikipedia Facciata di Santa Maria del Fiore, vahvistaa);
+  Tribunan neljä alkuainetta ja 5 780 simpukkaa (uffizi.it-lähde lahteet-kentässä). Uffizin lyhyt ei enää toista Pittin
+  Vasarin käytävää, mikä on hyvä korjaus.
+
+## Granada
+- Hyväksytty sellaisenaan.
+- Pistokokeet: Kaarle V:n palatsin moriskivero ja rahoituksen loppuminen ennen kattopalkkeja (andalucia.com vahvistaa
+  veron ja kattopalkit; Wikipedian mukaan katto valmistui 1967, eli "1900-luvulle asti" pitää). Kohta "jota vastaan he
+  saivat pitää omat tapansa" ei löydy agentin lähteestä. Hakutulos (cervantesvirtual: "Carlos V y la cuestión morisca")
+  tukee sitä: moriskit maksoivat vuonna 1526 kahdeksankymmentätuhatta dukaattia, jotta heidän tapojaan koskevat
+  uudistukset jätettäisiin toteuttamatta, ja palatsiin ohjattiin osa summasta. Sivu palautti WebFetchille 403-virheen,
+  joten jätin väitteen voimaan mutta merkitsen sen Päätoimittajalle. Irvingin oleskelu Alhambrassa (en.wikipedia Tales of
+  the Alhambra) ja katedraalin 22-metrinen rotunda on hyväksytty.
+
+## Helsinki
+
+### Helsingin tuomiokirkko — kenttä `lyhyt` (TARKISTAJAN KORJAUS)
+- **Vanha:** "Helsingin tuomiokirkon neljä pientä kulmatornia lisäsi Engelin apulainen Ernst Lohrmann…"
+- **Uusi:** "Helsingin tuomiokirkon neljä pientä kulmatornia lisäsi Engelin seuraaja Ernst Lohrmann…"
+- **Syy:** 3, titteli. Lohrmann tuli Suomeen vuonna 1841, Engelin kuoleman (1840) jälkeen, ja toimi intendentinkonttorin
+  päällikkönä Engelin jälkeen. Hän ei siis voinut olla Engelin apulainen. Suomenkielisen Wikipedian tuomiokirkkoartikkeli
+  sanoo "apulainen", mutta Lohrmannin oma artikkeli ja aikajärjestys kumoavat sen. `lahteet`-kenttään on lisätty merkintä.
+- **Lähde:** https://fi.wikipedia.org/wiki/Ernst_Lohrmann
+
+Pistokokeet: kulmatornien ja kellotapulin syy (fi.wikipedia Helsingin tuomiokirkko, vahvistaa); Saarisen karhut ja
+pilakuva sekä Oodin teräskaaret ja keskustatunnelin keskeytys 2019 on hyväksytty lähteiden perusteella. Hotovitskin
+teloitus mainitaan, sitä ei kuvata, eli sävy on sopiva.
+
+## Islanti
+- Hyväksytty sellaisenaan.
+- Pistokokeet: Harpan 714 ledvaloa ja kaksitoista kuukausiteosta vuonna 2021 (en.wikipedia, vahvistaa sanatarkasti);
+  tuomiokirkon urut vuonna 1840 ensimmäisinä islantilaisessa kirkossa (domkirkjan.is, vahvistaa) ja kirkon
+  kelpaamattomuus vuonna 1815 (is.wikipedia, vahvistaa). Perlanin painevesi ja Höfðin norjalaiset valmisosat on
+  hyväksytty Wikipedian perusteella.
+
+## Päätoimittajalle
+
+1. **Bergen, päällekkäisyys (tyyppi 1):** Bryggenin lyhyt (nimi muutettiin toukokuussa 1945 "heti Saksan miehityksen
+   päätyttyä") ja Fløibanenin lyhyt ("Miehityksen päätyttyä vaunut maalattiin" Norjan lipun väreihin) ovat kierroksella
+   1. ja 4. kohde. Tarinat ovat eri, mutta rakenne ja aihe toistuvat. En kirjoittanut uudelleen, koska molemmat ovat
+   lähteiden mukaan oikein ja hyviä tarinoita. Päätä, vaihdetaanko toinen.
+2. **Ateena, aihetoisto:** karyatidit ovat aiheena sekä Erekhtheionin lyhyessä (veistotapa ja kampaukset) että
+   Akropolis-museon lyhyessä (laserpuhdistus ja kuudennen tyhjä jalusta). Lisäksi Erekhtheionin teksti kertoo, että viisi
+   on museossa ja kuudes Lontoossa. Toisto oli jo vanhassa versiossa. Agentit siirsivät yksityiskohtia, mutta aihe
+   toistuu yhä.
+3. **Granada, Kaarle V:n palatsi:** "jota vastaan he saivat pitää omat tapansa" ei löydy kentän omasta lähteestä
+   (andalucia.com: "agreed to pay rather than face further repression"). Hakutulosten mukaan väite on historiallisesti
+   oikein (vuoden 1526 kahdeksankymmenentuhannen dukaatin maksu), mutta en saanut avattua tukevaa sivua (403). Joko
+   hyväksy, tai muotoile "jonka he suostuivat maksamaan välttääkseen uusia rajoituksia".
+4. **Barcelona, Sagrada Família:** "Kirkon pääjulkisivu on yhä rakenteilla" on totta nyt, mutta vanhenee, kun Kunnian
+   julkisivu valmistuu, arviolta 2030-luvulla. Kyse on vanhasta tekstistä, joten en muuttanut sitä.
+5. **Berliini, Voitonpylväs (vanha teksti):** "yli sadantuhannen hengen yleisölle". Obaman vuoden 2008 yleisöksi
+   arvioidaan yleensä noin kaksisataatuhatta. Väite on teknisesti tosi mutta vähättelevä. En muuttanut, koska kenttää ei
+   muutettu tässä tarkistuksessa.
