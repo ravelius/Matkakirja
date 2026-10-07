@@ -781,7 +781,7 @@ namespace Matkakirja.Natiivi
                 }
                 case "mac":
                 {
-                    // Mac-syöte (MacSyote.cs): ui mac tila | pakota | veto dx dy [x y] | rulla dy [x y] | nipistys s [x y]
+                    // Mac-syöte (MacSyote.cs): ui mac tila | pakota | paikka | hiiri pohjaan|irti | veto dx dy [x y] | rulla dy [x y] | nipistys s [x y]
                     // (pikselit, UIKitin suunta: y alas, osoitin yläkulmasta; ilman osoitinta ruudun keskeltä).
                     var m = loput.Split(new[] { ' ' }, System.StringSplitOptions.RemoveEmptyEntries);
                     float L(int i, float oletus) => m.Length > i && float.TryParse(m[i], System.Globalization.NumberStyles.Float,
@@ -789,6 +789,29 @@ namespace Matkakirja.Natiivi
                     string laji = m.Length > 0 ? m[0] : "tila";
                     if (laji == "tila") { Kirjaa("mac: " + MacSyote.Tila()); return null; }
                     if (laji == "pakota") { Kirjaa("mac pakota: " + MacSyote.Pakota()); return null; }
+                    // Ohjauslevyvian toisto (omistaja 7.10.2026, Mac TF 160: eleet lakkasivat, kunnes klikkasi karttaa):
+                    // ui mac paikka → pallon pituus/leveys/korkeus ja hiiren napin tila; ui mac hiiri pohjaan|irti → Input Systemin
+                    // hiiren vasen nappi tilatapahtumana (kursori ei liiku).
+                    if (laji == "paikka")
+                    {
+                        var pk = Object.FindAnyObjectByType<PalloKierto>();
+                        var hiiri = UnityEngine.InputSystem.Mouse.current;
+                        Kirjaa(pk == null ? "mac paikka: ei palloa" : string.Format(CultureInfo.InvariantCulture,
+                            "mac paikka: pituus {0:0.0000} leveys {1:0.0000} korkeus {2:0} hiiri {3} fokus {4} lukko [{5}] eleet muualla {6}",
+                            pk.pituus, pk.leveys, pk.korkeus, hiiri == null ? "ei" : hiiri.leftButton.isPressed ? "pohjassa" : "ylhäällä",
+                            Application.isFocused, SyoteLukko.Kuvaus, pk.EleetMuualla));
+                        return null;
+                    }
+                    if (laji == "hiiri" && m.Length > 1)
+                    {
+                        var hiiri = UnityEngine.InputSystem.Mouse.current;
+                        if (hiiri == null) { Kirjaa("mac hiiri: ei hiirtä"); return null; }
+                        var tila = new UnityEngine.InputSystem.LowLevel.MouseState { position = hiiri.position.ReadValue() }
+                            .WithButton(UnityEngine.InputSystem.LowLevel.MouseButton.Left, m[1] == "pohjaan");
+                        UnityEngine.InputSystem.InputSystem.QueueStateEvent(hiiri, tila);
+                        Kirjaa($"mac hiiri {m[1]} jonoon");
+                        return null;
+                    }
                     int o = laji == "veto" ? 3 : 2;
                     var os = new Vector2(L(o, Screen.width / 2f), L(o + 1, Screen.height / 2f));
                     string tulos = laji == "veto" ? MacSyote.Testi(new Vector2(L(1, 0), L(2, 0)), Vector2.zero, 1f, os)
