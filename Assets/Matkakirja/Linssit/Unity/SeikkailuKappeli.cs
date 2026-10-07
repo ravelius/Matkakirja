@@ -196,6 +196,7 @@ namespace Matkakirja.Natiivi
             kappalainen.gameObject.SetActive(true);
             kappalainen.position = reunaOvi + (reunaOvi - alttari).normalized * 1.2f;
             lyhty.enabled = true; lyhty.intensity = 0f;
+            SeikkailuPelaaja.Aktiivinen?.PyydaKaanto(reunaOvi);   // valo oven alla: käännössääntö (pelattavuusmalli 7.3)
             for (float t = 0; t < 2f; t += Time.deltaTime) { lyhty.intensity = Mathf.Lerp(0f, 0.8f, t / 2f); yield return null; }
             double kesto = SeikkailuRepliikit.Aktiivinen?.Soita("kappalainen-2", kappalainen) ?? 0;
             yield return new WaitForSeconds((float)Math.Max(1.0, kesto));

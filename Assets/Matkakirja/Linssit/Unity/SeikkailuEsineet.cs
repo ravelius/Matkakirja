@@ -18,7 +18,7 @@ namespace Matkakirja.Natiivi
     public sealed class SeikkailuEsineet : MonoBehaviour
     {
         public static SeikkailuEsineet Aktiivinen { get; private set; }
-        public const float PoimintaM = 1.2f, HeittoEteen = 7f, HeittoYlos = 3.5f, KuuluuM = 12f;
+        public const float PoimintaM = 1.2f, HeittoEteen = 7f, HeittoYlos = 3.5f, KuuluuM = 12f, ValitsinAste = 30f;
         static readonly int IdKuva = Shader.PropertyToID("_Kuva"), IdPohjaKuva = Shader.PropertyToID("_PohjaKuva"), IdTila = Shader.PropertyToID("_Tila");
         /// <summary>Kolahduksen klippi (rakennus.json aanet pikari-1); Sovitin asettaa.</summary>
         public static AudioClip KolahdusKlippi;
@@ -154,7 +154,7 @@ namespace Matkakirja.Natiivi
             var p = SeikkailuPelaaja.Aktiivinen;
             if (p == null) return;
             // Lähin heitettävä (ei kädessä eikä lennossa).
-            Esine lahin = null; float pd = PoimintaM * PoimintaM;
+            Esine lahin = null; float pd = float.MaxValue;
             var pp = p.transform.position + Vector3.up * 0.9f;
             foreach (var e in esineet)
             {
@@ -164,6 +164,14 @@ namespace Matkakirja.Natiivi
                 if (e.Laji == Laji.Irrotettava && SeikkailuKynttilat.Aktiivinen is SeikkailuKynttilat kyt && !kyt.SaumatNakyvat) continue;
                 if (e.Laji == Laji.Nostettava && Muurattu(e)) continue;   // syvennyksen esineet vasta, kun lähimmät kivet on irrotettu
                 float d = (e.Go.transform.position - pp).sqrMagnitude;
+                if (d >= PoimintaM * PoimintaM) continue;
+                if (SeikkailuPelaaja.Ensimmainen && p.Silmat != null)
+                {
+                    // Valitsin (pelattavuusmalli 2.4): katseen suunnassa ±30°, lähin kulma voittaa (ei pelkkä etäisyys).
+                    float kulma = Vector3.Angle(p.Silmat.forward, e.Go.transform.position - p.Silmat.position);
+                    if (kulma > ValitsinAste) continue;
+                    d = kulma;
+                }
                 if (d < pd) { pd = d; lahin = e; }
             }
             // Ei esinettä lähellä eikä kädessä → toiminto kynttilöille (E3: sammuta, sytytä, puhalla oma); nappi näkyy samoin ehdoin.

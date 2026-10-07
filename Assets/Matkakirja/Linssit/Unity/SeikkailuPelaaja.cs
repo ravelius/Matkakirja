@@ -14,10 +14,12 @@
 // kamera silmien korkeudella (1,62 m, kyyryssä 1,0 m, pehmeä siirtymä, ei pään heiluntaa), ei näkyvää vartaloa, käsiä eikä peilikuvaa;
 // kannettu esine (kynttilä, kivi) kameran edessä oikealla (Kasi); hahmo kääntyy katseen mukana. Kolmas persoona jää testikytkimeksi.
 using System;
+using System.Collections.Generic;
 using Matkakirja.Linssit.Dioraama;
 using Matkakirja.Linssit.Seikkailu;
 using Unity.Cinemachine;
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.InputSystem;
 
 namespace Matkakirja.Natiivi
@@ -32,6 +34,67 @@ namespace Matkakirja.Natiivi
         /// <summary>Kantokohta: kynttilä ja poimittu esine (ensimmäisessä persoonassa kameran edessä oikealla, muuten käden korkeudella).</summary>
         public Transform Kasi { get; private set; }
         float silmaNyt = SilmaY, eleNotko;
+        // Portaiden pehmennys (pelattavuusmalli kohta 6): silmien maailmankorkeus seuraa 0,1 s:n viiveellä, enintään 0,4 m jäljessä.
+        public const float PortaatViive = 0.1f, PortaatMaxJalki = 0.4f;
+        float silmaMaailma = float.NaN, silmaNopeus;
+        bool hiipiKytkin;
+
+        // Napautuskävely (kohdat 2.1 ja 6): napautus tai napsautus lattiaan → reitti kävelyverkkoa pitkin (NavMesh, vara suora viiva),
+        // kävely 1,4 m/s, hiivintä vaaran lähellä (SeikkailuVartijat.Vaara), katse ei käänny; oma ohjaus keskeyttää.
+        public const float NapautusM = 30f, PerillaM = 0.25f, JumiS = 1.5f;
+        readonly List<Vector3> napautusReitti = new List<Vector3>();
+        float jumiAika; Vector3 jumiPaikka;
+        public bool Napautuskavely => napautusReitti.Count > 0;
+
+        /// <summary>Napautus ruutuun (pikseleinä, Natiivi-UI:n kosketus tai Macin napsautus): lattia → kävely sinne; esine tai seinä
+        /// alle 1,2 m:n päässä → toiminto (SeikkailuEsineet). Palauttaa, osuiko napautus maailmaan.</summary>
+        public static bool Napautus(Vector2 ruutu)
+        {
+            var p = Aktiivinen; var cam = Camera.main;
+            var n = p != null ? p.GetComponentInParent<DioraamaNayttamo>() : null;
+            if (n != null && n.Kamera != null) cam = n.Kamera;
+            if (p == null || cam == null || p.Eleessa) return false;
+            var sade = cam.ScreenPointToRay(ruutu);
+            if (!Physics.Raycast(sade, out var osuma, NapautusM, 1 << DioraamaNayttamo.Kerros, QueryTriggerInteraction.Ignore)) return false;
+            var vaaka = osuma.point - p.transform.position; vaaka.y = 0;
+            if (osuma.normal.y < 0.7f || osuma.collider.attachedRigidbody != null)
+            {
+                if (vaaka.magnitude < SeikkailuEsineet.PoimintaM + 0.3f) { SeikkailuEsineet.ToimintoPyydetty = true; return true; }
+                return false;
+            }
+            p.napautusReitti.Clear();
+            var polku = new NavMeshPath();
+            if (NavMesh.SamplePosition(osuma.point, out var kohde, 0.6f, NavMesh.AllAreas) && NavMesh.CalculatePath(p.transform.position, kohde.position, NavMesh.AllAreas, polku)
+                && polku.status != NavMeshPathStatus.PathInvalid && polku.corners.Length > 1)
+                for (int i = 1; i < polku.corners.Length; i++) p.napautusReitti.Add(polku.corners[i]);
+            else p.napautusReitti.Add(osuma.point);
+            p.jumiAika = 0; p.jumiPaikka = p.transform.position;
+            Debug.Log($"MATKAKIRJA seikkailu: napautuskävely {p.napautusReitti.Count} pistettä → {osuma.point}");
+            return true;
+        }
+
+        /// <summary>Kamera kääntyy tapahtuman jälkeen kohti pistettä käännössäännöllä (≤ 10°, ≥ 0,8 s, ei jos pelaaja ohjasi
+        /// viimeisen sekunnin aikana; Kavely.PyydaKaanto).</summary>
+        public bool PyydaKaanto(Vector3 kohde)
+        {
+            var d = kohde - transform.position; d.y = 0;
+            return d.sqrMagnitude > 0.01f && kavely.PyydaKaanto(Mathf.Atan2(d.x, d.z) * Mathf.Rad2Deg);
+        }
+
+        /// <summary>Napautusreitin syöte: suunta seuraavaan kulmaan kameran kehyksessä (katse ei käänny); vaarassa hiivintä.</summary>
+        void NapautusSyote(ref KavelySyote s, float dt)
+        {
+            if (napautusReitti.Count == 0) return;
+            if (Math.Abs(s.LiikeX) > Kavely.KuolleAlue || Math.Abs(s.LiikeY) > Kavely.KuolleAlue) { napautusReitti.Clear(); return; }   // oma ohjaus
+            var d = napautusReitti[0] - transform.position; d.y = 0;
+            while (d.magnitude < PerillaM) { napautusReitti.RemoveAt(0); if (napautusReitti.Count == 0) return; d = napautusReitti[0] - transform.position; d.y = 0; }
+            jumiAika += dt;
+            if (jumiAika > JumiS) { if ((transform.position - jumiPaikka).magnitude < 0.1f) { napautusReitti.Clear(); return; } jumiAika = 0; jumiPaikka = transform.position; }
+            d.Normalize();
+            double y = kavely.KameraYaw * Math.PI / 180, sy = Math.Sin(y), cy = Math.Cos(y);
+            s.LiikeY = d.x * sy + d.z * cy; s.LiikeX = d.x * cy - d.z * sy;
+            if (SeikkailuVartijat.Vaara(transform.position)) s.Hiipiminen = true;
+        }
         public Transform Silmat => olka;
 
         // Kädet (ensimmäinen persoona, omistaja 7.10. 18.7x): hihat ja hanskat näkyvät hetkittäin toiminnoissa. Perusleike kannosta
@@ -127,7 +190,7 @@ namespace Matkakirja.Natiivi
             p.cc.height = Korkeus; p.cc.radius = Sade; p.cc.stepOffset = Askel; p.cc.center = new Vector3(0, Korkeus / 2, 0);
             p.cc.slopeLimit = 40f; p.cc.skinWidth = 0.03f;
             p.kavely.KameraYaw = p.kavely.HahmoYaw = yaw;
-            if (Ensimmainen) { p.kavely.KameraPitch = 0; p.kavely.PitchAla = -75; p.kavely.PitchYla = 75; }
+            if (Ensimmainen) { p.kavely.KameraPitch = 0; p.kavely.PitchAla = -75; p.kavely.PitchYla = 75; p.kavely.Kallistusvyohykkeet = true; }
             p.viimeMaassa = paikka;
             // Hahmo (väliaikainen kapseli; Fogg-glb myöhemmin).
             // Hahmosolmu (kääntö, skaalaamaton: Fogg, kynttilä ja esineet sen lapsina) ja kapseli sen lapsena (7.10.: Fogg peri kapselin
@@ -190,7 +253,7 @@ namespace Matkakirja.Natiivi
         public void Siirra(Vector3 paikka)
         {
             cc.enabled = false; transform.position = paikka; cc.enabled = true; pysty = 0; viimeMaassa = paikka;
-            kavely.NopeusX = kavely.NopeusZ = 0;
+            kavely.NopeusX = kavely.NopeusZ = 0; napautusReitti.Clear(); silmaMaailma = float.NaN;
         }
 
         static void LisaaTaytevalo(Transform isa, int kerros, Vector3 paikka)
@@ -276,6 +339,7 @@ namespace Matkakirja.Natiivi
         {
             float dt = Mathf.Min(Time.unscaledDeltaTime, 0.05f);
             var s = LueSyote();
+            NapautusSyote(ref s, dt);
             PaivitaKadet(dt);
             if (PaivitaEle(dt))
             {
@@ -283,7 +347,7 @@ namespace Matkakirja.Natiivi
                 s.LiikeX = s.LiikeY = 0; s.Juoksu = s.Hiipiminen = false;
                 double hy = kavely.HahmoYaw; kavely.Paivita(dt, s); kavely.HahmoYaw = hy; kavely.NopeusX = kavely.NopeusZ = 0;
                 olka.rotation = Quaternion.Euler((float)kavely.KameraPitch, (float)kavely.KameraYaw, 0);
-                if (Ensimmainen) olka.localPosition = new Vector3(0f, silmaNyt - eleNotko, 0f);
+                if (Ensimmainen) { olka.localPosition = new Vector3(0f, silmaNyt - eleNotko, 0f); silmaMaailma = float.NaN; }
                 return;
             }
             kavely.Paivita(dt, s);
@@ -298,7 +362,12 @@ namespace Matkakirja.Natiivi
             {
                 // Kyykky laskee silmät pehmeästi (ei heiluntaa askelissa).
                 silmaNyt = Mathf.MoveTowards(silmaNyt, kavely.Tapa == Liiketapa.Hiipiminen ? KyykkySilmaY : SilmaY, SilmaNopeus * dt);
-                olka.localPosition = new Vector3(0f, silmaNyt, 0f);
+                // Portaat: maailmankorkeus pehmennetään (askelmat eivät nytkäytä kuvaa), kyykky ei viivästy.
+                float tavoite = transform.position.y + silmaNyt;
+                if (float.IsNaN(silmaMaailma)) { silmaMaailma = tavoite; silmaNopeus = 0f; }
+                silmaMaailma = Mathf.SmoothDamp(silmaMaailma, tavoite, ref silmaNopeus, PortaatViive, Mathf.Infinity, dt);
+                silmaMaailma = Mathf.Clamp(silmaMaailma, tavoite - PortaatMaxJalki, tavoite + PortaatMaxJalki);
+                olka.localPosition = new Vector3(0f, silmaMaailma - transform.position.y, 0f);
             }
             if (cc.isGrounded) viimeMaassa = transform.position;
             else if (transform.position.y < viimeMaassa.y - 6f)
@@ -342,13 +411,22 @@ namespace Matkakirja.Natiivi
                 var d = hiiri.delta.ReadValue();
                 s.HiiriX = d.x * HiiriAstePerPx; s.HiiriY = d.y * HiiriAstePerPx;
             }
+            // Mac: vasen napsautus lattiaan = napautuskävely, esineeseen = toiminto (ei UI-elementin päällä; kosketus tulee Natiivi-UI:lta).
+            if (Ensimmainen && hiiri != null && hiiri.leftButton.wasPressedThisFrame && Cursor.lockState != CursorLockMode.Locked)
+            {
+                var pos = hiiri.position.ReadValue();
+                if (!(UiKerros.Olemassa && UiKerros.Hae().PeittaaPisteen(pos))) Napautus(pos);
+            }
             var gp = Gamepad.current;
             if (gp != null)
             {
                 var l = gp.leftStick.ReadValue(); var r = gp.rightStick.ReadValue();
                 if (l.sqrMagnitude > s.LiikeX * s.LiikeX + s.LiikeY * s.LiikeY) { s.LiikeX = l.x; s.LiikeY = l.y; }
                 if (Math.Abs(r.x) + Math.Abs(r.y) > 0.05f) { s.KatseX = r.x; s.KatseY = r.y; }
-                s.Juoksu |= gp.leftStickButton.isPressed; s.Hiipiminen |= gp.buttonEast.isPressed;
+                s.Juoksu |= gp.leftStickButton.isPressed;
+                // B: pito (NYK) ja ensimmäisessä persoonassa painallus vaihtaa hiivinnän päälle/pois (pelattavuusmalli kohta 6).
+                if (Ensimmainen && gp.buttonEast.wasPressedThisFrame) hiipiKytkin = !hiipiKytkin;
+                s.Hiipiminen |= gp.buttonEast.isPressed || hiipiKytkin;
             }
             // Kosketustapit (Natiivi-UI:n SeikkailuTapit, TAPPI-pohja, 2D): heijastuksella, puuttuva luokka ohitetaan.
             if (!tapitHaettu)

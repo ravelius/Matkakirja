@@ -26,6 +26,26 @@ namespace Matkakirja.Linssit.Seikkailu
         public double KameraYaw, KameraPitch = 12;
         /// <summary>Katseen pystyrajat (asteina, + = alas); ensimmäisessä persoonassa laajemmat (SeikkailuPelaaja asettaa).</summary>
         public double PitchAla = PitchMin, PitchYla = PitchMax;
+
+        // Pelattavuusmalli 7.10. kohdat 2.1 ja 6 (ensimmäinen persoona): tapin tai sauvan kallistusvyöhykkeet — 12–50 % hiivintä
+        // (0 → HiipiminenMs), 50–95 % kävely (HiipiminenMs → KavelyMs), yli 95 % juoksu (Unity-sovitin asettaa Juoksu).
+        public const double HiipintaRaja = 0.5, KavelyTaysi = 0.95;
+        public bool Kallistusvyohykkeet;
+        // Käännössääntö (kohta 6): kamera kääntyy itsestään vain pyynnöstä (tapahtuman jälkeen), enintään 10°, vähintään 0,8 s,
+        // eikä jos pelaaja on ohjannut viimeisen sekunnin aikana; ohjaus keskeyttää käännön.
+        public const double KaantoMaxAste = 10, KaantoMinS = 0.8, KaantoOhjausS = 1.0;
+        double kaantoJaljella, kaantoNopeus, ohjauksesta = 99;
+        public bool Kaantyy => Math.Abs(kaantoJaljella) > 1e-6;
+
+        /// <summary>Pyydä kameraa kääntymään kohti kulmaa (tapahtuma: valo oven alla, ääni). Palauttaa, hyväksyttiinkö.</summary>
+        public bool PyydaKaanto(double kohdeYaw)
+        {
+            if (ohjauksesta < KaantoOhjausS) return false;
+            double ero = Math.Clamp(Kulma(kohdeYaw - KameraYaw), -KaantoMaxAste, KaantoMaxAste);
+            if (Math.Abs(ero) < 0.5) return false;
+            kaantoJaljella = ero; kaantoNopeus = Math.Abs(ero) / KaantoMinS;
+            return true;
+        }
         /// <summary>Hahmon suunta (yaw) asteina ja nopeus (m/s) vaakatasossa (x, z).</summary>
         public double HahmoYaw;
         public double NopeusX, NopeusZ;
@@ -35,6 +55,14 @@ namespace Matkakirja.Linssit.Seikkailu
         public void Paivita(double dt, in KavelySyote s)
         {
             if (dt <= 0) return;
+            bool ohjaa = Math.Abs(s.KatseX) >= KuolleAlue || Math.Abs(s.KatseY) >= KuolleAlue || s.HiiriX != 0 || s.HiiriY != 0
+                || Math.Abs(s.LiikeX) >= KuolleAlue || Math.Abs(s.LiikeY) >= KuolleAlue;
+            if (ohjaa) { ohjauksesta = 0; kaantoJaljella = 0; } else ohjauksesta += dt;
+            if (Kaantyy)
+            {
+                double k = Math.Min(Math.Abs(kaantoJaljella), kaantoNopeus * dt) * Math.Sign(kaantoJaljella);
+                KameraYaw = Kulma(KameraYaw + k); kaantoJaljella -= k;
+            }
             // Katse: sauva/tappi nopeudella, hiiri suoraan asteina.
             KameraYaw = Kulma(KameraYaw + Kuollut(s.KatseX) * KatseNopeusAsteS * dt + s.HiiriX);
             KameraPitch = Math.Clamp(KameraPitch - Kuollut(s.KatseY) * KatseNopeusAsteS * 0.7 * dt - s.HiiriY, PitchAla, PitchYla);
@@ -43,6 +71,13 @@ namespace Matkakirja.Linssit.Seikkailu
             double voima = Math.Min(1, Math.Sqrt(lx * lx + ly * ly));
             Tapa = s.Hiipiminen ? Liiketapa.Hiipiminen : s.Juoksu && voima > 0.7 ? Liiketapa.Juoksu : Liiketapa.Kavely;
             double max = Tapa == Liiketapa.Hiipiminen ? HiipiminenMs : Tapa == Liiketapa.Juoksu ? JuoksuMs : KavelyMs;
+            if (Kallistusvyohykkeet && Tapa != Liiketapa.Juoksu && voima > 0)
+            {
+                double m = Math.Min(1, Math.Sqrt(s.LiikeX * s.LiikeX + s.LiikeY * s.LiikeY));
+                if (m < HiipintaRaja) { Tapa = Liiketapa.Hiipiminen; max = HiipiminenMs * Math.Clamp((m - KuolleAlue) / (HiipintaRaja - KuolleAlue), 0.2, 1); }
+                else if (Tapa == Liiketapa.Kavely) max = HiipiminenMs + (KavelyMs - HiipiminenMs) * Math.Clamp((m - HiipintaRaja) / (KavelyTaysi - HiipintaRaja), 0, 1);
+                voima = 1;   // nopeus vyöhykkeestä
+            }
             double y = KameraYaw * Math.PI / 180, sy = Math.Sin(y), cy = Math.Cos(y);
             // eteen = (sin yaw, cos yaw), oikealle = (cos yaw, −sin yaw)
             double tx = (sy * ly + cy * lx), tz = (cy * ly - sy * lx);

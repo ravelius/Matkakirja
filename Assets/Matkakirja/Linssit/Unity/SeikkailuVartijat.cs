@@ -39,6 +39,18 @@ namespace Matkakirja.Natiivi
 
         /// <summary>Pelaajan valoisuus 0…1 (vartijoiden näkö ja ensimmäisen persoonan kuvan tummuminen, SeikkailuNakyvyys).
         /// V7: tilojen liekeistä (tulisija, soihdut, kynttilät); E3: kynttilöiden huoneessa kynttilöistä ja omasta kynttilästä.</summary>
+        /// <summary>Vaara pisteessä (pelattavuusmalli 2.1, automaattinen hiivintä): lähin vartija alle säteen tai joku epäilee/etsii.</summary>
+        public static bool Vaara(Vector3 p, float sade = 10f)
+        {
+            var a = Aktiivinen; if (a == null) return false;
+            foreach (var v in a.vartijat)
+            {
+                if (v.Aivot.Tila == VartijanTila.Epaily || v.Aivot.Tila == VartijanTila.Etsinta) return true;
+                var ag = v.Agentti; if (ag != null && (ag.transform.position - p).sqrMagnitude < sade * sade) return true;
+            }
+            return false;
+        }
+
         public static double PelaajanValoisuus(SeikkailuPelaaja p)
         {
             if (p == null) return ValoisuusOletus;
