@@ -1,0 +1,1 @@
+Tervetuloa Ateenaan. Ylhäältä kaupunki näyttää vaalealta talomatolta, joka täyttää koko laakson vuorten ja meren välissä. Sen keskeltä nousee jyrkkä kallio, jonka laella marmoritemppelit hohtavat. Kierros alkaa tältä kalliolta, Akropoliilta, jonka temppelit rakennettiin 400-luvulla ennen ajanlaskun alkua.

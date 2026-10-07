@@ -1,0 +1,435 @@
+{
+ "kaupunki": "Ateena",
+ "id": "ateena",
+ "versio": 1,
+ "kohteet": [
+  {
+   "id": "Q131013",
+   "nimi": "Akropolis",
+   "kuvaus": "Ateenan temppelikallio",
+   "luokka": "linnoitus",
+   "koko_m": 300,
+   "teksti": "Akropolis kohoaa kaupungin keskeltä jyrkkäseinäisenä kalliona, jonka laella marmoritemppelit erottuvat ylhäältä vaaleina harmaata kiveä vasten. Tasanne nousee noin sadanviidenkymmenen metrin korkeuteen merenpinnasta, ja sen laella on ollut linnoitus jo pronssikaudella. Nykyiset temppelit rakennettiin 400-luvulla ennen ajanlaskun alkua, kun persialaiset olivat hävittäneet vanhat. Toukokuun lopussa vuonna 1941 kaksi yhdeksäntoistavuotiasta nuorukaista, Manolis Glezos ja Apostolos Santas, kiipesi yöllä kalliolle salaista reittiä ja otti alas miehittäjien hakaristilipun. Aamulla koko kaupunki näki, että lippu oli poissa.",
+   "lyhyt": "Akropoliin lounaiskulmassa seisoo kallion pienin temppeli, Athena Niken pyhäkkö. Sen jumalankuvalla ei ollut siipiä, ja ateenalaiset selittivät, ettei Voitto siksi voisi koskaan lentää pois heidän kaupungistaan. Osmanit purkivat temppelin vuonna 1686, mutta se koottiin myöhemmin uudelleen.",
+   "syventava": "Miten pojat pääsivät kalliolle?",
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Kalliotasanne kohoaa noin 150 metriin merenpinnasta; myöhäisellä pronssikaudella laella oli mykeneläinen palatsi ja kyklooppimuuri.",
+     "url": "https://en.wikipedia.org/wiki/Acropolis_of_Athens"
+    },
+    {
+     "vaite": "Persialaiset hävittivät Akropoliin vuonna 480 eaa., ja Perikleen rakennusohjelmassa rakennettiin nykyiset temppelit 400-luvulla eaa.",
+     "url": "https://www.newworldencyclopedia.org/entry/Acropolis_of_Athens"
+    },
+    {
+     "vaite": "Manolis Glezos ja Apostolos Santas, molemmat 19-vuotiaita, ottivat yöllä 30.5.1941 hakaristilipun alas Akropoliilta; aamulla ateenalaiset huomasivat lipun kadonneen.",
+     "url": "https://greekcitytimes.com/2025/05/30/nazi-1941-acropolis-flag"
+    },
+    {
+     "vaite": "Athena Niken temppeli on Akropoliin pienin temppeli, ja se seisoo kallion lounaiskulmassa.",
+     "url": "https://en.wikipedia.org/wiki/Temple_of_Athena_Nike"
+    },
+    {
+     "vaite": "Pausaniaan mukaan jumalankuvalla ei ollut siipiä, jotta se ei koskaan lähtisi Ateenasta; osmanit purkivat temppelin 1686 ja se koottiin uudelleen itsenäistymisen jälkeen.",
+     "url": "https://www.visitgreece.gr/en/culture/monuments/temple_of_athena_nike"
+    }
+   ]
+  },
+  {
+   "id": "Q10288",
+   "nimi": "Parthenon",
+   "kuvaus": "Athenan temppeli Akropoliilla",
+   "luokka": "rakennus",
+   "koko_m": 70,
+   "teksti": "Parthenon on ylhäältä katsottuna pitkä pylväiden reunustama suorakaide Akropoliin korkeimmalla kohdalla, ja pylväsrivien välistä näkyy, ettei temppelillä ole enää kattoa. Se rakennettiin 400-luvulla ennen ajanlaskun alkua vajaassa kymmenessä vuodessa Athena Parthenoksen temppeliksi, ja sen suunnittelivat Iktinos ja Kallikrates Feidiaan johtaessa veistostöitä. Rakennuksessa ei juuri ole suoria viivoja: alusta kaartuu keskeltä hieman ylöspäin, ja pylväät kallistuvat aavistuksen sisäänpäin, jotta temppeli näyttäisi silmään suoralta. Vuonna 1687 venetsialaisten ammus osui ruutivarastoksi muutettuun temppeliin, ja räjähdys repi sen keskiosan auki.",
+   "lyhyt": "Parthenon oli ollut vuosisatoja ensin kirkkona ja sitten moskeijana, ennen kuin räjähdys runteli sen. Suuri osa sen veistoksista on nykyään Lontoossa Brittiläisessä museossa, jonne lordi Elgin vei ne 1800-luvun alussa.",
+   "syventava": "Kuka ampui Parthenonin raunioiksi?",
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Parthenon rakennettiin Athena Parthenoksen temppeliksi vuosina 447–438 eaa.; suunnittelijat Iktinos ja Kallikrates, veistostöitä johti Feidias.",
+     "url": "https://en.wikipedia.org/wiki/Parthenon"
+    },
+    {
+     "vaite": "Stylobaatti kaartuu keskeltä ylöspäin, ja pylväät kallistuvat hieman sisäänpäin optisten harhojen korjaamiseksi; suoria viivoja on vähän.",
+     "url": "https://www.thecollector.com/parthenon-illusion/"
+    },
+    {
+     "vaite": "26.9.1687 venetsialaisten kranaatti osui osmanien ruutivarastona käyttämään Parthenoniin, ja räjähdys aiheutti rakennuksen historian suurimman tuhon.",
+     "url": "https://en.wikipedia.org/wiki/Francesco_Morosini"
+    },
+    {
+     "vaite": "Parthenon oli ollut kirkko, ja osmanit muuttivat sen moskeijaksi 1400-luvulla; vuonna 1687 venetsialaisten ammus räjäytti sen ruutivaraston.",
+     "url": "https://greekcitytimes.com/?p=369692"
+    },
+    {
+     "vaite": "Lordi Elgin vei veistoksia 1800-luvun alussa; ne ovat Brittiläisessä museossa.",
+     "url": "https://www.npr.org/2009/10/19/113889188/greece-unveils-museum-meant-for-stolen-sculptures"
+    }
+   ]
+  },
+  {
+   "id": "Q395367",
+   "nimi": "Antiikin agora",
+   "kuvaus": "Muinaisen Ateenan tori",
+   "luokka": "aukio",
+   "koko_m": 300,
+   "teksti": "Antiikin agora erottuu ylhäältä vihreänä, raunioiden ja puiden täplittämänä alueena Akropoliin luoteispuolella, ja sen itälaidalla kulkee pitkä kaksikerroksinen pylväshalli. Agora oli Ateenan tori ja kokouspaikka, jossa kauppa, politiikka ja oikeus kohtasivat. Täällä Sokrates kulki kojujen ja pylväikköjen lomassa ja esitti vastaantulijoille yhä vaikeampia kysymyksiä. Kansalaiset äänestivät myös liian vaikutusvaltaisten miesten karkottamisesta raapimalla nimen saviastian palaseen, ja torin museossa on palasia, joihin on kirjoitettu sotapäällikkö Themistokleen nimi.",
+   "lyhyt": "Antiikin agoran itälaidan pylväshalli, Attaloksen stoa, oli alun perin Pergamonin kuninkaan lahja kaupungille 100-luvulla ennen ajanlaskun alkua. Amerikkalaiset arkeologit rakensivat sen uudelleen 1950-luvulla, ja nykyään siinä toimii agoran museo.",
+   "syventava": "Mitä Sokrates kyseli torilla?",
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Agora oli Ateenan kauppa- ja kokouspaikka.",
+     "url": "https://en.wikipedia.org/wiki/Ancient_Agora_of_Athens"
+    },
+    {
+     "vaite": "Sokrates opetti agoralla kulkien kojujen ja pylväikköjen välissä ja esittäen vieraille yhä vaikeampia kysymyksiä; ostrakismissa nimi raaputettiin saviastian palaseen, ja museossa on Themistokleen nimellä varustettuja palasia.",
+     "url": "https://www.ancient-greece.org/museum/agora.html"
+    },
+    {
+     "vaite": "Attaloksen stoa on kaksikerroksinen pylväshalli agoran itälaidalla; Pergamonin kuningas Attalos II rakennutti sen 100-luvulla eaa.; American School of Classical Studies rakensi sen uudelleen 1953–1956, ja siinä toimii agoran museo.",
+     "url": "https://agora.ascsa.net/id/agora/publication/agora%20picture%20book%202"
+    }
+   ]
+  },
+  {
+   "id": "Q1123019",
+   "nimi": "Olympoksen Zeuksen temppeli",
+   "kuvaus": "Antiikin Kreikan suurin temppeli",
+   "luokka": "rakennus",
+   "koko_m": 120,
+   "teksti": "Olympoksen Zeuksen temppelistä on ylhäältä katsottuna jäljellä vain ryhmä jättimäisiä pylväitä laajan kivialustan laidalla. Alun perin seitsemäntoista metriä korkeita pylväitä oli sataneljä, ja temppeli oli antiikin Kreikan suurin. Rakentaminen aloitettiin 500-luvulla ennen ajanlaskun alkua, mutta temppeli valmistui vasta keisari Hadrianuksen aikana, yli kuusisataa vuotta myöhemmin. Pystyssä on nykyään viisitoista pylvästä. Kuudestoista kaatui myrskyssä vuonna 1852, ja se makaa yhä maassa kuin kumoon kaatunut pino kivikiekkoja.",
+   "lyhyt": "Olympoksen Zeuksen temppelin rakentaminen alkoi tyranni Peisistratoksen aikana, mutta työ pysähtyi perustuksiin, kun hänen sukunsa menetti vallan. Vuosisatoja myöhemmin keisari Hadrianus vihki temppelin, ja sen viereen pystytettiin hänen kunniakseen porttikaari.",
+   "syventava": "Miksi temppelin rakentaminen pysähtyi?",
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Temppelissä oli 104 pylvästä, noin 17 metriä korkeita; se oli antiikin Kreikan suurin temppeli.",
+     "url": "https://en.wikipedia.org/wiki/Temple_of_Olympian_Zeus,_Athens"
+    },
+    {
+     "vaite": "Rakentaminen aloitettiin 500-luvulla eaa. ja temppeli valmistui Hadrianuksen aikana vuonna 131 jaa., yli kuusisataa vuotta myöhemmin.",
+     "url": "https://www.aroundgreece.net/athens/attractions/temple-olympian-zeus"
+    },
+    {
+     "vaite": "Pystyssä on 15 pylvästä; kuudestoista kaatui myrskyssä vuonna 1852 ja on yhä maassa.",
+     "url": "https://en.wikipedia.org/wiki/Temple_of_Olympian_Zeus,_Athens"
+    },
+    {
+     "vaite": "Työ aloitettiin Peisistratoksen aikana mutta jäi kalkkikiviperustukseen, kun Peisistratos suku syöstiin vallasta; Hadrianus vihki temppelin.",
+     "url": "https://www.aroundgreece.net/athens/attractions/temple-olympian-zeus"
+    },
+    {
+     "vaite": "Hadrianuksen kaari pystytettiin läheisen temppelin vihkimisen yhteydessä 131 tai 132 jaa. keisarin kunniaksi.",
+     "url": "https://en.wikipedia.org/wiki/Arch_of_Hadrian_(Athens)"
+    }
+   ]
+  },
+  {
+   "id": "Q208811",
+   "nimi": "Kallimarmaro (Panathinaïkó-stadion)",
+   "kuvaus": "Maailman ainoa marmoristadion",
+   "luokka": "muu",
+   "koko_m": 260,
+   "teksti": "Marmoristadion Kallimarmaro näkyy ylhäältä pitkänä valkoisena hevosenkenkänä, ja se on maailman ainoa kokonaan marmorista rakennettu stadion. Marmoriasunsa se sai jo Herodes Atticuksen aikana, ja vuoden 1896 kisoja varten se kunnostettiin entiselleen Georgios Averoffin lahjoituksella. Keväällä 1896 sen katsomossa oli kymmeniätuhansia ihmisiä, kun uuden ajan ensimmäiset olympialaiset alkoivat. Maratonin voitti kaksikymmentäkolmevuotias Spyridon Louis, joka kantoi työkseen juomavettä Maroúsista Ateenaan, sillä kaupungissa ei vielä ollut vesijohtoa. Voittajat eivät tuolloin saaneet kultaa, vaan hopeamitalin ja oliivinoksan.",
+   "lyhyt": "Marmoristadionilla luovutetaan nykyään olympiatuli seuraavien kisojen isäntämaalle, ennen kuin se lähtee Kreikasta. Ateenan olympialaisissa vuonna 2004 miesten ja naisten maratonit päättyivät samalle radalle, jolla ensimmäinen olympiamaraton oli päättynyt yli sata vuotta aiemmin.",
+   "syventava": "Kuka oli maratonin vesikantaja?",
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Stadion on hevosenkengän muotoinen ja maailman ainoa kokonaan marmorista rakennettu.",
+     "url": "https://en.wikipedia.org/wiki/Panathenaic_Stadium"
+    },
+    {
+     "vaite": "Keväällä 1896 avajaisissa oli kymmeniätuhansia katsojia (arviot 50 000–80 000); maratonin voitti 23-vuotias Spyridon Louis, joka kuljetti vettä Maroúsista Ateenaan, jossa ei ollut vesijohtoa.",
+     "url": "https://en.wikipedia.org/wiki/Spyridon_Louis"
+    },
+    {
+     "vaite": "Vuoden 1896 voittajat saivat hopeamitalin, oliivinoksan ja diplomin.",
+     "url": "https://en.wikipedia.org/wiki/1896_Summer_Olympics"
+    },
+    {
+     "vaite": "Stadion sai marmoriasunsa Herodes Atticuksen aikana vuonna 144, ja Georgios Averoffin lahjoitus kunnosti sen vuoden 1896 olympialaisiin.",
+     "url": "https://greeka.com/Attica/athens/sightseeing/athens-roman-stadium"
+    },
+    {
+     "vaite": "Olympiatulen luovutusseremonia isäntämaalle pidetään stadionilla viimeisenä paikkana Kreikassa; vuoden 2004 maratonit päättyivät sinne.",
+     "url": "https://en.wikipedia.org/wiki/Panathenaic_Stadium"
+    }
+   ]
+  },
+  {
+   "id": "Q242741",
+   "nimi": "Erekhtheion",
+   "kuvaus": "Karyatidien kannattelema temppeli",
+   "luokka": "rakennus",
+   "koko_m": 30,
+   "teksti": "Erekhtheion on Akropoliin pohjoisreunan temppeli, jonka eteläistä kuistia kannattaa pylväiden sijaan kuusi marmorista neitoa, karyatidia. Paikalla seisovat patsaat ovat jäljennöksiä: alkuperäisistä viisi on Akropolis-museossa, ja kuudennen lordi Elgin vei Lontooseen 1800-luvun alussa. Tarun mukaan juuri tällä kalliolla Athene ja Poseidon kiistelivät siitä, kumman suojelukseen kaupunki kuuluisi. Poseidon iski kalliosta suolaisen lähteen ja Athene kasvatti oliivipuun, ja voiton vei Athene. Temppelin länsipuolella kasvaa yhä oliivipuu, joka istutettiin 1900-luvulla pyhän puun paikalle.",
+   "lyhyt": "Erekhtheionin karyatidit eivät ole toistensa kopioita, sillä kampaukset, vaatteiden laskokset ja polven asento vaihtelevat. Museossa viisi siskoa puhdistettiin 2010-luvulla laserilla mustasta noesta, ja vierailijat saivat seurata työtä suorana.",
+   "syventava": "Missä kuudes karyatidi on nyt?",
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Eteläkuistia kannattaa kuusi marmorista naishahmoa, karyatidia; paikalla ovat jäljennökset, viisi alkuperäistä on Akropolis-museossa ja yksi Brittiläisessä museossa, jonne lordi Elgin sen vei.",
+     "url": "https://en.wikipedia.org/wiki/Caryatid"
+    },
+    {
+     "vaite": "Elgin vei karyatidin 1800-luvun alussa; patsaat eroavat kampauksiltaan, laskoksiltaan ja polven asennoltaan; ne puhdistettiin laserilla vuosina 2011–2015 museovieraiden nähden.",
+     "url": "https://resources.culturalheritage.org/conservators-converse/2014/07/08/from-the-new-york-times-acropolis-maidens-glow-anew/"
+    },
+    {
+     "vaite": "Taru: Athene ja Poseidon kilpailivat kaupungista; Poseidon antoi suolaisen lähteen, Athene oliivipuun, ja Athene voitti; Erekhtheion rakennettiin kiistan paikalle, ja sen edustalla kasvaa oliivipuu.",
+     "url": "https://www.historyhit.com/locations/the-erechtheion"
+    },
+    {
+     "vaite": "Nykyinen oliivipuu istutettiin vuonna 1952.",
+     "url": "https://www.historyhit.com/locations/the-erechtheion"
+    }
+   ]
+  },
+  {
+   "id": "Q421084",
+   "nimi": "Akropolis-museo",
+   "kuvaus": "Akropoliin löytöjen moderni museo",
+   "luokka": "rakennus",
+   "koko_m": 160,
+   "teksti": "Akropolis-museo on Akropoliin etelärinteen juurella seisova lasinen ja betoninen rakennus, jonka ylin kerros on käännetty muuta taloa vinoon. Museo avattiin vuonna 2009, ja sen suunnitteli arkkitehti Bernard Tschumi. Ylimmän kerroksen lasiseinäinen Parthenon-sali on linjattu samaan suuntaan kuin itse temppeli, joka näkyy sen ikkunoista. Salissa kiertää Parthenonin veistetty friisi kokonaisuudessaan: Ateenassa säilyneiden laattojen välissä on valkoisia kipsivaloksia niistä osista, jotka lordi Elgin vei 1800-luvun alussa ja jotka ovat nykyään Lontoossa.",
+   "lyhyt": "Akropolis-museo rakennettiin arkeologisen kaivausalueen päälle, ja lasilattioiden läpi näkyy muinaisen asuinalueen raunioita. Museossa on esillä myös viisi Erekhtheionin karyatidia, ja kuudennen jalusta on jätetty tyhjäksi.",
+   "syventava": "Miksi osa friisistä on valkoista?",
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Museo avattiin 20.6.2009, suunnittelijat Bernard Tschumi ja Michael Photiadis; ylimmän kerroksen Parthenon-galleria on linjattu Parthenonin mukaan; lasilattioista näkyy kaivausalue.",
+     "url": "https://en.wikipedia.org/wiki/Acropolis_Museum"
+    },
+    {
+     "vaite": "Parthenon-galleriassa friisi on esillä kokonaan; Lontoossa olevat osat ovat valkoisia kipsivaloksia alkuperäisten välissä.",
+     "url": "https://www.npr.org/2009/10/19/113889188/greece-unveils-museum-meant-for-stolen-sculptures"
+    },
+    {
+     "vaite": "Ylin kerros on käännetty 23 astetta alempiin kerroksiin nähden, jotta Parthenon-galleria olisi linjassa temppelin kanssa; galleriassa on lasiseinät.",
+     "url": "https://en.wikipedia.org/wiki/Acropolis_Museum"
+    },
+    {
+     "vaite": "Museossa on viisi karyatidia, ja kuudennen paikka on tyhjä.",
+     "url": "https://resources.culturalheritage.org/conservators-converse/?p=11119"
+    }
+   ]
+  },
+  {
+   "id": "Q756824",
+   "nimi": "Hefaistoksen temppeli",
+   "kuvaus": "Parhaiten säilynyt doorilainen temppeli",
+   "luokka": "rakennus",
+   "koko_m": 40,
+   "teksti": "Hefaistoksen temppeli seisoo agoran länsilaidalla matalan kukkulan päällä, ja ylhäältä katsottuna se näyttää yhä kokonaiselta temppeliltä. Se on Kreikan parhaiten säilynyt doorilainen temppeli, ja sen rakentaminen aloitettiin vuonna 449 ennen ajanlaskun alkua tulen ja sepäntaidon jumalan kunniaksi. Rakennus säilyi, koska se toimi kirkkona 600-luvulta vuoteen 1834. Ateenalaiset kutsuivat sitä pitkään Theseioniksi, sillä sen kiviveistokset kuvaavat sankari Theseuksen urotöitä ja hänen uskottiin olevan haudattu sinne. Nimi elää yhä läheisen Thission-kaupunginosan nimessä.",
+   "lyhyt": "Hefaistoksen temppelissä pidettiin viimeinen jumalanpalvelus vuonna 1833, kun juhlittiin kuningas Otton saapumista Kreikkaan. Kun Ateenasta tuli seuraavana vuonna maan pääkaupunki, asiasta kertova kuninkaallinen julistus luettiin juuri täällä.",
+   "syventava": "Miksi temppeliä kutsuttiin Theseioniksi?",
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Temppeli on Agoraios Kolonos -kukkulalla agoran laidalla; se on Kreikan parhaiten säilynyt doorilainen temppeli; se toimi Pyhän Yrjön kirkkona 600-luvulta vuoteen 1834.",
+     "url": "https://en.wikipedia.org/wiki/Temple_of_Hephaestus"
+    },
+    {
+     "vaite": "Rakentaminen alkoi vuonna 449 eaa.; metoopit kuvaavat Theseuksen urotöitä, ja nimi Theseion johtui uskomuksesta, että Theseus oli haudattu sinne.",
+     "url": "https://ancient-greece.org/?p=3953"
+    },
+    {
+     "vaite": "Viimeinen jumalanpalvelus pidettiin 21.2.1833 Otton saapumisen juhlinnassa, ja kun Ateenasta tuli pääkaupunki 1834, kuninkaallinen asetus julkaistiin temppelissä.",
+     "url": "https://athensattica.com/point/temple-of-hephaestus/"
+    },
+    {
+     "vaite": "Temppeli tunnetaan myös nimellä Thission, ja lähistön kaupunginosa ja metroasema ovat Thissio.",
+     "url": "https://athensattica.com/point/temple-of-hephaestus/"
+    }
+   ]
+  },
+  {
+   "id": "Q1137997",
+   "nimi": "Sýntagman aukio",
+   "kuvaus": "Ateenan keskusaukio parlamentin edessä",
+   "luokka": "aukio",
+   "koko_m": 150,
+   "teksti": "Sýntagman aukio on Ateenan keskusaukio, ylhäältä katsottuna puiden reunustama neliö, jonka itälaidalla kohoaa vaalea parlamenttitalo. Talo rakennettiin 1830- ja 1840-lukujen taitteessa Kreikan ensimmäisen kuninkaan Otton palatsiksi, ja parlamentti on kokoontunut siellä vuodesta 1935. Sen edessä on tuntemattoman sotilaan hauta, jota vartioivat evzonit valkoisissa hameissaan ja tupsukengissään. Vartio vaihtuu tasatunnein hitaalla askelluksella, jossa jalka nousee suorana eteen. Aukion alla metroasemalla on esillä kaivauksissa löydettyjä hautoja ja pätkä muinaista vesijohtoa.",
+   "lyhyt": null,
+   "syventava": "Miksi evzonien kengissä on tupsut?",
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Parlamenttitalo rakennettiin 1836–1842 kuningas Otton palatsiksi, ja parlamentti on kokoontunut siellä vuodesta 1935.",
+     "url": "https://www.hellenicparliament.gr/en/Vouli-ton-Ellinon/ToKtirio"
+    },
+    {
+     "vaite": "Evzonien asuun kuuluu valkoinen fustanella-hame ja tupsulliset tsarouhia-kengät; marssiessa jalka nousee suorana ylös.",
+     "url": "https://www.athensinsider.com/evzones-behind-the-seams/"
+    },
+    {
+     "vaite": "Syntagman metroaseman kaivauksissa löytyi hautoja ja osa Peisistratoksen aikaista vesijohtoa, jotka ovat esillä.",
+     "url": "https://athensattica.com/point/outdoor-exhibition-area-at-syntagma-square/"
+    },
+    {
+     "vaite": "Tuntemattoman sotilaan hautaa vartioivat evzonit; vartio vaihtuu tasatunnein.",
+     "url": "https://en.wikipedia.org/wiki/Syntagma_Square"
+    }
+   ]
+  },
+  {
+   "id": "Q1357713",
+   "nimi": "Likavittos",
+   "kuvaus": "Ateenan keskustan korkein kukkula",
+   "luokka": "muu",
+   "koko_m": 800,
+   "teksti": "Likavittos on Ateenan keskustan korkein kohta, kaksisataaseitsemänkymmentäseitsemän metriä korkea kalliokukkula, jonka huipulla erottuu ylhäältä pieni valkoinen kirkko. Pyhän Yrjön kappeli rakennettiin 1800-luvulla, ja huipun lähellä on ulkoilmateatteri, jossa on järjestetty paljon konsertteja. Ylös pääsee Kolonakin kaupunginosasta lähtevällä köysiradalla, ja huipulta näkyy koko kaupunki merelle asti. Tarun mukaan Athene kantoi vuorta Akropolista varten, mutta kun varis toi hänelle pahoja uutisia, hän pudotti sen tähän. Siitä lähtien variksilla ei tarun mukaan ollut asiaa Akropoliille.",
+   "lyhyt": null,
+   "syventava": "Minkä uutisen varis toi Athenelle?",
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Kukkula on 277 metriä korkea ja Ateenan keskustan korkein kohta; huipulla on 1800-luvun Pyhän Yrjön kappeli ja ulkoilmateatteri; köysirata nousee Kolonakista.",
+     "url": "https://en.wikipedia.org/wiki/Mount_Lycabettus"
+    },
+    {
+     "vaite": "Tarun mukaan Athene kantoi vuorta Akropolista varten, pudotti sen, kun varis toi pahan uutisen, ja kielsi varikselta pääsyn Akropoliille.",
+     "url": "https://en.wikipedia.org/wiki/Erichthonius_(son_of_Hephaestus)"
+    },
+    {
+     "vaite": "Huipulta näkyy koko kaupunki merelle asti.",
+     "url": "https://en.wikipedia.org/wiki/Mount_Lycabettus"
+    }
+   ]
+  },
+  {
+   "id": "Q1231816",
+   "nimi": "Pláka",
+   "kuvaus": "Ateenan vanhin kaupunginosa",
+   "luokka": "muu",
+   "koko_m": 600,
+   "teksti": "Kaupunginosa Pláka levittäytyy Akropoliin rinteiden juurelle kapeiden kujien sokkelona, ja se on Ateenan vanhin. Sen halki kulkeva Adrianoun katu on seurannut samaa linjaa noin kaksituhatta viisisataa vuotta, ja kaivausten mukaan se on kaupungin vanhin yhä käytössä oleva katu. Akropoliin rinteellä on Anafiotika, valkoisten talojen kylä, jonka rakensivat 1800-luvulla Anafin saarelta tulleet rakentajat, jotka olivat töissä kuningas Otton palatsilla. He muurasivat kotinsa öisin, sillä silloisen lain mukaan auringonlaskun ja auringonnousun välillä pystytetty talo jäi rakentajalleen.",
+   "lyhyt": null,
+   "syventava": "Miksi saarelaiset rakensivat öisin?",
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Pláka on Ateenan historiallisen keskustan vanhin kaupunginosa Akropoliin juurella.",
+     "url": "https://greekcitytimes.com/2017/05/08/lose-yourself-around-plaka-athens-oldest-finest-neighbourhood/amp"
+    },
+    {
+     "vaite": "Adrianou-katu on kulkenut samaa linjaa noin 2 500 vuotta ja on Ateenan vanhin jatkuvasti käytössä ollut katu.",
+     "url": "https://en.wikipedia.org/wiki/Adrianou_Street"
+    },
+    {
+     "vaite": "Anafiotikan rakensivat 1800-luvulla Anafin saarelta tulleet rakentajat, jotka työskentelivät kuningas Otton palatsilla; he rakensivat öisin, koska osmanien aikaisen lain mukaan auringonlaskun ja -nousun välillä pystytetty rakennus jäi rakentajalle.",
+     "url": "https://en.wikipedia.org/wiki/Anafiotika"
+    }
+   ]
+  },
+  {
+   "id": "Q1328165",
+   "nimi": "Herodes Atticuksen odeion",
+   "kuvaus": "Roomalaisajan kivinen teatteri",
+   "luokka": "rakennus",
+   "koko_m": 90,
+   "teksti": "Herodes Atticuksen odeion näkyy ylhäältä Akropoliin lounaisrinteellä puoliympyrän muotoisena kivikatsomona, jonka takana kohoaa korkea kaariaukkoinen seinä. Rikas ateenalainen Herodes Atticus, joka oli myös Rooman konsuli, rakennutti sen vaimonsa Regillan muistoksi, ja se valmistui vuonna 161. Vuonna 267 herulien hyökkäys tuhosi sen. Katsomo ja näyttämö korjattiin marmorilla 1950-luvulla, ja nykyään paikkoja on viitisentuhatta. Odeionista tuli Ateenan festivaalin päänäyttämö, jonka esityksiä järjestetään joka vuosi toukokuusta lokakuuhun, ja vuonna 1957 siellä lauloi Maria Callas.",
+   "lyhyt": null,
+   "syventava": "Kuka oli Herodes Atticuksen vaimo Regilla?",
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Herodes Atticus rakennutti odeionin vuonna 161 vaimonsa Regillan muistoksi, ja herulit tuhosivat sen vuonna 267.",
+     "url": "https://athensattica.com/point/odeon-of-herodes-atticus-herodeon/"
+    },
+    {
+     "vaite": "Katsomo ja orkestra korjattiin pentelikonin marmorilla 1950-luvulla; paikkoja on noin 5 000; odeion on Ateenan festivaalin päänäyttämö, ja Maria Callas esiintyi siellä vuonna 1957.",
+     "url": "https://en.wikipedia.org/wiki/Odeon_of_Herodes_Atticus"
+    },
+    {
+     "vaite": "Herodes Atticus oli rikas ateenalainen ja Rooman konsuli vuonna 143.",
+     "url": "https://en.wikipedia.org/wiki/Herodes_Atticus"
+    },
+    {
+     "vaite": "Ateenan festivaali järjestetään vuosittain toukokuusta lokakuuhun.",
+     "url": "https://en.wikipedia.org/wiki/Odeon_of_Herodes_Atticus"
+    }
+   ]
+  },
+  {
+   "id": "Q372717",
+   "nimi": "Tuulien torni",
+   "kuvaus": "Antiikin kahdeksankulmainen kellotorni",
+   "luokka": "torni",
+   "koko_m": 20,
+   "korkeus_m": 12,
+   "teksti": "Tuulien torni on roomalaisen torin laidalla seisova kahdeksankulmainen marmoritorni, noin kaksitoista metriä korkea. Se valmistui viimeistään noin vuonna 50 ennen ajanlaskun alkua, ja se on antiikin ainoa säilynyt kellotorni. Rakentajaksi mainitaan tähtitieteilijä Andronikos Kyrrhoslainen. Jokaisella kahdeksalla sivulla lentää oma tuulenjumalansa, ja niiden alle on kaiverrettu aurinkokellot. Pilvisellä säällä aikaa mittasi tornin sisällä vesikello, jota pyöritti Akropoliin lähteestä johdettu vesi, ja katolla kääntyi pronssinen Triton, joka osoitti sauvallaan, mistä tuuli puhalsi.",
+   "lyhyt": null,
+   "syventava": "Miten tornin vesikello toimi?",
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Torni on kahdeksankulmainen marmoritorni roomalaisella agoralla, noin 12 metriä korkea; sivuilla tuulenjumalien reliefit ja aurinkokellot; sisällä vesikello ja katolla pronssinen Triton-tuuliviiri.",
+     "url": "https://en.wikipedia.org/wiki/Tower_of_the_Winds"
+    },
+    {
+     "vaite": "Tornin rakentajaksi mainitaan tähtitieteilijä Andronikos Kyrrhoslainen.",
+     "url": "https://en.wikipedia.org/wiki/Tower_of_the_Winds"
+    },
+    {
+     "vaite": "Torni valmistui viimeistään noin 50 eaa., ja se on antiikin ainoa säilynyt kellotorni.",
+     "url": "https://en.wikipedia.org/wiki/Tower_of_the_Winds"
+    },
+    {
+     "vaite": "Vesikelloa käytti Akropoliin lähteen vesi; katolla oli Triton-tuuliviiri, joka piti kädessään sauvaa.",
+     "url": "https://www.worldhistory.org/article/1044/tower-of-the-winds"
+    }
+   ]
+  },
+  {
+   "id": "Q1567576",
+   "nimi": "Hadrianuksen kaari",
+   "kuvaus": "Keisari Hadrianuksen marmorinen porttikaari",
+   "luokka": "muu",
+   "koko_m": 20,
+   "teksti": "Hadrianuksen kaari on vaalea marmorinen porttikaari vilkkaan kadun varrella, Zeuksen temppelin ja vanhan kaupungin välissä. Se pystytettiin noin vuonna 131 keisari Hadrianuksen kunniaksi, kun läheinen temppeli vihittiin. Kaaren kahdelle puolelle on kaiverrettu vastakkaiset kirjoitukset. Akropoliin puoleisella sivulla lukee, että tämä on Ateena, Theseuksen muinainen kaupunki, ja temppelin puolella, että tämä on Hadrianuksen eikä Theseuksen kaupunki. Kirjoitusten on tulkittu merkinneen rajaa vanhan Ateenan ja keisarin uuden kaupunginosan välillä.",
+   "lyhyt": null,
+   "syventava": "Kuka oli sankari Theseus?",
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Kaari pystytettiin noin 131 tai 132 jaa. Hadrianuksen kunniaksi läheisen temppelin vihkimisen yhteydessä; länsipuolen kirjoitus: tämä on Ateena, Theseuksen muinainen kaupunki; itäpuolen: tämä on Hadrianuksen eikä Theseuksen kaupunki; perinteinen tulkinta on vanhan ja uuden Ateenan raja.",
+     "url": "https://en.wikipedia.org/wiki/Arch_of_Hadrian_(Athens)"
+    }
+   ]
+  },
+  {
+   "id": "Q1227044",
+   "nimi": "Dionysoksen teatteri",
+   "kuvaus": "Akropoliin rinteen antiikin teatteri",
+   "luokka": "muu",
+   "koko_m": 100,
+   "teksti": "Dionysoksen teatteri on Akropoliin etelärinteeseen rakennettu puoliympyrän muotoinen katsomo, jota pidetään kreikkalaisen tragedian syntypaikkana. Täällä esitettiin 400-luvulla ennen ajanlaskun alkua ensimmäistä kertaa Aiskhyloksen, Sofokleen, Euripideen ja Aristofaneen näytelmiä. Esitykset kuuluivat viinin ja juhlan jumalan Dionysoksen kevätjuhlaan, ja näytelmäkirjailijat kilpailivat niissä keskenään. Kun katsomo myöhemmin rakennettiin kivestä ja marmorista, siihen mahtui noin seitsemäntoistatuhatta katsojaa. Eturivissä on yhä marmorisia kunniaistuimia, ja keskimmäinen, leijonankäpälin koristeltu istuin oli varattu Dionysoksen papille.",
+   "lyhyt": null,
+   "syventava": "Kuka voitti näytelmäkilpailut?",
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Teatterissa esitettiin 400-luvulla eaa. ensimmäistä kertaa Sofokleen, Euripideen, Aiskhyloksen ja Aristofaneen näytelmiä; kivestä ja marmorista uudelleen rakennettuun katsomoon mahtui noin 17 000; eturivin marmoristuimista keskimmäinen leijonankäpälin koristeltu oli Dionysoksen papin.",
+     "url": "https://www.worldhistory.org/article/814/theatre-of-dionysos-eleuthereus"
+    },
+    {
+     "vaite": "Näytelmät esitettiin kilpailuissa Dionysoksen juhlilla.",
+     "url": "https://kids.britannica.com/kids/article/Theatre-of-Dionysus/30552"
+    },
+    {
+     "vaite": "Teatteria pidetään kreikkalaisen tragedian syntypaikkana.",
+     "url": "https://www.headout.com/blog/theatre-of-dionysus/"
+    },
+    {
+     "vaite": "Eturivin keskimmäinen istuin kuului Dionysoksen papille, ja sen jalat päättyvät leijonankäpäliin.",
+     "url": "https://blogs.hsc.edu/drjclassics/greece/athens/south-slope/theater-of-dionysus/"
+    }
+   ]
+  }
+ ]
+}
