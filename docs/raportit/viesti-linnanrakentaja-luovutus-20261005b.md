@@ -257,3 +257,14 @@ Brotli (haara linnanrakentaja-zstd, worktree olemassa), akustiikka #3979 (Steam 
   Lähteiden reitti torniin: pikkupiha → itäsiipi (E 102 / portaat) → Linnantupa (+86,4) → Kirkkotornin pohjakerros (ovi) →
   porras kappeliin (+92,6). TODO kappelikorjaus: kappeli.js sijoitus y +3,2, Ø 7,8 m, ristiholvi ~11,8 m alimmasta, ikkunaton,
   ampumakäytävä +96,5 (malli 13,5); kavely reitti.json kirkkotorni_alin 3,4 ja kappeli 9,6, portaat itäsiiven kautta (A).
+- 7.10. 10.4x: KAPPELI KORJATTU (haara linnanrakentaja-linna-v42 880b73923): kappeli.js sijoitus y +0,2 (lattia 9,6), sisäsäde 3,9
+  (torni paksuus 2,7), ristiholvi = kupoli + `ristiholvi: {kulma 5, nousu 0,55, reuna 0,25}` (uusi ristiRuudukko reseptit-linna.mjs),
+  lähtö 12,3 / laki 15,0 (+0,2), ikkunaton (ikkunarako + keila pois), kalusteet sisäsäteelle. leivo_tila.py: alaspäin osoittavat
+  pinnat poistetaan VAIN < 2,2 m tilan rajojen alareunasta (holvin laki ja keittiön katto katosivat atlaksesta).
+  KEITTIO-G102 valmis (agentti, _valmiit/olavinlinna-keittio-g102-v1, esinetarkistus: nauris, talikynttilä, rautapadat; esine-nauris.glb
+  esineet-v1:ssä). Stillit Päätoimittajalle 10.4x. SOUTU valmis (_valmiit/olavinlinna-soutu-v1, hahmo istuin_soutaja-lapseksi, skaala 0,9753).
+  KÄVELY v2 (lahde/kavely.py kirkkotorni() uusiksi, reitti.json tasot 3,4/9,6): kierreporras Ø 3 (−20,7, −4,3) −2,74 → 1,2, suora
+  varsi 11 askelmaa → Tott-kammio 3,4 (r 4,15), muuriporras kahtena suorana vartena r 5,65 (325→275 → 6,5, 265→215 → 9,6),
+  kappeliin leikkaussektorin puolelta; esine:omena → esine:nauris. Tuotos scratchpad kavely-v2 → kopioi _valmiit/olavinlinna-kavely-v1/v2/
+  + kuori_kavely.py ulkoalue + esineet. MUISTIRAJA (Päätoimittaja 10.4x): paistot yksi kerrallaan, PhysMem unused > 20 Gt;
+  scratchpad paistot.sh leipoo kappelin ja keittiön uudelleen (4k) muistin salliessa → v44 (soutu, keittio-g102, kappeli, kävely v2).
