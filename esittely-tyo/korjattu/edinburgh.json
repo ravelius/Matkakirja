@@ -1,526 +1,526 @@
 {
- "kaupunki": "Edinburgh",
- "id": "edinburgh",
- "versio": 1,
- "kohteet": [
-  {
-   "id": "Q212065",
-   "nimi": "Edinburghin linna",
-   "kuvaus": "Linna sammuneen tulivuoren kalliolla",
-   "luokka": "linnoitus",
-   "koko_m": 350,
-   "teksti": "Edinburghin linna kohoaa sammuneen tulivuoren kalliolla, joka putoaa kolmelta suunnalta jyrkänteenä, joten linnaan pääsee kävellen vain idästä. Linnan vanhin rakennus, Pyhän Margaretan kappeli, rakennettiin noin vuonna 1130, ja se on koko Edinburghin vanhin säilynyt rakennus. Linnassa säilytetään myös Skotlannin kruununjalokiviä, jotka ovat Brittein saarten vanhimmat. Muurilta ammutaan tykillä tasan kello yksi joka päivä paitsi sunnuntaisin ja muutamana juhlapäivänä. Perinne alkoi vuonna 1861 aikamerkiksi Forthin vuonon laivoille, jotka saattoivat tarkistaa kellonsa laukauksen mukaan.",
-   "lyhyt": "Edinburghin linnan edessä on avara paraatikenttä, jolle pystytetään joka kesä valtavat katsomot elokuun sotilassoittokuntien iltaesityksiä varten. Linnassa on näytteillä myös Mons Meg, 1400-luvulla valmistettu lähes seitsemän tonnin piiritystykki, joka pystyi ampumaan kivikuulan noin kolmen kilometrin päähän.",
-   "syventava": "Mistä Skotlannin kruununjalokivet ovat peräisin?",
-   "kysymykset": [
-    "Miksi linnan tykki ammutaan juuri kello yksi?",
-    "Kuka oli kuningatar Margareta, jolle kappeli omistettiin?",
-    "Onko linnaa koskaan valloitettu piirityksellä?",
-    "Mitä Skotlannin kruununjalokiviin kuuluu?",
-    "Asuuko linnassa yhä sotilaita?"
-   ],
-   "isoisa": false,
-   "lahteet": [
+  "kaupunki": "Edinburgh",
+  "id": "edinburgh",
+  "versio": 1,
+  "kohteet": [
     {
-     "vaite": "Linna seisoo sammuneen tulivuoren tulpalla; kalliolla on jyrkänteet etelässä, lännessä ja pohjoisessa, joten ainoa helppo reitti linnaan on idästä.",
-     "url": "https://en.wikipedia.org/wiki/Castle_Rock_(Edinburgh)"
+      "id": "Q212065",
+      "nimi": "Edinburghin linna",
+      "kuvaus": "Linna sammuneen tulivuoren kalliolla",
+      "luokka": "linnoitus",
+      "koko_m": 350,
+      "teksti": "Edinburghin linna kohoaa sammuneen tulivuoren kalliolla, joka putoaa kolmelta suunnalta jyrkänteenä, joten linnaan pääsee kävellen vain idästä. Linnan vanhin rakennus, Pyhän Margaretan kappeli, rakennettiin noin vuonna 1130, ja se on koko Edinburghin vanhin säilynyt rakennus. Linnassa säilytetään myös Skotlannin kruununjalokiviä, jotka ovat Brittein saarten vanhimmat. Muurilta ammutaan tykillä tasan kello yksi joka päivä paitsi sunnuntaisin ja muutamana juhlapäivänä. Perinne alkoi vuonna 1861 aikamerkiksi Forthin vuonon laivoille, jotka saattoivat tarkistaa kellonsa laukauksen mukaan.",
+      "lyhyt": "Edinburghin linnan edessä on avara paraatikenttä, jolle pystytetään joka kesä valtavat katsomot elokuun sotilassoittokuntien iltaesityksiä varten. Linnassa on näytteillä myös Mons Meg, 1400-luvulla valmistettu lähes seitsemän tonnin piiritystykki, joka pystyi ampumaan kivikuulan noin kolmen kilometrin päähän.",
+      "syventava": "Mistä Skotlannin kruununjalokivet ovat peräisin?",
+      "kysymykset": [
+        "Miksi linnan tykki ammutaan juuri kello yksi?",
+        "Kuka oli kuningatar Margareta, jolle kappeli omistettiin?",
+        "Onko linnaa koskaan valloitettu piirityksellä?",
+        "Mitä Skotlannin kruununjalokiviin kuuluu?",
+        "Asuuko linnassa yhä sotilaita?"
+      ],
+      "isoisa": false,
+      "lahteet": [
+        {
+          "vaite": "Linna seisoo sammuneen tulivuoren tulpalla; kalliolla on jyrkänteet etelässä, lännessä ja pohjoisessa, joten ainoa helppo reitti linnaan on idästä.",
+          "url": "https://en.wikipedia.org/wiki/Castle_Rock_(Edinburgh)"
+        },
+        {
+          "vaite": "Pyhän Margaretan kappeli on rakennettu noin vuonna 1130 ja on Edinburghin vanhin rakennus.",
+          "url": "https://questoapp.com/edinburgh/places-to-visit/edinburgh-castle"
+        },
+        {
+          "vaite": "Linnassa säilytetään Skotlannin kruununjalokivet, Honours of Scotland, jotka ovat Brittein saarten vanhimmat kruununjalokivet.",
+          "url": "https://www.edinburghtourism.org/what-to-see-inside-edinburgh-castle/"
+        },
+        {
+          "vaite": "Kello yhden tykki ammutaan joka päivä paitsi sunnuntaina, pitkänäperjantaina ja joulupäivänä; perinne alkoi vuonna 1861 Leithin sataman ja Forthin vuonon laivojen aikamerkiksi.",
+          "url": "https://edinburghcastle.scot/discover/highlights/one-oclock-gun"
+        },
+        {
+          "vaite": "Linnan edustan paraatikentälle, Esplanadelle, rakennetaan joka kesä väliaikainen katsomo elokuun Royal Edinburgh Military Tattoo -esityksiä varten.",
+          "url": "https://projectscot.com/2026/08/tilbury-douglas-completes-build-of-royal-edinburgh-military-tattoo-stadium/"
+        },
+        {
+          "vaite": "Mons Meg valmistettiin Monsissa vuonna 1449, painaa 6,6 tonnia ja pystyi ampumaan 150 kilon kivikuulan 3,2 kilometrin päähän.",
+          "url": "https://en.wikipedia.org/wiki/Mons_Meg"
+        }
+      ]
     },
     {
-     "vaite": "Pyhän Margaretan kappeli on rakennettu noin vuonna 1130 ja on Edinburghin vanhin rakennus.",
-     "url": "https://questoapp.com/edinburgh/places-to-visit/edinburgh-castle"
+      "id": "Q852908",
+      "nimi": "Royal Mile",
+      "kuvaus": "Vanhankaupungin pääkatu",
+      "luokka": "katu",
+      "koko_m": 1800,
+      "teksti": "Kuninkaallinen maili, Royal Mile, laskeutuu linnalta Holyroodin palatsille kapeaa kallioharjannetta pitkin, ja sen pituus on yksi vanha skotlantilainen maili, vajaat kaksi kilometriä. Kadulta haarautuu molemmin puolin kymmeniä kapeita kujia, joita kutsutaan nimellä close. Yksi niistä, Mary King's Close, jäi 1700-luvun puolivälissä uuden pörssirakennuksen alle, kun talo rakennettiin vanhojen asuinrakennusten alakerrosten päälle. Nykyään rakennus on kaupungintalo, ja maan alle säilyneelle kujalle viedään opastetuilla kierroksilla. Elokuussa katu täyttyy Fringe-festivaalin esiintyjistä.",
+      "lyhyt": "Kuninkaallinen maili koostuu viidestä peräkkäisestä kadusta, joiden nimi vaihtuu matkalla linnalta palatsille. Pyhän Gilesin katedraalin edustalla kiveykseen on upotettu sydämen muotoinen mosaiikki vanhan vankilan oven kohdalle, ja paikalliset sylkevät yhä sen päälle.",
+      "syventava": "Miksi sydänmosaiikin päälle syljetään?",
+      "kysymykset": [
+        "Miksi kujia kutsutaan nimellä close?",
+        "Kuinka korkeita vanhankaupungin talot olivat?",
+        "Kuka oli Mary King?",
+        "Miksi Fringe-festivaalille saa tulla kuka tahansa?",
+        "Mitä kadun varrella oli ennen kuin matkamuistoliikkeitä?"
+      ],
+      "isoisa": false,
+      "lahteet": [
+        {
+          "vaite": "Royal Mile kulkee linnalta Holyroodin palatsille, ja sen pituus on noin yksi skotlantilainen maili eli 1,81 kilometriä.",
+          "url": "https://en.wikipedia.org/wiki/Royal_Mile"
+        },
+        {
+          "vaite": "Linnankallio suojasi jäätikön kulutukselta itäpuolisen maan, ja syntyi kallion ja hännän muodostuma, jonka harjannetta pitkin katu laskeutuu.",
+          "url": "https://en.wikipedia.org/wiki/Castle_Rock_(Edinburgh)"
+        },
+        {
+          "vaite": "Kadun varrella on lukuisia kapeita kujia, closeja.",
+          "url": "https://en.wikipedia.org/wiki/List_of_closes_on_the_Royal_Mile"
+        },
+        {
+          "vaite": "Mary King's Close jäi osittain puretuksi ja haudatuksi Royal Exchangen rakentamisessa vuonna 1753; alemmat kerrokset jätettiin perustuksiksi. Rakennus on nykyään kaupungintalo, City Chambers.",
+          "url": "https://en.wikipedia.org/wiki/Mary_King%27s_Close"
+        },
+        {
+          "vaite": "Kaupungintalon alle jäänyt kuja on nykyään opastettu kohde Real Mary King's Close.",
+          "url": "https://www.edinburghexpert.com/blog/edinburghs-royal-mile-high-street"
+        },
+        {
+          "vaite": "Elokuussa High Street täyttyy Fringe-festivaalin katuesiintyjistä.",
+          "url": "https://edinburghguide.com/venues/visitor-attractions/edinburgh-fringe-shop-and-box-office"
+        },
+        {
+          "vaite": "Royal Mile koostuu viidestä kadusta: Castlehill, Lawnmarket, High Street, Canongate ja Abbey Strand.",
+          "url": "https://en.wikipedia.org/wiki/Royal_Mile"
+        },
+        {
+          "vaite": "Sydänmosaiikki Heart of Midlothian St Gilesin edustalla merkitsee vanhan Tolbooth-vankilan sisäänkäyntiä; paikalliset sylkevät sen päälle.",
+          "url": "https://en.wikipedia.org/wiki/Heart_of_Midlothian_(Royal_Mile)"
+        }
+      ]
     },
     {
-     "vaite": "Linnassa säilytetään Skotlannin kruununjalokivet, Honours of Scotland, jotka ovat Brittein saarten vanhimmat kruununjalokivet.",
-     "url": "https://www.edinburghtourism.org/what-to-see-inside-edinburgh-castle/"
+      "id": "Q505950",
+      "nimi": "Holyroodin palatsi",
+      "kuvaus": "Hallitsijan virka-asunto Skotlannissa",
+      "luokka": "rakennus",
+      "koko_m": 230,
+      "teksti": "Holyroodin palatsi sulkee Kuninkaallisen mailin itäpään, ja se on hallitsijan virallinen asuinpaikka Skotlannissa. Palatsin kyljessä näkyvät kattottoman luostarikirkon rauniot. Kuningas Daavid ensimmäinen perusti luostarin vuonna 1128, ja legendan mukaan hän oli edellisenä vuonna pelastunut metsällä saksanhirven hyökkäykseltä ristin ilmestyksen ansiosta, mistä tulee nimi Holyrood eli pyhä risti. Maaliskuussa 1566 kuningatar Maria Stuartin sihteeri David Rizzio raahattiin palatsissa pois kuningattaren illallispöydän äärestä ja puukotettiin yli viisikymmentä kertaa.",
+      "lyhyt": "Holyroodin palatsi sai alkunsa luostarin vierasmajasta, josta Skotlannin kuninkaat tekivät vähitellen asuinpaikkansa 1400-luvulla. Kun Rizzio surmattiin, Maria Stuart oli kuudennella kuukaudella raskaana, ja hänen pojastaan tuli myöhemmin Skotlannin kuningas Jaakko kuudes.",
+      "syventava": "Miksi Rizzio surmattiin kuningattaren edessä?",
+      "kysymykset": [
+        "Kuka oli Maria Stuart?",
+        "Ketkä hyökkäsivät Rizzion kimppuun?",
+        "Milloin luostarikirkko jäi raunioiksi?",
+        "Asuuko kuningas palatsissa joskus itse?",
+        "Mitä palatsissa tapahtuu nykyään kesäisin?"
+      ],
+      "isoisa": false,
+      "lahteet": [
+        {
+          "vaite": "Holyroodin palatsi on hallitsijan virallinen asuinpaikka Skotlannissa ja sijaitsee Royal Milen itäpäässä.",
+          "url": "https://webcf.waybackmachine.org/web/20211013063708/https://en.wikipedia.org/wiki/Holyrood_Palace"
+        },
+        {
+          "vaite": "Daavid I perusti Holyroodin luostarin vuonna 1128; legendan mukaan hän pelastui vuonna 1127 metsästyksellä hirven hyökkäykseltä ristin ilmestyksen ansiosta; rood tarkoittaa ristiä.",
+          "url": "https://en.wikipedia.org/wiki/Holyrood_Abbey"
+        },
+        {
+          "vaite": "Luostarikirkko on ollut raunioina 1700-luvulta, ja sen muurit ovat palatsin vieressä.",
+          "url": "https://en.wikipedia.org/wiki/Holyrood_Abbey"
+        },
+        {
+          "vaite": "9. maaliskuuta 1566 Rizzio murhattiin kuningattaren yksityishuoneissa Holyroodissa; puukoniskuja oli lähteestä riippuen 56 tai yli viisikymmentä.",
+          "url": "https://rct.uk/resources/the-murder-of-david-rizzio"
+        },
+        {
+          "vaite": "Luostarin vierasmaja kehitettiin kuninkaalliseksi asuinpaikaksi 1400-luvulla.",
+          "url": "https://en.wikipedia.org/wiki/Holyrood_Abbey"
+        },
+        {
+          "vaite": "Rizzio raahattiin pois Maria Stuartin illallisseurueesta; kuningatar oli kuudennella kuukaudella raskaana tulevan Jaakko VI:n kanssa.",
+          "url": "https://en.wikipedia.org/wiki/David_Rizzio"
+        }
+      ]
     },
     {
-     "vaite": "Kello yhden tykki ammutaan joka päivä paitsi sunnuntaina, pitkänäperjantaina ja joulupäivänä; perinne alkoi vuonna 1861 Leithin sataman ja Forthin vuonon laivojen aikamerkiksi.",
-     "url": "https://edinburghcastle.scot/discover/highlights/one-oclock-gun"
+      "id": "Q712311",
+      "nimi": "Arthur's Seat",
+      "kuvaus": "Sammunut tulivuori keskellä kaupunkia",
+      "luokka": "puisto",
+      "koko_m": 1200,
+      "korkeus_m": 251,
+      "teksti": "Sammunut tulivuori Arthur's Seat kohoaa kaupungin itälaidalla kaksisataaviisikymmentäyksi metriä korkeaksi, ja sen ympärille levittäytyy laaja Holyroodin puisto. Kaupungin puolella näkyy jyrkkä kallioseinämä Salisbury Crags, ja rinteellä seisovat keskiaikaisen Pyhän Antoniuksen kappelin rauniot. Vuonna 1836 kaniininkoloja etsineet pojat löysivät kallion kolosta seitsemäntoista pientä arkkua, ja jokaisessa makasi puinen ihmishahmo. Kukaan ei tiedä varmasti, kuka arkut sinne kätki tai miksi, ja kahdeksan säilynyttä arkkua on nyt Skotlannin kansallismuseossa.",
+      "lyhyt": "Sammuneen tulivuoren, Arthur's Seatin, huipulle kiivetään perinteisesti vappuaamuna pesemään kasvot aamukasteessa, sillä vanhan uskomuksen mukaan se tuo ikuisen kauneuden. Huipulta avautuu laaja näkymä koko vanhaankaupunkiin, linnasta Kuninkaallista mailia pitkin palatsille asti.",
+      "syventava": "Keitä pienet puuhahmot arkuissa esittivät?",
+      "kysymykset": [
+        "Mistä nimi Arthur's Seat on peräisin?",
+        "Kuinka kauan sitten tulivuori purkautui viimeksi?",
+        "Miksi arkut kätkettiin juuri tänne?",
+        "Voiko huipulle kiivetä helposti?",
+        "Mitä eläimiä Holyroodin puistossa elää?"
+      ],
+      "isoisa": false,
+      "lahteet": [
+        {
+          "vaite": "Arthur's Seat on 251 metriä korkea sammunut tulivuori ja Holyroodin puiston korkein huippu.",
+          "url": "https://en.wikipedia.org/wiki/Holyrood_Park"
+        },
+        {
+          "vaite": "Salisbury Crags on kallioseinämä Holyroodin puistossa, ja puistossa ovat keskiaikaisen Pyhän Antoniuksen kappelin rauniot, viimeistään 1400-luvun alusta.",
+          "url": "https://www.undiscoveredscotland.co.uk/edinburgh/stanthonys/index.html"
+        },
+        {
+          "vaite": "Vuonna 1836 kaniininkoloja etsineet pojat löysivät kallion kolosta seitsemäntoista pientä arkkua, joissa oli puisia hahmoja; kahdeksan on Skotlannin kansallismuseossa.",
+          "url": "https://en.wikipedia.org/wiki/Edinburgh_coffins"
+        },
+        {
+          "vaite": "Arthur's Seatille kiivetään yhä vappuaamuna pesemään kasvot aamukasteessa; uskomuksen mukaan se tuo ikuisen kauneuden.",
+          "url": "https://www.scotsman.com/arts-and-culture/when-scots-would-wash-their-faces-may-dew-luck-586256"
+        },
+        {
+          "vaite": "Huipulta näkyvät Holyroodin palatsi, Royal Mile, vanhakaupunki ja linna.",
+          "url": "https://inlingua-edinburgh.co.uk/arthurs-seat-experience-a-proper-hill-walk-on-an-ancient-volcano-in-the-heart-of-edinburgh"
+        }
+      ]
     },
     {
-     "vaite": "Linnan edustan paraatikentälle, Esplanadelle, rakennetaan joka kesä väliaikainen katsomo elokuun Royal Edinburgh Military Tattoo -esityksiä varten.",
-     "url": "https://projectscot.com/2026/08/tilbury-douglas-completes-build-of-royal-edinburgh-military-tattoo-stadium/"
+      "id": "Q1547466",
+      "nimi": "St Gilesin katedraali",
+      "kuvaus": "Kruunutornin koristama pääkirkko",
+      "luokka": "kirkko",
+      "koko_m": 70,
+      "korkeus_m": 44,
+      "teksti": "Pyhän Gilesin katedraalin, St Gilesin, tunnistaa ylhäältä tornista, joka kohoaa Kuninkaallisen mailin varrella ja jonka huipun muodostavat kahdeksan kaarta kruunun muotoon. Kruunutorni valmistui vuonna 1495. Uskonpuhdistaja John Knox saarnasi kirkossa vuodesta 1559 alkaen, ja kirkkoa on kutsuttu maailman presbyteeristen kirkkojen äitikirkoksi. Heinäkuussa 1637 kirkossa luettiin ensimmäisen kerran uutta rukouskirjaa, ja tarinan mukaan torikauppias Jenny Geddes heitti silloin jakkaransa saarnaajaa kohti. Siitä alkanut mellakka johti sotiin, jotka levisivät lopulta koko Britanniaan.",
+      "lyhyt": "Pyhän Gilesin katedraalin kyljessä on Ohdakeritarikunnan kappeli, jonka arkkitehti Robert Lorimer suunnitteli ja joka valmistui vuonna 1911. Sen tarkoin veistettyjen penkkien, vaakunoiden ja koristeiden sekaan on kätketty säkkipilliä soittavia enkeleitä.",
+      "syventava": "Mitä Jenny Geddesin mellakasta seurasi?",
+      "kysymykset": [
+        "Miksi kirkkoa kutsutaan katedraaliksi?",
+        "Kuka oli John Knox?",
+        "Miksi uusi rukouskirja suututti seurakunnan?",
+        "Mikä on Ohdakeritarikunta?",
+        "Kuka oli pyhä Giles?"
+      ],
+      "isoisa": false,
+      "lahteet": [
+        {
+          "vaite": "Kruunutorni, jota kannattelee kahdeksan kaaritukea, rakennettiin vuonna 1495; tornin ja huipun korkeus noin 44 metriä.",
+          "url": "https://en.wikipedia.org/wiki/Crown_steeple"
+        },
+        {
+          "vaite": "John Knox saarnasi kirkossa vuodesta 1559.",
+          "url": "https://questoapp.com/edinburgh/places-to-visit/st-giles-cathedral"
+        },
+        {
+          "vaite": "St Gilesiä on kutsuttu maailman presbyterianismin äitikirkoksi.",
+          "url": "https://en.wikipedia.org/wiki/St_Giles%27_Cathedral"
+        },
+        {
+          "vaite": "Perimätiedon mukaan Jenny Geddes heitti jakkaransa dekaania kohti 23. heinäkuuta 1637, kun uutta rukouskirjaa luettiin ensimmäisen kerran; mellakka johti Kolmen kuningaskunnan sotiin.",
+          "url": "https://stgilescathedral.org.uk/jenny-geddes"
+        },
+        {
+          "vaite": "Ohdakekappelin suunnitteli Robert Lorimer, ja se valmistui vuonna 1911; koristeissa on säkkipilliä soittavia enkeleitä.",
+          "url": "https://www.stgilescathedral.org.uk/the-thistle-chapel"
+        },
+        {
+          "vaite": "Kappelin koristeisiin on kätketty kolme säkkipilliä soittavaa enkeliä, kaksi puusta ja yksi kivestä.",
+          "url": "https://assets.atlasobscura.com/places/st-giles-cathedral-thistle-chapel"
+        }
+      ]
     },
     {
-     "vaite": "Mons Meg valmistettiin Monsissa vuonna 1449, painaa 6,6 tonnia ja pystyi ampumaan 150 kilon kivikuulan 3,2 kilometrin päähän.",
-     "url": "https://en.wikipedia.org/wiki/Mons_Meg"
+      "id": "Q1199959",
+      "nimi": "Calton Hill",
+      "kuvaus": "Monumenttien kukkula",
+      "luokka": "puisto",
+      "koko_m": 450,
+      "teksti": "Kukkula Calton Hill kohoaa Uudenkaupungin itäpäässä, ja sen laella seisoo kaksitoista paksua pylvästä kuin keskeneräinen kreikkalainen temppeli. Kansallismonumentti piti rakentaa Ateenan Parthenonin mallin mukaan, mutta työ alkoi vuonna 1826 ja rahat loppuivat jo vuonna 1829. Vieressä kohoaa ylösalaisin käännetyn kaukoputken muotoinen Nelsonin muistomerkki. Sen huipulle on palautettu paikalleen suuri aikapallo, joka pudotettiin aikoinaan joka päivä tasan kello yksi, jotta Forthin vuonon laivat saattoivat tarkistaa kellonsa käymättä maissa.",
+      "lyhyt": "Kukkulan, Calton Hillin, keskeneräistä kansallismonumenttia kutsuttiin pilkallisesti Edinburghin häpeäksi, vaikka hanketta tuki muun muassa kirjailija Walter Scott. Suurimpia kiviä vedettiin rinnettä ylös kahdentoista hevosen ja seitsemänkymmenen miehen voimin, ja arkkitehti William Playfair kutsui monumenttia skottien ylpeydeksi ja köyhyydeksi.",
+      "syventava": "Ketä kansallismonumentin piti kunnioittaa?",
+      "kysymykset": [
+        "Miksi kansallismonumentista ei koskaan tehty valmista?",
+        "Kuka keksi pudottaa aikapallon kello yksi?",
+        "Mitä muita muistomerkkejä kukkulalla on?",
+        "Miksi Nelsonille pystytettiin muistomerkki Skotlantiin?",
+        "Mitä kukkulalla juhlitaan vapun aattona?"
+      ],
+      "isoisa": false,
+      "lahteet": [
+        {
+          "vaite": "Kansallismonumentti piti olla Parthenonin jäljitelmä; rakentaminen alkoi 1826 ja päättyi rahojen loputtua 1829, kun valmiina oli kaksitoista pylvästä.",
+          "url": "https://historic-uk.com/HistoryUK/HistoryofScotland/National-Monument-of-Scotland"
+        },
+        {
+          "vaite": "Hankkeen tukijoihin kuului Walter Scott.",
+          "url": "https://www.myhighlands.de/en/calton-hill-edinburgh/"
+        },
+        {
+          "vaite": "Keskeneräistä monumenttia kutsuttiin muun muassa nimellä Edinburgh's Disgrace eli Edinburghin häpeä.",
+          "url": "https://historic-uk.com/HistoryUK/HistoryofScotland/National-Monument-of-Scotland"
+        },
+        {
+          "vaite": "Nelsonin muistomerkki on ylösalaisin käännetyn kaukoputken muotoinen; aikapallo lisättiin vuonna 1852, jotta Forthin laivojen kapteenit saattoivat asettaa kronometrinsä kello yhden pudotuksen mukaan.",
+          "url": "https://en.wikipedia.org/wiki/Nelson_Monument,_Edinburgh"
+        },
+        {
+          "vaite": "Aikapallo putoaa päivittäin sunnuntaita lukuun ottamatta kello yksi, ja sen avulla laivojen kapteenit saattoivat asettaa kronometrinsä tulematta maihin.",
+          "url": "https://www.scottish-places.info/features/featurefirst1046.html"
+        },
+        {
+          "vaite": "Calton Hill sijaitsee Uudenkaupungin itäpäässä, ja sieltä näkyy vanhakaupunki.",
+          "url": "https://www.myhighlands.de/en/calton-hill-edinburgh/"
+        },
+        {
+          "vaite": "Suurimpien kivien siirtämiseen kukkulalle tarvittiin kaksitoista hevosta ja seitsemänkymmentä miestä; arkkitehti William Henry Playfair kutsui monumenttia \"pride and poverty of us Scots\".",
+          "url": "https://historic-uk.com/HistoryUK/HistoryofScotland/National-Monument-of-Scotland"
+        }
+      ]
+    },
+    {
+      "id": "Q2502213",
+      "nimi": "Scottin muistomerkki",
+      "kuvaus": "Walter Scottin goottilainen muistotorni",
+      "luokka": "torni",
+      "koko_m": 40,
+      "korkeus_m": 61,
+      "teksti": "Scottin muistomerkki kohoaa Princes Streetin puistosta goottilaisena kivitornina, kuusikymmentäyksi metriä korkeana. Holvin alla istuu valkoisesta Carraran marmorista veistetty Walter Scott koiransa Maidan kanssa, ja tornin syvennyksissä seisoo kuusikymmentäneljä pientä patsasta hänen kirjojensa henkilöitä. Suunnittelukilpailun voitti nimimerkillä ehdotuksensa lähettänyt George Meikle Kemp, itseoppinut puuseppä ilman arkkitehdin koulutusta. Hän ei nähnyt valmista tornia, sillä hän hukkui Unionin kanavaan sumuisena iltana maaliskuussa 1844 matkalla kotiin, ja torni valmistui saman vuoden syksyllä.",
+      "lyhyt": "Scottin muistomerkin ylimmälle tasanteelle johtaa kaikkiaan kaksisataakahdeksankymmentäseitsemän porrasta. Suunnittelukilpailu järjestettiin kahdesti, ja Kemp lähetti ehdotuksensa nimellä John Morvo, joka on kaiverrettu Melrosen luostarin seinään ja jonka arvellaan kuuluneen luostaria rakentaneelle kivenhakkaajalle.",
+      "syventava": "Keitä tornin pienet patsaat esittävät?",
+      "kysymykset": [
+        "Miksi Walter Scottia arvostettiin niin paljon?",
+        "Mitä kirjoja Walter Scott kirjoitti?",
+        "Miksi torni on niin tumma?",
+        "Millainen koira Maida oli?",
+        "Miksi kilpailu järjestettiin kahteen kertaan?"
+      ],
+      "isoisa": false,
+      "lahteet": [
+        {
+          "vaite": "Goottilainen torni Princes Streetin puistossa on 61,11 metriä korkea, valmistui syksyllä 1844; ylimmälle tasanteelle 287 porrasta; tornissa 64 hahmoa Scottin romaaneista; John Steellin veistämä istuva Scott ja koira Maida valkoista Carraran marmoria.",
+          "url": "https://en.wikipedia.org/wiki/Scott_Monument"
+        },
+        {
+          "vaite": "George Meikle Kemp oli itseoppinut arkkitehti, ammatiltaan puuseppä, ja hukkui Unionin kanavaan 6. maaliskuuta 1844 ennen tornin valmistumista.",
+          "url": "https://en.wikipedia.org/wiki/George_Meikle_Kemp"
+        },
+        {
+          "vaite": "Kemp osallistui kilpailuun nimimerkillä John Morvo, joka on kaiverrettu Melrosen luostariin ja jonka arvellaan olleen luostarin kivimiehen nimi; hän hukkui kanavaan pimeänä, sumuisena iltana matkalla kotiin. Kilpailu järjestettiin 1836 ja uudelleen 1838, jolloin Kemp voitti.",
+          "url": "https://www.historyscotland.com/history/an-expert-guide-to-the-life-of-george-meikle-kemp-architect-of-the"
+        }
+      ]
+    },
+    {
+      "id": "Q2876448",
+      "nimi": "Greyfriars Kirkyard",
+      "kuvaus": "Vanhankaupungin vanha hautausmaa",
+      "luokka": "puisto",
+      "koko_m": 250,
+      "teksti": "Hautausmaa Greyfriars Kirkyard levittäytyy vanhankaupungin etelälaidalla vanhan kirkon ympärille, ja monen haudan päällä on yhä kivestä ja raudasta tehty häkki. Niillä suojattiin vainajia 1800-luvun alussa ruumiinryöstäjiltä, jotka myivät ruumiita lääketieteen opetukseen. Isoisäsi näki vuonna 1873 Edinburghin hautausmaalla vanhan rautahäkin haudan päällä ja kysyi haudankaivajalta, kauanko häkkiä oli tarvittu. Vastaus kuului: kunnes ruumis ei enää kelvannut kaupaksi. Portin vastapäätä kadunkulmassa istuu pronssinen Greyfriars Bobby, terrieri, joka tarinan mukaan vartioi isäntänsä hautaa neljätoista vuotta.",
+      "lyhyt": "Hautausmaalla, Greyfriars Kirkyardilla, allekirjoitettiin vuonna 1638 Skotlannin kansallinen liitto eli covenantti. Kun liiton aseelliset kannattajat hävisivät taistelun vuonna 1679, noin tuhat kaksisataa heistä suljettiin kirkon eteläpuoliselle pellolle, joka tunnetaan yhä covenanttilaisten vankilana.",
+      "syventava": "Kenen hautaa Bobby vartioi?",
+      "kysymykset": [
+        "Miksi lääkärit tarvitsivat ruumiita opetukseen?",
+        "Ketkä olivat kuuluisimmat ruumiinryöstäjät?",
+        "Miksi Bobbyn kuonoa hierotaan kiiltäväksi?",
+        "Mihin Greyfriars Bobby itse on haudattu?",
+        "Miksi hautausmaata pidetään kummittelevana?"
+      ],
+      "isoisa": true,
+      "lahteet": [
+        {
+          "vaite": "Monia hautoja ympäröivät kivestä ja raudasta tehdyt häkit, mortsafet, jotka suojasivat vainajia 1800-luvun alun ruumiinryöstäjiltä, jotka toimittivat ruumiita lääketieteelliseen opetukseen.",
+          "url": "https://en.wikipedia.org/wiki/Greyfriars_Kirkyard"
+        },
+        {
+          "vaite": "Isoisän merkintä 1873: Edinburghin hautausmaalla vanha rautahäkki peitti hautaa; hän kysyi haudankaivajalta, kauanko häkkiä oli tarvittu, ja vastaus oli: kunnes ruumis ei enää kelvannut kaupaksi. Merkintä ei nimeä hautausmaata.",
+          "url": "kaanon:isoisan-paivakirja"
+        },
+        {
+          "vaite": "Greyfriars Bobbyn patsas on hautausmaan portin vastapäätä George IV Bridgen ja Candlemaker Row'n kulmassa.",
+          "url": "https://en.wikipedia.org/wiki/Greyfriars_Kirkyard"
+        },
+        {
+          "vaite": "Bobby oli terrieri, joka tarinan mukaan vartioi isäntänsä John Grayn hautaa 14 vuotta.",
+          "url": "https://en.wikipedia.org/wiki/Greyfriars_Bobby_Fountain"
+        },
+        {
+          "vaite": "Kansallinen liitto allekirjoitettiin hautausmaalla vuonna 1638; Bothwell Brigin tappion jälkeen 1679 noin 1200 covenanttilaista vangittiin kirkon eteläpuoliselle pellolle, joka tunnetaan nimellä Covenanters' Prison.",
+          "url": "https://en.wikipedia.org/wiki/Greyfriars_Kirkyard"
+        }
+      ]
+    },
+    {
+      "id": "Q1633842",
+      "nimi": "National Museum of Scotland",
+      "kuvaus": "Skotlannin kansallismuseo",
+      "luokka": "rakennus",
+      "koko_m": 200,
+      "teksti": "Skotlannin kansallismuseo, National Museum of Scotland, koostuu kahdesta vierekkäisestä rakennuksesta: viktoriaaninen museo avattiin vuonna 1866 ja moderni laajennus vuonna 1998. Vanhan puolen suuri galleria on valkoiseksi maalatusta valuraudasta ja lasista rakennettu halli, jonka esikuvana oli Lontoon kristallipalatsi. Museossa on esillä Dolly-lammas, joka syntyi vuonna 1996 Edinburghin eteläpuolella ensimmäisenä aikuisen solusta kloonattuna nisäkkäänä. Samassa museossa on yksitoista 1100-luvulla veistettyä Lewisin shakkinappulaa ja Arthur's Seatilta löydetyt pienet arkut.",
+      "lyhyt": null,
+      "syventava": "Miten Dolly-lammas kloonattiin?",
+      "kysymykset": [
+        "Mistä Lewisin shakkinappulat löydettiin?",
+        "Mitä museon katolta näkyy?",
+        "Miksi Dolly sai nimensä laulajalta?",
+        "Milloin Dolly-lammas kuoli?",
+        "Mitä vuosituhannen kello esittää?"
+      ],
+      "isoisa": false,
+      "lahteet": [
+        {
+          "vaite": "Museo muodostui vuonna 2006 yhdistämällä vuonna 1866 avattu viktoriaaninen museo ja vuonna 1998 rakennettu Museum of Scotland.",
+          "url": "https://en.wikipedia.org/wiki/National_Museum_of_Scotland"
+        },
+        {
+          "vaite": "Suuri galleria on valurautainen, lasikattoinen halli, joka avattiin 1866 ja jonka esikuvana oli Lontoon Kristallipalatsi.",
+          "url": "https://nms.ac.uk/national-museum-of-scotland/see-and-do/tours-and-trails/architecture-trail"
+        },
+        {
+          "vaite": "Dolly syntyi 5.7.1996 Roslinin instituutissa Midlothianissa, oli ensimmäinen aikuisen somaattisesta solusta kloonattu nisäkäs, ja sen jäännökset ovat esillä Skotlannin kansallismuseossa.",
+          "url": "https://en.wikipedia.org/wiki/Dolly_(sheep)"
+        },
+        {
+          "vaite": "Lewisin shakkinappulat ovat 1100-luvulta; 93 nappulasta 11 on Edinburghin kansallismuseossa.",
+          "url": "https://en.wikipedia.org/wiki/Lewis_chessmen"
+        },
+        {
+          "vaite": "Kahdeksan Arthur's Seatin pienoisarkkua on Skotlannin kansallismuseon kokoelmissa.",
+          "url": "https://en.wikipedia.org/wiki/Edinburgh_coffins"
+        }
+      ]
+    },
+    {
+      "id": "Q2746031",
+      "nimi": "Skotlannin parlamenttitalo",
+      "kuvaus": "Skotlannin parlamentin moderni talo",
+      "luokka": "rakennus",
+      "koko_m": 300,
+      "teksti": "Skotlannin parlamenttitalo on Kuninkaallisen mailin alapäässä Holyroodin palatsin lähellä, ja ylhäältä sen katot näyttävät rantaan käännetyiltä veneiltä. Talon suunnitteli espanjalainen arkkitehti Enric Miralles, joka kuoli vuonna 2000 ennen rakennuksen valmistumista. Kuningatar Elisabet toinen avasi talon lokakuussa 2004, ja hinnaksi tuli neljäsataaneljätoista miljoonaa puntaa. Talon kadunpuoleiseen muuriin on upotettu eri puolilta Skotlantia tuotuja kiviä, joihin on kaiverrettu lainauksia kirjailijoilta, runoista ja sananlaskuista. Kansanedustajien työhuoneiden ulkonevissa ikkunoissa on istuin, jolla edustaja voi pysähtyä miettimään työtään.",
+      "lyhyt": null,
+      "syventava": "Miksi rakentaminen maksoi niin paljon?",
+      "kysymykset": [
+        "Milloin Skotlanti sai taas oman parlamentin?",
+        "Kuinka monta edustajaa parlamentissa istuu?",
+        "Mistä Miralles sai idean veneen muotoisiin kattoihin?",
+        "Voiko istuntoja käydä seuraamassa?",
+        "Kuka valitsee muuriin uudet lainaukset?"
+      ],
+      "isoisa": false,
+      "lahteet": [
+        {
+          "vaite": "Katot muistuttavat rantaan käännettyjä veneitä; suunnittelija Enric Miralles kuoli ennen valmistumista.",
+          "url": "https://en.wikipedia.org/wiki/Scottish_Parliament_Building"
+        },
+        {
+          "vaite": "Enric Miralles eli 1955–2000 ja oli espanjalainen arkkitehti.",
+          "url": "https://en.wikipedia.org/wiki/Enric_Miralles"
+        },
+        {
+          "vaite": "Kuningatar Elisabet II avasi talon 9.10.2004; hinta 414 miljoonaa puntaa.",
+          "url": "https://en.wikipedia.org/wiki/Scottish_Parliament_Building"
+        },
+        {
+          "vaite": "Talo on Royal Milen alapäässä Holyroodin palatsin lähellä.",
+          "url": "https://parliament.scot/about/history-of-the-scottish-parliament/new-parliament-building"
+        },
+        {
+          "vaite": "Canongate Wallin kiviin, jotka on tuotu eri puolilta Skotlantia, on kaiverrettu 29 lainausta kirjailijoilta ja ajattelijoilta sekä sananlaskuja ja runoja; uusia lisättiin 2025.",
+          "url": "https://www.parliament.scot/about/news/news-listing/new-quotes-unveiled-on-canongate-wall"
+        },
+        {
+          "vaite": "Kansanedustajien työhuoneiden ikkunoissa on istuin, jolla edustajat voivat istua miettimässä työtään.",
+          "url": "https://www.parliament.scot/-/media/files/education/familytrail.pdf"
+        }
+      ]
+    },
+    {
+      "id": "Q5086152",
+      "nimi": "Charlotte Square",
+      "kuvaus": "Uudenkaupungin georgiaaninen aukio",
+      "luokka": "aukio",
+      "koko_m": 170,
+      "teksti": "Aukio Charlotte Square on Uudenkaupungin länsipäässä, ja sen keskellä on puutarha. Arkkitehti Robert Adam suunnitteli vuonna 1791 aukion talorivien yhtenäiset julkisivut, ja pohjoissivua pidetään yhtenä georgiaanisen arkkitehtuurin hienoimmista esimerkeistä. Pohjoisrivin keskimmäinen talo, Bute House, on ollut Skotlannin pääministerin virka-asunto vuodesta 1999, ja sen naapuritalo on kunnostettu museoksi, joka näyttää varakkaan perheen elämää georgiaanisella ajalla. Puutarhan keskellä seisoo prinssi Albertin ratsastajapatsas, jonka kuningatar Viktoria paljasti vuonna 1876.",
+      "lyhyt": null,
+      "syventava": "Kenen mukaan aukio on nimetty?",
+      "kysymykset": [
+        "Kuka oli arkkitehti Robert Adam?",
+        "Miksi Uusikaupunki rakennettiin ruutukaavaan?",
+        "Kuka pääministereistä asui talossa ensimmäisenä?",
+        "Miksi prinssi Albertille pystytettiin patsas?",
+        "Pääseekö aukion puutarhaan kuka tahansa?"
+      ],
+      "isoisa": false,
+      "lahteet": [
+        {
+          "vaite": "Charlotte Square on Uudenkaupungin aukio, jonka keskellä on puutarha; Robert Adam suunnitteli vuonna 1791 yhtenäiset julkisivut, ja pohjoissivu on georgiaanisen arkkitehtuurin hienoimpia.",
+          "url": "https://en.wikipedia.org/wiki/Charlotte_Square"
+        },
+        {
+          "vaite": "Robert Adam suunnitteli vuonna 1791 Charlotte Squaren yhtenäiset julkisivut; Bute House on ollut pääministerin virka-asunto heinäkuusta 1999.",
+          "url": "https://en.wikipedia.org/wiki/Bute_House"
+        },
+        {
+          "vaite": "Bute House on pohjoissivun keskimmäinen talo numero 6 ja on ollut pääministerin, First Ministerin, virka-asunto heinäkuusta 1999.",
+          "url": "https://en.wikipedia.org/wiki/Bute_House"
+        },
+        {
+          "vaite": "Viereinen Georgian House numerossa 7 on National Trust for Scotlandin ylläpitämä museo.",
+          "url": "https://en.wikipedia.org/wiki/Bute_House"
+        },
+        {
+          "vaite": "Prinssi Albertin ratsastajapatsaan teki John Steell, ja kuningatar Victoria paljasti sen 17.8.1876.",
+          "url": "https://canmore.org.uk/site/74081"
+        }
+      ]
+    },
+    {
+      "id": "Q1807521",
+      "nimi": "Royal Botanic Garden Edinburgh",
+      "kuvaus": "Kuninkaallinen kasvitieteellinen puutarha",
+      "luokka": "puisto",
+      "koko_m": 600,
+      "teksti": "Kuninkaallinen kasvitieteellinen puutarha, Royal Botanic Garden, levittäytyy Inverleithin kaupunginosassa lähes kolmenkymmenen hehtaarin alueella. Puutarha perustettiin vuonna 1670 lääkekasvien kasvatukseen, ja nykyiselle paikalleen se muutti 1820-luvun alussa. Muutossa puutarhuri William McNab siirsi jopa kahdentoista metrin korkuisia puita kahdentoista hevosen vetämällä istutuskoneella, ja kaupunkilaiset kerääntyivät ihmettelemään keinuvien oksien kulkuetta. Vuonna 1858 valmistunut viktoriaaninen palmuhuone on Britannian korkein perinteinen palmuhuone, ja sen korkea lasikatto erottuu ylhäältä vihreän puiston keskeltä.",
+      "lyhyt": null,
+      "syventava": "Miten täysikasvuinen puu siirrettiin?",
+      "kysymykset": [
+        "Miksi puutarhassa kasvatettiin ensin lääkekasveja?",
+        "Mitä harvinaisia kasveja puutarhassa on?",
+        "Mitä vanhoissa palmuhuoneissa kasvaa?",
+        "Missä puutarha sijaitsi ennen muuttoa?",
+        "Mitä kiinalaisella rinteellä kasvaa?"
+      ],
+      "isoisa": false,
+      "lahteet": [
+        {
+          "vaite": "Puutarha on 28 hehtaarin kokoinen ja sijaitsee Inverleithissä.",
+          "url": "https://www.scottish-places.info/features/featurefirst1004.html"
+        },
+        {
+          "vaite": "Puutarha perustettiin vuonna 1670 lääkekasvitarhaksi ja muutti Inverleithiin vuodesta 1820 alkaen.",
+          "url": "https://en.wikipedia.org/wiki/Royal_Botanic_Garden_Edinburgh"
+        },
+        {
+          "vaite": "Kuraattori William McNab käytti puiden siirtoon kahdentoista hevosen vetämää istutuskonetta, ja kulkue miehiä, hevosia ja huojuvia oksia hämmästytti kaupunkilaisia.",
+          "url": "https://www.edinburghnews.scotsman.com/news/a-man-called-mcnab-got-royal-botanic-show-on-the-road-900777"
+        },
+        {
+          "vaite": "Vuonna 1858 valmistunut Temperate Palm House on Britannian korkein perinteinen palmuhuone, 21,95 metriä.",
+          "url": "https://www.rbge.org.uk/collections/living-collection/living-collection-at-the-royal-botanic-garden-edinburgh/glasshouses-history/"
+        },
+        {
+          "vaite": "Palmuhuoneet suljettiin vuonna 2021 Edinburgh Biomes -kunnostukseen ja avattiin uudelleen yleisölle 2.10.2026.",
+          "url": "https://www.rbge.org.uk/news/articles/historic-palm-houses-to-reopen-after-5-year-restoration/"
+        },
+        {
+          "vaite": "McNab siirsi istutuskoneella vakiintuneita puita, joista osa oli yli neljäkymmentä jalkaa eli yli kaksitoista metriä korkeita.",
+          "url": "https://atom-2.rbge.org.uk/index.php/mcnab-william"
+        },
+        {
+          "vaite": "Istutuskonetta veti kaksitoista hevosta, ja miesten, hevosten ja huojuvien oksien kulkue kulki esikaupunkien läpi monta päivää.",
+          "url": "https://www.rcpe.ac.uk/heritage/botanics"
+        }
+      ]
     }
-   ]
-  },
-  {
-   "id": "Q852908",
-   "nimi": "Royal Mile",
-   "kuvaus": "Vanhankaupungin pääkatu",
-   "luokka": "katu",
-   "koko_m": 1800,
-   "teksti": "Kuninkaallinen maili, Royal Mile, laskeutuu linnalta Holyroodin palatsille kapeaa kallioharjannetta pitkin, ja sen pituus on yksi vanha skotlantilainen maili, vajaat kaksi kilometriä. Kadulta haarautuu molemmin puolin kymmeniä kapeita kujia, joita kutsutaan nimellä close. Yksi niistä, Mary King's Close, jäi 1700-luvun puolivälissä uuden pörssirakennuksen alle, kun talo rakennettiin vanhojen asuinrakennusten alakerrosten päälle. Nykyään rakennus on kaupungintalo, ja maan alle säilyneelle kujalle viedään opastetuilla kierroksilla. Elokuussa katu täyttyy Fringe-festivaalin esiintyjistä.",
-   "lyhyt": "Kuninkaallinen maili koostuu viidestä peräkkäisestä kadusta, joiden nimi vaihtuu matkalla linnalta palatsille. Pyhän Gilesin katedraalin edustalla kiveykseen on upotettu sydämen muotoinen mosaiikki vanhan vankilan oven kohdalle, ja paikalliset sylkevät yhä sen päälle.",
-   "syventava": "Miksi sydänmosaiikin päälle syljetään?",
-   "kysymykset": [
-    "Miksi kujia kutsutaan nimellä close?",
-    "Kuinka korkeita vanhankaupungin talot olivat?",
-    "Kuka oli Mary King?",
-    "Miksi Fringe-festivaalille saa tulla kuka tahansa?",
-    "Mitä kadun varrella oli ennen kuin matkamuistoliikkeitä?"
-   ],
-   "isoisa": false,
-   "lahteet": [
-    {
-     "vaite": "Royal Mile kulkee linnalta Holyroodin palatsille, ja sen pituus on noin yksi skotlantilainen maili eli 1,81 kilometriä.",
-     "url": "https://en.wikipedia.org/wiki/Royal_Mile"
-    },
-    {
-     "vaite": "Linnankallio suojasi jäätikön kulutukselta itäpuolisen maan, ja syntyi kallion ja hännän muodostuma, jonka harjannetta pitkin katu laskeutuu.",
-     "url": "https://en.wikipedia.org/wiki/Castle_Rock_(Edinburgh)"
-    },
-    {
-     "vaite": "Kadun varrella on lukuisia kapeita kujia, closeja.",
-     "url": "https://en.wikipedia.org/wiki/List_of_closes_on_the_Royal_Mile"
-    },
-    {
-     "vaite": "Mary King's Close jäi osittain puretuksi ja haudatuksi Royal Exchangen rakentamisessa vuonna 1753; alemmat kerrokset jätettiin perustuksiksi. Rakennus on nykyään kaupungintalo, City Chambers.",
-     "url": "https://en.wikipedia.org/wiki/Mary_King%27s_Close"
-    },
-    {
-     "vaite": "Kaupungintalon alle jäänyt kuja on nykyään opastettu kohde Real Mary King's Close.",
-     "url": "https://www.edinburghexpert.com/blog/edinburghs-royal-mile-high-street"
-    },
-    {
-     "vaite": "Elokuussa High Street täyttyy Fringe-festivaalin katuesiintyjistä.",
-     "url": "https://edinburghguide.com/venues/visitor-attractions/edinburgh-fringe-shop-and-box-office"
-    },
-    {
-     "vaite": "Royal Mile koostuu viidestä kadusta: Castlehill, Lawnmarket, High Street, Canongate ja Abbey Strand.",
-     "url": "https://en.wikipedia.org/wiki/Royal_Mile"
-    },
-    {
-     "vaite": "Sydänmosaiikki Heart of Midlothian St Gilesin edustalla merkitsee vanhan Tolbooth-vankilan sisäänkäyntiä; paikalliset sylkevät sen päälle.",
-     "url": "https://en.wikipedia.org/wiki/Heart_of_Midlothian_(Royal_Mile)"
-    }
-   ]
-  },
-  {
-   "id": "Q505950",
-   "nimi": "Holyroodin palatsi",
-   "kuvaus": "Hallitsijan virka-asunto Skotlannissa",
-   "luokka": "rakennus",
-   "koko_m": 230,
-   "teksti": "Holyroodin palatsi sulkee Kuninkaallisen mailin itäpään, ja se on hallitsijan virallinen asuinpaikka Skotlannissa. Palatsin kyljessä näkyvät kattottoman luostarikirkon rauniot. Kuningas Daavid ensimmäinen perusti luostarin vuonna 1128, ja legendan mukaan hän oli edellisenä vuonna pelastunut metsällä saksanhirven hyökkäykseltä ristin ilmestyksen ansiosta, mistä tulee nimi Holyrood eli pyhä risti. Maaliskuussa 1566 kuningatar Maria Stuartin sihteeri David Rizzio raahattiin palatsissa pois kuningattaren illallispöydän äärestä ja puukotettiin yli viisikymmentä kertaa.",
-   "lyhyt": "Holyroodin palatsi sai alkunsa luostarin vierasmajasta, josta Skotlannin kuninkaat tekivät vähitellen asuinpaikkansa 1400-luvulla. Kun Rizzio surmattiin, Maria Stuart oli kuudennella kuukaudella raskaana, ja hänen pojastaan tuli myöhemmin Skotlannin kuningas Jaakko kuudes.",
-   "syventava": "Miksi Rizzio surmattiin kuningattaren edessä?",
-   "kysymykset": [
-    "Kuka oli Maria Stuart?",
-    "Ketkä hyökkäsivät Rizzion kimppuun?",
-    "Milloin luostarikirkko jäi raunioiksi?",
-    "Asuuko kuningas palatsissa joskus itse?",
-    "Mitä palatsissa tapahtuu nykyään kesäisin?"
-   ],
-   "isoisa": false,
-   "lahteet": [
-    {
-     "vaite": "Holyroodin palatsi on hallitsijan virallinen asuinpaikka Skotlannissa ja sijaitsee Royal Milen itäpäässä.",
-     "url": "https://webcf.waybackmachine.org/web/20211013063708/https://en.wikipedia.org/wiki/Holyrood_Palace"
-    },
-    {
-     "vaite": "Daavid I perusti Holyroodin luostarin vuonna 1128; legendan mukaan hän pelastui vuonna 1127 metsästyksellä hirven hyökkäykseltä ristin ilmestyksen ansiosta; rood tarkoittaa ristiä.",
-     "url": "https://en.wikipedia.org/wiki/Holyrood_Abbey"
-    },
-    {
-     "vaite": "Luostarikirkko on ollut raunioina 1700-luvulta, ja sen muurit ovat palatsin vieressä.",
-     "url": "https://en.wikipedia.org/wiki/Holyrood_Abbey"
-    },
-    {
-     "vaite": "9. maaliskuuta 1566 Rizzio murhattiin kuningattaren yksityishuoneissa Holyroodissa; puukoniskuja oli lähteestä riippuen 56 tai yli viisikymmentä.",
-     "url": "https://rct.uk/resources/the-murder-of-david-rizzio"
-    },
-    {
-     "vaite": "Luostarin vierasmaja kehitettiin kuninkaalliseksi asuinpaikaksi 1400-luvulla.",
-     "url": "https://en.wikipedia.org/wiki/Holyrood_Abbey"
-    },
-    {
-     "vaite": "Rizzio raahattiin pois Maria Stuartin illallisseurueesta; kuningatar oli kuudennella kuukaudella raskaana tulevan Jaakko VI:n kanssa.",
-     "url": "https://en.wikipedia.org/wiki/David_Rizzio"
-    }
-   ]
-  },
-  {
-   "id": "Q712311",
-   "nimi": "Arthur's Seat",
-   "kuvaus": "Sammunut tulivuori keskellä kaupunkia",
-   "luokka": "puisto",
-   "koko_m": 1200,
-   "korkeus_m": 251,
-   "teksti": "Sammunut tulivuori Arthur's Seat kohoaa kaupungin itälaidalla kaksisataaviisikymmentäyksi metriä korkeaksi, ja sen ympärille levittäytyy laaja Holyroodin puisto. Kaupungin puolella näkyy jyrkkä kallioseinämä Salisbury Crags, ja rinteellä seisovat keskiaikaisen Pyhän Antoniuksen kappelin rauniot. Vuonna 1836 kaniininkoloja etsineet pojat löysivät kallion kolosta seitsemäntoista pientä arkkua, ja jokaisessa makasi puinen ihmishahmo. Kukaan ei tiedä varmasti, kuka arkut sinne kätki tai miksi, ja kahdeksan säilynyttä arkkua on nyt Skotlannin kansallismuseossa.",
-   "lyhyt": "Sammuneen tulivuoren, Arthur's Seatin, huipulle kiivetään perinteisesti vappuaamuna pesemään kasvot aamukasteessa, sillä vanhan uskomuksen mukaan se tuo ikuisen kauneuden. Huipulta avautuu laaja näkymä koko vanhaankaupunkiin, linnasta Kuninkaallista mailia pitkin palatsille asti.",
-   "syventava": "Keitä pienet puuhahmot arkuissa esittivät?",
-   "kysymykset": [
-    "Mistä nimi Arthur's Seat on peräisin?",
-    "Kuinka kauan sitten tulivuori purkautui viimeksi?",
-    "Miksi arkut kätkettiin juuri tänne?",
-    "Voiko huipulle kiivetä helposti?",
-    "Mitä eläimiä Holyroodin puistossa elää?"
-   ],
-   "isoisa": false,
-   "lahteet": [
-    {
-     "vaite": "Arthur's Seat on 251 metriä korkea sammunut tulivuori ja Holyroodin puiston korkein huippu.",
-     "url": "https://en.wikipedia.org/wiki/Holyrood_Park"
-    },
-    {
-     "vaite": "Salisbury Crags on kallioseinämä Holyroodin puistossa, ja puistossa ovat keskiaikaisen Pyhän Antoniuksen kappelin rauniot, viimeistään 1400-luvun alusta.",
-     "url": "https://www.undiscoveredscotland.co.uk/edinburgh/stanthonys/index.html"
-    },
-    {
-     "vaite": "Vuonna 1836 kaniininkoloja etsineet pojat löysivät kallion kolosta seitsemäntoista pientä arkkua, joissa oli puisia hahmoja; kahdeksan on Skotlannin kansallismuseossa.",
-     "url": "https://en.wikipedia.org/wiki/Edinburgh_coffins"
-    },
-    {
-     "vaite": "Arthur's Seatille kiivetään yhä vappuaamuna pesemään kasvot aamukasteessa; uskomuksen mukaan se tuo ikuisen kauneuden.",
-     "url": "https://www.scotsman.com/arts-and-culture/when-scots-would-wash-their-faces-may-dew-luck-586256"
-    },
-    {
-     "vaite": "Huipulta näkyvät Holyroodin palatsi, Royal Mile, vanhakaupunki ja linna.",
-     "url": "https://inlingua-edinburgh.co.uk/arthurs-seat-experience-a-proper-hill-walk-on-an-ancient-volcano-in-the-heart-of-edinburgh"
-    }
-   ]
-  },
-  {
-   "id": "Q1547466",
-   "nimi": "St Gilesin katedraali",
-   "kuvaus": "Kruunutornin koristama pääkirkko",
-   "luokka": "kirkko",
-   "koko_m": 70,
-   "korkeus_m": 44,
-   "teksti": "Pyhän Gilesin katedraalin, St Gilesin, tunnistaa ylhäältä tornista, joka kohoaa Kuninkaallisen mailin varrella ja jonka huipun muodostavat kahdeksan kaarta kruunun muotoon. Kruunutorni valmistui vuonna 1495. Uskonpuhdistaja John Knox saarnasi kirkossa vuodesta 1559 alkaen, ja kirkkoa on kutsuttu maailman presbyteeristen kirkkojen äitikirkoksi. Heinäkuussa 1637 kirkossa luettiin ensimmäisen kerran uutta rukouskirjaa, ja tarinan mukaan torikauppias Jenny Geddes heitti silloin jakkaransa saarnaajaa kohti. Siitä alkanut mellakka johti sotiin, jotka levisivät lopulta koko Britanniaan.",
-   "lyhyt": "Pyhän Gilesin katedraalin kyljessä on Ohdakeritarikunnan kappeli, jonka arkkitehti Robert Lorimer suunnitteli ja joka valmistui vuonna 1911. Sen tarkoin veistettyjen penkkien, vaakunoiden ja koristeiden sekaan on kätketty säkkipilliä soittavia enkeleitä.",
-   "syventava": "Mitä Jenny Geddesin mellakasta seurasi?",
-   "kysymykset": [
-    "Miksi kirkkoa kutsutaan katedraaliksi?",
-    "Kuka oli John Knox?",
-    "Miksi uusi rukouskirja suututti seurakunnan?",
-    "Mikä on Ohdakeritarikunta?",
-    "Kuka oli pyhä Giles?"
-   ],
-   "isoisa": false,
-   "lahteet": [
-    {
-     "vaite": "Kruunutorni, jota kannattelee kahdeksan kaaritukea, rakennettiin vuonna 1495; tornin ja huipun korkeus noin 44 metriä.",
-     "url": "https://en.wikipedia.org/wiki/Crown_steeple"
-    },
-    {
-     "vaite": "John Knox saarnasi kirkossa vuodesta 1559.",
-     "url": "https://questoapp.com/edinburgh/places-to-visit/st-giles-cathedral"
-    },
-    {
-     "vaite": "St Gilesiä on kutsuttu maailman presbyterianismin äitikirkoksi.",
-     "url": "https://en.wikipedia.org/wiki/St_Giles%27_Cathedral"
-    },
-    {
-     "vaite": "Perimätiedon mukaan Jenny Geddes heitti jakkaransa dekaania kohti 23. heinäkuuta 1637, kun uutta rukouskirjaa luettiin ensimmäisen kerran; mellakka johti Kolmen kuningaskunnan sotiin.",
-     "url": "https://stgilescathedral.org.uk/jenny-geddes"
-    },
-    {
-     "vaite": "Ohdakekappelin suunnitteli Robert Lorimer, ja se valmistui vuonna 1911; koristeissa on säkkipilliä soittavia enkeleitä.",
-     "url": "https://www.stgilescathedral.org.uk/the-thistle-chapel"
-    },
-    {
-     "vaite": "Kappelin koristeisiin on kätketty kolme säkkipilliä soittavaa enkeliä, kaksi puusta ja yksi kivestä.",
-     "url": "https://assets.atlasobscura.com/places/st-giles-cathedral-thistle-chapel"
-    }
-   ]
-  },
-  {
-   "id": "Q1199959",
-   "nimi": "Calton Hill",
-   "kuvaus": "Monumenttien kukkula",
-   "luokka": "puisto",
-   "koko_m": 450,
-   "teksti": "Kukkula Calton Hill kohoaa Uudenkaupungin itäpäässä, ja sen laella seisoo kaksitoista paksua pylvästä kuin keskeneräinen kreikkalainen temppeli. Kansallismonumentti piti rakentaa Ateenan Parthenonin mallin mukaan, mutta työ alkoi vuonna 1826 ja rahat loppuivat jo vuonna 1829. Vieressä kohoaa ylösalaisin käännetyn kaukoputken muotoinen Nelsonin muistomerkki. Sen huipulla on suuri aikapallo, joka pudotetaan yhä joka päivä paitsi sunnuntaisin tasan kello yksi, jotta Forthin vuonon laivat saattoivat aikoinaan tarkistaa kellonsa käymättä maissa.",
-   "lyhyt": "Kukkulan, Calton Hillin, keskeneräistä kansallismonumenttia kutsuttiin pilkallisesti Edinburghin häpeäksi, vaikka hanketta tuki muun muassa kirjailija Walter Scott. Suurimpia kiviä vedettiin rinnettä ylös kahdentoista hevosen ja seitsemänkymmenen miehen voimin, ja arkkitehti William Playfair kutsui monumenttia skottien ylpeydeksi ja köyhyydeksi.",
-   "syventava": "Ketä kansallismonumentin piti kunnioittaa?",
-   "kysymykset": [
-    "Miksi kansallismonumentista ei koskaan tehty valmista?",
-    "Kuka keksi pudottaa aikapallon kello yksi?",
-    "Mitä muita muistomerkkejä kukkulalla on?",
-    "Miksi Nelsonille pystytettiin muistomerkki Skotlantiin?",
-    "Mitä kukkulalla juhlitaan vapun aattona?"
-   ],
-   "isoisa": false,
-   "lahteet": [
-    {
-     "vaite": "Kansallismonumentti piti olla Parthenonin jäljitelmä; rakentaminen alkoi 1826 ja päättyi rahojen loputtua 1829, kun valmiina oli kaksitoista pylvästä.",
-     "url": "https://historic-uk.com/HistoryUK/HistoryofScotland/National-Monument-of-Scotland"
-    },
-    {
-     "vaite": "Hankkeen tukijoihin kuului Walter Scott.",
-     "url": "https://www.myhighlands.de/en/calton-hill-edinburgh/"
-    },
-    {
-     "vaite": "Keskeneräistä monumenttia kutsuttiin muun muassa nimellä Edinburgh's Disgrace eli Edinburghin häpeä.",
-     "url": "https://historic-uk.com/HistoryUK/HistoryofScotland/National-Monument-of-Scotland"
-    },
-    {
-     "vaite": "Nelsonin muistomerkki on ylösalaisin käännetyn kaukoputken muotoinen; aikapallo lisättiin vuonna 1852, jotta Forthin laivojen kapteenit saattoivat asettaa kronometrinsä kello yhden pudotuksen mukaan.",
-     "url": "https://en.wikipedia.org/wiki/Nelson_Monument,_Edinburgh"
-    },
-    {
-     "vaite": "Aikapallo putoaa päivittäin sunnuntaita lukuun ottamatta kello yksi, ja sen avulla laivojen kapteenit saattoivat asettaa kronometrinsä tulematta maihin.",
-     "url": "https://www.scottish-places.info/features/featurefirst1046.html"
-    },
-    {
-     "vaite": "Calton Hill sijaitsee Uudenkaupungin itäpäässä, ja sieltä näkyy vanhakaupunki.",
-     "url": "https://www.myhighlands.de/en/calton-hill-edinburgh/"
-    },
-    {
-     "vaite": "Suurimpien kivien siirtämiseen kukkulalle tarvittiin kaksitoista hevosta ja seitsemänkymmentä miestä; arkkitehti William Henry Playfair kutsui monumenttia \"pride and poverty of us Scots\".",
-     "url": "https://historic-uk.com/HistoryUK/HistoryofScotland/National-Monument-of-Scotland"
-    }
-   ]
-  },
-  {
-   "id": "Q2502213",
-   "nimi": "Scottin muistomerkki",
-   "kuvaus": "Walter Scottin goottilainen muistotorni",
-   "luokka": "torni",
-   "koko_m": 40,
-   "korkeus_m": 61,
-   "teksti": "Scottin muistomerkki kohoaa Princes Streetin puistosta goottilaisena kivitornina, kuusikymmentäyksi metriä korkeana. Holvin alla istuu valkoisesta Carraran marmorista veistetty Walter Scott koiransa Maidan kanssa, ja tornin syvennyksissä seisoo kuusikymmentäneljä pientä patsasta hänen kirjojensa henkilöitä. Suunnittelukilpailun voitti nimimerkillä ehdotuksensa lähettänyt George Meikle Kemp, itseoppinut puuseppä ilman arkkitehdin koulutusta. Hän ei nähnyt valmista tornia, sillä hän hukkui Unionin kanavaan sumuisena iltana maaliskuussa 1844 matkalla kotiin, ja torni valmistui saman vuoden syksyllä.",
-   "lyhyt": "Scottin muistomerkin ylimmälle tasanteelle johtaa kaikkiaan kaksisataakahdeksankymmentäseitsemän porrasta. Suunnittelukilpailu järjestettiin kahdesti, ja Kemp lähetti ehdotuksensa nimellä John Morvo, joka on kaiverrettu Melrosen luostarin seinään ja jonka arvellaan kuuluneen luostaria rakentaneelle kivenhakkaajalle.",
-   "syventava": "Keitä tornin pienet patsaat esittävät?",
-   "kysymykset": [
-    "Miksi Walter Scottia arvostettiin niin paljon?",
-    "Mitä kirjoja Walter Scott kirjoitti?",
-    "Miksi torni on niin tumma?",
-    "Millainen koira Maida oli?",
-    "Miksi kilpailu järjestettiin kahteen kertaan?"
-   ],
-   "isoisa": false,
-   "lahteet": [
-    {
-     "vaite": "Goottilainen torni Princes Streetin puistossa on 61,11 metriä korkea, valmistui syksyllä 1844; ylimmälle tasanteelle 287 porrasta; tornissa 64 hahmoa Scottin romaaneista; John Steellin veistämä istuva Scott ja koira Maida valkoista Carraran marmoria.",
-     "url": "https://en.wikipedia.org/wiki/Scott_Monument"
-    },
-    {
-     "vaite": "George Meikle Kemp oli itseoppinut arkkitehti, ammatiltaan puuseppä, ja hukkui Unionin kanavaan 6. maaliskuuta 1844 ennen tornin valmistumista.",
-     "url": "https://en.wikipedia.org/wiki/George_Meikle_Kemp"
-    },
-    {
-     "vaite": "Kemp osallistui kilpailuun nimimerkillä John Morvo, joka on kaiverrettu Melrosen luostariin ja jonka arvellaan olleen luostarin kivimiehen nimi; hän hukkui kanavaan pimeänä, sumuisena iltana matkalla kotiin. Kilpailu järjestettiin 1836 ja uudelleen 1838, jolloin Kemp voitti.",
-     "url": "https://www.historyscotland.com/history/an-expert-guide-to-the-life-of-george-meikle-kemp-architect-of-the"
-    }
-   ]
-  },
-  {
-   "id": "Q2876448",
-   "nimi": "Greyfriars Kirkyard",
-   "kuvaus": "Vanhankaupungin vanha hautausmaa",
-   "luokka": "puisto",
-   "koko_m": 250,
-   "teksti": "Hautausmaa Greyfriars Kirkyard levittäytyy vanhankaupungin etelälaidalla vanhan kirkon ympärille, ja monen haudan päällä on yhä kivestä ja raudasta tehty häkki. Niillä suojattiin vainajia 1800-luvun alussa ruumiinryöstäjiltä, jotka myivät ruumiita lääketieteen opetukseen. Isoisäsi näki vuonna 1873 Edinburghin hautausmaalla vanhan rautahäkin haudan päällä ja kysyi haudankaivajalta, kauanko häkkiä oli tarvittu. Vastaus kuului: kunnes ruumis ei enää kelvannut kaupaksi. Portin vastapäätä kadunkulmassa istuu pronssinen Greyfriars Bobby, terrieri, joka tarinan mukaan vartioi isäntänsä hautaa neljätoista vuotta.",
-   "lyhyt": "Hautausmaalla, Greyfriars Kirkyardilla, allekirjoitettiin vuonna 1638 Skotlannin kansallinen liitto eli covenantti. Kun liiton aseelliset kannattajat hävisivät taistelun vuonna 1679, noin tuhat kaksisataa heistä suljettiin kirkon eteläpuoliselle pellolle, joka tunnetaan yhä covenanttilaisten vankilana.",
-   "syventava": "Kenen hautaa Bobby vartioi?",
-   "kysymykset": [
-    "Miksi lääkärit tarvitsivat ruumiita opetukseen?",
-    "Ketkä olivat kuuluisimmat ruumiinryöstäjät?",
-    "Miksi Bobbyn kuonoa hierotaan kiiltäväksi?",
-    "Mihin Greyfriars Bobby itse on haudattu?",
-    "Miksi hautausmaata pidetään kummittelevana?"
-   ],
-   "isoisa": true,
-   "lahteet": [
-    {
-     "vaite": "Monia hautoja ympäröivät kivestä ja raudasta tehdyt häkit, mortsafet, jotka suojasivat vainajia 1800-luvun alun ruumiinryöstäjiltä, jotka toimittivat ruumiita lääketieteelliseen opetukseen.",
-     "url": "https://en.wikipedia.org/wiki/Greyfriars_Kirkyard"
-    },
-    {
-     "vaite": "Isoisän merkintä 1873: Edinburghin hautausmaalla vanha rautahäkki peitti hautaa; hän kysyi haudankaivajalta, kauanko häkkiä oli tarvittu, ja vastaus oli: kunnes ruumis ei enää kelvannut kaupaksi. Merkintä ei nimeä hautausmaata.",
-     "url": "kaanon:isoisan-paivakirja"
-    },
-    {
-     "vaite": "Greyfriars Bobbyn patsas on hautausmaan portin vastapäätä George IV Bridgen ja Candlemaker Row'n kulmassa.",
-     "url": "https://en.wikipedia.org/wiki/Greyfriars_Kirkyard"
-    },
-    {
-     "vaite": "Bobby oli terrieri, joka tarinan mukaan vartioi isäntänsä John Grayn hautaa 14 vuotta.",
-     "url": "https://en.wikipedia.org/wiki/Greyfriars_Bobby_Fountain"
-    },
-    {
-     "vaite": "Kansallinen liitto allekirjoitettiin hautausmaalla vuonna 1638; Bothwell Brigin tappion jälkeen 1679 noin 1200 covenanttilaista vangittiin kirkon eteläpuoliselle pellolle, joka tunnetaan nimellä Covenanters' Prison.",
-     "url": "https://en.wikipedia.org/wiki/Greyfriars_Kirkyard"
-    }
-   ]
-  },
-  {
-   "id": "Q1633842",
-   "nimi": "National Museum of Scotland",
-   "kuvaus": "Skotlannin kansallismuseo",
-   "luokka": "rakennus",
-   "koko_m": 200,
-   "teksti": "Skotlannin kansallismuseo, National Museum of Scotland, koostuu kahdesta vierekkäisestä rakennuksesta: viktoriaaninen museo avattiin vuonna 1866 ja moderni laajennus vuonna 1998. Vanhan puolen suuri galleria on valkoiseksi maalatusta valuraudasta ja lasista rakennettu halli, jonka esikuvana oli Lontoon kristallipalatsi. Museossa on esillä Dolly-lammas, joka syntyi vuonna 1996 Edinburghin eteläpuolella ensimmäisenä aikuisen solusta kloonattuna nisäkkäänä. Samassa museossa on yksitoista 1100-luvulla veistettyä Lewisin shakkinappulaa ja Arthur's Seatilta löydetyt pienet arkut.",
-   "lyhyt": null,
-   "syventava": "Miten Dolly-lammas kloonattiin?",
-   "kysymykset": [
-    "Mistä Lewisin shakkinappulat löydettiin?",
-    "Mitä museon katolta näkyy?",
-    "Miksi Dolly sai nimensä laulajalta?",
-    "Milloin Dolly-lammas kuoli?",
-    "Mitä vuosituhannen kello esittää?"
-   ],
-   "isoisa": false,
-   "lahteet": [
-    {
-     "vaite": "Museo muodostui vuonna 2006 yhdistämällä vuonna 1866 avattu viktoriaaninen museo ja vuonna 1998 rakennettu Museum of Scotland.",
-     "url": "https://en.wikipedia.org/wiki/National_Museum_of_Scotland"
-    },
-    {
-     "vaite": "Suuri galleria on valurautainen, lasikattoinen halli, joka avattiin 1866 ja jonka esikuvana oli Lontoon Kristallipalatsi.",
-     "url": "https://nms.ac.uk/national-museum-of-scotland/see-and-do/tours-and-trails/architecture-trail"
-    },
-    {
-     "vaite": "Dolly syntyi 5.7.1996 Roslinin instituutissa Midlothianissa, oli ensimmäinen aikuisen somaattisesta solusta kloonattu nisäkäs, ja sen jäännökset ovat esillä Skotlannin kansallismuseossa.",
-     "url": "https://en.wikipedia.org/wiki/Dolly_(sheep)"
-    },
-    {
-     "vaite": "Lewisin shakkinappulat ovat 1100-luvulta; 93 nappulasta 11 on Edinburghin kansallismuseossa.",
-     "url": "https://en.wikipedia.org/wiki/Lewis_chessmen"
-    },
-    {
-     "vaite": "Kahdeksan Arthur's Seatin pienoisarkkua on Skotlannin kansallismuseon kokoelmissa.",
-     "url": "https://en.wikipedia.org/wiki/Edinburgh_coffins"
-    }
-   ]
-  },
-  {
-   "id": "Q2746031",
-   "nimi": "Skotlannin parlamenttitalo",
-   "kuvaus": "Skotlannin parlamentin moderni talo",
-   "luokka": "rakennus",
-   "koko_m": 300,
-   "teksti": "Skotlannin parlamenttitalo on Kuninkaallisen mailin alapäässä Holyroodin palatsin lähellä, ja ylhäältä sen katot näyttävät rantaan käännetyiltä veneiltä. Talon suunnitteli espanjalainen arkkitehti Enric Miralles, joka kuoli vuonna 2000 ennen rakennuksen valmistumista. Kuningatar Elisabet toinen avasi talon lokakuussa 2004, ja hinnaksi tuli neljäsataaneljätoista miljoonaa puntaa. Talon kadunpuoleiseen muuriin on upotettu eri puolilta Skotlantia tuotuja kiviä, joihin on kaiverrettu lainauksia kirjailijoilta, runoista ja sananlaskuista. Kansanedustajien työhuoneiden ulkonevissa ikkunoissa on istuin, jolla edustaja voi pysähtyä miettimään työtään.",
-   "lyhyt": null,
-   "syventava": "Miksi rakentaminen maksoi niin paljon?",
-   "kysymykset": [
-    "Milloin Skotlanti sai taas oman parlamentin?",
-    "Kuinka monta edustajaa parlamentissa istuu?",
-    "Mistä Miralles sai idean veneen muotoisiin kattoihin?",
-    "Voiko istuntoja käydä seuraamassa?",
-    "Kuka valitsee muuriin uudet lainaukset?"
-   ],
-   "isoisa": false,
-   "lahteet": [
-    {
-     "vaite": "Katot muistuttavat rantaan käännettyjä veneitä; suunnittelija Enric Miralles kuoli ennen valmistumista.",
-     "url": "https://en.wikipedia.org/wiki/Scottish_Parliament_Building"
-    },
-    {
-     "vaite": "Enric Miralles eli 1955–2000 ja oli espanjalainen arkkitehti.",
-     "url": "https://en.wikipedia.org/wiki/Enric_Miralles"
-    },
-    {
-     "vaite": "Kuningatar Elisabet II avasi talon 9.10.2004; hinta 414 miljoonaa puntaa.",
-     "url": "https://en.wikipedia.org/wiki/Scottish_Parliament_Building"
-    },
-    {
-     "vaite": "Talo on Royal Milen alapäässä Holyroodin palatsin lähellä.",
-     "url": "https://parliament.scot/about/history-of-the-scottish-parliament/new-parliament-building"
-    },
-    {
-     "vaite": "Canongate Wallin kiviin, jotka on tuotu eri puolilta Skotlantia, on kaiverrettu 29 lainausta kirjailijoilta ja ajattelijoilta sekä sananlaskuja ja runoja; uusia lisättiin 2025.",
-     "url": "https://www.parliament.scot/about/news/news-listing/new-quotes-unveiled-on-canongate-wall"
-    },
-    {
-     "vaite": "Kansanedustajien työhuoneiden ikkunoissa on istuin, jolla edustajat voivat istua miettimässä työtään.",
-     "url": "https://www.parliament.scot/-/media/files/education/familytrail.pdf"
-    }
-   ]
-  },
-  {
-   "id": "Q5086152",
-   "nimi": "Charlotte Square",
-   "kuvaus": "Uudenkaupungin georgiaaninen aukio",
-   "luokka": "aukio",
-   "koko_m": 170,
-   "teksti": "Aukio Charlotte Square on Uudenkaupungin länsipäässä, ja sen keskellä on puutarha. Arkkitehti Robert Adam suunnitteli vuonna 1791 aukion talorivien yhtenäiset julkisivut, ja pohjoissivua pidetään yhtenä georgiaanisen arkkitehtuurin hienoimmista esimerkeistä. Pohjoisrivin keskimmäinen talo, Bute House, on ollut Skotlannin pääministerin virka-asunto vuodesta 1999, ja sen naapuritalo on kunnostettu museoksi, joka näyttää varakkaan perheen elämää georgiaanisella ajalla. Puutarhan keskellä seisoo prinssi Albertin ratsastajapatsas, jonka kuningatar Viktoria paljasti vuonna 1876.",
-   "lyhyt": null,
-   "syventava": "Kenen mukaan aukio on nimetty?",
-   "kysymykset": [
-    "Kuka oli arkkitehti Robert Adam?",
-    "Miksi Uusikaupunki rakennettiin ruutukaavaan?",
-    "Kuka pääministereistä asui talossa ensimmäisenä?",
-    "Miksi prinssi Albertille pystytettiin patsas?",
-    "Pääseekö aukion puutarhaan kuka tahansa?"
-   ],
-   "isoisa": false,
-   "lahteet": [
-    {
-     "vaite": "Charlotte Square on Uudenkaupungin aukio, jonka keskellä on puutarha; Robert Adam suunnitteli vuonna 1791 yhtenäiset julkisivut, ja pohjoissivu on georgiaanisen arkkitehtuurin hienoimpia.",
-     "url": "https://en.wikipedia.org/wiki/Charlotte_Square"
-    },
-    {
-     "vaite": "Robert Adam suunnitteli vuonna 1791 Charlotte Squaren yhtenäiset julkisivut; Bute House on ollut pääministerin virka-asunto heinäkuusta 1999.",
-     "url": "https://en.wikipedia.org/wiki/Bute_House"
-    },
-    {
-     "vaite": "Bute House on pohjoissivun keskimmäinen talo numero 6 ja on ollut pääministerin, First Ministerin, virka-asunto heinäkuusta 1999.",
-     "url": "https://en.wikipedia.org/wiki/Bute_House"
-    },
-    {
-     "vaite": "Viereinen Georgian House numerossa 7 on National Trust for Scotlandin ylläpitämä museo.",
-     "url": "https://en.wikipedia.org/wiki/Bute_House"
-    },
-    {
-     "vaite": "Prinssi Albertin ratsastajapatsaan teki John Steell, ja kuningatar Victoria paljasti sen 17.8.1876.",
-     "url": "https://canmore.org.uk/site/74081"
-    }
-   ]
-  },
-  {
-   "id": "Q1807521",
-   "nimi": "Royal Botanic Garden Edinburgh",
-   "kuvaus": "Kuninkaallinen kasvitieteellinen puutarha",
-   "luokka": "puisto",
-   "koko_m": 600,
-   "teksti": "Kuninkaallinen kasvitieteellinen puutarha, Royal Botanic Garden, levittäytyy Inverleithin kaupunginosassa lähes kolmenkymmenen hehtaarin alueella. Puutarha perustettiin vuonna 1670 lääkekasvien kasvatukseen, ja nykyiselle paikalleen se muutti 1820-luvun alussa. Muutossa puutarhuri William McNab siirsi jopa kahdentoista metrin korkuisia puita kahdentoista hevosen vetämällä istutuskoneella, ja kaupunkilaiset kerääntyivät ihmettelemään keinuvien oksien kulkuetta. Vuonna 1858 valmistunut viktoriaaninen palmuhuone on Britannian korkein perinteinen palmuhuone, ja sen korkea lasikatto erottuu ylhäältä vihreän puiston keskeltä.",
-   "lyhyt": null,
-   "syventava": "Miten täysikasvuinen puu siirrettiin?",
-   "kysymykset": [
-    "Miksi puutarhassa kasvatettiin ensin lääkekasveja?",
-    "Mitä harvinaisia kasveja puutarhassa on?",
-    "Mitä vanhoissa palmuhuoneissa kasvaa?",
-    "Missä puutarha sijaitsi ennen muuttoa?",
-    "Mitä kiinalaisella rinteellä kasvaa?"
-   ],
-   "isoisa": false,
-   "lahteet": [
-    {
-     "vaite": "Puutarha on 28 hehtaarin kokoinen ja sijaitsee Inverleithissä.",
-     "url": "https://www.scottish-places.info/features/featurefirst1004.html"
-    },
-    {
-     "vaite": "Puutarha perustettiin vuonna 1670 lääkekasvitarhaksi ja muutti Inverleithiin vuodesta 1820 alkaen.",
-     "url": "https://en.wikipedia.org/wiki/Royal_Botanic_Garden_Edinburgh"
-    },
-    {
-     "vaite": "Kuraattori William McNab käytti puiden siirtoon kahdentoista hevosen vetämää istutuskonetta, ja kulkue miehiä, hevosia ja huojuvia oksia hämmästytti kaupunkilaisia.",
-     "url": "https://www.edinburghnews.scotsman.com/news/a-man-called-mcnab-got-royal-botanic-show-on-the-road-900777"
-    },
-    {
-     "vaite": "Vuonna 1858 valmistunut Temperate Palm House on Britannian korkein perinteinen palmuhuone, 21,95 metriä.",
-     "url": "https://www.rbge.org.uk/collections/living-collection/living-collection-at-the-royal-botanic-garden-edinburgh/glasshouses-history/"
-    },
-    {
-     "vaite": "Palmuhuoneet suljettiin vuonna 2021 Edinburgh Biomes -kunnostukseen ja avattiin uudelleen yleisölle 2.10.2026.",
-     "url": "https://www.rbge.org.uk/news/articles/historic-palm-houses-to-reopen-after-5-year-restoration/"
-    },
-    {
-     "vaite": "McNab siirsi istutuskoneella vakiintuneita puita, joista osa oli yli neljäkymmentä jalkaa eli yli kaksitoista metriä korkeita.",
-     "url": "https://atom-2.rbge.org.uk/index.php/mcnab-william"
-    },
-    {
-     "vaite": "Istutuskonetta veti kaksitoista hevosta, ja miesten, hevosten ja huojuvien oksien kulkue kulki esikaupunkien läpi monta päivää.",
-     "url": "https://www.rcpe.ac.uk/heritage/botanics"
-    }
-   ]
-  }
- ]
+  ]
 }
