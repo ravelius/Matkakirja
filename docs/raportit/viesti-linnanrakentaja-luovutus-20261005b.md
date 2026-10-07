@@ -268,3 +268,10 @@ Brotli (haara linnanrakentaja-zstd, worktree olemassa), akustiikka #3979 (Steam 
   kappeliin leikkaussektorin puolelta; esine:omena → esine:nauris. Tuotos scratchpad kavely-v2 → kopioi _valmiit/olavinlinna-kavely-v1/v2/
   + kuori_kavely.py ulkoalue + esineet. MUISTIRAJA (Päätoimittaja 10.4x): paistot yksi kerrallaan, PhysMem unused > 20 Gt;
   scratchpad paistot.sh leipoo kappelin ja keittiön uudelleen (4k) muistin salliessa → v44 (soutu, keittio-g102, kappeli, kävely v2).
+- 7.10. 10.5x: UUDELLEENKÄYNNISTYS ~11.05 (Postivahti). paistot.sh pysäytetty ennen yhtään paistoa; ei ajoja käynnissä. Scratchpadin
+  tarpeelliset tiedostot talteen proto-3d/tyokalut/linnanrakentaja-ajot/scratch-20261007/ (paistot.sh: aseta SCR; rakenna_kappeli.mjs ja
+  rakenna_g102.mjs rakentavat leivontapaketit worktreestä; leivottu_esik.py / atlas_esik.py = leivotun glb:n esikatselu; pohja-muunnos.json
+  + korkeus.npy = piirroksen kohdistus kuoreen). KÄYNNISTYKSEN JÄLKEEN: (1) muisti → paistot.sh (kappeli + keittio-g102, päivä + hämärä)
+  → tarkista leivottu_esik.py:llä, että holvin laki ja keittiön katto näkyvät; (2) kuori_kavely.py v2:lle (ulkoalue); (3) v44 =
+  _valmiit/olavinlinna-blender-v44 (v43 + soutu tehty) + tilat/valot kappeli ja keittio-g102 + ASTC + kavely v2 → vie-blender →
+  vie-dioraama osoitin=false → peili Siirtosepälle. Päätoimittajalta odotetaan kuittausta 2k-leivontaan (fseventsd 15 Gt).
