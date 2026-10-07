@@ -1,0 +1,1 @@
+Tervetuloa Berliiniin. Ylhäältä kaupunki on laaja ja tasainen kattojen, puistojen ja järvien maisema, jonka halki Spree kiemurtelee hitaasti länteen. Keskustan länsilaidalla levittäytyy Tiergartenin vihreä puisto. Kierros alkaa Alexanderplatzin laidalta televisiotornilta, jonka hopeanhohtoinen pallo näkyy lähes koko kaupunkiin.
