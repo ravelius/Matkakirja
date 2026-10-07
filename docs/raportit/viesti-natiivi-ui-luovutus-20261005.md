@@ -19,7 +19,10 @@ huoneet 1–5. Ei uusia pohjia. Työt SeikkailuTapit.cs:ään (haara cbc92a25:n 
 3 alkuilta: testi "seikkailussa ei näkyvää tekstiä" (paitsi löytö- ja tietokerrospohjat; kohta 11).
 TILA 7.10. 19.5x: vaihe 1 KUITATTU junaan 163 ja SHA Natiivisepälle = natiivi-ui/seikkailu-fp eb115fc3 (sisältää cbc92a25) (Pulun napautus →
   tietokerros tai SeikkailuPelaaja.PuluVihje() kytketty). VAIHE 2 KUITATTU 163 ja SHA Natiivisepälle: natiivi-ui/seikkailu-verbi 754f090b (sisältää eb115fc3 ja cbc92a25) (verbi SeikkailuEsineet.Toiminto). VAIHE 3 KUITATTU 163 ja SHA Natiivisepälle: natiivi-ui/seikkailu-tekstivahti 82decfa9 = JUNAN 163 NUI-KÄRKI (sisältää 754f090b, eb115fc3, cbc92a25) (SeikkailuTapit.Tekstivahti, testi ui seikkailutapit teksti). Kaikki 3 vaihetta tehty. LISÄKSI KUITATTU 163 ja SHA Natiivisepälle: natiivi-ui/seikkailu-jatka 6af3eb9f = JUNAN 163 NUI-KÄRKI (Jatka/Alusta-valinta Vahvistus-dialogilla,
-  Vahvistus.Kysy kunPeruttu; SeikkailuTapit.AvaaPelattavaPala; Siirtoseppä vaihtaa Paavalikon rivin kutsun). Jäljellä omistajan ikonipäätös. Aiempi: 680be26a (cbc92a25:n päällä): OtaKatse() (oikean puoliskon
+  Vahvistus.Kysy kunPeruttu; SeikkailuTapit.AvaaPelattavaPala; Siirtoseppä vaihtoi Paavalikon rivin, ce5e596f).
+  KONTEKSTIKUVAKKEET (omistaja hyväksyi 20.3x) kuittauksessa: natiivi-ui/seikkailu-kuvakkeet 0fe836d3 (Ikonit.Kasi/Heittokaari/Liekki,
+  SeikkailuTapit.Kuvake(verbi)); tyylikirjarivi web-PR #4070 (natiivi-ui-tyylikirja-kulta 40be6b15, proton kopion lähde
+  b28e77f1a682). Kuittauksen jälkeen SHA Natiivisepälle (uusi junan 163 kärki). Aiempi: 680be26a (cbc92a25:n päällä): OtaKatse() (oikean puoliskon
   veto), oikea TAPPI testikytkin (OikeaTappi, oletus pois), napautus → SeikkailuPelaaja.Napautus(Vector2 px) (Siirtoseppä
   historia-fp d0f26d0b).
 Kontekstikuvakkeet (käsi, kaari, liekki) = omistajan päätettävä 13.3; toteuta VASTA kuittauksesta.

@@ -11,6 +11,6 @@ tarvittaessa (DEF_IOS + ;MATKAKIRJA_APPSTORE kopiossa unity-tarkistus.sh:sta). E
 savuja eikä toistoajoja. Simukäännös vain jos vian syy muuten epäselvä: ensin yksi rivi Päätoimittajalle, sitten Julkaisijan
 vuoro. Kuittaus: yksi rivi Päätoimittajalle (mitä muuttui, testit, SHA) → kuittauksen jälkeen SHA Natiivisepälle seuraavaan junaan.
 
-Tila 7.10. 20.0x: junassa 161 metro 89d98b7e; junassa 162 apuraha-kuvat 3f07c49b ja seikkailu-toiminto f9f48082; junassa 163 seikkailu-jatka 6af3eb9f (sisältää tekstivahdin, verbin, fp-ohjauksen ja tietokerroksen). Avoinna vain omistajan kuvakepäätös (käsi, kaari, liekki; pelattavuusmalli 13.3) → vaihda SeikkailuTapit.PoimiIkoni/HeitaIkoni uudessa haarassa 6af3eb9f:n päälle.
+Tila 7.10. 20.0x: junassa 161 metro 89d98b7e; junassa 162 apuraha-kuvat 3f07c49b ja seikkailu-toiminto f9f48082; junassa 163 seikkailu-jatka 6af3eb9f (sisältää tekstivahdin, verbin, fp-ohjauksen ja tietokerroksen). Kontekstikuvakkeet 0fe836d3 kuittauksessa (ks. luovutus).
 HUOMINEN 8.10.: pelattavuusmalli (luovutuksen ylin osio HUOMINEN 8.10.).
 UI-POHJAT: vain olemassa olevat pohjat; puuttuva → Päätoimittaja.
