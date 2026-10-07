@@ -14,6 +14,15 @@ Ennen junaa/TF:ää vain automaattiset testit (Kartta/Peli/Linssit-testit, tarki
 käännös. EI savua, EI Laitetestaajaa, EI stillejä, EI iPad-mittauksia, EI toistoja ennen korjausta. Juna 1–2/pv, kun valmista on.
 Muisti testaus-kevyemmin-20261007.
 
+## TILA 16.0x: JUNA 162 -RUNKO natiiviseppa/juna-162-koe **baaa24445** (wt/proto-natiiviseppa-j144) = BUILD 161 9572eaff + LS1 b9f37ee8f +
+NUI 3f07c49b + LS2 f6e4a8495 + Siirtoseppä a5cd9d81 (kaikki Päätoimittajan kuittaamia 16.1x). Testit 447/419/835, tarkista, unity
+iOS/Mac/App Store 0, editori ok (lokit/natiiviseppa-juna162-testit.txt).
+- Omistaja: enintään 2 junaa/pv, MUTTA Julkaisijan mukaan TF 162 tänään klo 22 (omistajan pyyntö): lukko vapaana 21.10 alkaen, runko
+  lukitaan ~21.15 → testit → proto-kaanna (EI savua) → VIE/AVAUS → BUILD 162 master-merge → SHA + muutoslokin sisältölista Julkaisijalle →
+  Mac TF 162 heti iOS-latauksen jälkeen (lupa annettu; lokit/natiiviseppa-skriptit/mac-tf-161.sh mallina, vaihda SHA/build 162).
+- Odottaa Päätoimittajan vahvistusta: Siirtoseppä 78e56088 (⊇ a5cd9d81, E1; KONFLIKTI LinssiOhjain.cs → Siirtoseppä ratkaisee
+  yhdistämällä baaa24445:n) + NUI seikkailu-tapit 34cf54b0 (puhdas).
+
 ## TILA 16.1x: TF 161 + MAC TF 161 LADATTU (iOS 37623777958, Mac 37624780571; fi.matkakirja.peli build 161 = 9572eaff).
 Omistaja 16.0x: roolit eivät tee omia käännöksiä; täysi käännös vain junalle (minä) ja TF:lle (Julkaisija).
 JUNA 162 -ehdokkaat: LS1 pallo-latauskuva **b9f37ee8f** (korvaa cc6176356, LS1:n mukaan kuitattu), NUI apuraha-kuvat **3f07c49b** (korvaa 5e45d1da; NUI:n mukaan kuitattu, ⊇ kehittaja-tf),
