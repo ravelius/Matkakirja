@@ -87,7 +87,8 @@ namespace Matkakirja.Natiivi
                 esineToiminto = t?.GetField("ToimintoPyydetty", BindingFlags.Public | BindingFlags.Static);
             }
             if (!(esineetAktiivinen?.GetValue(null) is Object e) || e == null) return null;
-            if (esineKadessa?.GetValue(e) is string k && k.Length > 0) return "heita";
+            // Pyhä esine (kalkki, pateeni, liuskekivi) lasketaan, ei heitetä (Siirtoseppä E3); muut kädessä olevat heitetään.
+            if (esineKadessa?.GetValue(e) is string k && k.Length > 0) return PyhaEsine(k) ? "laske" : "heita";
             // E3 (Siirtoseppä): kynttilä, koputus ja kivet omina tiloina samalla napilla (VoiceOver-nimi Toimintonimet); kuvake kuten poimi.
             if (esineLahin?.GetValue(e) is string l && l.Length > 0) return Tila(l);
             return null;
@@ -98,14 +99,16 @@ namespace Matkakirja.Natiivi
         {
             if (lahin == "kynttila" || lahin == "koputa") return lahin;
             if (lahin.StartsWith("kivi-")) return "irrota";
-            if (lahin == "kalkki" || lahin == "pateeni" || lahin == "liuskekivi") return "nosta";
+            if (PyhaEsine(lahin)) return "nosta";
             return "poimi";
         }
+
+        static bool PyhaEsine(string id) => id == "kalkki" || id == "pateeni" || id == "liuskekivi";
 
         /// <summary>Toimintonapin VoiceOver-nimet tiloittain (Siirtoseppä E2/E3).</summary>
         static readonly System.Collections.Generic.Dictionary<string, string> Toimintonimet = new System.Collections.Generic.Dictionary<string, string>
         {
-            ["poimi"] = "Poimi", ["heita"] = "Heitä", ["kynttila"] = "Kynttilä", ["koputa"] = "Koputa", ["irrota"] = "Irrota", ["nosta"] = "Nosta",
+            ["poimi"] = "Poimi", ["heita"] = "Heitä", ["kynttila"] = "Kynttilä", ["koputa"] = "Koputa", ["irrota"] = "Irrota", ["nosta"] = "Nosta", ["laske"] = "Laske",
         };
 
         void PyydaToiminto()
