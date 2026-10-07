@@ -1,0 +1,1 @@
+Tervetuloa Bergeniin. Ylhäältä kaupunki on kattojen kirjo seitsemän vuoren sylissä, ja sen keskelle työntyy vuonolta kapea Vågen-lahti. Kierros alkaa lahden itärannalta Bryggeniltä, hansakauppiaiden vanhalta laiturilta, jonka puutalojen rivi on noussut jokaisen tulipalon jälkeen uudelleen samalle paikalle.
