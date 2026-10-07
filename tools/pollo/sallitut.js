@@ -55,6 +55,20 @@ export const OPAS_SALLITUT = Object.freeze({
   ],
 });
 
+/*
+ * KOKEILUKOHTEET (Päätoimittaja 7.10. 08.5x): vain kehityskäännöksille, jotka lähettävät otsakkeen
+ * x-matkakirja-kokeilu: <id>[,<id>] (worker siirtää sen env.OPAS_KOKEILU-listaksi). TF-appit eivät näe näitä.
+ * Giza: omat Blender-mallit (omistaja 08.4x), TF 157/158:ssa mallit pois päältä → ei tuotannon listalle.
+ */
+export const OPAS_SALLITUT_KOKEILU = Object.freeze({
+  giza: { id: 'giza', nimi: 'Gizan pyramidit', lat: 29.9765, lon: 31.1313, r_m: 1500 },
+});
+/** Pyynnön kokeilukohteet: otsakkeen id:t, jotka ovat kokeilulistalla. */
+export const kokeilut = (otsake) => String(otsake ?? '').split(',').map((x) => x.trim().toLowerCase()).filter((x) => OPAS_SALLITUT_KOKEILU[x]);
+const kokeilussa = (env) => (env?.OPAS_KOKEILU ?? []).map((x) => OPAS_SALLITUT_KOKEILU[x]).filter(Boolean);
+/** Sallitut tälle pyynnölle (/opas/aineistot): tuotannon lista + pyynnön kokeilukohteet. */
+export const sallitutPyynnolle = (env) => [...OPAS_SALLITUT.sallitut, ...kokeilussa(env)];
+
 /** Kaupungin id nimestä (sama kaava kuin aineistoindeksissä). */
 export const sallittuId = (nimi) => String(nimi ?? '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '')
   .replace(/ø/g, 'o').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
@@ -64,7 +78,8 @@ export const sallittuId = (nimi) => String(nimi ?? '').toLowerCase().normalize('
  * suodatus, Kysyn ei-sallittu) on päällä vain, kun env.OPAS_SALLITUT_ESTO = '1' — TF 154/155 eivät vielä lue listaa
  * (natiivi junassa 157). Testi voi antaa oman listan env.OPAS_SALLITUT_TESTI ({ sallitut }), jolloin esto on päällä.
  */
-const lista = (env) => env?.OPAS_SALLITUT_TESTI ?? (String(env?.OPAS_SALLITUT_ESTO ?? '') === '1' ? OPAS_SALLITUT : null);
+const perus = (env) => env?.OPAS_SALLITUT_TESTI ?? (String(env?.OPAS_SALLITUT_ESTO ?? '') === '1' ? OPAS_SALLITUT : null);
+const lista = (env) => { const l = perus(env); return l && kokeilussa(env).length ? { sallitut: [...l.sallitut, ...kokeilussa(env)] } : l; };
 const kaikki = (l) => l.sallitut;
 const metreina = (a, b) => {
   const r = Math.PI / 180, dLat = (b.lat - a.lat) * r, dLon = (b.lon - a.lon) * r;
@@ -97,6 +112,6 @@ export function pisteSallittu(piste, kaupunki = null, env = null) {
  */
 export function sallittuAluePisteelle(piste, env = null) {
   if (!Number.isFinite(piste?.lat) || !Number.isFinite(piste?.lon)) return null;
-  const l = env?.OPAS_SALLITUT_TESTI ?? OPAS_SALLITUT;
+  const l = { sallitut: [...(env?.OPAS_SALLITUT_TESTI ?? OPAS_SALLITUT).sallitut, ...kokeilussa(env)] };
   return l.sallitut.map((a) => ({ a, d: metreina(a, piste) })).filter((x) => x.d <= x.a.r_m).sort((x, y) => x.d - y.d)[0]?.a ?? null;
 }
