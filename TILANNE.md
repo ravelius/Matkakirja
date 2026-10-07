@@ -42,6 +42,15 @@ E1–E25: vahvistui 11, korjattu 12, jää epävarmaksi 2; osio 4: 21/9/11. Agen
 **Jäljellä:** Giza-tiedoston osio (odottaa C ja F; D valmis), sitten TARKISTAJA (sonnet) molemmille
 tiedostoille, lopuksi loppuraportti. KK-tiedoston TARKISTAJA-läpikäynti on vielä tekemättä.
 
+**Giza/C valmis (scratchpadissa), tärkeimmät löydökset:** E10 KORJATTU: Tallet & Lehner 2021 luku 14 (Lehner): Mererin Tura-kivi
+ei todennäköisesti mennyt pyramidin verhoukseen (verhous valmis; kivet pengertiehen, laaksotemppeliin, venekuoppien kattolohkoihin), Tallet 2017 eri mieltä;
+E6 kuukaudet löytyivät (Papyrus A = I Akhet/heinä, B = II–IV Akhet + I Peret); E13 Tura–Giza vesireitti n. 20 km; E5 "17. laskenta" pois;
+E1 epävarmuus 26/27 on tutkijoiden oma (WP:n Diary_of_Merer ristiriidassa itsensä kanssa); E8 joukkue 40 (aper 160), luku 200 pois;
+E9 kausisaldo n. 750 lohkoa; "Ankhhaf ei visiiri" harhaanjohtava (Tallet: visiiri); Khufu 2633–2605 eaa. (Tallet&Lehner), ±40 liian kapea;
+E3 mefat = väriaine, 400 miestä ei lähteessä. RSS-skannauksessa ei sivunumeroita (viittaus luku + PDF-sivu).
+**Giza/D lisäksi:** RAB-siiloja ~30 (ei 10), Area C Khafren, Ain Sukhna Khafre–Pepi II ja Montuhotep IV–Senusret I, E14 "Younes 2024" pois (Younes on PNAS:n kirjoittaja),
+E58–E59 luvut mallinnuksia, E61 muotit 3 kokoa, E62 40 khar = 1 922 l (+ suuri heqat = 1 941 l) vahvistui, E63 jää (Gately-kirja), E64 Roth 1991 s. 121 ei ratkaise ryhmäkokoa.
+
 **Raporttien tärkeimmät löydökset (jotta ne säilyvät, jos kontti katoaa):**
 - KK/A: Time 9.7.1923 ("CHINA: Fire") ja 23.7.1923 ("Eunuch's Strike") ovat eri artikkelit, molemmat päiväykset oikein;
   "klo 21" ei tuettu (palo syttyi n. 0–1, hälytys 3, sammui 7, 27.6.); "yli 300 huonetta" on populaariluku (aikalaiset 100+/120/127);
