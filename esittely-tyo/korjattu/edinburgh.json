@@ -192,7 +192,7 @@
    "koko_m": 70,
    "korkeus_m": 44,
    "teksti": "Pyhän Gilesin katedraalin, St Gilesin, tunnistaa ylhäältä tornista, joka kohoaa Kuninkaallisen mailin varrella ja jonka huipun muodostavat kahdeksan kaarta kruunun muotoon. Kruunutorni valmistui vuonna 1495. Uskonpuhdistaja John Knox saarnasi kirkossa vuodesta 1559 alkaen, ja kirkkoa on kutsuttu maailman presbyteeristen kirkkojen äitikirkoksi. Heinäkuussa 1637 kirkossa luettiin ensimmäisen kerran uutta rukouskirjaa, ja tarinan mukaan torikauppias Jenny Geddes heitti silloin jakkaransa saarnaajaa kohti. Siitä alkanut mellakka johti sotiin, jotka levisivät lopulta koko Britanniaan.",
-   "lyhyt": "Pyhän Gilesin katedraalin kyljessä on Ohdakeritarikunnan kappeli, jonka arkkitehti Robert Lorimer suunnitteli ja joka valmistui vuonna 1911. Sen tarkoin veistettyjen puisten penkkien ja vaakunoiden sekaan on kätketty pieni enkeli, joka soittaa säkkipilliä.",
+   "lyhyt": "Pyhän Gilesin katedraalin kyljessä on Ohdakeritarikunnan kappeli, jonka arkkitehti Robert Lorimer suunnitteli ja joka valmistui vuonna 1911. Sen tarkoin veistettyjen penkkien, vaakunoiden ja koristeiden sekaan on kätketty säkkipilliä soittavia enkeleitä.",
    "syventava": "Mitä Jenny Geddesin mellakasta seurasi?",
    "kysymykset": [
     "Miksi kirkkoa kutsutaan katedraaliksi?",
@@ -222,6 +222,10 @@
     {
      "vaite": "Ohdakekappelin suunnitteli Robert Lorimer, ja se valmistui vuonna 1911; koristeissa on säkkipilliä soittavia enkeleitä.",
      "url": "https://www.stgilescathedral.org.uk/the-thistle-chapel"
+    },
+    {
+     "vaite": "Kappelin koristeisiin on kätketty kolme säkkipilliä soittavaa enkeliä, kaksi puusta ja yksi kivestä.",
+     "url": "https://assets.atlasobscura.com/places/st-giles-cathedral-thistle-chapel"
     }
    ]
   },
@@ -232,7 +236,7 @@
    "luokka": "puisto",
    "koko_m": 450,
    "teksti": "Kukkula Calton Hill kohoaa Uudenkaupungin itäpäässä, ja sen laella seisoo kaksitoista paksua pylvästä kuin keskeneräinen kreikkalainen temppeli. Kansallismonumentti piti rakentaa Ateenan Parthenonin mallin mukaan, mutta työ alkoi vuonna 1826 ja rahat loppuivat jo vuonna 1829. Vieressä kohoaa ylösalaisin käännetyn kaukoputken muotoinen Nelsonin muistomerkki. Sen huipulla on suuri aikapallo, joka pudotetaan yhä joka päivä paitsi sunnuntaisin tasan kello yksi, jotta Forthin vuonon laivat saattoivat aikoinaan tarkistaa kellonsa käymättä maissa.",
-   "lyhyt": "Kukkulan, Calton Hillin, keskeneräistä kansallismonumenttia kutsuttiin pilkallisesti Edinburghin häpeäksi, vaikka hanketta tuki muun muassa kirjailija Walter Scott. Ajan mittaan pylväsrivistä tuli yksi kaupungin rakastetuimmista maamerkeistä, ja kukkulalta näkyy koko vanhakaupunki linnasta palatsiin.",
+   "lyhyt": "Kukkulan, Calton Hillin, keskeneräistä kansallismonumenttia kutsuttiin pilkallisesti Edinburghin häpeäksi, vaikka hanketta tuki muun muassa kirjailija Walter Scott. Suurimpia kiviä vedettiin rinnettä ylös kahdentoista hevosen ja seitsemänkymmenen miehen voimin, ja arkkitehti William Playfair kutsui monumenttia skottien ylpeydeksi ja köyhyydeksi.",
    "syventava": "Ketä kansallismonumentin piti kunnioittaa?",
    "kysymykset": [
     "Miksi kansallismonumentista ei koskaan tehty valmista?",
@@ -266,6 +270,10 @@
     {
      "vaite": "Calton Hill sijaitsee Uudenkaupungin itäpäässä, ja sieltä näkyy vanhakaupunki.",
      "url": "https://www.myhighlands.de/en/calton-hill-edinburgh/"
+    },
+    {
+     "vaite": "Suurimpien kivien siirtämiseen kukkulalle tarvittiin kaksitoista hevosta ja seitsemänkymmentä miestä; arkkitehti William Henry Playfair kutsui monumenttia \"pride and poverty of us Scots\".",
+     "url": "https://historic-uk.com/HistoryUK/HistoryofScotland/National-Monument-of-Scotland"
     }
    ]
   },
@@ -478,7 +486,7 @@
    "kysymykset": [
     "Miksi puutarhassa kasvatettiin ensin lääkekasveja?",
     "Mitä harvinaisia kasveja puutarhassa on?",
-    "Miksi vanhat palmuhuoneet suljettiin kunnostukseen?",
+    "Mitä vanhoissa palmuhuoneissa kasvaa?",
     "Missä puutarha sijaitsi ennen muuttoa?",
     "Mitä kiinalaisella rinteellä kasvaa?"
    ],
@@ -497,8 +505,20 @@
      "url": "https://www.edinburghnews.scotsman.com/news/a-man-called-mcnab-got-royal-botanic-show-on-the-road-900777"
     },
     {
-     "vaite": "Vuonna 1858 valmistunut Temperate Palm House on Britannian korkein perinteinen palmuhuone, 21,95 metriä; palmuhuoneet ovat olleet suljettuina Edinburgh Biomes -kunnostuksen vuoksi.",
+     "vaite": "Vuonna 1858 valmistunut Temperate Palm House on Britannian korkein perinteinen palmuhuone, 21,95 metriä.",
      "url": "https://www.rbge.org.uk/collections/living-collection/living-collection-at-the-royal-botanic-garden-edinburgh/glasshouses-history/"
+    },
+    {
+     "vaite": "Palmuhuoneet suljettiin vuonna 2021 Edinburgh Biomes -kunnostukseen ja avattiin uudelleen yleisölle 2.10.2026.",
+     "url": "https://www.rbge.org.uk/news/articles/historic-palm-houses-to-reopen-after-5-year-restoration/"
+    },
+    {
+     "vaite": "McNab siirsi istutuskoneella vakiintuneita puita, joista osa oli yli neljäkymmentä jalkaa eli yli kaksitoista metriä korkeita.",
+     "url": "https://atom-2.rbge.org.uk/index.php/mcnab-william"
+    },
+    {
+     "vaite": "Istutuskonetta veti kaksitoista hevosta, ja miesten, hevosten ja huojuvien oksien kulkue kulki esikaupunkien läpi monta päivää.",
+     "url": "https://www.rcpe.ac.uk/heritage/botanics"
     }
    ]
   }

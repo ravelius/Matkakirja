@@ -877,3 +877,96 @@ Lisäksi kaupungista löytyi kolme nykytilavirhettä (löydöstyyppi 5), joista 
 ### Bergen — koneellinen tarkistus
 `Bergen: 11 kohdetta, 0 virhettä, 12 huomiota, puhetta 10041 merkkiä`
 Yksitoista huomiota on "ei ala paikan nimellä" (suomenkielinen etusana, ääntämissääntö) ja kahdestoista "avaus puuttuu" (avaus on erillisessä tiedostossa). Nimialkuhuomioiden määrä on sama kuin ennen passia.
+
+## Dublin
+
+### Christ Church -katedraali — kenttä `lyhyt`
+- **Vanha:** "Dublinin vanhin katedraali, Christ Church, oli 1800-luvulla rapistumassa, kunnes viskintislaaja Henry Roe maksoi sen kunnostuksen yksin. Työt kestivät vuodesta 1871 vuoteen 1878. Entisessä synodisalissa toimii nykyään keskiajan Dublinista kertova museo Dublinia."
+- **Uusi:** "Dublinin vanhimmasta katedraalista, Christ Churchista, varastettiin maaliskuussa 2012 kaupungin suojeluspyhimyksen Laurence O'Toolen sydän, jota säilytettiin rautakalterein suljetussa rasiassa. Poliisi löysi sen kuusi vuotta myöhemmin Phoenix Parkista, ja marraskuussa 2018 sydän pantiin jälleen esille katedraalissa."
+- **Syy:** 1 (päällekkäisyys) ja 2 (hallintoa). Pyhän Patrickin katedraalin lyhyt kertoo saman tarinan (rapistunut katedraali, jonka rikas panimo-/tislaamosuvun mies kunnosti omilla rahoillaan); lisäksi "työt kestivät vuodesta X vuoteen Y" on hallintotietoa. Patrickin versio jätettiin, Christ Churchiin vaihdettiin sydänvarkauden tarina. Henry Roen lähde poistettu.
+- **Lähde:** https://en.wikipedia.org/wiki/Christ_Church_Cathedral,_Dublin ; https://www.irishpost.com/news/heart-dublins-patron-saint-laurence-otoole-back-display-2012-theft-161893
+
+### Guinness Storehouse — kenttä `lyhyt`
+- **Vanha:** "Panimomuseo Guinness Storehouse avattiin vuonna 2000, ja siitä on tullut Irlannin suosituin maksullinen nähtävyys. Arthur Guinness vuokrasi käyttämättömän panimon vuonna 1759 neljänkymmenenviiden punnan vuosivuokralla, mutta yhtiö osti tontin myöhemmin omakseen, joten sopimus raukesi."
+- **Uusi:** "Panimomuseo Guinness Storehousen panimo oli vähällä jäädä ilman vettä huhtikuussa 1775, kun kaupunki huomasi Arthur Guinnessin muuttaneen putkiaan ja päätti katkaista vesijohdon. Guinness kohtasi kaupungin miehet hakku kädessä ja uhkasi kaivaa oman kanavan. Kiista ratkesi vuonna 1785: Guinness alkoi maksaa vedestä vuokraa."
+- **Syy:** 1 ja 2. Vanha lyhyt kertoi samasta vuokrasopimuksesta kuin saman kohteen teksti (isoisän merkintä), ja avausvuosi + "suosituin maksullinen nähtävyys" on kävijätilastoa. Uusi: vesikiista ja hakku. Vivahde säilytetty: kaupunki puuttui asiaan, koska Guinness oli muuttanut putkiaan saadakseen lisää vettä.
+- **Lähde:** https://en.wikipedia.org/wiki/Arthur_Guinness
+
+### Kilmainhamin vankila — kenttä `lyhyt`
+- **Vanha:** "Kilmainhamin vankila on näytellyt elokuvissa englantilaista vankilaa, muun muassa elokuvissa Isän nimeen ja The Italian Job. Vapaaehtoiset aloittivat rapistuneen vankilan kunnostuksen vuonna 1960, ja työ päättyi vuonna 1971, kun kappelin alttari oli rakennettu uudelleen."
+- **Uusi:** "Kilmainhamin vankila on esittänyt elokuvissa englantilaista vankilaa, esimerkiksi elokuvassa Isän nimeen. Sisällissodan jälkeen vuonna 1923 Éamon de Valera oli koko länsisiiven ainoa vanki, ja hän pelasi tiettävästi käsipalloa vankilanjohtajan kanssa. Muurin yli lentäneet pallot päätyivät naapureille, jotka lahjoittivat ne myöhemmin museolle."
+- **Syy:** 1 ja 2. Tekstin viimeinen virke kertoo jo, että vapaaehtoiset kunnostivat vankilan museoksi; lyhyt toisti saman vuosilukuineen (hallintotietoa). Huom: harkitsin "de Valera oli vankilan viimeinen vanki" -väitettä (yleinen matkailusivuilla), mutta museon satavuotisartikkelin mukaan viimeinen vanki oli Ernie O'Malley, joten väitettä EI käytetty. "Tiettävästi", koska lähde sanoo "it seems".
+- **Lähde:** https://www.irishlegal.com/articles/kilmainham-gaol-museum-marks-centenary-of-last-prisoners
+
+### Spire — kenttä `lyhyt` (3. virke)
+- **Vanha:** "Suunnitelma valittiin vuonna 1998 järjestetyssä kilpailussa, jonka voitti brittiarkkitehti Ian Ritchien ehdotus."
+- **Uusi:** "Neulan piti valmistua vuosituhannen vaihteen juhliin, mutta yhden vastustajan valitus vei suunnitelman oikeuteen, eikä neula ehtinyt ajoissa."
+- **Syy:** 2 (suunnittelukilpailu ja arkkitehti on perustietoa, ei tarinaa). Suunnittelijasta on yhä Kysy-kysymys.
+- **Lähde:** https://en.wikipedia.org/wiki/Spire_of_Dublin
+
+### Phoenix Park — kenttä `teksti`
+- **Vanha:** "Puiston nimi ei viittaa feenikslintuun vaan iirin sanoihin fionn uisce, kirkas vesi."
+- **Uusi:** "Puiston nimen on usein väitetty tulevan iirin sanoista fionn uisce, kirkas vesi, mutta todellisuudessa se periytyy 1600-luvun alussa rakennetusta Phoenix-nimisestä kartanosta."
+- **Syy:** 3 (faktan vivahde, käänteinen): Wikipedian mukaan fionn uisce -selitys on 1800-luvun kansanetymologia ja nimi tulee Sir Edward Fisherin vuonna 1611 rakennuttamasta House of the Phoenix -kartanosta; logainm.ie: Fionnuisce-paikannimestä ei ole todisteita. Peurojen määrä (noin 600) tarkistettu puiston omalta sivulta (Wikipedia sanoo 400–450; jätetty virallisen lähteen mukaan).
+- **Lähde:** https://en.wikipedia.org/wiki/Phoenix_Park ; https://www.logainm.ie/en/themes/125 ; https://phoenixpark.ie/?p=362
+
+### St Stephen's Green — kenttä `teksti` (ja `puhe_teksti`)
+- **Vanha:** "…kapinalliset kaivoivat puistoon juoksuhautoja kreivitär Markieviczin valvonnassa. Kerrotaan, että kumpikin osapuoli suostui kahdesti päivässä tulitaukoon, jotta lampien sorsat ja joutsenet saatiin ruokittua."
+- **Uusi:** "…kapinalliset kaivoivat puistoon juoksuhautoja komentaja Michael Mallinin ja kreivitär Markieviczin johdolla. Kerrotaan, että ammunta keskeytettiin välillä, jotta puiston puutarhuri pääsi ruokkimaan lampien sorsat."
+- **Syy:** 3. Komentaja oli Michael Mallin, Markievicz hänen alaisensa; "kahdesti päivässä" ja "kumpikin osapuoli suostui" löytyvät vain yhdestä blogista, Wikipedia kertoo vain ammunnan tilapäisestä keskeytyksestä puutarhurin vuoksi. Säilytetty "Kerrotaan" (perimätietoa).
+- **Lähde:** https://en.wikipedia.org/wiki/St_Stephen%27s_Green
+
+### St Stephen's Green — kenttä `kysymykset`
+- **Vanha:** "Mitä Grafton Streetillä on nykyään?"
+- **Uusi:** "Miksi puistossa on sokeiden puutarha?"
+- **Syy:** 7 (kysymys koski eri paikkaa, ja vastaus vanhenee).
+- **Lähde:** https://en.wikipedia.org/wiki/St_Stephen%27s_Green
+
+### Trinity College — kenttä `teksti`
+- **Vanha:** "Samassa rakennuksessa säilytetään Kellsin kirjaa, keskiaikaista koristeltua evankeliumikirjaa, joka tuli yliopistolle vuonna 1661."
+- **Uusi:** "Yliopiston suurin aarre on Kellsin kirja, keskiaikainen koristeltu evankeliumikirja, joka tuli sen kokoelmiin vuonna 1661."
+- **Syy:** 5 (nykyaika): vanha kirjasto suljetaan remonttiin vuoden 2027 lopussa ja Kellsin kirja siirtyy Printing House -rakennukseen; äänitetty "samassa rakennuksessa" vanhenisi.
+- **Lähde:** https://www.tcd.ie/old-library-campaign/faq
+
+### Trinity College — kenttä `kysymykset`
+- **Vanha:** "Miksi vanhaa kirjastoa kunnostetaan nyt?"
+- **Uusi:** "Miksi katolinen kirkko kielsi opiskelun täällä?"
+- **Syy:** 7 (vanhenee remontin myötä). Katolisen kirkon kielto (vuoteen 1970) on tosi oletus.
+- **Lähde:** —
+
+### Muuta tarkistettua (ei muutosta)
+- Pilven epävarmuudet ratkaistu: sorsien tulitauko → korjattu yllä; kellotornin taikausko jää "uskotaan"-muotoon (opiskelijaperinne, ei faktaväite); linna "yli seitsemänsataa vuotta" (1204–1922) pitää.
+- Avaus: 39 sanaa, alkaa "Tervetuloa", ilmakuva (kattojen ja puistojen tilkkutäkki, Liffey) kunnossa.
+- Lyhyet luettu peräkkäin: muita päällekkäisyyksiä ei jäänyt (Patrickin Guinness-kunnostus ja Storehousen vesikiista ovat eri aiheita).
+- Tarkistin: 0 virhettä, 17 huomiota (sama määrä kuin ennen).
+
+## Edinburgh
+
+### Calton Hill — kenttä `lyhyt` (2. virke)
+- **Vanha:** "Ajan mittaan pylväsrivistä tuli yksi kaupungin rakastetuimmista maamerkeistä, ja kukkulalta näkyy koko vanhakaupunki linnasta palatsiin."
+- **Uusi:** "Suurimpia kiviä vedettiin rinnettä ylös kahdentoista hevosen ja seitsemänkymmenen miehen voimin, ja arkkitehti William Playfair kutsui monumenttia skottien ylpeydeksi ja köyhyydeksi."
+- **Syy:** 1 (päällekkäisyys): kierroksen ensimmäinen kohde Arthur's Seat kertoo lyhyessään saman näkymän ("koko vanhaankaupunkiin, linnasta Kuninkaallista mailia pitkin palatsille asti"). Arthur's Seatin versio jätettiin, Calton Hilliin vaihdettiin rakennustarina ja Playfairin ironinen lausahdus ("pride and poverty of us Scots").
+- **Lähde:** https://historic-uk.com/HistoryUK/HistoryofScotland/National-Monument-of-Scotland
+
+### St Gilesin katedraali — kenttä `lyhyt` (2. virke)
+- **Vanha:** "Sen tarkoin veistettyjen puisten penkkien ja vaakunoiden sekaan on kätketty pieni enkeli, joka soittaa säkkipilliä."
+- **Uusi:** "Sen tarkoin veistettyjen penkkien, vaakunoiden ja koristeiden sekaan on kätketty säkkipilliä soittavia enkeleitä."
+- **Syy:** 3 (vivahde): katedraalin oma sivu puhuu monikossa "angels playing bagpipes"; Atlas Obscuran mukaan enkeleitä on kolme, kaksi puusta ja yksi kivestä — "pieni puinen enkeli" yksikössä ei pidä. Lukumäärää ei mainita, koska vain yksi lähde antaa sen.
+- **Lähde:** https://www.stgilescathedral.org.uk/the-thistle-chapel ; https://assets.atlasobscura.com/places/st-giles-cathedral-thistle-chapel
+
+### Kuninkaallinen kasvitieteellinen puutarha (Royal Botanic Garden Edinburgh) — kenttä `kysymykset`
+- **Vanha:** "Miksi vanhat palmuhuoneet suljettiin kunnostukseen?"
+- **Uusi:** "Mitä vanhoissa palmuhuoneissa kasvaa?"
+- **Syy:** 5 ja 7 (nykyaika): palmuhuoneet avattiin uudelleen yleisölle perjantaina 2.10.2026 viiden vuoden Edinburgh Biomes -kunnostuksen jälkeen; kunnostusta koskeva kysymys olisi jo nyt vanhentunut. Teksti ("Britannian korkein perinteinen palmuhuone", 1858) on oikein eikä väitä mitään sulkemisesta — ei muutosta. Lähteen "ovat olleet suljettuina" -maininta päivitetty.
+- **Lähde:** https://www.rbge.org.uk/news/articles/historic-palm-houses-to-reopen-after-5-year-restoration/ ; https://www.rbge.org.uk/collections/living-collection/living-collection-at-the-royal-botanic-garden-edinburgh/glasshouses-history/
+
+### Kuninkaallinen kasvitieteellinen puutarha — `lahteet` (ei tekstimuutosta)
+- Pilven epävarmuus "puiden 12 m (jaloista muunnettu)" ratkaistu: RBGE:n arkiston mukaan McNab siirsi puita, "some over 40 feet high" (yli 12 m), joten "jopa kahdentoista metrin" on varovainen ja oikea. 12 hevosta ja kulkue vahvistettu RCPE:n sivulta. Scotsman-lähde ei auennut (403), siksi lisätty avatut lähteet.
+- **Lähde:** https://atom-2.rbge.org.uk/index.php/mcnab-william ; https://www.rcpe.ac.uk/heritage/botanics
+
+### Muuta tarkistettua (ei muutosta)
+- Lyhyet luettu peräkkäin (Arthur's Seat → Holyrood → Calton Hill → Royal Mile → St Giles → Greyfriars → linna → Scott): muuta toistoa ei jäänyt. Huom. Päätoimittajalle: linnan `teksti` (kello yhden tykki laivoille) ja Calton Hillin `teksti` (aikapallo laivoille kello yksi) kertovat rinnakkaisen asian; ne ovat Kerro lisää -tekstejä eivätkä lyhyitä, ja laitteet todella toimivat yhdessä, joten jätin ne. Calton Hillin uusi lyhyt ja kasvitieteellisen puutarhan teksti mainitsevat kumpikin "kahdentoista hevosen" — eri asioita, eri kerrostasoilla, jätetty.
+- Nykytila: Tattoo-katsomo on yhä joka kesä pystytettävä väliaikainen (2026); Scottin muistomerkki auki (180-vuotisjuhla 2026); Nelsonin muistomerkin aikapallo kunnostettiin ja nostettiin takaisin 28.5.2025 ja putoaa kello yksi (tarkkaa 2026-tilaa en saanut virallisesta lähteestä, mutta ei viitteitä pysähtymisestä); Dolly yhä esillä kansallismuseossa; Kellsin kirjan kaltaisia siirtoja ei Edinburghissa.
+- Faktat avattu: Jenny Geddes "tarinan mukaan" vastaa Wikipediaa ("Tradition attests"); "maailman presbyteeristen kirkkojen äitikirkko" vahvistettu.
+- Avaus: 37 sanaa, alkaa "Tervetuloa", ilmakuva (linna kalliolla, vanhakaupunki harjanteella) kunnossa.
+- Tarkistin: 0 virhettä, 14 huomiota (sama määrä kuin ennen).

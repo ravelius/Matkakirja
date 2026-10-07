@@ -9,7 +9,7 @@
    "kuvaus": "Irlannin vanhin yliopisto",
    "luokka": "rakennus",
    "koko_m": 400,
-   "teksti": "Dublinin yliopiston Trinity College näkyy ylhäältä harmaiden kivitalojen ympäröimien sisäpihojen ja nurmikenttien sarjana keskellä kaupunkia. Etupihan keskellä kohoaa kellotorni, jonka alta opiskelijat eivät kulje kellon soidessa, sillä silloin heidän uskotaan reputtavan kaikki tenttinsä. Kuningatar Elisabet ensimmäinen perusti yliopiston vuonna 1592. Vanhan kirjaston Pitkä sali on kuusikymmentäviisi metriä pitkä, ja sen tynnyriholvi rakennettiin vuonna 1860, kun kirjahyllyille tarvittiin lisää tilaa. Samassa rakennuksessa säilytetään Kellsin kirjaa, keskiaikaista koristeltua evankeliumikirjaa, joka tuli yliopistolle vuonna 1661.",
+   "teksti": "Dublinin yliopiston Trinity College näkyy ylhäältä harmaiden kivitalojen ympäröimien sisäpihojen ja nurmikenttien sarjana keskellä kaupunkia. Etupihan keskellä kohoaa kellotorni, jonka alta opiskelijat eivät kulje kellon soidessa, sillä silloin heidän uskotaan reputtavan kaikki tenttinsä. Kuningatar Elisabet ensimmäinen perusti yliopiston vuonna 1592. Vanhan kirjaston Pitkä sali on kuusikymmentäviisi metriä pitkä, ja sen tynnyriholvi rakennettiin vuonna 1860, kun kirjahyllyille tarvittiin lisää tilaa. Yliopiston suurin aarre on Kellsin kirja, keskiaikainen koristeltu evankeliumikirja, joka tuli sen kokoelmiin vuonna 1661.",
    "lyhyt": "Dublinin yliopiston Trinity Collegessa fyysikko Erwin Schrödinger piti helmikuussa 1943 kolme yleisöluentoa. Saliin mahtui sataviisikymmentä kuulijaa, mutta tulijoita oli neljäsataa, joten luennot pidettiin kahteen kertaan. Luennoista syntynyt kirja johdatti myöhemmin Watsonin ja Crickin perintöaineksen jäljille.",
    "syventava": "Miksi kellotornin alta ei kuljeta?",
    "kysymykset": [
@@ -17,7 +17,7 @@
     "Ketkä kuuluisat kirjailijat ovat opiskelleet täällä?",
     "Miksi kuningatar perusti yliopiston Dubliniin?",
     "Mitä Pitkän salin marmoririntakuvat esittävät?",
-    "Miksi vanhaa kirjastoa kunnostetaan nyt?"
+    "Miksi katolinen kirkko kielsi opiskelun täällä?"
    ],
    "isoisa": false,
    "lahteet": [
@@ -38,7 +38,7 @@
      "url": "https://en.wikipedia.org/wiki/The_Old_Library,_Trinity_College_Dublin"
     },
     {
-     "vaite": "Kellsin kirja on vanhassa kirjastossa ja tuli yliopistolle vuonna 1661.",
+     "vaite": "Kellsin kirja tuli yliopistolle vuonna 1661.",
      "url": "https://en.wikipedia.org/wiki/Library_of_Trinity_College_Dublin"
     },
     {
@@ -52,6 +52,10 @@
     {
      "vaite": "Fysiikan luentosaliin mahtui noin 150 kuulijaa, ja luennot toistettiin seuraavina maanantaina.",
      "url": "https://www.dias.ie/?p=639"
+    },
+    {
+     "vaite": "Kellsin kirja on esillä vanhassa kirjastossa vuoden 2027 loppuun ja siirtyy sen jälkeen Printing House -rakennukseen, joten teksti ei sido kirjaa rakennukseen.",
+     "url": "https://www.tcd.ie/old-library-campaign/faq"
     }
    ]
   },
@@ -62,7 +66,7 @@
    "luokka": "rakennus",
    "koko_m": 100,
    "teksti": "Panimomuseo Guinness Storehouse toimii seitsemänkerroksisessa panimon käymislaitoksessa, joka rakennettiin vuonna 1902. Talon keskellä on tuopin muotoinen lasinen valopiha, ja sen pohjalla on lattiaan upotettuna Arthur Guinnessin vuokrasopimus yhdeksäksituhanneksi vuodeksi. Isoisäsi kirjoitti vuonna 1873, että sellainen sopimus vaatii uskoa olueen tai janoon. Panimon portilla hän kysyi tynnyreitä kärryille vierittävältä mieheltä, loppuuko työ koskaan, mutta mies vain katsoi häntä pitkään ja vieritti seuraavan tynnyrin. Ylimmän kerroksen lasiseinäisestä baarista näkyy koko kaupunki.",
-   "lyhyt": "Panimomuseo Guinness Storehouse avattiin vuonna 2000, ja siitä on tullut Irlannin suosituin maksullinen nähtävyys. Arthur Guinness vuokrasi käyttämättömän panimon vuonna 1759 neljänkymmenenviiden punnan vuosivuokralla, mutta yhtiö osti tontin myöhemmin omakseen, joten sopimus raukesi.",
+   "lyhyt": "Panimomuseo Guinness Storehousen panimo oli vähällä jäädä ilman vettä huhtikuussa 1775, kun kaupunki huomasi Arthur Guinnessin muuttaneen putkiaan ja päätti katkaista vesijohdon. Guinness kohtasi kaupungin miehet hakku kädessä ja uhkasi kaivaa oman kanavan. Kiista ratkesi vuonna 1785: Guinness alkoi maksaa vedestä vuokraa.",
    "syventava": "Miksi vuokrasopimus raukesi?",
    "kysymykset": [
     "Miksi Guinness-olut on niin tummaa?",
@@ -90,12 +94,8 @@
      "url": "https://en.wikipedia.org/wiki/Guinness_Storehouse"
     },
     {
-     "vaite": "Museo avattiin vuonna 2000, ja se on Irlannin suosituin (eniten vierailtu) maksullinen nähtävyys.",
-     "url": "https://en.wikipedia.org/wiki/Guinness_Storehouse"
-    },
-    {
-     "vaite": "Arthur Guinness vuokrasi käyttämättömän panimon vuonna 1759 45 punnan vuosivuokralla; yhtiö osti tontin myöhemmin, ja sopimus raukesi.",
-     "url": "https://en.wikipedia.org/wiki/Guinness_Brewery"
+     "vaite": "Huhtikuussa 1775 kaupunki huomasi Guinnessin muuttaneen putkistoaan saadakseen lisää vettä ja päätti katkaista vedensaannin; Guinness kohtasi kaupungin hakun kanssa ja uhkasi kaivaa oman kanavan; 1785 hän suostui vuokraamaan veden kaupungilta kymmenen punnan vuosimaksulla.",
+     "url": "https://en.wikipedia.org/wiki/Arthur_Guinness"
     }
    ]
   },
@@ -238,7 +238,7 @@
    "luokka": "kirkko",
    "koko_m": 100,
    "teksti": "Dublinin vanhin katedraali, Christ Church, seisoo vanhan kaupungin mäellä, ja ylhäältä näkyy, kuinka sen länsipäästä kaartuu katettu kivisilta kadun yli entiseen synodisaliin. Viikinkikuningas Sigtrygg Silkkiparta perusti kirkon noin vuonna 1030, ja nykyinen kivikirkko aloitettiin normannien valloituksen jälkeen 1170-luvulla. Kirkon alla on Irlannin ja Britannian suurin krypta, jonka lasivitriinissä ovat kissan ja rotan muumiot: tarinan mukaan kissa ajoi rottaa takaa urkupilliin, ja kumpikin jäi sinne jumiin. James Joyce mainitsee parin romaanissaan Finnegans Wake.",
-   "lyhyt": "Dublinin vanhin katedraali, Christ Church, oli 1800-luvulla rapistumassa, kunnes viskintislaaja Henry Roe maksoi sen kunnostuksen yksin. Työt kestivät vuodesta 1871 vuoteen 1878. Entisessä synodisalissa toimii nykyään keskiajan Dublinista kertova museo Dublinia.",
+   "lyhyt": "Dublinin vanhimmasta katedraalista, Christ Churchista, varastettiin maaliskuussa 2012 kaupungin suojeluspyhimyksen Laurence O'Toolen sydän, jota säilytettiin rautakalterein suljetussa rasiassa. Poliisi löysi sen kuusi vuotta myöhemmin Phoenix Parkista, ja marraskuussa 2018 sydän pantiin jälleen esille katedraalissa.",
    "syventava": "Miten kissa ja rotta muumioituivat?",
    "kysymykset": [
     "Kuka oli viikinkikuningas Sigtrygg Silkkiparta?",
@@ -262,12 +262,16 @@
      "url": "https://www.atlasobscura.com/places/christ-church-cathedral-dublin"
     },
     {
-     "vaite": "Viskintislaaja Henry Roe maksoi kunnostuksen; työt alkoivat keväällä 1871 ja katedraali avattiin uudelleen 1.5.1878.",
-     "url": "https://www.archiseek.com/1871-design-for-restoration-of-christ-church-cathedral-synod-house-dublin/"
-    },
-    {
      "vaite": "Christ Churchissa on Irlannin ja Ison-Britannian suurin katedraalikrypta.",
      "url": "https://rsai.locloudhosting.net/items/show/28453?lang=en"
+    },
+    {
+     "vaite": "Lorcán Ua Tuathailin eli pyhän Laurence O'Toolen sydän varastettiin katedraalista 3.3.2012, ja poliisi löysi sen Phoenix Parkista huhtikuussa 2018.",
+     "url": "https://en.wikipedia.org/wiki/Christ_Church_Cathedral,_Dublin"
+    },
+    {
+     "vaite": "Dublinin suojeluspyhimyksen sydän varastettiin rautakalterein suljetusta rasiasta maaliskuussa 2012, palautettiin katedraaliin huhtikuussa 2018 ja pantiin esille 14.11.2018.",
+     "url": "https://www.irishpost.com/news/heart-dublins-patron-saint-laurence-otoole-back-display-2012-theft-161893"
     }
    ]
   },
@@ -279,7 +283,7 @@
    "koko_m": 120,
    "korkeus_m": 120,
    "teksti": "Teräksinen neulamonumentti Spire nousee O'Connell Streetin keskeltä satakaksikymmentä metriä korkeana, ja ylhäältä katsottuna se kutistuu ohueksi pisteeksi kadun keskellä. Juurestaan kolmen metrin levyinen neula kapenee huipulla viidentoista senttimetrin paksuiseksi. Pimeällä huippu loistaa sisältä, kun valodiodien valo pääsee ulos tuhansista pienistä rei'istä. Samalla paikalla seisoi amiraali Nelsonin pylväs, kunnes tasavaltalaiset räjäyttivät sen yöllä vuonna 1966. Neula valmistui vuonna 2003, ja dublinilaiset ovat keksineet sille liudan pilkkanimiä.",
-   "lyhyt": "Teräsneula Spire on koottu kahdeksasta ontosta ruostumattoman teräksen kartiosta. Poikkeuksellisen kovalla tuulella huippu heilahtelee yli metrin, ja huojuntaa vaimentaa kaksi neulan sisään asennettua massavaimenninta. Suunnitelma valittiin vuonna 1998 järjestetyssä kilpailussa, jonka voitti brittiarkkitehti Ian Ritchien ehdotus.",
+   "lyhyt": "Teräsneula Spire on koottu kahdeksasta ontosta ruostumattoman teräksen kartiosta. Poikkeuksellisen kovalla tuulella huippu heilahtelee yli metrin, ja huojuntaa vaimentaa kaksi neulan sisään asennettua massavaimenninta. Neulan piti valmistua vuosituhannen vaihteen juhliin, mutta yhden vastustajan valitus vei suunnitelman oikeuteen, eikä neula ehtinyt ajoissa.",
    "syventava": "Miksi Nelsonin pylväs räjäytettiin?",
    "kysymykset": [
     "Mitä pilkkanimiä dublinilaiset keksivät neulalle?",
@@ -321,6 +325,10 @@
     {
      "vaite": "Poikkeuksellisen kovalla tuulella huippu heilahtelee yli metrin; kaksi viritettyä massavaimenninta on viidennessä osassa alhaalta.",
      "url": "https://en.wikipedia.org/wiki/Spire_of_Dublin"
+    },
+    {
+     "vaite": "Vastustajan valituksen vuoksi suunnitelma vietiin High Courtiin, eikä monumentti valmistunut vuoden 2000 vuosituhatjuhliin.",
+     "url": "https://en.wikipedia.org/wiki/Spire_of_Dublin"
     }
    ]
   },
@@ -331,7 +339,7 @@
    "luokka": "rakennus",
    "koko_m": 150,
    "teksti": "Kilmainhamin vankila avattiin vuonna 1796, ja ylhäältä erottuvat sen harmaat siivet ja muurien ympäröimät pihat. Vuonna 1862 valmistunut itäsiipi rakennettiin niin, että vartija saattoi valvoa vankeja yhdestä keskipisteestä, mutta vangit eivät tienneet, milloin heitä katsottiin. Pääsiäiskapinan johtajista neljätoista ammuttiin toukokuussa 1916 vankilan kivenmurskauspihalla. Yksi heistä, Joseph Plunkett, vihittiin morsiamensa Grace Giffordin kanssa vankilan kappelissa vain muutamaa tuntia ennen teloitustaan. Vankila suljettiin vuonna 1924, ja myöhemmin vapaaehtoiset kunnostivat sen museoksi.",
-   "lyhyt": "Kilmainhamin vankila on näytellyt elokuvissa englantilaista vankilaa, muun muassa elokuvissa Isän nimeen ja The Italian Job. Vapaaehtoiset aloittivat rapistuneen vankilan kunnostuksen vuonna 1960, ja työ päättyi vuonna 1971, kun kappelin alttari oli rakennettu uudelleen.",
+   "lyhyt": "Kilmainhamin vankila on esittänyt elokuvissa englantilaista vankilaa, esimerkiksi elokuvassa Isän nimeen. Sisällissodan jälkeen vuonna 1923 Éamon de Valera oli koko länsisiiven ainoa vanki, ja hän pelasi tiettävästi käsipalloa vankilanjohtajan kanssa. Muurin yli lentäneet pallot päätyivät naapureille, jotka lahjoittivat ne myöhemmin museolle.",
    "syventava": "Missä Plunkett ja Gifford vihittiin?",
    "kysymykset": [
     "Keitä pääsiäiskapinan johtajat olivat?",
@@ -355,12 +363,16 @@
      "url": "https://en.wikipedia.org/wiki/Grace_Gifford"
     },
     {
-     "vaite": "Vankila oli hylättynä vuoteen 1960, jolloin vapaaehtoiset alkoivat kunnostaa sitä museoksi; työ valmistui 1971 kappelin alttarin jälleenrakennukseen.",
-     "url": "https://wikishire.co.uk/wiki/Kilmainham_Gaol"
-    },
-    {
      "vaite": "Vankilaa on käytetty elokuvissa Isän nimeen ja The Italian Job, joissa se esitti englantilaista vankilaa.",
      "url": "https://strollingguides.co.uk/books/dublin/places/kilmainham.php"
+    },
+    {
+     "vaite": "Éamon de Valera siirrettiin Kilmainhamiin vuonna 1923; hän oli eristyksissä länsisiiven ainoana asukkaana, pelasi ilmeisesti käsipalloa vankilanjohtaja William Corrin kanssa, ja naapurit keräsivät muurin yli lentäneet pallot ja lahjoittivat ne myöhemmin museolle.",
+     "url": "https://www.irishlegal.com/articles/kilmainham-gaol-museum-marks-centenary-of-last-prisoners"
+    },
+    {
+     "vaite": "Vapaaehtoiset aloittivat kunnostuksen toukokuussa 1960 (tekstin viimeinen virke).",
+     "url": "https://en.wikipedia.org/wiki/Kilmainham_Gaol"
     }
    ]
   },
@@ -490,7 +502,7 @@
    "kuvaus": "Muurin ympäröimä suurpuisto",
    "luokka": "puisto",
    "koko_m": 3000,
-   "teksti": "Dublinin suuri puisto Phoenix Park levittäytyy kaupungin länsilaidalla seitsemänsadanseitsemän hehtaarin laajuisena, ja sitä kiertää yksitoista kilometriä pitkä muuri. Ylhäältä erottuu Wellingtonin muistomerkki, kuusikymmentäkaksi metriä korkea obeliski, joka on Euroopan korkein. Puiston nimi ei viittaa feenikslintuun vaan iirin sanoihin fionn uisce, kirkas vesi. Ormonden herttua perusti puiston kuninkaalliseksi peura-aitaukseksi 1660-luvulla, ja nurmilla laiduntaa yhä noin kuudensadan kuusipeuran villi lauma. Puistossa ovat myös presidentin virka-asunto ja vuonna 1831 avattu eläintarha.",
+   "teksti": "Dublinin suuri puisto Phoenix Park levittäytyy kaupungin länsilaidalla seitsemänsadanseitsemän hehtaarin laajuisena, ja sitä kiertää yksitoista kilometriä pitkä muuri. Ylhäältä erottuu Wellingtonin muistomerkki, kuusikymmentäkaksi metriä korkea obeliski, joka on Euroopan korkein. Puiston nimen on usein väitetty tulevan iirin sanoista fionn uisce, kirkas vesi, mutta todellisuudessa se periytyy 1600-luvun alussa rakennetusta Phoenix-nimisestä kartanosta. Ormonden herttua perusti puiston kuninkaalliseksi peura-aitaukseksi 1660-luvulla, ja nurmilla laiduntaa yhä noin kuudensadan kuusipeuran villi lauma. Puistossa ovat myös presidentin virka-asunto ja vuonna 1831 avattu eläintarha.",
    "lyhyt": null,
    "syventava": "Mistä puiston peurat ovat peräisin?",
    "kysymykset": [
@@ -515,8 +527,8 @@
      "url": "https://en.wikipedia.org/wiki/Wellington_Monument,_Dublin"
     },
     {
-     "vaite": "Nimi tulee iirin sanoista fionn uisce, kirkas vesi.",
-     "url": "https://www.logainm.ie/en/themes/125"
+     "vaite": "Fionn uisce -selitys on 1800-luvun kansanetymologia; nimi tulee Sir Edward Fisherin vuonna 1611 rakennuttamasta House of the Phoenix -kartanosta.",
+     "url": "https://en.wikipedia.org/wiki/Phoenix_Park"
     },
     {
      "vaite": "Ormonden herttua perusti puiston kuninkaalliseksi peura-aitaukseksi 1662; noin 600 kuusipeuran villi lauma polveutuu osin 1660-luvun peuroista.",
@@ -525,6 +537,10 @@
     {
      "vaite": "Eläintarha avattiin yleisölle 1.9.1831.",
      "url": "https://en.wikipedia.org/wiki/Dublin_Zoo"
+    },
+    {
+     "vaite": "Fionnuisce-paikannimestä ei ole todisteita; nimi viittasi alun perin Fisherin noin 1611–1618 rakennuttamaan taloon.",
+     "url": "https://www.logainm.ie/en/themes/125"
     }
    ]
   },
@@ -534,8 +550,8 @@
    "kuvaus": "Keskustan viktoriaaninen puisto",
    "luokka": "puisto",
    "koko_m": 400,
-   "teksti": "Puisto St Stephen's Green on keskustan lähes yhdeksän hehtaarin suorakaiteen muotoinen viheralue, ja Grafton Streetin kulmassa sen pääsisäänkäyntinä on kivinen riemukaari. Lordi Ardilaun, Guinnessin panimosuvun jäsen, osti puiston, maisemoi sen ja avasi sen yleisölle vuonna 1880, ja hänen patsaansa istuu yhä puistossa. Pääsiäiskapinan aikana 1916 kapinalliset kaivoivat puistoon juoksuhautoja kreivitär Markieviczin valvonnassa. Kerrotaan, että kumpikin osapuoli suostui kahdesti päivässä tulitaukoon, jotta lampien sorsat ja joutsenet saatiin ruokittua.",
-   "puhe_teksti": "Puisto Saint Stephen's Green on keskustan lähes yhdeksän hehtaarin suorakaiteen muotoinen viheralue, ja Grafton Streetin kulmassa sen pääsisäänkäyntinä on kivinen riemukaari. Lordi Ardilaun, Guinnessin panimosuvun jäsen, osti puiston, maisemoi sen ja avasi sen yleisölle vuonna 1880, ja hänen patsaansa istuu yhä puistossa. Pääsiäiskapinan aikana 1916 kapinalliset kaivoivat puistoon juoksuhautoja kreivitär Markieviczin valvonnassa. Kerrotaan, että kumpikin osapuoli suostui kahdesti päivässä tulitaukoon, jotta lampien sorsat ja joutsenet saatiin ruokittua.",
+   "teksti": "Puisto St Stephen's Green on keskustan lähes yhdeksän hehtaarin suorakaiteen muotoinen viheralue, ja Grafton Streetin kulmassa sen pääsisäänkäyntinä on kivinen riemukaari. Lordi Ardilaun, Guinnessin panimosuvun jäsen, osti puiston, maisemoi sen ja avasi sen yleisölle vuonna 1880, ja hänen patsaansa istuu yhä puistossa. Pääsiäiskapinan aikana 1916 kapinalliset kaivoivat puistoon juoksuhautoja komentaja Michael Mallinin ja kreivitär Markieviczin johdolla. Kerrotaan, että ammunta keskeytettiin välillä, jotta puiston puutarhuri pääsi ruokkimaan lampien sorsat.",
+   "puhe_teksti": "Puisto Saint Stephen's Green on keskustan lähes yhdeksän hehtaarin suorakaiteen muotoinen viheralue, ja Grafton Streetin kulmassa sen pääsisäänkäyntinä on kivinen riemukaari. Lordi Ardilaun, Guinnessin panimosuvun jäsen, osti puiston, maisemoi sen ja avasi sen yleisölle vuonna 1880, ja hänen patsaansa istuu yhä puistossa. Pääsiäiskapinan aikana 1916 kapinalliset kaivoivat puistoon juoksuhautoja komentaja Michael Mallinin ja kreivitär Markieviczin johdolla. Kerrotaan, että ammunta keskeytettiin välillä, jotta puiston puutarhuri pääsi ruokkimaan lampien sorsat.",
    "lyhyt": null,
    "syventava": "Miksi taistelijat pitivät tulitaukoja?",
    "kysymykset": [
@@ -543,7 +559,7 @@
     "Ketä riemukaarella muistetaan?",
     "Miksi puisto oli aiemmin suljettu yleisöltä?",
     "Mitä patsaita puistossa on?",
-    "Mitä Grafton Streetillä on nykyään?"
+    "Miksi puistossa on sokeiden puutarha?"
    ],
    "isoisa": false,
    "lahteet": [
@@ -560,16 +576,12 @@
      "url": "https://en.wikipedia.org/wiki/Arthur_Guinness,_1st_Baron_Ardilaun"
     },
     {
-     "vaite": "Vuonna 1916 kapinalliset kaivoivat puistoon juoksuhautoja Markieviczin valvonnassa.",
-     "url": "https://maritaconlonmckenna.com/2016/03/27/st-stephens-green/"
-    },
-    {
-     "vaite": "Kerrotun mukaan osapuolet sopivat kahdesti päivässä tulitauosta, jotta lintuja voitiin ruokkia.",
-     "url": "https://maritaconlonmckenna.com/2016/03/27/st-stephens-green/"
-    },
-    {
      "vaite": "Puistossa on lordi Ardilaunin muistomerkki eli istuva patsas.",
      "url": "https://www.buildingsofireland.ie/buildings-search/building/50100266/lord-ardilaun-memorial-saint-stephens-green-dublin-2-dublin"
+    },
+    {
+     "vaite": "Kapinallisryhmä komentaja Michael Mallinin ja Constance Markieviczin johdolla asettui puistoon ja kaivoi puolustusasemia; ammunta keskeytettiin tilapäisesti, jotta puiston puutarhuri pääsi ruokkimaan sorsat; puistossa on sokeiden tuoksupuutarha.",
+     "url": "https://en.wikipedia.org/wiki/St_Stephen%27s_Green"
     }
    ]
   },
