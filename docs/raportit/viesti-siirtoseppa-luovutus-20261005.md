@@ -514,3 +514,6 @@ Edellinen luovutus on `viesti-siirtoseppa-luovutus-20261002.md` (5.10. osiot 02.
 - 18.31: Omistaja 18.7x: kädet saavat näkyä hetkittäin (hihat + hanskat, ei ihoa). Pyydetty LR:ltä kadet-v1 (työn alla, rakennus.json
   pelaaja.kadet). Kytkentä valmiina 2ca850a0 (historia-fp): PelaajaMalli.Kadet, KasiEle/KadetLeike, eleet toiminnoista. Kun malli tulee:
   Kasi-piste kahva_oikea-luuhun, tarkista kanto_idle/suojaus. 839/839, unity-tarkistus 0.
+- 18.54: LR v44k (a51f1b69: kilpilaatat esine:kilpilaatta-tott/-sture kiintea, holvimaalaukset, fogg asu v2) kytketty 0656eef6 (historia-fp):
+  Kiintea-esine (ei poimittavissa), esineet DioraamaValaistu-varjostimella (pistevalot + kynttilä, kohokuva). Juna164-ehdokas jää v44j:hin
+  (vanha koodi tekisi kilpilaatoista poimittavia). Kädet.glb tulee LR:n seuraavassa viennissä.
