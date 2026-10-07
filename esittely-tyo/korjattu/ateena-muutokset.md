@@ -40,3 +40,25 @@ Epävarmuudet: Likavittoksen mäntyjen istuttaja ja pääsiäisyön kulkue on j�
 
 ## Orkestroijan jälkikorjaus
 - Sýntagman aukio, teksti: alku "Sýntagman aukio" → "Syntagma-aukio" (suomen vakiintunut kirjoitusasu ilman aksenttia), jotta puhesynteesi ei äännä alkua vieraalla kielellä (tarkistimen ääntöhuomio).
+
+## Lyhyiden alaraja (jälkipassi)
+
+### Antiikin agora (29 → 31 sanaa)
+- Vanha: Antiikin agoran itälaidan pylväshalli, Attaloksen stoa, oli alun perin Pergamonin kuninkaan lahja kaupungille 100-luvulla ennen ajanlaskun alkua. Amerikkalaiset arkeologit rakensivat sen uudelleen 1950-luvulla, ja nykyään siinä toimii agoran museo.
+- Uusi: Antiikin agoran itälaidan pylväshalli, Attaloksen stoa, oli alun perin Pergamonin kuninkaan Attalos toisen lahja kaupungille 100-luvulla ennen ajanlaskun alkua. Amerikkalaiset arkeologit rakensivat sen uudelleen 1950-luvulla, ja nykyään siinä toimii agoran museo.
+- Lisätty lähde: Attaloksen stoa oli Pergamonin kuninkaan Attalos II:n lahja Ateenalle. — https://en.wikipedia.org/wiki/Stoa_of_Attalos
+
+### Erekhtheion (28 → 33 sanaa)
+- Vanha: Erekhtheionin karyatidit eivät ole toistensa kopioita, sillä kampaukset, vaatteiden laskokset ja polven asento vaihtelevat. Museossa viisi siskoa puhdistettiin 2010-luvulla laserilla mustasta noesta, ja vierailijat saivat seurata työtä suorana.
+- Uusi: Erekhtheionin karyatidit eivät ole toistensa kopioita, sillä kampaukset, vaatteiden laskokset ja polven asento vaihtelevat. Museossa viisi siskoa, jotka siirrettiin sisätiloihin vuonna 1979, puhdistettiin 2010-luvulla laserilla mustasta noesta, ja vierailijat saivat seurata työtä suorana.
+- Lisätty lähde: Karyatidit siirrettiin vuonna 1979 sisätiloihin vanhaan Akropolis-museoon ja korvattiin jäljennöksillä. — https://en.wikipedia.org/wiki/Caryatid
+
+### Akropolis-museo (25 → 33 sanaa)
+- Vanha: Akropolis-museo rakennettiin arkeologisen kaivausalueen päälle, ja lasilattioiden läpi näkyy muinaisen asuinalueen raunioita. Museossa on esillä myös viisi Erekhtheionin karyatidia, ja kuudennen jalusta on jätetty tyhjäksi.
+- Uusi: Akropolis-museo rakennettiin arkeologisen kaivausalueen päälle, ja lasilattioiden läpi näkyy muinaisen asuinalueen raunioita, joiden kaduilla on vuodesta 2019 voinut myös kävellä. Museossa on esillä myös viisi Erekhtheionin karyatidia, ja kuudennen jalusta on jätetty tyhjäksi.
+- Lisätty lähde: Museon alla oleva kaivausalue avattiin yleisölle kesäkuussa 2019, ja vierailijat voivat kävellä muinaisen asuinalueen läpi. — https://theacropolismuseum.gr/en/node/21519
+
+### Hefaistoksen temppeli (27 → 31 sanaa)
+- Vanha: Hefaistoksen temppelissä pidettiin viimeinen jumalanpalvelus vuonna 1833, kun juhlittiin kuningas Otton saapumista Kreikkaan. Kun Ateenasta tuli seuraavana vuonna maan pääkaupunki, asiasta kertova kuninkaallinen julistus luettiin juuri täällä.
+- Uusi: Hefaistoksen temppelissä pidettiin viimeinen jumalanpalvelus vuonna 1833, kun juhlittiin Baijerista tulleen kuningas Otton saapumista Kreikkaan. Kun Ateenasta tuli seuraavana vuonna Nafplionin sijaan maan pääkaupunki, asiasta kertova kuninkaallinen julistus luettiin juuri täällä.
+- Lisätty lähde: Ateenasta tuli Kreikan pääkaupunki Nafplionin sijaan vuonna 1834; kuningas Otto saapui Baijerista vuonna 1833. — https://www.greecetravel.com/nafplio/history.html

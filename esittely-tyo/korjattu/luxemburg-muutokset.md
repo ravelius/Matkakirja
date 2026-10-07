@@ -42,3 +42,10 @@ Tarkistin: 0 virhettä, 11 huomiota. Huomiot ovat "ei ala paikan nimellä" (lis�
 - Katedraalin kolmannen tornin korkeutta ei mainita, koska sitä ei saatu vahvistettua.
 - "Murheellisten lohduttaja" on Consolatrix Afflictorum -nimen suomennos. Se vastaa Loreton litanian suomenkielistä asua, mutta sitä ei tarkistettu verkosta.
 - Bockin tykit ja varuskunta: lähteiden mukaan nämä koskevat koko kasemattiverkkoa (1700-luku). Teksti sanoo "kallion uumeniin".
+
+## Lyhyiden alaraja (jälkipassi)
+
+### Adolphe-silta (28 → 32 sanaa)
+- Vanha: Luxemburgin Adolphe-sillan kannen alle ripustettiin vuonna 2018 erillinen pyörä- ja kävelysilta. Sataviisikymmentäneljä metriä pitkä kaista roikkuu ohuiden vaijerien varassa, joten pyöräilijät ylittävät laakson sillan kahden rinnakkaisen kivikaaren välissä.
+- Uusi: Luxemburgin Adolphe-sillan kannen alle ripustettiin vuonna 2018 erillinen pyörä- ja kävelysilta. Sataviisikymmentäneljä metriä pitkä ja neljä metriä leveä kaista roikkuu ohuiden vaijerien varassa, joten pyöräilijät ylittävät laakson sillan kahden rinnakkaisen kivikaaren välissä.
+- Lisätty lähde: Sillan alle ripustettu pyörä- ja kävelysilta on 154 metriä pitkä ja 4 metriä leveä. — https://world-architects.com/fr/projects/view/passerelle-pont-adolphe

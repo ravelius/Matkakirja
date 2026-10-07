@@ -59,3 +59,10 @@ Tarkistin: 0 virhettä, 13 huomiota (12 × "ei ala paikan nimellä" LISÄSÄÄNN
 
 ## Orkestroijan jälkikorjaus
 - Retiron puisto, lyhyt: toinen virke "pääsi puistoon … näyttämättä käyntikorttiaan, sillä … kuului jo kaupungille" oli syy-yhteystulkinta ja toisti tekstin sisältöä. Uusi muoto kertoo vain merkinnän sisällön: "Isoisäsi kirjoitti vuonna 1873, että kuningattaren entinen puisto kuului nyt kaupungille ja että tähän seuraan pääsi ilman esittelyä."
+
+## Lyhyiden alaraja (jälkipassi)
+
+### Almudenan katedraali (29 → 32 sanaa)
+- Vanha: Almudenan katedraalin vanhin osa on uusromaaninen krypta, joka avattiin jo vuonna 1911. Kirkkosali on sen sijaan uusgoottilainen, ja alttarin takaisen kaaren värikkäät maalaukset, Kiko Argüellon työt, herättivät valmistuttuaan kiistaa.
+- Uusi: Almudenan katedraalin vanhin osa on uusromaaninen krypta, joka avattiin jo vuonna 1911. Kirkkosali on sen sijaan uusgoottilainen, ja alttarin takaisen kaaren värikkäät maalaukset, Kiko Argüellon vuonna 2004 valmistuneet työt, herättivät valmistuttuaan kiistaa.
+- Lisätty lähde: Kiko Argüellon apsismaalaukset siunattiin huhtikuussa 2004, ja ne herättivät kiistaa. — https://www.liquisearch.com/almudena_cathedral

@@ -73,3 +73,10 @@ Kaikki kanonin pelin aineistoon (kaanon:pelin-aineisto) nojanneet lähteet on va
 - Länsi-Euroopan suurin ortodoksinen kirkko: en.wikipedian ja yleisen matkailutiedon varassa.
 - Temppeliaukion kupolin 22 km kuparilankaa ja Berglundin neuvo nojaavat Korea JoongAng Dailyyn (Wikipedia-otetta ei saatu).
 - "Suomen vilkkain rakennus" (asema): MyHelsingin "most visited building".
+
+## Lyhyiden alaraja (jälkipassi)
+
+### Uspenskin katedraali (28 → 33 sanaa)
+- Vanha: Uspenskin katedraalin suunnitteli venäläinen arkkitehti Aleksei Gornostajev, joka kuoli vuonna 1862 eikä nähnyt kirkkoa valmiina. Sisällä katse kiinnittyy runsaaseen ikonostaasiin, jossa evankelistat reunustavat ehtoollista ja taivaaseenastumista esittäviä kuvia.
+- Uusi: Uspenskin katedraalin suunnitteli venäläinen arkkitehti Aleksei Gornostajev, joka kuoli vuonna 1862 eikä nähnyt kirkkoa valmiina. Sisällä katse kiinnittyy runsaaseen ikonostaasiin, jonka maalasi Pavel Šiltsov ja jossa evankelistat reunustavat ehtoollista ja taivaaseenastumista esittäviä kuvia.
+- Lisätty lähde: Katedraalin ikonostaasin maalasi Pavel Šiltsov. — https://en.wikipedia.org/wiki/Uspenski_Cathedral

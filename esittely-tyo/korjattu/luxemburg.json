@@ -107,7 +107,7 @@
    "luokka": "silta",
    "koko_m": 153,
    "teksti": "Luxemburgin Adolphe-silta ylittää Pétrussen laakson suurella kivikaarella noin neljänkymmenenkahden metrin korkeudella. Sen suunnittelivat ranskalainen insinööri Paul Séjourné ja luxemburgilainen Albert Rodange, ja valmistuessaan vuonna 1903 sen lähes kahdeksankymmentäviisi metriä leveä pääkaari oli maailman suurin kivikaari. Silta sai nimensä suurherttua Adolphen mukaan, mutta luxemburgilaiset kutsuvat sitä yhä Uudeksi sillaksi, vaikka se on yli satavuotias. Nimi juontuu siitä, että laakson yli kulki jo vanhempi silta. Vuoden 2020 joulukuusta lähtien sillan yläkannella on kulkenut raitiovaunu.",
-   "lyhyt": "Luxemburgin Adolphe-sillan kannen alle ripustettiin vuonna 2018 erillinen pyörä- ja kävelysilta. Sataviisikymmentäneljä metriä pitkä kaista roikkuu ohuiden vaijerien varassa, joten pyöräilijät ylittävät laakson sillan kahden rinnakkaisen kivikaaren välissä.",
+   "lyhyt": "Luxemburgin Adolphe-sillan kannen alle ripustettiin vuonna 2018 erillinen pyörä- ja kävelysilta. Sataviisikymmentäneljä metriä pitkä ja neljä metriä leveä kaista roikkuu ohuiden vaijerien varassa, joten pyöräilijät ylittävät laakson sillan kahden rinnakkaisen kivikaaren välissä.",
    "syventava": "Mikä oli laakson vanhempi silta?",
    "kysymykset": [
     "Miksi siltaa kutsutaan Uudeksi sillaksi?",
@@ -141,6 +141,10 @@
     {
      "vaite": "Pyörätie riippuu teräsvaijerien varassa sillan kahden kaaririvin välisessä tilassa.",
      "url": "https://www.dezeen.com/2019/05/24/passerelle-pont-adolphe-cycle-path-luxembourg-christian-bauer/amp/"
+    },
+    {
+     "vaite": "Sillan alle ripustettu pyörä- ja kävelysilta on 154 metriä pitkä ja 4 metriä leveä.",
+     "url": "https://world-architects.com/fr/projects/view/passerelle-pont-adolphe"
     }
    ]
   },

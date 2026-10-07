@@ -244,7 +244,7 @@
    "luokka": "rakennus",
    "koko_m": 60,
    "teksti": "Konserttitalo Palau de la Música Catalana on puristunut vanhan kaupungin kapeiden katujen väliin, ja sen tiilijulkisivussa kukkivat mosaiikit ja veistokset. Arkkitehti Lluís Domènech i Montaner suunnitteli talon barcelonalaiselle Orfeó Català -kuorolle, ja se valmistui vuonna 1908. Salin katossa on valtava lasimaalausikkuna, jonka keskeltä riippuu alaspäin kullanhohtoinen kupu kuin aurinko. Se on Euroopan ainoa konserttisali, jota päivisin valaisee pelkkä luonnonvalo, ja vuonna 1997 siitä tuli maailman ainoa Unescon maailmanperintökohteeksi nimetty konserttisali.",
-   "lyhyt": "Konserttitalo Palau de la Música Catalanan lavan takaseinällä on kahdeksantoista mosaiikkineitoa, joista jokainen soittaa eri soitinta. Kattoikkunan lasimaalauksen suunnitteli Antoni Rigalt, ja saliin mahtuu noin kaksituhatta kaksisataa kuulijaa.",
+   "lyhyt": "Konserttitalo Palau de la Música Catalanan lavan takaseinällä on kahdeksantoista muusaa, joiden ylävartalot ovat veistoksia ja alavartalot mosaiikkia, ja jokainen soittaa eri soitinta. Kattoikkunan lasimaalauksen suunnitteli Antoni Rigalt, ja saliin mahtuu noin kaksituhatta kaksisataa kuulijaa.",
    "syventava": "Mikä on Orfeó Català -kuoro?",
    "kysymykset": [
     "Mitä julkisivun kulman veistosryhmä esittää?",
@@ -274,6 +274,10 @@
     {
      "vaite": "Euroopan ainoa konserttisali, jota päivisin valaisee kokonaan luonnonvalo; noin 2 200 paikkaa; 18 muusaa eri soittimineen.",
      "url": "https://worldheritagesite.org/community/ming_9734/palau-de-la-musica-catalana-hospital-de-sant-pau"
+    },
+    {
+     "vaite": "Lavan kahdeksantoista muusan ylävartalot veisti Eusebi Arnau ja alavartalojen mosaiikin teki Lluís Bru; kukin soittaa eri soitinta.",
+     "url": "https://www.fascinatingspain.com/articulo/monuments-of-spain/palau-de-la-musica-catalana/20201124113617071159.html"
     }
    ]
   },

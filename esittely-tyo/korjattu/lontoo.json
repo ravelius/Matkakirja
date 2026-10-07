@@ -107,7 +107,7 @@
    "luokka": "rakennus",
    "koko_m": 300,
    "teksti": "Buckinghamin palatsi on hallitsijan virka-asunto Lontoossa, ja ylhäältä sen takana avautuu kaupungin suurin yksityinen puutarha. Kuningatar Viktoria muutti palatsiin ensimmäisenä hallitsijana noustuaan valtaistuimelle vuonna 1837. Tutun itäjulkisivunsa palatsi sai vasta vuonna 1913, kun arkkitehti Aston Webb päällysti itäsiiven uudelleen kalkkikivellä edustan Viktorian muistomerkin taustaksi. Katolla liehuva lippu kertoo, onko kuningas kotona: kuninkaallinen lippu nousee salkoon, kun hän on palatsissa, ja muulloin salossa liehuu Britannian lippu.",
-   "lyhyt": "Buckinghamin palatsin puutarhan keskellä on 1800-luvulla kaivettu järvi, jonka vesi tuli aluksi Hyde Parkin Serpentine-järven ylivuotona. Joka kesä puutarhassa pidetään kolme kuninkaallista puutarhajuhlaa, ja kuhunkin kutsutaan noin kahdeksantuhatta vierasta.",
+   "lyhyt": "Buckinghamin palatsin puutarhan keskellä on 1800-luvulla kaivettu järvi, jonka vesi tuli aluksi Hyde Parkin Serpentine-järven ylivuotona. Järven saarella on viisi mehiläispesää. Joka kesä puutarhassa pidetään kolme kuninkaallista puutarhajuhlaa, ja kuhunkin kutsutaan noin kahdeksantuhatta vierasta.",
    "syventava": "Kuka asui palatsissa ennen kuninkaallisia?",
    "kysymykset": [
     "Kuka palatsin alun perin rakennutti?",
@@ -141,6 +141,10 @@
     {
      "vaite": "Kesäisin Buckinghamin palatsissa pidetään perinteisesti kolme puutarhajuhlaa, kussakin noin 8 000 vierasta.",
      "url": "https://royal.uk/garden-parties"
+    },
+    {
+     "vaite": "Puutarhan järven saarella on vuodesta 2008 ollut viisi mehiläispesää.",
+     "url": "https://americanbeejournal.mydigitalpublication.com/articles/the-queen-s-bees-beekeeping-at-buckingham-palace"
     }
    ]
   },
@@ -288,7 +292,7 @@
    "koko_m": 170,
    "korkeus_m": 111,
    "teksti": "Pyhän Paavalin katedraali eli St Paulin katedraali erottuu ylhäältä Cityn kattojen keskeltä suuren kupolinsa ansiosta. Christopher Wren rakensi sen vuoden 1666 suurpalon raunioille, ja kirkko valmistui vuonna 1710. Kupolin sisäkehää kiertää kuiskausgalleria, jossa seinän vierellä kuiskatut sanat kuuluvat selvästi kupolin toiselle puolelle. Joulukuun lopussa 1940 valokuvaaja Herbert Mason kuvasi pommitusten savusta kohoavan kupolin, ja kuvasta tuli Lontoon sitkeyden symboli. Wren on haudattu kryptaan, ja hänen muistolauseensa kehottaa etsimään hänen muistomerkkiään katsomalla ympärilleen.",
-   "lyhyt": "Pyhän Paavalin katedraalissa vihittiin heinäkuussa 1981 prinssi Charles ja lady Diana Spencer. Häitä seurasi televisiosta arviolta seitsemänsataaviisikymmentä miljoonaa ihmistä, ja Lontoon kaduilla kulkuetta oli katsomassa noin kuusisataatuhatta ihmistä.",
+   "lyhyt": "Pyhän Paavalin katedraalissa vihittiin heinäkuussa 1981 prinssi Charles ja lady Diana Spencer, jotka valitsivat sen tilavampana Westminster Abbeyn sijaan. Häitä seurasi televisiosta arviolta seitsemänsataaviisikymmentä miljoonaa ihmistä, ja Lontoon kaduilla kulkuetta oli katsomassa noin kuusisataatuhatta ihmistä.",
    "syventava": "Miksi kuiskaus kuuluu kupolin poikki?",
    "kysymykset": [
     "Millainen oli suurpalossa tuhoutunut vanha kirkko?",
@@ -325,6 +329,10 @@
     },
     {
      "vaite": "Prinssi Charles ja lady Diana vihittiin St Paulin katedraalissa 29.7.1981; arviolta 750 miljoonaa televisiokatsojaa, noin 600 000 ihmistä kaduilla.",
+     "url": "https://en.wikipedia.org/wiki/Wedding_of_Prince_Charles_and_Lady_Diana_Spencer"
+    },
+    {
+     "vaite": "Charles ja Diana valitsivat St Paulin katedraalin Westminster Abbeyn sijaan, koska siihen mahtui enemmän vieraita.",
      "url": "https://en.wikipedia.org/wiki/Wedding_of_Prince_Charles_and_Lady_Diana_Spencer"
     }
    ],

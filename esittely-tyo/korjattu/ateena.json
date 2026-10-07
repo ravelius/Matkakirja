@@ -90,7 +90,7 @@
    "luokka": "aukio",
    "koko_m": 300,
    "teksti": "Antiikin agora erottuu ylhäältä vihreänä, raunioiden ja puiden täplittämänä alueena Akropoliin luoteispuolella, ja sen itälaidalla kulkee pitkä kaksikerroksinen pylväshalli. Agora oli Ateenan tori ja kokouspaikka, jossa kauppa, politiikka ja oikeus kohtasivat. Täällä Sokrates kulki kojujen ja pylväikköjen lomassa ja esitti vastaantulijoille yhä vaikeampia kysymyksiä. Kansalaiset äänestivät myös liian vaikutusvaltaisten miesten karkottamisesta raapimalla nimen saviastian palaseen, ja torin museossa on palasia, joihin on kirjoitettu sotapäällikkö Themistokleen nimi.",
-   "lyhyt": "Antiikin agoran itälaidan pylväshalli, Attaloksen stoa, oli alun perin Pergamonin kuninkaan lahja kaupungille 100-luvulla ennen ajanlaskun alkua. Amerikkalaiset arkeologit rakensivat sen uudelleen 1950-luvulla, ja nykyään siinä toimii agoran museo.",
+   "lyhyt": "Antiikin agoran itälaidan pylväshalli, Attaloksen stoa, oli alun perin Pergamonin kuninkaan Attalos toisen lahja kaupungille 100-luvulla ennen ajanlaskun alkua. Amerikkalaiset arkeologit rakensivat sen uudelleen 1950-luvulla, ja nykyään siinä toimii agoran museo.",
    "syventava": "Mitä Sokrates kyseli torilla?",
    "kysymykset": [
     "Miksi ateenalaiset tuomitsivat Sokrateen kuolemaan?",
@@ -112,6 +112,10 @@
     {
      "vaite": "Attaloksen stoa on kaksikerroksinen pylväshalli agoran itälaidalla; Pergamonin kuningas Attalos II rakennutti sen 100-luvulla eaa.; American School of Classical Studies rakensi sen uudelleen 1953–1956, ja siinä toimii agoran museo.",
      "url": "https://agora.ascsa.net/id/agora/publication/agora%20picture%20book%202"
+    },
+    {
+     "vaite": "Attaloksen stoa oli Pergamonin kuninkaan Attalos II:n lahja Ateenalle.",
+     "url": "https://en.wikipedia.org/wiki/Stoa_of_Attalos"
     }
    ]
   },
@@ -202,7 +206,7 @@
    "luokka": "rakennus",
    "koko_m": 30,
    "teksti": "Erekhtheion on Akropoliin pohjoisreunan temppeli, jonka eteläistä kuistia kannattaa pylväiden sijaan kuusi marmorista neitoa, karyatidia. Paikalla seisovat patsaat ovat jäljennöksiä: alkuperäisistä viisi on Akropolis-museossa, ja kuudennen lordi Elgin vei Lontooseen 1800-luvun alussa. Tarun mukaan juuri tällä kalliolla Athene ja Poseidon kiistelivät siitä, kumman suojelukseen kaupunki kuuluisi. Poseidon iski kalliosta suolaisen lähteen ja Athene kasvatti oliivipuun, ja voiton vei Athene. Temppelin länsipuolella kasvaa yhä oliivipuu, joka istutettiin 1900-luvulla pyhän puun paikalle.",
-   "lyhyt": "Erekhtheionin karyatidit eivät ole toistensa kopioita, sillä kampaukset, vaatteiden laskokset ja polven asento vaihtelevat. Museossa viisi siskoa puhdistettiin 2010-luvulla laserilla mustasta noesta, ja vierailijat saivat seurata työtä suorana.",
+   "lyhyt": "Erekhtheionin karyatidit eivät ole toistensa kopioita, sillä kampaukset, vaatteiden laskokset ja polven asento vaihtelevat. Museossa viisi siskoa, jotka siirrettiin sisätiloihin vuonna 1979, puhdistettiin 2010-luvulla laserilla mustasta noesta, ja vierailijat saivat seurata työtä suorana.",
    "syventava": "Missä kuudes karyatidi on nyt?",
    "kysymykset": [
     "Kuka oli tarujen kuningas Erekhtheus?",
@@ -228,6 +232,10 @@
     {
      "vaite": "Nykyinen oliivipuu istutettiin vuonna 1952.",
      "url": "https://www.historyhit.com/locations/the-erechtheion"
+    },
+    {
+     "vaite": "Karyatidit siirrettiin vuonna 1979 sisätiloihin vanhaan Akropolis-museoon ja korvattiin jäljennöksillä.",
+     "url": "https://en.wikipedia.org/wiki/Caryatid"
     }
    ]
   },
@@ -238,7 +246,7 @@
    "luokka": "rakennus",
    "koko_m": 160,
    "teksti": "Akropolis-museo on Akropoliin etelärinteen juurella seisova lasinen ja betoninen rakennus, jonka ylin kerros on käännetty muuta taloa vinoon. Museo avattiin vuonna 2009, ja sen suunnitteli arkkitehti Bernard Tschumi. Ylimmän kerroksen lasiseinäinen Parthenon-sali on linjattu samaan suuntaan kuin itse temppeli, joka näkyy sen ikkunoista. Salissa kiertää Parthenonin veistetty friisi kokonaisuudessaan: Ateenassa säilyneiden laattojen välissä on valkoisia kipsivaloksia niistä osista, jotka lordi Elgin vei 1800-luvun alussa ja jotka ovat nykyään Lontoossa.",
-   "lyhyt": "Akropolis-museo rakennettiin arkeologisen kaivausalueen päälle, ja lasilattioiden läpi näkyy muinaisen asuinalueen raunioita. Museossa on esillä myös viisi Erekhtheionin karyatidia, ja kuudennen jalusta on jätetty tyhjäksi.",
+   "lyhyt": "Akropolis-museo rakennettiin arkeologisen kaivausalueen päälle, ja lasilattioiden läpi näkyy muinaisen asuinalueen raunioita, joiden kaduilla on vuodesta 2019 voinut myös kävellä. Museossa on esillä myös viisi Erekhtheionin karyatidia, ja kuudennen jalusta on jätetty tyhjäksi.",
    "syventava": "Miksi osa friisistä on valkoista?",
    "kysymykset": [
     "Miksi museon rakentaminen herätti kiistaa?",
@@ -264,6 +272,10 @@
     {
      "vaite": "Museossa on viisi karyatidia, ja kuudennen paikka on tyhjä.",
      "url": "https://resources.culturalheritage.org/conservators-converse/?p=11119"
+    },
+    {
+     "vaite": "Museon alla oleva kaivausalue avattiin yleisölle kesäkuussa 2019, ja vierailijat voivat kävellä muinaisen asuinalueen läpi.",
+     "url": "https://theacropolismuseum.gr/en/node/21519"
     }
    ]
   },
@@ -274,7 +286,7 @@
    "luokka": "rakennus",
    "koko_m": 40,
    "teksti": "Hefaistoksen temppeli seisoo agoran länsilaidalla matalan kukkulan päällä, ja ylhäältä katsottuna se näyttää yhä kokonaiselta temppeliltä. Se on Kreikan parhaiten säilynyt doorilainen temppeli, ja sen rakentaminen aloitettiin vuonna 449 ennen ajanlaskun alkua tulen ja sepäntaidon jumalan kunniaksi. Rakennus säilyi, koska se toimi kirkkona 600-luvulta vuoteen 1834. Ateenalaiset kutsuivat sitä pitkään Theseioniksi, sillä sen kiviveistokset kuvaavat sankari Theseuksen urotöitä ja hänen uskottiin olevan haudattu sinne. Nimi elää yhä läheisen Thission-kaupunginosan nimessä.",
-   "lyhyt": "Hefaistoksen temppelissä pidettiin viimeinen jumalanpalvelus vuonna 1833, kun juhlittiin kuningas Otton saapumista Kreikkaan. Kun Ateenasta tuli seuraavana vuonna maan pääkaupunki, asiasta kertova kuninkaallinen julistus luettiin juuri täällä.",
+   "lyhyt": "Hefaistoksen temppelissä pidettiin viimeinen jumalanpalvelus vuonna 1833, kun juhlittiin Baijerista tulleen kuningas Otton saapumista Kreikkaan. Kun Ateenasta tuli seuraavana vuonna Nafplionin sijaan maan pääkaupunki, asiasta kertova kuninkaallinen julistus luettiin juuri täällä.",
    "syventava": "Miksi temppeliä kutsuttiin Theseioniksi?",
    "kysymykset": [
     "Millainen jumala Hefaistos oli?",
@@ -300,6 +312,10 @@
     {
      "vaite": "Temppeli tunnetaan myös nimellä Thission, ja lähistön kaupunginosa ja metroasema ovat Thissio.",
      "url": "https://athensattica.com/point/temple-of-hephaestus/"
+    },
+    {
+     "vaite": "Ateenasta tuli Kreikan pääkaupunki Nafplionin sijaan vuonna 1834; kuningas Otto saapui Baijerista vuonna 1833.",
+     "url": "https://www.greecetravel.com/nafplio/history.html"
     }
    ]
   },

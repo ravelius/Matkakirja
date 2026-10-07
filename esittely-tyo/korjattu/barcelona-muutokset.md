@@ -42,3 +42,10 @@ Muutettu 8 kysymystä:
 - Torre Glòries: "Miksi tornin ikkunat ovat epäsäännöllisesti?" → "…on sijoiteltu epäsäännöllisesti?" (vajaa lause); "Mitä lempinimiä barcelonalaiset ovat keksineet?" → "…ovat antaneet tornille?" (puuttuva kohde); "Kuka tornissa työskentelee nykyään?" → "Kuka tornin omistaa nykyään?" (vuokralaistilanne muuttui 2025, Meta-sisällönvalvojien keskus supistui; omistajakysymys on vakaampi).
 
 Epävarmuudet: La Rambla "Miten Ramblaa parhaillaan uudistetaan?" vanhenee, kun työt valmistuvat (arvio 2027). Lepanton Kristuksen vääntyminen on legenda.
+
+## Lyhyiden alaraja (jälkipassi)
+
+### Palau de la Música Catalana (28 → 35 sanaa)
+- Vanha: Konserttitalo Palau de la Música Catalanan lavan takaseinällä on kahdeksantoista mosaiikkineitoa, joista jokainen soittaa eri soitinta. Kattoikkunan lasimaalauksen suunnitteli Antoni Rigalt, ja saliin mahtuu noin kaksituhatta kaksisataa kuulijaa.
+- Uusi: Konserttitalo Palau de la Música Catalanan lavan takaseinällä on kahdeksantoista muusaa, joiden ylävartalot ovat veistoksia ja alavartalot mosaiikkia, ja jokainen soittaa eri soitinta. Kattoikkunan lasimaalauksen suunnitteli Antoni Rigalt, ja saliin mahtuu noin kaksituhatta kaksisataa kuulijaa.
+- Lisätty lähde: Lavan kahdeksantoista muusan ylävartalot veisti Eusebi Arnau ja alavartalojen mosaiikin teki Lluís Bru; kukin soittaa eri soitinta. — https://www.fascinatingspain.com/articulo/monuments-of-spain/palau-de-la-musica-catalana/20201124113617071159.html

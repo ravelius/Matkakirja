@@ -111,7 +111,7 @@
    "luokka": "kirkko",
    "koko_m": 70,
    "teksti": "Uspenskin katedraali kohoaa Katajanokan kalliolla punatiilisenä, ja sen katolla kimaltaa kolmetoista kullattua sipulikupolia, jotka kuvaavat Kristusta ja kahtatoista apostolia. Tiilet tuotiin proomuilla Ahvenanmaalta Bomarsundin linnoituksesta, joka hävitettiin Krimin sodassa, ja niitä kului seitsemänsataatuhatta. Kirkko vihittiin vuonna 1868, ja se on Länsi-Euroopan suurin ortodoksinen kirkko. Vuonna 2010 kirkosta varastettiin ihmeitätekevänä pidetty Jumalanäidin ikoni. Seuraavana talvena vangittu varas kertoi kätköpaikan, ja Turussa maahan kaivettuna ollut ikoni korjattiin ja palautettiin kirkkoon.",
-   "lyhyt": "Uspenskin katedraalin suunnitteli venäläinen arkkitehti Aleksei Gornostajev, joka kuoli vuonna 1862 eikä nähnyt kirkkoa valmiina. Sisällä katse kiinnittyy runsaaseen ikonostaasiin, jossa evankelistat reunustavat ehtoollista ja taivaaseenastumista esittäviä kuvia.",
+   "lyhyt": "Uspenskin katedraalin suunnitteli venäläinen arkkitehti Aleksei Gornostajev, joka kuoli vuonna 1862 eikä nähnyt kirkkoa valmiina. Sisällä katse kiinnittyy runsaaseen ikonostaasiin, jonka maalasi Pavel Šiltsov ja jossa evankelistat reunustavat ehtoollista ja taivaaseenastumista esittäviä kuvia.",
    "syventava": "Mistä katedraalin tiilet tuotiin?",
    "kysymykset": [
     "Mistä katedraalin punaiset tiilet tuotiin?",
@@ -149,6 +149,10 @@
     {
      "vaite": "Ikonostaasissa evankelistat reunustavat ehtoollista ja taivaaseenastumista esittäviä kuvia.",
      "url": "https://www.lonelyplanet.com/points-of-interest/uspenski-cathedral/1185226"
+    },
+    {
+     "vaite": "Katedraalin ikonostaasin maalasi Pavel Šiltsov.",
+     "url": "https://en.wikipedia.org/wiki/Uspenski_Cathedral"
     }
    ]
   },

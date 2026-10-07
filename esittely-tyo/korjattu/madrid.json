@@ -299,7 +299,7 @@
    "koko_m": 105,
    "korkeus_m": 73,
    "teksti": "Almudenan katedraali seisoo kuninkaanlinnaa vastapäätä, ja sen vaalea julkisivu ja kupoli on sovitettu linnan uusklassiseen tyyliin. Kirkko on poikkeuksellisesti suunnattu pohjoisesta etelään, jotta pääjulkisivu katsoisi linnaa kohti. Rakentaminen alkoi vuonna 1883, mutta valmista tuli vasta yli sata vuotta myöhemmin, ja paavi Johannes Paavali toinen vihki katedraalin vuonna 1993. Nimi tulee Neitsyt Marian kuvasta, joka legendan mukaan kätkettiin kaupunginmuuriin ja löytyi, kun muurin osa sortui vuonna 1085. Vuonna 2004 kirkossa vihittiin kruununprinssi Felipe ja Letizia Ortiz, nykyinen kuningaspari.",
-   "lyhyt": "Almudenan katedraalin vanhin osa on uusromaaninen krypta, joka avattiin jo vuonna 1911. Kirkkosali on sen sijaan uusgoottilainen, ja alttarin takaisen kaaren värikkäät maalaukset, Kiko Argüellon työt, herättivät valmistuttuaan kiistaa.",
+   "lyhyt": "Almudenan katedraalin vanhin osa on uusromaaninen krypta, joka avattiin jo vuonna 1911. Kirkkosali on sen sijaan uusgoottilainen, ja alttarin takaisen kaaren värikkäät maalaukset, Kiko Argüellon vuonna 2004 valmistuneet työt, herättivät valmistuttuaan kiistaa.",
    "syventava": "Miksi rakentaminen kesti yli sata vuotta?",
    "kysymykset": [
     "Miksi Madrid sai oman katedraalin näin myöhään?",
@@ -333,6 +333,10 @@
     {
      "vaite": "Apsidin maalaukset teki Kiko Argüello; valinta herätti kiistaa.",
      "url": "https://www.thegeographicalcure.com/post/guide-to-almudena-cathedral"
+    },
+    {
+     "vaite": "Kiko Argüellon apsismaalaukset siunattiin huhtikuussa 2004, ja ne herättivät kiistaa.",
+     "url": "https://www.liquisearch.com/almudena_cathedral"
     }
    ]
   },

@@ -30,3 +30,15 @@ Tarkistin: 0 virhettä, 16 huomiota. Niistä 15 on "ei ala paikan nimellä" (LIS
 - Westminster Hallin vuosi 1097 perustuu parliament.uk-pdf:ään (Wikipedia: 1000-luku).
 - Tate Modernin piippu: lähteet antavat kupolille 111–114 m, mutta piippu on joka tapauksessa matalampi.
 - Kensingtonin palatsin kysymys "Kuka kuninkaallisista asuu palatsissa nyt?" pitää, koska palatsissa asuu yhä kuninkaallisia (esim. Gloucesterit).
+
+## Lyhyiden alaraja (jälkipassi)
+
+### Buckinghamin palatsi (29 → 34 sanaa)
+- Vanha: Buckinghamin palatsin puutarhan keskellä on 1800-luvulla kaivettu järvi, jonka vesi tuli aluksi Hyde Parkin Serpentine-järven ylivuotona. Joka kesä puutarhassa pidetään kolme kuninkaallista puutarhajuhlaa, ja kuhunkin kutsutaan noin kahdeksantuhatta vierasta.
+- Uusi: Buckinghamin palatsin puutarhan keskellä on 1800-luvulla kaivettu järvi, jonka vesi tuli aluksi Hyde Parkin Serpentine-järven ylivuotona. Järven saarella on viisi mehiläispesää. Joka kesä puutarhassa pidetään kolme kuninkaallista puutarhajuhlaa, ja kuhunkin kutsutaan noin kahdeksantuhatta vierasta.
+- Lisätty lähde: Puutarhan järven saarella on vuodesta 2008 ollut viisi mehiläispesää. — https://americanbeejournal.mydigitalpublication.com/articles/the-queen-s-bees-beekeeping-at-buckingham-palace
+
+### St Paulin katedraali (28 → 35 sanaa)
+- Vanha: Pyhän Paavalin katedraalissa vihittiin heinäkuussa 1981 prinssi Charles ja lady Diana Spencer. Häitä seurasi televisiosta arviolta seitsemänsataaviisikymmentä miljoonaa ihmistä, ja Lontoon kaduilla kulkuetta oli katsomassa noin kuusisataatuhatta ihmistä.
+- Uusi: Pyhän Paavalin katedraalissa vihittiin heinäkuussa 1981 prinssi Charles ja lady Diana Spencer, jotka valitsivat sen tilavampana Westminster Abbeyn sijaan. Häitä seurasi televisiosta arviolta seitsemänsataaviisikymmentä miljoonaa ihmistä, ja Lontoon kaduilla kulkuetta oli katsomassa noin kuusisataatuhatta ihmistä.
+- Lisätty lähde: Charles ja Diana valitsivat St Paulin katedraalin Westminster Abbeyn sijaan, koska siihen mahtui enemmän vieraita. — https://en.wikipedia.org/wiki/Wedding_of_Prince_Charles_and_Lady_Diana_Spencer
