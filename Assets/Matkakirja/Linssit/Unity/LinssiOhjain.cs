@@ -178,6 +178,16 @@ namespace Matkakirja.Natiivi
             PlayerPrefs.Save();
         }
 
+        /// <summary>Kehittäjävalikko "Olavinlinna – pelattava pala (kokeilu)" (Päätoimittaja 7.10.): avaa Olavinlinnan ja käynnistää
+        /// historiamoottorin E1:n (venesaapuminen → laituri → vapaa kävely, vartijat). Omistaja pelaa TF:ssä kehittäjäkoodilla.</summary>
+        public static void AvaaPelattavaPala()
+        {
+            var o = Instanssi; if (o == null) return;
+            Matkakirja.Natiivi.DioraamaSovitin.PelattavaPalaPyydetty = true;
+            if (!AineistoValmis && o.rekisteri.Kaikki.All(l => l.Tiedot.Id != "poikkileikkaus")) o.StartCoroutine(o.ValitseKunValmis("poikkileikkaus"));
+            else o.rekisteri.Valitse("poikkileikkaus");
+        }
+
         public static bool ValmiitLinssitAuki => Linssirekisteri.Valmiit.Count > 0;
 
         /// <summary>

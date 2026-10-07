@@ -378,6 +378,13 @@ namespace Matkakirja.Natiivi
             // Cinemachine (5.10.2026, DioraamaCinemachine): lepokamerat + brainin blendit korvaavat jousen askeleen; jousesta jää
             // jatkuvan orbitin vaihe. "poikki cinemachine 0" palauttaa vanhan jousipolun A/B-vertailuun.
             // Historiamoottorin kävelytila: pelaajan olan yli -kamera ohittaa lepokamerat, pakotetun kameran ja jousen (V1 7.10.).
+            // Kehittäjävalikon "Olavinlinna – pelattava pala (kokeilu)" (Päätoimittaja 7.10. 16.0x): E1 heti, kun rakennus on ladattu.
+            if (PelattavaPalaPyydetty && rakennus != null && nayttamo != null && cm != null && SeikkailuVene.Aktiivinen == null && SeikkailuPelaaja.Aktiivinen == null)
+            {
+                PelattavaPalaPyydetty = false; pelattavaPala = true;
+                o.StartCoroutine(VenePaalle(VeneKestoS));
+                o.Kirjaa("seikkailu: pelattava pala käynnistyy");
+            }
             var pelaaja = cm != null ? SeikkailuPelaaja.Aktiivinen : null;
             var vene = cm != null ? SeikkailuVene.Aktiivinen : null;
             // V2: vene etenee aina (myös kun pelaaja on jo laiturilla: vene jää kiinnitettynä); perillä pelaaja laiturille.
@@ -473,6 +480,9 @@ namespace Matkakirja.Natiivi
             timeline.Tuhoa(); // ennen aanet.Sulje: vanhan graafin klipit eivät enää koske kertojaan
             kelloSiirto = 0;
             kuoriOdotusAlku = -1f; SaapumisOdotus = false; RakennusLatautuu = false; LatausVirhe = null; // näyttämö (ja sen odotuspiilotus) tuhoutuu alla
+            // Historiamoottori: seikkailu pois (näyttämön lapset tuhoutuvat; globaalit kuoren leikkaukset ja kävelydata nollataan).
+            SeikkailuVartijat.Poista(); SeikkailuVene.Poista(); SeikkailuPelaaja.Poista(); SeikkailuRepliikit.Poista(); SeikkailuKavely.Pura();
+            cm?.SeikkailuPois(); PelattavaPalaPyydetty = false; pelattavaPala = false;
             rakennus3D?.Tyhjenna(); rakennus3D = null;
             hahmot3D?.Tyhjenna(); hahmot3D = null;
             nayttamo?.Tuhoa(); nayttamo = null;
@@ -841,6 +851,9 @@ namespace Matkakirja.Natiivi
         // aloituspaikkaan: merkki "ovi:<tid>-alku"/osa tid tai tilan kamerakohde, ja pudotus lähimmälle törmäyspinnalle.
         static string kavelyKehitysJuuri;
         string pelaajaKameraTapa;
+        /// <summary>Kehittäjävalikon pelattava pala (LinssiOhjain.AvaaPelattavaPala): käynnistyy, kun Olavinlinna on ladattu.</summary>
+        public static bool PelattavaPalaPyydetty;
+        bool pelattavaPala;
         bool veneLaituriin; int veneRepliikki;
         const double VeneSumuM = 120, VeneKestoS = 50;
         float himmennysAsti = -1f;
@@ -955,6 +968,7 @@ namespace Matkakirja.Natiivi
             if (Physics.Raycast(alku + Vector3.up * 2f, Vector3.down, out var osuma, 30f, 1 << DioraamaNayttamo.Kerros)) alku = osuma.point + Vector3.up * 0.05f;
             else o.Kirjaa($"seikkailu: nousupaikan alla ei törmäyspintaa ({alku}) — laituri puuttuu törmäyksestä?");
             LisaaPelaajahahmo(SeikkailuPelaaja.Luo(nayttamo.transform, alku, yaw, DioraamaNayttamo.Kerros));
+            if (pelattavaPala) o.StartCoroutine(VartijatPaalle());   // pelattavassa palassa vartijat partioon heti laiturille noustessa
             o.Kirjaa($"seikkailu: vene perillä, pelaaja laiturilla ({alku}, yaw {yaw:F0}, {(nm != null ? "nousu:laituri" : "laiturin kohde")})");
         }
 
