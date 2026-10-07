@@ -118,3 +118,8 @@ Päätoimittaja = "PÄÄTOIMITTAJA (Opus, max)".
   yksityiskohdat Pariisi/Praha/Wien/Rooma v4/Lontoo/Kööpenhamina), #4160/#4166 Sisältökirjurin luettelot. Viennit: Olavinlinnan E3-äänet,
   tietokerros, ilmapallon kori (glb), opas-esittely-aaneton (31), opas-aaniajat.
 - Merge-odotuksessa vaadi `statusCheckRollup|length == 2` ja kaikki COMPLETED + SUCCESS (keskeneräinen = tyhjä conclusion).
+- **21.3x TF 162 PIDÄTETTY** (Päätoimittaja): omistaja katsoo iPad-vaakakuvat; LS1 korjaa yksityiskohtakuvien esilatauksen →
+  Natiiviseppä kääntää 162:n uudelleen → kuva 2 → PT kuittaa → TF (~22.45). Muutosloki #4171 mergetty (ce50afe3).
+  **Varalaukaisu**: setsid `julkaisija-tyokalut/tf162-odota-lupa.sh` odottaa tiedostoa `tf162-lupa` (BUILD 162 täysi SHA) ja
+  ajaa `tf-kaynnista.sh 162 <sha> ce50afe3…`; `tf162-kaynnistetty` estää tuplan. Tarkista `tf162-odota-lupa.log` ja `tf162-ketju.log`.
+  Jos TF on jo käynnissä, älä käynnistä uudelleen. #4168 merge + Pöllö vasta TF 162 testaajilla.
