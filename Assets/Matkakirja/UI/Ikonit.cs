@@ -83,7 +83,7 @@ namespace Matkakirja.Natiivi
         /// <summary>Avoin kämmen (poimi, käytä, avaa, aseta, laske …): neljä sormea ja peukalo.</summary>
         public const string Kasi = "<path d=\"M8 15.5V5.5M11 12V3.8M14 12V4.5\"/><path d=\"M17 7v7.5a6.5 6.5 0 0 1-6.5 6.5h-.6a5.5 5.5 0 0 1-4.3-2.1l-3-3.8a1.4 1.4 0 0 1 2.1-1.8L8 15.5\"/>";
         /// <summary>Heittorata nuolenkärjellä (heitä): lähtöpiste vasemmalla alhaalla, kaari ja kärki oikealla.</summary>
-        public const string Heittokaari = "<circle class=\"taytto\" cx=\"4\" cy=\"19\" r=\"1.3\"/><path d=\"M5.2 17.4Q10 3.5 20 15\"/><path d=\"M19.6 10 20 15l-4.8-1.3\"/>";
+        public const string Heittokaari = "<circle class=\"taytto\" cx=\"3.4\" cy=\"19.8\" r=\"1.5\"/><path d=\"M4.4 18.3Q9.5 1 21 16\"/><path d=\"M20.6 10 21 16l-5.8-1.7\"/>";
         /// <summary>Kynttilänliekki (sytytä, puhalla, sammuta): liekki, sisäliekki ja sydänlanka.</summary>
         public const string Liekki = "<path d=\"M12 3c-1 3-5 6.5-5 10.5a5 5 0 0 0 10 0C17 9.5 13 6 12 3z\"/><path d=\"M12 12.5c-.8 1.2-1.8 2.1-1.8 3.2a1.8 1.8 0 0 0 3.6 0c0-1.1-1-2-1.8-3.2z\"/><path d=\"M12 18.5V21\"/>";
 
