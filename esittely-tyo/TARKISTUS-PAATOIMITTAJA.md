@@ -2291,6 +2291,111 @@ Muut tarkistetut: avaus (36 sanaa, ilmakuva kannaksesta ja koskesta, Hämeensill
 - Isoisä: vain basilikan tekstissä, merkinnän sisällöllä. OK.
 - Tarkistin: `Venetsia: 14 kohdetta, 0 virhettä, 9 huomiota` (sama määrä kuin ennen).
 
+## Vilna
+
+### Vilnan vanhakaupunki — kenttä `lyhyt`
+- **Vanha:** "Vilnan vanhassakaupungissa on seitsemänkymmentäneljä korttelia, seitsemänkymmentä katua ja kujaa sekä lähes tuhat viisisataa rakennusta. Sitä pidetään Alppien pohjoispuolen suurimpana ja itäisimpänä barokkikaupunkina. Kaupunkia ympäröi aikoinaan muuri, jonka yhdeksästä portista vain yksi on yhä pystyssä."
+- **Uusi:** "Vilnan vanhassakaupungissa seisoi yli kolmesataa vuotta Suuri synagoga, juutalaisen Vilnan sydän. Natsit tuhosivat sen sodassa, ja neuvostovalta purki rauniot ja rakensi paikalle päiväkodin ja koulun. Viime vuosina arkeologit ovat kaivaneet maan alta esiin rukoussalin lattian ja barokkityylisen lukukorokkeen."
+- **Syy:** Tyyppi 2: korttelit, kadut ja rakennusmäärät ovat tilastoa. Tyyppi 1: "yhdeksästä portista vain yksi on pystyssä" toisti Aamuportin tekstin (Aamuportti on kierroksella). Tyyppi 3: superlatiivi "Alppien pohjoispuolen suurin barokkikaupunki" ei löytynyt avatusta Wikipediasta. Wikipedian nykyversio sanoo "Itä- ja Keski-Euroopan suurin barokkivanhakaupunki". Uusi tarina tulee pelin aineistosta (Suuri synagoga, Liettuan Jerusalem), ja nykytila on tarkistettu: päiväkoti purettiin 2025 ja rukoussali sekä bima paljastettiin 2026. Kaksi tilastolähdettä poistettu, yksi lisätty.
+- **Lähde:** https://en.wikipedia.org/wiki/Great_Synagogue_of_Vilna
+
+### Vilnan vanhakaupunki — kenttä `kysymykset`
+- **Vanha:** "Mitä vanhassakaupungissa tehdään nykyään iltaisin?"
+- **Uusi:** "Miksi Vilnaa kutsuttiin Liettuan Jerusalemiksi?"
+- **Syy:** Tyyppi 7: yleinen iltaelämäkysymys sopisi minkä tahansa kohteen alle, ja vastaus vanhenee. Uusi kysymys liittyy uuteen kierrosversioon, ja oletus on tosi (pelin aineisto).
+- **Lähde:** pelin aineisto (pohja/vilna.json, tausta)
+
+### Gediminasin torni — kentät `lyhyt` ja `puhe_lyhyt`
+- **Vanha:** "…nousi Liettuan kolmivärinen lippu ensimmäisen kerran uudenvuodenpäivänä 1919…"
+- **Uusi:** "…nousi Liettuan kolmivärinen lippu uudenvuodenpäivänä 1919…"
+- **Syy:** Tyyppi 3: lähteet ovat ristiriidassa. Liettuan yleisensyklopedian (VLE) mukaan lippu nostettiin torniin 1.1.1919 "toisen kerran", koska siitä oli tehty päätös jo 1918. Kansallismuseon ja liputuspäivän mukaan kyseessä oli ensimmäinen kerta. Kiistanalainen "ensimmäisen kerran" poistettu, eikä muuta muuteta. Lähteiden kuvaukset päivitetty: linnamäen korkeus 48 m (Castle Hill -artikkeli), ja vuoden 1988 lipunnosto vahvistettu tv3.lt:stä.
+- **Lähde:** https://www.vle.lt/straipsnis/lietuvos-valstybes-veliava/ ; https://www.tv3.lt/naujiena/lietuva/trispalvei-90-n193469 ; https://en.wikipedia.org/wiki/Castle_Hill_(Vilnius)
+
+### Gediminasin torni — `lahteet` (NYKYAIKA-tarkistus, tekstiin ei muutoksia)
+- Tornin museo ja näköalatasanne ovat auki 2026: VilniusGO kertoo 12.3.2026, että uudistettu torni näyttelyineen ja näköalatasanteineen on avoinna, ja linnamäen rinteet vahvistettiin 2017–2022. Tekstin "Nykyään tornissa on museo, ja sen näköalatasanteelta näkee koko vanhankaupungin" pitää paikkansa. Museolähteeksi vaihdettu VilniusGO.
+- **Lähde:** https://vilniusgo.lt/atsinaujines-gedimino-pilies-bokstas-ka-verta-pamatyti/ ; https://en.wikipedia.org/wiki/Castle_Hill_(Vilnius)
+
+### Vilnan tuomiokirkko — kenttä `lyhyt`
+- **Vanha:** "Hautaholvi löytyi vasta vuonna 1931, kun tulva oli huuhtonut kirkon kellareita."
+- **Uusi:** "Hautaholvi löytyi vasta vuonna 1931, kun insinöörit tutkivat tulvan vaurioittamia perustuksia."
+- **Syy:** Tyyppi 3: tulva ei paljastanut holvia. Insinöörit kaivoivat lattian alle tarkistaakseen tulvan jälkeen perustusten kunnon ja löysivät onkalon. Vanha lähde (bpmuziejus.lt/crypts.html) palauttaa 404:n, joten se on korvattu LRT:n jutulla. Joulukuun 2024 kruunulöytö on vahvistettu LRT:stä: kruunuja ei ole vielä asetettu näytteille, eikä teksti niin väitäkään.
+- **Lähde:** https://www.lrt.lt/en/news-in-english/19/1360434/the-great-1931-flood-of-vilnius-sailing-on-wardrobes-and-a-macabre-discovery ; https://www.lrt.lt/en/news-in-english/19/2453837/burial-crowns-of-lithuanian-polish-rulers-discovered-in-vilnius-cathedral
+
+### Vilnan tuomiokirkko — `lahteet` ja `korkeus_m` (ei tekstimuutosta)
+- Vuoden 1949 sulkemiselle ei ollut lähdettä (Kuzman artikkeli ei mainitse sitä). Lisätty cityofmercy.lt: "suljettu 1949–1988, pitkään taidegalleriana". Kellotapulin lähde on vaihdettu govilnius.lt:hen.
+- `korkeus_m` 57 on kellotapulin korkeus ristin kanssa (ilman ristiä 52 m). Kirkkorakennuksen oman korkeuden lähdettä ei löytynyt. Arvo jätetään ennalleen, koska kameran kehystyksessä korkein osa on tapuli. Ratkaisu Päätoimittajalle, jos halutaan pelkän kirkon korkeus.
+- **Lähde:** https://cityofmercy.lt/en_GB/objektai/vilniaus-arkikatedra-bazilika/ ; https://govilnius.lt/vilnius-cathedral-bell-tower
+
+### Aamuportti — kenttä `lyhyt`
+- **Vanha:** "Aamuportin Neitsyt Marian kuva maalattiin todennäköisesti noin vuonna 1630 pohjoisen renessanssin tyyliin. Paljasjalkakarmeliitat rakensivat sille oman kappelin vuonna 1671. Paavi Johannes Paavali toinen rukoili kuvan edessä rukousnauhaa pyhiinvaeltajien kanssa vuonna 1993."
+- **Uusi:** "Aamuportin Neitsyt Marian kuvan oikeassa hihassa näkyy yhä luodinreikä. Kerrotaan, että sen ampui ruotsalainen sotilas, kun Ruotsin armeija valtasi Vilnan vuonna 1702. Legendan mukaan raskas rautaportti putosi pääsiäislauantain aamuna ja murskasi neljä ruotsalaista sotilasta."
+- **Syy:** Tyyppi 2: kolme vuosilukua peräkkäin (maalaus, kappeli, paavin vierailu) ilman tarinaa. Lisäksi tyyppi 3: lähteet ovat ristiriidassa kappelin vuodesta (1671 tai 1672). Tilalle tuli vuoden 1702 tarina, jossa legenda on merkitty legendaksi. Kaksi lähdettä poistettu, yksi lisätty.
+- **Lähde:** https://en.wikipedia.org/wiki/Our_Lady_of_the_Gate_of_Dawn
+
+### Pyhän Annan kirkko — kenttä `teksti`
+- **Vanha:** "Todellisuudessa hänen ratsuväkensä piti kirkossa hevosiaan ja poltti sen puiset sisustukset."
+- **Uusi:** "Todellisuudessa hänen perääntyvät sotilaansa tekivät kirkosta varaston ja polttivat sen penkit ja rippituolit."
+- **Syy:** Tyyppi 3: lähteeksi merkitty History Hit ei mainitse ratsuväkeä, talleja eikä vuotta 1859 (tarkistettu). Liettuan suurruhtinaskunnan historiasivun mukaan perääntyvä armeija teki kirkosta varaston ja poltti penkit, rippituolit ja muut puutyöt. Saman lähteen mukaan Napoleonin lausahdus julkaistiin vasta Kirkorin oppaassa 1859. Molemmat lähteet vaihdettu.
+- **Lähde:** https://www.ldkistorija.lt/?p=8428
+
+### Pyhän Annan kirkko — kenttä `lyhyt`
+- **Vanha:** "Pyhän Annan kirkon vieressä seisoo 1800-luvulla rakennettu kellotapuli, joka jäljittelee goottilaista tyyliä. Kirkon arkkitehdiksi on arveltu gdanskilaista Michał Enkingeriä, joka työskenteli kirkolla 1500-luvun alussa. Yhdessä bernardiinikirkon ja luostarin kanssa se muodostaa yhden Vilnan merkittävimmistä rakennuskokonaisuuksista."
+- **Uusi:** "Pyhän Annan kirkon paikalla seisoi ensin puukirkko, joka rakennettiin Vytautas Suuren ensimmäiselle puolisolle Annalle ja kaupungissa käyville saksalaisille katolilaisille. Puukirkko paloi vuonna 1419. Nykyisen tiilikirkon ulkoasu on säilynyt lähes muuttumattomana, mutta julkisivun pienet sivutornit puuttuivat pitkään ja rakennettiin uudelleen vasta vuonna 2009."
+- **Syy:** Tyyppi 2: kellotapuli, arkkitehtiarvelu ja "merkittävä kokonaisuus" ovat perustietoa. Tyyppi 1: bernardiinikokonaisuus oli jo tekstissä. Tyyppi 3: Wikipedian nykyversion mukaan arkkitehdiksi on ehdotettu joko Enkingeriä tai Benedikt Rejtiä, eikä kumpaakaan tue kirjallinen lähde. Uusi kertoo kirkon alkuperästä ja sivutornien paluusta. Enkinger-lähde poistettu.
+- **Lähde:** https://en.wikipedia.org/wiki/Church_of_St._Anne,_Vilnius
+
+### Vilnan yliopisto — kenttä `lyhyt`
+- **Vanha:** "Vilnan yliopiston pihan laidalla on vuonna 1753 perustettu tähtitorni, Euroopan neljänneksi vanhin. Sen julkisivuun on kaiverrettu eläinradan merkit ja latinankielisiä lauseita. Yliopiston kirjakaupan Litteran holveja peittävät vuonna 1978 maalatut freskot, jotka kuvaavat yliopistossa kukoistaneita taiteita ja tieteitä."
+- **Uusi:** "Vilnan yliopiston tähtitorni on Euroopan neljänneksi vanhin, ja sen julkisivuun on kaiverrettu eläinradan merkit. Kaupungin valot ovat kuitenkin kasvaneet niin kirkkaiksi, ettei tähtiä voi enää tarkkailla keskustasta. Havainnot tehdään nykyään kaukana maaseudulla, mutta vanhassa tähtitornissa tutkimus jatkuu yhä."
+- **Syy:** Tyyppi 2: perustamisvuosi ja kahden kohteen perustiedot rinnakkain, ilman juonta. Uusi kertoo ristiriidan: tähtitornista ei näe enää tähtiä. Asia on pelin aineistossa ja Wikipediassa (Molėtain observatorio). Littera siirtyi kysymykseksi.
+- **Lähde:** https://en.wikipedia.org/wiki/Vilnius_University_Astronomical_Observatory
+
+### Vilnan yliopisto — kenttä `kysymykset`
+- **Vanha:** "Paljonko yliopistossa on opiskelijoita nykyään?"
+- **Uusi:** "Mitä Litteran kirjakaupan freskot esittävät?"
+- **Syy:** Tyyppi 7: opiskelijamäärä vanhenee vuosittain. Litteran freskojen olemassaolo on vahvistettu VU:n kirjaston sivulta (lähde on jo listassa).
+- **Lähde:** https://biblioteka.vu.lt/e.parodos/kiemeliai/vu/filologijosfakultetas/infoen.html
+
+### Vilnan yliopisto — `lahteet` (ei tekstimuutosta)
+- vu.lt/en/about-vu/history/university-ensemble ei enää kerro sisäpihoista eikä tapulista. Kolmentoista sisäpihan lähteeksi vaihdettu VU:n museo. Tapulin korkeus 68 m ja "vanhankaupungin korkein rakennus" on vahvistettu VU:n museon uutisesta, ja lähde vaihdettu siihen.
+- **Lähde:** https://www.muziejus.vu.lt/en/departments/architectural-ensemble-and-bell-tower ; https://www.muziejus.vu.lt/en/news/news1/1110-after-a-long-lockdown-architectural-ensemble-of-vilnius-university-is-opening-up-guests-can-once-again-visit-the-highest-building-of-vilnius-old-town
+
+### Užupis — kenttä `teksti`
+- **Vanha:** "…jolla on presidentti, lippu, hymni ja noin yhdentoista miehen armeija. Perustuslain neljäkymmentäyksi pykälää ovat esillä…"
+- **Uusi:** "…jolla on presidentti, lippu, hymni ja oma valuutta. Perustuslain neljäkymmentäyksi pykälää on esillä…"
+- **Syy:** Tyyppi 5: armeijan nykytila on epävarma. Wikipedian nykyversiosta armeija on poistettu, ja hakuotteen mukaan "armeija on sittemmin lakkautettu". OCA Magazine (2018) mainitsee rahan, joten armeija korvattiin valuutalla. Tyyppi 6: kongruenssi "neljäkymmentäyksi pykälää ovat" → "on". Julistusvuosi 1997 on vahvistettu (Wikipedia, OCA Magazine: 1.4.1997). Pilviraportin "1998" ei saa tukea.
+- **Lähde:** https://www.ocamagazine.com/2018/07/09/uzupis-republic-and-where-on-earth-is-that ; https://en.wikipedia.org/wiki/U%C5%BEupis
+
+### Užupis — kenttä `lyhyt`
+- **Vanha:** "Kaupunginosa Užupis juhlii itsenäisyyspäiväänsä joka vuosi aprillipäivänä. Silloin Paupio-kadun seinälle kiinnitetään perustuslaki taas uudella kielellä. Perustuslain kirjoittivat Romas Lileikis ja Tomas Čepaitis, ja kerrotaan, että siihen meni vain kolme tuntia."
+- **Uusi:** "Kaupunginosa Užupisin ulkoministeriö on nimittänyt maailmalle yli viisisataa suurlähettilästä, joiden joukossa on suurlähettiläs kolibrien keskuudessa ja kaduilla viheltämisen suurlähettiläs. Tasavallan kunniakansalaiseksi on nimetty Dalai-lama, joka istutti vuonna 2018 puun kaupunginosan Tiibetin aukiolle."
+- **Syy:** Tyyppi 1: aprillipäivä, Paupio-kadun seinä ja perustuslain kielet olivat jo saman kohteen tekstissä. Vaihtoehdoista hylättiin lipun vuodenaikaväri, koska Gediminasin tornin kierrosversio kertoo jo lipusta. Lileikis–Čepaitis-lähde poistettu, Wikipedia-lähde lisätty.
+- **Lähde:** https://en.wikipedia.org/wiki/U%C5%BEupis
+
+### Pyhän Pietarin ja Pyhän Paavalin kirkko — kenttä `lyhyt`
+- **Vanha:** "Pyhän Pietarin ja Pyhän Paavalin kirkon suunnitteli ja rakensi krakovalainen Jan Zaor. Stukkohahmojen ympärille koristeet teki italialainen Giovanni Maria Galli, ja sisätilaa pidetään Euroopassa ainutlaatuisena. Kirkon katosta riippuu laivan muotoinen kattokruunu."
+- **Uusi:** "Pyhän Pietarin ja Pyhän Paavalin kirkon raunioihin hetmani Pac kerrotaan piiloutuneen vuonna 1662, kun kapinoivat sotilaat yrittivät surmata hänet. Samat sotilaat tappoivat myöhemmin kenttähetmani Wincenty Gosiewskin. Pac selvisi ja päätti rakentaa tuhoutuneen kirkon uudelleen."
+- **Syy:** Tyyppi 2: arkkitehti, koristelija ja "ainutlaatuinen" ovat perustietoa. Tyyppi 1: stukkokoristelu on jo tekstissä. Uusi on tarina rakennuttajasta, ja "kerrotaan" on Wikipedian "It is said" -muotoilun mukainen. Kattokruunukysymys jää kysymyksiin, ja sen oletus pitää (kruunu hankittiin 1901–1905).
+- **Lähde:** https://en.wikipedia.org/wiki/Church_of_St._Peter_and_St._Paul,_Vilnius
+
+### Kolme ristiä — kenttä `teksti`
+- **Vanha:** "…paikalla on ollut puisia ristejä 1600-luvun alusta."
+- **Uusi:** "…paikalla on ollut puisia ristejä ainakin 1600-luvun puolivälistä."
+- **Syy:** Tyyppi 3: Wikipedian mukaan puiset ristit mainitaan ensimmäisen kerran vuonna 1649, joten "1600-luvun alusta" ei saa tukea. Muut väitteet on vahvistettu: Vivulskis 1916, purku 1950 ja uudet ristit 1989 (Kuzma ja Šilgalis).
+- **Lähde:** https://en.wikipedia.org/wiki/Three_Crosses
+
+### Tarkistettu ilman muutoksia
+- Avaus (avaukset/vilna.md): 38 sanaa, alkaa sanalla "Tervetuloa", ja ilmakuva (katot, tornit, kukkulat, jokien yhtymäkohta) toimii. Ei muutoksia.
+- Liettuan suurruhtinaiden palatsi: 1655, 1801, 2002 ja 2013 vahvistettu Wikipediasta. Museo avattiin osittain 2013 ja kokonaan 2018, joten "museo avattiin yleisölle vuonna 2013" pitää paikkansa.
+- Vanhankaupungin teksti: Pilies-kadun väitteet on vahvistettu govilnius.lt:stä.
+- Aamuportin teksti: 1503–1514, Medininkai, muurien purku 1799–1805 ja riza vahvistettu Wikipediasta.
+- Isoisä: ei mainintaa missään kohteessa, koska merkintä ei nimeä kohdetta. Oikein.
+- Kierrosversioiden päällekkäisyys tarkistettu muutosten jälkeen. Aiheet: krypta ja kruunut, Suuri synagoga, tähtitorni ja valosaaste, luodinreikä ja ruotsalaiset, Užupisin suurlähettiläät, puukirkko ja sivutornit, lippu 1919 ja 1988, Pacin piilopaikka. Ei toistoja.
+
+### Epävarmuudet Päätoimittajalle
+- Gediminasin tornin lippu: kansallismuseon (lnm.lt) sivu, jolla raitojen repiminen 6.1.1919 mainitaan, on Cloudflare-suojattu, enkä saanut sitä auki. Väite on kahdessa hakuotteessa ja kansallismuseon nimissä, mutta en ole lukenut sitä itse. Säilytin sen, koska kansallismuseo hoitaa tornia. Jos halutaan täysi varmuus, raitojen repiminen pitää vahvistaa tai virke muotoilla uudelleen.
+- Tuomiokirkon `korkeus_m` 57 on kellotapulin korkeus ristin kanssa (ks. yllä).
+
 ---
 
 # TARKISTAJAN PASSI (erillinen tarkistaja-agentti)

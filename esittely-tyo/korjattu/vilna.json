@@ -10,14 +10,14 @@
    "luokka": "muu",
    "koko_m": 2000,
    "teksti": "Vilnan vanhakaupunki näkyy ylhäältä kaartuvien katujen, punaisten kattojen ja kirkontornien verkkona, jonka pinta-ala on yli kolme ja puoli neliökilometriä. Se on yksi Pohjois-Euroopan suurimmista säilyneistä keskiaikaisista kaupunginosista, ja Unesco otti sen maailmanperintöluetteloon vuonna 1994. Vanhin ja koristeellisin katu on Linnankatu, liettuaksi Pilies, joka syntyi linnaan johtaneen tien paikalle. Sitä pitkin kulkivat aikoinaan kuninkaat, paavin lähettiläät ja vieraiden maiden suurlähettiläät matkallaan linnaan. Kadun varrella goottilaiset, renessanssiajan ja barokkiajan talot seisovat yhä rinnakkain.",
-   "lyhyt": "Vilnan vanhassakaupungissa on seitsemänkymmentäneljä korttelia, seitsemänkymmentä katua ja kujaa sekä lähes tuhat viisisataa rakennusta. Sitä pidetään Alppien pohjoispuolen suurimpana ja itäisimpänä barokkikaupunkina. Kaupunkia ympäröi aikoinaan muuri, jonka yhdeksästä portista vain yksi on yhä pystyssä.",
+   "lyhyt": "Vilnan vanhassakaupungissa seisoi yli kolmesataa vuotta Suuri synagoga, juutalaisen Vilnan sydän. Natsit tuhosivat sen sodassa, ja neuvostovalta purki rauniot ja rakensi paikalle päiväkodin ja koulun. Viime vuosina arkeologit ovat kaivaneet maan alta esiin rukoussalin lattian ja barokkityylisen lukukorokkeen.",
    "syventava": "Ketkä kulkivat Linnankatua pitkin?",
    "kysymykset": [
     "Miksi vanhankaupungin kadut kiemurtelevat?",
     "Milloin Vilnasta tuli Liettuan pääkaupunki?",
     "Mikä on Linnankadun vanhin talo?",
     "Miksi Vilnaa kutsutaan barokin kaupungiksi?",
-    "Mitä vanhassakaupungissa tehdään nykyään iltaisin?"
+    "Miksi Vilnaa kutsuttiin Liettuan Jerusalemiksi?"
    ],
    "isoisa": false,
    "lahteet": [
@@ -34,12 +34,8 @@
      "url": "https://www.govilnius.lt/pilies-street"
     },
     {
-     "vaite": "Vanhassakaupungissa on 74 korttelia, 70 katua ja kujaa sekä 1487 rakennusta; sitä kutsutaan Alppien pohjoispuolen suurimmaksi ja itäisimmäksi barokkikaupungiksi.",
-     "url": "https://en.wikipedia.org/wiki/Vilnius_Old_Town"
-    },
-    {
-     "vaite": "Portti oli yksi kaupunginmuurin yhdeksästä portista, ja se on ainoa säilynyt.",
-     "url": "https://en.wikipedia.org/wiki/Gate_of_Dawn"
+     "vaite": "Suuri synagoga valmistui 1633 ja toimi vuoteen 1941, jolloin natsit tuhosivat sen; neuvostovalta purki sen 1955–1957 ja rakensi paikalle päiväkodin ja koulun; kaivauksissa on paljastettu rukoussali terrazzolattioineen ja barokkinen bima.",
+     "url": "https://en.wikipedia.org/wiki/Great_Synagogue_of_Vilna"
     }
    ]
   },
@@ -51,8 +47,8 @@
    "koko_m": 120,
    "korkeus_m": 20,
    "teksti": "Gediminasin torni seisoo linnamäen laella lähes viisikymmentä metriä vanhankaupungin yläpuolella, ja ylhäältä sen kahdeksankulmaisen punatiilitornin erottaa puiden keskeltä. Torni on jäänne ylälinnasta, jonka ensimmäisen tiililinnan suuriruhtinas Vytautas sai valmiiksi vuonna 1409. Legendan mukaan suuriruhtinas Gediminas näki jokilaaksossa unta rautaisesta sudesta, joka seisoi kukkulan laella ja ulvoi kuin sata sutta. Pappi Lizdeika selitti, että paikalle nousisi suuri pääkaupunki. Nykyään tornissa on museo, ja sen näköalatasanteelta näkee koko vanhankaupungin.",
-   "lyhyt": "Gediminasin tornin salkoon nousi Liettuan kolmivärinen lippu ensimmäisen kerran uudenvuodenpäivänä 1919, mutta jo muutaman päivän kuluttua bolševikit repivät siitä keltaisen ja vihreän raidan. Lokakuun seitsemäntenä päivänä 1988 uudistusliike Sąjūdis nosti lipun takaisin tornin huipulle, ja siellä se liehuu yhä.",
-   "puhe_lyhyt": "Gediminasin tornin salkoon nousi Liettuan kolmivärinen lippu ensimmäisen kerran uudenvuodenpäivänä 1919, mutta jo muutaman päivän kuluttua bolševikit repivät siitä keltaisen ja vihreän raidan. Lokakuun seitsemäntenä päivänä 1988 uudistusliike Sajudis nosti lipun takaisin tornin huipulle, ja siellä se liehuu yhä.",
+   "lyhyt": "Gediminasin tornin salkoon nousi Liettuan kolmivärinen lippu uudenvuodenpäivänä 1919, mutta jo muutaman päivän kuluttua bolševikit repivät siitä keltaisen ja vihreän raidan. Lokakuun seitsemäntenä päivänä 1988 uudistusliike Sąjūdis nosti lipun takaisin tornin huipulle, ja siellä se liehuu yhä.",
+   "puhe_lyhyt": "Gediminasin tornin salkoon nousi Liettuan kolmivärinen lippu uudenvuodenpäivänä 1919, mutta jo muutaman päivän kuluttua bolševikit repivät siitä keltaisen ja vihreän raidan. Lokakuun seitsemäntenä päivänä 1988 uudistusliike Sajudis nosti lipun takaisin tornin huipulle, ja siellä se liehuu yhä.",
    "syventava": "Mitä Gediminas näki unessa?",
    "kysymykset": [
     "Miksi rautainen susi liitetään Vilnaan?",
@@ -64,8 +60,8 @@
    "isoisa": false,
    "lahteet": [
     {
-     "vaite": "Linnamäki kohoaa noin 48 metriä; torni on kolmikerroksinen, kahdeksankulmainen, noin 20 metriä korkea, punatiiltä ja kiveä.",
-     "url": "https://en.wikipedia.org/wiki/Gediminas%27s_Tower"
+     "vaite": "Linnamäki kohoaa 48 metriä ympäröivän maan yläpuolelle.",
+     "url": "https://en.wikipedia.org/wiki/Castle_Hill_(Vilnius)"
     },
     {
      "vaite": "Torni on jäljellä oleva osa ylälinnaa; ensimmäisen tiililinnan sai valmiiksi Vytautas vuonna 1409.",
@@ -76,12 +72,12 @@
      "url": "https://en.wikipedia.org/wiki/Iron_Wolf_(character)"
     },
     {
-     "vaite": "Tornissa on museo ja näköalatasanne vanhankaupungin ylle.",
-     "url": "https://en.wikipedia.org/wiki/Gediminas%27s_Tower"
+     "vaite": "Tornissa on museo ja näköalatasanne vanhankaupungin ylle; uudistettu torni on avoinna vuonna 2026 näyttelyineen ja näköalatasanteineen.",
+     "url": "https://vilniusgo.lt/atsinaujines-gedimino-pilies-bokstas-ka-verta-pamatyti/"
     },
     {
-     "vaite": "Kolmivärinen lippu nostettiin torniin ensimmäisen kerran 1.1.1919; bolševikit valtasivat Vilnan 6.1. ja repivät lipusta keltaisen ja vihreän raidan; Sąjūdis nosti lipun uudelleen 7.10.1988.",
-     "url": "https://lnm.lt/?p=19877"
+     "vaite": "Kolmivärinen lippu nostettiin torniin 1.1.1919; bolševikit valtasivat Vilnan 6.1. ja repivät lipusta keltaisen ja vihreän raidan (Liettuan kansallismuseo); lippu nostettiin uudelleen 7.10.1988.",
+     "url": "https://www.tv3.lt/naujiena/lietuva/trispalvei-90-n193469"
     }
    ]
   },
@@ -93,7 +89,7 @@
    "koko_m": 100,
    "korkeus_m": 57,
    "teksti": "Vilnan tuomiokirkko näkyy ylhäältä valkoisena, antiikin temppeliä muistuttavana rakennuksena, jonka katolla seisoo kolme pyhimyspatsasta ja vieressä erillinen kellotapuli. Nykyisen uusklassisen asunsa kirkko sai arkkitehti Laurynas Gucevičiuksen suunnitelmien mukaan 1700-luvun lopulla. Kellotapuli on rakennettu vanhan puolustustornin pyöreälle pohjalle. Neuvostovalta sulki kirkon vuonna 1949 ja teki siitä varaston ja taidegallerian, ja seuraavana vuonna katon patsaat revittiin alas. Kuvanveistäjä Stanislovas Kuzma teki patsaat uudelleen, ja ne palasivat katolle vuonna 1997.",
-   "lyhyt": "Vilnan tuomiokirkon kryptassa lepäävät kuningas Aleksanteri sekä Sigismund Augustin puolisot Elisabet ja Barbara. Hautaholvi löytyi vasta vuonna 1931, kun tulva oli huuhtonut kirkon kellareita. Vuonna 2024 kryptasta avattiin kätkö, josta löytyivät hallitsijoiden hautakruunut.",
+   "lyhyt": "Vilnan tuomiokirkon kryptassa lepäävät kuningas Aleksanteri sekä Sigismund Augustin puolisot Elisabet ja Barbara. Hautaholvi löytyi vasta vuonna 1931, kun insinöörit tutkivat tulvan vaurioittamia perustuksia. Vuonna 2024 kryptasta avattiin kätkö, josta löytyivät hallitsijoiden hautakruunut.",
    "syventava": "Miksi katon patsaat revittiin alas?",
    "kysymykset": [
     "Ketä pyhimyksiä katon kolme patsasta esittävät?",
@@ -113,16 +109,16 @@
      "url": "https://en.wikipedia.org/wiki/Laurynas_Gucevi%C4%8Dius"
     },
     {
-     "vaite": "Kellotapuli on rakennettu vanhan linnanmuurin puolustustornin pyöreälle pohjalle; noin 57 metriä korkea.",
-     "url": "https://en.wikipedia.org/wiki/Vilnius_Cathedral"
+     "vaite": "Kellotapuli rakennettiin alalinnan puolustustornin päälle; se on 52 metriä korkea ja ristin kanssa 57 metriä.",
+     "url": "https://govilnius.lt/vilnius-cathedral-bell-tower"
     },
     {
      "vaite": "Neuvostovalta sulki kirkon 1949 ja käytti sitä varastona ja galleriana; patsaat poistettiin 1950; Stanislovas Kuzma teki ne uudelleen 1997.",
      "url": "https://en.wikipedia.org/wiki/Stanislovas_Kuzma"
     },
     {
-     "vaite": "Kuninkaallisessa hautaholvissa lepäävät Aleksanteri Jagellonilainen sekä Sigismund Augustin puolisot Elisabet Itävaltalainen ja Barbara Radziwiłł; holvi löytyi vuoden 1931 tulvan jälkeen.",
-     "url": "https://bpmuziejus.lt/crypts.html"
+     "vaite": "Hautaholvi löytyi, kun vuoden 1931 tulvan jälkeen insinöörit kaivoivat kirkon lattian alle tutkiakseen perustuksia; haudoissa lepäsivät Aleksanteri Jagellonilainen, Elisabet Habsburg ja Barbara Radziwiłł.",
+     "url": "https://www.lrt.lt/en/news-in-english/19/1360434/the-great-1931-flood-of-vilnius-sailing-on-wardrobes-and-a-macabre-discovery"
     },
     {
      "vaite": "Joulukuussa 2024 kryptasta avattiin vuonna 1939 tehty kätkö, josta löytyivät hallitsijoiden hautakruunut ja muut tunnukset.",
@@ -131,6 +127,10 @@
     {
      "vaite": "Aukiolla on stebuklas-laatta, johon Baltian ketju päättyi 1989.",
      "url": "https://www.atlasobscura.com/places/stebuklas-miracle-tile"
+    },
+    {
+     "vaite": "Neuvostovalta sulki tuomiokirkon vuosiksi 1949–1988, ja siinä toimi pitkään Vilnan taidegalleria.",
+     "url": "https://cityofmercy.lt/en_GB/objektai/vilniaus-arkikatedra-bazilika/"
     }
    ]
   },
@@ -141,7 +141,7 @@
    "luokka": "rakennus",
    "koko_m": 40,
    "teksti": "Aamuportti on Vilnan kaupunginmuurin ainoa säilynyt portti, ja ylhäältä sen erottaa kapean kadun poikki kulkevana rakennuksena vanhankaupungin eteläreunalla. Portti rakennettiin 1500-luvun alussa yhdeksi muurin yhdeksästä portista, ja sitä kutsuttiin aluksi Medininkain portiksi, koska tie vei siitä Medininkain kylään. Kun Venäjän viranomaiset purkivat muurit 1700- ja 1800-lukujen vaihteessa, portti jäi pystyyn, ja kaupunkilaiset uskoivat sen säästyneen kappelissa palvotun Neitsyt Marian kuvan ansiosta. Kuva katsoo suuren kaari-ikkunan läpi vanhaankaupunkiin, ja sen hopeinen ja kullattu päällys jättää näkyviin vain kasvot ja kädet.",
-   "lyhyt": "Aamuportin Neitsyt Marian kuva maalattiin todennäköisesti noin vuonna 1630 pohjoisen renessanssin tyyliin. Paljasjalkakarmeliitat rakensivat sille oman kappelin vuonna 1671. Paavi Johannes Paavali toinen rukoili kuvan edessä rukousnauhaa pyhiinvaeltajien kanssa vuonna 1993.",
+   "lyhyt": "Aamuportin Neitsyt Marian kuvan oikeassa hihassa näkyy yhä luodinreikä. Kerrotaan, että sen ampui ruotsalainen sotilas, kun Ruotsin armeija valtasi Vilnan vuonna 1702. Legendan mukaan raskas rautaportti putosi pääsiäislauantain aamuna ja murskasi neljä ruotsalaista sotilasta.",
    "syventava": "Miksi Aamuportti säästettiin purkamiselta?",
    "kysymykset": [
     "Miksi kuvassa näkyvät vain kasvot ja kädet?",
@@ -169,12 +169,8 @@
      "url": "https://en.wikipedia.org/wiki/Our_Lady_of_the_Gate_of_Dawn"
     },
     {
-     "vaite": "Kuva on pohjoisen renessanssin tyyliä ja valmistui todennäköisesti noin 1630; paljasjalkakarmeliitat rakensivat kappelin 1671.",
+     "vaite": "Ruotsin armeija valtasi Vilnan 1702; sotilas ampui kuvaa, ja luodinreikä näkyy yhä oikeassa hihassa; legendan mukaan raskas rautaportti putosi pääsiäislauantain aamuna ja murskasi neljä ruotsalaista sotilasta.",
      "url": "https://en.wikipedia.org/wiki/Our_Lady_of_the_Gate_of_Dawn"
-    },
-    {
-     "vaite": "Johannes Paavali II rukoili rukousnauhaa Aamuportilla pyhiinvaeltajien kanssa 4.9.1993.",
-     "url": "https://ausrosvartai.lt/en/pope-john-paul-ii/"
     }
    ]
   },
@@ -184,8 +180,8 @@
    "kuvaus": "Punatiilinen myöhäisgoottilainen kirkko",
    "luokka": "kirkko",
    "koko_m": 40,
-   "teksti": "Pyhän Annan kirkko on pieni punatiilinen kirkko, jonka julkisivua kruunaa kaksi pitsimäistä tornia. Se valmistui noin vuonna 1500, ja sen rakentamiseen käytettiin kolmeakymmentäkolmea erilaista tiiltä. Kirkkoa pidetään entisen Puolan ja Liettuan valtioliiton alueen komeimpana liekehtivän gotiikan esimerkkinä, ja sen takana seisovat bernardiinien kirkko ja luostari. Legendan mukaan Napoleon ihastui kirkkoon vuonna 1812 niin, että olisi halunnut kantaa sen kämmenellään Pariisiin. Todellisuudessa hänen ratsuväkensä piti kirkossa hevosiaan ja poltti sen puiset sisustukset.",
-   "lyhyt": "Pyhän Annan kirkon vieressä seisoo 1800-luvulla rakennettu kellotapuli, joka jäljittelee goottilaista tyyliä. Kirkon arkkitehdiksi on arveltu gdanskilaista Michał Enkingeriä, joka työskenteli kirkolla 1500-luvun alussa. Yhdessä bernardiinikirkon ja luostarin kanssa se muodostaa yhden Vilnan merkittävimmistä rakennuskokonaisuuksista.",
+   "teksti": "Pyhän Annan kirkko on pieni punatiilinen kirkko, jonka julkisivua kruunaa kaksi pitsimäistä tornia. Se valmistui noin vuonna 1500, ja sen rakentamiseen käytettiin kolmeakymmentäkolmea erilaista tiiltä. Kirkkoa pidetään entisen Puolan ja Liettuan valtioliiton alueen komeimpana liekehtivän gotiikan esimerkkinä, ja sen takana seisovat bernardiinien kirkko ja luostari. Legendan mukaan Napoleon ihastui kirkkoon vuonna 1812 niin, että olisi halunnut kantaa sen kämmenellään Pariisiin. Todellisuudessa hänen perääntyvät sotilaansa tekivät kirkosta varaston ja polttivat sen penkit ja rippituolit.",
+   "lyhyt": "Pyhän Annan kirkon paikalla seisoi ensin puukirkko, joka rakennettiin Vytautas Suuren ensimmäiselle puolisolle Annalle ja kaupungissa käyville saksalaisille katolilaisille. Puukirkko paloi vuonna 1419. Nykyisen tiilikirkon ulkoasu on säilynyt lähes muuttumattomana, mutta julkisivun pienet sivutornit puuttuivat pitkään ja rakennettiin uudelleen vasta vuonna 2009.",
    "syventava": "Mitä Napoleon sanoi kirkosta?",
    "kysymykset": [
     "Miksi kirkon rakentamiseen tarvittiin niin monta tiiltä?",
@@ -209,15 +205,15 @@
      "url": "https://polonika.pl/en/polonik-tygodnia/kosciol-sw-anny-w-wilnie"
     },
     {
-     "vaite": "Legendan mukaan Napoleon halusi kantaa kirkon kämmenellään Pariisiin; lausahdus esiintyy painettuna vasta 1859.",
-     "url": "https://www.historyhit.com/locations/church-of-st-anne-vilnius/"
+     "vaite": "Napoleonin lausahduksen kirkon kantamisesta kämmenellä Pariisiin julkaisi Adam Honory Kirkor Vilnan oppaassaan vasta 1859.",
+     "url": "https://www.ldkistorija.lt/?p=8428"
     },
     {
-     "vaite": "Vuonna 1812 ranskalainen ratsuväki käytti kirkkoa tallina ja poltti sen puiset kalusteet.",
-     "url": "https://www.historyhit.com/locations/church-of-st-anne-vilnius/"
+     "vaite": "Vuonna 1812 Napoleonin perääntyvä armeija teki kirkosta varaston ja poltti sen penkit, rippituolit ja muut puutyöt.",
+     "url": "https://www.ldkistorija.lt/?p=8428"
     },
     {
-     "vaite": "Vieressä 1870-luvulla lisätty uusgoottilainen kellotapuli; arkkitehdiksi on ehdotettu Michael Enkingeria Danzigista, joka työskenteli kirkolla ja bernardiiniluostarissa 1501–1507.",
+     "vaite": "Ensimmäinen, puinen kirkko rakennettiin Vytautas Suuren ensimmäiselle puolisolle Annalle ja kaupungissa käyville katolisille saksalaisille, ja se paloi 1419; tiilikirkon ulkoasu on säilynyt lähes muuttumattomana; pitkään puuttuneet sivutornit rakennettiin uudelleen 2009.",
      "url": "https://en.wikipedia.org/wiki/Church_of_St._Anne,_Vilnius"
     }
    ]
@@ -229,24 +225,24 @@
    "luokka": "rakennus",
    "koko_m": 200,
    "teksti": "Vilnan yliopiston vanhat rakennukset täyttävät vanhassakaupungissa kokonaisen korttelin, ja ylhäältä niiden väliin erottuu kolmetoista sisäpihaa. Suurimman pihan laidalla on Pyhän Johanneksen kirkko, jonka kuusikymmentäkahdeksan metriä korkea kellotapuli on vanhankaupungin korkein rakennus. Jesuiitat perustivat tänne kollegion vuonna 1570, ja kuningas Stefan Batory antoi sille yliopiston oikeudet vuonna 1579. Se on Baltian maiden vanhin yliopisto. Tsaari Nikolai ensimmäinen sulki sen vuonna 1832 marraskuun kansannousun jälkeen, ja opetus alkoi uudelleen vasta vuonna 1919.",
-   "lyhyt": "Vilnan yliopiston pihan laidalla on vuonna 1753 perustettu tähtitorni, Euroopan neljänneksi vanhin. Sen julkisivuun on kaiverrettu eläinradan merkit ja latinankielisiä lauseita. Yliopiston kirjakaupan Litteran holveja peittävät vuonna 1978 maalatut freskot, jotka kuvaavat yliopistossa kukoistaneita taiteita ja tieteitä.",
+   "lyhyt": "Vilnan yliopiston tähtitorni on Euroopan neljänneksi vanhin, ja sen julkisivuun on kaiverrettu eläinradan merkit. Kaupungin valot ovat kuitenkin kasvaneet niin kirkkaiksi, ettei tähtiä voi enää tarkkailla keskustasta. Havainnot tehdään nykyään kaukana maaseudulla, mutta vanhassa tähtitornissa tutkimus jatkuu yhä.",
    "syventava": "Miksi tsaari sulki yliopiston?",
    "kysymykset": [
     "Keitä kuuluisia ihmisiä yliopistossa on opiskellut?",
     "Miksi jesuiitat tulivat Vilnaan?",
     "Mitä marraskuun kansannousussa tapahtui?",
     "Voiko kellotapuliin kiivetä?",
-    "Paljonko yliopistossa on opiskelijoita nykyään?"
+    "Mitä Litteran kirjakaupan freskot esittävät?"
    ],
    "isoisa": false,
    "lahteet": [
     {
-     "vaite": "Yliopisto täyttää Pilies-kadun vieressä kokonaisen korttelin; kokonaisuudessa on kolmetoista sisäpihaa, Pyhän Johanneksen kirkko ja kellotapuli.",
-     "url": "https://vu.lt/en/about-vu/history/university-ensemble"
+     "vaite": "Yliopiston arkkitehtuurikokonaisuudessa on kolmetoista sisäpihaa.",
+     "url": "https://www.muziejus.vu.lt/en/departments/architectural-ensemble-and-bell-tower"
     },
     {
      "vaite": "Kellotapuli on 68 metriä korkea ja vanhankaupungin korkein rakennus.",
-     "url": "https://www.muziejus.vu.lt/en/departments/architectural-ensemble-and-bell-tower"
+     "url": "https://www.muziejus.vu.lt/en/news/news1/1110-after-a-long-lockdown-architectural-ensemble-of-vilnius-university-is-opening-up-guests-can-once-again-visit-the-highest-building-of-vilnius-old-town"
     },
     {
      "vaite": "Jesuiitat perustivat Vilnan kollegion 1570; Stefan Batory myönsi akatemian perustamiskirjan 1.4.1579; Baltian maiden vanhin yliopisto.",
@@ -257,7 +253,7 @@
      "url": "https://en.wikipedia.org/wiki/Vilnius_University"
     },
     {
-     "vaite": "Tähtitorni perustettiin 1753, Euroopan neljänneksi vanhin; julkisivussa eläinradan merkit ja latinankielinen lause.",
+     "vaite": "Tähtitorni perustettiin 1753 ja on Euroopan neljänneksi vanhin; valosaasteen vuoksi havaintoja ei voi enää tehdä Vilnassa, vaan ne tehdään Molėtain observatoriossa, mutta tutkimus jatkuu.",
      "url": "https://en.wikipedia.org/wiki/Vilnius_University_Astronomical_Observatory"
     },
     {
@@ -276,8 +272,8 @@
    "kuvaus": "Taiteilijoiden oma tasavalta",
    "luokka": "muu",
    "koko_m": 800,
-   "teksti": "Kaupunginosa Užupis on Vilnia-joen toisella puolella vanhastakaupungista, ja nimi tarkoittaakin liettuaksi joen takaista. Aprillipäivänä 1997 asukkaat julistivat sen omaksi tasavallakseen, jolla on presidentti, lippu, hymni ja noin yhdentoista miehen armeija. Perustuslain neljäkymmentäyksi pykälää ovat esillä Paupio-kadun seinällä yli viidelläkymmenellä kielellä. Pykälän kaksitoista mukaan koiralla on oikeus olla koira, ja pykälä kuusitoista antaa jokaiselle oikeuden olla onnellinen. Kaupunginosan tunnus on torveen puhaltava enkeli, joka seisoo korkean pylvään päällä pääaukiolla.",
-   "lyhyt": "Kaupunginosa Užupis juhlii itsenäisyyspäiväänsä joka vuosi aprillipäivänä. Silloin Paupio-kadun seinälle kiinnitetään perustuslaki taas uudella kielellä. Perustuslain kirjoittivat Romas Lileikis ja Tomas Čepaitis, ja kerrotaan, että siihen meni vain kolme tuntia.",
+   "teksti": "Kaupunginosa Užupis on Vilnia-joen toisella puolella vanhastakaupungista, ja nimi tarkoittaakin liettuaksi joen takaista. Aprillipäivänä 1997 asukkaat julistivat sen omaksi tasavallakseen, jolla on presidentti, lippu, hymni ja oma valuutta. Perustuslain neljäkymmentäyksi pykälää on esillä Paupio-kadun seinällä yli viidelläkymmenellä kielellä. Pykälän kaksitoista mukaan koiralla on oikeus olla koira, ja pykälä kuusitoista antaa jokaiselle oikeuden olla onnellinen. Kaupunginosan tunnus on torveen puhaltava enkeli, joka seisoo korkean pylvään päällä pääaukiolla.",
+   "lyhyt": "Kaupunginosa Užupisin ulkoministeriö on nimittänyt maailmalle yli viisisataa suurlähettilästä, joiden joukossa on suurlähettiläs kolibrien keskuudessa ja kaduilla viheltämisen suurlähettiläs. Tasavallan kunniakansalaiseksi on nimetty Dalai-lama, joka istutti vuonna 2018 puun kaupunginosan Tiibetin aukiolle.",
    "syventava": "Mitä Užupisin perustuslaissa lukee?",
    "kysymykset": [
     "Kuka on Užupisin tasavallan presidentti?",
@@ -293,8 +289,8 @@
      "url": "https://en.wikipedia.org/wiki/U%C5%BEupis"
     },
     {
-     "vaite": "Kaupunginosa julistautui tasavallaksi 1.4.1997; sillä on lippu, valuutta, presidentti, perustuslaki, hymni ja noin yhdentoista miehen armeija.",
-     "url": "https://en.wikipedia.org/wiki/U%C5%BEupis"
+     "vaite": "Kaupunginosa julistautui tasavallaksi 1.4.1997; sillä on oma presidentti, lippu, hymni ja raha.",
+     "url": "https://www.ocamagazine.com/2018/07/09/uzupis-republic-and-where-on-earth-is-that"
     },
     {
      "vaite": "Perustuslaissa on 41 pykälää; Paupio-kadun laattarivissä se on yli viidelläkymmenellä kielellä, ja joka vuosi Užupisin päivänä paljastetaan uusi kieli.",
@@ -313,8 +309,8 @@
      "url": "https://en.wikipedia.org/wiki/U%C5%BEupis"
     },
     {
-     "vaite": "Perustuslain kirjoittivat Romas Lileikis ja Tomas Čepaitis kolmessa tunnissa.",
-     "url": "https://govilnius.lt/the-constitution-of-uzupis"
+     "vaite": "Užupisin ulkoministeriö on nimittänyt yli 500 suurlähettilästä, muun muassa suurlähettilään kolibrien keskuudessa ja kadulla viheltämisen suurlähettilään; kunniakansalainen Dalai-lama istutti 2018 puun tasavallan Tiibetin aukiolle.",
+     "url": "https://en.wikipedia.org/wiki/U%C5%BEupis"
     }
    ]
   },
@@ -325,7 +321,7 @@
    "luokka": "kirkko",
    "koko_m": 70,
    "teksti": "Pyhän Pietarin ja Pyhän Paavalin kirkko seisoo Antakalnisin kaupunginosassa vanhankaupungin koillispuolella, ja ylhäältä sen kaksi tornia ja kupoli erottuvat selvästi ympäröivistä puista. Kirkon rakennutti hetmani Michał Kazimierz Pac kiitokseksi siitä, että moskovalaiset oli karkotettu Vilnasta kuuden vuoden miehityksen jälkeen. Sisällä seiniä ja holveja peittää noin kaksituhatta stukkohahmoa, jotka veisti italialainen Giovanni Pietro Perti. Pac kuoli vuonna 1682 ennen kirkon valmistumista. Hänet haudattiin kirkon oven kynnyksen alle, ja hautakivessä lukee latinaksi: tässä lepää syntinen.",
-   "lyhyt": "Pyhän Pietarin ja Pyhän Paavalin kirkon suunnitteli ja rakensi krakovalainen Jan Zaor. Stukkohahmojen ympärille koristeet teki italialainen Giovanni Maria Galli, ja sisätilaa pidetään Euroopassa ainutlaatuisena. Kirkon katosta riippuu laivan muotoinen kattokruunu.",
+   "lyhyt": "Pyhän Pietarin ja Pyhän Paavalin kirkon raunioihin hetmani Pac kerrotaan piiloutuneen vuonna 1662, kun kapinoivat sotilaat yrittivät surmata hänet. Samat sotilaat tappoivat myöhemmin kenttähetmani Wincenty Gosiewskin. Pac selvisi ja päätti rakentaa tuhoutuneen kirkon uudelleen.",
    "syventava": "Miksi Pac haudattiin kynnyksen alle?",
    "kysymykset": [
     "Mitä kaikkea stukkohahmot esittävät?",
@@ -351,6 +347,10 @@
     {
      "vaite": "Kirkossa on laivan muotoinen kattokruunu.",
      "url": "https://lithuania.travel/en/what-to-do/history-culture-art/lithuania-for-spiritual-travelers-sacred-places-and-piligrimage-experiences/top-sacred-places-and-spiritual-experiences/sts-peter-and-paul-the-apostles-church"
+    },
+    {
+     "vaite": "Kerrotaan, että Pac innostui rakentamaan kirkon uudelleen, kun hän oli 1662 piiloutunut sen raunioihin ja välttänyt kapinoivat sotilaat, jotka myöhemmin surmasivat kenttähetmani Wincenty Gosiewskin; sodissa 1655–1661 kirkko tuhoutui.",
+     "url": "https://en.wikipedia.org/wiki/Church_of_St._Peter_and_St._Paul,_Vilnius"
     }
    ]
   },
@@ -360,7 +360,7 @@
    "kuvaus": "Valkoiset ristit kukkulalla",
    "luokka": "muu",
    "koko_m": 60,
-   "teksti": "Kolme ristiä seisoo Kalnain puiston kukkulalla vanhankaupungin itäpuolella, ja ylhäältä valkoiset betoniristit erottuvat selvästi puiden keskeltä. Legendan mukaan kukkulalla mestattiin seitsemän fransiskaanimunkkia, ja paikalla on ollut puisia ristejä 1600-luvun alusta. Betonisen muistomerkin suunnitteli Antanas Vivulskis vuonna 1916. Neuvostovalta tuhosi sen vuonna 1950, ja ristit nousivat uudelleen vuonna 1989, vähän ennen kuin Liettua palautti itsenäisyytensä. Ristien juurella on pieni näköalatasanne, jolta avautuu laaja näkymä vanhankaupungin ylle.",
+   "teksti": "Kolme ristiä seisoo Kalnain puiston kukkulalla vanhankaupungin itäpuolella, ja ylhäältä valkoiset betoniristit erottuvat selvästi puiden keskeltä. Legendan mukaan kukkulalla mestattiin seitsemän fransiskaanimunkkia, ja paikalla on ollut puisia ristejä ainakin 1600-luvun puolivälistä. Betonisen muistomerkin suunnitteli Antanas Vivulskis vuonna 1916. Neuvostovalta tuhosi sen vuonna 1950, ja ristit nousivat uudelleen vuonna 1989, vähän ennen kuin Liettua palautti itsenäisyytensä. Ristien juurella on pieni näköalatasanne, jolta avautuu laaja näkymä vanhankaupungin ylle.",
    "lyhyt": null,
    "syventava": "Keitä kukkulalla mestattiin?",
    "kysymykset": [
@@ -377,7 +377,7 @@
      "url": "https://govilnius.lt/hill-of-three-crosses"
     },
     {
-     "vaite": "Legendan mukaan seitsemän fransiskaanimunkkia mestattiin kukkulalla; puisia ristejä 1600-luvun alusta.",
+     "vaite": "Legendan mukaan seitsemän fransiskaanimunkkia mestattiin kukkulalla; puiset ristit mainitaan ensimmäisen kerran 1649.",
      "url": "https://en.wikipedia.org/wiki/Three_Crosses"
     },
     {
