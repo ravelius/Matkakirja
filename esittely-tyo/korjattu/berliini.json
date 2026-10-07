@@ -9,8 +9,8 @@
    "kuvaus": "Berliinin tunnetuin kaupunkiportti",
    "luokka": "muu",
    "koko_m": 65,
-   "teksti": "Brandenburgin portti sulkee Pariser Platzin aukion länsilaidan, ja ylhäältä sen katolla erottuu neljän hevosen vetämä vaunu, Quadriga, jota ohjaa voitonjumalatar. Carl Gotthard Langhansin suunnittelema portti valmistui vuonna 1791, ja sen kaksitoista pylvästä muodostaa viisi kulkuaukkoa, joista leveintä keskimmäistä sai käyttää vain hovi. Napoleon vei Quadrigan sotasaaliina Pariisiin vuonna 1806, mutta vuonna 1814 se palasi, ja jumalattaren sauvaan lisättiin rautaristi ja Preussin kotka. Muurin aikana portti jäi rajavyöhykkeelle, ja joulukuussa 1989 se avattiin taas kulkijoille.",
-   "lyhyt": "Brandenburgin portin esikuvana oli Ateenan Akropoliin porttirakennus. Portti rakennettiin kohtaan, josta tie lähti Brandenburg an der Haveliin, ja siitä alkaa yhä Unter den Linden -bulevardi, joka johtaa entiselle kaupunkilinnalle ja tuomiokirkolle.",
+   "teksti": "Brandenburgin portti sulkee Pariser Platzin aukion länsilaidan, ja ylhäältä sen katolla erottuu neljän hevosen vetämä vaunu, Quadriga, jota ohjaa voitonjumalatar. Carl Gotthard Langhansin suunnittelema portti valmistui vuonna 1791, ja sen kaksitoista pylvästä muodostaa viisi kulkuaukkoa, joista leveintä keskimmäistä sai käyttää vain kuninkaallinen perhe. Napoleon vei Quadrigan sotasaaliina Pariisiin vuonna 1806, mutta vuonna 1814 se palasi, ja jumalattaren sauvaan lisättiin rautaristi ja Preussin kotka. Muurin aikana portti jäi rajavyöhykkeelle, ja joulukuussa 1989 se avattiin taas kulkijoille.",
+   "lyhyt": "Brandenburgin portin esikuvana oli Ateenan Akropoliin porttirakennus. Kun Yhdysvaltain presidentti John Kennedy vieraili Berliinissä vuonna 1963, neuvostoliittolaiset ripustivat portin pylväiden väliin suuret punaiset kankaat, jottei hän voisi katsoa portin läpi itään.",
    "syventava": "Miksi Napoleon vei Quadrigan Pariisiin?",
    "kysymykset": [
     "Kuka veisti portin katolla olevan Quadrigan?",
@@ -50,7 +50,11 @@
      "url": "https://en.wikipedia.org/wiki/Brandenburg_Gate"
     },
     {
-     "vaite": "Portti on Unter den Lindenin alkupää, joka johtaa entiselle kaupunkilinnalle ja tuomiokirkolle.",
+     "vaite": "Keskimmäisen kulkuaukon läpi sai kulkea vain kuninkaallinen perhe (ja vuosina 1814–1919 Pfuelin suku).",
+     "url": "https://en.wikipedia.org/wiki/Brandenburg_Gate"
+    },
+    {
+     "vaite": "Kun presidentti John F. Kennedy vieraili portilla vuonna 1963, neuvostoliittolaiset ripustivat portin eteen suuret punaiset kankaat, jotta hän ei voisi katsoa Itä-Berliiniin.",
      "url": "https://en.wikipedia.org/wiki/Brandenburg_Gate"
     },
     {
@@ -73,7 +77,7 @@
    "kuvaus": "Saksan liittopäivien talo",
    "luokka": "rakennus",
    "koko_m": 140,
-   "teksti": "Valtiopäivätalon katolla kimaltaa lasikupoli, jonka keskellä peileillä päällystetty kartio heijastaa päivänvaloa alas Saksan liittopäivien istuntosaliin. Paul Wallotin suunnittelema talo valmistui vuonna 1894, mutta päätykolmion omistuskirjoitus Saksan kansalle lisättiin vasta joulukuussa 1916, keskellä ensimmäistä maailmansotaa. Kun Norman Fosterin työryhmä alkoi uudistaa taloa vuonna 1995, seinien takaa paljastui neuvostosotilaiden vuonna 1945 kirjoittamia nimiä ja iskulauseita. Osa kirjoituksista jätettiin tarkoituksella näkyviin, ja liittopäivät kokoontuivat taloon jälleen vuonna 1999.",
+   "teksti": "Valtiopäivätalon katolla kimaltaa lasikupoli, jonka keskellä peileillä päällystetty kartio heijastaa päivänvaloa alas Saksan liittopäivien istuntosaliin. Paul Wallotin suunnittelema talo valmistui vuonna 1894, mutta omistuskirjoitus Saksan kansalle lisättiin pääportaalin yläpuolelle vasta joulukuussa 1916, keskellä ensimmäistä maailmansotaa. Kun Norman Fosterin työryhmä alkoi uudistaa taloa vuonna 1995, seinien takaa paljastui neuvostosotilaiden vuonna 1945 kirjoittamia nimiä ja iskulauseita. Osa kirjoituksista jätettiin tarkoituksella näkyviin, ja liittopäivät kokoontuivat taloon jälleen vuonna 1999.",
    "lyhyt": "Valtiopäivätalon istuntosali tuhoutui tulipalossa helmikuussa 1933, ja natsit syyttivät palosta kommunisteja. Kesällä 1995 taiteilijat Christo ja Jeanne-Claude käärivät koko talon hopeanhohtoiseen kankaaseen. Nykyään kupolin kahta kierreramppia pitkin pääsee kiertämään istuntosalin yläpuolelle.",
    "syventava": "Mitä neuvostosotilaat kirjoittivat seiniin?",
    "kysymykset": [
@@ -96,6 +100,10 @@
     {
      "vaite": "Kirjoitus Dem deutschen Volke kiinnitettiin pääportaalin yläpuolelle joulukuussa 1916.",
      "url": "https://www.bundestag.de/dokumente/textarchiv/2016/kw51-kalenderblatt-inschrift-reichstag-484614"
+    },
+    {
+     "vaite": "Omistuskirjoitus on länsiportaalin pääsisäänkäynnin arkkitraavissa, ei päätykolmiossa; kiinnitettiin 20.–24.12.1916.",
+     "url": "https://de.wikipedia.org/wiki/Reichstagsgeb%C3%A4ude"
     },
     {
      "vaite": "Neuvostosotilaiden vuoden 1945 kirjoitukset löytyivät, kun Fosterin tiimi aloitti työt vuonna 1995.",
@@ -130,7 +138,7 @@
    "luokka": "torni",
    "koko_m": 60,
    "teksti": "Berliinin televisiotorni kohoaa aivan Alexanderplatzin vieressä kolmensadankuudenkymmenenkahdeksan metrin korkeuteen ja on Saksan korkein rakennelma, joka näkyy lähes kaikkiin kaupunginosiin. Itä-Saksa rakensi tornin 1960-luvun jälkipuoliskolla vallan ja tekniikan symboliksi, ja sen pallo sai mallinsa Neuvostoliiton Sputnik-satelliitista. Kun aurinko paistaa pallon teräslaattoihin, niihin syntyy ristin muotoinen heijastus. Suunnittelijat eivät osanneet odottaa sitä, ja berliiniläiset alkoivat kutsua ilmiötä paavin kostoksi, sillä kirkkoja vierastanut valtio oli saanut keskustaansa ristin.",
-   "lyhyt": "Berliinin televisiotornin pallossa on näköalatasanne ja vähän sen yläpuolella ravintola, joka kiertää täyden kierroksen puolessa tunnissa. Torni aloitti koelähetykset lokakuussa 1969, ja virallisesti se vihittiin neljä päivää myöhemmin Itä-Saksan kansallispäivänä.",
+   "lyhyt": "Berliinin televisiotornin pallossa runsaan kahdensadan metrin korkeudessa on ravintola, joka kiertää täyden kierroksen puolessa tunnissa. Aluksi kierros kesti tunnin, mutta vuoden 1997 korjauksessa vauhti kaksinkertaistettiin. Yleisölle torni avattiin Itä-Saksan kansallispäivänä lokakuussa 1969.",
    "syventava": "Miksi heijastusta kutsutaan paavin kostoksi?",
    "kysymykset": [
     "Kuka suunnitteli Berliinin televisiotornin?",
@@ -158,11 +166,11 @@
      "url": "https://en.wikipedia.org/wiki/Fernsehturm_Berlin"
     },
     {
-     "vaite": "Pallossa näköalatasanne ja muutaman metrin sen yläpuolella ravintola, joka kiertää kerran puolessa tunnissa.",
+     "vaite": "Näköalatasanne on 203 metrin korkeudessa ja ravintola sen yläpuolella; ravintola kiertää kerran puolessa tunnissa, kun alun perin kierrokseen kului tunti; nopeus kaksinkertaistettiin vuoden 1997 kunnostuksessa.",
      "url": "https://en.wikipedia.org/wiki/Fernsehturm_Berlin"
     },
     {
-     "vaite": "Koelähetykset alkoivat 3. lokakuuta 1969, virallinen vihkiminen neljä päivää myöhemmin DDR:n kansallispäivänä.",
+     "vaite": "Ulbricht vihki tornin 3.10.1969, ja yleisö pääsi torniin 7.10.1969 eli DDR:n kansallispäivänä.",
      "url": "https://en.wikipedia.org/wiki/Fernsehturm_Berlin"
     },
     {
@@ -179,7 +187,7 @@
    "luokka": "muu",
    "koko_m": 1000,
    "teksti": "Museosaari on Spree-joen saaren pohjoispää, jolle on rakennettu viisi suurta museota Vanhasta museosta Bode-museoon saaren kärjessä. Kokonaisuus syntyi vähitellen noin sadassa vuodessa, ja vuodesta 1999 se on ollut Unescon maailmanperintökohde. Uudessa museossa on esillä kuningatar Nofretetin rintakuva, jonka saksalaiset arkeologit löysivät Egyptin Amarnasta vuonna 1912 kuvanveistäjän työpajan raunioista. Sodan jälkeen veistos kiersi Wiesbadenin ja Länsi-Berliinin kautta ja palasi Uuteen museoon vuonna 2009, kun David Chipperfieldin kunnostama rakennus avattiin.",
-   "lyhyt": "Museosaaren Pergamon-museo on ollut kokonaan suljettuna peruskorjauksen vuoksi vuodesta 2023, ja sen on määrä avautua osittain uudelleen vuonna 2027 ja kokonaan vasta noin vuonna 2037. Saaren uusi sisäänkäyntirakennus, James Simonin galleria, avattiin vuonna 2019.",
+   "lyhyt": "Museosaaren Pergamon-museon kuuluisin aarre on Pergamonin alttarin suuri kuvafriisi, jonka Puna-armeija vei sodan jälkeen Leningradiin. Friisi palasi Itä-Berliiniin vuonna 1959. Museo on nyt peruskorjauksen vuoksi suljettu, ja sen pohjoissiipi avautuu vuonna 2027.",
    "syventava": "Miten Nofretetin rintakuva löydettiin?",
    "kysymykset": [
     "Mitä museoita Museosaarella on?",
@@ -223,6 +231,14 @@
      "url": "https://en.wikipedia.org/wiki/Pergamon_Museum"
     },
     {
+     "vaite": "Pergamonin alttarin reliefit purettiin 1941 ja varastoitiin; Puna-armeija vei ne sotasaaliina Neuvostoliittoon, jossa ne olivat Eremitaasin varastossa Leningradissa vuoteen 1958; suuri osa palautettiin Itä-Saksaan vuonna 1959.",
+     "url": "https://en.wikipedia.org/wiki/Pergamon_Altar"
+    },
+    {
+     "vaite": "Museo on ollut kokonaan suljettuna lokakuusta 2023; pohjoissiipi avautuu vuonna 2027.",
+     "url": "https://en.wikipedia.org/wiki/Pergamon_Museum"
+    },
+    {
      "vaite": "Rintakuva vietiin sodan jälkeen Wiesbadenin keräyspisteeseen, palautettiin Länsi-Berliiniin 1956 ja palasi Uuteen museoon lokakuussa 2009.",
      "url": "https://en.wikipedia.org/wiki/Egyptian_Museum_of_Berlin"
     },
@@ -239,8 +255,8 @@
    "luokka": "kirkko",
    "koko_m": 90,
    "korkeus_m": 98,
-   "teksti": "Berliinin tuomiokirkon vihreä kupoli hallitsee Museosaaren eteläpäätä Spreen rannalla. Keisari Vilhelm toinen piti Karl Friedrich Schinkelin uusklassista kirkkoa liian vaatimattomana, joten se purettiin vuonna 1893, ja tilalle rakennettiin Julius Raschdorffin suunnittelema mahtipontinen kupolikirkko. Uusi kirkko vihittiin vuonna 1905, ja se oli Berliinin vastaus Rooman Pietarinkirkolle ja Lontoon Paavalinkatedraalille. Kirkon kellarissa on Hohenzollernien hautaholvi, jossa on lähes sata sukuun kuuluneiden arkkua ja hautamuistomerkkiä neljän vuosisadan ajalta.",
-   "lyhyt": "Berliinin tuomiokirkko vaurioitui pahoin toisessa maailmansodassa, ja se avattiin uudelleen vasta vuonna 1993, kun sisätilojen kalliit korjaukset valmistuivat. Kirkon suuret urut rakensi Wilhelm Sauerin urkutehdas vuonna 1905, ja niissä on yli seitsemäntuhatta pilliä.",
+   "teksti": "Berliinin tuomiokirkon vihreä kupoli hallitsee Museosaaren eteläpäätä Spreen rannalla. Keisari Vilhelm toinen piti vanhaa barokkikirkkoa, jonka Karl Friedrich Schinkel oli muuttanut uusklassiseksi, liian vaatimattomana, joten se purettiin vuonna 1893, ja tilalle rakennettiin Julius Raschdorffin suunnittelema mahtipontinen kupolikirkko. Uusi kirkko vihittiin vuonna 1905, ja se oli Berliinin vastaus Rooman Pietarinkirkolle ja Lontoon Paavalinkatedraalille. Kirkon kellarissa on Hohenzollernien hautaholvi, jossa on lähes sata arkkua ja hautamuistomerkkiä neljän vuosisadan ajalta.",
+   "lyhyt": "Berliinin tuomiokirkkoon osui toukokuussa 1944 palopommi, joka sytytti kupolin huipulla olevan lyhdyn, ja palava lyhty romahti kirkon lattialle. Pääsali vihittiin uudelleen vasta vuonna 1993. Kirkon suuret urut rakensi Wilhelm Sauerin urkutehdas, ja niissä on yli seitsemäntuhatta pilliä.",
    "syventava": "Keitä hautaholviin on haudattu?",
    "kysymykset": [
     "Miksi keisari halusi uuden tuomiokirkon?",
@@ -268,6 +284,14 @@
      "url": "https://aviewoncities.com/berlin/berlin-cathedral"
     },
     {
+     "vaite": "Paikalla oli Johann Boumann vanhemman barokkikirkko 1747–1750; Schinkel muutti sen sisä- ja ulkoasun uusklassiseksi 1817 ja 1820–1822; Boumannin rakennus purettiin 1893.",
+     "url": "https://en.wikipedia.org/wiki/Berlin_Cathedral"
+    },
+    {
+     "vaite": "24.5.1944 palavaa nestettä sisältänyt pommi osui kupolin lyhtyyn; tulta ei saatu sammumaan, lyhty paloi ja romahti pääkerrokseen; pääsali vihittiin uudelleen 6.6.1993.",
+     "url": "https://en.wikipedia.org/wiki/Berlin_Cathedral"
+    },
+    {
      "vaite": "Wilhelm Sauerin urkutehtaan urut vuodelta 1905, yli 7000 pilliä.",
      "url": "https://aviewoncities.com/berlin/berlin-cathedral"
     }
@@ -280,7 +304,7 @@
    "luokka": "muu",
    "koko_m": 1300,
    "teksti": "Maalauksin peitetty East Side Gallery on Berliinin muurin pisin säilynyt osuus, ja ylhäältä se erottuu kapeana värikkäänä nauhana Spreen rannassa Mühlenstraßen varrella. Muuria on jäljellä runsaan kilometrin matkalta, ja vuonna 1990 siihen maalasi teoksensa runsaat sata taiteilijaa kahdestakymmenestäyhdestä maasta. Tunnetuin niistä on venäläisen Dmitri Vrubelin maalaus, jossa Neuvostoliiton johtaja Leonid Brežnev ja Itä-Saksan johtaja Erich Honecker suutelevat. Se jäljittelee valokuvaa, joka otettiin Itä-Berliinissä vuonna 1979 Itä-Saksan kolmekymmenvuotisjuhlissa.",
-   "lyhyt": "Säälle ja töhryille alttiin East Side Galleryn maalaukset kärsivät vuosien mittaan, ja vuonna 2009 Vrubelin suudelma pyyhittiin muurista. Taiteilija maalasi sen uudelleen. Teoksen nimi on Jumala, auta minua selviytymään tästä kuolettavasta rakkaudesta.",
+   "lyhyt": "Säästä ja töhryistä kärsineet East Side Galleryn maalaukset uusittiin vuonna 2009, mutta kahdeksan alkuperäistä taiteilijaa kieltäytyi maalaamasta teostaan toiseen kertaan. Heidän työnsä oli pyyhitty pois, ja he vaativat tekijänoikeuksiaan, kun kuvia jäljennettiin ilman lupaa.",
    "syventava": "Miksi Brežnev ja Honecker suutelevat?",
    "kysymykset": [
     "Miksi juuri tämä muurin osa säilyi?",
@@ -314,6 +338,10 @@
     {
      "vaite": "Teoksen nimi: Mein Gott, hilf mir, diese tödliche Liebe zu überleben.",
      "url": "https://en.wikipedia.org/wiki/My_God,_Help_Me_to_Survive_This_Deadly_Love"
+    },
+    {
+     "vaite": "Kunnostus alkoi toukokuussa 2009; kahdeksan vuoden 1990 taiteilijaa kieltäytyi maalaamasta teostaan uudelleen sen jälkeen kun alkuperäiset oli tuhottu, ja he perustivat tekijänoikeuksiaan ajavan ryhmän, koska kuvia jäljennettiin ilman lupaa.",
+     "url": "https://en.wikipedia.org/wiki/East_Side_Gallery"
     }
    ]
   },
@@ -324,7 +352,7 @@
    "luokka": "muu",
    "koko_m": 100,
    "teksti": "Kylmän sodan tunnetuin rajanylityspaikka Checkpoint Charlie oli Friedrichstraßella Neuvostoliiton ja Yhdysvaltain miehitysvyöhykkeiden rajalla. Nimi tulee kirjaimesta C, sillä se oli liittoutuneiden kolmas tarkastuspiste, ja sen kautta kulkivat ulkomaalaiset, diplomaatit ja liittoutuneiden sotilaat. Lokakuussa 1961 amerikkalaiset ja neuvostoliittolaiset panssarivaunut seisoivat täällä tykit toisiaan kohti noin sadan metrin päässä toisistaan. Jännitys laukesi, kun Kennedy ja Hruštšov sopivat salaisia kanavia pitkin, että kumpikin osapuoli vetää vaununsa vähitellen pois.",
-   "lyhyt": "Entisen rajapaikan kohdalla seisoo nykyään jäljennös Checkpoint Charlien vartiokopista, ja alkuperäinen koppi on liittoutuneiden museossa. Läheisellä Zimmerstraßella muistopylväs kertoo Peter Fechteristä, joka ammuttiin pakoyrityksessä vuonna 1962 ja joka vuoti kuiviin rajavyöhykkeellä kenenkään auttamatta.",
+   "lyhyt": "Entisen rajapaikan kohdalla seisoo nykyään jäljennös Checkpoint Charlien vartiokopista, ja viimeinen aito koppi on liittoutuneiden museossa Zehlendorfissa. Läheisellä Zimmerstraßella muistopylväs kertoo Peter Fechteristä, joka ammuttiin pakoyrityksessä vuonna 1962 ja joka vuoti kuiviin rajavyöhykkeellä kenenkään auttamatta.",
    "syventava": "Miksi panssarivaunut seisoivat vastakkain?",
    "kysymykset": [
     "Miksi rajapaikkaa kutsuttiin Charlieksi?",
@@ -354,6 +382,10 @@
     {
      "vaite": "Paikalla jäljennös vartiokopista, alkuperäinen liittoutuneiden museossa Zehlendorfissa.",
      "url": "https://aviewoncities.com/berlin/checkpoint-charlie"
+    },
+    {
+     "vaite": "Liittoutuneiden museo Zehlendorfin Clayalleella esittelee Checkpoint Charlien viimeisen vartiokopin (the last guardhouse of Checkpoint Charlie).",
+     "url": "https://www.alliiertenmuseum.de/en/"
     },
     {
      "vaite": "Peter Fechter ammuttiin 17.8.1962 Zimmerstraßella, vuoti kuiviin ilman apua; muistopylväs Zimmerstraßella.",
@@ -488,21 +520,25 @@
    "kuvaus": "Lasitornien ympäröimä uusi keskusaukio",
    "luokka": "aukio",
    "koko_m": 400,
-   "teksti": "Uudelleen rakennettu Potsdamer Platz on lasisten pilvenpiirtäjien ympäröimä aukio, ja ylhäältä Sony Centerin teltan muotoinen lasikatto erottuu kuin jättimäinen sateenvarjo. Vuonna 1924 aukiolle pystytettiin Euroopan ensimmäinen liikennevalotorni, viisikulmainen ja kahdeksan metriä korkea, ja sen jäljennös seisoo lähellä alkuperäistä paikkaa. Ennen sotaa aukio oli Euroopan vilkkaimpia, mutta muurin aikana siitä tuli joutomaata rajavyöhykkeellä. Muurin murruttua alueesta tuli vuosiksi Euroopan suurin rakennustyömaa, jolle muun muassa Renzo Piano ja Helmut Jahn suunnittelivat kokonaisia kortteleita.",
+   "teksti": "Uudelleen rakennettu Potsdamer Platz on lasisten pilvenpiirtäjien ympäröimä aukio, ja ylhäältä entisen Sony Centerin teltan muotoinen lasikatto erottuu kuin jättimäinen sateenvarjo. Vuonna 1924 aukiolle pystytettiin Euroopan ensimmäinen liikennevalotorni, viisikulmainen ja kahdeksan metriä korkea, ja sen jäljennös seisoo lähellä alkuperäistä paikkaa. Ennen sotaa aukio oli Euroopan vilkkaimpia, mutta muurin aikana siitä tuli joutomaata rajavyöhykkeellä. Muurin murruttua alueesta tuli vuosiksi Euroopan suurin rakennustyömaa, jolle muun muassa Renzo Piano ja Helmut Jahn suunnittelivat kokonaisia kortteleita.",
    "lyhyt": null,
    "syventava": "Miltä aukio näytti ennen sotaa?",
    "kysymykset": [
     "Miksi aukiolle rakennettiin liikennevalotorni?",
     "Miltä aukio näytti muurin aikana?",
-    "Kuka suunnitteli Sony Centerin katon?",
+    "Kuka suunnitteli teltan muotoisen lasikaton?",
     "Mitä aukiolla tapahtuu Berlinalen aikana?",
-    "Mitä Sony Centerin katon alla on?"
+    "Mitä teltan muotoisen katon alla on?"
    ],
    "isoisa": false,
    "lahteet": [
     {
      "vaite": "Sony Centerin teltan muotoinen lasikatto, suunnittelija Helmut Jahn.",
      "url": "https://www.nh-hotels.com/it/guide-di-viaggio/berlino/potsdamer-platz"
+    },
+    {
+     "vaite": "Sony Center menetti nimensä: omistajat Oxford Properties ja Norges Bank nimesivät korttelin uudelleen keväällä 2023, joten Sony Center on entinen nimi; Helmut Jahn suunnitteli alkuperäisen rakennuksen.",
+     "url": "https://www.oxfordproperties.com/news/oxford-properties-and-norges-bank-rename-berlins-sony-center-as-part-of-200-million-repositioning"
     },
     {
      "vaite": "15.12.1924 otettiin käyttöön viisikulmainen, kahdeksanmetrinen liikennetorni, Euroopan ensimmäinen puoliautomaattinen liikennevalotorni; jäljennös vuodesta 2000 lähellä alkuperäistä paikkaa.",
@@ -524,7 +560,7 @@
    "kuvaus": "Konserttitalon ja kahden kirkon tori",
    "luokka": "aukio",
    "koko_m": 250,
-   "teksti": "Kolmen suuren rakennuksen kehystämä Gendarmenmarkt on tori, jonka keskellä seisoo Karl Friedrich Schinkelin suunnittelema konserttitalo ja sen molemmin puolin kaksi lähes samannäköistä kupolikirkkoa. Ranskalainen kirkko rakennettiin Ranskasta paenneille hugenoteille, ja saksalainen kirkko seisoo sitä vastapäätä. Carl von Gontard lisäsi kummankin viereen samanlaisen kupolitornin 1780-luvulla, ja siksi niitä kutsutaan tuomiokirkoiksi, vaikka nimitys viittaa vain kupoliin. Torin nimi tulee Gens d'armes -rykmentistä, jonka vartiotalo ja tallit olivat täällä 1700-luvulla.",
+   "teksti": "Kolmen suuren rakennuksen kehystämä Gendarmenmarkt on tori, jonka länsilaidalla seisoo Karl Friedrich Schinkelin suunnittelema konserttitalo ja sen molemmin puolin kaksi lähes samannäköistä kupolikirkkoa. Ranskalainen kirkko rakennettiin Ranskasta paenneille hugenoteille, ja saksalainen kirkko seisoo sitä vastapäätä. Carl von Gontard lisäsi kummankin viereen samanlaisen kupolitornin 1780-luvulla, ja siksi niitä kutsutaan tuomiokirkoiksi, vaikka nimitys viittaa vain kupoliin. Torin nimi tulee Gens d'armes -rykmentistä, jonka vartiotalo ja tallit olivat täällä 1700-luvulla.",
    "lyhyt": null,
    "syventava": "Keitä hugenotit olivat?",
    "kysymykset": [
@@ -539,6 +575,10 @@
     {
      "vaite": "Toria kehystävät saksalainen ja ranskalainen kirkko sekä konserttitalo.",
      "url": "https://berlin.de/en/attractions-and-sights/3560277-3104052-gendarmenmarkt.en.html"
+    },
+    {
+     "vaite": "Ranskalainen kirkko on torin pohjoispäässä, saksalainen kirkko eteläpäässä ja konserttitalo torin länsilaidalla; torin oma peruskorjaus valmistui maaliskuussa 2025.",
+     "url": "https://de.wikipedia.org/wiki/Gendarmenmarkt"
     },
     {
      "vaite": "Konserttitalon suunnitteli Karl Friedrich Schinkel 1821.",
@@ -564,14 +604,14 @@
    "kuvaus": "Kaksikerroksinen punatiilinen silta",
    "luokka": "silta",
    "koko_m": 160,
-   "teksti": "Kaksikerroksinen Oberbaumbrücke ylittää Spreen punatiilisenä, ja ylhäältä sen kahden tornin välissä erottuu yläkannella kulkeva metrorata. Arkkitehti Otto Stahn viimeisteli sillan vuonna 1896 pohjoissaksalaiseen tiiligotiikkaan, ja tornien esikuvana oli Prenzlaun kaupungin keskiaikainen porttitorni. Muurin aikana raja kulki sillan kohdalla, ja vuodesta 1963 silta oli rajanylityspaikka, jonka kautta vain länsiberliiniläiset jalankulkijat pääsivät itään. Nykyään se yhdistää Friedrichshainin ja Kreuzbergin kaupunginosat, ja sen vieressä joessa on vuodesta 1999 seissyt Jonathan Borofskyn kolmenkymmenen metrin korkuinen Molekyylimies-veistos.",
+   "teksti": "Kaksikerroksinen Oberbaumbrücke ylittää Spreen punatiilisenä, ja ylhäältä sen kahden tornin välissä erottuu yläkannella kulkeva metrorata. Silta rakennettiin vuonna 1896 Otto Stahnin suunnitelmien mukaan pohjoissaksalaiseen tiiligotiikkaan, ja tornien esikuvana oli Prenzlaun kaupungin keskiaikainen porttitorni. Muurin aikana raja kulki sillan kohdalla, ja vuodesta 1963 silta oli rajanylityspaikka, jonka kautta vain länsiberliiniläiset jalankulkijat pääsivät itään. Nykyään se yhdistää Friedrichshainin ja Kreuzbergin kaupunginosat, ja sen lähellä joessa on vuodesta 1999 seissyt Jonathan Borofskyn kolmenkymmenen metrin korkuinen veistos Molecule Men, jossa kolme hahmoa sulautuu toisiinsa.",
    "lyhyt": null,
-   "syventava": "Mitä Molekyylimies-veistos esittää?",
+   "syventava": "Mitä Molecule Men -veistos esittää?",
    "kysymykset": [
     "Miksi sillalla on kaksi kerrosta?",
     "Mistä silta on saanut nimensä?",
     "Mitä sillalla tapahtui muurin aikana?",
-    "Mitä Molekyylimies-veistos esittää?",
+    "Miksi sillan tornit muistuttavat kaupunginporttia?",
     "Milloin metro alkoi kulkea sillan yli?"
    ],
    "isoisa": false,
@@ -589,7 +629,7 @@
      "url": "https://en.wikipedia.org/wiki/Oberbaum_Bridge"
     },
     {
-     "vaite": "Borofskyn noin 30-metrinen Molecule Man -veistos on seissyt joessa sillan lähellä vuodesta 1999.",
+     "vaite": "Jonathan Borofskyn noin 30-metrinen teos Molecule Men on seissyt Spreessä Oberbaumbrücken lähellä vuodesta 1999; siinä on kolme toisiinsa sulautuvaa hahmoa, ja se seisoo Treptowin, Kreuzbergin ja Friedrichshainin rajakohdassa.",
      "url": "https://www.visitberlin.de/en/molecule-men"
     }
    ]
@@ -685,7 +725,7 @@
    "kuvaus": "Euroopan suurin tornirautatieasema",
    "luokka": "rakennus",
    "koko_m": 400,
-   "teksti": "Berliinin päärautatieaseman lasikatto erottuu ylhäältä Spreen pohjoispuolella pitkänä kaarevana holvina. Aseman suunnitteli hampurilainen arkkitehtitoimisto von Gerkan, Marg ja kumppanit. Asema avattiin toukokuussa 2006 vanhan Lehrter Bahnhofin paikalle, ja se on Euroopan suurin tornirautatieasema, jossa radat kulkevat eri kerroksissa ristikkäin. Rakennuttaja pyysi lyhentämään lasikattoa noin sadalla metrillä, jotta työt saataisiin päätökseen aiemmin. Runsas puoli vuotta avajaisten jälkeen Kyrill-myrsky repi julkisivusta irti teräspalkin, joka putosi neljäkymmentä metriä alas portaikkoon, ja muut palkit hitsattiin kiinni.",
+   "teksti": "Berliinin päärautatieaseman lasikatto erottuu ylhäältä Spreen pohjoispuolella pitkänä kaarevana holvina. Aseman suunnitteli hampurilainen arkkitehtitoimisto von Gerkan, Marg ja kumppanit. Asema avattiin toukokuussa 2006 vanhan Lehrter Bahnhofin paikalle, ja se on Euroopan suurin tornirautatieasema, jossa radat kulkevat eri kerroksissa ristikkäin. Rautatieyhtiö lyhensi lasikattoa suunnitellusta runsaalla sadalla metrillä, jotta asema valmistuisi ajoissa jalkapallon maailmanmestaruuskisoihin. Runsas puoli vuotta avajaisten jälkeen Kyrill-myrsky repi julkisivusta irti teräspalkin, joka putosi neljäkymmentä metriä alas portaikkoon, ja muut palkit hitsattiin kiinni.",
    "lyhyt": null,
    "syventava": "Miksi palkki pääsi putoamaan myrskyssä?",
    "kysymykset": [
@@ -706,12 +746,20 @@
      "url": "https://en.wikipedia.org/wiki/Berlin_Hauptbahnhof"
     },
     {
-     "vaite": "Euroopan suurin tornirautatieasema, radat risteävät eri tasoilla.",
+     "vaite": "Rakenteellisesti koko asema on tornirautatieasema, jossa radat risteävät eri tasoilla.",
      "url": "https://en.wikipedia.org/wiki/Berlin_Hauptbahnhof"
     },
     {
-     "vaite": "Lasikattoa lyhennettiin noin sata metriä tilaajan pyynnöstä, jolloin työt valmistuivat aiemmin.",
-     "url": "https://www.wikipedia.org/wiki/Berlin_Hbf"
+     "vaite": "Berliinin päärautatieasema on Euroopan suurin tornirautatieasema.",
+     "url": "https://www.berlinstadtservice.de/xinh/Hauptbahnhof_Berlin.html"
+    },
+    {
+     "vaite": "Hallin lasikatto lyhennettiin suunnitellusta 454,6 metristä 321 metriin eli noin 133 metriä; syyksi ilmoitettiin vuoden 2006 maailmanmestaruuskisojen aikataulu ja säästöt.",
+     "url": "https://de.wikipedia.org/wiki/Berlin_Hauptbahnhof"
+    },
+    {
+     "vaite": "Lasikattoa lyhennettiin noin sata metriä rakentamisen nopeuttamiseksi.",
+     "url": "https://en.wikipedia.org/wiki/Berlin_Hauptbahnhof"
     },
     {
      "vaite": "Kyrill-myrsky irrotti tammikuussa 2007 palkkeja; 1,35 tonnin palkki putosi 40 metriä portaikkoon; muut palkit varmistettiin hitsaamalla.",
