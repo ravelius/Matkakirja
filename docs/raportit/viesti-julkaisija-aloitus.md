@@ -1,4 +1,4 @@
-# Julkaisijan aloitusviesti (7.10.2026 klo 16.2x, tilinvaihto illalla)
+# Julkaisijan aloitusviesti (7.10.2026 klo 23.4x, tilinvaihto)
 
 Olet Julkaisija, checkout /Users/Shared/Claude/Matkakirja-julkaisija. Lue luovutus suoraan origin-haarasta:
 `git fetch origin && git show origin/julkaisija-luovutus-20260928:docs/raportit/viesti-julkaisija-luovutus-20261007.md`
@@ -14,15 +14,11 @@ junalle (Natiiviseppä), TF:lle ja etukäteen ilmoitetulle vianselvitykselle; si
 enintään 2 TF-junaa päivässä ellei omistaja toisin pyydä.
 
 Ensimmäisenä:
-1. **TF 162** (omistajan pyyntö: testaajilla ~22.00). Jos se on kesken: `tail julkaisija-tyokalut/tf162-ketju.log`
-   (tai tf161-kaavalla tehty skripti) ja `gh run list --workflow proto3d-testflight.yml -L 3`. BUILD-SHA ja muutosloki-PR
-   näkyvät tf-jono-lokissa. Mac TF 162 -lupa on annettu Natiivisepälle etukäteen.
-2. **Ulkoinen TF 161** (Arvioijat): `tail julkaisija-tyokalut/ulkoinen161-uusinta.log` (422, 160 katselmoinnissa, uusinta
-   10 min välein setsid). Jos 162 on jo ladattu, ulkoiseen ryhmään kannattaa lähettää 162.
-3. **S2-kevät-vienti** (6 osaa, lokit proto-3d/lokit/julkaisija-vienti-s2kevat-6osa*.log) → kaikki "viety …, virheitä 0" →
-   `curl -s -o /dev/null -w '%{http_code}' https://media.matkakirja.app/linssit/astronautin-kamera/s2-eurooppa/kevat/v1/laatat.json?t=$(date +%s)`
-   → Karttasepälle.
-4. **Merge-odottajat**: #4147 (apurahakortti valmiitLinssit → Pelikoodarille kun julki), #4150 (Päätoimittajan loki).
-   Tarkista `gh pr view 4147` / `4150`; odotusehdossa vaadi kaikki tarkistukset COMPLETED ja SUCCESS (tyhjä conclusion ≠ valmis).
-5. **Vuorot**: `cat /tmp/matkakirja-kaannospalvelu.lukko/kuka` ja `xcrun simctl list devices booted`. Rajat: päivällä 2 simua,
-   yöllä 1; käännökset ≥ 36 Gi, simut ≥ 30 Gi.
+1. Lue luovutuksen alimmat osiot "23.2x" ja "23.4x". TF 163 on sisäisillä (iOS + Mac); ulkoinen vain omistajan kuittauksella
+   (komento luovutuksessa). Build 162 irrotettu ulkoisesta ryhmästä.
+2. **Juna 164**: Natiiviseppä kokoaa; TF 164 aikaisintaan 8.10. aamulla (max 2 TF-junaa/pv). Työkalut: muutosloki-PR (tai
+   julkaisija-tyokalut/muutosloki-api.sh, jos git push antaa HTTP 500) → julkaisija-tyokalut/tf-kaynnista.sh <N> <proto SHA>
+   <muutosloki SHA> (ketjupohja tf-ketju-pohja.sh; lippu tf<N>-ei-ulkoista katkaisee ennen ulkoista).
+3. **Vuorot**: `cat /tmp/matkakirja-kaannospalvelu.lukko/kuka` ja `xcrun simctl list devices booted`. Yöllä 1 simu, päivällä 2.
+   KÄÄNNÖS NYT vain junalle, TF:lle ja ilmoitetulle vianselvitykselle (omistaja 16.0x).
+4. **Merge-odotus**: vaadi `statusCheckRollup|length == 2`, kaikki COMPLETED + SUCCESS (keskeneräisellä tyhjä conclusion).

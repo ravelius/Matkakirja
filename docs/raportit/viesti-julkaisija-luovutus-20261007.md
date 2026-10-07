@@ -143,3 +143,10 @@ Päätoimittaja = "PÄÄTOIMITTAJA (Opus, max)".
   (422 ANOTHER_BUILD_IN_REVIEW = 160 yhä katselmoinnissa → silmukka ulkoinen162-uusinta.sh-mallilla).
 - Build 162 irrotettu Arvioijat-ryhmästä (#4173 + #4174, ajo 37679830602). Vain sisäisille.
 - Avoimia taustaajoja ei ole (S2-kevät valmis, TF-ketjut valmiit).
+
+## 23.4x — VAIHTO NYT (lopullinen)
+- Käynnissä vaihtohetkellä: LS1:n simuajo (juna 164 -koe 08188463, 60 s video Päätoimittajalle, iPad 3A3E4671) — odota
+  "simu vapaa". Junaa 164 kootaan (Natiiviseppä); TF 164 vasta 8.10. (omistaja: max 2 TF-junaa/pv). Mahdollisesti Karttasepän
+  talvi2d-ajo omana taustaprosessinaan (ei Julkaisijan).
+- Omat taustaajot: ei yhtään (TF 162/163 -ketjut ja varalaukaisut valmiit, tf162/163-kaynnistetty-liput olemassa).
+- TF 163: ulkoinen vain omistajan kuittauksella (ks. 23.2x). Build 162 vain sisäisille.
