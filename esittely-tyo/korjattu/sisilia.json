@@ -38,12 +38,12 @@
      "url": "https://assets.atlasobscura.com/places/arabic-inscription-of-palermo-cathedral"
     },
     {
-     "vaite": "Fredrik II lepää porfyyrisarkofagissa; Roger II teetti sarkofagit ennen 1145, ja Fredrik II siirsi ne katedraaliin.",
-     "url": "https://turismo.cittametropolitana.pa.it/the-cathedral/?lang=en"
+     "vaite": "Roger II teetti ennen 1145 kaksi porfyyrisarkofagia Cefalùn katedraaliin, toisen omaksi haudakseen; Fredrik II siirsi ne Palermon katedraaliin ja varasi toisen itselleen.",
+     "url": "https://www.smarteducationunescosicilia.it/?p=48186"
     },
     {
-     "vaite": "Pyhän Rosalian kappelin hopeinen jäännösarkku valmistettiin 1631–1637 Mariano Smiriglion suunnitelman mukaan.",
-     "url": "https://turismo.cittametropolitana.pa.it/the-cathedral/?lang=en"
+     "vaite": "Pyhän Rosalian kappelin hopeinen jäännösarkku tehtiin 1631 alkaen Mariano Smiriglion suunnitelman mukaan.",
+     "url": "https://www.smarteducationunescosicilia.it/?p=48250"
     },
     {
      "vaite": "Katedraalin meridiaanin rakensi tähtitieteilijä Giuseppe Piazzi vuonna 1801.",
@@ -106,7 +106,7 @@
    "luokka": "rakennus",
    "koko_m": 200,
    "teksti": "Normannien palatsi on laaja kivilinna vanhan keskustan länsilaidalla, ja sen sisällä on kuuluisa Palatiinikappeli. Rakentaminen alkoi 800-luvulla arabivallan aikana, ja normannit laajensivat palatsia vuodesta 1072 alkaen; sitä pidetään Euroopan vanhimpana kuninkaallisena asuntona. Vuodesta 1946 siellä on kokoontunut Sisilian aluehallinnon parlamentti, joten palatsi on yhä vallan keskus. Palatsin Pisana-torniin perustettiin vuonna 1790 tähtitorni, josta pappi ja tähtitieteilijä Giuseppe Piazzi löysi vuoden 1801 ensimmäisenä päivänä kääpiöplaneetta Cereksen, Sisilian suojelijajumalattaren mukaan nimetyn.",
-   "lyhyt": "Normannien palatsi oli Hauteville-suvun normannikuninkaiden asunto ja myöhemmin myös keisari Fredrik toisen hallitsijanistuin. Kuninkaalliset huoneistot ovat yleisön nähtävissä silloin, kun Sisilian parlamentti ei ole koolla. Palatsi kappeleineen kuuluu Unescon maailmanperintöluetteloon.",
+   "lyhyt": "Normannien palatsista hallinneen keisari Fredrik toisen hovissa runoilijat alkoivat 1230-luvulla kirjoittaa rakkausrunoja omalla kansankielellään, ja niistä kasvoi ensimmäinen italialainen kirjakieli. Hovin notaarin Giacomo da Lentinin uskotaan keksineen sonetin, runomuodon, jota Dante ja Petrarca myöhemmin hioivat.",
    "syventava": "Miten Ceres löydettiin palatsin tornista?",
    "kysymykset": [
     "Kuka rakensi palatsin ensimmäisenä?",
@@ -126,20 +126,28 @@
      "url": "https://en.wikipedia.org/wiki/Palazzo_dei_Normanni"
     },
     {
-     "vaite": "Vuodesta 1946 Sisilian aluehallinnon parlamentin istuin; kuninkaalliset huoneistot avoinna, kun parlamentti ei istu.",
-     "url": "https://en.wikipedia.org/wiki/Palazzo_dei_Normanni"
-    },
-    {
-     "vaite": "Sisilian kuninkaiden asunto ja Fredrik II:n ja Konrad IV:n keisarillinen istuin; Unescon maailmanperintöä.",
-     "url": "https://en.wikipedia.org/wiki/Palazzo_dei_Normanni"
-    },
-    {
      "vaite": "Tähtitorni perustettiin 1790 palatsin Torre Pisanaan.",
      "url": "https://www.media.inaf.it/2023/07/18/affresco-cerere-santa-ninfa/"
     },
     {
      "vaite": "Giuseppe Piazzi, pappi ja tähtitieteilijä, löysi Cereksen 1.1.1801 Palermon tähtitornista; nimi Sisilian suojelijajumalattaren mukaan.",
      "url": "https://en.wikipedia.org/wiki/Giuseppe_Piazzi"
+    },
+    {
+     "vaite": "Palatsi oli normannikuninkaiden ja Fredrik II:n hallitsijanistuin.",
+     "url": "https://en.wikipedia.org/wiki/Palazzo_dei_Normanni"
+    },
+    {
+     "vaite": "Sisilialainen runoilijakoulu toimi Fredrik II:n hovissa 1230–1266 ja loi ensimmäisen italialaisen kirjakielen kansankielen pohjalta; Dante tunnusti sen merkityksen.",
+     "url": "https://en.wikipedia.org/wiki/Sicilian_School"
+    },
+    {
+     "vaite": "Giacomo (Jacopo) da Lentini oli notaari Fredrik II:n hovissa, ja hänen katsotaan keksineen sonetin.",
+     "url": "https://en.wikipedia.org/wiki/Giacomo_da_Lentini"
+    },
+    {
+     "vaite": "Vuodesta 1946 Sisilian aluehallinnon parlamentin istuin.",
+     "url": "https://en.wikipedia.org/wiki/Palazzo_dei_Normanni"
     }
    ]
   },
@@ -277,8 +285,8 @@
    "kuvaus": "Kolmen punaisen kupolin kirkko",
    "luokka": "kirkko",
    "koko_m": 25,
-   "teksti": "San Cataldon kirkko on ylhäältä helppo tunnistaa: kuution muotoisen kivirakennuksen katolla on rivissä kolme pientä punaista kupolia. Kirkon perusti 1150-luvulla Maio Barilainen, kuningas Vilhelm ensimmäisen kansleri, mutta hänet murhattiin vuonna 1160, ja työt jäivät luultavasti siksi kesken. Sisäseinät ovat yhä paljaat, vaikka lattia on koristeltu värikkäin marmorikuvioin. Ulkoseinien yläosaa kiertää pitsimäinen kivifriisi, joka kertoo arabialaisen rakennustaiteen vaikutuksesta. Sisällä laivoja erottavat pylväät ja niiden kapiteelit on otettu uudelleen käyttöön vanhemmista rakennuksista.",
-   "lyhyt": "San Cataldon kirkko on kuulunut 1930-luvulta lähtien Pyhän haudan ritarikunnalle. Vuonna 2015 se liitettiin Unescon maailmanperintöluetteloon osana Palermon arabialais-normannilaisten rakennusten sarjaa, johon kuuluu yhdeksän kohdetta. Kirkko on Bellinin aukiolla aivan Martoranan kirkon vieressä.",
+   "teksti": "San Cataldon kirkko on ylhäältä helppo tunnistaa: kuution muotoisen kivirakennuksen katolla on rivissä kolme pientä punaista kupolia. Kirkon perusti 1150-luvulla Maio Barilainen, kuningas Vilhelm ensimmäisen suuramiraali, mutta hänet murhattiin vuonna 1160, ja työt jäivät luultavasti siksi kesken. Sisäseinät ovat yhä paljaat, vaikka lattia on koristeltu värikkäin marmorikuvioin. Ulkoseinien yläosaa kiertää pitsimäinen kivifriisi, joka kertoo arabialaisen rakennustaiteen vaikutuksesta. Sisällä laivoja erottavat pylväät ja niiden kapiteelit on otettu uudelleen käyttöön vanhemmista rakennuksista.",
+   "lyhyt": "San Cataldon kirkossa toimi vuodesta 1787 Palermon kuninkaallinen posti, ja 1800-luvun alussa sen ympärille rakennettiin postitalo, joka kätki kirkon kokonaan sisäänsä. Vasta 1880-luvulla lisärakennukset purettiin, ja keskiaikainen kirkko kupoleineen tuli taas esiin.",
    "syventava": "Miksi Maio Barilainen murhattiin?",
    "kysymykset": [
     "Kuka oli pyhä Cataldo?",
@@ -294,7 +302,7 @@
      "url": "https://www.oessh.va/content/ordineequestresantosepolcro/en/nelle-luogotenenze/le-chiese-dell-ordine/la-chiesa-di-san-cataldo-a-palermo.html"
     },
     {
-     "vaite": "Rakennutti 1154–1160 Maio Barilainen, Vilhelm I:n suuramiraali ja kansleri; hänen kuolemansa 1160 luultavasti keskeytti työt (paljas sisätila).",
+     "vaite": "Rakennutti 1154–1160 Maio Barilainen Vilhelm I:n suuramiraalina; hänen kuolemansa 1160 luultavasti keskeytti työt (paljas sisätila).",
      "url": "https://www.oessh.va/content/ordineequestresantosepolcro/en/nelle-luogotenenze/le-chiese-dell-ordine/la-chiesa-di-san-cataldo-a-palermo.html"
     },
     {
@@ -314,12 +322,12 @@
      "url": "https://en.wikipedia.org/wiki/Church_of_San_Cataldo"
     },
     {
-     "vaite": "Kuuluu 1930-luvulta Pyhän haudan ritarikunnalle; Unescon maailmanperintöä 2015.",
-     "url": "https://en.wikipedia.org/wiki/Church_of_San_Cataldo"
+     "vaite": "Maio Barilainen oli Vilhelm I:n suuramiraali 1154–1160 (kansleri jo 1152); hänet murhattiin 10.11.1160.",
+     "url": "https://en.wikipedia.org/wiki/Maio_of_Bari"
     },
     {
-     "vaite": "Unescon kohde Arab-Norman Palermo käsittää yhdeksän rakennusta.",
-     "url": "https://en.wikipedia.org/wiki/Monreale_Cathedral"
+     "vaite": "Vuonna 1787 kirkkoon perustettiin kuninkaallisen postin toimisto; 1800-luvun alussa ympärille rakennettiin postin päärakennus, joka nielaisi kappelin kokonaan; Patricolo purki lisärakennukset 1882–1885.",
+     "url": "https://www.balarm.it/news/quell-intrigante-atmosfera-divenuta-simbolo-di-palermo-l-imponente-san-cataldo-111930"
     }
    ]
   },
@@ -329,12 +337,12 @@
    "kuvaus": "Viiden punaisen kupolin kirkko",
    "luokka": "kirkko",
    "koko_m": 60,
-   "teksti": "Erakkojen kirkko San Giovanni degli Eremiti näkyy ylhäältä viitenä punaisena kupolina palmujen ja appelsiinipuiden keskellä. Paavi Gregorius Suuri perusti paikalle benediktiiniluostarin vuonna 581, mutta 800-luvulla saaren vallanneet muslimit tuhosivat sen ja rakensivat tilalle moskeijan. Vuonna 1132 kuningas Roger toinen vihki rakennuksen jälleen kirkoksi. Kupolien kirkas puna ei silti ole keskiaikainen: restauroija Giuseppe Patricolo löysi 1800-luvun lopulla kupoleista punaisen rappauksen kappaleita ja maalasi ne kaikki punaisiksi.",
-   "lyhyt": "Erakkojen kirkon parhaiten säilynyt osa on vanhan luostarin ristikäytävä, jonka teräväkaaria kantavat pienet kaksoispylväät kasviaihein koristeltuine kapiteeleineen. Muurien suojaamassa puutarhassa kasvaa appelsiinipuita, korkeita palmuja ja viikunakaktuksia, ja sieltä näkyvät kupolit lähietäisyydeltä.",
+   "teksti": "Erakkojen kirkko San Giovanni degli Eremiti näkyy ylhäältä viitenä punaisena kupolina palmujen ja appelsiinipuiden keskellä. Perimätiedon mukaan paikalle perusti luostarin jo 500-luvulla Gregorius Suuri, myöhempi paavi, mutta 800-luvulla saaren vallanneet muslimit tuhosivat sen. Kuningas Roger toinen rakennutti nykyisen kirkon 1130-luvulla ja antoi sen munkkien hoitoon. Kupolien kirkas puna ei silti ole keskiaikainen: restauroija Giuseppe Patricolo löysi 1800-luvun lopulla kupoleista punaisen rappauksen kappaleita ja maalasi ne kaikki punaisiksi.",
+   "lyhyt": "Erakkojen kirkon parhaiten säilynyt osa on vanhan luostarin ristikäytävä, jonka teräväkaaria kantavat pienet kaksoispylväät kasviaihein koristeltuine kapiteeleineen. Ristikäytävän puutarhassa on yhä arabiaikainen vesisäiliö, ja sieltä kirkon punaiset kupolit näkyvät aivan läheltä.",
    "syventava": "Kuka maalasi kupolit punaisiksi?",
    "kysymykset": [
     "Keitä olivat kirkon nimen erakot?",
-    "Miltä rakennus näytti moskeijana?",
+    "Mitä paikalla oli ennen nykyistä kirkkoa?",
     "Kuka oli Gregorius Suuri?",
     "Miksi muslimit hallitsivat Sisiliaa?",
     "Mitä ristikäytävän pylväisiin on kaiverrettu?"
@@ -350,12 +358,16 @@
      "url": "https://www.ancient-history-sites.com/sites/san-giovanni-degli-eremiti/"
     },
     {
-     "vaite": "Paavi Gregorius Suuri perusti benediktiiniluostarin 581; 800-luvulla muslimit tuhosivat sen ja rakensivat moskeijan; Roger II vihki sen kirkoksi 1132.",
-     "url": "https://en.wikipedia.org/wiki/San_Giovanni_degli_Eremiti"
+     "vaite": "Ristikäytävä on parhaiten säilynyt osa; pienet kaksoispylväät kasviaihein koristelluin kapitealein kantavat teräväkaaria.",
+     "url": "https://turismo.cittametropolitana.pa.it/church-of-san-giovanni-degli-eremiti/?lang=en"
     },
     {
-     "vaite": "Ristikäytävä on parhaiten säilynyt osa; pienet kaksoispylväät kantavat teräväkaaria; puutarhassa appelsiinipuita, palmuja ja viikunakaktuksia.",
-     "url": "https://turismo.cittametropolitana.pa.it/church-of-san-giovanni-degli-eremiti/?lang=en"
+     "vaite": "Perimätiedon mukaan Gregorius Suuri ja hänen äitinsä Silvia olivat luostarin perustajia (581); saraseenit tuhosivat luostarin; Roger II rakennutti kirkon 1132–1136 ja antoi luostarin Vilhelm Vercelliläisen munkeille.",
+     "url": "https://it.wikipedia.org/wiki/Chiesa_di_San_Giovanni_degli_Eremiti"
+    },
+    {
+     "vaite": "Paavi Gregoriuksen osuus esitetään perimätietona (is said); Roger II palautti paikan munkeille noin 1136; ristikäytävässä arabialainen vesisäiliö.",
+     "url": "https://en.wikipedia.org/wiki/San_Giovanni_degli_Eremiti"
     }
    ]
   },
@@ -432,6 +444,10 @@
     {
      "vaite": "Neliön muotoisen ristikäytävän portikkoa kiertää 228 pientä pariksi asetettua pylvästä, jotka kantavat teräväkaaria.",
      "url": "https://romeartlover.it/Monreale.html"
+    },
+    {
+     "vaite": "Bonanno Pisano valmisti Pisan tuomiokirkon pronssisen Porta Realen 1179–1180 (tuhoutui 1595) ja Monrealen oven 1185–1186.",
+     "url": "https://en.wikipedia.org/wiki/Bonanno_Pisano"
     }
    ]
   },
@@ -553,7 +569,7 @@
    "kuvaus": "Palermon hiekkaranta ja kylpyläkylä",
    "luokka": "vesi",
    "koko_m": 2000,
-   "teksti": "Rantakylä Mondello kaartuu noin kahden kilometrin pituisena vaaleana hiekkarantana turkoosin veden reunassa Monte Pellegrinon ja Monte Gallon välisessä lahdessa. Vielä 1800-luvun lopulla rannikko oli malariasuota, jota käyttivät vain kalastajat, kunnes se kuivattiin 1890-luvulla ja suuri osa alueesta vuokrattiin belgialaiselle yhtiölle. Rannan edustalla seisoo merenpohjaan upotettujen paalujen varassa jugendtyylinen kylpylärakennus, jota kutsutaan Charlestoniksi. Se valmistui vuonna 1913 Palermon porvariston kylpylaitokseksi, ja sen betonipaalut kuuluvat kaupungin varhaisimpiin teräsbetonirakenteisiin.",
+   "teksti": "Rantakylä Mondello kaartuu noin puolentoista kilometrin pituisena vaaleana hiekkarantana turkoosin veden reunassa Monte Pellegrinon ja Monte Gallon välisessä lahdessa. Vielä 1800-luvun lopulla rannikko oli malariasuota, jota käyttivät vain kalastajat, kunnes se kuivattiin 1890-luvulla ja suuri osa alueesta vuokrattiin belgialaiselle yhtiölle. Rannan edustalla seisoo merenpohjaan upotettujen paalujen varassa jugendtyylinen kylpylärakennus, jota kutsutaan Charlestoniksi. Se valmistui vuonna 1913 Palermon porvariston kylpylaitokseksi, ja sen betonipaalut kuuluvat kaupungin varhaisimpiin teräsbetonirakenteisiin.",
    "lyhyt": null,
    "syventava": "Miksi rakennusta kutsutaan Charlestoniksi?",
    "kysymykset": [
@@ -566,8 +582,8 @@
    "isoisa": false,
    "lahteet": [
     {
-     "vaite": "Noin kahden kilometrin hiekkaranta Monte Pellegrinon ja Monte Gallon välisessä lahdessa.",
-     "url": "https://thethinkingtraveller.com/italy/sicily/towns-and-cities-in-sicily/mondello"
+     "vaite": "Noin puolentoista kilometrin hiekkaranta Monte Pellegrinon ja Monte Gallon välisessä lahdessa.",
+     "url": "https://en.wikipedia.org/wiki/Mondello"
     },
     {
      "vaite": "Rannikko oli 1800-luvun loppuun malariasuota, jota käyttivät kalastajat; kuivattiin 1890-luvulla ja vuokrattiin suurelta osin belgialaiselle yhtiölle.",

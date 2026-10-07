@@ -17,7 +17,7 @@ ja aalto committataan + pushataan.
 | 1 | amsterdam, ateena (VALMIS) / barcelona, bergen (VALMIS) / berliini, bryssel (VALMIS) / budapest, bukarest (VALMIS) | VALMIS |
 | 2 | dublin, edinburgh (VALMIS) / firenze, granada (VALMIS) / helsinki, islanti (VALMIS) / kosice, krakova (VALMIS) | VALMIS |
 | 3 | kreeta, lissabon (VALMIS) / ljubljana, luxemburg (VALMIS) / madrid, marseille (VALMIS) / oslo, sevilla (käynnissä) | osin käynnissä |
-| 4 | sisilia, sofia (käynnissä) / tampere, tukholma (käynnissä) / valletta, venetsia (käynnissä) / vilna | osin käynnissä |
+| 4 | sisilia, sofia (VALMIS) / tampere, tukholma (käynnissä) / valletta, venetsia (käynnissä) / vilna (käynnissä) | osin käynnissä |
 | 5 | TARKISTAJA-agentti käy koko diffin läpi | ei aloitettu |
 
 Agentit ajetaan liukuvasti: kun pari valmistuu, se committataan heti ja seuraava pari käynnistyy (max 4 rinnakkain).

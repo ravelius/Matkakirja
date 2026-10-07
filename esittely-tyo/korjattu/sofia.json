@@ -11,7 +11,7 @@
    "koko_m": 80,
    "korkeus_m": 51,
    "teksti": "Aleksanteri Nevskin katedraali erottuu ylhäältä kullattujen kupoliensa ryhmänä, jonka keskimmäinen kultakupoli kohoaa neljäänkymmeneenviiteen metriin. Kirkko rakennettiin niiden venäläisten sotilaiden muistoksi, jotka kaatuivat vuosien 1877 ja 1878 sodassa, jonka seurauksena Bulgaria vapautui osmanien vallasta. Työ alkoi arkkitehti Aleksandr Pomerantsevin suunnitelmien mukaan vuonna 1882 ja valmistui vasta 1912. Kellotornissa riippuu kaksitoista Moskovassa valettua kelloa, joista raskain painaa lähes kaksitoista tonnia ja kevyin vain kymmenen kiloa. Nykyään katedraali on Bulgarian patriarkan pääkirkko.",
-   "lyhyt": "Aleksanteri Nevskin katedraalin kryptassa toimii kansallisgallerian kristillisen taiteen museo, joka perustettiin vuonna 1965. Sen kokoelmassa on yli kaksisataa ikonia 1200-luvulta 1800-luvulle, ja se on yksi maailman rikkaimmista ikonikokoelmista. Näyttelyssä on myös seinämaalausten katkelmia ja kaiverruksia.",
+   "lyhyt": "Aleksanteri Nevskin katedraali on nimetty venäläisen ruhtinaan mukaan, mutta ensimmäisessä maailmansodassa Bulgaria ja Venäjä taistelivat vastakkaisilla puolilla. Siksi kirkko kantoi vuodesta 1916 vuoteen 1920 slaavien apostolien Kyrilloksen ja Methodioksen nimeä, kunnes vanha nimi palautettiin.",
    "syventava": "Kuka oli Aleksanteri Nevski?",
    "kysymykset": [
     "Miksi katedraali rakennettiin venäläisten muistoksi?",
@@ -43,11 +43,11 @@
      "url": "https://en.wikipedia.org/wiki/Saint_Alexander_Nevsky_Cathedral,_Sofia"
     },
     {
-     "vaite": "Kryptassa kansallisgallerian kristillisen taiteen museo, perustettu 1965; yli 200 ikonia 1200-luvulta 1800-luvulle; maailman rikkaimpia ikonikokoelmia.",
-     "url": "https://nationalgallery.bg/visiting/museum-of-christian-art/"
+     "vaite": "Pyhä Aleksanteri Nevski oli venäläinen ruhtinas; katedraalin nimi oli 1916–1920 Pyhien Kyrilloksen ja Methodioksen katedraali, koska Bulgaria ja Venäjä olivat ensimmäisessä maailmansodassa vastakkaisilla puolilla.",
+     "url": "https://en.wikipedia.org/wiki/Saint_Alexander_Nevsky_Cathedral,_Sofia"
     },
     {
-     "vaite": "Näyttelyssä myös kolme seinämaalauksen katkelmaa ja kaiverruksia.",
+     "vaite": "Kysymys kryptasta: kryptassa on kansallisgallerian kristillisen taiteen museo (perustettu 1965, avoinna).",
      "url": "https://nationalgallery.bg/visiting/museum-of-christian-art/"
     }
    ]
@@ -59,7 +59,7 @@
    "luokka": "kirkko",
    "koko_m": 30,
    "teksti": "Bojanan kirkko on pieni keskiaikainen kirkko Sofian eteläreunalla Vitoša-vuoren juurella, ja se on ollut Unescon maailmanperintökohde vuodesta 1979. Kirkko rakennettiin kolmessa vaiheessa: vanhin osa on 900- ja 1000-lukujen vaihteesta, toinen 1200-luvun puolivälistä ja kolmas 1800-luvulta. Sen maine perustuu vuonna 1259 maalattuihin freskoihin, joissa on kahdeksankymmentäyhdeksän kohtausta ja kaksisataaneljäkymmentä ihmishahmoa. Lahjoittajat, sebastokraattori Kalojan ja hänen vaimonsa Desislava, on maalattu seinälle täyspitkinä, ja Kalojan pitelee käsissään pienoismallia kirkosta.",
-   "lyhyt": "Bojanan kirkon ehtoollisfreskossa vuodelta 1259 pöydällä on raamatunkertomuksesta poiketen nauriita ja sipulia, joita pidetään bulgarialaisena perinneruokana. Kohtauksessa on vain yksitoista apostolia. Freskojen maalarin nimeä ei tunneta, ja häntä kutsutaan Bojanan mestariksi.",
+   "lyhyt": "Bojanan kirkon ehtoollisfreskossa vuodelta 1259 pöydällä on raamatunkertomuksesta poiketen nauriita ja sipulia, joita pidetään bulgarialaisena perinneruokana. Kohtauksessa on vain yksitoista apostolia. Freskojen maalarin nimeä ei tiedetä varmasti, ja häntä kutsutaan Bojanan mestariksi.",
    "syventava": "Mitä ehtoollispöydälle on maalattu?",
    "kysymykset": [
     "Kuka maalasi Bojanan kirkon freskot?",
@@ -95,7 +95,7 @@
      "url": "https://bnrnews.bg/en/post/123396/unesco-delegates-to-visit-boyana-church"
     },
     {
-     "vaite": "Freskot maalasi tuntematon Bojanan mestari oppilaineen.",
+     "vaite": "Freskojen maalarit ovat nimettömiä; restauroinnissa 2006–2008 löytyi mahdollinen maalarin signeeraus.",
      "url": "https://en.wikipedia.org/wiki/Boyana_Church"
     }
    ]
@@ -108,7 +108,7 @@
    "koko_m": 40,
    "korkeus_m": 14,
    "teksti": "Pyhän Yrjön rotunda on pieni pyöreä punatiilinen rakennus sisäpihalla, jota reunustavat presidentin virkatalo ja hotelli, ja sen ympärillä näkyy roomalaisen Serdican katujen ja talojen raunioita. Se rakennettiin 300-luvun alussa roomalaiseksi kylpylaitokseksi, ja sitä pidetään Sofian vanhimpana rakennuksena. Seinillä on viisi päällekkäistä freskokerrosta, joista vanhimmat kukkakuviot ovat 300-luvulta. Osmanien aikana rotunda toimi moskeijana, ja maalaukset peitettiin; ne tulivat uudelleen esiin vasta 1900-luvulla. Kupolissa Kristusta ympäröi neljä enkeliä, ja sen alla kiertää yli kaksimetristen profeettojen rivi.",
-   "lyhyt": "Pyhän Yrjön rotunda on vain noin neljätoista metriä korkea, mutta se on ollut vuorotellen kylpylä, kirkko ja moskeija. Nykyään se on taas ortodoksinen kirkko, ja pihalle pääsee vapaasti kujaa pitkin presidentin virkatalon ja opetusministeriön välistä.",
+   "lyhyt": "Pyhän Yrjön rotunda rakennettiin roomalaiseen Serdicaan, jossa keisari Galerius antoi vuonna 311 suvaitsevaisuusediktin. Se lopetti kristittyjen vainot kaksi vuotta ennen kuuluisampaa Milanon ediktiä. Keisari Konstantinus Suuren kerrotaan sanoneen kaupungista: Serdica on minun Roomani.",
    "syventava": "Miksi freskot olivat piilossa vuosisatoja?",
    "kysymykset": [
     "Millainen oli roomalainen Serdica?",
@@ -140,8 +140,12 @@
      "url": "https://thebyzantinelegacy.com/rotunda-serdica"
     },
     {
-     "vaite": "Nykyään Bulgarian ortodoksisen kirkon kirkko; piha on avoin yleisölle, kulku presidentin virkatalon ja opetusministeriön välisen kujan kautta.",
-     "url": "https://www.inyourpocket.com/Bulgaria/sofia/articles/city-walking-tour-2"
+     "vaite": "Rotunda rakennettiin 300-luvun alussa Galeriuksen ja Konstantinus Suuren aikana; nykyään toimiva ortodoksinen kirkko.",
+     "url": "https://en.wikipedia.org/wiki/Church_of_Saint_George,_Sofia"
+    },
+    {
+     "vaite": "Galerius antoi Serdicassa 311 suvaitsevaisuusediktin, joka lopetti Diocletianuksen kristittyvainot kaksi vuotta ennen Milanon ediktiä; Konstantinukselle Serdica oli \"minun Roomani\".",
+     "url": "https://en.wikipedia.org/wiki/Serdica"
     }
    ]
   },
@@ -151,7 +155,7 @@
    "kuvaus": "Ortodoksinen katedraali keskusaukiolla",
    "luokka": "kirkko",
    "koko_m": 50,
-   "teksti": "Pyhän Nedeljan kirkko, Sveta Nedelya, seisoo keskellä samannimistä aukiota, josta Vitoša-bulevardi lähtee etelään. Paikalla on ollut kirkko jo 900-luvulla, ja nykyinen rakennus vihittiin vuonna 1933. Huhtikuussa 1925 kommunistisen puolueen sotilasjärjestö räjäytti kirkon kupolin kenraalin hautajaisten aikana Neuvostoliiton sotilastiedustelun tuella. Kupolin alla olevaan pylvääseen oli kätketty kaksikymmentäviisi kiloa räjähteitä, ja romahdus oli tuhoisa: yli kaksisataa ihmistä kuoli ja noin viisisataa loukkaantui. Iskun pääkohde, tsaari Boris kolmas, myöhästyi toimituksesta ja selvisi. Räjähdystä pidetään Bulgarian historian verisimpänä terrori-iskuna.",
+   "teksti": "Pyhän Nedeljan kirkko, Sveta Nedelya, seisoo keskellä samannimistä aukiota, josta Vitoša-bulevardi lähtee etelään. Paikalla on ollut kirkko jo 900-luvulla, ja nykyinen rakennus vihittiin vuonna 1933. Huhtikuussa 1925 kommunistisen puolueen sotilasjärjestö räjäytti kirkon kupolin kenraalin hautajaisten aikana Neuvostoliiton sotilastiedustelun tuella. Kirkon ullakolle kupolia kannattavan pylvään yläpuolelle oli kätketty kaksikymmentäviisi kiloa räjähteitä, ja romahdus oli tuhoisa: yli kaksisataa ihmistä kuoli ja noin viisisataa loukkaantui. Iskun pääkohde, tsaari Boris kolmas, myöhästyi toimituksesta ja selvisi. Räjähdystä pidetään Bulgarian historian verisimpänä terrori-iskuna.",
    "lyhyt": "Pyhän Nedeljan kirkossa, Sveta Nedelyassa, säilytetään serbialaisen kuninkaan Stefan Milutinin pyhäinjäännöksiä. Ne tuotiin Bulgariaan jo noin vuonna 1460 ja tähän kirkkoon vuonna 1863, ja siksi kirkkoa kutsuttiin 1800-luvun lopulla ja 1900-luvun alussa Pyhän kuninkaan kirkoksi.",
    "syventava": "Miksi tsaari myöhästyi hautajaisista?",
    "kysymykset": [
@@ -168,7 +172,7 @@
      "url": "https://voicemap.me/tour/sofia/mineral-springs-ruins-and-communist-echoes-a-guide-to-sofia-s-roots/sites"
     },
     {
-     "vaite": "Iskun johti ja varusti Neuvostoliiton sotilastiedustelu; kupolin alla olevaan pylvääseen oli kätketty 25 kiloa räjähteitä.",
+     "vaite": "Iskun johti ja varusti Neuvostoliiton sotilastiedustelu; 25 kiloa räjähteitä kätkettiin ullakolle pääkupolin pylvään yläpuolelle; 213 kuoli ja noin 500 loukkaantui.",
      "url": "https://en.wikipedia.org/wiki/St._Nedelya_Church_bombing"
     },
     {
@@ -199,7 +203,7 @@
    "kuvaus": "Sofian ainoa toimiva moskeija",
    "luokka": "rakennus",
    "koko_m": 35,
-   "teksti": "Banja Bashin moskeija erottuu ylhäältä leveästä, halkaisijaltaan viidentoista metrin kupolistaan ja hoikasta minareetistaan. Se valmistui vuonna 1566, ja sen suunnittelijaksi mainitaan kuuluisa osmaniarkkitehti Mimar Sinan. Moskeija on rakennettu luonnon kuumien lähteiden päälle, ja muurien vierellä voi nähdä höyryn nousevan maasta. Rakennus on muurattu tiilestä, ja sen nimi tarkoittaa monia kylpylöitä. Nykyään se on ainoa Sofian moskeija, jossa kaupungin muslimit yhä rukoilevat, ja aivan sen vieressä on lähdevesihanoja.",
+   "teksti": "Banja Bashin moskeija erottuu ylhäältä leveästä, halkaisijaltaan viidentoista metrin kupolistaan ja hoikasta minareetistaan. Se valmistui vuonna 1566, ja sen suunnittelijaksi mainitaan kuuluisa osmaniarkkitehti Mimar Sinan. Moskeija on rakennettu luonnon kuumien lähteiden päälle, ja muurien vierellä voi nähdä höyryn nousevan maasta. Rakennus on muurattu tiilestä, ja sen turkinkielinen nimi viittaa kylpylään. Nykyään se on ainoa Sofian moskeija, jossa kaupungin muslimit yhä rukoilevat, ja aivan sen vieressä on lähdevesihanoja.",
    "lyhyt": "Banja Bashin moskeija oli aikoinaan vain yksi Sofian monista moskeijoista, ja vapautussodan jälkeen suurin osa kaupungin muslimeista muutti pois. Joulukuussa 1878 venäläiset sotilasinsinöörit räjäyttivät yhden yön aikana seitsemän moskeijaa, ja ukkosmyrsky peitti räjähdysten äänen.",
    "syventava": "Mistä moskeijan alla oleva vesi tulee?",
    "kysymykset": [
@@ -207,7 +211,7 @@
     "Miksi moskeija rakennettiin kuumien lähteiden päälle?",
     "Miksi muut Sofian moskeijat tuhottiin?",
     "Saako moskeijaan mennä sisälle katsomaan?",
-    "Kuinka monta muslimia Sofiassa asuu nykyään?"
+    "Miten tämä moskeija säästyi, kun muut tuhottiin?"
    ],
    "isoisa": false,
    "lahteet": [
@@ -220,7 +224,7 @@
      "url": "https://en.wikipedia.org/wiki/Banya_Bashi_Mosque"
     },
     {
-     "vaite": "Rakennettu luonnon kuumien lähteiden päälle; höyryä nousee maasta muurien vierellä; nimi Banja Bashi tarkoittaa monia kylpylöitä.",
+     "vaite": "Rakennettu luonnon kuumien lähteiden päälle; höyryä nousee maasta muurien vierellä; nimi tulee turkin sanoista banyo, kylpy, ja baş, pää: kylpylän päämoskeija (käännös monet kylpylät on epätarkka).",
      "url": "https://en.wikipedia.org/wiki/Banya_Bashi_Mosque"
     },
     {
@@ -244,7 +248,7 @@
    "luokka": "rakennus",
    "koko_m": 130,
    "teksti": "Sofian yliopisto on Bulgarian vanhin korkeakoulu, ja sen päärakennus seisoo keskustassa Tsar Osvoboditel -bulevardin varrella kansalliskirjaston naapurissa. Yliopisto perustettiin vuonna 1888, ja se on nimetty Pyhän Kliment Ohridskin mukaan; hän oli keskiaikainen oppinut ja ensimmäinen piispa, joka saarnasi muinaisbulgariaksi. Päärakennus nousi 1920- ja 1930-luvuilla veljesten Evlogi ja Hristo Georgievin rahoilla, ja heidän veistoksensa istuvat pääsisäänkäynnin molemmin puolin. Yliopiston kirjasto on maan suurin tieteellinen kirjasto, ja siinä on yli kaksi ja puoli miljoonaa julkaisua.",
-   "lyhyt": "Sofian yliopistossa opiskelee noin kaksikymmentäyksituhatta opiskelijaa kuudessatoista tiedekunnassa. Evlogi Georgiev testamenttasi yliopistolle tontin ja kahdeksansataatuhatta leviä jo vuonna 1896, ja lopulta veljekset antoivat rakennusta varten kuusi miljoonaa leviä. Päärakennus valmistui vasta lähes neljäkymmentä vuotta testamentin jälkeen.",
+   "lyhyt": "Sofian yliopiston opiskelijat buuasivat tammikuussa 1907 ruhtinas Ferdinandille uuden kansallisteatterin avajaisissa. Hallitus sulki yliopiston rangaistukseksi ja erotti yhdellä päätöksellä kaikki sen opettajat, ja vasta seuraavan vuoden alussa uusi hallitus palautti professorit virkoihinsa.",
    "syventava": "Kuka oli Kliment Ohridski?",
    "kysymykset": [
     "Miksi Georgievin veljekset lahjoittivat rahansa?",
@@ -272,20 +276,20 @@
      "url": "https://en.wikipedia.org/wiki/Sofia_University"
     },
     {
-     "vaite": "Noin 21 000 opiskelijaa ja 16 tiedekuntaa.",
-     "url": "https://en.wikipedia.org/wiki/Sofia_University"
-    },
-    {
-     "vaite": "Evlogi Georgiev testamenttasi 1896 tontin ja 800 000 leviä yliopiston rakentamiseen.",
-     "url": "https://uni-sofia.bg/index.php/eng/the_university/history/donators"
-    },
-    {
      "vaite": "Päärakennus eli rehtoraatti on Tsar Osvoboditel -bulevardilla kansalliskirjaston ja parlamentin rakennusten vieressä.",
      "url": "https://www.sofia.bg/web/sofia-municipality/w/sofia-university-st-kliment-ohridski-"
     },
     {
-     "vaite": "Georgievin veljekset antoivat 6 miljoonaa leviä yliopiston rakennukseen.",
-     "url": "https://www.sofia.bg/web/sofia-municipality/w/sofia-university-st-kliment-ohridski-"
+     "vaite": "Vuonna 1907 opiskelijat buuasivat ruhtinas Ferdinandia kansallisteatterin avajaisissa; yliopisto suljettiin kuudeksi kuukaudeksi ja kaikki opettajat erotettiin.",
+     "url": "https://en.wikipedia.org/wiki/Sofia_University"
+    },
+    {
+     "vaite": "Mielenosoitus 3.1.1907; ministerineuvosto sulki yliopiston ja erotti kaikki opettajat; yliopisto avattiin tammikuun lopulla 1908 Malinovin uuden hallituksen palautettua professorit.",
+     "url": "https://bg.wikipedia.org/wiki/Софийски_университет"
+    },
+    {
+     "vaite": "Yliopiston kirjasto on Bulgarian suurin tieteellinen kirjasto, kokoelmissa yli 2,7 miljoonaa nidettä.",
+     "url": "https://libsu.uni-sofia.bg/UB/?p=1301"
     }
    ]
   },
@@ -295,8 +299,8 @@
    "kuvaus": "Kongressi- ja kulttuurikeskus",
    "luokka": "rakennus",
    "koko_m": 250,
-   "teksti": "Kansalliskulttuuripalatsi on Vitoša-bulevardin eteläpäässä kohoava massiivinen kongressi- ja kulttuuritalo, jonka edessä levittäytyy suihkulähteiden ja istutusten puisto. Talo avattiin maaliskuussa 1981, kun Bulgarian valtion perustamisesta tuli kuluneeksi tuhat kolmesataa vuotta. Se on Kaakkois-Euroopan suurin monitoimikeskus: kahdeksassa maanpäällisessä ja kolmessa maanalaisessa kerroksessa on tilaa satakaksikymmentäkolmetuhatta neliömetriä. Pääarkkitehti oli Aleksandar Barov, ja talossa järjestetään konferensseja, konsertteja ja näyttelyitä. Talon eteen pystytettiin samana juhlavuonna muistomerkki, joka rapistui ja purettiin vuonna 2017 taiteilijoiden vastalauseista huolimatta.",
-   "lyhyt": "Kansalliskulttuuripalatsin edustalla on suihkulähteitä ja laaja puisto, joka on suosittu kävelypaikka. Vitoša-bulevardin alittavan alikulun seinille on maalattu katutaidetta, ja alikulusta pääsee suoraan metroasemalle, joka on nimetty palatsin mukaan ja avattiin vuonna 2012.",
+   "teksti": "Kansalliskulttuuripalatsi on Vitoša-bulevardin eteläpäässä kohoava massiivinen kongressi- ja kulttuuritalo, jonka edessä levittäytyy suihkulähteiden ja istutusten puisto. Talo avattiin maaliskuussa 1981, kun Bulgarian valtion perustamisesta tuli kuluneeksi tuhat kolmesataa vuotta. Se on Kaakkois-Euroopan suurin monitoimikeskus: kahdeksassa maanpäällisessä ja kolmessa maanalaisessa kerroksessa on tilaa satakaksikymmentäkolmetuhatta neliömetriä. Pääarkkitehti oli Aleksandar Barov, ja talossa järjestetään konferensseja, konsertteja ja näyttelyitä. Talon eteen pystytettiin samana juhlavuonna muistomerkki, joka rapistui ja purettiin vuonna 2017 mielenosoittajien vastalauseista huolimatta.",
+   "lyhyt": "Kansalliskulttuuripalatsi rakennettiin kommunistijohtaja Todor Živkovin tyttären Ljudmila Živkovan aloitteesta, ja hän kuoli heinäkuussa 1981, vain muutama kuukausi talon avajaisten jälkeen. Seuraavana kesänä talo nimettiin hänen mukaansa, ja nimestä luovuttiin vasta vuonna 1990.",
    "syventava": "Miksi muistomerkki purettiin?",
    "kysymykset": [
     "Mitä tapahtumia palatsissa järjestetään nykyään?",
@@ -320,23 +324,31 @@
      "url": "https://en.wikipedia.org/wiki/National_Palace_of_Culture"
     },
     {
-     "vaite": "Palatsin edessä puisto suihkulähteineen; Vitoša-bulevardin alittavassa alikulussa katutaidetta ja metroaseman sisäänkäynti; asema on nimetty palatsin mukaan. Asema avattiin 31.8.2012; puisto on suosittu kävelypaikka.",
+     "vaite": "Palatsin edessä puisto suihkulähteineen.",
      "url": "https://en.wikipedia.org/wiki/NDK_Metro_Station"
     },
     {
-     "vaite": "Palatsin eteen 1981 pystytetty muistomerkki 1300 vuotta Bulgariaa rapistui; purkupäätös 2017, Bulgarian taiteilijaliitto vastusti.",
+     "vaite": "Palatsin eteen 1981 pystytetty muistomerkki 1300 vuotta Bulgariaa rapistui ja purettiin 2017, vaikka mielenosoittajat vastustivat purkua.",
      "url": "https://architectuul.com/architecture/monument-to-1300-years-of-bulgaria"
+    },
+    {
+     "vaite": "Palatsi syntyi Todor Živkovin tyttären Ljudmila Živkovan aloitteesta; hän kuoli 1981.",
+     "url": "https://en.wikipedia.org/wiki/National_Palace_of_Culture"
+    },
+    {
+     "vaite": "Živkova kuoli heinäkuussa 1981; 3.7.1982 alkaen nimi oli Ljudmila Živkovan kansan kulttuuripalatsi; 1990 nimeksi tuli Kansallinen kulttuuripalatsi.",
+     "url": "https://bg.wikipedia.org/wiki/Национален_дворец_на_културата"
     }
    ]
   },
   {
    "id": "Q942127",
    "nimi": "Sofian synagoga",
-   "kuvaus": "Euroopan suurin sefardisynagoga",
+   "kuvaus": "Balkanin suurin synagoga",
    "luokka": "rakennus",
    "koko_m": 50,
-   "teksti": "Sofian synagoga erottuu ylhäältä kolmesta kupolistaan, ja sen suunnitteli wieniläinen arkkitehti Friedrich Grünanger maurilaisen tyylin ja wieniläisen jugendin sekoitukseksi. Synagoga vihittiin käyttöön syyskuussa 1909, ja se on Euroopan suurin sefardijuutalaisten synagoga. Arkkitehdin tehtävänä oli rakentaa talo Wienin suuren sefardisynagogan kaltaiseksi. Rukoussalissa riippuu Wienissä valmistettu messinkinen kattokruunu, joka painaa tuhat seitsemänsataa kiloa, ja se on Bulgarian suurin kattokruunu. Yläkerrassa toimii juutalainen historiallinen museo, joka kertoo erityisesti siitä, miten Bulgarian juutalaisten karkotus pysäytettiin vuonna 1943.",
-   "lyhyt": "Sofian synagoga oli suljettuna vuosina 1943 ja 1944, kun suurin osa kaupungin juutalaisista oli karkotettu maaseudulle. Rakennus on Kaakkois-Euroopan suurin synagoga, ja sen sisäkupoli kohoaa kahteenkymmeneenkolmeen metriin. Pääsalissa on yli tuhat istumapaikkaa.",
+   "teksti": "Sofian synagoga erottuu ylhäältä kolmesta kupolistaan, ja sen suunnitteli wieniläinen arkkitehti Friedrich Grünanger maurilaisen tyylin ja wieniläisen jugendin sekoitukseksi. Synagoga vihittiin käyttöön syyskuussa 1909, ja se on yksi Euroopan suurimmista sefardijuutalaisten synagogista. Arkkitehdin tehtävänä oli rakentaa talo Wienin suuren sefardisynagogan kaltaiseksi. Rukoussalissa riippuu Wienissä valmistettu messinkinen kattokruunu, joka painaa tuhat seitsemänsataa kiloa, ja se on Bulgarian suurin kattokruunu. Yläkerrassa toimii juutalainen historiallinen museo, joka kertoo erityisesti siitä, miten Bulgarian juutalaisten karkotus pysäytettiin vuonna 1943.",
+   "lyhyt": "Sofian synagogaan osui huhtikuussa 1944 kaupungin pommitusten aikana pommi, joka ei räjähtänyt, mutta isku rikkoi tärinällään koristeelliset lasimaalaukset. Vuonna 1982 eräs ministeri yritti muuttaa synagogan konserttisaliksi, mutta juutalaisyhteisö sai torjuttua hankkeen.",
    "syventava": "Miten karkotus saatiin pysäytettyä?",
    "kysymykset": [
     "Keitä sefardijuutalaiset ovat?",
@@ -349,10 +361,6 @@
    "lahteet": [
     {
      "vaite": "Kolme kupolia; arkkitehti Friedrich Grünanger; maurilaisen tyylin ja Wienin secession sekoitus.",
-     "url": "https://en.wikipedia.org/wiki/Sofia_Synagogue"
-    },
-    {
-     "vaite": "Ensimmäinen jumalanpalvelus 9.9.1909; Euroopan suurin sefardisynagoga.",
      "url": "https://en.wikipedia.org/wiki/Sofia_Synagogue"
     },
     {
@@ -372,15 +380,11 @@
      "url": "https://visitbulgaria.com/sofia-synagogue-and-its-history-museum-sofia-city/"
     },
     {
-     "vaite": "Synagoga oli suljettu 1943–1944, kun suurin osa Sofian juutalaisista oli karkotettu maaseudulle.",
-     "url": "https://www.vagabond.bg/witness-time-2945"
-    },
-    {
-     "vaite": "Kaakkois-Euroopan suurin synagoga; sisäkupolin korkeus 23 metriä.",
+     "vaite": "Ensimmäinen jumalanpalvelus ja vihkiminen 9.9.1909.",
      "url": "https://en.wikipedia.org/wiki/Sofia_Synagogue"
     },
     {
-     "vaite": "Pääsalissa 1 170 istumapaikkaa.",
+     "vaite": "Yksi Euroopan kolmesta suurimmasta sefardisynagogasta ja Balkanin suurin; 13.4.1944 pommi osui rakennuksen koilliskulmaan mutta ei räjähtänyt, ja tärinä rikkoi lasimaalaukset; 1982 ministeri yritti muuttaa synagogan konserttisaliksi, yhteisö torjui sen.",
      "url": "https://www.sofiasynagogue.com/en/history/"
     }
    ]

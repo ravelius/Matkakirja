@@ -1682,3 +1682,145 @@ Tarkistin: 0 virhettä, 6 huomiota (5 × "ei ala paikan nimellä", 1 × "avaus p
 
 ### Tarkistettu ilman muutoksia
 Saint-Victorin luostari (kynttilänpäivän kulkue), vanha satama (teksti, lyhyt ja peilikatos), Frioulin saaret, Ifin linnan teksti, Saint-Charlesin asema, Stade Vélodrome, avaus (38 sanaa, alkaa "Tervetuloa", ilmasta nähtävä amfiteatterikuva).
+
+## Sisilia
+
+Tarkistin: `Sisilia: 14 kohdetta, 0 virhettä, 10 huomiota` (huomiot samat kuin ennen: suomenkieliset etusanat + avaus erillisessä tiedostossa).
+
+### Normannien palatsi — kenttä `lyhyt`
+- **Vanha:** "Normannien palatsi oli Hauteville-suvun normannikuninkaiden asunto ja myöhemmin myös keisari Fredrik toisen hallitsijanistuin. Kuninkaalliset huoneistot ovat yleisön nähtävissä silloin, kun Sisilian parlamentti ei ole koolla. Palatsi kappeleineen kuuluu Unescon maailmanperintöluetteloon."
+- **Uusi:** "Normannien palatsista hallinneen keisari Fredrik toisen hovissa runoilijat alkoivat 1230-luvulla kirjoittaa rakkausrunoja omalla kansankielellään, ja niistä kasvoi ensimmäinen italialainen kirjakieli. Hovin notaarin Giacomo da Lentinin uskotaan keksineen sonetin, runomuodon, jota Dante ja Petrarca myöhemmin hioivat."
+- **Syy:** Tyyppi 2 (aukioloaika, Unesco-merkintä ja asukaslista = perustietoa) ja tyyppi 1 (parlamentti kerrottiin jo saman kohteen tekstissä).
+- **Lähde:** https://en.wikipedia.org/wiki/Sicilian_School ; https://en.wikipedia.org/wiki/Giacomo_da_Lentini ; https://en.wikipedia.org/wiki/Palazzo_dei_Normanni
+
+### San Cataldon kirkko — kenttä `lyhyt`
+- **Vanha:** "San Cataldon kirkko on kuulunut 1930-luvulta lähtien Pyhän haudan ritarikunnalle. Vuonna 2015 se liitettiin Unescon maailmanperintöluetteloon osana Palermon arabialais-normannilaisten rakennusten sarjaa, johon kuuluu yhdeksän kohdetta. Kirkko on Bellinin aukiolla aivan Martoranan kirkon vieressä."
+- **Uusi:** "San Cataldon kirkossa toimi vuodesta 1787 Palermon kuninkaallinen posti, ja 1800-luvun alussa sen ympärille rakennettiin postitalo, joka kätki kirkon kokonaan sisäänsä. Vasta 1880-luvulla lisärakennukset purettiin, ja keskiaikainen kirkko kupoleineen tuli taas esiin."
+- **Syy:** Tyyppi 2 (omistaja, Unesco-vuosi, sijainti = hallintoa). Patricolon nimeä ja punaisten kupolien tarinaa ei käytetty, koska ne ovat jo Erakkojen kirkon tekstissä.
+- **Lähde:** https://www.balarm.it/news/quell-intrigante-atmosfera-divenuta-simbolo-di-palermo-l-imponente-san-cataldo-111930 ; https://www.balarm.it/news/palermo-e-quelle-cupole-tinte-di-bianco-cose-che-non-sapevi-su-uno-dei-simboli-della-citta-126475 ; https://en.wikipedia.org/wiki/Church_of_San_Cataldo
+
+### San Cataldon kirkko — kenttä `teksti`
+- **Vanha:** "Maio Barilainen, kuningas Vilhelm ensimmäisen kansleri"
+- **Uusi:** "Maio Barilainen, kuningas Vilhelm ensimmäisen suuramiraali"
+- **Syy:** Tyyppi 3 (titteli): Maio oli kansleri vuodesta 1152, mutta kirkon rakennusaikana vuosina 1154–1160 hän oli "amiraalien amiraali".
+- **Lähde:** https://en.wikipedia.org/wiki/Maio_of_Bari
+
+### San Giovanni degli Eremiti — kenttä `teksti`
+- **Vanha:** "Paavi Gregorius Suuri perusti paikalle benediktiiniluostarin vuonna 581, mutta 800-luvulla saaren vallanneet muslimit tuhosivat sen ja rakensivat tilalle moskeijan. Vuonna 1132 kuningas Roger toinen vihki rakennuksen jälleen kirkoksi."
+- **Uusi:** "Perimätiedon mukaan paikalle perusti luostarin jo 500-luvulla Gregorius Suuri, myöhempi paavi, mutta 800-luvulla saaren vallanneet muslimit tuhosivat sen. Kuningas Roger toinen rakennutti nykyisen kirkon 1130-luvulla ja antoi sen munkkien hoitoon."
+- **Syy:** Tyyppi 3: Gregorius ei ollut paavi vuonna 581 (paavi 590 alkaen), ja lähteissä perustaminen on perimätietoa ("is said"). Moskeija on lähteissä vain "ehkä", joten se poistettiin. Roger toinen ei "vihkinyt rakennusta jälleen kirkoksi" vaan rakennutti kirkon vuosina 1132–1136.
+- **Lähde:** https://it.wikipedia.org/wiki/Chiesa_di_San_Giovanni_degli_Eremiti ; https://en.wikipedia.org/wiki/San_Giovanni_degli_Eremiti
+
+### San Giovanni degli Eremiti — kenttä `lyhyt`
+- **Vanha:** "…Muurien suojaamassa puutarhassa kasvaa appelsiinipuita, korkeita palmuja ja viikunakaktuksia, ja sieltä näkyvät kupolit lähietäisyydeltä."
+- **Uusi:** "…Ristikäytävän puutarhassa on yhä arabiaikainen vesisäiliö, ja sieltä kirkon punaiset kupolit näkyvät aivan läheltä."
+- **Syy:** Tyyppi 1: palmut ja appelsiinipuut toistuivat avauksessa ("palmujen keskellä") ja saman kohteen tekstissä.
+- **Lähde:** https://en.wikipedia.org/wiki/San_Giovanni_degli_Eremiti
+
+### San Giovanni degli Eremiti — kenttä `kysymykset`
+- **Vanha:** "Miltä rakennus näytti moskeijana?"
+- **Uusi:** "Mitä paikalla oli ennen nykyistä kirkkoa?"
+- **Syy:** Tyyppi 7: oletus (rakennus oli moskeija) ei ole varma.
+- **Lähde:** https://en.wikipedia.org/wiki/San_Giovanni_degli_Eremiti
+
+### Mondello — kenttä `teksti`
+- **Vanha:** "noin kahden kilometrin pituisena"
+- **Uusi:** "noin puolentoista kilometrin pituisena"
+- **Syy:** Tyyppi 3, PILVI-RAPORTIN epävarmuus ratkaistu: Wikipedian mukaan ranta on noin 1,5 km. Kahden kilometrin luku oli vain matkailusivulta.
+- **Lähde:** https://en.wikipedia.org/wiki/Mondello
+
+### Palermon katedraali — `lahteet` (ei tekstimuutosta)
+- Porfyyriarkun ja hopea-arkun lähde vaihdettiin, koska cittametropolitana-sivu ei tue väitteitä. Roger II teetti arkut Cefalùhun ja Fredrik II siirsi ne Palermoon (smarteducationunescosicilia.it/?p=48186); arkku tehtiin vuodesta 1631 alkaen (…/?p=48250).
+
+### Monrealen katedraali — `lahteet` (ei tekstimuutosta)
+- PILVI-RAPORTIN epävarmuus ratkaistu: Bonanno Pisano teki Pisan tuomiokirkon Porta Realen vuosina 1179–1180, ja ovi tuhoutui vuonna 1595. Lähde lisätty: https://en.wikipedia.org/wiki/Bonanno_Pisano
+
+### Muut tarkistetut (ei muutoksia)
+- Teatro Massimo: väite "avajaisaikaan Euroopan kolmanneksi suurin Pariisin ja Wienin jälkeen" vahvistui (en.wikipedia), joten PILVI-epävarmuus on ratkaistu. Kummisetä III ja sulkeminen 1974–1997 ovat kunnossa.
+- Palatiinikappeli (isoisä ok), Quattro Canti (1608–1620, kaupunginosat, Piazza Vigliena), Martorana (frutta martorana "is said", joten muotoilu "tulivat kuuluisiksi" on riittävän varovainen), Monte Pellegrino (606 m, pyhäkkö), Politeama (sinfoniaorkesterin kausi 2026/27 on yhä Politeamassa), Zisa ja Amiraalin silta.
+- Charleston-kylpylä: avattu 15.7.1913 (ok). Nimi Charleston tulee vuonna 1969 avatusta ravintolasta; syventävän kysymyksen oletus on tosi.
+- Avaus: 39 sanaa, ilmakuva (kenno, laakso, Monte Pellegrino), alkaa sanalla "Tervetuloa". Ok.
+
+## Sofia
+
+Tarkistin: `Sofia: 10 kohdetta, 0 virhettä, 3 huomiota` (sama kuin ennen).
+
+### Aleksanteri Nevskin katedraali — kenttä `lyhyt`
+- **Vanha:** "Aleksanteri Nevskin katedraalin kryptassa toimii kansallisgallerian kristillisen taiteen museo, joka perustettiin vuonna 1965. Sen kokoelmassa on yli kaksisataa ikonia 1200-luvulta 1800-luvulle, ja se on yksi maailman rikkaimmista ikonikokoelmista. Näyttelyssä on myös seinämaalausten katkelmia ja kaiverruksia."
+- **Uusi:** "Aleksanteri Nevskin katedraali on nimetty venäläisen ruhtinaan mukaan, mutta ensimmäisessä maailmansodassa Bulgaria ja Venäjä taistelivat vastakkaisilla puolilla. Siksi kirkko kantoi vuodesta 1916 vuoteen 1920 slaavien apostolien Kyrilloksen ja Methodioksen nimeä, kunnes vanha nimi palautettiin."
+- **Syy:** Tyyppi 2 (perustamisvuosi ja kokoelman koko). Lisäksi museon nykyinen sivu ei enää vahvista lukua "yli 200 ikonia 1200–1800-luvuilta", sillä sivu kertoo kokoelman kattavan 300-luvulta 1800-luvulle. Kysymys "Mitä katedraalin kryptassa on nykyään?" säilyy, ja museo on yhä auki.
+- **Lähde:** https://en.wikipedia.org/wiki/Saint_Alexander_Nevsky_Cathedral,_Sofia ; https://nationalgallery.bg/visiting/museum-of-christian-art/
+
+### Sofian yliopisto — kenttä `lyhyt`
+- **Vanha:** "Sofian yliopistossa opiskelee noin kaksikymmentäyksituhatta opiskelijaa kuudessatoista tiedekunnassa. Evlogi Georgiev testamenttasi yliopistolle tontin ja kahdeksansataatuhatta leviä jo vuonna 1896, ja lopulta veljekset antoivat rakennusta varten kuusi miljoonaa leviä. Päärakennus valmistui vasta lähes neljäkymmentä vuotta testamentin jälkeen."
+- **Uusi:** "Sofian yliopiston opiskelijat buuasivat tammikuussa 1907 ruhtinas Ferdinandille uuden kansallisteatterin avajaisissa. Hallitus sulki yliopiston rangaistukseksi ja erotti yhdellä päätöksellä kaikki sen opettajat, ja vasta seuraavan vuoden alussa uusi hallitus palautti professorit virkoihinsa."
+- **Syy:** Tyyppi 2 (opiskelija- ja tiedekuntamäärät, jotka myös vanhenevat) ja tyyppi 1 (Georgievin veljesten rahoitus kerrottiin jo saman kohteen tekstissä).
+- **Lähde:** https://en.wikipedia.org/wiki/Sofia_University ; https://bg.wikipedia.org/wiki/Софийски_университет
+
+### Sofian yliopisto — `lahteet` (ei tekstimuutosta)
+- Tekstin väitteellä kirjastosta ("maan suurin tieteellinen kirjasto, yli kaksi ja puoli miljoonaa julkaisua") ei ollut lähdettä. Väite vahvistui, ja lähde lisättiin: https://libsu.uni-sofia.bg/UB/?p=1301
+
+### Banja Bashin moskeija — kenttä `teksti`
+- **Vanha:** "ja sen nimi tarkoittaa monia kylpylöitä"
+- **Uusi:** "ja sen turkinkielinen nimi viittaa kylpylään"
+- **Syy:** Tyyppi 3 (kansanetymologia esitettynä tosiasiana): banyo on kylpy ja baş pää, joten nimi tarkoittaa "kylpylän pää(moskeija)" eikä "monia kylpylöitä". Wikipedia mainitsee molemmat ja toteaa, että "kylpylän pää" on oikeampi.
+- **Lähde:** https://en.wikipedia.org/wiki/Banya_Bashi_Mosque
+
+### Banja Bashin moskeija — kenttä `kysymykset`
+- **Vanha:** "Kuinka monta muslimia Sofiassa asuu nykyään?"
+- **Uusi:** "Miten tämä moskeija säästyi, kun muut tuhottiin?"
+- **Syy:** Tyyppi 7: vastaus on vanheneva tilasto. Uusi kysymys liittyy kohteeseen ja kierrosversioon (vuonna 1878 räjäytetyt moskeijat), ja sen oletus on tosi.
+- **Lähde:** https://en.wikipedia.org/wiki/Sofia
+
+### Sofian synagoga — kenttä `lyhyt`
+- **Vanha:** "Sofian synagoga oli suljettuna vuosina 1943 ja 1944, kun suurin osa kaupungin juutalaisista oli karkotettu maaseudulle. Rakennus on Kaakkois-Euroopan suurin synagoga, ja sen sisäkupoli kohoaa kahteenkymmeneenkolmeen metriin. Pääsalissa on yli tuhat istumapaikkaa."
+- **Uusi:** "Sofian synagogaan osui huhtikuussa 1944 kaupungin pommitusten aikana pommi, joka ei räjähtänyt, mutta isku rikkoi tärinällään koristeelliset lasimaalaukset. Vuonna 1982 eräs ministeri yritti muuttaa synagogan konserttisaliksi, mutta juutalaisyhteisö sai torjuttua hankkeen."
+- **Syy:** Tyyppi 2 (koko, kupolin korkeus, paikkamäärä) ja tyyppi 1 (vuosien 1943–1944 karkotusaihe oli jo saman kohteen tekstissä).
+- **Lähde:** https://www.sofiasynagogue.com/en/history/
+
+### Sofian synagoga — kentät `teksti` ja `kuvaus`
+- **Vanha:** "ja se on Euroopan suurin sefardijuutalaisten synagoga" / kuvaus "Euroopan suurin sefardisynagoga"
+- **Uusi:** "ja se on yksi Euroopan suurimmista sefardijuutalaisten synagogista" / kuvaus "Balkanin suurin synagoga"
+- **Syy:** Tyyppi 3 (superlatiivi): synagogan oma sivu sanoo "one of the three largest Sephardic synagogues in Europe and the largest on the Balkan Peninsula". En.wikipedia ei sano "Euroopan suurin sefardisynagoga", vaikka vanha lähde väitti niin.
+- **Lähde:** https://www.sofiasynagogue.com/en/history/ ; https://en.wikipedia.org/wiki/Sofia_Synagogue
+
+### Pyhän Yrjön rotunda — kenttä `lyhyt`
+- **Vanha:** "Pyhän Yrjön rotunda on vain noin neljätoista metriä korkea, mutta se on ollut vuorotellen kylpylä, kirkko ja moskeija. Nykyään se on taas ortodoksinen kirkko, ja pihalle pääsee vapaasti kujaa pitkin presidentin virkatalon ja opetusministeriön välistä."
+- **Uusi:** "Pyhän Yrjön rotunda rakennettiin roomalaiseen Serdicaan, jossa keisari Galerius antoi vuonna 311 suvaitsevaisuusediktin. Se lopetti kristittyjen vainot kaksi vuotta ennen kuuluisampaa Milanon ediktiä. Keisari Konstantinus Suuren kerrotaan sanoneen kaupungista: Serdica on minun Roomani."
+- **Syy:** Tyyppi 1 (kylpylä–kirkko–moskeija toisti saman kohteen tekstin) ja tyyppi 2 (korkeus ja kulkureitti). PILVI-epävarmuus kulkureitistä poistui, koska väite poistettiin. Rilan Johanneksen pyhäinjäännöksiä ei valittu, koska seuraava kierroskohde (Sveta Nedelya) kertoo jo pyhäinjäännöksistä.
+- **Lähde:** https://en.wikipedia.org/wiki/Serdica ; https://en.wikipedia.org/wiki/Church_of_Saint_George,_Sofia
+
+### Sveta Nedelyan kirkko — kenttä `teksti`
+- **Vanha:** "Kupolin alla olevaan pylvääseen oli kätketty kaksikymmentäviisi kiloa räjähteitä"
+- **Uusi:** "Kirkon ullakolle kupolia kannattavan pylvään yläpuolelle oli kätketty kaksikymmentäviisi kiloa räjähteitä"
+- **Syy:** Tyyppi 3: räjähteet vietiin ullakolle pääkupolin pylvään yläpuolelle eikä pylvään sisään. Kuolleiden määrä "yli kaksisataa" (213) ja tsaarin myöhästyminen vahvistuivat.
+- **Lähde:** https://en.wikipedia.org/wiki/St._Nedelya_Church_bombing
+
+### Kansalliskulttuuripalatsi — kenttä `lyhyt`
+- **Vanha:** "Kansalliskulttuuripalatsin edustalla on suihkulähteitä ja laaja puisto, joka on suosittu kävelypaikka. Vitoša-bulevardin alittavan alikulun seinille on maalattu katutaidetta, ja alikulusta pääsee suoraan metroasemalle, joka on nimetty palatsin mukaan ja avattiin vuonna 2012."
+- **Uusi:** "Kansalliskulttuuripalatsi rakennettiin kommunistijohtaja Todor Živkovin tyttären Ljudmila Živkovan aloitteesta, ja hän kuoli heinäkuussa 1981, vain muutama kuukausi talon avajaisten jälkeen. Seuraavana kesänä talo nimettiin hänen mukaansa, ja nimestä luovuttiin vasta vuonna 1990."
+- **Syy:** Tyyppi 2 (puisto, alikulku, metroaseman avausvuosi = perustietoa) ja tyyppi 1 (suihkulähteet ja puisto olivat jo saman kohteen tekstissä).
+- **Lähde:** https://en.wikipedia.org/wiki/National_Palace_of_Culture ; https://bg.wikipedia.org/wiki/Национален_дворец_на_културата
+
+### Kansalliskulttuuripalatsi — kenttä `teksti`
+- **Vanha:** "purettiin vuonna 2017 taiteilijoiden vastalauseista huolimatta"
+- **Uusi:** "purettiin vuonna 2017 mielenosoittajien vastalauseista huolimatta"
+- **Syy:** Tyyppi 3: vuonna 2017 purkua vastustivat paikalle tulleet mielenosoittajat. Taiteilijaliiton kirje on vuodelta 2012. PILVI-epävarmuus on ratkaistu: muistomerkki purettiin vuonna 2017.
+- **Lähde:** https://architectuul.com/architecture/monument-to-1300-years-of-bulgaria
+
+### Bojanan kirkko — kenttä `lyhyt`
+- **Vanha:** "Freskojen maalarin nimeä ei tunneta,"
+- **Uusi:** "Freskojen maalarin nimeä ei tiedetä varmasti,"
+- **Syy:** Tyyppi 3: restauroinnissa vuosina 2006–2008 löytyi mahdollinen maalarin signeeraus.
+- **Lähde:** https://en.wikipedia.org/wiki/Boyana_Church
+
+### Muut tarkistetut (ei muutoksia)
+- Banja Bashi: PILVI-epävarmuus on ratkaistu. En.wikipedia antaa vuodeksi 1566, ja osa lähteistä mainitsee 1576. Muotoilu "suunnittelijaksi mainitaan Mimar Sinan" jätetään ennalleen. Lyhyen versio seitsemästä vuonna 1878 räjäytetystä moskeijasta vahvistui sanatarkasti (en.wikipedia Sofia).
+- Sveta Nedelya: Milutinin pyhäinjäännökset kunnossa. Bojana: nauriit, sipuli ja yksitoista apostolia vahvistuivat (BNR), samoin vuosi 1259 sekä 89 kohtausta ja 240 hahmoa.
+- Ivan Vazovin kansallisteatteri: kunnossa (3.1.1907, tulipalo 1923, Dülfer 1929, nimi 1962).
+- Mineraalikylpylä: kunnossa (isoisä kertoo vain merkinnän sisällön; museo vuodesta 2015).
+- Avaus: 36 sanaa, ilmakuva (vuorten ympäröimä laakso, Vitoša), alkaa sanalla "Tervetuloa". Ok.
+
+### Epävarmuudet Päätoimittajalle
+- Sofian yliopisto: "buuasivat" perustuu en.wikipedian sanaan "booed". Bg.wikipedia puhuu ruhtinasta vastustaneesta mielenosoituksesta. Ilmaisu on tavallinen, mutta sävyn voi halutessaan muuttaa.
+- Rotunda: lause "Serdica on minun Roomani" on esitetty muodossa "kerrotaan sanoneen", koska alkuperäistä antiikin lähdettä ei mainita.
