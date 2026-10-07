@@ -72,7 +72,7 @@ namespace Matkakirja.Natiivi
             reliefi.tooltip = "Astronautin kameran reliefi: täysvärinen (1,0) tai webin vaimea (0,8). Näkyy seuraavalla avauksella.";
             Rakenne.Teksti("Astronautin reliefi", "mk-kytkinrivi__nimi", reliefi);
             reliefiTila = Rakenne.Teksti("", "mk-kytkinrivi__tila", reliefi);
-#if !MATKAKIRJA_APPSTORE
+            // Omistaja 7.10. 12.5x: kokeilukytkimet myös App Store -käännöksessä (näkyvät vasta kehittäjäkoodilla); työhuone ei.
             // Linssien avautumiskynnykset (Linssiseppä): kehittäjätilassa kaikki linssit auki.
             kynnykset = Rakenne.Nappi(null, "mk-kytkinrivi", () =>
             {
@@ -113,20 +113,17 @@ namespace Matkakirja.Natiivi
             // web #3388; KortinLukija, Striimiaani.Pelinimet).
             // Työhuone (web #kehittaja-tyohuone): Raamattu ja Kehittäjälehti kehittäjän liitteinä (Tyohuone.cs).
             // Fable 24.9.: vain kehittäjätilassa eikä koskaan App Store -buildissa.
+#if !MATKAKIRJA_APPSTORE
             Tyohuonerivi("Raamattu", "<path d=\"M5 4.5h6.5v15H6.6A1.6 1.6 0 0 1 5 17.9z\"/><path d=\"M19 4.5h-6.5v15h4.9a1.6 1.6 0 0 0 1.6-1.6z\"/>", Tyohuone.AvaaRaamattu);
             Tyohuonerivi("Kehittäjälehti", "<path d=\"M4.5 5.5h15v13h-15z\"/><path d=\"M7.5 9.5h6M7.5 12.5h9M7.5 15.5h9\"/>", Tyohuone.AvaaKehittajalehti);
 #endif
 
             kehittaja = new KehittajaIkkuna(kerros);
-#if MATKAKIRJA_APPSTORE
-            // App Storessa ei kehittäjätilaa: "Mitä uutta" ilman Kehittäjä-nappia.
-            MitaUutta = new MitaUutta(kerros, null);
-#else
+            // Omistaja 7.10. 12.5x: Kehittäjä-nappi (webin #kehittaja-btn) ja koodirivi kaikissa käännöksissä, myös App Storessa.
             MitaUutta = new MitaUutta(kerros, kehittaja.Avaa);
             // Kehittäjäkoodi (sama ikkuna aukeaa myös Asetusten Kehittäjä-kytkimestä ja Mitä uutta -näkymän napista).
             var koodi = Rakenne.Nappi(null, "mk-kytkinrivi", () => { Sulje(); kehittaja.Avaa(); }, kokeet, Ikonit.Ratas);
             Rakenne.Teksti("Kehittäjäkoodi", "mk-kytkinrivi__nimi", koodi);
-#endif
             Asetukset.Muuttui += _ => { VarmistaMaailma(); if (Auki) Paivita(); };
             kerros.Juuri(UiKerros.Valikot).schedule.Execute(VarmistaMaailma).StartingIn(1000);
         }

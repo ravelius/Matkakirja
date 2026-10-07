@@ -153,7 +153,7 @@ namespace Matkakirja.Natiivi
         public static void AsetaKehittajatila(bool paalla)
         {
 #if MATKAKIRJA_APPSTORE
-            return;   // App Store: kynnykset aina
+            if (!Matkakirja.Natiivi.Asetukset.Kehittaja) return;   // App Store: kynnykset aina, paitsi kehittäjäkoodilla (omistaja 7.10.)
 #endif
             Linssirekisteri.Kehittajatila = paalla;
             PlayerPrefs.SetInt(KehittajatilaAvain, paalla ? 1 : 0);
@@ -214,7 +214,8 @@ namespace Matkakirja.Natiivi
                 PlayerPrefs.GetFloat(KyllaisyysAvain, (float)Matkakirja.Linssit.Astronautti.AstronauttiLinssi.WebinKyllaisyys);
             // Kehittäjätila (kaikki linssit auki): sisäinen build oletuksena päällä, App Store ei koskaan.
 #if MATKAKIRJA_APPSTORE
-            Linssirekisteri.Kehittajatila = false;   // App Store: kynnykset aina, ei kytkintä
+            // App Store: kynnykset oletuksena; kehittäjäkoodilla KOKEET-kytkin toimii (omistaja 7.10. 12.5x).
+            Linssirekisteri.Kehittajatila = Matkakirja.Natiivi.Asetukset.Kehittaja && PlayerPrefs.GetInt(KehittajatilaAvain, 0) == 1;
 #else
             Linssirekisteri.Kehittajatila = PlayerPrefs.GetInt(KehittajatilaAvain, KehittajatilaOletus ? 1 : 0) == 1;
 #endif

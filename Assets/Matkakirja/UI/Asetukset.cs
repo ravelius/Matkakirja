@@ -36,15 +36,11 @@ namespace Matkakirja.Natiivi
         const string KehittajaTiivisteRajattu = "b3282a2f2a28757b3a18ab833de16a9c54518c0b0cf493e3f0a7cf09386f326a";
 
         /// <summary>
-        /// Kehittäjätila. App Store -käännöksessä (määrite MATKAKIRJA_APPSTORE, Rakennus.IosTestFlight) aina pois
-        /// eikä koodilla kytkettävissä (Fable 24.9.: portti build-määrityksestä, ei vain kytkimestä). Sisäisessä
-        /// TestFlightissä (release, ei määritettä) oletuksena pois ja koodilla päälle kuten webissä.
+        /// Kehittäjätila. Omistajan päätös 7.10.2026 klo 12.5x (kumoaa Fablen 24.9. portin): avautuu koodilla myös App Store
+        /// -käännöksessä (MATKAKIRJA_APPSTORE = TestFlight, sama binääri App Storeen); oletuksena pois, ja vain oikea koodi
+        /// (tiiviste) kytkee sen. Avaimet ajon aikana Keychainiin, ei binääriin eikä lokiin.
         /// </summary>
-#if MATKAKIRJA_APPSTORE
-        public static bool Kehittaja => false;
-#else
         public static bool Kehittaja => !PakotaPelaaja && (Debug.isDebugBuild || PlayerPrefs.GetString(KehittajaAvain, "") == "1");
-#endif
 
         /// <summary>
         /// Testi (ui pelaaja 1|0, Päätoimittaja 1.10.): pelaajan näkymä myös Debug-käännöksessä, jossa kehittäjätila on muuten
@@ -56,15 +52,12 @@ namespace Matkakirja.Natiivi
         /// <summary>
         /// Pöllön kehittäjäkoodi chatin x-pollo-kehittaja-otsakkeeseen (Fable 24.9.: ei koskaan kovakoodattuna eikä
         /// PlayerPrefsissä). Omistaja syöttää sen kerran kehittäjätilan kytkennässä; arvo säilyy vain iOS Keychainissa
-        /// (MatkakirjaAvaimet, kuten Lukijoilta-avain). Editorissa vain muistissa. App Store -käännöksessä aina null.
+        /// (MatkakirjaAvaimet, kuten Lukijoilta-avain). Editorissa vain muistissa. Myös App Store -käännöksessä (omistaja 7.10.).
         /// </summary>
         public static string PolloKoodi
         {
             get
             {
-#if MATKAKIRJA_APPSTORE
-                return null;
-#else
                 if (!polloKoodiLuettu)
                 {
                     polloKoodiLuettu = true;
@@ -73,11 +66,9 @@ namespace Matkakirja.Natiivi
 #endif
                 }
                 return string.IsNullOrEmpty(polloKoodi) ? null : polloKoodi;
-#endif
             }
         }
 
-#if !MATKAKIRJA_APPSTORE
         const string PolloKeychain = "pollo-kehittajakoodi";
         static string polloKoodi;
         static bool polloKoodiLuettu;
@@ -95,15 +86,10 @@ namespace Matkakirja.Natiivi
                 Debug.LogWarning("MATKAKIRJA asetukset: avainnippuun kirjoitus ei onnistunut (pöllön koodi vain muistissa)");
 #endif
         }
-#endif
 
         /// <summary>Kytkee kehittäjätilan koodilla (true = onnistui) tai pois (koodi null).</summary>
         public static bool AsetaKehittaja(string koodi)
         {
-#if MATKAKIRJA_APPSTORE
-            PlayerPrefs.DeleteKey(KehittajaAvain);
-            return koodi == null;
-#else
             if (koodi == null)
             {
                 PlayerPrefs.DeleteKey(KehittajaAvain);
@@ -130,7 +116,6 @@ namespace Matkakirja.Natiivi
             PlayerPrefs.Save();
             Muuttui?.Invoke("Kehittaja");
             return true;
-#endif
         }
 
         /// <summary>Kuljetun reitin kytkimen PlayerPrefs-avain ("0" = pois).</summary>
