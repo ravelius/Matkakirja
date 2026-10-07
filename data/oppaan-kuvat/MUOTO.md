@@ -21,7 +21,7 @@ Per kaupunki yksi tiedosto `data/oppaan-kuvat/kaupungit/<kaupunki-id>.json`:
 }
 ```
 
-- Lukittu kohdelista 6–20 kohdetta kaupungin koon mukaan (omistaja 6.10.): `kohteet` (1–5 kuvaa, järjestys 1 = paras, vaakakuva ensin; suuret maamerkit 4–5, tavalliset 2–3, pienet 1) + `eiKuvaa`, merkittävyysjärjestyksessä. Jokaisella kohteella `peruste`: "pelin nosto" | "UNESCO" (P757) | "sitelinks" (≥ 15 kieliversiota). Kaupunkikierros käyttää 8–10 ensimmäistä, Liiku kaikkia.
+- Lukittu kohdelista 6–20 kohdetta kaupungin koon mukaan (omistaja 6.10.): `kohteet` (1–5 kuvaa, järjestys 1 = paras, vaakakuva ensin; suuret maamerkit 4–5, tavalliset 2–3, pienet 1) + `eiKuvaa`, merkittävyysjärjestyksessä. Jokaisella kohteella `peruste`: "pelin nosto" | "UNESCO" (P757) | "sitelinks" (≥ 15 kieliversiota) | "kaupungin päänähtävyys" (Päätoimittajan päätös 7.10.: oikea nähtävyys ilman kielirajaa, ei Wikidata-tarkistusta). Kaupunkikierros käyttää 8–10 ensimmäistä, Liiku kaikkia.
 - `nimi` suomeksi, `lat`/`lon` Wikidatan P625:stä (validointi sallii 0,002°).
 - Kuvaehdot: PD / CC0 / CC BY / CC BY-SA, leveys ≥ 1 200 px, ei karttaa, logoa, lippua, vaakunaa, pohjapiirrosta eikä vesileimaa.
 - `tarkistettu: true` vasta silmätarkistuksen jälkeen (kuvataulu `node tools/oppaan-kuvat.mjs taulu`).

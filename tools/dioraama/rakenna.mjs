@@ -60,6 +60,9 @@ import { PINNAT } from '../../js/dioraama/pankit/pinnat.js';
 import { HENKILOT } from '../../js/dioraama/pankit/henkilot.js';
 import { LIEKIT } from '../../js/dioraama/pankit/liekit.js';
 import { AANET } from '../../js/dioraama/pankit/aanet.js';
+// Huulisynkka ja eleiden ajoitus (Linnanrakentaja 7.10.2026): ElevenLabsin merkkikohdistukset puheille (raaka-vastaus = valmiin
+// tiedoston aikajana, tarkistettu kestoista), id → { merkit, alut_s, loput_s }. Lähde _valmiit/linna-kohtaukset-v3/raaka/*-vastaus.json.
+const KOHDISTUKSET = JSON.parse(readFileSync(new URL('../../js/dioraama/pankit/kohdistukset.json', import.meta.url), 'utf8'));
 import { LIIKKEET } from '../../js/dioraama/pankit/liikkeet.js';
 
 const AO_MAX_M = 3; // speksin kohta 3: AO enintään 3 m kantama
@@ -333,6 +336,10 @@ export function lisaaBlender(rakennusJson, blender) {
   for (const [id, h] of Object.entries(rakennusJson.henkilot || {})) {
     if (!SKIN[id] || !on.has(`hahmot/${id}.glb`) || !h.malli3d) continue;
     h.malli3d = { ...h.malli3d, skin: { glb: B(`hahmot/${id}.glb`), ...SKIN[id] } };
+    // Faceit-ilmeet (morph-kohteet) omassa glb:ssä rinnalla (v41, 7.10.2026): vanha appi (TF 154) hylkää morph-glb:n
+    // ("Dioraama GLB: morph ei tuettu") ja linna jäi tyhjäksi, joten skin.glb on ilman morpheja ja vain junan 156 koodi lukee
+    // skin.faceit-kentän.
+    if (on.has(`hahmot/${id}-faceit.glb`)) h.malli3d.skin.faceit = B(`hahmot/${id}-faceit.glb`);
   }
   rakennusJson.tunnelma = 'hamara';
   rakennusJson.ulkokuori = {
@@ -803,13 +810,16 @@ export async function rakennaData(rakennus, {
   rakennusJson.aanet = {};
   for (const id of [...kaytetytAanet].sort()) {
     if (!Object.hasOwn(AANET, id)) throw new Error(`rakenna: käytetty ääni '${id}' puuttuu AANET-pankista`);
-    const { silmukka, voimakkuus, kesto_s: kestoS, versio, kuiva, kaiku, kaikuPitka } = AANET[id];
+    const { silmukka, voimakkuus, kesto_s: kestoS, versio, kuiva, kaiku, kaikuPitka, kohdistus } = AANET[id];
     // `tiedosto` on suhteessa rakennuksen juureen (ei hash-kansioon) — vakio polku riippumatta
     // siitä, kopioitiinko paikallinen mp3 tässä ajossa (`--aanet`); ämpäri tarjoaa sen julkaisussa.
     // v<versio>-alikansio: ks. aanetVersiot yllä (natiivin URL-välimuisti).
     rakennusJson.aanet[id] = { tiedosto: `aanet/v${versio ?? 1}/${id}.mp3`, silmukka, voimakkuus, kesto_s: kestoS };
     // Mikseritilan valinnaiset otot (kehittäjätila; Pelikoodari 30.9.): '/'-alkuinen polku median juuresta.
     for (const [k, v] of Object.entries({ kuiva, kaiku, kaikuPitka })) if (v !== undefined) rakennusJson.aanet[id][k] = v;
+    // Huulisynkka (Linnanrakentaja 6.10., Faceit-ilmeet): ElevenLabsin merkkikohdistus { merkit, alut_s, loput_s } sellaisenaan.
+    const kohd = kohdistus ?? KOHDISTUKSET[id];
+    if (kohd !== undefined) rakennusJson.aanet[id].kohdistus = kohd;
   }
   // era2b kohta 4 (3D-hahmot, ali-agentti P4b): liikesilmukkapankki LIIKKEET rakennus.json:iin SELLAISENAAN
   // (sama muoto kuin js/dioraama/pankit/liikkeet.js — ei rakennuskohtaista suodatusta, koska mikä silmukka
