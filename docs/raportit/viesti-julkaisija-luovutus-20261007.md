@@ -123,3 +123,16 @@ Päätoimittaja = "PÄÄTOIMITTAJA (Opus, max)".
   **Varalaukaisu**: setsid `julkaisija-tyokalut/tf162-odota-lupa.sh` odottaa tiedostoa `tf162-lupa` (BUILD 162 täysi SHA) ja
   ajaa `tf-kaynnista.sh 162 <sha> ce50afe3…`; `tf162-kaynnistetty` estää tuplan. Tarkista `tf162-odota-lupa.log` ja `tf162-ketju.log`.
   Jos TF on jo käynnissä, älä käynnistä uudelleen. #4168 merge + Pöllö vasta TF 162 testaajilla.
+
+## 23.0x — TILANNE ENNEN KESKIYÖN TILINVAIHTOA
+- **TF 162** (BUILD 30fbc374): sisäisillä 22.15, Mac TF 162 ladattu. Omistaja löysi iPad-vikoja → EI ulkoisille. Ulkoinen
+  silmukka pysäytetty. 162 irrotetaan Arvioijat-ryhmästä: #4173 (--poista) mergetty, korjaus #4174 (iOS+macOS sama versio)
+  odottaa testejä → taustalla merge + `gh workflow run testflight-ulkoinen.yml -f poista=162 -f build_numero=`. Tarkista lokista
+  "Build 162: irrotettu"; jos ei tehty, aja itse.
+- **Korjausjuna 163**: BUILD 163 = ecb11b787ac53f9e417aa3188f16b453fd891e7c (juna/b13 2739ded6; myöhemmin vielä
+  79462cba/d78cd0e0-käännöksiä → Natiiviseppä ilmoittaa lopullisen). Muutosloki #4175 mergetty (6b37efec).
+  Varalaukaisu setsid `tf163-odota-lupa.sh`: kun PT kuittaa, Natiiviseppä kirjoittaa BUILD 163 -SHA:n `tf163-lupa`-tiedostoon →
+  TF 163 + ketju (uusi pohja `tf-ketju-pohja.sh`: sisäinen heti, vienti ennen ulkoista). `tf163-ei-ulkoista` on asetettu:
+  ulkoinen ryhmä VAIN omistajan kuittauksella (PT) → silloin poista lippu ja aja testflight-ulkoinen build_numero=163.
+- TF-viive: sisäinen ryhmä hasAccessToAllBuilds=True (näkyy heti Applen käsittelyn jälkeen, ~16 min).
+- #4168 (turvakerrokset) julki 22.19. #4172 (TF -jobs 12) mergetty 22.05.
