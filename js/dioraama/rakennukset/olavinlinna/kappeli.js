@@ -87,30 +87,63 @@ const PULPETTI = [0.9, LATTIA, -21.9]; // 7.10.: sisäsäde 3,9 → lähemmäs k
 const pulpKynt = paik(PULPETTI, 180, -0.2, 1.1, -0.2);
 liekki(paik(pulpKynt, 0, 0, 0.25 * KYNTTILAN_KARKI, 0), 1.4, 0.6);
 
-// --- 12 vihkimisristiä seinäkaarella, tasavälein sektorin (95…230) ulkopuolella: väli 18,6° alkaen 242°.
+// --- 12 vihkimisristiä seinäkaarella sektorin (95…230) ulkopuolella.
 const RISTIT = [];
-for (let k = 0; k < 12; k++) {
-  const a = (242 + 18.6 * k) % 360;
+// 7.10. E3: kaari-ovi (300°), kätkö (38,75°) ja oikea ikkuna (58,7°) vaativat välit: 12 ristiä näkyvälle kaarelle
+// (230…95) esteiden väleihin (kaari-ovi 291…309, hagioskooppi 3, kätkö 35…42, ikkuna 57…61).
+for (const a of [236, 252, 268, 284, 318, 333, 348, 13, 28, 49.5, 71, 87]) {
   RISTIT.push({ resepti: 'vihkimisristi', paikka: pol(a, SEINA, 10.75), suunta: a + 180, sade: 0.26 }); // 7.10.: 0,34 → 0,26 (pienempi seinä)
 }
 
 // Hagioskooppirako (pohjaseinä 3°, kammion aukko) ja koillismuurin ainoa ahdas ikkuna (Aspelin 1875, Sisältökirjurin
 // lähdetarkistus #4129; Maconi 1910 ei näytä sitä): kivireunus laatoista. Ikkuna 58,7° ristien 49,4° ja 68° välissä, korkealla
 // (lattia + 1,5…2,3), suljettu rautaluukulla; valo tulee edelleen kynttilöistä.
-const KIVI = { yla: 'kivi', sivu: 'kivi', ala: 'kivi' };
-// Sivualttarin (38°) kätkösyvennys E3:lle: kompassi a0…a1 (ristien 30,8° ja 49,4° välissä), lattia + 1,05…1,65 (alttaripöydän
-// yläpuolella), syvyys 0,55. Irrotettavat kivet, kalkki, pateeni ja liuskekivi ovat kavely-merkkien esineitä (eivät leivottuja).
-const SYV = { a: 38.75, a0: 34.9, a1: 42.6, y0: LATTIA + 1.05, y1: LATTIA + 1.65, leveys: 0.52, syvyys: 0.55 }; // 7.10.: kivireunus (laatan oletus yla = lankku näytti puulta)
+const KIVI = { yla: 'kivi', sivu: 'kivi', ala: 'kivi' }; // 7.10.: kivireunus (laatan oletus yla = lankku näytti puulta)
+// Sivualttarin (38°) kätkösyvennys E3:lle: kompassi a0…a1 (ristien 30,8° ja 49,4° välissä), lattia + 1,1…1,5 (alttaripöydän
+// yläpuolella), syvyys 0,4. Irrotettavat kivet, kalkki, pateeni ja liuskekivi ovat kavely-merkkien esineitä (eivät leivottuja).
+// 7.10. E3-käsikirjoitus (#4155): ontelo 0,5 × 0,4 × 0,4 m, umpimuuraus neljästä kivestä (2 × 2).
+const SYV = { a: 38.75, a0: 35.06, a1: 42.44, y0: LATTIA + 1.1, y1: LATTIA + 1.5, leveys: 0.5, syvyys: 0.4 };
+// Kaari-ovi (Maconi 1910: "oikealla kaari-ovi noin 1,05 m, josta askelmat seinänsisäiseen tilaan"; E3: portaat ampumakäytävään,
+// TULKINTA) luoteessa 300°, 1,05 × 2,4 m. Kävelyosa kappeli-kavely jatkaa portaat seinän sisään.
+const KAARIOVI = { a: 300, puoli: 7.75, y0: 9.0, y1: LATTIA + 2.4 };
+const IKKUNA = { a: 58.7, puoli: 1.92, y0: LATTIA + 1.5, y1: LATTIA + 2.3 };
+const SEINAN_AUKOT = [
+  [KAARIOVI.a - KAARIOVI.puoli, KAARIOVI.a + KAARIOVI.puoli, KAARIOVI.y0, KAARIOVI.y1],
+  [SYV.a0, SYV.a1, SYV.y0, SYV.y1],
+  [IKKUNA.a - IKKUNA.puoli, IKKUNA.a + IKKUNA.puoli, IKKUNA.y0, IKKUNA.y1],
+];
+// Torniseinä vaakakaistoina: kaistan rajat = aukkojen y-rajat; kaistalla vapaat kulmavälit näkyvällä kaarella 230…455 → kukin
+// torni-palikka, jonka auki = välin komplementti (torni pitää välin [loppu, alku + 360]).
+function seinaAukoin() {
+  const Y0 = 9.0, Y1 = 15.6;
+  const rajat = [...new Set([Y0, Y1, ...SEINAN_AUKOT.flatMap(([, , y0, y1]) => [y0, y1])])].filter((y) => y >= Y0 && y <= Y1).sort((p, q) => p - q);
+  const osat = [];
+  for (let i = 0; i < rajat.length - 1; i++) {
+    const ya = rajat[i], yb = rajat[i + 1], ym = (ya + yb) / 2;
+    const esteet = SEINAN_AUKOT.filter(([, , y0, y1]) => ym > y0 && ym < y1)
+      .map(([a0, a1]) => [a0 < 230 ? a0 + 360 : a0, a1 < 230 ? a1 + 360 : a1]).sort((p, q) => p[0] - q[0]);
+    let alku = 230;
+    for (const [a0, a1] of [...esteet, [455, 455]]) {
+      if (a0 - alku > 0.01) osat.push({ resepti: 'torni', paikka: [CX, ya, CZ], suunta: 0, sade: 6.6, paksuus: 2.7, korkeus: r3(yb - ya), segmentit: 32, auki: { alku: r3(a0 - 360), loppu: r3(alku) } });
+      alku = Math.max(alku, a1);
+    }
+  }
+  // Ikkunatunnelin ja kaari-oven aukon katot (seinän paksuuden läpi / oven syvennys)
+  osat.push({ resepti: 'laatta', paikka: pol(IKKUNA.a, SEINA + 1.36, IKKUNA.y1 + 0.04), suunta: IKKUNA.a + 180, leveys: 0.36, syvyys: 2.8, paksuus: 0.06, pinnat: KIVI });
+  osat.push({ resepti: 'laatta', paikka: pol(KAARIOVI.a, SEINA + 0.4, KAARIOVI.y1 + 0.04), suunta: KAARIOVI.a + 180, leveys: 1.15, syvyys: 0.9, paksuus: 0.06, pinnat: KIVI });
+  // Kaari-oven aukon pohja ulkopinnan sisällä (r 6,45): dioraamassa ei näy taivasta; kävelyosan portaat pysyvät r < 6,3.
+  osat.push({ resepti: 'laatta', paikka: pol(KAARIOVI.a, 6.47, KAARIOVI.y1), suunta: KAARIOVI.a + 180, leveys: 2.0, syvyys: 0.05, paksuus: r3(KAARIOVI.y1 - KAARIOVI.y0), pinnat: KIVI });
+  return osat;
+}
 const REIAT = [];
 for (const h of [
   { a: 3, y: 10.05, leveys: 0.24, korkeus: 0.5 }, // hagioskooppi
-  { a: 58.7, y: LATTIA + 1.5, leveys: 0.26, korkeus: 0.8, luukku: true }, // koillisikkuna (Aspelin 1875)
+  { a: 58.7, y: LATTIA + 1.5, leveys: 0.26, korkeus: 0.8, aukko: true }, // koillisikkuna (Aspelin 1875): todellinen aukko
 ]) {
-  REIAT.push({ resepti: 'rako', paikka: pol(h.a, SEINA, h.y), suunta: h.a + 180, leveys: h.leveys, korkeus: h.korkeus });
+  if (!h.aukko) REIAT.push({ resepti: 'rako', paikka: pol(h.a, SEINA, h.y), suunta: h.a + 180, leveys: h.leveys, korkeus: h.korkeus });
   REIAT.push({ resepti: 'laatta', paikka: pol(h.a, SEINA - 0.13, h.y), suunta: h.a + 180, leveys: h.leveys + 0.3, syvyys: 0.3, paksuus: 0.07, pinnat: KIVI });
   REIAT.push({ resepti: 'laatta', paikka: pol(h.a, SEINA - 0.13, h.y + h.korkeus + 0.07), suunta: h.a + 180, leveys: h.leveys + 0.3, syvyys: 0.3, paksuus: 0.07, pinnat: KIVI });
-  // Rautaluukku kiinni (pystylevy aukon edessä; laatan paikka-y = yläreuna).
-  if (h.luukku) REIAT.push({ resepti: 'laatta', paikka: pol(h.a, SEINA - 0.035, h.y + h.korkeus), suunta: h.a + 180, leveys: h.leveys + 0.04, syvyys: 0.025, paksuus: h.korkeus, pinnat: { yla: 'kengat', sivu: 'kengat', ala: 'kengat' } }); // tumma rauta (rauta-pinta leipoutuu ruosteeksi)
+  // Rautaluukku on kävelyosan avattava esine (esine-luukku.glb, merkki luukku:koillinen), ei leivottu.
 }
 
 // --- Hahmot: kappalainen pääalttarin ääressä (messu), vouti seurakuntalaisena penkin luona.
@@ -196,12 +229,8 @@ export const TILA = {
     { resepti: 'kiekko', paikka: [CX, LATTIA, CZ], suunta: 0, sade: 6.6, paksuus: 0.4, segmentit: 32, pinnat: { yla: 'kivi' } },
     // Tornin seinä kerroksen korkeudelta (uusi tapa 29.9.: kuoressa ei ole sisäpintaa, massan torni ei ole mukana).
     // Seinä 2,7 m (sisäsäde 3,9) ja holvin yläpuolelle asti (y 9,0…15,6), ettei kennojen seinäkaarien yllä näy rakoa.
-    // 7.10. E3 (valoarvoitus): seinä kolmessa korkeusosassa, jotta sivualttarin (38°) yläpuolelle jää todellinen syvennys
-    // (Härö 1997: sivualttarien syvennykset 1870-luvulla umpeen muurattuja). Syvennys SYV (kompassi, y, leveys, korkeus, syvyys).
-    { resepti: 'torni', paikka: [CX, 9.0, CZ], suunta: 0, sade: 6.6, paksuus: 2.7, korkeus: SYV.y0 - 9.0, segmentit: 32, auki: { alku: 95, loppu: 230 } },
-    { resepti: 'torni', paikka: [CX, SYV.y0, CZ], suunta: 0, sade: 6.6, paksuus: 2.7, korkeus: SYV.y1 - SYV.y0, segmentit: 32, auki: { alku: 95 - 360, loppu: SYV.a1 } },
-    { resepti: 'torni', paikka: [CX, SYV.y0, CZ], suunta: 0, sade: 6.6, paksuus: 2.7, korkeus: SYV.y1 - SYV.y0, segmentit: 32, auki: { alku: SYV.a0, loppu: 230 } },
-    { resepti: 'torni', paikka: [CX, SYV.y1, CZ], suunta: 0, sade: 6.6, paksuus: 2.7, korkeus: 15.6 - SYV.y1, segmentit: 32, auki: { alku: 95, loppu: 230 } },
+    // 7.10. E3: seinä (sisäsäde 3,9, y 9,0…15,6) aukkolistasta SEINAN_AUKOT: dioraaman leikkaus 95…230, kätkö, ikkuna ja kaari-ovi.
+    ...seinaAukoin(),
     // syvennyksen takaseinä ja katto (lattia = alaosan yläreuna)
     { resepti: 'laatta', paikka: pol(SYV.a, SEINA + SYV.syvyys + 0.03, SYV.y1), suunta: SYV.a + 180, leveys: SYV.leveys + 0.1, syvyys: 0.05, paksuus: SYV.y1 - SYV.y0, pinnat: KIVI },
     { resepti: 'laatta', paikka: pol(SYV.a, SEINA + SYV.syvyys / 2, SYV.y1 + 0.04), suunta: SYV.a + 180, leveys: SYV.leveys + 0.1, syvyys: SYV.syvyys + 0.1, paksuus: 0.06, pinnat: KIVI },
