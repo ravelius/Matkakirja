@@ -130,7 +130,7 @@ namespace Matkakirja.Natiivi
             // Partioreitit osittain.
             // Reitti = merkin nimi ilman loppunumeroa (partio:portinvartija-1, -2 …; v44m: useampi reitti samassa osassa).
             var reitit = new SortedDictionary<string, List<KavelyMerkki>>(StringComparer.Ordinal);
-            foreach (var m in d.Lajia("istuu")) reitit["istuu-" + m.Tunnus] = new List<KavelyMerkki> { m };   // torkkuva vartija: yksi paikka
+            foreach (var m in d.Lajia("istuu")) if (m.Profiili != null) reitit["istuu-" + m.Tunnus] = new List<KavelyMerkki> { m };   // torkkuva vartija (ei istuu:pelaaja-*)
             foreach (var m in d.Lajia("partio"))
             {
                 int vi = m.Tunnus.LastIndexOf('-');
@@ -399,7 +399,9 @@ namespace Matkakirja.Natiivi
             riitaKaynnissa = false;
         }
 
-        V ote;
+        V ote; bool tyrmassa;
+        /// <summary>Pelaaja tyrmässä: vartijat eivät näe eivätkä kuule häntä (tyrmässä ei voi jäädä uudelleen kiinni).</summary>
+        public bool Tyrmassa => tyrmassa;
         /// <summary>Kiinnijäänti ensimmäisessä persoonassa (pelattavuusmalli 4.1): ote olasta (nytkähdys 3°), 1,0 s:n irtipääsyikkuna
         /// (toiminto: E, X tai toimintonappi → Vartija.Irrottaudu, 3 s etumatka), sitten kuva himmenee 1,5 s (vartija-kiinni-2) ja
         /// pelaaja tarkistuspisteeseen (tyrmä tulee tähän), kaikki vartijat valppaina.</summary>
@@ -432,6 +434,16 @@ namespace Matkakirja.Natiivi
             if (r != null && r.Valmis && v.Agentti != null) r.Soita("vartija-kiinni-2", v.Agentti.transform);
             yield return new WaitForSecondsRealtime(SeikkailuNakyvyys.HimmennysS);
             if (p != null) p.Otteessa = false;
+            // Tyrmä (pelattavuusmalli 4.1), jos sen merkit ovat paketissa: vartijat nollautuvat heti, pelaaja palaa tarkistuspisteeseen
+            // vasta paon jälkeen (armoaika ja valppaus silloin).
+            if (p != null && SeikkailuTyrma.Aloita(transform.parent, p, () => { Kiinni(v); }, kirjaa))
+            {
+                foreach (var x in vartijat) { var xp = x.Agentti.transform.position; x.Aivot.Nollaa(xp.x, xp.z, valpas: true); x.EdellinenTila = VartijanTila.Partio; }
+                tyrmassa = true;
+                while (SeikkailuTyrma.Aktiivinen != null) yield return null;
+                tyrmassa = false; ote = null;
+                yield break;
+            }
             Kiinni(v);
             ote = null;
             yield return new WaitForSecondsRealtime(0.3f);

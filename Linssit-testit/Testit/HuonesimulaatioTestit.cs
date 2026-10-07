@@ -22,7 +22,7 @@ namespace Matkakirja.Linssit.Testit
         static List<Simuvartija> Vartijat(KavelyData d)
         {
             var reitit = new SortedDictionary<string, List<KavelyMerkki>>(StringComparer.Ordinal);
-            foreach (var m in d.Lajia("istuu")) reitit["istuu-" + m.Tunnus] = new List<KavelyMerkki> { m };
+            foreach (var m in d.Lajia("istuu")) if (m.Profiili != null) reitit["istuu-" + m.Tunnus] = new List<KavelyMerkki> { m };
             foreach (var m in d.Lajia("partio"))
             {
                 int vi = m.Tunnus.LastIndexOf('-');

@@ -139,8 +139,10 @@ namespace Matkakirja.Natiivi
         static Vector3? OnttoPaikka()
         {
             var d = SeikkailuKavely.Data; if (d == null) return null;
-            foreach (var m in d.Lajia("ontto")) return new Vector3((float)m.X, (float)m.Y, (float)-m.Z);
-            return null;
+            // Kappelin syvennys (v44n: myös tyrmässä on ontto kohta, ontto:tyrma).
+            KavelyMerkki eka = null;
+            foreach (var m in d.Lajia("ontto")) { if (m.Tunnus == "syvennys") { eka = m; break; } if (eka == null && m.Osa != "tyrma-E101") eka = m; }
+            return eka != null ? new Vector3((float)eka.X, (float)eka.Y, (float)-eka.Z) : (Vector3?)null;
         }
 
         /// <summary>Saumat erottuvat viistovalossa: palava kynttilä asetettuna ≤ 0,9 m ontosta kohdasta tai kädessä ≤ 0,5 m (käsikirjoitus kohta 6).</summary>

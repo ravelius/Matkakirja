@@ -676,7 +676,7 @@ namespace Matkakirja.Natiivi
         /// <summary>Pelattavan palan kiinnitetty paketti (Linnanrakentajan v44g: kävely, Fogg, vene, laiturin kansi). Tuotannon osoitin
         /// (uusin.json) ei muutu: pala lukee tämän paketin testiosoittimena (sama hash-juuri ja manifest.json kuin julkaisulla, joten
         /// levyvälimuisti toimii; Päätoimittaja 7.10.: ei 250–400 Mt joka avauksella) ja palauttaa tuotannon, kun linna suljetaan.</summary>
-        public const string PelattavaPalaHash = "eb8b9c55f5c22795";   // v44m (v44l + pinnat, partioprofiilit, piilot, reitti:pelaaja)
+        public const string PelattavaPalaHash = "190df07ec22e8616";   // v44n (v44m + tyrmä E 101)
 
         void LataaUudelleen()
         {
