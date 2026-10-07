@@ -9,6 +9,15 @@ Olet Natiiviseppä (Opus, high). Lue tämä osio, MEMORY.md ja natiiviseppa-tila
 Juna-SHA:t otetaan vain PÄÄTOIMITTAJAN suoralla kuittauksella; käännökset, simut ja iPad vain Julkaisijan NYT-viestillä.
 Tarkista ensin taustalla jatkuneiden ajojen tulokset (alla) ja kerro ne Julkaisijalle ja PÄÄTOIMITTAJALLE.
 
+## OMISTAJAN PÄÄTÖS 15.5x (SITOVA): TESTAUS KEVYEMMIN
+Ennen junaa/TF:ää vain automaattiset testit (Kartta/Peli/Linssit-testit, tarkista.sh zsh, unity-tarkistus iOS+Mac, editori) ja
+käännös. EI savua, EI Laitetestaajaa, EI stillejä, EI iPad-mittauksia, EI toistoja ennen korjausta. Juna 1–2/pv, kun valmista on.
+Muisti testaus-kevyemmin-20261007.
+
+## TILA 16.0x: iOS TF 161 ladattu 15.56 (37623777958). Mac TF 161 -ketju (mac-tf-161.sh) käynnissä setsid, jonottaa lukkoa.
+PR ravelius/Matkakirja#4149 (mono_crash talteen) Julkaisijalle. Juna 162 -ehdokkaat: LS1 cc6176356, NUI 5e45d1da (kuittaus?),
+LS2 f6e4a8495 (varmista).
+
 ## TILA 15.4x: BUILD 161 = proto master **9572eaff** (juna/b13 2309f55d → c076765c, juna.log kirjattu). Julkaisija: muutosloki-PR + TF 161;
 Mac TF 161 Julkaisijan luvalla iOS-latauksen jälkeen: `MATKAKIRJA_APPSTORE=1 MATKAKIRJA_BUNDLE_ID=fi.matkakirja.peli zsh
 wt/proto-natiiviseppa-mac/tyokalut/mac-kaanna.sh 9572eaff 1.1 161` → ditto lokit/natiiviseppa-mac-tf-161-9572eaff → gh workflow run
