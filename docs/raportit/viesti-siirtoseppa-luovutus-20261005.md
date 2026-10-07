@@ -397,3 +397,6 @@ Edellinen luovutus on `viesti-siirtoseppa-luovutus-20261002.md` (5.10. osiot 02.
 - Eleet-2 ruuduittain: puhuja rajattu; tyhjät blendiruudut puhujan vaihdossa + renkaan kaari → b051b5d6 (vaihto leikkaa, rengas 1,5 s).
 - Julkaisijan jonoon b051b5d6 + NUI 34cf54b0 + 73ed2612; sitten eleet-2-uusinta (video Päätoimittajalle) + kävely.
 - LR v44 tulossa: soutu (_valmiit/olavinlinna-soutu-v1/soutu.json), keittio-g102-tila, kappeli lähteiden mukaan, kävely v2 (Tott-kammio, esine:nauris).
+- 12.34: uusinta ec14e9b3 (b051b5d6+NUI) iPad: eleet-2 puolilähi OK (ei tyhjiä ruutuja, video Päätoimittajalle lokit/siirtoseppa-vuoro-h2/eleet/).
+  LR v44 peili 5795bcd4039bf161 (soutu, keittio-g102, kappeli lähteistä, kävely v2 UV:llä): kävely tekstuurein, kirkkotorni pihalta.
+  e3af31dd: etsinnän renkaat ja syke pois kävelytilassa. Seuraavaksi: V2 venesaapuminen (soutu.json) ja käännös e3af31dd.
