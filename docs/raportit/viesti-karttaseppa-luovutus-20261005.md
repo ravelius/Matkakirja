@@ -1,3 +1,17 @@
+# TILANNE 8.10. klo 02.1x
+
+- **AJOSSA: TALVI2E** (`kaudet/aja-talvi2e.sh`, PGID 23889, 02.09 alkaen, 28 lohkoa, arvio noin 04) → `s2-eurooppa-talvi2e/`. Koodi: `kausimosaiikki-talvi2e-20261008.mjs`.
+  PT kuittasi 02.2x: A = mannerilmaston lumiraja (TALVI_ITA=1: 54° N ≤ 15° E → 48° N ≥ 30° E), jolla Itä-Euroopan ruutukuvio korjataan, sekä Mezeninlahden merijään rajaus 42° E:hen.
+  Talvi2d valmis 02.04: Grönlanti kunnossa (`yleiskuva-talvi2d-z6.jpg`).
+  **Lopulliset kerrokset: talvi2e → talvi2d → talvi2c → talvi2.** Valmistuttua:
+  1) Yleiskuva (neljännekset, erityisesti 48–57° N Puola–Venäjä ja Mezeninlahti).
+  2) Yksi rivi PT:lle.
+  3) Talvipaketti kokoa-kausi.py:llä (kerrokset yllä), LAHTEET.md ja Julkaisija.
+  Jos ajo venyy yli klo 08:n, ilmoita Natiivisepälle (junakäännös).
+- Syksy v1 ja kevät v1 ovat ämpärissä. Worldview on tuotannossa.
+
+---
+
 # TILANNE 7.10. klo 23.4x (TILINVAIHTO, VAIHTO NYT)
 
 - **AJOSSA: TALVI2D** (`kaudet/aja-talvi2d.sh`, PGID 68005, 23.22 alkaen, 80 lohkoa, klo 23.4x tilanne 1/80, valmis noin 02.30; tila `kaudet/aja-talvi2d.out`) → `s2-eurooppa-talvi2d/`. Koodi: `kausimosaiikki-talvi2d-20261007.mjs`.
