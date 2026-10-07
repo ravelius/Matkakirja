@@ -212,3 +212,12 @@ NUI:n osa on `natiivi-ui/sallitut-157` 0f770be2. LS2:n lista on tiedostossa `pro
   - Latauskuva v2 (vaakarajaus ja tumma liuku, iPad 1,4 ×): cc6176356, käännös ec7402278. Stillit `omistajalle/latauskuva-kolme-nakymaa-v2.png` lähetetty Päätoimittajalle kuittaukseen.
   - Alkulento-v3 8be4e3831 kääntyy junan 161 jälkeen, toistoajo savun jälkeen.
   - Korjaushaara alkulento-v3-korjaus c917ffd28: ei yötä, kone alusta, napautuksen kamera-ajo pois valinnassa.
+- 15.5x: OMISTAJAN PÄÄTÖS, kevyempi testaus. Kuittaukseen vain automaattiset testit ja käännös, ei stillejä, videoita eikä toistoajoja. Simu vain, jos syy on epäselvä.
+  - pallo-latauskuva b9f37ee8f (162):
+    - latauskuva v2 kuitattu 15.2x
+    - Siirrytään pois, ion-logo tasavälein (oma logo, krediittikerroksen kiinteä piiloon)
+    - siirtymäpeiton purku oppaan sulkeutuessa: Nayta(false) ja ajastinvarmistus, kertalaskuri
+    - Testit Linssit 806, Kartta 444, Peli 419 OK. Käännös jonossa.
+  - alkulento-v3-korjaus 8dbc785f2 (162): ei yötä, kone alusta, napautuksen kamera-ajo pois, leikkauksen vaiheajanotto. Testit Linssit 810, Kartta 447, Peli 419 OK.
+    - 1. toisto (6f681c85c) jumittui käännöksen aikana 44,8 s.
+    - Leikkauskehys kesti 763 ms (nykäyksen todennäköinen syy). Diagnostiikka-ajo pyydetty.
