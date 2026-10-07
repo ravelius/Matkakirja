@@ -58,8 +58,12 @@ namespace Matkakirja.Natiivi
 
         /// <summary>uusin.jsonin polku ("&lt;hash&gt;/") — sama esilataukselle ja linssille saman istunnon aikana (30 min),
         /// testiosoitin ensin. null = ei saatu.</summary>
+        /// <summary>Testi ("poikki osoitin esta 1"): uusin.json ei latautu eikä istunnon osoitinta käytetä (verkko pois -toistoajo).</summary>
+        public static bool EstaOsoitin;
+
         public static IEnumerator LueOsoitin(string ampariJuuri, Action<string> polku)
         {
+            if (EstaOsoitin) { polku(null); yield break; }
             if (!string.IsNullOrEmpty(TestiOsoitin)) { polku(TestiOsoitin.Trim('/') + "/"); yield break; }
             while (osoitinHaussa) yield return null;
             if (osoitinPolku != null && osoitinJuuri == ampariJuuri && Time.realtimeSinceStartup - osoitinLuettu < OsoitinVoimassaS)
