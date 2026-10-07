@@ -130,13 +130,18 @@ namespace Matkakirja.Linssit
             if (leikkaus == null)
             {
                 leikkaus = google.gameObject.AddComponent<CesiumPolygonRasterOverlay>();
+                // JUURISYY (simu 7.10. 03.58: koko Googlen tileset katosi): Cesium asettaa materialKey = "Clipping" vain editorin
+                // Reset()-metodissa (#if UNITY_EDITOR); ajonaikainen AddComponent jäi avaimelle "0" (kuvakerros), jolloin polygonimaski
+                // piirtyi tiilien kuvana. Avain asetetaan itse, ja Refresh lisää overlayn uudelleen oikealla avaimella.
+                leikkaus.materialKey = "Clipping";
                 leikkaus.invertSelection = false;
                 leikkaus.excludeSelectedTiles = true;
             }
             var lista = new List<CesiumCartographicPolygon>();
             foreach (var m in mallit) if (m.polygoni != null) lista.Add(m.polygoni);
-            if (leikkaus.polygons == null || leikkaus.polygons.Count != lista.Count)
+            if (leikkaus.polygons == null || leikkaus.polygons.Count != lista.Count || leikkaus.materialKey != "Clipping")
             {
+                leikkaus.materialKey = "Clipping";
                 leikkaus.polygons = lista;
                 leikkaus.Refresh();
                 kirjaa?.Invoke($"omat mallit: {k.Id} ladattu, Googlen tiilet leikattu {lista.Count} alueelta");
