@@ -293,3 +293,4 @@ Brotli (haara linnanrakentaja-zstd, worktree olemassa), akustiikka #3979 (Steam 
   värin sRGB 195,170,128:aan → leivonta giza-v2/sfinksi-uusi (kun valmis: korvaa glb/sfinksi-lod*.glb + sfinksi-tekstuurit,
   tarkista mediaani ~195,170,128, ilmoita LS1:lle, joka ottaa Gizan pelikuvat Päätoimittajalle).
 - 7.10. 13.0x: GIZA v2b VALMIS ja LS1:llä (Sfinksin väri + aitauksen hiekka, helmat 150 m + sfinksi-helma). Odottaa LS1:n pelikuvia Päätoimittajalle. Ei käynnissä olevia ajoja.
+- 7.10. 13.0x: JONOSSA (Siirtoseppä, ennen v45): portinvartija-1500 henkilöihin = vartija-1500:n varianssi (eri päähine/väri, samat leikkeet idle/kavely/puhe + ele_*), mixamo-v5 + faceit-v2 -ketjulla; paikka/partio vasta kun docs/raportit/olavinlinna-pystyleike-repliikit.md:n kohtaus lukittu. Lisäksi v45:een kappelin koillisikkunan leivonta.
