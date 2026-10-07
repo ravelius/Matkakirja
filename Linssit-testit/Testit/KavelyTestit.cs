@@ -48,5 +48,17 @@ namespace Matkakirja.Linssit.Testit
             Aja(k, new KavelySyote { HiiriX = 200 }, 1 / 60.0);
             Oleta.Tosi(k.KameraYaw >= -180 && k.KameraYaw < 180, $"yaw kääritty ({k.KameraYaw:F1})");
         }
+
+        [Testi] static void EnsimmaisenPersoonanPystyrajat()
+        {
+            var k = new Kavely();
+            Aja(k, new KavelySyote { HiiriY = -200 }, 1 / 60.0);
+            Oleta.Sama(Kavely.PitchMax, k.KameraPitch);   // oletusrajat (olan yli)
+            k.PitchAla = -75; k.PitchYla = 75;
+            Aja(k, new KavelySyote { HiiriY = -200 }, 1 / 60.0);
+            Oleta.Sama(75.0, k.KameraPitch);
+            Aja(k, new KavelySyote { HiiriY = 400 }, 1 / 60.0);
+            Oleta.Sama(-75.0, k.KameraPitch);
+        }
     }
 }

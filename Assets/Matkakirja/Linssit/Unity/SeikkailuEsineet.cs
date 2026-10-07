@@ -199,8 +199,8 @@ namespace Matkakirja.Natiivi
             }
             kadessa = e; e.Heitetty = false; e.Kuului = false;
             e.Rb.isKinematic = true;
-            e.Go.transform.SetParent(p.Hahmo, true);
-            e.Go.transform.localPosition = new Vector3(0.25f, 1.05f, 0.3f);
+            e.Go.transform.SetParent(p.Kasi, true);
+            e.Go.transform.localPosition = SeikkailuPelaaja.Ensimmainen ? new Vector3(0.02f, -0.05f, 0.05f) : new Vector3(0.03f, -0.1f, 0f);
             kirjaa?.Invoke($"seikkailu: poimittu {e.Id}");
             if (e.Laji == Laji.Nostettava) Nostettiin?.Invoke(e.Id);
         }

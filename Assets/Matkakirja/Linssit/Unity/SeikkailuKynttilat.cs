@@ -145,7 +145,7 @@ namespace Matkakirja.Natiivi
                 if (!ydin.OmaPalaa || !(OnttoPaikka() is Vector3 o)) return false;
                 if (OmaAsetettu is Vector3 a) return Vector3.Distance(a, o) <= AsetusM;
                 var p = SeikkailuPelaaja.Aktiivinen;
-                return p != null && Vector3.Distance(p.Hahmo.TransformPoint(new Vector3(0.22f, 1.15f, 0.3f)), o) <= KasiSaumaM;
+                return p != null && Vector3.Distance(p.Kasi.position, o) <= KasiSaumaM;
             }
         }
 
@@ -204,7 +204,7 @@ namespace Matkakirja.Natiivi
             bool oma = ydin.OmaPalaa && p != null;
             if (oma)
             {
-                var kasi = OmaAsetettu ?? p.Hahmo.TransformPoint(new Vector3(0.22f, 1.15f, 0.3f));
+                var kasi = OmaAsetettu ?? p.Kasi.position;
                 float lepatus = 0.9f + 0.1f * Mathf.PerlinNoise(Time.time * 6f, 0.3f);
                 Shader.SetGlobalVector(IdKanto, new Vector4(kasi.x, kasi.y, kasi.z, (float)Kynttilat.OmaValoM));
                 Shader.SetGlobalVector(IdKantoVari, new Vector4(1f, 0.72f, 0.42f, 0.95f * lepatus));
@@ -217,11 +217,11 @@ namespace Matkakirja.Natiivi
                 }
                 omaValo.transform.position = kasi; omaValo.intensity = 1.4f * lepatus; omaValo.enabled = true;
                 // Näkyvä liekki kädessä (DioraamaLiekit.LuoLyhty: sama 3D-liekki kuin hahmojen lyhdyissä), joka kallistuu vedossa.
-                if (omaLiekki == null && liekitLahde != null) omaLiekki = liekitLahde.LuoLyhty(p.Hahmo);
+                if (omaLiekki == null && liekitLahde != null) omaLiekki = liekitLahde.LuoLyhty(p.Kasi);
                 if (omaLiekki != null)
                 {
                     if (OmaAsetettu is Vector3 asl) { omaLiekki.transform.SetParent(transform, false); omaLiekki.transform.position = asl; }
-                    else { if (omaLiekki.transform.parent != p.Hahmo) omaLiekki.transform.SetParent(p.Hahmo, false); omaLiekki.transform.localPosition = new Vector3(0.22f, 1.15f, 0.3f); }
+                    else { if (omaLiekki.transform.parent != p.Kasi) omaLiekki.transform.SetParent(p.Kasi, false); omaLiekki.transform.localPosition = Vector3.zero; }
                     omaLiekki.SetActive(true);
                     var (kallistus, suunta) = Veto(kasi);
                     if (LuukkuAuki)

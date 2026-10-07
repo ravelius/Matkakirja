@@ -454,7 +454,8 @@ namespace Matkakirja.Natiivi
                 ? Mathf.Clamp(Vector3.Distance(nayttamo.Kamera.transform.position, pr) - PuolilahiVapaaM, 0f, PuolilahiLeikkausMaxM) : 0f;   // enintään 1,2 m: kuulija ei katoa blendissä
             // Kävely: kameran ja pelaajan väliin jäävä lähieste (pylväs, soihtu, oven pieli) jää piirtämättä (Päätoimittaja 7.10. 14.0x:
             // pihakuvassa pylväs peitti kolmanneksen) — leikkaus 1,2 m ennen pelaajaa, ettei hahmo itse katoa.
-            if (SeikkailuPelaaja.Aktiivinen is SeikkailuPelaaja sp && nayttamo.Kamera != null)
+            if (SeikkailuPelaaja.Aktiivinen != null && SeikkailuPelaaja.Ensimmainen) nayttamo.LahiLeikkaus = 0f;   // silmistä: ei peittäjiä
+            else if (SeikkailuPelaaja.Aktiivinen is SeikkailuPelaaja sp && nayttamo.Kamera != null)
                 nayttamo.LahiLeikkaus = Mathf.Clamp(Vector3.Distance(nayttamo.Kamera.transform.position, sp.transform.position + Vector3.up * 1.2f) - 1.6f, 0f, KavelyLahiMaxM);   // enintään 2,2 m: lattia ruudun alareunassa ei katoa
             // Rengas piilossa myös 1,5 s puolilähikuvan jälkeen: blendi takaisin lepoon on vielä lähellä kasvoja (eleet-2-ajo 7.10.: kaari kokin yllä).
             if (puolilahiRinta.HasValue) himmennysAsti = Time.unscaledTime + 1.5f;
@@ -990,6 +991,13 @@ namespace Matkakirja.Natiivi
             rakennus.Henkilot[id] = new Henkilo { Id = id, Nimi = pm.Nimi, Malli3d = new Malli3d { Skin = new SkinMalli { Glb = pm.Glb, Leikkeet = new Dictionary<string, string>(pm.Leikkeet) } } };
             sp.Malli = pm;
             nayttamo.Hahmot3D.PoistaIrralliset(id);
+            if (SeikkailuPelaaja.Ensimmainen)
+            {
+                // Ensimmäinen persoona: ei vartaloa (omistaja 7.10. 18.5x); leikkeiden kestot (nousu) silti mallista.
+                o.StartCoroutine(EsineetPaalle());
+                o.Kirjaa("seikkailu: ensimmäinen persoona (ei pelaajahahmoa)");
+                return;
+            }
             nayttamo.Hahmot3D.LisaaIrrallinen(rakennus, id, sp.Hahmo, sp.Leike, Quaternion.Euler(0f, 180f, 0f));
             var glbt = new List<string>();
             nayttamo.Hahmot3D.IrrallistenGlb(glbt);
@@ -1586,6 +1594,7 @@ namespace Matkakirja.Natiivi
                     return;
                 }
                 if (arvo == "toiminto") { SeikkailuEsineet.ToimintoPyydetty = true; o.Kirjaa($"poikki: toiminto (lähin {SeikkailuEsineet.Aktiivinen?.Lahin ?? "-"}, kädessä {SeikkailuEsineet.Aktiivinen?.Kadessa ?? "-"})"); return; }
+                if (arvo == "fp") { SeikkailuPelaaja.Ensimmainen = osat.Length <= 3 || osat[3] != "0"; o.Kirjaa($"poikki: kävely {(SeikkailuPelaaja.Ensimmainen ? "ensimmäinen persoona" : "olan yli")} (seuraavasta aloituksesta)"); return; }
                 if (arvo == "data") { kavelyKehitysJuuri = osat.Length > 3 ? osat[3].TrimEnd('/') + "/" : null; o.Kirjaa($"poikki: kävelydata {kavelyKehitysJuuri ?? "paketista"}"); return; }
                 string tid = osat.Length > 3 ? osat[3] : Linssi?.NakymaHetkella(YdinAika, false).KohdeTila ?? "laituri";
                 o.StartCoroutine(KavelyPaalle(tid));

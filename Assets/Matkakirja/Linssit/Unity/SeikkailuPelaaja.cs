@@ -10,6 +10,9 @@
 //   TAPPI-pohja täysillä 2D-arvoilla (pyyntö Natiivi-UI:lle; OpasTapit antaa vasemmasta vain pystyn).
 // - Törmäys: LisaaTormaykset lisää MeshColliderit tilojen meshesiin, kunnes Linnanrakentajan kavely/<osa>-tormays.glb tulee.
 // Hahmo on toistaiseksi kapseli (DioraamaValaistu); Fogg-glb ja Mixamo-leikkeet kytketään, kun ne ovat paketissa.
+// ENSIMMÄINEN PERSOONA (omistaja 7.10. 18.5x, sitova: pelaaja ei samastu minkään näköiseen eikä mihinkään sukupuoleen; mallina Thief):
+// kamera silmien korkeudella (1,62 m, kyyryssä 1,0 m, pehmeä siirtymä, ei pään heiluntaa), ei näkyvää vartaloa, käsiä eikä peilikuvaa;
+// kannettu esine (kynttilä, kivi) kameran edessä oikealla (Kasi); hahmo kääntyy katseen mukana. Kolmas persoona jää testikytkimeksi.
 using System;
 using Matkakirja.Linssit.Dioraama;
 using Matkakirja.Linssit.Seikkailu;
@@ -23,6 +26,12 @@ namespace Matkakirja.Natiivi
     {
         public const float Korkeus = 1.75f, Sade = 0.3f, Askel = 0.35f, Painovoima = -18f, HiiriAstePerPx = 0.12f;
         public const float KameraFov = 60f, KameraEtaisyys = 4.5f, OlkaX = 1.45f;
+        public const float SilmaY = 1.62f, KyykkySilmaY = 1.0f, SilmaNopeus = 2.2f, FpFov = 62f;
+        /// <summary>Ensimmäinen persoona (oletus); false = vanha olan yli -kamera (testikytkin "poikki kavely fp 0").</summary>
+        public static bool Ensimmainen = true;
+        /// <summary>Kantokohta: kynttilä ja poimittu esine (ensimmäisessä persoonassa kameran edessä oikealla, muuten käden korkeudella).</summary>
+        public Transform Kasi { get; private set; }
+        float silmaNyt = SilmaY, eleNotko;
         public static SeikkailuPelaaja Aktiivinen { get; private set; }
         /// <summary>Testisyöte (simulaattoriajot ilman kosketusta): liike ja katse −1…1 kunnes TestiLoppuu.</summary>
         public static KavelySyote Testi; public static float TestiLoppuu = -1f;
@@ -57,6 +66,7 @@ namespace Matkakirja.Natiivi
             p.cc.height = Korkeus; p.cc.radius = Sade; p.cc.stepOffset = Askel; p.cc.center = new Vector3(0, Korkeus / 2, 0);
             p.cc.slopeLimit = 40f; p.cc.skinWidth = 0.03f;
             p.kavely.KameraYaw = p.kavely.HahmoYaw = yaw;
+            if (Ensimmainen) { p.kavely.KameraPitch = 0; p.kavely.PitchAla = -75; p.kavely.PitchYla = 75; }
             p.viimeMaassa = paikka;
             // Hahmo (väliaikainen kapseli; Fogg-glb myöhemmin).
             // Hahmosolmu (kääntö, skaalaamaton: Fogg, kynttilä ja esineet sen lapsina) ja kapseli sen lapsena (7.10.: Fogg peri kapselin
@@ -71,15 +81,31 @@ namespace Matkakirja.Natiivi
             var sh = Resources.Load<Shader>("Varjostimet/DioraamaValaistu");
             if (sh != null) h.GetComponent<MeshRenderer>().sharedMaterial = new Material(sh) { color = new Color(0.55f, 0.35f, 0.2f) };
             p.hahmo = hs.transform; p.kapseli = h;
-            // Olkapiste ja kamera.
-            p.olka = new GameObject("olka").transform;
+            // Olkapiste (ensimmäisessä persoonassa silmät) ja kamera.
+            p.olka = new GameObject(Ensimmainen ? "silmat" : "olka").transform;
             p.olka.SetParent(go.transform, false);
-            p.olka.localPosition = new Vector3(0, 1.55f, 0);
+            p.olka.localPosition = new Vector3(0, Ensimmainen ? SilmaY : 1.55f, 0);
+            p.Kasi = new GameObject("kasi").transform;
+            if (Ensimmainen) { p.Kasi.SetParent(p.olka, false); p.Kasi.localPosition = new Vector3(0.2f, -0.3f, 0.45f); }
+            else { p.Kasi.SetParent(hs.transform, false); p.Kasi.localPosition = new Vector3(0.22f, 1.15f, 0.3f); }
             var cg = new GameObject("CM pelaaja") { layer = kerros };
             cg.transform.SetParent(go.transform, false);
             p.kamera = cg.AddComponent<CinemachineCamera>();
             p.kamera.Follow = p.olka;
             p.kamera.Priority = 1000000;   // DioraamaCinemachine.PaivitaPelaaja varmistaa lisäksi lepokameroiden yli
+            if (Ensimmainen)
+            {
+                // Silmät: kamera lukittu silmäpisteeseen ja sen kiertoon (Ytimen kulmat), ei vaimennusta eikä heiluntaa.
+                p.KapseliPiiloon();
+                var fl = LensSettings.Default; fl.FieldOfView = FpFov; fl.NearClipPlane = 0.05f; fl.FarClipPlane = 4000f;
+                p.kamera.Lens = fl;
+                cg.AddComponent<CinemachineHardLockToTarget>();
+                cg.AddComponent<CinemachineRotateWithFollowTarget>();
+                LisaaTaytevalo(go.transform, kerros, new Vector3(0.3f, 2.3f, -0.8f));
+                Aktiivinen = p;
+                Debug.Log($"MATKAKIRJA seikkailu: pelaaja luotu {paikka}, yaw {yaw:F0} (ensimmäinen persoona)");
+                return p;
+            }
             // Olan yli (Päätoimittaja 7.10. 14.0x): hahmo vasempaan kolmannekseen ~35 % ruudun korkeudesta, kamera hieman ylempänä.
             // FOV 60° → 4,5 m:n päässä näkyy 5,2 m korkeutta (1,75 m ≈ 34 %); olka 1,45 m oikealle ≈ 17° = vasen kolmannes.
             var lens = LensSettings.Default; lens.FieldOfView = KameraFov; lens.NearClipPlane = 0.1f; lens.FarClipPlane = 4000f;
@@ -92,12 +118,7 @@ namespace Matkakirja.Natiivi
             tpf.AvoidObstacles = es;
             // Täytevalo (Päätoimittaja: keittiön lattia ja esineet erottuvat): lämmin pehmeä pistevalo pään yläpuolella hieman takana,
             // ei varjoja (URP:n lisävalo, DioraamaValaistu lukee sen kuten tilojen pistevalot).
-            var vg = new GameObject("täytevalo") { layer = kerros };
-            vg.transform.SetParent(go.transform, false);
-            vg.transform.localPosition = new Vector3(0.4f, 2.3f, -1.2f);
-            var valo = vg.AddComponent<Light>();
-            valo.type = LightType.Point; valo.range = 7.5f; valo.intensity = 1.6f; valo.color = new Color(1f, 0.86f, 0.68f);
-            valo.shadows = LightShadows.None; valo.renderMode = LightRenderMode.ForcePixel;
+            LisaaTaytevalo(go.transform, kerros, new Vector3(0.4f, 2.3f, -1.2f));
             Aktiivinen = p;
             Debug.Log($"MATKAKIRJA seikkailu: pelaaja luotu {paikka}, yaw {yaw:F0}");
             return p;
@@ -110,15 +131,25 @@ namespace Matkakirja.Natiivi
             kavely.NopeusX = kavely.NopeusZ = 0;
         }
 
+        static void LisaaTaytevalo(Transform isa, int kerros, Vector3 paikka)
+        {
+            var vg = new GameObject("täytevalo") { layer = kerros };
+            vg.transform.SetParent(isa, false);
+            vg.transform.localPosition = paikka;
+            var valo = vg.AddComponent<Light>();
+            valo.type = LightType.Point; valo.range = 7.5f; valo.intensity = 1.6f; valo.color = new Color(1f, 0.86f, 0.68f);
+            valo.shadows = LightShadows.None; valo.renderMode = LightRenderMode.ForcePixel;
+        }
+
         // Kertaele juurisiirrolla (v44j nousu_laiturille: veneestä kannelle). Kapseli paikallaan ja törmäys pois leikkeen ajan; viimeisellä
         // ruudulla kapseli siirtyy root_siirto (hahmon kehyksessä, +Z kasvot) ja leike vaihtuu idleen (idle alkaa origosta, ei hyppyä).
-        float eleLoppuu = -1f, eleKesto; Vector3 eleSiirto; Action eleValmis;
+        float eleLoppuu = -1f, eleKesto; Vector3 eleSiirto, eleAlku; Action eleValmis;
         public bool Eleessa => eleLoppuu >= 0f;
 
         public void SoitaEle(string nimi, float kesto, Vector3 juuriSiirto, Action valmis = null)
         {
             leike = nimi; leikeAika = 0; eleKesto = kesto; eleLoppuu = Time.unscaledTime + kesto; eleValmis = valmis;
-            eleSiirto = hahmo.rotation * juuriSiirto;
+            eleSiirto = hahmo.rotation * juuriSiirto; eleAlku = transform.position;
             cc.enabled = false; pysty = 0; kavely.NopeusX = kavely.NopeusZ = 0;
             Debug.Log($"MATKAKIRJA seikkailu: ele {nimi} {kesto:F1} s, juurisiirto {eleSiirto}");
         }
@@ -127,8 +158,21 @@ namespace Matkakirja.Natiivi
         {
             if (eleLoppuu < 0f) return false;
             leikeAika = Math.Min(leikeAika + dt, eleKesto - 1e-3);   // ei kierrä alkuun (Hahmot3D ottaa ajan modulo kesto)
+            if (Ensimmainen)
+            {
+                // Ensimmäinen persoona: kamera kulkee leikkeen juuren polkua (nousu_laiturille: y valmis ruudulla 38/73, eteen ≤ 0,25 m
+                // siihen asti, sitten loput eteen) ja painuu polvelle noustessa (notko ≤ 0,55 m), ilman vartaloa.
+                float u = Mathf.Clamp01(1f - (eleLoppuu - Time.unscaledTime) / eleKesto);
+                const float Y = 38f / 73f;
+                float fy = u < Y ? Mathf.SmoothStep(0f, 1f, u / Y) : 1f;
+                float fz = u < Y ? 0.26f * u / Y : 0.26f + 0.74f * Mathf.SmoothStep(0f, 1f, (u - Y) / (1f - Y));
+                var vaaka = new Vector3(eleSiirto.x, 0f, eleSiirto.z);
+                transform.position = eleAlku + Vector3.up * eleSiirto.y * fy + vaaka * fz;
+                eleNotko = 0.55f * Mathf.Sin(Mathf.PI * Mathf.Clamp01((u - 0.1f) / 0.8f));
+            }
             if (Time.unscaledTime < eleLoppuu) return true;
-            transform.position += eleSiirto; viimeMaassa = transform.position;
+            eleNotko = 0f;
+            transform.position = eleAlku + eleSiirto; viimeMaassa = transform.position;
             cc.enabled = true; leike = "idle"; leikeAika = 0; eleLoppuu = -1f;
             var v = eleValmis; eleValmis = null; v?.Invoke();
             return false;
@@ -164,15 +208,23 @@ namespace Matkakirja.Natiivi
                 s.LiikeX = s.LiikeY = 0; s.Juoksu = s.Hiipiminen = false;
                 double hy = kavely.HahmoYaw; kavely.Paivita(dt, s); kavely.HahmoYaw = hy; kavely.NopeusX = kavely.NopeusZ = 0;
                 olka.rotation = Quaternion.Euler((float)kavely.KameraPitch, (float)kavely.KameraYaw, 0);
+                if (Ensimmainen) olka.localPosition = new Vector3(0f, silmaNyt - eleNotko, 0f);
                 return;
             }
             kavely.Paivita(dt, s);
             // Painovoima ja liike.
             if (cc.isGrounded && pysty < 0) pysty = -1f; else pysty += Painovoima * dt;
             cc.Move(new Vector3((float)kavely.NopeusX, pysty, (float)kavely.NopeusZ) * dt);
+            if (Ensimmainen) kavely.HahmoYaw = kavely.KameraYaw;   // keho katseen suuntaan (kantokohta ja heitto eteen)
             hahmo.localRotation = Quaternion.Euler(0, (float)kavely.HahmoYaw, 0);
             PaivitaLeike(dt);
             olka.rotation = Quaternion.Euler((float)kavely.KameraPitch, (float)kavely.KameraYaw, 0);
+            if (Ensimmainen)
+            {
+                // Kyykky laskee silmät pehmeästi (ei heiluntaa askelissa).
+                silmaNyt = Mathf.MoveTowards(silmaNyt, kavely.Tapa == Liiketapa.Hiipiminen ? KyykkySilmaY : SilmaY, SilmaNopeus * dt);
+                olka.localPosition = new Vector3(0f, silmaNyt, 0f);
+            }
             if (cc.isGrounded) viimeMaassa = transform.position;
             else if (transform.position.y < viimeMaassa.y - 6f)
             {

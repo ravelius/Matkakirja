@@ -24,6 +24,8 @@ namespace Matkakirja.Linssit.Seikkailu
 
         /// <summary>Kameran kierto (yaw) ja kallistus (pitch, + = katse alas) asteina.</summary>
         public double KameraYaw, KameraPitch = 12;
+        /// <summary>Katseen pystyrajat (asteina, + = alas); ensimmäisessä persoonassa laajemmat (SeikkailuPelaaja asettaa).</summary>
+        public double PitchAla = PitchMin, PitchYla = PitchMax;
         /// <summary>Hahmon suunta (yaw) asteina ja nopeus (m/s) vaakatasossa (x, z).</summary>
         public double HahmoYaw;
         public double NopeusX, NopeusZ;
@@ -35,7 +37,7 @@ namespace Matkakirja.Linssit.Seikkailu
             if (dt <= 0) return;
             // Katse: sauva/tappi nopeudella, hiiri suoraan asteina.
             KameraYaw = Kulma(KameraYaw + Kuollut(s.KatseX) * KatseNopeusAsteS * dt + s.HiiriX);
-            KameraPitch = Math.Clamp(KameraPitch - Kuollut(s.KatseY) * KatseNopeusAsteS * 0.7 * dt - s.HiiriY, PitchMin, PitchMax);
+            KameraPitch = Math.Clamp(KameraPitch - Kuollut(s.KatseY) * KatseNopeusAsteS * 0.7 * dt - s.HiiriY, PitchAla, PitchYla);
             // Liike kameran suuntaan.
             double lx = Kuollut(s.LiikeX), ly = Kuollut(s.LiikeY);
             double voima = Math.Min(1, Math.Sqrt(lx * lx + ly * ly));
