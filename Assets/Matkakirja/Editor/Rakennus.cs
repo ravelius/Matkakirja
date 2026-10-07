@@ -821,8 +821,38 @@ namespace Matkakirja.Editori
             string kansio = Ymp("MATKAKIRJA_KANSIO", "Build/mac");
             try { Kaanna(Path.Combine(kansio, "Matkakirja 3D.app"), BuildOptions.None, BuildTarget.StandaloneOSX); }
             finally { if (appStore) PlayerSettings.SetScriptingDefineSymbols(kohde, maaritteet); }
+            MacKuvake(Path.Combine(kansio, "Matkakirja 3D.app"));
             Debug.Log($"MATKAKIRJA: Mac-vienti {PlayerSettings.GetApplicationIdentifier(kohde)} {PlayerSettings.bundleVersion} " +
                       $"({PlayerSettings.macOS.buildNumber}), {PlayerSettings.GetScriptingBackend(kohde)}");
+        }
+
+        /// <summary>
+        /// Mac-kuvake (Mac TF 1.1 (155) 7.10.2026: App Store Connect hylkäsi, koska ICNS 512 pt @2x puuttui — Unity ei kirjoittanut
+        /// PlayerIcon.icns:ää lainkaan, vaikka Info.plist viittaa siihen). Kuvake-1024.png → iconset (16–512 pt, @1x ja @2x) → iconutil
+        /// → Contents/Resources/PlayerIcon.icns. Käännös tapahtuu aina Macilla (sips ja iconutil kuuluvat macOS:ään).
+        /// </summary>
+        static void MacKuvake(string app)
+        {
+            string lahde = Path.GetFullPath(KuvakeTiedosto);
+            string joukko = Path.Combine(Path.GetTempPath(), "matkakirja-mac-kuvake.iconset");
+            if (Directory.Exists(joukko)) Directory.Delete(joukko, true);
+            Directory.CreateDirectory(joukko);
+            void Aja(string ohjelma, string args)
+            {
+                var p = System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo(ohjelma, args)
+                    { UseShellExecute = false, RedirectStandardOutput = true, RedirectStandardError = true });
+                p.WaitForExit();
+                if (p.ExitCode != 0) throw new Exception($"Mac-kuvake: {ohjelma} {args} → {p.ExitCode}: {p.StandardError.ReadToEnd()}");
+            }
+            foreach (int k in new[] { 16, 32, 128, 256, 512 })
+            {
+                Aja("/usr/bin/sips", $"-z {k} {k} \"{lahde}\" --out \"{Path.Combine(joukko, $"icon_{k}x{k}.png")}\"");
+                Aja("/usr/bin/sips", $"-z {k * 2} {k * 2} \"{lahde}\" --out \"{Path.Combine(joukko, $"icon_{k}x{k}@2x.png")}\"");
+            }
+            string icns = Path.Combine(app, "Contents", "Resources", "PlayerIcon.icns");
+            Aja("/usr/bin/iconutil", $"-c icns -o \"{icns}\" \"{joukko}\"");
+            Directory.Delete(joukko, true);
+            Debug.Log($"MATKAKIRJA: Mac-kuvake {icns} ({new FileInfo(icns).Length / 1024} kt, 16–1024 px)");
         }
 
         /// <summary>
