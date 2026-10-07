@@ -83,8 +83,18 @@ namespace Matkakirja.Linssit
             ["ihmisen-matka-2"] = "ihmisen-matka",
         };
 
-        /// <summary>Valitsimessa näkyvä ja avattava: kehittäjätila tai omistus.</summary>
-        public bool Saatavilla(string id) => Kehittajatila || Omistaa(id != null && Omistusalias.TryGetValue(id, out var alkuperainen) ? alkuperainen : id);
+        /// <summary>
+        /// VALMIIT LINSSIT (omistaja 7.10.2026 15.0x, apurahakortin nappi): pelaajille julkaistut linssit auki heti ilman pisteitä.
+        /// Lista tulee esittely.json:sta (sama kuin webissä); kehittäjätilaan ei kosketa, kehitteillä olevat pysyvät kiinni.
+        /// </summary>
+        public static HashSet<string> Valmiit = new HashSet<string>(StringComparer.Ordinal);
+
+        /// <summary>Valitsimessa näkyvä ja avattava: kehittäjätila, valmiit linssit tai omistus.</summary>
+        public bool Saatavilla(string id)
+        {
+            var alkuperainen = id != null && Omistusalias.TryGetValue(id, out var a) ? a : id;
+            return Kehittajatila || (id != null && (Valmiit.Contains(id) || Valmiit.Contains(alkuperainen))) || Omistaa(alkuperainen);
+        }
 
         /// <summary>Auki oleva linssi tai null.</summary>
         public ILinssi Auki { get; private set; }

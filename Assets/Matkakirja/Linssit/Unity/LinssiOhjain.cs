@@ -160,33 +160,38 @@ namespace Matkakirja.Natiivi
             PlayerPrefs.Save();
         }
 
-        /// <summary>PlayerPrefs-avain esittelylinsseille (apurahan kortti, Pelikoodari 30.9.2026).</summary>
-        public const string EsittelyAvain = "linssi.esittelylinssit";
+        /// <summary>Vanha esittelylinssien avain (kaikki linssit, 30.9.2026): omistaja 7.10. 15.0x poisti, poistetaan käynnistyksessä.</summary>
+        const string EsittelyAvain = "linssi.esittelylinssit";
+        /// <summary>PlayerPrefs-avain valmiille linsseille (pilkuin eroteltu tunnuslista).</summary>
+        public const string ValmiitAvain = "linssi.valmiit";
 
         /// <summary>
-        /// ESITTELYLINSSIT (omistaja 30.9.2026, apurahan arvioijan kortti): kaikki rekisterin linssit auki heti, myös
-        /// kokeilut (Poikkileikkaus, Tähtitaivas, Yökartta), ilman pisteitä ja ilman muuta kehittäjätilaa (Asetukset.Kehittaja
-        /// ei muutu). Muistetaan; toimii myös App Store -käännöksessä, koska kortti on arvioijaa varten.
+        /// VALMIIT LINSSIT (omistaja 7.10.2026 15.0x, apurahakortin nappi "Avaa valmiit linssit"): vain pelaajille julkaistut
+        /// linssit auki heti ilman pisteitä; lista esittely.json:sta (sama kuin webissä). Kehitteillä olevat eivät aukea, eikä
+        /// kehittäjätila muutu (testaajatila koodilla on erillinen). Muistetaan; toimii myös App Store -käännöksessä.
         /// </summary>
-        public static void AvaaEsittelylinssit()
+        public static void AvaaValmiitLinssit(IEnumerable<string> tunnukset)
         {
-            Linssirekisteri.Kehittajatila = true;
-            PlayerPrefs.SetInt(EsittelyAvain, 1);
+            var lista = (tunnukset ?? Enumerable.Empty<string>()).Where(t => !string.IsNullOrEmpty(t)).Distinct().ToList();
+            Linssirekisteri.Valmiit = new HashSet<string>(lista, StringComparer.Ordinal);
+            PlayerPrefs.SetString(ValmiitAvain, string.Join(",", lista));
             PlayerPrefs.Save();
         }
 
-        public static bool EsittelylinssitAuki => PlayerPrefs.GetInt(EsittelyAvain, 0) == 1;
+        public static bool ValmiitLinssitAuki => Linssirekisteri.Valmiit.Count > 0;
 
-        /// <summary>Esittelylinssit kiinni (testaajatilan poisto, omistaja 7.10.): kynnykset kuten ilman esittelyä.</summary>
-        public static void SuljeEsittelylinssit()
+        /// <summary>
+        /// Linssien kehittäjätila asetuksista: KOKEET-kytkin (App Storessa vain kehittäjäkoodilla) tai testaajatila (koodilla,
+        /// kaikki linssit + vapaa liikkuminen, omistaja 7.10.). Lasketaan käynnistyksessä ja aina kun koodi vaihtuu.
+        /// </summary>
+        public static void PaivitaKehittajatila()
         {
-            PlayerPrefs.DeleteKey(EsittelyAvain);
-            PlayerPrefs.Save();
 #if MATKAKIRJA_APPSTORE
             Linssirekisteri.Kehittajatila = Matkakirja.Natiivi.Asetukset.Kehittaja && PlayerPrefs.GetInt(KehittajatilaAvain, 0) == 1;
 #else
             Linssirekisteri.Kehittajatila = PlayerPrefs.GetInt(KehittajatilaAvain, KehittajatilaOletus ? 1 : 0) == 1;
 #endif
+            if (Matkakirja.Natiivi.Asetukset.Testaaja) Linssirekisteri.Kehittajatila = true;
         }
 
         /// <summary>Asettaa ja muistaa astronautin reliefin kylläisyyden (0,8 tai 1,0); vaikuttaa seuraavaan avaukseen.</summary>
@@ -224,14 +229,13 @@ namespace Matkakirja.Natiivi
             // Astronautin reliefin kylläisyys: oletus webin 0,8, täysväri 1,0 vain KOKEET-kytkimellä.
             Matkakirja.Linssit.Astronautti.AstronauttiLinssi.Kyllaisyys =
                 PlayerPrefs.GetFloat(KyllaisyysAvain, (float)Matkakirja.Linssit.Astronautti.AstronauttiLinssi.WebinKyllaisyys);
-            // Kehittäjätila (kaikki linssit auki): sisäinen build oletuksena päällä, App Store ei koskaan.
-#if MATKAKIRJA_APPSTORE
-            // App Store: kynnykset oletuksena; kehittäjäkoodilla KOKEET-kytkin toimii (omistaja 7.10. 12.5x).
-            Linssirekisteri.Kehittajatila = Matkakirja.Natiivi.Asetukset.Kehittaja && PlayerPrefs.GetInt(KehittajatilaAvain, 0) == 1;
-#else
-            Linssirekisteri.Kehittajatila = PlayerPrefs.GetInt(KehittajatilaAvain, KehittajatilaOletus ? 1 : 0) == 1;
-#endif
-            if (EsittelylinssitAuki) Linssirekisteri.Kehittajatila = true;   // apurahan kortin esittelylinssit
+            // Kehittäjätila (kaikki linssit auki): sisäinen build oletuksena päällä; App Store vain kehittäjäkoodilla
+            // (KOKEET-kytkin, omistaja 7.10. 12.5x) tai testaajatilassa.
+            PaivitaKehittajatila();
+            Matkakirja.Natiivi.Asetukset.Muuttui += nimi => { if (nimi == "Kehittaja") PaivitaKehittajatila(); };
+            // Valmiit linssit (apurahakortti); vanha "kaikki linssit" -esittelylippu ei enää avaa mitään (omistaja 7.10. 15.0x).
+            if (PlayerPrefs.HasKey(EsittelyAvain)) { PlayerPrefs.DeleteKey(EsittelyAvain); PlayerPrefs.Save(); }
+            Linssirekisteri.Valmiit = new HashSet<string>(PlayerPrefs.GetString(ValmiitAvain, "").Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries), StringComparer.Ordinal);
             // Radiotila (web luentaSallittu): kaupungin napautus on play-nappi eikä avaa korttia,
             // ja luennat vaikenevat (Pelikoodarin koukut, pelikoodari/linssikytkennat).
             // Linssin portti (web linssikarttaEstaa) estää myös kaupungin napautuksen.

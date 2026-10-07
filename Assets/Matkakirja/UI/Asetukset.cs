@@ -102,7 +102,6 @@ namespace Matkakirja.Natiivi
             if (koodi == null)
             {
                 PlayerPrefs.DeleteKey(KehittajaAvain);
-                if (PlayerPrefs.GetString(TestaajaAvain, "") == "1" && PlayerPrefs.GetInt(TestaajaLinssitAvain, 0) == 1) LinssiOhjain.SuljeEsittelylinssit();
                 PlayerPrefs.DeleteKey(TestaajaAvain);
                 PlayerPrefs.DeleteKey(TestaajaLinssitAvain);
                 PlayerPrefs.Save();
@@ -122,12 +121,10 @@ namespace Matkakirja.Natiivi
             }
             if (t == TestaajaTiiviste)
             {
-                // Testaaja: kaikki linssit heti (sama joukko kuin apurahakortin esittelylinssit) ja vapaa liikkuminen (maailmatila).
+                // Testaaja: kaikki linssit heti (LinssiOhjain.PaivitaKehittajatila Muuttui-tapahtumasta) ja vapaa liikkuminen (maailmatila).
                 PlayerPrefs.DeleteKey(KehittajaAvain);
                 PlayerPrefs.SetString(TestaajaAvain, "1");
-                if (!LinssiOhjain.EsittelylinssitAuki) PlayerPrefs.SetInt(TestaajaLinssitAvain, 1);
                 PlayerPrefs.Save();
-                LinssiOhjain.AvaaEsittelylinssit();
                 Muuttui?.Invoke("Kehittaja");
                 return true;
             }
