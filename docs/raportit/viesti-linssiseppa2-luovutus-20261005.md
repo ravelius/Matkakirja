@@ -23,6 +23,10 @@ Avoimet työt:
   (2) vain pelaajan nykyisen maan pallot kaikilla zoomeilla (omistaja 12.5x; NostoKerros.NykyinenMaa, UiSisalto.Kaupunki.Maa).
   Ketju scratchpad/ketju-puoli.sh: simu-lupa-p1 (toisto ennen 19ef80cc Ateena) → kaannos-lupa-p → simu-lupa-p2 (37 kaupunkia
   iPhone + Ateena/Pariisi iPad, skenaariot puoli-kaikki.txt / puoli-ipad.txt). Yhdistelmä yövalot-161 mahdollinen (Julkaisija).
+  12.43 toistoajo ennen tehty (lokit/todistus-puoli-ennen-19ef80cc-*): iPhonella Ateenan kortti oikealla, pallo ei peitossa (vika ei
+  toistunut iPhonella; omistajan näkymä todennäköisesti iPad), mutta Sofian (BGR) pallo näkyi Kreikassa → 12.5x-sääntö korjaa.
+  Ketju (pid ketju-puoli.sh) odottaa yhä kaannos-lupa-p ja simu-lupa-p2 (tauon yli setsid). Jos Julkaisija kääntää yhdistelmän
+  (yövalot-161 + pallo), aja puoli-kaikki.txt / puoli-ipad.txt sen appilla käsin (komennot ketju-puoli.sh:ssa) ja tapa ketju.
   Tulos: lista kaupungeista, joissa puoli vaihtui (loki "kaupunkipallot: <id> oikealle"), + stillit Kreikka/Ranska → Päätoimittaja.
 
 ## TILA 7.10. 12.2x
