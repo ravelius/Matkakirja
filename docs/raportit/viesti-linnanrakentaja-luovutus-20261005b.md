@@ -308,3 +308,4 @@ Brotli (haara linnanrakentaja-zstd, worktree olemassa), akustiikka #3979 (Steam 
   + ASTC + kavely v2 → vie-blender → dispatch → Siirtosepälle. GIZA JONOSSA (odottaa omistajaa): LS1 mittasi LOD1/2 väritekstuurin
   67–70 % mustaa (leivonta aukkoinen: cage/ray + täyttö), helmat liian vaaleat/keltaiset (harmaammaksi + reunahäivytys).
   (LS1: mittaus proto-3d/tyokalut/linssiseppa-ajot/glb-musta-uv.py; kaukoreiät LS1 korjasi itse, helmoja ei kasvateta.)
+- 7.10. 14.4x: v44d PEILISSÄ 13cdef0883fdabf6 (blender f975e0ce, haara linnanrakentaja-linna-v42) → Siirtoseppä + Päätoimittaja: pikkupiha-kiveys, käytävien kivikatot, keittiön kiviseinät (leivottu), kappelin ikkuna + tumma luukku (kengat-pinta; rauta leipoutuu ruosteeksi), Fogg, laiturin kansi. Seuraava: Siirtosepän E1-löydökset; v45: portinvartija (henkilöpankissa jo, malli mixamo-v5 + faceit-v2 olemassa), keittiön esineet heitettava: true.
