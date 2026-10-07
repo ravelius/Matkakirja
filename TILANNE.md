@@ -62,8 +62,16 @@ E58–E59 luvut mallinnuksia, E61 muotit 3 kokoa, E62 40 khar = 1 922 l (+ suuri
   6643/387 = 《申报》"yli 6000 aarretta, pelastui runsaat 300"; pidätettyjen eunukkien nimet eivät ole lähteessä; Johnstonin puhelu dokumentoitu 《申报》1.7.1923.
 - KK/B: E15 päiväys on 4.9.1922 (kuukalenterivirhe tiedostossa); ~1000 eunukkia palatsissa, ~100 jäi, ~900 ajettiin ulos;
   E13 "eroraha kutistui" ei lähteessä (taksa 200/20 yuania); palatsissa puhelimia jo 1910 (myös Jianfugongissa); Duankang nuorin leskijalkavaimo.
-- Giza/D: "Khufun ystävät" = Hawassin popularisointi (Roth 1991 s. 125: kolme Khufun nimen muotoa); E35 löytöpäivä 14.4.1990;
+- Giza/D: "Khufun ystävät" VAHVISTUI (TARKISTAJA kumosi ylikorjauksen: RSS luku 14 nimeää "Friends of Khufu" ja "Followers of the Powerful White Crown of Khufu"); E35 löytöpäivä 14.4.1990;
   Tura ~17 km (PNAS), ei 12; luunmurtuma 1,97 % pitkistä luista, ei 44 %; Khufu-sinetit Kromerin kaatopaikalla = paras näyttö Lost Cityn yhteydestä Khufuun.
+
+## LOPPUTILA (7.10.2026): TYÖ VALMIS
+
+Molemmat tiedostot sisältävät osion "Lähdetarkistus 7.10.2026 (sivut avattu)" ja ovat käyneet erillisen TARKISTAJA-agentin (sonnet) läpi; löydökset on käsitelty.
+- KK 1923: E1–E25 vahvistui 11, korjattu 12, jää epävarmaksi 2; osio 4 (41 riviä): 21/9/11.
+- Giza: tarkistettu 42/74 kohtaa: vahvistui 21, korjattu 18, jää epävarmaksi 3 (E27, E63, E64); 32 kohtaa ei tilauksessa, ei avattu uudelleen.
+- Ei PR:ää, ei mergeä; muita tiedostoja ei muokattu (vain nämä kaksi ja TILANNE.md).
+- Avoimet: Johnstonin *Twilight* ja Puyin *From Emperor to Citizen* (archive.org-lainausrajoitus), Shenbaon alkuperäisnumerot, RSS:n sivunumerot kirjastokappaleesta.
 
 ## Mitä on tehty (vaihe 1)
 
