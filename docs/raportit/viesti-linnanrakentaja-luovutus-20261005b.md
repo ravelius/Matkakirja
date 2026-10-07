@@ -13,7 +13,7 @@ aikaan; ei omia natiivikäännöksiä; kuittaus = peili + yksi rivi (ei stillej�
 ## TILA LOPUSSA (7.10. klo 21.0x)
 - OMISTAJAN LINJAT: 13.3x ensimmäinen pelattava pala ensin, Giza ja Kielletty odottavat. 18.5x pelit 1. PERSOONASSA (Fogg ei näy;
   asu v2 kauko-/takakuviin; kädet kadet-v1). PELATTAVUUSMALLI mainissa: docs/raportit/pelattavuusmalli-olavinlinna.md (#4163).
-- LINNA v44q PEILISSÄ 676840af54bbbcd5 (d0f2b9dcc; MUUTOKSET.md v44…v44q, _valmiit/olavinlinna-blender-v44).
+- LINNA v44r PEILISSÄ f13f34e21fed3e66 (d7a968228; MUUTOKSET.md v44…v44r, _valmiit/olavinlinna-blender-v44). Huoneet 1–10 kävelymallissa.
   Siirtoseppä kytkee jokaisen viennin historia-fp:hen. Huoneet 1–8 käveltävinä: laituri, keittiö, Kirkkotorni, kappeli E3,
   tyrmä E 101 (osa tyrma-E101), huone 6 palatsi (Linnantupa + voudin sali leivottu, palatsi.js), huone 7 muurikäytävä, huone 8
   muurinharja + Kellotornin otteet (osa muurikaytava). Reitti kappelista: kaari-ovi → kaariportaat (RP 6,3) → ampumakäytävä
@@ -23,10 +23,9 @@ aikaan; ei omia natiivikäännöksiä; kuittaus = peili + yksi rivi (ei stillej�
   (esine:avainnippu-tyrma, esine:avainrengas, esine:esiliina, esine:myssy, esine:keittokulho) kavely.py:ssä → kavely.py + kuori_kavely.py
   → rsync v44/kavely → vienti → Siirtosepälle. Puuttuu myös köysikiepin glb (resepti koysikieppi on dioraamassa). Samalle agentille
   lisätty esine-arkku-komero.glb (solmut runko, kansi, kilpi-1, kilpi-2) → merkki esine:arkku-komero glb=.
-- HUONE 9 LÄHTEESSÄ (EI vielä viety, tulee seuraavaan vientiin esineiden kanssa): komero:kellotorni (280°, kynnys 14,8, leikkaus +
-  törmäys), tiili:komero-1..6, esine:arkku-komero, kilpi:arkku-1/2, valo:kuu-komero, koysi:krampi-komero.
-- HUONE 10 KYSYTTY PT:ltä 20.5x: köysilaskun paikka (280° alla 1790-l. Kellobastioni kuoressa; suositus laskeutuminen ~295°
-  paljaalle kalliolle, rinne 300° veteen r ~25, TULKINTA) vai 1499-kallion mallinnus. Odottaa vastausta.
+- HUONEET 9–10 VIETY v44r: komero (280°, tiilet, arkku + kilvet merkkeinä) ja pako (PT 21.0x vaihtoehto A: köysilasku 295°, rinne 300°,
+  Kellobastioni pois vain 1499-näkymästä leikkauksilla pako-kellobastioni-1..3 + kallio; kirjattu _lahteet/olavinlinna-pohjat/
+  SEIKKAILU-TARKISTUS.md loppuun). kuori_kavely.py: PAKO-alue rajaukseen ja kävelyyn (≤ 60°).
 - AJOTAPA: muutos → leivonta (scratch paistot.sh / leivo_tila.py 2k) → kopioi v44:ään → ASTC (swift proto-3d/tyokalut/astc-mip.swift
   X.jpg X-4x4.astcm 4) → worktreessä `source ~/.zshrc; zsh tools/dioraama/vie-blender.sh --lahde <v44>` → commit blender.json + push →
   `gh workflow run vie-dioraama.yml --ref linnanrakentaja-linna-v42 -f rakennus=olavinlinna -f kuiva=false -f osoitin=false` → hash:
