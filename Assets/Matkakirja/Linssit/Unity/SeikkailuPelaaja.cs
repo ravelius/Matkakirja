@@ -134,8 +134,24 @@ namespace Matkakirja.Natiivi
                 if (Math.Abs(r.x) + Math.Abs(r.y) > 0.05f) { s.KatseX = r.x; s.KatseY = r.y; }
                 s.Juoksu |= gp.leftStickButton.isPressed; s.Hiipiminen |= gp.buttonEast.isPressed;
             }
+            // Kosketustapit (Natiivi-UI:n SeikkailuTapit, TAPPI-pohja, 2D): heijastuksella, puuttuva luokka ohitetaan.
+            if (!tapitHaettu)
+            {
+                tapitHaettu = true;
+                var t = typeof(SeikkailuPelaaja).Assembly.GetType("Matkakirja.Natiivi.SeikkailuTapit");
+                const System.Reflection.BindingFlags F = System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Static;
+                tapVasen = t?.GetProperty("Vasen", F); tapOikea = t?.GetProperty("Oikea", F);
+            }
+            if (tapVasen != null && tapOikea != null)
+            {
+                var v = (Vector2)tapVasen.GetValue(null); var o = (Vector2)tapOikea.GetValue(null);
+                if (v.sqrMagnitude > s.LiikeX * s.LiikeX + s.LiikeY * s.LiikeY) { s.LiikeX = v.x; s.LiikeY = v.y; }
+                if (Math.Abs(o.x) + Math.Abs(o.y) > 0.05f) { s.KatseX = o.x; s.KatseY = o.y; }
+                if (v.magnitude > 0.95f) s.Juoksu = true;   // tappi reunaan = juoksu (ei erillistä nappia)
+            }
             return s;
         }
+        static bool tapitHaettu; static System.Reflection.PropertyInfo tapVasen, tapOikea;
 
         void OnDestroy() { if (Aktiivinen == this) Aktiivinen = null; }
     }
