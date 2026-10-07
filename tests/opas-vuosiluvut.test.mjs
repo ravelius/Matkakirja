@@ -3,6 +3,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { vuosiluvutSanoiksi as v, lukuSanoina } from '../tools/pollo/puhesanat.js';
 import { OPAS_KEHOTE } from '../tools/pollo/opas.js';
+import { KESKUSTELU_KEHOTE } from '../tools/pollo/opaskeskustelu.js';
 
 test('vuosiluvut perusmuodossa', () => {
   assert.equal(v('vuonna 1066 Normandia'), 'vuonna tuhatkuusikymmentäkuusi Normandia');
@@ -75,4 +76,9 @@ test('välimerkit vuoden perässä', () => {
   assert.equal(v('(1843)'), '(tuhatkahdeksansataaneljäkymmentäkolme)');
   assert.equal(v('1843; 1844: 1845!'), 'tuhatkahdeksansataaneljäkymmentäkolme; tuhatkahdeksansataaneljäkymmentäneljä: tuhatkahdeksansataaneljäkymmentäviisi!');
   assert.equal(v('1843,5 metriä'), '1843,5 metriä');
+});
+
+test('Kysy-vastauksen kehote: vuosiluvut numeroina (LS1 TF 159: "kaksituhatta yhdeksäntoista" näytöllä)', () => {
+  assert.match(KESKUSTELU_KEHOTE, /Vuosiluvut, \\?\s*vuosisadat ja vuosikymmenet NUMEROINA/);
+  assert.doesNotMatch(KESKUSTELU_KEHOTE, /vuosiluvut ja \\?\s*numerot sanoina/);
 });
