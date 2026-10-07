@@ -181,6 +181,24 @@ namespace Matkakirja.Natiivi
             aivot.ManualUpdate(Time.frameCount, dt);
         }
 
+        /// <summary>Historiamoottorin kävelytila: aivot ajetaan pelaajan olan yli -kameralle (prioriteetti kaikkien lepokameroiden yli).
+        /// Jos aivot eivät valitse sitä (rekisteri, kanava), kameran tila kopioidaan suoraan, ettei kuva jää lepokameraan. Palauttaa
+        /// diagnostiikan ("aivot" tai "suora") ja Elava nollataan, jotta paluu lepoon leikkaa.</summary>
+        public string PaivitaPelaaja(CinemachineCamera pelaaja, Camera kamera, float dt)
+        {
+            if (pelaaja.Priority.Value <= prioriteetti) pelaaja.Priority = prioriteetti + 1000;
+            Elava = null;
+            lentoPerlin.AmplitudeGain = 0f;
+            foreach (var l in lepot.Values) l.Perlin.AmplitudeGain = 0f;
+            aivot.ManualUpdate(Time.frameCount, dt);
+            if (ReferenceEquals(aivot.ActiveVirtualCamera, pelaaja)) return "aivot";
+            pelaaja.InternalUpdateCameraState(Vector3.up, dt);
+            var st = pelaaja.State;
+            kamera.transform.SetPositionAndRotation(st.GetFinalPosition(), st.GetFinalOrientation());
+            kamera.fieldOfView = st.Lens.FieldOfView;
+            return "suora (aivot: " + (aivot.ActiveVirtualCamera?.Name ?? "-") + ")";
+        }
+
         /// <summary>"poikki cm": elävä kamera, blendi ja kameran ero Ytimen asentoon (sama muokkaus) lokiin.</summary>
         public string Tila(Camera kamera, Asento odotettu)
         {

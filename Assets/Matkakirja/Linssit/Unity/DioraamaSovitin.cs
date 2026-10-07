@@ -377,9 +377,20 @@ namespace Matkakirja.Natiivi
             Asento kameraAsento;
             // Cinemachine (5.10.2026, DioraamaCinemachine): lepokamerat + brainin blendit korvaavat jousen askeleen; jousesta jää
             // jatkuvan orbitin vaihe. "poikki cinemachine 0" palauttaa vanhan jousipolun A/B-vertailuun.
-            bool cmKaytossa = cm != null && DioraamaCinemachine.Paalla && pakotettuKamera == null;
+            // Historiamoottorin kävelytila: pelaajan olan yli -kamera ohittaa lepokamerat, pakotetun kameran ja jousen (V1 7.10.).
+            var pelaaja = cm != null ? SeikkailuPelaaja.Aktiivinen : null;
+            bool cmKaytossa = cm != null && (pelaaja != null || DioraamaCinemachine.Paalla && pakotettuKamera == null);
             cm?.Kaytossa(cmKaytossa);
-            if (pakotettuKamera is Asento pk) { jousi.Nollaa(); kameraAsento = pk; }
+            if (pelaaja != null)
+            {
+                jousi.Nollaa();
+                string tapa = cm.PaivitaPelaaja(pelaaja.Kamera, nayttamo.Kamera, dt);
+                if (tapa != pelaajaKameraTapa) { o.Kirjaa($"seikkailu: kamera {tapa}, {nayttamo.Kamera.transform.position}"); pelaajaKameraTapa = tapa; }
+                // Sumu ja syväterävyys: kohde 25 m päässä, ei taustan sumennusta (aukko 0).
+                var pp = pelaaja.transform.position;
+                kameraAsento = new Asento(new Matkakirja.Linssit.Dioraama.V3(pp.x, pp.y, -pp.z), 0, 0, KavelySumuM, 55, 0);
+            }
+            else if (pakotettuKamera is Asento pk) { pelaajaKameraTapa = null; jousi.Nollaa(); kameraAsento = pk; }
             else if (cmKaytossa)
             {
                 if (SaapumisOdotus) cm.Nollaa();
@@ -776,6 +787,8 @@ namespace Matkakirja.Natiivi
         // HISTORIAMOOTTORI: kävelytila. Kävelygeometria (Linnanrakentajan kavely { osat, merkit } tai kehitysjuuri), sitten pelaaja
         // aloituspaikkaan: merkki "ovi:<tid>-alku"/osa tid tai tilan kamerakohde, ja pudotus lähimmälle törmäyspinnalle.
         static string kavelyKehitysJuuri;
+        string pelaajaKameraTapa;
+        const double KavelySumuM = 25;
         IEnumerator KavelyPaalle(string tid)
         {
             if (nayttamo == null || rakennus == null) { o.Kirjaa("poikki: kävely: linssi ei auki"); yield break; }
@@ -789,14 +802,25 @@ namespace Matkakirja.Natiivi
             SeikkailuKavely.Leikkaukset(true);
             Vector3 alku; float yaw;
             var m = SeikkailuKavely.Data == null ? null : System.Linq.Enumerable.FirstOrDefault(SeikkailuKavely.Data.Merkit, x => x.Laji == "ovi" && (x.Osa == tid || x.Tunnus.StartsWith(tid, StringComparison.Ordinal)));
-            if (m != null) { alku = new Vector3((float)m.X, (float)m.Y, (float)-m.Z); yaw = 0f; }
+            if (m != null)
+            {
+                // Katse oviaukosta osan keskelle (glTF z etelä → Unityn −z).
+                alku = new Vector3((float)m.X, (float)m.Y, (float)-m.Z); yaw = 0f;
+                if (m.Osa != null && SeikkailuKavely.Data.Osat.TryGetValue(m.Osa, out var ko))
+                {
+                    double kx = (ko.RajatMin[0] + ko.RajatMax[0]) / 2 - m.X, kz = -((ko.RajatMin[2] + ko.RajatMax[2]) / 2 - m.Z);
+                    if (kx * kx + kz * kz > 0.25) yaw = (float)(Math.Atan2(kx, kz) * 180 / Math.PI);
+                }
+            }
             else
             {
                 var tl = rakennus.Tila(tid);
                 if (tl == null) { o.Kirjaa($"poikki: kävely: tilaa tai osaa {tid} ei löydy"); yield break; }
                 alku = DioraamaNayttamo.UnityPiste(tl.Kamera.Kohde); yaw = (float)Matkakirja.Linssit.Seikkailu.Kavely.Kulma(tl.Kamera.Atsimuutti + 180.0);
             }
-            if (Physics.Raycast(alku + Vector3.up * 2f, Vector3.down, out var osuma, 30f)) alku = osuma.point + Vector3.up * 0.05f;
+            Physics.SyncTransforms();
+            if (Physics.Raycast(alku + Vector3.up * 2f, Vector3.down, out var osuma, 30f, 1 << DioraamaNayttamo.Kerros)) alku = osuma.point + Vector3.up * 0.05f;
+            else o.Kirjaa($"seikkailu: aloituspaikan alla ei törmäyspintaa ({alku})");
             SeikkailuPelaaja.Luo(nayttamo.transform, alku, yaw, DioraamaNayttamo.Kerros);
             o.Kirjaa($"poikki: kävely päällä tilassa {tid} ({alku}), kävelygeometria {(SeikkailuKavely.Ladattu ? "ladattu" : "ei (tilameshit " + tilaTormays + ")")}");
         }

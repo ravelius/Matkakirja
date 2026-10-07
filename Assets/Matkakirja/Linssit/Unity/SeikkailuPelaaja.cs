@@ -32,6 +32,9 @@ namespace Matkakirja.Natiivi
         float pysty;
 
         public Kavely Tila => kavely;
+        public CinemachineCamera Kamera => kamera;
+        /// <summary>Viimeisin paikka maassa: putoaminen (laiturin reunalta veteen) palauttaa tähän.</summary>
+        Vector3 viimeMaassa;
 
         /// <summary>Luo pelaajan paikkaan (Unity), katse yaw-suuntaan; kerros = dioraaman kerros (kamera piirtää sen).</summary>
         public static SeikkailuPelaaja Luo(Transform isa, Vector3 paikka, float yaw, int kerros)
@@ -45,6 +48,7 @@ namespace Matkakirja.Natiivi
             p.cc.height = Korkeus; p.cc.radius = Sade; p.cc.stepOffset = Askel; p.cc.center = new Vector3(0, Korkeus / 2, 0);
             p.cc.slopeLimit = 40f; p.cc.skinWidth = 0.03f;
             p.kavely.KameraYaw = p.kavely.HahmoYaw = yaw;
+            p.viimeMaassa = paikka;
             // Hahmo (väliaikainen kapseli; Fogg-glb myöhemmin).
             var h = GameObject.CreatePrimitive(PrimitiveType.Capsule);
             Destroy(h.GetComponent<Collider>());
@@ -62,7 +66,7 @@ namespace Matkakirja.Natiivi
             cg.transform.SetParent(go.transform, false);
             p.kamera = cg.AddComponent<CinemachineCamera>();
             p.kamera.Follow = p.olka;
-            p.kamera.Priority = 100;
+            p.kamera.Priority = 1000000;   // DioraamaCinemachine.PaivitaPelaaja varmistaa lisäksi lepokameroiden yli
             p.kamera.Lens = LensSettings.Default; p.kamera.Lens.FieldOfView = 55f; p.kamera.Lens.NearClipPlane = 0.1f; p.kamera.Lens.FarClipPlane = 4000f;
             var tpf = cg.AddComponent<CinemachineThirdPersonFollow>();
             tpf.ShoulderOffset = new Vector3(0.45f, 0.15f, 0f); tpf.VerticalArmLength = 0.2f; tpf.CameraSide = 1f; tpf.CameraDistance = 2.6f;
@@ -105,7 +109,15 @@ namespace Matkakirja.Natiivi
             cc.Move(new Vector3((float)kavely.NopeusX, pysty, (float)kavely.NopeusZ) * dt);
             hahmo.localRotation = Quaternion.Euler(0, (float)kavely.HahmoYaw, 0);
             olka.rotation = Quaternion.Euler((float)kavely.KameraPitch, (float)kavely.KameraYaw, 0);
-            if (transform.position.y < -200f) { Debug.Log("MATKAKIRJA seikkailu: putosi, palautus"); cc.enabled = false; transform.position += Vector3.up * 210f; cc.enabled = true; }
+            if (cc.isGrounded) viimeMaassa = transform.position;
+            else if (transform.position.y < viimeMaassa.y - 6f)
+            {
+                // Ei uintia: reunalta pudonnut palaa viimeiseen maakohtaan hieman taaksepäin liikesuunnasta (vesi ei ole törmäys).
+                var taakse = new Vector3((float)-kavely.NopeusX, 0, (float)-kavely.NopeusZ);
+                var paluu = viimeMaassa + (taakse.sqrMagnitude > 1e-4f ? taakse.normalized * 0.6f : Vector3.zero) + Vector3.up * 0.1f;
+                Debug.Log($"MATKAKIRJA seikkailu: putosi, palautus {paluu}");
+                cc.enabled = false; transform.position = paluu; cc.enabled = true; pysty = 0;
+            }
         }
 
         KavelySyote LueSyote()

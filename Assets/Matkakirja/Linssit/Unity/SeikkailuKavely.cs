@@ -45,7 +45,7 @@ namespace Matkakirja.Natiivi
                 if (!string.IsNullOrEmpty(osa.Tormays))
                 {
                     byte[] b = null; yield return DioraamaLevyvalimuisti.Hae(url(juuri + osa.Tormays), 120, t => b = t);
-                    var m = b != null ? Mesh(b, "Tormays:" + osa.Id, kirjaa) : null;
+                    var m = b != null ? Mesh(b, "Tormays:" + osa.Id, kirjaa, kaksipuolinen: true) : null;
                     if (m != null)
                     {
                         var go = new GameObject("Törmäys:" + osa.Id) { layer = DioraamaNayttamo.Kerros };
@@ -90,8 +90,10 @@ namespace Matkakirja.Natiivi
             Leikkaukset(false);
         }
 
-        /// <summary>Glb:n kaikki osat yhdeksi meshiksi (vain paikat ja kolmiot; Unity-koordinaatit DioraamaGlb.Lue(unityyn: true)).</summary>
-        static Mesh Mesh(byte[] tavut, string nimi, Action<string> kirjaa)
+        /// <summary>Glb:n kaikki osat yhdeksi meshiksi (vain paikat ja kolmiot; Unity-koordinaatit DioraamaGlb.Lue(unityyn: true)).
+        /// kaksipuolinen = jokainen kolmio myös käännettynä (törmäys: z-peilaus kääntää kiertosuunnan, ja säteet ja kapseli osuvat
+        /// silloin pintaan kummaltakin puolelta).</summary>
+        static Mesh Mesh(byte[] tavut, string nimi, Action<string> kirjaa, bool kaksipuolinen = false)
         {
             GlbMalli malli;
             try { malli = DioraamaGlb.Lue(tavut, true); } catch (Exception e) { kirjaa?.Invoke($"seikkailu: {nimi} glb virhe: {e.Message}"); return null; }
@@ -103,6 +105,7 @@ namespace Matkakirja.Natiivi
                 for (int i = 0; i < n; i++) p.Add(new Vector3(osa.Paikat[i * 3], osa.Paikat[i * 3 + 1], osa.Paikat[i * 3 + 2]));
                 foreach (int ix in osa.Kolmiot ?? Array.Empty<int>()) t.Add(ix + alku);
             }
+            if (kaksipuolinen) for (int i = 0, n = t.Count; i + 2 < n; i += 3) { t.Add(t[i]); t.Add(t[i + 2]); t.Add(t[i + 1]); }
             var m = new Mesh { name = nimi, indexFormat = p.Count > 65000 ? IndexFormat.UInt32 : IndexFormat.UInt16 };
             m.SetVertices(p); m.SetTriangles(t, 0); m.RecalculateBounds(); m.RecalculateNormals();
             return m;
