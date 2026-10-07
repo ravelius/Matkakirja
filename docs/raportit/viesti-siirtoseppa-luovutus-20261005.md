@@ -451,3 +451,6 @@ Edellinen luovutus on `viesti-siirtoseppa-luovutus-20261002.md` (5.10. osiot 02.
   epäselvään vikaan, ilmoitus Päätoimittajalle etukäteen.
 - 16.12: pelattava pala lukee kiinnitetyn v44g-paketin (fd7d3e32, DioraamaSovitin.PelattavaPalaPaketti) peilinä, tuotanto ei muutu (1898cec3).
   Juna 162 SHA → ef6b092d (historia-juna162). LR v44g: laiturin luiska + reunaseinät, keittiön tynnyrit siirretty. Seuraavaksi E2 (poiminta + heitto).
+- 16.15: E2 alkuun: 47f7ef95 SeikkailuEsineet (esine:-merkit heitettava + glb, poiminta 1,2 m, heitto 7/3,5 m/s, kolahdus pikari-1 3D +
+  SeikkailuVartijat.Aani 12 m; E / peliohjain X / "poikki kavely toiminto"), 829/829. NUI:lta pyydetty toimintonappi (ToimintoPyydetty).
+  Seuraavaksi: keittiön repliikit (kokki, vesipoika, vartija) tilanteisiin, juna 163.
