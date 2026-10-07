@@ -1,0 +1,981 @@
+{
+  "source": "posti/sisaltokirjuri-codex-olavinlinna-tietokerros-12-kuvitusta-20261007.md",
+  "sourceCommit": "9ec0418c925144f71ea5efa719e3e44a812bd2ea",
+  "sourceBlob": "2804df1dc3a092a7ac44eb72b197f6c38f5fe5a3",
+  "sourceReadInFull": true,
+  "factSourceReadReceipt": {
+    "status": "READY_WITH_CONSTRAINTS",
+    "SourceReadInFull": true,
+    "order": "9ec0418c925144f71ea5efa719e3e44a812bd2ea",
+    "readMethod": "Full numbered local-file reads; truncated first outputs repaired by overlapping reads; no remote calls.",
+    "readCoverage": {
+      "cards": "1-340",
+      "factbase": "1-1464",
+      "route": "1-144"
+    },
+    "sources": [
+      {
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/worktrees/latauskuva-kuumailmapallo-20261007/docs/raportit/olavinlinna-tietokerros-kortit.md",
+        "bytes": 28465,
+        "characters": 27515,
+        "lines": 340,
+        "sha256": "62a4e6853c2fcd3065c9806b52edf397c9a69935b29beed5c076790bef740bfb",
+        "readInFull": true
+      },
+      {
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/worktrees/latauskuva-kuumailmapallo-20261007/docs/raportit/faktapohja-olavinlinna-1500.md",
+        "bytes": 259535,
+        "characters": 252580,
+        "lines": 1464,
+        "sha256": "079c55dd36330338705fffcfe0e31ba93bcff52bc2b1d9b7852b806d3e025c66",
+        "readInFull": true
+      },
+      {
+        "path": "/Users/Shared/Claude/proto-3d/_lahteet/olavinlinna-pohjat/REITTI-LAHTEET.md",
+        "bytes": 15214,
+        "characters": 14672,
+        "lines": 144,
+        "sha256": "47a815e6c9c7b6ecc7759a24f1c98ccaec728db15a057d051e2719fb09a1bd02",
+        "readInFull": true
+      },
+      {
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/saapuneet-kuvatilaukset-20261007/photoreal-update/sisaltokirjuri-codex-olavinlinna-tietokerros-12-kuvitusta-20261007.md",
+        "bytes": 9590,
+        "characters": 9277,
+        "lines": 62,
+        "sha256": "05f3ab5bd9a527c5c572f838aa70d6a2ff2b56d0ca855423bd5610d62aced2a7",
+        "readInFull": true
+      },
+      {
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/saapuneet-kuvatilaukset-20261007/photoreal-update/sisaltokirjuri-codex-lisays-fotorealistinen-20261007.md",
+        "bytes": 3577,
+        "characters": 3469,
+        "lines": 35,
+        "sha256": "3eae1f4efb850a32f553d0a68a158dcf30b26388923986195f23ff4b9549515d",
+        "readInFull": true
+      }
+    ],
+    "generationPerformed": false,
+    "gitOperationsPerformed": false,
+    "r2DeliveryPerformed": false,
+    "remoteSourceVerificationPerformed": false,
+    "referencesSeenAsImages": false
+  },
+  "date": "2026-10-07",
+  "acceptedImages": 12,
+  "generationCalls": 14,
+  "tool": "built-in image_gen",
+  "style": "photorealistic-real-camera-look",
+  "productionDimensions": [
+    1536,
+    1024
+  ],
+  "metadataRequired": true,
+  "comparison": {
+    "file": "vertailukuva-12.jpg",
+    "r2Key": "julisteet/olavinlinna-tietokerros/20261007/vertailukuva-12.jpg",
+    "url": "https://media.matkakirja.app/julisteet/olavinlinna-tietokerros/20261007/vertailukuva-12.jpg",
+    "sha256": "b3f63b91c067701c5073c7104cf15cff8f660a16dc86f2f36d02e7569b0056be",
+    "bytes": 670269,
+    "http": 200,
+    "mime": "image/jpeg",
+    "cors": "https://matkakirja.app",
+    "byteExactReadback": true
+  },
+  "assets": [
+    {
+      "nativeDimensions": [
+        1536,
+        1024
+      ],
+      "deliveryDimensions": [
+        1536,
+        1024
+      ],
+      "technicalTransform": "No delivery crop or resize. RGB conversion, sRGB ICC and PNG text metadata; QA copies resized only,16:9QA crop=(0,80,1536,944).",
+      "qa": {
+        "nativeReviewed": true,
+        "finalReviewed": true,
+        "qa480Reviewed": true,
+        "qa16x9Reviewed": true,
+        "photoreal": true,
+        "noLegibleText": true,
+        "noFaces": true,
+        "noForbiddenItems": true,
+        "centralCropSafe": true
+      },
+      "card": 1,
+      "file": "kortti-01-kyronsalmi.png",
+      "caption": "Linna virtaavan Kyrönsalmen kallioluodolla. Havainnekuva.",
+      "generationPrompt": "Use case: historical-scene. Generate a NEW photorealistic historical illustrative image, as if photographed by a real camera, of Olavinlinna on its steep compact rock island in Kyrönsalmi Finland around 1500, winter.\nCamera from water west of the island, middle-distance wide view. Compact triangular MAIN castle has exactly THREE circular grey fieldstone towers around a very small courtyard: Bell tower northwest (left near), St Erik tower SOUTH (right near), Church tower northeast (behind these two, visible upper portion between them). Tall connecting straight grey fieldstone curtain walls. Maincastle sits on the highest WEST end of the narrow rock island, raw steep striated rock visible dropping into flowing open water. No spread-out huge fortress. All three tower tops are OPEN roofless stone upper storeys, simple flat continuous parapet rims, no conical roofs or brick caps, no exaggerated battlements. Do not copy the three towers currently standing in the modern castle: medieval southern St Erik tower is reconstructed.\nForeground and center show dark moving rippled OPEN WATER in winter current. Snow on rocks and distant forest banks, modest thin shore ice only away from the fast main current; no ice walkway to castle. A tiny plain hollowed-log dugout canoe near foreground with one very small back-facing paddler, no face. Castle and canoe wholly inside the central 16:9 band of a 3:2 landscape 1536x1024 frame with comfortable top/bottom margin.\nNatural muted low winter daylight, overcast pale sky, restrained grey/brown blue colours, real stone texture and photographic water. No HDR, cinematic colour grade, painting, gouache, illustration, text, letters, numerals, logos, watermark, frame. NO bridge, city, park, modern boats, jetty, later outer corner towers, bastions, surrounding curved fortifications, roof extensions, glass windows. Narrow medieval slit openings only. East outer ward is entirely occluded from west camera angle. This is a conservative illustrative reconstruction; tower top openness and exact height are interpretive.",
+      "references": [
+        "scene-constraint-sheet.md K35–45 F323–324 F914",
+        "Härö1997 figure2 maincastle A Bell NW/B Church NE/E StErik South",
+        "ext-395c214e196cfc22.jpg viewed for lower raw rock,fieldstone,water ONLY; no imageinput"
+      ],
+      "uncertainties": [
+        "Tower height,roofless upper storeys,exact wall appearance and camera viewpoint are reconstruction interpretations.",
+        "Winter weather and dugout shape are illustrative; no claim of a specific1500boat.",
+        "View deliberately occludes east outerward; medieval StErik restored in reconstruction."
+      ],
+      "sha256": "a563b2277eb0084d06fe3fc2693a966509d38cf13a2f9c0458876c21a730d4d9",
+      "originalSha256": "1c5aea81fc0ba98f7dee7f9a6fcd76dd9ff3209efe96e7f2cb06418bb72a2db1",
+      "technicalVerified": true,
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-tietokerros-20261007/production/01-04/kortti-01-kyronsalmi.png",
+      "productionDimensions": [
+        1536,
+        1024
+      ],
+      "viitteet": [
+        "scene-constraint-sheet.md K35–45 F323–324 F914",
+        "Härö1997 figure2 maincastle A Bell NW/B Church NE/E StErik South",
+        "ext-395c214e196cfc22.jpg viewed for lower raw rock,fieldstone,water ONLY; no imageinput"
+      ],
+      "kuvateksti": "Linna virtaavan Kyrönsalmen kallioluodolla. Havainnekuva.",
+      "r2Key": "julisteet/olavinlinna-tietokerros/20261007/kortti-01-kyronsalmi.png",
+      "metadataText": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "fictional": false,
+      "temporalScope": "circa1495–1510 historical interpretation",
+      "parentVisualReview": true,
+      "gameIntegrated": false,
+      "editorAcceptance": "pending",
+      "published": false,
+      "url": "https://media.matkakirja.app/julisteet/olavinlinna-tietokerros/20261007/kortti-01-kyronsalmi.png",
+      "bytes": 2519067,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "nativeDimensions": [
+        1536,
+        1024
+      ],
+      "deliveryDimensions": [
+        1536,
+        1024
+      ],
+      "technicalTransform": "No delivery crop or resize. RGB conversion, sRGB ICC and PNG text metadata; QA copies resized only,16:9QA crop=(0,80,1536,944).",
+      "qa": {
+        "nativeReviewed": true,
+        "finalReviewed": true,
+        "qa480Reviewed": true,
+        "qa16x9Reviewed": true,
+        "photoreal": true,
+        "noLegibleText": true,
+        "noFaces": true,
+        "noForbiddenItems": true,
+        "centralCropSafe": true
+      },
+      "card": 2,
+      "file": "kortti-02-paalinna-ja-portti.png",
+      "caption": "Pääportti päälinnan läntisessä kehämuurissa. Havainnekuva.",
+      "generationPrompt": "Use case: historical-scene. Generate a wholly NEW photorealistic historical illustrative camera image of Olavinlinna Finland about 1495–1510. Reference image is our generated reconstruction ONLY for consistency of three main castle stone towers and compact triangular disposition; create a NEW closer west-side viewpoint and late summer natural daylight, NOT an edit.\nMain purpose: the simple WEST MAIN GATE in the straight western curtain wall between the northwest Bell tower (left near) and the SOUTH St Erik tower (right near). Northeast Church tower behind, upper part visible between near towers. Exactly three circular grey FIELDSTONE towers, all OPEN roofless upper storeys, plain flat continuous stone parapet rims, NO roof, NO brick caps, NO fancy battlements. Compact castle around small courtyard, on highest western rock-island part. Front WEST curtain wall visible with one unadorned plain rough stone round arch and CLOSED weathered wooden plank gate near its base. Gate is general interpretive form, not reproduction of 1700/1790 gateway. A small rough natural rock landing outside door leads straight to water, no constructed bridge or dock.\nCamera slightly oblique from a boat WEST of castle, closer than reference, looking up modestly. Clearly show gate, three towers and irregular raw steep lower rock/grey fieldstone. East outer ward hidden behind castle from this angle. Flowing dark water in lower foreground; distant forest only. All towers/whole gate within central 1536x864 crop-safe band of 1536x1024 landscape, comfortable margins. Soft muted overcast late summer light, true photographic stone/water/wood, subtle olive/grey/brown. No painterly surfaces, HDR or cinematic colours.\nAvoid: later bastions, surrounding zigzag/curved fortifications, extra outer towers, Kijl or Thick tower, modern roof extensions, city, park, bridge, modern stairs, concrete, metal railing, glass, plaque, text, letters/numbers, symbols, logos, watermark, frame, people. Historical reconstruction uncertainties remain deliberately plain.\nCritical output framing correction: NEW 3:2 LANDSCAPE image, 1536 wide by1024 high. Show castle occupying only MIDDLE60percent of image HEIGHT. Large empty sky margin ABOVE all tower tops (at least180pixels) and water below. Do not make panoramic16:9 image. Tower tops must fit within central16:9crop. Camera farther back enough for these margins.",
+      "references": [
+        "scene-constraint-sheet.md K50–60 K251 F297–303",
+        "Härö1997 figure2 A Bell NW/B Church NE/E StErik South",
+        "Senaatti2019 gate westwall location",
+        "ext-395c214e196cfc22.jpg viewed for lower materials only,not imageinput"
+      ],
+      "uncertainties": [
+        "Gate arch,plank-door details,doorheight and exactlanding interpreted,not1700gate reconstruction.",
+        "Tower top openness,height,wallheight and precise rockprofile interpreted.",
+        "Eastouterward fullyoccluded; no historical claim that it didnotexist."
+      ],
+      "generationAttempts": 2,
+      "rejected": "kortti-02-rejected-crop-original.png",
+      "rejectionReason": "Firstnative1672x941 too little upper margin,towertop wouldclip atcentral16:9crop. Entirelynew generation; originalpreserved.",
+      "sha256": "d8d497d82897aa0ee7237d03449f854515dd2e8b89df0fa1cb3b523e5b18be8b",
+      "originalSha256": "c712c6231b06e11393a613a06acd7f63e45552ff4f1186a62c234eaba7c4271f",
+      "technicalVerified": true,
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-tietokerros-20261007/production/01-04/kortti-02-paalinna-ja-portti.png",
+      "productionDimensions": [
+        1536,
+        1024
+      ],
+      "viitteet": [
+        "scene-constraint-sheet.md K50–60 K251 F297–303",
+        "Härö1997 figure2 A Bell NW/B Church NE/E StErik South",
+        "Senaatti2019 gate westwall location",
+        "ext-395c214e196cfc22.jpg viewed for lower materials only,not imageinput"
+      ],
+      "kuvateksti": "Pääportti päälinnan läntisessä kehämuurissa. Havainnekuva.",
+      "r2Key": "julisteet/olavinlinna-tietokerros/20261007/kortti-02-paalinna-ja-portti.png",
+      "metadataText": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "fictional": false,
+      "temporalScope": "circa1495–1510 historical interpretation",
+      "parentVisualReview": true,
+      "gameIntegrated": false,
+      "editorAcceptance": "pending",
+      "published": false,
+      "url": "https://media.matkakirja.app/julisteet/olavinlinna-tietokerros/20261007/kortti-02-paalinna-ja-portti.png",
+      "bytes": 2472392,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "nativeDimensions": [
+        1536,
+        1024
+      ],
+      "deliveryDimensions": [
+        1536,
+        1024
+      ],
+      "technicalTransform": "No delivery crop or resize. RGB conversion, sRGB ICC and PNG text metadata; QA copies resized only,16:9QA crop=(0,80,1536,944).",
+      "qa": {
+        "nativeReviewed": true,
+        "finalReviewed": true,
+        "qa480Reviewed": true,
+        "qa16x9Reviewed": true,
+        "photoreal": true,
+        "noLegibleText": true,
+        "noFaces": true,
+        "noForbiddenItems": true,
+        "centralCropSafe": true
+      },
+      "card": 3,
+      "file": "kortti-03-pikkupiha-ja-perustamistaulu.png",
+      "caption": "Perustamistaulu ja Sturen sekä Tottin vaakunat pienellä linnanpihalla. Havainnekuva.",
+      "generationPrompt": "Use case: historical-scene. Produce ONE wholly NEW photorealistic historical illustrative image for Olavinlinna Finland about1500, as if a documentary camera photograph of real fieldstone textures, not painting.\nClose framed modest SMALL castle courtyard, rough grey fieldstone hall exterior wall, simple worn stone/earth paving, no people needed. Main subject at eye level is a grey rectangular founding stone TABLET mounted on wall. Tablet has several faint shallow horizontal carved ROWS at top, worn ambiguous small indentations, absolutely NO decipherable text, NO letters, numbers or year. Directly BELOW rows are exactly TWO shallow stone HERALDIC shield reliefs beside one another, restrained plausible stonework: LEFT Sture coat with exactly THREE broad water-lily/seeblad LEAVES (two above one below) in shield; RIGHT Tott shield quartered2×2 with alternating recessed and raised plain quadrants, shield tilted slightly heraldicright (viewerleft), small helmet with TWO horns and restrained acanthus foliage above. NO lions, eagles, crosses, fleurdelis, portraits, crowns or invented heraldry. Shield reliefs remain subtle and worn, no colour or text.\nThis tablet's detailed appearance and mounting are an interpreted reconstruction informed by documented Sture/Tott subjects, not a replica of a proven surviving tablet. Row ambiguity is the no-readable-text solution, not evidence of damaged1500 condition. No fire or destruction.\n3:2 LANDSCAPE1536×1024. Tablet and both shields centred, comfortably fully visible in central1536×864 band, with stonewall margins around. Perspective slightly side-on to show realistic shallow carved stone relief and wall texture; small glimpse of courtyard sidewall at edge demonstrates enclosed small space. Soft muted daylight, natural grey/brown and restrained earthy tones, photographic imperfections, no HDR/cinematic colour. NO later buildings, towers, roofs, glass, modern signs, metal plaques, flags, banners, words/logos/watermark/frame.",
+      "references": [
+        "scene-constraint-sheet.md K65–77 K246",
+        "Härö1997 pp32–35 and43;haro-03.png/haro-05.png inspected as researchQA only,not input images",
+        "Aspelin1875; Savon historia sourcepreflight"
+      ],
+      "uncertainties": [
+        "Entire tablet layout,exact mount,placing and reliefdepth interpreted; no claim to surviving tablet replica.",
+        "Sture depicted three stylised seeblad/waterlily heraldleaves; Tott2x2quarteredshield withhelmet/twohorns/acanthus. Specificcarving execution not an exactcopy.",
+        "Faintrowmarks satisfy no-readable-text restriction; do not claim the1500tablet was damaged."
+      ],
+      "sha256": "a8e9a9481dba2bde2ce0a95e7bfd1d508739f51aafede589b51ac4dce68881d9",
+      "originalSha256": "e15e7ca4edc9d4b4d9e780a72d5acf8f477a6ae27ea7ddf302deb2b9053a85ce",
+      "technicalVerified": true,
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-tietokerros-20261007/production/01-04/kortti-03-pikkupiha-ja-perustamistaulu.png",
+      "productionDimensions": [
+        1536,
+        1024
+      ],
+      "viitteet": [
+        "scene-constraint-sheet.md K65–77 K246",
+        "Härö1997 pp32–35 and43;haro-03.png/haro-05.png inspected as researchQA only,not input images",
+        "Aspelin1875; Savon historia sourcepreflight"
+      ],
+      "kuvateksti": "Perustamistaulu ja Sturen sekä Tottin vaakunat pienellä linnanpihalla. Havainnekuva.",
+      "r2Key": "julisteet/olavinlinna-tietokerros/20261007/kortti-03-pikkupiha-ja-perustamistaulu.png",
+      "metadataText": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "fictional": false,
+      "temporalScope": "circa1495–1510 historical interpretation",
+      "parentVisualReview": true,
+      "gameIntegrated": false,
+      "editorAcceptance": "pending",
+      "published": false,
+      "url": "https://media.matkakirja.app/julisteet/olavinlinna-tietokerros/20261007/kortti-03-pikkupiha-ja-perustamistaulu.png",
+      "bytes": 3385623,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "card": 4,
+      "file": "kortti-04-keittio-ja-ruoka.png",
+      "caption": "Ruokaa avotulella pienen linnanpihan tuntumassa. Havainnekuva.",
+      "generationPrompt": "Use case: historical-scene.\nCreate one NEW photorealistic historical illustrative image for an Olavinlinna educational card, around 1495–1510, Finland. It must look like a real camera photograph of a plausible historical scene, not illustration or painting.\nScene: a SMALL enclosed castle courtyard. Foreground simple rough wooden food preparation bench: clearly recognizable dried perch or salted pike, small white-purple TURNIPS with slender roots, green cabbage, peas in a plain wooden bowl, dark ROUND dense rye bread without a central hole. Around the center of the frame an open wood fire with a hanging blackened cooking pot and another plain pot. Background: a plain LOW grey fieldstone kitchen wall with a timber doorway, only a general interpretive building, no claim of precise archaeology. One or two small distant kitchen workers facing AWAY, plain wool/linen clothes, no visible identifiable faces.\nCamera: natural documentary food photo, low eye level, restrained realistic detail, 3:2 landscape. Soft muted cloudy daylight, tiny realistic firelight, grey/brown/green natural palette, no HDR or cinematic saturation. Main food, pots and fire fully visible in the central 16:9 crop-safe band with vertical margin above/below, nothing important near image edges.\nMaterials must look real: irregular grey fieldstone, rough wood, worn unglazed earthenware if needed, soot, natural smoke, fish skin, textured rye crust.\nNo text, letters, numbers, logos, watermark or frame. No apples, forks, rutabaga/swede, potatoes, tomatoes, glass, tile stove, modern iron range, oil lamp, well, metal modern cookware, fancy cutlery, modern windows. No towers, roof extensions, bastions, city or modern structures. No built archaeological hearth foundation: fire directly on simple dirt/stone ground. The food and building arrangement are a plausible interpretation, not a proven 1500 menu or exact kitchen reconstruction. Produce 1536x1024 opaque image.",
+      "temporalScope": "circa1495–1510 historical interpretation",
+      "references": [
+        "scene-constraint-sheet.md K82–93 F309 F637 F690 F699–707 F712–713 F1215 F1261–1263",
+        "Yle https://yle.fi/a/3-6618420",
+        "Senaatti 2019",
+        "Savon historia talonpito"
+      ],
+      "uncertainties": [
+        "Food choices plausible analogies, not a verified Olavinlinna 1500 menu.",
+        "Background kitchen wall and doorway interpreted; exact south-wing appearance, date, hearth and doorway unknown."
+      ],
+      "qa": {
+        "nativeReviewed": true,
+        "finalReviewed": true,
+        "qa480Reviewed": true,
+        "qa16x9Reviewed": true,
+        "photoreal": true,
+        "facesAbsent": true,
+        "noForbiddenItems": true,
+        "centralCropSafe": true
+      },
+      "nativeDimensions": [
+        1536,
+        1024
+      ],
+      "deliveryDimensions": [
+        1536,
+        1024
+      ],
+      "technicalTransform": "No crop/resize of delivery; RGB conversion and sRGB/text metadata. QA only resize and central crop.",
+      "sha256": "b933c24a14e8af2d39fc95d681c7ddf31b8dbc702cfd3d3afd3106610e14a5af",
+      "originalSha256": "a456595452fd101b1cce171fc727f392ccab109d80aae9c1a892d5a6095a0b41",
+      "technicalVerified": true,
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-tietokerros-20261007/production/01-04/kortti-04-keittio-ja-ruoka.png",
+      "productionDimensions": [
+        1536,
+        1024
+      ],
+      "viitteet": [
+        "scene-constraint-sheet.md K82–93 F309 F637 F690 F699–707 F712–713 F1215 F1261–1263",
+        "Yle https://yle.fi/a/3-6618420",
+        "Senaatti 2019",
+        "Savon historia talonpito"
+      ],
+      "kuvateksti": "Ruokaa avotulella pienen linnanpihan tuntumassa. Havainnekuva.",
+      "r2Key": "julisteet/olavinlinna-tietokerros/20261007/kortti-04-keittio-ja-ruoka.png",
+      "metadataText": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "fictional": false,
+      "parentVisualReview": true,
+      "gameIntegrated": false,
+      "editorAcceptance": "pending",
+      "published": false,
+      "url": "https://media.matkakirja.app/julisteet/olavinlinna-tietokerros/20261007/kortti-04-keittio-ja-ruoka.png",
+      "bytes": 2543891,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "card": 5,
+      "originalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-tietokerros-20261007/production/05-08/kortti-05-tottin-kamari-original.png",
+      "nativeDimensions": [
+        1536,
+        1024
+      ],
+      "deliveryPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-tietokerros-20261007/production/05-08/kortti-05-tottin-kamari.png",
+      "deliveryDimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "colourSpace": "sRGB",
+      "opaque": true,
+      "sha256": "c40388a16c32b8a10e477530f11a6376ddf075009f4821a7f45e3fa7958b87f9",
+      "nativeSha256": "ec494fc4c5b3ae0db744e19f7a4055ff32bece28ebd0cce8b291a12f137cdfb7",
+      "cropRect": [
+        0,
+        80,
+        1536,
+        944
+      ],
+      "cropDimensions": [
+        1536,
+        864
+      ],
+      "generationPrompt": "Use case: historical-scene. Create a new photorealistic historical explanatory image that looks exactly like a real camera photograph, not a painting, not CGI. Olavinlinna, Finland circa 1500: a small austere chamber at the lowest inhabited floor of the Church Tower, known as Tott's chamber. Modest roughly three metre high room built of irregular grey natural stone and pale worn mortar. A simple plain open hearth fireplace with a small low fire, completely undecorated: no shields, coats of arms or carvings. One modest heavy timber door leading to the adjacent hall and built-in stone benches along the walls. Sparse candlelight plus low hearth light, dim believable exposure, natural stone texture, subtle colours and deep unlit corners. No people, no ghost, no portrait, no glass, no modern objects or furniture, no tiles, no text, numbers, logos or watermark. Do not claim any exact surviving surveyed floorplan; this is a restrained generic historical interpretation. Eye-level 35mm full-frame camera framing, ordinary documentary architectural photograph, realistic imperfect surfaces, no cinematic effects or HDR. Landscape 3:2 composition, request 1536x1024 image, all key features including fireplace, doorway and benches within central 1536x864 area so a centred 16:9 crop retains them; leave top and bottom margins expendable. One image only.",
+      "generationArgsPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-tietokerros-20261007/production/05-08/kortti-05-args.json",
+      "references": [],
+      "postprocessing": "RGB sRGB PNG metadata; dimensions already matched; QA downscaling and centre crop only; no retouch",
+      "qa": {
+        "passed": [
+          "Photoreal camera-like stone texture and fire/candle lighting",
+          "Small chamber, plain fireplace, timber door and stone benches",
+          "No heraldic shields, ghost, glass, text or people",
+          "Native, final, full480 and centred16x9 crop480 inspected; fireplace, benches and doorway readable"
+        ],
+        "uncertainties": [
+          "Generic chamber geometry and furnishing placement, not verified RHOOL2037 floorplan",
+          "First habitable/oldest room claim not made"
+        ]
+      },
+      "status": "local_candidate_passed_self_qa_pending_root_owner_review",
+      "generationCount": 1,
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-tietokerros-20261007/production/05-08/kortti-05-tottin-kamari.png",
+      "file": "kortti-05-tottin-kamari.png",
+      "productionDimensions": [
+        1536,
+        1024
+      ],
+      "viitteet": [],
+      "kuvateksti": "Tottin kamari Kirkkotornin alimmassa kerroksessa. Havainnekuva.",
+      "r2Key": "julisteet/olavinlinna-tietokerros/20261007/kortti-05-tottin-kamari.png",
+      "metadataText": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "fictional": false,
+      "temporalScope": "circa1495–1510 historical interpretation",
+      "parentVisualReview": true,
+      "gameIntegrated": false,
+      "editorAcceptance": "pending",
+      "published": false,
+      "url": "https://media.matkakirja.app/julisteet/olavinlinna-tietokerros/20261007/kortti-05-tottin-kamari.png",
+      "bytes": 2839699,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "card": 6,
+      "originalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-tietokerros-20261007/production/05-08/kortti-06-kappeli-original.png",
+      "nativeDimensions": [
+        1536,
+        1024
+      ],
+      "deliveryPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-tietokerros-20261007/production/05-08/kortti-06-kappeli.png",
+      "deliveryDimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "colourSpace": "sRGB",
+      "opaque": true,
+      "sha256": "a2dcc72c33a5a6feaa24917075a850aafecf1fb6869d359615334dd654828f2e",
+      "nativeSha256": "64da8fd89837a57808aa0b59b2940921941a4bd37e2c939279d3e6e6dce92285",
+      "cropRect": [
+        0,
+        80,
+        1536,
+        944
+      ],
+      "cropDimensions": [
+        1536,
+        864
+      ],
+      "generationPrompt": "Use case: historical-scene. Generate one NEW photorealistic historical explanatory scene: a camera photograph of the small chapel on floor three of Olavinlinna Church Tower, Finland circa 1500. The attached current chapel photographs are references ONLY for modest room scale, groin-vault geometry, thick plastered walls and uneven stone materials. Do NOT copy their two large modern windows, crucifix, organ, visitors, glass or furniture. Reconstruct a modest seven-to-eight metre wide groin-vaulted chapel about five-and-a-half metres high, seen from ordinary standing eye level, not from overhead, not a giant cathedral. EXACTLY ONE small narrow exterior window aperture in the northeast wall, with a heavy iron shutter folded partly open: only a tiny sliver of daylight hits the adjacent wall edge. All other walls unpierced except a tiny dark hagioscope aperture communicating with a side chamber, obviously not a second bright exterior window. Almost dark, candle flames are the primary illumination. Three simple stone altar tables: one central and two smaller side altar tables, all empty apart from simple candles. No crucifix. Painted consecration crosses in muted red circles spaced on walls, twelve total around the entire room, only five or six in camera's visible section, the others on unseen walls; never force twelve into the view or duplicate them. Faint restrained traces of leaf, flower and shield-shaped wall/vault paintings, no faces and no readable inscriptions. True photographic uneven pale plaster and stone, low-light sensor texture, ordinary documentary 35mm full-frame exposure, believable shadows, muted natural colours, realistic materials. No painting, no gouache, no illustration look, no CGI, no HDR or cinematic glow. No people, organ, modern furnishings, crucifix, stained glass, large church windows, second exterior window, text, letters, numbers, logo or watermark. Landscape 3:2, requested 1536x1024; all three altars, tiny window, vault spring and hagioscope kept inside central 1536x864 crop-safe strip, top/bottom expendable.",
+      "generationArgsPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-tietokerros-20261007/production/05-08/kortti-06-args.json",
+      "references": [
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-tietokerros-20261007/viitteet/ref-c0fea40cbe957bf5.jpg",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-tietokerros-20261007/viitteet/ref-a78505f3ab95feaf.jpg"
+      ],
+      "postprocessing": "RGB sRGB PNG metadata; dimensions already matched; QA downscaling and centre crop only; no retouch",
+      "qa": {
+        "passed": [
+          "Small groin-vaulted chapel at eye level",
+          "Three simple altars; six visible consecration crosses, twelve specified around complete unseen room",
+          "Exactly one narrow exterior window with iron shutter; daylight confined to bright sliver and adjacent reveal",
+          "Candlelit primary illumination, dark side hagioscope aperture, restrained floral/shield painting traces",
+          "No crucifix, organ, people, glass, second exterior window, inscriptions or faces",
+          "Native, final, full480 and centred16x9 crop480 inspected; all three altars/window/crosses remain legible"
+        ],
+        "uncertainties": [
+          "Exact altar shapes and positions are interpretation",
+          "Hagioscope represented as dark pointed aperture; connection to side chamber cannot be visually proved",
+          "Only six crosses visible; total twelve across unseen walls is prompt intent, not visually countable",
+          "Historical decorative state and precise room dimensions remain uncertain; supplied modern references used only for scale/material/vault geometry"
+        ]
+      },
+      "status": "local_candidate_passed_self_qa_pending_root_owner_review",
+      "generationCount": 1,
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-tietokerros-20261007/production/05-08/kortti-06-kappeli.png",
+      "file": "kortti-06-kappeli.png",
+      "productionDimensions": [
+        1536,
+        1024
+      ],
+      "viitteet": [
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-tietokerros-20261007/viitteet/ref-c0fea40cbe957bf5.jpg",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-tietokerros-20261007/viitteet/ref-a78505f3ab95feaf.jpg"
+      ],
+      "kuvateksti": "Kirkkotornin kappeli kynttilänvalossa. Havainnekuva.",
+      "r2Key": "julisteet/olavinlinna-tietokerros/20261007/kortti-06-kappeli.png",
+      "metadataText": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "fictional": false,
+      "temporalScope": "circa1495–1510 historical interpretation",
+      "parentVisualReview": true,
+      "gameIntegrated": false,
+      "editorAcceptance": "pending",
+      "published": false,
+      "url": "https://media.matkakirja.app/julisteet/olavinlinna-tietokerros/20261007/kortti-06-kappeli.png",
+      "bytes": 2286241,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "card": 7,
+      "originalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-tietokerros-20261007/production/05-08/kortti-07-perustaminen-1475-original.png",
+      "nativeDimensions": [
+        1536,
+        1024
+      ],
+      "deliveryPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-tietokerros-20261007/production/05-08/kortti-07-perustaminen-1475.png",
+      "deliveryDimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "colourSpace": "sRGB",
+      "opaque": true,
+      "sha256": "f25a0464e4eaeb75e70ac37db051ddcc9d096fa8870329c3f966740af1622a4a",
+      "nativeSha256": "b167faba4c97e3f92548f427ae2ed1122b3dbb61d82b59c0484aaacb04fab37e",
+      "cropRect": [
+        0,
+        80,
+        1536,
+        944
+      ],
+      "cropDimensions": [
+        1536,
+        864
+      ],
+      "generationPrompt": "Use case: historical-scene. Make one NEW image that looks like an ordinary real documentary camera photograph taken at a small medieval construction site on Olavinlinna's rocky island in the Kyronsalmi waterway, Finland in the INITIAL year 1475. Clearly only the beginning of the castle: low incomplete grey natural-stone foundations and wall segments mostly waist-to-head height, no finished castle and no tall towers. Modest temporary timber palisade and simple timber scaffolding around short unfinished wall segments. Centre the practical work: rough stone blocks, pile of lime and sand, a small hand-operated wooden lifting winch with natural rope, a few workers seen small from behind wearing simple coarse medieval wool and linen, no identifiable faces. Two small primitive wooden rowboats beside the rocky bank delivering materials. Forested shoreline beyond flowing dark water. No bridges, town, modern embankments, roofs of completed towers, cranes, steel cables, modern tools, machines, electric lighting, glass, text, letters, numbers or watermark. Human scale, sober early building phase, no named or portrayed historic individuals. Autumnish muted natural northern daylight, overcast calm sky, rough honest grey stone textures, physically plausible timber and rope; entirely photoreal photographic surfaces, 35mm full-frame documentary lens, no painting or illustration appearance, no CGI, no HDR, no artificial cinematic saturation. Landscape 3:2 request 1536x1024. Worksite, winch, low walls and boats must remain within the central 1536x864 crop-safe strip, expendable water/sky at bottom/top. Island geology and exact tool design are a general historical interpretation, do not invent a precise quarry or stone species.",
+      "generationArgsPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-tietokerros-20261007/production/05-08/kortti-07-args.json",
+      "references": [],
+      "postprocessing": "RGB sRGB PNG metadata; dimensions already matched; QA downscaling and centre crop only; no retouch",
+      "qa": {
+        "passed": [
+          "Low unfinished early construction, no finished castle or tall towers",
+          "Grey natural stone, temporary palisade, timber scaffold and rope-driven wooden winch",
+          "Workers small, no identifiable historical person; two small wooden boats carrying materials",
+          "No modern crane, steel wire, electric tools, glass, bridges, text or town",
+          "Native, final, full480 and centred16x9 crop480 inspected; worksite, winch and boats retained"
+        ],
+        "uncertainties": [
+          "Exact wall plan, winch mechanism, boats, clothing and tool details are general historical interpretation",
+          "Landform and autumn weather are illustrative, no quarry or rock-species claim"
+        ]
+      },
+      "status": "local_candidate_passed_self_qa_pending_root_owner_review",
+      "generationCount": 1,
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-tietokerros-20261007/production/05-08/kortti-07-perustaminen-1475.png",
+      "file": "kortti-07-perustaminen-1475.png",
+      "productionDimensions": [
+        1536,
+        1024
+      ],
+      "viitteet": [],
+      "kuvateksti": "Linnan rakennustyömaa kallioluodolla vuonna 1475. Havainnekuva.",
+      "r2Key": "julisteet/olavinlinna-tietokerros/20261007/kortti-07-perustaminen-1475.png",
+      "metadataText": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "fictional": false,
+      "temporalScope": "1475 beginning construction",
+      "parentVisualReview": true,
+      "gameIntegrated": false,
+      "editorAcceptance": "pending",
+      "published": false,
+      "url": "https://media.matkakirja.app/julisteet/olavinlinna-tietokerros/20261007/kortti-07-perustaminen-1475.png",
+      "bytes": 2696483,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "card": 8,
+      "originalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-tietokerros-20261007/production/05-08/kortti-08-puolustusvalmius-1495-original.png",
+      "nativeDimensions": [
+        1536,
+        1024
+      ],
+      "deliveryPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-tietokerros-20261007/production/05-08/kortti-08-puolustusvalmius-1495.png",
+      "deliveryDimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "colourSpace": "sRGB",
+      "opaque": true,
+      "sha256": "77a2d0e11ea0c1c241c1bd488db68636c7440c6fbb0a340432fe76b914acc377",
+      "nativeSha256": "1132cecbac7b0eb8e5866602b3f9102fab5748964340f90e8d2d7a5b94ed4e38",
+      "cropRect": [
+        0,
+        80,
+        1536,
+        944
+      ],
+      "cropDimensions": [
+        1536,
+        864
+      ],
+      "generationPrompt": "Use case: historical-scene. Generate a NEW photoreal explanatory historical image that looks like a real camera documentary photograph: Olavinlinna, Finland in autumn 1495, quiet defensive readiness. A restricted wall-walk view showing ONE round medieval grey natural-stone tower and adjoining grey stone curtain wall on a rocky waterway island, seen from a neighbouring wall at ordinary standing eye height. Attached present-day castle photo is ONLY a comparison for rough grey natural stone and cylindrical lower tower masonry: exclude all its later brick upper storeys, round brick gun-port belts and conical roofs. The historical tower is deliberately lower, entirely grey natural stone, its uppermost floor visibly OPEN TO SKY with a simple continuous stone parapet, no roof, no brick cap, no invented giant battlements. The tower and wall show restrained medieval small openings. A few tiny guards, only three, distant and seen from behind on the wall walk, in simple dull medieval wool cloaks with helmets; one carrying a plain bow held down at rest. No recognisable person or face, no named historical portrait. They quietly watch a misty lake; pale distant water vapour beyond, forest shoreline and muted autumn morning light. No attackers, fighting, blood, wounds, fires, lightning, explosions, gunpowder smoke, arquebuses or cannons. No later outer bailey towers, bastions, modern city, bridges, railings, glass, flag lettering, words, numbers, logos or watermark. Genuine-looking low contrast northern autumn camera capture, textured irregular stone, subdued grey-brown-green colour, realistic overcast dawn exposure; no painting, no illustration, no CGI, no HDR, no movie colour grading. Landscape 3:2, request 1536x1024; the entire low tower top, wall and three guards within central 1536x864 crop-safe strip, expendable sky/water top and bottom. Tower-top form and uniforms are general historical interpretation rather than verified exact reconstruction.",
+      "generationArgsPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-tietokerros-20261007/production/05-08/kortti-08-args.json",
+      "references": [
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-tietokerros-20261007/viitteet/ext-395c214e196cfc22.jpg"
+      ],
+      "postprocessing": "RGB sRGB PNG metadata; dimensions already matched; QA downscaling and centre crop only; no retouch",
+      "qa": {
+        "passed": [
+          "Quiet readiness on grey stone wall beside one round roofless tower",
+          "Three small guards seen from behind; bow held at rest; no identifiable face",
+          "Mist over water, no attackers, violence, blood, fire, lightning, explosion, guns or cannons",
+          "No later brick caps or conical roofs, bridges, modern city, text or flags",
+          "Native, final, full480 and centred16x9 crop480 inspected; tower top and guards retained"
+        ],
+        "uncertainties": [
+          "Restricted maincastle masonry view, tower geometry/top parapet is interpretation rather than surveyed 1495 reconstruction",
+          "Guard clothing and bow are generic allowed illustration; no exact 1495 weapon inventory claim",
+          "Mist and autumn lighting are illustration, not documented weather"
+        ]
+      },
+      "status": "local_candidate_passed_self_qa_pending_root_owner_review",
+      "generationCount": 1,
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-tietokerros-20261007/production/05-08/kortti-08-puolustusvalmius-1495.png",
+      "file": "kortti-08-puolustusvalmius-1495.png",
+      "productionDimensions": [
+        1536,
+        1024
+      ],
+      "viitteet": [
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-tietokerros-20261007/viitteet/ext-395c214e196cfc22.jpg"
+      ],
+      "kuvateksti": "Linnan vartijat puolustusvalmiudessa syksyllä 1495. Havainnekuva.",
+      "r2Key": "julisteet/olavinlinna-tietokerros/20261007/kortti-08-puolustusvalmius-1495.png",
+      "metadataText": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "fictional": false,
+      "temporalScope": "circa1495–1510 historical interpretation",
+      "parentVisualReview": true,
+      "gameIntegrated": false,
+      "editorAcceptance": "pending",
+      "published": false,
+      "url": "https://media.matkakirja.app/julisteet/olavinlinna-tietokerros/20261007/kortti-08-puolustusvalmius-1495.png",
+      "bytes": 2495013,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "card": 9,
+      "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-tietokerros-20261007/production/09-12/kortti-09-bielke.png",
+      "nativeSource": "/Users/samireivinen/.codex/generated_images/01a1160b-a377-7b63-b50b-3d45a54753fb/exec-4205d7c3-29af-4fec-aa4e-81c8e2b7515e.png",
+      "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-tietokerros-20261007/production/09-12/originals/kortti-09-native.png",
+      "nativeDimensions": [
+        1536,
+        1024
+      ],
+      "finalDimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "colorSpace": "sRGB",
+      "opaque": true,
+      "operations": [
+        "RGB conversion",
+        "embedded sRGB ICC",
+        "PNG metadata; pixels not retouched"
+      ],
+      "cropSafe": [
+        0,
+        80,
+        1536,
+        944
+      ],
+      "caption": "Uuden linnanherran aika ja kiista rajapyykeistä vuonna 1499. Havainnekuva.",
+      "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "sha256": "670a39a56599075848a6c4c828b7f1e17ec4441bd2cf70cb4689922021d966a5",
+      "promptFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-tietokerros-20261007/production/09-12/prompts/kortti-09.txt",
+      "builtInArguments": {
+        "transparent_background": false,
+        "prompt": "Use case: historical-scene.\nCreate a NEW photorealistic camera photograph-looking historical reconstruction, landscape 1536x1024, opaque. Around 1499 at Olavinlinna in Finland. Wide natural camera view from a forested shore looking over a flowing lake channel toward a rocky island. On the highest western rock of the island is a COMPACT triangular main castle of grey irregular fieldstone: exactly three round cylindrical towers clustered closely around a small inner courtyard, two northern towers and the third at the south apex, connected by tall plain grey curtain walls. All three towers are roofless and have simple flat open upper storeys; only grey fieldstone, no brick upper bands. This is the medieval main castle, not the present castle. There may be a low simple outer wall eastward but no fourth or fifth tower. Pale small unglazed wall openings. Strong exposed rock slopes into the water.\nA small plain early wooden rowing boat heads toward the rocky island. One anonymous new lord is seen only as a tiny distant figure from behind, in plain dark wool cloak, with a small rower also from behind; no visible face or portrait. In foreground at the forest shore a modest rough stone cairn illustrates the idea of a border marker, without a claim that this exact cairn was beside the castle. Late-summer warm low sunlight, muted greens and warm grey stone, rippling water. Keep all three towers, boat and cairn within central 16:9 crop-safe band, generous margins.\nPhotographic realism: real lens perspective, believable landscape distance and atmospheric depth, fine natural textures, subtle grain, no painting or drawing, no HDR, no fantasy cinematic glow.\nAvoid modern Olavinlinna additions: NO roofs, brick tower crowns, bastions, cannons, flags, bridges, quays, town, park, paved paths or modern boats. No recognizable faces, heraldry, inscriptions, maps, letters, numbers, logos, watermark or frame. Boat arrival, exact date within late summer, cairn appearance and scene arrangement are illustrative interpretation.\n"
+      },
+      "status": "accepted_local_QA",
+      "sourcePreflightReceipt": "output/olavinlinna-tietokerros-20261007/preflight/faktapreflight/source-read-receipt.json",
+      "researchReferences": [
+        "haro-02.png figure2: main castle triangular topology",
+        "ext-395c214e196cfc22.jpg: lower stone/rock/water only; not supplied to image tool"
+      ],
+      "uncertainties": [
+        "Boat arrival not documented event",
+        "Late summer time illustrative; exact arrival month uncertain",
+        "Cairn generic interpretation, not documented location",
+        "Roofless upper floors client-selected interpretation",
+        "No actual portrait of Bielke"
+      ],
+      "visualQA": {
+        "native": true,
+        "final": true,
+        "480px": true,
+        "center16x9": true,
+        "photoreal": true,
+        "noText": true,
+        "singleAcceptedCandidate": true,
+        "factConstraints": true,
+        "notes": "Exactly three clustered main towers, roofless grey fieldstone; tiny rear-view figures; generic cairn."
+      },
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-tietokerros-20261007/production/09-12/kortti-09-bielke.png",
+      "file": "kortti-09-bielke.png",
+      "productionDimensions": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Use case: historical-scene.\nCreate a NEW photorealistic camera photograph-looking historical reconstruction, landscape 1536x1024, opaque. Around 1499 at Olavinlinna in Finland. Wide natural camera view from a forested shore looking over a flowing lake channel toward a rocky island. On the highest western rock of the island is a COMPACT triangular main castle of grey irregular fieldstone: exactly three round cylindrical towers clustered closely around a small inner courtyard, two northern towers and the third at the south apex, connected by tall plain grey curtain walls. All three towers are roofless and have simple flat open upper storeys; only grey fieldstone, no brick upper bands. This is the medieval main castle, not the present castle. There may be a low simple outer wall eastward but no fourth or fifth tower. Pale small unglazed wall openings. Strong exposed rock slopes into the water.\nA small plain early wooden rowing boat heads toward the rocky island. One anonymous new lord is seen only as a tiny distant figure from behind, in plain dark wool cloak, with a small rower also from behind; no visible face or portrait. In foreground at the forest shore a modest rough stone cairn illustrates the idea of a border marker, without a claim that this exact cairn was beside the castle. Late-summer warm low sunlight, muted greens and warm grey stone, rippling water. Keep all three towers, boat and cairn within central 16:9 crop-safe band, generous margins.\nPhotographic realism: real lens perspective, believable landscape distance and atmospheric depth, fine natural textures, subtle grain, no painting or drawing, no HDR, no fantasy cinematic glow.\nAvoid modern Olavinlinna additions: NO roofs, brick tower crowns, bastions, cannons, flags, bridges, quays, town, park, paved paths or modern boats. No recognizable faces, heraldry, inscriptions, maps, letters, numbers, logos, watermark or frame. Boat arrival, exact date within late summer, cairn appearance and scene arrangement are illustrative interpretation.\n",
+      "viitteet": [
+        "haro-02.png figure2: main castle triangular topology",
+        "ext-395c214e196cfc22.jpg: lower stone/rock/water only; not supplied to image tool"
+      ],
+      "kuvateksti": "Uuden linnanherran aika ja kiista rajapyykeistä vuonna 1499. Havainnekuva.",
+      "r2Key": "julisteet/olavinlinna-tietokerros/20261007/kortti-09-bielke.png",
+      "metadataText": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "fictional": false,
+      "temporalScope": "circa1495–1510 historical interpretation",
+      "parentVisualReview": true,
+      "gameIntegrated": false,
+      "editorAcceptance": "pending",
+      "published": false,
+      "url": "https://media.matkakirja.app/julisteet/olavinlinna-tietokerros/20261007/kortti-09-bielke.png",
+      "bytes": 2967097,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "card": 10,
+      "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-tietokerros-20261007/production/09-12/kortti-10-vaakunalaatat.png",
+      "nativeSource": "/Users/samireivinen/.codex/generated_images/01a1160b-a377-7b63-b50b-3d45a54753fb/exec-e50d958c-49b6-4c86-bcd3-a02401a3dcab.png",
+      "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-tietokerros-20261007/production/09-12/originals/kortti-10-native.png",
+      "nativeDimensions": [
+        1536,
+        1024
+      ],
+      "finalDimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "colorSpace": "sRGB",
+      "opaque": true,
+      "operations": [
+        "RGB conversion",
+        "embedded sRGB ICC",
+        "PNG metadata; pixels not retouched"
+      ],
+      "cropSafe": [
+        0,
+        80,
+        1536,
+        944
+      ],
+      "caption": "Vaakunalaatta ja tiilillä suljettu komero tornin muurissa. Havainnekuva.",
+      "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "sha256": "dda9d689f562553de1dadc6c1dfac060d049d922d1830c30977b113208585f63",
+      "promptFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-tietokerros-20261007/production/09-12/prompts/kortti-10-accepted.txt",
+      "builtInArguments": {
+        "transparent_background": false,
+        "prompt": "Use case: historical-scene.\nCreate a NEW photorealistic camera photograph-looking reconstruction of a medieval Olavinlinna exterior masonry detail around 1495–1510, landscape 1536x1024 opaque. A close view across the gently curved exterior of a grey irregular fieldstone tower. The main subject is a square dark grey amphibolite slate plaque with a shallow carved Tott-family heraldic relief, and nearby a taller narrow segmental-arched wall niche fully BRICKED CLOSED. The niche is slightly ABOVE and BETWEEN two plaques; one legible main plaque in left lower area, a second peripheral dark plaque at right lower area, without needing to show its motif clearly. The tall niche has a shallow low rounded segmental arch, NOT a pointed Gothic arch and NOT semicircular doorway, completely filled with dull handmade red-brown medieval bricks and lime mortar, no void, statue or object.\nMain plaque relief motif precisely: a single simple shield tilted toward heraldic right (viewer left), quartered into exactly FOUR fields in a 2x2 checkerboard. Opposite diagonal quarters recessed and the other opposite diagonal quarters raised flat. Above the shield a simple jousting helmet, TWO curved horns as crest and restrained curling acanthus mantling. NO lion, eagle, bird, animals, cross, fleur-de-lis or lettering. Shallow relief cut into the dark stone, credible hand carving, not a modern metal coat of arms. No vivid coloring; stone relief depth communicates the alternating fields. Plaque has simple small side iron anchors.\nSoft subdued natural daylight rakes realistic stone, slate, lime mortar and old bricks, muted grey and earthy colors. Camera close but wide enough to understand plaque and closed niche together; all important details in central 16:9 crop-safe band. Real lens rendering, subtle sensor grain, no drawing, painting, stylization, HDR, cinematic saturation, magic or modern restoration machinery.\nNo people, text, numbers, inscriptions, logos, watermark, frame, windows or glass. No open niche or niche interior. This is an illustrative arrangement; precise medieval plaque placement and brick fill timing are not asserted.\nCritical framing correction for this entirely NEW generation: Pull the camera back so the COMPLETE arched niche including its brick arch crown has at least 180 pixels of plain stone wall above it in the 1024px-high image. Both full plaques, whole niche and full arch are inside the central safe band y=80 through y=944. The arch must NOT touch or exceed the upper edge of image or central crop. Plain stone wall margins surround the arrangement on all sides. Wide detail shot rather than extreme closeup.\n"
+      },
+      "status": "accepted_local_QA",
+      "sourcePreflightReceipt": "output/olavinlinna-tietokerros-20261007/preflight/faktapreflight/source-read-receipt.json",
+      "researchReferences": [
+        "haro-02.png p32 Tott heraldic motif text",
+        "haro-03.png p33 Tott shallow relief",
+        "haro-05.png p35 niche arrangement"
+      ],
+      "referenceUsage": "Research and QA only, PDF photos not supplied to image tool; photo licenses not independently verified",
+      "uncertainties": [
+        "Precise medieval plaque arrangement is illustrative",
+        "Brick-fill medieval dating not verified; shown as ordered",
+        "Niche purpose unknown, no function asserted"
+      ],
+      "rejectedCandidate": {
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-tietokerros-20261007/production/09-12/originals/kortti-10-rejected-cropsafety.png",
+        "reason": "Arch crown touched native image upper edge and failed central16x9 crop safety",
+        "promptFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-tietokerros-20261007/production/09-12/prompts/kortti-10.txt"
+      },
+      "generationCount": 2,
+      "acceptedCandidates": 1,
+      "visualQA": {
+        "native": true,
+        "final": true,
+        "480px": true,
+        "center16x9": true,
+        "photoreal": true,
+        "noText": true,
+        "singleAcceptedCandidate": true,
+        "factConstraints": true,
+        "notes": "Four alternating shield fields, helmet/two horns/acanthus; closed brick fill and complete segmental arch inside central crop; no guessed animal heraldry or niche function."
+      },
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-tietokerros-20261007/production/09-12/kortti-10-vaakunalaatat.png",
+      "file": "kortti-10-vaakunalaatat.png",
+      "productionDimensions": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Use case: historical-scene.\nCreate a NEW photorealistic camera photograph-looking reconstruction of a medieval Olavinlinna exterior masonry detail around 1495–1510, landscape 1536x1024 opaque. A close view across the gently curved exterior of a grey irregular fieldstone tower. The main subject is a square dark grey amphibolite slate plaque with a shallow carved Tott-family heraldic relief, and nearby a taller narrow segmental-arched wall niche fully BRICKED CLOSED. The niche is slightly ABOVE and BETWEEN two plaques; one legible main plaque in left lower area, a second peripheral dark plaque at right lower area, without needing to show its motif clearly. The tall niche has a shallow low rounded segmental arch, NOT a pointed Gothic arch and NOT semicircular doorway, completely filled with dull handmade red-brown medieval bricks and lime mortar, no void, statue or object.\nMain plaque relief motif precisely: a single simple shield tilted toward heraldic right (viewer left), quartered into exactly FOUR fields in a 2x2 checkerboard. Opposite diagonal quarters recessed and the other opposite diagonal quarters raised flat. Above the shield a simple jousting helmet, TWO curved horns as crest and restrained curling acanthus mantling. NO lion, eagle, bird, animals, cross, fleur-de-lis or lettering. Shallow relief cut into the dark stone, credible hand carving, not a modern metal coat of arms. No vivid coloring; stone relief depth communicates the alternating fields. Plaque has simple small side iron anchors.\nSoft subdued natural daylight rakes realistic stone, slate, lime mortar and old bricks, muted grey and earthy colors. Camera close but wide enough to understand plaque and closed niche together; all important details in central 16:9 crop-safe band. Real lens rendering, subtle sensor grain, no drawing, painting, stylization, HDR, cinematic saturation, magic or modern restoration machinery.\nNo people, text, numbers, inscriptions, logos, watermark, frame, windows or glass. No open niche or niche interior. This is an illustrative arrangement; precise medieval plaque placement and brick fill timing are not asserted.\nCritical framing correction for this entirely NEW generation: Pull the camera back so the COMPLETE arched niche including its brick arch crown has at least 180 pixels of plain stone wall above it in the 1024px-high image. Both full plaques, whole niche and full arch are inside the central safe band y=80 through y=944. The arch must NOT touch or exceed the upper edge of image or central crop. Plain stone wall margins surround the arrangement on all sides. Wide detail shot rather than extreme closeup.\n",
+      "viitteet": [
+        "haro-02.png p32 Tott heraldic motif text",
+        "haro-03.png p33 Tott shallow relief",
+        "haro-05.png p35 niche arrangement"
+      ],
+      "kuvateksti": "Vaakunalaatta ja tiilillä suljettu komero tornin muurissa. Havainnekuva.",
+      "r2Key": "julisteet/olavinlinna-tietokerros/20261007/kortti-10-vaakunalaatat.png",
+      "metadataText": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "fictional": false,
+      "temporalScope": "circa1495–1510 historical interpretation",
+      "parentVisualReview": true,
+      "gameIntegrated": false,
+      "editorAcceptance": "pending",
+      "published": false,
+      "url": "https://media.matkakirja.app/julisteet/olavinlinna-tietokerros/20261007/kortti-10-vaakunalaatat.png",
+      "bytes": 3508273,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "card": 11,
+      "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-tietokerros-20261007/production/09-12/kortti-11-aarnivalkea.png",
+      "nativeSource": "/Users/samireivinen/.codex/generated_images/01a1160b-a377-7b63-b50b-3d45a54753fb/exec-46efb4eb-d7bc-46bc-8724-42e68ee314bf.png",
+      "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-tietokerros-20261007/production/09-12/originals/kortti-11-native.png",
+      "nativeDimensions": [
+        1536,
+        1024
+      ],
+      "finalDimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "colorSpace": "sRGB",
+      "opaque": true,
+      "operations": [
+        "RGB conversion",
+        "embedded sRGB ICC",
+        "PNG metadata; pixels not retouched"
+      ],
+      "cropSafe": [
+        0,
+        80,
+        1536,
+        944
+      ],
+      "caption": "Aarnivalkea ja kukkiva sananjalka kansanuskon kuvitelmassa. Havainnekuva.",
+      "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "sha256": "9d7376cbb12de5b870cd51a453792e3c520af62546f9ab2e800d76359f1c372a",
+      "promptFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-tietokerros-20261007/production/09-12/prompts/kortti-11.txt",
+      "builtInArguments": {
+        "transparent_background": false,
+        "prompt": "Use case: historical-scene.\nCreate a brand-new photorealistic camera photograph-looking reconstruction for a Finnish game knowledge card, landscape 1536 x 1024, opaque. This is a fictional depiction of Finnish folk belief, photographed as if a real physical scene: a quiet Finnish forest on Midsummer night. Medium-wide low camera framing of damp moss, pine trunks, birch understory, a small natural stone cairn and a bracken fern. Beside the cairn, a modest pale blue-green ground flame rises only about 20 cm. The fern has ONE small, imagined pale flower as part of the same folklore fiction, visibly a subtle impossibility rather than botanical evidence. Realistic leaf texture, believable moisture, earth, stone and air; cool dim moonlight mixed with northern midsummer twilight. The flame is restrained, physically luminous, without magical particles or huge glow.\nStyle: indistinguishable from a real camera capture, fine photographic grain, quiet natural muted colors, convincing shadows, no painterly surfaces, no illustration, no cinematic saturation, no HDR. Keep fern, small flame and stone cairn fully within the central 16:9 crop-safe area; generous upper and lower background margins.\nNo people, no castle, no treasure visible, no words, letters, numbers, signs, logos, watermark or frame. Do not create an overwhelmingly magical fantasy aesthetic. This image depicts folk imagination, not a documented historical occurrence.\n"
+      },
+      "status": "accepted_local_QA",
+      "sourcePreflightReceipt": "output/olavinlinna-tietokerros-20261007/preflight/faktapreflight/source-read-receipt.json",
+      "visualQA": {
+        "native": true,
+        "final": true,
+        "480px": true,
+        "center16x9": true,
+        "photoreal": true,
+        "noTextOrPeople": true,
+        "singleAcceptedCandidate": true,
+        "factConstraints": true,
+        "notes": "Folk-belief fiction: imagined fern flower and pale small ground flame; no castle or visible treasure."
+      },
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-tietokerros-20261007/production/09-12/kortti-11-aarnivalkea.png",
+      "file": "kortti-11-aarnivalkea.png",
+      "productionDimensions": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Use case: historical-scene.\nCreate a brand-new photorealistic camera photograph-looking reconstruction for a Finnish game knowledge card, landscape 1536 x 1024, opaque. This is a fictional depiction of Finnish folk belief, photographed as if a real physical scene: a quiet Finnish forest on Midsummer night. Medium-wide low camera framing of damp moss, pine trunks, birch understory, a small natural stone cairn and a bracken fern. Beside the cairn, a modest pale blue-green ground flame rises only about 20 cm. The fern has ONE small, imagined pale flower as part of the same folklore fiction, visibly a subtle impossibility rather than botanical evidence. Realistic leaf texture, believable moisture, earth, stone and air; cool dim moonlight mixed with northern midsummer twilight. The flame is restrained, physically luminous, without magical particles or huge glow.\nStyle: indistinguishable from a real camera capture, fine photographic grain, quiet natural muted colors, convincing shadows, no painterly surfaces, no illustration, no cinematic saturation, no HDR. Keep fern, small flame and stone cairn fully within the central 16:9 crop-safe area; generous upper and lower background margins.\nNo people, no castle, no treasure visible, no words, letters, numbers, signs, logos, watermark or frame. Do not create an overwhelmingly magical fantasy aesthetic. This image depicts folk imagination, not a documented historical occurrence.\n",
+      "viitteet": [],
+      "kuvateksti": "Aarnivalkea ja kukkiva sananjalka kansanuskon kuvitelmassa. Havainnekuva.",
+      "r2Key": "julisteet/olavinlinna-tietokerros/20261007/kortti-11-aarnivalkea.png",
+      "metadataText": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "fictional": false,
+      "temporalScope": "folklore imagining",
+      "parentVisualReview": true,
+      "gameIntegrated": false,
+      "editorAcceptance": "pending",
+      "published": false,
+      "url": "https://media.matkakirja.app/julisteet/olavinlinna-tietokerros/20261007/kortti-11-aarnivalkea.png",
+      "bytes": 2343744,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "card": 12,
+      "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-tietokerros-20261007/production/09-12/kortti-12-keksittya.png",
+      "nativeSource": "/Users/samireivinen/.codex/generated_images/01a1160b-a377-7b63-b50b-3d45a54753fb/exec-1aae38f8-9738-4133-bae0-644d89e3312c.png",
+      "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-tietokerros-20261007/production/09-12/originals/kortti-12-native.png",
+      "nativeDimensions": [
+        1536,
+        1024
+      ],
+      "finalDimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "colorSpace": "sRGB",
+      "opaque": true,
+      "operations": [
+        "RGB conversion",
+        "embedded sRGB ICC",
+        "PNG metadata; pixels not retouched"
+      ],
+      "cropSafe": [
+        0,
+        80,
+        1536,
+        944
+      ],
+      "caption": "Keksitty aarrekätkö kellarissa. Kuvitteellinen havainnekuva.",
+      "Description": "Kuvitteellinen havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "Source": "Kuvitteellinen havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "sha256": "a8874be282c7b37ae7af480d0062978d07b4eea0f07c5683d59bded7d762a052",
+      "promptFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-tietokerros-20261007/production/09-12/prompts/kortti-12.txt",
+      "builtInArguments": {
+        "transparent_background": false,
+        "prompt": "Use case: historical-scene.\nCreate a brand-new photorealistic camera photograph-looking fictional treasure hiding place for a Finnish game knowledge card. Landscape 1536 x 1024, opaque. Generic small medieval stone cellar, invented room, NOT a reconstruction of any documented Olavinlinna room. A rough low stone arch curves above a sturdy modest oak chest with a simple shield-shaped iron lock escutcheon. On a low stone ledge beside the chest: one medieval-form chalice, a silver bowl and a plain dark slate stone slab with NO markings. Two wax candles in plain iron holders produce the only warm light, restrained and believable; dim stone background remains visible. Medium-wide eye-level camera, natural perspective, materially realistic wood grain, hammered iron, silver patina, rough grey fieldstone and mortar. Objects and chest fully inside the central 16:9 crop-safe band, background margin above and below.\nStyle: looks like a real camera photograph of physical props in an actual stone cellar, muted natural colors, subtle sensor grain, honest candlelight, no painting, no drawn edges, no concept-art look, no HDR or excessive cinematic saturation. Period inspiration around 1495–1510, but explicitly fictional scene and fictional objects.\nNo people, no statues, no treasure sparkle or magic, no glass, no modern furnishings, no skulls, no readable marks on slate, no text, letters, numerals, logos, watermark or frame. The chest lock is a plain shield-shaped metal escutcheon, no heraldic symbol or lettering.\n"
+      },
+      "status": "accepted_local_QA",
+      "sourcePreflightReceipt": "output/olavinlinna-tietokerros-20261007/preflight/faktapreflight/source-read-receipt.json",
+      "visualQA": {
+        "native": true,
+        "final": true,
+        "480px": true,
+        "center16x9": true,
+        "photoreal": true,
+        "noTextOrPeople": true,
+        "singleAcceptedCandidate": true,
+        "factConstraints": true,
+        "notes": "Generic fictional cellar; plain shield lock, chalice, silver bowl, unmarked slate; fiction disclosed in caption and metadata."
+      },
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-tietokerros-20261007/production/09-12/kortti-12-keksittya.png",
+      "file": "kortti-12-keksittya.png",
+      "productionDimensions": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Use case: historical-scene.\nCreate a brand-new photorealistic camera photograph-looking fictional treasure hiding place for a Finnish game knowledge card. Landscape 1536 x 1024, opaque. Generic small medieval stone cellar, invented room, NOT a reconstruction of any documented Olavinlinna room. A rough low stone arch curves above a sturdy modest oak chest with a simple shield-shaped iron lock escutcheon. On a low stone ledge beside the chest: one medieval-form chalice, a silver bowl and a plain dark slate stone slab with NO markings. Two wax candles in plain iron holders produce the only warm light, restrained and believable; dim stone background remains visible. Medium-wide eye-level camera, natural perspective, materially realistic wood grain, hammered iron, silver patina, rough grey fieldstone and mortar. Objects and chest fully inside the central 16:9 crop-safe band, background margin above and below.\nStyle: looks like a real camera photograph of physical props in an actual stone cellar, muted natural colors, subtle sensor grain, honest candlelight, no painting, no drawn edges, no concept-art look, no HDR or excessive cinematic saturation. Period inspiration around 1495–1510, but explicitly fictional scene and fictional objects.\nNo people, no statues, no treasure sparkle or magic, no glass, no modern furnishings, no skulls, no readable marks on slate, no text, letters, numerals, logos, watermark or frame. The chest lock is a plain shield-shaped metal escutcheon, no heraldic symbol or lettering.\n",
+      "viitteet": [],
+      "kuvateksti": "Keksitty aarrekätkö kellarissa. Kuvitteellinen havainnekuva.",
+      "r2Key": "julisteet/olavinlinna-tietokerros/20261007/kortti-12-keksittya.png",
+      "metadataText": "Kuvitteellinen havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "fictional": true,
+      "temporalScope": "fictional scene",
+      "parentVisualReview": true,
+      "gameIntegrated": false,
+      "editorAcceptance": "pending",
+      "published": false,
+      "url": "https://media.matkakirja.app/julisteet/olavinlinna-tietokerros/20261007/kortti-12-keksittya.png",
+      "bytes": 2755758,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    }
+  ],
+  "editorAcceptance": "pending",
+  "gameIntegrated": false,
+  "published": false,
+  "noMergeVersionRelease": true
+}
