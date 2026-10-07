@@ -11,7 +11,7 @@
    "koko_m": 80,
    "korkeus_m": 62,
    "teksti": "Helsingin tuomiokirkko nousee Senaatintorin pohjoislaidalla valkoisena ristinä, jonka keskeltä kohoaa vihreä kupoli ja kulmista neljä pienempää. Katon harjoilla ja kulmissa seisoo kaksitoista ihmistä suurempaa apostolia, jotka valettiin sinkistä Berliinissä 1840-luvulla, ja ne ovat yksi maailman suurimmista yhtenäisistä sinkkiveistosten kokoelmista. Isoisäsi kirjoitti vuonna 1873, että kirkon apostolit katsoivat merelle. Rakennuksen piirsi Carl Ludvig Engel, mutta se valmistui vasta vuonna 1852, kaksitoista vuotta arkkitehdin kuoleman jälkeen. Kirkon edestä leveät portaat laskeutuvat suoraan Senaatintorille.",
-   "lyhyt": "Helsingin tuomiokirkko on kuusikymmentäkaksi metriä korkea, ja vihreine kupoleineen se on maamerkki kaikille, jotka saapuvat kaupunkiin mereltä. Alun perin se oli Nikolainkirkko, itsenäistymisen jälkeen Suurkirkko, ja tuomiokirkoksi se nimettiin vasta vuonna 1959.",
+   "lyhyt": "Helsingin tuomiokirkon neljä pientä kulmatornia lisäsi Engelin apulainen Ernst Lohrmann, koska kirkon rakennetta pelättiin liian heikoksi ja päätorni tarvitsi tukea. Raskaita kelloja ei uskallettu nostaa kupoliin, joten Lohrmann piirsi portaiden reunoille erillisen kellotapulin ja sen pariksi kappelin.",
    "syventava": "Keitä katon apostolit esittävät?",
    "kysymykset": [
     "Kuka veisti katon apostolipatsaat?",
@@ -43,16 +43,16 @@
      "url": "https://en.wikipedia.org/wiki/Helsinki_Cathedral"
     },
     {
-     "vaite": "Kirkko on mereltä saapuvien maamerkki; vihreät kupolit monumentaalisten portaiden yllä Senaatintorilla.",
-     "url": "https://www.myhelsinki.fi/fi/n%C3%A4e-ja-koe/n%C3%A4ht%C3%A4vyydet/helsingin-tuomiokirkko"
-    },
-    {
      "vaite": "Kirkon korkeus on 62 metriä.",
      "url": "https://structurae.net/de/bauwerke/lutheranische-kathedrale"
     },
     {
-     "vaite": "Vihittiin 1852 Nikolainkirkoksi; itsenäistymisen jälkeen Suurkirkko; tuomiokirkko 1959 Helsingin hiippakunnan synnyttyä.",
-     "url": "https://helsingintuomiokirkko.fi/en/index/historyofthecathedral.html"
+     "vaite": "Engelin kuoltua Lohrmannin johdolla lisättiin päätornin tueksi neljä kulmatornia, koska rakenteen pelättiin olevan liian heikko; koska kupoliin ei uskallettu sijoittaa painavia kelloja, Lohrmann suunnitteli portaiden reunoille sivurakennukset, kellotapulin ja kappelin.",
+     "url": "https://fi.wikipedia.org/wiki/Helsingin_tuomiokirkko"
+    },
+    {
+     "vaite": "Ernst Lohrmann lisäsi neljä pientä kupolia ja suunnitteli portaiden sivuille kellotapulin ja kappelin.",
+     "url": "https://en.wikipedia.org/wiki/Helsinki_Cathedral"
     }
    ]
   },
@@ -63,7 +63,7 @@
    "luokka": "linnoitus",
    "koko_m": 1500,
    "teksti": "Suomenlinna levittäytyy Helsingin edustalle saariryhmänä, jonka rannoilla kiertävät harmaat bastionit ja vallit. Ruotsi alkoi rakentaa merilinnoitusta vuonna 1748 Augustin Ehrensvärdin johdolla, ja vuoteen 1918 asti sitä kutsuttiin Viaporiksi. Ehrensvärd on haudattu Susisaaren linnanpihalle keskelle omaa linnoitustaan. Eteläisimmän saaren rannassa seisoo Kuninkaanportti, joka rakennettiin kohtaan, johon kuningas Aadolf Fredrik ankkuroi laivansa tullessaan tarkastamaan töitä. Nykyään Suomenlinna on Unescon maailmanperintökohde ja kaupunginosa, jossa asuu noin kahdeksansataa ihmistä.",
-   "lyhyt": "Suomenlinnaan pääsee Kauppatorilta ympäri vuoden kulkevalla lautalla tavallisella joukkoliikennelipulla. Saarten kirkko rakennettiin alun perin ortodoksiseksi varuskuntakirkoksi, ja sen tornissa on majakka, jonka valo välähtää neljä kertaa peräkkäin: se on morseaakkosten H niin kuin Helsinki.",
+   "lyhyt": "Suomenlinnan kirkko rakennettiin vuonna 1854 linnoituksen venäläisen varuskunnan ortodoksiseksi kirkoksi. Itsenäistymisen jälkeen siitä tehtiin luterilainen kirkko, ja sipulikupolit ja sivutornit poistettiin. Vuodesta 1929 tornissa on ollut majakka, jonka valo välähtää neljästi: se on morseaakkosten H niin kuin Helsinki.",
    "syventava": "Miksi Viapori sai uuden nimen?",
    "kysymykset": [
     "Miksi linnoitus rakennettiin saarille?",
@@ -95,12 +95,12 @@
      "url": "https://en.wikipedia.org/wiki/Suomenlinna"
     },
     {
-     "vaite": "Suomenlinna on Helsingin kaupunginosa, jossa asuu noin 800 ihmistä; HSL:n lautta Kauppatorilta kulkee ympäri vuoden tavallisella joukkoliikennelipulla.",
+     "vaite": "Suomenlinna on Helsingin kaupunginosa, jossa asuu noin 800 ihmistä.",
      "url": "https://www.myhelsinki.fi/fi/places/suomenlinnan-merilinnoitus/"
     },
     {
-     "vaite": "Kirkko valmistui 1854 ortodoksiseksi varuskuntakirkoksi; tornin majakka välähtää neljästi, morseaakkosten H kuin Helsinki.",
-     "url": "https://finnisharchitecture.fi/suomenlinna-church/"
+     "vaite": "Kirkko rakennettiin 1854 Viaporin venäläisen varuskunnan ortodoksiseksi kirkoksi; luterilaiseksi 1918, jolloin sipulikupolit vaihdettiin; 1927–1929 neljä sivutornia poistettiin; tornin majakka vuodesta 1929 välähtää morseaakkosten H:n eli Helsingin.",
+     "url": "https://fi.wikipedia.org/wiki/Suomenlinnan_kirkko"
     }
    ]
   },
@@ -111,7 +111,7 @@
    "luokka": "kirkko",
    "koko_m": 70,
    "teksti": "Uspenskin katedraali kohoaa Katajanokan kalliolla punatiilisenä, ja sen katolla kimaltaa kolmetoista kullattua sipulikupolia, jotka kuvaavat Kristusta ja kahtatoista apostolia. Tiilet tuotiin proomuilla Ahvenanmaalta Bomarsundin linnoituksesta, joka hävitettiin Krimin sodassa, ja niitä kului seitsemänsataatuhatta. Kirkko vihittiin vuonna 1868, ja se on Länsi-Euroopan suurin ortodoksinen kirkko. Vuonna 2010 kirkosta varastettiin ihmeitätekevänä pidetty Jumalanäidin ikoni. Seuraavana talvena vangittu varas kertoi kätköpaikan, ja Turussa maahan kaivettuna ollut ikoni korjattiin ja palautettiin kirkkoon.",
-   "lyhyt": "Uspenskin katedraalin suunnitteli venäläinen arkkitehti Aleksei Gornostajev, joka kuoli vuonna 1862 eikä nähnyt kirkkoa valmiina. Sisällä katse kiinnittyy runsaaseen ikonostaasiin, jonka maalasi Pavel Šiltsov ja jossa evankelistat reunustavat ehtoollista ja taivaaseenastumista esittäviä kuvia.",
+   "lyhyt": "Uspenskin katedraalin alakerran kryptakappeli on pyhitetty pappismarttyyri Aleksandr Hotovitskille. Hän perusti ortodoksisia seurakuntia Pohjois-Amerikassa ja toimi ensimmäisen maailmansodan vuosina Helsingin ortodoksisen seurakunnan kirkkoherrana, mutta Stalinin vainoissa hänet teloitettiin vuonna 1937. Venäjän ortodoksinen kirkko julisti hänet pyhäksi vuonna 1994.",
    "syventava": "Mistä katedraalin tiilet tuotiin?",
    "kysymykset": [
     "Mistä katedraalin punaiset tiilet tuotiin?",
@@ -143,16 +143,16 @@
      "url": "https://www.johnsanidopoulos.com/2011/08/theotokos-of-kozeltshan-icon-restored.html"
     },
     {
-     "vaite": "Suunnittelija Aleksei Gornostajev kuoli 1862; kirkko rakennettiin hänen kuolemansa jälkeen 1862–1868.",
-     "url": "https://en.wikipedia.org/wiki/Uspenski_Cathedral"
+     "vaite": "Katedraalin kryptakappeli on pyhitetty pappismarttyyri Aleksandr Hotovitskille (k. 1937).",
+     "url": "https://fi.wikipedia.org/wiki/Uspenskin_katedraali"
     },
     {
-     "vaite": "Ikonostaasissa evankelistat reunustavat ehtoollista ja taivaaseenastumista esittäviä kuvia.",
-     "url": "https://www.lonelyplanet.com/points-of-interest/uspenski-cathedral/1185226"
+     "vaite": "Hotovitski perusti seurakuntia Pohjois-Amerikassa, oli Helsingin ortodoksisen seurakunnan kirkkoherra 1914–1917, teloitettiin 1937 ja julistettiin pyhäksi 1994 Venäjän ortodoksisessa kirkossa.",
+     "url": "https://fi.wikipedia.org/wiki/Aleksandr_Hotovitski"
     },
     {
-     "vaite": "Katedraalin ikonostaasin maalasi Pavel Šiltsov.",
-     "url": "https://en.wikipedia.org/wiki/Uspenski_Cathedral"
+     "vaite": "Helsingissä 1914–1917; teloitettiin Stalinin suuren terrorin aikana 1937; kanonisoitiin 1994; kryptakappeli nimetty hänen mukaansa.",
+     "url": "https://en.wikipedia.org/wiki/Alexander_Hotovitzky"
     }
    ]
   },
@@ -250,7 +250,7 @@
    "kuvaus": "Kallioon louhittu kirkko",
    "luokka": "kirkko",
    "koko_m": 60,
-   "teksti": "Temppeliaukion kirkko näkyy ylhäältä vain matalana kalliokumpareena, jonka keskellä hohtaa kuparinen kupoli. Veljekset Timo ja Tuomo Suomalainen louhivat kirkon kallion sisään sen sijaan, että olisivat rakentaneet sen päälle, ja kirkko avattiin vuonna 1969. Kupolin halkaisija on kaksikymmentäneljä metriä, ja sen pintaan on kierretty kuparilankaa kaksikymmentäkaksi kilometriä. Seinät jätettiin karkeaksi kiveksi kapellimestari Paavo Berglundin neuvosta, koska rosoinen pinta parantaa akustiikkaa. Vilkkaimpina vuosina kirkossa on pidetty jopa neljäsataa konserttia.",
+   "teksti": "Temppeliaukion kirkko näkyy ylhäältä vain matalana kalliokumpareena, jonka keskellä hohtaa kuparinen kupoli. Veljekset Timo ja Tuomo Suomalainen louhivat kirkon kallion sisään sen sijaan, että olisivat rakentaneet sen päälle, ja kirkko avattiin vuonna 1969. Kupolin halkaisija on kaksikymmentäneljä metriä, ja sen pinta on verhottu kuparinauhalla, jota on jopa kaksikymmentäkaksi kilometriä. Seinät jätettiin karkeaksi kiveksi kapellimestari Paavo Berglundin neuvosta, koska rosoinen pinta parantaa akustiikkaa. Vilkkaimpina vuosina kirkossa on pidetty jopa neljäsataa konserttia.",
    "lyhyt": "Temppeliaukion kirkon kupolin ja kallioseinän välissä kiertää kattoikkunoiden nauha, jonka sadastakahdeksastakymmenestä ikkunasta päivänvalo valuu saliin. Alttarin kohdalla kallioseinässä on luonnollinen halkeama, ja itse kallio on noin kaksi miljardia vuotta vanhaa graniittia.",
    "syventava": "Miksi kirkon seinät jätettiin karkeiksi?",
    "kysymykset": [
@@ -267,11 +267,19 @@
      "url": "https://en.wikipedia.org/wiki/Temppeliaukio_Church"
     },
     {
-     "vaite": "Kupolin halkaisija 24 metriä; kupolissa 22 kilometriä kuparilankaa; seinät jätettiin karkeiksi Paavo Berglundin neuvosta akustiikan vuoksi.",
+     "vaite": "Kupolin halkaisija 24 metriä.",
      "url": "https://www.koreajoongangdaily.com/opinion/rock-and-refuge-finlands-temppeliaukio-church-blends-nature-and-faith/11974203"
     },
     {
-     "vaite": "Vilkkaimpina vuosina jopa 400 konserttia; 180 kattoikkunaa; alttarina luonnollinen kallionhalkeama; noin kaksi miljardia vuotta vanha graniittikallio.",
+     "vaite": "Kuparikatto koostuu jopa 22 kilometristä kuparinauhaa; 180 kattoikkunaa; vilkkaimpina vuosina jopa 400 konserttia; kaksi miljardia vuotta vanha graniittikallio.",
+     "url": "https://www.myhelsinki.fi/fi/places/temppeliaukion-kirkko/"
+    },
+    {
+     "vaite": "Kapellimestari Paavo Berglund ja akustikko Mauri Parjo korostivat epätasaisten pintojen akustista etua, minkä vuoksi kallioseinät jätettiin näkyviin; noin 180 ikkunaa.",
+     "url": "https://en.wikipedia.org/wiki/Temppeliaukio_Church"
+    },
+    {
+     "vaite": "Alttaritauluna toimii kallion luonnollinen halkeama.",
      "url": "https://www.stromma.com/fi-fi/helsinki/nahtavyydet/temppeliaukion-kirkko"
     }
    ]
@@ -283,7 +291,7 @@
    "luokka": "rakennus",
    "koko_m": 200,
    "teksti": "Helsingin päärautatieasema erottuu ylhäältä graniittisena kokonaisuutena, jonka laidalta kohoaa lähes viisikymmentä metriä korkea kellotorni. Asemarakennuksen suunnitteli Eliel Saarinen, työt alkoivat vuonna 1905, ja asema valmistui vuonna 1919. Pääovea vartioi neljä graniittista lyhdynkantajaa, joiden käsissä pallolamput syttyvät illalla. Emil Wikström veisti ne vuonna 1914 saman kipsimallin mukaan, joten kaikki neljä ovat sama mies. Nykyään hahmot tunnetaan Kivimiehinä, ja niille on puettu muun muassa Käärijän vihreät bolerot.",
-   "lyhyt": "Helsingin päärautatieaseman kautta kulkee arviolta kaksisataatuhatta matkustajaa päivässä, joten se on Suomen vilkkain rakennus. Arkkitehti Eliel Saarisen ehdotus valittiin aikanaan kahdenkymmenenyhden kilpailuehdotuksen joukosta, ja koko massiivinen rakennus verhoiltiin suomalaisella graniitilla.",
+   "lyhyt": "Helsingin päärautatieaseman suunnittelukilpailun voitti Eliel Saarisen kansallisromanttinen ehdotus, jossa oli torneja ja kahdeksan graniittista karhua. Arkkitehdit moittivat sitä vanhanaikaiseksi, ja lehtien pilakuvissa yksi karhuista hyppäsi kadulle jahtaamaan ihmisiä. Saarinen piirsi aseman lähes kokonaan uudelleen, ja karhut jäivät pois.",
    "syventava": "Kuka oli kivimiesten malli?",
    "kysymykset": [
     "Kuka oli lyhdynkantajien malli?",
@@ -299,7 +307,7 @@
      "url": "https://www.myhelsinki.fi/?p=5121"
     },
     {
-     "vaite": "Eliel Saarisen suunnittelema asema; graniittiverhous; neljä Wikströmin lyhdynkantajaa pallolamppuineen pääoven molemmin puolin; noin 200 000 matkustajaa päivässä, Suomen vierailluin rakennus.",
+     "vaite": "Eliel Saarisen suunnittelema asema; graniittiverhous; neljä Wikströmin lyhdynkantajaa pallolamppuineen pääoven molemmin puolin.",
      "url": "https://www.myhelsinki.fi/en/see-and-do/sights/helsinki-central-railway-station"
     },
     {
@@ -311,7 +319,11 @@
      "url": "https://www.mtvuutiset.fi/artikkeli/helsingin-rautatieaseman-kivimiehet-saivat-omat-kaarija-boleronsa-nain-paljon-niihin-upposi-kangasta/8691576"
     },
     {
-     "vaite": "Vuoden 1904 kilpailuun tuli 21 ehdotusta, ja Saarinen voitti.",
+     "vaite": "Kahdenkymmenenyhden ehdotuksen kilpailun voitti Saarisen kansallisromanttinen ehdotus, jossa oli muun muassa kahdeksan graniittista karhua ja korkea torni; Frosterus ja Strengell moittivat sitä vanhanaikaiseksi; pilakuvissa yksi karhu oli hypännyt kadulle jahtaamaan ihmisiä; Saarinen muutti suunnitelman perusteellisesti ja sisäänkäyntihalli karhuineen poistettiin.",
+     "url": "https://fi.wikipedia.org/wiki/Helsingin_p%C3%A4%C3%A4rautatieasema"
+    },
+    {
+     "vaite": "Saarisen alkuperäistä ehdotusta pidettiin vanhanaikaisena, ja hän suunnitteli aseman kokonaan uudelleen rationaalisemmaksi; karhupatsaat poistuivat.",
      "url": "https://en.wikipedia.org/wiki/Helsinki_Central_Station"
     }
    ]
@@ -323,7 +335,7 @@
    "luokka": "rakennus",
    "koko_m": 150,
    "teksti": "Oodi on Kansalaistorin laidalla kaartuva keskustakirjasto, jonka julkisivu on verhoiltu kuusipuulla. Se avattiin itsenäisyyspäivän aattona vuonna 2018, ja se oli valtion ja Helsingin lahja Suomen satavuotisjuhlaan. Ylin kerros on Kirjataivaaksi kutsuttu avara lukusali, jonka aaltoilevassa katossa on neljätoista kattoikkunaa. Toisessa kerroksessa voi kirjojen lisäksi käyttää ompelukoneita, kolmiulotteisia tulostimia ja äänitysstudioita, ja talossa on myös elokuvateatteri ja kahvila. Vuonna 2019 Oodi valittiin maailman parhaaksi uudeksi yleiseksi kirjastoksi.",
-   "lyhyt": "Oodin ylimmän kerroksen laaja terassi katsoo suoraan aukion yli eduskuntataloa kohti. Kirjasto ja eduskunta ovat Kansalaistorin eri puolilla vastakkain, ja kirjastolain tavoitteena on edistää muun muassa sivistystä, demokratiaa ja sananvapautta.",
+   "lyhyt": "Oodi on rakennettu kuin silta: kirjasto kaartuu yli sadan metrin matkalta avoimen pohjakerroksen yllä kahden massiivisen teräskaaren varassa. Ratkaisu teki sisätiloista pilarittomia ja jätti tontin alle tilaa tulevalle autotunnelille, jonka suunnittelu kuitenkin keskeytettiin vuonna 2019.",
    "syventava": "Mitä Oodissa voi tehdä kirjojen lisäksi?",
    "kysymykset": [
     "Miksi kirjasto rakennettiin eduskuntataloa vastapäätä?",
@@ -359,8 +371,16 @@
      "url": "https://oodihelsinki.fi/en/helsinki-central-library-oodi-chosen-as-the-best-new-public-library-in-the-world/"
     },
     {
-     "vaite": "Kirjastolain tavoitteena on edistää muun muassa yhtäläisiä mahdollisuuksia sivistykseen, aktiivista kansalaisuutta, demokratiaa ja sananvapautta.",
-     "url": "https://finlex.fi/api/media/statute/63835/mainPdf/main.pdf"
+     "vaite": "Kirjasto on yli sadan metrin silta avoimen pohjakerroksen yllä, ja sitä kantaa kaksi massiivista teräskaarta; ratkaisu mahdollisti pilarittomat sisätilat ja tulevan autotunnelin rakentamisen tontin alle.",
+     "url": "https://www.metalocus.es/en/news/helsinki-central-library-oodi-ala-architects"
+    },
+    {
+     "vaite": "Oodin runkona on piilossa oleva yli sata metriä pitkä ja lähes 800 tonnia painava teräksinen siltarakenne, joka mahdollistaa pilarittomat sisätilat.",
+     "url": "https://www.ramboll.com/fi-fi/projektit/kiinteistot/helsingin-keskustakirjasto-oodi"
+    },
+    {
+     "vaite": "Keskustatunnelin valmistelu keskeytettiin vuonna 2019.",
+     "url": "https://fi.wikipedia.org/wiki/Helsingin_keskustatunneli"
     }
    ]
   },
@@ -377,7 +397,7 @@
     "Miksi Kiasma herätti aikanaan vastustusta?",
     "Mitä nimi Kiasma tarkoittaa?",
     "Kuka oli arkkitehti Steven Holl?",
-    "Millaista taidetta Kiasmassa on nyt esillä?",
+    "Miten Kiasma hyödyntää päivänvaloa?",
     "Kenen ratsastajapatsas seisoo museon vieressä?"
    ],
    "isoisa": false,
@@ -485,7 +505,7 @@
     "Miksi Vuoristoradan junaa jarrutetaan käsin?",
     "Keitä olivat ensimmäiset jarrumestarit?",
     "Mihin huvipuiston tuotto käytetään?",
-    "Mikä on Linnanmäen uusin laite?",
+    "Kuinka nopeasti Vuoristoradan juna kulkee?",
     "Miksi mäellä oli ennen vesitorni?"
    ],
    "isoisa": false,
@@ -518,7 +538,7 @@
     "Miksi viereen lisättiin Sibeliuksen kasvot?",
     "Kuka oli kuvanveistäjä Eila Hiltunen?",
     "Soiko muistomerkki tuulessa?",
-    "Mitä Sibeliuksen musiikkia kannattaa kuunnella ensin?"
+    "Miksi muistomerkin nimi on Passio Musicae?"
    ],
    "isoisa": false,
    "lahteet": [

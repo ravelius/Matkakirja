@@ -11,7 +11,7 @@
    "koko_m": 100,
    "korkeus_m": 74.5,
    "teksti": "Islannin suurin kirkko, Hallgrímskirkja, kohoaa Skólavörðuholtin kukkulalla, ja sen seitsemänkymmentäneljä ja puoli metriä korkea torni näkyy kaikkialle kaupunkiin. Arkkitehti Guðjón Samúelsson sai tehtävän vuonna 1937 ja muotoili tornin molemmin puolin porrastuvat siivet islantilaisten basalttipylväiden mukaan. Rakennus valmistui vasta vuonna 1986. Kirkko on nimetty 1600-luvun pappisrunoilijan Hallgrímur Péturssonin mukaan, joka kirjoitti viisikymmentä passiovirttä. Kirkon edessä seisoo löytöretkeilijä Leif Eriksonin patsas, jonka Yhdysvallat lahjoitti Islannille vuonna 1930 Islannin parlamentin tuhatvuotisjuhlan kunniaksi.",
-   "lyhyt": "Islannin suurimman kirkon, Hallgrímskirkjan, tornissa kulkee hissi näköalatasanteelle, jolta Reykjavikin kadut ja talot levittäytyvät lahden rantaan asti. Kirkkaalla säällä lännessä erottuu kaukainen Snæfellsjökullin jäätikkö. Kirkon suuret urut rakensi saksalainen urkurakentamo Klais, ja ne valmistuivat vuonna 1992.",
+   "lyhyt": "Islannin luterilaisen kirkon johto halusi Hallgrímskirkjalle suuren tornin, joka peittoaisi katolisen Landakotskirkjan, vaikka rakennuksesta oli alun perin tarkoitus tehdä matalampi. Torni ja siivet valmistuivat jo vuonna 1974, kauan ennen kirkkosalia.",
    "syventava": "Kuka oli Hallgrímur Pétursson?",
    "kysymykset": [
     "Miksi kirkon rakentaminen kesti niin kauan?",
@@ -43,16 +43,11 @@
      "url": "https://en.wikipedia.org/wiki/Hallgr%C3%ADmskirkja"
     },
     {
-     "vaite": "Tornissa kulkee hissi näköalatasanteelle; kirkkaalla säällä lännessä näkyy Snæfellsjökull.",
-     "url": "https://www.iceland-highlights.com/destination/hallgrimskirkja-church/"
-    },
-    {
-     "vaite": "Urut rakensi saksalainen Johannes Klais Bonnista; ne valmistuivat joulukuussa 1992.",
+     "vaite": "Kirkon oli alun perin tarkoitus olla matalampi, mutta Islannin kirkon johto halusi suuren tornin, joka peittoaisi katolisen Landakotskirkjan; torni ja siivet valmistuivat 1974, kirkkosali vihittiin 1986.",
      "url": "https://en.wikipedia.org/wiki/Hallgr%C3%ADmskirkja"
     }
    ],
-   "puhe_teksti": "Islannin suurin kirkko, Hallgrímskirkja, kohoaa Skólavörduholtin kukkulalla, ja sen seitsemänkymmentäneljä ja puoli metriä korkea torni näkyy kaikkialle kaupunkiin. Arkkitehti Gudjón Samúelsson sai tehtävän vuonna 1937 ja muotoili tornin molemmin puolin porrastuvat siivet islantilaisten basalttipylväiden mukaan. Rakennus valmistui vasta vuonna 1986. Kirkko on nimetty 1600-luvun pappisrunoilijan Hallgrímur Péturssonin mukaan, joka kirjoitti viisikymmentä passiovirttä. Kirkon edessä seisoo löytöretkeilijä Leif Eriksonin patsas, jonka Yhdysvallat lahjoitti Islannille vuonna 1930 Islannin parlamentin tuhatvuotisjuhlan kunniaksi.",
-   "puhe_lyhyt": "Islannin suurimman kirkon, Hallgrímskirkjan, tornissa kulkee hissi näköalatasanteelle, jolta Reykjavikin kadut ja talot levittäytyvät lahden rantaan asti. Kirkkaalla säällä lännessä erottuu kaukainen Snaifellsjökullin jäätikkö. Kirkon suuret urut rakensi saksalainen urkurakentamo Klais, ja ne valmistuivat vuonna 1992."
+   "puhe_teksti": "Islannin suurin kirkko, Hallgrímskirkja, kohoaa Skólavörduholtin kukkulalla, ja sen seitsemänkymmentäneljä ja puoli metriä korkea torni näkyy kaikkialle kaupunkiin. Arkkitehti Gudjón Samúelsson sai tehtävän vuonna 1937 ja muotoili tornin molemmin puolin porrastuvat siivet islantilaisten basalttipylväiden mukaan. Rakennus valmistui vasta vuonna 1986. Kirkko on nimetty 1600-luvun pappisrunoilijan Hallgrímur Péturssonin mukaan, joka kirjoitti viisikymmentä passiovirttä. Kirkon edessä seisoo löytöretkeilijä Leif Eriksonin patsas, jonka Yhdysvallat lahjoitti Islannille vuonna 1930 Islannin parlamentin tuhatvuotisjuhlan kunniaksi."
   },
   {
    "id": "Q1783706",
@@ -61,7 +56,7 @@
    "luokka": "rakennus",
    "koko_m": 130,
    "teksti": "Konserttitalo Harpa seisoo Reykjavikin sataman reunalla, ja sen värejä heijastava lasijulkisivu on saanut innoituksensa Islannin basalttimaisemista. Talon suunnittelivat tanskalainen Henning Larsen Architects ja tanskalais-islantilainen taiteilija Olafur Eliasson, ja eteläjulkisivu on koottu yli tuhannesta kaksitoistatahkoisesta lasitiilestä. Rakentaminen alkoi vuonna 2007, mutta seuraavana vuonna pankkiromahdus pysäytti työt, ja puolivalmiin talon kohtalo oli pitkään epävarma. Valtio päätti lopulta rahoittaa rakennuksen loppuun, ja Harpa avattiin toukokuussa 2011. Suurin sali, Eldborg, on nimetty tunnetun islantilaisen tulivuorenkraatterin mukaan.",
-   "lyhyt": "Konserttitalo Harpa voitti vuonna 2013 Euroopan unionin Mies van der Rohe -arkkitehtuuripalkinnon. Talossa on esitetty myös oopperaa, vaikka konserteille suunnitellusta talosta puuttuvat esirippu, näyttämöaukko ja perinteinen näyttämökoneisto. Pääsaliin mahtuu ainakin tuhat kuusisataa kuulijaa.",
+   "lyhyt": "Konserttitalo Harpan lasijulkisivun itä- ja länsiosissa on yhteensä seitsemänsataaneljätoista ledvaloa, joilla Olafur Eliasson on luonut talon kylkiin vaihtuvia valoteoksia. Talon kymmenvuotisjuhlaan vuonna 2021 hän suunnitteli kaksitoista uutta valoteosta, yhden kullekin kuukaudelle.",
    "syventava": "Miten pankkiromahdus uhkasi Harpaa?",
    "kysymykset": [
     "Miksi lasiseinä muistuttaa basalttia?",
@@ -89,11 +84,7 @@
      "url": "https://en.wikipedia.org/wiki/Harpa_(concert_hall)"
     },
     {
-     "vaite": "Vuonna 2013 Euroopan unionin Mies van der Rohe -palkinto.",
-     "url": "https://en.wikipedia.org/wiki/Harpa_(concert_hall)"
-    },
-    {
-     "vaite": "Islannin ooppera on esiintynyt talossa, vaikka siitä puuttuvat esirippu, proscenium ja näyttämökoneisto; Eldborgissa 1600–1800 paikkaa.",
+     "vaite": "Julkisivussa on 714 LED-valoa (itäosassa 486, länsiosassa 228), joilla näytetään Olafur Eliassonin videoteoksia; kymmenvuotisjuhlaan 2021 Eliasson teki kaksitoista uutta kuukausittaista valoteosta.",
      "url": "https://en.wikipedia.org/wiki/Harpa_(concert_hall)"
     }
    ]
@@ -105,10 +96,10 @@
    "luokka": "rakennus",
    "koko_m": 100,
    "teksti": "Näköalarakennus Perlan eli Helmi kimaltelee Öskjuhlíðin metsäisen kukkulan laella lasikupolina, joka lepää kuuden kaukolämpösäiliön päällä. Ensimmäinen kuumavesisäiliö rakennettiin mäelle vuonna 1939, ja nykyinen rakennus avattiin yleisölle kesäkuussa 1991. Säiliöistä neljä varastoi yhä kaupungin kuumaa vettä, yhdessä toimii planetaario ja yhdessä keinotekoinen jääluola. Noin sadan metrin pituinen luola on rakennettu noin neljästäsadasta tonnista jäätä, lunta ja tuhkaa. Säiliöiden katolla kiertää näköalatasanne, jolta kaupunki näkyy joka suuntaan.",
-   "lyhyt": "Näköalarakennus Perlanin suunnitteli arkkitehti Ingimundur Sveinsson. Nykyään se on luontomuseo, jossa on revontulinäytös, jäätikkönäyttely ja kymmenen metriä korkea jäljennös Látrabjargista, yhdestä Euroopan suurimmista lintukallioista. Rakennuksessa on myös kahvila, ravintola ja jäätelöbaari.",
+   "lyhyt": "Näköalarakennus Perlanin kukkula kohoaa kuusikymmentäyksi metriä merenpinnan yläpuolelle, ja siksi kaupungin kuuma vesi varastoitiin sen laelle. Korkeus antoi niin paljon painetta, että vesi nousi kymmenenteen kerrokseen asti ja riitti koko kaupunkiin, jopa Hallgrímskirkjan kukkulalle.",
    "syventava": "Miten jääluola pysyy jäässä?",
    "kysymykset": [
-    "Miksi kuumaa vettä säilytetään mäen laella?",
+    "Paljonko kuumaa vettä säiliöihin mahtuu?",
     "Miten jääluola pysyy jäässä ympäri vuoden?",
     "Mistä Reykjavikin kuuma vesi tulee?",
     "Mitä Perlanin museossa voi nähdä?",
@@ -137,15 +128,11 @@
      "url": "https://en.wikipedia.org/wiki/Perlan"
     },
     {
-     "vaite": "Jääluola on rakennettu noin 400 tonnista jäätä, lunta ja tuhkaa; rakennuksessa on kahvila, ravintola ja jäätelöbaari.",
+     "vaite": "Jääluola on rakennettu noin 400 tonnista jäätä, lunta ja tuhkaa.",
      "url": "https://en.wikipedia.org/wiki/Perlan"
     },
     {
-     "vaite": "Suunnittelija Ingimundur Sveinsson; rakennus vihittiin 21.6.1991.",
-     "url": "https://www.kupi.com/en-ae/explore/iceland/reykjavik/perlan"
-    },
-    {
-     "vaite": "Luonnontieteellinen museo: revontulinäytös, jäätikkönäyttely ja kymmenmetrinen jäljennös Látrabjargin lintukalliosta, yhdestä Euroopan suurimmista.",
+     "vaite": "Ensimmäinen säiliö oli 61 metriä merenpinnan yläpuolella, mikä antoi painetta nostaa vettä kymmenenteen kerrokseen ja riitti koko Reykjavikiin, jopa Hallgrímskirkjan kukkulalle.",
      "url": "https://en.wikipedia.org/wiki/Perlan"
     }
    ],
@@ -158,7 +145,7 @@
    "luokka": "rakennus",
    "koko_m": 40,
    "teksti": "Jugendtyylinen talo Höfði seisoo yksin nurmikolla meren rannassa Borgartúnin kadun varrella, ja sieltä näkyy Faxaflóin lahden yli Esja-vuorelle. Talo rakennettiin vuonna 1909 Ranskan konsulin asunnoksi, ja myöhemmin siinä asui runoilija Einar Benediktsson, joka antoi sille nimen. Lokakuussa 1986 Yhdysvaltain presidentti Ronald Reagan ja Neuvostoliiton johtaja Mihail Gorbatšov neuvottelivat täällä kaksi päivää ydinaseiden vähentämisestä ja hävittämisestä. Neuvottelut kariutuivat lopulta Reaganin avaruuspuolustusohjelmaan, mutta kokousta pidetään kylmän sodan lopun alkuna.",
-   "lyhyt": "Jugendtyylinen talo Höfði on ollut Reykjavikin kaupungin omistuksessa vuodesta 1958, ja vuodesta 1967 siinä on pidetty kaupungin vastaanottoja. Perimätiedon mukaan talossa kummittelee nuoren naisen haamu, ja 1950-luvun alussa siellä asunut brittiläinen diplomaatti vaati talon myymistä öisten kolinoiden vuoksi.",
+   "lyhyt": "Jugendtyylinen talo Höfði valmistettiin osina Norjassa, laivattiin Islantiin ja koottiin Reykjavikissa. Perimätiedon mukaan talossa kummittelee nuoren naisen haamu, ja 1950-luvun alussa siellä asunut brittiläinen diplomaatti vaati talon myymistä öisten kolinoiden vuoksi.",
    "syventava": "Miksi neuvottelut Höfðissa kariutuivat?",
    "kysymykset": [
     "Miksi huippukokous pidettiin juuri Islannissa?",
@@ -174,7 +161,7 @@
      "url": "https://en.wikipedia.org/wiki/H%C3%B6f%C3%B0i"
     },
     {
-     "vaite": "Talo on rannalla Borgartúnin varrella, ja sieltä näkyy Faxaflóin lahdelle ja Esjalle.",
+     "vaite": "Talo on Borgartúnin varrella.",
      "url": "https://visitreykjavik.is/service/hofdi-house"
     },
     {
@@ -190,16 +177,24 @@
      "url": "https://en.wikipedia.org/wiki/Reykjav%C3%ADk_Summit"
     },
     {
-     "vaite": "Kaupunki osti talon 1958; vuodesta 1967 kaupungin vastaanottotila.",
+     "vaite": "Kaupunki osti talon 1958.",
      "url": "https://en.wikipedia.org/wiki/H%C3%B6f%C3%B0i"
     },
     {
      "vaite": "Talossa kerrotaan asuvan nuoren naisen hengen; vuonna 1952 talossa asunut John Greenway vaati talon myymistä öisten kolinoiden vuoksi.",
      "url": "https://en.wikipedia.org/wiki/H%C3%B6f%C3%B0i"
+    },
+    {
+     "vaite": "Talo on rantatien varrella ja katsoo Faxaflóin lahden yli Esjalle.",
+     "url": "https://guidetoiceland.is/travel-iceland/drive/hofdi"
+    },
+    {
+     "vaite": "Talo valmistettiin Norjassa valmisosina, laivattiin Islantiin ja pystytettiin vuonna 1909.",
+     "url": "https://en.wikipedia.org/wiki/H%C3%B6f%C3%B0i"
     }
    ],
    "puhe_teksti": "Jugendtyylinen talo Höfdi seisoo yksin nurmikolla meren rannassa Borgartúnin kadun varrella, ja sieltä näkyy Faxaflóin lahden yli Esja-vuorelle. Talo rakennettiin vuonna 1909 Ranskan konsulin asunnoksi, ja myöhemmin siinä asui runoilija Einar Benediktsson, joka antoi sille nimen. Lokakuussa 1986 Yhdysvaltain presidentti Ronald Reagan ja Neuvostoliiton johtaja Mihail Gorbatšov neuvottelivat täällä kaksi päivää ydinaseiden vähentämisestä ja hävittämisestä. Neuvottelut kariutuivat lopulta Reaganin avaruuspuolustusohjelmaan, mutta kokousta pidetään kylmän sodan lopun alkuna.",
-   "puhe_lyhyt": "Jugendtyylinen talo Höfdi on ollut Reykjavikin kaupungin omistuksessa vuodesta 1958, ja vuodesta 1967 siinä on pidetty kaupungin vastaanottoja. Perimätiedon mukaan talossa kummittelee nuoren naisen haamu, ja 1950-luvun alussa siellä asunut brittiläinen diplomaatti vaati talon myymistä öisten kolinoiden vuoksi."
+   "puhe_lyhyt": "Jugendtyylinen talo Höfdi valmistettiin osina Norjassa, laivattiin Islantiin ja koottiin Reykjavikissa. Perimätiedon mukaan talossa kummittelee nuoren naisen haamu, ja 1950-luvun alussa siellä asunut brittiläinen diplomaatti vaati talon myymistä öisten kolinoiden vuoksi."
   },
   {
    "id": "Q945753",
@@ -247,7 +242,7 @@
    "kuvaus": "Islannin parlamentin talo",
    "luokka": "rakennus",
    "koko_m": 40,
-   "teksti": "Islannin parlamenttitalo, Alþingishúsið, on harmaa kivirakennus Austurvöllurin aukion laidalla tuomiokirkon vieressä. Talo valmistui vuonna 1881 tanskalaisen arkkitehdin Ferdinand Meldahlin suunnitelmien mukaan, ja se on rakennettu hakatusta islantilaisesta doleriitista. Neljän ikkunan yläpuolella on reliefit Islannin neljästä suojelushengestä, jotka ovat lohikäärme, kotka, jättiläinen ja härkä. Samat hahmot kannattelevat Islannin vaakunaa. Tammikuussa 2009 tuhannet pankkikriisistä suuttuneet ihmiset kokoontuivat talon eteen paukuttamaan kattiloita ja pannuja, ja muutamaa päivää myöhemmin hallitus erosi.",
+   "teksti": "Islannin parlamenttitalo, Alþingishúsið, on harmaa kivirakennus Austurvöllurin aukion laidalla tuomiokirkon vieressä. Talo valmistui vuonna 1881 tanskalaisen arkkitehdin Ferdinand Meldahlin suunnitelmien mukaan, ja se on rakennettu hakatusta islantilaisesta doleriitista. Neljän ikkunan yläpuolella on reliefit Islannin neljästä suojelushengestä, jotka ovat lohikäärme, aarnikotka, jättiläinen ja härkä. Samat hahmot kannattelevat Islannin vaakunaa. Tammikuussa 2009 tuhannet pankkikriisistä suuttuneet ihmiset kokoontuivat talon eteen paukuttamaan kattiloita ja pannuja, ja muutamaa päivää myöhemmin hallitus erosi.",
    "lyhyt": "Islannin parlamenttitalo, Alþingishúsið, on palvellut myös muita tarkoituksia. Siellä ovat aikanaan olleet kansalliskirjasto, muinaismuistokokoelma ja kansallisgalleria, ja Islannin yliopisto toimi talon ensimmäisessä kerroksessa vuodesta 1911 vuoteen 1940. Nykyään talossa kokoontuu Islannin parlamentti, alþingi.",
    "syventava": "Miksi mielenosoittajat paukuttivat kattiloita?",
    "kysymykset": [
@@ -282,9 +277,13 @@
     {
      "vaite": "Talossa ovat olleet kansalliskirjasto, muinaismuistokokoelma ja kansallisgalleria; yliopisto käytti ensimmäistä kerrosta 1911–1940.",
      "url": "https://en.wikipedia.org/wiki/Al%C3%BEingish%C3%BAsi%C3%B0"
+    },
+    {
+     "vaite": "Islannin vaakunan kilvenkannattajat ovat neljä suojelijaa: härkä, aarnikotka (Gammur), lohikäärme ja jättiläinen.",
+     "url": "https://fi.wikipedia.org/wiki/Islannin_vaakuna"
     }
    ],
-   "puhe_teksti": "Islannin parlamenttitalo, Althingishúsid, on harmaa kivirakennus Austurvöllurin aukion laidalla tuomiokirkon vieressä. Talo valmistui vuonna 1881 tanskalaisen arkkitehdin Ferdinand Meldahlin suunnitelmien mukaan, ja se on rakennettu hakatusta islantilaisesta doleriitista. Neljän ikkunan yläpuolella on reliefit Islannin neljästä suojelushengestä, jotka ovat lohikäärme, kotka, jättiläinen ja härkä. Samat hahmot kannattelevat Islannin vaakunaa. Tammikuussa 2009 tuhannet pankkikriisistä suuttuneet ihmiset kokoontuivat talon eteen paukuttamaan kattiloita ja pannuja, ja muutamaa päivää myöhemmin hallitus erosi.",
+   "puhe_teksti": "Islannin parlamenttitalo, Althingishúsid, on harmaa kivirakennus Austurvöllurin aukion laidalla tuomiokirkon vieressä. Talo valmistui vuonna 1881 tanskalaisen arkkitehdin Ferdinand Meldahlin suunnitelmien mukaan, ja se on rakennettu hakatusta islantilaisesta doleriitista. Neljän ikkunan yläpuolella on reliefit Islannin neljästä suojelushengestä, jotka ovat lohikäärme, aarnikotka, jättiläinen ja härkä. Samat hahmot kannattelevat Islannin vaakunaa. Tammikuussa 2009 tuhannet pankkikriisistä suuttuneet ihmiset kokoontuivat talon eteen paukuttamaan kattiloita ja pannuja, ja muutamaa päivää myöhemmin hallitus erosi.",
    "puhe_lyhyt": "Islannin parlamenttitalo, Althingishúsid, on palvellut myös muita tarkoituksia. Siellä ovat aikanaan olleet kansalliskirjasto, muinaismuistokokoelma ja kansallisgalleria, ja Islannin yliopisto toimi talon ensimmäisessä kerroksessa vuodesta 1911 vuoteen 1940. Nykyään talossa kokoontuu Islannin parlamentti, althingi."
   },
   {
@@ -294,7 +293,7 @@
    "luokka": "kirkko",
    "koko_m": 35,
    "teksti": "Reykjavikin tuomiokirkko on pieni kirkko Austurvöllurin aukion laidalla aivan parlamenttitalon vieressä. Se valmistui vuonna 1796 tanskalaisen arkkitehdin Andreas Kirkerupin suunnitelmien mukaan uusklassiseen tyyliin, ja samana vuonna Islannin piispanistuin siirrettiin tänne Skálholtista, jonka rakennuksia maanjäristys oli tuhonnut vuonna 1784. Kastemaljan veisti kuvanveistäjä Bertel Thorvaldsen, jonka isä oli syntynyt Islannissa. Hän tarkoitti maljan isänsä synnyinkylän kirkkoon Pohjois-Islantiin, mutta se päätyi Reykjavikiin. Valtiopäivien avajaispäivänä kansanedustajat kulkevat parlamenttitalosta kulkueena tuomiokirkon jumalanpalvelukseen.",
-   "lyhyt": "Reykjavikin tuomiokirkko oli ensimmäinen rakennus, joka tehtiin nimenomaan sitä silmällä pitäen, että Reykjavikista tulisi maan pääkaupunki. Kirkkoa laajennettiin 1840-luvulla, ja nykyään se on Islannin piispan istuin ja maan luterilaisen kirkon äitikirkko.",
+   "lyhyt": "Reykjavikin tuomiokirkko ei pysynyt kunnossa kauan: jo vuonna 1815, vain yhdeksäntoista vuotta vihkimisen jälkeen, sitä ei pidetty kelvollisena jumalanpalveluksiin. Vuonna 1840 sinne tuotiin urut, ja ne olivat ensimmäiset islantilaiseen kirkkoon hankitut urut.",
    "syventava": "Miksi piispa muutti pois Skálholtista?",
    "kysymykset": [
     "Miksi piispa muutti Skálholtista Reykjavikiin?",
@@ -326,12 +325,12 @@
      "url": "https://icelandmonitor.mbl.is/news/news/2025/09/10/157th_session_of_althingi_officially_opened"
     },
     {
-     "vaite": "Ensimmäinen rakennus, joka rakennettiin sitä silmällä pitäen, että Reykjavikista tulisi pääkaupunki.",
-     "url": "https://icelandmonitor.mbl.is/news/culture_and_living/2016/10/27/reykjavik_s_pretty_cathedral_celebrates_anniversary"
+     "vaite": "Kirkko vihittiin 1796; vuonna 1815 sitä ei pidetty kelvollisena jumalanpalveluksiin, ja se korjattiin perusteellisesti 1817.",
+     "url": "https://is.wikipedia.org/wiki/D%C3%B3mkirkjan_%C3%AD_Reykjav%C3%ADk"
     },
     {
-     "vaite": "Islannin piispan istuin ja Islannin evankelis-luterilaisen kirkon äitikirkko.",
-     "url": "https://en.wikipedia.org/wiki/Reykjav%C3%ADk_Cathedral"
+     "vaite": "Ensimmäiset urut tulivat tuomiokirkkoon vuonna 1840, ja ne olivat ensimmäiset urut islantilaisessa kirkossa; kirkon suunnitteli A. Kirkerup.",
+     "url": "https://domkirkjan.is/sagan/"
     }
    ]
   },

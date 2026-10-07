@@ -15,8 +15,8 @@ ja aalto committataan + pushataan.
 | Aalto | Kaupungit | Tila |
 |---|---|---|
 | 1 | amsterdam, ateena (VALMIS) / barcelona, bergen (VALMIS) / berliini, bryssel (VALMIS) / budapest, bukarest (VALMIS) | VALMIS |
-| 2 | dublin, edinburgh (VALMIS) / firenze, granada (VALMIS) / helsinki, islanti (käynnissä) / kosice, krakova (käynnissä) | käynnissä |
-| 3 | kreeta, lissabon (käynnissä) / ljubljana, luxemburg (käynnissä) / madrid, marseille / oslo, sevilla | osin käynnissä |
+| 2 | dublin, edinburgh (VALMIS) / firenze, granada (VALMIS) / helsinki, islanti (VALMIS) / kosice, krakova (käynnissä) | käynnissä |
+| 3 | kreeta, lissabon (käynnissä) / ljubljana, luxemburg (käynnissä) / madrid, marseille (käynnissä) / oslo, sevilla | osin käynnissä |
 | 4 | sisilia, sofia / tampere, tukholma / valletta, venetsia / vilna | ei aloitettu |
 | 5 | TARKISTAJA-agentti käy koko diffin läpi | ei aloitettu |
 

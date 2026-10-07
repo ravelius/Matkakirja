@@ -1078,3 +1078,122 @@ Yksitoista huomiota on "ei ala paikan nimellä" (suomenkielinen etusana, äänt�
 - Sacromonte: lyijykirjojen 1682-tuomio ja palautus Granadaan 2000 vahvistuivat (Wikipedia: Vatikaani piti niitä jo 1682 "harhaoppisina väärennöksinä", joten teksti on oikein).
 - Avaus: 38 sanaa, ilmakuva (tasanko, Sierra Nevada, kaksi kukkulaa), alkaa "Tervetuloa". Ei muutosta.
 - Epävarmuus Päätoimittajalle: Clintonin auringonlasku (Albayzínin `teksti`) on yhä "Kerrotaan"-muodossa. Virallista lähdettä ei löytynyt, mutta legendaksi merkittynä se on hyväksyttävä. Jätettiin.
+
+## Helsinki
+
+### Helsingin tuomiokirkko — kenttä `lyhyt`
+- **Vanha:** "Helsingin tuomiokirkko on kuusikymmentäkaksi metriä korkea, ja vihreine kupoleineen se on maamerkki kaikille, jotka saapuvat kaupunkiin mereltä. Alun perin se oli Nikolainkirkko, itsenäistymisen jälkeen Suurkirkko, ja tuomiokirkoksi se nimettiin vasta vuonna 1959."
+- **Uusi:** "Helsingin tuomiokirkon neljä pientä kulmatornia lisäsi Engelin apulainen Ernst Lohrmann, koska kirkon rakennetta pelättiin liian heikoksi ja päätorni tarvitsi tukea. Raskaita kelloja ei uskallettu nostaa kupoliin, joten Lohrmann piirsi portaiden reunoille erillisen kellotapulin ja sen pariksi kappelin."
+- **Syy:** Tyyppi 2: korkeus ja nimenmuutokset olivat perustietoa ja hallintoa (nimeäminen tuomiokirkoksi hiippakunnan synnyttyä). Lisäksi tyyppi 1: "maamerkki mereltä" sivusi saman kohteen tekstin isoisäkohtaa (apostolit katsovat merelle). Uusi tarina selittää, miksi tekstin mainitsemat neljä pientä kupolia ovat olemassa, toistamatta tekstiä. Vanhojen lyhyen lähteiden (maamerkki, nimihistoria) rivit poistettu lahteista, 62 metriä jäi korkeus_m:n lähteeksi.
+- **Lähde:** https://fi.wikipedia.org/wiki/Helsingin_tuomiokirkko ; https://en.wikipedia.org/wiki/Helsinki_Cathedral
+
+### Suomenlinna — kenttä `lyhyt`
+- **Vanha:** "Suomenlinnaan pääsee Kauppatorilta ympäri vuoden kulkevalla lautalla tavallisella joukkoliikennelipulla. Saarten kirkko rakennettiin alun perin ortodoksiseksi varuskuntakirkoksi, ja sen tornissa on majakka, jonka valo välähtää neljä kertaa peräkkäin: se on morseaakkosten H niin kuin Helsinki."
+- **Uusi:** "Suomenlinnan kirkko rakennettiin vuonna 1854 linnoituksen venäläisen varuskunnan ortodoksiseksi kirkoksi. Itsenäistymisen jälkeen siitä tehtiin luterilainen kirkko, ja sipulikupolit ja sivutornit poistettiin. Vuodesta 1929 tornissa on ollut majakka, jonka valo välähtää neljästi: se on morseaakkosten H niin kuin Helsinki."
+- **Syy:** Tyyppi 1 ja 2: lauttavirke oli käytännön liikennetietoa (lippu, aikataulu), ja sama ympäri vuoden kulkeva lautta kerrotaan jo Kauppatorin tekstissä. Tilalle kirkon muodonmuutos ortodoksisesta luterilaiseksi; majakkayksityiskohta säilyi. Nykytila tarkistettu: tuomiokirkkoseurakunta on luopumassa kirkon säännöllisestä käytöstä 2026, mutta rakennus ja majakka säilyvät, eikä teksti väitä kirkon toiminnasta mitään.
+- **Lähde:** https://fi.wikipedia.org/wiki/Suomenlinnan_kirkko
+
+### Uspenskin katedraali — kenttä `lyhyt`
+- **Vanha:** "Uspenskin katedraalin suunnitteli venäläinen arkkitehti Aleksei Gornostajev, joka kuoli vuonna 1862 eikä nähnyt kirkkoa valmiina. Sisällä katse kiinnittyy runsaaseen ikonostaasiin, jonka maalasi Pavel Šiltsov ja jossa evankelistat reunustavat ehtoollista ja taivaaseenastumista esittäviä kuvia."
+- **Uusi:** "Uspenskin katedraalin alakerran kryptakappeli on pyhitetty pappismarttyyri Aleksandr Hotovitskille. Hän perusti ortodoksisia seurakuntia Pohjois-Amerikassa ja toimi ensimmäisen maailmansodan vuosina Helsingin ortodoksisen seurakunnan kirkkoherrana, mutta Stalinin vainoissa hänet teloitettiin vuonna 1937. Venäjän ortodoksinen kirkko julisti hänet pyhäksi vuonna 1994."
+- **Syy:** Tyyppi 2: arkkitehti ja ikonostaasin kuvaus olivat perustietoa. Tyyppi 1: "arkkitehti kuoli eikä nähnyt kirkkoa valmiina" toisti saman rakenteen kuin tuomiokirkon teksti (valmistui kaksitoista vuotta Engelin kuoleman jälkeen). Uusi tarina kertoo ihmisestä. Teloitus mainitaan vain sanana, ei kuvata.
+- **Lähde:** https://fi.wikipedia.org/wiki/Uspenskin_katedraali ; https://fi.wikipedia.org/wiki/Aleksandr_Hotovitski ; https://en.wikipedia.org/wiki/Alexander_Hotovitzky
+
+### Temppeliaukion kirkko — kenttä `teksti`
+- **Vanha:** "…ja sen pintaan on kierretty kuparilankaa kaksikymmentäkaksi kilometriä."
+- **Uusi:** "…ja sen pinta on verhottu kuparinauhalla, jota on jopa kaksikymmentäkaksi kilometriä."
+- **Syy:** Tyyppi 3: kupoli on verhottu kuparinauhalla, ei kierretty langalla (fi-wiki: kuparinauhaverhous; MyHelsinki: "jopa 22 kilometristä kuparinauhaa"). Ratkaisee pilviraportin epävarmuuden "Temppeliaukion kuparilanka". Lahteet: Strömman sivu ei sisältänyt 180 ikkunaa, kallion ikää eikä konserttimäärää, joten ne siirretty MyHelsingin lähteelle (avattu, vahvistaa kaikki); Berglund en.wikipedialle; Strömma jäi vain alttarihalkeaman lähteeksi.
+- **Lähde:** https://www.myhelsinki.fi/fi/places/temppeliaukion-kirkko/ ; https://en.wikipedia.org/wiki/Temppeliaukio_Church
+
+### Helsingin päärautatieasema — kenttä `lyhyt`
+- **Vanha:** "Helsingin päärautatieaseman kautta kulkee arviolta kaksisataatuhatta matkustajaa päivässä, joten se on Suomen vilkkain rakennus. Arkkitehti Eliel Saarisen ehdotus valittiin aikanaan kahdenkymmenenyhden kilpailuehdotuksen joukosta, ja koko massiivinen rakennus verhoiltiin suomalaisella graniitilla."
+- **Uusi:** "Helsingin päärautatieaseman suunnittelukilpailun voitti Eliel Saarisen kansallisromanttinen ehdotus, jossa oli torneja ja kahdeksan graniittista karhua. Arkkitehdit moittivat sitä vanhanaikaiseksi, ja lehtien pilakuvissa yksi karhuista hyppäsi kadulle jahtaamaan ihmisiä. Saarinen piirsi aseman lähes kokonaan uudelleen, ja karhut jäivät pois."
+- **Syy:** Tyyppi 2: kävijämäärä, kilpailuehdotusten määrä ja verhousmateriaali olivat hallinnollista perustietoa. Samalla poistui epävarma "Suomen vilkkain rakennus" (pilviraportin epävarmuus; fi-wikin mukaan matkustajia on noin 250 000, joten luku olisi myös vanhentunut). Uusi tarina on ristiriita ja yllätys.
+- **Lähde:** https://fi.wikipedia.org/wiki/Helsingin_p%C3%A4%C3%A4rautatieasema ; https://en.wikipedia.org/wiki/Helsinki_Central_Station
+
+### Oodi — kenttä `lyhyt`
+- **Vanha:** "Oodin ylimmän kerroksen laaja terassi katsoo suoraan aukion yli eduskuntataloa kohti. Kirjasto ja eduskunta ovat Kansalaistorin eri puolilla vastakkain, ja kirjastolain tavoitteena on edistää muun muassa sivistystä, demokratiaa ja sananvapautta."
+- **Uusi:** "Oodi on rakennettu kuin silta: kirjasto kaartuu yli sadan metrin matkalta avoimen pohjakerroksen yllä kahden massiivisen teräskaaren varassa. Ratkaisu teki sisätiloista pilarittomia ja jätti tontin alle tilaa tulevalle autotunnelille, jonka suunnittelu kuitenkin keskeytettiin vuonna 2019."
+- **Syy:** Tyyppi 1: terassinäkymä eduskuntataloon kerrotaan jo Eduskuntatalon tekstissä. Tyyppi 2: kirjastolain tavoitepykälä oli hallintoa (ja sävyltään saarnaava). Uusi yksityiskohta on rakenteellinen yllätys, jossa on ristiriita (tunneli jäi rakentamatta).
+- **Lähde:** https://www.metalocus.es/en/news/helsinki-central-library-oodi-ala-architects ; https://www.ramboll.com/fi-fi/projektit/kiinteistot/helsingin-keskustakirjasto-oodi ; https://fi.wikipedia.org/wiki/Helsingin_keskustatunneli
+
+### Kiasma — kenttä `kysymykset`
+- **Vanha:** "Millaista taidetta Kiasmassa on nyt esillä?"
+- **Uusi:** "Miten Kiasma hyödyntää päivänvaloa?"
+- **Syy:** Tyyppi 7: vastaus vanhenee näyttelyiden vaihtuessa.
+
+### Linnanmäki — kenttä `kysymykset`
+- **Vanha:** "Mikä on Linnanmäen uusin laite?"
+- **Uusi:** "Kuinka nopeasti Vuoristoradan juna kulkee?"
+- **Syy:** Tyyppi 7: vastaus vanhenee joka kausi.
+
+### Sibelius-monumentti — kenttä `kysymykset`
+- **Vanha:** "Mitä Sibeliuksen musiikkia kannattaa kuunnella ensin?"
+- **Uusi:** "Miksi muistomerkin nimi on Passio Musicae?"
+- **Syy:** Tyyppi 7: kysymys koski säveltäjää yleisesti, ei tätä kohdetta.
+
+### Tarkistettu, ei muutettu (Helsinki)
+- Avaus: ilmakuva (niemi, saaret), 37 sanaa, alkaa "Tervetuloa" — kunnossa.
+- Senaatintorin lyhyt (Sederholmin talo): fi-wiki "Helsingin kantakaupungin vanhin rakennus" vastaa muotoilua "keskustan vanhin rakennus"; Lasten kaupunki toimii talossa yhä (kaupunginmuseon sivu). Lyhyt on yllättävä vertailu, jätettiin.
+- Kauppatorin lyhyt (Havis Amanda): lakitus pidettiin myös vappuna 2026 (HYY); Kauppatorin peruskorjaus vasta 2030-luvulla. Ei muutosta.
+- Tuomiokirkko: julkisivuremontti valmistui marraskuussa 2025 (Kirkko ja kaupunki), kirkko on kolmessa vaaleanharmaan sävyssä ja näyttää valkoiselta; tekstin "valkoisena ristinä" ja kysymys "Miksi kirkko on niin valkoinen?" pätevät.
+- Uspenski: auki, pääsymaksu toukokuusta 2025; "Länsi-Euroopan suurin ortodoksinen kirkko" en.wikipedian mukaan (pilviraportin epävarmuus: lähde vahvistaa, jätettiin).
+- Suomen kansallismuseo: suljettuna peruskorjauksen ja laajennuksen vuoksi syksystä 2023 kevääseen 2027. Teksti ei väitä museon olevan auki (aulan freskot ovat yhä paikallaan), joten ei muutosta — **Päätoimittajalle:** halutaanko sulkeminen mainita? En lisännyt, koska tieto vanhenee keväällä 2027.
+- Ateneum: van Gogh 1903 "ensimmäinen museokokoelma maailmassa" vahvistettu en.wikipediasta.
+- Kiasma: ei sulkemistietoa 2026.
+- koko_m-arviot (pilviraportin epävarmuus): uskottavia, ei muutettu.
+
+## Islanti
+
+### Hallgrímskirkja — kenttä `lyhyt`
+- **Vanha:** "Islannin suurimman kirkon, Hallgrímskirkjan, tornissa kulkee hissi näköalatasanteelle, jolta Reykjavikin kadut ja talot levittäytyvät lahden rantaan asti. Kirkkaalla säällä lännessä erottuu kaukainen Snæfellsjökullin jäätikkö. Kirkon suuret urut rakensi saksalainen urkurakentamo Klais, ja ne valmistuivat vuonna 1992."
+- **Uusi:** "Islannin luterilaisen kirkon johto halusi Hallgrímskirkjalle suuren tornin, joka peittoaisi katolisen Landakotskirkjan, vaikka rakennuksesta oli alun perin tarkoitus tehdä matalampi. Torni ja siivet valmistuivat jo vuonna 1974, kauan ennen kirkkosalia."
+- **Syy:** Tyyppi 2: hissi, näkymä ja urkurakentamo olivat matkailu- ja perustietoa. Uusi tarina on ristiriita kahden kirkkokunnan välillä ja kytkeytyy kierroksen Landakotskirkjaan (jonka teksti kertoo sen olleen 1929 Islannin suurin kirkko). Poistaa samalla pilviraportin epävarmuuden Snæfellsjökull-näkymästä. puhe_lyhyt poistettu (uudessa lyhyessä ei þ/ð/æ-kirjaimia).
+- **Lähde:** https://en.wikipedia.org/wiki/Hallgr%C3%ADmskirkja
+
+### Reykjavíkin tuomiokirkko — kenttä `lyhyt`
+- **Vanha:** "Reykjavikin tuomiokirkko oli ensimmäinen rakennus, joka tehtiin nimenomaan sitä silmällä pitäen, että Reykjavikista tulisi maan pääkaupunki. Kirkkoa laajennettiin 1840-luvulla, ja nykyään se on Islannin piispan istuin ja maan luterilaisen kirkon äitikirkko."
+- **Uusi:** "Reykjavikin tuomiokirkko ei pysynyt kunnossa kauan: jo vuonna 1815, vain yhdeksäntoista vuotta vihkimisen jälkeen, sitä ei pidetty kelvollisena jumalanpalveluksiin. Vuonna 1840 sinne tuotiin urut, ja ne olivat ensimmäiset islantilaiseen kirkkoon hankitut urut."
+- **Syy:** Tyyppi 1: piispanistuin kerrottiin jo saman kohteen tekstissä (piispanistuin siirrettiin tänne 1796). Tyyppi 2: laajennus ja asema äitikirkkona olivat hallinnollista perustietoa. Uudessa on yllätys ja ensimmäisyys. Tarkistettu myös tekstin arkkitehti: en.wikipedia nimeää Andreas Hallanderin, mutta kirkon oma historiasivu nimeää A. Kirkerupin, joten tekstin Kirkerup jäi.
+- **Lähde:** https://is.wikipedia.org/wiki/D%C3%B3mkirkjan_%C3%AD_Reykjav%C3%ADk ; https://domkirkjan.is/sagan/
+
+### Perlan — kenttä `lyhyt`
+- **Vanha:** "Näköalarakennus Perlanin suunnitteli arkkitehti Ingimundur Sveinsson. Nykyään se on luontomuseo, jossa on revontulinäytös, jäätikkönäyttely ja kymmenen metriä korkea jäljennös Látrabjargista, yhdestä Euroopan suurimmista lintukallioista. Rakennuksessa on myös kahvila, ravintola ja jäätelöbaari."
+- **Uusi:** "Näköalarakennus Perlanin kukkula kohoaa kuusikymmentäyksi metriä merenpinnan yläpuolelle, ja siksi kaupungin kuuma vesi varastoitiin sen laelle. Korkeus antoi niin paljon painetta, että vesi nousi kymmenenteen kerrokseen asti ja riitti koko kaupunkiin, jopa Hallgrímskirkjan kukkulalle."
+- **Syy:** Tyyppi 2: arkkitehti, näyttelyluettelo ja kahvila/ravintola/jäätelöbaari olivat perustietoa ja mainosmaista; näyttelyluettelo myös vanhenee (tyyppi 5). Arkkitehdin nimi oli lisäksi ristiriitainen (is.wiki Ingimundur Sveinsson, en.wiki rakennesuunnittelija Jón Búi Guðlaugsson), joten se jäi pois. Uusi lyhyt selittää, miksi säiliöt ovat juuri mäellä, toistamatta tekstin vuotta 1939.
+- **Lähde:** https://en.wikipedia.org/wiki/Perlan
+
+### Perlan — kenttä `kysymykset`
+- **Vanha:** "Miksi kuumaa vettä säilytetään mäen laella?"
+- **Uusi:** "Paljonko kuumaa vettä säiliöihin mahtuu?"
+- **Syy:** Tyyppi 7 ja 1: uusi lyhyt vastaa jo vanhaan kysymykseen. Vastaus on pysyvä (kuusi säiliötä, kukin viisi miljoonaa litraa, en.wiki/is.wiki).
+
+### Höfði — kenttä `lyhyt` (ja `puhe_lyhyt`)
+- **Vanha:** "Jugendtyylinen talo Höfði on ollut Reykjavikin kaupungin omistuksessa vuodesta 1958, ja vuodesta 1967 siinä on pidetty kaupungin vastaanottoja. Perimätiedon mukaan…"
+- **Uusi:** "Jugendtyylinen talo Höfði valmistettiin osina Norjassa, laivattiin Islantiin ja koottiin Reykjavikissa. Perimätiedon mukaan…" (kummitustarina ennallaan)
+- **Syy:** Tyyppi 2: omistus ja käyttötarkoitus olivat hallintoa. Tilalle yllättävä yksityiskohta (Norjassa tehty valmistalo). puhe_lyhyt päivitetty (Höfdi).
+- **Lähde:** https://en.wikipedia.org/wiki/H%C3%B6f%C3%B0i
+
+### Höfði — `lahteet` (ei tekstimuutosta)
+- Tekstin "sieltä näkyy Faxaflóin lahden yli Esja-vuorelle": visitreykjavik.is-sivu ei mainitse näkymää, joten lähde vaihdettu sivuun, joka sanoo sen (guidetoiceland.is: "looks out over Faxaflói Bay and Mount Esjan"). Ratkaisee pilviraportin epävarmuuden.
+
+### Harpa — kenttä `lyhyt`
+- **Vanha:** "Konserttitalo Harpa voitti vuonna 2013 Euroopan unionin Mies van der Rohe -arkkitehtuuripalkinnon. Talossa on esitetty myös oopperaa, vaikka konserteille suunnitellusta talosta puuttuvat esirippu, näyttämöaukko ja perinteinen näyttämökoneisto. Pääsaliin mahtuu ainakin tuhat kuusisataa kuulijaa."
+- **Uusi:** "Konserttitalo Harpan lasijulkisivun itä- ja länsiosissa on yhteensä seitsemänsataaneljätoista ledvaloa, joilla Olafur Eliasson on luonut talon kylkiin vaihtuvia valoteoksia. Talon kymmenvuotisjuhlaan vuonna 2021 hän suunnitteli kaksitoista uutta valoteosta, yhden kullekin kuukaudelle."
+- **Syy:** Tyyppi 2: palkinto ja paikkamäärä olivat perustietoa. Tyyppi 5: oopperavirke vanheni — en.wikipedian mukaan uusi Islannin kansallisooppera muuttaa Harpaan vuodesta 2026, joten "esitetty myös oopperaa, vaikka…" -kehys ei enää kuvaa nykytilaa. Uusi lyhyt on ilmasta nähtävä yksityiskohta, ja siinä on ihminen.
+- **Lähde:** https://en.wikipedia.org/wiki/Harpa_(concert_hall)
+
+### Alþingishúsið — kenttä `teksti` (ja `puhe_teksti`)
+- **Vanha:** "…jotka ovat lohikäärme, kotka, jättiläinen ja härkä."
+- **Uusi:** "…jotka ovat lohikäärme, aarnikotka, jättiläinen ja härkä."
+- **Syy:** Tyyppi 3: Islannin suojelijoiden lintu (Gammur) on suomenkielisessä vakiintuneessa käytössä aarnikotka (fi.wiki, Islannin vaakuna); en.wikipedian "vulture" ja vaakunan "eagle/griffin" vaihtelevat. Ratkaisee pilviraportin epävarmuuden.
+- **Lähde:** https://fi.wikipedia.org/wiki/Islannin_vaakuna
+
+### Tarkistettu, ei muutettu (Islanti)
+- Avaus: ilmakuva (kirjava kattojen tilkkutäkki, lahti, Esja), 37 sanaa, alkaa "Tervetuloa" — kunnossa.
+- Harpan "yli tuhannesta kaksitoistatahkoisesta lasitiilestä": Henning Larsenin sivu sanoo sanatarkasti "more than 1,000 quasi-bricks", joten jätettiin (pilviraportin epävarmuus ratkaistu).
+- Alþingishúsiðin lyhyt (kirjasto, kokoelmat, yliopisto talossa) on yllättävä yksityiskohta, eikä se toistu muualla, joten jätettiin. Täysistunnot pidetään yhä talossa.
+- Landakotskirkjan lyhyt (ranskalaiset papit) on tarina, joten jätettiin. Tjörninin lyhyt (luistelu) jätettiin, koska se on kohtaus eikä hallintoa; se on kierroksen heikoin, mutta ei virheellinen.
+- Laugardalsvöllur: yhä maajoukkueen kotikenttä (en.wiki); hybridinurmi ja lämmitys 2024–2026 eivät muuta tekstiä.
+- Kansallisteatteri: "ensimmäinen arkkitehdiksi kouluttautunut islantilainen" vahvistettu (en.wiki: "the first Icelander to be educated in architecture").
+- Isoisä: ei mainita (pohjan merkintä koskee pesulähteitä Reykjavikin ulkopuolella, ei mitään kohdetta suoraan), kuten aiemmin.
