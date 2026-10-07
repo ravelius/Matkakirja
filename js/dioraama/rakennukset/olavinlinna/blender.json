@@ -1,7 +1,7 @@
 {
   "rakennus": "olavinlinna",
-  "hash": "5a530808b3e85ffa",
-  "kansio": "dioraama/olavinlinna/blender/5a530808b3e85ffa/",
+  "hash": "737600b481d96610",
+  "kansio": "dioraama/olavinlinna/blender/737600b481d96610/",
   "tiedostot": [
     {
       "polku": "hahmot/apulainen-1500-faceit.glb",
@@ -230,13 +230,13 @@
     },
     {
       "polku": "kavely/vesiportti-kavely.glb",
-      "sha256": "1e609b86da602c5fe79b001abd4a3488e6592c283fb5658a57bfd85c4230f3ae",
-      "tavuja": 2748
+      "sha256": "294e41164350474444b7f43ef10cae28c681cd10cd20d53e4746eafd970c7127",
+      "tavuja": 2724
     },
     {
       "polku": "kavely/vesiportti-tormays.glb",
-      "sha256": "fb039a69bc9083a9e0c8e1fc2af7109515651a29c9336d935f198e5364546bac",
-      "tavuja": 13320
+      "sha256": "de202c2f3b200c6bcb49cb00f7d423d4de51d1a0e0e00b30b93f6a54ef0f4ca7",
+      "tavuja": 13344
     },
     {
       "polku": "kavely/vesiportti.glb",
