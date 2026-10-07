@@ -83,6 +83,18 @@ namespace Matkakirja.Natiivi
             return d.sqrMagnitude > 0.01f && kavely.PyydaKaanto(Mathf.Atan2(d.x, d.z) * Mathf.Rad2Deg);
         }
 
+        /// <summary>Botti (vianselvitys): kävele pisteeseen napautuskävelyn tavoin (reitti NavMeshillä). Palauttaa, löytyikö reitti.</summary>
+        public bool KaveleKohti(Vector3 kohde)
+        {
+            napautusReitti.Clear();
+            var polku = new NavMeshPath();
+            bool ok = NavMesh.SamplePosition(kohde, out var k, 1.0f, NavMesh.AllAreas) && NavMesh.CalculatePath(transform.position, k.position, NavMesh.AllAreas, polku)
+                && polku.status != NavMeshPathStatus.PathInvalid && polku.corners.Length > 1;
+            if (ok) for (int i = 1; i < polku.corners.Length; i++) napautusReitti.Add(polku.corners[i]); else napautusReitti.Add(kohde);
+            jumiAika = 0; jumiPaikka = transform.position;
+            return ok;
+        }
+
         /// <summary>Napautusreitin syöte: suunta seuraavaan kulmaan kameran kehyksessä (katse ei käänny); vaarassa hiivintä.</summary>
         void NapautusSyote(ref KavelySyote s, float dt)
         {

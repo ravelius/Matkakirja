@@ -910,6 +910,33 @@ namespace Matkakirja.Natiivi
         /// <summary>Pelattava pala jatkuu tallennuksesta (Natiivi-UI:n Jatka; SeikkailuTallentaja.LueTiedosto kertoo, onko jatkettavaa).</summary>
         public static bool PelattavaPalaJatka;
 
+        IEnumerator Botti(int alkuN)
+        {
+            var d = SeikkailuKavely.Data; var p = SeikkailuPelaaja.Aktiivinen;
+            if (d == null || p == null) { o.Kirjaa("botti: ei pelaajaa tai kävelydataa"); yield break; }
+            var pisteet = new SortedDictionary<int, Matkakirja.Linssit.Seikkailu.KavelyMerkki>();
+            foreach (var m in d.Lajia("reitti"))
+                if (m.Tunnus.StartsWith("pelaaja-", StringComparison.Ordinal) && int.TryParse(m.Tunnus.Substring(8), out int n) && n >= alkuN) pisteet[n] = m;
+            int kiinni = 0; void Laske(string osa) => kiinni++;
+            SeikkailuVartijat.Kiinnijaatiin += Laske;
+            float alku = Time.unscaledTime;
+            o.Kirjaa($"botti: {pisteet.Count} pistettä (reitti:pelaaja-{alkuN}…)");
+            foreach (var kv in pisteet)
+            {
+                p = SeikkailuPelaaja.Aktiivinen; if (p == null) break;
+                var kohde = new Vector3((float)kv.Value.X, (float)kv.Value.Y, (float)-kv.Value.Z);
+                bool reitti = p.KaveleKohti(kohde);
+                float t0 = Time.unscaledTime;
+                while (p != null && p.Napautuskavely && Time.unscaledTime - t0 < 40f) { yield return null; p = SeikkailuPelaaja.Aktiivinen; }
+                float etaisyys = p != null ? Vector3.Distance(p.transform.position, kohde) : -1;
+                o.Kirjaa($"botti: pelaaja-{kv.Key} {(etaisyys >= 0 && etaisyys < 1.0f ? "OK" : "VIRHE")} {etaisyys:F1} m, {Time.unscaledTime - t0:F1} s{(reitti ? "" : " (ei NavMesh-reittiä)")}, kiinni {kiinni}");
+            }
+            SeikkailuVartijat.Kiinnijaatiin -= Laske;
+            var tv = typeof(DioraamaSovitin).Assembly.GetType("Matkakirja.Natiivi.SeikkailuTapit")?.GetMethod("Tekstivahti", System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Static);
+            string teksti = tv != null ? tv.Invoke(null, null) as string : "ei Tekstivahtia";
+            o.Kirjaa($"botti: valmis {Time.unscaledTime - alku:F0} s, kiinnijäämisiä {kiinni}, tekstivahti {teksti}");
+        }
+
         /// <summary>V6 jatko: pelaaja viimeisimpään tarkistuspisteeseen ilman saapumista, armoaika 4 s, vartijat ja kappeli kuten laiturilta.</summary>
         IEnumerator JatkaTallennuksesta(Matkakirja.Linssit.Seikkailu.SeikkailuTallennus t)
         {
@@ -1634,6 +1661,14 @@ namespace Matkakirja.Natiivi
                 if (arvo == "data") { kavelyKehitysJuuri = osat.Length > 3 ? osat[3].TrimEnd('/') + "/" : null; o.Kirjaa($"poikki: kävelydata {kavelyKehitysJuuri ?? "paketista"}"); return; }
                 string tid = osat.Length > 3 ? osat[3] : Linssi?.NakymaHetkella(YdinAika, false).KohdeTila ?? "laituri";
                 o.StartCoroutine(KavelyPaalle(tid));
+                return;
+            }
+            // "poikki seikkailu botti [alku-N]": vianselvitys (pelattavuusmalli 11, EI ennen junaa/TF:ää) — kävelee reitti:pelaaja-N -merkit
+            // napautuskävelyllä, kirjaa saapumiset, kiinnijäämiset ja ajat sekä lopuksi Natiivi-UI:n Tekstivahdin (ei näkyvää tekstiä).
+            if (mita == "seikkailu" && arvo == "botti")
+            {
+                int alkuN = osat.Length > 3 && int.TryParse(osat[3], out int an) ? an : 1;
+                o.StartCoroutine(Botti(alkuN));
                 return;
             }
             // "poikki vartijat 1 | 0 | tila": historiamoottori V3 — vartijat partioreiteille (merkit partio:*), NavMesh kävelypinnoista.
