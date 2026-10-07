@@ -17,7 +17,14 @@ Avoimet työt:
    Vauhtirajaus opas-vapaa-lataus 5683ffaf jäi pois junasta. Ei uutta työtä tähän.
 4. s2-meri 0f6e4e89 on KUITATTU junaan 154 (BMNG:n meri S2:n meriväriin).
 
-## TILA 7.10. 03.1x (uusin)
+## TILA 7.10. 03.2x (uusin)
+- Sallitut 38 (Varsova pakotettu SALLITTU; Sisilia/Kreeta/Islanti mitattu Palermo/Heraklion/Reykjavík P625) → Pelikoodarin PR #4098.
+  sallitut.py:ssä PAKOTA-taulu; tulokset lokit/linssiseppa2-3d-kattavuus/ (sallitut-3d.json, renkaat-tulokset.json).
+- RAJA-stillit: stillit2-061c8850/3d-raja-ja-korjatut.jpg → Päätoimittaja. Kiova ja Sarajevo litteitä (POIS), Tromssa tarkka
+  ~0,5 km (ehdotettu SALLITTU r 500 m tai POIS) – odottaa Päätoimittajan päätöstä; jos SALLITTU, lisää PAKOTA + rivi Pelikoodarille.
+- Pallopisteiden siirto (Sisilia, Kreeta, Islanti) kuuluu Karttasepälle/Päätoimittajalle; Venetsia jo San Marcolla pelissä.
+
+## TILA 7.10. 03.1x
 - 3D-stillit valmiit: lokit/linssiseppa2-3d-kattavuus/stillit-11d043c75/3d-luokat-helsinki-varsova-tallinna.jpg → Päätoimittaja.
   Tallinna litteä (karkea), Varsovan keskusta näyttää kunnolliselta 3D:ltä → ehdotettu SALLITTU (päätös Päätoimittaja/omistaja).
 - Odottaa: Sisilian uusintamittaus Pelikoodarin pistekorjauksen jälkeen (renkaat kuten sallitut.py; lisää tulos sallitut-3d.json:iin).
