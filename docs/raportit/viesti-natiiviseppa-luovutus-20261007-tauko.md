@@ -9,6 +9,15 @@ Olet Natiiviseppä (Opus, high). Lue tämä osio, MEMORY.md ja natiiviseppa-tila
 Juna-SHA:t otetaan vain PÄÄTOIMITTAJAN suoralla kuittauksella; käännökset, simut ja iPad vain Julkaisijan NYT-viestillä.
 Tarkista ensin taustalla jatkuneiden ajojen tulokset (alla) ja kerro ne Julkaisijalle ja PÄÄTOIMITTAJALLE.
 
+## TILA 15.2x (myöhempi): JUNA 161 VALMIS VIE-PÄÄTÖKSEEN
+
+- Runko **c076765c4**, koekäännös 68429b27b (app lokit/natiiviseppa-app-161koe-c076765c), loppusavu OK 15.19 (stillit
+  lokit/natiiviseppa-savu161-juna/, 0 poikkeusta, kirjoitusääni 16 lyöntiä). Odottaa: Laitetestaajan rutiini → Päätoimittajan VIE →
+  Julkaisijan JUNAN AVAUS NYT → `git update-ref refs/heads/juna/b13 c076765c4 2309f55d…` (tarkista nykyinen juna/b13!) + juna.log,
+  BUILD 161 master-merge d8b0e0fc:n päälle, SHA Julkaisijalle (hän tekee muutosloki-PR:n), Mac TF 161 Julkaisijan luvalla
+  (mac-kaanna <BUILD 161 master> 1.1 161, APPSTORE=1, kopio lokit/natiiviseppa-mac-tf-161-<sha>, gh workflow run lataa=true).
+- Junaan 162: LS1 pallo-latauskuva cc6176356, NUI apuraha-kuvat 5e45d1da.
+
 ## TILA 15.3x
 
 - **JUNA 161 -RUNKO c076765c4** (= 012faf6b6 + LS2 2d8da858f pallojen klikkaus + ui hiiri; testit 419/833, unity 0). Aiempi: **012faf6b6** (Päätoimittaja vahvisti 15.1x NUI 89d98b7e + Siirtoseppä 49888505, korvaa 227529f3; EI apuraha-kuvat
