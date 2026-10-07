@@ -22,6 +22,8 @@ namespace Matkakirja.Linssit.Kierros
         {
             public string KohdeId, Tekstilaji, Ankkuri, Kuvateksti, Url, Tekija, Lisenssi;
             public int Leveys, Korkeus;
+            /// <summary>Tekoälyllä tehty havainnekuva (Sisältökirjuri v3:sta alkaen "havainnekuva": true; puuttuva = false).</summary>
+            public bool Havainnekuva;
         }
 
         /// <summary>Paketin JSON (lista) kuviksi; puutteelliset (ei kohdetta, ankkuria tai osoitetta) pois.</summary>
@@ -35,11 +37,23 @@ namespace Matkakirja.Linssit.Kierros
                 string S(string a) => d.TryGetValue(a, out var x) ? x as string : null;
                 int I(string a) => d.TryGetValue(a, out var x) && x is double v ? (int)v : 0;
                 var k = new Kuva { KohdeId = S("kohde_id"), Tekstilaji = S("tekstilaji"), Ankkuri = S("ankkuri"), Kuvateksti = S("kuvateksti"),
-                    Url = S("media_url"), Tekija = S("tekija"), Lisenssi = S("lisenssi"), Leveys = I("paketti_leveys"), Korkeus = I("paketti_korkeus") };
+                    Url = S("media_url"), Tekija = S("tekija"), Lisenssi = S("lisenssi"), Leveys = I("paketti_leveys"), Korkeus = I("paketti_korkeus"),
+                    Havainnekuva = d.TryGetValue("havainnekuva", out var h) && h is bool hb && hb };
                 if (string.IsNullOrEmpty(k.KohdeId) || string.IsNullOrWhiteSpace(k.Ankkuri) || string.IsNullOrEmpty(k.Url)) continue;
                 l.Add(k);
             }
             return l;
+        }
+
+        /// <summary>Kortin alarivi: "Kuva: tekijä, lisenssi"; havainnekuvassa "Havainnekuva" (ja tekijä, jos annettu).</summary>
+        public static string Tekijarivi(Kuva k)
+        {
+            if (k == null) return "";
+            string tekija = string.IsNullOrWhiteSpace(k.Tekija) ? "" : k.Tekija.Trim();
+            string lisenssi = string.IsNullOrWhiteSpace(k.Lisenssi) ? "" : k.Lisenssi.Trim();
+            if (k.Havainnekuva) return tekija.Length > 0 ? $"Havainnekuva · {tekija}" : "Havainnekuva";
+            if (tekija.Length == 0) return "";
+            return lisenssi.Length > 0 ? $"Kuva: {tekija}, {lisenssi}" : $"Kuva: {tekija}";
         }
 
         /// <summary>/opas/aineistot "yksityiskohdat_polut" {kaupunki-id: polku median juuresta}; polut, joissa "..", ohitetaan.</summary>

@@ -61,5 +61,14 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(a[0].AikaS == 2.0 && a[1].AikaS == 9.0 && a[2].AikaS == 20.0, "ankkurin sanan alku");
             Oleta.Sama(2, OpasYksityiskohdat.Ajoita(K(), "Q243", Eiffel, 21.0, ajat).Count, "loppuvara: 20 s > 21 − 1,5 pois");
         }
+    
+        [Testi] static void HavainnekuvaMerkitaan()
+        {
+            var l = OpasYksityiskohdat.Lue(Matkakirja.Peli.MiniJson.Jasenna("[{\"kohde_id\":\"Q1\",\"ankkuri\":\"a\",\"media_url\":\"u\",\"havainnekuva\":true},"
+                + "{\"kohde_id\":\"Q1\",\"ankkuri\":\"b\",\"media_url\":\"u\",\"tekija\":\"besopha\",\"lisenssi\":\"CC BY 2.0\"}]"));
+            Oleta.Tosi(l[0].Havainnekuva && !l[1].Havainnekuva, "puuttuva = false");
+            Oleta.Sama("Havainnekuva", OpasYksityiskohdat.Tekijarivi(l[0]));
+            Oleta.Sama("Kuva: besopha, CC BY 2.0", OpasYksityiskohdat.Tekijarivi(l[1]));
+        }
     }
 }

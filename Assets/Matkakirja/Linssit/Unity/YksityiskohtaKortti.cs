@@ -145,7 +145,7 @@ namespace Matkakirja.Linssit
             float kaanto = KaantoAste * Mathf.Sign(lepo.x == 0f ? 1f : lepo.x) * (pysty ? 0.5f : 1f);
 
             string rivi = string.IsNullOrWhiteSpace(k.Kuvateksti) ? "" : k.Kuvateksti.Trim();
-            string tekija = string.IsNullOrWhiteSpace(k.Tekija) ? "" : $"Kuva: {k.Tekija.Trim()}{(string.IsNullOrWhiteSpace(k.Lisenssi) ? "" : ", " + k.Lisenssi.Trim())}";
+            string tekija = OpasYksityiskohdat.Tekijarivi(k);
             teksti.text = rivi.Length > 0 && tekija.Length > 0 ? $"{rivi}\n<size=70%>{tekija}</size>" : rivi + tekija;
             // Teksti kortin paikallisissa yksiköissä (kortti 1 × 1): alakaistaan, vasemmalle sisennyksen verran.
             var tt = teksti.rectTransform;
