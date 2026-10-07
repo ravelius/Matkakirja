@@ -37,6 +37,18 @@ namespace Matkakirja.Natiivi
         /// <summary>Tilojen liekit valoisuuden lähteenä (Sovitin asettaa).</summary>
         public static DioraamaLiekit Liekit;
 
+        /// <summary>Pelaajan valoisuus 0…1 (vartijoiden näkö ja ensimmäisen persoonan kuvan tummuminen, SeikkailuNakyvyys).
+        /// V7: tilojen liekeistä (tulisija, soihdut, kynttilät); E3: kynttilöiden huoneessa kynttilöistä ja omasta kynttilästä.</summary>
+        public static double PelaajanValoisuus(SeikkailuPelaaja p)
+        {
+            if (p == null) return ValoisuusOletus;
+            double v = ValoisuusOletus;
+            if (Liekit != null) v = Liekit.Valoisuus(p.transform.position + Vector3.up * 1.0f);
+            var ky = SeikkailuKynttilat.Aktiivinen;
+            if (ky != null && ky.Lahella(p.transform.position)) v = ky.Valoisuus(p.transform.position + Vector3.up, p.transform.position + Vector3.up);
+            return v;
+        }
+
         readonly List<V> vartijat = new List<V>();
         NavMeshDataInstance navi; NavMeshData data;
         DioraamaHahmot3D hahmot;
@@ -130,12 +142,7 @@ namespace Matkakirja.Natiivi
             {
                 var ag = v.Agentti; if (ag == null || !ag.isOnNavMesh) continue;
                 var vp = ag.transform.position;
-                var s = new VartijanSyote { VartijaX = vp.x, VartijaZ = vp.z, Valoisuus = ValoisuusOletus, Aanet = aanet };
-                // V7: valoisuus tilojen liekeistä (tulisija, soihdut, kynttilät): pimeässä nurkassa vartija näkee vain lähelle.
-                if (p != null && Liekit != null) s.Valoisuus = Liekit.Valoisuus(p.transform.position + Vector3.up * 1.0f);
-                // E3: kynttilöiden huoneessa valoisuus kynttilöistä ja omasta kynttilästä (pimeässä vartija näkee vain lähelle).
-                var ky = SeikkailuKynttilat.Aktiivinen;
-                if (p != null && ky != null && ky.Lahella(p.transform.position)) s.Valoisuus = ky.Valoisuus(p.transform.position + Vector3.up, p.transform.position + Vector3.up);
+                var s = new VartijanSyote { VartijaX = vp.x, VartijaZ = vp.z, Valoisuus = PelaajanValoisuus(p), Aanet = aanet };
                 if (p != null)
                 {
                     var pp = p.transform.position;

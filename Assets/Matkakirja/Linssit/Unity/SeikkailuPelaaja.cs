@@ -102,6 +102,7 @@ namespace Matkakirja.Natiivi
                 cg.AddComponent<CinemachineHardLockToTarget>();
                 cg.AddComponent<CinemachineRotateWithFollowTarget>();
                 LisaaTaytevalo(go.transform, kerros, new Vector3(0.3f, 2.3f, -0.8f));
+                SeikkailuNakyvyys.Luo(go.transform);   // valoisuus kuvana (reunat ja viileys), ei mittaria
                 Aktiivinen = p;
                 Debug.Log($"MATKAKIRJA seikkailu: pelaaja luotu {paikka}, yaw {yaw:F0} (ensimmäinen persoona)");
                 return p;
