@@ -66,10 +66,10 @@ done
 
 export MATKAKIRJA_KANSIO=Build/mac MATKAKIRJA_VERSIO=$VERSIO MATKAKIRJA_BUILD=$BUILD
 cd $KOPIO
-UNITY_BURST_DISABLE_COMPILATION=1 nice -n 15 "$UNITY" -batchmode -nographics -quit -projectPath . -buildTarget StandaloneOSX \
+UNITY_BURST_DISABLE_COMPILATION=1 nice -n 10 "$UNITY" -batchmode -nographics -quit -projectPath . -buildTarget StandaloneOSX \
   -executeMethod Matkakirja.Editori.Rakennus.LuoPallo -logFile tulokset/mac-luo.log || vika "LuoPallo (tulokset/mac-luo.log)"
 echo "$(date +%T) LuoPallo valmis" >> $LOKI
-nice -n 15 "$UNITY" -batchmode -nographics -quit -projectPath . -buildTarget StandaloneOSX \
+nice -n 10 "$UNITY" -batchmode -nographics -quit -projectPath . -buildTarget StandaloneOSX \
   -executeMethod Matkakirja.Editori.Rakennus.MacOS -logFile tulokset/mac.log || vika "MacOS (tulokset/mac.log)"
 grep "MATKAKIRJA: " tulokset/mac.log | tail -4 >> $LOKI
 
