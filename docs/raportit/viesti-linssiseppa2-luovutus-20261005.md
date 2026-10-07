@@ -19,6 +19,7 @@ Avoimet työt:
 
 ## OMISTAJA 7.10. 15.5x (sitova): ennen junaa VAIN automaattiset testit + käännös; ei savuja, stillejä, iPad-mittauksia,
 ## toistoajoja; kuittaus 1 rivi (muutos, testit, SHA) → Natiiviseppä. Simu vain, jos vian syy muuten epäselvä.
+## 16.0x: EI omia käännöksiä (iOS/Mac); haaralle unity-tarkistus + testit; täysi käännös vain juna/TF; poikkeus vian selvitys + ilmoitus PT:lle.
 
 ## TILA 7.10. 15.3x (uusin)
 - JUNA 161 pallon klikkaus TODENNETTU (68429b27, Natiivisepän koeappi): iPhone Ateena, iPad Kreeta+Pariisi, Mac Ateena (oma 6ec5dcff).
