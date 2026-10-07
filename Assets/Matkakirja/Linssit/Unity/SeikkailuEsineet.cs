@@ -246,7 +246,7 @@ namespace Matkakirja.Natiivi
                 if (e == kadessa || e.Go == null || !e.Go.activeSelf || e.Id == Kirja || e.Laji == Laji.Kiintea || e.Kaatunut) continue;   // kirja on kappalaisen; kilpilaatat seinässä
                 if (e.Laji == Laji.Irrotettava && e.Irrotettu) continue;
                 // Saumat napautettaviksi vasta viistovalossa (käsikirjoitus kohta 6; ilman kynttilöitä aina).
-                if (e.Laji == Laji.Irrotettava && SeikkailuKynttilat.Aktiivinen is SeikkailuKynttilat kyt && !kyt.SaumatNakyvat) continue;
+                if (e.Laji == Laji.Irrotettava && !e.Id.StartsWith("irtokivi", StringComparison.Ordinal) && SeikkailuKynttilat.Aktiivinen is SeikkailuKynttilat kyt && !kyt.SaumatNakyvat) continue;   // tyrmän irtokivi ilman viistovaloa
                 if (e.Laji == Laji.Nostettava && Muurattu(e)) continue;   // syvennyksen esineet vasta, kun lähimmät kivet on irrotettu
                 float d = (e.Go.transform.position - pp).sqrMagnitude;
                 if (d >= PoimintaM * PoimintaM) continue;
@@ -390,9 +390,13 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Kivi liukuu 0,3 m ulos seinästä (laastisauma antaa periksi) ja putoaa; kolahdus ei kuulu vartijoille (hiljainen työ).</summary>
+        /// <summary>Kivi irtosi (tyrmän muunnelma 3: ryömintäaukko auki).</summary>
+        public static event Action<string> Irrotettiin;
+
         IEnumerator Irrota(Esine e)
         {
             e.Irrotettu = true;
+            Irrotettiin?.Invoke(e.Id);
             SeikkailuAanet.Soita("kivi-irtoaa", e.Go.transform.position, 0.8f);
             var alku = e.Go.transform.position; var loppu = alku + e.Ulos * 0.3f;
             for (float t = 0; t < 1f; t += Time.deltaTime / 1.2f) { if (e.Go == null) yield break; e.Go.transform.position = Vector3.Lerp(alku, loppu, t * t * (3 - 2 * t)); yield return null; }

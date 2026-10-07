@@ -20,6 +20,19 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(t.Aika <= 45, $"muunnelma 1 ≤ 45 s ({t.Aika:F0} s)");
         }
 
+        [Testi] static void Muunnelmat2ja3()
+        {
+            var v = new Tyrma(2);
+            Aja(v, Tyrma.VesipoikaS + 0.2);
+            Oleta.Tosi(v.VesipoikaAvasi && v.Vaihe == TyrmanVaihe.OviAuki, "vesipoika jätti oven raolleen");
+            Aja(v, 20); Oleta.Tosi(v.Ulos() && v.Aika <= 45, $"muunnelma 2 ≤ 45 s ({v.Aika:F0} s)");
+            var k = new Tyrma(3);
+            Aja(k, 8); k.Yritys(); Aja(k, 10);
+            Oleta.Tosi(k.KiviIrti() && k.Vaihe == TyrmanVaihe.OviAuki, "irtokivi → aukko");
+            Aja(k, 10); Oleta.Tosi(k.Ulos() && k.Aika <= 45, $"muunnelma 3 ≤ 45 s ({k.Aika:F0} s)");
+            Oleta.Sama(1, new Tyrma(7).Muunnelma);
+        }
+
         [Testi] static void VikasietoVihjeJaPuluAvaa()
         {
             var t = new Tyrma();

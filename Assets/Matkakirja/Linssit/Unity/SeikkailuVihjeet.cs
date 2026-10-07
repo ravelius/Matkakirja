@@ -76,6 +76,7 @@ namespace Matkakirja.Natiivi
         static Vector3? Kohde(SeikkailuPelaaja p)
         {
             var pp = p.transform.position;
+            if (SeikkailuTyrma.Aktiivinen is SeikkailuTyrma ty) return ty.VihjeKohde();
             var es = SeikkailuEsineet.Aktiivinen; var ky = SeikkailuKynttilat.Aktiivinen; var k = SeikkailuKappeli.Aktiivinen;
             if (k != null && k.Nyt != SeikkailuKappeli.Vaihe.Odottaa && ky != null)
             {

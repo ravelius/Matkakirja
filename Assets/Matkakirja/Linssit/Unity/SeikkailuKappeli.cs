@@ -185,7 +185,7 @@ namespace Matkakirja.Natiivi
         // --- E3c: kappalaisen paluu (vaihe 7) ---
         public const float PaluuS = 100f, LyhtyM = 2.5f, VaroitusS = 6f;
         bool paluuTehty, raapaistu; float pimeaAlku;
-        void Raapaisu() => raapaistu = true;
+        void Raapaisu() { if (SeikkailuTyrma.Aktiivinen == null) raapaistu = true; }   // tyrmän irtokivi ei kutsu kappalaista
 
         IEnumerator Paluu()
         {

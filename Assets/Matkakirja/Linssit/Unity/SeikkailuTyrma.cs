@@ -14,8 +14,9 @@ namespace Matkakirja.Natiivi
     {
         public static SeikkailuTyrma Aktiivinen { get; private set; }
         public const float OviM = 1.5f, UlosM = 1.2f;
-        readonly Tyrma ydin = new Tyrma();
-        Vector3 istuin, rako, avaimet, ovi, ulos; float katse;
+        Tyrma ydin = new Tyrma();
+        Vector3 istuin, rako, avaimet, ovi, ulos, ryomi; float katse; bool ryomiOn;
+        static int kerta;
         Action valmis; Action<string> kirjaa; string avainId;
         public Tyrma Ydin => ydin;
 
@@ -34,11 +35,17 @@ namespace Matkakirja.Natiivi
             t.rako = M("ilmarako:tyrma") is KavelyMerkki mr ? U(mr) : t.istuin + Vector3.up * 2f;
             var ma = M("esine:avainnippu-tyrma"); t.avainId = ma?.Tunnus; t.avaimet = ma != null ? U(ma) : t.istuin + Vector3.right * 2f;
             t.katse = mi.KiertoY is double ky ? (float)(-ky * 180 / Math.PI) : 0f;
+            // Muunnelmat vuorotellen (1 avaimet, 2 vesipoika, 3 irtokivi); puuttuvat merkit → muunnelma 1.
+            var mry = M("ovi:tyrma-ryomi"); t.ryomiOn = mry != null && M("esine:irtokivi-tyrma") != null; if (mry != null) t.ryomi = U(mry);
+            int mu1 = kerta++ % 3 + 1;
+            if (mu1 == 3 && !t.ryomiOn || mu1 == 1 && ma == null) mu1 = 2;
+            t.ydin = new Tyrma(mu1);
+            SeikkailuEsineet.Irrotettiin += t.KiviIrti; SeikkailuEsineet.Raapaistiin += t.Yritys;
             Aktiivinen = t;
             p.Siirra(t.istuin + Vector3.up * 0.05f); p.Tila.KameraYaw = p.Tila.HahmoYaw = t.katse; p.Tila.KameraPitch = 10;
             SeikkailuNakyvyys.Himmennys = 0f;
             if (SeikkailuVihjeet.Aktiivinen != null) SeikkailuVihjeet.Aktiivinen.Ydin.Tyrmassa = true;
-            kirjaa?.Invoke("seikkailu: tyrmä (muunnelma 1: Pulu tuo avaimet)");
+            kirjaa?.Invoke($"seikkailu: tyrmä (muunnelma {t.ydin.Muunnelma}: {(t.ydin.Muunnelma == 1 ? "Pulu tuo avaimet" : t.ydin.Muunnelma == 2 ? "vesipojan ovi" : "irtokivi")})");
             return true;
         }
 
@@ -54,10 +61,19 @@ namespace Matkakirja.Natiivi
                 SeikkailuAanet.Soita("kivi-lasku", avaimet, 0.4f, 1.6f);   // avaimet kilahtavat olkiin
                 kirjaa?.Invoke("seikkailu: tyrmä: Pulu pudotti avaimet");
             }
+            if (ydin.VesipoikaAvasi)
+            {
+                ydin.VesipoikaAvasi = false;
+                if (SeikkailuVartijat.AskelKlippi != null) AudioSource.PlayClipAtPoint(SeikkailuVartijat.AskelKlippi, ovi, 0.6f);
+                SeikkailuAanet.Soita("kivi-kolahdus", ovi + Vector3.up * 0.3f, 0.7f, 0.7f);   // sanko kolahtaa
+                SeikkailuAanet.Soita("luukku-narahdus", ovi + Vector3.up, 0.8f);            // ovi jää raolleen
+                kirjaa?.Invoke("seikkailu: tyrmä: vesipoika jätti oven raolleen");
+            }
             if (ydin.Vihje) { ydin.Vihje = false; SeikkailuVihjeet.Aktiivinen?.Pakota(2, "tyrmä 20 s"); }
             if (ydin.Vaihe == TyrmanVaihe.AvaimetOlissa && avainId != null && SeikkailuEsineet.Aktiivinen?.Kadessa == avainId) ydin.Poimi();
             if (ydin.PuluAvasi) { ydin.PuluAvasi = false; SeikkailuAanet.Soita("avain-lukko", ovi + Vector3.up, 0.8f); kirjaa?.Invoke("seikkailu: tyrmä: Pulu avasi oven (60 s)"); }
-            if (ydin.Vaihe == TyrmanVaihe.OviAuki && Vector3.Distance(p.transform.position, ulos) < UlosM && ydin.Ulos()) StartCoroutine(Ulos());
+            var maali = ydin.Muunnelma == 3 && ryomiOn ? ryomi : ulos;
+            if (ydin.Vaihe == TyrmanVaihe.OviAuki && Vector3.Distance(p.transform.position, maali) < UlosM && ydin.Ulos()) StartCoroutine(Ulos());
         }
 
         /// <summary>Toimintonappi ovella avaimet kädessä (SeikkailuEsineet kysyy verbin ja kutsuu).</summary>
@@ -85,6 +101,22 @@ namespace Matkakirja.Natiivi
         }
 
         public static void Poista() { var a = Aktiivinen; Aktiivinen = null; if (a != null) Destroy(a.gameObject); }
-        void OnDestroy() { if (Aktiivinen == this) Aktiivinen = null; }
+        /// <summary>Pulun vihjeen kohde tyrmässä: avaimet → ovi (1), ovi (2), irtokivi → aukko (3), lopuksi käytävän pää.</summary>
+        public Vector3 VihjeKohde()
+        {
+            if (ydin.Vaihe == TyrmanVaihe.AvaimetOlissa) return avaimet;
+            if (ydin.Vaihe == TyrmanVaihe.AvaimetKadessa) return ovi;
+            if (ydin.Vaihe == TyrmanVaihe.Istuu && ydin.Muunnelma == 3) return SeikkailuEsineet.Aktiivinen?.Irrottamaton(ryomi) ?? ryomi;
+            return ydin.Muunnelma == 3 && ryomiOn ? ryomi : ydin.Vaihe == TyrmanVaihe.OviAuki ? ulos : ovi;
+        }
+
+        void KiviIrti(string id) { if (id.StartsWith("irtokivi", StringComparison.Ordinal) && ydin.KiviIrti()) kirjaa?.Invoke("seikkailu: tyrmä: irtokivi irti, aukko auki"); }
+        void Yritys() => ydin.Yritys();
+
+        void OnDestroy()
+        {
+            if (Aktiivinen == this) Aktiivinen = null;
+            SeikkailuEsineet.Irrotettiin -= KiviIrti; SeikkailuEsineet.Raapaistiin -= Yritys;
+        }
     }
 }
