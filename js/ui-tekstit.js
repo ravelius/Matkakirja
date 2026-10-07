@@ -97,7 +97,7 @@ export const PERIAATTEET = {
       + 'lähdekoodia lukea vapaasti, mutta julkaisuun tai omaan tuotteeseen '
       + 'tarvitaan lupa.' },
   ],
-  lippurivi: 'Lippukuvat ovat Wikimedia Commonsista. Näiden tekijät lisenssi käskee nimetä: ',
+  lippurivi: 'Lippukuvat ovat Wikimedia Commonsista. Lisenssi edellyttää näiden tekijöiden mainitsemista: ',
   linkki: { teksti: 'Pelin GitHub-sivu', url: 'https://github.com/ravelius/Matkakirja' },
   oikeudet: '© Visuaaliviestinnän Instituutti Tampere Oy',
 };
