@@ -383,3 +383,7 @@ Edellinen luovutus on `viesti-siirtoseppa-luovutus-20261002.md` (5.10. osiot 02.
   putoaminen palauttaa viimeiseen maakohtaan, aloituskatse oviaukosta osan keskelle, aloitussäde vain kerrokseen 9.
 - Julkaisijan jonoon vaihdettu ea7a36e4 + NUI 34cf54b0 + 73ed2612 (LS1:n giza-valmiin jälkeen). Samalla vuorolla: eleet-2-tarkistus,
   apurahakuva (hämärä P1 → lokit/apuraha-kuvat/), laiturin rako LR:lle, LR v42 -peili.
+- 09.58: LR:n v43-peili 3ddc05cc85ddbb35 (vene rekvisiittana, laiturin otsalaudat). fc1c13e1: ymparisto.mallit "maailmaan": false
+  (tai id vene) → Ymparisto.Rekvisiitta, ei piirretä origoon; LR lisää kentän v44:ään. Julkaisijan jonossa nyt fc1c13e1 + NUI 34cf54b0 + 73ed2612.
+  Vuoroskripti valmiina: scratchpad vuoro-h1.sh (apurahakuva hämärä P1 ×1,5 → lokit/apuraha-kuvat/, laiturin rako v43,
+  eleet-2 puolilähi, kävely v43 iPad + iPhone). Uusi tyokalut/siirtoseppa-ajot/ajo-kuvat.sh (kiinteä kamera + poikki kuva), ajo-kavely.sh PEILI.
