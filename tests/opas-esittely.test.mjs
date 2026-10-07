@@ -108,3 +108,22 @@ test('omat kohteet (Giza): vain kokeilu-otsakkeella; Liiku kierros LS1:n järjes
     assert.ok(a.sallitut.some((x) => x.id === 'giza'));
   } finally { globalThis.fetch = vanha; }
 });
+
+test('Giza kokeilu-otsakkeella: kierros alkaa Sfinksin valmiista kerronnasta ilman mallikutsua', async () => {
+  const { OPAS_OMAT } = await import('../tools/pollo/opas-omat.js');
+  const e = { ...ymparisto(), OPAS_ESITTELY_TESTI: undefined, OPAS_SALLITUT_ESTO: '1' };
+  const vanha = globalThis.fetch; let malli = 0;
+  globalThis.fetch = async (u, init) => {
+    if (String(u).includes('anthropic') && JSON.stringify(JSON.parse(init.body).system).includes('Matkakirja-pelin kertoja')) malli += 1;
+    return new Response(JSON.stringify({ content: [{ type: 'text', text: 'NIMI: X\nTEKSTI: x' }], query: { pages: {} }, claims: {}, entities: {} }));
+  };
+  try {
+    const d = await (await worker.fetch(new Request('https://pollo.example/opas/seuraava', { method: 'POST', headers: { ...H, 'x-matkakirja-kokeilu': 'giza' },
+      body: JSON.stringify({ kaupunki: 'Gizan pyramidit', sijainti: { lat: 29.9765, lon: 31.1313 }, toive: 'Esittele kaupunki', istunto: 'g1' }) }), e, { waitUntil() {} })).json();
+    assert.equal(malli, 0); assert.equal(d.valmis, true); assert.equal(d.id, 'Q130958');
+    assert.equal(d.teksti, OPAS_OMAT.giza.kohteet[0].teksti); assert.deepEqual(d.kierros, { numero: 1, maara: 4 });
+    const ilman = await worker.fetch(new Request('https://pollo.example/opas/seuraava', { method: 'POST', headers: H,
+      body: JSON.stringify({ kaupunki: 'Gizan pyramidit', toive: 'Esittele kaupunki', istunto: 'g2' }) }), e, { waitUntil() {} });
+    assert.equal(ilman.status, 403);
+  } finally { globalThis.fetch = vanha; }
+});
