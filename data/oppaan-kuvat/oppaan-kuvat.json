@@ -1,6 +1,6 @@
 {
  "skeema": 1,
- "versio": "2026-10-06",
+ "versio": "2026-10-07",
  "kaupungit": {
   "addisabeba": {
    "nimi": "Addis Abeba",
@@ -3409,20 +3409,19 @@
    "lon": -21.82,
    "kohteet": [
     "Q271466",
-    "Q38519",
-    "Q216846",
-    "Q107370",
-    "Q886946",
-    "Q1130718",
-    "Q511933",
-    "Q777882",
-    "Q179734",
-    "Q210280",
-    "Q1137629",
-    "Q1547402",
-    "Q212051",
-    "Q184975",
-    "Q178124"
+    "Q1783706",
+    "Q1367886",
+    "Q1067075",
+    "Q945753",
+    "Q116492",
+    "Q116484",
+    "Q451045",
+    "Q1270853",
+    "Q794242",
+    "Q151212",
+    "Q626963",
+    "Q749950",
+    "Q565455"
    ],
    "kuvat": [
     {
@@ -4786,40 +4785,40 @@
    "lon": 25.304,
    "kohteet": [
     "Q173527",
-    "Q1128366",
-    "Q249707",
-    "Q182299",
-    "Q916136",
-    "Q1324824",
-    "Q603920",
-    "Q541696",
-    "Q636972"
+    "Q7798352",
+    "Q1018106",
+    "Q284463",
+    "Q632418",
+    "Q473766",
+    "Q845105",
+    "Q1021602",
+    "Q1142384"
    ],
    "kuvat": [
     {
      "jarjestys": 1,
-     "tiedosto": "Aerial view of the north-west part of the island of Crete, Greece.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aerial_view_of_the_north-west_part_of_the_island_of_Crete%2C_Greece.jpg?width=1280",
-     "tekija": "dronepicr",
-     "lisenssi": "CC BY 2.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aerial_view_of_the_north-west_part_of_the_island_of_Crete%2C_Greece.jpg",
-     "selite": "Kreetan luoteisosan rannikko ja vuoret avautuvat ilmasta nähtynä.",
-     "leveys": 5464,
-     "korkeus": 3640,
+     "tiedosto": "Gouves Kriti - panoramio - pepanos (2).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gouves_Kriti_-_panoramio_-_pepanos_(2).jpg?width=1280",
+     "tekija": "pepanos",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Gouves_Kriti_-_panoramio_-_pepanos_(2).jpg",
+     "selite": "Kreetan pohjoisrannikko mutkittelee Iraklionin itäpuolella vuorten ja meren välissä.",
+     "leveys": 2048,
+     "korkeus": 1536,
      "tarkistettu": true
     },
     {
      "jarjestys": 2,
-     "tiedosto": "Panoramic view of Kourtaliotiko Gorge on Crete, Greece.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Panoramic_view_of_Kourtaliotiko_Gorge_on_Crete%2C_Greece.jpg?width=1280",
-     "tekija": "dronepicr",
-     "lisenssi": "CC BY 2.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Panoramic_view_of_Kourtaliotiko_Gorge_on_Crete%2C_Greece.jpg",
-     "selite": "Kourtaliotikon rotko leikkaa Kreetan vuoristoista sisämaata.",
-     "leveys": 8192,
-     "korkeus": 2704,
+     "tiedosto": "Gouves Kriti - panoramio - pepanos (1).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gouves_Kriti_-_panoramio_-_pepanos_(1).jpg?width=1280",
+     "tekija": "pepanos",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Gouves_Kriti_-_panoramio_-_pepanos_(1).jpg",
+     "selite": "Rantatie seuraa lahtea, jonka rannalla on lomakaupunkeja.",
+     "leveys": 2048,
+     "korkeus": 1536,
      "tarkistettu": true
     }
    ]
@@ -42406,550 +42405,656 @@
    "kaupunkiQ": "Q189",
    "lat": 64.14194,
    "lon": -21.92694,
-   "koko_m": 80,
+   "koko_m": 100,
    "kuvat": [
     {
      "jarjestys": 1,
-     "tiedosto": "Hallgrimskirkja mai 2026.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hallgrimskirkja_mai_2026.jpg?width=1280",
-     "tekija": "Steinninn",
-     "lisenssi": "CC BY 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Hallgrimskirkja_mai_2026.jpg",
-     "selite": "Hallgrímskirkja on Reykjavíkin korkeimpia rakennuksia, ja sen torni kohoaa kaupungin yli.",
-     "leveys": 1318,
-     "korkeus": 1157,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
      "tiedosto": "Hallgrimskirkja 2026.jpg",
      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hallgrimskirkja_2026.jpg?width=1280",
      "tekija": "VeraVidiVici",
      "lisenssi": "CC BY-SA 4.0",
      "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
      "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Hallgrimskirkja_2026.jpg",
-     "selite": "Kirkon julkisivu muistuttaa basalttipylväitä.",
+     "selite": "Hallgrímskirkjan betoninen torni kohoaa Reykjavíkin kukkulalla ja näkyy kaupungin yli.",
      "leveys": 4080,
      "korkeus": 3060,
-     "tarkistettu": true
-    }
-   ]
-  },
-  "Q38519": {
-   "nimi": "Gullfoss",
-   "peruste": "sitelinks",
-   "kaupunki": "islanti",
-   "kaupunkiQ": "Q189",
-   "lat": 64.32611,
-   "lon": -20.12111,
-   "koko_m": 400,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "Gullfoss, Suðurland, Islandia, 2014-08-16, DD 123.JPG",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gullfoss%2C_Su%C3%B0urland%2C_Islandia%2C_2014-08-16%2C_DD_123.JPG?width=1280",
-     "tekija": "Diego Delso",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Gullfoss%2C_Su%C3%B0urland%2C_Islandia%2C_2014-08-16%2C_DD_123.JPG",
-     "selite": "Gullfoss eli Kultainen putous syöksyy kahdessa portaassa Hvítá-joen kanjoniin.",
-     "leveys": 5390,
-     "korkeus": 3329,
      "tarkistettu": true
     },
     {
      "jarjestys": 2,
-     "tiedosto": "Gullfoss (Golden Falls) is a waterfall located in the canyon of Hvítá river in southwest Iceland. (21675419004).jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gullfoss_(Golden_Falls)_is_a_waterfall_located_in_the_canyon_of_Hv%C3%ADt%C3%A1_river_in_southwest_Iceland._(21675419004).jpg?width=1280",
-     "tekija": "Bryan Ledgard",
-     "lisenssi": "CC BY 2.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Gullfoss_(Golden_Falls)_is_a_waterfall_located_in_the_canyon_of_Hv%C3%ADt%C3%A1_river_in_southwest_Iceland._(21675419004).jpg",
-     "selite": "Putouksen suihku nousee kanjonin seinämien väliin.",
-     "leveys": 4608,
-     "korkeus": 3072,
+     "tiedosto": "Hallgrimskirkja mai 2026.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hallgrimskirkja_mai_2026.jpg?width=1280",
+     "tekija": "Steinninn",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Hallgrimskirkja_mai_2026.jpg",
+     "selite": "Kirkon torni ja sen edustan kuviopäällystetty aukio kaupungin ylle katsottuna.",
+     "leveys": 1318,
+     "korkeus": 1157,
      "tarkistettu": true
     },
     {
      "jarjestys": 3,
-     "tiedosto": "GullfossOverview.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/GullfossOverview.jpg?width=1280",
-     "tekija": "Andreas Tille",
+     "tiedosto": "Hallgrimskirkja 2026 Utsida.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hallgrimskirkja_2026_Utsida.jpg?width=1280",
+     "tekija": "VeraVidiVici",
      "lisenssi": "CC BY-SA 4.0",
      "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:GullfossOverview.jpg",
-     "selite": "Gullfoss kuuluu Islannin kuuluisan Kultaisen kierroksen kohteisiin.",
-     "leveys": 2932,
-     "korkeus": 1913,
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Hallgrimskirkja_2026_Utsida.jpg",
+     "selite": "Hallgrímskirkjan basalttipylväitä muistuttava julkisivu ja sivusiipi.",
+     "leveys": 3060,
+     "korkeus": 4080,
      "tarkistettu": true
     }
    ]
   },
-  "Q216846": {
-   "nimi": "Geysir",
+  "Q1783706": {
+   "nimi": "Harpa",
    "peruste": "sitelinks",
    "kaupunki": "islanti",
    "kaupunkiQ": "Q189",
-   "lat": 64.31383,
-   "lon": -20.29949,
-   "koko_m": 400,
+   "lat": 64.15028,
+   "lon": -21.9325,
+   "koko_m": 150,
    "kuvat": [
     {
      "jarjestys": 1,
-     "tiedosto": "+Der aktivste Geysir Islands. 03.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%2BDer_aktivste_Geysir_Islands._03.jpg?width=1280",
+     "tiedosto": "*Das Opern- und Konzerthaus in Reykjavik. 05.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/*Das_Opern-_und_Konzerthaus_in_Reykjavik._05.jpg?width=1280",
      "tekija": "Holger Uwe Schmitt",
      "lisenssi": "CC BY-SA 4.0",
      "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%2BDer_aktivste_Geysir_Islands._03.jpg",
-     "selite": "Geysirin kuumien lähteiden alue on antanut nimensä kaikille maailman geysireille; vieressä purkautuu aktiivinen Strokkur.",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:*Das_Opern-_und_Konzerthaus_in_Reykjavik._05.jpg",
+     "selite": "Harpa-konserttitalon lasiseinäinen julkisivu hohtaa Reykjavíkin satamassa.",
      "leveys": 5906,
-     "korkeus": 4143,
+     "korkeus": 3822,
      "tarkistettu": true
     },
     {
      "jarjestys": 2,
-     "tiedosto": "+Der aktivste Geysir Islands. 01.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%2BDer_aktivste_Geysir_Islands._01.jpg?width=1280",
+     "tiedosto": "*Das Opern- und Konzerthaus in Reykjavik. 04.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/*Das_Opern-_und_Konzerthaus_in_Reykjavik._04.jpg?width=1280",
      "tekija": "Holger Uwe Schmitt",
      "lisenssi": "CC BY-SA 4.0",
      "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%2BDer_aktivste_Geysir_Islands._01.jpg",
-     "selite": "Strokkur ampuu vesipatsaan ilmaan muutaman minuutin välein.",
-     "leveys": 3939,
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:*Das_Opern-_und_Konzerthaus_in_Reykjavik._04.jpg",
+     "selite": "Harpan lasiset kuutiot ja viereinen rakennus kaupungin satama-alueella.",
+     "leveys": 5906,
+     "korkeus": 2778,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "*Das Opern- und Konzerthaus in Reykjavik. 03.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/*Das_Opern-_und_Konzerthaus_in_Reykjavik._03.jpg?width=1280",
+     "tekija": "Holger Uwe Schmitt",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:*Das_Opern-_und_Konzerthaus_in_Reykjavik._03.jpg",
+     "selite": "Konserttitalon vihertävän lasisen julkisivun kiteinen muoto.",
+     "leveys": 5906,
+     "korkeus": 3258,
+     "tarkistettu": true
+    }
+   ]
+  },
+  "Q1367886": {
+   "nimi": "Perlan",
+   "peruste": "sitelinks",
+   "kaupunki": "islanti",
+   "kaupunkiQ": "Q189",
+   "lat": 64.12917,
+   "lon": -21.91917,
+   "koko_m": 150,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "20190623 Perlan 8841 (48469867211).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20190623_Perlan_8841_(48469867211).jpg?width=1280",
+     "tekija": "Ray Swi-hymn from Sijhih-Taipei, Taiwan",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20190623_Perlan_8841_(48469867211).jpg",
+     "selite": "Perlanin lasikupolin alla lepäävät suuret kuumavesisäiliöt Öskjuhlíðin kukkulalla.",
+     "leveys": 7952,
+     "korkeus": 5304,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "20190623 Perlan 8842 (48469866386).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20190623_Perlan_8842_(48469866386).jpg?width=1280",
+     "tekija": "Ray Swi-hymn from Sijhih-Taipei, Taiwan",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20190623_Perlan_8842_(48469866386).jpg",
+     "selite": "Perlanin säiliörakennukset kohoavat nurmikkoisen mäen laella.",
+     "leveys": 7952,
+     "korkeus": 5304,
+     "tarkistettu": true
+    }
+   ]
+  },
+  "Q1067075": {
+   "nimi": "Höfði",
+   "peruste": "sitelinks",
+   "kaupunki": "islanti",
+   "kaupunkiQ": "Q189",
+   "lat": 64.14653,
+   "lon": -21.90637,
+   "koko_m": 80,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Hofdi House Reykjavik (cropped).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hofdi_House_Reykjavik_(cropped).jpg?width=1280",
+     "tekija": "Laurentgauthier",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Hofdi_House_Reykjavik_(cropped).jpg",
+     "selite": "Höfði on valkoinen merenrantatalo, jossa Reagan ja Gorbatšov tapasivat vuonna 1986.",
+     "leveys": 1795,
+     "korkeus": 1084,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "1986 trafen sich hier trafen sich hier Ronald Reagan und Michael Gorbatschow. 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/1986_trafen_sich_hier_trafen_sich_hier_Ronald_Reagan_und_Michael_Gorbatschow._01.jpg?width=1280",
+     "tekija": "Holger Uwe Schmitt",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:1986_trafen_sich_hier_trafen_sich_hier_Ronald_Reagan_und_Michael_Gorbatschow._01.jpg",
+     "selite": "Höfði-talo ja sen vieressä merimiehen patsas Reykjavíkin rannalla.",
+     "leveys": 4542,
+     "korkeus": 3128,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "1986 trafen sich hier trafen sich hier Ronald Reagan und Michael Gorbatschow. 02.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/1986_trafen_sich_hier_trafen_sich_hier_Ronald_Reagan_und_Michael_Gorbatschow._02.jpg?width=1280",
+     "tekija": "Holger Uwe Schmitt",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:1986_trafen_sich_hier_trafen_sich_hier_Ronald_Reagan_und_Michael_Gorbatschow._02.jpg",
+     "selite": "Höfðin puinen päärakennus kohoaa nurmikon takana.",
+     "leveys": 3936,
      "korkeus": 5906,
      "tarkistettu": true
     }
    ]
   },
-  "Q107370": {
-   "nimi": "Þingvellir",
-   "peruste": "UNESCO",
-   "kaupunki": "islanti",
-   "kaupunkiQ": "Q189",
-   "lat": 64.25806,
-   "lon": -21.125,
-   "koko_m": 2000,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "Thingvellir.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Thingvellir.jpg?width=1280",
-     "tekija": "Andreas Tille",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Thingvellir.jpg",
-     "selite": "Þingvellirissä perustettiin Alþingi noin vuonna 930, ja paikka on Islannin kansallinen symboli.",
-     "leveys": 2876,
-     "korkeus": 1708,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "+ Um das Jahr 930 wurde hier das Althing, eines der ältesten Parlamente der Welt, gegründet. 01.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%2B_Um_das_Jahr_930_wurde_hier_das_Althing%2C_eines_der_%C3%A4ltesten_Parlamente_der_Welt%2C_gegr%C3%BCndet._01.jpg?width=1280",
-     "tekija": "Holger Uwe Schmitt",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%2B_Um_das_Jahr_930_wurde_hier_das_Althing%2C_eines_der_%C3%A4ltesten_Parlamente_der_Welt%2C_gegr%C3%BCndet._01.jpg",
-     "selite": "Kansallispuisto sijaitsee mannerlaattojen välisessä hautavajoamassa.",
-     "leveys": 5906,
-     "korkeus": 2802,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 3,
-     "tiedosto": "+ Um das Jahr 930 wurde hier das Althing, eines der ältesten Parlamente der Welt, gegründet. 03.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%2B_Um_das_Jahr_930_wurde_hier_das_Althing%2C_eines_der_%C3%A4ltesten_Parlamente_der_Welt%2C_gegr%C3%BCndet._03.jpg?width=1280",
-     "tekija": "Holger Uwe Schmitt",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%2B_Um_das_Jahr_930_wurde_hier_das_Althing%2C_eines_der_%C3%A4ltesten_Parlamente_der_Welt%2C_gegr%C3%BCndet._03.jpg",
-     "selite": "Tasanteen halki kulkevat joet ja järvet.",
-     "leveys": 5906,
-     "korkeus": 3937,
-     "tarkistettu": true
-    }
-   ]
-  },
-  "Q886946": {
-   "nimi": "Blue Lagoon",
+  "Q945753": {
+   "nimi": "Tjörnin",
    "peruste": "sitelinks",
    "kaupunki": "islanti",
    "kaupunkiQ": "Q189",
-   "lat": 63.8792,
-   "lon": -22.44552,
-   "koko_m": 500,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "Blue Lagoon with Þorbjörn, Iceland, 20230430 1626 3692.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Blue_Lagoon_with_%C3%9Eorbj%C3%B6rn%2C_Iceland%2C_20230430_1626_3692.jpg?width=1280",
-     "tekija": "Jakub Hałun",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Blue_Lagoon_with_%C3%9Eorbj%C3%B6rn%2C_Iceland%2C_20230430_1626_3692.jpg",
-     "selite": "Blue Lagoon on laavakentälle syntynyt geoterminen kylpylä Reykjanesin niemimaalla.",
-     "leveys": 5016,
-     "korkeus": 3348,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "Blue Lagoon Bath.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Blue_Lagoon_Bath.jpg?width=1280",
-     "tekija": "Sindre Jacobsen",
-     "lisenssi": "CC BY 2.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Blue_Lagoon_Bath.jpg",
-     "selite": "Veden maitomaisen sininen väri tulee mineraaleista.",
-     "leveys": 3875,
-     "korkeus": 2511,
-     "tarkistettu": true
-    }
-   ]
-  },
-  "Q1130718": {
-   "nimi": "Skógafoss",
-   "peruste": "sitelinks",
-   "kaupunki": "islanti",
-   "kaupunkiQ": "Q189",
-   "lat": 63.52972,
-   "lon": -19.51389,
-   "koko_m": 150,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "Skogafoss-02-2018-gje.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Skogafoss-02-2018-gje.jpg?width=1280",
-     "tekija": "Gerd Eichmann",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Skogafoss-02-2018-gje.jpg",
-     "selite": "Skógafoss on Etelä-Islannin leveä ja korkea putous, joka syöksyy suoraan rinteen reunalta.",
-     "leveys": 5156,
-     "korkeus": 2921,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "17845-Skogafoss (22882095653).jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/17845-Skogafoss_(22882095653).jpg?width=1280",
-     "tekija": "oliver.dodd",
-     "lisenssi": "CC BY 2.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:17845-Skogafoss_(22882095653).jpg",
-     "selite": "Putouksen suihku kastelee vihreän rinteen.",
-     "leveys": 4256,
-     "korkeus": 2832,
-     "tarkistettu": true
-    }
-   ]
-  },
-  "Q511933": {
-   "nimi": "Jökulsárlón",
-   "peruste": "sitelinks",
-   "kaupunki": "islanti",
-   "kaupunkiQ": "Q189",
-   "lat": 64.07028,
-   "lon": -16.21167,
-   "koko_m": 1500,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "Icebergs in the Jökulsárlón Glacier Lagoon, Iceland.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Icebergs_in_the_J%C3%B6kuls%C3%A1rl%C3%B3n_Glacier_Lagoon%2C_Iceland.jpg?width=1280",
-     "tekija": "Marine SABRES",
-     "lisenssi": "CC BY 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Icebergs_in_the_J%C3%B6kuls%C3%A1rl%C3%B3n_Glacier_Lagoon%2C_Iceland.jpg",
-     "selite": "Jökulsárlón on jäätikköjärvi, jossa kelluu Vatnajökullista irronneita jäävuoria.",
-     "leveys": 5184,
-     "korkeus": 2920,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "Striped iceberg at Jökulsárlón Glacier Lagoon.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Striped_iceberg_at_J%C3%B6kuls%C3%A1rl%C3%B3n_Glacier_Lagoon.jpg?width=1280",
-     "tekija": "Snowolf",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Striped_iceberg_at_J%C3%B6kuls%C3%A1rl%C3%B3n_Glacier_Lagoon.jpg",
-     "selite": "Jäävuorten raidat syntyvät jäätikön sisään jääneestä tuhkasta ja mudasta.",
-     "leveys": 5568,
-     "korkeus": 3712,
-     "tarkistettu": true
-    }
-   ]
-  },
-  "Q777882": {
-   "nimi": "Seljalandsfoss",
-   "peruste": "sitelinks",
-   "kaupunki": "islanti",
-   "kaupunkiQ": "Q189",
-   "lat": 63.61583,
-   "lon": -19.99278,
-   "koko_m": 120,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "+60 Meter hoch ist der Wasservorhang des Seljalandsfoss. 01.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%2B60_Meter_hoch_ist_der_Wasservorhang_des_Seljalandsfoss._01.jpg?width=1280",
-     "tekija": "Holger Uwe Schmitt",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%2B60_Meter_hoch_ist_der_Wasservorhang_des_Seljalandsfoss._01.jpg",
-     "selite": "Seljalandsfossin taakse pääsee kävelemään putouksen ja kallion väliin.",
-     "leveys": 5906,
-     "korkeus": 4106,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "+60 Meter hoch ist der Wasservorhang des Seljalandsfoss. 02.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%2B60_Meter_hoch_ist_der_Wasservorhang_des_Seljalandsfoss._02.jpg?width=1280",
-     "tekija": "Holger Uwe Schmitt",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%2B60_Meter_hoch_ist_der_Wasservorhang_des_Seljalandsfoss._02.jpg",
-     "selite": "Putous laskeutuu vihreän kalliojyrkänteen reunalta.",
-     "leveys": 5906,
-     "korkeus": 3937,
-     "tarkistettu": true
-    }
-   ]
-  },
-  "Q179734": {
-   "nimi": "Vatnajökull",
-   "peruste": "sitelinks",
-   "kaupunki": "islanti",
-   "kaupunkiQ": "Q189",
-   "lat": 64.4,
-   "lon": -16.8,
-   "koko_m": 5000,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "Island Vatnajökull 02.JPG",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Island_Vatnaj%C3%B6kull_02.JPG?width=1280",
-     "tekija": "Zairon",
-     "lisenssi": "CC BY-SA 3.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Island_Vatnaj%C3%B6kull_02.JPG",
-     "selite": "Vatnajökull on Euroopan suurin jäätikkö, jonka reunalta laskee useita jäätikkökieliä.",
-     "leveys": 3444,
-     "korkeus": 2586,
-     "tarkistettu": true
-    }
-   ]
-  },
-  "Q210280": {
-   "nimi": "Dettifoss",
-   "peruste": "sitelinks",
-   "kaupunki": "islanti",
-   "kaupunkiQ": "Q189",
-   "lat": 65.82192,
-   "lon": -16.38817,
+   "lat": 64.14453,
+   "lon": -21.94263,
    "koko_m": 300,
    "kuvat": [
     {
      "jarjestys": 1,
-     "tiedosto": "100 Meter breit und 45 Meter hoch ist der Dettifoss. 01.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/100_Meter_breit_und_45_Meter_hoch_ist_der_Dettifoss._01.jpg?width=1280",
+     "tiedosto": "1992 wurde das Rathaus in Reykjavik eröffnet. 04.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/1992_wurde_das_Rathaus_in_Reykjavik_er%C3%B6ffnet._04.jpg?width=1280",
      "tekija": "Holger Uwe Schmitt",
      "lisenssi": "CC BY-SA 4.0",
      "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:100_Meter_breit_und_45_Meter_hoch_ist_der_Dettifoss._01.jpg",
-     "selite": "Dettifoss on Euroopan vesirikkaimpia putouksia ja syöksyy Jökulsá á Fjöllum -joesta kanjoniin.",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:1992_wurde_das_Rathaus_in_Reykjavik_er%C3%B6ffnet._04.jpg",
+     "selite": "Tjörnin on Reykjavíkin keskustan lampi, jonka reunalla seisoo kaupungintalo.",
      "leveys": 5906,
      "korkeus": 3937,
      "tarkistettu": true
-    }
-   ]
-  },
-  "Q1137629": {
-   "nimi": "Goðafoss",
-   "peruste": "sitelinks",
-   "kaupunki": "islanti",
-   "kaupunkiQ": "Q189",
-   "lat": 65.68313,
-   "lon": -17.55038,
-   "koko_m": 200,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "Goðafoss Island.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Go%C3%B0afoss_Island.jpg?width=1280",
-     "tekija": "Superbass",
-     "lisenssi": "CC BY-SA 3.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Go%C3%B0afoss_Island.jpg",
-     "selite": "Goðafoss eli jumalten putous on hevosenkengän muotoinen putous Pohjois-Islannissa.",
-     "leveys": 3888,
-     "korkeus": 2592,
-     "tarkistettu": true
     },
     {
      "jarjestys": 2,
-     "tiedosto": "1 Goðafoss aerial pano 2017.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/1_Go%C3%B0afoss_aerial_pano_2017.jpg?width=1280",
-     "tekija": "Chensiyuan",
+     "tiedosto": "201708 Reykjavik centre a01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/201708_Reykjavik_centre_a01.jpg?width=1280",
+     "tekija": "Ziko van Dijk",
      "lisenssi": "CC BY-SA 4.0",
      "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:1_Go%C3%B0afoss_aerial_pano_2017.jpg",
-     "selite": "Ilmasta näkyy putouksen kaareva reuna ja Skjálfandafljót-joen uoma.",
-     "leveys": 9606,
-     "korkeus": 4134,
-     "tarkistettu": true
-    }
-   ]
-  },
-  "Q1547402": {
-   "nimi": "Kirkjufell",
-   "peruste": "sitelinks",
-   "kaupunki": "islanti",
-   "kaupunkiQ": "Q189",
-   "lat": 64.9475,
-   "lon": -23.31083,
-   "koko_m": 600,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "Kirkjufell, Iceland (Unsplash LoKG7kKx7Zc).jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kirkjufell%2C_Iceland_(Unsplash_LoKG7kKx7Zc).jpg?width=1280",
-     "tekija": "Steven Diaz stevendiazphoto",
-     "lisenssi": "CC0",
-     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kirkjufell%2C_Iceland_(Unsplash_LoKG7kKx7Zc).jpg",
-     "selite": "Kirkjufell on Snæfellsnesin pyramidinmuotoinen vuori, jonka vierellä Kirkjufellsfoss-putoukset virtaavat.",
-     "leveys": 3463,
-     "korkeus": 2309,
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:201708_Reykjavik_centre_a01.jpg",
+     "selite": "Tjörnin-lammen rannalla seisova Fríkirkjan-kirkko.",
+     "leveys": 4000,
+     "korkeus": 3000,
      "tarkistettu": true
     },
     {
-     "jarjestys": 2,
-     "tiedosto": "1 grundarfjörður 2017 aerial pano.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/1_grundarfj%C3%B6r%C3%B0ur_2017_aerial_pano.jpg?width=1280",
-     "tekija": "Chensiyuan",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:1_grundarfj%C3%B6r%C3%B0ur_2017_aerial_pano.jpg",
-     "selite": "Vuori kohoaa Grundarfjörðurin kalastajakylän vieressä.",
-     "leveys": 11525,
-     "korkeus": 4714,
-     "tarkistettu": true
-    }
-   ]
-  },
-  "Q212051": {
-   "nimi": "Mývatn",
-   "peruste": "sitelinks",
-   "kaupunki": "islanti",
-   "kaupunkiQ": "Q189",
-   "lat": 65.6,
-   "lon": -17,
-   "koko_m": 3000,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "Myvatn-Skutustathagigar-26-2018-gje.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Myvatn-Skutustathagigar-26-2018-gje.jpg?width=1280",
-     "tekija": "Gerd Eichmann",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Myvatn-Skutustathagigar-26-2018-gje.jpg",
-     "selite": "Mývatn on tulivuoritoiminnan muovaama järvi, jonka ympärillä on pseudokraattereita ja laavamuodostelmia.",
-     "leveys": 5184,
-     "korkeus": 2537,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "+Der Mückensee im Norden Islands. 02.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%2BDer_M%C3%BCckensee_im_Norden_Islands._02.jpg?width=1280",
+     "jarjestys": 3,
+     "tiedosto": "1992 wurde das Rathaus in Reykjavik eröffnet. 06.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/1992_wurde_das_Rathaus_in_Reykjavik_er%C3%B6ffnet._06.jpg?width=1280",
      "tekija": "Holger Uwe Schmitt",
      "lisenssi": "CC BY-SA 4.0",
      "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%2BDer_M%C3%BCckensee_im_Norden_Islands._02.jpg",
-     "selite": "Järven rannat ja tulivuoren rinteet muodostavat Pohjois-Islannin tunnetuimman maiseman.",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:1992_wurde_das_Rathaus_in_Reykjavik_er%C3%B6ffnet._06.jpg",
+     "selite": "Joutsen uiskentelee Tjörninin vesillä keskustan rakennusten edessä.",
      "leveys": 5906,
-     "korkeus": 3937,
+     "korkeus": 3224,
      "tarkistettu": true
     }
    ]
   },
-  "Q184975": {
-   "nimi": "Hekla",
+  "Q116492": {
+   "nimi": "Viðey",
    "peruste": "sitelinks",
    "kaupunki": "islanti",
    "kaupunkiQ": "Q189",
-   "lat": 63.99222,
-   "lon": -19.66583,
-   "koko_m": 3000,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "2006-05-21-153901 Iceland Stórinúpur.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2006-05-21-153901_Iceland_St%C3%B3rin%C3%BApur.jpg?width=1280",
-     "tekija": "Hansueli Krapf",
-     "lisenssi": "CC BY-SA 3.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2006-05-21-153901_Iceland_St%C3%B3rin%C3%BApur.jpg",
-     "selite": "Hekla on Islannin tunnetuimpia tulivuoria, jota keskiajalla pidettiin helvetin porttina.",
-     "leveys": 2048,
-     "korkeus": 1536,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "2016-06-13 10-52-37 80.0 Iceland - Hellu Hella.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2016-06-13_10-52-37_80.0_Iceland_-_Hellu_Hella.jpg?width=1280",
-     "tekija": "Hansueli Krapf This file was uploaded with Commonist.",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2016-06-13_10-52-37_80.0_Iceland_-_Hellu_Hella.jpg",
-     "selite": "Lumihuippuinen kartiomainen tulivuori hallitsee Etelä-Islannin tasankoa.",
-     "leveys": 4288,
-     "korkeus": 2848,
-     "tarkistettu": true
-    }
-   ]
-  },
-  "Q178124": {
-   "nimi": "Surtsey",
-   "peruste": "UNESCO",
-   "kaupunki": "islanti",
-   "kaupunkiQ": "Q189",
-   "lat": 63.30403,
-   "lon": -20.60471,
+   "lat": 64.16609,
+   "lon": -21.85378,
    "koko_m": 1500,
    "kuvat": [
     {
      "jarjestys": 1,
-     "tiedosto": "Surtsey by Brian Gratwicke.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Surtsey_by_Brian_Gratwicke.jpg?width=1280",
-     "tekija": "Brian Gratwicke",
-     "lisenssi": "CC BY 2.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Surtsey_by_Brian_Gratwicke.jpg",
-     "selite": "Surtsey nousi merestä tulivuorenpurkauksessa 1960-luvulla, ja saarta on suojeltu luonnon tutkimusta varten.",
-     "leveys": 5142,
-     "korkeus": 3381,
+     "tiedosto": "Hill on the Viðey island with Reykjavík harbour.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hill_on_the_Vi%C3%B0ey_island_with_Reykjav%C3%ADk_harbour.jpg?width=1280",
+     "tekija": "Slawojar",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Hill_on_the_Vi%C3%B0ey_island_with_Reykjav%C3%ADk_harbour.jpg",
+     "selite": "Viðey on nurmikkoinen saari Reykjavíkin edustalla.",
+     "leveys": 3264,
+     "korkeus": 2448,
      "tarkistettu": true
     },
     {
      "jarjestys": 2,
-     "tiedosto": "Surstey Island2.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Surstey_Island2.jpg?width=1280",
-     "tekija": "CanonS2",
+     "tiedosto": "Viðey island shore.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Vi%C3%B0ey_island_shore.jpg?width=1280",
+     "tekija": "Slawojar",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Vi%C3%B0ey_island_shore.jpg",
+     "selite": "Viðeyn saaren kallioinen ranta avautuu kohti merta.",
+     "leveys": 3264,
+     "korkeus": 2448,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Panoramic view from the Viðey island.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Panoramic_view_from_the_Vi%C3%B0ey_island.jpg?width=1280",
+     "tekija": "Slawojar",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Panoramic_view_from_the_Vi%C3%B0ey_island.jpg",
+     "selite": "Viðeyn rannikkomaisemaa kohti Reykjavíkia ja Faxaflóa-lahtea.",
+     "leveys": 3232,
+     "korkeus": 1232,
+     "tarkistettu": true
+    }
+   ]
+  },
+  "Q116484": {
+   "nimi": "Imagine Peace Tower",
+   "peruste": "sitelinks",
+   "kaupunki": "islanti",
+   "kaupunkiQ": "Q189",
+   "lat": 64.16324,
+   "lon": -21.85947,
+   "koko_m": 200,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Bright Lights, Big City (3033276536).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bright_Lights%2C_Big_City_(3033276536).jpg?width=1280",
+     "tekija": "Helgi Halldórsson from Reykjavík, Iceland",
      "lisenssi": "CC BY-SA 2.0",
      "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Surstey_Island2.jpg",
-     "selite": "Saari on maailmanperintökohde, jonne pääsevät vain tutkijat.",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bright_Lights%2C_Big_City_(3033276536).jpg",
+     "selite": "Imagine Peace Tower lähettää valopylvään yötaivaalle Viðeyn saarelta Reykjavíkin yli.",
+     "leveys": 4272,
+     "korkeus": 2722,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Iceland - Peace Tower 40.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Iceland_-_Peace_Tower_40.jpg?width=1280",
+     "tekija": "McKay Savage from London, UK",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Iceland_-_Peace_Tower_40.jpg",
+     "selite": "Rauhantornin sininen valopylväs revontulten alla.",
+     "leveys": 2376,
+     "korkeus": 1584,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Iceland - Peace Tower 21 (6571373193).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Iceland_-_Peace_Tower_21_(6571373193).jpg?width=1280",
+     "tekija": "McKay Savage from London, UK",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Iceland_-_Peace_Tower_21_(6571373193).jpg",
+     "selite": "Valopylväät nousevat Viðeyn saaren muistomerkistä.",
+     "leveys": 2376,
+     "korkeus": 1584,
+     "tarkistettu": true
+    }
+   ]
+  },
+  "Q451045": {
+   "nimi": "Alþingishúsið",
+   "peruste": "sitelinks",
+   "kaupunki": "islanti",
+   "kaupunkiQ": "Q189",
+   "lat": 64.14667,
+   "lon": -21.94028,
+   "koko_m": 80,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Alþingishúsið.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Al%C3%BEingish%C3%BAsi%C3%B0.jpg?width=1280",
+     "tekija": "APK",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Al%C3%BEingish%C3%BAsi%C3%B0.jpg",
+     "selite": "Alþingishúsið on Islannin parlamentin tummasta basaltista rakennettu talo Austurvöllurin laidalla.",
+     "leveys": 2883,
+     "korkeus": 2618,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "201708 Reykjavík c24.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/201708_Reykjav%C3%ADk_c24.jpg?width=1280",
+     "tekija": "Ziko van Dijk",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:201708_Reykjav%C3%ADk_c24.jpg",
+     "selite": "Parlamenttitalon takaosa ja puutarha Reykjavíkin keskustassa.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  "Q1270853": {
+   "nimi": "Reykjavíkin tuomiokirkko",
+   "peruste": "sitelinks",
+   "kaupunki": "islanti",
+   "kaupunkiQ": "Q189",
+   "lat": 64.14666,
+   "lon": -21.93936,
+   "koko_m": 60,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Dómkirkjan í Reykjavík 2023.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/D%C3%B3mkirkjan_%C3%AD_Reykjav%C3%ADk_2023.jpg?width=1280",
+     "tekija": "APK",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:D%C3%B3mkirkjan_%C3%AD_Reykjav%C3%ADk_2023.jpg",
+     "selite": "Dómkirkjan on Reykjavíkin pieni valkoinen tuomiokirkko Austurvöllurin vieressä.",
+     "leveys": 2804,
+     "korkeus": 2619,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "+Der Sitz des Bischofs von Island. 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%2BDer_Sitz_des_Bischofs_von_Island._01.jpg?width=1280",
+     "tekija": "Holger Uwe Schmitt",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%2BDer_Sitz_des_Bischofs_von_Island._01.jpg",
+     "selite": "Tuomiokirkon torni ja viherkattoinen pitkä kirkkosali.",
+     "leveys": 5906,
+     "korkeus": 3855,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "201708 Reykjavík c26.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/201708_Reykjav%C3%ADk_c26.jpg?width=1280",
+     "tekija": "Ziko van Dijk",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:201708_Reykjav%C3%ADk_c26.jpg",
+     "selite": "Tuomiokirkko nurmikon ja kivetyn aukion reunalla.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  "Q794242": {
+   "nimi": "Landakotskirkja",
+   "peruste": "sitelinks",
+   "kaupunki": "islanti",
+   "kaupunkiQ": "Q189",
+   "lat": 64.14744,
+   "lon": -21.94855,
+   "koko_m": 80,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Basílica de Cristo el Rey, Reikiavik, Distrito de la Capital, Islandia, 2014-08-13, DD 093.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bas%C3%ADlica_de_Cristo_el_Rey%2C_Reikiavik%2C_Distrito_de_la_Capital%2C_Islandia%2C_2014-08-13%2C_DD_093.JPG?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bas%C3%ADlica_de_Cristo_el_Rey%2C_Reikiavik%2C_Distrito_de_la_Capital%2C_Islandia%2C_2014-08-13%2C_DD_093.JPG",
+     "selite": "Landakotskirkja on Reykjavíkin kookas roomalaiskatolinen kirkko Landakotin kukkulalla.",
+     "leveys": 4286,
+     "korkeus": 3541,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "10 Cathedral Reykjavik 270918.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/10_Cathedral_Reykjavik_270918.jpg?width=1280",
+     "tekija": "NAC",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:10_Cathedral_Reykjavik_270918.jpg",
+     "selite": "Landakotskirkjan tornimainen julkisivu ja kirkkorakennus puiston reunalla.",
      "leveys": 2048,
-     "korkeus": 1525,
+     "korkeus": 1365,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Basílica de Cristo el Rey, Reikiavik, Distrito de la Capital, Islandia, 2014-08-13, DD 091.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bas%C3%ADlica_de_Cristo_el_Rey%2C_Reikiavik%2C_Distrito_de_la_Capital%2C_Islandia%2C_2014-08-13%2C_DD_091.JPG?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bas%C3%ADlica_de_Cristo_el_Rey%2C_Reikiavik%2C_Distrito_de_la_Capital%2C_Islandia%2C_2014-08-13%2C_DD_091.JPG",
+     "selite": "Kirkon kapea torni kohoaa pystysuorana Reykjavíkin keskustan yllä.",
+     "leveys": 2928,
+     "korkeus": 5157,
+     "tarkistettu": true
+    }
+   ]
+  },
+  "Q151212": {
+   "nimi": "Laugardalsvöllur",
+   "peruste": "sitelinks",
+   "kaupunki": "islanti",
+   "kaupunkiQ": "Q189",
+   "lat": 64.14356,
+   "lon": -21.87897,
+   "koko_m": 250,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Laugardalsvöllur, Iceland's national football stadium.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Laugardalsv%C3%B6llur%2C_Iceland's_national_football_stadium.jpg?width=1280",
+     "tekija": "Quintin Soloviev",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Laugardalsv%C3%B6llur%2C_Iceland's_national_football_stadium.jpg",
+     "selite": "Laugardalsvöllur on Islannin jalkapallomaajoukkueen kotistadion Reykjavíkin Laugardalurissa.",
+     "leveys": 5280,
+     "korkeus": 3675,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Eimskipsvöllurinn, Iceland Football Stadium.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Eimskipsv%C3%B6llurinn%2C_Iceland_Football_Stadium.jpg?width=1280",
+     "tekija": "Lee Vilenski",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Eimskipsv%C3%B6llurinn%2C_Iceland_Football_Stadium.jpg",
+     "selite": "Stadionin katsomo ja sisäänkäynti Laugardalurin urheilualueella.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    }
+   ]
+  },
+  "Q626963": {
+   "nimi": "Islannin kansallismuseo",
+   "peruste": "sitelinks",
+   "kaupunki": "islanti",
+   "kaupunkiQ": "Q189",
+   "lat": 64.1419,
+   "lon": -21.94811,
+   "koko_m": 100,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Nationalmuseum 20120919 2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Nationalmuseum_20120919_2.jpg?width=1280",
+     "tekija": "Helmut Seger",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Nationalmuseum_20120919_2.jpg",
+     "selite": "Islannin kansallismuseo esittelee maan historiaa asutuksesta nykypäivään.",
+     "leveys": 1920,
+     "korkeus": 1080,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "20190623 NM 8620 (48470219387).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20190623_NM_8620_(48470219387).jpg?width=1280",
+     "tekija": "Ray Swi-hymn from Sijhih-Taipei, Taiwan",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20190623_NM_8620_(48470219387).jpg",
+     "selite": "Kansallismuseon rakennus puiden ja lippujen reunustamana.",
+     "leveys": 7952,
+     "korkeus": 5304,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Building of the National Museum in Reykjavík.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Building_of_the_National_Museum_in_Reykjav%C3%ADk.jpg?width=1280",
+     "tekija": "Szilas",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Building_of_the_National_Museum_in_Reykjav%C3%ADk.jpg",
+     "selite": "Museorakennuksen harmaa torniosa Reykjavíkin yliopiston lähellä.",
+     "leveys": 4136,
+     "korkeus": 2808,
+     "tarkistettu": true
+    }
+   ]
+  },
+  "Q749950": {
+   "nimi": "Elliðaár",
+   "peruste": "sitelinks",
+   "kaupunki": "islanti",
+   "kaupunkiQ": "Q189",
+   "lat": 64.11501,
+   "lon": -21.81074,
+   "koko_m": 400,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Ellirardalur11.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ellirardalur11.JPG?width=1280",
+     "tekija": "TommyBee",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ellirardalur11.JPG",
+     "selite": "Elliðaár virtaa koskina Reykjavíkin itäosan halki lupiinien reunustamana.",
+     "leveys": 3072,
+     "korkeus": 2304,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Ellidaár.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ellida%C3%A1r.JPG?width=1280",
+     "tekija": "Bromr",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ellida%C3%A1r.JPG",
+     "selite": "Elliðaár-joen vuolas virta kiemurtelee kosteikkoisen laakson läpi.",
+     "leveys": 3264,
+     "korkeus": 2448,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Ellirardalur10.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ellirardalur10.JPG?width=1280",
+     "tekija": "TommyBee",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ellirardalur10.JPG",
+     "selite": "Joen kosket ja kesäinen Elliðaárdalur kaupungin kupeessa.",
+     "leveys": 3072,
+     "korkeus": 2304,
+     "tarkistettu": true
+    }
+   ]
+  },
+  "Q565455": {
+   "nimi": "Islannin kansallisteatteri",
+   "peruste": "sitelinks",
+   "kaupunki": "islanti",
+   "kaupunkiQ": "Q189",
+   "lat": 64.14721,
+   "lon": -21.93163,
+   "koko_m": 100,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "2026-08-13-Reykjavik-Nationaltheater-1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2026-08-13-Reykjavik-Nationaltheater-1.jpg?width=1280",
+     "tekija": "Gunnar Klack",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2026-08-13-Reykjavik-Nationaltheater-1.jpg",
+     "selite": "Islannin kansallisteatterin harmaa, korkea julkisivu seisoo Reykjavíkin keskustassa Hverfisgatan varrella.",
+     "leveys": 4250,
+     "korkeus": 3500,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "2026-08-13-Reykjavik-Nationaltheater-2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2026-08-13-Reykjavik-Nationaltheater-2.jpg?width=1280",
+     "tekija": "Gunnar Klack",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2026-08-13-Reykjavik-Nationaltheater-2.jpg",
+     "selite": "Kansallisteatterin pylväsmäinen betonijulkisivu sivusta nähtynä.",
+     "leveys": 3500,
+     "korkeus": 3500,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "20190623 Harbor 8998 (48468737112).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20190623_Harbor_8998_(48468737112).jpg?width=1280",
+     "tekija": "Ray Swi-hymn from Sijhih-Taipei, Taiwan",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20190623_Harbor_8998_(48468737112).jpg",
+     "selite": "Kansallisteatteri kohoaa Arnarhóllin nurmikkomäen taustalla.",
+     "leveys": 7952,
+     "korkeus": 5304,
      "tarkistettu": true
     }
    ]
@@ -55267,7 +55372,11 @@
    "kaupunkiQ": "Q34374",
    "lat": 35.29796,
    "lon": 25.16316,
-   "koko_m": 300,
+   "aliakset": [
+    "Q9054457",
+    "Q1091243"
+   ],
+   "koko_m": 250,
    "kuvat": [
     {
      "jarjestys": 1,
@@ -55284,6 +55393,32 @@
     },
     {
      "jarjestys": 2,
+     "tiedosto": "Knossos - North Portico 02.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Knossos_-_North_Portico_02.jpg?width=1280",
+     "tekija": "Bernard Gagnon",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Knossos_-_North_Portico_02.jpg",
+     "selite": "Pohjoinen portiikki punaisine pylväineen on yksi palatsialueen tunnetuimmista näkymistä.",
+     "leveys": 3456,
+     "korkeus": 2592,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Knossos, Sept. 2019e.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Knossos%2C_Sept._2019e.jpg?width=1280",
+     "tekija": "Cayambe",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Knossos%2C_Sept._2019e.jpg",
+     "selite": "Palatsin uudelleenrakennetut punaiset pylväät kapenevat alaspäin, kuten minolaisessa arkkitehtuurissa.",
+     "leveys": 5975,
+     "korkeus": 3707,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 4,
      "tiedosto": "Knossos in Crete west court.jpg",
      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Knossos_in_Crete_west_court.jpg?width=1280",
      "tekija": "This Photo was taken by Wolfgang Moroder. Feel free to use my photos, but please mention me as the author and send me a message. This image is not in the public domain. Please respect the copyright protection. It may only be used according to the rules mentioned here. This specifically excludes use in social media, if applicable terms of the licenses listed here not appropriate. Please do not upload an updated image here without consultation with the Author. The author would like to make corrections only at his own source. This ensures that the changes are preserved.Please if you think that any changes should be required, please inform the author.Otherwise you can upload a new image with a new name. Please use one of the templates derivative or extract.",
@@ -55296,364 +55431,325 @@
      "tarkistettu": true
     },
     {
-     "jarjestys": 3,
+     "jarjestys": 5,
+     "tiedosto": "Theatral area Knossos palace.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Theatral_area_Knossos_palace.jpg?width=1280",
+     "tekija": "Jebulon",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Theatral_area_Knossos_palace.jpg",
+     "selite": "Teatterialueen leveät kiviportaat johtivat palatsin vanhaa kuninkaan tietä pitkin.",
+     "leveys": 4592,
+     "korkeus": 3056,
+     "tarkistettu": true
+    }
+   ]
+  },
+  "Q7798352": {
+   "nimi": "Knossoksen valtaistuinsali",
+   "peruste": "pelin nosto",
+   "kaupunki": "kreeta",
+   "kaupunkiQ": "Q34374",
+   "lat": 35.29804,
+   "lon": 25.16308,
+   "koko_m": 30,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Throne room of the Minoan Palace in Knossos.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Throne_room_of_the_Minoan_Palace_in_Knossos.jpg?width=1280",
+     "tekija": "Annatsach",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Throne_room_of_the_Minoan_Palace_in_Knossos.jpg",
+     "selite": "Valtaistuinsali on punaisin kukkamaalauksin koristeltu huone, jossa on kivinen istuin ja matala vesiastia.",
+     "leveys": 4512,
+     "korkeus": 3000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
      "tiedosto": "Throne of Minos at Knossos Palace.jpg",
      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Throne_of_Minos_at_Knossos_Palace.jpg?width=1280",
      "tekija": "Jebulon",
      "lisenssi": "CC0",
      "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
      "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Throne_of_Minos_at_Knossos_Palace.jpg",
-     "selite": "Valtaistuinsali on punaisin kukkamaalauksin koristeltu huone, jossa on kivinen istuin.",
+     "selite": "Kivinen valtaistuin seisoo seinää vasten ja sitä pidetään Euroopan vanhimpana säilyneenä valtaistuimena.",
      "leveys": 3056,
      "korkeus": 4090,
      "tarkistettu": true
-    },
+    }
+   ]
+  },
+  "Q1018106": {
+   "nimi": "Chersónisos",
+   "peruste": "sitelinks",
+   "kaupunki": "kreeta",
+   "kaupunkiQ": "Q34374",
+   "lat": 35.3078,
+   "lon": 25.3718,
+   "koko_m": 1500,
+   "kuvat": [
     {
-     "jarjestys": 4,
-     "tiedosto": "Ruins of the Minoan Palace in Knossos.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ruins_of_the_Minoan_Palace_in_Knossos.jpg?width=1280",
-     "tekija": "Annatsach",
+     "jarjestys": 1,
+     "tiedosto": "Λιμένας Χερσονήσου 0082.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%CE%9B%CE%B9%CE%BC%CE%AD%CE%BD%CE%B1%CF%82_%CE%A7%CE%B5%CF%81%CF%83%CE%BF%CE%BD%CE%AE%CF%83%CE%BF%CF%85_0082.jpg?width=1280",
+     "tekija": "C messier",
      "lisenssi": "CC BY-SA 4.0",
      "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ruins_of_the_Minoan_Palace_in_Knossos.jpg",
-     "selite": "Palatsin kivijäänteet ovat levittäytyneet männikön keskelle kukkulan rinteelle.",
-     "leveys": 4512,
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%CE%9B%CE%B9%CE%BC%CE%AD%CE%BD%CE%B1%CF%82_%CE%A7%CE%B5%CF%81%CF%83%CE%BF%CE%BD%CE%AE%CF%83%CE%BF%CF%85_0082.jpg",
+     "selite": "Chersónisoksen satamakaupunki on yksi Kreetan pohjoisrannikon vilkkaimpia lomakohteita.",
+     "leveys": 3936,
+     "korkeus": 2952,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Limenas Chersonisos19.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Limenas_Chersonisos19.jpg?width=1280",
+     "tekija": "User:Nikater",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Limenas_Chersonisos19.jpg",
+     "selite": "Vanhan sataman edustalla on pieni kallioinen saari, jonka päällä on muinaisia jäännöksiä.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Hersonissos night.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hersonissos_night.JPG?width=1280",
+     "tekija": "Luu",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Hersonissos_night.JPG",
+     "selite": "Satamakaupungin valot heijastuvat illalla lahden tyyneen veteen.",
+     "leveys": 3888,
+     "korkeus": 2592,
+     "tarkistettu": true
+    }
+   ]
+  },
+  "Q284463": {
+   "nimi": "Mália",
+   "peruste": "sitelinks",
+   "kaupunki": "kreeta",
+   "kaupunkiQ": "Q34374",
+   "lat": 35.28361,
+   "lon": 25.4625,
+   "koko_m": 1500,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Μάλια 0059.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%CE%9C%CE%AC%CE%BB%CE%B9%CE%B1_0059.jpg?width=1280",
+     "tekija": "C messier",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%CE%9C%CE%AC%CE%BB%CE%B9%CE%B1_0059.jpg",
+     "selite": "Mália on rantakaupunki Kreetan pohjoisrannikolla, ja sen lähellä on minolainen palatsialue.",
+     "leveys": 3516,
+     "korkeus": 2637,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Παραλία Ποταμός, Μάλια 0030.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%CE%A0%CE%B1%CF%81%CE%B1%CE%BB%CE%AF%CE%B1_%CE%A0%CE%BF%CF%84%CE%B1%CE%BC%CF%8C%CF%82%2C_%CE%9C%CE%AC%CE%BB%CE%B9%CE%B1_0030.jpg?width=1280",
+     "tekija": "C messier",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%CE%A0%CE%B1%CF%81%CE%B1%CE%BB%CE%AF%CE%B1_%CE%A0%CE%BF%CF%84%CE%B1%CE%BC%CF%8C%CF%82%2C_%CE%9C%CE%AC%CE%BB%CE%B9%CE%B1_0030.jpg",
+     "selite": "Pitkä hiekkaranta ja matala meri reunustavat Málian rannikkoa vuorten edessä.",
+     "leveys": 4000,
      "korkeus": 3000,
      "tarkistettu": true
     }
    ]
   },
-  "Q1128366": {
-   "nimi": "Samarián rotko",
-   "peruste": "pelin nosto",
+  "Q632418": {
+   "nimi": "Archánes",
+   "peruste": "sitelinks",
    "kaupunki": "kreeta",
    "kaupunkiQ": "Q34374",
-   "lat": 35.27111,
-   "lon": 23.96139,
-   "koko_m": 600,
+   "lat": 35.23667,
+   "lon": 25.16361,
+   "koko_m": 800,
    "kuvat": [
     {
      "jarjestys": 1,
-     "tiedosto": "Φαράγγι Σαμαριάς 3754.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%CE%A6%CE%B1%CF%81%CE%AC%CE%B3%CE%B3%CE%B9_%CE%A3%CE%B1%CE%BC%CE%B1%CF%81%CE%B9%CE%AC%CF%82_3754.jpg?width=1280",
+     "tiedosto": "Αρχάνες 7928.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%CE%91%CF%81%CF%87%CE%AC%CE%BD%CE%B5%CF%82_7928.jpg?width=1280",
      "tekija": "C messier",
      "lisenssi": "CC BY-SA 4.0",
      "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%CE%A6%CE%B1%CF%81%CE%AC%CE%B3%CE%B3%CE%B9_%CE%A3%CE%B1%CE%BC%CE%B1%CF%81%CE%B9%CE%AC%CF%82_3754.jpg",
-     "selite": "Samarián rotko on Euroopan pisimpiä rotkoja ja kansallispuisto Kreetan Valkoisissa vuorissa.",
-     "leveys": 4587,
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%CE%91%CF%81%CF%87%CE%AC%CE%BD%CE%B5%CF%82_7928.jpg",
+     "selite": "Archánes on viinitarhojen ympäröimä kaupunki Kreetan sisämaassa Iraklionin eteläpuolella.",
+     "leveys": 4203,
+     "korkeus": 3153,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Agios Nikolaos Archanes 915-6141.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Agios_Nikolaos_Archanes_915-6141.JPG?width=1280",
+     "tekija": "C messier",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Agios_Nikolaos_Archanes_915-6141.JPG",
+     "selite": "Agios Nikolaosin kaksilaivainen valkoinen kirkko kuuluu Archánesin vanhaan ytimeen.",
+     "leveys": 4608,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Agia Triada, Archanes 915-6221.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Agia_Triada%2C_Archanes_915-6221.JPG?width=1280",
+     "tekija": "C messier",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Agia_Triada%2C_Archanes_915-6221.JPG",
+     "selite": "Agia Triadan kirkossa on pyöreä apsis ja pieni kellotapuli.",
+     "leveys": 4608,
+     "korkeus": 3456,
+     "tarkistettu": true
+    }
+   ]
+  },
+  "Q473766": {
+   "nimi": "Amnisos",
+   "peruste": "sitelinks",
+   "kaupunki": "kreeta",
+   "kaupunkiQ": "Q34374",
+   "lat": 35.33083,
+   "lon": 25.20611,
+   "koko_m": 400,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Έπαυλη των Κρίνων - Αμνισός 3273.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%CE%88%CF%80%CE%B1%CF%85%CE%BB%CE%B7_%CF%84%CF%89%CE%BD_%CE%9A%CF%81%CE%AF%CE%BD%CF%89%CE%BD_-_%CE%91%CE%BC%CE%BD%CE%B9%CF%83%CF%8C%CF%82_3273.jpg?width=1280",
+     "tekija": "C messier",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%CE%88%CF%80%CE%B1%CF%85%CE%BB%CE%B7_%CF%84%CF%89%CE%BD_%CE%9A%CF%81%CE%AF%CE%BD%CF%89%CE%BD_-_%CE%91%CE%BC%CE%BD%CE%B9%CF%83%CF%8C%CF%82_3273.jpg",
+     "selite": "Amnisos oli Knossoksen satamakaupunki, ja Liljojen huvilan kiviperustukset ovat merenrannalla.",
+     "leveys": 4632,
      "korkeus": 3464,
      "tarkistettu": true
     },
     {
      "jarjestys": 2,
-     "tiedosto": "Samaria Gorge 09.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Samaria_Gorge_09.jpg?width=1280",
-     "tekija": "Lapplaender",
-     "lisenssi": "CC BY-SA 3.0 de",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Samaria_Gorge_09.jpg",
-     "selite": "Rotkon kapein kohta on vaeltajien suosima ja jyrkkien kallioseinien rajaama.",
-     "leveys": 3600,
-     "korkeus": 2400,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 3,
-     "tiedosto": "Samaria Gorge Summer of 2025 15.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Samaria_Gorge_Summer_of_2025_15.jpg?width=1280",
-     "tekija": "Wormcrane",
+     "tiedosto": "Amnisos 923.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Amnisos_923.JPG?width=1280",
+     "tekija": "C messier",
      "lisenssi": "CC BY-SA 4.0",
      "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Samaria_Gorge_Summer_of_2025_15.jpg",
-     "selite": "Korkeat kalliot nousevat kuivan joenuoman molemmin puolin.",
-     "leveys": 1856,
-     "korkeus": 4096,
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Amnisos_923.JPG",
+     "selite": "Muinaisen satamapaikan edustalla avautuu matala lahti ja Kreetan pohjoisrannikko.",
+     "leveys": 2560,
+     "korkeus": 1920,
      "tarkistettu": true
     }
    ]
   },
-  "Q249707": {
-   "nimi": "Faistos",
-   "peruste": "UNESCO",
+  "Q845105": {
+   "nimi": "Kastélli",
+   "peruste": "sitelinks",
    "kaupunki": "kreeta",
    "kaupunkiQ": "Q34374",
-   "lat": 35.05123,
-   "lon": 24.81427,
-   "koko_m": 200,
+   "lat": 35.20889,
+   "lon": 25.33778,
+   "koko_m": 800,
    "kuvat": [
     {
      "jarjestys": 1,
-     "tiedosto": "Central courtyard Phaistos palace Crete.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Central_courtyard_Phaistos_palace_Crete.jpg?width=1280",
-     "tekija": "Jebulon",
+     "tiedosto": "Kastelli - Iraklio - Crete.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kastelli_-_Iraklio_-_Crete.JPG?width=1280",
+     "tekija": "Schuppi",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kastelli_-_Iraklio_-_Crete.JPG",
+     "selite": "Kastélli on Pediadan tasangon kylä, jonka yllä aukeaa maisema oliivipuiden ja vuorten yli.",
+     "leveys": 5456,
+     "korkeus": 3632,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Kastelli Agios Georgios 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kastelli_Agios_Georgios_01.jpg?width=1280",
+     "tekija": "Olaf Tausch",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kastelli_Agios_Georgios_01.jpg",
+     "selite": "Agios Georgiosin valkoisessa kirkossa on punainen kupoli.",
+     "leveys": 4645,
+     "korkeus": 3482,
+     "tarkistettu": true
+    }
+   ]
+  },
+  "Q1021602": {
+   "nimi": "Néa Alikarnassós",
+   "peruste": "sitelinks",
+   "kaupunki": "kreeta",
+   "kaupunkiQ": "Q34374",
+   "lat": 35.32861,
+   "lon": 25.16444,
+   "koko_m": 1200,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Νέα Αλικαρνασσός 5799.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%CE%9D%CE%AD%CE%B1_%CE%91%CE%BB%CE%B9%CE%BA%CE%B1%CF%81%CE%BD%CE%B1%CF%83%CF%83%CF%8C%CF%82_5799.jpg?width=1280",
+     "tekija": "C messier",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%CE%9D%CE%AD%CE%B1_%CE%91%CE%BB%CE%B9%CE%BA%CE%B1%CF%81%CE%BD%CE%B1%CF%83%CF%83%CF%8C%CF%82_5799.jpg",
+     "selite": "Néa Alikarnassós on Iraklionin länsipuolella meren rannalla, ja kaupunginosan vieressä on lentokentän kiitotie.",
+     "leveys": 3720,
+     "korkeus": 2530,
+     "tarkistettu": true
+    }
+   ]
+  },
+  "Q1142384": {
+   "nimi": "Iraklionin kansainvälinen lentoasema",
+   "peruste": "sitelinks",
+   "kaupunki": "kreeta",
+   "kaupunkiQ": "Q34374",
+   "lat": 35.33972,
+   "lon": 25.18028,
+   "koko_m": 800,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Aéroport d'Héraklion en Crète.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/A%C3%A9roport_d'H%C3%A9raklion_en_Cr%C3%A8te.JPG?width=1280",
+     "tekija": "Benoît Prieur",
      "lisenssi": "CC0",
      "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Central_courtyard_Phaistos_palace_Crete.jpg",
-     "selite": "Faistos oli minolainen palatsi Messaran tasangon laidalla, ja sen taustalla näkyvät lumiset vuoret.",
-     "leveys": 4592,
-     "korkeus": 3056,
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:A%C3%A9roport_d'H%C3%A9raklion_en_Cr%C3%A8te.JPG",
+     "selite": "Nikos Kazantzakisin lentoasema on Kreetan vilkkain portti saarelle.",
+     "leveys": 3186,
+     "korkeus": 1916,
      "tarkistettu": true
     },
     {
      "jarjestys": 2,
-     "tiedosto": "Storage Magazines Phaistos Palace.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Storage_Magazines_Phaistos_Palace.jpg?width=1280",
-     "tekija": "Tholos History",
-     "lisenssi": "CC BY 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Storage_Magazines_Phaistos_Palace.jpg",
-     "selite": "Palatsin varastotilat olivat pitkiä käytäviä kivisten seinien välissä.",
-     "leveys": 4032,
-     "korkeus": 2268,
-     "tarkistettu": true
-    }
-   ]
-  },
-  "Q182299": {
-   "nimi": "Hania",
-   "peruste": "sitelinks",
-   "kaupunki": "kreeta",
-   "kaupunkiQ": "Q34374",
-   "lat": 35.51667,
-   "lon": 24.01667,
-   "koko_m": 500,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "Chania - Venetian harbor 3.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Chania_-_Venetian_harbor_3.jpg?width=1280",
-     "tekija": "Lapplaender",
-     "lisenssi": "CC BY-SA 3.0 de",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Chania_-_Venetian_harbor_3.jpg",
-     "selite": "Hanian vanha venetsialainen satama on kaupungin sydän, ja sen ympärillä on värikkäitä taloja.",
-     "leveys": 3600,
-     "korkeus": 2400,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "Kreta (GR), Chania, Alter Hafen, Leuchtturm -- 2023 -- 8527.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kreta_(GR)%2C_Chania%2C_Alter_Hafen%2C_Leuchtturm_--_2023_--_8527.jpg?width=1280",
-     "tekija": "Dietmar Rabich",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kreta_(GR)%2C_Chania%2C_Alter_Hafen%2C_Leuchtturm_--_2023_--_8527.jpg",
-     "selite": "Satamamuurin päässä seisoo vanha majakka.",
-     "leveys": 6556,
-     "korkeus": 4371,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 3,
-     "tiedosto": "Chania - Venetian harbor 2.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Chania_-_Venetian_harbor_2.jpg?width=1280",
-     "tekija": "Lapplaender",
-     "lisenssi": "CC BY-SA 3.0 de",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Chania_-_Venetian_harbor_2.jpg",
-     "selite": "Satamaa reunustavat vanhat venetsialaiset rakennukset.",
-     "leveys": 3600,
-     "korkeus": 2400,
-     "tarkistettu": true
-    }
-   ]
-  },
-  "Q916136": {
-   "nimi": "Spinalonga",
-   "peruste": "sitelinks",
-   "kaupunki": "kreeta",
-   "kaupunkiQ": "Q34374",
-   "lat": 35.297,
-   "lon": 25.738,
-   "koko_m": 500,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "20090620 Spinalogka Elounta panoramic view from the mountain.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20090620_Spinalogka_Elounta_panoramic_view_from_the_mountain.jpg?width=1280",
-     "tekija": "Ggia",
+     "tiedosto": "Port lotniczy - panoramio.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Port_lotniczy_-_panoramio.jpg?width=1280",
+     "tekija": "Mietek Ł",
      "lisenssi": "CC BY-SA 3.0",
      "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20090620_Spinalogka_Elounta_panoramic_view_from_the_mountain.jpg",
-     "selite": "Spinalonga on pieni linnoitussaari Eloundan lahdella, jolla toimi myöhemmin spitaalisten siirtola.",
-     "leveys": 4284,
-     "korkeus": 2844,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "Spinalonga island - panoramic view from Plaka.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Spinalonga_island_-_panoramic_view_from_Plaka.jpg?width=1280",
-     "tekija": "Alexey laa",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Spinalonga_island_-_panoramic_view_from_Plaka.jpg",
-     "selite": "Saari kohoaa matalana meren yllä Kreetan rannikon edustalla.",
-     "leveys": 10883,
-     "korkeus": 2758,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 3,
-     "tiedosto": "Σπιναλόγκα 0761.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%CE%A3%CF%80%CE%B9%CE%BD%CE%B1%CE%BB%CF%8C%CE%B3%CE%BA%CE%B1_0761.jpg?width=1280",
-     "tekija": "C messier",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%CE%A3%CF%80%CE%B9%CE%BD%CE%B1%CE%BB%CF%8C%CE%B3%CE%BA%CE%B1_0761.jpg",
-     "selite": "Saaren rapistuneet kivitalot ovat jäännöksiä asutuksesta.",
-     "leveys": 4279,
-     "korkeus": 3209,
-     "tarkistettu": true
-    }
-   ]
-  },
-  "Q1324824": {
-   "nimi": "Elafonisi",
-   "peruste": "sitelinks",
-   "kaupunki": "kreeta",
-   "kaupunkiQ": "Q34374",
-   "lat": 35.26917,
-   "lon": 23.5325,
-   "koko_m": 1000,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "Aerial view of Elafonisi beach separating Crete and Elafonisi Island in Greece.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aerial_view_of_Elafonisi_beach_separating_Crete_and_Elafonisi_Island_in_Greece.jpg?width=1280",
-     "tekija": "dronepicr",
-     "lisenssi": "CC BY 2.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aerial_view_of_Elafonisi_beach_separating_Crete_and_Elafonisi_Island_in_Greece.jpg",
-     "selite": "Elafonisi on Kreetan lounaisrannikon pieni saari, jonka hiekka on osin vaaleanpunaista.",
-     "leveys": 5444,
-     "korkeus": 3627,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "Ελαφονήσι 0976.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%CE%95%CE%BB%CE%B1%CF%86%CE%BF%CE%BD%CE%AE%CF%83%CE%B9_0976.jpg?width=1280",
-     "tekija": "C messier",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%CE%95%CE%BB%CE%B1%CF%86%CE%BF%CE%BD%CE%AE%CF%83%CE%B9_0976.jpg",
-     "selite": "Matala laguuni yhdistää saaren Kreetaan ja hiekkaranta jatkuu kaukaisuuteen.",
-     "leveys": 4632,
-     "korkeus": 3008,
-     "tarkistettu": true
-    }
-   ]
-  },
-  "Q603920": {
-   "nimi": "Iraklionin Koules-linnoitus",
-   "peruste": "sitelinks",
-   "kaupunki": "kreeta",
-   "kaupunkiQ": "Q34374",
-   "lat": 35.34457,
-   "lon": 25.13688,
-   "koko_m": 150,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "Venetian Fortress in Heraklion Crete NE side.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Venetian_Fortress_in_Heraklion_Crete_NE_side.jpg?width=1280",
-     "tekija": "This Photo was taken by Wolfgang Moroder. Feel free to use my photos, but please mention me as the author and send me a message. This image is not in the public domain. Please respect the copyright protection. It may only be used according to the rules mentioned here. This specifically excludes use in social media, if applicable terms of the licenses listed here not appropriate. Please do not upload an updated image here without consultation with the Author. The author would like to make corrections only at his own source. This ensures that the changes are preserved.Please if you think that any changes should be required, please inform the author.Otherwise you can upload a new image with a new name. Please use one of the templates derivative or extract.",
-     "lisenssi": "CC BY-SA 3.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Venetian_Fortress_in_Heraklion_Crete_NE_side.jpg",
-     "selite": "Koules on venetsialaisten rakentama linnoitus Iraklionin vanhan sataman suulla.",
-     "leveys": 7360,
-     "korkeus": 3982,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "Venetian Fortress of Koules in Heraklion, Crete 003.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Venetian_Fortress_of_Koules_in_Heraklion%2C_Crete_003.jpg?width=1280",
-     "tekija": "Moonik",
-     "lisenssi": "CC BY-SA 3.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Venetian_Fortress_of_Koules_in_Heraklion%2C_Crete_003.jpg",
-     "selite": "Linnoituksen edustalla on pieni kalastajasatama.",
-     "leveys": 4288,
-     "korkeus": 2848,
-     "tarkistettu": true
-    }
-   ]
-  },
-  "Q541696": {
-   "nimi": "Arkádin luostari",
-   "peruste": "sitelinks",
-   "kaupunki": "kreeta",
-   "kaupunkiQ": "Q34374",
-   "lat": 35.31,
-   "lon": 24.62944,
-   "koko_m": 120,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "Arkadi Monastery - Apses of the church.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Arkadi_Monastery_-_Apses_of_the_church.jpg?width=1280",
-     "tekija": "Bernard Gagnon",
-     "lisenssi": "CC BY-SA 3.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Arkadi_Monastery_-_Apses_of_the_church.jpg",
-     "selite": "Arkádin luostari on kreetalaisen vastarinnan symboli, ja sen kirkko on 1500-luvulta.",
-     "leveys": 2718,
-     "korkeus": 1945,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "Arkadi Monastery - Main bell.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Arkadi_Monastery_-_Main_bell.jpg?width=1280",
-     "tekija": "Bernard Gagnon",
-     "lisenssi": "CC BY-SA 3.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Arkadi_Monastery_-_Main_bell.jpg",
-     "selite": "Luostarin kellotorni kohoaa taivasta vasten.",
-     "leveys": 1907,
-     "korkeus": 2296,
-     "tarkistettu": true
-    }
-   ]
-  },
-  "Q636972": {
-   "nimi": "Iraklionin arkeologinen museo",
-   "peruste": "sitelinks",
-   "kaupunki": "kreeta",
-   "kaupunkiQ": "Q34374",
-   "lat": 35.33917,
-   "lon": 25.1375,
-   "koko_m": 80,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "Building of the Archaeological Museum of Heraklion, 061381.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Building_of_the_Archaeological_Museum_of_Heraklion%2C_061381.jpg?width=1280",
-     "tekija": "Zde",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Building_of_the_Archaeological_Museum_of_Heraklion%2C_061381.jpg",
-     "selite": "Iraklionin arkeologinen museo säilyttää maailman laajinta minolaisten esineiden kokoelmaa.",
-     "leveys": 2592,
-     "korkeus": 1868,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "Clay bull-shaped rhyton from Koumasa 2000-1900 BC (js).jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Clay_bull-shaped_rhyton_from_Koumasa_2000-1900_BC_(js).jpg?width=1280",
-     "tekija": "Jerzystrzelecki",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Clay_bull-shaped_rhyton_from_Koumasa_2000-1900_BC_(js).jpg",
-     "selite": "Kokoelmaan kuuluu esimerkiksi savinen härän muotoinen juomasoitin.",
-     "leveys": 3441,
-     "korkeus": 2294,
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Port_lotniczy_-_panoramio.jpg",
+     "selite": "Kentän terminaalirakennus sijaitsee aivan meren rannalla Iraklionin kupeessa.",
+     "leveys": 2977,
+     "korkeus": 2231,
      "tarkistettu": true
     }
    ]
