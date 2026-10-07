@@ -486,19 +486,9 @@ namespace Matkakirja.Natiivi
                 vasen = OpasTapit.Reuna + OpasTapit.Halkaisija + KuvaRako;
                 ala = h - (TapitAla + KuvaRako);
             }
-            // Korin köysi (LS1 KoriVasenKoysiNorm, 0–1 ruudusta; omistajan kuittaus 7.10.: iPadilla ja iPhonen vaakana köysi peitti
-            // linjan): linja köyden oikealle puolelle. Köysi keinuu, joten raja = oikea reuna + väli, ja vasen reuna vain kasvaa
-            // saman näkymän aikana (ei hypi).
-            var koysi = OpasSovitin.KoriVasenKoysiNorm;
-            // Varmistus (dd49fff5: AABB-projektio antoi xMax ~1 ja linja katosi ruudun ulkopuolelle): vain kapea vasen köysi kelpaa.
-            if (koysi.width > 0f && koysi.xMax <= 0.4f && koysi.width <= 0.2f && Juuri.panel != null)
-            {
-                float pw = Juuri.panel.visualTree.layout.width;
-                float koysiOikea = koysi.xMax * pw - Juuri.worldBound.xMin + KuvaRako;
-                metroKoysiVasen = Mathf.Max(metroKoysiVasen, koysiOikea);
-                vasen = Mathf.Max(vasen, Mathf.Round(metroKoysiVasen));
-            }
-            else metroKoysiVasen = 0f;
+            // iPad (omistaja 7.10. 13.3x): ihan vasempaan reunaan pienellä marginaalilla (turva-alueen ulkopuolelle), köyden
+            // vasemmalle puolelle; pystysuunnassa ennallaan.
+            if (LeveaRuutu && Juuri.panel != null) vasen = ReunaPt - UiKerros.Hae().Reunat(kerrosNro).x;
             metro.Kompakti = false;
             if (!LeveaRuutu && Juuri.panel != null) { PuhelinMetro(nayta, w, h); return; }
             metro.Paivita(nayta, yla, ala, Mathf.Max(h * 0.4f, OpasMetrolinja.VahinRivi * metro.Maara), LeveaRuutu ? w * 0.3f : w * 0.42f, vasen);
@@ -525,10 +515,10 @@ namespace Matkakirja.Natiivi
             }
             else
             {
-                // Island vasemmassa laidassa keskellä (vaaka, turva-alueen vasen reuna > 0): kaista ylänurkasta Islandin yläreunaan.
-                x = 14f; y = KulmaVaraPt;
-                float islandYla = t.x > 20f ? ph * 0.5f - IslandLeveysPt * 0.5f - KuvaRako : ph * 0.6f;
-                korkeus = Mathf.Max(0f, islandYla - y);
+                // Omistajan tarkennus 13.3x: vaakana heti Dynamic Islandin oikean reunan jälkeen (Island vasemmassa laidassa
+                // ~11–48 pt, turva-alueen vasen reuna > 0), ylhäällä; muuten ruudun laitaan.
+                x = t.x > 20f ? IslandOikeaPt + KuvaRako : 14f; y = 12f;
+                korkeus = Mathf.Min(ph * 0.5f, OpasMetrolinja.AsemaValiPt * metro.Maara);
                 var koysi = OpasSovitin.KoriVasenKoysiNorm;
                 float koysiVasen = koysi.width > 0f && koysi.xMax <= 0.4f ? koysi.xMin * pw : pw * 0.3f;
                 leveys = Mathf.Max(60f, koysiVasen - x - KuvaRako);
@@ -541,7 +531,9 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Pyöristetyn kulman vara (pt) ja Dynamic Islandin pituus (pt) iPhonella.</summary>
-        const float KulmaVaraPt = 22f, IslandLeveysPt = 126f;
+        /// <summary>iPadin metrolinjan marginaali ruudun vasemmasta reunasta (pt).</summary>
+        const float ReunaPt = 6f;
+        const float KulmaVaraPt = 22f, IslandLeveysPt = 126f, IslandOikeaPt = 48f;
 
         VisualElement esitysRivi;
         bool esitysNakyy;
