@@ -17,6 +17,9 @@ namespace Matkakirja.Natiivi
         public const float AsemaValiPt = AsemaVali;
         /// <summary>Kompakti (iPhone vaaka, omistaja 13.3x): vain nykyinen ja viereiset nimellä, muut pisteinä tiiviisti.</summary>
         public bool Kompakti;
+        /// <summary>iPhone pysty (omistaja 13.3x): Dynamic Islandin tasolla (rivin yläreuna &lt; IslandAlaY, paneelin pt) nimi enintään
+        /// IslandKapea pt; alemmat rivit koko leveydellä. 0 = ei rajausta.</summary>
+        public float IslandAlaY, IslandKapea;
         /// <summary>Pienin rivikorkeus (pt), jolla nimi mahtuu (apuri-koko + väli).</summary>
         public const float VahinRivi = 16f;
         /// <summary>Asemien määrä (viimeksi rakennettu).</summary>
@@ -131,6 +134,9 @@ namespace Matkakirja.Natiivi
                 // Kompaktissa muut kuin nykyinen ja viereiset ilman nimeä (piste jää).
                 var nd = Kompakti && taso < 0.5f ? DisplayStyle.None : DisplayStyle.Flex;
                 if (nimi.style.display != nd) nimi.style.display = nd;
+                float kapea = IslandAlaY > 0f && rivi.worldBound.yMin < IslandAlaY ? IslandKapea - 20f : -1f;
+                if (kapea > 0f) { if (nimi.style.maxWidth.value.value != kapea) nimi.style.maxWidth = kapea; }
+                else if (nimi.style.maxWidth.keyword != StyleKeyword.Null) nimi.style.maxWidth = StyleKeyword.Null;
                 bool lihava = taso > 1.5f;
                 if (rivi.ClassListContains("mk-metrolinja__asema--nykyinen") != lihava)
                 {

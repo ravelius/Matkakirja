@@ -5,7 +5,7 @@
  * iPhonella vasen yläkulma, iPadilla vasen reuna keskellä; korkeus enintään 40 %. Pitkä nimi yhdelle riville (…). VAIN --tk-*. */
 .mk-metrolinja {
     position: absolute;
-    padding: var(--tk-vali-s) var(--tk-vali-m) var(--tk-vali-s) var(--tk-vali-s);
+    padding: 0;   /* ei taustaa (omistaja 12.3x) → ei sisäreunusta; nimet saavat koko leveyden */
     justify-content: space-between;
     opacity: 0;
     transition-property: opacity;

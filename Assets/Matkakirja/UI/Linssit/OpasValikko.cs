@@ -489,7 +489,7 @@ namespace Matkakirja.Natiivi
             // iPad (omistaja 7.10. 13.3x): ihan vasempaan reunaan pienellä marginaalilla (turva-alueen ulkopuolelle), köyden
             // vasemmalle puolelle; pystysuunnassa ennallaan.
             if (LeveaRuutu && Juuri.panel != null) vasen = ReunaPt - UiKerros.Hae().Reunat(kerrosNro).x;
-            metro.Kompakti = false;
+            metro.Kompakti = false; metro.IslandAlaY = 0f;
             if (!LeveaRuutu && Juuri.panel != null) { PuhelinMetro(nayta, w, h); return; }
             metro.Paivita(nayta, yla, ala, Mathf.Max(h * 0.4f, OpasMetrolinja.VahinRivi * metro.Maara), LeveaRuutu ? w * 0.3f : w * 0.42f, vasen);
         }
@@ -510,7 +510,9 @@ namespace Matkakirja.Natiivi
             {
                 // Island ylhäällä keskellä (~126 × 37 pt, yläreuna ~11 pt): vasen ylänurkka Islandin tasolta alaspäin.
                 x = KulmaVaraPt; y = Mathf.Max(10f, t.y - 50f);
-                leveys = pw * 0.5f - IslandLeveysPt * 0.5f - KuvaRako - x;
+                // Islandin tasolla (yläreuna ~11, alareuna ~48 pt) nimi Islandin vasemmalle puolelle; alemmat rivit leveämpinä.
+                metro.IslandAlaY = 52f; metro.IslandKapea = pw * 0.5f - IslandLeveysPt * 0.5f - KuvaRako - x;
+                leveys = pw * 0.48f;
                 korkeus = Mathf.Min(ph * 0.4f, OpasMetrolinja.AsemaValiPt * metro.Maara);
             }
             else
