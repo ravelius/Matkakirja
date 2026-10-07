@@ -138,3 +138,15 @@ Yhteensä ~9–10 työpäivää; V1, V2 ja V3 voivat kulkea rinnakkain agenteill
 Ensimmäinen persoona on kevyempi (ei pelaajahahmoa, ei kontekstianimaatioita pelaajalle) ja immersiivinen; olan yli näyttää
 hiiviskelyn ja kiipeilyn paremmin ja on lajityypin tavallisin. Suositus pystyleikkeeseen: **olan yli** (hiiviskely ja kiipeily
 luettavampia ilman opastusta, mikä sopii linjaan "ei opeteta"). Päätös omistajalle.
+
+### Tarkennus 7.10. (Linnanrakentaja / Päätoimittaja): reitti lähteiden mukaan, kamera olan yli hyväksytty
+
+- **Omistaja hyväksyi (08.5x):** kamera olan yli (nuori Fogg ruudussa, Mixamo), vihjeet Pululta pyydettäessä + kevyt automaattinen
+  vihje ~3 min jumin jälkeen, ei tekstiä; ensin vain Olavinlinna.
+- **Reitti:** laituri → Vesiportin bastioni (piha y −5,6) → porttikäytävä 11,7 m (nousu ~2 m, 4 askelmaa) → pikkupiha (y −2,7) →
+  **keittiö pikkupihan eteläsiivessä** (purettu 1720-luvulla, mallinnetaan 1:1 ~59 m²; vanha keittiö käytössä kunnes uusi todennettu)
+  → Kirkkotorni pihan koillisnurkassa (kierreportaat lounaispuolella, **kappeli 3. kerroksessa**). Itäsiiven alakerta = läpikulku.
+- **Kappeli ikkunaton** (Aalto-arkisto 1910, opas 1923): Ø ~7,8 m, ristiholvi ~11,8 m, 8-aukkoinen ampumakäytävä ~10–10,5 m →
+  V5 valoarvoitus kynttilöillä, soihduilla tai ampuma-aukkojen valolla.
+- **V1 tehty koodina:** siirtoseppa/historia-h0 cf5a4379 (Ydin Seikkailu.Kavely + SeikkailuPelaaja, poikki kavely). Kosketustapit
+  täysillä 2D-arvoilla pyydetään Natiivi-UI:lta TAPPI-pohjalla.
