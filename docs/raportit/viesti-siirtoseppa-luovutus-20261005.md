@@ -373,7 +373,7 @@ Edellinen luovutus on `viesti-siirtoseppa-luovutus-20261002.md` (5.10. osiot 02.
 - **Todisteet:** `docs/raportit/kaappaukset/siirtoseppa-20261005/` (ei committoitu).
 
 **Huom:** levysiivous tyhjentää vanhoja lokit/*-app-kansioita (levy 97 %), joten käännä uudelleen tai käytä junan appia (lokit/juna-1.1.142-*).
-## TILA 7.10. 10.0x — V1-kävelyn ensimmäinen ajo, korjaus ea7a36e4
+## TILA 7.10. 09.5x — V1-kävelyn ensimmäinen ajo, korjaus ea7a36e4
 
 - V1-ajo (1499a256, iPhone + iPad, lokit/siirtoseppa-kavely1/): kävelygeometria latautuu (5 osaa, 20 merkkiä), pelaaja syntyy
   oikeaan kohtaan ja NUI:n tapit toimivat. Kaksi vikaa: (1) olan yli -kamera ei ottanut kuvaa, vaan lepokamera jäi päälle;
