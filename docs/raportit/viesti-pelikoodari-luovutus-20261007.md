@@ -1,4 +1,4 @@
-# Pelikoodarin luovutus 7.10.2026 (päivitetty klo 20.4x)
+# Pelikoodarin luovutus 7.10.2026 (päivitetty klo 23.1x)
 
 Uusi Pelikoodari: lue tämä, sitten docs/raportit/viesti-pelikoodari-aloitus.md. Edellinen: viesti-pelikoodari-luovutus-20261006.md.
 
@@ -21,6 +21,19 @@ Uusi Pelikoodari: lue tämä, sitten docs/raportit/viesti-pelikoodari-aloitus.md
    tarkista ankkurit tuotannon tekstistä → aineistot.js yksityiskohdat_polut + tests/opas-esittely.test.mjs.
 4b. PIDOSSA: #4168 oppaan turvakerrokset alaikäisille (alaikäistarkistus #4161 kohdat 1, 2, 3, 9; Julkaisija mergeää
    TF 162:n jälkeen). R2-sääntö opas-teksti-48h on jo voimassa. Kohdat 4–8 omistajalle.
+4d. KUSTANNUSSUUNNITELMA 8.10. (Päätoimittaja 23.0x, omistaja: "kustannus todella korkea kun muita pelaajia ei ole"):
+   (1) erottele testi/simu vs omistajan peli, (2) testi- ja kehitysliikenne EI Sonnetille (testiotsake → valmisvastaus
+   tai Haiku 5.5), (3) Kysyn valmiit kysymykset: vastaus kerran per kaupunki + kehoteversio, välimuistista kaikille,
+   (4) Pulun ~15 000 tokenin kehote: miksi joka kutsulla ~1 500 tokenin välimuistikirjoitus. Raportti: kk-kulu
+   jaoteltuna, arvio korjausten jälkeen, kustannus per pelikerta (1 000 pelaajaa × 10/kk). Toteutus junaan kohta kerrallaan.
+   LÖYDÖKSET 7.10. 23.1x: oppaan ei-testiliikenne 6.–7.10. tuli KOKONAAN Mac Studion verkosta (KV opas:p3:<pvm>:abc78e7d
+   = 182 ja 193; abc78e7d = tämän koneen julkisen IP:n tiiviste, rajat.js tiiviste; omistajan laitteet kotiverkossa
+   samalla IP:llä). Testiotsakkeelliset kutsut (testitunnus/kehittäjä) EIVÄT näy laskurissa mutta kutsuvat Sonnetia.
+   Pulu: KV pollo:k 279 (syyskuu), 52 (lokakuu). Worker-lokit (observability) sisältävät pyyntöjen otsakenimet
+   (requestHeaderNames: x-matkakirja-testi/-testitunnus) ja verkon (asOrganization) → luokittelu niistä; API
+   accounts/<id>/workers/observability/telemetry/query (view events/calculations). Pulun välimuisti: ainoa breakpoint
+   worker.js ~1861 system-lohkossa; cache_read 13 403 + cache_write 1 489 per kutsu → system-tekstin loppu (~1,5 k)
+   vaihtelee kutsuittain → siirrä vaihteleva osa breakpointin jälkeen (lisaohje/käyttäjäviesti).
 4c. OLAVINLINNAN ÄÄNET 8.10.: omistajan lupa enintään 10 000 krediittiä (turbo, yksi otto): ~30 huudahdusta (pelattavuusmalli
    3.6), kappelin 2 voudin repliikkiä ja CC0:sta puuttuvat tehosteet. Generoi VASTA kun tekstit valmiit ja Sisältökirjuri
    tarkistanut; kirjaa käyttö. Freesound-ehdokkaat: _tyo/freesound-olavinlinna/ehdokkaat.md (97 CC0).
