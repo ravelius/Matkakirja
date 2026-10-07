@@ -1135,6 +1135,22 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(l.KertojaKaynnissa(30.5), "uusinta käynnistyy valinnan jälkeen");
         }
 
+        // Historiamoottorin kävelytila (7.10.): KertojaPois kesken kierroksen → ei jaksotekstejä; ↻ palauttaa.
+        [Testi] static void KavelyPoistaaKertojanKierroksen()
+        {
+            string json = KeittioFixture.Replace("\"yleiskamera\": {",
+                "\"saapuminen\": {\"alku\": {\"atsimuutti\": 200, \"etaisyys\": 600, \"korkeus\": 8}, \"kesto\": 10, \"lyhyt\": 6, \"loppu\": \"kertoja\"},\n" +
+                "  \"kertoja\": {\"jaksot\": [{\"id\": \"j1\", \"teksti\": \"Yksi.\", \"kesto_s\": 30, \"kamera\": {\"kohde\": [0, 0, 0], \"atsimuutti\": 230, \"korkeus\": 10, \"etaisyys\": 230}}]},\n  \"yleiskamera\": {");
+            var l = new PoikkileikkausLinssi();
+            l.Avaa(DioraamaData.Lue(json), 0, false);
+            Oleta.Tosi(l.KertojaKaynnissa(12), "kierros käynnissä");
+            l.KertojaPois();
+            Oleta.Tosi(!l.KertojaKaynnissa(12) && !l.KertojaKaynnissa(20), "kävely → ei kierrosta");
+            Oleta.Tosi(l.NakymaHetkella(12, pysty: false).KertojaJakso < 0, "ei jaksotekstiä");
+            l.KertojaUudelleen(40);
+            Oleta.Tosi(l.KertojaKaynnissa(40.5), "uusinta palauttaa");
+        }
+
         // Jakson nimet ja kuva (Linnanrakentaja 6.10.2026): nimet[{teksti, paikka, alku_s, kesto_s?}], kuva{tiedosto, alku_s, ...}.
         [Testi] static void KertojanJaksonNimetJaKuva()
         {

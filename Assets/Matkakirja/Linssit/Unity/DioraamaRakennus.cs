@@ -189,7 +189,8 @@ namespace Matkakirja.Natiivi
                     paikat[kv + i] = new Vector3(osa.Paikat[i * 3], osa.Paikat[i * 3 + 1], osa.Paikat[i * 3 + 2]);
                     normaalit[kv + i] = osa.Normaalit != null && osa.Normaalit.Length >= (i + 1) * 3
                         ? new Vector3(osa.Normaalit[i * 3], osa.Normaalit[i * 3 + 1], osa.Normaalit[i * 3 + 2]) : Vector3.up;
-                    uvt[kv + i] = osa.Uv != null && osa.Uv.Length >= (i + 1) * 2 ? new Vector2(osa.Uv[i * 2], osa.Uv[i * 2 + 1]) : Vector2.zero;
+                    uvt[kv + i] = osa.Uv != null && osa.Uv.Length >= (i + 1) * 2 ? new Vector2(osa.Uv[i * 2], osa.Uv[i * 2 + 1])
+                        : LaatikkoUv(paikat[kv + i], normaalit[kv + i]) / ToistoPinnalle(rakennus, osa.Pinta);
                     // glTF:n UV:n origo on vasen yläkulma, Unityn tekstuurin vasen alakulma: atlas-UV käännetään (v → 1 − v).
                     if (uv1t != null) uv1t[kv + i] = new Vector2(osa.Uv1[i * 2], 1f - osa.Uv1[i * 2 + 1]);
                     varit[kv + i] = osa.Varit != null && osa.Varit.Length >= (i + 1) * 4
@@ -248,8 +249,29 @@ namespace Matkakirja.Natiivi
         public Material PinnanMateriaali(Rakennus rakennus, string pintaId) =>
             rakennus != null && NykyinenVarjostin() != null ? MateriaaliPinnalle(rakennus, pintaId) : null;
 
+        /// <summary>UV:ttömän glb:n (Linnanrakentajan kavely-osat: vain paikat, normaalit ja pintanimi) laatikkoprojektio metreinä:
+        /// hallitsevan normaaliakselin taso, kuten pintojen koko_m- ja toisto_m-kuviot olettavat.</summary>
+        static Vector2 LaatikkoUv(Vector3 p, Vector3 n)
+        {
+            float ax = Mathf.Abs(n.x), ay = Mathf.Abs(n.y), az = Mathf.Abs(n.z);
+            return ay >= ax && ay >= az ? new Vector2(p.x, p.z) : ax >= az ? new Vector2(p.z, p.y) : new Vector2(p.x, p.y);
+        }
+
+        /// <summary>Pinnan toisto_m (laatikko-UV:n jakaja, kuten Linnanrakentajan viennin UV:t: metrit / toisto); 1 jos puuttuu.</summary>
+        static float ToistoPinnalle(Rakennus rakennus, string pintaId)
+        {
+            if (pintaId == null || rakennus?.Pinnat == null) return 1f;
+            if (!rakennus.Pinnat.TryGetValue(pintaId, out var p) && !(PintaAliakset.TryGetValue(pintaId, out var a) && rakennus.Pinnat.TryGetValue(a, out p))) return 1f;
+            return p.ToistoU > 0 ? (float)p.ToistoU : 1f;
+        }
+
+        /// <summary>Kävelyosien pintanimet, joita rakennus.jsonin pinnoissa ei ole: lähin olemassa oleva pinta.</summary>
+        static readonly Dictionary<string, string> PintaAliakset = new Dictionary<string, string> { ["laasti"] = "rappaus", ["laatta"] = "kivilattia" };
+
         Material MateriaaliPinnalle(Rakennus rakennus, string pintaId)
         {
+            if (pintaId != null && rakennus?.Pinnat != null && !rakennus.Pinnat.ContainsKey(pintaId) && PintaAliakset.TryGetValue(pintaId, out var alias)
+                && rakennus.Pinnat.ContainsKey(alias)) pintaId = alias;
             viimeisinRakennus = rakennus;
             string avain = pintaId ?? "?";
             if (materiaalit.TryGetValue(avain, out var m)) return m;

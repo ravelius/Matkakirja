@@ -800,6 +800,7 @@ namespace Matkakirja.Natiivi
             }
             int tilaTormays = SeikkailuKavely.Ladattu ? 0 : SeikkailuPelaaja.LisaaTormaykset(nayttamo.transform);   // vara: tilameshit
             SeikkailuKavely.Leikkaukset(true);
+            linssi.KertojaPois();   // ei kertojan jaksotekstejä (vuosiluvut, nimet) kävellessä
             Vector3 alku; float yaw;
             var m = SeikkailuKavely.Data == null ? null : System.Linq.Enumerable.FirstOrDefault(SeikkailuKavely.Data.Merkit, x => x.Laji == "ovi" && (x.Osa == tid || x.Tunnus.StartsWith(tid, StringComparison.Ordinal)));
             if (m != null)
