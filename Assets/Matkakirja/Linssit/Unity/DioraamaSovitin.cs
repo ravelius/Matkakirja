@@ -626,6 +626,8 @@ namespace Matkakirja.Natiivi
         /// <summary>Linssi auki ja rakennus.json latautuu (nimiruutu näkyy jo silloin).</summary>
         public static bool RakennusLatautuu { get; private set; }
         public const string SaapumisAlarivi = "Savonlinna · 1475";
+        /// <summary>Nimiruudun alarivi: rakennus.jsonin alarivi (Kielletty kaupunki "Peking · 1873"), muuten SaapumisAlarivi.</summary>
+        public static string SaapumisAlariviNyt => !string.IsNullOrEmpty(Linssi?.Rakennus?.Alarivi) ? Linssi.Rakennus.Alarivi : SaapumisAlarivi;
         float kuoriOdotusAlku = -1f;
         /// <summary>Täyden tarkkuuden odotus: käsitellyt tilat ja hahmomallit (onnistuneet tai epäonnistuneet), lataushäiriön tunnistus.</summary>
         int tilojaKasitelty, hahmojaKasitelty, virheitaAlussa, viimeValmistuneita, osumiaAlussa, latauksiaAlussa;

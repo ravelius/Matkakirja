@@ -303,7 +303,7 @@ namespace Matkakirja.Natiivi
             nimiruudunNimi = Rakenne.Teksti("", "mk-astroavaus__nimi", nimiOtsikko);
             Kirjasimet.Aseta(nimiruudunNimi, Kirjasin.KoneLihava);
             Rakenne.El("mk-astroavaus__viiva", nimiOtsikko, PickingMode.Ignore);
-            Rakenne.Teksti(DioraamaSovitin.SaapumisAlarivi, "mk-astroavaus__lahde", nimiOtsikko);
+            nimiruudunAlarivi = Rakenne.Teksti(DioraamaSovitin.SaapumisAlarivi, "mk-astroavaus__lahde", nimiOtsikko);
             // LATAUSPALKKI (omistaja 5.10.2026 klo 12.5x) korvaa tekstit "Linna latautuu…" / "Vielä pieni hetki…": EDISTYMINEN-pohjan
             // ohut palkki alarivin alla tumman teeman väreillä. Palkki on alusta asti paikallaan läpinäkyvänä, joten otsikko ei liiku
             // sen ilmestyessä (Päätoimittaja 4.10.). Edistyminen: LatausEdistyminen (Siirtoseppä kytkee linnan latauksen).
@@ -410,7 +410,7 @@ namespace Matkakirja.Natiivi
         readonly Label avainsanaVuosi, avainsanaSanat;
         Avainsana avainsanaNyt;
         internal const float AvainsanaS = 4f; // myös DioraamaTimelinen avainsanaraidan klippien kesto
-        readonly Label nimiruudunNimi;
+        readonly Label nimiruudunNimi, nimiruudunAlarivi;
         readonly Latauspalkki latauspalkki;
         bool nimiruutuAuki, virheIlmoitettu;
         float nimiruutuAlku;
@@ -453,6 +453,8 @@ namespace Matkakirja.Natiivi
             bool odotus = testi || (DioraamaSovitin.SaapumisOdotus || DioraamaSovitin.RakennusLatautuu) && DioraamaSovitin.LatausVirhe == null;
             string nimi = testi && string.IsNullOrEmpty(DioraamaSovitin.SaapumisNimi) ? "OLAVINLINNA" : DioraamaSovitin.SaapumisNimi;
             if (odotus && nimiruudunNimi.text != nimi) nimiruudunNimi.text = nimi;
+            string alarivi = DioraamaSovitin.SaapumisAlariviNyt;
+            if (odotus && nimiruudunAlarivi.text != alarivi) nimiruudunAlarivi.text = alarivi;
             if (odotus && !nimiruutuAuki)
             {
                 nimiruutuAuki = true;
