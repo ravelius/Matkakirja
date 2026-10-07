@@ -22,6 +22,7 @@ import { dirname, join } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { kokoaAineisto } from './tee-opas-aineisto.mjs';
 import { PALLON_KAUPUNKIPISTEET } from '../../js/packs/maailmankartta-pallopisteet.js';
+import { OPAS_SALLITUT, sallittuId } from './sallitut.js';
 
 const TAMA = dirname(fileURLToPath(import.meta.url));
 const JUURI = join(TAMA, '..', '..');
@@ -187,8 +188,10 @@ export async function kokoaKuvalista({ sisalto = null, ulos = null, loki = conso
   const tulos = { skeema: 1, versio: new Date().toISOString().slice(0, 10), kohteet: {}, kaupungit: {}, aliakset: {} };
   for (const [id, a] of Object.entries(aineisto)) {
     const p = kaupungit.get(id);
-    // Ilman Wikidata-koordinaattia (Venetsia, Alpit, Islanti ym., Päätoimittaja 7.10.): pelin oma pallopiste.
-    const pp = PALLON_KAUPUNKIPISTEET[id] ?? null;
+    // Ilman Wikidata-koordinaattia (Venetsia, Kreeta, Islanti ym., Päätoimittaja 7.10.): ensin sallitun 3D-alueen keskus
+    // (LS2: hyvän 3D:n painopiste, sama kuin oppaan ja yövalojen), sitten pelin oma pallopiste.
+    const sp = OPAS_SALLITUT.sallitut.find((x) => x.id === id || x.id === sallittuId(a.nimi ?? '')) ?? null;
+    const pp = sp ?? PALLON_KAUPUNKIPISTEET[id] ?? null;
     tulos.kaupungit[id] = { nimi: a.nimi ?? p?.nimi ?? id, Q: p?.Q ?? null, lat: p?.lat ?? pp?.lat ?? null, lon: p?.lon ?? pp?.lon ?? null,
       kohteet: [], kuvat: [] };
   }
