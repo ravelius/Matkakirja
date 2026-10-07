@@ -9,6 +9,12 @@ Olet Natiiviseppä (Opus, high). Lue tämä osio, MEMORY.md ja natiiviseppa-tila
 Juna-SHA:t otetaan vain PÄÄTOIMITTAJAN suoralla kuittauksella; käännökset, simut ja iPad vain Julkaisijan NYT-viestillä.
 Tarkista ensin taustalla jatkuneiden ajojen tulokset (alla) ja kerro ne Julkaisijalle ja PÄÄTOIMITTAJALLE.
 
+## TILA 15.3x
+
+- **JUNA 161 -RUNKO 012faf6b6** (Päätoimittaja vahvisti 15.1x NUI 89d98b7e + Siirtoseppä 49888505, korvaa 227529f3; EI apuraha-kuvat
+  5e45d1da → 162). Testit 447/419/833, tarkista, unity iOS/Mac 0, editori ok. KÄÄNNÖS NYT + SIMULAATTORI NYT pyydetty Julkaisijalta.
+  LS2 pallojen klikkaus ja LS1:n kuitattavat vain jos ehtivät ennen koekäännöstä, muuten 162.
+
 ## TILA 15.2x
 
 - **JUNA 161 -RUNKO f3d710212** = ea1a60e73 + natiiviseppa/mac-ohjauslevy **73794c17** (DIAGNOOSI-lokirivi; Päätoimittaja: diagnostiikka
