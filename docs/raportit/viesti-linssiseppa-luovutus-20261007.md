@@ -143,3 +143,16 @@ NUI:n osa on `natiivi-ui/sallitut-157` 0f770be2. LS2:n lista on tiedostossa `pro
 - Käynnistyksen jälkeen (uudelleenajot):
   - esitys-giza a74031868 → käännös → stillit (ajo-esitys.sh) ja Giza v2 (ajo-pinta.sh helmaosio, ilman pintaa).
   - iPad-laitemittaus (ipad-ab.sh).
+
+## TILANNE 12.35 (uudelleenkäynnistyksen jälkeen)
+- Pariisin omistajasarja (3f2363479) on toimitettu Päätoimittajalle: `lokit/linssiseppa-esitys-20261007/omistajalle/`.
+  - Omistajan palaute 12.3x tehty esitys-gizaan: köydet pois iPhonen pystystä ja KierrosLahtee-tapahtuma. NUI teki metroanimaation (natiivi-ui/pariisi-esitys b657bb2d) ja ottaa stillit.
+- Omistaja 12.4x: opastus vain 1. kuumailmapallokyydillä (PlayerPrefs `matkakirja-pallo-opastus-kuultu`) ja avaus ennen kierrosta → esitys-giza fbf816e34.
+  - Testiskripti ajo-opastus.sh (Pariisi 1. → opastus, 2. → ei, nollaus → Praha → opastus), simuvuoro ~12.55.
+- Yövalojen paikkakorjaus junaan 161: `linssiseppa/yovalot-paikka-161` 47622521f (BUILD 159 + cherry-pick).
+  - Vika näkyi vain iPadin 1. ajossa (ensiasennus), toisella ajolla ei.
+  - Toistoajo ajo-yo-toisto.sh (NIMI=159, APP=natiiviseppa-app-159vie-19ef80cc; sitten korjattu).
+- torjunta-aika-160 jätetty pois (Päätoimittaja); haara säilyy.
+- iPad-mittaukset valmiit: yövalot ≈ 0 ms (+1 Mt), terävöitys ≈ 0, yö/päivä 16,7 ms. Ensiajon 58 ms oli laitteen tila.
+- Giza v2 (Sfinksi v2 + sävytetyt helmat), tileset `_tyo/linssiseppa/giza-v2-tiles`, ajo-helma.sh → simuvuoro ~13.0x.
+  - Kaukaa (1,4–5 km) leikkausmaski on karkea ja sivussa; ratkaisu etäisyysrajalla vielä tekemättä.
