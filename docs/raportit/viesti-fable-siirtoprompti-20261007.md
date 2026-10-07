@@ -40,6 +40,16 @@ Omistaja kirjautuu työpöytäsovellukseen uudella tilillä, avaa session kansio
    rooma-v1 kaksi kuvaa + json) poistoon omistajan luvalla; Volumetric Fog & Mist 2 valinnainen osto (järviusva).
 6. **PILVI:** krediitti loppui sami.reivinen-tililtä; pilveen vain rajatut tehtävät. CLI-tili tarkistetaan tilinvaihdossa.
 
+7. **LISÄYS 23.4x (vaihto nyt, omistajan päätös):** T7-simulaattorisarja LUOTU (omistaja antoi CoreSimulatorServicelle täyden levyn
+   oikeuden 23.3x; 26 laitetta, proto-3d/tyokalut/simusarja.sh + simusarja-udid.tsv) — työkalujen vaihto Natiivisepälle 8.10. aamulla
+   ennen junaa 164; vanhan sisäisen sarjan (105 Gt) ja T7:n vanhan kopion (112 Gt) poisto omistajan Run-rivillä vasta päivän käytön jälkeen.
+   Omistajan TF 163 -palaute (lento liian nopea ja äkkinäinen, narina liian kova, "mietin sopivan reitin") → LS1 linssiseppa/juna-164
+   4020d4b59 (lento ≥ 17 s, kääntö ≤ 10°/s, narina −12 dB, ei odotuslausetta valmiin esittelyn kaupungeissa); simukäännös
+   lokit/natiiviseppa-app-164koe-4020d4b5 → LS1:n 60 s video omistajan reitillä (linssi → Pariisi) KATSO ENNEN JUNAA 164 ja lähetä
+   omistajalle tauolla. Huom: 4020d4b59 on runko d78cd0e00:n päällä (puu = BUILD 163). Pelikoodari: kustannussuunnitelma (testit eivät
+   Sonnetille, Kysyn valmiit vastaukset välimuistiin, Pulun välimuistiraja) + raportti omistajalle 8.10. aamupäivällä. Haiku 5.5:
+   ei vaihtoa (#4176, #4178). Karttaseppä talvi2d ~02.30 → talvipaketti. Viikko 90 % klo 23.28.
+
 ## 3. Roolit (checkout /Users/Shared/Claude/…, malli, kärki vaihdossa)
 
 | Rooli | Checkout | Malli | Kärki ja tila vaihdossa |
