@@ -1,0 +1,1015 @@
+{
+  "sourceCommit": "9ec0418c925144f71ea5efa719e3e44a812bd2ea",
+  "sourceBlob": "cae06d7ce6c3f43f537ffa97175ac38674ebbbc5",
+  "source": "posti/sisaltokirjuri-codex-oppaan-kaupunkinakymat-sallitut-25-20261007.md",
+  "sourceReadInFull": true,
+  "date": "2026-10-07",
+  "batch": "04",
+  "cityIds": [
+    "granada",
+    "sevilla",
+    "bergen",
+    "oslo",
+    "bukarest"
+  ],
+  "acceptedImages": 5,
+  "style": "photorealistic-real-camera-look",
+  "tool": "built-in image_gen",
+  "productionDimensions": [
+    1536,
+    1024
+  ],
+  "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+  "reviewFirstThree": [
+    "granada",
+    "sevilla",
+    "bergen"
+  ],
+  "comparison": {
+    "file": "comparison-batch04.jpg",
+    "r2Key": "julisteet/herokoe/20261007/comparison-batch04.jpg",
+    "url": "https://media.matkakirja.app/julisteet/herokoe/20261007/comparison-batch04.jpg",
+    "sha256": "87103dcbcc3616dff74ff8984ff32ab3ec5470f0a2a2046a0f2aa314142b542f",
+    "bytes": 301007,
+    "http": 200,
+    "mime": "image/jpeg",
+    "cors": "https://matkakirja.app",
+    "byteExactReadback": true
+  },
+  "assets": [
+    {
+      "id": "granada",
+      "subject": "Alhambra ja sen linnakukkula",
+      "caption": "Alhambran palatsit ja Alcazaban linnoitus Granadan metsäisellä kukkulalla. Havainnekuva.",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "aiLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "kind": "havainnekuva",
+      "file": "hero-granada.png",
+      "preview480": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/granada/production/hero-granada-480.png",
+      "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/granada/production/original.png",
+      "nativeDimensions": [
+        1536,
+        1024
+      ],
+      "productionDimensions": [
+        1536,
+        1024
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "colourSpace": "sRGB",
+      "opaque": true,
+      "sha256": "d339748dbbcc55b9525ca4e0f5b0bf680e4798687410c2bc1c221a955d8a557c",
+      "generator": "built-in image_gen",
+      "generationPrompt": "Use case: photorealistic-natural\nAsset type: current-day European city guide hero, opaque landscape 1536x1024 pixels.\nPrimary request: Create a completely new photorealistic illustrative camera view of the Alhambra complex and its wooded fortress hill in Granada, Spain. Both supplied images are geometry references, not edit targets. Preserve the identifiable north-facing arrangement of tan Nasrid palace walls and rectangular Torre de Comares, low terracotta roofs, rectangular Renaissance Charles V palace behind, and the Alcazaba square crenellated towers farther right. The full long hilltop complex must dominate the frame, its actual buildings separate and proportionally plausible, not a single invented castle. Forested ravine below, small Granada white-and-tile rooftops near lower edge; distant mountain foothills restrained. No water.\nCamera: VAKIO, low elevated rooftop height roughly level with landmark midpoint, slightly above adjacent roofs, gently downward about 15 degrees. Not high aerial and not ground eye level. Show all towers and walls with generous sky above the highest tower; horizontal landscape 3:2. Zoom into the long fortress hill more than reference panorama, maintaining the referenced real arrangement.\nLight: clear natural late-afternoon light, muted believable ochre and green, real stone and leaf textures, ordinary camera exposure. No HDR, no painterly aesthetic, no illustration style, no miniature/diorama, no oversaturated colours, no fog fantasy. Current-day scene. Tiny incidental people only if visible. Absolutely no text, logos, readable signs, watermark, frame. Generate one image.",
+      "generationArgs": {
+        "prompt": "Use case: photorealistic-natural\nAsset type: current-day European city guide hero, opaque landscape 1536x1024 pixels.\nPrimary request: Create a completely new photorealistic illustrative camera view of the Alhambra complex and its wooded fortress hill in Granada, Spain. Both supplied images are geometry references, not edit targets. Preserve the identifiable north-facing arrangement of tan Nasrid palace walls and rectangular Torre de Comares, low terracotta roofs, rectangular Renaissance Charles V palace behind, and the Alcazaba square crenellated towers farther right. The full long hilltop complex must dominate the frame, its actual buildings separate and proportionally plausible, not a single invented castle. Forested ravine below, small Granada white-and-tile rooftops near lower edge; distant mountain foothills restrained. No water.\nCamera: VAKIO, low elevated rooftop height roughly level with landmark midpoint, slightly above adjacent roofs, gently downward about 15 degrees. Not high aerial and not ground eye level. Show all towers and walls with generous sky above the highest tower; horizontal landscape 3:2. Zoom into the long fortress hill more than reference panorama, maintaining the referenced real arrangement.\nLight: clear natural late-afternoon light, muted believable ochre and green, real stone and leaf textures, ordinary camera exposure. No HDR, no painterly aesthetic, no illustration style, no miniature/diorama, no oversaturated colours, no fog fantasy. Current-day scene. Tiny incidental people only if visible. Absolutely no text, logos, readable signs, watermark, frame. Generate one image.",
+        "referenced_image_paths": [
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/granada/references/ref-19120111f7428cb5.jpg",
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/granada/references/ref-dd4e27821a50ab2d.jpg"
+        ],
+        "transparent_background": false
+      },
+      "references": [
+        {
+          "nimi": "File:The whole Alhambra Granada Spain.jpg",
+          "tekija": "Jebulon",
+          "lisenssi": "CC0",
+          "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+          "sivu": "https://commons.wikimedia.org/wiki/File:The_whole_Alhambra_Granada_Spain.jpg",
+          "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8c/The_whole_Alhambra_Granada_Spain.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/The_whole_Alhambra_Granada_Spain.jpg/1280px-The_whole_Alhambra_Granada_Spain.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/granada/references/ref-19120111f7428cb5.jpg",
+          "originalDimensions": [
+            3563,
+            2008
+          ],
+          "downloadDimensions": [
+            1280,
+            721
+          ],
+          "sha256": "19120111f7428cb54f3dc87fd3cb7e1a80e8cf69da30beaf86417973aac75bf7",
+          "originalSha1": "644de4a2e0543f37df096b9bf34a29b98e852825",
+          "apiPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/granada/references/api.json",
+          "apiSha256": "392d8af103041e4ed57d516ecfbf1670f67092e027152c248629d7ab6a3e3056",
+          "categories": [
+            "Category:Alhambra in 2012",
+            "Category:August 2012 in the province of Granada",
+            "Category:Buildings in the province of Granada photographed in 2012",
+            "Category:CC-Zero",
+            "Category:Files with coordinates missing SDC location of creation",
+            "Category:Files with derivative versions",
+            "Category:Quality images",
+            "Category:Quality images by Jebulon",
+            "Category:Quality images missing SDC depicts",
+            "Category:Quality images of Alhambra",
+            "Category:Self-published work",
+            "Category:Spain photographs taken on 2012-08-04",
+            "Category:Taken with Sony DSLR-A550",
+            "Category:Views of Alhambra from Mirador de San Nicolás"
+          ],
+          "metadata": {
+            "GPSLatitude": "37.180988",
+            "GPSLongitude": "-3.592599",
+            "GPSMapDatum": "WGS-84",
+            "ImageDescription": "The whole Alhambra, as seen from the mirador San Nicolas, Granada, Spain.",
+            "DateTimeOriginal": "2012-08-04 20:23:17"
+          },
+          "viewed": true,
+          "visualReview": "Physically viewed; current exterior of intended subject; geometry and materials reviewed."
+        },
+        {
+          "nimi": "File:View of the Alhambra and Sierra Nevada - Granada - Spain.jpg",
+          "tekija": "Adam Jones, Ph.D.",
+          "lisenssi": "CC BY-SA 3.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:View_of_the_Alhambra_and_Sierra_Nevada_-_Granada_-_Spain.jpg",
+          "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/6/68/View_of_the_Alhambra_and_Sierra_Nevada_-_Granada_-_Spain.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/68/View_of_the_Alhambra_and_Sierra_Nevada_-_Granada_-_Spain.jpg/1280px-View_of_the_Alhambra_and_Sierra_Nevada_-_Granada_-_Spain.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/granada/references/ref-dd4e27821a50ab2d.jpg",
+          "originalDimensions": [
+            3456,
+            2304
+          ],
+          "downloadDimensions": [
+            1280,
+            853
+          ],
+          "sha256": "dd4e27821a50ab2d9c2d0a98e9f0c1199e5a416cf584fb8917aa03381f1e9d19",
+          "originalSha1": "1afb44a83e77c7cdf7ace0583e1199825034def7",
+          "apiPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/granada/references/api.json",
+          "apiSha256": "392d8af103041e4ed57d516ecfbf1670f67092e027152c248629d7ab6a3e3056",
+          "categories": [
+            "Category:Alhambra in 2010",
+            "Category:CC-BY-SA-3.0",
+            "Category:Cultural heritage monuments in Spain missing SDC depicts",
+            "Category:Cultural heritage monuments in Spain missing SDC location of creation",
+            "Category:Cultural heritage monuments in Spain with known IDs",
+            "Category:May 2010 in the province of Granada"
+          ],
+          "metadata": {
+            "ImageDescription": "View of the Alhambra and Sierra Nevada - Granada - Spain.",
+            "DateTimeOriginal": "2010-05-18 07:17:51"
+          },
+          "viewed": true,
+          "visualReview": "Physically viewed; current exterior of intended subject; geometry and materials reviewed."
+        }
+      ],
+      "viitteet": [
+        {
+          "nimi": "File:The whole Alhambra Granada Spain.jpg",
+          "tekija": "Jebulon",
+          "lisenssi": "CC0",
+          "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+          "sivu": "https://commons.wikimedia.org/wiki/File:The_whole_Alhambra_Granada_Spain.jpg"
+        },
+        {
+          "nimi": "File:View of the Alhambra and Sierra Nevada - Granada - Spain.jpg",
+          "tekija": "Adam Jones, Ph.D.",
+          "lisenssi": "CC BY-SA 3.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:View_of_the_Alhambra_and_Sierra_Nevada_-_Granada_-_Spain.jpg"
+        }
+      ],
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "camera": {
+        "preset": "VAKIO",
+        "actualAssessment": "Low elevated rooftop / landmark midpoint view, gentle downward angle, facade visible and sky above complete landmark.",
+        "requestedTiltDegreesApprox": 15,
+        "measuredCameraPose": false
+      },
+      "lighting": "Natural late afternoon",
+      "geometryQA": "Comares tower left, Charles V palace behind, Alcazaba towers right, wooded ravine below; complete crowns and sky; Granada roofs at bottom; no water.",
+      "geography": {
+        "center": [
+          37.17095,
+          -3.6179
+        ],
+        "subjectCoordinatesApprox": [
+          37.176,
+          -3.58814
+        ],
+        "radiusMetres": 20000,
+        "subjectDistanceApproxMetres": 2696,
+        "radiusPassApprox": true,
+        "distinction": "Subject coordinates are approximate planning coordinates; reference EXIF GPS, when present, locates photographer, not guaranteed landmark center. Generated image has no measured GPS or camera pose."
+      },
+      "qa": {
+        "referenceImagesPhysicallyViewed": true,
+        "nativePhysicallyViewed": true,
+        "finalPhysicallyViewed": true,
+        "preview480PhysicallyViewed": true,
+        "subjectIdentity": true,
+        "completeLandmarkFraming": true,
+        "noInventedWater": true,
+        "noLegibleTextLogosWatermarkFrame": true,
+        "peopleTinyOrAbsent": true,
+        "naturalPhotographicAppearance": true,
+        "currentDay": true
+      },
+      "status": "local_candidate_awaiting_root_review",
+      "publication": "Not uploaded, integrated, approved or published.",
+      "r2Key": "julisteet/herokoe/hero-granada.png",
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-granada.png",
+      "bytes": 2961248,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/granada/production/hero-granada.png",
+      "metadataText": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "parentQA": {
+        "reviewer": "root",
+        "sha256": "d339748dbbcc55b9525ca4e0f5b0bf680e4798687410c2bc1c221a955d8a557c",
+        "nativeViewed": true,
+        "referenceComparisonViewed": true,
+        "photorealism": true,
+        "recognisableLandmarkAndImmediateContext": true,
+        "technicalValidationAtUpload": true,
+        "approvedForDelivery": true,
+        "limitations": {},
+        "cameraDecision": "low elevated reference-anchored view accepted"
+      },
+      "editorAcceptance": "pending",
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "sevilla",
+      "subject": "Katedraali ja Giralda vanhassakaupungissa",
+      "caption": "Sevillan katedraali ja Giraldan kellotorni vanhankaupungin kattojen yllä. Havainnekuva.",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "aiLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "kind": "havainnekuva",
+      "file": "hero-sevilla.png",
+      "preview480": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/sevilla/production/hero-sevilla-480.png",
+      "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/sevilla/production/original.png",
+      "nativeDimensions": [
+        1536,
+        1024
+      ],
+      "productionDimensions": [
+        1536,
+        1024
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "colourSpace": "sRGB",
+      "opaque": true,
+      "sha256": "0c34d6e97e5f214cb0d30cc2913d44ab63cf8c4abda1ed9ad937118eb7a0eaed",
+      "generator": "built-in image_gen",
+      "generationPrompt": "Use case: photorealistic-natural\nAsset type: European current-day city guide hero, opaque PNG landscape 1536x1024 pixels.\nPrimary request: A completely new believable camera view of Seville Cathedral and La Giralda, Seville Spain. Both supplied photographs are geometry references, not edit targets. Giralda's tall square ochre Almohad shaft with repeated diamond relief and paired arch windows, Renaissance multi-stage belfry and weather vane, beside the sprawling lower Gothic cathedral with dense pinnacles, buttresses and lead/stone roof volumes. Preserve actual cathedral-tower connection and relative proportions from references. The cathedral and Giralda dominate foreground, with local street/old town white and ochre rooftops around; modern Seville behind. No invented water, no other cathedral or unrelated domed building dominating foreground. Fully visible top of Giralda with clear sky margin, complete cathedral mass readable.\nCamera: VAKIO low elevated rooftop viewpoint roughly Giralda midpoint, only gentle downward tilt about 15 degrees. Not high top-down aerial, not eye-level street view. Entire landmark fits naturally in 3:2 frame, tower rises through upper frame and facades visible.\nLight: bright clear late morning, natural restrained colour, real sand-coloured stone and city textures, ordinary full-frame photography. Avoid pink sunset copied from reference, HDR, oversaturation, cartoon, painterly, miniature or stylized rendering. No text, readable signs, logos, watermarks or border. People only tiny incidentals. Generate one new image.",
+      "generationArgs": {
+        "prompt": "Use case: photorealistic-natural\nAsset type: European current-day city guide hero, opaque PNG landscape 1536x1024 pixels.\nPrimary request: A completely new believable camera view of Seville Cathedral and La Giralda, Seville Spain. Both supplied photographs are geometry references, not edit targets. Giralda's tall square ochre Almohad shaft with repeated diamond relief and paired arch windows, Renaissance multi-stage belfry and weather vane, beside the sprawling lower Gothic cathedral with dense pinnacles, buttresses and lead/stone roof volumes. Preserve actual cathedral-tower connection and relative proportions from references. The cathedral and Giralda dominate foreground, with local street/old town white and ochre rooftops around; modern Seville behind. No invented water, no other cathedral or unrelated domed building dominating foreground. Fully visible top of Giralda with clear sky margin, complete cathedral mass readable.\nCamera: VAKIO low elevated rooftop viewpoint roughly Giralda midpoint, only gentle downward tilt about 15 degrees. Not high top-down aerial, not eye-level street view. Entire landmark fits naturally in 3:2 frame, tower rises through upper frame and facades visible.\nLight: bright clear late morning, natural restrained colour, real sand-coloured stone and city textures, ordinary full-frame photography. Avoid pink sunset copied from reference, HDR, oversaturation, cartoon, painterly, miniature or stylized rendering. No text, readable signs, logos, watermarks or border. People only tiny incidentals. Generate one new image.",
+        "referenced_image_paths": [
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/sevilla/references/ref-51da0be834ed638d.jpg",
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/sevilla/references/ref-e2fb14e12b59521b.jpg"
+        ],
+        "transparent_background": false
+      },
+      "references": [
+        {
+          "nimi": "File:Seville Cathedral (48911401451).jpg",
+          "tekija": "Paul VanDerWerf from Brunswick, Maine, USA",
+          "lisenssi": "CC BY 2.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Seville_Cathedral_(48911401451).jpg",
+          "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Seville_Cathedral_%2848911401451%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/Seville_Cathedral_%2848911401451%29.jpg/1280px-Seville_Cathedral_%2848911401451%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/sevilla/references/ref-51da0be834ed638d.jpg",
+          "originalDimensions": [
+            1620,
+            1080
+          ],
+          "downloadDimensions": [
+            1280,
+            853
+          ],
+          "sha256": "51da0be834ed638d9fb287a30a9b8a90e51553be3d2a32165d0b1219bbe24a47",
+          "originalSha1": "b25758442183c56fe37ec2b4ba93fbf5f673ea9d",
+          "apiPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/sevilla/references/api.json",
+          "apiSha256": "f467901ebd476cdc11280913068464d12833785f6e9eba7f6c1dfa40e04939ad",
+          "categories": [
+            "Category:Blue hour in Seville",
+            "Category:CC-BY-2.0",
+            "Category:Files with coordinates missing SDC location of creation",
+            "Category:Flickr images missing SDC inception",
+            "Category:Flickr images reviewed by FlickreviewR 2",
+            "Category:Images by Paul VanDerWerf",
+            "Category:October 2019 in Seville",
+            "Category:Spain photographs taken on 2019-10-02"
+          ],
+          "metadata": {
+            "GPSLatitude": "37.386006",
+            "GPSLongitude": "-5.992891",
+            "GPSMapDatum": "WGS-84",
+            "ImageDescription": "This is a photo of the Seville Cathedral.  It is constructed on the site of a mosque that after the Reconquista served as a church until it was demolished to make way for this cathedral.  The minaret survives and is the bell tower.  The Muslims in power when the city was takne by the Christians had planned to demolish the minaret but when threatened with mass slaughter by invaders relented.  Construction of the cathedral lasted from 1434 to 1517 and it is the largest Gothic structure in the world and the largest cathedral in the world.  Its size was intended to send a message  to the world of the wealth of the city.\nThe interior has the longest nave of any cathedral in Spain. The central nave rises to a height of 42 metres (138 ft). In the main body of the cathedral, the most noticeable features are the great boxlike choir loft, which fills the central portion of the nave, and the vast Gothic retablo of carved scenes from the life of Christ. This altarpiece was the lifetime work of a single craftsman, Pierre Dancart. \nThe builders preserved some elements from the ancient mosque. The mosque's sahn, that is, the courtyard for ablutions for the faithful to conduct their ritual cleansing before entering the prayer hall is known today as the Patio de los Naranjos. It contains a fountain and orange trees. However, the most well known is its minaret, which was converted into a bell tower known as La Giralda, and is now the city's most well-known symbol. \n\nThe Giralda is the bell tower of the Cathedral of Seville. Its height is 343 feet (105 m) and its square base is 23 feet (7.0 m) above sea level and 44 feet (13 m) long per side. It was converted into a bell tower for the cathedral after the Reconquista, although the topmost section dates from the Renaissance. [Wikipedia]",
+            "DateTimeOriginal": "2 October 2019, 08:18 (according to Exif data)"
+          },
+          "viewed": true,
+          "visualReview": "Physically viewed; current exterior of intended subject; geometry and materials reviewed."
+        },
+        {
+          "nimi": "File:La Giralda (51599631667).jpg",
+          "tekija": "Francisco Anzola from United States",
+          "lisenssi": "CC BY 2.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:La_Giralda_(51599631667).jpg",
+          "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/3/30/La_Giralda_%2851599631667%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/La_Giralda_%2851599631667%29.jpg/1280px-La_Giralda_%2851599631667%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/sevilla/references/ref-e2fb14e12b59521b.jpg",
+          "originalDimensions": [
+            5119,
+            3903
+          ],
+          "downloadDimensions": [
+            1280,
+            976
+          ],
+          "sha256": "e2fb14e12b59521ba48c599881e2c53a7845ad22b5fea046d10c458b6142d547",
+          "originalSha1": "b2fde714c7b3436c329fede9774cbb874029d702",
+          "apiPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/sevilla/references/api.json",
+          "apiSha256": "f467901ebd476cdc11280913068464d12833785f6e9eba7f6c1dfa40e04939ad",
+          "categories": [
+            "Category:CC-BY-2.0",
+            "Category:Files with coordinates missing SDC location of creation",
+            "Category:Flickr images reviewed by FlickreviewR 2",
+            "Category:Giralda",
+            "Category:Taken with Fujifilm X-S10"
+          ],
+          "metadata": {
+            "GPSLatitude": "37.386276",
+            "GPSLongitude": "-5.993299",
+            "GPSMapDatum": "WGS-84",
+            "ImageDescription": "La Giralda",
+            "DateTimeOriginal": "2021-10-16 22:52"
+          },
+          "viewed": true,
+          "visualReview": "Physically viewed; current exterior of intended subject; geometry and materials reviewed."
+        }
+      ],
+      "viitteet": [
+        {
+          "nimi": "File:Seville Cathedral (48911401451).jpg",
+          "tekija": "Paul VanDerWerf from Brunswick, Maine, USA",
+          "lisenssi": "CC BY 2.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Seville_Cathedral_(48911401451).jpg"
+        },
+        {
+          "nimi": "File:La Giralda (51599631667).jpg",
+          "tekija": "Francisco Anzola from United States",
+          "lisenssi": "CC BY 2.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:La_Giralda_(51599631667).jpg"
+        }
+      ],
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "camera": {
+        "preset": "VAKIO",
+        "actualAssessment": "Low elevated rooftop / landmark midpoint view, gentle downward angle, facade visible and sky above complete landmark.",
+        "requestedTiltDegreesApprox": 15,
+        "measuredCameraPose": false
+      },
+      "lighting": "Clear late morning",
+      "geometryQA": "Giralda square decorated shaft and stepped Renaissance bell tower; Gothic cathedral beside, fully framed tower top, dense surrounding old town roofs and streets. Rooftops partially obscure lowest wall, as elevated city context.",
+      "geography": {
+        "center": [
+          37.38158,
+          -5.99563
+        ],
+        "subjectCoordinatesApprox": [
+          37.38614,
+          -5.99254
+        ],
+        "radiusMetres": 10000,
+        "subjectDistanceApproxMetres": 576,
+        "radiusPassApprox": true,
+        "distinction": "Subject coordinates are approximate planning coordinates; reference EXIF GPS, when present, locates photographer, not guaranteed landmark center. Generated image has no measured GPS or camera pose."
+      },
+      "qa": {
+        "referenceImagesPhysicallyViewed": true,
+        "nativePhysicallyViewed": true,
+        "finalPhysicallyViewed": true,
+        "preview480PhysicallyViewed": true,
+        "subjectIdentity": true,
+        "completeLandmarkFraming": true,
+        "noInventedWater": true,
+        "noLegibleTextLogosWatermarkFrame": true,
+        "peopleTinyOrAbsent": true,
+        "naturalPhotographicAppearance": true,
+        "currentDay": true
+      },
+      "status": "local_candidate_awaiting_root_review",
+      "publication": "Not uploaded, integrated, approved or published.",
+      "r2Key": "julisteet/herokoe/hero-sevilla.png",
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-sevilla.png",
+      "bytes": 2631963,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/sevilla/production/hero-sevilla.png",
+      "metadataText": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "parentQA": {
+        "reviewer": "root",
+        "sha256": "0c34d6e97e5f214cb0d30cc2913d44ab63cf8c4abda1ed9ad937118eb7a0eaed",
+        "nativeViewed": true,
+        "referenceComparisonViewed": true,
+        "photorealism": true,
+        "recognisableLandmarkAndImmediateContext": true,
+        "technicalValidationAtUpload": true,
+        "approvedForDelivery": true,
+        "limitations": {},
+        "cameraDecision": "low elevated reference-anchored view accepted"
+      },
+      "editorAcceptance": "pending",
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "bergen",
+      "subject": "Bryggenin hansatalot Vågenin rannalla",
+      "caption": "Bryggenin värikkäät hansatalot Vågenin rannalla Bergenissä. Havainnekuva.",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "aiLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "kind": "havainnekuva",
+      "file": "hero-bergen.png",
+      "preview480": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/bergen/production/hero-bergen-480.png",
+      "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/bergen/production/original.png",
+      "nativeDimensions": [
+        1536,
+        1024
+      ],
+      "productionDimensions": [
+        1536,
+        1024
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "colourSpace": "sRGB",
+      "opaque": true,
+      "sha256": "fa9de9e4ca646f11067496d081b536f39d82473119d667885189de94754e96b5",
+      "generator": "built-in image_gen",
+      "generationPrompt": "Use case: photorealistic-natural\nAsset type: European guide city hero, contemporary, opaque 1536x1024 landscape.\nPrimary request: Entirely new camera-real view of the Bryggen historic Hanseatic waterfront wooden gabled houses along the eastern shore of Vågen in Bergen Norway. Both real photographs are references for waterfront facades, geometry, muted red ochre cream timber colours and actual street/quay relationships, not edit targets. Closely follow real narrow front gables and steep tiled roofs, continuous row with alley gaps, not invented matching townhouses. Row large and dominant foreground, full roof peaks framed and sky above. Public promenade and quay immediately in front, harbour water below only where it belongs; wooded Floyen slope and ordinary Bergen houses rise behind. A few small modern boats and tiny walkers, no grand cruise ship hiding row.\nCamera VAKIO: low elevated rooftop height at landmark midpoint, gently downward about 15 degrees, diagonally across quay to show fronts clearly. Not eye-level, not high aerial top-down. 3:2 frame, whole front row recognizable.\nLight: soft natural lightly overcast late-afternoon daylight with blue-grey water, natural photographic colours, real wood/weathering and Norwegian atmosphere. No HDR, exaggerated glow, pink fantasy skies, painterly/cartoon/miniature/diorama aesthetic. No readable text, signs, logos, watermark, border. One completely new image.\n\nMandatory: All shopfront fascias must be plain blank painted wood, no alphabetic lettering or numbers, including the yellow ochre central historic facade. No bus advertisements. Preserve the real sequence of paired white, ochre, red and brown gables from second reference, distinct narrow alley passages and row depth. Viewpoint above water at nearby roof midheight with visible quay paving and roofs; do not copy eye-level reference viewpoint.",
+      "generationArgs": {
+        "prompt": "Use case: photorealistic-natural\nAsset type: European guide city hero, contemporary, opaque 1536x1024 landscape.\nPrimary request: Entirely new camera-real view of the Bryggen historic Hanseatic waterfront wooden gabled houses along the eastern shore of Vågen in Bergen Norway. Both real photographs are references for waterfront facades, geometry, muted red ochre cream timber colours and actual street/quay relationships, not edit targets. Closely follow real narrow front gables and steep tiled roofs, continuous row with alley gaps, not invented matching townhouses. Row large and dominant foreground, full roof peaks framed and sky above. Public promenade and quay immediately in front, harbour water below only where it belongs; wooded Floyen slope and ordinary Bergen houses rise behind. A few small modern boats and tiny walkers, no grand cruise ship hiding row.\nCamera VAKIO: low elevated rooftop height at landmark midpoint, gently downward about 15 degrees, diagonally across quay to show fronts clearly. Not eye-level, not high aerial top-down. 3:2 frame, whole front row recognizable.\nLight: soft natural lightly overcast late-afternoon daylight with blue-grey water, natural photographic colours, real wood/weathering and Norwegian atmosphere. No HDR, exaggerated glow, pink fantasy skies, painterly/cartoon/miniature/diorama aesthetic. No readable text, signs, logos, watermark, border. One completely new image.\n\nMandatory: All shopfront fascias must be plain blank painted wood, no alphabetic lettering or numbers, including the yellow ochre central historic facade. No bus advertisements. Preserve the real sequence of paired white, ochre, red and brown gables from second reference, distinct narrow alley passages and row depth. Viewpoint above water at nearby roof midheight with visible quay paving and roofs; do not copy eye-level reference viewpoint.",
+        "referenced_image_paths": [
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/bergen/references/ref-b595bb3db817aeb9.jpg",
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/bergen/references/ref-86555e1728bc37bf.jpg"
+        ],
+        "transparent_background": false
+      },
+      "references": [
+        {
+          "nimi": "File:Bergen Bryggen 1017.jpg",
+          "tekija": "Anna Anichkova",
+          "lisenssi": "CC BY-SA 3.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Bergen_Bryggen_1017.jpg",
+          "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/8/82/Bergen_Bryggen_1017.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/Bergen_Bryggen_1017.jpg/1280px-Bergen_Bryggen_1017.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/bergen/references/ref-b595bb3db817aeb9.jpg",
+          "originalDimensions": [
+            3756,
+            2353
+          ],
+          "downloadDimensions": [
+            1280,
+            802
+          ],
+          "sha256": "b595bb3db817aeb99433d0c3db2d7f8c0c8b3cc23467e1dd8c034ff92bc0c6ef",
+          "originalSha1": "08d90a80267e90c32895f484ef1646af63d1b53f",
+          "apiPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/bergen/references/api.json",
+          "apiSha256": "6b0c492251bb9fea2dd94bebbe0697b58fb34a3f189dfb49f11038778da14855",
+          "categories": [
+            "Category:Bergen harbour",
+            "Category:CC-BY-SA-3.0",
+            "Category:Files with coordinates missing SDC location of creation",
+            "Category:Seaside views of Bryggen, Bergen",
+            "Category:Self-published work",
+            "Category:Taken with Canon EOS 400D"
+          ],
+          "metadata": {
+            "GPSLatitude": "60.397617",
+            "GPSLongitude": "5.322661",
+            "GPSMapDatum": "WGS-84",
+            "ImageDescription": "The harbour of the city of Bergen, Norway",
+            "DateTimeOriginal": "2007-08-24 15:32:54"
+          },
+          "viewed": true,
+          "visualReview": "Physically viewed; current exterior of intended subject; geometry and materials reviewed.",
+          "role": "Wide exterior waterfront layout and context"
+        },
+        {
+          "nimi": "File:2010-08-06 - Bergen - Bryggen von Vågen aus gesehen - panoramio.jpg",
+          "tekija": "giggel",
+          "lisenssi": "CC BY 3.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:2010-08-06_-_Bergen_-_Bryggen_von_V%C3%A5gen_aus_gesehen_-_panoramio.jpg",
+          "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/5/50/2010-08-06_-_Bergen_-_Bryggen_von_V%C3%A5gen_aus_gesehen_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/2010-08-06_-_Bergen_-_Bryggen_von_V%C3%A5gen_aus_gesehen_-_panoramio.jpg/1280px-2010-08-06_-_Bergen_-_Bryggen_von_V%C3%A5gen_aus_gesehen_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/bergen/references/ref-86555e1728bc37bf.jpg",
+          "originalDimensions": [
+            3397,
+            2191
+          ],
+          "downloadDimensions": [
+            1280,
+            826
+          ],
+          "sha256": "86555e1728bc37bf30670ac3944ea66966c89bb653f98dcfea34bf5cc57adc95",
+          "originalSha1": "5be2c557d85d4b9ab50f3b87eaef3d0e6bbafaef",
+          "apiPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/bergen/references/api.json",
+          "apiSha256": "6b0c492251bb9fea2dd94bebbe0697b58fb34a3f189dfb49f11038778da14855",
+          "categories": [
+            "Category:CC-BY-3.0",
+            "Category:Files with coordinates missing SDC location of creation",
+            "Category:Norway photographs taken on 2010-08-06",
+            "Category:Panoramio files uploaded by Panoramio upload bot",
+            "Category:Panoramio images reviewed by trusted users",
+            "Category:Photos from Panoramio",
+            "Category:Seaside views of Bryggen, Bergen"
+          ],
+          "metadata": {
+            "GPSLatitude": "60.396113",
+            "GPSLongitude": "5.320516",
+            "GPSMapDatum": "WGS-84",
+            "ImageDescription": "2010-08-06 - Bergen - Bryggen von Vågen aus gesehen",
+            "DateTimeOriginal": "Taken on 6 August 2010"
+          },
+          "viewed": true,
+          "visualReview": "Physically viewed; current exterior of intended subject; geometry and materials reviewed.",
+          "role": "Closer actual Bryggen waterfront gable-row identity and proportions"
+        }
+      ],
+      "viitteet": [
+        {
+          "nimi": "File:Bergen Bryggen 1017.jpg",
+          "tekija": "Anna Anichkova",
+          "lisenssi": "CC BY-SA 3.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Bergen_Bryggen_1017.jpg"
+        },
+        {
+          "nimi": "File:2010-08-06 - Bergen - Bryggen von Vågen aus gesehen - panoramio.jpg",
+          "tekija": "giggel",
+          "lisenssi": "CC BY 3.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:2010-08-06_-_Bergen_-_Bryggen_von_V%C3%A5gen_aus_gesehen_-_panoramio.jpg"
+        }
+      ],
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "camera": {
+        "preset": "VAKIO",
+        "actualAssessment": "Low elevated across harbour at roughly roof midheight, gentle downward view exposes roofs and promenade, main gables uncut vertically, no high top-down aerial.",
+        "requestedTiltDegreesApprox": 15,
+        "measuredCameraPose": false
+      },
+      "lighting": "Natural lightly overcast late-afternoon daylight",
+      "geometryQA": "Recognizable alternating gabled timber front row, paired white houses and ochre central facade, blank shop fascias, quay promenade directly before row and water below, visible roof depth from low elevated view. Row continues beyond edges; main central gables fully framed. Distant wooded slopes and houses illustrative rather than cadastral.",
+      "geography": {
+        "center": [
+          60.38804,
+          5.32924
+        ],
+        "subjectCoordinatesApprox": [
+          60.3976,
+          5.3249
+        ],
+        "radiusMetres": 10000,
+        "subjectDistanceApproxMetres": 1089,
+        "radiusPassApprox": true,
+        "distinction": "Subject coordinates are approximate planning coordinates; reference EXIF GPS, when present, locates photographer, not guaranteed landmark center. Generated image has no measured GPS or camera pose."
+      },
+      "qa": {
+        "referenceImagesPhysicallyViewed": true,
+        "nativePhysicallyViewed": true,
+        "finalPhysicallyViewed": true,
+        "preview480PhysicallyViewed": true,
+        "subjectIdentity": true,
+        "completeLandmarkFraming": true,
+        "noInventedWater": true,
+        "noLegibleTextLogosWatermarkFrame": true,
+        "peopleTinyOrAbsent": true,
+        "naturalPhotographicAppearance": true,
+        "currentDay": true
+      },
+      "status": "local_candidate_awaiting_root_review",
+      "publication": "Not uploaded, integrated, approved or published.",
+      "r2Key": "julisteet/herokoe/hero-bergen.png",
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-bergen.png",
+      "bytes": 2966245,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/bergen/production/hero-bergen.png",
+      "metadataText": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "parentQA": {
+        "reviewer": "root",
+        "sha256": "fa9de9e4ca646f11067496d081b536f39d82473119d667885189de94754e96b5",
+        "nativeViewed": true,
+        "referenceComparisonViewed": true,
+        "photorealism": true,
+        "recognisableLandmarkAndImmediateContext": true,
+        "technicalValidationAtUpload": true,
+        "approvedForDelivery": true,
+        "limitations": {},
+        "cameraDecision": "low elevated reference-anchored view accepted"
+      },
+      "editorAcceptance": "pending",
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "oslo",
+      "subject": "Oslon oopperatalo ja Bjørvikan ranta",
+      "caption": "Oslon oopperatalon valkoiset kattotasot Bjørvikan rannassa. Havainnekuva.",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "aiLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "kind": "havainnekuva",
+      "file": "hero-oslo.png",
+      "preview480": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/oslo/production/hero-oslo-480.png",
+      "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/oslo/production/original.png",
+      "nativeDimensions": [
+        1536,
+        1024
+      ],
+      "productionDimensions": [
+        1536,
+        1024
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "colourSpace": "sRGB",
+      "opaque": true,
+      "sha256": "3b1f9a58d1e1210d355225c20f84ae720d9ea234d03a799df9257e4967425072",
+      "generator": "built-in image_gen",
+      "generationPrompt": "Use case: photorealistic-natural\nAsset type: European guide city hero, contemporary, opaque 1536x1024 landscape.\nPrimary request: Entirely new photorealistic camera view of Oslo Opera House and its Bjørvika waterfront. Both real photographs are geometry references, not edit targets. Preserve actual Snøhetta building: broad sloping white stone accessible roof planes descend toward water, low angular glazed main volume, taller rectangular clad stage tower, white side slopes, actual platform and seawall. Whole opera building large and dominant in foreground, completely framed with sky above tower. Bjørvika water immediately in front/south, dense ordinary contemporary city buildings on land behind/north, far wooded ridge secondary. Do not create a free-standing island or moat around building; do not duplicate Opera structure or blend unrelated museums into it. Tiny people walking on real roof, no close crowds.\nCamera VAKIO: low elevated roof-height view approximately midpoint of main building, gently down about 15 degrees, from water-facing south-west so facade and roof geometry readable. Not high aerial/top-down or eye level. Landmark fully contained within landscape 3:2 frame.\nLight: natural lightly overcast Nordic midday, soft cloud sky, restrained white-grey stone and blue-grey glass/water. Real materials and camera exposure, no HDR, oversaturated skyline, painterly/cartoon/miniature/diorama aesthetic. No text, signs, logos, watermark, border. One entirely new image.\n\nReference roles: Image 1 is the wide water-facing overall mass/site layout anchor. Image 2 is supplementary exterior stage-tower aluminium panel and accessible roof detail, not a guide for full-view composition. Limit city background to immediately adjacent land buildings, keeping waterfront geometry from first reference; do not invent new skyline.",
+      "generationArgs": {
+        "prompt": "Use case: photorealistic-natural\nAsset type: European guide city hero, contemporary, opaque 1536x1024 landscape.\nPrimary request: Entirely new photorealistic camera view of Oslo Opera House and its Bjørvika waterfront. Both real photographs are geometry references, not edit targets. Preserve actual Snøhetta building: broad sloping white stone accessible roof planes descend toward water, low angular glazed main volume, taller rectangular clad stage tower, white side slopes, actual platform and seawall. Whole opera building large and dominant in foreground, completely framed with sky above tower. Bjørvika water immediately in front/south, dense ordinary contemporary city buildings on land behind/north, far wooded ridge secondary. Do not create a free-standing island or moat around building; do not duplicate Opera structure or blend unrelated museums into it. Tiny people walking on real roof, no close crowds.\nCamera VAKIO: low elevated roof-height view approximately midpoint of main building, gently down about 15 degrees, from water-facing south-west so facade and roof geometry readable. Not high aerial/top-down or eye level. Landmark fully contained within landscape 3:2 frame.\nLight: natural lightly overcast Nordic midday, soft cloud sky, restrained white-grey stone and blue-grey glass/water. Real materials and camera exposure, no HDR, oversaturated skyline, painterly/cartoon/miniature/diorama aesthetic. No text, signs, logos, watermark, border. One entirely new image.\n\nReference roles: Image 1 is the wide water-facing overall mass/site layout anchor. Image 2 is supplementary exterior stage-tower aluminium panel and accessible roof detail, not a guide for full-view composition. Limit city background to immediately adjacent land buildings, keeping waterfront geometry from first reference; do not invent new skyline.",
+        "referenced_image_paths": [
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/oslo/references/ref-cf9bc7c7f6b42d24.jpg",
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/oslo/references/ref-a01cd2b4b18ac7ad.jpg"
+        ],
+        "transparent_background": false
+      },
+      "references": [
+        {
+          "nimi": "File:Oslo Opera house (2015).jpg",
+          "tekija": "Beata May",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Oslo_Opera_house_(2015).jpg",
+          "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Oslo_Opera_house_%282015%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/Oslo_Opera_house_%282015%29.jpg/1280px-Oslo_Opera_house_%282015%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/oslo/references/ref-cf9bc7c7f6b42d24.jpg",
+          "originalDimensions": [
+            2634,
+            1301
+          ],
+          "downloadDimensions": [
+            1280,
+            632
+          ],
+          "sha256": "cf9bc7c7f6b42d241aeff46ed0fe10153bb18f0a4cacf8139dff634f881d609c",
+          "originalSha1": "9a6709da975dfafbf9495e8043e54a1be05bcdd0",
+          "apiPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/oslo/references/api.json",
+          "apiSha256": "96cb7421173cd9c1e062df7c29522eaf14e546096cb78f616cf8d2781620e29b",
+          "categories": [
+            "Category:CC-BY-SA-4.0",
+            "Category:Files with coordinates missing SDC location of creation",
+            "Category:March 2015 in Oslo",
+            "Category:Norway photographs taken on 2015-03-14",
+            "Category:Oslo Opera house",
+            "Category:Photos by Beata May",
+            "Category:Self-published work"
+          ],
+          "metadata": {
+            "GPSLatitude": "59.906944",
+            "GPSLongitude": "10.753611",
+            "GPSMapDatum": "WGS-84",
+            "ImageDescription": "Oslo Opera house",
+            "DateTimeOriginal": "2015-03-14 14:17:09"
+          },
+          "viewed": true,
+          "visualReview": "Physically viewed; current exterior of intended subject; geometry and materials reviewed.",
+          "role": "Wide exterior waterfront mass/site layout anchor"
+        },
+        {
+          "nimi": "File:2025-09-26-Operahuset-Oslo-1.jpg",
+          "tekija": "Gunnar Klack",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:2025-09-26-Operahuset-Oslo-1.jpg",
+          "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/d/da/2025-09-26-Operahuset-Oslo-1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/da/2025-09-26-Operahuset-Oslo-1.jpg/1280px-2025-09-26-Operahuset-Oslo-1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/oslo/references/ref-a01cd2b4b18ac7ad.jpg",
+          "originalDimensions": [
+            4314,
+            3300
+          ],
+          "downloadDimensions": [
+            1280,
+            979
+          ],
+          "sha256": "a01cd2b4b18ac7adbc068944560619c171396ce843f81db1ecd927516b78a3c2",
+          "originalSha1": "b1b64957a9dc3430cbb8bddcf2981683db0dae11",
+          "apiPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/oslo/references/api.json",
+          "apiSha256": "96cb7421173cd9c1e062df7c29522eaf14e546096cb78f616cf8d2781620e29b",
+          "categories": [
+            "Category:CC-BY-SA-4.0",
+            "Category:Oslo Opera house rooftop",
+            "Category:Photographs by Gunnar Klack 2025",
+            "Category:Self-published work",
+            "Category:September 2025 in Oslo"
+          ],
+          "metadata": {
+            "ImageDescription": "Opernhaus Oslo",
+            "DateTimeOriginal": "2025-09-26"
+          },
+          "viewed": true,
+          "visualReview": "Physically viewed; current exterior of intended subject; geometry and materials reviewed.",
+          "role": "Complementary exterior roof stage-tower metal panel detail; not full-view composition anchor"
+        }
+      ],
+      "viitteet": [
+        {
+          "nimi": "File:Oslo Opera house (2015).jpg",
+          "tekija": "Beata May",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Oslo_Opera_house_(2015).jpg"
+        },
+        {
+          "nimi": "File:2025-09-26-Operahuset-Oslo-1.jpg",
+          "tekija": "Gunnar Klack",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:2025-09-26-Operahuset-Oslo-1.jpg"
+        }
+      ],
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "camera": {
+        "preset": "VAKIO",
+        "actualAssessment": "Low elevated across-water view, broad roof planes visible and mild downward perspective. Approximately low roof height, no top-down aerial; exact 15-degree pose is not measurable.",
+        "requestedTiltDegreesApprox": 15,
+        "measuredCameraPose": false
+      },
+      "lighting": "Lightly overcast Nordic midday",
+      "geometryQA": "Wide water-facing photo anchors angular glass mass, sloping stone roofs and real quay; stage-tower roof-detail reference anchors aluminium panels. Main building complete; broad western plaza continues beyond left edge. Immediate background follows wide reference, no island moat.",
+      "geography": {
+        "center": [
+          59.91888,
+          10.74747
+        ],
+        "subjectCoordinatesApprox": [
+          59.9075,
+          10.75318
+        ],
+        "radiusMetres": 10000,
+        "subjectDistanceApproxMetres": 1305,
+        "radiusPassApprox": true,
+        "distinction": "Subject coordinates are approximate planning coordinates; reference EXIF GPS, when present, locates photographer, not guaranteed landmark center. Generated image has no measured GPS or camera pose."
+      },
+      "qa": {
+        "referenceImagesPhysicallyViewed": true,
+        "nativePhysicallyViewed": true,
+        "finalPhysicallyViewed": true,
+        "preview480PhysicallyViewed": true,
+        "subjectIdentity": true,
+        "completeLandmarkFraming": true,
+        "noInventedWater": true,
+        "noLegibleTextLogosWatermarkFrame": true,
+        "peopleTinyOrAbsent": true,
+        "naturalPhotographicAppearance": true,
+        "currentDay": true
+      },
+      "status": "local_candidate_awaiting_root_review",
+      "publication": "Not uploaded, integrated, approved or published.",
+      "r2Key": "julisteet/herokoe/hero-oslo.png",
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-oslo.png",
+      "bytes": 2375066,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/oslo/production/hero-oslo.png",
+      "metadataText": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "parentQA": {
+        "reviewer": "root",
+        "sha256": "3b1f9a58d1e1210d355225c20f84ae720d9ea234d03a799df9257e4967425072",
+        "nativeViewed": true,
+        "referenceComparisonViewed": true,
+        "photorealism": true,
+        "recognisableLandmarkAndImmediateContext": true,
+        "technicalValidationAtUpload": true,
+        "approvedForDelivery": true,
+        "limitations": {},
+        "cameraDecision": "low elevated reference-anchored view accepted"
+      },
+      "editorAcceptance": "pending",
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "bukarest",
+      "subject": "Romanian Ateneum ja sen edustan puisto",
+      "caption": "Romanian Athenaeum ja sen puutarha Bukarestissa. Havainnekuva.",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "aiLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "kind": "havainnekuva",
+      "file": "hero-bukarest.png",
+      "preview480": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/bukarest/production/hero-bukarest-480.png",
+      "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/bukarest/production/original.png",
+      "nativeDimensions": [
+        1536,
+        1024
+      ],
+      "productionDimensions": [
+        1536,
+        1024
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "colourSpace": "sRGB",
+      "opaque": true,
+      "sha256": "5cda83b796a6b5b402bf73dcd53b85063b8f3a450806fcac4613087260ff7a6a",
+      "generator": "built-in image_gen",
+      "generationPrompt": "Use case: photorealistic-natural\nAsset type: European city guide hero, current day, opaque 1536x1024 landscape.\nPrimary request: Create an entirely new photorealistic camera scene of the Romanian Athenaeum in central Bucharest. Both reference photographs show its real exterior geometry; use them as structure references, not edit targets. Cream circular drum with ornate round windows and low ribbed grey dome with finial, classical triangular pediment and exactly six tall Ionic columns, darker doorways and circular portrait mosaics beneath portico; low wings extend from rotunda. Preserve the proportions and elegant distinct actual building. Fully framed building large in foreground, sky margin above finial. Gardens with lawn, restrained flowerbeds, paths, conifers and deciduous trees directly in front; urban streets and ordinary Bucharest neighbouring buildings behind/edges. No water, no other monumental invented building.\nCamera: VAKIO low elevated rooftop-level viewpoint at approximately mid-building height, gently downward about 15 degrees, clear portico facade and garden below. Slight oblique angle to reveal circular dome and wing volume while front columns clearly count six. Not eye-level or top-down aerial. Main building fills substantial middle foreground; modern city context remains secondary.\nLight: soft clear morning sunlight, restrained pale cream and grey stone, natural greens, camera-real materials, fine architectural detail. No HDR, cartoon, painterly, diorama, unrealistic glow, excessive saturation. Modern contemporary scene, tiny incidental pedestrians only. No text even architectural inscription, no legible signs, logos, watermark, border. Generate one new image.\nMandatory corrections: The entire frieze immediately below triangular pediment must be plain blank smooth stone without ANY inscription or letter shapes. Also no signage anywhere. Leave at least 80 pixels of empty sky ABOVE the topmost dome finial. Widen framing slightly so building is complete with comfortable margins. Generate from scratch using only real reference photographs; do not modify previous candidate.",
+      "generationArgs": {
+        "prompt": "Use case: photorealistic-natural\nAsset type: European city guide hero, current day, opaque 1536x1024 landscape.\nPrimary request: Create an entirely new photorealistic camera scene of the Romanian Athenaeum in central Bucharest. Both reference photographs show its real exterior geometry; use them as structure references, not edit targets. Cream circular drum with ornate round windows and low ribbed grey dome with finial, classical triangular pediment and exactly six tall Ionic columns, darker doorways and circular portrait mosaics beneath portico; low wings extend from rotunda. Preserve the proportions and elegant distinct actual building. Fully framed building large in foreground, sky margin above finial. Gardens with lawn, restrained flowerbeds, paths, conifers and deciduous trees directly in front; urban streets and ordinary Bucharest neighbouring buildings behind/edges. No water, no other monumental invented building.\nCamera: VAKIO low elevated rooftop-level viewpoint at approximately mid-building height, gently downward about 15 degrees, clear portico facade and garden below. Slight oblique angle to reveal circular dome and wing volume while front columns clearly count six. Not eye-level or top-down aerial. Main building fills substantial middle foreground; modern city context remains secondary.\nLight: soft clear morning sunlight, restrained pale cream and grey stone, natural greens, camera-real materials, fine architectural detail. No HDR, cartoon, painterly, diorama, unrealistic glow, excessive saturation. Modern contemporary scene, tiny incidental pedestrians only. No text even architectural inscription, no legible signs, logos, watermark, border. Generate one new image.\nMandatory corrections: The entire frieze immediately below triangular pediment must be plain blank smooth stone without ANY inscription or letter shapes. Also no signage anywhere. Leave at least 80 pixels of empty sky ABOVE the topmost dome finial. Widen framing slightly so building is complete with comfortable margins. Generate from scratch using only real reference photographs; do not modify previous candidate.",
+        "referenced_image_paths": [
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/bukarest/references/ref-7d5b364b04993bea.jpg",
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/bukarest/references/ref-b154069e2ddcf575.jpg"
+        ],
+        "transparent_background": false
+      },
+      "references": [
+        {
+          "nimi": "File:2017 Romanian Athenaeum.jpg",
+          "tekija": "Babu",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:2017_Romanian_Athenaeum.jpg",
+          "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/3/37/2017_Romanian_Athenaeum.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/2017_Romanian_Athenaeum.jpg/1280px-2017_Romanian_Athenaeum.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/bukarest/references/ref-7d5b364b04993bea.jpg",
+          "originalDimensions": [
+            1287,
+            724
+          ],
+          "downloadDimensions": [
+            1280,
+            720
+          ],
+          "sha256": "7d5b364b04993bea3f5ac7f62436c05d81732ce7483f64eac8d764ced405e7a9",
+          "originalSha1": "a7268cebf1277685c8ee1c69bde17d40521e1ae9",
+          "apiPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/bukarest/references/api.json",
+          "apiSha256": "500df440f7b152bb35dcbc58a2e655a53d8a7f803b975a6da2a992cc147b2ba7",
+          "categories": [
+            "Category:April 2017 in Bucharest",
+            "Category:CC-BY-SA-4.0",
+            "Category:Romania photographs taken on 2017-04-16",
+            "Category:Romanian Athenaeum",
+            "Category:Self-published work"
+          ],
+          "metadata": {
+            "ImageDescription": "Ateneu Român, aprilie 2017",
+            "DateTimeOriginal": "Taken on 16 April 2017"
+          },
+          "viewed": true,
+          "visualReview": "Physically viewed; current exterior of intended subject; geometry and materials reviewed."
+        },
+        {
+          "nimi": "File:Bucuresti Ateneum 2.jpg",
+          "tekija": "Andrzej Otrębski",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Bucuresti_Ateneum_2.jpg",
+          "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Bucuresti_Ateneum_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/Bucuresti_Ateneum_2.jpg/1280px-Bucuresti_Ateneum_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/bukarest/references/ref-b154069e2ddcf575.jpg",
+          "originalDimensions": [
+            6000,
+            4000
+          ],
+          "downloadDimensions": [
+            1280,
+            853
+          ],
+          "sha256": "b154069e2ddcf5758a10a345827d2497ddc422fa959af12588cd1b0ab0313d3c",
+          "originalSha1": "1e28d388a3e6c87a2e51456968764684963b6467",
+          "apiPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/bukarest/references/api.json",
+          "apiSha256": "500df440f7b152bb35dcbc58a2e655a53d8a7f803b975a6da2a992cc147b2ba7",
+          "categories": [
+            "Category:CC-BY-SA-4.0",
+            "Category:Exterior of the Romanian Athenaeum",
+            "Category:March 2024 in Bucharest",
+            "Category:Photos by User:Andrzej O",
+            "Category:Self-published work"
+          ],
+          "metadata": {
+            "ImageDescription": "Bucharest - Romanian Athenaeum",
+            "DateTimeOriginal": "2024-03-16 10:22:06"
+          },
+          "viewed": true,
+          "visualReview": "Physically viewed; current exterior of intended subject; geometry and materials reviewed."
+        }
+      ],
+      "viitteet": [
+        {
+          "nimi": "File:2017 Romanian Athenaeum.jpg",
+          "tekija": "Babu",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:2017_Romanian_Athenaeum.jpg"
+        },
+        {
+          "nimi": "File:Bucuresti Ateneum 2.jpg",
+          "tekija": "Andrzej Otrębski",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Bucuresti_Ateneum_2.jpg"
+        }
+      ],
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "camera": {
+        "preset": "VAKIO",
+        "actualAssessment": "Low elevated rooftop / landmark midpoint view, gentle downward angle, facade visible and sky above complete landmark.",
+        "requestedTiltDegreesApprox": 15,
+        "measuredCameraPose": false
+      },
+      "lighting": "Soft clear morning",
+      "geometryQA": "Six Ionic columns, pediment, circular ornate window drum and grey ribbed dome, actual garden and statue in front. Front inscription deliberately omitted to meet no-text constraint. Complete finial within sky margin. Distant city context approximate.",
+      "geography": {
+        "center": [
+          44.43251,
+          26.10329
+        ],
+        "subjectCoordinatesApprox": [
+          44.44136,
+          26.09725
+        ],
+        "radiusMetres": 10000,
+        "subjectDistanceApproxMetres": 1095,
+        "radiusPassApprox": true,
+        "distinction": "Subject coordinates are approximate planning coordinates; reference EXIF GPS, when present, locates photographer, not guaranteed landmark center. Generated image has no measured GPS or camera pose."
+      },
+      "qa": {
+        "referenceImagesPhysicallyViewed": true,
+        "nativePhysicallyViewed": true,
+        "finalPhysicallyViewed": true,
+        "preview480PhysicallyViewed": true,
+        "subjectIdentity": true,
+        "completeLandmarkFraming": true,
+        "noInventedWater": true,
+        "noLegibleTextLogosWatermarkFrame": true,
+        "peopleTinyOrAbsent": true,
+        "naturalPhotographicAppearance": true,
+        "currentDay": true
+      },
+      "status": "local_candidate_awaiting_root_review",
+      "publication": "Not uploaded, integrated, approved or published.",
+      "correction": {
+        "reason": "Readable frieze inscription and tight finial margin in first candidate",
+        "method": "Complete new generation from same real references; no pixel retouch",
+        "rejectedOriginal": "rejected-original-01.png"
+      },
+      "r2Key": "julisteet/herokoe/hero-bukarest.png",
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-bukarest.png",
+      "bytes": 2949463,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/bukarest/production/hero-bukarest.png",
+      "metadataText": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "parentQA": {
+        "reviewer": "root",
+        "sha256": "5cda83b796a6b5b402bf73dcd53b85063b8f3a450806fcac4613087260ff7a6a",
+        "nativeViewed": true,
+        "referenceComparisonViewed": true,
+        "photorealism": true,
+        "recognisableLandmarkAndImmediateContext": true,
+        "technicalValidationAtUpload": true,
+        "approvedForDelivery": true,
+        "limitations": {},
+        "cameraDecision": "low elevated reference-anchored view accepted"
+      },
+      "editorAcceptance": "pending",
+      "gameIntegrated": false,
+      "published": false
+    }
+  ],
+  "editorAcceptance": "pending",
+  "gameIntegrated": false,
+  "published": false,
+  "noMergeVersionRelease": true
+}

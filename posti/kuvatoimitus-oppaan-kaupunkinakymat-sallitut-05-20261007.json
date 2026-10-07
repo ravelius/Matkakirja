@@ -1,0 +1,1385 @@
+{
+  "sourceCommit": "9ec0418c925144f71ea5efa719e3e44a812bd2ea",
+  "sourceBlob": "cae06d7ce6c3f43f537ffa97175ac38674ebbbc5",
+  "source": "posti/sisaltokirjuri-codex-oppaan-kaupunkinakymat-sallitut-25-20261007.md",
+  "sourceReadInFull": true,
+  "date": "2026-10-07",
+  "batch": "05",
+  "cityIds": [
+    "krakova",
+    "sofia",
+    "tampere",
+    "vilna",
+    "islanti"
+  ],
+  "acceptedImages": 5,
+  "style": "photorealistic-real-camera-look",
+  "tool": "built-in image_gen",
+  "productionDimensions": [
+    1536,
+    1024
+  ],
+  "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+  "reviewFirstThree": [
+    "krakova",
+    "sofia",
+    "tampere"
+  ],
+  "comparison": {
+    "file": "comparison-batch05.jpg",
+    "r2Key": "julisteet/herokoe/20261007/comparison-batch05.jpg",
+    "url": "https://media.matkakirja.app/julisteet/herokoe/20261007/comparison-batch05.jpg",
+    "sha256": "d394cb1746c4025f90c3fe759830e1b02db120f18e5af532c0053570f088e4ea",
+    "bytes": 284221,
+    "http": 200,
+    "mime": "image/jpeg",
+    "cors": "https://matkakirja.app",
+    "byteExactReadback": true
+  },
+  "assets": [
+    {
+      "id": "krakova",
+      "cityName": "Krakova",
+      "subject": "Mariankirkko Krakovan pääaukiolla",
+      "file": "hero-krakova.png",
+      "preview480": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/krakova/production/hero-krakova-480.png",
+      "nativeOriginal": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/krakova/production/native-original.png",
+      "sha256": "69bfa6f863b5e62486ef874c701375b8655106b72cc3c6cb8cde9692faa2cc09",
+      "nativeSha256": "d1238a86f197124f8bbf5c148d7f04a97b2e359a2a3c115b32d4413601e315e9",
+      "nativeDimensions": [
+        1536,
+        1024
+      ],
+      "productionDimensions": [
+        1536,
+        1024
+      ],
+      "previewDimensions": [
+        480,
+        320
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "colorSpace": "sRGB",
+      "iccEmbedded": true,
+      "opaque": true,
+      "generationTool": "built-in image_gen",
+      "generationPrompt": "Use case: photorealistic-natural. Create a completely new photorealistic current-day city hero illustration of St Mary's Basilica, Kraków, on the east side of Rynek Główny. Reference 1 Pawel Pacholec: modern exterior architecture and square placement; reference 2 Jakub Hałun: detailed asymmetrical two-tower western facade, no copying photo composition. Brick Gothic basilica, taller LEFT tower ornate pointed crown with surrounding pinnacles and long slender finial, shorter RIGHT tower multi-tier dark Baroque crown; green central entrance porch, steep dark nave roof extending behind. Pale historic townhouses to either side, broad stone Main Market Square below with tiny everyday pedestrians. Do not invent water or extra church towers. Shot from LOW ELEVATED rooftop viewpoint roughly 35m above the square, around landmark midpoint, looking gently 15 degrees downward from southwest; full west facade and some south flank, landmark large and dominant, city roofscape behind. Whole church and BOTH finials fully inside frame, at least 10% sky above tallest tip, facade base and square visible. Landscape 3:2 1536x1024. Crisp full-frame camera realism, natural soft late-afternoon autumn light, modest atmospheric distance, natural brick color, no HDR, no illustration, no maquette, no tilt shift. No readable lettering, signs, text, logos, watermark, borders. Opaque.",
+      "generationArguments": {
+        "prompt": "Use case: photorealistic-natural. Create a completely new photorealistic current-day city hero illustration of St Mary's Basilica, Kraków, on the east side of Rynek Główny. Reference 1 Pawel Pacholec: modern exterior architecture and square placement; reference 2 Jakub Hałun: detailed asymmetrical two-tower western facade, no copying photo composition. Brick Gothic basilica, taller LEFT tower ornate pointed crown with surrounding pinnacles and long slender finial, shorter RIGHT tower multi-tier dark Baroque crown; green central entrance porch, steep dark nave roof extending behind. Pale historic townhouses to either side, broad stone Main Market Square below with tiny everyday pedestrians. Do not invent water or extra church towers. Shot from LOW ELEVATED rooftop viewpoint roughly 35m above the square, around landmark midpoint, looking gently 15 degrees downward from southwest; full west facade and some south flank, landmark large and dominant, city roofscape behind. Whole church and BOTH finials fully inside frame, at least 10% sky above tallest tip, facade base and square visible. Landscape 3:2 1536x1024. Crisp full-frame camera realism, natural soft late-afternoon autumn light, modest atmospheric distance, natural brick color, no HDR, no illustration, no maquette, no tilt shift. No readable lettering, signs, text, logos, watermark, borders. Opaque.",
+        "referenced_image_paths": [
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/krakova/references/ref-1a19f755e389b900.jpg",
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/krakova/references/ref-41ecc567dcc5a764.jpg"
+        ],
+        "transparent_background": false
+      },
+      "caption": "Krakovan Mariankirkko ja pääaukio. Havainnekuva.",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "references": [
+        {
+          "nimi": "File:St. Mary's church in Krakow (11787311126).jpg",
+          "tekija": "Pawel Pacholec from Gdynia, Poland",
+          "lisenssi": "CC BY 2.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:St._Mary%27s_church_in_Krakow_(11787311126).jpg",
+          "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/3/30/St._Mary%27s_church_in_Krakow_%2811787311126%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/St._Mary%27s_church_in_Krakow_%2811787311126%29.jpg/1280px-St._Mary%27s_church_in_Krakow_%2811787311126%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/krakova/references/ref-1a19f755e389b900.jpg",
+          "originalDimensions": [
+            3600,
+            2400
+          ],
+          "downloadDimensions": [
+            1280,
+            853
+          ],
+          "sha256": "1a19f755e389b900bec6b8ab99b892928046e716e29bd036a72ace627fe209ae",
+          "originalSha1": "9dc012e37b93d35a5d06c6eca4d4b2287527ce1f",
+          "apiPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/krakova/references/api.json",
+          "apiSha256": "d9ede73bface1f1dc7374430bb29ffaa9911e03a8ced4d330222bc6c93e94a15",
+          "categories": [
+            "Category:CC-BY-2.0",
+            "Category:Exterior of Saint Mary Basilica in Kraków",
+            "Category:Flickr images missing SDC published in",
+            "Category:Flickr images reviewed by FlickreviewR 2",
+            "Category:Saint Mary Basilica in Kraków - western facade"
+          ],
+          "metadata": {
+            "ImageDescription": "St. Mary's church and Sukiennice in Krakow",
+            "DateTimeOriginal": "2013-12-22 15:48"
+          },
+          "viewed": true,
+          "role": "modern exterior architecture and immediate setting; different creator reference 1",
+          "visualIdentityConfirmed": true
+        },
+        {
+          "nimi": "File:20200512 Kościół Mariacki w Krakowie 1735 9920.jpg",
+          "tekija": "Jakub Hałun",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:20200512_Ko%C5%9Bci%C3%B3%C5%82_Mariacki_w_Krakowie_1735_9920.jpg",
+          "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e4/20200512_Ko%C5%9Bci%C3%B3%C5%82_Mariacki_w_Krakowie_1735_9920.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/20200512_Ko%C5%9Bci%C3%B3%C5%82_Mariacki_w_Krakowie_1735_9920.jpg/1280px-20200512_Ko%C5%9Bci%C3%B3%C5%82_Mariacki_w_Krakowie_1735_9920.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/krakova/references/ref-41ecc567dcc5a764.jpg",
+          "originalDimensions": [
+            2478,
+            3727
+          ],
+          "downloadDimensions": [
+            1280,
+            1925
+          ],
+          "sha256": "41ecc567dcc5a764a065a746972f9ff0c7d7bf2afc6f5d8d744a7ba20d389812",
+          "originalSha1": "4f9e36faeb983e009e58416d056ca43ed0dcc40b",
+          "apiPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/krakova/references/api.json",
+          "apiSha256": "d9ede73bface1f1dc7374430bb29ffaa9911e03a8ced4d330222bc6c93e94a15",
+          "categories": [
+            "Category:CC-BY-SA-4.0",
+            "Category:Exterior of Saint Mary Basilica in Kraków",
+            "Category:Files with coordinates missing SDC location of creation",
+            "Category:Quality images",
+            "Category:Quality images by Jakub Hałun",
+            "Category:Quality images of Kraków",
+            "Category:Quality images of churches in Poland",
+            "Category:Saint Mary Basilica in Kraków - views from southwest",
+            "Category:Saint Mary Basilica in Kraków - western facade",
+            "Category:Self-published work"
+          ],
+          "metadata": {
+            "GPSLatitude": "50.061061",
+            "GPSLongitude": "19.937144",
+            "GPSMapDatum": "WGS-84",
+            "ImageDescription": "Saint Mary Basilica in Kraków",
+            "DateTimeOriginal": "2020-05-12 17:35:39"
+          },
+          "viewed": true,
+          "role": "modern exterior architecture and immediate setting; different creator reference 2",
+          "visualIdentityConfirmed": true
+        }
+      ],
+      "subjectCoordinatesApprox": [
+        50.06168,
+        19.93936
+      ],
+      "allowedCenter": [
+        50.05902,
+        19.9439
+      ],
+      "radiusMetres": 10000,
+      "subjectDistanceApproxMetres": 439,
+      "subjectRadiusPassApprox": true,
+      "coordinateDistinction": "Subject coordinates are approximate landmark location. Reference EXIF GPS records camera creation position and is not used as subject coordinate.",
+      "actualCamera": {
+        "heightApproxMetres": 35,
+        "positionRelativeToSubject": "southwest",
+        "direction": "northeast",
+        "tiltDownApproxDegrees": 15,
+        "angleRule": "VAKIO",
+        "assessedVisually": "low elevated rooftop view, full landmark and tip; not top-down aerial"
+      },
+      "technicalPostprocessing": "ICC embedding and RGB PNG metadata; native exact size so no crop or resize. 480 preview only downscaled.",
+      "visualFactualQA": {
+        "nativeViewed": true,
+        "finalViewed": true,
+        "preview480Viewed": true,
+        "photorealistic": true,
+        "currentDayExterior": true,
+        "sameSubjectTwoDifferentCreatorPhotos": true,
+        "wholeMainLandmarkAndTipVisible": true,
+        "noReadableTextLogoWatermarkBorder": true,
+        "tinyOrdinaryPeople": true,
+        "immediateGeography": "Two unequal brick Gothic towers match refs; full slender finials intact, taller tip 30px below frame top. Square, green entrance and townhouses coherent.",
+        "status": "production agent physically inspected native, final1536 and480 preview; accepted for root review"
+      },
+      "publicationState": "local candidate only; no R2, Git, handoff, integration or publication",
+      "viitteet": [
+        {
+          "nimi": "File:St. Mary's church in Krakow (11787311126).jpg",
+          "tekija": "Pawel Pacholec from Gdynia, Poland",
+          "lisenssi": "CC BY 2.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:St._Mary%27s_church_in_Krakow_(11787311126).jpg",
+          "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/3/30/St._Mary%27s_church_in_Krakow_%2811787311126%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/St._Mary%27s_church_in_Krakow_%2811787311126%29.jpg/1280px-St._Mary%27s_church_in_Krakow_%2811787311126%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/krakova/references/ref-1a19f755e389b900.jpg",
+          "originalDimensions": [
+            3600,
+            2400
+          ],
+          "downloadDimensions": [
+            1280,
+            853
+          ],
+          "sha256": "1a19f755e389b900bec6b8ab99b892928046e716e29bd036a72ace627fe209ae",
+          "originalSha1": "9dc012e37b93d35a5d06c6eca4d4b2287527ce1f",
+          "apiPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/krakova/references/api.json",
+          "apiSha256": "d9ede73bface1f1dc7374430bb29ffaa9911e03a8ced4d330222bc6c93e94a15",
+          "categories": [
+            "Category:CC-BY-2.0",
+            "Category:Exterior of Saint Mary Basilica in Kraków",
+            "Category:Flickr images missing SDC published in",
+            "Category:Flickr images reviewed by FlickreviewR 2",
+            "Category:Saint Mary Basilica in Kraków - western facade"
+          ],
+          "metadata": {
+            "ImageDescription": "St. Mary's church and Sukiennice in Krakow",
+            "DateTimeOriginal": "2013-12-22 15:48"
+          },
+          "viewed": true,
+          "role": "modern exterior architecture and immediate setting; different creator reference 1",
+          "visualIdentityConfirmed": true
+        },
+        {
+          "nimi": "File:20200512 Kościół Mariacki w Krakowie 1735 9920.jpg",
+          "tekija": "Jakub Hałun",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:20200512_Ko%C5%9Bci%C3%B3%C5%82_Mariacki_w_Krakowie_1735_9920.jpg",
+          "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e4/20200512_Ko%C5%9Bci%C3%B3%C5%82_Mariacki_w_Krakowie_1735_9920.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/20200512_Ko%C5%9Bci%C3%B3%C5%82_Mariacki_w_Krakowie_1735_9920.jpg/1280px-20200512_Ko%C5%9Bci%C3%B3%C5%82_Mariacki_w_Krakowie_1735_9920.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/krakova/references/ref-41ecc567dcc5a764.jpg",
+          "originalDimensions": [
+            2478,
+            3727
+          ],
+          "downloadDimensions": [
+            1280,
+            1925
+          ],
+          "sha256": "41ecc567dcc5a764a065a746972f9ff0c7d7bf2afc6f5d8d744a7ba20d389812",
+          "originalSha1": "4f9e36faeb983e009e58416d056ca43ed0dcc40b",
+          "apiPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/krakova/references/api.json",
+          "apiSha256": "d9ede73bface1f1dc7374430bb29ffaa9911e03a8ced4d330222bc6c93e94a15",
+          "categories": [
+            "Category:CC-BY-SA-4.0",
+            "Category:Exterior of Saint Mary Basilica in Kraków",
+            "Category:Files with coordinates missing SDC location of creation",
+            "Category:Quality images",
+            "Category:Quality images by Jakub Hałun",
+            "Category:Quality images of Kraków",
+            "Category:Quality images of churches in Poland",
+            "Category:Saint Mary Basilica in Kraków - views from southwest",
+            "Category:Saint Mary Basilica in Kraków - western facade",
+            "Category:Self-published work"
+          ],
+          "metadata": {
+            "GPSLatitude": "50.061061",
+            "GPSLongitude": "19.937144",
+            "GPSMapDatum": "WGS-84",
+            "ImageDescription": "Saint Mary Basilica in Kraków",
+            "DateTimeOriginal": "2020-05-12 17:35:39"
+          },
+          "viewed": true,
+          "role": "modern exterior architecture and immediate setting; different creator reference 2",
+          "visualIdentityConfirmed": true
+        }
+      ],
+      "r2Key": "julisteet/herokoe/hero-krakova.png",
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-krakova.png",
+      "bytes": 2614854,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/krakova/production/hero-krakova.png",
+      "metadataText": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "parentQA": {
+        "reviewer": "root",
+        "sha256": "69bfa6f863b5e62486ef874c701375b8655106b72cc3c6cb8cde9692faa2cc09",
+        "nativeViewed": true,
+        "referenceComparisonViewed": true,
+        "photorealism": true,
+        "recognisableLandmarkAndImmediateContext": true,
+        "technicalValidationAtUpload": true,
+        "approvedForDelivery": true,
+        "limitations": {},
+        "cameraDecision": "low elevated reference-anchored view accepted"
+      },
+      "editorAcceptance": "pending",
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "sofia",
+      "cityName": "Sofia",
+      "subject": "Aleksanteri Nevskin katedraali",
+      "file": "hero-sofia.png",
+      "preview480": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/sofia/production/hero-sofia-480.png",
+      "nativeOriginal": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/sofia/production/native-original.png",
+      "sha256": "5043517412c4443c89dda008ddfb6aca911594b06a8d65cba7441f5b38687bbe",
+      "nativeSha256": "ca5b9fe17fcb18156bdf05e091ca0ede166be2534e967c1e7bc42534e54cf354",
+      "nativeDimensions": [
+        1536,
+        1024
+      ],
+      "productionDimensions": [
+        1536,
+        1024
+      ],
+      "previewDimensions": [
+        480,
+        320
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "colorSpace": "sRGB",
+      "iccEmbedded": true,
+      "opaque": true,
+      "generationTool": "built-in image_gen",
+      "generationPrompt": "Use case: photorealistic-natural. Generate a completely new current-day camera-real city hero illustration of Alexander Nevsky Cathedral Sofia. Both references are modern exterior architecture references only, Pudelek wide south flank and Beyoglou 2025 side details; do not reproduce one photo's composition. Retain exact recognizable Neo-Byzantine pale stone volumes: one taller western bell tower at left with golden rounded dome, large central gold dome on arcaded drum, lower green copper apsidal domes and arched windows, broad low side aisle. Low elevated rooftop camera south-southwest of cathedral at about 25m height, roughly landmark midpoint, gentle downward angle about15deg, entire cathedral from foundation to highest cross within frame with clear sky margin. Broad paved square and street below, tiny ordinary people, sparse modern parked cars, surrounding Sofia urban blocks and trees in distance. Geographically coherent modern setting, no water, no twin bell tower, no added church spires on nearby roofs. Natural clear spring morning sunlight, restrained true pale stone and patinated copper colors, honest full-frame camera textures, no HDR/no stylization/no tilt shift/no maquette. Main landmark dominates wide landscape 3:2 1536x1024 image. No readable signage or lettering, logos, watermark, border, artificial text. Opaque. Factual geography correction for whole new generation: Looking north/northeast from SOUTH of cathedral. Vitosha is SOUTH and behind camera, therefore NO MOUNTAINS visible behind cathedral. Background must be modest low Sofia city roofs and gentle distant plain fading in atmospheric haze, a sky horizon. Keep real cathedral south-facade geometry and one bell tower, enough room above crosses. This is an entirely new image, do not edit earlier output.",
+      "generationArguments": {
+        "prompt": "Use case: photorealistic-natural. Generate a completely new current-day camera-real city hero illustration of Alexander Nevsky Cathedral Sofia. Both references are modern exterior architecture references only, Pudelek wide south flank and Beyoglou 2025 side details; do not reproduce one photo's composition. Retain exact recognizable Neo-Byzantine pale stone volumes: one taller western bell tower at left with golden rounded dome, large central gold dome on arcaded drum, lower green copper apsidal domes and arched windows, broad low side aisle. Low elevated rooftop camera south-southwest of cathedral at about 25m height, roughly landmark midpoint, gentle downward angle about15deg, entire cathedral from foundation to highest cross within frame with clear sky margin. Broad paved square and street below, tiny ordinary people, sparse modern parked cars, surrounding Sofia urban blocks and trees in distance. Geographically coherent modern setting, no water, no twin bell tower, no added church spires on nearby roofs. Natural clear spring morning sunlight, restrained true pale stone and patinated copper colors, honest full-frame camera textures, no HDR/no stylization/no tilt shift/no maquette. Main landmark dominates wide landscape 3:2 1536x1024 image. No readable signage or lettering, logos, watermark, border, artificial text. Opaque. Factual geography correction for whole new generation: Looking north/northeast from SOUTH of cathedral. Vitosha is SOUTH and behind camera, therefore NO MOUNTAINS visible behind cathedral. Background must be modest low Sofia city roofs and gentle distant plain fading in atmospheric haze, a sky horizon. Keep real cathedral south-facade geometry and one bell tower, enough room above crosses. This is an entirely new image, do not edit earlier output.",
+        "referenced_image_paths": [
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/sofia/references/ref-d97c5a2560c7081c.jpg",
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/sofia/references/ref-ee1c5ea492a2ce04.jpg"
+        ],
+        "transparent_background": false
+      },
+      "caption": "Sofian Aleksanteri Nevskin katedraali. Havainnekuva.",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "references": [
+        {
+          "nimi": "File:Alexander Nevsky Cathedral, Sofia (by Pudelek).JPG",
+          "tekija": "Pudelek (Marcin Szala)",
+          "lisenssi": "CC BY-SA 3.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Alexander_Nevsky_Cathedral,_Sofia_(by_Pudelek).JPG",
+          "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/0/04/Alexander_Nevsky_Cathedral%2C_Sofia_%28by_Pudelek%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Alexander_Nevsky_Cathedral%2C_Sofia_%28by_Pudelek%29.JPG/1280px-Alexander_Nevsky_Cathedral%2C_Sofia_%28by_Pudelek%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/sofia/references/ref-d97c5a2560c7081c.jpg",
+          "originalDimensions": [
+            2908,
+            1883
+          ],
+          "downloadDimensions": [
+            1280,
+            829
+          ],
+          "sha256": "d97c5a2560c7081c4be75d523bdf159218243639e4915f4c8d7b4dc73051e7b3",
+          "originalSha1": "d85a931f25588526226a8a2051a8a80171584cd1",
+          "apiPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/sofia/references/api.json",
+          "apiSha256": "d0560e02ef616ec27a9f1a7401afffc11d4318f5eb679e2c29d3672f302e474f",
+          "categories": [
+            "Category:Alexander Nevsky Cathedral, Sofia-exterior",
+            "Category:August 2013 in Sofia",
+            "Category:CC-BY-SA-3.0",
+            "Category:Featured pictures by Marcin Szala",
+            "Category:Featured pictures of Sofia",
+            "Category:Featured pictures of churches in Bulgaria",
+            "Category:Featured pictures on Wikimedia Commons",
+            "Category:Featured pictures on Wikipedia, Persian",
+            "Category:Featured pictures on Wikipedia, Polish",
+            "Category:Files with coordinates missing SDC location of creation",
+            "Category:Images by Marcin Szala",
+            "Category:Pictures of the day (2014)",
+            "Category:Quality Images by Marcin Szala",
+            "Category:Quality images",
+            "Category:Quality images of cathedrals",
+            "Category:Quality images of churches in Sofia",
+            "Category:Self-published work"
+          ],
+          "metadata": {
+            "GPSLatitude": "42.695819",
+            "GPSLongitude": "23.332776",
+            "GPSMapDatum": "WGS-84",
+            "ImageDescription": "Alexander Nevsky Cathedral, Sofia, Bulgaria",
+            "DateTimeOriginal": "2013-08"
+          },
+          "viewed": true,
+          "role": "modern exterior architecture and immediate setting; different creator reference 1",
+          "visualIdentityConfirmed": true
+        },
+        {
+          "nimi": "File:Alexander Nevsky Cathedral, Sofia, 2025.jpg",
+          "tekija": "Beyoglou",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Alexander_Nevsky_Cathedral,_Sofia,_2025.jpg",
+          "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/4/43/Alexander_Nevsky_Cathedral%2C_Sofia%2C_2025.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/43/Alexander_Nevsky_Cathedral%2C_Sofia%2C_2025.jpg/1280px-Alexander_Nevsky_Cathedral%2C_Sofia%2C_2025.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/sofia/references/ref-ee1c5ea492a2ce04.jpg",
+          "originalDimensions": [
+            3024,
+            4032
+          ],
+          "downloadDimensions": [
+            1280,
+            1707
+          ],
+          "sha256": "ee1c5ea492a2ce0495c32ee3621a1ef12dc99a9a022d41d1fcec55f5dca4a1d9",
+          "originalSha1": "81c608feb5ead1da0d143d2131779d3b9fe3ca4e",
+          "apiPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/sofia/references/api.json",
+          "apiSha256": "d0560e02ef616ec27a9f1a7401afffc11d4318f5eb679e2c29d3672f302e474f",
+          "categories": [
+            "Category:Alexander Nevsky Cathedral, Sofia",
+            "Category:CC-BY-SA-4.0",
+            "Category:Self-published work"
+          ],
+          "metadata": {
+            "ImageDescription": "Alexander Nevsky Katedrali, 2025",
+            "DateTimeOriginal": "2025-09-24 16:17:11"
+          },
+          "viewed": true,
+          "role": "modern exterior architecture and immediate setting; different creator reference 2",
+          "visualIdentityConfirmed": true
+        }
+      ],
+      "subjectCoordinatesApprox": [
+        42.69599,
+        23.33297
+      ],
+      "allowedCenter": [
+        42.69789,
+        23.33376
+      ],
+      "radiusMetres": 10000,
+      "subjectDistanceApproxMetres": 221,
+      "subjectRadiusPassApprox": true,
+      "coordinateDistinction": "Subject coordinates are approximate landmark location. Reference EXIF GPS records camera creation position and is not used as subject coordinate.",
+      "actualCamera": {
+        "heightApproxMetres": 25,
+        "positionRelativeToSubject": "south-southwest",
+        "direction": "north-northeast",
+        "tiltDownApproxDegrees": 15,
+        "angleRule": "VAKIO",
+        "assessedVisually": "low elevated rooftop view, full landmark and tip; not top-down aerial"
+      },
+      "technicalPostprocessing": "ICC embedding and RGB PNG metadata; native exact size so no crop or resize. 480 preview only downscaled.",
+      "visualFactualQA": {
+        "nativeViewed": true,
+        "finalViewed": true,
+        "preview480Viewed": true,
+        "photorealistic": true,
+        "currentDayExterior": true,
+        "sameSubjectTwoDifferentCreatorPhotos": true,
+        "wholeMainLandmarkAndTipVisible": true,
+        "noReadableTextLogoWatermarkBorder": true,
+        "tinyOrdinaryPeople": true,
+        "immediateGeography": "Single western golden bell tower and central dome, green lower domes match two south-exterior refs. Whole new regeneration removed wrongly placed Vitosha mountain backdrop; accepted image looks north over urban plain.",
+        "status": "production agent physically inspected native, final1536 and480 preview; accepted for root review"
+      },
+      "publicationState": "local candidate only; no R2, Git, handoff, integration or publication",
+      "rejectedCandidates": [
+        {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/sofia/production/rejected-native-v1-mountains-wrong-direction.png",
+          "reason": "Vitosha mountains incorrectly behind south-façade view toward north; wholly regenerated."
+        }
+      ],
+      "viitteet": [
+        {
+          "nimi": "File:Alexander Nevsky Cathedral, Sofia (by Pudelek).JPG",
+          "tekija": "Pudelek (Marcin Szala)",
+          "lisenssi": "CC BY-SA 3.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Alexander_Nevsky_Cathedral,_Sofia_(by_Pudelek).JPG",
+          "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/0/04/Alexander_Nevsky_Cathedral%2C_Sofia_%28by_Pudelek%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Alexander_Nevsky_Cathedral%2C_Sofia_%28by_Pudelek%29.JPG/1280px-Alexander_Nevsky_Cathedral%2C_Sofia_%28by_Pudelek%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/sofia/references/ref-d97c5a2560c7081c.jpg",
+          "originalDimensions": [
+            2908,
+            1883
+          ],
+          "downloadDimensions": [
+            1280,
+            829
+          ],
+          "sha256": "d97c5a2560c7081c4be75d523bdf159218243639e4915f4c8d7b4dc73051e7b3",
+          "originalSha1": "d85a931f25588526226a8a2051a8a80171584cd1",
+          "apiPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/sofia/references/api.json",
+          "apiSha256": "d0560e02ef616ec27a9f1a7401afffc11d4318f5eb679e2c29d3672f302e474f",
+          "categories": [
+            "Category:Alexander Nevsky Cathedral, Sofia-exterior",
+            "Category:August 2013 in Sofia",
+            "Category:CC-BY-SA-3.0",
+            "Category:Featured pictures by Marcin Szala",
+            "Category:Featured pictures of Sofia",
+            "Category:Featured pictures of churches in Bulgaria",
+            "Category:Featured pictures on Wikimedia Commons",
+            "Category:Featured pictures on Wikipedia, Persian",
+            "Category:Featured pictures on Wikipedia, Polish",
+            "Category:Files with coordinates missing SDC location of creation",
+            "Category:Images by Marcin Szala",
+            "Category:Pictures of the day (2014)",
+            "Category:Quality Images by Marcin Szala",
+            "Category:Quality images",
+            "Category:Quality images of cathedrals",
+            "Category:Quality images of churches in Sofia",
+            "Category:Self-published work"
+          ],
+          "metadata": {
+            "GPSLatitude": "42.695819",
+            "GPSLongitude": "23.332776",
+            "GPSMapDatum": "WGS-84",
+            "ImageDescription": "Alexander Nevsky Cathedral, Sofia, Bulgaria",
+            "DateTimeOriginal": "2013-08"
+          },
+          "viewed": true,
+          "role": "modern exterior architecture and immediate setting; different creator reference 1",
+          "visualIdentityConfirmed": true
+        },
+        {
+          "nimi": "File:Alexander Nevsky Cathedral, Sofia, 2025.jpg",
+          "tekija": "Beyoglou",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Alexander_Nevsky_Cathedral,_Sofia,_2025.jpg",
+          "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/4/43/Alexander_Nevsky_Cathedral%2C_Sofia%2C_2025.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/43/Alexander_Nevsky_Cathedral%2C_Sofia%2C_2025.jpg/1280px-Alexander_Nevsky_Cathedral%2C_Sofia%2C_2025.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/sofia/references/ref-ee1c5ea492a2ce04.jpg",
+          "originalDimensions": [
+            3024,
+            4032
+          ],
+          "downloadDimensions": [
+            1280,
+            1707
+          ],
+          "sha256": "ee1c5ea492a2ce0495c32ee3621a1ef12dc99a9a022d41d1fcec55f5dca4a1d9",
+          "originalSha1": "81c608feb5ead1da0d143d2131779d3b9fe3ca4e",
+          "apiPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/sofia/references/api.json",
+          "apiSha256": "d0560e02ef616ec27a9f1a7401afffc11d4318f5eb679e2c29d3672f302e474f",
+          "categories": [
+            "Category:Alexander Nevsky Cathedral, Sofia",
+            "Category:CC-BY-SA-4.0",
+            "Category:Self-published work"
+          ],
+          "metadata": {
+            "ImageDescription": "Alexander Nevsky Katedrali, 2025",
+            "DateTimeOriginal": "2025-09-24 16:17:11"
+          },
+          "viewed": true,
+          "role": "modern exterior architecture and immediate setting; different creator reference 2",
+          "visualIdentityConfirmed": true
+        }
+      ],
+      "r2Key": "julisteet/herokoe/hero-sofia.png",
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-sofia.png",
+      "bytes": 2908513,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/sofia/production/hero-sofia.png",
+      "metadataText": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "parentQA": {
+        "reviewer": "root",
+        "sha256": "5043517412c4443c89dda008ddfb6aca911594b06a8d65cba7441f5b38687bbe",
+        "nativeViewed": true,
+        "referenceComparisonViewed": true,
+        "photorealism": true,
+        "recognisableLandmarkAndImmediateContext": true,
+        "technicalValidationAtUpload": true,
+        "approvedForDelivery": true,
+        "limitations": {},
+        "cameraDecision": "low elevated reference-anchored view accepted"
+      },
+      "editorAcceptance": "pending",
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "tampere",
+      "cityName": "Tampere",
+      "subject": "Finlaysonin tehdasalue Frenckellin aukion tuntumassa",
+      "file": "hero-tampere.png",
+      "preview480": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/tampere/production/hero-tampere-480.png",
+      "nativeOriginal": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/tampere/production/native-original.png",
+      "sha256": "57d6a56aee1490d25217612f4a6917a3254173772ede465a5e455090c42d8992",
+      "nativeSha256": "b86865e59fbeaa64ae0e21ebd58efd7cbe12ff230363c811ccdd477a9b3fcf71",
+      "nativeDimensions": [
+        1536,
+        1024
+      ],
+      "productionDimensions": [
+        1536,
+        1024
+      ],
+      "previewDimensions": [
+        480,
+        320
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "colorSpace": "sRGB",
+      "iccEmbedded": true,
+      "opaque": true,
+      "generationTool": "built-in image_gen",
+      "generationPrompt": "Use case: photorealistic-natural. Create a completely new current-day real-camera-looking city hero of the Finlayson factory south facade viewed north from Frenckellinaukio in central Tampere Finland. Reference 1 JIP and reference2 Tiia Monto depict EXACT SAME red-brick south factory facade and square, architecture references only, do not copy single composition. Long rectangular four-main-storey red brick mill block, repeating tall paired round-arched windows in brick bays, stepped end parapet gables, flat roof, SINGLE slender round redbrick chimney behind slightly right of center. Low modern frontage embedded below factory terrace, wide steps ascend at RIGHT beside perpendicular lower redbrick Frenckell building, curve-pattern cobbled square foreground, leafy deciduous trees at sides. Behind factory: city blocks, no water immediately behind street or square, do not introduce Messukylä church or cathedral spires or another mill copied from elsewhere. Camera LOW ELEVATED rooftop height about18m above square facing north-northwest, near factory midpoint and tilted gently15deg down, long entire facade and chimney fully visible, safe sky above chimney, dominant factory plus immediate coherent urban environment. Wide1536x1024 landscape3:2. Natural Finnish early summer soft bright overcast daylight, subdued authentic brick reds, honest full-frame photo surfaces and perspective. Tiny everyday people on square. No readable Finlayson roof letters: omit ALL lettering and signs/logos, no text, watermark, borders. No illustration, HDR, miniature, tilt-shift or artistic rendering. Opaque.",
+      "generationArguments": {
+        "prompt": "Use case: photorealistic-natural. Create a completely new current-day real-camera-looking city hero of the Finlayson factory south facade viewed north from Frenckellinaukio in central Tampere Finland. Reference 1 JIP and reference2 Tiia Monto depict EXACT SAME red-brick south factory facade and square, architecture references only, do not copy single composition. Long rectangular four-main-storey red brick mill block, repeating tall paired round-arched windows in brick bays, stepped end parapet gables, flat roof, SINGLE slender round redbrick chimney behind slightly right of center. Low modern frontage embedded below factory terrace, wide steps ascend at RIGHT beside perpendicular lower redbrick Frenckell building, curve-pattern cobbled square foreground, leafy deciduous trees at sides. Behind factory: city blocks, no water immediately behind street or square, do not introduce Messukylä church or cathedral spires or another mill copied from elsewhere. Camera LOW ELEVATED rooftop height about18m above square facing north-northwest, near factory midpoint and tilted gently15deg down, long entire facade and chimney fully visible, safe sky above chimney, dominant factory plus immediate coherent urban environment. Wide1536x1024 landscape3:2. Natural Finnish early summer soft bright overcast daylight, subdued authentic brick reds, honest full-frame photo surfaces and perspective. Tiny everyday people on square. No readable Finlayson roof letters: omit ALL lettering and signs/logos, no text, watermark, borders. No illustration, HDR, miniature, tilt-shift or artistic rendering. Opaque.",
+        "referenced_image_paths": [
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/tampere/references/ref-d706c098387f1651.jpg",
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/tampere/references/ref-e325e52e0544ff46.jpg"
+        ],
+        "transparent_background": false
+      },
+      "caption": "Finlaysonin tehdasalue Tampereella Frenckellinaukiolta nähtynä. Havainnekuva.",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "references": [
+        {
+          "nimi": "File:Finlayson seen from Frenckell square.jpg",
+          "tekija": "JIP",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Finlayson_seen_from_Frenckell_square.jpg",
+          "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/d/de/Finlayson_seen_from_Frenckell_square.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Finlayson_seen_from_Frenckell_square.jpg/1280px-Finlayson_seen_from_Frenckell_square.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/tampere/references/ref-d706c098387f1651.jpg",
+          "originalDimensions": [
+            4608,
+            3456
+          ],
+          "downloadDimensions": [
+            1280,
+            960
+          ],
+          "sha256": "d706c098387f1651447bb7e1817d06b00ddc9dfbd33cc63cc920fa05a9e0260e",
+          "originalSha1": "dc1cde51f6104b325fe65a92aadbc14da8390a3c",
+          "apiPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/tampere/references/api.json",
+          "apiSha256": "f7d97d9fea6a4ca091e60c342b972d65299e5eef55870b762c2b16090133db70",
+          "categories": [
+            "Category:CC-BY-SA-4.0",
+            "Category:Finland photographs taken on 2022-06-09",
+            "Category:Finlayson, Tampere",
+            "Category:GFDL",
+            "Category:June 2022 in Tampere",
+            "Category:License migration redundant",
+            "Category:Self-published work",
+            "Category:Taken with Olympus E-M1"
+          ],
+          "metadata": {
+            "ImageDescription": "The Finlayson building in central Tampere, Finland, seen from the Frenckell square to the south of the building.",
+            "DateTimeOriginal": "2022-06-09"
+          },
+          "viewed": true,
+          "role": "modern exterior architecture and immediate setting; different creator reference 1",
+          "visualIdentityConfirmed": true
+        },
+        {
+          "nimi": "File:Finlayson 2018.jpg",
+          "tekija": "Tiia Monto",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Finlayson_2018.jpg",
+          "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Finlayson_2018.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fe/Finlayson_2018.jpg/1280px-Finlayson_2018.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/tampere/references/ref-e325e52e0544ff46.jpg",
+          "originalDimensions": [
+            5397,
+            2907
+          ],
+          "downloadDimensions": [
+            1280,
+            689
+          ],
+          "sha256": "e325e52e0544ff464fd06df5e21c088f29669a41338411aca7982adc17f95dd5",
+          "originalSha1": "2ae2cc5682745f0678175b35285208d55357757c",
+          "apiPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/tampere/references/api.json",
+          "apiSha256": "f7d97d9fea6a4ca091e60c342b972d65299e5eef55870b762c2b16090133db70",
+          "categories": [
+            "Category:CC-BY-SA-4.0",
+            "Category:Finland photographs taken on 2018-07-06",
+            "Category:Finlayson, Tampere",
+            "Category:Finlayson (company)",
+            "Category:Frenckellinaukio",
+            "Category:Images from Wiki Loves Monuments 2018",
+            "Category:Images from Wiki Loves Monuments 2018 in Finland",
+            "Category:July 2018 in Tampere",
+            "Category:Self-published work",
+            "Category:Taken with Sony DSC-RX100 III",
+            "Category:Uploaded via Campaign:wlm-fi-rephotography-wikidata"
+          ],
+          "metadata": {
+            "GPSLatitude": "61.500184",
+            "GPSLongitude": "23.759657",
+            "GPSMapDatum": "WGS-84",
+            "ImageDescription": "This is a photo of a monument in Finland identified by the ID 'Tampella factory area' (Q29974201) -  RKY: 5021",
+            "DateTimeOriginal": "2018-07-06 13:51:06"
+          },
+          "viewed": true,
+          "role": "modern exterior architecture and immediate setting; different creator reference 2",
+          "visualIdentityConfirmed": true
+        }
+      ],
+      "subjectCoordinatesApprox": [
+        61.5028,
+        23.7592
+      ],
+      "allowedCenter": [
+        61.49193,
+        23.75253
+      ],
+      "radiusMetres": 10000,
+      "subjectDistanceApproxMetres": 1259,
+      "subjectRadiusPassApprox": true,
+      "coordinateDistinction": "Subject coordinates are approximate landmark location. Reference EXIF GPS records camera creation position and is not used as subject coordinate.",
+      "actualCamera": {
+        "heightApproxMetres": 18,
+        "positionRelativeToSubject": "south",
+        "direction": "north",
+        "tiltDownApproxDegrees": 15,
+        "angleRule": "VAKIO",
+        "assessedVisually": "low elevated rooftop view, full landmark and tip; not top-down aerial"
+      },
+      "technicalPostprocessing": "ICC embedding and RGB PNG metadata; native exact size so no crop or resize. 480 preview only downscaled.",
+      "visualFactualQA": {
+        "nativeViewed": true,
+        "finalViewed": true,
+        "preview480Viewed": true,
+        "photorealistic": true,
+        "currentDayExterior": true,
+        "sameSubjectTwoDifferentCreatorPhotos": true,
+        "wholeMainLandmarkAndTipVisible": true,
+        "noReadableTextLogoWatermarkBorder": true,
+        "tinyOrdinaryPeople": true,
+        "immediateGeography": "Same southern Finlayson facade in both photos physically verified despite second reference metadata naming Tampella. Long brick facade, single chimney, right-side steps and Frenckell wing coherent; no water.",
+        "status": "production agent physically inspected native, final1536 and480 preview; accepted for root review"
+      },
+      "publicationState": "local candidate only; no R2, Git, handoff, integration or publication",
+      "viitteet": [
+        {
+          "nimi": "File:Finlayson seen from Frenckell square.jpg",
+          "tekija": "JIP",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Finlayson_seen_from_Frenckell_square.jpg",
+          "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/d/de/Finlayson_seen_from_Frenckell_square.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Finlayson_seen_from_Frenckell_square.jpg/1280px-Finlayson_seen_from_Frenckell_square.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/tampere/references/ref-d706c098387f1651.jpg",
+          "originalDimensions": [
+            4608,
+            3456
+          ],
+          "downloadDimensions": [
+            1280,
+            960
+          ],
+          "sha256": "d706c098387f1651447bb7e1817d06b00ddc9dfbd33cc63cc920fa05a9e0260e",
+          "originalSha1": "dc1cde51f6104b325fe65a92aadbc14da8390a3c",
+          "apiPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/tampere/references/api.json",
+          "apiSha256": "f7d97d9fea6a4ca091e60c342b972d65299e5eef55870b762c2b16090133db70",
+          "categories": [
+            "Category:CC-BY-SA-4.0",
+            "Category:Finland photographs taken on 2022-06-09",
+            "Category:Finlayson, Tampere",
+            "Category:GFDL",
+            "Category:June 2022 in Tampere",
+            "Category:License migration redundant",
+            "Category:Self-published work",
+            "Category:Taken with Olympus E-M1"
+          ],
+          "metadata": {
+            "ImageDescription": "The Finlayson building in central Tampere, Finland, seen from the Frenckell square to the south of the building.",
+            "DateTimeOriginal": "2022-06-09"
+          },
+          "viewed": true,
+          "role": "modern exterior architecture and immediate setting; different creator reference 1",
+          "visualIdentityConfirmed": true
+        },
+        {
+          "nimi": "File:Finlayson 2018.jpg",
+          "tekija": "Tiia Monto",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Finlayson_2018.jpg",
+          "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Finlayson_2018.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fe/Finlayson_2018.jpg/1280px-Finlayson_2018.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/tampere/references/ref-e325e52e0544ff46.jpg",
+          "originalDimensions": [
+            5397,
+            2907
+          ],
+          "downloadDimensions": [
+            1280,
+            689
+          ],
+          "sha256": "e325e52e0544ff464fd06df5e21c088f29669a41338411aca7982adc17f95dd5",
+          "originalSha1": "2ae2cc5682745f0678175b35285208d55357757c",
+          "apiPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/tampere/references/api.json",
+          "apiSha256": "f7d97d9fea6a4ca091e60c342b972d65299e5eef55870b762c2b16090133db70",
+          "categories": [
+            "Category:CC-BY-SA-4.0",
+            "Category:Finland photographs taken on 2018-07-06",
+            "Category:Finlayson, Tampere",
+            "Category:Finlayson (company)",
+            "Category:Frenckellinaukio",
+            "Category:Images from Wiki Loves Monuments 2018",
+            "Category:Images from Wiki Loves Monuments 2018 in Finland",
+            "Category:July 2018 in Tampere",
+            "Category:Self-published work",
+            "Category:Taken with Sony DSC-RX100 III",
+            "Category:Uploaded via Campaign:wlm-fi-rephotography-wikidata"
+          ],
+          "metadata": {
+            "GPSLatitude": "61.500184",
+            "GPSLongitude": "23.759657",
+            "GPSMapDatum": "WGS-84",
+            "ImageDescription": "This is a photo of a monument in Finland identified by the ID 'Tampella factory area' (Q29974201) -  RKY: 5021",
+            "DateTimeOriginal": "2018-07-06 13:51:06"
+          },
+          "viewed": true,
+          "role": "modern exterior architecture and immediate setting; different creator reference 2",
+          "visualIdentityConfirmed": true
+        }
+      ],
+      "r2Key": "julisteet/herokoe/hero-tampere.png",
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-tampere.png",
+      "bytes": 2892102,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/tampere/production/hero-tampere.png",
+      "metadataText": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "parentQA": {
+        "reviewer": "root",
+        "sha256": "57d6a56aee1490d25217612f4a6917a3254173772ede465a5e455090c42d8992",
+        "nativeViewed": true,
+        "referenceComparisonViewed": true,
+        "photorealism": true,
+        "recognisableLandmarkAndImmediateContext": true,
+        "technicalValidationAtUpload": true,
+        "approvedForDelivery": true,
+        "limitations": {},
+        "cameraDecision": "low elevated reference-anchored view accepted"
+      },
+      "editorAcceptance": "pending",
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "vilna",
+      "cityName": "Vilna",
+      "subject": "Vilnan katedraali ja erillinen kellotorni",
+      "file": "hero-vilna.png",
+      "preview480": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/vilna/production/hero-vilna-480.png",
+      "nativeOriginal": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/vilna/production/native-original.png",
+      "sha256": "0e0d90cfe0994eae3e5650a6e2ca1c1a0beb402e2784effe5657d1bc7ae42d53",
+      "nativeSha256": "5f63d5423e9a2c9c1c522ef53f89b6d96d60b77193ff274369d4c96cfda44455",
+      "nativeDimensions": [
+        1536,
+        1024
+      ],
+      "productionDimensions": [
+        1536,
+        1024
+      ],
+      "previewDimensions": [
+        480,
+        320
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "colorSpace": "sRGB",
+      "iccEmbedded": true,
+      "opaque": true,
+      "generationTool": "built-in image_gen",
+      "generationPrompt": "Use case: photorealistic-natural. Completely new current-day photo-realistic hero of Vilnius Cathedral and its single DETACHED bell tower in Cathedral Square Vilnius Lithuania. Reference1 Pudelek and reference2 Guillaume Speurt are licensed modern exterior geometry references, not targets to edit or compositions to copy. White neoclassical cathedral: west portico with six large Doric columns, triangular sculptured pediment, exactly three rooftop saint statues and cross on central saint. Long restrained white nave to right behind portico, St Casimir chapel dark dome near far right rear. SINGLE detached bell tower to left across real open paved gap: white rounded medieval lower base, tapering octagonal upper storeys, dark clock faces, dark pointed spire with finial. Do not join tower to cathedral, do not duplicate it, do not add spires to neighboring buildings. Low elevated rooftop camera at about25m southWEST of square, looking northEAST with gentle15degree downward tilt roughly landmark midpoint. Whole cathedral and bell tower spire fully visible with safe sky top margin, wide square below with tiny people, wooded Gediminas hill at rear right and coherent modest city blocks left. No water or fictitious giant skyline. Natural soft evening warm side light with realistic white stone, subdued colors, crisp full-frame camera texture, no HDR, artwork, miniature or tilt shift. Landscape3:2 1536x1024. No readable text, signs, lettering, logos, watermark or border. Opaque.",
+      "generationArguments": {
+        "prompt": "Use case: photorealistic-natural. Completely new current-day photo-realistic hero of Vilnius Cathedral and its single DETACHED bell tower in Cathedral Square Vilnius Lithuania. Reference1 Pudelek and reference2 Guillaume Speurt are licensed modern exterior geometry references, not targets to edit or compositions to copy. White neoclassical cathedral: west portico with six large Doric columns, triangular sculptured pediment, exactly three rooftop saint statues and cross on central saint. Long restrained white nave to right behind portico, St Casimir chapel dark dome near far right rear. SINGLE detached bell tower to left across real open paved gap: white rounded medieval lower base, tapering octagonal upper storeys, dark clock faces, dark pointed spire with finial. Do not join tower to cathedral, do not duplicate it, do not add spires to neighboring buildings. Low elevated rooftop camera at about25m southWEST of square, looking northEAST with gentle15degree downward tilt roughly landmark midpoint. Whole cathedral and bell tower spire fully visible with safe sky top margin, wide square below with tiny people, wooded Gediminas hill at rear right and coherent modest city blocks left. No water or fictitious giant skyline. Natural soft evening warm side light with realistic white stone, subdued colors, crisp full-frame camera texture, no HDR, artwork, miniature or tilt shift. Landscape3:2 1536x1024. No readable text, signs, lettering, logos, watermark or border. Opaque.",
+        "referenced_image_paths": [
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/vilna/references/ref-d6372a6c53b44f02.jpg",
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/vilna/references/ref-fe779834c8d219ed.jpg"
+        ],
+        "transparent_background": false
+      },
+      "caption": "Vilnan katedraali ja erillinen kellotorni. Havainnekuva.",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "references": [
+        {
+          "nimi": "File:Vilnius (Wilno) - cathedral.jpg",
+          "tekija": "Pudelek (Marcin Szala)",
+          "lisenssi": "CC BY-SA 3.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Vilnius_(Wilno)_-_cathedral.jpg",
+          "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/4/45/Vilnius_%28Wilno%29_-_cathedral.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/45/Vilnius_%28Wilno%29_-_cathedral.jpg/1280px-Vilnius_%28Wilno%29_-_cathedral.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/vilna/references/ref-d6372a6c53b44f02.jpg",
+          "originalDimensions": [
+            2583,
+            1564
+          ],
+          "downloadDimensions": [
+            1280,
+            775
+          ],
+          "sha256": "d6372a6c53b44f0235036e52ed999851d5f9218d27d4d3dcc29621212da59101",
+          "originalSha1": "c89d51af928b34ba761707e9156df77978e7b1dc",
+          "apiPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/vilna/references/api.json",
+          "apiSha256": "b2b8b531f4b0a21425137f94eb89d495d76e50487b1b35a3a97405df56205243",
+          "categories": [
+            "Category:CC-BY-SA-3.0",
+            "Category:Cathedral Square in Vilnius",
+            "Category:Exterior of Vilnius Cathedral",
+            "Category:Images by Marcin Szala",
+            "Category:Images with annotations",
+            "Category:Quality Images by Marcin Szala",
+            "Category:Quality images",
+            "Category:Quality images missing SDC depicts",
+            "Category:Quality images of Vilnius",
+            "Category:Self-published work",
+            "Category:Vilnius Cathedral Bell Tower"
+          ],
+          "metadata": {
+            "ImageDescription": "Cathedral in Vilnius, Lithuania.",
+            "DateTimeOriginal": "2011-08"
+          },
+          "viewed": true,
+          "role": "modern exterior architecture and immediate setting; different creator reference 1",
+          "visualIdentityConfirmed": true
+        },
+        {
+          "nimi": "File:Cathedral and Belfry of Vilnius (7931978582).jpg",
+          "tekija": "Guillaume Speurt from Vilnius, Lithuania",
+          "lisenssi": "CC BY-SA 2.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Cathedral_and_Belfry_of_Vilnius_(7931978582).jpg",
+          "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Cathedral_and_Belfry_of_Vilnius_%287931978582%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/Cathedral_and_Belfry_of_Vilnius_%287931978582%29.jpg/1280px-Cathedral_and_Belfry_of_Vilnius_%287931978582%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/vilna/references/ref-fe779834c8d219ed.jpg",
+          "originalDimensions": [
+            3456,
+            2235
+          ],
+          "downloadDimensions": [
+            1280,
+            828
+          ],
+          "sha256": "fe779834c8d219ed004baa3166fa5d7219c828c1007a347331c6a566b65bc955",
+          "originalSha1": "851630ce85621847bd4a82dbfa50616db335dc90",
+          "apiPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/vilna/references/api.json",
+          "apiSha256": "b2b8b531f4b0a21425137f94eb89d495d76e50487b1b35a3a97405df56205243",
+          "categories": [
+            "Category:CC-BY-SA-2.0",
+            "Category:Cathedral Square in Vilnius",
+            "Category:Exterior of Vilnius Cathedral",
+            "Category:Files with coordinates missing SDC location of creation",
+            "Category:Flickr images reviewed by File Upload Bot (Magnus Manske)",
+            "Category:Photographs by Guillaume Speurt",
+            "Category:Taken with Sony DSLR-A330",
+            "Category:Vilnius Cathedral Bell Tower"
+          ],
+          "metadata": {
+            "GPSLatitude": "54.682882",
+            "GPSLongitude": "25.278442",
+            "GPSMapDatum": "WGS-84",
+            "ImageDescription": "Cathedral and Belfry of Vilnius",
+            "DateTimeOriginal": "2012-08-28 08:00"
+          },
+          "viewed": true,
+          "role": "modern exterior architecture and immediate setting; different creator reference 2",
+          "visualIdentityConfirmed": true
+        }
+      ],
+      "subjectCoordinatesApprox": [
+        54.68585,
+        25.28738
+      ],
+      "allowedCenter": [
+        54.69282,
+        25.26939
+      ],
+      "radiusMetres": 10000,
+      "subjectDistanceApproxMetres": 1392,
+      "subjectRadiusPassApprox": true,
+      "coordinateDistinction": "Subject coordinates are approximate landmark location. Reference EXIF GPS records camera creation position and is not used as subject coordinate.",
+      "actualCamera": {
+        "heightApproxMetres": 25,
+        "positionRelativeToSubject": "southwest",
+        "direction": "northeast",
+        "tiltDownApproxDegrees": 15,
+        "angleRule": "VAKIO",
+        "assessedVisually": "low elevated rooftop view, full landmark and tip; not top-down aerial"
+      },
+      "technicalPostprocessing": "ICC embedding and RGB PNG metadata; native exact size so no crop or resize. 480 preview only downscaled.",
+      "visualFactualQA": {
+        "nativeViewed": true,
+        "finalViewed": true,
+        "preview480Viewed": true,
+        "photorealistic": true,
+        "currentDayExterior": true,
+        "sameSubjectTwoDifferentCreatorPhotos": true,
+        "wholeMainLandmarkAndTipVisible": true,
+        "noReadableTextLogoWatermarkBorder": true,
+        "tinyOrdinaryPeople": true,
+        "immediateGeography": "One detached belfry on left, portico and three saint statues, chapel dome, Gediminas hill rear right, paved gap fully intact.",
+        "status": "production agent physically inspected native, final1536 and480 preview; accepted for root review"
+      },
+      "publicationState": "local candidate only; no R2, Git, handoff, integration or publication",
+      "viitteet": [
+        {
+          "nimi": "File:Vilnius (Wilno) - cathedral.jpg",
+          "tekija": "Pudelek (Marcin Szala)",
+          "lisenssi": "CC BY-SA 3.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Vilnius_(Wilno)_-_cathedral.jpg",
+          "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/4/45/Vilnius_%28Wilno%29_-_cathedral.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/45/Vilnius_%28Wilno%29_-_cathedral.jpg/1280px-Vilnius_%28Wilno%29_-_cathedral.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/vilna/references/ref-d6372a6c53b44f02.jpg",
+          "originalDimensions": [
+            2583,
+            1564
+          ],
+          "downloadDimensions": [
+            1280,
+            775
+          ],
+          "sha256": "d6372a6c53b44f0235036e52ed999851d5f9218d27d4d3dcc29621212da59101",
+          "originalSha1": "c89d51af928b34ba761707e9156df77978e7b1dc",
+          "apiPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/vilna/references/api.json",
+          "apiSha256": "b2b8b531f4b0a21425137f94eb89d495d76e50487b1b35a3a97405df56205243",
+          "categories": [
+            "Category:CC-BY-SA-3.0",
+            "Category:Cathedral Square in Vilnius",
+            "Category:Exterior of Vilnius Cathedral",
+            "Category:Images by Marcin Szala",
+            "Category:Images with annotations",
+            "Category:Quality Images by Marcin Szala",
+            "Category:Quality images",
+            "Category:Quality images missing SDC depicts",
+            "Category:Quality images of Vilnius",
+            "Category:Self-published work",
+            "Category:Vilnius Cathedral Bell Tower"
+          ],
+          "metadata": {
+            "ImageDescription": "Cathedral in Vilnius, Lithuania.",
+            "DateTimeOriginal": "2011-08"
+          },
+          "viewed": true,
+          "role": "modern exterior architecture and immediate setting; different creator reference 1",
+          "visualIdentityConfirmed": true
+        },
+        {
+          "nimi": "File:Cathedral and Belfry of Vilnius (7931978582).jpg",
+          "tekija": "Guillaume Speurt from Vilnius, Lithuania",
+          "lisenssi": "CC BY-SA 2.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Cathedral_and_Belfry_of_Vilnius_(7931978582).jpg",
+          "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Cathedral_and_Belfry_of_Vilnius_%287931978582%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/Cathedral_and_Belfry_of_Vilnius_%287931978582%29.jpg/1280px-Cathedral_and_Belfry_of_Vilnius_%287931978582%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/vilna/references/ref-fe779834c8d219ed.jpg",
+          "originalDimensions": [
+            3456,
+            2235
+          ],
+          "downloadDimensions": [
+            1280,
+            828
+          ],
+          "sha256": "fe779834c8d219ed004baa3166fa5d7219c828c1007a347331c6a566b65bc955",
+          "originalSha1": "851630ce85621847bd4a82dbfa50616db335dc90",
+          "apiPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/vilna/references/api.json",
+          "apiSha256": "b2b8b531f4b0a21425137f94eb89d495d76e50487b1b35a3a97405df56205243",
+          "categories": [
+            "Category:CC-BY-SA-2.0",
+            "Category:Cathedral Square in Vilnius",
+            "Category:Exterior of Vilnius Cathedral",
+            "Category:Files with coordinates missing SDC location of creation",
+            "Category:Flickr images reviewed by File Upload Bot (Magnus Manske)",
+            "Category:Photographs by Guillaume Speurt",
+            "Category:Taken with Sony DSLR-A330",
+            "Category:Vilnius Cathedral Bell Tower"
+          ],
+          "metadata": {
+            "GPSLatitude": "54.682882",
+            "GPSLongitude": "25.278442",
+            "GPSMapDatum": "WGS-84",
+            "ImageDescription": "Cathedral and Belfry of Vilnius",
+            "DateTimeOriginal": "2012-08-28 08:00"
+          },
+          "viewed": true,
+          "role": "modern exterior architecture and immediate setting; different creator reference 2",
+          "visualIdentityConfirmed": true
+        }
+      ],
+      "r2Key": "julisteet/herokoe/hero-vilna.png",
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-vilna.png",
+      "bytes": 2420700,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/vilna/production/hero-vilna.png",
+      "metadataText": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "parentQA": {
+        "reviewer": "root",
+        "sha256": "0e0d90cfe0994eae3e5650a6e2ca1c1a0beb402e2784effe5657d1bc7ae42d53",
+        "nativeViewed": true,
+        "referenceComparisonViewed": true,
+        "photorealism": true,
+        "recognisableLandmarkAndImmediateContext": true,
+        "technicalValidationAtUpload": true,
+        "approvedForDelivery": true,
+        "limitations": {},
+        "cameraDecision": "low elevated reference-anchored view accepted"
+      },
+      "editorAcceptance": "pending",
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "islanti",
+      "cityName": "Islanti",
+      "subject": "Hallgrímskirkja Reykjavikissa",
+      "file": "hero-islanti.png",
+      "preview480": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/islanti/production/hero-islanti-480.png",
+      "nativeOriginal": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/islanti/production/native-original.png",
+      "sha256": "bde566ff90fdc5430e5ebe3b556f2e1f067f7846117835747de4631b31c963ee",
+      "nativeSha256": "b07207b942c682f6aa70d2e909710aa3b0eae0d4db3bc3d52b7f8503e666b2f0",
+      "nativeDimensions": [
+        1536,
+        1024
+      ],
+      "productionDimensions": [
+        1536,
+        1024
+      ],
+      "previewDimensions": [
+        480,
+        320
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "colorSpace": "sRGB",
+      "iccEmbedded": true,
+      "opaque": true,
+      "generationTool": "built-in image_gen",
+      "generationPrompt": "Use case: photorealistic-natural. Generate entirely new current-day camera-real city hero of Hallgrímskirkja Reykjavík, Iceland. Reference1 Alberto Moreno and reference2 Holger Uwe Schmitt are modern exterior architectural references only, do not copy a photo. Landmark pale concrete west facade with ONE tall tapering central clock tower and cross, stepped basalt-column-inspired vertical concrete ribs sweeping down symmetrically to two low wings, pointed entrance, real dark bronze Leif Erikson statue on stone pedestal in front plaza at smaller scale. Cathedral large dominating foreground but whole cross and both stepped wings inside frame, generous clear sky top margin. Camera LOW ELEVATED rooftop viewpoint northwest/west of church about28m height, near tower midpoint, looking southeast and gently15deg down, front face plus modest south flank/nave behind right. Immediate paved forecourt and tiny tourists below, modest Reykjavík colorful low houses and streets behind, geographic setting land behind church, NO sea directly behind, NO waterfall, black beach or rural mountains dominating the scene. Only Reykjavik within3km of64.14401,-21.93145, subject64.14174,-21.92662. Natural Icelandic bright overcast morning with soft clouds, subdued pale concrete, realistic photographic texture and lens perspective, no HDR, artistic style, maquette or tilt shift. Landscape3:2 1536x1024, opaque. No readable text/signs/lettering, logos, watermark, border.",
+      "generationArguments": {
+        "prompt": "Use case: photorealistic-natural. Generate entirely new current-day camera-real city hero of Hallgrímskirkja Reykjavík, Iceland. Reference1 Alberto Moreno and reference2 Holger Uwe Schmitt are modern exterior architectural references only, do not copy a photo. Landmark pale concrete west facade with ONE tall tapering central clock tower and cross, stepped basalt-column-inspired vertical concrete ribs sweeping down symmetrically to two low wings, pointed entrance, real dark bronze Leif Erikson statue on stone pedestal in front plaza at smaller scale. Cathedral large dominating foreground but whole cross and both stepped wings inside frame, generous clear sky top margin. Camera LOW ELEVATED rooftop viewpoint northwest/west of church about28m height, near tower midpoint, looking southeast and gently15deg down, front face plus modest south flank/nave behind right. Immediate paved forecourt and tiny tourists below, modest Reykjavík colorful low houses and streets behind, geographic setting land behind church, NO sea directly behind, NO waterfall, black beach or rural mountains dominating the scene. Only Reykjavik within3km of64.14401,-21.93145, subject64.14174,-21.92662. Natural Icelandic bright overcast morning with soft clouds, subdued pale concrete, realistic photographic texture and lens perspective, no HDR, artistic style, maquette or tilt shift. Landscape3:2 1536x1024, opaque. No readable text/signs/lettering, logos, watermark, border.",
+        "referenced_image_paths": [
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/islanti/references/ref-db1cd60aafe1b2df.jpg",
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/islanti/references/ref-25c6ea0053c5bb64.jpg"
+        ],
+        "transparent_background": false
+      },
+      "caption": "Hallgrímskirkja Reykjavikissa. Havainnekuva.",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "references": [
+        {
+          "nimi": "File:Hallgrimskirkja church view.jpg",
+          "tekija": "Alberto Moreno",
+          "lisenssi": "CC0",
+          "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Hallgrimskirkja_church_view.jpg",
+          "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3d/Hallgrimskirkja_church_view.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3d/Hallgrimskirkja_church_view.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/islanti/references/ref-db1cd60aafe1b2df.jpg",
+          "originalDimensions": [
+            1280,
+            1280
+          ],
+          "downloadDimensions": [
+            1280,
+            1280
+          ],
+          "sha256": "db1cd60aafe1b2df190a835bb93673c72fe35fcdbee7e55f233d4bf89fbd1d05",
+          "originalSha1": "dfeb996d6cfca6863c92345c0c95ecbd7df6926c",
+          "apiPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/islanti/references/api.json",
+          "apiSha256": "1f25b52693691cc67866f24eaa6247854d8a6c67ada28f985c91c3303f062d9c",
+          "categories": [
+            "Category:CC-Zero",
+            "Category:Exterior of Hallgrímskirkja",
+            "Category:Self-published work",
+            "Category:Statue of Leifur Eiríksson (Reykjavík)"
+          ],
+          "metadata": {
+            "ImageDescription": "Hallgrimskirkja church in Reykjavik at dawn",
+            "DateTimeOriginal": "2018-11-21"
+          },
+          "viewed": true,
+          "role": "modern exterior architecture and immediate setting; different creator reference 1",
+          "visualIdentityConfirmed": true
+        },
+        {
+          "nimi": "File:+Die Hallgrimskirkja ist das markanteste Bauwerk Reykjaviks. 01.jpg",
+          "tekija": "Holger Uwe Schmitt",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:%2BDie_Hallgrimskirkja_ist_das_markanteste_Bauwerk_Reykjaviks._01.jpg",
+          "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/4/49/%2BDie_Hallgrimskirkja_ist_das_markanteste_Bauwerk_Reykjaviks._01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/49/%2BDie_Hallgrimskirkja_ist_das_markanteste_Bauwerk_Reykjaviks._01.jpg/1280px-%2BDie_Hallgrimskirkja_ist_das_markanteste_Bauwerk_Reykjaviks._01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/islanti/references/ref-25c6ea0053c5bb64.jpg",
+          "originalDimensions": [
+            4836,
+            5906
+          ],
+          "downloadDimensions": [
+            1280,
+            1563
+          ],
+          "sha256": "25c6ea0053c5bb64d6309c6e27cc62237b896e55a42ea07a7c41e6177200b124",
+          "originalSha1": "5043010217973ea585d84ca744ff9cee712e051c",
+          "apiPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/islanti/references/api.json",
+          "apiSha256": "1f25b52693691cc67866f24eaa6247854d8a6c67ada28f985c91c3303f062d9c",
+          "categories": [
+            "Category:CC-BY-SA-4.0",
+            "Category:Exterior of Hallgrímskirkja",
+            "Category:Self-published work"
+          ],
+          "metadata": {
+            "ImageDescription": "The Hallgrimskirkja in Reykjavik.",
+            "DateTimeOriginal": "2026-07-10 13:16:03"
+          },
+          "viewed": true,
+          "role": "modern exterior architecture and immediate setting; different creator reference 2",
+          "visualIdentityConfirmed": true
+        }
+      ],
+      "subjectCoordinatesApprox": [
+        64.14174,
+        -21.92662
+      ],
+      "allowedCenter": [
+        64.14401,
+        -21.93145
+      ],
+      "radiusMetres": 3000,
+      "subjectDistanceApproxMetres": 344,
+      "subjectRadiusPassApprox": true,
+      "coordinateDistinction": "Subject coordinates are approximate landmark location. Reference EXIF GPS records camera creation position and is not used as subject coordinate.",
+      "actualCamera": {
+        "heightApproxMetres": 28,
+        "positionRelativeToSubject": "west-northwest",
+        "direction": "east-southeast",
+        "tiltDownApproxDegrees": 15,
+        "angleRule": "VAKIO",
+        "assessedVisually": "low elevated rooftop view, full landmark and tip; not top-down aerial"
+      },
+      "technicalPostprocessing": "ICC embedding and RGB PNG metadata; native exact size so no crop or resize. 480 preview only downscaled.",
+      "visualFactualQA": {
+        "nativeViewed": true,
+        "finalViewed": true,
+        "preview480Viewed": true,
+        "photorealistic": true,
+        "currentDayExterior": true,
+        "sameSubjectTwoDifferentCreatorPhotos": true,
+        "wholeMainLandmarkAndTipVisible": true,
+        "noReadableTextLogoWatermarkBorder": true,
+        "tinyOrdinaryPeople": true,
+        "immediateGeography": "One Hallgrímskirkja clock tower with full cross, stepped concrete wings, front Leif statue and Reykjavik low houses; no rural waterfall/beach.",
+        "status": "production agent physically inspected native, final1536 and480 preview; accepted for root review"
+      },
+      "publicationState": "local candidate only; no R2, Git, handoff, integration or publication",
+      "viitteet": [
+        {
+          "nimi": "File:Hallgrimskirkja church view.jpg",
+          "tekija": "Alberto Moreno",
+          "lisenssi": "CC0",
+          "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Hallgrimskirkja_church_view.jpg",
+          "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3d/Hallgrimskirkja_church_view.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3d/Hallgrimskirkja_church_view.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/islanti/references/ref-db1cd60aafe1b2df.jpg",
+          "originalDimensions": [
+            1280,
+            1280
+          ],
+          "downloadDimensions": [
+            1280,
+            1280
+          ],
+          "sha256": "db1cd60aafe1b2df190a835bb93673c72fe35fcdbee7e55f233d4bf89fbd1d05",
+          "originalSha1": "dfeb996d6cfca6863c92345c0c95ecbd7df6926c",
+          "apiPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/islanti/references/api.json",
+          "apiSha256": "1f25b52693691cc67866f24eaa6247854d8a6c67ada28f985c91c3303f062d9c",
+          "categories": [
+            "Category:CC-Zero",
+            "Category:Exterior of Hallgrímskirkja",
+            "Category:Self-published work",
+            "Category:Statue of Leifur Eiríksson (Reykjavík)"
+          ],
+          "metadata": {
+            "ImageDescription": "Hallgrimskirkja church in Reykjavik at dawn",
+            "DateTimeOriginal": "2018-11-21"
+          },
+          "viewed": true,
+          "role": "modern exterior architecture and immediate setting; different creator reference 1",
+          "visualIdentityConfirmed": true
+        },
+        {
+          "nimi": "File:+Die Hallgrimskirkja ist das markanteste Bauwerk Reykjaviks. 01.jpg",
+          "tekija": "Holger Uwe Schmitt",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:%2BDie_Hallgrimskirkja_ist_das_markanteste_Bauwerk_Reykjaviks._01.jpg",
+          "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/4/49/%2BDie_Hallgrimskirkja_ist_das_markanteste_Bauwerk_Reykjaviks._01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/49/%2BDie_Hallgrimskirkja_ist_das_markanteste_Bauwerk_Reykjaviks._01.jpg/1280px-%2BDie_Hallgrimskirkja_ist_das_markanteste_Bauwerk_Reykjaviks._01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/islanti/references/ref-25c6ea0053c5bb64.jpg",
+          "originalDimensions": [
+            4836,
+            5906
+          ],
+          "downloadDimensions": [
+            1280,
+            1563
+          ],
+          "sha256": "25c6ea0053c5bb64d6309c6e27cc62237b896e55a42ea07a7c41e6177200b124",
+          "originalSha1": "5043010217973ea585d84ca744ff9cee712e051c",
+          "apiPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/islanti/references/api.json",
+          "apiSha256": "1f25b52693691cc67866f24eaa6247854d8a6c67ada28f985c91c3303f062d9c",
+          "categories": [
+            "Category:CC-BY-SA-4.0",
+            "Category:Exterior of Hallgrímskirkja",
+            "Category:Self-published work"
+          ],
+          "metadata": {
+            "ImageDescription": "The Hallgrimskirkja in Reykjavik.",
+            "DateTimeOriginal": "2026-07-10 13:16:03"
+          },
+          "viewed": true,
+          "role": "modern exterior architecture and immediate setting; different creator reference 2",
+          "visualIdentityConfirmed": true
+        }
+      ],
+      "r2Key": "julisteet/herokoe/hero-islanti.png",
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-islanti.png",
+      "bytes": 2332904,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/islanti/production/hero-islanti.png",
+      "metadataText": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "parentQA": {
+        "reviewer": "root",
+        "sha256": "bde566ff90fdc5430e5ebe3b556f2e1f067f7846117835747de4631b31c963ee",
+        "nativeViewed": true,
+        "referenceComparisonViewed": true,
+        "photorealism": true,
+        "recognisableLandmarkAndImmediateContext": true,
+        "technicalValidationAtUpload": true,
+        "approvedForDelivery": true,
+        "limitations": {},
+        "cameraDecision": "low elevated reference-anchored view accepted"
+      },
+      "editorAcceptance": "pending",
+      "gameIntegrated": false,
+      "published": false
+    }
+  ],
+  "editorAcceptance": "pending",
+  "gameIntegrated": false,
+  "published": false,
+  "noMergeVersionRelease": true
+}

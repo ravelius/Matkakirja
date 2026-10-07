@@ -35,3 +35,31 @@ Manifesti: `posti/kuvatoimitus-oppaan-kaupunkinakymat-sallitut-03-20261007.json`
 Edinburghin ensimmäisen kuvan keksityt linnan kirkontornit hylättiin. Toimitettu kokonaan uusi kuva rajaa näkymän oikeaan palatsiin, puolipyöreään patteriin ja linnankallioon. Kuvakulma on läheisempi, jotta laaja kaupunkipanoraama ei lisää vääriä rakennuksia. Sisilia on Palermon katedraalin eteläportiikki; Kreeta on Heraklionin Koules. Ei Taorminaa, Etnaa, Chaniaa tai Elafonisia. Marseillen sataman ja basilikan suhde on viitteisiin ankkuroitu, tarkka korttelisto on havainnollistava.
 
 Katselmus ja pelikytkentä odottavat. Ei mergeä, versionnostoa tai julkaisua Codexilta.
+
+## Erä 04 toimitettu
+
+Granada, Sevilla, Bergen, Oslo ja Bukarest: viisi natiivisti 1536 × 1024 fotorealistista kuvaa. Kaikkien R2-takaisinluku läpäisi HTTP 200 / MIME / CORS / tavutarkkuuden. Samat havainnekuva- ja lisenssimerkinnät kuin aiemmissa erissä.
+
+Päätoimittajan katselmukseen ensimmäiset kolme: Granada, Sevilla ja Bergen. Vertailukuva: https://media.matkakirja.app/julisteet/herokoe/20261007/comparison-batch04.jpg
+Manifesti: `posti/kuvatoimitus-oppaan-kaupunkinakymat-sallitut-04-20261007.json`.
+
+Bergenin takapihan ja Torgetin viitteet hylättiin ennen generointia. Toimitettu näkymä käyttää kahta oikeaa Bryggenin rantarivin viitettä. Oslon viitteet ovat yleisnäkymä ja saman rakennuksen kattodetalji; roolit on kirjattu erikseen. Bukarestin luettava otsikko poistettiin kokonaan uudella generoinnilla.
+
+Katselmus ja pelikytkentä odottavat. Ei mergeä, versionnostoa tai julkaisua Codexilta.
+
+## Erä 05 toimitettu
+
+Krakova, Sofia, Tampere, Vilna ja Islanti (Reykjavik): viisi natiivisti 1536 × 1024 fotorealistista kuvaa. Kaikkien R2-takaisinluku läpäisi HTTP 200 / MIME / CORS / tavutarkkuuden. Samat havainnekuva- ja lisenssimerkinnät kuin aiemmissa erissä.
+
+Päätoimittajan katselmukseen ensimmäiset kolme: Krakova, Sofia ja Tampere. Vertailukuva: https://media.matkakirja.app/julisteet/herokoe/20261007/comparison-batch05.jpg
+Manifesti: `posti/kuvatoimitus-oppaan-kaupunkinakymat-sallitut-05-20261007.json`.
+
+Sofian väärä vuoristotausta korjattiin uudella generoinnilla. Tampereen kohde on Finlaysonin eteläjulkisivu Frenckellin aukion tuntumassa; Vilnan katedraali ja sen erillinen kellotorni; Islanti on Hallgrímskirkja Reykjavikissa, sallitun 3 km säteen sisällä.
+
+Katselmus ja pelikytkentä odottavat. Ei mergeä, versionnostoa tai julkaisua Codexilta.
+
+## Tilaus valmis kuvatoimituksen osalta
+
+Kaikki uuden tilauksen 25 sallittua kaupunkia on toimitettu viitenä viiden kuvan eränä täsmälleen tilauksen tunnuksilla ja järjestyksellä. Aiemmat 12 kuvat eivät kuulu tämän tilauksen 25 kuvan laskentaan. Varsovaa ja alueiden ulkopuolisia kohteita ei ole toimitettu.
+
+Päätoimittajan kuittaukset, oppaan kytkentä ja näkyvyys pelissä ovat erillisiä odottavia vaiheita. Tämä toimitus ei anna merge- tai julkaisulupaa.
