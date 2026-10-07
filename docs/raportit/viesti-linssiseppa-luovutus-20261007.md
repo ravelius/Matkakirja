@@ -208,3 +208,7 @@ NUI:n osa on `natiivi-ui/sallitut-157` 0f770be2. LS2:n lista on tiedostossa `pro
     - `linssiseppa/alkulento-v3-korjaus` eeb46378b: Paivanvalo `Pakota ?? false` ja kone radan alussa odotuksesta asti, nappula pois.
     - Nykäyksen syy selviää toistoajosta. Ehdokkaat: esikääntö, KaupunkiMerkit.ValitseKaupunki-ajo napautuksessa ja leikkauskehyksen muutokset (usva, reitit, LentoKarkeaSse).
     - Mittaus: `tyokalut/linssiseppa-ajot/mittaa-kehykset.py konsoli.log`.
+- 15.1x:
+  - Latauskuva v2 (vaakarajaus ja tumma liuku, iPad 1,4 ×): cc6176356, käännös ec7402278. Stillit `omistajalle/latauskuva-kolme-nakymaa-v2.png` lähetetty Päätoimittajalle kuittaukseen.
+  - Alkulento-v3 8be4e3831 kääntyy junan 161 jälkeen, toistoajo savun jälkeen.
+  - Korjaushaara alkulento-v3-korjaus c917ffd28: ei yötä, kone alusta, napautuksen kamera-ajo pois valinnassa.
