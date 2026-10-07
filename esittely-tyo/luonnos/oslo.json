@@ -1,0 +1,608 @@
+{
+ "kaupunki": "Oslo",
+ "id": "oslo",
+ "versio": 1,
+ "kohteet": [
+  {
+   "id": "Q863932",
+   "nimi": "Oslon kuninkaanlinna",
+   "kuvaus": "Norjan kuninkaan virka-asunto",
+   "luokka": "rakennus",
+   "koko_m": 300,
+   "teksti": "Oslon kuninkaanlinna seisoo matalalla kukkulalla pääkadun länsipäässä, ja sen pitkä vaalea julkisivu katsoo suoraan Karl Johans gaten suuntaan. Linnaa alettiin rakentaa vuonna 1825 Hans Linstowin piirustusten mukaan, mutta kuningas Kaarle Juhana ei ehtinyt asua siinä, sillä hän kuoli ennen kuin rakennus valmistui vuonna 1849. Ensimmäisenä linnaan muutti hänen poikansa Oskar ensimmäinen. Linnan edessä on Brynjulf Bergslienin tekemä Kaarle Juhanan ratsastajapatsas, ja ympärillä levittäytyy kaikille avoin linnanpuisto. Vartionvaihto nähdään joka päivä puoli kahdelta.",
+   "lyhyt": "Oslon kuninkaanlinnassa on sataseitsemänkymmentäkolme huonetta, ja kesäisin osaan niistä pääsee opastetulla kierroksella. Kansallispäivänä seitsemästoista toukokuuta kuninkaallinen perhe tervehtii linnan parvekkeelta lasten kulkuetta, ja tavan aloitti kuningas Haakon seitsemäs vuonna 1906.",
+   "syventava": "Miksi Kaarle Juhana ei asunut linnassa?",
+   "kysymykset": [
+    "Kuka asuu kuninkaanlinnassa nykyään?",
+    "Miksi linnan rakentaminen kesti niin kauan?",
+    "Kuka oli kuningas Kaarle Juhana?",
+    "Mitä vartionvaihdossa tapahtuu?",
+    "Miksi kuninkaallinen perhe vilkuttaa parvekkeelta?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Linna on Norjan hallitsijan virka-asunto, Hans Linstowin suunnittelema, 173 huonetta.",
+     "url": "https://en.wikipedia.org/wiki/Royal_Palace,_Oslo"
+    },
+    {
+     "vaite": "Rakennustyöt alkoivat 1825, ja Oskar I muutti ensimmäisenä hallitsijana linnaan sen valmistuttua 1849; Kaarle Juhana hallitsi 1818–1844.",
+     "url": "https://www.royalcourt.no/artikkel.html?tid=29640"
+    },
+    {
+     "vaite": "Oskar I oli Kaarle XIV Juhanan poika.",
+     "url": "https://en.wikipedia.org/wiki/Oscar_I_of_Sweden"
+    },
+    {
+     "vaite": "Brynjulf Bergslienin Kaarle Juhanan ratsastajapatsas paljastettiin linnan edessä 1875.",
+     "url": "https://en.wikipedia.org/wiki/Karl_Johans_gate"
+    },
+    {
+     "vaite": "Linnanpuisto on 22 hehtaarin julkinen puisto.",
+     "url": "https://en.wikipedia.org/wiki/Royal_Palace,_Oslo"
+    },
+    {
+     "vaite": "Vartionvaihto päivittäin kello 13.30.",
+     "url": "https://en.wikipedia.org/wiki/Royal_Palace,_Oslo"
+    },
+    {
+     "vaite": "Linna on avoinna opastetuin kierroksin kesäisin.",
+     "url": "https://www.royalcourt.no/visits-and-cultural-activities/visit-the-royal-palace/guided-tours-of-the-royal-palace"
+    },
+    {
+     "vaite": "Kuninkaallinen perhe tervehtii 17.5. lasten kulkuetta linnan parvekkeelta; tavan aloitti kuningas Haakon 1906.",
+     "url": "https://www.royalcourt.no/news/celebrating-may-17th"
+    }
+   ]
+  },
+  {
+   "id": "Q1490775",
+   "nimi": "Karl Johans gate",
+   "kuvaus": "Oslon pääkatu",
+   "luokka": "katu",
+   "koko_m": 1300,
+   "teksti": "Oslon pääkatu Karl Johans gate halkoo keskustan suorana nauhana rautatieasemalta kuninkaanlinnalle, ja matkaa kertyy runsas kilometri. Kadun varrelle osuvat suurkäräjien keltatiilinen talo, Kansallisteatteri ja Grand Hotel. Nimensä katu sai vuonna 1852 kuningas Kaarle Juhanan mukaan, joka hallitsi samaan aikaan Ruotsia ja Norjaa. Joka vuosi kymmenes joulukuuta soihtukulkue saattaa Nobelin rauhanpalkinnon saajan Grand Hotelin eteen, ja palkittu tervehtii väkijoukkoa hotellin parvekkeelta. Kansallispäivänä katu täyttyy lasten kulkueesta, joka marssii linnalle.",
+   "lyhyt": "Oslon pääkadun Grand Hotel avattiin vuonna 1874, ja rauhanpalkinnon saaja majoittuu aina sen Nobel-sviitissä. Kadun nimi juontaa kuninkaasta, joka tunnetaan Ruotsissa nimellä Kaarle neljästoista Juhana ja joka oli alun perin ranskalainen marsalkka Jean Bernadotte.",
+   "syventava": "Miksi Norjan kuningas oli ranskalainen?",
+   "kysymykset": [
+    "Miten ranskalaisesta marsalkasta tuli kuningas?",
+    "Milloin soihtukulkue järjestetään?",
+    "Kuinka paljon lapsia kansallispäivän kulkueessa on?",
+    "Mitä kadun varrella on nykyään?",
+    "Miksi Norjalla ja Ruotsilla oli yhteinen kuningas?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Katu kulkee keskusasemalta kuninkaanlinnalle, noin 1,3 kilometriä.",
+     "url": "https://scandinavia.nordicvisitor.com/travel-guide/attractions/norway/karl-johans-gate"
+    },
+    {
+     "vaite": "Varrella suurkäräjien talo, Kansallisteatteri ja Grand Hotel.",
+     "url": "https://scandinavia.nordicvisitor.com/travel-guide/attractions/norway/karl-johans-gate"
+    },
+    {
+     "vaite": "Suurkäräjien talo on keltatiilinen.",
+     "url": "https://en.wikipedia.org/wiki/Storting_building"
+    },
+    {
+     "vaite": "Nimetty 1852 Kaarle III Juhanan mukaan, joka oli Norjan ja Ruotsin kuningas 1818–1844.",
+     "url": "https://oslobyleksikon.no/side/Karl_Johans_gate_(English)"
+    },
+    {
+     "vaite": "10.12. soihtukulkue päättyy Grand Hotelille, ja palkittu tervehtii Nobel-sviitin parvekkeelta; palkittu majoittuu aina sviitissä.",
+     "url": "https://www.insightguides.com/inspire-me/blog/oslo-home-to-the-nobel-peace-prize"
+    },
+    {
+     "vaite": "Kansallispäivän lasten kulkue kulkee katua pitkin.",
+     "url": "https://www.aaa.com/tripcanvas/attraction/karl-johans-gate-VA22583"
+    },
+    {
+     "vaite": "Grand Hotel avattiin 1874 Karl Johans gatella.",
+     "url": "https://hotelsforkings.com/city/oslo/grand-hotel-oslo"
+    },
+    {
+     "vaite": "Kaarle XIV Juhana oli alun perin ranskalainen marsalkka Jean Bernadotte.",
+     "url": "https://en.wikipedia.org/wiki/Charles_XIV_John"
+    }
+   ]
+  },
+  {
+   "id": "Q644464",
+   "nimi": "Akershusin linnoitus",
+   "kuvaus": "Keskiaikainen linnoitus ja linna",
+   "luokka": "linnoitus",
+   "koko_m": 600,
+   "teksti": "Akershusin linnoitus kohoaa niemellä sataman ja Bjørvikan lahden välissä, ja ylhäältä erottuvat jyrkät muurit, kulmikkaat bastionit ja niiden keskellä linna. Kuningas Haakon viides aloitti rakentamisen 1290-luvun lopulla, eikä linnoitusta ole koskaan onnistuttu valtaamaan piirityksellä. Kun kaupunki paloi vuonna 1624, Kristian neljäs rakennutti sen uudelleen linnoituksen viereen ja antoi sille nimen Christiania. Hän muutti myös keskiaikaisen linnan renessanssilinnaksi. Linnan kirkon kuninkaallisessa hautakammiossa lepäävät muun muassa kuninkaat Haakon seitsemäs ja Olav viides.",
+   "lyhyt": "Akershusin linnoitus antautui Saksalle taistelutta vuonna 1940, ja miehittäjät teloittivat siellä ihmisiä. Sodan jälkeen samassa paikassa ammuttiin maanpetturina tuomittu Vidkun Quisling lokakuussa 1945. Nykyään linnoituksessa toimivat Norjan vastarintamuseo ja puolustusvoimien museo.",
+   "syventava": "Miksi kaupunki siirrettiin linnoituksen viereen?",
+   "kysymykset": [
+    "Miksi linnoitusta ei koskaan vallattu?",
+    "Kuka oli kuningas Haakon viides?",
+    "Mitä vastarintamuseossa kerrotaan?",
+    "Ketkä on haudattu kuninkaalliseen hautakammioon?",
+    "Miksi kaupungin nimi oli ennen Christiania?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Bjørvika sijaitsee Gamlebyenin ja Akershusin linnoituksen välissä.",
+     "url": "https://en.wikipedia.org/wiki/Bj%C3%B8rvika"
+    },
+    {
+     "vaite": "Haakon V rakennutti linnoituksen 1290-luvun lopulla; sitä ei ole koskaan onnistuneesti piiritetty, mutta se antautui taistelutta Saksalle 1940 ja saksalaiset teloittivat siellä ihmisiä.",
+     "url": "https://en.wikipedia.org/wiki/Akershus_Fortress"
+    },
+    {
+     "vaite": "Vuoden 1624 palon jälkeen Kristian IV rakennutti kaupungin uudelleen linnoituksen lähelle, nimesi sen Christianiaksi ja muutti linnan renessanssilinnaksi italialaisvaikutteisin bastionein.",
+     "url": "https://en.wikipedia.org/wiki/Akershus_Fortress"
+    },
+    {
+     "vaite": "Linnan kirkossa on kuninkaallinen hautakammio, jossa lepäävät mm. Haakon VII, kuningatar Maud ja Olav V; linnoituksessa toimivat Norjan vastarintamuseo ja puolustusvoimien museo.",
+     "url": "https://www.forsvarsbygg.no/en/festningene/akershus-fortress"
+    },
+    {
+     "vaite": "Vidkun Quisling teloitettiin ampumalla Akershusin linnoituksessa 24.10.1945.",
+     "url": "https://en.wikipedia.org/wiki/Vidkun_Quisling"
+    }
+   ]
+  },
+  {
+   "id": "Q43280",
+   "nimi": "Oslon oopperatalo",
+   "kuvaus": "Vinokattoinen ooppera vuonon rannalla",
+   "luokka": "rakennus",
+   "koko_m": 220,
+   "teksti": "Oslon oopperatalo nousee Bjørvikan rannasta kuin vinoon kallistunut valkoinen jäälautta, ja sen loiva katto laskeutuu aivan veden rajaan. Katolle saa kävellä kuka tahansa, joten ylhäältä siellä näkyy yleensä ihmisiä matkalla kohti korkeinta kohtaa. Pinnat on päällystetty valkoisella graniitilla ja italialaisella Carraran marmorilla. Talon suunnitteli norjalainen arkkitehtitoimisto Snøhetta, jonka ehdotus valittiin kolmensadan viidenkymmenen kilpailutyön joukosta, ja se avattiin vuonna 2008. Vieressä vuonossa kelluu lasista ja teräksestä tehty veistos She Lies, joka kääntyilee vuoroveden ja tuulen mukana.",
+   "lyhyt": "Oslon oopperatalo on suurin Norjaan rakennettu kulttuurirakennus sitten Nidarosin tuomiokirkon. Pääsalissa on tuhat kolmesataakuusikymmentäneljä istumapaikkaa, ja salia ympäröi tammella verhoiltu seinä. Vedessä kelluva veistos She Lies on Monica Bonvicinin tulkinta Caspar David Friedrichin maalauksesta Jäämeri.",
+   "syventava": "Mitä vuonossa kelluva veistos esittää?",
+   "kysymykset": [
+    "Miksi oopperatalon katolle saa kävellä?",
+    "Kuka suunnitteli oopperatalon?",
+    "Mitä oopperatalossa esitetään nykyään?",
+    "Miksi talo muistuttaa jäävuorta?",
+    "Millaisesta kivestä katto on tehty?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Katto laskeutuu maan tasolle ja muodostaa aukion, jolle jalankulkijat voivat kävellä.",
+     "url": "https://en.wikipedia.org/wiki/Oslo_Opera_House"
+    },
+    {
+     "vaite": "Pinnat valkoista graniittia ja italialaista Carraran marmoria.",
+     "url": "https://en.wikipedia.org/wiki/Oslo_Opera_House"
+    },
+    {
+     "vaite": "Suunnittelija Snøhetta, valittu 350 kilpailuehdotuksen joukosta.",
+     "url": "https://en.wikipedia.org/wiki/Oslo_Opera_House"
+    },
+    {
+     "vaite": "Avattiin 12.4.2008; suurin Norjaan Nidarosin katedraalin jälkeen rakennettu kulttuurirakennus.",
+     "url": "kaanon:pelin-aineisto"
+    },
+    {
+     "vaite": "Pääsalissa 1 364 paikkaa; tammiverhoilu kiertää salin.",
+     "url": "https://en.wikipedia.org/wiki/Oslo_Opera_House"
+    },
+    {
+     "vaite": "She Lies on Monica Bonvicinin teräs- ja lasiveistos, joka kelluu vuonossa ja kääntyy vuoroveden ja tuulen mukana; se tulkitsee Caspar David Friedrichin maalausta Jäämeri.",
+     "url": "https://en.wikipedia.org/wiki/She_Lies"
+    }
+   ]
+  },
+  {
+   "id": "Q373850",
+   "nimi": "Oslon kaupungintalo",
+   "kuvaus": "Kaksitorninen punatiilinen kaupungintalo",
+   "luokka": "rakennus",
+   "koko_m": 120,
+   "teksti": "Oslon kaupungintalo hallitsee sataman pohjukkaa kahdella punatiilisellä tornillaan, joista korkeampi kohoaa kuusikymmentäkuusi metriä. Arkkitehdit Arnstein Arneberg ja Magnus Poulsson suunnittelivat talon, jota rakennettiin vuodesta 1931 vuoteen 1950, ja toinen maailmansota keskeytti työt pitkäksi aikaa. Itäisessä tornissa soi neljänkymmenenyhdeksän kellon kellopeli. Joka vuosi kymmenes joulukuuta, Alfred Nobelin kuolinpäivänä, talossa jaetaan Nobelin rauhanpalkinto, ja palkittu pitää siellä Nobel-luentonsa. Suuren salin seinämaalaukset ovat Henrik Sørensenin ja Alf Rolfsenin käsialaa.",
+   "lyhyt": "Oslon kaupungintalon länsitornin pohjoiskyljessä on tähtitieteellinen kello, joka näyttää kellonajan ja kuukauden, auringon ja kuun paikan sekä eläinradan merkit. Talossa työskentelevät kaupunginvaltuusto ja kaupungin hallinto, ja sen suureen saliin pääsee tutustumaan maksutta.",
+   "syventava": "Kuka maalasi suuren salin seinät?",
+   "kysymykset": [
+    "Miksi rauhanpalkinto jaetaan Oslossa?",
+    "Mitä suuren salin maalaukset kuvaavat?",
+    "Mitä kellopeli soittaa?",
+    "Miksi talo rakennettiin punatiilestä?",
+    "Mitä kaupungintalossa tehdään arkisin?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Kaksi punatiilistä tornia, 63 ja 66 metriä; itätornissa 49 kellon kellopeli.",
+     "url": "https://en.wikipedia.org/wiki/Oslo_City_Hall"
+    },
+    {
+     "vaite": "Suunnittelijat Arnstein Arneberg ja Magnus Poulsson; rakennettu 1931–1950, toinen maailmansota keskeytti.",
+     "url": "https://en.wikipedia.org/wiki/Oslo_City_Hall"
+    },
+    {
+     "vaite": "Rauhanpalkintoseremonia 10.12., Alfred Nobelin kuolinpäivänä; palkittu pitää luennon.",
+     "url": "https://en.wikipedia.org/wiki/Oslo_City_Hall"
+    },
+    {
+     "vaite": "Pääsalin koristelivat Henrik Sørensen ja Alf Rolfsen.",
+     "url": "https://en.wikipedia.org/wiki/Oslo_City_Hall"
+    },
+    {
+     "vaite": "Tähtitieteellinen kello länsitornin pohjoissivulla näyttää ajan, kuukauden, auringon ja kuun paikan sekä eläinradan merkit.",
+     "url": "https://en.wikipedia.org/wiki/Oslo_City_Hall"
+    },
+    {
+     "vaite": "Talossa kaupunginvaltuusto ja kaupungin hallinto; vierailu maksuton.",
+     "url": "https://www.nomadotravel.app/en/attractions/oslo-city-hall"
+    }
+   ]
+  },
+  {
+   "id": "Q1126911",
+   "nimi": "Vigelandin puisto",
+   "kuvaus": "Gustav Vigelandin veistospuisto",
+   "luokka": "puisto",
+   "koko_m": 850,
+   "teksti": "Vigelandin puisto on Frognerin puiston sydän, ja ylhäältä sen tunnistaa pitkästä suorasta akselista, joka johtaa portilta sillan ja suihkulähteen kautta kukkulalle. Kukkulan laella kohoaa Monoliitti, neljätoista metriä korkea graniittipylväs, johon on veistetty satakaksikymmentäyksi ihmishahmoa. Kolme kivenhakkaajaa työsti sitä yhdestä lohkareesta neljätoista vuotta. Kaikki puiston yli kaksisataa veistosta ovat Gustav Vigelandin käsialaa, ja hän suunnitteli myös portit, sillat ja lyhdyt. Sillan kaiteella seisoo puiston tunnetuin pieni hahmo, kiukkuinen poika Sinnataggen.",
+   "lyhyt": "Vigelandin puiston veistokset syntyivät sopimuksesta. Vuonna 1921 kaupunki antoi Gustav Vigelandille talon ja ateljeen, ja hän lupasi vastineeksi kaikki tulevat teoksensa kaupungille. Ateljeesta tuli museo, ja sen tornihuoneessa on urna, jossa ovat taiteilijan tuhkat.",
+   "syventava": "Miksi poika on niin kiukkuinen?",
+   "kysymykset": [
+    "Mitä Monoliitin hahmot kuvaavat?",
+    "Miksi veistosten ihmiset ovat alastomia?",
+    "Kuka oli Gustav Vigeland?",
+    "Saako puistoon mennä myös yöllä?",
+    "Miksi Vigeland lahjoitti teoksensa kaupungille?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Veistoskokonaisuuteen kuuluu portti, silta, suihkulähde ja Monoliitti; yli 200 veistosta.",
+     "url": "https://www.britannica.com/print/article/628635"
+    },
+    {
+     "vaite": "Vigelandin puisto on Frognerin puistossa; maailman suurin yhden taiteilijan veistospuisto.",
+     "url": "https://en.wikipedia.org/wiki/Frogner_Park"
+    },
+    {
+     "vaite": "Monoliitti 14 m, 121 hahmoa, kolme kivenhakkaajaa työsti yhdestä lohkareesta 14 vuotta; Vigeland suunnitteli myös sillat, portit ja lyhdyt; puistoon pääsee maksutta mihin aikaan tahansa.",
+     "url": "kaanon:pelin-aineisto"
+    },
+    {
+     "vaite": "Sillan pronssiveistosten joukossa on Sinnataggen eli kiukkuinen poika.",
+     "url": "https://www.visitoslo.com/attraction/vigeland-sculpture-park"
+    },
+    {
+     "vaite": "Helmikuun 1921 sopimuksella Vigeland sai kaupungilta talon ja lupasi kaikki tulevat teoksensa kaupungille; ateljeesta tuli museo, jonka tornissa on hänen tuhkauurnansa.",
+     "url": "https://en.wikipedia.org/wiki/Vigeland_Museum"
+    }
+   ]
+  },
+  {
+   "id": "Q33572",
+   "nimi": "Holmenkollbakken",
+   "kuvaus": "Oslon kuuluisa hyppyrimäki",
+   "luokka": "muu",
+   "koko_m": 400,
+   "teksti": "Hyppyrimäki Holmenkollbakken piirtyy Oslon pohjoispuolisen metsäisen mäen rinteeseen, ja sen teräksinen vauhtimäki kurottuu ilmaan kauas kaupungin yläpuolelle. Holmenkollenilla hypättiin ensimmäinen kilpailu vuonna 1892, ja nykyinen mäki rakennettiin vanhan paikalle kokonaan uudelleen. Ensimmäisen hypyn uudesta mäestä teki Anette Sagen maaliskuussa 2010. Mäen juurella on vuonna 1923 perustettu hiihtomuseo, joka on maailman vanhin laatuaan. Rohkeimmat voivat laskeutua tornin huipulta vaijeria pitkin alas, ja vaijeria on kolmesataakuusikymmentäyksi metriä.",
+   "lyhyt": "Hyppyrimäki Holmenkollbakken oli vuoden 1952 talviolympialaisten areena, ja suurmäen kilpailua seurasi silloin satakaksikymmentätuhatta katsojaa. Holmenkollenin hiihtojuhlat ovat kuuluneet vuodesta 1980 lähtien mäkihypyn maailmancupiin. Mäen katsomoihin ja rinteille mahtuu nykyään seitsemänkymmentätuhatta katsojaa.",
+   "syventava": "Kuka hyppäsi ensimmäisenä uudesta mäestä?",
+   "kysymykset": [
+    "Kuinka pitkälle mäestä voi hypätä?",
+    "Miksi vanha mäki purettiin?",
+    "Mitä hiihtomuseossa on nähtävänä?",
+    "Milloin mäessä kilpaillaan nykyään?",
+    "Miksi mäkihyppy on Norjassa niin suosittua?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Mäki purettiin ja rakennettiin uudelleen 2008–2010; ensimmäisen virallisen hypyn teki Anette Sagen 3.3.2010.",
+     "url": "https://en.wikipedia.org/wiki/Holmenkollbakken"
+    },
+    {
+     "vaite": "Ensimmäinen kilpailu 1892.",
+     "url": "https://en.wikipedia.org/wiki/Holmenkollbakken"
+    },
+    {
+     "vaite": "Hiihtomuseo perustettiin 1923 mäen juurelle ja on maailman vanhin hiihtomuseo.",
+     "url": "https://en.wikipedia.org/wiki/Holmenkollen_Ski_Museum"
+    },
+    {
+     "vaite": "Kollensvevet-vaijeri tornin huipulta alas, pituus 361 metriä.",
+     "url": "https://www.skiforeningen.no/en/holmenkollen/tickets-all-events/"
+    },
+    {
+     "vaite": "Vuoden 1952 olympialaisten suurmäen kilpailussa 120 000 katsojaa.",
+     "url": "https://holmenkollen.com/en/historien-om-bakken/"
+    },
+    {
+     "vaite": "Kapasiteetti 70 000 katsojaa.",
+     "url": "https://en.wikipedia.org/wiki/Holmenkollbakken"
+    },
+    {
+     "vaite": "Holmenkollenin hiihtojuhlat osa mäkihypyn maailmancupia vuodesta 1980.",
+     "url": "https://en.wikipedia.org/wiki/Holmenkollbakken"
+    }
+   ]
+  },
+  {
+   "id": "Q961220",
+   "nimi": "Viikinkilaivamuseo",
+   "kuvaus": "Viikinkilaivojen museo Bygdøyllä",
+   "luokka": "rakennus",
+   "koko_m": 120,
+   "teksti": "Viikinkilaivamuseo on Bygdøyn niemellä, ja ylhäältä näkyy sekä vanha museorakennus että sen kylkeen rakennettu uusi museo. Vanha museo suljettiin vuonna 2021, ja laivat on siirretty uuteen Viikinkiajan museoon, jonka on määrä avautua vuonna 2027. Arvokkain niistä on Osebergin laiva, joka kaivettiin esiin hautakummusta vuonna 1904. Haudassa lepäsi kaksi naista, ja heidän kanssaan oli haudattu koristeltu kärry, rekiä ja kirjailtuja kankaita. Hautakammion puut on ajoitettu vuoteen 834.",
+   "lyhyt": "Viikinkilaivamuseon Osebergin laiva siirrettiin syyskuussa 2025 ensimmäistä kertaa yhdeksäänkymmeneenyhdeksään vuoteen. Hauras laiva nostettiin tärinältä suojattuun laatikkoon ja kuljetettiin katon nosturiradalla uuteen museoon. Siirron hinnaksi arvioitiin noin viisisataa miljoonaa kruunua, ja sitä suunniteltiin kymmenen vuotta.",
+   "syventava": "Keitä Osebergin hautaan haudattiin?",
+   "kysymykset": [
+    "Keitä Osebergin hautaan haudatut naiset olivat?",
+    "Miksi laiva säilyi maan alla niin hyvin?",
+    "Mitä laivoja uuteen museoon tulee?",
+    "Milloin uusi museo avataan yleisölle?",
+    "Miksi viikingit hautasivat vainajia laivoihin?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Museo on Bygdøyllä; vanha Viikinkilaivatalo suljettiin 2021, uusi Viikinkiajan museo on rakennettu sen kylkeen.",
+     "url": "https://www.tu.no/nyhetsstudio/88519"
+    },
+    {
+     "vaite": "Museo avautuu Viikinkiajan museona vuonna 2027.",
+     "url": "https://www.oslo-spirit.com/guides/viking-ship-museum-status/"
+    },
+    {
+     "vaite": "Osebergin laiva kaivettiin esiin 1904; haudassa kaksi naista, koristeltuja rekiä, kirjailtuja tekstiilejä; hautakammion puu ajoitettu vuoteen 834.",
+     "url": "https://www.Britannica.Com/topic/Oseberg-ship"
+    },
+    {
+     "vaite": "Haudassa koristeltu kärry ja neljä rekeä.",
+     "url": "kaanon:pelin-aineisto"
+    },
+    {
+     "vaite": "Osebergin laiva siirrettiin syyskuussa 2025 ensimmäistä kertaa 99 vuoteen; tärinältä suojattu laatikko, kattoon tuettu nosturijärjestelmä; hinta noin 500 miljoonaa kruunua; suunniteltu kymmenen vuotta.",
+     "url": "https://www.tu.no/nyhetsstudio/87751"
+    }
+   ]
+  },
+  {
+   "id": "Q941250",
+   "nimi": "Fram-museo",
+   "kuvaus": "Napatutkimuslaiva Framin museo",
+   "luokka": "rakennus",
+   "koko_m": 80,
+   "teksti": "Fram-museo seisoo Bygdøyn niemen rannassa, ja sen katon alla on napatutkimusalus Fram. Laivanrakentaja Colin Archer teki rungosta pyöreäpohjaisen, jotta puristuva jää nostaisi laivan ylös eikä murskaisi sitä. Framilla on purjehdittu pohjoisempana ja eteläisempänä kuin yhdelläkään muulla laivalla, sillä Fridtjof Nansen ajelehti sillä jään mukana kohti pohjoisnapaa ja Roald Amundsen vei sen Etelämantereelle matkallaan etelänavalle. Laivan alkuperäiset sisätilat ovat säilyneet, ja kävijät pääsevät laivan sisälle. Samassa museossa on myös Gjøa, ensimmäinen Luoteisväylän läpi purjehtinut laiva.",
+   "lyhyt": null,
+   "syventava": "Miksi Framin pohja on pyöreä?",
+   "kysymykset": [
+    "Kuinka kauan Nansen ajelehti jään mukana?",
+    "Miksi Nansen ei päässyt pohjoisnavalle asti?",
+    "Kuka voitti kilpailun etelänavalle?",
+    "Mitä laivan hyteissä voi nähdä?",
+    "Miten Gjøa löysi tien Luoteisväylän läpi?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Museo Bygdøyn niemellä, keskittyy alkuperäiseen Framiin, jonka sisätilat ovat säilyneet ja johon kävijät pääsevät sisälle; Fram on purjehtinut pohjoisimpana ja eteläisimpänä kaikista laivoista; museossa myös Gjøa, ensimmäinen Luoteisväylän läpi kulkenut laiva.",
+     "url": "https://en.wikipedia.org/wiki/Fram_Museum"
+    },
+    {
+     "vaite": "Colin Archer rakensi pyöreäpohjaisen laivan, jonka jää nostaa ylös; Nansen ajelehti jään mukana kohti pohjoisnapaa.",
+     "url": "kaanon:pelin-aineisto"
+    },
+    {
+     "vaite": "Amundsen käytti Framia etelänavan retkellään 1910–1912.",
+     "url": "https://en.wikipedia.org/wiki/Fram_(ship)"
+    }
+   ]
+  },
+  {
+   "id": "Q844926",
+   "nimi": "Munch-museo",
+   "kuvaus": "Edvard Munchin taidemuseo",
+   "luokka": "rakennus",
+   "koko_m": 100,
+   "teksti": "Munch-museo kohoaa Bjørvikan rannassa kolmetoistakerroksisena tornina, jonka yläosa on taitettu kaksikymmentä astetta eteenpäin. Espanjalaisen Estudio Herrerosin suunnittelema talo on verhottu lasilla ja kierrätetyillä rei'itetyillä alumiinilevyillä, ja se avattiin lokakuussa 2021. Kokoelman pohja on Edvard Munchin testamentti. Kun Saksa oli miehittänyt Norjan vuonna 1940, taiteilija pelkäsi natsien vievän teoksensa ja jätti lähes koko jäljellä olevan tuotantonsa Oslon kaupungille. Nykyään kokoelmassa on yli kaksikymmentäkuusituhatta teosta, joiden joukossa on useita versioita Huudosta.",
+   "lyhyt": null,
+   "syventava": "Miksi Munch pelkäsi natsien vievän teoksensa?",
+   "kysymykset": [
+    "Montako versiota Munch teki Huudosta?",
+    "Kuka oli Edvard Munch?",
+    "Miksi museon torni on kallellaan?",
+    "Mitä museon ylimmästä kerroksesta näkee?",
+    "Kuka teki museon edessä olevan suuren veistoksen?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Kolmetoistakerroksinen museo avattiin Bjørvikassa 22.10.2021.",
+     "url": "https://en.wikipedia.org/wiki/Munch_Museum"
+    },
+    {
+     "vaite": "Suunnittelija Estudio Herreros; torni kallistuu kahdenkymmenen asteen kulmassa; verhoilu lasia ja kierrätettyjä rei'itettyjä alumiinipaneeleja.",
+     "url": "https://www.dezeen.com/?p=1672965"
+    },
+    {
+     "vaite": "Munch kirjoitti testamenttinsa huhtikuussa 1940 miehityksen alla peläten natsien vievän teoksensa ja testamenttasi lähes koko tuotantonsa Oslon kaupungille.",
+     "url": "kaanon:pelin-aineisto"
+    },
+    {
+     "vaite": "Kokoelmassa yli 26 000 teosta, mukana useita Huudon versioita.",
+     "url": "https://en.wikipedia.org/wiki/Munch_Museum"
+    },
+    {
+     "vaite": "Museon edessä on Tracey Eminin suuri pronssiveistos Äiti.",
+     "url": "https://theartnewspaper.com/2022/03/29/tracey-emins-massive-sculpture-honouring-her-mother-finally-arrives-in-oslo"
+    }
+   ]
+  },
+  {
+   "id": "Q1063209",
+   "nimi": "Oslon tuomiokirkko",
+   "kuvaus": "Oslon hiippakunnan pääkirkko",
+   "luokka": "kirkko",
+   "koko_m": 70,
+   "teksti": "Oslon tuomiokirkko seisoo Stortorvetin aukion laidalla aivan pääkadun pohjoispuolella, ja ylhäältä sen tunnistaa ristinmuotoisesta pohjasta ja tornista. Nykyinen kirkko vihittiin vuonna 1697, ja aiemmin sitä kutsuttiin Vapahtajan kirkoksi. Sisällä holveja peittävät Hugo Lous Mohrin maalaukset, joiden aiheet ovat uskontunnustuksesta. Hän maalasi niitä 1930-luvulta 1950-luvulle noin tuhannen viidensadan neliömetrin alalle, ja työ herätti aikanaan kiistaa. Kirkon pronssiovien vuorisaarna-aiheet teki Dagfin Werenskiold, ja vuonna 2001 kirkossa vihittiin kruununprinssi Haakon ja Mette-Marit.",
+   "lyhyt": null,
+   "syventava": "Miksi kattomaalaukset herättivät kiistaa?",
+   "kysymykset": [
+    "Miksi kattomaalaukset herättivät kiistaa?",
+    "Millaiset urut tuomiokirkossa on?",
+    "Miksi kirkkoa kutsuttiin Vapahtajan kirkoksi?",
+    "Mitä pronssioviin on kuvattu?",
+    "Pidetäänkö kirkossa yhä jumalanpalveluksia?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Kirkko on Stortorvetilla Karl Johans gaten pohjoispuolella; entinen Vapahtajan kirkko; nykyinen rakennus 1694–1697, vihitty 1697.",
+     "url": "https://en.wikipedia.org/wiki/Oslo_Cathedral"
+    },
+    {
+     "vaite": "Hugo Lous Mohrin kiistanalaiset kattomaalaukset uskontunnustuksen aiheista 1936–1950, noin 1 500 neliömetriä.",
+     "url": "https://oslobyleksikon.no/side/Oslo_Cathedral"
+    },
+    {
+     "vaite": "Pronssiovet vuorisaarnan aiheista teki Dagfin Werenskiold 1938.",
+     "url": "https://oslobyleksikon.no/side/Oslo_Cathedral"
+    },
+    {
+     "vaite": "Kruununprinssi Haakon ja Mette-Marit vihittiin kirkossa 2001.",
+     "url": "https://en.wikipedia.org/wiki/Oslo_Cathedral"
+    },
+    {
+     "vaite": "Ristinmuotoinen pohja.",
+     "url": "https://en.wikipedia.org/wiki/Oslo_Cathedral"
+    }
+   ]
+  },
+  {
+   "id": "Q6515317",
+   "nimi": "Stortinget",
+   "kuvaus": "Norjan parlamenttitalo",
+   "luokka": "rakennus",
+   "koko_m": 100,
+   "teksti": "Norjan suurkäräjien talo, Stortinget, seisoo Karl Johans gaten varrella, ja ylhäältä sen erottaa keltatiilisistä seinistä ympäröivien talojen keskellä. Talon suunnitteli ruotsalainen arkkitehti Emil Victor Langlet, ja se otettiin käyttöön maaliskuussa 1866. Täällä kokoontuu Norjan parlamentti, ja keväällä 2026 rakennus täytti satakuusikymmentä vuotta. Pääjulkisivu katsoo Eidsvollin aukiolle, jonka nimi muistuttaa Eidsvollin kartanosta, jossa Norjan perustuslaki hyväksyttiin vuonna 1814. Aukion allas on talvisin maksuton luistinrata, ja sen leikillinen lempinimi Spikersuppa eli naulakeitto juontaa naulatehtaasta, joka rahoitti altaan.",
+   "lyhyt": null,
+   "syventava": "Mitä Eidsvollissa tapahtui vuonna 1814?",
+   "kysymykset": [
+    "Miksi parlamenttitalon suunnitteli ruotsalainen?",
+    "Kuinka monta edustajaa Stortingetissa istuu?",
+    "Voiko parlamenttitaloon mennä katsomaan?",
+    "Mitä Eidsvollissa päätettiin?",
+    "Miksi talo rakennettiin keltaisesta tiilestä?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Rakennus on osoitteessa Karl Johans gate 22, otettiin käyttöön 5.3.1866, suunnittelija ruotsalainen Emil Victor Langlet; keltatiilinen; pääjulkisivu Eidsvolls plassille.",
+     "url": "https://en.wikipedia.org/wiki/Storting_building"
+    },
+    {
+     "vaite": "Rakennus täytti 160 vuotta 2026.",
+     "url": "https://www.stortinget.no/en/In-English/About-the-Storting/News-archive/Front-page-news/2025-2026/160-years-of-the-storting-building"
+    },
+    {
+     "vaite": "Eidsvolls plassin allasta kutsutaan Spikersuppaksi, koska sen rahoitti naulatehdas Christiania Spigerverk; talvisin luistinrata vuodesta 1994; maksuton.",
+     "url": "https://en.wikipedia.org/wiki/Eidsvolls_plass"
+    },
+    {
+     "vaite": "Norjan perustuslaki hyväksyttiin Eidsvollissa vuonna 1814.",
+     "url": "https://en.wikipedia.org/wiki/Constitution_of_Norway"
+    }
+   ]
+  },
+  {
+   "id": "Q1415972",
+   "nimi": "Kon-Tiki-museo",
+   "kuvaus": "Thor Heyerdahlin retkien museo",
+   "luokka": "rakennus",
+   "koko_m": 70,
+   "teksti": "Kon-Tiki-museo on Bygdøyn niemellä, ja sen tärkein esine on balsapuinen lautta Kon-Tiki. Thor Heyerdahl sitoi vuonna 1947 yhdeksän balsapuun runkoa yhteen köysillä ilman ainuttakaan naulaa ja purjehti viiden miehen kanssa Perusta Polynesiaan. Matka kesti satayksi päivää, ja lautta ajautui lopulta riutalle Tuamotusaarilla. Museossa on myös kaislavene Ra II, jolla Heyerdahl ylitti Atlantin Pohjois-Afrikasta Karibialle, kun ensimmäinen yritys oli epäonnistunut. Museo avattiin vuonna 1950, ja matkasta kuvattu dokumenttielokuva voitti Oscarin.",
+   "puhe_teksti": "Kon-Tiki-museo on Bygdøyn niemellä, ja sen tärkein esine on balsapuinen lautta Kon-Tiki. Thor Heyerdahl sitoi vuonna 1947 yhdeksän balsapuun runkoa yhteen köysillä ilman ainuttakaan naulaa ja purjehti viiden miehen kanssa Perusta Polynesiaan. Matka kesti satayksi päivää, ja lautta ajautui lopulta riutalle Tuamotusaarilla. Museossa on myös kaislavene Ra kaksi, jolla Heyerdahl ylitti Atlantin Pohjois-Afrikasta Karibialle, kun ensimmäinen yritys oli epäonnistunut. Museo avattiin vuonna 1950, ja matkasta kuvattu dokumenttielokuva voitti Oscarin.",
+   "lyhyt": null,
+   "syventava": "Miksi Heyerdahl purjehti lautalla Tyynenmeren yli?",
+   "kysymykset": [
+    "Mitä Heyerdahl halusi matkallaan todistaa?",
+    "Mitä lautalla syötiin matkan aikana?",
+    "Miksi ensimmäinen kaislavene epäonnistui?",
+    "Keitä muita lautalla oli mukana?",
+    "Onko Heyerdahlin teoria nykyään hyväksytty?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Museo avattiin 1950 Bygdøyllä Kon-Tiki-lauttaa varten; Heyerdahl purjehti Perusta Polynesiaan 1947; museossa myös Ra II, jolla hän purjehti Pohjois-Afrikasta Karibialle Ra-veneen epäonnistuttua; dokumenttielokuva voitti Oscarin.",
+     "url": "https://en.wikipedia.org/wiki/Kon-Tiki_Museum"
+    },
+    {
+     "vaite": "Yhdeksän balsarunkoa köysillä ilman nauloja, viisi miestä mukana, 101 päivää, riutalle Tuamotusaarilla.",
+     "url": "kaanon:pelin-aineisto"
+    }
+   ]
+  },
+  {
+   "id": "Q941120",
+   "nimi": "Nobelin rauhankeskus",
+   "kuvaus": "Rauhanpalkinnon museo ja näyttelykeskus",
+   "luokka": "rakennus",
+   "koko_m": 60,
+   "teksti": "Nobelin rauhankeskus toimii vanhassa Länsiaseman rakennuksessa sataman rannassa kaupungintalon lähellä. Asemarakennus valmistui vuonna 1872 Georg Andreas Bullin piirustusten mukaan, ja junat lakkasivat kulkemasta sieltä vuonna 1989. Keskuksen sisätilat ja värimaailman suunnitteli brittiarkkitehti David Adjaye. Keskus avattiin kesäkuussa 2005, ja avajaisvieraina olivat Nelson Mandela ja tuore rauhanpalkinnon saaja Wangari Maathai. Näyttelyt kertovat Alfred Nobelista, rauhanpalkinnon saajista ja heidän työstään, ja joulukuussa keskus esittelee aina juuri palkitun.",
+   "lyhyt": null,
+   "syventava": "Kuka oli ensimmäinen rauhanpalkinnon saaja?",
+   "kysymykset": [
+    "Kuka valitsee rauhanpalkinnon saajan?",
+    "Miksi rauhanpalkinto jaetaan Norjassa?",
+    "Mitä keskuksen näyttelyissä on nähtävänä?",
+    "Kuka oli Wangari Maathai?",
+    "Miksi vanha asema muutettiin museoksi?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Keskus toimii entisessä Oslo Vestbanestasjonin rakennuksessa, jonka piirsi Georg Andreas Bull 1872; asemakäyttö loppui 1989; suunnittelusta vastasi David Adjaye; avattiin kesäkuussa 2005, vieraina Nelson Mandela ja Wangari Maathai.",
+     "url": "https://en.wikipedia.org/wiki/Nobel_Peace_Center"
+    },
+    {
+     "vaite": "Keskus on Rådhusplassenilla kaupungintalon lähellä satamassa.",
+     "url": "https://en.wikipedia.org/wiki/Nobel_Peace_Center"
+    },
+    {
+     "vaite": "Wangari Maathai sai rauhanpalkinnon vuonna 2004.",
+     "url": "https://en.wikipedia.org/wiki/Wangari_Maathai"
+    },
+    {
+     "vaite": "Keskus esittelee vuosittain uuden palkitun näyttelyssä.",
+     "url": "https://nobelpeacecenter.org/en/news/a-meeting-place-for-people-and-culture"
+    }
+   ]
+  },
+  {
+   "id": "Q3267175",
+   "nimi": "Bjørvika",
+   "kuvaus": "Uusi kulttuurikortteli sataman rannassa",
+   "luokka": "vesi",
+   "koko_m": 1000,
+   "teksti": "Satamanlahti Bjørvika avautuu Akershusin linnoituksen ja vanhankaupungin välissä, ja siihen laskee Akerselva-joki. Vielä 2000-luvun alussa rannassa oli konttisatama, mutta nyt sen paikalla ovat oopperatalo, vuonna 2021 tänne muuttanut Munch-museo ja Deichmanin pääkirjasto, joka avattiin keväällä 2020. Pohjoisreunaa hallitsee Barcode-hankkeen kapeiden ja korkeiden monikäyttötalojen rivi, joka muistuttaa sivulta katsottuna viivakoodia. Lahden toisella puolella, uuden Sørengan asuinkorttelin rannassa, merivesiallas houkuttelee kesällä uimareita, ja laiturilta voi hypätä vuonoon hyppytelineeltä.",
+   "lyhyt": null,
+   "syventava": "Miksi Barcode-talot ovat niin kapeita?",
+   "kysymykset": [
+    "Miksi konttisatama siirrettiin pois keskustasta?",
+    "Mitä Deichmanin kirjastossa on erikoista?",
+    "Saako satamassa todella uida?",
+    "Miksi talorivi muistuttaa viivakoodia?",
+    "Mitä Bjørvikaan vielä rakennetaan?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Bjørvika on lahti Gamlebyenin ja Akershusin linnoituksen välissä, Akerselvan suu; muutettu konttisatamasta 2000-luvulla; oopperatalo, kirjasto ja Munch-museo; Barcode-hankkeen monikäyttötalot hallitsevat pohjoista horisonttia; Sørengan asuinalue; Munch-museo muutti alueelle.",
+     "url": "https://en.wikipedia.org/wiki/Bj%C3%B8rvika"
+    },
+    {
+     "vaite": "Deichman Bjørvika avattiin keväällä 2020; Barcode-talot ovat kapeita ja korkeita, nimi viittaa ulkonäköön; Sørengan merivesiallas, jossa hyppytelineet.",
+     "url": "https://www.visitoslo.com/activities-and-attractions/boroughs/bjorvika"
+    }
+   ]
+  }
+ ]
+}
