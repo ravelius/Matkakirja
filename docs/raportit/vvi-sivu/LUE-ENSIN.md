@@ -2,7 +2,7 @@
 
 Tarkoitus: lyhyt alasivu (ehdotus `vvi.fi/matkakirja`), joka esittelee VVI:n kehittämän pelin. Sivua käytetään myös
 Claude for Startups -hakemuksen verkkosivuna (ks. `hakemus-claude-startups.md`). Sivu tehdään vvi.fi:n omalla
-ulkoasulla; tässä ovat tekstit, kuvat ja merkinnät. Pidä sivu yhtenä näkymänä: otsikko, ingressi, kuvat, kolme
+ulkoasulla; tässä ovat tekstit, kuvat ja merkinnät. Pidä sivu yhtenä näkymänä: otsikko, ingressi, kuvat, neljä
 lyhyttä osiota.
 
 ## Teksti suomeksi
@@ -17,6 +17,9 @@ kartalla ja etsii unohdettuja aarteita. Peli on tarkoitettu 13 vuotta täyttäne
 - Hyppää kuumailmapallon kyytiin ja tutki kaupunkeja fotorealistisessa 3D:ssä. Opas kertoo kohteista ja vastaa kysymyksiisi.
 - Katso maapalloa kansainvälisen avaruusaseman kupolasta ja ota kuva mistä tahansa paikasta.
 - Astu historian hetkiin: ensimmäisenä Olavinlinna vuonna 1499. Saavut yöllä veneellä, hiivit vartijoiden ohi ja ratkaiset arvoituksen.
+
+*Tekoäly pelissä*
+Tekoäly on mukana myös pelatessa: kaupunkien opas ja Pulu-lintu vastaavat pelaajan omiin kysymyksiin suoraan Clauden avulla, joten jokainen voi syventyä juuri siihen, mikä häntä kiinnostaa. Peli rakentuu jatkossakin tekoälyn varaan.
 
 *Miten peliä tehdään*
 VVI kehittää peliä tekoälyn avulla. Kahdentoista Claude-agentin tiimi (pelimoottori, käyttöliittymä, kartat,
@@ -40,6 +43,9 @@ Europe in search of forgotten treasures. For ages 13 and up, and adults.
 - Hop on a hot-air balloon and explore cities in photorealistic 3D, with a guide who tells you about the sights and answers your questions.
 - View the Earth from the cupola of the International Space Station and take a picture of any place.
 - Step into moments of history, starting with Olavinlinna castle in 1499: arrive by boat at night, sneak past the guards and solve the riddle.
+
+*AI in the game*
+AI is part of playing, too: the city guide and Pulu the pigeon answer the player's own questions live with Claude, so everyone can dig into whatever interests them. The game will keep building on AI as it grows.
 
 *How it is made*
 VVI develops the game with AI. A team of twelve Claude agents (engine, interface, maps, 3D models, content and

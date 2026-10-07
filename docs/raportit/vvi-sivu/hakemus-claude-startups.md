@@ -29,6 +29,8 @@ AI -tiimin tapaamiset kahden viikon välein, kumppanietuja.
 > iPhone, iPad and Mac (Unity), with a web version. Players follow their grandfather's 1873 travel journal across a real
 > 3D map of Europe, tour cities from a hot-air balloon in photorealistic 3D with a live AI guide that answers their
 > questions via the Claude API, view Earth from the ISS cupola, and play historical sites, such as Olavinlinna castle in
-> 1499, as stealth-and-puzzle adventures. The game is built by a team of twelve Claude Code agents (engine, UI, maps,
+> 1499, as stealth-and-puzzle adventures. AI is core to the gameplay, not just to development: the city guide and the
+> companion character Pulu answer players' own questions live via the Claude API, and we will keep expanding AI-driven
+> features in play. The game is built by a team of twelve Claude Code agents (engine, UI, maps,
 > 3D, content, release) coordinated by a lead editor agent, and Claude also writes and fact-checks the in-game
 > narration. The game launches in Finnish, with an English version planned.
