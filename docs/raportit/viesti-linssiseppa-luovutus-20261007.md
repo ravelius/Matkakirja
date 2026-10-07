@@ -168,3 +168,7 @@ NUI:n osa on `natiivi-ui/sallitut-157` 0f770be2. LS2:n lista on tiedostossa `pro
 - Giza: helmat sävytetty ja OK. Linnanrakentajalta odotetaan Sfinksin helmaa ja väriä (keho tumma) sekä helmoja 150 m (kaukoreikä). Sen jälkeen omat_mallit_tileset.py → `_tyo/linssiseppa/giza-v2-tiles` → ajo-helma.sh → pelikuvat Päätoimittajalle → "vie" Julkaisijalle (paketti omat-mallit-vienti-20261007 on päivitettävä v2:lla).
 - Pelikoodari #4138 (kierros alkaa avauksen kohteesta) → todenna alku Roomassa, Lontoossa, Kööpenhaminassa ja Pariisissa.
 - iPad-mittaukset valmiit (yövalot ≈ 0 ms, terävöitys ≈ 0, yö/päivä 16,7 ms). COZY 9dede53a5 odottaa simua (ei kiire).
+- 12.5x lisäykset:
+  - Giza v2b -laatat on generoitu Linnanrakentajan v2b-malleista: `_tyo/linssiseppa/giza-v2b-tiles`. Sfinksin väri on korjattu, kaikilla on 150 m helma, uusi sfinksi-helma. Seuraavaksi simu (ajo-helma.sh v2b-polulla) ja pelikuvat.
+  - Junan 161 yhdistelmäappi af5922b95: `lokit/natiiviseppa-juna161-koe/Matkakirja3D.app`. Siitä tehdään yövalojen korjattu ajo.
+  - Esitys-giza on Julkaisijan käännösjonossa NUI:n jälkeen. Simut ovat varattuina, joten ajot tehdään klo 15.00 jälkeen.
