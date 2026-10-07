@@ -1,7 +1,7 @@
 {
   "rakennus": "olavinlinna",
-  "hash": "f975e0ce0b706bd3",
-  "kansio": "dioraama/olavinlinna/blender/f975e0ce0b706bd3/",
+  "hash": "73e9856f323875f0",
+  "kansio": "dioraama/olavinlinna/blender/73e9856f323875f0/",
   "tiedostot": [
     {
       "polku": "hahmot/apulainen-1500-faceit.glb",
@@ -180,13 +180,13 @@
     },
     {
       "polku": "kavely/merkit.json",
-      "sha256": "6e4e34456240b7c9eabc99a480b7a34ebbd5745e65d0db50514c9f55e2c7a97d",
-      "tavuja": 4056
+      "sha256": "57631420ed8fb94b8ae29c59a7dd1c14acad2872bd0a82185f3fb4a331039b25",
+      "tavuja": 4264
     },
     {
       "polku": "kavely/osat.json",
-      "sha256": "48992ad5bf2d2656365a336d934c305979d378512dec5b9a359e963d20956ce9",
-      "tavuja": 9381
+      "sha256": "1bb32aec9c4f7e2912e198f08435cfbec32ee5fba23f74584aa0dbcbcfcf3d16",
+      "tavuja": 9379
     },
     {
       "polku": "kavely/pikkupiha-kavely.glb",
@@ -230,13 +230,13 @@
     },
     {
       "polku": "kavely/vesiportti-kavely.glb",
-      "sha256": "576fa38652926bf66d635704a26ef26526d0ceee9831955cee84a80bf062c297",
+      "sha256": "1e609b86da602c5fe79b001abd4a3488e6592c283fb5658a57bfd85c4230f3ae",
       "tavuja": 2748
     },
     {
       "polku": "kavely/vesiportti-tormays.glb",
-      "sha256": "5ae9c22d16eac6da59fbad4370a071d5f9787454e0e957dd1e482da33e150cd4",
-      "tavuja": 13304
+      "sha256": "fb039a69bc9083a9e0c8e1fc2af7109515651a29c9336d935f198e5364546bac",
+      "tavuja": 13320
     },
     {
       "polku": "kavely/vesiportti.glb",

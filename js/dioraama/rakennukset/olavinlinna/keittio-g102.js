@@ -14,7 +14,7 @@
 // ASETTELU (Päätoimittaja: tulisija länsipäässä, pöytä keskellä, tynnyrit itäpäässä, hyllyt pihan seinällä) ja
 // kävelymallin merkit (v1/merkit.json): piilo:uunin-vieressa (−23,8; 13,9) jää tulisijan ja länsiseinän väliin vapaaksi;
 // piilo:poydan-alla (−20,0; 12,6) = pöydän alla jalkojen välissä (pöytä 0,9 m, jalat x ±1,11); piilo:tynnyrien-takana
-// (−15,6; 14,2) = kolmen tynnyrin takana kaakkoiskulmassa, sisäänpääsy lännestä kehämuuria pitkin; esine:kauha (−22,8;
+// (−15,95; 14,35) = kolmen tynnyrin takana kaakkoiskulmassa, sisäänpääsy lännestä kehämuuria pitkin; esine:kauha (−22,8;
 // 1,0; 13,4) putoaa tulisijan reunalle, esine:savipurkki/lautanen/omena pöydälle (niiden kohdat jätetty tyhjiksi);
 // partio:keittio-1/-2 (z 11,6) kulkee pihan seinän vierustaa hyllyjen (syvyys 0,32) ja pöydän välistä.
 // Lähteet ja arviot: _valmiit/olavinlinna-keittio-g102-v1/LAHTEET.md (kalusteiden paikat arvio A).
@@ -252,9 +252,9 @@ export const TILA = {
     { resepti: 'vati', paikka: [-16.8, y(HYLLYTASOT[3]), HZ], suunta: 0, sade: 0.13, pinnat: PUUVATI },
 
     // --- Itäpää: kolme tynnyriä piilon edessä (pääsy lännestä muurin vierustaa), säkit, kirnu ja nauriskorit.
-    { resepti: 'tynnyri', paikka: [-15.55, Y, 13.2], suunta: 0, sade: 0.33, korkeus: 0.9, segmentit: 16 },
-    { resepti: 'tynnyri', paikka: [-16.35, Y, 13.3], suunta: 0, sade: 0.33, korkeus: 0.9, segmentit: 16 },
-    { resepti: 'tynnyri', paikka: [-16.65, Y, 14.1], suunta: 0, sade: 0.33, korkeus: 0.9, segmentit: 16 },
+    { resepti: 'tynnyri', paikka: [-15.55, Y, 13.15], suunta: 0, sade: 0.33, korkeus: 0.9, segmentit: 16 },
+    { resepti: 'tynnyri', paikka: [-16.4, Y, 13.1], suunta: 0, sade: 0.33, korkeus: 0.9, segmentit: 16 },
+    { resepti: 'tynnyri', paikka: [-17.0, Y, 13.7], suunta: 0, sade: 0.33, korkeus: 0.9, segmentit: 16 }, // 7.10.: piilo 0,9 m irti seinästä (Siirtoseppä: kamera puristui)
     { resepti: 'ruukku', paikka: [-16.35, y(0.9), 13.3], suunta: 0, sade: 0.1, korkeus: 0.18 },
     { resepti: 'sakki', paikka: [-15.45, Y, 12.3], suunta: 0, sade: 0.3, korkeus: 0.6, siemen: 21 },
     { resepti: 'sakki', paikka: [-16.2, Y, 12.5], suunta: 30, sade: 0.28, korkeus: 0.55, siemen: 22 },

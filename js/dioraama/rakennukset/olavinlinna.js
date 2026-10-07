@@ -48,6 +48,8 @@ export const RAKENNUS = {
   // Ympäristömallien lisäkentät id:n mukaan (rakenna.mjs → ymparisto.mallit[]): vene on rekvisiitta, jonka Timeline sijoittaa
   // (Siirtoseppä 7.10.: maailmaan false = ei piirretä maailman origoon).
   ymparistoMallit: { vene: { maailmaan: false } },
+  // Pystyleikkeen portinvartija (Siirtoseppä 7.10.): paikka ja reitti käsikirjoituksesta, kun kohtaus lukittu.
+  lisaHenkilot: ['portinvartija-1500'],
   otsikko: 'Olavinlinna – elävä linna',
   versio: 1,
   lahteet: [{ nimi: 'Kansallismuseo: Olavinlinnan historiaa', osoite: 'https://www.kansallismuseo.fi/fi/olavinlinna/historiaa' }],
