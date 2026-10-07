@@ -27,8 +27,17 @@ aikaan; ei omia natiivikäännöksiä; kuittaus = peili + yksi rivi (ei stillej�
   https://media.matkakirja.app/dioraama/olavinlinna/<hash>/`. Kävely: Blender -b -P lahde/kavely.py -- v2, sitten lahde/kuori_kavely.py --
   _valmiit/olavinlinna-blender-v41/ulkokuori/ulkokuori_huippu.glb <v44>/tilat/laituri.glb $PWD/v2; rsync v2/ → v44/kavely/.
   Kappelin leivontapaketti: node scratch/rakenna_kappeli.mjs <paketti>. maalaukset.py ajetaan venv-rembg/bin/python:lla.
-- JONO: (1) Siirtosepän palaute v44k/v44l; (2) huone 6 karkea tila (_lahteet/olavinlinna-pohjat/HUONE6-PALATSI.md); pelattavuusmalli
-  docs/raportit/pelattavuusmalli-olavinlinna.md tulossa. PR linnanrakentaja-linna-v42 → main kun Päätoimittaja pyytää.
+- JONO (Päätoimittaja 7.10. 19.4x, PELATTAVUUSMALLI mainissa #4163: docs/raportit/pelattavuusmalli-olavinlinna.md, järjestys
+  kohdan 12 sarakkeesta): (1) pinnat (kohta 2.2: puu, olki, sora, vesi `pinta:`-merkkeinä kavely.py:ssä); (2) merkit (portinvartija,
+  renki, tarjotin, patapino, torkkuva vartija, porraskomero, hiilipannu, reitti:pelaaja-*); (3) tyrmä E 101 karkeana; (4) huone 6:
+  naulakko (esiliina + myssy) Tott-kammion puolelle Linnantuvan oven viereen + takan hiillos Tott-kammioon; (5) huoneet 7–8
+  (huone 7 = muurikäytävä, EI kierreporrasta; pako = köysilasku kalliolle). Huone 6:n REITTI (Päätoimittaja): kappelin kaari-ovesta
+  SAMOJA muuriportaita alas Tott-kammioon ja sen ovesta Linnantupaan (L2, L15); EI uutta käytävää.
+- HUONE 6 ALOITETTU 578f94a91: js/dioraama/rakennukset/olavinlinna/palatsi.js (TILA_LINNANTUPA + TILA_VOUDIN_SALI, kohdistettava
+  false, sijoitus suunta 333, paikallinen origo siiven keskilinja (−10,56; 5,38), sisämitat 7 × 17, tupa 3,4 / palkisto 7,0 / sali
+  7,5 / holvi 10,1→12,6), tools/dioraama/reseptit-linna.mjs tynnyriholvi. EI vielä leivottu eikä kävelymallia (kavely.py palatsi():
+  Tott-kammion ovi kompassi ≈ 186° → käytävä → Linnantuvan pohjoisovi x 0; muurinsisäinen porras länsiseinässä z −10,8 → −5,1).
+  PR linnanrakentaja-linna-v42 → main kun Päätoimittaja pyytää.
 - GIZA (odottaa): Sfinksin LOD1/2 väritekstuuri ~70 % mustaa (LS1:n mittari proto-3d/tyokalut/linssiseppa-ajot/glb-musta-uv.py),
   helmat liian vaaleat; _valmiit/giza-v2. KIELLETTY (odottaa): haara linnanrakentaja-kielletty.
 
