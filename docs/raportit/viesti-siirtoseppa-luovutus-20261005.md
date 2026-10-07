@@ -7,6 +7,13 @@ Worktreet: /Users/Shared/Claude/wt/proto-siirtoseppa-*. Käännös vain Julkaisi
 (oma UDID D5900D45 = siirtoseppa-iPad13, TYHJENNETTY 19.0x, appit asennettava uudelleen). Ei detachia simupaneelista.
 Oikeat tapit: lokit/siirtoseppa-alo/.sk (simkosketus, käännä tarvittaessa tyokalut/todistusajo/simkosketus.m).
 
+## TILA 7.10. 05.0x
+
+- **Juna 156 = siirtoseppa/linna-valinta 36b8a852** (Päätoimittaja kuittasi d5959026:n tilalle): + savu 156:n huonevalintavika
+  (valinta saapumiskaaren aikana ei katkaissut tulevaa kertojan kierrosta; PoikkileikkausLinssi.Kierros, testi). VIE odottaa käännöstä + savua.
+- eleet-2 = 50bb5d99 (sis. 36b8a852 + puolilähikuva + alarivi datasta), jonossa junan 156 VIE:n jälkeen.
+- Äänimaisema 69558b6b (+ NykyinenKaupunkiId heijastuksella) käännetään yhdessä LS1:n linssiseppa/sallitut-157 a9dc543ec:n kanssa (~05.35).
+
 ## TILA 7.10. 04.4x
 
 - **v41 todennettu molemmilla** (TF 154 03.10 + junan 156 koodi a5285a27 04.18–04.21: faceit-glb:t, 11 elettä, 14 reaktiota); osoitin 1a1857e0.
