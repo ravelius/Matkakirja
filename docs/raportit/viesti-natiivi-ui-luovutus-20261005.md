@@ -9,7 +9,7 @@ AD119F7B-A2A2-43EE-8769-7326DD757F89; lopuksi sammutus ja "simu vapaa".
 ## TILA 7.10. klo 13.0x (uusin, TAUKO 13.45–15.00)
 
 JATKA TÄSTÄ (tyhjästä kontekstista): UUSIN 13.3x: omistaja haluaa iPhonen metrolinjan ruudun laitaan Dynamic Islandin
-  viereen → natiivi-ui/pariisi-esitys 70b3c0f7 (PuhelinMetro, Kompakti; iPadin köysi EI toiminut daa70f22:lla – testi ui opasvalikko metro tulostaa köyden ruutualan, selvitä LS1:n kanssa). Tarvitaan
+  viereen → natiivi-ui/pariisi-esitys 81aa5fea (omistajan tarkennukset: iPhone vaaka Islandin oikealle ylhäälle, iPad ihan vasempaan reunaan; skriptit/vuoro-iphone-metro.sh <app>, iPhone 18 Pro Max 46EC73E2 Julkaisijan luvalla; iPadin köysi EI toiminut daa70f22:lla – testi ui opasvalikko metro tulostaa köyden ruutualan, selvitä LS1:n kanssa). Tarvitaan
   KÄÄNNÖS + stillit iPhone pysty ja vaaka (myös uusin iPhone-malli, kysy Julkaisijalta lupa toiseen simuun) + iPad ennallaan →
   Päätoimittajalle. Köysiketjun (13.24) tulokset ketju-koysi.log kertovat iPadin köysikorjauksen. proto-git /Users/Shared/Claude/proto-3d/Matkakirja-proto, skriptit lokit/natiivi-ui-1035/skriptit.
 - 13.2x: köysikorjauksen still dd49fff5 EPÄONNISTUI (metrolinja katosi: LS1 KoriVasenKoysiNorm AABB liian leveä). Varmistus
