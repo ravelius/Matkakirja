@@ -488,3 +488,6 @@ Edellinen luovutus on `viesti-siirtoseppa-luovutus-20261002.md` (5.10. osiot 02.
   kutsutaan heijastuksella; varanousu; DioraamaSovitin.KameraVapaa). Junahaara 163: siirtoseppa/historia-juna163 @ 2d19eb49 (historia-h0 +
   historia-juna162), 842/842, kuittaus pyydetty; riippuvuus natiivi-ui/seikkailu-toiminto. Paikkamerkit vaihdetaan LR:n peilistä (luukku:koillinen,
   valo:ikuinen, esine:kirja, kivi-4, portaikko:ylapaa).
+- 17.56: Päätoimittaja kuittasi historia-juna163 @ 2d19eb49 JO JUNAAN 162 (lukitus 21.15); Natiivisepälle ilmoitettu (+ NUI seikkailu-toiminto,
+  LS2 linssiseppa2/e3-nousu = SeikkailuNousu, kutsutaan heijastuksella). Pelikoodari tekee tietokerros-v1 (12 korttia, kenttä lyhyt).
+  2bc3ce1f3 V7 valoisuus liekeistä → juna 164.
