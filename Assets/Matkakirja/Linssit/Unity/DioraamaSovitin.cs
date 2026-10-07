@@ -257,6 +257,7 @@ namespace Matkakirja.Natiivi
             Vaihtui?.Invoke(linssi);
             LukitseVaaka(true);
 
+            if (PelattavaPalaPyydetty && peiliKuvaus != PelattavaPalaPaketti) AsetaPeili(PelattavaPalaPaketti);   // ennen latausta
             if (rakennus == null)
             {
                 if (!latausKaynnissa) { latausKaynnissa = true; o.StartCoroutine(LataaRakennus()); }
@@ -482,7 +483,15 @@ namespace Matkakirja.Natiivi
             kuoriOdotusAlku = -1f; SaapumisOdotus = false; RakennusLatautuu = false; LatausVirhe = null; // näyttämö (ja sen odotuspiilotus) tuhoutuu alla
             // Historiamoottori: seikkailu pois (näyttämön lapset tuhoutuvat; globaalit kuoren leikkaukset ja kävelydata nollataan).
             SeikkailuVartijat.Poista(); SeikkailuVene.Poista(); SeikkailuPelaaja.Poista(); SeikkailuRepliikit.Poista(); SeikkailuKavely.Pura();
-            cm?.SeikkailuPois(); PelattavaPalaPyydetty = false; pelattavaPala = false;
+            cm?.SeikkailuPois(); PelattavaPalaPyydetty = false;
+            if (peiliKuvaus == PelattavaPalaPaketti)
+            {
+                // Seuraava avaus taas tuotannosta (myös kesken latauksen suljettaessa): peili pois ja rakennus unohdetaan ilman latausta
+                // (AsetaPeili käynnistäisi latauksen kesken purun).
+                peili = s2 => s2; peiliPaalla = false; peiliHttps = false; peiliKuvaus = edellinenPeili = "pois (ämpäri)";
+                rakennus = null; latausKaynnissa = false;
+            }
+            pelattavaPala = false;
             rakennus3D?.Tyhjenna(); rakennus3D = null;
             hahmot3D?.Tyhjenna(); hahmot3D = null;
             nayttamo?.Tuhoa(); nayttamo = null;
@@ -623,6 +632,30 @@ namespace Matkakirja.Natiivi
         }
 
         string edellinenPeili = "pois (ämpäri)";
+
+        /// <summary>Peili (ämpärin paketti toisesta juuresta) tai "pois"/null = tuotanto (uusin.json). Vaihto lataa rakennuksen uudelleen.</summary>
+        void AsetaPeili(string arvo)
+        {
+            peiliHttps = false;
+            peiliPaalla = !(arvo == null || arvo == "pois");
+            if (!peiliPaalla) { peili = s => s; peiliKuvaus = "pois (ämpäri)"; }
+            else
+            {
+                peiliHttps = arvo.StartsWith("https://", StringComparison.Ordinal);
+                string uusiJuuri = arvo;
+                peili = s => s.StartsWith(AmpariJuuri, StringComparison.Ordinal) ? uusiJuuri.TrimEnd('/') + "/" + s.Substring(AmpariJuuri.Length) : s;
+                peiliKuvaus = uusiJuuri;
+            }
+            o.Kirjaa("poikki: peili " + peiliKuvaus);
+            // Natiiviseppä 7.10. (FACEIT ABAB): "peili pois" A-peilin jälkeen käytti muistissa olevaa rakennusta, jonka juuri oli
+            // hashiton (peilissä ei ole uusin.jsonia) → kaikki 404. Peilin vaihto lataa rakennuksen uudelleen seuraavassa avauksessa.
+            if (peiliKuvaus != edellinenPeili && rakennus != null) { LataaUudelleen(); o.Kirjaa("poikki: peili vaihtui, rakennus ladataan uudelleen"); }
+            edellinenPeili = peiliKuvaus;
+        }
+
+        /// <summary>Pelattavan palan kiinnitetty paketti (Linnanrakentajan v44g: kävely, Fogg, vene, laiturin kansi). Tuotannon osoitin
+        /// (uusin.json) ei muutu: pala lukee tämän paketin peilinä ja palauttaa tuotannon, kun linna suljetaan.</summary>
+        public const string PelattavaPalaPaketti = "https://media.matkakirja.app/dioraama/olavinlinna/fd7d3e32c86ed7fb/";
 
         void LataaUudelleen()
         {
@@ -1473,7 +1506,8 @@ namespace Matkakirja.Natiivi
                 o.Kirjaa($"poikki: rakennus {RakennusId} ({AmpariJuuri}){(Linssi != null ? ", vaihtuu seuraavassa avauksessa" : "")}");
                 return;
             }
-            if (mita == "peili")
+            if (mita == "peili") { AsetaPeili(arvo); return; }
+            if (mita == "peili-vanha")
             {
                 peiliHttps = false;
                 peiliPaalla = !(arvo == null || arvo == "pois");
