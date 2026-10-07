@@ -8,7 +8,10 @@ AD119F7B-A2A2-43EE-8769-7326DD757F89; lopuksi sammutus ja "simu vapaa".
 
 ## TILA 7.10. klo 13.0x (uusin, TAUKO 13.45–15.00)
 
-JATKA TÄSTÄ (tyhjästä kontekstista): proto-git /Users/Shared/Claude/proto-3d/Matkakirja-proto, skriptit lokit/natiivi-ui-1035/skriptit.
+JATKA TÄSTÄ (tyhjästä kontekstista): UUSIN 13.3x: omistaja haluaa iPhonen metrolinjan ruudun laitaan Dynamic Islandin
+  viereen → natiivi-ui/pariisi-esitys 6. kärki (git log) "Metrolinja iPhonella ruudun laitaan" (PuhelinMetro, Kompakti). Tarvitaan
+  KÄÄNNÖS + stillit iPhone pysty ja vaaka (myös uusin iPhone-malli, kysy Julkaisijalta lupa toiseen simuun) + iPad ennallaan →
+  Päätoimittajalle. Köysiketjun (13.24) tulokset ketju-koysi.log kertovat iPadin köysikorjauksen. proto-git /Users/Shared/Claude/proto-3d/Matkakirja-proto, skriptit lokit/natiivi-ui-1035/skriptit.
 - 13.2x: köysikorjauksen still dd49fff5 EPÄONNISTUI (metrolinja katosi: LS1 KoriVasenKoysiNorm AABB liian leveä). Varmistus
   7239f7f5 (vain xMax ≤ 0,4 ja leveys ≤ 0,2). Pyydetty LS1:ltä tarkempi laskenta akselista → tauon jälkeen merge LS1:n kärki,
   KÄÄNNÖS NYT, skriptit/vuoro-koysi.sh, katso metrolinja näkyy köyden oikealla → 2 stilliä Päätoimittajalle.
