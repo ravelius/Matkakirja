@@ -13,7 +13,7 @@ namespace Matkakirja.Natiivi
         readonly VisualElement himmennys;
         readonly Label kapiteeli, otsikko, teksti, korostus;
         readonly Button peru, ok;
-        Action vahvistettu;
+        Action vahvistettu, peruttu;
 
         public bool Auki { get; private set; }
 
@@ -36,14 +36,15 @@ namespace Matkakirja.Natiivi
             korostus = Rakenne.Teksti("", "mk-kortti__teksti mk-kortti__teksti--korostus", kortti.Sisus);
             Kirjasimet.Aseta(korostus, Kirjasin.LukuLihava);
             var napit = Rakenne.El("mk-kortti__napit", kortti.Sisus, PickingMode.Ignore);
-            peru = Rakenne.Nappi("Peruuta", "mk-nappi--toiminto", Sulje, napit);
+            // Peru-nappi: valinnainen kunPeruttu (esim. seikkailun "Alusta"); Esc ja Sulje eivät kutsu sitä.
+            peru = Rakenne.Nappi("Peruuta", "mk-nappi--toiminto", () => { var p = peruttu; Sulje(); p?.Invoke(); }, napit);
             ok = Rakenne.Nappi("", "mk-nappi--kulta", () => { var v = vahvistettu; Sulje(); v?.Invoke(); }, napit);
             Kirjasimet.Aseta(napit, Kirjasin.Kone);
             Kirjasimet.Aseta(ok, Kirjasin.KoneLihava);
         }
 
         public void Kysy(string otsikkoTeksti, string leipa, string peruTeksti, string okTeksti, Action kunVahvistettu,
-            string kapiteeliTeksti = null, string korostusTeksti = null)
+            string kapiteeliTeksti = null, string korostusTeksti = null, Action kunPeruttu = null)
         {
             kapiteeli.text = kapiteeliTeksti ?? "";
             kapiteeli.style.display = string.IsNullOrEmpty(kapiteeliTeksti) ? DisplayStyle.None : DisplayStyle.Flex;
@@ -54,6 +55,7 @@ namespace Matkakirja.Natiivi
             peru.Q<Label>(className: "mk-nappi__teksti").text = peruTeksti;
             ok.Q<Label>(className: "mk-nappi__teksti").text = okTeksti;
             vahvistettu = kunVahvistettu;
+            peruttu = kunPeruttu;
             Auki = true;
             Rakenne.Nayta(himmennys, true, 320);
             SyoteLukko.Esta(this);
@@ -64,6 +66,7 @@ namespace Matkakirja.Natiivi
             if (!Auki) return;
             Auki = false;
             vahvistettu = null;
+            peruttu = null;
             Rakenne.Nayta(himmennys, false, 250);
             SyoteLukko.Vapauta(this);
         }

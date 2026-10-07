@@ -393,6 +393,35 @@ namespace Matkakirja.Natiivi
             return true;
         }
 
+        /// <summary>
+        /// PELATTAVAN PALAN AVAUS JATKA/ALUSTA-VALINNALLA (Siirtoseppä V6-tallennus, Päätoimittaja 7.10. 20.1x): jos tallennus on
+        /// (SeikkailuTallentaja.LueTiedosto("olavinlinna", DioraamaSovitin.PelattavaPalaHash) != null), olemassa oleva Vahvistus-
+        /// dialogi "Olavinlinna" / "Jatketaanko siitä, mihin jäit?" / Alusta (TOIMINTO) ja Jatka (kulta); Jatka asettaa
+        /// DioraamaSovitin.PelattavaPalaJatka = true ennen LinssiOhjain.AvaaPelattavaPala(). Ilman tallennusta suoraan alusta.
+        /// Esc sulkee käynnistämättä. Siirtosepän luokat heijastuksella (historia-fp); Paavalikon rivi kutsuu tätä.
+        /// </summary>
+        public static void AvaaPelattavaPala()
+        {
+            var asm = typeof(SeikkailuTapit).Assembly;
+            var sovitin = asm.GetType("Matkakirja.Natiivi.DioraamaSovitin");
+            var tallentaja = asm.GetType("Matkakirja.Natiivi.SeikkailuTallentaja");
+            var avaa = asm.GetType("Matkakirja.Natiivi.LinssiOhjain")?.GetMethod("AvaaPelattavaPala", BindingFlags.Public | BindingFlags.Static, null, System.Type.EmptyTypes, null);
+            var jatkaKentta = sovitin?.GetField("PelattavaPalaJatka", BindingFlags.Public | BindingFlags.Static);
+            string hash = sovitin?.GetField("PelattavaPalaHash", BindingFlags.Public | BindingFlags.Static)?.GetValue(null) as string;
+            var lue = tallentaja?.GetMethod("LueTiedosto", BindingFlags.Public | BindingFlags.Static, null, new[] { typeof(string), typeof(string) }, null);
+            if (avaa == null) { Debug.LogWarning("MATKAKIRJA seikkailutapit: LinssiOhjain.AvaaPelattavaPala puuttuu"); return; }
+            void Aloita(bool jatka)
+            {
+                jatkaKentta?.SetValue(null, jatka);
+                Debug.Log("MATKAKIRJA seikkailutapit: pelattava pala " + (jatka ? "jatkaa tallennuksesta" : "alusta"));
+                avaa.Invoke(null, null);
+            }
+            object tallennus = hash != null ? lue?.Invoke(null, new object[] { "olavinlinna", hash }) : null;
+            if (tallennus == null) { Aloita(false); return; }
+            UiNakymat.Hae().Vahvistus.Kysy("Olavinlinna", "Jatketaanko siitä, mihin jäit?", "Alusta", "Jatka",
+                () => Aloita(true), kunPeruttu: () => Aloita(false));
+        }
+
         /// <summary>Testi: tila, arvot ja laatikot.</summary>
         public static string Kuvaus()
         {
