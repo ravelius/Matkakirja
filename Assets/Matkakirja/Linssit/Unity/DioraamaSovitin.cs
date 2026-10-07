@@ -1355,9 +1355,20 @@ namespace Matkakirja.Natiivi
             if (mita == "kavely")
             {
                 if (arvo == "0") { SeikkailuPelaaja.Poista(); SeikkailuVene.Poista(); SeikkailuVartijat.Poista(); SeikkailuKavely.Leikkaukset(false); cm?.SeikkailuPois(); o.Kirjaa("poikki: kävely pois"); return; }
+                // "poikki kavely siirra <merkki | x y z>": pelaaja merkkiin (glTF) testiajoja varten (piilo, ovi).
+                if (arvo == "siirra" && osat.Length > 3 && SeikkailuPelaaja.Aktiivinen is SeikkailuPelaaja sps)
+                {
+                    Vector3? kohde = null;
+                    if (osat.Length > 5) kohde = new Vector3((float)Luku(osat[3]), (float)Luku(osat[4]), (float)-Luku(osat[5]));
+                    else if (SeikkailuKavely.Data != null) foreach (var mk in SeikkailuKavely.Data.Merkit) if (mk.Nimi == osat[3]) { kohde = new Vector3((float)mk.X, (float)mk.Y + 0.05f, (float)-mk.Z); break; }
+                    if (kohde is Vector3 kv) { sps.Siirra(kv); o.Kirjaa($"poikki: kävely siirretty {osat[3]} {kv}"); } else o.Kirjaa($"poikki: kävely: merkkiä {osat[3]} ei löydy");
+                    return;
+                }
                 if (arvo == "tapit" && osat.Length > 7)
                 {
-                    SeikkailuPelaaja.Testi = new Matkakirja.Linssit.Seikkailu.KavelySyote { LiikeX = Luku(osat[3]), LiikeY = Luku(osat[4]), KatseX = Luku(osat[5]), KatseY = Luku(osat[6]) };
+                    string tapa = osat.Length > 8 ? osat[8] : "";
+                    SeikkailuPelaaja.Testi = new Matkakirja.Linssit.Seikkailu.KavelySyote { LiikeX = Luku(osat[3]), LiikeY = Luku(osat[4]), KatseX = Luku(osat[5]), KatseY = Luku(osat[6]),
+                        Hiipiminen = tapa == "hiipii", Juoksu = tapa == "juoksu" };
                     SeikkailuPelaaja.TestiLoppuu = Time.unscaledTime + (float)Luku(osat[7]);
                     o.Kirjaa($"poikki: kävely tapit {osat[3]} {osat[4]} {osat[5]} {osat[6]} {osat[7]} s");
                     return;
