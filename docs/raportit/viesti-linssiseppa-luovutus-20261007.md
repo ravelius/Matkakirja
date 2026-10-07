@@ -287,7 +287,7 @@ JUNA 162 (lukitus 21.15, Natiivisepällä):
 - alkulento-v3-korjaus 19dcb1d15
 - alkulento-aani b11f5e253
 - kori-pehmea 18d854a13 (sisältää kori-vahvemman)
-JUNA 163 (Natiivisepällä): aaneton-esitys 7568a39bc (sisältää yksityiskohdat + havainnekuva + kaikki kaupungit).
+JUNA 163 (Natiivisepällä): aaneton-esitys 578d1186c (korvaa 7568a39bc; sisältää yksityiskohdat, havainnekuvan (alarivi "Tekoälyllä tuotettu, ei valokuva") ja kaikki kaupungit). Lontoo 56, Praha 54, Wien 49 ja Rooma v3 66 riviä datana OK.
 AVOINNA:
 - Omistaja testaa alkulennon ja korin TF 162:lla illalla. Jos nykäys näkyy: Natiiviseppä ajaa `lento v3 kehysloki 1` iPadilla, ja minä teen kohdennetun korjauksen.
 - Yksityiskohtakortin ulkoasu omistajan TF 163 -palautteen mukaan.
