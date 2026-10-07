@@ -154,7 +154,10 @@ namespace Matkakirja.Natiivi
                 indeksiYritys = Time.unscaledTime;
                 using var ir = UnityWebRequest.Get(Matkakirja.Peli.Lukijaaani.Palvelin + "/opas/aineistot");
                 ir.timeout = 10;
+                // Natiivin otsakkeet kuten CesiumKaupunki.HaeTunnus (simu 7.10. 03.05: ilman testitunnusta 403 → ei karttaa).
                 ir.SetRequestHeader("x-matkakirja-natiivi", Application.identifier);
+                Matkakirja.Natiivi.PolloTestitunnus.Lisaa(ir);
+                ir.SetRequestHeader("User-Agent", "Matkakirja/" + Application.version + " (" + Application.identifier + ")");
                 yield return ir.SendWebRequest();
                 if (ir.result == UnityWebRequest.Result.Success && Matkakirja.Peli.MiniJson.Jasenna(ir.downloadHandler.text) is Dictionary<string, object> io)
                 {
@@ -185,10 +188,14 @@ namespace Matkakirja.Natiivi
             string kerros = KaupunkiAanimaisema.Kerrokset[i];
             // Oletus: Pelikoodarin nimeäminen aanimaisema-v1/<kerros>-01.mp3 (aanimaisema.json korvaa, kun se on).
             string url = SilmukanUrl != null ? SilmukanUrl(kerros) : Juuri + "aanimaisema-v1/" + kerros + "-01.mp3";
-            if (string.IsNullOrEmpty(url) || !ladataan.Add(kerros)) return;
+            if (string.IsNullOrEmpty(url) || ladataan.Contains(kerros)) return;
+            // Puuttuva silmukka (404, esim. tuuli ennen Pelikoodarin vientiä) yritetään uudelleen vasta UusintaS:n päästä (simu 7.10.: 1 209 hakua).
+            if (epaonnistunut.TryGetValue(url, out float milloin) && Time.unscaledTime - milloin < UusintaS) return;
+            ladataan.Add(kerros);
             StartCoroutine(Lataa(url, c =>
             {
                 ladataan.Remove(kerros);
+                if (c == null) epaonnistunut[url] = Time.unscaledTime; else epaonnistunut.Remove(url);
                 if (c == null || this == null || lahteet[i] != null) return;
                 var g = new GameObject(kerros); g.transform.SetParent(transform, false);
                 var l = g.AddComponent<AudioSource>(); l.clip = c; l.loop = true; l.spatialBlend = 0; l.volume = 0; l.playOnAwake = false;
@@ -200,6 +207,9 @@ namespace Matkakirja.Natiivi
                 Debug.Log($"MATKAKIRJA äänimaisema: {kerros} soi ({c.length:F0} s)");
             }));
         }
+
+        static readonly Dictionary<string, float> epaonnistunut = new Dictionary<string, float>();
+        const float UusintaS = 300f;
 
         void Vapauta(int i)
         {
