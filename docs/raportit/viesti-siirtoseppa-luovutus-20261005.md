@@ -387,3 +387,13 @@ Edellinen luovutus on `viesti-siirtoseppa-luovutus-20261002.md` (5.10. osiot 02.
   (tai id vene) → Ymparisto.Rekvisiitta, ei piirretä origoon; LR lisää kentän v44:ään. Julkaisijan jonossa nyt fc1c13e1 + NUI 34cf54b0 + 73ed2612.
   Vuoroskripti valmiina: proto-3d/tyokalut/siirtoseppa-ajot/vuoro-h1.sh (+ kuvat-*.txt; app lokit/siirtoseppa-historia2-app, käännös 10.46) (apurahakuva hämärä P1 ×1,5 → lokit/apuraha-kuvat/, laiturin rako v43,
   eleet-2 puolilähi, kävely v43 iPad + iPhone). Uusi tyokalut/siirtoseppa-ajot/ajo-kuvat.sh (kiinteä kamera + poikki kuva), ajo-kavely.sh PEILI.
+
+## TILA 7.10. 12.13 — historia-vuoro 81574aff ajettu (lokit/siirtoseppa-vuoro-h1/)
+
+- Apurahakuva lokit/apuraha-kuvat/olavinlinna-hamara.png (4128×3096) Päätoimittajalle. Laiturin rako v43: syy (a), otsalaudat korjasivat, LR kuittasi.
+- V1-kävely v43: olan yli -kamera toimii ("kamera aivot"), portaat nousevat. Korjattu 457437c0: kävelyosien laatikko-UV (LR:n glb:t ilman UV:ta),
+  pinta-aliakset laasti→rappaus, laatta→kivilattia, Ydin PoikkileikkausLinssi.KertojaPois (testi KavelyPoistaaKertojanKierroksen; 810/810).
+  LR:lle: UV:t, pintanimet, ovi:kirkkotorni-portaat-alku ilman törmäyspintaa.
+- Eleet-2 ruuduittain: puhuja rajattu; tyhjät blendiruudut puhujan vaihdossa + renkaan kaari → b051b5d6 (vaihto leikkaa, rengas 1,5 s).
+- Julkaisijan jonoon b051b5d6 + NUI 34cf54b0 + 73ed2612; sitten eleet-2-uusinta (video Päätoimittajalle) + kävely.
+- LR v44 tulossa: soutu (_valmiit/olavinlinna-soutu-v1/soutu.json), keittio-g102-tila, kappeli lähteiden mukaan, kävely v2 (Tott-kammio, esine:nauris).
