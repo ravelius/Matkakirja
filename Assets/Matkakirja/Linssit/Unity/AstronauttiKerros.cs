@@ -404,7 +404,7 @@ namespace Matkakirja.Natiivi
         /// Paikallinen), välimuistin S2-alikatto 200 Mt. Kevyt laite (Kyytipino.KevytLaite): enintään z9. Kyydin päättyessä reliefi
         /// palaa. A/B `astro kyyti s2 0|1`, testiosoite `astro kyyti s2 url <{docs}/… | pois>`.
         /// </summary>
-        public const string S2Juuri = "https://media.matkakirja.app/" + Laattapalvelin.S2Polku + "/" + Laattapalvelin.S2EuroopanVersio + "/";
+        public static string S2Juuri => "https://media.matkakirja.app/" + Laattapalvelin.S2Polku + "/" + Laattapalvelin.S2EuroopanKausi + "/";
         public const string S2Kerros = "astronautti-s2";
         /// <summary>
         /// Kevyt laite S2:lle (Natiivisepän ehto 1.10.): Kyytipino.KevytLaite (≤ iPhone 15 Pro) tai muisti ≤ 6144 Mt → z9, karkeampi
@@ -499,6 +499,15 @@ namespace Matkakirja.Natiivi
             // S2 on kesäaineisto: vain lumettomina kausina (Iss.Vuodenaika.S2Nakyy), talvella BMNG (omistaja 1.10.); kuvan pinta aina.
             bool halutaan = kyydissa && ((S2Kaytossa && Vuodenaika.S2Nakyy(Vuodenaika.Kausi(kuukausiLisatty))) || kuvan.HasValue)
                 && kuukausiLisatty > 0;
+            // Kauden Euroopan mosaiikki (syksy/v1 jne.; Laattapalvelin.S2EuroopanKausi): vaihtuessa S2-kerros lisätään uudelleen,
+            // ettei Cesiumin muistiin jääneitä edellisen kauden laattoja näy (maailman URL-malli ei muutu).
+            string kausi = Vuodenaika.S2EuroopanVersio(Vuodenaika.Kausi(kuukausiLisatty)) ?? Laattapalvelin.S2EuroopanVersio;
+            if (kausi != Laattapalvelin.S2EuroopanKausi)
+            {
+                Laattapalvelin.S2EuroopanKausi = kausi;
+                Debug.Log("MATKAKIRJA linssit: s2: Euroopan mosaiikki " + kausi);
+                if (s2Lisatty) { kk.PoistaRasteri(S2Kerros); s2Lisatty = false; }
+            }
             bool maailma = !kuvan.HasValue && S2Osoite == null && S2MaailmaValmis;
             string haluttu = kuvan?.Url ?? (S2Osoite ?? (maailma ? S2MaailmaMalli : S2Juuri + "{z}/{x}/{reverseY}.jpg"));
             // Kuvan pinta tulee tai poistuu kesken S2:n: vaihdetaan vain S2-kerros (reliefi ja BMNG pysyvät paikoillaan).
