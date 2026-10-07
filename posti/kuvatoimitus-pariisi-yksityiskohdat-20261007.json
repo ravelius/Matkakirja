@@ -1,0 +1,517 @@
+{
+  "task": "pariisi-yksityiskohdat-7-20261007",
+  "deliveredAt": "2026-10-07T13:40:33.056056+00:00",
+  "source": {
+    "path": "posti/sisaltokirjuri-codex-pariisi-yksityiskohdat-20261007.md",
+    "commit": "50aea672f75d435107fddfa543a1e99c2012ed4f",
+    "blob": "348eb186f9b00c8d3b1825f2c041fe49ceadd8cc"
+  },
+  "sourceVersionsReadInFull": true,
+  "imageCount": 7,
+  "generationLimit": 7,
+  "removedSubject": "Q178065 Stravinsky-suihkulähde: ei tuotettu",
+  "referenceMethod": "Tilauksessa erikseen pyydetyt yksityiskohdat, joille ei ollut sopivaa vapaata kuvaa. Faktat tekstilähteistä; valokuvapikseleitä ei syötetty generaattoriin.",
+  "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+  "editorAcceptance": false,
+  "gameIntegrated": false,
+  "published": false,
+  "editorDecisions": [
+    "Pont Neufin kaksi lähekkäistä ankkuria: päätoimittaja valitsee näytettävän kuvan.",
+    "Oscar Wilde ja Kommunardien muuri: päätoimittaja valitsee näytettävän kuvan."
+  ],
+  "assets": [
+    {
+      "number": 1,
+      "qid": "Q28785",
+      "id": "savoyarde",
+      "filename": "pariisi-Q28785-savoyarde.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "file": "pariisi-Q28785-savoyarde.png",
+      "r2Key": "julisteet/pariisi-yksityiskohdat/20261007/pariisi-Q28785-savoyarde.png",
+      "url": "https://media.matkakirja.app/julisteet/pariisi-yksityiskohdat/20261007/pariisi-Q28785-savoyarde.png",
+      "sha256": "6b60b0d8635648fa20a76a9e81ef065f8f8a82bb4ef2fc1a52739bcddd7b2bc0",
+      "bytes": 2653689,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "mitat": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Use case: photorealistic-natural\nAsset type: one commissioned factual detail illustration for the Matkakirja Paris guide; landscape 3:2 image, 1536 × 1024 pixels, opaque RGB, sRGB.\nPrimary request: Create exactly one new, convincing real-camera photograph-like illustrative image of La Savoyarde, the enormous bronze bell in the Sacré-Cœur campanile in Montmartre, Paris. Present-day scene. Text-informed illustration, not a copy of a reference photograph.\nScene/backdrop: The quiet interior of the bell tower, surrounded by pale off-white Château-Landon travertine-like limestone masonry and tall Romanesque round-arched openings. Show the thickness of the stone piers and window reveals to communicate the enormous scale. Soft daylight enters through the arches, with a pale sky outside.\nSubject: One giant dark patinated bronze bell, its complete silhouette from crown to broad flared lip visible. Physical proportions should suit a bell approximately 3.06 m high and 3.03 m in diameter, weighing nearly nineteen tonnes. The heavy headstock, substantial timber and steel support members, and their real structural connections must be visible above and beside the bell. Make the bronze wall thick and heavy, with restrained raised ornamental bands around the shoulder and lower skirt. A very massive dark iron clapper hangs centrally within the open mouth, with a large pear-shaped striking end clearly visible just below the rim; it should look consistent with an 850 kg clapper.\nStyle/medium: Strictly photorealistic, natural documentary camera image. Real material texture, irregular aged bronze patina, small casting imperfections, worn timber grain, muted stone pores and joints. Modest photographic grain, believable optical detail. No illustration, painting, CGI or 3D-render appearance.\nComposition/framing: Horizontal 3:2 composition, a slight low-angle view from a few metres away. The bell and its mounting occupy about two thirds of the frame. Leave sufficient space so the entire bell, its clapper and the main mounting beam are not cropped. The open bell mouth remains visible. Tall arched window architecture on both sides provides scale without a person. Natural 28–35 mm full-frame camera perspective with plausible straight masonry verticals; no fisheye distortion.\nLighting/mood: Soft available daylight, gently brighter on one side of the bronze, natural shadows in the mouth of the bell, correctly exposed stone openings, understated muted colours. No theatrical lighting, no dramatic spotlight, no HDR, no oversaturated cinematic colour grading.\nConstraints: Single bell and a single scene only; human-free. No readable lettering, numbers, labels or inscriptions anywhere, including the ornamental bands. No signs, cables, modern lamps, tourists, crowds, logos, watermarks, captions, border or frame. Preserve the giant bell's full silhouette and heavy clapper.",
+      "viitteet": [
+        {
+          "type": "textResearchOnly",
+          "url": "https://www.sacre-coeur-montmartre.com/decouvrir/patrimoine-et-art-sacre/la-savoyarde/",
+          "note": "Official basilica text: Savoyarde weighs approximately 19 tonnes and hangs in the 84 m Romano-Byzantine campanile. Arrival 1895; permanent campanile installation 1907.",
+          "photoPixelsUsed": false
+        },
+        {
+          "type": "textResearchOnly",
+          "url": "https://paccard.com/portfolio/la-savoyarde-la-plus-grosse-cloche-de-france/",
+          "note": "Manufacturer technical list: weight 18,835 kg; height 3.06 m; circumference 9.60 m; clapper 850 kg; headstock 4,650 kg.",
+          "photoPixelsUsed": false
+        },
+        {
+          "type": "textResearchOnly",
+          "url": "https://www.paris.fr/pages/le-sacre-coeur-se-refait-une-beaute-30792",
+          "note": "Municipality text: diameter 3.03 m; weight 18,835 kg; permanent campanile installation 1907; restoration of timber and steel ringing-wheel components.",
+          "photoPixelsUsed": false
+        },
+        {
+          "type": "textResearchOnly",
+          "url": "https://www.sacre-coeur-montmartre.com/decouvrir/patrimoine-et-art-sacre/lentree-et-sa-facade/",
+          "note": "Official basilica text: pale Château-Landon stone is used in the basilica; supports commissioned pale masonry setting.",
+          "photoPixelsUsed": false
+        }
+      ],
+      "kuvateksti": "Savoyarde-kello Sacré-Cœurin kellotornissa. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-yksityiskohdat-20261007/production/01-savoyarde/pariisi-Q28785-savoyarde.png",
+      "productionRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-yksityiskohdat-20261007/production/01-savoyarde/production-record.json",
+      "technicalChanges": [],
+      "visualReview": {
+        "file": "pariisi-Q28785-savoyarde.png",
+        "sha256": "6b60b0d8635648fa20a76a9e81ef065f8f8a82bb4ef2fc1a52739bcddd7b2bc0",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Kello ja massiivinen kieli kokonaan näkyvissä, pronssipatina ja koristevyöt; puinen ripustuspalkki näkyy kokonaisena.",
+          "Oikean sivutuen jatko leikkautuu yläreunaan. Se ei leikkaa puista ripustuspalkkia; täydellistä tukikehikon näkyvyyttä ei väitetä.",
+          "Kivikaaret antavat kokovertailun, ei ihmisiä eikä luettavaa tekstiä."
+        ]
+      },
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "number": 2,
+      "qid": "Q550",
+      "id": "puutarhakatu",
+      "filename": "pariisi-Q550-puutarhakatu.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "file": "pariisi-Q550-puutarhakatu.png",
+      "r2Key": "julisteet/pariisi-yksityiskohdat/20261007/pariisi-Q550-puutarhakatu.png",
+      "url": "https://media.matkakirja.app/julisteet/pariisi-yksityiskohdat/20261007/pariisi-Q550-puutarhakatu.png",
+      "sha256": "7e59b1310550de8780acc6931e4c4873770cdfaaf783eb2d44efe62cfb836d84",
+      "bytes": 3322349,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "mitat": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Use case: photorealistic-natural\nAsset type: a single educational detail illustration for Matkakirja's Paris city guide, used for a few seconds. Create exactly ONE image.\nPrimary request: An original, plausible 2030s FUTURE GARDEN AVENUE concept for the Champs-Élysées in Paris. This is our own illustrative concept, NOT a representation of an approved municipal design, NOT a copy or recreation of any PCA-STREAM or other architectural visualization. Do not emulate any published rendering. No input images.\nScene/backdrop: Summer daytime on the real, broad, straight historical avenue. STREET LEVEL, human eye height, standing roughly near the eastern end of the built-up upper avenue, looking WEST gently uphill along the long, unmistakable straight axis to the Arc de Triomphe in the FAR DISTANCE. Keep the Arc de Triomphe SMALL, around 5–7 percent of image height, unobstructed at the distant vanishing point, with its correct monumental single principal arch shape. It must never loom over the foreground or be placed close to the camera.\nSubject: The broad avenue is transformed into a credible green public promenade: approximately half of the street surface is greenery, with newly planted irregular groups of ordinary deciduous trees, low shrubs, and continuous lawn strips, including foreground plantings and planting islands farther along the axis. The existing pale limestone Haussmann-era façades, wrought-iron balconies, and grey zinc mansard roof silhouettes are retained along BOTH avenue edges; do not replace them with new architecture.\nComposition/framing: A single landscape 3:2 frame, 1536 x 1024 pixels. Eye-level 35 mm documentary-camera view, generous depth, natural perspective without fisheye or ultra-wide stretching. Foreground grasses, low shrubs and lawn clearly lead into the scene. Broad light-grey stone-paved pedestrian areas continue on both sides and through the planting layout. Several understated slatted wooden benches. A continuous clear view along the historical axis survives between the tree groups.\nEveryday life: Many small pedestrians walking, a few seated on benches, and several small cyclists on a clearly separated sensible cycling path. All people are at middle or far distance, anonymous, unrecognizable, mostly seen from behind or as tiny side profiles, never portrait sized. Two or three ordinary modern cars total, confined to a narrow continuous two-lane access carriageway of credible width, separated from people and planting by low curbs. Cars must not drive through lawns or collide with pedestrians. Conventional present-day vehicles and street furniture remain credible for the 2030s.\nStyle/medium: Photorealistic, like a modest natural documentary photograph with convincing leaves, stone texture, faint surface wear, mild atmospheric depth and normal real camera detail. It is an AI illustration but visually resembles an ordinary real photograph. Avoid the glossy sterile look of commercial architectural renders.\nLighting/mood: Ordinary soft summer daylight, gently hazy pale-blue sky, subtle scattered cloud, restrained shadows. Calm and everyday, pleasant and believable. Muted natural greens, beige limestone, quiet grey paving. No HDR, no cinematic saturation, no dramatic sunset, no exaggerated turquoise or orange grading, no bloom.\nConstraints: OPAQUE RGB sRGB PNG. No text anywhere, no shop names or readable lettering, no logos, no advertising, no signs, no banners, no flags, no watermark, no frame. Ground-floor façades and shopfronts are plain and unobtrusive with blank surfaces. No recognizable faces. No futuristic buildings, flying objects, sci-fi transport, monumental new sculptures or protected contemporary artwork. No Eiffel Tower. No collage or multiple panels.",
+      "viitteet": [
+        {
+          "title": "Rénovation, végétalisation : comment les Champs-Élysées vont se transformer",
+          "publisher": "Ville de Paris",
+          "url": "https://www.paris.fr/pages/les-champs-elysees-se-refont-une-beaute-21040",
+          "pageUpdated": "2023-02-22",
+          "usedFor": "Textual grounding: broad avenue, future green promenade, mixed-height trees, lawns and flowerbeds, more space for walking and cycling. The published timeline is a historical proposal, not confirmation of completion.",
+          "usage": "textResearchOnly",
+          "pixelInput": false
+        },
+        {
+          "title": "Les Parisiens veulent une avenue des Champs-Elysées plus verte et plus authentique",
+          "publisher": "Ville de Paris",
+          "url": "https://www.paris.fr/pages/les-parisiens-veulent-une-avenue-des-champs-elysees-plus-verte-et-plus-authentique-7902",
+          "pageUpdated": "2020-07-03",
+          "usedFor": "Textual grounding: greener street, reduced space for automobiles, separate cycle paths, benches and preservation of Haussmann façades. Copyrighted PCA-STREAM visualization explicitly not used.",
+          "usage": "textResearchOnly",
+          "pixelInput": false
+        },
+        {
+          "title": "Genèse et première pierre",
+          "publisher": "Centre des monuments nationaux / Arc de triomphe",
+          "url": "https://www.paris-arc-de-triomphe.fr/decouvrir/genese-et-premiere-pierre",
+          "usedFor": "Historical avenue geometry: continuous perspective toward Chaillot/Étoile, Arc de Triomphe at the western terminus visible along the avenue.",
+          "usage": "textResearchOnly",
+          "pixelInput": false
+        },
+        {
+          "title": "Champs-Élysées : histoire et secrets de la plus belle avenue",
+          "publisher": "Paris je t'aime — Office de tourisme",
+          "url": "https://parisjetaime.com/article/tout-savoir-sur-les-champs-elysees-a708",
+          "usedFor": "Official tourism text confirms roughly 1.9 km avenue linking Place de la Concorde to Arc de Triomphe. Text only.",
+          "usage": "textResearchOnly",
+          "pixelInput": false
+        }
+      ],
+      "kuvateksti": "Oma tulevaisuuskonsepti Champs-Élysées’n mahdollisesta 2030-luvun puutarhakadusta. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-yksityiskohdat-20261007/production/02-puutarhakatu/pariisi-Q550-puutarhakatu.png",
+      "productionRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-yksityiskohdat-20261007/production/02-puutarhakatu/production-record.json",
+      "technicalChanges": [],
+      "visualReview": {
+        "file": "pariisi-Q550-puutarhakatu.png",
+        "sha256": "7e59b1310550de8780acc6931e4c4873770cdfaaf783eb2d44efe62cfb836d84",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Katutasoinen akseli pieneen Riemukaareen, vihreys, penkit, kävelijät, pyöräilijät ja kaksi autoa.",
+          "Lähihahmot selin tai profiilissa ilman tunnistettavia kasvoja; ei luettavia myymälänimiä tai kylttejä.",
+          "Oma tulevaisuuskonsepti; ei hyväksytyn liikennesuunnitelman jäljennös."
+        ]
+      },
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "number": 3,
+      "qid": "Q187840",
+      "id": "kattomehilaispesat",
+      "filename": "pariisi-Q187840-kattomehilaispesat.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "file": "pariisi-Q187840-kattomehilaispesat.png",
+      "r2Key": "julisteet/pariisi-yksityiskohdat/20261007/pariisi-Q187840-kattomehilaispesat.png",
+      "url": "https://media.matkakirja.app/julisteet/pariisi-yksityiskohdat/20261007/pariisi-Q187840-kattomehilaispesat.png",
+      "sha256": "36dba98920d9368b39c7648b435e5717d06939cc1aa165b1c8c8735fb3ca3057",
+      "bytes": 2384754,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "mitat": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Use case: photorealistic-natural\nAsset type: Matkakirja Paris city guide detail illustration, a single landscape 3:2 image, 1536 × 1024 pixels, opaque RGB sRGB PNG.\nPrimary request: A new photorealistic illustrative view of rooftop beehives on the Palais Garnier in Paris in the 2020s. Create one image only.\nScene/backdrop: From the roof level at a low human eye-height camera, a flat weathered dull grey zinc or lead metal roof platform in the foreground, a broad sloping standing-seam metal roof behind the hives. Only the right edge of the frame includes a cropped part of the Palais Garnier's low curved green-patinated copper dome, with restrained gilded nineteenth-century ornamental accents around its rim and ribs. A faint distant glimpse of dense Paris rooftops appears beyond the roof to the left. Do not invent a cathedral dome or tall church spire.\nSubject: Exactly four separate ordinary wooden beehives in a row in the foreground. Each hive consists of a few stacked rectangular wooden hive boxes, a simple dull metal lid, a visible narrow front flight opening near the bottom, and a small landing board. Modest natural variations in weathered honey-brown and pale wood; no paintwork, brands or markings. The entire hive stacks are visible, grounded on the level roof, each approximately one third of the total image height. A few tiny bees at natural insect scale are flying immediately near the front entrances, and a few sit on the landing boards; no macro bees and no dense swarm.\nStyle/medium: Looks like a real restrained documentary photograph, physically believable perspective and material texture. Natural photographic depth of field with hives readable and background gently softer. No illustration, painting, CGI or decorative art look.\nComposition/framing: Landscape 3:2, human roof-level vantage point, shallow oblique frontal view so the hive front flight slots are visible. Hives span the lower central and left area, with space between the four boxes. The sloping grey metal roof and a cropped curved green copper dome on the far right establish the Garnier roof context. Keep hives dominant and recognizable at thumbnail size.\nLighting/mood: Natural low afternoon sunlight from the left, warm muted wood and gold highlights, soft cool grey metal and muted green patina, calm quiet urban rooftop. Normal photographic exposure with natural moderate shadows.\nConstraints: Modern 2020s scene. Metal roof, never clay roof tiles. Exactly four separate hive stacks, clearly recognizable front flight entrances. No people or beekeeper, honey jars, labels, foreground HVAC, antennas, foreground safety railings, text, lettering, numbers, signs, logos, watermarks, frame or collage. No HDR, extreme saturation, cinematic color grading or exaggerated glowing sunset. This is an AI-created illustration of a factual rooftop-beekeeping setting, not a documentary proof of the precise actual placement or current hive count.\nInput images: None. Use only the textual specification; no source photo pixels.",
+      "viitteet": [
+        {
+          "url": "https://www.operadeparis.fr/actualites/des-abeilles-a-lopera-bastille",
+          "title": "Des abeilles à l’Opéra Bastille",
+          "publisher": "Opéra national de Paris",
+          "date": "2016-07-15",
+          "type": "textResearchOnly",
+          "notes": "Oopperan tiedote kertoo viidestä vuonna 2015 Garnierin katolle asennetusta pesästä ja noin 30 vuoden hunajantuotannon perinteestä. Käytetty vain kattomehiläistarhauksen olemassaolon tukena. Tiedote ei vahvista 2020-luvun tarkkaa pesämäärää tai sijoittelua."
+        },
+        {
+          "url": "https://www.operadeparis.fr/apropos/theatres-et-ateliers/palais-garnier",
+          "title": "Palais Garnier — Théâtres et Ateliers",
+          "publisher": "Opéra national de Paris",
+          "type": "textResearchOnly",
+          "notes": "Oopperan esittely kuvaa Charles Garnierin vuonna 1875 valmistuneen teatterirakennuksen. Käytetty rakennuksen ja 1800-luvun arkkitehtuurin yleiskontekstiin."
+        },
+        {
+          "url": "https://www.oppic.fr/article1510.html",
+          "title": "Opéra de Paris, Palais Garnier — Restauration de la couverture",
+          "publisher": "OPPIC, Opéra national de Paris’n kunnostushankkeen rakennuttajaedustaja",
+          "type": "textResearchOnly",
+          "notes": "Kunnostushankkeen ensisijainen kuvaus nimeää katon materiaaleiksi kuparin ja lyijyn sekä lyijyisiä kulkuteitä ja vesikouruja. Käytetty metallisen kattopinnan tukena. Sinkkipeltikatto, oikealle rajattu vihreä kupoli sekä 3–4 pesää ovat korjatun tilauksen kuvaohje, eivät tästä tekstilähteestä todistettu tarkka näkymä."
+        }
+      ],
+      "kuvateksti": "Mehiläispesiä Palais Garnierin metallikatolla Pariisissa. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-yksityiskohdat-20261007/production/03-kattomehilaispesat/pariisi-Q187840-kattomehilaispesat.png",
+      "productionRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-yksityiskohdat-20261007/production/03-kattomehilaispesat/production-record.json",
+      "technicalChanges": [],
+      "visualReview": {
+        "file": "pariisi-Q187840-kattomehilaispesat.png",
+        "sha256": "36dba98920d9368b39c7648b435e5717d06939cc1aa165b1c8c8735fb3ca3057",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Neljä puista pinottua pesälaatikkoa lentoaukkoineen ja pieniä mehiläisiä.",
+          "Metallikatto, oikealla osittainen vihreä kupoli ja kullatut ornamentit; ei ihmisiä tai etualan tekniikkaa.",
+          "Suurin pesä noin41% korkeudesta; muut30–35%, tilauksen noin1/3-tavoite välittyy. Sijoittelu on havainnollinen."
+        ]
+      },
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "number": 4,
+      "qid": "Q187840",
+      "id": "vesiallas",
+      "filename": "pariisi-Q187840-vesiallas.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "file": "pariisi-Q187840-vesiallas.png",
+      "r2Key": "julisteet/pariisi-yksityiskohdat/20261007/pariisi-Q187840-vesiallas.png",
+      "url": "https://media.matkakirja.app/julisteet/pariisi-yksityiskohdat/20261007/pariisi-Q187840-vesiallas.png",
+      "sha256": "49b11887dfa7bd40e2ad0d181654390f8373d04f6acc8ff018388be9767ccfe5",
+      "bytes": 2306040,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "mitat": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Use case: photorealistic-natural\nAsset type: one commissioned Matkakirja Paris detail illustration, present day; one single image.\nPrimary request: a photorealistic illustrative underground water tank associated with the Palais Garnier, viewed from just above the still black water. This is a modest enclosed utilitarian nineteenth-century masonry reservoir, not a fantasy location.\nScene: completely underground and closed. Low masonry ceiling, compact ordinary rectangular stone-and-brick load-bearing piers, modest shallow barrel or groin vaults repeating into darkness. Wet blackened stone, aged brown brick, rough joints, slight damp mineral deposits. Simple structural arches without decorated capitals; the headroom above water is low and believable.\nComposition: horizontal 3:2, 1536 x 1024 pixels. Camera only a little above the water surface, looking into the tank between the piers. The dark still water occupies the lower half of the frame and gives subdued mirror reflections of piers and low vaults. Recurring piers establish scale and depth, disappearing gradually in a closed dark background. Restrained wide-angle real-camera view, no dramatic fisheye.\nLighting: one faint warm lantern at the side provides just enough raking practical light to read the nearest damp masonry and a narrow restrained reflection on the water. Gentle natural shadow falloff, faintly visible texture, unlit depth. The water remains nearly still, dark, and unbroken.\nStyle: visually like a real low-light camera photograph with honest fine grain, physically plausible wet surfaces, imperfect old masonry, restrained natural exposure, muted brown and charcoal colors. No HDR, no oversaturated cinematic grading, no magical fog, no theatrical spotlight.\nConstraints: no people, boats, divers, firefighters, grilles, fences, mesh, pipes, cables, cable channels, signs, LED lights, words, numbers, logos, watermark, border or frame. No Gothic church, catacomb, cathedral, soaring vault, pointed arches, sculptures, decorative columns, dungeon props, glowing blue water, fantasy lake or cavern. No extra inset or collage. Opaque image.\nResearch use: text-informed commissioned visualization only; exact real tank geometry is unverified. Do not claim this is a documentary photograph.",
+      "viitteet": [
+        {
+          "url": "https://www.operadeparis.fr/apropos/theatres-et-ateliers/palais-garnier",
+          "title": "Palais Garnier — Théâtres et Ateliers",
+          "publisher": "Opéra national de Paris",
+          "type": "textResearchOnly",
+          "access": "web open text",
+          "notes": "Rakennuksen virallinen historia kertoo vuoden 1862 pohjaveden pumppauksesta ja vuoden 1863 perustusten, holvien ja kellareiden rakentamisesta. Katsomon yleiskonteksti ja vuoden 1964 kattomaalaus tunnistettu. Kuvapikseleitä ei käytetty."
+        },
+        {
+          "url": "https://catalogue.bnf.fr/ark:/12148/cb44761601q",
+          "title": "Nouvel Opéra, Coupe longitudinale sur la partie comprise entre la galerie et la cuve. Coupe C, D. / Charles Garnier",
+          "publisher": "Bibliothèque nationale de France",
+          "type": "textResearchOnly",
+          "access": "web open catalogue text only",
+          "notes": "Garnierin alkuperäisen piirustuksen luettelotietue tunnistaa gallerian ja vesialtaan välisen poikkileikkauksen. Luettelotiedot luettu; piirustuksen pikseleitä ei ladattu, tarkastettu tai käytetty kuvanluonnissa. Altaan täsmällinen nykygeometria jää varmentamatta."
+        }
+      ],
+      "kuvateksti": "Palais Garnierin maanalaisen vesialtaan havainnollistus; holvien muoto on viitteellinen. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-yksityiskohdat-20261007/production/04-vesiallas/pariisi-Q187840-vesiallas.png",
+      "productionRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-yksityiskohdat-20261007/production/04-vesiallas/production-record.json",
+      "technicalChanges": [
+        "Embedded sRGB ICC profile and PNG Description/Source markers; no color transformation or creative image alteration."
+      ],
+      "visualReview": {
+        "file": "pariisi-Q187840-vesiallas.png",
+        "sha256": "49b11887dfa7bd40e2ad0d181654390f8373d04f6acc8ff018388be9767ccfe5",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "requiresEditorCompositionReview": false,
+        "observations": [
+          "Matala tiilinen holvitila, kosteat kivipilarit ja rauhallinen tumma vesi alareunan puolikkaassa.",
+          "Yksi niukka lyhty sivulla heijastuu veteen, perspektiivi häviää pimeään; ei ihmisiä, veneitä, ritilöitä tai tekniikkaa.",
+          "Tarkan allastilan geometria on tilauksen havainnollistus, ei kuvavarmennettu dokumentaarinen näkymä."
+        ]
+      },
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "number": 5,
+      "qid": "Q187840",
+      "id": "kattokruunu",
+      "filename": "pariisi-Q187840-kattokruunu.png",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "file": "pariisi-Q187840-kattokruunu.png",
+      "r2Key": "julisteet/pariisi-yksityiskohdat/20261007/pariisi-Q187840-kattokruunu.png",
+      "url": "https://media.matkakirja.app/julisteet/pariisi-yksityiskohdat/20261007/pariisi-Q187840-kattokruunu.png",
+      "sha256": "f96c7c55440acbad8b711fbce96c46ee08f195378b997cb7dcad360a327b437c",
+      "bytes": 2145962,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "mitat": [
+        1024,
+        1024
+      ],
+      "generationPrompt": "Use case: photorealistic-natural\nAsset type: one commissioned Matkakirja Paris auditorium detail illustration; one single image.\nPrimary request: a photorealistic straight-up view from the auditorium floor of the Palais Garnier, looking at the centered large bronze/brass and crystal chandelier, surrounded by a circular ceiling and gilt stucco, with the top edge of ornate theatre boxes at the outer frame.\nComposition: square 1024 x 1024 pixels, the camera optical axis points vertically upward. Center the chandelier exactly. Its physically plausible large multilevel bronze/brass construction, circular tiers of arms and warm lamps, cascades of faceted crystal pendants, and central hanging crystal assembly are legible from directly underneath. Chandelier occupies roughly one third to two fifths of the image width. Circular ceiling is visible around it; outer edges show rich nineteenth-century gilded stucco cornices and upper theatre-box arches, with subtle deep red velvet only in peripheral box recesses. Real architectural scale and photographic perspective.\nCeiling surface: invent an ENTIRELY ORIGINAL nonfigurative abstract painted surface formed solely by blurred irregular asymmetrical patches and soft uneven color fields of muted dusty blue, ochre, mauve and sage. Keep it quiet and irregular across the entire circular surface. It contains no figures or representational forms whatsoever. The colors do NOT form radial sectors, wedges, narrative scenes, outlined shapes, recognizable motifs, architecture, buildings, animals, faces, bodies, writing, signature, instruments or objects. Do not copy or evoke Marc Chagall's composition, figures, buildings, distinctive palette or color sequence. No Chagall artwork reproduction. The abstract invented surface is deliberately unrecognizable.\nLighting and realism: warm natural practical chandelier-lamp illumination, restrained exposure, true bronze/brass wear and crystal texture, slightly imperfect real camera detail and subtle grain. Muted colors and softly warm gilt, no HDR, no oversaturation, no cinematic grading or excessive sparkles. No people, text, logos, signs, watermarks, border or frame. Opaque image.\nResearch use: official textual chandelier/architecture information only; no source-photo pixels. It is a commissioned illustrative view with invented nonfigurative ceiling art, not documentary evidence of the actual ceiling.",
+      "viitteet": [
+        {
+          "url": "https://www.operadeparis.fr/apropos/theatres-et-ateliers/palais-garnier",
+          "title": "Palais Garnier — Théâtres et Ateliers",
+          "publisher": "Opéra national de Paris",
+          "type": "textResearchOnly",
+          "access": "web open text",
+          "notes": "Rakennuksen virallinen historia kertoo vuoden 1862 pohjaveden pumppauksesta ja vuoden 1863 perustusten, holvien ja kellareiden rakentamisesta. Katsomon yleiskonteksti ja vuoden 1964 kattomaalaus tunnistettu. Kuvapikseleitä ei käytetty."
+        },
+        {
+          "url": "https://www.operadeparis.fr/visites/palais-garnier/individuels",
+          "title": "Visiter le Palais Garnier — La salle de spectacle",
+          "publisher": "Opéra national de Paris",
+          "type": "textResearchOnly",
+          "access": "search-index text; direct open inaccessible",
+          "notes": "Virallisen vierailusivun hakuteksti nimeää pronssi- ja kristallikruunun, 8 tonnin painon ja 340 valoa sekä stukon, sametin ja kullatut koristeet. Nämä tukevat materiaalivalintoja; lamppujen täsmällistä lukumäärää tai ripustuksen geometriaa ei väitetä kuvassa varmennetuksi."
+        }
+      ],
+      "kuvateksti": "Kristallikruunu ja kullatut koristeet Palais Garnierin katsomossa; kattopinnan hahmottomat värit on keksitty tätä kuvaa varten. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-yksityiskohdat-20261007/production/05-kattokruunu/pariisi-Q187840-kattokruunu.png",
+      "productionRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-yksityiskohdat-20261007/production/05-kattokruunu/production-record.json",
+      "technicalChanges": [
+        "Uniform resize 1254x1254 to 1024x1024 with Lanczos; no crop or creative alteration.",
+        "Embedded sRGB ICC profile and PNG Description/Source markers; no color transformation or creative image alteration."
+      ],
+      "visualReview": {
+        "file": "pariisi-Q187840-kattokruunu.png",
+        "sha256": "f96c7c55440acbad8b711fbce96c46ee08f195378b997cb7dcad360a327b437c",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "requiresEditorCompositionReview": true,
+        "observations": [
+          "Neliö, ylöspäin suuntautuva katsomonäkymä, kokonainen kristalli-/metallikruunu, lämmin valaistus ja kullattu kehys.",
+          "Kattopinta on hahmoton ja sommitelma keksitty; tunnistettavaa Chagallin maalauksen hahmoa tai värisektorirakennetta ei ole.",
+          "Kamera on hieman vino: kruunu ja kattoruusuke eivät ole täysin samankeskisiä. Toimitetaan tarkistettavana ehdokkaana tästä rajauspoikkeamasta kerrottuna."
+        ]
+      },
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "number": 6,
+      "qid": "Q335277",
+      "id": "kangassilta-1985",
+      "filename": "pariisi-Q335277-kangassilta-1985.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "file": "pariisi-Q335277-kangassilta-1985.png",
+      "r2Key": "julisteet/pariisi-yksityiskohdat/20261007/pariisi-Q335277-kangassilta-1985.png",
+      "url": "https://media.matkakirja.app/julisteet/pariisi-yksityiskohdat/20261007/pariisi-Q335277-kangassilta-1985.png",
+      "sha256": "cfd7e22d5b1bf7653461b59a692e828f71c7f1787ba92aa7136327e9b1933e7d",
+      "bytes": 2492465,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "mitat": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Use case: historical-scene\nAsset type: one commissioned photorealistic Matkakirja Paris detail illustration, landscape 1536 x 1024, opaque, no words in the picture.\nPrimary request: Pont Neuf in Paris completely wrapped in golden sandstone beige polyamide cloth, as in Christo and Jeanne-Claude's The Pont Neuf Wrapped in September 1985. Create an original documentary-style composition from textual description only; do not replicate any existing photograph.\nScene and composition: human eye-level camera standing on a Seine stone quay, looking slightly upward and obliquely along the SIDE of the real historic Pont Neuf. A mid-distance bridge spans the image width. Show two complete broad LOW SEMICIRCULAR river arches and part of a third in perspective, the substantial rounded cutwaters and piers between them, and the rounded projecting balconies on the parapet above the piers. These must be real low masonry-bridge proportions, with a nearly level continuous deck, not a tall viaduct. Keep the two central arches, fabric and water reflections intelligible in a square central crop. A little stone quay wall in one bottom corner, rippled Seine water and bridge reflections across the lower third; Paris stone riverside buildings recede quietly in the distance.\nMaterials and details: soft golden sandstone-coloured fabric is wrapped close around ALL visible bridge side surfaces, parapets, projecting balconies, piers and underside vaults of the arches; their historic masonry shapes remain clearly readable through the cloth. The fabric has natural tension, creases, broad folds and draping, with visible realistic rope bindings holding it to the structure, particularly around the rounded cutwaters and over the parapet. No exposed decorative stone masks or bare patches interrupt the cloth. The river passes freely through the cloth-lined arch openings. Tiny wrapped lamp-post silhouettes can appear on the deck. A few tiny distant faceless ordinary pedestrians walk on top, wearing September 1985 everyday coats, plain trousers or simple skirts; no close people.\nStyle and light: like an unposed historical documentary colour photograph, restrained natural September afternoon light under a lightly overcast sky, muted beige-gold cloth, grey-green Seine, subtle autumn foliage, real cloth weave and water texture. Clear readable bridge volume, no HDR, no cinematic grading, no painting or illustration texture, no artificial glow.\nAvoid: any text, names, numbers, captions, signs, logos, watermarks, border or frame; recognisable faces; smartphones, contemporary cars, contemporary street furniture. No other artworks by Christo or Jeanne-Claude. No 2026 JR cave installation, no cave, no inflatable arch, no giant tunnel, no tall monumental arch, no suspension bridge, no ruined structure, no collage. Exactly one landscape image.",
+      "viitteet": {
+        "type": "textResearchOnly",
+        "sourceImageInputs": false,
+        "researchRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-yksityiskohdat-20261007/production/06-kangassilta-1985/research-notes.json"
+      },
+      "kuvateksti": "Pont Neuf kankaaseen käärittynä syyskuussa 1985. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-yksityiskohdat-20261007/production/06-kangassilta-1985/pariisi-Q335277-kangassilta-1985.png",
+      "productionRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-yksityiskohdat-20261007/production/06-kangassilta-1985/production-record.json",
+      "technicalChanges": [
+        "Copied generated original unchanged into production folder; preserved built-in original.",
+        "Converted output pixel mode to RGB without creative editing.",
+        "Embedded standard sRGB ICC profile.",
+        "Embedded exact AI illustration disclosure in PNG Description and Source.",
+        "No resize or crop of final output."
+      ],
+      "visualReview": {
+        "file": "pariisi-Q335277-kangassilta-1985.png",
+        "sha256": "cfd7e22d5b1bf7653461b59a692e828f71c7f1787ba92aa7136327e9b1933e7d",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "requiresEditorCompositionReview": false,
+        "observations": [
+          "Kaksi kokonaista kaarta ja osa kolmannesta, kangas sekä köysisidonnat sillan sivuissa, kaarissa, parapeteissa ja ulokkeissa.",
+          "Seinen rantakameran keskietäisyys, vesi ja heijastukset, pienet sivulliset sillalla; ei nykyaikaisia autoja, luettavaa tekstiä tai uuden JR-installaation piirteitä.",
+          "Tilauksen vuoden1985 havainnollistus; tarkkoja kankaan ryppyjä ja näkymän taustageometriaa ei kuvavarmennettu."
+        ]
+      },
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "number": 7,
+      "qid": "Q311",
+      "id": "wilden-hauta",
+      "filename": "pariisi-Q311-wilden-hauta.png",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "file": "pariisi-Q311-wilden-hauta.png",
+      "r2Key": "julisteet/pariisi-yksityiskohdat/20261007/pariisi-Q311-wilden-hauta.png",
+      "url": "https://media.matkakirja.app/julisteet/pariisi-yksityiskohdat/20261007/pariisi-Q311-wilden-hauta.png",
+      "sha256": "2a3afc71803ed8dd91d430e073f25d5d21367e82a0b020b6a39ed2f19ee17324",
+      "bytes": 2162113,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "mitat": [
+        1024,
+        1024
+      ],
+      "generationPrompt": "Use case: photorealistic-natural\nAsset type: one commissioned photorealistic Matkakirja Paris detail illustration, square 1024 x 1024, opaque, no words in the picture.\nPrimary request: current post-2011 Oscar Wilde tomb in division 89 of Père-Lachaise Cemetery, Paris, showing the Jacob Epstein monument and its clean protective glass barrier. Create an original eye-level documentary composition from textual description only, not a reproduction of any existing photograph.\nSubject and geometry: the whole huge pale warm-white limestone monolith must be visible. A heavy horizontally extended rectangular block rests on a simple low stone plinth. The broad side contains the stylized archaic winged Assyrian/Egyptian sphinx-like male messenger in horizontal forward flight, deeply carved from and partly projecting out of the limestone mass: an angular profile head with archaic headdress, a straight elongated flying body, a massive squared wing with repeated stone feather ridges occupying the upper broad side, and angular bent legs trailing below. Preserve the heavy squared stone backing around and behind the carving. This is a stone modernist profile relief integrated into a huge rectangular tomb, NOT a generic Christian angel, NOT a freestanding statue standing on top of a grave, NOT a portrait of Oscar Wilde. Slight stone weathering and tiny chisel marks; mass and pale stone colour are essential.\nScene and composition: photograph from the cemetery path at HUMAN EYE LEVEL, oblique front-and-side view with the broad carved side facing the camera and a narrow end of the block visible in perspective. Fit the complete monument and plinth into the square with comfortable margins. A simple low rectangular enclosure of CLEAR glass panels surrounds the base, attached with discreet small metal clamps; the glass remains below the upper part of the massive tomb, with visible edges and subtle environmental reflections, and the carving is readily visible through it. A few small cut flowers lie outside the glass at its base. Background: a quiet gravel cemetery path, older grey stone graves and mature trees receding softly, without prominent unrelated sculptures.\nStyle and light: unposed natural documentary photograph, soft overcast daylight, restrained muted pale limestone, grey graves and subdued green-brown trees. Real stone, clear glass and fallen leaves; deep enough focus to read the monument, quiet photographic background falloff. No HDR, no cinema colour grading, no dramatic spotlights, no painting surface.\nCritical exclusions: NO legible writing anywhere, including monument inscriptions, other graves, signs or flowers. Stone areas remain weathered or faintly textured without readable letters. NO lipstick kisses, lip marks, graffiti or notes on stone or glass. NO people, faces, logos, captions, watermarks, decorative frame or border. No towering glass museum display box, no roof over the tomb, no standalone upright angel, no generic winged woman on top. Exactly one square image.",
+      "viitteet": {
+        "type": "textResearchOnly",
+        "sourceImageInputs": false,
+        "researchRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-yksityiskohdat-20261007/production/07-wilden-hauta/research-notes.json"
+      },
+      "kuvateksti": "Oscar Wilden hauta ja sitä suojaava lasi Père-Lachaisen hautausmaalla. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-yksityiskohdat-20261007/production/07-wilden-hauta/pariisi-Q311-wilden-hauta.png",
+      "productionRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-yksityiskohdat-20261007/production/07-wilden-hauta/production-record.json",
+      "technicalChanges": [
+        "Copied generated original unchanged into production folder; preserved built-in original.",
+        "Converted output pixel mode to RGB without creative editing.",
+        "Embedded standard sRGB ICC profile.",
+        "Embedded exact AI illustration disclosure in PNG Description and Source.",
+        "Technical proportional resize from [1254, 1254] to [1024, 1024] using Lanczos; no crop."
+      ],
+      "visualReview": {
+        "file": "pariisi-Q311-wilden-hauta.png",
+        "sha256": "2a3afc71803ed8dd91d430e073f25d5d21367e82a0b020b6a39ed2f19ee17324",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "requiresEditorCompositionReview": true,
+        "observations": [
+          "Koko vaalea massiivinen monoliitti ja jalusta, lentävä siivekäs profiilihahmo, lasisuoja, kukat ja hautausmaan puut.",
+          "Silmänkorkeuden vinokuva, ei ihmisiä, luettavia hautanimiä, kirjoitusta tai suudelmajälkiä.",
+          "Monoliitti ja reliefin mittasuhteet ovat havainnollisia. Tilauksen pystysuuntaisen kohteen neliörajaus toteutuu; täydellistä mittatarkkuutta ei väitetä."
+        ]
+      },
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false
+    }
+  ],
+  "comparison": {
+    "file": "vertailukuva-7.jpg",
+    "r2Key": "julisteet/pariisi-yksityiskohdat/20261007/vertailukuva-7.jpg",
+    "url": "https://media.matkakirja.app/julisteet/pariisi-yksityiskohdat/20261007/vertailukuva-7.jpg",
+    "sha256": "984832abdfc31363287b68cb44ffac50bb9a77bc648e8bc272023c909a8bbca3",
+    "bytes": 387393,
+    "http": 200,
+    "mime": "image/jpeg",
+    "cors": "https://matkakirja.app",
+    "byteExactReadback": true
+  },
+  "productionStatus": "Seitsemän uutta fotorealistista ehdokasta tuotettu ja toimitettu tarkistettavaksi",
+  "compositionReviewRequired": [
+    "pariisi-Q187840-kattokruunu.png: kamera hieman vino, ei täysin samankeskinen.",
+    "pariisi-Q311-wilden-hauta.png: reliefin ja monoliitin tarkat mittasuhteet havainnollisia."
+  ],
+  "sourceFactualCorrection": {
+    "subject": "Savoyarde",
+    "sourceOrderClaim": "kello paikallaan vuodesta1895",
+    "verifiedCorrection": "Saapui1895, pysyvä kampanilisijoitus1907. Kuvateksti ei sisällä väärää vuosiväitettä.",
+    "sources": [
+      "https://www.sacre-coeur-montmartre.com/decouvrir/patrimoine-et-art-sacre/la-savoyarde/",
+      "https://www.paris.fr/pages/le-sacre-coeur-se-refait-une-beaute-30792"
+    ]
+  }
+}
