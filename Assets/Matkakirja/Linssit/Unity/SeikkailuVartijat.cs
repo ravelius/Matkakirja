@@ -35,7 +35,7 @@ namespace Matkakirja.Natiivi
         NavMeshDataInstance navi; NavMeshData data;
         DioraamaHahmot3D hahmot;
         Action<string> kirjaa;
-        Vector3 tarkistus; bool tarkistusAsetettu;
+        Vector3 tarkistus; SeikkailuPelaaja tarkistusPelaaja;
         double sykliMs = 0.955;
 
         public int Maara => vartijat.Count;
@@ -108,7 +108,7 @@ namespace Matkakirja.Natiivi
         {
             float dt = Mathf.Min(Time.unscaledDeltaTime, 0.05f);
             var p = SeikkailuPelaaja.Aktiivinen;
-            if (p != null && !tarkistusAsetettu) { tarkistus = p.transform.position; tarkistusAsetettu = true; }
+            if (p != null && p != tarkistusPelaaja) { tarkistus = p.transform.position; tarkistusPelaaja = p; }   // uusi pelaaja = uusi tarkistuspiste
             var aanet = new List<Aanilahde>(jono); jono.Clear();
             if (p != null)
             {

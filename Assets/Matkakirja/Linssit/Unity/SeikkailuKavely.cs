@@ -57,7 +57,7 @@ namespace Matkakirja.Natiivi
                 if (!string.IsNullOrEmpty(osa.Kavely))
                 {
                     byte[] b = null; yield return DioraamaLevyvalimuisti.Hae(url(juuri + osa.Kavely), 120, t => b = t);
-                    var m = b != null ? Mesh(b, "Kavely:" + osa.Id, kirjaa) : null;
+                    var m = b != null ? Mesh(b, "Kavely:" + osa.Id, kirjaa, kaksipuolinen: true) : null;   // NavMesh hylkää alaspäin osoittavat (keittiö v44b)
                     if (m != null) KavelyPinnat.Add(m);
                 }
             }
