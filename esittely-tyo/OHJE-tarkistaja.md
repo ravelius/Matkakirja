@@ -13,6 +13,8 @@ Jokaiselle kohteelle:
    isoisä enintään kerran ja vain merkinnän sisällöllä, ääntämiskentät (puhe_teksti) roomalaisille numeroille ym.
 4. LYHYT (kierroksen 8): 30–42 sanaa, 2–3 virkettä, eri sisältö kuin teksti. SYVENTAVA: ≤ 6 sanaa, tosi oletus.
 5. koko_m: korjaa selvästi väärät kameramitat.
+6. KYSYMYKSET: 5 kpl, ≤ 60 merkkiä, kysymysmerkki, luvut sanoina, tosi oletus, luonteva kieli. AVAUS: 30–50 sanaa,
+   ilmasta nähtävä kuva ja kierroksen ensimmäinen kohde, suomenkielinen alku.
 
 Tulos: `esittely-tyo/korjattu/<id>.json` (sama rakenne) ja `esittely-tyo/korjattu/<id>-muutokset.md` (per kohde: mitä
 korjasit ja miksi; jäljelle jääneet epävarmuudet). Aja: `node tools/opas/tarkista-esittely.mjs esittely-tyo/pohja/<id>.json

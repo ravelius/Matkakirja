@@ -24,3 +24,11 @@ Kun sessio on valmis, Pelikoodari ajaa koneellisen tarkistuksen uudelleen Macill
 Päivitys 7.10. 04.5x: mukaan Varsova ja Islanti (Reykjavik). Kreeta odottaa Sisältökirjurin uutta kohdelistaa (nykyisessä lentoasema ja esikaupunki), Sisilialle 3D-säteelle jää vain 4 kohdetta (< 6), joten se ei ole mukana.
 Päivitys 7.10. 05.3x: Kreeta (Heraklion, 13 kohdetta) ja Sisilia (Palermo, 14) mukaan Sisältökirjurin #4100:n listoilla → 35 kaupunkia.
 Päivitys 7.10. 07.2x: Varsova poistettu sallituista (Googlen 404-tiilet) → 34 kaupunkia.
+
+## Päivitys 7.10. 10.3x (Päätoimittaja): KYSYMYKSET JA AVAUKSET
+
+Jokaiseen kaupunkiin kenttä "kysymykset" (5 per kohde, ks. OHJE-kirjoittaja.md) ja kaupungin "avaus". Lisäpassi myös
+pilottikaupungeille Pariisi, Praha ja Wien, joiden hyväksytyt tekstit ovat valmiina kansiossa esittely-tyo/korjattu/: lisää
+niihin VAIN kohteiden "kysymykset", älä muuta tekstejä, avausta (Pariisin, Prahan ja Wienin avaukset ovat jo kentässä) tai
+lähteitä. Jos 34 kaupungin avaukset on jo kirjoitettu tiedostoihin esittely-tyo/avaukset/<id>.md, Pelikoodari siirtää ne
+avaus-kenttään. Tarkistin (tools/opas/tarkista-esittely.mjs) valvoo kysymykset ja avauksen.

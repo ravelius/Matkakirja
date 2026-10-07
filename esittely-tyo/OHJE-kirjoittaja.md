@@ -20,6 +20,9 @@ PYSÄHDYS NÄKYY ILMASTA, ISOISÄ ja PELIN AINEISTO. OHITA kohdat PAIKAN VALINTA
 - koko_m: halkaisija tai pituus metreinä kameralle (kokonaisluku 20–3000); korkeus_m vain torneille ja kirkoille.
 - syventava: enintään 6 sanaa, jatkokysymys, johon teksti herättää uteliaisuuden (oletuksen on oltava tosi).
 - isoisa: true vain, jos teksti mainitsee isoisän. lahteet: [{ "vaite", "url" }] jokaiselle tosiasiaväitteelle.
+- kysymykset: TASAN 5 valmista Kysy-napin kysymystä pelaajan suulla (Päätoimittaja 7.10.): kokonaisia kysymyksiä, enintään
+  60 merkkiä, kysymysmerkki lopussa, luvut sanoina; uteliaita ja eri suuntiin (historia, ihmiset, nykyhetki, yksityiskohta,
+  "miksi"). Vastaukset tulevat livenä, joten kysymykseen ei tarvita lähdettä, mutta sen oletuksen on oltava tosi.
 - puhe_teksti / puhe_lyhyt (valinnainen): jos tekstissä on jotain, mitä puhesyntetisaattori ei lue oikein (roomalaiset
   numerot kuten "Kaarle V", vaikeat lyhenteet), sama teksti ongelmakohta kirjoitettuna niin kuin suomalainen opas sen
   sanoisi ("Kaarle viidennen"). Näytölle jää kirjoitusasu.
@@ -40,9 +43,17 @@ PYSÄHDYS NÄKYY ILMASTA, ISOISÄ ja PELIN AINEISTO. OHITA kohdat PAIKAN VALINTA
   → "reunustaa"). Ei sulkeita, luetteloita eikä pisteellisiä lyhenteitä. Vakiintunut suomenkielinen nimi, jos on.
 - NYKYAIKA: paikka sellaisena kuin se on nyt (2026); historia taustana.
 
+## Kaupungin avaus (kaupungin tasolla, kenttä "avaus")
+Noin 20 sekuntia eli 30–50 sanaa: tervetuloa, kaupunki yhdellä ilmasta nähtävällä kuvalla ja kierroksen alku (kierroksen
+ensimmäinen kohde). Muoto { "teksti": "…" }. Esimerkki (omistajan hyväksymä): "Tervetuloa Pariisiin. Ylhäältä kaupunki näyttää
+vaalealta kiviviuhkalta, jonka keskellä Seine kiemurtelee kahden saaren ohi. Kierros alkaa joen keskeltä Cité-saarelta, josta
+Pariisi sai alkunsa ja jolla Notre-Dame on seissyt 1100-luvulta asti."
+ÄÄNTÄMINEN: jos teksti tai kierrosversio alkaisi vieraskielisellä nimellä (Notre-Dame, Schönbrunn), aloita suomenkielisellä
+sanalla ("Katedraali Notre-Dame…") — puhesyntetisaattori ääntää muuten koko alun vieraalla kielellä.
+
 ## Tulos ja tarkistus
 Kirjoita `esittely-tyo/luonnos/<id>.json`:
 `{ "kaupunki", "id", "versio": 1, "kohteet": [ { "id", "nimi", "kuvaus", "luokka", "koko_m", "korkeus_m"?, "teksti",
-"lyhyt", "syventava", "isoisa", "lahteet", "puhe_teksti"?, "puhe_lyhyt"? } ] }` (pohjan tarkeys-järjestys, nimi täsmälleen).
+"lyhyt", "syventava", "kysymykset", "isoisa", "lahteet", "puhe_teksti"?, "puhe_lyhyt"? } ], "avaus": { "teksti" } }` (pohjan tarkeys-järjestys, nimi täsmälleen).
 Aja: `node tools/opas/tarkista-esittely.mjs esittely-tyo/pohja/<id>.json esittely-tyo/luonnos/<id>.json` — korjaa
 kunnes 0 virhettä. Kirjoita lopuksi `esittely-tyo/luonnos/<id>-huomiot.md`: epävarmat kohdat tarkistajalle.

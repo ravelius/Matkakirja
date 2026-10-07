@@ -1,0 +1,460 @@
+{
+ "kaupunki": "Wien",
+ "id": "wien",
+ "versio": 1,
+ "kohteet": [
+  {
+   "id": "Q5943",
+   "nimi": "Stephansdom",
+   "kuvaus": "Wienin tuomiokirkko",
+   "luokka": "kirkko",
+   "koko_m": 107,
+   "korkeus_m": 136,
+   "teksti": "Stephansdom erottuu ylhäältä heti jyrkästä ja kirjavasta katostaan, johon on ladottu noin kaksisataakolmekymmentätuhatta lasitettua tiiltä. Eteläiselle lappeelle tiilistä on koottu kaksipäinen kotka, ja pohjoispuolella näkyvät Wienin ja Itävallan vaakunat. Vuonna 1945 läheisistä liikkeistä alkanut tulipalo levisi kirkkoon ja tuhosi katon puisen kehikon, joten uusi katto rakennettiin teräksen varaan. Samassa palossa särkyi kirkon suuri kello Pummerin, joka oli valettu osittain tykeistä, jotka oli saatu osmaneilta sotasaaliiksi 1600-luvun lopulla. Sirpaleet sulatettiin mukaan uuden Pummerinin metalliin.",
+   "lyhyt": "Stephansdom on Wienin tuomiokirkko, ja sen etelätorni valmistui jo vuonna 1433. Satakolmekymmentäkuusi metriä korkea torni oli vuosisatojen ajan Euroopan korkeimpia rakennuksia, ja yhä se kohoaa korkealle vanhan kaupungin kattojen yläpuolelle.",
+   "syventava": "Kuinka korkea on etelätorni?",
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Katossa on 230 000 lasitettua tiiltä.",
+     "url": "https://en.wikipedia.org/wiki/St._Stephen%27s_Cathedral,_Vienna"
+    },
+    {
+     "vaite": "Kuoron yllä eteläpuolella tiilistä on koottu kaksipäinen kotka, pohjoispuolella Wienin kaupungin ja Itävallan tasavallan vaakunat.",
+     "url": "https://en.wikipedia.org/wiki/St._Stephen%27s_Cathedral,_Vienna"
+    },
+    {
+     "vaite": "Vuonna 1945 ryöstelijöiden läheisiin liikkeisiin sytyttämä palo levisi tuulen mukana kirkkoon ja tuhosi katon puisen kehikon; tilalle tuli teräsrakenne.",
+     "url": "https://en.wikipedia.org/wiki/St._Stephen%27s_Cathedral,_Vienna"
+    },
+    {
+     "vaite": "Pummerin valettiin osin 1600-luvun lopun osmanipiirityksessä saaduista tykeistä; se särkyi 1945 ja sirpaleet sulatettiin nykyisen Pummerinin metalliin.",
+     "url": "https://en.wikipedia.org/wiki/St._Stephen%27s_Cathedral,_Vienna"
+    },
+    {
+     "vaite": "Etelätorni valmistui 1433 ja on 136 metriä korkea (lyhyt).",
+     "url": "https://en.wikipedia.org/wiki/St._Stephen%27s_Cathedral,_Vienna"
+    },
+    {
+     "vaite": "Etelätorni oli vuosisatoja Euroopan korkeimpia (lyhyt; pelin aineisto).",
+     "url": "https://en.wikipedia.org/wiki/St._Stephen%27s_Cathedral,_Vienna"
+    }
+   ]
+  },
+  {
+   "id": "Q131330",
+   "nimi": "Schönbrunnin linna",
+   "kuvaus": "Keisarien kesäpalatsi",
+   "luokka": "rakennus",
+   "koko_m": 1200,
+   "teksti": "Schönbrunnin linna oli Habsburgien kesäasunto, ja ylhäältä sen puisto avautuu pitkänä akselina linnan takaa kohti mäen laella seisovaa Gloriettea. Puistossa on maailman vanhin yhä toimiva eläintarha, jonka Maria Teresian puoliso Frans Stefan esitteli vieraille kesällä 1752. Eläintarhan keskelle valmistui vuonna 1759 kahdeksankulmainen paviljonki keisariperheen aamiaishuoneeksi. Sen ympärille sommiteltiin kakunpalojen tapaan kaksitoista yhtä suurta tarhaa, joten pöydän äärestä näki eläimiä joka suuntaan. Paviljongissa on toiminut ravintola vuodesta 1949, ja keisarillisella aamiaispaikalla voi yhä syödä.",
+   "lyhyt": "Schönbrunnin linnassa on yli tuhat neljäsataa huonetta, ja sitä kutsutaan joskus Itävallan Versailles'ksi. Arkkitehti Johann Bernhard Fischer von Erlach suunnitteli paikalle vuonna 1688 linnan, joka olisi ylittänyt Versailles'n loistossa, mutta suunnitelma oli liian kallis toteuttaa.",
+   "syventava": "Mikä on Gloriette?",
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Schönbrunn oli Habsburgien tärkein kesäasunto; puiston akseli päättyy mäkeen, jolla Gloriette seisoo.",
+     "url": "https://en.wikipedia.org/wiki/Sch%C3%B6nbrunn_Palace"
+    },
+    {
+     "vaite": "Frans Stefan, Maria Teresian puoliso, teetti eläintarhan, joka esiteltiin kesällä 1752; maailman vanhin yhä toimiva eläintarha.",
+     "url": "https://en.wikipedia.org/wiki/Tiergarten_Sch%C3%B6nbrunn"
+    },
+    {
+     "vaite": "Kahdeksankulmainen paviljonki valmistui 1759 aamiais- ja seurusteluhuoneeksi; ympärillä kaksitoista samankokoista tarhaa; ravintolana vuodesta 1949.",
+     "url": "https://en.wikipedia.org/wiki/Tiergarten_Sch%C3%B6nbrunn"
+    },
+    {
+     "vaite": "Linnassa on 1441 huonetta (lyhyt).",
+     "url": "https://en.wikipedia.org/wiki/Sch%C3%B6nbrunn_Palace"
+    },
+    {
+     "vaite": "Schönbrunnia kutsutaan Itävallan Versailles'ksi; Fischer von Erlachin vuoden 1688 suunnitelma olisi ylittänyt Versailles'n, mutta sitä ei olisi voitu rahoittaa (lyhyt).",
+     "url": "https://de.wikipedia.org/wiki/Schloss_Sch%C3%B6nbrunn"
+    }
+   ]
+  },
+  {
+   "id": "Q46242",
+   "nimi": "Hofburg",
+   "kuvaus": "Keisarien talvipalatsi",
+   "luokka": "rakennus",
+   "koko_m": 550,
+   "teksti": "Hofburg ei ole yksi palatsi vaan kokonainen kortteli siipiä ja sisäpihoja. Se kasvoi kuudessasadassa vuodessa, kun hallitsija toisensa jälkeen rakensi oman lisäyksensä. Vuodesta 1946 lähtien yhdessä sen siivessä on työskennellyt Itävallan liittopresidentti. Ylhäältä erottuu Heldenplatz, jonka laidalla kaartuu Neue Burgin julkisivu: sille piti rakentaa peilikuva aukion toiselle puolelle, mutta kustannukset kasvoivat ja suunnitelma jäi kesken. Palatsin omassa maneesissa voi yhä katsoa Espanjalaisen ratsastuskoulun orien aamuharjoituksia.",
+   "lyhyt": "Hofburg oli Habsburgien talviasunto, ja kesäksi hovi muutti Schönbrunnin linnaan. Palatsin vanhimmat osat ovat 1200-luvulta, ja nykyään siellä toimii useita museoita sekä Itävallan kansalliskirjasto, jonka barokkisessa loistosalissa on sotapäällikkö Eugen Savoijilaisen kirjakokoelma.",
+   "syventava": "Mikä on Espanjalainen ratsastuskoulu?",
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Hofburg kasvoi 1200-luvulta alkaen useiden laajennusten kautta; pelin aineisto: kuudessasadassa vuodessa.",
+     "url": "https://en.wikipedia.org/wiki/Hofburg"
+    },
+    {
+     "vaite": "Liittopresidentin virkahuoneet ovat Leopoldin siivessä vuodesta 1946.",
+     "url": "https://de.wikipedia.org/wiki/Hofburg"
+    },
+    {
+     "vaite": "Neue Burg on pitkä kaareva rakennus Heldenplatzin laidalla; vastapäinen kaksoisrakennus jäi suunnitteluasteelle.",
+     "url": "https://visitingvienna.com/sights/winter-palace/neue-burg"
+    },
+    {
+     "vaite": "Muu foorumi jäi kesken, kun kustannukset nousivat eikä valtavalle hankkeelle löytynyt käyttöä.",
+     "url": "https://de.wikipedia.org/wiki/Neue_Burg"
+    },
+    {
+     "vaite": "Espanjalainen ratsastuskoulu on Hofburgissa; yleisö voi seurata orien harjoituksia ja esityksiä.",
+     "url": "https://en.wikipedia.org/wiki/Spanish_Riding_School"
+    },
+    {
+     "vaite": "Hofburg oli talviasunto, Schönbrunn kesäasunto; kansalliskirjaston loistosalissa on Eugen Savoijilaisen kirjakokoelma (lyhyt).",
+     "url": "https://en.wikipedia.org/wiki/Hofburg"
+    }
+   ]
+  },
+  {
+   "id": "Q211818",
+   "nimi": "Belvedere",
+   "kuvaus": "Barokkipalatsit ja taidemuseo",
+   "luokka": "rakennus",
+   "koko_m": 800,
+   "teksti": "Belvedere on oikeastaan kaksi palatsia, ja ylhäältä niiden välissä näkyy pengerretty barokkipuutarha, joka laskeutuu rinnettä alas. Palatsit rakennutti 1700-luvun alussa kesäasunnokseen sotapäällikkö Eugen Savoijilainen, ja Ylä-Belvederessä on nykyään taidemuseo, jonka tunnetuin teos on Gustav Klimtin Suudelma. Saman palatsin marmorisalissa allekirjoitettiin vuonna 1955 valtiosopimus, joka palautti Itävallan itsenäisyyden. Ulkoministeri Leopold Figl sanoi kuuluisat sanansa ”Itävalta on vapaa” juuri salissa, ei parvekkeella, jolta hän näytti sopimusta puutarhaan kerääntyneelle väkijoukolle.",
+   "lyhyt": "Belvedere tarkoittaa italiaksi kaunista näköalaa. Ylempi palatsi on noin kaksikymmentäkolme metriä alempaa palatsia korkeammalla, ja puutarha viettää sen edestä kohti vanhaa kaupunkia. Molemmat palatsit suunnitteli barokkiarkkitehti Johann Lucas von Hildebrandt.",
+   "syventava": "Kuka oli Eugen Savoijilainen?",
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Belvedere rakennettiin Eugen Savoijilaisen kesäasunnoksi 1700-luvun alussa; kaksi palatsia, joiden välissä kolmeen terassiin porrastettu puutarha.",
+     "url": "https://en.wikipedia.org/wiki/Belvedere,_Vienna"
+    },
+    {
+     "vaite": "Ylä-Belvederen kokoelmassa on Gustav Klimtin Suudelma.",
+     "url": "https://en.wikipedia.org/wiki/Belvedere,_Vienna"
+    },
+    {
+     "vaite": "Valtiosopimus allekirjoitettiin 15.5.1955 Ylä-Belvederen marmorisalissa.",
+     "url": "https://de.wikipedia.org/wiki/Schloss_Belvedere"
+    },
+    {
+     "vaite": "Figlin lause Österreich ist frei sanottiin marmorisalissa eikä parvekkeella; väkijoukko oli puutarhassa.",
+     "url": "https://de.wikipedia.org/wiki/%C3%96sterreichischer_Staatsvertrag"
+    },
+    {
+     "vaite": "Ylempi palatsi on noin 23 metriä alempaa korkeammalla; arkkitehti Johann Lucas von Hildebrandt (lyhyt).",
+     "url": "https://de.wikipedia.org/wiki/Schloss_Belvedere"
+    }
+   ]
+  },
+  {
+   "id": "Q697578",
+   "nimi": "Wienin Riesenrad",
+   "kuvaus": "Praterin jättiratas",
+   "luokka": "muu",
+   "koko_m": 61,
+   "korkeus_m": 65,
+   "teksti": "Wienin Riesenrad seisoo Praterin huvipuiston sisäänkäynnin luona, ja ylhäältä näkee, ettei sen kehä ole ympyrä vaan kolmikymmenkulmio. Alun perin jokaisessa kulmassa riippui vaunu. Ratas paloi vuonna 1945, ja kun se avattiin uudelleen vuonna 1947, takaisin ripustettiin vain viisitoista vaunua, joten ne roikkuvat yhä joka toisessa kulmassa. Ratas pystytettiin vuonna 1897 keisari Frans Joosefin viisikymmenvuotisen hallituskauden kunniaksi, eikä sitä vielä ollut, kun Praterissa pidettiin maailmannäyttely vuonna 1873. Siellä isoisäsi näki koneen, joka painoi sanomalehteä.",
+   "lyhyt": "Wienin Riesenrad on lähes kuusikymmentäviisi metriä korkea, ja sen kehä kulkee alle kolmea kilometriä tunnissa, hitaammin kuin ihminen kävelee. Ratas tuli maailmankuuluksi vuonna 1949 elokuvasta Kolmas mies, jonka päähenkilöt kohtaavat rattaan vaunussa.",
+   "syventava": "Mitä maailmannäyttelyssä nähtiin?",
+   "isoisa": true,
+   "lahteet": [
+    {
+     "vaite": "Riesenrad sijaitsee Praterin huvipuiston sisäänkäynnillä.",
+     "url": "https://en.wikipedia.org/wiki/Wiener_Riesenrad"
+    },
+    {
+     "vaite": "Rattaan muoto on kolmikymmenkulmio, alun perin kolmekymmentä vaunua.",
+     "url": "https://de.wikipedia.org/wiki/Wiener_Riesenrad"
+    },
+    {
+     "vaite": "Ratas paloi huhtikuussa 1945 (pelin aineisto) ja avattiin uudelleen 24.5.1947 viidellätoista vaunulla.",
+     "url": "https://de.wikipedia.org/wiki/Wiener_Riesenrad"
+    },
+    {
+     "vaite": "Ratas rakennettiin 1897 Frans Joosefin 50-vuotisen hallitsijajuhlan kunniaksi.",
+     "url": "https://de.wikipedia.org/wiki/Wiener_Riesenrad"
+    },
+    {
+     "vaite": "Vuoden 1873 maailmannäyttelyn pääalue oli Praterissa.",
+     "url": "https://en.wikipedia.org/wiki/1873_Vienna_World%27s_Fair"
+    },
+    {
+     "vaite": "Isoisä: Wienin maailmannäyttelyssä kone painoi sanomalehteä.",
+     "url": "kaanon:js/packs/fokusvirta-wien.js:125"
+    },
+    {
+     "vaite": "Korkeus 64,75 metriä, nopeus enintään 2,7 km/h (lyhyt).",
+     "url": "https://de.wikipedia.org/wiki/Wiener_Riesenrad"
+    },
+    {
+     "vaite": "Kolmannen miehen Lime ja Martins kohtaavat rattaan vaunussa; elokuva vuodelta 1949 (lyhyt).",
+     "url": "https://en.wikipedia.org/wiki/The_Third_Man"
+    }
+   ]
+  },
+  {
+   "id": "Q209937",
+   "nimi": "Wienin valtionooppera",
+   "kuvaus": "Wienin oopperatalo",
+   "luokka": "rakennus",
+   "koko_m": 160,
+   "teksti": "Wienin valtionooppera oli ensimmäinen niistä loistorakennuksista, jotka nousivat Ringin varrelle, ja se avattiin vuonna 1869. Kesken rakennustöiden kadun pintaa nostettiin metrillä, jolloin talo näytti painuneen maahan, ja pilkkaajat vertasivat sitä uponneeseen aarrearkkuun. Kumpikaan arkkitehti, Eduard van der Nüll tai August Sicard von Sicardsburg, ei ehtinyt nähdä avajaisia. Pommitus sytytti oopperan palamaan vuonna 1945, ja vasta kymmenen vuotta myöhemmin talo avattiin uudelleen Beethovenin Fideliolla. Kerran vuodessa permannon tuolirivit poistetaan, ja tilalle rakennetaan näyttämön tasoinen tanssilattia oopperatanssiaisia varten.",
+   "lyhyt": "Wienin valtionooppera avattiin keväällä 1869 Mozartin Don Giovannilla. Talon editse kaartaa Ring, puretun kaupunginmuurin paikalle rakennettu kehäkatu, jota raitiovaunut kulkevat yhä, ja sen varrelle nousivat myöhemmin kaupungin muut suuret julkiset rakennukset.",
+   "syventava": "Mitä oopperatanssiaisissa tapahtuu?",
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Ooppera oli Ringin ensimmäinen suuri rakennus ja avattiin 25.5.1869 Don Giovannilla.",
+     "url": "https://en.wikipedia.org/wiki/Vienna_State_Opera"
+    },
+    {
+     "vaite": "Ringstrassen tasoa nostettiin metrillä rakennustöiden aikana; taloa verrattiin uponneeseen aarrearkkuun.",
+     "url": "https://en.wikipedia.org/wiki/Vienna_State_Opera"
+    },
+    {
+     "vaite": "Van der Nüll teki itsemurhan ja Sicardsburg kuoli kymmenen viikkoa myöhemmin; kumpikaan ei nähnyt valmistumista.",
+     "url": "https://de.wikipedia.org/wiki/Wiener_Staatsoper"
+    },
+    {
+     "vaite": "Pommitus sytytti oopperan 12.3.1945; uudelleenavaus 5.11.1955 Fideliolla.",
+     "url": "https://en.wikipedia.org/wiki/Vienna_State_Opera"
+    },
+    {
+     "vaite": "Tanssiaisia varten permannon tuolirivit poistetaan ja rakennetaan näyttämön tasoinen lattia; tanssiaiset kerran vuodessa.",
+     "url": "https://en.wikipedia.org/wiki/Vienna_Opera_Ball"
+    },
+    {
+     "vaite": "Ring rakennettiin puretun kaupunginmuurin paikalle, ja raitiovaunut kulkevat sitä (lyhyt; pelin aineisto).",
+     "url": "https://en.wikipedia.org/wiki/Vienna_State_Opera"
+    }
+   ]
+  },
+  {
+   "id": "Q686468",
+   "nimi": "Wienin raatihuone",
+   "kuvaus": "Uusgoottilainen kaupungintalo",
+   "luokka": "rakennus",
+   "koko_m": 150,
+   "korkeus_m": 103,
+   "teksti": "Wienin raatihuoneen keskitornin huipulla seisoo Rathausmann, kuparinen ritari lippu kädessään. Keisari Frans Joosef oli toivonut, ettei torni nousisi läheisen Votivkirchen yli, joten arkkitehti Friedrich von Schmidt teki tornista metrin matalamman. Sitten hän nosti huipulle ritarin ja ylitti rajan sittenkin. Ritari tehtiin kuparilevystä, johon oli sulatettu venäläisiä kolikoita, ja sen kopio seisoo raatihuoneen puistossa, jossa hahmon näkee läheltä. Rakennuksen edessä levittäytyy Rathausplatz, jolla on marras- ja joulukuussa kaupungin suuret joulumarkkinat.",
+   "lyhyt": "Wienin raatihuone rakennettiin 1870- ja 1880-luvuilla uusgoottilaiseen tyyliin, ja siinä työskentelee nykyään kaupungin pormestari. Talon edustan aukiolle jäädytetään tammi- ja helmikuuksi suuri luistelurata, ja kesäisin samalla aukiolla näytetään elokuvia ulkona.",
+   "syventava": "Kuka teki tornin ritarin?",
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Rathausmann on ritari, jolla on lippu; tehty 4 mm kuparilevystä, johon sulatettiin venäläisiä kuparikolikoita.",
+     "url": "https://de.wikipedia.org/wiki/Wiener_Rathausmann"
+    },
+    {
+     "vaite": "Keisari toivoi, ettei torni ylittäisi 99-metristä Votivkirchea; Schmidt teki 98-metrisen tornin ja ylitti rajan ritarihahmolla.",
+     "url": "https://de.wikipedia.org/wiki/Wiener_Rathausmann"
+    },
+    {
+     "vaite": "Kopio seisoo Rathausparkin eteläosassa.",
+     "url": "https://de.wikipedia.org/wiki/Wiener_Rathausmann"
+    },
+    {
+     "vaite": "Rathausplatzilla on vuodesta 1975 joulumarkkinat marras- ja joulukuussa; tammi–helmikuussa Wiener Eistraum; ulkoelokuvia (lyhyt).",
+     "url": "https://de.wikipedia.org/wiki/Rathausplatz_(Wien)"
+    },
+    {
+     "vaite": "Rakennettu 1872–1883 uusgoottilaiseen tyyliin; talossa pormestari (lyhyt).",
+     "url": "https://en.wikipedia.org/wiki/Vienna_City_Hall"
+    }
+   ]
+  },
+  {
+   "id": "Q702121",
+   "nimi": "Itävallan parlamenttitalo",
+   "kuvaus": "Parlamentin istuntotalo",
+   "luokka": "rakennus",
+   "koko_m": 150,
+   "teksti": "Itävallan parlamenttitalo muistuttaa pylväineen kreikkalaista temppeliä, ja niin oli tarkoituskin, sillä antiikin Kreikka yhdistettiin demokratian ihanteeseen. Talon suunnitteli 1870-luvulla Ringin varrelle tanskalaissyntyinen Theophil Hansen, joka oli työskennellyt aiemmin Ateenassa. Pääsisäänkäynnin edessä seisoo suihkulähteen huipulla viisauden jumalatar Pallas Athene kullattu kypärä päässään ja voitonjumalatar Nike oikeassa kädessään. Vuonna 2023 päättyneessä peruskorjauksessa kansallisneuvoston istuntosaliin tehtiin suuri lasikatto, jonka läpi saliin tulee päivänvaloa. Korjauksen ajan parlamentti kokoontui Hofburgin suuressa Redoutensaalissa.",
+   "lyhyt": "Itävallan parlamenttitalossa kokoontuvat kansallisneuvosto ja liittoneuvosto. Talo valmistui vuonna 1883 keisarikunnan valtakunnanneuvostolle, ja tasavallan parlamentti peri sen vuoden 1918 jälkeen. Istuntoja voi seurata lasitetulta yleisölehteriltä, ja opastetuilla kierroksilla näkee talon muitakin saleja.",
+   "syventava": "Miksi Athene seisoo parlamentin edessä?",
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Arkkitehti Theophil Hansen; kreikkalainen tyyli valittiin antiikin kreikkalaisten ja demokratian ihanteen vuoksi.",
+     "url": "https://en.wikipedia.org/wiki/Austrian_Parliament_Building"
+    },
+    {
+     "vaite": "Hansen oli tanskalainen ja suunnitteli myös Ateenan akatemian.",
+     "url": "https://de.wikipedia.org/wiki/Parlamentsgeb%C3%A4ude_(Wien)"
+    },
+    {
+     "vaite": "Rakennettu 1874–1883 Ringstrassen varrelle valtakunnanneuvostolle; nykyään kansallisneuvosto ja liittoneuvosto.",
+     "url": "https://en.wikipedia.org/wiki/Austrian_Parliament_Building"
+    },
+    {
+     "vaite": "Athene-suihkulähde: kullattu kypärä, oikeassa kädessä Nike; Athene viisauden jumalatar.",
+     "url": "https://en.wikipedia.org/wiki/Austrian_Parliament_Building"
+    },
+    {
+     "vaite": "Peruskorjaus 2017–2023, uudelleenavaus 12.1.2023; korjauksen ajan kamarit kokoontuivat Hofburgin Großer Redoutensaalissa.",
+     "url": "https://de.wikipedia.org/wiki/Parlamentsgeb%C3%A4ude_(Wien)"
+    },
+    {
+     "vaite": "Kansallisneuvoston salissa on korjauksen jälkeen valtava lasikatto; istuntoja voi seurata lasitetulta lehteriltä; opastettuja kierroksia (lyhyt).",
+     "url": "https://www.wien.info/de/sehen-erleben/sehenswuerdigkeiten-a-z/parlament-355038"
+    }
+   ]
+  },
+  {
+   "id": "Q408847",
+   "nimi": "Karlskirche",
+   "kuvaus": "Barokkikirkko Karlsplatzin laidalla",
+   "luokka": "kirkko",
+   "koko_m": 80,
+   "korkeus_m": 72,
+   "teksti": "Karlskirchen julkisivua reunustaa kaksi valtavaa pylvästä, joiden esikuvana on Rooman Trajanuksen pylväs. Niiden kierteiset reliefit kertovat pyhän Carlo Borromeon elämästä. Keisari Kaarle kuudes, Maria Teresian isä, lupasi vuonna 1713 Wieniä koetelleen ruton vuoksi rakentaa kirkon tälle pyhimykselle, jota kunnioitettiin ruttoon sairastuneiden parantajana. Ylhäältä kirkon edessä näkyy soikea allas, jossa on brittiläisen kuvanveistäjän Henry Mooren pronssiveistos. Veistos herätti aluksi vastustusta, mutta Moore itse kutsui sitä barokkiveistokseksi barokkikirkolle.",
+   "lyhyt": null,
+   "syventava": "Kuka oli Carlo Borromeo?",
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Kaarle VI lupasi kirkon 1713 ruton vuoksi ja omisti sen Carlo Borromeolle, ruttopotilaiden parantajana kunnioitetulle pyhimykselle.",
+     "url": "https://en.wikipedia.org/wiki/Karlskirche"
+    },
+    {
+     "vaite": "Lupaus annettiin 22.10.1713 ruttoepidemian aikana.",
+     "url": "https://de.wikipedia.org/wiki/Karlskirche_(Wien)"
+    },
+    {
+     "vaite": "Pylväiden esikuva Trajanuksen pylväs; kierrereliefit Carlo Borromeon elämästä.",
+     "url": "https://en.wikipedia.org/wiki/Karlskirche"
+    },
+    {
+     "vaite": "Kaarle VI oli Maria Teresian isä.",
+     "url": "https://en.wikipedia.org/wiki/Charles_VI,_Holy_Roman_Emperor"
+    },
+    {
+     "vaite": "Henry Mooren pronssiveistos Hill Arches asennettiin 1978 kirkon eteen ja herätti valituksia.",
+     "url": "https://en.wikipedia.org/wiki/Hill_Arches_1973"
+    },
+    {
+     "vaite": "Veistos on soikeassa altaassa; Moore kutsui sitä barokkiveistokseksi barokkikirkolle.",
+     "url": "https://blogs.fcdo.gov.uk/leighturner/2018/12/12/a-great-henry-moore-in-vienna-domes-hills-and-protective-parents"
+    }
+   ]
+  },
+  {
+   "id": "Q95569",
+   "nimi": "Wienin taidehistoriallinen museo",
+   "kuvaus": "Habsburgien taidekokoelmat",
+   "luokka": "rakennus",
+   "koko_m": 170,
+   "teksti": "Wienin taidehistoriallinen museo ja vastapäinen luonnontieteellinen museo ovat lähes samanlaiset palatsit, jotka katsovat toisiaan Maria Teresian aukion yli. Molemmat avattiin 1800-luvun lopulla, ja aukion keskellä on keisarinnan suuri muistomerkki. Kokoelmat ovat Habsburgien vuosisatojen aikana keräämiä, ja täällä on maailman suurin kokoelma Pieter Bruegel vanhemman maalauksia, muun muassa Baabelin torni ja Metsästäjät lumessa. Pääportaikon pylväiden ja kaarten väliin maalasi kuvia myös nuori Gustav Klimt yhdessä veljensä Ernstin kanssa.",
+   "lyhyt": null,
+   "syventava": "Mitä Baabelin tornissa kuvataan?",
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Museo ja luonnontieteellinen museo avattiin noin 1891 vastakkain Maria-Theresien-Platzin laidoilla; Habsburgien kokoelmat; Baabelin torni ja Metsästäjät lumessa.",
+     "url": "https://en.wikipedia.org/wiki/Kunsthistorisches_Museum"
+    },
+    {
+     "vaite": "Aukion keskellä on Maria Teresian muistomerkki.",
+     "url": "https://en.wikipedia.org/wiki/Maria-Theresien-Platz"
+    },
+    {
+     "vaite": "Maailman suurin Bruegel vanhemman maalauskokoelma, kaksitoista teosta.",
+     "url": "https://www.khm.at/en/visit/collections/picture-gallery/the-best-of-bruegel-only-in-vienna/"
+    },
+    {
+     "vaite": "Pääportaikossa on Gustav ja Ernst Klimtin maalauksia.",
+     "url": "https://en.wikipedia.org/wiki/Kunsthistorisches_Museum"
+    }
+   ]
+  },
+  {
+   "id": "Q308720",
+   "nimi": "Burgtheater",
+   "kuvaus": "Itävallan kansallisteatteri",
+   "luokka": "rakennus",
+   "koko_m": 140,
+   "teksti": "Burgtheater on Itävallan kansallisteatteri, ja ylhäältä erottuu Ringiä kohti kaartuva keskiosa, jonka molemmilla puolilla on portaikkosiivet. Nykyinen talo avattiin vuonna 1888, mutta salin akustiikkaa moitittiin, ja katsomo rakennettiin uudelleen vuonna 1897. Portaikkojen kattoihin Gustav Klimt maalasi muun muassa Lontoon Globe-teatterin, jonka näyttämöllä esitetään Romeoa ja Juliaa. Teatterin edeltäjä toimi Hofburgin kupeessa, ja siellä kantaesitettiin vuonna 1786 Mozartin Figaron häät. Yleisö vaati niin monta numeroa uudelleen, että keisari Joosef toinen kielsi toistamasta useamman laulajan numeroita.",
+   "lyhyt": null,
+   "syventava": "Miksi keisari kielsi Figaron näytelmän?",
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Burgtheater on Itävallan kansallisteatteri; uusi talo avattiin 14.10.1888.",
+     "url": "https://en.wikipedia.org/wiki/Burgtheater"
+    },
+    {
+     "vaite": "Kaareva keskiosa ja sivusiivet, joissa juhlaportaikot; katsomo rakennettiin uudelleen 1897 akustiikan vuoksi; Klimt maalasi portaikkojen kattoihin muun muassa Globe-teatterin ja Romeon ja Julian.",
+     "url": "https://de.wikipedia.org/wiki/Burgtheater"
+    },
+    {
+     "vaite": "Vanha Burgtheater oli Michaelerplatzilla Hofburgin vieressä; Figaron häät kantaesitettiin siellä 1786.",
+     "url": "https://en.wikipedia.org/wiki/Burgtheater"
+    },
+    {
+     "vaite": "Ensi-illassa toistettiin viisi numeroa; Joosef II määräsi, ettei useamman kuin yhden laulajan numeroita saa toistaa.",
+     "url": "https://en.wikipedia.org/wiki/The_Marriage_of_Figaro"
+    }
+   ]
+  },
+  {
+   "id": "Q254476",
+   "nimi": "Votivkirche",
+   "kuvaus": "Uusgoottilainen kiitoskirkko",
+   "luokka": "kirkko",
+   "koko_m": 100,
+   "korkeus_m": 99,
+   "teksti": "Votivkirchen pitsimäiset kaksoistornit kohoavat Ringin laidalla yliopiston vieressä, ja kirkon edessä levittäytyy Sigmund Freudin mukaan nimetty puisto. Kirkko on kiitoslahja: vuonna 1853 unkarilainen kansallismielinen János Libényi hyökkäsi nuoren keisari Frans Joosefin kimppuun, mutta isku kimposi keisarin jäykän kauluksen paksusta kultakirjailusta. Keisarin veli Maksimilian, myöhemmin Meksikon keisari, keräsi kirkkoa varten lahjoituksia koko valtakunnasta, ja suunnittelijaksi valittiin vasta kaksikymmentäkuusivuotias Heinrich von Ferstel. Pehmeä valkoinen hiekkakivi rapautuu ilmansaasteiden vuoksi, joten kirkkoa korjataan lähes jatkuvasti.",
+   "lyhyt": null,
+   "syventava": "Mitä Maksimilianille tapahtui Meksikossa?",
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Libényi hyökkäsi Frans Joosefin kimppuun 18.2.1853; isku kimposi kauluksen kultakirjailusta.",
+     "url": "https://en.wikipedia.org/wiki/Votivkirche,_Vienna"
+    },
+    {
+     "vaite": "Arkkiherttua Ferdinand Maximilian keräsi lahjoituksia koko valtakunnasta.",
+     "url": "https://en.wikipedia.org/wiki/Votivkirche,_Vienna"
+    },
+    {
+     "vaite": "Heinrich von Ferstel oli voittaessaan 26-vuotias.",
+     "url": "https://en.wikipedia.org/wiki/Votivkirche,_Vienna"
+    },
+    {
+     "vaite": "Pehmeä valkoinen hiekkakivi vaatii jatkuvaa korjausta ilmansaasteiden ja happosateiden vuoksi.",
+     "url": "https://en.wikipedia.org/wiki/Votivkirche,_Vienna"
+    },
+    {
+     "vaite": "Kirkko on Ringstrassen varrella yliopiston päärakennuksen ja Sigmund Freud -puiston vieressä.",
+     "url": "https://en.wikipedia.org/wiki/Votivkirche,_Vienna"
+    }
+   ]
+  },
+  {
+   "id": "Q493126",
+   "nimi": "Hundertwasserhaus",
+   "kuvaus": "Taiteilijan suunnittelema vuokratalo",
+   "luokka": "rakennus",
+   "koko_m": 60,
+   "teksti": "Hundertwasserhausin katoilla ja terasseilla kasvaa nurmea ja noin kaksisataaviisikymmentä puuta ja pensasta, ja joidenkin puiden oksat työntyvät ulos suoraan asuntojen ikkunoista. Taiteilija Friedensreich Hundertwasser ideoi talon, joka valmistui 1980-luvulla kaupungin vuokrataloksi. Julkisivu on kirjava ja epäsäännöllinen, ja sisällä lattiatkin aaltoilevat. Hundertwasser ei ottanut työstään palkkiota, koska piti palkkiona jo sitä, ettei paikalle noussut mitään rumaa. Kun tulet paikalle, muista, että talossa asutaan, eikä sisätiloihin pääse vapaasti.",
+   "lyhyt": null,
+   "syventava": "Kuka oli Friedensreich Hundertwasser?",
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Katolla multaa ja nurmea, puut kasvavat huoneista oksat ikkunoista ulos; lattiat aaltoilevat; noin 250 puuta ja pensasta.",
+     "url": "https://en.wikipedia.org/wiki/Hundertwasserhaus"
+    },
+    {
+     "vaite": "Rakennettu 1983–1985 Wienin kaupungin asuintaloksi; osa tiloista ei ole vapaasti kuljettavissa.",
+     "url": "https://de.wikipedia.org/wiki/Hundertwasserhaus_(Wien)"
+    },
+    {
+     "vaite": "Hundertwasser ei ottanut suunnittelusta palkkiota, jotta paikalle ei nousisi mitään rumaa.",
+     "url": "https://en.wikipedia.org/wiki/Hundertwasserhaus"
+    }
+   ]
+  }
+ ],
+ "avaus": {
+  "teksti": "Tervetuloa Wieniin. Ylhäältä näkyy, miten vanha kaupunki on puristunut leveän kehäkadun, Ringin, sisään, ja keskeltä nousee yksi korkea, kapea torni. Kierros alkaa juuri sieltä, Stephansdomista, jonka etelätornia wieniläiset kutsuvat hellästi Stefliksi."
+ }
+}
