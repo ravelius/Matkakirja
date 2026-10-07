@@ -292,3 +292,4 @@ Brotli (haara linnanrakentaja-zstd, worktree olemassa), akustiikka #3979 (Steam 
   ulko-osa 8 m, Sfinksille helma, SISA 4 m), Sfinksi korkeus 19,0 EGM; Sfinksin väri liian tumma → sfinksi_glb.py normalisoi
   värin sRGB 195,170,128:aan → leivonta giza-v2/sfinksi-uusi (kun valmis: korvaa glb/sfinksi-lod*.glb + sfinksi-tekstuurit,
   tarkista mediaani ~195,170,128, ilmoita LS1:lle, joka ottaa Gizan pelikuvat Päätoimittajalle).
+- 7.10. 13.0x: GIZA v2b VALMIS ja LS1:llä (Sfinksin väri + aitauksen hiekka, helmat 150 m + sfinksi-helma). Odottaa LS1:n pelikuvia Päätoimittajalle. Ei käynnissä olevia ajoja.
