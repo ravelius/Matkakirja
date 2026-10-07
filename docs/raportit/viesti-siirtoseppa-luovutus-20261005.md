@@ -8,7 +8,7 @@ kappeli). Lue tämä osio ja alin TILA-loki (päivän loppu), sitten CLAUDE.md j
   <haara>:refs/heads/peili/proto/<haara>`). Luovutus: tämä tiedosto haarassa siirtoseppa-luovutus (Matkakirja-siirtoseppa).
 - Haarat: **siirtoseppa/historia-h0** (kolmas persoona, junien pohja, kärki c652ba83), **siirtoseppa/historia-juna164 @ 6d2b1149**
   (kuittaus pyydetty PT:ltä; juna163 + V7 + tietokerros + v44i-merkit + nousu laiturille; pala v44j 42d49bd4),
-  **siirtoseppa/historia-fp @ d0f26d0b** (ENSIMMÄINEN PERSOONA + kädet-v1 + pelattavuusmallin vaihe 1, ei vielä junaan; pala v44l 45be7435).
+  **siirtoseppa/historia-fp @ 14525cc6** (ENSIMMÄINEN PERSOONA + kädet-v1 + pelattavuusmallin vaiheet 1–2 osin, ei vielä junaan; pala v44l 45be7435).
 - TESTAUS (omistaja 7.10. 15.5x/16.0x): ennen junaa VAIN Linssit-testit/kaanna.sh + Linssit-testit/unity-tarkistus.sh; ei omia
   käännöksiä, simua, stillejä eikä savuja. Kuittaus PT:ltä yhdellä rivillä (mitä, testit, SHA) → Natiiviseppä junaan.
 - OMISTAJA 7.10. 18.5x–18.7x: KAIKKI PELIT ENSIMMÄISESSÄ PERSOONASSA (Thief-malli; ei vartaloa/peilikuvaa; kädet saavat näkyä
@@ -544,3 +544,8 @@ Edellinen luovutus on `viesti-siirtoseppa-luovutus-20261002.md` (5.10. osiot 02.
   SeikkailuVartijat.Vaara; Mac-napsautus; NUI:lle kosketuksen kutsu ilmoitettu), valitsin ±30° (SeikkailuEsineet.ValitsinAste), portaiden
   pehmennys 0,1 s, ohjaimen B vaihtaa. 841/841, unity-tarkistus 0. JÄLJELLÄ vaiheesta 1: tarkistus kohdan 2.2 pintojen äänekkyys
   (vaihe 2:n Vartija-lisäysten kanssa), sitten vaihe 2 (kohta 3).
+- 19.42: VAIHE 2 (kohta 3) ydin + kytkentä 14525cc6 (historia-fp): VartijaProfiili (partio-merkin "profiili"; LR lisää kentät), liikekerroin,
+  Etsii/Halytys (uudet VartijanTila-arvot), valppaus 60 s, varoitussääntö (Vartija.Varoitettu; testi 1 000 ajoa), sydän tempo → Silmukka
+  savel, huuto + Kutsu (20 m, ≤ 2), tyrmästä valppaana. NUI: OtaKatse luetaan, PuluVihje()-koukku (VihjePyydetty, vaihe 4 täyttää).
+  844/844, unity-tarkistus 0. JÄLJELLÄ: pintojen äänekkyys (2.2) + seinäsääntö, nähty piiloon meno (2.5), oma kynttilä valoisuus 0,9/0,45
+  (2.3), hahmon lyhty valaisee, irtipääsy (3.4), torkkuva vartija -profiili; sitten vaiheet 3–4.
