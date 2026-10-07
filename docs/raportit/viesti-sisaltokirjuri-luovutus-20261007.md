@@ -27,6 +27,10 @@ Työtapa (kopioi Praha/Wien): työkalut `esittely-tyo/kuvat/tyokalut/` (haarassa
 - Päätoimittajan linjaukset: Luxorin obeliski säilyy, Pompidou (ei FoP) pois, pikku vintiö säilyy; peli käännetään englanniksi (sinä-muoto, ei he/she: Fogg/you/they).
 - Viestit Päätoimittajalle send_messagella session id:llä `local_5df52e10-10e4-4b72-9554-0049db300dfe`.
 
-## Jonossa Köpiksen jälkeen (Päätoimittaja 7.10. ~19.35, huomiselle 8.10.)
-Pelattavuusmalli (mainissa: docs/raportit/pelattavuusmalli-olavinlinna.md kohdat 10 ja 12): CC0/PD-lista uusille Olavinlinnan tehosteille LAHTEET-muodossa. Ensin Freesound CC0 ja Commons; EI generointia. Tehosteet: askeleet oljella/soralla/matalassa vedessä (4–6 varianttia); viitan kahina, hanska esineeseen, köysi käsissä, uinti ja sukellus ilman hengitystä; vartijan varusteet, kauha, luuta; nauris, savipurkin rikkoutuminen, patapinon kaatuminen, tiili kalliolle, hopea arkussa, leimahdus, tarjottimen kolina; elokuun yön linnut, kaukainen koira. Ei aloitettu.
-- Rooman 6 Codex-kuvaa ja korjaustarpeet ovat tulleet postilaatikkoon (686267a7d): käsittele (tarkista, luettelon v3 `havainnekuva: true`).
+## Valmiit (päivitys klo ~20.50)
+- Köpis v1 54 riviä (ämpärissä), Rooma v4 65 (5 havainnekuvaa), Lontoo v1 56; Codex-tilaukset: Lontoo 10 (a46d3d59a), Rooman uusinta Colosseum+Appia (b508c84b3), Köpis 3 (6a2022a19). Tulos-PR #4166 (työkaluja → Julkaisijan junaan). Pelikoodari ja Linssiseppä tietävät polut.
+- Olavinlinnan FP-tehosteet: CC0/PD-ehdokaslista LAHTEET-muodossa `docs/raportit/olavinlinna-fp-aanet-lahteet-20261007.md`; raaka-äänet ämpärissä `seikkailu/olavinlinna/aanet-fp-raaka-v1/raaka/` (89 tiedostoa, valitut + varaehdokkaat, ei kuunneltu). Freesound-ehdokkaat (97) Pelikoodarilta: `proto-3d/_tyo/freesound-olavinlinna/ehdokkaat.md`.
+- **Sonnissin GDC 2026 -paketti (~7,5 Gt, T7:lle):** Päätoimittaja välitti omistajan luvan, mutta lataus vaatii käyttäjän oman kuittauksen minulle chatissa — EI ladattu. Jos kuitattu: T7:lle (ei sisäiselle), poimi sopivat, kirjaa lähde + lisenssi LAHTEET-muotoon.
+- Orpo ämpäriobjektit poistettavaksi (Julkaisija/omistaja): pariisi-v1/kuvat/e96fe3107395eede.jpg + vanhat pariisi-v1/rooma-v1/rooma-v2-jsonit; rooma-v1/kuvat/1727a3f352629b36.jpg ja 2bdc72d07cdb8916.jpg.
+- Kesken: Colosseum/Appia-uusinta (Codex), sitten Rooma v5; Lontoo/Köpis/Rooma Codex-kuvat → uudet luetteloversiot (`havainnekuva: true`) kun tulevat; repliikkien sukupuolitarkistus (31 + kappeli, englanninnettavuus) ei aloitettu.
+- Worktree `wt/sisaltokirjuri-praha-wien-kuvat` (haara sisaltokirjuri-esittely-kuvat-tulokset, PR #4166) ja `wt/sisaltokirjuri-posti-praha-wien`: poista mergen jälkeen `tools/uusi-worktree.sh --poista`.
