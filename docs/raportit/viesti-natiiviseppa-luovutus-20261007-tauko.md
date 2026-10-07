@@ -12,7 +12,8 @@ Juna-SHA:t vain PÄÄTOIMITTAJAN kuittauksella; käännökset Julkaisijan NYT-vi
 
 **KORJAUSJUNA TÄNÄ ILTANA (Päätoimittaja 22.1x)** — VIE-VALMISTELU TEHTY 22.56: BUILD 163 = proto master 062bb439af8764e00edcafb9f6acac78e085c215
 (runko d78cd0e00 = 79462cbae + LS1 d3d243595 avaustauko 2,3 s; käännös c0c4d9de5, app lokit/natiiviseppa-app-163-d78cd0e0;
-juna/b13 → d78cd0e0; aiemmat BUILD 163 -mergit ecb11b78 ja 9457e8da jäivät historiaan, ei julkaistu). tf163-lupa VASTA Päätoimittajan kuittauksella (LS1:n reittitarkistus), sitten Mac TF -odottaja
+juna/b13 → d78cd0e0; aiemmat BUILD 163 -mergit ecb11b78 ja 9457e8da jäivät historiaan, ei julkaistu). PÄÄTOIMITTAJA KIRJOITTAA
+tf163-luvan itse LS1:n lukijamittauksen jälkeen. Mac TF 163 -odottaja käynnissä (mac-tf-odottaja.sh 062bb439 163 2026-10-07T19:57:16Z, irrotettu, 2 h). tf163-lupa VASTA Päätoimittajan kuittauksella (LS1:n reittitarkistus), sitten Mac TF -odottaja
 (ALKU = kuittaushetki UTC). Alla historia: haara natiiviseppa/korjausjuna-163 (wt/proto-natiiviseppa-j144) BUILD 162 30fbc374:n
 päällä: Siirtoseppä 0bfc86e0 + LS1 71cf7b97b (KUITATTU) + LS1 4e35edbde (avausnäkymä) + LS2 2739ded66 (kaupunkipallot maailmanäkymässä) = runko **2739ded66** (Kartta 448, Peli 419,
 Linssit 862, unity 0), KÄÄNNETTY 22.37 (dd94a2766, app lokit/natiiviseppa-app-163-2739ded6; aiemmat 5a99dda77/a69df1186 ja EI julkaista aiempaa 40faaf311/bc66ba1e2,
@@ -45,7 +46,7 @@ log -1 master`, `tail -3 proto-3d/lokit/kaannospalvelu/juna.log`, `tail -5 proto
 5. Mac TF 162 (lupa annettu): iOS-latauksen jälkeen `perl -e 'use POSIX; exit if fork; setsid; exec "zsh", @ARGV'
    proto-3d/lokit/natiiviseppa-skriptit/mac-tf.sh <BUILD162-sha8> 162`, tulos mac-tf-vahti.txt + gh run list proto3d-mac-testflight.
 6. JUNA 164 (+ Päätoimittaja 23.0x: LS1 kortti-teksti 7c4122bc9 (⊇ d3d243595; tekijärivi pois, KuvaLahteet) + NUI opas-lahteet
-   8b4659e9 (⊇ 48878725, NUI:n mukaan; Päätoimittajalta kysytty kumpi); ent. "163"; huomenna 8.10.; LS1-osuus jo korjausjunassa 163 (71cf7b97b ⊇ e5c4b145e, 578d1186c), KUITATTU Päätoimittaja 20.0x–21.5x; POHJA BUILD 162 30fbc374; LS1 lappu-katolle 6ad4244fc POIS):
+   8b4659e9 (⊇ 48878725; Päätoimittaja vahvisti 8b4659e9); ent. "163"; huomenna 8.10.; LS1-osuus jo korjausjunassa 163 (71cf7b97b ⊇ e5c4b145e, 578d1186c), KUITATTU Päätoimittaja 20.0x–21.5x; POHJA BUILD 162 30fbc374; LS1 lappu-katolle 6ad4244fc POIS):
    LISÄKSI: LS1 kortti-teksti e5c4b145e (⊇ ee5f54a81 ⊇ e3d40e096 + cbd2b6abc; liikkeen palautus; uusi KorttiAsettelu.cs + .meta) ja Natiiviseppä kaannos-jobs 7d66739d.
    Siirtoseppä historia-valot-juna b91278bf (⊇ 463fefc7 ⊇ 2d1c133e ⊇ e4dab248 ⊇ 787f0092 ⊇ 6d23aed1; kuoren leikkaukset 16 paikkaan; kehittäjävalikon Volumetriset valot PÄÄLLÄ/POIS + Candle VFX + Volumetric Lights 2 laatutasokytkimen takana, Asset Store -paketit ENSIMMÄISTÄ KERTAA junassa; jos käännös kaatuu pakettien takia → varahaara historia-fp-juna-2 8b071c07 (⊇ 6f9ad1e5 ⊇ 9cddc246, korvaa 6d23aed1) viivyttämättä + yksi rivi Päätoimittajalle) +
    NUI-kärki seikkailu-kuvakkeet 8aa55e02 (⊇ jatka 6af3eb9f ⊇ tekstivahti ⊇ verbi ⊇ fp eb115fc3 ⊇ tietokerros cbc92a25) + LS1 äänetön
