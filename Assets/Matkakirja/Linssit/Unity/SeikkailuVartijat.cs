@@ -76,7 +76,7 @@ namespace Matkakirja.Natiivi
         DioraamaHahmot3D hahmot;
         Action<string> kirjaa;
         Vector3 tarkistus; SeikkailuPelaaja tarkistusPelaaja;
-        string pelaajanOsa; float osaTarkistus;
+        string pelaajanOsa; float osaTarkistus; string kiinniOsa; int kiinniOsassa;
         /// <summary>Viimeisimmän tarkistuspisteen osa ja tapahtuma (V6 tallennus kuuntelee).</summary>
         public static string TarkistusOsa;
         public static event Action<string, Vector3> Tarkistuspiste;
@@ -180,6 +180,7 @@ namespace Matkakirja.Natiivi
                         Tarkistuspiste?.Invoke(osaNyt, pp1);
                     }
                     pelaajanOsa = osaNyt;
+                    if (kiinniOsa != null && osaNyt != kiinniOsa) { kiinniOsa = null; kiinniOsassa = 0; foreach (var x in vartijat) x.Aivot.Helpotettu = false; }   // helpotus päättyy huoneen vaihtuessa
                 }
             }
             var aanet = new List<Aanilahde>(jono); jono.Clear();
@@ -365,7 +366,16 @@ namespace Matkakirja.Natiivi
         {
             var p = SeikkailuPelaaja.Aktiivinen;
             kirjaa?.Invoke($"seikkailu: KIINNI ({v.Osa}), pelaaja tarkistuspisteeseen {tarkistus}");
-            if (p != null) Kiinnijaatiin?.Invoke(Askelaani.Osa(SeikkailuKavely.Data, p.transform.position.x, p.transform.position.y, -p.transform.position.z));
+            if (p != null)
+            {
+                string osa = Askelaani.Osa(SeikkailuKavely.Data, p.transform.position.x, p.transform.position.y, -p.transform.position.z);
+                Kiinnijaatiin?.Invoke(osa);
+                // Anteeksianto (pelattavuusmalli 4.2): 2. kiinnijäänti samassa huoneessa → näkö −15 % ja epäilyraja 0,4; 3. → Pulun taso 2 heti.
+                kiinniOsassa = osa == kiinniOsa ? kiinniOsassa + 1 : 1; kiinniOsa = osa;
+                if (kiinniOsassa >= 2) foreach (var x in vartijat) x.Aivot.Helpotettu = true;
+                if (kiinniOsassa >= 3) SeikkailuVihjeet.Aktiivinen?.Pakota(2, "3. kiinnijäänti");
+                kirjaa?.Invoke($"seikkailu: kiinnijäänti {kiinniOsassa}. kerran osassa {osa}{(kiinniOsassa >= 2 ? " (helpotus)" : "")}");
+            }
             if (p != null) p.Siirra(tarkistus);
             armoAsti = Time.unscaledTime + ArmoS;   // E1-ajo 7.10.: tarkistuspiste vartijan näkyvissä → kiinni uudelleen heti
             foreach (var x in vartijat) { var vp = x.Agentti.transform.position; x.Aivot.Nollaa(vp.x, vp.z, valpas: true); x.EdellinenTila = VartijanTila.Partio; }   // tyrmästä palatessa valppaus 60 s

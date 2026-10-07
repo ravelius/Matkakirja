@@ -57,6 +57,9 @@ namespace Matkakirja.Natiivi
             if (ydin.Paivita(Time.deltaTime, Vaara(p), keskustelu || p.Eleessa) == 2) Nayta(p, 2, "jumi");
         }
 
+        /// <summary>Vihje heti (anteeksianto: 3. kiinnijäänti samassa huoneessa → taso 2 tarkistuspisteessä).</summary>
+        public void Pakota(int taso, string syy) { var p = SeikkailuPelaaja.Aktiivinen; if (p != null) Nayta(p, taso, syy); }
+
         void Nayta(SeikkailuPelaaja p, int taso, string syy)
         {
             var kohde = Kohde(p);
