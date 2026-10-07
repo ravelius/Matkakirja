@@ -13,6 +13,13 @@ kohdeotsikko metrolinjaan (OpasMetrolinja.Korostus/KorostusSelite, KierrosTaulu 
 pienemmiksi (iPad ≤ 1,15 × 56, puhelin 40) ja tummemmiksi (himmennys.kevyt). Ei laitetarkistusta; jos omistaja antaa TF:stä
 palautetta koosta, säädä KorostusKoko / KuvaKoko.
 
+## 7.10. klo 22.1x: KUVIEN TEKIJÄT ☰ LÄHTEET -NÄKYMÄÄN (omistaja 22.5x, Päätoimittaja hyväksyi; juna 164)
+
+natiivi-ui/opas-lahteet 48878725 (a27f2e2c:n päällä, worktree wt/proto-natiivi-ui-otsikko): oppaan ☰ "Lähteet ›" -alanäkymä
+(Kartta- ja maastoaineistot + kuvien tekijät kohteittain). ODOTTAA LS1:n OpasSovitin.KuvaLahteet-luetteloa (pyydetty 22.1x:
+IReadOnlyList<(string Kohde, string Tekija, string Lisenssi, bool Havainnekuva)>); luetaan heijastuksella. Kun LS1 vastaa:
+tarkista nimi/muoto, testit, 1 rivin kuittaus Päätoimittajalta → SHA Natiivisepälle LS1:n kortin alarivin poiston parina.
+
 ## HUOMINEN 8.10.: PELATTAVUUSMALLI (Päätoimittaja 7.10. 19.1x, main #4163 docs/raportit/pelattavuusmalli-olavinlinna.md)
 
 Lue kohdat 6 (ohjaus laitteittain) ja 12 (Natiivi-UI-sarake). Tavoite illan junaan: Olavinlinnan 1. persoonan pala
