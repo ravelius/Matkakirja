@@ -439,3 +439,7 @@ Edellinen luovutus on `viesti-siirtoseppa-luovutus-20261002.md` (5.10. osiot 02.
   vartijan mittari hitaammin + takaa-ajo + kiinni 1,2 m, armonaika 4 s). Osoitin vanha toisto OK (lokit/siirtoseppa-osoitin-vanha).
   Jono: osoitin 49888505 (→ vuoro-osoitin.sh, app lokit/siirtoseppa-osoitin-app) ja E1-uusinta 08329b85+NUI (→ APP=…/siirtoseppa-historia6-app
   vuoro-e1.sh). LR:lle: tilan vene kiinnityspaikalla, piilo:tynnyrien-takana irti seinästä.
+- 16.01: OMISTAJA 15.5x: testaus kevyemmin (vain automaattiset testit + käännös, kuittaus 1 rivi → Natiiviseppä; simu vain epäselvään vikaan).
+  Osoitinvarmistus 49888505 toistot OK (lokit/siirtoseppa-osoitin-toisto/) → merge-pyyntö Natiivisepälle junaan 161.
+  E1-uusinta f5882d8c (35ea7ca1): repliikit kuuluvat (+13 dB), piilo toimii, askeleet URL-vika → 186e35e6, kynnyksellä putoaminen → LR.
+  Junaehdokas 162: siirtoseppa/historia-juna162 @ a5cd9d81 (historia-h0 186e35e6 + historia-juna161), kuittaus pyydetty Päätoimittajalta.
