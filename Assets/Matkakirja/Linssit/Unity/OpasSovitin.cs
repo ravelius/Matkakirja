@@ -329,6 +329,8 @@ namespace Matkakirja.Natiivi
             if (kaupunkiOdottaa) { silmukka.Paivita(Time.unscaledDeltaTime, MaaKorkeus, () => false); return; }
             kori.Kayta(Kaupunkitila && nakymaAuki, kaupunki.Kamera);   // kuumailmapallon korinäkymä (kokeilu, Päätoimittaja 7.10. 09.1x)
             IlmoitaKierros();
+            if (esitysAlkaa && Kaupunkitila && !silmukka.Siirtymassa && kohteet != null && kohteet.Count > 0 && kohteetKaupunki == Aloituskaupunki)
+            { esitysAlkaa = false; o.Kirjaa("opas: esitys alkaa (kaupunkikierros)"); Kaupunkikierros(); }
             if (jatkoVastauksenJalkeen && silmukka.KierrosKeskeytetty && silmukka.Vaihe == OpasVaihe.Odottaa && silmukka.VaiheAika > JatkoViiveS && !puhuu)
             { jatkoVastauksenJalkeen = false; o.Kirjaa("opas: kierros jatkuu vastauksen jälkeen"); JatkaKierrosta(); }
             OpasSilmukka.PalloLento = kori.Nakyy;
@@ -436,11 +438,18 @@ namespace Matkakirja.Natiivi
         {
             get
             {
-                var k = Viimeisin?.kysymykset;
-                if (k == null || k.Length <= 5) return k ?? Array.Empty<string>();
-                var r = new string[5]; Array.Copy(k, r, 5); return r;
+                var k = Viimeisin?.kysymykset ?? Array.Empty<string>();
+                var r = new List<string>(6);
+                // Yksi esitys (omistaja 10.3x): kierroksella ensimmäinen vaihtoehto "Kerro lisää" (pidempi pysähdysteksti).
+                if (Kaupunkitila && Auki && (Viimeisin.silmukka.KierrosKaynnissa || Viimeisin.silmukka.KierrosKeskeytetty)) r.Add(KerroLisaaTeksti);
+                for (int i = 0; i < k.Length && i < 5; i++) r.Add(k[i]);
+                return r;
             }
         }
+        public const string KerroLisaaTeksti = "Kerro lisää";
+        /// <summary>Kaupunkitilan avaus aloittaa esityksen (kaupunkikierros) heti, kun kohdelista on haettu ja siirtymä ohi.</summary>
+        static bool esitysAlkaa;
+        bool kerroLisaaOdottaa;
         /// <summary>Kaupunkitilassa kysymyksen vastauksen jälkeen kierros jatkuu tämän tauon jälkeen (s).</summary>
         public const float JatkoViiveS = 2f;
         bool jatkoVastauksenJalkeen;
@@ -620,6 +629,13 @@ namespace Matkakirja.Natiivi
             if (!Auki || string.IsNullOrWhiteSpace(teksti)) return false;
             var v = Viimeisin;
             if (v.tauolla) Tauko(false);
+            if (string.Equals(teksti.Trim(), KerroLisaaTeksti, StringComparison.OrdinalIgnoreCase) && Kaupunkitila)
+            {
+                v.o.Kirjaa("opas: kerro lisää (esitys)");
+                v.silmukka.KerroLisaa();
+                v.kerroLisaaOdottaa = true;
+                return true;
+            }
             v.o.Kirjaa("opas: kysy \"" + teksti.Trim() + "\"");
             // Kierroksella kysymys keskeyttää kierroksen heti (omistaja TF 149): kamera paikalleen, kertoja vaikenee, JATKA-nappi vastauksen jälkeen.
             if (v.silmukka.KeskeytaKierros()) v.o.Kirjaa("opas: kierros keskeytetty kysymykseen");
@@ -854,6 +870,7 @@ namespace Matkakirja.Natiivi
             var rek = LinssiOhjain.Rekisteri;
             if (rek == null) return false;
             AsetaKaupunkitila(k);
+            esitysAlkaa = true;
             Aloituskaupunki = k.Nimi; AloitusKeskusta = (k.Lat, k.Lon);
             if (Auki) return VaihdaKaupunki(k.Nimi, k.Lat, k.Lon);
             rek.Valitse(OpasTiedot.Id);
@@ -1451,7 +1468,8 @@ namespace Matkakirja.Natiivi
             foreach (var id in silmukka.Nahdyt) { if (!eka) sb.Append(','); sb.Append('"').Append(Escape(id)).Append('"'); eka = false; }
             sb.Append("],\"kieli\":\"fi\"");
             // Kaupunkikierros: lyhyt kerronta ja järjestysnumero (omistaja 11.57).
-            if (kt.numero > 0) sb.Append(",\"kierros\":{\"numero\":").Append(kt.numero).Append(",\"maara\":").Append(kt.maara).Append("},\"lyhyt\":true");
+            if (silmukka.PitkaPyynto) { silmukka.PitkaPyynto = false; o.Kirjaa("opas: kerro lisää → pitkä teksti"); }
+            else if (kt.numero > 0) sb.Append(",\"kierros\":{\"numero\":").Append(kt.numero).Append(",\"maara\":").Append(kt.maara).Append("},\"lyhyt\":true");
             // Näytettävät tekijätiedot (Pelikoodari #4028, ODbL): worker palauttaa OSM-pohjaista dataa vain, kun "osm" on mukana.
             sb.Append(",\"krediitit\":[\"osm\"]");
             // "Kerro lisää" ei toista edellistä kappaletta (Pelikoodari #4011).
@@ -1750,6 +1768,7 @@ namespace Matkakirja.Natiivi
         /// <summary>Kappale alkaa noin 3 s ennen saapumista (Päätoimittaja 5.10. 19.4x: hiljaisuus pysähdysten välissä enintään ~3 s).</summary>
         void AlkaaPuhua(OpasKohde k)
         {
+            if (kerroLisaaOdottaa) { kerroLisaaOdottaa = false; jatkoVastauksenJalkeen = true; }
             if (k == null || puhuttu == k) return;
             puhuttu = k;
             if (k.Id != null && k.Id.StartsWith("kysy-")) kysyOdotus.Alkoi();   // kysymyksen vastaus alkoi: odotusportaat seis

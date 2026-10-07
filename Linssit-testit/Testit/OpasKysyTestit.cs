@@ -152,6 +152,19 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(s2.Nykyinen == null, "kohteeseen siirryttäessä sama");
         }
 
+        // Omistaja 7.10. 10.3x "yksi esitys + Kerro lisää": kierroksella Kerro lisää keskeyttää, pyytää pitkän tekstin, JATKA seuraavasta.
+        [Testi] static void KerroLisaaKierroksella()
+        {
+            var (s, p, _) = Pysahdyksella();
+            s.AloitaKierros(new List<(string, double, double)> { ("K1", 55.6761, 12.5683), ("K2", 55.6800, 12.5800), ("K3", 55.6850, 12.5900) });
+            Oleta.Tosi(s.KierrosKaynnissa);
+            int n = p.Count;
+            Oleta.Tosi(s.KerroLisaa());
+            Oleta.Tosi(s.KierrosKeskeytetty && !s.KierrosKaynnissa && s.PitkaPyynto, "keskeytetty ja pitkä pyyntö");
+            Oleta.Tosi(p.Count > n && p[^1].t.Contains("kerro lisää"), "toive kerro lisää");
+            Oleta.Tosi(s.JatkaKierrosta() && s.KierrosKaynnissa, "jatko");
+        }
+
         [Testi] static void KaupunginSisallaLennetaan()
         {
             var (s, p, puhe) = Pysahdyksella();

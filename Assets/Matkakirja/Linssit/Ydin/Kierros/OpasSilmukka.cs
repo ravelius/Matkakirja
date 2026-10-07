@@ -532,6 +532,25 @@ namespace Matkakirja.Linssit.Kierros
             return true;
         }
 
+        /// <summary>
+        /// "KERRO LISÄÄ" kierroksella (omistaja 7.10. 10.3x, yksi esitys): kierros keskeytyy kuten kysymyksessä, nykyisestä kohteesta
+        /// pyydetään pidempi teksti (PitkaPyynto: ei kierroksen lyhyt-kenttää), ja JATKA jatkaa seuraavasta (lyhyttä ei toisteta).
+        /// Kierroksen ulkopuolella tavallinen toive. true = otettu.
+        /// </summary>
+        public bool KerroLisaa(string teksti = "kerro lisää")
+        {
+            if (Vaihe == OpasVaihe.Valmis) return false;
+            if (!KierrosKaynnissa && !KierrosKeskeytetty) { Toive(teksti); return true; }
+            if (KierrosKaynnissa) KeskeytaKierros();
+            var kt = keskeytysTieto;
+            Toive(teksti);
+            KierrosKeskeytetty = true; keskeytysTieto = kt; jatkoKohde = null;
+            PitkaPyynto = true;
+            return true;
+        }
+        /// <summary>Seuraava pyyntö ilman kierroksen lyhyt-merkintää (sovitin kuluttaa).</summary>
+        public bool PitkaPyynto;
+
         /// <summary>JATKA KIERROSTA: kesken jäänyt kohde alusta, muuten seuraava jonosta. true = jatkui.</summary>
         public bool JatkaKierrosta()
         {
