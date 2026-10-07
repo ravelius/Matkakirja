@@ -83,6 +83,7 @@ namespace Matkakirja.Natiivi
         {
             paalla &= Paalla && kamera != null;
             if (paalla && (perus != kamera || overlay == null)) Luo(kamera);
+            if (paalla && overlay != null) VarmistaKohde();   // ruudun koko (kierto) ennen piirtoa, ei piirron sisällä
             if (paalla == kaytossa) return;
             kaytossa = paalla;
             if (juuri != null) juuri.gameObject.SetActive(paalla);
@@ -435,7 +436,6 @@ namespace Matkakirja.Natiivi
         {
             // Korin kamera piirtää ensin (depth perus − 1): asento ja liike lasketaan sen piirron alussa.
             if (c != overlay || perus == null || juuri == null) return;
-            VarmistaKohde();
             SovitaKooste();
             overlay.aspect = perus.aspect;
             overlay.fieldOfView = perus.fieldOfView;
