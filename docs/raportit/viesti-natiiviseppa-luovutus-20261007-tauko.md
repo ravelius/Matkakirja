@@ -11,9 +11,12 @@ Juna-SHA:t vain PÄÄTOIMITTAJAN kuittauksella; käännökset Julkaisijan NYT-vi
 (omistaja 15.5x), EI roolien omia käännöksiä (16.0x), enintään 2 junaa/pv ellei omistaja pyydä.
 
 **KORJAUSJUNA TÄNÄ ILTANA (Päätoimittaja 22.1x)**: haara natiiviseppa/korjausjuna-163 (wt/proto-natiiviseppa-j144) BUILD 162 30fbc374:n
-päällä: Siirtoseppä 0bfc86e0 + LS1 71cf7b97b (KUITATTU) + LS1 4e35edbde (avausnäkymä) = runko **5a99dda77** (Linssit 862, unity 0), KÄÄNNETTY 22.32 (a69df1186, app lokit/natiiviseppa-app-163-5a99dda7; EI julkaista aiempaa 40faaf311/bc66ba1e2,
+päällä: Siirtoseppä 0bfc86e0 + LS1 71cf7b97b (KUITATTU) + LS1 4e35edbde (avausnäkymä) + LS2 2739ded66 (kaupunkipallot maailmanäkymässä) = runko **2739ded66** (Kartta 448, Peli 419,
+Linssit 862, unity 0), KÄÄNNETTY 22.37 (dd94a2766, app lokit/natiiviseppa-app-163-2739ded6; aiemmat 5a99dda77/a69df1186 ja EI julkaista aiempaa 40faaf311/bc66ba1e2,
 app lokit/natiiviseppa-app-163-40faaf31; vaiheajat luo 23 s, vienti 44 s, xcodebuild 95 s -jobs 12). LS1 ottaa kuvat → Päätoimittajan
-kuittaus → VIE (juna/b13 f524d89b → 5a99dda7, BUILD 163 -merge 30fbc374:n päälle) → tf163-lupa? (kysytty Julkaisijalta) → Mac TF 163.
+kuittaus → VIE (juna/b13 f524d89b → 2739ded6, BUILD 163 -merge 30fbc374:n päälle) → BUILD 163 -SHA tiedostoon /Users/Shared/Claude/julkaisija-tyokalut/tf163-lupa (Julkaisija vahvisti) → Mac TF:
+`perl … lokit/natiiviseppa-skriptit/mac-tf-odottaja.sh <sha8> 163 <VIE-hetki UTC ISO>` (irrotettu). Muutosloki #4175 mergetty.
+Ulkoinen ryhmä EI saa 163:a ennen omistajan kuittausta (Julkaisija hoitaa).
 HUOM numerointi: korjausjuna = BUILD 163; aiemmin "juna 163":ksi suunniteltu kokoonpano = JUNA 164 huomenna (Päätoimittaja).
 
 **JUNA 162 VALMIS: BUILD 162 = proto master 30fbc3748a19e96b369d1ae82617d181b019b570; iOS TF 162 (37669475818) ja Mac TF 162
