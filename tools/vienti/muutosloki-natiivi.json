@@ -2,6 +2,11 @@
  "kuvaus": "Natiivin \"Mitä uutta\" -rivit uusin ensin. Julkaisija lisää rivin jokaisesta App Store Connectiin ladatusta TestFlight-buildista: node tools/vienti/muutosloki-natiivi.mjs --versio \"1.0.0 (<CFBundleVersion>)\" --teksti \"…\" (1–3 lausetta suomeksi pelaajalle). Sisältöpäivitysten rivit tulevat automaattisesti osoittimeen (uusin.json muutos).",
  "rivit": [
   {
+   "versio": "1.1 (157)",
+   "paiva": "2026-10-07",
+   "teksti": "Elävä opas vie nyt vain kaupunkeihin, joissa on tarkka 3D-malli, ja paikan valinta näyttää ne Euroopan maittain. Suosikeissa on vain näiden kaupunkien kohteita. Jos pyydät muuhun kaupunkiin, opas kertoo, ettei paikkaa ole vielä kuvattu tarpeeksi tarkasti."
+  },
+  {
    "versio": "1.1 (156)",
    "paiva": "2026-10-07",
    "teksti": "Linnan hahmot elehtivät puheen tahdissa, ja kuulijat nyökkäävät. Oppaassa on Seuraava-nappi, latauksen ajan näkyy kuva, iPadin ohjaimet ovat lähempänä peukaloita ja lennot ovat pehmeämmät. Eiffel-torni ja muut korkeat kohteet näkyvät kokonaan, ja illalla kaupunki valaistuu."
