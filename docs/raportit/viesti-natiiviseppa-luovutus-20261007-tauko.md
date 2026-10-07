@@ -76,7 +76,9 @@ log -1 master`, `tail -3 proto-3d/lokit/kaannospalvelu/juna.log`, `tail -5 proto
    session" (NSPOSIXErrorDomain 60). SYY LÖYTYI 23.4x: macOS kysyi "SimulatorTrampoline.xpc haluaa käyttää irrotettavan taltion
    tiedostoja" (omistaja ei saanut napsautettua; pyytäjä pid 72602 suljettu) → omistajalle ohje: Täysi levyn käyttöoikeus myös
    /Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/XPCServices/SimulatorTrampoline.xpc (koodaus-käyttäjällä),
-   sitten boot-todennus uudelleen. Selvitä aamulla ennen työkaluvaihtoa (mahdollisesti Simulator.app/launchd_sim vs. ulkoinen levy tai
+   sitten boot-todennus uudelleen. 23.5x TODENNETTU: omistaja lisäsi SimulatorTrampoline.xpc:n FDA-listaan, palvelut uudelleen →
+   T7:n natiiviseppa-iPhone BOOT OK, 164koe asennettu ja käynnistetty, kuvakaappaus lokit/natiiviseppa-t7-todennus/t7-164koe.png
+   (aloitusnäkymä), sammutettu. Seuraavaksi pelkkä työkaluvaihto (ja MCP-simulaattorityökalun/Simulator.app:n sarjakysymys). Aiempi teksti: (mahdollisesti Simulator.app/launchd_sim vs. ulkoinen levy tai
    palvelun tila uudelleenkäynnistyksen jälkeen; kokeile ensin oletussarjan simun boot, sitten T7). Lisäksi ratkaistava: MCP-simulaattorityökalu
    ja Simulator.app näkevät vain oletussarjan (oikeat napautukset!). Työkaluja EI muutettu (kaikki vanhassa sarjassa, yhtenäinen tila).
    Inventaario: proto-3d/tyokalut/proto-kaanna.sh, Matkakirja-proto/aja.sh, tyokalut/palvelu/{proto-kaanna,siivoa-pariteettisimut}.sh,
