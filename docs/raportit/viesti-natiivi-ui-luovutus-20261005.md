@@ -13,6 +13,8 @@ kohdeotsikko metrolinjaan (OpasMetrolinja.Korostus/KorostusSelite, KierrosTaulu 
 pienemmiksi (iPad ≤ 1,15 × 56, puhelin 40) ja tummemmiksi (himmennys.kevyt). Ei laitetarkistusta; jos omistaja antaa TF:stä
 palautetta koosta, säädä KorostusKoko / KuvaKoko.
 
+## TILINVAIHTO 7.10. 23.4x: ei taustaajoja, ei avoimia eriä; kaikki erät kuitattu ja SHA:t Natiivisepällä (ks. aloitusviesti).
+
 ## 7.10. klo 22.1x: KUVIEN TEKIJÄT ☰ LÄHTEET -NÄKYMÄÄN (omistaja 22.5x, Päätoimittaja hyväksyi; juna 164)
 
 natiivi-ui/opas-lahteet 8b4659e9 (a27f2e2c:n päällä, worktree wt/proto-natiivi-ui-otsikko): oppaan ☰ "Lähteet ›" -alanäkymä

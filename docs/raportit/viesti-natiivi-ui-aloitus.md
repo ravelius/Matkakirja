@@ -11,6 +11,6 @@ tarvittaessa (DEF_IOS + ;MATKAKIRJA_APPSTORE kopiossa unity-tarkistus.sh:sta). E
 savuja eikä toistoajoja. Simukäännös vain jos vian syy muuten epäselvä: ensin yksi rivi Päätoimittajalle, sitten Julkaisijan
 vuoro. Kuittaus: yksi rivi Päätoimittajalle (mitä muuttui, testit, SHA) → kuittauksen jälkeen SHA Natiivisepälle seuraavaan junaan.
 
-Tila 7.10. 20.0x: junassa 161 metro 89d98b7e; junassa 162 apuraha-kuvat 3f07c49b ja seikkailu-toiminto f9f48082; junassa 163 seikkailu-kuvakkeet 8aa55e02 (sisältää jatkan, tekstivahdin, verbin, fp-ohjauksen ja tietokerroksen). Ei avoimia eriä.
+Tila 7.10. 23.4x (tilinvaihto): ei avoimia eriä eikä taustaajoja. Junassa 161 metro 89d98b7e; junassa 162 apuraha-kuvat 3f07c49b, seikkailu-tapit 34cf54b0, seikkailu-toiminto f9f48082 ja pariisi-otsikko a27f2e2c; junassa 163 seikkailu-kuvakkeet 8aa55e02 (sisältää jatkan, tekstivahdin, verbin, fp-ohjauksen ja tietokerroksen); junassa 164 opas-lahteet 8b4659e9 (LS1 7c4122bc9:n pari). Tyylikirjan kontekstikuvakerivi on web-PR #4070:ssä (natiivi-ui-tyylikirja-kulta 40be6b15). Seuraavaksi: luovutuksen HUOMINEN 8.10. -osio (pelattavuusmallin vaiheet 1–3 jo tehty).
 HUOMINEN 8.10.: pelattavuusmalli (luovutuksen ylin osio HUOMINEN 8.10.).
 UI-POHJAT: vain olemassa olevat pohjat; puuttuva → Päätoimittaja.
