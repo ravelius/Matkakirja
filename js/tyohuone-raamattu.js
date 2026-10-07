@@ -190,6 +190,7 @@ export const RAAMATTU = {
           + 'vasen tappi tarkka liike (kevyt = hiivintä), oikea veto katse, ei kyykkynappia; ruudulla vain liikkumistappi, toimintonappi kontekstikuvakkein '
           + '(käsi, kaari, liekki), Pulun reunakuva ja tauko; ei pään keinuntaa; hiiviskelyssä ei musiikkia (sydän vaarassa, kanteleaihe löydössä ja '
           + 'lopussa); Freesound CC0 ja Sonnissin ilmaiset GDC-paketit sallittu; keskeneräinen jätetään pois julkaisusta. '
+          + 'VERKKOLÄHTEET (Päätoimittaja 7.10.2026 klo 21.0x): haetaan vain virallisilla rajapinnoilla tai robots.txt:n ja käyttöehtojen sallimilla poluilla, robottitarkistuksia ei ohiteta; Freesound vain API:lla (Actions-salaisuus); muuten omistaja lataa käsin tai lähde jätetään. '
           + 'HETKET JA TARINAT (omistaja 7.10.2026 klo 09.4x–10.0x, kortit, sitova): OLAVINLINNA = "Aarnivalkea", elokuun ilta ja yö 1499 '
           + '(docs/raportit/ehdotus-olavinlinna-seikkailu.md: salamatkustajana huoltoveneessä, kiertävä valo Kirkkotornissa, pystyleike Laituri → '
           + 'Keittiö → Kappeli noin 10 min, arvoitus todellisten vaakunalaattojen ja umpeen muurattujen komeroiden varassa, aarre fiktiota, '
