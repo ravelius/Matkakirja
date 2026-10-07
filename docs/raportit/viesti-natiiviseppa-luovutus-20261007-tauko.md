@@ -11,7 +11,8 @@ Tarkista ensin taustalla jatkuneiden ajojen tulokset (alla) ja kerro ne Julkaisi
 
 ## TILA 14.2x
 
-- **JUNA 161 -ESIRUNKO natiiviseppa/juna-161-koe c4fbdd6f5** (wt/proto-natiiviseppa-j144) = BUILD 160 d8b0e0fc + LS1 741625b8d +
+- **JUNA 161 -ESIRUNKO natiiviseppa/juna-161-koe ea1a60e73** (c4fbdd6f5 + LS2 swe-rajat 95cf8eb97 14.2x, maarajat 200 todennettu;
+  Kartta 447, unity iOS/Mac 0). Aiempi: c4fbdd6f5 (wt/proto-natiiviseppa-j144) = BUILD 160 d8b0e0fc + LS1 741625b8d +
   Siirtoseppä historia-juna161 526c9373 (korvaa eleet-2 67728f0b) + NUI kehittaja-tf 767c70eb + LS2 aa32b618b + 074c95a3 →
   755597cf (kirjoitusääni + vSync + Mac lepo, KUITATTU 14.2x). Testit 447/419/833, tarkista (zsh!), unity iOS/Mac 0, editori ok.
   PUUTTUU: NUI pariisi-esitys (metrolinjan stillit Päätoimittajalle), LS2 swe-rajat 95cf8eb97 (vasta kun Karttaseppä vahvistaa
