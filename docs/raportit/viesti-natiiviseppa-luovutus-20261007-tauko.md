@@ -15,7 +15,8 @@ Tarkista ensin taustalla jatkuneiden ajojen tulokset (alla) ja kerro ne Julkaisi
   Siirtoseppä historia-juna161 526c9373 (korvaa eleet-2 67728f0b) + NUI kehittaja-tf 767c70eb + LS2 aa32b618b + 074c95a3 →
   755597cf (kirjoitusääni + vSync + Mac lepo, KUITATTU 14.2x). Testit 447/419/833, tarkista (zsh!), unity iOS/Mac 0, editori ok.
   PUUTTUU: NUI pariisi-esitys (metrolinjan stillit Päätoimittajalle), LS2 swe-rajat 95cf8eb97 (vasta kun Karttaseppä vahvistaa
-  maarajapolut, nyt 404). Karttasepän #4140 kuitattu (main-repon PR, ei proto). Juna kootaan vasta NUI:n stillikuittauksen jälkeen.
+  maarajapolut, nyt 404). Karttasepän #4140 kuitattu (main-repon PR, ei proto). Karttaseppä 14.3x: maarajojen vienti
+  Julkaisijalla ~15.30–16; Karttaseppä ilmoittaa, kun molemmat 200 → vasta sitten 95cf8eb97 runkoon ja TF. Juna kootaan vasta NUI:n stillikuittauksen jälkeen.
 - **Junan savu (Päätoimittaja):** Mac: piiloon → takaisin → panorointi lataa uudet laatat ja ääni palaa; kirjoitusääni aloitusruudussa.
   EI hiiri/näppäinautomaatiota, kun omistaja käyttää Macia (muisti mac-gui-automaatio-omistajan-naytolla).
 - **Mac lepo mitattu:** 755597cf piilossa 2,1–2,6 %, ei valittuna 7,5 % (4975a36c), täysi 15–16 %. Omistaja todentaa Mac TF 161:llä.
