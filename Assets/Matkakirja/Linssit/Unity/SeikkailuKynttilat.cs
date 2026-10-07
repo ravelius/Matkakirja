@@ -48,6 +48,9 @@ namespace Matkakirja.Natiivi
             return k;
         }
 
+        /// <summary>Liekkien paikat (Unity) Ytimen indeksijärjestyksessä (E3a: kappalaisen sammutusjärjestys).</summary>
+        public IEnumerable<Vector3> LiekkiPaikat() { foreach (var l in liekit) yield return l.Paikka; }
+
         /// <summary>Onko piste kynttilöiden huoneessa (lähin kynttilä LahellaM:n sisällä).</summary>
         public bool Lahella(Vector3 p)
         {

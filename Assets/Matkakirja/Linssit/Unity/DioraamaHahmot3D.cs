@@ -122,6 +122,9 @@ namespace Matkakirja.Natiivi
             }
         }
 
+        /// <summary>Historiamoottori: tilat, joiden kohtaushahmot piilotetaan (E3: kappelin kappalainen ja vouti korvataan pelin hahmoilla).</summary>
+        public static readonly HashSet<string> PiilotetutTilat = new HashSet<string>(StringComparer.Ordinal);
+
         public void PoistaIrralliset(string henkiloId = null)
         {
             for (int i = esiintymat.Count - 1; i >= 0; i--)
@@ -749,6 +752,7 @@ namespace Matkakirja.Natiivi
             {
                 if (e.Juuri == null) continue; // glb ei ole vielä latautunut — ei GameObjectia, ei mitään tehtävää.
                 if (e.TilaId == "irrallinen") { PaivitaIrrallinen(e); continue; }
+                if (PiilotetutTilat.Contains(e.TilaId)) { if (e.Nakyvissa) { e.Juuri.SetActive(false); e.Nakyvissa = false; } continue; }
                 if (!nakymaHaku.TryGetValue((e.TilaId, e.HahmoId), out var hn) || !hn.Naky)
                 {
                     if (e.Nakyvissa) { e.Juuri.SetActive(false); e.Nakyvissa = false; }

@@ -1,0 +1,181 @@
+// HISTORIAMOOTTORI E3a: KAPPELIN KOHTAUS JA PIMEYS (Siirtoseppä 7.10.2026; docs/raportit/kasikirjoitus-olavinlinna-kappeli-e3.md
+// vaiheet 1–2). Fogg astuu kaari-ovelle (ovi:kappeli-alku, 2 m) → valmis Kappeli-keskustelu soi (29 s, kertoja ei puhu), kappalainen
+// alttarilla ja vouti oven käytävässä. Vouti lähtee 2 s viimeisen vuoron jälkeen pääovelle ja katoaa. Kappalainen sammuttaa liekit
+// kaukaisimmasta alkaen (kruunu, pulpetti, sivualttarit, lattiajalat), kahden viimeisen kohdalla kappalainen-1, sytyttää lyhtynsä ja
+// sammuttaa viimeisen, kävelee reittiä (reitti:kappalainen-5 → 1) pääovelle ja lukitsee; lyhdyn valo himmenee. Tallennuspiste "pimeä
+// kappeli". Kappelin kohtaushahmot piilotetaan (DioraamaHahmot3D.PiilotetutTilat) ja korvataan liikkuvilla pelin hahmoilla.
+// Jos Fogg astuu valaistuun kappeliin kohtauksen aikana: kappalainen-3 (E3c vie tyrmään; nyt tarkistuspisteeseen kaari-ovelle).
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using Matkakirja.Linssit.Dioraama;
+using Matkakirja.Linssit.Seikkailu;
+using UnityEngine;
+
+namespace Matkakirja.Natiivi
+{
+    public sealed class SeikkailuKappeli : MonoBehaviour
+    {
+        public static SeikkailuKappeli Aktiivinen { get; private set; }
+        public enum Vaihe { Odottaa, Kohtaus, Pimeys, Pimea }
+        public Vaihe Nyt { get; private set; } = Vaihe.Odottaa;
+        public const float AlkuM = 2.0f, Askel = 1.1f, SammutusS = 1.4f;
+
+        Transform kappalainen, vouti; Light lyhty;
+        string kappalainenLeike = "idle", voutiLeike = "idle"; double kappalainenAika, voutiAika;
+        Vector3 ovi, alttari; readonly List<Vector3> reitti = new List<Vector3>();
+        AudioSource keskustelu;
+        Action<string> kirjaa;
+        public Vector3 Tallennus { get; private set; }
+
+        public static SeikkailuKappeli Luo(Transform isa, Rakennus rakennus, DioraamaHahmot3D hahmot, AudioClip keskusteluKlippi, Action<string> kirjaa)
+        {
+            Poista();
+            var d = SeikkailuKavely.Data;
+            if (d == null) { kirjaa?.Invoke("seikkailu: kappeli: kävelydata puuttuu"); return null; }
+            KavelyMerkki m0 = null;
+            foreach (var m in d.Merkit) if (m.Nimi == "ovi:kappeli-alku") m0 = m;
+            if (m0 == null) { kirjaa?.Invoke("seikkailu: kappeli: ovi:kappeli-alku puuttuu"); return null; }
+            var go = new GameObject("Seikkailu kappeli");
+            go.transform.SetParent(isa, false);
+            var k = go.AddComponent<SeikkailuKappeli>();
+            k.kirjaa = kirjaa;
+            k.ovi = U(m0);
+            var r = new SortedDictionary<string, Vector3>(StringComparer.Ordinal);
+            foreach (var m in d.Lajia("reitti")) if (m.Tunnus.StartsWith("kappalainen-", StringComparison.Ordinal) && m.Tunnus.IndexOf("paluu", StringComparison.Ordinal) < 0 && m.Tunnus.IndexOf("luukku", StringComparison.Ordinal) < 0) r[m.Tunnus] = U(m);
+            k.reitti.AddRange(r.Values);
+            k.alttari = k.reitti.Count > 0 ? k.reitti[k.reitti.Count - 1] : k.ovi;
+            k.Tallennus = k.ovi;
+            // Pelin hahmot: kappalainen alttarilla, vouti oven käytävässä (reitin alku).
+            k.kappalainen = new GameObject("Kappalainen").transform; k.kappalainen.SetParent(go.transform, false); k.kappalainen.position = k.alttari;
+            k.vouti = new GameObject("Vouti").transform; k.vouti.SetParent(go.transform, false); k.vouti.position = k.reitti.Count > 0 ? k.reitti[0] : k.ovi;
+            KatsoKohti(k.kappalainen, k.alttari + Vector3.forward); KatsoKohti(k.vouti, k.alttari);
+            hahmot?.LisaaIrrallinen(rakennus, "kappalainen-1500", k.kappalainen, () => (k.kappalainenLeike, k.kappalainenAika), Quaternion.Euler(0f, 180f, 0f));
+            hahmot?.LisaaIrrallinen(rakennus, "vouti-1500", k.vouti, () => (k.voutiLeike, k.voutiAika), Quaternion.Euler(0f, 180f, 0f));
+            DioraamaHahmot3D.PiilotetutTilat.Add("kappeli");
+            var lg = new GameObject("Lyhty"); lg.transform.SetParent(k.kappalainen, false); lg.transform.localPosition = new Vector3(0.3f, 1.0f, 0.2f);
+            k.lyhty = lg.AddComponent<Light>(); k.lyhty.type = LightType.Point; k.lyhty.range = 2.5f; k.lyhty.color = new Color(1f, 0.78f, 0.5f);
+            k.lyhty.intensity = 1.6f; k.lyhty.shadows = LightShadows.None; k.lyhty.enabled = false;
+            if (keskusteluKlippi != null) { k.keskustelu = go.AddComponent<AudioSource>(); k.keskustelu.clip = keskusteluKlippi; k.keskustelu.spatialBlend = 0f; k.keskustelu.playOnAwake = false; }
+            Aktiivinen = k;
+            kirjaa?.Invoke($"seikkailu: kappeli valmis (reitti {k.reitti.Count} pistettä, keskustelu {(keskusteluKlippi != null ? keskusteluKlippi.length.ToString("F1") + " s" : "puuttuu")})");
+            return k;
+        }
+
+        static Vector3 U(KavelyMerkki m) => new Vector3((float)m.X, (float)m.Y, (float)-m.Z);
+        static void KatsoKohti(Transform t, Vector3 p) { var d = p - t.position; d.y = 0; if (d.sqrMagnitude > 1e-4f) t.rotation = Quaternion.LookRotation(d); }
+
+        void Update()
+        {
+            kappalainenAika += Time.deltaTime; voutiAika += Time.deltaTime;
+            var p = SeikkailuPelaaja.Aktiivinen;
+            if (Nyt == Vaihe.Odottaa && p != null && Vector3.Distance(p.transform.position, ovi) < AlkuM) StartCoroutine(Kohtaus());
+            // Valaistuun kappeliin kohtauksen tai sammutuksen aikana (yli 2,5 m kaari-ovelta kohti alttaria): kappalainen näkee.
+            if ((Nyt == Vaihe.Kohtaus || Nyt == Vaihe.Pimeys) && p != null && !nahty && Vector3.Distance(p.transform.position, ovi) > 2.5f
+                && Vector3.Distance(p.transform.position, alttari) < Vector3.Distance(ovi, alttari) + 0.5f)
+                StartCoroutine(Nahty(p));
+        }
+
+        bool nahty;
+        IEnumerator Nahty(SeikkailuPelaaja p)
+        {
+            nahty = true;
+            keskustelu?.Stop();
+            kirjaa?.Invoke("seikkailu: kappalainen näki Foggin valaistussa kappelissa");
+            double kesto = SeikkailuRepliikit.Aktiivinen?.Soita("kappalainen-3", kappalainen) ?? 0;
+            yield return new WaitForSeconds((float)Math.Max(1.5, kesto));
+            // E3c: vartija → tyrmä. Nyt: tarkistuspisteeseen kaari-ovelle ja kohtaus alusta.
+            p.Siirra(Tallennus - (alttari - ovi).normalized * 0.8f);
+            StopAllCoroutines();
+            Nyt = Vaihe.Odottaa; nahty = false;
+            kappalainen.position = alttari; vouti.position = reitti.Count > 0 ? reitti[0] : ovi;
+            kappalainenLeike = voutiLeike = "idle"; lyhty.enabled = false;
+            var ky = SeikkailuKynttilat.Aktiivinen; if (ky != null) for (int i = 0; i < ky.Ydin.Maara; i++) ky.Ydin.Aseta(i, true);
+        }
+
+        IEnumerator Kohtaus()
+        {
+            Nyt = Vaihe.Kohtaus;
+            kirjaa?.Invoke("seikkailu: kappelin kohtaus alkaa");
+            float kesto = 29.2f;
+            if (keskustelu != null && keskustelu.clip != null) { keskustelu.Play(); kesto = keskustelu.clip.length; }
+            kappalainenLeike = "puhe"; voutiLeike = "puhe";
+            yield return new WaitForSeconds(kesto + 2f);
+            // Vouti lähtee pääovesta (reitin alku → ovi, sitten katoaa holvin yllä).
+            voutiLeike = "kavely";
+            yield return Kavele(vouti, new List<Vector3> { reitti.Count > 0 ? reitti[0] : ovi, reitti.Count > 0 ? reitti[0] + (reitti[0] - alttari).normalized * 2f : ovi }, a => voutiAika = a);
+            vouti.gameObject.SetActive(false);
+            yield return Pimeys();
+        }
+
+        IEnumerator Pimeys()
+        {
+            Nyt = Vaihe.Pimeys;
+            var ky = SeikkailuKynttilat.Aktiivinen;
+            if (ky != null && ky.Ydin.Maara > 0)
+            {
+                // Järjestys kaukaisimmasta alttarilta lähimpään; kaksi lähintä viimeisinä (kappalainen-1).
+                var jarjestys = new List<int>();
+                for (int i = 0; i < ky.Ydin.Maara; i++) jarjestys.Add(i);
+                var paikat = Paikat(ky);
+                jarjestys.Sort((a, b) => Vector3.Distance(paikat[b], alttari).CompareTo(Vector3.Distance(paikat[a], alttari)));
+                for (int n = 0; n < jarjestys.Count; n++)
+                {
+                    int i = jarjestys[n];
+                    if (n == jarjestys.Count - 2)
+                    {
+                        double kesto = SeikkailuRepliikit.Aktiivinen?.Soita("kappalainen-1", kappalainen) ?? 0;
+                        lyhty.enabled = true;   // sytyttää lyhtynsä viimeisestä kynttilästä
+                        yield return new WaitForSeconds((float)Math.Max(2.0, kesto - 0.6));
+                    }
+                    var kohde = paikat[i]; kohde.y = kappalainen.position.y;
+                    var kohti = kohde + (kappalainen.position - kohde).normalized * 0.6f;
+                    kappalainenLeike = "kavely";
+                    yield return Kavele(kappalainen, new List<Vector3> { kohti }, a => kappalainenAika = a);
+                    kappalainenLeike = "tyo"; KatsoKohti(kappalainen, kohde);
+                    yield return new WaitForSeconds(SammutusS * 0.5f);
+                    ky.Ydin.Aseta(i, false);
+                    yield return new WaitForSeconds(SammutusS * 0.5f);
+                }
+            }
+            // Pääovelle reittiä takaisin ja lukitus; lyhdyn valo himmenee oven takana.
+            kappalainenLeike = "kavely";
+            var takaisin = new List<Vector3>(reitti); takaisin.Reverse();
+            yield return Kavele(kappalainen, takaisin, a => kappalainenAika = a);
+            for (float t = 0; t < 1.5f; t += Time.deltaTime) { lyhty.intensity = Mathf.Lerp(1.6f, 0f, t / 1.5f); yield return null; }
+            kappalainen.gameObject.SetActive(false);
+            Nyt = Vaihe.Pimea;
+            Tallennus = SeikkailuPelaaja.Aktiivinen != null ? SeikkailuPelaaja.Aktiivinen.transform.position : ovi;
+            kirjaa?.Invoke("seikkailu: kappeli pimeä (tallennuspiste)");
+        }
+
+        static List<Vector3> Paikat(SeikkailuKynttilat ky)
+        {
+            var l = new List<Vector3>();
+            foreach (var x in ky.LiekkiPaikat()) l.Add(x);
+            return l;
+        }
+
+        IEnumerator Kavele(Transform t, List<Vector3> pisteet, Action<double> aika)
+        {
+            foreach (var q in pisteet)
+            {
+                var kohde = new Vector3(q.x, t.position.y, q.z);
+                KatsoKohti(t, kohde);
+                while ((t.position - kohde).sqrMagnitude > 0.01f)
+                {
+                    t.position = Vector3.MoveTowards(t.position, kohde, Askel * Time.deltaTime);
+                    yield return null;
+                }
+            }
+        }
+
+        public static void Poista() { var a = Aktiivinen; Aktiivinen = null; if (a != null) Destroy(a.gameObject); }
+
+        void OnDestroy()
+        {
+            if (Aktiivinen == this) Aktiivinen = null;
+            DioraamaHahmot3D.PiilotetutTilat.Remove("kappeli");
+        }
+    }
+}

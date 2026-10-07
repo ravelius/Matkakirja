@@ -488,7 +488,7 @@ namespace Matkakirja.Natiivi
             kelloSiirto = 0;
             kuoriOdotusAlku = -1f; SaapumisOdotus = false; RakennusLatautuu = false; LatausVirhe = null; // näyttämö (ja sen odotuspiilotus) tuhoutuu alla
             // Historiamoottori: seikkailu pois (näyttämön lapset tuhoutuvat; globaalit kuoren leikkaukset ja kävelydata nollataan).
-            SeikkailuVartijat.Poista(); SeikkailuVene.Poista(); SeikkailuPelaaja.Poista(); SeikkailuRepliikit.Poista(); SeikkailuEsineet.Poista(); SeikkailuKynttilat.Poista(); SeikkailuKavely.Pura();
+            SeikkailuVartijat.Poista(); SeikkailuVene.Poista(); SeikkailuPelaaja.Poista(); SeikkailuRepliikit.Poista(); SeikkailuEsineet.Poista(); SeikkailuKynttilat.Poista(); SeikkailuKappeli.Poista(); SeikkailuKavely.Pura();
             SeikkailuEsineet.Kolahti -= KokkiKuuleeKolahduksen;
             cm?.SeikkailuPois(); PelattavaPalaPyydetty = false;
             if (DioraamaLevyvalimuisti.TestiOsoitin == PelattavaPalaHash)
@@ -1006,6 +1006,31 @@ namespace Matkakirja.Natiivi
         }
         float kokkiRepliikkiAsti; int kokkiLaskuri;
 
+        /// <summary>E3a: kappelin kohtaus ja pimeys (SeikkailuKappeli); kynttilät ensin, keskustelun ääni rakennuksen äänistä.</summary>
+        IEnumerator KappeliPaalle()
+        {
+            if (nayttamo == null || rakennus == null) yield break;
+            yield return VarmistaKavelyData();
+            if (SeikkailuKynttilat.Aktiivinen == null && rakennus.Tila("kappeli") != null)
+            {
+                var ky = SeikkailuKynttilat.Luo(nayttamo.transform, "kappeli", nayttamo.Liekit, rakennus3D, o.Kirjaa);
+                if (ky != null) ky.Ydin.OmaKynttila = true;
+            }
+            SeikkailuRepliikit.Luo(nayttamo.transform, MediaJuuri + "/seikkailu/" + RakennusId + "/repliikit-v1/manifest.json", o.Kirjaa);
+            AudioClip klippi = null;
+            if (rakennus.Aanet != null && rakennus.Aanet.TryGetValue("kappeli-keskustelu", out var ka) && !string.IsNullOrEmpty(ka.Tiedosto))
+            {
+                using var q = UnityEngine.Networking.UnityWebRequestMultimedia.GetAudioClip(AaniUrl(ka.Tiedosto), AudioType.MPEG);
+                ((UnityEngine.Networking.DownloadHandlerAudioClip)q.downloadHandler).streamAudio = false;
+                yield return q.SendWebRequest();
+                if (q.result == UnityEngine.Networking.UnityWebRequest.Result.Success) klippi = UnityEngine.Networking.DownloadHandlerAudioClip.GetContent(q);
+            }
+            SeikkailuKappeli.Luo(nayttamo.transform, rakennus, nayttamo.Hahmot3D, klippi, o.Kirjaa);
+            var glbt = new List<string>();
+            nayttamo.Hahmot3D?.IrrallistenGlb(glbt);
+            foreach (var glb in glbt) if (hahmoGlbJonossaTaiValmiit.Add(glb)) o.StartCoroutine(LataaHahmoGlb(glb));
+        }
+
         IEnumerator VartijatPaalle()
         {
             if (nayttamo == null || rakennus == null) { o.Kirjaa("poikki: vartijat: linssi ei auki"); yield break; }
@@ -1053,11 +1078,7 @@ namespace Matkakirja.Natiivi
             if (pelattavaPala)
             {
                 o.StartCoroutine(VartijatPaalle());   // pelattavassa palassa vartijat partioon heti laiturille noustessa
-                if (SeikkailuKynttilat.Aktiivinen == null && rakennus.Tila("kappeli") != null)
-                {
-                    var ky = SeikkailuKynttilat.Luo(nayttamo.transform, "kappeli", nayttamo.Liekit, rakennus3D, o.Kirjaa);
-                    if (ky != null) ky.Ydin.OmaKynttila = true;   // tarjottimen kynttilä (huone 4) ennen tarjotin-kohtausta: Foggilla on kynttilä mukana
-                }
+                o.StartCoroutine(KappeliPaalle());   // kynttilät (Foggilla tarjottimen kynttilä mukana) + kappelin kohtaus kaari-ovella
             }
             o.Kirjaa($"seikkailu: vene perillä, pelaaja laiturilla ({alku}, yaw {yaw:F0}, {(nm != null ? "nousu:laituri" : "laiturin kohde")})");
         }
@@ -1538,6 +1559,14 @@ namespace Matkakirja.Natiivi
                 else if (arvo != "tila") SeikkailuKynttilat.Luo(nayttamo.transform, osat.Length > 3 ? osat[3] : "kappeli", nayttamo.Liekit, rakennus3D, o.Kirjaa);
                 ky = SeikkailuKynttilat.Aktiivinen;
                 o.Kirjaa("poikki: kynttilät " + (ky == null ? "pois" : $"{ky.TilaId} palavia {ky.Ydin.Palavia}/{ky.Ydin.Maara}, oma {(ky.Ydin.OmaPalaa ? "palaa" : ky.Ydin.OmaKynttila ? "sammunut" : "ei")}"));
+                return;
+            }
+            // "poikki kappeli 1 | 0 | tila": E3a kappelin kohtaus ja pimeys (kaari-ovelle astuminen käynnistää).
+            if (mita == "kappeli")
+            {
+                if (arvo == "0") { SeikkailuKappeli.Poista(); SeikkailuKynttilat.Poista(); }
+                else if (arvo != "tila") o.StartCoroutine(KappeliPaalle());
+                o.Kirjaa("poikki: kappeli " + (SeikkailuKappeli.Aktiivinen?.Nyt.ToString() ?? "pois"));
                 return;
             }
             // "poikki vene 1 [kesto_s] | 0": historiamoottori V2 — venesaapuminen laituriin, sitten vapaa kävely.
