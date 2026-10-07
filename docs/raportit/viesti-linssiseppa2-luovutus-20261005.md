@@ -3,19 +3,20 @@
 Edellinen: viesti-linssiseppa2-luovutus-20261004.md. Päätoimittaja local_5df52e10-10e4-4b72-9554-0049db300dfe.
 VUOROT: käännös- ja simuvuoro aina Julkaisijalta ("NYT käännös", "SIMU NYT"). Ilmoita: "KÄÄNNETTY <sha>, lukko vapaa" ja "simu vapaa".
 
-## ALOITUSVIESTI UUDELLE SESSIOLLE (tilinvaihto 6.10. 23.4x)
-Olet Linssiseppä 2 (Opus, high). Lue tämä tiedosto (TILA-osiot ylhäältä alas) ja CLAUDE.md. Proto-git on
-/Users/Shared/Claude/proto-3d/Matkakirja-proto. Worktreet ovat wt/proto-linssiseppa2-pilvet (gibs-pehmea) ja wt/proto-linssiseppa2-meri
-(s2-meri). Ne poistetaan, kun haarat ovat mainissa. Vuorot (KÄÄNNÖS NYT / SIMU NYT) tulevat Julkaisijalta, ja ilmoitat "lukko vapaa"
-ja "simu vapaa". Simulaattorit ovat F2D9B022 (iPhone) ja 4CE6C737 (iPad). Ajoskriptit ovat scratchpadissa, joka ei säily: ajo147.sh
-on myös aiemmissa luovutuksissa, ja todistusajo.sh löytyy proton masterista.
+## ALOITUSVIESTI UUDELLE SESSIOLLE (tilinvaihto 7.10. ilta)
+Olet Linssiseppä 2 (Opus, high). Lue CLAUDE.md, tämä tiedosto (OMISTAJA- ja TILA-osiot ylhäältä alas) ja Raamatun Ydinajatus kohta 2.
+Proto-git /Users/Shared/Claude/proto-3d/Matkakirja-proto. TYÖTAPA (omistaja 7.10. 15.5x/16.0x): ei omia käännöksiä, savuja, stillejä
+eikä toistoajoja; haaralle unity-tarkistus (tyokalut/tarkista.sh) + testiajurit (Kartta-/Linssit-/Peli-testit/kaanna.sh); kuittaus
+Päätoimittajalta 1 rivillä → SHA Natiivisepälle junaan. Simu/käännös vain vian syyn selvittämiseen, ilmoitus PT:lle etukäteen.
+Ajoskriptit pysyvästi: proto-3d/lokit/linssiseppa2-3d-kattavuus/ajot/ (scratchpad ei säily). Simut F2D9B022 (iPhone), 4CE6C737 (iPad).
 Avoimet työt:
-1. gibs-pehmea 640eb7b4 on KUITATTU junaan 155. Seuraa, että Natiiviseppä ottaa sen junaan.
-2. Omistajan Helsinki-juliste: tarvitaan saman näkymän pari (olkapää 0/1 tai ennen/jälkeen) KIINTEÄLLÄ kellolla. ajo147.sh laskee
-   kellon kuvakohtaisesti, joten korjaa se ensin (laske siirto kerran ja käytä samaa). Pari lähetetään Päätoimittajalle omistajaa varten.
-3. Vapaan tilan 14d/14e (sumeat laatat matalalla) on kirjattu suoratoiston normaaliksi viiveeksi, koska kuva tarkentuu +5 s:ssa.
-   Vauhtirajaus opas-vapaa-lataus 5683ffaf jäi pois junasta. Ei uutta työtä tähän.
-4. s2-meri 0f6e4e89 on KUITATTU junaan 154 (BMNG:n meri S2:n meriväriin).
+1. S2-KAUDET talvi ja kevät: kun Karttaseppä ilmoittaa s2-eurooppa/talvi/v1 ja kevat/v1 olevan ämpärissä, lisää ne
+   Ydin/Iss/Vuodenaika.S2EuroopanVersio-taulukkoon (nyt vain syksy; talvella myös Vuodenaika.S2Nakyy(Talvi) = true, jos talvi-S2 korvaa
+   BMNG:n – kysy PT:ltä) + VuodenaikaTestit → PT:n kuittaus → Natiiviseppä. Syksy f6e4a8495 on junassa 162.
+2. Worktreet (poista `git worktree remove`, kun haara on masterissa): wt/proto-linssiseppa2-pallo-puoli (aa32b618b, juna 161),
+   -hiiri (2d8da858f + ui hiiri juna 161; 6ec5dcff4 -ei-lepoa vain testihaarassa), -hiiri160 (testi, ei junaan), -paikannimet
+   (59d44e87b juna 160), -swe-rajat (95cf8eb97 juna 161), -kaudet (f6e4a8495 juna 162).
+3. Siirrytään-ruutu jää peittämään, jos opas suljetaan kesken siirtymän: LS1 korjaa (linssiseppa/pallo-latauskuva, juna 162).
 
 ## OMISTAJA 7.10. 15.5x (sitova): ennen junaa VAIN automaattiset testit + käännös; ei savuja, stillejä, iPad-mittauksia,
 ## toistoajoja; kuittaus 1 rivi (muutos, testit, SHA) → Natiiviseppä. Simu vain, jos vian syy muuten epäselvä.
