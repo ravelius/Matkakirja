@@ -1,7 +1,7 @@
 {
   "rakennus": "olavinlinna",
-  "hash": "73e9856f323875f0",
-  "kansio": "dioraama/olavinlinna/blender/73e9856f323875f0/",
+  "hash": "5a530808b3e85ffa",
+  "kansio": "dioraama/olavinlinna/blender/5a530808b3e85ffa/",
   "tiedostot": [
     {
       "polku": "hahmot/apulainen-1500-faceit.glb",
@@ -335,7 +335,7 @@
     },
     {
       "polku": "tilat/keittio-g102.glb",
-      "sha256": "3fc169530a346e1fca69f8aa84c4da415516755aca7d18b426fe155ea5fb9594",
+      "sha256": "9b207fecd7930ea6ca5643dc9daeeecdcd0547e3df73e7eb01b153fd5882252e",
       "tavuja": 742080
     },
     {
@@ -545,43 +545,43 @@
     },
     {
       "polku": "valot/keittio-g102-2k-4x4.astcm",
-      "sha256": "93e50e0b8fc624e522f10c0488776a6dd28429508a9223c83a1de155abfec50e",
+      "sha256": "a69c21a42ae728c43e46dfb6ec71b55edd1e3efd8417df960cfb4976e1484d0c",
       "tavuja": 1398144
     },
     {
       "polku": "valot/keittio-g102-2k.jpg",
-      "sha256": "7b0539f6f9b41163d58efcec5b91652b1b408216cd34186e173e08778b228848",
-      "tavuja": 174908
+      "sha256": "8208e133611c84605e0b7d4df47d05269aed8af376955e64eb26a5ac57fb4f9d",
+      "tavuja": 174108
     },
     {
       "polku": "valot/keittio-g102-4x4.astcm",
-      "sha256": "4d5c88f357477a40ae111ada74f3d541ab2ca55631c37e59dfeb403a6a8a2e3a",
+      "sha256": "9fbbae9475fb40184430395fe3ab221ee19d39210b1b28e2752e897500f3cf36",
       "tavuja": 5592448
     },
     {
       "polku": "valot/keittio-g102-hamara-2k-4x4.astcm",
-      "sha256": "8243be0ad612a6b8db22d43ed098d74716a9057604521f72127fb81b4027b598",
+      "sha256": "dea21748674fe799e001101026c78d3588597f5082e5ce01b6ca4b22a43dde53",
       "tavuja": 1398144
     },
     {
       "polku": "valot/keittio-g102-hamara-2k.jpg",
-      "sha256": "86d077cd17ff056c5bbd8f12be0845cff996b1d3749a7964ec6db9d9a8c9321b",
-      "tavuja": 157806
+      "sha256": "0ae3ae2765f90b44e582725619de076f05adca46283b52668a24e34f29ef8c62",
+      "tavuja": 157245
     },
     {
       "polku": "valot/keittio-g102-hamara-4x4.astcm",
-      "sha256": "36f5e4731c2aa254f7b5c3a202fb80aad256d4ca8f58461cdca25710013dedef",
+      "sha256": "c5327542477808581061f78bd8355baf43b1b525ab4299e447593fcde6cc29ba",
       "tavuja": 5592448
     },
     {
       "polku": "valot/keittio-g102-hamara.jpg",
-      "sha256": "d1279ef47de76ee4db5b8cd84e1056f0550a4df88c4f5a9134d3096c31fb62c1",
-      "tavuja": 485003
+      "sha256": "e90c0a3851ff61f9fd18ff3038f8ca99423430e325b78a6546bfd4c03c543f8b",
+      "tavuja": 484173
     },
     {
       "polku": "valot/keittio-g102.jpg",
-      "sha256": "7f4c5b2dd3cf8c1dd8d6f0c8c417146bf789194a4138048f6ebe5c1e02a3f8a2",
-      "tavuja": 543828
+      "sha256": "d9381ee5b43eba5a8354c90d1647f962be4a92a71a554e7aee43c90e32ce8214",
+      "tavuja": 542242
     },
     {
       "polku": "valot/keittio-hamara-2k-4x4.astcm",
