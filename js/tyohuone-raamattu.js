@@ -156,8 +156,9 @@ export const RAAMATTU = {
           + '(Olavinlinna n1500 = 1500-luvun alku, ennen Savonlinnan kaupunkia 1639) — '
           + 'nykykaupunki, sillat, tiet, katot ja moottoriveneet pois, tilalle luonnonranta, '
           + 'vanha metsä ja harkiten ajan puurakennukset; linna itse, maasto ja vesi ennallaan.',
-        'HISTORIALLISET KOHTEET SEIKKAILUINA MAAN TASALTA (omistaja 7.10.2026 klo 08.4x–08.5x, sitova): Olavinlinnaa, Kiellettyä kaupunkia ja '
-          + 'Gizan historiallista versiota (pyramidien kulta-aika, tarina ja elävät henkilöt kuten Olavinlinnassa) kehitetään yhtä aikaa. Pelaaja '
+        'HISTORIALLISET KOHTEET SEIKKAILUINA MAAN TASALTA (omistaja 7.10.2026 klo 08.4x–08.5x, sitova): Olavinlinna, Kielletty kaupunki ja '
+          + 'Gizan historiallinen versio (pyramidien kulta-aika, tarina ja elävät henkilöt kuten Olavinlinnassa) tehdään samalla moottorilla, '
+          + 'mutta ENSIN VAIN OLAVINLINNA (omistaja 08.5x: "keskitytään ensin vain Olavinlinnaan"); Kielletty kaupunki ja Giza sen jälkeen. Pelaaja '
           + 'liikkuu pääasiassa maan tasalla ("kuin pääsisi astumaan historiassa taaksepäin noihin hetkiin"). Ei aloiteta historian esittelyllä '
           + '(tornien nimet, vuosiluvut): pelaaja astuu suoraan toiminnan ja seikkailun keskelle, ja tehtävänä on selvittää arvoitus tai löytää '
           + 'aarre; historia opitaan pelatessa, vihjeet nojaavat oikeisiin paikkoihin, esineisiin ja henkilöihin, ja tietokerros (drone-näkymä, '
@@ -170,7 +171,9 @@ export const RAAMATTU = {
           + 'jännittävä, hurja ja visuaalisesti näyttävä kokemus, johon pääsee heti ilman selostuksia; opastus mahdollisimman pienin vihjein, ja '
           + 'tehtävä ymmärretään heti. Joka huoneessa on tekemistä (ratkaisut haetaan muiden pelien toimivista esimerkeistä); vähän tappelua saa '
           + 'olla, mutta tarvitaan myös oveluutta, reaktiota ja muita taitoja. Opettava anti on, että paikka tulee visuaalisesti tutuksi; '
-          + 'tarinoita ja tietoa saa halutessaan pelin aikana tai sen jälkeen, mutta mitään oppimiseen liittyvää ei ole pakko tehdä.',
+          + 'tarinoita ja tietoa saa halutessaan pelin aikana tai sen jälkeen, mutta mitään oppimiseen liittyvää ei ole pakko tehdä. KAMERA JA '
+          + 'VIHJEET (omistaja 7.10.2026 klo 08.5x, sitova): kamera olan yli (nuori Fogg näkyy ruudussa, Mixamo-animaatiot); vihjeet antaa Pulu '
+          + 'pyydettäessä ja kevyesti itse noin 3 minuutin jumin jälkeen (lento oikeaan suuntaan, äännähdys), ratkaisua kertomatta ja ilman tekstiä.',
         'PELIT, TALOUS JA LUENTA (omistaja 27.9.2026 klo 09.2x–10.4x, sitova; ideat '
           + 'omistajan 12-vuotiaalta tyttäreltä): 1) PELIT ovat yhtä merkittävä osa kuin '
           + 'linssit — oma kehittämissivu docs/pelikatalogi.md (+ pelikatalogi.html) samalla '
