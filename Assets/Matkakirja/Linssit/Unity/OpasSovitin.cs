@@ -526,6 +526,92 @@ namespace Matkakirja.Natiivi
             return EsittelyJuuri + "esittely-v1/" + UnityWebRequest.EscapeURL(kaupunkiId) + ".json";
         }
 
+        // ---- YKSITYISKOHTAKUVAT (omistaja 7.10. 10.1x, Päätoimittaja 16.5x, juna 163) ----
+        // Kerronnan aikana kuva ankkurisanan kohdalla (OpasYksityiskohdat, YksityiskohtaKortti). Paketin polku /opas/aineistot
+        // "yksityiskohdat_polut" {kaupunki-id: polku}; sana-ajat kohteen "aani_ajat" (kerro lisää: kerro_lisaa_aani_ajat) tai avauksen
+        // .ajat.json; ilman aikoja ankkurin osuus tekstistä × klipin kesto. Ei kuvaa, kun valikko tai chat on auki.
+        static Dictionary<string, string> yksPolut = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);
+        static List<OpasYksityiskohdat.Kuva> yksKuvat;
+        static string yksKaupunki;
+        static bool yksHaussa;
+        YksityiskohtaKortti kortti;
+        Coroutine yksAjo;
+
+        static string YksKaupunkiId() => KaupunkitilaId ?? OpasSallitut.Nimella(sallitut, Aloituskaupunki)?.Id;
+
+        IEnumerator HaeYksityiskohdat(string id, string polku)
+        {
+            yksHaussa = true;
+            using (var r = UnityWebRequest.Get("https://media.matkakirja.app/" + polku))
+            {
+                r.timeout = 10;
+                yield return r.SendWebRequest();
+                var l = r.result == UnityWebRequest.Result.Success ? OpasYksityiskohdat.Lue(MiniJson.Jasenna(r.downloadHandler.text)) : null;
+                if (yksKaupunki == id) yksKuvat = l;
+                o.Kirjaa($"opas: yksityiskohtakuvat {id}: {(l != null ? l.Count + " kuvaa" : "ei latautunut (" + r.responseCode + ")")} [{polku}]");
+            }
+            yksHaussa = false;
+        }
+
+        void VarmistaYksityiskohdat()
+        {
+            string id = YksKaupunkiId();
+            if (id == yksKaupunki) return;
+            yksKaupunki = id; yksKuvat = null;
+            if (id != null && yksPolut.TryGetValue(id, out var polku) && !Testi) o.StartCoroutine(HaeYksityiskohdat(id, polku));
+        }
+
+        static bool YksPeittaa()
+        {
+            if (Matkakirja.Natiivi.OpasValikko.Viimeisin?.Auki == true) return true;
+            return Matkakirja.Natiivi.UiNakymat.Olemassa && Matkakirja.Natiivi.UiNakymat.Hae()?.Chat?.Auki == true;
+        }
+
+        void YksPois()
+        {
+            if (yksAjo != null) { o.StopCoroutine(yksAjo); yksAjo = null; }
+            kortti?.Piilota();
+        }
+
+        /// <summary>Kerronta alkoi: kohteen (tai "avaus") kuvat ajoitetaan ja näytetään soivan klipin ajan mukaan.</summary>
+        void YksAloita(string kohdeId, string teksti, AudioSource lahde, AudioClip klippi, string ajatUrl, double kestoS)
+        {
+            YksPois();
+            VarmistaYksityiskohdat();
+            if (string.IsNullOrEmpty(kohdeId) || string.IsNullOrEmpty(teksti) || lahde == null || klippi == null || Testi) return;
+            if (kohdeId.EndsWith("-lisaa")) kohdeId = kohdeId.Substring(0, kohdeId.Length - 6);
+            yksAjo = o.StartCoroutine(YksAja(kohdeId, teksti, lahde, klippi, ajatUrl, kestoS));
+        }
+
+        IEnumerator YksAja(string kohdeId, string teksti, AudioSource lahde, AudioClip klippi, string ajatUrl, double kestoS)
+        {
+            float raja = Time.unscaledTime + 3f;
+            while (yksHaussa && Time.unscaledTime < raja) yield return null;
+            if (yksKuvat == null || yksKuvat.Count == 0) yield break;
+            List<(int, double)> ajat = null;
+            if (!string.IsNullOrEmpty(ajatUrl))
+                using (var r = UnityWebRequest.Get(ajatUrl))
+                {
+                    r.timeout = 5;
+                    yield return r.SendWebRequest();
+                    if (r.result == UnityWebRequest.Result.Success) ajat = OpasYksityiskohdat.LueAjat(MiniJson.Jasenna(r.downloadHandler.text));
+                }
+            var lista = OpasYksityiskohdat.Ajoita(yksKuvat, kohdeId, teksti, kestoS, ajat);
+            if (lista.Count == 0) yield break;
+            o.Kirjaa($"opas: yksityiskohtakuvat {kohdeId}: {lista.Count} ({(ajat != null && ajat.Count > 0 ? "sana-ajat" : "osuus tekstistä")}) "
+                     + string.Join(", ", lista.ConvertAll(x => $"{x.AikaS:F1} s")));
+            kortti ??= new YksityiskohtaKortti(o);
+            foreach (var (kuva, t) in lista)
+            {
+                // Kuva lähtee ~0,35 s ennen ankkuria (lataus ja sisääntulo), kun klippi yhä soi.
+                while (lahde != null && lahde.clip == klippi && (lahde.isPlaying || tauolla) && lahde.time < t - 0.35f) yield return null;
+                if (lahde == null || lahde.clip != klippi || !lahde.isPlaying) yield break;
+                if (YksPeittaa() || kaupunki?.Kamera == null) continue;
+                kortti.Nayta(kaupunki.Kamera, kuva, YksPeittaa);
+            }
+            yksAjo = null;
+        }
+
         IEnumerator EsitysAvaus(string kaupunkiId)
         {
             o.Kirjaa($"opas: esitys alkaa ({kaupunkiId}): avaus{(OpastusKuultu ? "" : " + opastus (1. kyyti)")}{(kaupunkiId != null && esittelyPolut.ContainsKey(kaupunkiId) ? " [" + esittelyPolut[kaupunkiId] + "]" : "")}");
@@ -539,7 +625,8 @@ namespace Matkakirja.Natiivi
                     if (r.result == UnityWebRequest.Result.Success && MiniJson.Jasenna(r.downloadHandler.text) is Dictionary<string, object> j)
                         avaus = j.TryGetValue("avaus", out var a) ? a as Dictionary<string, object> : null;
                 }
-                if (avaus != null && avaus.TryGetValue("aani", out var au) && au is string url) yield return SoitaJaOdota(url, "avaus");
+                if (avaus != null && avaus.TryGetValue("aani", out var au) && au is string url)
+                    yield return SoitaJaOdota(url, "avaus", avaus.TryGetValue("teksti", out var at) ? at as string : null);
                 if (!OpastusKuultu && silmukka != null && Kaupunkitila)
                 {
                     string ourl = null;
@@ -561,7 +648,7 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Esityksen puhe (avaus, opastus) siltalauseiden kanavalla; odottaa loppuun (ei kertojaa päälle).</summary>
-        IEnumerator SoitaJaOdota(string url, string mika)
+        IEnumerator SoitaJaOdota(string url, string mika, string teksti = null)
         {
             if (silta == null || !Asetukset.Paalla(Kytkin.Kertoja)) yield break;
             using var p = UnityWebRequestMultimedia.GetAudioClip(url, AudioType.MPEG);
@@ -571,6 +658,8 @@ namespace Matkakirja.Natiivi
             if (p.result != UnityWebRequest.Result.Success || silmukka == null) { o.Kirjaa($"opas: esitys {mika} ei latautunut ({p.responseCode})"); yield break; }
             var klippi = DownloadHandlerAudioClip.GetContent(p);
             silta.clip = klippi; silta.volume = 1f; silta.Play();
+            // Avauksen sana-ajat avauksen äänen rinnalla (.mp3 → .ajat.json, Pelikoodari #4152); puuttuessa varapolku.
+            if (teksti != null) YksAloita("avaus", teksti, silta, klippi, url.EndsWith(".mp3") ? url.Substring(0, url.Length - 4) + ".ajat.json" : null, klippi.length);
             o.Kirjaa($"opas: esitys {mika} soi ({klippi.length:F1} s, lataus {Time.realtimeSinceStartup - t0:F1} s)");
             float loppu = Time.realtimeSinceStartup + klippi.length + 0.6f;
             while (Time.realtimeSinceStartup < loppu && silmukka != null && Kaupunkitila) yield return null;
@@ -918,7 +1007,7 @@ namespace Matkakirja.Natiivi
                 string S(string n) => jl.TryGetValue(n, out var x) ? x as string : null;
                 double D(string n, double o0) => jl.TryGetValue(n, out var x) && x != null && !(x is string) ? Convert.ToDouble(x, System.Globalization.CultureInfo.InvariantCulture) : o0;
                 kerroLisaa = new OpasKohde { Id = k.Id + "-lisaa", Nimi = k.Nimi, Alarivi = k.Alarivi, Teksti = kts.Trim(), Aani = S("kerro_lisaa_aani"),
-                    AaniPcm = S("kerro_lisaa_aani_pcm"), AaniTaajuus = (int)D("kerro_lisaa_aani_taajuus", 24000), KestoS = D("kerro_lisaa_kesto_s", 0),
+                    AaniPcm = S("kerro_lisaa_aani_pcm"), AaniAjat = S("kerro_lisaa_aani_ajat"), AaniTaajuus = (int)D("kerro_lisaa_aani_taajuus", 24000), KestoS = D("kerro_lisaa_kesto_s", 0),
                     Lat = k.Lat, Lon = k.Lon, KokoM = k.KokoM, KorkeusM = k.KorkeusM, Luokka = k.Luokka, Kuvat = k.Kuvat, Korostus = k.Korostus, Kierros = true };
                 kerroLisaaId = k.Id;
             }
@@ -954,6 +1043,7 @@ namespace Matkakirja.Natiivi
                 if (!System.IO.File.Exists(SallitutPolku)) return;
                 var lj = MiniJson.Jasenna(System.IO.File.ReadAllText(SallitutPolku));
                 LueEsittelyPolut(lj);
+                yksPolut = OpasYksityiskohdat.LuePolut(lj);
                 var l = OpasSallitut.Lue(lj);
                 if (l.Count > 0) { AsetaSallitut(l); Debug.Log($"MATKAKIRJA linssit: opas: sallitut kaupungit levyltä {l.Count}"); }
             }
@@ -1041,6 +1131,7 @@ namespace Matkakirja.Natiivi
             var teksti = r.downloadHandler.text;
             var hj = MiniJson.Jasenna(teksti);
             LueEsittelyPolut(hj);
+            yksPolut = OpasYksityiskohdat.LuePolut(hj);
             var l = OpasSallitut.Lue(hj);
             if (l.Count == 0 && sallitut != null && sallitut.Count > 0) { KirjaaS($"opas: sallitut-lista tyhjä vastauksessa, pidetään {sallitut.Count} edellistä"); yield break; }
             if (l.Count > 0) try { System.IO.File.WriteAllText(SallitutPolku, teksti); } catch (Exception) { }
@@ -1884,6 +1975,8 @@ namespace Matkakirja.Natiivi
             if (kertoja && !string.IsNullOrEmpty(avain) && klipit.TryGetValue(avain, out var klippi) && klippi != null && puhe != null)
             {
                 puhe.clip = klippi; puhe.volume = 1f; puhe.Play();
+                // PCM-virran klipin pituus ei ole kerronnan kesto: vastauksen kesto_s ensin (yksityiskohtakuvien varapolku).
+                if (!k.Kysymys) YksAloita(k.Id, k.Teksti, puhe, klippi, k.AaniAjat, k.KestoS > 0 && pcmVirrat.ContainsKey(avain) ? k.KestoS : klippi.length);
                 puhuu = true; y.Repliikki(true); puheAlkoi = Time.unscaledTime;
                 pelaajanToimi = -1f;   // kerronta alkoi: odotus-lausetta ei tarvita
                 pcmNyt = pcmVirrat.TryGetValue(avain, out var v) ? v : null;
@@ -2033,6 +2126,7 @@ namespace Matkakirja.Natiivi
 
         void Hiljenna()
         {
+            YksPois();
             pcmNyt = null;
             if (puhe != null && puhe.isPlaying) puhe.Stop();
             if (puhuu) { puhuu = false; y.Repliikki(false); }
@@ -2058,6 +2152,7 @@ namespace Matkakirja.Natiivi
 
         public void Sulje()
         {
+            YksPois(); kortti?.Sulje(); kortti = null;
             luotain?.Dispose(); luotain = null;
             OpasKorostusKuva.Piilota(true);
             KaupunkiYovalot.Kohde = null;
