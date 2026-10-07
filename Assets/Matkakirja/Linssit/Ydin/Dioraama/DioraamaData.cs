@@ -114,13 +114,16 @@ namespace Matkakirja.Linssit.Dioraama
         /// <summary>SKINNATTU MALLI (Siirtoseppä 2.10.2026, omistaja loki 59b9df127): malli3d.skin; null = nivelhahmo (Glb).</summary>
         public SkinMalli Skin;
         /// <summary>Natiivin ladattava glb: skinnattu, jos sellainen on, muuten nivelhahmo.</summary>
-        public string NatiiviGlb => !string.IsNullOrEmpty(Skin?.Glb) ? Skin.Glb : Glb;
+        public string NatiiviGlb => !string.IsNullOrEmpty(Skin?.Faceit) ? Skin.Faceit : !string.IsNullOrEmpty(Skin?.Glb) ? Skin.Glb : Glb;
     }
 
     /// <summary>henkilot[id].malli3d.skin (Linnanrakentaja 2.10.: rakenna.mjs lisaaBlender + js/dioraama/hahmot-skin.json).</summary>
     public sealed class SkinMalli
     {
         public string Glb;
+        /// <summary>FACEIT-glb (morph-kohteet; Linnanrakentaja v41, 7.10.2026): vain tämä koodi lukee sen. Vanhat appit lukevat Glb:n,
+        /// jossa ei ole morph-kohteita (TF 154: "morph ei tuettu" → hahmot puuttuivat, kun morphit olivat Glb:ssä). null = Glb.</summary>
+        public string Faceit;
         /// <summary>silmukka → GLB:n animations[].name; puuttuva tai null = samanniminen leike.</summary>
         public Dictionary<string, string> Leikkeet = new Dictionary<string, string>();
         /// <summary>Matka metreinä yhden kävelyleikkeen kierroksen aikana; 0 = luonnollinen nopeus.</summary>
@@ -1277,7 +1280,7 @@ namespace Matkakirja.Linssit.Dioraama
 
         /// <summary>Lukee henkilön valinnaisen malli3d-kentän (era 2b, kohta 4 "HENKILOT.malli3d"). Palauttaa
         /// null, jos lähteessä ei ole malli3d-oliota lainkaan (2D-atlashahmo jatkuu).</summary>
-        static Malli3d LueMalli3d(Dictionary<string, object> o)
+        internal static Malli3d LueMalli3d(Dictionary<string, object> o)
         {
             if (o == null) return null;
             var m = new Malli3d { Esine = MiniJson.Teksti(o, "esine"), Glb = MiniJson.Teksti(o, "glb") };
@@ -1294,7 +1297,7 @@ namespace Matkakirja.Linssit.Dioraama
             var skin = MiniJson.ObjektiTaiNull(MiniJson.Kentta(o, "skin"));
             if (skin != null && !string.IsNullOrEmpty(MiniJson.Teksti(skin, "glb")))
             {
-                m.Skin = new SkinMalli { Glb = MiniJson.Teksti(skin, "glb"), KavelySykliM = MiniJson.Luku(skin, "kavely_sykli_m") ?? 0,
+                m.Skin = new SkinMalli { Glb = MiniJson.Teksti(skin, "glb"), Faceit = MiniJson.Teksti(skin, "faceit"), KavelySykliM = MiniJson.Luku(skin, "kavely_sykli_m") ?? 0,
                     Skaala = MiniJson.Luku(skin, "skaala") ?? 1 };
                 foreach (var pari in MiniJson.ObjektiTaiNull(MiniJson.Kentta(skin, "leikkeet")) ?? new Dictionary<string, object>())
                     if (pari.Value is string leike) m.Skin.Leikkeet[pari.Key] = leike;

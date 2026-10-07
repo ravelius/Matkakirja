@@ -74,6 +74,16 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(osia >= 4, $"muodollisia primitiivejä {osia}");
         }
 
+        [Testi] static void FaceitGlbOmassaKentassa()
+        {
+            // v41 (7.10.): vanhat appit lukevat skin.glb:n (ei morphia), tämä koodi skin.faceitin, jos se on.
+            var m = DioraamaData.LueMalli3d((Dictionary<string, object>)MiniJson.Jasenna(
+                "{\"skin\": {\"glb\": \"blender/hahmot/vouti-1500.glb\", \"faceit\": \"blender/hahmot/vouti-1500-faceit.glb\"}}"));
+            Oleta.Tosi(m.NatiiviGlb == "blender/hahmot/vouti-1500-faceit.glb", "faceit-glb ensin: " + m.NatiiviGlb);
+            var vanha = DioraamaData.LueMalli3d((Dictionary<string, object>)MiniJson.Jasenna("{\"skin\": {\"glb\": \"blender/hahmot/vouti-1500.glb\"}}"));
+            Oleta.Tosi(vanha.NatiiviGlb == "blender/hahmot/vouti-1500.glb", "ilman faceitia skin.glb: " + vanha.NatiiviGlb);
+        }
+
         [Testi] static void KohdistuksenLukuMolemmistaMuodoista()
         {
             var oma = DioraamaData.LueKohdistus((Dictionary<string, object>)MiniJson.Jasenna("{\"merkit\": \"ab\", \"alut_s\": [0, 0.1], \"loput_s\": [0.1, 0.2]}"));
