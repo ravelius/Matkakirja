@@ -1,7 +1,7 @@
 {
   "rakennus": "olavinlinna",
-  "hash": "9c8b1d8727ebf48a",
-  "kansio": "dioraama/olavinlinna/blender/9c8b1d8727ebf48a/",
+  "hash": "e0a7f0ef78a37697",
+  "kansio": "dioraama/olavinlinna/blender/e0a7f0ef78a37697/",
   "tiedostot": [
     {
       "polku": "hahmot/apulainen-1500-faceit.glb",
@@ -124,6 +124,26 @@
       "tavuja": 2505524
     },
     {
+      "polku": "kavely/esine-arkku-komero.glb",
+      "sha256": "b796a77d3c75671b2d36e8abc161c9fb2cff7e26038103f07f137eb5bfed10e7",
+      "tavuja": 324800
+    },
+    {
+      "polku": "kavely/esine-avainnippu.glb",
+      "sha256": "fee28e0e5bf039792b4fe275cc6355e8541e04aa3041159300d1b711bd37f40f",
+      "tavuja": 233864
+    },
+    {
+      "polku": "kavely/esine-avainrengas.glb",
+      "sha256": "5fe19d4036cd68d4d1c90e7d96a92de8b0e25dfb610e7ceb33e9178a0e39c889",
+      "tavuja": 298488
+    },
+    {
+      "polku": "kavely/esine-esiliina.glb",
+      "sha256": "12b8e2bf81d078f5d1b46a1d3082ae7f5984aeecb84d4325f4d403523dec7824",
+      "tavuja": 227400
+    },
+    {
       "polku": "kavely/esine-hiilipannu.glb",
       "sha256": "a1ba07c67c48b5d01cb283e01e59994102caea693e6f331731d1b0223c3f75d0",
       "tavuja": 429800
@@ -142,6 +162,11 @@
       "polku": "kavely/esine-kauha.glb",
       "sha256": "b1106df74d4a614ae5e6bf7cc828b9e80736a6db8c88e11923ca1d47eba8c2a2",
       "tavuja": 68500
+    },
+    {
+      "polku": "kavely/esine-keittokulho.glb",
+      "sha256": "86de5259cc3db935be4a3386de159a9b674062ab2bfc76af996cd4fafd94eb59",
+      "tavuja": 210372
     },
     {
       "polku": "kavely/esine-kilpilaatta-sture.glb",
@@ -207,6 +232,11 @@
       "polku": "kavely/esine-luukku.glb",
       "sha256": "47a44032ffc0ddd0357f32f50294282b10a79e02f17daff23539b0816c5b7bee",
       "tavuja": 99032
+    },
+    {
+      "polku": "kavely/esine-myssy.glb",
+      "sha256": "eb69032a27ada2a8d15a6df7cd6266dbb896fead56b0fdcd34ab70261b66a3ba",
+      "tavuja": 71844
     },
     {
       "polku": "kavely/esine-nauris.glb",
@@ -290,8 +320,8 @@
     },
     {
       "polku": "kavely/merkit.json",
-      "sha256": "cb3c1c99fe4cb0596fd98d1a6bc84a96887f5278dfd636a5fbb2f42104a74f3b",
-      "tavuja": 42303
+      "sha256": "4402c66ec56278aa0ef9f0d0ee505dc18f2df292107dc93ac6676e11f1906325",
+      "tavuja": 42582
     },
     {
       "polku": "kavely/muurikaytava-kavely.glb",
