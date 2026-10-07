@@ -1,0 +1,1 @@
+Tervetuloa Krakovaan. Ylhäältä vanhakaupunki näyttää soikealta kattojen saarelta, jota vihreä puistorengas kehystää ja jonka keskellä avautuu valtava neliön muotoinen tori. Etelässä kalkkikivikukkula kohoaa Veikselin mutkaan. Kierros alkaa kukkulan laelta Wawelin linnasta, jossa Puolan kuninkaat asuivat vuosisatojen ajan.

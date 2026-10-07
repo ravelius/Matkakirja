@@ -1,0 +1,413 @@
+{
+ "kaupunki": "Krakova",
+ "id": "krakova",
+ "versio": 1,
+ "kohteet": [
+  {
+   "id": "Q18820",
+   "nimi": "Wawelin linna",
+   "kuvaus": "Puolan kuninkaiden linna",
+   "luokka": "linnoitus",
+   "koko_m": 300,
+   "teksti": "Wawelin linna kohoaa kalkkikivikukkulan laella Veikselin rannalla, ja ylhäältä sen keskeltä erottuu suuri sisäpiha, jota kaarikäytävät kehystävät. Kuningas Sigismund Vanha rakennutti goottilaisesta linnasta renessanssipalatsin 1500-luvun alkupuolella, ja työtä johtivat italialaiset arkkitehdit. Vuoden 1795 jaon jälkeen kukkula joutui Itävallalle, jonka sotilaat muuttivat linnan kasarmiksi ja muurasivat kaarikäytävät umpeen. Vasta vuonna 1905 keisari Frans Joosef veti joukkonsa pois. Kunnostus rahoitettiin keräyksellä, ja lahjoittajien nimet kaiverrettiin tiiliin, jotka näkyvät yhä muurissa pohjoisen portin lähellä.",
+   "lyhyt": "Wawelin linnan arvokkain aarre on kuningas Sigismund Augustin kuvakudoskokoelma, joka kudottiin Brysselissä 1500-luvun puolivälissä. Se on maailman suurin yhden hallitsijan tilaama kuvakudoskokoelma. Linna on Puolan suosituin taidemuseo, ja vuonna 2025 siellä kävi lähes kolme ja puoli miljoonaa ihmistä.",
+   "syventava": "Miksi linnasta tehtiin kasarmi?",
+   "kysymykset": [
+    "Ketkä kuninkaat asuivat Wawelin linnassa?",
+    "Miksi linnan rakensivat italialaiset arkkitehdit?",
+    "Mitä Wawelin kuvakudoksissa kuvataan?",
+    "Miten itävaltalaiset muuttivat linnaa?",
+    "Mitä linnassa voi nähdä nykyään?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Linna seisoo Wawelin kalkkikivikukkulalla Veikselin rannalla.",
+     "url": "kaanon:pelin-aineisto"
+    },
+    {
+     "vaite": "Kaarikäytävien kehystämä renessanssisisäpiha; Sigismund Vanha uudisti goottilaisen linnan renessanssipalatsiksi 1500-luvun alkupuoliskolla, rakentajina italialaiset Francesco Fiorentino ja Bartolommeo Berrecci.",
+     "url": "https://karnet.krakowculture.pl/en/17801-krakow-wawel-royal-castle"
+    },
+    {
+     "vaite": "Vuoden 1795 jaon jälkeen Itävalta teki kukkulasta kasarmin, kaarikäytävät muurattiin umpeen; Frans Joosef veti joukot pois 1905; kunnostus keräysvaroin, lahjoittajien nimet tiilissä pohjoisen portin lähellä.",
+     "url": "kaanon:pelin-aineisto"
+    },
+    {
+     "vaite": "Itävaltalaiset käyttivät linnaa kasarmina 1800-luvulla; puolalaiset ostivat sen takaisin 1905.",
+     "url": "https://culture.pl/en/node/7276"
+    },
+    {
+     "vaite": "Sigismund Augustin kuvakudokset tehtiin Brysselissä 1500-luvun puolivälissä; maailman suurin yhden hallitsijan tilaama kuvakudoskokoelma.",
+     "url": "https://karnet.krakowculture.pl/en/17801-krakow-wawel-royal-castle"
+    },
+    {
+     "vaite": "Vuonna 2025 yli 3,47 miljoonaa kävijää; Puolan vierailluin taidemuseo.",
+     "url": "https://en.wikipedia.org/wiki/Wawel_Castle"
+    }
+   ]
+  },
+  {
+   "id": "Q770631",
+   "nimi": "Rynek Główny (Krakovan pääaukio)",
+   "kuvaus": "Krakovan keskiaikainen päätori",
+   "luokka": "aukio",
+   "koko_m": 220,
+   "teksti": "Krakovan pääaukio, Rynek Główny, on ylhäältä lähes neliön muotoinen, noin kahdensadan metrin levyinen tori, jonka keskellä pitkä kangashalli jakaa sen kahtia. Tori suunniteltiin vuonna 1257, jolloin Krakova sai kaupunkioikeudet, ja sitä pidetään yhtenä Euroopan suurimmista keskiaikaisista toreista. Hallin vieressä kohoaa noin seitsemänkymmentä metriä korkea raatihuoneen torni, ainoa jäänne 1300-luvun raatihuoneesta. Hallin toisella puolella seisoo runoilija Adam Mickiewiczin muistomerkki, jonka saksalaiset tuhosivat vuonna 1940. Suurin osa sen pronssihahmoista löytyi sodan jälkeen hampurilaiselta romukasalta, ja muistomerkki palasi torille vuonna 1955.",
+   "lyhyt": "Krakovan pääaukion suosituin tapaamispaikka on Mickiewiczin muistomerkki, jonka juurelle krakovalaiset sopivat tapaamisia. Joka joulukuun ensimmäisenä torstaina muistomerkin ympärille kannetaan pahvista ja foliosta rakennettuja jouluseimiä kilpailuun, ja tapa on Unescon kulttuuriperintöluettelossa.",
+   "syventava": "Miksi Mickiewiczin muistomerkki tuhottiin?",
+   "kysymykset": [
+    "Miksi tori on niin suuri?",
+    "Kuka oli Adam Mickiewicz?",
+    "Mitä raatihuoneelle tapahtui?",
+    "Mitä torilla tapahtuu jouluna?",
+    "Mikä pieni kirkko seisoo torin kulmassa?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Tori suunniteltiin 1257, kun Krakova sai kaupunkioikeudet; noin 200 x 200 metriä; yksi Euroopan suurimmista keskiaikaisista toreista.",
+     "url": "https://en.wikipedia.org/wiki/Main_Square,_Krak%C3%B3w"
+    },
+    {
+     "vaite": "Noin 70 metriä korkea raatihuoneen torni on ainoa jäänne 1300-luvun raatihuoneesta; kangashalli torin keskellä.",
+     "url": "https://en.wikipedia.org/wiki/Main_Square,_Krak%C3%B3w"
+    },
+    {
+     "vaite": "Mickiewiczin muistomerkki paljastettiin 1898, natsit tuhosivat sen 17.8.1940, hahmot löytyivät Hampurin romukasalta 1946 ja muistomerkki palasi 1955; suosittu tapaamispaikka (pod Adasiem).",
+     "url": "https://en.wikipedia.org/wiki/Adam_Mickiewicz_Monument,_Krak%C3%B3w"
+    },
+    {
+     "vaite": "Szopka-seimet kannetaan joulukuun ensimmäisenä torstaina Mickiewiczin muistomerkille kilpailuun; Unesco 2018.",
+     "url": "kaanon:pelin-aineisto"
+    }
+   ]
+  },
+  {
+   "id": "Q1143171",
+   "nimi": "Mariankirkko",
+   "kuvaus": "Kaksitorninen goottilainen basilika",
+   "luokka": "kirkko",
+   "koko_m": 90,
+   "korkeus_m": 80,
+   "teksti": "Mariankirkko kohoaa pääaukion laidalla, ja ylhäältä sen kaksi tornia näkyvät selvästi eriparisina. Korkeampi, kahdeksankymmentä metriä korkea torni on ollut kaupungin vartiotorni, ja sen huipulta soitetaan joka tunti torvella hejnał-sävelmä, joka katkeaa kesken. Perimätiedon mukaan nuoli osui torvensoittajaan juuri, kun tämä varoitti kaupunkia hyökkäyksestä. Katkos toistetaan neljään ilmansuuntaan, ja keskipäivän soitto lähetetään suorana radiossa koko Puolaan. Tornissa päivystetään ympäri vuorokauden, joten soitto ei jää väliin yhtenäkään yönä.",
+   "lyhyt": "Mariankirkon pääalttarin takana on Veit Stossin veistämä alttarikaappi, maailman suurin goottilainen alttaritaulu. Se on kolmetoista metriä korkea ja yksitoista metriä leveä. Kuvanveistäjä työsti sitä vuodesta 1477 vuoteen 1489, ja siinä on yli kaksisataa maalattua ja kullattua hahmoa.",
+   "syventava": "Miksi torvisoitto katkeaa kesken?",
+   "kysymykset": [
+    "Miksi kirkon tornit ovat eri korkuiset?",
+    "Kuka soittaa torvea tornissa?",
+    "Mitä alttaritaulussa kuvataan?",
+    "Kuka oli Veit Stoss?",
+    "Kuuleeko torvisoiton yhä radiosta?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Tornit ovat eri korkuiset; korkeampi 80 metriä, vartiotorni; sieltä soitetaan joka tunti hejnał, joka katkeaa kesken; perimätiedon mukaan nuoli osui varoittavaan soittajaan; soitto neljään ilmansuuntaan; tornissa päivystetään ympäri vuorokauden.",
+     "url": "kaanon:pelin-aineisto"
+    },
+    {
+     "vaite": "Hejnał soitetaan korkeammasta tornista joka tunti; keskipäivän soitto lähetetään suorana Polskie Radio 1:ssä; legenda torvensoittajasta, johon osui ennen mongolihyökkäystä.",
+     "url": "https://structurae.net/en/structures/saint-mary-s-basilica-cracow"
+    },
+    {
+     "vaite": "Veit Stossin alttaritaulu tehtiin 1477–1489; 13 m korkea ja 11 m leveä; yli 200 maalattua ja kullattua hahmoa; maailman suurin goottilainen alttaritaulu.",
+     "url": "https://www.ncregister.com/cna/world-s-largest-gothic-altarpiece-dazzles-again-after-6-year-restoration-project"
+    }
+   ]
+  },
+  {
+   "id": "Q1072350",
+   "nimi": "Sukiennice (kauppahalli)",
+   "kuvaus": "Renessanssiajan kauppahalli torin keskellä",
+   "luokka": "rakennus",
+   "koko_m": 108,
+   "teksti": "Kangashalli Sukiennice on satakahdeksan metriä pitkä rakennus keskellä pääaukiota, ja ylhäältä sen kattoa kiertää koristeellinen renessanssikaide. Halli syntyi 1300-luvun alussa, kun kaksi kojuriviä katettiin yhteisen katon alle. Vuoden 1555 palon jälkeen se rakennettiin uudelleen renessanssityyliin, ja kaiteen irvinaamat veisti kuninkaan hovitaiteilija Santi Gucci. Krakova oli kauppareittien risteys: halliin tuotiin mausteita, silkkiä ja nahkaa, ja täältä lähti kangasta, lyijyä ja suolaa. Pohjakerroksen holvikäytävässä myydään yhä käsitöitä ja matkamuistoja.",
+   "lyhyt": "Kangashalli Sukiennicen yläkertaan perustettiin vuonna 1879 Puolan ensimmäinen kansallismuseo. Nykyään siellä on 1800-luvun puolalaisen maalaustaiteen galleria, jossa on esillä muun muassa Jan Matejkon, Henryk Siemiradzkin ja Józef Chełmońskin ja muiden aikansa mestarien teoksia.",
+   "syventava": "Kuka veisti katon irvinaamat?",
+   "kysymykset": [
+    "Mitä hallissa myytiin keskiajalla?",
+    "Miksi halli rakennettiin keskelle toria?",
+    "Kuka oli maalari Jan Matejko?",
+    "Mitä torin alla on maan sisässä?",
+    "Mitä hallista nykyään voi ostaa?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Halli on 108 metriä pitkä; syntyi 1300-luvun alussa, kun kaksi kojuriviä katettiin; rakennettiin renessanssityyliin vuoden 1555 palon jälkeen; pohjakerroksessa käsitöitä ja matkamuistoja.",
+     "url": "https://www.lonelyplanet.com/points-of-interest/cloth-hall/1115072"
+    },
+    {
+     "vaite": "Kaiteen irvinaamat teki Santi Gucci, Sigismund Augustin hovitaiteilija.",
+     "url": "https://www.krakow-info.com/1clothall.htm"
+    },
+    {
+     "vaite": "Halliin tuotiin mausteita, silkkiä ja nahkaa, ja täältä lähti kangasta, lyijyä ja suolaa; Krakova kauppareittien risteyksessä.",
+     "url": "kaanon:pelin-aineisto"
+    },
+    {
+     "vaite": "Vuonna 1879 yläkertaan perustettiin Puolan ensimmäinen kansallismuseo; nykyään 1800-luvun puolalaisen taiteen galleria, mm. Matejko, Siemiradzki, Chełmoński.",
+     "url": "https://www.krakow-info.com/1clothall.htm"
+    }
+   ]
+  },
+  {
+   "id": "Q638519",
+   "nimi": "Wawelin katedraali",
+   "kuvaus": "Puolan kuninkaiden kruunauskirkko",
+   "luokka": "kirkko",
+   "koko_m": 90,
+   "teksti": "Wawelin katedraalin kattojen keskeltä erottuu ylhäältä kultainen kupoli, joka kuuluu Sigismundin kappeliin. Sen rakensi italialainen arkkitehti Bartolomeo Berrecci 1500-luvun alussa Jagellonien suvun hautakappeliksi. Nykyinen goottilainen kirkko vihittiin vuonna 1364, ja siinä kruunattiin ja haudattiin Puolan kuninkaat. Kryptoihin on haudattu myös runoilijat Adam Mickiewicz ja Juliusz Słowacki sekä marsalkka Józef Piłsudski. Pääoven vieressä roikkuu ketjussa valtavia luita, joita on keskiajalta asti pidetty Wawelin lohikäärmeen luina, vaikka ne lienevät valaan tai mammutin.",
+   "lyhyt": "Wawelin katedraalin tornissa riippuu vuonna 1520 valettu Sigismundin kello, joka painaa lähes kolmetoista tonnia. Sitä soitetaan vain juhlapyhinä ja kansallisina merkkipäivinä, ja heilauttamiseen tarvitaan kaksitoista kellonsoittajaa. Kello on yksi Puolan kansallisista symboleista.",
+   "syventava": "Kenen luut roikkuvat oven vieressä?",
+   "kysymykset": [
+    "Ketkä kuninkaat on haudattu katedraaliin?",
+    "Miksi kappelin kupoli on kullattu?",
+    "Milloin Sigismundin kelloa soitetaan?",
+    "Miksi runoilijat haudattiin kuninkaiden joukkoon?",
+    "Mitä katedraali merkitsi paavi Johannes Paavalille?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Sigismundin kappelin kullattu kupoli; Bartolomeo Berrecci rakensi kappelin 1519–1533 Jagellonien hautakappeliksi.",
+     "url": "https://en.wikipedia.org/wiki/Sigismund%27s_Chapel"
+    },
+    {
+     "vaite": "Goottilainen katedraali vihittiin 1364; perinteinen kruunaus- ja hautauskirkko.",
+     "url": "https://www.pilgrimaps.com/wawel-cathedral/"
+    },
+    {
+     "vaite": "Kryptoihin on haudattu Mickiewicz (1890), Słowacki (1927) ja Piłsudski (1936).",
+     "url": "https://www.katedra-wawelska.pl/en/historia-katedry/katedra-wieszczow-i-bohaterow-narodowych/"
+    },
+    {
+     "vaite": "Sisäänkäynnin vieressä ketjussa riippuvia luita on keskiajalta pidetty lohikäärmeen luina; todennäköisesti valaan, mammutin tai sarvikuonon.",
+     "url": "https://www.atlasobscura.com/places/the-bones-of-the-wawel-dragon"
+    },
+    {
+     "vaite": "Sigismundin kello valettiin 1520, painaa lähes 13 tonnia, sitä heilauttaa 12 soittajaa käsin; soitetaan juhlapyhinä ja kansallisina merkkipäivinä; kansallinen symboli.",
+     "url": "https://en.wikipedia.org/wiki/The_Sigismund_Bell"
+    }
+   ]
+  },
+  {
+   "id": "Q807309",
+   "nimi": "Barbaakani",
+   "kuvaus": "Pyöreä goottilainen tiililinnake",
+   "luokka": "linnoitus",
+   "koko_m": 30,
+   "teksti": "Barbakaani on pyöreä tiililinnake Florianin portin edustalla, ja ylhäältä se näyttää paksulta renkaalta, jonka muurin harjalla kohoaa seitsemän pientä tornia. Kuningas Juhana Albrecht rakennutti sen 1490-luvun lopulla, kun hän oli kärsinyt tappion moldavialaisille. Kolmen metrin paksuisissa muureissa on sata kolmekymmentä ampuma-aukkoa. Aikoinaan linnaketta ympäröi vallihauta, ja nostosilta ja muurien suojaama käytävä yhdistivät sen porttiin. Barbakaani oli etuvartio, joka suojasi kaupungin pääporttia, ja sitä pidetään nykyään yhtenä Euroopan parhaiten säilyneistä barbakaaneista.",
+   "lyhyt": "Barbakaani välttyi purkamiselta 1800-luvun alussa, kun lähes kaikki Krakovan linnoitukset hajotettiin ja niiden paikalle tehtiin Plantyn puisto. Halkaisijaltaan linnake on runsaat kaksikymmentäneljä metriä, ja se suojasi aikanaan kuninkaallisen tien alkupäätä.",
+   "syventava": "Miten Barbakaani yhdistettiin porttiin?",
+   "kysymykset": [
+    "Miksi linnake rakennettiin pyöreäksi?",
+    "Ketä vastaan Krakovaa puolustettiin?",
+    "Miksi linnaketta ei purettu muurien mukana?",
+    "Mitä Barbakaanissa on nykyään?",
+    "Mihin vallihauta katosi?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Pyöreä tiililinnake, kolmen metrin muurit, 130 ampuma-aukkoa ja seitsemän tornia.",
+     "url": "kaanon:pelin-aineisto"
+    },
+    {
+     "vaite": "Rakennettiin 1498–1499 kuningas Juhana I Albrechtin käskystä tämän kärsittyä tappion moldavialaisille Cosminin metsän taistelussa.",
+     "url": "https://www.historyhit.com/locations/the-barbakan"
+    },
+    {
+     "vaite": "Vallihauta, halkaisija 24,4 m, seitsemän tornia, suojasi Florianin porttia ja kuninkaallista tietä; yhdistetty porttiin nostosillalla ja muurien suojaamalla käytävällä; yksi Euroopan parhaiten säilyneistä barbakaaneista; säilyi, kun linnoitukset purettiin 1800-luvun alussa ja tilalle tehtiin Plantyn puisto.",
+     "url": "https://www.lonelyplanet.com/points-of-interest/barbican/419955"
+    }
+   ]
+  },
+  {
+   "id": "Q1363724",
+   "nimi": "Florianin portti",
+   "kuvaus": "Vanhankaupungin ainoa säilynyt portti",
+   "luokka": "torni",
+   "koko_m": 40,
+   "korkeus_m": 34,
+   "teksti": "Florianin portti on kolmekymmentäkolme ja puoli metriä korkea goottilainen porttitorni vanhankaupungin pohjoislaidalla, ja ylhäältä sen kummallekin puolelle jatkuu lyhyt pätkä vanhaa kaupunginmuuria. Keskiajalla kaupunkiin johti kahdeksan porttia, mutta vain tämä säilyi, kun muurit purettiin 1800-luvulla. Yliopiston professori Feliks Radwański sai vuonna 1817 kaupungin senaatin säästämään portin ja sen edustan Barbakaanin. Portilta alkoi kuninkaallinen tie, jota hallitsijat, kruunajaiskulkueet ja ulkomaiset lähettiläät kulkivat pääaukion kautta Wawelin linnaan.",
+   "lyhyt": "Florianin portin viereen jäi pätkä keskiaikaista kaupunginmuuria ja kaksi pienempää puolustustornia. Muurin kylkeen ripustetaan nykyään maalauksia, joita taiteilijat myyvät ohikulkijoille, ja portin alta Florianinkatu johtaa suoraan pääaukiolle, samaa reittiä kuin kruunajaiskulkueet aikanaan.",
+   "syventava": "Kuka pelasti portin purkamiselta?",
+   "kysymykset": [
+    "Miksi Krakovan muurit purettiin?",
+    "Kuka oli pyhä Florian?",
+    "Mitä kuninkaallista tietä pitkin kuljettiin?",
+    "Kuka maalauksia muurilla myy?",
+    "Miksi juuri tämä portti säästettiin?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Porttitorni on 33,5 metriä korkea; ainoa kahdeksasta keskiaikaisesta portista, jota ei purettu 1800-luvulla; viereinen muuri ja kaksi pienempää tornia säilyivät ja niillä on myytävää taidetta; kuninkaallisen tien lähtöpiste.",
+     "url": "https://en.wikipedia.org/wiki/St._Florian%27s_Gate"
+    },
+    {
+     "vaite": "Vuonna 1817 professori Feliks Radwański sai Krakovan tasavallan senaatin säästämään Florianin portin ja Barbakaanin.",
+     "url": "https://en.wikipedia.org/wiki/Planty_Park_(Krak%C3%B3w)"
+    },
+    {
+     "vaite": "Kuninkaallista tietä kulkivat hallitsijat, lähettiläät ja kruunajaiskulkueet portilta torin kautta Waweliin; Florianinkatu portilta torille.",
+     "url": "https://renesans.krakow.pl/en/content/21/royal-route-krakow"
+    }
+   ]
+  },
+  {
+   "id": "Q93706",
+   "nimi": "Kazimierz",
+   "kuvaus": "Historiallinen juutalaiskaupunginosa",
+   "luokka": "muu",
+   "koko_m": 1200,
+   "teksti": "Kaupunginosa Kazimierz levittäytyy vanhankaupungin eteläpuolella, ja ylhäältä sen kapeiden katujen keskeltä erottuu leveä, aukiomainen Szeroka-katu. Kuningas Kasimir Suuri julisti alueen vuonna 1335 uudeksi kaupungiksi, joka sai hänen nimensä, ja itsenäinen se oli 1800-luvun alkuun asti. Kaupunginosan koillisosa oli vuosisatojen ajan juutalaisten asuinaluetta, jossa puolalainen ja juutalainen kulttuuri elivät rinnakkain. Szeroka-kadulla seisoo Puolan vanhin synagoga, joka on toiminut juutalaisen historian ja kulttuurin museona vuodesta 1961. Samalla kadulla Steven Spielberg kuvasi kohtauksia elokuvaan Schindlerin lista.",
+   "lyhyt": "Kaupunginosa Kazimierzin Uuden torin keskellä on pyöreä halli, jonka ikkunoista myydään zapiekankaa, pitkää kuumaa voileipää, johon saa valita täytteet. Kaupunginosan Vanha synagoga on yksi maailman vain kahdesta säilyneestä goottilaisesta synagogasta.",
+   "syventava": "Mitä Kazimierzissa kuvattiin elokuvaan?",
+   "kysymykset": [
+    "Miksi Kazimierz oli aikoinaan oma kaupunkinsa?",
+    "Mitä Kazimierzin juutalaisille tapahtui sodassa?",
+    "Miksi Spielberg kuvasi elokuvansa täällä?",
+    "Mikä on zapiekanka?",
+    "Missä Veikselin haara ennen virtasi?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Kasimir Suuri julisti 27.3.1335 alueen uudeksi kaupungiksi nimeltä Kazimierz; itsenäinen kaupunki 1800-luvun alkuun; vanhankaupungin eteläpuolella; koillisosa oli historiallisesti juutalainen.",
+     "url": "https://en.wikipedia.org/wiki/Kazimierz"
+    },
+    {
+     "vaite": "Vanha synagoga Szeroka-kadulla on Puolan vanhin synagoga, museona vuodesta 1961, yksi kahdesta säilyneestä goottilaisesta synagogasta.",
+     "url": "https://en.wikipedia.org/wiki/Old_Synagogue_(Krak%C3%B3w)"
+    },
+    {
+     "vaite": "Schindlerin listaa kuvattiin Szeroka-kadulla.",
+     "url": "https://www.absolutetours.com/blog/?p=292"
+    },
+    {
+     "vaite": "Uuden torin pyöreän hallin ikkunoista myydään zapiekankaa, pitkää patonkivoileipää valittavin täyttein.",
+     "url": "https://www.civitatis.com/en/krakow/krakow-jewish-quarter-free-tour/?aid=127"
+    }
+   ]
+  },
+  {
+   "id": "Q919596",
+   "nimi": "Collegium Maius",
+   "kuvaus": "Puolan vanhin yliopistorakennus",
+   "luokka": "rakennus",
+   "koko_m": 60,
+   "teksti": "Yliopistotalo Collegium Maius on Puolan vanhin yliopistorakennus, ja ylhäältä sen keskeltä erottuu kaarikäytävien ympäröimä sisäpiha. Pihan kellosta tulee joka toinen tunti esiin puisia hahmoja, kuten kuningatar Jadwiga, ja kello soittaa Gaudeamus igitur -sävelmää. Nikolaus Kopernikus opiskeli täällä 1490-luvulla. Rakennuksen museossa on vuoden 1510 tienoilla tehty Jagellonien maapallo, yksi ensimmäisistä, joihin Amerikka on piirretty. Isoisäsi kertoo nähneensä yliopistossa vanhan maapallon, jossa Amerikka oli merkitty Intian eteläpuolelle ja vieressä luki: vastikään löydetty.",
+   "lyhyt": null,
+   "syventava": "Miksi Amerikka on maapallolla väärässä paikassa?",
+   "kysymykset": [
+    "Mitä Kopernikus opiskeli täällä?",
+    "Ketkä puiset hahmot kellosta tulevat esiin?",
+    "Miksi Amerikka oli maapallossa väärässä kohdassa?",
+    "Kuka perusti Krakovan yliopiston?",
+    "Opiskellaanko rakennuksessa vielä nykyään?"
+   ],
+   "isoisa": true,
+   "lahteet": [
+    {
+     "vaite": "Puolan vanhin yliopistorakennus, myöhäisgoottilainen kaarikäytävien sisäpiha; kellosta tulee joka toinen tunti esiin puisia hahmoja, mm. kuningatar Jadwiga, ja soi Gaudeamus igitur; Kopernikus opiskeli täällä 1491–1495.",
+     "url": "https://www.inyourpocket.com/poland/krakow/articles/krakows-jagiellonian-university"
+    },
+    {
+     "vaite": "Jagellonien maapallo noin vuodelta 1510, yksi ensimmäisistä Amerikan esittävistä; nimellä AMERICA NOVITER REPERTA ja väärin Intian valtameren kohdalla eteläisellä pallonpuoliskolla; Collegium Maiusin kirjastossa 1600-luvulta, nykyään yliopiston museossa Collegium Maiusissa.",
+     "url": "https://www.elysee.fr/en/maison-elysee/2024/10/14/a-diplomatic-gift-the-globus-jagellonicus"
+    },
+    {
+     "vaite": "Isoisä näki Krakovan yliopistossa vanhan maapallon, jossa Intian eteläpuolelle oli merkitty Amerikka ja vieressä luki vastikään löydetty.",
+     "url": "kaanon:isoisan-paivakirja"
+    }
+   ]
+  },
+  {
+   "id": "Q9338697",
+   "nimi": "Wawelin lohikäärme",
+   "kuvaus": "Tulta puhaltava pronssilohikäärme",
+   "luokka": "muu",
+   "koko_m": 20,
+   "teksti": "Wawelin lohikäärme on kuuden metrin korkuinen pronssiveistos Wawelin kukkulan juurella Veikselin rannalla, lohikäärmeen luolan suulla. Pedolla on seitsemän päätä: kuusi pienempää kurkottaa pitkien kaulojen päässä kuin käsivarsina. Kuvanveistäjä Bronisław Chromyn teos asennettiin vuonna 1972, ja se puhaltaa oikeaa kaasuliekkiä säännöllisin väliajoin. Tarun mukaan pedon kaatoi suutarinoppipoika, joka jätti luolan eteen rikillä täytetyn lampaan. Lohikäärme ahmi syötin, joi janoonsa Veikseliä niin kauan, että halkesi, ja kuningas antoi pojalle tyttärensä.",
+   "lyhyt": null,
+   "syventava": "Miten suutarinoppipoika kaatoi lohikäärmeen?",
+   "kysymykset": [
+    "Miten lohikäärme puhaltaa tulta?",
+    "Kuka veisti lohikäärmeen?",
+    "Miksi lohikäärmeellä on seitsemän päätä?",
+    "Voiko lohikäärmeen luolaan mennä sisälle?",
+    "Mistä lohikäärmetaru on peräisin?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Bronisław Chromyn kuusimetrinen pronssiveistos kalkkikivilohkareella lohikäärmeen luolan suulla Wawelin juurella Veikselin rannalla, asennettu 1972; seitsemän päätä, joista kuusi pitkien kaulojen päässä; puhaltaa kaasuliekkiä säännöllisesti.",
+     "url": "https://en.wikipedia.org/wiki/Wawel_Dragon_(statue)"
+    },
+    {
+     "vaite": "Tarun mukaan suutarinoppipoika jätti luolan eteen rikillä täytetyn lampaan; lohikäärme joi Veikseliä kunnes halkesi; kuningas antoi pojalle tyttärensä.",
+     "url": "kaanon:pelin-aineisto"
+    }
+   ]
+  },
+  {
+   "id": "Q1945780",
+   "nimi": "Plantyn puisto",
+   "kuvaus": "Vanhankaupungin kiertävä puistorengas",
+   "luokka": "puisto",
+   "koko_m": 1400,
+   "teksti": "Plantyn puisto kiertää vanhankaupungin vihreänä, noin neljän kilometrin mittaisena renkaana, ja ylhäältä se piirtää tarkasti keskiaikaisten muurien linjan. Puisto tehtiin 1820-luvulla purettujen muurien ja täytetyn vallihaudan paikalle, ja sen pääsuunnittelija oli yliopiston professori Feliks Radwański. Alkuaikoina puiston aitoihin maalattiin valkoisia ja vaaleansinisiä raitoja, kaupungin värejä. Pinta-alaa on kaksikymmentäyksi hehtaaria, ja puiston kahdeksaan puutarhaan mahtuu yli kaksikymmentä muistomerkkiä. Niiden joukossa ovat Nikolaus Kopernikuksen, maalari Jan Matejkon ja kuningatar Jadwigan patsaat.",
+   "lyhyt": null,
+   "syventava": "Miksi muurit purettiin puiston tieltä?",
+   "kysymykset": [
+    "Miksi Krakovan muurit purettiin puiston tieltä?",
+    "Kuka oli Feliks Radwański?",
+    "Mikä on puiston vanhin puu?",
+    "Mitä vallihaudalle tapahtui?",
+    "Kenen patsaita puistossa on?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Noin 4 km pitkä, 21 hehtaaria, tehty 1822–1830 purettujen muurien ja vallihaudan paikalle; kahdeksan puutarhaa; pääsuunnittelija Feliks Radwański; aidat maalattiin kaupungin väreillä valkoisiksi ja vaaleansinisiksi raidoiksi.",
+     "url": "https://en.wikipedia.org/wiki/Planty_Park_(Krak%C3%B3w)"
+    },
+    {
+     "vaite": "Puistossa yli kaksikymmentä muistomerkkiä, mm. Kopernikus, Jan Matejko, kuningatar Jadwiga ja Vladislav Jagiello.",
+     "url": "https://krakowmonamour.com/?p=145"
+    }
+   ]
+  },
+  {
+   "id": "Q641398",
+   "nimi": "Kościuszkon kumpu",
+   "kuvaus": "Kansallissankarin muistokumpu",
+   "luokka": "muu",
+   "koko_m": 250,
+   "teksti": "Kansallissankarin muistoksi kasattu Kościuszkon kumpu kohoaa kaupungin länsilaidalla Sikornikin mäellä. Kumpu on kolmekymmentäneljä metriä korkea, ja sitä kasasivat vapaaehtoiset kolmen vuoden ajan, kunnes se valmistui vuonna 1823. Tadeusz Kościuszko oli kuollut vuonna 1817, ja kumpuun upotettiin uurnissa multaa taistelukentiltä, joilla hän oli taistellut, kuten Racławicesta ja Maciejowicesta. Vuonna 1926 mukaan tuotiin maata myös Yhdysvaltain vapaussodan taistelukentiltä. Itävaltalaiset rakensivat myöhemmin kummun ympärille linnoituksen, ja kirkkaalla säällä huipulta näkyvät Tatra-vuoret.",
+   "lyhyt": null,
+   "syventava": "Mistä kumpuun tuotu multa on peräisin?",
+   "kysymykset": [
+    "Kuka oli Tadeusz Kościuszko?",
+    "Miksi muistomerkiksi kasattiin kumpu?",
+    "Miksi kumpuun tuotiin maata Amerikasta?",
+    "Mitä kummun ympärillä olevassa linnoituksessa on?",
+    "Kuinka kauas kummun huipulta näkee?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Kumpu Sikornikin mäellä Zwierzyniecin alueella länsi-Krakovassa; 34 metriä korkea; vapaaehtoiset kasasivat sen 1820–1823; Kościuszko kuoli 1817; multaa mm. Racławicen ja Maciejowicen taistelukentiltä; myöhemmin Yhdysvaltain vapaussodan taistelukentiltä; Itävalta ympäröi kummun linnoituksella.",
+     "url": "https://en.wikipedia.org/wiki/Ko%C5%9Bciuszko_Mound"
+    },
+    {
+     "vaite": "Uurnissa taistelukenttien multaa; amerikkalainen maa 1926; Tatra-vuoret näkyvät kirkkaalla säällä.",
+     "url": "https://www.historyhit.com/locations/kosciuszko-mound/"
+    }
+   ]
+  }
+ ]
+}
