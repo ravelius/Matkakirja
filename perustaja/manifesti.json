@@ -1,17 +1,88 @@
 {
-  "title": "Erik Akselinpoika Tott — havainnekuva",
-  "date": "2026-10-06",
+  "title": "Erik Akselinpoika Tott — fotorealistinen havainnekuva",
+  "date": "2026-10-07",
   "file": "perustaja/erik-akselinpoika-tott.png",
   "width": 1024,
   "height": 1024,
   "mode": "RGB",
   "icc": "sRGB",
-  "sha256": "2810adf383b35c0bf4be7ea58a0e4707bf56cd072b06ecaeeb8df200dc992622",
-  "bytes": 2105703,
-  "method": "Sisäänrakennettu image_gen, kokonaan uusi generointi; 1254x1254 alkuperäisestä 1024x1024 PNG-vienti.",
-  "sourceMail": "posti/fable-codex-olavinlinna-perustaja-20261006.md",
-  "sourceCommit": "1f50128c24faba4c39396974020b5452baf4aad5",
+  "sha256": "80371b1fcf89736741b17e17db42a51eff03b1952bb6d5bcab81b94efc246c20",
+  "bytes": 1510293,
+  "method": "Sisäänrakennettu image_gen, kokonaan uusi fotorealistinen generointi; tekninen1024×1024sRGBPNG-vienti.",
+  "sourceMail": "posti/sisaltokirjuri-codex-uusinta-fotorealistinen-tott-ja-kappelin-puhujakuvat-20261007.md",
+  "sourceCommit": "88166805075d12d723f9eae9cd7f3766839b5ed4",
+  "sourceBlob": "c13c44ac26b951acce8367da2c4a1876dc5304a8",
+  "onlySectionA": true,
+  "speakerCancellationCommit": "359f69c476eb484862a49243e604fe4e8748531a",
+  "styleCorrectionCommit": "9ec0418c925144f71ea5efa719e3e44a812bd2ea",
+  "generationPrompt": "Use case: photorealistic-natural. Produce ONE entirely NEW opaque square photograph-like historical portrait for a game, requested1024×1024PNG. Imagined Erik Axelsson Tott at about60years old in the1470s, Olavinlinna's founder and commander of Vyborg. His facial features are wholly invented, not based on any documented portrait, statue, monument, living person or recognisable actor. No reference image is being edited or copied.\nA believable older northern-European man with an individual irregular weathered face, natural asymmetry, real skin pores, age lines, thoughtful eyes, greying brown hair and a restrained short grey-brown beard. Dignified calm purposeful expression, not a villain or caricature. Full head, neck, shoulders and upper chest. Eye-level camera, head level, three-quarter turn toward the RIGHT of image, gaze horizontally toward an offscreen castle rather than at viewer. Leave generous margins around the entire head and shoulders.\nPlausible1470s Nordic noble clothes: dark heavy wool houppelande/robe, modest brown fur collar, simple knight's gold chain composed of plain links without pendant, emblem or medallion. Real wool/fur/metal textures, no fantasy armour or modern tailoring, no crown, weapon, heraldry, insignia, writing or props.\nLooks genuinely photographed on a full-frame camera with an85mm portrait lens, subtle natural depth of field and realistic exposure. Warm soft candle/window-dusk illumination from left, a little fill, deep gentle shadows, subdued brown/cream palette. Dark soft warm-brown background all the way to all four edges, no identifiable room or castle. No pre-faded edges, circular vignette, frame or border.\nAll surfaces photographic, NOT painting, oil/gouache brushwork, drawing, illustration, paper, CGI/plastic skin, cinematic HDR, oversaturation or beauty retouch. No text, letters, numbers, labels, logos, watermarks. Entirely opaque.",
   "historicalSource": "https://suomenkansallismuseo.fi/kohde/olavinlinna/olavinlinnan-historia/",
-  "interpretation": "Kuvitteellinen historiallinen havainnekuva; kasvonpiirteet eivät perustu varmennettuun aikalaismuotokuvaan. Asu toimeksiannon mukainen.",
-  "gameIntegrationVerified": false
+  "interpretation": "Keksityt kasvonpiirteet, eivät varmennettu aikalaismuotokuva, patsas tai näyttelijäviite. Viipurin käskynhaltija1475.",
+  "kuvateksti": "Olavinlinnan perustaja ja Viipurin käskynhaltija Erik Akselinpoika Tott. Havainnekuva.",
+  "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+  "lahde": "Tekoälyllä tuotettu havainnekuva.",
+  "sourceNativeSize": [
+    1254,
+    1254
+  ],
+  "gameIntegrationVerified": false,
+  "editorAcceptance": "pending",
+  "parentVisualReview": {
+    "nativeAnd1024Viewed": true,
+    "preview480Viewed": true,
+    "photorealistic": true,
+    "eyeLevelAndThreeQuarterRight": true,
+    "wholeHeadInsideFrame": true,
+    "fictionalFaceNoHumanReferenceUsed": true,
+    "noCrownWeaponEmblemTextFrame": true,
+    "periodDressSourcePlausible": true,
+    "opaqueRGBsRGBAndTextMetadataVerified": true,
+    "approvedForDelivery": true
+  },
+  "R2": {
+    "file": "erik-akselinpoika-tott.png",
+    "r2Key": "julisteet/olavinlinna-perustaja/20261007/erik-akselinpoika-tott.png",
+    "url": "https://media.matkakirja.app/julisteet/olavinlinna-perustaja/20261007/erik-akselinpoika-tott.png",
+    "sha256": "80371b1fcf89736741b17e17db42a51eff03b1952bb6d5bcab81b94efc246c20",
+    "bytes": 1510293,
+    "http": 200,
+    "mime": "image/png",
+    "cors": "https://matkakirja.app",
+    "byteExactReadback": true
+  },
+  "repositoryVerification": {
+    "nodeTests": {
+      "pass": 5274,
+      "fail": 0,
+      "skipped": 19,
+      "total": 5293
+    },
+    "otherChecks": [
+      {
+        "tool": "tarkista-kaksoisavaimet",
+        "exitCode": 0
+      },
+      {
+        "tool": "tarkista-niputus",
+        "exitCode": 0
+      },
+      {
+        "tool": "tarkista-savukkeet",
+        "exitCode": 0
+      },
+      {
+        "tool": "tarkista-nimiolimitys",
+        "exitCode": 1
+      },
+      {
+        "tool": "build-standalone",
+        "exitCode": 0
+      },
+      {
+        "tool": "source-report",
+        "exitCode": 0
+      }
+    ],
+    "nameOverlap": "Pohjan Naundorff/Delft-havainto, kirjattu jo alkuperäiseenPR4050raporttiin; kuva ei muuta nimiöaineistoa."
+  }
 }

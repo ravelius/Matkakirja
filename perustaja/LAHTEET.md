@@ -1,11 +1,11 @@
-# Erik Akselinpoika Tott — havainnekuva
+# Erik Akselinpoika Tott — fotorealistinen havainnekuva
 
-Tilaus: `posti/fable-codex-olavinlinna-perustaja-20261006.md`, commit `1f50128c24faba4c39396974020b5452baf4aad5`. Omistajan tilaus välittyi Päätoimittajalta 6.10.2026.
+Uusintatilaus: posti/sisaltokirjuri-codex-uusinta-fotorealistinen-tott-ja-kappelin-puhujakuvat-20261007.md, osio A, commit88166805075d12d723f9eae9cd7f3766839b5ed4. Puhujakuvien osio B peruttiin commitissa359f69c476eb484862a49243e604fe4e8748531a. Omistajan fotorealismiohje ja lisäys9ec0418c on sovellettu.
 
-Suomen kansallismuseon [Olavinlinnan historia](https://suomenkansallismuseo.fi/kohde/olavinlinna/olavinlinnan-historia/) vahvistaa linnan perustamisen vuonna 1475 sekä tanskalaissyntyisen ritari Erik Akselinpoika Tottin roolin Viipurin käskynhaltijana. Lähde tarkistettu 6.10.2026.
+Suomen kansallismuseon [Olavinlinnan historia](https://suomenkansallismuseo.fi/kohde/olavinlinna/olavinlinnan-historia/) on luettu7.10.2026: tanskalaissyntyinen ritari Erik Akselinpoika Tott perusti linnan1475 ja oli silloin Viipurin käskynhaltija. Kuvatekstissä käytetään tätä titteliä.
 
-Kuva on oma tekoälyllä tuotettu historiallinen havainnekuva Matkakirjalle. Kasvonpiirteet ovat taiteellinen tulkinta, eivät varmennettu aikalaismuotokuva. Noin 60 vuoden ikä, 1470-luvun tumma pohjoismainen ylimysasu, turkiskaulus ja tunnukseton kultaketju noudattavat toimeksiantoa. Ei kruunua, aseita, vaakunaa tai tekstiä.
+Kasvonpiirteet on keksitty eikä henkilöllä ole käytetty muotokuva-,patsas-,näyttelijä- tai muuta kasvoviitettä. Kuva ei ole varmennettu aikalaismuotokuva. Noin60vuoden ikä,1470-luvun tumma pohjoismainen ylimysasu,turkiskaulus ja tunnukseton kultaketju noudattavat toimeksiantoa. Ei kruunua,aseita,vaakunoita tai tekstiä.
 
-Työkalu: Codexin sisäänrakennettu OpenAI image_gen. Maalauksellista tyyliä ja kynttilänvaloa ohjasi Matkakirjan oma uusi kappalaisen kuva; Tottin henkilöhahmo generoitiin erilliseksi. Ei kolmannen osapuolen kuvia tuotantokuvan osana. Alkuperäinen 1254×1254 generointi säilytetään tuotantohakemistossa. Vienti: 1024×1024, sRGB, RGB PNG. Vain koon ja tiedostomuodon tekninen vienti.
+Työkalu: Codexin sisäänrakennettu image_gen, yksi kokonaan uusi fotorealistinen generointi; ei maalauksen tai piirroksen pintaa eikä vanhan kuvan muokkausta. Alkuperäinen1254×1254 säilytetty paikallisessa tuotantokansiossa; tekninen vienti1024×1024sRGB RGB PNG. Description ja Source: Havainnekuva. Tekoälyllä tuotettu, ei valokuva. Vanhat ja uudet alkuperäiset säilyvät.
 
-Päätoimittaja tarkistaa, Linnanrakentaja kytkee perustajaa mainitsevaan linnan esittelyn noin viiden sekunnin kohtaan. Toimitus ei tarkoita varmennettua pelikytkentää tai julkaisua.
+Natiivi,toimituskuva ja480pxesikatselu katsottu. R2-takaisinluku on tavutarkka; manifesti sisältää URL,SHA-256,mitat,promptin ja lähteet. Linnanrakentaja kytkee perustajaa mainitsevan esittelyn noin5sekunnin kohtaan,Päätoimittaja katselmoi. Kytkentää tai julkaisua ei ole varmennettu tässä työssä; PR4050jää auki,eikä Codex mergeä sitä.
