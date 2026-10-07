@@ -449,3 +449,5 @@ Edellinen luovutus on `viesti-siirtoseppa-luovutus-20261002.md` (5.10. osiot 02.
 - 16.06: juna 162 -runko (Natiiviseppä) baaa24445 → 3bc7680c1 yhdistetty: historia-juna162 @ a7adab9f (LinssiOhjain-ristiriita ratkaistu), 835/835.
   OMISTAJA 16.0x: roolit eivät tee omia iOS/iPad/Mac-käännöksiä; haaraan riittää unity-tarkistus + automaattiset testit; simukäännös vain
   epäselvään vikaan, ilmoitus Päätoimittajalle etukäteen.
+- 16.12: pelattava pala lukee kiinnitetyn v44g-paketin (fd7d3e32, DioraamaSovitin.PelattavaPalaPaketti) peilinä, tuotanto ei muutu (1898cec3).
+  Juna 162 SHA → ef6b092d (historia-juna162). LR v44g: laiturin luiska + reunaseinät, keittiön tynnyrit siirretty. Seuraavaksi E2 (poiminta + heitto).
