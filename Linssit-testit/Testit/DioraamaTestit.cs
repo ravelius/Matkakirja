@@ -1094,6 +1094,25 @@ namespace Matkakirja.Linssit.Testit
             Lahella(0, Math.IEEERemainder(lyLoppu.Atsimuutti - yleis.Atsimuutti, 360), "lyhyt kaari päättyy yleisnäkymään", 0.05);
         }
 
+        // Savu 156 (Laitetestaaja 7.10.): huonevalinta saapumiskaaren aikana katkaisee tulevan kertojan kierroksen ja vie huoneeseen.
+        [Testi] static void HuonevalintaSaapumisenAikanaKatkaiseeKierroksen()
+        {
+            string json = KeittioFixture.Replace("\"yleiskamera\": {",
+                "\"saapuminen\": {\"alku\": {\"atsimuutti\": 200, \"etaisyys\": 600, \"korkeus\": 8}, \"kesto\": 10, \"lyhyt\": 6, \"loppu\": \"kertoja\"},\n" +
+                "  \"kertoja\": {\"jaksot\": [{\"id\": \"j1\", \"teksti\": \"Yksi.\", \"kesto_s\": 3, \"kamera\": {\"kohde\": [0, 0, 0], \"atsimuutti\": 230, \"korkeus\": 10, \"etaisyys\": 230}}]},\n  \"yleiskamera\": {");
+            var rak = DioraamaData.Lue(json);
+            string tila = rak.Tilat[0].Id;
+            var l = new PoikkileikkausLinssi();
+            l.Avaa(rak, 0, false);
+            Oleta.Tosi(l.KertojaKaynnissa(10.5), "ilman valintaa kierros alkaa kaaren lopussa");
+            l.Kohdista(tila, 5);
+            Oleta.Tosi(!l.KertojaKaynnissa(10.5) && !l.KertojaKaynnissa(12), "valinta kaaren aikana → ei kierrosta");
+            Oleta.Sama(tila, l.NakymaHetkella(20, pysty: false).KohdeTila);
+            // Uusinta (↻) valinnan jälkeen toimii.
+            l.KertojaUudelleen(30);
+            Oleta.Tosi(l.KertojaKaynnissa(30.5), "uusinta käynnistyy valinnan jälkeen");
+        }
+
         // Jakson nimet ja kuva (Linnanrakentaja 6.10.2026): nimet[{teksti, paikka, alku_s, kesto_s?}], kuva{tiedosto, alku_s, ...}.
         [Testi] static void KertojanJaksonNimetJaKuva()
         {
