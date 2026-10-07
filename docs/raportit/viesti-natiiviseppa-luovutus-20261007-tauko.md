@@ -10,6 +10,9 @@ ja natiiviseppa-tila-20261003.md. Kytke Remote Control päälle. Kerro Julkaisij
 Juna-SHA:t vain PÄÄTOIMITTAJAN kuittauksella; käännökset Julkaisijan NYT-viestillä. EI savua/Laitetestaajaa/stillejä ennen junaa
 (omistaja 15.5x), EI roolien omia käännöksiä (16.0x), enintään 2 junaa/pv ellei omistaja pyydä.
 
+**TF 163 + MAC TF 163 LADATTU 23.06/23.15 (iOS 37678690889, Mac 37679671606; BUILD 163 = 062bb439).** Seuraavaksi T7-simusarja (kohta 7),
+sitten juna 164 BUILD 163:n päälle (kohta 6).
+
 **KORJAUSJUNA TÄNÄ ILTANA (Päätoimittaja 22.1x)** — VIE-VALMISTELU TEHTY 22.56: BUILD 163 = proto master 062bb439af8764e00edcafb9f6acac78e085c215
 (runko d78cd0e00 = 79462cbae + LS1 d3d243595 avaustauko 2,3 s; käännös c0c4d9de5, app lokit/natiiviseppa-app-163-d78cd0e0;
 juna/b13 → d78cd0e0; aiemmat BUILD 163 -mergit ecb11b78 ja 9457e8da jäivät historiaan, ei julkaistu). PÄÄTOIMITTAJA KIRJOITTAA
