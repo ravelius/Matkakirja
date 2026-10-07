@@ -1,8 +1,9 @@
 // HISTORIAMOOTTORI: TIETOKERROS UNITYSSA (Siirtoseppä 7.10.2026; ydin Matkakirja.Linssit.Seikkailu.Tietokerros). Lataa
 // media.matkakirja.app/seikkailu/<rakennus>/tietokerros-v1/tietokerros.json, päättelee pelaajan huoneen (1 vene, 2 laituri ja portti,
 // 3 pikkupiha ja keittiö, 4 Kirkkotorni ja portaat, 5 kappeli) kävelyosista ja korkeudesta, avaa huoneen kortit ja muistaa ne
-// (PlayerPrefs). Pelin aikana ei tekstiä: Natiivi-UI:n kutsu SeikkailuTapit.TietokorttiAvautui(lyhyt) (heijastuksella, esim. Pulun
-// reunakuvan hehku); lopussa (nousun jälkeen) SeikkailuTapit.NaytaTietokerros(otsikot, tekstit, lyhyet) avaa kortiston.
+// (PlayerPrefs). Pelin aikana ei tekstiä: Natiivi-UI:n kutsu SeikkailuTapit.TietokorttiAvautui(lyhyt) (heijastuksella; Pulun ele
+// "utelias"); lopussa (nousun jälkeen) SeikkailuTapit.NaytaTietokerros(otsikot, tekstit, lyhyet): Pulu ilahtuu, ja kortisto (KORTTI-pohja)
+// aukeaa, kun pelaaja napauttaa Pulua.
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -73,7 +74,7 @@ namespace Matkakirja.Natiivi
         {
             Talleta();
             kirjaa?.Invoke($"seikkailu: tietokortti avautui {k.Numero} {k.Lyhyt}");
-            Kutsu("TietokorttiAvautui", k.Lyhyt);
+            Kutsu("TietokorttiAvautui", k.Lyhyt ?? "");   // null yksinään params-taulukkona = null-taulukko
         }
 
         /// <summary>Pystyleikkeen loppu: loppukortit auki ja kortisto Natiivi-UI:lle.</summary>
