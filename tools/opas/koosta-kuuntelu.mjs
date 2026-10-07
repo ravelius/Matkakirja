@@ -3,9 +3,10 @@
  * Omistajan kuuntelukooste (Päätoimittaja 7.10.2026): kaupungeittain yksi mp3 kierrosjärjestyksessä (pysähdys +
  * kierrosversio), sitten muut kohteet; 1,5 s tauot; sisällysluettelo aikoineen (.txt). Tehdään tasoitetuista PCM-
  * mastereista (tee-esittelyaanet.mjs: <tyo>/master/<sha>-t.wav) ja pakataan mp3:ksi kerran.
- * Käyttö: node tools/opas/koosta-kuuntelu.mjs --tyo <aanet-kansio> --pohjat <kansio> <esittely.json> [...]
+ * --avaukset <kansio>: kaupungin avaus alkuun (tee-aanet-kohdistuksella.mjs: <kansio>/master/<id>-avaus-t.wav).
+ * Käyttö: node tools/opas/koosta-kuuntelu.mjs --tyo <aanet-kansio> --pohjat <kansio> [--avaukset <kansio>] <esittely.json> [...]
  */
-import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
+import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { execFileSync } from 'node:child_process';
 import { vuosiluvutSanoiksi } from '../pollo/puhesanat.js';
@@ -23,6 +24,12 @@ for (const f of tiedostot) {
   const jarjestys = [...pohja.kierros, ...e.kohteet.map((k) => k.id).filter((q) => !pohja.kierros.includes(q))];
   const palat = [], rivit = [`${e.kaupunki} — kuuntelukooste (kierros reittijärjestyksessä, sitten muut kohteet)`, ''];
   let t = 0;
+  const avaus = arg('avaukset') && join(arg('avaukset'), 'master', `${e.id}-avaus-t.wav`);
+  if (avaus && existsSync(avaus)) {
+    const data = pcm(avaus);
+    rivit.push(`${aika(t).padStart(5)}  Kaupungin avaus`);
+    palat.push(data, tauko); t += data.length / 2 / SR + 1.5;
+  }
   jarjestys.forEach((q, i) => {
     const k = e.kohteet.find((x) => x.id === q);
     if (!k) return;
