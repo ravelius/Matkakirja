@@ -301,3 +301,9 @@ Brotli (haara linnanrakentaja-zstd, worktree olemassa), akustiikka #3979 (Steam 
   onko Fogg-hahmoa jo (hahmot/ tai linna-hahmot/), muuten UBC-pohjasta 1873-asuun. (1) v45: kappelin koillisikkuna leivottuna,
   portinvartija-1500, keittiön esine:savipurkki/kauha/nauris/lautanen → rakennus.json esineet{} glb:t (esineet-v1) + heitettava: true.
   (2) törmäys/kamera-korjaukset ja (3) vene v2 Siirtosepän ajojen jälkeen.
+- 7.10. 14.3x: v44c PEILISSÄ c8a45400570196fe (blender 16e04782): FOGG pelaajaksi (_valmiit/linna-hahmot/pelaaja-v1: pelaaja_skin.py,
+  fogg.glb/json, LAHTEET; rakenna.mjs `pelaaja` ← js/dioraama/pelaaja.json) + laiturin kansi kavely.py:n laituri_kansi(). Venemerkit
+  nyt kavely.py:ssä (VENE). TYÖN ALLA v44d: kavely.py pikkupiha() (kiveys) + käytävien kivikatto (V1-stilli 5), keittio-g102.js
+  seinät taka: 'kivi' (V1-stillit 3–4), kappelin ikkuna → paistot.sh (2k, muisti > 10 Gt) → v44: tilat/valot kappeli + keittio-g102
+  + ASTC + kavely v2 → vie-blender → dispatch → Siirtosepälle. GIZA JONOSSA (odottaa omistajaa): LS1 mittasi LOD1/2 väritekstuurin
+  67–70 % mustaa (leivonta aukkoinen: cage/ray + täyttö), helmat liian vaaleat/keltaiset (harmaammaksi + reunahäivytys).
