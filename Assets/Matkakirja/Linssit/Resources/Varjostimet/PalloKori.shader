@@ -1,9 +1,9 @@
 // KUUMAILMAPALLON KORI, PAIKKAMERKKI (Päätoimittaja 7.10. 09.1x; Linnanrakentajan malli korvaa): korin punos, nahkareunus ja
 // köydet overlay-kameralle. Valaistus kiinteästä yläviistosta (kori on kameran lapsi), kuvio uv:sta: _Kuvio 0 = sileä (nahka),
-// 1 = punos (vinot säikeet), 2 = köysi (kierre). Ei varjoja eikä läpinäkyvyyttä.
+// 1 = punos (vinot säikeet), 2 = köysi (kierre), 3 = Linnanrakentajan mallin baseColor-tekstuuri (_MainTex). Ei varjoja.
 Shader "Matkakirja/Linssit/PalloKori"
 {
-    Properties { _Vari ("Väri", Color) = (0.55, 0.40, 0.24, 1) _Kuvio ("Kuvio", Float) = 1 _Toisto ("Toisto", Vector) = (40, 4, 0, 0) }
+    Properties { _Vari ("Väri", Color) = (0.55, 0.40, 0.24, 1) _Kuvio ("Kuvio", Float) = 1 _Toisto ("Toisto", Vector) = (40, 4, 0, 0) _MainTex ("Väri", 2D) = "white" {} }
     SubShader
     {
         Tags { "RenderType" = "Opaque" "RenderPipeline" = "UniversalPipeline" "Queue" = "Geometry" }
@@ -18,6 +18,7 @@ Shader "Matkakirja/Linssit/PalloKori"
             CBUFFER_START(UnityPerMaterial)
             half4 _Vari; float _Kuvio; float4 _Toisto;
             CBUFFER_END
+            TEXTURE2D(_MainTex); SAMPLER(sampler_MainTex);
             struct A { float4 p : POSITION; float3 n : NORMAL; float2 uv : TEXCOORD0; };
             struct V { float4 p : SV_POSITION; float3 n : TEXCOORD0; float2 uv : TEXCOORD1; };
             V vert(A a) { V v; v.p = TransformObjectToHClip(a.p.xyz); v.n = TransformObjectToWorldNormal(a.n); v.uv = a.uv * _Toisto.xy; return v; }
@@ -26,6 +27,7 @@ Shader "Matkakirja/Linssit/PalloKori"
                 float3 n = normalize(v.n);
                 half valo = 0.55h + 0.45h * saturate(dot(n, normalize(float3(-0.3, 0.8, -0.5))));
                 half k = 1.0h;
+                if (_Kuvio > 2.5) return half4(SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex, v.uv).rgb * _Vari.rgb * valo, 1.0h);
                 if (_Kuvio > 0.5 && _Kuvio < 1.5)
                 {
                     // Punos: kaksi vinoa säiettä vuorotellen, säikeiden väliin tumma rako.

@@ -5,7 +5,10 @@
 // Liike: Ydin KoriLiike (keinunta ~1° / 5 s, jousi vastasuuntaan kiihdytyksissä, köydet viiveellä); kaupunki ja horisontti
 // pysyvät vakaina, koska vain overlay-kameran lapset kääntyvät. Kiihtyvyys kaupunkikameran paikasta (2. derivaatta,
 // alipäästö); origon siirto (siirtymä toiseen paikkaan) nollaa historian.
-// PAIKKAMERKKI: laatikot ja sylinterit PalloKori-varjostimella, kunnes Linnanrakentajan GLB (kori + 2 köyttä) tulee.
+// MALLI: Linnanrakentajan kori_nakyma.glb (_valmiit/ilmapallo-v1/kori; solmut kori_etureuna, koysi_v, koysi_o, kamera (0; 1,5; 0)
+// katse −Z): Documents/pallokori/kori_nakyma.glb (testi) tai R2 MalliOsoite, välimuisti persistentDataPath. Luetaan DioraamaGlb:llä
+// (taustasäie), baseColor-tekstuuri PalloKori-varjostimen _Kuvio 3:lla. Kunnes malli on ladattu, paikkamerkki (laatikot ja
+// sylinterit). Korin solmu keinuu omasta pivotistaan (köysien kiinnitysten keskeltä) ja köysisolmut omistaan (alapää).
 // ÄÄNET (Päätoimittaja 7.10. 09.2x): ylhäällä lähes hiljaista; korin narina ja köysien kiristys säästeliäästi vain nopeissa
 // siirtymissä (kiihtyvyys yli NarinaKiihtyvyys, vähintään NarinaValiS välein), nousun alussa lyhyt liekin humahdus ja laskun
 // alussa kankaan huokaus. Kaupungin äänimaisema korkeuden mukaan Siirtosepän KaupunkiAanimaisemaSoitin.Kamera-Funcilla
@@ -13,6 +16,9 @@
 // omistajan kokeilulupa) ja kirjasto-* (PD/CC0; lähteet proto-3d/_lahteet/pallokori-aanet/*/LAHTEET.md); A/B `opas kori aanet
 // eleven|kirjasto` (puuttuva kirjastoääni → eleven).
 // A/B: komento `opas kori 0|1`.
+using System.IO;
+using System.Threading.Tasks;
+using Matkakirja.Linssit.Dioraama;
 using Matkakirja.Linssit.Kierros;
 using UnityEngine;
 using UnityEngine.Rendering;
@@ -29,6 +35,11 @@ namespace Matkakirja.Natiivi
         public static string AaniSarja = "eleven";
         public const float NarinaKiihtyvyys = 1.2f, NarinaValiS = 9f, PystyRaja = 1.8f, PystyValiS = 6f, Voimakkuus = 0.55f;
         AudioSource aani;
+        public const string MalliOsoite = "https://media.matkakirja.app/kartta/ilmapallo/v1/kori_nakyma.glb";
+        static GlbMalli malli; static bool malliHaussa;
+        Transform malliJuuri, malliKori; readonly System.Collections.Generic.List<Transform> malliKoydet = new System.Collections.Generic.List<Transform>();
+        readonly System.Collections.Generic.List<Quaternion> malliKoysiAlku = new System.Collections.Generic.List<Quaternion>();
+        Quaternion malliKoriAlku;
         float viimeNarina = -100f, viimeLiekki = -100f, viimeHuokaus = -100f;
         int pystySuunta;
         /// <summary>Etäisyys kamerasta korin etureunaan (m); näkymäkulma ratkaisee koon.</summary>
@@ -74,6 +85,7 @@ namespace Matkakirja.Natiivi
             if (overlay != null) Object.Destroy(overlay.gameObject);
             foreach (var m in new[] { punos, nahka, koysi }) if (m != null) Object.Destroy(m);
             KytkeAanimaisema(false);
+            malliJuuri = null; malliKori = null; malliKoydet.Clear(); malliKoysiAlku.Clear();
             overlay = null; juuri = null; perus = null; punos = nahka = koysi = null; fov = aspect = -1; aani = null;
         }
 
@@ -146,6 +158,8 @@ namespace Matkakirja.Natiivi
         {
             foreach (Transform t in koriKaanto) Object.Destroy(t.gameObject);
             foreach (Transform t in koysiKaanto) Object.Destroy(t.gameObject);
+            if (malli != null) { if (malliJuuri == null) RakennaMalli(); return; }
+            if (!malliHaussa && Matkakirja.Natiivi.LinssiOhjain.Instanssi != null) Matkakirja.Natiivi.LinssiOhjain.Instanssi.StartCoroutine(HaeMalli());
             float h = EtaisyysM * Mathf.Tan(fov * 0.5f * Mathf.Deg2Rad), w = h * aspect;
             float yla = -h + 2 * h * ReunaOsuus, nahkaK = 0.05f * h;
             Laatikko(koriKaanto, punos, new Vector3(0, (yla - nahkaK + -1.6f * h) * 0.5f, EtaisyysM + 0.02f), new Vector3(2.6f * w, (yla - nahkaK) + 1.6f * h, 0.04f));
@@ -156,6 +170,97 @@ namespace Matkakirja.Natiivi
                 var ylos = new Vector3(s * 0.62f * w, 2.2f * h, EtaisyysM + 0.6f);
                 Koysi(koysiKaanto, ala, ylos, 0.012f * h);
             }
+        }
+
+        /// <summary>GLB levyltä (Documents → välimuisti) tai R2:sta; jäsennys taustasäikeellä. Saapuessa näkymä rakennetaan uudelleen.</summary>
+        System.Collections.IEnumerator HaeMalli()
+        {
+            malliHaussa = true;
+            string testi = Path.Combine(Application.persistentDataPath, "pallokori", "kori_nakyma.glb");
+            string valimuisti = Path.Combine(Application.persistentDataPath, "kuvat", "pallokori-v1.glb");
+            byte[] glb = null;
+            foreach (var p in new[] { testi, valimuisti }) if (glb == null && File.Exists(p)) try { glb = File.ReadAllBytes(p); } catch (System.Exception) { }
+            if (glb == null)
+            {
+                using var r = UnityEngine.Networking.UnityWebRequest.Get(MalliOsoite);
+                r.timeout = 30;
+                yield return r.SendWebRequest();
+                if (r.result == UnityEngine.Networking.UnityWebRequest.Result.Success)
+                {
+                    glb = r.downloadHandler.data;
+                    try { Directory.CreateDirectory(Path.GetDirectoryName(valimuisti)); File.WriteAllBytes(valimuisti, glb); } catch (System.Exception) { }
+                }
+                else Debug.Log($"MATKAKIRJA kaupunki: kori: malli ei latautunut ({r.responseCode}), paikkamerkki");
+            }
+            if (glb == null) { malliHaussa = false; yield break; }
+            var tyo = Task.Run(() => DioraamaGlb.Lue(glb, true));
+            while (!tyo.IsCompleted) yield return null;
+            malliHaussa = false;
+            if (tyo.IsFaulted) { Debug.Log("MATKAKIRJA kaupunki: kori: GLB virhe " + tyo.Exception?.GetBaseException().Message); yield break; }
+            malli = tyo.Result;
+            Debug.Log($"MATKAKIRJA kaupunki: kori: malli {malli.Solmut.Count} solmua, {malli.Kuvat.Count} kuvaa");
+            fov = -1;   // seuraava kehys rakentaa mallin
+        }
+
+        void RakennaMalli()
+        {
+            malliJuuri = new GameObject("Korimalli") { layer = Kerros }.transform;
+            malliJuuri.SetParent(juuri, false);
+            malliJuuri.localPosition = new Vector3(0, -1.5f, 0);   // mallin kamera (0; 1,5; 0) = overlay-kamera
+            var tekstuurit = new System.Collections.Generic.Dictionary<int, Texture2D>();
+            var solmut = new Transform[malli.Solmut.Count];
+            for (int i = 0; i < malli.Solmut.Count; i++)
+            {
+                var sm = malli.Solmut[i];
+                var go = new GameObject(sm.Nimi ?? "solmu") { layer = Kerros };
+                solmut[i] = go.transform;
+                go.transform.localPosition = new Vector3(sm.Translation[0], sm.Translation[1], sm.Translation[2]);
+                go.transform.localRotation = new Quaternion(sm.Rotation[0], sm.Rotation[1], sm.Rotation[2], sm.Rotation[3]);
+                go.transform.localScale = new Vector3(sm.Scale[0], sm.Scale[1], sm.Scale[2]);
+                foreach (var osa in sm.Osat) Osa(go.transform, osa, tekstuurit);
+            }
+            for (int i = 0; i < solmut.Length; i++)
+            {
+                int v = malli.Solmut[i].Vanhempi;
+                solmut[i].SetParent(v >= 0 ? solmut[v] : malliJuuri, false);
+                var nimi = malli.Solmut[i].Nimi ?? "";
+                if (nimi == "kori_etureuna") { malliKori = solmut[i]; malliKoriAlku = solmut[i].localRotation; }
+                else if (nimi.StartsWith("koysi")) { malliKoydet.Add(solmut[i]); malliKoysiAlku.Add(solmut[i].localRotation); }
+            }
+        }
+
+        void Osa(Transform v, GlbOsa osa, System.Collections.Generic.Dictionary<int, Texture2D> tekstuurit)
+        {
+            int n = (osa.Paikat?.Length ?? 0) / 3;
+            if (n == 0) return;
+            var paikat = new Vector3[n]; var normaalit = new Vector3[n]; var uv = new Vector2[n];
+            for (int i = 0; i < n; i++)
+            {
+                paikat[i] = new Vector3(osa.Paikat[i * 3], osa.Paikat[i * 3 + 1], osa.Paikat[i * 3 + 2]);
+                normaalit[i] = osa.Normaalit != null && osa.Normaalit.Length >= (i + 1) * 3 ? new Vector3(osa.Normaalit[i * 3], osa.Normaalit[i * 3 + 1], osa.Normaalit[i * 3 + 2]) : Vector3.up;
+                uv[i] = osa.Uv != null && osa.Uv.Length >= (i + 1) * 2 ? new Vector2(osa.Uv[i * 2], 1f - osa.Uv[i * 2 + 1]) : Vector2.zero;
+            }
+            var mesh = new Mesh { name = "Kori " + osa.Pinta, indexFormat = IndexFormat.UInt32 };
+            mesh.SetVertices(paikat); mesh.SetNormals(normaalit); mesh.SetUVs(0, uv);
+            mesh.SetTriangles(osa.Kolmiot ?? System.Array.Empty<int>(), 0);
+            mesh.RecalculateBounds();
+            var go = new GameObject("osa " + osa.Pinta) { layer = Kerros };
+            go.transform.SetParent(v, false);
+            go.AddComponent<MeshFilter>().sharedMesh = mesh;
+            var r = go.AddComponent<MeshRenderer>(); r.shadowCastingMode = ShadowCastingMode.Off; r.receiveShadows = false;
+            var m = Materiaali(Shader.Find("Matkakirja/Linssit/PalloKori"), Color.white, 3, new Vector4(1, 1, 0, 0));
+            if (osa.Kuva >= 0 && osa.Kuva < malli.Kuvat.Count && malli.Kuvat[osa.Kuva] != null)
+            {
+                if (!tekstuurit.TryGetValue(osa.Kuva, out var t))
+                {
+                    t = new Texture2D(2, 2, TextureFormat.RGBA32, true);
+                    t.LoadImage(malli.Kuvat[osa.Kuva], true);
+                    tekstuurit[osa.Kuva] = t;
+                }
+                m.SetTexture("_MainTex", t);
+            }
+            else if (osa.Vari != null && osa.Vari.Length >= 3) { m.SetFloat("_Kuvio", 0); m.SetColor("_Vari", new Color(osa.Vari[0], osa.Vari[1], osa.Vari[2]).gamma); }
+            r.sharedMaterial = m;
         }
 
         void Laatikko(Transform v, Material m, Vector3 p, Vector3 koko)
@@ -219,8 +324,11 @@ namespace Matkakirja.Natiivi
             float aEteen = Vector3.Dot(kiihtyvyys, eteen), aOikea = Vector3.Dot(kiihtyvyys, oikea);
             liike.Paivita(dt, aEteen, aOikea);
             Aanet(new Vector2(aEteen, aOikea).magnitude, v.y);
-            koriKaanto.localRotation = Quaternion.Euler((float)liike.Nyokkays, 0, -(float)liike.Kallistus);
-            koysiKaanto.localRotation = Quaternion.Euler((float)liike.KoysiNyokkays, 0, -(float)liike.KoysiKallistus);
+            var kKori = Quaternion.Euler((float)liike.Nyokkays, 0, -(float)liike.Kallistus);
+            var kKoysi = Quaternion.Euler((float)liike.KoysiNyokkays, 0, -(float)liike.KoysiKallistus);
+            koriKaanto.localRotation = kKori; koysiKaanto.localRotation = kKoysi;
+            if (malliKori != null) malliKori.localRotation = kKori * malliKoriAlku;
+            for (int i = 0; i < malliKoydet.Count; i++) if (malliKoydet[i] != null) malliKoydet[i].localRotation = kKoysi * malliKoysiAlku[i];
         }
     }
 }
