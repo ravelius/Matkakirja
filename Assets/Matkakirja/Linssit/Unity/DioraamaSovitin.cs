@@ -32,7 +32,23 @@ namespace Matkakirja.Natiivi
 {
     public sealed class DioraamaSovitin : ILinssi
     {
-        public const string AmpariJuuri = "https://media.matkakirja.app/dioraama/olavinlinna/";
+        /// <summary>
+        /// HISTORIAMOOTTORI H0 (Siirtoseppä 7.10.2026; omistajan linja 08.4x: Olavinlinna, Kielletty kaupunki ja Giza seikkailuina):
+        /// rakennuksen ämpärijuuri rakennus-id:stä (ennen vakio …/olavinlinna/). Id asetetaan ennen linssin avausta
+        /// (AsetaRakennus tai "poikki rakennus &lt;id&gt;"); osoitin, paketti, äänet ja levyvälimuisti seuraavat sitä. Oletus olavinlinna.
+        /// </summary>
+        public static string RakennusId { get; private set; } = Oletusrakennus;
+        public const string Oletusrakennus = "olavinlinna";
+        public static string AmpariJuuri => MediaJuuri + "/dioraama/" + RakennusId + "/";
+        /// <summary>Valitse avattava rakennus (vain pienet kirjaimet, numerot ja väliviiva; muu → oletus). Avoin linssi ei vaihdu
+        /// kesken (vaikuttaa seuraavaan avaukseen).</summary>
+        public static bool AsetaRakennus(string id)
+        {
+            bool ok = !string.IsNullOrEmpty(id) && id.Length <= 64;
+            if (ok) foreach (char c in id) if (!(c >= 'a' && c <= 'z' || c >= '0' && c <= '9' || c == '-')) { ok = false; break; }
+            RakennusId = ok ? id : Oletusrakennus;
+            return ok;
+        }
 
         /// <summary>Auki oleva linssi (Natiivi-UI:n paneeli, DioraamaTaulu), muuten null.</summary>
         public static PoikkileikkausLinssi Linssi { get; private set; }
@@ -69,7 +85,10 @@ namespace Matkakirja.Natiivi
         // (PlayerPrefs), jottei palkki täyty, kun myöhemmät osat (tilat, hahmot, ympäristö) vasta jonoutuvat. Ei koskaan taaksepäin.
         static DioraamaSovitin aktiivinen;
         static float latausOsuus;
-        const string LatausAvain = "linna-latauksen-tavut", KestoAvain = "linna-latauksen-kesto";
+        // Rakennuskohtaiset avaimet (H0): Olavinlinnan avaimet ennallaan (pelaajien tallennukset), muille rakennuksille ":<id>".
+        static string RakennusAvain(string a) => RakennusId == Oletusrakennus ? a : a + ":" + RakennusId;
+        static string LatausAvain => RakennusAvain("linna-latauksen-tavut");
+        static string KestoAvain => RakennusAvain("linna-latauksen-kesto");
         static float latausAika, latausTavut, latausVaiheet, latausLokiAika;
         public static float LatausOsuus()
         {
@@ -623,8 +642,8 @@ namespace Matkakirja.Natiivi
             get
             {
                 string n = Linssi?.Rakennus?.Nimi;
-                // Ennen rakennus.jsonia linssin oma lyhyt kuvaus ("Olavinlinna aukileikattuna") → ensimmäinen sana.
-                if (string.IsNullOrEmpty(n)) n = (PoikkileikkausLinssi.PoikkiTiedot.Lyhyt ?? "").Split(' ')[0];
+                // Ennen rakennus.jsonia linssin oma lyhyt kuvaus ("Olavinlinna aukileikattuna") → ensimmäinen sana; muu rakennus: id.
+                if (string.IsNullOrEmpty(n)) n = RakennusId == Oletusrakennus ? (PoikkileikkausLinssi.PoikkiTiedot.Lyhyt ?? "").Split(' ')[0] : RakennusId.Replace('-', ' ');
                 return n.ToUpperInvariant();
             }
         }
@@ -779,7 +798,7 @@ namespace Matkakirja.Natiivi
             viimeEdistys = Time.realtimeSinceStartup;
         }
 
-        const string SaapuminenAvain = "dioraama-saapuminen-nahty";
+        static string SaapuminenAvain => RakennusAvain("dioraama-saapuminen-nahty");
         /// <summary>Elävä linna: toisella käynnillä saapumiskaari on lyhyt (Saapuminen.Lyhyt), kehittäjä nollaa
         /// "poikki saapuminen alusta".</summary>
         static bool SaapuminenNahty
@@ -1093,6 +1112,13 @@ namespace Matkakirja.Natiivi
             {
                 if (arvo == "1" || arvo == "0") DioraamaTimeline.Paalla = arvo == "1";
                 o.Kirjaa("poikki: timeline " + timeline.Raportti());
+                return;
+            }
+            // "poikki rakennus <id>": seuraava avaus lataa rakennuksen dioraama/<id>/ (H0). Ilman arvoa kertoo nykyisen.
+            if (mita == "rakennus")
+            {
+                if (arvo != null && !AsetaRakennus(arvo)) o.Kirjaa($"poikki: rakennus-id '{arvo}' ei kelpaa → {Oletusrakennus}");
+                o.Kirjaa($"poikki: rakennus {RakennusId} ({AmpariJuuri}){(Linssi != null ? ", vaihtuu seuraavassa avauksessa" : "")}");
                 return;
             }
             if (mita == "peili")
