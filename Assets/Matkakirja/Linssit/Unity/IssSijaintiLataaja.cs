@@ -44,17 +44,24 @@ namespace Matkakirja.Natiivi
                 }
             // Natural Earthin asutut paikat (PD, ~7 300; tyokalut/iss_paikat.py): LCD:n tarkka kaupunki ≤ 40 km (Päätoimittaja 4.10.).
             var paikatTeksti = Resources.Load<TextAsset>("IssPaikat/paikat");
+            // Ajantasaiset suomenkieliset nimet (Päätoimittaja 7.10.: LCD:ssä "ILLICHIVSK", nimi Tšornomorsk vuodesta 2016; kartta elää
+            // nykyajassa): Resources/IssPaikat/nimet-fi.json "nimi|ISO3" → nimi (Wikidata fi, SFS 4900); vain LCD, ei oppaan valikkoa.
+            var nimetTeksti = Resources.Load<TextAsset>("IssPaikat/nimet-fi");
+            string nimetJson = nimetTeksti != null ? nimetTeksti.text : null;
+            if (nimetTeksti != null) Resources.UnloadAsset(nimetTeksti);
             if (paikatTeksti != null)
             {
                 string json = paikatTeksti.text;
                 var jasennys = System.Threading.Tasks.Task.Run(() =>
                 {
                     var r = new List<IssSijainti.Paikka>();
+                    var nimet = nimetJson == null ? null : Matkakirja.Peli.MiniJson.Kentta(Matkakirja.Peli.MiniJson.Jasenna(nimetJson) as Dictionary<string, object>, "nimet") as Dictionary<string, object>;
                     var juuri = Matkakirja.Peli.MiniJson.Jasenna(json) as Dictionary<string, object>;
                     if (Matkakirja.Peli.MiniJson.Kentta(juuri, "paikat") is List<object> rivit)
                         foreach (var o in rivit)
                             if (o is List<object> x && x.Count >= 5)
-                                r.Add(new IssSijainti.Paikka(x[0] as string, Convert.ToDouble(x[1], CultureInfo.InvariantCulture),
+                                r.Add(new IssSijainti.Paikka(nimet != null && nimet.TryGetValue((x[0] as string) + "|" + (x[3] as string), out var uusi) && uusi is string un && un.Length > 0 ? un : x[0] as string,
+                                    Convert.ToDouble(x[1], CultureInfo.InvariantCulture),
                                     Convert.ToDouble(x[2], CultureInfo.InvariantCulture), x[3] as string, Convert.ToInt32(x[4], CultureInfo.InvariantCulture),
                                     x.Count > 6 ? x[6] as string : null));
                     return r;
