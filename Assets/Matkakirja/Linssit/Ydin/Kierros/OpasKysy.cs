@@ -50,11 +50,13 @@ namespace Matkakirja.Linssit.Kierros
             if (td != null)
             {
                 var sisa = td.TryGetValue("kohde", out var kx) && kx is IDictionary<string, object> kd ? kd : td;
-                // Kaupunki + kohde (#4107): kaupunki on toiminnon omissa kentissä, kohde alikentässä.
-                if (v.Toiminto == OpasToiminto.Kaupunki && sisa != td)
+                // Kaupunki + kohde (#4107): kaupunki on toiminnon omissa kentissä, kohde litteinä kenttinä kohde_nimi/_lat/_lon.
+                // Litteä muoto, koska TF 156/157 -appien jäsennys ottaisi "kohde"-alikentän nimen kaupungin nimeksi (Päätoimittaja
+                // 7.10. 07.0x); alikenttä luetaan silti, jos worker lähettää sen.
+                if (v.Toiminto == OpasToiminto.Kaupunki)
                 {
-                    v.KohdeNimi = S(sisa, "nimi"); v.KohdeLat = D(sisa, "lat", double.NaN); v.KohdeLon = D(sisa, "lon", double.NaN);
-                    sisa = td;
+                    if (sisa != td) { v.KohdeNimi = S(sisa, "nimi"); v.KohdeLat = D(sisa, "lat", double.NaN); v.KohdeLon = D(sisa, "lon", double.NaN); sisa = td; }
+                    if (S(td, "kohde_nimi") is string kn) { v.KohdeNimi = kn; v.KohdeLat = D(td, "kohde_lat", double.NaN); v.KohdeLon = D(td, "kohde_lon", double.NaN); }
                 }
                 v.ToimintoNimi = S(sisa, "nimi"); v.ToimintoId = S(sisa, "id");
                 v.ToimintoLat = D(sisa, "lat", double.NaN); v.ToimintoLon = D(sisa, "lon", double.NaN);

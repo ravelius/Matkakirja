@@ -40,6 +40,8 @@ namespace Matkakirja.Linssit.Testit
             var e = L("{\"teksti\":\"Lennetään Venetsiaan.\",\"toiminto\":{\"tyyppi\":\"kaupunki\",\"nimi\":\"Venetsia\",\"id\":\"venetsia\",\"lat\":45.4371,\"lon\":12.3326,\"kohde\":{\"nimi\":\"Pyhän Markuksen basilika\",\"lat\":45.4345,\"lon\":12.3397}}}");
             Oleta.Tosi(e.Toiminto == OpasToiminto.Kaupunki && e.ToimintoNimi == "Venetsia" && Math.Abs(e.ToimintoLat - 45.4371) < 1e-9, "kaupunki ei korvaudu kohteella");
             Oleta.Tosi(e.KohdeNimi == "Pyhän Markuksen basilika" && Math.Abs(e.KohdeLon - 12.3397) < 1e-9);
+            var g = L("{\"toiminto\":{\"tyyppi\":\"kaupunki\",\"nimi\":\"Venetsia\",\"lat\":45.4371,\"lon\":12.3326,\"kohde_nimi\":\"Pyhän Markuksen basilika\",\"kohde_lat\":45.4345,\"kohde_lon\":12.3397}}");
+            Oleta.Tosi(g.ToimintoNimi == "Venetsia" && g.KohdeNimi == "Pyhän Markuksen basilika" && Math.Abs(g.KohdeLat - 45.4345) < 1e-9, "litteä muoto");
             var f = L("{\"toiminto\":{\"tyyppi\":\"kaupunki\",\"nimi\":\"Praha\",\"lat\":50.08,\"lon\":14.42}}");
             Oleta.Tosi(f.ToimintoNimi == "Praha" && f.KohdeNimi == null && double.IsNaN(f.KohdeLat));
             var y = OpasKysyVastaus.Yhdista(new[] { "Entä?", "Miksi?" }, new[] { "Miksi?", "Milloin?", "Kuka?" });
