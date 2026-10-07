@@ -548,6 +548,14 @@ namespace Matkakirja.Linssit.Kierros
             PitkaPyynto = true;
             return true;
         }
+        /// <summary>Kierroksen keskeytys ilman kesken jääneen kohteen toistoa (valmis "Kerro lisää" esitetään paikalla; JATKA seuraavasta).</summary>
+        public bool KeskeytaKierrosOhittaen()
+        {
+            bool ok = KierrosKaynnissa ? KeskeytaKierros() : KierrosKeskeytetty;
+            jatkoKohde = null;
+            return ok;
+        }
+
         /// <summary>Seuraava pyyntö ilman kierroksen lyhyt-merkintää (sovitin kuluttaa).</summary>
         public bool PitkaPyynto;
 

@@ -450,6 +450,7 @@ namespace Matkakirja.Natiivi
         /// <summary>Kaupunkitilan avaus aloittaa esityksen (kaupunkikierros) heti, kun kohdelista on haettu ja siirtymä ohi.</summary>
         static bool esitysAlkaa;
         bool kerroLisaaOdottaa;
+        OpasKohde kerroLisaa; string kerroLisaaId;
         /// <summary>Kaupunkitilassa kysymyksen vastauksen jälkeen kierros jatkuu tämän tauon jälkeen (s).</summary>
         public const float JatkoViiveS = 2f;
         bool jatkoVastauksenJalkeen;
@@ -631,7 +632,17 @@ namespace Matkakirja.Natiivi
             if (v.tauolla) Tauko(false);
             if (string.Equals(teksti.Trim(), KerroLisaaTeksti, StringComparison.OrdinalIgnoreCase) && Kaupunkitila)
             {
-                v.o.Kirjaa("opas: kerro lisää (esitys)");
+                var nyt = v.silmukka.Nykyinen;
+                if (v.kerroLisaa != null && nyt != null && v.kerroLisaaId == nyt.Id)
+                {
+                    // Valmis pidempi teksti (Pelikoodari #4126): heti paikalla, ei workeria; kierros jatkuu sen jälkeen seuraavasta.
+                    v.o.Kirjaa("opas: kerro lisää (valmis teksti)");
+                    v.silmukka.KeskeytaKierrosOhittaen();
+                    v.Valmistele(v.kerroLisaa); v.silmukka.Esita(v.kerroLisaa);
+                    v.jatkoVastauksenJalkeen = true;
+                    return true;
+                }
+                v.o.Kirjaa("opas: kerro lisää (worker)");
                 v.silmukka.KerroLisaa();
                 v.kerroLisaaOdottaa = true;
                 return true;
@@ -754,8 +765,9 @@ namespace Matkakirja.Natiivi
         void PaivitaKysymykset(OpasKohde k)
         {
             jatkoKysymykset = Array.Empty<string>();
-            if (k.Kysymykset != null && k.Kysymykset.Length > 0) { kysymykset = k.Kysymykset; return; }
-            kysymykset = null;
+            // Esitys (kaupunkitila): /opas/kysymykset haetaan aina, koska se palauttaa myös valmiin "Kerro lisää" -tekstin (#4126).
+            if (k.Kysymykset != null && k.Kysymykset.Length > 0) { kysymykset = k.Kysymykset; if (!Kaupunkitila || Testi || string.IsNullOrEmpty(k.Id)) return; }
+            else kysymykset = null;
             if (!Testi && !string.IsNullOrEmpty(k.Id)) o.StartCoroutine(HaeKysymykset(k));
         }
 
@@ -772,9 +784,20 @@ namespace Matkakirja.Natiivi
                 foreach (var x in l) if (x is string s && !string.IsNullOrWhiteSpace(s)) t.Add(s.Trim());
                 lista = t.ToArray();
             }
+            if (r.result == UnityWebRequest.Result.Success && MiniJson.Jasenna(r.downloadHandler.text) is Dictionary<string, object> jl
+                && jl.TryGetValue("kerro_lisaa_teksti", out var kt) && kt is string kts && !string.IsNullOrWhiteSpace(kts))
+            {
+                string S(string n) => jl.TryGetValue(n, out var x) ? x as string : null;
+                double D(string n, double o0) => jl.TryGetValue(n, out var x) && x != null && !(x is string) ? Convert.ToDouble(x, System.Globalization.CultureInfo.InvariantCulture) : o0;
+                kerroLisaa = new OpasKohde { Id = k.Id + "-lisaa", Nimi = k.Nimi, Alarivi = k.Alarivi, Teksti = kts.Trim(), Aani = S("kerro_lisaa_aani"),
+                    AaniPcm = S("kerro_lisaa_aani_pcm"), AaniTaajuus = (int)D("kerro_lisaa_aani_taajuus", 24000), KestoS = D("kerro_lisaa_kesto_s", 0),
+                    Lat = k.Lat, Lon = k.Lon, KokoM = k.KokoM, KorkeusM = k.KorkeusM, Luokka = k.Luokka, Kuvat = k.Kuvat, Korostus = k.Korostus, Kierros = true };
+                kerroLisaaId = k.Id;
+            }
+            if (lista == null || lista.Length == 0) lista = k.Kysymykset;
             k.Kysymykset = lista;
             kysymykset = OpasKysyVastaus.Yhdista(jatkoKysymykset, lista ?? Array.Empty<string>());
-            o.Kirjaa($"opas: kysymykset {kysymykset.Length} ({k.Nimi})");
+            o.Kirjaa($"opas: kysymykset {kysymykset.Length} ({k.Nimi}){(kerroLisaaId == k.Id ? ", kerro lisää valmiina" + (kerroLisaa.AaniAvain == null ? " (ei ääntä)" : "") : "")}");
         }
 
         /// <summary>Liiku-lista kaupungin vaihtuessa (ja avauksessa): GET /opas/liiku?kaupunki=…</summary>
