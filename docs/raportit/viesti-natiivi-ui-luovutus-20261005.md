@@ -6,6 +6,13 @@ worktreet /Users/Shared/Claude/wt/proto-natiivi-ui-<aihe>. Käännös: lokit/nat
 Simu vain Julkaisijan "SIMU NYT" -viestistä, oma iPhone FB234D08-4693-4496-9C7A-6C7C15B03963, iPad
 AD119F7B-A2A2-43EE-8769-7326DD757F89; lopuksi sammutus ja "simu vapaa".
 
+## 7.10. klo 21.4x: OMISTAJAN PARIISI-PALAUTE JUNAAN 162 (SHA Natiivisepälle 21.4x)
+
+natiivi-ui/pariisi-otsikko a27f2e2c (natiiviseppa/juna-162-koe 8b3ffb91:n päällä; worktree wt/proto-natiivi-ui-otsikko):
+kohdeotsikko metrolinjaan (OpasMetrolinja.Korostus/KorostusSelite, KierrosTaulu asettaa; nimi 44 pt + selite ~3 s), kuvakortit
+pienemmiksi (iPad ≤ 1,15 × 56, puhelin 40) ja tummemmiksi (himmennys.kevyt). Ei laitetarkistusta; jos omistaja antaa TF:stä
+palautetta koosta, säädä KorostusKoko / KuvaKoko.
+
 ## HUOMINEN 8.10.: PELATTAVUUSMALLI (Päätoimittaja 7.10. 19.1x, main #4163 docs/raportit/pelattavuusmalli-olavinlinna.md)
 
 Lue kohdat 6 (ohjaus laitteittain) ja 12 (Natiivi-UI-sarake). Tavoite illan junaan: Olavinlinnan 1. persoonan pala
