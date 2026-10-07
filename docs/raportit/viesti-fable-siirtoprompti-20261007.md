@@ -41,7 +41,7 @@ Omistaja kirjautuu työpöytäsovellukseen uudella tilillä, avaa session kansio
 6. **PILVI:** krediitti loppui sami.reivinen-tililtä; pilveen vain rajatut tehtävät. CLI-tili tarkistetaan tilinvaihdossa.
 
 7. **LISÄYS 23.4x (vaihto nyt, omistajan päätös):** T7-simulaattorisarja LUOTU (omistaja antoi CoreSimulatorServicelle täyden levyn
-   oikeuden 23.3x; 26 laitetta, proto-3d/tyokalut/simusarja.sh + simusarja-udid.tsv) — työkalujen vaihto Natiivisepälle 8.10. aamulla
+   oikeuden 23.3x; 26 laitetta, proto-3d/tyokalut/simusarja.sh + simusarja-udid.tsv), MUTTA T7-simun käynnistys kaatui ("launchd_sim: could not bind to session", Natiiviseppä 23.31; MCP-simutyökalu näkee vain oletussarjan) → selvitys aamulla ennen vaihtoa; työkalujen vaihto Natiivisepälle 8.10. aamulla
    ennen junaa 164; vanhan sisäisen sarjan (105 Gt) ja T7:n vanhan kopion (112 Gt) poisto omistajan Run-rivillä vasta päivän käytön jälkeen.
    Omistajan TF 163 -palaute (lento liian nopea ja äkkinäinen, narina liian kova, "mietin sopivan reitin") → LS1 linssiseppa/juna-164
    4020d4b59 (lento ≥ 17 s, kääntö ≤ 10°/s, narina −12 dB, ei odotuslausetta valmiin esittelyn kaupungeissa); simukäännös
