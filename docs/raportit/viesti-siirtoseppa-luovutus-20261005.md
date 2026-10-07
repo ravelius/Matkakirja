@@ -502,3 +502,8 @@ Edellinen luovutus on `viesti-siirtoseppa-luovutus-20261002.md` (5.10. osiot 02.
 - 18.23: LR v44j (42d49bd4 = v44i + Foggin nousu_laiturille) kytketty c652ba83: Fogg aloittaa veneen pohjalta 0,55 m kannen reunasta (reuna ja
   suunta säteillä nousu:laiturin ympäriltä), SeikkailuPelaaja.SoitaEle (kapseli paikallaan, törmäys pois, lopussa root_siirto + idle),
   PelaajaMalli.JuuriSiirto. Junahaara historia-juna164 @ 6d2b1149, 845/845, unity-tarkistus 0; kuittaus pyydetty.
+- 18.28: OMISTAJAN PÄÄTÖS (PT:n kautta): historiamoottori ENSIMMÄISEEN PERSOONAAN (malli Thief; ei vartaloa, käsiä eikä peilikuvaa).
+  Juna 162 menee nykyisenä. Aloitettu haarassa siirtoseppa/historia-fp @ b2438dbe (historia-h0:n päällä, varmuuskopio natiivi-backupissa):
+  silmät 1,62 m / kyyryssä 1,0 m, FOV 62, keho katseen mukana, pystykatse ±75°, Kasi-kantokohta kameran edessä (kynttilä, esineet),
+  laiturille nousu kamerapolkuna, ei lähileikkausta, kytkin poikki kavely fp 0|1. 839/839, unity-tarkistus 0. Huomenna jatko
+  pelattavuusmallin (docs/raportit/pelattavuusmalli-olavinlinna.md) mukaan; valoisuusosoitin (Thiefin valokivi) tarvitsee NUI-pohjan.
