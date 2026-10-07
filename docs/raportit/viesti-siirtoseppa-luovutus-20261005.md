@@ -8,7 +8,7 @@ kappeli). Lue tämä osio ja alin TILA-loki (päivän loppu), sitten CLAUDE.md j
   <haara>:refs/heads/peili/proto/<haara>`). Luovutus: tämä tiedosto haarassa siirtoseppa-luovutus (Matkakirja-siirtoseppa).
 - Haarat: **siirtoseppa/historia-h0** (kolmas persoona, junien pohja, kärki c652ba83), **siirtoseppa/historia-juna164 @ 6d2b1149**
   (kuittaus pyydetty PT:ltä; juna163 + V7 + tietokerros + v44i-merkit + nousu laiturille; pala v44j 42d49bd4),
-  **siirtoseppa/historia-fp @ 0b396d7d** (ENSIMMÄINEN PERSOONA + kädet-v1; pelattavuusmallin 8.10. työjärjestyksestä TEHTY JO 7.10. ILLALLA lähes kaikki, ks. TILA-loki; pala v44n 190df07e).
+  **siirtoseppa/historia-fp @ 7d1a7c6b** (ENSIMMÄINEN PERSOONA + kädet-v1; pelattavuusmallin 8.10. työjärjestyksestä TEHTY JO 7.10. ILLALLA lähes kaikki, ks. TILA-loki; pala v44p a727471e).
   **siirtoseppa/historia-fp-juna @ 2f492b05** (junaehdokas: juna164 + historia-fp; yhdistä historia-fp uudelleen ennen kuittauspyyntöä).
 - TESTAUS (omistaja 7.10. 15.5x/16.0x): ennen junaa VAIN Linssit-testit/kaanna.sh + Linssit-testit/unity-tarkistus.sh; ei omia
   käännöksiä, simua, stillejä eikä savuja. Kuittaus PT:ltä yhdellä rivillä (mitä, testit, SHA) → Natiiviseppä junaan.
@@ -574,3 +574,12 @@ Edellinen luovutus on `viesti-siirtoseppa-luovutus-20261002.md` (5.10. osiot 02.
 - 20.12: kappelin kiinnijäänti tyrmään be4f5567; tyrmän muunnelmat 2–3 + vihjekohde cea38abd. 858/858, unity-tarkistus 0. JÄLJELLÄ: K1 (kaukokuva Pulun lentona, malli), kiipeily (ei merkkejä), huoneet 3–5 simulaatioon, junakuittaus (kun PT haluaa ensimmäisen persoonan junaan).
 - 20.14: huonesimulaation ajuri (tarjotin, väistö, armo) 0b396d7d; koko palan testi odottaa keittiön ajoitusta (kokin reitti kulkee reitti:pelaaja-10/-11 kautta, 52 kiinnijääntiä tyhmällä ajurilla). historia-fp-kärki 0b396d7d, 858/858, unity-tarkistus 0.
 - 20.15: JUNAEHDOKAS ensimmäiselle persoonalle valmiina: siirtoseppa/historia-fp-juna @ 2f492b05 (= historia-juna164 + historia-fp), 865/865, unity-tarkistus 0. EI vielä kuittauspyyntöä (PT: 8.10. illan juna); riippuvuus NUI 6af3eb9f. Päivitä yhdistämällä historia-fp uudelleen ennen pyyntöä.
+- 20.39: OMISTAJA HYVÄKSYI (20.3x) pelattavuusmallin kohdan 13 suositukset kaikki (irtipääsy + köyden katkaisu/töytäisy, napautuskävely
+  + tappi + veto ilman kyykkynappia, kontekstikuvakkeet, kanteleaihe, ei uusia repliikkejä palaan, reitin korjaus).
+  UUDET PAKETIT upotettu proto-gitiin haaraan siirtoseppa/vfx-paketit @ 3ee905f8 (proto masterin päällä, worktree
+  /Users/Shared/Claude/wt/proto-siirtoseppa-vfx): Volumetric Lights 2 URP (Assets/VolumetricLights, ilman demoja, LightType.Area →
+  Rectangle käsin; asmref URP-runtimeen) ja Candle VFX - URP (Assets/Vefects, ilman demoja); LAHTEET.md säilytysehtoineen, alkuperäiset
+  _lahteet/unity-paketit-siirtoseppa/. EI junaan 162. SEURAAVA: käyttöönotto linnaan (kynttilät, soihdut, kuunsäteet;
+  VolumetricLightsRenderFeature dioraaman rendereriin ja laatutasokytkin) — ensin merge historia-fp:hen tai proto masteriin.
+  LR v44p (a727471e) kytketty 7d1a7c6b: vartijan torkku/syo/nousu_istumasta, tarjotin/patapino/hiilipannu-mallit. Huone 6 (palatsi,
+  Tott-kammion naulakko, linnaväki, vouti) on datassa, ei vielä koodissa (M-osa). syo→nousu-ristihäivytys puuttuu (Hahmot3D irrallinen).
