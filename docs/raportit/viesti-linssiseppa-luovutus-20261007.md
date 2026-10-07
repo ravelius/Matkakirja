@@ -136,3 +136,10 @@ NUI:n osa on `natiivi-ui/sallitut-157` 0f770be2. LS2:n lista on tiedostossa `pro
   - Avaus ja opastus kytketään, kun #4126 on tuotannossa.
   - Yksityiskohtakuvat: kuvalista pilvestä klo ~11, NOSTOKORTTI-arvot NUI:lta (paperi #f5f0e2, reunus 1 pt rgba(70,51,31,.3), kulma 12 pt, sisäreuna 4 %).
 - Junaan 160 kuitattu: `linssiseppa/siltalauseet-v2` 2db2d9d9d (ilmoitettu Natiivisepälle). Lisäksi `linssiseppa/torjunta-aika-160` b3cb1a53a odottaa todennusta ja stilliä.
+- 10.55: simuajot valmiit.
+  - Giza-pinta: korkeudet Linnanrakentajalla.
+  - Helmakuvista puuttuivat mallit, koska tilesetin tyhjää ADD-juurta ei tarkennettu. Korjattu 994c2c7e9 (esitys-giza), ja uusi tileset on `proto-3d/_tyo/linssiseppa/giza-v2-tiles`.
+  - Pariisin stillit `lokit/linssiseppa-esitys-20261007`: korin sovitus pystyruudulle ja metron nykyinen kohde korjattu a74031868. Vaakametron tyhjä laatikko on NUI:lla.
+- Käynnistyksen jälkeen (uudelleenajot):
+  - esitys-giza a74031868 → käännös → stillit (ajo-esitys.sh) ja Giza v2 (ajo-pinta.sh helmaosio, ilman pintaa).
+  - iPad-laitemittaus (ipad-ab.sh).
