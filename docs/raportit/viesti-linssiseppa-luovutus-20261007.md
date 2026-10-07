@@ -51,6 +51,16 @@ NUI:n osa on `natiivi-ui/sallitut-157` 0f770be2. LS2:n lista on tiedostossa `pro
 - Varsova: Päätoimittaja päätti (a): Varsova on poistettu sallituista (LS2:n json 37, Pelikoodarin #4109).
 - (b) ei onnistunut: reikä tuli kaikilla etäisyyksillä 5 000–1 500 m, ja 404-tiiliä oli 38 (`linssiseppa-varsova-b-20261007`). **Jonossa: tarkistus 14.10.2026** (Päätoimittaja) yhdellä ajolla. Jos kahdella käynnillä ei tule 404:ää, Varsova palaa listalle (LS2 ja Pelikoodari palauttavat rivin). (c) ei nyt.
 
+## Juna 159: kaupunkitila (omistaja 7.10. 08.3x, kaupunkiopas karttaelementtinä)
+
+`linssiseppa/kaupunkitila-159` 1be5518db (kaupunki-kohde-158 eebfb3eee:n päällä). Testit 800/800, unity 0 virhettä; simutodennus odottaa vuoroa.
+- `OpasSovitin.AvaaKaupunkitila(id)` avaa oppaan suoraan kaupunkiin ilman täkyjä. Komento: `opas kaupunkitila <id>`.
+- Rajapinta: `Kaupunkitila`, `KaupunkitilaId` ja `KaupunkitilaVaihtui`. Natiivi-UI piilottaa aloitusvalinnan ja Vaihda kohde -rivin.
+- Kaupunkitilassa silmukan sallittu alue on vain tämä kaupunki. Toinen kaupunki (valikko, "vie minut", #4107) torjutaan torjuntatekstillä.
+- Linssiseppä 2:n karttaelementti käyttää rajapintoja `SallitutLista`, `SallitutVaihtui` ja `LataaSallitut()`; sallittujen haku on nyt staattinen.
+- Tila päättyy oppaan Sulje-kutsussa, joten laaja Elävä opas toimii ennallaan.
+- Linnanrakentaja tekee pallon mallin, ja Linssiseppä 2 tekee sille paikkamerkin.
+
 ## Giza (omistaja 6.10. 23.35, Päätoimittajan lupa)
 
 - Googlen ehdot on tarkistettu: omat 3D-objektit ovat sallittuja, kun niitä ei ole johdettu Googlen tiilistä.
