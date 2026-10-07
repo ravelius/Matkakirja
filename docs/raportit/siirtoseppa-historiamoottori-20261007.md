@@ -146,7 +146,9 @@ luettavampia ilman opastusta, mikä sopii linjaan "ei opeteta"). Päätös omist
 - **Reitti:** laituri → Vesiportin bastioni (piha y −5,6) → porttikäytävä 11,7 m (nousu ~2 m, 4 askelmaa) → pikkupiha (y −2,7) →
   **keittiö pikkupihan eteläsiivessä** (purettu 1720-luvulla, mallinnetaan 1:1 ~59 m²; vanha keittiö käytössä kunnes uusi todennettu)
   → Kirkkotorni pihan koillisnurkassa (kierreportaat lounaispuolella, **kappeli 3. kerroksessa**). Itäsiiven alakerta = läpikulku.
-- **Kappeli ikkunaton** (Aalto-arkisto 1910, opas 1923): Ø ~7,8 m, ristiholvi ~11,8 m, 8-aukkoinen ampumakäytävä ~10–10,5 m →
-  V5 valoarvoitus kynttilöillä, soihduilla tai ampuma-aukkojen valolla.
+- **Kappeli: ikkuna rautaluukulla, yöllä kiinni** (Päätoimittaja 7.10. 13.2x; Aspelin 1875, lähdetarkistus #4129: ahdas ikkuna
+  koillismuurissa rautaluukulla, kappeli valaistiin kynttilöillä; aiempi "ikkunaton" Aalto-arkisto 1910 / opas 1923 korvattu): Ø ~7,8 m,
+  ristiholvi ~11,8 m, 8-aukkoinen ampumakäytävä ~10–10,5 m → V5 valoarvoitus kynttilöillä ja soihduilla; luukun avaus (kuunvalo
+  paljastaa jotain) on valinnainen arvoituksen osa. Linnanrakentajan v45: kapea syvennys, luukku kiinni.
 - **V1 tehty koodina:** siirtoseppa/historia-h0 cf5a4379 (Ydin Seikkailu.Kavely + SeikkailuPelaaja, poikki kavely). Kosketustapit
   täysillä 2D-arvoilla pyydetään Natiivi-UI:lta TAPPI-pohjalla.
