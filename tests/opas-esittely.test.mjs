@@ -170,3 +170,8 @@ test('Kerro lisää: ei maksullista generointia – ääni vain R2:sta, muuten n
     assert.equal(eleven, 0, 'ElevenLabsia ei kutsuttu');
   } finally { globalThis.fetch = vanha; }
 });
+
+test('esittely-indeksi: pilotti pariisi, praha, wien (vienti 7.10.)', async () => {
+  const { OPAS_AINEISTOT } = await import('../tools/pollo/aineistot.js');
+  assert.deepEqual(OPAS_AINEISTOT.esittely, ['pariisi', 'praha', 'wien']);
+});
