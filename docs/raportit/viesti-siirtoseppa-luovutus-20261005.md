@@ -10,7 +10,7 @@ kappeli). Lue tämä osio ja alin TILA-loki (päivän loppu), sitten CLAUDE.md j
   (kuittaus pyydetty PT:ltä; juna163 + V7 + tietokerros + v44i-merkit + nousu laiturille; pala v44j 42d49bd4),
   **siirtoseppa/historia-fp @ 7d1a7c6b** (ENSIMMÄINEN PERSOONA + kädet-v1; pelattavuusmallin 8.10. työjärjestyksestä TEHTY JO 7.10. ILLALLA lähes kaikki, ks. TILA-loki; pala v44p a727471e).
   **siirtoseppa/historia-fp-juna @ 6d23aed1** KUITATTU JUNAAN 163 (PT 20.4x; NUI 8aa55e02).
-  **siirtoseppa/historia-valot @ 7d8408f9** (KEHITYSKÄRKI: valot + kytkin + tikkaat + v44q) ja **siirtoseppa/historia-valot-juna @ b91278bf** JUNAAN 163 (463fefc7 kuitattu + kellokorjaus 0bfc86e0; varahaara ilman paketteja siirtoseppa/historia-fp-juna-2 @ 8b071c07).
+  **siirtoseppa/historia-valot @ 7d8408f9** (KEHITYSKÄRKI: valot + kytkin + tikkaat + v44q) ja **siirtoseppa/historia-valot-juna @ b91278bf** KUITATTU JUNAAN 163 (463fefc7 + kellokorjaus 0bfc86e0, joka myös korjausjunassa; varahaara ilman paketteja siirtoseppa/historia-fp-juna-2 @ 8b071c07).
 - TESTAUS (omistaja 7.10. 15.5x/16.0x): ennen junaa VAIN Linssit-testit/kaanna.sh + Linssit-testit/unity-tarkistus.sh; ei omia
   käännöksiä, simua, stillejä eikä savuja. Kuittaus PT:ltä yhdellä rivillä (mitä, testit, SHA) → Natiiviseppä junaan.
 - OMISTAJA 7.10. 18.5x–18.7x: KAIKKI PELIT ENSIMMÄISESSÄ PERSOONASSA (Thief-malli; ei vartaloa/peilikuvaa; kädet saavat näkyä
@@ -594,3 +594,4 @@ Edellinen luovutus on `viesti-siirtoseppa-luovutus-20261002.md` (5.10. osiot 02.
 - 21.37: KUITATTU junaan 163: historia-valot-juna @ 463fefc7, vara historia-fp-juna-2 @ 6f9ad1e5 (PT ilmoitti Natiivisepälle).
 - 21.37: v44s kehityshaaraan 7d8408f9 (historia-valot), arkku kiinteä. M-osan (huoneet 6–10) logiikka seuraavaksi: naamio (esiliina/myssy), avainrengas + lukitut ovet, ote-kiipeily ulkoseinällä + tuulenpuuskat, köysi sakaraan/krampiin, arkun kilpilukko, köysilasku + pako, K1–K5 kaukokuvat (Pulun malli puuttuu).
 - 22.22: KIIRE (TF 162, omistaja: kaupungin kello kumisee lakkaamatta): syy kello-01.mp3 = 34 s:n äänite ~12 iskusta, soitettiin kokonaan joka lyönnillä (7 × 3 kirkkoa = 21 päällekkäistä). Korjaus 0bfc86e0 siirtoseppa/kello-yksi-lyonti (master 30fbc374 päällä, worktree wt/proto-siirtoseppa-kello): yksi isku 2,0 s + häivytys 0,35 s. Cherry-pick junahaaroihin: historia-valot-juna @ b91278bf, vara historia-fp-juna-2 @ 8b071c07. PT:lle ilmoitettu.
+- 22.22: KUITATTU: 0bfc86e0 korjausjunaan tänä iltana; b91278bf (historia-valot-juna) ja vara 8b071c07 (historia-fp-juna-2) junaan 163.
