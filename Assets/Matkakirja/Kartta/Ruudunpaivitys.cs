@@ -211,6 +211,13 @@ namespace Matkakirja
             int fps = Math.Min(uusi == Tila.Taysi ? taysi : uusi == Tila.Kerros ? kerrosFps : LepoFps, katto);
             int vali = uusi == Tila.Paikallaan ? PaikallaanVali : 1;
             if (Application.targetFrameRate != fps) Application.targetFrameRate = fps;
+#if UNITY_STANDALONE_OSX && !UNITY_EDITOR
+            // MAC: TAHDISTUS NÄYTTÖÖN (omistaja 7.10.2026, Mac TF: nopeassa panoroinnissa ruudun keskellä repeämäviiva).
+            // QualitySettings.vSyncCount on 0 (iOS:llä vsync on aina päällä ja targetFrameRate riittää), joten Mac piirsi
+            // tahdistamatta. Macilla kuvataajuus tehdään vSyncin jakajalla: näyttö/fps (60 Hz: täysi 1, lepo 30 fps 2).
+            int vs = Mathf.Clamp(Mathf.RoundToInt(Naytto / (float)Mathf.Max(1, fps)), 1, 4);
+            if (QualitySettings.vSyncCount != vs) QualitySettings.vSyncCount = vs;
+#endif
             if (OnDemandRendering.renderFrameInterval != vali) OnDemandRendering.renderFrameInterval = vali;
             if (uusi != Nyt) Nyt = uusi;
         }
