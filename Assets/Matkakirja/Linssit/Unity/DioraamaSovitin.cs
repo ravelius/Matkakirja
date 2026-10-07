@@ -676,7 +676,7 @@ namespace Matkakirja.Natiivi
         /// <summary>Pelattavan palan kiinnitetty paketti (Linnanrakentajan v44g: kävely, Fogg, vene, laiturin kansi). Tuotannon osoitin
         /// (uusin.json) ei muutu: pala lukee tämän paketin testiosoittimena (sama hash-juuri ja manifest.json kuin julkaisulla, joten
         /// levyvälimuisti toimii; Päätoimittaja 7.10.: ei 250–400 Mt joka avauksella) ja palauttaa tuotannon, kun linna suljetaan.</summary>
-        public const string PelattavaPalaHash = "45be74356f79a1c6";   // v44l (v44k + ensimmäisen persoonan kädet)
+        public const string PelattavaPalaHash = "eb8b9c55f5c22795";   // v44m (v44l + pinnat, partioprofiilit, piilot, reitti:pelaaja)
 
         void LataaUudelleen()
         {
@@ -1054,7 +1054,7 @@ namespace Matkakirja.Natiivi
         void KokkiKuuleeKolahduksen(Vector3 kohta)
         {
             var r = SeikkailuRepliikit.Aktiivinen;
-            if (r == null || !r.Valmis || Time.unscaledTime < kokkiRepliikkiAsti || HenkilonPaikka("kokki-1500") is not Vector3 kp || (kp - kohta).sqrMagnitude > 144f) return;
+            if (r == null || !r.Valmis || Time.unscaledTime < kokkiRepliikkiAsti || DioraamaHahmot3D.PiilotetutHenkilot.Contains("kokki-1500") || HenkilonPaikka("kokki-1500") is not Vector3 kp || (kp - kohta).sqrMagnitude > 144f) return;   // partioiva kokki kuulee itse (SeikkailuVartijat)
             kokkiRepliikkiAsti = Time.unscaledTime + 8f;
             r.Soita(++kokkiLaskuri % 2 == 0 ? "kokki-harhautus-1" : "kokki-harhautus-2", kp);
         }

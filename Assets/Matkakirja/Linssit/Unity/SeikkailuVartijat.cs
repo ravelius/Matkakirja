@@ -28,7 +28,7 @@ namespace Matkakirja.Natiivi
 
         sealed class V
         {
-            public Vartija Aivot; public NavMeshAgent Agentti; public string Osa; public bool NakiViimeksi;
+            public Vartija Aivot; public NavMeshAgent Agentti; public string Osa, Nimi, Henkilo; public bool NakiViimeksi;
             public double KavelyAika; public bool Kavelee; public Vector3 Kohde = new Vector3(float.NaN, 0, 0);
             public VartijanTila EdellinenTila;
             public AudioSource Askeleet;
@@ -104,16 +104,21 @@ namespace Matkakirja.Natiivi
             if (skin != null && skin.KavelySykliM > 0) sv.sykliMs = skin.KavelySykliM * (skin.Skaala > 0 ? skin.Skaala : 1) / KavelyKestoS;
             sv.RakennaNavMesh(isa);
             // Partioreitit osittain.
+            // Reitti = merkin nimi ilman loppunumeroa (partio:portinvartija-1, -2 …; v44m: useampi reitti samassa osassa).
             var reitit = new SortedDictionary<string, List<KavelyMerkki>>(StringComparer.Ordinal);
             foreach (var m in d.Lajia("partio"))
             {
-                string osa = m.Osa ?? m.Tunnus;
-                if (!reitit.TryGetValue(osa, out var l)) reitit[osa] = l = new List<KavelyMerkki>();
+                int vi = m.Tunnus.LastIndexOf('-');
+                string nimi = vi > 0 && int.TryParse(m.Tunnus.Substring(vi + 1), out _) ? m.Tunnus.Substring(0, vi) : m.Tunnus;
+                if (!reitit.TryGetValue(nimi, out var l)) reitit[nimi] = l = new List<KavelyMerkki>();
                 l.Add(m);
             }
             foreach (var kv in reitit)
             {
-                kv.Value.Sort((a, b) => string.CompareOrdinal(a.Tunnus, b.Tunnus));
+                kv.Value.Sort((a, b) => Numero(a.Tunnus).CompareTo(Numero(b.Tunnus)));
+                var eka = kv.Value.Find(x => x.Profiili != null || x.Henkilo != null) ?? kv.Value[0];
+                string henkilo = eka.Henkilo ?? Henkilo;
+                if (rakennus?.Henkilot == null || !rakennus.Henkilot.ContainsKey(henkilo)) henkilo = Henkilo;
                 var pisteet = new List<(double X, double Z, double OdotaS)>();
                 foreach (var m in kv.Value) pisteet.Add((m.X, -m.Z, m.OdotaS > 0 ? m.OdotaS : 2.0));
                 var alku = new Vector3((float)kv.Value[0].X, (float)kv.Value[0].Y, (float)-kv.Value[0].Z);
@@ -126,11 +131,13 @@ namespace Matkakirja.Natiivi
                 ag.radius = 0.3f; ag.height = 1.8f; ag.baseOffset = 0f; ag.angularSpeed = 360f; ag.acceleration = 6f;
                 ag.stoppingDistance = 0.25f; ag.autoBraking = true; ag.speed = (float)Vartija.KavelyMs;
                 ag.obstacleAvoidanceType = ObstacleAvoidanceType.LowQualityObstacleAvoidance;
-                var v = new V { Aivot = new Vartija(pisteet) { Profiili = VartijaProfiili.Hae(kv.Value[0].Profiili) }, Agentti = ag, Osa = kv.Key, Askeleet = SeikkailuKuulija.Lahde("Askeleet:" + kv.Key, 2f, 28f) };
+                var v = new V { Aivot = new Vartija(pisteet) { Profiili = VartijaProfiili.Hae(eka.Profiili) }, Agentti = ag, Osa = eka.Osa ?? kv.Key, Nimi = kv.Key, Henkilo = henkilo, Askeleet = SeikkailuKuulija.Lahde("Askeleet:" + kv.Key, 2f, 28f) };
                 foreach (var pm in d.Lajia("piilo")) v.Aivot.Piilot.Add((pm.X, -pm.Z));   // vaihe 3: piilot ja varjot etsintään
                 v.Askeleet.loop = true; v.Askeleet.volume = 0.9f;
                 sv.vartijat.Add(v);
-                hahmot?.LisaaIrrallinen(rakennus, Henkilo, vg.transform, () => (v.Kavelee ? "kavely" : "idle", v.KavelyAika));
+                hahmot?.LisaaIrrallinen(rakennus, henkilo, vg.transform, () => (v.Kavelee ? "kavely" : "idle", v.KavelyAika));
+                DioraamaHahmot3D.PiilotetutHenkilot.Add(henkilo);   // kohtauksen sama henkilö pois (ei kahta kokkia)
+                sv.henkilot.Add(henkilo);
             }
             Aktiivinen = sv;
             if (AlkuArmo) { AlkuArmo = false; sv.armoAsti = Time.unscaledTime + ArmoS; }
@@ -235,7 +242,8 @@ namespace Matkakirja.Natiivi
                     // Hälytys (kohta 3.5): huuto kuuluu 20 m; enintään kaksi muuta tulee tutkimaan, muut valppaiksi (Vartija.Kutsu).
                     v.Aivot.Huuto = false;
                     var r = SeikkailuRepliikit.Aktiivinen;
-                    if (r != null && r.Valmis) r.Soita(v.Aivot.Profiili == VartijaProfiili.Kokki ? "kokki-halytys-6" : "vartija-valpas-1", ag.transform);
+                    string huuto = v.Aivot.Profiili == VartijaProfiili.Kokki ? "kokki-halytys-6" : v.Aivot.Profiili == VartijaProfiili.Vartija ? "vartija-valpas-1" : null;
+                    if (r != null && r.Valmis && huuto != null) r.Soita(huuto, ag.transform);
                     int tulee = 0;
                     foreach (var x in vartijat)
                         if (x != v && tulee < 2 && x.Agentti != null && (x.Agentti.transform.position - vp).sqrMagnitude < HuutoM * HuutoM) { x.Aivot.Kutsu(v.Aivot.EpailyX, v.Aivot.EpailyZ); tulee++; }
@@ -286,12 +294,24 @@ namespace Matkakirja.Natiivi
             var r = SeikkailuRepliikit.Aktiivinen;
             if (r == null || !r.Valmis || Time.unscaledTime < v.RepliikkiAsti) return;
             string t = null; int n = ++v.RepliikkiLaskuri;
-            if (nyt == VartijanTila.Epaily) t = n % 2 == 0 ? "vartija-epaily-2" : "vartija-epaily-1";
+            var pr = v.Aivot.Profiili;
+            bool palasi = nyt == VartijanTila.Partio && oli != VartijanTila.Partio && oli != VartijanTila.Kiinni;
+            // Profiilien omat äänet (pelattavuusmalli 3.6): kokki ja portinvartija vain omilla repliikeillään, renki ei puhu.
+            if (pr == VartijaProfiili.Renki || pr == VartijaProfiili.Apulainen) return;
+            if (pr == VartijaProfiili.Kokki || pr == VartijaProfiili.Portinvartija)
+            {
+                bool kokki = pr == VartijaProfiili.Kokki;
+                if (nyt == VartijanTila.Epaily) t = kokki ? "kokki-epaily-5" : "portinvartija-epaily-3";
+                else if (nyt == VartijanTila.Etsinta && kokki) t = n % 2 == 0 ? "kokki-harhautus-2" : "kokki-harhautus-1";
+                else if (nyt == VartijanTila.Kiinni && !kokki) t = "portinvartija-tarttuu-4";
+                else if (palasi) t = kokki ? "kokki-paluu-4" : "portinvartija-paluu-5";
+            }
+            else if (nyt == VartijanTila.Epaily) t = n % 2 == 0 ? "vartija-epaily-2" : "vartija-epaily-1";
             else if (nyt == VartijanTila.Etsii) t = n % 2 == 0 ? "vartija-etsinta-3" : "vartija-etsinta-2";
             else if (nyt == VartijanTila.Halytys && v.Aivot.Profiili != VartijaProfiili.Kokki) t = "vartija-valpas-1";
             else if (nyt == VartijanTila.Etsinta) t = oli == VartijanTila.Partio && !nakee ? "vartija-epaily-3" : n % 2 == 0 ? "vartija-etsinta-2" : "vartija-etsinta-1";
             else if (nyt == VartijanTila.Partio && (oli == VartijanTila.Etsinta || oli == VartijanTila.Epaily || oli == VartijanTila.Paluu || oli == VartijanTila.Etsii || oli == VartijanTila.Halytys))
-                t = v.Osa == "kirkkotorni-portaat" && r.On("vartija-paluu-3") ? "vartija-paluu-3" : n % 2 == 0 ? "vartija-paluu-2" : "vartija-paluu-1";
+                t = (v.Nimi == "piha" || v.Nimi == "kirkkotorni-portaat") && r.On("vartija-paluu-3") ? "vartija-paluu-3" : n % 2 == 0 ? "vartija-paluu-2" : "vartija-paluu-1";   // pihan vartija
             else if (nyt == VartijanTila.Kiinni) t = "vartija-kiinni-1";
             if (t == null) return;
             double kesto = r.Soita(t, v.Agentti.transform);
@@ -314,6 +334,8 @@ namespace Matkakirja.Natiivi
             return false;
         }
         const float PiiloM = 0.7f, HuutoM = 20f, LyhtyM = 4f;
+        readonly HashSet<string> henkilot = new HashSet<string>(StringComparer.Ordinal);
+        static int Numero(string tunnus) { int vi = tunnus.LastIndexOf('-'); return vi > 0 && int.TryParse(tunnus.Substring(vi + 1), out int n) ? n : 0; }
         bool piiloPaljastui;
         bool sydanPaalla;
 
@@ -398,7 +420,7 @@ namespace Matkakirja.Natiivi
         void OnDestroy()
         {
             if (Aktiivinen == this) Aktiivinen = null;
-            hahmot?.PoistaIrralliset(Henkilo);
+            foreach (var h in henkilot) { hahmot?.PoistaIrralliset(h); DioraamaHahmot3D.PiilotetutHenkilot.Remove(h); }
             foreach (var v in vartijat) if (v.Askeleet != null) Destroy(v.Askeleet.gameObject);
             if (navi.valid) NavMesh.RemoveNavMeshData(navi);
             if (data != null) Destroy(data);
