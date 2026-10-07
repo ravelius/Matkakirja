@@ -6,6 +6,9 @@
      `s2-eurooppa-kevat-pohjoinen2/` + `kausi-rengas/kevat-pohjoinen2/` (PT 7.10. 02.xx). Arvio noin 2,5 h.
 - **Syksy A2 VALMIS 04.02** (`s2-eurooppa-syksy-A2/` + `kausi-rengas/syksy-A2/`), kuvapari `kuvapari-syksy-A2-20261007.jpg` lähetetty PT:lle.
   Järvet ovat kunnossa. Tilkkuja on vielä vähän (Pohjois-Lappi 67,5° N, Ruotsin keskiosa), ja Lokka on ruskea. Ehdotettu vientiä, tilkut seuraavalle kierrokselle.
+- **SYKSYN VIENTIPAKETTI VALMIS (PT kuittasi vientiin 04.xx):** `proto-3d/_valmiit/s2-eurooppa-syksy-vienti-20261007`
+  → `linssit/astronautin-kamera/s2-eurooppa/syksy/v1/` (sama jako kuin v2; 57 629 laattaa + laatat.json; --kuiva ok).
+  Polku kysytty LS2:lta 04.4x. Kun LS2 kuittaa (tai PT hyväksyy), Julkaisija vie. Työkalu `kaudet/kokoa-kausi.py <kausi> v1 <paketti> <kerrokset> "<kuvaus>"`.
 - **TALVI2-koodi (testattu 4 + 2 lohkolla):** lumi ensin (> 53° N) ja lumen mediaani leveysasteliukumalla 54→57° N.
   Isot järvet jäätyvät kokonaan NE-järvimaskilla (`ne_10m_lakes`; 0,9 × JAA + 0,1 × S2). Pienet järvet: tumma pikseli → JAA.
   Jäätyviin järviin ei sumeaa vesiväriä. Vuonoissa jää-sääntö ohitetaan S2-maalle 3 km:n päähän rannasta, ja talven rantasumennus on 0,2–1,2 km.
