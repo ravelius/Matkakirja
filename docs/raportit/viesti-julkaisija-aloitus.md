@@ -12,6 +12,6 @@ Ensimmäisenä (käynnistyksen jälkeen):
 1. **Vuorot**: `cat /tmp/matkakirja-kaannospalvelu.lukko/kuka` ja `xcrun simctl list devices booted`. Simujono: LS1 esitys-giza
    (kesken) → NUI 4 min LS1:n appilla → Siirtoseppä historia 20 min. Käännöksiä ei jonossa (Siirtosepän historia kääntyi 10.46–).
 2. **S2-syksy-vienti** osat 0/2/3 uudelleen (ks. luovutus), sitten laatat.json 200 → Karttaseppä.
-3. **#4126** (Kerro lisää): merge + Pöllö jos ei vielä, sitten opas-esittely-vienti-20261007 → Pelikoodarin indeksi-PR.
+3. **opas-esittely-vienti-20261007** heti (#4126 julki 10.55) → Pelikoodarin indeksi-PR.
 4. **Juna 160** Natiivisepältä; TF 159 + Mac 159 ovat testaajilla.
 5. **Rajat**: päivällä 2 simua; käännökset ≥ 36 Gi, simut ≥ 30 Gi.
