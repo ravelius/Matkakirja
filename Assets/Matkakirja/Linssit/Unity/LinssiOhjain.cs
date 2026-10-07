@@ -177,6 +177,18 @@ namespace Matkakirja.Natiivi
 
         public static bool EsittelylinssitAuki => PlayerPrefs.GetInt(EsittelyAvain, 0) == 1;
 
+        /// <summary>Esittelylinssit kiinni (testaajatilan poisto, omistaja 7.10.): kynnykset kuten ilman esittelyä.</summary>
+        public static void SuljeEsittelylinssit()
+        {
+            PlayerPrefs.DeleteKey(EsittelyAvain);
+            PlayerPrefs.Save();
+#if MATKAKIRJA_APPSTORE
+            Linssirekisteri.Kehittajatila = Matkakirja.Natiivi.Asetukset.Kehittaja && PlayerPrefs.GetInt(KehittajatilaAvain, 0) == 1;
+#else
+            Linssirekisteri.Kehittajatila = PlayerPrefs.GetInt(KehittajatilaAvain, KehittajatilaOletus ? 1 : 0) == 1;
+#endif
+        }
+
         /// <summary>Asettaa ja muistaa astronautin reliefin kylläisyyden (0,8 tai 1,0); vaikuttaa seuraavaan avaukseen.</summary>
         public static void AsetaAstronautinKyllaisyys(float arvo)
         {

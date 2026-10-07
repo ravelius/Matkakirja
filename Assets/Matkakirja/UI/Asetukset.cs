@@ -38,6 +38,8 @@ namespace Matkakirja.Natiivi
         // (repo on julkinen). Avaa kaikki linssit (esittelylinssit) ja vapaan liikkumisen (maailmatila), ei kehittäjätyökaluja.
         const string TestaajaTiiviste = "5e8a21ead84851c212c2cae58849de4d37bc0babfcab05ceff51350412eb3e94";
         const string TestaajaAvain = "matkakirja-testaaja";
+        /// <summary>Testaajatila avasi esittelylinssit (ne eivät olleet auki apurahakortista): poisto sulkee ne (Päätoimittaja 7.10.).</summary>
+        const string TestaajaLinssitAvain = "matkakirja-testaaja-linssit";
 
         /// <summary>
         /// Kehittäjätila. Omistajan päätös 7.10.2026 klo 12.5x (kumoaa Fablen 24.9. portin): avautuu koodilla myös App Store
@@ -100,7 +102,9 @@ namespace Matkakirja.Natiivi
             if (koodi == null)
             {
                 PlayerPrefs.DeleteKey(KehittajaAvain);
+                if (PlayerPrefs.GetString(TestaajaAvain, "") == "1" && PlayerPrefs.GetInt(TestaajaLinssitAvain, 0) == 1) LinssiOhjain.SuljeEsittelylinssit();
                 PlayerPrefs.DeleteKey(TestaajaAvain);
+                PlayerPrefs.DeleteKey(TestaajaLinssitAvain);
                 PlayerPrefs.Save();
                 // Web talletaPolloKoodi(''): pöllön ohitus pois.
                 Puhe.TalletaKehittajakoodi(null);
@@ -121,6 +125,7 @@ namespace Matkakirja.Natiivi
                 // Testaaja: kaikki linssit heti (sama joukko kuin apurahakortin esittelylinssit) ja vapaa liikkuminen (maailmatila).
                 PlayerPrefs.DeleteKey(KehittajaAvain);
                 PlayerPrefs.SetString(TestaajaAvain, "1");
+                if (!LinssiOhjain.EsittelylinssitAuki) PlayerPrefs.SetInt(TestaajaLinssitAvain, 1);
                 PlayerPrefs.Save();
                 LinssiOhjain.AvaaEsittelylinssit();
                 Muuttui?.Invoke("Kehittaja");
