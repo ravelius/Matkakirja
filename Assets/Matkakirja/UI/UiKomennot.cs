@@ -1277,6 +1277,14 @@ namespace Matkakirja.Natiivi
                         return "=" + ui.Erikoisnostot.Saato(en[0], float.Parse(en[1], CultureInfo.InvariantCulture), float.Parse(en[2], CultureInfo.InvariantCulture), float.Parse(en[3], CultureInfo.InvariantCulture));
                     return "=" + ui.Erikoisnostot.Tila();
                 }
+                case "kaupunkipallot":
+                {
+                    // "ui kaupunkipallot [tila|0|1|napauta <id|i>]": kaupunkioppaan kuumailmapallot kartalla (omistaja 7.10.).
+                    var kp = loput.Split(' ');
+                    if (kp[0] == "0" || kp[0] == "1") { KaupunkiPallot.Paalla = kp[0] == "1"; return "=" + ui.KaupunkiPallot.Tila(); }
+                    if (kp[0] == "napauta") return "=" + ui.KaupunkiPallot.Napauta(kp.Length > 1 ? kp[1] : "0");
+                    return "=" + ui.KaupunkiPallot.Tila();
+                }
                 case "linssitnappi":
                 {
                     // "ui linssitnappi [napauta|sulje]": Linssit-karttanappi (web #3859) — näkyvyys, paikka ja pillerivalikon näkymä.

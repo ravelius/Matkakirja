@@ -34,17 +34,22 @@ namespace Matkakirja.Natiivi
         const string KehittajaAvain = "matkakirja-kehittaja";
         const string KehittajaTiiviste = "2f7f15d0bb83b97a7ce3054be0972e80b60742cfc8b4c36ce06f3330f6f045c6";
         const string KehittajaTiivisteRajattu = "b3282a2f2a28757b3a18ab833de16a9c54518c0b0cf493e3f0a7cf09386f326a";
+        // TESTAAJATILA (omistaja 7.10.2026 klo 12.5x, beetatestaajat): kevyempi taso omalla koodillaan; vain SHA-256-tiiviste
+        // (repo on julkinen). Avaa kaikki linssit (esittelylinssit) ja vapaan liikkumisen (maailmatila), ei kehittäjätyökaluja.
+        const string TestaajaTiiviste = "5e8a21ead84851c212c2cae58849de4d37bc0babfcab05ceff51350412eb3e94";
+        const string TestaajaAvain = "matkakirja-testaaja";
+        /// <summary>Testaajatila avasi esittelylinssit (ne eivät olleet auki apurahakortista): poisto sulkee ne (Päätoimittaja 7.10.).</summary>
+        const string TestaajaLinssitAvain = "matkakirja-testaaja-linssit";
 
         /// <summary>
-        /// Kehittäjätila. App Store -käännöksessä (määrite MATKAKIRJA_APPSTORE, Rakennus.IosTestFlight) aina pois
-        /// eikä koodilla kytkettävissä (Fable 24.9.: portti build-määrityksestä, ei vain kytkimestä). Sisäisessä
-        /// TestFlightissä (release, ei määritettä) oletuksena pois ja koodilla päälle kuten webissä.
+        /// Kehittäjätila. Omistajan päätös 7.10.2026 klo 12.5x (kumoaa Fablen 24.9. portin): avautuu koodilla myös App Store
+        /// -käännöksessä (MATKAKIRJA_APPSTORE = TestFlight, sama binääri App Storeen); oletuksena pois, ja vain oikea koodi
+        /// (tiiviste) kytkee sen. Avaimet ajon aikana Keychainiin, ei binääriin eikä lokiin.
         /// </summary>
-#if MATKAKIRJA_APPSTORE
-        public static bool Kehittaja => false;
-#else
         public static bool Kehittaja => !PakotaPelaaja && (Debug.isDebugBuild || PlayerPrefs.GetString(KehittajaAvain, "") == "1");
-#endif
+
+        /// <summary>Testaajatila (ei kehittäjätilaa): kaikki linssit ja vapaa liikkuminen kartalla, ei syvempiä työkaluja.</summary>
+        public static bool Testaaja => !PakotaPelaaja && !Kehittaja && PlayerPrefs.GetString(TestaajaAvain, "") == "1";
 
         /// <summary>
         /// Testi (ui pelaaja 1|0, Päätoimittaja 1.10.): pelaajan näkymä myös Debug-käännöksessä, jossa kehittäjätila on muuten
@@ -56,15 +61,12 @@ namespace Matkakirja.Natiivi
         /// <summary>
         /// Pöllön kehittäjäkoodi chatin x-pollo-kehittaja-otsakkeeseen (Fable 24.9.: ei koskaan kovakoodattuna eikä
         /// PlayerPrefsissä). Omistaja syöttää sen kerran kehittäjätilan kytkennässä; arvo säilyy vain iOS Keychainissa
-        /// (MatkakirjaAvaimet, kuten Lukijoilta-avain). Editorissa vain muistissa. App Store -käännöksessä aina null.
+        /// (MatkakirjaAvaimet, kuten Lukijoilta-avain). Editorissa vain muistissa. Myös App Store -käännöksessä (omistaja 7.10.).
         /// </summary>
         public static string PolloKoodi
         {
             get
             {
-#if MATKAKIRJA_APPSTORE
-                return null;
-#else
                 if (!polloKoodiLuettu)
                 {
                     polloKoodiLuettu = true;
@@ -73,11 +75,9 @@ namespace Matkakirja.Natiivi
 #endif
                 }
                 return string.IsNullOrEmpty(polloKoodi) ? null : polloKoodi;
-#endif
             }
         }
 
-#if !MATKAKIRJA_APPSTORE
         const string PolloKeychain = "pollo-kehittajakoodi";
         static string polloKoodi;
         static bool polloKoodiLuettu;
@@ -95,18 +95,16 @@ namespace Matkakirja.Natiivi
                 Debug.LogWarning("MATKAKIRJA asetukset: avainnippuun kirjoitus ei onnistunut (pöllön koodi vain muistissa)");
 #endif
         }
-#endif
 
         /// <summary>Kytkee kehittäjätilan koodilla (true = onnistui) tai pois (koodi null).</summary>
         public static bool AsetaKehittaja(string koodi)
         {
-#if MATKAKIRJA_APPSTORE
-            PlayerPrefs.DeleteKey(KehittajaAvain);
-            return koodi == null;
-#else
             if (koodi == null)
             {
                 PlayerPrefs.DeleteKey(KehittajaAvain);
+                if (PlayerPrefs.GetString(TestaajaAvain, "") == "1" && PlayerPrefs.GetInt(TestaajaLinssitAvain, 0) == 1) LinssiOhjain.SuljeEsittelylinssit();
+                PlayerPrefs.DeleteKey(TestaajaAvain);
+                PlayerPrefs.DeleteKey(TestaajaLinssitAvain);
                 PlayerPrefs.Save();
                 // Web talletaPolloKoodi(''): pöllön ohitus pois.
                 Puhe.TalletaKehittajakoodi(null);
@@ -122,7 +120,19 @@ namespace Matkakirja.Natiivi
                 foreach (var b in tavut) sb.Append(b.ToString("x2"));
                 t = sb.ToString();
             }
+            if (t == TestaajaTiiviste)
+            {
+                // Testaaja: kaikki linssit heti (sama joukko kuin apurahakortin esittelylinssit) ja vapaa liikkuminen (maailmatila).
+                PlayerPrefs.DeleteKey(KehittajaAvain);
+                PlayerPrefs.SetString(TestaajaAvain, "1");
+                if (!LinssiOhjain.EsittelylinssitAuki) PlayerPrefs.SetInt(TestaajaLinssitAvain, 1);
+                PlayerPrefs.Save();
+                LinssiOhjain.AvaaEsittelylinssit();
+                Muuttui?.Invoke("Kehittaja");
+                return true;
+            }
             if (t != KehittajaTiiviste && t != KehittajaTiivisteRajattu) return false;
+            PlayerPrefs.DeleteKey(TestaajaAvain);
             // Web talletaPolloKoodi(taysi ? syote : ''): vain pääkoodi workerille (lukijaäänen ääni ja ohje).
             Puhe.TalletaKehittajakoodi(t == KehittajaTiiviste ? koodi.Trim() : null);
             TalletaPolloKoodi(t == KehittajaTiiviste ? koodi.Trim() : null);
@@ -130,7 +140,6 @@ namespace Matkakirja.Natiivi
             PlayerPrefs.Save();
             Muuttui?.Invoke("Kehittaja");
             return true;
-#endif
         }
 
         /// <summary>Kuljetun reitin kytkimen PlayerPrefs-avain ("0" = pois).</summary>
