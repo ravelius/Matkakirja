@@ -26,9 +26,9 @@ namespace Matkakirja.Natiivi
         const string Muisti = "matkakirja-apuraha-esittely";
 
         public sealed class Kappale { public int Numero; public string Otsikko, Teksti, LinkkiTeksti, LinkkiUrl, NappiTeksti, NappiValmis, Toiminto; public bool Korostus; public List<string> Lista = new List<string>(); }
-        /// <summary>Kappale = esittely.json:n kappaleen järjestysnumero (1 = ensimmäinen; versio 7, omistaja 7.10. 14.5x): kuva pienenä
-        /// kappaleen vieressä; 0 = kortin lopun kuvarivi.</summary>
-        public sealed class Kuva { public string Url, Teksti; public int Kappale; public float RajausX = 50f, RajausY = 20f; }
+        /// <summary>Kappale = esittely.json:n kappaleet-taulukon 0-pohjainen indeksi alkuperäisessä järjestyksessä (versio 7, omistaja
+        /// 7.10. 14.5x; Pelikoodari): kuva pienenä kappaleen vieressä; −1 tai osumaton indeksi = kortin lopun kuvarivi.</summary>
+        public sealed class Kuva { public string Url, Teksti; public int Kappale = -1; public float RajausX = 50f, RajausY = 20f; }
         public sealed class Esittely
         {
             public string Nappi, Otsikko, Alaotsikko;
@@ -47,10 +47,10 @@ namespace Matkakirja.Natiivi
             var e = new Esittely { Nappi = S(d, "nappi")?.Trim(), Otsikko = S(d, "otsikko"), Alaotsikko = S(d, "alaotsikko") ?? "" };
             var kappaleet = Rakenne.Lista(d.TryGetValue("kappaleet", out var kv) ? kv : null);
             if (string.IsNullOrEmpty(e.Nappi) || e.Otsikko == null || kappaleet == null) return null;
-            int numero = 0;
+            int numero = -1;
             foreach (var ko in kappaleet)
             {
-                numero++;
+                numero++;   // 0-pohjainen indeksi JSONin kappaleet-taulukossa (tyhjät mukaan lukien)
                 var o = Rakenne.Olio(ko);
                 if (o == null) continue;
                 // "korostus": true = kappaleen teksti lihavoituna, sama koko (omistaja 1.10.2026).
@@ -312,7 +312,7 @@ namespace Matkakirja.Natiivi
                     Kirjasimet.Aseta(Rakenne.Nappi(k.LinkkiTeksti, "mk-lehti__linkki mk-apuraha__linkki", () => Application.OpenURL(url), vieritys), Kirjasin.Kone);
                 }
             }
-            var loppukuvat = e.Kuvat.Where(x => x.Kappale <= 0 || !e.Kappaleet.Any(k => k.Numero == x.Kappale && k.Teksti != null)).ToList();
+            var loppukuvat = e.Kuvat.Where(x => x.Kappale < 0 || !e.Kappaleet.Any(k => k.Numero == x.Kappale && k.Teksti != null)).ToList();
             if (loppukuvat.Count > 0)
             {
                 var kuvarivi = Rakenne.El("mk-apuraha__kuvat", vieritys, PickingMode.Ignore);
