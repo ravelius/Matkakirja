@@ -189,3 +189,14 @@ NUI:n osa on `natiivi-ui/sallitut-157` 0f770be2. LS2:n lista on tiedostossa `pro
   - Aloitusajo cbd5ffad7 OK: Ateena ja Pariisi kylmästä, laatat 99/100 % saapuessa, ei tyhjiä. Kuvat `lokit/linssiseppa-aloitus-20261007/kuvat`. Raportoitu Päätoimittajalle; simu vapaa.
   - NUI kuvaa köysikohdan omalla 5c3d45e6:lla 15.00 jälkeen.
   - Klo 15:n jälkeen: Giza v2b (ajo-helma.sh v2b-tiles) ja kierroksen alut (#4142 julki).
+- 14.2x (tauko peruttu 13.47):
+  - Pallon latauskuva (Päätoimittaja 13.5x, Codex #4143): haara `linssiseppa/pallo-latauskuva` 09a1c8bb1 (esitys-giza + kaukosääntö + latauskuva).
+    - 1. simukierros: `lokit/linssiseppa-pallokuva-20261007`.
+    - Korjattu: esilataus (iPadilla oli 2 s mustaa), iPhonen vaakarajaus ja kaksoisavaus.
+    - Käännös ja simu on pyydetty uudelleen (ajo-pallokuva.sh). Kuvat Päätoimittajalle ennen kuittausta.
+  - Giza v2b ajettu (`lokit/linssiseppa-gizav2b-20261007`):
+    - Sfinksi on musta, koska LOD1/2-leivonnasta on 67–70 % mustaa pinta-alalla painotettuna (glb-musta-uv.py).
+    - Helmat ovat liian vaaleat.
+    - Linnanrakentaja korjaa nämä vasta, kun Päätoimittaja avaa Gizan uudelleen (omistaja: Olavinlinna ensin).
+  - Kaukoreiät korjattu omalla puolella: esitys-giza 1abecc5ce, leikkaus pois yli 2,2 km:stä ja takaisin alle 1,8 km:ssä. Ei vielä todennettu simussa.
+  - Kierroksen alut (#4138 + #4142) todennettu julkisesta Pöllöstä.
