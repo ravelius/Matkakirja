@@ -902,11 +902,18 @@ namespace Matkakirja.Natiivi
         /// </summary>
         public Func<bool> NapautusEstetty;
 
+        /// <summary>
+        /// Napautuksen kaappaus (seikkailun tietokerros, Päätoimittaja 7.10. 18.0x): true = napautus käytettiin (esim. kortisto
+        /// avautui), eikä chat tai tervehdys käynnisty. SeikkailuTapit asettaa ja nollaa.
+        /// </summary>
+        public Func<bool> NapautusKaappaa;
+
         void Napautettu()
         {
             if (NapautusEstetty?.Invoke() == true) return;
             viimeToimi = Aika;
             if (nukkuu) { nukkuu = false; Toista("wake"); }
+            if (NapautusKaappaa?.Invoke() == true) return;
             if (NaytaPiilotettu()) return;
             if (Napautus != null) { Napautus(); return; }
             Aanet.PulunTehoste("pulu.kujerrus");
