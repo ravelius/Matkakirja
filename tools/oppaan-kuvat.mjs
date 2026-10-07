@@ -265,7 +265,7 @@ export async function tarkistaKaupunki(id) {
     if (e.lat == null) virheet.push(`${id}/${k.q}: Wikidatassa ei P625-koordinaattia`);
     else if (Math.abs(e.lat - k.lat) > 0.002 || Math.abs(e.lon - k.lon) > 0.002) virheet.push(`${id}/${k.q}: koordinaatit eivät täsmää P625:een (${e.lat},${e.lon})`);
     if (!k.nimi) virheet.push(`${id}/${k.q}: suomenkielinen nimi puuttuu`);
-    if (!/^(pelin nosto|UNESCO|sitelinks)/.test(k.peruste ?? '')) virheet.push(`${id}/${k.q}: peruste puuttuu (pelin nosto | UNESCO | sitelinks ...)`);
+    if (!/^(pelin nosto|UNESCO|sitelinks|kaupungin päänähtävyys)/.test(k.peruste ?? '')) virheet.push(`${id}/${k.q}: peruste puuttuu (pelin nosto | UNESCO | sitelinks ... | kaupungin päänähtävyys)`);
     else if (/^UNESCO/.test(k.peruste) && !e.unesco) virheet.push(`${id}/${k.q}: peruste UNESCO mutta Wikidatassa ei P757-tunnusta`);
     else if (/^sitelinks/.test(k.peruste) && e.kielia < 13) virheet.push(`${id}/${k.q}: peruste sitelinks mutta kieliversioita vain ${e.kielia} (< 13)`);
   }

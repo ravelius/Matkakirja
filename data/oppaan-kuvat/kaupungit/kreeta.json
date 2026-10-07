@@ -7,13 +7,13 @@
   "Q636972",
   "Q603920",
   "Q2942217",
+  "Q4426010",
+  "Q15616490",
+  "Q20127741",
   "Q632418",
   "Q3321879",
   "Q473766",
   "Q2707725",
-  "Q1142384",
-  "Q1928668",
-  "Q1021602",
   "Q2097291"
  ],
  "kohteet": [
@@ -142,19 +142,32 @@
    "kuvat": [
     {
      "jarjestys": 1,
-     "tiedosto": "Building of the Archaeological Museum of Heraklion, 061381.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Building_of_the_Archaeological_Museum_of_Heraklion%2C_061381.jpg?width=1280",
-     "tekija": "Zde",
+     "tiedosto": "202610 Archaeological Museum of Heraklion 03.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/202610_Archaeological_Museum_of_Heraklion_03.jpg?width=1280",
+     "tekija": "Jonashtand",
      "lisenssi": "CC BY-SA 4.0",
      "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Building_of_the_Archaeological_Museum_of_Heraklion%2C_061381.jpg",
-     "selite": "Iraklionin arkeologinen museo säilyttää maailman laajimman minolaisen kulttuurin kokoelman.",
-     "leveys": 2592,
-     "korkeus": 1868,
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:202610_Archaeological_Museum_of_Heraklion_03.jpg",
+     "selite": "Museon uudistetun rakennuksen punaiset pylväät reunustavat sisäänkäyntiä ja pihaa.",
+     "leveys": 6000,
+     "korkeus": 4000,
      "tarkistettu": true
     },
     {
      "jarjestys": 2,
+     "tiedosto": "202610 Archaeological Museum of Heraklion 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/202610_Archaeological_Museum_of_Heraklion_01.jpg?width=1280",
+     "tekija": "Jonashtand",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:202610_Archaeological_Museum_of_Heraklion_01.jpg",
+     "selite": "Sisäänkäyntihalli avaa tien Euroopan vanhimman sivilisaation aarteisiin.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
      "tiedosto": "Bull leaping minoan fresco archmus Heraklion.jpg",
      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bull_leaping_minoan_fresco_archmus_Heraklion.jpg?width=1280",
      "tekija": "Jebulon",
@@ -167,7 +180,7 @@
      "tarkistettu": true
     },
     {
-     "jarjestys": 3,
+     "jarjestys": 4,
      "tiedosto": "Phaistos Disc - Heraklion Archaeological Museum by Joy of Museums.jpg",
      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Phaistos_Disc_-_Heraklion_Archaeological_Museum_by_Joy_of_Museums.jpg?width=1280",
      "tekija": "Joyofmuseums",
@@ -288,6 +301,166 @@
      "selite": "Kirkon länsijulkisivua koristavat kaarikäytävät ja ikkunaryhmät.",
      "leveys": 1914,
      "korkeus": 1439,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q4426010",
+   "nimi": "Pyhän Tituksen kirkko",
+   "peruste": "kaupungin päänähtävyys",
+   "koko_m": 60,
+   "lat": 35.34012,
+   "lon": 25.13474,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Outside church Hagios Titos Heraklion.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Outside_church_Hagios_Titos_Heraklion.jpg?width=1280",
+     "tekija": "Jebulon",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Outside_church_Hagios_Titos_Heraklion.jpg",
+     "selite": "Pyhä Titus on Kreetan ensimmäinen piispa, ja hänen nimikirkkonsa on Heraklionin vanhan keskustan sydämessä.",
+     "leveys": 4590,
+     "korkeus": 2850,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Agios Titos (Heracleion).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Agios_Titos_(Heracleion).jpg?width=1280",
+     "tekija": "PawełMM",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Agios_Titos_(Heracleion).jpg",
+     "selite": "Kirkon vaalea julkisivu palmuineen on yksi kaupungin tunnetuimmista näkymistä.",
+     "leveys": 2984,
+     "korkeus": 1896,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "27.Agios Titos Backside.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/27.Agios_Titos_Backside.jpg?width=1280",
+     "tekija": "J.hagelüken",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:27.Agios_Titos_Backside.jpg",
+     "selite": "Kirkon sivussa ja takana näkyvät kaarevat ikkunat ja rakennuksen monikerroksinen historia.",
+     "leveys": 2560,
+     "korkeus": 1920,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q15616490",
+   "nimi": "Morosinin suihkulähde",
+   "peruste": "kaupungin päänähtävyys",
+   "koko_m": 30,
+   "lat": 35.33917,
+   "lon": 25.13314,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "2016-07-25 Heraklion 063.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2016-07-25_Heraklion_063.jpg?width=1280",
+     "tekija": "Goosi",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2016-07-25_Heraklion_063.jpg",
+     "selite": "Venetsialaisten rakentama leijonasuihkulähde on Heraklionin vilkkaan Leijonatorin keskus.",
+     "leveys": 4919,
+     "korkeus": 3279,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Morozini Fontein Heraklion.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Morozini_Fontein_Heraklion.jpg?width=1280",
+     "tekija": "Danbu14",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Morozini_Fontein_Heraklion.jpg",
+     "selite": "Altaan reunaa koristavat veistetyt reliefit ja keskellä kohoavat leijonat.",
+     "leveys": 3696,
+     "korkeus": 2536,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "File by Alexander Baranov - . (7366670856).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/File_by_Alexander_Baranov_-_._(7366670856).jpg?width=1280",
+     "tekija": "Alexander Baranov from Montpellier, France",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:File_by_Alexander_Baranov_-_._(7366670856).jpg",
+     "selite": "Kaivon yläaltaan kantava kivileijona on suihkulähteen tunnetuin yksityiskohta.",
+     "leveys": 2544,
+     "korkeus": 1696,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q20127741",
+   "nimi": "Heraklionin venetsialaiset muurit",
+   "peruste": "kaupungin päänähtävyys",
+   "koko_m": 600,
+   "lat": 35.33271,
+   "lon": 25.13066,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "5313043walls of Herakleion.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/5313043walls_of_Herakleion.JPG?width=1280",
+     "tekija": "C messier",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:5313043walls_of_Herakleion.JPG",
+     "selite": "Venetsialaiset muurit ympäröivät vanhaa kaupunkia, ja niiden bastionit kuuluvat Euroopan vahvimpiin.",
+     "leveys": 4608,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "5313048walls of Herakleion.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/5313048walls_of_Herakleion.JPG?width=1280",
+     "tekija": "C messier",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:5313048walls_of_Herakleion.JPG",
+     "selite": "Betlehemin bastionin paksu kiviseinä kaartuu kaupungin eteläreunalla.",
+     "leveys": 4608,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "5313045walls of Herakleion.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/5313045walls_of_Herakleion.JPG?width=1280",
+     "tekija": "C messier",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:5313045walls_of_Herakleion.JPG",
+     "selite": "Muuria kiertävä vallihauta on nykyään puistoa ja leikkikenttää.",
+     "leveys": 4608,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 4,
+     "tiedosto": "Iraklio, tomba di Nikos Kazantzakis 02.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Iraklio%2C_tomba_di_Nikos_Kazantzakis_02.jpg?width=1280",
+     "tekija": "Syrio",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Iraklio%2C_tomba_di_Nikos_Kazantzakis_02.jpg",
+     "selite": "Kirjailija Nikos Kazantzakisin hauta on Martinengon bastionin laella ja sen ristissä on vain yksinkertainen kirjoitus.",
+     "leveys": 4000,
+     "korkeus": 3000,
      "tarkistettu": true
     }
    ]
@@ -471,88 +644,6 @@
      "selite": "Vanha kivikaivo muistuttaa kylän vuosisataisesta historiasta.",
      "leveys": 3442,
      "korkeus": 3264,
-     "tarkistettu": true
-    }
-   ]
-  },
-  {
-   "q": "Q1142384",
-   "nimi": "Iraklionin kansainvälinen lentoasema",
-   "peruste": "sitelinks",
-   "koko_m": 800,
-   "lat": 35.33972,
-   "lon": 25.18028,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "Aéroport d'Héraklion en Crète.JPG",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/A%C3%A9roport_d'H%C3%A9raklion_en_Cr%C3%A8te.JPG?width=1280",
-     "tekija": "Benoît Prieur",
-     "lisenssi": "CC0",
-     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:A%C3%A9roport_d'H%C3%A9raklion_en_Cr%C3%A8te.JPG",
-     "selite": "Nikos Kazantzakisin lentoasema on Kreetan vilkkain portti saarelle.",
-     "leveys": 3186,
-     "korkeus": 1916,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "Port lotniczy - panoramio.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Port_lotniczy_-_panoramio.jpg?width=1280",
-     "tekija": "Mietek Ł",
-     "lisenssi": "CC BY-SA 3.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Port_lotniczy_-_panoramio.jpg",
-     "selite": "Kentän terminaalirakennus sijaitsee aivan meren rannalla Iraklionin kupeessa.",
-     "leveys": 2977,
-     "korkeus": 2231,
-     "tarkistettu": true
-    }
-   ]
-  },
-  {
-   "q": "Q1928668",
-   "nimi": "Pankrítio-stadion",
-   "peruste": "sitelinks",
-   "koko_m": 250,
-   "lat": 35.33667,
-   "lon": 25.10611,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "PankritioStadium2019.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/PankritioStadium2019.jpg?width=1280",
-     "tekija": "Ergotelis123",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:PankritioStadium2019.jpg",
-     "selite": "Pankrítio on Heraklionin suuri urheilustadion, jolla pelataan jalkapalloa ja yleisurheilua.",
-     "leveys": 4160,
-     "korkeus": 3120,
-     "tarkistettu": true
-    }
-   ]
-  },
-  {
-   "q": "Q1021602",
-   "nimi": "Néa Alikarnassós",
-   "peruste": "sitelinks",
-   "koko_m": 1200,
-   "lat": 35.32861,
-   "lon": 25.16444,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "Νέα Αλικαρνασσός 5799.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%CE%9D%CE%AD%CE%B1_%CE%91%CE%BB%CE%B9%CE%BA%CE%B1%CF%81%CE%BD%CE%B1%CF%83%CF%83%CF%8C%CF%82_5799.jpg?width=1280",
-     "tekija": "C messier",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%CE%9D%CE%AD%CE%B1_%CE%91%CE%BB%CE%B9%CE%BA%CE%B1%CF%81%CE%BD%CE%B1%CF%83%CF%83%CF%8C%CF%82_5799.jpg",
-     "selite": "Néa Alikarnassós on Iraklionin länsipuolella meren rannalla, ja kaupunginosan vieressä on lentokentän kiitotie.",
-     "leveys": 3720,
-     "korkeus": 2530,
      "tarkistettu": true
     }
    ]
