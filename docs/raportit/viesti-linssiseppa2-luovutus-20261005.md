@@ -21,8 +21,9 @@ Avoimet työt:
 - SWE-RAJAT (Karttaseppä 7.10., PT kuittasi): proto linssiseppa2/swe-rajat 95cf8eb97 (wt/proto-linssiseppa2-swe-rajat): Vektorikerros
   KorkeusVersio 2026-10-07-swe-korkeus / WebVersio 2026-10-07-swe, Maaraja Geojson/Maamaa 2026-10-07. Junaan (161) VASTA kun
   Karttaseppä/Julkaisija ilmoittaa sarjojen olevan ämpärissä → SHA Natiivisepälle.
-- PALLO 161: simu af5922b9 (juna161-koe) käynnistyi 12.54 (iPhone 37 kaupunkia + iPad), tulos lokit/linssiseppa2-puoli.log
-  ja todistus-puoli-*-af5922b9*; raportoi Päätoimittajalle (lista puolen vaihdoista + stillit Kreikka/Ranska), "simu vapaa" Julkaisijalle.
+- PALLO 161 TEHTY 13.2x: simu af5922b9 OK (oma maa, puoli; 13 kaupunkia oikealle), stillit lokit/linssiseppa2-kaupunkipallo-161-stillit/
+  → Päätoimittaja. Löydös (toisen kaupungin kortti käänsi naapuripallon) korjattu aa32b618b → Natiivisepälle junaan 161
+  e16d100db:n tilalle. Todenna aa32b618b junan 161 käännöksellä (esim. sevilla + tampere: vain oma pallo päättää).
 - KAUPUNKIPALLOT juna 161: proto linssiseppa2/pallo-puoli e16d100db (wt/proto-linssiseppa2-pallo-puoli, masterin b00c06f7 päällä):
   (1) pallo kutsukortista poispäin (omistaja 12.4x Ateena; KaupunkiPalloMitat.Oikealle, peilaus, puoli kerran per kaupunki),
   (2) vain pelaajan nykyisen maan pallot kaikilla zoomeilla (omistaja 12.5x; NostoKerros.NykyinenMaa, UiSisalto.Kaupunki.Maa).
