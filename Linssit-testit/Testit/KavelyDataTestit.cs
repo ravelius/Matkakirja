@@ -54,5 +54,14 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(!System.Linq.Enumerable.Last(d.Lajia("esine")).Heitettava, "ilman kenttää ei heitettävä");
             Oleta.Tosi(System.Linq.Enumerable.First(d.Lajia("vene")).KiertoY == 2.1, "kierto_y");
         }
+
+        [Testi] static void LuukunSarana()
+        {
+            var d = KavelyData.Lue("{\"osat\": {}}", "[{\"nimi\": \"luukku:koillinen\", \"paikka\": [-12.1, 11.5, -16.6], \"sarana\": [-12.2, 11.5, -16.7], \"glb\": \"esine-luukku.glb\"}, " +
+                "{\"nimi\": \"valo:ikuinen\", \"paikka\": [0, 0, 0]}]");
+            var l = System.Linq.Enumerable.First(d.Lajia("luukku"));
+            Oleta.Tosi(l.Sarana != null && l.Sarana[0] == -12.2 && l.Sarana[2] == -16.7 && l.Glb == "esine-luukku.glb", "luukun sarana");
+            Oleta.Tosi(System.Linq.Enumerable.First(d.Lajia("valo")).Sarana == null, "ilman saranaa null");
+        }
 }
 }
