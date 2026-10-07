@@ -15,7 +15,7 @@ namespace Matkakirja.Linssit.Kierros
 {
     public static class KorttiAsettelu
     {
-        public const float LeveysOsuus = 0.4f, SisennysOsuus = 0.04f, AlaPt = 44f, FovAste = 40f, KaantoAste = 14f;
+        public const float LeveysOsuus = 0.4f, SisennysOsuus = 0.04f, AlaPt = 32f, FovAste = 40f, KaantoAste = 14f;
         /// <summary>Kortin korkeus enintään tämä osuus ruudun korkeudesta (vaaka / pysty).</summary>
         public const float KorkVaaka = 0.72f, KorkPysty = 0.56f;
         /// <summary>Sisääntulon lähtösyvyys (kortti 1/SisaanSyvyys-kokoisena oikealla ruudun ulkopuolella) ja poistumisen loppusyvyys.</summary>
