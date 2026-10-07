@@ -36,6 +36,14 @@ namespace Matkakirja.Linssit.Testit
             var d = L("{\"toiminto\":{\"tyyppi\":\"kohde\",\"id\":\"Q1\"}}");
             Oleta.Tosi(d.Toiminto == OpasToiminto.Kohde && d.ToimintoId == "Q1");
             Oleta.Tosi(L("{}") == null);
+            // #4107: kaupunki + kohde → kaupunki toiminnon kentistä, kohde alikentästä.
+            var e = L("{\"teksti\":\"Lennetään Venetsiaan.\",\"toiminto\":{\"tyyppi\":\"kaupunki\",\"nimi\":\"Venetsia\",\"id\":\"venetsia\",\"lat\":45.4371,\"lon\":12.3326,\"kohde\":{\"nimi\":\"Pyhän Markuksen basilika\",\"lat\":45.4345,\"lon\":12.3397}}}");
+            Oleta.Tosi(e.Toiminto == OpasToiminto.Kaupunki && e.ToimintoNimi == "Venetsia" && Math.Abs(e.ToimintoLat - 45.4371) < 1e-9, "kaupunki ei korvaudu kohteella");
+            Oleta.Tosi(e.KohdeNimi == "Pyhän Markuksen basilika" && Math.Abs(e.KohdeLon - 12.3397) < 1e-9);
+            var g = L("{\"toiminto\":{\"tyyppi\":\"kaupunki\",\"nimi\":\"Venetsia\",\"lat\":45.4371,\"lon\":12.3326,\"kohde_nimi\":\"Pyhän Markuksen basilika\",\"kohde_lat\":45.4345,\"kohde_lon\":12.3397}}");
+            Oleta.Tosi(g.ToimintoNimi == "Venetsia" && g.KohdeNimi == "Pyhän Markuksen basilika" && Math.Abs(g.KohdeLat - 45.4345) < 1e-9, "litteä muoto");
+            var f = L("{\"toiminto\":{\"tyyppi\":\"kaupunki\",\"nimi\":\"Praha\",\"lat\":50.08,\"lon\":14.42}}");
+            Oleta.Tosi(f.ToimintoNimi == "Praha" && f.KohdeNimi == null && double.IsNaN(f.KohdeLat));
             var y = OpasKysyVastaus.Yhdista(new[] { "Entä?", "Miksi?" }, new[] { "Miksi?", "Milloin?", "Kuka?" });
             Oleta.Tosi(y.Length == 4 && y[0] == "Entä?" && y[2] == "Milloin?");
         }
@@ -109,6 +117,39 @@ namespace Matkakirja.Linssit.Testit
             for (int i = 0; i < 15; i++) s.Paivita(0.1, _ => 5);
             Oleta.Tosi(!s.Siirtymassa && s.Vaihe == OpasVaihe.Puhuu && s.Nykyinen?.Id == "Colosseum", "näkymä auki, kertoja alkaa");
             Oleta.Tosi(puhe.Contains("Colosseum"));
+        }
+
+        // #4107 (Pelikoodari 7.10.): "vie minut Pyhän Markuksen kirkkoon" Kööpenhaminasta → siirto suoraan basilikaan, ei yleiskuvaan.
+        [Testi] static void KaupunginVaihtoSuoraanKohteeseen()
+        {
+            var (s, p, puhe) = Pysahdyksella();
+            double siirtoLat = double.NaN;
+            s.SiirtoAlkaa += (la, lo) => siirtoLat = la;
+            int pyyntoja = p.Count;
+            s.VaihdaPaikkaKohteeseen("Pyhän Markuksen basilika", 45.4345, 12.3397);
+            Oleta.Tosi(s.Siirtymassa, "siirto (yli 30 km)"); Oleta.Sama("Pyhän Markuksen basilika", s.SiirtoNimi);
+            Oleta.Tosi(Math.Abs(siirtoLat - 45.4345) < 1e-6, "origo kohteeseen");
+            Oleta.Tosi(p.Count > pyyntoja && p[^1].t == "Pyhän Markuksen basilika", "workerin pysähdys kohteesta");
+            Oleta.Tosi(s.PyynnonSijainti is (double la, double lo) && Math.Abs(la - 45.4345) < 1e-9, "pyynnön sijainti kohde");
+            var (s2, p2, _) = Pysahdyksella();
+            s2.Sallitut = new List<OpasSallitut.Kaupunki> { new OpasSallitut.Kaupunki { Id = "koopenhamina", Nimi = "Kööpenhamina", Lat = 55.6761, Lon = 12.5683, RM = 5000 } };
+            s2.VaihdaPaikkaKohteeseen("Pyhän Markuksen basilika", 45.4345, 12.3397);
+            Oleta.Tosi(!s2.Siirtymassa && s2.Torjuntoja == 1, "sallitun ulkopuolella torjutaan");
+        }
+
+        // Simu 7.10. 07.08: basilikan kuvakortti jäi Varsovan yleiskuvaan (Nykyinen jäi edelliseen kaupunkiin).
+        [Testi] static void KaupunginVaihtoUnohtaaEdellisenKohteen()
+        {
+            var (s, p, _) = Pysahdyksella();
+            Oleta.Sama("A", s.Nykyinen?.Id);
+            s.LatausEdistys = () => 1;
+            s.VaihdaPaikka(52.231, 21.013, "Varsova");
+            Oleta.Tosi(s.Nykyinen == null, "edellinen kohde ei ole enää nykyinen");
+            for (int i = 0; i < 400 && s.Vaihe == OpasVaihe.Lentaa; i++) s.Paivita(0.1, _ => 5);
+            Oleta.Tosi(s.Vaihe == OpasVaihe.Odottaa && s.Nykyinen == null, "yleiskuva ilman vanhaa kohdetta");
+            var (s2, _, _) = Pysahdyksella();
+            s2.VaihdaPaikkaKohteeseen("Pyhän Markuksen basilika", 45.4345, 12.3397);
+            Oleta.Tosi(s2.Nykyinen == null, "kohteeseen siirryttäessä sama");
         }
 
         [Testi] static void KaupunginSisallaLennetaan()
