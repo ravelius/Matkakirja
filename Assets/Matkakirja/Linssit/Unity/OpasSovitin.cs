@@ -1533,6 +1533,26 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Kohdekehyksen maa pisteeseen (silmukka.MaaTarvitaan); epäonnistuessa arvio 45 m, jottei siirto jää odottamaan.</summary>
+        /// <summary>Testi `opas pinta lat lon [lat lon …]` (Linnanrakentaja 7.10.: Gizan maapohja): Googlen pinnan ellipsoidikorkeus
+        /// pisteissä (SampleHeightMostDetailed, yksittäiset pisteet ilman kehää) lokiin.</summary>
+        public static bool Pinta(IReadOnlyList<(double lat, double lon)> pisteet)
+        {
+            if (!Auki || Viimeisin.kaupunki.Pinta == null || pisteet.Count == 0) return false;
+            Viimeisin.o.StartCoroutine(Viimeisin.PintaNayte(pisteet));
+            return true;
+        }
+        IEnumerator PintaNayte(IReadOnlyList<(double lat, double lon)> p)
+        {
+            var q = new double3[p.Count];
+            for (int i = 0; i < p.Count; i++) q[i] = new double3(p[i].lon, p[i].lat, 0);
+            var t = kaupunki.Pinta.SampleHeightMostDetailed(q);
+            while (!t.IsCompleted) yield return null;
+            var r = t.IsFaulted ? null : t.Result;
+            for (int i = 0; i < p.Count; i++)
+                o.Kirjaa($"opas: pinta {p[i].lat.ToString("F5", System.Globalization.CultureInfo.InvariantCulture)}, {p[i].lon.ToString("F5", System.Globalization.CultureInfo.InvariantCulture)}: "
+                    + (r != null && r.sampleSuccess[i] ? $"{r.longitudeLatitudeHeightPositions[i].z:F2} m (ellipsoidi)" : "ei osumaa"));
+        }
+
         IEnumerator KorkeusPisteessa(double lat, double lon)
         {
             string a = PisteAvain(lat, lon);
