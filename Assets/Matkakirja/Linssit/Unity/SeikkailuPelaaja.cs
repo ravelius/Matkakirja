@@ -110,6 +110,30 @@ namespace Matkakirja.Natiivi
             kavely.NopeusX = kavely.NopeusZ = 0;
         }
 
+        // Kertaele juurisiirrolla (v44j nousu_laiturille: veneestä kannelle). Kapseli paikallaan ja törmäys pois leikkeen ajan; viimeisellä
+        // ruudulla kapseli siirtyy root_siirto (hahmon kehyksessä, +Z kasvot) ja leike vaihtuu idleen (idle alkaa origosta, ei hyppyä).
+        float eleLoppuu = -1f, eleKesto; Vector3 eleSiirto; Action eleValmis;
+        public bool Eleessa => eleLoppuu >= 0f;
+
+        public void SoitaEle(string nimi, float kesto, Vector3 juuriSiirto, Action valmis = null)
+        {
+            leike = nimi; leikeAika = 0; eleKesto = kesto; eleLoppuu = Time.unscaledTime + kesto; eleValmis = valmis;
+            eleSiirto = hahmo.rotation * juuriSiirto;
+            cc.enabled = false; pysty = 0; kavely.NopeusX = kavely.NopeusZ = 0;
+            Debug.Log($"MATKAKIRJA seikkailu: ele {nimi} {kesto:F1} s, juurisiirto {eleSiirto}");
+        }
+
+        bool PaivitaEle(float dt)
+        {
+            if (eleLoppuu < 0f) return false;
+            leikeAika = Math.Min(leikeAika + dt, eleKesto - 1e-3);   // ei kierrä alkuun (Hahmot3D ottaa ajan modulo kesto)
+            if (Time.unscaledTime < eleLoppuu) return true;
+            transform.position += eleSiirto; viimeMaassa = transform.position;
+            cc.enabled = true; leike = "idle"; leikeAika = 0; eleLoppuu = -1f;
+            var v = eleValmis; eleValmis = null; v?.Invoke();
+            return false;
+        }
+
         public static void Poista()
         {
             if (Aktiivinen != null) Destroy(Aktiivinen.gameObject);
@@ -134,6 +158,14 @@ namespace Matkakirja.Natiivi
         {
             float dt = Mathf.Min(Time.unscaledDeltaTime, 0.05f);
             var s = LueSyote();
+            if (PaivitaEle(dt))
+            {
+                // Ele: vain katse kääntyy (olan yli -kamera), hahmo ja kapseli paikallaan.
+                s.LiikeX = s.LiikeY = 0; s.Juoksu = s.Hiipiminen = false;
+                double hy = kavely.HahmoYaw; kavely.Paivita(dt, s); kavely.HahmoYaw = hy; kavely.NopeusX = kavely.NopeusZ = 0;
+                olka.rotation = Quaternion.Euler((float)kavely.KameraPitch, (float)kavely.KameraYaw, 0);
+                return;
+            }
             kavely.Paivita(dt, s);
             // Painovoima ja liike.
             if (cc.isGrounded && pysty < 0) pysty = -1f; else pysty += Painovoima * dt;
