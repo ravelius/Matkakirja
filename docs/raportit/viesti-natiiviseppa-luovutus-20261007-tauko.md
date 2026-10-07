@@ -25,7 +25,7 @@ log -1 master`, `tail -3 proto-3d/lokit/kaannospalvelu/juna.log`, `tail -5 proto
 4. Täysi BUILD 162 -SHA Julkaisijalle + Päätoimittajalle. Julkaisija ajaa TF 162:n.
 5. Mac TF 162 (lupa annettu): iOS-latauksen jälkeen `perl -e 'use POSIX; exit if fork; setsid; exec "zsh", @ARGV'
    proto-3d/lokit/natiiviseppa-skriptit/mac-tf.sh <BUILD162-sha8> 162`, tulos mac-tf-vahti.txt + gh run list proto3d-mac-testflight.
-6. JUNA 163 (huomenna 8.10., KUITATTU Päätoimittaja 20.0x): Siirtoseppä historia-fp-juna 6d23aed1 (1. persoonan pala, huoneet 1–5) +
+6. JUNA 163 (huomenna 8.10., KUITATTU Päätoimittaja 20.0x): Siirtoseppä historia-valot-juna 787f0092 (⊇ 6d23aed1 + Candle VFX + Volumetric Lights 2 laatutasokytkimen takana, Asset Store -paketit ENSIMMÄISTÄ KERTAA junassa; jos käännös kaatuu pakettien takia → 6d23aed1 viivyttämättä + yksi rivi Päätoimittajalle) +
    NUI-kärki seikkailu-kuvakkeet 8aa55e02 (⊇ jatka 6af3eb9f ⊇ tekstivahti ⊇ verbi ⊇ fp eb115fc3 ⊇ tietokerros cbc92a25) + LS1 äänetön
    esitys 578d1186c (korvaa 7568a39bc) + LS2 S2-kevät 08a6891a0. Pohja: BUILD 162 -master. Ajankohta sovitaan Julkaisijan kanssa.
    Muut ehdokkaat (eivät kuitattuja tähän): LS1 yksityiskohdat-haarat sisältyvät 578d1186c:hen.
