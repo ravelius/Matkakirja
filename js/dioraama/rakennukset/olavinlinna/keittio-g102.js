@@ -99,13 +99,15 @@ const PALKIT = Array.from({ length: 11 }, (_, k) => {
   return { resepti: 'laatta', paikka: [r3(x), y(H + 0.02), r3((10.4 + z1) / 2)], suunta: 0, leveys: 0.22, syvyys: r3(z1 - 10.4), paksuus: 0.24, pinnat: { yla: 'puu', ala: 'puu', sivu: 'puu' } };
 });
 const SEINAT = [
-  // Pihan seinä: ovi (u −1,8) ja kaksi ikkunaa (u 0,9 ja 3,9). Ulkona kivi, sisällä rappaus.
+  // Pihan seinä: ovi (u −1,8) ja kaksi ikkunaa (u 0,9 ja 3,9). Kivi molemmin puolin (7.10. Päätoimittaja V1-stilleistä: sisäpuolen
+  // rappaus näkyi 2k-atlaksessa sileän tasaisena ruskeana pääseinän kiven vieressä).
   {
     resepti: 'seina', paikka: [-19.7, Y, ZP], suunta: 0, pituus: 10.2, korkeus: H, paksuus: 0.9,
     aukot: [{ u: -1.8, y: 0, leveys: 1.1, korkeus: 2.0 }, { u: 0.9, y: 1.6, leveys: 0.6, korkeus: 0.8 }, { u: 3.9, y: 1.6, leveys: 0.6, korkeus: 0.8 }],
+    pinnat: { taka: 'kivi' },
   },
-  { resepti: 'seina', paikka: [X0, Y, 12.35], suunta: 270, pituus: 3.5, korkeus: H, paksuus: 0.9 }, // länsi (porttikäytävän puoli)
-  { resepti: 'seina', paikka: [X1, Y, 13.0], suunta: 90, pituus: 4.8, korkeus: H, paksuus: 0.9 }, // itä
+  { resepti: 'seina', paikka: [X0, Y, 12.35], suunta: 270, pituus: 3.5, korkeus: H, paksuus: 0.9, pinnat: { taka: 'kivi' } }, // länsi (porttikäytävän puoli)
+  { resepti: 'seina', paikka: [X1, Y, 13.0], suunta: 90, pituus: 4.8, korkeus: H, paksuus: 0.9, pinnat: { taka: 'kivi' } }, // itä
   // Kehämuuri (3,3 m:n muurin sisäosa, kavely.py 1,2 m): raakaa kiveä molemmin puolin.
   ...[[ETELA[0], ETELA[1], SA], [ETELA[1], ETELA[2], SB]].map(([a, b, s]) => ({
     resepti: 'seina', paikka: [r3((a[0] + b[0]) / 2), y(-0.5), r3((a[1] + b[1]) / 2)], suunta: r3(s),

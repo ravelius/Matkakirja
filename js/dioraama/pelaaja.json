@@ -1,0 +1,77 @@
+{
+ "huom": "Pelaajahahmo Fogg (Linnanrakentaja 7.10.2026, Siirtosepän E1): Quaternius CC0 (UBC + Fantasy-asu Ranger tummana + UAL), punainen huivi. Liikkeiden toistokerroin = tavoitenopeus / leikkeen mitattu nopeus. Lähde _valmiit/linna-hahmot/pelaaja-v1/pelaaja_skin.py.",
+ "nimi": "fogg",
+ "rooli": "pelaaja",
+ "leikkeet": {
+  "idle": "idle",
+  "kavely": "kavely",
+  "juoksu": "juoksu",
+  "hiipiminen": "hiipiminen",
+  "kyykky_idle": "kyykky_idle",
+  "nousu": "nousu",
+  "puhe": "puhe"
+ },
+ "liikkeet": {
+  "kavely": {
+   "kesto_s": 1.333,
+   "nopeus_m_s": 0.955,
+   "sykli_m": 1.273,
+   "lantion_siirto_m": 0.0,
+   "akseli": "y",
+   "tavoite_m_s": 1.4,
+   "toistokerroin": 1.466
+  },
+  "juoksu": {
+   "kesto_s": 0.933,
+   "nopeus_m_s": 5.894,
+   "sykli_m": 5.501,
+   "lantion_siirto_m": 0.0,
+   "akseli": "y",
+   "tavoite_m_s": 3.2,
+   "toistokerroin": 0.543
+  },
+  "hiipiminen": {
+   "kesto_s": 2.0,
+   "nopeus_m_s": 0.586,
+   "sykli_m": 1.172,
+   "lantion_siirto_m": 0.0,
+   "akseli": "y",
+   "tavoite_m_s": 0.9,
+   "toistokerroin": 1.536
+  },
+  "idle": {
+   "kesto_s": 2.5
+  },
+  "kyykky_idle": {
+   "kesto_s": 2.933
+  },
+  "nousu": {
+   "kesto_s": 1.033,
+   "huom": "UAL Sitting_Exit (tuolilta nousu): veneestä nousun varaleike, ei silmukka"
+  },
+  "puhe": {
+   "kesto_s": 2.933
+  }
+ },
+ "kavely_sykli_m": 1.273,
+ "fps": 30,
+ "kapseli": {
+  "korkeus_m": 1.75,
+  "sade_m": 0.3,
+  "juuri": "jalkojen välissä (origo)",
+  "kasvot": "+Z"
+ },
+ "pituus_m": 1.808,
+ "kasvot_gltf": [
+  -0.014,
+  -0.071,
+  0.141
+ ],
+ "kolmiot": 15031,
+ "kirkkaus": 1.35,
+ "hiusvari": [
+  0.42,
+  0.3,
+  0.2
+ ]
+}

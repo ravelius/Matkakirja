@@ -341,6 +341,13 @@ export function lisaaBlender(rakennusJson, blender) {
     // skin.faceit-kentän.
     if (on.has(`hahmot/${id}-faceit.glb`)) h.malli3d.skin.faceit = B(`hahmot/${id}-faceit.glb`);
   }
+  // Pelaajahahmo (Siirtoseppä 7.10.2026, E1 pystyleike): blender/hahmot/fogg.glb + js/dioraama/pelaaja.json (leikkeet, liikkeiden
+  // mitatut nopeudet ja toistokertoimet, kapseli). Vain jos glb on viety.
+  if (on.has('hahmot/fogg.glb')) {
+    const P = JSON.parse(readFileSync(new URL('../../js/dioraama/pelaaja.json', import.meta.url), 'utf8'));
+    delete P.huom;
+    rakennusJson.pelaaja = { glb: B('hahmot/fogg.glb'), ...P };
+  }
   rakennusJson.tunnelma = 'hamara';
   rakennusJson.ulkokuori = {
     ...Object.fromEntries(Object.keys(tasot).map((t) => [t, B(`ulkokuori/ulkokuori_${t}.glb`)])),
