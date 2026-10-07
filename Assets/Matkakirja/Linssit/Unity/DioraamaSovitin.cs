@@ -383,7 +383,9 @@ namespace Matkakirja.Natiivi
             // Lähileikkaus puolilähikuvassa: kaikki yli PuolilahiVapaaM lähempänä kameraa kuin puhuja jää piirtämättä (ei peittäjiä).
             nayttamo.LahiLeikkaus = puolilahiRinta is Vector3 pr && nayttamo.Kamera != null
                 ? Mathf.Clamp(Vector3.Distance(nayttamo.Kamera.transform.position, pr) - PuolilahiVapaaM, 0f, PuolilahiLeikkausMaxM) : 0f;   // enintään 1,2 m: kuulija ei katoa blendissä
-            DioraamaEtsinta.Himmennys = puolilahiRinta.HasValue;
+            // Rengas piilossa myös 1,5 s puolilähikuvan jälkeen: blendi takaisin lepoon on vielä lähellä kasvoja (eleet-2-ajo 7.10.: kaari kokin yllä).
+            if (puolilahiRinta.HasValue) himmennysAsti = Time.unscaledTime + 1.5f;
+            DioraamaEtsinta.Himmennys = Time.unscaledTime < himmennysAsti;
             puolilahiRinta = null;
             nayttamo.Paivita(kameraAsento, y.VahennettyLiike, t, asetaKamera: !cmKaytossa);
             hahmot3D.Paivita(rakennus, nakyma, nayttamo.Kamera, t);
@@ -751,9 +753,10 @@ namespace Matkakirja.Natiivi
                 if (!NakolinjaPeitossa(DioraamaNayttamo.UnityPiste(kp), puolilahiRinta.Value, puhuja, tila)) { atsimuutti = ehd; break; }
             }
             if (double.IsNaN(atsimuutti)) atsimuutti = varalla;
-            return (lepo.Avain + "|" + puhuja + "|puolilahi", new Asento(rinta, atsimuutti, korkeus, etaisyys, fov, p.Aukko, p.Kierto), 0.2, false);
+            return (lepo.Avain + "|" + puhuja + DioraamaCinemachine.PuolilahiPaate, new Asento(rinta, atsimuutti, korkeus, etaisyys, fov, p.Aukko, p.Kierto), 0.2, false);
         }
         static double KiertoEro(double a0, double a1) => ((a1 - a0 + 180) % 360 + 360) % 360 - 180;
+        float himmennysAsti = -1f;
 
         /// <summary>Onko kamerasta puhujan rintaan kulkevalla janalla toinen hahmo (pystysauva 0–1,8 m, säde 0,45 m) tai tilan liekki (0,6 m).</summary>
         bool NakolinjaPeitossa(Vector3 kamera, Vector3 rinta, string puhuja, string tilaId)

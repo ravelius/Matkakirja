@@ -54,6 +54,8 @@ namespace Matkakirja.Natiivi
         readonly CinemachineBasicMultiChannelPerlin lentoPerlin;
         readonly NoiseSettings kohina;
         int prioriteetti = 10;
+        /// <summary>DioraamaSovitin.Puolilahikuva-avaimen pääte ("tila:x|puhuja|puolilahi").</summary>
+        public const string PuolilahiPaate = "|puolilahi";
 
         /// <summary>Elävä kamera (lepoavain tai "lento"); null = seuraava vaihto on leikkaus.</summary>
         public string Elava { get; private set; }
@@ -169,7 +171,10 @@ namespace Matkakirja.Natiivi
             string tavoite = lepo.Saapumassa ? Lento : lepo.Avain;
             if (tavoite != Elava)
             {
-                float kesto = Elava == null ? 0f : Elava == Lento ? SaapumisenLoppuS : Mathf.Max(LyhinBlendiS, (float)lepo.Jaljella + JalkivenymaS);
+                // Puhujan vaihto puolilähikuvassa leikkaa (kuva–vastakuva): blendi kulki tyhjän tilan kautta (eleet-2-ajo 7.10.: tyhjät penkit
+                // t 22,0 ja 29,2 s). Lepokuvasta puolilähiin ja takaisin blendataan kuten ennen.
+                bool puhujanVaihto = Elava != null && Elava.EndsWith(PuolilahiPaate, System.StringComparison.Ordinal) && tavoite.EndsWith(PuolilahiPaate, System.StringComparison.Ordinal);
+                float kesto = Elava == null || puhujanVaihto ? 0f : Elava == Lento ? SaapumisenLoppuS : Mathf.Max(LyhinBlendiS, (float)lepo.Jaljella + JalkivenymaS);
                 aivot.DefaultBlend = kesto <= 0f ? new CinemachineBlendDefinition(CinemachineBlendDefinition.Styles.Cut, 0f)
                     : new CinemachineBlendDefinition(CinemachineBlendDefinition.Styles.Custom, kesto) { CustomCurve = Kayra };
                 (tavoite == Lento ? lento : lepot[tavoite].Cam).Priority = ++prioriteetti;
