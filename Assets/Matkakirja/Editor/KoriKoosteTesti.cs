@@ -5,7 +5,7 @@
 // korimaskin ulkopuolella eroaa alle 2 % kuvasta ilman koostetta. Kuvat tulokset/kori-kooste-{kanssa,ilman}.png. Exit 0 = läpi.
 using System;
 using System.IO;
-using Matkakirja.Linssit;
+using Matkakirja.Natiivi;
 using UnityEditor;
 using UnityEditor.SceneManagement;
 using UnityEngine;
