@@ -1,4 +1,4 @@
-# TILANNE 7.10. klo 19.1x
+# TILANNE 7.10. klo 20.0x
 
 - **AJOSSA: TALVI2C** (`kaudet/aja-talvi2c.sh`, PGID 50483, 19.09 alkaen, noin 4 h): rivit 13–20 → `s2-eurooppa-talvi2c/`. Koodi: `kausimosaiikki-talvi2c-20261007.mjs`.
   Talvi2b (18.57) HYLÄTTY: merijään laatikkosulkeminen teki porrasneliöitä ja levitti jäätä saaristoon. Talvi2c täyttää vain aidot reiät
@@ -6,7 +6,7 @@
   Valmistuttua:
   1) Koko Euroopan yleiskuva kerroksista talvi2c → talvi2 (vertaa `yleiskuva-talvi2b-z6.jpg`): saumat, pilvet ja porrasneliöt (Turun saaristo, Vienanmeren itäranta 39_14–16).
   2) Yksi rivi PT:lle, kuittauksen jälkeen `kokoa-kausi.py talvi v1 <_valmiit/s2-eurooppa-talvi-vienti-<pvm>> "<talvi2c/laatat>:<talvi2/laatat>" "<kuvaus>"`, LAHTEET.md (pohjana kevät) ja Julkaisija.
-- **KEVÄT v1 viennissä** (Julkaisija 16.0x). Kun Julkaisija ilmoittaa, tarkista määrä (57 630) ja viesti LS2:lle.
+- **KEVÄT v1 ÄMPÄRISSÄ** 20.02 (57 630 tarkistettu), ja LS2:lle on ilmoitettu. Syksy ja kevät ovat valmiit; jäljellä on talvi.
 - Worldview on tuotannossa, ja syksy v1 on ämpärissä (LS2:lle ilmoitettu).
 
 ---

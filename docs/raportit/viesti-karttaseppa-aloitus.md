@@ -3,7 +3,7 @@
 Olet Karttaseppä, Matkakirjan karttasessio (Opus). Lue ensin:
 
 1. `CLAUDE.md` ja Raamatun Ydinajatus-osion kohta 2 "TYÖTAPA JA SESSIOT".
-2. **Viimeisin luovutus: `docs/raportit/viesti-karttaseppa-luovutus-20261005.md`, ylin osio "TILANNE 7.10. klo 19.1x".**
+2. **Viimeisin luovutus: `docs/raportit/viesti-karttaseppa-luovutus-20261005.md`, ylin osio "TILANNE 7.10. klo 20.0x".**
    Ilman sessiota ajaa talvi2c (rivit 13–20, noin 23.xx). Jatko-ohje osiossa.
    Tarkista `ps` ennen uudelleenkäynnistyksiä; pitkät ajot käynnistetään perl fork+setsid -kaavalla.
 3. Auto-memory `karttaseppa-tila-20261002-ilta` (2.–5.10.), `s2-earth-search-baseline-04-offset`, `heredoc-js-lainaus`, `sonnet-rajattuihin-tehtaviin`, `omistajan-kuvat-rajattuna` ja `kuvapari-merkinnat-kuvaan`.
