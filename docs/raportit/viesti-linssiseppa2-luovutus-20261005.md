@@ -14,7 +14,7 @@ Avoimet työt:
    Ydin/Iss/Vuodenaika.S2EuroopanVersio-taulukkoon (nyt vain syksy; talvella myös Vuodenaika.S2Nakyy(Talvi) = true, jos talvi-S2 korvaa
    BMNG:n – kysy PT:ltä) + VuodenaikaTestit → PT:n kuittaus → Natiiviseppä. Syksy f6e4a8495 on junassa 162.
    KEVÄT TEHTY 7.10. 20.1x: 08a6891a0 (peili/proto/linssiseppa2/s2-kevat, worktree wt/proto-linssiseppa2-kevat, syksyn päällä),
-   kuittauspyyntö PT:lle → kuittauksen jälkeen SHA Natiivisepälle junaan 163. Talvi (talvi/v1) Karttasepältä ~23.xx → tee
+   PT KUITTASI junaan 163, SHA lähetetty Natiivisepälle. Talvi (talvi/v1) Karttasepältä ~23.xx → tee
    samaan tapaan uutena committina kevään päälle.
 2. Worktreet (poista `git worktree remove`, kun haara on masterissa): wt/proto-linssiseppa2-pallo-puoli (aa32b618b, juna 161),
    -hiiri (2d8da858f + ui hiiri juna 161; 6ec5dcff4 -ei-lepoa vain testihaarassa), -hiiri160 (testi, ei junaan), -paikannimet
