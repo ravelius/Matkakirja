@@ -23,6 +23,84 @@ toistuvaa ongelmatyyppiä, joita etsittiin kaikista 31 kaupungista:
 6. Kieli on luontevaa suomea; suomenkielinen alkusana (ääntäminen); sävy ei lapsellinen eikä saarnaava.
 7. Kysymyksillä on vastaus, joka ei vanhene nopeasti, ja ne liittyvät kohteeseen.
 
+Löydöstyyppi 4 tarkistettiin koneellisesti kaikille 31 kaupungille ennen agenttityötä: ei poikkeamia.
+Yhtään avausta (`avaukset/*.md`) ei tarvinnut muuttaa. Jo äänitettyihin kaupunkeihin ei koskettu.
+
+## Yhteenveto: muutokset kaupungeittain
+
+Luvut ovat sisältömuutoksia (`lyhyt`, `teksti`, `kysymykset`, `syventava`, `kuvaus`); pelkät lähderivien
+päivitykset eivät ole mukana. "Tarkistaja" = erillisen tarkistaja-agentin jälkikorjaukset.
+
+| Kaupunki | Muutokset | Tarkistaja | Yhteensä |
+|---|---|---|---|
+| Amsterdam | 16 | 3 | 19 |
+| Ateena | 12 | 0 | 12 |
+| Barcelona | 11 | 0 | 11 |
+| Bergen | 11 | 1 | 12 |
+| Berliini | 19 | 2 | 21 |
+| Bryssel | 14 | 0 | 14 |
+| Budapest | 13 | 1 | 14 |
+| Bukarest | 14 | 3 | 17 |
+| Dublin | 9 | 0 | 9 |
+| Edinburgh | 3 | 0 | 3 |
+| Firenze | 8 | 0 | 8 |
+| Granada | 7 | 0 | 7 |
+| Helsinki | 9 | 1 | 10 |
+| Islanti | 7 | 0 | 7 |
+| Košice | 14 | 0 | 14 |
+| Krakova | 7 | 1 | 8 |
+| Kreeta | 7 | 1 | 8 |
+| Lissabon | 7 | 0 | 7 |
+| Ljubljana | 7 | 2 | 9 |
+| Luxemburg | 7 | 0 | 7 |
+| Madrid | 9 | 0 | 9 |
+| Marseille | 6 | 1 | 7 |
+| Oslo | 13 | 0 | 13 |
+| Sevilla | 10 | 0 | 10 |
+| Sisilia | 7 | 0 | 7 |
+| Sofia | 13 | 2 | 15 |
+| Tampere | 10 | 0 | 10 |
+| Tukholma | 12 | 1 | 13 |
+| Valletta | 10 | 0 | 10 |
+| Venetsia | 13 | 0 | 13 |
+| Vilna | 16 | 5 | 21 |
+| **Yhteensä** | **321** | **24** | **345** |
+
+Jokaisesta kaupungista löytyi korjattavaa; yksikään ei jäänyt "ei korjattavaa" -tilaan. Tarkistajat hyväksyivät
+sellaisenaan 18 kaupungin muutokset (Ateena, Barcelona, Bryssel, Dublin, Edinburgh, Firenze, Granada, Islanti, Košice,
+Lissabon, Luxemburg, Madrid, Oslo, Sevilla, Sisilia, Tampere, Valletta, Venetsia).
+
+Koneellinen tarkistin lopuksi kaikille 31: **0 virhettä**. Huomiot ovat vain hyväksyttyjä tyyppejä ("ei ala paikan
+nimellä" suomenkielisen etusanan takia, "avaus puuttuu"). Tukholmassa huomioita on 4 enemmän kuin ennen, koska
+Drottningholmin ja Riddarholmenin tekstit alkoivat ruotsinkielisellä nimellä ja saivat suomenkielisen etusanan.
+
+## Päätoimittajan päätettävät (koottu kaupunkien ja tarkistajien raporteista)
+
+Nykytila, joka voi vanhentua äänitteessä:
+- **Košice, Miklušin vankila:** "työn on määrä valmistua kesällä 2027" ja kysymys uudesta näyttelystä.
+- **Luxemburg, Pétrusse:** "ensimmäinen vaihe valmistui 2024, työ jatkuu" vanhenee noin 2028. Ehdotus: viimeisen virkkeen poisto.
+- **Barcelona, Sagrada Família:** "pääjulkisivu on yhä rakenteilla" (vanha teksti) vanhenee valmistuessaan.
+- **Bergen, Troldhaugen:** huvila suljettu 15.8.2025 alkaen; avautumisvuosi lähteissä 2026 tai 2027. Teksti kirjoitettu kantaa ottamatta.
+- **Tukholma, Riddarholmen:** torninhuippu purettu syyskuussa 2026, palaa 2028 mennessä; `korkeus_m` 90 jätetty.
+- **Dublin, Nelsonin aikapallo:** palautettu 28.5.2025; päivittäistä pudotusta 2026 ei voitu varmistaa virallisesta lähteestä.
+
+Sävy ja sisältö:
+- **Lissabon, Santa Justan hissi:** halutaanko Glórian onnettomuus kuudentoista kuolonuhrin mainintoineen pysyvään äänitteeseen.
+- **Madrid, Retiro:** isoisä siirtyi kierrosversiosta pelkkään "Kerro lisää" -tekstiin (kuten Pariisin mallin Louvre); isoisä ei siis kuulu Madridin kierroksella.
+- **Marseille:** isoisän merkintä "Marseillen satamassa" on liitetty Vanhaan satamaan; rajatapaus jätetty ennalleen.
+
+Jäljelle jääneet päällekkäisyydet (lievät, jätetty perustellusti):
+- **Ateena:** karyatidit sekä Erekhtheionin että Akropolis-museon kierrosversiossa (eri näkökulmat: patsaat temppelillä / museossa).
+- **Budapest:** kolme kahdeksasta kierrosversiosta sijoittuu toiseen maailmansotaan.
+- **Valletta:** ranskalaisten miehitys sivulauseessa kahdessa peräkkäisessä kierrosversiossa.
+- **Oslo:** viikinkilaivojen siirto tekstissä yhdellä virkkeellä ja kierrosversion aiheena.
+
+Lähteiden varassa poistettuja tai pehmennettyjä väitteitä, jotka voi palauttaa, jos lähde löytyy:
+- **Barcelona:** La Boquerian peruskiven kulta; Palaun "Euroopan ainoa luonnonvalolla valaistu konserttisali" (pelin aineisto väittää).
+- **Berliini:** "Euroopan suurin tornirautatieasema" jätettiin, mutta lähde on ohut.
+- **Košice:** Itä-Slovakian museon arkkitehdin nimi (Lechner Ödön vai Jenő).
+- **Westerkerk:** korkeus 85/87 m poistettu tekstistä; `korkeus_m` 85 jätetty.
+
 ---
 
 <!-- MUUTOKSET-ALKAA -->

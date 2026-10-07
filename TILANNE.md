@@ -3,6 +3,12 @@
 Haara `fable-esittely-tarkistus` (pohjana `pelikoodari-esittely-pilvi`).
 Pysäytetty 7.10.2026 Päätoimittajan käskystä (omistajan päätös, 5 tunnin raja). Jatkettu 7.10.2026 uudessa pilvisessiossa.
 
+**TYÖ VALMIS 7.10.2026.** Kaikki 31 kaupunkia tarkistettu ja erillisen tarkistajan läpikäymiä: 345 sisältömuutosta
+(321 + 24 tarkistajan jälkikorjausta), tarkistin 0 virhettä kaikissa 31:ssä, avauksiin ei muutoksia, äänitettyihin
+kaupunkeihin ei koskettu. Tulokset, kaupunkikohtainen taulukko ja Päätoimittajan päätettävät:
+`esittely-tyo/TARKISTUS-PAATOIMITTAJA.md`. Ei PR:ää, ei mergeä, ei ääniä (tilauksen mukaan).
+Tämä tiedosto on työn aikainen tilaloki; sen voi poistaa ennen mergeä.
+
 ## JATKOSESSION TILA (päivitetään jokaisen aallon jälkeen)
 
 Toimeksianto on nyt repossa: `esittely-tyo/OHJE-toimituksellinen-tarkistus.md`.
@@ -18,7 +24,7 @@ ja aalto committataan + pushataan.
 | 2 | dublin, edinburgh (VALMIS) / firenze, granada (VALMIS) / helsinki, islanti (VALMIS) / kosice, krakova (VALMIS) | VALMIS |
 | 3 | kreeta, lissabon (VALMIS) / ljubljana, luxemburg (VALMIS) / madrid, marseille (VALMIS) / oslo, sevilla (VALMIS) | VALMIS |
 | 4 | sisilia, sofia (VALMIS) / tampere, tukholma (VALMIS) / valletta, venetsia (VALMIS) / vilna (VALMIS) | VALMIS |
-| 5 | TARKISTAJA A (amsterdam–islanti) VALMIS; B (kosice–tukholma) käynnissä; C (valletta, venetsia, vilna + Bergenin päällekkäisyys) käynnissä | käynnissä |
+| 5 | TARKISTAJAT A, B ja C: 24 jälkikorjausta, kaikki committattu | VALMIS |
 
 Agentit ajetaan liukuvasti: kun pari valmistuu, se committataan heti ja seuraava pari käynnistyy (max 4 rinnakkain).
 Valmis kaupunki = muutokset committattu JA fragmentti liitetty TARKISTUS-PAATOIMITTAJA.md:hin.
