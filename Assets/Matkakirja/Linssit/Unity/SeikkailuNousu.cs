@@ -17,11 +17,17 @@ namespace Matkakirja.Natiivi
     {
         /// <summary>Kappelin holvin laki (Unity y, Siirtoseppä 7.10.: lattia 9,6 + 5,6).</summary>
         public static float HolviY = 15.2f;
-        /// <summary>Kellotornin seinän kaari ja sen ulkonormaali (Unity) sekä linnan keskipiste ja vaakasäde drone-kaarelle.
-        /// Linnanrakentajan mitat (rakennus.json-merkki "nakyma:kellotorni-kaari" tai viesti); ennen niitä arvio.</summary>
-        public static Vector3 KaariUnity = new Vector3(-40f, 18f, 10f), KaariUlosUnity = new Vector3(-1f, 0f, 0f),
-            LinnaKeskiUnity = new Vector3(0f, 10f, 0f);
-        public static float LinnaSade = 60f;
+        /// <summary>
+        /// Kellotornin seinän kaari (Linnanrakentaja 7.10.: segmenttikaarinen komero, 0,85 m leveä, laki 1,95 m, syvyys 0,56 m, kynnys
+        /// +97,8 NN; Härö 1997) keskipisteenä ja ulkonormaali (kompassi 280°, länsi–luode; alla kallio, pudotus 10–12 m) Unityssa,
+        /// sekä päälinnan keskipiste ja vaakasäde drone-kaarelle (glTF (−20; 15; 0), ~90 m). Linnanrakentaja lisää merkin
+        /// "nakyma:kellotorni-kaari" kavely/merkit.json:iin; kutsuja voi asettaa kentät ennen Aloita-kutsua.
+        /// </summary>
+        public static Vector3 KaariUnity = new Vector3(-51.0f, 15.8f, 5.5f), KaariUlosUnity = new Vector3(-0.985f, 0f, 0.174f),
+            LinnaKeskiUnity = new Vector3(-20f, 15f, 0f);
+        public static float LinnaSade = 90f;
+        /// <summary>Pysähdyksen etäisyys komerosta (m): pieni komero (0,85 × 1,95 m) rajautuu tornin seinän keskelle.</summary>
+        public static float LoppuEtaisyys = 9f;
 
         static SeikkailuNousu ajossa;
         /// <summary>Käynnissä (testit ja Siirtosepän varanousu).</summary>
@@ -49,7 +55,7 @@ namespace Matkakirja.Natiivi
             float alkuLahi = nayttamo != null ? nayttamo.LahiLeikkaus : 0f;
             if (nayttamo != null) nayttamo.AsetaTunnelma(true);   // yötaivas: dioraaman hämärä (taivas, aurinko, linnut)
             var reitti = new NousuReitti(V(lahto), V(lahto + kamera.forward * 5f), cam != null ? cam.fieldOfView : 60,
-                HolviY, V(LinnaKeskiUnity), LinnaSade, V(KaariUnity), V(KaariUlosUnity));
+                HolviY, V(LinnaKeskiUnity), LinnaSade, V(KaariUnity), V(KaariUlosUnity), LoppuEtaisyys);
             Debug.Log($"MATKAKIRJA seikkailu: nousu alkaa {lahto} → kaari {KaariUnity}, {NousuReitti.Kesto:F1} s");
             float alku = Time.unscaledTime;
             char vaihe = ' ';

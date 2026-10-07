@@ -71,5 +71,23 @@ namespace Matkakirja.Linssit.Testit
                 Oleta.Tosi(s.Y > 18, $"lennossa korkealla (t {t:F1}, y {s.Y:F1})");
             }
         }
+
+        /// <summary>Olavinlinnan oikeat mitat (Linnanrakentaja 7.10., glTF): kaari (−51,0; 15,8; −5,5), ulos (−0,985; 0; −0,174),
+        /// päälinna (−20; 15; 0) säde 90; kappeli Siirtosepältä. Pysähdys länsipuolella komeron edessä, ei tornin sisällä.</summary>
+        [Testi] static void OlavinlinnanKellotorni()
+        {
+            var r = new NousuReitti(new V3(-16.5, 11.2, -12.2), new V3(-12.9, 10.4, -15.0), 60, 15.2,
+                new V3(-20, 15, 0), 90, new V3(-51.0, 15.8, -5.5), new V3(-0.985, 0, -0.174), 9);
+            var (s, k, _, _, _) = r.Hetki(NousuReitti.Kesto);
+            Oleta.Tosi(s.X < -51.0 - 8 && Math.Abs((s - k).Pituus - 9) < 1e-6, $"kamera 9 m komerosta länteen {s}");
+            Oleta.Tosi(Math.Abs(r.Loppu.Atsimuutti - 280) < 1.0 || Math.Abs(r.Loppu.Atsimuutti + 80) < 1.0, $"kompassi 280° ({r.Loppu.Atsimuutti:F1})");
+            // Lennon aikana ei Kellotornin sisään (keskipiste (−43,7; ·; −4,2), säde ~8 m) alle 40 m:n korkeudella.
+            for (double t = NousuReitti.NousuS; t < NousuReitti.Kesto; t += 0.05)
+            {
+                var (p, _, _, _, _) = r.Hetki(t);
+                double d = Math.Sqrt((p.X + 43.7) * (p.X + 43.7) + (p.Z + 4.2) * (p.Z + 4.2));
+                Oleta.Tosi(d > 8 || p.Y > 40.5, $"ei tornin läpi (t {t:F2}, d {d:F1}, y {p.Y:F1})");
+            }
+        }
     }
 }
