@@ -27,7 +27,10 @@ namespace Matkakirja.Natiivi
         /// <summary>Testi / kosketusnappi: seuraava ruutu tekee toiminnon.</summary>
         public static bool ToimintoPyydetty;
 
-        sealed class Esine { public string Id; public GameObject Go; public Rigidbody Rb; public bool Heitetty, Kuului; }
+        enum Laji { Heitettava, Nostettava, Irrotettava }
+        sealed class Esine { public string Id; public GameObject Go; public Rigidbody Rb; public bool Heitetty, Kuului; public Laji Laji; public bool Irrotettu; public Vector3 Ulos; }
+        /// <summary>Koputuksen ääni (ontto kohta); Sovitin asettaa.</summary>
+        public static AudioClip OnttoKlippi;
         readonly List<Esine> esineet = new List<Esine>();
         readonly List<UnityEngine.Object> luodut = new List<UnityEngine.Object>();
         Esine kadessa;
@@ -46,7 +49,7 @@ namespace Matkakirja.Natiivi
             var varjostin = Shader.Find("Matkakirja/Linssit/DioraamaMaasto");
             foreach (var m in d.Lajia("esine"))
             {
-                if (string.IsNullOrEmpty(m.Glb) || !m.Heitettava) continue;
+                if (string.IsNullOrEmpty(m.Glb)) continue;
                 byte[] b = null;
                 yield return DioraamaLevyvalimuisti.Hae(url(juuri + m.Glb), 60, t => b = t);
                 if (b == null || se == null) continue;
@@ -55,6 +58,8 @@ namespace Matkakirja.Natiivi
                 var eg = new GameObject("Esine:" + m.Tunnus) { layer = DioraamaNayttamo.Kerros };
                 eg.transform.SetParent(go.transform, false);
                 eg.transform.position = new Vector3((float)m.X, (float)m.Y, (float)-m.Z);
+                // kierto_y (glTF, rad) → Unity: z-peilaus kääntää kiertosuunnan.
+                if (m.KiertoY is double ky) eg.transform.rotation = Quaternion.Euler(0f, (float)(-ky * 180 / Math.PI), 0f);
                 Texture2D kuva = null;
                 if (malli.Kuvat.Count > 0 && malli.Kuvat[0] != null)
                 {
@@ -69,7 +74,10 @@ namespace Matkakirja.Natiivi
                 var sc = eg.AddComponent<SphereCollider>(); sc.center = mesh.bounds.center; sc.radius = Mathf.Max(0.04f, mesh.bounds.extents.magnitude * 0.6f);
                 var rb = eg.AddComponent<Rigidbody>(); rb.mass = 0.6f; rb.isKinematic = true; rb.interpolation = RigidbodyInterpolation.Interpolate;
                 rb.collisionDetectionMode = CollisionDetectionMode.ContinuousDynamic;
-                var e = new Esine { Id = m.Tunnus, Go = eg, Rb = rb };
+                var laji = m.Irrotettava ? Laji.Irrotettava : m.Heitettava ? Laji.Heitettava : Laji.Nostettava;
+                // Irrotettavan ulospäin = vastakkainen kuin "suunta seinään" (kierto_y), Unityssa (sin, 0, −cos) peilattuna.
+                var ulos = m.KiertoY is double ka ? -new Vector3((float)Math.Sin(ka), 0f, (float)-Math.Cos(ka)) : Vector3.zero;
+                var e = new Esine { Id = m.Tunnus, Go = eg, Rb = rb, Laji = laji, Ulos = ulos };
                 eg.AddComponent<Osuma>().Kun = (nopeus, kohta) => se.Osui(e, nopeus, kohta);
                 se.esineet.Add(e);
             }
@@ -106,21 +114,25 @@ namespace Matkakirja.Natiivi
             foreach (var e in esineet)
             {
                 if (e == kadessa || e.Go == null) continue;
+                if (e.Laji == Laji.Irrotettava && e.Irrotettu) continue;
+                if (e.Laji == Laji.Nostettava && Muurattu(e)) continue;   // syvennyksen esineet vasta, kun lähimmät kivet on irrotettu
                 float d = (e.Go.transform.position - pp).sqrMagnitude;
                 if (d < pd) { pd = d; lahin = e; }
             }
             // Ei esinettä lähellä eikä kädessä → toiminto kynttilöille (E3: sammuta, sytytä, puhalla oma); nappi näkyy samoin ehdoin.
             var kynttilat = SeikkailuKynttilat.Aktiivinen;
-            Lahin = lahin?.Id ?? (kadessa == null && kynttilat != null && kynttilat.ToimintoTarjolla(p) ? "kynttila" : null);
+            Lahin = lahin?.Id ?? (kadessa == null && kynttilat != null && kynttilat.ToimintoTarjolla(p) ? "kynttila" : null)
+                ?? (kadessa == null && OnttoLahella(p) ? "koputa" : null);
             bool toiminto = ToimintoPyydetty;
             ToimintoPyydetty = false;
             var kb = Keyboard.current; var gp = Gamepad.current;
             if (kb != null && kb.eKey.wasPressedThisFrame) toiminto = true;
             if (gp != null && gp.buttonWest.wasPressedThisFrame) toiminto = true;
             if (!toiminto) return;
-            if (kadessa != null) Heita(p);
-            else if (lahin != null) Poimi(p, lahin);
-            else kynttilat?.Toimi(p);
+            if (kadessa != null) { if (kadessa.Laji == Laji.Heitettava) Heita(p); else Laske(p); }
+            else if (lahin != null) { if (lahin.Laji == Laji.Irrotettava) StartCoroutine(Irrota(lahin)); else Poimi(p, lahin); }
+            else if (kynttilat != null && kynttilat.Toimi(p)) { }
+            else if (OnttoLahella(p)) Koputa(p);
         }
 
         void Poimi(SeikkailuPelaaja p, Esine e)
@@ -145,6 +157,54 @@ namespace Matkakirja.Natiivi
             e.Rb.angularVelocity = UnityEngine.Random.insideUnitSphere * 8f;
             e.Heitetty = true;
             kirjaa?.Invoke($"seikkailu: heitetty {e.Id} suuntaan {eteen}");
+        }
+
+        /// <summary>Nostettu (kalkki, pateeni, liuskekivi) lasketaan varovasti eteen (ei heitetä: pyhä esine).</summary>
+        void Laske(SeikkailuPelaaja p)
+        {
+            var e = kadessa; kadessa = null;
+            e.Go.transform.SetParent(transform, true);
+            e.Go.transform.position = p.transform.position + p.Hahmo.forward * 0.5f + Vector3.up * 0.9f;
+            e.Rb.isKinematic = false; e.Rb.linearVelocity = Vector3.zero; e.Heitetty = false;
+            kirjaa?.Invoke($"seikkailu: laskettu {e.Id}");
+        }
+
+        /// <summary>Kivi liukuu 0,3 m ulos seinästä (laastisauma antaa periksi) ja putoaa; kolahdus ei kuulu vartijoille (hiljainen työ).</summary>
+        IEnumerator Irrota(Esine e)
+        {
+            e.Irrotettu = true;
+            var alku = e.Go.transform.position; var loppu = alku + e.Ulos * 0.3f;
+            for (float t = 0; t < 1f; t += Time.deltaTime / 1.2f) { if (e.Go == null) yield break; e.Go.transform.position = Vector3.Lerp(alku, loppu, t * t * (3 - 2 * t)); yield return null; }
+            e.Rb.isKinematic = false; e.Rb.linearVelocity = e.Ulos * 0.4f;
+            kirjaa?.Invoke($"seikkailu: irrotettu {e.Id} (jäljellä {esineet.FindAll(x => x.Laji == Laji.Irrotettava && !x.Irrotettu).Count})");
+        }
+
+        /// <summary>Onko esineen edessä (1,0 m:n sisällä) vielä irrottamaton kivi.</summary>
+        bool Muurattu(Esine e)
+        {
+            foreach (var k in esineet)
+                if (k.Laji == Laji.Irrotettava && !k.Irrotettu && k.Go != null && (k.Go.transform.position - e.Go.transform.position).sqrMagnitude < 1f) return true;
+            return false;
+        }
+
+        static bool OnttoLahella(SeikkailuPelaaja p)
+        {
+            var d = SeikkailuKavely.Data; if (d == null) return false;
+            var c = p.transform.position + Vector3.up * 1.2f;
+            foreach (var m in d.Lajia("ontto"))
+                if (Vector3.Distance(new Vector3((float)m.X, (float)m.Y, (float)-m.Z), c) < 1.1f) return true;
+            return false;
+        }
+
+        void Koputa(SeikkailuPelaaja p)
+        {
+            var c = p.transform.position + Vector3.up * 1.2f + p.Hahmo.forward * 0.4f;
+            if (OnttoKlippi != null)
+            {
+                var a = SeikkailuKuulija.Lahde("Koputus", 1.5f, 15f); SeikkailuKuulija.Aseta(a, c);
+                a.clip = OnttoKlippi; a.pitch = 0.75f; a.Play(); Destroy(a.gameObject, OnttoKlippi.length / 0.75f + 0.2f);
+            }
+            kirjaa?.Invoke("seikkailu: koputus kuulostaa ontolta");
         }
 
         void Osui(Esine e, float nopeus, Vector3 kohta)

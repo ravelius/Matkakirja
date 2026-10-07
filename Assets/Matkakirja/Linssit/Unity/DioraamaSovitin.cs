@@ -961,6 +961,14 @@ namespace Matkakirja.Natiivi
                 yield return q.SendWebRequest();
                 if (q.result == UnityEngine.Networking.UnityWebRequest.Result.Success) SeikkailuEsineet.KolahdusKlippi = UnityEngine.Networking.DownloadHandlerAudioClip.GetContent(q);
             }
+            // E3: koputuksen ontto ääni (väliaikaisesti ovi-puu matalammalla sävelellä, kunnes oma koputusääni on pankissa).
+            if (SeikkailuEsineet.OnttoKlippi == null && rakennus?.Aanet != null && rakennus.Aanet.TryGetValue("ovi-puu", out var ov) && !string.IsNullOrEmpty(ov.Tiedosto))
+            {
+                using var q2 = UnityEngine.Networking.UnityWebRequestMultimedia.GetAudioClip(AaniUrl(ov.Tiedosto), AudioType.MPEG);
+                ((UnityEngine.Networking.DownloadHandlerAudioClip)q2.downloadHandler).streamAudio = false;
+                yield return q2.SendWebRequest();
+                if (q2.result == UnityEngine.Networking.UnityWebRequest.Result.Success) SeikkailuEsineet.OnttoKlippi = UnityEngine.Networking.DownloadHandlerAudioClip.GetContent(q2);
+            }
         }
 
         void LisaaPelaajahahmo(SeikkailuPelaaja sp)
