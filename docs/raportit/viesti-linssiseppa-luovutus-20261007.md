@@ -221,3 +221,12 @@ NUI:n osa on `natiivi-ui/sallitut-157` 0f770be2. LS2:n lista on tiedostossa `pro
   - alkulento-v3-korjaus 8dbc785f2 (162): ei yötä, kone alusta, napautuksen kamera-ajo pois, leikkauksen vaiheajanotto. Testit Linssit 810, Kartta 447, Peli 419 OK.
     - 1. toisto (6f681c85c) jumittui käännöksen aikana 44,8 s.
     - Leikkauskehys kesti 763 ms (nykäyksen todennäköinen syy). Diagnostiikka-ajo pyydetty.
+- 16.1x: OMISTAJAN PÄÄTÖS, ei omia käännöksiä. Riittävät unity-tarkistus ja testit. Simukäännös vain vian selvitykseen, siitä ilmoitus Päätoimittajalle etukäteen.
+  - Junaan 162 Natiivisepälle:
+    - pallo-latauskuva b9f37ee8f (Päätoimittaja kuittasi)
+    - alkulento-v3-korjaus 19dcb1d15 (Päätoimittaja: suoraan 162)
+  - Alkulennon diagnostiikka (`lokit/linssiseppa-alkulento-20261007/iphone-korjaus`):
+    - yö 0, kone 28 px napautuksesta
+    - nykäyksen syy: radan näyte 1 hyppäsi katsepisteessä 0,1°, korjattu 0,8 s:n sulautuksella (sulautusta ei ajettu simussa)
+    - avoinna: kaksi 83 ms:n kehystä lennon alussa (kamera vielä hidas)
+  - Giza odottaa (Olavinlinna ensin). Linnanrakentajan jonossa LOD1/2-leivonta ja helmojen sävy.
