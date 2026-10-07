@@ -663,6 +663,28 @@ namespace Matkakirja.Natiivi
 
         static Soiva lento;
         static int lentoVuoro;
+        // ALKULENTO v3 (omistaja 7.10.: "ettei kartta nykäise ollenkaan"; Linssiseppä: lennon 1. kehys ~190 ms pääsäiettä):
+        // moottoriäänen mp3 (78,7 s) purettiin ja sen 40 s:n silmukka leikattiin leikkauskehyksessä. EsilataaLento tekee molemmat jo
+        // aloituskaupungin napautuksessa (kamera paikallaan odotuksessa); LentoAani käyttää valmiin silmukan kerran.
+        static AudioClip valmisSilmukka, valmisLahde;
+        static bool lentoEsiladataan;
+
+        /// <summary>Moottoriääni ja sen silmukka muistiin ennen lentoa (PeliOhjain.AloituslentoAlkoi).</summary>
+        public static void EsilataaLento()
+        {
+            if (Mykistetty || lentoEsiladataan || valmisSilmukka != null || lento != null) return;
+            lentoEsiladataan = true;
+            float t0 = Time.realtimeSinceStartup;
+            Hae(Tehostetaulu.Lento.Url, klippi =>
+            {
+                lentoEsiladataan = false;
+                if (klippi == null || lento != null) return;
+                float alku = klippi.length > Tehostetaulu.Lento.PitkaAaniteS ? Tehostetaulu.Lento.SilmukkaAlkuS : 0f;
+                valmisSilmukka = alku > 0f ? Leikkaa(klippi, alku, klippi.length - alku, 1f, verho: false) : null;
+                valmisLahde = klippi;
+                Debug.Log($"MATKAKIRJA ui ääni: lentomoottori esiladattu {(Time.realtimeSinceStartup - t0) * 1000:F0} ms (silmukka {(valmisSilmukka != null ? valmisSilmukka.length.ToString("F0") + " s" : "-")})");
+            });
+        }
 
         /// <summary>
         /// Lennon moottoriääni (PeliOhjain.LentoAani): alkaa = true käynnistää (jo soiva jatkuu),
@@ -684,7 +706,10 @@ namespace Matkakirja.Natiivi
                 if (klippi == null || vuoro != lentoVuoro || lento != null || Mykistetty) return;
                 // Pitkissä äänityksissä alku on lähestymistä: silmukka lennon ytimestä loppuun.
                 float alku = klippi.length > Tehostetaulu.Lento.PitkaAaniteS ? Tehostetaulu.Lento.SilmukkaAlkuS : 0f;
-                AudioClip silmukka = alku > 0f ? Leikkaa(klippi, alku, klippi.length - alku, 1f, verho: false) : null;
+                // Esiladattu silmukka kerran (EsilataaLento), muuten leikkaus nyt.
+                AudioClip silmukka = valmisSilmukka != null && valmisLahde == klippi ? valmisSilmukka : null;
+                valmisSilmukka = null; valmisLahde = null;
+                if (silmukka == null && alku > 0f) silmukka = Leikkaa(klippi, alku, klippi.length - alku, 1f, verho: false);
                 var s = Soitin(AaniKanava.Tehoste);
                 s.clip = silmukka != null ? silmukka : klippi;
                 s.loop = true;
