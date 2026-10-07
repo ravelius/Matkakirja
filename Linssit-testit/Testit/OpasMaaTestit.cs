@@ -1,4 +1,5 @@
 using System;
+using Matkakirja.Linssit;
 using Matkakirja.Linssit.Kierros;
 
 namespace Matkakirja.Linssit.Testit
@@ -28,6 +29,31 @@ namespace Matkakirja.Linssit.Testit
             // Naapurin katot puolessa kehästä eivät nosta maata yli keskuksen (matala rakennus, keskus = oma katto 25 m).
             var (m2, _) = OpasKuvaus.MaaJaKorkeus(102, new double[] { 77, 77, 100, 101, 78, 99, 77, 78 });
             Oleta.Tosi(m2 <= 102, "maa ≤ keskus");
+        }
+
+        static (double huippu, double juuri) Kulmat(Pysahdys p, double korkeus, double aika = 0)
+        {
+            var a = OpasKuvaus.Pysahdyksella(p, aika);
+            double kat = a.KatseKorkeusM - p.MaaM, k = a.Kallistus * Math.PI / 180;
+            double silma = kat + a.EtaisyysM * Math.Cos(k), vaaka = a.EtaisyysM * Math.Sin(k), akseli = 90 - a.Kallistus;
+            double K(double z) => akseli - Math.Atan2(silma - z, vaaka) * 180 / Math.PI;
+            return (K(korkeus), K(0));
+        }
+
+        [Testi] static void KorkeaTorniMahtuuKuvaan()
+        {
+            // Päätoimittaja 04.3x: Eiffelin huippu leikkautui (600 m:n katto), Liikun jälkeen (lähemmäs-vaihe) kolmannes yli reunan.
+            var e = OpasKuvaus.Kehysta(new OpasKohde { Nimi = "Eiffel", Lat = 48.8583, Lon = 2.2945, KokoM = 125, KorkeusM = 330, Luokka = "torni" }, 91, 0);
+            double puoli = OpasKuvaus.KuvaPystyAst / 2;
+            foreach (double t in new[] { 0.0, 6, 15, 20, 40 })
+            {
+                var (h, j) = Kulmat(e, 330, t);
+                Oleta.Tosi(h <= puoli - 2 && j >= -puoli + 2, $"Eiffel t {t}: huippu {h:F1}°, juuri {j:F1}° (raja ±{puoli})");
+            }
+            Oleta.Tosi(e.EtaisyysM > 600 && e.EtaisyysM <= OpasKuvaus.KorkeaEtMaxM, $"Eiffel et {e.EtaisyysM:F0} m");
+            var l = OpasKuvaus.Kehysta(new OpasKohde { Nimi = "Louvre", Lat = 48.861, Lon = 2.336, KokoM = 400 }, 78, 0);
+            Oleta.Sama(0.0, l.MinEtM, "matala kohde ennallaan");
+            Oleta.Sama(350.0, l.EtaisyysM, "Louvre 350 m kuten ennen");
         }
 
         [Testi] static void KorkeaTorniKehystetaanKauas()
