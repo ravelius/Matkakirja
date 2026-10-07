@@ -2,6 +2,11 @@
  "kuvaus": "Natiivin \"Mitä uutta\" -rivit uusin ensin. Julkaisija lisää rivin jokaisesta App Store Connectiin ladatusta TestFlight-buildista: node tools/vienti/muutosloki-natiivi.mjs --versio \"1.0.0 (<CFBundleVersion>)\" --teksti \"…\" (1–3 lausetta suomeksi pelaajalle). Sisältöpäivitysten rivit tulevat automaattisesti osoittimeen (uusin.json muutos).",
  "rivit": [
   {
+   "versio": "1.1 (162)",
+   "paiva": "2026-10-07",
+   "teksti": "Kuumailmapallo on valmis: kaupunkiin siirryttäessä näkyy latauskuva, kerronnassa yksityiskohtakuvia ja 31 kaupungissa äänetön esitys. Aloituslento alkaa pehmeästi ilman yöpuolta, ja ISS-kyydissä Eurooppa näkyy syksyn värein. Apurahakortissa on kuvat ja Valmiit linssit -nappi."
+  },
+  {
    "versio": "1.1 (161)",
    "paiva": "2026-10-07",
    "teksti": "Kuumailmapalloja voi taas napauttaa kosketuksella ja Macilla, ja niitä näkyy vain nykyisessä maassa. Introssa kuuluu kirjoituskone, ja metrolinja on vasemmassa yläreunassa. Macilla kuva ei repeile ja peli lepää taustalla; kehittäjä- ja testaajatila avautuvat koodilla."
