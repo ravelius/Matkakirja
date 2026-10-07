@@ -102,7 +102,9 @@ Avaimia ei kysytä omistajalta.
 - Julkaisukaava ja versionumerokäytäntö: docs/roolitus.md
   ("Julkaisusäännöt"). `git fetch origin main` aina juuri ennen
   versionumeron valintaa — sessiot julkaisevat rinnakkain.
-- Kuvat ja media vain PD/CC, tarkistettuina Commonsista. API-avaimia
+- Kuvat vain PD/CC, tarkistettuina Commonsista. Maksulliset äänilähteet,
+  liitännäiset ja 3D-mallit sallittuja, kun ne nopeuttavat olennaisesti tai
+  parantavat laatua; omistaja ostaa (7.10.2026, Raamattu MAKSULLISET LÄHTEET). API-avaimia
   ei koskaan repoon eikä lokiin.
 - Konttiympäristössä Noden fetch tarvitsee `NODE_USE_ENV_PROXY=1`;
   Chromium on Macilla ~/Library/Caches/ms-playwright (konttipolku /opt/pw-browsers/chromium oli vanha ympäristö).
