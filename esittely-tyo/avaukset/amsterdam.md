@@ -1,0 +1,1 @@
+Tervetuloa Amsterdamiin. Ylhäältä kaupunki näyttää puolikuulta, jonka kanavat kiertävät vanhaa keskustaa sisäkkäisinä kaarina kuin puun vuosirenkaat. Pohjoisessa puolikuuta rajaa satama lauttoineen. Kierros alkaa keskustan itälaidalta Rembrandtin talosta, jossa maalari asui ja työskenteli lähes kaksikymmentä vuotta.
