@@ -118,6 +118,14 @@ namespace Matkakirja.Linssit.Dioraama
     }
 
     /// <summary>henkilot[id].malli3d.skin (Linnanrakentaja 2.10.: rakenna.mjs lisaaBlender + js/dioraama/hahmot-skin.json).</summary>
+    /// <summary>Pelaajahahmo: glb, silmukka → leike, liikkeet (kesto, tavoitenopeus m/s, toistokerroin tavoitenopeudella).</summary>
+    public sealed class PelaajaMalli
+    {
+        public string Glb, Nimi;
+        public Dictionary<string, string> Leikkeet = new Dictionary<string, string>();
+        public Dictionary<string, (double KestoS, double TavoiteMs, double Toistokerroin)> Liikkeet = new Dictionary<string, (double, double, double)>();
+    }
+
     public sealed class SkinMalli
     {
         public string Glb;
@@ -637,6 +645,8 @@ namespace Matkakirja.Linssit.Dioraama
         public string Alarivi;
         /// <summary>Historiamoottorin kävelygeometria (kavely { osat, merkit }, polut paketin juuresta); null = ei kävelytilaa.</summary>
         public string KavelyOsat, KavelyMerkit;
+        /// <summary>Historiamoottorin pelaajahahmo (Linnanrakentaja v44c: rakennus.json pelaaja { glb, leikkeet, liikkeet }); null = kapseli.</summary>
+        public PelaajaMalli Pelaaja;
         public int Versio;
         public Asento YleisVaaka, YleisPysty;
         public V3 PuluLaskeutuminen;
@@ -701,6 +711,16 @@ namespace Matkakirja.Linssit.Dioraama
             r.Alarivi = MiniJson.Teksti(juuri, "alarivi");
             var kav = MiniJson.ObjektiTaiNull(MiniJson.Kentta(juuri, "kavely"));
             r.KavelyOsat = MiniJson.Teksti(kav, "osat"); r.KavelyMerkit = MiniJson.Teksti(kav, "merkit");
+            if (MiniJson.ObjektiTaiNull(MiniJson.Kentta(juuri, "pelaaja")) is Dictionary<string, object> pel && !string.IsNullOrEmpty(MiniJson.Teksti(pel, "glb")))
+            {
+                var pm = new PelaajaMalli { Glb = MiniJson.Teksti(pel, "glb"), Nimi = MiniJson.Teksti(pel, "nimi") ?? "pelaaja" };
+                foreach (var kv in MiniJson.ObjektiTaiNull(MiniJson.Kentta(pel, "leikkeet")) ?? new Dictionary<string, object>())
+                    if (kv.Value is string ls) pm.Leikkeet[kv.Key] = ls;
+                foreach (var kv in MiniJson.ObjektiTaiNull(MiniJson.Kentta(pel, "liikkeet")) ?? new Dictionary<string, object>())
+                    if (kv.Value is Dictionary<string, object> lo)
+                        pm.Liikkeet[kv.Key] = (MiniJson.Luku(lo, "kesto_s") ?? 1, MiniJson.Luku(lo, "tavoite_m_s") ?? 0, MiniJson.Luku(lo, "toistokerroin") ?? 1);
+                r.Pelaaja = pm;
+            }
             foreach (var eo in MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(juuri, "etsinnat")))
             {
                 var e = MiniJson.ObjektiTaiNull(eo);

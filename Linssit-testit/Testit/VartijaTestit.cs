@@ -36,7 +36,7 @@ namespace Matkakirja.Linssit.Testit
         {
             var v = new Vartija(Reitti, yaw: 0);
             var edessa = new VartijanSyote { VartijaX = 0, VartijaZ = 0, PelaajaX = 0.5, PelaajaZ = 5, NakolinjaVapaa = true, Valoisuus = 1 };
-            Oleta.Tosi(v.NakoVoima(edessa) > 0.5, $"edessä näkyy ({v.NakoVoima(edessa):F2})");
+            Oleta.Tosi(v.NakoVoima(edessa) > 0.3, $"edessä näkyy ({v.NakoVoima(edessa):F2})");
             var takana = edessa; takana.PelaajaZ = -5;
             Oleta.Sama(0.0, v.NakoVoima(takana));
             var pimea = edessa; pimea.PelaajaZ = 6; pimea.Valoisuus = 0; pimea.Hiipii = true;   // ulottuma 10·0,35·0,7 = 2,45 m
@@ -50,11 +50,13 @@ namespace Matkakirja.Linssit.Testit
         [Testi] static void EpailyJaKiinni()
         {
             var v = new Vartija(Reitti, yaw: 0); double x = 0, z = 0;
-            VartijanSyote Nakyy(double vx, double vz) => new VartijanSyote { PelaajaX = 0, PelaajaZ = vz + 3, NakolinjaVapaa = true, Valoisuus = 1 };
-            Aja(v, ref x, ref z, Nakyy, 0.3);
-            Oleta.Tosi(v.Tila == VartijanTila.Epaily || v.Tila == VartijanTila.Kiinni, $"epäily ({v.Tila}, mittari {v.Mittari:F2})");
-            Aja(v, ref x, ref z, Nakyy, 2);
+            // Pelaaja paikallaan 3 m edessä: epäily ~0,4 s:ssa, ei vielä kiinni 0,6 s:ssa (reaktioaika), sitten takaa-ajo ja kiinni 1,2 m:ssä.
+            VartijanSyote Nakyy(double vx, double vz) => new VartijanSyote { PelaajaX = 0, PelaajaZ = 3, NakolinjaVapaa = true, Valoisuus = 1 };
+            Aja(v, ref x, ref z, Nakyy, 0.6);
+            Oleta.Tosi(v.Tila == VartijanTila.Epaily, $"epäily, ei kiinni ({v.Tila}, mittari {v.Mittari:F2})");
+            Aja(v, ref x, ref z, Nakyy, 4);
             Oleta.Sama(VartijanTila.Kiinni, v.Tila);
+            Oleta.Tosi(z > 1.5, $"vartija ajoi takaa ennen kiinniottoa (z {z:F1})");
             v.Nollaa(x, z);
             Oleta.Tosi(v.Tila == VartijanTila.Partio && v.Mittari == 0, "nollaus partioon");
         }

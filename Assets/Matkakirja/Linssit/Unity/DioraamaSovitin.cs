@@ -385,6 +385,15 @@ namespace Matkakirja.Natiivi
             {
                 var vt = vene.Paivita(y.VahennettyLiike);
                 if (vt.Perilla && pelaaja == null && !veneLaituriin) { veneLaituriin = true; o.StartCoroutine(VeneLaituriin()); }
+                // Huone 1 (Veneyö): soutajan repliikit käsikirjoituksen ikkunoissa (soutaja-1 25–40 s, soutaja-2 40–55 s; 50 s:n matkalla 28 ja 44 s).
+                var rep = SeikkailuRepliikit.Aktiivinen;
+                if (rep != null && rep.Valmis && vene.IstuinSoutaja != null)
+                {
+                    if (veneRepliikki == 0) { rep.Esilataa("soutaja-1"); rep.Esilataa("soutaja-2"); veneRepliikki = 1; }
+                    double osuus = vene.Aika / Math.Max(1, vene.Ydin.KestoS);
+                    if (veneRepliikki == 1 && osuus >= 0.56) { rep.Soita("soutaja-1", vene.IstuinSoutaja); veneRepliikki = 2; }
+                    else if (veneRepliikki == 2 && osuus >= 0.88) { rep.Soita("soutaja-2", vene.IstuinSoutaja); veneRepliikki = 3; }
+                }
             }
             var seikkailuKamera = pelaaja != null ? pelaaja.Kamera : vene?.Kamera;
             bool cmKaytossa = cm != null && (seikkailuKamera != null || DioraamaCinemachine.Paalla && pakotettuKamera == null);
@@ -394,6 +403,7 @@ namespace Matkakirja.Natiivi
                 jousi.Nollaa();
                 string tapa = (pelaaja != null ? "pelaaja " : "vene ") + cm.PaivitaPelaaja(seikkailuKamera, nayttamo.Kamera, dt);
                 if (tapa != pelaajaKameraTapa) { o.Kirjaa($"seikkailu: kamera {tapa}, {nayttamo.Kamera.transform.position}"); pelaajaKameraTapa = tapa; }
+                SeikkailuKuulija.Paivita(nayttamo.Kamera.transform);   // 3D-äänet kuulostavat aktiivisesta kamerasta
                 // Sumu ja syväterävyys: kohde 25 m päässä (veneessä linna kaukana: 120 m), ei taustan sumennusta (aukko 0).
                 var pp = seikkailuKamera.transform.position;
                 kameraAsento = new Asento(new Matkakirja.Linssit.Dioraama.V3(pp.x, pp.y, -pp.z), 0, 0, pelaaja != null ? KavelySumuM : VeneSumuM, 55, 0);
@@ -421,6 +431,10 @@ namespace Matkakirja.Natiivi
             // Lähileikkaus puolilähikuvassa: kaikki yli PuolilahiVapaaM lähempänä kameraa kuin puhuja jää piirtämättä (ei peittäjiä).
             nayttamo.LahiLeikkaus = puolilahiRinta is Vector3 pr && nayttamo.Kamera != null
                 ? Mathf.Clamp(Vector3.Distance(nayttamo.Kamera.transform.position, pr) - PuolilahiVapaaM, 0f, PuolilahiLeikkausMaxM) : 0f;   // enintään 1,2 m: kuulija ei katoa blendissä
+            // Kävely: kameran ja pelaajan väliin jäävä lähieste (pylväs, soihtu, oven pieli) jää piirtämättä (Päätoimittaja 7.10. 14.0x:
+            // pihakuvassa pylväs peitti kolmanneksen) — leikkaus 1,2 m ennen pelaajaa, ettei hahmo itse katoa.
+            if (SeikkailuPelaaja.Aktiivinen is SeikkailuPelaaja sp && nayttamo.Kamera != null)
+                nayttamo.LahiLeikkaus = Mathf.Clamp(Vector3.Distance(nayttamo.Kamera.transform.position, sp.transform.position + Vector3.up * 1.2f) - 1.6f, 0f, KavelyLahiMaxM);   // enintään 2,2 m: lattia ruudun alareunassa ei katoa
             // Rengas piilossa myös 1,5 s puolilähikuvan jälkeen: blendi takaisin lepoon on vielä lähellä kasvoja (eleet-2-ajo 7.10.: kaari kokin yllä).
             if (puolilahiRinta.HasValue) himmennysAsti = Time.unscaledTime + 1.5f;
             // Kävelytilassa ei etsinnän renkaita (v44-ajo 7.10.: renkaat kameran edessä keittiössä).
@@ -827,10 +841,11 @@ namespace Matkakirja.Natiivi
         // aloituspaikkaan: merkki "ovi:<tid>-alku"/osa tid tai tilan kamerakohde, ja pudotus lähimmälle törmäyspinnalle.
         static string kavelyKehitysJuuri;
         string pelaajaKameraTapa;
-        bool veneLaituriin;
+        bool veneLaituriin; int veneRepliikki;
         const double VeneSumuM = 120, VeneKestoS = 50;
         float himmennysAsti = -1f;
         const double KavelySumuM = 25;
+        const float KavelyLahiMaxM = 2.2f;
         IEnumerator VarmistaKavelyData()
         {
             if (SeikkailuKavely.Ladattu) yield break;
@@ -848,7 +863,8 @@ namespace Matkakirja.Natiivi
             var vm = rakennus.Ymparisto?.Rekvisiitta?.Find(x => x.Id == "vene") ?? default;
             if (vm.Id == null) { o.Kirjaa("poikki: vene: rekvisiitta vene puuttuu (ymparisto.mallit, maailmaan: false)"); yield break; }
             yield return VarmistaKavelyData();
-            SeikkailuPelaaja.Poista(); SeikkailuVene.Poista(); cm?.SeikkailuPois(); veneLaituriin = false;
+            SeikkailuPelaaja.Poista(); SeikkailuVene.Poista(); cm?.SeikkailuPois(); veneLaituriin = false; veneRepliikki = 0;
+            SeikkailuRepliikit.Luo(nayttamo.transform, MediaJuuri + "/seikkailu/" + RakennusId + "/repliikit-v1/manifest.json", o.Kirjaa);
             double vesi = rakennus.Ulkokuori?.VesiY ?? 0;
             var reitti = new List<(double X, double Y, double Z)>(); double? loppuSuunta = null;
             if (SeikkailuKavely.Data != null)
@@ -878,11 +894,38 @@ namespace Matkakirja.Natiivi
             o.Kirjaa($"poikki: vene päällä ({lahde}, {reitti.Count} pistettä, {ydin.Pituus:F0} m, {ydin.KestoS:F0} s)");
         }
 
+        /// <summary>Pelaajahahmo (rakennus.json pelaaja, Linnanrakentajan Fogg) kapselin tilalle: irrallinen hahmo pelaajan hahmosolmussa
+        /// (skin-hahmo katsoo Unityssa paikallista −z:aa → 180°), leike pelaajan liikkeestä. Henkilö syntetisoidaan rakennuksen henkilöihin.</summary>
+        void LisaaPelaajahahmo(SeikkailuPelaaja sp)
+        {
+            var pm = rakennus?.Pelaaja;
+            if (sp == null || pm == null || nayttamo?.Hahmot3D == null) return;
+            const string id = "pelaaja-hahmo";
+            rakennus.Henkilot ??= new Dictionary<string, Henkilo>();
+            rakennus.Henkilot[id] = new Henkilo { Id = id, Nimi = pm.Nimi, Malli3d = new Malli3d { Skin = new SkinMalli { Glb = pm.Glb, Leikkeet = new Dictionary<string, string>(pm.Leikkeet) } } };
+            sp.Malli = pm;
+            nayttamo.Hahmot3D.PoistaIrralliset(id);
+            nayttamo.Hahmot3D.LisaaIrrallinen(rakennus, id, sp.Hahmo, sp.Leike, Quaternion.Euler(0f, 180f, 0f));
+            var glbt = new List<string>();
+            nayttamo.Hahmot3D.IrrallistenGlb(glbt);
+            foreach (var glb in glbt) if (hahmoGlbJonossaTaiValmiit.Add(glb)) o.StartCoroutine(LataaHahmoGlb(glb));
+            sp.KapseliPiiloon();
+            o.Kirjaa($"seikkailu: pelaajahahmo {pm.Nimi} ({pm.Glb}, {pm.Leikkeet.Count} leikettä)");
+        }
+
         IEnumerator VartijatPaalle()
         {
             if (nayttamo == null || rakennus == null) { o.Kirjaa("poikki: vartijat: linssi ei auki"); yield break; }
             yield return VarmistaKavelyData();
             SeikkailuVartijat.Luo(nayttamo.transform, rakennus, SeikkailuKavely.Data, nayttamo.Hahmot3D, o.Kirjaa);
+            if (SeikkailuVartijat.AskelKlippi == null && rakennus.Aanet != null && rakennus.Aanet.TryGetValue("askel-kivi", out var askel) && !string.IsNullOrEmpty(askel.Tiedosto))
+            {
+                using var q = UnityEngine.Networking.UnityWebRequestMultimedia.GetAudioClip(AaniUrl(askel.Tiedosto), AudioType.MPEG);   // äänet rakennuksen juuressa (E1-ajo: hash-juuri 404)
+                ((UnityEngine.Networking.DownloadHandlerAudioClip)q.downloadHandler).streamAudio = false;
+                yield return q.SendWebRequest();
+                if (q.result == UnityEngine.Networking.UnityWebRequest.Result.Success) SeikkailuVartijat.AskelKlippi = UnityEngine.Networking.DownloadHandlerAudioClip.GetContent(q);
+                o.Kirjaa($"seikkailu: vartijan askeleet {(SeikkailuVartijat.AskelKlippi != null ? "ladattu" : "ei latautunut")} ({askel.Tiedosto})");
+            }
             var glbt = new List<string>();
             nayttamo.Hahmot3D?.IrrallistenGlb(glbt);
             foreach (var glb in glbt) if (hahmoGlbJonossaTaiValmiit.Add(glb)) o.StartCoroutine(LataaHahmoGlb(glb));
@@ -899,18 +942,19 @@ namespace Matkakirja.Natiivi
             if (nm != null) alku = new Vector3((float)nm.X, (float)nm.Y, (float)-nm.Z);
             else if (lt != null) alku = DioraamaNayttamo.UnityPiste(lt.Kamera.Kohde);
             else { o.Kirjaa("seikkailu: vene perillä, ei nousupaikkaa"); yield break; }
-            if (v != null)
+            // Katse vesiportin oveen (E1-ajo 7.10.: veneestä poispäin katsova pelaaja käveli kannen reunalta veteen); varalla keulan suunta.
+            var ovi = SeikkailuKavely.Data == null ? null : System.Linq.Enumerable.FirstOrDefault(SeikkailuKavely.Data.Merkit, x => x.Nimi == "ovi:vesiportti-alku");
+            if (ovi != null) { var kohti = new Vector3((float)ovi.X, alku.y, (float)-ovi.Z) - alku; if (kohti.sqrMagnitude > 0.25f) yaw = Mathf.Atan2(kohti.x, kohti.z) * Mathf.Rad2Deg; }
+            else if (v != null)
             {
                 var vt = v.Ydin.Tila(v.Ydin.KestoS);
-                var d = new Vector3((float)vt.SuuntaX, 0, (float)-vt.SuuntaZ);
-                var kohti = alku - new Vector3((float)vt.X, alku.y, (float)-vt.Z);
-                var suunta = kohti.sqrMagnitude > 0.25f ? kohti : d;
-                yaw = Mathf.Atan2(suunta.x, suunta.z) * Mathf.Rad2Deg;
+                yaw = Mathf.Atan2((float)vt.SuuntaX, (float)-vt.SuuntaZ) * Mathf.Rad2Deg;
             }
             SeikkailuKavely.Leikkaukset(true);
             Physics.SyncTransforms();
             if (Physics.Raycast(alku + Vector3.up * 2f, Vector3.down, out var osuma, 30f, 1 << DioraamaNayttamo.Kerros)) alku = osuma.point + Vector3.up * 0.05f;
-            SeikkailuPelaaja.Luo(nayttamo.transform, alku, yaw, DioraamaNayttamo.Kerros);
+            else o.Kirjaa($"seikkailu: nousupaikan alla ei törmäyspintaa ({alku}) — laituri puuttuu törmäyksestä?");
+            LisaaPelaajahahmo(SeikkailuPelaaja.Luo(nayttamo.transform, alku, yaw, DioraamaNayttamo.Kerros));
             o.Kirjaa($"seikkailu: vene perillä, pelaaja laiturilla ({alku}, yaw {yaw:F0}, {(nm != null ? "nousu:laituri" : "laiturin kohde")})");
         }
 
@@ -942,7 +986,7 @@ namespace Matkakirja.Natiivi
             Physics.SyncTransforms();
             if (Physics.Raycast(alku + Vector3.up * 2f, Vector3.down, out var osuma, 30f, 1 << DioraamaNayttamo.Kerros)) alku = osuma.point + Vector3.up * 0.05f;
             else o.Kirjaa($"seikkailu: aloituspaikan alla ei törmäyspintaa ({alku})");
-            SeikkailuPelaaja.Luo(nayttamo.transform, alku, yaw, DioraamaNayttamo.Kerros);
+            LisaaPelaajahahmo(SeikkailuPelaaja.Luo(nayttamo.transform, alku, yaw, DioraamaNayttamo.Kerros));
             o.Kirjaa($"poikki: kävely päällä tilassa {tid} ({alku}), kävelygeometria {(SeikkailuKavely.Ladattu ? "ladattu" : "ei (tilameshit " + tilaTormays + ")")}");
         }
 
@@ -1348,9 +1392,20 @@ namespace Matkakirja.Natiivi
             if (mita == "kavely")
             {
                 if (arvo == "0") { SeikkailuPelaaja.Poista(); SeikkailuVene.Poista(); SeikkailuVartijat.Poista(); SeikkailuKavely.Leikkaukset(false); cm?.SeikkailuPois(); o.Kirjaa("poikki: kävely pois"); return; }
+                // "poikki kavely siirra <merkki | x y z>": pelaaja merkkiin (glTF) testiajoja varten (piilo, ovi).
+                if (arvo == "siirra" && osat.Length > 3 && SeikkailuPelaaja.Aktiivinen is SeikkailuPelaaja sps)
+                {
+                    Vector3? kohde = null;
+                    if (osat.Length > 5) kohde = new Vector3((float)Luku(osat[3]), (float)Luku(osat[4]), (float)-Luku(osat[5]));
+                    else if (SeikkailuKavely.Data != null) foreach (var mk in SeikkailuKavely.Data.Merkit) if (mk.Nimi == osat[3]) { kohde = new Vector3((float)mk.X, (float)mk.Y + 0.05f, (float)-mk.Z); break; }
+                    if (kohde is Vector3 kv) { sps.Siirra(kv); o.Kirjaa($"poikki: kävely siirretty {osat[3]} {kv}"); } else o.Kirjaa($"poikki: kävely: merkkiä {osat[3]} ei löydy");
+                    return;
+                }
                 if (arvo == "tapit" && osat.Length > 7)
                 {
-                    SeikkailuPelaaja.Testi = new Matkakirja.Linssit.Seikkailu.KavelySyote { LiikeX = Luku(osat[3]), LiikeY = Luku(osat[4]), KatseX = Luku(osat[5]), KatseY = Luku(osat[6]) };
+                    string tapa = osat.Length > 8 ? osat[8] : "";
+                    SeikkailuPelaaja.Testi = new Matkakirja.Linssit.Seikkailu.KavelySyote { LiikeX = Luku(osat[3]), LiikeY = Luku(osat[4]), KatseX = Luku(osat[5]), KatseY = Luku(osat[6]),
+                        Hiipiminen = tapa == "hiipii", Juoksu = tapa == "juoksu" };
                     SeikkailuPelaaja.TestiLoppuu = Time.unscaledTime + (float)Luku(osat[7]);
                     o.Kirjaa($"poikki: kävely tapit {osat[3]} {osat[4]} {osat[5]} {osat[6]} {osat[7]} s");
                     return;
