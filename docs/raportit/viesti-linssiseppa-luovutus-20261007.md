@@ -271,3 +271,6 @@ NUI:n osa on `natiivi-ui/sallitut-157` 0f770be2. LS2:n lista on tiedostossa `pro
 - 18.5x: korin liike ja äänet vahvistettu (omistaja ei huomannut niitä TF 161:ssä). `linssiseppa/kori-vahvempi` 42597b009 → juna 162 Natiivisepälle.
   - Keinunta ~2,5°, vastaliike ≤ 5,5°, köysiviive 0,55 s, äänet 0,9.
   - Syy Päätoimittajalle: oletuksena päällä, mutta liian pieni mitoitus.
+- 19.08: korin pehmennys `linssiseppa/kori-pehmea` 18d854a13 → juna 162 Natiivisepälle (korvaa kori-vahvemman).
+  - GPU-testi Editor/KoriKoosteTesti läpi: ajuri `tyokalut/linssiseppa-ajot/proto-testiajo.sh <haara> <metodi> <kansio>` käännöspalvelun lukolla, vain luvalla. Tulos `lokit/linssiseppa-koritesti-20261007`.
+  - Ajonaikainen itsetarkistus palauttaa suoraan piirtoon, jos alfa ei säily.
