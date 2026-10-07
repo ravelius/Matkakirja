@@ -115,10 +115,10 @@ namespace Matkakirja.Editori
             }
         }
 
-        /// <summary>Kopioi tilannekuvan Xcode-projektin Data/Raw/sisalto/tilannekuva/:iin (StreamingAssets iOS:llä).</summary>
-        public static void KopioiBuildiin(string xcodeProjekti)
+        /// <summary>Kopioi tilannekuvan buildin StreamingAssetsin sisalto/tilannekuva/:iin (<see cref="Rakennus.StreamingKansio"/>).</summary>
+        public static void KopioiBuildiin(string streaming)
         {
-            string kohde = Path.Combine(xcodeProjekti, "Data", "Raw", "sisalto", "tilannekuva");
+            string kohde = Path.Combine(streaming, "sisalto", "tilannekuva");
             if (Directory.Exists(kohde)) Directory.Delete(kohde, true);
             if (!File.Exists(Path.Combine(Kansio, "tilannekuva.json")) || Environment.GetEnvironmentVariable("MATKAKIRJA_TILANNEKUVA") == "0")
             {

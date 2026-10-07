@@ -40,7 +40,7 @@ namespace Matkakirja.Linssit.Testit
 
         [Testi] static void KellonAvainkuvat()
         {
-            Oleta.Tosi(KaupunkiValo.Tunnille(12).Lampotila == 0 && KaupunkiValo.Tunnille(2).Valotus < -0.5 && KaupunkiValo.Tunnille(2).Lampotila > 0, "päivä ja yö (himmeä ilta)");
+            Oleta.Tosi(KaupunkiValo.Tunnille(12).Lampotila == 0 && KaupunkiValo.Tunnille(2).Valotus < -1.5 && KaupunkiValo.Tunnille(2).Lampotila < 0, "päivä ja yö (kuunsininen, valot erikseen)");
             Oleta.Tosi(Math.Abs(KaupunkiValo.Tunnille(24).Valotus - KaupunkiValo.Tunnille(0).Valotus) < 1e-9, "keskiyö jatkuva");
             var h = KaupunkiValo.Taivas(KaupunkiValo.Paiva, 0); var z = KaupunkiValo.Taivas(KaupunkiValo.Paiva, 1);
             Oleta.Tosi(h[2] == KaupunkiValo.Paiva.Horisontti[2] && z[2] == KaupunkiValo.Paiva.TaivasYla[2], "taivaan päät");

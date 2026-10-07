@@ -35,6 +35,24 @@ namespace Matkakirja.Natiivi
         Nakyma nakyma;
         public bool Auki { get; private set; }
 
+        readonly Button taukoNappi;
+        bool taukoTauolla;
+
+        /// <summary>Esittelyn II/▶ (DioraamaTaulu joka ruutu): näkyy kertojan kierroksen tai tauon ajan.</summary>
+        public void NaytaTauko(bool nakyy)
+        {
+            bool tauolla = Matkakirja.Natiivi.DioraamaSovitin.Tauolla;
+            nakyy |= tauolla;
+            var d = nakyy ? DisplayStyle.Flex : DisplayStyle.None;
+            if (taukoNappi.style.display != d) taukoNappi.style.display = d;
+            if (tauolla == taukoTauolla) return;
+            taukoTauolla = tauolla;
+            taukoNappi.Clear();
+            taukoNappi.Add(new SvgIkoni(tauolla ? Ikonit.Toista : Ikonit.Tauko));
+            taukoNappi.tooltip = tauolla ? "Jatka" : "Tauko";
+            taukoNappi.EnableInClassList("mk-valittu", tauolla);
+        }
+
         const string MinikarttaKuva = "Minikartta/olavinlinna-minikartta@3x", MinikarttaTiedot = "Minikartta/olavinlinna-minikartta";
         readonly Dictionary<string, (string Nimi, Vector2 Paikka)> karttaTilat = new Dictionary<string, (string, Vector2)>();
 
@@ -46,6 +64,9 @@ namespace Matkakirja.Natiivi
             Juuri.style.display = DisplayStyle.None;
 
             ryhma = Ohjausnappi.Ryhma(Juuri);
+            // ESITTELYN TAUKO (omistaja 6.10.2026): II/▶ ☰:n vieressä kertojan esittelyn ajan (sama kuvake kuin oppaassa).
+            taukoNappi = Ohjausnappi.Nappi(Ikonit.Tauko, "Tauko", () => { Matkakirja.Natiivi.DioraamaSovitin.VaihdaTauko(); NaytaTauko(true); }, ryhma);
+            taukoNappi.style.display = DisplayStyle.None;
             nappi = Ohjausnappi.Nappi(Ikonit.Valikko, "Valikko", () => { if (Auki) Sulje(); else Avaa(Nakyma.Paa); }, ryhma);
 
             // Pienoiskartta ‹:n paikalle OHJAUSNAPPI-kehyksessä (.mk-ohjausnappi--iso 56 pt, omistaja 17.4x): oma ryhmä

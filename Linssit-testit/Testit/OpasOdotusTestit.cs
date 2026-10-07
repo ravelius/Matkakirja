@@ -70,6 +70,41 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama(1, t.Count); Oleta.Tosi(t[0].Iso2 == "IT" && t[0].Kaupunki == "Venetsia" && t[0].KuvaUrl == "u");
         }
 
+        [Testi] static void LiikunArviokehysVaihtuuOikeaan()
+        {
+            // Juna 156 VIE-este (simu 04.1x): Liiku Eiffeliin kehysti arviokohteen (katu, 143 m), ja workerin oikea kohde samassa
+            // paikassa (korkeus 330 m) jäi "Kerro lisää" -oikotien takia arviokehykseen.
+            var (s, p) = Uusi();
+            s.Vastaus(p[^1].n, K("A", 55.6760, 12.5700));
+            for (int i = 0; i < 300 && s.Vaihe != OpasVaihe.Puhuu; i++) s.Paivita(0.1, _ => 5);
+            s.Liiku("Eiffel-torni", 55.6800, 12.5800);
+            for (int i = 0; i < 300 && s.Vaihe == OpasVaihe.Lentaa; i++) s.Paivita(0.1, _ => 5);
+            var eiffel = K("E", 55.6800, 12.5800); eiffel.KorkeusM = 330; eiffel.Luokka = "torni"; eiffel.KokoM = 125;
+            s.Vastaus(p[^1].n, eiffel);
+            for (int i = 0; i < 300 && !(s.Vaihe == OpasVaihe.Puhuu && s.Nykyinen?.Id == "E"); i++) s.Paivita(0.1, _ => 5);
+            Oleta.Sama("E", s.Nykyinen?.Id);
+            Oleta.Tosi(s.NykyinenKehys.EtaisyysM > 500, $"oikean kohteen kehys (et {s.NykyinenKehys.EtaisyysM:F0} m, ei arvion 143 m)");
+            // Kerro lisää samasta oikeasta kohteesta: oikotie (ei lentoa).
+            var lisaa = K("E", 55.6800, 12.5800); lisaa.KorkeusM = 330; lisaa.Luokka = "torni";
+            s.Toive("kerro lisää");
+            s.Vastaus(p[^1].n, lisaa);
+            s.Paivita(0.1, _ => 5);
+            Oleta.Tosi(s.Vaihe == OpasVaihe.Puhuu, "kerro lisää: kertoja heti, ei lentoa");
+        }
+
+        [Testi] static void KierrosReittijarjestyksessa()
+        {
+            // Pelikoodari #4086: /opas/liiku "kierros" = id:t lyhimmän reitin järjestyksessä; kohteet pysyvät tärkeysjärjestyksessä.
+            string K3 = "\"kohteet\":[{\"id\":\"a\",\"nimi\":\"A\",\"lat\":1,\"lon\":1},{\"id\":\"b\",\"nimi\":\"B\",\"lat\":2,\"lon\":2},{\"id\":\"c\",\"nimi\":\"C\",\"lat\":3,\"lon\":3}]";
+            var j = (Dictionary<string, object>)Matkakirja.Peli.MiniJson.Jasenna("{" + K3 + ",\"kierros\":[\"c\",\"x\",\"a\"]}");
+            var k = OpasTaky.Kierros(j, OpasTaky.Lue(j));
+            Oleta.Sama("C,A", string.Join(",", k.ConvertAll(t => t.Nimi)), "kierroksen järjestys, tuntematon ohitetaan");
+            var ilman = (Dictionary<string, object>)Matkakirja.Peli.MiniJson.Jasenna("{" + K3 + "}");
+            Oleta.Sama("A,B,C", string.Join(",", OpasTaky.Kierros(ilman, OpasTaky.Lue(ilman)).ConvertAll(t => t.Nimi)), "ilman kenttää lista sellaisenaan");
+            var tyhja = (Dictionary<string, object>)Matkakirja.Peli.MiniJson.Jasenna("{" + K3 + ",\"kierros\":[\"x\"]}");
+            Oleta.Sama(3, OpasTaky.Kierros(tyhja, OpasTaky.Lue(tyhja)).Count, "ei osumia → lista");
+        }
+
         [Testi] static void KaupunginVaihtoLentaaHeti()
         {
             // Natiivi-UI 6.10. 00.2x (toistoappi 3244207f): Amsterdam valittu, kertoja kysyi Amsterdamista, mutta kamera jäi Kööpenhaminaan.

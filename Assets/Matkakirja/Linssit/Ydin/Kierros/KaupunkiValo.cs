@@ -48,12 +48,13 @@ namespace Matkakirja.Linssit.Kierros
             TaivasYla = new[] { 0.30, 0.38, 0.62 }, Horisontti = new[] { 0.98, 0.70, 0.48 }, Suodin = new[] { 1.0, 0.93, 0.85 },
             Lampotila = 18, Savytys = 4, Valotus = -0.12, Kontrasti = 10, Saturaatio = -8,
         };
-        // YÖ = HIMMEÄ ILTA (Päätoimittaja 6.10. 19.0x: sininen yö näytti "siniseltä päivältä" ilman kaupungin valoja): oikea yö
-        // vasta Black Marble- tai ikkunavalojen kanssa; siihen asti illan sävy himmeämpänä ja vähemmän värikkäänä.
+        // YÖ (kuvanlaatujärjestys kohta 2, 6.10.2026): Black Marble -valot tulevat jälkikäsittelyn jälkeen (KaupunkiYovalot), joten
+        // kuva itse on oikea yö: ~2 EV tummempi, kuunsininen ja vähävärinen; taivas lähes musta, horisontissa kaupungin
+        // valosaasteen hehku. (19.0x: sininen yö ilman valoja näytti "siniseltä päivältä" — nyt valot erottavat yön.)
         public static readonly Savy Yo = new Savy
         {
-            TaivasYla = new[] { 0.14, 0.12, 0.22 }, Horisontti = new[] { 0.62, 0.38, 0.26 }, Suodin = new[] { 1.0, 0.84, 0.70 },
-            Lampotila = 22, Savytys = 5, Valotus = -0.7, Kontrasti = 10, Saturaatio = 0,
+            TaivasYla = new[] { 0.020, 0.028, 0.065 }, Horisontti = new[] { 0.20, 0.13, 0.10 }, Suodin = new[] { 0.72, 0.80, 1.0 },
+            Lampotila = -15, Savytys = 0, Valotus = -1.9, Kontrasti = 14, Saturaatio = -35,
         };
 
         /// <summary>Avainkuvat (paikallinen aurinkotunti → sävy); väleissä lineaarinen liuku. Yö 21–5, aamu 6.30, päivä 9–16.30, ilta 19.</summary>

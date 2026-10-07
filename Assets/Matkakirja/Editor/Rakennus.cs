@@ -643,7 +643,7 @@ namespace Matkakirja.Editori
             Debug.Log("MATKAKIRJA: editorin Burst-asetus palautettu kaatuneen käännöksen jäljiltä");
         }
 
-        static void Kaanna(string kansio, BuildOptions lisat = BuildOptions.None)
+        static void Kaanna(string kansio, BuildOptions lisat = BuildOptions.None, BuildTarget kohde = BuildTarget.iOS)
         {
             if (!File.Exists(PalloKohtaus)) LuoPallo();
             // Laattapaketti (pallon kaukonäkymä, löydös 80): ladataan ämpäristä, jos puuttuu tai sarjat vaihtuivat;
@@ -655,7 +655,7 @@ namespace Matkakirja.Editori
             {
                 scenes = new[] { PalloKohtaus },
                 locationPathName = kansio,
-                target = BuildTarget.iOS,
+                target = kohde,
                 options = lisat,
             };
             // Release-käännös oletuksena: Development-tila hidastaa ja näyttää kehityskonsolin.
@@ -777,6 +777,115 @@ namespace Matkakirja.Editori
         static bool TestFlightVienti;
 
         /// <summary>
+        /// NATIIVI MAC (omistaja 6.10.2026: "tehdään seuraavaksi natiivi mac appi … ei tehdä jokaista julkaisun kääntöä
+        /// sille. vain joka kolmas tai tarpeen mukaan"): macOS-sovellus MATKAKIRJA_KANSIO/Matkakirja 3D.app
+        /// (oletus Build/mac). Ajetaan omassa projektikopiossa (-buildTarget StandaloneOSX), ei käännöspalvelun
+        /// iOS-kopiossa: alustan vaihto tuo kaikki assetit uudelleen. Ympäristömuuttujat:
+        ///   MATKAKIRJA_BUNDLE_ID  (oletus app.matkakirja.proto3d; TestFlight-Mac = iOS:n sama ID, universal purchase)
+        ///   MATKAKIRJA_VERSIO / MATKAKIRJA_BUILD  CFBundleShortVersionString / CFBundleVersion (oletus 0.1.0 / 1)
+        ///   MATKAKIRJA_IL2CPP     1 = IL2CPP (vaatii Hubin Mac Build Support (IL2CPP) -moduulin), muuten Mono
+        ///   MATKAKIRJA_APPSTORE   1 = App Store -käännös (määrite MATKAKIRJA_APPSTORE; kuittitarkistus aina pois)
+        /// Vain Apple silicon (arm64): linnan ASTC-tekstuurit ja laattapaketti nojaavat ASTC-tukeen, jota Intel-Maceissa ei ole.
+        /// Allekirjoitus, sandbox-oikeudet ja lähetys ovat erillinen vaihe (Julkaisija), kuten iOS:n arkistointi.
+        /// </summary>
+        public static void MacOS()
+        {
+            string Ymp(string nimi, string oletus) =>
+                string.IsNullOrEmpty(Environment.GetEnvironmentVariable(nimi)) ? oletus : Environment.GetEnvironmentVariable(nimi);
+            var kohde = UnityEditor.Build.NamedBuildTarget.Standalone;
+            PlayerSettings.companyName = "Matkakirja";
+            PlayerSettings.productName = "Matkakirja 3D";
+            PlayerSettings.SetApplicationIdentifier(kohde, Ymp("MATKAKIRJA_BUNDLE_ID", "app.matkakirja.proto3d"));
+            PlayerSettings.SetScriptingBackend(kohde,
+                Ymp("MATKAKIRJA_IL2CPP", "0") == "1" ? ScriptingImplementation.IL2CPP : ScriptingImplementation.Mono2x);
+            PlayerSettings.bundleVersion = Ymp("MATKAKIRJA_VERSIO", "0.1.0");
+            PlayerSettings.macOS.buildNumber = Ymp("MATKAKIRJA_BUILD", "1");
+            // Ikkuna: muutettava koko, oletus 1440×900; käyttöliittymän skaalaus ja minimikoko ovat Natiivi-UI:n (PanelSettings).
+            PlayerSettings.fullScreenMode = FullScreenMode.Windowed;
+            PlayerSettings.defaultScreenWidth = 1440;
+            PlayerSettings.defaultScreenHeight = 900;
+            PlayerSettings.resizableWindow = true;
+            PlayerSettings.runInBackground = true;
+            PlayerSettings.SplashScreen.show = false;
+            PlayerSettings.SplashScreen.showUnityLogo = false;
+            var kuvake = AssetDatabase.LoadAssetAtPath<Texture2D>(KuvakeTiedosto);
+            if (kuvake == null) throw new Exception("Kuvaketta ei löydy: " + KuvakeTiedosto);
+            PlayerSettings.SetIcons(kohde, new[] { kuvake }, IconKind.Any);
+            AsetaMacArkkitehtuuri("ARM64");
+            bool appStore = Ymp("MATKAKIRJA_APPSTORE", "0") == "1";
+            // Kuittitarkistus pois myös App Store -käännöksessä: Unity lopettaa ilman kuittia (exit 173), eikä tarkistusta
+            // vaadita; App Store -käännös = vain määrite MATKAKIRJA_APPSTORE (kehittäjätila ja testikomennot pois).
+            PlayerSettings.useMacAppStoreValidation = false;
+            string maaritteet = PlayerSettings.GetScriptingDefineSymbols(kohde);
+            if (appStore) PlayerSettings.SetScriptingDefineSymbols(kohde, (maaritteet + ";MATKAKIRJA_APPSTORE").Trim(';'));
+            string kansio = Ymp("MATKAKIRJA_KANSIO", "Build/mac");
+            try { Kaanna(Path.Combine(kansio, "Matkakirja 3D.app"), BuildOptions.None, BuildTarget.StandaloneOSX); }
+            finally { if (appStore) PlayerSettings.SetScriptingDefineSymbols(kohde, maaritteet); }
+            MacKuvake(Path.Combine(kansio, "Matkakirja 3D.app"));
+            Debug.Log($"MATKAKIRJA: Mac-vienti {PlayerSettings.GetApplicationIdentifier(kohde)} {PlayerSettings.bundleVersion} " +
+                      $"({PlayerSettings.macOS.buildNumber}), {PlayerSettings.GetScriptingBackend(kohde)}");
+        }
+
+        /// <summary>
+        /// Mac-kuvake (Mac TF 1.1 (155) 7.10.2026: App Store Connect hylkäsi, koska ICNS 512 pt @2x puuttui — Unity ei kirjoittanut
+        /// PlayerIcon.icns:ää lainkaan, vaikka Info.plist viittaa siihen). Kuvake-1024.png → iconset (16–512 pt, @1x ja @2x) → iconutil
+        /// → Contents/Resources/PlayerIcon.icns. Käännös tapahtuu aina Macilla (sips ja iconutil kuuluvat macOS:ään).
+        /// </summary>
+        static void MacKuvake(string app)
+        {
+            string lahde = Path.GetFullPath(KuvakeTiedosto);
+            string joukko = Path.Combine(Path.GetTempPath(), "matkakirja-mac-kuvake.iconset");
+            if (Directory.Exists(joukko)) Directory.Delete(joukko, true);
+            Directory.CreateDirectory(joukko);
+            void Aja(string ohjelma, string args)
+            {
+                var p = System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo(ohjelma, args)
+                    { UseShellExecute = false, RedirectStandardOutput = true, RedirectStandardError = true });
+                p.WaitForExit();
+                if (p.ExitCode != 0) throw new Exception($"Mac-kuvake: {ohjelma} {args} → {p.ExitCode}: {p.StandardError.ReadToEnd()}");
+            }
+            foreach (int k in new[] { 16, 32, 128, 256, 512 })
+            {
+                Aja("/usr/bin/sips", $"-z {k} {k} \"{lahde}\" --out \"{Path.Combine(joukko, $"icon_{k}x{k}.png")}\"");
+                Aja("/usr/bin/sips", $"-z {k * 2} {k * 2} \"{lahde}\" --out \"{Path.Combine(joukko, $"icon_{k}x{k}@2x.png")}\"");
+            }
+            string icns = Path.Combine(app, "Contents", "Resources", "PlayerIcon.icns");
+            Aja("/usr/bin/iconutil", $"-c icns -o \"{icns}\" \"{joukko}\"");
+            Directory.Delete(joukko, true);
+            Debug.Log($"MATKAKIRJA: Mac-kuvake {icns} ({new FileInfo(icns).Length / 1024} kt, 16–1024 px)");
+        }
+
+        /// <summary>
+        /// UserBuildSettings.architecture (UnityEditor.OSXStandalone, Mac-moduulin laajennus) heijastuksella, jotta
+        /// iOS-käännöspalvelu kääntää tämän ilman Mac-moduulin viittausta. Nimi on OSArchitecture-arvo (ARM64, x64, x64ARM64).
+        /// </summary>
+        static void AsetaMacArkkitehtuuri(string nimi)
+        {
+            var asetukset = AppDomain.CurrentDomain.GetAssemblies()
+                .Select(a => a.GetType("UnityEditor.OSXStandalone.UserBuildSettings", false)).FirstOrDefault(t => t != null);
+            var ominaisuus = asetukset?.GetProperty("architecture",
+                System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Static);
+            if (ominaisuus == null) { Debug.LogWarning("MATKAKIRJA: Mac-arkkitehtuuria ei voi asettaa (UserBuildSettings puuttuu)"); return; }
+            try { ominaisuus.SetValue(null, Enum.Parse(ominaisuus.PropertyType, nimi, true)); }
+            catch (ArgumentException)
+            {
+                throw new Exception($"Mac-arkkitehtuuria {nimi} ei ole ({string.Join(", ", Enum.GetNames(ominaisuus.PropertyType))})");
+            }
+            Debug.Log("MATKAKIRJA: Mac-arkkitehtuuri " + ominaisuus.GetValue(null));
+        }
+
+        /// <summary>
+        /// Buildin StreamingAssets-kansio PostProcessBuildissa: iOS:llä Xcode-projektin Data/Raw/, macOS:llä
+        /// .app/Contents/Resources/Data/StreamingAssets/. Muilla alustoilla null.
+        /// </summary>
+        public static string StreamingKansio(BuildTarget kohde, string polku) => kohde switch
+        {
+            BuildTarget.iOS => Path.Combine(polku, "Data", "Raw"),
+            BuildTarget.StandaloneOSX => Path.Combine(polku, "Contents", "Resources", "Data", "StreamingAssets"),
+            _ => null,
+        };
+
+        /// <summary>
         /// Build-numero (PlayerSettings.iOS.buildNumber = CFBundleVersion) Xcode-projektin
         /// StreamingAssetsiin (Data/Raw/rakennus.txt): BuildNumeroSilta lukee sen Natiivi-UI:n
         /// "Peli päivittyi" -vertailuun. Ei kirjoita repoon.
@@ -784,10 +893,11 @@ namespace Matkakirja.Editori
         [UnityEditor.Callbacks.PostProcessBuild(180)]
         static void BuildNumeroTiedostoon(BuildTarget kohde, string polku)
         {
-            if (kohde != BuildTarget.iOS) return;
-            string kansio = Path.Combine(polku, "Data", "Raw");
+            string kansio = StreamingKansio(kohde, polku);
+            if (kansio == null) return;
             Directory.CreateDirectory(kansio);
-            File.WriteAllText(Path.Combine(kansio, "rakennus.txt"), PlayerSettings.iOS.buildNumber ?? "");
+            File.WriteAllText(Path.Combine(kansio, "rakennus.txt"),
+                (kohde == BuildTarget.StandaloneOSX ? PlayerSettings.macOS.buildNumber : PlayerSettings.iOS.buildNumber) ?? "");
             // Käännöksen commit (Data/Raw/kaannos.txt): .app-kopion tarkistus vertaa sitä käännöspalvelun KÄÄNNETTY-SHA:han
             // (1.10.2026: juna 93:n kopioksi päätyi simulaattoriin takaisin asennettu 92 ja savuke ajettiin väärällä binäärillä).
             File.WriteAllText(Path.Combine(kansio, "kaannos.txt"), KaannoksenCommit());
@@ -820,9 +930,10 @@ namespace Matkakirja.Editori
         [UnityEditor.Callbacks.PostProcessBuild(185)]
         static void KopioiLaattapaketti(BuildTarget kohde, string polku)
         {
-            if (kohde != BuildTarget.iOS) return;
-            LaattapakettiRakennus.KopioiBuildiin(polku);
-            TilannekuvaRakennus.KopioiBuildiin(polku);
+            string streaming = StreamingKansio(kohde, polku);
+            if (streaming == null) return;
+            LaattapakettiRakennus.KopioiBuildiin(streaming);
+            TilannekuvaRakennus.KopioiBuildiin(streaming);
         }
 
         /// <summary>Laattapalvelin (127.0.0.1) vaatii ATS-poikkeuksen paikalliselle verkolle.</summary>
