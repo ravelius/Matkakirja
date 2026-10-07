@@ -85,3 +85,6 @@ Päätoimittaja = "PÄÄTOIMITTAJA (Opus, max)".
   setsid-ketjuna 13.24– (loki proto-3d/lokit/natiivi-ui-1035/ketju-koysi.log; KETJU VALMIS → stillit Päätoimittajalle).
   Olavinlinnan repliikit viety 13.21 (63). **15.00 jälkeen ensin**: Siirtoseppä historia KÄÄNNÖS NYT, LS1 Giza v2b -simu,
   worldview-viennin tila → osoitin + #4140, S2-syksy, #4141/#4142 tulokset, TF 160 -ryhmäketju (tf160-ketju.log).
+- **13.3x**: #4141 julki (Pöllö 13.28, Pelikoodari todensi). #4142 → setsid `julkaisija-tyokalut/merge4142.sh` (loki merge4142.log)
+  mergeää vihreänä + Pöllö → kerro Pelikoodarille. NUI 5c3d45e6 käännetty, stillit setsid. Siirtoseppä historia kääntyy setsid
+  13.28– (tulos proto-3d/lokit/siirtoseppa-historia4-kaannos.out) → 15.00 jälkeen SIMU NYT Siirtoseppä iPad 18 min + LS1 Giza v2b.
