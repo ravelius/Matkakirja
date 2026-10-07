@@ -1,0 +1,738 @@
+{
+ "kaupunki": "Rooma",
+ "id": "rooma",
+ "versio": 1,
+ "kohteet": [
+  {
+   "id": "Q10285",
+   "nimi": "Colosseum",
+   "kuvaus": "Antiikin Rooman suurin amfiteatteri",
+   "luokka": "rakennus",
+   "koko_m": 189,
+   "teksti": "Rooman Colosseum näkyy ylhäältä soikeana kehänä, jonka korkea ulkoseinä on säilynyt vain pohjoispuolelta. Etelämuuri sortui maanjäristyksessä vuonna 1349, ja renessanssiajalla raunioista louhittiin kiveä palatseihin ja kirkkoihin, myös Pietarinkirkkoon. Seinien lukemattomat kolot jäivät, kun kivilohkoja yhdistäneet rautapuristimet hakattiin irti ja sulatettiin. Areenan alla on kellarikerros, josta eläimet ja lavasteet nostettiin hisseillä näytökseen. Keisari Titus avasi tämän antiikin suurimman, noin viidenkymmenentuhannen katsojan amfiteatterin vuonna 80 kisoilla, jotka kestivät yli sata päivää.",
+   "lyhyt": "Rooman Colosseumissa paavi johtaa pitkäperjantaina ristintien hartauden. Perinne juontaa 1700-luvulle, jolloin paavi Benedictus neljästoista omisti areenan Kristuksen kärsimykselle ja varhaisille marttyyreille ja sen keskelle pystytettiin suuri risti. Nykyinen perinne elvytettiin 1900-luvulla, kun paavit palasivat Colosseumille.",
+   "syventava": "Miten eläimet nousivat areenalle?",
+   "kysymykset": [
+    "Taistelivatko gladiaattorit aina kuolemaan asti?",
+    "Mitä areenalla tapahtui aamupäivisin?",
+    "Kuka rakennutti Colosseumin?",
+    "Voiko kellarikerrokseen päästä nykyään?",
+    "Miksi Colosseumia louhittiin kivilouhoksena?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Areena on soikea, 189 x 156 metriä; maan alla hypogeum eli käytävien ja hissien verkosto.",
+     "url": "https://en.wikipedia.org/wiki/Colosseum"
+    },
+    {
+     "vaite": "Ulkoseinä on säilynyt kolmena kaarikerroksena vain toiselta puolelta.",
+     "url": "kaanon:pelin-aineisto"
+    },
+    {
+     "vaite": "Vuoden 1349 maanjäristys kaatoi etelämuurin; renessanssiajalla kiveä vietiin palatseihin ja kirkkoihin, myös Pietarinkirkkoon.",
+     "url": "https://geographyworlds.com/blog/colosseum-rome-site/"
+    },
+    {
+     "vaite": "Julkisivun kolot syntyivät, kun travertiinilohkoja yhdistäneet rautapuristimet poistettiin ja sulatettiin.",
+     "url": "https://en.fmyly.com/article/why-is-there-a-big-hole-in-the-colosseum/"
+    },
+    {
+     "vaite": "Titus avasi amfiteatterin vuonna 80 yli sata päivää kestäneillä kisoilla; aamulla eläinnäytökset.",
+     "url": "https://en.wikipedia.org/wiki/Inaugural_games_of_the_Colosseum"
+    },
+    {
+     "vaite": "Benedictus XIV omisti Colosseumin Kristuksen kärsimykselle ja marttyyreille, ristintie ja suuri risti pystytettiin 1750; Johannes XXIII palautti ristintien Colosseumille ja Paavali VI vakiinnutti perinteen.",
+     "url": "https://aleteia.org/2024/03/26/how-the-vaticans-way-of-the-cross-got-to-the-colosseum/"
+    }
+   ]
+  },
+  {
+   "id": "Q12512",
+   "nimi": "Pietarinkirkko",
+   "kuvaus": "Vatikaanin suuri basilika",
+   "luokka": "kirkko",
+   "koko_m": 220,
+   "korkeus_m": 136,
+   "teksti": "Pietarinkirkon kupoli nousee ristin huippuun asti satakolmekymmentäkuusi metriä, ja se on yhä Rooman korkein rakennelma. Kupolin suunnitteli Michelangelo, joka otti työmaan johtoonsa vuonna 1546 seitsemänkymmenenyhden vuoden iässä eikä ehtinyt nähdä sitä valmiina. Kirkon edessä Berninin pylväikkö kaartaa soikean aukion ympäri kuin kaksi syleilevää käsivartta. Pääalttarin yllä on Berninin pronssinen katos, jonka valamiseen paavi Urbanus kahdeksas käski sulattaa Pantheonin pronssipalkkeja. Katos merkitsee kohtaa, jonka alla perimätiedon mukaan on apostoli Pietarin hauta.",
+   "lyhyt": "Pietarinkirkko seisoo Vatikaanissa, maailman pienimmässä valtiossa. Oikealla heti sisäänkäynnin jälkeen olevassa kappelissa on Michelangelon Pietà, marmoriveistos Mariasta kuollut Jeesus sylissään. Se on ainoa teos, jonka Michelangelo koskaan signeerasi, ja hän veisti sen alle kolmekymppisenä.",
+   "syventava": "Kuka on haudattu pääalttarin alle?",
+   "kysymykset": [
+    "Voiko kupolin huipulle kiivetä?",
+    "Montako vuotta kirkkoa rakennettiin?",
+    "Miksi Michelangelo signeerasi juuri Pietàn?",
+    "Ketä pylväikön päällä seisovat patsaat esittävät?",
+    "Kuka vartioi Vatikaania nykyään?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Kirkko on 136 metriä korkea maasta kupolin ristiin; Michelangelo suunnitteli kupolin 1546.",
+     "url": "https://www.vatican.va/content/vatican/en/ra/cupolone-lanterna.html"
+    },
+    {
+     "vaite": "Michelangelon kupoli on yhä Rooman korkein rakennelma; Pietarinkirkko on Vatikaanissa, maailman pienimmässä valtiossa.",
+     "url": "kaanon:pelin-aineisto"
+    },
+    {
+     "vaite": "Paavali III määräsi Michelangelon työmaan johtoon 1546, kun tämä oli 71-vuotias; hän ei nähnyt kupolia valmiina.",
+     "url": "https://press.princeton.edu/node/42049"
+    },
+    {
+     "vaite": "Berninin pylväikkö syleilee aukiota kuin äitikirkon käsivarret; aukio on soikea.",
+     "url": "https://en.wikipedia.org/wiki/St._Peter%27s_Square"
+    },
+    {
+     "vaite": "Berninin pronssinen baldakiini pääalttarin yllä merkitsee Pietarin haudan paikkaa; Urbanus VIII käski sulattaa Pantheonin pronssipalkkeja.",
+     "url": "https://en.wikipedia.org/wiki/St._Peter%27s_Baldachin"
+    },
+    {
+     "vaite": "Pietà 1498–1499 on ensimmäisessä kappelissa oikealla; ainoa Michelangelon signeeraama teos.",
+     "url": "https://simple.wikipedia.org/wiki/Piet%C3%A0_(Michelangelo)"
+    },
+    {
+     "vaite": "Michelangelo syntyi 1475, joten hän oli veistäessään noin 23-vuotias.",
+     "url": "https://en.wikipedia.org/wiki/Michelangelo"
+    }
+   ]
+  },
+  {
+   "id": "Q180212",
+   "nimi": "Forum Romanum",
+   "kuvaus": "Antiikin Rooman keskustori",
+   "luokka": "muu",
+   "koko_m": 400,
+   "teksti": "Rooman vanha keskustori, Forum Romanum, levittäytyy ylhäältä katsottuna raunioiden laaksona Palatinuksen ja Capitoliumin kukkuloiden välissä. Se oli tasavallan ja keisariajan Rooman tori, oikeuspaikka ja uskonnollinen keskus. Keskiajalla tori hautautui maan alle, ja koska siellä laidunsi karjaa, sitä kutsuttiin lehmäkentäksi; järjestelmällinen kaivaminen alkoi vasta vuonna 1803. Jumalallisen Caesarin temppelin raunioissa on kohta, jossa Julius Caesarin ruumis poltettiin murhan jälkeen. Sinne tuodaan yhä kukkia, varsinkin murhan vuosipäivänä maaliskuun puolivälissä.",
+   "lyhyt": "Rooman vanhan torin, Forum Romanumin, kaakkoispäässä Pyhän tien varrella seisoo Tituksen riemukaari. Keisari Domitianus pystytti sen veljensä kuoleman jälkeen, ja sen reliefeissä roomalaiset sotilaat kantavat Jerusalemin temppelistä ryöstettyä saalista, muun muassa seitsenhaaraista kynttilänjalkaa.",
+   "syventava": "Missä Caesar oikeastaan murhattiin?",
+   "kysymykset": [
+    "Miksi tori hautautui maan alle?",
+    "Mitä vestaalit tekivät torilla?",
+    "Kuka rakennutti senaatin talon?",
+    "Miksi Caesarin ruumis poltettiin torilla?",
+    "Mitä torilta on löydetty kaivauksissa?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Forum Romanum oli tasavallan ja keisariajan tori, oikeuspaikka ja uskonnollinen keskus; keskiajalla hautautui, Campo Vaccino eli lehmäkenttä; kaivaminen alkoi 1803.",
+     "url": "kaanon:pelin-aineisto"
+    },
+    {
+     "vaite": "Campo Vaccino viittaa karjaan, jota tuotiin laiduntamaan.",
+     "url": "https://rome.us/monumentos-antiguos/roman-forum.html"
+    },
+    {
+     "vaite": "Forum sijaitsee Palatinuksen ja Capitoliumin välissä.",
+     "url": "https://en.wikipedia.org/wiki/Roman_Forum"
+    },
+    {
+     "vaite": "Jumalallisen Caesarin temppeli on Caesarin rovion paikalla; puoliympyrän muotoinen apsis merkitsee polttopaikkaa.",
+     "url": "https://vroma.org/vromans/forum/tempjc.html"
+    },
+    {
+     "vaite": "Temppeliin tuodaan kukkia päivittäin ja erityisesti 15. maaliskuuta.",
+     "url": "https://en.wikipedia.org/wiki/Temple_of_Caesar"
+    },
+    {
+     "vaite": "Domitianus rakennutti Tituksen kaaren noin vuonna 81 veljensä kuoleman jälkeen; kaari on Via Sacralla Forumin kaakkoispuolella.",
+     "url": "https://en.wikipedia.org/wiki/Arch_of_Titus"
+    },
+    {
+     "vaite": "Kaaren reliefeissä sotilaat kantavat Jerusalemin temppelin saalista, myös seitsenhaaraista menoraa.",
+     "url": "https://rome.us/monumentos-antiguos/roman-forum.html"
+    }
+   ]
+  },
+  {
+   "id": "Q185382",
+   "nimi": "Trevin suihkulähde",
+   "kuvaus": "Rooman suurin barokkisuihkulähde",
+   "luokka": "muu",
+   "koko_m": 50,
+   "teksti": "Trevin suihkulähde täyttää kokonaisen palatsin seinän pienen aukion laidalla: veistosten ja kallioiden ryhmä on kaksikymmentäkuusi metriä korkea ja lähes viisikymmentä leveä. Sen suunnitteli Nicola Salvi, ja Giuseppe Pannini sai työn valmiiksi vuonna 1762. Vesi tulee yhä Aqua Virgo -vesijohtoa pitkin, jonka Marcus Agrippa rakennutti vuonna 19 ennen ajanlaskun alkua. Perimätiedon mukaan altaaseen kolikon heittänyt palaa Roomaan, ja kolikoita kertyy vuodessa noin puolentoista miljoonan euron arvosta. Rahat lahjoitetaan katoliselle avustusjärjestölle Caritakselle.",
+   "lyhyt": "Trevin suihkulähteen altaan ääreen pääsee helmikuusta 2026 lähtien vain kahden euron lipulla, ellei ole roomalainen, ja altaalla saa olla kerralla enintään neljäsataa ihmistä. Juuri tässä altaassa kahlasi Anita Ekberg Federico Fellinin elokuvassa La Dolce Vita vuonna 1960.",
+   "syventava": "Kuka on keskellä seisova hahmo?",
+   "kysymykset": [
+    "Kuka on altaan keskellä seisova jumala?",
+    "Miksi kolikko heitetään olan yli?",
+    "Mistä suihkulähteen vesi on peräisin?",
+    "Kuka oli arkkitehti Nicola Salvi?",
+    "Saako altaassa kahlata nykyään?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Suihkulähde on 26,3 metriä korkea ja 49,15 metriä leveä; suunnittelija Nicola Salvi, valmiiksi Giuseppe Pannini 1762.",
+     "url": "https://en.wikipedia.org/wiki/Trevi_Fountain"
+    },
+    {
+     "vaite": "Marcus Agrippa rakennutti Aqua Virgo -vesijohdon 19 eaa.",
+     "url": "https://en.wikipedia.org/wiki/Trevi_Fountain"
+    },
+    {
+     "vaite": "Lähteen vesi tulee yhä antiikin akveduktia pitkin.",
+     "url": "kaanon:pelin-aineisto"
+    },
+    {
+     "vaite": "Kolikon heittäjä palaa Roomaan; kolikoita noin 1,5 miljoonaa euroa vuodessa, lahjoitetaan Caritakselle.",
+     "url": "https://www.wantedinrome.com/news/what-does-rome-do-with-all-the-trevi-fountain-coins.html"
+    },
+    {
+     "vaite": "Kahden euron pääsymaksu alkoi helmikuun alussa 2026; roomalaisille ilmainen; kerralla enintään 400 ihmistä.",
+     "url": "https://www.thestar.com.my/news/world/2026/02/02/rome-introduces-trevi-fountain-access-fee-to-curb-coin-tossing-crowds"
+    },
+    {
+     "vaite": "Suihkulähde esiintyi Fellinin elokuvassa La Dolce Vita 1960, jossa Anita Ekberg kahlaa altaassa.",
+     "url": "https://en.wikipedia.org/wiki/La_Dolce_Vita"
+    }
+   ]
+  },
+  {
+   "id": "Q99309",
+   "nimi": "Pantheon",
+   "kuvaus": "Antiikin temppeli, nykyään kirkko",
+   "luokka": "kirkko",
+   "koko_m": 80,
+   "korkeus_m": 43,
+   "teksti": "Rooman Pantheonin kupolin keskellä on pyöreä, noin kahdeksanmetrinen aukko, joka on rakennuksen ainoa valonlähde. Kupoli on ollut maailman suurin raudoittamaton betonikupoli lähes kaksituhatta vuotta, ja sen halkaisija on täsmälleen sama kuin korkeus lattiasta aukkoon. Keisari Hadrianus rakennutti temppelin nykyiseen asuunsa 100-luvulla mutta jätti päätyyn Marcus Agrippan nimen. Isoisäsi näki vuonna 1873, miten kattoaukosta satoi sisään ja vesi katosi lattian pieniin reikiin. Hän tuumi, ettei näin vanhalle talolle kai tohtinut huomauttaa katosta.",
+   "lyhyt": "Rooman Pantheon muutettiin kirkoksi 600-luvun alussa, ja juuri siksi se säästyi, kun muita antiikin rakennuksia purettiin kiviksi. Kirkkoon on haudattu taidemaalari Rafael ja Italian kaksi ensimmäistä kuningasta, Viktor Emanuel toinen ja Umberto ensimmäinen.",
+   "syventava": "Miten kupoli on pysynyt pystyssä?",
+   "kysymykset": [
+    "Miten valtava kupoli on pysynyt pystyssä?",
+    "Mitä kattoaukosta sataa helluntaina?",
+    "Miksi Rafael haudattiin juuri tänne?",
+    "Kuka oli Marcus Agrippa?",
+    "Paljonko sisäänpääsy maksaa nykyään?"
+   ],
+   "isoisa": true,
+   "lahteet": [
+    {
+     "vaite": "Kattoaukko on halkaisijaltaan 8,2 metriä ja ainoa luonnonvalon lähde; halkaisija 43,3 m on sama kuin korkeus lattiasta aukkoon; lattiassa 22 viemäriaukkoa.",
+     "url": "https://www.pantheonroma.com/?p=90378"
+    },
+    {
+     "vaite": "Kupoli on ollut maailman suurin raudoittamaton betonikupoli lähes kaksituhatta vuotta.",
+     "url": "kaanon:pelin-aineisto"
+    },
+    {
+     "vaite": "Hadrianus rakennutti Pantheonin 118–125 ja säilytti Agrippan nimen päätyyn.",
+     "url": "https://lonelyplanet.com/points-of-interest/pantheon/389093"
+    },
+    {
+     "vaite": "Isoisän merkintä: kattoaukosta satoi sisään, vesi katosi lattian pieniin reikiin, vanhalle talolle ei kai tohtinut huomauttaa katosta.",
+     "url": "kaanon:isoisan-paivakirja"
+    },
+    {
+     "vaite": "Bonifatius IV muutti Pantheonin kirkoksi 600-luvun alussa, minkä vuoksi se säästyi kivenryöstöltä.",
+     "url": "https://www.pantheonroma.com/?p=90372"
+    },
+    {
+     "vaite": "Pantheoniin on haudattu Rafael sekä Italian ensimmäiset kuninkaat Viktor Emanuel II ja Umberto I.",
+     "url": "https://thecultureexplorer.beehiiv.com/p/buried-pantheon-rome"
+    }
+   ]
+  },
+  {
+   "id": "Q848072",
+   "nimi": "Espanjalaiset portaat",
+   "kuvaus": "Barokkiportaat aukiolta kirkolle",
+   "luokka": "muu",
+   "koko_m": 100,
+   "teksti": "Espanjalaiset portaat nousevat leveinä, kaartuvina syöksyinä Piazza di Spagnalta ylös Trinità dei Montin kirkolle, ja askelmia on satakolmekymmentäviisi. Portaat valmistuivat vuonna 1725, ja ne rahoitettiin ranskalaisen diplomaatin Étienne Gueffierin testamenttiinsa jättämillä varoilla. Portaiden juurella on Berninin veneen muotoinen Barcaccia-suihkulähde. Tarinan mukaan paavi ihastui veneeseen, jonka Tiberin tulva oli vuonna 1598 tuonut aukiolle asti. Portaiden oikealla puolella on talo, jossa runoilija John Keats kuoli vuonna 1821, ja nykyään siinä toimii Keatsin ja Shelleyn museo.",
+   "lyhyt": "Espanjalaisilla portailla ei ole saanut istua kesästä 2019 lähtien, sillä kaupunki kielsi istumisen, syömisen ja juomisen portailla sakon uhalla. Kiellon alkaessa poliisit partioivat portailla ja puhalsivat pilliin aina, kun joku istahti.",
+   "syventava": "Miksi portaita sanotaan espanjalaisiksi?",
+   "kysymykset": [
+    "Miksi portaita kutsutaan espanjalaisiksi?",
+    "Kuka oli runoilija John Keats?",
+    "Miksi suihkulähde on veneen muotoinen?",
+    "Mikä kirkko portaiden yläpäässä seisoo?",
+    "Kukkiiko portailla keväisin atsaleoita?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Portaissa on 135 askelmaa, ja ne nousevat Piazza di Spagnalta Trinità dei Montin kirkolle.",
+     "url": "kaanon:pelin-aineisto"
+    },
+    {
+     "vaite": "Portaat rakennettiin 1723–1725; rahoitus ranskalaisen diplomaatin Étienne Gueffierin testamentista.",
+     "url": "https://depts.washington.edu/hrome/Authors/kirinsl/PiazzadiSpagna/pub_zbarticle_view_printable.html"
+    },
+    {
+     "vaite": "Barcaccia on Berninin veneen muotoinen suihkulähde; paavi innostui veneestä, jonka vuoden 1598 tulva toi aukiolle.",
+     "url": "https://depts.washington.edu/hrome/Authors/ams82/SpanishSteps/pub_zbarticle_view_printable.html"
+    },
+    {
+     "vaite": "Portaiden oikealla puolella oleva talo on Keats-Shelley-museo; Keats kuoli siellä 23.2.1821.",
+     "url": "https://heritagehistorian.com/tag/percy-bysshe-shelley/"
+    },
+    {
+     "vaite": "Istuminen, syöminen ja juominen kiellettiin 2019, sakko 250–400 euroa; poliisit partioivat ja puhalsivat pilliin.",
+     "url": "https://www.washingtontimes.com/news/2019/aug/7/rome-enforces-ban-on-sitting-on-spanish-steps/"
+    }
+   ]
+  },
+  {
+   "id": "Q486382",
+   "nimi": "Castel Sant’Angelo",
+   "kuvaus": "Hadrianuksen hautamuistomerkki ja linna",
+   "luokka": "linnoitus",
+   "koko_m": 150,
+   "teksti": "Enkelinlinna, Castel Sant’Angelo, näkyy ylhäältä pyöreänä tornina Tiberin rannalla neliön muotoisten muurien keskellä. Keisari Hadrianus rakennutti sen 100-luvulla itselleen ja suvulleen hautamuistomerkiksi. Perimätiedon mukaan paavi Gregorius ensimmäinen näki vuonna 590 ruttokulkueessa arkkienkeli Mikaelin rakennuksen huipulla panemassa miekkaa tuppeen, ja rutto päättyi. Siksi huipulla seisoo nykyään arkkienkelin pronssinen patsas vuodelta 1753. Vuonna 1527 paavi Klemens seitsemäs pakeni keisarin joukkoja Vatikaanista linnaan noin kahdeksansataa metriä pitkää korotettua käytävää pitkin.",
+   "lyhyt": "Enkelinlinna on nykyään museo, mutta vielä 1900-luvun alkuun se oli linnoitus, ja paavit pitivät siellä vankeja, kuten filosofi Giordano Brunoa. Muureilla tapahtuu myös Giacomo Puccinin oopperan Tosca viimeinen näytös, jossa päähenkilö syöksyy linnan muurilta kuolemaansa.",
+   "syventava": "Mihin linnan salainen käytävä johtaa?",
+   "kysymykset": [
+    "Kuka oli keisari Hadrianus?",
+    "Ketä linnassa pidettiin vankina?",
+    "Voiko paavien käytävää kävellä nykyään?",
+    "Miksi enkeli panee miekkaa tuppeen?",
+    "Mikä silta johtaa linnalle?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Hadrianus rakennutti mausoleumin 100-luvulla itselleen ja suvulleen.",
+     "url": "https://www.turismoroma.it/en/places/mausoleum-hadrian-saint-angel-castle"
+    },
+    {
+     "vaite": "Gregorius I näki ruttokulkueessa noin 590 arkkienkeli Mikaelin panevan miekan tuppeen; tulkittiin ruton loppumisen merkiksi.",
+     "url": "https://www.turismoroma.it/en/places/mausoleum-hadrian-saint-angel-castle"
+    },
+    {
+     "vaite": "Huipulla on Verschaffeltin pronssinen Mikael vuodelta 1753.",
+     "url": "https://en.wikipedia.org/wiki/Castel_Sant%27Angelo"
+    },
+    {
+     "vaite": "Klemens VII pakeni vuoden 1527 ryöstön aikana noin 800 metriä pitkää Passetto di Borgo -käytävää pitkin.",
+     "url": "https://en.wikipedia.org/wiki/Passetto_di_Borgo"
+    },
+    {
+     "vaite": "Linna poistettiin sotilaskäytöstä 1901 ja on nyt museo; paavinvaltio käytti sitä vankilana, Giordano Bruno vankina kuusi vuotta.",
+     "url": "https://en.wikipedia.org/wiki/Castel_Sant%27Angelo"
+    },
+    {
+     "vaite": "Puccinin Toscan kolmas näytös tapahtuu linnassa, ja Tosca syöksyy muurilta.",
+     "url": "https://en.wikipedia.org/wiki/Castel_Sant%27Angelo"
+    }
+   ]
+  },
+  {
+   "id": "Q463400",
+   "nimi": "Piazza Navona",
+   "kuvaus": "Barokkiaukio antiikin stadionin paikalla",
+   "luokka": "aukio",
+   "koko_m": 260,
+   "teksti": "Navonan aukio, Piazza Navona, on ylhäältä pitkä ja kapea, ja sen pohjoispää on pyöristetty. Muoto seuraa tarkasti keisari Domitianuksen stadionia, jonka perustusten päälle aukion talot rakennettiin. Keskellä on Gian Lorenzo Berninin vuonna 1651 suunnittelema Neljän virran suihkulähde, jonka jokijumalat kuvaavat neljän maanosan suuria virtoja. Niilin pää on huputettu, koska joen lähteitä ei vielä tunnettu. Oppaiden suosikkitarina, jonka mukaan jumala ei kestänyt katsoa kilpailijan Borrominin kirkkoa, ei pidä paikkaansa, sillä suihkulähde valmistui ennen kirkkoa.",
+   "lyhyt": "Navonan aukio tulvitettiin 1600-luvun puolivälistä 1800-luvun jälkipuoliskolle kesäisin: suihkulähteiden viemärit tukittiin, ja vesi täytti aukion matalaksi järveksi. Joulun ja loppiaisen välillä aukiolla ovat perinteiset Befana-markkinat, jotka on nimetty lahjoja tuovan noidan mukaan.",
+   "syventava": "Kuka marttyyri kuoli stadionilla?",
+   "kysymykset": [
+    "Mitä Domitianuksen stadionilla kilpailtiin?",
+    "Miksi Bernini ja Borromini olivat kilpailijoita?",
+    "Mikä lintu istuu obeliskin huipulla?",
+    "Mitä aukion kaksi muuta suihkulähdettä esittävät?",
+    "Kuka oli pyhä Agnes?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Aukio säilyttää Domitianuksen stadionin muodon, ja stadion on ympäröivien talojen perustuksena.",
+     "url": "https://en.wikipedia.org/wiki/Piazza_Navona"
+    },
+    {
+     "vaite": "Berninin vuonna 1651 suunnittelema Neljän virran suihkulähde; jokijumalat kuvaavat neljän maanosan virtoja.",
+     "url": "kaanon:pelin-aineisto"
+    },
+    {
+     "vaite": "Niili on huputettu, koska sen lähteitä ei tunnettu; tarina Borrominin kirkosta on väärä, suihkulähde valmistui vuosia ennen kirkkotyötä.",
+     "url": "https://en.wikipedia.org/wiki/Fontana_dei_Quattro_Fiumi"
+    },
+    {
+     "vaite": "Aukio tulvitettiin kesäisin tukkimalla suihkulähteiden viemärit 1651–1867.",
+     "url": "https://crystallyn.substack.com/p/the-summer-flooding-of-piazza-navona"
+    },
+    {
+     "vaite": "Joulusta loppiaiseen aukiolla on perinteiset Befana-markkinat.",
+     "url": "https://radicalstorage.com/travel/rome-christmas-market/"
+    },
+    {
+     "vaite": "Pyhä Agnes kärsi marttyyrikuoleman Domitianuksen stadionilla.",
+     "url": "https://en.wikipedia.org/wiki/Sant%27Agnese_in_Agone"
+    }
+   ]
+  },
+  {
+   "id": "Q506234",
+   "nimi": "Viktor Emanuel II:n monumentti",
+   "kuvaus": "Yhdistyneen Italian kansallismonumentti",
+   "luokka": "rakennus",
+   "koko_m": 135,
+   "teksti": "Viktor Emanuel toisen monumentti erottuu ylhäältä häikäisevän valkoisena Piazza Venezian laidalla, ja roomalaiset ovat antaneet sille lempinimet kirjoituskone ja hääkakku. Yhdistyneen Italian ensimmäisen kuninkaan muistomerkki vihittiin vuonna 1911, mutta se valmistui vasta vuonna 1935. Kuninkaan pronssinen ratsastajapatsas on kaksitoista metriä korkea, ja vihkiäisten aikoihin kaksikymmentä miestä söi päivällistä hevosen vatsassa. Patsaan alapuolella on Isänmaan alttari ja tuntemattoman sotilaan hauta vuodelta 1921. Lasihissi vie katolle kahdeksankymmenen metrin korkeuteen.",
+   "lyhyt": null,
+   "syventava": "Mitä monumentin katolta näkee?",
+   "kysymykset": [
+    "Miksi monumenttia kutsutaan kirjoituskoneeksi?",
+    "Kuka oli kuningas Viktor Emanuel toinen?",
+    "Kuka vartioi tuntemattoman sotilaan hautaa?",
+    "Mistä monumentin valkoinen marmori tuotiin?",
+    "Miksi monumentti on herättänyt kiistaa?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Lempinimet kirjoituskone ja hääkakku; lasihissit vievät kahdeksankymmenen metrin korkeuteen.",
+     "url": "https://turismoroma.it/en/places/terraces-vittoriano"
+    },
+    {
+     "vaite": "Monumentti vihittiin 4.6.1911 ja valmistui 1935; valkoinen Botticinon marmori; ratsastajapatsas 12 m; 20 miestä söi päivällistä hevosen vatsassa; tuntemattoman sotilaan hauta Isänmaan alttarissa 1921.",
+     "url": "https://en.wikipedia.org/wiki/Victor_Emmanuel_II_Monument"
+    }
+   ]
+  },
+  {
+   "id": "Q34925",
+   "nimi": "Capitolium",
+   "kuvaus": "Kukkula ja Michelangelon aukio",
+   "luokka": "muu",
+   "koko_m": 300,
+   "teksti": "Kapitolinen kukkula, Capitolium, kohoaa Forum Romanumin luoteispuolella, ja sen laella on Michelangelon suunnittelema aukio, jonka kiveyksen soikea kuvio erottuu ylhäältä selvästi. Aukion keskellä seisoo jäljennös keisari Marcus Aureliuksen pronssisesta ratsastajapatsaasta, ja alkuperäinen on viereisessä museossa. Patsas on ainoa kokonaan säilynyt keisarin pronssinen ratsastajapatsas, koska sen luultiin esittävän ensimmäistä kristittyä keisaria Konstantinusta. Kapitolin museot ovat maailman vanhin yleisölle avattu museo. Aukion päässä Senaattoripalatsissa kokoontuu yhä Rooman kaupunginvaltuusto.",
+   "lyhyt": null,
+   "syventava": "Miten hanhet pelastivat Rooman?",
+   "kysymykset": [
+    "Mikä oli Tarpeian kallio?",
+    "Mitä Kapitolin museoissa voi nähdä?",
+    "Missä Jupiterin temppeli seisoi?",
+    "Miksi kukkulalle nousevat portaat ovat loivat?",
+    "Kuka siirsi ratsastajapatsaan kukkulalle?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Aukion suunnitteli Michelangelo; patsas keskellä soikealla kivetyllä kentällä; alkuperäinen museossa, kopio aukiolla; ainoa kokonaan säilynyt keisarin pronssinen ratsastajapatsas, koska sen luultiin esittävän Konstantinusta.",
+     "url": "https://en.wikipedia.org/wiki/Piazza_del_Campidoglio"
+    },
+    {
+     "vaite": "Kapitolin museot avattiin yleisölle 1734, maailman vanhin julkinen museo.",
+     "url": "https://en.wikipedia.org/wiki/Capitoline_Museums"
+    },
+    {
+     "vaite": "Senaattoripalatsi on Rooman kaupunginvaltuuston kokouspaikka.",
+     "url": "https://en.wikipedia.org/wiki/City_Council_of_Rome"
+    },
+    {
+     "vaite": "Capitolium on Forum Romanumin luoteispuolella.",
+     "url": "https://en.wikipedia.org/wiki/Capitoline_Hill"
+    }
+   ]
+  },
+  {
+   "id": "Q200642",
+   "nimi": "Palatinus",
+   "kuvaus": "Keisarien palatsien kukkula",
+   "luokka": "muu",
+   "koko_m": 500,
+   "teksti": "Palatinuksen kukkula kohoaa Forum Romanumin ja Circus Maximuksen välissä, ja ylhäältä sen laella erottuu laaja keisaripalatsien raunioiden kenttä puiden ja puutarhojen keskellä. Tarun mukaan Romulus perusti Rooman juuri tänne, ja kaivauksissa onkin löydetty rautakautisten majojen paalunreikiä. Ensimmäinen keisari Augustus asui kukkulalla, ja hänen seuraajansa rakensivat sen täyteen palatseja. Kukkulan nimestä on peräisin myös sana palatsi monissa kielissä. Etelärinteen palatsista keisari saattoi seurata kilpa-ajoja Circus Maximuksella omalta aitioltaan.",
+   "lyhyt": null,
+   "syventava": "Missä Romulus ja Remus löydettiin?",
+   "kysymykset": [
+    "Miksi keisarit asuivat juuri täällä?",
+    "Voiko Augustuksen talon freskoja nähdä?",
+    "Mitä Farnesen puutarhoissa kasvoi?",
+    "Miksi Romulus surmasi veljensä Remuksen?",
+    "Mistä kohdasta näkee parhaiten Forumille?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Sana palatsi on peräisin Palatinuksen nimestä monissa kielissä.",
+     "url": "https://www.italyguides.it/en/lazio/rome/ancient-rome/roman-forum/palatine-hill"
+    },
+    {
+     "vaite": "Romulus perusti Rooman Palatinukselle; rautakautisia majojen paalunreikiä 900–600-luvuilta eaa.",
+     "url": "https://en.wikipedia.org/wiki/Palatine_Hill"
+    },
+    {
+     "vaite": "Augustus asui kukkulalla; palatsista oli näkymä Circus Maximukselle ja keisarillinen aitio kilpa-ajojen seuraamiseen.",
+     "url": "https://www.thegeographicalcure.com/post/complete-guide-to-the-palatine-hill-in-rome"
+    },
+    {
+     "vaite": "Kardinaali Farnese rakennutti raunioiden päälle kasvitieteellisen puutarhan.",
+     "url": "https://www.italyguides.it/en/lazio/rome/ancient-rome/roman-forum/palatine-hill"
+    }
+   ]
+  },
+  {
+   "id": "Q207808",
+   "nimi": "Circus Maximus",
+   "kuvaus": "Antiikin vaunukilpailujen rata",
+   "luokka": "muu",
+   "koko_m": 621,
+   "teksti": "Kilparata Circus Maximus näkyy ylhäältä pitkänä, nurmettuneena painanteena Palatinuksen ja Aventinuksen kukkuloiden välissä. Rata oli kuusisataakaksikymmentäyksi metriä pitkä, ja vaunukilpailuja seurasi siellä yli sataviisikymmentätuhatta katsojaa. Radan keskellä seisoi kaksi egyptiläistä obeliskia, jotka ovat nykyään Kansan aukiolla ja Lateraanin kirkon edessä. Niistä vanhemman keisari Augustus toi Egyptistä valloituksensa muistomerkiksi. Nykyään paikka on julkinen puisto, jossa järjestetään suuria konsertteja. Vuonna 2014 Rolling Stones soitti siellä yli seitsemällekymmenelletuhannelle kuulijalle.",
+   "lyhyt": null,
+   "syventava": "Kuinka vaarallisia vaunukilpailut olivat?",
+   "kysymykset": [
+    "Miten vaunukilpailu käytiin?",
+    "Kenen joukkueita katsojat kannattivat?",
+    "Miksi rata on nykyään nurmikkoa?",
+    "Mitä radan keskikaistalla oli?",
+    "Missä keisari istui kisoja katsomassa?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Rata oli 621 m pitkä ja 118 m leveä, yli 150 000 katsojaa; nykyään julkinen puisto.",
+     "url": "https://madainproject.com/circus_maximus"
+    },
+    {
+     "vaite": "Obeliskit: Augustuksen pystyttämä nykyään Piazza del Popololla, Constantius II:n Lateraanin aukiolla.",
+     "url": "https://penelope.uchicago.edu/~grout/encyclopaedia_Romana/circusmaximus/obelisk.html"
+    },
+    {
+     "vaite": "Rolling Stones soitti Circus Maximuksella 2014 yli 70 000 kuulijalle.",
+     "url": "https://www.thelocal.it/20140623/jagger-boosts-italys-coffers-and-tips-world-cup-win"
+    },
+    {
+     "vaite": "Rata on Palatinuksen ja Aventinuksen välissä.",
+     "url": "https://en.wikipedia.org/wiki/Circus_Maximus"
+    }
+   ]
+  },
+  {
+   "id": "Q84090",
+   "nimi": "Lateraanin Johanneksen arkkibasilika",
+   "kuvaus": "Rooman piispan tuomiokirkko",
+   "luokka": "kirkko",
+   "koko_m": 140,
+   "teksti": "Lateraanin Johanneksen arkkibasilika on Rooman tuomiokirkko, ja arvojärjestyksessä se on Pietarinkirkkoakin ylempänä. Julkisivussa lukee latinaksi, että se on kaikkien kaupungin ja maailman kirkkojen äiti ja pää. Julkisivun harjalla seisoo viisitoista seitsemänmetristä patsasta, keskellä Kristus ja hänen vierellään Johannes Kastaja ja evankelista Johannes, ja rivi erottuu ylhäältä taivasta vasten. Kirkko perustettiin vuonna 324, ja se on läntisen maailman vanhin basilika. Viereisessä Lateraanin palatsissa allekirjoitettiin vuonna 1929 sopimus, jolla Vatikaanista tuli itsenäinen valtio.",
+   "lyhyt": null,
+   "syventava": "Mitkä ovat kirkon viereiset pyhät portaat?",
+   "kysymykset": [
+    "Miksi tämä kirkko on Pietarinkirkkoa arvokkaampi?",
+    "Mistä aukion valtava obeliski on peräisin?",
+    "Kuka oli keisari Konstantinus?",
+    "Asuivatko paavit ennen Lateraanissa?",
+    "Mitä Lateraanin sopimuksessa sovittiin?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Rooman vanhin julkinen kirkko ja lännen vanhin basilika, perustettu 324; julkisivun latinankielinen kirjoitus kaikkien kirkkojen äiti ja pää; arvojärjestyksessä Pietarinkirkon yläpuolella.",
+     "url": "https://en.wikipedia.org/wiki/Archbasilica_of_Saint_John_Lateran"
+    },
+    {
+     "vaite": "Galilein julkisivu valmistui 1735; viisitoista seitsemänmetristä patsasta, keskellä Kristus, vierellä Johannes Kastaja ja Johannes evankelista.",
+     "url": "https://www.walksofitaly.com/blog/?p=20888"
+    },
+    {
+     "vaite": "Lateraanin sopimus allekirjoitettiin Lateraanin palatsissa 11.2.1929; Vatikaanista itsenäinen valtio.",
+     "url": "https://en.wikipedia.org/wiki/Lateran_Treaty"
+    }
+   ]
+  },
+  {
+   "id": "Q186282",
+   "nimi": "Santa Maria Maggiore",
+   "kuvaus": "Rooman suurin Marian kirkko",
+   "luokka": "kirkko",
+   "koko_m": 120,
+   "korkeus_m": 75,
+   "teksti": "Basilika Santa Maria Maggiore seisoo Esquilinuksen kukkulalla, ja ylhäältä sen tunnistaa seitsemänkymmentäviisi metriä korkeasta kellotornista, joka on Rooman korkein. Kirkon syntytarinan mukaan Neitsyt Maria ilmestyi paaville unessa, ja aamulla kukkulan peitti lumi keskellä elokuuta. Muistoksi kirkon katosta sataa joka vuosi viides elokuuta valkoisia kukan terälehtiä. Huhtikuussa 2025 kuollut paavi Franciscus on haudattu tähän kirkkoon. Hän kävi täällä rukoilemassa Marian ikonin edessä ennen ulkomaanmatkojaan ja niiden jälkeen.",
+   "lyhyt": null,
+   "syventava": "Mitä ikoni Salus Populi Romani esittää?",
+   "kysymykset": [
+    "Miksi paavi Franciscus haudattiin tänne?",
+    "Milloin lumen ihmettä juhlitaan?",
+    "Mitä kirkon vanhimmat mosaiikit esittävät?",
+    "Mitä kirkossa säilytetään jouluseimestä?",
+    "Miksi kellotorni on Rooman korkein?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Kellotorni on 75 metriä korkea ja Rooman korkein.",
+     "url": "https://cgmr.carleton.edu/items/show/411"
+    },
+    {
+     "vaite": "Lumen ihme: Maria ilmestyi unessa paavi Liberiukselle, ja Esquilinus oli aamulla lumen peitossa elokuussa; messussa katosta pudotetaan valkoisia terälehtiä 5. elokuuta.",
+     "url": "https://www.wantedinrome.com/news/romes-miracle-of-the-snow-in-august.html"
+    },
+    {
+     "vaite": "Paavi Franciscus kuoli huhtikuussa 2025 ja on haudattu Santa Maria Maggioreen.",
+     "url": "https://www.wantedinrome.com/news/romes-miracle-of-the-snow-in-august.html"
+    },
+    {
+     "vaite": "Franciscus rukoili Salus Populi Romani -ikonin edessä ennen ulkomaanmatkoja ja niiden jälkeen.",
+     "url": "https://www.ansa.it/english/news/2017/09/11/pope-prays-at-rome-basilica-after-colombia-trip_02997237-5f76-4096-841e-eb4977362a7a.html"
+    }
+   ]
+  },
+  {
+   "id": "Q502098",
+   "nimi": "Caracallan kylpylät",
+   "kuvaus": "Keisariaikaisen kylpylän valtavat rauniot",
+   "luokka": "muu",
+   "koko_m": 330,
+   "teksti": "Caracallan kylpylät näkyvät ylhäältä jättimäisinä tiilimuurien neliöinä vehreän alueen keskellä. Kylpylä avattiin vuonna 216, ja siellä mahtui kylpemään yhtä aikaa yli puolitoista tuhatta ihmistä. Maan alla kulkee kolmessa kerroksessa käytäviä, joissa orjat kuljettivat polttopuita viidellekymmenelle uunille, ja osaan käytävistä pääsee nykyään yleisökin. Kesäisin raunioissa näytetään Rooman oopperan ulkoilmaesityksiä muinaisten holvien edessä. Vuonna 1990 Luciano Pavarotti, Plácido Domingo ja José Carreras lauloivat täällä ensimmäisen yhteisen konserttinsa kolmena tenorina.",
+   "lyhyt": null,
+   "syventava": "Kuka oli keisari Caracalla?",
+   "kysymykset": [
+    "Miten kylpylän vesi lämmitettiin?",
+    "Mitä kylpylässä tehtiin kylpemisen lisäksi?",
+    "Minne kylpylän patsaat ja mosaiikit vietiin?",
+    "Miksi kylpylä lakkasi toimimasta?",
+    "Millainen oli roomalaisen kylpijän päivä?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Kylpylä avattiin 216, ja siihen mahtui noin 1 600 kylpijää; Rooman oopperan kesänäyttämö.",
+     "url": "https://en.wikipedia.org/wiki/Baths_of_Caracalla"
+    },
+    {
+     "vaite": "Maanalaiset käytävät kolmessa kerroksessa; orjat lämmittivät uuneja; viisikymmentä maanalaista uunia; osa avoinna yleisölle vuodesta 2019.",
+     "url": "https://www.thegeographicalcure.com/post/guide-to-baths-of-caracalla"
+    },
+    {
+     "vaite": "Kolmen tenorin ensimmäinen yhteiskonsertti Caracallan kylpylöissä 7.7.1990.",
+     "url": "https://en.wikipedia.org/wiki/The_Three_Tenors"
+    }
+   ]
+  },
+  {
+   "id": "Q824997",
+   "nimi": "Piazza del Popolo",
+   "kuvaus": "Kaksoiskirkkojen ja obeliskin aukio",
+   "luokka": "aukio",
+   "koko_m": 150,
+   "teksti": "Kansan aukio, Piazza del Popolo, avautuu ylhäältä laajana soikiona, jonka keskellä seisoo egyptiläinen obeliski. Obeliski on veistetty faarao Seti ensimmäisen ja Ramses toisen aikana, ja keisari Augustus toi sen Roomaan Circus Maximuksen radalle. Aukion eteläpäässä kaksi lähes samannäköistä kirkkoa reunustaa katujen haarautumaa, vaikka toisen pohja on soikea ja toisen pyöreä. Pohjoisportin uudisti Bernini vuonna 1655 katolilaisuuteen kääntyneen Ruotsin kuningatar Kristiinan saapumista varten. Portin vieressä Santa Maria del Popolon kirkossa on kaksi Caravaggion maalausta.",
+   "lyhyt": null,
+   "syventava": "Miksi kirkot näyttävät kaksosilta?",
+   "kysymykset": [
+    "Mistä aukion nimi on peräisin?",
+    "Mitä Caravaggion maalaukset esittävät?",
+    "Miksi kuningatar Kristiina muutti Roomaan?",
+    "Kuka suunnitteli aukion nykyisen muodon?",
+    "Mikä terassi aukion yllä kohoaa?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Obeliski on Seti I:n ja Ramses II:n ajalta; Augustus toi sen Roomaan ja pystytti Circus Maximukseen.",
+     "url": "https://en.wikipedia.org/wiki/Flaminio_Obelisk"
+    },
+    {
+     "vaite": "Valadierin uusklassinen soikea aukio 1811–1822.",
+     "url": "https://en.wikipedia.org/wiki/Piazza_del_Popolo"
+    },
+    {
+     "vaite": "Kaksoiskirkot Santa Maria dei Miracoli ja Santa Maria in Montesanto; toisen sisätila soikea, toisen pyöreä.",
+     "url": "https://turismoroma.it/en/node/756"
+    },
+    {
+     "vaite": "Bernini uudisti Porta del Popolon 1655 katolilaisuuteen kääntyneen Kristiinan saapumista varten.",
+     "url": "https://en.wikipedia.org/wiki/Piazza_del_Popolo"
+    },
+    {
+     "vaite": "Santa Maria del Popolon Cerasin kappelissa on kaksi Caravaggion maalausta.",
+     "url": "https://en.wikipedia.org/wiki/Cerasi_Chapel"
+    }
+   ]
+  },
+  {
+   "id": "Q678313",
+   "nimi": "Villa Borghese",
+   "kuvaus": "Rooman keskustan suuri puisto",
+   "luokka": "puisto",
+   "koko_m": 1200,
+   "teksti": "Borghesen puisto, Villa Borghese, levittäytyy ylhäältä noin kahdeksankymmenen hehtaarin vihreänä alueena keskustan pohjoisreunalla. Kardinaali Scipione Borghese laajensi sen 1600-luvun alussa huvipuutarhaksi, ja vuonna 1901 valtio osti alueen ja luovutti sen pian kaupungille yleisön käyttöön. Puiston huvilassa toimii Borghesen galleria, jossa on Gian Lorenzo Berninin veistos Apollo ja Dafne: nymfi muuttuu laakeripuuksi juuri, kun jumala tavoittaa hänet. Puiston länsilaidalta Pincion terassilta avautuu näkymä Kansan aukiolle ja kaupungin kattojen yli.",
+   "lyhyt": null,
+   "syventava": "Mitä muuta Borghesen galleriassa on?",
+   "kysymykset": [
+    "Kuka oli kardinaali Scipione Borghese?",
+    "Miksi galleriaan pitää varata aika etukäteen?",
+    "Onko puistossa eläintarha?",
+    "Miten Bernini sai marmorin näyttämään lehdiltä?",
+    "Mitä Pincion terassilta näkee?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Puisto on noin 80 hehtaaria; kardinaali Scipione Borghese laajensi sen 1600-luvun alussa huvipuutarhaksi; valtio osti 1901 ja luovutti kaupungille 1903.",
+     "url": "https://museocanonica.it/en/node/3119"
+    },
+    {
+     "vaite": "Pincion kävelyalue on puiston suosituimpia osia ja antaa Piazza del Popololle.",
+     "url": "https://museocanonica.it/en/node/3119"
+    },
+    {
+     "vaite": "Berninin Apollo ja Dafne 1622–1625 on Borghesen galleriassa.",
+     "url": "https://en.wikipedia.org/wiki/Apollo_and_Daphne_(Bernini)"
+    }
+   ]
+  },
+  {
+   "id": "Q914255",
+   "nimi": "Trastevere",
+   "kuvaus": "Vanha kaupunginosa Tiberin länsirannalla",
+   "luokka": "muu",
+   "koko_m": 1200,
+   "teksti": "Kaupunginosa Trastevere levittäytyy Tiberin länsirannalle, ja ylhäältä se näkyy kapeiden, mutkittelevien kujien ja punaisten kattojen tiheänä verkkona. Nimi tulee latinasta ja tarkoittaa Tiberin takana. Keskusaukiolla seisoo Santa Maria in Trasteveren basilika, jota pidetään Rooman vanhimpana Neitsyt Marialle omistettuna kirkkona, ja sen julkisivua koristavat 1100-luvun mosaiikit. Heinäkuun jälkipuoliskolla kaupunginosa viettää omaa Noantri-juhlaansa, jonka nimi tarkoittaa me muut. Juhla juontaa 1500-luvulle, jolloin kalastajat löysivät Tiberin suulta Madonnan patsaan.",
+   "lyhyt": null,
+   "syventava": "Mitä Madonnan patsaalle juhlassa tehdään?",
+   "kysymykset": [
+    "Ketkä Trasteveressa ennen asuivat?",
+    "Miksi Trastevere on suosittu iltaisin?",
+    "Mitä kirkon mosaiikit esittävät?",
+    "Mikä kanuuna laukeaa Gianicolon kukkulalla?",
+    "Mitä Noantri-juhlassa tehdään?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Nimi tulee latinan sanoista trans Tiberim, Tiberin takana.",
+     "url": "https://italyformovies.com/location/detail/18873/trastevere-rome"
+    },
+    {
+     "vaite": "Santa Maria in Trastevere on Rooman vanhin Marialle omistettu kirkko; 1100-luvulla lisättiin kellotorni ja mosaiikein koristeltu julkisivu.",
+     "url": "https://www.theculturetrip.com/europe/italy/articles/a-history-of-trastevere-santa-maria-rome-in-60-seconds"
+    },
+    {
+     "vaite": "Festa de' Noantri 15.–30. heinäkuuta; noi altri; juontaa vuoteen 1535, kun kalastajat löysivät Madonnan patsaan Tiberin suulta.",
+     "url": "https://www.wantedinrome.com/news/festa-de-noantri-in-romes-trastevere.html"
+    }
+   ]
+  },
+  {
+   "id": "Q189417",
+   "nimi": "Via Appia",
+   "kuvaus": "Antiikin Rooman kuuluisin valtatie",
+   "luokka": "katu",
+   "koko_m": 3000,
+   "teksti": "Appiuksen tie, Via Appia, erkanee Roomasta kaakkoon suorana, hautamuistomerkkien reunustamana nauhana. Sen ensimmäinen osa rakennettiin vuonna 312 ennen ajanlaskun alkua sotilastieksi etelään, ja myöhemmin se jatkui Brindisiin asti. Roomalaiset kutsuivat sitä pitkien teiden kuningattareksi, ja vuonna 2024 tie pääsi Unescon maailmanperintöluetteloon. Vuonna 71 ennen ajanlaskun alkua Spartacuksen orjakapinan kukistuttua kuusituhatta vankia ristiinnaulittiin tien varteen Capuasta Roomaan asti. Sunnuntaisin vanha tie on suljettu autoilta, ja sillä pyöräillään, kävellään ja syödään eväitä.",
+   "lyhyt": null,
+   "syventava": "Mitä tien varren katakombeissa on?",
+   "kysymykset": [
+    "Kuka rakennutti Appiuksen tien?",
+    "Kuka oli Spartacus?",
+    "Miksi tien varrella on niin paljon hautoja?",
+    "Kuka oli Caecilia Metella?",
+    "Miten roomalaiset tiet rakennettiin?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Appius Claudius Caecus rakennutti ensimmäisen osan sotilastieksi etelään 312 eaa.; tie yhdisti Rooman Brindisiin; regina viarum; Unescon maailmanperintöluetteloon heinäkuussa 2024.",
+     "url": "https://en.wikipedia.org/wiki/Appian_Way"
+    },
+    {
+     "vaite": "Spartacuksen kapinan jälkeen 71 eaa. kuusituhatta vankia ristiinnaulittiin Via Appian varteen Capuasta Roomaan.",
+     "url": "https://en.wikipedia.org/wiki/Spartacus"
+    },
+    {
+     "vaite": "Appia Antican puisto on sunnuntaisin suljettu autoilta; perheet piknikillä, pyöräilijät.",
+     "url": "https://www.frommers.com/destinations/rome/the-appian-way--the-catacombs"
+    }
+   ]
+  }
+ ]
+}

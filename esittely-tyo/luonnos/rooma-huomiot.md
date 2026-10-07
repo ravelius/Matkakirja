@@ -1,0 +1,24 @@
+# Rooma – huomiot tarkistajalle
+
+- Tarkistin: 0 virhettä, 18 huomiota. 17 on "ei ala paikan nimellä" LISÄSÄÄNNÖN A takia: "Rooman Colosseum", "Rooman vanha keskustori, Forum Romanum", "Rooman Pantheon", "Enkelinlinna, Castel Sant’Angelo", "Navonan aukio, Piazza Navona", "Kapitolinen kukkula, Capitolium", "Kilparata Circus Maximus", "Basilika Santa Maria Maggiore", "Kansan aukio, Piazza del Popolo", "Borghesen puisto, Villa Borghese", "Kaupunginosa Trastevere", "Appiuksen tie, Via Appia" (lyhyissä vastaavat). Ääntöhuomioita 0. "Avaus puuttuu" on hyväksyttävä: avaus on tiedostossa avaukset/rooma.md (36 sanaa).
+- Latinankieliset vakiintuneet nimet (Colosseum, Pantheon, Forum Romanum) saivat suomenkielisen etusanan varmuuden vuoksi; Palatinus ja Pietarinkirkko, Trevin suihkulähde, Espanjalaiset portaat, Lateraanin arkkibasilika ja Caracallan kylpylät alkavat nimellä (tarkennus A).
+- Viktor Emanuel II:n monumentti: tekstissä "Viktor Emanuel toisen monumentti", jotta roomalaista numeroa ei lueta ääneen (ei puhe_tekstiä tarvita).
+- Isoisä: vain Pantheon (teksti). Merkintä nimeää Pantheonin: kattoaukosta satoi sisään, vesi katosi lattian pieniin reikiin, vanhalle talolle ei kai tohtinut huomauttaa katosta. Vuosi 1873 mainitaan; kuukautta ja säätä (paikkarivi) ei.
+- Lähteet: WebFetch estetty, kaikki tarkistettu WebSearch-otteista. Pelin aineistoon nojaavat: Colosseumin ulkoseinä säilynyt vain toiselta puolelta; Pietarinkirkon kupoli Rooman korkein ja Vatikaani pienin valtio; Forumin Campo Vaccino ja kaivaukset 1803; Trevin vesi antiikin akveduktia pitkin; Pantheonin raudoittamaton kupoli; portaiden 135 askelmaa (2019 uutisissa 136 – käytetty aineiston lukua); Neljän virran suihkulähde 1651.
+- Epävarmat:
+  - Colosseum: "pohjoispuolelta" (etelämuuri sortui 1349, joten pohjoinen on säilynyt). "Noin viidenkymmenentuhannen katsojan" aineistosta (lähteissä 50 000–80 000).
+  - Pietarinkirkko: koko_m 220 on arvio pituudesta. Pantheonin pronssi: lähteen mukaan Urbanus VIII käski sulattaa Pantheonin pronssipalkkeja baldakiinia varten (tutkijat kiistelevät, päätyikö kaikki pronssi katokseen vai tykkeihin; teksti sanoo vain "käski sulattaa"). Pietà "alle kolmekymppisenä" (Michelangelo syntyi 1475, teos 1498–1499).
+  - Forum: kukat tuodaan Caesarin temppeliin "varsinkin murhan vuosipäivänä" (Wikipedia: daily, ja 15.3.). "Kaakkoispäässä Pyhän tien varrella" Tituksen kaarelle.
+  - Trevi: kahden euron maksu alkoi 1.–2.2.2026 (lähteissä molemmat päivät), kirjoitettu "helmikuusta 2026". Kolikot "noin puolitoista miljoonaa euroa vuodessa".
+  - Espanjalaiset portaat: Barcaccia "Berninin" (yleensä Pietro Bernini, mahdollisesti poikansa Gian Lorenzon kanssa). Sakon summaa ei kerrota.
+  - Castel Sant'Angelo: koko_m 150 arvio. "Vielä 1900-luvun alkuun linnoitus" = poistettiin sotilaskäytöstä 1901.
+  - Piazza Navona: "pohjoispää on pyöristetty" yleistietoa kartasta. Tulvitus 1651–1867 = "1600-luvun puolivälistä 1800-luvun jälkipuoliskolle".
+  - Vittoriano: lähteen mukaan kaksikymmentä miestä söi hevosen vatsassa "vihkiäisissä"; kirjoitettu "vihkiäisten aikoihin". Lasihissi 80 metriin (turismoroma).
+  - Circus Maximus: "yli sataviisikymmentätuhatta katsojaa" = lähteen "over 150,000" (arviot vaihtelevat). Rolling Stones 2014 "yli seitsemällekymmenelletuhannelle" (The Local).
+  - Santa Maria Maggiore: koko_m 120 arvio; korkeus_m 75 = kellotorni.
+  - Caracalla: "yli puolitoista tuhatta" = noin 1 600 kylpijää. Maanalaiset käytävät osin avoinna vuodesta 2019 (geographicalcure).
+  - Piazza del Popolo: obeliski Seti I:n ja Ramses II:n ajalta (kolme sivua Seti, yksi Ramses).
+  - Villa Borghese: koko_m 1200 arvio (80 ha). Pincio "puiston länsilaidalla" (Pincio on puiston yhteydessä Piazza del Popolon yllä).
+  - Trastevere: "Noantri" = noi altri, kirjoitettu "me muut". Juhla heinäkuun jälkipuoliskolla (15.–30.7.).
+  - Via Appia: "suorana" yleistieto; koko_m 3000 (maksimi), tie on paljon pidempi.
+- korkeus_m: Pietarinkirkko 136, Pantheon 43 (sisäkorkeus = halkaisija), Santa Maria Maggiore 75 (kellotorni).

@@ -1,0 +1,1 @@
+Tervetuloa Roomaan. Ylhäältä kaupunki on okranväristen kattojen ja kupolien meri, jonka halki Tiber kiemurtelee ja jonka kortteleiden välistä pilkottaa antiikin raunioita. Kierros alkaa kaupungin muinaisesta sydämestä, Forum Romanumilta, jossa roomalaiset kävivät kauppaa, käräjöivät ja palvoivat jumaliaan.
