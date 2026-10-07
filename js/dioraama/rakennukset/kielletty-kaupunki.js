@@ -37,7 +37,9 @@ export const RAKENNUS = {
     aurinko: { atsimuutti: 160, korkeus: 42, vari: '#fff0dc', voima: 1.5 },
     taivas: { yla: '#9db4d0', ala: '#6b5a48', voima: 0.6 },
     sisalla: { aurinko: 1, taivas: 1 },
-    sumu: null,
+    // Etäisyysutu kameran etäisyyden kertoimina (Siirtoseppä 7.10., natiivi eleet-2 / junan 156 jälkeen): ilmakuvissa maa ei
+    // jatku horisonttiin (Päätoimittaja v4). Vanha natiivi ohittaa kentän.
+    sumu: { alku: 0.9, loppu: 3.2 },
   },
   yleiskamera: {
     vaaka: { kohde: [0, 10, 70], atsimuutti: 170, korkeus: 22, etaisyys: 280, fov: 40, aukko: 0.3 },
