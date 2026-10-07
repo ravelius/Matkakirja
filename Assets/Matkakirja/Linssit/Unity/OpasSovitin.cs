@@ -868,9 +868,18 @@ namespace Matkakirja.Natiivi
             r.SetRequestHeader("User-Agent", "Matkakirja/" + Application.version + " (" + Application.identifier + ")");
             string koodi = Asetukset.PolloKoodi;
             if (!string.IsNullOrEmpty(koodi)) r.SetRequestHeader(Lukijaaani.KoodiOtsake, koodi);
+            if (GizaKokeilu) r.SetRequestHeader("x-matkakirja-kokeilu", "giza");
             PolloTestitunnus.Lisaa(r);
             return r;
         }
+
+        /// <summary>Gizan kokeilu (omistaja 7.10. 08.4x, Päätoimittaja: vain kehityskäännökset): Pöllö listaa Gizan sallituissa ja
+        /// palauttaa sen kohteet vain otsakkeella x-matkakirja-kokeilu: giza (Pelikoodari #4116). App Store -käännöksessä aina pois.</summary>
+#if MATKAKIRJA_APPSTORE
+        public static bool GizaKokeilu => false;
+#else
+        public static bool GizaKokeilu => Asetukset.Kehittaja || Linssirekisteri.Kehittajatila;
+#endif
 
         // Natiivi-UI:n nimet siirtoruudulle (tapahtumat reunoista PaivitaKamerassa).
         public static event Action<string> SiirtymaAlkaa;
