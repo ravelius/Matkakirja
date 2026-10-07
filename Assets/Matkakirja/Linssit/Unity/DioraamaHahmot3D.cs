@@ -96,13 +96,73 @@ namespace Matkakirja.Natiivi
             public double NyokkaysAlku = double.NegativeInfinity; public int NyokkaysLaskuri; public string KuulijaEle;
             public string KatseKohde;
             public int Siemen = int.MinValue;
+            // Irrallinen hahmo (historiamoottori V2c: soutaja veneessä): vanhempi, leike ja ulkoinen kello; ei tilan paikkaa eikä eleitä.
+            public Transform Isa; public Func<(string Leike, double Aika)> IrrallinenTila; public GlbAnimaatio IrrallinenEdellinen;
+        }
+
+        /// <summary>Irrallinen hahmo (V2c): henkilön glb, vanhempana isa (esim. veneen istuin_soutaja, ilman omaa siirtoa tai kiertoa),
+        /// leike soi kellon ajasta (soutu.json: veneen ja soutajan leikkeet samasta kellosta). Glb latautuu IrrallistenGlb-listan kautta.</summary>
+        public void LisaaIrrallinen(Rakennus rakennus, string henkiloId, Transform isa, Func<(string Leike, double Aika)> tila)
+        {
+            if (rakennus?.Henkilot == null || !rakennus.Henkilot.TryGetValue(henkiloId, out var henkilo) || string.IsNullOrEmpty(henkilo.Malli3d?.NatiiviGlb)) return;
+            var e = new Esiintyma { TilaId = "irrallinen", HahmoId = henkiloId, Hahmo = new Hahmo { Id = henkiloId, HenkiloId = henkiloId }, Henkilo = henkilo,
+                Isa = isa, IrrallinenTila = tila };
+            esiintymat.Add(e);
+            if (malliCache.TryGetValue(henkilo.Malli3d.NatiiviGlb, out var malli)) Rakenna(e, malli);
+        }
+
+        /// <summary>Irrallisten hahmojen glb:t, joita ei ole vielä ladattu.</summary>
+        public void IrrallistenGlb(List<string> ulos)
+        {
+            foreach (var e in esiintymat)
+            {
+                if (e.Isa == null) continue;
+                string glb = e.Henkilo.Malli3d?.NatiiviGlb;
+                if (!string.IsNullOrEmpty(glb) && !malliCache.ContainsKey(glb) && !ulos.Contains(glb)) ulos.Add(glb);
+            }
+        }
+
+        public void PoistaIrralliset(string henkiloId = null)
+        {
+            for (int i = esiintymat.Count - 1; i >= 0; i--)
+                if (esiintymat[i].TilaId == "irrallinen" && (henkiloId == null || esiintymat[i].HahmoId == henkiloId))
+                {
+                    if (esiintymat[i].Juuri != null) UnityEngine.Object.Destroy(esiintymat[i].Juuri);
+                    esiintymat.RemoveAt(i);
+                }
+        }
+
+        void PaivitaIrrallinen(Esiintyma e)
+        {
+            if (e.Isa == null) { if (e.Juuri.activeSelf) e.Juuri.SetActive(false); return; }
+            if (e.Juuri.transform.parent != e.Isa) { e.Juuri.transform.SetParent(e.Isa, false); e.Juuri.transform.localPosition = Vector3.zero; e.Juuri.transform.localRotation = Quaternion.identity; }
+            if (!e.Juuri.activeSelf) e.Juuri.SetActive(true);
+            e.Nakyvissa = true;
+            var (leike, aika) = e.IrrallinenTila?.Invoke() ?? ("idle", 0.0);
+            // Leike glb:n nimellä (ele_soutu) tai silmukan nimellä skin.leikkeet-taulun kautta (vartija: idle, kavely); aika kiertää.
+            var anim = e.Malli.Glb.Animaatio(leike) ?? e.Malli.Glb.Animaatio(Leike(e.Henkilo.Malli3d?.Skin, leike)) ?? e.Malli.Glb.Animaatio("idle");
+            var sk = e.Sekoitin;
+            if (anim == null || sk == null) return;
+            if (anim != e.IrrallinenEdellinen && e.IrrallinenEdellinen != null)
+                foreach (var k in e.IrrallinenEdellinen.Kanavat) { int i = k.Solmu; var g = e.Malli.Glb.Solmut[i];
+                    Array.Copy(g.Translation, 0, sk.T, i * 3, 3); Array.Copy(g.Rotation, 0, sk.R, i * 4, 4); Array.Copy(g.Scale, 0, sk.S, i * 3, 3); }
+            e.IrrallinenEdellinen = anim;
+            DioraamaSekoitin.Nayte(anim, anim.Kesto > 0 ? (float)(aika % anim.Kesto) : 0f, sk.T, sk.R, sk.S);
+            foreach (var k in anim.Kanavat)
+            {
+                int i = k.Solmu; if (i < 0 || i >= e.SolmuT.Length) continue;
+                var tr = e.SolmuT[i];
+                if (k.Polku == 0) tr.localPosition = new Vector3(sk.T[i * 3], sk.T[i * 3 + 1], sk.T[i * 3 + 2]);
+                else if (k.Polku == 1) tr.localRotation = new Quaternion(sk.R[i * 4], sk.R[i * 4 + 1], sk.R[i * 4 + 2], sk.R[i * 4 + 3]);
+                else tr.localScale = new Vector3(sk.S[i * 3], sk.S[i * 3 + 1], sk.S[i * 3 + 2]);
+            }
         }
 
         /// <summary>Keskustelun puhuja (KuunnelmaKaistale.PuhuvaHahmo; DioraamaSovitin asettaa joka kehys) ja tila. Saman huoneen
         /// paikallaan olevat kuulijat kääntyvät kohti puhujaa (enintään ±MaxKatseAsteet omasta suunnastaan, KatseNopeus °/s),
         /// ja puhuja kääntyy kohti edellistä puhujaa. Ei keskustelua → takaisin omaan suuntaan.</summary>
         public static string Puhuja, PuhujanTila, EdellinenPuhuja;
-        const float MaxKatseAsteet = 70f, KatseNopeus = 90f;
+        const float MaxKatseAsteet = 70f, KatseNopeus = 90f, PuhujanMaxKatse = 150f;   // puhuja kääntyy kuulijaan myös työpisteeltä (7.10.)
 
         /// <summary>
         /// ELEET PUHEEN TAHDISSA (Siirtoseppä 7.10.2026; omistaja 7.10. 01.3x "linna loppuun mahdollisimman hyväksi (eleet yms.)"):
@@ -212,14 +272,53 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Keskustelukumppani, jota hahmo katsoo: kuulija → puhuja, puhuja → valittu kuulija (tai edellinen puhuja).</summary>
-        static string KatseenKohde(Esiintyma e)
+        string KatseenKohde(Esiintyma e)
         {
             if (e.TilaId != PuhujanTila || Puhuja == null) { e.KatseKohde = null; return null; }
             if (e.HahmoId != Puhuja) { e.KatseKohde = null; return Puhuja; }
-            return EleetPaalla && e.KatseKohde != null ? e.KatseKohde : EdellinenPuhuja;
+            if (!EleetPaalla) return EdellinenPuhuja;
+            string valittu = e.KatseKohde ?? EdellinenPuhuja;
+            if (valittu != null) return KuulijaKameranTakana(e, valittu) ? KameraKohde : valittu;
+            // Ensimmäinen vuoro: lähin paikallaan oleva kuulija (sama kuin kameran puolilähikuvassa, DioraamaSovitin.PuhujaanPain).
+            string lahin = null; float d2 = float.MaxValue;
+            foreach (var m in esiintymat)
+                if (m != e && m.TilaId == e.TilaId && m.Juuri != null && m.Nakyvissa && m.Hahmo.Reitti == null)
+                {
+                    float dx = (float)(m.Hahmo.Paikka.X - e.Hahmo.Paikka.X), dz = (float)(m.Hahmo.Paikka.Z - e.Hahmo.Paikka.Z);
+                    if (dx * dx + dz * dz < d2) { d2 = dx * dx + dz * dz; lahin = m.HahmoId; }
+                }
+            // Ei paikallaan olevaa kuulijaa (keittiö: apulainen kävelee, iPhone 7.10. 06.38: kokki puhui selin): puhuja kääntyy kameraan,
+            // kuten puolilähikuva (DioraamaSovitin.Puolilahikuva) asettuu kasvojen eteen.
+            return lahin != null && !KuulijaKameranTakana(e, lahin) ? lahin : KameraKohde;
         }
+        const string KameraKohde = "@kamera";
+        /// <summary>Huoneen lepokameran suunta puhujasta kameraan (Unity, vaaka; DioraamaSovitin.PuhujaanPain asettaa). Vakaa viite
+        /// kääntymiselle: liikkuva puolilähikamera seuraa puhujan suuntaa, joten sitä vasten kääntyminen jahtasi kameraa (iPad 7.10. 08.33).</summary>
+        public static Vector3? LepoKameraSuunta;
+
+        /// <summary>Kuulija kameran suunnasta katsottuna puhujan takana (yli KuulijaTakanaAst): puhujan kääntyminen kuulijaan veisi
+        /// kasvot pois kamerasta (iPad 7.10. 07.27: vesipoika puhui selin, kun kokki oli seinän puolella) → puhuja kääntyy kameraan.</summary>
+        bool KuulijaKameranTakana(Esiintyma e, string kuulija)
+        {
+            if (LepoKameraSuunta is not Vector3 k || e.Juuri == null) return false;
+            foreach (var m in esiintymat)
+                if (m != e && m.HahmoId == kuulija && m.TilaId == e.TilaId && m.Juuri != null)
+                {
+                    var p = e.Juuri.transform.position;
+                    Vector3 h = m.Juuri.transform.position - p; k.y = h.y = 0;
+                    return k.sqrMagnitude > 0.01f && h.sqrMagnitude > 0.01f && Vector3.Angle(k, h) > KuulijaTakanaAst;
+                }
+            return false;
+        }
+        const float KuulijaTakanaAst = 110f, PuhujaKameraAst = 60f;
         /// <summary>Puhujan pään yläpuolinen maailmanpiste (kasvokuvan ankkuri, Natiivi-UI:n pohja), tai null.</summary>
         public static Vector3? PuhujanPaa { get; private set; }
+        /// <summary>Puhujan juuri ja kasvojen suunta (Unity) tältä kehykseltä: puolilähikuva seuraa myös kävelevää puhujaa (7.10.).</summary>
+        public static Vector3? PuhujanJuuri { get; private set; }
+        public static Vector3? PuhujanKasvot { get; private set; }
+        /// <summary>Kohdistetun huoneen (PuhujanTila) näkyvät hahmot tältä kehykseltä: id, juuri ja kasvojen suunta (Unity). Puolilähikuva
+        /// kehystää tulevan tai kävelevän puhujan elävästä paikasta ja välttää kuulijat kameran ja puhujan välissä (Päätoimittaja 7.10.).</summary>
+        public static readonly List<(string Id, Vector3 Juuri, Vector3 Kasvot)> TilanHahmot = new List<(string, Vector3, Vector3)>();
 
         readonly Transform juuri;
         readonly Dictionary<string, HenkiloMalli> malliCache = new Dictionary<string, HenkiloMalli>(StringComparer.Ordinal);
@@ -642,13 +741,14 @@ namespace Matkakirja.Natiivi
         public void Paivita(Rakennus rakennus, Nakyma nakyma, double t)
         {
             nakymaHaku.Clear();
-            PuhujanPaa = null;
+            PuhujanPaa = null; PuhujanJuuri = null; PuhujanKasvot = null; TilanHahmot.Clear();
             if (nakyma.Hahmot != null) foreach (var hn in nakyma.Hahmot) nakymaHaku[(hn.TilaId, hn.HahmoId)] = hn;
             if (EleetPaalla) AjoitaEleet(t);
 
             foreach (var e in esiintymat)
             {
                 if (e.Juuri == null) continue; // glb ei ole vielä latautunut — ei GameObjectia, ei mitään tehtävää.
+                if (e.TilaId == "irrallinen") { PaivitaIrrallinen(e); continue; }
                 if (!nakymaHaku.TryGetValue((e.TilaId, e.HahmoId), out var hn) || !hn.Naky)
                 {
                     if (e.Nakyvissa) { e.Juuri.SetActive(false); e.Nakyvissa = false; }
@@ -805,9 +905,12 @@ namespace Matkakirja.Natiivi
             var paa = e.SolmuT[e.PaaIndeksi];
             if (kohde != null && e.Hahmo.Reitti == null)
                 foreach (var m in esiintymat)
-                    if (m != e && m.TilaId == e.TilaId && m.HahmoId == kohde && m.Juuri != null && m.Nakyvissa)
+                    if (kohde == KameraKohde ? m == e && LepoKameraSuunta.HasValue
+                        : m != e && m.TilaId == e.TilaId && m.HahmoId == kohde && m.Juuri != null && m.Nakyvissa)
                     {
-                        var kohdePaa = m.PaaIndeksi >= 0 ? m.SolmuT[m.PaaIndeksi].position : m.Juuri.transform.position + Vector3.up * 1.55f;
+                        // Kameraan katsova puhuja (ei paikallaan olevaa kuulijaa): pää kohti kameraa, pystykulma rajattuna kuten muuten.
+                        var kohdePaa = kohde == KameraKohde ? paa.position + (LepoKameraSuunta ?? Vector3.forward) * 5f
+                            : m.PaaIndeksi >= 0 ? m.SolmuT[m.PaaIndeksi].position : m.Juuri.transform.position + Vector3.up * 1.55f;
                         var eteen = -e.Juuri.transform.forward; // skinnatun mallin kasvot (ks. PaivitaSijainti)
                         var suunta = kohdePaa - paa.position;
                         // Pystykatse enintään PaaPystyAst (Päätoimittaja 5.10.: polvistuva kappalainen kallisti pään taakse
@@ -850,14 +953,33 @@ namespace Matkakirja.Natiivi
         {
             string kohde = KatseenKohde(e);
             float tavoite = 0f;
-            if (kohde != null)
+            if (kohde == KameraKohde && LepoKameraSuunta is Vector3 lk)
+            {
+                var suunta = lk; suunta.y = 0f;
+                if (suunta.sqrMagnitude > 0.04f) tavoite = Mathf.Clamp(Vector3.SignedAngle(oma, suunta, Vector3.up), -PuhujanMaxKatse, PuhujanMaxKatse);
+            }
+            else if (kohde != null)
                 foreach (var m in esiintymat)
                     if (m != e && m.TilaId == e.TilaId && m.HahmoId == kohde && m.Juuri != null && m.Nakyvissa)
                     {
                         var suunta = m.Juuri.transform.position - paikka; suunta.y = 0f;
-                        if (suunta.sqrMagnitude > 0.04f) tavoite = Mathf.Clamp(Vector3.SignedAngle(oma, suunta, Vector3.up), -MaxKatseAsteet, MaxKatseAsteet);
+                        float raja = EleetPaalla && e.HahmoId == Puhuja ? PuhujanMaxKatse : MaxKatseAsteet;
+                        if (suunta.sqrMagnitude > 0.04f) tavoite = Mathf.Clamp(Vector3.SignedAngle(oma, suunta, Vector3.up), -raja, raja);
                         break;
                     }
+            // Puhujan kasvot enintään PuhujaKameraAst kameran suunnasta (iPhone 7.10. 07.48: kokki kääntyi kuulijaan seinän puolelle ja
+            // puolilähikuva jäi selän taakse, koska kamera pysyy poikkileikkauksen avoimella puolella).
+            if (EleetPaalla && e.HahmoId == Puhuja && kohde != null && LepoKameraSuunta is Vector3 kdv)
+            {
+                var kd = kdv; kd.y = 0f;
+                if (kd.sqrMagnitude > 0.04f)
+                {
+                    var halu = Quaternion.AngleAxis(tavoite, Vector3.up) * oma;
+                    float k = Mathf.Clamp(Vector3.SignedAngle(kd, halu, Vector3.up), -PuhujaKameraAst, PuhujaKameraAst);
+                    var raj = Quaternion.AngleAxis(k, Vector3.up) * kd;
+                    tavoite = Mathf.Clamp(Vector3.SignedAngle(oma, raj, Vector3.up), -PuhujanMaxKatse, PuhujanMaxKatse);
+                }
+            }
             e.KatseKulma = Mathf.MoveTowards(e.KatseKulma, tavoite, KatseNopeus * Time.unscaledDeltaTime);
             return Quaternion.AngleAxis(e.KatseKulma, Vector3.up) * oma;
         }
@@ -884,7 +1006,15 @@ namespace Matkakirja.Natiivi
             e.Juuri.transform.position = paikka;
             if (e.Hahmo.Reitti == null && e.Sekoitin != null) kasvot = Katse(e, paikka, kasvot);
             if (kasvot.sqrMagnitude > 1e-8f) e.Juuri.transform.rotation = Quaternion.LookRotation(kasvot, Vector3.up);
-            if (Puhuja != null && e.HahmoId == Puhuja && e.TilaId == PuhujanTila) PuhujanPaa = paikka + Vector3.up * 2.1f;
+            if (PuhujanTila != null && e.TilaId == PuhujanTila && e.Juuri != null)
+            {
+                var fk = e.Juuri.transform.forward; TilanHahmot.Add((e.HahmoId, paikka, e.Sekoitin != null ? -fk : fk));
+            }
+            if (Puhuja != null && e.HahmoId == Puhuja && e.TilaId == PuhujanTila)
+            {
+                PuhujanPaa = paikka + Vector3.up * 2.1f; PuhujanJuuri = paikka;
+                var f = e.Juuri.transform.forward; PuhujanKasvot = e.Sekoitin != null ? -f : f;   // skinnattu malli katsoo −Z:aan
+            }
         }
 
         /// <summary>Nivelen (rx,ry,rz) [asteina, JS:n THREE 'XYZ'] -> Unity-paikallinen kvaternio peilattuna.
