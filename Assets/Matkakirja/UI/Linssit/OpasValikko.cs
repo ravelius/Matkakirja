@@ -506,12 +506,24 @@ namespace Matkakirja.Natiivi
             siirtymaKuva = Rakenne.El(null, siirtyma, PickingMode.Ignore);
             siirtymaKuva.style.position = Position.Absolute;
             siirtymaKuva.style.left = 0; siirtymaKuva.style.right = 0; siirtymaKuva.style.top = 0; siirtymaKuva.style.bottom = 0;
-            siirtymaKuva.style.backgroundSize = new BackgroundSize(BackgroundSizeType.Cover);
+            siirtymaKuva.style.backgroundSize = new BackgroundSize(Length.Percent(100), Length.Percent(100));
             siirtymaKuva.style.display = DisplayStyle.None;
-            var otsikko = Rakenne.Teksti("Siirrytään", "mk-ajattelija__vuodet", siirtyma);
-            siirtymaNimi = Rakenne.Teksti("", "mk-ajattelija__nimi", siirtyma);
+            // Tumma liuku leveän vaakaruudun alaosaan (4:3-rajauksesta näkyy vain kaista): kuvan oma alasävy (Tyylikirja.Kehys.Bg).
+            siirtymaLiuku = Rakenne.El(null, siirtyma, PickingMode.Ignore);
+            siirtymaLiuku.style.position = Position.Absolute;
+            siirtymaLiuku.style.left = 0; siirtymaLiuku.style.right = 0; siirtymaLiuku.style.bottom = 0;
+            siirtymaLiuku.style.height = Length.Percent(LiukuOsuus * 100f);
+            siirtymaLiuku.style.backgroundSize = new BackgroundSize(Length.Percent(100), Length.Percent(100));
+            siirtymaLiuku.style.display = DisplayStyle.None;
+            // Teksti ja palkki yhdessä kääreessä: iPadilla kääre isonnetaan 1,4-kertaiseksi (sama iPad-isonnus kuin
+            // mk-kartuscha--tabletti ja mk-maakunnat--tabletti; ei uutta tyyliä).
+            siirtymaTeksti = Rakenne.El(null, siirtyma, PickingMode.Ignore);
+            siirtymaTeksti.style.alignItems = Align.Center;
+            siirtymaTeksti.style.transformOrigin = new TransformOrigin(Length.Percent(50), Length.Percent(100));
+            var otsikko = Rakenne.Teksti("Siirrytään", "mk-ajattelija__vuodet", siirtymaTeksti);
+            siirtymaNimi = Rakenne.Teksti("", "mk-ajattelija__nimi", siirtymaTeksti);
             foreach (var t in new[] { otsikko, siirtymaNimi }) { t.pickingMode = PickingMode.Ignore; t.style.unityTextAlign = TextAnchor.MiddleCenter; Kirjasimet.Aseta(t, Kirjasin.Lcd); }
-            siirtymaPalkki = new Latauspalkki(siirtyma);
+            siirtymaPalkki = new Latauspalkki(siirtymaTeksti);
             // Cesium ion -logo vasemmassa alakulmassa latauksen ajan (omistaja 6.10. 12.2x): Cesiumin oma kuva muuttamattomana,
             // samassa koossa ja paikassa kuin krediiteissä (musta ruutu peittää Cesiumin krediittikerroksen).
             siirtymaIon = Rakenne.El(null, siirtyma, PickingMode.Ignore);
@@ -583,6 +595,27 @@ namespace Matkakirja.Natiivi
         // luetaan levyltä siirtymän alkaessa ja vapautetaan sen jälkeen. Ei kuvaa vielä → musta ruutu kuten ennen.
         VisualElement siirtymaKuva;
         bool palloNakyy;
+        VisualElement siirtymaLiuku, siirtymaTeksti;
+        static Texture2D liukuKuva;
+        /// <summary>Liu'un korkeus ruudusta ja kuvan yläreunan kohta leveällä vaakaruudulla (kupu ja ilma näkyviin, PT 14.5x).</summary>
+        const float LiukuOsuus = 0.5f, VaakaKuvanAlku = 0.12f, IpadIsonnus = 1.4f;
+
+        static Texture2D LiukuKuva()
+        {
+            if (liukuKuva != null) return liukuKuva;
+            const int n = 64;
+            liukuKuva = new Texture2D(1, n, TextureFormat.RGBA32, false) { wrapMode = TextureWrapMode.Clamp, filterMode = FilterMode.Bilinear, name = "pallo-liuku" };
+            Color32 bg = Tyylikirja.Kehys.Bg;
+            for (int y = 0; y < n; y++)
+            {
+                // y = 0 alareuna (tekstuurin rivi 0 on alhaalla): täysi sävy alimmassa 45 %:ssa, sitten pehmeä S ylös.
+                float u = Mathf.Clamp01((y / (float)(n - 1) - 0.45f) / 0.55f);
+                bg.a = (byte)Mathf.RoundToInt(255f * (1f - u * u * (3f - 2f * u)));
+                liukuKuva.SetPixel(0, y, bg);
+            }
+            liukuKuva.Apply(false, true);
+            return liukuKuva;
+        }
 
         void AsetaPalloKuva(bool nayta)
         {
@@ -591,6 +624,8 @@ namespace Matkakirja.Natiivi
             {
                 palloNakyy = false;
                 siirtymaKuva.style.display = DisplayStyle.None;
+                siirtymaLiuku.style.display = DisplayStyle.None;
+                siirtymaTeksti.style.scale = StyleKeyword.Null;
                 siirtymaKuva.style.backgroundImage = StyleKeyword.Null;
                 siirtyma.style.justifyContent = StyleKeyword.Null; siirtyma.style.paddingBottom = StyleKeyword.Null;
                 OpasSovitin.VapautaPalloTekstuuri();
@@ -601,10 +636,20 @@ namespace Matkakirja.Natiivi
             siirtyma.style.justifyContent = Justify.FlexEnd;
             var koko = siirtyma.parent?.worldBound.size ?? Vector2.one;
             siirtyma.style.paddingBottom = Mathf.Max(koko.y, 1f) * 0.07f;
-            siirtymaKuva.style.backgroundPositionY = koko.x > koko.y * 1.5f
-                ? new BackgroundPosition(BackgroundPositionKeyword.Top, Length.Percent(35)) : new BackgroundPosition(BackgroundPositionKeyword.Center);
             var t = OpasSovitin.PalloTekstuuri(n);
             if (t == null) { OpasSovitin.PalloTekstuuriMuistiin(n); return; }   // valmistuessa PalloTekstuuriValmis → tänne uudelleen
+            // Kuvan paikka itse (peittävä skaala): leveällä vaakaruudulla yläreuna kohtaan VaakaKuvanAlku (kupu ilmoineen näkyviin)
+            // ja tumma liuku alaosaan tekstille; muuten keskitetty.
+            float w = Mathf.Max(koko.x, 1f), h = Mathf.Max(koko.y, 1f), kuvasuhde = t.width / (float)Mathf.Max(1, t.height);
+            float kw = Mathf.Max(w, h * kuvasuhde), kh = kw / kuvasuhde;
+            bool levea = w > h * 1.5f;
+            siirtymaKuva.style.right = StyleKeyword.Auto; siirtymaKuva.style.bottom = StyleKeyword.Auto;
+            siirtymaKuva.style.width = kw; siirtymaKuva.style.height = kh;
+            siirtymaKuva.style.left = (w - kw) * 0.5f;
+            siirtymaKuva.style.top = levea ? -VaakaKuvanAlku * kh : (h - kh) * 0.5f;
+            siirtymaLiuku.style.display = levea ? DisplayStyle.Flex : DisplayStyle.None;
+            if (levea) siirtymaLiuku.style.backgroundImage = new StyleBackground(LiukuKuva());
+            siirtymaTeksti.style.scale = UiKerros.Tabletti ? new Scale(new Vector3(IpadIsonnus, IpadIsonnus, 1f)) : (StyleScale)StyleKeyword.Null;
             bool myohassa = siirtyma.resolvedStyle.opacity > 0.5f && Time.realtimeSinceStartup - siirtymaAlku > 0.3f;
             siirtymaKuva.style.backgroundImage = new StyleBackground(t);
             siirtymaKuva.style.display = DisplayStyle.Flex;
