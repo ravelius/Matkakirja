@@ -1,0 +1,1 @@
+Tervetuloa Barcelonaan. Ylhäältä kaupunki levittäytyy meren ja vuorten väliin, ja sen keskellä on tasainen ruudukko kahdeksankulmaisia kortteleita, joiden yllä kohoavat Sagrada Famílian tornit. Kierros alkaa vanhan kaupungin laidalta konserttitalosta Palau de la Música Catalanasta, jonka salia valaisee päivisin pelkkä luonnonvalo.
