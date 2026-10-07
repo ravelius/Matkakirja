@@ -12,11 +12,10 @@ JATKA TÄSTÄ: junaan 162 kuitattu apuraha-kuvat 3f07c49b (SHA Natiivisepälle 1
 OMISTAJA 15.5x + 16.0x: ei stillejä, savuja eikä omia iOS/Mac-käännöksiä; haaraan unity-tarkistus + kaanna.sh-testit
 (Peli/Linssit/Kartta), kuittaus 1 rivillä Päätoimittajalta → Natiivisepälle. Simukäännös vain epäselvän vian syyhyn, ilmoitus
 Päätoimittajalle ensin. Siirtymäruudun korjaus on LS1:n (pallo-latauskuva 810cda48).
-AVOIN: seikkailun toimintonappi (Siirtoseppä E2, juna 163) = natiivi-ui/seikkailu-toiminto f9f48082 (E2 poimi/heitä + E3 kynttilä, koputa, irrota, nosta, laske + NaytaLoyto-löytökutsu; worktree
-wt/proto-natiivi-ui-seikkailutoiminto), logiikka valmis, unity-tarkistus 0. Kuvakkeet (avoin käsi = poimi, kaareva nuoli =
-heitä, uudet 24×24-viivaikonit Ikonit-kirjastoon) odottavat OMISTAJAN UI-POHJAT-vastausta Päätoimittajan kautta (illalla);
-nyt väliaikaiset Viiva["peukalo"]/Viiva["nuoli"] (SeikkailuTapit.PoimiIkoni/HeitaIkoni). Vastauksen jälkeen ikonit →
-testit → 1 rivin kuittaus Päätoimittajalta → SHA Natiivisepälle.
+Junaan 162 KUITATTU (Päätoimittaja 18.0x) ja SHA Natiivisepälle: natiivi-ui/seikkailu-toiminto f9f48082 (toimintonappi
+poimi/heitä/laske/kynttilä/koputa/irrota/nosta + SeikkailuTapit.NaytaLoyto). AVOIN: omistajan ikonipäätös (avoin käsi, kaareva
+nuoli, ehkä liekki; uudet 24×24-viivaikonit) → vaihda SeikkailuTapit.PoimiIkoni/HeitaIkoni uudessa haarassa → testit →
+1 rivin kuittaus → Natiivisepälle.
 
 ## TILA 7.10. klo 15.0x
 
