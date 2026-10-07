@@ -116,6 +116,8 @@ namespace Matkakirja.Natiivi
                 if (vauhti > 0.3 && p.Tila.Tapa != Liiketapa.Hiipiminen)
                     aanet.Add(new Aanilahde(p.transform.position.x, p.transform.position.z, p.Tila.Tapa == Liiketapa.Juoksu ? JuoksuKuuluuM : KavelyKuuluuM));
             }
+            bool piilossa = p != null && Piilossa(p);
+            if (piilossa != oliPiilossa) { kirjaa?.Invoke($"seikkailu: pelaaja {(piilossa ? "piilossa" : "esillä")}"); oliPiilossa = piilossa; }
             foreach (var v in vartijat)
             {
                 var ag = v.Agentti; if (ag == null || !ag.isOnNavMesh) continue;
@@ -126,6 +128,7 @@ namespace Matkakirja.Natiivi
                     var pp = p.transform.position;
                     s.PelaajaX = pp.x; s.PelaajaZ = pp.z; s.Hiipii = p.Tila.Tapa == Liiketapa.Hiipiminen;
                     s.NakolinjaVapaa = Nakolinja(vp + Vector3.up * 1.6f, pp + Vector3.up * 1.2f);
+                    s.Piilossa = piilossa;
                 }
                 else { s.PelaajaX = vp.x + 1000; s.PelaajaZ = vp.z; }
                 v.Aivot.Paivita(dt, s);
@@ -151,6 +154,23 @@ namespace Matkakirja.Natiivi
                 v.KavelyAika += v.Kavelee ? dt * (v2 / Math.Max(0.1, sykliMs)) * 1.0 : dt;
             }
         }
+
+        bool oliPiilossa;
+        /// <summary>V4 (ensimmäinen pala): piilo:-merkin luona (≤ PiiloM vaakatasossa) piilossa — kyykky-tyyppisessä vain hiipien
+        /// (pöydän alla, tynnyrien takana), seisova-tyyppisessä aina (uunin vieressä varjossa).</summary>
+        bool Piilossa(SeikkailuPelaaja p)
+        {
+            var d = SeikkailuKavely.Data; if (d == null) return false;
+            var pp = p.transform.position;
+            foreach (var m in d.Lajia("piilo"))
+            {
+                float dx = pp.x - (float)m.X, dz = pp.z + (float)m.Z;
+                if (dx * dx + dz * dz > PiiloM * PiiloM || Mathf.Abs(pp.y - (float)m.Y) > 1.2f) continue;
+                if (m.Tyyppi == "seisova" || p.Tila.Tapa == Liiketapa.Hiipiminen) return true;
+            }
+            return false;
+        }
+        const float PiiloM = 0.7f;
 
         bool Nakolinja(Vector3 silmat, Vector3 rinta)
         {
