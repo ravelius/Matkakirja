@@ -180,6 +180,10 @@ namespace Matkakirja.Linssit
                 leikkaus.materialKey = "Clipping";
                 leikkaus.invertSelection = false;
                 leikkaus.excludeSelectedTiles = true;
+                // Simu 7.10. 09.33: kaukaa (1,4–5 km) maski rasteroitui karkean Google-tiilen kokoiselle tekstuurille, ja reikä paisui
+                // lähes kaksinkertaiseksi (lähellä tarkka). Hienompi maski: pienempi ruutuvirhe ja suurempi tekstuuri.
+                leikkaus.maximumScreenSpaceError = 0.5f;
+                leikkaus.maximumTextureSize = 4096;
             }
             var lista = new List<CesiumCartographicPolygon>();
             foreach (var m in mallit) if (m.polygoni != null) lista.Add(m.polygoni);
