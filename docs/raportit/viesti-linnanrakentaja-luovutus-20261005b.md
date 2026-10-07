@@ -218,3 +218,6 @@ Brotli (haara linnanrakentaja-zstd, worktree olemassa), akustiikka #3979 (Steam 
   175ec1b8683452d6 (lasitettu-tiilikatto urilla, harmaa-tiilikiveys, kalkkirappaus). Peili 938313041859d831 (blender
   a630203a6809461e), haara linnanrakentaja-kielletty. Siirtoseppä todensi 64a89525: detalji OK, katon rivit eivät erottuneet → korjattu.
   KUVAT: Julkaisijan vuoro ~05.15 (kielletty-kuvat.sh + kielletty-merkitse.py) → Päätoimittajalle ennen 07.30.
+- 7.10. 05.5x: KIELLETTY v3c KUVAT PÄÄTOIMITTAJALLA (14 kpl, lokit/linnanrakentaja-kielletty-v3c-0546/omistajalle/). Peili
+  0ddc7c7c75aac0af (blender 5ca4c4b500142453); v3b seinät tasaiseksi (seina_v3.jpg), v3c maskin R nollattu (kalkkirappauksen
+  tahrat läikkinä) ja kuori_leivo LUOKKA ilman seinää. Simut erasettu. Odottaa Päätoimittajan/omistajan palautetta; PR kun hyväksytty.
