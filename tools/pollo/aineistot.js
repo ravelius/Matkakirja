@@ -27,4 +27,6 @@ export const OPAS_AINEISTOT = Object.freeze({
   // Poikkeavat esittelypolut (ämpäri muuttumaton): Praha ja Wien avauksen ja kierros-kentän kanssa 7.10. (-20261007c).
   // Worker ja natiivi käyttävät tätä polkua, jos id on tässä, muuten opas/esittely-v1/<id>.json.
   esittely_polut: { praha: 'opas/esittely-v1b/praha.json', wien: 'opas/esittely-v1b/wien.json' },
+  // Yksityiskohtakuvat (Sisältökirjuri 7.10.; natiivi lentää kuvan sivuun ankkurisanan kohdalla): luettelo media-juuresta.
+  yksityiskohdat_polut: { pariisi: 'esittely/pariisi-v2/pariisi-yksityiskohdat.json' },
 });
