@@ -1,0 +1,400 @@
+{
+ "kaupunki": "Granada",
+ "id": "granada",
+ "versio": 1,
+ "kohteet": [
+  {
+   "id": "Q47476",
+   "nimi": "Alhambra",
+   "kuvaus": "Nasridien palatsilinnoitus kukkulalla",
+   "luokka": "linnoitus",
+   "koko_m": 740,
+   "teksti": "Palatsilinnoitus Alhambra venyy Sabikan kukkulalla yli seitsemänsadan metrin mittaisena muurien, tornien ja palatsien jonona, ja sen nimi tarkoittaa arabiaksi punaista linnaa. Rakennustyöt aloitti vuonna 1238 Granadan emiirikunnan perustaja Muhammad ensimmäinen. Kun kaupunki luovutettiin vuonna 1492, uudet hallitsijat eivät purkaneet palatsia vaan muuttivat siihen, ja siksi arabiankieliset kirjoitukset ovat yhä seinillä. Vielä 1800-luvulla matkailijat veivät palatsista koristeita matkamuistoiksi. Isoisäsi poimi vuonna 1873 jätekasasta sinisen kaakelinpalan, mutta antoi sen miehelle, joka keräsi sirpaleita museota varten.",
+   "lyhyt": "Palatsilinnoitus Alhambra kuuluu Espanjan vierailluimpiin monumentteihin, ja vuonna 2024 siellä kävi yli kaksi ja puoli miljoonaa ihmistä. Kansainvälisen maineen sille toi amerikkalainen kirjailija Washington Irving, joka asui palatsissa vuonna 1829 ja kirjoitti siitä tarinakokoelman.",
+   "syventava": "Mitä palatsin seinille on kirjoitettu?",
+   "kysymykset": [
+    "Miksi voittajat eivät purkaneet palatsia?",
+    "Kuka oli Granadan viimeinen sulttaani?",
+    "Mistä palatsin vesi tuodaan kukkulalle?",
+    "Mihin museoihin kaakeleita päätyi?",
+    "Montako kävijää palatsiin päästetään päivässä?"
+   ],
+   "isoisa": true,
+   "lahteet": [
+    {
+     "vaite": "Alhambra on 740 metriä pitkä ja enimmillään 205 metriä leveä.",
+     "url": "https://en.wikipedia.org/wiki/Alhambra"
+    },
+    {
+     "vaite": "Alhambra sijaitsee Sabikan kukkulalla; nimi tulee arabian sanoista al-qal'a al-hamra, punainen linna.",
+     "url": "https://en.wikipedia.org/wiki/Alhambra"
+    },
+    {
+     "vaite": "Rakentamisen aloitti vuonna 1238 Muhammad I ibn al-Ahmar, ensimmäinen nasridiemiiri ja Granadan emiirikunnan perustaja.",
+     "url": "https://en.wikipedia.org/wiki/Alhambra"
+    },
+    {
+     "vaite": "Vuonna 1492 luovutettua palatsia ei purettu, vaan uudet hallitsijat muuttivat siihen; arabiankieliset kirjoitukset ovat paikoillaan.",
+     "url": "kaanon:pelin-aineisto"
+    },
+    {
+     "vaite": "1800-luvun jälkipuoliskolla matkailijoita jopa kannustettiin viemään kaakeleita matkamuistoiksi; niitä on nyt museoissa ympäri Eurooppaa.",
+     "url": "https://collections.vam.ac.uk/item/O78719/architectural-model-contreras"
+    },
+    {
+     "vaite": "Isoisä poimi jätekasasta sinisen kaakelinpalan ja antoi sen miehelle, joka keräsi sirpaleita museota varten.",
+     "url": "kaanon:isoisan-paivakirja"
+    },
+    {
+     "vaite": "Alhambrassa ja Generalifessa kävi vuonna 2024 noin 2,725 miljoonaa ihmistä; vuonna 2023 se oli Espanjan vierailluin monumentti.",
+     "url": "https://theolivepress.es/spain-news/2024/02/04/this-is-the-most-visited-monument-in-spain-and-its-in-andalucia"
+    },
+    {
+     "vaite": "Washington Irving asui Alhambrassa vuonna 1829; teos Tales of the Alhambra 1832 toi paikalle kansainvälistä huomiota.",
+     "url": "https://en.wikipedia.org/wiki/Alhambra"
+    }
+   ]
+  },
+  {
+   "id": "Q525811",
+   "nimi": "Generalife",
+   "kuvaus": "Nasridien kesäpalatsi ja puutarhat",
+   "luokka": "puisto",
+   "koko_m": 400,
+   "teksti": "Kesäpalatsi Generalife sijaitsee Alhambran itäpuolella omalla rinteellään, ja ylhäältä sen tunnistaa pitkästä ja kapeasta puutarhapihasta, jonka halki kulkee vesikanava. Kanavan reunoilta kaartuu suihkujen vesikaaria, ja pihaa kutsutaan Vesikanavan pihaksi. Palatsi rakennettiin 1200-luvun lopulla nasridihallitsijoiden kesäasunnoksi, ja seuraavat emiirit laajensivat sitä. Veden toi kuninkaallinen kanava, joka otettiin Darro-joesta ylävirran puolelta ja joka kasteli matkallaan myös palatsin hedelmätarhat. Puutarhojen eteläpäähän rakennettiin 1950-luvulla ulkoilmateatteri, jossa esitetään balettia Granadan kansainvälisellä musiikki- ja tanssijuhlalla.",
+   "lyhyt": "Kesäpalatsi Generalifen puutarhoissa on vesiportaat, joiden kaiteisiin on kaiverrettu uomat juoksevalle vedelle. Portaat jakautuvat kolmeen osaan, ja jokaisella tasanteella on suihkulähde. Varjoisilla portailla solisevan veden tehtävä oli viilentää palatsia kuumina kesäkuukausina.",
+   "syventava": "Mistä Generalifen vesi on peräisin?",
+   "kysymykset": [
+    "Mitä nimi Generalife tarkoittaa?",
+    "Kuka sulttaaneista rakennutti kesäpalatsin?",
+    "Miksi puutarhassa on niin paljon vettä?",
+    "Mitä kasveja puutarhoissa kasvaa nykyään?",
+    "Ketkä ovat esiintyneet ulkoilmateatterissa?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Vesikanavan piha on pitkä ja kapea, keskellä vesikanava, jota reunustavat vesisuihkut.",
+     "url": "https://archnet.org/sites/20765"
+    },
+    {
+     "vaite": "Generalife rakennettiin Muhammad II:n aikana 1273–1302 ja sitä laajensivat Muhammad III ja Ismail I; se oli nasridien kesäasunto.",
+     "url": "https://archnet.org/sites/20765"
+    },
+    {
+     "vaite": "Kuninkaallinen kanava eli sulttaanin kanava otettiin Darro-joesta ylävirrasta ja kasteli matkalla Generalifen hedelmätarhat.",
+     "url": "https://www.alhambra-patronato.es/en/elemento-del-mes/the-royal-canal"
+    },
+    {
+     "vaite": "Ulkoilmateatteri rakennettiin puutarhojen eteläpäähän ja avattiin vuonna 1954 musiikki- ja tanssijuhlan balettiesitysten päänäyttämöksi.",
+     "url": "https://www.alhambra-patronato.es/en?p=11249"
+    },
+    {
+     "vaite": "Vesiportaat jakautuvat kolmeen osaan, joissa kussakin suihkulähde, ja kaiteisiin on kaiverrettu uomat juoksevalle vedelle; tarkoitus oli viilentää kesällä.",
+     "url": "https://andalucia.com/cities/granada/generalife.htm"
+    }
+   ]
+  },
+  {
+   "id": "Q576339",
+   "nimi": "Albayzín",
+   "kuvaus": "Granadan vanha maurilainen kaupunginosa",
+   "luokka": "muu",
+   "koko_m": 1200,
+   "teksti": "Vanha kaupunginosa Albayzín peittää Alhambraa vastapäätä olevan kukkulan valkoisilla taloilla, joiden välissä kiemurtelee kapeiden ja jyrkkien kujien verkko. Korkeiden muurien taakse kätkeytyy carmeneita, puutarhallisia huviloita, ja moni kirkko on rakennettu entisen moskeijan paikalle. Kaupunginosa oli suurimmillaan nasridivallan viimeisinä vuosina, jolloin siellä asui yli neljäkymmentätuhatta ihmistä. San Nicolásin näköalapaikalta avautuu Granadan kuvatuin näkymä Alhambraan ja Sierra Nevadan vuoriin. Yhdysvaltain presidentti Bill Clinton kutsui sieltä näkemäänsä auringonlaskua maailman kauneimmaksi vuonna 1997.",
+   "lyhyt": "Vanhan kaupunginosan Albayzínin juuret ovat 1000-luvulla, jolloin Granadan ensimmäinen muslimihallitsijoiden suku, ziridit, asettui kukkulalle ja rakensi sen ympärille muurit. Osa muureista on yhä pystyssä. Unesco liitti kaupunginosan Alhambran maailmanperintökohteeseen vuonna 1994.",
+   "syventava": "Mikä on carmen-huvila?",
+   "kysymykset": [
+    "Miksi kujat ovat niin kapeita ja mutkaisia?",
+    "Mitä moskeijoille tapahtui valloituksen jälkeen?",
+    "Asuuko kaupunginosassa nykyään paljon ihmisiä?",
+    "Mistä talojen vesi tuli nasridien aikaan?",
+    "Kuka oli ensimmäinen ziridihallitsija?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Albayzínissa on jyrkkiä kapeita kujia, valkoisia taloja, carmeneita eli muurien ympäröimiä puutarhahuviloita ja moskeijojen paikalle rakennettuja kirkkoja.",
+     "url": "https://www.alhambradegranada.org/en/info/albaicin-quarter.asp"
+    },
+    {
+     "vaite": "Kaupunginosa oli suurimmillaan nasridivallan viimeisinä vuosina, jolloin asukkaita oli yli 40 000.",
+     "url": "https://www.alhambradegranada.org/en/info/albaicin-quarter.asp"
+    },
+    {
+     "vaite": "San Nicolásin näköalapaikka on Granadan kuvatuin, näkymä Alhambraan ja Sierra Nevadaan.",
+     "url": "https://www.alhambradegranada.org/en/info/albaicin-quarter.asp"
+    },
+    {
+     "vaite": "Bill Clinton vieraili Granadassa vuonna 1997 ja kutsui San Nicolásin auringonlaskua maailman kauneimmaksi.",
+     "url": "https://www.barcelo.com/guia-turismo/en/spain/granada/things-to-do/mirador-de-san-nicolas-lookout-point/"
+    },
+    {
+     "vaite": "1000-luvulla ziridit, Granadan ensimmäinen muslimihovi, asettuivat tänne ja rakensivat muurit, jotka ovat osin yhä pystyssä.",
+     "url": "https://www.alhambradegranada.org/en/info/albaicin-quarter.asp"
+    },
+    {
+     "vaite": "Unesco julisti Albayzínin maailmanperinnöksi vuonna 1994 Alhambran ja Generalifen kohteen laajennuksena.",
+     "url": "https://en.wikipedia.org/wiki/Albaic%C3%ADn"
+    }
+   ]
+  },
+  {
+   "id": "Q5419362",
+   "nimi": "Granadan katedraali",
+   "kuvaus": "Renessanssityylinen tuomiokirkko",
+   "luokka": "kirkko",
+   "koko_m": 120,
+   "korkeus_m": 57,
+   "teksti": "Granadan katedraali täyttää vanhan keskustan sydämessä kokonaisen korttelin, ja sen kulmalla kohoaa yksi ainoa torni. Suunnitelmissa torneja oli kaksi, mutta rahat loppuivat, ja ainoaan tuli kuuden kerroksen sijaan vain kolme. Kirkko rakennettiin kaupungin entisen päämoskeijan paikalle, ja sen alkuperäinen goottilainen suunnitelma vaihtui renessanssiin, kun työn johtoon tuli Diego de Siloé. Pääjulkisivun suunnitteli 1600-luvulla taidemaalari ja arkkitehti Alonso Cano, joka työskenteli kirkon parissa elämänsä loppuun ja on haudattu sinne.",
+   "lyhyt": "Granadan katedraalia rakennettiin satakahdeksankymmentäyksi vuotta, sillä peruskivi laskettiin vuonna 1523 ja työt saatiin päätökseen vasta jouluaattona 1704. Diego de Siloén suunnittelemassa kirkossa on viisi laivaa, ja sen pohjapiirroksen esikuvana olivat varhaiskristilliset hautakirkot.",
+   "syventava": "Miksi kirkolla on vain yksi torni?",
+   "kysymykset": [
+    "Mitä moskeijasta on jäljellä kirkon alla?",
+    "Miksi rakentaminen kesti lähes kaksisataa vuotta?",
+    "Kuka oli taidemaalari Alonso Cano?",
+    "Millaiset maalaukset kirkon kupolissa on?",
+    "Pidetäänkö katedraalissa yhä jumalanpalveluksia?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Katedraaliin piti tulla kaksi kuusikerroksista tornia, mutta rahapulan ja Canon kuoleman vuoksi rakennettiin vain yksi kolmikerroksinen.",
+     "url": "https://alhambradegranada.org/en/info/monuments-granada/catedral.asp"
+    },
+    {
+     "vaite": "Katedraali rakennettiin kaupungin päämoskeijan paikalle; alkuperäiset suunnitelmat olivat goottilaisia, ja Diego de Siloé muutti ne renessanssiksi.",
+     "url": "https://en.wikipedia.org/wiki/Granada_Cathedral"
+    },
+    {
+     "vaite": "Alonso Cano suunnitteli pääjulkisivun uudelleen 1600-luvulla, työskenteli kirkossa elämänsä loppuun ja on haudattu sinne.",
+     "url": "https://digitalhistory.unite.it/en/territories/regional-routes/arabic-history-and-baroque-taste/granada-and-jaen/"
+    },
+    {
+     "vaite": "Peruskivi laskettiin 25.3.1523 ja kirkko valmistui 24.12.1704; rakentaminen kesti 181 vuotta.",
+     "url": "https://en.wikipedia.org/wiki/Granada_Cathedral"
+    },
+    {
+     "vaite": "Siloén suunnitelmassa on latinalainen risti ja viisi laivaa; pohjapiirroksen esikuvana varhaiskristilliset hautakirkot.",
+     "url": "https://digitalhistory.unite.it/en/territories/regional-routes/arabic-history-and-baroque-taste/granada-and-jaen/"
+    }
+   ]
+  },
+  {
+   "id": "Q4270926",
+   "nimi": "Leijonain piha",
+   "kuvaus": "Alhambran leijonasuihkulähteen piha",
+   "luokka": "aukio",
+   "koko_m": 35,
+   "teksti": "Leijonain piha on Alhambran palatsien sydän, pitkänomainen sisäpiha, jota kiertää sataakahtakymmentäneljää valkoista marmoripylvästä kantava pylväikkö. Keskellä on suihkulähde, jonka kaksitoistakulmaista allasta kannattelee kaksitoista vettä suihkuttavaa leijonaa. Altaan reunaan on kaiverrettu sulttaanin visiirin ja hovirunoilijan Ibn Zamrakin arabiankielinen runo. Pihan rakennutti 1300-luvulla sulttaani Muhammad viides. Leijonat irrotettiin yksi kerrallaan kunnostettaviksi, ja vuonna 2012 piha avattiin jälleen kymmenen vuoden työn jälkeen, kun vesi virtasi taas leijonien suista.",
+   "lyhyt": "Leijonain pihan itäpään paviljongin päällä oli 1800-luvulla pyöreä laatoitettu kupoli, jonka arkkitehti Rafael Contreras oli lisännyt korjaustöissä. Vuonna 1934 Leopoldo Torres Balbás purki kupolin uutena keksintönä ja korvasi sen pyramidikatolla, mistä nousi kansainvälinen kiista.",
+   "syventava": "Mitä altaan runossa sanotaan?",
+   "kysymykset": [
+    "Miksi islamilaisessa palatsissa on leijonapatsaita?",
+    "Mistä leijonien suihkuttama vesi tulee?",
+    "Mitä pihan ympärillä olevissa saleissa tehtiin?",
+    "Miksi pylväät ovat niin hoikkia?",
+    "Kuinka moni kävijä näkee pihan päivittäin?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Piha on noin 35 metriä pitkä ja 20 metriä leveä, ja sitä kiertää 124 valkoisen marmoripylvään kantama pylväikkö.",
+     "url": "https://en.wikipedia.org/wiki/Court_of_the_Lions"
+    },
+    {
+     "vaite": "Keskellä suihkulähde, jonka kaksitoistakulmaista allasta kannattelee kaksitoista vettä suihkuttavaa leijonaa.",
+     "url": "https://www.alhambradegranada.org/en/info/nasridpalaces/patioofthelions.asp"
+    },
+    {
+     "vaite": "Altaan reunaan on kaiverrettu Muhammad V:n visiirin ja hovirunoilijan Ibn Zamrakin runo.",
+     "url": "https://en.wikipedia.org/wiki/Court_of_the_Lions"
+    },
+    {
+     "vaite": "Leijonien palatsin rakennutti Muhammad V hallituskautensa toisella jaksolla 1362–1391.",
+     "url": "https://en.wikipedia.org/wiki/Court_of_the_Lions"
+    },
+    {
+     "vaite": "Kunnostus alkoi 2002 ensimmäisen leijonan irrotuksella; piha avattiin 2012 kymmenen vuoden jälkeen, ja vesi virtasi taas.",
+     "url": "https://alhambra-patronato.es/en?p=27420"
+    },
+    {
+     "vaite": "Rafael Contreras nosti itäpaviljongin päälle laatoitetun kupolin vuonna 1859; Leopoldo Torres Balbás purki sen 1934 ja teki tilalle pyramidikaton, mistä nousi kansainvälinen kiista.",
+     "url": "kaanon:pelin-aineisto"
+    },
+    {
+     "vaite": "Torres Balbás korvasi persialaistyylisen kupolin harjakatolla, koska piti sitä modernina keksintönä.",
+     "url": "https://en.wikipedia.org/wiki/Court_of_the_Lions"
+    }
+   ]
+  },
+  {
+   "id": "Q2046808",
+   "nimi": "Kaarle V:n palatsi",
+   "kuvaus": "Keisarin renessanssipalatsi Alhambrassa",
+   "luokka": "rakennus",
+   "koko_m": 63,
+   "teksti": "Kaarle viidennen palatsi erottuu ylhäältä selvästi Alhambran keskeltä, sillä se on neliön muotoinen renessanssirakennus, jonka sisällä on täysin pyöreä pylväspiha. Keisari päätti rakennuttaa sen vuonna 1526, kun hän vietti kuherruskuukauttaan Alhambrassa Portugalin Isabellan kanssa ja nasridipalatsi tuntui ahtaalta ja kylmältä. Kuningatar muutti seurueineen jopa alakaupungin luostariin. Palatsin suunnitteli Italiassa opiskellut Pedro Machuca, ja työt alkoivat vuonna 1527. Rakennus jäi kuitenkin keskeneräiseksi vuosisadoiksi ja valmistui vasta 1900-luvulla.",
+   "lyhyt": "Kaarle viidennen palatsissa toimii nykyään kaksi museota, alakerrassa Alhambran museo ja yläkerrassa Granadan taidemuseo. Pyöreällä pihalla soittavat kesäisin suuret sinfoniaorkesterit Granadan kansainvälisellä musiikki- ja tanssijuhlalla. Pyöreän pihan toteutti Pedro Machucan poika Luis, joka jatkoi työtä isänsä jälkeen.",
+   "syventava": "Miksi palatsin piha on pyöreä?",
+   "kysymykset": [
+    "Asuiko keisari koskaan palatsissaan?",
+    "Mitä Alhambran museossa on esillä?",
+    "Miksi rakentaminen keskeytyi niin pitkäksi aikaa?",
+    "Mitä palatsin tieltä purettiin?",
+    "Miksi palatsi on niin erilainen kuin Alhambra?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Palatsi on ulkoa neliön muotoinen ja sen sisäpiha pyöreä.",
+     "url": "https://en.wikipedia.org/wiki/Palace_of_Charles_V"
+    },
+    {
+     "vaite": "Päätös syntyi vuonna 1526 Kaarle V:n ja Portugalin Isabellan häämatkalla, kun nasridipalatsi tuntui ahtaalta ja kylmältä; Isabella muutti seurueineen alakaupungin luostariin.",
+     "url": "https://www.alhambra-patronato.es/en/edificios-lugares/palace-of-charles-v"
+    },
+    {
+     "vaite": "Palatsin suunnitteli Italiassa koulutuksensa saanut Pedro Machuca; rakentaminen alkoi 1527.",
+     "url": "https://en.wikipedia.org/wiki/Palace_of_Charles_V"
+    },
+    {
+     "vaite": "Palatsi jäi kesken, ja Kaarlen tilaama työ saatiin valmiiksi vasta 1900-luvulla.",
+     "url": "https://turismo.granada.org/en/palace-charles-v"
+    },
+    {
+     "vaite": "Alakerrassa on Alhambran museo ja yläkerrassa Granadan taidemuseo.",
+     "url": "https://en.wikipedia.org/wiki/Palace_of_Charles_V"
+    },
+    {
+     "vaite": "Musiikki- ja tanssijuhlan suurten sinfoniaorkesterien konsertit pidetään Kaarle V:n palatsissa.",
+     "url": "https://www.spain.info/en/calendar/festival-granada/"
+    },
+    {
+     "vaite": "Pedro Machucaa seurasi hänen poikansa Luis, joka toteutti pyöreän pihan.",
+     "url": "https://www.alhambra-patronato.es/en/edificios-lugares/palace-of-charles-v"
+    }
+   ]
+  },
+  {
+   "id": "Q429192",
+   "nimi": "Kuninkaallinen kappeli",
+   "kuvaus": "Katolisten kuninkaiden hautakappeli",
+   "luokka": "kirkko",
+   "koko_m": 60,
+   "teksti": "Kuninkaallinen kappeli on rakennettu kiinni katedraalin kylkeen, ja ylhäältä ne näyttävät yhdeltä suurelta rakennusryhmältä. Kuningatar Isabella määräsi, että hänet ja hänen puolisonsa Ferdinand haudataan Granadaan, ja kappeli valmistui vuonna 1517. Kuningasparin marmorisen hautamonumentin veisti italialainen Domenico Fancelli, ja sen vieressä lepäävät heidän tyttärensä Johanna ja tämän puoliso Filip. Monumenttien alla on pieni ja koruton krypta, jossa lyijyarkut on merkitty pelkillä nimikirjaimilla. Kuningasparin jäännökset siirsi kappeliin heidän pojanpoikansa Kaarle viides vuonna 1521.",
+   "lyhyt": "Kuninkaallisen kappelin sakaristossa on museo, jossa säilytetään kuningatar Isabellan kruunua, valtikkaa, korurasiaa ja peiliä sekä kuningas Ferdinandin miekkaa. Kokoelmiin kuuluu myös Isabellan flaamilaisia maalauksia sekä Sandro Botticellin maalaus Jeesuksesta Getsemanen puutarhassa.",
+   "syventava": "Miksi Isabella halusi haudan Granadaan?",
+   "kysymykset": [
+    "Miksi Johannaa kutsuttiin hulluksi?",
+    "Kuka kappelin rakensi?",
+    "Mitä hautamonumenttien veistokset esittävät?",
+    "Miksi arkut ovat lyijyä?",
+    "Ketkä muut kuninkaalliset lepäävät kryptassa?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Kappeli rakennettiin 1505–1517; Isabellan ja Ferdinandin haudat veisti Domenico Fancelli, Johannan ja Filipin Bartolomé Ordóñez.",
+     "url": "https://en.wikipedia.org/wiki/Royal_Chapel_of_Granada"
+    },
+    {
+     "vaite": "Kuningatar Isabella antoi määräyksen kappelin rakentamisesta Granadaan, jonne hänet haudattaisiin puolisonsa Ferdinandin rinnalle.",
+     "url": "https://www.barcelo.com/guia-turismo/en/spain/granada/things-to-do/royal-chapel/"
+    },
+    {
+     "vaite": "Mausoleumien alla on pieni ja koruton krypta, jossa lyijyarkut on merkitty nimikirjaimilla.",
+     "url": "https://capillarealgranada.com/?p=971"
+    },
+    {
+     "vaite": "Kaarle V siirsi isovanhempiensa jäännökset kappeliin vuonna 1521.",
+     "url": "https://alhambradegranada.org/en/info/monuments-granada/capillareal.asp"
+    },
+    {
+     "vaite": "Sakaristomuseossa ovat kuningattaren kruunu, valtikka, korurasia ja peili sekä kuningas Ferdinandin miekka; myös Isabellan flaamilaisia maalauksia ja Botticellin Rukous Getsemanessa.",
+     "url": "https://www.barcelo.com/guia-turismo/en/spain/granada/things-to-do/royal-chapel/"
+    }
+   ]
+  },
+  {
+   "id": "Q2842387",
+   "nimi": "Sacromonte",
+   "kuvaus": "Luola-asuntojen kaupunginosa rinteellä",
+   "luokka": "muu",
+   "koko_m": 900,
+   "teksti": "Kaupunginosa Sacromonte nousee Albayzínista itään Darro-joen laakson rinteelle, ja ylhäältä rinteessä erottuu valkoisia julkisivuja, joiden takana asunnot jatkuvat kallioon kaivettuina luolina. Rinne on Granadan romanien perinteinen asuinalue, ja luolissa syntyi zambra, kaupungin oma flamencon muoto, joka kuului alun perin häihin. Vuoden 1963 rankkasateet horjuttivat rinnettä, ja viranomaiset häätivät suuren osan asukkaista. Osassa luolista tanssitaan yhä flamencoa, ja luolamuseossa näkee, miten seppä, kutoja ja savenvalaja asuivat ja tekivät työtään.",
+   "lyhyt": "Kukkulan luostarissa säilytetään lyijykirjoja, jotka löydettiin Sacromonten luolista 1500-luvun lopulla. Niiden väitettiin olevan varhaiskristillisiä tekstejä, mutta paavi tuomitsi ne väärennöksiksi vuonna 1682. Vatikaani palautti kirjat Granadaan vuonna 2000.",
+   "syventava": "Miten zambraa tanssitaan häissä?",
+   "kysymykset": [
+    "Asuuko luolissa ihmisiä vielä nykyään?",
+    "Miksi asunnot kaivettiin kallioon?",
+    "Ketkä lyijykirjat oikeasti kirjoittivat?",
+    "Pysyvätkö luolat viileinä kesähelteellä?",
+    "Kuka on Sacromonten tunnetuin tanssija?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Sacromonte on Granadan romanien perinteinen kaupunginosa, jonka asunnot on kaivettu rinteeseen.",
+     "url": "https://en.wikipedia.org/wiki/Sacromonte"
+    },
+    {
+     "vaite": "Zambra on Sacromonten luolien flamencomuoto, joka kuului alun perin hääpäivään.",
+     "url": "kaanon:pelin-aineisto"
+    },
+    {
+     "vaite": "Zambra on maurilais- ja romanijuurinen flamencolaulun ja -tanssin muoto, kaupunginosan elävä symboli.",
+     "url": "https://en.wikipedia.org/wiki/Sacromonte"
+    },
+    {
+     "vaite": "Vuonna 1963 rankkasateet horjuttivat maaperää, ja viranomaiset häätivät luolien asukkaat.",
+     "url": "https://creators.vice.com/en/article/qvab8m/the-cave-people-of-granada"
+    },
+    {
+     "vaite": "Luolamuseossa on aitoja luola-asuntoja, joissa näytetään sepän, kutojan ja savenvalajan asumista ja työtä.",
+     "url": "https://www.nomadotravel.app/en/attractions/museo-del-sacromonte"
+    },
+    {
+     "vaite": "Lyijykirjat löydettiin Sacromonten luolista 1595–1606, ne väitettiin varhaiskristillisiksi, ja Innocentius XI tuomitsi ne väärennöksiksi 1682; ne säilytetään Sacromonten luostarissa.",
+     "url": "https://en.wikipedia.org/wiki/Lead_Books_of_Sacromonte"
+    },
+    {
+     "vaite": "Vatikaani palautti lyijykirjat Sacromonten luostariin vuonna 2000.",
+     "url": "https://en.wikipedia.org/wiki/Lead_Books_of_Sacromonte"
+    }
+   ]
+  },
+  {
+   "id": "Q5663883",
+   "nimi": "Alcaicería",
+   "kuvaus": "Entinen silkkibasaari katedraalin vieressä",
+   "luokka": "katu",
+   "koko_m": 120,
+   "teksti": "Basaarikortteli Alcaicería on katedraalin vieressä oleva kapeiden kauppakujien sokkelo, jonka kojuissa myydään nykyään lasilyhtyjä, keramiikkaa ja matkamuistoja. Nasridien aikana se oli hallitsijoiden omistama basaari, joka lukittiin ja vartioitiin öisin ja jossa kaupattiin silkkiä ja muita arvotavaroita. Vuonna 1787 piirretyssä kartassa basaarissa oli sataviisikymmentäkaksi liikettä. Heinäkuussa 1843 tulipalo tuhosi suurimman osan niistä. Basaari rakennettiin uudelleen paljon pienempänä, ja se oli Granadan ensimmäinen rakennus, joka jäljitteli Alhambran tyyliä.",
+   "lyhyt": null,
+   "syventava": "Miksi basaari lukittiin öisin?",
+   "kysymykset": [
+    "Mistä Granadan silkki oli peräisin?",
+    "Miten heinäkuun suuri tulipalo syttyi?",
+    "Mitä fajalauza-keramiikka on?",
+    "Saako kojuissa yhä tinkiä hinnasta?",
+    "Mitä nimi Alcaicería tarkoittaa?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Alcaicería on katedraalin vieressä; kojuissa myydään matkamuistoja, käsitöitä, värikkäitä lasilyhtyjä ja keramiikkaa.",
+     "url": "https://andalucia.com/cities/granada/alcaiceria.htm"
+    },
+    {
+     "vaite": "Nasridit omistivat basaarin, joka lukittiin ja vartioitiin öisin ja jossa myytiin silkkiä ja muita arvotavaroita; vuoden 1787 kartassa jopa 152 liikettä.",
+     "url": "https://en.wikipedia.org/wiki/Alcaicer%C3%ADa_of_Granada"
+    },
+    {
+     "vaite": "Tulipalo 20.7.1843 tuhosi suurimman osan liikkeistä; basaari rakennettiin paljon pienempänä uusnasridityyliin, ensimmäisenä Alhambraa jäljittelevänä arkkitehtuurina Granadassa.",
+     "url": "https://en.wikipedia.org/wiki/Alcaicer%C3%ADa_of_Granada"
+    }
+   ]
+  }
+ ]
+}
