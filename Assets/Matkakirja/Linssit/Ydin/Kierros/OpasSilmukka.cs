@@ -889,7 +889,11 @@ namespace Matkakirja.Linssit.Kierros
         {
             var k = Seuraava; Seuraava = null;
             // "Kerro lisää" (Pelikoodari #4009): sama paikka uudelleen → kamera jää kiertämään, kappale alkaa heti.
-            if (NykyinenKehys != null && KierrosLento.EtaisyysM(NykyinenKehys.Lat, NykyinenKehys.Lon, k.Lat, k.Lon) < 50)
+            // Vain, kun nykyinen kehys on oikean kohteen: valinnan ja Liikun välitön lento kehystää arviokohteen (koko 120, ei
+            // korkeutta → katu, 143 m), ja juna 156:n VIE-este (Eiffel tornin juurella, simu 7.10. 04.1x) syntyi, kun workerin
+            // oikea kohde (korkeus 330 m) jäi tämän oikotien takia arviokehykseen. Arviosta lennetään lyhyesti oikeaan kehykseen.
+            if (NykyinenKehys != null && kehysKohde != null && kehysKohde.Id != null
+                && KierrosLento.EtaisyysM(NykyinenKehys.Lat, NykyinenKehys.Lon, k.Lat, k.Lon) < 50)
             {
                 Nykyinen = k;
                 Vaihe = OpasVaihe.Puhuu; VaiheAika = 0; aaniLoppui = false;

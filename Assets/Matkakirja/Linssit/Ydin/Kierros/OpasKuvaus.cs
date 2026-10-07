@@ -11,6 +11,7 @@
 //     kallistus 30° pystystä ja etäisyys ≥ 1,5 × kehys (ei matalaa liukua karkeiden laattojen yllä, TF 144 -palaute), katse
 //     lentosuuntaan ja lopuksi kohteeseen. Yli 20 km: OpasSilmukka.Lennossa (isoympyrä).
 using System;
+using System.Collections.Generic;
 
 namespace Matkakirja.Linssit.Kierros
 {
@@ -180,6 +181,40 @@ namespace Matkakirja.Linssit.Kierros
                 : t > 1 - a ? kokonais - a * SmoothstepIntegraali((1 - t) / a)
                 : a * 0.5 + (t - a);
             return x / kokonais;
+        }
+
+        // ---- MAA JA KORKEUS NÄYTTEISTÄ (Päätoimittaja 7.10. 02.0x, juna 156 VIE-este: Eiffelin pysähdyksellä kamera tornin sisällä).
+        // Juurisyy: maa näytteistettiin kohteen keskipisteestä (SampleHeightMostDetailed), ja tornissa ja katoissa säde osui
+        // rakenteeseen (Eiffel ~190 m, Sydneyn oopperatalo 73 m katto), jolloin kehys rakennettiin latvaan. Maa otetaan nyt kehältä
+        // kohteen ympäriltä: MEDIAANI 8 pisteestä (Päätoimittaja 02.1x: rinteessä matalin piste on selvästi jalkaa alempana, ja
+        // yksittäinen kuoppa tai naapurin katto ei siirrä mediaania), ja puuttuva korkeus arvioidaan
+        // keskipisteen ja maan erotuksesta (workerin korkeus_m tulee mallilta eikä ole aina mukana). ----
+        public const int KehaPisteita = 8;
+        public const double KorkeusArvioMinM = 20;
+
+        /// <summary>Kehän säde (m) kohteen koosta, 35–60 m: lähellä jalkaa (simu 7.10. 03.5x: Akropoliksen 220 m:n kehä osui
+        /// kukkulan rinteeseen, maa 191 → 130 m). Tornissa 60 m osuu jalkojen väliseen maahan tai jalustan viereen.</summary>
+        public static double KehaSade(double kokoM) => Rajaa(0.6 * Math.Max(10, kokoM), 35, 60);
+
+        /// <summary>Kehän piste i (0…KehaPisteita−1) kohteen ympärillä.</summary>
+        public static (double lat, double lon) KehaPiste(double lat, double lon, double sadeM, int i)
+        {
+            double a = 2 * Math.PI * i / KehaPisteita;
+            return (lat + sadeM * Math.Cos(a) / 111195.0, lon + sadeM * Math.Sin(a) / (111195.0 * Math.Max(0.01, Math.Cos(lat * Math.PI / 180))));
+        }
+
+        /// <summary>Maa = min(keskus, kehän mediaani); korkeus = keskus − maa, jos vähintään KorkeusArvioMinM, muuten 0.
+        /// NaN-näytteet ohitetaan; ei yhtään kehänäytettä → keskus (vanha käytös).</summary>
+        public static (double maa, double korkeus) MaaJaKorkeus(double keskus, IReadOnlyList<double> keha)
+        {
+            var l = new List<double>();
+            if (keha != null) foreach (var h in keha) if (!double.IsNaN(h)) l.Add(h);
+            if (l.Count == 0) return (keskus, 0);
+            l.Sort();
+            double maa = l.Count % 2 == 1 ? l[l.Count / 2] : 0.5 * (l[l.Count / 2 - 1] + l[l.Count / 2]);
+            if (!double.IsNaN(keskus)) maa = Math.Min(maa, keskus);
+            double korkeus = double.IsNaN(keskus) ? 0 : keskus - maa;
+            return (maa, korkeus >= KorkeusArvioMinM ? korkeus : 0);
         }
 
         static double Rajaa(double x, double min, double max) => Math.Max(min, Math.Min(max, x));
