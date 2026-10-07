@@ -321,7 +321,20 @@ namespace Matkakirja.Linssit.Kierros
         {
             double km = matkaM / 1000.0;
             double s = km < 10 ? 3.0 + 2.2 * Math.Sqrt(km) : 10.0 + 4.0 * Math.Log10(km / 10.0);
-            return Math.Max(LentoMinS, Math.Min(LentoMaxS, s));
+            if (PalloLento) s *= PalloKerroin(km);
+            return Math.Max(LentoMinS, Math.Min(LentoMaxS * (PalloLento ? PalloKerroinLyhyt : 1), s));
+        }
+
+        // ---- KUUMAILMAPALLO (Päätoimittaja 7.10. 09.2x: "liike suhteellisen hidas kuin pallolla, mutta fysiikkaa saa venyttää, jotta
+        // kaikki kiinnostavat kohteet ehditään nähdä (tuulta vastaan, nopeammin pitkillä väleillä)") ----
+        /// <summary>Korinäkymä päällä (sovitin): lyhyet lennot hitaammin, pitkät lähes ennallaan.</summary>
+        public static bool PalloLento;
+        public const double PalloKerroinLyhyt = 1.6, PalloKerroinPitka = 1.15, PalloPitkaKm = 3.0;
+        /// <summary>Lennon keston kerroin pallossa: 1,6 alle 0,5 km:n väleillä, liukuen 1,15:een 3 km:ssä ja sen yli.</summary>
+        public static double PalloKerroin(double km)
+        {
+            double t = Math.Max(0, Math.Min(1, (km - 0.5) / (PalloPitkaKm - 0.5)));
+            return PalloKerroinLyhyt + (PalloKerroinPitka - PalloKerroinLyhyt) * t;
         }
 
         /// <summary>Käynnistys: ensimmäinen pyyntö (alkutoive, esim. "Kööpenhamina").</summary>
@@ -444,6 +457,10 @@ namespace Matkakirja.Linssit.Kierros
         public (double lat, double lon)? PyynnonSijainti;
         readonly List<(string nimi, double lat, double lon)> kierrosJono = new List<(string, double, double)>();
         int kierrosIndeksi;
+        /// <summary>Kierroksen kohteet järjestyksessä (metrokartta, Pariisi-kokeilu 7.10.): tyhjä, kun kierros ei ole käynnissä.</summary>
+        public IReadOnlyList<(string nimi, double lat, double lon)> KierrosJono => kierrosJono;
+        /// <summary>Nykyisen (viimeksi pyydetyn) kierroskohteen indeksi 0…; −1 = ei kierrosta.</summary>
+        public int KierrosNykyinen => KierrosKaynnissa || KierrosKeskeytetty ? Math.Max(0, kierrosIndeksi - 1) : -1;
 
         /// <summary>Liiku-listan kohde: lento heti kohteeseen (kaukana siirto), ja workerin pysähdys kohteesta pyydetään samalla.</summary>
         public void Liiku(string nimi, double lat, double lon)
