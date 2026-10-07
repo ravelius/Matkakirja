@@ -257,7 +257,13 @@ namespace Matkakirja.Natiivi
             Vaihtui?.Invoke(linssi);
             LukitseVaaka(true);
 
-            if (PelattavaPalaPyydetty && peiliKuvaus != PelattavaPalaPaketti) AsetaPeili(PelattavaPalaPaketti);   // ennen latausta
+            if (PelattavaPalaPyydetty && DioraamaLevyvalimuisti.TestiOsoitin != PelattavaPalaHash)
+            {
+                // Ennen latausta: pala-paketti osoittimeksi; jo ladattu tuotantorakennus unohdetaan (ladataan uudelleen alla).
+                if (peiliPaalla) AsetaPeili("pois");
+                DioraamaLevyvalimuisti.TestiOsoitin = PelattavaPalaHash;
+                if (rakennus != null) LataaUudelleen();
+            }
             if (rakennus == null)
             {
                 if (!latausKaynnissa) { latausKaynnissa = true; o.StartCoroutine(LataaRakennus()); }
@@ -406,7 +412,14 @@ namespace Matkakirja.Natiivi
             var seikkailuKamera = pelaaja != null ? pelaaja.Kamera : vene?.Kamera;
             bool cmKaytossa = cm != null && (seikkailuKamera != null || DioraamaCinemachine.Paalla && pakotettuKamera == null);
             cm?.Kaytossa(cmKaytossa);
-            if (seikkailuKamera != null)
+            if (KameraVapaa && nayttamo.Kamera != null)
+            {
+                // Pelattavan palan loppu (E3 vaihe 11): SeikkailuNousu (LS2) tai varanousu ohjaa kameraa; tämä ei kirjoita siihen.
+                cm?.Kaytossa(false); jousi.Nollaa();
+                var kp = nayttamo.Kamera.transform.position;
+                kameraAsento = new Asento(new Matkakirja.Linssit.Dioraama.V3(kp.x, kp.y, -kp.z), 0, 0, VeneSumuM, nayttamo.Kamera.fieldOfView, 0);
+            }
+            else if (seikkailuKamera != null)
             {
                 jousi.Nollaa();
                 string tapa = (pelaaja != null ? "pelaaja " : "vene ") + cm.PaivitaPelaaja(seikkailuKamera, nayttamo.Kamera, dt);
@@ -448,7 +461,7 @@ namespace Matkakirja.Natiivi
             // Kävelytilassa ei etsinnän renkaita (v44-ajo 7.10.: renkaat kameran edessä keittiössä).
             DioraamaEtsinta.Himmennys = Time.unscaledTime < himmennysAsti || SeikkailuPelaaja.Aktiivinen != null || SeikkailuVene.Aktiivinen != null;
             puolilahiRinta = null;
-            nayttamo.Paivita(kameraAsento, y.VahennettyLiike, t, asetaKamera: !cmKaytossa);
+            nayttamo.Paivita(kameraAsento, y.VahennettyLiike, t, asetaKamera: !cmKaytossa && !KameraVapaa);
             hahmot3D.Paivita(rakennus, nakyma, nayttamo.Kamera, t);
             // era 2b kohta 4 (ali-agentti P4b): 3D-pienoisfiguurit -- SAMAAN kohtaan kuin vanha 2D-hahmot3D
             // yllä, mutta Nayttamon omistama (ks. DioraamaNayttamo.cs:n Hahmot3D-kommentti).
@@ -482,13 +495,13 @@ namespace Matkakirja.Natiivi
             kelloSiirto = 0;
             kuoriOdotusAlku = -1f; SaapumisOdotus = false; RakennusLatautuu = false; LatausVirhe = null; // näyttämö (ja sen odotuspiilotus) tuhoutuu alla
             // Historiamoottori: seikkailu pois (näyttämön lapset tuhoutuvat; globaalit kuoren leikkaukset ja kävelydata nollataan).
-            SeikkailuVartijat.Poista(); SeikkailuVene.Poista(); SeikkailuPelaaja.Poista(); SeikkailuRepliikit.Poista(); SeikkailuKavely.Pura();
-            cm?.SeikkailuPois(); PelattavaPalaPyydetty = false;
-            if (peiliKuvaus == PelattavaPalaPaketti)
+            SeikkailuVartijat.Poista(); SeikkailuVene.Poista(); SeikkailuPelaaja.Poista(); SeikkailuRepliikit.Poista(); SeikkailuEsineet.Poista(); SeikkailuKynttilat.Poista(); SeikkailuKappeli.Poista(); SeikkailuAanet.Poista(); SeikkailuKavely.Pura();
+            SeikkailuEsineet.Kolahti -= KokkiKuuleeKolahduksen;
+            cm?.SeikkailuPois(); PelattavaPalaPyydetty = false; KameraVapaa = false;
+            if (DioraamaLevyvalimuisti.TestiOsoitin == PelattavaPalaHash)
             {
-                // Seuraava avaus taas tuotannosta (myös kesken latauksen suljettaessa): peili pois ja rakennus unohdetaan ilman latausta
-                // (AsetaPeili käynnistäisi latauksen kesken purun).
-                peili = s2 => s2; peiliPaalla = false; peiliHttps = false; peiliKuvaus = edellinenPeili = "pois (ämpäri)";
+                // Seuraava avaus taas tuotannosta (myös kesken latauksen suljettaessa): osoitin pois ja rakennus unohdetaan ilman latausta.
+                DioraamaLevyvalimuisti.TestiOsoitin = null;
                 rakennus = null; latausKaynnissa = false;
             }
             pelattavaPala = false;
@@ -654,8 +667,9 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Pelattavan palan kiinnitetty paketti (Linnanrakentajan v44g: kävely, Fogg, vene, laiturin kansi). Tuotannon osoitin
-        /// (uusin.json) ei muutu: pala lukee tämän paketin peilinä ja palauttaa tuotannon, kun linna suljetaan.</summary>
-        public const string PelattavaPalaPaketti = "https://media.matkakirja.app/dioraama/olavinlinna/fd7d3e32c86ed7fb/";
+        /// (uusin.json) ei muutu: pala lukee tämän paketin testiosoittimena (sama hash-juuri ja manifest.json kuin julkaisulla, joten
+        /// levyvälimuisti toimii; Päätoimittaja 7.10.: ei 250–400 Mt joka avauksella) ja palauttaa tuotannon, kun linna suljetaan.</summary>
+        public const string PelattavaPalaHash = "87e023c69817a28d";   // v44h (kappeli: syvennys, kivet, kalkki)
 
         void LataaUudelleen()
         {
@@ -886,6 +900,8 @@ namespace Matkakirja.Natiivi
         string pelaajaKameraTapa;
         /// <summary>Kehittäjävalikon pelattava pala (LinssiOhjain.AvaaPelattavaPala): käynnistyy, kun Olavinlinna on ladattu.</summary>
         public static bool PelattavaPalaPyydetty;
+        /// <summary>Kamera ulkoisen ohjauksen vallassa (E3 loppu: SeikkailuNousu); Sovitin ei kirjoita kameraan.</summary>
+        public static bool KameraVapaa;
         bool pelattavaPala;
         bool veneLaituriin; int veneRepliikki;
         const double VeneSumuM = 120, VeneKestoS = 50;
@@ -942,6 +958,28 @@ namespace Matkakirja.Natiivi
 
         /// <summary>Pelaajahahmo (rakennus.json pelaaja, Linnanrakentajan Fogg) kapselin tilalle: irrallinen hahmo pelaajan hahmosolmussa
         /// (skin-hahmo katsoo Unityssa paikallista −z:aa → 180°), leike pelaajan liikkeestä. Henkilö syntetisoidaan rakennuksen henkilöihin.</summary>
+        /// <summary>E2: keittiön heitettävät esineet ja kolahduksen ääni (kerran per kävelydata).</summary>
+        IEnumerator EsineetPaalle()
+        {
+            if (SeikkailuEsineet.Aktiivinen != null || SeikkailuKavely.Data == null) yield break;
+            yield return SeikkailuEsineet.Lataa(SeikkailuKavely.Data, SeikkailuKavely.Juuri, peili, nayttamo.transform, o.Kirjaa);
+            if (SeikkailuEsineet.KolahdusKlippi == null && rakennus?.Aanet != null && rakennus.Aanet.TryGetValue("pikari-1", out var ko) && !string.IsNullOrEmpty(ko.Tiedosto))
+            {
+                using var q = UnityEngine.Networking.UnityWebRequestMultimedia.GetAudioClip(AaniUrl(ko.Tiedosto), AudioType.MPEG);
+                ((UnityEngine.Networking.DownloadHandlerAudioClip)q.downloadHandler).streamAudio = false;
+                yield return q.SendWebRequest();
+                if (q.result == UnityEngine.Networking.UnityWebRequest.Result.Success) SeikkailuEsineet.KolahdusKlippi = UnityEngine.Networking.DownloadHandlerAudioClip.GetContent(q);
+            }
+            // E3: koputuksen ontto ääni (väliaikaisesti ovi-puu matalammalla sävelellä, kunnes oma koputusääni on pankissa).
+            if (SeikkailuEsineet.OnttoKlippi == null && rakennus?.Aanet != null && rakennus.Aanet.TryGetValue("ovi-puu", out var ov) && !string.IsNullOrEmpty(ov.Tiedosto))
+            {
+                using var q2 = UnityEngine.Networking.UnityWebRequestMultimedia.GetAudioClip(AaniUrl(ov.Tiedosto), AudioType.MPEG);
+                ((UnityEngine.Networking.DownloadHandlerAudioClip)q2.downloadHandler).streamAudio = false;
+                yield return q2.SendWebRequest();
+                if (q2.result == UnityEngine.Networking.UnityWebRequest.Result.Success) SeikkailuEsineet.OnttoKlippi = UnityEngine.Networking.DownloadHandlerAudioClip.GetContent(q2);
+            }
+        }
+
         void LisaaPelaajahahmo(SeikkailuPelaaja sp)
         {
             var pm = rakennus?.Pelaaja;
@@ -956,13 +994,59 @@ namespace Matkakirja.Natiivi
             nayttamo.Hahmot3D.IrrallistenGlb(glbt);
             foreach (var glb in glbt) if (hahmoGlbJonossaTaiValmiit.Add(glb)) o.StartCoroutine(LataaHahmoGlb(glb));
             sp.KapseliPiiloon();
+            o.StartCoroutine(EsineetPaalle());
             o.Kirjaa($"seikkailu: pelaajahahmo {pm.Nimi} ({pm.Glb}, {pm.Leikkeet.Count} leikettä)");
+        }
+
+        /// <summary>Henkilön ensimmäisen tilahahmon paikka Unityssa (kokki liedellä), tai null.</summary>
+        Vector3? HenkilonPaikka(string henkiloId)
+        {
+            if (rakennus?.Tilat == null) return null;
+            foreach (var t in rakennus.Tilat) if (t.Hahmot != null) foreach (var h in t.Hahmot) if (h.HenkiloId == henkiloId) return DioraamaNayttamo.UnityPiste(h.Paikka) + Vector3.up * 1.6f;
+            return null;
+        }
+
+        void KokkiKuuleeKolahduksen(Vector3 kohta)
+        {
+            var r = SeikkailuRepliikit.Aktiivinen;
+            if (r == null || !r.Valmis || Time.unscaledTime < kokkiRepliikkiAsti || HenkilonPaikka("kokki-1500") is not Vector3 kp || (kp - kohta).sqrMagnitude > 144f) return;
+            kokkiRepliikkiAsti = Time.unscaledTime + 8f;
+            r.Soita(++kokkiLaskuri % 2 == 0 ? "kokki-harhautus-1" : "kokki-harhautus-2", kp);
+        }
+        float kokkiRepliikkiAsti; int kokkiLaskuri;
+
+        /// <summary>E3a: kappelin kohtaus ja pimeys (SeikkailuKappeli); kynttilät ensin, keskustelun ääni rakennuksen äänistä.</summary>
+        IEnumerator KappeliPaalle()
+        {
+            if (nayttamo == null || rakennus == null) yield break;
+            yield return VarmistaKavelyData();
+            if (SeikkailuKynttilat.Aktiivinen == null && rakennus.Tila("kappeli") != null)
+            {
+                var ky = SeikkailuKynttilat.Luo(nayttamo.transform, "kappeli", nayttamo.Liekit, rakennus3D, o.Kirjaa);
+                if (ky != null) ky.Ydin.OmaKynttila = true;
+            }
+            SeikkailuRepliikit.Luo(nayttamo.transform, MediaJuuri + "/seikkailu/" + RakennusId + "/repliikit-v1/manifest.json", o.Kirjaa);
+            AudioClip klippi = null;
+            if (rakennus.Aanet != null && rakennus.Aanet.TryGetValue("kappeli-keskustelu", out var ka) && !string.IsNullOrEmpty(ka.Tiedosto))
+            {
+                using var q = UnityEngine.Networking.UnityWebRequestMultimedia.GetAudioClip(AaniUrl(ka.Tiedosto), AudioType.MPEG);
+                ((UnityEngine.Networking.DownloadHandlerAudioClip)q.downloadHandler).streamAudio = false;
+                yield return q.SendWebRequest();
+                if (q.result == UnityEngine.Networking.UnityWebRequest.Result.Success) klippi = UnityEngine.Networking.DownloadHandlerAudioClip.GetContent(q);
+            }
+            SeikkailuAanet.Luo(nayttamo.transform, MediaJuuri + "/seikkailu/" + RakennusId + "/aanet-e3-v1/manifest.json", o.Kirjaa);
+            SeikkailuKappeli.Luo(nayttamo.transform, rakennus, nayttamo.Hahmot3D, klippi, o.Kirjaa);
+            var glbt = new List<string>();
+            nayttamo.Hahmot3D?.IrrallistenGlb(glbt);
+            foreach (var glb in glbt) if (hahmoGlbJonossaTaiValmiit.Add(glb)) o.StartCoroutine(LataaHahmoGlb(glb));
         }
 
         IEnumerator VartijatPaalle()
         {
             if (nayttamo == null || rakennus == null) { o.Kirjaa("poikki: vartijat: linssi ei auki"); yield break; }
             yield return VarmistaKavelyData();
+            SeikkailuRepliikit.Luo(nayttamo.transform, MediaJuuri + "/seikkailu/" + RakennusId + "/repliikit-v1/manifest.json", o.Kirjaa);
+            SeikkailuEsineet.Kolahti -= KokkiKuuleeKolahduksen; SeikkailuEsineet.Kolahti += KokkiKuuleeKolahduksen;
             SeikkailuVartijat.Luo(nayttamo.transform, rakennus, SeikkailuKavely.Data, nayttamo.Hahmot3D, o.Kirjaa);
             if (SeikkailuVartijat.AskelKlippi == null && rakennus.Aanet != null && rakennus.Aanet.TryGetValue("askel-kivi", out var askel) && !string.IsNullOrEmpty(askel.Tiedosto))
             {
@@ -1001,7 +1085,11 @@ namespace Matkakirja.Natiivi
             if (Physics.Raycast(alku + Vector3.up * 2f, Vector3.down, out var osuma, 30f, 1 << DioraamaNayttamo.Kerros)) alku = osuma.point + Vector3.up * 0.05f;
             else o.Kirjaa($"seikkailu: nousupaikan alla ei törmäyspintaa ({alku}) — laituri puuttuu törmäyksestä?");
             LisaaPelaajahahmo(SeikkailuPelaaja.Luo(nayttamo.transform, alku, yaw, DioraamaNayttamo.Kerros));
-            if (pelattavaPala) o.StartCoroutine(VartijatPaalle());   // pelattavassa palassa vartijat partioon heti laiturille noustessa
+            if (pelattavaPala)
+            {
+                o.StartCoroutine(VartijatPaalle());   // pelattavassa palassa vartijat partioon heti laiturille noustessa
+                o.StartCoroutine(KappeliPaalle());   // kynttilät (Foggilla tarjottimen kynttilä mukana) + kappelin kohtaus kaari-ovella
+            }
             o.Kirjaa($"seikkailu: vene perillä, pelaaja laiturilla ({alku}, yaw {yaw:F0}, {(nm != null ? "nousu:laituri" : "laiturin kohde")})");
         }
 
@@ -1457,6 +1545,7 @@ namespace Matkakirja.Natiivi
                     o.Kirjaa($"poikki: kävely tapit {osat[3]} {osat[4]} {osat[5]} {osat[6]} {osat[7]} s");
                     return;
                 }
+                if (arvo == "toiminto") { SeikkailuEsineet.ToimintoPyydetty = true; o.Kirjaa($"poikki: toiminto (lähin {SeikkailuEsineet.Aktiivinen?.Lahin ?? "-"}, kädessä {SeikkailuEsineet.Aktiivinen?.Kadessa ?? "-"})"); return; }
                 if (arvo == "data") { kavelyKehitysJuuri = osat.Length > 3 ? osat[3].TrimEnd('/') + "/" : null; o.Kirjaa($"poikki: kävelydata {kavelyKehitysJuuri ?? "paketista"}"); return; }
                 string tid = osat.Length > 3 ? osat[3] : Linssi?.NakymaHetkella(YdinAika, false).KohdeTila ?? "laituri";
                 o.StartCoroutine(KavelyPaalle(tid));
@@ -1468,6 +1557,26 @@ namespace Matkakirja.Natiivi
                 if (arvo == "0") { SeikkailuVartijat.Poista(); o.Kirjaa("poikki: vartijat pois"); return; }
                 if (arvo == "tila") { o.Kirjaa("poikki: " + (SeikkailuVartijat.Aktiivinen?.Raportti() ?? "vartijat pois")); return; }
                 o.StartCoroutine(VartijatPaalle());
+                return;
+            }
+            // "poikki kynttilat 1 [tila] | 0 | sammuta | oma 0|1 | tila": E3 kappelin kynttilät (oletustila kappeli).
+            if (mita == "kynttilat" || mita == "kynttilät")
+            {
+                var ky = SeikkailuKynttilat.Aktiivinen;
+                if (arvo == "0") SeikkailuKynttilat.Poista();
+                else if (arvo == "sammuta") ky?.Ydin.SammutaKaikki();
+                else if (arvo == "oma" && ky != null) { ky.Ydin.OmaKynttila = true; ky.Ydin.AsetaOma(osat.Length > 3 && osat[3] == "1"); }
+                else if (arvo != "tila") SeikkailuKynttilat.Luo(nayttamo.transform, osat.Length > 3 ? osat[3] : "kappeli", nayttamo.Liekit, rakennus3D, o.Kirjaa);
+                ky = SeikkailuKynttilat.Aktiivinen;
+                o.Kirjaa("poikki: kynttilät " + (ky == null ? "pois" : $"{ky.TilaId} palavia {ky.Ydin.Palavia}/{ky.Ydin.Maara}, oma {(ky.Ydin.OmaPalaa ? "palaa" : ky.Ydin.OmaKynttila ? "sammunut" : "ei")}"));
+                return;
+            }
+            // "poikki kappeli 1 | 0 | tila": E3a kappelin kohtaus ja pimeys (kaari-ovelle astuminen käynnistää).
+            if (mita == "kappeli")
+            {
+                if (arvo == "0") { SeikkailuKappeli.Poista(); SeikkailuKynttilat.Poista(); }
+                else if (arvo != "tila") o.StartCoroutine(KappeliPaalle());
+                o.Kirjaa("poikki: kappeli " + (SeikkailuKappeli.Aktiivinen?.Nyt.ToString() ?? "pois"));
                 return;
             }
             // "poikki vene 1 [kesto_s] | 0": historiamoottori V2 — venesaapuminen laituriin, sitten vapaa kävely.

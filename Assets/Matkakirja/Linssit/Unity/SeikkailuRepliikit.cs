@@ -70,6 +70,16 @@ namespace Matkakirja.Natiivi
             r.Klippi = DownloadHandlerAudioClip.GetContent(p); r.Klippi.name = "Repliikki:" + r.Tunnus;
         }
 
+        /// <summary>Repliikki kiinteästä paikasta (tilan hahmo, jolla ei ole omaa Transformia seikkailussa, esim. kokki liedellä).</summary>
+        public double Soita(string tunnus, Vector3 paikka)
+        {
+            if (!kiinteat.TryGetValue(tunnus, out var t) || t == null) { t = new GameObject("Paikka:" + tunnus).transform; t.SetParent(transform, false); kiinteat[tunnus] = t; }
+            t.position = paikka - Vector3.up * 1.6f;
+            return Soita(tunnus, t);
+        }
+        readonly Dictionary<string, Transform> kiinteat = new Dictionary<string, Transform>(StringComparer.Ordinal);
+        public bool On(string tunnus) => repliikit.ContainsKey(tunnus);
+
         /// <summary>Soittaa repliikin puhujan kohdalta (puhuja = Transform, jota ääni seuraa). Palauttaa keston (s) tai 0.</summary>
         public double Soita(string tunnus, Transform puhuja)
         {

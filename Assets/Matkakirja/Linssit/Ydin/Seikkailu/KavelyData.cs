@@ -41,6 +41,10 @@ namespace Matkakirja.Linssit.Seikkailu
         public double X, Y, Z, Leveys, Korkeus, Koko, OdotaS;
         /// <summary>kierto_y radiaaneina (glTF y-akselin ympäri; esim. vene:laituri = keulan suunta); null jos puuttuu.</summary>
         public double? KiertoY;
+        /// <summary>esine: heitettava (Linnanrakentaja v44e): poimittava ja heitettävä harhautukseen.</summary>
+        public bool Heitettava;
+        /// <summary>esine: irrotettava (Linnanrakentaja v44h: syvennyksen muuratut kivet).</summary>
+        public bool Irrotettava;
     }
 
     public sealed class KavelyData
@@ -102,7 +106,7 @@ namespace Matkakirja.Linssit.Seikkailu
                 Nimi = nimi, Laji = kp > 0 ? nimi.Substring(0, kp) : "", Tunnus = kp > 0 ? nimi.Substring(kp + 1) : nimi,
                 Osa = MiniJson.Teksti(o, "osa"), Tyyppi = MiniJson.Teksti(o, "tyyppi"), Glb = MiniJson.Teksti(o, "glb"),
                 X = p[0], Y = p[1], Z = p[2], Leveys = MiniJson.Luku(o, "leveys") ?? 0, Korkeus = MiniJson.Luku(o, "korkeus") ?? 0,
-                Koko = MiniJson.Luku(o, "koko") ?? 0, OdotaS = MiniJson.Luku(o, "odota_s") ?? 0, KiertoY = MiniJson.Luku(o, "kierto_y"),
+                Koko = MiniJson.Luku(o, "koko") ?? 0, OdotaS = MiniJson.Luku(o, "odota_s") ?? 0, KiertoY = MiniJson.Luku(o, "kierto_y"), Heitettava = MiniJson.Kentta(o, "heitettava") is bool hb && hb, Irrotettava = MiniJson.Kentta(o, "irrotettava") is bool ib && ib,
             };
         }
 
