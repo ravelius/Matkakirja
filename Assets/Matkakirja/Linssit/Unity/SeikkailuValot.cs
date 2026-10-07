@@ -19,6 +19,8 @@ namespace Matkakirja.Natiivi
         static SeikkailuVfxViitteet viitteet; static bool haettu;
         static Type tyyppiValo, tyyppiFeature;
         static readonly List<ScriptableRendererFeature> lisatyt = new List<ScriptableRendererFeature>();
+        /// <summary>Luodut säteet (kytkin ajon aikana näyttää/piilottaa ne; luukun säde lisäksi luukun tilan mukaan).</summary>
+        static readonly List<Light> saeteet = new List<Light>();
 
         /// <summary>Candle VFX -liekit (kevyet, oletuksena päällä kaikilla).</summary>
         public static bool Liekit = true;
@@ -43,7 +45,13 @@ namespace Matkakirja.Natiivi
         public static void Aseta(bool? liekit = null, bool? volumetriset = null)
         {
             if (liekit is bool l) Liekit = l;
-            if (volumetriset is bool v) { Volumetriset = v; if (!v) PoistaFeature(); }
+            if (volumetriset is bool v)
+            {
+                Volumetriset = v;
+                if (!v) PoistaFeature(); else VarmistaFeature();
+                saeteet.RemoveAll(x => x == null);
+                foreach (var s in saeteet) { var vl = tyyppiValo != null ? s.GetComponent(tyyppiValo) as Behaviour : null; if (vl != null) vl.enabled = v; s.enabled = v; }
+            }
             Muuttui?.Invoke();
         }
 
@@ -78,7 +86,8 @@ namespace Matkakirja.Natiivi
         public static Light Saede(Transform isa, Vector3 paikka, Vector3 suunta, Color vari, float voima, float kantama, float kulma, int kerros)
         {
             Hae();
-            if (!Volumetriset || tyyppiValo == null || !VarmistaFeature()) return null;
+            // Säde luodaan aina, kun paketti on mukana (kytkin voi tuoda sen ajon aikana); laatutaso pois → valo ja efekti pois.
+            if (tyyppiValo == null || Volumetriset && !VarmistaFeature()) return null;
             var go = new GameObject("Kuunsäde (volumetrinen)") { layer = kerros };
             go.transform.SetParent(isa, false);
             go.transform.position = paikka;
@@ -87,6 +96,8 @@ namespace Matkakirja.Natiivi
             l.type = LightType.Spot; l.color = vari; l.intensity = voima; l.range = kantama; l.spotAngle = kulma; l.shadows = LightShadows.None;
             var vl = go.AddComponent(tyyppiValo);
             Kentta(vl, "density", 0.12f); Kentta(vl, "brightness", 0.8f); Kentta(vl, "noiseStrength", 0.6f); Kentta(vl, "enableDustParticles", true);
+            if (!Volumetriset) { l.enabled = false; if (vl is Behaviour b) b.enabled = false; }
+            saeteet.Add(l);
             return l;
         }
 
