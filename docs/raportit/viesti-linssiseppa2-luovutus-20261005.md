@@ -17,11 +17,14 @@ Avoimet työt:
    Vauhtirajaus opas-vapaa-lataus 5683ffaf jäi pois junasta. Ei uutta työtä tähän.
 4. s2-meri 0f6e4e89 on KUITATTU junaan 154 (BMNG:n meri S2:n meriväriin).
 
+## OMISTAJA 7.10. 15.5x (sitova): ennen junaa VAIN automaattiset testit + käännös; ei savuja, stillejä, iPad-mittauksia,
+## toistoajoja; kuittaus 1 rivi (muutos, testit, SHA) → Natiiviseppä. Simu vain, jos vian syy muuten epäselvä.
+
 ## TILA 7.10. 15.3x (uusin)
 - JUNA 161 pallon klikkaus TODENNETTU (68429b27, Natiivisepän koeappi): iPhone Ateena, iPad Kreeta+Pariisi, Mac Ateena (oma 6ec5dcff).
   Korjaus 2d8da858f + ui hiiri 5b61d14f4 junassa; -ei-lepoa (6ec5dcff4) vain testihaarassa. Still lokit/linssiseppa2-kaupunkipallo-161-stillit/osuma-161-68429b27.jpg.
 - Lisälöydös: Siirrytään-ruutu jää, jos opas suljetaan kesken siirtymän → LS1 korjaa (linssiseppa/pallo-latauskuva, SiirtymaPeru, juna 162).
-  NUI pyysi: toista Ateena → linssi pois → Kreeta LS1:n korjausta vasten (skenaario pallo-osuma.txt ilman odota 25 -rivejä).
+  (NUI:n toistopyyntö peruttu: omistaja 15.5x "testaus vielä kevyemmin" – vain automaattiset testit + käännös ennen junaa.)
 - S2-KAUDET todennettu iPadilla (c3c9bc115): lokit/linssiseppa2-s2-kaudet/syksy-kesa-c3c9bc115.jpg → KUITATTU junaan 162 (15.4x), SHA Natiivisepälle
   (f6e4a8495). Pari ei täsmälleen samasta kohdasta (ISS liikkui); tarvittaessa uusi pari kiinteällä kellolla. Talvi/kevät taulukkoon kun ämpärissä.
 - Mac-ajotapa: lokit/linssiseppa2-3d-kattavuus/ajot/mac-pallo.sh; Mac-appi -ei-lepoa-lipulla, komennot ~/Library/Application Support/Matkakirja/Matkakirja 3D/.
