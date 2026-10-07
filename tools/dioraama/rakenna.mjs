@@ -348,6 +348,14 @@ export function lisaaBlender(rakennusJson, blender) {
     delete P.huom;
     rakennusJson.pelaaja = { glb: B('hahmot/fogg.glb'), ...P };
   }
+  // Ensimmäisen persoonan kädet (omistaja 7.10. 18.5x: pelit 1. persoonassa; Siirtoseppä historia-fp): blender/hahmot/kadet.glb +
+  // js/dioraama/pelaaja-kadet.json (leikkeet, liikkeet, kahva, kamera) → pelaaja.kadet.
+  if (on.has('hahmot/kadet.glb')) {
+    const KJ = JSON.parse(readFileSync(new URL('../../js/dioraama/pelaaja-kadet.json', import.meta.url), 'utf8'));
+    delete KJ.huom;
+    rakennusJson.pelaaja = rakennusJson.pelaaja || {};
+    rakennusJson.pelaaja.kadet = { glb: B('hahmot/kadet.glb'), ...KJ };
+  }
   rakennusJson.tunnelma = 'hamara';
   rakennusJson.ulkokuori = {
     ...Object.fromEntries(Object.keys(tasot).map((t) => [t, B(`ulkokuori/ulkokuori_${t}.glb`)])),
