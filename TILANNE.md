@@ -122,4 +122,5 @@ Puuttuvat tulostiedostot:
   Tavoite 40–60 kuvaa voi jäädä vajaaksi, jolloin ero katetaan Codex-tilauksilla.
 - Ehdokaslistalla on lisenssejä (GFDL, FAL), jotka eivät kelpaa. `yhdista.py` hylkää ne,
   mutta älä poimi niitä listalta käsin.
+- TARKISTAJA A valmistui pysäytyksen jälkeen (`wip/tarkistus_A.json`: 30 OK, 5 KORJAA, 0 HYLKAA; rivit 8, 10, 20, 28, 32). Molemmat tarkistukset valmiit; jäljellä: korjausten teko osa*.json:iin, tulostiedostot, wip/-poisto.
 - pysäytetty 7.10. 16.1x, loppukokoaminen tehdään paikallisesti

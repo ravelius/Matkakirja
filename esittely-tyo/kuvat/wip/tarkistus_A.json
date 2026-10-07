@@ -1,0 +1,317 @@
+[
+ {
+  "indeksi": 0,
+  "kohde_id": "avaus",
+  "tekstilaji": "avaus",
+  "commons_tiedosto": "File:Immeuble haussmannien à Paris (52169315349).jpg",
+  "verdikti": "OK",
+  "syy": "Lisenssi CC BY 2.0 (besopha) ja mitat täsmäävät. Kuva näyttää vaalean kalkkikivijulkisivun ja takorautaparvekkeet, hyvä vaakakuva; kiviviuhkan kuvaus on välillisempi (ei ilmakuva), mutta toimii materiaalin kuvana. Ei NC/ND, ei vesileimaa.",
+  "korjaus": null
+ },
+ {
+  "indeksi": 1,
+  "kohde_id": "avaus",
+  "tekstilaji": "avaus",
+  "commons_tiedosto": "File:Paris (75004) Cathédrale Notre-Dame Façade occidentale 2015-08-02.jpg",
+  "verdikti": "OK",
+  "syy": "CC BY 4.0 (Vanessa) täsmää. Länsijulkisivu, tornit ja kuningasgalleria selvästi näkyvissä; pystykuva mutta kohde pystysuuntainen. Ankkuri 1 kpl, tekstin lopussa (1 sana jäljellä).",
+  "korjaus": null
+ },
+ {
+  "indeksi": 2,
+  "kohde_id": "Q243",
+  "tekstilaji": "teksti",
+  "commons_tiedosto": "File:Eiffel Tower and Champ de Mars seen from Trocadéro Palace, Paris Exposition, 1889.jpg",
+  "verdikti": "OK",
+  "syy": "PD, aikalaisvalokuva 1889 näyttelyalueelta, tunnistettava. Ankkuri 1 kpl (4. sana, ei kolmen ensimmäisen joukossa). Kuvateksti 6 sanaa.",
+  "korjaus": null
+ },
+ {
+  "indeksi": 3,
+  "kohde_id": "Q243",
+  "tekstilaji": "teksti",
+  "commons_tiedosto": "File:Antennas at the top of Eiffel tower.jpg",
+  "verdikti": "OK",
+  "syy": "CC BY-SA 3.0 (kaksoislisenssi GFDL, CC BY-SA kelpaa). Alkuperäistiedoston URL antoi 429, katsottu API:n 320 px pikkukuva: antennirakenne tornin huipulla taivasta vasten. Pieni (800 px) ja vaatimaton laatu, mutta tunnistettava ja käyttökelpoinen.",
+  "korjaus": null
+ },
+ {
+  "indeksi": 4,
+  "kohde_id": "Q243",
+  "tekstilaji": "teksti",
+  "commons_tiedosto": "File:Chasles, Lavoisier, Ampere.001 - Torre Eiffel.jpg",
+  "verdikti": "OK",
+  "syy": "CC BY-SA 4.0 täsmää. Näkyy kullatut nimet CHASLES, LAVOISIER, AMPERE ensimmäisen tason friisissä, tarkka ja vaakakuva. Ankkuri tekstin lopussa.",
+  "korjaus": null
+ },
+ {
+  "indeksi": 5,
+  "kohde_id": "Q243",
+  "tekstilaji": "lyhyt",
+  "commons_tiedosto": "File:Louis-Emile Durandelle, The Eiffel Tower - State of the Construction, 1888.jpg",
+  "verdikti": "OK",
+  "syy": "PD (Durandelle). Kuvaus vahvistaa päiväyksen 23.11.1888, joten kuvateksti pitää paikkansa. Pystykuva, kohde selvästi pystysuuntainen.",
+  "korjaus": null
+ },
+ {
+  "indeksi": 6,
+  "kohde_id": "Q243",
+  "tekstilaji": "lyhyt",
+  "commons_tiedosto": "File:Travaux de peinture à la Tour Eiffel (deux peintres au travail) - btv1b532543124.jpg",
+  "verdikti": "OK",
+  "syy": "PD (Agence Rol, 1932). Kaksi maalaria ja maalisanko rautapalkeilla, Pariisi taustalla. Kuvassa arkistonumeroita (Rol-merkintä), ei vesileimaa. Ankkuri tekstin lopussa.",
+  "korjaus": null
+ },
+ {
+  "indeksi": 7,
+  "kohde_id": "Q19675",
+  "tekstilaji": "teksti",
+  "commons_tiedosto": "File:Ruins of the Tuileries Palace MET DT5936.jpg",
+  "verdikti": "OK",
+  "syy": "CC0 (Pils, MET). Akvarellin signeeraus 'Les Tuileries 7 juillet 1871' vahvistaa kuvatekstin 'heinäkuussa 1871'. Pystykuva, mutta aikalaisteos poltetusta palatsista ja Carrousel-kaaresta.",
+  "korjaus": null
+ },
+ {
+  "indeksi": 8,
+  "kohde_id": "Q19675",
+  "tekstilaji": "teksti",
+  "commons_tiedosto": "File:Façade en ruines des Tuileries sur le jardins des Tuileries, 1er arrondissement, Paris, PH34622.jpg",
+  "verdikti": "KORJAA",
+  "syy": "Lisenssi CC0 (Carnavalet) ja mitat täsmäävät, kuva osuu (palatsin rauniojulkisivu puutarhan puolelta). Mutta teoksen nimi on 'Démolition des Tuileries / Façade sur le Jardin, 1883' ja kuvassa on purkujätettä ja aita, eli purku on jo käynnissä; 'ennen purkua' on epätarkka.",
+  "korjaus": "Palatsin rauniot puutarhan puolelta purkutöiden alkaessa"
+ },
+ {
+  "indeksi": 9,
+  "kohde_id": "Q19675",
+  "tekstilaji": "teksti",
+  "commons_tiedosto": "File:Grande allée du jardin des Tuileries, Paris le 5 mai 2016.jpg",
+  "verdikti": "OK",
+  "syy": "CC BY 2.0 (Vellut) täsmää. Puiden reunustama pääkäytävä länteen, taustalla Concorden suuntaa; etualalla näkyy kausipyörä (nykyaika sallittu). Ankkuri tekstin lopussa.",
+  "korjaus": null
+ },
+ {
+  "indeksi": 10,
+  "kohde_id": "Q19675",
+  "tekstilaji": "lyhyt",
+  "commons_tiedosto": "File:I.M. Pei (4x5 cropped).jpg",
+  "verdikti": "KORJAA",
+  "syy": "Public domain (Gotfryd, LoC) täsmää. Rajattu muotokuva on rakeinen ja hieman epätarkka; alkuperäinen kuvaus: Pei katsoo New Yorkin Convention Centerin mallia, ei Louvren pyramidia, ja malli näkyy rajauksessa vain reunalla. 'pienoismallinsa ääressä' johtaa harhaan.",
+  "korjaus": "Arkkitehti Ieoh Ming Pei vuonna 1980"
+ },
+ {
+  "indeksi": 11,
+  "kohde_id": "Q19675",
+  "tekstilaji": "lyhyt",
+  "commons_tiedosto": "File:François Mitterrand, 1984.jpg",
+  "verdikti": "OK",
+  "syy": "CC BY 4.0 (EU/Zamboni) täsmää. Terävä muotokuva, nimi osuu pilkkanimen selitykseen; henkilökuva sallittu koska hän on lauseen aihe. Kuvateksti 5 sanaa.",
+  "korjaus": null
+ },
+ {
+  "indeksi": 12,
+  "kohde_id": "Q2981",
+  "tekstilaji": "teksti",
+  "commons_tiedosto": "File:Flèche en feu - Spire on Fire.jpeg",
+  "verdikti": "OK",
+  "syy": "CC BY-SA 4.0 (Levrier) täsmää. Palava tornihuippu Saint-Louis-sillalta 15.4.2019; pystykuva, kohde pystysuuntainen. Dramaattinen mutta sopii 13+.",
+  "korjaus": null
+ },
+ {
+  "indeksi": 13,
+  "kohde_id": "Q2981",
+  "tekstilaji": "teksti",
+  "commons_tiedosto": "File:La charpente de Notre-Dame de Paris, novembre 2025.jpg",
+  "verdikti": "OK",
+  "syy": "CC BY-SA 4.0 (Ibex73) täsmää. Uuden kattotuolin vaaleat tammipalkit ja kulkusillat, vaakakuva, osuu ankkuriin.",
+  "korjaus": null
+ },
+ {
+  "indeksi": 14,
+  "kohde_id": "Q2981",
+  "tekstilaji": "teksti",
+  "commons_tiedosto": "File:Point zéro des routes de France à Paris.jpg",
+  "verdikti": "OK",
+  "syy": "CC BY-SA 4.0 (Bregain) täsmää. Pronssinen tuuliruusu graniittilaatan keskellä kivetyksessä ja 'POINT ZERO DES ROUTES DE FRANCE'; ei turistia. Täydellinen osuma.",
+  "korjaus": null
+ },
+ {
+  "indeksi": 15,
+  "kohde_id": "Q2981",
+  "tekstilaji": "lyhyt",
+  "commons_tiedosto": "File:Notre Dame de Paris (1888) illustr.jpg",
+  "verdikti": "OK",
+  "syy": "PD (Lemud, 1888 painos). Romaanin nimiösivun kuvitus: Quasimodo ylhäällä, Frollo, Esmeralda vuohineen ja muut; teksti 'NOTRE-DAME DE PARIS' on osa taidetta. Pystykuva, mutta kuvitus toimii; ankkuri 'vuonna 1831' kuvaa romaania.",
+  "korjaus": null
+ },
+ {
+  "indeksi": 16,
+  "kohde_id": "Q2981",
+  "tekstilaji": "lyhyt",
+  "commons_tiedosto": "File:Chimera Notre Dame Paris.jpg",
+  "verdikti": "OK",
+  "syy": "CC BY-SA 3.0 (Lupo; kaksoislisenssi GFDL, CC BY-SA kelpaa). Le Stryge leuka käden varassa, Pariisi ja Sacré-Cœur taustalla. Pystykuva, kohde riittävän pystysuuntainen. Ankkuri tekstin lopussa.",
+  "korjaus": null
+ },
+ {
+  "indeksi": 17,
+  "kohde_id": "Q64436",
+  "tekstilaji": "teksti",
+  "commons_tiedosto": "File:Arc de Triomphe mg 6829 Oudinot - Davout - Lannes - Mortier.jpg",
+  "verdikti": "OK",
+  "syy": "CC BY-SA 2.0 (Rama) täsmää. Katsottu API:n 320 px pikkukuva: OUDINOT, DAVOUST, LANNES, MORTIER; LANNES ja MORTIER alleviivattu, joten kuvateksti pitää paikkansa. Kaiverrus 1800-luvulta, ei tekijänoikeusongelmaa.",
+  "korjaus": null
+ },
+ {
+  "indeksi": 18,
+  "kohde_id": "Q64436",
+  "tekstilaji": "teksti",
+  "commons_tiedosto": "File:Flamme Arc triomphe.jpg",
+  "verdikti": "OK",
+  "syy": "CC0 (Jebulon) täsmää. Ikuinen tuli pronssikehyksessä, kukkaseppele, 'ICI' kivessä; terävä vaakakuva.",
+  "korjaus": null
+ },
+ {
+  "indeksi": 19,
+  "kohde_id": "Q64436",
+  "tekstilaji": "teksti",
+  "commons_tiedosto": "File:Godefroy flight.jpg",
+  "verdikti": "OK",
+  "syy": "PD (Mortane). Kaksitaso näkyy kaaren aukossa, raitiovaunu alhaalla; rakeinen mutta aikalaiskuva ja tunnistettava. Ankkuri tekstin lopussa.",
+  "korjaus": null
+ },
+ {
+  "indeksi": 20,
+  "kohde_id": "Q64436",
+  "tekstilaji": "lyhyt",
+  "commons_tiedosto": "File:François Pascal Simon Gérard - La bataille d'Austerlitz. 2 decembre 1805.jpg",
+  "verdikti": "KORJAA",
+  "syy": "PD (Gérard) täsmää, hyvä vaakakuva. Kuvateksti 'Napoleon ottaa vastaan Austerlitzin voiton' on tulkinta, ei kuvan faktaa (maalaus esittää Napoleonia ja kenraali Rappia taistelun jälkeen, venäläiset liput kädessä).",
+  "korjaus": "Gérardin maalaus Austerlitzin taistelusta 1805"
+ },
+ {
+  "indeksi": 21,
+  "kohde_id": "Q64436",
+  "tekstilaji": "lyhyt",
+  "commons_tiedosto": "File:Funerailles de l'Empereur Napoleon.png",
+  "verdikti": "OK",
+  "syy": "PD (Dumouza/Lehnert), litografia Napoleonin hautajaisista 15.12.1840: ruumisauto kaaren alla, kaaren huipulla väliaikainen patsasryhmä ja symbolit. Kuvateksti täsmää. Ankkuri tekstin lopussa.",
+  "korjaus": null
+ },
+ {
+  "indeksi": 22,
+  "kohde_id": "Q28785",
+  "tekstilaji": "teksti",
+  "commons_tiedosto": "File:Detail of Basilique du Sacré-Cœur de Montmartre (49462523211).jpg",
+  "verdikti": "OK",
+  "syy": "CC BY-SA 2.0 (Fernandes) täsmää. Kupolirummun vaaleat kaariaukot ja kivipinta tarkka vaakakuva; Abadien rakennus PD.",
+  "korjaus": null
+ },
+ {
+  "indeksi": 23,
+  "kohde_id": "Q28785",
+  "tekstilaji": "teksti",
+  "commons_tiedosto": "File:16-10-19, consécration du Sacré-Coeur - btv1b530304460.jpg",
+  "verdikti": "OK",
+  "syy": "PD (Agence Rol, 16.10.1919). Papisto ja kansa basilikan kyljellä, kulkue; kuvassa Rol-arkistonumeroita, ei vesileimaa. 'edessä' hieman löyhä mutta ok.",
+  "korjaus": null
+ },
+ {
+  "indeksi": 24,
+  "kohde_id": "Q28785",
+  "tekstilaji": "teksti",
+  "commons_tiedosto": "File:Master of Sir John Fastolf, Saint Denis Holding His Head - Getty Museum.jpg",
+  "verdikti": "OK",
+  "syy": "PD (Getty, n. 1430-40). Pyhä Dionysios kantaa päätään, enkelit mukana; pystykuva mutta pieni miniatyyri rajautuu hyvin. Ankkuri tekstin lopun tuntumassa.",
+  "korjaus": null
+ },
+ {
+  "indeksi": 25,
+  "kohde_id": "Q28785",
+  "tekstilaji": "lyhyt",
+  "commons_tiedosto": "File:Paris view from Sacre Coeur DSC 0371.JPG",
+  "verdikti": "OK",
+  "syy": "CC BY-SA 3.0 (Pline) täsmää. Näkymä kupolin parvekkeelta Pariisin yli horisonttiin, selkeä vaakakuva. Ankkuri tekstin lopussa.",
+  "korjaus": null
+ },
+ {
+  "indeksi": 26,
+  "kohde_id": "Q23402",
+  "tekstilaji": "teksti",
+  "commons_tiedosto": "File:Gare d'Orsay vue générale du hall.jpg",
+  "verdikti": "OK",
+  "syy": "PD (Meurisse, 1920). Asemahalli lasiholvin alla, hämärä mutta tunnistettava; arkistonumeroita kuvassa, ei vesileimaa.",
+  "korjaus": null
+ },
+ {
+  "indeksi": 27,
+  "kohde_id": "Q23402",
+  "tekstilaji": "teksti",
+  "commons_tiedosto": "File:View to Montmartre, as seen through the clock in the cafeteria of the Musee d'Orsay, 1987.jpg",
+  "verdikti": "OK",
+  "syy": "CC BY 3.0 (Neworion) täsmää. Kellotaulun läpi Sacré-Cœur ja pyörä; Orsayn 1900-luvun kello on PD. Hieman matalaresoluutioinen (1156 px) mutta riittää.",
+  "korjaus": null
+ },
+ {
+  "indeksi": 28,
+  "kohde_id": "Q23402",
+  "tekstilaji": "lyhyt",
+  "commons_tiedosto": "File:Musee d Orsay main hall Paris 2023 dllu.jpg",
+  "verdikti": "KORJAA",
+  "syy": "CC BY-SA 4.0 (dllu) ja mitat täsmäävät, kuva on erinomainen ja osuu. Riski: keskihallin nykyinen sisustus (kivikuutiot, parvet) on Gae Aulentin 1980-luvun työ (tekijänoikeus voimassa, Ranskassa ei panoraamavapautta sisätiloille). Kuvaa ei ole hylätty varmuudella, mutta omistajan/Päätoimittajan pitää hyväksyä riski tai vaihtaa kuva.",
+  "korjaus": "Päätä riskistä; vaihtoehto: rajaa lasiholviin ja Carpeaux'n veistokseen"
+ },
+ {
+  "indeksi": 29,
+  "kohde_id": "Q23402",
+  "tekstilaji": "lyhyt",
+  "commons_tiedosto": "File:Restaurant of the Musée d'Orsay (52257045593).jpg",
+  "verdikti": "OK",
+  "syy": "CC BY-SA 2.0 (Scottow) täsmää. Kullattu Belle Époque -sali kattokruunuineen; nykyaikaiset Campana-tyyppiset tuolit näkyvät, mutta sivuseikkana (matala riski). Ankkuri tekstin lopussa.",
+  "korjaus": null
+ },
+ {
+  "indeksi": 30,
+  "kohde_id": "Q550",
+  "tekstilaji": "teksti",
+  "commons_tiedosto": "File:Arc de Triomphe (Paris) - Sunset - 2008-05-06-20-04-40.jpg",
+  "verdikti": "OK",
+  "syy": "CC BY-SA 3.0 (Coyau; kaksoislisenssi GFDL, CC BY-SA kelpaa). Aurinko laskee Riemukaaren holviin Champs-Élysées'n päässä. Etualalla liikennettä ja pimeää, mutta aihe on selvä; La Défensen kaari ei näy.",
+  "korjaus": null
+ },
+ {
+  "indeksi": 31,
+  "kohde_id": "Q550",
+  "tekstilaji": "teksti",
+  "commons_tiedosto": "File:Paris - Plan de Turgot Champs Elysées.jpg",
+  "verdikti": "OK",
+  "syy": "PD (Turgot'n kartta 1739). Champs-Élysées'n puukuja ja nimi 'CHAMPS ELIZEES' näkyvät selvästi. Kartta on 1739, kuvateksti sanoo niin; ankkuri koskee vuotta 1667, sopiva aikalaiskuva.",
+  "korjaus": null
+ },
+ {
+  "indeksi": 32,
+  "kohde_id": "Q550",
+  "tekstilaji": "teksti",
+  "commons_tiedosto": "File:Champs-Elysees Bastille Day 2013 Paris t090858.jpg",
+  "verdikti": "KORJAA",
+  "syy": "CC BY 2.5 (Nguyen) täsmää, hyvä vaakakuva. Kuva esittää paraatia edeltäviä joukkoja ja johtoajoneuvoa kuvaajaa kohti, Riemukaari taustalla; 'paraati Riemukaarta kohti' antaa väärän suunnan (paraati kulkee Riemukaarelta Concordelle).",
+  "korjaus": "Paraatin joukot Champs-Élysées'llä, taustalla Riemukaari"
+ },
+ {
+  "indeksi": 33,
+  "kohde_id": "Q550",
+  "tekstilaji": "lyhyt",
+  "commons_tiedosto": "File:Les promenades de Paris. Les Champs Elysées. QB.424.jpg",
+  "verdikti": "OK",
+  "syy": "CC0 (Carnavalet). Litografia: vaunut, ratsastajat ja hienosti pukeutunut väki puistokadulla. Kuvassa leveä paperireunus ja painettu otsikko 'Les promenades de Paris' (osa teosta); rajaus kuva-alueeseen suositeltava.",
+  "korjaus": null
+ },
+ {
+  "indeksi": 34,
+  "kohde_id": "Q189503",
+  "tekstilaji": "teksti",
+  "commons_tiedosto": "File:The pyramid at the top of the Obelisk Luxor.jpg",
+  "verdikti": "OK",
+  "syy": "CC BY-SA 4.0 (Davidphenry) täsmää. Kullattu huippu ja hieroglyfit tarkasti; pystykuva mutta obeliski pystysuuntainen. Kullattu huippu 1998 on restaurointi, ei omaperäinen taideteos (matala riski).",
+  "korjaus": null
+ }
+]
