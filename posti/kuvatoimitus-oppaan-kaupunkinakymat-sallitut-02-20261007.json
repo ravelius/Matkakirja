@@ -1,0 +1,1154 @@
+{
+  "sourceCommit": "9ec0418c925144f71ea5efa719e3e44a812bd2ea",
+  "sourceBlob": "cae06d7ce6c3f43f537ffa97175ac38674ebbbc5",
+  "source": "posti/sisaltokirjuri-codex-oppaan-kaupunkinakymat-sallitut-25-20261007.md",
+  "sourceReadInFull": true,
+  "date": "2026-10-07",
+  "batch": "02",
+  "cityIds": [
+    "lissabon",
+    "firenze",
+    "ateena",
+    "amsterdam",
+    "tukholma"
+  ],
+  "acceptedImages": 5,
+  "style": "photorealistic-real-camera-look",
+  "tool": "built-in image_gen",
+  "productionDimensions": [
+    1536,
+    1024
+  ],
+  "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+  "reviewFirstThree": [
+    "lissabon",
+    "firenze",
+    "ateena"
+  ],
+  "comparison": {
+    "file": "comparison-batch02.jpg",
+    "r2Key": "julisteet/herokoe/20261007/comparison-batch02.jpg",
+    "url": "https://media.matkakirja.app/julisteet/herokoe/20261007/comparison-batch02.jpg",
+    "sha256": "b01c305bdb16ecc1974d863b04dfebf295a17d4fe0e117eb916d33e614cf775c",
+    "bytes": 335432,
+    "http": 200,
+    "mime": "image/jpeg",
+    "cors": "https://matkakirja.app",
+    "byteExactReadback": true
+  },
+  "assets": [
+    {
+      "id": "lissabon",
+      "cityName": "Lissabon",
+      "subject": "São Jorgen linna ja sen lähiympäristö",
+      "subjectCoordinatesApprox": [
+        38.71394,
+        -9.1335
+      ],
+      "subjectDistanceApproxMetres": 843,
+      "file": "hero-lissabon.png",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/lissabon/production/hero-lissabon.png",
+      "subjectRadiusPassApprox": true,
+      "coordinateProof": {
+        "method": "approved plan approximate subject point; reference camera GPS where available",
+        "landmarkCoordinateVerifiedFromMetadata": false,
+        "referenceCameraGPS": [
+          {
+            "nimi": "File:Lisbon Castelo de São Jorge BW 2018-10-03 11-13-09.jpg",
+            "lat": "38.713457",
+            "lon": "-9.133280"
+          },
+          {
+            "nimi": "File:Castelo de São Jorge, Lisbon, 20250604 1706 9397.jpg",
+            "lat": "38.713864",
+            "lon": "-9.134088"
+          }
+        ],
+        "caveat": "Camera GPS does not claim exact object coordinates."
+      },
+      "caption": "São Jorgen linnan kivimuurit, sisäänkäyntisilta ja oliivipuut Lissabonissa. Havainnekuva.",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "metadataText": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "viitteet": [
+        {
+          "nimi": "File:Lisbon Castelo de São Jorge BW 2018-10-03 11-13-09.jpg",
+          "tekija": "Berthold Werner",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Lisbon_Castelo_de_S%C3%A3o_Jorge_BW_2018-10-03_11-13-09.jpg"
+        },
+        {
+          "nimi": "File:Castelo de São Jorge, Lisbon, 20250604 1706 9397.jpg",
+          "tekija": "Jakub Hałun",
+          "lisenssi": "CC BY 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Castelo_de_S%C3%A3o_Jorge,_Lisbon,_20250604_1706_9397.jpg"
+        }
+      ],
+      "referenceMetadata": [
+        {
+          "nimi": "File:Lisbon Castelo de São Jorge BW 2018-10-03 11-13-09.jpg",
+          "tekija": "Berthold Werner",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Lisbon_Castelo_de_S%C3%A3o_Jorge_BW_2018-10-03_11-13-09.jpg",
+          "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Lisbon_Castelo_de_S%C3%A3o_Jorge_BW_2018-10-03_11-13-09.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ec/Lisbon_Castelo_de_S%C3%A3o_Jorge_BW_2018-10-03_11-13-09.jpg/1280px-Lisbon_Castelo_de_S%C3%A3o_Jorge_BW_2018-10-03_11-13-09.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/lissabon/references/ref-0bc06630acb0a757.jpg",
+          "originalDimensions": [
+            6475,
+            6360
+          ],
+          "downloadDimensions": [
+            1280,
+            1257
+          ],
+          "sha256": "0bc06630acb0a757d00c5810a915ee9e69fff6f35f2bdac5a8d72cabf4db06e6",
+          "originalSha1": "c61b8710ebb86063f8ec4bbf89d39f5a066f13dc",
+          "apiPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/lissabon/references/api.json",
+          "apiSha256": "c30770ced9c7066d34d6c214eca6156e560c29fd634dccbc6841d9a8f824614b",
+          "categories": [
+            "Category:Blue sky in Portugal",
+            "Category:CC-BY-SA-4.0",
+            "Category:Entrance to the Castelejo at Castelo de São Jorge",
+            "Category:Files with coordinates missing SDC location of creation",
+            "Category:Images from Wiki Loves Monuments 2019",
+            "Category:Images from Wiki Loves Monuments 2019 in Portugal",
+            "Category:Images from Wiki Loves Monuments 2019 in Portugal - Lisboa",
+            "Category:Images from Wiki Loves Monuments missing SDC depicts",
+            "Category:Images from Wiki Loves Monuments missing SDC location of creation",
+            "Category:October 2018 in Lisbon",
+            "Category:Photographs by User:Berthold Werner/Ansichtssachen",
+            "Category:Photographs by User:Berthold Werner/Portugal/Lissabon",
+            "Category:Photographs by User:Berthold Werner/Themen/Burgen Festungen Schlösser Villen",
+            "Category:Portugal photographs taken on 2018-10-03",
+            "Category:Quality images",
+            "Category:Quality images by User:Berthold Werner",
+            "Category:Quality images from Wiki Loves Monuments Portugal 2019",
+            "Category:Quality images missing SDC depicts",
+            "Category:Quality images of Santa Maria Maior (Lisbon)",
+            "Category:Self-published work"
+          ],
+          "metadata": {
+            "GPSLatitude": "38.713457",
+            "GPSLongitude": "-9.133280",
+            "GPSMapDatum": "WGS-84",
+            "ImageDescription": "Portugal, Lisbon, Castelo de São Jorge",
+            "DateTimeOriginal": "2018-10-03 11:13:09"
+          },
+          "viewed": false
+        },
+        {
+          "nimi": "File:Castelo de São Jorge, Lisbon, 20250604 1706 9397.jpg",
+          "tekija": "Jakub Hałun",
+          "lisenssi": "CC BY 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Castelo_de_S%C3%A3o_Jorge,_Lisbon,_20250604_1706_9397.jpg",
+          "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/5/56/Castelo_de_S%C3%A3o_Jorge%2C_Lisbon%2C_20250604_1706_9397.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/56/Castelo_de_S%C3%A3o_Jorge%2C_Lisbon%2C_20250604_1706_9397.jpg/1280px-Castelo_de_S%C3%A3o_Jorge%2C_Lisbon%2C_20250604_1706_9397.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/lissabon/references/ref-38c055ebdec6a6d2.jpg",
+          "originalDimensions": [
+            3840,
+            4360
+          ],
+          "downloadDimensions": [
+            1280,
+            1453
+          ],
+          "sha256": "38c055ebdec6a6d2a68e9de8f8dc781f84b23a303cec013c1d7a653cc5d02843",
+          "originalSha1": "dd76e71a704fba07b81c4349c0567bbff81729e1",
+          "apiPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/lissabon/references/api.json",
+          "apiSha256": "c30770ced9c7066d34d6c214eca6156e560c29fd634dccbc6841d9a8f824614b",
+          "categories": [],
+          "metadata": {
+            "GPSLatitude": "38.713864",
+            "GPSLongitude": "-9.134088",
+            "GPSMapDatum": "WGS-84",
+            "ImageDescription": "Western view of the Castelejo of Castelo de São Jorge, Lisbon",
+            "DateTimeOriginal": "2025-06-04 17:06:01"
+          },
+          "viewed": false
+        }
+      ],
+      "generationPrompt": "Use case: photorealistic-natural. Generate a COMPLETELY NEW independent landscape 1536x1024 modern Lisbon hero, never edit a prior generated candidate. Two inputs are real-photo geometry references of São Jorge Castelejo, entrance tower/ramp and western walls/olive grove; use both for stonework and real structure relationships, not composition copying. CAMERA IS THE ESSENTIAL REQUIREMENT: floating camera 9 METRES ABOVE THE COBBLED ENTRANCE PATH, level with the middle/upper half of the main tower. Clearly look DOWN about 15 degrees. See the TOP SURFACES of crenellations, the broad top of the ramp, courtyard/path below, and some roofless fortification interior. NOT a ground eye-height view, NOT upward-looking facade view. Fortress is large, complete recognizable square crenellated tower, weathered rough walls and entrance ramp all visible. Use pale worn stone rectangular towers and squared crenellations, not fantasy reconstructed castle. Immediate olive trees, actual cobbled paths and dry slopes only. No invented nearby city skyline, river or new houses. Original close elevated composition. Warm late-afternoon natural directional light, physically plausible full-frame 50mm camera and neutral natural colour, rough stone texture, restrained real photographic exposure, no HDR/painting/stylization. Tiny ordinary visitors. No lettering, signs, logos, flags, watermark or border. Opaque output.",
+      "generationTool": "built-in image_gen",
+      "generatedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/lissabon/production/original-generated.png",
+      "nativeDimensions": [
+        1536,
+        1024
+      ],
+      "deliveryDimensions": [
+        1536,
+        1024
+      ],
+      "productionDimensions": [
+        1536,
+        1024
+      ],
+      "format": "PNG",
+      "colorMode": "RGB",
+      "colorSpace": "sRGB",
+      "opaque": true,
+      "sha256": "0c60b23034f3a26c3c59b3cd28aedfd3ec7e8400886a83c4d90fbb2c1f0e32cb",
+      "camera": {
+        "preset": "VAKIO",
+        "heightApproxMetresAbovePathRequested": 9,
+        "downwardTiltDegreesRequested": 15,
+        "view": "elevated fortification midpoint with tops of battlements visible"
+      },
+      "timeOfDay": "warm late afternoon",
+      "referenceVisualQA": {
+        "reviewedCount": 2,
+        "modernExteriorSameSubject": true,
+        "differentCreators": true,
+        "originalLongSideAtLeast1000": true,
+        "identity": "same Castelejo entrance and western wall, two angles and creators"
+      },
+      "visualQA": {
+        "status": "production agent inspected native, final 1536x1024 and 480px preview; root QA pending",
+        "recognizableSubject": true,
+        "geometry": "square crenellated towers, stone entrance ramp and walls",
+        "context": "olive paths and immediate fortification only",
+        "noText": true,
+        "people": "tiny tourists",
+        "noStylization": true,
+        "correction": "Whole-new generation for root-rejected low camera; old saved in rejected-camera",
+        "rootDecision": "accepted by root after native inspection and reference comparison"
+      },
+      "technicalQA": {
+        "dimensions1536x1024": true,
+        "pngRGB": true,
+        "srgbICC": true,
+        "opaque": true,
+        "metadataDescriptionAndSource": true
+      },
+      "deliveryState": "local candidate awaiting root QA; not uploaded/integrated/published",
+      "r2Key": "julisteet/herokoe/hero-lissabon.png",
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-lissabon.png",
+      "bytes": 3699445,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "parentQA": {
+        "reviewer": "root",
+        "sha256": "0c60b23034f3a26c3c59b3cd28aedfd3ec7e8400886a83c4d90fbb2c1f0e32cb",
+        "nativeViewed": true,
+        "referenceComparisonViewed": true,
+        "photorealism": true,
+        "recognisableLandmarkAndImmediateContext": true,
+        "technicalValidationAtUpload": true,
+        "approvedForDelivery": true,
+        "limitations": {
+          "status": "production agent inspected native, final 1536x1024 and 480px preview; root QA pending",
+          "recognizableSubject": true,
+          "geometry": "square crenellated towers, stone entrance ramp and walls",
+          "context": "olive paths and immediate fortification only",
+          "noText": true,
+          "people": "tiny tourists",
+          "noStylization": true,
+          "correction": "Whole-new generation for root-rejected low camera; old saved in rejected-camera",
+          "rootDecision": "accepted by root after native inspection and reference comparison"
+        },
+        "cameraDecision": "low elevated view accepted"
+      },
+      "editorAcceptance": "pending",
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "firenze",
+      "cityName": "Firenze",
+      "subject": "Ponte Vecchio ja Arno",
+      "file": "hero-firenze.png",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/firenze/production/hero-firenze.png",
+      "subjectCoordinatesApprox": [
+        43.76797,
+        11.25314
+      ],
+      "subjectDistanceApproxMetres": 667,
+      "subjectRadiusPassApprox": true,
+      "coordinateProof": {
+        "method": "approved plan approximate object point; reference GPS camera locations support proximity only",
+        "landmarkCoordinateVerifiedFromMetadata": false,
+        "referenceCameraGPS": [
+          {
+            "nimi": "File:Ponte Vecchio at sunset from Piazzale Michelangelo Florence 2023 dllu.jpg",
+            "lat": "43.763206",
+            "lon": "11.264107"
+          },
+          {
+            "nimi": "File:Apartments on the Ponte Vecchio. Florence, Italy.jpg",
+            "lat": "43.767950",
+            "lon": "11.254762"
+          }
+        ],
+        "caveat": "GPS locations are photo camera positions, not object coordinates."
+      },
+      "caption": "Ponte Vecchion kivikaaret ja sillalle rakennetut talot Arnon yllä Firenzessä. Havainnekuva.",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "metadataText": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "viitteet": [
+        {
+          "nimi": "File:Ponte Vecchio at sunset from Piazzale Michelangelo Florence 2023 dllu.jpg",
+          "tekija": "Daniel Lu (User:dllu)",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Ponte_Vecchio_at_sunset_from_Piazzale_Michelangelo_Florence_2023_dllu.jpg"
+        },
+        {
+          "nimi": "File:Apartments on the Ponte Vecchio. Florence, Italy.jpg",
+          "tekija": "Ввласенко",
+          "lisenssi": "CC BY-SA 3.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Apartments_on_the_Ponte_Vecchio._Florence,_Italy.jpg"
+        }
+      ],
+      "referenceMetadata": [
+        {
+          "nimi": "File:Ponte Vecchio at sunset from Piazzale Michelangelo Florence 2023 dllu.jpg",
+          "tekija": "Daniel Lu (User:dllu)",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Ponte_Vecchio_at_sunset_from_Piazzale_Michelangelo_Florence_2023_dllu.jpg",
+          "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Ponte_Vecchio_at_sunset_from_Piazzale_Michelangelo_Florence_2023_dllu.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a2/Ponte_Vecchio_at_sunset_from_Piazzale_Michelangelo_Florence_2023_dllu.jpg/1280px-Ponte_Vecchio_at_sunset_from_Piazzale_Michelangelo_Florence_2023_dllu.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/firenze/references/ref-5730882076f6483b.jpg",
+          "originalDimensions": [
+            11514,
+            8567
+          ],
+          "downloadDimensions": [
+            1280,
+            952
+          ],
+          "sha256": "5730882076f6483b83ce959a012e0c1e6561a704c69b5971141afdb6c7d4bc8a",
+          "originalSha1": "d5cf3430b0e8c8675f91c477fe065d97658209e9",
+          "apiPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/firenze/references/api.json",
+          "apiSha256": "35eb0fecdaaedc3b156fdf64cea4e853f9c523c8300e533e9d0a0cb56ee84cd4",
+          "categories": [
+            "Category:CC-BY-SA-4.0",
+            "Category:Dusk in Tuscany",
+            "Category:Exposure time 1/13 sec",
+            "Category:Featured pictures by dllu",
+            "Category:Featured pictures of Florence",
+            "Category:Featured pictures on Wikimedia Commons"
+          ],
+          "metadata": {
+            "GPSLatitude": "43.763206",
+            "GPSLongitude": "11.264107",
+            "GPSMapDatum": "WGS-84",
+            "ImageDescription": "Ponte Vecchio spanning the Arno River at sunset, viewed from Piazzale Michelangelo in Florence, Italy, 17 February 2023.",
+            "DateTimeOriginal": "2023-02-17"
+          },
+          "viewed": false
+        },
+        {
+          "nimi": "File:Apartments on the Ponte Vecchio. Florence, Italy.jpg",
+          "tekija": "Ввласенко",
+          "lisenssi": "CC BY-SA 3.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Apartments_on_the_Ponte_Vecchio._Florence,_Italy.jpg",
+          "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/f/ff/Apartments_on_the_Ponte_Vecchio._Florence%2C_Italy.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/Apartments_on_the_Ponte_Vecchio._Florence%2C_Italy.jpg/1280px-Apartments_on_the_Ponte_Vecchio._Florence%2C_Italy.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/firenze/references/ref-5eaf10e7afc48ff6.jpg",
+          "originalDimensions": [
+            5640,
+            10037
+          ],
+          "downloadDimensions": [
+            1280,
+            2278
+          ],
+          "sha256": "5eaf10e7afc48ff69b5afa71a2f14d5a4584e23704b8c9c87567cc2921c92c53",
+          "originalSha1": "8e86a4e12edc70d1207a319228fee5c735b10d01",
+          "apiPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/firenze/references/api.json",
+          "apiSha256": "35eb0fecdaaedc3b156fdf64cea4e853f9c523c8300e533e9d0a0cb56ee84cd4",
+          "categories": [
+            "Category:Arno River",
+            "Category:CC-BY-SA-3.0",
+            "Category:Files with coordinates missing SDC location of creation",
+            "Category:Houses on Ponte Vecchio (east side)",
+            "Category:Italy photographs taken on 2014-05-08",
+            "Category:May 2014 in Florence",
+            "Category:Photographs by Ввласенко/Volodymyr Vlasenko",
+            "Category:Quality images",
+            "Category:Quality images by Ввласенко",
+            "Category:Quality images missing SDC creator",
+            "Category:Quality images missing SDC depicts",
+            "Category:Quality images of Florence",
+            "Category:Quality images of bridges in Italy",
+            "Category:Self-published work"
+          ],
+          "metadata": {
+            "GPSLatitude": "43.767950",
+            "GPSLongitude": "11.254762",
+            "GPSMapDatum": "WGS-84",
+            "ImageDescription": "Apartments on the Ponte Vecchio. Florence, Italy",
+            "DateTimeOriginal": "2014-05-08 10:36:02"
+          },
+          "viewed": false
+        }
+      ],
+      "generationPrompt": "Use case: photorealistic-natural. Asset: NEW independent city-guide hero of Ponte Vecchio, Florence, present day, landscape 3:2 1536x1024. The two photographs are geometry references, never edit targets: reference 1 shows real bridge and Arno context from east; reference 2 shows the east-side projecting houses, shutters, stone piers and wooden brackets in close detail. Preserve three low segmental stone arches, two actual river piers, irregular ochre houses and terracotta roofs on the bridge, long upper Vasari corridor and central open loggia. Entire bridge dominates frame from a low elevated riverside roof-level camera, roughly 15m over water, gently tilted down about 15 degrees; close east-side three-quarter view, whole bridge and both banks visible. Restrict context to demonstrated Arno stone embankments and immediate buildings; no invented nearby landmarks. Clear fresh morning light, subdued warm stone, green-brown slowly rippling river, natural sky and realistic camera exposure. Original composition and light, do not copy either reference. Real full-frame 50mm photographic appearance, no HDR or painterly stylization. Tiny ordinary people only. No lettering, readable signs, logos, text, watermark or border; no fantastical buildings. Output opaque.",
+      "generationTool": "built-in image_gen",
+      "generatedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/firenze/production/original-generated.png",
+      "nativeDimensions": [
+        1536,
+        1024
+      ],
+      "deliveryDimensions": [
+        1536,
+        1024
+      ],
+      "productionDimensions": [
+        1536,
+        1024
+      ],
+      "format": "PNG",
+      "colorMode": "RGB",
+      "colorSpace": "sRGB",
+      "opaque": true,
+      "sha256": "4a0222df7659144e192fbdca6097364812c5f19abc90fa28ec77943cf7aac453",
+      "camera": {
+        "preset": "VAKIO",
+        "heightApproxMetres": 15,
+        "downwardTiltDegreesRequested": 15,
+        "view": "low roof-height east-side river view"
+      },
+      "timeOfDay": "clear morning",
+      "referenceVisualQA": {
+        "reviewedCount": 2,
+        "modernExteriorSameSubject": true,
+        "differentCreators": true,
+        "originalLongSideAtLeast1000": true,
+        "identity": "bridge-wide context plus east-side houses and pier detail"
+      },
+      "visualQA": {
+        "status": "production agent inspected native, final 1536x1024 and 480px preview; root QA pending",
+        "recognizableSubject": true,
+        "geometry": "three low arches, two piers, projecting houses and long corridor retained",
+        "context": "Arno, close river banks and immediate houses",
+        "noText": true,
+        "people": "small tourists",
+        "noStylization": true,
+        "caveat": "Right riverbank approach reaches frame edge; root to assess whole-landmark framing",
+        "rootDecision": "accepted by root after reference comparison"
+      },
+      "deliveryState": "local candidate awaiting root QA; not uploaded/integrated/published",
+      "technicalQA": {
+        "dimensions1536x1024": true,
+        "pngRGB": true,
+        "srgbICC": true,
+        "opaque": true,
+        "metadataDescriptionAndSource": true
+      },
+      "r2Key": "julisteet/herokoe/hero-firenze.png",
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-firenze.png",
+      "bytes": 2804170,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "parentQA": {
+        "reviewer": "root",
+        "sha256": "4a0222df7659144e192fbdca6097364812c5f19abc90fa28ec77943cf7aac453",
+        "nativeViewed": true,
+        "referenceComparisonViewed": true,
+        "photorealism": true,
+        "recognisableLandmarkAndImmediateContext": true,
+        "technicalValidationAtUpload": true,
+        "approvedForDelivery": true,
+        "limitations": {
+          "status": "production agent inspected native, final 1536x1024 and 480px preview; root QA pending",
+          "recognizableSubject": true,
+          "geometry": "three low arches, two piers, projecting houses and long corridor retained",
+          "context": "Arno, close river banks and immediate houses",
+          "noText": true,
+          "people": "small tourists",
+          "noStylization": true,
+          "caveat": "Right riverbank approach reaches frame edge; root to assess whole-landmark framing",
+          "rootDecision": "accepted by root after reference comparison"
+        },
+        "cameraDecision": "low elevated view accepted"
+      },
+      "editorAcceptance": "pending",
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "ateena",
+      "cityName": "Ateena",
+      "subject": "Akropolis Parthenoneineen",
+      "subjectCoordinatesApprox": [
+        37.97153,
+        23.72575
+      ],
+      "subjectDistanceApproxMetres": 690,
+      "file": "hero-ateena.png",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/ateena/production/hero-ateena.png",
+      "subjectRadiusPassApprox": true,
+      "coordinateProof": {
+        "method": "approved plan approximate subject point; reference camera GPS where available",
+        "landmarkCoordinateVerifiedFromMetadata": false,
+        "referenceCameraGPS": [
+          {
+            "nimi": "File:Parthenon from south.jpg",
+            "lat": "37.971111",
+            "lon": "23.726389"
+          },
+          {
+            "nimi": "File:The Acropolis of Athens with the Parthenon, the Erecththeion and the Mycenean Fountain from Monastiraki Square on March 11, 2020.jpg",
+            "lat": "37.976580",
+            "lon": "23.725800"
+          }
+        ],
+        "caveat": "Camera GPS does not claim exact object coordinates."
+      },
+      "caption": "Akropoliin kallio, Parthenonin rauniot ja Erechtheion Ateenan nykyisten kattojen yllä. Havainnekuva.",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "metadataText": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "viitteet": [
+        {
+          "nimi": "File:Parthenon from south.jpg",
+          "tekija": "Thermos",
+          "lisenssi": "CC BY-SA 2.5",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Parthenon_from_south.jpg"
+        },
+        {
+          "nimi": "File:The Acropolis of Athens with the Parthenon, the Erecththeion and the Mycenean Fountain from Monastiraki Square on March 11, 2020.jpg",
+          "tekija": "George E. Koronaios",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:The_Acropolis_of_Athens_with_the_Parthenon,_the_Erecththeion_and_the_Mycenean_Fountain_from_Monastiraki_Square_on_March_11,_2020.jpg"
+        }
+      ],
+      "referenceMetadata": [
+        {
+          "nimi": "File:Parthenon from south.jpg",
+          "tekija": "Thermos",
+          "lisenssi": "CC BY-SA 2.5",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Parthenon_from_south.jpg",
+          "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8f/Parthenon_from_south.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8f/Parthenon_from_south.jpg/1280px-Parthenon_from_south.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/ateena/references/ref-09bd5bb701eda832.jpg",
+          "originalDimensions": [
+            2345,
+            3519
+          ],
+          "downloadDimensions": [
+            1280,
+            1921
+          ],
+          "sha256": "09bd5bb701eda83222bbfe004409758910169c5a8854db470eac6c18feedb658",
+          "originalSha1": "197a10e623bb9cd9a49c8795db9d08ca02df2f6c",
+          "apiPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/ateena/references/api.json",
+          "apiSha256": "33fbcf5c6677ca16ada5ccf20ea0566af0f088ce3a8af819897e40a224c5c67e",
+          "categories": [
+            "Category:CC-BY-SA-2.5",
+            "Category:Clouds in Athens",
+            "Category:December 2005 in Greece",
+            "Category:Featured pictures of Athens",
+            "Category:Featured pictures on Wikimedia Commons",
+            "Category:Featured pictures on Wikipedia, English",
+            "Category:Featured pictures on Wikipedia, Turkish",
+            "Category:Files with coordinates missing SDC location of creation",
+            "Category:Greece photographs taken on 2005-12-05",
+            "Category:Picture of week on the Czech Wikipedia",
+            "Category:Pictures of the Year (2007)",
+            "Category:Pictures of the Year (candidate)",
+            "Category:Pictures of the day (2007)",
+            "Category:Quality images",
+            "Category:Quality images missing SDC depicts",
+            "Category:Self-published work",
+            "Category:Southern side of the Parthenon",
+            "Category:Taken with Canon EOS 20D",
+            "Category:The Parthenon in 2005"
+          ],
+          "metadata": {
+            "GPSLatitude": "37.971111",
+            "GPSLongitude": "23.726389",
+            "GPSMapDatum": "WGS-84",
+            "ImageDescription": "Picture of Parthenon I took in late afternoon.",
+            "DateTimeOriginal": "5 December 2005 (according to Exif data)"
+          },
+          "viewed": false
+        },
+        {
+          "nimi": "File:The Acropolis of Athens with the Parthenon, the Erecththeion and the Mycenean Fountain from Monastiraki Square on March 11, 2020.jpg",
+          "tekija": "George E. Koronaios",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:The_Acropolis_of_Athens_with_the_Parthenon,_the_Erecththeion_and_the_Mycenean_Fountain_from_Monastiraki_Square_on_March_11,_2020.jpg",
+          "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5b/The_Acropolis_of_Athens_with_the_Parthenon%2C_the_Erecththeion_and_the_Mycenean_Fountain_from_Monastiraki_Square_on_March_11%2C_2020.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5b/The_Acropolis_of_Athens_with_the_Parthenon%2C_the_Erecththeion_and_the_Mycenean_Fountain_from_Monastiraki_Square_on_March_11%2C_2020.jpg/1280px-The_Acropolis_of_Athens_with_the_Parthenon%2C_the_Erecththeion_and_the_Mycenean_Fountain_from_Monastiraki_Square_on_March_11%2C_2020.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/ateena/references/ref-f8c3590132f9790a.jpg",
+          "originalDimensions": [
+            6000,
+            4000
+          ],
+          "downloadDimensions": [
+            1280,
+            853
+          ],
+          "sha256": "f8c3590132f9790a1b0e9855fc619e1d0b43a172fe834ee90b73d8ff8d1f0c00",
+          "originalSha1": "2385b86b44b283302cdb7f7fde0197a89655ac9e",
+          "apiPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/ateena/references/api.json",
+          "apiSha256": "33fbcf5c6677ca16ada5ccf20ea0566af0f088ce3a8af819897e40a224c5c67e",
+          "categories": [
+            "Category:2020 in Athens"
+          ],
+          "metadata": {
+            "GPSLatitude": "37.976580",
+            "GPSLongitude": "23.725800",
+            "GPSMapDatum": "WGS-84",
+            "ImageDescription": "The Acropolis of Athens with the Parthenon, the Erechththeion and the Mycenean Fountain from Monastiraki Square on March 11, 2020.",
+            "DateTimeOriginal": "2020-03-11 10:55:54"
+          },
+          "viewed": false
+        }
+      ],
+      "generationPrompt": "Use case: photorealistic-natural. NEW independent present-day Athens city guide hero, 1536x1024 landscape 3:2 opaque. TWO images are geometry references, not targets: first real Parthenon south-side Doric stone/entablature detail; second actual full Acropolis north face from Monastiraki with Parthenon at left and Erechtheion near centre. Main subject is Acropolis rock and Parthenon in their real ruined present-day state, no reconstruction of missing roof or columns. Create original close north-side low elevated rooftop-height view about 20m ABOVE Monastiraki roofline, approximately level with the cliff midpoint, gently down about 15 degrees toward rock base, not ground view or aerial overhead. Dominant rocky plateau fills most of frame with whole Parthenon skyline visible; accurately placed Erechtheion in front/right of Parthenon as reference north view. Retain visible restoration scaffold at Parthenon east side, varied damaged pale marble, actual craggy north cliff with vegetation and retaining walls. Restrict context to narrow lower strip of demonstrated cream/terracotta Monastiraki buildings, no invented landmark structures. Soft bright late-morning after-cloud light, natural muted Greek stone, plausible full-frame 70mm photography, realistic exposure and atmosphere, no HDR, painting, dramatic cinematic colour or fantasy. Tiny visitors only on plateau. No text, legible signs, logo, watermark or frame. Independent composition.",
+      "generationTool": "built-in image_gen",
+      "generatedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/ateena/production/original-generated.png",
+      "nativeDimensions": [
+        1536,
+        1024
+      ],
+      "deliveryDimensions": [
+        1536,
+        1024
+      ],
+      "productionDimensions": [
+        1536,
+        1024
+      ],
+      "format": "PNG",
+      "colorMode": "RGB",
+      "colorSpace": "sRGB",
+      "opaque": true,
+      "sha256": "1f00609e163541b0860e3f82ae7ded1d930daade61066c04270ffc3745bcdf60",
+      "camera": {
+        "preset": "VAKIO",
+        "heightApproxMetresAboveRooflineRequested": 20,
+        "downwardTiltDegreesRequested": 15,
+        "view": "low elevated north cliff-midpoint view"
+      },
+      "timeOfDay": "soft bright late morning",
+      "referenceVisualQA": {
+        "reviewedCount": 2,
+        "modernExteriorSameSubject": true,
+        "differentCreators": true,
+        "originalLongSideAtLeast1000": true,
+        "identity": "Parthenon south column detail plus north full plateau; rejected Nike reference never used"
+      },
+      "visualQA": {
+        "status": "production agent inspected native, final 1536x1024 and 480px preview; root QA pending",
+        "recognizableSubject": true,
+        "geometry": "ruined Parthenon long side, northern plateau wall and Erechtheion; restoration scaffold retained",
+        "context": "restrained Monastiraki roofs below north cliff",
+        "noText": true,
+        "people": "tiny plateau visitors",
+        "noStylization": true,
+        "caveat": "Camera looks nearly horizontal to high cliff; roof elevation must be judged relative to lower city",
+        "rootDecision": "accepted by root after native inspection and reference comparison"
+      },
+      "technicalQA": {
+        "dimensions1536x1024": true,
+        "pngRGB": true,
+        "srgbICC": true,
+        "opaque": true,
+        "metadataDescriptionAndSource": true
+      },
+      "deliveryState": "local candidate awaiting root QA; not uploaded/integrated/published",
+      "r2Key": "julisteet/herokoe/hero-ateena.png",
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-ateena.png",
+      "bytes": 3097687,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "parentQA": {
+        "reviewer": "root",
+        "sha256": "1f00609e163541b0860e3f82ae7ded1d930daade61066c04270ffc3745bcdf60",
+        "nativeViewed": true,
+        "referenceComparisonViewed": true,
+        "photorealism": true,
+        "recognisableLandmarkAndImmediateContext": true,
+        "technicalValidationAtUpload": true,
+        "approvedForDelivery": true,
+        "limitations": {
+          "status": "production agent inspected native, final 1536x1024 and 480px preview; root QA pending",
+          "recognizableSubject": true,
+          "geometry": "ruined Parthenon long side, northern plateau wall and Erechtheion; restoration scaffold retained",
+          "context": "restrained Monastiraki roofs below north cliff",
+          "noText": true,
+          "people": "tiny plateau visitors",
+          "noStylization": true,
+          "caveat": "Camera looks nearly horizontal to high cliff; roof elevation must be judged relative to lower city",
+          "rootDecision": "accepted by root after native inspection and reference comparison"
+        },
+        "cameraDecision": "low elevated view accepted"
+      },
+      "editorAcceptance": "pending",
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "amsterdam",
+      "cityName": "Amsterdam",
+      "subject": "Prinsengracht Westerkerkin tuntumassa",
+      "subjectCoordinatesApprox": [
+        52.37438,
+        4.88339
+      ],
+      "subjectDistanceApproxMetres": 1505,
+      "file": "hero-amsterdam.png",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/amsterdam/production/hero-amsterdam.png",
+      "subjectRadiusPassApprox": true,
+      "coordinateProof": {
+        "method": "approved plan approximate subject point; reference camera GPS where available",
+        "landmarkCoordinateVerifiedFromMetadata": false,
+        "referenceCameraGPS": [
+          {
+            "nimi": "File:Amsterdam Westerkerk Blick vom Turm auf die Prinsengracht 2.jpg",
+            "lat": null,
+            "lon": null
+          },
+          {
+            "nimi": "File:Prinsengracht Amsterdam.jpg",
+            "lat": "52.362891",
+            "lon": "4.887886"
+          }
+        ],
+        "caveat": "Camera GPS does not claim exact object coordinates."
+      },
+      "caption": "Prinsengrachtin kanaali, rantatalot ja pieni silta Amsterdamissa. Havainnekuva.",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "metadataText": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "viitteet": [
+        {
+          "nimi": "File:Amsterdam Westerkerk Blick vom Turm auf die Prinsengracht 2.jpg",
+          "tekija": "Zairon",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Amsterdam_Westerkerk_Blick_vom_Turm_auf_die_Prinsengracht_2.jpg"
+        },
+        {
+          "nimi": "File:Prinsengracht Amsterdam.jpg",
+          "tekija": "Aforaseem",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Prinsengracht_Amsterdam.jpg"
+        }
+      ],
+      "referenceMetadata": [
+        {
+          "nimi": "File:Amsterdam Westerkerk Blick vom Turm auf die Prinsengracht 2.jpg",
+          "tekija": "Zairon",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Amsterdam_Westerkerk_Blick_vom_Turm_auf_die_Prinsengracht_2.jpg",
+          "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f8/Amsterdam_Westerkerk_Blick_vom_Turm_auf_die_Prinsengracht_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f8/Amsterdam_Westerkerk_Blick_vom_Turm_auf_die_Prinsengracht_2.jpg/1280px-Amsterdam_Westerkerk_Blick_vom_Turm_auf_die_Prinsengracht_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/amsterdam/references/ref-fb9a8151e909cf8b.jpg",
+          "originalDimensions": [
+            4560,
+            3406
+          ],
+          "downloadDimensions": [
+            1280,
+            956
+          ],
+          "sha256": "fb9a8151e909cf8b6bea16de8e51959c7262ca815f411d156adb35d0b264d720",
+          "originalSha1": "b9dc5bea94cbbf93adb4ee5a2574b1939efa5fc7",
+          "apiPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/amsterdam/references/api.json",
+          "apiSha256": "5916f90501220e36d64d054586446f6e265dacf6cc4b115dac6add6b76a156ad",
+          "categories": [
+            "Category:CC-BY-SA-4.0",
+            "Category:Netherlands photographs taken on 2017-09-23",
+            "Category:Prinsengracht, Amsterdam",
+            "Category:Self-published work",
+            "Category:September 2017 in Amsterdam",
+            "Category:Taken with Panasonic Lumix DMC-G3",
+            "Category:Views from Westerkerk (Amsterdam)"
+          ],
+          "metadata": {
+            "ImageDescription": "View from the Tower of the West Church to the Prince's Canal, Amsterdam, Province of North Holland, Netherlands",
+            "DateTimeOriginal": "2017-09-23 14:17:22"
+          },
+          "viewed": false
+        },
+        {
+          "nimi": "File:Prinsengracht Amsterdam.jpg",
+          "tekija": "Aforaseem",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Prinsengracht_Amsterdam.jpg",
+          "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/0/00/Prinsengracht_Amsterdam.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Prinsengracht_Amsterdam.jpg/1280px-Prinsengracht_Amsterdam.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/amsterdam/references/ref-789f5e6bb77add7f.jpg",
+          "originalDimensions": [
+            3072,
+            2304
+          ],
+          "downloadDimensions": [
+            1280,
+            960
+          ],
+          "sha256": "789f5e6bb77add7f53694f5bf88feb540ce6ad05d235e431607912cb4b5af7ce",
+          "originalSha1": "eca567ee33b2575bd412a479d1e2be39892016b4",
+          "apiPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/amsterdam/references/api.json",
+          "apiSha256": "5916f90501220e36d64d054586446f6e265dacf6cc4b115dac6add6b76a156ad",
+          "categories": [
+            "Category:2008 in Amsterdam",
+            "Category:CC-BY-SA-4.0,3.0,2.5,2.0,1.0",
+            "Category:Canalside houses in Amsterdam",
+            "Category:GFDL",
+            "Category:License migration redundant",
+            "Category:Night in Amsterdam",
+            "Category:Prinsengracht, Amsterdam",
+            "Category:Quality images",
+            "Category:Quality images missing SDC depicts",
+            "Category:Quality images missing SDC inception",
+            "Category:Quality images of Amsterdam",
+            "Category:Self-published work",
+            "Category:Taken with Canon PowerShot A570 IS"
+          ],
+          "metadata": {
+            "GPSLatitude": "52.362891",
+            "GPSLongitude": "4.887886",
+            "GPSMapDatum": "WGS-84",
+            "ImageDescription": "Canal at Prinsengracht street, Amsterdam",
+            "DateTimeOriginal": "17-Feb-2008, Amsterdam"
+          },
+          "viewed": false
+        }
+      ],
+      "generationPrompt": "Use case: photorealistic-natural. Generate one completely NEW present-day Amsterdam Prinsengracht city-guide hero, landscape 3:2 1536x1024, opaque. Input images are two photographers' reference photos of the same Prinsengracht canal, first shows canal by Westerkerk with actual gabled house rows, quay trees and narrow footbridge, second shows canal houses at dusk from a different stretch. Use these only for authentic canal dimensions, house types and urban relationships, not as edit targets or copied compositions. Main subject is Prinsengracht canal and its close brick gabled houses, not a portrait of any church. Rooftop-height LOW elevated camera roughly 15m over quay, level with middle of house facades, gently downward 15 degrees, looking along canal toward the short crossing bridge near Westerkerk. Canal and nearest identifiable narrow house facades dominate, trees and everyday moored boats balanced foreground, only immediate streets and distant roofs. Do not invent Westerkerk tower or other skyline buildings outside demonstrated view. Early blue hour with pale cool sky, soft natural remaining light, restrained few warm windows, realistic water reflections; natural photographic full-frame 45mm camera appearance, moderate exposure, fine brick textures, ordinary tiny pedestrians and bicycles. No HDR, drama, saturated night glow, painting, invented historic structures, text, legible signs, logos, watermark, frame. Independent original composition.",
+      "generationTool": "built-in image_gen",
+      "generatedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/amsterdam/production/original-generated.png",
+      "nativeDimensions": [
+        1536,
+        1024
+      ],
+      "deliveryDimensions": [
+        1536,
+        1024
+      ],
+      "productionDimensions": [
+        1536,
+        1024
+      ],
+      "format": "PNG",
+      "colorMode": "RGB",
+      "colorSpace": "sRGB",
+      "opaque": true,
+      "sha256": "bb7274032714b08ff22c279406c4e013188961c756c465e25864233b8daca72b",
+      "camera": {
+        "preset": "VAKIO",
+        "heightApproxMetresRequested": 15,
+        "downwardTiltDegreesRequested": 15,
+        "presetRequested": "VAKIO",
+        "presetActual": "LAHI",
+        "heightApproxMetresObserved": 5,
+        "fallbackReason": "Root approved lower, closer canal view to avoid invented wide city panorama from references of two different Prinsengracht stretches"
+      },
+      "timeOfDay": "early blue hour",
+      "referenceVisualQA": {
+        "reviewedCount": 2,
+        "modernExteriorSameSubject": true,
+        "differentCreators": true,
+        "originalLongSideAtLeast1000": true,
+        "identity": "two Prinsengracht canal photos from different stretches; canal subject permitted by root"
+      },
+      "visualQA": {
+        "status": "production agent inspected native, final 1536x1024 and 480px preview; root QA pending",
+        "recognizableSubject": true,
+        "geometry": "narrow canal, moored boats, brick gabled house rows and small bridge",
+        "context": "immediate canal streets and trees",
+        "noText": true,
+        "people": "small pedestrians",
+        "noStylization": true,
+        "caveat": "Camera is lower than requested roof height; nearest house tops partly cropped",
+        "rootDecision": "accepted as LAHI fallback"
+      },
+      "technicalQA": {
+        "dimensions1536x1024": true,
+        "pngRGB": true,
+        "srgbICC": true,
+        "opaque": true,
+        "metadataDescriptionAndSource": true
+      },
+      "deliveryState": "local candidate awaiting root QA; not uploaded/integrated/published",
+      "r2Key": "julisteet/herokoe/hero-amsterdam.png",
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-amsterdam.png",
+      "bytes": 2953358,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "parentQA": {
+        "reviewer": "root",
+        "sha256": "bb7274032714b08ff22c279406c4e013188961c756c465e25864233b8daca72b",
+        "nativeViewed": true,
+        "referenceComparisonViewed": true,
+        "photorealism": true,
+        "recognisableLandmarkAndImmediateContext": true,
+        "technicalValidationAtUpload": true,
+        "approvedForDelivery": true,
+        "limitations": {
+          "status": "production agent inspected native, final 1536x1024 and 480px preview; root QA pending",
+          "recognizableSubject": true,
+          "geometry": "narrow canal, moored boats, brick gabled house rows and small bridge",
+          "context": "immediate canal streets and trees",
+          "noText": true,
+          "people": "small pedestrians",
+          "noStylization": true,
+          "caveat": "Camera is lower than requested roof height; nearest house tops partly cropped",
+          "rootDecision": "accepted as LAHI fallback"
+        },
+        "cameraDecision": "LAHI narrow-canal fallback"
+      },
+      "editorAcceptance": "pending",
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "tukholma",
+      "cityName": "Tukholma",
+      "subject": "Riddarholmen ja Riddarholmenin kirkko",
+      "subjectCoordinatesApprox": [
+        59.32476,
+        18.0636
+      ],
+      "subjectDistanceApproxMetres": 814,
+      "file": "hero-tukholma.png",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/tukholma/production/hero-tukholma.png",
+      "subjectRadiusPassApprox": true,
+      "coordinateProof": {
+        "method": "approved plan approximate subject point; reference camera GPS where available",
+        "landmarkCoordinateVerifiedFromMetadata": false,
+        "referenceCameraGPS": [
+          {
+            "nimi": "File:Riddarholmen (by Pudelek).JPG",
+            "lat": null,
+            "lon": null
+          },
+          {
+            "nimi": "File:Riddarholmskyrkan February 2013 01.jpg",
+            "lat": "59.325089",
+            "lon": "18.063531"
+          }
+        ],
+        "caveat": "Camera GPS does not claim exact object coordinates."
+      },
+      "caption": "Riddarholmenin kirkko ja vanhankaupungin korttelit kapean kanaalin takana Tukholmassa. Havainnekuva.",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "metadataText": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "viitteet": [
+        {
+          "nimi": "File:Riddarholmen (by Pudelek).JPG",
+          "tekija": "Pudelek",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Riddarholmen_(by_Pudelek).JPG"
+        },
+        {
+          "nimi": "File:Riddarholmskyrkan February 2013 01.jpg",
+          "tekija": "Arild Vågen",
+          "lisenssi": "CC BY-SA 3.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Riddarholmskyrkan_February_2013_01.jpg"
+        }
+      ],
+      "referenceMetadata": [
+        {
+          "nimi": "File:Riddarholmen (by Pudelek).JPG",
+          "tekija": "Pudelek",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Riddarholmen_(by_Pudelek).JPG",
+          "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/8/85/Riddarholmen_%28by_Pudelek%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/85/Riddarholmen_%28by_Pudelek%29.JPG/1280px-Riddarholmen_%28by_Pudelek%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/tukholma/references/ref-6c93973449e1ad11.jpg",
+          "originalDimensions": [
+            3316,
+            2044
+          ],
+          "downloadDimensions": [
+            1280,
+            789
+          ],
+          "sha256": "6c93973449e1ad114fef91e7bc41dd460b05e2281ff726ee925bfbc165d26579",
+          "originalSha1": "67c66def39b7d4f9069f7b073140b8aab55f6c80",
+          "apiPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/tukholma/references/api.json",
+          "apiSha256": "7ad2dd21bc168967dabfecbfd2ecfd303147d68ff9576deea718378d621d91e2",
+          "categories": [
+            "Category:CC-BY-SA-4.0"
+          ],
+          "metadata": {
+            "ImageDescription": "Riddarholmen, Stockholm, Sweden",
+            "DateTimeOriginal": "2015-07-01 16:24:37"
+          },
+          "viewed": false
+        },
+        {
+          "nimi": "File:Riddarholmskyrkan February 2013 01.jpg",
+          "tekija": "Arild Vågen",
+          "lisenssi": "CC BY-SA 3.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Riddarholmskyrkan_February_2013_01.jpg",
+          "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/9/94/Riddarholmskyrkan_February_2013_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/9/94/Riddarholmskyrkan_February_2013_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/tukholma/references/ref-608e345ef6140748.jpg",
+          "originalDimensions": [
+            1200,
+            1029
+          ],
+          "downloadDimensions": [
+            1200,
+            1029
+          ],
+          "sha256": "608e345ef61407487c35607d15b6f1c129d91c86431f0660242a6d0bb668fd57",
+          "originalSha1": "68a7ec282551367b797d23d3f32fcd400cc3ce47",
+          "apiPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/tukholma/references/api.json",
+          "apiSha256": "7ad2dd21bc168967dabfecbfd2ecfd303147d68ff9576deea718378d621d91e2",
+          "categories": [
+            "Category:2013 aerial photographs of Sweden",
+            "Category:2013 in Riddarholmen",
+            "Category:Aerial photographs from helicopters",
+            "Category:Aerial photographs of Sweden approved by the Swedish Defence Forces",
+            "Category:Aerial photographs of churches in Sweden",
+            "Category:Aerial views of Riddarholmen",
+            "Category:CC-BY-SA-3.0",
+            "Category:Churches in Stockholm photographed in 2013",
+            "Category:February 2013 in Stockholm",
+            "Category:Files with coordinates missing SDC location of creation",
+            "Category:Images by Arild Vågen-Aerial photography",
+            "Category:Media created by technology pool of Wikimedia Sverige",
+            "Category:Riddarholmskyrkan",
+            "Category:Self-published work",
+            "Category:Structures in Stockholm in snow",
+            "Category:Sweden photographs taken on 2013-02-02",
+            "Category:Taken with Nikon D600",
+            "Category:Wikimedia Sveriges flygfotoprojekt 2012",
+            "Category:Winter 2012-2013 in Stockholm"
+          ],
+          "metadata": {
+            "GPSLatitude": "59.325089",
+            "GPSLongitude": "18.063531",
+            "GPSMapDatum": "WGS-84",
+            "ImageDescription": "Riddarholmskyrkan.",
+            "DateTimeOriginal": "2013-02-02 11:16:46"
+          },
+          "viewed": false
+        }
+      ],
+      "generationPrompt": "Use case: photorealistic-natural. Create a COMPLETELY NEW independent present-day Stockholm city guide photographic illustration, 1536x1024 landscape 3:2 opaque. Use TWO real photographs strictly as architecture and geography references: island-shore view gives church spire proportions; aerial reference gives precise church/chapels and immediate roads, narrow eastern canal and Gamla Stan block relationships. NOT an edit of a generated candidate. ESSENTIAL CAMERA/FRAMING: camera ONLY 22 METRES above church square, low rooftop/belfry-midpoint elevation, NOT high aerial 80m, looking mostly horizontally with only gentle 15 degree down tilt. Entire Riddarholmskyrkan, including highest iron-spire cross and foundation, comfortably inside frame. Reserve 15 PERCENT IMAGE HEIGHT OF PLAIN SKY ABOVE the tallest spire point. No cropping of church. Make church about 65 percent frame height, large identifiable red-brick body, copper nave and domed burial chapels, dark openwork cast-iron spire. View northwest toward east/southeast as second reference: behind church show restrained actual yellow/cream blocks, narrow east canal with road/rail zone, dense Gamla Stan buildings beyond. No broad lake or water horizon behind church. Only immediate verified streets and neighboring buildings; no sweeping city panorama. Natural mild-cloud Nordic summer afternoon, neutral natural colours and credible full-frame 50mm photograph, realistic brick and aged copper, subtle camera exposure, no HDR/painterly/dramatic style. Ordinary pedestrians tiny. No lettering, legible signs, logo, watermark or border. Generate independently from the two reference sources.",
+      "generationTool": "built-in image_gen",
+      "generatedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/tukholma/production/original-generated.png",
+      "nativeDimensions": [
+        1536,
+        1024
+      ],
+      "deliveryDimensions": [
+        1536,
+        1024
+      ],
+      "productionDimensions": [
+        1536,
+        1024
+      ],
+      "format": "PNG",
+      "colorMode": "RGB",
+      "colorSpace": "sRGB",
+      "opaque": true,
+      "sha256": "fa38d9ebbe040907a84d2f2bb26035399edce079a074145f428a7affecc73e0e",
+      "camera": {
+        "presetRequested": "VAKIO",
+        "heightApproxMetresRequested": 22,
+        "downwardTiltDegreesRequested": 15,
+        "observed": "roof/belfry-midpoint view, lower than rejected-framing aerial",
+        "skyMarginRequestedPercent": 15,
+        "skyMarginObservedPercent": 1
+      },
+      "timeOfDay": "Nordic summer afternoon",
+      "referenceVisualQA": {
+        "reviewedCount": 2,
+        "modernExteriorSameSubject": true,
+        "differentCreators": true,
+        "originalLongSideAtLeast1000": true,
+        "identity": "same real Riddarholmskyrkan geometry/reference pair"
+      },
+      "visualQA": {
+        "status": "production agent inspected native, final 1536x1024 and 480px preview; root QA pending",
+        "recognizableSubject": true,
+        "geometry": "full iron spire cross and church base inside frame; domed copper burial chapels intact",
+        "context": "narrow east canal, roads and Gamla Stan buildings retained; no broad lake behind",
+        "noText": true,
+        "people": "tiny pedestrians",
+        "noStylization": true,
+        "caveat": "Full spire is now visible but sky margin only about 1%, requested 15%; root framing QA pending",
+        "correction": "Whole-new lower-camera/full-spire correction; second candidate saved rejected-framing, first rejected-geography"
+      },
+      "technicalQA": {
+        "dimensions1536x1024": true,
+        "pngRGB": true,
+        "srgbICC": true,
+        "opaque": true,
+        "metadataDescriptionAndSource": true
+      },
+      "deliveryState": "local candidate awaiting root QA; not uploaded/integrated/published",
+      "r2Key": "julisteet/herokoe/hero-tukholma.png",
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-tukholma.png",
+      "bytes": 2747547,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "parentQA": {
+        "reviewer": "root",
+        "sha256": "fa38d9ebbe040907a84d2f2bb26035399edce079a074145f428a7affecc73e0e",
+        "nativeViewed": true,
+        "referenceComparisonViewed": true,
+        "photorealism": true,
+        "recognisableLandmarkAndImmediateContext": true,
+        "technicalValidationAtUpload": true,
+        "approvedForDelivery": true,
+        "limitations": {
+          "status": "production agent inspected native, final 1536x1024 and 480px preview; root QA pending",
+          "recognizableSubject": true,
+          "geometry": "full iron spire cross and church base inside frame; domed copper burial chapels intact",
+          "context": "narrow east canal, roads and Gamla Stan buildings retained; no broad lake behind",
+          "noText": true,
+          "people": "tiny pedestrians",
+          "noStylization": true,
+          "caveat": "Full spire is now visible but sky margin only about 1%, requested 15%; root framing QA pending",
+          "correction": "Whole-new lower-camera/full-spire correction; second candidate saved rejected-framing, first rejected-geography"
+        },
+        "cameraDecision": "low elevated view accepted",
+        "skyMargin": "Whole finial visible but about1%topmargin; no claimed15%margin"
+      },
+      "editorAcceptance": "pending",
+      "gameIntegrated": false,
+      "published": false
+    }
+  ],
+  "editorAcceptance": "pending",
+  "gameIntegrated": false,
+  "published": false,
+  "noMergeVersionRelease": true
+}

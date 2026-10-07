@@ -13,3 +13,14 @@ Jokaisella kuvalla on kaksi katsottua, vapaasti lisensoitua Commons-viitettä er
 R2-takaisinluku varmennettu kaikista viidestä kuvasta: HTTP 200, MIME, CORS ja tavutarkka vastaavuus. PNG:n Description ja Source: ”Havainnekuva. Tekoälyllä tuotettu, ei valokuva.” Lähderivi: ”Tekoälyllä tuotettu havainnekuva.” Kuvatekstit päättyvät Havainnekuva. BY-SA-viitteisiin perustuvat kuvat on merkitty CC BY-SA 4.0:ksi.
 
 Kuvat odottavat päätoimittajan katselmusta ja oppaan kytkentää Julkaisijan kautta. Tässä ei väitetä niiden näkyvän vielä pelissä. Codex ei mergeä, nosta versiota tai julkaise. Aiemmat 12 kaupunkikuvaa ja kartan isometriset miniatyyrit säilyvät; Varsovaa ei toimiteta.
+
+## Erä 02 toimitettu
+
+Lissabon, Firenze, Ateena, Amsterdam ja Tukholma: viisi uutta, natiivisti 1536 × 1024 fotorealistista kuvaa. Kaikkien R2-takaisinluku läpäisi HTTP 200 / MIME / CORS / tavutarkkuuden. Samat havainnekuva- ja BY-SA-merkinnät kuin erässä 01.
+
+Päätoimittajan katselmukseen ensimmäiset kolme: Lissabon, Firenze ja Ateena. Vertailukuva: https://media.matkakirja.app/julisteet/herokoe/20261007/comparison-batch02.jpg
+Manifesti: `posti/kuvatoimitus-oppaan-kaupunkinakymat-sallitut-02-20261007.json`.
+
+Ateenan Nike-temppeliin rajattu viite hylättiin ennen generointia ja korvattiin Parthenon-viitteellä. Lissabonin liian matala kamera ja Tukholman väärä vesialue sekä katkennut tornin kärki korjattiin kokonaan uusilla kuvilla. Tukholman kärki on nyt kokonaan näkyvissä, mutta yläreunan marginaali on pieni. Amsterdamin kanavalle hyväksyttiin läheinen LAHI-kuvakulma, joka rajaa laajan epävarman kaupunkipanoraaman pois. Tarkistuksen rajat näkyvät manifestissa.
+
+Katselmus ja pelikytkentä odottavat. Ei mergeä, versionnostoa tai julkaisua Codexilta.
