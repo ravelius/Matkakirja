@@ -30,6 +30,21 @@ Erä 1 (A–D) ehti käynnistyä Opuksella ja saa valmistua sillä; **kaikki tä
 käynnistettävät ali-agentit ja TARKISTAJA-agentti ajetaan mallilla `sonnet`**. Päätös on
 CLAUDE.md:n agenttisäännön mukainen (vain Opus tai Sonnet; Fable-mallia ei koskaan agenttina).
 
+**Edistyminen (vaihe 2):** raportit valmiina scratchpadissa (ei repossa, katoavat kontin mukana):
+A (KK palo) ✔, B (KK eunukit/henkilöt) ✔, D (Giza kylä/satama/tulva) ✔. Käynnissä: C (Giza Merer),
+E (KK kuvalisenssit ja osio 4, Sonnet), F (Giza E15, E18, E21, E27, E28, E53–E55, Sonnet).
+Seuraavaksi: kirjoitusvaihe (osiot tiedostojen loppuun + selvien virheiden korjaus
+`[KORJATTU 7.10.]`), sitten erillinen TARKISTAJA (Sonnet).
+
+**Raporttien tärkeimmät löydökset (jotta ne säilyvät, jos kontti katoaa):**
+- KK/A: Time 9.7.1923 ("CHINA: Fire") ja 23.7.1923 ("Eunuch's Strike") ovat eri artikkelit, molemmat päiväykset oikein;
+  "klo 21" ei tuettu (palo syttyi n. 0–1, hälytys 3, sammui 7, 27.6.); "yli 300 huonetta" on populaariluku (aikalaiset 100+/120/127);
+  6643/387 = 《申报》"yli 6000 aarretta, pelastui runsaat 300"; pidätettyjen eunukkien nimet eivät ole lähteessä; Johnstonin puhelu dokumentoitu 《申报》1.7.1923.
+- KK/B: E15 päiväys on 4.9.1922 (kuukalenterivirhe tiedostossa); ~1000 eunukkia palatsissa, ~100 jäi, ~900 ajettiin ulos;
+  E13 "eroraha kutistui" ei lähteessä (taksa 200/20 yuania); palatsissa puhelimia jo 1910 (myös Jianfugongissa); Duankang nuorin leskijalkavaimo.
+- Giza/D: "Khufun ystävät" = Hawassin popularisointi (Roth 1991 s. 125: kolme Khufun nimen muotoa); E35 löytöpäivä 14.4.1990;
+  Tura ~17 km (PNAS), ei 12; luunmurtuma 1,97 % pitkistä luista, ei 44 %; Khufu-sinetit Kromerin kaatopaikalla = paras näyttö Lost Cityn yhteydestä Khufuun.
+
 ## Mitä on tehty (vaihe 1)
 
 1. **Haara luotu** `origin/main`-pohjalta.
