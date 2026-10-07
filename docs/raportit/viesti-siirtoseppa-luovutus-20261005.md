@@ -459,3 +459,7 @@ Edellinen luovutus on `viesti-siirtoseppa-luovutus-20261002.md` (5.10. osiot 02.
 - 16.18: Päätoimittaja OK ef6b092d junaan 162. Pala testiosoittimena (levyvälimuisti) historia-h0:ssa → juna 163. NUI toimintonappi
   natiivi-ui/seikkailu-toiminto 43701b94 (kuvakkeet Päätoimittajalla). E3 käsikirjoitus kysytty Päätoimittajalta. Tilinvaihto ~24, luovutus 23.40.
   MUISTA: Wi-Fi/mobiili ei erotella eikä "Wi-Fi suositeltava" -ohjeita (CLAUDE.md).
+- 16.23: Päätoimittaja: E2 d9871e0a + NUI 43701b94 junaan 163 kuvakepäätöksen jälkeen; E3-käsikirjoitus docs/raportit/kasikirjoitus-olavinlinna-kappeli-e3.md
+  tulossa tänään. E3 perusosat ab9e034a: Ydin Kynttilat (+3 testiä, 832/832), SeikkailuKynttilat (liekit, leivottu _Kirkkaus, kantovalo
+  DioraamaLeivottu-varjostimeen, valoisuus vartijoille), toiminto esineiden jälkeen, "poikki kynttilat 1|0|sammuta|oma 0|1|tila".
+  LR:ltä pyydetty kappelin merkit (piilo:kaari-ovi, veto:, ontto:, esine:kivi/kalkki/pateeni/liuskekivi, reitti:kappalainen-*).
