@@ -6,7 +6,7 @@ worktreet /Users/Shared/Claude/wt/proto-natiivi-ui-<aihe>. Käännös: lokit/nat
 Simu vain Julkaisijan "SIMU NYT" -viestistä, oma iPhone FB234D08-4693-4496-9C7A-6C7C15B03963, iPad
 AD119F7B-A2A2-43EE-8769-7326DD757F89; lopuksi sammutus ja "simu vapaa".
 
-## TILA 7.10. klo 09.1x (uusin)
+## TILA 7.10. klo 09.0x (uusin)
 
 - JUNA 157: Natiivisepän VIE-runkoon fdc7828c konflikti OpasOdotusTestit.cs → natiivi-ui/sallitut-157b eb6f860f (molemmat testit,
   Linssit-testit 796/796) lähetetty Natiivisepälle.
