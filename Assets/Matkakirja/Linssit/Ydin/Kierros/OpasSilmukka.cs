@@ -200,6 +200,23 @@ namespace Matkakirja.Linssit.Kierros
 
         /// <summary>Lento seuraavaan alkoi (kohde, matka m, pelaajan toiveesta): siltalause kierroksen siirtymään (juna 146).</summary>
         public event Action<OpasKohde, double, bool> LentoAlkaa;
+
+        // ---- SALLITUT KAUPUNGIT (omistaja 7.10. 00.4x, juna 157): lennot ja workerin kohteet vain sallitun 3D:n alueelle ----
+        /// <summary>Sallitut kaupungit (Pöllön /opas/aineistot "sallitut"); tyhjä = ei rajausta.</summary>
+        public IReadOnlyList<OpasSallitut.Kaupunki> Sallitut = Array.Empty<OpasSallitut.Kaupunki>();
+        /// <summary>Kohde torjuttiin (sallitun alueen ulkopuolella): nimi ja pelaajan pyynnöstä (vie minut, valinta, Liiku). Sovitin
+        /// kirjaa ja soittaa pelaajan pyynnöstä siltalauseen "valitse kohde listasta" (Päätoimittaja 7.10. 01.0x); kierroksen
+        /// esihaussa hiljaa.</summary>
+        public event Action<string, bool> Torjuttu;
+        public int Torjuntoja { get; private set; }
+        int torjuntoja;
+        bool Sallittu(double lat, double lon) => OpasSallitut.Sallittu(Sallitut, lat, lon);
+        bool Torju(string nimi, double lat, double lon, bool pelaajalta = true)
+        {
+            if (Sallittu(lat, lon)) return false;
+            Torjuntoja++; Torjuttu?.Invoke(nimi ?? $"{lat:F3}, {lon:F3}", pelaajalta);
+            return true;
+        }
         /// <summary>Saapui kohteeseen: sovitin aloittaa äänen ja näyttää nimen.</summary>
         public event Action<OpasKohde> Saapui;
         /// <summary>Kappale alkaa PuheEnnenS ennen saapumista (sovitin soittaa; Saapui ei enää aloita puhetta uudelleen).</summary>
@@ -341,6 +358,7 @@ namespace Matkakirja.Linssit.Kierros
         /// </summary>
         public void VaihdaPaikka(double lat, double lon, string nimi = null)
         {
+            if (Torju(nimi, lat, lon)) return;
             VaihdaPaikka();
             if (Vaihe == OpasVaihe.Valmis || (!PakotaSiirto && KierrosLento.EtaisyysM(Asento.Lat, Asento.Lon, lat, lon) < SiirtymaMinM)) return;
             // Sama 5 km:n yläkuva kuin avauksessa (Päätoimittaja 6.10. 00.4x: Amsterdam laskeutui matalaan viistoon kuvaan).
@@ -412,6 +430,7 @@ namespace Matkakirja.Linssit.Kierros
         void LiikuSisainen(string nimi, double lat, double lon)
         {
             if (string.IsNullOrWhiteSpace(nimi) || Vaihe == OpasVaihe.Valmis) return;
+            if (Torju(nimi, lat, lon)) return;
             PyynnonSijainti = (lat, lon);
             bool kierros = KierrosKaynnissa;
             Toive(nimi);
@@ -646,6 +665,15 @@ namespace Matkakirja.Linssit.Kierros
             if (k == null) { Virhe(koodi, odotaS); return; }
             Virheita = 0; VirheTauko = 0; ViimeKoodi = 0;
             if (k.Odota) return;
+            // Sallitun alueen ulkopuolinen pysähdys torjutaan (worker suodattaa myös); kaksi uutta yritystä peräkkäin, sitten odotetaan.
+            if (!k.Kysymys && Torju(k.Nimi, k.Lat, k.Lon, toiveesta))
+            {
+                // Pelaajan toive (vie minut X) ulkona: ei lentoa eikä uutta pyyntöä, siltalause ohjaa listaan.
+                if (toiveesta) { toiveesta = false; return; }
+                if (++torjuntoja <= 2) UusiPyynto();
+                return;
+            }
+            torjuntoja = 0;
             if (KierrosKaynnissa) k.Kierros = true;
             if (k.Kysymys)
             {
@@ -850,7 +878,7 @@ namespace Matkakirja.Linssit.Kierros
                 if (Vaihe == OpasVaihe.Puhuu && !aaniLoppui) { vapaaKaynnissa = false; return false; }
                 vapaaKehyksessa = false;
             }
-            if (!vapaaKaynnissa) { Vapaa.Aloita(Asento, MaaPisteessa); vapaaKaynnissa = true; }
+            if (!vapaaKaynnissa) { Vapaa.Aloita(Asento, MaaPisteessa); Vapaa.Alue = OpasSallitut.Alue(Sallitut, Asento.Lat, Asento.Lon); vapaaKaynnissa = true; }
             Asento = Vapaa.Paivita(dt, VapaaTapit.vx, VapaaTapit.vy, VapaaTapit.ox, VapaaTapit.oy, MaaPisteessa);
             // 3D-pinnan näytteet (rakennukset mukana) kamerasta ja liikkeen suunnasta 4 kertaa sekunnissa (sovitin välimuistittaa ~11 m:n ruutuun).
             vapaaNayteS -= dt;

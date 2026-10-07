@@ -52,6 +52,8 @@ namespace Matkakirja.Linssit.Kierros
         /// <summary>Toivotun vaakaliikkeen suunta katsesuunnasta (°, + oikealle): tapista, muuten nopeudesta; paikallaan 0.</summary>
         public double ToiveSuuntaEro { get; private set; }
 
+        /// <summary>Sallittu alue (OpasSilmukka asettaa vapaan tilan alussa); null = ei rajausta.</summary>
+        public OpasSallitut.Kaupunki Alue;
         public double Lat { get; private set; }
         public double Lon { get; private set; }
         /// <summary>Kameran korkeus ellipsoidista (m).</summary>
@@ -115,8 +117,11 @@ namespace Matkakirja.Linssit.Kierros
             if (EsteAllaM < MinKorkeusM * 1.5)
                 vNousu = Math.Max(vNousu, EsteAllaM < MinKorkeusM ? EsteNousuMS * Math.Min(1, 0.3 + (1 - EsteAllaM / MinKorkeusM)) : 0);
             Suunta = KierrosLento.Kiedo(Suunta + vKaanto * dt);
-            (Lat, Lon) = Siirra(Lat, Lon, Suunta, vEteen * dt);
-            (Lat, Lon) = Siirra(Lat, Lon, Suunta + 90, vSivu * dt);
+            var (nLat, nLon) = Siirra(Lat, Lon, Suunta, vEteen * dt);
+            (nLat, nLon) = Siirra(nLat, nLon, Suunta + 90, vSivu * dt);
+            // Sallitun kaupungin hyvän 3D:n alue (omistaja 7.10. 00.4x, LS1): ulospäin liike hidastuu pehmeästi ja pysähtyy reunalle.
+            if (Alue != null) { var (dl, dn) = OpasSallitut.Rajaa(Alue, Lat, Lon, nLat - Lat, nLon - Lon); nLat = Lat + dl; nLon = Lon + dn; }
+            (Lat, Lon) = (nLat, nLon);
             // Pinta kamerassa ja liikkeen suunnassa (rakennus edessä nostaa jo ennen kuin kamera on sen kohdalla).
             var (el, eo) = Ennakko;
             double suurin = double.NaN; int tunnetut = 0;
