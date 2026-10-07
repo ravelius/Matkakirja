@@ -328,6 +328,9 @@ namespace Matkakirja.Natiivi
             // lento on pakotettu siirto, joka avaa kartan SiirtoAlkaa-kutsussa suoraan kohteeseen).
             if (kaupunkiOdottaa) { silmukka.Paivita(Time.unscaledDeltaTime, MaaKorkeus, () => false); return; }
             kori.Kayta(Kaupunkitila && nakymaAuki, kaupunki.Kamera);   // kuumailmapallon korinäkymä (kokeilu, Päätoimittaja 7.10. 09.1x)
+            IlmoitaKierros();
+            if (jatkoVastauksenJalkeen && silmukka.KierrosKeskeytetty && silmukka.Vaihe == OpasVaihe.Odottaa && silmukka.VaiheAika > JatkoViiveS && !puhuu)
+            { jatkoVastauksenJalkeen = false; o.Kirjaa("opas: kierros jatkuu vastauksen jälkeen"); JatkaKierrosta(); }
             OpasSilmukka.PalloLento = kori.Nakyy;
             // PCM: loppu = kaikki ladattu ja soitettu; varmistus: klippi pysähtyi (ei saa jäädä odottamaan ikuisesti, toisto 16.4x).
             bool pcmPysahtyi = pcmNyt != null && puhe != null && !puhe.isPlaying && Time.unscaledTime - puheAlkoi > 1f;
@@ -419,6 +422,36 @@ namespace Matkakirja.Natiivi
         // ---- KYSY, LIIKU, KAUPUNKIKIERROS, KESKUSTELU (omistaja 6.10. 11.57; Pelikoodarin endpointit, Natiivi-UI:n nimet) ----
         /// <summary>Kysy-lista: vastauksen jatkokysymykset ensin, sitten paikan kysymykset; null = latautuu.</summary>
         public static IReadOnlyList<string> Kysymykset => Viimeisin?.kysymykset;
+
+        // ---- PARIISI-KOKEILU (omistaja 7.10. 10.1x): metrokartta ja Kysy aina näkyvissä (Natiivi-UI) ----
+        /// <summary>Kierroksen kohteet (nimi, lat, lon) järjestyksessä; tyhjä ilman kierrosta.</summary>
+        public static IReadOnlyList<(string nimi, double lat, double lon)> KierrosKohteet =>
+            Auki ? Viimeisin.silmukka.KierrosJono : (IReadOnlyList<(string, double, double)>)Array.Empty<(string, double, double)>();
+        /// <summary>Nykyisen kierroskohteen indeksi KierrosKohteet-listassa; −1 = ei kierrosta.</summary>
+        public static int KierrosIndeksi => Auki ? Viimeisin.silmukka.KierrosNykyinen : -1;
+        /// <summary>Kohteet, indeksi tai kohteen valmiit kysymykset (KysyKysymykset) vaihtuivat.</summary>
+        public static event Action KierrosVaihtui;
+        /// <summary>Nykyisen kohteen valmiit kysymykset (enintään 5; /opas/kysymykset tai pysähdyksen kysymykset).</summary>
+        public static IReadOnlyList<string> KysyKysymykset
+        {
+            get
+            {
+                var k = Viimeisin?.kysymykset;
+                if (k == null || k.Length <= 5) return k ?? Array.Empty<string>();
+                var r = new string[5]; Array.Copy(k, r, 5); return r;
+            }
+        }
+        /// <summary>Kaupunkitilassa kysymyksen vastauksen jälkeen kierros jatkuu tämän tauon jälkeen (s).</summary>
+        public const float JatkoViiveS = 2f;
+        bool jatkoVastauksenJalkeen;
+        int ilmoitettuIndeksi = -2, ilmoitettuMaara = -1; string[] ilmoitetutKysymykset;
+        void IlmoitaKierros()
+        {
+            int i = KierrosIndeksi, n = KierrosKohteet.Count;
+            if (i == ilmoitettuIndeksi && n == ilmoitettuMaara && ReferenceEquals(kysymykset, ilmoitetutKysymykset)) return;
+            ilmoitettuIndeksi = i; ilmoitettuMaara = n; ilmoitetutKysymykset = kysymykset;
+            KierrosVaihtui?.Invoke();
+        }
         /// <summary>Liiku-lista: kaupungin 12 tärkeintä (GET /opas/liiku); null = latautuu.</summary>
         public static IReadOnlyList<OpasTaky> Kohteet => Viimeisin?.kohteet;
         public static bool KierrosKaynnissa => Viimeisin?.silmukka != null && Viimeisin.silmukka.KierrosKaynnissa;
@@ -645,6 +678,7 @@ namespace Matkakirja.Natiivi
                 KestoS = v.KestoS, Lat = kehys?.Lat ?? silmukka.Asento.Lat, Lon = kehys?.Lon ?? silmukka.Asento.Lon, KokoM = nyt?.KokoM ?? 100, Kuvat = nyt?.Kuvat,
                 Korostus = nyt?.Korostus, Kysymykset = kysymykset };
             if (paikka != null) { Valmistele(vastaus); silmukka.Esita(vastaus); yield break; }
+            jatkoVastauksenJalkeen = Kaupunkitila;   // Pariisi-kokeilu (omistaja 10.1x): kierros jatkuu itsestään vastauksen jälkeen
             switch (v.Toiminto)
             {
                 case OpasToiminto.Siirry:

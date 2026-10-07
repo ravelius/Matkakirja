@@ -457,6 +457,10 @@ namespace Matkakirja.Linssit.Kierros
         public (double lat, double lon)? PyynnonSijainti;
         readonly List<(string nimi, double lat, double lon)> kierrosJono = new List<(string, double, double)>();
         int kierrosIndeksi;
+        /// <summary>Kierroksen kohteet järjestyksessä (metrokartta, Pariisi-kokeilu 7.10.): tyhjä, kun kierros ei ole käynnissä.</summary>
+        public IReadOnlyList<(string nimi, double lat, double lon)> KierrosJono => kierrosJono;
+        /// <summary>Nykyisen (viimeksi pyydetyn) kierroskohteen indeksi 0…; −1 = ei kierrosta.</summary>
+        public int KierrosNykyinen => KierrosKaynnissa || KierrosKeskeytetty ? Math.Max(0, kierrosIndeksi - 1) : -1;
 
         /// <summary>Liiku-listan kohde: lento heti kohteeseen (kaukana siirto), ja workerin pysähdys kohteesta pyydetään samalla.</summary>
         public void Liiku(string nimi, double lat, double lon)
