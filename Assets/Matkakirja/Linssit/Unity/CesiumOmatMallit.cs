@@ -3,7 +3,9 @@
 // (Cesium piirtää GLB:n itse, LOD REPLACE-ketjuna), ja kun mallin juurilaatta on ladattu, Googlen tilesetiin lisätään
 // CesiumPolygonRasterOverlay, joka leikkaa mallien alueet pois (excludeSelectedTiles: kokonaan sisään jäävät laatat jätetään
 // lataamatta). Leikkaus vain näyttöhetkellä; Googlen dataa ei tallenneta. Mallin epäonnistuessa leikkaus pois (ei tyhjää reikää).
-// LÄHDE: Documents/omat-mallit/mallit.json (kehitys, file://) tai StreamingAssets/omat-mallit/mallit.json (appin mukana).
+// LÄHDE: Documents/omat-mallit/mallit.json (kehitys, file://), StreamingAssets/omat-mallit/mallit.json (appin mukana) tai
+// R2 (omistaja 7.10. 08.4x "Egypti loppuun omilla malleilla"): media.matkakirja.app/kartta/omat-mallit/uusin.json → {"mallit":
+// "<versio>/mallit.json"}; haetaan kerran kaupunkinäkymän avautuessa, ja jos lähellä on kohteita, mallit avataan kun json saapuu.
 // KORKEUS: mallit.json:n ellipsoidikorkeus (EGM2008 + N-arvio); Googlen pinta näytteistetään leikkauskulmista lokiin, ja jos ero
 // on yli KorjausRajaM, malli siirretään Googlen pinnan mukaan (sauma ei saa jäädä ilmaan eikä hautautua).
 // TEKIJÄRIVI: Tekijat (esim. "Pyramidien 3D-malli: Matkakirja") näytetään erillään Googlen riveistä (Natiivi-UI, KrediititTiivis).
@@ -37,11 +39,48 @@ namespace Matkakirja.Linssit
         readonly List<(OmatMallit.Kohde kohde, Cesium3DTileset tileset, CesiumCartographicPolygon polygoni)> mallit = new();
         string tekija;
 
-        public CesiumOmatMallit(Action<string> kirjaa) { this.kirjaa = kirjaa; }
+        public CesiumOmatMallit(Action<string> kirjaa) { this.kirjaa = kirjaa; VerkkoSaapui += Saapui; }
 
-        /// <summary>Googlen leikkaus OLETUKSENA POIS (Päätoimittaja 7.10. 01.2x: koe-156:ssa leikkaus piilotti koko tilesetin; ei junaan
-        /// ennen kuin leikkaus rajautuu pyramidien polygoneihin ja ennen/jälkeen-kuva on näytetty). Testi: Documents/omat-mallit/leikkaus-paalle.</summary>
-        static bool Leikkaa => File.Exists(Path.Combine(Application.persistentDataPath, "omat-mallit", "leikkaus-paalle"));
+        /// <summary>Googlen leikkaus: juurisyy (koko tileset katosi, materialKey "0") korjattu 72cc68be; päällä Gizan valmistuessa
+        /// (omistaja 7.10. 08.4x), kun ennen/jälkeen-kuva on todennettu. Testi pois: Documents/omat-mallit/leikkaus-pois.</summary>
+        static bool Leikkaa => !File.Exists(Path.Combine(Application.persistentDataPath, "omat-mallit", "leikkaus-pois"));
+
+        public const string VerkkoOsoitin = "https://media.matkakirja.app/kartta/omat-mallit/uusin.json";
+        static string verkkoJson, verkkoJuuri;
+        static bool verkkoHaettu, verkkoHaussa;
+        /// <summary>R2:n mallit.json saapui (avoin kaupunkinäkymä avaa lähellä olevat mallit).</summary>
+        static event Action VerkkoSaapui;
+        double viimeLat, viimeLon;
+
+        /// <summary>Hakee R2:n osoittimen ja mallit.json:n kerran istunnossa (ei mitään, jos Documents tai StreamingAssets käytössä).</summary>
+        static System.Collections.IEnumerator HaeVerkosta()
+        {
+            verkkoHaussa = true;
+            string osoitin = null;
+            using (var r = UnityEngine.Networking.UnityWebRequest.Get(VerkkoOsoitin + "?t=" + DateTime.UtcNow.Ticks / TimeSpan.TicksPerMinute))
+            {
+                r.timeout = 15;
+                yield return r.SendWebRequest();
+                if (r.result == UnityEngine.Networking.UnityWebRequest.Result.Success
+                    && Matkakirja.Peli.MiniJson.Jasenna(r.downloadHandler.text) is Dictionary<string, object> d && d.TryGetValue("mallit", out var m))
+                    osoitin = m as string;
+                else Debug.Log($"MATKAKIRJA kaupunki: omat mallit: osoitin ei latautunut ({r.responseCode})");
+            }
+            if (!string.IsNullOrEmpty(osoitin) && !osoitin.Contains("..") && !osoitin.StartsWith("/"))
+            {
+                string url = new Uri(new Uri(VerkkoOsoitin), osoitin).AbsoluteUri;
+                using var r = UnityEngine.Networking.UnityWebRequest.Get(url);
+                r.timeout = 15;
+                yield return r.SendWebRequest();
+                if (r.result == UnityEngine.Networking.UnityWebRequest.Result.Success)
+                { verkkoJson = r.downloadHandler.text; verkkoJuuri = url.Substring(0, url.LastIndexOf('/') + 1); }
+                Debug.Log($"MATKAKIRJA kaupunki: omat mallit: {osoitin} {(verkkoJson != null ? "ok" : r.responseCode.ToString())}");
+            }
+            verkkoHaettu = true; verkkoHaussa = false;
+            if (verkkoJson != null) VerkkoSaapui?.Invoke();
+        }
+
+        void Saapui() { if (vanhempi0 != null && avattu == null) Avaa(vanhempi0, googleViimeisin, viimeLat, viimeLon, kerros0); }
 
         public int Maara => mallit.Count;
         string avattu;   // avattujen kohteiden id:t (Paivita avaa uudelleen vain, jos joukko vaihtuu)
@@ -51,6 +90,7 @@ namespace Matkakirja.Linssit
         public void Paivita(double lat, double lon)
         {
             if (vanhempi0 == null) return;
+            viimeLat = lat; viimeLon = lon;
             var (json, _, _) = Lue();
             var l = json == null ? new List<OmatMallit.Kohde>() : OmatMallit.Lahella(OmatMallit.Lue(json), lat, lon);
             if (string.Join(",", l.ConvertAll(k => k.Id)) != (avattu ?? "")) Avaa(vanhempi0, google ?? googleViimeisin, lat, lon, kerros0);
@@ -61,9 +101,13 @@ namespace Matkakirja.Linssit
         public void Avaa(Transform vanhempi, Cesium3DTileset googleTileset, double lat, double lon, int kerros)
         {
             Sulje();
-            vanhempi0 = vanhempi; kerros0 = kerros; googleViimeisin = googleTileset;
+            vanhempi0 = vanhempi; kerros0 = kerros; googleViimeisin = googleTileset; viimeLat = lat; viimeLon = lon;
             var (json, juuriUrl, lahde) = Lue();
-            if (json == null) return;
+            if (json == null)
+            {
+                if (!verkkoHaettu && !verkkoHaussa && Matkakirja.Natiivi.LinssiOhjain.Instanssi != null) Matkakirja.Natiivi.LinssiOhjain.Instanssi.StartCoroutine(HaeVerkosta());
+                return;
+            }
             var paketti = OmatMallit.Lue(json);
             var lahella = OmatMallit.Lahella(paketti, lat, lon);
             if (lahella.Count == 0) return;
@@ -230,6 +274,7 @@ namespace Matkakirja.Linssit
                 try { if (File.Exists(p)) return (File.ReadAllText(p), new Uri(kansio + "/").AbsoluteUri, nimi); }
                 catch (Exception) { }
             }
+            if (verkkoJson != null) return (verkkoJson, verkkoJuuri, "R2");
             return (null, null, null);
         }
     }
