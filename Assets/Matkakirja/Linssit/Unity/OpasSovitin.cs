@@ -1363,6 +1363,20 @@ namespace Matkakirja.Natiivi
         }
 
         // ── Saapuminen ja puhe ───────────────────────────────────────────────
+        /// <summary>Kehys ja kameran todellinen paikka lokiin (Eiffel-korjauksen todennus 7.10.: silmän korkeus maasta, etäisyys kohteesta).</summary>
+        void KameraLoki(OpasKohde k, string milloin)
+        {
+            var kam = kierto != null ? kierto.GetComponent<Camera>() : null;
+            var g = kaupunki.Georef; var kh = silmukka?.NykyinenKehys;
+            if (kam == null || g == null || kh == null) return;
+            var llh = CesiumForUnity.CesiumWgs84Ellipsoid.EarthCenteredEarthFixedToLongitudeLatitudeHeight(
+                g.TransformUnityPositionToEarthCenteredEarthFixed((double3)(float3)kam.transform.position));
+            double vaaka = KierrosLento.EtaisyysM(llh.y, llh.x, k.Lat, k.Lon);
+            o.Kirjaa($"opas: kamera {milloin} {k.Nimi}: kehys et {kh.EtaisyysM:F0} m, kallistus {kh.Kallistus:F0}°, maa {kh.MaaM:F0}, nosto {kh.NostoM:F0}, korkeus_m {k.KorkeusM:F0}, koko {k.KokoM:F0} " +
+                $"| silmä {llh.z - kh.MaaM:F0} m maasta, {vaaka:F0} m kohteesta, kallistus käytössä {kierto.KaytettyKallistus:F0}°");
+        }
+        IEnumerator KameraLokiMyohemmin(OpasKohde k, float s) { yield return new WaitForSecondsRealtime(s); if (silmukka?.Nykyinen == k) KameraLoki(k, $"{s:F0} s"); }
+
         void Saapui(OpasKohde k)
         {
             kaupunki.SiirraOrigo(k.Lat, k.Lon, MaaKorkeus(k) is double m && !double.IsNaN(m) ? m : 45);
@@ -1371,6 +1385,7 @@ namespace Matkakirja.Natiivi
             saapumisia++;
             o.StartCoroutine(Siivoa());
             o.Kirjaa($"opas: saapui {k.Nimi} ({k.Lat:F4}, {k.Lon:F4}), ääni {(puhuu ? "soi" : "ei")}, laatat {kaupunki.Latausaste:F0} %");
+            KameraLoki(k, "saapuessa"); o.StartCoroutine(KameraLokiMyohemmin(k, 6f));
             saapumisAika = Time.realtimeSinceStartup;
             if (kaupunki.Latausaste < LatausKuvaRaja && k.Kuvat != null && k.Kuvat.Length > 0 && !k.Kysymys)
             {
