@@ -70,5 +70,14 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama("Havainnekuva", OpasYksityiskohdat.Tekijarivi(l[0]));
             Oleta.Sama("Kuva: besopha, CC BY 2.0", OpasYksityiskohdat.Tekijarivi(l[1]));
         }
+    
+        [Testi] static void LukuaikaAanettomalle()
+        {
+            Oleta.Sama(6.0, KierrosLento.LukuKesto("Lyhyt."), "vähintään 6 s");
+            Oleta.Sama(20.0, KierrosLento.LukuKesto(new string('a', 280)), "14 merkkiä/s");
+            Oleta.Sama(6.0, KierrosLento.LukuKesto(null));
+            var a = OpasYksityiskohdat.Ajoita(K(), "Q243", Eiffel, KierrosLento.LukuKesto(Eiffel));
+            Oleta.Tosi(a.Count >= 2, "kuvat ajoittuvat lukuajasta");
+        }
     }
 }

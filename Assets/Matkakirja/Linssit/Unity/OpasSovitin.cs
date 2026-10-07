@@ -568,7 +568,30 @@ namespace Matkakirja.Natiivi
         static bool YksPeittaa()
         {
             if (Matkakirja.Natiivi.OpasValikko.Viimeisin?.Auki == true) return true;
-            return Matkakirja.Natiivi.UiNakymat.Olemassa && Matkakirja.Natiivi.UiNakymat.Hae()?.Chat?.Auki == true;
+            return !tekstiAvasiChatin && ChatAuki;
+        }
+        static bool ChatAuki => Matkakirja.Natiivi.UiNakymat.Olemassa && Matkakirja.Natiivi.UiNakymat.Hae()?.Chat?.Auki == true;
+
+        // ÄÄNETÖN KAPPALE NÄKYVIIN: oppaan chat (Näytä teksti -näkymä, kappaleet ovat jo siellä) aukeaa itsestään, jos se ei ollut
+        // auki, ja sulkeutuu kappaleen jälkeen, ellei uutta äänetöntä kappaletta ala heti (ei välkettä peräkkäisissä).
+        static bool tekstiAvasiChatin;
+        double tekstiKulunut;
+        void TekstiNakyviin()
+        {
+            if (Testi || ChatAuki) return;
+            ChatOppaalle(true);
+            tekstiAvasiChatin = ChatAuki;
+        }
+        IEnumerator TekstiPoisViiveella()
+        {
+            yield return new WaitForSecondsRealtime(1.5f);
+            TekstiPois();
+        }
+        void TekstiPois()
+        {
+            if (!tekstiAvasiChatin || tekstina != null) return;
+            tekstiAvasiChatin = false;
+            if (ChatAuki) ChatOppaalle(false);
         }
 
         void YksPois()
@@ -580,14 +603,25 @@ namespace Matkakirja.Natiivi
         /// <summary>Kerronta alkoi: kohteen (tai "avaus") kuvat ajoitetaan ja näytetään soivan klipin ajan mukaan.</summary>
         void YksAloita(string kohdeId, string teksti, AudioSource lahde, AudioClip klippi, string ajatUrl, double kestoS)
         {
-            YksPois();
-            VarmistaYksityiskohdat();
-            if (string.IsNullOrEmpty(kohdeId) || string.IsNullOrEmpty(teksti) || lahde == null || klippi == null || Testi) return;
-            if (kohdeId.EndsWith("-lisaa")) kohdeId = kohdeId.Substring(0, kohdeId.Length - 6);
-            yksAjo = o.StartCoroutine(YksAja(kohdeId, teksti, lahde, klippi, ajatUrl, kestoS));
+            if (lahde == null || klippi == null) return;
+            YksAloita(kohdeId, teksti, ajatUrl, kestoS, () => lahde != null ? lahde.time : 0f,
+                () => lahde != null && lahde.clip == klippi && (lahde.isPlaying || tauolla));
         }
 
-        IEnumerator YksAja(string kohdeId, string teksti, AudioSource lahde, AudioClip klippi, string ajatUrl, double kestoS)
+        /// <summary>Äänetön kappale: aika on kulunut lukuaika (TekstiLoppuu, tauko pysäyttää), jatkuu niin kauan kuin kappale on esillä.</summary>
+        void YksAloitaTeksti(string kohdeId, string teksti, double kestoS, Func<bool> esilla)
+            => YksAloita(kohdeId, teksti, null, kestoS, () => tekstiKulunut, esilla);
+
+        void YksAloita(string kohdeId, string teksti, string ajatUrl, double kestoS, Func<double> aika, Func<bool> kaynnissa)
+        {
+            YksPois();
+            VarmistaYksityiskohdat();
+            if (string.IsNullOrEmpty(kohdeId) || string.IsNullOrEmpty(teksti) || Testi) return;
+            if (kohdeId.EndsWith("-lisaa")) kohdeId = kohdeId.Substring(0, kohdeId.Length - 6);
+            yksAjo = o.StartCoroutine(YksAja(kohdeId, teksti, ajatUrl, kestoS, aika, kaynnissa));
+        }
+
+        IEnumerator YksAja(string kohdeId, string teksti, string ajatUrl, double kestoS, Func<double> aika, Func<bool> kaynnissa)
         {
             float raja = Time.unscaledTime + 3f;
             while (yksHaussa && Time.unscaledTime < raja) yield return null;
@@ -608,12 +642,28 @@ namespace Matkakirja.Natiivi
             foreach (var (kuva, t) in lista)
             {
                 // Kuva lähtee ~0,35 s ennen ankkuria (lataus ja sisääntulo), kun klippi yhä soi.
-                while (lahde != null && lahde.clip == klippi && (lahde.isPlaying || tauolla) && lahde.time < t - 0.35f) yield return null;
-                if (lahde == null || lahde.clip != klippi || !lahde.isPlaying) yield break;
+                while (kaynnissa() && aika() < t - 0.35) yield return null;
+                if (!kaynnissa()) yield break;
                 if (YksPeittaa() || kaupunki?.Kamera == null) continue;
                 kortti.Nayta(kaupunki.Kamera, kuva, YksPeittaa);
             }
             yksAjo = null;
+        }
+
+        /// <summary>Avaus ilman ääntä (tai Kertoja pois): teksti chattiin ja näkyviin lukuajan, yksityiskohtakuvat lukuajasta.</summary>
+        IEnumerator AvausTekstina(string teksti)
+        {
+            double kesto = KierrosLento.LukuKesto(teksti);
+            o.Kirjaa($"opas: esitys avaus tekstinä ({kesto:F1} s)");
+            KysymysChattiin(new OpasKohde { Id = "avaus", Teksti = teksti });
+            TekstiNakyviin();
+            var avausK = new OpasKohde { Id = "avaus", Teksti = teksti };
+            tekstina = avausK; tekstiKulunut = 0;
+            YksAloitaTeksti("avaus", teksti, kesto, () => tekstina == avausK);
+            double t = 0;
+            while (t < kesto && silmukka != null && Kaupunkitila && tekstina == avausK) { if (!tauolla) t += Time.unscaledDeltaTime; tekstiKulunut = t; yield return null; }
+            if (tekstina == avausK) tekstina = null;
+            TekstiPois();
         }
 
         IEnumerator EsitysAvaus(string kaupunkiId)
@@ -629,8 +679,11 @@ namespace Matkakirja.Natiivi
                     if (r.result == UnityWebRequest.Result.Success && MiniJson.Jasenna(r.downloadHandler.text) is Dictionary<string, object> j)
                         avaus = j.TryGetValue("avaus", out var a) ? a as Dictionary<string, object> : null;
                 }
-                if (avaus != null && avaus.TryGetValue("aani", out var au) && au is string url)
-                    yield return SoitaJaOdota(url, "avaus", avaus.TryGetValue("teksti", out var at) ? at as string : null);
+                string avausTeksti = avaus != null && avaus.TryGetValue("teksti", out var at) ? at as string : null;
+                if (avaus != null && avaus.TryGetValue("aani", out var au) && au is string url && Asetukset.Paalla(Kytkin.Kertoja))
+                    yield return SoitaJaOdota(url, "avaus", avausTeksti);
+                else if (!string.IsNullOrWhiteSpace(avausTeksti) && silmukka != null)
+                    yield return AvausTekstina(avausTeksti);
                 if (!OpastusKuultu && silmukka != null && Kaupunkitila)
                 {
                     string ourl = null;
@@ -1979,6 +2032,7 @@ namespace Matkakirja.Natiivi
             if (kertoja && !string.IsNullOrEmpty(avain) && klipit.TryGetValue(avain, out var klippi) && klippi != null && puhe != null)
             {
                 puhe.clip = klippi; puhe.volume = 1f; puhe.Play();
+                TekstiPois();   // äänellinen kerronta: tekstitilan itse avaama chat kiinni
                 // PCM-virran klipin pituus ei ole kerronnan kesto: vastauksen kesto_s ensin (yksityiskohtakuvien varapolku).
                 if (!k.Kysymys) YksAloita(k.Id, k.Teksti, puhe, klippi, k.AaniAjat, k.KestoS > 0 && pcmVirrat.ContainsKey(avain) ? k.KestoS : klippi.length);
                 puhuu = true; y.Repliikki(true); puheAlkoi = Time.unscaledTime;
@@ -1989,7 +2043,11 @@ namespace Matkakirja.Natiivi
             }
             o.Kirjaa($"opas: kappale tekstinä ({(!kertoja ? "Kertoja pois" : string.IsNullOrEmpty(avain) ? "ei ääntä vastauksessa" : "ääni ei latautunut")})");
             tekstina = k;
-            double s = k.KestoS > 0 ? k.KestoS : KierrosLento.PysahdysKesto(k.Teksti);
+            // ÄÄNETÖN KAUPUNKIESITYS (Päätoimittaja 7.10. 18.2x): kesto lukunopeudesta (kesto_s etusijalla, jos annettu), teksti
+            // näkyy itsestään oppaan Näytä teksti -näkymässä, ja yksityiskohtakuvat ajoitetaan kuluvasta lukuajasta.
+            double s = k.KestoS > 0 ? k.KestoS : KierrosLento.LukuKesto(k.Teksti);
+            tekstiKulunut = 0;
+            if (!k.Kysymys) { TekstiNakyviin(); YksAloitaTeksti(k.Id, k.Teksti, s, () => tekstina == k); }
             o.StartCoroutine(TekstiLoppuu(s, k));
         }
         OpasKohde tekstina, aaniOdotus;
@@ -2062,8 +2120,8 @@ namespace Matkakirja.Natiivi
         IEnumerator TekstiLoppuu(double s, OpasKohde k)
         {
             double t = 0;
-            while (t < s) { if (!tauolla) t += Time.unscaledDeltaTime; yield return null; }   // tauko pysäyttää myös tekstikappaleen
-            if (silmukka != null && tekstina == k && !puhuu) { tekstina = null; silmukka.AaniLoppui(); }
+            while (t < s) { if (!tauolla) t += Time.unscaledDeltaTime; if (tekstina == k) tekstiKulunut = t; yield return null; }   // tauko pysäyttää myös tekstikappaleen
+            if (silmukka != null && tekstina == k && !puhuu) { tekstina = null; silmukka.AaniLoppui(); o.StartCoroutine(TekstiPoisViiveella()); }
         }
 
         /// <summary>
@@ -2156,7 +2214,7 @@ namespace Matkakirja.Natiivi
 
         public void Sulje()
         {
-            YksPois(); kortti?.Sulje(); kortti = null;
+            YksPois(); kortti?.Sulje(); kortti = null; tekstiAvasiChatin = false;
             luotain?.Dispose(); luotain = null;
             OpasKorostusKuva.Piilota(true);
             KaupunkiYovalot.Kohde = null;
