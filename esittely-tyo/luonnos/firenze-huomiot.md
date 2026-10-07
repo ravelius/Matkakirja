@@ -1,0 +1,21 @@
+# Firenze – huomiot tarkistajalle
+
+- Tarkistin: 0 virhettä, 12 huomiota. Kaikki "ei ala paikan nimellä" -huomiot johtuvat LISÄSÄÄNNÖSTÄ A: "Vanha silta, Ponte Vecchio", "Vanha palatsi, Palazzo Vecchio", "Kaupungin pääaukio, Piazza della Signoria", "Ruhtinaiden palatsi, Palazzo Pitti", "Näköalatasanne Piazzale Michelangelo", "Kukkulan kirkko San Miniato al Monte", "Taideakatemian galleria, Galleria dell'Accademia" (lyhyissä vastaavat taivutetut muodot). Santa Crocen basilika, Santa Maria Novellan basilika, Bobolin puutarha ja Bargellon kansallismuseo alkavat nimellä (suomeksi taivutettu nimi, tarkennus A). Ääntöhuomioita 0. "Avaus puuttuu" on hyväksyttävä: avaus on tiedostossa avaukset/firenze.md (36 sanaa).
+- Isoisä: vain Piazza della Signoria (teksti, ei lyhyt). Kerrotaan merkinnästä: David seisoi aukiolla 1873, patsas aiottiin siirtää sateelta suojaan, isoisä vertasi patsaan suurta kättä omaansa. Kuukautta, säätä ja tunteita ei mainita. "Samana vuonna alkuperäinen siirrettiin museoon" on yleistä historiaa (aineisto + Frommer's), ei isoisän kokemus.
+- Lähteet: WebFetch oli estetty, joten kaikki on tarkistettu WebSearch-otteista. Pelin aineistoon (kaanon:pelin-aineisto) nojaavat: kupolin aukko yli sata vuotta, vuoden 1418 kilpailu, kalanruoto ja yli neljä miljoonaa tiiltä; teurastajien karkotus käytävän hajun takia; Palazzo Vecchio "vuodesta 1299"; Venuksen syntymä ja Kevät samassa salissa ja kulta Venuksen hiuksissa; Davidin 369 vuotta oven vieressä ("yli kolmesataa"); Savonarolan laatta; Vasarin käytävä 1565, noin kilometri; Piazzale Michelangelo ja pääkaupunkiajan uudistus.
+- Epävarmat:
+  - Tuomiokirkko: korkeus_m 114 (Wikipedia 114,5). "Hauta löydettiin uudelleen kaivauksissa vuonna 1972" – Opera del Duomon sivu; kirjoitettu "kirkon alle" (hauta on kryptassa Santa Reparatan kaivausalueella).
+  - Ponte Vecchio: koko_m 100 on arvio (silta noin 95 m). Cellinin rintakuva "sillan keskikohdalla suihkulähteen päällä" (lähde: itäpuolen keskellä).
+  - Palazzo Vecchio: "jotkut tutkijat uskovat" Leonardon freskon olevan Vasarin seinän takana – lähteessä nimeltä Maurizio Seracini; väite on kiistanalainen, muotoiltu varovasti. "Etsivä löytää" on käännös lipun sanoista Cerca trova.
+  - Uffizi: lähde simple.wikipedia (U-muoto tulkittu pitkästä kapeasta pihasta, joka avautuu Arnolle). Vasarin käytävä suljettu 2016–2024 (kahdeksan vuotta).
+  - Piazza della Signoria: Neptunuksen suihkulähteen lempinimi Biancone suomennettu "isoksi valkoiseksi". Häät: Francesco ja Itävallan Johanna 1565 (Frommer's).
+  - Santa Croce: perustusvuosi 1294 (Reid's); "itälaidalle laajan aukion päähän" yleistieto. Vesi "lähes kuuden metrin" = lähteen "nearly 20 feet". Cimabue "yli puolet maalipinnasta" = noin 60 %.
+  - Bobolin puutarha: "puolikkaan kilparadan muotoinen" = Wikipedian "half of a classical hippodrome". Hovikääpiö Morgante Bacchuksena kilpikonnan selässä (Bacchinon suihkulähde; tekijää ei nimetty).
+  - Palazzo Pitti: Viktor Emanuel kolmas = Viktor Emanuel toisen pojanpoika (yleistieto, Wikipedia).
+  - Piazzale Michelangelo: neljä vuorokaudenaikaveistosta "kuuluvat samaan muistomerkkiin" (lähteessä pronssijäljennökset Davidista ja neljästä allegoriasta). Ravintolan terassi: La Loggia (lähteessä panoraamaterassi).
+  - Santa Maria Novella: Masaccio "ensimmäinen monumentaalinen renessanssimaalaus, jossa käytettiin keskeisperspektiiviä" (Wikipedia: linear perspective). Apteekki "pidetään maailman vanhimpana" (Officinan oma väite, Wikipedia toistaa).
+  - Kastekappeli: Paratiisin portit on itäovi; teksti ei nimeä suuntaa (yksi hakuote sanoi virheellisesti "north"). Dante: Helvetti 19:17 "mio bel San Giovanni", altaan rikkominen samassa laulussa.
+  - San Miniato: marttyyrin nimi suomeksi "Minias" (lat. Minias, it. Miniato). Iltarukouksen kellonaikaa ei kerrota.
+  - Bargello: "ylimmän virkamiehen" = podestà. Donatellon Davidin ajoitus "luultavasti 1440-luvulla".
+  - Accademia: "sali" = De Fabrisin tribuuna, avattu 1882. Vangit "Davidin luo johtavan salin varrella" (Galleria dei Prigioni).
+- korkeus_m vain tuomiokirkolle (114). Palazzo Vecchio luokassa rakennus (torni mainitaan tekstissä, 94 m).
