@@ -45,7 +45,7 @@ export const OPAS_SALLITUT = Object.freeze({
     {"id": "valletta", "nimi": "Valletta", "lat": 35.88815, "lon": 14.49975, "r_m": 10000},
     {"id": "vilna", "nimi": "Vilna", "lat": 54.69282, "lon": 25.26939, "r_m": 10000},
     {"id": "ateena", "nimi": "Ateena", "lat": 37.96964, "lon": 23.71825, "r_m": 7000},
-    {"id": "islanti", "nimi": "Islanti", "lat": 64.14401, "lon": -21.93145, "r_m": 3000},
+    {"id": "islanti", "nimi": "Reykjavík", "lat": 64.14401, "lon": -21.93145, "r_m": 3000},
     {"id": "amsterdam", "nimi": "Amsterdam", "lat": 52.3661, "lon": 4.90092, "r_m": 5000},
     {"id": "kosice", "nimi": "Košice", "lat": 48.71823, "lon": 21.25015, "r_m": 5000},
     {"id": "luxemburg", "nimi": "Luxemburg", "lat": 49.6132, "lon": 6.12956, "r_m": 5000},
@@ -78,7 +78,8 @@ export function sallittuKaupunki(nimi, env = null) {
   if (!id) return null;
   const l = lista(env);
   if (!l) return { id, nimi, rajaton: true };
-  return l.sallitut.find((x) => x.id === id) ?? null;
+  // Id kaupungin pelinimestä (Islanti → islanti) tai näyttönimestä (Reykjavík).
+  return l.sallitut.find((x) => x.id === id || sallittuId(x.nimi) === id) ?? null;
 }
 
 /** Onko piste jonkin sallitun kaupungin r_m-säteellä; kaupunki annettuna vain sen säteellä. */

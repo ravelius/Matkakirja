@@ -25,6 +25,8 @@ test('lista: 36 sallittua, ei raja- eikä POIS-kaupunkeja; id-kaava', () => {
   assert.ok(sallittuKaupunki('Pariisi', paalla)); assert.ok(sallittuKaupunki('Kööpenhamina', paalla));
   for (const pois of ['Tallinna', 'Istanbul', 'Kiova', 'Sarajevo', 'Tromssa']) assert.equal(sallittuKaupunki(pois, paalla), null, pois);
   assert.equal(sallittuId('Košice'), 'kosice');
+  assert.equal(sallittuKaupunki('Islanti', paalla)?.nimi, 'Reykjavík', 'pelinimi Islanti, näyttönimi Reykjavík');
+  assert.equal(sallittuKaupunki('Reykjavík', paalla)?.id, 'islanti');
   assert.ok(pisteSallittu({ lat: 48.8584, lon: 2.2945 }, 'Pariisi', paalla));
   assert.ok(!pisteSallittu({ lat: 59.437, lon: 24.745 }, null, paalla), 'Tallinna ei millään säteellä');
 });
