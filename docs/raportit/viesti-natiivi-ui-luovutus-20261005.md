@@ -6,7 +6,18 @@ worktreet /Users/Shared/Claude/wt/proto-natiivi-ui-<aihe>. Käännös: lokit/nat
 Simu vain Julkaisijan "SIMU NYT" -viestistä, oma iPhone FB234D08-4693-4496-9C7A-6C7C15B03963, iPad
 AD119F7B-A2A2-43EE-8769-7326DD757F89; lopuksi sammutus ja "simu vapaa".
 
-## TILA 7.10. klo 13.0x (uusin, TAUKO 13.45–15.00)
+## TILA 7.10. klo 15.0x (uusin)
+
+JATKA TÄSTÄ: metro 89d98b7e KUITATTU junaan 161, SHA lähetetty Natiivisepälle 15.0x. APURAHA v7 + VALMIIT LINSSIT =
+natiivi-ui/apuraha-kuvat 3f07c49b (proto-git; sisältää kehittaja-tf:n yhdistettynä): kuvat kappaleen viereen (kuvat[].kappale
+0-pohj., kuvat[].rivi 0-pohj. listarivi), kortti 760, palaute pois; ylätason valmiitLinssit {teksti,nappi,valmis,linssit}
+(Pelikoodari #4147) → LinssiOhjain.AvaaValmiitLinssit → Linssirekisteri.Valmiit (ei kehittäjätilaa); vanha esittelylippu
+poistetaan käynnistyksessä; testaajatila = LinssiOhjain.PaivitaKehittajatila (Asetukset.Muuttui). Julkaisijan jonossa ~15.45,
+YKSI simu kerrallaan: skriptit/apuraha-v7.sh <UDID> <nimi> <app> [vaaka] (iPhone 17 FB234D08 pysty+vaaka, sitten iPad
+AD119F7B) → tarkista 0-julkaistu-loppu (ei nappia), 8-nappi, 9-avattu + valittavissa ennen/jälkeen → Päätoimittajalle
+(ehdot 1–3) + Pelikoodarille tunnusvahvistus → junaan 162. Mac-stillit Natiivisepän Mac-käännöksestä.
+
+## TILA 7.10. klo 13.0x (TAUKO 13.45–15.00)
 
 JATKA TÄSTÄ (tyhjästä kontekstista): UUSIN 14.2x: omistajan metropäätös (iPad vasen yläkulma + ☀A oikealle, iPhone vaaka
   Islandin oikealle ylös, nimet köyden päällä, iPhone pysty Island-rivit rajattu) = natiivi-ui/pariisi-esitys 89d98b7e. Jonossa
