@@ -379,10 +379,10 @@ if '--leivo' in argv:
     omat = [o for o in tilan if o.type == 'MESH']
     # Alaspäin osoittavat pinnat (laattojen, kalusteiden pohjat) eivät näy dioraaman kameroista, mutta veisivät
     # atlaksesta tilaa ja leipoutuisivat mustiksi: pois ennen UV-levitystä.
-    # 7.10.: vain lattian lähellä (alle 2,2 m tilan rajojen alareunasta). Holvien ja kattojen alapinnat näkyvät
-    # kameroista (kappelin ristiholvin laki katosi, ja kuori näkyi sen läpi sahalaitana).
+    # 7.10.: vain lattian lähellä (alle 1,2 m tilan rajojen alareunasta; pöytien alapinnat). Holvien, kattojen, hyllyjen ja
+    # kappelin syvennyksen (1,65 m) alapinnat näkyvät kameroista (ristiholvin laki katosi, syvennyksen katto näkyi sinisenä).
     import bmesh
-    raja_z = bl(tila['rajat']['min'])[2] + 2.2
+    raja_z = bl(tila['rajat']['min'])[2] + 1.2
     for o in omat:
         bm = bmesh.new(); bm.from_mesh(o.data)
         pois = [f for f in bm.faces if f.normal.z < -0.7 and (o.matrix_world @ f.calc_center_median()).z < raja_z]

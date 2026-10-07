@@ -97,7 +97,10 @@ for (let k = 0; k < 12; k++) {
 // Hagioskooppirako (pohjaseinä 3°, kammion aukko) ja koillismuurin ainoa ahdas ikkuna (Aspelin 1875, Sisältökirjurin
 // lähdetarkistus #4129; Maconi 1910 ei näytä sitä): kivireunus laatoista. Ikkuna 58,7° ristien 49,4° ja 68° välissä, korkealla
 // (lattia + 1,5…2,3), suljettu rautaluukulla; valo tulee edelleen kynttilöistä.
-const KIVI = { yla: 'kivi', sivu: 'kivi', ala: 'kivi' }; // 7.10.: kivireunus (laatan oletus yla = lankku näytti puulta)
+const KIVI = { yla: 'kivi', sivu: 'kivi', ala: 'kivi' };
+// Sivualttarin (38°) kätkösyvennys E3:lle: kompassi a0…a1 (ristien 30,8° ja 49,4° välissä), lattia + 1,05…1,65 (alttaripöydän
+// yläpuolella), syvyys 0,55. Irrotettavat kivet, kalkki, pateeni ja liuskekivi ovat kavely-merkkien esineitä (eivät leivottuja).
+const SYV = { a: 38.75, a0: 34.9, a1: 42.6, y0: LATTIA + 1.05, y1: LATTIA + 1.65, leveys: 0.52, syvyys: 0.55 }; // 7.10.: kivireunus (laatan oletus yla = lankku näytti puulta)
 const REIAT = [];
 for (const h of [
   { a: 3, y: 10.05, leveys: 0.24, korkeus: 0.5 }, // hagioskooppi
@@ -193,7 +196,18 @@ export const TILA = {
     { resepti: 'kiekko', paikka: [CX, LATTIA, CZ], suunta: 0, sade: 6.6, paksuus: 0.4, segmentit: 32, pinnat: { yla: 'kivi' } },
     // Tornin seinä kerroksen korkeudelta (uusi tapa 29.9.: kuoressa ei ole sisäpintaa, massan torni ei ole mukana).
     // Seinä 2,7 m (sisäsäde 3,9) ja holvin yläpuolelle asti (y 9,0…15,6), ettei kennojen seinäkaarien yllä näy rakoa.
-    { resepti: 'torni', paikka: [CX, 9.0, CZ], suunta: 0, sade: 6.6, paksuus: 2.7, korkeus: 6.6, segmentit: 32, auki: { alku: 95, loppu: 230 } },
+    // 7.10. E3 (valoarvoitus): seinä kolmessa korkeusosassa, jotta sivualttarin (38°) yläpuolelle jää todellinen syvennys
+    // (Härö 1997: sivualttarien syvennykset 1870-luvulla umpeen muurattuja). Syvennys SYV (kompassi, y, leveys, korkeus, syvyys).
+    { resepti: 'torni', paikka: [CX, 9.0, CZ], suunta: 0, sade: 6.6, paksuus: 2.7, korkeus: SYV.y0 - 9.0, segmentit: 32, auki: { alku: 95, loppu: 230 } },
+    { resepti: 'torni', paikka: [CX, SYV.y0, CZ], suunta: 0, sade: 6.6, paksuus: 2.7, korkeus: SYV.y1 - SYV.y0, segmentit: 32, auki: { alku: 95 - 360, loppu: SYV.a1 } },
+    { resepti: 'torni', paikka: [CX, SYV.y0, CZ], suunta: 0, sade: 6.6, paksuus: 2.7, korkeus: SYV.y1 - SYV.y0, segmentit: 32, auki: { alku: SYV.a0, loppu: 230 } },
+    { resepti: 'torni', paikka: [CX, SYV.y1, CZ], suunta: 0, sade: 6.6, paksuus: 2.7, korkeus: 15.6 - SYV.y1, segmentit: 32, auki: { alku: 95, loppu: 230 } },
+    // syvennyksen takaseinä ja katto (lattia = alaosan yläreuna)
+    { resepti: 'laatta', paikka: pol(SYV.a, SEINA + SYV.syvyys + 0.03, SYV.y1), suunta: SYV.a + 180, leveys: SYV.leveys + 0.1, syvyys: 0.05, paksuus: SYV.y1 - SYV.y0, pinnat: KIVI },
+    { resepti: 'laatta', paikka: pol(SYV.a, SEINA + SYV.syvyys / 2, SYV.y1 + 0.04), suunta: SYV.a + 180, leveys: SYV.leveys + 0.1, syvyys: SYV.syvyys + 0.1, paksuus: 0.06, pinnat: KIVI },
+    { resepti: 'laatta', paikka: pol(SYV.a, SEINA + SYV.syvyys / 2, SYV.y0 + 0.01), suunta: SYV.a + 180, leveys: SYV.leveys + 0.1, syvyys: SYV.syvyys + 0.1, paksuus: 0.06, pinnat: KIVI },
+    // Tottin ja Sturen kilpilaatat syvennyksen yläpuolella (Aspelin 1870-l. alttariseinällä, Härö 1997; arvoitus: "kilpien alla")
+    ...[SYV.a - 3.1, SYV.a + 3.1].map((a) => ({ resepti: 'laatta', paikka: pol(a, SEINA - 0.03, LATTIA + 2.2), suunta: a + 180, leveys: 0.3, syvyys: 0.05, paksuus: 0.38, pinnat: KIVI })),
     // Ristiholvi (Maconi 1910): taitteet seinällä y 12,3, kennojen seinäkaaret y 13,8, laki y 15,0. Taitekulmat
     // 5° + 45°·j osuvat sektorin ruudukkoon (230° + 11,25°·i). Maalaukset (lehti- ja kukka-aiheet): holvi-pinta rappaus.
     { resepti: 'kupoli', paikka: [CX, HOLVI.lahto, CZ], suunta: 0, sade: SEINA - 0.06, korkeus: HOLVI.laki - HOLVI.lahto, paksuus: 0.3,
