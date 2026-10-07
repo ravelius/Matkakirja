@@ -21,7 +21,7 @@ Avoimet työt:
 - Apurahakuvat v2 lähetetty: lokit/apuraha-kuvat/iss-cupola-{lansi-eurooppa,itameri-suomi}-ipad-vaaka.png (19ef80cc, LCD ajantasainen).
 - PAIKANNIMET: proto linssiseppa2/paikannimet 4ad028d78 (worktree wt/proto-linssiseppa2-paikannimet): Resources/IssPaikat/nimet-fi.json
   (337 Euroopan paikkaa, Wikidata fi + SFS 4900), IssSijaintiLataaja lukee (vain LCD), IssNimetTestit. Muutoslista
-  lokit/linssiseppa2-paikannimet/muutoslista.md → Päätoimittajan kuittaus odottaa, EI junaan ilman sitä.
+  lokit/linssiseppa2-paikannimet/muutoslista.md. + 59d44e87b kiistanalaiset maat (Krim UKR, P-Kypros CYP, Kosovo). KUITATTU junaan 160/161, SHA Natiivisepälle.
 - Kaupunkipallo junassa 159 (VIE OK). Worktree wt/proto-linssiseppa2-kaupunkipallo poistetaan, kun 159 on masterissa.
 
 ## TILA 7.10. 10.5x
