@@ -446,3 +446,6 @@ Edellinen luovutus on `viesti-siirtoseppa-luovutus-20261002.md` (5.10. osiot 02.
 - 16.05: Päätoimittaja kuittasi juna 162. Kehittäjävalikkoon "Olavinlinna – pelattava pala (kokeilu)" (b47f31d4: LinssiOhjain.AvaaPelattavaPala
   → DioraamaSovitin.PelattavaPalaPyydetty → VenePaalle; laiturilla vartijat; Sulje purkaa seikkailun). Merge-pyyntö Natiivisepälle:
   siirtoseppa/historia-juna162 @ 78e56088 (+ riippuvuus natiivi-ui/seikkailu-tapit 34cf54b0). historia-h0 kärki b47f31d4.
+- 16.06: juna 162 -runko (Natiiviseppä) baaa24445 → 3bc7680c1 yhdistetty: historia-juna162 @ a7adab9f (LinssiOhjain-ristiriita ratkaistu), 835/835.
+  OMISTAJA 16.0x: roolit eivät tee omia iOS/iPad/Mac-käännöksiä; haaraan riittää unity-tarkistus + automaattiset testit; simukäännös vain
+  epäselvään vikaan, ilmoitus Päätoimittajalle etukäteen.
