@@ -1,10 +1,31 @@
-# TILANNE: lähdetarkistus (Kielletty kaupunki 1923 ja Giza) — keskeytetty 7.10.2026
+# TILANNE: lähdetarkistus (Kielletty kaupunki 1923 ja Giza) — jatkoajo 7.10.2026
 
 Päätoimittajan tilaus 7.10.2026: lähdetarkistus kahteen faktapohjaan, jotka kirjoitettiin
 ilman pääsyä lähdesivuille. Omistajan päätös (5 tunnin raja) keskeytti työn kesken.
 Haara: `fable-lahdetarkistus-kk-giza` (pohja: `origin/main`).
 
-## Mitä on tehty
+## VAIHE 2 (jatkoajo, uusi pilvisessio 7.10.2026)
+
+**Verkon tila tarkistettu uudelleen tässä ympäristössä (kaikki toimii):**
+
+| Lähde | Vaste |
+|---|---|
+| `en.wikipedia.org/wiki/Diary_of_Merer` | 200 |
+| `commons.wikimedia.org/w/api.php` (imageinfo + extmetadata) | 200 (ajoittain 429 = kiintiö; uusinta auttaa) |
+| `content.time.com/time/magazine/article/...` ja `time.com/archive/...` | 200 (vaatii user agentin) |
+| `archive.org/details/twilightinforbid0000regi` | 200 |
+| `dpm.org.cn` (Palatsimuseon PDF) | 200 |
+
+Komento, jota agentit käyttävät:
+`curl -sS -L --max-time 60 -A "MatkakirjaFactCheck/1.0 (sami.reivinen@vvi.fi)" "<URL>"`
+(ympäristömuuttuja `NODE_USE_ENV_PROXY=1`).
+
+**Vaihe 2 käynnissä:** neljä Opus-ali-agenttia (A, B, C, D alla olevan työnjaon mukaan) ajossa
+rinnakkain. Raportit kirjoitetaan session scratchpad-kansioon, ei repoon; vasta kun kaikki
+neljä ovat valmiit, tulokset liitetään faktapohjien loppuun osioksi
+"Lähdetarkistus 7.10.2026 (sivut avattu)".
+
+## Mitä on tehty (vaihe 1)
 
 1. **Haara luotu** `origin/main`-pohjalta.
 2. **Verkon tila todettu** (tämä on tarkistuksen kannalta oleellinen havainto): ajoympäristössä
