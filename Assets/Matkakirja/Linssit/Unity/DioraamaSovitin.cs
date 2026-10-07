@@ -822,6 +822,27 @@ namespace Matkakirja.Natiivi
             var ab = b - a; float u = Mathf.Clamp01(Vector3.Dot(p - a, ab) / Mathf.Max(1e-6f, ab.sqrMagnitude));
             return Vector3.Distance(p, a + ab * u);
         }
+        IEnumerator Kuvakaappaus(string nimi, double skaala)
+        {
+            yield return new WaitForEndOfFrame();
+            var cam = nayttamo?.Kamera;
+            if (cam == null) { o.Kirjaa("poikki: kuva: ei kameraa"); yield break; }
+            int w = Mathf.Clamp((int)(Screen.width * skaala), 64, 8192), h = Mathf.Clamp((int)(Screen.height * skaala), 64, 8192);
+            var rt = new RenderTexture(w, h, 24, RenderTextureFormat.ARGB32) { antiAliasing = 4 };
+            var vanha = cam.targetTexture; float vanhaAspect = cam.aspect;
+            cam.targetTexture = rt; cam.aspect = (float)w / h;
+            cam.Render();
+            cam.targetTexture = vanha; cam.aspect = vanhaAspect;
+            var edellinen = RenderTexture.active; RenderTexture.active = rt;
+            var tex = new Texture2D(w, h, TextureFormat.RGB24, false);
+            tex.ReadPixels(new Rect(0, 0, w, h), 0, 0); tex.Apply();
+            RenderTexture.active = edellinen;
+            string polku = System.IO.Path.Combine(Application.persistentDataPath, System.IO.Path.GetFileName(nimi));
+            try { System.IO.File.WriteAllBytes(polku, tex.EncodeToPNG()); o.Kirjaa($"poikki: kuva {System.IO.Path.GetFileName(nimi)} {w}×{h}"); }
+            catch (Exception e) { o.Kirjaa("poikki: kuva: " + e.Message); }
+            UnityEngine.Object.Destroy(tex); rt.Release(); UnityEngine.Object.Destroy(rt);
+        }
+
         Vector3? puolilahiRinta;
         const float PuolilahiVapaaM = 0.9f, PuolilahiLeikkausMaxM = 1.2f;
         const double PuolilahiSivu = 35, PuolilahiMaxKierto = 60, PuolilahiKohdeY = 1.35, PuolilahiKorkeusM = 1.5, PuolilahiMinM = 1.7,
@@ -1207,6 +1228,13 @@ namespace Matkakirja.Natiivi
                 float yaw = (float)(tl.Kamera.Atsimuutti + 180.0);
                 SeikkailuPelaaja.Luo(nayttamo.transform, alku, (float)Matkakirja.Linssit.Seikkailu.Kavely.Kulma(yaw), DioraamaNayttamo.Kerros);
                 o.Kirjaa($"poikki: kävely päällä tilassa {tid} ({alku}), törmäyksiä {tormayksia}");
+                return;
+            }
+            // "poikki kuva <nimi.png> [skaala]": puhdas kuva dioraamakamerasta ilman käyttöliittymää ja tekstityksiä (Päätoimittaja 7.10.:
+            // apurahakortin kuva), ruudun koko × skaala, Documents/<nimi>.
+            if (mita == "kuva")
+            {
+                o.StartCoroutine(Kuvakaappaus(string.IsNullOrEmpty(arvo) ? "linna.png" : arvo, osat.Length > 3 ? Luku(osat[3]) : 1.0));
                 return;
             }
             // "poikki rakennus <id>": seuraava avaus lataa rakennuksen dioraama/<id>/ (H0). Ilman arvoa kertoo nykyisen.
