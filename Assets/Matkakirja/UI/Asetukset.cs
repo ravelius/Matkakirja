@@ -34,6 +34,10 @@ namespace Matkakirja.Natiivi
         const string KehittajaAvain = "matkakirja-kehittaja";
         const string KehittajaTiiviste = "2f7f15d0bb83b97a7ce3054be0972e80b60742cfc8b4c36ce06f3330f6f045c6";
         const string KehittajaTiivisteRajattu = "b3282a2f2a28757b3a18ab833de16a9c54518c0b0cf493e3f0a7cf09386f326a";
+        // TESTAAJATILA (omistaja 7.10.2026 klo 12.5x, beetatestaajat): kevyempi taso omalla koodillaan; vain SHA-256-tiiviste
+        // (repo on julkinen). Avaa kaikki linssit (esittelylinssit) ja vapaan liikkumisen (maailmatila), ei kehittäjätyökaluja.
+        const string TestaajaTiiviste = "5e8a21ead84851c212c2cae58849de4d37bc0babfcab05ceff51350412eb3e94";
+        const string TestaajaAvain = "matkakirja-testaaja";
 
         /// <summary>
         /// Kehittäjätila. Omistajan päätös 7.10.2026 klo 12.5x (kumoaa Fablen 24.9. portin): avautuu koodilla myös App Store
@@ -41,6 +45,9 @@ namespace Matkakirja.Natiivi
         /// (tiiviste) kytkee sen. Avaimet ajon aikana Keychainiin, ei binääriin eikä lokiin.
         /// </summary>
         public static bool Kehittaja => !PakotaPelaaja && (Debug.isDebugBuild || PlayerPrefs.GetString(KehittajaAvain, "") == "1");
+
+        /// <summary>Testaajatila (ei kehittäjätilaa): kaikki linssit ja vapaa liikkuminen kartalla, ei syvempiä työkaluja.</summary>
+        public static bool Testaaja => !PakotaPelaaja && !Kehittaja && PlayerPrefs.GetString(TestaajaAvain, "") == "1";
 
         /// <summary>
         /// Testi (ui pelaaja 1|0, Päätoimittaja 1.10.): pelaajan näkymä myös Debug-käännöksessä, jossa kehittäjätila on muuten
@@ -93,6 +100,7 @@ namespace Matkakirja.Natiivi
             if (koodi == null)
             {
                 PlayerPrefs.DeleteKey(KehittajaAvain);
+                PlayerPrefs.DeleteKey(TestaajaAvain);
                 PlayerPrefs.Save();
                 // Web talletaPolloKoodi(''): pöllön ohitus pois.
                 Puhe.TalletaKehittajakoodi(null);
@@ -108,7 +116,18 @@ namespace Matkakirja.Natiivi
                 foreach (var b in tavut) sb.Append(b.ToString("x2"));
                 t = sb.ToString();
             }
+            if (t == TestaajaTiiviste)
+            {
+                // Testaaja: kaikki linssit heti (sama joukko kuin apurahakortin esittelylinssit) ja vapaa liikkuminen (maailmatila).
+                PlayerPrefs.DeleteKey(KehittajaAvain);
+                PlayerPrefs.SetString(TestaajaAvain, "1");
+                PlayerPrefs.Save();
+                LinssiOhjain.AvaaEsittelylinssit();
+                Muuttui?.Invoke("Kehittaja");
+                return true;
+            }
             if (t != KehittajaTiiviste && t != KehittajaTiivisteRajattu) return false;
+            PlayerPrefs.DeleteKey(TestaajaAvain);
             // Web talletaPolloKoodi(taysi ? syote : ''): vain pääkoodi workerille (lukijaäänen ääni ja ohje).
             Puhe.TalletaKehittajakoodi(t == KehittajaTiiviste ? koodi.Trim() : null);
             TalletaPolloKoodi(t == KehittajaTiiviste ? koodi.Trim() : null);

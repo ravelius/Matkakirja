@@ -226,7 +226,7 @@ namespace Matkakirja.Natiivi
         readonly Label maailmaTila;
 
         /// <summary>Kehittäjän maailmanäkymä päällä (säilyy kuten webin kehittajaMaailmaPaalla); vain kehittäjätilassa.</summary>
-        public static bool Maailma => Asetukset.Kehittaja && PlayerPrefs.GetInt(MaailmaAvain, 0) == 1;
+        public static bool Maailma => Asetukset.Kehittaja && PlayerPrefs.GetInt(MaailmaAvain, 0) == 1 || Asetukset.Testaaja;   // testaaja: vapaa liikkuminen aina
 
         /// <summary>
         /// PELAAJAN NÄKYMÄ (omistaja 29.9.2026 klo 08.5x: "Maailmatilaan voisi tehdä apunapin, joka näyttäisi kartan samalla
@@ -341,8 +341,10 @@ namespace Matkakirja.Natiivi
 
         public void Avaa()
         {
-            bool paalla = Asetukset.Kehittaja;
-            selite.text = paalla ? "Kehittäjätila on päällä: Kehittäjätyökalut näkyvät Asetuksissa." : "Kehittäjätila avaa Asetuksiin Kehittäjätyökalut.";
+            bool paalla = Asetukset.Kehittaja || Asetukset.Testaaja;
+            selite.text = Asetukset.Kehittaja ? "Kehittäjätila on päällä: Kehittäjätyökalut näkyvät Asetuksissa."
+                : Asetukset.Testaaja ? "Testaajatila on päällä: kaikki linssit ja vapaa liikkuminen kartalla."
+                : "Kehittäjä- tai testaajakoodi avaa lisätoiminnot.";
             kentta.style.display = paalla ? DisplayStyle.None : DisplayStyle.Flex;
             kentta.value = "";
             virhe.style.display = DisplayStyle.None;
@@ -360,7 +362,7 @@ namespace Matkakirja.Natiivi
 
         void Kytke()
         {
-            if (Asetukset.Kehittaja) { Asetukset.AsetaKehittaja(null); Sulje(); return; }
+            if (Asetukset.Kehittaja || Asetukset.Testaaja) { Asetukset.AsetaKehittaja(null); Sulje(); return; }
             if (Asetukset.AsetaKehittaja(kentta.value)) { Sulje(); return; }
             kentta.value = "";
             virhe.style.display = DisplayStyle.Flex;
