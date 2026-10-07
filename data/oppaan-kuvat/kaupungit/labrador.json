@@ -1,0 +1,281 @@
+{
+ "kaupunki": "labrador",
+ "kaupunkiQ": "Q380307",
+ "kohteet": [
+  {
+   "q": "Q3238270",
+   "nimi": "Red Bayn baskivalaanpyyntiasema",
+   "peruste": "UNESCO",
+   "koko_m": 2000,
+   "lat": 51.72692,
+   "lon": -56.42953,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Red Bay Labrador 07.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Red_Bay_Labrador_07.jpg?width=1280",
+     "tekija": "Cephas",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Red_Bay_Labrador_07.jpg",
+     "selite": "Red Bayn kylä Labradorin etelärannikolla, jossa baskit pyydystivät valaita 1500-luvulla.",
+     "leveys": 5472,
+     "korkeus": 3648,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Red Bay Labrador 06.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Red_Bay_Labrador_06.jpg?width=1280",
+     "tekija": "Cephas",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Red_Bay_Labrador_06.jpg",
+     "selite": "Red Bayn satamakylä sumuisen lahden rannalla.",
+     "leveys": 5385,
+     "korkeus": 3590,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Red Bay Labrador 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Red_Bay_Labrador_01.jpg?width=1280",
+     "tekija": "Cephas",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Red_Bay_Labrador_01.jpg",
+     "selite": "Kalastajakylä ja kalliorannikko Red Bayn lahden äärellä.",
+     "leveys": 5346,
+     "korkeus": 3564,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q152688",
+   "nimi": "Torngatvuorten kansallispuisto",
+   "peruste": "sitelinks",
+   "koko_m": 20000,
+   "lat": 59.43583,
+   "lon": -63.69639,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Nachvak Fjord Labrador 2008.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Nachvak_Fjord_Labrador_2008.JPG?width=1280",
+     "tekija": "Paul Gierszewski",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Nachvak_Fjord_Labrador_2008.JPG",
+     "selite": "Nachvakin vuono halkoo Torngatvuorten jylhiä, lumihuippuisia kallioita Pohjois-Labradorissa.",
+     "leveys": 3072,
+     "korkeus": 2304,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Nachvak Fjord on a sunny September day.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Nachvak_Fjord_on_a_sunny_September_day.jpg?width=1280",
+     "tekija": "WiseWoman",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Nachvak_Fjord_on_a_sunny_September_day.jpg",
+     "selite": "Nachvakin tyyni vuonovesi peilaa ympäröivät vuoret.",
+     "leveys": 2432,
+     "korkeus": 1824,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q37799",
+   "nimi": "Churchillin putoukset",
+   "peruste": "sitelinks",
+   "koko_m": 3000,
+   "lat": 53.59472,
+   "lon": -64.30833,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Bowdoin Canyon 02.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bowdoin_Canyon_02.jpg?width=1280",
+     "tekija": "Cephas",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bowdoin_Canyon_02.jpg",
+     "selite": "Churchill-joen kanjoni Labradorin sisämaassa leikkaa syvälle kallioperään.",
+     "leveys": 5472,
+     "korkeus": 3648,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Churchill Falls 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Churchill_Falls_01.jpg?width=1280",
+     "tekija": "Cephas",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Churchill_Falls_01.jpg",
+     "selite": "Churchillin putoukset syöksyvät kalliorinteen yli havumetsän keskellä.",
+     "leveys": 4646,
+     "korkeus": 3097,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Churchill Falls 03.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Churchill_Falls_03.jpg?width=1280",
+     "tekija": "Cephas",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Churchill_Falls_03.jpg",
+     "selite": "Joen kallioiset kosket ovat osa Labradorin sisämaan jylhää maisemaa.",
+     "leveys": 5472,
+     "korkeus": 3648,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q767147",
+   "nimi": "Labrador City",
+   "peruste": "sitelinks",
+   "koko_m": 3000,
+   "lat": 52.94493,
+   "lon": -66.91052,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Labrador City, NL.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Labrador_City%2C_NL.jpg?width=1280",
+     "tekija": "Quintin Soloviev",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Labrador_City%2C_NL.jpg",
+     "selite": "Labrador City on rautamalmikaupunki Labradorin länsiosassa.",
+     "leveys": 12008,
+     "korkeus": 7205,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Open pit iron mine, Labrador.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Open_pit_iron_mine%2C_Labrador.jpg?width=1280",
+     "tekija": "Neil Carey",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Open_pit_iron_mine%2C_Labrador.jpg",
+     "selite": "Rautamalmikaivos on alueen tärkein elinkeino ja muokkaa maisemaa.",
+     "leveys": 1600,
+     "korkeus": 1200,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1266964",
+   "nimi": "Happy Valley-Goose Bay",
+   "peruste": "sitelinks",
+   "koko_m": 3000,
+   "lat": 53.30194,
+   "lon": -60.41667,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Goose Bay Labrador (2513512285).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Goose_Bay_Labrador_(2513512285).jpg?width=1280",
+     "tekija": "Shawn from Airdrie, Canada",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Goose_Bay_Labrador_(2513512285).jpg",
+     "selite": "Goose Bay on Labradorin suurin asutuskeskus Lake Melvillen perukassa.",
+     "leveys": 2181,
+     "korkeus": 1636,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3335210",
+   "nimi": "Nain",
+   "peruste": "sitelinks",
+   "koko_m": 1500,
+   "lat": 56.5422,
+   "lon": -61.6928,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Nain, NL as viewed from Mt. Sophie.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Nain%2C_NL_as_viewed_from_Mt._Sophie.jpg?width=1280",
+     "tekija": "Chaughten",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Nain%2C_NL_as_viewed_from_Mt._Sophie.jpg",
+     "selite": "Nain on Nunatsiavutin inuiittialueen suurin yhteisö Labradorin pohjoisrannikolla.",
+     "leveys": 4258,
+     "korkeus": 1400,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Nain Moravian Church, Labrador, July 2023.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Nain_Moravian_Church%2C_Labrador%2C_July_2023.jpg?width=1280",
+     "tekija": "Quincylvania",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Nain_Moravian_Church%2C_Labrador%2C_July_2023.jpg",
+     "selite": "Nainin valkoinen herrnhutilaiskirkko kertoo lähetystyön ajasta rannikolla.",
+     "leveys": 3850,
+     "korkeus": 2887,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Mealy Mountains Labrador 1.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mealy_Mountains_Labrador_1.jpg?width=1280",
+   "tekija": "Paul Gierszewski",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mealy_Mountains_Labrador_1.jpg",
+   "selite": "Labradorin sisämaa on laaksojen, vuonojen ja asumattomien tunturien vyöhyke.",
+   "leveys": 5413,
+   "korkeus": 3108,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Saglek Fjord Labrador 2008.JPG",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Saglek_Fjord_Labrador_2008.JPG?width=1280",
+   "tekija": "Paul Gierszewski",
+   "lisenssi": "Public domain",
+   "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Saglek_Fjord_Labrador_2008.JPG",
+   "selite": "Saglekin vuono kohtaa jyrkän vuorenrinteen Labradorin pohjoisrannikolla.",
+   "leveys": 2940,
+   "korkeus": 2135,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": [
+  {
+   "q": "Q1507060",
+   "nimi": "Lake Melville",
+   "peruste": "sitelinks",
+   "lat": 53.68222,
+   "lon": -59.74861,
+   "syy": "ei vapaata sopivaa kuvaa >= 1200 px (vain karttoja)"
+  },
+  {
+   "q": "Q1539726",
+   "nimi": "Smallwoodin tekojärvi",
+   "peruste": "sitelinks",
+   "lat": 54.09639,
+   "lon": -64.01111,
+   "syy": "ei kelvollista kuvaa"
+  }
+ ]
+}

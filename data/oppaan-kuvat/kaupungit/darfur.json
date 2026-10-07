@@ -1,0 +1,167 @@
+{
+ "kaupunki": "darfur",
+ "kaupunkiQ": "Q46733",
+ "pieniAlue": true,
+ "kohteet": [
+  {
+   "q": "Q886772",
+   "nimi": "Marran vuoristo",
+   "peruste": "pelin nosto",
+   "koko_m": 20000,
+   "lat": 12.95,
+   "lon": 24.27,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Jebel Marra, landscape.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Jebel_Marra%2C_landscape.jpg?width=1280",
+     "tekija": "Wlyeldeen Abkar",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Jebel_Marra%2C_landscape.jpg",
+     "selite": "Marran vuoristo kohoaa Darfurin tasankojen yllä ja on seudun vihreä ja vesirikas sydän.",
+     "leveys": 3008,
+     "korkeus": 1992,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Marrah Mountains waterfall - Sudan.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Marrah_Mountains_waterfall_-_Sudan.jpg?width=1280",
+     "tekija": "Mohamed Siddig Abdelaziz",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Marrah_Mountains_waterfall_-_Sudan.jpg",
+     "selite": "Vuoriston rinteiden sade ja lähteet ruokkivat vesiputouksia ja tiheää kasvillisuutta aavikon keskellä.",
+     "leveys": 4864,
+     "korkeus": 2736,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2520348",
+   "nimi": "Deriban kraatterijärvet",
+   "peruste": "pelin nosto",
+   "koko_m": 5000,
+   "lat": 12.95139,
+   "lon": 24.25889,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Sudan Jebel Marra Deriba Lakes edited.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sudan_Jebel_Marra_Deriba_Lakes_edited.jpg?width=1280",
+     "tekija": "J Williams (= Hammy07 at en.wikipedia)",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Sudan_Jebel_Marra_Deriba_Lakes_edited.jpg",
+     "selite": "Deriban laaja kraatteri on Marran uinuvan tulivuoren huipulla, ja sen pohjalla on kaksi järveä.",
+     "leveys": 3016,
+     "korkeus": 2008,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Jebel Marra Volcano, Sudan by Planet Labs.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Jebel_Marra_Volcano%2C_Sudan_by_Planet_Labs.jpg?width=1280",
+     "tekija": "Planet Labs, Inc.",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Jebel_Marra_Volcano%2C_Sudan_by_Planet_Labs.jpg",
+     "selite": "Satelliittikuvassa Deriban kraatterin rosoiset reunat ja järvet erottuvat selvästi.",
+     "leveys": 2787,
+     "korkeus": 2091,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "ISS-64 Deriba caldera in the Marrah Mountains in Darfur, Sudan.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/ISS-64_Deriba_caldera_in_the_Marrah_Mountains_in_Darfur%2C_Sudan.jpg?width=1280",
+     "tekija": "NASA",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:ISS-64_Deriba_caldera_in_the_Marrah_Mountains_in_Darfur%2C_Sudan.jpg",
+     "selite": "Avaruusasemalta Deriban kraatteri näkyy pienenä pyöreänä painanteena Marran vuoriston kuivassa maisemassa.",
+     "leveys": 5568,
+     "korkeus": 3712,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q851576",
+   "nimi": "Nyala",
+   "peruste": "sitelinks",
+   "koko_m": 3000,
+   "lat": 12.05,
+   "lon": 24.88333,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Elwadi Nyala.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Elwadi_Nyala.jpg?width=1280",
+     "tekija": "Esam Idris",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Elwadi_Nyala.jpg",
+     "selite": "Nyala on Etelä-Darfurin pääkaupunki, ja kuivan joenuoman rannoille on rakentunut tiivis asutus.",
+     "leveys": 3264,
+     "korkeus": 1836,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q311204",
+   "nimi": "El Fasher",
+   "peruste": "sitelinks",
+   "koko_m": 3000,
+   "lat": 13.62698,
+   "lon": 25.34958,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Central of Elfashir north of darfour.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Central_of_Elfashir_north_of_darfour.jpg?width=1280",
+     "tekija": "Evon2023",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Central_of_Elfashir_north_of_darfour.jpg",
+     "selite": "El Fasher on Pohjois-Darfurin pääkaupunki ja entisen sulttaanikunnan historiallinen keskus.",
+     "leveys": 4896,
+     "korkeus": 3264,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Nature in Darfur.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Nature_in_Darfur.jpg?width=1280",
+   "tekija": "Mazinco93",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Nature_in_Darfur.jpg",
+   "selite": "Darfurin laaja ruohotasanko jatkuu kauas, ja matalat vuoret pilkottavat horisontissa.",
+   "leveys": 4000,
+   "korkeus": 1800,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Harry Mountain around Dougu Village in the Western Sudan, South Darfur State.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Harry_Mountain_around_Dougu_Village_in_the_Western_Sudan%2C_South_Darfur_State.jpg?width=1280",
+   "tekija": "FUDOL YOUSUF AHMED HAMID",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Harry_Mountain_around_Dougu_Village_in_the_Western_Sudan%2C_South_Darfur_State.jpg",
+   "selite": "Sadekaudella Darfurin kalliorinteet vihertyvät ja karja laiduntaa niiden juurella.",
+   "leveys": 4608,
+   "korkeus": 3456,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

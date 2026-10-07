@@ -1,0 +1,144 @@
+{
+ "kaupunki": "sitka",
+ "kaupunkiQ": "Q79804",
+ "pieniAlue": true,
+ "kohteet": [
+  {
+   "q": "Q288383",
+   "nimi": "Edgecumben tulivuori",
+   "peruste": "sitelinks",
+   "koko_m": 3000,
+   "lat": 57.05,
+   "lon": -135.75,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "EdgecumbeAK.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/EdgecumbeAK.jpg?width=1280",
+     "tekija": "Duncan Mariott",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:EdgecumbeAK.jpg",
+     "selite": "Sammunut tulivuori kohoaa lumihuippuisena Sitkan salmen yli, kun iltavalo punertaa sen rinteet.",
+     "leveys": 3072,
+     "korkeus": 2048,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Mount Edgecumbe - panoramio.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mount_Edgecumbe_-_panoramio.jpg?width=1280",
+     "tekija": "hakkun",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mount_Edgecumbe_-_panoramio.jpg",
+     "selite": "Edgecumbe kohoaa Kruzofinsaarella merenlahden takaa ja vartioi Sitkan edustaa.",
+     "leveys": 2048,
+     "korkeus": 1536,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Line5118 - Flickr - NOAA Photo Library.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Line5118_-_Flickr_-_NOAA_Photo_Library.jpg?width=1280",
+     "tekija": "Alaska ShoreZone Program NOAA/NMFS/AKFSC; Courtesy of Mandy Lindeberg, NOAA/NMFS/AKFSC.",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Line5118_-_Flickr_-_NOAA_Photo_Library.jpg",
+     "selite": "Tulivuori siintää kaukaa saarten ja metsäisten niemien yli.",
+     "leveys": 2872,
+     "korkeus": 1862,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q807267",
+   "nimi": "Baranofinsaari",
+   "peruste": "sitelinks",
+   "koko_m": 5000,
+   "lat": 56.95139,
+   "lon": -134.94778,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Baranof Island (7663702254).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Baranof_Island_(7663702254).jpg?width=1280",
+     "tekija": "Joseph from Port Townsend, WA, USA",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Baranof_Island_(7663702254).jpg",
+     "selite": "Sitka sijaitsee Baranofinsaaren länsirannalla, jossa pilvet kietovat vuoret sademetsän yllä.",
+     "leveys": 2538,
+     "korkeus": 1743,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Baranof Island (8540324789).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Baranof_Island_(8540324789).jpg?width=1280",
+     "tekija": "Joseph from Cabin On The Road, USA",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Baranof_Island_(8540324789).jpg",
+     "selite": "Baranofinsaaren lumiset vuorenhuiput loistavat auringonlaskussa ilmasta katsottuna.",
+     "leveys": 1596,
+     "korkeus": 1360,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q4353743",
+   "nimi": "Kruzofinsaari",
+   "peruste": "sitelinks",
+   "koko_m": 5000,
+   "lat": 57.1706,
+   "lon": -135.675,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Kruzof Island.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kruzof_Island.jpg?width=1280",
+     "tekija": "Bwdaigle75",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kruzof_Island.jpg",
+     "selite": "Ylhäältä näkyvät Edgecumben kraatterit Kruzofinsaaren tulivuoriperäisessä maisemassa.",
+     "leveys": 1284,
+     "korkeus": 2422,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Sitka Sound, Mt. Edgecumbe and John O'Connell Bridge as seen from the park. (ce381fa9-3f33-4d74-be3b-0d4391fa3b6d).JPG",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sitka_Sound%2C_Mt._Edgecumbe_and_John_O'Connell_Bridge_as_seen_from_the_park._(ce381fa9-3f33-4d74-be3b-0d4391fa3b6d).JPG?width=1280",
+   "tekija": "NPS Photo",
+   "lisenssi": "Public domain",
+   "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Sitka_Sound%2C_Mt._Edgecumbe_and_John_O'Connell_Bridge_as_seen_from_the_park._(ce381fa9-3f33-4d74-be3b-0d4391fa3b6d).JPG",
+   "selite": "Edgecumben tulivuori ja O'Connell-silta näkyvät Sitkan salmen yli kalastusveneiden takaa.",
+   "leveys": 6000,
+   "korkeus": 4000,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Sitka, AK - breakwater, Crescent Harbor, and skyline 01.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sitka%2C_AK_-_breakwater%2C_Crescent_Harbor%2C_and_skyline_01.jpg?width=1280",
+   "tekija": "Photo by Joe Mabel",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Sitka%2C_AK_-_breakwater%2C_Crescent_Harbor%2C_and_skyline_01.jpg",
+   "selite": "Kiviaallonmurtaja suojaa Crescent Harborin venesatamaa, jonka takana Sitkan keskusta levittäytyy.",
+   "leveys": 6000,
+   "korkeus": 4000,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

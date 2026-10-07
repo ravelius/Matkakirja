@@ -1,0 +1,552 @@
+{
+ "kaupunki": "firenze",
+ "kaupunkiQ": "Q2044",
+ "kohteet": [
+  {
+   "q": "Q191739",
+   "nimi": "Firenzen tuomiokirkko",
+   "peruste": "pelin nosto",
+   "koko_m": 200,
+   "lat": 43.77306,
+   "lon": 11.25694,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Florence Duomo from Michelangelo hill.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Florence_Duomo_from_Michelangelo_hill.jpg?width=1280",
+     "tekija": "Petar Milošević",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Florence_Duomo_from_Michelangelo_hill.jpg",
+     "selite": "Santa Maria del Fioren punaoranssi kupoli hallitsee Firenzen siluettia.",
+     "leveys": 3308,
+     "korkeus": 2399,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Roofs Duomo Campanile Florence.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Roofs_Duomo_Campanile_Florence.jpg?width=1280",
+     "tekija": "Jebulon",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Roofs_Duomo_Campanile_Florence.jpg",
+     "selite": "Brunelleschin kupoli ja Giotton kellotorni kohoavat vanhan kaupungin kattojen yllä.",
+     "leveys": 2803,
+     "korkeus": 2004,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Cathédrale Santa Maria del Fiore (Florence).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cath%C3%A9drale_Santa_Maria_del_Fiore_(Florence).jpg?width=1280",
+     "tekija": "Gzen92",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cath%C3%A9drale_Santa_Maria_del_Fiore_(Florence).jpg",
+     "selite": "Tuomiokirkon vihreä, valkoinen ja vaaleanpunainen marmoriverhous on 1800-luvun uusgoottilaista työtä.",
+     "leveys": 3000,
+     "korkeus": 4200,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 4,
+     "tiedosto": "Florence Cathedral (Duomo).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Florence_Cathedral_(Duomo).jpg?width=1280",
+     "tekija": "Kevin Poh",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Florence_Cathedral_(Duomo).jpg",
+     "selite": "Kirkon kupoli oli valmistuessaan 1400-luvulla maailman suurin muurattu kupoli.",
+     "leveys": 3372,
+     "korkeus": 2490,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q208633",
+   "nimi": "Ponte Vecchio",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 43.76799,
+   "lon": 11.25319,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Ponte Vecchio sobre el río Arno, Florencia, Italia, 2022-09-19, DD 02.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ponte_Vecchio_sobre_el_r%C3%ADo_Arno%2C_Florencia%2C_Italia%2C_2022-09-19%2C_DD_02.jpg?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ponte_Vecchio_sobre_el_r%C3%ADo_Arno%2C_Florencia%2C_Italia%2C_2022-09-19%2C_DD_02.jpg",
+     "selite": "Ponte Vecchio on Arno-joen yli kulkeva keskiaikainen silta, jonka varrella on kauppoja.",
+     "leveys": 8032,
+     "korkeus": 5355,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Ponte Vecchio at dusk 1.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ponte_Vecchio_at_dusk_1.JPG?width=1280",
+     "tekija": "Martin Falbisoner",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ponte_Vecchio_at_dusk_1.JPG",
+     "selite": "Illan valot heijastuvat Arnon pintaan sillan kultasepänliikkeiden takana.",
+     "leveys": 4948,
+     "korkeus": 3786,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Ponte Vecchio at sunset from Piazzale Michelangelo Florence 2023 dllu.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ponte_Vecchio_at_sunset_from_Piazzale_Michelangelo_Florence_2023_dllu.jpg?width=1280",
+     "tekija": "Daniel Lu (User:dllu)",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ponte_Vecchio_at_sunset_from_Piazzale_Michelangelo_Florence_2023_dllu.jpg",
+     "selite": "Korkealta nähdään, kuinka silta jatkuu Uffizien käytävänä joen yli.",
+     "leveys": 11514,
+     "korkeus": 8567,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q271928",
+   "nimi": "Palazzo Vecchio",
+   "peruste": "pelin nosto",
+   "koko_m": 120,
+   "lat": 43.76944,
+   "lon": 11.25611,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Palazzo vecchio Florence.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Palazzo_vecchio_Florence.jpg?width=1280",
+     "tekija": "Jebulon",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Palazzo_vecchio_Florence.jpg",
+     "selite": "Palazzo Vecchio on Firenzen kaupungintalo, jonka torni erottuu kaukaa.",
+     "leveys": 2007,
+     "korkeus": 3464,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Firenze - Florence - Piazza della Signoria - View ESE on Palazzo Vecchio I.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Firenze_-_Florence_-_Piazza_della_Signoria_-_View_ESE_on_Palazzo_Vecchio_I.jpg?width=1280",
+     "tekija": "Txllxt TxllxT",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Firenze_-_Florence_-_Piazza_della_Signoria_-_View_ESE_on_Palazzo_Vecchio_I.jpg",
+     "selite": "Linnamainen palatsi seisoo Signorian aukion laidalla.",
+     "leveys": 2016,
+     "korkeus": 3024,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q51252",
+   "nimi": "Uffizin galleria",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 43.76833,
+   "lon": 11.25528,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Piazzale degli Uffizi perspective view, Florence, Italy, August 2025.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Piazzale_degli_Uffizi_perspective_view%2C_Florence%2C_Italy%2C_August_2025.jpg?width=1280",
+     "tekija": "Verum3414",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Piazzale_degli_Uffizi_perspective_view%2C_Florence%2C_Italy%2C_August_2025.jpg",
+     "selite": "Uffizin kaksi pitkää siipeä rajaavat kapean pihan, jonka päässä näkyy Palazzo Vecchio.",
+     "leveys": 4080,
+     "korkeus": 2295,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Florence, Italy - panoramio (125).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Florence%2C_Italy_-_panoramio_(125).jpg?width=1280",
+     "tekija": "Arek N.",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Florence%2C_Italy_-_panoramio_(125).jpg",
+     "selite": "Galleria on yksi maailman tunnetuimmista renessanssitaiteen museoista.",
+     "leveys": 3456,
+     "korkeus": 2304,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q849846",
+   "nimi": "Piazza della Signoria",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 43.76972,
+   "lon": 11.25556,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Firenze - Florence - Piazza della Signoria - View ESE on Palazzo Vecchio II.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Firenze_-_Florence_-_Piazza_della_Signoria_-_View_ESE_on_Palazzo_Vecchio_II.jpg?width=1280",
+     "tekija": "Txllxt TxllxT",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Firenze_-_Florence_-_Piazza_della_Signoria_-_View_ESE_on_Palazzo_Vecchio_II.jpg",
+     "selite": "Signorian aukio on ollut Firenzen julkisen elämän keskus keskiajalta asti.",
+     "leveys": 3024,
+     "korkeus": 2016,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Firenze - Florence - Piazza della Signoria - Entrance to Palazzo Vecchio - ICE Photocompilation Viewing from NW to North.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Firenze_-_Florence_-_Piazza_della_Signoria_-_Entrance_to_Palazzo_Vecchio_-_ICE_Photocompilation_Viewing_from_NW_to_North.jpg?width=1280",
+     "tekija": "Txllxt TxllxT",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Firenze_-_Florence_-_Piazza_della_Signoria_-_Entrance_to_Palazzo_Vecchio_-_ICE_Photocompilation_Viewing_from_NW_to_North.jpg",
+     "selite": "Aukion patsaat ovat kuin ulkoilmamuseo palatsin portin edessä.",
+     "leveys": 3400,
+     "korkeus": 2823,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q51177",
+   "nimi": "Santa Crocen basilika",
+   "peruste": "pelin nosto",
+   "koko_m": 120,
+   "lat": 43.76845,
+   "lon": 11.26274,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Basilica di Santa Croce (12437).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Basilica_di_Santa_Croce_(12437).jpg?width=1280",
+     "tekija": "Rhododendrites",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Basilica_di_Santa_Croce_(12437).jpg",
+     "selite": "Santa Crocen marmorijulkisivu kohoaa suuren aukion päässä.",
+     "leveys": 4401,
+     "korkeus": 3348,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Santa Croce Florence November 2022-1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Santa_Croce_Florence_November_2022-1.jpg?width=1280",
+     "tekija": "Alvesgaspar",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Santa_Croce_Florence_November_2022-1.jpg",
+     "selite": "Fransiskaaniluostarin kirkkoon on haudattu monia firenzeläisiä suurmiehiä.",
+     "leveys": 7989,
+     "korkeus": 8091,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q888825",
+   "nimi": "Bobolin puutarha",
+   "peruste": "pelin nosto",
+   "koko_m": 400,
+   "lat": 43.7618,
+   "lon": 11.24661,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Jardín de Bóboli, Florencia, Italia, 2022-09-19, DD 36.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Jard%C3%ADn_de_B%C3%B3boli%2C_Florencia%2C_Italia%2C_2022-09-19%2C_DD_36.jpg?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Jard%C3%ADn_de_B%C3%B3boli%2C_Florencia%2C_Italia%2C_2022-09-19%2C_DD_36.jpg",
+     "selite": "Bobolin puutarha on Palazzo Pittin takana kohoava renessanssipuutarha.",
+     "leveys": 4429,
+     "korkeus": 6644,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Obelisco, Boboli Gardens, Florence (26408174180).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Obelisco%2C_Boboli_Gardens%2C_Florence_(26408174180).jpg?width=1280",
+     "tekija": "Dimitris Kamaras from Athens, Greece",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Obelisco%2C_Boboli_Gardens%2C_Florence_(26408174180).jpg",
+     "selite": "Puutarhan aukioiden keskellä on obeliskeja ja altaita.",
+     "leveys": 3456,
+     "korkeus": 4608,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q29286",
+   "nimi": "Palazzo Pitti",
+   "peruste": "sitelinks",
+   "koko_m": 200,
+   "lat": 43.76515,
+   "lon": 11.25001,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Palazzo Pitti (Florence) - Facade 20150811.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Palazzo_Pitti_(Florence)_-_Facade_20150811.jpg?width=1280",
+     "tekija": "Suicasmo",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Palazzo_Pitti_(Florence)_-_Facade_20150811.jpg",
+     "selite": "Palazzo Pitti on valtava kivipalatsi, joka toimi aikoinaan Medicien ja myöhemmin kuninkaiden asuntona.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Facade of Palazzo Pitti, Florence.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Facade_of_Palazzo_Pitti%2C_Florence.jpg?width=1280",
+     "tekija": "John Samuel",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Facade_of_Palazzo_Pitti%2C_Florence.jpg",
+     "selite": "Karun kivijulkisivun edessä on laaja kivetty aukio.",
+     "leveys": 4272,
+     "korkeus": 2848,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1348158",
+   "nimi": "Piazzale Michelangelo",
+   "peruste": "pelin nosto",
+   "koko_m": 250,
+   "lat": 43.76292,
+   "lon": 11.26516,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Vista de Florencia desde Piazzale Michelangelo, Italia, 2022-09-18, DD 212-214 HDR.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Vista_de_Florencia_desde_Piazzale_Michelangelo%2C_Italia%2C_2022-09-18%2C_DD_212-214_HDR.jpg?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Vista_de_Florencia_desde_Piazzale_Michelangelo%2C_Italia%2C_2022-09-18%2C_DD_212-214_HDR.jpg",
+     "selite": "Piazzale Michelangelolta aukeaa Firenzen tunnetuin kaupunkinäkymä.",
+     "leveys": 8665,
+     "korkeus": 3850,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Florence Cathedral seen from Piazzale Michelangelo night dllu.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Florence_Cathedral_seen_from_Piazzale_Michelangelo_night_dllu.jpg?width=1280",
+     "tekija": "Dllu",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Florence_Cathedral_seen_from_Piazzale_Michelangelo_night_dllu.jpg",
+     "selite": "Illan hämärässä tuomiokirkon kupoli hohtaa kattojen yllä.",
+     "leveys": 11662,
+     "korkeus": 8744,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q51175",
+   "nimi": "Santa Maria Novellan basilika",
+   "peruste": "pelin nosto",
+   "koko_m": 120,
+   "lat": 43.7743,
+   "lon": 11.24937,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Basílica de Santa María Novella, Florencia, Italia, 2022-09-19, DD 47.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bas%C3%ADlica_de_Santa_Mar%C3%ADa_Novella%2C_Florencia%2C_Italia%2C_2022-09-19%2C_DD_47.jpg?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bas%C3%ADlica_de_Santa_Mar%C3%ADa_Novella%2C_Florencia%2C_Italia%2C_2022-09-19%2C_DD_47.jpg",
+     "selite": "Santa Maria Novellan julkisivun renessanssigeometria on kuuluisa.",
+     "leveys": 6257,
+     "korkeus": 5792,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Plaza de Santa María Novella, Florencia, Italia, 2022-09-19, DD 44.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Plaza_de_Santa_Mar%C3%ADa_Novella%2C_Florencia%2C_Italia%2C_2022-09-19%2C_DD_44.jpg?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Plaza_de_Santa_Mar%C3%ADa_Novella%2C_Florencia%2C_Italia%2C_2022-09-19%2C_DD_44.jpg",
+     "selite": "Kirkko seisoo rautatieaseman lähellä olevan nurmikkoaukion laidalla.",
+     "leveys": 7741,
+     "korkeus": 3642,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q732511",
+   "nimi": "Firenzen kastekappeli",
+   "peruste": "sitelinks",
+   "koko_m": 60,
+   "lat": 43.77306,
+   "lon": 11.255,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Florence, Duomo di Firenze.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Florence%2C_Duomo_di_Firenze.jpg?width=1280",
+     "tekija": "George M. Groutas",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Florence%2C_Duomo_di_Firenze.jpg",
+     "selite": "Kahdeksankulmainen marmorinen kastekappeli on Firenzen vanhimpia rakennuksia.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Baptistère et cathédrale Santa Maria del Fiore (Florence).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Baptist%C3%A8re_et_cath%C3%A9drale_Santa_Maria_del_Fiore_(Florence).jpg?width=1280",
+     "tekija": "Gzen92",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Baptist%C3%A8re_et_cath%C3%A9drale_Santa_Maria_del_Fiore_(Florence).jpg",
+     "selite": "Kastekappeli seisoo tuomiokirkon edessä, ja sen ovet ovat taidehistorian merkkiteoksia.",
+     "leveys": 5472,
+     "korkeus": 3648,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q844337",
+   "nimi": "San Miniato al Monte",
+   "peruste": "sitelinks",
+   "koko_m": 100,
+   "lat": 43.75944,
+   "lon": 11.265,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Firenze Basilica di San Miniato al Monte Esterno Facciata 7.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Firenze_Basilica_di_San_Miniato_al_Monte_Esterno_Facciata_7.jpg?width=1280",
+     "tekija": "Zairon",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Firenze_Basilica_di_San_Miniato_al_Monte_Esterno_Facciata_7.jpg",
+     "selite": "San Miniato on romaaninen basilika Arnon eteläpuolisella kukkulalla.",
+     "leveys": 5162,
+     "korkeus": 3858,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "San Miniato al Monte (Florence) - Facade.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/San_Miniato_al_Monte_(Florence)_-_Facade.jpg?width=1280",
+     "tekija": "Yair Haklai",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:San_Miniato_al_Monte_(Florence)_-_Facade.jpg",
+     "selite": "Vihreä ja valkoinen marmori koristavat julkisivua mosaiikilla.",
+     "leveys": 4032,
+     "korkeus": 2268,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q388448",
+   "nimi": "Bargellon kansallismuseo",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": 43.7704,
+   "lon": 11.25801,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Palazzo del Bargello (Florence) - Courtyard.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Palazzo_del_Bargello_(Florence)_-_Courtyard.jpg?width=1280",
+     "tekija": "Yair-haklai",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Palazzo_del_Bargello_(Florence)_-_Courtyard.jpg",
+     "selite": "Bargello on keskiaikainen linnoitusmainen palatsi, jonka pihaa reunustavat holvikaaret.",
+     "leveys": 2560,
+     "korkeus": 1920,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q10855544",
+   "nimi": "Galleria dell'Accademia",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": 43.77694,
+   "lon": 11.25889,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Firenze, galleria dell'accademia, tribuna del david 02.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Firenze%2C_galleria_dell'accademia%2C_tribuna_del_david_02.jpg?width=1280",
+     "tekija": "Francesco Bini",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Firenze%2C_galleria_dell'accademia%2C_tribuna_del_david_02.jpg",
+     "selite": "Galleria dell'Accademiassa seisoo Michelangelon David omassa kupolisalissaan.",
+     "leveys": 4037,
+     "korkeus": 6049,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Vista de Florencia desde Piazzale Michelangelo, Italia, 2022-09-18, DD 199.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Vista_de_Florencia_desde_Piazzale_Michelangelo%2C_Italia%2C_2022-09-18%2C_DD_199.jpg?width=1280",
+   "tekija": "Diego Delso",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Vista_de_Florencia_desde_Piazzale_Michelangelo%2C_Italia%2C_2022-09-18%2C_DD_199.jpg",
+   "selite": "Firenze levittäytyy Arno-joen molemmin puolin hämärän laskeutuessa.",
+   "leveys": 5647,
+   "korkeus": 2902,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Firenze Campanile di Giotto Vista su la Cupola della Cattedrale di Santa Maria del Fiore 09.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Firenze_Campanile_di_Giotto_Vista_su_la_Cupola_della_Cattedrale_di_Santa_Maria_del_Fiore_09.jpg?width=1280",
+   "tekija": "Zairon",
+   "lisenssi": "CC BY 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Firenze_Campanile_di_Giotto_Vista_su_la_Cupola_della_Cattedrale_di_Santa_Maria_del_Fiore_09.jpg",
+   "selite": "Kellotornista näkee kupolin ja punaisten kattojen meren.",
+   "leveys": 5136,
+   "korkeus": 3824,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

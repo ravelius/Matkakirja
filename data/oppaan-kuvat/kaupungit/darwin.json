@@ -1,0 +1,293 @@
+{
+ "kaupunki": "darwin",
+ "kaupunkiQ": "Q11568",
+ "kohteet": [
+  {
+   "q": "Q189657",
+   "nimi": "Kakadun kansallispuisto",
+   "peruste": "UNESCO",
+   "koko_m": 20000,
+   "lat": -13.00547,
+   "lon": 132.51951,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "00 2236 Kakadu National Park - Australien.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/00_2236_Kakadu_National_Park_-_Australien.jpg?width=1280",
+     "tekija": "W. Bulach",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:00_2236_Kakadu_National_Park_-_Australien.jpg",
+     "selite": "Kakadun hiekkakiviröykkiöt nousevat metsän yläpuolelle Pohjoisterritorion kosteikoilla.",
+     "leveys": 3300,
+     "korkeus": 2200,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "A Billabong from the air.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/A_Billabong_from_the_air.jpg?width=1280",
+     "tekija": "Rhonda.W",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:A_Billabong_from_the_air.jpg",
+     "selite": "Kakadun kosteikot täyttyvät sadekaudella, ja lintuparvet kerääntyvät laguuneille.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": ".00 323. Rock paintings in Australia.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/.00_323._Rock_paintings_in_Australia.jpg?width=1280",
+     "tekija": "W. Bulach",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:.00_323._Rock_paintings_in_Australia.jpg",
+     "selite": "Kakadun kalliomaalaukset kertovat aboriginaalien kulttuurista tuhansien vuosien takaa.",
+     "leveys": 3300,
+     "korkeus": 2200,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q24887011",
+   "nimi": "Darwin Waterfront",
+   "peruste": "pelin nosto",
+   "koko_m": 600,
+   "lat": -12.46835,
+   "lon": 130.84783,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Darwin Waterfront.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Darwin_Waterfront.jpg?width=1280",
+     "tekija": "eGuide Travel",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Darwin_Waterfront.jpg",
+     "selite": "Waterfront on vanha satamakortteli, joka muutettiin asunnoiksi, hotelleiksi ja uimalaguuniksi.",
+     "leveys": 4928,
+     "korkeus": 3264,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q6863837",
+   "nimi": "Mindil Beach",
+   "peruste": "pelin nosto",
+   "koko_m": 800,
+   "lat": -12.4451,
+   "lon": 130.831,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Mindil Beach.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mindil_Beach.jpg?width=1280",
+     "tekija": "Bidgee",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mindil_Beach.jpg",
+     "selite": "Mindil Beach on kaupungin tunnetuin ranta, jonka laidalla kokoontuvat auringonlaskumarkkinat.",
+     "leveys": 1500,
+     "korkeus": 1125,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1954532",
+   "nimi": "Pohjoisterritorion museo ja taidegalleria",
+   "peruste": "pelin nosto",
+   "koko_m": 200,
+   "lat": -12.4375,
+   "lon": 130.83361,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "MAGNT Darwin, 2023 (01).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/MAGNT_Darwin%2C_2023_(01).jpg?width=1280",
+     "tekija": "Bahnfrend",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:MAGNT_Darwin%2C_2023_(01).jpg",
+     "selite": "Museo ja taidegalleria seisoo Bullocky Pointin rannalla Fannie Bayn laidalla.",
+     "leveys": 3624,
+     "korkeus": 2348,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q5537331",
+   "nimi": "George Brownin kasvitieteellinen puutarha",
+   "peruste": "pelin nosto",
+   "koko_m": 600,
+   "lat": -12.445,
+   "lon": 130.836,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "AU-Darwin-botan-garden.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/AU-Darwin-botan-garden.jpg?width=1280",
+     "tekija": "Balou46",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:AU-Darwin-botan-garden.jpg",
+     "selite": "Puutarha esittelee trooppisia kasveja Pohjoisterritorion tuuli- ja sadekauden keskellä.",
+     "leveys": 4928,
+     "korkeus": 3264,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Darwin Bontanic Gardens.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Darwin_Bontanic_Gardens.jpg?width=1280",
+     "tekija": "Bidgee",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Darwin_Bontanic_Gardens.jpg",
+     "selite": "Valtavat sadepuut varjostavat puutarhan käytäviä Darwinin keskustan pohjoispuolella.",
+     "leveys": 1500,
+     "korkeus": 1125,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1322845",
+   "nimi": "Pohjoisterritorion parlamenttitalo",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": -12.46639,
+   "lon": 130.84278,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Northern Territory Legislative Assembly.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Northern_Territory_Legislative_Assembly.jpg?width=1280",
+     "tekija": "kenhodge13",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Northern_Territory_Legislative_Assembly.jpg",
+     "selite": "Valkoinen parlamenttitalo kohoaa Esplanaden varrella nurmikon takana.",
+     "leveys": 3648,
+     "korkeus": 2736,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1540449",
+   "nimi": "Kuvernöörintalo",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": -12.46832,
+   "lon": 130.84382,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Darwin (AU), Government House -- 2019 -- 4353.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Darwin_(AU)%2C_Government_House_--_2019_--_4353.jpg?width=1280",
+     "tekija": "Dietmar Rabich",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Darwin_(AU)%2C_Government_House_--_2019_--_4353.jpg",
+     "selite": "Pohjoisterritorion kuvernöörin virka-asunto on kestänyt kaikki hirmumyrskyt ja pommitukset.",
+     "leveys": 6720,
+     "korkeus": 4480,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q5433947",
+   "nimi": "Fannie Bay Gaol",
+   "peruste": "pelin nosto",
+   "koko_m": 200,
+   "lat": -12.425,
+   "lon": 130.836,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Fannie Bay Goal P6200008.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Fannie_Bay_Goal_P6200008.JPG?width=1280",
+     "tekija": "Cuddy Wifter",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Fannie_Bay_Goal_P6200008.JPG",
+     "selite": "Entisen vankilan kivirakennus Fannie Bayn rannalla toimii nykyään museona.",
+     "leveys": 2540,
+     "korkeus": 1517,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q137715643",
+   "nimi": "East Point Reserve",
+   "peruste": "pelin nosto",
+   "koko_m": 2000,
+   "lat": -12.4103,
+   "lon": 130.8231,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Darwin (AU), East Point -- 2019 -- 4331.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Darwin_(AU)%2C_East_Point_--_2019_--_4331.jpg?width=1280",
+     "tekija": "Dietmar Rabich",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Darwin_(AU)%2C_East_Point_--_2019_--_4331.jpg",
+     "selite": "East Pointin niemeltä avautuu näkymä Darwin Harbourin suulle ja Fannie Bayn venesatamaan.",
+     "leveys": 6720,
+     "korkeus": 3780,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Darwin CBD (March 2017).jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Darwin_CBD_(March_2017).jpg?width=1280",
+   "tekija": "Mark Pegrum",
+   "lisenssi": "CC BY-SA 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Darwin_CBD_(March_2017).jpg",
+   "selite": "Darwinin keskusta on matalalla törmällä Darwin Harbourin rannalla, ja sadekauden pilvet nousevat mereltä.",
+   "leveys": 2581,
+   "korkeus": 1936,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": [
+  {
+   "q": "Q28183785",
+   "nimi": "Hotel Darwin",
+   "peruste": "pelin nosto",
+   "lat": -12.46581,
+   "lon": 130.84099,
+   "syy": "ei vapaata kuvaa >= 1200 px"
+  },
+  {
+   "q": "Q21956604",
+   "nimi": "Lameroo Beach",
+   "peruste": "pelin nosto",
+   "lat": -12.46445,
+   "lon": 130.83883,
+   "syy": "ei tunnistettavaa kelvollista kuvaa"
+  },
+  {
+   "q": "Q1063366",
+   "nimi": "Charles Darwinin kansallispuisto",
+   "peruste": "pelin nosto",
+   "lat": -12.45083,
+   "lon": 130.87333,
+   "syy": "ei tunnistettavaa kelvollista kuvaa"
+  }
+ ]
+}

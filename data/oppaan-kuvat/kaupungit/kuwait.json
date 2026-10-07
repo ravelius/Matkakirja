@@ -1,0 +1,366 @@
+{
+ "kaupunki": "kuwait",
+ "kaupunkiQ": "Q35178",
+ "kohteet": [
+  {
+   "q": "Q1335640",
+   "nimi": "Kuwait-tornit",
+   "peruste": "pelin nosto",
+   "koko_m": 250,
+   "lat": 29.39,
+   "lon": 48.00306,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Kuwait (31420655062).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kuwait_(31420655062).jpg?width=1280",
+     "tekija": "Jaafar Alnasser",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kuwait_(31420655062).jpg",
+     "selite": "Kuwait-tornit kohoavat yöllä Persianlahden rannalla ja heijastuvat tummaan veteen.",
+     "leveys": 4856,
+     "korkeus": 2374,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Kuwait towers.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kuwait_towers.jpg?width=1280",
+     "tekija": "Mikael Lindmark",
+     "lisenssi": "CC BY-SA 2.5 se",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.5/se/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kuwait_towers.jpg",
+     "selite": "Kuwait-tornit erottuvat Kuwaitin kaupungin rannikkosiluetissa hopeanvärisinä neulamaisina torneina.",
+     "leveys": 1600,
+     "korkeus": 1200,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Kuwait Towers at night (4283818686).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kuwait_Towers_at_night_(4283818686).jpg?width=1280",
+     "tekija": "Divya Thakur",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kuwait_Towers_at_night_(4283818686).jpg",
+     "selite": "Valaistut tornit ovat kaupungin tunnetuin tunnusmerkki meren puolelta katsottuna.",
+     "leveys": 4288,
+     "korkeus": 2848,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q557933",
+   "nimi": "Al Hamra -torni",
+   "peruste": "pelin nosto",
+   "koko_m": 200,
+   "lat": 29.37861,
+   "lon": 47.99278,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Kuwait City Kuwait Towers View to the al-Hamra Tower.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kuwait_City_Kuwait_Towers_View_to_the_al-Hamra_Tower.jpg?width=1280",
+     "tekija": "Zairon",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kuwait_City_Kuwait_Towers_View_to_the_al-Hamra_Tower.jpg",
+     "selite": "Al Hamra -torni on Kuwaitin korkein rakennus, ja sen kiertyvä kivijulkisivu erottuu pilvenpiirtäjien joukosta.",
+     "leveys": 4486,
+     "korkeus": 3140,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Kuwait Alhamra Tower (37472150).jpeg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kuwait_Alhamra_Tower_(37472150).jpeg?width=1280",
+     "tekija": "Ghala Alrefaei",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kuwait_Alhamra_Tower_(37472150).jpeg",
+     "selite": "Auringonlasku värjää Al Hamra -tornin lasipinnan ja keskustan tornit oransseiksi.",
+     "leveys": 2048,
+     "korkeus": 1997,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Al-Hamra-Tower-night-001.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Al-Hamra-Tower-night-001.jpg?width=1280",
+     "tekija": "Aziz J.Hayat",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Al-Hamra-Tower-night-001.jpg",
+     "selite": "Illan hämärässä Al Hamra -tornin siluetti piirtyy sinistä taivasta vasten.",
+     "leveys": 3730,
+     "korkeus": 2916,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1432832",
+   "nimi": "Kuwaitin suurmoskeija",
+   "peruste": "pelin nosto",
+   "koko_m": 250,
+   "lat": 29.36972,
+   "lon": 47.97833,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Kuwait City Grand Mosque Exterior South Facade 5.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kuwait_City_Grand_Mosque_Exterior_South_Facade_5.jpg?width=1280",
+     "tekija": "Zairon",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kuwait_City_Grand_Mosque_Exterior_South_Facade_5.jpg",
+     "selite": "Suurmoskeija on Kuwaitin valtionmoskeija, jonka kupoli ja minareetti kohoavat Arabian Gulf Streetin varrella.",
+     "leveys": 4544,
+     "korkeus": 2864,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Kuwait City Grand Mosque Interior 04.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kuwait_City_Grand_Mosque_Interior_04.jpg?width=1280",
+     "tekija": "Zairon",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kuwait_City_Grand_Mosque_Interior_04.jpg",
+     "selite": "Rukoussalin pylväät ja kullatut yksityiskohdat kehystävät moskeijan laajaa sisätilaa.",
+     "leveys": 4353,
+     "korkeus": 3429,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Kuwait City Grand Mosque Exterior Doors.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kuwait_City_Grand_Mosque_Exterior_Doors.jpg?width=1280",
+     "tekija": "Zairon",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kuwait_City_Grand_Mosque_Exterior_Doors.jpg",
+     "selite": "Moskeijan puiset ovet ovat koristeellisesti veistetyt.",
+     "leveys": 3442,
+     "korkeus": 3447,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3564897",
+   "nimi": "Seifin palatsi",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 29.38083,
+   "lon": 47.97111,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Seif Palace, Kuwait City.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Seif_Palace%2C_Kuwait_City.jpg?width=1280",
+     "tekija": "Evan Hemingway",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Seif_Palace%2C_Kuwait_City.jpg",
+     "selite": "Seifin palatsin edustaa reunustavat palmut ja valaisimet johtavat hallintorakennuksen portille.",
+     "leveys": 3264,
+     "korkeus": 2448,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q80688",
+   "nimi": "Vapautustorni",
+   "peruste": "sitelinks",
+   "koko_m": 100,
+   "lat": 29.36828,
+   "lon": 47.97495,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Kuwait cosmopolis - don't miss the details - zoom in (540280595).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kuwait_cosmopolis_-_don't_miss_the_details_-_zoom_in_(540280595).jpg?width=1280",
+     "tekija": "Snap® from Kuwait, Kuwait",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kuwait_cosmopolis_-_don't_miss_the_details_-_zoom_in_(540280595).jpg",
+     "selite": "Vapautustorni nousee Kuwaitin keskustan yläpuolelle valaistuna tv- ja tietoliikennetornina.",
+     "leveys": 3456,
+     "korkeus": 2304,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Kuwait highway.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kuwait_highway.jpg?width=1280",
+     "tekija": "Fawaz",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kuwait_highway.jpg",
+     "selite": "Moottoritien yllä kohoaa Vapautustornin merkkivalaistu huippu.",
+     "leveys": 3100,
+     "korkeus": 2325,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1392962",
+   "nimi": "Failaka",
+   "peruste": "sitelinks",
+   "koko_m": 1500,
+   "lat": 29.43333,
+   "lon": 48.33333,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Antiquities of Failaka island 01.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Antiquities_of_Failaka_island_01.JPG?width=1280",
+     "tekija": "Bo hessin",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Antiquities_of_Failaka_island_01.JPG",
+     "selite": "Failakan saarella on muinaisten asutusten kaivauksia, joiden jäänteet kertovat Persianlahden kaupankäynnistä.",
+     "leveys": 1936,
+     "korkeus": 2592,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Antiquities of Failaka island 04.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Antiquities_of_Failaka_island_04.JPG?width=1280",
+     "tekija": "Bo hessin",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Antiquities_of_Failaka_island_04.JPG",
+     "selite": "Failakan saaren perinteinen savirakennus seisoo hiekkaisella rannalla.",
+     "leveys": 1936,
+     "korkeus": 2592,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q15156679",
+   "nimi": "Kuwaitin kansalliskokouksen rakennus",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 29.37028,
+   "lon": 47.96417,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Kuwait City Arabian Gulf Street 10.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kuwait_City_Arabian_Gulf_Street_10.jpg?width=1280",
+     "tekija": "Zairon",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kuwait_City_Arabian_Gulf_Street_10.jpg",
+     "selite": "Kansalliskokouksen valkoinen rakennus sijaitsee Arabian Gulf Streetin varrella palmuja kasvavan puiston takana.",
+     "leveys": 4564,
+     "korkeus": 2931,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q4702482",
+   "nimi": "Al-Hashemi II",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": 29.30161,
+   "lon": 48.08939,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Al-Hashemi-II (ship).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Al-Hashemi-II_(ship).jpg?width=1280",
+     "tekija": "Photographer: Mosbatho",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Al-Hashemi-II_(ship).jpg",
+     "selite": "Al-Hashemi II on suuri puinen purjealus, joka seisoo kuivalla maalla Persianlahden rannalla.",
+     "leveys": 3000,
+     "korkeus": 2200,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Hawalli Al-Hashemi II & Mohamedi 2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hawalli_Al-Hashemi_II_%26_Mohamedi_2.jpg?width=1280",
+     "tekija": "Zairon",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Hawalli_Al-Hashemi_II_%26_Mohamedi_2.jpg",
+     "selite": "Aluksen kookas keula ja runko nousevat korkealle rantamuurin takana.",
+     "leveys": 4377,
+     "korkeus": 3384,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Hawalli Al-Hashemi II Exterior Aft 3.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hawalli_Al-Hashemi_II_Exterior_Aft_3.jpg?width=1280",
+     "tekija": "Zairon",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Hawalli_Al-Hashemi_II_Exterior_Aft_3.jpg",
+     "selite": "Aluksen perä on koristeltu puukaiverruksin ja silmäkuvioin.",
+     "leveys": 4469,
+     "korkeus": 3384,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Kuwait City skyline (39710595225).jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kuwait_City_skyline_(39710595225).jpg?width=1280",
+   "tekija": "Francisco Anzola from United States",
+   "lisenssi": "CC BY 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kuwait_City_skyline_(39710595225).jpg",
+   "selite": "Kuwaitin kaupungin pilvenpiirtäjät kohoavat meren yllä rannikon tasangolla.",
+   "leveys": 5897,
+   "korkeus": 3921,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Kuwait City (8287172359).jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kuwait_City_(8287172359).jpg?width=1280",
+   "tekija": "Abdullah Alqattan from Tempe, United States",
+   "lisenssi": "CC BY-SA 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kuwait_City_(8287172359).jpg",
+   "selite": "Yöllä Kuwaitin keskusta hohtaa valoissa moottoriteiden ja tornien ympärillä.",
+   "leveys": 2160,
+   "korkeus": 1217,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": [
+  {
+   "q": "Q7398110",
+   "nimi": "Sadu House",
+   "peruste": "pelin nosto",
+   "lat": 29.37444,
+   "lon": 47.96722,
+   "syy": "ei kelvollista vapaata kuvaa >= 1200 px"
+  },
+  {
+   "q": "Q6448876",
+   "nimi": "Kuwaitin tiedekeskus",
+   "peruste": "pelin nosto",
+   "lat": 29.3497,
+   "lon": 48.08956,
+   "syy": "ei kelvollista ulkokuvaa, vain kuvia keskuksesta ulos"
+  }
+ ]
+}

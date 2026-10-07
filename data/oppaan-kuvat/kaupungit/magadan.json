@@ -1,0 +1,313 @@
+{
+ "kaupunki": "magadan",
+ "kaupunkiQ": "Q7968",
+ "kohteet": [
+  {
+   "q": "Q1635369",
+   "nimi": "Surun naamio",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": 59.59166,
+   "lon": 150.81214,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "«Маска Скорби» (ракурс).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%C2%AB%D0%9C%D0%B0%D1%81%D0%BA%D0%B0_%D0%A1%D0%BA%D0%BE%D1%80%D0%B1%D0%B8%C2%BB_(%D1%80%D0%B0%D0%BA%D1%83%D1%80%D1%81).jpg?width=1280",
+     "tekija": "Сергей Ковалев",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%C2%AB%D0%9C%D0%B0%D1%81%D0%BA%D0%B0_%D0%A1%D0%BA%D0%BE%D1%80%D0%B1%D0%B8%C2%BB_(%D1%80%D0%B0%D0%BA%D1%83%D1%80%D1%81).jpg",
+     "selite": "Surun naamio on Neuvostoliiton vankileirien uhrien muistomerkki Magadanin kukkulalla.",
+     "leveys": 1600,
+     "korkeus": 1067,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Маска скорби вид сзади.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%9C%D0%B0%D1%81%D0%BA%D0%B0_%D1%81%D0%BA%D0%BE%D1%80%D0%B1%D0%B8_%D0%B2%D0%B8%D0%B4_%D1%81%D0%B7%D0%B0%D0%B4%D0%B8.jpg?width=1280",
+     "tekija": "Timofeevandrew",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%D0%9C%D0%B0%D1%81%D0%BA%D0%B0_%D1%81%D0%BA%D0%BE%D1%80%D0%B1%D0%B8_%D0%B2%D0%B8%D0%B4_%D1%81%D0%B7%D0%B0%D0%B4%D0%B8.jpg",
+     "selite": "Muistomerkin sisällä on pieni kappeli, jonka ristiinnaulitun kuva näkyy illalla valaistuna.",
+     "leveys": 1536,
+     "korkeus": 2048,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2369683",
+   "nimi": "Nagajevanlahti",
+   "peruste": "pelin nosto",
+   "koko_m": 2000,
+   "lat": 59.54056,
+   "lon": 150.67806,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Freezing the waters of the Sea of Okhotsk. Magadan.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Freezing_the_waters_of_the_Sea_of_Okhotsk._Magadan.jpg?width=1280",
+     "tekija": "JukoFF",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Freezing_the_waters_of_the_Sea_of_Okhotsk._Magadan.jpg",
+     "selite": "Nagajevanlahti on Ohotanmeren lahti ja Magadanin sataman suojaisa ankkuripaikka.",
+     "leveys": 5360,
+     "korkeus": 3096,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1112052",
+   "nimi": "Jamskin saaret",
+   "peruste": "pelin nosto",
+   "koko_m": 8000,
+   "lat": 59.20528,
+   "lon": 155.52333,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Серые шпили Катемалью.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%A1%D0%B5%D1%80%D1%8B%D0%B5_%D1%88%D0%BF%D0%B8%D0%BB%D0%B8_%D0%9A%D0%B0%D1%82%D0%B5%D0%BC%D0%B0%D0%BB%D1%8C%D1%8E.jpg?width=1280",
+     "tekija": "Кирилл Уютнов",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%D0%A1%D0%B5%D1%80%D1%8B%D0%B5_%D1%88%D0%BF%D0%B8%D0%BB%D0%B8_%D0%9A%D0%B0%D1%82%D0%B5%D0%BC%D0%B0%D0%BB%D1%8C%D1%8E.jpg",
+     "selite": "Jamskin saaret ovat Ohotanmeren jyrkkäkallioinen saaristo, jossa pesii valtavia merilintuparvia.",
+     "leveys": 2000,
+     "korkeus": 1333,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Скалы острова Баран.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%A1%D0%BA%D0%B0%D0%BB%D1%8B_%D0%BE%D1%81%D1%82%D1%80%D0%BE%D0%B2%D0%B0_%D0%91%D0%B0%D1%80%D0%B0%D0%BD.jpg?width=1280",
+     "tekija": "Кирилл Уютнов",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%D0%A1%D0%BA%D0%B0%D0%BB%D1%8B_%D0%BE%D1%81%D1%82%D1%80%D0%BE%D0%B2%D0%B0_%D0%91%D0%B0%D1%80%D0%B0%D0%BD.jpg",
+     "selite": "Saarten rapautuneet kalliojyrkänteet ovat merilintujen pesäkallioita.",
+     "leveys": 2000,
+     "korkeus": 1333,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Ямские острова. Остров Матыкиль.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%AF%D0%BC%D1%81%D0%BA%D0%B8%D0%B5_%D0%BE%D1%81%D1%82%D1%80%D0%BE%D0%B2%D0%B0._%D0%9E%D1%81%D1%82%D1%80%D0%BE%D0%B2_%D0%9C%D0%B0%D1%82%D1%8B%D0%BA%D0%B8%D0%BB%D1%8C.jpg?width=1280",
+     "tekija": "Екатерина Васягина",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%D0%AF%D0%BC%D1%81%D0%BA%D0%B8%D0%B5_%D0%BE%D1%81%D1%82%D1%80%D0%BE%D0%B2%D0%B0._%D0%9E%D1%81%D1%82%D1%80%D0%BE%D0%B2_%D0%9C%D0%B0%D1%82%D1%8B%D0%BA%D0%B8%D0%BB%D1%8C.jpg",
+     "selite": "Matykilin saari kohoaa rannikon vuorten edessä Ohotanmeren rannikolla.",
+     "leveys": 3000,
+     "korkeus": 2003,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1142859",
+   "nimi": "Kolyman valtatie",
+   "peruste": "sitelinks",
+   "koko_m": 500,
+   "lat": 59.58829,
+   "lon": 150.8317,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "R504 Kolyma in autumn.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/R504_Kolyma_in_autumn.jpg?width=1280",
+     "tekija": "FKU Uprdor \"Vilyui\" (Rosavtodor)",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:R504_Kolyma_in_autumn.jpg",
+     "selite": "Kolyman valtatie mutkittelee Magadanista sisämaahan halki taigan ja vuoristojen.",
+     "leveys": 1229,
+     "korkeus": 691,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "R504 kolyma.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/R504_kolyma.jpg?width=1280",
+     "tekija": "Government of Russia",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:R504_kolyma.jpg",
+     "selite": "Valtatie kulkee jokilaaksojen rinteitä pitkin Koillis-Siperian erämaassa.",
+     "leveys": 4000,
+     "korkeus": 2250,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1574959",
+   "nimi": "Tauinlahti",
+   "peruste": "sitelinks",
+   "koko_m": 3000,
+   "lat": 59.3,
+   "lon": 150.4,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Taui Bay.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Taui_Bay.jpg?width=1280",
+     "tekija": "AlGaman",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Taui_Bay.jpg",
+     "selite": "Tauinlahti on Magadanin lähellä sijaitseva Ohotanmeren lahti.",
+     "leveys": 4592,
+     "korkeus": 3056,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Taui Bay from Staritsky Peninsula 2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Taui_Bay_from_Staritsky_Peninsula_2.jpg?width=1280",
+     "tekija": "frage23",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Taui_Bay_from_Staritsky_Peninsula_2.jpg",
+     "selite": "Lahden yli näkyvät Staritskin niemimaan vuoret ja rannikon asutus.",
+     "leveys": 1280,
+     "korkeus": 960,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q4273876",
+   "nimi": "Magadanin luonnonsuojelualue",
+   "peruste": "sitelinks",
+   "koko_m": 5000,
+   "lat": 59.64194,
+   "lon": 147.44861,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Озеро Няша. Кава-Челомджинский участок.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%9E%D0%B7%D0%B5%D1%80%D0%BE_%D0%9D%D1%8F%D1%88%D0%B0._%D0%9A%D0%B0%D0%B2%D0%B0-%D0%A7%D0%B5%D0%BB%D0%BE%D0%BC%D0%B4%D0%B6%D0%B8%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D1%83%D1%87%D0%B0%D1%81%D1%82%D0%BE%D0%BA.JPG?width=1280",
+     "tekija": "Butorin",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%D0%9E%D0%B7%D0%B5%D1%80%D0%BE_%D0%9D%D1%8F%D1%88%D0%B0._%D0%9A%D0%B0%D0%B2%D0%B0-%D0%A7%D0%B5%D0%BB%D0%BE%D0%BC%D0%B4%D0%B6%D0%B8%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D1%83%D1%87%D0%B0%D1%81%D1%82%D0%BE%D0%BA.JPG",
+     "selite": "Magadanin luonnonsuojelualue suojelee Ohotanmeren rannikon taigaa, soita ja lintujen pesimäalueita.",
+     "leveys": 5469,
+     "korkeus": 3499,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Мыс Таран и остров Завьялова вдалеке.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%9C%D1%8B%D1%81_%D0%A2%D0%B0%D1%80%D0%B0%D0%BD_%D0%B8_%D0%BE%D1%81%D1%82%D1%80%D0%BE%D0%B2_%D0%97%D0%B0%D0%B2%D1%8C%D1%8F%D0%BB%D0%BE%D0%B2%D0%B0_%D0%B2%D0%B4%D0%B0%D0%BB%D0%B5%D0%BA%D0%B5.jpg?width=1280",
+     "tekija": "Кирилл Уютнов",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%D0%9C%D1%8B%D1%81_%D0%A2%D0%B0%D1%80%D0%B0%D0%BD_%D0%B8_%D0%BE%D1%81%D1%82%D1%80%D0%BE%D0%B2_%D0%97%D0%B0%D0%B2%D1%8C%D1%8F%D0%BB%D0%BE%D0%B2%D0%B0_%D0%B2%D0%B4%D0%B0%D0%BB%D0%B5%D0%BA%D0%B5.jpg",
+     "selite": "Suojelualueeseen kuuluu jyrkkiä rannikkokallioita ja saaria.",
+     "leveys": 2000,
+     "korkeus": 1333,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Лентикулярные облака над полуостровом Кони.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%9B%D0%B5%D0%BD%D1%82%D0%B8%D0%BA%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D1%8B%D0%B5_%D0%BE%D0%B1%D0%BB%D0%B0%D0%BA%D0%B0_%D0%BD%D0%B0%D0%B4_%D0%BF%D0%BE%D0%BB%D1%83%D0%BE%D1%81%D1%82%D1%80%D0%BE%D0%B2%D0%BE%D0%BC_%D0%9A%D0%BE%D0%BD%D0%B8.jpg?width=1280",
+     "tekija": "Кирилл Уютнов",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%D0%9B%D0%B5%D0%BD%D1%82%D0%B8%D0%BA%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D1%8B%D0%B5_%D0%BE%D0%B1%D0%BB%D0%B0%D0%BA%D0%B0_%D0%BD%D0%B0%D0%B4_%D0%BF%D0%BE%D0%BB%D1%83%D0%BE%D1%81%D1%82%D1%80%D0%BE%D0%B2%D0%BE%D0%BC_%D0%9A%D0%BE%D0%BD%D0%B8.jpg",
+     "selite": "Konin niemimaan vuoret kohoavat suojelualueen merenrannan yllä.",
+     "leveys": 2000,
+     "korkeus": 1333,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q4332095",
+   "nimi": "Jack Londonin järvi",
+   "peruste": "sitelinks",
+   "koko_m": 3000,
+   "lat": 62.08028,
+   "lon": 149.52861,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Озеро Джека Лондона.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%9E%D0%B7%D0%B5%D1%80%D0%BE_%D0%94%D0%B6%D0%B5%D0%BA%D0%B0_%D0%9B%D0%BE%D0%BD%D0%B4%D0%BE%D0%BD%D0%B0.jpg?width=1280",
+     "tekija": "Sergei siluyanov",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%D0%9E%D0%B7%D0%B5%D1%80%D0%BE_%D0%94%D0%B6%D0%B5%D0%BA%D0%B0_%D0%9B%D0%BE%D0%BD%D0%B4%D0%BE%D0%BD%D0%B0.jpg",
+     "selite": "Jack Londonin järvi on Kolyman vuoristossa sijaitseva kirkasvetinen vuorijärvi.",
+     "leveys": 5000,
+     "korkeus": 2466,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Jack London Lake by bartosh.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Jack_London_Lake_by_bartosh.jpg?width=1280",
+     "tekija": "Bartosh Dmytro, Ukraine, Kiev. http://fotostudio.com.ua",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Jack_London_Lake_by_bartosh.jpg",
+     "selite": "Järven rannat ovat metsäisiä ja taustalla kohoavat korkeat vuoret.",
+     "leveys": 2000,
+     "korkeus": 986,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Оз. Джека Лондона о.Веры.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%9E%D0%B7._%D0%94%D0%B6%D0%B5%D0%BA%D0%B0_%D0%9B%D0%BE%D0%BD%D0%B4%D0%BE%D0%BD%D0%B0_%D0%BE.%D0%92%D0%B5%D1%80%D1%8B.jpg?width=1280",
+     "tekija": "Странник 18",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%D0%9E%D0%B7._%D0%94%D0%B6%D0%B5%D0%BA%D0%B0_%D0%9B%D0%BE%D0%BD%D0%B4%D0%BE%D0%BD%D0%B0_%D0%BE.%D0%92%D0%B5%D1%80%D1%8B.jpg",
+     "selite": "Järvessä on pieniä saaria, ja lahtien ympärillä kasvaa mäntyjä.",
+     "leveys": 5472,
+     "korkeus": 3648,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Magadan seen from mountain.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Magadan_seen_from_mountain.jpg?width=1280",
+   "tekija": "Johannes Rohr",
+   "lisenssi": "CC BY-SA 3.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Magadan_seen_from_mountain.jpg",
+   "selite": "Magadan levittyy Ohotanmeren rannalle vuorten ympäröimänä.",
+   "leveys": 3392,
+   "korkeus": 2510,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Laika ac View of Magadan from the Mask of Sorrow (6457760607).jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Laika_ac_View_of_Magadan_from_the_Mask_of_Sorrow_(6457760607).jpg?width=1280",
+   "tekija": "Laika ac from USA",
+   "lisenssi": "CC BY-SA 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Laika_ac_View_of_Magadan_from_the_Mask_of_Sorrow_(6457760607).jpg",
+   "selite": "Kaupunki ja sen takana kohoavat vuoret näkyvät Surun naamion kukkulalta.",
+   "leveys": 4000,
+   "korkeus": 3000,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

@@ -1,0 +1,408 @@
+{
+ "kaupunki": "doha",
+ "kaupunkiQ": "Q3861",
+ "kohteet": [
+  {
+   "q": "Q1148353",
+   "nimi": "Islamilaisen taiteen museo",
+   "peruste": "pelin nosto",
+   "koko_m": 250,
+   "lat": 25.29502,
+   "lon": 51.53927,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Museum of Islamic Art Park, Doha.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Museum_of_Islamic_Art_Park%2C_Doha.jpg?width=1280",
+     "tekija": "Sandra Doha",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Museum_of_Islamic_Art_Park%2C_Doha.jpg",
+     "selite": "Islamilaisen taiteen museo kohoaa keinotekoisella saarella Dohan lahden rannalla puistonsa takana.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "View of the Persian Gulf and the Museum of Islamic Art in Qatar at dusk.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/View_of_the_Persian_Gulf_and_the_Museum_of_Islamic_Art_in_Qatar_at_dusk.jpg?width=1280",
+     "tekija": "Alex Sergeev (www.asergeev.com)",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:View_of_the_Persian_Gulf_and_the_Museum_of_Islamic_Art_in_Qatar_at_dusk.jpg",
+     "selite": "Illansuussa museon geometrinen rakennus heijastuu tyyneen Persianlahden veteen.",
+     "leveys": 1634,
+     "korkeus": 1087,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q4117959",
+   "nimi": "Souq Waqif",
+   "peruste": "pelin nosto",
+   "koko_m": 400,
+   "lat": 25.28738,
+   "lon": 51.53321,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Souq Waqif, Doha, Catar, 2013-08-05, DD 09.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Souq_Waqif%2C_Doha%2C_Catar%2C_2013-08-05%2C_DD_09.JPG?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Souq_Waqif%2C_Doha%2C_Catar%2C_2013-08-05%2C_DD_09.JPG",
+     "selite": "Souq Waqifin kujien ylle on ripustettu värikkäitä sateenvarjoja, jotka antavat varjoa.",
+     "leveys": 4812,
+     "korkeus": 3490,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Souq Waqif, Doha, Catar, 2013-08-05, DD 84.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Souq_Waqif%2C_Doha%2C_Catar%2C_2013-08-05%2C_DD_84.JPG?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Souq_Waqif%2C_Doha%2C_Catar%2C_2013-08-05%2C_DD_84.JPG",
+     "selite": "Illalla kaarikäytävin koristeltu rakennus hohtaa valaistuna Souq Waqifin torilla.",
+     "leveys": 5273,
+     "korkeus": 3152,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Souq Waqif, Doha, Catar, 2013-08-05, DD 75.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Souq_Waqif%2C_Doha%2C_Catar%2C_2013-08-05%2C_DD_75.JPG?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Souq_Waqif%2C_Doha%2C_Catar%2C_2013-08-05%2C_DD_75.JPG",
+     "selite": "Perinteisen savi- ja kivirakennuksen tuuliraudat johdattavat viileää ilmaa sisälle.",
+     "leveys": 4945,
+     "korkeus": 2634,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 4,
+     "tiedosto": "Souq Waqif, Doha, Catar, 2013-08-05, DD 107.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Souq_Waqif%2C_Doha%2C_Catar%2C_2013-08-05%2C_DD_107.JPG?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Souq_Waqif%2C_Doha%2C_Catar%2C_2013-08-05%2C_DD_107.JPG",
+     "selite": "Souq Waqifin kapea kuja kulkee kivimuurattujen kauppakujien välissä.",
+     "leveys": 4310,
+     "korkeus": 3190,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1234812",
+   "nimi": "Dohan Corniche",
+   "peruste": "pelin nosto",
+   "koko_m": 300,
+   "lat": 25.29139,
+   "lon": 51.53722,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Doha Corniche by KS.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Doha_Corniche_by_KS.jpg?width=1280",
+     "tekija": "Krissubh",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Doha_Corniche_by_KS.jpg",
+     "selite": "Corniche kiertää Dohan lahtea, ja sen edustalla seilaa perinteisiä dhow-aluksia kaupungin siluetin edessä.",
+     "leveys": 5241,
+     "korkeus": 3276,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "A dhow photographed in 2014 off the Doha Corniche.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/A_dhow_photographed_in_2014_off_the_Doha_Corniche.jpg?width=1280",
+     "tekija": "Alex Sergeev (www.asergeev.com)",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:A_dhow_photographed_in_2014_off_the_Doha_Corniche.jpg",
+     "selite": "Dhow-alus purjehtii Corniche-rannan edustalla West Bayn pilvenpiirtäjien edessä.",
+     "leveys": 1634,
+     "korkeus": 1087,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Stretch of promenade on Doha Corniche.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Stretch_of_promenade_on_Doha_Corniche.jpg?width=1280",
+     "tekija": "Kevin Gong @ Flickr",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Stretch_of_promenade_on_Doha_Corniche.jpg",
+     "selite": "Palmujen reunustama kävelykatu seuraa lahden rantaa.",
+     "leveys": 4752,
+     "korkeus": 3168,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3084218",
+   "nimi": "Qatarin kansallismuseo",
+   "peruste": "pelin nosto",
+   "koko_m": 250,
+   "lat": 25.28847,
+   "lon": 51.54926,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "National Museum of Qatar.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/National_Museum_of_Qatar.jpg?width=1280",
+     "tekija": "CallMeBarcode",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:National_Museum_of_Qatar.jpg",
+     "selite": "Vanhan palatsin portin läpi näkyy museon aavikon ruusua muistuttava uudisrakennus.",
+     "leveys": 4032,
+     "korkeus": 1960,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "National Museum of Qatar building and skyline of Old Salata.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/National_Museum_of_Qatar_building_and_skyline_of_Old_Salata.jpg?width=1280",
+     "tekija": "Michael Coghlan @ Flickr",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:National_Museum_of_Qatar_building_and_skyline_of_Old_Salata.jpg",
+     "selite": "Museon vanha sheikin palatsi on säilytetty osana kokonaisuutta modernin kaupungin keskellä.",
+     "leveys": 2385,
+     "korkeus": 1867,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q4704253",
+   "nimi": "Al Koot -linnake",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": 25.2866,
+   "lon": 51.5309,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Doha Souq Waqif Al Koot Fort 1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Doha_Souq_Waqif_Al_Koot_Fort_1.jpg?width=1280",
+     "tekija": "Zairon",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Doha_Souq_Waqif_Al_Koot_Fort_1.jpg",
+     "selite": "Al Koot -linnake on valkoiseksi kalkittu vartiolinnake Souq Waqifin vieressä.",
+     "leveys": 4254,
+     "korkeus": 2070,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Fuerte Al Koot, Doha, Catar, 2013-08-06, DD 07.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Fuerte_Al_Koot%2C_Doha%2C_Catar%2C_2013-08-06%2C_DD_07.JPG?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Fuerte_Al_Koot%2C_Doha%2C_Catar%2C_2013-08-06%2C_DD_07.JPG",
+     "selite": "Linnakkeen pyöreät tornit ja matalat muurit palvelivat kaupungin vartiopaikkana.",
+     "leveys": 5393,
+     "korkeus": 2927,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Fuerte Al Koot, Doha, Catar, 2013-08-06, DD 05.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Fuerte_Al_Koot%2C_Doha%2C_Catar%2C_2013-08-06%2C_DD_05.JPG?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Fuerte_Al_Koot%2C_Doha%2C_Catar%2C_2013-08-06%2C_DD_05.JPG",
+     "selite": "Linnakkeen edustalla lepäilee kameleita perinteen muistona.",
+     "leveys": 5355,
+     "korkeus": 2578,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q25112655",
+   "nimi": "Msheireb",
+   "peruste": "pelin nosto",
+   "koko_m": 400,
+   "lat": 25.28608,
+   "lon": 51.52711,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Musheireb downtown on Abdullah Bin Thani Street in 2021.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Musheireb_downtown_on_Abdullah_Bin_Thani_Street_in_2021.jpg?width=1280",
+     "tekija": "bobbyqat @ Mapillary.com",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Musheireb_downtown_on_Abdullah_Bin_Thani_Street_in_2021.jpg",
+     "selite": "Msheireb on kokonaan uudelleen rakennettu Dohan keskusta, jossa moderni arkkitehtuuri nojaa perinteeseen.",
+     "leveys": 1638,
+     "korkeus": 1051,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Msheireb Downtown Doha tram at night.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Msheireb_Downtown_Doha_tram_at_night.jpg?width=1280",
+     "tekija": "Michael Coghlan @ Flickr",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Msheireb_Downtown_Doha_tram_at_night.jpg",
+     "selite": "Msheirebin raitiovaunu kulkee kaupunginosan katuja iltavalossa.",
+     "leveys": 2399,
+     "korkeus": 1640,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q682615",
+   "nimi": "The Pearl",
+   "peruste": "sitelinks",
+   "koko_m": 600,
+   "lat": 25.36861,
+   "lon": 51.55158,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "The Pearl Marina in Nov 2013.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/The_Pearl_Marina_in_Nov_2013.jpg?width=1280",
+     "tekija": "Alex Sergeev (www.asergeev.com)",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:The_Pearl_Marina_in_Nov_2013.jpg",
+     "selite": "The Pearl on keinotekoinen saari, jonka satama täyttyy veneistä ja rannan kerrostaloista.",
+     "leveys": 1634,
+     "korkeus": 1087,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Marsa Malaz Kempinski Hotel in Porto Arabia.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Marsa_Malaz_Kempinski_Hotel_in_Porto_Arabia.jpg?width=1280",
+     "tekija": "Alex Sergeev (www.asergeev.com)",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Marsa_Malaz_Kempinski_Hotel_in_Porto_Arabia.jpg",
+     "selite": "Porto Arabian rannalla kohoaa palatsimainen hotelli Venetsiaa muistuttavien kanavien äärellä.",
+     "leveys": 1605,
+     "korkeus": 1068,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1361436",
+   "nimi": "Qatarin kansalliskirjasto",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 25.28254,
+   "lon": 51.54027,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Qatar National Library-03.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Qatar_National_Library-03.jpg?width=1280",
+     "tekija": "Mohammed Abdul Mutallib",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Qatar_National_Library-03.jpg",
+     "selite": "Kansalliskirjaston avoimessa salissa kirjahyllyt nousevat portaikon tavoin tasoilta toisille.",
+     "leveys": 5922,
+     "korkeus": 3948,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Qatar National Library 2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Qatar_National_Library_2.jpg?width=1280",
+     "tekija": "Sharawi13",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Qatar_National_Library_2.jpg",
+     "selite": "Kirjaston valtava avoin tila on yksi maailman suurimmista yhtenäisistä lukusaleista.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Doha - West Bay Skyline 04.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Doha_-_West_Bay_Skyline_04.jpg?width=1280",
+   "tekija": "P. Hughes",
+   "lisenssi": "CC BY 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Doha_-_West_Bay_Skyline_04.jpg",
+   "selite": "Dohan West Bayn pilvenpiirtäjät kohoavat lahden rannalle.",
+   "leveys": 5594,
+   "korkeus": 3969,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Doha West Bay Skyline Qatar Jan 2020.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Doha_West_Bay_Skyline_Qatar_Jan_2020.jpg?width=1280",
+   "tekija": "Thameur Belghith",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Doha_West_Bay_Skyline_Qatar_Jan_2020.jpg",
+   "selite": "Illalla West Bayn tornit valaistuvat ja heijastuvat lahden pintaan.",
+   "leveys": 5722,
+   "korkeus": 3814,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": [
+  {
+   "q": "Q737602",
+   "nimi": "Aspire Tower",
+   "peruste": "sitelinks",
+   "lat": 25.26247,
+   "lon": 51.44483,
+   "syy": "ei sopivaa vapaata ulkokuvaa >= 1200 px"
+  },
+  {
+   "q": "Q772988",
+   "nimi": "Khalifa International Stadium",
+   "peruste": "sitelinks",
+   "lat": 25.26361,
+   "lon": 51.44806,
+   "syy": "vain yleisökuvia ja sisätiloja, ei ulkokuvaa"
+  },
+  {
+   "q": "Q1048774",
+   "nimi": "Kampusalueen stadion",
+   "peruste": "sitelinks",
+   "lat": 25.31059,
+   "lon": 51.42427,
+   "syy": "vain ottelukuvia ja yleisöä, ei ulkokuvaa"
+  },
+  {
+   "q": "Q1134439",
+   "nimi": "Stadium 974",
+   "peruste": "sitelinks",
+   "lat": 25.2887,
+   "lon": 51.56647,
+   "syy": "ei kelvollista kuvaa stadionista"
+  }
+ ]
+}

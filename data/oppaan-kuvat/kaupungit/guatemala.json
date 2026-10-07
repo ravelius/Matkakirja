@@ -1,0 +1,532 @@
+{
+ "kaupunki": "guatemala",
+ "kaupunkiQ": "Q1555",
+ "kohteet": [
+  {
+   "q": "Q212773",
+   "nimi": "Antigua Guatemala",
+   "peruste": "UNESCO",
+   "koko_m": 1500,
+   "lat": 14.5575,
+   "lon": -90.73333,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Santa Catalina Arch - Antigua Guatemala Feb 2020.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Santa_Catalina_Arch_-_Antigua_Guatemala_Feb_2020.jpg?width=1280",
+     "tekija": "Chad Davis",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Santa_Catalina_Arch_-_Antigua_Guatemala_Feb_2020.jpg",
+     "selite": "Keltainen Santa Catalinan kaari kehystää Agua-tulivuoren Antiguan pääkadun päässä.",
+     "leveys": 6993,
+     "korkeus": 4664,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Antigua Guatemala - 55444068444.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Antigua_Guatemala_-_55444068444.jpg?width=1280",
+     "tekija": "xiquinhosilva",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Antigua_Guatemala_-_55444068444.jpg",
+     "selite": "La Mercedin kirkon runsaasti koristeltu barokkijulkisivu on Antiguan tunnetuimpia.",
+     "leveys": 3000,
+     "korkeus": 2000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Antigua Guatemala - 55444026498.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Antigua_Guatemala_-_55444026498.jpg?width=1280",
+     "tekija": "xiquinhosilva",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Antigua_Guatemala_-_55444026498.jpg",
+     "selite": "Antiguan katedraalin valkoinen julkisivu hallitsee keskusaukion laitaa.",
+     "leveys": 3000,
+     "korkeus": 1943,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 4,
+     "tiedosto": "Antigua Guatemala - 55442931992.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Antigua_Guatemala_-_55442931992.jpg?width=1280",
+     "tekija": "xiquinhosilva",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Antigua_Guatemala_-_55442931992.jpg",
+     "selite": "Tanque La Unión on yhteinen pesupaikka keltaisine kaarineen.",
+     "leveys": 3000,
+     "korkeus": 2000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q181172",
+   "nimi": "Tikal",
+   "peruste": "sitelinks",
+   "koko_m": 1500,
+   "lat": 17.22209,
+   "lon": -89.62361,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Tikal ruinas=Great Plaza (6995996121).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tikal_ruinas%3DGreat_Plaza_(6995996121).jpg?width=1280",
+     "tekija": "Murray Foubister",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tikal_ruinas%3DGreat_Plaza_(6995996121).jpg",
+     "selite": "Tikalin suurelta aukiolta kohoaa Temppeli I sademetsän keskellä.",
+     "leveys": 2121,
+     "korkeus": 1414,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Tikal Temple I 02.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tikal_Temple_I_02.jpg?width=1280",
+     "tekija": "Kaldari",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tikal_Temple_I_02.jpg",
+     "selite": "Temppeli I eli Suuren jaguaarin temppeli on mayakaupungin tunnetuin pyramidi.",
+     "leveys": 3000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Tikal central ballcourt, looking towards the Central Acropolis.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tikal_central_ballcourt%2C_looking_towards_the_Central_Acropolis.jpg?width=1280",
+     "tekija": "Simon Burchell",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tikal_central_ballcourt%2C_looking_towards_the_Central_Acropolis.jpg",
+     "selite": "Palloleikkikenttä johtaa kohti Keskusakropolista.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 4,
+     "tiedosto": "Tikal Temple II.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tikal_Temple_II.jpg?width=1280",
+     "tekija": "Mike Vondran derivative work: MrPanyGoff",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tikal_Temple_II.jpg",
+     "selite": "Temppeli II seisoo suurta aukiota vastapäätä Temppeli I:tä.",
+     "leveys": 2407,
+     "korkeus": 2000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q6974722",
+   "nimi": "Kansallispalatsi",
+   "peruste": "pelin nosto",
+   "koko_m": 200,
+   "lat": 14.64294,
+   "lon": -90.51323,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Palacio Nacional De La Cultura de Guatemala (25089083308).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Palacio_Nacional_De_La_Cultura_de_Guatemala_(25089083308).jpg?width=1280",
+     "tekija": "Hans Birger Nilsen",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Palacio_Nacional_De_La_Cultura_de_Guatemala_(25089083308).jpg",
+     "selite": "Vihreä kansallispalatsi reunustaa Perustuslain aukiota Guatemala Cityn keskustassa.",
+     "leveys": 3155,
+     "korkeus": 2512,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Palacio nacional de la cultura 15 de septiembre.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Palacio_nacional_de_la_cultura_15_de_septiembre.jpg?width=1280",
+     "tekija": "David Rojas",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Palacio_nacional_de_la_cultura_15_de_septiembre.jpg",
+     "selite": "Kansallispalatsi valaistuna illalla Guatemalan lipun sinisellä.",
+     "leveys": 2048,
+     "korkeus": 882,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Palacio Nacional de la Cultura in Guatemala (53749165876).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Palacio_Nacional_de_la_Cultura_in_Guatemala_(53749165876).jpg?width=1280",
+     "tekija": "Reg Natarajan from Vancouver, Bogotá",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Palacio_Nacional_de_la_Cultura_in_Guatemala_(53749165876).jpg",
+     "selite": "Palatsin sisäkaton seinämaalaukset kuvaavat maan historiaa.",
+     "leveys": 4080,
+     "korkeus": 3072,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1081581",
+   "nimi": "Kaminaljuyú",
+   "peruste": "pelin nosto",
+   "koko_m": 400,
+   "lat": 14.6328,
+   "lon": -90.5491,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Kaminaljuyu 11.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kaminaljuyu_11.jpg?width=1280",
+     "tekija": "Simon Burchell",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kaminaljuyu_11.jpg",
+     "selite": "Kaminaljuyún kaivaukset paljastavat esiklassisen mayakaupungin Guatemala Cityn alta.",
+     "leveys": 2816,
+     "korkeus": 2112,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Cerro Kaminal.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cerro_Kaminal.jpg?width=1280",
+     "tekija": "Rrmsjp",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cerro_Kaminal.jpg",
+     "selite": "Kaminaljuyún muinaiset multakummut kohoavat nyky-Guatemala Cityn keskellä.",
+     "leveys": 1280,
+     "korkeus": 1024,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Estela 11 de Kaminaljuyu.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Estela_11_de_Kaminaljuyu.jpg?width=1280",
+     "tekija": "Konjiki1",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Estela_11_de_Kaminaljuyu.jpg",
+     "selite": "Kaminaljuyún stela 11 on kaiverrettu mayojen kivipaasi.",
+     "leveys": 2583,
+     "korkeus": 4605,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q273276",
+   "nimi": "Atitlánjärvi",
+   "peruste": "sitelinks",
+   "koko_m": 8000,
+   "lat": 14.7,
+   "lon": -91.2,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "2010.05.02.074448 Sololá Panajachel vista lago Atitlán Guatemala.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2010.05.02.074448_Solol%C3%A1_Panajachel_vista_lago_Atitl%C3%A1n_Guatemala.jpg?width=1280",
+     "tekija": "Hermann Luyken",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2010.05.02.074448_Solol%C3%A1_Panajachel_vista_lago_Atitl%C3%A1n_Guatemala.jpg",
+     "selite": "Atitlánjärvi on tulivuorten ympäröimä kraatterijärvi Guatemalan ylängöllä.",
+     "leveys": 1920,
+     "korkeus": 1280,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Amanecer \"Las Peñas Toliman\".jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Amanecer_%22Las_Pe%C3%B1as_Toliman%22.jpg?width=1280",
+     "tekija": "Francisco Conóz",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Amanecer_%22Las_Pe%C3%B1as_Toliman%22.jpg",
+     "selite": "Aamuvalo nousee Atitlánjärven yllä Tolimánin tulivuoren juurella.",
+     "leveys": 4160,
+     "korkeus": 3120,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q753924",
+   "nimi": "Pacayan tulivuori",
+   "peruste": "sitelinks",
+   "koko_m": 3000,
+   "lat": 14.38083,
+   "lon": -90.60111,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "El Volcán de Pacaya.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/El_Volc%C3%A1n_de_Pacaya.jpg?width=1280",
+     "tekija": "young shanahan",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:El_Volc%C3%A1n_de_Pacaya.jpg",
+     "selite": "Pacayan tulivuori on aktiivinen ja suosittu retkikohde lähellä Guatemala Cityä.",
+     "leveys": 4288,
+     "korkeus": 2806,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Crater pacaya volcano 2005-07-25.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Crater_pacaya_volcano_2005-07-25.jpg?width=1280",
+     "tekija": "Bruno Girin",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Crater_pacaya_volcano_2005-07-25.jpg",
+     "selite": "Pacayan kraatterin reunalla laava on värjännyt kallion keltaiseksi ja punaiseksi.",
+     "leveys": 1280,
+     "korkeus": 853,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q859376",
+   "nimi": "Fuegon tulivuori",
+   "peruste": "sitelinks",
+   "koko_m": 4000,
+   "lat": 14.47472,
+   "lon": -90.88083,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Volcán de Fuego and Acatenango.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Volc%C3%A1n_de_Fuego_and_Acatenango.jpg?width=1280",
+     "tekija": "Scottydude",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Volc%C3%A1n_de_Fuego_and_Acatenango.jpg",
+     "selite": "Fuegon ja Acatenangon tulivuoret kohoavat Antiguan yläpuolella.",
+     "leveys": 1600,
+     "korkeus": 1200,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "2007 Volcan de Fuego.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2007_Volcan_de_Fuego.jpg?width=1280",
+     "tekija": "Simon Burchell",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2007_Volcan_de_Fuego.jpg",
+     "selite": "Fuegon säännöllisesti purkautuva tulivuori on yksi Keski-Amerikan aktiivisimpia.",
+     "leveys": 2560,
+     "korkeus": 1920,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1327687",
+   "nimi": "Aguan tulivuori",
+   "peruste": "sitelinks",
+   "koko_m": 4000,
+   "lat": 14.465,
+   "lon": -90.74278,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "2010.05.13.113701 Volcán Agua Antigua Guatemala.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2010.05.13.113701_Volc%C3%A1n_Agua_Antigua_Guatemala.jpg?width=1280",
+     "tekija": "Hermann Luyken",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2010.05.13.113701_Volc%C3%A1n_Agua_Antigua_Guatemala.jpg",
+     "selite": "Aguan tulivuori kohoaa Antiguan katujen yläpuolelle.",
+     "leveys": 1920,
+     "korkeus": 1280,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "2010.05.13.113457 Volcán Agua Antigua Guatemala.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2010.05.13.113457_Volc%C3%A1n_Agua_Antigua_Guatemala.jpg?width=1280",
+     "tekija": "Hermann Luyken",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2010.05.13.113457_Volc%C3%A1n_Agua_Antigua_Guatemala.jpg",
+     "selite": "Aguan symmetrinen kartio nousee pilvien keskeltä.",
+     "leveys": 1920,
+     "korkeus": 1280,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q5762798",
+   "nimi": "Cerrito del Carmen",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": 14.64681,
+   "lon": -90.50583,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Cerrito del Carmen 02.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cerrito_del_Carmen_02.JPG?width=1280",
+     "tekija": "Arielaasturias",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cerrito_del_Carmen_02.JPG",
+     "selite": "Cerrito del Carmenin kukkulalla seisoo kivinen risti vanhan keskustan yläpuolella.",
+     "leveys": 3072,
+     "korkeus": 2304,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1753887",
+   "nimi": "Torre del Reformador",
+   "peruste": "sitelinks",
+   "koko_m": 100,
+   "lat": 14.61303,
+   "lon": -90.5168,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Cityscape - Guatemala City.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cityscape_-_Guatemala_City.jpg?width=1280",
+     "tekija": "Juan Francisco",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cityscape_-_Guatemala_City.jpg",
+     "selite": "Reformadorin teräsrakenteinen torni kohoaa Guatemala Cityn kaupunkinäkymässä.",
+     "leveys": 3694,
+     "korkeus": 2473,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Guatemala City - Reformador Tower.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Guatemala_City_-_Reformador_Tower.jpg?width=1280",
+     "tekija": "Sasha India",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Guatemala_City_-_Reformador_Tower.jpg",
+     "selite": "Reformadorin torni on Eiffel-tornia muistuttava teräsmasto Guatemala Cityn kadun päässä.",
+     "leveys": 1200,
+     "korkeus": 1600,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q6974147",
+   "nimi": "Kansalliskirjasto",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": 14.64197,
+   "lon": -90.515,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Biblioteca Nacional de Guatemala Luis Cardoza y Aragón.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Biblioteca_Nacional_de_Guatemala_Luis_Cardoza_y_Arag%C3%B3n.jpg?width=1280",
+     "tekija": "Todo por mi Guate Por un mejor País!",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Biblioteca_Nacional_de_Guatemala_Luis_Cardoza_y_Arag%C3%B3n.jpg",
+     "selite": "Kansalliskirjasto toimii modernistisessa rakennuksessa Guatemala Cityn keskustassa.",
+     "leveys": 1632,
+     "korkeus": 1232,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Bibliotecha nacional - panoramio.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bibliotecha_nacional_-_panoramio.jpg?width=1280",
+     "tekija": "Patrick Boomer",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bibliotecha_nacional_-_panoramio.jpg",
+     "selite": "Kansalliskirjaston julkisivua koristaa veistoksellinen reliefi.",
+     "leveys": 2592,
+     "korkeus": 1944,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2909156",
+   "nimi": "Popol Vuh -museo",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": 14.62472,
+   "lon": -90.53278,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Museo Popol Vuh 3.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Museo_Popol_Vuh_3.jpg?width=1280",
+     "tekija": "Freddy eduardo",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Museo_Popol_Vuh_3.jpg",
+     "selite": "Popol Vuh -museon pienoismalli esittelee mayakaupungin pyramidit.",
+     "leveys": 4080,
+     "korkeus": 3072,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Museo Popol Vuh - Guatemala 2014 02.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Museo_Popol_Vuh_-_Guatemala_2014_02.jpg?width=1280",
+     "tekija": "Andrea_GR",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Museo_Popol_Vuh_-_Guatemala_2014_02.jpg",
+     "selite": "Museon kokoelmiin kuuluvat mayojen koristeelliset keramiikka-astiat.",
+     "leveys": 1920,
+     "korkeus": 2560,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Catedral Metropolitana - Guatemala City - Air View.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Catedral_Metropolitana_-_Guatemala_City_-_Air_View.jpg?width=1280",
+   "tekija": "Toby Argüelles",
+   "lisenssi": "CC BY-SA 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Catedral_Metropolitana_-_Guatemala_City_-_Air_View.jpg",
+   "selite": "Katedraali ja keskustan korttelit näkyvät ilmasta Guatemala Cityssä.",
+   "leveys": 3992,
+   "korkeus": 2242,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "200904-volcanes-luna.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/200904-volcanes-luna.jpg?width=1280",
+   "tekija": "Luisfi",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:200904-volcanes-luna.jpg",
+   "selite": "Guatemala Cityn tornitalojen takaa kohoavat tulivuoret.",
+   "leveys": 4608,
+   "korkeus": 3456,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

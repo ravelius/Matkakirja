@@ -1,0 +1,539 @@
+{
+ "kaupunki": "alicesprings",
+ "kaupunkiQ": "Q17872",
+ "kohteet": [
+  {
+   "q": "Q33910",
+   "nimi": "Uluru",
+   "peruste": "sitelinks",
+   "koko_m": 3500,
+   "lat": -25.345,
+   "lon": 131.03611,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Sunset at Uluru on July 30, 2005.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sunset_at_Uluru_on_July_30%2C_2005.jpg?width=1280",
+     "tekija": "Thomas Schoch",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Sunset_at_Uluru_on_July_30%2C_2005.jpg",
+     "selite": "Uluru hehkuu auringonlaskussa oranssinpunaisena keskellä tasaista aavikkoa.",
+     "leveys": 1561,
+     "korkeus": 1171,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "094 Ayers Rock at dawn, July 1976 (51753208805).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/094_Ayers_Rock_at_dawn%2C_July_1976_(51753208805).jpg?width=1280",
+     "tekija": "wilford peloquin",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:094_Ayers_Rock_at_dawn%2C_July_1976_(51753208805).jpg",
+     "selite": "Aamuvalossa kalliomonoliitti kohoaa pensaikon ja kuivan ruohon yläpuolelle.",
+     "leveys": 2560,
+     "korkeus": 1920,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "14. Uluru at dawn.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/14._Uluru_at_dawn.jpg?width=1280",
+     "tekija": "BriMiDra",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:14._Uluru_at_dawn.jpg",
+     "selite": "Kallion pinnan syvät urat ja kolot ovat anangu-kansan pyhiä paikkoja.",
+     "leveys": 2048,
+     "korkeus": 1536,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 4,
+     "tiedosto": "106 Ayers Rock, July 1976 (51753208715).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/106_Ayers_Rock%2C_July_1976_(51753208715).jpg?width=1280",
+     "tekija": "wilford peloquin",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:106_Ayers_Rock%2C_July_1976_(51753208715).jpg",
+     "selite": "Kallion tumma kylki nousee jyrkkänä seinänä aavikon puiden takaa.",
+     "leveys": 2560,
+     "korkeus": 1920,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q279980",
+   "nimi": "Kata Tjuta",
+   "peruste": "sitelinks",
+   "koko_m": 8000,
+   "lat": -25.3,
+   "lon": 130.7593,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "01-valley-of-the-wind-walk-olgas-kata-tjuta-australia.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/01-valley-of-the-wind-walk-olgas-kata-tjuta-australia.JPG?width=1280",
+     "tekija": "HjalmarGerbig",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:01-valley-of-the-wind-walk-olgas-kata-tjuta-australia.JPG",
+     "selite": "Valley of the Winds -vaellus kulkee punaisten kupolien lomitse Kata Tjutassa.",
+     "leveys": 1920,
+     "korkeus": 1080,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Aerial View of Kata Tjuta - 2013.04 - panoramio.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aerial_View_of_Kata_Tjuta_-_2013.04_-_panoramio.jpg?width=1280",
+     "tekija": "rheins",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aerial_View_of_Kata_Tjuta_-_2013.04_-_panoramio.jpg",
+     "selite": "Ilmasta Kata Tjutan kupolit erottuvat aavikon tasangolla kauas Ulurun länsipuolella.",
+     "leveys": 3252,
+     "korkeus": 2437,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "ApproachToKataJuta.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/ApproachToKataJuta.jpg?width=1280",
+     "tekija": "Arlen Heginbotham aka Arlen66 (talk) (Uploads)",
+     "lisenssi": "CC BY 2.5",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.5",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:ApproachToKataJuta.jpg",
+     "selite": "Tie kulkee suoraan kohti Kata Tjutan punaisia kupolikallioita.",
+     "leveys": 3000,
+     "korkeus": 960,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1742132",
+   "nimi": "Kings Canyon",
+   "peruste": "pelin nosto",
+   "koko_m": 1500,
+   "lat": -24.258,
+   "lon": 131.563,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Kingscanyongorge.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kingscanyongorge.jpg?width=1280",
+     "tekija": "Vinci Liu at English Wikipedia",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kingscanyongorge.jpg",
+     "selite": "Kings Canyonin jyrkät punaiset hiekkakivirinteet kohoavat rotkon molemmin puolin.",
+     "leveys": 2560,
+     "korkeus": 1920,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Kings Canyon NT view.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kings_Canyon_NT_view.jpg?width=1280",
+     "tekija": "Zoharby",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kings_Canyon_NT_view.jpg",
+     "selite": "Rotkon reunalta näkee sadan metrin pystysuoran seinämän ja aavikon horisontin.",
+     "leveys": 2540,
+     "korkeus": 1896,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Kingscanyondomes.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kingscanyondomes.jpg?width=1280",
+     "tekija": "Vinci Liu at English Wikipedia",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kingscanyondomes.jpg",
+     "selite": "Tasangon pinnalla kuvioitu hiekkakiven kupolimaisema tunnetaan nimellä Lost City.",
+     "leveys": 2560,
+     "korkeus": 1920,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1475441",
+   "nimi": "MacDonnell Ranges",
+   "peruste": "sitelinks",
+   "koko_m": 5000,
+   "lat": -23.69972,
+   "lon": 132.5,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "GlenHelenGorge NorthernTerritory Panorama.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/GlenHelenGorge_NorthernTerritory_Panorama.jpg?width=1280",
+     "tekija": "Toby Hudson",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:GlenHelenGorge_NorthernTerritory_Panorama.jpg",
+     "selite": "Glen Helen Gorgen punainen kallioseinämä kohoaa Finke-joen mutkan yläpuolelle.",
+     "leveys": 10609,
+     "korkeus": 2340,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "CSIRO ScienceImage 1217 Aerial view of Central Australian landscape.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/CSIRO_ScienceImage_1217_Aerial_view_of_Central_Australian_landscape.jpg?width=1280",
+     "tekija": "Robert Kerton, CSIRO",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:CSIRO_ScienceImage_1217_Aerial_view_of_Central_Australian_landscape.jpg",
+     "selite": "Ilmasta vuorijono näkyy taittuvina harjanteina kuivan laakson molemmin puolin.",
+     "leveys": 2657,
+     "korkeus": 1745,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "CSIRO ScienceImage 1744 Central Australian Waterhole.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/CSIRO_ScienceImage_1744_Central_Australian_Waterhole.jpg?width=1280",
+     "tekija": "Robert Kerton, CSIRO",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:CSIRO_ScienceImage_1744_Central_Australian_Waterhole.jpg",
+     "selite": "Pysyvä vesiallas ja jättiläiseukalyptukset ovat aavikon harvinaisia keitaita.",
+     "leveys": 2657,
+     "korkeus": 1745,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q584201",
+   "nimi": "Amadeuksenjärvi",
+   "peruste": "sitelinks",
+   "koko_m": 8000,
+   "lat": -24.75,
+   "lon": 130.91667,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Lake Amadeus from fixed wing aircraft.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lake_Amadeus_from_fixed_wing_aircraft.jpg?width=1280",
+     "tekija": "Hopeontheriver",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Lake_Amadeus_from_fixed_wing_aircraft.jpg",
+     "selite": "Ilmasta suolajärven valkea pinta ja sen keskellä oleva saarekas näkyvät kauas aavikolle.",
+     "leveys": 1280,
+     "korkeus": 853,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Lake Amadeus ESA345627.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lake_Amadeus_ESA345627.jpg?width=1280",
+     "tekija": "European Space Agency",
+     "lisenssi": "CC BY-SA 3.0 igo",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/igo/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Lake_Amadeus_ESA345627.jpg",
+     "selite": "Avaruudesta kuivan järven suolasaarekkeet erottuvat punaisella aavikolla.",
+     "leveys": 1680,
+     "korkeus": 1188,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1417383",
+   "nimi": "Finke-joki",
+   "peruste": "sitelinks",
+   "koko_m": 2000,
+   "lat": -24.14432,
+   "lon": 132.87243,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Finke River.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Finke_River.jpg?width=1280",
+     "tekija": "Menphrad",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Finke_River.jpg",
+     "selite": "Finke-joen hiekkainen uoma on suurimman osan vuodesta lähes kuiva, ja se kuuluu maailman vanhimpiin jokiin.",
+     "leveys": 2646,
+     "korkeus": 1736,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Finke River Gorge - panoramio.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Finke_River_Gorge_-_panoramio.jpg?width=1280",
+     "tekija": "Eric Spenle",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Finke_River_Gorge_-_panoramio.jpg",
+     "selite": "Joki on uurtanut kapean laakson punaisten kallioiden väliin Palm Valleyn suuntaan.",
+     "leveys": 1300,
+     "korkeus": 867,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q17964",
+   "nimi": "Hermannsburg",
+   "peruste": "pelin nosto",
+   "koko_m": 600,
+   "lat": -23.9431,
+   "lon": 132.778,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Bethlehem Lutheran Church Hermannsburg.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bethlehem_Lutheran_Church_Hermannsburg.jpg?width=1280",
+     "tekija": "WikiWookie",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bethlehem_Lutheran_Church_Hermannsburg.jpg",
+     "selite": "Hermannsburgin lähetysasemalla seisoo punakivinen luterilainen kirkko tähtineen.",
+     "leveys": 2048,
+     "korkeus": 1536,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "48. Old Colonists House, Hermannsburg.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/48._Old_Colonists_House%2C_Hermannsburg.jpg?width=1280",
+     "tekija": "BriMiDra",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:48._Old_Colonists_House%2C_Hermannsburg.jpg",
+     "selite": "Valkoiseksi kalkitut vanhat lähetysaseman talot kuuluvat historialliseen alueeseen.",
+     "leveys": 1600,
+     "korkeus": 1200,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "46. Strehlows House, Hermannsburg.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/46._Strehlows_House%2C_Hermannsburg.jpg?width=1280",
+     "tekija": "BriMiDra",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:46._Strehlows_House%2C_Hermannsburg.jpg",
+     "selite": "Strehlowin talon veranta ja puuaita ovat osa Hermannsburgin 1800-luvun lähetysasemaa.",
+     "leveys": 1600,
+     "korkeus": 1200,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1373400",
+   "nimi": "Alice Springsin lennätinasema",
+   "peruste": "pelin nosto",
+   "koko_m": 250,
+   "lat": -23.672,
+   "lon": 133.888,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Alice Springs Telegraph Station, 2015 (08).JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Alice_Springs_Telegraph_Station%2C_2015_(08).JPG?width=1280",
+     "tekija": "Bahnfrend",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Alice_Springs_Telegraph_Station%2C_2015_(08).JPG",
+     "selite": "Kivinen lennätinasema Todd-joen varrella oli kaupungin alkuperäinen asutus 1870-luvulla.",
+     "leveys": 3968,
+     "korkeus": 2232,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Alice Springs Telegraph Station 3.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Alice_Springs_Telegraph_Station_3.jpg?width=1280",
+     "tekija": "Reinhard Dietrich",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Alice_Springs_Telegraph_Station_3.jpg",
+     "selite": "Aseman rakennukset ja nurmikko on kunnostettu museoksi.",
+     "leveys": 2592,
+     "korkeus": 1944,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Alice Springs Telegraph Station 8.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Alice_Springs_Telegraph_Station_8.jpg?width=1280",
+     "tekija": "Reinhard Dietrich",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Alice_Springs_Telegraph_Station_8.jpg",
+     "selite": "Vanha vankkuri ja lennätinpylväs muistuttavat Australian halki kulkeneesta lennätinlinjasta.",
+     "leveys": 2592,
+     "korkeus": 1944,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q19870735",
+   "nimi": "ANZAC Hill",
+   "peruste": "pelin nosto",
+   "koko_m": 300,
+   "lat": -23.69421,
+   "lon": 133.88191,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Anzac Hill, 2015 (01).JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Anzac_Hill%2C_2015_(01).JPG?width=1280",
+     "tekija": "Bahnfrend",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Anzac_Hill%2C_2015_(01).JPG",
+     "selite": "ANZAC Hillin huipulla seisoo sotamuistomerkki ja liput Alice Springsin yllä.",
+     "leveys": 3648,
+     "korkeus": 2736,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Alice Springs, early 1940s from Anzac Hill looking towards Heavitree Gap.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Alice_Springs%2C_early_1940s_from_Anzac_Hill_looking_towards_Heavitree_Gap.jpg?width=1280",
+     "tekija": "Donald and Isabel Dowling",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Alice_Springs%2C_early_1940s_from_Anzac_Hill_looking_towards_Heavitree_Gap.jpg",
+     "selite": "Sodan aikainen Alice Springs oli pieni kylä Heavitree Gapin harjanteen edessä.",
+     "leveys": 5334,
+     "korkeus": 3508,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q4726107",
+   "nimi": "Alice Springsin rautatieasema",
+   "peruste": "pelin nosto",
+   "koko_m": 250,
+   "lat": -23.6967,
+   "lon": 133.874,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Alice Springs railway station, October 2025 03.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Alice_Springs_railway_station%2C_October_2025_03.jpg?width=1280",
+     "tekija": "DaHuzyBru",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Alice_Springs_railway_station%2C_October_2025_03.jpg",
+     "selite": "Asemarakennuksen leveä katos ja punainen opaste palvelevat The Ghan -pitkänmatkajunaa.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Alice Springs railway station, October 2025 04.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Alice_Springs_railway_station%2C_October_2025_04.jpg?width=1280",
+     "tekija": "DaHuzyBru",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Alice_Springs_railway_station%2C_October_2025_04.jpg",
+     "selite": "Laiturin katoksen alla odottavat matkustajat Australian halki kulkevaa junaa.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q4726098",
+   "nimi": "Alice Springsin kaupunginkirjasto",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": -23.70161,
+   "lon": 133.88294,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Alice Springs Public Library.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Alice_Springs_Public_Library.jpg?width=1280",
+     "tekija": "Tenniscourtisland",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Alice_Springs_Public_Library.jpg",
+     "selite": "Kaupunginkirjaston punatiilinen rakennus seisoo puiden varjossa keskustassa.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "ASPL exterior mural (i) 02.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/ASPL_exterior_mural_(i)_02.jpg?width=1280",
+     "tekija": "Alice Springs Public Library",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:ASPL_exterior_mural_(i)_02.jpg",
+     "selite": "Rakennuksen seinää koristaa keskisen Australian maisemaa esittävä seinämaalaus.",
+     "leveys": 2048,
+     "korkeus": 1365,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Alice Springs(GN05684).jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Alice_Springs(GN05684).jpg?width=1280",
+   "tekija": "Captain Frank Hurley",
+   "lisenssi": "CC0",
+   "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Alice_Springs(GN05684).jpg",
+   "selite": "Vanhalla kuvalla Alice Springs levittäytyy matalana MacDonnell Rangesin harjanteen juurelle.",
+   "leveys": 3264,
+   "korkeus": 2448,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Alice Springs - Anzac Hill - panoramio.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Alice_Springs_-_Anzac_Hill_-_panoramio.jpg?width=1280",
+   "tekija": "Pavel Špindler",
+   "lisenssi": "CC BY 3.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Alice_Springs_-_Anzac_Hill_-_panoramio.jpg",
+   "selite": "ANZAC Hillin laelta näkee kaupungin matalat talot ja taustalla vuorijonon.",
+   "leveys": 2592,
+   "korkeus": 1944,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": [
+  {
+   "q": "Q262120",
+   "nimi": "Olive Pinkin kasvitieteellinen puutarha",
+   "peruste": "pelin nosto",
+   "lat": -23.7064,
+   "lon": 133.885,
+   "syy": "Commonsissa vain opastaulukuvia, ei kelvollista näkymää"
+  },
+  {
+   "q": "Q72151744",
+   "nimi": "Stuart Town Gaol",
+   "peruste": "pelin nosto",
+   "lat": -23.69809,
+   "lon": 133.88125,
+   "syy": "ei vapaata kuvaa Commonsissa"
+  }
+ ]
+}

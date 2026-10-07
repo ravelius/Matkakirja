@@ -1,0 +1,630 @@
+{
+ "kaupunki": "lima",
+ "kaupunkiQ": "Q2868",
+ "kohteet": [
+  {
+   "q": "Q3320442",
+   "nimi": "Liman historiallinen keskusta",
+   "peruste": "UNESCO",
+   "koko_m": 900,
+   "lat": -12.05139,
+   "lon": -77.04306,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Vista aérea del Centro de Lima en la cuarentena 2020.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Vista_a%C3%A9rea_del_Centro_de_Lima_en_la_cuarentena_2020.jpg?width=1280",
+     "tekija": "MINISTERIO DE DEFENSA DEL PERÚ",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Vista_a%C3%A9rea_del_Centro_de_Lima_en_la_cuarentena_2020.jpg",
+     "selite": "Ilmasta näkyy Plaza Mayor ja sen ympärille ruutukaavaan rakennettu Liman vanha keskusta.",
+     "leveys": 5180,
+     "korkeus": 3453,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Historic Center of Lima - 54548281854.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Historic_Center_of_Lima_-_54548281854.jpg?width=1280",
+     "tekija": "xiquinhosilva",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Historic_Center_of_Lima_-_54548281854.jpg",
+     "selite": "Liman historiallinen keskusta on Unescon maailmanperintökohde, jonka sydän on Plaza Mayor ja sen katedraali.",
+     "leveys": 3000,
+     "korkeus": 2000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Historic Center of Lima - 54548441955.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Historic_Center_of_Lima_-_54548441955.jpg?width=1280",
+     "tekija": "xiquinhosilva",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Historic_Center_of_Lima_-_54548441955.jpg",
+     "selite": "Plaza Mayorin reunalla seisovat palatsit on koristeltu perinteisillä puisilla parvekkeilla.",
+     "leveys": 3000,
+     "korkeus": 2000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 4,
+     "tiedosto": "Plaza de Armas, Lima.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Plaza_de_Armas%2C_Lima.jpg?width=1280",
+     "tekija": "Art DiNo from Lima, Perú",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Plaza_de_Armas%2C_Lima.jpg",
+     "selite": "Aukion laidalla odottavat hevosvaunut, joilla kierretään vanhan kaupungin katuja.",
+     "leveys": 3072,
+     "korkeus": 2048,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2536763",
+   "nimi": "Plaza Mayor",
+   "peruste": "sitelinks",
+   "koko_m": 200,
+   "lat": -12.04596,
+   "lon": -77.03054,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Historic Center of Lima - 54547223542.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Historic_Center_of_Lima_-_54547223542.jpg?width=1280",
+     "tekija": "xiquinhosilva",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Historic_Center_of_Lima_-_54547223542.jpg",
+     "selite": "Plaza Mayor on Liman perustamisaukio, jota reunustavat arkkipiispan palatsi ja katedraali.",
+     "leveys": 3000,
+     "korkeus": 2000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Historic Center of Lima - 54548098431.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Historic_Center_of_Lima_-_54548098431.jpg?width=1280",
+     "tekija": "xiquinhosilva",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Historic_Center_of_Lima_-_54548098431.jpg",
+     "selite": "Aukion laidalla seisova keltainen kaupungintalo on koristeltu puisilla parvekkeilla.",
+     "leveys": 3000,
+     "korkeus": 2000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Lima centro Plaza 36.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lima_centro_Plaza_36.jpg?width=1280",
+     "tekija": "Rodolfo pimentel",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Lima_centro_Plaza_36.jpg",
+     "selite": "Aukion keskellä on palmuja ja kukkapenkkejä.",
+     "leveys": 3600,
+     "korkeus": 2392,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2446793",
+   "nimi": "Liman katedraali",
+   "peruste": "sitelinks",
+   "koko_m": 120,
+   "lat": -12.04647,
+   "lon": -77.03004,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Fachada principal de la Catedral de Lima.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Fachada_principal_de_la_Catedral_de_Lima.jpg?width=1280",
+     "tekija": "Wasiwatana",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Fachada_principal_de_la_Catedral_de_Lima.jpg",
+     "selite": "Liman katedraali kohoaa Plaza Mayorin laidalla, ja sen vieressä lepää Francisco Pizarro.",
+     "leveys": 2592,
+     "korkeus": 1944,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Catedral de Lima durante la noche de Jueves Santo.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Catedral_de_Lima_durante_la_noche_de_Jueves_Santo.jpg?width=1280",
+     "tekija": "Bhonyx07",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Catedral_de_Lima_durante_la_noche_de_Jueves_Santo.jpg",
+     "selite": "Illalla valaistu julkisivu hehkuu oranssina Plaza Mayorin yllä.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q385938",
+   "nimi": "Hallituksen linna",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": -12.04514,
+   "lon": -77.02989,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Palacio de Gobierno del Perú 2017.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Palacio_de_Gobierno_del_Per%C3%BA_2017.jpg?width=1280",
+     "tekija": "User:Pedro Felipe",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Palacio_de_Gobierno_del_Per%C3%BA_2017.jpg",
+     "selite": "Hallituksen linna on Perun presidentin virka-asunto, ja sen julkisivu katsoo Plaza Mayorille.",
+     "leveys": 4924,
+     "korkeus": 3044,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1026229",
+   "nimi": "Miraflores",
+   "peruste": "sitelinks",
+   "koko_m": 900,
+   "lat": -12.12091,
+   "lon": -77.02893,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Miraflores Lima Peru skyline.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Miraflores_Lima_Peru_skyline.jpg?width=1280",
+     "tekija": "Mira4espina78y",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Miraflores_Lima_Peru_skyline.jpg",
+     "selite": "Miraflores on Liman hienostokaupunginosa, jonka korkeat talot nousevat Tyynenmeren jyrkän rantatörmän reunalla.",
+     "leveys": 2048,
+     "korkeus": 1152,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Cliffs at Miraflores, Lima.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cliffs_at_Miraflores%2C_Lima.jpg?width=1280",
+     "tekija": "David Bush",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cliffs_at_Miraflores%2C_Lima.jpg",
+     "selite": "Rantatörmän alla kulkee kaupunkimoottoritie ja kapea rantakaista.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Comunal Coworking, Lima, Peru (Unsplash 4YAhiaZkUfs).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Comunal_Coworking%2C_Lima%2C_Peru_(Unsplash_4YAhiaZkUfs).jpg?width=1280",
+     "tekija": "Dan Gold danielcgold",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Comunal_Coworking%2C_Lima%2C_Peru_(Unsplash_4YAhiaZkUfs).jpg",
+     "selite": "Ilmasta näkyy kaupunginosan tiivis rakennuskanta ja puistoalueet.",
+     "leveys": 6000,
+     "korkeus": 3376,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1954240",
+   "nimi": "Larcon museo",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": -12.0725,
+   "lon": -77.07086,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Lima museo larco.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lima_museo_larco.jpg?width=1280",
+     "tekija": "Velvet",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Lima_museo_larco.jpg",
+     "selite": "Larcon museo esittelee esikolumbiaanista taidetta valkoisessa siirtomaa-ajan kartanossa.",
+     "leveys": 3602,
+     "korkeus": 1688,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Larco Museum, Lima, Peru.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Larco_Museum%2C_Lima%2C_Peru.jpg?width=1280",
+     "tekija": "BrunoLocatelli",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Larco_Museum%2C_Lima%2C_Peru.jpg",
+     "selite": "Museon varastosalissa on tuhansia keramiikkaesineitä hyllyillä.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Lima, Peru…Museo Larco (8443270949).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lima%2C_Peru%E2%80%A6Museo_Larco_(8443270949).jpg?width=1280",
+     "tekija": "Murray Foubister",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Lima%2C_Peru%E2%80%A6Museo_Larco_(8443270949).jpg",
+     "selite": "Museon puutarha on täynnä trooppisia kasveja.",
+     "leveys": 2121,
+     "korkeus": 1414,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3294506",
+   "nimi": "Plaza San Martín",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": -12.0515,
+   "lon": -77.0345,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Plaza San Martín, Lima Peru.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Plaza_San_Mart%C3%ADn%2C_Lima_Peru.jpg?width=1280",
+     "tekija": "Ministerio de Defensa del Perú",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Plaza_San_Mart%C3%ADn%2C_Lima_Peru.jpg",
+     "selite": "Plaza San Martín on keskustan suuri, puistomainen aukio, jota reunustavat 1900-luvun alun rakennukset.",
+     "leveys": 3110,
+     "korkeus": 2074,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "2017 Lima - Monumento ecuestre - Plaza San Martín.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2017_Lima_-_Monumento_ecuestre_-_Plaza_San_Mart%C3%ADn.jpg?width=1280",
+     "tekija": "Felipe Restrpo Acosta",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2017_Lima_-_Monumento_ecuestre_-_Plaza_San_Mart%C3%ADn.jpg",
+     "selite": "Aukion keskellä on kenraali San Martínin ratsastajapatsas.",
+     "leveys": 4928,
+     "korkeus": 3696,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "2017 Lima - La Avenida Nicolás de Piérola desde la plaza San Martín.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2017_Lima_-_La_Avenida_Nicol%C3%A1s_de_Pi%C3%A9rola_desde_la_plaza_San_Mart%C3%ADn.jpg?width=1280",
+     "tekija": "Felipe Restrpo Acosta",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2017_Lima_-_La_Avenida_Nicol%C3%A1s_de_Pi%C3%A9rola_desde_la_plaza_San_Mart%C3%ADn.jpg",
+     "selite": "Aukiolta alkaa Avenida Nicolás de Piérola, joka johtaa kohti vanhaa keskustaa.",
+     "leveys": 4954,
+     "korkeus": 3429,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2404214",
+   "nimi": "San Franciscon luostari",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": -12.0455,
+   "lon": -77.02739,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Iglesia de San Francisco, Lima, Perú, 2015-07-28, DD 70.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Iglesia_de_San_Francisco%2C_Lima%2C_Per%C3%BA%2C_2015-07-28%2C_DD_70.jpg?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Iglesia_de_San_Francisco%2C_Lima%2C_Per%C3%BA%2C_2015-07-28%2C_DD_70.jpg",
+     "selite": "San Franciscon luostarin barokkijulkisivu ja keltainen luostarirakennus ovat osa Liman historiallista keskustaa.",
+     "leveys": 6625,
+     "korkeus": 4242,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2506000",
+   "nimi": "Torre Taglen palatsi",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": -12.0486,
+   "lon": -77.02943,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Casa de Torre Tagle.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Casa_de_Torre_Tagle.jpg?width=1280",
+     "tekija": "Freddiearomerop",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Casa_de_Torre_Tagle.jpg",
+     "selite": "Torre Taglen palatsi on 1700-luvun aatelispalatsi, jonka julkisivua koristavat puiset parvekkeet.",
+     "leveys": 3072,
+     "korkeus": 1456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Palacio de Torre Tagle Lima, Peru.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Palacio_de_Torre_Tagle_Lima%2C_Peru.jpg?width=1280",
+     "tekija": "Miguel Francisco Rueda Ñañez",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Palacio_de_Torre_Tagle_Lima%2C_Peru.jpg",
+     "selite": "Parvekkeiden hienosti veistetty puutyö kuuluu Liman siirtomaa-ajan tunnusmerkkeihin.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Palacio de Torre Tagle 2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Palacio_de_Torre_Tagle_2.jpg?width=1280",
+     "tekija": "Juan José Pacheco Ibarra",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Palacio_de_Torre_Tagle_2.jpg",
+     "selite": "Palatsin vaaleanpunainen julkisivu ja tummat parvekkeet erottuvat vanhan kaupungin kujalla.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q6121562",
+   "nimi": "Santa Rosan pyhäkkö",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": -12.04247,
+   "lon": -77.03525,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Iglesia Santa Rosa, Lima, Perú, 2015-07-28, DD 08.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Iglesia_Santa_Rosa%2C_Lima%2C_Per%C3%BA%2C_2015-07-28%2C_DD_08.JPG?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Iglesia_Santa_Rosa%2C_Lima%2C_Per%C3%BA%2C_2015-07-28%2C_DD_08.JPG",
+     "selite": "Santa Rosa de Liman pyhäkkö on punaiseksi maalattu kirkko, joka on omistettu Amerikan ensimmäiselle pyhimykselle.",
+     "leveys": 6405,
+     "korkeus": 4846,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Lima centro Iglesia 43.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lima_centro_Iglesia_43.jpg?width=1280",
+     "tekija": "Rodolfo pimentel",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Lima_centro_Iglesia_43.jpg",
+     "selite": "Kirkon takana kohoaa pitkä punainen tiilimuuri ja puisto.",
+     "leveys": 3600,
+     "korkeus": 2392,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Iglesia Santa Rosaaaaaa.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Iglesia_Santa_Rosaaaaaa.jpg?width=1280",
+     "tekija": "Gatodemichi",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Iglesia_Santa_Rosaaaaaa.jpg",
+     "selite": "Kaksi tornia ja koristeellinen julkisivu erottuvat kaupunkikuvassa.",
+     "leveys": 3264,
+     "korkeus": 2448,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q5201102",
+   "nimi": "Casa de Osambela",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": -12.0439,
+   "lon": -77.0326,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Casa de Osambela - Lima (Peru).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Casa_de_Osambela_-_Lima_(Peru).jpg?width=1280",
+     "tekija": "Christian Bellazzi",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Casa_de_Osambela_-_Lima_(Peru).jpg",
+     "selite": "Casa de Osambela on sinertävä 1800-luvun alun kaupunkipalatsi, jota koristavat puiset parvekkeet.",
+     "leveys": 1920,
+     "korkeus": 1280,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "BalconesCasaOsambela.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/BalconesCasaOsambela.JPG?width=1280",
+     "tekija": "Guillermo Arévalo Aucahuasi",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:BalconesCasaOsambela.JPG",
+     "selite": "Parvekkeiden hienosti veistetyt jalat ja ristikot ovat Liman kaupunkikuvan erikoisuus.",
+     "leveys": 2304,
+     "korkeus": 1536,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Casa Osambela.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Casa_Osambela.jpg?width=1280",
+     "tekija": "Estuardo02",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Casa_Osambela.jpg",
+     "selite": "Talon portti ja koristeet ovat neoklassista tyyliä.",
+     "leveys": 3264,
+     "korkeus": 2448,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q5075650",
+   "nimi": "Inkvisition museo",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": -12.048,
+   "lon": -77.02636,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "The Spanish Inquisition.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/The_Spanish_Inquisition.jpg?width=1280",
+     "tekija": "Phil Whitehouse",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:The_Spanish_Inquisition.jpg",
+     "selite": "Inkvisition museo toimii entisessä Pyhän virkatoimen rakennuksessa, jossa nykyään on myös kongressin museo.",
+     "leveys": 2048,
+     "korkeus": 1536,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "MuseoInquisición2.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/MuseoInquisici%C3%B3n2.JPG?width=1280",
+     "tekija": "Jofrigerio",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:MuseoInquisici%C3%B3n2.JPG",
+     "selite": "Museon kellarissa on esillä vanhoja kuulustelun ja rangaistuksen välineitä.",
+     "leveys": 2048,
+     "korkeus": 1536,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1369495",
+   "nimi": "Perun kansallisstadion",
+   "peruste": "sitelinks",
+   "koko_m": 300,
+   "lat": -12.06714,
+   "lon": -77.03372,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Vista aérea del estadio nacional del Perú (2021).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Vista_a%C3%A9rea_del_estadio_nacional_del_Per%C3%BA_(2021).jpg?width=1280",
+     "tekija": "Ministerio de Defensa del Perú",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Vista_a%C3%A9rea_del_estadio_nacional_del_Per%C3%BA_(2021).jpg",
+     "selite": "Perun kansallisstadion on maan suurin jalkapallostadion Liman keskustassa.",
+     "leveys": 5163,
+     "korkeus": 3442,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Estadio Nacional de Lima, Peru 00.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Estadio_Nacional_de_Lima%2C_Peru_00.jpg?width=1280",
+     "tekija": "Avodrocc",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Estadio_Nacional_de_Lima%2C_Peru_00.jpg",
+     "selite": "Stadionin edessä on suihkulähteillä koristeltu puisto.",
+     "leveys": 4928,
+     "korkeus": 3264,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Estadio Nacional de Lima, Peru..jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Estadio_Nacional_de_Lima%2C_Peru..jpg?width=1280",
+     "tekija": "Avodrocc",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Estadio_Nacional_de_Lima%2C_Peru..jpg",
+     "selite": "Stadionin ympärillä kohoaa Liman tiivis kaupunki.",
+     "leveys": 4880,
+     "korkeus": 3190,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2901492",
+   "nimi": "Perun kansalliskirjasto",
+   "peruste": "sitelinks",
+   "koko_m": 120,
+   "lat": -12.0502,
+   "lon": -77.0281,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Biblioteca nacional del Peru cropped.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Biblioteca_nacional_del_Peru_cropped.jpg?width=1280",
+     "tekija": "Biblioteca_nacional_del_Peru.JPG: *derivative work: Xauxa (talk)",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Biblioteca_nacional_del_Peru_cropped.jpg",
+     "selite": "Perun kansalliskirjasto säilyttää maan julkaisut ja asiakirja-aineistoa modernissa rakennuksessa.",
+     "leveys": 2502,
+     "korkeus": 824,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Vista aérea de Lima en 2020.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Vista_a%C3%A9rea_de_Lima_en_2020.jpg?width=1280",
+   "tekija": "MINISTERIO DE DEFENSA DEL PERÚ",
+   "lisenssi": "CC BY 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Vista_a%C3%A9rea_de_Lima_en_2020.jpg",
+   "selite": "Lima on Tyynenmeren autiomaarannikolle levittäytynyt miljoonakaupunki, jossa harmaa sumu peittää usein taivaan.",
+   "leveys": 5472,
+   "korkeus": 3648,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Vista aérea del malecón de Miraflores 2017.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Vista_a%C3%A9rea_del_malec%C3%B3n_de_Miraflores_2017.jpg?width=1280",
+   "tekija": "Municipalidad de Miraflores",
+   "lisenssi": "CC BY 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Vista_a%C3%A9rea_del_malec%C3%B3n_de_Miraflores_2017.jpg",
+   "selite": "Kaupungin rantatörmien juurella kulkee Costa Verde -rantatie ja Tyynenmeren hiekkaranta.",
+   "leveys": 2496,
+   "korkeus": 1400,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

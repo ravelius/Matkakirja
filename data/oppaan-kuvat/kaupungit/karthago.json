@@ -1,0 +1,447 @@
+{
+ "kaupunki": "karthago",
+ "kaupunkiQ": "Q6343",
+ "kohteet": [
+  {
+   "q": "Q1018648",
+   "nimi": "Byrsan kukkula",
+   "peruste": "pelin nosto",
+   "koko_m": 300,
+   "lat": 36.85222,
+   "lon": 10.32389,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Byrsa panorama.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Byrsa_panorama.jpg?width=1280",
+     "tekija": "Asma BEN GHARBI",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Byrsa_panorama.jpg",
+     "selite": "Byrsan kukkula oli Karthagon linnakukkula, josta avautuu näkymä Tunisian lahdelle ja nykyiselle kaupungille.",
+     "leveys": 3784,
+     "korkeus": 2867,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Byrsa forum fragments.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Byrsa_forum_fragments.jpg?width=1280",
+     "tekija": "Alexandre Moreau",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Byrsa_forum_fragments.jpg",
+     "selite": "Kukkulalla näkyy roomalaisen forumin kivipaloja ja kaukana siintävä lahti.",
+     "leveys": 4310,
+     "korkeus": 2868,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Absides Byrsa.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Absides_Byrsa.jpg?width=1280",
+     "tekija": "Pradigue",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Absides_Byrsa.jpg",
+     "selite": "Kukkulan rauniot paljastavat roomalaisaikaisia rakennuksia, jotka seisovat puunilaisen kaupungin päällä.",
+     "leveys": 1280,
+     "korkeus": 960,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3523842",
+   "nimi": "Antoninuksen kylpylä",
+   "peruste": "pelin nosto",
+   "koko_m": 200,
+   "lat": 36.8543,
+   "lon": 10.3351,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Antonine Baths.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Antonine_Baths.jpg?width=1280",
+     "tekija": "Bernard Gagnon",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Antonine_Baths.jpg",
+     "selite": "Antoninuksen kylpylä oli yksi Rooman valtakunnan suurimmista kylpylöistä, ja sen pylväät kohoavat meren rannalla.",
+     "leveys": 1809,
+     "korkeus": 1341,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Antonin Baths 02.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Antonin_Baths_02.JPG?width=1280",
+     "tekija": "Emnamizouni",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Antonin_Baths_02.JPG",
+     "selite": "Kylpylän holvikaaret ja muurit ovat säilyneet maan alle jääneiden kerrosten ansiosta.",
+     "leveys": 4608,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Antonin Baths 01.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Antonin_Baths_01.JPG?width=1280",
+     "tekija": "Emnamizouni",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Antonin_Baths_01.JPG",
+     "selite": "Valtavat holvit kertovat kylpylän alkuperäisestä mittakaavasta.",
+     "leveys": 4608,
+     "korkeus": 3456,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2743152",
+   "nimi": "Puunilaiset satamat",
+   "peruste": "pelin nosto",
+   "koko_m": 600,
+   "lat": 36.8452,
+   "lon": 10.3251,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Carthage-1958-PortsPuniques.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Carthage-1958-PortsPuniques.jpg?width=1280",
+     "tekija": "Unknown authorUnknown author",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Carthage-1958-PortsPuniques.jpg",
+     "selite": "Karthagon kaksi puunilaista satamaa olivat muurien sisällä: ympyränmuotoinen sotasatama ja suorakaiteen muotoinen kauppasatama.",
+     "leveys": 2000,
+     "korkeus": 1268,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Ancien port punique de Carthage.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ancien_port_punique_de_Carthage.JPG?width=1280",
+     "tekija": "Ddk71",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ancien_port_punique_de_Carthage.JPG",
+     "selite": "Nykyään satamat ovat hiljaisia laguuneja Karthagon esikaupungin keskellä.",
+     "leveys": 3264,
+     "korkeus": 2448,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Carthage - Punic port.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Carthage_-_Punic_port.jpg?width=1280",
+     "tekija": "Neil Rickards",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Carthage_-_Punic_port.jpg",
+     "selite": "Sotasataman saaren paikalla on nykyisin puiston ympäröimä alue.",
+     "leveys": 1280,
+     "korkeus": 960,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1418492",
+   "nimi": "Saint-Louisin katedraali",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": 36.85378,
+   "lon": 10.32336,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Acropolium.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Acropolium.jpg?width=1280",
+     "tekija": "Niels Elgaard Larsen - (WT-en) Elgaard at English Wikivoyage",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Acropolium.jpg",
+     "selite": "Saint-Louisin katedraali eli Acropolium kohoaa Byrsan kukkulan huipulla, ja se rakennettiin 1800-luvun lopulla.",
+     "leveys": 2576,
+     "korkeus": 1932,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Acropolium de Carthage from far.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Acropolium_de_Carthage_from_far.jpg?width=1280",
+     "tekija": "Salaam Halila",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Acropolium_de_Carthage_from_far.jpg",
+     "selite": "Kaukaa katedraalin valkoiset kupolit erottuvat puiden lomasta.",
+     "leveys": 2048,
+     "korkeus": 1365,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Acropolium de Carthage(1).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Acropolium_de_Carthage(1).jpg?width=1280",
+     "tekija": "Sinda BF",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Acropolium_de_Carthage(1).jpg",
+     "selite": "Julkisivun kaksi tornia ja ruusuikkuna kuvastavat ranskalaista siirtomaa-ajan tyyliä.",
+     "leveys": 4608,
+     "korkeus": 3456,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q52284968",
+   "nimi": "Karthagon arkeologinen alue",
+   "peruste": "UNESCO",
+   "koko_m": 1500,
+   "lat": 36.85788,
+   "lon": 10.33084,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Archaeological Site of Carthage-130237.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Archaeological_Site_of_Carthage-130237.jpg?width=1280",
+     "tekija": "Christian Manhart",
+     "lisenssi": "CC BY-SA 3.0 igo",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/igo/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Archaeological_Site_of_Carthage-130237.jpg",
+     "selite": "Karthagon arkeologinen alue on UNESCOn maailmanperintökohde, jossa puunilaiset ja roomalaiset rauniot ovat lomittain.",
+     "leveys": 4320,
+     "korkeus": 3240,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Punic Ruins, Carthage.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Punic_Ruins%2C_Carthage.jpg?width=1280",
+     "tekija": "upyernoz",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Punic_Ruins%2C_Carthage.jpg",
+     "selite": "Puunilaisen kaupunginosan talojen perustukset ovat rinteessä Byrsan kukkulan juurella.",
+     "leveys": 1280,
+     "korkeus": 825,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2844404",
+   "nimi": "Karthagon amfiteatteri",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 36.85612,
+   "lon": 10.31508,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Amphitheatre carthage 2006.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Amphitheatre_carthage_2006.jpg?width=1280",
+     "tekija": "No machine-readable author provided. Profburp assumed (based on copyright claims).",
+     "lisenssi": "CC BY-SA 2.5",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Amphitheatre_carthage_2006.jpg",
+     "selite": "Karthagon amfiteatteri oli yksi Rooman Afrikan suurimmista, ja sen areenan alla on tekninen kellaritila.",
+     "leveys": 1744,
+     "korkeus": 1202,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Amphithéâtre romain 12.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Amphith%C3%A9%C3%A2tre_romain_12.jpg?width=1280",
+     "tekija": "Noomen9",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Amphith%C3%A9%C3%A2tre_romain_12.jpg",
+     "selite": "Männyt ja palmut kasvavat amfiteatterin raunioiden ympärillä.",
+     "leveys": 4288,
+     "korkeus": 2848,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Amphithéâtre romain 13.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Amphith%C3%A9%C3%A2tre_romain_13.jpg?width=1280",
+     "tekija": "Noomen9",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Amphith%C3%A9%C3%A2tre_romain_13.jpg",
+     "selite": "Katsomon rinteet on osittain peittänyt kasvillisuus.",
+     "leveys": 4288,
+     "korkeus": 2848,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q877391",
+   "nimi": "Sidi Bou Said",
+   "peruste": "UNESCO",
+   "koko_m": 600,
+   "lat": 36.86976,
+   "lon": 10.34101,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Sidi Bou Said, Tunisia, 19 March 2018 DSC 8004.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sidi_Bou_Said%2C_Tunisia%2C_19_March_2018_DSC_8004.jpg?width=1280",
+     "tekija": "Habib M'henni",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Sidi_Bou_Said%2C_Tunisia%2C_19_March_2018_DSC_8004.jpg",
+     "selite": "Sidi Bou Said on valkoisiin ja sinisiin talonseiniin tunnettu kylä Välimeren rinteellä.",
+     "leveys": 4634,
+     "korkeus": 3076,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3106527",
+   "nimi": "Tunisin medina",
+   "peruste": "UNESCO",
+   "koko_m": 1000,
+   "lat": 36.79903,
+   "lon": 10.17006,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Terrasses de la médina de Tunis.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Terrasses_de_la_m%C3%A9dina_de_Tunis.jpg?width=1280",
+     "tekija": "Raspail",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Terrasses_de_la_m%C3%A9dina_de_Tunis.jpg",
+     "selite": "Tunisin medina on tiiviisti rakennettu vanha kaupunki, jonka kattoterassit ulottuvat silmänkantamattomiin.",
+     "leveys": 2032,
+     "korkeus": 1354,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Le mur d'enceinte nord et le minaret de la mosquée de la casbah dans la médina - A65207S.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Le_mur_d'enceinte_nord_et_le_minaret_de_la_mosqu%C3%A9e_de_la_casbah_dans_la_m%C3%A9dina_-_A65207S.jpg?width=1280",
+     "tekija": "Gadmer Frédéric",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Le_mur_d'enceinte_nord_et_le_minaret_de_la_mosqu%C3%A9e_de_la_casbah_dans_la_m%C3%A9dina_-_A65207S.jpg",
+     "selite": "Kasbahin moskeijan minareetti kohoaa vanhan kaupungin muurien yläpuolelle.",
+     "leveys": 1519,
+     "korkeus": 2048,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1429003",
+   "nimi": "Bardon kansallismuseo",
+   "peruste": "sitelinks",
+   "koko_m": 120,
+   "lat": 36.80944,
+   "lon": 10.13444,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Tunis, Museum Bardo.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tunis%2C_Museum_Bardo.jpg?width=1280",
+     "tekija": "Herbert Frank from Wien (Vienna), AT",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tunis%2C_Museum_Bardo.jpg",
+     "selite": "Bardon museo Tunisissa kuuluu maailman suurimpiin roomalaisten mosaiikkien kokoelmiin.",
+     "leveys": 1920,
+     "korkeus": 1080,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q623425",
+   "nimi": "Zaghouanin akveduktti",
+   "peruste": "pelin nosto",
+   "koko_m": 2000,
+   "lat": 36.61606,
+   "lon": 10.13419,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Zaghouane Aqueduc.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Zaghouane_Aqueduc.JPG?width=1280",
+     "tekija": "Rais67",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Zaghouane_Aqueduc.JPG",
+     "selite": "Zaghouanin akveduktti kuljetti vettä yli sadan kilometrin matkan vuorilta Karthagoon.",
+     "leveys": 3072,
+     "korkeus": 2304,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "63 Oued ELLIL 08.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/63_Oued_ELLIL_08.JPG?width=1280",
+     "tekija": "This illustration was made by (User:Royonx) and released under the license(s) stated above. You are free to use it for any purpose as long as you credit me and follow the terms of the license. Example : © Michel Royon / Wikimedia Commons If you use this image outside of the Wikimedia projects, I would be happy to hear from you par courriel ( royonx gmail.com). Thanks ! Ce message en français",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:63_Oued_ELLIL_08.JPG",
+     "selite": "Pitkä kaarisarja ylittää viljelyalueen tasangolla Tunisin länsipuolella.",
+     "leveys": 3008,
+     "korkeus": 2000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Aqueduc de Zaghouan 12.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aqueduc_de_Zaghouan_12.jpg?width=1280",
+     "tekija": "Noomen9",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aqueduc_de_Zaghouan_12.jpg",
+     "selite": "Paksujen kaarien läpi näkyy etäisyydelle ulottuva tasanko.",
+     "leveys": 4288,
+     "korkeus": 2848,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Tunisie Carthage Ruines 12.JPG",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tunisie_Carthage_Ruines_12.JPG?width=1280",
+   "tekija": "Calips",
+   "lisenssi": "CC BY 2.5",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/2.5",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tunisie_Carthage_Ruines_12.JPG",
+   "selite": "Sypressit ja rauniot muodostavat Karthagon tunnistettavan maiseman Tunisin lahden rannalla.",
+   "leveys": 3008,
+   "korkeus": 2000,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Théâtre romain de carthage 2.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Th%C3%A9%C3%A2tre_romain_de_carthage_2.jpg?width=1280",
+   "tekija": "Noomen9",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Th%C3%A9%C3%A2tre_romain_de_carthage_2.jpg",
+   "selite": "Karthagon roomalainen teatteri on yhä käytössä kesäisin kulttuuritapahtumissa.",
+   "leveys": 6000,
+   "korkeus": 4000,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

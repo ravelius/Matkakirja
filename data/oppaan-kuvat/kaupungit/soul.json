@@ -1,0 +1,578 @@
+{
+ "kaupunki": "soul",
+ "kaupunkiQ": "Q8684",
+ "kohteet": [
+  {
+   "q": "Q482485",
+   "nimi": "Gyeongbokgung",
+   "peruste": "pelin nosto",
+   "koko_m": 700,
+   "lat": 37.57988,
+   "lon": 126.9768,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Front view of the Imperial Throne Hall Geunjeongjeon at Gyeongbokgung Palace with blue sky in Seoul.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Front_view_of_the_Imperial_Throne_Hall_Geunjeongjeon_at_Gyeongbokgung_Palace_with_blue_sky_in_Seoul.jpg?width=1280",
+     "tekija": "Basile Morin",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Front_view_of_the_Imperial_Throne_Hall_Geunjeongjeon_at_Gyeongbokgung_Palace_with_blue_sky_in_Seoul.jpg",
+     "selite": "Gyeongbokgung on Joseon-dynastian pääpalatsi ja Geunjeongjeon sen valtaistuinsali.",
+     "leveys": 6402,
+     "korkeus": 3601,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Front view of the Eastern side of the Imperial Throne Hall Geunjeongjeon at Gyeongbokgung Palace in Seoul.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Front_view_of_the_Eastern_side_of_the_Imperial_Throne_Hall_Geunjeongjeon_at_Gyeongbokgung_Palace_in_Seoul.jpg?width=1280",
+     "tekija": "Basile Morin",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Front_view_of_the_Eastern_side_of_the_Imperial_Throne_Hall_Geunjeongjeon_at_Gyeongbokgung_Palace_in_Seoul.jpg",
+     "selite": "Valtaistuinsalin kaksikerroksinen katto seisoo laajalla kivipihalla.",
+     "leveys": 6212,
+     "korkeus": 3979,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Interior view of the Geunjeongjeon Hall at Gyeongbokgung Palace in Seoul.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Interior_view_of_the_Geunjeongjeon_Hall_at_Gyeongbokgung_Palace_in_Seoul.jpg?width=1280",
+     "tekija": "Basile Morin",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Interior_view_of_the_Geunjeongjeon_Hall_at_Gyeongbokgung_Palace_in_Seoul.jpg",
+     "selite": "Salin sisällä värikäs katto ja valtaistuin ovat dancheong-maalausten koristamia.",
+     "leveys": 4977,
+     "korkeus": 3318,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 4,
+     "tiedosto": "Gyeongbokgung(palace) Geunjeongjeon(hall).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gyeongbokgung(palace)_Geunjeongjeon(hall).jpg?width=1280",
+     "tekija": "Brady Bellini",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Gyeongbokgung(palace)_Geunjeongjeon(hall).jpg",
+     "selite": "Palatsi rakennettiin 1300-luvun lopulla Joseon-kuninkaiden asuinpaikaksi.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q485034",
+   "nimi": "Gwanghwamun",
+   "peruste": "pelin nosto",
+   "koko_m": 200,
+   "lat": 37.57604,
+   "lon": 126.97702,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Gwanghwamun Gate Moonbaedo Painting 02.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gwanghwamun_Gate_Moonbaedo_Painting_02.jpg?width=1280",
+     "tekija": "Republic of Korea",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Gwanghwamun_Gate_Moonbaedo_Painting_02.jpg",
+     "selite": "Gwanghwamun on Gyeongbokgungin pääportti ja Soulin keskeinen maamerkki.",
+     "leveys": 5025,
+     "korkeus": 2828,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Gwanghwamun December 2023.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gwanghwamun_December_2023.jpg?width=1280",
+     "tekija": "Huntsmanleader",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Gwanghwamun_December_2023.jpg",
+     "selite": "Portti avautuu suurelle Gwanghwamunin aukiolle ja leveälle kadulle.",
+     "leveys": 4608,
+     "korkeus": 3456,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q490981",
+   "nimi": "Bukchonin hanok-kylä",
+   "peruste": "pelin nosto",
+   "koko_m": 300,
+   "lat": 37.58306,
+   "lon": 126.98361,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Bukchon-ro 11-gil street with hanok houses and blue sky in Bukchon Hanok Village Seoul.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bukchon-ro_11-gil_street_with_hanok_houses_and_blue_sky_in_Bukchon_Hanok_Village_Seoul.jpg?width=1280",
+     "tekija": "Basile Morin",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bukchon-ro_11-gil_street_with_hanok_houses_and_blue_sky_in_Bukchon_Hanok_Village_Seoul.jpg",
+     "selite": "Bukchonin kapeat mäkikadut kulkevat perinteisten hanok-talojen välissä.",
+     "leveys": 6288,
+     "korkeus": 4297,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Bukchon-ro 11-gil street with hanok houses at blue hour in Bukchon Hanok Village Seoul.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bukchon-ro_11-gil_street_with_hanok_houses_at_blue_hour_in_Bukchon_Hanok_Village_Seoul.jpg?width=1280",
+     "tekija": "Basile Morin",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bukchon-ro_11-gil_street_with_hanok_houses_at_blue_hour_in_Bukchon_Hanok_Village_Seoul.jpg",
+     "selite": "Hanok-talojen kaakeloidut katot ja kiviseinät luovat kylän tunnelman.",
+     "leveys": 6404,
+     "korkeus": 4269,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Traditional hanok house with wooden doors along a steeply sloping street in Bukchon Hanok Village Seoul.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Traditional_hanok_house_with_wooden_doors_along_a_steeply_sloping_street_in_Bukchon_Hanok_Village_Seoul.jpg?width=1280",
+     "tekija": "Basile Morin",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Traditional_hanok_house_with_wooden_doors_along_a_steeply_sloping_street_in_Bukchon_Hanok_Village_Seoul.jpg",
+     "selite": "Perinteinen hanok-talo on rakennettu puusta, savesta ja kivestä.",
+     "leveys": 5015,
+     "korkeus": 3761,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q477157",
+   "nimi": "Changdeokgung",
+   "peruste": "UNESCO",
+   "koko_m": 700,
+   "lat": 37.57944,
+   "lon": 126.99167,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Changdeokgung Seoul 3.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Changdeokgung_Seoul_3.jpg?width=1280",
+     "tekija": "kallerna",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Changdeokgung_Seoul_3.jpg",
+     "selite": "Changdeokgung on Unescon maailmanperintökohde, jonka pääsali on Injeongjeon.",
+     "leveys": 5110,
+     "korkeus": 3525,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Injeongjeon Hall 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Injeongjeon_Hall_01.jpg?width=1280",
+     "tekija": "Bernard Gagnon",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Injeongjeon_Hall_01.jpg",
+     "selite": "Injeongjeon-sali oli kuninkaan seremonioiden paikka.",
+     "leveys": 4962,
+     "korkeus": 3308,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q490497",
+   "nimi": "Jongmyo",
+   "peruste": "UNESCO",
+   "koko_m": 400,
+   "lat": 37.57472,
+   "lon": 126.99361,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Jongmyo-Jeongjeon.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Jongmyo-Jeongjeon.jpg?width=1280",
+     "tekija": "João Trindade",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Jongmyo-Jeongjeon.jpg",
+     "selite": "Jongmyo on Joseon-kuninkaiden esi-isien temppeli, ja pitkä Jeongjeon-sali on sen keskus.",
+     "leveys": 3648,
+     "korkeus": 2736,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Jongmyo Shrine, Seoul IMG 20160922 032238.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Jongmyo_Shrine%2C_Seoul_IMG_20160922_032238.jpg?width=1280",
+     "tekija": "G41rn8",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Jongmyo_Shrine%2C_Seoul_IMG_20160922_032238.jpg",
+     "selite": "Salin kivijalka ja punaiset pilarit muodostavat pitkän rivin.",
+     "leveys": 4160,
+     "korkeus": 3120,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q488678",
+   "nimi": "Insadong",
+   "peruste": "pelin nosto",
+   "koko_m": 200,
+   "lat": 37.573,
+   "lon": 126.986,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Seoul-Insadong-Street-01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Seoul-Insadong-Street-01.jpg?width=1280",
+     "tekija": "travelmate2021 東大策略顧問有限公司",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Seoul-Insadong-Street-01.jpg",
+     "selite": "Insadong on Soulin vanhan kaupungin katu, jossa myydään antiikkia, teetä ja käsitöitä.",
+     "leveys": 1280,
+     "korkeus": 960,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Seoul-Insadong-Ssamzie Street-01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Seoul-Insadong-Ssamzie_Street-01.jpg?width=1280",
+     "tekija": "東大策略顧問有限公司",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Seoul-Insadong-Ssamzie_Street-01.jpg",
+     "selite": "Ssamziegil on Insadongin keskeinen ostoskeskus.",
+     "leveys": 1280,
+     "korkeus": 960,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q488824",
+   "nimi": "Jogyesa",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": 37.57391,
+   "lon": 126.9819,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Lotus Lantern Festival at Jogyesa, Seoul.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lotus_Lantern_Festival_at_Jogyesa%2C_Seoul.jpg?width=1280",
+     "tekija": "Ken Eckert",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Lotus_Lantern_Festival_at_Jogyesa%2C_Seoul.jpg",
+     "selite": "Jogyesa on korealaisen sŏn-buddhalaisuuden päätemppeli Soulin keskustassa.",
+     "leveys": 2000,
+     "korkeus": 1333,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Seoul-Buddhist.temple-Jogyesa-01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Seoul-Buddhist.temple-Jogyesa-01.jpg?width=1280",
+     "tekija": "https://www.flickr.com/photos/parrhesiastes/",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Seoul-Buddhist.temple-Jogyesa-01.jpg",
+     "selite": "Temppelin piha täyttyy värikkäistä lyhdyistä Buddhan syntymäpäivän aikaan.",
+     "leveys": 3471,
+     "korkeus": 2311,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q69134",
+   "nimi": "Namsan Seoul Tower",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 37.55122,
+   "lon": 126.98828,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Seoul Aerial Shot 08.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Seoul_Aerial_Shot_08.jpg?width=1280",
+     "tekija": "Republic of Korea",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Seoul_Aerial_Shot_08.jpg",
+     "selite": "N Seoul Tower seisoo Namsan-vuoren huipulla kaupungin keskellä.",
+     "leveys": 5463,
+     "korkeus": 3624,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Namsan Tower sunset, Seoul.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Namsan_Tower_sunset%2C_Seoul.jpg?width=1280",
+     "tekija": "Rtflakfizer",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Namsan_Tower_sunset%2C_Seoul.jpg",
+     "selite": "Torni erottuu siluettina laskevan auringon edessä.",
+     "leveys": 2808,
+     "korkeus": 2098,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q495437",
+   "nimi": "Cheonggyecheon",
+   "peruste": "sitelinks",
+   "koko_m": 500,
+   "lat": 37.56902,
+   "lon": 126.97771,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Cheonggyecheon stream at sunrise with trees in Seoul.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cheonggyecheon_stream_at_sunrise_with_trees_in_Seoul.jpg?width=1280",
+     "tekija": "Basile Morin",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cheonggyecheon_stream_at_sunrise_with_trees_in_Seoul.jpg",
+     "selite": "Cheonggyecheon on kaupungin halki virtaava kunnostettu oja, jonka yllä oli ennen valtatie.",
+     "leveys": 6555,
+     "korkeus": 4370,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Cheonggyecheon stream with flowers and bridge at sunrise near Cheonggye Plaza in Seoul.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cheonggyecheon_stream_with_flowers_and_bridge_at_sunrise_near_Cheonggye_Plaza_in_Seoul.jpg?width=1280",
+     "tekija": "Basile Morin",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cheonggyecheon_stream_with_flowers_and_bridge_at_sunrise_near_Cheonggye_Plaza_in_Seoul.jpg",
+     "selite": "Oja alkaa Cheonggye-aukiolta ja kulkee pilvenpiirtäjien välissä.",
+     "leveys": 6653,
+     "korkeus": 4435,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q494895",
+   "nimi": "Lotte World Tower",
+   "peruste": "sitelinks",
+   "koko_m": 300,
+   "lat": 37.5125,
+   "lon": 127.1025,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Lotte World morning view 8.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lotte_World_morning_view_8.jpg?width=1280",
+     "tekija": "kallerna",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Lotte_World_morning_view_8.jpg",
+     "selite": "Lotte World Tower on yksi maailman korkeimmista pilvenpiirtäjistä.",
+     "leveys": 6000,
+     "korkeus": 4100,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Lotte World day view 5.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lotte_World_day_view_5.jpg?width=1280",
+     "tekija": "kallerna",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Lotte_World_day_view_5.jpg",
+     "selite": "Torni kohoaa Seokchon-järven ja huvipuiston yllä.",
+     "leveys": 8200,
+     "korkeus": 4500,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q482631",
+   "nimi": "Deoksugung",
+   "peruste": "sitelinks",
+   "koko_m": 400,
+   "lat": 37.56611,
+   "lon": 126.975,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Daehanmun of deoksugung.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Daehanmun_of_deoksugung.JPG?width=1280",
+     "tekija": "Youkseo",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Daehanmun_of_deoksugung.JPG",
+     "selite": "Daehanmun on Deoksugungin pääportti keskellä Soulin liikekeskustaa.",
+     "leveys": 2592,
+     "korkeus": 1728,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Deoksugung Daehanmun.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Deoksugung_Daehanmun.JPG?width=1280",
+     "tekija": "Lawinc82",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Deoksugung_Daehanmun.JPG",
+     "selite": "Palatsi on poikkeuksellinen: osa rakennuksista on länsimaista tyyliä.",
+     "leveys": 1600,
+     "korkeus": 1200,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q465345",
+   "nimi": "Sungnyemun",
+   "peruste": "sitelinks",
+   "koko_m": 200,
+   "lat": 37.55997,
+   "lon": 126.97531,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Sungnyemun Gate in Seoul.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sungnyemun_Gate_in_Seoul.jpg?width=1280",
+     "tekija": "Bernard Gagnon",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Sungnyemun_Gate_in_Seoul.jpg",
+     "selite": "Sungnyemun eli Namdaemun on vanhan Soulin muurin eteläinen suurportti.",
+     "leveys": 3688,
+     "korkeus": 2238,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Sungnyemun Gate, front, 2013.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sungnyemun_Gate%2C_front%2C_2013.jpg?width=1280",
+     "tekija": "DoulosCore",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Sungnyemun_Gate%2C_front%2C_2013.jpg",
+     "selite": "Portti rakennettiin uudelleen palon jälkeen vanhoin menetelmin.",
+     "leveys": 3604,
+     "korkeus": 2530,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q482852",
+   "nimi": "Changgyeonggung",
+   "peruste": "sitelinks",
+   "koko_m": 400,
+   "lat": 37.57843,
+   "lon": 126.99598,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Myeongjeongjeon seen through the wooden Gate Hyehwamun at Changgyeonggung Palace in Seoul.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Myeongjeongjeon_seen_through_the_wooden_Gate_Hyehwamun_at_Changgyeonggung_Palace_in_Seoul.jpg?width=1280",
+     "tekija": "Basile Morin",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Myeongjeongjeon_seen_through_the_wooden_Gate_Hyehwamun_at_Changgyeonggung_Palace_in_Seoul.jpg",
+     "selite": "Changgyeonggung on Soulin viiden suuren palatsin joukossa, ja Myeongjeongjeon sen pääsali.",
+     "leveys": 5221,
+     "korkeus": 3857,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Myeongjeongjeon(명정전).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Myeongjeongjeon(%EB%AA%85%EC%A0%95%EC%A0%84).jpg?width=1280",
+     "tekija": "Noh Mun Duek",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Myeongjeongjeon(%EB%AA%85%EC%A0%95%EC%A0%84).jpg",
+     "selite": "Salin edessä olevan kivipihan rivit osoittavat virkamiesten paikat.",
+     "leveys": 4514,
+     "korkeus": 3020,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q494407",
+   "nimi": "Korean kansallismuseo",
+   "peruste": "sitelinks",
+   "koko_m": 400,
+   "lat": 37.52389,
+   "lon": 126.98028,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "National Museum of Korea, Seoul (4) (41131638041).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/National_Museum_of_Korea%2C_Seoul_(4)_(41131638041).jpg?width=1280",
+     "tekija": "Richard Mortel from Riyadh, Saudi Arabia",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:National_Museum_of_Korea%2C_Seoul_(4)_(41131638041).jpg",
+     "selite": "Korean kansallismuseo on yksi Itä-Aasian suurimpia museoita.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Building by the Lake outside the National Museum of Korea in Seoul.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Building_by_the_Lake_outside_the_National_Museum_of_Korea_in_Seoul.jpg?width=1280",
+     "tekija": "Ethan Doyle White",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Building_by_the_Lake_outside_the_National_Museum_of_Korea_in_Seoul.jpg",
+     "selite": "Museon puistossa on lampi ja perinteinen paviljonki.",
+     "leveys": 4896,
+     "korkeus": 3264,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Seoul Aerial Shot 12.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Seoul_Aerial_Shot_12.jpg?width=1280",
+   "tekija": "Republic of Korea",
+   "lisenssi": "CC BY-SA 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Seoul_Aerial_Shot_12.jpg",
+   "selite": "Soul levittyy Han-joen ja vuorten väliin.",
+   "leveys": 6000,
+   "korkeus": 3674,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Skyline view from Seoul City (South Korea).jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Skyline_view_from_Seoul_City_(South_Korea).jpg?width=1280",
+   "tekija": "Flickr - Laurie Nevay https://www.flickr.com/photos/laurienevay/",
+   "lisenssi": "CC BY-SA 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Skyline_view_from_Seoul_City_(South_Korea).jpg",
+   "selite": "Soulin keskusta täyttää laakson vuorten juurella.",
+   "leveys": 2736,
+   "korkeus": 1824,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

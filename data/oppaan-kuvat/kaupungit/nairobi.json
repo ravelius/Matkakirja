@@ -1,0 +1,395 @@
+{
+ "kaupunki": "nairobi",
+ "kaupunkiQ": "Q3870",
+ "kohteet": [
+  {
+   "q": "Q739993",
+   "nimi": "Nairobin kansallispuisto",
+   "peruste": "sitelinks",
+   "koko_m": 3000,
+   "lat": -1.37333,
+   "lon": 36.85889,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "A giraffe with a beautiful background of Nairobi City Skyline.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/A_giraffe_with_a_beautiful_background_of_Nairobi_City_Skyline.jpg?width=1280",
+     "tekija": "Alexmbogo",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:A_giraffe_with_a_beautiful_background_of_Nairobi_City_Skyline.jpg",
+     "selite": "Nairobin kansallispuisto on villieläinten suojelualue aivan pääkaupungin pilvenpiirtäjien vieressä.",
+     "leveys": 5999,
+     "korkeus": 3225,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "A clash of worlds - Nairobi skyline from the Nairobi National park.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/A_clash_of_worlds_-_Nairobi_skyline_from_the_Nairobi_National_park.jpg?width=1280",
+     "tekija": "Shadychiri",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:A_clash_of_worlds_-_Nairobi_skyline_from_the_Nairobi_National_park.jpg",
+     "selite": "Savannilta näkyy kaupungin keskusta, mikä tekee puistosta ainutlaatuisen.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3272625",
+   "nimi": "Kenyattan kongressikeskus",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": -1.28861,
+   "lon": 36.82306,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Kenyatta International Convention Centre, Nairobi, by Karl Henrik Nøstvik architect, general.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kenyatta_International_Convention_Centre%2C_Nairobi%2C_by_Karl_Henrik_N%C3%B8stvik_architect%2C_general.jpg?width=1280",
+     "tekija": "IndicibleEspace",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kenyatta_International_Convention_Centre%2C_Nairobi%2C_by_Karl_Henrik_N%C3%B8stvik_architect%2C_general.jpg",
+     "selite": "Kenyattan kongressikeskuksen sylinterimäinen torni on Nairobin keskustan tunnetuimpia maamerkkejä.",
+     "leveys": 5845,
+     "korkeus": 3897,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Kenyatta International Convention Centre, 2025 (01).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kenyatta_International_Convention_Centre%2C_2025_(01).jpg?width=1280",
+     "tekija": "Bahnfrend",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kenyatta_International_Convention_Centre%2C_2025_(01).jpg",
+     "selite": "Kompleksin sisäänkäynnin takana kohoaa torni ja tunnusomainen kartiokattoinen sali.",
+     "leveys": 2560,
+     "korkeus": 2700,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2595707",
+   "nimi": "Kenian kansallismuseo",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": -1.27404,
+   "lon": 36.8145,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "At Nairobi National Museum 2025 005.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/At_Nairobi_National_Museum_2025_005.jpg?width=1280",
+     "tekija": "Photograph by Mike Peel (www.mikepeel.net).",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:At_Nairobi_National_Museum_2025_005.jpg",
+     "selite": "Nairobin kansallismuseo esittelee Kenian luontoa, kulttuuria ja ihmiskunnan varhaishistoriaa.",
+     "leveys": 6960,
+     "korkeus": 4640,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Nairobi Museum entrance 2.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi_Museum_entrance_2.JPG?width=1280",
+     "tekija": "Karl Ragnar Gjertsen Krg This photo was taken by Karl Ragnar Gjertsen. Please credit this photo Karl Ragnar Gjertsen in the immediate vicinity of the image.",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Nairobi_Museum_entrance_2.JPG",
+     "selite": "Museon vanhempi sisäänkäynti on pylväiden kehystämä.",
+     "leveys": 1600,
+     "korkeus": 1200,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q6959773",
+   "nimi": "Nairobin arboretum",
+   "peruste": "pelin nosto",
+   "koko_m": 400,
+   "lat": -1.2743,
+   "lon": 36.8131,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Nairobi Arboretum in August 2025 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi_Arboretum_in_August_2025_01.jpg?width=1280",
+     "tekija": "Anthere",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Nairobi_Arboretum_in_August_2025_01.jpg",
+     "selite": "Nairobin arboretum on kaupungin keskellä oleva vehreä puisto, jossa kasvaa kotimaisia ja tuotuja puulajeja.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Nairobi Arboretum Park 01.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi_Arboretum_Park_01.JPG?width=1280",
+     "tekija": "Ahero dala",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Nairobi_Arboretum_Park_01.JPG",
+     "selite": "Puiston polut kulkevat tiheän metsän halki.",
+     "leveys": 4320,
+     "korkeus": 3240,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q10539858",
+   "nimi": "Jeevanjeen puutarha",
+   "peruste": "pelin nosto",
+   "koko_m": 250,
+   "lat": -1.28101,
+   "lon": 36.8195,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Lascar Jeevanjee Gardens (4521970401).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lascar_Jeevanjee_Gardens_(4521970401).jpg?width=1280",
+     "tekija": "Jorge Láscar from Australia",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Lascar_Jeevanjee_Gardens_(4521970401).jpg",
+     "selite": "Jeevanjeen puutarha on keskustan vanha puisto, jonka suuret puut tarjoavat varjoa kaupunkilaisille.",
+     "leveys": 3216,
+     "korkeus": 2136,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Nairobi Jeevanjee Gardens.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi_Jeevanjee_Gardens.jpg?width=1280",
+     "tekija": "Yerpo",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Nairobi_Jeevanjee_Gardens.jpg",
+     "selite": "Puisto sijaitsee Nairobin liikekeskustan laidalla.",
+     "leveys": 8163,
+     "korkeus": 4428,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q6392606",
+   "nimi": "Kenian kansallisarkisto",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": -1.28489,
+   "lon": 36.82594,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Lascar Kenya National Archives building (4540823420).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lascar_Kenya_National_Archives_building_(4540823420).jpg?width=1280",
+     "tekija": "Jorge Láscar from Australia",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Lascar_Kenya_National_Archives_building_(4540823420).jpg",
+     "selite": "Kenian kansallisarkisto toimii historiallisessa pankkirakennuksessa Nairobin keskustassa.",
+     "leveys": 3216,
+     "korkeus": 2136,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Entry gate of Kenya National Archives.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Entry_gate_of_Kenya_National_Archives.jpg?width=1280",
+     "tekija": "DesiBoy101",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Entry_gate_of_Kenya_National_Archives.jpg",
+     "selite": "Rakennuksen pääsisäänkäyntiä koristavat punaiset pylväät.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q4451415",
+   "nimi": "Pyhän perheen katedraali",
+   "peruste": "sitelinks",
+   "koko_m": 120,
+   "lat": -1.28694,
+   "lon": 36.82056,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Cathedral Basilica of the Holy Family, Nairobi, 2025 (01).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cathedral_Basilica_of_the_Holy_Family%2C_Nairobi%2C_2025_(01).jpg?width=1280",
+     "tekija": "Bahnfrend",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cathedral_Basilica_of_the_Holy_Family%2C_Nairobi%2C_2025_(01).jpg",
+     "selite": "Pyhän perheen katedraali on Nairobin katolinen päärakennus, jota hallitsee korkea kellotorni.",
+     "leveys": 2636,
+     "korkeus": 2636,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Cathedral Basilica of the Holy Family, Nairobi, 2025 (03).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cathedral_Basilica_of_the_Holy_Family%2C_Nairobi%2C_2025_(03).jpg?width=1280",
+     "tekija": "Bahnfrend",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cathedral_Basilica_of_the_Holy_Family%2C_Nairobi%2C_2025_(03).jpg",
+     "selite": "Kirkon sisätilan valtavat ikkunat tuovat runsaasti valoa.",
+     "leveys": 3346,
+     "korkeus": 2391,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q611606",
+   "nimi": "Nairobin rautatiemuseo",
+   "peruste": "pelin nosto",
+   "koko_m": 200,
+   "lat": -1.29373,
+   "lon": 36.82219,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "5930 the largest Garratt in Africa.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/5930_the_largest_Garratt_in_Africa.jpg?width=1280",
+     "tekija": "shankar s.",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:5930_the_largest_Garratt_in_Africa.jpg",
+     "selite": "Rautatiemuseossa on Itä-Afrikan rautateiden höyryveturikalustoa, muun muassa suuri Garratt-veturi.",
+     "leveys": 3264,
+     "korkeus": 2448,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "At Nairobi Railway Museum 2025 007.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/At_Nairobi_Railway_Museum_2025_007.jpg?width=1280",
+     "tekija": "Photograph by Mike Peel (www.mikepeel.net).",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:At_Nairobi_Railway_Museum_2025_007.jpg",
+     "selite": "Museo muistuttaa Uganda-rautatien historiasta, jonka päätepisteenä Nairobi syntyi.",
+     "leveys": 6960,
+     "korkeus": 4640,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1861057",
+   "nimi": "Ngongin kukkulat",
+   "peruste": "sitelinks",
+   "koko_m": 3000,
+   "lat": -1.4,
+   "lon": 36.63333,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Ngong Hills.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ngong_Hills.jpg?width=1280",
+     "tekija": "Rotsee2",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ngong_Hills.jpg",
+     "selite": "Ngongin kukkulat ovat vehreä harjanne Nairobin lounaispuolella ja suosittu patikointikohde.",
+     "leveys": 2272,
+     "korkeus": 1704,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "First Hill.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/First_Hill.jpg?width=1280",
+     "tekija": "Akash Pitrola",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:First_Hill.jpg",
+     "selite": "Harjanteen huipuilta näkyy Rift-laakson reuna ja Nairobi.",
+     "leveys": 1920,
+     "korkeus": 1080,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1701225",
+   "nimi": "Kenian parlamenttirakennus",
+   "peruste": "sitelinks",
+   "koko_m": 300,
+   "lat": -1.29005,
+   "lon": 36.82013,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Green nairobi.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Green_nairobi.jpg?width=1280",
+     "tekija": "Waceke kamau",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Green_nairobi.jpg",
+     "selite": "Parlamenttirakennuksen kellotorni kohoaa Uhuru-puiston vieressä Nairobin keskustassa.",
+     "leveys": 6016,
+     "korkeus": 4000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Parliament Buildings and Uhuru Park, Nairobi.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Parliament_Buildings_and_Uhuru_Park%2C_Nairobi.jpg?width=1280",
+     "tekija": "Ninara",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Parliament_Buildings_and_Uhuru_Park%2C_Nairobi.jpg",
+     "selite": "Kenian kansalliskokous kokoontuu rakennuskompleksissa keskustan laidalla.",
+     "leveys": 3000,
+     "korkeus": 1899,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Nairobi City County Skyline.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi_City_County_Skyline.jpg?width=1280",
+   "tekija": "Antony Trivet",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Nairobi_City_County_Skyline.jpg",
+   "selite": "Nairobin pilvenpiirtäjät hohtavat illan hämärässä Kenian pääkaupungissa.",
+   "leveys": 8256,
+   "korkeus": 5504,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "City view from Uhuru Park, Nairobi.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/City_view_from_Uhuru_Park%2C_Nairobi.jpg?width=1280",
+   "tekija": "DEMOSH",
+   "lisenssi": "CC BY 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:City_view_from_Uhuru_Park%2C_Nairobi.jpg",
+   "selite": "Uhuru-puiston lampi ja keskustan korkeat rakennukset muodostavat Nairobin tutun siluetin.",
+   "leveys": 2240,
+   "korkeus": 1382,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

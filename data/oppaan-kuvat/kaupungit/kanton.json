@@ -1,0 +1,555 @@
+{
+ "kaupunki": "kanton",
+ "kaupunkiQ": "Q16572",
+ "kohteet": [
+  {
+   "q": "Q1195445",
+   "nimi": "Pyhän sydämen katedraali",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": 23.11732,
+   "lon": 113.25483,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Sacred Heart Cathedral Guangzhou front facade 2026 dllu.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sacred_Heart_Cathedral_Guangzhou_front_facade_2026_dllu.jpg?width=1280",
+     "tekija": "Daniel Lu (User:dllu)",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Sacred_Heart_Cathedral_Guangzhou_front_facade_2026_dllu.jpg",
+     "selite": "Pyhän sydämen katedraali on graniitista rakennettu uusgoottilainen kirkko, jota kutsutaan Kantonissa Kivitaloksi.",
+     "leveys": 10593,
+     "korkeus": 19487,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Sacred Heart Cathedral of Guangzhou 2025.06 04.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sacred_Heart_Cathedral_of_Guangzhou_2025.06_04.jpg?width=1280",
+     "tekija": "Shujianyang",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Sacred_Heart_Cathedral_of_Guangzhou_2025.06_04.jpg",
+     "selite": "Kirkon kaksi tornia kohoavat vanhojen kauppatalojen reunustaman kadun päässä.",
+     "leveys": 2400,
+     "korkeus": 1680,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Sacred Heart Cathedral of Guangzhou 2025.06 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sacred_Heart_Cathedral_of_Guangzhou_2025.06_01.jpg?width=1280",
+     "tekija": "Shujianyang",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Sacred_Heart_Cathedral_of_Guangzhou_2025.06_01.jpg",
+     "selite": "Katedraalin pääportti ja ruusuikkuna ovat uusgoottilaisen julkisivun keskipiste.",
+     "leveys": 1600,
+     "korkeus": 2400,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q9373800",
+   "nimi": "Zhenhai-torni",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": 23.1407,
+   "lon": 113.26,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Zhenhai Tower, Yuexiu Park, Guangzhou (10075748113).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Zhenhai_Tower%2C_Yuexiu_Park%2C_Guangzhou_(10075748113).jpg?width=1280",
+     "tekija": "Gary Todd from Xinzheng, China",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Zhenhai_Tower%2C_Yuexiu_Park%2C_Guangzhou_(10075748113).jpg",
+     "selite": "Zhenhai-torni on punainen viisikerroksinen torni Yuexiun kukkulalla, entisen kaupunginmuurin kohdalla.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Zhenhai Tower, Yuexiu Park, Guangzhou (9967316355).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Zhenhai_Tower%2C_Yuexiu_Park%2C_Guangzhou_(9967316355).jpg?width=1280",
+     "tekija": "Gary Todd from Xinzheng, China",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Zhenhai_Tower%2C_Yuexiu_Park%2C_Guangzhou_(9967316355).jpg",
+     "selite": "Tornissa toimii nykyään Guangzhoun museo.",
+     "leveys": 3888,
+     "korkeus": 2592,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Zhenhai Tower 03359-Guangzhou (32667960970).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Zhenhai_Tower_03359-Guangzhou_(32667960970).jpg?width=1280",
+     "tekija": "xiquinhosilva",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Zhenhai_Tower_03359-Guangzhou_(32667960970).jpg",
+     "selite": "Kerrokset nousevat porrastettuina päätyyn ja kattoon.",
+     "leveys": 3000,
+     "korkeus": 2003,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q985779",
+   "nimi": "Guangxiao-temppeli",
+   "peruste": "pelin nosto",
+   "koko_m": 120,
+   "lat": 23.1321,
+   "lon": 113.251,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "20250222 Guangxiao Temple 04.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20250222_Guangxiao_Temple_04.jpg?width=1280",
+     "tekija": "Windmemories",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20250222_Guangxiao_Temple_04.jpg",
+     "selite": "Guangxiao-temppeli on yksi Kantonin vanhimmista buddhalaisista temppeleistä.",
+     "leveys": 1800,
+     "korkeus": 1200,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "20250222 Guangxiao Temple 07.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20250222_Guangxiao_Temple_07.jpg?width=1280",
+     "tekija": "Windmemories",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20250222_Guangxiao_Temple_07.jpg",
+     "selite": "Temppelin tumma puurakenne ja viistot katot hallitsevat pihaa.",
+     "leveys": 1800,
+     "korkeus": 1200,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q5090739",
+   "nimi": "Chenin suvun sali",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": 23.12984,
+   "lon": 113.24011,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Chen Clan Ancestral Hall 2025.06 03.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Chen_Clan_Ancestral_Hall_2025.06_03.jpg?width=1280",
+     "tekija": "Shujianyang",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Chen_Clan_Ancestral_Hall_2025.06_03.jpg",
+     "selite": "Chenin suvun sali on 1800-luvun lopulla rakennettu suvun temppeli ja koulu, jonka katot ovat täynnä veistoksia.",
+     "leveys": 2400,
+     "korkeus": 1600,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Chen Clan Ancestral Hall 2025.06 02.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Chen_Clan_Ancestral_Hall_2025.06_02.jpg?width=1280",
+     "tekija": "Shujianyang",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Chen_Clan_Ancestral_Hall_2025.06_02.jpg",
+     "selite": "Julkisivun keraamiset kattokoristeet ja kivileijonat ovat kantonilaista rakennustaidetta.",
+     "leveys": 2400,
+     "korkeus": 1350,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Chen Clan Academy, Guangzhou (5928976016).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Chen_Clan_Academy%2C_Guangzhou_(5928976016).jpg?width=1280",
+     "tekija": "Eduardo M. C.",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Chen_Clan_Academy%2C_Guangzhou_(5928976016).jpg",
+     "selite": "Pihan kivipilarit kehystävät salin sisäänkäyntiä.",
+     "leveys": 3264,
+     "korkeus": 2448,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q683127",
+   "nimi": "Liurong-temppeli ja Kukkapagodi",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": 23.13088,
+   "lon": 113.25479,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Temple of the Six Banyan Trees pagoda 2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Temple_of_the_Six_Banyan_Trees_pagoda_2.jpg?width=1280",
+     "tekija": "Shujianyang",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Temple_of_the_Six_Banyan_Trees_pagoda_2.jpg",
+     "selite": "Liurong-temppelin Kukkapagodi on kahdeksankulmainen torni, jota on pidetty Kantonin vanhana maamerkkinä.",
+     "leveys": 1600,
+     "korkeus": 2133,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Flower Pagoda in Canton.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Flower_Pagoda_in_Canton.jpg?width=1280",
+     "tekija": "Lai Afong",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Flower_Pagoda_in_Canton.jpg",
+     "selite": "Vanha valokuva näyttää pagodin 1800-luvun Kantonin siluetissa.",
+     "leveys": 2058,
+     "korkeus": 1582,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q992508",
+   "nimi": "Huaishengin moskeija",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": 23.12538,
+   "lon": 113.25359,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "CNGD-020-001怀圣寺光塔.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/CNGD-020-001%E6%80%80%E5%9C%A3%E5%AF%BA%E5%85%89%E5%A1%94.jpg?width=1280",
+     "tekija": "斯巴鲁美乐斯",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:CNGD-020-001%E6%80%80%E5%9C%A3%E5%AF%BA%E5%85%89%E5%A1%94.jpg",
+     "selite": "Huaishengin moskeijan valkoinen minareetti on Kiinan vanhimpia islamilaisia rakennuksia.",
+     "leveys": 2448,
+     "korkeus": 3264,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Huaisheng Mosque in Guangzhou.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Huaisheng_Mosque_in_Guangzhou.jpg?width=1280",
+     "tekija": "Chinatravelsavvy",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Huaisheng_Mosque_in_Guangzhou.jpg",
+     "selite": "Moskeijan muuri ja portti piiloutuvat vanhojen puiden alle.",
+     "leveys": 2048,
+     "korkeus": 1536,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q371818",
+   "nimi": "Kolmentoista faktorian paikka",
+   "peruste": "pelin nosto",
+   "koko_m": 300,
+   "lat": 23.1138,
+   "lon": 113.248,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Canton factories.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Canton_factories.jpg?width=1280",
+     "tekija": "Unknown Chinese artist",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Canton_factories.jpg",
+     "selite": "Kolmetoista faktoriaa oli ulkomaisten kauppiaiden kortteli Helmijoen rannalla ennen vuotta 1856.",
+     "leveys": 1219,
+     "korkeus": 800,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "View of Canton factories 2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/View_of_Canton_factories_2.jpg?width=1280",
+     "tekija": "William Daniell",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:View_of_Canton_factories_2.jpg",
+     "selite": "Vanha maalaus esittää faktorioiden julkisivut ja eri maiden liput jokirannassa.",
+     "leveys": 2500,
+     "korkeus": 1289,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q529977",
+   "nimi": "Shamianin saari",
+   "peruste": "pelin nosto",
+   "koko_m": 400,
+   "lat": 23.10944,
+   "lon": 113.23944,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Our Lady of Lourdes Chapel.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Our_Lady_of_Lourdes_Chapel.jpg?width=1280",
+     "tekija": "Anthony Hartman from Meizhou, China",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Our_Lady_of_Lourdes_Chapel.jpg",
+     "selite": "Shamianin saarella on eurooppalaistyylinen kappeli ja vanhoja siirtomaa-ajan rakennuksia.",
+     "leveys": 3072,
+     "korkeus": 2304,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Shamian Island, Guangzhou (5928584895).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Shamian_Island%2C_Guangzhou_(5928584895).jpg?width=1280",
+     "tekija": "Eduardo M. C.",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Shamian_Island%2C_Guangzhou_(5928584895).jpg",
+     "selite": "Saaren puistokäytävät ja lammet ovat varjostettuina vanhojen puiden alla.",
+     "leveys": 3264,
+     "korkeus": 2448,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Shamian Island, Guangzhou (5929142460).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Shamian_Island%2C_Guangzhou_(5929142460).jpg?width=1280",
+     "tekija": "Eduardo M. C.",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Shamian_Island%2C_Guangzhou_(5929142460).jpg",
+     "selite": "Saaren vanhat ulkomaalaisten rakennukset ovat säilyneet nykypäivään.",
+     "leveys": 2448,
+     "korkeus": 3264,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q168400",
+   "nimi": "Kantonin torni",
+   "peruste": "sitelinks",
+   "koko_m": 200,
+   "lat": 23.1092,
+   "lon": 113.31915,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Canton Tower at night 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Canton_Tower_at_night_01.jpg?width=1280",
+     "tekija": "Shujianyang",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Canton_Tower_at_night_01.jpg",
+     "selite": "Kantonin torni on kierteisen verkkorakenteen televisio- ja näköalatorni Helmijoen rannalla.",
+     "leveys": 1600,
+     "korkeus": 2400,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Canton Tower 20220626 (cropped).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Canton_Tower_20220626_(cropped).jpg?width=1280",
+     "tekija": "Tim Wu",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Canton_Tower_20220626_(cropped).jpg",
+     "selite": "Torni kohoaa Zhujiangin uuden keskustan pilvenpiirtäjien yläpuolelle.",
+     "leveys": 2709,
+     "korkeus": 1806,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3354553",
+   "nimi": "Kantonin oopperatalo",
+   "peruste": "sitelinks",
+   "koko_m": 200,
+   "lat": 23.1175,
+   "lon": 113.31722,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Guangzhou Opera House overview.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Guangzhou_Opera_House_overview.JPG?width=1280",
+     "tekija": "圍棋一級",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Guangzhou_Opera_House_overview.JPG",
+     "selite": "Kantonin oopperatalon pehmeät kulmikkaat muodot muistuttavat kiviä, jotka joki on hioinut.",
+     "leveys": 1600,
+     "korkeus": 1200,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Guangzhou Opera House(Near).JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Guangzhou_Opera_House(Near).JPG?width=1280",
+     "tekija": "Mr a",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Guangzhou_Opera_House(Near).JPG",
+     "selite": "Rakennuksen kolmiorakenteiset julkisivut heijastuvat altaaseen.",
+     "leveys": 4224,
+     "korkeus": 2376,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Guangzhou Opera House and Canton Tower.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Guangzhou_Opera_House_and_Canton_Tower.JPG?width=1280",
+     "tekija": "Ecow",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Guangzhou_Opera_House_and_Canton_Tower.JPG",
+     "selite": "Illalla oopperatalo ja Kantonin torni valaistaan Zhujiangin uudessa keskustassa.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1043438",
+   "nimi": "Guangzhoun kansainvälinen rahoituskeskus",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 23.12035,
+   "lon": 113.31807,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Guangzhou International Finance Center from Huacheng Square.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Guangzhou_International_Finance_Center_from_Huacheng_Square.jpg?width=1280",
+     "tekija": "そらみみ",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Guangzhou_International_Finance_Center_from_Huacheng_Square.jpg",
+     "selite": "Rahoituskeskuksen kapeneva lasitorni on Zhujiangin uuden keskustan tunnetuimpia pilvenpiirtäjiä.",
+     "leveys": 3024,
+     "korkeus": 4032,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q168575",
+   "nimi": "CTF Finance Centre",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 23.12028,
+   "lon": 113.32056,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Guangzhou CTF Finance Centre.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Guangzhou_CTF_Finance_Centre.jpg?width=1280",
+     "tekija": "Shujianyang",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Guangzhou_CTF_Finance_Centre.jpg",
+     "selite": "CTF Finance Centre on yksi Guangzhoun korkeimmista pilvenpiirtäjistä Tianhen kaupunginosassa.",
+     "leveys": 1597,
+     "korkeus": 2400,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Guangzhou CTF Finance Centre 02-10-2018.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Guangzhou_CTF_Finance_Centre_02-10-2018.jpg?width=1280",
+     "tekija": "Milkomède",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Guangzhou_CTF_Finance_Centre_02-10-2018.jpg",
+     "selite": "Pilvenpiirtäjän vaalea lasijulkisivu kohoaa uuden keskustan yläpuolelle.",
+     "leveys": 2304,
+     "korkeus": 3456,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q15456024",
+   "nimi": "Guangzhou Circle",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 23.0525,
+   "lon": 113.254,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Guangzhou Circle 3.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Guangzhou_Circle_3.jpg?width=1280",
+     "tekija": "Midip",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Guangzhou_Circle_3.jpg",
+     "selite": "Guangzhou Circle on kultaista kolikkoa muistuttava rengasrakennus Helmijoen rannalla.",
+     "leveys": 1920,
+     "korkeus": 1839,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Guangzhou Circle Building 3.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Guangzhou_Circle_Building_3.jpg?width=1280",
+     "tekija": "CRCHF",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Guangzhou_Circle_Building_3.jpg",
+     "selite": "Rakennuksen kolmiokuvioitu julkisivu kiertää suuren pyöreän aukon.",
+     "leveys": 1812,
+     "korkeus": 1974,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Canton Tower 20241027.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Canton_Tower_20241027.jpg?width=1280",
+   "tekija": "Tim Wu",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Canton_Tower_20241027.jpg",
+   "selite": "Kanton eli Guangzhou levittäytyy Helmijoen molemmin puolin, ja Kantonin torni hallitsee horisonttia.",
+   "leveys": 7205,
+   "korkeus": 4803,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Guangzhou skyline (6343573781).jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Guangzhou_skyline_(6343573781).jpg?width=1280",
+   "tekija": "kevinmcgill from Den Bosch, Netherlands",
+   "lisenssi": "CC BY-SA 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Guangzhou_skyline_(6343573781).jpg",
+   "selite": "Helmijoen pohjoisrannalla Guangzhoun uusi keskusta erottuu vesistön takaa.",
+   "leveys": 2127,
+   "korkeus": 1179,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

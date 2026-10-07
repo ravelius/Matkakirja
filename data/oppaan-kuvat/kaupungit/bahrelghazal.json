@@ -1,0 +1,199 @@
+{
+ "kaupunki": "bahrelghazal",
+ "kaupunkiQ": "Q803639",
+ "kohteet": [
+  {
+   "q": "Q276534",
+   "nimi": "Wau",
+   "peruste": "sitelinks",
+   "koko_m": 2500,
+   "lat": 7.7,
+   "lon": 27.98333,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "St. Mary Cathedral Catholic Diocese of Wau (cropped).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/St._Mary_Cathedral_Catholic_Diocese_of_Wau_(cropped).jpg?width=1280",
+     "tekija": "James Bol Bol Duer",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:St._Mary_Cathedral_Catholic_Diocese_of_Wau_(cropped).jpg",
+     "selite": "Wau on Länsi-Bahr el Ghazalin pääkaupunki, ja sen punatiilinen katedraali kohoaa punaisen hiekkakadun varrella.",
+     "leveys": 2765,
+     "korkeus": 2074,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "St Mary Cathedral, Wau.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/St_Mary_Cathedral%2C_Wau.jpg?width=1280",
+     "tekija": "Enkaschau",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:St_Mary_Cathedral%2C_Wau.jpg",
+     "selite": "Katedraalin julkisivu kuuluu kaupungin tunnetuimpiin rakennuksiin.",
+     "leveys": 2320,
+     "korkeus": 3154,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Dinka Bull, Wau. Sudan - panoramio.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dinka_Bull%2C_Wau._Sudan_-_panoramio.jpg?width=1280",
+     "tekija": "Michael Walsh",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Dinka_Bull%2C_Wau._Sudan_-_panoramio.jpg",
+     "selite": "Dinka-paimenten karja palaa kaupungin laidalla illan valossa kotiinsa.",
+     "leveys": 3314,
+     "korkeus": 1252,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2003254",
+   "nimi": "Jur-joki",
+   "peruste": "sitelinks",
+   "koko_m": 1500,
+   "lat": 8.65,
+   "lon": 29.3,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "River Jur.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/River_Jur.jpg?width=1280",
+     "tekija": "James Bol Bol Duer",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:River_Jur.jpg",
+     "selite": "Jur-joki virtaa Waun kaupungin läpi Bahr el Ghazalin sydämessä.",
+     "leveys": 4160,
+     "korkeus": 3120,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "River jur.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/River_jur.jpg?width=1280",
+     "tekija": "James Bol Bol Duer",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:River_jur.jpg",
+     "selite": "Joen rannat ovat vehreitä, ja joki kulkee hitaasti tasaisen savannin halki.",
+     "leveys": 4160,
+     "korkeus": 3120,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q803634",
+   "nimi": "Bahr el Ghazal -joki",
+   "peruste": "sitelinks",
+   "koko_m": 5000,
+   "lat": 4.55583,
+   "lon": 28.60833,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Under an African Sky - panoramio.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Under_an_African_Sky_-_panoramio.jpg?width=1280",
+     "tekija": "Michael Walsh",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Under_an_African_Sky_-_panoramio.jpg",
+     "selite": "Bahr el Ghazalin laaja tulvatasanko hehkuu auringonlaskussa ja muuttuu sadekaudella suoksi.",
+     "leveys": 3907,
+     "korkeus": 2344,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q492001",
+   "nimi": "Lol-joki",
+   "peruste": "sitelinks",
+   "koko_m": 3000,
+   "lat": 9.19056,
+   "lon": 29.19667,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Photo View of the Lol River in Bahr al-Ghazal, with hundreds of boats belonging to Dinka fishermen 1958 - Touring Club Italiano BBT 127.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Photo_View_of_the_Lol_River_in_Bahr_al-Ghazal%2C_with_hundreds_of_boats_belonging_to_Dinka_fishermen_1958_-_Touring_Club_Italiano_BBT_127.jpg?width=1280",
+     "tekija": "Unknown authorUnknown author",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Photo_View_of_the_Lol_River_in_Bahr_al-Ghazal%2C_with_hundreds_of_boats_belonging_to_Dinka_fishermen_1958_-_Touring_Club_Italiano_BBT_127.jpg",
+     "selite": "Vanhassa valokuvassa Lol-joella kalastaa joukko pieniä veneitä.",
+     "leveys": 3976,
+     "korkeus": 3214,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1371016",
+   "nimi": "Tonj",
+   "peruste": "sitelinks",
+   "koko_m": 800,
+   "lat": 7.28,
+   "lon": 28.68,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Tonj Catholic Church.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tonj_Catholic_Church.JPG?width=1280",
+     "tekija": "Ernst Ulz",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tonj_Catholic_Church.JPG",
+     "selite": "Tonjin tiilinen katolinen kirkko seisoo kuivalla tasangolla Dinka-alueen sydämessä.",
+     "leveys": 3776,
+     "korkeus": 2520,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q654544",
+   "nimi": "Sudd",
+   "peruste": "sitelinks",
+   "koko_m": 30000,
+   "lat": 8,
+   "lon": 31,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Pantanal Sudd, Sudão do Sul.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Pantanal_Sudd%2C_Sud%C3%A3o_do_Sul.jpg?width=1280",
+     "tekija": "Coordenação-Geral de Observação da Terra/INPE",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Pantanal_Sudd%2C_Sud%C3%A3o_do_Sul.jpg",
+     "selite": "Sudd on Niilin valtava kosteikko, jonka vesikanavat ja lampareet näkyvät avaruudesta.",
+     "leveys": 5255,
+     "korkeus": 2954,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Traditional dinka homestead.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Traditional_dinka_homestead.jpg?width=1280",
+   "tekija": "Jayyeass",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Traditional_dinka_homestead.jpg",
+   "selite": "Dinka-talonpoikien perinteinen ruokokattoinen savimaja seisoo maissipeltojen keskellä.",
+   "leveys": 4608,
+   "korkeus": 3456,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

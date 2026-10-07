@@ -1,0 +1,313 @@
+{
+ "kaupunki": "luxemburg",
+ "kaupunkiQ": "Q1842",
+ "kohteet": [
+  {
+   "q": "Q1348719",
+   "nimi": "Notre Damen katedraali",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": 49.60967,
+   "lon": 6.13156,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Notre Dame Cathedral, Luxembourg LUX.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Notre_Dame_Cathedral%2C_Luxembourg_LUX.jpg?width=1280",
+     "tekija": "Stefano Vigorelli",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Notre_Dame_Cathedral%2C_Luxembourg_LUX.jpg",
+     "selite": "Notre Damen katedraalin kaksi mustaa tornia hallitsevat Luxemburgin vanhaa kaupunkia.",
+     "leveys": 1944,
+     "korkeus": 2592,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Luxembourg Cathédrale Notre-Dame ancien portail - Octave 2016.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Luxembourg_Cath%C3%A9drale_Notre-Dame_ancien_portail_-_Octave_2016.jpg?width=1280",
+     "tekija": "Cayambe",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Luxembourg_Cath%C3%A9drale_Notre-Dame_ancien_portail_-_Octave_2016.jpg",
+     "selite": "Katedraalin vanha portaali on 1600-luvun jesuiittakirkon pääsisäänkäynti.",
+     "leveys": 5609,
+     "korkeus": 2510,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1205254",
+   "nimi": "Suurherttuan palatsi",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": 49.61089,
+   "lon": 6.13283,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Luxembourg Grand Ducal Palace 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Luxembourg_Grand_Ducal_Palace_01.jpg?width=1280",
+     "tekija": "Cayambe",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Luxembourg_Grand_Ducal_Palace_01.jpg",
+     "selite": "Suurherttuan palatsi on Luxemburgin valtionpäämiehen virallinen residenssi vanhassakaupungissa.",
+     "leveys": 4256,
+     "korkeus": 2832,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Grand Ducal Palace in Luxembourg City 04.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Grand_Ducal_Palace_in_Luxembourg_City_04.jpg?width=1280",
+     "tekija": "Krzysztof Golik",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Grand_Ducal_Palace_in_Luxembourg_City_04.jpg",
+     "selite": "Palatsin kulmassa on koristeellinen torni.",
+     "leveys": 3009,
+     "korkeus": 3262,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Grand Ducal Palace in Luxembourg City 06.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Grand_Ducal_Palace_in_Luxembourg_City_06.jpg?width=1280",
+     "tekija": "Krzysztof Golik",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Grand_Ducal_Palace_in_Luxembourg_City_06.jpg",
+     "selite": "Palatsin renessanssijulkisivu avautuu kapealle kadulle.",
+     "leveys": 3838,
+     "korkeus": 3590,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q365643",
+   "nimi": "Adolphe-silta",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 49.60831,
+   "lon": 6.12707,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Adolphe Bridge post 2017 renovation works - 7 August 2018.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Adolphe_Bridge_post_2017_renovation_works_-_7_August_2018.jpg?width=1280",
+     "tekija": "Denise Hastert",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Adolphe_Bridge_post_2017_renovation_works_-_7_August_2018.jpg",
+     "selite": "Adolphe-silta on kaksoiskaariperustainen kivisilta, joka yhdistää vanhankaupungin ja uuden keskustan Pétrussen laakson yli.",
+     "leveys": 4000,
+     "korkeus": 1995,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Adolphe Bridge in Luxembourg.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Adolphe_Bridge_in_Luxembourg.jpg?width=1280",
+     "tekija": "Tunegravity",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Adolphe_Bridge_in_Luxembourg.jpg",
+     "selite": "Silta kaareutuu vihreän rotkolaakson yläpuolella.",
+     "leveys": 4096,
+     "korkeus": 3072,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q125561209",
+   "nimi": "Bockin kasematit",
+   "peruste": "pelin nosto",
+   "koko_m": 120,
+   "lat": 49.61174,
+   "lon": 6.13715,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Casemates du Bock Luxembourg - Lëtzebuerg 43.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Casemates_du_Bock_Luxembourg_-_L%C3%ABtzebuerg_43.jpg?width=1280",
+     "tekija": "FrDr",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Casemates_du_Bock_Luxembourg_-_L%C3%ABtzebuerg_43.jpg",
+     "selite": "Bockin kasematit ovat kallioon louhittuja puolustusgallerioita, joista on näkymä laaksoon.",
+     "leveys": 6960,
+     "korkeus": 4640,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Bock casemates, Luxembourg - panoramio (2).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bock_casemates%2C_Luxembourg_-_panoramio_(2).jpg?width=1280",
+     "tekija": "Николай Максимович",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bock_casemates%2C_Luxembourg_-_panoramio_(2).jpg",
+     "selite": "Kallion ikkuna avautuu vehreään Alzetten laaksoon.",
+     "leveys": 2048,
+     "korkeus": 2048,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Casemates du Bock Luxembourg - Lëtzebuerg 40.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Casemates_du_Bock_Luxembourg_-_L%C3%ABtzebuerg_40.jpg?width=1280",
+     "tekija": "FrDr",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Casemates_du_Bock_Luxembourg_-_L%C3%ABtzebuerg_40.jpg",
+     "selite": "Kasematteja yhdistävät kiviholvatut käytävät.",
+     "leveys": 4640,
+     "korkeus": 6960,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q359872",
+   "nimi": "Guillaume II:n aukio",
+   "peruste": "pelin nosto",
+   "koko_m": 120,
+   "lat": 49.61083,
+   "lon": 6.13028,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Luxembourg pl Guillaume II vers rue de la Reine.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Luxembourg_pl_Guillaume_II_vers_rue_de_la_Reine.jpg?width=1280",
+     "tekija": "Cayambe",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Luxembourg_pl_Guillaume_II_vers_rue_de_la_Reine.jpg",
+     "selite": "Guillaume II:n aukio on vanhankaupungin keskusaukio, jonka keskellä seisoo ratsastajapatsas.",
+     "leveys": 4230,
+     "korkeus": 2001,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Luxembourg City monument Guillaume II statue 2011.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Luxembourg_City_monument_Guillaume_II_statue_2011.jpg?width=1280",
+     "tekija": "Antonin Mercié",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Luxembourg_City_monument_Guillaume_II_statue_2011.jpg",
+     "selite": "Kuningas Guillaume II:n pronssinen ratsastajapatsas on aukion keskipiste.",
+     "leveys": 3303,
+     "korkeus": 2717,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q950660",
+   "nimi": "Pétrusse",
+   "peruste": "sitelinks",
+   "koko_m": 300,
+   "lat": 49.6,
+   "lon": 6.11667,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Vallée de la Pétrusse à Luxembourg (juin 2019).JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Vall%C3%A9e_de_la_P%C3%A9trusse_%C3%A0_Luxembourg_(juin_2019).JPG?width=1280",
+     "tekija": "Florian Pépellin",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Vall%C3%A9e_de_la_P%C3%A9trusse_%C3%A0_Luxembourg_(juin_2019).JPG",
+     "selite": "Pétrussen laakso halkoo Luxemburgin kaupunkia, ja sen yllä kohoaa vanhan kaupungin linnoitusmuuri.",
+     "leveys": 2048,
+     "korkeus": 1536,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Valley of Petrusse river in Luxembourg City 02.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Valley_of_Petrusse_river_in_Luxembourg_City_02.jpg?width=1280",
+     "tekija": "Krzysztof Golik",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Valley_of_Petrusse_river_in_Luxembourg_City_02.jpg",
+     "selite": "Lehtimetsä peittää laakson rinteitä kaupungin keskellä.",
+     "leveys": 8392,
+     "korkeus": 3547,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q585990",
+   "nimi": "Thüngenin linnake",
+   "peruste": "sitelinks",
+   "koko_m": 120,
+   "lat": 49.61639,
+   "lon": 6.13889,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Fuerte Thüngen, ciudad de Luxemburgo, Luxemburgo, 2023-12-16, DD 148.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Fuerte_Th%C3%BCngen%2C_ciudad_de_Luxemburgo%2C_Luxemburgo%2C_2023-12-16%2C_DD_148.jpg?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Fuerte_Th%C3%BCngen%2C_ciudad_de_Luxemburgo%2C_Luxemburgo%2C_2023-12-16%2C_DD_148.jpg",
+     "selite": "Thüngenin linnake eli Kolmen tammen linnake on entisen Luxemburgin linnoituksen osa.",
+     "leveys": 7199,
+     "korkeus": 4799,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Fuerte Thüngen, ciudad de Luxemburgo, Luxemburgo, 2023-12-16, DD 149-151 HDR.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Fuerte_Th%C3%BCngen%2C_ciudad_de_Luxemburgo%2C_Luxemburgo%2C_2023-12-16%2C_DD_149-151_HDR.jpg?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Fuerte_Th%C3%BCngen%2C_ciudad_de_Luxemburgo%2C_Luxemburgo%2C_2023-12-16%2C_DD_149-151_HDR.jpg",
+     "selite": "Linnakkeen pyöreät tornit valaistaan illalla.",
+     "leveys": 8165,
+     "korkeus": 4820,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Luxembourg City Night Wikimedia Commons.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Luxembourg_City_Night_Wikimedia_Commons.jpg?width=1280",
+   "tekija": "Benh LIEU SONG",
+   "lisenssi": "CC BY-SA 3.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Luxembourg_City_Night_Wikimedia_Commons.jpg",
+   "selite": "Luxemburgin kaupunki hohtaa illalla Alzetten laakson kallioilla.",
+   "leveys": 11101,
+   "korkeus": 5860,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Luxembourg City pano Wikimedia Commons.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Luxembourg_City_pano_Wikimedia_Commons.jpg?width=1280",
+   "tekija": "Benh LIEU SONG",
+   "lisenssi": "CC BY-SA 3.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Luxembourg_City_pano_Wikimedia_Commons.jpg",
+   "selite": "Grundin kaupunginosa ja kirkko avautuvat vanhan kaupungin kallion juurelle.",
+   "leveys": 6687,
+   "korkeus": 3331,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

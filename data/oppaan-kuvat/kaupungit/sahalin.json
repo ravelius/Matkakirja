@@ -1,0 +1,261 @@
+{
+ "kaupunki": "sahalin",
+ "kaupunkiQ": "Q7792",
+ "kohteet": [
+  {
+   "q": "Q7859",
+   "nimi": "Južno-Sahalinsk",
+   "peruste": "sitelinks",
+   "koko_m": 3000,
+   "lat": 46.95,
+   "lon": 142.73333,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Yuzhno-Sakhalinsk overview.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Yuzhno-Sakhalinsk_overview.jpg?width=1280",
+     "tekija": "Maarten",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Yuzhno-Sakhalinsk_overview.jpg",
+     "selite": "Južno-Sahalinsk on Sahalinin alueen pääkaupunki, jonka taakse kohoaa vuori.",
+     "leveys": 3008,
+     "korkeus": 2000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "2024-09-29-Sakhalin-panorama.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2024-09-29-Sakhalin-panorama.jpg?width=1280",
+     "tekija": "I13Robin",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2024-09-29-Sakhalin-panorama.jpg",
+     "selite": "Köysirata nousee kaupungin yläpuoliselle vuorelle, josta avautuu näkymä Susujajoen laaksoon.",
+     "leveys": 4000,
+     "korkeus": 1838,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "2024-10-03-Sakhalin-park-lake.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2024-10-03-Sakhalin-park-lake.jpg?width=1280",
+     "tekija": "I13Robin",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2024-10-03-Sakhalin-park-lake.jpg",
+     "selite": "Puiston lammen rannalla kaupunki heijastuu veteen.",
+     "leveys": 4000,
+     "korkeus": 2788,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3739749",
+   "nimi": "Anivan majakka",
+   "peruste": "pelin nosto",
+   "koko_m": 200,
+   "lat": 46.01888,
+   "lon": 143.41408,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Маяк Анива.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%9C%D0%B0%D1%8F%D0%BA_%D0%90%D0%BD%D0%B8%D0%B2%D0%B0.jpg?width=1280",
+     "tekija": "Yaroslav Shuraev",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%D0%9C%D0%B0%D1%8F%D0%BA_%D0%90%D0%BD%D0%B8%D0%B2%D0%B0.jpg",
+     "selite": "Anivan majakka seisoo kalliolla Sahalinin eteläkärjessä ja valmistui Japanin Karafuton aikana.",
+     "leveys": 6612,
+     "korkeus": 4408,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q494269",
+   "nimi": "Moneron",
+   "peruste": "sitelinks",
+   "koko_m": 4000,
+   "lat": 46.254,
+   "lon": 141.23269,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Гостевые домики на острове Монерон.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%93%D0%BE%D1%81%D1%82%D0%B5%D0%B2%D1%8B%D0%B5_%D0%B4%D0%BE%D0%BC%D0%B8%D0%BA%D0%B8_%D0%BD%D0%B0_%D0%BE%D1%81%D1%82%D1%80%D0%BE%D0%B2%D0%B5_%D0%9C%D0%BE%D0%BD%D0%B5%D1%80%D0%BE%D0%BD.jpg?width=1280",
+     "tekija": "Ванифатов Павел",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%D0%93%D0%BE%D1%81%D1%82%D0%B5%D0%B2%D1%8B%D0%B5_%D0%B4%D0%BE%D0%BC%D0%B8%D0%BA%D0%B8_%D0%BD%D0%B0_%D0%BE%D1%81%D1%82%D1%80%D0%BE%D0%B2%D0%B5_%D0%9C%D0%BE%D0%BD%D0%B5%D1%80%D0%BE%D0%BD.jpg",
+     "selite": "Moneron on Sahalinin edustan vihreä saari, jonka rannoilla on pieniä vierastaloja.",
+     "leveys": 2560,
+     "korkeus": 1707,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Tourist complex on Moneron Island.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tourist_complex_on_Moneron_Island.JPG?width=1280",
+     "tekija": "Dmitry Petelin",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tourist_complex_on_Moneron_Island.JPG",
+     "selite": "Saaren jyrkät rinteet laskeutuvat suoraan Japaninmereen.",
+     "leveys": 3872,
+     "korkeus": 2592,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q103406",
+   "nimi": "Aleksandrovsk-Sahalinski",
+   "peruste": "sitelinks",
+   "koko_m": 1500,
+   "lat": 50.9,
+   "lon": 142.15,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Маяк на мысе Жонкьер.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%9C%D0%B0%D1%8F%D0%BA_%D0%BD%D0%B0_%D0%BC%D1%8B%D1%81%D0%B5_%D0%96%D0%BE%D0%BD%D0%BA%D1%8C%D0%B5%D1%80.jpg?width=1280",
+     "tekija": "Maxim trukhin",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%D0%9C%D0%B0%D1%8F%D0%BA_%D0%BD%D0%B0_%D0%BC%D1%8B%D1%81%D0%B5_%D0%96%D0%BE%D0%BD%D0%BA%D1%8C%D0%B5%D1%80.jpg",
+     "selite": "Zonkjerin niemen majakka seisoo vihreällä niemellä Aleksandrovskin lähellä, entisen vankisiirtolan seudulla.",
+     "leveys": 4705,
+     "korkeus": 3116,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Anton Chekhov museum Alexandrovsk-Sakhalinsky file 1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Anton_Chekhov_museum_Alexandrovsk-Sakhalinsky_file_1.jpg?width=1280",
+     "tekija": "Harveyqs",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Anton_Chekhov_museum_Alexandrovsk-Sakhalinsky_file_1.jpg",
+     "selite": "Tšehovin museo sijaitsee Aleksandrovskissa, jossa kirjailija vieraili Sahalinin-matkallaan 1890.",
+     "leveys": 2304,
+     "korkeus": 1704,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q155331",
+   "nimi": "Korsakov",
+   "peruste": "sitelinks",
+   "koko_m": 2000,
+   "lat": 46.63333,
+   "lon": 142.76667,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Korsakov, Sakhalin Oblast (2022).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Korsakov%2C_Sakhalin_Oblast_(2022).jpg?width=1280",
+     "tekija": "Peutro",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Korsakov%2C_Sakhalin_Oblast_(2022).jpg",
+     "selite": "Korsakov on Anivanlahden satamakaupunki Sahalinin eteläosassa.",
+     "leveys": 1280,
+     "korkeus": 960,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q197609",
+   "nimi": "Holmsk",
+   "peruste": "sitelinks",
+   "koko_m": 2000,
+   "lat": 47.04028,
+   "lon": 142.04306,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Гавань торгового порта Холмска.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%93%D0%B0%D0%B2%D0%B0%D0%BD%D1%8C_%D1%82%D0%BE%D1%80%D0%B3%D0%BE%D0%B2%D0%BE%D0%B3%D0%BE_%D0%BF%D0%BE%D1%80%D1%82%D0%B0_%D0%A5%D0%BE%D0%BB%D0%BC%D1%81%D0%BA%D0%B0.JPG?width=1280",
+     "tekija": "Max Shestera",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%D0%93%D0%B0%D0%B2%D0%B0%D0%BD%D1%8C_%D1%82%D0%BE%D1%80%D0%B3%D0%BE%D0%B2%D0%BE%D0%B3%D0%BE_%D0%BF%D0%BE%D1%80%D1%82%D0%B0_%D0%A5%D0%BE%D0%BB%D0%BC%D1%81%D0%BA%D0%B0.JPG",
+     "selite": "Holmsk on Tatarinsalmen satamakaupunki, johon junalautta saapuu mantereelta.",
+     "leveys": 3648,
+     "korkeus": 2736,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Ahts - panoramio.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ahts_-_panoramio.jpg?width=1280",
+     "tekija": "Maksim Safiullin",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ahts_-_panoramio.jpg",
+     "selite": "Aluksia ja nostureita Holmskin satamassa auringonlaskun aikaan.",
+     "leveys": 3264,
+     "korkeus": 1840,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q183093",
+   "nimi": "Poronaisk",
+   "peruste": "sitelinks",
+   "koko_m": 1500,
+   "lat": 49.21667,
+   "lon": 143.1,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Мэрия Поронайска.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%9C%D1%8D%D1%80%D0%B8%D1%8F_%D0%9F%D0%BE%D1%80%D0%BE%D0%BD%D0%B0%D0%B9%D1%81%D0%BA%D0%B0.jpg?width=1280",
+     "tekija": "Meilcont",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%D0%9C%D1%8D%D1%80%D0%B8%D1%8F_%D0%9F%D0%BE%D1%80%D0%BE%D0%BD%D0%B0%D0%B9%D1%81%D0%BA%D0%B0.jpg",
+     "selite": "Poronaisk on Sahalinin keskiosan kaupunki Terpenijanlahden rannikon tuntumassa.",
+     "leveys": 1200,
+     "korkeus": 750,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Скалы мыса Великан.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%A1%D0%BA%D0%B0%D0%BB%D1%8B_%D0%BC%D1%8B%D1%81%D0%B0_%D0%92%D0%B5%D0%BB%D0%B8%D0%BA%D0%B0%D0%BD.jpg?width=1280",
+   "tekija": "Rost.galis",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%D0%A1%D0%BA%D0%B0%D0%BB%D1%8B_%D0%BC%D1%8B%D1%81%D0%B0_%D0%92%D0%B5%D0%BB%D0%B8%D0%BA%D0%B0%D0%BD.jpg",
+   "selite": "Velikanin niemen kekurikalliot kohoavat Sahalinin kaakkoisrannikolla Ohotanmeren aallokossa.",
+   "leveys": 5071,
+   "korkeus": 3719,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "The frozen southeastern coast of Russia’s Sakhalin Island (iss074e0312749).jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/The_frozen_southeastern_coast_of_Russia%E2%80%99s_Sakhalin_Island_(iss074e0312749).jpg?width=1280",
+   "tekija": "NASA Johnson Space Center",
+   "lisenssi": "Public domain",
+   "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:The_frozen_southeastern_coast_of_Russia%E2%80%99s_Sakhalin_Island_(iss074e0312749).jpg",
+   "selite": "Avaruudesta näkyy Sahalinin kaakkoisrannikon jäätynyt Terpenijanlahti.",
+   "leveys": 4928,
+   "korkeus": 2768,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

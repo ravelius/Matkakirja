@@ -1,0 +1,382 @@
+{
+ "kaupunki": "vilna",
+ "kaupunkiQ": "Q216",
+ "kohteet": [
+  {
+   "q": "Q445649",
+   "nimi": "Vilnan vanhakaupunki",
+   "peruste": "UNESCO",
+   "koko_m": 900,
+   "lat": 54.68333,
+   "lon": 25.28333,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Gedimino kalnas 58.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gedimino_kalnas_58.jpg?width=1280",
+     "tekija": "Gytis Grižas https://www.wikidata.org/wiki/Q16452479",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Gedimino_kalnas_58.jpg",
+     "selite": "Vilnan punakattoinen vanhakaupunki on yksi Euroopan suurimmista säilyneistä keskiaikaisista kaupunginosista.",
+     "leveys": 5464,
+     "korkeus": 3070,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "210 vilnius From Three Crosses Hill (15315336184).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/210_vilnius_From_Three_Crosses_Hill_(15315336184).jpg?width=1280",
+     "tekija": "Brian Toward from London, United Kingdom",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:210_vilnius_From_Three_Crosses_Hill_(15315336184).jpg",
+     "selite": "Kolmen ristin kukkulalta näkyvät vanhakaupunki, Gediminasin linnavuori ja tuomiokirkko.",
+     "leveys": 5660,
+     "korkeus": 3930,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1497616",
+   "nimi": "Gediminasin torni",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": 54.68676,
+   "lon": 25.29068,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Gedimino pilis by Augustas Didzgalvis.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gedimino_pilis_by_Augustas_Didzgalvis.jpg?width=1280",
+     "tekija": "BigHead",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Gedimino_pilis_by_Augustas_Didzgalvis.jpg",
+     "selite": "Tiilitorni on jäljellä oleva osa Vilnan ylälinnasta kukkulan huipulla Nerisjoen mutkassa.",
+     "leveys": 1800,
+     "korkeus": 1200,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "218 vilnius River Neris and Castle Hill (15941676980).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/218_vilnius_River_Neris_and_Castle_Hill_(15941676980).jpg?width=1280",
+     "tekija": "Brian Toward from London, United Kingdom",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:218_vilnius_River_Neris_and_Castle_Hill_(15941676980).jpg",
+     "selite": "Neris-joen takaa linnavuoren torni hallitsee Vilnan keskustan siluettia.",
+     "leveys": 6000,
+     "korkeus": 3511,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "2 Gediminas Castle, Vilnius.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2_Gediminas_Castle%2C_Vilnius.jpg?width=1280",
+     "tekija": "Felix Winkelnkemper",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2_Gediminas_Castle%2C_Vilnius.jpg",
+     "selite": "Illalla valaistu torni erottuu kukkulan huipulta Vilnan yllä.",
+     "leveys": 3024,
+     "korkeus": 4032,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1281237",
+   "nimi": "Vilnan tuomiokirkko",
+   "peruste": "pelin nosto",
+   "koko_m": 120,
+   "lat": 54.68589,
+   "lon": 25.28788,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Wilno - katedra corrected.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Wilno_-_katedra_corrected.jpg?width=1280",
+     "tekija": "Wilno_-_katedra.JPG: Krzysztof Mizera derivative work: --Chrumps (talk)",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Wilno_-_katedra_corrected.jpg",
+     "selite": "Uusklassinen pylväsjulkisivu tekee tuomiokirkosta Liettuan kansallisen symbolin.",
+     "leveys": 2711,
+     "korkeus": 2000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Vilnius - Cathedral 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Vilnius_-_Cathedral_01.jpg?width=1280",
+     "tekija": "Lestat (Jan Mehlich)",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Vilnius_-_Cathedral_01.jpg",
+     "selite": "Erillinen kellotorni seisoo tuomiokirkon vieressä Katedros-aukiolla, ja sitä käytetään tapaamispaikkana.",
+     "leveys": 2427,
+     "korkeus": 2965,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q937212",
+   "nimi": "Aamuportti",
+   "peruste": "sitelinks",
+   "koko_m": 60,
+   "lat": 54.67444,
+   "lon": 25.28944,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Aushros vartai (Gate of Dawn).JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aushros_vartai_(Gate_of_Dawn).JPG?width=1280",
+     "tekija": "Umnik",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aushros_vartai_(Gate_of_Dawn).JPG",
+     "selite": "Aamuportti on Vilnan vanhan kaupunginmuurin ainoa säilynyt portti, ja sen päällä on kappeli.",
+     "leveys": 2048,
+     "korkeus": 1536,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Ausros Vartai.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ausros_Vartai.jpg?width=1280",
+     "tekija": "Ypsilon from Finland",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ausros_Vartai.jpg",
+     "selite": "Portin yläkappelin ihmeitätekevä Neitsyt Marian kuva vetää pyhiinvaeltajia kaikkialta Itä-Euroopasta.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q937290",
+   "nimi": "Pyhän Annan kirkko",
+   "peruste": "pelin nosto",
+   "koko_m": 50,
+   "lat": 54.68306,
+   "lon": 25.29333,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "St. Anne's Church Exterior 3, Vilnius, Lithuania - Diliff.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/St._Anne's_Church_Exterior_3%2C_Vilnius%2C_Lithuania_-_Diliff.jpg?width=1280",
+     "tekija": "Diliff",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:St._Anne's_Church_Exterior_3%2C_Vilnius%2C_Lithuania_-_Diliff.jpg",
+     "selite": "Punatiilisen goottilaisen kirkon pitsimäinen julkisivu on Vilnan tunnetuimpia rakennuksia.",
+     "leveys": 5594,
+     "korkeus": 8000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "188 vilnius St Ann Church (15399072730).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/188_vilnius_St_Ann_Church_(15399072730).jpg?width=1280",
+     "tekija": "Brian Toward from London, United Kingdom",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:188_vilnius_St_Ann_Church_(15399072730).jpg",
+     "selite": "Kirkon vieressä seisoo Bernardiinien kirkko, ja yhdessä ne muodostavat tiiliarkkitehtuurin kokonaisuuden.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q658192",
+   "nimi": "Vilnan yliopisto",
+   "peruste": "pelin nosto",
+   "koko_m": 200,
+   "lat": 54.6825,
+   "lon": 25.28722,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Vilnius University Great Courtyard 1, Vilnius, Lithuania - Diliff.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Vilnius_University_Great_Courtyard_1%2C_Vilnius%2C_Lithuania_-_Diliff.jpg?width=1280",
+     "tekija": "Diliff",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Vilnius_University_Great_Courtyard_1%2C_Vilnius%2C_Lithuania_-_Diliff.jpg",
+     "selite": "Yliopiston suuri sisäpiha on vanhaa kampusta, ja yliopisto perustettiin vuonna 1579.",
+     "leveys": 4589,
+     "korkeus": 5000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Senamiestis, Vilnius, Lithuania - panoramio (165).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Senamiestis%2C_Vilnius%2C_Lithuania_-_panoramio_(165).jpg?width=1280",
+     "tekija": "Michal Gorski",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Senamiestis%2C_Vilnius%2C_Lithuania_-_panoramio_(165).jpg",
+     "selite": "Yliopiston pihoja kehystävät erilaiset rakennukset ja vanhat tornit.",
+     "leveys": 5472,
+     "korkeus": 3648,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q945499",
+   "nimi": "Užupis",
+   "peruste": "pelin nosto",
+   "koko_m": 600,
+   "lat": 54.68056,
+   "lon": 25.29694,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Uzupio by Augustas Didzgalvis.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Uzupio_by_Augustas_Didzgalvis.jpg?width=1280",
+     "tekija": "Augustas Didžgalvis",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Uzupio_by_Augustas_Didzgalvis.jpg",
+     "selite": "Užupisin kaupunginosan aukiolla enkelipatsas symboloi kaupunginosan itsenäistä taiteilijatasavaltaa.",
+     "leveys": 1800,
+     "korkeus": 1200,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "199 vilnius Užupis Constitution (15598363386).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/199_vilnius_U%C5%BEupis_Constitution_(15598363386).jpg?width=1280",
+     "tekija": "Brian Toward from London, United Kingdom",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:199_vilnius_U%C5%BEupis_Constitution_(15598363386).jpg",
+     "selite": "Seinälle kiinnitetyissä tauluissa on Užupisin tasavallan perustuslaki monella kielellä.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1283798",
+   "nimi": "Pyhän Pietarin ja Pyhän Paavalin kirkko",
+   "peruste": "sitelinks",
+   "koko_m": 80,
+   "lat": 54.69417,
+   "lon": 25.30639,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Vilnius Sts Peter et Paul Church 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Vilnius_Sts_Peter_et_Paul_Church_01.jpg?width=1280",
+     "tekija": "Scotch Mist",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Vilnius_Sts_Peter_et_Paul_Church_01.jpg",
+     "selite": "Antakalnisin barokkikirkko on tunnettu tuhansista stukkoveistoksista sisätiloissaan.",
+     "leveys": 5597,
+     "korkeus": 3721,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q83238",
+   "nimi": "Kolme ristiä",
+   "peruste": "sitelinks",
+   "koko_m": 50,
+   "lat": 54.68674,
+   "lon": 25.29755,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Three Crosses monument at sunset (8178265580).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Three_Crosses_monument_at_sunset_(8178265580).jpg?width=1280",
+     "tekija": "Guillaume Speurt from Vilnius, Lithuania",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Three_Crosses_monument_at_sunset_(8178265580).jpg",
+     "selite": "Kolmen valkoisen ristin muistomerkki kohoaa kukkulan päällä Vilnan keskustan yläpuolella.",
+     "leveys": 3265,
+     "korkeus": 2376,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "3 kryziai 2021.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/3_kryziai_2021.jpg?width=1280",
+     "tekija": "user:CD",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:3_kryziai_2021.jpg",
+     "selite": "Kukkulan ristit näkyvät kauas kaupungin ylle erityisesti hämärässä.",
+     "leveys": 3000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1284847",
+   "nimi": "Liettuan suurruhtinaiden palatsi",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 54.68585,
+   "lon": 25.28896,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Valdovu by Augustas Didzgalvis.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Valdovu_by_Augustas_Didzgalvis.jpg?width=1280",
+     "tekija": "Augustas Didžgalvis",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Valdovu_by_Augustas_Didzgalvis.jpg",
+     "selite": "Uudelleen rakennettu palatsi seisoo alavalla Gediminasin kukkulan juurella ja toimii museona.",
+     "leveys": 1800,
+     "korkeus": 1200,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Vilnius river.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Vilnius_river.jpg?width=1280",
+   "tekija": "Tiia Monto",
+   "lisenssi": "CC BY-SA 3.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Vilnius_river.jpg",
+   "selite": "Neris virtaa Vilnan läpi, ja uusi pilvenpiirtäjäalue erottuu vanhankaupungin takaa.",
+   "leveys": 3067,
+   "korkeus": 2140,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Vilnius old town 2.JPG",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Vilnius_old_town_2.JPG?width=1280",
+   "tekija": "Karmen media",
+   "lisenssi": "CC BY-SA 3.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Vilnius_old_town_2.JPG",
+   "selite": "Vanhankaupungin punaiset katot ja kirkkojen tornit näkyvät ylhäältä katsottuna.",
+   "leveys": 3456,
+   "korkeus": 2592,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

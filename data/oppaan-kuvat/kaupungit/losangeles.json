@@ -1,0 +1,625 @@
+{
+ "kaupunki": "losangeles",
+ "kaupunkiQ": "Q65",
+ "kohteet": [
+  {
+   "q": "Q180376",
+   "nimi": "Hollywood-kyltti",
+   "peruste": "sitelinks",
+   "koko_m": 300,
+   "lat": 34.1341,
+   "lon": -118.32169,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Hollywood Sign.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hollywood_Sign.jpg?width=1280",
+     "tekija": "Thomas Wolf, www.foto-tw.de",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Hollywood_Sign.jpg",
+     "selite": "Hollywood-kyltti on Mount Leen rinteelle pystytetty valkoinen kirjainrivi, joka tunnetaan kaikkialla.",
+     "leveys": 16850,
+     "korkeus": 11464,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Hollywood sign from Clinton and Normandie.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hollywood_sign_from_Clinton_and_Normandie.jpg?width=1280",
+     "tekija": "Downtowngal",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Hollywood_sign_from_Clinton_and_Normandie.jpg",
+     "selite": "Kaukaa kyltti erottuu kaupungin yli palmujen takaa kukkuloilla.",
+     "leveys": 4416,
+     "korkeus": 2174,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q575901",
+   "nimi": "Griffithin observatorio",
+   "peruste": "sitelinks",
+   "koko_m": 200,
+   "lat": 34.11856,
+   "lon": -118.30037,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Griffith observatory 2006.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Griffith_observatory_2006.jpg?width=1280",
+     "tekija": "Matthew Field",
+     "lisenssi": "CC BY 2.5",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.5",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Griffith_observatory_2006.jpg",
+     "selite": "Griffithin observatorio on Mount Hollywoodin rinteellä oleva valkoinen art deco -rakennus kuparikupoleineen.",
+     "leveys": 2000,
+     "korkeus": 970,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Griffith Observatory 2012 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Griffith_Observatory_2012_01.jpg?width=1280",
+     "tekija": "Photograph by Mike Peel (www.mikepeel.net).",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Griffith_Observatory_2012_01.jpg",
+     "selite": "Rakennus näkyy kaukaa kukkulan harjalta kaupungin ylle.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q595439",
+   "nimi": "Santa Monica Pier",
+   "peruste": "sitelinks",
+   "koko_m": 600,
+   "lat": 34.00861,
+   "lon": -118.49861,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Aerial Photo of Santa Monica Pier.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aerial_Photo_of_Santa_Monica_Pier.jpg?width=1280",
+     "tekija": "Jelson25",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aerial_Photo_of_Santa_Monica_Pier.jpg",
+     "selite": "Santa Monica Pier ulottuu pitkänä laituriosana hiekkarannalta Tyynellemerelle.",
+     "leveys": 3517,
+     "korkeus": 1555,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Los Angeles (California, USA), Santa Monica Beach -- 2012 -- 5301.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Los_Angeles_(California%2C_USA)%2C_Santa_Monica_Beach_--_2012_--_5301.jpg?width=1280",
+     "tekija": "Dietmar Rabich",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Los_Angeles_(California%2C_USA)%2C_Santa_Monica_Beach_--_2012_--_5301.jpg",
+     "selite": "Laiturin maailmanpyörä näkyy rantaviivan päässä.",
+     "leveys": 5184,
+     "korkeus": 2826,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q474326",
+   "nimi": "Walt Disney -konserttitalo",
+   "peruste": "pelin nosto",
+   "koko_m": 200,
+   "lat": 34.05528,
+   "lon": -118.25,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Image-Disney Concert Hall by Carol Highsmith edit.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Image-Disney_Concert_Hall_by_Carol_Highsmith_edit.jpg?width=1280",
+     "tekija": "Carol M. Highsmith",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Image-Disney_Concert_Hall_by_Carol_Highsmith_edit.jpg",
+     "selite": "Frank Gehryn suunnittelema konserttitalo on kasa kaarevia teräspintoja Grand Avenuella.",
+     "leveys": 4500,
+     "korkeus": 3516,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Walt Disney Concert Hall exterior 02.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Walt_Disney_Concert_Hall_exterior_02.jpg?width=1280",
+     "tekija": "Leviclancy",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Walt_Disney_Concert_Hall_exterior_02.jpg",
+     "selite": "Ruostumattoman teräksen pinnat heijastavat taivasta ja kaupunkia.",
+     "leveys": 6016,
+     "korkeus": 4000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q368489",
+   "nimi": "Los Angelesin kaupungintalo",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 34.0536,
+   "lon": -118.243,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Los Angeles City Hall dllu.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Los_Angeles_City_Hall_dllu.jpg?width=1280",
+     "tekija": "Daniel L. Lu (user:dllu)",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Los_Angeles_City_Hall_dllu.jpg",
+     "selite": "Kaupungintalon valkoinen art deco -torni kohoaa Civic Centerin yläpuolelle.",
+     "leveys": 4977,
+     "korkeus": 4848,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Los Angeles City Hall, 2022.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Los_Angeles_City_Hall%2C_2022.jpg?width=1280",
+     "tekija": "Another Believer",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Los_Angeles_City_Hall%2C_2022.jpg",
+     "selite": "Torni nousee porrastettuna palmujen ja kuusen väliltä.",
+     "leveys": 3024,
+     "korkeus": 4032,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1069719",
+   "nimi": "Angels Flight",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": 34.05134,
+   "lon": -118.25021,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Angels Flight 2020.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Angels_Flight_2020.jpg?width=1280",
+     "tekija": "Андрей Романенко",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Angels_Flight_2020.jpg",
+     "selite": "Angels Flight on lyhyt oranssi köysirata, joka nousee Bunker Hillin rinnettä keskustassa.",
+     "leveys": 1944,
+     "korkeus": 2592,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Angels Flight funicular, Downtown Los Angeles, California 02.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Angels_Flight_funicular%2C_Downtown_Los_Angeles%2C_California_02.jpg?width=1280",
+     "tekija": "Levi Clancy",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Angels_Flight_funicular%2C_Downtown_Los_Angeles%2C_California_02.jpg",
+     "selite": "Kaksi pientä vaunua kulkevat vastakkain samalla radalla.",
+     "leveys": 4000,
+     "korkeus": 6016,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q27676389",
+   "nimi": "Los Angelesin pääkirjasto",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 34.05028,
+   "lon": -118.255,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Los Angeles, CA Central Library 1971.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Los_Angeles%2C_CA_Central_Library_1971.jpg?width=1280",
+     "tekija": "Adam from Champaign, Illinois, USA",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Los_Angeles%2C_CA_Central_Library_1971.jpg",
+     "selite": "Pääkirjaston Bertram Goodhuen suunnittelema rakennus on taustaltaan Bunker Hillin pilvenpiirtäjien edessä.",
+     "leveys": 4666,
+     "korkeus": 3637,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q29247",
+   "nimi": "Getty Center",
+   "peruste": "sitelinks",
+   "koko_m": 400,
+   "lat": 34.0775,
+   "lon": -118.475,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Getty Center from Central Garden on 2009-02-08.png",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Getty_Center_from_Central_Garden_on_2009-02-08.png?width=1280",
+     "tekija": "Robert F. Tobler",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Getty_Center_from_Central_Garden_on_2009-02-08.png",
+     "selite": "Getty Center on kukkulalle rakennettu taidemuseokompleksi, ja sen keskipuutarha avautuu laaksoon.",
+     "leveys": 5120,
+     "korkeus": 2560,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q495106",
+   "nimi": "Bradbury Building",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": 34.05053,
+   "lon": -118.24783,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Bradbury Atrium 2011.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bradbury_Atrium_2011.JPG?width=1280",
+     "tekija": "Sgerbic",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bradbury_Atrium_2011.JPG",
+     "selite": "Bradbury Buildingin valoisa sisäpiha on täynnä rautakaiteita ja avoimia hissejä.",
+     "leveys": 3456,
+     "korkeus": 5184,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Bradbury Building, interior, ironwork.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bradbury_Building%2C_interior%2C_ironwork.jpg?width=1280",
+     "tekija": "Luke Jones",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bradbury_Building%2C_interior%2C_ironwork.jpg",
+     "selite": "Valurautaiset portaat ja ruskeat tiiliseinät muodostavat rakennuksen tunnusmerkin.",
+     "leveys": 2048,
+     "korkeus": 1536,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1122565",
+   "nimi": "Grauman's Chinese Theatre",
+   "peruste": "sitelinks",
+   "koko_m": 80,
+   "lat": 34.10194,
+   "lon": -118.34083,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Grauman's Chinese Theatre, by Carol Highsmith fixed & straightened.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Grauman's_Chinese_Theatre%2C_by_Carol_Highsmith_fixed_%26_straightened.jpg?width=1280",
+     "tekija": "Carol M. Highsmith",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Grauman's_Chinese_Theatre%2C_by_Carol_Highsmith_fixed_%26_straightened.jpg",
+     "selite": "Graumanin kiinalaisen teatterin pagodikatto ja lohikäärmeet erottuvat Hollywood Boulevardin varrella.",
+     "leveys": 3445,
+     "korkeus": 4343,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "The Chinese Theatre, Hollywood, California.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/The_Chinese_Theatre%2C_Hollywood%2C_California.jpg?width=1280",
+     "tekija": "Boston Public Library",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:The_Chinese_Theatre%2C_Hollywood%2C_California.jpg",
+     "selite": "Vanha postikortti esittelee teatterin sivuilla olevat torni- ja pagodikoristeet.",
+     "leveys": 1500,
+     "korkeus": 970,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q849784",
+   "nimi": "Los Angeles Memorial Coliseum",
+   "peruste": "pelin nosto",
+   "koko_m": 300,
+   "lat": 34.01417,
+   "lon": -118.28778,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Los Angeles Memorial Coliseum, 3911 S. Figueroa St. University Park 16.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Los_Angeles_Memorial_Coliseum%2C_3911_S._Figueroa_St._University_Park_16.jpg?width=1280",
+     "tekija": "MikeJiroch",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Los_Angeles_Memorial_Coliseum%2C_3911_S._Figueroa_St._University_Park_16.jpg",
+     "selite": "Coliseumin kaarevan stadionin pääportin yläpuolella palaa olympiasoihtu.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Aerial view of Los Angeles Memorial Coliseum, 1987.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aerial_view_of_Los_Angeles_Memorial_Coliseum%2C_1987.jpg?width=1280",
+     "tekija": "Thomas Kelsey, Los Angeles Times",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aerial_view_of_Los_Angeles_Memorial_Coliseum%2C_1987.jpg",
+     "selite": "Ilmasta stadionin soikea katsomo ja kenttä erottuvat selvästi.",
+     "leveys": 3930,
+     "korkeus": 2604,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q71842",
+   "nimi": "Eastern Columbia Building",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": 34.04275,
+   "lon": -118.25623,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "LA Eastern Columbia Building.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/LA_Eastern_Columbia_Building.jpg?width=1280",
+     "tekija": "Photo: Andreas Praefcke",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:LA_Eastern_Columbia_Building.jpg",
+     "selite": "Eastern Columbia Building on turkoosilaattainen art deco -pilvenpiirtäjä keskustassa.",
+     "leveys": 3264,
+     "korkeus": 2448,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Eastern Columbia Building 3.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Eastern_Columbia_Building_3.jpg?width=1280",
+     "tekija": "Antoine Taveneaux",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Eastern_Columbia_Building_3.jpg",
+     "selite": "Tornin kellotaulut ja kultaiset koristeet erottuvat sinistä taivasta vasten.",
+     "leveys": 3078,
+     "korkeus": 4749,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q784575",
+   "nimi": "Olvera Street",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 34.0575,
+   "lon": -118.238,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Olvera Street, Los Angeles-2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Olvera_Street%2C_Los_Angeles-2.jpg?width=1280",
+     "tekija": "Visitor7",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Olvera_Street%2C_Los_Angeles-2.jpg",
+     "selite": "Olvera Street on El Pueblo de Los Angelesin kävelykatu, jonka kojut myyvät meksikolaisia tuotteita.",
+     "leveys": 5472,
+     "korkeus": 3648,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Olvera Street, Los Angeles-4.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Olvera_Street%2C_Los_Angeles-4.jpg?width=1280",
+     "tekija": "Visitor7",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Olvera_Street%2C_Los_Angeles-4.jpg",
+     "selite": "Punatiilinen katu kulkee vanhojen adobetalojen välissä.",
+     "leveys": 5472,
+     "korkeus": 3648,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q976218",
+   "nimi": "Hollywood Bowl",
+   "peruste": "sitelinks",
+   "koko_m": 250,
+   "lat": 34.11278,
+   "lon": -118.33889,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Hollywood bowl and sign.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hollywood_bowl_and_sign.jpg?width=1280",
+     "tekija": "Matthew Field, http://www.photography.mattfield.com",
+     "lisenssi": "CC BY-SA 2.5",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Hollywood_bowl_and_sign.jpg",
+     "selite": "Hollywood Bowl on rinteeseen rakennettu ulkoilmakonserttipaikka, jonka kaarimainen lava on tunnusmerkki.",
+     "leveys": 3504,
+     "korkeus": 2336,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Hollywood Bowl at Sunset.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hollywood_Bowl_at_Sunset.jpg?width=1280",
+     "tekija": "Royalsafira",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Hollywood_Bowl_at_Sunset.jpg",
+     "selite": "Illalla katsomo ja kaaret valaistaan rinteen laidalla.",
+     "leveys": 4535,
+     "korkeus": 2819,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q198019",
+   "nimi": "Union Station",
+   "peruste": "sitelinks",
+   "koko_m": 250,
+   "lat": 34.0551,
+   "lon": -118.235,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "20140830 50 Los Angeles Union Station (15360153108).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20140830_50_Los_Angeles_Union_Station_(15360153108).jpg?width=1280",
+     "tekija": "David Wilson from Oak Park, Illinois, USA",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20140830_50_Los_Angeles_Union_Station_(15360153108).jpg",
+     "selite": "Union Station on espanjalaisen tyylin ja art decon yhdistävä rautatieasema palmujen keskellä.",
+     "leveys": 2816,
+     "korkeus": 2112,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Union Station (Los Angeles) 2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Union_Station_(Los_Angeles)_2.jpg?width=1280",
+     "tekija": "Antoine Taveneaux",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Union_Station_(Los_Angeles)_2.jpg",
+     "selite": "Aseman kello- ja tornirakennus erottuu valkoisena aukion yläpuolella.",
+     "leveys": 3264,
+     "korkeus": 4928,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q49490657",
+   "nimi": "Fort Moore -muistomuuri",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": 34.05833,
+   "lon": -118.24194,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Fort Moore Pioneer Memorial, Downtown Los Angeles.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Fort_Moore_Pioneer_Memorial%2C_Downtown_Los_Angeles.JPG?width=1280",
+     "tekija": "Los Angeles",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Fort_Moore_Pioneer_Memorial%2C_Downtown_Los_Angeles.JPG",
+     "selite": "Fort Moore -muistomuuri kertoo sotilaiden ja uudisasukkaiden vaiheista Bunker Hillin rinteellä.",
+     "leveys": 2752,
+     "korkeus": 2018,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Los Angeles, California (September 9, 2022) - 242.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Los_Angeles%2C_California_(September_9%2C_2022)_-_242.jpg?width=1280",
+     "tekija": "Another Believer",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Los_Angeles%2C_California_(September_9%2C_2022)_-_242.jpg",
+     "selite": "Muistomuurin vieressä on pitkä vesiallas ja tiilimuuri.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1590419",
+   "nimi": "Japanilaisamerikkalainen museo",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": 34.0496,
+   "lon": -118.239,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Japanese American National Museum (Los Angeles) August 2024.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Japanese_American_National_Museum_(Los_Angeles)_August_2024.JPG?width=1280",
+     "tekija": "Alexis Doine",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Japanese_American_National_Museum_(Los_Angeles)_August_2024.JPG",
+     "selite": "Japanilaisamerikkalainen museo toimii Little Tokiossa, ja sen uusi lasijulkisivu avautuu aukiolle.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Lax skyline 01212012.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lax_skyline_01212012.jpg?width=1280",
+   "tekija": "Michael Adams",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Lax_skyline_01212012.jpg",
+   "selite": "Los Angelesin keskusta nousee laajan kaupunkimaiseman keskeltä vuorten edessä.",
+   "leveys": 4604,
+   "korkeus": 3404,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Downtown Los Angeles Aerial 4163 (49531653592).jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Downtown_Los_Angeles_Aerial_4163_(49531653592).jpg?width=1280",
+   "tekija": "formulanone",
+   "lisenssi": "CC BY-SA 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Downtown_Los_Angeles_Aerial_4163_(49531653592).jpg",
+   "selite": "Ilmasta keskustan pilvenpiirtäjät erottuvat tiheän kortteliruudukon keskellä.",
+   "leveys": 2400,
+   "korkeus": 1600,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": [
+  {
+   "q": "Q7170179",
+   "nimi": "Pershing Square",
+   "peruste": "pelin nosto",
+   "lat": 34.04833,
+   "lon": -118.25278,
+   "syy": "ei kelvollista vapaata kuvaa >= 1 200 px löytynyt tarkistetuista ehdokkaista"
+  },
+  {
+   "q": "Q1147168",
+   "nimi": "La Brean tervahaudat",
+   "peruste": "sitelinks",
+   "lat": 34.06306,
+   "lon": -118.35583,
+   "syy": "ei ulkokuvaa tervahaudoista; löydetyt kuvat ovat museon sisätiloista"
+  }
+ ]
+}

@@ -1,0 +1,473 @@
+{
+ "kaupunki": "ljubljana",
+ "kaupunkiQ": "Q437",
+ "kohteet": [
+  {
+   "q": "Q2075156",
+   "nimi": "Ljubljanan linna",
+   "peruste": "pelin nosto",
+   "koko_m": 300,
+   "lat": 46.04871,
+   "lon": 14.50863,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Ljubljanski grad in Grajski grič.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ljubljanski_grad_in_Grajski_gri%C4%8D.jpg?width=1280",
+     "tekija": "LjGrad",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ljubljanski_grad_in_Grajski_gri%C4%8D.jpg",
+     "selite": "Ljubljanan linna kohoaa kaupungin yläpuolella linnavuorella.",
+     "leveys": 1200,
+     "korkeus": 800,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "07 Ljubljana (14) (33544468633).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/07_Ljubljana_(14)_(33544468633).jpg?width=1280",
+     "tekija": "Kévin Veau",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:07_Ljubljana_(14)_(33544468633).jpg",
+     "selite": "Linnan paksut kivimuurit ja torni ovat keskiaikaista perua.",
+     "leveys": 4800,
+     "korkeus": 3200,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "07 Ljubljana (18) (33544467623).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/07_Ljubljana_(18)_(33544467623).jpg?width=1280",
+     "tekija": "Kévin Veau",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:07_Ljubljana_(18)_(33544467623).jpg",
+     "selite": "Linnan kellotorni ja lippu erottuvat vuorelta pitkälle kaupunkiin.",
+     "leveys": 3200,
+     "korkeus": 4800,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q676315",
+   "nimi": "Tromostovje",
+   "peruste": "pelin nosto",
+   "koko_m": 120,
+   "lat": 46.05108,
+   "lon": 14.5062,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "2021-07-28 Ljubljana-0769.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2021-07-28_Ljubljana-0769.jpg?width=1280",
+     "tekija": "Sieglinde Hankele",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2021-07-28_Ljubljana-0769.jpg",
+     "selite": "Tromostovje eli Kolmoissilta ylittää Ljubljanica-joen Prešerenin aukion kupeessa.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Ljubljana (11992532396).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ljubljana_(11992532396).jpg?width=1280",
+     "tekija": "Jorge Láscar from Australia",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ljubljana_(11992532396).jpg",
+     "selite": "Plečnikin suunnittelemat jalankulkusillat seisovat vanhan kivisillan rinnalla.",
+     "leveys": 4288,
+     "korkeus": 2848,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "August 2006, Ljubljana 4.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/August_2006%2C_Ljubljana_4.jpg?width=1280",
+     "tekija": "Syced",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:August_2006%2C_Ljubljana_4.jpg",
+     "selite": "Siltojen kaaret ja kivinen kaide heijastuvat joen veteen.",
+     "leveys": 2272,
+     "korkeus": 1704,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1889515",
+   "nimi": "Prešerenin aukio",
+   "peruste": "pelin nosto",
+   "koko_m": 120,
+   "lat": 46.05137,
+   "lon": 14.50595,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "COVID-19 pandemic in Slovenia (Ljubljana downtown, center).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/COVID-19_pandemic_in_Slovenia_(Ljubljana_downtown%2C_center).jpg?width=1280",
+     "tekija": "Petar Milošević",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:COVID-19_pandemic_in_Slovenia_(Ljubljana_downtown%2C_center).jpg",
+     "selite": "Prešerenin aukio on Ljubljanan keskustan aukio, jota hallitsee vaaleanpunainen Fransiskaanikirkko.",
+     "leveys": 7440,
+     "korkeus": 3808,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Tromostovje in Prešernov trg (Tromostovje and Prešeren Square).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tromostovje_in_Pre%C5%A1ernov_trg_(Tromostovje_and_Pre%C5%A1eren_Square).jpg?width=1280",
+     "tekija": "Petar Milošević",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tromostovje_in_Pre%C5%A1ernov_trg_(Tromostovje_and_Pre%C5%A1eren_Square).jpg",
+     "selite": "Ilmasta aukion pyöreä kuvio ja sillat hohtavat illan valoissa.",
+     "leveys": 5280,
+     "korkeus": 3956,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Crossing the triple bridge (34834748760).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Crossing_the_triple_bridge_(34834748760).jpg?width=1280",
+     "tekija": "Francisco Anzola from United States",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Crossing_the_triple_bridge_(34834748760).jpg",
+     "selite": "Aukiolta alkavat kävelykadut vanhaan kaupunkiin.",
+     "leveys": 6016,
+     "korkeus": 4000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q660029",
+   "nimi": "Lohikäärmesilta",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": 46.05194,
+   "lon": 14.51028,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Dragons Bridge, Ljubljana 2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dragons_Bridge%2C_Ljubljana_2.jpg?width=1280",
+     "tekija": "Thomas Ledl",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Dragons_Bridge%2C_Ljubljana_2.jpg",
+     "selite": "Lohikäärmesilta on jugendtyylinen kaarisilta Ljubljanican yli.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Dragon Bridge, Ljubljana, 20240502 1822 7810.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dragon_Bridge%2C_Ljubljana%2C_20240502_1822_7810.jpg?width=1280",
+     "tekija": "Jakub Hałun",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Dragon_Bridge%2C_Ljubljana%2C_20240502_1822_7810.jpg",
+     "selite": "Sillan kulmissa vartioivat lohikäärmepatsaat, jotka ovat Ljubljanan vaakunan symboli.",
+     "leveys": 5792,
+     "korkeus": 3864,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Dragon on the Dragon Bridge (Ljubljana).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dragon_on_the_Dragon_Bridge_(Ljubljana).jpg?width=1280",
+     "tekija": "Petar Milošević",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Dragon_on_the_Dragon_Bridge_(Ljubljana).jpg",
+     "selite": "Vihreäksi patinoituneet lohikäärmeet kohoavat sillan kulmapylväiden päällä.",
+     "leveys": 4833,
+     "korkeus": 3709,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1236564",
+   "nimi": "Ljubljanan tuomiokirkko",
+   "peruste": "sitelinks",
+   "koko_m": 70,
+   "lat": 46.05071,
+   "lon": 14.50824,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Stolnica Sv. Nikolaja 02.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Stolnica_Sv._Nikolaja_02.jpg?width=1280",
+     "tekija": "Mihael Grmek",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Stolnica_Sv._Nikolaja_02.jpg",
+     "selite": "Ljubljanan tuomiokirkko on barokkinen kupolikirkko Keskustorin laidalla.",
+     "leveys": 2462,
+     "korkeus": 2606,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Slovénie, Ljubljana, Cathédrale Saint-Nicolas (Stolnica svetega Nikolaja) (45196157485).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Slov%C3%A9nie%2C_Ljubljana%2C_Cath%C3%A9drale_Saint-Nicolas_(Stolnica_svetega_Nikolaja)_(45196157485).jpg?width=1280",
+     "tekija": "Marie Thérèse Hébert & Jean Robert Thibault",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Slov%C3%A9nie%2C_Ljubljana%2C_Cath%C3%A9drale_Saint-Nicolas_(Stolnica_svetega_Nikolaja)_(45196157485).jpg",
+     "selite": "Kirkon kupoli ja torni kohoavat vanhan kaupungin talojen yläpuolelle.",
+     "leveys": 1920,
+     "korkeus": 1080,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q12034073",
+   "nimi": "Plečnikin tori",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 46.05143,
+   "lon": 14.50857,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Ljubljana - Central Market.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ljubljana_-_Central_Market.jpg?width=1280",
+     "tekija": "Tiia Monto",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ljubljana_-_Central_Market.jpg",
+     "selite": "Ljubljanan keskustori on Plečnikin suunnittelema kauppahallien ja arkadien kokonaisuus Ljubljanican rannalla.",
+     "leveys": 3712,
+     "korkeus": 2320,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Ljubljana - Pogačarjev trg (2008-07).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ljubljana_-_Poga%C4%8Darjev_trg_(2008-07).jpg?width=1280",
+     "tekija": "Szeder László",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ljubljana_-_Poga%C4%8Darjev_trg_(2008-07).jpg",
+     "selite": "Torin viherraidalliset markiisit ja arkadit johtavat tuomiokirkon varjoon.",
+     "leveys": 1600,
+     "korkeus": 1200,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Ljubljana Central Market, view from Ljubljana Castle.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ljubljana_Central_Market%2C_view_from_Ljubljana_Castle.jpg?width=1280",
+     "tekija": "Ajznponar",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ljubljana_Central_Market%2C_view_from_Ljubljana_Castle.jpg",
+     "selite": "Linnavuorelta nähtynä tori levittäytyy joen ja kattojen väliin.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2428528",
+   "nimi": "Tivolin puisto",
+   "peruste": "sitelinks",
+   "koko_m": 500,
+   "lat": 46.0539,
+   "lon": 14.4967,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Tivoli park in Ljubljan.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tivoli_park_in_Ljubljan.jpg?width=1280",
+     "tekija": "This Photo was taken by Miha Peče. Feel free to use my photos, but please mention me as the author. I would much appreciate if you send me an email pc.osx.linux@gmail.com or write on my talk page, for my information. Please do not upload an edited image here without consulting me. I would like to make corrections only at my own source to ensure that the changes improve the image and are preserved.Otherwise you may upload an edited image with a new name. Please use one of the templates derivative or extract.",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tivoli_park_in_Ljubljan.jpg",
+     "selite": "Tivolin puisto on Ljubljanan suurin puisto, ja linna näkyy sen yli.",
+     "leveys": 6994,
+     "korkeus": 4633,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Tivoli City Park, Ljubljana (2013).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tivoli_City_Park%2C_Ljubljana_(2013).jpg?width=1280",
+     "tekija": "Dedo70",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tivoli_City_Park%2C_Ljubljana_(2013).jpg",
+     "selite": "Puiston pääkäytävä on kulkureitti, jonka varrella pidetään valokuvanäyttelyitä.",
+     "leveys": 3456,
+     "korkeus": 2304,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Tivoli City Park, Ljubljana (2019).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tivoli_City_Park%2C_Ljubljana_(2019).jpg?width=1280",
+     "tekija": "Dedo70",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tivoli_City_Park%2C_Ljubljana_(2019).jpg",
+     "selite": "Käytävää reunustavat suuret puut ja avoimet nurmialueet.",
+     "leveys": 4608,
+     "korkeus": 3456,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q6438656",
+   "nimi": "Križanke",
+   "peruste": "pelin nosto",
+   "koko_m": 120,
+   "lat": 46.0465,
+   "lon": 14.50328,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Križanke (1).JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kri%C5%BEanke_(1).JPG?width=1280",
+     "tekija": "Ljuba brank at Slovenian Wikipedia",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kri%C5%BEanke_(1).JPG",
+     "selite": "Križanke on entinen ritarikunnan luostari, josta on tullut kesäteatteri ja kulttuurikeskus.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Krizanke, sculpture at 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Krizanke%2C_sculpture_at_01.jpg?width=1280",
+     "tekija": "Ajznponar",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Krizanke%2C_sculpture_at_01.jpg",
+     "selite": "Luostarin portit ja pihat ovat Plečnikin ajan uudistamia.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q4178650",
+   "nimi": "Nebotičnik",
+   "peruste": "sitelinks",
+   "koko_m": 60,
+   "lat": 46.05319,
+   "lon": 14.50361,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Ljubljana - Nebotičnik (48864291718).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ljubljana_-_Neboti%C4%8Dnik_(48864291718).jpg?width=1280",
+     "tekija": "Fred Romero from Paris, France",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ljubljana_-_Neboti%C4%8Dnik_(48864291718).jpg",
+     "selite": "Nebotičnik on art deco -tyylinen pilvenpiirtäjä Ljubljanan keskustassa.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Ljubljana - Nebotičnik (48865011612).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ljubljana_-_Neboti%C4%8Dnik_(48865011612).jpg?width=1280",
+     "tekija": "Fred Romero from Paris, France",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ljubljana_-_Neboti%C4%8Dnik_(48865011612).jpg",
+     "selite": "Rakennus oli valmistuessaan Balkanin korkeimpia.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3444329",
+   "nimi": "Ljubljanan kaupungintalo",
+   "peruste": "sitelinks",
+   "koko_m": 60,
+   "lat": 46.04972,
+   "lon": 14.50712,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Town Hall of Ljubljana (2).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Town_Hall_of_Ljubljana_(2).jpg?width=1280",
+     "tekija": "Tournasol7",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Town_Hall_of_Ljubljana_(2).jpg",
+     "selite": "Ljubljanan kaupungintalo on kellotornillinen virastotalo vanhan kaupungin Raatihuoneentorilla.",
+     "leveys": 2588,
+     "korkeus": 4941,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Ljubljana BW 2014-10-09 11-34-41.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ljubljana_BW_2014-10-09_11-34-41.jpg?width=1280",
+     "tekija": "Berthold Werner",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ljubljana_BW_2014-10-09_11-34-41.jpg",
+     "selite": "Raatihuoneen julkisivu on säännöllinen ja siihen kuuluu pieni parveke.",
+     "leveys": 1790,
+     "korkeus": 3005,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Laibach (13890314188).jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Laibach_(13890314188).jpg?width=1280",
+   "tekija": "Alois Staudacher",
+   "lisenssi": "CC BY 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Laibach_(13890314188).jpg",
+   "selite": "Ljubljanan punaiset katot ja kaupunkikortteli levittäytyvät linnavuoren juurelle.",
+   "leveys": 4608,
+   "korkeus": 3072,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Ljubljana city view (11330258683).jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ljubljana_city_view_(11330258683).jpg?width=1280",
+   "tekija": "Vladimir Yaitskiy from Kyiv, Ukraine",
+   "lisenssi": "CC BY-SA 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ljubljana_city_view_(11330258683).jpg",
+   "selite": "Linnavuorelta näkyy kattojen yli kaupungin keskusta.",
+   "leveys": 3008,
+   "korkeus": 2000,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}
