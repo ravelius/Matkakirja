@@ -143,6 +143,28 @@ namespace Matkakirja.Natiivi
             return t;
         }
 
+        /// <summary>
+        /// Osumatesti näytön pisteessä (px, y ylös) kuten osoittimella: ylin paneeli (sortingOrder) ensin, ensimmäinen poimittu
+        /// elementti "kerros N: nimi .luokat (isä …)"; testikomento ui hiiri (HiiriTesti, Linssiseppä 2 7.10.2026).
+        /// </summary>
+        public string Poimi(Vector2 px)
+        {
+            var lista = new List<KeyValuePair<int, UIDocument>>(dokumentit);
+            lista.Sort((a, b) => (b.Value.panelSettings != null ? b.Value.panelSettings.sortingOrder : b.Key)
+                .CompareTo(a.Value.panelSettings != null ? a.Value.panelSettings.sortingOrder : a.Key));
+            foreach (var kv in lista)
+            {
+                var juuri = kv.Value.rootVisualElement;
+                if (juuri?.panel == null || juuri.resolvedStyle.display == DisplayStyle.None) continue;
+                var pt = RuntimePanelUtils.ScreenToPanel(juuri.panel, new Vector2(px.x, Screen.height - px.y));
+                var e = juuri.panel.Pick(pt);
+                if (e == null) continue;
+                string Kuvaa(VisualElement v) => v == null ? "-" : (string.IsNullOrEmpty(v.name) ? "" : v.name + " ") + "." + string.Join(".", v.GetClasses());
+                return $"kerros {kv.Key}: {Kuvaa(e)} (isä {Kuvaa(e.hierarchy.parent)})";
+            }
+            return "ei osumaa (kartta)";
+        }
+
         /// <summary>Kerroksen koko ruudun juuri (himmennykset, jotka peittävät myös turva-alueen ulkopuolen).</summary>
         public VisualElement Juuri(int kerros) => Dokumentti(kerros).rootVisualElement;
 

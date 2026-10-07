@@ -236,6 +236,16 @@ namespace Matkakirja.Natiivi
                 korkeus / 1000, NostoKerros.Instanssi?.NykyinenMaa ?? "-", KaupunkiPalloMitat.Koko(korkeus), string.Join("; ", nakyvat));
         }
 
+        /// <summary>Pallon kuoren keskikohta (Nostot-paneelin pt) hiiritestiin: kuori on kuvan yläosassa kallistuspuolella.</summary>
+        public Vector2? KuorenKeskus(string id)
+        {
+            var p = pallot.FirstOrDefault(x => x.Id == id);
+            if (p == null || !p.Nakyy) return null;
+            var r = p.Nappi.worldBound;
+            var keski = juuri.WorldToLocal(new Vector2(r.center.x + (p.Oikea ? 0.18f : -0.18f) * r.width, r.yMin + 0.28f * r.height));
+            return keski;
+        }
+
         /// <summary>Testikomento `ui kaupunkipallot napauta <id|i>`: napautus kuten sormi (avaa kaupungin oppaan).</summary>
         public string Napauta(string kohde)
         {

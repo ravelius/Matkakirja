@@ -1277,6 +1277,17 @@ namespace Matkakirja.Natiivi
                         return "=" + ui.Erikoisnostot.Saato(en[0], float.Parse(en[1], CultureInfo.InvariantCulture), float.Parse(en[2], CultureInfo.InvariantCulture), float.Parse(en[3], CultureInfo.InvariantCulture));
                     return "=" + ui.Erikoisnostot.Tila();
                 }
+                case "hiiri":
+                {
+                    // "ui hiiri klikkaa x y | pallo <id> | poimi x y": sovelluksen sisäinen hiiriklikkaus Input Systemin kautta (HiiriTesti).
+                    var h = loput.Split(new[] { ' ' }, System.StringSplitOptions.RemoveEmptyEntries);
+                    float H(int i) => h.Length > i && float.TryParse(h[i], NumberStyles.Float, CultureInfo.InvariantCulture, out var v) ? v : float.NaN;
+                    if (h.Length > 1 && h[0] == "pallo")
+                        return "=" + (ui.KaupunkiPallot.KuorenKeskus(h[1]) is Vector2 kp ? HiiriTesti.Klikkaa(UiKerros.Hae(), kp) : "hiiri: palloa " + h[1] + " ei näy");
+                    if (h.Length > 2 && h[0] == "poimi") return "=hiiri: " + HiiriTesti.Poimi(UiKerros.Hae(), new Vector2(H(1), H(2)));
+                    if (h.Length > 2 && h[0] == "klikkaa") return "=" + HiiriTesti.Klikkaa(UiKerros.Hae(), new Vector2(H(1), H(2)));
+                    return "=käyttö: ui hiiri klikkaa x y | pallo <id> | poimi x y";
+                }
                 case "kaupunkipallot":
                 {
                     // "ui kaupunkipallot [tila|0|1|napauta <id|i>]": kaupunkioppaan kuumailmapallot kartalla (omistaja 7.10.).
