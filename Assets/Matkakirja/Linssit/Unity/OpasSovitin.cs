@@ -377,7 +377,7 @@ namespace Matkakirja.Natiivi
                 // Omistaja TF 162 (Rooma) / Päätoimittaja 22.4x: avausnäkymä katsoo ensimmäistä kohdetta (alakolmannes), 1,1 km / 50°.
                 if (silmukka.KohdistaAvausKohteeseen(ek[0].Nimi, ek[0].Lat, ek[0].Lon)) o.Kirjaa($"opas: avausnäkymä kohti ensimmäistä kohdetta ({ek[0].Nimi}, {silmukka.Asento})");
             }
-            if (esitysAlkaa && Kaupunkitila && !silmukka.Siirtymassa && kohteet != null && kohteet.Count > 0 && kohteetKaupunki == Aloituskaupunki)
+            if (esitysAlkaa && Kaupunkitila && !silmukka.Siirtymassa && !silmukka.AvausTauolla && kohteet != null && kohteet.Count > 0 && kohteetKaupunki == Aloituskaupunki)
             { esitysAlkaa = false; o.StartCoroutine(EsitysAvaus(KaupunkitilaId)); }
             if (jatkoVastauksenJalkeen && silmukka.KierrosKeskeytetty && silmukka.Vaihe == OpasVaihe.Odottaa && silmukka.VaiheAika > JatkoViiveS && !puhuu)
             { jatkoVastauksenJalkeen = false; o.Kirjaa("opas: kierros jatkuu vastauksen jälkeen"); JatkaKierrosta(); }
