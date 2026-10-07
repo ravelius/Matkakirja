@@ -30,7 +30,10 @@ namespace Matkakirja.Natiivi
         public static bool ToimintoPyydetty;
 
         enum Laji { Heitettava, Nostettava, Irrotettava }
-        sealed class Esine { public string Id; public GameObject Go; public Rigidbody Rb; public bool Heitetty, Kuului; public Laji Laji; public bool Irrotettu; public Vector3 Ulos; }
+        sealed class Esine { public string Id; public GameObject Go; public Rigidbody Rb; public bool Heitetty, Kuului; public Laji Laji; public bool Irrotettu; public Vector3 Ulos; public int Napautuksia; }
+        /// <summary>Veitsen raapaisu saumaan (E3c: ensimmäinen raapaisu laukaisee kappalaisen paluun).</summary>
+        public static event Action Raapaistiin;
+        public const int IrrotusNapautukset = 3;
         /// <summary>Koputuksen ääni (ontto kohta); Sovitin asettaa.</summary>
         public static AudioClip OnttoKlippi;
         readonly List<Esine> esineet = new List<Esine>();
@@ -132,7 +135,19 @@ namespace Matkakirja.Natiivi
             if (gp != null && gp.buttonWest.wasPressedThisFrame) toiminto = true;
             if (!toiminto) return;
             if (kadessa != null) { if (kadessa.Laji == Laji.Heitettava) Heita(p); else Laske(p); }
-            else if (lahin != null) { if (lahin.Laji == Laji.Irrotettava) StartCoroutine(Irrota(lahin)); else Poimi(p, lahin); }
+            else if (lahin != null)
+            {
+                if (lahin.Laji == Laji.Irrotettava)
+                {
+                    // Käsikirjoitus vaihe 9: kolme napautusta veitsellä kiveä kohden; jokainen liikauttaa kiveä.
+                    lahin.Napautuksia++;
+                    Raapaistiin?.Invoke();
+                    kirjaa?.Invoke($"seikkailu: raapaisu {lahin.Id} ({lahin.Napautuksia}/{IrrotusNapautukset})");
+                    if (lahin.Napautuksia >= IrrotusNapautukset) StartCoroutine(Irrota(lahin));
+                    else StartCoroutine(Liikahda(lahin));
+                }
+                else Poimi(p, lahin);
+            }
             else if (kynttilat != null && kynttilat.Toimi(p)) { }
             else if (OnttoLahella(p)) Koputa(p);
         }
@@ -187,6 +202,13 @@ namespace Matkakirja.Natiivi
             foreach (var k in esineet)
                 if (k.Laji == Laji.Irrotettava && !k.Irrotettu && k.Go != null && (k.Go.transform.position - e.Go.transform.position).sqrMagnitude < 1f) return true;
             return false;
+        }
+
+        IEnumerator Liikahda(Esine e)
+        {
+            var alku = e.Go.transform.position;
+            for (float t = 0; t < 0.25f; t += Time.deltaTime) { if (e.Go == null) yield break; e.Go.transform.position = alku + e.Ulos * 0.012f * Mathf.Sin(t / 0.25f * Mathf.PI); yield return null; }
+            if (e.Go != null) e.Go.transform.position = alku + e.Ulos * 0.01f * e.Napautuksia;
         }
 
         static bool OnttoLahella(SeikkailuPelaaja p)
