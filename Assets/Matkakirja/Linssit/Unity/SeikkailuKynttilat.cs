@@ -23,6 +23,8 @@ namespace Matkakirja.Natiivi
         readonly List<(GameObject Go, Vector3 Paikka)> liekit = new List<(GameObject, Vector3)>();
         Material leivottu; float kirkkausAlku = 1f;
         Light omaValo;
+        GameObject omaLiekki;
+        DioraamaLiekit liekitLahde;
         Action<string> kirjaa;
         public string TilaId { get; private set; }
         public Kynttilat Ydin => ydin;
@@ -34,7 +36,7 @@ namespace Matkakirja.Natiivi
             var go = new GameObject("Seikkailu kynttilät");
             go.transform.SetParent(isa, false);
             var k = go.AddComponent<SeikkailuKynttilat>();
-            k.kirjaa = kirjaa; k.TilaId = tilaId;
+            k.kirjaa = kirjaa; k.TilaId = tilaId; k.liekitLahde = liekitLahde;
             k.liekit.AddRange(liekitLahde.TilanLiekit(tilaId));
             var paikat = new List<(double, double, double)>();
             foreach (var l in k.liekit) paikat.Add((l.Paikka.x, l.Paikka.y, l.Paikka.z));
@@ -95,13 +97,47 @@ namespace Matkakirja.Natiivi
                     omaValo.shadows = LightShadows.None;
                 }
                 omaValo.transform.position = kasi; omaValo.intensity = 1.4f * lepatus; omaValo.enabled = true;
+                // Näkyvä liekki kädessä (DioraamaLiekit.LuoLyhty: sama 3D-liekki kuin hahmojen lyhdyissä), joka kallistuu vedossa.
+                if (omaLiekki == null && liekitLahde != null) omaLiekki = liekitLahde.LuoLyhty(p.Hahmo);
+                if (omaLiekki != null)
+                {
+                    if (omaLiekki.transform.parent != p.Hahmo) omaLiekki.transform.SetParent(p.Hahmo, false);
+                    omaLiekki.transform.localPosition = new Vector3(0.22f, 1.15f, 0.3f);
+                    omaLiekki.SetActive(true);
+                    var (kallistus, suunta) = Veto(kasi);
+                    // Veto (ehdotus huone 5: "kilpien alla liekki kallistuu seinää kohti"): kallistus kohti seinää, värinä vedossa.
+                    float varina = kallistus > 0 ? 6f * Mathf.Sin(Time.time * 23f) * kallistus : 0f;
+                    var akseli = Vector3.Cross(Vector3.up, suunta);
+                    omaLiekki.transform.rotation = Quaternion.AngleAxis(38f * kallistus + varina, akseli.sqrMagnitude > 1e-4f ? akseli.normalized : Vector3.right);
+                    if (kallistus > 0.05f && !vetoKirjattu) { kirjaa?.Invoke($"seikkailu: veto tuntuu ({kallistus:F2})"); vetoKirjattu = true; }
+                }
             }
             else
             {
                 Shader.SetGlobalVector(IdKanto, Vector4.zero);
                 if (omaValo != null) omaValo.enabled = false;
+                if (omaLiekki != null) omaLiekki.SetActive(false);
             }
         }
+
+        bool vetoKirjattu;
+        /// <summary>Vedon voimakkuus 0…1 ja suunta (Unity) pisteessä: merkki veto:&lt;id&gt; (kierto_y = suunta seinään, glTF), 1,0 m:n säde.</summary>
+        static (float Kallistus, Vector3 Suunta) Veto(Vector3 p)
+        {
+            var d = SeikkailuKavely.Data; if (d == null) return (0f, Vector3.forward);
+            float paras = 0f; Vector3 suunta = Vector3.forward;
+            foreach (var m in d.Lajia("veto"))
+            {
+                var mp = new Vector3((float)m.X, (float)m.Y, (float)-m.Z);
+                float k = 1f - Vector3.Distance(mp, p) / VetoM;
+                if (k <= paras) continue;
+                paras = k;
+                double a = m.KiertoY ?? 0;
+                suunta = new Vector3((float)Math.Sin(a), 0f, (float)-Math.Cos(a));
+            }
+            return (Mathf.Clamp01(paras), suunta);
+        }
+        public const float VetoM = 1.0f;
 
         public static void Poista() { var a = Aktiivinen; Aktiivinen = null; if (a != null) Destroy(a.gameObject); }
 
@@ -112,6 +148,7 @@ namespace Matkakirja.Natiivi
             if (leivottu != null) leivottu.SetFloat(IdKirkkaus, kirkkausAlku);
             foreach (var l in liekit) if (l.Go != null) l.Go.SetActive(true);
             if (omaValo != null) Destroy(omaValo.gameObject);
+            if (omaLiekki != null) Destroy(omaLiekki);
         }
     }
 }
