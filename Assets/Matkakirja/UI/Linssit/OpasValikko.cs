@@ -503,6 +503,11 @@ namespace Matkakirja.Natiivi
         {
             siirtyma = Rakenne.El("mk-astroavaus tk-teema-tumma", kerrosJuuri, PickingMode.Position);
             siirtyma.style.display = DisplayStyle.None;
+            siirtymaKuva = Rakenne.El(null, siirtyma, PickingMode.Ignore);
+            siirtymaKuva.style.position = Position.Absolute;
+            siirtymaKuva.style.left = 0; siirtymaKuva.style.right = 0; siirtymaKuva.style.top = 0; siirtymaKuva.style.bottom = 0;
+            siirtymaKuva.style.backgroundSize = new BackgroundSize(BackgroundSizeType.Cover);
+            siirtymaKuva.style.display = DisplayStyle.None;
             var otsikko = Rakenne.Teksti("Siirrytään", "mk-ajattelija__vuodet", siirtyma);
             siirtymaNimi = Rakenne.Teksti("", "mk-ajattelija__nimi", siirtyma);
             foreach (var t in new[] { otsikko, siirtymaNimi }) { t.pickingMode = PickingMode.Ignore; t.style.unityTextAlign = TextAnchor.MiddleCenter; Kirjasimet.Aseta(t, Kirjasin.Lcd); }
@@ -519,6 +524,9 @@ namespace Matkakirja.Natiivi
             avausIon.style.unityBackgroundScaleMode = ScaleMode.ScaleToFit;
             avausIon.style.display = DisplayStyle.None;
             kerrosJuuri.schedule.Execute(PaivitaAvausIon).Every(100);
+            OpasSovitin.SallitutVaihtui += () => UiKerros.PaaSaikeessa(PalloKuvatEsiin);
+            PalloKuvaLadattu += () => { if (siirtyma.style.display != DisplayStyle.None && OpasSovitin.Kaupunkitila && palloKuva == null) AsetaPalloKuva(true); };
+            kerrosJuuri.schedule.Execute(PalloKuvatEsiin).ExecuteLater(2000);
             OpasSovitin.SiirtymaAlkaa += n => UiKerros.PaaSaikeessa(() => SiirtymaAlkaa(n));
             OpasSovitin.SiirtymaValmis += () => UiKerros.PaaSaikeessa(SiirtymaValmis);
         }
@@ -535,6 +543,7 @@ namespace Matkakirja.Natiivi
             siirtyma.style.display = DisplayStyle.Flex;
             siirtyma.BringToFront();
             siirtymaPalkki.Nayta(true);
+            AsetaPalloKuva(OpasSovitin.Kaupunkitila);
             KrediititTiivis.CesiumNakyviin = true;
             AsetaSiirtymaIon();
             Debug.Log("MATKAKIRJA opas: siirtymä alkaa → " + nimi);
@@ -569,6 +578,84 @@ namespace Matkakirja.Natiivi
             e.style.bottom = ala;
         }
 
+        // KUUMAILMAPALLON LATAUSKUVA (Päätoimittaja 7.10. 13.5x, Codex PR #4143, data/latauskuvat/kuumailmapallo.json): kaupunkitilan
+        // siirtymän taustana havainnekuva (pallo keskellä 40–63 %, alin 25 % tummaa tekstille). Kolme rajausta R2:ssa; laite ja
+        // asento valitsevat. Ladataan välimuistiin (Documents/latauskuvat/), kun sallittujen kaupunkien lista saapuu, ja tekstuuri
+        // luetaan levyltä siirtymän alkaessa ja vapautetaan sen jälkeen. Ei kuvaa vielä → musta ruutu kuten ennen.
+        VisualElement siirtymaKuva;
+        Texture2D palloKuva;
+        string palloKuvaNimi;
+        const string PalloKuvaJuuri = "https://media.matkakirja.app/julisteet/latauskuva-kuumailmapallo/20261007/";
+        static readonly string[] PalloKuvat = { "latauskuva-pallo-iphone.png", "latauskuva-pallo-ipad-pysty.png", "latauskuva-pallo-ipad-vaaka.png" };
+        static readonly HashSet<string> palloHaussa = new HashSet<string>();
+        static event Action PalloKuvaLadattu;
+        static string PalloKuvaPolku(string n) => System.IO.Path.Combine(Application.persistentDataPath, "latauskuvat", n);
+
+        static string PalloKuvaRuudulle()
+        {
+            float w = Screen.width, h = Screen.height;
+            if (w > h) return PalloKuvat[2];
+            return w / Mathf.Max(h, 1f) >= 0.6f ? PalloKuvat[1] : PalloKuvat[0];
+        }
+
+        /// <summary>Molemmat tämän laitteen rajaukset (pysty + vaaka) välimuistiin taustalla.</summary>
+        void PalloKuvatEsiin()
+        {
+            if (OpasSovitin.SallitutLista.Count == 0) return;
+            bool ipad = Mathf.Min(Screen.width, Screen.height) / Mathf.Max(Mathf.Max(Screen.width, Screen.height), 1f) >= 0.6f;
+            foreach (var n in new[] { ipad ? PalloKuvat[1] : PalloKuvat[0], PalloKuvat[2] }) HaePalloKuva(n);
+        }
+
+        static void HaePalloKuva(string n)
+        {
+            string polku = PalloKuvaPolku(n);
+            if (System.IO.File.Exists(polku) || !palloHaussa.Add(n)) return;
+            try { System.IO.Directory.CreateDirectory(System.IO.Path.GetDirectoryName(polku)); } catch (Exception) { palloHaussa.Remove(n); return; }
+            var r = UnityEngine.Networking.UnityWebRequest.Get(PalloKuvaJuuri + n);
+            r.downloadHandler = new UnityEngine.Networking.DownloadHandlerFile(polku + ".osa") { removeFileOnAbort = true };
+            r.timeout = 60;
+            r.SendWebRequest().completed += _ =>
+            {
+                bool ok = r.result == UnityEngine.Networking.UnityWebRequest.Result.Success;
+                r.Dispose();
+                try { if (ok) System.IO.File.Move(polku + ".osa", polku); else System.IO.File.Delete(polku + ".osa"); } catch (Exception) { ok = false; }
+                palloHaussa.Remove(n);
+                Debug.Log($"MATKAKIRJA opas: pallon latauskuva {n} {(ok ? "välimuistiin" : "ei latautunut")}");
+                if (ok) PalloKuvaLadattu?.Invoke();
+            };
+        }
+
+        void AsetaPalloKuva(bool nayta)
+        {
+            string n = nayta ? PalloKuvaRuudulle() : null;
+            if (n != null && !System.IO.File.Exists(PalloKuvaPolku(n))) { HaePalloKuva(n); n = null; }
+            if (n == null)
+            {
+                siirtymaKuva.style.display = DisplayStyle.None;
+                siirtymaKuva.style.backgroundImage = StyleKeyword.Null;
+                siirtyma.style.justifyContent = StyleKeyword.Null; siirtyma.style.paddingBottom = StyleKeyword.Null;
+                if (palloKuva != null) { UnityEngine.Object.Destroy(palloKuva); palloKuva = null; palloKuvaNimi = null; }
+                return;
+            }
+            // Teksti ja palkki kuvan tummaan alaosaan (pallo jää keskelle näkyviin).
+            siirtyma.style.justifyContent = Justify.FlexEnd;
+            siirtyma.style.paddingBottom = Mathf.Max(siirtyma.parent?.worldBound.height ?? 0f, 1f) * 0.07f;
+            if (palloKuva != null && palloKuvaNimi == n) { siirtymaKuva.style.display = DisplayStyle.Flex; return; }
+            var r = UnityEngine.Networking.UnityWebRequestTexture.GetTexture("file://" + PalloKuvaPolku(n), true);
+            r.SendWebRequest().completed += _ =>
+            {
+                var t = r.result == UnityEngine.Networking.UnityWebRequest.Result.Success ? UnityEngine.Networking.DownloadHandlerTexture.GetContent(r) : null;
+                r.Dispose();
+                if (t == null) { Debug.Log("MATKAKIRJA opas: pallon latauskuva ei auennut " + n); return; }
+                if (siirtyma.style.display == DisplayStyle.None || !OpasSovitin.Kaupunkitila) { UnityEngine.Object.Destroy(t); return; }
+                if (palloKuva != null) UnityEngine.Object.Destroy(palloKuva);
+                palloKuva = t; palloKuvaNimi = n;
+                siirtymaKuva.style.backgroundImage = new StyleBackground(t);
+                siirtymaKuva.style.display = DisplayStyle.Flex;
+                Debug.Log($"MATKAKIRJA opas: pallon latauskuva näkyviin {n} ({t.width}×{t.height})");
+            };
+        }
+
         /// <summary>Kohde ladattu: musta ruutu häipyy (Cupolan häivytys) ja näkymä aukeaa.</summary>
         public void SiirtymaValmis()
         {
@@ -577,7 +664,7 @@ namespace Matkakirja.Natiivi
             siirtymaPalkki.Arvo = 1f;
             siirtyma.AddToClassList("mk-astroavaus--haipyy");
             siirtyma.schedule.Execute(() => siirtyma.style.opacity = 0f).ExecuteLater(16);
-            siirtyma.schedule.Execute(() => { if (siirtyma.resolvedStyle.opacity < 0.01f) siirtyma.style.display = DisplayStyle.None; }).StartingIn(1200);
+            siirtyma.schedule.Execute(() => { if (siirtyma.resolvedStyle.opacity < 0.01f) { siirtyma.style.display = DisplayStyle.None; AsetaPalloKuva(false); } }).StartingIn(1200);
             testiEdistyminen = null;
             KrediititTiivis.CesiumNakyviin = false;
             Debug.Log("MATKAKIRJA opas: siirtymä valmis");
