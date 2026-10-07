@@ -25,8 +25,10 @@ namespace Matkakirja.Natiivi
         public const string Osoite = Sivusto + "assets/apuraha/esittely.json";
         const string Muisti = "matkakirja-apuraha-esittely";
 
-        public sealed class Kappale { public string Otsikko, Teksti, LinkkiTeksti, LinkkiUrl, NappiTeksti, NappiValmis, Toiminto; public bool Korostus; public List<string> Lista = new List<string>(); }
-        public sealed class Kuva { public string Url, Teksti; public float RajausX = 50f, RajausY = 20f; }
+        public sealed class Kappale { public int Numero; public string Otsikko, Teksti, LinkkiTeksti, LinkkiUrl, NappiTeksti, NappiValmis, Toiminto; public bool Korostus; public List<string> Lista = new List<string>(); }
+        /// <summary>Kappale = esittely.json:n kappaleen järjestysnumero (1 = ensimmäinen; versio 7, omistaja 7.10. 14.5x): kuva pienenä
+        /// kappaleen vieressä; 0 = kortin lopun kuvarivi.</summary>
+        public sealed class Kuva { public string Url, Teksti; public int Kappale; public float RajausX = 50f, RajausY = 20f; }
         public sealed class Esittely
         {
             public string Nappi, Otsikko, Alaotsikko;
@@ -45,12 +47,14 @@ namespace Matkakirja.Natiivi
             var e = new Esittely { Nappi = S(d, "nappi")?.Trim(), Otsikko = S(d, "otsikko"), Alaotsikko = S(d, "alaotsikko") ?? "" };
             var kappaleet = Rakenne.Lista(d.TryGetValue("kappaleet", out var kv) ? kv : null);
             if (string.IsNullOrEmpty(e.Nappi) || e.Otsikko == null || kappaleet == null) return null;
+            int numero = 0;
             foreach (var ko in kappaleet)
             {
+                numero++;
                 var o = Rakenne.Olio(ko);
                 if (o == null) continue;
                 // "korostus": true = kappaleen teksti lihavoituna, sama koko (omistaja 1.10.2026).
-                var k = new Kappale { Otsikko = S(o, "otsikko"), Teksti = S(o, "teksti"), Korostus = MiniJson.Totuus(o, "korostus") };
+                var k = new Kappale { Numero = numero, Otsikko = S(o, "otsikko"), Teksti = S(o, "teksti"), Korostus = MiniJson.Totuus(o, "korostus") };
                 var lista = Rakenne.Lista(o.TryGetValue("lista", out var lv) ? lv : null);
                 // Rivi on teksti tai {teksti, webTeksti}; natiivi näyttää teksti-kentän (webTeksti on selaimen versio).
                 if (lista != null) foreach (var r in lista) { var rt = r as string ?? S(Rakenne.Olio(r), "teksti"); if (rt != null) k.Lista.Add(rt); }
@@ -74,6 +78,7 @@ namespace Matkakirja.Natiivi
                     // Pikkukuvan painopiste "x% y%" (web object-position; radion paneeli alhaalla 50% 90%).
                     var m = System.Text.RegularExpressions.Regex.Match(S(o, "rajaus") ?? "", @"^(\d{1,3})% (\d{1,3})%$");
                     if (m.Success) { kuva.RajausX = float.Parse(m.Groups[1].Value); kuva.RajausY = float.Parse(m.Groups[2].Value); }
+                    if (o.TryGetValue("kappale", out var kp) && kp != null && int.TryParse(System.Convert.ToString(kp, System.Globalization.CultureInfo.InvariantCulture), out int kn)) kuva.Kappale = kn;
                     e.Kuvat.Add(kuva);
                 }
             return e;
@@ -147,6 +152,8 @@ namespace Matkakirja.Natiivi
         // ©-rivi; GitHub-linkki ja periaatetekstit jäävät pois. Pohjat: pieni oikeusrivi (.mk-aloitus__oikeudet, Kirjain.Apuri) ja
         // palautteen lohko sellaisenaan. Lippurivin alku paketin ui-tekstit PERIAATTEET.lippurivi (Aloitusnakyma), tekijät
         // moduulit/js/packs/lippu-tekijat.json (web js/packs/lippu-tekijat.js, tools/lisaa-tekijat.mjs).
+        /// <summary>"Palaute ja mukaan" -lohko kortin lopussa (pois apurahakierroksen ajan, omistaja 14.5x).</summary>
+        const bool PalauteKortissa = false;
         public static string Lippurivi = "Lippukuvat ovat Wikimedia Commonsista. Lisenssi edellyttää näiden tekijöiden mainitsemista: ";   // Päätoimittaja 7.10. kielikorjaus
         const string Oikeudet = "© Visuaaliviestinnän Instituutti Tampere Oy";
         static List<(string Tekija, string Lisenssi)> lippuTekijat;
@@ -161,7 +168,8 @@ namespace Matkakirja.Natiivi
             lippuEl.style.whiteSpace = WhiteSpace.Normal;   // simu 10.2x: rivi katkesi "…":llä yhdelle riville
             PaivitaLippurivi();
             if (lippuTekijat == null) UiKerros.Hae().StartCoroutine(LataaLippuTekijat());
-            palaute = PalauteLomake.PeriaateLohko(isa, UiKerros.Traileri);
+            // Omistaja 7.10. 14.5x: palautelomakkeet pois apurahakortista apurahakierroksen ajaksi; palautus: PalauteKortissa = true.
+            if (PalauteKortissa) palaute = PalauteLomake.PeriaateLohko(isa, UiKerros.Traileri);
             Kirjasimet.Aseta(Rakenne.Teksti(Oikeudet, "mk-aloitus__oikeudet", isa), Tyylikirja.Kirjain.Apuri);
         }
 
@@ -198,13 +206,52 @@ namespace Matkakirja.Natiivi
         public string AvaaPalaute()
         {
             Avaa();
-            if (palaute == null || vieritys == null) return "apuraha: esittely ei ladattu";
+            if (vieritys == null) return "apuraha: esittely ei ladattu";
+            if (palaute == null) return "apuraha: palautelohko pois apurahakierroksen ajan";
             Rakenne.Vierita(vieritys, palaute, 350);
             return "apuraha: palautelohko";
         }
 
+        /// <summary>Kappaleen kuvasarakkeen leveys (% kortin sisäleveydestä; omistaja 14.5x "aika pienellä").</summary>
+        const float KappaleKuvaOsuus = 33f;
+        readonly List<Kuva> ladatut = new List<Kuva>();
+
+        /// <summary>
+        /// Kuvanappi pohjalla mk-apuraha__kuva (3:4), näkyviin vasta latauduttua (ei tyhjää kehystä), napautus avaa kokoruudun
+        /// latautuneista. leveys ≥ 0 = kiinteä % (kappaleen sarake), &lt; 0 = rivin näkyvien kesken jaettuna (rako 2 %).
+        /// </summary>
+        void KuvaNappi(Esittely e, Kuva kuva, VisualElement isa, List<Kuva> ladatut, float leveys)
+        {
+            Button b = null;
+            b = Rakenne.Nappi(null, "mk-apuraha__kuva", () =>
+            {
+                var jarj = e.Kuvat.Where(ladatut.Contains).ToList();
+                AvaaKokoruutu(jarj, Mathf.Max(0, jarj.IndexOf(kuva)));
+            }, isa);
+            b.style.display = DisplayStyle.None;
+            if (leveys >= 0f) { b.style.width = Length.Percent(leveys); b.style.marginBottom = 6; }
+            b.style.backgroundPositionX = new BackgroundPosition(BackgroundPositionKeyword.Left, Length.Percent(kuva.RajausX));
+            b.style.backgroundPositionY = new BackgroundPosition(BackgroundPositionKeyword.Top, Length.Percent(kuva.RajausY));
+            b.RegisterCallback<GeometryChangedEvent>(_ => { if (b.layout.width > 1f && Mathf.Abs(b.layout.height - b.layout.width * 4f / 3f) > 0.5f) b.style.height = b.layout.width * 4f / 3f; });
+            string url = kuva.Url;
+            Kuvat.Hae(url, t =>
+            {
+                if (t == null) { Debug.Log("MATKAKIRJA apuraha: kuva puuttuu, ei kehystä: " + url); return; }
+                b.style.backgroundImage = new StyleBackground(t);
+                b.style.display = DisplayStyle.Flex;
+                if (!ladatut.Contains(kuva)) ladatut.Add(kuva);
+                isa.style.display = DisplayStyle.Flex;
+                if (leveys < 0f)
+                {
+                    var nakyvat = isa.Children().Where(c => c.style.display == DisplayStyle.Flex).ToList();
+                    foreach (var c in nakyvat) c.style.width = Length.Percent((100f - 2f * (nakyvat.Count - 1)) / nakyvat.Count);
+                }
+            });
+        }
+
         VisualElement Rakenna(Esittely e)
         {
+            ladatut.Clear();
             var h = Rakenne.El("mk-himmennys mk-himmennys--tumma", juuri);
             h.style.display = DisplayStyle.None;
             h.RegisterCallback<PointerDownEvent>(ev => { if (ev.target == h) Sulje(); });
@@ -220,10 +267,23 @@ namespace Matkakirja.Natiivi
             foreach (var k in e.Kappaleet)
             {
                 if (k.Otsikko != null) Kirjasimet.Aseta(Rakenne.Teksti(k.Otsikko.ToUpperInvariant(), "mk-apuraha__valiotsikko", vieritys), Kirjasin.Kone);
+                // KUVAT TEKSTIN YHTEYDESSÄ (omistaja 7.10. 14.5x): kappaleen kuvat pienenä (~kolmannes kortista) tekstin vieressä.
+                var omat = e.Kuvat.Where(x => x.Kappale == k.Numero).ToList();
                 if (k.Teksti != null)
                 {
-                    var t = Rakenne.Teksti(k.Teksti, "mk-kortti__teksti mk-apuraha__teksti", vieritys);
+                    VisualElement isa = vieritys;
+                    if (omat.Count > 0) { isa = Rakenne.El("mk-apuraha__rivi", vieritys, PickingMode.Ignore); isa.style.alignItems = Align.FlexStart; }
+                    var t = Rakenne.Teksti(k.Teksti, "mk-kortti__teksti mk-apuraha__teksti", isa);
+                    if (omat.Count > 0) { t.style.flexGrow = 1; t.style.flexShrink = 1; }
                     if (k.Korostus) Kirjasimet.Aseta(t, Kirjasin.LukuLihava);
+                    if (omat.Count > 0)
+                    {
+                        var sarake = Rakenne.El("mk-apuraha__kappalekuvat", isa, PickingMode.Ignore);
+                        sarake.style.width = Length.Percent(KappaleKuvaOsuus); sarake.style.flexShrink = 0;
+                        sarake.style.marginLeft = 8;
+                        sarake.style.display = DisplayStyle.None;   // näkyviin vasta kuvan latauduttua (ei tyhjää saraketta)
+                        foreach (var kv2 in omat) KuvaNappi(e, kv2, sarake, ladatut, 100f);
+                    }
                 }
                 for (int i = 0; i < k.Lista.Count; i++)
                 {
@@ -252,44 +312,12 @@ namespace Matkakirja.Natiivi
                     Kirjasimet.Aseta(Rakenne.Nappi(k.LinkkiTeksti, "mk-lehti__linkki mk-apuraha__linkki", () => Application.OpenURL(url), vieritys), Kirjasin.Kone);
                 }
             }
-            if (e.Kuvat.Count > 0)
+            var loppukuvat = e.Kuvat.Where(x => x.Kappale <= 0 || !e.Kappaleet.Any(k => k.Numero == x.Kappale && k.Teksti != null)).ToList();
+            if (loppukuvat.Count > 0)
             {
                 var kuvarivi = Rakenne.El("mk-apuraha__kuvat", vieritys, PickingMode.Ignore);
-                // Pikkukuvat 3:4 (web aspect-ratio): korkeus leveydestä.
-                kuvarivi.RegisterCallback<GeometryChangedEvent>(_ =>
-                {
-                    foreach (var c in kuvarivi.Children())
-                        if (c.layout.width > 1f && Mathf.Abs(c.layout.height - c.layout.width * 4f / 3f) > 0.5f) c.style.height = c.layout.width * 4f / 3f;
-                });
-                // Ei tyhjää kehystä (omistaja, UI kevyt; Päätoimittaja 7.10. junan 160 still: 3. ja 4. kehys tyhjinä): kuva tulee
-                // näkyviin vasta latauduttuaan, puuttuva kuva ei koskaan; leveys jaetaan näkyvien kesken (rako 2 %).
                 kuvarivi.style.display = DisplayStyle.None;
-                // Kokoruutuselaus vain latautuneista (järjestys säilyy).
-                var ladatut = new List<Kuva>();
-                for (int i = 0; i < e.Kuvat.Count; i++)
-                {
-                    var kuva = e.Kuvat[i];
-                    Button b = null;
-                    b = Rakenne.Nappi(null, "mk-apuraha__kuva", () =>
-                    {
-                        var jarj = e.Kuvat.Where(ladatut.Contains).ToList();
-                        AvaaKokoruutu(jarj, Mathf.Max(0, jarj.IndexOf(kuva)));
-                    }, kuvarivi);
-                    b.style.display = DisplayStyle.None;
-                    b.style.backgroundPositionX = new BackgroundPosition(BackgroundPositionKeyword.Left, Length.Percent(e.Kuvat[i].RajausX));
-                    b.style.backgroundPositionY = new BackgroundPosition(BackgroundPositionKeyword.Top, Length.Percent(e.Kuvat[i].RajausY));
-                    string url = e.Kuvat[i].Url;
-                    Kuvat.Hae(url, t =>
-                    {
-                        if (t == null) { Debug.Log("MATKAKIRJA apuraha: kuva puuttuu, ei kehystä: " + url); return; }
-                        b.style.backgroundImage = new StyleBackground(t);
-                        b.style.display = DisplayStyle.Flex;
-                        ladatut.Add(kuva);
-                        kuvarivi.style.display = DisplayStyle.Flex;
-                        var nakyvat = kuvarivi.Children().Where(c => c.style.display == DisplayStyle.Flex).ToList();
-                        foreach (var c in nakyvat) c.style.width = Length.Percent((100f - 2f * (nakyvat.Count - 1)) / nakyvat.Count);
-                    });
-                }
+                foreach (var kuva in loppukuvat) KuvaNappi(e, kuva, kuvarivi, ladatut, -1f);
             }
             Loppuosa(vieritys);
             kortti.Sisus.Add(vieritys);
