@@ -88,10 +88,25 @@ namespace Matkakirja.Natiivi
             }
             if (!(esineetAktiivinen?.GetValue(null) is Object e) || e == null) return null;
             if (esineKadessa?.GetValue(e) is string k && k.Length > 0) return "heita";
-            // E3 (Siirtoseppä): kappelin kynttilä (sammuta, sytytä tai puhalla oma) samalla napilla; kuvake kuten poimi.
-            if (esineLahin?.GetValue(e) is string l && l.Length > 0) return l == "kynttila" ? "kynttila" : "poimi";
+            // E3 (Siirtoseppä): kynttilä, koputus ja kivet omina tiloina samalla napilla (VoiceOver-nimi Toimintonimet); kuvake kuten poimi.
+            if (esineLahin?.GetValue(e) is string l && l.Length > 0) return Tila(l);
             return null;
         }
+
+        /// <summary>Lahin-tunnuksen tila: kynttila, koputa, irrota (kivi-1…3), nosta (kalkki, pateeni, liuskekivi), muuten poimi.</summary>
+        static string Tila(string lahin)
+        {
+            if (lahin == "kynttila" || lahin == "koputa") return lahin;
+            if (lahin.StartsWith("kivi-")) return "irrota";
+            if (lahin == "kalkki" || lahin == "pateeni" || lahin == "liuskekivi") return "nosta";
+            return "poimi";
+        }
+
+        /// <summary>Toimintonapin VoiceOver-nimet tiloittain (Siirtoseppä E2/E3).</summary>
+        static readonly System.Collections.Generic.Dictionary<string, string> Toimintonimet = new System.Collections.Generic.Dictionary<string, string>
+        {
+            ["poimi"] = "Poimi", ["heita"] = "Heitä", ["kynttila"] = "Kynttilä", ["koputa"] = "Koputa", ["irrota"] = "Irrota", ["nosta"] = "Nosta",
+        };
 
         void PyydaToiminto()
         {
@@ -109,7 +124,7 @@ namespace Matkakirja.Natiivi
             bool heita = tila == "heita";
             toimintoNappi.Clear();
             toimintoNappi.Add(new SvgIkoni(heita ? HeitaIkoni : PoimiIkoni));
-            toimintoNappi.tooltip = heita ? "Heitä" : tila == "kynttila" ? "Kynttilä" : "Poimi";   // VoiceOver-nimi
+            toimintoNappi.tooltip = Toimintonimet.TryGetValue(tila, out var nimi) ? nimi : "Poimi";   // VoiceOver-nimi
         }
 
         const float TappiAla = 40f;
