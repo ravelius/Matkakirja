@@ -136,3 +136,10 @@ Päätoimittaja = "PÄÄTOIMITTAJA (Opus, max)".
   ulkoinen ryhmä VAIN omistajan kuittauksella (PT) → silloin poista lippu ja aja testflight-ulkoinen build_numero=163.
 - TF-viive: sisäinen ryhmä hasAccessToAllBuilds=True (näkyy heti Applen käsittelyn jälkeen, ~16 min).
 - #4168 (turvakerrokset) julki 22.19. #4172 (TF -jobs 12) mergetty 22.05.
+
+## 23.2x — VALMIS
+- TF 163 (BUILD 062bb439, muutosloki #4175): sisäisillä 23.11, Mac TF 163 ladattu ~23.15. Ulkoinen ohitettu (tf163-ei-ulkoista):
+  kun omistaja kuittaa → `rm julkaisija-tyokalut/tf163-ei-ulkoista; gh workflow run testflight-ulkoinen.yml --ref main -f build_numero=163`
+  (422 ANOTHER_BUILD_IN_REVIEW = 160 yhä katselmoinnissa → silmukka ulkoinen162-uusinta.sh-mallilla).
+- Build 162 irrotettu Arvioijat-ryhmästä (#4173 + #4174, ajo 37679830602). Vain sisäisille.
+- Avoimia taustaajoja ei ole (S2-kevät valmis, TF-ketjut valmiit).
