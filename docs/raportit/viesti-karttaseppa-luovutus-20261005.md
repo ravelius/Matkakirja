@@ -1,3 +1,20 @@
+# TILANNE 7.10. klo 14.xx
+
+- **Worldview + CYP admin-1 VALMIIT, viennit Julkaisijalla.** PR #4140 (haara karttaseppa-raja-worldview, kärki ab0e9d136). Paketit:
+  - `_valmiit/raja-worldview-vienti-20261007` (ajossa 13.03 alkaen, noin 2–3 h)
+  - `natiivi-maarajat-vienti-20261007` (.geojson-MIME lisätty)
+  - `maakunnat-cyp-vienti-20261007` (2026-10-07a: Pohjois-Kypros CYP:n alueeksi "Kyproksen pohjoisosa", linja D; vaihtoehto C:n lisenssiä ei löytynyt)
+  **Kun Julkaisija ilmoittaa:**
+  1) Tarkista ämpäri (taustavahdin neljä polkua) ja ilmoita LS2:lle (vakiot proto linssiseppa2/swe-rajat 95cf8eb97 junaan 161; jos LS2 on poissa, Natiivisepälle).
+  2) Maakuntapaketin jälkeen `node tools/vienti/maakuntarajat.mjs --paivita` worktreessä ja commit #4140:ään.
+  3) Viivatason osoitinvaihto (viivataso-2026-10-07.json) Julkaisijalla.
+  Sisältökirjurille [de21d1] on pyydetty CYP "Kyproksen pohjoisosa" -luonnehdinta ja pulu omaan PR:äänsä.
+- **Talvi2 VALMIS 13.46**, kuvapari PT:lle (`kuvapari-talvi2-20261007.jpg`). Odottaa PT:n kuittausta, jonka jälkeen talvipaketti: `kokoa-kausi.py talvi v1 <paketti> <talvi2/laatat> "<kuvaus>"` (talvella ei rengasta).
+  Kysytty PT:ltä: pidetäänkö Perämeren jää vai palautetaanko avomeri MERI-väriin.
+- **Kevät rivit 13–17** ajossa (alkoi 13.46, noin 2,5 h) → `s2-eurooppa-kevat-pohjoinen2` + `kausi-rengas/kevat-pohjoinen2`. Sitten kuvapari (sarake kevat2) ja kevätpaketti.
+
+---
+
 # TILANNE 7.10. klo 13.1x (TAUKO 13.45–15.00)
 
 - **WORLDVIEW KUITATTU (PT 13.0x, koko _swe).** PR https://github.com/ravelius/Matkakirja/pull/4140 (haara karttaseppa-raja-worldview).
