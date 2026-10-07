@@ -197,3 +197,10 @@ test('Liiku-kierros alkaa avauksen lupaamasta kohteesta (LS1 lukee kierroksen /o
     assert.equal((await hae(ymparisto()))[0], 'Q100', 'ilman avausta lähin kuten ennen');
   } finally { globalThis.fetch = vanha; }
 });
+
+test('esittely_polut: Praha ja Wien poikkeavasta polusta (avaus + kierros), muut esittely-v1', async () => {
+  const urlit = [];
+  const haku = async (u) => { urlit.push(String(u)); return new Response(JSON.stringify(ESITTELY)); };
+  await oppaanEsittely({}, 'Praha', haku); await oppaanEsittely({}, 'Rooma', haku);
+  assert.deepEqual(urlit, ['https://media.matkakirja.app/opas/esittely-v1b/praha.json', 'https://media.matkakirja.app/opas/esittely-v1/rooma.json']);
+});
