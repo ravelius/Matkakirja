@@ -67,7 +67,8 @@ namespace Matkakirja.Natiivi
             var hg = new GameObject("Voudin hehku"); hg.transform.SetParent(go.transform, false); hg.transform.position = k.portaikkoYla;
             k.hehku = hg.AddComponent<Light>(); k.hehku.type = LightType.Point; k.hehku.range = 3f; k.hehku.color = new Color(1f, 0.75f, 0.45f); k.hehku.intensity = 0f; k.hehku.shadows = LightShadows.None;
             k.voudinAskeleet = SeikkailuKuulija.Lahde("Voudin askeleet", 3f, 25f); k.voudinAskeleet.loop = true; k.voudinAskeleet.volume = 0.7f;
-            SeikkailuEsineet.Kolahti += k.Kova; SeikkailuEsineet.Aanteli += k.Tavallinen; SeikkailuEsineet.Raapaistiin += k.Raapaisu; SeikkailuEsineet.Nostettiin += k.Nosto;
+            SeikkailuEsineet.Kolahti += k.Kova; SeikkailuEsineet.Aanteli += k.Tavallinen; SeikkailuEsineet.Raapaistiin += k.Raapaisu; SeikkailuEsineet.Nostettiin += k.Nosto; SeikkailuKynttilat.LuukkuAani += k.Tavallinen; SeikkailuEsineet.AsetettiinAlttarille += k.Asetettu;
+            SeikkailuEsineet.Alttari = k.alttari;
             if (keskusteluKlippi != null) { k.keskustelu = go.AddComponent<AudioSource>(); k.keskustelu.clip = keskusteluKlippi; k.keskustelu.spatialBlend = 0f; k.keskustelu.playOnAwake = false; }
             Aktiivinen = k;
             kirjaa?.Invoke($"seikkailu: kappeli valmis (reitti {k.reitti.Count} pistettä, keskustelu {(keskusteluKlippi != null ? keskusteluKlippi.length.ToString("F1") + " s" : "puuttuu")})");
@@ -207,9 +208,57 @@ namespace Matkakirja.Natiivi
             {
                 m.Invoke(null, new object[] { "Kappelin kätkö",
                     "Liinaan kääritty hopeinen kalkki ja pateeni sekä liuskekivi, johon on kaiverrettu kaksi toisiaan kohti kallistuvaa kilpeä, kaari ja pieni kello.",
-                    null, null, (Action)(() => kirjaa?.Invoke("seikkailu: löytö kuitattu (Jatka matkaa)")) });
+                    null, null, (Action)(() => { kirjaa?.Invoke("seikkailu: löytö kuitattu (Jatka matkaa)"); StartCoroutine(Alttarille()); }) });
             }
             catch (Exception e) { kirjaa?.Invoke("seikkailu: löytö: " + (e.InnerException?.Message ?? e.Message)); }
+        }
+
+        // --- E3d vaihe 11: kalkki alttarille (10 s:n jälkeen Fogg tekee sen itse), liuskekivi laukkuun, Pulu kujertaa, nousu ---
+        readonly HashSet<string> alttarilla = new HashSet<string>(StringComparer.Ordinal);
+        bool loppu;
+        void Asetettu(string id) { alttarilla.Add(id); if (!loppu && alttarilla.Contains("kalkki") && alttarilla.Contains("pateeni")) StartCoroutine(Loppu()); }
+
+        IEnumerator Alttarille()
+        {
+            yield return new WaitForSeconds(10f);
+            var es = SeikkailuEsineet.Aktiivinen;
+            if (es == null || loppu) yield break;
+            foreach (var id in new[] { "kalkki", "pateeni", "liuskekivi" }) if (!alttarilla.Contains(id)) es.AsetaAlttarille(id);
+        }
+
+        IEnumerator Loppu()
+        {
+            loppu = true;
+            var es = SeikkailuEsineet.Aktiivinen;
+            if (es != null && !alttarilla.Contains("liuskekivi")) es.AsetaAlttarille("liuskekivi");
+            yield return new WaitForSeconds(1.2f);
+            var p = SeikkailuPelaaja.Aktiivinen;
+            SeikkailuAanet.Soita("pulu-kujerrus", (p != null ? p.transform.position : alttari) + Vector3.up * 1.7f, 0.9f);
+            kirjaa?.Invoke("seikkailu: pelattava pala: loppu (kalkki alttarilla, liuskekivi laukussa)");
+            yield return new WaitForSeconds(1.5f);
+            var kamera = FindKamera();
+            if (kamera == null) yield break;
+            DioraamaSovitin.KameraVapaa = true;
+            var t = typeof(SeikkailuKappeli).Assembly.GetType("Matkakirja.Natiivi.SeikkailuNousu");
+            var m = t?.GetMethod("Aloita", System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Static);
+            Action valmis = () => kirjaa?.Invoke("seikkailu: pelattava pala valmis (nousu päättyi)");
+            if (m != null) { try { m.Invoke(null, new object[] { kamera, kamera.position, valmis }); yield break; } catch (Exception e) { kirjaa?.Invoke("seikkailu: SeikkailuNousu: " + (e.InnerException?.Message ?? e.Message)); } }
+            // Varanousu (kunnes LS2:n SeikkailuNousu on mukana): holvin läpi 80 m linnan ylle katse alas keskukseen, 9 s.
+            var alku = kamera.position; var loppuP = keskus + new Vector3(-40f, 80f, -60f);
+            for (float s = 0; s < 1f; s += Time.deltaTime / 9f)
+            {
+                float u = s * s * (3 - 2 * s);
+                kamera.position = Vector3.Lerp(alku, loppuP, u);
+                kamera.rotation = Quaternion.Slerp(kamera.rotation, Quaternion.LookRotation(keskus - kamera.position), Time.deltaTime * 2f);
+                yield return null;
+            }
+            valmis();
+        }
+
+        Transform FindKamera()
+        {
+            var n = GetComponentInParent<DioraamaNayttamo>();
+            return n != null && n.Kamera != null ? n.Kamera.transform : null;
         }
 
         bool nahty;
@@ -314,7 +363,7 @@ namespace Matkakirja.Natiivi
         {
             if (Aktiivinen == this) Aktiivinen = null;
             DioraamaHahmot3D.PiilotetutTilat.Remove("kappeli");
-            SeikkailuEsineet.Kolahti -= Kova; SeikkailuEsineet.Aanteli -= Tavallinen; SeikkailuEsineet.Raapaistiin -= Raapaisu; SeikkailuEsineet.Nostettiin -= Nosto;
+            SeikkailuEsineet.Kolahti -= Kova; SeikkailuEsineet.Aanteli -= Tavallinen; SeikkailuEsineet.Raapaistiin -= Raapaisu; SeikkailuEsineet.Nostettiin -= Nosto; SeikkailuKynttilat.LuukkuAani -= Tavallinen; SeikkailuEsineet.AsetettiinAlttarille -= Asetettu; SeikkailuEsineet.Alttari = null;
             if (voudinAskeleet != null) Destroy(voudinAskeleet.gameObject);
         }
     }

@@ -412,7 +412,14 @@ namespace Matkakirja.Natiivi
             var seikkailuKamera = pelaaja != null ? pelaaja.Kamera : vene?.Kamera;
             bool cmKaytossa = cm != null && (seikkailuKamera != null || DioraamaCinemachine.Paalla && pakotettuKamera == null);
             cm?.Kaytossa(cmKaytossa);
-            if (seikkailuKamera != null)
+            if (KameraVapaa && nayttamo.Kamera != null)
+            {
+                // Pelattavan palan loppu (E3 vaihe 11): SeikkailuNousu (LS2) tai varanousu ohjaa kameraa; tämä ei kirjoita siihen.
+                cm?.Kaytossa(false); jousi.Nollaa();
+                var kp = nayttamo.Kamera.transform.position;
+                kameraAsento = new Asento(new Matkakirja.Linssit.Dioraama.V3(kp.x, kp.y, -kp.z), 0, 0, VeneSumuM, nayttamo.Kamera.fieldOfView, 0);
+            }
+            else if (seikkailuKamera != null)
             {
                 jousi.Nollaa();
                 string tapa = (pelaaja != null ? "pelaaja " : "vene ") + cm.PaivitaPelaaja(seikkailuKamera, nayttamo.Kamera, dt);
@@ -454,7 +461,7 @@ namespace Matkakirja.Natiivi
             // Kävelytilassa ei etsinnän renkaita (v44-ajo 7.10.: renkaat kameran edessä keittiössä).
             DioraamaEtsinta.Himmennys = Time.unscaledTime < himmennysAsti || SeikkailuPelaaja.Aktiivinen != null || SeikkailuVene.Aktiivinen != null;
             puolilahiRinta = null;
-            nayttamo.Paivita(kameraAsento, y.VahennettyLiike, t, asetaKamera: !cmKaytossa);
+            nayttamo.Paivita(kameraAsento, y.VahennettyLiike, t, asetaKamera: !cmKaytossa && !KameraVapaa);
             hahmot3D.Paivita(rakennus, nakyma, nayttamo.Kamera, t);
             // era 2b kohta 4 (ali-agentti P4b): 3D-pienoisfiguurit -- SAMAAN kohtaan kuin vanha 2D-hahmot3D
             // yllä, mutta Nayttamon omistama (ks. DioraamaNayttamo.cs:n Hahmot3D-kommentti).
@@ -490,7 +497,7 @@ namespace Matkakirja.Natiivi
             // Historiamoottori: seikkailu pois (näyttämön lapset tuhoutuvat; globaalit kuoren leikkaukset ja kävelydata nollataan).
             SeikkailuVartijat.Poista(); SeikkailuVene.Poista(); SeikkailuPelaaja.Poista(); SeikkailuRepliikit.Poista(); SeikkailuEsineet.Poista(); SeikkailuKynttilat.Poista(); SeikkailuKappeli.Poista(); SeikkailuAanet.Poista(); SeikkailuKavely.Pura();
             SeikkailuEsineet.Kolahti -= KokkiKuuleeKolahduksen;
-            cm?.SeikkailuPois(); PelattavaPalaPyydetty = false;
+            cm?.SeikkailuPois(); PelattavaPalaPyydetty = false; KameraVapaa = false;
             if (DioraamaLevyvalimuisti.TestiOsoitin == PelattavaPalaHash)
             {
                 // Seuraava avaus taas tuotannosta (myös kesken latauksen suljettaessa): osoitin pois ja rakennus unohdetaan ilman latausta.
@@ -893,6 +900,8 @@ namespace Matkakirja.Natiivi
         string pelaajaKameraTapa;
         /// <summary>Kehittäjävalikon pelattava pala (LinssiOhjain.AvaaPelattavaPala): käynnistyy, kun Olavinlinna on ladattu.</summary>
         public static bool PelattavaPalaPyydetty;
+        /// <summary>Kamera ulkoisen ohjauksen vallassa (E3 loppu: SeikkailuNousu); Sovitin ei kirjoita kameraan.</summary>
+        public static bool KameraVapaa;
         bool pelattavaPala;
         bool veneLaituriin; int veneRepliikki;
         const double VeneSumuM = 120, VeneKestoS = 50;

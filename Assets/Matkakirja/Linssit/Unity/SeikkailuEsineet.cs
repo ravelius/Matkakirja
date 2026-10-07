@@ -187,9 +187,28 @@ namespace Matkakirja.Natiivi
         {
             var e = kadessa; kadessa = null;
             e.Go.transform.SetParent(transform, true);
+            // E3 vaihe 11: alttarin lähellä kalkki ja pateeni asetetaan alttarille, liuskekivi laukkuun.
+            if (Alttari is Vector3 al && Vector3.Distance(p.transform.position, al) < 1.6f) { AsetaAlttarille(e.Id); return; }
             e.Go.transform.position = p.transform.position + p.Hahmo.forward * 0.5f + Vector3.up * 0.9f;
             e.Rb.isKinematic = false; e.Rb.linearVelocity = Vector3.zero; e.Heitetty = false;
             kirjaa?.Invoke($"seikkailu: laskettu {e.Id}");
+        }
+
+        /// <summary>Pääalttarin paikka (SeikkailuKappeli asettaa) ja tapahtuma, kun esine asetetaan sille.</summary>
+        public static Vector3? Alttari;
+        public static event Action<string> AsetettiinAlttarille;
+
+        /// <summary>Kalkki tai pateeni alttarille (pöydän pinnalle), liuskekivi laukkuun (piiloon); myös automaattisesti (10 s).</summary>
+        public void AsetaAlttarille(string id)
+        {
+            var e = esineet.Find(x => x.Id == id); if (e == null || e.Go == null || !(Alttari is Vector3 al)) return;
+            if (kadessa == e) kadessa = null;
+            e.Go.transform.SetParent(transform, true);
+            if (id == "liuskekivi") e.Go.SetActive(false);
+            else { e.Rb.isKinematic = true; e.Go.transform.position = al + Vector3.up * 1.0f + (id == "pateeni" ? Vector3.right * 0.2f : Vector3.zero); e.Go.transform.rotation = Quaternion.identity; }
+            SeikkailuAanet.Soita(id == "liuskekivi" ? "liina-avaus" : "hopea-kilahdus", e.Go.transform.position, 0.6f);
+            kirjaa?.Invoke($"seikkailu: {id} {(id == "liuskekivi" ? "laukkuun" : "alttarille")}");
+            AsetettiinAlttarille?.Invoke(id);
         }
 
         /// <summary>Kivi liukuu 0,3 m ulos seinästä (laastisauma antaa periksi) ja putoaa; kolahdus ei kuulu vartijoille (hiljainen työ).</summary>

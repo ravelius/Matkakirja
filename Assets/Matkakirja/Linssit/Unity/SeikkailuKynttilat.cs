@@ -60,6 +60,49 @@ namespace Matkakirja.Natiivi
 
         public double Valoisuus(Vector3 p, Vector3? oma) => ydin.Valoisuus(p.x, p.y, p.z, oma is Vector3 o ? (o.x, o.y, o.z) : ((double, double, double)?)null);
 
+        // --- E3d: ikuinen valo (vaihe 8) ja rautaluukku + virtaus (vaihe 4). Paikat merkeistä valo:ikuinen ja luukku:koillinen;
+        // puuttuessa PAIKKAMERKIT (Päätoimittaja 7.10. 17.5x: vaihdetaan, kun Linnanrakentajan peili päivittyy). ---
+        public bool LuukkuAuki { get; private set; }
+        public Vector3 IkuinenValo { get; private set; }
+        public Vector3 Luukku { get; private set; }
+        public Vector3 Portaikko { get; private set; }
+        public bool Paikkamerkit { get; private set; }
+        Light ikuinenValoLight; AudioSource tuuli;
+        public const float SytytysM = 1.0f, LuukkuM = 1.2f, LuukkuSammuuM = 1.0f, PortaikkoSammuuM = 1.2f;
+
+        void AsetaPaikat()
+        {
+            var d = SeikkailuKavely.Data;
+            Vector3? Merkki(string n) { if (d != null) foreach (var m in d.Merkit) if (m.Nimi == n) return new Vector3((float)m.X, (float)m.Y, (float)-m.Z); return null; }
+            var ovi = Merkki("ovi:kappeli-alku") ?? (liekit.Count > 0 ? liekit[0].Paikka : Vector3.zero);
+            // Alttari = reitin viimeinen piste (kappalainen-5), muuten liekkien keskipiste.
+            Vector3 alttari = Merkki("reitti:kappalainen-5") ?? Keski();
+            var keskus = (ovi + alttari) * 0.5f;
+            Portaikko = Merkki("portaikko:ylapaa") is Vector3 py ? new Vector3(ovi.x, ovi.y, ovi.z) : ovi;
+            var iv = Merkki("valo:ikuinen"); var lk = Merkki("luukku:koillinen");
+            Paikkamerkit = iv == null || lk == null;
+            IkuinenValo = iv ?? alttari + Vector3.up * 1.8f + (keskus - alttari).normalized * 0.6f;
+            // Koillinen: glTF x itä, z etelä → koillinen (+x, −z glTF) = Unity (+x, +z); seinälle 3,6 m keskuksesta, 1,6 m lattiasta.
+            Luukku = lk ?? new Vector3(keskus.x, ovi.y + 1.6f, keskus.z) + new Vector3(0.707f, 0f, 0.707f) * 3.6f;
+            var g = new GameObject("Ikuinen valo"); g.transform.SetParent(transform, false); g.transform.position = IkuinenValo;
+            ikuinenValoLight = g.AddComponent<Light>(); ikuinenValoLight.type = LightType.Point; ikuinenValoLight.range = 1.6f;
+            ikuinenValoLight.intensity = 0.5f; ikuinenValoLight.color = new Color(1f, 0.6f, 0.3f); ikuinenValoLight.shadows = LightShadows.None;
+            if (liekitLahde != null) { var lt = liekitLahde.LuoLyhty(g.transform); if (lt != null) lt.transform.localPosition = Vector3.zero; }
+            kirjaa?.Invoke($"seikkailu: kappeli: ikuinen valo {IkuinenValo}, luukku {Luukku}{(Paikkamerkit ? " (paikkamerkit)" : "")}");
+        }
+
+        Vector3 Keski() { var v = Vector3.zero; foreach (var l in liekit) v += l.Paikka; return liekit.Count > 0 ? v / liekit.Count : Vector3.zero; }
+
+        /// <summary>Luukku auki/kiinni (narahdus tai kolahdus kuuluu voudille tavallisena äänenä).</summary>
+        public void VaihdaLuukku()
+        {
+            LuukkuAuki = !LuukkuAuki;
+            SeikkailuAanet.Soita(LuukkuAuki ? "luukku-narahdus" : "luukku-kolahdus", Luukku);
+            LuukkuAani?.Invoke(Luukku);
+            kirjaa?.Invoke($"seikkailu: luukku {(LuukkuAuki ? "auki" : "kiinni")}");
+        }
+        public static event Action<Vector3> LuukkuAani;
+
         // --- E3d: kynttilän asetus alttaripöydälle seinän viereen (vaihe 6 "Saumat") ---
         /// <summary>Foggin kynttilä asetettuna (paikka) tai null (kädessä).</summary>
         public Vector3? OmaAsetettu { get; private set; }
@@ -88,6 +131,13 @@ namespace Matkakirja.Natiivi
         public bool Toimi(SeikkailuPelaaja p)
         {
             var c = p.transform.position + Vector3.up * 1.0f;
+            if (Vector3.Distance(c, Luukku) < LuukkuM) { VaihdaLuukku(); return true; }
+            if (ydin.OmaKynttila && !ydin.OmaPalaa && OmaAsetettu == null && Vector3.Distance(c + Vector3.up * 0.4f, IkuinenValo) < SytytysM + 0.6f)
+            {
+                ydin.AsetaOma(true); SeikkailuAanet.Soita("sytytys", IkuinenValo, 0.7f);
+                kirjaa?.Invoke("seikkailu: kynttilä sytytetty ikuisesta valosta");
+                return true;
+            }
             // Asetettu kynttilä lähellä → takaisin käteen; palava oma kynttilä ontolla kohdalla → asetetaan pöydälle seinän viereen.
             if (OmaAsetettu is Vector3 asp && Vector3.Distance(asp, c) < 1.2f) { OmaAsetettu = null; kirjaa?.Invoke("seikkailu: kynttilä otettu käteen"); return true; }
             if (OmaAsetettu == null && ydin.OmaPalaa && OnttoPaikka() is Vector3 op && Vector3.Distance(op, c) < 1.3f)
@@ -110,6 +160,8 @@ namespace Matkakirja.Natiivi
         {
             if (p == null) return false;
             var c = p.transform.position + Vector3.up * 1.0f;
+            if (Vector3.Distance(c, Luukku) < LuukkuM) return true;
+            if (ydin.OmaKynttila && !ydin.OmaPalaa && OmaAsetettu == null && Vector3.Distance(c + Vector3.up * 0.4f, IkuinenValo) < SytytysM + 0.6f) return true;
             if (OmaAsetettu is Vector3 asp && Vector3.Distance(asp, c) < 1.2f) return true;
             if (OmaAsetettu == null && ydin.OmaPalaa && OnttoPaikka() is Vector3 op && Vector3.Distance(op, c) < 1.3f) return true;
             return ydin.Valitse(c.x, c.y, c.z).Toiminto != KynttilaToiminto.Ei && (Lahella(c) || ydin.OmaPalaa);
@@ -120,6 +172,8 @@ namespace Matkakirja.Natiivi
             for (int i = 0; i < liekit.Count; i++)
                 if (liekit[i].Go != null && liekit[i].Go.activeSelf != ydin.Palaa(i)) liekit[i].Go.SetActive(ydin.Palaa(i));
             if (leivottu != null) leivottu.SetFloat(IdKirkkaus, kirkkausAlku * Mathf.Lerp(Himmein, 1f, (float)ydin.Osuus));
+            if (ikuinenValoLight == null && liekit.Count > 0) AsetaPaikat();
+            SeikkailuAanet.Silmukka("tuuli-rako", LuukkuAuki, Luukku, 0.6f);
             var p = SeikkailuPelaaja.Aktiivinen;
             bool oma = ydin.OmaPalaa && p != null;
             if (oma)
@@ -144,6 +198,15 @@ namespace Matkakirja.Natiivi
                     else { if (omaLiekki.transform.parent != p.Hahmo) omaLiekki.transform.SetParent(p.Hahmo, false); omaLiekki.transform.localPosition = new Vector3(0.22f, 1.15f, 0.3f); }
                     omaLiekki.SetActive(true);
                     var (kallistus, suunta) = Veto(kasi);
+                    if (LuukkuAuki)
+                    {
+                        // Virtaus luukusta kaari-oven portaikkoon (savupiippu); kätkön kohdalla veto voittaa (TULKINTA: ontelo).
+                        var virta = Portaikko - Luukku; virta.y = 0;
+                        if (kallistus < 0.3f) { suunta = virta.normalized; kallistus = Mathf.Max(kallistus, 0.45f); }
+                        else kallistus = Mathf.Min(1f, kallistus * 1.6f);
+                        bool sammuu = Vector3.Distance(kasi, Luukku) < LuukkuSammuuM || Vector3.Distance(kasi, Portaikko) < PortaikkoSammuuM;
+                        if (sammuu && OmaAsetettu == null) { ydin.AsetaOma(false); kirjaa?.Invoke("seikkailu: liekki repesi vedossa ja sammui"); }
+                    }
                     // Veto (ehdotus huone 5: "kilpien alla liekki kallistuu seinää kohti"): kallistus kohti seinää, värinä vedossa.
                     float varina = kallistus > 0 ? 6f * Mathf.Sin(Time.time * 23f) * kallistus : 0f;
                     var akseli = Vector3.Cross(Vector3.up, suunta);
