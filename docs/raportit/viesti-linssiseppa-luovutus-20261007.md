@@ -298,3 +298,4 @@ AVOINNA:
 - Varsova tarkistetaan uudelleen 14.10.
 - 21.4x: omistajan iPad-vaakakuva junasta 162: kuva 1 (lento) lähetetty, kuva 2 (yksityiskohtakuva) odottaa uudelleenkäännöstä (`tyokalut/linssiseppa-ajot/ajo-ipad-pallo.sh`, NIMI=juna162-<sha>; kuvat käännetään 90°, `omistajalle/`).
 - 21.52: BUILD 162 (30fbc374) iPad-vaakakuvat valmiit `omistajalle/build162-30fbc374-*`, lähetetty Päätoimittajalle; simu vapautettu Julkaisijalle. Kortissa ei vielä kuvatekstiä (korjaus 163:ssa).
+- 22.3x: TF 162 -toisto omistajan reitillä (linssi → Kuumailmapallo → Pariisi): kori puuttui (vain kaupunkitilassa), workerin kysymys soi siirtymän aikana, laatat karkeina (oletus: 99 % ei täyty laitteella). Korjaus 71cf7b97b (haara kortti-teksti, sisältää 578d1186c + e5c4b145e) Natiivisepälle junaan 163; Päätoimittaja ei ole vielä kuitannut 71cf7b97b:tä.
