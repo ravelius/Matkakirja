@@ -53,10 +53,20 @@ export function tarkistaEsittely(pohja, e) {
     if (!Number.isInteger(k.koko_m) || k.koko_m < 20 || k.koko_m > 3000) v(k.id, `koko_m ${k.koko_m}`);
     if (sanat(k.kuvaus) > 5 || !k.kuvaus) v(k.id, `kuvaus "${k.kuvaus}"`);
     if (!k.syventava || sanat(k.syventava) > 7) v(k.id, `syventava "${k.syventava}"`);
+    // Kysy-napin valmiit kysymykset (Päätoimittaja 7.10.): 5 kpl, ≤ 60 merkkiä, kysymysmerkki; vastaukset livenä.
+    if (k.kysymykset === undefined) huomiot.push(`${k.id}: kysymykset puuttuvat`);
+    else if (!Array.isArray(k.kysymykset) || k.kysymykset.length !== 5) v(k.id, `kysymykset: ${k.kysymykset?.length ?? 0} (pitää olla 5)`);
+    else for (const q of k.kysymykset) if (typeof q !== 'string' || q.length > 60 || !q.trim().endsWith('?') || /\d/.test(q)) v(k.id, `kysymys "${q}" (≤ 60 mrk, ?, luvut sanoina)`);
     if (!Array.isArray(k.lahteet) || !k.lahteet.length) v(k.id, 'lähteet puuttuvat');
     else for (const l of k.lahteet) if (!/^(https:\/\/|kaanon:)/.test(l.url ?? '')) v(k.id, `lähteen url "${l.url}" (https:// tai kaanon:)`);
   }
   if (isoisia > 1) virheet.push(`${e.id}: isoisä ${isoisia} kohteessa (enintään 1)`);
+  // Kaupungin avaus (Päätoimittaja 7.10.): { teksti, aani? }, noin 20 s eli 30–50 sanaa.
+  if (e.avaus !== undefined) {
+    const n = sanat(e.avaus?.teksti);
+    if (n < 25 || n > 55) virheet.push(`${e.id}: avaus ${n} sanaa (30–50)`);
+    if (/[()[\]•]/.test(e.avaus?.teksti ?? '') || /\d/.test(vuosiluvutSanoiksi(e.avaus?.teksti ?? ''))) virheet.push(`${e.id}: avauksen muoto (sulkeet tai numero)`);
+  } else huomiot.push(`${e.id}: avaus puuttuu`);
   // Päätoimittaja 7.10.: sama vinkin alku enintään kerran per kaupunki.
   const vinkit = e.kohteet.filter((k) => /kun tulet paikalle/i.test(`${k.teksti} ${k.lyhyt ?? ''}`)).length;
   if (vinkit > 1) virheet.push(`${e.id}: "Kun tulet paikalle" ${vinkit} kohteessa (enintään 1)`);
