@@ -1,0 +1,713 @@
+{
+  "sourceCommit": "9ec0418c925144f71ea5efa719e3e44a812bd2ea",
+  "sourceBlob": "cae06d7ce6c3f43f537ffa97175ac38674ebbbc5",
+  "source": "posti/sisaltokirjuri-codex-oppaan-kaupunkinakymat-sallitut-25-20261007.md",
+  "sourceReadInFull": true,
+  "date": "2026-10-07",
+  "batch": "01",
+  "cityIds": [
+    "rooma",
+    "koopenhamina",
+    "barcelona",
+    "berliini",
+    "madrid"
+  ],
+  "acceptedImages": 5,
+  "style": "photorealistic-real-camera-look",
+  "tool": "built-in image_gen",
+  "productionDimensions": [
+    1536,
+    1024
+  ],
+  "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+  "reviewFirstThree": [
+    "rooma",
+    "koopenhamina",
+    "barcelona"
+  ],
+  "comparison": {
+    "file": "comparison-batch01.jpg",
+    "r2Key": "julisteet/herokoe/20261007/comparison-batch01.jpg",
+    "url": "https://media.matkakirja.app/julisteet/herokoe/20261007/comparison-batch01.jpg",
+    "sha256": "7ac1bfac239010ee487057b644bec7d5c145a873e96b815e70c18d34c22bae49",
+    "bytes": 321911,
+    "http": 200,
+    "mime": "image/jpeg",
+    "cors": "https://matkakirja.app",
+    "byteExactReadback": true
+  },
+  "assets": [
+    {
+      "id": "rooma",
+      "cityName": "Rooma",
+      "subject": "Colosseumin ulkonäkymä",
+      "subjectCoordinatesApprox": [
+        41.89021,
+        12.49223
+      ],
+      "subjectDistanceApproxMetres": 905,
+      "subjectRadiusPassApprox": true,
+      "coordinateProof": {
+        "method": "approved plan approximate landmark point; Commons metadata lacks GPS",
+        "landmarkCoordinateVerifiedFromMetadata": false,
+        "referenceCameraGPS": null,
+        "caveat": "Approximate subject coordinate, not GPS camera position."
+      },
+      "caption": "Colosseumin säilynyt ulkokehä ja matalampi sisäseinä Rooman nykyisessä kaupunkimaisemassa. Havainnekuva.",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "metadataText": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "viitteet": [
+        {
+          "nimi": "File:Colosseo 2020.jpg",
+          "tekija": "FeaturedPics",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Colosseo_2020.jpg"
+        },
+        {
+          "nimi": "File:Colosseum on a November Day (45615640574).jpg",
+          "tekija": "Sonse",
+          "lisenssi": "CC BY 2.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Colosseum_on_a_November_Day_(45615640574).jpg"
+        }
+      ],
+      "sourceVersion": "9ec0418c925144f71ea5efa719e3e44a812bd2ea",
+      "sourceBlob": "cae06d7ce6c3f43f537ffa97175ac38674ebbbc5",
+      "generationPrompt": "Use case: photorealistic-natural. Asset: one landscape 3:2 1536x1024 city-guide hero, AI illustration with convincing real-camera appearance. Generate a completely NEW photograph-like image, not an edit or copy of either reference. Input images 1 and 2 are two different photographers' architectural references of the actual present-day Colosseum in Rome: preserve its real elliptical geometry, worn travertine arches, surviving taller exterior arc and lower broken inner wall, never reconstruct the missing masonry. Main subject: full Colosseum exterior, large and dominant with its entire silhouette inside frame. Camera VAKIO: LOW ELEVATED rooftop viewpoint approximately 20m above ground, roughly level with the landmark midpoint, gentle about 15 degree downward tilt; natural full-frame 35mm perspective, never overhead. Show the plaza and the real immediate Roman street context near Colle Oppio, tiny ordinary modern pedestrians, stone paving and umbrella pines; keep the city context restrained and anchored to reference geometry, no unrelated landmarks or invented buildings. Warm clear morning, directional soft sunlight and credible shadows, naturally muted warm stone colours, detailed rough pores and iron-clamp holes, physically plausible lens and atmosphere. Restrained photographic exposure, no HDR, no hyperreal glow, no saturated travel-poster treatment. No text, no lettering, no signs or legible plaques, no logos, no watermark, no border. No stylization, painting, diorama, model or cinematic illustration. Opaque output.",
+      "generationTool": "built-in image_gen",
+      "generatedOriginalPath": "/Users/samireivinen/.codex/generated_images/01a11612-fda9-7730-b005-061a78d50c49/exec-7251a003-fa2b-4941-b551-12a664482092.png",
+      "nativeDimensions": [
+        1536,
+        1024
+      ],
+      "productionDimensions": [
+        1536,
+        1024
+      ],
+      "deliveryDimensions": [
+        1536,
+        1024
+      ],
+      "format": "PNG",
+      "colorMode": "RGB",
+      "colorSpace": "sRGB",
+      "opaque": true,
+      "sha256": "99955e506237e88f3cd500fbc1bfbdb4f6301d1de4ece19b75f7424cf2f320dc",
+      "camera": {
+        "preset": "VAKIO",
+        "heightApproxMetres": 20,
+        "downwardTiltDegrees": 15,
+        "view": "low rooftop height; whole Colosseum visible"
+      },
+      "timeOfDay": "warm morning",
+      "referenceVisualQA": {
+        "reviewedCount": 2,
+        "modernExteriorSameSubject": true,
+        "differentCreators": true,
+        "originalLongSideAtLeast1000": true
+      },
+      "visualQA": {
+        "status": "production-agent inspected native, final 1536x1024 and 480px preview; root QA pending",
+        "recognizableSubject": true,
+        "geometry": "Surviving high outer arc and lower inner wall retained; entire outline visible.",
+        "context": "restricted modern Roman street/plaza and umbrella pines",
+        "people": "small pedestrians",
+        "noStylization": true,
+        "caveat": "Small plaque masonry texture retained from real facade; root must assess prohibition of legible signs."
+      },
+      "deliveryState": "local candidate awaiting root QA; not uploaded/integrated/published",
+      "technicalQA": {
+        "dimensionsVerified": true,
+        "RGBVerified": true,
+        "opaqueVerified": true,
+        "sRGBProfilePresent": true,
+        "DescriptionVerified": true,
+        "SourceVerified": true,
+        "sha256Verified": true
+      },
+      "file": "hero-rooma.png",
+      "r2Key": "julisteet/herokoe/hero-rooma.png",
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-rooma.png",
+      "bytes": 2901269,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/rooma/production/hero-rooma.png",
+      "parentQA": {
+        "reviewer": "root",
+        "sha256": "99955e506237e88f3cd500fbc1bfbdb4f6301d1de4ece19b75f7424cf2f320dc",
+        "nativeViewed": true,
+        "referenceComparisonViewed": true,
+        "photorealism": true,
+        "recognisableLandmarkAndImmediateContext": true,
+        "technicalValidationAtUpload": true,
+        "approvedForDelivery": true,
+        "limitations": {
+          "status": "production-agent inspected native, final 1536x1024 and 480px preview; root QA pending",
+          "recognizableSubject": true,
+          "geometry": "Surviving high outer arc and lower inner wall retained; entire outline visible.",
+          "context": "restricted modern Roman street/plaza and umbrella pines",
+          "people": "small pedestrians",
+          "noStylization": true,
+          "caveat": "Small plaque masonry texture retained from real facade; root must assess prohibition of legible signs."
+        },
+        "cameraDecision": "low elevated view accepted"
+      },
+      "editorAcceptance": "pending",
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "caption": "Nyhavnin kanava, purjelaivat ja värikkäät talot Kööpenhaminan iltapäivässä. Havainnekuva.",
+      "timeOfDay": "warm late afternoon",
+      "camera": {
+        "preset": "VAKIO",
+        "heightApproxMetres": 15,
+        "downwardTiltDegrees": 15,
+        "view": "Charlottenborg-side elevated viewpoint across canal"
+      },
+      "visualQA": {
+        "status": "production-agent inspected native, final 1536x1024 and 480px preview; root QA pending",
+        "recognizableSubject": true,
+        "geometry": "Nyhavn contiguous north-side facades, canal and moored ships match both references.",
+        "context": "Immediate canal/quay context; no invented remote landmark.",
+        "people": "Small modern visitors",
+        "noStylization": true,
+        "noReadableText": true
+      },
+      "id": "koopenhamina",
+      "cityName": "Kööpenhamina",
+      "subject": "Nyhavnin kanava ja talorivi",
+      "subjectCoordinatesApprox": [
+        55.68056,
+        12.59056
+      ],
+      "subjectDistanceApproxMetres": 3334,
+      "subjectRadiusPassApprox": true,
+      "coordinateProof": {
+        "method": "approved plan landmark approximate point and broker Commons metadata",
+        "landmarkCoordinateVerifiedFromMetadata": false,
+        "referenceCameraGPS": [
+          {
+            "reference": "File:Nyhavn houses and boats.jpg",
+            "cameraGPS": [
+              "55.679650",
+              "12.591300"
+            ]
+          }
+        ],
+        "caveat": "Reference GPS is camera location, not landmark centre. Subject coordinate remains approximate."
+      },
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "metadataText": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "viitteet": [
+        {
+          "nimi": "File:Nyhavn houses and boats.jpg",
+          "tekija": "OleNeitzel",
+          "lisenssi": "CC BY 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Nyhavn_houses_and_boats.jpg"
+        },
+        {
+          "nimi": "File:Classic Nyhavn I (7530252984).jpg",
+          "tekija": "Karen Mardahl",
+          "lisenssi": "CC BY-SA 2.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Classic_Nyhavn_I_(7530252984).jpg"
+        }
+      ],
+      "sourceVersion": "9ec0418c925144f71ea5efa719e3e44a812bd2ea",
+      "sourceBlob": "cae06d7ce6c3f43f537ffa97175ac38674ebbbc5",
+      "generationPrompt": "Use case: photorealistic-natural. Create one NEW 1536x1024 landscape 3:2 photographic AI illustration of present-day Nyhavn, Copenhagen. Both input images are licensed architectural/geographic references from different photographers, not edit targets. Show the real north-side Nyhavn waterfront row with its actual varying narrow ochre, muted yellow, pale blue, red and cream facades, white window grids, stepped and triangular gables, clay tiled roofs and chimneys. Preserve the anchored sequence and relationships shown in the references: the canal in front, historic moored sailing ships with plausible ropes and masts, quayside cafes and tiny modern ordinary visitors, Copenhagen buildings immediately behind. Low elevated VAKIO viewpoint from the Charlottenborg side of the canal, rooftop height roughly 12-15m, roughly level with the facades' midpoints, camera gently downward about 15 degrees, natural full-frame lens perspective. Waterfront row large, whole roofs and canal visible; distant context restrained to the real contiguous city fabric. Warm late-afternoon sunlight after passing thin cloud, quiet soft shadows, credible gentle water ripples, subtle natural colours and real painted-plaster texture, ordinary photographic exposure, no HDR or dramatic glow. No lettering anywhere: shop fascia and awnings blank, no readable signs or labels, no boat names, no licence plates, no text, logos, watermark or borders. No painting, illustration style, miniature or diorama, oversaturation or fantasy additions. Opaque.",
+      "generationTool": "built-in image_gen",
+      "generatedOriginalPath": "/Users/samireivinen/.codex/generated_images/01a11612-fda9-7730-b005-061a78d50c49/exec-d7ef7b47-1994-4c75-baed-d4f3922363ff.png",
+      "nativeDimensions": [
+        1536,
+        1024
+      ],
+      "productionDimensions": [
+        1536,
+        1024
+      ],
+      "deliveryDimensions": [
+        1536,
+        1024
+      ],
+      "format": "PNG",
+      "colorMode": "RGB",
+      "colorSpace": "sRGB",
+      "opaque": true,
+      "sha256": "655fe50ec1dbd7d57b140fab0fee27d958aab63020180e8172fb89df2ef97572",
+      "referenceVisualQA": {
+        "reviewedCount": 2,
+        "modernExteriorSameSubject": true,
+        "differentCreators": true,
+        "originalLongSideAtLeast1000": true
+      },
+      "deliveryState": "local candidate awaiting root QA; not uploaded/integrated/published",
+      "technicalQA": {
+        "dimensionsVerified": true,
+        "RGBVerified": true,
+        "opaqueVerified": true,
+        "sRGBProfilePresent": true,
+        "DescriptionVerified": true,
+        "SourceVerified": true,
+        "sha256Verified": true
+      },
+      "file": "hero-koopenhamina.png",
+      "r2Key": "julisteet/herokoe/hero-koopenhamina.png",
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-koopenhamina.png",
+      "bytes": 3034186,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/koopenhamina/production/hero-koopenhamina.png",
+      "parentQA": {
+        "reviewer": "root",
+        "sha256": "655fe50ec1dbd7d57b140fab0fee27d958aab63020180e8172fb89df2ef97572",
+        "nativeViewed": true,
+        "referenceComparisonViewed": true,
+        "photorealism": true,
+        "recognisableLandmarkAndImmediateContext": true,
+        "technicalValidationAtUpload": true,
+        "approvedForDelivery": true,
+        "limitations": {
+          "status": "production-agent inspected native, final 1536x1024 and 480px preview; root QA pending",
+          "recognizableSubject": true,
+          "geometry": "Nyhavn contiguous north-side facades, canal and moored ships match both references.",
+          "context": "Immediate canal/quay context; no invented remote landmark.",
+          "people": "Small modern visitors",
+          "noStylization": true,
+          "noReadableText": true
+        },
+        "cameraDecision": "low elevated view accepted"
+      },
+      "editorAcceptance": "pending",
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "caption": "Casa Batllón mosaiikkijulkisivu ja kaakeliharja Passeig de Gràcian varrella Barcelonassa. Havainnekuva.",
+      "timeOfDay": "neutral bright daytime with soft cloud",
+      "camera": {
+        "preset": "VAKIO",
+        "heightApproxMetres": 15,
+        "downwardTiltDegrees": 15,
+        "view": "across Passeig de Gràcia; complete front facade"
+      },
+      "subjectCorrection": {
+        "oldSubject": "Palau de la Música Catalana",
+        "reason": "One supplied reference is a concert-hall interior; rejected before generation.",
+        "newSubject": "Casa Batlló",
+        "plan": "reference-plan-barcelona-correction.json",
+        "oldSubjectGenerationCount": 0
+      },
+      "visualQA": {
+        "status": "production-agent inspected native, final 1536x1024 and 480px preview; root QA pending",
+        "recognizableSubject": true,
+        "geometry": "Left turret/cross, curved tiled roof, mask balconies, mosaic facade and bone-like lower colonnade anchored to two complementary exterior-detail references.",
+        "context": "Immediate Passeig de Gràcia street plus attached Casa Amatller stepped facade to left and conventional facade to right.",
+        "people": "Small ordinary modern pedestrians",
+        "noStylization": true,
+        "noReadableText": true,
+        "caveat": "Reference pair provides complementary upper and lower details rather than one full facade photograph; fine window/balcony counts remain approximate."
+      },
+      "id": "barcelona",
+      "cityName": "Barcelona",
+      "subject": "Casa Batllón julkisivu ja Passeig de Gràcian lähiympäristö",
+      "subjectCoordinatesApprox": [
+        41.39165,
+        2.165
+      ],
+      "subjectDistanceApproxMetres": 1451,
+      "subjectRadiusPassApprox": true,
+      "coordinateProof": {
+        "method": "approved plan landmark approximate point and broker Commons metadata",
+        "landmarkCoordinateVerifiedFromMetadata": false,
+        "referenceCameraGPS": [
+          {
+            "reference": "File:Casa Batlló 01.jpg",
+            "cameraGPS": [
+              "41.391606",
+              "2.164794"
+            ]
+          }
+        ],
+        "caveat": "Reference GPS is camera location, not landmark centre. Subject coordinate remains approximate."
+      },
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "metadataText": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "viitteet": [
+        {
+          "nimi": "File:Gaudi's Casa Batllo, Barcelona, Spain (IMG 5380a).jpg",
+          "tekija": "Frank K.",
+          "lisenssi": "CC BY 2.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Gaudi%27s_Casa_Batllo,_Barcelona,_Spain_(IMG_5380a).jpg"
+        },
+        {
+          "nimi": "File:Casa Batlló 01.jpg",
+          "tekija": "Bernard Gagnon",
+          "lisenssi": "CC BY-SA 3.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Casa_Batll%C3%B3_01.jpg"
+        }
+      ],
+      "sourceVersion": "9ec0418c925144f71ea5efa719e3e44a812bd2ea",
+      "sourceBlob": "cae06d7ce6c3f43f537ffa97175ac38674ebbbc5",
+      "generationPrompt": "Use case: photorealistic-natural. One NEW 1536x1024 landscape 3:2 photographic AI illustration of present-day Casa Batlló, Barcelona, front facade on Passeig de Gràcia. Input images 1 and 2 are different photographers' architectural references: image 1 documents the lower organic bone-like stone window colonnade and mask-shaped balconies, image 2 documents the actual curved blue-green tiled dragon-back roof and left rounded turret with four-armed stone cross. Combine their evidence to preserve this one real facade, not unrelated Gaudí buildings: authentic narrow facade with shimmering small restrained mosaic pieces, green shutters, multiple regular stacked mask-shaped balconies, sculptural curved lower windows, asymmetrical roof crest and cross tower on the LEFT. Full Casa Batlló facade and complete roof cross visible, large and dominant. Camera VAKIO low elevated viewpoint across Passeig de Gràcia at about 15m rooftop height, roughly facade midpoint, gently downward about 15 degrees, natural full-frame 35mm perspective, not ground-up and not top-down. Only immediate attached neighbours on left and right and the street/sidewalk below; left Casa Amatller has its real stepped triangular roof outline, right neighbour a restrained beige conventional facade, never merge neighbours into Casa Batlló and no invented distant skyline. Tiny ordinary modern pedestrians and no foreground close people. Neutral bright daytime with soft high cloud, subtle natural colours and real ceramic/stone texture, realistic camera exposure and credible reflections; no glowing mosaic, no HDR, no travel-poster saturation. No illustration style, painting, miniature, diorama, fantasy additions. Absolutely no lettering, no readable signs, banners, plaques, inscriptions or advertisements; no logos, watermark or borders. Opaque.",
+      "generationTool": "built-in image_gen",
+      "generatedOriginalPath": "/Users/samireivinen/.codex/generated_images/01a11612-fda9-7730-b005-061a78d50c49/exec-911ef9aa-520d-4672-a13c-3230325b7b88.png",
+      "nativeDimensions": [
+        1536,
+        1024
+      ],
+      "productionDimensions": [
+        1536,
+        1024
+      ],
+      "deliveryDimensions": [
+        1536,
+        1024
+      ],
+      "format": "PNG",
+      "colorMode": "RGB",
+      "colorSpace": "sRGB",
+      "opaque": true,
+      "sha256": "fa29100d615facdbe6d1655e9acacec9a6efaf66be7262d8b372126e6f08f7fc",
+      "referenceVisualQA": {
+        "reviewedCount": 2,
+        "modernExteriorSameSubject": true,
+        "differentCreators": true,
+        "originalLongSideAtLeast1000": true
+      },
+      "deliveryState": "local candidate awaiting root QA; not uploaded/integrated/published",
+      "technicalQA": {
+        "dimensionsVerified": true,
+        "RGBVerified": true,
+        "opaqueVerified": true,
+        "sRGBProfilePresent": true,
+        "DescriptionVerified": true,
+        "SourceVerified": true,
+        "sha256Verified": true
+      },
+      "file": "hero-barcelona.png",
+      "r2Key": "julisteet/herokoe/hero-barcelona.png",
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-barcelona.png",
+      "bytes": 3288164,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/barcelona/production/hero-barcelona.png",
+      "parentQA": {
+        "reviewer": "root",
+        "sha256": "fa29100d615facdbe6d1655e9acacec9a6efaf66be7262d8b372126e6f08f7fc",
+        "nativeViewed": true,
+        "referenceComparisonViewed": true,
+        "photorealism": true,
+        "recognisableLandmarkAndImmediateContext": true,
+        "technicalValidationAtUpload": true,
+        "approvedForDelivery": true,
+        "limitations": {
+          "status": "production-agent inspected native, final 1536x1024 and 480px preview; root QA pending",
+          "recognizableSubject": true,
+          "geometry": "Left turret/cross, curved tiled roof, mask balconies, mosaic facade and bone-like lower colonnade anchored to two complementary exterior-detail references.",
+          "context": "Immediate Passeig de Gràcia street plus attached Casa Amatller stepped facade to left and conventional facade to right.",
+          "people": "Small ordinary modern pedestrians",
+          "noStylization": true,
+          "noReadableText": true,
+          "caveat": "Reference pair provides complementary upper and lower details rather than one full facade photograph; fine window/balcony counts remain approximate."
+        },
+        "cameraDecision": "low elevated view accepted"
+      },
+      "editorAcceptance": "pending",
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "caption": "Berliner Domin kuparikupolit Lustgartenin yllä sinisen hetken alussa. Havainnekuva.",
+      "timeOfDay": "early blue hour",
+      "camera": {
+        "preset": "VAKIO",
+        "heightApproxMetres": 30,
+        "downwardTiltDegrees": 15,
+        "view": "west/southwest over Lustgarten"
+      },
+      "visualQA": {
+        "status": "production-agent inspected native, final 1536x1024 and 480px preview; root QA pending",
+        "recognizableSubject": true,
+        "geometry": "Correct large ribbed central dome, two front domed towers, stone arch facade retained.",
+        "context": "Lustgarten foreground and Fernsehturm behind right as in main reference; no Spree falsely placed in front.",
+        "people": "Small modern pedestrians",
+        "noStylization": true,
+        "noReadableText": true
+      },
+      "id": "berliini",
+      "cityName": "Berliini",
+      "subject": "Berliner Dom ja Museosaaren kaupunkinäkymä",
+      "subjectCoordinatesApprox": [
+        52.51906,
+        13.40108
+      ],
+      "subjectDistanceApproxMetres": 854,
+      "subjectRadiusPassApprox": true,
+      "coordinateProof": {
+        "method": "approved plan landmark approximate point and broker Commons metadata",
+        "landmarkCoordinateVerifiedFromMetadata": false,
+        "referenceCameraGPS": [
+          {
+            "reference": "File:Berliner Dom BW 5.jpg",
+            "cameraGPS": [
+              "52.517918",
+              "13.399479"
+            ]
+          },
+          {
+            "reference": "File:Berliner Dom, 170409, ako (2).jpg",
+            "cameraGPS": [
+              "52.521600",
+              "13.398913"
+            ]
+          }
+        ],
+        "caveat": "Reference GPS is camera location, not landmark centre. Subject coordinate remains approximate."
+      },
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "metadataText": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "viitteet": [
+        {
+          "nimi": "File:Berliner Dom BW 5.jpg",
+          "tekija": "Berthold Werner",
+          "lisenssi": "CC BY-SA 3.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Berliner_Dom_BW_5.jpg"
+        },
+        {
+          "nimi": "File:Berliner Dom, 170409, ako (2).jpg",
+          "tekija": "Ansgar Koreng",
+          "lisenssi": "CC BY 3.0 de",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0/de/deed.en",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Berliner_Dom,_170409,_ako_(2).jpg"
+        }
+      ],
+      "sourceVersion": "9ec0418c925144f71ea5efa719e3e44a812bd2ea",
+      "sourceBlob": "cae06d7ce6c3f43f537ffa97175ac38674ebbbc5",
+      "generationPrompt": "Use case photorealistic-natural. One completely NEW landscape 3:2 1536x1024 real-camera-looking AI illustration of the actual present-day Berliner Dom, Berlin. Images 1 and 2 are licensed architectural and place references by different photographers. Preserve the real cathedral's central large ribbed verdigris-copper dome with lantern and gold finial/cross, the smaller domed towers, ornate weathered stone west facade with arch and stairs, no invented extra towers or altered dome. Entire main cathedral silhouette visible, large and dominant. VAKIO camera LOW ELEVATED at rooftop height about 30m, roughly level with cathedral midpoint, gently down about 15 degrees from west/southwest over Lustgarten, natural full-frame 35mm camera perspective; not aerial top-down. Show immediate Lustgarten paths, lawn and very small modern pedestrians below; restrained real Berlin street context; Fernsehturm slender white shaft and silver sphere only in its actual reference relation behind to the right. Do not invent buildings or collage unrelated city landmarks; omit distant skyline details that are not established by the references. Early blue hour just after sunset: credible light steel-blue sky and ambient light, restrained warm architectural illumination with still readable natural stone detail; subdued verdigris and beige colours, realistic atmospheric clarity, photographic exposure with modest shadows. No HDR, glowing halo, oversaturation, diorama, painting, fantasy or stylization. No text, no signs/advertisements/lettering, no logos, no watermark, no frame. Opaque.",
+      "generationTool": "built-in image_gen",
+      "generatedOriginalPath": "/Users/samireivinen/.codex/generated_images/01a11612-fda9-7730-b005-061a78d50c49/exec-e253afe6-fa63-4c5d-82eb-fb47648e135f.png",
+      "nativeDimensions": [
+        1536,
+        1024
+      ],
+      "productionDimensions": [
+        1536,
+        1024
+      ],
+      "deliveryDimensions": [
+        1536,
+        1024
+      ],
+      "format": "PNG",
+      "colorMode": "RGB",
+      "colorSpace": "sRGB",
+      "opaque": true,
+      "sha256": "4f1cb28eab02b89ded3cc1f413d918960b2bec5d1ceca4f99b13e86bc5c0d442",
+      "referenceVisualQA": {
+        "reviewedCount": 2,
+        "modernExteriorSameSubject": true,
+        "differentCreators": true,
+        "originalLongSideAtLeast1000": true
+      },
+      "deliveryState": "local candidate awaiting root QA; not uploaded/integrated/published",
+      "technicalQA": {
+        "dimensionsVerified": true,
+        "RGBVerified": true,
+        "opaqueVerified": true,
+        "sRGBProfilePresent": true,
+        "DescriptionVerified": true,
+        "SourceVerified": true,
+        "sha256Verified": true
+      },
+      "file": "hero-berliini.png",
+      "r2Key": "julisteet/herokoe/hero-berliini.png",
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-berliini.png",
+      "bytes": 2528285,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/berliini/production/hero-berliini.png",
+      "parentQA": {
+        "reviewer": "root",
+        "sha256": "4f1cb28eab02b89ded3cc1f413d918960b2bec5d1ceca4f99b13e86bc5c0d442",
+        "nativeViewed": true,
+        "referenceComparisonViewed": true,
+        "photorealism": true,
+        "recognisableLandmarkAndImmediateContext": true,
+        "technicalValidationAtUpload": true,
+        "approvedForDelivery": true,
+        "limitations": {
+          "status": "production-agent inspected native, final 1536x1024 and 480px preview; root QA pending",
+          "recognizableSubject": true,
+          "geometry": "Correct large ribbed central dome, two front domed towers, stone arch facade retained.",
+          "context": "Lustgarten foreground and Fernsehturm behind right as in main reference; no Spree falsely placed in front.",
+          "people": "Small modern pedestrians",
+          "noStylization": true,
+          "noReadableText": true
+        },
+        "cameraDecision": "low elevated view accepted"
+      },
+      "editorAcceptance": "pending",
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "caption": "Plaza Mayorin Casa de la Panadería ja Filip III:n ratsastajapatsas sateen jälkeisessä valossa. Havainnekuva.",
+      "timeOfDay": "warm sun after light rain",
+      "camera": {
+        "preset": "VAKIO",
+        "heightApproxMetres": 15,
+        "downwardTiltDegrees": 15,
+        "view": "south side towards Casa de la Panadería"
+      },
+      "visualQA": {
+        "status": "production-agent inspected native, final 1536x1024 and 480px preview; root QA pending",
+        "recognizableSubject": true,
+        "geometry": "Muralled long north facade, two spires, slate roof, arcades and equestrian statue match both references.",
+        "context": "Immediate stone-paved Plaza Mayor, attached red facades; no unrelated skyline.",
+        "people": "Small modern pedestrians; few nearest figures approach 8 percent image height, root QA requested",
+        "noStylization": true,
+        "noReadableText": true
+      },
+      "id": "madrid",
+      "cityName": "Madrid",
+      "subject": "Plaza Mayor",
+      "subjectCoordinatesApprox": [
+        40.41539,
+        -3.70737
+      ],
+      "subjectDistanceApproxMetres": 1407,
+      "subjectRadiusPassApprox": true,
+      "coordinateProof": {
+        "method": "approved plan landmark approximate point and broker Commons metadata",
+        "landmarkCoordinateVerifiedFromMetadata": false,
+        "referenceCameraGPS": [
+          {
+            "reference": "File:Plaza Mayor de Madrid - 01.jpg",
+            "cameraGPS": [
+              "40.415143",
+              "-3.707352"
+            ]
+          }
+        ],
+        "caveat": "Reference GPS is camera location, not landmark centre. Subject coordinate remains approximate."
+      },
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "metadataText": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "viitteet": [
+        {
+          "nimi": "File:Plaza Mayor de Madrid - 01.jpg",
+          "tekija": "Carlos Delgado",
+          "lisenssi": "CC BY-SA 3.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Plaza_Mayor_de_Madrid_-_01.jpg"
+        },
+        {
+          "nimi": "File:Plaza Mayor, Madrid, España, 2023-01-03, DD 78.jpg",
+          "tekija": "Diego Delso",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Plaza_Mayor,_Madrid,_Espa%C3%B1a,_2023-01-03,_DD_78.jpg"
+        }
+      ],
+      "sourceVersion": "9ec0418c925144f71ea5efa719e3e44a812bd2ea",
+      "sourceBlob": "cae06d7ce6c3f43f537ffa97175ac38674ebbbc5",
+      "generationPrompt": "Use case photorealistic-natural. Generate one completely NEW real-camera-looking AI illustration, landscape 3:2 1536x1024, of present-day Plaza Mayor in Madrid. Both input images are licensed references by different photographers showing the actual Casa de la Panadería on the north side of the square. Preserve the building's real long facade with central softly weathered ochre/pink figurative painted murals, regular white shuttered windows with black iron balconies, ground-level granite arcades, grey slate roof, and paired narrow tower spires; no invented architecture. Full principal facade and both tower tips inside frame, large and dominant, red adjoining square buildings retain their real attached relationship. The Felipe III bronze equestrian statue on its stone pedestal stands in the square in front of the facade, horse and rider credible and proportional. VAKIO camera from south side of square LOW ELEVATED rooftop height about 15m, roughly level with the building's midpoint, gentle downward 15-degree view, natural full-frame lens perspective, not top-down. Include the immediate broad stone-paved square below and tiny ordinary contemporary pedestrians; no wide unrelated Madrid skyline. Warm light breaking through after a light rain, softly reflective damp paving with subtle real reflections, soft credible shadows, natural restrained colours and ordinary camera exposure. No HDR, cinematic glow, illustration, painting, diorama or miniature. Murals may depict real figurative art, but absolutely no lettering, inscription, readable plaque, banner, sign, text, advertising, logo, watermark or border. Small flag colours are allowed without writing. Opaque output.",
+      "generationTool": "built-in image_gen",
+      "generatedOriginalPath": "/Users/samireivinen/.codex/generated_images/01a11612-fda9-7730-b005-061a78d50c49/exec-9ada0f64-101f-416a-915f-a2a94a0477ec.png",
+      "nativeDimensions": [
+        1536,
+        1024
+      ],
+      "productionDimensions": [
+        1536,
+        1024
+      ],
+      "deliveryDimensions": [
+        1536,
+        1024
+      ],
+      "format": "PNG",
+      "colorMode": "RGB",
+      "colorSpace": "sRGB",
+      "opaque": true,
+      "sha256": "b179d1e954253fc261f47af24842a78f40d62bdb419bd6ab2b7f427040aa3c6a",
+      "referenceVisualQA": {
+        "reviewedCount": 2,
+        "modernExteriorSameSubject": true,
+        "differentCreators": true,
+        "originalLongSideAtLeast1000": true
+      },
+      "deliveryState": "local candidate awaiting root QA; not uploaded/integrated/published",
+      "technicalQA": {
+        "dimensionsVerified": true,
+        "RGBVerified": true,
+        "opaqueVerified": true,
+        "sRGBProfilePresent": true,
+        "DescriptionVerified": true,
+        "SourceVerified": true,
+        "sha256Verified": true
+      },
+      "file": "hero-madrid.png",
+      "r2Key": "julisteet/herokoe/hero-madrid.png",
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-madrid.png",
+      "bytes": 2830342,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opas-kaupunkinakymat-sallitut-25-20261007/cities/madrid/production/hero-madrid.png",
+      "parentQA": {
+        "reviewer": "root",
+        "sha256": "b179d1e954253fc261f47af24842a78f40d62bdb419bd6ab2b7f427040aa3c6a",
+        "nativeViewed": true,
+        "referenceComparisonViewed": true,
+        "photorealism": true,
+        "recognisableLandmarkAndImmediateContext": true,
+        "technicalValidationAtUpload": true,
+        "approvedForDelivery": true,
+        "limitations": {
+          "status": "production-agent inspected native, final 1536x1024 and 480px preview; root QA pending",
+          "recognizableSubject": true,
+          "geometry": "Muralled long north facade, two spires, slate roof, arcades and equestrian statue match both references.",
+          "context": "Immediate stone-paved Plaza Mayor, attached red facades; no unrelated skyline.",
+          "people": "Small modern pedestrians; few nearest figures approach 8 percent image height, root QA requested",
+          "noStylization": true,
+          "noReadableText": true
+        },
+        "cameraDecision": "low elevated view accepted"
+      },
+      "editorAcceptance": "pending",
+      "gameIntegrated": false,
+      "published": false
+    }
+  ],
+  "editorAcceptance": "pending",
+  "gameIntegrated": false,
+  "published": false,
+  "noMergeVersionRelease": true
+}
