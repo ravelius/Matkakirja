@@ -7,7 +7,7 @@ Worktreet: /Users/Shared/Claude/wt/proto-siirtoseppa-*. Käännös vain Julkaisi
 (oma UDID D5900D45 = siirtoseppa-iPad13, TYHJENNETTY 19.0x, appit asennettava uudelleen). Ei detachia simupaneelista.
 Oikeat tapit: lokit/siirtoseppa-alo/.sk (simkosketus, käännä tarvittaessa tyokalut/todistusajo/simkosketus.m).
 
-## TILA 7.10. 03.1x
+## TILA 7.10. 03.0x
 
 - **Juna 156 = siirtoseppa/eleet-1 d5959026** (Päätoimittaja kuittasi Natiivisepälle): linna-149 + FACEIT + d7c8596c faceit-kenttä
   (malli3d.skin.faceit, NatiiviGlb faceit → skin.glb) + eleet ca44be90. Ehto: savu tuotannon peilillä a0e53749.
