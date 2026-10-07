@@ -431,3 +431,7 @@ Edellinen luovutus on `viesti-siirtoseppa-luovutus-20261002.md` (5.10. osiot 02.
   olka 1,45, lähileikkaus ≤ 2,2 m, täytevalo). LR v44c c8a45400570196fe: Fogg (rakennus.json pelaaja) + laiturin kansi. d915022a Fogg pelaajaksi
   (PelaajaMalli Ytimeen + testi, 818/818), 465a8388 SeikkailuRepliikit (soutaja-1/2 venematkalla), a7fc94f4 testikomennot (tapit hiipii|juoksu,
   kavely siirra <merkki>). Jonossa a7fc94f4 + NUI; vuoro-e1.sh → ajo-e1.sh (äänellinen E1-video kahdessa osassa), app lokit/siirtoseppa-historia5-app.
+- 14.31: FACEIT ABAB valmis (Natiiviseppä): +0,03 ms/kehys GPU (B 9,39 vs A 9,36, raja 0,3) — FACEIT hyväksyttävä. Osoitinvarmistus
+  siirtoseppa/osoitin-varmistus @ 49888505 (peilin vaihto lataa uudelleen, tyhjä osoitin uudelleen, "poikki osoitin esta 1|0"):
+  Päätoimittaja kuittasi junaan 161 ehdoin (toisto vanha/uusi, virheilmoitus tilarivillä, lokit + still). Vanha toisto ketjutettu E1:n perään
+  (lokit/siirtoseppa-osoitin-vanha), uusi käännös 49888505 jonossa 3. → ajo-osoitin.sh VAIHE=peili ja VAIHE=esta.
