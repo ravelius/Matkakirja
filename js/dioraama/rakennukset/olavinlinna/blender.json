@@ -1,7 +1,7 @@
 {
   "rakennus": "olavinlinna",
-  "hash": "4f408bae7fea344d",
-  "kansio": "dioraama/olavinlinna/blender/4f408bae7fea344d/",
+  "hash": "e358b43eae1bfc4c",
+  "kansio": "dioraama/olavinlinna/blender/e358b43eae1bfc4c/",
   "tiedostot": [
     {
       "polku": "hahmot/apulainen-1500-faceit.glb",
@@ -124,6 +124,11 @@
       "tavuja": 2505524
     },
     {
+      "polku": "kavely/esine-hiilipannu.glb",
+      "sha256": "a1ba07c67c48b5d01cb283e01e59994102caea693e6f331731d1b0223c3f75d0",
+      "tavuja": 429800
+    },
+    {
       "polku": "kavely/esine-ikuinen-valo.glb",
       "sha256": "6148ce9ea658b303f999c79d4d25688c2408cd180cf327eed76ba60fe5660f2e",
       "tavuja": 282772
@@ -209,6 +214,11 @@
       "tavuja": 93868
     },
     {
+      "polku": "kavely/esine-patapino.glb",
+      "sha256": "d08f386de35253072a65524b3a8ea9f47c71c1f5f53f229b1d534ffed270756b",
+      "tavuja": 270456
+    },
+    {
       "polku": "kavely/esine-pateeni.glb",
       "sha256": "c772b3f53341481bf7c1982d97e404c9ae053442ccf76df2fc51d8dd27e6c92b",
       "tavuja": 48168
@@ -227,6 +237,11 @@
       "polku": "kavely/esine-savipurkki.glb",
       "sha256": "7fc5c90b5085adc36cd1a9a4906a5862f8bc6445219b150058d96838ac799477",
       "tavuja": 112148
+    },
+    {
+      "polku": "kavely/esine-tarjotin.glb",
+      "sha256": "84ba3f31c0a018ff0b5c1adcfc8fef5a4734a78edee35211f513d5c96c37f9e6",
+      "tavuja": 282000
     },
     {
       "polku": "kavely/kappeli-kavely-kavely.glb",
@@ -275,8 +290,8 @@
     },
     {
       "polku": "kavely/merkit.json",
-      "sha256": "e2739a8548b0231d9aa0742d1c76e0f7a43898efad6c0ffbae7c6a6a6b15f157",
-      "tavuja": 28615
+      "sha256": "6794e7fc802d7a69c8ec987831128cf4868a3fdb53ae011886f4d51947024d6d",
+      "tavuja": 28770
     },
     {
       "polku": "kavely/osat.json",
