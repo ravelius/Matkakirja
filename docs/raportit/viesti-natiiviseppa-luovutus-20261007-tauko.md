@@ -9,6 +9,18 @@ Olet Natiiviseppä (Opus, high). Lue tämä osio, MEMORY.md ja natiiviseppa-tila
 Juna-SHA:t otetaan vain PÄÄTOIMITTAJAN suoralla kuittauksella; käännökset, simut ja iPad vain Julkaisijan NYT-viestillä.
 Tarkista ensin taustalla jatkuneiden ajojen tulokset (alla) ja kerro ne Julkaisijalle ja PÄÄTOIMITTAJALLE.
 
+## TILA 14.2x
+
+- **JUNA 161 -ESIRUNKO natiiviseppa/juna-161-koe c4fbdd6f5** (wt/proto-natiiviseppa-j144) = BUILD 160 d8b0e0fc + LS1 741625b8d +
+  Siirtoseppä historia-juna161 526c9373 (korvaa eleet-2 67728f0b) + NUI kehittaja-tf 767c70eb + LS2 aa32b618b + 074c95a3 →
+  755597cf (kirjoitusääni + vSync + Mac lepo, KUITATTU 14.2x). Testit 447/419/833, tarkista (zsh!), unity iOS/Mac 0, editori ok.
+  PUUTTUU: NUI pariisi-esitys (metrolinjan stillit Päätoimittajalle), LS2 swe-rajat 95cf8eb97 (vasta kun Karttaseppä vahvistaa
+  maarajapolut, nyt 404). Karttasepän #4140 kuitattu (main-repon PR, ei proto). Juna kootaan vasta NUI:n stillikuittauksen jälkeen.
+- **Junan savu (Päätoimittaja):** Mac: piiloon → takaisin → panorointi lataa uudet laatat ja ääni palaa; kirjoitusääni aloitusruudussa.
+  EI hiiri/näppäinautomaatiota, kun omistaja käyttää Macia (muisti mac-gui-automaatio-omistajan-naytolla).
+- **Mac lepo mitattu:** 755597cf piilossa 2,1–2,6 %, ei valittuna 7,5 % (4975a36c), täysi 15–16 %. Omistaja todentaa Mac TF 161:llä.
+- **FACEIT-uusinta** käynnissä 14.06 (puhdas uudelleenasennus korjasi latausvirheen), tulos lokit/natiiviseppa-faceit-uusinta.txt.
+
 ## TILA 14.0x (tauko peruttu 13.47)
 
 - **Mac lepo:** 13.36-ajon "vika" oli mittausvirhe (selain peitti ikkunan → oikein "piilossa"). mac-cpu.sh korjattu (ikkuna
