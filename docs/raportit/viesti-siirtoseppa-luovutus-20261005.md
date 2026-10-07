@@ -1,11 +1,23 @@
-# Siirtosepän luovutus 5.–6.10.2026 — TILA KLO 23.3x, TILINVAIHTO (Opus 5.5, high)
+# Siirtosepän luovutus 5.–7.10.2026 — TILA 7.10. KLO 19.1x, TILINVAIHTO ~22 (Opus 5.5, high)
 
 ## ALOITUSVIESTI SEURAAJALLE
 
-Olet Siirtoseppä (Unity-proto: linna, opas-kuva, ääni). Lue tämä osio, sitten CLAUDE.md ja Raamatun Ydinajatus kohta 2.
-Worktreet: /Users/Shared/Claude/wt/proto-siirtoseppa-*. Käännös vain Julkaisijan "KÄÄNNÖS NYT", simu vain "SIMU NYT"
-(oma UDID D5900D45 = siirtoseppa-iPad13, TYHJENNETTY 19.0x, appit asennettava uudelleen). Ei detachia simupaneelista.
-Oikeat tapit: lokit/siirtoseppa-alo/.sk (simkosketus, käännä tarvittaessa tyokalut/todistusajo/simkosketus.m).
+Olet Siirtoseppä (Opus, high): johdat HISTORIAMOOTTORIA (Olavinlinnan ensimmäinen pelattava pala: veneyö → laituri → keittiö →
+kappeli). Lue tämä osio ja alin TILA-loki (päivän loppu), sitten CLAUDE.md ja Raamatun Ydinajatus kohta 2.
+- Worktree /Users/Shared/Claude/wt/proto-siirtoseppa-face (proto, ei originia; varmuuskopio `git push natiivi-backup
+  <haara>:refs/heads/peili/proto/<haara>`). Luovutus: tämä tiedosto haarassa siirtoseppa-luovutus (Matkakirja-siirtoseppa).
+- Haarat: **siirtoseppa/historia-h0** (kolmas persoona, junien pohja, kärki c652ba83), **siirtoseppa/historia-juna164 @ 6d2b1149**
+  (kuittaus pyydetty PT:ltä; juna163 + V7 + tietokerros + v44i-merkit + nousu laiturille; pala v44j 42d49bd4),
+  **siirtoseppa/historia-fp @ 0656eef6** (ENSIMMÄINEN PERSOONA, ei vielä junaan; pala v44k a51f1b69).
+- TESTAUS (omistaja 7.10. 15.5x/16.0x): ennen junaa VAIN Linssit-testit/kaanna.sh + Linssit-testit/unity-tarkistus.sh; ei omia
+  käännöksiä, simua, stillejä eikä savuja. Kuittaus PT:ltä yhdellä rivillä (mitä, testit, SHA) → Natiiviseppä junaan.
+- OMISTAJA 7.10. 18.5x–18.7x: KAIKKI PELIT ENSIMMÄISESSÄ PERSOONASSA (Thief-malli; ei vartaloa/peilikuvaa; kädet saavat näkyä
+  hetkittäin hihoissa + hanskoissa, ei ihoa). EI HUD-mittaria (ei valokiveä): näkyvyys kuvana (SeikkailuNakyvyys) + vartijan reaktio
+  + sydän. Kolmannen persoonan KAUKOKUVAT sallittu (hahmo < ~10 % kuvan korkeudesta; Foggin malli säilyy niitä varten).
+- ODOTTAA: PT:n kuittaus juna164; LR:n kadet.glb (pelaaja.kadet, kahva_oikea → SeikkailuPelaaja.Kasi-pisteeksi); PT:n
+  pelattavuusmalli docs/raportit/pelattavuusmalli-olavinlinna.md (nimeää kaukokuvat, luvut); ElevenLabs-äänet VAIN omistajan luvalla.
+- E3-käsikirjoitus: docs/raportit/kasikirjoitus-olavinlinna-kappeli-e3.md (mainissa). Arkkitehtuuri: siirtoseppa-historiamoottori-20261007.md.
+- Seuraavaksi: pelattavuusmallin mukaiset FP-muutokset, kädet, kaukokuvat (veneen saapuminen ylhäältä ym.), Pulun vihjeportaat, V6 tallennus.
 
 ## TILA 7.10. 09.2x
 
