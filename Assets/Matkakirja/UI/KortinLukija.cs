@@ -45,7 +45,7 @@ namespace Matkakirja.Natiivi
         };
         static readonly float[] Kynnykset = { 0.04f, 0.10f, 0.20f };
         // Web OHJAIN_PIIRROT (24 × 24, viiva 1,6): valikko, edellinen ja seuraava kappale.
-        const string ValikkoIkoni = "<path d=\"M6.5 8.2h11\"/><path d=\"M6.5 12h11\"/><path d=\"M6.5 15.8h11\"/>";
+        const string ValikkoIkoni = "<path d=\"M4.5 5h15M4.5 12h15M4.5 19h15\"/>";
         const string EdellinenIkoni = "<path d=\"M7.4 6.6v10.8\"/><path d=\"M17 6.8 10.2 12l6.8 5.2z\"/>";
         const string SeuraavaIkoni = "<path d=\"M16.6 6.6v10.8\"/><path d=\"M7 6.8l6.8 5.2L7 17.2z\"/>";
         /// <summary>Web KELAUS_S ja KAPPALEEN_NIMI / KAPPALEEN_ALKU (merkkiä).</summary>
@@ -84,6 +84,47 @@ namespace Matkakirja.Natiivi
         List<string> tagit = new List<string>();
         bool luetaan, keskeytetty;
         int versio;
+
+        // PINNATTU LUENTA TAUSTALLA (omistaja 6.10. 23.0x: "jos klikkaan noston uudestaan auki, luenta alkaa virheellisesti
+        // alusta"; Raamattu: luenta jatkuu samasta kohdasta): luenta on oma ketjunsa. Kun pinnatun noston kortti suljetaan
+        // (pienennys palkiksi) tai kortti vaihtaa sisältöä, ketju irtoaa lukijasta ja jatkaa taustalla niin kauan kuin
+        // Puhe.Pinnattu on sen omistaja; saman noston palatessa (Aseta samalla omistajalla) ketju kiinnittyy takaisin, ja
+        // kaiutin, valikko ja jatkokohta jatkavat siitä.
+        sealed class Ketju
+        {
+            public string Omistaja;
+            public List<string> Palat, Tagit;
+            public int Kohta;
+            public bool Elossa = true;
+        }
+        /// <summary>Taustalla jatkunut pinnattu luenta luettiin loppuun (omistaja): AUTO siirtyy seuraavaan nostoon.</summary>
+        public static event Action<string> TaustaLoppui;
+        /// <summary>Tähän lukijaan kiinnitetty luenta (null = ei luentaa).</summary>
+        Ketju ketju;
+        /// <summary>Pinnattu luenta, jonka kortti suljettiin tai vaihtui (jatkuu taustalla).</summary>
+        static Ketju tausta;
+        /// <summary>Luettavan sisällön omistaja (Puhe.Pinnaa-tunniste, esim. "nosto:&lt;id&gt;"); null = ei pinnattavissa.</summary>
+        public string Omistaja { get; private set; }
+        bool PinnattuTama => ketju != null && ketju.Omistaja != null && Puhe.Instanssi?.Pinnattu == ketju.Omistaja;
+
+        /// <summary>
+        /// Pinnatun palkin edistyminen koko luennan matkalta (kaikki palat merkkimäärillä painotettuna, soiva pala aika/kesto);
+        /// null = pinnattu ei ole kortin luenta (esim. Pulun chat), jolloin palkki käyttää soivan palan edistymistä.
+        /// </summary>
+        public static float? KokoEdistyminen(float aika, float kesto)
+        {
+            var p = Puhe.Instanssi?.Pinnattu;
+            if (p == null) return null;
+            Ketju k = tausta != null && tausta.Elossa && tausta.Omistaja == p ? tausta
+                : ajossa?.ketju != null && ajossa.ketju.Omistaja == p ? ajossa.ketju : null;
+            if (k == null || k.Palat == null || k.Palat.Count == 0) return null;
+            float koko = 0f, ennen = 0f;
+            int nyt = Mathf.Clamp(k.Kohta, 0, k.Palat.Count - 1);
+            for (int j = 0; j < k.Palat.Count; j++) { koko += k.Palat[j].Length; if (j < nyt) ennen += k.Palat[j].Length; }
+            if (koko <= 0f) return null;
+            float osa = kesto > 0f ? Mathf.Clamp01(aika / kesto) : 0f;
+            return Mathf.Clamp01((ennen + k.Palat[nyt].Length * osa) / koko);
+        }
         /// <summary>Soiva (tai viimeksi kuultu) pala; katkennut luenta jatkaa tästä (web __lukijaKohta).</summary>
         int kohta, jatkoKohta = -1;
 
@@ -125,7 +166,9 @@ namespace Matkakirja.Natiivi
                 // Mini-hampurilainen kaiuttimen vasemmalla (entisen rattaan paikalla), sama pystykeskitys.
                 ratas = Rakenne.Nappi(null, "mk-lukija mk-lukija__valikkonappi", VaihdaPaneeli, Juuri);
                 ratas.tooltip = SaadinOtsikko;
-                Rakenne.Ikoni(Ikonit.Valikko, "mk-lukija__valikkoikoni", ratas);   // juna 154: sama ☰ kuin OHJAUSNAPPI-sarjassa (ylärivi yhtenäiseksi)
+                // Juna 155 (omistaja: kolme oikeinta eri korkeuksilla): ☰ väljemmin viivavälein, jotta näkyvä korkeus on pinnin ja
+                // kaiuttimen luokkaa (~14 pt); sama 15 yksikön leveys kuin OHJAUSNAPPI-sarjan ☰:ssa.
+                Rakenne.Ikoni(ValikkoIkoni, "mk-lukija__valikkoikoni", ratas);
                 Nappi = Rakenne.Nappi(null, "mk-lukija mk-lukija--kortti", Vaihda, Juuri);
                 var kuvake = Rakenne.El("mk-kaiutin", Nappi, PickingMode.Ignore);
                 Rakenne.Ikoni(KaiutinRunko, "mk-kaiutin__osa", kuvake);
@@ -167,10 +210,11 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Kortin luettavat tekstit (kappaleet); edellinen luenta pysähtyy (web: uusi kortti ruudulle).</summary>
-        public void Aseta(IEnumerable<string> tekstit, string otsikko = null)
+        public void Aseta(IEnumerable<string> tekstit, string otsikko = null, string omistaja = null)
         {
             if (otsikko != null) this.otsikko = otsikko;
             Pysayta();
+            Omistaja = omistaja;
             jatkoKohta = -1;
             AsetaKeskeytys(false);
             SuljePaneeli();
@@ -182,6 +226,22 @@ namespace Matkakirja.Natiivi
             // Säätöratas seuraa kaiutinta: ilman luettavaa ei säätimiäkään (web __lukijaSaadin.hidden).
             Juuri.style.display = raaka.Sum(p => p.Length) >= Vahimmais ? DisplayStyle.Flex : DisplayStyle.None;
             PaivitaMykistys();
+            // Pinnattu nosto palasi: taustalla jatkunut luenta kiinnittyy takaisin samaan kohtaan.
+            if (omistaja != null && tausta != null && tausta.Elossa && tausta.Omistaja == omistaja && Puhe.Instanssi?.Pinnattu == omistaja)
+            {
+                ketju = tausta;
+                tausta = null;
+                palat = ketju.Palat; tagit = ketju.Tagit;
+                kohta = ketju.Kohta;
+                if (ajossa != null && ajossa != this) ajossa.Pysayta();
+                ajossa = this;
+                luetaan = true;
+                Nappi.AddToClassList("mk-lukee");
+                KaynnistaMittari();
+                PaivitaNimi();
+                PaivitaValikko();
+                Debug.Log($"MATKAKIRJA ui lukija: pinnattu luenta jatkuu palasta {kohta + 1}/{palat.Count} ({omistaja})");
+            }
         }
 
         void PaivitaMykistys()
@@ -229,21 +289,42 @@ namespace Matkakirja.Natiivi
             Debug.Log($"MATKAKIRJA ui lukija: aloita pala {Mathf.Clamp(alku, 0, palat.Count - 1) + 1}/{palat.Count} \"{Lyhenna(palat[Mathf.Clamp(alku, 0, palat.Count - 1)], 40)}\"");
             luetaan = true;
             Nappi.AddToClassList("mk-lukee");
-            int v = ++versio, i = Mathf.Clamp(alku, 0, palat.Count - 1);
+            ++versio;
+            int i = Mathf.Clamp(alku, 0, palat.Count - 1);
+            var k = new Ketju { Omistaja = Omistaja, Palat = palat, Tagit = tagit, Kohta = i };
+            if (ketju != null) ketju.Elossa = false;
+            ketju = k;
             jatkoKohta = -1;
             AsetaKeskeytys(false);
             KaynnistaMittari();
             PaivitaNimi();
             void Seuraava()
             {
-                if (v != versio) return;
-                if (i >= palat.Count) { jatkoKohta = -1; kohta = palat.Count; Pysayta(false); loppui?.Invoke(); return; } // luettu loppuun: alusta
-                kohta = i;
-                latausAlku = Time.unscaledTime * 1000f;
-                if (!puhe.Lue(palat[i], persoona, 0, () => UiKerros.PaaSaikeessa(Seuraava), pyynnosta: true, loppuTagi: tagit[i])) { Pysayta(); return; }
+                if (!k.Elossa) return;
+                bool kiinni = ketju == k;
+                // Taustalla jatkuu vain, kun luenta on yhä pinnattu (uusi luenta tai pinnauksen poisto lopettaa sen).
+                if (!kiinni && Puhe.Instanssi?.Pinnattu != k.Omistaja) { k.Elossa = false; if (tausta == k) tausta = null; return; }
+                if (i >= k.Palat.Count)
+                {
+                    k.Elossa = false;
+                    if (tausta == k) tausta = null;
+                    if (kiinni) { ketju = null; jatkoKohta = -1; kohta = palat.Count; Pysayta(false); loppui?.Invoke(); } // luettu loppuun: alusta
+                    else TaustaLoppui?.Invoke(k.Omistaja);
+                    return;
+                }
+                k.Kohta = i;
+                if (kiinni) { kohta = i; latausAlku = Time.unscaledTime * 1000f; }
+                // Pinnatun seuraava pala jatkona (ei korvaa omaa pinnausta); ensimmäinen pala korvaa muun pinnatun kuten ennen.
+                if (!puhe.LueJatkona(k.Omistaja, k.Palat[i], persoona, () => UiKerros.PaaSaikeessa(Seuraava), k.Tagit[i]))
+                {
+                    k.Elossa = false;
+                    if (tausta == k) tausta = null;
+                    if (kiinni) Pysayta();
+                    return;
+                }
                 i++;
-                Esihae(puhe, palat, i, persoona, tagit);
-                PaivitaValikko();
+                Esihae(puhe, k.Palat, i, persoona, k.Tagit);
+                if (kiinni) PaivitaValikko();
             }
             Seuraava();
         }
@@ -278,15 +359,30 @@ namespace Matkakirja.Natiivi
         /// Jokin kortin lukija lukee (nostokortti, lehti, wiki …; myös tauolla). Matkakirjakortin luentavahti ei avaa korttia
         /// tämän aikana: kertoja lukee silloin kortin tekstiä, ei matkakirjan omaa (Päätoimittaja 1.10.2026).
         /// </summary>
-        public static bool KorttiaLuetaan => ajossa != null && ajossa.luetaan;
+        public static bool KorttiaLuetaan => (ajossa != null && ajossa.luetaan) || (tausta != null && tausta.Elossa);
 
         /// <summary>Luenta seis; sulje = false jättää valikon auki (luettu loppuun).</summary>
         void Pysayta(bool sulje)
         {
             if (sulje) SuljePaneeli();
             if (!luetaan) return;
+            // Pinnattu luenta ei pysähdy kortin sulkuun tai sisällön vaihtoon: ketju irtoaa ja jatkaa taustalla.
+            if (PinnattuTama && ketju.Elossa)
+            {
+                tausta = ketju;
+                ketju = null;
+                luetaan = false;
+                Nappi.RemoveFromClassList("mk-lukee");
+                if (ajossa == this) ajossa = null;
+                PysaytaMittari();
+                PaivitaNimi();
+                PaivitaValikko();
+                Debug.Log($"MATKAKIRJA ui lukija: pinnattu luenta jatkuu taustalla palasta {tausta.Kohta + 1}/{tausta.Palat.Count} ({tausta.Omistaja})");
+                return;
+            }
             luetaan = false;
             versio++;
+            if (ketju != null) { ketju.Elossa = false; ketju = null; }
             Nappi.RemoveFromClassList("mk-lukee");
             if (ajossa == this) ajossa = null;
             // Web talletaKortinKohta: katkennut kortti jatkaa viimeksi kuullusta palasta (Aseta nollaa uuden sisällön).

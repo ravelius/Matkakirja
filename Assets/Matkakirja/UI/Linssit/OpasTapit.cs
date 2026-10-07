@@ -34,8 +34,9 @@ namespace Matkakirja.Natiivi
             oikea.Juuri.tooltip = "Kierrä kohdetta ja nosta tai laske kameraa";
         }
 
-        /// <summary>Näkyvyys ja alareuna (krediittien yläpuolella) joka ruudulla OpasValikolta; piiloon mennessä arvot nollaan.</summary>
-        public void Paivita(bool nayta, float ala)
+        /// <summary>Näkyvyys, alareuna ja etäisyys sivureunasta joka ruudulla OpasValikolta (juna 156: iPadilla sisemmäs ja
+        /// ylemmäs); piiloon mennessä arvot nollaan.</summary>
+        public void Paivita(bool nayta, float ala, float sivu)
         {
             if (nayta != nakyy)
             {
@@ -43,9 +44,13 @@ namespace Matkakirja.Natiivi
                 vasen.Nayta(nayta);
                 oikea.Nayta(nayta);
             }
-            vasen.Juuri.style.bottom = ala;
-            oikea.Juuri.style.bottom = ala;
+            Ala = ala;
+            if (vasen.Juuri.style.bottom.value.value != ala) { vasen.Juuri.style.bottom = ala; oikea.Juuri.style.bottom = ala; }
+            if (vasen.Juuri.style.left.value.value != sivu) { vasen.Juuri.style.left = sivu; oikea.Juuri.style.right = sivu; }
         }
+
+        /// <summary>Tappien alareuna (viimeisin Paivita).</summary>
+        public float Ala { get; private set; }
 
         public bool Nakyy => nakyy;
         public Rect VasenLaatikko => vasen.Juuri.worldBound;

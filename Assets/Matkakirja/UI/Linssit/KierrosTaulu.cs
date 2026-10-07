@@ -36,7 +36,8 @@ namespace Matkakirja.Natiivi
 
             otsikko = Rakenne.El("mk-astroavaus__otsikko--haipyy", yla, PickingMode.Ignore);
             otsikko.style.position = Position.Absolute;
-            // Vasemman yläkulman vuorokausinapin alle (Natiivi-UI juna 152: otsikko osui napin päälle): 24 + nappi 44 + väli 8.
+            // Vasemman yläkulman vuorokausinapin alle (Natiivi-UI juna 152: otsikko osui napin päälle); paikka turva-alueen mukaan
+            // joka ruudulla (AsetteleOtsikko, juna 156).
             otsikko.style.left = 28; otsikko.style.top = 76;
             otsikko.style.right = 110;   // oikean yläkulman napit (kuvakytkin, ☰) ~100 pt (Natiivi-UI 5.10.)
             otsikko.style.alignItems = Align.FlexStart;
@@ -76,6 +77,7 @@ namespace Matkakirja.Natiivi
             Rakenne.El("mk-astroavaus__viiva", nimiOtsikko, PickingMode.Ignore);
             ruudunAlarivi = Rakenne.Teksti("", "mk-astroavaus__lahde", nimiOtsikko);
 
+            viimeisin = this;
             KierrosSovitin.Vaihtui += Kytke;
             OpasSovitin.Vaihtui += KytkeOpas;
             kerros.JokaRuutu += Paivita;
@@ -122,6 +124,39 @@ namespace Matkakirja.Natiivi
         /// <summary>Oppaan kohteen nimen näkyvyys saapumisesta (s); häivytys 0,2 s (siirtymä alle 250 ms).</summary>
         const float NimiNakyyS = 3f;   // omistaja 5.10. 23.0x (koko peli): nimikyltti saavuttaessa ~3 s ja pois
 
+        /// <summary>
+        /// Otsikko vasemman yläkulman nappirivin alle turva-alueen mukaan (Päätoimittaja 7.10. junan 156 still: iPhonella
+        /// "Eiffel-torni" alkoi ☾A-napin päältä, koska kiinteä top 76 ei huomioinut Dynamic Islandin turva-aluetta ~62 pt):
+        /// turva-alueen yläreuna + ryhmän väli 8 + OHJAUSNAPPI 40 + väli 8; vasen reuna turva-alueen sisään.
+        /// </summary>
+        /// <summary>
+        /// Oppaan lyhyt ilmoitus kertojan laatikossa (PUHE TEKSTINÄ -pohja; juna 157: LS1:n torjunta "valitse kohde listasta", kun
+        /// ei-sallittu-siltalause ei soinut). Oppaan chat ei aukea itsestään, joten PuluChat.Vastaa jäi näkymättömiin (simu 04.35).
+        /// </summary>
+        public static void Ilmoitus(string teksti, float kestoS = 5f) { ilmoitusTeksti = teksti; ilmoitusAsti = Time.unscaledTime + kestoS; }
+        static string ilmoitusTeksti;
+        static float ilmoitusAsti = -1f;
+
+        /// <summary>Testi `ui opasvalikko otsikko <nimi>|<alarivi>` / `pois`: pysähdyksen otsikko pysyvästi näkyviin (pitkä nimi).</summary>
+        public static string Testiotsikko;
+
+        /// <summary>Testi: otsikon laatikko ja paikka.</summary>
+        public static string OtsikkoKuvaus => viimeisin == null ? "otsikko: ei taulua"
+            : $"otsikko \"{viimeisin.nimi.text}\" @ {viimeisin.otsikko.worldBound.xMin:0},{viimeisin.otsikko.worldBound.yMin:0} {viimeisin.otsikko.worldBound.width:0}×{viimeisin.otsikko.worldBound.height:0}";
+        static KierrosTaulu viimeisin;
+
+        void AsetteleOtsikko()
+        {
+            var paneeli = otsikko.panel;
+            if (paneeli == null || Screen.height <= 0) return;
+            var alue = Screen.safeArea;
+            var vy = RuntimePanelUtils.ScreenToPanel(paneeli, new Vector2(alue.xMin, Screen.height - alue.yMax));
+            float yla = Mathf.Round(Mathf.Max(0f, vy.y) + 8f + Tyylikirja.Nappi.Ohjaus + 8f);
+            float vasen = Mathf.Round(Mathf.Max(0f, vy.x) + 28f);
+            if (otsikko.style.top.value.value != yla) otsikko.style.top = yla;
+            if (otsikko.style.left.value.value != vasen) otsikko.style.left = vasen;
+        }
+
         void PaivitaOpas(OpasSovitin s)
         {
             if (s.Virhe != null)
@@ -147,9 +182,17 @@ namespace Matkakirja.Natiivi
             }
             // Opas kevyeksi (Päätoimittaja 5.10.): nimi ja alarivi häipyvät 3 s saapumisen jälkeen (omistaja 23.0x), palaavat seuraavalla pysähdyksellä.
             otsikko.style.opacity = puhuu && l.Nykyinen != null && Time.unscaledTime - nimiAlku < NimiNakyyS ? 1f : 0f;
+            if (Testiotsikko != null)
+            {
+                var o = Testiotsikko.Split('|');
+                if (nimi.text != o[0]) { nimi.text = o[0]; alarivi.text = o.Length > 1 ? o[1] : ""; }
+                otsikko.style.opacity = 1f;
+            }
             string teksti = s.TekstiRuudulle;
+            bool ilmoitus = Time.unscaledTime < ilmoitusAsti;
+            if (ilmoitus) teksti = ilmoitusTeksti;
             if (teksti != null && kertojaTeksti.text != teksti) kertojaTeksti.text = teksti;
-            kertojaLaatikko.EnableInClassList("mk-nakyy", teksti != null && l.VaiheAika > 0.8);
+            kertojaLaatikko.EnableInClassList("mk-nakyy", teksti != null && (ilmoitus || l.VaiheAika > 0.8));
         }
 
         void Kytke(KierrosSovitin s)
@@ -189,6 +232,7 @@ namespace Matkakirja.Natiivi
 
         void Paivita()
         {
+            AsetteleOtsikko();
             if (opas != null) { PaivitaOpas(opas); return; }
             var s = sovitin;
             if (s == null) return;

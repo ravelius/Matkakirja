@@ -800,10 +800,13 @@ namespace Matkakirja.Natiivi
                 AsetaPortti(false);
                 portti.schedule.Execute(() => { if (!PorttiAuki) portti.style.display = DisplayStyle.None; }).StartingIn(400);
             }
+            Debug.Log($"MATKAKIRJA aloitus: valinta pyydetty (auki {Auki}, pallolla {ValitseePallolla}, sisältö {UiSisalto.Valmis})");
             UiSisalto.Lataa(() =>
             {
-                if (!Auki || ValitseePallolla) return;
+                // Mac v1 -löydös 7.10. (NUI m4): napautus poisti portin, mutta valintanäkymä ei alkanut; loki kertoo miksi.
+                if (!Auki || ValitseePallolla) { Debug.Log($"MATKAKIRJA aloitus: valinta ohitettu (auki {Auki}, pallolla {ValitseePallolla})"); return; }
                 if (!PakotaKortti && AloitaPallovalinta()) return;
+                Debug.Log("MATKAKIRJA aloitus: valinta kortille (pallo ei valmis)");
                 valintaLista.Clear();
                 foreach (var (id, nimi) in kohteet)
                 {

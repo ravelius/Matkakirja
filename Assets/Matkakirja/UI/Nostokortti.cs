@@ -57,6 +57,36 @@ namespace Matkakirja.Natiivi
         string pinId;
         bool pienennetaan;
         string PinOmistaja => nosto?.Id == null ? null : "nosto:" + nosto.Id;
+        static string PinOmistajaNostolle(Nosto n) => n?.Id == null ? null : "nosto:" + n.Id;
+
+        /// <summary>
+        /// PINNATTU TILA PYSYY (omistaja 6.10. 23.0x: "nosto saisi pysyä pienennettynä vaikka klikkaisin toista nostoa kartalla.
+        /// Luenta vain siirtyisi siihen"): pinnattu nosto on palkkina ja kortti kiinni → kartalta valittu tai AUTOn seuraava nosto
+        /// ei avaa korttia, vaan palkki ja luenta vaihtuvat siihen; ensimmäinen kuva näkyy palkin alla 3 s (Pinnaus.NaytaKuva).
+        /// </summary>
+        bool Taustatila => !Auki && Pinnaus.Pienena && !Pinnaus.Vaisto && Pinnaus.Nykyinen?.Omistaja != null
+                           && Pinnaus.Nykyinen.Omistaja.StartsWith("nosto:", StringComparison.Ordinal);
+
+        void NaytaTaustalla(Nosto n)
+        {
+            nosto = n;
+            pinId = null;
+            lukija.Aseta(LuennanTekstit(n), "Kuuntele: " + (n.Otsikko ?? ""), PinOmistajaNostolle(n));
+            selain.Paivita(valo);
+            lukija.Paina();        // pelaajan luenta: korvaa edellisen pinnatun
+            VaihdaPin();           // uusi nosto pinnatuksi …
+            Pinnaus.Pienenna();    // … ja heti palkiksi
+            lukija.Pysayta();      // ketju taustalle (jatkuu, kunnes pinnaus vaihtuu tai luettu loppuun)
+            Pinnaus.NaytaKuva(n.Kuvat.Count > 0 ? n.Kuvat[0].Lahde : null);
+            Debug.Log($"MATKAKIRJA ui pinnaus: palkki vaihtui nostoon {n.Id} (kortti kiinni)");
+        }
+
+        /// <summary>Taustalla luettu nosto loppui: AUTO siirtyy seuraavaan palkkina (kortti pysyy kiinni).</summary>
+        void TaustaLoppui(string omistaja)
+        {
+            if (!Nostoselain.Auto || !Taustatila || Pinnaus.Nykyinen.Omistaja != omistaja) return;
+            if (!selain.Askel(1)) Debug.Log("MATKAKIRJA ui pinnaus: AUTO – ei seuraavaa nostoa");
+        }
         /// <summary>Tämä kortti näyttää pinnatun noston täysikokoisena.</summary>
         bool PinNakyvissa => Auki && Pinnaus.Nykyinen != null && Pinnaus.Nykyinen.Omistaja == PinOmistaja && !Pinnaus.Pienena;
 
@@ -107,7 +137,8 @@ namespace Matkakirja.Natiivi
         readonly VisualElement kahva, kahvaAlue;
         bool laajennettu, kahvaVeto;
         Vector2 kahvaAlku;
-        const float KahvaVyohyke = 28f, KahvaYlos = 20f, KahvaAlas = 40f;
+        // Vyöhyke 20 pt (juna 155: selaimen rivi nousi ~8 pt kahvan alle; ennen 28 pt, joka olisi peittänyt nappien yläosan).
+        const float KahvaVyohyke = 20f, KahvaYlos = 20f, KahvaAlas = 40f;
         const float HeroSuhde = 0.5f; // tyylikirja mitat.kuva.hero-kortti 2:1
 
         Nosto nosto;
@@ -188,6 +219,7 @@ namespace Matkakirja.Natiivi
                 VaihdaPin();
             }, TrickleDown.TrickleDown);
             Pinnaus.Muuttui += PaivitaPin;
+            KortinLukija.TaustaLoppui += TaustaLoppui;
             lukija.Juuri.RegisterCallback<GeometryChangedEvent>(_ => SijoitaLukija());
             // Napit näkyvät heti (omistaja 28.9.2026, TF 1.0.34, Korintin kanava): kiinni kortissa, ei vierityksessä.
             sisus.verticalScroller.valueChanged += _ => SijoitaLukija();
@@ -308,6 +340,12 @@ namespace Matkakirja.Natiivi
             VerkkoOdotus.Loppu(odotus, v != versio ? "ohitettu" : n == null ? "ei sisältöä" : null);
             if (v != versio) yield break;
             if (n == null) Debug.Log("MATKAKIRJA ui nostot: ei sisältöä valolle " + valoId);
+            else if (Taustatila)
+            {
+                // Pinnattu nosto palkkina: sama nosto avaa koko kortin, toinen vaihtaa palkin ja luennan (kortti pysyy kiinni).
+                if (Pinnaus.Nykyinen.Omistaja == PinOmistajaNostolle(n)) Pinnaus.Palauta();
+                else { valo = valoId; NaytaTaustalla(n); KirjaaLoyto(valoId); }
+            }
             else { valo = valoId; Nayta(n); MittaaAvaus(valoId, v); KirjaaLoyto(valoId); }
             jalkeen?.Invoke(n != null);
         }
@@ -415,7 +453,9 @@ namespace Matkakirja.Natiivi
             Mitoita();
             // Kohdekortti (omistaja 1.10.2026 kokeiluun, loki f344f1034): suoraan koko korttiin ilman kuva edellä -vaihetta.
             // AUTO: suoraan koko korttiin ja luentaan (kuva edellä -vaihe ohitetaan).
-            if (n.Kuvat.Count > 0 && n.Laji != NostoLaji.Kohde && !Nostoselain.Auto) Vaihe1(); else Vaihe2();
+            // Pinnatun noston palautus suoraan koko korttiin: luenta kiinnittyy takaisin samaan kohtaan (KortinLukija.Aseta).
+            bool pinnattu = Puhe.Instanssi?.Pinnattu != null && Puhe.Instanssi.Pinnattu == PinOmistajaNostolle(n);
+            if (n.Kuvat.Count > 0 && n.Laji != NostoLaji.Kohde && !Nostoselain.Auto && !pinnattu) Vaihe1(); else Vaihe2();
             AvaaKerros();
             EsihaeLuennanAlku(n);
             selain.Paivita(valo);
@@ -781,7 +821,7 @@ namespace Matkakirja.Natiivi
                 : n.Laji == NostoLaji.Takynosto ? "Kuuntele kortti"
                 : n.Laji == NostoLaji.Syvennys ? "Kuuntele tarina"
                 : n.Laji == NostoLaji.Maakunta ? "Kuuntele: " + (n.Otsikko ?? "")
-                : "Kuuntele hetki");
+                : "Kuuntele hetki", PinOmistajaNostolle(n));
 
             // Löydös 133: kaiutin ylärivin oikeaan päähän (oikean yläkulman ✕ ja sen viereinen kaiutin poistuivat).
             // NAPIT NÄKYVÄT HETI (omistaja 28.9.2026, TF 1.0.34: "käyttäjän pitää vierittää lappua hieman alaspäin, jotta
@@ -902,7 +942,9 @@ namespace Matkakirja.Natiivi
                     if (paikka[i] != ylarivi && paikka[i] != lukijaPaikka && paikka[i] != pinNappi && paikka[i] != selain.AutoNappi) paikka.RemoveAt(i);
             if (ylarivi == null || lukijaPaikka == null || !selain.Nakyvissa) { if (ylarivi != null) ylarivi.Add(pinNappi); return; }
             selain.Oikea.Insert(selain.AutoNappi != null && selain.AutoNappi.parent == selain.Oikea ? selain.Oikea.IndexOf(selain.AutoNappi) + 1 : 0, pinNappi); // AUTO, pin, ≡, kaiutin
-            selain.Vasen.Add(ylarivi);       // kategoria (symboli ja nimi) vasemmalle
+            // Juna 155 (omistaja 6.10. 22.x: "kategorian voisi siirtää omalle rivilleen otsikon läheisyyteen sen yläpuolelle ja
+            // nämä napit vähän ylemmäs"): kategoria (symboli ja nimi) jää kortin sisältöön otsikon yläpuolelle omaksi rivikseen.
+            ylarivi.AddToClassList("mk-nosto__ylarivi--kategoria");
             selain.Oikea.Add(lukijaPaikka);  // ≡ ja kaiutin oikeaan reunaan
         }
 

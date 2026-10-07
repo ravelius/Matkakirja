@@ -50,11 +50,27 @@ namespace Matkakirja.Natiivi
         // ks. Kartta/LiikeLaatat.cs: sama valinta kuin SSE × NayttoKerroin ILMAN tilesetin uudelleenluontia). Kun laatat ≥ 99 % ja
         // kamera on paikallaan (sovitin: Tarkenna), valinta siirtyy pääkameraan ja lisätarkkuus tulee tarkentumisena.
         public const float AlarajaKerroin = 1.3f;
+
+        // ---- MAC-LAATU (Natiiviseppä 7.10. 01.3x, natiiviseppa/mac MacLaatu; omistajan MacBook Air M4 16 Gt) ----
+        // Macilla tarkkuus tulee MacLaatu-profiilista (fyysinen ja vapaa muisti), ei näytön koosta eikä alarajakertoimesta;
+        // välimuisti profiilista; kuorma (lämpö, kehysaika) > KuormaRaja → laatat valitaan karkealla kameralla pikselikertoimella
+        // 1/Kuorma myös levossa, ilman tilesetin uudelleenluontia.
+#if UNITY_STANDALONE_OSX
+        static bool Mac => Matkakirja.MacLaatu.Kaytossa;
+        static float MacKuorma => Mac ? Mathf.Max(1f, Matkakirja.MacLaatu.Kuorma) : 1f;
+        static long GoogleValimuistiNyt => Mac && Matkakirja.MacLaatu.Valimuisti > 0 ? Matkakirja.MacLaatu.Valimuisti : GoogleValimuisti;
+#else
+        static bool Mac => false;
+        static float MacKuorma => 1f;
+        static long GoogleValimuistiNyt => GoogleValimuisti;
+#endif
+        public const float KuormaRaja = 1.05f, KuormaPois = 1.02f;
+        bool kuormaValinta;
         Camera karkea;
         bool karkeaKaytossa;
         float karkeaAlku = -1f, tarkkaAlku = -1f;
         /// <summary>Karkean kameran pikselikerroin (1 = ei karkeaa vaihetta, iPhone).</summary>
-        float KarkeaSkaala => Mathf.Clamp(SseKerroin / NayttoKerroin, 0.2f, 1f);
+        float KarkeaSkaala => Mathf.Clamp(Mathf.Min(Mac ? 1f : SseKerroin / NayttoKerroin, 1f / MacKuorma), 0.2f, 1f);
         public bool KarkeaKaytossa => karkeaKaytossa;
 
         /// <summary>Lennon, siirron tai avauksen alussa: laatat karkealla kameralla (saapuminen yhtä nopea kuin 1,71:llä).</summary>
@@ -78,21 +94,59 @@ namespace Matkakirja.Natiivi
         public void Tarkenna()
         {
             if (!karkeaKaytossa || hallinta == null) return;
-            if (karkea != null) hallinta.additionalCameras.Remove(karkea);
-            hallinta.useMainCamera = true;
+            if (MacKuorma > KuormaRaja) kuormaValinta = true;   // Mac kuormassa: valinta jää karkealle (1/Kuorma)
+            else
+            {
+                if (karkea != null) hallinta.additionalCameras.Remove(karkea);
+                hallinta.useMainCamera = true;
+            }
             karkeaKaytossa = false; tarkkaAlku = Time.realtimeSinceStartup; tarkkaLaski = false;
             kirjaa($"kaupunki: tarkkuus tarkentuu → {SseKerroin:F2} ({(karkeaAlku > 0 ? Time.realtimeSinceStartup - karkeaAlku : 0):F1} s karkeana)");
         }
 
         void PaivitaKarkea()
         {
-            if (!karkeaKaytossa || karkea == null || kamera == null) return;
+            PaivitaKuormaValinta();
+            if (!(karkeaKaytossa || kuormaValinta) || karkea == null || kamera == null) return;
             karkea.fieldOfView = kamera.fieldOfView;
             karkea.nearClipPlane = kamera.nearClipPlane; karkea.farClipPlane = kamera.farClipPlane;
             var r0 = kamera.pixelRect; float sk = KarkeaSkaala;
             karkea.pixelRect = new Rect(r0.x, r0.y, Mathf.Max(8f, r0.width * sk), Mathf.Max(8f, r0.height * sk));
             karkea.aspect = kamera.aspect;
         }
+
+        /// <summary>Mac levossa: kuorma yli KuormaRajan → laattavalinta karkealle kameralle (1/Kuorma), alle KuormaPoisin → pääkameraan.</summary>
+        void PaivitaKuormaValinta()
+        {
+            if (!Mac || !auki || hallinta == null || kamera == null || karkeaKaytossa) return;
+            float k = MacKuorma;
+            if (!kuormaValinta && k > KuormaRaja)
+            {
+                if (karkea == null)
+                {
+                    karkea = new GameObject("Kaupunki karkea valinta").AddComponent<Camera>();
+                    karkea.transform.SetParent(kamera.transform, false);
+                    karkea.enabled = false; karkea.cullingMask = 0;
+                }
+                if (!hallinta.additionalCameras.Contains(karkea)) hallinta.additionalCameras.Add(karkea);
+                hallinta.useMainCamera = false;
+                kuormaValinta = true;
+                kirjaa($"kaupunki: Mac-kuorma {k:F2} → laattavalinta karkealla (pikselit ×{KarkeaSkaala:F2}), profiili {MacProfiili}");
+            }
+            else if (kuormaValinta && k < KuormaPois)
+            {
+                if (karkea != null) hallinta.additionalCameras.Remove(karkea);
+                hallinta.useMainCamera = true;
+                kuormaValinta = false;
+                kirjaa($"kaupunki: Mac-kuorma {k:F2} → laattavalinta pääkameraan");
+            }
+        }
+
+#if UNITY_STANDALONE_OSX
+        static string MacProfiili => Mac ? $"{Matkakirja.MacLaatu.Profiili} (SSE {Matkakirja.MacLaatu.GoogleSse:F0}, välimuisti {Matkakirja.MacLaatu.Valimuisti >> 20} Mt, kuorma {Matkakirja.MacLaatu.Kuorma:F2})" : "-";
+#else
+        static string MacProfiili => "-";
+#endif
 
         /// <summary>Tarkentumisen jälkeen 99 %:iin kulunut aika lokiin kerran (latausajan mittaus).</summary>
         bool tarkkaLaski;
@@ -354,9 +408,13 @@ namespace Matkakirja.Natiivi
             float pakotettu = PakotettuKerroin();
             // Tavoite muistista, alaraja AlarajaKerroin (Päätoimittaja: jos 1,0 ei näytä paremmalta kuin 1,3, 1,3 jää); pakotus ohittaa.
             kerroin = pakotettu > 0 ? pakotettu : Mathf.Min(NayttoKerroin, Mathf.Max(AlarajaKerroin, KerroinMuistille(vapaa / 1e9, NayttoKerroin)));
-            karkeaKaytossa = false; tarkkaAlku = -1f;
+#if UNITY_STANDALONE_OSX
+            // Mac: profiilin SSE suoraan (ei näyttö- eikä alarajakerrointa); GoogleSseMin-lattia skaalautuu samalla kertoimella.
+            if (Mac && pakotettu <= 0 && Matkakirja.MacLaatu.GoogleSse > 0) kerroin = Matkakirja.MacLaatu.GoogleSse / GoogleSse;
+#endif
+            karkeaKaytossa = false; kuormaValinta = false; tarkkaAlku = -1f;
             hataKaytetty = false; muistiTarkistettu = 0f; muistiKirjattu = 0f; minVapaa = long.MaxValue;
-            kirjaa($"kaupunki: muisti vapaa {(vapaa > 0 ? (vapaa / 1e9).ToString("F2") + " Gt" : "ei tiedossa")}, näyttö {Screen.width}×{Screen.height} (kerroin {NayttoKerroin:F2}) → SSE-kerroin {kerroin:F2}{(pakotettu > 0 ? " (pakotettu)" : "")}");
+            kirjaa($"kaupunki: muisti vapaa {(vapaa > 0 ? (vapaa / 1e9).ToString("F2") + " Gt" : "ei tiedossa")}, näyttö {Screen.width}×{Screen.height} (kerroin {NayttoKerroin:F2}) → SSE-kerroin {kerroin:F2}{(pakotettu > 0 ? " (pakotettu)" : "")}{(Mac ? $", Mac-profiili {MacProfiili}" : "")}");
 
             // Pallon tileset: ei SetActivea (pallo on samassa oliossa kuin georeferenssi → SetOrigin heitti "Initialize"-poikkeuksen, simu 18.0x).
             palloTileset = KarttaKerrokset.Instanssi != null ? KarttaKerrokset.Instanssi.pallo : null;
@@ -418,7 +476,7 @@ namespace Matkakirja.Natiivi
                 maasto.url = KarttaKerrokset.Instanssi != null && KarttaKerrokset.Instanssi.pallo != null ? KarttaKerrokset.Instanssi.pallo.url : null;
             }
             else if (data == Lahde.Google)
-                maasto = LuoTileset("Kaupunki Google 3D", GoogleAsset, GoogleSse, GoogleValimuisti);
+                maasto = LuoTileset("Kaupunki Google 3D", GoogleAsset, GoogleSse, GoogleValimuistiNyt);
             else
             {
                 maasto = LuoTileset("Kaupunki maasto", 1, MaastoSse, MaastoValimuisti);
@@ -443,8 +501,8 @@ namespace Matkakirja.Natiivi
                 kirjaa($"kaupunki: Google-SSE {maasto.maximumScreenSpaceError:F0} → {sseMin:F1} (muistikatto, näyttö {Screen.width}×{Screen.height}, kerroin {SseKerroin:F2})");
                 maasto.maximumScreenSpaceError = sseMin;
             }
-            if (maasto != null && maasto.maximumCachedBytes > (data == Lahde.Google ? GoogleValimuisti : MaastoValimuisti))
-                maasto.maximumCachedBytes = data == Lahde.Google ? GoogleValimuisti : MaastoValimuisti;
+            if (maasto != null && maasto.maximumCachedBytes > (data == Lahde.Google ? GoogleValimuistiNyt : MaastoValimuisti))
+                maasto.maximumCachedBytes = data == Lahde.Google ? GoogleValimuistiNyt : MaastoValimuisti;
         }
 
         Cesium3DTileset LuoTileset(string nimi, long asset, float sse, long valimuisti)
@@ -658,7 +716,7 @@ namespace Matkakirja.Natiivi
             if (hallinta != null && karkea != null) hallinta.additionalCameras.Remove(karkea);
             if (hallinta != null) hallinta.useMainCamera = true;
             if (karkea != null) UnityEngine.Object.Destroy(karkea.gameObject);
-            karkea = null; karkeaKaytossa = false; tarkkaAlku = -1f;
+            karkea = null; karkeaKaytossa = false; kuormaValinta = false; tarkkaAlku = -1f;
             omat.Sulje();
             if (juuri != null) UnityEngine.Object.Destroy(juuri);
             juuri = null; maasto = null; rakennukset = null; esikamera = null; hallinta = null;

@@ -41,6 +41,60 @@ namespace Matkakirja.Natiivi
         public static Func<IReadOnlyList<Kaupunki>> Kaupungit = Lue;
 
         static List<Kaupunki> luettu;
+
+        // SALLITUT KAUPUNGIT (omistaja 7.10. 00.4x, Päätoimittaja: vapaa haku pois, pelaajat vain hyvän 3D:n kaupunkeihin; juna 157):
+        // Vaihda kohde ja aloitusvalikon paikat näyttävät vain LS1:n OpasSovitin.SallitutKaupungit-listan kaupungit (maanosa › maa ›
+        // kaupunki karsiutuu niiden mukaan). Tyhjä lista = palvelin ei vielä palauta kenttää → ei rajausta (vanha lista varalla).
+        // Vastaavuus nimellä (kirjainkoosta riippumatta) tai alle SallittuKm:n päässä keskipisteestä (nimen kirjoitusasu voi erota).
+        const double SallittuKm = 25.0;
+
+        // Simu 04.35: 36 sallittua → 46 riviä (lähiöt 25 km:n sisällä) ja Kreeta puuttui (ei samannimistä asutuspaikkaa). Nyt
+        // jokaisesta sallitusta tasan yksi rivi sallitun omalla nimellä ja paikalla; maa ja maanosa samannimisestä tai lähimmästä
+        // asutuspaikasta (enintään MaaHakuKm). Tulos välimuistiin listan ja aineiston mukaan.
+        const double MaaHakuKm = 250.0;
+        static IReadOnlyList<Kaupunki> sallitutVali;
+        static object sallitutAvain, kaikkiAvain;
+
+        static IReadOnlyList<Kaupunki> VainSallitut(IReadOnlyList<Kaupunki> kaikki)
+        {
+            var s = OpasSovitin.SallitutKaupungit;
+            if (kaikki == null || s == null || s.Count == 0) return kaikki;
+            if (ReferenceEquals(s, sallitutAvain) && ReferenceEquals(kaikki, kaikkiAvain)) return sallitutVali;
+            var tulos = new List<Kaupunki>();
+            foreach (var t in s)
+            {
+                Kaupunki? paras = null; double lahin = double.MaxValue;
+                foreach (var k in kaikki)
+                {
+                    if (string.Equals(k.Nimi, t.Nimi, StringComparison.OrdinalIgnoreCase) && EtaisyysKm(k.Lat, k.Lon, t.Lat, t.Lon) < MaaHakuKm) { paras = k; break; }
+                    double e = EtaisyysKm(k.Lat, k.Lon, t.Lat, t.Lon);
+                    if (e < lahin && e < MaaHakuKm) { lahin = e; paras = k; }
+                }
+                if (paras is Kaupunki p) tulos.Add(new Kaupunki(t.Nimi, p.Maa, p.Maanosa, t.Lat, t.Lon, p.Vakiluku, p.Iso));
+                else Debug.Log($"MATKAKIRJA opas: sallittu {t.Nimi} ilman maata (ei asutuspaikkaa {MaaHakuKm:0} km:n sisällä)");
+            }
+            sallitutAvain = s; kaikkiAvain = kaikki; sallitutVali = tulos;
+            return tulos;
+        }
+
+        /// <summary>Suosikit (täkyt) vain sallituilta alueilta (LS1 SallittuPiste; tyhjä lista = kaikki).</summary>
+        static IEnumerable<OpasTaky> SallitutTakyt() =>
+            (OpasSovitin.Takyt ?? (IReadOnlyList<OpasTaky>)Array.Empty<OpasTaky>()).Where(t => OpasSovitin.SallittuPiste(t.Lat, t.Lon));
+
+        void Torjunta(string t)
+        {
+            if (!nakyy) return;
+            var chat = UiNakymat.Hae()?.Chat;
+            Debug.Log("MATKAKIRJA opas: torjunta tekstinä (" + ((chat?.Auki ?? false) ? "chat" : "kertojan laatikko") + ")");
+            if (chat?.Auki ?? false) chat.Vastaa(t); else KierrosTaulu.Ilmoitus(t);
+        }
+
+        static double EtaisyysKm(double la1, double lo1, double la2, double lo2)
+        {
+            double r = Math.PI / 180.0, dla = (la2 - la1) * r, dlo = (lo2 - lo1) * r;
+            double a = Math.Sin(dla / 2) * Math.Sin(dla / 2) + Math.Cos(la1 * r) * Math.Cos(la2 * r) * Math.Sin(dlo / 2) * Math.Sin(dlo / 2);
+            return 6371.0 * 2.0 * Math.Asin(Math.Min(1.0, Math.Sqrt(a)));
+        }
         static readonly Dictionary<string, string> Maanosat = new Dictionary<string, string>
         {
             ["Europe"] = "Eurooppa", ["Asia"] = "Aasia", ["Africa"] = "Afrikka", ["North America"] = "Pohjois-Amerikka",
@@ -110,7 +164,10 @@ namespace Matkakirja.Natiivi
 
         public readonly VisualElement Juuri;
         readonly VisualElement ryhma, valikko, sirurivi;
-        readonly Button puhuSiru, kuvaNappi, taukoNappi;
+        readonly Button puhuSiru, kuvaNappi, taukoNappi, seuraavaNappi;
+        // OHJAINRIVI (omistaja 6.10. 23.3x, juna 156): ‖/▶ ja ›| OHJAUSNAPPI-ryhmänä oikean tapin alla (iPhonella tapin ja
+        // nappirivin välissä); näkyy koko oppaan ajan, myös lennolla, joten tauko ei enää ole ☰:n vieressä.
+        readonly VisualElement ohjainRivi;
         bool taukoNakyy;
         // OPPAAN KUVAT (omistaja 5.10.2026 klo 19.3x): pieni kuvakortti NOSTOKORTTI-pohjan kuvakehyksellä pysähdyksen ajan,
         // napautus → nostojen kuvasuurennos tekijä- ja lisenssirivein; havainnekuva aina merkitty HAVAINNEKUVA. Kytkin oikeassa
@@ -145,6 +202,12 @@ namespace Matkakirja.Natiivi
         /// <summary>Oppaan nappirivin korkeus (mk-opas-nappi 44 pt).</summary>
         const float NappiriviKorkeus = 44f;
         float TapitAla => nappiNakyy ? krediittiAla + NappiriviKorkeus + KuvaRako : krediittiAla;
+        /// <summary>Ohjainrivin (‖ ›|) alareuna; tapit sen yläpuolella (PaivitaTapit).</summary>
+        float ohjainAla;
+        /// <summary>Tapit sisemmäs ja ylemmäs leveällä ruudulla (omistaja 6.10. 23.3x, juna 156: iPadilla peukalot eivät ulotu
+        /// alakulmiin): tapin keskikohta 17 % leveydestä reunasta ja kolmasosa korkeudesta alhaalta. Puhelimella kulmissa.</summary>
+        const float TappiSivuOsuus = 0.17f, TappiKorkeusOsuus = 1f / 3f, LeveaLyhyt = 600f;
+        bool LeveaRuutu => Mathf.Min(Juuri.layout.width, Juuri.layout.height) >= LeveaLyhyt;
         readonly OpasTapit tapit;
         readonly OpasNimilappu nimilappu;
         int siruPoletti = -1;
@@ -181,13 +244,17 @@ namespace Matkakirja.Natiivi
             // LOPETA KIERROS (omistaja 6.10. 16.4x): ■ OHJAUSNAPPI tauon vasemmalla, näkyy vain kierroksen aikana (PaivitaTauko).
             lopetaNappi = Ohjausnappi.Nappi(Ikonit.Lopeta, "Lopeta kierros", LopetaKierros, ryhma);
             lopetaNappi.style.display = DisplayStyle.None;
-            taukoNappi = Ohjausnappi.Nappi(Ikonit.Tauko, "Tauko", () => OpasSovitin.Tauko(!OpasSovitin.Tauolla), ryhma);
+            ohjainRivi = Ohjausnappi.Ryhma(Juuri);
+            ohjainRivi.style.top = StyleKeyword.Auto;
+            taukoNappi = Ohjausnappi.Nappi(Ikonit.Tauko, "Tauko", () => { OpasSovitin.Tauko(!OpasSovitin.Tauolla); Debug.Log("MATKAKIRJA opas: tauko-nappi → " + OpasSovitin.Tauolla); }, ohjainRivi);
+            seuraavaNappi = Ohjausnappi.Nappi(Ikonit.Seuraava, "Seuraava kohde", () => Debug.Log("MATKAKIRJA opas: seuraava-nappi → " + OpasSovitin.Seuraava()), ohjainRivi);
             kuvaNappi = Ohjausnappi.Nappi(KuvatPaalla ? Ikonit.PilleriJulisteet : KuvaPoisIkoni, KuvatPaalla ? "Kuvat päällä" : "Kuvat pois",
                 VaihdaKuvat, ryhma);
             // Omistaja 6.10. 12.1x: "piilota pause ja kuva nappi hampurilaisen sisään": ruudulla vain ☰; tauko ja kuvat valikon riveinä.
             // Omistaja 6.10. 16.3x: tauko taas aina näkyvissä ☰:n vasemmalla (kumoaa 12.1x:n tauon osalta); kuvat jäävät ☰:n sisään.
+            // Juna 156: tauko siirtyi ohjainriville oikean tapin alle (Seuraavan viereen); ylänurkassa ■ ja ☰.
             kuvaNappi.style.display = DisplayStyle.None;
-            nappi = Ohjausnappi.Nappi(Ikonit.Valikko, "Valikko", () => { if (Auki) Sulje(); else Avaa(Nakyma.Paa); }, ryhma);
+            nappi = Ohjausnappi.Nappi(Ikonit.Valikko, "Valikko", () => { Debug.Log("MATKAKIRJA opas: ☰ " + (Auki ? "kiinni" : "auki")); if (Auki) Sulje(); else Avaa(Nakyma.Paa); }, ryhma);
             // VUOROKAUDENAIKA (omistaja 6.10. 18.5x): OHJAUSNAPPI vasempaan yläkulmaan; kuvake = voimassa oleva tila, A = automaattinen.
             var aikaRyhma = Ohjausnappi.Ryhma(Juuri);
             aikaRyhma.AddToClassList("mk-ohjausryhma--vasen");
@@ -291,6 +358,12 @@ namespace Matkakirja.Natiivi
             tapit = new OpasTapit(Juuri);
             nimilappu = new OpasNimilappu(Juuri);
             kerros.JokaRuutu += PaivitaTapit;
+            OpasSovitin.LatausKuvaVaihtui += LatausKuvaVaihtui;
+            // Sallitut saapuvat oppaan avauksessa (aloitusvalikko jo auki): lista uudelleen, jotta rajaamaton ei jää näkyviin.
+            OpasSovitin.SallitutVaihtui += () => { if (nakyy && Auki) Rakenna(); };
+            // Torjunta tekstinä (LS1 sallitut-157): "vie minut X" / Liiku / kaupunki listan ulkopuolelle, kun siltalause ei soinut.
+            // Oppaan chat ei aukea itsestään (Vastaa jäi näkymättömiin): auki olevaan chattiin vastauksena, muuten kertojan laatikkoon.
+            OpasSovitin.TorjuntaTeksti += Torjunta;
             Viimeisin = this;
         }
 
@@ -819,24 +892,49 @@ namespace Matkakirja.Natiivi
         /// </summary>
         void PaivitaTapit()
         {
-            if (!nakyy) { tapit.Paivita(false, krediittiAla); nimilappu.Paivita(null); return; }
             var chat = UiNakymat.Olemassa ? UiNakymat.Hae().Chat : null;
+            bool riviNakyy = nakyy && !Auki && !(chat?.Auki ?? false);
+            var rd = riviNakyy ? DisplayStyle.Flex : DisplayStyle.None;
+            if (ohjainRivi.style.display != rd) ohjainRivi.style.display = rd;
+            if (!nakyy) { tapit.Paivita(false, krediittiAla, OpasTapit.Reuna); nimilappu.Paivita(null); return; }
             var l = OpasSovitin.Viimeisin?.Silmukka;
             bool pysahdys = l != null && l.Nykyinen != null && (l.Vaihe == OpasVaihe.Puhuu || l.Vaihe == OpasVaihe.Odottaa);
-            // Tapit nappirivin yläpuolelle, kun napit näkyvät (junan 148b video 6.10.: oikea tappi peitti näppäimistönapin).
-            tapit.Paivita((pysahdys || VapaaTila) && !Auki && !(chat?.Auki ?? false), TapitAla);
+            // Seuraava vain, kun ohitettavaa on (LS1: SeuraavaKaytettavissa); paikka säilyy, jottei tauko hyppää.
+            var sv = testiSeuraava ?? OpasSovitin.SeuraavaKaytettavissa ? Visibility.Visible : Visibility.Hidden;
+            if (seuraavaNappi.style.visibility != sv) seuraavaNappi.style.visibility = sv;
+
+            // Paikat: puhelimella ohjainrivi nappirivin yläpuolelle oikeaan reunaan ja tapit sen yläpuolelle (junan 148b video:
+            // oikea tappi peitti näppäimistönapin); leveällä ruudulla tapit sisemmäs ja ylemmäs, rivi oikean tapin alle keskelle.
+            float w = Juuri.layout.width, h = Juuri.layout.height;
+            float rivi = Tyylikirja.Nappi.Ohjaus, riviLeveys = ohjainRivi.layout.width;
+            if (float.IsNaN(riviLeveys) || riviLeveys <= 0f) riviLeveys = 2f * (Tyylikirja.Nappi.Ohjaus + 8f);
+            float sivu = OpasTapit.Reuna, tappiAla = TapitAla + rivi + KuvaRako;
+            if (LeveaRuutu && !float.IsNaN(w) && !float.IsNaN(h))
+            {
+                sivu = Mathf.Round(Mathf.Max(OpasTapit.Reuna, w * TappiSivuOsuus - OpasTapit.Halkaisija * 0.5f));
+                tappiAla = Mathf.Round(Mathf.Max(tappiAla, h * TappiKorkeusOsuus - OpasTapit.Halkaisija * 0.5f));
+            }
+            ohjainAla = tappiAla - KuvaRako - rivi;
+            // Rivin oikea reuna tapin keskilinjalle niin, että rivi on tapin alla keskellä; ei ruudun reunan yli.
+            float riviOikea = Mathf.Max(OpasTapit.Reuna, sivu + OpasTapit.Halkaisija * 0.5f - riviLeveys * 0.5f);
+            if (ohjainRivi.style.right.value.value != riviOikea) ohjainRivi.style.right = riviOikea;
+            if (ohjainRivi.style.bottom.value.value != ohjainAla) ohjainRivi.style.bottom = ohjainAla;
+
+            tapit.Paivita((pysahdys || VapaaTila) && !Auki && !(chat?.Auki ?? false), tappiAla, sivu);
             // Kohteen nimilappu pysähdyksellä (myös valikon aikana; chat peittää sen joka tapauksessa).
             nimilappu.Paivita(pysahdys && !(chat?.Auki ?? false) ? l.Nykyinen.Nimi : null);
             float siruAla = krediittiAla;
-            if (tapit.Nakyy && siruNakyy)
+            if (tapit.Nakyy && siruNakyy && !LeveaRuutu)
             {
                 float leveys = 0f;
                 foreach (var c in sirurivi.Children()) leveys += c.layout.width + 8f;
-                float vapaa = Juuri.layout.width - 2f * (OpasTapit.Reuna + OpasTapit.Halkaisija + KuvaRako);
-                if (leveys > vapaa) siruAla = krediittiAla + OpasTapit.Halkaisija + KuvaRako;
+                float vapaa = w - 2f * (OpasTapit.Reuna + OpasTapit.Halkaisija + KuvaRako);
+                if (leveys > vapaa) siruAla = tappiAla + OpasTapit.Halkaisija + KuvaRako;
             }
             if (sirurivi.style.bottom.value.value != siruAla) sirurivi.style.bottom = siruAla;
         }
+        /// <summary>Testi `ui opasvalikko seuraava on|off|auto`: Seuraava-napin näkyvyys ilman käynnissä olevaa opasta.</summary>
+        bool? testiSeuraava;
 
         // --- oppaan kuvat --------------------------------------------------------------------------------
 
@@ -918,7 +1016,7 @@ namespace Matkakirja.Natiivi
         float OikeaAla(float leveys)
         {
             float linja = krediittiAla + (NappiriviKorkeus - Tyylikirja.Nappi.Korkeus) * 0.5f;
-            if (tapit.Nakyy) return TapitAla + OpasTapit.Halkaisija + KuvaRako;
+            if (!LeveaRuutu) return tapit.Nakyy ? tapit.Ala + OpasTapit.Halkaisija + KuvaRako : ohjainAla + Tyylikirja.Nappi.Ohjaus + KuvaRako;
             if (!nappiNakyy) return linja;
             var rb = (riviAuki ? rivinIkkuna : vakanen).worldBound;
             if (rb.width <= 0 || float.IsNaN(rb.xMax)) return linja;
@@ -993,18 +1091,37 @@ namespace Matkakirja.Natiivi
             // Kokoruutuselaus: nostojen Kuvasuurennos sarjana (pyyhkäisy ja ‹ ›), lähderivi ja selite kuvakohtaisesti.
             var kaikki = NykyisetKuvat();
             var sarja = new List<LehtiKuva>();
-            foreach (var x in kaikki.Count > 0 ? kaikki : new[] { k })
-            {
-                string teksti = !string.IsNullOrWhiteSpace(x.Selite) ? x.Selite : l?.Nimi;
-                string selite = x.Havainnekuva ? "HAVAINNEKUVA" + (teksti != null ? " · " + teksti : "") : teksti;
-                sarja.Add(new LehtiKuva
-                {
-                    Lahde = x.Url, Lyhyt = selite, Selite = selite,
-                    LahdeRivi = string.Join(" · ", new[] { x.Tekija, x.Lisenssi }.Where(y => !string.IsNullOrEmpty(y))),
-                });
-            }
+            foreach (var x in kaikki.Count > 0 ? kaikki : new[] { k }) sarja.Add(Lehtikuvaksi(x, l?.Nimi));
             suurennos.Avaa(sarja, 0);
             Debug.Log($"MATKAKIRJA opas: kuvat suurennettu ({sarja.Count})");
+        }
+
+        /// <summary>Oppaan kuva suurennoksen kuvaksi: selite (havainnekuvalla HAVAINNEKUVA) ja lähderivi tekijä · lisenssi.</summary>
+        static LehtiKuva Lehtikuvaksi(OpasKuva x, string nimi)
+        {
+            string teksti = !string.IsNullOrWhiteSpace(x.Selite) ? x.Selite : nimi;
+            string selite = x.Havainnekuva ? "HAVAINNEKUVA" + (teksti != null ? " · " + teksti : "") : teksti;
+            return new LehtiKuva
+            {
+                Lahde = x.Url, Lyhyt = selite, Selite = selite,
+                LahdeRivi = string.Join(" · ", new[] { x.Tekija, x.Lisenssi }.Where(y => !string.IsNullOrEmpty(y))),
+            };
+        }
+
+        // KUVA LATAUKSEN AJAKSI (omistaja 6.10. 23.3x: "näyttää automaattisesti yhden kuvan 80 % kokoisena", juna 156; LS1
+        // OpasSovitin.LatausKuva): saavuttaessa, kun laattoja on alle rajan, kohteen ensimmäinen kuva KUVASUURENNOS-pohjan
+        // kokoruututilassa 80 %:n kokoisena lähderiveineen. LS1 poistaa kuvan (laatat valmiit, aikaraja, lento, Seuraava);
+        // napautus sulkee sen kuten muunkin suurennoksen. Kaupunkikamera ei pysähdy (lataus jatkuu kuvan alla).
+        Kuvasuurennos latausSuurennos;
+        const float LatausKuvaOsuus = 0.8f;
+
+        void LatausKuvaVaihtui(OpasKuva k)
+        {
+            if (k == null) { if (latausSuurennos?.Auki ?? false) { latausSuurennos.Sulje(); Debug.Log("MATKAKIRJA opas: latauskuva suljettu"); } return; }
+            if (!nakyy || !KuvatPaalla || (suurennos?.Auki ?? false)) return;
+            latausSuurennos ??= new Kuvasuurennos(UiKerros.Hae().Juuri(UiKerros.Valikot)) { Tayteen = true, Kokoruutu = true, LahdeKokoruudussa = true, Osuus = LatausKuvaOsuus };
+            latausSuurennos.Avaa(new[] { Lehtikuvaksi(k, OpasSovitin.Viimeisin?.Silmukka?.Nykyinen?.Nimi) }, 0);
+            Debug.Log("MATKAKIRJA opas: latauskuva näkyviin " + k.Url);
         }
 
         /// <summary>Vaihtoehdon napautus: kysymys oppaalle saman chatin kautta (Sieppaa → OpasSovitin.Toive), chat pysyy kiinni.</summary>
@@ -1055,7 +1172,7 @@ namespace Matkakirja.Natiivi
             valikko.Add(vanhat);
             rivit = null;
             nykyiset.Clear();
-            var kaikki = Kaupungit?.Invoke();
+            var kaikki = VainSallitut(Kaupungit?.Invoke());
             if (aloitus) RakennaAloitus();
             switch (nakyma)
             {
@@ -1219,7 +1336,7 @@ namespace Matkakirja.Natiivi
         /// TÄKYLUETTELO: Linssivalitsimen väliotsikko ja LINSSIRIVI-pohjan rivit (kuva, nimi, koukkurivi) workerin täkyistä
         /// (OpasSovitin.Takyt; null = latautuu, päivitetään 0,5 s välein), alla "Tai valitse paikka" ja maanosat.
         /// </summary>
-        static bool OnTakyja => OpasSovitin.Takyt != null && OpasSovitin.Takyt.Count > 0;
+        static bool OnTakyja => OpasSovitin.Takyt != null && SallitutTakyt().Any();
 
 
         /// <summary>Aloitus koko ruutuna; Linssisepän varapolku (ei täkyjä → vanha alku kartalle) sulkee sen ilman valintaa.</summary>
@@ -1283,7 +1400,7 @@ namespace Matkakirja.Natiivi
             aloitusOikea = Rakenne.El("mk-opas-aloitus__sarake", valikko, PickingMode.Ignore);
             Kirjasimet.Aseta(Rakenne.Teksti("SUOSIKIT", "mk-linssivalitsin__valiotsikko", aloitusOikea), Kirjasin.ModerniLihava);
             aloitusSuosikit = Lista(aloitusOikea);
-            if (OnTakyja) foreach (var t in OpasSovitin.Takyt.Take(SuosikitMax)) TakyRivi(t, aloitusSuosikit);
+            if (OnTakyja) foreach (var t in SallitutTakyt().Take(SuosikitMax)) TakyRivi(t, aloitusSuosikit);
             else
             {
                 Kirjasimet.Aseta(Rakenne.Teksti("Suosikit latautuvat…", "mk-linssivalikko__lahde", aloitusSuosikit), Kirjasin.Moderni);
@@ -1293,7 +1410,7 @@ namespace Matkakirja.Natiivi
                 {
                     if (!aloitus || aloitusSuosikit != sarake || !OnTakyja) return;
                     sarake.Clear();
-                    foreach (var t in OpasSovitin.Takyt.Take(SuosikitMax)) TakyRivi(t, sarake);
+                    foreach (var t in SallitutTakyt().Take(SuosikitMax)) TakyRivi(t, sarake);
                 }).Every(500).Until(() => !aloitus || aloitusSuosikit != sarake || OnTakyja && sarake.childCount > 1);
             }
             AsetteleAloitus();
@@ -1321,7 +1438,7 @@ namespace Matkakirja.Natiivi
             if (OnTakyja)
             {
                 Kirjasimet.Aseta(Rakenne.Teksti("MIHIN LENNETÄÄN?", "mk-linssivalitsin__valiotsikko", rivit), Kirjasin.ModerniLihava);
-                foreach (var t in OpasSovitin.Takyt) TakyRivi(t);
+                foreach (var t in SallitutTakyt()) TakyRivi(t);
                 Kirjasimet.Aseta(Rakenne.Teksti("TAI VALITSE PAIKKA", "mk-linssivalitsin__valiotsikko", rivit), Kirjasin.ModerniLihava);
             }
             if (kaikki == null || kaikki.Count == 0) { Kirjasimet.Aseta(Rakenne.Teksti("Kaupungit latautuvat…", "mk-linssivalikko__lahde", rivit), Kirjasin.Moderni); return; }
@@ -1497,12 +1614,27 @@ namespace Matkakirja.Natiivi
 
         void TarkistaOhiNapautus()
         {
-            if (!Auki) return;
             var osoitin = Pointer.current;
             if (osoitin == null || !osoitin.press.wasPressedThisFrame || valikko.panel == null) return;
             var ruutu = osoitin.position.ReadValue();
             var p = RuntimePanelUtils.ScreenToPanel(valikko.panel, new Vector2(ruutu.x, Screen.height - ruutu.y));
-            if (!valikko.worldBound.Contains(p) && !nappi.worldBound.Contains(p)) Sulje();
+            // ☰-OSUMAN DIAGNOSTIIKKA (juna 156, oikean yläkulman osumavika: simussa 18/20 ja 19/20): painallus ☰:n lähellä →
+            // mihin UITK:n poiminta osuu ja onko valikko auki (lokista erottuu ohi-osuma, toinen elementti tai sulku-avaus).
+            if (Vector2.Distance(p, nappi.worldBound.center) < 40f && Juuri.panel != null)
+            {
+                var osuma = Juuri.panel.Pick(p);
+                Debug.Log($"MATKAKIRJA opas: ☰-painallus {p.x:0},{p.y:0} (ero {p.x - nappi.worldBound.center.x:0},{p.y - nappi.worldBound.center.y:0}), "
+                          + $"auki {Auki}, poiminta [{(osuma == null ? "-" : string.Join(".", osuma.GetClasses()) + "#" + osuma.name)}], "
+                          + $"laajennettu {nappi.ContainsPoint(nappi.WorldToLocal(p))}");
+            }
+            if (!Auki) return;
+            // Ohi-napautus ei saa sulkea, kun painallus osuu ☰:n laajennettuun osuma-alaan (Kosketusnappi 44 pt): muuten sulku
+            // tässä ja ☰:n klikkaus perään avasivat valikon uudelleen, eli napautus näytti menevän ohi.
+            if (!valikko.worldBound.Contains(p) && !nappi.ContainsPoint(nappi.WorldToLocal(p)))
+            {
+                Debug.Log($"MATKAKIRJA opas: ohi-napautus sulki valikon {p.x:0},{p.y:0}");
+                Sulje();
+            }
         }
 
         /// <summary>Testikomento `ui opasvalikko valikko|maanosat|maat <maanosa>|kaupungit <maanosa>|<maa>|sulje`.</summary>
@@ -1586,13 +1718,41 @@ namespace Matkakirja.Natiivi
                 case "maanosat": Avaa(Nakyma.Maanosat); return "opas: maanosat";
                 case "takyt": Avaa(Nakyma.Takyt); return $"opas: täkyt ({OpasSovitin.Takyt?.Count.ToString() ?? "latautuu"})";
                 case "tauko": OpasSovitin.Tauko(!OpasSovitin.Tauolla); return "opas: tauolla " + OpasSovitin.Tauolla;
+                case "otsikko":
+                    KierrosTaulu.Testiotsikko = o.Length > 1 && o[1] != "pois" ? o[1] : null;
+                    return "opas: " + KierrosTaulu.OtsikkoKuvaus;
+                case "seuraava":
+                    // `ui opasvalikko seuraava on|off|auto`: napin näkyvyys testissä; ilman argumenttia kuten napin painallus.
+                    if (o.Length > 1) { testiSeuraava = o[1] == "on" ? true : o[1] == "off" ? false : (bool?)null; return "opas: seuraava-testi " + o[1]; }
+                    return "opas: seuraava → " + OpasSovitin.Seuraava();
+                case "ohjain":
+                {
+                    Rect r = ohjainRivi.worldBound, t = taukoNappi.worldBound, sn = seuraavaNappi.worldBound;
+                    return $"opas: ohjainrivi {(ohjainRivi.resolvedStyle.display == DisplayStyle.Flex ? "näkyy" : "piilossa")} @ {r.xMin:0},{r.yMin:0} {r.width:0}×{r.height:0}, "
+                         + $"tauko {t.center.x:0},{t.center.y:0}, seuraava {(seuraavaNappi.resolvedStyle.visibility == Visibility.Visible ? "näkyy" : "piilossa")} {sn.center.x:0},{sn.center.y:0}, "
+                         + $"valikkonappi {nappi.worldBound.center.x:0},{nappi.worldBound.center.y:0} {nappi.worldBound.width:0}×{nappi.worldBound.height:0}, "
+                         + $"leveä {LeveaRuutu}, ruutu {Juuri.layout.width:0}×{Juuri.layout.height:0}; " + tapit.Kuvaus();
+                }
+                case "latauskuva":
+                    // `ui opasvalikko latauskuva [pois]`: testikuva (Nyhavn) latauskuvana ilman saapumista.
+                    if (o.Length > 1 && o[1] == "pois") { LatausKuvaVaihtui(null); return "opas: latauskuva pois"; }
+                    LatausKuvaVaihtui(new OpasKuva { Url = "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Nyhavn%2C_Copenhagen%2C_20220618_1728_7354.jpg/960px-Nyhavn%2C_Copenhagen%2C_20220618_1728_7354.jpg", Tekija = "Jakub Hałun", Lisenssi = "CC BY-SA 4.0", Selite = "Nyhavnin kanava" });
+                    return "opas: latauskuva " + (latausSuurennos?.Auki ?? false ? "auki" : "ei avattu (opas kiinni tai kuvat pois)");
                 case "maat": maanosa = o.Length > 1 ? o[1] : maanosa; Avaa(Nakyma.Maat); return "opas: maat " + maanosa;
                 case "kaupungit":
                     var p = o.Length > 1 ? o[1].Split('|') : new string[0];
                     if (p.Length == 2) { maanosa = p[0]; maa = p[1]; }
                     Avaa(Nakyma.Kaupungit);
                     return $"opas: kaupungit {maanosa} / {maa}";
-                default: Avaa(Nakyma.Paa); return "opas: valikko (" + (Kaupungit?.Invoke()?.Count ?? 0) + " kaupunkia)";
+                case "torjunta": Torjunta(OpasSovitin.EiSallittuTeksti); return "opas: torjunta";
+                case "sallitut":
+                {
+                    var kaikki = Kaupungit?.Invoke(); var vain = VainSallitut(kaikki);
+                    return $"opas: sallitut {OpasSovitin.SallitutKaupungit?.Count ?? 0} → valikossa {vain?.Count ?? 0}/{kaikki?.Count ?? 0} kaupunkia, "
+                         + $"suosikit {SallitutTakyt().Count()}/{OpasSovitin.Takyt?.Count ?? 0}"
+                         + (vain != null && vain.Count <= 40 ? ": " + string.Join(", ", vain.Select(k => k.Nimi)) : "");
+                }
+                default: Avaa(Nakyma.Paa); return "opas: valikko (" + (VainSallitut(Kaupungit?.Invoke())?.Count ?? 0) + " kaupunkia)";
             }
         }
     }
