@@ -257,7 +257,13 @@ namespace Matkakirja.Natiivi
             Vaihtui?.Invoke(linssi);
             LukitseVaaka(true);
 
-            if (PelattavaPalaPyydetty && peiliKuvaus != PelattavaPalaPaketti) AsetaPeili(PelattavaPalaPaketti);   // ennen latausta
+            if (PelattavaPalaPyydetty && DioraamaLevyvalimuisti.TestiOsoitin != PelattavaPalaHash)
+            {
+                // Ennen latausta: pala-paketti osoittimeksi; jo ladattu tuotantorakennus unohdetaan (ladataan uudelleen alla).
+                if (peiliPaalla) AsetaPeili("pois");
+                DioraamaLevyvalimuisti.TestiOsoitin = PelattavaPalaHash;
+                if (rakennus != null) LataaUudelleen();
+            }
             if (rakennus == null)
             {
                 if (!latausKaynnissa) { latausKaynnissa = true; o.StartCoroutine(LataaRakennus()); }
@@ -485,11 +491,10 @@ namespace Matkakirja.Natiivi
             SeikkailuVartijat.Poista(); SeikkailuVene.Poista(); SeikkailuPelaaja.Poista(); SeikkailuRepliikit.Poista(); SeikkailuEsineet.Poista(); SeikkailuKavely.Pura();
             SeikkailuEsineet.Kolahti -= KokkiKuuleeKolahduksen;
             cm?.SeikkailuPois(); PelattavaPalaPyydetty = false;
-            if (peiliKuvaus == PelattavaPalaPaketti)
+            if (DioraamaLevyvalimuisti.TestiOsoitin == PelattavaPalaHash)
             {
-                // Seuraava avaus taas tuotannosta (myös kesken latauksen suljettaessa): peili pois ja rakennus unohdetaan ilman latausta
-                // (AsetaPeili käynnistäisi latauksen kesken purun).
-                peili = s2 => s2; peiliPaalla = false; peiliHttps = false; peiliKuvaus = edellinenPeili = "pois (ämpäri)";
+                // Seuraava avaus taas tuotannosta (myös kesken latauksen suljettaessa): osoitin pois ja rakennus unohdetaan ilman latausta.
+                DioraamaLevyvalimuisti.TestiOsoitin = null;
                 rakennus = null; latausKaynnissa = false;
             }
             pelattavaPala = false;
@@ -655,8 +660,9 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Pelattavan palan kiinnitetty paketti (Linnanrakentajan v44g: kävely, Fogg, vene, laiturin kansi). Tuotannon osoitin
-        /// (uusin.json) ei muutu: pala lukee tämän paketin peilinä ja palauttaa tuotannon, kun linna suljetaan.</summary>
-        public const string PelattavaPalaPaketti = "https://media.matkakirja.app/dioraama/olavinlinna/fd7d3e32c86ed7fb/";
+        /// (uusin.json) ei muutu: pala lukee tämän paketin testiosoittimena (sama hash-juuri ja manifest.json kuin julkaisulla, joten
+        /// levyvälimuisti toimii; Päätoimittaja 7.10.: ei 250–400 Mt joka avauksella) ja palauttaa tuotannon, kun linna suljetaan.</summary>
+        public const string PelattavaPalaHash = "fd7d3e32c86ed7fb";
 
         void LataaUudelleen()
         {
