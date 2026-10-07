@@ -1,0 +1,652 @@
+{
+ "kaupunki": "Bukarest",
+ "id": "bukarest",
+ "versio": 1,
+ "kohteet": [
+  {
+   "id": "Q164150",
+   "nimi": "Romanian parlamenttitalo",
+   "kuvaus": "Maailman painavin hallintorakennus",
+   "luokka": "rakennus",
+   "koko_m": 270,
+   "teksti": "Romanian parlamenttitalo täyttää ylhäältä katsottuna kokonaisen kaupunginosan: valkoinen kivimassa on kaksisataaseitsemänkymmentä metriä leveä ja kaksisataaneljäkymmentä metriä pitkä. Rakennustyöt alkoivat vuonna 1984 Nicolae Ceaușescun käskystä, ja talon tieltä purettiin suuri osa vanhaa kaupunkia; kymmenettuhannet asukkaat joutuivat muuttamaan. Pääarkkitehti Anca Petrescu oli voittanut suunnittelukilpailun vain kaksikymmentäkahdeksanvuotiaana, ja hänen apunaan työskenteli noin seitsemänsataa arkkitehtia. Ceaușescu ei nähnyt taloa valmiina, sillä hänet teloitettiin jouluna 1989. Nykyään siellä kokoontuu Romanian parlamentti, ja samassa talossa toimii nykytaiteen museo.",
+   "lyhyt": "Romanian parlamenttitaloa pidetään maailman painavimpana rakennuksena: talo painaa noin neljä miljoonaa tonnia. Lattiaa on kolmesataakuusikymmentäviisituhatta neliömetriä ja huoneita yli tuhat, mutta suurin osa niistä on yhä tyhjillään. Maan päällä talossa on kaksitoista kerrosta.",
+   "syventava": "Mitä talon tieltä purettiin?",
+   "kysymykset": [
+    "Miksi Ceaușescu halusi näin valtavan talon?",
+    "Kuka oli arkkitehti Anca Petrescu?",
+    "Mitä talon tieltä purettiin?",
+    "Pääseekö parlamenttitaloon sisälle?",
+    "Miksi niin monet huoneet ovat tyhjillään?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Rakennus on 240 metriä pitkä ja 270 metriä leveä.",
+     "url": "https://en.wikipedia.org/wiki/Palace_of_the_Parliament"
+    },
+    {
+     "vaite": "Peruskivi 25.6.1984 Ceaușescun hallinnon aikana; pääarkkitehti Anca Petrescu ja noin 700 arkkitehdin tiimi.",
+     "url": "https://en.wikipedia.org/wiki/Palace_of_the_Parliament"
+    },
+    {
+     "vaite": "Tieltä purettiin seitsemän neliökilometriä vanhaa kaupunkia, ja 40 000 ihmistä siirrettiin; aineiston mukaan kymmenettuhannet asukkaat muuttivat.",
+     "url": "https://en.wikipedia.org/wiki/Palace_of_the_Parliament"
+    },
+    {
+     "vaite": "Anca Petrescu voitti kilpailun vain 28-vuotiaana.",
+     "url": "https://livetheworld.com/post/one-of-a-kind-palace-the-people-s-house-in-bucharest-ztho"
+    },
+    {
+     "vaite": "Ceaușescu teloitettiin joulupäivänä 1989 eikä nähnyt rakennusta valmiina.",
+     "url": "https://accidentallywesanderson.com/places/palace-of-the-parliament/"
+    },
+    {
+     "vaite": "Talossa toimivat Romanian parlamentti ja kansallinen nykytaiteen museo.",
+     "url": "https://en.wikipedia.org/wiki/Palace_of_the_Parliament"
+    },
+    {
+     "vaite": "Painavimpia rakennuksia maailmassa, noin 4 098 500 tonnia; lattiaa 365 000 neliömetriä, 1 100 huonetta.",
+     "url": "https://en.wikipedia.org/wiki/Palace_of_the_Parliament"
+    },
+    {
+     "vaite": "Noin 70 prosenttia huoneista on yhä tyhjillään (vain noin 400 suunnitellusta 1 100 huoneesta käytössä).",
+     "url": "https://museumforall.eu/museum/bucharest-palace-of-the-parliament/"
+    },
+    {
+     "vaite": "Rakennuksessa on 12 kerrosta maan päällä.",
+     "url": "https://en.wikipedia.org/wiki/Palace_of_the_Parliament"
+    }
+   ]
+  },
+  {
+   "id": "Q755457",
+   "nimi": "Romanian ateneum",
+   "kuvaus": "Kupolikattoinen konserttitalo",
+   "luokka": "rakennus",
+   "koko_m": 60,
+   "teksti": "Romanian ateneum on pyöreä, kupolin kruunaama konserttitalo, jonka edustaa koristaa kreikkalaisen temppelin tapainen pylväikkö. Talo avattiin vuonna 1888 ranskalaisen arkkitehdin Albert Galleronin piirustusten mukaan. Osa rakennusrahoista kerättiin kansalaiskeräyksellä, joka kesti kaksikymmentäkahdeksan vuotta, ja sen iskulause muistetaan yhä: lahjoita yksi leu Ateneumille. Pääsalin seiniä kiertää seitsemänkymmentäviisi metriä pitkä fresko, johon taidemaalari Costin Petrescu kuvasi Romanian historian käännekohtia, ja se valmistui vasta vuonna 1937. Talo on George Enescun filharmonian koti ja Enescu-festivaalin tärkein näyttämö.",
+   "lyhyt": "Romanian ateneumin rakennutti vuonna 1865 perustettu Romanian ateneumin kulttuuriseura tontille, joka oli kuulunut Văcărescun suvulle. Vaikka talo avattiin vuonna 1888, rakennustyöt jatkuivat vielä vuoteen 1897 asti. Seuran perustajiin kuuluivat muun muassa Constantin Esarcu ja Nicolae Kretzulescu.",
+   "syventava": "Mitä seinää kiertävä fresko esittää?",
+   "kysymykset": [
+    "Mitä historian hetkiä fresko esittää?",
+    "Kuka oli säveltäjä George Enescu?",
+    "Miksi talo rakennettiin kansalaisten rahoilla?",
+    "Millainen konsertti salissa kannattaa kuulla?",
+    "Kuinka monta kuulijaa saliin mahtuu?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Pyöreä, kupolillinen konserttitalo, avattiin 1888.",
+     "url": "https://en.wikipedia.org/wiki/Romanian_Athenaeum"
+    },
+    {
+     "vaite": "Arkkitehti oli ranskalainen Albert Galleron.",
+     "url": "https://en.wikipedia.org/wiki/Romanian_Athenaeum"
+    },
+    {
+     "vaite": "Osa rahoista kerättiin 28 vuotta kestäneellä kansalaiskeräyksellä; iskulause 'Lahjoita yksi leu Ateneumille'.",
+     "url": "https://en.wikipedia.org/wiki/Romanian_Athenaeum"
+    },
+    {
+     "vaite": "Costin Petrescun 75 metriä pitkä fresko kuvaa 25 käännekohtaa Romanian historiasta ja valmistui 1937.",
+     "url": "https://en.wikipedia.org/wiki/Romanian_Athenaeum"
+    },
+    {
+     "vaite": "George Enescun filharmonian ja Enescu-festivaalin koti.",
+     "url": "https://en.wikipedia.org/wiki/Romanian_Athenaeum"
+    },
+    {
+     "vaite": "Talo rakennettiin tontille, joka oli kuulunut Văcărescun suvulle; rakennuttaja oli vuonna 1865 perustettu Romanian ateneumin kulttuuriseura.",
+     "url": "https://en.wikipedia.org/wiki/Romanian_Athenaeum"
+    },
+    {
+     "vaite": "Talo vihittiin 1888, mutta työt jatkuivat vuoteen 1897.",
+     "url": "https://en.wikipedia.org/wiki/Romanian_Athenaeum"
+    },
+    {
+     "vaite": "Romanian ateneumin kulttuuriseuran perustivat 1865 muun muassa Constantin Esarcu, V. A. Urechia ja Nicolae Kretzulescu.",
+     "url": "https://en.wikipedia.org/wiki/Romanian_Athenaeum"
+    }
+   ]
+  },
+  {
+   "id": "Q3390456",
+   "nimi": "Vallankumouksen aukio",
+   "kuvaus": "Vuoden 1989 vallankumouksen aukio",
+   "luokka": "aukio",
+   "koko_m": 250,
+   "teksti": "Vallankumouksen aukio on Calea Victoriein varrella, ja sen keskeltä nousee kaksikymmentäviisi metriä korkea marmoripylväs, jonka kärjessä on metallinen kruunu. Aukion laidalla on entisen kommunistisen puolueen keskuskomitean talo. Sen parvekkeelta Nicolae Ceaușescu piti viimeisen puheensa joulukuussa 1989, kun aukiolle komennettu yli satatuhatpäinen väkijoukko kääntyi häntä vastaan. Seuraavana päivänä hän pakeni vaimonsa kanssa helikopterilla saman talon katolta. Vuonna 2005 pystytettyä uudestisyntymisen muistomerkkiä monet bukarestilaiset kutsuvat pilkallisesti seivästetyksi perunaksi.",
+   "lyhyt": "Vallankumouksen aukion nimi oli vuoteen 1989 asti Palatsiaukio, sillä sen laidalla on entinen kuninkaanlinna. Joulukuun 1989 taisteluissa linnassa toiminut taidemuseo kärsi pahoin, ja yli tuhat taideteosta vaurioitui tai tuhoutui. Aukion muistomerkki on omistettu vallankumouksen uhreille.",
+   "syventava": "Miksi väkijoukko kääntyi Ceaușescua vastaan?",
+   "kysymykset": [
+    "Mitä Ceaușescu yritti puheessaan sanoa?",
+    "Minne Ceaușescu pakeni helikopterilla?",
+    "Miksi muistomerkkiä kutsutaan perunaksi?",
+    "Mitä keskuskomitean talossa on nykyään?",
+    "Miten vallankumous Romaniassa alkoi?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Aukio on Calea Victoriein varrella; nimi oli Palatsiaukio vuoteen 1989.",
+     "url": "https://en.wikipedia.org/wiki/Revolution_Square,_Bucharest"
+    },
+    {
+     "vaite": "Uudestisyntymisen muistomerkki on 25 metriä korkea marmoripylväs, jonka päällä on metallinen kruunu; valmistui 2005.",
+     "url": "https://en.wikipedia.org/wiki/Memorial_of_Rebirth"
+    },
+    {
+     "vaite": "Ceaușescu piti viimeisen puheensa keskuskomitean talon parvekkeelta 21.12.1989; yli satatuhatpäinen paikalle tuotu väkijoukko buuasi hänet alas, ja hän pakeni seuraavana päivänä helikopterilla talon katolta.",
+     "url": "https://www.inyourpocket.com/romania/bucharest/venues/piata-revolutiei"
+    },
+    {
+     "vaite": "Ceaușescu ja hänen vaimonsa pakenivat helikopterilla talon katolta 22.12.1989.",
+     "url": "https://en.wikipedia.org/wiki/Revolution_Square,_Bucharest"
+    },
+    {
+     "vaite": "Muistomerkkiä kutsutaan pilkallisesti seivästetyksi perunaksi.",
+     "url": "https://en.wikipedia.org/wiki/Memorial_of_Rebirth"
+    },
+    {
+     "vaite": "Joulukuussa 1989 taidemuseon rakennuksesta vaurioitui 80 prosenttia ja yli 1 000 teosta vaurioitui tai tuhoutui.",
+     "url": "https://en.wikipedia.org/wiki/National_Museum_of_Art_of_Romania"
+    }
+   ]
+  },
+  {
+   "id": "Q1319192",
+   "nimi": "Romanian kansallinen taidemuseo",
+   "kuvaus": "Taidemuseo entisessä kuninkaanlinnassa",
+   "luokka": "rakennus",
+   "koko_m": 150,
+   "teksti": "Romanian kansallinen taidemuseo toimii entisessä kuninkaanlinnassa, jonka pitkä vaalea julkisivu reunustaa Vallankumouksen aukiota. Nykyinen linna rakennettiin 1930-luvulla, kun tulipalo oli vuonna 1926 tuhonnut edellisen palatsin keskiosan. Monarkian lakkauttamisen jälkeen vuonna 1948 linnasta tehtiin taidemuseo. Joulukuun 1989 taisteluissa luodit ja tulipalot vaurioittivat suurinta osaa rakennuksesta, ja yli tuhat teosta kärsi tai tuhoutui. Museo avattiin osittain uudelleen vuonna 2000, ja nykyään sen keskiaikaisen taiteen kokoelmassa on aarteita luostareista, jotka purettiin Ceaușescun aikana.",
+   "lyhyt": "Romanian kansallisen taidemuseon eurooppalaisen taiteen galleria on linnan Kretzulescun siivessä, ja sen noin kolmesataa teosta esittelevät Euroopan taidekouluja 1300-luvulta 1800-luvulle. Linnan uudelleenrakentamisen käynnisti kuningas Kaarle toinen. Museon keskiaikaisen taiteen kokoelma avattiin uudelleen keväällä 2002.",
+   "syventava": "Mitkä teokset tuhoutuivat vuonna 1989?",
+   "kysymykset": [
+    "Mitkä taideteokset tuhoutuivat vallankumouksessa?",
+    "Kuka kuningas asui tässä linnassa?",
+    "Kenen romanialaisen taiteilijan töitä täällä on?",
+    "Miksi linnasta tehtiin museo?",
+    "Mitä luostareista pelastettiin museoon?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Museo on entisessä kuninkaanlinnassa Vallankumouksen aukiolla.",
+     "url": "https://en.wikipedia.org/wiki/National_Museum_of_Art_of_Romania"
+    },
+    {
+     "vaite": "Joulukuussa 1926 tulipalo tuhosi vanhan kuninkaanlinnan päärakennuksen; nykyinen linna valmistui laajassa uudelleenrakennuksessa 1937 Nicolae Nenciulescun suunnitelmin.",
+     "url": "https://en.wikipedia.org/wiki/Royal_Palace_of_Bucharest"
+    },
+    {
+     "vaite": "Kaarle II rakennutti palatsin uudelleen; 1948 monarkian lakkauttamisen jälkeen linnasta tuli kansallinen taidemuseo.",
+     "url": "https://www.artonstamps.org/Art-Gallery/Museums/Bucharest/Palace/palace.htm"
+    },
+    {
+     "vaite": "Joulukuussa 1989 80 prosenttia rakennuksesta vaurioitui ja yli 1 000 teosta vaurioitui tai tuhoutui.",
+     "url": "https://en.wikipedia.org/wiki/National_Museum_of_Art_of_Romania"
+    },
+    {
+     "vaite": "Osa museosta avattiin uudelleen 2000; keskiaikaisen taiteen kokoelmassa on teoksia Ceaușescun aikana puretuista luostareista.",
+     "url": "https://en.wikipedia.org/wiki/National_Museum_of_Art_of_Romania"
+    },
+    {
+     "vaite": "Eurooppalaisen taiteen galleria on Kretzulescun siivessä, noin 300 teosta 1300–1800-luvuilta.",
+     "url": "https://ghidulmuzeelor.cimec.ro/idEN.asp?k=34"
+    }
+   ]
+  },
+  {
+   "id": "Q1514860",
+   "nimi": "Romanian patriarkaalinen katedraali",
+   "kuvaus": "Romanian ortodoksisen kirkon pääkirkko",
+   "luokka": "kirkko",
+   "koko_m": 60,
+   "teksti": "Romanian patriarkaalinen katedraali seisoo Patriarkaatinmäen laella, ja ylhäältä sen katolla erottuu kolme kupolia ja neljä tornia. Ruhtinas Constantin Șerban rakennutti kirkon 1650-luvulla kiitokseksi maahan palanneesta rauhasta, ja se vihittiin vuonna 1658. Kirkko rakennettiin vanhan puisen erakkoluostarin paikalle, ja sen esikuvana oli Curtea de Argeșin luostarikirkko. Vuodesta 1925, jolloin Romanian ortodoksinen kirkko sai oman patriarkan, kirkko on ollut sen pääkirkko. Joka lokakuu yli satatuhatta pyhiinvaeltajaa jonottaa mäelle kunnioittamaan Bukarestin suojeluspyhimyksen, pyhän Demetrios Uuden, reliikkejä.",
+   "lyhyt": "Romanian patriarkaalisen katedraalin vieressä on patriarkaatin palatsi, joka valmistui vuonna 1907 kansanedustajien istuntotaloksi, ja se oli Romanian ensimmäinen teräsbetonirakennus. Parlamentti kokoontui siellä vuoteen 1997, jolloin talo siirtyi kirkolle. Kirkon kellotornin rakennutti ruhtinas Constantin Brâncoveanu vuonna 1698.",
+   "syventava": "Kuka oli pyhä Demetrios Uusi?",
+   "kysymykset": [
+    "Kuka oli pyhä Demetrios Uusi?",
+    "Miksi kirkko rakennettiin mäen laelle?",
+    "Missä Romanian patriarkka asuu?",
+    "Miksi parlamentti kokoontui kirkon vieressä?",
+    "Miten tämä kirkko eroaa uudesta katedraalista?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Katedraali sijaitsee Dealul Mitropoliein eli Patriarkaatinmäen laella.",
+     "url": "https://en.wikipedia.org/wiki/Romanian_Patriarchal_Cathedral"
+    },
+    {
+     "vaite": "Katolla kolme kupolia ja neljä tornia; malli Curtea de Argeșin kirkosta.",
+     "url": "https://www.inyourpocket.com/romania/bucharest/venues/Patriarchal-Palace-and-Church"
+    },
+    {
+     "vaite": "Rakennettiin 1655–1659 ruhtinas Constantin Șerbanin aloitteesta kiitokseksi rauhasta; vihittiin 1658.",
+     "url": "https://basilica.ro/en/368-ani-sfintirea-catedralei-patriarhale/"
+    },
+    {
+     "vaite": "Vuonna 1925 Romanian patriarkaatin perustamisen myötä kirkosta tuli patriarkaalinen katedraali.",
+     "url": "https://basilica.ro/en/368-ani-sfintirea-catedralei-patriarhale/"
+    },
+    {
+     "vaite": "Lokakuun pyhiinvaellus Bukarestin suojeluspyhimyksen pyhän Demetrios Uuden reliikeille; vuonna 2025 noin 110 000 pyhiinvaeltajaa.",
+     "url": "https://basilica.ro/en/celebrations-of-saint-demetrius-the-new-begin-at-patriarchal-cathedral-in-bucharest/"
+    },
+    {
+     "vaite": "Patriarkaatin palatsi valmistui 1907, toimi lainsäätäjien istuntotalona, ja parlamentaarikot lähtivät 1997, jolloin talo siirtyi patriarkaatille.",
+     "url": "https://en.wikipedia.org/wiki/Palace_of_the_Patriarchate"
+    },
+    {
+     "vaite": "Kirkko rakennettiin vanhemman puisen skiitan eli erakkoluostarin paikalle.",
+     "url": "https://basilica.ro/en/368-ani-sfintirea-catedralei-patriarhale/"
+    },
+    {
+     "vaite": "Patriarkaatin palatsi oli maan ensimmäinen teräsbetonirakennus.",
+     "url": "https://en.wikipedia.org/wiki/Palace_of_the_Patriarchate"
+    },
+    {
+     "vaite": "Kirkko on Curtea de Argeșin katedraalin kopio; ruhtinas Constantin Brâncoveanu rakennutti kellotornin 1698.",
+     "url": "https://en.wikipedia.org/wiki/Dealul_Mitropoliei"
+    }
+   ]
+  },
+  {
+   "id": "Q638278",
+   "nimi": "Riemukaari",
+   "kuvaus": "Graniittinen riemukaari",
+   "luokka": "muu",
+   "koko_m": 40,
+   "teksti": "Riemukaari seisoo liikenneympyrän keskellä Kiseleffin valtatiellä kaupungin pohjoisosassa, lähellä kuningas Mikael ensimmäisen puistoa. Kaksikymmentäseitsemän metriä korkea graniittikaari vihittiin vuonna 1936 ensimmäisen maailmansodan voiton muistoksi, ja sen esikuvana oli Pariisin riemukaari. Samalle paikalle pystytettiin jo vuonna 1878 kiireellä puinen kaari, jonka alta itsenäisyyssodasta palanneet joukot marssivat. Vuonna 1922 tilalle tuli betonirunkoinen ja kipsipintainen kaari, joka purettiin nykyisen tieltä. Romanian kansallispäivänä joulukuun ensimmäisenä päivänä kaaren ali kulkee sotilasparaati.",
+   "lyhyt": "Riemukaaren julkisivujen veistokset ovat romanialaisten kuvanveistäjien, muun muassa Ion Jalean ja Dimitrie Paciurean, käsialaa. Kaaren sisältä portaat johtavat katolle näköalaterassille. Kaari on rakennettu Transilvanian Devasta louhitusta graniitista. Arkkitehti Petre Antonescu suunnitteli sekä vuoden 1922 väliaikaisen kaaren että nykyisen.",
+   "syventava": "Miksi ensimmäinen kaari tehtiin puusta?",
+   "kysymykset": [
+    "Minkä voiton muistoksi kaari rakennettiin?",
+    "Miksi ensimmäinen kaari tehtiin puusta?",
+    "Pääseekö kaaren huipulle?",
+    "Mitä kaaren veistokset esittävät?",
+    "Miksi Bukarestia sanottiin Pieneksi Pariisiksi?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Kaari on Kiseleffin valtatiellä Bukarestin pohjoisosassa lähellä kuningas Mikael I:n puistoa.",
+     "url": "https://www.atlasobscura.com/places/arcul-de-triumf"
+    },
+    {
+     "vaite": "Nykyinen kaari on 27 metriä korkea, Devan graniittia, vihitty 1936, Petre Antonescun suunnittelema.",
+     "url": "https://www.atlasobscura.com/places/arcul-de-triumf"
+    },
+    {
+     "vaite": "Esikuvana Pariisin riemukaari.",
+     "url": "https://structurae.net/en/structures/arcul-de-triumf"
+    },
+    {
+     "vaite": "Vuonna 1878 kiireellä rakennettu puinen kaari itsenäisyyden ja palaavien joukkojen kunniaksi.",
+     "url": "https://www.atlasobscura.com/places/arcul-de-triumf"
+    },
+    {
+     "vaite": "Vuoden 1922 kaari oli betonirunkoinen ja kipsipintainen, ja se purettiin nykyisen tieltä.",
+     "url": "https://www.atlasobscura.com/places/arcul-de-triumf"
+    },
+    {
+     "vaite": "Sotilasparaati kulkee kaaren ali kansallispäivänä 1. joulukuuta.",
+     "url": "https://www.atlasobscura.com/places/arcul-de-triumf"
+    },
+    {
+     "vaite": "Veistokset ovat muun muassa Ion Jalean ja Dimitrie Paciurean; sisäportaat johtavat katon näköalaterassille.",
+     "url": "https://structurae.net/en/structures/arcul-de-triumf"
+    },
+    {
+     "vaite": "Nykyinen kaari vihittiin 1.12.1936 ensimmäisen maailmansodan voiton muistoksi.",
+     "url": "https://en.wikipedia.org/wiki/Arcul_de_Triumf"
+    },
+    {
+     "vaite": "Petre Antonescu suunnitteli vuoden 1922 kaaren ja nykyisen, 1936 vihityn kaaren.",
+     "url": "https://en.wikipedia.org/wiki/Arcul_de_Triumf"
+    }
+   ]
+  },
+  {
+   "id": "Q5010221",
+   "nimi": "CEC-palatsi",
+   "kuvaus": "Säästöpankin kupolipalatsi",
+   "luokka": "rakennus",
+   "koko_m": 80,
+   "teksti": "Säästöpankin palatsi, CEC-palatsi, erottuu ylhäältä Calea Victoriein varrella vanhan keskustan laidalla suuresta lasi- ja metallikupolistaan, jota ympäröi neljä pienempää kulmakupolia. Talo valmistui vuonna 1900 säästöpankin pääkonttoriksi ranskalaisen arkkitehdin Paul Gottereaun suunnitelmien mukaan. Gottereau oli opiskellut Pariisin kuvataidekoulussa, ja talo edustaa ranskalaista beaux-arts-tyyliä; julkisivu on Dobrudžan marmoria ja kiveä. Tontilla oli aiemmin luostari ja sen majatalo, ja luostarin 1500-luvulla rakennettu kirkko purettiin vuonna 1875. Pankki omistaa talon yhä, eikä se ole säännöllisesti yleisölle avoinna.",
+   "lyhyt": "Säästöpankin palatsin rakentaminen alkoi kesäkuussa 1897, ja työmaata valvoi romanialainen arkkitehti Ion Socolescu. Julkisivua koristavat kaupan jumalan Merkuriuksen ja maanviljelyksen jumalattaren Demeterin patsaat. Tontilla seisoneen luostarikirkon oli aikoinaan kunnostanut ruhtinas Constantin Brâncoveanu.",
+   "syventava": "Miksi luostarin kirkko purettiin?",
+   "kysymykset": [
+    "Mikä luostari tontilla oli ennen?",
+    "Miksi säästöpankki tarvitsi palatsin?",
+    "Pääseekö palatsin kupolin alle?",
+    "Kuka oli arkkitehti Paul Gottereau?",
+    "Mitä kadun toisella puolella on?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Rakennettu 8.6.1897–1900 Calea Victoriein varrelle, CEC-pankin pääkonttori.",
+     "url": "https://en.wikipedia.org/wiki/CEC_Palace"
+    },
+    {
+     "vaite": "Arkkitehti Paul Gottereau; työtä valvoi Ion Socolescu.",
+     "url": "https://en.wikipedia.org/wiki/CEC_Palace"
+    },
+    {
+     "vaite": "Tontilla oli Pyhän Johannes Suuren luostarin rauniot ja majatalo; 1500-luvun kirkko purettiin 1875.",
+     "url": "https://en.wikipedia.org/wiki/CEC_Palace"
+    },
+    {
+     "vaite": "Lasi- ja metallikupoli, neljä kulmakupolia, Dobrudžan marmori ja kivi, Merkuriuksen ja Demeterin patsaat.",
+     "url": "https://romania-insider.com/bucharest-old-town-highlights-iconic-cec-palace-over-century-old"
+    },
+    {
+     "vaite": "Palatsi ei ole säännöllisesti avoinna yleisölle; pankki järjestää joskus avoimia ovia.",
+     "url": "https://www.aaa.com/tripcanvas/attraction/cec-palace-palatul-cec-VA21945"
+    },
+    {
+     "vaite": "Palatsi on Calea Victoriein varrella vanhan keskustan laidalla.",
+     "url": "https://romania-insider.com/bucharest-old-town-highlights-iconic-cec-palace-over-century-old"
+    },
+    {
+     "vaite": "Gottereau oli valmistunut Pariisin École des Beaux-Arts'sta; tyyli on ranskalaista beaux-arts-arkkitehtuuria.",
+     "url": "https://en.wikipedia.org/wiki/CEC_Palace"
+    },
+    {
+     "vaite": "Luostarin kirkon kunnosti Constantin Brâncoveanu 1702–1703.",
+     "url": "https://en.wikipedia.org/wiki/CEC_Palace"
+    }
+   ],
+   "puhe_teksti": "Säästöpankin palatsi, tšek-palatsi, erottuu ylhäältä Calea Victoriein varrella vanhan keskustan laidalla suuresta lasi- ja metallikupolistaan, jota ympäröi neljä pienempää kulmakupolia. Talo valmistui vuonna 1900 säästöpankin pääkonttoriksi ranskalaisen arkkitehdin Paul Gottereaun suunnitelmien mukaan. Gottereau oli opiskellut Pariisin kuvataidekoulussa, ja talo edustaa ranskalaista beaux-arts-tyyliä; julkisivu on Dobrudžan marmoria ja kiveä. Tontilla oli aiemmin luostari ja sen majatalo, ja luostarin 1500-luvulla rakennettu kirkko purettiin vuonna 1875. Pankki omistaa talon yhä, eikä se ole säännöllisesti yleisölle avoinna."
+  },
+  {
+   "id": "Q3119683",
+   "nimi": "Stavropoleoksen kirkko",
+   "kuvaus": "Vanhan keskustan luostarikirkko",
+   "luokka": "kirkko",
+   "koko_m": 40,
+   "teksti": "Stavropoleoksen kirkko on vanhan keskustan pieni luostarikirkko, jonka veistetyt kivipylväät ja koristeelliset kaaret erottuvat kapeiden katujen välistä. Kreikkalainen munkki Ioannikios rakennutti sen vuonna 1724 majatalonsa yhteyteen, ja majatalon tulot elättivät luostaria. Kun hänestä tuli Stavropoliksen metropoliitta, luostari sai nimensä hänen istuimestaan. Majatalo purettiin 1800-luvun lopulla, ja vuonna 1899 arkkitehti Ion Mincu rakensi kirkon viereen pylväikköpihan, jonne on koottu hautakiviä ja purettujen kirkkojen kiviosia. Nykyään luostarissa asuu pieni nunnayhteisö.",
+   "lyhyt": "Stavropoleoksen kirkon kirjastossa on Romanian suurin bysanttilaisen kirkkomusiikin kirjakokoelma, ja siellä säilytetään harvinaisia käsikirjoituksia ja vanhoja painotuotteita. Luostarin bysanttilainen kuoro perustettiin vuonna 1994, ja nunnat entisöivät vanhoja kirjoja, ikoneita ja liturgisia asuja sekä maalaavat ikoneita lasille.",
+   "syventava": "Miksi munkki rakensi kirkon majatalon viereen?",
+   "kysymykset": [
+    "Miksi munkki piti majataloa?",
+    "Mitä nimi Stavropoleos tarkoittaa?",
+    "Kuka oli arkkitehti Ion Mincu?",
+    "Mistä pihan hautakivet ovat peräisin?",
+    "Voiko kuoron laulua kuulla jumalanpalveluksessa?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Kirkon rakennutti 1724 kreikkalainen arkkimandriitta Ioannikios Stratonikeas majatalonsa yhteyteen; majatalo elätti luostaria.",
+     "url": "https://en.wikipedia.org/wiki/Stavropoleos_Monastery"
+    },
+    {
+     "vaite": "Vuonna 1726 Ioannikios valittiin Stavropoliksen metropoliitaksi, ja luostari sai nimensä istuimesta.",
+     "url": "https://en.wikipedia.org/wiki/Stavropoleos_Monastery"
+    },
+    {
+     "vaite": "Majatalo ja luostarin sivurakennukset purettiin 1800-luvun lopulla.",
+     "url": "https://en.wikipedia.org/wiki/Stavropoleos_Monastery"
+    },
+    {
+     "vaite": "Ion Mincu rakensi pylväikköpihan 1899; pihalla on hautakiviä ja purettujen kirkkojen osia.",
+     "url": "https://en.wikipedia.org/wiki/Stavropoleos_Monastery"
+    },
+    {
+     "vaite": "Veistetyt kiviset yksityiskohdat, pylväät ja kaaret, brâncoveanulainen tyyli.",
+     "url": "https://www.radissonhotels.com/es-es/destino/rumania/bucarest/iglesia-de-stavropoleos"
+    },
+    {
+     "vaite": "Luostarissa asuu pieni nunnayhteisö; Romanian suurin bysanttilaisen musiikin kirjakokoelma; kuoro 1994; nunnat entisöivät kirjoja, ikoneita ja asuja ja maalaavat lasi-ikoneita.",
+     "url": "https://en.wikipedia.org/wiki/Stavropoleos_Monastery"
+    },
+    {
+     "vaite": "Luostarin kirjasto säilyttää harvinaisia käsikirjoituksia ja painotuotteita, ja siinä on Romanian suurin bysanttilaisen musiikin kirjakokoelma.",
+     "url": "https://en.wikipedia.org/wiki/Stavropoleos_Monastery"
+    }
+   ]
+  },
+  {
+   "id": "Q1855757",
+   "nimi": "Vanha ruhtinaanhovi",
+   "kuvaus": "Ruhtinaiden palatsin rauniot",
+   "luokka": "muu",
+   "koko_m": 100,
+   "teksti": "Vanha ruhtinaanhovi on vanhan keskustan raunioalue, jonka tiilimuurien jäänteet ja pylväiden tyvet ovat taivasalla. Valakian ruhtinas Vlad kolmas, joka tunnetaan myös nimellä Vlad Seivästäjä, rakennutti tänne asuinpalatsin, ja hänen kansliassaan laadittiin syyskuussa 1459 vanhin tunnettu asiakirja, jossa Bukarestin nimi mainitaan. Raunioiden vieressä seisoo vuonna 1559 rakennettu hovin kirkko, yksi kaupungin vanhimmista. Palatsin ympärille kasvoi kauppiaiden ja käsityöläisten kortteli, josta tuli Bukarestin kaupallinen sydän. Arkeologiset kaivaukset alkoivat vuonna 1953, ja nykyään aluetta hoitaa Bukarestin kaupunginmuseo.",
+   "lyhyt": null,
+   "syventava": "Kuka oli Vlad Seivästäjä?",
+   "kysymykset": [
+    "Oliko Vlad Seivästäjä oikeasti Dracula?",
+    "Miksi ruhtinaat muuttivat pois hovista?",
+    "Mitä raunioista on kaivettu esiin?",
+    "Miksi Lipscanin katu on nimetty Leipzigin mukaan?",
+    "Kuka rakennutti hovin kirkon?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Hovi rakennettiin Vlad III:n aikana; asiakirja 20.9.1459 on vanhin Bukarestin nimen mainitseva.",
+     "url": "https://en.wikipedia.org/wiki/Curtea_Veche"
+    },
+    {
+     "vaite": "Paikka on raunioalue, jolla näkyy pylväitä ja vanhoja hautakiviä taivasalla.",
+     "url": "https://en.wikipedia.org/wiki/Curtea_Veche"
+    },
+    {
+     "vaite": "Hovin kirkon rakennutti Mircea Paimen 1559; yksi kaupungin vanhimmista kirkoista.",
+     "url": "https://en.wikipedia.org/wiki/Curtea_Veche"
+    },
+    {
+     "vaite": "Palatsista tuli Bukarestin talouden keskus, jota ympäröivät kauppiaiden ja käsityöläisten talot.",
+     "url": "https://en.wikipedia.org/wiki/Curtea_Veche"
+    },
+    {
+     "vaite": "Kaivaukset alkoivat 1953; aluetta hoitaa Bukarestin kaupunginmuseo.",
+     "url": "https://en.wikipedia.org/wiki/Curtea_Veche"
+    }
+   ]
+  },
+  {
+   "id": "Q2074133",
+   "nimi": "Herăstrău-puisto",
+   "kuvaus": "Järvipuisto kaupungin pohjoisosassa",
+   "luokka": "puisto",
+   "koko_m": 1600,
+   "teksti": "Kuningas Mikael ensimmäisen puisto, jota kutsutaan yhä yleisesti Herăstrău-puistoksi, on sadankahdeksankymmenenseitsemän hehtaarin laajuinen, ja ylhäältä sen keskellä kimaltaa Herăstrău-järvi. Paikalla oli soita, jotka kuivattiin 1930-luvun alussa, ja puisto avattiin vuonna 1936. Toisen maailmansodan jälkeen puisto nimettiin Stalinin mukaan, ja sen sisäänkäynnille pystytettiin Stalinin patsas; vuonna 1956 patsas kaadettiin ja puisto nimettiin järven mukaan. Joulukuussa 2017 se sai nykyisen nimensä Romanian viimeisen kuninkaan, Mikael ensimmäisen, kuoltua. Järvellä soudetaan ja purjehditaan, ja puistossa on Ruusujen saari ja japanilainen puutarha.",
+   "lyhyt": null,
+   "syventava": "Kuka oli kuningas Mikael ensimmäinen?",
+   "kysymykset": [
+    "Kuka oli kuningas Mikael ensimmäinen?",
+    "Miksi Stalinin patsas kaadettiin?",
+    "Mistä järven vesi tulee?",
+    "Voiko järvellä soutaa?",
+    "Mikä on Ruusujen saari?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Puisto ympäröi Herăstrău-järveä ja on 187 hehtaarin laajuinen.",
+     "url": "https://en.wikipedia.org/wiki/King_Michael_I_Park"
+    },
+    {
+     "vaite": "Suot kuivattiin 1930–1935 ja puisto avattiin 1936.",
+     "url": "https://en.wikipedia.org/wiki/King_Michael_I_Park"
+    },
+    {
+     "vaite": "Sodan jälkeen puisto nimettiin I. V. Stalinin puistoksi ja sisäänkäynnille pystytettiin Stalinin patsas; 1956 patsas kaadettiin ja nimi muutettiin Herăstrăuksi.",
+     "url": "https://en.wikipedia.org/wiki/King_Michael_I_Park"
+    },
+    {
+     "vaite": "19.12.2017 puisto nimettiin kuningas Mikael I:n mukaan hänen kuoltuaan 5.12.2017.",
+     "url": "https://en.wikipedia.org/wiki/King_Michael_I_Park"
+    },
+    {
+     "vaite": "Mikael I oli Romanian viimeinen kuningas.",
+     "url": "https://en.wikipedia.org/wiki/Michael_I_of_Romania"
+    },
+    {
+     "vaite": "Järvellä soudetaan ja purjehditaan; puistossa Ruusujen saari ja japanilainen puutarha.",
+     "url": "https://rri.ro/en/features-and-reports/rri-encyclopaedia/herastrau-park-in-bucharest-id168561.html"
+    }
+   ]
+  },
+  {
+   "id": "Q1850614",
+   "nimi": "Yliopiston aukio",
+   "kuvaus": "Mielenosoitusten aukio keskustassa",
+   "luokka": "aukio",
+   "koko_m": 250,
+   "teksti": "Yliopiston aukio on keskustan vilkas risteys, jonka keskellä seisoo rivi kivisiä ristejä joulukuun 1989 vallankumouksessa kuolleiden muistoksi. Yliopiston edessä on neljä patsasta, joista vanhin, Mikael Urhoollisen patsas, pystytettiin vuonna 1874. Keväällä 1990 mielenosoittajat valtasivat aukion viikkojen ajaksi uutta hallitusta vastaan. Kesäkuussa presidentti Ion Iliescu kutsui Jiun laakson kaivosmiehet tyhjentämään sen, ja nämä hakkasivat mielenosoittajia ja runtelivat yliopiston tiloja. Aukiota kutsutaan kaupungin nollakilometriksi, ja yhä se on mielenosoitusten kokoontumispaikka.",
+   "lyhyt": null,
+   "syventava": "Miksi kaivosmiehet tulivat Bukarestiin?",
+   "kysymykset": [
+    "Miksi kaivosmiehet tulivat Bukarestiin?",
+    "Kuka oli Mikael Urhoollinen?",
+    "Mitä aukion ympärillä on nykyään?",
+    "Kenen muistoksi ristit on pystytetty?",
+    "Miksi aukiota sanotaan nollakilometriksi?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Aukion keskellä on kivisiä ristejä joulukuussa 1989 kuolleiden muistoksi.",
+     "url": "https://unknownbucharest.com/bucharest-communist-tour/revolution-memorial-university-square-downtown-bucharest/"
+    },
+    {
+     "vaite": "Yliopiston edessä neljä patsasta: Heliade Rădulescu 1879, Mikael Urhoollinen 1874, Lazăr 1889, Haret 1932.",
+     "url": "https://en.wikipedia.org/wiki/University_Square,_Bucharest"
+    },
+    {
+     "vaite": "Mielenosoitukset alkoivat 22.4.1990; 13.–15.6.1990 Iliescu kehotti Jiun laakson kaivosmiehiä tyhjentämään aukion, ja he hakkasivat mielenosoittajia ja tuhosivat yliopistoa.",
+     "url": "https://en.wikipedia.org/wiki/June_1990_Mineriad"
+    },
+    {
+     "vaite": "Aukiota on kutsuttu Bukarestin nollakilometriksi; ihmiset kokoontuivat sinne mielenosoituksiin taas 2012.",
+     "url": "https://ro.tranzit.org/en/exhibition/0/2012-11-30/tranzitro-bucuresti---km-0-representations-and-repetitions-of-university-square"
+    }
+   ]
+  },
+  {
+   "id": "Q2933758",
+   "nimi": "Calea Victoriei",
+   "kuvaus": "Bukarestin historiallinen pääkatu",
+   "luokka": "katu",
+   "koko_m": 2700,
+   "teksti": "Voitonkatu, Calea Victoriei, kulkee vajaat kolme kilometriä etelästä Dâmbovița-joen rannasta pohjoiseen Voiton aukiolle. Ruhtinas Constantin Brâncoveanu päällysti sen vuonna 1692 kahdeksan metrin mittaisilla tammirungoilla, ja katu sai nimen Mogoșoaian puusilta, koska se johti hänen Mogoșoaian palatsiinsa. Nykyisen nimensä katu sai vuonna 1878, kun itsenäisyyssodan voittanut armeija marssi kaupunkiin. Nykyään kadun varrella ovat muun muassa Kretzulescun kirkko, kansallinen sotilaskerho, säästöpankin palatsi, Cantacuzinon palatsi ja Romanian kansallinen historiamuseo.",
+   "lyhyt": null,
+   "syventava": "Miksi katua sanottiin puusillaksi?",
+   "kysymykset": [
+    "Miksi katu päällystettiin puulla?",
+    "Mitä palatseja kadun varrella on?",
+    "Missä vanha kansallisteatteri oli?",
+    "Miksi Bukarestia sanottiin Pieneksi Pariisiksi?",
+    "Mitä Cantacuzinon palatsissa on nykyään?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Katu on 2,7 kilometriä pitkä ja kulkee Splaiul Independențeistä Dâmbovițan rannasta Piața Victorieille.",
+     "url": "https://en.wikipedia.org/wiki/Calea_Victoriei"
+    },
+    {
+     "vaite": "Constantin Brâncoveanu yhdisti 1692 vanhat tiet Mogoșoaian puusillaksi; päällysteenä kahdeksan metriä pitkät tammirungot; katu johti Mogoșoaian palatsiin.",
+     "url": "https://en.wikipedia.org/wiki/Calea_Victoriei"
+    },
+    {
+     "vaite": "Nimi Calea Victoriei annettiin 1878 itsenäisyyssodan voittaneiden joukkojen tultua kaupunkiin.",
+     "url": "https://en.wikipedia.org/wiki/Calea_Victoriei"
+    },
+    {
+     "vaite": "Kadun varrella ovat muun muassa kansallinen historiamuseo, Kretzulescun kirkko, kansallinen sotilaskerho, CEC-palatsi ja Cantacuzinon palatsi.",
+     "url": "https://skia.one.ro/en/blog/calea-victoriei-past-and-present/"
+    },
+    {
+     "vaite": "Vanha kansallisteatteri oli Podul Mogoșoaiein eli nykyisen Calea Victoriein varrella (kysymyksen oletus).",
+     "url": "https://en.wikipedia.org/wiki/National_Theatre_Bucharest"
+    }
+   ]
+  },
+  {
+   "id": "Q1956214",
+   "nimi": "Kansallinen kylämuseo",
+   "kuvaus": "Ulkomuseo Herăstrău-järven rannalla",
+   "luokka": "muu",
+   "koko_m": 400,
+   "teksti": "Kansallinen kylämuseo levittäytyy Herăstrău-järven rannalle, ja ylhäältä puiden lomasta erottuu talonpoikaistalojen, latojen, myllyjen ja kirkkojen kattoja. Sosiologi Dimitrie Gusti perusti ulkomuseon, ja kuningas Kaarle toinen oli läsnä sen avajaisissa toukokuussa 1936. Rakennukset purettiin kotikylissään ja koottiin täällä uudelleen, ja työhön tuotiin talonpoikaiskäsityöläisiä samoista kylistä. Avajaisissa esillä oli kolmekymmentä taloa, ja nykyään rakennuksia on satoja. Museoalue on nykyään neljäntoista hehtaarin kokoinen, ja sen arvokkaimpia kohteita on Maramureșista tuotu puukirkko vuodelta 1722.",
+   "lyhyt": null,
+   "syventava": "Miten talot siirrettiin kylistä Bukarestiin?",
+   "kysymykset": [
+    "Miten talot siirrettiin kylistä tänne?",
+    "Kuka oli sosiologi Dimitrie Gusti?",
+    "Mikä on museon vanhin rakennus?",
+    "Millaisia käsitöitä museossa näkee?",
+    "Miksi Maramureșin kirkot ovat puuta?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Dimitrie Gusti perusti museon 1936; kuningas Kaarle II oli läsnä avajaisissa 10.5.1936.",
+     "url": "https://en.wikipedia.org/wiki/Dimitrie_Gusti_National_Village_Museum"
+    },
+    {
+     "vaite": "Museossa on talonpoikaistaloja, latoja, kirkkoja, verstaita ja myllyjä, jotka purettiin ja koottiin uudelleen; rakennuksia on satoja.",
+     "url": "https://www.erih.net/i-want-to-go-there/dimitrie-gusti-national-village-museum"
+    },
+    {
+     "vaite": "Avajaisissa esillä oli 30 taloa; kokoamisessa käytettiin käsityöläisiä talojen kotikylistä; museo on Herăstrău-järven rannalla.",
+     "url": "https://rri.ro/en/features-and-reports/rri-encyclopaedia/the-village-museum-id165008.html"
+    },
+    {
+     "vaite": "Museon arvokkaimpia kohteita on Maramureșin Dragomireștista tuotu puukirkko vuodelta 1722.",
+     "url": "https://ghidulmuzeelor.cimec.ro/idEN.asp?k=48"
+    },
+    {
+     "vaite": "Museo on nykyään 14 hehtaarin kokoinen.",
+     "url": "https://www.erih.net/i-want-to-go-there/dimitrie-gusti-national-village-museum"
+    }
+   ]
+  },
+  {
+   "id": "Q959632",
+   "nimi": "Cișmigiun puutarha",
+   "kuvaus": "Bukarestin vanhin julkinen puisto",
+   "luokka": "puisto",
+   "koko_m": 500,
+   "teksti": "Bukarestin vanhin julkinen puisto, Cișmigiun puutarha, on keskustan vihreä keidas, jonka halki kiemurtelee pitkä ja kapea järvi. Paikalla oli 1600-luvulla kalalampi ja myöhemmin viinitarha lähteen ympärillä. Saksalainen puutarhuri Carl Meyer suunnitteli puiston, ja se avattiin vuonna 1847; Meyer kuoli lavantautiin vain viisi vuotta myöhemmin. Kesällä järvellä soudetaan, ja talvella se muuttuu luistinradaksi. Kirjailijoiden rotundassa on kaksitoista romanialaisen kirjailijan rintakuvaa, muun muassa Mihai Eminescun ja Ion Luca Caragialen.",
+   "lyhyt": null,
+   "syventava": "Kuka oli runoilija Mihai Eminescu?",
+   "kysymykset": [
+    "Kuka oli runoilija Mihai Eminescu?",
+    "Mistä nimi Cișmigiu tulee?",
+    "Voiko järvellä luistella talvella?",
+    "Kuka oli puutarhuri Carl Meyer?",
+    "Mitä puistossa tehdään kesällä?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Bukarestin vanhin julkinen puutarha, perustettu 1847; suunnittelijat Carl Meyer ja muut; Meyer kuoli lavantautiin 1852.",
+     "url": "https://en.wikipedia.org/wiki/Ci%C8%99migiu_Gardens"
+    },
+    {
+     "vaite": "Paikalla oli 1600-luvulla kalastuslampi, myöhemmin viinitarha lähteen ympärillä.",
+     "url": "https://en.wikipedia.org/wiki/Ci%C8%99migiu_Gardens"
+    },
+    {
+     "vaite": "Järvi on noin 1,3 kilometriä pitkä ja 50 metriä leveä; talvella luistinrata, kesällä soutuveneitä.",
+     "url": "https://en.wikipedia.org/wiki/Ci%C8%99migiu_Gardens"
+    },
+    {
+     "vaite": "Kirjailijoiden rotundassa on kahdentoista romanialaisen kirjailijan rintakuvat, muun muassa Eminescu ja Caragiale.",
+     "url": "https://en.wikipedia.org/wiki/Ci%C8%99migiu_Gardens"
+    }
+   ]
+  }
+ ]
+}
