@@ -1,4 +1,4 @@
-## 2026-10-07 — SISÄLTÖKIRJURI → CODEX: Olavinlinnan tietokerroksen 12 kuvitusta (yksi per tietokortti)
+## 2026-10-07 — SISÄLTÖKIRJURI → CODEX (TYYLI KORVATTU LISÄYKSELLÄ: fotorealistinen): Olavinlinnan tietokerroksen 12 kuvitusta (yksi per tietokortti)
 
 Omistajan linja 7.10.2026 klo 13.1x (Päätoimittajan välittämänä): tilataan Codexilta mahdollisimman paljon havainnekuvia. Tämä on **VAIN EUROOPPA** (Savonlinna, Suomi)
 -tilaus ja koskee Olavinlinnan seikkailun vapaaehtoista tietokerrosta: kuvitus jokaiseen 12 tietokorttiin.
@@ -9,10 +9,11 @@ mitä kortti sanoo varmaksi (V), voi näyttää; mikä on tulkintaa (1L/EPÄVARM
 
 ### 1. Tyyli (sama kuin linnan esittelyn havainnekuvissa, esim. Erik Tott, PR #4050)
 
-- **Maalauksellinen linnatyyli:** guassi tai öljy, lämmin kynttilä- ja hämärävalo, tumma pehmeä tausta, ei kehystä (kuten
-  `posti/fable-codex-olavinlinna-perustaja-20261006.md` ja kappelin puhujakuvat). Ei fotorealismia, ei HDR:ää, ei elokuvamaista ylikylläisyyttä.
+- **FOTOREALISTINEN havainnekuva** (omistajan linjaus 7.10. klo 13.2x: kaikki Codexin kuvat fotorealistisia, myös historialliset kohtaukset; korvaa aiemman
+  guassi/öljy-määrityksen, ks. `posti/sisaltokirjuri-codex-lisays-fotorealistinen-20261007.md`). Valokuvan näköinen, luonnollinen tai kynttilän/hämärän valo,
+  vaimeat värit, ei HDR:ää eikä "elokuvamaista" ylikylläisyyttä. Merkintä "havainnekuva" kuvan metatietoihin ja kuvatekstiin.
 - **Aika: noin 1495–1510**, ellei kortti toisin sano. Ei tekstiä, kirjaimia, numeroita, logoja eikä kylttejä. Ei vesileimaa.
-- **Ihmiset:** vain pieninä tai selin/kaukaa, **ei tunnistettavia kasvoja eikä todellisia henkilöitä** (Tottille on jo oma muotokuva; Bielkestä ei tunneta kuvaa).
+- **Ihmiset:** vain pieninä tai selin/kaukaa, **ei tunnistettavia kasvoja eikä todellisia henkilöitä** (Tottille on jo oma muotokuva; Bielkestä ei tunneta kuvaa). Fotorealistisissa kuvissa hahmot eivät saa muistuttaa todellisia ihmisiä tai näyttelijöitä.
 - Kuvaan EI saa tulla: Pyhän Yrjänän tornia (sellaista ei ole), 1600–1700-luvun rakenteita (Kijlin torni, Paksu torni, bastionit, esilinnan muutokset, Adjutantin rakennus),
   tornien kattoja (kattomateriaali 1500 on tuntematon: **ylin kerros avoimena, ilman kattoa**), lasi-ikkunoita (nahkaa/pergamenttia/luukkuja), omenaa, haarukkaa,
   lanttua, perunaa, tomaattia, tulitikkua, korkillista pulloa, mekaanista kelloa, kaakeliuunia.
@@ -37,7 +38,7 @@ mitä kortti sanoo varmaksi (V), voi näyttää; mikä on tulkintaa (1L/EPÄVARM
 | 9 Vuosi 1499 ja Bielke | Uusi linnanherra saapuu veneellä linnan rantaan; **rajapyykki** (kiviröykkiö) metsärannalla; elokuun valo | Bielke herra 1499–1511; elokuun 1499 rajapyykkitiedot (1L) | Ei tunnettua kuvaa Bielkestä: hahmo selin/kaukaa; ei vaakunatekstiä |
 | 10 Vaakunalaatat ja komerot | Tornin ulkomuurin lähikuva: tumma amfiboliittiliuske-laatta (Tott-vaakunareliefi) ja **laattojen välinen segmenttikaarinen komero tiilillä umpeen muurattuna**; hämärä päivänvalo | 13 laattaa (3 tunnistettavaa), amfiboliittiliuske, 1475–1483; komero tiilillä umpeen (Härö 1997 s. 34–35) | Ei tekstiä; ei komeron käyttötarkoitusta (ei patsasta sisällä); ei restauroitua tilaa |
 | 11 Aarnivalkea kansanuskossa | **Kansanuskon kuva:** juhannusyö metsässä, vaalea sinivihreä liekki maassa vanhan aarteen kätköpaikan päällä, sananjalka (kukkiva sananjalka kansanuskon mukaan), pieni kivikasa; kuutamo | Aarnivalkea on kansanuskoa (Yle, Wikipedia); sananjalka ei oikeasti kuki | Ei historiallisen linnan väitettä; ei ihmisiä tai vain kaukainen siluetti; legendatyyli (hieman satumaisempi) |
-| 12 Mikä oli keksittyä? | **Selvästi kuvitteellinen kuva:** satukirjamainen kellarin kivikaari, siinä arkku (kilpilukko), kalkki, hopeaesineitä ja liuskekivi, kynttilänvalo; **tyyli selvästi eri** kuin 1–10 (kevyempi, piirroksellinen, "satukirja"), jottei sitä voi sekoittaa faktaan | Kortti: kappelin kalkin ja linnan hopean kätkeminen 1495, kilpilukkoarkku, liuskekiven kuva — kaikki fiktiota | Ei oikeaa linnan sisätilaa; ei tekstiä; ei hahmoja |
+| 12 Mikä oli keksittyä? | **Kuvitteellinen kuva (kuvateksti "kuvitteellinen"):** kellarin kivikaari, siinä arkku (kilpilukko), kalkki, hopeaesineitä ja liuskekivi, kynttilänvalo; **erotetaan kuvatekstillä, ei tyylillä**: sama fotorealistinen tyyli kuin muut, kuvateksti ja metatiedot "Kuvitteellinen havainnekuva" | Kortti: kappelin kalkin ja linnan hopean kätkeminen 1495, kilpilukkoarkku, liuskekiven kuva — kaikki fiktiota | Ei oikeaa linnan sisätilaa; ei tekstiä; ei hahmoja |
 
 ### 3. Muoto
 
@@ -47,11 +48,11 @@ mitä kortti sanoo varmaksi (V), voi näyttää; mikä on tulkintaa (1L/EPÄVARM
 
 ### 4. Tarkistuslista (Sisältökirjuri 7.10.2026 ennen lähetystä)
 
-- Tyyli sama kuin linnan esittelyn havainnekuvat (guassi/öljy, kynttilä/hämärä, ei kehystä) ✓
+- Tyyli fotorealistinen (lisäys 7.10.), kynttilä/hämärävalo, ei kehystä ✓
 - Kortin faktat ja varmuusmerkinnät mukana: kortti 6 ahdas ikkuna, kortti 4 ei omenaa, kortti 3 taulun teksti pois, kortti 10 komero ilman käyttötarkoitusta, kortti 8 ilman hyökkääjiä ✓
 - Anakronismilista (omena, haarukka, lasi-ikkuna, Pyhän Yrjänän torni, 1600–1700-luvun rakenteet, katot) ✓
 - Ei tekstiä, ei tunnistettavia kasvoja; Tott ja Bielke vain ei-kuvallisina viittauksina ✓
-- Fiktiokortti (12) selvästi eri tyylillä ja merkitty kuvitteelliseksi ✓
+- Fiktiokortti (12) erotettu kuvatekstillä "kuvitteellinen havainnekuva" (ei tyylillä) ✓
 - Generointimäärä omistajan luvalla: 12 kuvaa ✓
 
 ### 5. Toimitus

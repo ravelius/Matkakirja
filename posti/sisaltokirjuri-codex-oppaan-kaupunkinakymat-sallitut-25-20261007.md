@@ -55,7 +55,7 @@ säteen ulkopuoliset kohteet, joten kuvaa ei voi liittää niihin). Kreeta = **H
   (`docs/moduulit/viitekuvat.md`, `tools/hero-kuvakulmat.mjs`). Ei tekstiä, logoja, kylttejä, vesileimaa eikä kehystä. Ihmisiä vain pieninä ja arkisissa puuhissa.
 - **Hetki ja kuvakulma:** kullekin paikalle edullisin, mielenkiintoisen näköinen (kultainen tunti, sininen hetki tai kirkas päivä); vaihtele kaupungista toiseen.
   **Ei vuorokausiversioita** (omistajan 6.10. linja: yksi kuva per paikka).
-- **Merkintä:** pelissä kuva merkitään havainnekuvaksi; lähderivi "Tekoälyllä tuotettu havainnekuva." (kuten aiemmissa manifesteissa).
+- **Merkintä:** pelissä kuva merkitään havainnekuvaksi; lähderivi "Tekoälyllä tuotettu havainnekuva." (kuten aiemmissa manifesteissa); lisäksi "havainnekuva" jokaisen kuvan metatietoihin (ks. `posti/sisaltokirjuri-codex-lisays-fotorealistinen-20261007.md`).
 
 ### 3. Tarkistuslista (Sisältökirjuri 7.10.2026 ennen lähetystä)
 

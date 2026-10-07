@@ -1,4 +1,4 @@
-## 2026-10-07 — SISÄLTÖKIRJURI → CODEX: Havainnekuva "kuumailmapallo taivaalla" (kuumailmapallo-linssin latauskuva)
+## 2026-10-07 — SISÄLTÖKIRJURI → CODEX (TYYLI KORVATTU LISÄYKSELLÄ: fotorealistinen): Havainnekuva "kuumailmapallo taivaalla" (kuumailmapallo-linssin latauskuva)
 
 Omistajan tilaus (Päätoimittajan välittämänä 7.10.2026 klo 12.5x): kuumailmapallo-linssin latauskuva, joka näkyy, kun kaupunki
 latautuu. Yksi aihe, kolme rajausta. Kuva merkitään pelissä havainnekuvaksi (kuten muutkin generoidut havainnekuvat).
@@ -16,14 +16,15 @@ vaakarengas kuoren päällä, kantorengas, pieni kulta/ruskea kori ja ohut ankku
 - Commons, PD: `Victoria Cinq semaines en ballon.PNG` (Riou ja de Montaut; 494 × 758 px) ja `Cinq Semaines en ballon 021.png`
   (Riou/Hetzel 1863; 990 × 1488 px) — vain yleismuodon esikuvaksi, ei jäljennettäväksi.
 
-### 2. Tyyli (pelin vanha estetiikka, kartta nykyajassa)
+### 2. Tyyli (FOTOREALISTINEN havainnekuva; kartta nykyajassa; ks. lisäys 7.10.)
 
-- **Vanha estetiikka:** hillitty akvarelli- tai kirjakuvituksen henki, hieman paperimainen pinta; ei fotorealismia, ei HDR:ää, ei
-  "elokuvamaista" ylikylläistä valoa (kuten miniatyyrien ja havainnekuvien tyylisäännöt). Ei kirkkaita, räikeitä värejä.
+- **FOTOREALISTINEN havainnekuva** (omistajan linjaus 7.10. klo 13.2x: kaikki Codexin kuvat fotorealistisia; korvaa aiemman akvarelli/kirjakuvitus-määrityksen,
+  ks. `posti/sisaltokirjuri-codex-lisays-fotorealistinen-20261007.md`). Valokuvan näköinen, luonnollinen valo, vaimeat värit, ei HDR:ää eikä ylikylläistä
+  "elokuvamaista" valoa. Merkintä "havainnekuva" kuvan metatietoihin ja kuvatekstiin.
 - **Nykyaika sallittu:** taustan kaupunki on nykykaupunki hennolla siluetilla (kupoleita, kirkontorneja, muutama moderni torni).
   Ei tunnistettavia nimikohteita, ei kylttejä. Kaupunki on kaukana ja sumuinen, pallo pääosassa.
 - **Paletti (pelin Tyylikirja):** kuori mark `#b03a2b` ja kerma `#faf4d6`; verkko ja muste `#46331f`; kori kulta `#d9a13b`/
-  `#8a6114`; taivas ja pilvet pergamentti/hiekka (`#efdcb4`, `#dcc08f`) hennolla sinisen hallitulla sävyllä; kuvan alareuna
+  `#8a6114`; taivas ja pilvet luonnollisen vaaleat (ei värikylläinen); kuvan alareuna
   sulaa pelin tummaan taustaan `#1d1610` (panel `#2a1f16`).
 - **Ei tekstiä kuvaan** (ei kirjaimia, numeroita, logoja eikä kylttejä). **Ei ihmisiä** (kori näkyy tyhjänä tai ilman
   tunnistettavia hahmoja). Ei vesileimaa, ei kehystä, ei vinjettiä pyöreänä.
@@ -48,7 +49,7 @@ UI-ehdot tulevat Natiivi-UI:n Latauspalkista (Latauspalkki.cs: ohut palkki tekst
 
 ### 4. Tarkistuslista (Sisältökirjuri 7.10.2026 ennen lähetystä)
 
-- Vain pelin paletti (Tyylikirja kehys/kartta) ja tyylisäännöt (akvarelli, hillitty, ei fotorealismia) ✓
+- Pallon väritys pelin paletista; **fotorealistinen** havainnekuva (lisäys 7.10.), vaimeat värit ✓
 - Ei tekstiä, ei ihmisiä, ei tunnistettavia nimikohteita ✓
 - Latausrivin paikka: alaosan tumma vyöhyke, joka täyttää "ei koristeita, peitto ≤ 45 %" -säännön ✓
 - Kolme rajausta tiedostona; keskiaihe säilyy kaikissa ✓
