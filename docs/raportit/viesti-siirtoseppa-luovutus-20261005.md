@@ -7,6 +7,18 @@ Worktreet: /Users/Shared/Claude/wt/proto-siirtoseppa-*. Käännös vain Julkaisi
 (oma UDID D5900D45 = siirtoseppa-iPad13, TYHJENNETTY 19.0x, appit asennettava uudelleen). Ei detachia simupaneelista.
 Oikeat tapit: lokit/siirtoseppa-alo/.sk (simkosketus, käännä tarvittaessa tyokalut/todistusajo/simkosketus.m).
 
+## TILA 7.10. 08.5x — OMISTAJA: HISTORIAMOOTTORI (seikkailut maan tasalta, VAPAA KÄVELY), SIIRTOSEPPÄ JOHTAA
+
+- Arkkitehtuuri + pystyleikkeen vaiheet V0–V7 + tarpeet LR:ltä: docs/raportit/siirtoseppa-historiamoottori-20261007.md (kohta 11 =
+  vapaa kävely, Päätoimittaja kuittasi). Pystyleike Laituri → Keittiö → Kappeli ~10 min; tarina/arvoitus Päätoimittajalta.
+- **siirtoseppa/historia-h0 a419e639** (wt/proto-siirtoseppa-face, eleet-2:n päällä): H0 rakennus-id → juuri (poikki rakennus <id>,
+  rakennuskohtaiset PlayerPrefs-avaimet) + V0 ymparisto.mallit[] / ymparisto.rantakivet. EI käännetty.
+- LR: vene (agentti), rantakivet v1 valmis (_valmiit/olavinlinna-rantakivet-v1), soutu; vapaan kävelyn muodot sovittu (kavely/<osa>-
+  tormays.glb + -navi.glb, osat.json, piilo/kiipea/esine/ovi/partio-tyhjät, kapseli 1,75/0,3/0,35, budjetti 150 k / 48 Mt per osa).
+- Seuraavaksi: V1 pelaaja + ohjaus (TAPPI / näppäimistö + hiiri / peliohjain) + törmäys ensin nykyisillä tilamesheillä keittiössä.
+- Jonossa Julkaisijalla (~09.40): eleet-2 f73b387a (lepokameran suunta viitteenä) + kello b04e63b3 (KelloTaso 1,0) + venekuvat
+  (ajo-venekuvat.sh P1–P3 päivä/hämärä LR:lle).
+
 ## TILA 7.10. 08.1x
 
 - **eleet-2 = b8de22c2** (käännös 0f84c1b8, lokit/siirtoseppa-eleet2-app): puolilähikuva seuraa puhujan elävää paikkaa/suuntaa,
