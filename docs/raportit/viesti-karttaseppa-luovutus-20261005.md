@@ -10,7 +10,10 @@
   Kun Julkaisija ilmoittaa viennin valmistuneen: viesti LS2:lle, että sarjat ovat ämpärissä.
 - **SEURAAVA TYÖ (PT): admin-1 CYP.** Kyrenia omaksi alueekseen, pohjoiset osat Famagustan ja Nikosian alueisiin, Kyrenian sisältö Sisältökirjurille.
   MAR ja SOM myöhemmin (VAIN EUROOPPA). Tarkista lisäksi, että maahaku käyttää admin-0:aa (worldview) eikä maakuntadata ohita sitä.
-  **LÄHDEONGELMA (13.0x, kysytty PT:ltä):** NE admin-1:ssä Pohjois-Kypros on yksi alue ilman piirikuntia. geoBoundaries gbOpen (OSM) on ODbL, gbAuthoritative on UN SALB.
+  **PT 13.1x:** ensin C = Kyproksen avoin data (CC BY 4.0, piirikuntarajat). Jos sitä ei löydy, D = NE:n pohjoinen alue yhtenä CYP-alueena nimellä "Kyproksen pohjoisosa". A (ODbL) ja B (SALB) EIVÄT KÄY.
+  LS2:n natiivivakiot ovat valmiina: proto linssiseppa2/swe-rajat 95cf8eb97. Kun sarjat ovat ämpärissä, viesti LS2:lle; jos LS2 on tauolla, SHA Natiivisepälle junaan 161.
+  Tilanne 13.07: 2026-10-07-swe-korkeus on ämpärissä, swe ja geojsonit eivät vielä.
+  **LÄHDEONGELMA (13.0x):** NE admin-1:ssä Pohjois-Kypros on yksi alue ilman piirikuntia. geoBoundaries gbOpen (OSM) on ODbL, gbAuthoritative on UN SALB.
   Ensin etsitään Kyproksen avoin data (CC BY 4.0, Department of Lands and Surveys); data.gov.cy:n CKAN-API ei vastannut.
   Lähteet: `tools/vienti/maakuntarajat.json.gz` (NE admin-1, CYP 5 aluetta), `tools/tee-maakuntavektorit.mjs`, `tools/krim-ukrainalle.mjs` (admin-1-malli: krimUkrainalleAdmin1).
 - **Talvi2** noin 150/169, kevät rivit 13–17 perässä (irralliset, jatkuvat tauon yli). **Syksyn vienti** Julkaisijalla (51 109 / 57 630 klo 13.0x).
