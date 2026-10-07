@@ -161,6 +161,8 @@ namespace Matkakirja
             if (nappula == null) nappula = FindAnyObjectByType<Nappula>();
         }
 
+        static bool vSyncKirjattu;
+
         void LateUpdate()
         {
             Lampo.Paivita();
@@ -216,7 +218,11 @@ namespace Matkakirja
             // QualitySettings.vSyncCount on 0 (iOS:llä vsync on aina päällä ja targetFrameRate riittää), joten Mac piirsi
             // tahdistamatta. Macilla kuvataajuus tehdään vSyncin jakajalla: näyttö/fps (60 Hz: täysi 1, lepo 30 fps 2).
             int vs = Mathf.Clamp(Mathf.RoundToInt(Naytto / (float)Mathf.Max(1, fps)), 1, 4);
-            if (QualitySettings.vSyncCount != vs) QualitySettings.vSyncCount = vs;
+            if (QualitySettings.vSyncCount != vs)
+            {
+                QualitySettings.vSyncCount = vs;
+                if (!vSyncKirjattu) { vSyncKirjattu = true; Debug.Log($"MATKAKIRJA ruutu: Mac vSync {vs} (näyttö {Naytto} Hz, {fps} fps)"); }
+            }
 #endif
             if (OnDemandRendering.renderFrameInterval != vali) OnDemandRendering.renderFrameInterval = vali;
             if (uusi != Nyt) Nyt = uusi;
