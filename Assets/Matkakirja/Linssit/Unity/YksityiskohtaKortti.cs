@@ -1,7 +1,8 @@
 // OPPAAN YKSITYISKOHTAKUVA 3D-KORTTINA (omistaja 7.10. 10.1x, Päätoimittaja 16.5x, juna 163): kuva noin 40 % ruudusta
 // NOSTOKORTTI-kehyksessä (varjostin Varjostimet/Nostokortti, värit Tyylikirja.Paperi), 3D-tasona hieman keskustaa kohti
-// kääntyneenä; nousee kauempaa näkyviin, pysyy OpasYksityiskohdat.NayttoS ja poistuu kauas ylös. Koko, paikka ja liike
-// KorttiAsettelusta: kortti ei peitä nappeja missään vaiheessa (Napit-laatikot OpasValikolta). Oma
+// kääntyneenä; lentää oikealta sisään, pysyy OpasYksityiskohdat.NayttoS ja poistuu kaukaisuuteen oikeaan yläkulmaan (omistaja
+// 7.10. 10.2x). Koko, lepopaikka ja liike KorttiAsettelusta: levossa kortti ei peitä nappeja (Napit-laatikot OpasValikolta);
+// liikkeen aikana napit piirtyvät kortin päälle (UI Toolkitin ruutupaneelit kamerapinon jälkeen, tarkistus NapitPaalla). Oma
 // URP-overlay-kamera kerroksella 17 kaupunkikameran pinossa (kuten PalloKori). Alakaistassa kuvateksti ja tekijärivi
 // (CC BY / BY-SA vaativat maininnan). Yksi kortti kerrallaan; Piilota() vie kortin heti pois (valikko tai chat aukesi).
 using System.Collections;
@@ -141,6 +142,7 @@ namespace Matkakirja.Linssit
             float w = Screen.width, h = Screen.height;
             float kuvasuhde = kuva.height > 0 ? (float)kuva.width / kuva.height : 1.5f;
             var napit = Napit?.Invoke();
+            NapitPaalla();
             var asettelu = KorttiAsettelu.Laske(w, h, Screen.dpi > 0 ? Screen.dpi / 163f : 2f, kuvasuhde, napit);
             if (!asettelu.Mahtuu)
             {
@@ -176,7 +178,7 @@ namespace Matkakirja.Linssit
             teksti.ForceMeshUpdate();
             Debug.Log($"MATKAKIRJA opas: yksityiskohtakuvan teksti {teksti.textInfo.characterCount} merkkiä, {teksti.textInfo.lineCount} riviä, koko {teksti.fontSize:F0}, jono {teksti.fontSharedMaterial?.renderQueue}/{mat.renderQueue}");
             Debug.Log($"MATKAKIRJA opas: yksityiskohtakuva näkyviin {k.KohdeId} \"{k.Ankkuri}\" ({kuva.width}×{kuva.height}), lepo {asettelu.LepoLaatikko} ({w:0}×{h:0}, {napit?.Count ?? 0} nappia väistetty)");
-            // Sisään: kauempaa ja alempaa nousten, hidastuen; alfa nousee (KorttiAsettelu.Sisaan).
+            // Sisään oikealta kaukaa pienenä, hidastuen; kasvaa lepopaikkaa lähestyessään (KorttiAsettelu.Sisaan).
             for (float t = 0f; t < SisaanS; t += Time.unscaledDeltaTime)
             {
                 if (peittaa != null && peittaa()) { Piilota(); yield break; }
@@ -191,7 +193,7 @@ namespace Matkakirja.Linssit
                 if (peittaa != null && peittaa()) { Piilota(); yield break; }
                 yield return null;
             }
-            // Pois: kiihtyen kauas ja ylös samalla ruutu-x:llä, häivytys viimeisellä kolmanneksella.
+            // Pois: kiihtyen kauas oikeaan yläkulmaan; häivytetty ennen ensimmäistä nappikohtaa (KorttiAsettelu.PoisLoppu).
             for (float t = 0f; t < PoisS; t += Time.unscaledDeltaTime)
             {
                 var (a, alfa) = KorttiAsettelu.Pois(asettelu, t / PoisS);
@@ -199,6 +201,26 @@ namespace Matkakirja.Linssit
                 yield return null;
             }
             Piilota();
+        }
+
+        static bool napitTarkistettu;
+
+        /// <summary>
+        /// Kerran: napit ovat kortin päällä vain, jos jokainen UI-dokumentti piirtää ruutupaneeliin (ei RenderTextureen, joka
+        /// koostettaisiin kamerapinoon). Poikkeus kirjataan lokiin.
+        /// </summary>
+        static void NapitPaalla()
+        {
+            if (napitTarkistettu) return;
+            napitTarkistettu = true;
+            int rt = 0, kaikki = 0;
+            foreach (var d in Object.FindObjectsByType<UnityEngine.UIElements.UIDocument>(FindObjectsSortMode.None))
+            {
+                if (d == null || d.panelSettings == null) continue;
+                kaikki++;
+                if (d.panelSettings.targetTexture != null) rt++;
+            }
+            Debug.Log($"MATKAKIRJA opas: yksityiskohtakortti, napit kortin päällä: {(rt == 0 ? "kyllä" : "EI")} ({kaikki} UI-dokumenttia, {rt} tekstuuriin)");
         }
 
         void Aseta(KorttiAsettelu.Asento a, float yksikko, float alfa)

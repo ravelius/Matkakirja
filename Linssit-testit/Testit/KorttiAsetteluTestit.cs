@@ -4,7 +4,8 @@ using L = Matkakirja.Linssit.Kierros.KorttiAsettelu.Laatikko;
 
 namespace Matkakirja.Linssit.Testit
 {
-    // Yksityiskohtakortin ruutulaatikko ei leikkaa nappeja (Päätoimittaja 7.10. 21.5x). Napit: BUILD 162:n iPad 13 -vaakakuvan
+    // Yksityiskohtakortin ruutulaatikko ei leikkaa nappeja levossa eikä poistuessa näkyvänä (Päätoimittaja 7.10. 21.5x ja 22.0x);
+    // sisääntulossa napit piirtyvät kortin päälle (UI Toolkit kamerapinon jälkeen, ajossa YksityiskohtaKortti.NapitPaalla). Napit: BUILD 162:n iPad 13 -vaakakuvan
     // mukaiset paikat (ylänurkan rivi, tapit ja ohjainrivi, Kysy-rivi, alakulmat), sivuttaiset etäisyydet pisteinä reunasta ja
     // pystysuuntaiset osuuksina korkeudesta, turva-alue mukaan. Ajossa OpasValikko antaa oikeat laatikot.
     public static class KorttiAsetteluTestit
@@ -78,14 +79,23 @@ namespace Matkakirja.Linssit.Testit
                     var t = KorttiAsettelu.Laske(d.W, d.H, d.Pt * 1.35f, s, napit);
                     if (!t.Mahtuu) { System.Console.WriteLine($"  ei paikkaa: {d.Nimi} suhde {s}"); continue; }
                     mahtuu++;
-                    // Riippumaton tarkistus: koko näkyvä liike 60 näytteellä, ei väliä (vali 0), ruudun sisällä levossa.
+                    // Levossa ei leikkauksia; poistuessa näkyvä kortti (alfa ≥ NakyvaAlfa) ei koske nappeja (60 näytettä);
+                    // sisään oikealta ruudun ulkopuolelta pienenä, pois oikeaan yläkulmaan (omistaja 10.2x).
+                    foreach (var n in napit) Oleta.Tosi(!t.LepoLaatikko.Leikkaa(n), $"{d.Nimi} suhde {s}: lepo {t.LepoLaatikko} leikkaa napin {n}");
                     for (int i = 0; i <= 60; i++)
-                        foreach (var vaihe in new[] { KorttiAsettelu.Sisaan(t, i / 60f), KorttiAsettelu.Pois(t, i / 60f) })
-                        {
-                            if (vaihe.Item2 < KorttiAsettelu.NakyvaAlfa) continue;
-                            var l = KorttiAsettelu.Ruutu(d.W, d.H, t.Lev, t.Kork, vaihe.Item1);
-                            foreach (var n in napit) Oleta.Tosi(!l.Leikkaa(n), $"{d.Nimi} suhde {s}: kortti {l} leikkaa napin {n}");
-                        }
+                    {
+                        var (a, alfa) = KorttiAsettelu.Pois(t, i / 60f);
+                        if (alfa < KorttiAsettelu.NakyvaAlfa) continue;
+                        var l = KorttiAsettelu.Ruutu(d.W, d.H, t.Lev, t.Kork, a);
+                        foreach (var n in napit) Oleta.Tosi(!l.Leikkaa(n), $"{d.Nimi} suhde {s}: poistuva kortti {l} (alfa {alfa:0.00}) leikkaa napin {n}");
+                    }
+                    var alku = KorttiAsettelu.Ruutu(d.W, d.H, t.Lev, t.Kork, KorttiAsettelu.Sisaan(t, 0f).Item1);
+                    Oleta.Tosi(alku.X0 >= d.W, $"{d.Nimi} {s}: sisääntulo alkaa oikealta ruudun ulkopuolelta {alku}");
+                    Oleta.Tosi(alku.Y1 - alku.Y0 <= 0.5f * (t.LepoLaatikko.Y1 - t.LepoLaatikko.Y0), $"{d.Nimi} {s}: alussa pieni");
+                    var puoli = KorttiAsettelu.Ruutu(d.W, d.H, t.Lev, t.Kork, KorttiAsettelu.Sisaan(t, 0.3f).Item1);
+                    Oleta.Tosi(puoli.Y1 - puoli.Y0 < 0.9f * (t.LepoLaatikko.Y1 - t.LepoLaatikko.Y0), $"{d.Nimi} {s}: kasvaa vasta lähestyessään");
+                    var loppu = KorttiAsettelu.Ruutu(d.W, d.H, t.Lev, t.Kork, KorttiAsettelu.Pois(t, 1f).Item1);
+                    Oleta.Tosi(loppu.X0 + loppu.X1 > d.W && loppu.Y0 + loppu.Y1 > d.H, $"{d.Nimi} {s}: poistuu oikeaan yläkulmaan {loppu}");
                     var lepo = t.LepoLaatikko;
                     Oleta.Tosi(lepo.X0 >= 0 && lepo.Y0 >= 0 && lepo.X1 <= d.W && lepo.Y1 <= d.H, $"{d.Nimi} {s}: ruudulla {lepo}");
                     Oleta.Tosi((lepo.X1 - lepo.X0) * (lepo.Y1 - lepo.Y0) <= 0.45f * d.W * d.H, $"{d.Nimi} {s}: peitto ≤ 45 %");

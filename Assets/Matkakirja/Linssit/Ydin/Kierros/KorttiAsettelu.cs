@@ -1,7 +1,10 @@
 // YKSITYISKOHTAKORTIN ASETTELU (Päätoimittaja 7.10. 21.5x, iPad-vaaka BUILD 162: pystykortti peitti oikean nappisarakkeen ja
-// yläkulma ylänapit). Kortin koko, lepopaikka ja sisään-/poistumisliike lasketaan ruutupikseleinä 3D-kallistuksen ja perspektiivin
-// jälkeen: kortin ruutulaatikko ei koko näkyvän liikkeen aikana leikkaa yhtäkään nappia (OpasValikko antaa nappien laatikot) eikä
-// mene ruudun reunan yli. Jos paikkaa ei löydy edes kutistamalla, korttia ei näytetä (Mahtuu = false).
+// yläkulma ylänapit). Kortin koko ja lepopaikka lasketaan ruutupikseleinä 3D-kallistuksen ja perspektiivin jälkeen: levossa kortin
+// ruutulaatikko ei leikkaa yhtäkään nappia (OpasValikko antaa nappien laatikot) eikä mene ruudun reunan yli. Jos paikkaa ei löydy
+// edes kutistamalla, korttia ei näytetä (Mahtuu = false).
+// LIIKE (omistaja 7.10. 10.2x, Päätoimittaja 22.0x): lentää oikealta sisään ja kaukaisuuteen oikeaan yläkulmaan. Liikkeen aikana
+// napit piirtyvät kortin päälle (UI Toolkitin ruutupaneelit kamerapinon jälkeen); kortti tulee kaukaa pienenä ja kasvaa vasta
+// lepopaikkaa lähestyessään, ja poistuessa se on häivytetty ennen kuin sen laatikko ehtii yhdenkään napin kohdalle.
 // Koordinaatit: ruutupikselit, origo vasemmassa alakulmassa. Asento: kortin keskipiste pikseleinä ruudun keskeltä lepoetäisyydellä
 // (Syvyys 1 = lepoetäisyys; syvyydellä k sama pikselisiirtymä näkyy ruudulla 1/k-kokoisena), Kaanto astetta Y:n ympäri
 // (Unityn Quaternion.Euler(0, a, 0): positiivinen kulma tuo oikean reunan lähemmäs katsojaa).
@@ -15,9 +18,11 @@ namespace Matkakirja.Linssit.Kierros
         public const float LeveysOsuus = 0.4f, SisennysOsuus = 0.04f, AlaPt = 44f, FovAste = 40f, KaantoAste = 14f;
         /// <summary>Kortin korkeus enintään tämä osuus ruudun korkeudesta (vaaka / pysty).</summary>
         public const float KorkVaaka = 0.72f, KorkPysty = 0.56f;
-        /// <summary>Sisääntulon alfa nousee tämän osuuden aikana; poistuminen häivyttää viimeisen kolmanneksen.</summary>
-        public const float SisaanHaivytys = 0.6f, PoisHaivytysAlku = 0.66f;
-        /// <summary>Näkyvä vaihe (alfa yli tämän) ei saa leikata nappeja.</summary>
+        /// <summary>Sisääntulon lähtösyvyys (kortti 1/SisaanSyvyys-kokoisena oikealla ruudun ulkopuolella) ja poistumisen loppusyvyys.</summary>
+        public const float SisaanSyvyys = 2.5f, PoisSyvyys = 3f;
+        /// <summary>Poistuminen häivyttää viimeisen kolmanneksen ennen ensimmäistä nappikohtaa (Tulos.PoisLoppu).</summary>
+        public const float PoisHaivytysOsuus = 0.34f;
+        /// <summary>Poistumisen näkyvä vaihe (alfa yli tämän) ei saa leikata nappeja.</summary>
         public const float NakyvaAlfa = 0.15f;
 
         public struct Laatikko
@@ -44,6 +49,8 @@ namespace Matkakirja.Linssit.Kierros
             public float Lev, Kork, Sis, AlaPx;
             public Asento Tulo, Lepo, Lahto;
             public Laatikko LepoLaatikko;
+            /// <summary>Poistumisen vaihe (0..1), jossa kortti on täysin häivytetty: ennen ensimmäistä nappikohtaa, muuten 1.</summary>
+            public float PoisLoppu = 1f;
         }
 
         /// <summary>Kortin ruutulaatikko (kulmat kallistettuina ja perspektiiviprojisoituina).</summary>
@@ -63,18 +70,20 @@ namespace Matkakirja.Linssit.Kierros
             return l;
         }
 
-        /// <summary>Sisääntulon (t 0..1) asento ja alfa; liike hidastuu loppua kohti.</summary>
+        /// <summary>Sisääntulon (t 0..1) asento ja alfa (1): liike hidastuu loppua kohti, syvyys lähestyy lepoa vasta lopussa (kasvaa lähestyessään).</summary>
         public static (Asento, float) Sisaan(Tulos t, float aika01)
         {
             float u = 1f - (float)Math.Pow(1f - Rajaa(aika01), 3);
-            return (Asento.Lerp(t.Tulo, t.Lepo, u), Rajaa(aika01 / SisaanHaivytys));
+            var a = Asento.Lerp(t.Tulo, t.Lepo, u);
+            a.Syvyys = t.Tulo.Syvyys + (t.Lepo.Syvyys - t.Tulo.Syvyys) * u * u;
+            return (a, 1f);
         }
 
-        /// <summary>Poistumisen (t 0..1) asento ja alfa; liike kiihtyy, häivytys viimeisellä kolmanneksella.</summary>
+        /// <summary>Poistumisen (t 0..1) asento ja alfa; liike kiihtyy, häivytys päättyy PoisLoppuun (ennen ensimmäistä nappia).</summary>
         public static (Asento, float) Pois(Tulos t, float aika01)
         {
-            float u = Rajaa(aika01);
-            return (Asento.Lerp(t.Lepo, t.Lahto, u * u), 1f - Rajaa((u - PoisHaivytysAlku) / (1f - PoisHaivytysAlku)));
+            float u = Rajaa(aika01), loppu = t.PoisLoppu, alku = loppu * (1f - PoisHaivytysOsuus);
+            return (Asento.Lerp(t.Lepo, t.Lahto, u * u), 1f - Rajaa((u - alku) / (loppu - alku)));
         }
 
         /// <summary>
@@ -113,32 +122,41 @@ namespace Matkakirja.Linssit.Kierros
                     {
                         Lev = lev, Kork = kork, Sis = SisennysOsuus * lev, AlaPx = alaPx,
                         Lepo = new Asento(cx, cy, 1f, kaanto),
-                        // Sisään: hieman kauempaa, alempaa ja oikealta, kallistus jyrkempänä; pois: kauas ja ylös samalla ruutu-x:llä.
-                        Tulo = new Asento(cx + 0.04f * w, cy - 0.04f * h, 1.3f, kaanto * 2.2f),
-                        Lahto = new Asento(cx, cy + 0.12f * h, 3f, kaanto),
+                        // Sisään oikealta ruudun ulkopuolelta kaukaa (pienenä), kallistus jyrkempänä; pois kauas oikeaan yläkulmaan.
+                        Tulo = new Asento(0.5f * w + 0.7f * lev / SisaanSyvyys + reuna, cy, SisaanSyvyys, kaanto * 2.2f),
+                        Lahto = new Asento(0.3f * w, 0.3f * h, PoisSyvyys, kaanto),
                     };
                     t.LepoLaatikko = Ruutu(w, h, lev, kork, t.Lepo);
-                    if (Vapaa(t, w, h, ruutu, napit, vali)) { t.Mahtuu = true; return t; }
+                    if (Vapaa(t, w, h, ruutu, napit, vali)) { t.Mahtuu = true; t.PoisLoppu = PoisNapille(t, w, h, napit, vali); return t; }
                 }
             }
             return new Tulos { Mahtuu = false, AlaPx = alaPx };
         }
 
-        /// <summary>Koko näkyvä liike (lepo, sisääntulo ja poistuminen 24 näytteellä kumpikin) ruudun sisällä ja irti napeista.</summary>
+        /// <summary>Lepopaikka ruudun sisällä ja irti napeista (väli mukana).</summary>
         public static bool Vapaa(Tulos t, float w, float h, Laatikko ruutu, IList<Laatikko> napit, float vali)
         {
-            for (int vaihe = 0; vaihe < 3; vaihe++)
-                for (int i = 0; i <= (vaihe == 0 ? 0 : 24); i++)
-                {
-                    var (a, alfa) = vaihe == 0 ? (t.Lepo, 1f) : vaihe == 1 ? Sisaan(t, i / 24f) : Pois(t, i / 24f);
-                    if (alfa < NakyvaAlfa) continue;
-                    var l = Ruutu(w, h, t.Lev, t.Kork, a);
-                    if (vaihe == 0 && (l.X0 < ruutu.X0 || l.Y0 < ruutu.Y0 || l.X1 > ruutu.X1 || l.Y1 > ruutu.Y1)) return false;
-                    if (napit != null)
-                        foreach (var n in napit)
-                            if (l.Leikkaa(n.Laajenna(vali))) return false;
-                }
+            var l = Ruutu(w, h, t.Lev, t.Kork, t.Lepo);
+            if (l.X0 < ruutu.X0 || l.Y0 < ruutu.Y0 || l.X1 > ruutu.X1 || l.Y1 > ruutu.Y1) return false;
+            if (napit != null)
+                foreach (var n in napit)
+                    if (l.Leikkaa(n.Laajenna(vali))) return false;
             return true;
+        }
+
+        /// <summary>Poistumisen vaihe juuri ennen kuin kortin laatikko ensi kerran koskee nappia (48 näytettä); vähintään 0,25.</summary>
+        public static float PoisNapille(Tulos t, float w, float h, IList<Laatikko> napit, float vali)
+        {
+            if (napit == null || napit.Count == 0) return 1f;
+            const int N = 48;
+            for (int i = 1; i <= N; i++)
+            {
+                float u = i / (float)N;
+                var l = Ruutu(w, h, t.Lev, t.Kork, Asento.Lerp(t.Lepo, t.Lahto, u * u));
+                foreach (var n in napit)
+                    if (l.Leikkaa(n.Laajenna(vali))) return Math.Max(0.25f, (i - 1) / (float)N);
+            }
+            return 1f;
         }
 
         static float Rajaa(float x) => x < 0f ? 0f : x > 1f ? 1f : x;
