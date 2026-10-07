@@ -1,0 +1,1 @@
+Tervetuloa Kööpenhaminaan. Ylhäältä Tanskan pääkaupunki on matala kattojen ja vihreiden kuparitornien kenttä salmen rannalla, ja satama ja kanavat kiemurtelevat sen läpi. Kierros alkaa keskustan laidalta Tivolista, huvipuistosta, jonka puiden ja paviljonkien lomassa kimmeltää vanhan vallihaudan järvi.
