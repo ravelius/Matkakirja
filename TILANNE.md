@@ -36,6 +36,12 @@ E (KK kuvalisenssit ja osio 4, Sonnet), F (Giza E15, E18, E21, E27, E28, E53–E
 Seuraavaksi: kirjoitusvaihe (osiot tiedostojen loppuun + selvien virheiden korjaus
 `[KORJATTU 7.10.]`), sitten erillinen TARKISTAJA (Sonnet).
 
+**KK-tiedosto VALMIS (commit b3457bb):** `faktapohja-kielletty-kaupunki-1923.md` sai osion
+"Lähdetarkistus 7.10.2026 (sivut avattu)" + 28 tekstikorjausta (`[KORJATTU 7.10.]`).
+E1–E25: vahvistui 11, korjattu 12, jää epävarmaksi 2; osio 4: 21/9/11. Agentti E (kuvat/paikat) ✔.
+**Jäljellä:** Giza-tiedoston osio (odottaa C ja F; D valmis), sitten TARKISTAJA (sonnet) molemmille
+tiedostoille, lopuksi loppuraportti. KK-tiedoston TARKISTAJA-läpikäynti on vielä tekemättä.
+
 **Raporttien tärkeimmät löydökset (jotta ne säilyvät, jos kontti katoaa):**
 - KK/A: Time 9.7.1923 ("CHINA: Fire") ja 23.7.1923 ("Eunuch's Strike") ovat eri artikkelit, molemmat päiväykset oikein;
   "klo 21" ei tuettu (palo syttyi n. 0–1, hälytys 3, sammui 7, 27.6.); "yli 300 huonetta" on populaariluku (aikalaiset 100+/120/127);
