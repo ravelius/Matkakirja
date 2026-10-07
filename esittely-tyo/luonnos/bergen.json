@@ -12,6 +12,13 @@
    "teksti": "Bergenin vanha laituri, Bryggen, näkyy ylhäältä Vågen-lahden itärannalla tiheänä rivinä kapeita, harjakattoisia puutaloja, joiden päädyt kääntyvät satamaan päin. Hansaliitto perusti tänne kontorinsa noin vuonna 1350, ja saksalaiset kauppiaat varastoivat taloissa Pohjois-Norjan kuivattua kalaa ja Euroopasta tuotua viljaa. Laituri on palanut monta kertaa, mutta se on aina rakennettu uudelleen vanhan mallin mukaan. Vuoden 1955 palon jälkeisistä kaivauksista löytyi noin kuusisataaseitsemänkymmentä keskiaikaista riimukirjoitusta, ja yhdessä puupuikossa joku pyytää: rakkaani, suutele minua.",
    "lyhyt": "Bergenin vanhasta laiturista, Bryggenistä, on jäljellä noin kuusikymmentäkaksi rakennusta, ja se on ollut Unescon maailmanperintökohde vuodesta 1979. Hansaliitolla oli ulkomailla neljä kontoria, ja Bryggen on niistä ainoa, joka on säilynyt meidän päiviimme.",
    "syventava": "Mitä riimupuikkoihin kirjoitettiin?",
+   "kysymykset": [
+    "Miksi hansakauppiaiden piti pysyä naimattomina?",
+    "Missä kauppiaat lämmittelivät, kun tuli oli kielletty?",
+    "Miksi Bryggenin puutalot ovat kallistuneet?",
+    "Milloin hansakauppiaat lopulta lähtivät Bergenistä?",
+    "Mitä Bryggenin vanhoissa taloissa on nykyään?"
+   ],
    "isoisa": false,
    "lahteet": [
     {
@@ -53,6 +60,13 @@
    "teksti": "Vågen-lahden suulla, Bergenhusin linnakkeen muurien sisällä, erottuu ylhäältä kaksi harmaata kivirakennusta: harjakattoinen Haakonin sali ja sen vieressä Rosenkrantzin torni. Kuningas Haakon Haakoninpojan 1200-luvun puolivälissä rakennuttama sali on Norjan suurin keskiaikainen maallinen rakennus, mutta 1700-luvulle tultaessa sen tehtävä oli jo unohtunut. Vasta vuonna 1840 osoitettiin, että kyseessä oli kuninkaan juhlasali. Huhtikuussa 1944 satamassa räjähti räjähteitä lastattu laiva, ja tulipalo tuhosi salin puisen katon. Sali korjattiin ja avattiin uudelleen vuonna 1961, tasan seitsemänsataa vuotta ensimmäisen käyttönsä jälkeen.",
    "lyhyt": "Bergenin linnake Bergenhus menetti 1800-luvulla puolustustehtävänsä, mutta siellä on yhä noin sadanviidenkymmenen sotilaan varuskunta. Rosenkrantzin torni sai nykyisen muotonsa 1560-luvulla, kun lääninherra Erik Rosenkrantz korotti sitä kolmella kerroksella.",
    "syventava": "Miksi salin tehtävä unohtui?",
+   "kysymykset": [
+    "Kuka oli kuningas Haakon Haakoninpoika?",
+    "Miksi linnake rakennettiin juuri lahden suulle?",
+    "Ketä Rosenkrantzin tornin tyrmässä pidettiin?",
+    "Miksi satamassa räjähti laiva sodan aikana?",
+    "Mitä Haakonin salissa järjestetään nykyään?"
+   ],
    "isoisa": false,
    "lahteet": [
     {
@@ -94,6 +108,13 @@
    "teksti": "Kaupunkivuori Fløyen nousee suoraan Bergenin keskustan takaa, ja ylhäältä sen rinteellä erottuu köysiradan yläasema noin kolmensadankahdenkymmenen metrin korkeudessa. Vuoren korkein kohta on noin neljäsataa metriä merenpinnan yläpuolella, ja se on yksi niistä seitsemästä vuoresta, jotka kehystävät kaupungin keskustaa. Yläasemalta lähtee merkitty polku peikkometsään, jonka asukkaiden sanotaan muuttuvan auringonvalossa kiveksi. Rinteillä laiduntaa myös pieni kashmirvuohien lauma, jonka tehtävä on raivata vuorelta pensaikkoa, ja eläimet pysyvät alueellaan virtuaalisen aidan avulla.",
    "lyhyt": "Kaupunkivuori Fløyenin ja Bergenin korkeimman vuoren Ulrikenin välillä kulkee Vidden-reitti, noin kolmentoista kilometrin vaellus avoimen ylängön poikki. Reitti kuljetaan yleensä Ulrikenilta Fløyenille, jolloin alas kaupunkiin pääsee lopuksi köysiradalla.",
    "syventava": "Kuka raivaa Fløyenin rinteitä?",
+   "kysymykset": [
+    "Mistä Fløyen on saanut nimensä?",
+    "Kuka istutti metsän vuoren paljaille rinteille?",
+    "Mitä peikoista kerrotaan norjalaisissa tarinoissa?",
+    "Miksi Bergenissä sataa niin paljon?",
+    "Mitä Fløyenilta näkee kirkkaalla säällä?"
+   ],
    "isoisa": false,
    "lahteet": [
     {
@@ -131,6 +152,13 @@
    "teksti": "Köysirata Fløibanen piirtyy ylhäältä kapeana kaistana Bergenin keskustasta talojen ja metsän läpi Fløyenin rinnettä ylös. Rata avattiin tammikuussa 1918, se on kahdeksansataaneljäkymmentäkahdeksan metriä pitkä ja nousee kolmesataakaksi metriä. Radalla kulkee kaksi vaunua, punainen Rødhette eli Punahilkka ja sininen Blåmann, ja kumpaankin mahtuu satakaksikymmentä matkustajaa. Nykyiset vaunut ovat radan viides sukupolvi, ja ne otettiin käyttöön vuonna 2022. Rata on yksi Norjan suosituimmista nähtävyyksistä, ja vuonna 2018 sillä tehtiin yli kaksi miljoonaa matkaa.",
    "lyhyt": "Köysiradan Fløibanen nykyiset vaunut rakennettiin Sveitsissä Gangloffin tehtaalla. Ne suunnitteli erityisesti tätä rataa varten teollinen muotoilija Espen Thorup, ja kumpikin vaunu on maalattu nimensä mukaiseen väriin.",
    "syventava": "Miksi vaunu on nimeltään Punahilkka?",
+   "kysymykset": [
+    "Kenen idea oli rakentaa rata vuorelle?",
+    "Miten kaksi vaunua pitävät toisensa tasapainossa?",
+    "Missä kohdassa vaunut ohittavat toisensa?",
+    "Miksi sininen vaunu on nimeltään Blåmann?",
+    "Millä pysäkeillä vaunu pysähtyy matkalla?"
+   ],
    "isoisa": false,
    "lahteet": [
     {
@@ -160,6 +188,13 @@
    "teksti": "Mariankirkko on Bergenin vanhin yhä pystyssä oleva rakennus, ja ylhäältä sen tunnistaa Bryggenin takaa kahdesta korkeasta, neliskulmaisesta tornista. Romaaninen kivibasilika vaurioitui kaupungin suurpaloissa vuosina 1198 ja 1248, mutta sitä on käytetty kirkkona keskeytyksettä keskiajalta asti. Hansakaudella kirkko oli saksalaisten kauppiaiden kirkko, ja bergeniläiset kutsuvat sitä yhä usein saksalaisten kirkoksi. Kirkon sisällä on 1600-luvulla tehty barokkityylinen saarnatuoli. Kirkkoa kunnostettiin viisi vuotta, ja se avattiin uudelleen vuonna 2015.",
    "lyhyt": "Mariankirkko on Bryggenin alueen vanhin ja korkein rakennus. Kirkkoa alettiin rakentaa 1130- tai 1140-luvulla, ja sen arvellaan valmistuneen noin vuonna 1180. Edellinen suuri kunnostus oli tehty 1860- ja 1870-luvuilla.",
    "syventava": "Miksi kirkkoa kutsutaan saksalaisten kirkoksi?",
+   "kysymykset": [
+    "Mikä kirkossa muuttui uskonpuhdistuksen jälkeen?",
+    "Ketkä lahjoittivat kirkolle saarnatuolin?",
+    "Mitä keskiaikaisessa alttarikaapissa kuvataan?",
+    "Miksi kirkon länsipäässä on kaksi tornia?",
+    "Pidetäänkö kirkossa yhä jumalanpalveluksia?"
+   ],
    "isoisa": false,
    "lahteet": [
     {
@@ -201,6 +236,13 @@
    "teksti": "Bergenin tuomiokirkko erottuu ylhäältä keskustan kortteleista länsipään tornin ansiosta, joka sai nykyisen muotonsa 1600-luvun tulipalojen jälkeen. Kirkon alku on noin vuonna 1150 rakennettu pieni Pyhän Olavin kivikirkko, jonka ympärille fransiskaanit rakensivat luostarinsa 1200-luvulla. Ulkoseinässä on yhä kiinni tykinkuula vuoden 1665 meritaistelusta, jossa Englannin ja Alankomaiden laivastot ottivat yhteen kaupungin satamassa. Isoisäsi näki kuulan vuonna 1873 ja mainitsi oppaalle palvelleensa itse laivastossa, mutta vakuutti, että mukana oli vain lyijykynä.",
    "lyhyt": "Bergenin tuomiokirkko oli vuonna 1814 vaalikirkko, jossa valittiin valitsijamiehet Eidsvollin kansalliskokoukseen, joka kirjoitti Norjan perustuslain. Arkkitehdit Christian Christie ja Peter Andreas Blix palauttivat 1880-luvulla kirkon rokokoosisustuksen keskiaikaiseen asuun.",
    "syventava": "Miksi satamassa taisteltiin vuonna 1665?",
+   "kysymykset": [
+    "Kuka oli Pyhä Olavi, jolle kirkko rakennettiin?",
+    "Mitä fransiskaanien luostarille tapahtui?",
+    "Kuinka monta kertaa kirkko on palanut?",
+    "Miksi tykinkuula jätettiin kirkon seinään?",
+    "Kuka oli Bergenin ensimmäinen luterilainen piispa?"
+   ],
    "isoisa": true,
    "lahteet": [
     {
@@ -238,6 +280,13 @@
    "teksti": "Sauvakirkko kohoaa Bergenin eteläosassa Fantoftin metsän keskellä, ja ylhäältä sen porrastetuilla katoilla erottuvat lohikäärmeenpäät. Alkuperäinen kirkko rakennettiin 1100-luvulla Sognissa sijaitsevaan Fortuniin, ja vuonna 1883 konsuli Fredrik Georg Gade siirrätti sen Fantoftin tilalleen perheensä kappeliksi. Kesäkuussa 1992 kirkko tuhoutui tuhopoltossa, joka aloitti norjalaisen black metal -piirin kirkkopolttojen sarjan. Uusi, alkuperäisen mukaan rakennettu kirkko valmistui vuonna 1997. Vanhasta kirkosta ovat jäljellä vain alttarin risti ja seinään upotettu toivekivi.",
    "lyhyt": "Sauvakirkko Fantoftissa sai lohikäärmeenpäänsä ja veistetyt porttinsa Borgundin sauvakirkon mallista, kun konsuli Gaden puusepät pystyttivät sen uudelleen. Nykyään kirkkoa ympäröi aita, jonka on tarkoitus estää uudet tuhopoltot.",
    "syventava": "Kuka siirsi kirkon Bergeniin?",
+   "kysymykset": [
+    "Miksi sitä kutsutaan sauvakirkoksi?",
+    "Miksi kirkon katoilla on lohikäärmeenpäitä?",
+    "Saatiinko kirkon tuhopolttaja koskaan kiinni?",
+    "Mikä on kirkon seinään upotettu toivekivi?",
+    "Voiko kirkkoon nykyään päästä sisälle?"
+   ],
    "isoisa": false,
    "lahteet": [
     {
@@ -275,6 +324,13 @@
    "teksti": "Säveltäjä Edvard Griegin koti Troldhaugen on puuhuvila Nordåsvannet-järven rannalla Bergenin eteläosassa, ja nimi tarkoittaa peikkokukkulaa. Edvard ja hänen vaimonsa Nina asuivat talossa yli kaksikymmentä vuotta, ja Grieg sävelsi pienessä majassa aivan järven rannalla. Kun Grieg kuoli vuonna 1907, hänen tuhkauurninsa muurattiin järveen viettävän kallion kylkeen. Ninan tuhka laskettiin samaan kalliohautaan vuonna 1936. Talon lähellä on matala, nurmikattoinen Troldsalen-konserttisali, jossa on kaksisataa paikkaa ja jossa järjestetään konsertteja kesällä ja syksyllä.",
    "lyhyt": "Säveltäjä Griegin kodin, Troldhaugenin, suunnitteli hänen serkkunsa, arkkitehti Schak Bull, joka suunnitteli myöhemmin myös pariskunnan kalliohaudan. Nykyään huvila, säveltäjänmaja ja hauta muodostavat yhdessä Edvard Griegin museon.",
    "syventava": "Miksi Grieg haudattiin kallioon?",
+   "kysymykset": [
+    "Mitä Grieg sävelsi järven rannan majassa?",
+    "Kuka oli Nina Grieg?",
+    "Miksi talo sai nimen peikkokukkula?",
+    "Miksi Grieg sävelsi mieluummin majassa kuin talossa?",
+    "Mitä konserttisalin lavan takana näkyy?"
+   ],
    "isoisa": false,
    "lahteet": [
     {
@@ -316,6 +372,13 @@
    "teksti": "Konserttitalo Grieghallen erottuu Bergenin keskustasta suurena lasin ja betonin laattana. Talo vihittiin vuonna 1978, ja sen suunnitteli tanskalainen arkkitehti Knud Munk. Pääsalissa on puolitoista tuhatta paikkaa, ja talo on Bergenin filharmonisen orkesterin koti. Orkesterin juuret ulottuvat vuoteen 1765, joten se on yksi maailman vanhimmista orkestereista, ja Edvard Grieg johti sitä 1880-luvun alussa. Talo on ollut Bergenin kansainvälisen festivaalin päänäyttämö avajaisistaan lähtien, ja vuonna 1986 siellä järjestettiin Euroviisut.",
    "lyhyt": null,
    "syventava": "Kuka johti orkesteria ennen Griegiä?",
+   "kysymykset": [
+    "Miksi talon rakentaminen kesti niin kauan?",
+    "Kuka voitti Euroviisut Bergenissä?",
+    "Kuka johtaa Bergenin filharmonista orkesteria nyt?",
+    "Millaisia esityksiä talossa nähdään nykyään?",
+    "Miten pääsalin akustiikka on suunniteltu?"
+   ],
    "isoisa": false,
    "lahteet": [
     {
@@ -341,6 +404,13 @@
    "teksti": "Bergenin korkein kaupunkivuori, Ulriken, kohoaa kuusisataaneljäkymmentäkolme metriä merenpinnan yläpuolelle, ja ylhäältä sen huipun tunnistaa televisiomastosta. Se on korkein niistä seitsemästä vuoresta, jotka ympäröivät kaupunkia. Huipulle nousee köysirata Ulriksbanen, jonka rakensi sveitsiläinen yhtiö ja joka avattiin vuonna 1961. Huipulla on ravintola, ja sieltä lähtee Vidden-reitti avoimen ylängön poikki Fløyenille. Vaellus kestää neljästä kuuteen tuntia, eikä se vaadi kiipeilytaitoja, mutta sää ja tuuli voivat ylängöllä muuttua hyvin nopeasti.",
    "lyhyt": null,
    "syventava": "Mihin Vidden-reitti päättyy?",
+   "kysymykset": [
+    "Kuinka kauan köysiradalla kestää nousta huipulle?",
+    "Pääseekö huipulle kävellen ilman köysirataa?",
+    "Kuka rakensi portaat Ulrikenin rinteeseen?",
+    "Miksi huipulle rakennettiin televisiomasto?",
+    "Mitä huipulta näkee kirkkaalla säällä?"
+   ],
    "isoisa": false,
    "lahteet": [
     {
@@ -366,6 +436,13 @@
    "teksti": "Uusi kirkko, Nykirken, seisoo Nordnesin niemellä Vågen-lahden länsirannalla, vinosti vastapäätä Bergenhusin linnaketta. Ensimmäinen kirkko rakennettiin vuonna 1621 arkkipiispan 1300-luvulla rakennetun kivitalon raunioille, mutta se paloi jo kahden vuoden kuluttua. Kirkko on palanut ja noussut uudelleen monta kertaa, ja nykyinen rakennus on pääosin vuodelta 1764. Huhtikuussa 1944 lähellä räjähtänyt laiva sytytti kirkon jälleen tuleen, mutta tällä kertaa seinät kestivät. Korjauksesta vastasivat arkkitehdit Frederik Konow Lund ja Hans Wichmann Rohde.",
    "lyhyt": null,
    "syventava": "Mikä laiva räjähti satamassa 1944?",
+   "kysymykset": [
+    "Kuka arkkipiispa asui kivitalossa kirkon paikalla?",
+    "Näkyykö arkkipiispan talon raunioita yhä?",
+    "Kuka suunnitteli nykyisen kirkkorakennuksen?",
+    "Miksi laivan räjähdys tuhosi niin paljon?",
+    "Millainen paikka Nordnesin niemi on nykyään?"
+   ],
    "isoisa": false,
    "lahteet": [
     {

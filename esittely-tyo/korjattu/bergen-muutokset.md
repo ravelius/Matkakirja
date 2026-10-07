@@ -50,3 +50,14 @@ Tarkistin: 0 virhettä, 11 huomiota (kaikki "ei ala paikan nimellä" LISÄSÄÄN
 - Fantoftin Borgund-esikuva ja lohikäärmeenpäät vain matkailusivuilta (thehiddennorth, Frommer's).
 - Troldhaugenin valmistumisvuosi lähteissä 1885/1886 (tekstissä vain "yli kaksikymmentä vuotta", ei ristiriitaa).
 - Nykirkenin sijainti "vinosti vastapäätä Bergenhusia" perustuu lokalhistoriewikin kuvaukseen Vågenin suun kahdesta puolesta ja karttaan.
+
+## Kysymykset (tarkistettu jälkikäteen)
+
+Muutettu 5 kysymystä:
+- Ulriken: "Kuinka kauan köysiradalla kestää nousta huipulle?" → "Kuinka kauan nousu köysiradalla kestää?" (kömpelö rakenne, luontevampi suomi).
+- Mariankirkko: "Pidetäänkö kirkossa yhä jumalanpalveluksia?" → "Miksi kirkkoa kunnostettiin peräti viisi vuotta?" (teksti kertoo jo, että kirkkoa on käytetty kirkkona keskeytyksettä).
+- Bergenin tuomiokirkko: "…jolle kirkko rakennettiin?" → "…jolle kirkko on omistettu?" (täsmällisempi: kirkko on Pyhän Olavin nimissä).
+- Fantoftin sauvakirkko: "Miksi sitä kutsutaan sauvakirkoksi?" → "Mistä sauvakirkko on saanut nimensä?" (irrallinen "sitä" ilman viittauskohdetta).
+- Nykirken: "Kuka arkkipiispa asui kivitalossa kirkon paikalla?" → "Miksi arkkipiispalla oli kivitalo Bergenissä?" (oletus yhdestä tietystä asukkaasta ei pidä; arkkipiispan asuinpaikka oli käytössä useilla, ks. en.wikipedia.org/wiki/Nykirken). Haulla vahvistettu myös: nykyisen kirkon arkkitehti Johan Joachim Reichborn (1760-luku) ja raunioita on yhä kirkon kellarissa.
+
+Epävarmuudet: Fløyenin nimen alkuperä on lähteissä "todennäköisesti" tuuliviiri (kysymys avoin, joten kelpaa). Fantoftin "Saatiinko tuhopolttaja koskaan kiinni?" on tarkoituksella avoin (ketään ei ole tuomittu juuri Fantoftin poltosta).

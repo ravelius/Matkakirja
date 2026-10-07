@@ -26,3 +26,14 @@ Tarkistin: 0 virhettä, 3 huomiota (Kallimarmaron teksti ja lyhyt sekä Plákan 
 - Lausuuko kertoja ääneen luettavan tekstin alussa nimet Akropolis, Parthenon, Erekhtheion, Likavittos, Herodes Atticuksen ja Sýntagman suomeksi? Ne on jätetty alkuun suomeen vakiintuneina tai suomeksi taivutettuina.
 - Parthenonin hienosäätöjen (kaartuva alusta, sisäänpäin kallistuvat pylväät) tarkoitus "näyttää silmään suoralta" on yleinen mutta kiistelty selitys.
 - Evzonien hame on valkoinen ainakin juhla-asussa. Kesän arkiasun väriä en saanut varmistettua.
+
+## Kysymykset (tarkistettu jälkikäteen)
+
+Muutettu 6 kysymystä:
+- Akropolis: "Millainen oli … Propylaia?" → "Millainen on …" (rakennus on yhä pystyssä).
+- Olympoksen Zeuksen temppeli: "Kuka oli tyranni Peisistratos?" → "Kuka aloitti temppelin rakentamisen?" (Peisistratosta ei mainita tekstissä, ja aloittajana pidetään yleensä Peisistratoksen poikia; avoin kysymys on varma).
+- Akropolis-museo: "Millaista elämää museon alla olleessa kylässä oli?" → "Mitä museon alta paljastui kaivauksissa?" (museon alla on antiikin kaupunginosa, ei kylä).
+- Hefaistoksen temppeli: "Millainen jumala tulen ja sepäntaidon Hefaistos oli?" → "Millainen jumala Hefaistos oli?" (kömpelö kasauma); "Millainen kuningas Otto oli kreikkalaisille?" → "Miksi temppeli lakkasi olemasta kirkko?" (Otto ei liity tekstiin; uusi kysymys jatkaa tekstin vuotta 1834).
+- Tuulien torni: "Mikä oli roomalainen tori tornin vieressä?" → "Mitä roomalaisella torilla myytiin?" (outo muotoilu).
+
+Epävarmuudet: Likavittoksen mäntyjen istuttaja ja pääsiäisyön kulkue on jätetty yleistiedon varaan (metsitys 1800-luvun lopulla on tunnettu); "Oliko odeionilla alun perin katto?" on avoin kysymys.

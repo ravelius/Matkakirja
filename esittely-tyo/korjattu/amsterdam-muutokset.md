@@ -30,3 +30,11 @@ Sanat "näyttää puolikuun muotoiselta viuhkalta, jonka kanavat..." on muutettu
 - Keskusaseman tuulitaulun yhteys purjelaivojen aikaan perustuu matkailusivuihin (aviewoncities ja voicemap).
 - Lähteiden mukaan NEMOn kupari hapettuu ajan myötä. Teksti sanoo "vihreäksi hapettuneella", ja tämä on todennäköisesti oikein.
 - Ääntäminen: Prinsengracht, Jodenbreestraat, Westerman, Werlemann ja Wijsmuller kannattaa tarkistaa äänitteestä.
+
+## Kysymykset (tarkistettu jälkikäteen)
+
+Muutettu 1 kysymys:
+- Munttoren: "Kuka oli rakentaja Hendrick de Keyser?" → "Kuka oli arkkitehti Hendrick de Keyser?" (hän oli arkkitehti ja kuvanveistäjä, ei rakentaja).
+
+Haulla vahvistettu: kuninkaallisessa palatsissa on seitsemän ovea seitsemän provinssin mukaan eikä suurta pääovea (en.wikipedia.org/wiki/Royal_Palace_of_Amsterdam); Oude Kerkiä kutsuttiin kaupungin olohuoneeksi, koska kaupustelijat myivät ja kerjäläiset nukkuivat siellä.
+Epävarmuudet: Anne Frank "Tiedetäänkö, kuka paljasti piilopaikan?" on tarkoituksella avoin. "Mikä on Artiksen vanhin yhä elävä eläin?" vaatii vastaajalta ajantasaista tietoa.

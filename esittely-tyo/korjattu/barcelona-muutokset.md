@@ -31,3 +31,14 @@ Tarkistin: `Barcelona: 15 kohdetta, 0 virhettä, 18 huomiota`. Kaikki huomiot ov
 - Palau de la Música Catalana: väite "Euroopan ainoa päivisin pelkällä luonnonvalolla valaistu konserttisali" on yleisesti toistettu (myös pelin aineistossa), mutta hakuote vahvisti sen vain toissijaisesta lähteestä.
 - Casa Batlló: "suoria linjoja ei ole juuri lainkaan" on yleinen kuvaus, mutta lähde puhuu julkisivusta.
 - Barcelona-paviljonki: Kolben veistoksen nimi on espanjaksi Alba (aamunkoitto) ja saksaksi Der Morgen (aamu). Tekstissä on "Aamunkoitto".
+
+## Kysymykset (tarkistettu jälkikäteen)
+
+Muutettu 8 kysymystä:
+- Sagrada Família: "Mikä japanilaisen kuvanveistäjän osuus kirkossa on?" → "Mitä japanilainen kuvanveistäjä on tehnyt kirkkoon?" (luontevampi).
+- Güellin puisto: "Kuka asui puiston toisessa talossa?" → "Kuka asui puistossa Gaudín naapurina?" (alkuperäinen olisi voinut viitata Gaudín taloon, johon teksti jo vastaa).
+- Casa Milà: "riitautui" → "riitaantui" (oikea verbi); "Miksi kaupunki riitautti talon rakennusluvan?" → "Miksi talo rikkoi kaupungin rakennusmääräyksiä?" (talo ylitti mm. korkeusmääräykset; "riitautti rakennusluvan" ei ollut täsmällinen).
+- Palau de la Música Catalana: "Keitä tunnettuja taiteilijoita salissa on soittanut?" → "Ketkä tunnetut taiteilijat ovat soittaneet salissa?" (kielioppi).
+- Torre Glòries: "Miksi tornin ikkunat ovat epäsäännöllisesti?" → "…on sijoiteltu epäsäännöllisesti?" (vajaa lause); "Mitä lempinimiä barcelonalaiset ovat keksineet?" → "…ovat antaneet tornille?" (puuttuva kohde); "Kuka tornissa työskentelee nykyään?" → "Kuka tornin omistaa nykyään?" (vuokralaistilanne muuttui 2025, Meta-sisällönvalvojien keskus supistui; omistajakysymys on vakaampi).
+
+Epävarmuudet: La Rambla "Miten Ramblaa parhaillaan uudistetaan?" vanhenee, kun työt valmistuvat (arvio 2027). Lepanton Kristuksen vääntyminen on legenda.
