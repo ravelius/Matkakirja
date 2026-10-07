@@ -490,7 +490,8 @@ namespace Matkakirja.Natiivi
             // linjan): linja köyden oikealle puolelle. Köysi keinuu, joten raja = oikea reuna + väli, ja vasen reuna vain kasvaa
             // saman näkymän aikana (ei hypi).
             var koysi = OpasSovitin.KoriVasenKoysiNorm;
-            if (koysi.width > 0f && Juuri.panel != null)
+            // Varmistus (dd49fff5: AABB-projektio antoi xMax ~1 ja linja katosi ruudun ulkopuolelle): vain kapea vasen köysi kelpaa.
+            if (koysi.width > 0f && koysi.xMax <= 0.4f && koysi.width <= 0.2f && Juuri.panel != null)
             {
                 float pw = Juuri.panel.visualTree.layout.width;
                 float koysiOikea = koysi.xMax * pw - Juuri.worldBound.xMin + KuvaRako;
