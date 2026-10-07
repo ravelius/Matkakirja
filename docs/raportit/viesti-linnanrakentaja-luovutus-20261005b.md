@@ -221,3 +221,7 @@ Brotli (haara linnanrakentaja-zstd, worktree olemassa), akustiikka #3979 (Steam 
 - 7.10. 05.5x: KIELLETTY v3c KUVAT PÄÄTOIMITTAJALLA (14 kpl, lokit/linnanrakentaja-kielletty-v3c-0546/omistajalle/). Peili
   0ddc7c7c75aac0af (blender 5ca4c4b500142453); v3b seinät tasaiseksi (seina_v3.jpg), v3c maskin R nollattu (kalkkirappauksen
   tahrat läikkinä) ja kuori_leivo LUOKKA ilman seinää. Simut erasettu. Odottaa Päätoimittajan/omistajan palautetta; PR kun hyväksytty.
+- 7.10. 06.1x: KIELLETTY v4 (Päätoimittaja 06.0x: ilmakuvat 1, 2, 6; muut v3c-kuvat omistajalle sellaisinaan): kk_kaukaiset._halli
+  (aumakatto/harjakatto, ~80 kolmiota), kuori_leivo haivytys() + maareunuksen ulkorenkaat liukuväriin, näytepisteet ≥ 6 tekseliä;
+  js valaistus.sumu {0.9, 3.2} (Siirtoseppä eleet-2, junan 156 jälkeen). Peili 2851289d904b2320 (blender 2a01feacece9cb55).
+  Siirtoseppä ottaa ilmakuvat eleet-2-käännöksellä kielletty-kuvat.sh:lla → merkitse kielletty-merkitse.py → Päätoimittajalle (~klo 10).
