@@ -103,3 +103,4 @@ Päätoimittaja = "PÄÄTOIMITTAJA (Opus, max)".
 - Käynnissä: S2-kevät-vienti 6 osaa (lokit/julkaisija-vienti-s2kevat-6osa*.log) → valmis: laatat.json 200 → Karttasepälle.
   #4147 (apurahakortti valmiitLinssit) merge-odottaja → Pelikoodarille kun julki. #4150 loki-PR merge vihreänä.
   LS1 diagnostiikka-ajo (iPhone 5 min) alkulento-korjauksen käännöksen jälkeen hiljaisella hetkellä.
+- 18.1x: viety olavinlinna-e3-aanet, -tietokerros, ilmapallo-kori (glb), opas-esittely-aaneton (31). S2-kevät osa 0 uudelleen (-b).
