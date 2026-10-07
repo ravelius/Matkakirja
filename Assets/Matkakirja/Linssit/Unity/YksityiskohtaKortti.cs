@@ -91,7 +91,9 @@ namespace Matkakirja.Linssit
             var pd = kamera.GetUniversalAdditionalCameraData();
             if (pd != null && !pd.cameraStack.Contains(overlay)) pd.cameraStack.Add(overlay);
             var sh = Resources.Load<Shader>("Varjostimet/Nostokortti");
-            mat = new Material(sh != null ? sh : Shader.Find("Universal Render Pipeline/Unlit")) { name = "Nostokortti" };
+            // Kortti piirretään ennen tekstiä (iPad-simu 21.42: molemmat läpinäkyvien jonossa 3000, ja käännetyssä kortissa teksti
+            // lajittui etäisyydeltään tason taakse → paperi peitti kuvatekstin).
+            mat = new Material(sh != null ? sh : Shader.Find("Universal Render Pipeline/Unlit")) { name = "Nostokortti", renderQueue = 2950 };
             mat.SetColor("_Paperi", (Color)Tyylikirja.Paperi.Pinta);
             mat.SetColor("_Reuna", (Color)Tyylikirja.Paperi.Reunus);
             var q = GameObject.CreatePrimitive(PrimitiveType.Quad);
@@ -168,11 +170,12 @@ namespace Matkakirja.Linssit
             // Koko sovitetaan kaistaan (2 riviä: kuvateksti ja tekijä); 1 tekstiyksikkö = 1 ruutupikseli.
             teksti.fontSizeMax = alaPx * 12f; teksti.fontSizeMin = alaPx * 0.05f;
             teksti.alignment = TextAlignmentOptions.MidlineLeft;
-            teksti.ForceMeshUpdate();
-            Debug.Log($"MATKAKIRJA opas: yksityiskohtakuvan teksti {teksti.textInfo.characterCount} merkkiä, {teksti.textInfo.lineCount} riviä, koko {teksti.fontSize:F0}");
+
 
             Nakyy = true;
             kortti.gameObject.SetActive(true);
+            teksti.ForceMeshUpdate();
+            Debug.Log($"MATKAKIRJA opas: yksityiskohtakuvan teksti {teksti.textInfo.characterCount} merkkiä, {teksti.textInfo.lineCount} riviä, koko {teksti.fontSize:F0}, jono {teksti.fontSharedMaterial?.renderQueue}/{mat.renderQueue}");
             Debug.Log($"MATKAKIRJA opas: yksityiskohtakuva näkyviin {k.KohdeId} \"{k.Ankkuri}\" ({kuva.width}×{kuva.height})");
             // Sisään: pehmeä hidastus.
             for (float t = 0f; t < SisaanS; t += Time.unscaledDeltaTime)
