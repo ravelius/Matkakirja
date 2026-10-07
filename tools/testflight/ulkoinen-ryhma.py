@@ -160,10 +160,15 @@ def main():
     for pb in [x.strip() for x in a.poista.split(',') if x.strip()]:
         tila, d = kutsu('GET', f'/v1/builds?filter[app]={app_id}&filter[version]={pb}&limit=5')
         loydetyt = d.get('data', []) if tila == 200 else []
-        if len(loydetyt) != 1:
-            virhe('Irrotettavaa buildia ei löydy yksiselitteisesti', f'{pb}: {tila}, {len(loydetyt)} osumaa')
+        # Sama CFBundleVersion voi olla iOS- ja macOS-buildilla (TF 162: 2 osumaa) → vain ryhmään liitetyt.
+        tila_r, r = kutsu('GET', f'/v1/betaGroups/{ryhma_id}/relationships/builds?limit=200')
+        ryhmassa = {x['id'] for x in r.get('data', [])} if tila_r == 200 else set()
+        loydetyt = [b for b in loydetyt if b['id'] in ryhmassa]
+        if not loydetyt:
+            kirjaa(f'Build {pb}: ei ryhmässä, ei irrotettavaa.')
+            continue
         tila, d = kutsu('DELETE', f'/v1/betaGroups/{ryhma_id}/relationships/builds',
-                        {'data': [{'type': 'builds', 'id': loydetyt[0]['id']}]})
+                        {'data': [{'type': 'builds', 'id': b['id']} for b in loydetyt]})
         if tila not in (200, 204):
             virhe('Irrotus ulkoisesta ryhmästä epäonnistui', f'{pb}: {tila}: {d}')
         kirjaa(f'Build {pb}: irrotettu ulkoisesta ryhmästä.')
