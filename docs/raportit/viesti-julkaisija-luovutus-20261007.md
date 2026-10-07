@@ -90,5 +90,5 @@ Päätoimittaja = "PÄÄTOIMITTAJA (Opus, max)".
   13.28– (tulos proto-3d/lokit/siirtoseppa-historia4-kaannos.out) → 15.00 jälkeen SIMU NYT Siirtoseppä iPad 18 min + LS1 Giza v2b.
 - **13.38 (viimeinen ennen taukoa)**: TF 160 TESTAAJILLA 13.37 (Päätoimittajalle ilmoitettu). Siirtoseppä historia KÄÄNNETTY
   6490286bb (lokit/siirtoseppa-historia4-app). NUI köysi-stillit 13.32 kansiossa natiivi-ui-1035/pariisi-esitys (PT:lle tieto).
-  **15.00 jälkeen järjestys**: KÄÄNNÖS NYT NUI pariisi-esitys 70b3c0f7 (+ simu 10 min, lupa iPhone 18 Pro Max 46EC73E2);
+  **15.00 jälkeen järjestys**: KÄÄNNÖS NYT NUI pariisi-esitys 81aa5fea (+ simu 12 min, lupa iPhone 18 Pro Max 46EC73E2);
   SIMU NYT Siirtoseppä iPad 18 min ja LS1 Giza v2b 6 min (cbd5ffad7); Natiivisepän Mac TF 160 -tulos (natiiviseppa-mac-tf-vahti.txt).
