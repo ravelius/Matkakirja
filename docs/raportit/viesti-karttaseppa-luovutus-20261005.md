@@ -1,3 +1,20 @@
+# TILANNE 7.10. klo 13.0x
+
+- **WORLDVIEW-KORJAUS (PT 7.10., korkea prioriteetti), odottaa PT:n kuittausta, EI VIETY.** Juurisyy: natiivin
+  `Vektorikerros.KorkeusVersio` "2026-09-25-gshhs-korkeus" on tehty ennen 30.9. Krim-korjausta, joten Perekopin viiva oli mukana.
+  Uusi lähde on NE `_swe` (`tools/worldview.mjs`). Haara `karttaseppa-raja-worldview` fe4112c9b (worktree /Users/Shared/Claude/wt/).
+  Aineistot ovat kansiossa `pyramidi-poltto/worldview-2026-10-07/`:
+  vektorit-2026-10-07-swe (web), vektorit-2026-10-07-swe-korkeus (natiivi), maapolygonit.geojson, maamaa.geojson,
+  lavastus-viivat (2 181 deltalaattaa → julisteet/pyramidi/2026-10-07-viivat/viivat/) ja viivataso-2026-10-07.json
+  (luettelon uusi viivataso-kenttä: delta-perus 2026-09-27-viivat, laatastoon +2 bittiä). Kuvat ja laattalista: MUUTOKSET.md.
+  Viivataso poltettiin worktreellä /Users/Shared/Claude/wt/karttaseppa-viivat-20261007 (30.9. koodi 9ec231e0c + uusi rajaviivasto, `--eipiirit`).
+  Kohinalaatat (piirron reunanpehmennys) jätettiin vanhoiksi: rajaa-delta.py.
+  Avoin kysymys PT:lle: maakunnat (admin-1) CYP (Kyrenia) ja MAR (Länsi-Sahara). Kuittauksen jälkeen: paketit _valmiit-kansioon,
+  .geojson-MIME Julkaisijalle, JS-PR (PALLOVEKTORIT_VERSIO, maapolygonit.json) ja natiivin vakiot LS2:lle.
+- **Talvi2** 146/169 (13.0x), kevät rivit 13–17 perässä. **Syksyn vienti** ämpärissä 51 109 / 57 630 (Julkaisija jatkaa).
+
+---
+
 # TILANNE 7.10. klo 12.0x (uudelleenkäynnistyksen jälkeen)
 
 - **AJOSSA:** `kaudet/aja-talvi2.sh` (PGID 4645) jatkoi 11.56 tilasta 120/169. `aja-kevat-pohjoinen2.sh` (PGID 4649) odottaa sen VALMIS-merkkiä.
