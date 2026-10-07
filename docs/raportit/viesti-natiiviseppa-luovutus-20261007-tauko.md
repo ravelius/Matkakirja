@@ -11,6 +11,8 @@ Tarkista ensin taustalla jatkuneiden ajojen tulokset (alla) ja kerro ne Julkaisi
 
 ## TILA 15.2x (myöhempi): JUNA 161 VALMIS VIE-PÄÄTÖKSEEN
 
+- VIE-EHDOT (Päätoimittaja 15.3x): Laitetestaajan rutiini OK JA LS2 todentaa pallojen klikkauksen junan koekäännöksellä 68429b27b
+  (simkosketus Ateena + Kreeta, iPhone + iPad, still + lokirivi). Mac-savu TF:n jälkeen tai omistaja itse.
 - Runko **c076765c4**, koekäännös 68429b27b (app lokit/natiiviseppa-app-161koe-c076765c), loppusavu OK 15.19 (stillit
   lokit/natiiviseppa-savu161-juna/, 0 poikkeusta, kirjoitusääni 16 lyöntiä). Odottaa: Laitetestaajan rutiini → Päätoimittajan VIE →
   Julkaisijan JUNAN AVAUS NYT → `git update-ref refs/heads/juna/b13 c076765c4 2309f55d…` (tarkista nykyinen juna/b13!) + juna.log,
