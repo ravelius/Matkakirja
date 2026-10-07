@@ -37,6 +37,7 @@ import {
   MAAILMAN_SUOSIKIT_KEHOTE,
 } from './kohteet.js';
 import { OPAS_AINEISTOT } from './aineistot.js';
+import { tarkistaSyote, TURVA_JATKOT } from './opas-turva.js';
 import { oppaanEsittely, valmisKohde, omatKohteet, esittelynAlku } from './opas-esittely.js';
 import { OPAS_SALLITUT, sallittuKaupunki, pisteSallittu, sallittuAluePisteelle, kokeilut, sallitutPyynnolle } from './sallitut.js';
 import { vuosiluvutSanoiksi } from './puhesanat.js';
@@ -3360,6 +3361,13 @@ async function hoidaOppaanKysy(pyynto, env, kors, runko, ctx) {
   if (raja) return raja;
   const p = siivoaKeskustelu(runko);
   if (!p.kysymys) return vastaa({ virhe: 'kysely', viesti: 'Kysymys puuttuu.' }, { status: 400, ...kors });
+  // Syötesuodatin (alaikäistarkistus kohta 2): henkilötiedot, asiattomat ja hätä → valmis vastaus ilman mallia ja ääntä.
+  const turva = tarkistaSyote(p.kysymys);
+  if (turva) {
+    console.log(`opas: kysy → suodatin (${turva.tyyppi})`);
+    return vastaa({ teksti: turva.teksti, aani: null, aani_pcm: null, aani_taajuus: null, kesto_s: null, toiminto: null,
+      kysymykset: TURVA_JATKOT }, kors);
+  }
   try {
     const kaupunkiPiste = p.kaupunki ? await kaupunginSijainti(fetch, p.kaupunki).catch(() => null) : null;
     const lista = p.kaupunki ? await pysyvaLue(env.PUHE_R2, liikuAvain(p.kaupunki)).then((x) => (x ? JSON.parse(x) : [])).catch(() => []) : [];
@@ -3423,6 +3431,8 @@ async function hoidaOpas(pyynto, env, kors, runko, ctx) {
     return v;
   }
   const p = siivoaOpasPyynto(runko);
+  // Vapaa toive suodattimen läpi (alaikäistarkistus kohta 2): suodatettu toive ohitetaan, kierros jatkuu.
+  if (p.toive && tarkistaSyote(p.toive)) { console.log('opas: toive → suodatin'); p.toive = null; }
   if (p.kaupunki && !sallittuKaupunki(p.kaupunki, env)) return eiSallittu(p.kaupunki, kors);
   const kehittaja = kehittajaOhitus(pyynto, env);
   const kv = env.POLLO_KV ?? null;
