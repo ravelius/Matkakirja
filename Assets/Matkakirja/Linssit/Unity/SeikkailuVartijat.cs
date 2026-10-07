@@ -175,6 +175,7 @@ namespace Matkakirja.Natiivi
             float dt = Mathf.Min(Time.unscaledDeltaTime, 0.05f);
             var p = SeikkailuPelaaja.Aktiivinen;
             if (ote != null) return;   // kiinnijäänti käynnissä (Ote-kulku)
+            if (p != null && !riitaKaynnissa && (riitaAsti -= dt) <= 0) { riitaAsti = RiitaValiS; StartCoroutine(Riita(p)); }
             if (p != null && p != tarkistusPelaaja) { tarkistus = p.transform.position; tarkistusPelaaja = p; }   // uusi pelaaja = uusi tarkistuspiste
             // Tarkistuspisteet portaaleista (pelattavuusmalli 4.3): kynnyksen ylitys uuteen kävelyosaan, kun kukaan ei epäile.
             if (p != null && Time.unscaledTime > osaTarkistus)
@@ -347,6 +348,30 @@ namespace Matkakirja.Natiivi
         {
             if (!Physics.Linecast(silmat, rinta, out var osuma, 1 << DioraamaNayttamo.Kerros, QueryTriggerInteraction.Ignore)) return true;
             return osuma.collider.GetComponentInParent<SeikkailuPelaaja>() != null;
+        }
+
+        // Riidan ikkuna (pelattavuusmalli 8.1 huone 2): soutaja-2 veneestä → portinvartija-riita-1 → -2, portinvartija 12 s selin porttiin
+        // (näkö 4 m, ±35°) → portinvartija-paluu-5. Ensimmäinen 20 s pelaajan tultua, sitten 40 s:n välein, kun pelaaja on laiturilla tai portilla.
+        const float RiitaValiS = 40f; float riitaAsti = 20f; bool riitaKaynnissa;
+        System.Collections.IEnumerator Riita(SeikkailuPelaaja p)
+        {
+            var pv = vartijat.Find(x => x.Aivot.Profiili == VartijaProfiili.Portinvartija && x.Agentti != null);
+            var pp = p.transform.position; string osa = Askelaani.Osa(SeikkailuKavely.Data, pp.x, pp.y, -pp.z);
+            if (pv == null || pv.Aivot.Tila != VartijanTila.Partio || osa != "vesiportti" && osa != "ulkoalue") yield break;
+            var d = SeikkailuKavely.Data; Vector3 vene = pv.Agentti.transform.position + pv.Agentti.transform.forward * 6f;
+            if (d != null) foreach (var m in d.Merkit) if (m.Nimi == "vene:laituri") vene = new Vector3((float)m.X, (float)m.Y, (float)-m.Z);
+            riitaKaynnissa = true;
+            var r = SeikkailuRepliikit.Aktiivinen;
+            double k1 = r != null && r.Valmis ? r.Soita("soutaja-2", vene) : 0;
+            yield return new WaitForSecondsRealtime((float)Math.Max(1.0, k1));
+            pv.Aivot.AloitaRiita(vene.x, vene.z);
+            kirjaa?.Invoke("seikkailu: riita alkaa (portinvartija selin porttiin 12 s)");
+            double k2 = r != null && r.Valmis && pv.Agentti != null ? r.Soita("portinvartija-riita-1", pv.Agentti.transform) : 0;
+            yield return new WaitForSecondsRealtime((float)Math.Max(2.0, k2 + 0.3));
+            if (pv.Aivot.Riita > 0 && r != null && r.Valmis && pv.Agentti != null) r.Soita("portinvartija-riita-2", pv.Agentti.transform);
+            while (pv.Aivot.Riita > 0) yield return null;
+            if (pv.Aivot.Tila == VartijanTila.Partio && r != null && r.Valmis && pv.Agentti != null) r.Soita("portinvartija-paluu-5", pv.Agentti.transform);
+            riitaKaynnissa = false;
         }
 
         V ote;

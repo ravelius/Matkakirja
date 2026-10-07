@@ -1,0 +1,804 @@
+{
+ "versio": 1,
+ "koordinaatit": "glTF x itä, y ylös, z etelä",
+ "osat": {
+  "vesiportti": {
+   "kolmiot": {
+    "nakyva": 768,
+    "-tormays": 778,
+    "-kavely": 52
+   },
+   "merkit": [
+    "ovi:vesiportti-alku",
+    "ovi:vesiportti-loppu",
+    "ovi:vesiportti-2-alku",
+    "ovi:vesiportti-2-loppu"
+   ],
+   "leikkaukset": [
+    {
+     "nimi": "vesiportti",
+     "keskipiste": [
+      -55.0,
+      -4.6,
+      13.95
+     ],
+     "koko": [
+      3.295,
+      5.0,
+      2.7
+     ],
+     "kierto_y": 0.8399
+    },
+    {
+     "nimi": "vesiportti-2",
+     "keskipiste": [
+      -47.65,
+      -4.425,
+      16.9
+     ],
+     "koko": [
+      15.686,
+      5.0,
+      2.7
+     ],
+     "kierto_y": -0.6153
+    }
+   ],
+   "varmuus": "A (ovi kuoressa säteellä (−56,0, z 15,1), seinä lounaaseen → käytävä kohtisuoraan seinän läpi; 1923: synkkä holvikäytävä)",
+   "rajat": {
+    "min": [
+     -66.3,
+     -6.2,
+     10.56
+    ],
+    "max": [
+     -39.84,
+     -2.25,
+     26.64
+    ]
+   },
+   "naapurit": [
+    "ulkoalue",
+    "laituri"
+   ],
+   "portaalit": [
+    {
+     "nimi": "ovi:vesiportti-alku",
+     "paikka": [
+      -56.3,
+      -5.95,
+      15.4
+     ],
+     "leveys": 2.4,
+     "korkeus": 2.6
+    },
+    {
+     "nimi": "ovi:vesiportti-loppu",
+     "paikka": [
+      -53.7,
+      -5.85,
+      12.5
+     ],
+     "leveys": 2.4,
+     "korkeus": 2.6
+    },
+    {
+     "nimi": "ovi:vesiportti-2-alku",
+     "paikka": [
+      -54.3,
+      -5.85,
+      12.2
+     ],
+     "leveys": 2.4,
+     "korkeus": 2.6
+    },
+    {
+     "nimi": "ovi:vesiportti-2-loppu",
+     "paikka": [
+      -41.0,
+      -5.6,
+      21.6
+     ],
+     "leveys": 2.4,
+     "korkeus": 2.6
+    }
+   ],
+   "kamera_rajat": {
+    "katto_y": -2.5
+   },
+   "tiedostot": {
+    "nakyva": "vesiportti.glb",
+    "tormays": "vesiportti-tormays.glb",
+    "kavely": "vesiportti-kavely.glb"
+   },
+   "muistiarvio": {
+    "kolmiot_nakyva": 768,
+    "tekstuurit_mt": 0,
+    "huom": "pinnat rakennuksen pinta-materiaaleista"
+   },
+   "pinta": "kivi"
+  },
+  "porttikaytava-T102": {
+   "kolmiot": {
+    "nakyva": 434,
+    "-tormays": 432,
+    "-kavely": 26
+   },
+   "merkit": [
+    "ovi:porttikaytava-T102-alku",
+    "ovi:porttikaytava-T102-loppu"
+   ],
+   "leikkaukset": [
+    {
+     "nimi": "porttikaytava-T102",
+     "keskipiste": [
+      -29.35,
+      -2.87,
+      15.3
+     ],
+     "koko": [
+      10.828,
+      5.0,
+      4.6
+     ],
+     "kierto_y": 0.9658
+    }
+   ],
+   "varmuus": "L (pituus, leveys, askelmat), kuori (aukon linja säteenheitolla 7.10.)",
+   "rajat": {
+    "min": [
+     -35.0,
+     -5.71,
+     10.05
+    ],
+    "max": [
+     -25.2,
+     -0.07,
+     21.66
+    ]
+   },
+   "naapurit": [
+    "ulkoalue"
+   ],
+   "portaalit": [
+    {
+     "nimi": "ovi:porttikaytava-T102-alku",
+     "paikka": [
+      -32.6,
+      -5.6,
+      20.0
+     ],
+     "leveys": 4.3,
+     "korkeus": 2.6
+    },
+    {
+     "nimi": "ovi:porttikaytava-T102-loppu",
+     "paikka": [
+      -26.1,
+      -2.74,
+      10.6
+     ],
+     "leveys": 1.9,
+     "korkeus": 2.6
+    }
+   ],
+   "kamera_rajat": {
+    "katto_y": -0.32
+   },
+   "tiedostot": {
+    "nakyva": "porttikaytava-T102.glb",
+    "tormays": "porttikaytava-T102-tormays.glb",
+    "kavely": "porttikaytava-T102-kavely.glb"
+   },
+   "muistiarvio": {
+    "kolmiot_nakyva": 434,
+    "tekstuurit_mt": 0,
+    "huom": "pinnat rakennuksen pinta-materiaaleista"
+   },
+   "pinta": "kivi"
+  },
+  "keittio-G102": {
+   "kolmiot": {
+    "nakyva": 296,
+    "-tormays": 161,
+    "-kavely": 3
+   },
+   "merkit": [
+    "ovi:keittio-piha",
+    "piilo:poydan-alla",
+    "piilo:tynnyrien-takana",
+    "piilo:uunin-vieressa",
+    "esine:savipurkki",
+    "esine:kauha",
+    "esine:nauris",
+    "esine:lautanen",
+    "partio:keittio-1",
+    "partio:keittio-2"
+   ],
+   "leikkaukset": [
+    {
+     "nimi": "keittio-sisatila",
+     "keskipiste": [
+      -19.7,
+      -0.5,
+      13.4
+     ],
+     "koko": [
+      10.0,
+      4.5,
+      5.4
+     ],
+     "kierto_y": 0.0
+    }
+   ],
+   "varmuus": "L (siipi, 3,3 m kehämuuri, ~59 m²), A (seinälinja, korkeus, ovi)",
+   "rajat": {
+    "min": [
+     -25.3,
+     -3.15,
+     10.1
+    ],
+    "max": [
+     -14.1,
+     3.05,
+     17.28
+    ]
+   },
+   "naapurit": [
+    "ulkoalue"
+   ],
+   "portaalit": [
+    {
+     "nimi": "ovi:keittio-piha",
+     "paikka": [
+      -21.5,
+      -2.65,
+      10.6
+     ],
+     "leveys": 1.1,
+     "korkeus": 2.0
+    }
+   ],
+   "kamera_rajat": {
+    "katto_y": 2.8
+   },
+   "tiedostot": {
+    "nakyva": "keittio-G102.glb",
+    "tormays": "keittio-G102-tormays.glb",
+    "kavely": "keittio-G102-kavely.glb"
+   },
+   "muistiarvio": {
+    "kolmiot_nakyva": 296,
+    "tekstuurit_mt": 0,
+    "huom": "pinnat rakennuksen pinta-materiaaleista"
+   },
+   "pinta": "puu"
+  },
+  "pikkupiha": {
+   "kolmiot": {
+    "nakyva": 6,
+    "-tormays": 6,
+    "-kavely": 6
+   },
+   "merkit": [],
+   "leikkaukset": [],
+   "varmuus": "kuori (mitattu)",
+   "rajat": {
+    "min": [
+     -29.2,
+     -2.7,
+     3.2
+    ],
+    "max": [
+     -13.2,
+     -2.7,
+     15.8
+    ]
+   },
+   "naapurit": [
+    "ulkoalue",
+    "keittio-G102",
+    "porttikaytava-T102",
+    "kirkkotorni-portaat"
+   ],
+   "portaalit": [],
+   "kamera_rajat": {
+    "katto_y": -2.95
+   },
+   "tiedostot": {
+    "nakyva": "pikkupiha.glb",
+    "tormays": "pikkupiha-tormays.glb",
+    "kavely": "pikkupiha-kavely.glb"
+   },
+   "muistiarvio": {
+    "kolmiot_nakyva": 6,
+    "tekstuurit_mt": 0,
+    "huom": "pinnat rakennuksen pinta-materiaaleista"
+   },
+   "pinta": "kivi"
+  },
+  "kirkkotorni-portaat": {
+   "kolmiot": {
+    "nakyva": 1598,
+    "-tormays": 1290,
+    "-kavely": 166
+   },
+   "merkit": [
+    "ovi:kirkkotorni-piha",
+    "ovi:kierreporras",
+    "ovi:tott-kammio",
+    "piilo:muuriporras-2-komero",
+    "ovi:paaovi",
+    "ovi:kappeli-alku",
+    "piilo:alttarin-varjo",
+    "veto:syvennys",
+    "ontto:syvennys",
+    "esine:kivi-1",
+    "esine:kivi-2",
+    "esine:kivi-3",
+    "esine:kivi-4",
+    "esine:liinanyytti",
+    "esine:kalkki",
+    "esine:pateeni",
+    "esine:liuskekivi",
+    "esine:kilpilaatta-tott",
+    "esine:kilpilaatta-sture",
+    "luukku:koillinen",
+    "valo:ikuinen",
+    "esine:kirja",
+    "reitti:kappalainen-paluu-1",
+    "reitti:kappalainen-paluu-2",
+    "reitti:kappalainen-paluu-3",
+    "reitti:kappalainen-paluu-4",
+    "reitti:kappalainen-luukku-1",
+    "reitti:kappalainen-luukku-2",
+    "reitti:kappalainen-luukku-3",
+    "reitti:kappalainen-luukku-4",
+    "reitti:kappalainen-1",
+    "reitti:kappalainen-2",
+    "reitti:kappalainen-3",
+    "reitti:kappalainen-4",
+    "reitti:kappalainen-5",
+    "ovi:muuriporras",
+    "ovi:kappeli-porras",
+    "partio:piha-1",
+    "partio:piha-2"
+   ],
+   "leikkaukset": [
+    {
+     "nimi": "itasiipi-E102",
+     "keskipiste": [
+      -20.7,
+      -1.44,
+      1.35
+     ],
+     "koko": [
+      8.5,
+      3.2,
+      2.4
+     ],
+     "kierto_y": 1.5708
+    },
+    {
+     "nimi": "tornin-kierreporras",
+     "keskipiste": [
+      -20.7,
+      1.53,
+      -4.3
+     ],
+     "koko": [
+      3.4,
+      9.14,
+      3.4
+     ],
+     "kierto_y": 0.0
+    },
+    {
+     "nimi": "tornin-suora-varsi",
+     "keskipiste": [
+      -18.899,
+      3.5,
+      -7.589
+     ],
+     "koko": [
+      4.7,
+      5.2,
+      1.9
+     ],
+     "kierto_y": 1.0697
+    },
+    {
+     "nimi": "tornin-tasanne",
+     "keskipiste": [
+      -17.483,
+      4.6,
+      -10.174
+     ],
+     "koko": [
+      1.595,
+      3.0,
+      1.9
+     ],
+     "kierto_y": 1.0697
+    },
+    {
+     "nimi": "tornin-alin-kerros",
+     "keskipiste": [
+      -15.25,
+      4.9,
+      -14.25
+     ],
+     "koko": [
+      8.6,
+      3.2,
+      8.6
+     ],
+     "kierto_y": 0.0
+    },
+    {
+     "nimi": "muuriporras-sisaan",
+     "keskipiste": [
+      -18.032,
+      4.55,
+      -18.223
+     ],
+     "koko": [
+      1.8,
+      2.9,
+      1.4
+     ],
+     "kierto_y": 2.1817
+    },
+    {
+     "nimi": "muuriporras-1",
+     "keskipiste": [
+      -19.685,
+      6.1,
+      -16.81
+     ],
+     "koko": [
+      4.976,
+      6.0,
+      1.4
+     ],
+     "kierto_y": -2.0944
+    },
+    {
+     "nimi": "muuriporras-tasanne",
+     "keskipiste": [
+      -20.879,
+      7.65,
+      -14.25
+     ],
+     "koko": [
+      1.185,
+      2.9,
+      1.4
+     ],
+     "kierto_y": -1.5708
+    },
+    {
+     "nimi": "muuriporras-2",
+     "keskipiste": [
+      -19.685,
+      9.2,
+      -11.69
+     ],
+     "koko": [
+      4.976,
+      6.0,
+      1.4
+     ],
+     "kierto_y": -1.0472
+    },
+    {
+     "nimi": "kappeli-tasanne",
+     "keskipiste": [
+      -17.96,
+      10.75,
+      -10.38
+     ],
+     "koko": [
+      2.05,
+      2.9,
+      1.4
+     ],
+     "kierto_y": 0.9599
+    }
+   ],
+   "varmuus": "V kerrokset, A porras",
+   "rajat": {
+    "min": [
+     -22.3,
+     -3.04,
+     -19.51
+    ],
+    "max": [
+     -10.7,
+     12.25,
+     5.5
+    ]
+   },
+   "naapurit": [
+    "ulkoalue",
+    "kappeli",
+    "kappeli-kavely"
+   ],
+   "portaalit": [
+    {
+     "nimi": "ovi:kirkkotorni-piha",
+     "paikka": [
+      -20.7,
+      -2.74,
+      5.5
+     ],
+     "leveys": 2.0,
+     "korkeus": 2.6
+    },
+    {
+     "nimi": "ovi:kierreporras",
+     "paikka": [
+      -20.7,
+      -2.74,
+      -2.8
+     ],
+     "leveys": 1.05,
+     "korkeus": 1.95
+    },
+    {
+     "nimi": "ovi:tott-kammio",
+     "paikka": [
+      -17.244,
+      3.4,
+      -10.61
+     ],
+     "leveys": 1.05,
+     "korkeus": 2.0
+    },
+    {
+     "nimi": "ovi:paaovi",
+     "paikka": [
+      -17.637,
+      9.6,
+      -11.405
+     ],
+     "leveys": 1.0,
+     "korkeus": 1.9
+    },
+    {
+     "nimi": "ovi:kappeli-alku",
+     "paikka": [
+      -17.637,
+      9.6,
+      -11.405
+     ],
+     "leveys": 1.0,
+     "korkeus": 1.9
+    },
+    {
+     "nimi": "ovi:muuriporras",
+     "paikka": [
+      -17.63,
+      3.4,
+      -17.649
+     ],
+     "leveys": 1.0,
+     "korkeus": 1.9
+    },
+    {
+     "nimi": "ovi:kappeli-porras",
+     "paikka": [
+      -17.487,
+      9.6,
+      -11.055
+     ],
+     "leveys": 1.0,
+     "korkeus": 1.9
+    }
+   ],
+   "kamera_rajat": {
+    "katto_y": 12.0
+   },
+   "tiedostot": {
+    "nakyva": "kirkkotorni-portaat.glb",
+    "tormays": "kirkkotorni-portaat-tormays.glb",
+    "kavely": "kirkkotorni-portaat-kavely.glb"
+   },
+   "muistiarvio": {
+    "kolmiot_nakyva": 1598,
+    "tekstuurit_mt": 0,
+    "huom": "pinnat rakennuksen pinta-materiaaleista"
+   },
+   "pinta": "porras"
+  },
+  "kappeli-kavely": {
+   "kolmiot": {
+    "nakyva": 2528,
+    "-tormays": 776,
+    "-kavely": 154
+   },
+   "merkit": [
+    "aukko:ampuma-1",
+    "reitti:vouti-1",
+    "aukko:ampuma-2",
+    "reitti:vouti-2",
+    "aukko:ampuma-3",
+    "reitti:vouti-3",
+    "aukko:ampuma-4",
+    "reitti:vouti-4",
+    "aukko:ampuma-5",
+    "reitti:vouti-5",
+    "aukko:ampuma-6",
+    "reitti:vouti-6",
+    "aukko:ampuma-7",
+    "reitti:vouti-7",
+    "aukko:ampuma-8",
+    "reitti:vouti-8",
+    "portaikko:ylapaa",
+    "reitti:vouti-laskeutuminen-1",
+    "reitti:vouti-laskeutuminen-2",
+    "reitti:vouti-laskeutuminen-3",
+    "reitti:vouti-laskeutuminen-4",
+    "reitti:vouti-laskeutuminen-5",
+    "reitti:vouti-laskeutuminen-6",
+    "ovi:kaari-ovi",
+    "piilo:kaari-ovi"
+   ],
+   "leikkaukset": [
+    {
+     "nimi": "kaariovi-syvennys",
+     "keskipiste": [
+      -19.548,
+      10.8,
+      -16.995
+     ],
+     "koko": [
+      2.12,
+      3.0,
+      1.45
+     ],
+     "kierto_y": 2.618
+    },
+    {
+     "nimi": "kaariportaat-1",
+     "keskipiste": [
+      -18.634,
+      11.7,
+      -18.815
+     ],
+     "koko": [
+      4.601,
+      4.8,
+      1.35
+     ],
+     "kierto_y": 0.6545
+    },
+    {
+     "nimi": "kaariportaat-tasanne",
+     "keskipiste": [
+      -16.544,
+      12.65,
+      -20.224
+     ],
+     "koko": [
+      0.902,
+      2.9,
+      1.35
+     ],
+     "kierto_y": 0.2007
+    },
+    {
+     "nimi": "kaariportaat-2",
+     "keskipiste": [
+      -14.363,
+      13.6,
+      -19.937
+     ],
+     "koko": [
+      3.944,
+      4.8,
+      1.35
+     ],
+     "kierto_y": -0.192
+    },
+    {
+     "nimi": "kaariportaat-yla",
+     "keskipiste": [
+      -12.75,
+      14.4,
+      -19.19
+     ],
+     "koko": [
+      1.1,
+      2.6,
+      1.35
+     ],
+     "kierto_y": -2.0944
+    },
+    {
+     "nimi": "ampumakaytava",
+     "keskipiste": [
+      -15.4,
+      14.4,
+      -14.6
+     ],
+     "koko": [
+      10.9,
+      2.4,
+      10.9
+     ],
+     "kierto_y": 0.0
+    }
+   ],
+   "varmuus": "V kerrokset, A porras",
+   "rajat": {
+    "min": [
+     -21.03,
+     9.2,
+     -21.35
+    ],
+    "max": [
+     -10.1,
+     16.05,
+     -9.3
+    ]
+   },
+   "naapurit": [
+    "kappeli",
+    "kirkkotorni-portaat",
+    "ulkoalue"
+   ],
+   "portaalit": [
+    {
+     "nimi": "ovi:kaari-ovi",
+     "paikka": [
+      -18.76,
+      9.6,
+      -16.54
+     ],
+     "leveys": 1.05,
+     "korkeus": 2.4
+    }
+   ],
+   "kamera_rajat": {
+    "katto_y": 15.8
+   },
+   "tiedostot": {
+    "nakyva": "kappeli-kavely.glb",
+    "tormays": "kappeli-kavely-tormays.glb",
+    "kavely": "kappeli-kavely-kavely.glb"
+   },
+   "muistiarvio": {
+    "kolmiot_nakyva": 2528,
+    "tekstuurit_mt": 0,
+    "huom": "pinnat rakennuksen pinta-materiaaleista"
+   },
+   "pinta": "kivi"
+  },
+  "ulkoalue": {
+   "kolmiot": {
+    "-tormays": 9708,
+    "-kavely": 12000
+   },
+   "rajat": {
+    "x": [
+     -92.0,
+     -8.0
+    ],
+    "y": [
+     -8.0,
+     6.0
+    ],
+    "z": [
+     -12.0,
+     37.0
+    ]
+   },
+   "lahde": "kuori (olavinlinna-blender-v41 ulkokuori_huippu) + laituri.glb",
+   "varmuus": "kuori (mitattu)",
+   "merkit": [],
+   "leikkaukset": [],
+   "pinta": "kivi"
+  }
+ }
+}

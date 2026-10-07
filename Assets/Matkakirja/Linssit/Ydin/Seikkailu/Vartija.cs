@@ -91,6 +91,12 @@ namespace Matkakirja.Linssit.Seikkailu
         public const double NousuS = 1.5, SyoAlasS = 6, SyoKatseS = 3;
         /// <summary>Torkkuu (profiili torkku): ei näe; ääni herättää. Syö: näkee vain katsejaksoissa.</summary>
         public bool Torkkuu, Syo;
+        // Riidan ikkuna (pelattavuusmalli 8.1 huone 2): portinvartija riitelee soutajan kanssa 12 s selin porttiin, näkö 4 m ±35°.
+        public const double RiitaS = 12, RiitaNakoM = 4, RiitaKulma = 35;
+        public double Riita { get; private set; }
+        double riitaX, riitaZ;
+        /// <summary>Riita alkaa (sovitin: soutaja-2 → portinvartija-riita-1 → -2): katse kohti riitapistettä, näkö kapea ja lyhyt.</summary>
+        public void AloitaRiita(double x, double z, double kesto = RiitaS) { if (Tila != VartijanTila.Partio) return; Riita = kesto; riitaX = x; riitaZ = z; }
         double syoKello;
         /// <summary>Syödessä katse ylhäällä (katsejakso 3 s yhdeksästä).</summary>
         public bool SyoKatsoo => Syo && syoKello % (SyoAlasS + SyoKatseS) >= SyoAlasS;
@@ -137,13 +143,13 @@ namespace Matkakirja.Linssit.Seikkailu
             if (s.Piilossa || !s.NakolinjaVapaa || !Profiili.Havaitsee) return 0;
             if (Torkkuu && !SyoKatsoo) return 0;
             double dx = s.PelaajaX - s.VartijaX, dz = s.PelaajaZ - s.VartijaZ, d = Math.Sqrt(dx * dx + dz * dz);
-            double nako = Valppaus > 0 ? Math.Max(Profiili.NakoM, ValpasNakoM * Profiili.NakoM / NakoM) : Profiili.NakoM;
+            double nako = Riita > 0 ? RiitaNakoM : Valppaus > 0 ? Math.Max(Profiili.NakoM, ValpasNakoM * Profiili.NakoM / NakoM) : Profiili.NakoM;
             double liike = s.PelaajaVauhti is double pv ? (pv < 0.15 ? 0.8 : pv > 2.5 ? 1.25 : 1.0) : 1.0;
             double ulottuma = nako * (0.35 + 0.65 * Math.Max(0, Math.Min(1, s.Valoisuus))) * (s.Hiipii ? 0.7 : 1) * liike * (Helpotettu ? 0.85 : 1);
             if (d > ulottuma) return 0;
             double ero = Math.Abs(Kulma(Suunta(dx, dz) - Yaw));
-            bool lahella = d < LahiM;                       // aivan vieressä vartija tuntee pelaajan selkänsäkin takaa (hitaammin)
-            double kulma = Profiili.NakoKulma;
+            bool lahella = d < LahiM && Riita <= 0;         // aivan vieressä vartija tuntee pelaajan selkänsäkin takaa (ei riidan tuoksinassa)
+            double kulma = Riita > 0 ? RiitaKulma : Profiili.NakoKulma;
             if (ero > kulma && !lahella) return 0;
             double keskelle = ero <= kulma ? 1 - 0.5 * ero / kulma : 0.35;
             double lahelle = 1 - d / ulottuma;
@@ -157,6 +163,13 @@ namespace Matkakirja.Linssit.Seikkailu
             kello += dt;
             if (Tila == VartijanTila.Kiinni) { Vauhti = 0; OteS += dt; return; }
             if (horjahdus > 0) { horjahdus -= dt; Vauhti = 0; return; }
+            if (Riita > 0)
+            {
+                // Riidan aikana seisoo ja katsoo riitapistettä; havainto katkaisee riidan (epäily alkaa tavallisesti).
+                Riita -= dt;
+                if (Tila != VartijanTila.Partio || Mittari >= Raja) Riita = 0;
+                else { Vauhti = 0; Kaanny(dt, Suunta(riitaX - s.VartijaX, riitaZ - s.VartijaZ)); double vr = NakoVoima(s); if (vr > 0) { Mittari = Math.Min(1, Mittari + vr * dt); EpailyX = s.PelaajaX; EpailyZ = s.PelaajaZ; } else Mittari = Math.Max(0, Mittari - MittariLaskuS * dt); if (Mittari < Raja) return; Riita = 0; }
+            }
             if (Torkkuu)
             {
                 // Torkkuva vartija istuu: syödessä katsejaksot, ääni herättää (nousee NousuS), täysi mittari herättää jahtiin.
