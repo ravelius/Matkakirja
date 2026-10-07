@@ -14,7 +14,7 @@ Ennen junaa/TF:ää vain automaattiset testit (Kartta/Peli/Linssit-testit, tarki
 käännös. EI savua, EI Laitetestaajaa, EI stillejä, EI iPad-mittauksia, EI toistoja ennen korjausta. Juna 1–2/pv, kun valmista on.
 Muisti testaus-kevyemmin-20261007.
 
-## JUNA 162 TÄNÄÄN (omistaja 16.1x: "tee tänään yksi päivitys klo 22"): runko nyt **cac41f5b7** (+ Siirtoseppä a7adab9f ⊇ 78e56088; testit 447/419/835, unity 0). Aiempi **3bc7680c1** (= baaa24445 + NUI 34cf54b0, KUITATTU).
+## JUNA 162 TÄNÄÄN (omistaja 16.1x: "tee tänään yksi päivitys klo 22"): runko nyt **13c1c0269** (+ Siirtoseppä ef6b092d ⊇ a7adab9f ⊇ 78e56088, v44g-peili palalle; Päätoimittajalta pyydetty hyväksyntä ef6b092d:lle; testit 447/419/835, unity 0). Aiempi **3bc7680c1** (= baaa24445 + NUI 34cf54b0, KUITATTU).
 Siirtoseppä 78e56088 KUITATTU → hän yhdistää 3bc7680c1:n ja ratkaisee LinssiOhjain.cs:n, SHA viimeistään 21.00.
 21.15 runko lukittu → muutoslokin SISÄLTÖLISTA Julkaisijalle heti (hän tekee PR:n ennen SHA:ta) → testit → ~21.25 proto-kaanna
 (lukko vapaa 21.10 alkaen) → VIE ilman savua → update-ref juna/b13 c076765c → <runko> + juna.log → BUILD 162 master-merge →
