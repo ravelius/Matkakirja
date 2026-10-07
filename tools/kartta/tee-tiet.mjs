@@ -73,7 +73,7 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   const id = arg('id'), ulos = arg('ulos');
   if (!id || !ulos) { console.error('käyttö: --id <id> --lat <lat> --lon <lon> [--r 4000] --ulos <paketti>'); process.exit(1); }
   const vm = arg('valimuisti'); if (vm) mkdirSync(vm, { recursive: true });
-  const t = await teeTiet({ lat: Number(arg('lat')), lon: Number(arg('lon')), r: Number(arg('r', '4000')), valimuisti: vm ? join(vm, `tiet-${id}-r${arg('r', '4000')}.json`) : null });
+  const t = await teeTiet({ lat: Number(arg('lat')), lon: Number(arg('lon')), r: Number(arg('r', '4000')), valimuisti: vm ? join(vm, `tiet-${id}-r${arg('r', '4000')}-${Number(arg('lat')).toFixed(4)},${Number(arg('lon')).toFixed(4)}.json`) : null });
   const kansio = join(ulos, 'kartta', 'tiet-v1'); mkdirSync(kansio, { recursive: true });
   writeFileSync(join(kansio, `${id}.json`), JSON.stringify(t));
   const lkm = {}; for (const x of t.tiet) lkm[x.t] = (lkm[x.t] ?? 0) + 1;
