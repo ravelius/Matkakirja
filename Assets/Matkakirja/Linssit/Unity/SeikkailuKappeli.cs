@@ -241,7 +241,7 @@ namespace Matkakirja.Natiivi
             DioraamaSovitin.KameraVapaa = true;
             var t = typeof(SeikkailuKappeli).Assembly.GetType("Matkakirja.Natiivi.SeikkailuNousu");
             var m = t?.GetMethod("Aloita", System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Static);
-            Action valmis = () => kirjaa?.Invoke("seikkailu: pelattava pala valmis (nousu päättyi)");
+            Action valmis = () => { kirjaa?.Invoke("seikkailu: pelattava pala valmis (nousu päättyi)"); SeikkailuTietokerros.Aktiivinen?.Loppu(); };
             if (m != null) { try { m.Invoke(null, new object[] { kamera, kamera.position, valmis }); yield break; } catch (Exception e) { kirjaa?.Invoke("seikkailu: SeikkailuNousu: " + (e.InnerException?.Message ?? e.Message)); } }
             // Varanousu (kunnes LS2:n SeikkailuNousu on mukana): holvin läpi 80 m linnan ylle katse alas keskukseen, 9 s.
             var alku = kamera.position; var loppuP = keskus + new Vector3(-40f, 80f, -60f);

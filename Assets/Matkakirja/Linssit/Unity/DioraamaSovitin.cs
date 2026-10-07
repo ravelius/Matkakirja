@@ -927,6 +927,7 @@ namespace Matkakirja.Natiivi
             yield return VarmistaKavelyData();
             SeikkailuPelaaja.Poista(); SeikkailuVene.Poista(); cm?.SeikkailuPois(); veneLaituriin = false; veneRepliikki = 0;
             SeikkailuRepliikit.Luo(nayttamo.transform, MediaJuuri + "/seikkailu/" + RakennusId + "/repliikit-v1/manifest.json", o.Kirjaa);
+            SeikkailuTietokerros.Luo(nayttamo.transform, MediaJuuri + "/seikkailu/" + RakennusId + "/tietokerros-v1/tietokerros.json", RakennusId, o.Kirjaa);
             double vesi = rakennus.Ulkokuori?.VesiY ?? 0;
             var reitti = new List<(double X, double Y, double Z)>(); double? loppuSuunta = null;
             if (SeikkailuKavely.Data != null)
