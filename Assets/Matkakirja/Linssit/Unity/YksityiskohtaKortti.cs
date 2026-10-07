@@ -139,6 +139,15 @@ namespace Matkakirja.Linssit
             float sis = SisennysOsuus * lev, alaPx = AlaPt * Mathf.Max(1f, Screen.dpi > 0 ? Screen.dpi / 163f : 2f);
             float kuvasuhde = kuva.height > 0 ? (float)kuva.width / kuva.height : 1.5f;
             float kork = (lev - 2 * sis) / kuvasuhde + 2 * sis + alaPx;
+            // Pystykuva ei saa venyä ruudun yli (iPad-vaaka 21.49: Notre-Damen kaiverrus 86 % korkeudesta, yläreuna ruudun ulkona):
+            // korkeus enintään 72 % (vaaka) / 56 % (pysty) ruudusta, leveys kutistuu kuvasuhteen mukaan.
+            float korkMax = (h > w * 1.2f ? 0.56f : 0.72f) * h;
+            if (kork > korkMax)
+            {
+                lev = (korkMax - alaPx) / ((1f - 2f * SisennysOsuus) / kuvasuhde + 2f * SisennysOsuus);
+                sis = SisennysOsuus * lev;
+                kork = korkMax;
+            }
             mat.SetVector("_Koko", new Vector4(lev, kork, 0, 0));
             mat.SetFloat("_KulmaPt", 12f * lev / 320f);
             mat.SetFloat("_ReunaPt", Mathf.Max(1f, lev / 320f));
