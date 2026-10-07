@@ -30,7 +30,7 @@ namespace Matkakirja.Natiivi
         public static Func<string> KaupunkiId;
         public const string Juuri = "https://media.matkakirja.app/aanet/";
         AaniKartta kartta; string karttaId, karttaLadataan;
-        public const float Taso = 0.55f, KelloTaso = 0.6f, VapautusS = 5f;   // kello 0,6 (Päätoimittaja 7.10.: erottuu tapahtumana)
+        public const float Taso = 0.55f, KelloTaso = 1f, VapautusS = 5f;   // kello: puheettomana +7–8 dB maiseman yli (Päätoimittaja 7.10.; 0,6 antoi mitaten +4–5 dB)
 
         static KaupunkiAanimaisemaSoitin instanssi;
 
