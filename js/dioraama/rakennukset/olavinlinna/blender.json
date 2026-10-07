@@ -1,7 +1,7 @@
 {
   "rakennus": "olavinlinna",
-  "hash": "10bcc6905b2e87a2",
-  "kansio": "dioraama/olavinlinna/blender/10bcc6905b2e87a2/",
+  "hash": "604ef19e9d33d1d4",
+  "kansio": "dioraama/olavinlinna/blender/604ef19e9d33d1d4/",
   "tiedostot": [
     {
       "polku": "hahmot/apulainen-1500-faceit.glb",
@@ -260,28 +260,28 @@
     },
     {
       "polku": "kavely/kirkkotorni-portaat-kavely.glb",
-      "sha256": "39d6d50e33d9cb48e18c418155a8336b583b130108dc9158779b16ce2e3a8556",
-      "tavuja": 4916
+      "sha256": "20aada5c1f0bf938fa298ce2e7577a9eab6c245a6912c31b877286ca695c5d52",
+      "tavuja": 4976
     },
     {
       "polku": "kavely/kirkkotorni-portaat-tormays.glb",
-      "sha256": "b5255c6af39bc76805065208b29917b41ae2d4ceeaf2b164d6fa18e388489f1c",
-      "tavuja": 20200
+      "sha256": "31ceacbe13576a38287eab3c2de625e3ee26adc0de34959b23497d854196a519",
+      "tavuja": 20740
     },
     {
       "polku": "kavely/kirkkotorni-portaat.glb",
-      "sha256": "3248975caa4a14ddded66ae84e92875eda5d69c97c34a5f726208347f4eb1b50",
-      "tavuja": 102608
+      "sha256": "08967f10096d70c4e28ba19b34cf03b5baff4a71519a83ba5639f04e2676c42a",
+      "tavuja": 105188
     },
     {
       "polku": "kavely/merkit.json",
-      "sha256": "ae3da383e677149f7d73bf7fd25197766cc6982062e68be9f2841d7fa5a51ddb",
-      "tavuja": 14245
+      "sha256": "fec16bf7111c6ecf3887c3439348952101e43d93d52550a90fc379ca1d1fa096",
+      "tavuja": 20934
     },
     {
       "polku": "kavely/osat.json",
-      "sha256": "d7df3a9f6ece00e6b63968a302ae5de807743a8e3541a12a1197d2ce234eed33",
-      "tavuja": 13226
+      "sha256": "59140be64321409aedfa07903b501694ac4263ce247f9b70e89d583084693ceb",
+      "tavuja": 13401
     },
     {
       "polku": "kavely/pikkupiha-kavely.glb",
