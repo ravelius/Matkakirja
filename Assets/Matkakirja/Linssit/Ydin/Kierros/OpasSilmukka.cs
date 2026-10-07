@@ -531,7 +531,11 @@ namespace Matkakirja.Linssit.Kierros
         }
 
         /// <summary>Siirtoruudun jälkeen näkymä on auki näin kauan ennen kertojaa (omistaja 6.10. 16.5x: ~1,3 s).</summary>
-        public const double AvausTaukoS = 1.3;
+        // Päätoimittaja 7.10. 22.5x, mitattu BUILD 163 (linssi → Pariisi): latausikkuna häipyy 1,1 s siirron jälkeen
+        // (mk-astroavaus--haipyy), ja puhe alkoi 1,3 s:n tauolla vain 0,16 s sen jälkeen → tavoite ≥ 1 s näkymän auettua: 1,1 + 1,2.
+        public const double AvausTaukoS = 2.3;
+        /// <summary>Siirron jälkeinen avaustauko käynnissä (latausikkuna häipyy, puhe ei vielä ala).</summary>
+        public bool AvausTauolla => avausViive > 0;
         double avausViive;
 
         // ---- KIERROKSEN KESKEYTYS, JATKO JA LOPETUS (omistaja TF 149, Päätoimittaja 16.3x/16.4x, juna 151) ----

@@ -113,8 +113,8 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama(puheita, puhe.Count, "kertoja ei ala ennen näkymää");
             edistys = 0.97;
             for (int i = 0; i < 5; i++) s.Paivita(0.1, _ => 5);
-            Oleta.Tosi(!puhe.Contains("Colosseum"), "avaustauko: kertoja ei vielä (1,3 s)");
-            for (int i = 0; i < 15; i++) s.Paivita(0.1, _ => 5);
+            Oleta.Tosi(!puhe.Contains("Colosseum"), "avaustauko: kertoja ei vielä (2,3 s: latausikkuna häipyy 1,1 s + 1,2 s)");
+            for (int i = 0; i < 25; i++) s.Paivita(0.1, _ => 5);
             Oleta.Tosi(!s.Siirtymassa && s.Vaihe == OpasVaihe.Puhuu && s.Nykyinen?.Id == "Colosseum", "näkymä auki, kertoja alkaa");
             Oleta.Tosi(puhe.Contains("Colosseum"));
         }
@@ -204,7 +204,7 @@ namespace Matkakirja.Linssit.Testit
             maa = 290;
             s.Paivita(0.1, _ => double.NaN);
             Oleta.Tosi(s.Siirtymassa, "korjatun kehyksen laatoille hetki");
-            for (int i = 0; i < 25; i++) s.Paivita(0.1, _ => double.NaN);
+            for (int i = 0; i < 35; i++) s.Paivita(0.1, _ => double.NaN);
             Oleta.Tosi(!s.Siirtymassa && s.Vaihe == OpasVaihe.Puhuu, "näkymä auki näytteen jälkeen");
             Oleta.Tosi(s.NykyinenKehys.MaaM == 290 && s.Asento.KatseKorkeusM > 200, $"kehys oikealla maalla (katse {s.Asento.KatseKorkeusM:F0} m)");
         }
