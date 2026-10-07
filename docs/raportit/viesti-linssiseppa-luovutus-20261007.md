@@ -238,3 +238,11 @@ NUI:n osa on `natiivi-ui/sallitut-157` 0f770be2. LS2:n lista on tiedostossa `pro
   - Ehdotettu Päätoimittajalle: mittaus oikealla laitteella TF 162:n `lento v3 kehysloki 1` -komennolla ennen korjausta (juna 163).
   - Työkalut: `tyokalut/linssiseppa-ajot/alku-kaynnista.sh` / `alku-lopeta.sh` (VIDEO=0), `mittaa-kehykset.py`.
   - Tilinvaihto noin klo 24. Luovutus valmis viimeistään 23.40.
+- 16.5x–17.xx:
+  - alkulento-v3b 4826b9ba1 ei junaan (Päätoimittaja). Omistaja testaa alkulennon TF 162:lla. Jos nykäys näkyy, Natiiviseppä ajaa `lento v3 kehysloki 1` iPadilla ja teen kohdennetun korjauksen.
+  - UUSI, juna 163: Pariisin yksityiskohtakuvat, `linssiseppa/yksityiskohdat` 8bc2a42fc (masterin 161 päällä). Kuittausta pyydetty.
+    - Ydin: OpasYksityiskohdat (luku, polut, sana-ajat, ankkuri, ajoitus) ja testit.
+    - YksityiskohtaKortti: overlay-kerros 17, Nostokortti.shader.
+    - OpasSovitin: polut /opas/aineistotista, kohteen `aani_ajat`, avauksen .ajat.json.
+    - Pelikoodarin #4152 (worker-kentät) vahvistettu vanhoille appeille.
+    - Korttia ei ole nähty simussa (linjaus): ulkoasu ja tekstikoko nähdään vasta TF 163:ssa.
