@@ -9,7 +9,7 @@ namespace Matkakirja.Natiivi
 {
     public sealed class DioraamaSyke
     {
-        const string Avain = "dioraama-vihje-nahty";
+        static string Avain => DioraamaSovitin.RakennusId == DioraamaSovitin.Oletusrakennus ? "dioraama-vihje-nahty" : "dioraama-vihje-nahty:" + DioraamaSovitin.RakennusId;
         static readonly int IdKoko = Shader.PropertyToID("_Koko"), IdPeitto = Shader.PropertyToID("_Peitto"), IdAika = Shader.PropertyToID("_Aika");
 
         public static bool Nahty

@@ -404,6 +404,9 @@ namespace Matkakirja.Linssit.Dioraama
         /// <summary>Ei koskaan null (era 2b) — LueValaistus asettaa aina joko lähteen sisalla-olion tai
         /// Sisalla:n omat oletusarvot (1, 1).</summary>
         public Sisalla Sisalla = new Sisalla();
+        /// <summary>Etäisyysutu kameran etäisyyden kertoimina (Linnanrakentaja 7.10.: valaistus.sumu {alku, loppu}, Kielletty 0,9/3,2);
+        /// null = näyttämön oletus (Olavinlinna ennallaan).</summary>
+        public (double Alku, double Loppu)? Sumu;
     }
 
     /// <summary>Koko rakennus (kohta 1: RAKENNUS + rakennuskoneen lisäykset, kohta 3).</summary>
@@ -553,6 +556,12 @@ namespace Matkakirja.Linssit.Dioraama
     public sealed class Ymparisto
     {
         public string Huippu, Normaali, Kevyt;
+        /// <summary>Staattiset lisämallit kanonisissa koordinaateissa (historiamoottori V0, 7.10.2026: rantakivet, myöhemmin vene ym.):
+        /// ymparisto.mallit[] { id, huippu, kevyt }; Linnanrakentajan ymparisto.rantakivet { huippu, kevyt } luetaan id:llä "rantakivet".</summary>
+        public List<(string Id, string Huippu, string Kevyt)> Mallit = new List<(string, string, string)>();
+        /// <summary>Sijoittamattomat mallit (rekvisiitta, origo omassa juuressaan; Timeline tai seikkailu sijoittaa): ymparisto.mallit[] jossa
+        /// "maailmaan": false, tai id "vene" ilman maailmaan-kenttää (Linnanrakentajan v43: vene ei ole maailmaan sijoitettu).</summary>
+        public List<(string Id, string Huippu, string Kevyt)> Rekvisiitta = new List<(string, string, string)>();
         public string OrtoHuippu, OrtoNormaali, OrtoKevyt;
         public string Puut, Puukortit, Horisontti, HorisonttiKuva;
         /// <summary>Veden syvyyskartta (8 bit, 0 = ranta): kuva, pikselin koko, metriä/arvo ja kuvan vasen yläkulma (Blender x, y).</summary>
@@ -624,6 +633,10 @@ namespace Matkakirja.Linssit.Dioraama
     public sealed class Rakennus
     {
         public string Id, Nimi, Otsikko;
+        /// <summary>Nimiruudun alarivi (Linnanrakentaja 7.10.: "Peking · 1873"); null = DioraamaSovitin.SaapumisAlarivi.</summary>
+        public string Alarivi;
+        /// <summary>Historiamoottorin kävelygeometria (kavely { osat, merkit }, polut paketin juuresta); null = ei kävelytilaa.</summary>
+        public string KavelyOsat, KavelyMerkit;
         public int Versio;
         public Asento YleisVaaka, YleisPysty;
         public V3 PuluLaskeutuminen;
@@ -685,6 +698,9 @@ namespace Matkakirja.Linssit.Dioraama
             };
             r.Tunnelma = MiniJson.Teksti(juuri, "tunnelma");
             r.Nimilaput = MiniJson.Totuus(juuri, "nimilaput", true);
+            r.Alarivi = MiniJson.Teksti(juuri, "alarivi");
+            var kav = MiniJson.ObjektiTaiNull(MiniJson.Kentta(juuri, "kavely"));
+            r.KavelyOsat = MiniJson.Teksti(kav, "osat"); r.KavelyMerkit = MiniJson.Teksti(kav, "merkit");
             foreach (var eo in MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(juuri, "etsinnat")))
             {
                 var e = MiniJson.ObjektiTaiNull(eo);
@@ -726,6 +742,15 @@ namespace Matkakirja.Linssit.Dioraama
                     Horisontti = MiniJson.Teksti(ymp, "horisontti"), HorisonttiKuva = MiniJson.Teksti(ymp, "horisontti_kuva"),
                     SyvyysKuva = MiniJson.Teksti(syv, "kuva"),
                 };
+                foreach (var mo in MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(ymp, "mallit")))
+                    if (MiniJson.ObjektiTaiNull(mo) is Dictionary<string, object> m && !string.IsNullOrEmpty(MiniJson.Teksti(m, "huippu") ?? MiniJson.Teksti(m, "kevyt")))
+                    {
+                        var mid = MiniJson.Teksti(m, "id") ?? "malli";
+                        bool maailmaan = MiniJson.Kentta(m, "maailmaan") is bool mb ? mb : mid != "vene";
+                        (maailmaan ? y.Mallit : y.Rekvisiitta).Add((mid, MiniJson.Teksti(m, "huippu"), MiniJson.Teksti(m, "kevyt")));
+                    }
+                if (MiniJson.ObjektiTaiNull(MiniJson.Kentta(ymp, "rantakivet")) is Dictionary<string, object> rk && !string.IsNullOrEmpty(MiniJson.Teksti(rk, "huippu") ?? MiniJson.Teksti(rk, "kevyt")))
+                    y.Mallit.Add(("rantakivet", MiniJson.Teksti(rk, "huippu"), MiniJson.Teksti(rk, "kevyt")));
                 if (MiniJson.Luku(syv, "pikseli_m") is double pm) y.SyvyysPikseliM = pm;
                 if (MiniJson.Luku(syv, "kerroin_m") is double km) y.SyvyysKerroinM = km;
                 var origo = MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(syv, "origo"));
@@ -961,6 +986,8 @@ namespace Matkakirja.Linssit.Dioraama
             var sisalla = MiniJson.ObjektiTaiNull(MiniJson.Kentta(o, "sisalla"));
             if (sisalla != null) v.Sisalla = new Sisalla { Aurinko = MiniJson.Luku(sisalla, "aurinko") ?? 1,
                 Taivas = MiniJson.Luku(sisalla, "taivas") ?? 1 };
+            var sumu = MiniJson.ObjektiTaiNull(MiniJson.Kentta(o, "sumu"));
+            if (sumu != null && MiniJson.Luku(sumu, "alku") is double sa && MiniJson.Luku(sumu, "loppu") is double sl && sa > 0 && sl > sa) v.Sumu = (sa, sl);
             return v;
         }
 

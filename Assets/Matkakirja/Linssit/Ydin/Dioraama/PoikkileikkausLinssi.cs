@@ -352,6 +352,14 @@ namespace Matkakirja.Linssit.Dioraama
             kertojaOhitukset.Clear();
         }
 
+        /// <summary>Historiamoottorin kävelytila (7.10.): kertojan kierros pois (ei lentoja eikä jaksotekstejä kävellessä); ↻
+        /// (KertojaUudelleen) palauttaa sen.</summary>
+        public void KertojaPois()
+        {
+            kertojaVainUusintana = true;
+            kertojaAlku = -1; kertojaLahto = null; kertojaOhitukset.Clear();
+        }
+
         /// <summary>Jakson pysähdys: datan kesto, mutta vähintään puheen kesto + 0,5 s (Päätoimittaja 1.10., #3742: isoisän
         /// puhe ei katkea jakson vaihtuessa, vaikka kesto_s jäisi datassa lyhyeksi). Puhe alkaa tekstin noustessa lennon
         /// lopussa, joten teksti näkyy vähintään tämän ajan.</summary>

@@ -39,6 +39,8 @@ namespace Matkakirja.Natiivi
         /// <summary>Hehkun (Bloom) lämmin sävy, erä 2: #ffd9a8.</summary>
         static readonly Color HehkuSavy = new Color(1f, 0.851f, 0.6588f);
         const float SumuAlkuKerroin = 1.6f, SumuLoppuKerroin = 6f;
+        /// <summary>Lähileikkauksen tavoite metreinä (0 = oletus); DioraamaSovitin asettaa puolilähikuvassa.</summary>
+        public float LahiLeikkaus; float lahiNyt;
 
         static readonly int IdValo = Shader.PropertyToID("_DioraamaValo"), IdLepatus = Shader.PropertyToID("_DioraamaLepatus"),
             IdSumuVari = Shader.PropertyToID("_DioraamaSumuVari"), IdSumu = Shader.PropertyToID("_DioraamaSumu");
@@ -299,10 +301,19 @@ namespace Matkakirja.Natiivi
             // Ympäristö (1.10.2026): rannat 2 km ja horisontti 10 km näkyvät, joten kaukotaso 16 km ja ilmaperspektiivin
             // usva alkaa vasta kolminkertaisen katseluetäisyyden jälkeen ja on täysi 9 km:ssä (horisonttirengas häipyy taustaan).
             bool ymparisto = DioraamaYmparisto.Kaytossa;
-            Kamera.nearClipPlane = ymparisto ? 0.5f : 0.3f;
+            // Puolilähikuvan lähileikkaus (DioraamaSovitin): kameran ja puhujan väliin jäävä lähigeometria (kynttiläjalka, seinän reuna)
+            // ei peitä puhujaa (Päätoimittaja 7.10.); pehmeä muutos, ettei leikkaus nyi.
+            lahiNyt = Mathf.MoveTowards(lahiNyt, LahiLeikkaus, 2f * Time.unscaledDeltaTime);
+            Kamera.nearClipPlane = Mathf.Max(ymparisto ? 0.5f : 0.3f, lahiNyt);
             Kamera.farClipPlane = ymparisto ? 16000f : 2000f;
             float sumuLoppu = ymparisto ? 9000f : Mathf.Min(d * SumuLoppuKerroin, Kamera != null ? Kamera.farClipPlane * 0.9f : 1800f);
             float sumuAlku = ymparisto ? Mathf.Max(d * 3f, 300f) : Mathf.Min(d * SumuAlkuKerroin, sumuLoppu * 0.6f);
+            // Rakennuskohtainen etäisyysutu (valaistus.sumu, kameran etäisyyden kertoimina; Kielletyn ilmakuvissa maa näkyi horisonttiin).
+            if (DioraamaSovitin.Linssi?.Rakennus?.Valaistus?.Sumu is { } rs)
+            {
+                sumuLoppu = Mathf.Min(d * (float)rs.Loppu, Kamera.farClipPlane * 0.9f);
+                sumuAlku = Mathf.Min(d * (float)rs.Alku, sumuLoppu * 0.9f);
+            }
             float h = Mathf.Clamp01((Time.unscaledTime - haivytysAlku) / haivytysKesto);
             if (h < 1f)
             {

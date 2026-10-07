@@ -153,7 +153,7 @@ namespace Matkakirja.Natiivi
         public static void AsetaKehittajatila(bool paalla)
         {
 #if MATKAKIRJA_APPSTORE
-            return;   // App Store: kynnykset aina
+            if (!Matkakirja.Natiivi.Asetukset.Kehittaja) return;   // App Store: kynnykset aina, paitsi kehittäjäkoodilla (omistaja 7.10.)
 #endif
             Linssirekisteri.Kehittajatila = paalla;
             PlayerPrefs.SetInt(KehittajatilaAvain, paalla ? 1 : 0);
@@ -176,6 +176,18 @@ namespace Matkakirja.Natiivi
         }
 
         public static bool EsittelylinssitAuki => PlayerPrefs.GetInt(EsittelyAvain, 0) == 1;
+
+        /// <summary>Esittelylinssit kiinni (testaajatilan poisto, omistaja 7.10.): kynnykset kuten ilman esittelyä.</summary>
+        public static void SuljeEsittelylinssit()
+        {
+            PlayerPrefs.DeleteKey(EsittelyAvain);
+            PlayerPrefs.Save();
+#if MATKAKIRJA_APPSTORE
+            Linssirekisteri.Kehittajatila = Matkakirja.Natiivi.Asetukset.Kehittaja && PlayerPrefs.GetInt(KehittajatilaAvain, 0) == 1;
+#else
+            Linssirekisteri.Kehittajatila = PlayerPrefs.GetInt(KehittajatilaAvain, KehittajatilaOletus ? 1 : 0) == 1;
+#endif
+        }
 
         /// <summary>Asettaa ja muistaa astronautin reliefin kylläisyyden (0,8 tai 1,0); vaikuttaa seuraavaan avaukseen.</summary>
         public static void AsetaAstronautinKyllaisyys(float arvo)
@@ -214,7 +226,8 @@ namespace Matkakirja.Natiivi
                 PlayerPrefs.GetFloat(KyllaisyysAvain, (float)Matkakirja.Linssit.Astronautti.AstronauttiLinssi.WebinKyllaisyys);
             // Kehittäjätila (kaikki linssit auki): sisäinen build oletuksena päällä, App Store ei koskaan.
 #if MATKAKIRJA_APPSTORE
-            Linssirekisteri.Kehittajatila = false;   // App Store: kynnykset aina, ei kytkintä
+            // App Store: kynnykset oletuksena; kehittäjäkoodilla KOKEET-kytkin toimii (omistaja 7.10. 12.5x).
+            Linssirekisteri.Kehittajatila = Matkakirja.Natiivi.Asetukset.Kehittaja && PlayerPrefs.GetInt(KehittajatilaAvain, 0) == 1;
 #else
             Linssirekisteri.Kehittajatila = PlayerPrefs.GetInt(KehittajatilaAvain, KehittajatilaOletus ? 1 : 0) == 1;
 #endif
@@ -2152,6 +2165,15 @@ namespace Matkakirja.Natiivi
                     else if (osat.Length > 1 && osat[1] == "jatka") Kirjaa($"opas: jatka → {OpasSovitin.JatkaKierrosta()}");
                     else if (osat.Length > 2 && osat[1] == "kysy") Kirjaa($"opas: kysy → {OpasSovitin.Kysy(string.Join(" ", osat.Skip(2)))}");
                     // Kartan kaupunkielementti (juna 159): opas suoraan kaupunkitilaan sallittujen listan id:llä tai nimellä.
+                    else if (osat.Length > 3 && osat[1] == "kori" && osat[2] == "aanet") { PalloKori.AaniSarja = osat[3]; Kirjaa($"opas: kori äänet {PalloKori.AaniSarja}"); }
+                    else if (osat.Length > 2 && osat[1] == "kori") { PalloKori.Paalla = osat[2] == "1"; Kirjaa($"opas: kori {(PalloKori.Paalla ? "päällä" : "pois")}"); }
+                    else if (osat.Length > 3 && osat[1] == "pinta")
+                    {
+                        var pp = new List<(double, double)>();
+                        for (int i = 2; i + 1 < osat.Length; i += 2) pp.Add((Luku(osat[i]), Luku(osat[i + 1])));
+                        Kirjaa($"opas: pinta → {OpasSovitin.Pinta(pp)}");
+                    }
+                    else if (osat.Length > 2 && osat[1] == "opastus" && osat[2] == "nollaa") { OpasSovitin.OpastusKuultu = false; Kirjaa("opas: opastus nollattu (seuraava kyyti soittaa)"); }
                     else if (osat.Length > 2 && osat[1] == "kaupunkitila") Kirjaa($"opas: kaupunkitila → {OpasSovitin.AvaaKaupunkitila(string.Join(" ", osat.Skip(2)))}");
                     else if (osat.Length > 2 && osat[1] == "liiku")
                     {

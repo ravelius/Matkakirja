@@ -118,3 +118,16 @@ extern "C" void MatkakirjaMacSyote_Laite(double* ulos)
     ulos[2] = (double)pi.thermalState;
     ulos[3] = pi.lowPowerModeEnabled ? 1.0 : 0.0;
 }
+
+// Näkyvyys (omistaja 7.10.2026 13.0x, Mac TF: kokonäytön ikkuna toisessa Spacessa ei valittuna piti ~30 % prosessoria).
+// Ruudunpaivitys lepuuttaa: bitti 0 = jokin sovelluksen ikkuna näkyy (occlusionState Visible, ei pienennetty, sovellus ei
+// piilotettu), bitti 1 = sovellus on aktiivinen ja sillä on avainikkuna (valittuna).
+extern "C" int MatkakirjaMacSyote_Nakyvyys(void)
+{
+    int tila = 0;
+    if (!NSApp.isHidden)
+        for (NSWindow* w in [NSApp windows])
+            if (w.isVisible && !w.isMiniaturized && (w.occlusionState & NSWindowOcclusionStateVisible) != 0) { tila |= 1; break; }
+    if (NSApp.isActive && NSApp.keyWindow != nil) tila |= 2;
+    return tila;
+}

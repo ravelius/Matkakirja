@@ -101,6 +101,17 @@ def main():
             if lapsi: tile['children'] = [lapsi]
             lapsi = tile
         juuri = lapsi
+        # MAAPOHJAHELMA (Linnanrakentaja giza-v2, glb/<kohde>-helma.glb): hiekkalevy 1 m Googlen pinnan alla ~70 m leikkauksen yli,
+        # ettei leikkausreiän reunassa näy taustaa. Erillinen lapsi ADD-tarkennuksella tyhjän juuren alla: piirretään aina mallin rinnalla.
+        helma = os.path.join(a.lahde, 'glb', f'{kid}-helma.glb')
+        if os.path.exists(helma):
+            shutil.copyfile(helma, os.path.join(kansio, 'helma.glb'))
+            hl, hh, hk = glb_tiedot(helma)
+            bl = [min(lo[i], hl[i]) for i in range(3)]; bh = [max(hi[i], hh[i]) for i in range(3)]
+            # Tyhjä juuri tarkennetaan aina (virhe 10 000): muuten kaukaa (5 km) piirrettäisiin vain sisällötön juuri (simu 7.10. 10.51).
+            juuri = {'boundingVolume': {'box': laatikko(bl, bh)}, 'geometricError': 10000.0, 'refine': 'ADD',
+                     'children': [juuri, {'boundingVolume': {'box': laatikko(hl, hh)}, 'geometricError': 0.0, 'content': {'uri': 'helma.glb'}}]}
+            print(f'{kid}: helma {hk} kolmiota')
         juuri['transform'] = enu_matriisi(k['lat'], k['lon'], h)
         # Tilesetin oma virhe suuri: malli piirretään aina, kun Googlen tiilet alueella näkyvät (leikkausreikä ei saa jäädä tyhjäksi).
         ts = {'asset': {'version': '1.1', 'generator': 'Matkakirja omat_mallit_tileset.py'}, 'geometricError': 10000.0, 'root': juuri}

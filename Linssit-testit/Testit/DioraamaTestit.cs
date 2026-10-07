@@ -1094,6 +1094,28 @@ namespace Matkakirja.Linssit.Testit
             Lahella(0, Math.IEEERemainder(lyLoppu.Atsimuutti - yleis.Atsimuutti, 360), "lyhyt kaari päättyy yleisnäkymään", 0.05);
         }
 
+        // Historiamoottori V0: staattiset ympäristömallit (mallit[] ja Linnanrakentajan rantakivet-kenttä).
+        [Testi] static void YmparistonMallit()
+        {
+            var r = DioraamaData.Lue(KeittioFixture.Replace("\"yleiskamera\": {", "\"ymparisto\": {\"huippu\": \"m.glb\", \"mallit\": [{\"id\": \"vene\", \"huippu\": \"v.glb\", \"kevyt\": \"vk.glb\"}, " +
+                "{\"id\": \"laituri2\", \"huippu\": \"l.glb\"}, {\"id\": \"tynnyri\", \"kevyt\": \"t.glb\", \"maailmaan\": false}], " +
+                "\"rantakivet\": {\"huippu\": \"r.glb\", \"kevyt\": \"rk.glb\"}},\n  \"yleiskamera\": {"));
+            // Vene ja maailmaan:false ovat rekvisiittaa (ei piirretä maailman origoon), muut ja rantakivet maailmaan.
+            Oleta.Sama(2, r.Ymparisto.Mallit.Count);
+            Oleta.Tosi(r.Ymparisto.Mallit[0] == ("laituri2", "l.glb", null) && r.Ymparisto.Mallit[1] == ("rantakivet", "r.glb", "rk.glb"), "mallit ja rantakivet");
+            Oleta.Sama(2, r.Ymparisto.Rekvisiitta.Count);
+            Oleta.Tosi(r.Ymparisto.Rekvisiitta[0] == ("vene", "v.glb", "vk.glb") && r.Ymparisto.Rekvisiitta[1] == ("tynnyri", null, "t.glb"), "rekvisiitta");
+        }
+
+        // Rakennuskohtainen etäisyysutu (Linnanrakentaja 7.10.): valaistus.sumu {alku, loppu}; puuttuva tai virheellinen → null.
+        [Testi] static void ValaistuksenSumu()
+        {
+            var r = DioraamaData.Lue(KeittioFixture.Replace("\"yleiskamera\": {", "\"valaistus\": {\"sumu\": {\"alku\": 0.9, \"loppu\": 3.2}},\n  \"yleiskamera\": {"));
+            Oleta.Tosi(r.Valaistus?.Sumu is { } s && Math.Abs(s.Alku - 0.9) < 1e-9 && Math.Abs(s.Loppu - 3.2) < 1e-9, "sumu luettu");
+            var v = DioraamaData.Lue(KeittioFixture.Replace("\"yleiskamera\": {", "\"valaistus\": {\"sumu\": {\"alku\": 3, \"loppu\": 1}},\n  \"yleiskamera\": {"));
+            Oleta.Tosi(v.Valaistus != null && v.Valaistus.Sumu == null, "loppu < alku → oletus");
+        }
+
         // Savu 156 (Laitetestaaja 7.10.): huonevalinta saapumiskaaren aikana katkaisee tulevan kertojan kierroksen ja vie huoneeseen.
         [Testi] static void HuonevalintaSaapumisenAikanaKatkaiseeKierroksen()
         {
@@ -1111,6 +1133,22 @@ namespace Matkakirja.Linssit.Testit
             // Uusinta (↻) valinnan jälkeen toimii.
             l.KertojaUudelleen(30);
             Oleta.Tosi(l.KertojaKaynnissa(30.5), "uusinta käynnistyy valinnan jälkeen");
+        }
+
+        // Historiamoottorin kävelytila (7.10.): KertojaPois kesken kierroksen → ei jaksotekstejä; ↻ palauttaa.
+        [Testi] static void KavelyPoistaaKertojanKierroksen()
+        {
+            string json = KeittioFixture.Replace("\"yleiskamera\": {",
+                "\"saapuminen\": {\"alku\": {\"atsimuutti\": 200, \"etaisyys\": 600, \"korkeus\": 8}, \"kesto\": 10, \"lyhyt\": 6, \"loppu\": \"kertoja\"},\n" +
+                "  \"kertoja\": {\"jaksot\": [{\"id\": \"j1\", \"teksti\": \"Yksi.\", \"kesto_s\": 30, \"kamera\": {\"kohde\": [0, 0, 0], \"atsimuutti\": 230, \"korkeus\": 10, \"etaisyys\": 230}}]},\n  \"yleiskamera\": {");
+            var l = new PoikkileikkausLinssi();
+            l.Avaa(DioraamaData.Lue(json), 0, false);
+            Oleta.Tosi(l.KertojaKaynnissa(12), "kierros käynnissä");
+            l.KertojaPois();
+            Oleta.Tosi(!l.KertojaKaynnissa(12) && !l.KertojaKaynnissa(20), "kävely → ei kierrosta");
+            Oleta.Tosi(l.NakymaHetkella(12, pysty: false).KertojaJakso < 0, "ei jaksotekstiä");
+            l.KertojaUudelleen(40);
+            Oleta.Tosi(l.KertojaKaynnissa(40.5), "uusinta palauttaa");
         }
 
         // Jakson nimet ja kuva (Linnanrakentaja 6.10.2026): nimet[{teksti, paikka, alku_s, kesto_s?}], kuva{tiedosto, alku_s, ...}.

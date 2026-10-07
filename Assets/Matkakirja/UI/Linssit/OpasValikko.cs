@@ -209,7 +209,7 @@ namespace Matkakirja.Natiivi
         float krediittiAla = 40f;
         /// <summary>Oppaan nappirivin korkeus (mk-opas-nappi 44 pt).</summary>
         const float NappiriviKorkeus = 44f;
-        float TapitAla => nappiNakyy ? krediittiAla + NappiriviKorkeus + KuvaRako : krediittiAla;
+        float TapitAla => nappiNakyy || esitysNakyy ? krediittiAla + NappiriviKorkeus + KuvaRako : krediittiAla;
         /// <summary>Ohjainrivin (‖ ›|) alareuna; tapit sen yläpuolella (PaivitaTapit).</summary>
         float ohjainAla;
         /// <summary>Tapit sisemmäs ja ylemmäs leveällä ruudulla (omistaja 6.10. 23.3x, juna 156: iPadilla peukalot eivät ulotu
@@ -264,7 +264,7 @@ namespace Matkakirja.Natiivi
             kuvaNappi.style.display = DisplayStyle.None;
             nappi = Ohjausnappi.Nappi(Ikonit.Valikko, "Valikko", () => { Debug.Log("MATKAKIRJA opas: ☰ " + (Auki ? "kiinni" : "auki")); if (Auki) Sulje(); else Avaa(Nakyma.Paa); }, ryhma);
             // VUOROKAUDENAIKA (omistaja 6.10. 18.5x): OHJAUSNAPPI vasempaan yläkulmaan; kuvake = voimassa oleva tila, A = automaattinen.
-            var aikaRyhma = Ohjausnappi.Ryhma(Juuri);
+            aikaRyhma = Ohjausnappi.Ryhma(Juuri);
             aikaRyhma.AddToClassList("mk-ohjausryhma--vasen");
             aikaNappi = Ohjausnappi.Nappi(Ikonit.Viiva["paiva"], "Vuorokaudenaika", () => { if (Auki && nakyma == Nakyma.Aika) Sulje(); else Avaa(Nakyma.Aika); }, aikaRyhma);
 
@@ -336,6 +336,14 @@ namespace Matkakirja.Natiivi
             });
             mikkiNappi = OpasNappi(null, PuluChat.MikkiIkoni, Puhu, "Puhu oppaalle");
             OpasNappi(null, PuluChat.NappaimistoIkoni, Kirjoita, "Kirjoita oppaalle");
+            // KYSY AINA NÄKYVISSÄ (omistaja 7.10. 10.1x, Pariisin kaupunkiesitys): kierroksen ajan Kysy, mikrofoni ja näppäimistö
+            // keskellä alhaalla samalla nappirivin pohjalla (mk-opas-napit, LIIKU-nappipohja) väkäsen ja Liikun tilalla.
+            esitysRivi = Rakenne.El("tk-teema-harmaa mk-opas-napit", Juuri, PickingMode.Ignore);
+            esitysRivi.style.display = DisplayStyle.None;
+            esitysRivi.style.height = NappiriviKorkeus;
+            OpasNappi("Kysy", Ikonit.Puhekupla, () => Avaa(Nakyma.Kysy), "Valmiit kysymykset oppaalle", esitysRivi);
+            OpasNappi(null, PuluChat.MikkiIkoni, Puhu, "Puhu oppaalle", esitysRivi);
+            OpasNappi(null, PuluChat.NappaimistoIkoni, Kirjoita, "Kirjoita oppaalle", esitysRivi);
             kerros.JokaRuutu += PaivitaSirut;
             // Googlen ja Cesiumin krediitit (logot muuttamattomina, Googlen ehdot): sirurivi niiden yläpuolelle, tarkistus 2 × s.
             sirurivi.schedule.Execute(SovitaKrediitteihin).Every(500);
@@ -366,6 +374,9 @@ namespace Matkakirja.Natiivi
             tapit = new OpasTapit(Juuri);
             nimilappu = new OpasNimilappu(Juuri);
             kerros.JokaRuutu += PaivitaTapit;
+            // METROLINJA (omistaja 7.10. 10.2x): kierroksen eteneminen vasemmassa reunassa keskellä (OpasMetrolinja).
+            metro = new OpasMetrolinja(Juuri);
+            kerros.JokaRuutu += PaivitaMetro;
             OpasSovitin.LatausKuvaVaihtui += LatausKuvaVaihtui;
             // Sallitut saapuvat oppaan avauksessa (aloitusvalikko jo auki): lista uudelleen, jotta rajaamaton ei jää näkyviin.
             OpasSovitin.SallitutVaihtui += () => { if (nakyy && Auki) Rakenna(); };
@@ -437,9 +448,107 @@ namespace Matkakirja.Natiivi
         /// puhu/kirjoita-siru; ei chatin eikä valikon ollessa auki. Häivytys --tk-kesto-sulku (200 ms).
         /// </summary>
         /// <summary>Oppaan alarivin nappi LIIKU-pohjalla: teksti (Kysy, Liiku) tai pelkkä kuvake (mikrofoni, näppäimistö), keskitettynä.</summary>
-        Button OpasNappi(string teksti, string ikoni, Action teko, string ohje)
+        OpasMetrolinja metro;
+        float metroKoysiVasen;
+        VisualElement aikaRyhma;
+
+        /// <summary>Vuorokausinappi: iPhonella oikean yläkulman ryhmään ■ ≡ -nappien vasemmalle (omistaja 12.3x), iPadilla vasemmalle.</summary>
+        void SijoitaAikaNappi()
         {
-            var b = Rakenne.Nappi(null, "mk-liiku__nappi mk-opas-nappi" + (teksti == null ? " mk-opas-nappi--ikoni" : ""), () => { LopetaEsittely(); AsetaRiviAuki(false); teko(); }, liuku);
+            if (float.IsNaN(Juuri.layout.width) || Juuri.layout.width <= 0) return;
+            var isa = ryhma;   // omistaja 14.2x: myös iPadilla oikean ryhmän riviin (metrolinja vasempaan yläkulmaan)
+            if (aikaNappi.parent == isa) return;
+            aikaNappi.RemoveFromHierarchy();
+            isa.Insert(0, aikaNappi);
+        }
+
+        /// <summary>
+        /// Metrolinja kierroksen ajan (ei valikon tai chatin aikana) vasempaan reunaan keskelle: kaistaan otsikon (☾A:n alla, ~57 pt)
+        /// ja vasemman tapin / esitysrivin väliin, korkeus enintään 40 % ruudusta.
+        /// </summary>
+        void PaivitaMetro()
+        {
+            var chat = UiNakymat.Olemassa ? UiNakymat.Hae().Chat : null;
+            bool nayta = nakyy && !Auki && !(chat?.Auki ?? false) && (metro.Testi || OpasSovitin.KierrosIndeksi >= 0);
+            float h = Juuri.layout.height, w = Juuri.layout.width;
+            if (float.IsNaN(h) || h <= 0) return;
+            // Omistaja 12.3x: iPhonella (pysty ja vaaka) vasempaan yläkulmaan, vuorokausinappi oikean ryhmän riviin; iPadilla
+            // vasen reuna keskellä otsikon ja tappien välissä kuten ennen.
+            SijoitaAikaNappi();
+            metro.Keskita = LeveaRuutu;
+            float yla = LeveaRuutu ? 8f + Tyylikirja.Nappi.Ohjaus + 8f + 57f + 8f : 8f;
+            float ala = tapit.Nakyy ? h - (tapit.Ala + OpasTapit.Halkaisija + KuvaRako) : h - (TapitAla + KuvaRako);
+            float vasen = OpasTapit.Reuna;
+            // Matala ruutu (iPhone vaaka, LS1:n still 7.10.: 8 asemaa ~45 pt:n kaistassa, nimet litistyivät): linja vasemman tapin
+            // oikealle puolelle, jolloin kaista ulottuu esitysriviin asti.
+            if (ala - yla < OpasMetrolinja.VahinRivi * metro.Maara && tapit.Nakyy)
+            {
+                vasen = OpasTapit.Reuna + OpasTapit.Halkaisija + KuvaRako;
+                ala = h - (TapitAla + KuvaRako);
+            }
+            // iPad (omistaja 7.10. 13.3x): ihan vasempaan reunaan pienellä marginaalilla (turva-alueen ulkopuolelle), köyden
+            // vasemmalle puolelle; pystysuunnassa ennallaan.
+            if (LeveaRuutu && Juuri.panel != null) vasen = ReunaPt - UiKerros.Hae().Reunat(kerrosNro).x;
+            metro.Kompakti = false; metro.IslandAlaY = 0f;
+            if (!LeveaRuutu && Juuri.panel != null) { PuhelinMetro(nayta, w, h); return; }
+            // Omistaja 14.2x: iPadilla vasempaan yläkulmaan 6 pt reunasta, linja ja kaikki nimet köyden päällä (ei rajausta).
+            if (Juuri.panel != null)
+            {
+                metro.Keskita = false;
+                metro.Paivita(nayta, 8f, 8f + h * 0.4f, h * 0.4f, w * 0.3f, vasen);
+                return;
+            }
+            metro.Paivita(nayta, yla, ala, Mathf.Max(h * 0.4f, OpasMetrolinja.VahinRivi * metro.Maara), LeveaRuutu ? w * 0.3f : w * 0.42f, vasen);
+        }
+
+        /// <summary>
+        /// iPhone (omistaja 7.10. 13.3x): metrolinja ihan vasempaan laitaan turva-alueen ulkopuolelle, Dynamic Islandin viereen
+        /// – pystyssä vasempaan ylänurkkaan Islandin tasolle sen vasemmalle puolelle, vaakana vasempaan laitaan köyden vasemmalle
+        /// puolelle ylänurkan ja Islandin väliin. Pyöristetty kulma ei saa leikata tekstiä (KulmaVaraPt) eikä Island peittää sitä
+        /// (Island-mitat iPhonen pt:inä). Jos kaikki pysäkit eivät mahdu nimineen, nykyinen ja viereiset nimellä, muut pisteinä.
+        /// </summary>
+        void PuhelinMetro(bool nayta, float w, float h)
+        {
+            var t = UiKerros.Hae().Reunat(kerrosNro);   // turva-alueen reunat paneelin pisteinä: x vasen, y ylä, z oikea, w ala
+            float pw = Juuri.panel.visualTree.layout.width, ph = Juuri.panel.visualTree.layout.height;
+            bool pysty = ph > pw;
+            float x, y, korkeus, leveys;
+            if (pysty)
+            {
+                // Island ylhäällä keskellä (~126 × 37 pt, yläreuna ~11 pt): vasen ylänurkka Islandin tasolta alaspäin.
+                x = KulmaVaraPt; y = Mathf.Max(10f, t.y - 50f);
+                // Islandin tasolla (yläreuna ~11, alareuna ~48 pt) nimi Islandin vasemmalle puolelle; alemmat rivit leveämpinä.
+                metro.IslandAlaY = 52f; metro.IslandKapea = pw * 0.5f - IslandLeveysPt * 0.5f - KuvaRako - x;
+                leveys = pw * 0.48f;
+                korkeus = Mathf.Min(ph * 0.4f, OpasMetrolinja.AsemaValiPt * metro.Maara);
+            }
+            else
+            {
+                // Omistaja 13.3x ja 14.2x: vaakana heti Dynamic Islandin oikean reunan jälkeen ylhäällä; nimet kokonaan köyden päällä
+                // (ei katkaisua eikä pisteiksi supistusta).
+                x = t.x > 20f ? IslandOikeaPt + KuvaRako : 14f; y = 12f;
+                korkeus = Mathf.Min(ph * 0.6f, OpasMetrolinja.AsemaValiPt * metro.Maara);
+                leveys = pw * 0.45f;
+            }
+            // Juuri on turva-alueen sisällä: paikka turva-alueen koordinaateiksi (negatiivinen = ulkopuolella).
+            float yJ = y - t.y, xJ = x - t.x;
+            metro.Keskita = false;
+            metro.Paivita(nayta, yJ, yJ + korkeus, korkeus, leveys, xJ);
+        }
+
+        /// <summary>Pyöristetyn kulman vara (pt) ja Dynamic Islandin pituus (pt) iPhonella.</summary>
+        /// <summary>iPadin metrolinjan marginaali ruudun vasemmasta reunasta (pt).</summary>
+        const float ReunaPt = 6f;
+        const float KulmaVaraPt = 22f, IslandLeveysPt = 126f, IslandOikeaPt = 48f;
+
+        VisualElement esitysRivi;
+        bool esitysNakyy;
+        /// <summary>Testi `ui opasvalikko esitys on|off|auto`: kierroksen esitysrivi ilman kierrosta.</summary>
+        bool? testiEsitys;
+
+        Button OpasNappi(string teksti, string ikoni, Action teko, string ohje, VisualElement isa = null)
+        {
+            var b = Rakenne.Nappi(null, "mk-liiku__nappi mk-opas-nappi" + (teksti == null ? " mk-opas-nappi--ikoni" : ""), () => { LopetaEsittely(); AsetaRiviAuki(false); teko(); }, isa ?? liuku);
             b.tooltip = ohje;
             Rakenne.Ikoni(ikoni, "mk-ikoni mk-opas-nappi__ikoni", b);
             if (teksti != null) Kirjasimet.Aseta(Rakenne.Teksti(teksti, "mk-nappi__teksti mk-opas-nappi__teksti", b), Kirjasin.ModerniLihava);
@@ -613,15 +722,22 @@ namespace Matkakirja.Natiivi
             kirjoitus.RegisterCallback<PointerDownEvent>(e => e.StopPropagation());
         }
 
+        /// <summary>Kierroksella kohteen viisi valmista kysymystä (LS1 KysyKysymykset, omistaja 7.10. 10.1x), muuten oppaan kysymykset.</summary>
+        static IReadOnlyList<string> KysyLista =>
+            OpasSovitin.KierrosIndeksi >= 0 && OpasSovitin.KysyKysymykset is IReadOnlyList<string> kk && kk.Count > 0 ? kk : OpasSovitin.Kysymykset;
+
         void RakennaKysy()
         {
             Vieritys();
             Kirjasimet.Aseta(Rakenne.Teksti("KYSY OPPAALTA", "mk-linssivalitsin__valiotsikko", rivit), Kirjasin.ModerniLihava);
-            if (!(OpasSovitin.Kysymykset is IReadOnlyList<string> kys) || kys.Count == 0)
+            // Omistaja 7.10. 10.3x: ensimmäisenä "Kerro lisää" (LS1:n KysyKysymykset tuo sen kierroksella listan kärkeen,
+            // OpasSovitin.KerroLisaaTeksti), sitten viisi valmista kysymystä ja lopuksi mikrofoni ja näppäimistö (PuhuJaKirjoita).
+            if (!(KysyLista is IReadOnlyList<string> kys) || kys.Count == 0)
             {
                 Kirjasimet.Aseta(Rakenne.Teksti("Kysymykset latautuvat…", "mk-linssivalikko__lahde", rivit), Kirjasin.Moderni);
-                valikko.schedule.Execute(() => { if (Auki && nakyma == Nakyma.Kysy && OpasSovitin.Kysymykset is IReadOnlyList<string> k && k.Count > 0) Rakenna(); })
-                    .Every(500).Until(() => !Auki || nakyma != Nakyma.Kysy || OpasSovitin.Kysymykset is IReadOnlyList<string> k2 && k2.Count > 0);
+                valikko.schedule.Execute(() => { if (Auki && nakyma == Nakyma.Kysy && KysyLista is IReadOnlyList<string> k && k.Count > 0) Rakenna(); })
+                    .Every(500).Until(() => !Auki || nakyma != Nakyma.Kysy || KysyLista is IReadOnlyList<string> k2 && k2.Count > 0);
+                PuhuJaKirjoita();
                 return;
             }
             foreach (var q in kys)
@@ -640,6 +756,15 @@ namespace Matkakirja.Natiivi
                 b.tooltip = t;
                 nykyiset.Add((b, teko));
             }
+            PuhuJaKirjoita();
+        }
+
+        /// <summary>Kysy-valikon loppuun mikrofoni ja näppäimistö (omistaja 7.10. 10.3x) TOIMINTO-riveinä.</summary>
+        void PuhuJaKirjoita()
+        {
+            Viiva();
+            Komento("Puhu oppaalle", Puhu, rivit);
+            Komento("Kirjoita oppaalle", Kirjoita, rivit);
         }
 
         void RakennaLiiku()
@@ -654,14 +779,7 @@ namespace Matkakirja.Natiivi
                     .Every(500).Until(() => !Auki || nakyma != Nakyma.Liiku || OpasSovitin.Kohteet != null);
             }
             else foreach (var k in kohteet) LiikuRivi(k);
-            // Alimpana aina Kaupunkikierros (omistaja 6.10.).
-            Action kierros = () => { Sulje(); Debug.Log("MATKAKIRJA opas: kaupunkikierros"); OpasSovitin.Kaupunkikierros(); };
-            // Kaupunkikierros kiinnitettynä paneelin alareunaan, aina näkyvissä (omistaja 16.3x); lista vierii sen yläpuolella.
-            var kb = Rakenne.Nappi(null, "mk-linssivalikko__kohta mk-linssivalikko__komento", () => Rivilta(kierros), valikko);
-            kb.style.flexShrink = 0;
-            Kirjasimet.Aseta(Rakenne.Teksti("Kaupunkikierros", "mk-linssivalikko__nimi", kb), Kirjasin.ModerniLihava);
-            kb.tooltip = "Kaupunkikierros";
-            nykyiset.Add((kb, kierros));
+            // Kaupunkikierros-rivi poistettu (omistaja 7.10. 10.3x): esitys on yksi (avaus → kierros lyhyillä versioilla), ei kahdennusta.
         }
 
         void LiikuRivi(Matkakirja.Linssit.Kierros.OpasTaky t)
@@ -782,6 +900,12 @@ namespace Matkakirja.Natiivi
             // Neljä nappia näkyvät aina oppaassa, paitsi chatin tai valikon ollessa auki (vanha sirurivi ei enää näy).
             var c0 = UiNakymat.Olemassa ? UiNakymat.Hae().Chat : null;
             bool napitNakyy = c0 != null && !c0.Auki && !Auki;
+            // Kierroksen ajan esitysrivi (Kysy, mikki, näppäimistö) keskellä väkäsrivin tilalla.
+            bool esitys = napitNakyy && (testiEsitys ?? OpasSovitin.KierrosKaynnissa);
+            var ed = esitys ? DisplayStyle.Flex : DisplayStyle.None;
+            if (esitysRivi.style.display != ed) esitysRivi.style.display = ed;
+            esitysNakyy = esitys;
+            if (esitys) { esitysRivi.style.bottom = krediittiAla; napitNakyy = false; }
             if (napitNakyy != nappiNakyy)
             {
                 nappiNakyy = napitNakyy;
@@ -1756,6 +1880,14 @@ namespace Matkakirja.Natiivi
                     if (p.Length == 2) { maanosa = p[0]; maa = p[1]; }
                     Avaa(Nakyma.Kaupungit);
                     return $"opas: kaupungit {maanosa} / {maa}";
+                case "metro":
+                    // `ui opasvalikko metro <i>|auto`: testilinja Pariisin kohteilla ilman kierrosta.
+                    metro.Testi = o.Length > 1 && o[1] != "auto";
+                    if (metro.Testi && int.TryParse(o[1], out int mi)) metro.TestiIndeksi = mi;
+                    { var kr = OpasSovitin.KoriVasenKoysiNorm; return "opas: " + metro.Kuvaus() + $", köysi {kr.xMin:0.000}–{kr.xMax:0.000} × {kr.yMin:0.00}–{kr.yMax:0.00}, köysiraja {metroKoysiVasen:0}"; }
+                case "esitys":
+                    if (o.Length > 1) testiEsitys = o[1] == "on" ? true : o[1] == "off" ? false : (bool?)null;
+                    { var r = esitysRivi.worldBound; return $"opas: esitysrivi {(esitysRivi.resolvedStyle.display == DisplayStyle.Flex ? "näkyy" : "piilossa")} @ {r.xMin:0},{r.yMin:0} {r.width:0}×{r.height:0}, väkäsrivi {(nappiNakyy ? "näkyy" : "piilossa")}"; }
                 case "kaupunkitila":
                     if (o.Length > 1) testiKaupunkitila = o[1] == "on" ? true : o[1] == "off" ? false : (bool?)null;
                     return "opas: kaupunkitila " + Kaupunkitila;

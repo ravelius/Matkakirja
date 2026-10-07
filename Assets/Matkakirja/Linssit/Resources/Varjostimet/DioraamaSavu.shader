@@ -91,6 +91,9 @@ Shader "Matkakirja/Linssit/DioraamaSavu"
                 half3 vari = lerp(_Lammin.rgb, _Vari.rgb, (half)saturate(i.tieto.x * 3.0));
 
                 float etaisyys = length(_WorldSpaceCameraPos - i.paikkaW);
+                // Lähihäivytys (puolilähikuva 7.10.: tulisijan savu kokin pään korkeudella ~2 m kamerasta näkyi syväterävyyden
+                // bokeh-renkaana kasvojen edessä): alle 1,5 m näkymätön, täysi 3 m:stä; huonekuvissa (> 3 m) ennallaan.
+                a *= (half)saturate((etaisyys - 1.5) / 1.5);
                 half sumu = (half)saturate((etaisyys - _DioraamaSumu.x) / max(1e-3, _DioraamaSumu.y - _DioraamaSumu.x));
                 vari = lerp(vari, _DioraamaSumuVari.rgb, sumu);
                 return half4(vari, a);

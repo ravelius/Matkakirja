@@ -54,6 +54,12 @@ namespace Matkakirja.Natiivi
         readonly CinemachineBasicMultiChannelPerlin lentoPerlin;
         readonly NoiseSettings kohina;
         int prioriteetti = 10;
+        /// <summary>DioraamaSovitin.Puolilahikuva-avaimen pääte ("tila:x|puhuja|puolilahi").</summary>
+        public const string PuolilahiPaate = "|puolilahi";
+        CinemachineCamera viimeSeikkailu;
+        const float SeikkailuBlendiS = 1.6f;
+        /// <summary>Seikkailu päättyi (kävely ja vene pois): seuraava seikkailukamera leikkaa.</summary>
+        public void SeikkailuPois() => viimeSeikkailu = null;
 
         /// <summary>Elävä kamera (lepoavain tai "lento"); null = seuraava vaihto on leikkaus.</summary>
         public string Elava { get; private set; }
@@ -169,7 +175,10 @@ namespace Matkakirja.Natiivi
             string tavoite = lepo.Saapumassa ? Lento : lepo.Avain;
             if (tavoite != Elava)
             {
-                float kesto = Elava == null ? 0f : Elava == Lento ? SaapumisenLoppuS : Mathf.Max(LyhinBlendiS, (float)lepo.Jaljella + JalkivenymaS);
+                // Puhujan vaihto puolilähikuvassa leikkaa (kuva–vastakuva): blendi kulki tyhjän tilan kautta (eleet-2-ajo 7.10.: tyhjät penkit
+                // t 22,0 ja 29,2 s). Lepokuvasta puolilähiin ja takaisin blendataan kuten ennen.
+                bool puhujanVaihto = Elava != null && Elava.EndsWith(PuolilahiPaate, System.StringComparison.Ordinal) && tavoite.EndsWith(PuolilahiPaate, System.StringComparison.Ordinal);
+                float kesto = Elava == null || puhujanVaihto ? 0f : Elava == Lento ? SaapumisenLoppuS : Mathf.Max(LyhinBlendiS, (float)lepo.Jaljella + JalkivenymaS);
                 aivot.DefaultBlend = kesto <= 0f ? new CinemachineBlendDefinition(CinemachineBlendDefinition.Styles.Cut, 0f)
                     : new CinemachineBlendDefinition(CinemachineBlendDefinition.Styles.Custom, kesto) { CustomCurve = Kayra };
                 (tavoite == Lento ? lento : lepot[tavoite].Cam).Priority = ++prioriteetti;
@@ -179,6 +188,31 @@ namespace Matkakirja.Natiivi
             lentoPerlin.AmplitudeGain = vahvuus;
             foreach (var l in lepot.Values) l.Perlin.AmplitudeGain = vahvuus;
             aivot.ManualUpdate(Time.frameCount, dt);
+        }
+
+        /// <summary>Historiamoottorin kävelytila: aivot ajetaan pelaajan olan yli -kameralle (prioriteetti kaikkien lepokameroiden yli).
+        /// Jos aivot eivät valitse sitä (rekisteri, kanava), kameran tila kopioidaan suoraan, ettei kuva jää lepokameraan. Palauttaa
+        /// diagnostiikan ("aivot" tai "suora") ja Elava nollataan, jotta paluu lepoon leikkaa.</summary>
+        public string PaivitaPelaaja(CinemachineCamera pelaaja, Camera kamera, float dt)
+        {
+            // Seikkailukameran vaihto (venesaapumisen perä → pelaajan olan yli): pehmeä blendi; ensimmäinen leikkaa.
+            if (pelaaja != viimeSeikkailu)
+            {
+                aivot.DefaultBlend = viimeSeikkailu == null ? new CinemachineBlendDefinition(CinemachineBlendDefinition.Styles.Cut, 0f)
+                    : new CinemachineBlendDefinition(CinemachineBlendDefinition.Styles.EaseInOut, SeikkailuBlendiS);
+                viimeSeikkailu = pelaaja;
+            }
+            if (pelaaja.Priority.Value <= prioriteetti) pelaaja.Priority = prioriteetti + 1000;
+            Elava = null;
+            lentoPerlin.AmplitudeGain = 0f;
+            foreach (var l in lepot.Values) l.Perlin.AmplitudeGain = 0f;
+            aivot.ManualUpdate(Time.frameCount, dt);
+            if (ReferenceEquals(aivot.ActiveVirtualCamera, pelaaja)) return "aivot";
+            pelaaja.InternalUpdateCameraState(Vector3.up, dt);
+            var st = pelaaja.State;
+            kamera.transform.SetPositionAndRotation(st.GetFinalPosition(), st.GetFinalOrientation());
+            kamera.fieldOfView = st.Lens.FieldOfView;
+            return "suora (aivot: " + (aivot.ActiveVirtualCamera?.Name ?? "-") + ")";
         }
 
         /// <summary>"poikki cm": elävä kamera, blendi ja kameran ero Ytimen asentoon (sama muokkaus) lokiin.</summary>
