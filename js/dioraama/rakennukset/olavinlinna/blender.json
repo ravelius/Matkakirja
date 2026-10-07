@@ -1,7 +1,7 @@
 {
   "rakennus": "olavinlinna",
-  "hash": "604ef19e9d33d1d4",
-  "kansio": "dioraama/olavinlinna/blender/604ef19e9d33d1d4/",
+  "hash": "f5aca698339c06aa",
+  "kansio": "dioraama/olavinlinna/blender/f5aca698339c06aa/",
   "tiedostot": [
     {
       "polku": "hahmot/apulainen-1500-faceit.glb",
@@ -275,13 +275,13 @@
     },
     {
       "polku": "kavely/merkit.json",
-      "sha256": "fec16bf7111c6ecf3887c3439348952101e43d93d52550a90fc379ca1d1fa096",
-      "tavuja": 20934
+      "sha256": "f503e2d496876aa42f01be915baca6612b02fd605d9238879238629d790d32c5",
+      "tavuja": 23328
     },
     {
       "polku": "kavely/osat.json",
-      "sha256": "59140be64321409aedfa07903b501694ac4263ce247f9b70e89d583084693ceb",
-      "tavuja": 13401
+      "sha256": "5eefdaa84d4d332744b355f0428be9365d1bc2c20f9a4ae6c5f84271c2b1b9f2",
+      "tavuja": 15167
     },
     {
       "polku": "kavely/pikkupiha-kavely.glb",
@@ -314,14 +314,29 @@
       "tavuja": 33876
     },
     {
+      "polku": "kavely/tyrma-E101-kavely.glb",
+      "sha256": "746e434e758200ba082be8c48a2cd489c839bec5e1214f5905650cafc4215dbf",
+      "tavuja": 1896
+    },
+    {
+      "polku": "kavely/tyrma-E101-tormays.glb",
+      "sha256": "5f8dff1585948637f8594567c64571d88bc06b52c86f47575bca5eaebcd6a7e3",
+      "tavuja": 4392
+    },
+    {
+      "polku": "kavely/tyrma-E101.glb",
+      "sha256": "3086074fa934bedd3e235496dd237d4f92ec5c812cf9822609831318f7b540ba",
+      "tavuja": 23872
+    },
+    {
       "polku": "kavely/ulkoalue-kavely.glb",
-      "sha256": "9bfcb7562b47096590a408194a93aa8daf9411c6f38b373b5994c6c6e643ef28",
-      "tavuja": 206388
+      "sha256": "17851b02608c6d13081444aca8a5ede05f470c172652130b13a48c25444d4cdd",
+      "tavuja": 206508
     },
     {
       "polku": "kavely/ulkoalue-tormays.glb",
-      "sha256": "9aa82b48d4540fdfcaf2c74a504d501369efbcd85f58c8d3225d7aba24690008",
-      "tavuja": 116072
+      "sha256": "de5a632ea3dbc5c11967d544554a3104927ca7fd32ddfc8d82731bb0c89bad43",
+      "tavuja": 115760
     },
     {
       "polku": "kavely/vesiportti-kavely.glb",
