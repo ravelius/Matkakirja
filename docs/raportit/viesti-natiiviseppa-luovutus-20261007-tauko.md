@@ -9,6 +9,15 @@ Olet Natiiviseppä (Opus, high). Lue tämä osio, MEMORY.md ja natiiviseppa-tila
 Juna-SHA:t otetaan vain PÄÄTOIMITTAJAN suoralla kuittauksella; käännökset, simut ja iPad vain Julkaisijan NYT-viestillä.
 Tarkista ensin taustalla jatkuneiden ajojen tulokset (alla) ja kerro ne Julkaisijalle ja PÄÄTOIMITTAJALLE.
 
+## TILA 15.2x
+
+- **JUNA 161 -RUNKO f3d710212** = ea1a60e73 + natiiviseppa/mac-ohjauslevy **73794c17** (DIAGNOOSI-lokirivi; Päätoimittaja: diagnostiikka
+  junaan 161). Unity iOS/Mac 0. Odottaa Päätoimittajan vahvistusta: NUI pariisi-esitys **89d98b7e** ja Siirtoseppä osoitin-varmistus
+  **49888505** (merge-tree puhtaat). Sitten kaikki testit (tarkista.sh zsh:llä), proto-kaanna-koekäännös, savu (Mac: piiloon → takaisin →
+  panorointi + ääni; kirjoitusääni aloitusruudussa; ei hiiri-/näppäinautomaatiota omistajan käyttäessä konetta).
+- Ohjauslevy: omistaja vastasi "kaikki lakkaa", Matkakirja oli aktiivinen → ei taustafokus. Omistajan loki: Päätteessä
+  `cp ~/Library/Containers/fi.matkakirja.peli/Data/Library/Logs/Matkakirja/"Matkakirja 3D"/Player.log ~/Desktop/matkakirja-loki.txt`.
+
 ## TILA 15.0x
 
 - **MAC-OHJAUSLEVYVIKA (omistaja, Mac TF 160: panorointi/zoomaus lakkaa, kunnes klikkaa karttaa):** haara natiiviseppa/mac-ohjauslevy
