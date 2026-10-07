@@ -433,6 +433,11 @@ namespace Matkakirja.Natiivi
         public static int KierrosIndeksi => Auki ? Viimeisin.silmukka.KierrosNykyinen : -1;
         /// <summary>Kohteet, indeksi tai kohteen valmiit kysymykset (KysyKysymykset) vaihtuivat.</summary>
         public static event Action KierrosVaihtui;
+        /// <summary>
+        /// Pallo lähtee kierroksen seuraavaan kohteeseen (omistaja 7.10. 12.3x: metrokartta suurentaa seuraavan ja pienentää nykyisen
+        /// ~1 s:ssa): (nykyinen indeksi, seuraava indeksi, lennon kesto s) KierrosKohteet-listassa; nykyinen −1 = ei edellistä.
+        /// </summary>
+        public static event Action<int, int, float> KierrosLahtee;
         /// <summary>Nykyisen kohteen valmiit kysymykset (enintään 5; /opas/kysymykset tai pysähdyksen kysymykset).</summary>
         public static IReadOnlyList<string> KysyKysymykset
         {
@@ -1296,6 +1301,13 @@ namespace Matkakirja.Natiivi
         /// <summary>Kierroksen siirtymä: automaattinen lento soittaa "kierros" (yli 20 km "lento"); toiveen lento soitti jo valinnasta.</summary>
         void LentoAlkoi(OpasKohde k, double matkaM, bool toiveesta)
         {
+            if (silmukka.KierrosKaynnissa && k != null)
+            {
+                var jono = silmukka.KierrosJono; int seur = -1;
+                for (int i = 0; i < jono.Count; i++)
+                    if (string.Equals(jono[i].nimi, k.Nimi, StringComparison.OrdinalIgnoreCase) || KierrosLento.EtaisyysM(jono[i].lat, jono[i].lon, k.Lat, k.Lon) < 80) { seur = i; break; }
+                if (seur >= 0) { int nyk = seur - 1; o.Kirjaa($"opas: kierros lähtee {nyk} → {seur}"); KierrosLahtee?.Invoke(nyk, seur, (float)silmukka.LentoKestoS); }
+            }
             kaupunki.Karkeaksi();   // kaksivaiheinen tarkkuus (juna 153): lento ja saapuminen karkealla valinnalla
             o.Kirjaa($"opas: lento {k.Nimi} {matkaM:F0} m, kesto {silmukka.LentoKestoS:F1} s, suurin kiihtyvyys {silmukka.LentoMittari.kiihtyvyys:F1} m/s², suurin lasku {silmukka.LentoMittari.lasku:F1} m/s");
             kaupunki.YritaGoogleUudelleen();   // ion-varalla: Google uudelleen seuraavassa kohteessa (laatat lennon aikana)

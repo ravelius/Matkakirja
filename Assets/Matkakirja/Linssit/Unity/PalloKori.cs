@@ -29,6 +29,8 @@ namespace Matkakirja.Natiivi
     public sealed class PalloKori
     {
         public const int Kerros = 16;
+        /// <summary>Köydet vain, kun ruutu on vähintään tämän levyinen (leveys/korkeus): iPhone pysty ~0,46 → ei köysiä, iPad pysty 0,75 → köydet.</summary>
+        public const float KoydetMinAspect = 0.6f;
         /// <summary>A/B (komento `opas kori 0|1`); kaupunkitilassa oletuksena päällä tässä kokeessa.</summary>
         public static bool Paalla = true;
         /// <summary>Äänisarja (A/B): "eleven" tai "kirjasto".</summary>
@@ -241,6 +243,10 @@ namespace Matkakirja.Natiivi
             float tavoiteY = (-1f + 2f * ReunaOsuus) * t * Z;              // kameran koordinaateissa
             malliJuuri.localPosition = new Vector3(0, -1.5f + (tavoiteY - (ReunaY - 1.5f)), 0);
             float puoliLeveys = t * perus.aspect * Z;
+            // Omistaja 7.10. 12.3x: iPhonen pystynäkymässä köydet pois (kori ja reunus jäävät); vaaka ja iPad ennallaan.
+            bool koydet = perus.aspect >= KoydetMinAspect;
+            for (int i = 0; i < malliKoydet.Count; i++) if (malliKoydet[i] != null && malliKoydet[i].gameObject.activeSelf != koydet) malliKoydet[i].gameObject.SetActive(koydet);
+            if (koysiKaanto != null && koysiKaanto.gameObject.activeSelf != koydet) koysiKaanto.gameObject.SetActive(koydet);
             for (int i = 0; i < malliKoydet.Count; i++)
             {
                 var k = malliKoydet[i]; if (k == null) continue;
