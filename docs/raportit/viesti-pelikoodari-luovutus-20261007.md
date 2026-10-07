@@ -1,21 +1,26 @@
-# Pelikoodarin luovutus 7.10.2026 (päivitetty klo 13.2x, ennen tilin 5 h taukoa)
+# Pelikoodarin luovutus 7.10.2026 (päivitetty klo 16.1x)
 
 Uusi Pelikoodari: lue tämä, sitten docs/raportit/viesti-pelikoodari-aloitus.md. Edellinen: viesti-pelikoodari-luovutus-20261006.md.
 
-## KESKEN JA SEURAAVAKSI (päivitetty 13.2x, ennen tilin 5 h taukoa; jatka klo 15 jälkeen)
-0. OMISTAJA 13.1x: KAIKKI ÄÄNET eleven_v4_turbo (halvempi; ei eroa). Esittelyt jo turbolla.
-1. Prahan ja Wienin avaukset (#4141) ja Liiku-kierroksen alku (#4142) JULKI ja todennettu 13.44.
-2. Olavinlinnan 31 repliikkiä VALMIIT: _valmiit/olavinlinna-repliikit-v1 (manifest, kooste.mp3), skripti
-   proto-3d/tyokalut/pelikoodari-ajot/olavinlinna-repliikit.py. Toimitettu Siirtosepälle ja kooste Päätoimittajalle;
-   ämpärissä seikkailu/olavinlinna/repliikit-v1 (13.21).
-3. Esittely: 6 kaupunkia tuotannossa (Pariisi, Praha, Wien, Rooma, Lontoo, Kööpenhamina). Loput 31 odottavat omistajan
-   määrälupaa (ÄLÄ generoi ennen). Tekstit pilvihaarassa pelikoodari-esittely-pilvi. Lupa → korjaukset omaan haaraan
-   pelikoodari-esittely, tarkistin → tee-esittelyaanet.mjs + avaukset tee-aanet-kohdistuksella.mjs --r2 → koosta-kuuntelu.mjs
-   --avaukset → vientipaketti (JSONiin kierros: pohja.kierros + avaus.aani opas/esittely-v1/aanet/<id>-avaus.mp3). Mallina
-   _tyo/opas-esittely/kolme/ ja _valmiit/opas-esittely-vienti-20261007b.
-4. Junassa: #4132 (yöportti), #4133 (Kysy vuosiluvut), #4134 (lippurivi).
-5. Opastus erillinen leike yleiset-v1/opastus-01.mp3; yleiset-v2.json ilman kierrossääntöä. Kysy ilman ääntä
-   testitunnuksella on tarkoituksellista. ÄLÄ KÄYTÄ Agent isolation remote.
+## KESKEN JA SEURAAVAKSI (päivitetty 16.1x; tilinvaihto illalla)
+0. OMISTAJAN LINJAUKSET 7.10.: KAIKKI ÄÄNET eleven_v4_turbo (13.1x). TESTAUS KEVYESTI (15.5x): ennen junaa vain automaattiset
+   testit + käännös, ei stillejä/savuja/iPad-mittauksia kuittaukseen. EI OMIA iOS/iPad/Mac-KÄÄNNÖKSIÄ (16.0x): haaralle
+   unity-tarkistus + testit; simukäännös vain vian syyn selvitykseen, ilmoitus Päätoimittajalle etukäteen.
+1. Esittely: 6 kaupunkia tuotannossa (Pariisi, Praha, Wien, Rooma, Lontoo, Kööpenhamina), kaikilla avaus; kierros alkaa
+   avauksen kohteesta (#4138 /opas/seuraava, #4142 /opas/liiku; ESITTELY_ALKU-taulu + esittely.kierros[0]; Praha ja Wien
+   esittely_polut → opas/esittely-v1b, #4141).
+2. LOPUT 31 KAUPUNKIA: tekstit VALMIIT ja Päätoimittajan päätökset viety (haara pelikoodari-esittely 55c2af69:
+   esittely-tyo/korjattu|pohja|avaukset/<id>, TARKISTUS-PAATOIMITTAJA.md, tarkistin 0 virhettä). ÄÄNIÄ EI GENEROIDA ennen
+   omistajan lupaa (omistaja: vasta pelitestin jälkeen). Kun lupa: avaus-kenttä JSONiin avaukset/<id>.md:stä →
+   tee-esittelyaanet.mjs (turbo) + avaukset tee-aanet-kohdistuksella.mjs --r2 → koosta-kuuntelu.mjs --avaukset →
+   vientipaketti (JSONiin kierros: pohja.kierros + avaus.aani opas/esittely-v1/aanet/<id>-avaus.mp3; mallina
+   _valmiit/opas-esittely-vienti-20261007b/-c) → indeksi aineistot.js esittely. Määrä noin 31 × 12 000 mrk ≈ 186 000 krediittiä turbolla.
+3. Apurahakortti: #4146 (kuvat kappaleiden vieressä, kappale/rivi 0-pohjaisia, palaute pois APURAHA_PALAUTE=false) ja
+   #4147 (valmiitLinssit ylätasolla, 9 linssiä; TF 160 -jäsennin tarkistettu C#-ajurilla scratchpadissa) MERGETTY;
+   Pages-julkaisu tarkistettava (https://matkakirja.app/assets/apuraha/esittely.json sisältää valmiitLinssit). NUI lukee samat kentät.
+4. Olavinlinnan 31 repliikkiä ämpärissä seikkailu/olavinlinna/repliikit-v1 (Siirtoseppä).
+5. Junassa/julki: #4132 yöportti, #4133 Kysy vuosiluvut, #4134 lippurivi.
+6. Worktreet: wt/pelikoodari-esittely (tekstit), wt/pelikoodari-yoportti (yleinen erä-worktree). ÄLÄ KÄYTÄ Agent isolation remote.
 
 ## TÄNÄÄN JULKI (tärkeimmät)
 #4082 pidempi kerronta, #4089 vuosiluvut, #4086 lyhin reitti, #4084/#4090/#4102 äänikartat (Pariisi, Venetsia, Kööpenhamina)

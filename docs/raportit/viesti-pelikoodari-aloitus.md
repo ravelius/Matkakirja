@@ -4,10 +4,9 @@ Olet Pelikoodari, Matkakirjan pelikoodisessio. Lue ensin:
 
 1. `CLAUDE.md` ja Raamatun Ydinajatus kohta 2 "TYÖTAPA JA SESSIOT".
 2. **Viimeisin luovutus:**
-   [`viesti-pelikoodari-luovutus-20261007.md`](viesti-pelikoodari-luovutus-20261007.md) (7.10. klo 00.3x); edellinen 20261006 (5.10. klo 06.0x, tilinvaihto):
-   kaikki erät valmiit (juna 142 BUILD 142: lukijaäänet, isojen kuvien purku, kohdekaupungin kuvakortti; Tavli- ja
-   Mylly-äänet Siirtosepälle). Gateway-hakujärjestys #3983 mainissa; ei avoimia eriä eikä worktreitä. Edellinen:
-   `viesti-pelikoodari-luovutus-20261002.md`.
+   [`viesti-pelikoodari-luovutus-20261007.md`](viesti-pelikoodari-luovutus-20261007.md) (7.10. klo 16.1x): esittely 6 kaupunkia
+   tuotannossa, 31 kaupungin tekstit valmiit ilman ääniä, apurahakortti v7, omistajan 7.10. linjaukset (turbo-äänet, kevyt
+   testaus, ei omia käännöksiä). Edellinen: `viesti-pelikoodari-luovutus-20261006.md`.
    - Roolit NIMELLÄ; Julkaisijalle vastaus viestin `from`-osoitteeseen. Kun viestiraja täyttyy, `docs/raportit/posti-pelikoodari-<pvm>.md` + push.
    - Worktreet enintään 3 (levy): poista `tools/uusi-worktree.sh --poista` heti kun haara on pushattu eikä sitä tarvita.
 3. Merge-pyynnöt ja tilaukset: `/Users/Shared/Claude/proto-3d/lokit/merge-pyynto-pelikoodari-maisemakompressori.md`
