@@ -165,6 +165,19 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(s.JatkaKierrosta() && s.KierrosKaynnissa, "jatko");
         }
 
+        // Omistaja 7.10. 12.4x: esityksen avaus ja opastus ensin, ei workerin kaupunkikysymystä niiden päälle.
+        [Testi] static void EsityksenAvausPysayttaaPyynnot()
+        {
+            var (s, p, _) = Pysahdyksella();
+            s.PyynnotSeis = true;
+            int n = p.Count;
+            s.VaihdaPaikka(48.8566, 2.3522, "Pariisi");
+            for (int i = 0; i < 100; i++) s.Paivita(0.1, _ => 5);
+            Oleta.Sama(n, p.Count, "ei pyyntöjä avauksen aikana");
+            s.AloitaKierros(new List<(string, double, double)> { ("Notre-Dame", 48.853, 2.3499), ("Louvre", 48.8606, 2.3376) });
+            Oleta.Tosi(!s.PyynnotSeis && p.Count > n, "kierros purkaa ja pyytää");
+        }
+
         [Testi] static void KaupunginSisallaLennetaan()
         {
             var (s, p, puhe) = Pysahdyksella();

@@ -636,6 +636,7 @@ namespace Matkakirja.Linssit.Kierros
         public void AloitaKierros(IList<(string nimi, double lat, double lon)> kohteet)
         {
             if (kohteet == null || kohteet.Count == 0 || Vaihe == OpasVaihe.Valmis) return;
+            PyynnotSeis = false;
             PelaajaValitsi();
             kierrosJono.Clear(); kierrosJono.AddRange(kohteet);
             kierrosIndeksi = 0;
@@ -698,8 +699,13 @@ namespace Matkakirja.Linssit.Kierros
             UusiPyynto();
         }
 
+        /// <summary>Esityksen avaus ja opastus soivat (sovitin): ei workerin pyyntöjä ennen kierrosta (kaupungin kysymys ei saa
+        /// soida avauksen päälle). Kierroksen aloitus (AloitaKierros) purkaa.</summary>
+        public bool PyynnotSeis;
+
         void UusiPyynto()
         {
+            if (PyynnotSeis) return;
             lykattyKysymys = null; esihakuPuheenJalkeen = false;   // uusi pyyntö korvaa puheen aikana tulleen kysymyksen
             odotettuPaikka = null;
             if (toive == null && KierrosPyynto()) return;   // kierros päättyi: ei uutta pysähdystä
