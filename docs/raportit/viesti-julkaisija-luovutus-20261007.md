@@ -80,3 +80,8 @@ Päätoimittaja = "PÄÄTOIMITTAJA (Opus, max)".
   merge #4140 ja ilmoita Karttasepälle. LS1 yövalot-161 OK af5922b95:llä; LS2 pallo-simut OK. Natiiviseppä iPad FACEIT ABBA
   (luvattu setsid-ajona). NUI köysikorjaus ei vielä toiminut (metrolinja katosi).
 - **13.2x Natiiviseppä**: Mac TF 160 + mac-kaanna 28da7435 setsid-ketjuna LS1:n gizan perässä (loki proto-3d/lokit/natiiviseppa-mac-tf-vahti.txt) — lukko voi olla sillä 15.00; NUI seuraavaksi kun vapaa.
+- **13.25 tila**: Natiiviseppä Mac d8b0e0fc + 28da7435 käännetty 13.21–13.23 (Mac TF 160 -ketju jatkuu setsid). LS1 giza
+  käännetty cbd5ffad7 (appi lokit/linssiseppa-app-esitys-741625b8d), aloitusajo simulla 13.22–. NUI 5c3d45e6 käännös + stillit
+  setsid-ketjuna 13.24– (loki proto-3d/lokit/natiivi-ui-1035/ketju-koysi.log; KETJU VALMIS → stillit Päätoimittajalle).
+  Olavinlinnan repliikit viety 13.21 (63). **15.00 jälkeen ensin**: Siirtoseppä historia KÄÄNNÖS NYT, LS1 Giza v2b -simu,
+  worldview-viennin tila → osoitin + #4140, S2-syksy, #4141/#4142 tulokset, TF 160 -ryhmäketju (tf160-ketju.log).
