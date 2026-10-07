@@ -165,7 +165,7 @@ namespace Matkakirja.Natiivi
         bool riviAuki;
         IVisualElementScheduledItem esittely;
         bool nappiNakyy;
-        enum Nakyma { Paa, Takyt, Maanosat, Maat, Kaupungit, Kysy, Liiku, Mika, Aika }
+        enum Nakyma { Paa, Takyt, Maanosat, Maat, Kaupungit, Kysy, Liiku, Mika, Aika, Lahteet }
 
         /// <summary>Oppaan linssi auki (✕ pois, LinssiUi.PaivitaSulku).</summary>
         public static bool Nakyy => Viimeisin != null && Viimeisin.nakyy;
@@ -1467,12 +1467,22 @@ namespace Matkakirja.Natiivi
                     // Tauko ja kuvat valikon riveinä, tila tekstissä (omistaja 6.10. 12.1x).
                     Komento(KuvatPaalla ? "Kuvat: päällä" : "Kuvat: pois", VaihdaKuvat);
                     Komento("Näytä teksti", NaytaTeksti);
-                    Komento("Tietoja ja lähteet", () => { KrediititTiivis.NaytaKaikki(); Debug.Log("MATKAKIRJA opas: tietoja ja lähteet"); });
+                    // LÄHTEET (omistaja 7.10. 22.5x: kuvien tekijät eivät näy kuvissa, vaan täällä; sama alanäkymä kuin linnan Lähteet).
+                    Alanakyma("Lähteet", () => Avaa(Nakyma.Lahteet));
                     Viiva();
                     Komento("Poistu linssistä", () => UiNakymat.Hae()?.Linssit?.SuljeLinssi());
                     break;
                 case Nakyma.Takyt:
                     if (aloitus) RakennaAloitusPaikat(kaikki); else RakennaTakyt(kaikki);
+                    break;
+                case Nakyma.Lahteet:
+                    Takaisin("Lähteet", Nakyma.Paa);
+                    Komento("Kartta- ja maastoaineistot", () => { KrediititTiivis.NaytaKaikki(); Debug.Log("MATKAKIRJA opas: kartta-aineistot"); });
+                    Viiva();
+                    Vieritys();
+                    var lahteet = KuvaLahteet();
+                    if (lahteet.Count == 0) Kirjasimet.Aseta(Rakenne.Teksti("Ei kuvalähteitä.", "mk-linssivalikko__lahde", rivit), Kirjasin.Moderni);
+                    foreach (var l in lahteet) Kirjasimet.Aseta(Rakenne.Teksti(l, "mk-linssivalikko__lahde", rivit), Kirjasin.Moderni);
                     break;
                 case Nakyma.Kysy:
                     RakennaKysy();
@@ -1846,6 +1856,31 @@ namespace Matkakirja.Natiivi
         void Tyhja(string teksti) => Kirjasimet.Aseta(Rakenne.Teksti(teksti, "mk-linssivalikko__lahde", Kohde), Kirjasin.Moderni);
 
         void Viiva() => Rakenne.El("mk-linssivalikko__viiva", Kohde, PickingMode.Ignore);
+
+        /// <summary>
+        /// Nykyisen kaupungin yksityiskohtakuvien tekijät (LS1: OpasSovitin.KuvaLahteet, (Kohde, Tekija, Lisenssi, Havainnekuva)
+        /// heijastuksella): "kohde · tekijä · lisenssi"; havainnekuvassa "kohde · Tekoälyllä tuotettu havainnekuva"; kukin kerran.
+        /// </summary>
+        static List<string> KuvaLahteet()
+        {
+            var tulos = new List<string>();
+            var p = typeof(OpasValikko).Assembly.GetType("Matkakirja.Natiivi.OpasSovitin")
+                ?.GetProperty("KuvaLahteet", System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Static);
+            if (!(p?.GetValue(null) is System.Collections.IEnumerable lista)) return tulos;
+            foreach (var o in lista)
+            {
+                if (!(o is System.Runtime.CompilerServices.ITuple t) || t.Length < 4) continue;
+                string kohde = t[0] as string, tekija = (t[1] as string ?? "").Trim(), lisenssi = (t[2] as string ?? "").Trim();
+                bool havainne = t[3] is bool b && b;
+                var osat = new List<string>();
+                if (!string.IsNullOrWhiteSpace(kohde)) osat.Add(kohde.Trim());
+                if (havainne) osat.Add("Tekoälyllä tuotettu havainnekuva");
+                else { if (tekija.Length > 0) osat.Add(tekija); if (lisenssi.Length > 0) osat.Add(lisenssi); }
+                string rivi = string.Join(" · ", osat);
+                if (osat.Count > 1 && !tulos.Contains(rivi)) tulos.Add(rivi);
+            }
+            return tulos;
+        }
 
         void Vieritys()
         {
