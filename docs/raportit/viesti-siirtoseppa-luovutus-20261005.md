@@ -463,3 +463,7 @@ Edellinen luovutus on `viesti-siirtoseppa-luovutus-20261002.md` (5.10. osiot 02.
   tulossa tänään. E3 perusosat ab9e034a: Ydin Kynttilat (+3 testiä, 832/832), SeikkailuKynttilat (liekit, leivottu _Kirkkaus, kantovalo
   DioraamaLeivottu-varjostimeen, valoisuus vartijoille), toiminto esineiden jälkeen, "poikki kynttilat 1|0|sammuta|oma 0|1|tila".
   LR:ltä pyydetty kappelin merkit (piilo:kaari-ovi, veto:, ontto:, esine:kivi/kalkki/pateeni/liuskekivi, reitti:kappalainen-*).
+- 16.30: Foggin mittakaavavika (peri kapselin skaalan) → 678e8a15 historia-h0:ssa, poimittu junaan 162: historia-juna162 @ ee0084ee
+  (Natiivisepälle, kuittaus pyydetty). E3: 867f3b69 oma kynttilä näkyväksi liekiksi + veto kallistaa. LR:n kappelin merkit ~1 h:
+  kätkö sivualttarin syvennys (0,52×0,60×0,55, kilpien alla), merkit ovi:kappeli-alku, piilo:kaari-ovi, veto:/ontto:syvennys,
+  esine:kivi-1..3 (irrotettava), kalkki/pateeni/liuskekivi, reitti:kappalainen-1..5.
