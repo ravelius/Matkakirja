@@ -21,7 +21,9 @@ Tarkista ensin taustalla jatkuneiden ajojen tulokset (alla) ja kerro ne Julkaisi
 - **Junan savu (Päätoimittaja):** Mac: piiloon → takaisin → panorointi lataa uudet laatat ja ääni palaa; kirjoitusääni aloitusruudussa.
   EI hiiri/näppäinautomaatiota, kun omistaja käyttää Macia (muisti mac-gui-automaatio-omistajan-naytolla).
 - **Mac lepo mitattu:** 755597cf piilossa 2,1–2,6 %, ei valittuna 7,5 % (4975a36c), täysi 15–16 %. Omistaja todentaa Mac TF 161:llä.
-- **FACEIT-uusinta** käynnissä 14.06 (puhdas uudelleenasennus korjasi latausvirheen), tulos lokit/natiiviseppa-faceit-uusinta.txt.
+- **Juna 162 -ehdokas:** Siirtoseppä osoitin-varmistus **227529f3** (peilin vaihto lataa rakennuksen uudelleen; kehittäjäkomennon
+  vika, pelaajilla ei) — Päätoimittajan kuittaus. Siihen asti peilivaihdossa "poikki lataa" tai puhdas asennus.
+- **FACEIT-uusinta** 14.21 (LOHKOT "B A", puhdas asennus per lohko; aiempi 14.06-ajo antoi 2 A-jaksoa), käynnissä 14.06 (puhdas uudelleenasennus korjasi latausvirheen), tulos lokit/natiiviseppa-faceit-uusinta.txt.
 
 ## TILA 14.0x (tauko peruttu 13.47)
 
