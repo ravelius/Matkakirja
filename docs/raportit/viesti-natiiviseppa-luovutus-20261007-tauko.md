@@ -25,7 +25,7 @@ log -1 master`, `tail -3 proto-3d/lokit/kaannospalvelu/juna.log`, `tail -5 proto
 4. Täysi BUILD 162 -SHA Julkaisijalle + Päätoimittajalle. Julkaisija ajaa TF 162:n.
 5. Mac TF 162 (lupa annettu): iOS-latauksen jälkeen `perl -e 'use POSIX; exit if fork; setsid; exec "zsh", @ARGV'
    proto-3d/lokit/natiiviseppa-skriptit/mac-tf.sh <BUILD162-sha8> 162`, tulos mac-tf-vahti.txt + gh run list proto3d-mac-testflight.
-6. JUNA 163 -ehdokkaat: LS1 yksityiskohdat-havainnekuva c2884bc97 (⊇ 8bc2a42fc), NUI seikkailu-tietokerros cbc92a25 (f9f48082:n päällä); aiempi LS1 8bc2a42fc (Pariisin yksityiskohtakuvat; 3 uutta tiedostoa .metoineen, overlay-kerros 17;
+6. JUNA 163 -ehdokkaat: LS1 yksityiskohdat-havainnekuva c2884bc97 (⊇ 8bc2a42fc), NUI seikkailu-tietokerros cbc92a25 (f9f48082:n päällä), LS2 E3-nousu d75b33031 (SeikkailuNousu + NousuReitti, uudet .cs + .meta; Siirtosepän E3d-kutsu samaan junaan); aiempi LS1 8bc2a42fc (Pariisin yksityiskohtakuvat; 3 uutta tiedostoa .metoineen, overlay-kerros 17;
    tarvitsee workerin #4152, muuten kuvat eivät näy) — LS1:n mukaan kuitattu, varmista Päätoimittajalta.
 7. Muut: PR ravelius/Matkakirja#4149 (mono_crash) Julkaisijalle; Mac-ohjauslevyvika: odota omistajan Player.log (DIAGNOOSI-rivit).
 
