@@ -119,6 +119,11 @@ namespace Matkakirja.Natiivi
             }, kokeet, Ikonit.Viiva["taikalasit"]);
             pala.tooltip = "Olavinlinnan peliosan kokeilu: venesaapuminen, laituri, keittiö (kehittäjä).";
             Rakenne.Teksti("Olavinlinna – pelattava pala (kokeilu)", "mk-kytkinrivi__nimi", pala);
+            // Volumetriset valot (kuunsäteet; Päätoimittaja 7.10. 20.4x: testaaja voi sammuttaa ajon aikana, jos jotain hajoaa).
+            volumetriset = Rakenne.Nappi(null, "mk-kytkinrivi", () => { SeikkailuValot.Aseta(volumetriset: !SeikkailuValot.Volumetriset); Paivita(); }, kokeet, Ikonit.Viiva["yo"]);
+            volumetriset.tooltip = "Linnan volumetriset valot (kuunsäteet) päälle tai pois heti (kehittäjä). Oletus: Mac ja M-sarjan iPad päällä.";
+            Rakenne.Teksti("Volumetriset valot", "mk-kytkinrivi__nimi", volumetriset);
+            volumetrisetTila = Rakenne.Teksti("", "mk-kytkinrivi__tila", volumetriset);
             // Striimiääni muutti kehittäjävalikosta nostokortin säätörattaaseen pelinimellä (omistaja 27.9. klo 10.2x,
             // web #3388; KortinLukija, Striimiaani.Pelinimet).
             // Työhuone (web #kehittaja-tyohuone): Raamattu ja Kehittäjälehti kehittäjän liitteinä (Tyohuone.cs).
@@ -161,6 +166,7 @@ namespace Matkakirja.Natiivi
         readonly VisualElement kokeet;
         Button kynnykset;
         Label kynnyksetTila;
+        Button volumetriset; Label volumetrisetTila;
         (Slider Saadin, Label Arvo) kontrasti, nosto;
 
         /// <summary>Pohjakartan sävyn liukusäädinrivi kehittäjäosaan (Pohjasavy, Natiiviseppä).</summary>
@@ -313,6 +319,11 @@ namespace Matkakirja.Natiivi
                 bool paalla = !Matkakirja.Linssit.Linssirekisteri.Kehittajatila;
                 kynnykset.EnableInClassList("mk-valittu", paalla);
                 kynnyksetTila.text = paalla ? "PÄÄLLÄ" : "POIS";
+            }
+            if (volumetriset != null)
+            {
+                volumetriset.EnableInClassList("mk-valittu", SeikkailuValot.Volumetriset);
+                volumetrisetTila.text = SeikkailuValot.Volumetriset ? "PÄÄLLÄ" : "POIS";
             }
         }
     }
