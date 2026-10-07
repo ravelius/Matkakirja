@@ -2739,6 +2739,21 @@ async function oppaanAaniTunniste(teksti) {
   return (await sha256Heksa(new TextEncoder().encode(`william|eleven_v4_turbo|${teksti}`))).slice(0, 32);
 }
 
+/**
+ * Vain esigeneroitu ääni (Päätoimittaja 7.10.: Kerro lisää ei saa synnyttää maksullista generointia): url:t vain, jos
+ * opas/<sha>.mp3 tai .pcm on jo R2:ssa. Tekstiä EI tallenneta, joten GET /opas/aani/<sha> ei voi generoida sitä.
+ */
+async function oppaanValmisAani(pyynto, env, teksti) {
+  if (!teksti || !env.PUHE_R2) return null;
+  const sha = await oppaanAaniTunniste(vuosiluvutSanoiksi(teksti));
+  const onko = async (k) => { try { return Boolean(await (env.PUHE_R2.head ? env.PUHE_R2.head(k) : env.PUHE_R2.get(k))); } catch { return false; } };
+  const [mp3, pcm] = await Promise.all([onko(`opas/${sha}.mp3`), onko(`opas/${sha}.pcm`)]);
+  if (!mp3 && !pcm) return null;
+  const juuri = `${new URL(pyynto.url).origin}/opas/aani/${sha}`;
+  return { aani: mp3 ? `${juuri}.mp3` : null, aani_pcm: pcm ? `${juuri}.pcm` : null, aani_taajuus: OPAS_PCM_TAAJUUS,
+    kesto_s: Math.round((vuosiluvutSanoiksi(teksti).length / OPAS_MERKKIA_SEKUNNISSA) * 10) / 10 };
+}
+
 /** POST: ääni-url heti (teksti KV:hen, katto lasketaan nyt) → { aani, kesto_s } tai null. */
 async function oppaanAani(pyynto, env, ctx, naytettava, kehittaja) {
   if (!naytettava) return null;
@@ -3179,8 +3194,13 @@ async function oppaanKysymykset(env, { paikka, nimi, kaupunki }) {
   }
 }
 
-/** GET /opas/kysymykset?paikka&nimi&kaupunki → { paikka, kysymykset }. */
-async function hoidaOppaanKysymykset(pyynto, env, kors) {
+/**
+ * GET /opas/kysymykset?paikka&nimi&kaupunki → { paikka, kysymykset }. Valmiin esittelyn kohteella (omistaja 7.10. klo 10.3x,
+ * "Yksi esitys + Kerro lisää"): esittelyn 5 valmista kysymystä (jos on) ja Kysy-valikon ensimmäinen rivi "Kerro lisää" =
+ * kohteen pitkä pysähdysteksti ja sen ääni LITTEINÄ kenttinä (kerro_lisaa_teksti, _aani, _aani_pcm, _aani_taajuus,
+ * _kesto_s; vanhat natiivit ohittavat ne, ks. #4107).
+ */
+async function hoidaOppaanKysymykset(pyynto, env, kors, ctx) {
   if (!oppaanAsiakas(pyynto, kors, env)) return new Response('Origin ei ole sallittu', { status: 403 });
   const ip = pyynto.headers.get('cf-connecting-ip');
   if (ip && oppaanTiheysYlittyy(`kysymykset:${ip}`, Date.now(), 60)) {
@@ -3191,8 +3211,14 @@ async function hoidaOppaanKysymykset(pyynto, env, kors) {
   const paikka = siivoaTeksti(url.searchParams.get('paikka') ?? '', 120) || null;
   const nimi = siivoaTeksti(url.searchParams.get('nimi') ?? '', 120) || null;
   if (!paikka || !nimi) return vastaa({ virhe: 'kysely', viesti: 'Paikka ja nimi tarvitaan.' }, { status: 400, ...kors });
-  const kysymykset = await oppaanKysymykset(env, { paikka, nimi, kaupunki: siivoaTeksti(url.searchParams.get('kaupunki') ?? '', 80) || null });
-  return vastaa({ paikka, kysymykset }, kors);
+  const kaupunki = siivoaTeksti(url.searchParams.get('kaupunki') ?? '', 80) || null;
+  const valmis = kaupunki ? valmisKohde(await oppaanEsittely(env, kaupunki), paikka) : null;
+  const omat = Array.isArray(valmis?.kysymykset) && valmis.kysymykset.length ? valmis.kysymykset.slice(0, 5) : null;
+  const kysymykset = omat ?? await oppaanKysymykset(env, { paikka, nimi, kaupunki });
+  if (!valmis) return vastaa({ paikka, kysymykset }, kors);
+  const aani = await oppaanValmisAani(pyynto, env, valmis.puhe_teksti || valmis.teksti).catch(() => null);
+  return vastaa({ paikka, kysymykset, kerro_lisaa_teksti: valmis.teksti, kerro_lisaa_aani: aani?.aani ?? null,
+    kerro_lisaa_aani_pcm: aani?.aani_pcm ?? null, kerro_lisaa_aani_taajuus: aani?.aani_taajuus ?? null, kerro_lisaa_kesto_s: aani?.kesto_s ?? null }, kors);
 }
 
 /**
@@ -3626,7 +3652,7 @@ export default {
     }
     if (pyynto.method === 'GET' && new URL(pyynto.url).pathname === '/opas/tunnus') return hoidaOppaanTunnus(pyynto, env);
     if (pyynto.method === 'GET' && new URL(pyynto.url).pathname === '/opas/kohteet') return hoidaOppaanKohteet(pyynto, env, kors, ctx);
-    if (pyynto.method === 'GET' && new URL(pyynto.url).pathname === '/opas/kysymykset') return hoidaOppaanKysymykset(pyynto, env, kors);
+    if (pyynto.method === 'GET' && new URL(pyynto.url).pathname === '/opas/kysymykset') return hoidaOppaanKysymykset(pyynto, env, kors, ctx);
     if (pyynto.method === 'GET' && new URL(pyynto.url).pathname === '/opas/liiku') return hoidaOppaanLiiku(pyynto, env, kors);
     if (pyynto.method === 'GET' && new URL(pyynto.url).pathname === '/opas/lahella') return hoidaOppaanLahella(pyynto, env, kors);
     if (pyynto.method === 'GET' && new URL(pyynto.url).pathname === '/opas/aineistot') {
