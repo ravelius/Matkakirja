@@ -1,0 +1,569 @@
+{
+  "task": "rooma-yksityiskohdat-20261007",
+  "deliveredAt": "2026-10-07T16:43:03.294433+00:00",
+  "source": {
+    "path": "posti/sisaltokirjuri-codex-rooma-yksityiskohdat-20261007.md",
+    "commit": "c95ad78a20be9549c5fee0e859db1194c6e42f96",
+    "blob": "1027eaa39325d0a3f59922e3e5acb6f12a6f2029"
+  },
+  "sourceReadInFull": true,
+  "imageCount": 6,
+  "generatedCandidates": 8,
+  "generationCalls": 8,
+  "generationLimit": 8,
+  "sourceImagePixelsUsed": false,
+  "referenceMethod": "Tilauksessa erikseen pyydetyt puuttuvien yksityiskohtien havainnekuvat. Faktat tekstilähteistä; valokuvapikseleitä ei syötetty generaattoriin.",
+  "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+  "editorAcceptance": false,
+  "gameIntegrated": false,
+  "published": false,
+  "sourceFactualNotes": [
+    "Trevi caption must not say onlymunicipalRome residents exempt; metropolitanresidents also exempt. No price/number drawn inimage.",
+    "No source image pixels will be passed to imagegen.",
+    "Roma independent of pending PrahaWien decisions.",
+    "Madonna discovery specificallylegend, officialsource says Tiber mouth; commissionTrasteverebackdrop interpretation, avoid documentaryfindsiteclaim."
+  ],
+  "heldCandidates": [
+    {
+      "number": 1,
+      "qid": "Q10285",
+      "id": "avajaiskisat-80",
+      "filename": "rooma-Q10285-avajaiskisat-80.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "file": "rooma-Q10285-avajaiskisat-80.png",
+      "sha256": "7aacb6371ffae3ea85176f9feeac0270d8a4dff18db541d079877b5c76830b0e",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/rooma-yksityiskohdat-20261007/production/01-avajaiskisat-80/rooma-Q10285-avajaiskisat-80.png",
+      "visualReview": {
+        "file": "rooma-Q10285-avajaiskisat-80.png",
+        "sha256": "7aacb6371ffae3ea85176f9feeac0270d8a4dff18db541d079877b5c76830b0e",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": false,
+        "requiresEditorCompositionReview": false,
+        "observations": [
+          "Areena on kokonaisena soikiona, hiekka ehjä ja kolme pientä seisovaa hahmoa; velarium ja tiheä katsomo näkyvät.",
+          "Etureunan ohut verkkokaide näyttää modernilta; pyydettyä kolmen kaariarkadikerroksen rakennetta ei kuvasta voi todentaa, ja ulkokehä leikkautuu sivuilta.",
+          "Pidätetty korjausta varten; lisägenerointiin ei ole vielä omistajan lupaa."
+        ]
+      },
+      "generationPrompt": "Use case: historical-scene.\nAsset type: one commissioned photorealistic Matkakirja city-guide detail, landscape 3:2, native 1536 x 1024 pixels, opaque RGB.\nCreate an entirely NEW image from this text only. No source image, existing painting, film still, photograph or generated image is an input.\n\nScene: the Flavian Amphitheatre / Colosseum in Rome during its inaugural games in AD 80, in a quiet pause before an event. Architecture is newly completed and intact, pale ivory travertine and marble, no ruined or excavated areas. The whole sand-covered central arena and the whole densely occupied elliptical seating bowl are visible in one coherent real-camera view. The arena is an elongated ellipse, approximately 76 by 46 metres in plan, not a circle or rectangular stadium. The overall amphitheatre proportions are about 189 by 156 metres in plan. Respect a credible continuous oval, radial aisles, concentric tiers, and continuous perspective.\n\nCamera/framing: high in the upper seating, looking steeply down and diagonally across toward the imperial box on the opposite side. An extremely wide but rectilinear architectural lens, around 15 mm full-frame equivalent; aim the camera so both rounded ends of the entire sand arena and the near and far seating banks fit comfortably within the frame. The ellipse's long axis runs broadly across the landscape frame. Show the complete bowl rather than cropping one end; modest empty margin above the far rim. No close foreground heads or human figures. A small amount of near pale stone seating can establish the high viewpoint but must not obstruct the arena perimeter. The imperial box is a small architectural element opposite the camera, distinguished by plain purple-red cloth only. No recognizable portrait of Titus.\n\nArchitecture: a credible ancient Roman amphitheatre interior and complete new Colosseum envelope: three arcaded architectural orders and a solid upper attic with small rectangular openings, pale intact stone, densely packed marble seating below, a restrained upper rim gallery. Make the architecture coherent, not stacked disconnected stage sets. Timber masts with ropes around the rim support off-white linen velarium shadecloth, PARTIALLY extended over the outer seating; leave the entire arena open to the sky. A few small plain cloth pennants flutter at the rim in muted red, ochre, blue and purple. Their fabric is blank and completely unmarked.\n\nPeople: the enormous audience is made of tiny distant Roman spectators in restrained off-white, ochre and earth-colour tunics and draped cloth, filling the seating rows densely. No individual faces identifiable, no close foreground actors, no person resembling a real person or film actor. Exactly three tiny distant gladiator figures stand quietly on the middle area of the sand, naturally spaced, relaxed neutral poses, no fighting and no weapon action. They are minor scale markers, not a central character close-up.\n\nArena surface: one uninterrupted solid pale sandy oval floor with subtle foot scuffs. ALL underground infrastructure is hidden beneath the floor. Absolutely no exposed hypogeum, underground stone labyrinth, trenches, archaeological excavation, missing floor, cutaway, modern replacement decking, fencing or dividing walls on the arena.\n\nStyle: extremely convincing natural documentary-camera photograph appearance, warm gentle afternoon sunlight, realistic ambient shade beneath the velarium, muted Mediterranean colours, fine stone grain, woven linen texture, restrained atmosphere, natural highlight rolloff and optical depth. Historical reconstruction with a camera-shot appearance, not an actual photograph. No CGI or video-game render, no digital painting, no romantic nineteenth-century painting, no HDR, no dramatic cinematic grade, no bloom, no oversaturation, no exaggerated sunset.\n\nAbsolute exclusions: any lettering, inscriptions, words, numerals, SPQR, logos, eagles, imperial emblems, shields as emblems, banners with marks, signage, watermark, border or montage. No blood, injuries, corpses, animal attacks, combat, execution, spectacle violence or weapons in action. No current Rome skyline, ruined Colosseum profile, modern repairs, steel safety railings, tourists, contemporary clothing, electric lighting, cables, modern objects or modern buildings. No circular plan and no cropped arena ends.",
+      "r2Delivered": false,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "number": 8,
+      "qid": "Q189417",
+      "id": "appia-ristit-71eaa",
+      "filename": "rooma-Q189417-appia-ristit-71eaa.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "file": "rooma-Q189417-appia-ristit-71eaa.png",
+      "sha256": "5c58584bab1a0fa3d5e0bd8a849b066e1112ecd604b0df28059c2d31df0bdff0",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/rooma-yksityiskohdat-20261007/production/08-appia-ristit-71eaa/rooma-Q189417-appia-ristit-71eaa.png",
+      "visualReview": {
+        "file": "rooma-Q189417-appia-ristit-71eaa.png",
+        "sha256": "5c58584bab1a0fa3d5e0bd8a849b066e1112ecd604b0df28059c2d31df0bdff0",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": false,
+        "requiresEditorCompositionReview": false,
+        "observations": [
+          "Ei verta, kidutuslähikuvia tai tunnistettavia kasvoja; pitkä tie ja kaukaiset ristit.",
+          "Risteihin kiinnittyviä ihmishahmoja ei erotu: kuvasta tulee tyhjien ristien maisema. Tilattu keskeinen sisältö puuttuu.",
+          "Pidätetty korjausta varten; lisägenerointiin ei ole vielä omistajan lupaa."
+        ]
+      },
+      "generationPrompt": "Use case: historical-scene\nAsset type: Matkakirja city-guide detail; one complete NEW non-graphic historical-education LANDSCAPE illustration, photorealistic camera appearance.\nPrimary request: The Via Appia in 71 BCE after the Spartacus rebellion. A solemn, calm, very WIDE landscape view along a straight ancient Roman military road into the Capua plain. It illustrates an ancient account of prisoners along the Rome–Capua road. The road and open countryside are the main subject.\nScene/backdrop: Roman Republic 71 BCE. Straight road built of irregular dark basalt paving stones, with low tuff curbs, empty dry grass verges and open agricultural plain. Sparse cypress trees very far away, broad muted gray sky, distant low hills only at the extreme horizon.\nStrict distance and size composition: Camera very LOW at the road's surface, natural wide 24mm photo perspective. Horizon near the upper third. At least the ENTIRE LOWER HALF of the image must be EMPTY ROAD and empty surrounding landscape. Nothing human or cross-like anywhere in this foreground. Leave the first 150 METRES of the road, verges and surrounding land completely EMPTY. The first wooden crosses start only in the FAR DISTANCE, at least 150–200 metres away, clustered in a thin visual band near the horizon. DOZENS of plain wooden CROSS silhouettes run evenly along BOTH road verges and recede toward the vanishing point. ALL crosses and attached people are tiny distant dark silhouettes. IMPORTANT scale at output 1536 x 1024: the biggest human silhouette attached to a distant cross is only about 8–12 PIXELS TALL, and no cross exceeds about 20 PIXELS TALL. Every attached human is an ADULT, clothed opaque silhouette only with NO visible anatomy, NO faces and NO body details. Only the faint distant cross-shaped forms suggest the historical account. A few even tinier Roman guards appear as neutral standing silhouettes far behind the start of the crosses, with no visible faces or detailed clothing. They are inactive. This image is suitable for a 13+ educational city guide.\nLighting/mood: low natural late-afternoon BACKLIGHT under a muted gray sky, ordinary soft shadows, solemn quiet mood, brown grass and gray basalt, subdued natural colours. No red or orange giant sun, no horror aesthetic, no gruesome hero shot, no theatrical lighting, no cinematic oversaturation.\nStyle/medium: photorealistic camera-shot appearance with believable basalt texture and physical road perspective; not a painting, illustration or CGI render. LANDSCAPE 3:2, native exactly 1536 x 1024 pixels, opaque RGB sRGB. New generation from TEXT ONLY.\nMandatory exclusions: NO foreground cross or human. NO medium-distance or large human figure. NO body close-up, anatomical detail, visible restraints, nails, wounds, injuries, blood, gore, exposed skin, nudity, torture detail, suffering facial expression, execution action, violence in progress, minors, identifiable faces, named historical portrait or recognizable actors. NO skulls or corpse pile. NO later tomb of Cecilia Metella, no towers, medieval buildings, modern ruins, modern roads, cars or objects. NO words, numerals, inscriptions, road signs, logos, watermark or frame. No source-image inputs.\n",
+      "r2Delivered": false,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false
+    }
+  ],
+  "assets": [
+    {
+      "number": 2,
+      "qid": "Q99309",
+      "id": "oculus-sade",
+      "filename": "rooma-Q99309-oculus-sade.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "file": "rooma-Q99309-oculus-sade.png",
+      "r2Key": "julisteet/rooma-yksityiskohdat/20261007/rooma-Q99309-oculus-sade.png",
+      "url": "https://media.matkakirja.app/julisteet/rooma-yksityiskohdat/20261007/rooma-Q99309-oculus-sade.png",
+      "sha256": "9ff68b8d1f5e8c644f15e5b0d2d61d6bcb1e6f46b063f759753e27b155a10848",
+      "bytes": 2974831,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "mitat": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Use case: photorealistic-natural\nAsset type: one 1536 x 1024 landscape 3:2 RGB opaque sRGB PNG detail illustration for the Matkakirja Rome city guide.\nPrimary request: A single physically coherent, camera-shot photograph-like view INSIDE THE ACTUAL PANTHEON IN ROME ON A RAINY DAY, showing rain entering the open oculus and draining through several SMALL ROUND HOLES in the wet marble floor. This is the contemporary surviving Pantheon interior, empty of people. Generate a completely new image without any source-image input.\nArchitecture: the enormous circular Roman rotunda, approximately 43.3 metres in diameter and height, recognizable coloured marble wall revetment and classical columns framing the shallow niches, the restrained rectangular-panel attic, and the great hemispherical Roman concrete dome with its graduated square recessed coffers. The visible upper half of the dome occupies the upper image. The real central circular oculus, about 8.5 to 9 metres across, is fully OPEN TO A GREY SKY with a clearly visible curved rim. No glass, no roof insert. Use the actual Pantheon spatial relationships, not an ornate generic cathedral.\nComposition and camera: ONE continuous wide interior exposure, not a collage, montage or split screen. Camera at human eye height, about 1.5 metres above the floor, near the rotunda wall, looking across the centre; a very wide rectilinear architectural lens around 10–12 mm full-frame equivalent, tilted upward just enough that the oculus rim, the upper dome and the foreground floor can all genuinely fit in the same view. Keep a believable perspective and a continuous floor plane. The geometric wet floor occupies the lower foreground; the falling rain is in the rear central area directly beneath the oculus. Do not insert a macro detail at the bottom or combine incompatible camera positions.\nFloor and drainage: retain the Pantheon's geometric alternating circles and squares of muted red porphyry, grey granite and yellow giallo antico marble, framed by pale veined marble. Show several small dark ROUND drilled drainage openings within the central wet-floor area, well separated and small compared with the broad marble panels, naturally foreshortened by perspective. These are tiny unadorned holes in the stone, not grilles, not metal floor drains, not huge black sinkholes. Shallow water sheets and restrained tiny ripples converge subtly toward the holes and disappear through them. The floor is wet and reflective, with only a thin water film; no indoor flood, no dramatic swirling vortex. Drain-hole positions are illustrative rather than a surveyed exact map.\nRain and light: a broad but delicate column of real individual rain streaks drops from the open oculus to the floor, almost vertical with a slight consistent wind slant. Diffuse grey overcast daylight makes the rain visible against the darker interior; soft realistic reflections on the wet coloured stone. The rainy light must not become a solid white glowing ray, theatrical spotlight, waterfall or magical beam. Natural restrained camera exposure, subdued real material colours, quiet cloudy-day atmosphere, realistic stone texture and optical detail, no HDR, no cinematic colour grading, no hyper-saturation, no painted or rendered surface.\nConstraints: exactly one image, 1536 x 1024 landscape; no people or tourists anywhere, no text or inscriptions, no signs, logos, watermark or frame, no ropes or barriers, no modern extra lamps, no umbrellas, no stained glass, no closed oculus, no chandeliers, no Gothic architecture, no fresco-covered dome, no gold baroque fantasy interior, no theatrical sunbeam. Show small drainage holes and actual falling rain while preserving the authentic Pantheon rotunda, dome and floor.",
+      "viitteet": [
+        {
+          "type": "textResearchOnly",
+          "publisher": "Ministero della Cultura — Direzione Musei nazionali della città di Roma (monument operator)",
+          "title": "Cenni storici — Pantheon e Basilica di Santa Maria ad Martyres",
+          "url": "https://direzionemuseiroma.cultura.gov.it/pantheon/cenni-storici/",
+          "notes": "Operator confirms circular room 43.30 m across and high, coffered dome, circular opening about 9 m, seven alternating rectangular/semicircular chapels and eight aedicules, the current 1757 attic pattern, and rain draining through 22 holes at the centre of the floor. Text only; no images used."
+        },
+        {
+          "type": "textResearchOnly",
+          "publisher": "Ministero della Cultura — Direzione Musei nazionali della città di Roma (monument operator)",
+          "title": "Pantheon e Basilica di Santa Maria ad Martyres",
+          "url": "https://direzionemuseiroma.cultura.gov.it/pantheon/",
+          "notes": "Confirms cylindrical rotunda wall and concrete dome of 43.30 m diameter and equal height. Text only."
+        },
+        {
+          "type": "textResearchOnly",
+          "publisher": "Basilica di Santa Maria ad Martyres — Tourist to Pilgrim project",
+          "title": "Perché non piove nel Pantheon? Il fascino di un’opera unica al mondo",
+          "url": "https://www.pantheonroma.com/it/2026/03/24/perche-non-piove-nel-pantheon-il-fascino-di-unopera-unica-al-mondo/",
+          "notes": "Basilica-linked project confirms that rain enters, the original marble floor and underground drainage manage it, and the openings are small and nearly invisible. General slope description differs in emphasis from the operator's central-hole statement; exact slope geometry is not asserted by this illustration. Text only."
+        },
+        {
+          "type": "textResearchOnly",
+          "publisher": "Basilica di Santa Maria ad Martyres",
+          "title": "Basilica of Santa Maria ad Martyres — Pantheon in Rome",
+          "url": "https://pantheonroma.org/home-eng/",
+          "notes": "The basilica's own site links pantheonroma.com as its Tourist to Pilgrim visitor project, establishing the relationship of the preceding text source. Text only."
+        },
+        {
+          "type": "textResearchOnly",
+          "publisher": "Roma Capitale — Turismo Roma (official municipal tourism)",
+          "title": "Pantheon",
+          "url": "https://www.turismoroma.it/it/luoghi/pantheon",
+          "notes": "Supports the floor's squares/circles of porphyry, giallo antico, granite and pavonazzetto, five progressively smaller coffer tiers, and the 8.92 m oculus. This supplements operator/basilica texts. Text only."
+        }
+      ],
+      "kuvateksti": "Sade putoaa Pantheonin avoimesta kattoaukosta ja poistuu märän marmorilattian pienistä viemäriaukoista. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/rooma-yksityiskohdat-20261007/production/02-oculus-sade/rooma-Q99309-oculus-sade.png",
+      "technicalChanges": [
+        "Native generated image is 1536×1024 RGB PNG; no creative editing, cropping, retouching or production-size resizing.",
+        "Original generated image retained at built-in path and copied byte-for-byte to original-imagegen.png.",
+        "Added PNG Description and Source exact required marking, Title and embedded sRGB ICC profile. Pixel bytes unchanged.",
+        "Created separate 480×320 Lanczos technical downscale qa-preview-480.png for small-image QA."
+      ],
+      "visualReview": {
+        "file": "rooma-Q99309-oculus-sade.png",
+        "sha256": "9ff68b8d1f5e8c644f15e5b0d2d61d6bcb1e6f46b063f759753e27b155a10848",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "requiresEditorCompositionReview": true,
+        "observations": [
+          "Sade putoaa avoimesta oculuksesta, märkänä kiiltävä geometrinen marmorilattia ja pienet aukot erottuvat. Ei ihmisiä tai opasteita.",
+          "Oculuksen yläreuna leikkautuu. Aukkojen sijainnit ja tarkka sisätilageometria ovat havainnollisia.",
+          "Toimitettava Fablelle rajauksen arviointiin, ei täydellisen kattoaukko-/lattiamittauksen kuittaus."
+        ]
+      },
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "number": 3,
+      "qid": "Q848072",
+      "id": "tulvavene-1598",
+      "filename": "rooma-Q848072-tulvavene-1598.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "file": "rooma-Q848072-tulvavene-1598.png",
+      "r2Key": "julisteet/rooma-yksityiskohdat/20261007/rooma-Q848072-tulvavene-1598.png",
+      "url": "https://media.matkakirja.app/julisteet/rooma-yksityiskohdat/20261007/rooma-Q848072-tulvavene-1598.png",
+      "sha256": "497c0a915564618bd41e8c1679c63ecb3505caccc4ace09fc35b85ddf0bae052",
+      "bytes": 2904774,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "mitat": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Use case: historical-scene\nAsset type: Matkakirja city-guide detail, one complete new photorealistic historical illustrative image.\nPrimary request: December 1598, Piazza di Spagna in Rome AFTER floodwater has receded. Eye-level camera looks across the empty muddy square. A SMALL abandoned wooden rowing boat, about three metres long, is the central focal subject on mud-covered old cobblestones, surrounded by shallow still puddles. A tangled natural-fibre mooring rope lies beside its bow. The water must be shallow puddles after the flood, not a river or canal. This illustrates a LEGEND; it is not an authentic photograph or exact reconstruction of a documented moment.\nScene/backdrop: modest LOW late-16th-century Roman plastered and exposed-brick houses with simple terracotta roofs frame the square. Behind the boat a largely bare, steep muddy hillside has an old irregular footpath climbing toward the ALREADY EXISTING Trinità dei Monti church with its two bell towers, small in the upper background. Do not turn the whole hillside into stairs.\nComposition/framing: landscape 3:2, exactly 1536 x 1024 pixels, one full frame. Ordinary eye level, restrained 40mm lens camera perspective. Boat occupies approximately the central third of the frame width, not a large ship and not the whole foreground. Shallow puddles mirror grey sky; church is an understated distant landmark.\nStyle/medium: convincingly camera-shot photorealistic materials, natural daylight, damp weathered wood, muddy paving, mottled plaster. Restrained grey winter palette, soft overcast December light, normal dynamic range, no stylisation, no painterly texture, no HDR and no cinematic saturation.\nConstraints: historical 1598 scenery ONLY. The Spanish Steps were built in the 1720s and MUST NOT exist here; no modern Spanish Steps, no grand Baroque staircase, no Barcaccia fountain (built 1626–1629), no obelisk (erected much later), no current tall river retaining walls. No people. No text, lettering, numerals, signs, logos, watermarks, frames, cars, motors, electric lights, antennas, railings or modern art. Opaque RGB sRGB. Generate this entirely anew from this textual specification; there are no image inputs.\n",
+      "viitteet": [
+        {
+          "type": "textResearchOnly",
+          "publisher": "Roma Capitale / Turismo Roma",
+          "title": "The Barcaccia Fountain",
+          "url": "https://www.turismoroma.it/en/places/barcaccia-fountain",
+          "notes": "Text researched only. Dates 1626–1629, low boat-shaped fountain, historical association with flood of 1598. This source is contextual support, not source-image pixels or proof of an exact 1598 scene."
+        },
+        {
+          "type": "textResearchOnly",
+          "publisher": "Roma Capitale / Turismo Roma",
+          "title": "The Spanish Steps",
+          "url": "https://www.turismoroma.it/en/places/spanish-steps",
+          "notes": "Text researched only. Before the 1723–1726 stairs, a bare steep muddy hill separated square and Pincio. Ramps divide, wind, join and change direction. Jubilee inauguration 1725. No source images used."
+        },
+        {
+          "type": "textResearchOnly",
+          "publisher": "Roma Capitale / Turismo Roma",
+          "title": "Piazza della Trinità dei Monti",
+          "url": "https://www.turismoroma.it/it/luoghi/piazza-della-trinit%C3%A0-dei-monti",
+          "notes": "Text researched only. Twin-tower church façade completed in 1570; late-18th-century obelisk. Existing church appropriate for 1598, no obelisk or modern steps in that scene."
+        },
+        {
+          "type": "textResearchOnly",
+          "publisher": "Sovrintendenza Capitolina ai Beni Culturali",
+          "title": "Scalinata di Trinità dei Monti",
+          "url": "https://sovraintendenzaroma.it/i_luoghi/roma_medioevale_e_moderna/beni_architettonici/scalinata_di_trinita_dei_monti",
+          "notes": "Text researched only. Built 1723–1726; continual projections and recesses, concave/convex walls and paired flights. Generated geometric details were not checked against photograph pixels."
+        }
+      ],
+      "kuvateksti": "Vuoden 1598 Tiberin tulvaan liitetty legenda kertoo veneestä, joka jäi Piazza di Spagnalle veden laskettua. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/rooma-yksityiskohdat-20261007/production/03-tulvavene-1598/rooma-Q848072-tulvavene-1598.png",
+      "technicalChanges": [
+        "Preserved byte-identical generated original in original.png.",
+        "Final native 1536×1024 RGB unchanged pixels; embedded standard sRGB ICC profile for unprofiled generated RGB. No colour conversion or main-image resize.",
+        "Added required Description and Source PNG text fields.",
+        "Created 480×320 LANCZOS QA preview only. No creative pixel edits."
+      ],
+      "visualReview": {
+        "file": "rooma-Q848072-tulvavene-1598.png",
+        "sha256": "497c0a915564618bd41e8c1679c63ecb3505caccc4ace09fc35b85ddf0bae052",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "requiresEditorCompositionReview": false,
+        "observations": [
+          "Hylätty puinen vene mutaisella märällä aukiolla; vanha rakentamaton rinne ja kirkko taustalla.",
+          "Ei Espanjalaisia portaita, Barcacciaa tai obeliskia. Kuvateksti ilmoittaa legendan. Tarkka1598talorivi havainnollinen."
+        ]
+      },
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "number": 4,
+      "qid": "Q848072",
+      "id": "piktogrammit-2019",
+      "filename": "rooma-Q848072-piktogrammit-2019.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "file": "rooma-Q848072-piktogrammit-2019.png",
+      "r2Key": "julisteet/rooma-yksityiskohdat/20261007/rooma-Q848072-piktogrammit-2019.png",
+      "url": "https://media.matkakirja.app/julisteet/rooma-yksityiskohdat/20261007/rooma-Q848072-piktogrammit-2019.png",
+      "sha256": "453029afca9208a51a45ef767aada7c5ddc9a8480aa9f64cc4d61d99265184a9",
+      "bytes": 2447691,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "mitat": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Use case: photorealistic-natural\nAsset type: Matkakirja city-guide detail, one complete new photographic illustrative image.\nPrimary request: Rome, Spanish Steps, quiet morning after summer 2019. Camera at ordinary human eye level from the BOTTOM of the staircase, looking upward. In the foreground LEFT a SMALL white physical metal sign is attached to the iron handrail. The sign contains EXACTLY THREE prohibition pictograms and absolutely nothing else: 1) a black seated human silhouette; 2) a black bread bun / food silhouette; 3) a black bottle / drink silhouette. Each of these three icons has its own red circular border and a red diagonal strike through it. Three icons on one single compact sign, easily readable even in a small preview. No letters, no numbers, no words and no logo on the sign. This requested pictogram sign is an illustrative prop, not a claim about an actual official sign design.\nScene/backdrop: real characteristic Spanish Steps at Piazza di Spagna, pale travertine. Wide low sweeping entrance flights, stepped landings, sinuous concave and convex stone balustrade walls, paired flights which split and join and change direction. The broad, almost empty staircase occupies the central picture. Distant Trinità dei Monti twin-tower church is softly rendered above it; existing historic obelisk may be small behind. Focus on sign and stairs; no contemporary art.\nComposition/framing: landscape 3:2, exactly 1536 x 1024 pixels, a single photograph-like frame. Sign in lower-left foreground, no more than about one fifth of image width, attached visibly to a simple black iron rail; stair architecture remains the principal broad setting. Restrained 35mm real camera perspective, no fisheye. Church soft behind, stairs and icon silhouettes legible. No tourists or other people.\nStyle/medium: camera-shot photorealism, naturally textured pale stone, iron, painted metal. Gentle morning daylight, natural muted colours and normal contrast, no HDR, no cinematic grading, no painted or 3D-rendered aesthetic.\nConstraints: EXACTLY three prohibition pictograms, seated figure / bun / bottle, each crossed red. No other signs. No text, lettering, numerals, storefront words, brands, police insignia, watermarks, frames, cars, crowds, current new artwork or recognisable modern buildings. Do not replace the real varied Spanish Steps with a massive straight featureless staircase. Opaque RGB sRGB. Entirely new generation from text only, no image inputs.\n",
+      "viitteet": [
+        {
+          "type": "textResearchOnly",
+          "publisher": "Roma Capitale / Turismo Roma",
+          "title": "The Spanish Steps",
+          "url": "https://www.turismoroma.it/en/places/spanish-steps",
+          "notes": "Text researched only. Before the 1723–1726 stairs, a bare steep muddy hill separated square and Pincio. Ramps divide, wind, join and change direction. Jubilee inauguration 1725. No source images used."
+        },
+        {
+          "type": "textResearchOnly",
+          "publisher": "Sovrintendenza Capitolina ai Beni Culturali",
+          "title": "Scalinata di Trinità dei Monti",
+          "url": "https://sovraintendenzaroma.it/i_luoghi/roma_medioevale_e_moderna/beni_architettonici/scalinata_di_trinita_dei_monti",
+          "notes": "Text researched only. Built 1723–1726; continual projections and recesses, concave/convex walls and paired flights. Generated geometric details were not checked against photograph pixels."
+        },
+        {
+          "type": "textResearchOnly",
+          "publisher": "Roma Capitale",
+          "title": "Nuovo Regolamento di Polizia Urbana — 8 luglio 2019",
+          "url": "https://www.comune.roma.it/web/it/informazione-di-servizio.page?contentId=IDS366555",
+          "notes": "Official text: regulation and monetary penalties became applicable 8 July 2019. General 2019 rule context only, does not verify any particular pictogram sign, whistle scene or uniform model. Specific narrative scene comes from commissioned source01."
+        }
+      ],
+      "kuvateksti": "Kolme havainnollistavaa kuvamerkkiä kertoo istumisen, syömisen ja juomisen kiellosta Espanjalaisilla portailla vuoden 2019 jälkeen. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/rooma-yksityiskohdat-20261007/production/04-piktogrammit-2019/rooma-Q848072-piktogrammit-2019.png",
+      "technicalChanges": [
+        "Preserved byte-identical generated original in original.png.",
+        "Final native 1536×1024 RGB unchanged pixels; embedded standard sRGB ICC profile for unprofiled generated RGB. No colour conversion or main-image resize.",
+        "Added required Description and Source PNG text fields.",
+        "Created 480×320 LANCZOS QA preview only. No creative pixel edits."
+      ],
+      "visualReview": {
+        "file": "rooma-Q848072-piktogrammit-2019.png",
+        "sha256": "453029afca9208a51a45ef767aada7c5ddc9a8480aa9f64cc4d61d99265184a9",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "requiresEditorCompositionReview": true,
+        "observations": [
+          "Täsmälleen kolme piktogrammia: istuminen, sämpylä ja pullo, kukin punaisella yliviivauksella; ei sanoja tai numeroita.",
+          "Kyltin taustalla leveät tyhjät askelmat ja kaksitorninen kirkko. Kyltti suuri ja portaikko lähteeseen nähden suoristunut.",
+          "Fable arvioi paikkageometrian ennen käyttöä; kyltti on keksitty havainnollistus, ei varmennettu virallinen kylttimalli."
+        ]
+      },
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "number": 5,
+      "qid": "Q848072",
+      "id": "poliisin-pilli-2019",
+      "filename": "rooma-Q848072-poliisin-pilli-2019.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "file": "rooma-Q848072-poliisin-pilli-2019.png",
+      "r2Key": "julisteet/rooma-yksityiskohdat/20261007/rooma-Q848072-poliisin-pilli-2019.png",
+      "url": "https://media.matkakirja.app/julisteet/rooma-yksityiskohdat/20261007/rooma-Q848072-poliisin-pilli-2019.png",
+      "sha256": "3b7c3bb1bc0ab3cb8e3f6eb8afe354752afe7d5fe245d1bb0ff50ec673cd701a",
+      "bytes": 3134939,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "mitat": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Use case: photorealistic-natural\nAsset type: Matkakirja city-guide detail, one complete new illustrative photograph-like scene.\nPrimary request: Rome, Spanish Steps in hot SUMMER 2019. A camera positioned at the TOP of the stairs looks DOWN across the changing flights and landings toward Piazza di Spagna. In the mid-distance on a landing there are EXACTLY TWO small municipal police officers in generic dark-blue uniforms, seen from behind or an obscured side angle. Each officer is about 7 percent of picture height, distant enough that no face is identifiable. One officer clearly raises a hand holding a small metal whistle to the mouth and watches a SINGLE much tinier tourist who has briefly sat on a distant stair edge. The second officer stands nearby watching. A small standing tourist group is very far below beside the plaza; the staircase is otherwise almost empty. The people are ordinary unobtrusive figures.\nScene/backdrop and geometry: The actual Spanish Steps are NOT one endless straight rectangular staircase. From the top, show broad pale travertine stairs broken into multiple short flights, a generous oval middle landing, curved concave and convex stone parapets, paired lateral flights which split and rejoin around the landings, and irregular-width sweeping lower flights. The camera looks downward so the wide winding layout remains unmistakable. At the distant FOOT of the stairs, the Barcaccia is a SMALL low BOAT-SHAPED fountain with raised prow and stern, lying in its oval shallow sunken basin. It is only a minor detail, approximately 5 percent of image width. Piazza di Spagna and warm historic Roman plaster façades are farther beyond. No view of the Trinità church because the camera faces downhill.\nComposition/framing: landscape 3:2, exactly 1536 x 1024 pixels, one complete frame. Slight downward 35mm real-camera perspective from the uppermost landing, showing several landings and the curved split flights across the whole image. Two police figures near centre mid-distance, fountain tiny below. Make the hand-to-mouth whistle gesture discernible without making officers foreground portraits.\nStyle/medium: photorealistic camera-shot appearance, naturally textured pale weathered travertine, hot summer daylight, ordinary soft warm colours, muted saturation and natural shadows. No HDR, no cinematic grading, no painting or CGI appearance.\nConstraints: EXACTLY TWO distant dark-blue uniformed generic municipal police; no additional uniformed people. No identifiable faces, no recognisable real person, no readable badges or uniform letters, no logos or brands, no guns or any other weapons, no police cars, no violent action, no blood, no crowd. All visible people tiny distant back or obscure side views. No text anywhere, no signage, no storefront lettering, no numerals, no watermarks and no frames. No current new art or recognisable modern architecture. Preserve correct broadly sinuous multi-flight staircase proportions; NOT a giant uninterrupted straight flight. Opaque RGB sRGB. This is an illustrative 2019 scene, not an authentic documentary photograph. Entirely new generation from TEXT only, no source-image inputs.\n",
+      "viitteet": [
+        {
+          "type": "textResearchOnly",
+          "publisher": "Roma Capitale / Turismo Roma",
+          "title": "The Barcaccia Fountain",
+          "url": "https://www.turismoroma.it/en/places/barcaccia-fountain",
+          "notes": "Text researched only. Dates 1626–1629, low boat-shaped fountain, historical association with flood of 1598. This source is contextual support, not source-image pixels or proof of an exact 1598 scene."
+        },
+        {
+          "type": "textResearchOnly",
+          "publisher": "Roma Capitale / Turismo Roma",
+          "title": "The Spanish Steps",
+          "url": "https://www.turismoroma.it/en/places/spanish-steps",
+          "notes": "Text researched only. Before the 1723–1726 stairs, a bare steep muddy hill separated square and Pincio. Ramps divide, wind, join and change direction. Jubilee inauguration 1725. No source images used."
+        },
+        {
+          "type": "textResearchOnly",
+          "publisher": "Sovrintendenza Capitolina ai Beni Culturali",
+          "title": "Scalinata di Trinità dei Monti",
+          "url": "https://sovraintendenzaroma.it/i_luoghi/roma_medioevale_e_moderna/beni_architettonici/scalinata_di_trinita_dei_monti",
+          "notes": "Text researched only. Built 1723–1726; continual projections and recesses, concave/convex walls and paired flights. Generated geometric details were not checked against photograph pixels."
+        },
+        {
+          "type": "textResearchOnly",
+          "publisher": "Roma Capitale",
+          "title": "Nuovo Regolamento di Polizia Urbana — 8 luglio 2019",
+          "url": "https://www.comune.roma.it/web/it/informazione-di-servizio.page?contentId=IDS366555",
+          "notes": "Official text: regulation and monetary penalties became applicable 8 July 2019. General 2019 rule context only, does not verify any particular pictogram sign, whistle scene or uniform model. Specific narrative scene comes from commissioned source01."
+        }
+      ],
+      "kuvateksti": "Kaksi poliisia valvoo Espanjalaisten portaiden istumiskieltoa kesällä 2019. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/rooma-yksityiskohdat-20261007/production/05-poliisin-pilli-2019/rooma-Q848072-poliisin-pilli-2019.png",
+      "technicalChanges": [
+        "Preserved byte-identical generated original in original.png.",
+        "Final native 1536×1024 RGB unchanged pixels; embedded standard sRGB ICC profile for unprofiled generated RGB. No colour conversion or main-image resize.",
+        "Added required Description and Source PNG text fields.",
+        "Created 480×320 LANCZOS QA preview only. No creative pixel edits."
+      ],
+      "visualReview": {
+        "file": "rooma-Q848072-poliisin-pilli-2019.png",
+        "sha256": "3b7c3bb1bc0ab3cb8e3f6eb8afe354752afe7d5fe245d1bb0ff50ec673cd701a",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "requiresEditorCompositionReview": true,
+        "observations": [
+          "Kaksi kaukaista sinistä poliisihahmoa, toisella käsi suun kohdalla; pieni istuja ja kaukainen seisova ryhmä.",
+          "Erillistä pilliä ei voi pienessä kuvassa varmistaa. Barcaccia on suurehko ja havainnollinen. Ei kasvolähikuvia, aseita tai väkivaltaa.",
+          "Fable arvioi, välittääkö käsi suulla ankkurin pilliin riittävästi."
+        ]
+      },
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "number": 6,
+      "qid": "Q185382",
+      "id": "trevi-portti-2026",
+      "filename": "rooma-Q185382-trevi-portti-2026.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "file": "rooma-Q185382-trevi-portti-2026.png",
+      "r2Key": "julisteet/rooma-yksityiskohdat/20261007/rooma-Q185382-trevi-portti-2026.png",
+      "url": "https://media.matkakirja.app/julisteet/rooma-yksityiskohdat/20261007/rooma-Q185382-trevi-portti-2026.png",
+      "sha256": "b9f7a8ed9e8e94cf5bab6477cde035db3c7916f5b089b541ed5381c51d94df2a",
+      "bytes": 2960503,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "mitat": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Use case: photorealistic-natural\nAsset type: one Matkakirja city-guide detail image, landscape 3:2, native 1536 x 1024 pixels, opaque RGB sRGB.\nPrimary request: Make ONE new photorealistic, camera-shot-looking illustrative image of the Trevi Fountain basin access-control arrangement in Rome in 2026. It is an illustrative arrangement, not a claim to exactly reproduce installed gate hardware.\n\nScene/backdrop: Eye-level view from the edge of the piazza looking past a small access gate toward the LOWER basin area of the historical Trevi Fountain. Behind the foreground gate there must be clearly readable pale travertine/marble steps DESCENDING from the higher piazza into the lower walkway beside the basin. Clearly visible turquoise water in the basin beyond the steps, and only the lower rocky Baroque edge of the historic fountain with a little naturally falling water. Crop the whole monumental upper facade OUT of the frame, and crop all other city buildings out.\n\nForeground subject: A compact, low, restrained neutral dark metal entry module with a simple open walk-through gap and one slim gate leaf open to the side, a small generic ticket-reader device on a post beside the gap, and a brown stopping rope between two simple posts defining the adjacent empty waiting space. The open route from the piazza past the reader to the descending steps must be physically clear. Use a quiet matte antique-iron finish, gentle curved profiles compatible with the traditional travertine posts and nineteenth-century iron fencing. Small and modest in scale. Do not make a security turnstile maze or wrap the whole square in barriers.\n\nReader: The device is small, with an obliquely seen dark reflective BLANK face, completely switched-off/unlit. No writing, digits, price, labels, logos, brands, buttons with markings, QR codes, coloured displays, or luminous marks on the reader. The screen is plain uniformly dark reflective glass and does not face squarely toward the camera.\n\nPeople: Only one small distant generic attendant at the far end of the lower walkway, viewed from behind, no visible face, plain neutral clothing. Otherwise quiet and almost empty, no crowd and no foreground people.\n\nStyle/medium: Photorealistic ordinary documentary travel photography, natural soft early-morning light, muted realistic colour and contrast, fine imperfect texture of aged pale travertine, cobbles, matte metal and brown rope. Restrained turquoise water with actual soft ripples. Plausible perspective and coherent real physical construction. Broad enough depth of field to understand gate, descending steps, and basin. No theatrical lighting.\n\nConstraints: One uninterrupted landscape image. Gate, blank ticket reader, brown rope, descending pale steps, turquoise basin, and only the lower historic fountain edge must all be visible. No readable or simulated text ANYWHERE, no numbers, no price, no signage, no logos, no tourist brands, no watermarks, no border. No identifiable modern buildings or contemporary art, no full Trevi facade, no close faces or portraits. No HDR, oversaturation, CGI, architectural render, illustration, painted surface, dramatic cinema grading, or fantasy design. No photographic reference pixels are supplied; create entirely from this text specification.",
+      "viitteet": [
+        {
+          "type": "textResearchOnly",
+          "publisher": "Roma Capitale",
+          "title": "Biglietto d'ingresso per visitare la Fontana di Trevi",
+          "url": "https://www.comune.roma.it/web/it/notizia/biglietto-dingresso-fontana-di-trevi.page",
+          "notes": "Opened official text. Paid inner-perimeter access began 2 February 2026. Municipal and Metropolitan Rome residents have free access. New low metal modules refer to curved travertine posts and pre-existing nineteenth-century iron fences, finished in matte antique iron. This text does not confirm the reader brand/model or exact pictured gate geometry."
+        },
+        {
+          "type": "textResearchOnly",
+          "publisher": "Official Trevi Fountain ticket site",
+          "title": "The Trevi Fountain, a timeless masterpiece",
+          "url": "https://fontanaditrevi.roma.it/en",
+          "notes": "Opened official text and search excerpt after www host returned 502. Confirms 2026 access, stairs into the inner perimeter, entry at Via della Stamperia, exit toward Via dei Crociferi, and free viewing from outside. Generic device and gate in image remain illustrative."
+        },
+        {
+          "type": "textResearchOnly",
+          "publisher": "Roma Capitale — Turismo Roma",
+          "title": "The Trevi Fountain",
+          "url": "https://www.turismoroma.it/en/places/trevi-fountain",
+          "notes": "Opened official text. Historical fountain composition includes a wide basin, large sculpted cliff and flowing water. Modern hardware is not established by this source."
+        },
+        {
+          "type": "textResearchOnly",
+          "publisher": "Roma Capitale — Turismo Roma",
+          "title": "The Trevi Fountain reopens with new opening hours and visiting modes",
+          "url": "https://www.turismoroma.it/en/node/129138",
+          "notes": "Opened official historical 2024–2025 arrangement text: central access staircase, basin-edge and step restoration, and reception/security staff. Used only for general step/basin relationship, not as proof of exact 2026 routing or hardware."
+        }
+      ],
+      "kuvateksti": "Trevin altaalle johtavan sisäänpääsyn havainnollistava järjestely vuonna 2026: portin ja lukijalaitteen tarkkaa toteutusta ei ole varmennettu. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/rooma-yksityiskohdat-20261007/production/06-trevi-portti-2026/rooma-Q185382-trevi-portti-2026.png",
+      "technicalChanges": [
+        "Copied unmodified original imagegen PNG to own scene folder.",
+        "Encoded final PNG as RGB with sRGB ICC profile and exact required Description/Source metadata; no pixel changes from original RGB image.",
+        "Created 480×320 technical QA preview with Lanczos downsampling."
+      ],
+      "visualReview": {
+        "file": "rooma-Q185382-trevi-portti-2026.png",
+        "sha256": "b9f7a8ed9e8e94cf5bab6477cde035db3c7916f5b089b541ed5381c51d94df2a",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "requiresEditorCompositionReview": true,
+        "observations": [
+          "Neutraali avoin portti, tumma tyhjä lukija, ruskea köysi ja altaalle laskeutuvat askelmat; turkoosi vesi ja matala kallioaiheinen suihkulähde taustalla.",
+          "Lukijan yläkehyksessä pieni vaalea pilkku; ei luettavaa tekstiä, hintaa tai tunnistettavaa logoa. Tarkka portti/laite havainnollinen."
+        ]
+      },
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "number": 7,
+      "qid": "Q914255",
+      "id": "madonna-1535",
+      "filename": "rooma-Q914255-madonna-1535.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "file": "rooma-Q914255-madonna-1535.png",
+      "r2Key": "julisteet/rooma-yksityiskohdat/20261007/rooma-Q914255-madonna-1535.png",
+      "url": "https://media.matkakirja.app/julisteet/rooma-yksityiskohdat/20261007/rooma-Q914255-madonna-1535.png",
+      "sha256": "12d4833d34f91a1f650799995328dbb9cb4b52e9f84eb414570b82b3b40bd8bf",
+      "bytes": 2419942,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "mitat": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Use case: historical-scene\nAsset type: Matkakirja city-guide detail; one complete NEW photorealistic landscape historical-legend illustration.\nPrimary request: Noantri origin LEGEND, year 1535, fishermen finding a small old cedar-wood Madonna and child statue in a wet fishing net on the brown Tiber. One single camera-shot-looking photograph-like scene, not an authentic photograph of the event.\nScene/backdrop: Early Renaissance Rome, with a very softly blurred distant riverbank and LOW medieval Trastevere houses with muted reddish roof tiles. The bank is LOW old rough stone meeting the water, with irregular natural earth and old stonework. It is not a tall engineered retaining wall. The scene's background is an illustrative geographic interpretation of the commission; the tradition places the original find at the river mouth.\nSubject and physical action: EXACTLY TWO ordinary adult fishermen in a weathered wooden ROWBOAT. They wear simple undyed wool shirts, loose cloth trousers and plain wool hoods. Both men are turned away from the camera, showing only their BACKS and hooded rear heads, their faces completely invisible. They stand behind a physically raised wet rope fishing net in the boat's middle depth and hold its upper edges, lifting it out of the brown river water over the near boat side. The old small carved cedar-wood statue, roughly 40 cm tall, is CAUGHT IN and visibly supported by the net loops, upright near the CENTER of the picture. Its mother-and-child sculptural form is clearly recognizable with the child held in the woman's arms. Both are carved WOOD objects. Show wet dark wood grain, ordinary drips and small NATURAL reflections. Net threads wrap around and below the statue in a plausible physical way. Neither fisherman is a portrait or the primary subject.\nComposition/framing: LANDSCAPE 3:2, native exactly 1536 x 1024 pixels. Camera just above boat gunwale height, almost water-level, around 6–7 metres from the boat, natural 35mm photograph perspective. Brown rippling river in foreground; complete visible near side of small wooden boat and wet net with CENTERED small statue; hooded fishermen stand BEHIND the net in middle distance, facing away. Boat, fishermen and sculpture share a coherent real scale. Low old bank and low reddish roof houses soft and unobtrusive in the far background.\nStyle/medium: photorealistic camera-shot appearance, realistic rope fibres, damp aged wood, coarse wool, brown river water. Warm soft natural MORNING light, subdued natural colours, gentle shadows, believable exposure. No HDR, no dramatic grading, no oversaturation, no illustration brushstrokes, no CGI or game-render appearance.\nConstraints: entirely new generation from TEXT ONLY, no source-image pixels. Opaque RGB sRGB. NO text, letters, digits, signs, logos, watermark or frame anywhere. NO visible faces, recognizable real people, actors or named historical portraits. NO magic, glow, halo or saint's circle around the sculpture; NO shining supernatural rays. NO motors, motorboats, plastic, metal contemporary boat fittings, modern clothes or modern objects. NO tall nineteenth-century Lungotevere flood walls, no modern bridges, no modern riverfront railing, no modern architecture. No large modern riverside façades. Only LOW old rough stone bank. No combat, blood or violence.\n",
+      "viitteet": [
+        {
+          "type": "textResearchOnly",
+          "publisher": "Roma Capitale / Turismo Roma",
+          "title": "Madonna de’ Noantri 2026",
+          "url": "https://turismoroma.it/it/node/173872",
+          "notes": "Official text, accessed 7 October 2026: tradition dates origins to 1535; fishermen find cedar-wood Virgin statue after a storm at the Tiber MOUTH. This is a legend, not independently established discovery. No image pixels fetched or used."
+        }
+      ],
+      "kuvateksti": "Noantri-perinteen syntylegendan havainnollistus: kalastajat nostavat vuonna 1535 Madonnan puupatsaan verkossaan. Trastevere-tausta on tulkinnallinen. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/rooma-yksityiskohdat-20261007/production/07-madonna-1535/rooma-Q914255-madonna-1535.png",
+      "technicalChanges": [
+        "Preserved byte-identical generated original in original.png.",
+        "Final native 1536×1024 RGB pixels unchanged; embedded standard sRGB ICC profile in initially unprofiled RGB. No main-image resize or colour conversion.",
+        "Added required exact Description and Source PNG text fields.",
+        "Created 480×320 LANCZOS QA preview only. No creative pixel edits."
+      ],
+      "visualReview": {
+        "file": "rooma-Q914255-madonna-1535.png",
+        "sha256": "12d4833d34f91a1f650799995328dbb9cb4b52e9f84eb414570b82b3b40bd8bf",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "requiresEditorCompositionReview": false,
+        "observations": [
+          "Märkä Madonna-lapsi-puupatsas nostetussa verkossa, kaksi kalastajaa selin, soutuvene ja Tiberin vesi; ei haloa tai nykytekniikkaa.",
+          "Kuvateksti kertoo Noantri-legendasta ja Trastevere-taustan tulkinnallisuudesta."
+        ]
+      },
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false
+    }
+  ],
+  "comparison": {
+    "file": "toimitetut-6.jpg",
+    "r2Key": "julisteet/rooma-yksityiskohdat/20261007/toimitetut-6.jpg",
+    "url": "https://media.matkakirja.app/julisteet/rooma-yksityiskohdat/20261007/toimitetut-6.jpg",
+    "sha256": "1f72779da6000c04e95c81edb63c68c0a8c7908d17f7eda3014dc89478933ff3",
+    "bytes": 382660,
+    "http": 200,
+    "mime": "image/jpeg",
+    "cors": "https://matkakirja.app",
+    "byteExactReadback": true
+  },
+  "deliveryStatus": "Kuusi ehdokasta toimitettu Fable-arviointiin; Colosseum ja Appia pidätetty paikalliseen arviointiin ja korjausluvan odotukseen.",
+  "imageAgentCount": 5,
+  "ownerReplacementDecision": {
+    "state": "pending",
+    "askedForAdditionalWholeGenerations": 2,
+    "sourceGenerationLimit": 8,
+    "proposedTotalGenerations": 10,
+    "deliveredFinalImageCountWouldRemain": 8,
+    "answersReceived": false
+  },
+  "priorPrahaWienDecisions": "Separate; not changed by Rome order"
+}
