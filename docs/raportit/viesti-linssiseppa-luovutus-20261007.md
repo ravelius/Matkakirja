@@ -260,3 +260,8 @@ NUI:n osa on `natiivi-ui/sallitut-157` 0f770be2. LS2:n lista on tiedostossa `pro
 - 18.1x: kuumailmapallon tila raportoitu Päätoimittajalle.
   - Korimalli puuttui R2:sta (404), TF:ssä paikkamerkki. Vientipaketti `_valmiit/ilmapallo-kori-vienti-20261007` → kartta/ilmapallo/v1/kori_nakyma.glb. Päätoimittaja kuittasi, vienti pyydetty Julkaisijalta.
   - Äänet: ElevenLabs on oletus (suositus), komento vain kehittäjille.
+- 18.4x: korimalli viety R2:een (Julkaisija 18.04, 200 OK).
+  - UUSI: äänetön kaupunkiesitys `linssiseppa/aaneton-esitys` 7568a39bc (163, korvaa yksityiskohdat-havainnekuvan). Kuittausta pyydetty.
+    - Kappale ilman ääntä: LukuKesto 14 merkkiä/s, väh. 6 s. Chat aukeaa itsestään, ja kuvat ajoitetaan lukuajasta.
+    - Avaus tekstinä.
+    - Muoto sovittu Pelikoodarin kanssa: ei ääni- tai kestokenttiä, esittely-aaneton-v1 esittely_polut-kentän kautta.
