@@ -20,7 +20,8 @@ Avoimet työt:
 ## TILA 7.10. 03.2x (uusin)
 - Sallitut 38 (Varsova pakotettu SALLITTU; Sisilia/Kreeta/Islanti mitattu Palermo/Heraklion/Reykjavík P625) → Pelikoodarin PR #4098.
   sallitut.py:ssä PAKOTA-taulu; tulokset lokit/linssiseppa2-3d-kattavuus/ (sallitut-3d.json, renkaat-tulokset.json).
-- RAJA-stillit: stillit2-061c8850/3d-raja-ja-korjatut.jpg → Päätoimittaja. Kiova ja Sarajevo litteitä (POIS), Tromssa tarkka
+- RAJA-stillit: Päätoimittaja 03.3x: Kiova, Sarajevo, Tromssa POIS (PAKOTA); sallitut 38 lopullinen (#4098), raja-lista tyhjä.
+  (vanha: Tromssa tarkka
   ~0,5 km (ehdotettu SALLITTU r 500 m tai POIS) – odottaa Päätoimittajan päätöstä; jos SALLITTU, lisää PAKOTA + rivi Pelikoodarille.
 - Pallopisteiden siirto (Sisilia, Kreeta, Islanti) kuuluu Karttasepälle/Päätoimittajalle; Venetsia jo San Marcolla pelissä.
 
