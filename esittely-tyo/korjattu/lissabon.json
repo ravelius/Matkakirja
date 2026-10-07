@@ -10,14 +10,14 @@
    "luokka": "torni",
    "koko_m": 60,
    "korkeus_m": 30,
-   "teksti": "Joensuuta vartioiva Belémin torni valmistui vuonna 1519 pienelle saarelle lähelle Tejon pohjoisrantaa. Ylhäältä näkyy veteen työntyvä bastioni, jonka ampuma-aukoista seitsemäntoista tykkiä saattoi tulittaa joelle, ja sen takana kolmenkymmenen metrin korkuinen nelikerroksinen torni. Joen puoleisella parvekkeella seisoo Neitsyt Maria lapsi sylissään, merimiesten suojelija, jonka uskottiin tuovan laivat turvallisesti kotiin. Yhden vartiotornin juurella on kiveen hakattu sarvikuonon pää. Sen esikuvana pidetään eläintä, joka saapui Intiasta Lissaboniin kuningas Manuel ensimmäisen lahjaksi vuonna 1515.",
-   "lyhyt": "Joensuun vartiotornin, Belémin tornin, suunnitteli sotilasarkkitehti Francisco de Arruda. Usein kerrotaan, että joki siirtyi pois tornin ympäriltä vuoden 1755 maanjäristyksessä, mutta torni rakennettiin alun perin pienelle saarelle rannan tuntumaan. Vuodesta 1983 se on ollut Unescon maailmanperintöä Hieronymuksen luostarin kanssa.",
+   "teksti": "Joensuuta vartioiva Belémin torni valmistui vuonna 1519 pienelle saarelle lähelle Tejon pohjoisrantaa. Ylhäältä näkyy veteen työntyvä bastioni, jonka ampuma-aukoista seitsemäntoista tykkiä saattoi tulittaa joelle, ja sen takana kolmenkymmenen metrin korkuinen nelikerroksinen torni. Joen puoleisella parvekkeella seisoo Neitsyt Maria lapsi sylissään, merimiesten suojelija, jonka uskottiin tuovan laivat turvallisesti kotiin. Yhden vartiotornin juurella on kiveen hakattu sarvikuonon pää. Sen esikuvana pidetään eläintä, joka saapui Intiasta Lissaboniin lahjaksi kuningas Manuel ensimmäiselle vuonna 1515.",
+   "lyhyt": "Lissabonia mereltä suojaavan Belémin tornin varuskunta antautui vuonna 1580 muutaman tunnin taistelun jälkeen Alban herttuan espanjalaisjoukoille. Sen jälkeen tornin tyrmiä käytettiin vankilana vuoteen 1830 asti, ja kuningas Mikael sulki niihin liberaaleja vastustajiaan.",
    "syventava": "Miksi tornissa on sarvikuono?",
    "kysymykset": [
     "Mitä sarvikuonolle lopulta tapahtui?",
     "Kuka suunnitteli Belémin tornin?",
     "Miksi torni rakennettiin saarelle?",
-    "Käytettiinkö tornia myös vankilana?",
+    "Miksi torni on koristeltu kuin palatsi?",
     "Mitä tornin kiveen hakatut köydet tarkoittavat?"
    ],
    "isoisa": false,
@@ -39,12 +39,8 @@
      "url": "https://en.wikipedia.org/wiki/D%C3%BCrer%27s_Rhinoceros"
     },
     {
-     "vaite": "Suunnittelija sotilasarkkitehti Francisco de Arruda.",
+     "vaite": "Vuonna 1580 tornin varuskunta antautui muutaman tunnin taistelun jälkeen Alban herttuan espanjalaisjoukoille; sen jälkeen tyrmät toimivat vankilana vuoteen 1830; Mikael I vangitsi niihin liberaaleja vastustajiaan 1828–1834.",
      "url": "https://en.wikipedia.org/wiki/Bel%C3%A9m_Tower"
-    },
-    {
-     "vaite": "Unescon maailmanperintöä vuodesta 1983 yhdessä Hieronymuksen luostarin kanssa.",
-     "url": "https://en.wikipedia.org/wiki/Jer%C3%B3nimos_Monastery"
     }
    ]
   },
@@ -100,7 +96,7 @@
    "luokka": "aukio",
    "koko_m": 200,
    "teksti": "Kauppatori, Praça do Comércio, avautuu Tejolle sataseitsemänkymmentäviisi metriä leveänä U-kirjaimen muotoisena aukiona, jota reunustavat kolmelta sivulta keltaiset kaarikäytävien kehystämät virastotalot. Paikalla seisoi kuninkaiden Ribeiran palatsi, jonka vuoden 1755 maanjäristys tuhosi yli seitsemänkymmenentuhannen kirjan kirjastoineen, ja siksi lissabonilaiset kutsuvat aukiota yhä Palatsin pihaksi. Keskellä seisoo kuningas Joosef ensimmäisen pronssinen ratsastajapatsas, joka valettiin yhdellä valulla vuonna 1774. Helmikuussa 1908 aukiolla ammuttiin kuningas Kaarle ensimmäinen ja kruununprinssi Luís Filipe.",
-   "lyhyt": "Kauppatorin joenpuoleiselta reunalta leveät portaat laskeutuvat suoraan veteen, ja aikanaan arvovieraat nousivat niitä pitkin veneistä kaupunkiin. Uuden aukion suunnittelivat maanjäristyksen jälkeen Eugénio dos Santos ja Carlos Mardel, kun markiisi Pombal johti kaupungin jälleenrakennusta.",
+   "lyhyt": "Kauppatorin takana alkava alakaupunki rakennettiin maanjäristyksen jälkeen uudella tavalla: talojen seinien sisään kätkettiin joustava puuristikko, jonka piti huojua kaatumatta. Pienoismalleja testattiin antamalla sotilaiden marssia niiden ympärillä. Talot kuuluvat Euroopan varhaisimpiin maanjäristyksen varalle suunniteltuihin rakennuksiin.",
    "syventava": "Kuka on aukion ratsastajapatsas?",
    "kysymykset": [
     "Kuka on aukion keskellä ratsastava kuningas?",
@@ -128,12 +124,16 @@
      "url": "https://en.wikipedia.org/wiki/Lisbon_Regicide"
     },
     {
-     "vaite": "Cais das Colunas -laiturin marmoriportaat olivat vuosisatoja arvovieraiden sisäänkäynti kaupunkiin veneistä.",
-     "url": "https://aviewoncities.com/lisbon/praca-do-comercio"
+     "vaite": "Pombaliinisen alakaupungin talojen seinissä on symmetrinen puuristikko, gaiola pombalina, joka jakaa maanjäristyksen voimat; malleja testattiin marssittamalla sotilaita niiden ympärillä.",
+     "url": "https://en.wikipedia.org/wiki/Pombaline_Baixa"
     },
     {
-     "vaite": "Pombal johti jälleenrakennusta; aukion suunnittelivat Eugénio dos Santos ja Carlos Mardel.",
-     "url": "https://en.wikipedia.org/wiki/Pra%C3%A7a_do_Com%C3%A9rcio"
+     "vaite": "Pombaliiniset rakennukset kuuluvat Euroopan varhaisimpiin maanjäristyksiltä suojattuihin rakennuksiin; pieniä puisia malleja testattiin marssittamalla sotilaita niiden ympärillä.",
+     "url": "https://en.wikipedia.org/wiki/1755_Lisbon_earthquake"
+    },
+    {
+     "vaite": "Puurunko on joustava rakenne, joka 'huojuu mutta ei kaadu'.",
+     "url": "https://en.wikipedia.org/wiki/Pombaline_style"
     }
    ]
   },
@@ -168,8 +168,8 @@
      "url": "https://en.wikipedia.org/wiki/Alfama"
     },
     {
-     "vaite": "Maanjäristys ja palot tuhosivat yli 80 prosenttia Lissabonista.",
-     "url": "https://www.odysseytraveller.com/articles/alfama-portugal/"
+     "vaite": "Maanjäristys ja sitä seuranneet palot tuhosivat 85 prosenttia Lissabonin rakennuksista.",
+     "url": "https://en.wikipedia.org/wiki/1755_Lisbon_earthquake"
     },
     {
      "vaite": "Alfamassa on paljon fadoa esittäviä baareja ja ravintoloita.",
@@ -240,8 +240,8 @@
    "luokka": "torni",
    "koko_m": 30,
    "korkeus_m": 45,
-   "teksti": "Santa Justan hissi on neljäkymmentäviisi metriä korkea uusgoottilainen rautatorni, joka nostaa matkustajat alakaupungin kaduilta Carmon aukion tasolle. Ylhäältä erottuu tornin huipulta lähtevä kävelysilta, joka yhdistää sen mäen päälle Carmon luostarin raunioiden viereen. Hissin suunnitteli Portossa syntynyt ranskalaissukuinen insinööri Raoul Mesnier du Ponsard, ja se avattiin heinäkuussa 1902. Aluksi hissikoreja nosti höyrykone, mutta jo vuonna 1907 hissi sai sähkömoottorit. Hissi kuuluu yhä Lissabonin liikennelaitoksen kalustoon, ja sitä hoitaa sama yhtiö kuin kaupungin raitiovaunuja.",
-   "lyhyt": "Santa Justan hissin rautapitsimäisen tornin sisällä kulkee kaksi kiillotetusta puusta tehtyä hissikoria. Rakennuslupa myönnettiin jo vuonna 1882, mutta työt alkoivat vasta vuonna 1900. Huipun näköalatasanteelta avautuu näkymä alakaupungin kattojen yli joelle ja linnamäelle.",
+   "teksti": "Santa Justan hissi on neljäkymmentäviisi metriä korkea uusgoottilainen rautatorni, joka rakennettiin nostamaan matkustajat alakaupungin kaduilta Carmon aukion tasolle. Ylhäältä erottuu tornin huipulta lähtevä kävelysilta, joka yhdistää sen mäen päälle Carmon luostarin raunioiden viereen. Hissin suunnitteli Portossa syntynyt ranskalaissukuinen insinööri Raoul Mesnier du Ponsard, ja se avattiin heinäkuussa 1902. Aluksi hissikoreja nosti höyrykone, mutta jo vuonna 1907 hissi sai sähkömoottorit. Kun läheisen Glórian köysiradan vaunu suistui radaltaan syyskuussa 2025 ja kuusitoista ihmistä kuoli, myös Santa Justan hissi suljettiin turvallisuustarkastuksia varten.",
+   "lyhyt": "Santa Justan hissin rautasillan vihki kuningas Kaarle ensimmäinen elokuussa 1901 hoviväen ja aatelisten seurassa, mutta ensimmäinen hissikori lähti liikkeelle vasta seuraavana kesänä. Tornin kahdessa korissa on puupaneelit, peilit ja ikkunat, ja kumpaankin mahtui alun perin kaksikymmentäneljä matkustajaa.",
    "syventava": "Mihin hissin kävelysilta johtaa?",
    "kysymykset": [
     "Kuka suunnitteli Santa Justan hissin?",
@@ -265,12 +265,16 @@
      "url": "https://en.wikipedia.org/wiki/Santa_Justa_Lift"
     },
     {
-     "vaite": "Hissi kuuluu Carrisin kalustoon.",
-     "url": "https://carris.pt/en/discover/fleet/lift/"
+     "vaite": "Kuningas Carlos vihki metallisillan ja katoksen 31.8.1901 kuninkaallisten ja aatelisten läsnä ollessa; hissikori otettiin käyttöön vasta 10.7.1902; kahdessa korissa puuta, peilejä ja ikkunoita, alun perin 24 matkustajaa kumpaankin.",
+     "url": "https://en.wikipedia.org/wiki/Santa_Justa_Lift"
     },
     {
-     "vaite": "Mesnier du Ponsard haki lupaa toukokuussa 1882 ja sai sen 1.6.1882; rakentaminen alkoi 1900.",
-     "url": "https://en.wikipedia.org/wiki/Santa_Justa_Lift"
+     "vaite": "Glórian köysiradan vaunu suistui 3.9.2025; kuoli 16 ihmistä; kaupungin kaikki köysiradat suljettiin tarkastuksia varten.",
+     "url": "https://en.wikipedia.org/wiki/2025_Ascensor_da_Gl%C3%B3ria_derailment"
+    },
+    {
+     "vaite": "Santa Justan hissi on ollut suljettuna syyskuusta 2025, eikä avaamispäivää ollut vahvistettu syyskuussa 2026.",
+     "url": "https://rfm.pt/atualidade/23708/gloria-bica-lavra-e-santa-justa-um-ano-depois-do-acidente-o-que-aconteceu-aos-elevadores-historicos-de-lisboa"
     }
    ]
   },

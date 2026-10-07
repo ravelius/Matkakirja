@@ -154,7 +154,7 @@
    "luokka": "linnoitus",
    "koko_m": 90,
    "teksti": "Koulesin linnoitus seisoo Heraklionin vanhan sataman suulla aallonmurtajan päässä, ja ylhäältä sen paksut muurit näyttävät kiviseltä laatikolta meren laidalla. Venetsialaiset purkivat vanhan satamatornin vuonna 1523 ja rakensivat tilalle linnoituksen, joka valmistui vuonna 1540. Kunkin kolmen sisäänkäynnin yllä on marmorinen kohokuva Pyhän Markuksen siivekkäästä leijonasta, Venetsian tunnuksesta. Aallonmurtajaa levennettiin upottamalla sen pohjoispuolelle vanhoja laivoja, jotka oli lastattu Dian saarelta tuodulla kivellä. Linnoitus avattiin uudelleen vuonna 2016 kuuden vuoden korjausten jälkeen, ja kierros sen sisällä päättyy katolle, josta näkyy yli kaupungin ja meren.",
-   "lyhyt": "Koulesin linnoitus puolusti kaupunkia ottomaanien piirityksessä, joka kesti yli kaksikymmentäyksi vuotta. Nykyään sen saleissa on esillä amforia ja tykkejä, jotka meritutkija Jacques Cousteau nosti Dian saaren edustan hylyistä vuonna 1976.",
+   "lyhyt": "Koulesin linnoituksen edustalla, noin kolmentoista kilometrin päässä merellä, on Dian saari, jonka vesillä meritutkija Jacques Cousteau etsi 1970-luvulla kadonneen Atlantiksen jälkiä. Atlantista ei löytynyt, mutta saaren hylyistä nostetut amforat ja tykit tuotiin linnoitukseen.",
    "syventava": "Miksi leijona oli Venetsian tunnus?",
    "kysymykset": [
     "Kuinka monta laivaa aallonmurtajaan upotettiin?",
@@ -186,12 +186,16 @@
      "url": "https://www.lonelyplanet.com/points-of-interest/koules-fortress/446281"
     },
     {
-     "vaite": "Kandian piiritys kesti 1.5.1648–27.9.1669 eli yli 21 vuotta.",
-     "url": "https://en.wikipedia.org/wiki/Siege_of_Candia"
+     "vaite": "Dia on seitsemän meripeninkulman päässä Heraklionista; Cousteau tutki saaren vesiä Calypsolla 1976; neljän hylyn lastit nostettiin ja amforat ja muinaisesineet siirrettiin Koulesin linnoitukseen.",
+     "url": "https://www.gomega.gr/en/destinations-203/dia-island/"
     },
     {
-     "vaite": "Näyttelyssä on amforia, venetsialaisia tykkejä ja muita löytöjä, jotka Jacques Cousteau nosti Dian saaren hylyistä 1976.",
-     "url": "https://www.lonelyplanet.com/points-of-interest/koules-fortress/446281"
+     "vaite": "Cousteau etsi kadonnutta Atlantista Kreetan ja Santorinin väliltä 1974–1975 ja löysi Dian vesiltä seitsemän hylkyä.",
+     "url": "https://www.cretanbeaches.com/en/islands-and-islets-around-crete/dia-island"
+    },
+    {
+     "vaite": "Linnoituksen näyttelyssä esiteltiin 2016 ensimmäistä kertaa Cousteaun 1976 Dian vesiltä nostamia löytöjä.",
+     "url": "https://news.gtp.gr/2016/08/18/heraklion-fortress-reopens-music/"
     }
    ]
   },
@@ -201,8 +205,8 @@
    "kuvaus": "Kreetan suurin kirkko",
    "luokka": "kirkko",
    "koko_m": 70,
-   "teksti": "Pyhän Menaksen tuomiokirkko kohoaa vanhankaupungin keskellä suurena ristikirkkona, jonka kupoli lepää korkealla jalustalla ja jonka kahdessa kulmassa on kellotorni. Se on Kreetan suurin kirkko ja arkkipiispan istuin, ja sinne mahtuu noin kahdeksantuhatta ihmistä. Pääsiäisenä vuonna 1826 kristityt olivat jumalanpalveluksessa viereisessä pienessä Pyhän Menaksen kirkossa, kun ulos kerääntyi aseistettu joukko verilöylyn aikeissa. Kirkon ympäri ratsastanut harmaahiuksinen soturi ajoi joukon pakoon, ja kristityt uskoivat hänen olleen itse pyhä Menas. Siitä lähtien pyhimys on kuvattu ratsain, ja hänestä tuli Heraklionin suojeluspyhimys.",
-   "lyhyt": "Pyhän Menaksen tuomiokirkon peruskivi muurattiin vuonna 1862, mutta työt keskeytyivät Kreetan kapinan ajaksi, ja kirkko vihittiin vasta vuonna 1895. Sen ikonostaasi ja piispanistuin on tehty Tinoksen saaren valkoisesta ja vihreästä marmorista.",
+   "teksti": "Pyhän Menaksen tuomiokirkko kohoaa vanhankaupungin keskellä suurena ristikirkkona, jonka kupoli lepää korkealla jalustalla ja jonka kahdessa kulmassa on kellotorni. Se on Kreetan suurin kirkko ja arkkipiispan istuin, ja sinne mahtuu noin kahdeksantuhatta ihmistä. Pääsiäisenä vuonna 1826 kristityt olivat jumalanpalveluksessa viereisessä pienessä Pyhän Menaksen kirkossa, kun ulos kerääntyi aseistettu joukko verilöylyn aikeissa. Perimätiedon mukaan kirkon ympäri ratsastanut harmaahiuksinen soturi ajoi joukon pakoon, ja kristityt uskoivat hänen olleen itse pyhä Menas. Siitä lähtien pyhimys on kuvattu ratsain, ja hänestä tuli Heraklionin suojeluspyhimys.",
+   "lyhyt": "Pyhän Menaksen tuomiokirkon pohjoispuolella on esillä outo muistoesine, saksalainen lentopommi. Se putosi kirkon viereen, kun saksalaiset pommittivat Heraklionia vuonna 1941, mutta jäi räjähtämättä. Kaupunkilaiset pitivät kirkon säästymistä oman suojeluspyhimyksensä ihmeenä.",
    "syventava": "Kuka oli pyhä Menas?",
    "kysymykset": [
     "Miten Menaksen juhlaa vietetään kaupungissa?",
@@ -226,12 +230,12 @@
      "url": "https://religious.incrediblecrete.gr/en/metropolitan-church-of-agios-minas/"
     },
     {
-     "vaite": "Peruskivi 1862, työt keskeytyivät kapinan ajaksi, vihittiin 1895.",
-     "url": "https://en.wikipedia.org/wiki/Agios_Minas_Cathedral"
+     "vaite": "Kirkon pohjoispuolella on esillä pommi, joka putosi kirkon viereen saksalaisten pommittaessa Heraklionia 1941; se ei räjähtänyt, ja sitä pidettiin ihmeenä.",
+     "url": "https://cretanbeaches.com/en/cities-and-towns-in-crete/heraklion-city/religious-monuments-of-heraklion/cathedral-of-saint-minas"
     },
     {
-     "vaite": "Ikonostaasi ja piispanistuin on tehty Tinoksen valkoisesta ja vihreästä marmorista.",
-     "url": "https://en.wikipedia.org/wiki/Agios_Minas_Cathedral"
+     "vaite": "Räjähtämätön pommi kirkon pohjoispuolella luettiin pyhän Menaksen ihmeeksi; 1826 ratsain ilmestynyt hahmo, jonka kristityt uskoivat Menakseksi.",
+     "url": "https://religious.incrediblecrete.gr/en/metropolitan-church-of-agios-minas/"
     }
    ]
   },
@@ -293,7 +297,7 @@
     "Mitä altaan kohokuvat esittävät?",
     "Kuka oli Francesco Morosini?",
     "Mistä lähteen vesi tuli?",
-    "Toimiiko suihkulähde yhä?"
+    "Miksi altaassa on juuri leijonia?"
    ],
    "isoisa": false,
    "lahteet": [
@@ -325,8 +329,8 @@
    "kuvaus": "Vanhankaupungin bastionimuurit",
    "luokka": "linnoitus",
    "koko_m": 1500,
-   "teksti": "Heraklionin venetsialaiset muurit kiertävät vanhaa kaupunkia, ja ylhäältä niiden seitsemän bastionia piirtyvät kärkevinä ulokkeina kaupungin laitaan. Rakentaminen alkoi vuonna 1462 ja kesti yli sata vuotta, ja suunnittelijoihin kuului Venetsian tasavallan linnoitusarkkitehti Michele Sanmicheli. Muurien suojissa kaupunki kesti ottomaanien piiritystä vuodesta 1648 aina vuoteen 1669, jolloin se lopulta antautui. Martinengon bastionilla on nykyään kokonainen jalkapallostadion. Muurien päällä kulkee nykyään puistomainen kävelyreitti, ja vallihaudassa urheillaan ja pidetään kesäteatteria.",
-   "lyhyt": "Heraklionin venetsialaisille muureille, Martinengon bastionin laelle, haudattiin vuonna 1957 kirjailija Nikos Kazantzakis, koska ortodoksinen kirkko ei sallinut hänen hautaamistaan hautausmaalle. Hautakivessä lukee: En toivo mitään, en pelkää mitään, olen vapaa.",
+   "teksti": "Heraklionin venetsialaiset muurit kiertävät vanhaa kaupunkia, ja ylhäältä niiden seitsemän bastionia piirtyvät kärkevinä ulokkeina kaupungin laitaan. Rakentaminen alkoi vuonna 1462 ja kesti yli sata vuotta, ja suunnittelijoihin kuului Venetsian tasavallan linnoitusarkkitehti Michele Sanmicheli. Muurien suojissa kaupunki kesti ottomaanien piiritystä vuodesta 1648 aina vuoteen 1669, jolloin se lopulta antautui. Martinengon bastionilla on kokonainen jalkapallostadion. Muurien päällä kulkee nykyään puistomainen kävelyreitti, ja vallihaudassa urheillaan ja pidetään kesäteatteria.",
+   "lyhyt": "Heraklionin venetsialaisille muureille, Martinengon bastionin laelle, haudattiin vuonna 1957 kirjailija Nikos Kazantzakis. Usein väitetään, että kirkko eväsi häneltä hautajaiset, mutta Kreetan arkkipiispa siunasi hänet, vaikka kiihkoilijat polttivat hänen kirjojaan kirkon edessä. Hautakivessä lukee: En toivo mitään, en pelkää mitään, olen vapaa.",
    "syventava": "Miten muurit kestivät näin kauan?",
    "kysymykset": [
     "Miksi piiritys kesti yli kaksikymmentä vuotta?",
@@ -358,8 +362,16 @@
      "url": "https://visitheraklion.eu/en/walk-around-the-venetian-fort-walls/"
     },
     {
-     "vaite": "Kazantzakis kuoli 1957 ja haudattiin Martinengon bastionille, koska ortodoksinen kirkko ei sallinut hautaamista hautausmaalle; hautakirjoitus: I hope for nothing, I fear nothing, I am free.",
-     "url": "https://www.lonelyplanet.com/points-of-interest/tomb-of-nikos-kazantzakis/446295"
+     "vaite": "Kazantzakis kuoli 1957 ja on haudattu Martinengon bastionille; hautakirjoitus: I hope for nothing. I fear nothing. I am free.",
+     "url": "https://en.wikipedia.org/wiki/Nikos_Kazantzakis"
+    },
+    {
+     "vaite": "Kirkon johto hylkäsi ekskommunikaation; Kreetan arkkipiispa Eugenios toimitti hautajaiset, kun kiihkoilijat polttivat kirjoja kirkon ulkopuolella; haudalla puinen risti.",
+     "url": "https://www.cretanbeaches.com/en/cities-and-towns-in-crete/heraklion-city/historical-monuments-of-heraklion/nikos-kazantzakis-grave-martinengo"
+    },
+    {
+     "vaite": "Pappi toimitti hautauksen, mikä kumoaa väitteen, että Kazantzakis olisi kuollut kirkosta erotettuna ja haudattu ilman kirkon menoja.",
+     "url": "https://www.patrickcomerford.com/2025/04/climbing-walls-of-iraklion-at-easter-to.html?m=1"
     }
    ]
   },
@@ -382,8 +394,8 @@
    "isoisa": false,
    "lahteet": [
     {
-     "vaite": "Archanes on 14–16 kilometrin päässä Heraklionista; kylä on Juktas-vuoren juurella; palkittu Euroopan toiseksi parhaiten entistettynä kylänä.",
-     "url": "https://cretetravel.com/guide/archanes/"
+     "vaite": "Archanes on noin 14 kilometrin päässä Heraklionista Juktas-vuoren juurella; palkittu Euroopan toiseksi parhaiten entistettynä kylänä.",
+     "url": "https://www.argophilia.com/news/visit-archanes-for-a-sampling-of-sacred-cretan-village-life/224190"
     },
     {
      "vaite": "Vathypetron minolainen kartano on neljä kilometriä Archanesista etelään; sieltä on löydetty mantereen vanhin viinipuristin 1500-luvulta eaa.",

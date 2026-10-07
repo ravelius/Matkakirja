@@ -16,7 +16,7 @@ ja aalto committataan + pushataan.
 |---|---|---|
 | 1 | amsterdam, ateena (VALMIS) / barcelona, bergen (VALMIS) / berliini, bryssel (VALMIS) / budapest, bukarest (VALMIS) | VALMIS |
 | 2 | dublin, edinburgh (VALMIS) / firenze, granada (VALMIS) / helsinki, islanti (VALMIS) / kosice, krakova (käynnissä) | käynnissä |
-| 3 | kreeta, lissabon (käynnissä) / ljubljana, luxemburg (käynnissä) / madrid, marseille (käynnissä) / oslo, sevilla | osin käynnissä |
+| 3 | kreeta, lissabon (VALMIS) / ljubljana, luxemburg (käynnissä) / madrid, marseille (käynnissä) / oslo, sevilla (käynnissä) | osin käynnissä |
 | 4 | sisilia, sofia / tampere, tukholma / valletta, venetsia / vilna | ei aloitettu |
 | 5 | TARKISTAJA-agentti käy koko diffin läpi | ei aloitettu |
 
@@ -60,7 +60,7 @@ Jäljellä: löydöstyypit 1, 2, 3, 5, 6 ja 7 kaikille 31 kaupungille:
 | C | dublin, edinburgh, firenze, granada | ei aloitettu |
 | D | helsinki, islanti, kosice, krakova | ei aloitettu |
 | E | kreeta, lissabon, ljubljana, luxemburg | ei aloitettu |
-| F | madrid, marseille, oslo, sevilla | ei aloitettu |
+| F | madrid, marseille, oslo, sevilla (käynnissä) | ei aloitettu |
 | G | sisilia, sofia, tampere, tukholma | ei aloitettu |
 | H | valletta, venetsia, vilna | ei aloitettu |
 

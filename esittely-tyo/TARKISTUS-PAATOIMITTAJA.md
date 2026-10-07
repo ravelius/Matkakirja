@@ -1197,3 +1197,109 @@ Yksitoista huomiota on "ei ala paikan nimellä" (suomenkielinen etusana, äänt�
 - Laugardalsvöllur: yhä maajoukkueen kotikenttä (en.wiki); hybridinurmi ja lämmitys 2024–2026 eivät muuta tekstiä.
 - Kansallisteatteri: "ensimmäinen arkkitehdiksi kouluttautunut islantilainen" vahvistettu (en.wiki: "the first Icelander to be educated in architecture").
 - Isoisä: ei mainita (pohjan merkintä koskee pesulähteitä Reykjavikin ulkopuolella, ei mitään kohdetta suoraan), kuten aiemmin.
+
+## Kreeta
+
+### Heraklionin venetsialaiset muurit — kenttä `lyhyt`
+- **Vanha:** "Heraklionin venetsialaisille muureille, Martinengon bastionin laelle, haudattiin vuonna 1957 kirjailija Nikos Kazantzakis, koska ortodoksinen kirkko ei sallinut hänen hautaamistaan hautausmaalle. Hautakivessä lukee: En toivo mitään, en pelkää mitään, olen vapaa."
+- **Uusi:** "Heraklionin venetsialaisille muureille, Martinengon bastionin laelle, haudattiin vuonna 1957 kirjailija Nikos Kazantzakis. Usein väitetään, että kirkko eväsi häneltä hautajaiset, mutta Kreetan arkkipiispa siunasi hänet, vaikka kiihkoilijat polttivat hänen kirjojaan kirkon edessä. Hautakivessä lukee: En toivo mitään, en pelkää mitään, olen vapaa."
+- **Syy:** Tyyppi 3 (vivahde, legenda esitetty tosiasiana). Väite "kirkko ei sallinut hautaamista hautausmaalle" on yleinen länsimainen myytti: en.wikipedian mukaan kirkon johto hylkäsi ekskommunikaation, eikä artikkeli mainitse hautauskieltoa. Ateenan arkkipiispa kielsi ruumiin julkisen esillepanon Ateenassa, mutta Kreetan arkkipiispa Eugenios toimitti hautajaiset Heraklionissa, ja pappi siunasi haudan. Hautajaispäivä jätetty pois (lähteissä 5. tai 6.11.). Lonely Planet -lähde, joka toisti myytin, poistettu.
+- **Lähde:** https://en.wikipedia.org/wiki/Nikos_Kazantzakis ; https://www.cretanbeaches.com/en/cities-and-towns-in-crete/heraklion-city/historical-monuments-of-heraklion/nikos-kazantzakis-grave-martinengo ; https://www.patrickcomerford.com/2025/04/climbing-walls-of-iraklion-at-easter-to.html?m=1
+
+### Heraklionin venetsialaiset muurit — kenttä `teksti`
+- **Vanha:** "Martinengon bastionilla on nykyään kokonainen jalkapallostadion. Muurien päällä kulkee nykyään…"
+- **Uusi:** "Martinengon bastionilla on kokonainen jalkapallostadion. Muurien päällä kulkee nykyään…"
+- **Syy:** Tyyppi 6 (kieli): "nykyään" kahdessa peräkkäisessä virkkeessä. Stadionin sijainti bastionilla ja nykykäyttö tarkistettu.
+- **Lähde:** https://en.wikipedia.org/wiki/Nikos_Kazantzakis_Stadium
+
+### Pyhän Menaksen tuomiokirkko — kenttä `lyhyt`
+- **Vanha:** "Pyhän Menaksen tuomiokirkon peruskivi muurattiin vuonna 1862, mutta työt keskeytyivät Kreetan kapinan ajaksi, ja kirkko vihittiin vasta vuonna 1895. Sen ikonostaasi ja piispanistuin on tehty Tinoksen saaren valkoisesta ja vihreästä marmorista."
+- **Uusi:** "Pyhän Menaksen tuomiokirkon pohjoispuolella on esillä outo muistoesine, saksalainen lentopommi. Se putosi kirkon viereen, kun saksalaiset pommittivat Heraklionia vuonna 1941, mutta jäi räjähtämättä. Kaupunkilaiset pitivät kirkon säästymistä oman suojeluspyhimyksensä ihmeenä."
+- **Syy:** Tyyppi 2: vanha kierrosversio oli pelkkää perustietoa (peruskivi, vihkimisvuosi, materiaali). Uusi on tarina ja näkyvä yksityiskohta. Kazantzakiksen ruumis oli myös esillä tässä kirkossa, mutta sitä ei käytetty, koska muurien kierrosversio kertoo jo Kazantzakiksesta. Lähteiden mukaan pommi putosi kirkon VIEREEN, ei kirkon päälle (yksi hakuote väitti päälle). Vanhojen väitteiden lähderivit poistettu.
+- **Lähde:** https://cretanbeaches.com/en/cities-and-towns-in-crete/heraklion-city/religious-monuments-of-heraklion/cathedral-of-saint-minas ; https://religious.incrediblecrete.gr/en/metropolitan-church-of-agios-minas/
+
+### Pyhän Menaksen tuomiokirkko — kenttä `teksti`
+- **Vanha:** "Kirkon ympäri ratsastanut harmaahiuksinen soturi ajoi joukon pakoon…"
+- **Uusi:** "Perimätiedon mukaan kirkon ympäri ratsastanut harmaahiuksinen soturi ajoi joukon pakoon…"
+- **Syy:** Tyyppi 3: legenda oli kerrottu tosiasiana. Lähde kertoo sen ihmekertomuksena (ilmestyi ratsain upseeri; muslimit luulivat häntä Ayan Agaksi, kristityt pyhäksi Menakseksi). Legendan lähde (PILVI-RAPORTIN epävarmuus) avattu ja todettu yhteneväksi.
+- **Lähde:** https://religious.incrediblecrete.gr/en/metropolitan-church-of-agios-minas/
+
+### Koulesin linnoitus — kenttä `lyhyt`
+- **Vanha:** "Koulesin linnoitus puolusti kaupunkia ottomaanien piirityksessä, joka kesti yli kaksikymmentäyksi vuotta. Nykyään sen saleissa on esillä amforia ja tykkejä, jotka meritutkija Jacques Cousteau nosti Dian saaren edustan hylyistä vuonna 1976."
+- **Uusi:** "Koulesin linnoituksen edustalla, noin kolmentoista kilometrin päässä merellä, on Dian saari, jonka vesillä meritutkija Jacques Cousteau etsi 1970-luvulla kadonneen Atlantiksen jälkiä. Atlantista ei löytynyt, mutta saaren hylyistä nostetut amforat ja tykit tuotiin linnoitukseen."
+- **Syy:** Tyyppi 1: yli kaksikymmentä vuotta kestänyt piiritys kerrotaan jo avauksessa ("torjui piirittäjiä yli kaksikymmentä vuotta") ja muurien tekstissä. Tyyppi 5: "Nykyään sen saleissa on esillä" ei ole varmistettavissa vuodelle 2026. Cousteaun löydöt avattiin näytteille 2016, mutta 2026 päivitetyt matkailulähteet kertovat vaihtuvista näyttelyistä mainitsematta Cousteauta. Uusi muotoilu ei vanhene, ja siinä on tarina (Atlantiksen etsintä). Cousteaun vuosi on lähteissä ristiriitainen (1974–1975 / 1976), joten muotoiltu "1970-luvulla".
+- **Lähde:** https://www.gomega.gr/en/destinations-203/dia-island/ ; https://www.cretanbeaches.com/en/islands-and-islets-around-crete/dia-island ; https://news.gtp.gr/2016/08/18/heraklion-fortress-reopens-music/ ; https://www.argophilia.com/news/why-dia-islet-is-the-mysterious-rock-everyone-forgets/244411
+
+### Morosinin suihkulähde — kenttä `kysymykset`
+- **Vanha:** "Toimiiko suihkulähde yhä?"
+- **Uusi:** "Miksi altaassa on juuri leijonia?"
+- **Syy:** Tyyppi 7: vastaus vanhenee. Lähde on heinäkuussa 2026 kuiva, ja kunnostus on siirretty alkamaan 1.11.2026, jolloin veden palauttamista selvitetään.
+- **Lähde:** https://www.argophilia.com/news/morosini-fountain-restoration/250497/
+
+### Archánes — kenttä `lahteet`
+- **Vanha:** url https://cretetravel.com/guide/archanes/ (sivu palauttaa "Page not found")
+- **Uusi:** https://www.argophilia.com/news/visit-archanes-for-a-sampling-of-sacred-cretan-village-life/224190 (14 km Heraklionista, Juktas, Euroopan toiseksi parhaiten entistetty kylä; vahvistaa myös https://cretevillas4u.com/en/blog/archanes-village)
+- **Syy:** Kuollut lähde. Tekstiä ei muutettu. Palkinnon myöntäjä on argophilian mukaan EU, mutta vuotta ei löytynyt, ja teksti on jo varovainen ("palkittu yhtenä Euroopan parhaiten entistetyistä kylistä").
+- **Lähde:** ks. yllä
+
+### Tarkistettu ilman muutoksia (Kreeta)
+- Avaus: ilmasta nähtävä kuva (talojen kenno, bastionimuuri, vuori), 41 sanaa, alkaa "Tervetuloa". Ei muutoksia.
+- PILVI-RAPORTIN epävarmuudet: Koulesin rakennusvuodet (1523/1540), leijonakohokuvat ja upotetut laivat vahvistettu avaamalla explorecrete.com. Linnoitus on auki vuonna 2016 tehdyn kunnostuksen jälkeen (2026 aukioloajat). "Euroopan vanhin valtaistuin" pysyy "jota pidetään" -muodossa (en.wiki).
+- Kierrosversiot luettu peräkkäin: Knossos (lineaari-B), valtaistuinsali (Haagin jäljennös), museo (härkähyppy), Tituksen kallo, Morosinin aamu-bougatsa ja muurit. Ei muita päällekkäisyyksiä eikä hallintosisältöä. Morosinin kierrosversio on tunnelmakuva eikä tarina, mutta ei hallintoa, joten se jätettiin ennalleen.
+- Lähde-URLit testattu: kaikki vastaavat. Bigthink, biblicalarchaeology ja franciscanmedia palauttavat botille 403:n, eli ne ovat olemassa mutta estävät botit.
+
+## Lissabon
+
+### Santa Justan hissi — kenttä `teksti`
+- **Vanha:** "…uusgoottilainen rautatorni, joka nostaa matkustajat alakaupungin kaduilta Carmon aukion tasolle. … Hissi kuuluu yhä Lissabonin liikennelaitoksen kalustoon, ja sitä hoitaa sama yhtiö kuin kaupungin raitiovaunuja."
+- **Uusi:** "…uusgoottilainen rautatorni, joka rakennettiin nostamaan matkustajat alakaupungin kaduilta Carmon aukion tasolle. … Kun läheisen Glórian köysiradan vaunu suistui radaltaan syyskuussa 2025 ja kuusitoista ihmistä kuoli, myös Santa Justan hissi suljettiin turvallisuustarkastuksia varten."
+- **Syy:** Tyyppi 5 (NYKYAIKA). Hissi on ollut suljettuna syyskuusta 2025, eikä Carris ollut vahvistanut avaamispäivää 2.9.2026 mennessä. Preesens "nostaa matkustajat" ei pitänyt paikkaansa. Uusi muotoilu ei vanhene: menneen ajan tapahtuma pysyy totena, vaikka hissi avattaisiin.
+- **Lähde:** https://rfm.pt/atualidade/23708/gloria-bica-lavra-e-santa-justa-um-ano-depois-do-acidente-o-que-aconteceu-aos-elevadores-historicos-de-lisboa ; https://en.wikipedia.org/wiki/2025_Ascensor_da_Gl%C3%B3ria_derailment
+
+### Santa Justan hissi — kenttä `lyhyt`
+- **Vanha:** "Santa Justan hissin rautapitsimäisen tornin sisällä kulkee kaksi kiillotetusta puusta tehtyä hissikoria. Rakennuslupa myönnettiin jo vuonna 1882, mutta työt alkoivat vasta vuonna 1900. Huipun näköalatasanteelta avautuu näkymä alakaupungin kattojen yli joelle ja linnamäelle."
+- **Uusi:** "Santa Justan hissin rautasillan vihki kuningas Kaarle ensimmäinen elokuussa 1901 hoviväen ja aatelisten seurassa, mutta ensimmäinen hissikori lähti liikkeelle vasta seuraavana kesänä. Tornin kahdessa korissa on puupaneelit, peilit ja ikkunat, ja kumpaankin mahtui alun perin kaksikymmentäneljä matkustajaa."
+- **Syy:** Tyyppi 2: lupavuosi ja töiden alkuvuosi ovat hallintoa. Tyyppi 5: näköalatasanne on suljettu yhdessä hissin kanssa. Uusi on tapahtuma: silta vihittiin ennen kuin hissi toimi. Lupavuoden ja Carrisin lähderivit poistettu.
+- **Lähde:** https://en.wikipedia.org/wiki/Santa_Justa_Lift
+
+### Praça do Comércio — kenttä `lyhyt`
+- **Vanha:** "Kauppatorin joenpuoleiselta reunalta leveät portaat laskeutuvat suoraan veteen, ja aikanaan arvovieraat nousivat niitä pitkin veneistä kaupunkiin. Uuden aukion suunnittelivat maanjäristyksen jälkeen Eugénio dos Santos ja Carlos Mardel, kun markiisi Pombal johti kaupungin jälleenrakennusta."
+- **Uusi:** "Kauppatorin takana alkava alakaupunki rakennettiin maanjäristyksen jälkeen uudella tavalla: talojen seinien sisään kätkettiin joustava puuristikko, jonka piti huojua kaatumatta. Pienoismalleja testattiin antamalla sotilaiden marssia niiden ympärillä. Talot kuuluvat Euroopan varhaisimpiin maanjäristyksen varalle suunniteltuihin rakennuksiin."
+- **Syy:** Tyyppi 2: "suunnittelivat X ja Y" on kielletty perustietorakenne. Tyyppi 1: "aukio avautuu suoraan veteen" kerrotaan jo avauksessa juuri ennen tätä kierrosversiota. Portaiden lähde oli matkailusivu (PILVI-RAPORTIN epävarmuus), ja se poistui samalla. Uusi on yllättävä yksityiskohta (sotilaat marssivat "keinomaanjäristyksenä"). Superlatiivi muotoiltu lähteen mukaan: "among the earliest seismically protected constructions in Europe".
+- **Lähde:** https://en.wikipedia.org/wiki/1755_Lisbon_earthquake ; https://en.wikipedia.org/wiki/Pombaline_Baixa ; https://en.wikipedia.org/wiki/Pombaline_style
+
+### Belémin torni — kenttä `lyhyt`
+- **Vanha:** "Joensuun vartiotornin, Belémin tornin, suunnitteli sotilasarkkitehti Francisco de Arruda. Usein kerrotaan, että joki siirtyi pois tornin ympäriltä vuoden 1755 maanjäristyksessä, mutta torni rakennettiin alun perin pienelle saarelle rannan tuntumaan. Vuodesta 1983 se on ollut Unescon maailmanperintöä Hieronymuksen luostarin kanssa."
+- **Uusi:** "Lissabonia mereltä suojaavan Belémin tornin varuskunta antautui vuonna 1580 muutaman tunnin taistelun jälkeen Alban herttuan espanjalaisjoukoille. Sen jälkeen tornin tyrmiä käytettiin vankilana vuoteen 1830 asti, ja kuningas Mikael sulki niihin liberaaleja vastustajiaan."
+- **Syy:** Tyyppi 2: arkkitehti ja Unesco-vuosi ovat perustietoa. Tyyppi 1: tornin rakentaminen pienelle saarelle kerrotaan jo saman kohteen tekstissä. Uusi on tapahtuma ja ristiriita (puolustustorni antautui ja muuttui vankilaksi). Hallitsijan nimi fi.wikipedian mukaan Mikael (Mikael Anastaja, port. Miguel I). Torni avattiin uudelleen 28.5.2026 vuoden kestäneen restauroinnin jälkeen (https://www.sabado.pt/gps/amp/torre-de-belem-reabre-a-brilhar-e-com-novo-sistema-de-entradas-para-reduzir-filas), eikä mikään teksti väitä sitä suljetuksi.
+- **Lähde:** https://en.wikipedia.org/wiki/Bel%C3%A9m_Tower
+
+### Belémin torni — kenttä `teksti`
+- **Vanha:** "…joka saapui Intiasta Lissaboniin kuningas Manuel ensimmäisen lahjaksi vuonna 1515."
+- **Uusi:** "…joka saapui Intiasta Lissaboniin lahjaksi kuningas Manuel ensimmäiselle vuonna 1515."
+- **Syy:** Tyyppi 3/6: "Manuel ensimmäisen lahjaksi" voi kuulostaa siltä, että Manuel antoi lahjan. Todellisuudessa sarvikuono oli lahja Manuelille (Gujaratin sulttaanilta).
+- **Lähde:** https://en.wikipedia.org/wiki/D%C3%BCrer%27s_Rhinoceros
+
+### Belémin torni — kenttä `kysymykset`
+- **Vanha:** "Käytettiinkö tornia myös vankilana?"
+- **Uusi:** "Miksi torni on koristeltu kuin palatsi?"
+- **Syy:** Tyyppi 7: uusi kierrosversio vastaa jo vanhaan kysymykseen.
+- **Lähde:** –
+
+### Alfama — kenttä `lahteet`
+- **Vanha:** "yli 80 prosenttia tuhoutui" | https://www.odysseytraveller.com/articles/alfama-portugal/
+- **Uusi:** "85 prosenttia Lissabonin rakennuksista tuhoutui" | https://en.wikipedia.org/wiki/1755_Lisbon_earthquake
+- **Syy:** PILVI-RAPORTIN epävarmuus ratkaistu. Tekstin "yli neljä viidesosaa" pitää paikkansa, tekstiä ei muutettu.
+
+### Tarkistettu ilman muutoksia (Lissabon)
+- Joosef ensimmäisen patsas, yksi valu 15.10.1774: vahvistettu en.wikipediasta (Statue of José I), epävarmuus ratkaistu.
+- Rua Augustan riemukaaren huipulle pääsy vuodesta 2013: vahvistettu (trienaldelisboa). Näköalatasanne on auki 2026 (13-vuotisjuhla 9.8.2026).
+- Löytöretkien muistomerkki: avattiin uudelleen huhtikuussa lyhyen kunnostuksen jälkeen, eikä teksteissä ole vanhenevaa väitettä. São Jorgen linnan camera obscura on yhä käytössä (linnan oma sivu, opastukset 1.10.2026–28.2.2027).
+- Avaus: ilmasta nähtävä kuva (kukkulat, punaiset katot, Tejo), 38 sanaa, alkaa "Tervetuloa". Ei muutoksia.
+- Kierrosversiot luettu peräkkäin uusien kanssa: Kauppatori (maanjäristystalot), tuomiokirkko (Antonius ja sardiinit), Alfama (raitiolinja 28 ja maurit), linna (riikinkukot ja camera obscura), Santa Justa (kuninkaan vihkimä silta), Hieronymus (munkit, pastel de nata, Lissabonin sopimus), muistomerkki (kompassiruusu), Belém (antautuminen ja vankila). Ei päällekkäisyyksiä. Huom.: Alfaman kierrosversion maurivalta ja vuosi 1147 toistuvat linnan ja tuomiokirkon TEKSTEISSÄ, mutta eivät toisessa kierrosversiossa, joten Alfama jätettiin ennalleen.
+- Lähde-URLit testattu: kaikki vastaavat (franciscanmedia 403 = botti-esto).
+
+## Päätoimittajalle jätetyt epävarmuudet
+- Lissabon, Santa Justa: jos hissi avataan uudelleen, teksti pysyy totena, mutta Päätoimittaja voi halutessaan lisätä tiedon uudelleenavaamisesta.
+- Kreeta, Koules: Cousteaun löydöt ovat varmasti olleet esillä linnoituksessa (2016), mutta niiden nykyistä esillä oloa ei voitu varmistaa. Siksi teksti ei enää väitä niitä esillä oleviksi.
+- Kreeta, Pyhä Menas: pommin putoamispäiväksi yksi hakuote antoi 23.5.1941, mutta avatut lähteet kertovat vain vuoden, joten käytettiin vuotta 1941.
