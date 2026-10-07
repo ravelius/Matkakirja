@@ -2,27 +2,50 @@
 
 Tutkimus, ei generointia. Sama malli kuin `faktapohja-kielletty-kaupunki-1873.md`. Tilaus: Päätoimittaja 7.10.2026 (omistajan linja: Egypti historiallisena seikkailuna Olavinlinnan ja Kielletyn kaupungin tapaan).
 
+## Rakennustyömaan hetki: päätelmät (tarkistus 7.10.2026)
+
+Omistajan valinta: Suuren pyramidin työmaa Khufun 26./27. vuonna, Niilin tulva-aikaan (heinä–marraskuu), Mererin päiväkirjan aikaan. Tiivistelmä nojaa lopun tarkistukseen E1–E74, joka ohittaa osien 1–5 alkuperäiset merkinnät.
+
+**Varmaa (vähintään kaksi lähdettä):**
+- Päiväys on "karjalaskennan 13. kerran jälkeinen vuosi" (Merer-papyrukset ja Dakhlan kalliokirjoitus, E1–E3). Vuosiluku 26 vai 27 riippuu laskentatavasta: pelissä aina "26./27. vuosi".
+- Pyramidi on lähes valmis, ja valkoisia Tura-kalkkikiviä tuodaan veneillä verhousta varten (E10). Matka Turasta Gizaan kesti lastattuna kaksi päivää, tyhjänä paluu yhden; kaksi tai kolme lastia kymmenessä päivässä (E9).
+- Merer ja hänen joukkueensa (noin 40 miestä Talletin mukaan; luku jää epävarmaksi, E8), Ro-She Khufu ("Khufun lammen suu") satamana ja virastona pyramidin juurella, Khufun lampi ja kanavat; ruokaa haetaan Heliopoliksesta (E8, E14, E62).
+- Ankhhaf on paikalla johtajana, mutta papyruksissa hänen arvonsa on *iry-pat* (ylimys), ei visiiri (E16, E40). Hemiunu oli kuninkaan rakennustöiden valvoja; "arkkitehti" on päätelmä arvonimestä (E24).
+- Ei Sfinksiä, ei Khafren eikä Menkauren pyramidia, ei kultahuippua: tunnetut 4. dynastian huippukivet ovat valkoista kalkkikiveä (E23, E32). Ain Sukhna ei ollut käytössä (E36). Osiris ja Isis eivät esiinny 4. dynastian lähteissä (E71).
+- Kupari- ja doleriittityökalut, märkä hiekka kelkkojen edessä (fysiikka vahvistettu 2014), olut ja leipä perusravintona (E60, E61, E66, E67).
+
+**Tulkintaa (näytä "tutkijat arvelevat" -muodossa):**
+- Kuinka korkealle verhous ylsi ja oliko huippukivi jo paikallaan (E10). Ramppien muoto (E38).
+- Kuukausi: vain "tulvakausi"; yksittäisiä kuukausiotsikoita ei saatu (E6).
+- Työläiskaupunki Heit el-Ghurab: kaivetut kerrokset ovat Khafren ja Menkauren aikaa; Khufun aikainen leiri on "luultava" mutta kaivamatta (E17, E33, E57). Leipomot, karjan luut ja työläishaudat ovat analogia, eivät Khufun hetken todiste.
+- Työväen määrä (tuhansia, ehkä 20 000) ja rakennusaika (parikymmentä vuotta) (E11, E12).
+- Toinen laiva ja venekuopat kuuluvat vasta Khufun hautajaisiin (14. laskenta, n. vuosi 28–29), eivät tähän hetkeen (E4, E30, E31).
+
+**Mitä pelaaja voisi nähdä ja kohdata:** tulvan peittämä laakso ja kanava pyramidin juurelle; lastattu vene ja lohkojen purku; Mererin joukkue ja ylimys Ankhhaf; lähes valmis, valkoisena hohtava pyramidi, jonka pintaa vielä viimeistellään; kuningatarpyramidit ja Itäkentän prinssien mastabat (rakennettu hallituskauden loppupuolella, vuodet epävarmat, E27); leivän, oluen ja kuivatun kalan jakoa. Ei: Sfinksiä, muita pyramideja, kultahuippua, orjia.
+
+**Varaus:** tarkistuksen agentit eivät saaneet yhtään sivua auki (verkkoesto), joten "vahvistui" tarkoittaa kahta riippumatonta hakutiivistelmää. Ennen kuin luku tai nimi menee pelitekstiin, avaa vähintään yksi lähde.
+
 ## Käyttöohje
 
-- Osat: 1 ajanjakso ja sopivin hetki, 2 paikat, 3 henkilöt, 4 arki (ruoka, työ, vaatteet, uskonto, hautaus), 5 kuvalähteet (PD/CC Commons-lisensseineen). Jokaisessa osassa on lopussa `Avoimet kysymykset`.
+- Osat: 1 ajanjakso ja sopivin hetki, 2 paikat, 3 henkilöt, 4 arki (ruoka, työ, vaatteet, uskonto, hautaus), 5 kuvalähteet (PD/CC Commons-lisensseineen). Jokaisessa osassa on lopussa `Avoimet kysymykset`. Lopussa osa 6: epävarmojen tarkistus E1–E74 (7.10.2026), joka **ohittaa osien 1–5 alkuperäiset [EPÄVARMA]- ja [EI LÖYDETTY]-merkinnät**.
 - Jokaisella faktalla on lähde (URL tai viite), mieluiten kaksi itsenäistä. **[EPÄVARMA]** = lähteet eroavat tai vain yksi heikko lähde; **[EI LÖYDETTY]** = ei löytynyt; **[PÄÄTELMÄ]**/**[rekonstruktio]** = kirjoittajan johtopäätös. Merkinnät ovat Sonnet-tutkimusagenttien (web-haku): useat lähteet (Britannica, Met, UCL, Harvardin Giza-arkisto, osa AERA-PDF:istä) eivät auenneet, ja osa tiedoista perustuu tiivistelmiin. **Tarkista merkityt kohdat ennen kuin faktaa käytetään pelitekstissä** (kuten Kielletyn kaupungin faktapohjan epävarmojen tarkistus).
 - **Harvard Giza Project ja AERA (Lehner) ovat vain tutkimuslähteitä, ei median käyttöä.** Kuvat: vain PD / CC0 / CC BY / CC BY-SA, lisenssit luettu Commons-API:sta. CC BY -kuvissa tekijämaininta on pakollinen (ks. osa 5).
 - Nimet: Khufu (Kheops), Khafre (Khefren), Menkaure (Mykerinos); vaihtoehtoiset kirjoitusasut ovat osassa 1.
 
 ## Suositus hetkeksi (tiivistelmä)
 
-**Parhaiten sopii: vaihtoehto A tarkennettuna "pyramidi lähes valmis, työ vielä käynnissä": Khufun 26./27. vuosi, Niilin tulva-aika (Akhet), Merer-päiväkirjan aikaan.** Perustelut: (1) Merer-päiväkirja on ainoa aikalaislähde, joka kuvaa Gizan työmaata päivätasolla (Merer, visiiri Ankhhaf, Ro-She Khufu -satama, Tura-kalkkikiven kuljetus ja purku, ruokahuolto Heliopoliksesta); (2) ajoitus "13. karjalaskennan jälkeinen vuosi" on tuettu kolmesta riippumattomasta kohteesta; (3) visuaalisesti A sisältää B:n: pyramidi on lähes valmis valkoisine Tura-pintakivineen, mutta veneet, lohkot, kanavat ja väki antavat elämää (valmis, kiiltävä pyramidi ilman työtä olisi tyhjempi); (4) B (hautajaiset, vuosi 28/29) nojaa yhteen graffitiin ja venekuoppiin, ei yhteenkään ihmiskertomukseen.
+**Parhaiten sopii: vaihtoehto A tarkennettuna "pyramidi lähes valmis, työ vielä käynnissä": Khufun 26./27. vuosi, Niilin tulva-aika (Akhet), Merer-päiväkirjan aikaan.** Perustelut: (1) Merer-päiväkirja on ainoa aikalaislähde, joka kuvaa Gizan työmaata päivätasolla (Merer, ylimys Ankhhaf **[KORJATTU 7.10.2026, ks. E40]**, Ro-She Khufu -satama, Tura-kalkkikiven kuljetus ja purku, ruokahuolto Heliopoliksesta); (2) ajoitus "13. karjalaskennan jälkeinen vuosi" on tuettu kahdesta riippumattomasta kohteesta (Merer, Dakhla), ja venekuopan myöhempi "14. laskenta" -graffiti osoittaa Khufun eläneen tämän jälkeen **[KORJATTU 7.10.2026, ks. E2]**; (3) visuaalisesti A sisältää B:n: pyramidi on lähes valmis valkoisine Tura-pintakivineen, mutta veneet, lohkot, kanavat ja väki antavat elämää (valmis, kiiltävä pyramidi ilman työtä olisi tyhjempi); (4) B (hautajaiset, vuosi 28/29) nojaa yhteen graffitiin ja venekuoppiin, ei yhteenkään ihmiskertomukseen.
 
-Kolme kuvaushetkeä: (1) Ro-She Khufun padon avaus tulvan alussa (Papyrus A, päivät 11–17); (2) Tura-kalkkikiven purku Akhet-Khufulla, päivä 27 (Papyrus B); (3) visiiri Ankhhaf työmaalla, päivä 24 (Papyrus B, varalla). Vuosiluku: "n. 2560 eaa. (±40 v)", ei yhtä tarkkaa vuotta. Dioraamaan EI: kullattua huippua (4. dynastian pyramidionit valkoista kalkkikiveä), Khafren eikä Menkauren pyramidia, valmista Sfinksiä (Khafren aika).
+Kolme kuvaushetkeä: (1) Ro-She Khufun padon avaus tulvan alussa (Papyrus A, päivät 11–17); (2) Tura-kalkkikiven purku Akhet-Khufulla, päivä 27 (Papyrus B); (3) ylimys Ankhhaf työmaalla, päivä 24 **[KORJATTU 7.10.2026, ks. E16, E40]** (Papyrus B, varalla). Vuosiluku: "n. 2560 eaa. (±40 v)", ei yhtä tarkkaa vuotta. Dioraamaan EI: kullattua huippua (4. dynastian pyramidionit valkoista kalkkikiveä), Khafren eikä Menkauren pyramidia, valmista Sfinksiä (Khafren aika).
 
 ## Tärkeimmät korjaukset tilaukseen / yleisiin oletuksiin
 
 1. **Khufun hallituskausi.** Herodotos antaa Khufulle 50 vuotta ja pyramidin rakennusajaksi 20 vuotta; "23 vuotta" on Turinin kaanonin luku. Alkuvuosi vaihtelee (Shaw 2589, Allen 2551, Hornung 2509 eaa.); hallituskausi vähintään 27–29 vuotta kolmen päiväyksen perusteella [EPÄVARMA].
-2. **Merer-papyrusten vuosi** on 26 (Tallet) tai 27 (Wikipedia) — pelissä "26./27. vuosi". Joukkueen koko 40 vai 200 lähteestä riippuen. Merer-päiväkirjan titteli on lähteiden mukaan *sḥḏ* ("tarkastaja"), ei *sdjwty* (translitteraatiota ei tarkistettu primaarilähteestä).
+2. **Merer-papyrusten vuosi** on 26 (Tallet) tai 27 (Wikipedia); pelissä "26./27. vuosi". Joukkueen koko 40 vai 200 lähteestä riippuen. Merer-päiväkirjan titteli on lähteiden mukaan *sḥḏ* ("tarkastaja"), ei *sdjwty* (translitteraatiota ei tarkistettu primaarilähteestä).
 3. **Heit el-Ghurab (työläisten kaupunki) ei ole Khufun ajalta**, vaan pääosin Khafren ja Menkauren (n. 2520–2472 eaa.). Leipomot, luut ja työläishaudat ovat Khufua nuorempaa aineistoa: pelissä ne kelpaavat analogiana, ei Khufun hetken suorana todisteena. Khufun ajan suora lähde on Merer-aineisto.
 4. **Sfinksi ja Khafren pyramidi eivät kuulu Khufun hetkeen** (Khafren aika; vaihtoehtoteoria Khufu [EPÄVARMA]).
 5. **Paikkatiedot.** Khufun laiva 43,4 m (ei 43,6 m); G 2000 kuuluu Länsikentälle (ei Itäkentälle); pengertien pituus 740–825 m [EPÄVARMA].
-6. **Muita ristiriitoja:** Ankhhafin hauta G 7510 (Commonsin kuvaus: G 7310); Khufun norsunluupatsaan ajoituksen kiistää Hawass; "kuninkaan karjatilat" ja Heit el-Ghurabin panimot [EPÄVARMA]; Osiris varmasti vasta 5. dynastiasta; Isis 4. dynastiassa [EI LÖYDETTY].
+6. **Muita ristiriitoja:** Ankhhafin hauta G 7510 (Commonsin kuvaus: G 7310); Khufun norsunluupatsaan ajoituksen kiistää Hawass; "kuninkaan karjatilat" ja Heit el-Ghurabin panimot [EPÄVARMA]; Osiris ja Isis vasta 5. dynastiasta, kumpaakaan ei tunneta 4. dynastiassa **[KORJATTU 7.10.2026, ks. E71]**.
 7. **Kuvalähteet.** 70 varmennettua Commons-tiedostoa (osa 5); ei vapaita kuvia Wadi al-Jarf -papyruksista, Heit el-Ghurabista, työläisten haudoista eikä dolerite-vasaroista.
 
 ---
@@ -105,7 +128,7 @@ Kolme vuodenaikaa: **Akhet** (tulva), **Peret** (kasvu), **Shemu** (sato), kukin
 |---|---|---|---|
 | Edeltäjä | Sneferu rakensi kolme pyramidia (Meidum, Taittunut, Punainen); Khufu on hänen poikansa. | https://en.wikipedia.org/wiki/Sneferu | varma |
 | Khufun komplekseja johti Hemiunu | Hemiunu (Khufun veljenpoika), visiiri, "kaikkien kuninkaan rakennusten valvoja"; hänen mastabansa G 4000 Gizan länsikentällä, kivissä Khufun hallituskauden päivämääriä. | https://en.wikipedia.org/wiki/Hemiunu ; https://en.wikipedia.org/wiki/Khufu | varma (rooli), "arkkitehti" oletus |
-| Hallituskauden loppu: Ankhhaf | Khufun velipuoli, visiiri, "Ro-She Khufun johtaja"; T17: "evidently the supervisor of the project at this late stage". Haudattu suureen mastabaan G 7510 itäkentällä. | T17 liite I; https://en.wikipedia.org/wiki/Ankhhaf ; https://en.wikipedia.org/wiki/Diary_of_Merer | varma (asema), "projektipäällikkö" tulkinta |
+| Hallituskauden loppu: Ankhhaf | todennäköisesti Khufun velipuoli; papyruksissa *iry-pat* (ylimys) ja "Ro-She Khufun johtaja", visiirin arvo tunnetaan vasta haudasta **[KORJATTU 7.10.2026, ks. E40]**; T17: "evidently the supervisor of the project at this late stage". Haudattu suureen mastabaan G 7510 itäkentällä. | T17 liite I; https://en.wikipedia.org/wiki/Ankhhaf ; https://en.wikipedia.org/wiki/Diary_of_Merer | varma (asema), "projektipäällikkö" tulkinta |
 | Suuri pyramidi | Rakennusaika: Herodotos ja Diodoros 20 v (Diodoros 360 000 miestä, Herodotos 100 000); Tallet: työmaa oli luultavasti käynnissä "n. 25 vuotta"; WP: 20–27 v. | https://lexundria.com/hdt/2.124/mcly ; T17 s. 161 ("25 or so years"); https://en.wikipedia.org/wiki/Great_Pyramid_of_Giza | [EPÄVARMA] 20–27 v |
 | Työvoima | Lehnerin laskelma (Tallet siteeraa): enintään 20 000 koko hankkeessa, luultavasti paljon vähemmän, ehkä vain 4 000 pyramidin työmaalla; 1999 johtamistutkimus: keskimäärin 13 200, huippu n. 40 000; WP Giza: 20 000–30 000 ympärivuotista. Louhijoita n. 1 200 (Lehner, Tallet 1997 -viite). | T17 viitteet 61, 64 ; https://en.wikipedia.org/wiki/Great_Pyramid_of_Giza ; https://en.wikipedia.org/wiki/Giza_pyramid_complex | [EPÄVARMA] 4 000–40 000 |
 | Ydinkivi | Valtaosa paikallista kalkkikiveä; Lehner epäilee hevosenkengän muotoisen louhoksen Suuren pyramidin eteläpuolella (max syvyys 30 m, n. 2,76 milj. m3 puuttuvaa kiveä vs. pyramidin 2,59 milj. m3) tuottaneen suurimman osan. Louhos oli "enimmäkseen käytetty ennen Khafren pyramidia". | https://aeraweb.org/great-pyramid-quarry/ ; https://en.wikipedia.org/wiki/Great_Pyramid_of_Giza | [EPÄVARMA] (Lehnerin epäily) |
@@ -113,7 +136,7 @@ Kolme vuodenaikaa: **Akhet** (tulva), **Peret** (kasvu), **Shemu** (sato), kukin
 | Peitekivien viimeistely | Lohkot asetettiin ensin, pinta tasoitettiin vasta asettamisen jälkeen (todisteena Menkauren ja Henutsenin pyramidien keskeneräiset peitekivet). Yksi rekonstruktio: pyramidion paikalleen, pinta hiotaan ylhäältä alas. | https://en.wikipedia.org/wiki/Great_Pyramid_of_Giza (Lehner 1997); Müller-Römer 2015 (kuvaus hakutuloksessa, https://people.smu.edu/mboulanger/files/2023/08/Muller_Romer_2015.pdf) | [EPÄVARMA]: rekonstruktio |
 | Muut Khufun kompleksin osat | Kolme "kuningattaren pyramidia" G1-a, -b, -c ja pieni satelliittipyramidi G1-d; kolme venekuoppaa idässä, kaksi laajaa eteläpuolella (1954 löytynyt laiva 43,4–43,6 m, setri, 1 224 osaa). Mastabarivit itä- ja länsikentällä. | https://en.wikipedia.org/wiki/Great_Pyramid_of_Giza ; https://en.wikipedia.org/wiki/Khufu_ship | varma (olemassaolo), rakennusajankohta [EI LÖYDETTY] |
 | Satama ja kanavat | Khufun "satama" Gizassa Niilin yhteydessä (sedimenttiporanäytteet) ; Ro-She Khufu = "Khufun lammen sisäänkäynti" | https://en.wikipedia.org/wiki/Khufu (Younes 2024) ; T17 | varma (Merer), sijainti [EPÄVARMA] |
-| Djedefre | Hautasi Khufun (oletus: hänen vanhin poikansa): hänen nimensä on venekuoppien kattolohkoissa (11 mainintaa, Khufun nimi 4). | https://en.wikipedia.org/wiki/Great_Pyramid_of_Giza | [EPÄVARMA] |
+| Djedefre | Hautasi Khufun (oletus: hänen vanhin poikansa): hänen nimensä on venekuoppien kattolohkoissa (11 mainintaa, Khufun nimi 4; ensimmäisen kuopan kattolohkoissa lähteiden mukaan 18 Djedefren kartussia, ks. E15). | https://en.wikipedia.org/wiki/Great_Pyramid_of_Giza | [EPÄVARMA] |
 | Khafre | Toinen pyramidi: kanta 215,5 m (muissa lähteissä 214,5), alkuperäinen korkeus 143,5 m, nyt 136,4 m; alin kerros peitekivistä punaista graniittia, loput Turan kalkkikiveä; huippu edelleen peitetty. Kompleksissa 494,6 m johtotie ja graniittivaippainen laaksotemppeli. | https://en.wikipedia.org/wiki/Pyramid_of_Khafre ; https://www.worldhistory.org/giza/ (144 m) | varma |
 | Sfinksi | Valtaosa tutkijoista: Khafren aikainen. AERA/Lehner: Sfinksin alaosat ja sen temppeli on veistetty **myöhemmin kuin** Khafren pyramidi, pyramiditemppeli, johtotie ja laaksotemppeli; louhoksen eteläpuoli on Khafren johtotien perustus; työ jäi kesken Khafren loppuun mennessä; Khufun temppeleissä ei ole kulttikuville tilaa, Khafren on. Vaihtoehto: Stadelmann ym. Khufu (tai Djedefre). Sfinksi 73 m x 20 m x 19 m. | https://aeraweb.org/khafres-monuments ; https://en.wikipedia.org/wiki/Great_Sphinx_of_Giza | [EPÄVARMA] (enemmistö Khafre; Khufu-vaihtoehto) |
 | Menkaure | Kolmas pyramidi: kanta 108,5 m (WP:n Menkaure-sivun luku 103,4 m on alkuperäinen kanta; ristiriita), alkuperäinen korkeus 65,5 m, nyt 61 m; 16 alinta peitekiviriviä Assuanin punaista graniittia, graniitin viimeistely jäi kesken; ylempi vaippa hienoa kalkkikiveä. | https://en.wikipedia.org/wiki/Pyramid_of_Menkaure ; https://en.wikipedia.org/wiki/Menkaure | varma |
@@ -130,7 +153,7 @@ Kolme vuodenaikaa: **Akhet** (tulva), **Peret** (kasvu), **Shemu** (sato), kukin
 | Yläosa | Pyramidion puuttui jo antiikissa; huipulta puuttuu n. 8 m ja n. 1 000 t. Kaikki tunnetut 4. dynastian pyramidionit ovat valkoista kalkkikiveä, **ei kullattuja**; kullattu kärki vasta 5. dynastiasta. | https://en.wikipedia.org/wiki/Great_Pyramid_of_Giza |
 | Tilavuus / lohkot | n. 2,3 milj. lohkoa, n. 5,5–6 milj. t | https://en.wikipedia.org/wiki/Great_Pyramid_of_Giza |
 | Peitekivien ulkonäkö | Valkoinen Tura-kalkkikivi, tarkasti sovitetut liitokset (keskimäärin 0,5 mm), sileä, "kiiltävä/heijastava"; peitekivet purettiin pääosin keskiajalla (perimätieto: sulttaani al-Hasan 1356). Pohjoisella sivulla muutama alin kerros paikallaan. | https://en.wikipedia.org/wiki/Great_Pyramid_of_Giza ; National Museums Scotland (peitekivi): https://www.nms.ac.uk/explore-our-collections/stories/world-cultures/ancient-egyptian-collection/ancient-egyptian-collection/pyramid-casing-stone/ (vain hakutuloksen tiivistelmä luettu, sivu palautti 403 haettaessa) |
-| Pyramidin sijainti Turaan nähden | Tura n. 10 km (WP Great Pyramid) / 15 km (muut) Gizasta kaakkoon Niilin itärannalla | https://en.wikipedia.org/wiki/Great_Pyramid_of_Giza ; hakutulos, esim. NMS: viite yllä [EPÄVARMA 10–20 km] |
+| Pyramidin sijainti Turaan nähden | Tura n. 10 km (WP Great Pyramid) / 15 km (muut) Gizasta kaakkoon Niilin itärannalla; tarkistuksessa n. 13 km linnuntietä, jokimatka 13–17 km **[KORJATTU 7.10.2026, ks. E37]** | https://en.wikipedia.org/wiki/Great_Pyramid_of_Giza ; hakutulos, esim. NMS: viite yllä [EPÄVARMA 10–20 km] |
 
 ### 1.6 Merer-papyrukset (Wadi al-Jarf)
 
@@ -145,7 +168,7 @@ Kolme vuodenaikaa: **Akhet** (tulva), **Peret** (kasvu), **Shemu** (sato), kukin
 - Kirjoittaja **tarkastaja (sehedj) Merer**, keskitason virkamies. Joukkue ("phyle") n. **40 miestä** (T17 s. 160, WP). [EPÄVARMA] Tallet–Marouard 2014 mukaan sekundäärilähteessä "n. 200 miestä" (https://africame.factsanddetails.com/article/entry-1172.html); T17 on tuoreempi.
 - Työ: **Tura-kalkkikiven kuljetus** Tura Pohjois/Etelä -louhoksilta Giza-työmaalle (Akhet-Khufu) veneellä; kuukauden aikana n. 6–7 edestakaista matkaa (kaksi–kolme joka kymmenes päivä). Yksi kierros noin neljä päivää: päivä 26 lähtö Turasta, yö She-Khufussa; päivä 27 purku Akhet-Khufussa; päivä 28 paluu; päivä 29–30 kivien kuljetus louhoksella. Alus arvioitu 25–30 m pitkäksi, kuorma 70–80 t = n. 30 lohkoa x 2,5 t (**Talletin oletus**, ei lähteessä), eli n. 200 lohkoa kuussa, n. 1 000 koko tulvakauden aikana. Peitekivitarve 67 390 m3.
 - **Paikat:** *Ro-She Khufu* ("Khufun lammen sisäänkäynti", välietappi, hallintokeskus), *She-Khufu/She Akhet-Khufu* ("Khufun lampi"), *Akhet-Khufu* (pyramidi, määränpää), "Akhet-Khufun kappelit" (ehkä laaksotemppelin kappelirivi), *Ankh-Khufu* ("eläköön Khufu", kaupunkimerkillä, sijainti [EPÄVARMA]) ja **Heliopolis**, jonne Merer lähetti veneen hakemaan ruokaa ("40 khar-säkkiä ja suuri heqat-mitta leipää"). Tallet ei pidä Ro-Shea Heit el-Ghurabina.
-- **Ankhhaf** ("jaloverinen", *iry-pat*; Ro-She Khufun johtaja; visiiri ja "kaikkien kuninkaan töiden" vastaava), esiintyy B IV: päivä 24: hän on mukana kun joukkue vetää (kiviä/aluksia) "eliitin" (*stp-sȝ*) ja *aper*-ryhmien kanssa.
+- **Ankhhaf** ("jaloverinen", *iry-pat*; Ro-She Khufun johtaja; visiirin ja "kaikkien kuninkaan töiden" vastaavan arvonimet tunnetaan vasta hänen haudastaan **[KORJATTU 7.10.2026, ks. E40]**), esiintyy B IV: päivä 24: hän on mukana kun joukkue vetää (kiviä/aluksia) "eliitin" (*stp-sȝ*) ja *aper*-ryhmien kanssa.
 - **Papyrus A, päivät 11–17:** työt Ro-She Khufun **padolla**, 15 aper-ryhmää (n. 600 miestä, T17 viite 64), "padon paalujen nosto": Tallet tulkitsee Gizan kukkulan juurella olevan **vesialtaan käyttöönottona** (T17, Conclusions; Archaeology-lehdessä sama tulkinta toissijaisen lähteen mukaan: https://africame.factsanddetails.com/article/entry-1172.html).
 - Päiväkirjassa **ei ole** rakennustekniikkaa (rampit, nostot) (T17 liite I kohta 2).
 
@@ -158,7 +181,7 @@ Kolme vuodenaikaa: **Akhet** (tulva), **Peret** (kasvu), **Shemu** (sato), kukin
 | Khufun vuosi 1 | Valtaistuin; Giza valitaan (ajankohta rakennuksen alulle) | [EI LÖYDETTY] rakennuksen alun vuosi | |
 | Vuosi 13?–25? | Rakennustyö täydessä vauhdissa; Hemiunu johtaa | Hemiunun mastaban päivämäärät (WP Hemiunu) | [EPÄVARMA] |
 | Vuosi 26/27, Akhet I–Peret II ("heinä–marraskuu") | **Merer-päiväkirja:** Tura-kalkkikivi virtaa Gizaan; Ankhhaf Ro-Shella; peitekivien asennus ainakin osittain | T17 | hyvin dokumentoitu |
-| Vuosi 27 (Dakhla) | Khufun "mefat"-retkikunta Libyan aavikolla, saman päiväyksen kirjoitus | https://en.wikipedia.org/wiki/Khufu (Kuper & Förster 2003) | varma (yksi lähde) |
+| Vuosi 26/27 (Dakhla) | Khufun "mefat"-retkikunta (400 miestä) Libyan aavikolla, saman päiväyksen kirjoitus kuin Mererillä **[KORJATTU 7.10.2026, ks. E3]** | https://en.wikipedia.org/wiki/Khufu (Kuper & Förster 2003); https://fjexpeditions.com/desert/archeology/ancientroute/ancientroute.htm | varma |
 | Vuosi 28/29, Shemu I ("kevät-alkukesä") | Khufun hautajaisten valmistelut: graffiti venekuopan katolla, "14. laskenta"; Khufu kuolee pian | https://aeraweb.org/khufus-30-year-jubilee/ ; WP Khufu | [EPÄVARMA] vuosi ja tarkka kaava |
 | Heti sen jälkeen | Djedefre seuraa; hänen nimensä venekuoppien kattolohkoissa | WP Great Pyramid | [EPÄVARMA] |
 | Djedefren 8–11 v | Abu Rawashin pyramidi | WP Djedefre | |
@@ -172,7 +195,7 @@ Kolme vuodenaikaa: **Akhet** (tulva), **Peret** (kasvu), **Shemu** (sato), kukin
 Perustelut:
 
 1. **Paras lähdepohja.** Ainoa aikalaislähde, joka kuvaa Gizan työmaata päivätasolla, on Merer-päiväkirja: henkilöt (Merer, Ankhhaf), paikat (Ro-She Khufu, She-Khufu, Akhet-Khufu, Tura), toiminta (kuljetus, purku, padon työt), ruokahuolto Heliopoliksesta ja vuodenaika (tulva). Hetken B (hautajaiset) tueksi on käytännössä vain yksi graffiti ja arkeologinen kuvio (venekuopat), eikä mitään kertomusta sen ihmisistä. [PÄÄTELMÄ]
-2. **Luotettavuus.** Päivämäärä "karjalaskennan 13. jälkeinen vuosi" on kolmesta riippumattomasta kohteesta (Merer, Dakhla, venekuoppa) tuettu Khufun loppuvaihe. Peitekivien asennus on Talletin oma tulkinta, mutta 67 390 m3:n tarve, Tura-reitti ja "valmistumisen" tuntumat ovat yhdenmukaisia.
+2. **Luotettavuus.** Päivämäärä "karjalaskennan 13. jälkeinen vuosi" on kahdesta riippumattomasta kohteesta (Merer, Dakhla) tuettu Khufun loppuvaihe; venekuopan "14. laskenta" on vielä myöhempi. **[KORJATTU 7.10.2026, ks. E2]** Peitekivien asennus on Talletin oma tulkinta, mutta 67 390 m3:n tarve, Tura-reitti ja "valmistumisen" tuntumat ovat yhdenmukaisia.
 3. **Visuaalisesti A sisältää B:n.** Pyramidi on tässä vaiheessa lähes valmis: ydin ja suuri osa valkoisesta peitteestä paikallaan, mutta työ vielä käynnissä, mikä antaa dioraamaan elämää (veneet, lohkot, kanavat, väki) eikä vain jämähtänyttä muistomerkkiä. Valmis, kiiltävä pyramidi (B) olisi sama tausta ilman työtä: tyhjempi kuva ja heikompi kerronta, vaikka kuvallisesti vaikuttava.
 4. **Uskottavasti dioraamaan voi tehdä:** (a) pyramidi n. 146,6 x 230,3 m, 51°50' (varma); (b) valkoiset Tura-lohkot, hienosti sovitetut ja sileäksi hiotut (varma); peitekivien asennus ja hionta kesken yläreunassa tai alaosissa [rekonstruktio]; (c) **ei kullattua huippua** (4. dynastian pyramidionit valkoista kalkkikiveä; kuvissa kärki on joko puuttuva/valmisteilla tai valkoinen, ei kulta); (d) **ei Khafren eikä Menkauren pyramidia** ja Sfinksi vasta louhoksen/kallionkohoumana ja valmistumattomana (AERA: Sfinksi Khafren ajan; vaihtoehtoteoria Khufu) [EPÄVARMA]; (e) Suuren pyramidin eteläpuolella hevosenkenkälouhos, osin jo käytetty [EPÄVARMA]; (f) Hemiunun ja Ankhhafin mastabat, kolme kuningattaren pyramidia ja venekuopat lähellä (olemassaolo varma, rakennusvaihe [EI LÖYDETTY]); (g) kuvalähteet: Nefertiabetin stele, Louvre E 15591 (Khufun aika, n. 2580), Hemiunun patsas (Hildesheim, Pelizaeus-museo), Ankhhafin rintakuva (MFA Boston), Khufun laiva (Grand Egyptian Museum, 43,4 m) ja Tura-peitekivi (British Museum); arjen kuviin tarvitaan myöhempiä, 5. dynastian lähteitä (esim. Unasin johtotien kohtaukset, joissa pylväitä kuljetetaan aluksilla; Tallet viittaa niihin, T17 s. 160), mikä on [rekonstruktio]. Lähteet: https://en.wikipedia.org/wiki/Khufu ; https://en.wikipedia.org/wiki/Hemiunu ; https://en.wikipedia.org/wiki/Ankhhaf ; https://en.wikipedia.org/wiki/Khufu_ship ; https://en.wikipedia.org/wiki/Great_Pyramid_of_Giza.
 5. **Pelaajan kannalta:** tulva-ajan työpäivä sopii "ihmisten keskellä kulkemiseen": satama (Ro-She Khufu), laituri ja lohkojen purku, ruoka Heliopoliksesta, joukot. Vuodenaika (Akhet) antaa myös valo- ja vesimaiseman: vettä tasangon halki, lampi pyramidin juurella.
@@ -186,16 +209,16 @@ Kuvaus: aamu, 15 aper-ryhmää (n. 600 miestä) nostaa padon paaluja, vesi virta
 Kuvaus: lastattu alus (25–30 m, ~30 lohkoa) saapuu kanavaa pyramidin lammelle, lohkot puretaan, 40 miehen joukkue; yö She-Khufussa. Kuukausi [EI LÖYDETTY]; hyvä valinta: tulvan korkeimman veden aika, Talletin kehys Akhet I–Peret II (heinä–marras), esim. "loppukesä". Päivämäärä: "päivä 27" on sijoitettu papyrukseen, joten dioraamaan voi kirjoittaa "kuukauden 27. päivä, Khufun 26./27. vuosi" ilman nykykuukautta. Selkein päiväkirjan toimintakuva (kuljetus), aikalaisteksti.
 
 **Hetki 3: "Ankhhaf ja eliitti" (Papyrus B IV, päivä 22–24: yö Ro-She Khufulla, Akhet-Khufun kappelit, päivä 24 kivien veto eliitin, aper-ryhmien ja Ankhhafin kanssa).**
-Kuvaus: johtajan (visiirin) läsnäolo työmaalla, kappelirivi (laaksotemppelin ennakko?), ilta/yö Ro-Shella. Tunnelmallinen "valtapäivä": nimetty historiallinen henkilö paikalla. Tarkka kalenterikuukausi [EI LÖYDETTY].
+Kuvaus: johtajan (Ankhhaf; visiirin arvo tunnetaan vasta hänen haudastaan, ks. E40) läsnäolo työmaalla, kappelirivi (laaksotemppelin ennakko?), ilta/yö Ro-Shella. Tunnelmallinen "valtapäivä": nimetty historiallinen henkilö paikalla. Tarkka kalenterikuukausi [EI LÖYDETTY].
 
 **Vaihtoehtoinen hetki 4 (varalle, jos B halutaan): "Khufun hautajaisten valmistelu", Khufun vuosi 28/29, Shemu I (kevät–alkukesä).**
 Kuvaus: eteläiset venekuopat avoinna, laivan osat (1 224 palaa) asetellaan järjestykseen, kattolohkojen graffiti; pyramidi valmis ja kiiltävä. Käytettävissä vain, jos hautajaisten luonne (kuninkaan alus pitää olla) hyväksytään: laivan tarkoitus on [EPÄVARMA] (hautajaisalus vai elinaikainen kulkuneuvo) ja pyramidin valmiusaste Shemu I:nä [EI LÖYDETTY]. (https://aeraweb.org/khufus-30-year-jubilee/ ; https://en.wikipedia.org/wiki/Khufu_ship)
 
 ### Suositellut "kuvaushetki"-otsikot pelille (suomeksi)
 
-1. *Khufun 26. vuosi, tulvakauden alku: Ro-She Khufun pato avataan*
-2. *Khufun 26. vuosi: Tura-kalkkikivi saapuu Horisonttiin* (Merer-päiväkirjan 27. päivä)
-3. *Khufun 27. vuosi: visiiri Ankhhaf tarkastaa peitekiviä* (varalla)
+1. *Khufun 26./27. vuosi, tulvakauden alku: Ro-She Khufun pato avataan* **[KORJATTU 7.10.2026, ks. E1]**
+2. *Khufun 26./27. vuosi: Tura-kalkkikivi saapuu Horisonttiin* **[KORJATTU 7.10.2026, ks. E1]** (Merer-päiväkirjan 27. päivä)
+3. *Khufun 26./27. vuosi: ylimys Ankhhaf tarkastaa peitekiviä* **[KORJATTU 7.10.2026, ks. E1, E16, E40]** (varalla)
 
 Vuosilukuvaihtoehto otsikkoon: "n. 2560 eaa. (Shaw/Allen-välillä; ±40 v)"; älä käytä tarkkaa yhtä vuotta.
 
@@ -213,7 +236,7 @@ Vuosilukuvaihtoehto otsikkoon: "n. 2560 eaa. (Shaw/Allen-välillä; ±40 v)"; ä
 10. **17. laskennan graffiti** vapautuskammioissa (jos oikein, Khufu hallitsi vähintään 34 v): tulkinta kiistetty; tarvitsee Verner/Bárta- tai Hornung-lähteen (Verner 2006: https://giza.fas.harvard.edu/pubdocs/460/full/, vain metatiedot luettu).
 11. **Peitekivien kiilto ja väri:** "kiiltävä/heijastava" (NMS, WP) on yleisluonteinen kuvaus; mittaustietoa pinnan hionnasta ja mahdollisesta pigmentistä [EI LÖYDETTY].
 12. **Aikalaiskuvalähteet:** Khufun ajan Giza-mastabat ovat pääosin koristamattomia; arjen kohtauksia (veneet, työläiset, ruoka) tulee 5. dynastiasta (esim. Unasin johtotie, T17 s. 160) [rekonstruktio]; Met Museumin "Relief fragment with king Khufu's cattle" (https://www.metmuseum.org/art/collection/search/543890) on mahdollinen suora aikalaiskuva, sivu palautti 429 eikä sisältöä luettu [EI VARMISTETTU].
-13. **Tura-etäisyys ja reitti:** 10 vs. 15 km Gizasta; reitti kanavia pitkin tasangon juurelle (Tallet: vesitie "entirely by waterways", T17 liite I kohta 2); tarkka kartta [EI LÖYDETTY].
+13. **Tura-etäisyys ja reitti:** 10 vs. 15 km Gizasta (tarkistuksessa n. 13 km linnuntietä, jokimatka 13–17 km **[KORJATTU 7.10.2026, ks. E37]**); reitti kanavia pitkin tasangon juurelle (Tallet: vesitie "entirely by waterways", T17 liite I kohta 2); tarkka kartta [EI LÖYDETTY].
 
 ### Lähteet tähän tiedostoon (tiivistetty luettelo)
 
@@ -254,7 +277,7 @@ Lähdeslyhenteet: WP = Wikipedia (en), HGP = Harvard Giza Project (vain tutkimus
 
 **Materiaalit ja alkuperä** (kaksi lähdettä kullekin):
 - Ydinkivi: paikallinen kalkkikivi Gizan tasangolta (Mokattam-muodostuma), louhittu pyramidin etelä- ja lounaispuolen hevosenkengän muotoisesta louhoksesta ("Central Field"). Louhoksen suurin syvyys 30 m, puuttuvan kiven tilavuus ~2,76 milj. m³ vs. pyramidin ~2,59 milj. m³ (Lehner & Goodman). Louhos oli pääosin käytetty ennen Khafren pyramidia, koska Khafren lapset rakensivat hautansa sen länsiseiniin. https://aeraweb.org/great-pyramid-quarry/ ; https://en.wikipedia.org/wiki/Giza_Plateau
-- Pintakivi: hieno valkoinen Turan kalkkikivi (Tura–Masara), n. 10–15 km kaakkoon Gizasta Niilin yli veneillä. Lähteet: https://en.wikipedia.org/wiki/Stone_quarries_of_ancient_Egypt ; https://archaeology.org/issues/july-august-2022/features/egypt-wadi-el-jarf-port-papyri/ . (Etäisyys 10 km vs 15 km vaihtelee lähteittäin, [EPÄVARMA] tarkkuus.)
+- Pintakivi: hieno valkoinen Turan kalkkikivi (Tura–Masara), n. 13 km linnuntietä kaakkoon Gizasta Niilin yli veneillä **[KORJATTU 7.10.2026, ks. E37]**. Lähteet: https://en.wikipedia.org/wiki/Stone_quarries_of_ancient_Egypt ; https://archaeology.org/issues/july-august-2022/features/egypt-wadi-el-jarf-port-papyri/ . (Etäisyys 10 km vs 15 km vaihtelee lähteittäin, [EPÄVARMA] tarkkuus.)
 - Graniitti: Assuanista (>900 km etelään WP:n mukaan; toisissa lähteissä ~800 km) kuninkaankammioon, sarkofagiin ja ylikuormituskammioiden kattoon; yksittäiset lohkot jopa 25–80 t, uitettiin Niiliä pitkin. https://en.wikipedia.org/wiki/Great_Pyramid_of_Giza ; https://en.wikipedia.org/wiki/Stone_quarries_of_ancient_Egypt
 - Laasti: radiohiiliajoitus 2871–2604 eaa. (laastin hiili on "vanhaa puuta", joten ajoitus ei ole suora rakennusvuosi). WP Great Pyramid.
 
@@ -302,13 +325,13 @@ Lähdeslyhenteet: WP = Wikipedia (en), HGP = Harvard Giza Project (vain tutkimus
 | G1-c | pohja 46,25 m, korkeus 29,6 m | Henutsen; Uusi valtakunta -stele kutsuu "Khufun tyttäreksi", mutta todennäköisemmin vaimo [EPÄVARMA] | rakennettu kiireessä, keskeneräinen | https://en.wikipedia.org/wiki/Pyramid_G1-c |
 
 Kaikkien kolmen sivu ~45–49 m; rakentaminen todennäköisesti Khufun vuosina 15–17. https://en.wikipedia.org/wiki/Giza_East_Field
-Huomio: G1-c:n ei WP:n mukaan ole venekuoppaa; WP:n G1-c-artikkeli viittaa G1-a:n ja G1-b:n venekuoppiin, kun taas HGP laskee kaikki viisi kuoppaa Khufun kompleksiin [EPÄVARMA].
+Huomio: G1-c:n ei WP:n mukaan ole venekuoppaa; WP:n G1-c-artikkeli viittaa G1-a:n ja G1-b:n venekuoppiin, HGP:ssä venekuoppa on G I-a:lla ja G I-b:llä; Khufun omat viisi kuoppaa (No. 1–5) ovat eri kuoppia, joten ristiriita on näennäinen. **[KORJATTU 7.10.2026, ks. E28]**
 
-**Hetepheres I:** Khufun äiti, Sneferun puoliso, Huni-kuninkaan tytär. Hautakuilu **G 7000 X** löytyi 9.3.1925 (Reisner): 85 jalkaa (~26 m) syvä, ehjä kaluste (kullalla päällystetyt vuoteet, tuolit, kanoopparasia), alabasterisarkofagi **tyhjänä** 1927. Reisnerin teoria: ryöstäjät veivät muumion, Khufu määräsi salaisen uudelleenhautauksen; toinen teoria: muumio siirrettiin, kun G1-a valmistui [EPÄVARMA]. https://en.wikipedia.org/wiki/Hetepheres_I
+**Hetepheres I:** Khufun äiti, Sneferun puoliso, Huni-kuninkaan tytär. Hautakuilu **G 7000 X** löytyi 1925 Reisnerin retkikunnan kaivauksissa (kuilun kipsitäyte havaittiin 2.2.1925; Reisner itse oli Yhdysvalloissa): yli 27 m (27,4 m, noin 90 jalkaa) syvä **[KORJATTU 7.10.2026, ks. E29, E53]**, ehjä kaluste (kullalla päällystetyt vuoteet, tuolit, kanoopparasia), alabasterisarkofagi **tyhjänä** 1927. Reisnerin teoria: ryöstäjät veivät muumion, Khufu määräsi salaisen uudelleenhautauksen; toinen teoria: muumio siirrettiin, kun G1-a valmistui [EPÄVARMA]. https://en.wikipedia.org/wiki/Hetepheres_I
 
 **Laivakuopat (5 kpl):** kolme pyramidin itäsivulla (laivanmuotoiset; No. 3 ja 4 pyramiditemppelin eteläpuolella/pohjoispuolella, No. 5 pengertien vieressä) ja kaksi etelässä (suorakaiteen muotoiset, No. 1 ja 2; täynnä purettuja veneitä). Lepsius 1843, Petrie 1880–82, Reisner 1924, Hassan 1934–35 (kuopat 2–5). Hawass pitää niitä symbolisina. TIEDETÄÄN. https://giza.fas.harvard.edu/sites/1779/full/ ; https://en.wikipedia.org/wiki/Great_Pyramid_of_Giza
 - **Khufun laiva** löytyi touko 1954 (Kamal el-Mallakh) eteläisestä kuopasta; 1 224 osaa, **43,4 m pitkä**, 5,9 m leveä, 1,78 m syvä; libanoninsetri, nyöritetty halfa-ruohokimpuilla, tappiliitokset. Rekonstruoinnin johti Ahmed Youssef Moustafa; esillä Gizan Solar Boat Museumissa 1982 → siirretty Grand Egyptian Museumiin elokuussa 2021. TIEDETÄÄN. https://en.wikipedia.org/wiki/Khufu_ship ; https://madainproject.com/solar_boats_of_khufu . (Tehtävänannon "43,6 m" [EI LÖYDETTY]; lähteet antavat 43,4 m.)
-- **Toinen laiva:** toisessa kuopassa; osat nostettu japanilaisen tutkimusryhmän (Waseda) avulla, rekonstruktio kesken [EPÄVARMA tila]. Peitelohkoissa Djedefren kartussi eli Djedefre hautasi Khufun. https://english.ahram.org.eg/News/74929.aspx ; https://www.egyptpro.sci.waseda.ac.jp/e-khufu.html ; WP Great Pyramid.
+- **Toinen laiva:** toisessa kuopassa; osat nostettu japanilaisen tutkimusryhmän (Waseda) avulla, kokoaminen alkoi yleisön edessä Grand Egyptian Museumissa 24.12.2025 (n. 42 m, n. 1 650 osaa, arvio n. 4 vuotta) **[KORJATTU 7.10.2026, ks. E31]**. Peitelohkoissa Djedefren kartussi eli Djedefre hautasi Khufun. https://english.ahram.org.eg/News/74929.aspx ; https://www.egyptpro.sci.waseda.ac.jp/e-khufu.html ; WP Great Pyramid.
 - Ristiriita: WP:n Khufu ship -artikkeli sanoo laivan haudatun "n. 2500 eaa."; muu kronologia (Khufun kuolema ~2566) antaa aikaisemman ajan [EPÄVARMA].
 
 ---
@@ -318,7 +341,7 @@ Huomio: G1-c:n ei WP:n mukaan ole venekuoppaa; WP:n G1-c-artikkeli viittaa G1-a:
 | Kenttä | Sisältö | Ajoitus | Lähteet |
 |---|---|---|---|
 | **Itäkenttä (East Field, G 7000)** | pyramidin itäpuolella, pengertien eteläpuolella: kuningasperheen haudat. Alkuvaiheessa kaksoismastabaa 3 rivissä × 4: Kawab, Khufukhaf I, Hordjedef. Rakentaminen Khufun vuosina n. 17–24; nukleus 8 kaksoismastabaa. Käyttö jatkui 5.–6. dynastiaan | 4. dyn. | https://en.wikipedia.org/wiki/Giza_East_Field ; https://en.wikipedia.org/wiki/Giza_Necropolis |
-| **Länsikenttä (West Field)** | pyramidin länsipuolella; ensimmäiset rakennukset Khufun hallituskauden alussa. Hemiunun mastaba **G 4000** (suurin; kivissä Khufun vuosimerkintöjä; "yhtenäisen suunnitelman ulkopuolella"). Myös Khufun poikien haudat G 1200, G 2000, G 2100 | alku Khufu | https://giza.digitalhumanities.fas.harvard.edu/photos/52734/full/ (Western Cemetery) ; https://giza.fas.harvard.edu/sites/999/full/ ; https://en.wikipedia.org/wiki/Hemiunu |
+| **Länsikenttä (West Field)** | pyramidin länsipuolella; ensimmäiset rakennukset Khufun hallituskauden alussa. Hemiunun mastaba **G 4000** (Länsikentän toiseksi suurin, n. 52 m pitkä; suurin on G 2000 **[KORJATTU 7.10.2026, ks. E25]**; kivissä Khufun vuosimerkintöjä; "yhtenäisen suunnitelman ulkopuolella"). Myös Khufun poikien haudat G 1200, G 2000, G 2100 | alku Khufu | https://giza.digitalhumanities.fas.harvard.edu/photos/52734/full/ (Western Cemetery) ; https://giza.fas.harvard.edu/sites/999/full/ ; https://en.wikipedia.org/wiki/Hemiunu |
 
 - Mastabat on rakennettu rivistöinä (katuja ja kujia) suunnitellun hautakaupungin tapaan. TIEDETÄÄN. WP Giza Necropolis.
 - Huomio: G 2000 on Länsikentällä (ei Itäkentällä), korjaus tehtävänantoon.
@@ -369,11 +392,11 @@ Huomio: G1-c:n ei WP:n mukaan ole venekuoppaa; WP:n G1-c-artikkeli viittaa G1-a:
 
 | Paikka | Rooli Khufun aikana | Mitat/tiedot | Tila | Lähteet |
 |---|---|---|---|---|
-| **Giza-satama / Ro-she Khufu** | Khufun satama + kanavaverkko, joka ohjasi veneet pyramidin työmaalle. Merer: Ankh-haf (Khufun velipuoli, visiiri) "Ro-she Khufun johtaja" | sijaitsi Niilin länsihaarassa (Khufu-/Libeini-haara) Gizan itäpuolella; Lehner: Giza oli keskussatama kolme sukupolvea (Khufu, Khafre, Menkaure) | TIEDETÄÄN (kirjoitus) / REKONSTRUOITU (sijainti) | https://en.wikipedia.org/wiki/Diary_of_Merer ; haku (Lehner) ; https://www.aeraweb.org/lost-city/ |
+| **Giza-satama / Ro-she Khufu** | Khufun satama + kanavaverkko, joka ohjasi veneet pyramidin työmaalle. Merer: ylimys (*iry-pat*) Ankh-haf (todennäköisesti Khufun velipuoli) "Ro-she Khufun johtaja" **[KORJATTU 7.10.2026, ks. E40]** | sijaitsi Niilin länsihaarassa (Khufu-/Libeini-haara) Gizan itäpuolella; Lehner: Giza oli keskussatama kolme sukupolvea (Khufu, Khafre, Menkaure) | TIEDETÄÄN (kirjoitus) / REKONSTRUOITU (sijainti) | https://en.wikipedia.org/wiki/Diary_of_Merer ; haku (Lehner) ; https://www.aeraweb.org/lost-city/ |
 | **Wadi al-Jarf** (Punaisenmeren satama) | Khufun aikainen, ehkä Sneferun ajan perusta; papyrukset 2013 (Tallet & Marouard) | 119 km Suezista etelään; ~150 m mollo (WP) / L-muotoinen laituri, 650 jalan sivut, 12 eekkerin suojaisa alue (Archaeology); 25–31 louhittua galleriaa 16–34 m; 99 ankkuria varastossa + 25 vedessä; 60 × 30 m rakennus (13 huonetta); käytössä n. 50–70 v | TIEDETÄÄN | https://en.wikipedia.org/wiki/Wadi_al-Jarf ; https://archaeology.org/issues/july-august-2022/features/egypt-wadi-el-jarf-port-papyri/ |
 | **Merer-päiväkirja** | vanhin löydetty papyrus; tarkastaja Merer, päiväkirja yhdestä vuodesta Khufun hallituskauden lopulta; Tura–Giza-kuljetukset | **vuosi 26 vs 27 [EPÄVARMA]**; ~30 lohkoa (2–3 t) kerrallaan, ~200 lohkoa/kk; miehistö ~40 (viittaus ~200 miestä phylessä [EPÄVARMA]); matka Giza–Tura 2–3 kertaa/10 pv viikko, käytännössä tulva-aikaan | TIEDETÄÄN | https://en.wikipedia.org/wiki/Diary_of_Merer ; https://archaeology.org/issues/july-august-2022/features/egypt-wadi-el-jarf-port-papyri/ ; https://en.wikipedia.org/wiki/Khufu |
-| **Ain Sukhna** | Punaisenmeren satama Siinain kuparille/turkoosille | 10 varastogalleriaa 15–20 m hiekkakivessä; Vanha valtakunta + Keski valtakunta; huippu 5. ja 12. dynastiassa; Archaeology.org: käyttö alkoi Khafren aikana; **Khufun aikainen käyttö [EPÄVARMA]** | EPÄVARMA | https://www.ifao.egnet.net/bietud/ayn-soukhna/ ; https://archaeology.org/issues/july-august-2022/features/egypt-wadi-el-jarf-port-papyri/ ; https://en.wikipedia.org/wiki/Ain_Sukhna |
-| **Tura** (Tura-Masara) | valkoisen pintakiven louhos; Merer vuorotteli Pohjois- ja Etelä-Turan välillä | ~10–15 km Giza-lähtöpisteestä (lähteet eroavat) | TIEDETÄÄN | https://en.wikipedia.org/wiki/Stone_quarries_of_ancient_Egypt ; https://archaeology.org/issues/july-august-2022/features/egypt-wadi-el-jarf-port-papyri/ |
+| **Ain Sukhna** | Punaisenmeren satama Siinain kuparille/turkoosille | 10 varastogalleriaa 15–20 m hiekkakivessä; Vanha valtakunta + Keski valtakunta; huippu 5. ja 12. dynastiassa; IFAO ja Archaeology.org: Vanhan valtakunnan käyttö alkoi Khafren aikana; **ei käytössä Khufun aikana** **[KORJATTU 7.10.2026, ks. E36]** | TIEDETÄÄN (IFAO) | https://www.ifao.egnet.net/bietud/ayn-soukhna/ ; https://archaeology.org/issues/july-august-2022/features/egypt-wadi-el-jarf-port-papyri/ ; https://en.wikipedia.org/wiki/Ain_Sukhna |
+| **Tura** (Tura-Masara) | valkoisen pintakiven louhos; Merer vuorotteli Pohjois- ja Etelä-Turan välillä | ~13 km linnuntietä Gizasta kaakkoon; jokimatka 13–17 km **[KORJATTU 7.10.2026, ks. E13, E37]** | TIEDETÄÄN | https://en.wikipedia.org/wiki/Stone_quarries_of_ancient_Egypt ; https://archaeology.org/issues/july-august-2022/features/egypt-wadi-el-jarf-port-papyri/ |
 | **Assuan** | graniitti: kammio, sarkofagi, kattolohkot | >900 km (WP) / ~800 km; lohkot 25–80 t | TIEDETÄÄN | https://en.wikipedia.org/wiki/Stone_quarries_of_ancient_Egypt ; WP Great Pyramid |
 | **Hatnub** | alabasteri (travertiini) Itä-autiomaassa; ramppi Khufun aikaan | ~65 km kaakkoon Minyasta; ramppi +kaksi porrasta, kaltevuus ≥20 %; yli 100 kirjoitusta | TIEDETÄÄN | https://en.wikipedia.org/wiki/Hatnub ; https://www.sci.news/archaeology/ramp-system-alabaster-quarry-egypt-06582.html |
 | **Gizan louhos (Khufun louhos / "Central Field")** | pyramidin ydinkivi | hevosenkenkä, sivut linjassa pyramidin sivujen kanssa; max syvyys 30 m; 2,76 milj. m³; käytetty pääosin ennen Khafren pyramidia (Khafren lasten haudat louhoksen länsiseinissä) | REKONSTRUOITU (laskelma) | https://aeraweb.org/great-pyramid-quarry/ ; WP Great Pyramid (2017 Khufun aikainen hylätty louhos, työkalut) |
@@ -427,7 +450,7 @@ Huomio: G1-c:n ei WP:n mukaan ole venekuoppaa; WP:n G1-c-artikkeli viittaa G1-a:
 6. **Työläisten hautausmaan ajoitus** (Khafre vai Khufu): tarkista Hawass 1990–2010 -julkaisut.
 7. **Kuningattaren kammion tarkat mitat ja venekuoppien lukumäärä G1-a/G1-b:llä:** WP-artikkelit ristiriidassa HGP:n kanssa.
 8. **Huippu (pyramidion):** kultaus mahdollinen mutta todistamaton; älä esitä varmana.
-9. **Ain Sukhna Khufun aikana:** WP-hakua ei tuottanut Vanha valtakunta -tietoa; Archaeology.org ajoittaa alun Khafreen; IFAO sanoo "Vanha valtakunta" yleisesti [EPÄVARMA].
+9. **Ain Sukhna Khufun aikana:** WP-hakua ei tuottanut Vanha valtakunta -tietoa; Archaeology.org ajoittaa alun Khafreen; IFAO sanoo "Vanha valtakunta" yleisesti [EPÄVARMA]. Ratkaistu: IFAO:n mukaan käyttö alkaa Khafresta, Khufun aikana ei käytössä **[KORJATTU 7.10.2026, ks. E36]**.
 10. **Ahramat-haara:** uusi tutkimus (2024), kiistanalainen "uutuuden" osalta; Lehner & Hawass pitävät länsihaaraa vanhana tietona. Satama-altaan tarkka sijainti Khufun aikaan REKONSTRUOITU.
 11. **Työvoima:** 10 000 / 13 200 / 40 000 / 20 000 (kaupungin asukkaat) [EPÄVARMA]; ei yhtä numeroa.
 12. **Puuttui tästä haussa:** Wikidata-tunnisteet, Met Museum (HTTP 429), British Museum, Lehner "The Complete Pyramids" -sivunumerot, Verner [EI LÖYDETTY / ei haettu]. Tarkista ennen julkaisua toiselta lähteeltä: kuningatarpyramidin G1-a mitat, G 4000:n mitat, laivan 43,4 vs 43,6 m.
@@ -453,21 +476,21 @@ Lyhenteet lähteissä (täydet URLit lähdeluettelossa lopussa): [W-Khufu], [W-H
 |---|---|---|---|---|
 | **Khufu** (Kheops, Cheops, Sûphis; Khnum-Khufu "Khnum suojelee minua") | Faarao, 4. dynastian 2. kuningas, Suuren pyramidin rakennuttaja | hallitus n. 2589-2566 eaa. (Turin 23 v.; Herodotos 50; Manetho 63) | Ainoa säilynyt täysi 3D-kuva: 7,5 cm norsunluupatsas (Kairo JE 36143). Horus-nimi Medjedu. Äiti Hetepheres I, isä todennäköisesti Sneferu (isyys keskustelun alla) | [W-Khufu], [W-Patsas], [Commons-Khufu] |
 | **Hemiunu** (Hemon; "Hem-iunu") | Visiiri, "kuninkaan kaikkien rakennustöiden valvoja", todennäköinen Suuren pyramidin suunnittelija; Khufun veljenpoika | n. 2570 eaa. | Isä Nefermaat, äiti Itet, isoisä Sneferu. Hauta G 4000 (länsikenttä). Hildesheimin realistinen istuva patsas (155,5 cm, ylipainoinen hahmo). Suunnittelija-rooli ei suoraan dokumentoitu | [W-Hemiunu], [Hildesheim/Commons], [Giza-Hemiunu] |
-| **Ankhhaf** (Ankhaf, Ankhhaef) | Khufun velipuoli (Sneferun poika), visiiri, "kuninkaan kaikkien töiden päällikkö"; Merer-papyrusten mukaan Ro-She Khufun (Gizan satama-alue) johtaja | vuosi 26/27 Khufun hallituksesta (papyrus); haudan rakennus Khufu-Djedefre-Khafre | Hauta G 7510 (itäkenttä). Kalkkikivirintakuva MFA Boston 27.442. MFA: palveli Khafrea visiirinä | [W-Ankhhaf], [MFA-Ankhhaf], [W-Merer], [Pearse-Tallet] |
+| **Ankhhaf** (Ankhaf, Ankhhaef) | todennäköisesti Khufun velipuoli (Sneferun poika); haudassa visiiri ja "kuninkaan kaikkien töiden päällikkö" (todennäköisesti Khafren aikana); Merer-papyruksissa ylimys (iry-pat) ja Ro-She Khufun (Gizan satama-alue) päällikkö **[KORJATTU 7.10.2026, ks. E40]** | vuosi 26/27 Khufun hallituksesta (papyrus); haudan rakennus Khufu-Djedefre-Khafre | Hauta G 7510 (itäkenttä). Kalkkikivirintakuva MFA Boston 27.442. MFA: palveli Khafrea visiirinä | [W-Ankhhaf], [MFA-Ankhhaf], [W-Merer], [Pearse-Tallet] |
 | **Merer** (Inspector Merer; titteli *sḥḏ* "tarkastaja", ei *sdjwty*) | Keskitason virkamies, päiväkirjan pitäjä; veneryhmän päällikkö, joka kuljetti Tura-kalkkikiveä Gizaan | Khufun vuosi 26/27 | Joukkue noin 40 miestä [EPÄVARMA: yksi lähde sanoo n. 200]. Löytö Wadi al-Jarf 2013 (Tallet, Marouard). Papyrus "Jarf A ja B" | [W-Merer], [W-WadiJarf], [Pearse-Tallet], [LRB-Cioffi] |
 | **Hetepheres I** | Khufun äiti, "kuninkaan äiti"; Sneferun puoliso (todennäköisesti), Hunin tytär | n. 2600 eaa. | Haudan G 7000X löytö 1925 (Reisner): kultakoristeinen huonekalusto, tyhjä alabasterisarkofagi; alkuperäiset Kairossa, kopiot MFA Bostonissa | [W-Hetepheres I], [W-Tomb-HetI], [Commons-Heteph] |
 | **Meritites I** | Khufun vaimo, (puoli)sisar, Sneferun tytär | Khufun hallitus | Kawabin äiti (varma); Djedefren, Khafren ja Hetepheres II:n äitiys [EPÄVARMA]. Pyramidi G1-b | [W-Meritites I] |
-| **Henutsen** | Khufun vaimo (toinen tai kolmas) | n. 2600 eaa. | Vain titteli "kuninkaan vaimo". Pojat Khufukhaf I ja Minkhaf. Pyramidi G1-c (kiireellä tehty). Inventaariostele (26. dyn.) pitää häntä prinsessana, mutta tuo lähde on tulkittu väärennökseksi [EPÄVARMA] | [W-Henutsen] |
+| **Henutsen** | Khufun vaimo (toinen tai kolmas) | n. 2600 eaa. | Vain titteli "kuninkaan vaimo". Pojat Khufukhaf I ja Minkhaf. Pyramidi G1-c (kiireellä tehty). Inventaariostele (26. dyn.) pitää häntä prinsessana, mutta stele on 26. dynastian papiston teksti, joka esittää olevansa Khufun ajalta, ei aikalaislähde [EPÄVARMA] **[KORJATTU 7.10.2026, ks. E45]** | [W-Henutsen] |
 | **Kawab** | Kruununprinssi, Khufun vanhin poika (Meritites I:n poika); visiiri | n. 2600-2570 eaa.; kuoli ennen Khufua | Vaimo Hetepheres II (sisar); hauta G 7110-7120, punagraniittisarkofagi. Djedefre peri vallan | [W-Kawab], [W-Hetepheres II] |
-| **Djedefre** (Radjedef) | Khufun poika ja seuraaja | hallitus noin 7-9 v. [EPÄVARMA] | Pyramidi Abu Rawashissa; hänen kartussinsa on Khufun venekuoppien sulkukivissä, mikä viittaa hänen rooliinsa Khufun hautajaisissa | [W-Djedefre], [W-Pyramidi] |
+| **Djedefre** (Radjedef) | Khufun poika ja seuraaja | hallitus Turinin luettelon mukaan 8 v., mutta "11. karjanlaskennan vuosi" viittaa vähintään 11 vuoteen [EPÄVARMA] **[KORJATTU 7.10.2026, ks. E46]** | Pyramidi Abu Rawashissa; hänen kartussinsa on Khufun venekuoppien sulkukivissä, mikä viittaa hänen rooliinsa Khufun hautajaisissa | [W-Djedefre], [W-Pyramidi] |
 | **Khafre** (Kefren) | Khufun poika, kuninkaan 4. dyn. neljäs hallitsija | n. 2558-2532 eaa. | Äiti Meritites I tai Henutsen [EPÄVARMA]. Gizan toinen pyramidi, ehkä Sfinksi | [W-Khafre] |
 | **Djedefhor** (Hordjedef) | Khufun poika, visiiri, ylilukija-pappi, "työnvalvoja" | Khufu-Menkaure | Westcar-papyruksessa esittelee taikuri Djedin kuninkaalle; "Djedefhorin opetukset" -fragmentit. Hauta G 7210-7220 | [W-Djedefhor], [W-Westcar] |
 | **Hetepheres II** | Khufun tytär, Kawabin ja sitten Djedefren puoliso | s. n. 2590, k. n. 2500 eaa. | Äiti Meritites I? [EPÄVARMA]. Tytär Meresankh III | [W-Hetepheres II] |
 | **Meresankh III** | Kawabin ja Hetepheres II:n tytär, Khafren puoliso, Khufun lapsenlapsi | n. 2578-2520 eaa. [EPÄVARMA] | Löytö 1927 (Reisner): hauta G 7530-40; pariveistos Hetepheres II + Meresankh III MFA 30.1456. Khufun aikana lapsi | [W-Meresankh III], [Commons-pari] |
 | **Nefertiabet** | Prinsessa (todennäköisesti Khufun sisar, Sneferun tytär) | n. 2580 eaa. | Louvren stela E 15591: istuu ruokapöydän ääressä. Hauta G 1225. "Khufun tytär" -tulkinta mahdollinen [EPÄVARMA] | [W-Nefertiabet], [Commons-Nefertiabet] |
 | **Wepemnofret** | Khufun poika (äiti tuntematon) | k. n. 2589-2580 eaa. | Hauta G 1201, Cemetery 1200:n vanhin | [W-Wepemnofret] |
-| **Nefermaat I** | Visiiri, Sneferun vanhin poika, Khufun velipuoli, Hemiunun isä | n. 2570 eaa. | Mastaba 16 Meidumissa; "Meidumin hanhet" | [W-Nefermaat] |
-| **Kaninisut** (Ka-ni-nisut) | Korkea virkamies länsikentällä (ei Khufun sukulainen) | Khufu tai 5. dynastian alku [EPÄVARMA] | Hauta G 2155; kulttikammio Wienin Kunsthistorisessa (inv. 8006) | [W-Kaninisut] |
+| **Nefermaat I** | Visiiri, Sneferun vanhin poika, Khufun velipuoli, Hemiunun isä | Sneferun aika (kuoli todennäköisesti ennen Khufun valtaa) **[KORJATTU 7.10.2026, ks. E43]** | Mastaba 16 Meidumissa; "Meidumin hanhet" | [W-Nefermaat] |
+| **Kaninisut** (Ka-ni-nisut) | Korkea virkamies länsikentällä (ei Khufun sukulainen) | 4. dynastian loppu tai 5. dynastian alku (ei Khufun aikalainen) [EPÄVARMA] **[KORJATTU 7.10.2026, ks. E51]** | Hauta G 2155; kulttikammio Wienin Kunsthistorisessa (inv. 8006) | [W-Kaninisut] |
 | **Petety** | Käsityöläinen (artisaani) työläisten yläkalmistossa | 4. dynastia (Khufu-Menkaure) | Hawassin kaivaukset 1990-; hauta | [Ahram/Hawass] |
 | **Nefertheith** | "Liinavaatteiden valvoja", "kuninkaallisen puhdistustalon valvoja" | 4. dynastia | Koristeltu hauta työläiskalmistossa | [EgyMonuments] |
 | **Khufun kultin papit** (hem-ka, hem-netjer, wab) | Khufun kuolemanjälkeinen palvonta | Khufusta Ptolemaioksiin | Ei nimettyjä yksilöitä tässä kierroksessa [EI LÖYDETTY]. "67 pappia + 6 virkamiestä" heikosta lähteestä [EPÄVARMA] | [Hawass-diss], [Madain] |
@@ -478,13 +501,13 @@ Lyhenteet lähteissä (täydet URLit lähdeluettelossa lopussa): [W-Khufu], [W-H
 
 **Khufu.** Sama nimi on Khnum-Khufu, joka tarkoittaa suunnilleen "Khnum suojelee minua". Ulkonäöstä ei ole luotettavaa tietoa: ainoa pieni patsas (7,5 cm, norsunluuta; löytö Abydos 1903, Petrie) esittää istuvan kuninkaan punainen kruunu päässä ja ruoska olalla. Zahi Hawass on esittänyt, että patsas olisi 26. dynastian aikainen jäljitelmä, joten patsaan ajoitus on [EPÄVARMA]. Persoonasta antavat ristiriitaisen kuvan Herodotos (tyranni, jonka väitettiin sulkeneen temppelit ja pakottaneen 100 000 miestä, kirjoitettu n. 2000 v. myöhemmin) ja Westcar-papyrus (13. dynastia, n. 1650 eaa.; Khufu uteliaana ja välillä armottomana tai armollisena, tulkinnat vaihtelevat) [EPÄVARMA, molemmat myöhäisiä]. Dioraamaan: kuningas on kaukainen hahmo; ei kasvoja, vain kruunu ja Suuren pyramidin hohtava kalkkikivipinta. Kuolinikä ja muumio [EI LÖYDETTY].
 
-**Hemiunu.** Hildesheimin patsas (löytö Junker 1912, serdab G 4000) näyttää pulleaa, itsevarmaa vanhempaa miestä: muotokuva korostaa korkeaa asemaa, ei laihaa ihannekuvaa. Tittelit: vesiiri, "viiden suurin Thot-talossa", "kuninkaan rakennustöiden valvoja". Ikä [EI LÖYDETTY]. Dioraamaan: hahmo, joka seisoo pyramidin juurella piirustusten ja työnjohtajien kanssa; ikä ei saa olla tarkka luku.
+**Hemiunu.** Hildesheimin patsas (löytö Junker 1912, serdab G 4000) näyttää pulleaa, itsevarmaa vanhempaa miestä: muotokuva korostaa korkeaa asemaa, ei laihaa ihannekuvaa. Tittelit: visiiri, "viiden suurin Thot-talossa", "kuninkaan rakennustöiden valvoja". Ikä [EI LÖYDETTY]. Dioraamaan: hahmo, joka seisoo pyramidin juurella piirustusten ja työnjohtajien kanssa; ikä ei saa olla tarkka luku.
 
 **Ankhhaf.** Rintakuva (50,6 cm, maalattu kalkkikivi, MFA 27.442) on pidetty vanhan valtakunnan parhaana muotokuvana: yksilöllinen, ei ihannoitu kasvo. Merer-papyrus asettaa hänet Ro-She Khufun johtoon vuonna 26/27: hän valvoi tuolloin satama-aluetta ja viimeisiä rakennusvaiheita. Dioraamaan: satama-alueen päällikkö, joka katselee kivilastien tuloa.
 
 **Merer.** Ei ruhtinas vaan keskitason työnjohtaja ("tarkastaja"). Hänen lokikirjansa (vanhimmat tekstipapyrukset) kertoo, että hänen veneryhmänsä kuljetti valkoista Tura-kalkkikiveä Gizaan; kuukaudessa noin 200 kiveä (2-3 tonnia kukin), kaksi tai kolme edestakaista matkaa kymmenen päivän viikossa. Käytetyt paikat: Tura, She/Ro-She Khufu, Akhet-Khufu. Dioraamaan: paras "kuljettaja"-taustahahmo, mutta pelaajan oppipoika ei ole Merer.
 
-**Hetepheres I ja kuninkaan perhe.** Äidin haudan löytö 1925 (Reisner) antoi harvinaisen kuvan huonekalusta: kultapäällysteinen sänky, nojatuolit, kantotuoli ja kanooppilaatikko. Sarkofagi oli tyhjä [muumion kohtalo tuntematon]. Khufun perhe oli iso: ainakin yhdeksän poikaa ja tytär, vaimoina Meritites I ja Henutsen. Suhteet (kuka oli kenenkin äiti) ovat usein [EPÄVARMA].
+**Hetepheres I ja kuninkaan perhe.** Äidin haudan löytö 1925 (Reisnerin retkikunta) **[KORJATTU 7.10.2026, ks. E53]** antoi harvinaisen kuvan huonekalusta: kultapäällysteinen sänky, nojatuolit, kantotuoli ja kanooppilaatikko. Sarkofagi oli tyhjä [muumion kohtalo tuntematon]. Khufun perhe oli iso: ainakin yhdeksän poikaa ja tytär, vaimoina Meritites I ja Henutsen. Suhteet (kuka oli kenenkin äiti) ovat usein [EPÄVARMA].
 
 **Ylimykset.** Itäkenttä oli lähisukulaisten (Kawab, Hetepheres II, Meresankh III, Djedefhor), länsikenttä virkamiesten (Hemiunu, Kaninisut) hautausalue. Länsikentän mastaboissa oli kulttikammioita, joiden reliefit kuvaavat uhrilahjoja, perhettä ja arkea.
 
@@ -520,14 +543,14 @@ Ei mediaa: Harvard Giza Project / AERA -lähteitä käytetty vain tietolähtein�
 1. **Kronologia.** Khufun hallitus on yleensä 2589-2566 eaa. (23 vuotta Turinin luettelossa), mutta Merer-papyrusten "vuosi 26/27" ja Commonsin tiedoston nimen "2551-2528 BCE" viittaavat joko pidempään hallitukseen tai toiseen kronologiaan. Wadi al-Jarf -sivu antaa papyrusten ajaksi n. 2560-2550 eaa. Dioraamaan valittava yksi vuosi (esim. "Khufun 27. vuosi") ja pidettävä se johdonmukaisena. Selvitetään Fablelta.
 2. **Merer-joukkueen koko**: 40 (Wikipedia, LRB) vs. 200 (Pearse, joka siteeraa Tallet'ia). Käytä "noin 40" ja mainitse epävarmuus tai valitse vähemmän tarkka muoto.
 3. **Merer-titteli**: tehtävänannossa *sdjwty*; lähteissä titteli on *sḥḏ* "tarkastaja" (sehedj). Translitterointia ei ole tarkistettu primaarilähteestä.
-4. **Ankhhafin tomba**: Commonsin kuvaus sanoo "G 7310", MFA ja Wikipedia "G 7510". Käytä G 7510. Rooli: MFA sanoo palvelleen Khafrea, papyrus asettaa hänet Khufun vuoteen 26/27.
+4. **Ankhhafin hauta**: Commonsin kuvaus sanoo "G 7310", MFA ja Wikipedia "G 7510". Käytä G 7510. Rooli: MFA sanoo palvelleen Khafrea, papyrus asettaa hänet Khufun vuoteen 26/27.
 5. **Khufun patsaan aitous**: Hawassin 26. dynastia -väite vastaan vallitseva 4. dynastia. Kuvateksti: "pienoispatsas, jonka ajoitus on kiistanalainen".
 6. **Sukulaisuudet**: Khufun äiti (Hetepheres I) ja isä (Sneferu) mahdollisesti; Khafren äiti (Meritites I vai Henutsen); Henutsenin asema; Nefertiabet sisar vai tytär; kaikki [EPÄVARMA].
 7. **Hemiunun ikä, Khufun kuolinikä, papistojen nimet, yksittäisten leipurien/kalastajien nimet**: [EI LÖYDETTY]. Primaarilähteet: Hawass 1987 -väitöskirja, Reisnerin *Giza Necropolis*, Tallet 2017.
 8. **Idu**: hakutuloksessa mainittiin "Idu, Suuren pyramidin rakennuksen valvoja", heikko lähde [EPÄVARMA]; ei käytetä ennen tarkistusta. Nwi ja Behnui-Ka (Ahram) ovat Khafren tai myöhempiä, eivät Khufun aikaisia.
 9. **Heit el-Ghurab** on pääosin Khafren ja Menkauren ajan; dioraamaan Khufun aikaan leipurit ja panimot ovat perusteltu yleistys, mutta ei suora todiste Khufun ajalta.
 10. **Työporukkajako** (2 x 2000, 1000, 200, 20) on Wikipedian esittämä malli; alkuperä (Reisner/Lehner) ja varmuus tarkistamatta.
-11. **Hetepheres I:n löytöpäivä**: 8. vai 9.3.1925 (kaksi Wikipedia-artikkelia eri päivät); käytä "maaliskuussa 1925".
+11. **Hetepheres I:n löytöpäivä**: lähteissä 2.2., 8.3. ja 9.3.1925; käytä "1925, Reisnerin retkikunta". **[KORJATTU 7.10.2026, ks. E53]**
 12. **Dioraaman kuvitteelliset hahmot** (oppipoika, kuljettaja) merkittävä pelissä kuvitteellisiksi.
 
 ### Lähteet (URLit)
@@ -632,7 +655,7 @@ Tutkimusmuistio: Gizan tasanko Khufun aikana (4. dynastia, n. 2560 eaa.). Kaikki
 - **Kymmenpäiväinen viikko:** Merer-lokit ovat kuukausittaisia, joissa on kuukauden ja vuodenajan otsikko ja päivärivit. Työ- ja lepojaksot noudattivat kymmenpäiväistä rytmiä: Merer-ryhmä teki "kahdesta kolmeen" edestakaista matkaa noin 10 päivän välein, noin 30 lohkoa (2-3 tonnia) ja noin 200 lohkoa kuussa. Lähteet (2): https://en.wikipedia.org/wiki/Diary_of_Merer ; https://arxiv.org/pdf/2411.08061 (aikakäsitys, Merer; tämän PDF:n tarkkaa sisältöä ei ole luettu rivi riviltä [EPÄVARMA]).
 - **Ryhmien nimet:** Pyramidin keventokammioissa (Vyse 1837) on punamaalattuja ryhmämerkkejä Khufun nimellä, kuten "The gang, Companions/Friends of Khufu" ("Khufun ystävät/kumppanit", suomennos vaihtelee) ja toinen: "The white crown of Khnum-Khufu is powerful". Lähteet: https://en.wikipedia.org/wiki/Howard_Vyse ("gang, Companions of Khufu") ; https://en.wikipedia.org/wiki/Great_Pyramid_of_Giza (kirjoitusten tyyppi ja yhteys Wadi al-Jarfin ja Hatnubin merkkeihin) ; https://www.sciencefocus.com/science/were-the-egyptian-pyramids-built-by-slaves ("Friends of Khufu Gang"). Autenttisuutta epäilevät vain marginaalinen väite (Creighton jne.); valtavirta pitää merkkejä aitoina (Wikipedia, Vyse). "Drunkards of Menkaure" kuuluu Menkauren pyramidiin eikä Khufun aikaan.
 - **Merer-ryhmän oma nimi:** "Khufun uraeus on sen keula" -ryhmä (Archaeology.org: "Escort Team of 'The Uraeus of Khufu Is Its Prow'"). Merer oli tarkastaja (*sehedj*), keskitason virkamies. Lähteet: https://archaeology.org/issues/july-august-2022/features/egypt-wadi-el-jarf-port-papyri/ ; https://en.wikipedia.org/wiki/Diary_of_Merer .
-- **Johtajat:** Ankhhaf, Khufun velipuoli ja visiiri, oli koko kuninkaallisen rakennustyön johtaja (Tallet 2017: Ro-She Khufu -sataman johtaja); Wikipedia sanoo samaa. Archaeology.org-tiivistelmä väittää, ettei Ankhhafia mainita; se on virheellinen, koska Tallet 2017 mainitsee hänet (Section B, "the noble Ankhhaf, director of Ro-She Khufu"). Lähteet (2): Tallet 2017 ; https://en.wikipedia.org/wiki/Diary_of_Merer . Hemiunu on "oletettu arkkitehti" (https://en.wikipedia.org/wiki/Great_Pyramid_of_Giza) [EPÄVARMA].
+- **Johtajat:** Ankhhaf, todennäköisesti Khufun velipuoli, oli Ro-She Khufun johtaja ja papyruksissa ylimys (*iry-pat*); visiirin arvo tunnetaan vasta hänen haudastaan, ja "koko rakennustyön johtaja" on popularisoinnin tulkinta **[KORJATTU 7.10.2026, ks. E40]**. Archaeology.org-tiivistelmä väittää, ettei Ankhhafia mainita; se on virheellinen, koska Tallet 2017 mainitsee hänet (Section B, "the noble Ankhhaf, director of Ro-She Khufu"). Lähteet (2): Tallet 2017 ; https://en.wikipedia.org/wiki/Diary_of_Merer . Hemiunu on "oletettu arkkitehti" (https://en.wikipedia.org/wiki/Great_Pyramid_of_Giza) [EPÄVARMA].
 - **Työvoiman koko:** Arviot 10 000 (Redding, NBC, Michigan) ja 20 000 (Hawass; osa pysyviä, osa kausityöläisiä) ja 13 200 keskimäärin / 40 000 huippu (Smith 1999, Wikipedia). Ei varmaa lukua [EPÄVARMA].
   Lähteet: https://www.nbcnews.com/news/all/how-did-they-feed-10-000-pyramid-builders-flna6C9580357 ; https://en.wikipedia.org/wiki/Great_Pyramid_of_Giza
 
@@ -673,7 +696,7 @@ Tutkimusmuistio: Gizan tasanko Khufun aikana (4. dynastia, n. 2560 eaa.). Kaikki
 
 #### Tapaturmat ja terveydenhuolto
 
-- **Luurankolöydöt:** Gizan työläishaudoista (lähinnä Khafren-Menkauren ajalta) on löytynyt luunmurtumia (suurin osa parantunut asianmukaisesti), nikamien painumia ja yksi käsivarren amputaatio. Archaeology Magazine: aikuiset jakautuvat tasan miehiin ja naisiin, lapsia 23,6 %, perheet haudattu yhteen (DNA), työläiset kuolivat keskimäärin noin 10 vuotta aikaisemmin kuin aateliset; kuntoa voidaan arvioida "hyvin ruokituksi mutta kuluneeksi". Lähteet (2): https://archive.archaeology.org/online/reviews/secrets/index2.html ; https://egymonuments.gov.eg/en/monuments/workers-town-and-cemetery/ (parantuneet murtumat, "erittäin hyvä lääkärinhoito"). Hakukatkelma: kaikilla (miehillä ja naisilla) alaselän rasitusmerkit, nivelrikko, ja amputoitu henkilö eli noin 20 vuotta leikkauksen jälkeen: https://emory.edu/EMORY_REPORT/erarchive/2005/August/August%2029/Egyptologist.htm (sivu ei auennut; luku [EPÄVARMA]).
+- **Luurankolöydöt:** Gizan työläishaudoista (lähinnä Khafren-Menkauren ajalta) on löytynyt luunmurtumia (suurin osa parantunut asianmukaisesti), nikamien painumia sekä kaksi amputaatiota (sääri ja käsivarsi), joista potilaat elivät vuosia; Hawassin mukaan sääriamputoitu eli 14 vuotta. **[KORJATTU 7.10.2026, ks. E68]** Archaeology Magazine: aikuiset jakautuvat tasan miehiin ja naisiin, lapsia 23,6 %, perheet haudattu yhteen (DNA), työläiset kuolivat keskimäärin noin 10 vuotta aikaisemmin kuin aateliset; kuntoa voidaan arvioida "hyvin ruokituksi mutta kuluneeksi". Lähteet (2): https://archive.archaeology.org/online/reviews/secrets/index2.html ; https://egymonuments.gov.eg/en/monuments/workers-town-and-cemetery/ (parantuneet murtumat, "erittäin hyvä lääkärinhoito"). Hakukatkelma: kaikilla (miehillä ja naisilla) alaselän rasitusmerkit, nivelrikko, ja amputoitu henkilö eli noin 20 vuotta leikkauksen jälkeen: https://emory.edu/EMORY_REPORT/erarchive/2005/August/August%2029/Egyptologist.htm (sivu ei auennut; luku [EPÄVARMA]).
 - **Hawassin työläishaudat:** noin 40 % hautausmaasta kaivettu, 65 pääkammiota ja 900 yksittäistä hautaa (hakukatkelma) [EPÄVARMA]; luonnehdinta "Hawass: ne olivat valtion hanke, kaikki osallistuivat".
 - **Huom.:** "Lääkäri" / sairaala Gizalla: Wikipedia mainitsee HeG:ssä "sairaalan" (ei varmennettu AERA-lähteestä) [EPÄVARMA]. Älä esitä pelissä "sairaalaa" faktana; "parantajia" voi mainita luurankojen todisteiden pohjalta.
 - **Hoitokäytäntö:** Vanhan valtakunnan lääketekstejä tai työtapaturmien hoito-ohjeita ei löytynyt [EI LÖYDETTY]; hoitoa päätellään vain parantuneista luista.
@@ -708,7 +731,7 @@ Tutkimusmuistio: Gizan tasanko Khufun aikana (4. dynastia, n. 2560 eaa.). Kaikki
 - **Ra (Heliopolis):** Ra:n pääkultti oli Iunu (Heliopolis, "Auringon kaupunki"). 4. dynastiassa kuninkaat alkoivat yhdistää itsensä auringonjumalaan: Sneferu ensimmäisenä liitti itsensä Rahan; Djedefre (Khufun poika) otti ensimmäisenä arvonimen *Sa-Ra* ("Ra:n poika") ja yhdisti kuninkaannimensä Rahan; Khufu "samaisti itsensä Rahan" (hakukatkelma). 5. dynastiassa Ra valtionjumala, aurinkotemppelit, Pyramid Texts. Lähteet (2): https://en.wikipedia.org/wiki/Ra ; https://en.wikipedia.org/wiki/Djedefre ; hakukatkelma https://arxiv.org/pdf/0903.1416 (Belmonte; pyramidikenttien suuntaukset). Djedefren pyramidi Abu Rawashissa oli näkyvissä Heliopolikseen (Wikipedia).
 - **Horus:** Khufun Horus-nimi oli *Medjedu* (norsunluupatsas, Chufunachtin mastaban graffiti). Lähteet (2): https://en.wikipedia.org/wiki/Khufu_Statuette ; https://en.wikipedia.org/wiki/Great_Pyramid_of_Giza (graffiti "Mddw" Chufunachtin mastaballa). Kuningas = elävä Horus. Yleinen Horus-teologia 4. dynastiassa: [EI LÖYDETTY tarkemmin].
 - **Hathor:** Vanhan valtakunnan pyramidikompleksit omistettiin Ra:n, Hathorin ja Horuksen kolmikoille (Hawassin väitöskirja 1987; hakukatkelma: https://gizamedia.rc.fas.harvard.edu/images/MFA-images/Giza/GizaImage/full/library/hawass_diss_1987.pdf). Hathor "Sykomorin emäntä" Gizalla: Menkauren kolmikot (patsaat Kuningas-Hathor-nomi; Menkaure on Khufua myöhempi) ja Hathorin papittaria Gizan haudoissa (LG 87). Lähteet (2): https://en.wikipedia.org/wiki/Menkaure ; https://egymonuments.gov.eg/collections/menkaura-triads-2/ (otsikko). Khufun aikaa suoraan: [EI LÖYDETTY]; ajoita Hathor-kultti varoen.
-- **Isis ja Osiris:** Osiris ilmestyy varmasti vasta 5. dynastian puolivälistä (Pyramid Texts, Unasin pyramidin loppuosa), mutta hän on ehkä palvottu aiemmin (epiteetti Khentiamentiu ulottuu 1. dynastiaan). Khufun aikana Osirista ei pidä esittää tunnettuna jumalana [EPÄVARMA]. Lähteet (2): https://en.wikipedia.org/wiki/Osiris ; hakutulos https://historyofinformation.com/detail.php?id=1833 ja https://en.wikipedia.org/wiki/Osiris_myth . Isiksen varhaisin esiintyminen 4. dynastiassa: [EI LÖYDETTY]; älä käytä Isistä Khufun ajan keskeisenä jumalana.
+- **Isis ja Osiris:** Osiris mainitaan ensi kerran 5. dynastian puolivälissä yksityishautojen uhrikaavoissa (Niuserre, ehkä jo Neferirkare); Pyramiditeksteissä (Unas) vasta 5. dynastian lopussa **[KORJATTU 7.10.2026, ks. E71]**, mutta hän on ehkä palvottu aiemmin (epiteetti Khentiamentiu ulottuu 1. dynastiaan). Khufun aikana Osirista ei pidä esittää tunnettuna jumalana [EPÄVARMA]. Lähteet (2): https://en.wikipedia.org/wiki/Osiris ; hakutulos https://historyofinformation.com/detail.php?id=1833 ja https://en.wikipedia.org/wiki/Osiris_myth . Isiksen varhaisin esiintyminen 4. dynastiassa: [EI LÖYDETTY]; älä käytä Isistä Khufun ajan keskeisenä jumalana.
 - **Faarao jumalana, kuninkaan kultti:** Faarao on Horus, Ra:n poika (Djedefrestä alkaen) ja kuolemansa jälkeen Osiris (myöhemmin). Kuninkaan temppelissä papit toivat päivittäisiä ruoka-, suitsuke- ja juomauhreja; kulttia ylläpidettiin satoja vuosia (hakutulos). Khufun kompleksin temppeli on huonosti säilynyt (vain katkelmia). Lähteet: https://madainproject.com/pyramid_mortuary_temple ; hakukatkelma https://gizamedia.rc.fas.harvard.edu/images/MFA-images/Giza/GizaImage/full/library/hawass_diss_1987.pdf ; Metropolitan Museum: kuninkaan kultti-estaattien personifikaatiot (Khufun ajan?): https://www.metmuseum.org/art/collection/search/543891 (sivu antoi 429; hakutulos: kuninkaan ikuisen ylläpidon kuvaus). Wikipedia (Great Pyramid): temppelikuvat "Khufu is beautiful" -estaateista.
 - **Pyramidi ja aurinko:** Pyramidin nimi *Akhet-Khufu* "Khufun horisontti" (Merer-papyrus; Wikipedia). Pyramidi on aurinkosymboli ja horisontti, josta kuningas nousee Ra:n mukana; yksityiskohdat tulkinnallisia [EPÄVARMA].
 - **Pyhä veneretki:** Khufun laiva (43,4 m, setri, löydetty 1954) haudattu kuopassa pyramidin eteläpuolella. Käyttö: aurinkolaiva (solar barque), hautajaislaiva Memphiksestä Gizaan tai pyhiinvaellusalus [EPÄVARMA]. Lähteet (2): https://en.wikipedia.org/wiki/Khufu_ship ; https://en.wikipedia.org/wiki/Great_Pyramid_of_Giza (kuopat, Djedefren kartussit).
@@ -727,7 +750,7 @@ Tutkimusmuistio: Gizan tasanko Khufun aikana (4. dynastia, n. 2560 eaa.). Kaikki
 
 #### Mumifiointi 4. dynastiassa
 
-- **Hetepheres I:n kanooppilaatikko:** Khufun äidin (tai vaimon) hauta G 7000X löydettiin 9.3.1925 (Reisner), 85 jalan (noin 26 m) syvyydestä. Alabasterisarkofagi oli suljettu mutta tyhjä; kanooppilaatikossa oli elinten jäänteitä natronin vesiliuoksessa (noin 3 %). Se on yksi vanhimmista tunnetuista osoituksista sisäelinten poistosta. Lähteet (2): https://en.wikipedia.org/wiki/Hetepheres_I ; https://ancientegyptonline.co.uk/evolution-mummification1/ . Tulkinnat: Reisner (ryöstö Dahshurissa, uudelleenhautaus Khufun valvonnalla), Lehner (alkuperäinen hauta), Hawass (G1-a, hätäsiirto) [EPÄVARMA].
+- **Hetepheres I:n kanooppilaatikko:** Khufun äidin hauta G 7000X löytyi 1925 Reisnerin retkikunnan kaivauksissa (kuilun kipsitäyte havaittiin 2.2.1925, kammioon kurkistettiin maaliskuussa); kuilu on yli 27 m syvä. **[KORJATTU 7.10.2026, ks. E29, E53, E72]** Alabasterisarkofagi oli suljettu mutta tyhjä; kanooppilaatikossa oli elinten jäänteitä natronin vesiliuoksessa (noin 3 %). Se on yksi vanhimmista tunnetuista osoituksista sisäelinten poistosta. Lähteet (2): https://en.wikipedia.org/wiki/Hetepheres_I ; https://ancientegyptonline.co.uk/evolution-mummification1/ . Tulkinnat: Reisner (ryöstö Dahshurissa, uudelleenhautaus Khufun valvonnalla), Lehner (alkuperäinen hauta), Hawass (G1-a, hätäsiirto) [EPÄVARMA].
 - **Varhainen kehitys:** "Aito mumifiointi" (suoliston poisto vasemman kyljen viillosta, natron, pellava ja hartsi) on tunnettu 4. dynastiasta, mutta 4. dynastian muumiot "ei ole tutkittu kunnolla". Lähde: https://ancientegyptonline.co.uk/evolution-mummification1/ (yksi lähde) ; hakukatkelma UCL: https://www.ucl.ac.uk/museums-static/digitalegypt/mummy/ok.html (sivu 403) [EPÄVARMA].
 - **Kipsikäsittely:** Pään tai ylävartalon pinnoitus kipsillä oli lyhytaikainen tapa 5.-6. dynastiassa, erityisesti Gizalla (hakukatkelma, MFA: https://collections.mfa.org/objects/148197/plaster-body-covering ). Khufun ajalle ei siis käytä sitä.
 - **Miten näkyy:** Ylimyksillä ja kuninkaallisilla sisäelinten poisto alkaa mutta ei ole yleistä; työläiset eivät mumifioitu (haudoissa pelkkiä luurankoja; Wikipedia).
@@ -764,9 +787,9 @@ Tutkimusmuistio: Gizan tasanko Khufun aikana (4. dynastia, n. 2560 eaa.). Kaikki
 6. **Rampit ja kuljetus** (rampin tyyppi, kelkat ja märkä hiekka Khufun aikana): vain Keskivaltakunnan Djehutihotepin kuva ja koe-evidenssi. Pelissä taiteellista vapautta.
 7. **Lyhdyt louhoksissa**, **Punaisenmeren kala** ja **viikunat HeG:stä:** ei löytynyt.
 8. **Kotka-tähtilukko:** menetelmää ei löydy kirjallisuudesta; Spencen simultaaninen tähtikulku ja Dashin gnomon ovat ehdokkaat. Pelissä ei sanota "kotka-tähtilukko".
-9. **Isis ja Osiris Khufun aikaan:** Osiris vasta 5. dynastian lopun lähteissä; Isis [EI LÖYDETTY]. Pelin NPC:t eivät mainitse heitä.
+9. **Isis ja Osiris Khufun aikaan:** Osiris vasta 5. dynastian puolivälin ja lopun lähteissä; Isis ensi kerran 5. dynastian Pyramiditeksteissä. Kumpaakaan ei tunneta 4. dynastiassa. **[KORJATTU 7.10.2026, ks. E71]** Pelin NPC:t eivät mainitse heitä.
 10. **Leopardinnahka-sem-pappi 4. dynastiassa:** Reddingin leopardinhampaat HeG:stä (Khafre-Menkaure) ja Pyramid Textsin sem-maininta ovat myöhempiä; Khufun ajan kuvaa ei ole varmennettu.
-11. **Amputaatiopotilaan eloonjäänti 20 vuotta** ja **Hawassin 12 tunnin työpäivä / kolmen kuukauden vuoro:** yhden hakukatkelman varassa; tarkista alkuperäinen Hawass/Filer-julkaisu ennen pelikäyttöä.
+11. **Amputaatiopotilaan eloonjäänti 20 vuotta** ja **Hawassin 12 tunnin työpäivä / kolmen kuukauden vuoro:** yhden hakukatkelman varassa; tarkista alkuperäinen Hawass/Filer-julkaisu ennen pelikäyttöä. Tarkistuksessa: Hawassin mukaan sääriamputoitu eli 14 vuotta, "20 vuotta" ei vahvistunut; kolmen kuukauden vuorot ovat Hawassin väite, 12 tunnin päivälle ei lähdettä **[KORJATTU 7.10.2026, ks. E68, E69]**.
 12. **Hetepheres I:n haudan tulkinta** (Reisner vs Lehner vs Hawass) ja kanooppilaatikon "varhaisin" -väite: tulkinnanvarainen.
 13. **Reserve head -tulkinta** (Borchardt): vain Wikipedia; Met Museumin tai Harvardin sivu ei auennut.
 14. **Tallet 2017 -kopion URL:** paikallinen kopio on scratchpadissa; URL ei tiedossa. Tarkista tarvittaessa IFAOn sivuilta.
@@ -895,3 +918,560 @@ Ei median käyttöön (ei taulukossa), vain faktapohjaksi:
 
 ---
 
+---
+
+## 6. Epävarmojen tarkistus E1–E74 (7.10.2026)
+
+Tarkistus: neljä Opus-ali-agenttia rinnakkain (osat 1, 2, 3+5, 4) ja erillinen tarkistaja-agentti. **Tämä osio ohittaa osien 1–5 alkuperäiset [EPÄVARMA]- ja [EI LÖYDETTY]-merkinnät.** Numerointi: E1–E18 osa 1, E19–E38 osa 2, E39–E56 osat 3 ja 5, E57–E74 osa 4. Perusteluiden rivinumerot ("r. 14" ym.) viittaavat tarkistusta edeltäneeseen versioon, jossa ei vielä ollut päätelmäosiota; nykyisessä tiedostossa kohdat ovat noin 20–25 riviä alempana.
+
+**Työtapa ja rajoitus:** ympäristön verkkoesto esti WebFetchin ja curlin kaikkiin kohteisiin (Wikipedia, AERA, Harvard Giza Project, MFA, Commons-API, Met, arXiv ym.). Yhtään sivua ei avattu; kaikki tulokset perustuvat WebSearchin hakutiivistelmiin, ja lähteet on merkitty "(vain hakutiivistelmä)". **VAHVISTUI** = vähintään kaksi toisistaan riippumatonta hakutulosta sanoo saman. **KORJATTU** = alkuperäinen väite oli väärä tai harhaanjohtava. **JÄÄ EPÄVARMAKSI** = toista lähdettä ei löytynyt tai lähteet eroavat. Commons-lisenssejä ei voitu tarkistaa API:sta (E54): ne on ajettava uudelleen ympäristössä, jossa commons.wikimedia.org on sallittu. Britannica, Met, UCL, NMS ja Harvardin Giza-arkiston sivut jäivät edelleen avaamatta.
+
+### Yhteenvetotaulukko
+
+| Kohta | Aihe | Tulos |
+|---|---|---|
+| E1 | Merer-papyrusten vuosi: 26 vai 27 | JÄÄ EPÄVARMAKSI (ohje on oikea) |
+| E2 | "Kolme riippumatonta kohdetta" tukee päiväystä "13. laskennan jälkeinen vuosi" | KORJATTU |
+| E3 | Dakhlan "Djedefren vesivuori" ja Khufun päiväys | VAHVISTUI, mutta taulukon vuosi on korjattava |
+| E4 | Venekuopan graffiti "14. laskenta, Shemu I" | VAHVISTUI |
+| E5 | Khufun hallituskauden pituus ja vapautuskammioiden "17. laskenta" | VAHVISTUI pääosin |
+| E6 | Päiväkirjan kuukausiotsikot (esim. "III Akhet") | JÄÄ EPÄVARMAKSI |
+| E7 | Kalenterijakso heinä–marras, kesto ja karkauspäivät | Heinä–marras: VAHVISTUI (WP-tiivistelmä ja Talletin liite) |
+| E8 | Joukkueen koko: 40 vai 200 | JÄÄ EPÄVARMAKSI, mutta luvut selittyvät |
+| E9 | Kuljetusrytmi ja kuormat | VAHVISTUI (kaksi tiivistelmää) |
+| E10 | Pyramidin valmiusaste ja peitekivet vuonna 26/27 | VAHVISTUI (lähes valmis, Tura-verhousta asennettiin), korkeus ja pyramidion JÄÄVÄT EPÄVARMOIKSI |
+| E11 | Suuren pyramidin rakennusaika | JÄÄ EPÄVARMAKSI |
+| E12 | Työvoiman koko | JÄÄ EPÄVARMAKSI (vaihteluväli on oikea) |
+| E13 | Tura-etäisyys | JÄÄ EPÄVARMAKSI |
+| E14 | Ro-She Khufu, Khufun lampi ja satama | VAHVISTUI |
+| E15 | Djedefren nimet venekuoppien kattolohkoissa | KORJATTU (luku) / JÄÄ EPÄVARMAKSI (tulkinta) |
+| E16 | Hemiunu ja Ankhhaf | VAHVISTUI pääosin |
+| E17 | Heit el-Ghurab Khufun aikana | VAHVISTUI |
+| E18 | Tarkistamatta jääneet avautumattomien lähteiden kohdat | JÄÄ EPÄVARMAKSI |
+| E19 | Pengertien pituus (740–825 m) | KORJATTU |
+| E20 | Basalttilattia 1990 ja laaksotemppeli Nazlet el-Sammanin alla | VAHVISTUI |
+| E21 | Pyramiditemppeli: mitat ja Sed-juhla | Sed-osa VAHVISTUI, mitat JÄÄVÄT EPÄVARMOIKSI |
+| E22 | Kuningattaren kammion mitat | KORJATTU (täydennys) |
+| E23 | Pyramidionin materiaali | VAHVISTUI ja tarkentui |
+| E24 | Hemiunu arkkitehtina | VAHVISTUI sellaisenaan (päätelmä, ei suora todiste) |
+| E25 | Hemiunun mastaba G 4000: koko ja asema | KORJATTU |
+| E26 | G 2000 ja "Khufun poikien haudat" Länsikentällä | KORJATTU osittain |
+| E27 | Itäkenttä G 7000: vuodet 17–24 | JÄÄ EPÄVARMAKSI (yksi lähdeketju) |
+| E28 | Kuningatarpyramidit G1-a, G1-b, G1-c: omistajat, mitat ja venekuopat | Mitat ja omistajat JÄÄVÄT EPÄVARMOIKSI, venekuoppakysymys KORJATTU |
+| E29 | Hetepheres I:n hauta G 7000 X | KORJATTU |
+| E30 | Khufun laiva: 43,4 vs 43,6 m ja ajoitus | VAHVISTUI (43,4 × 5,9 m, siirto elokuussa 2021) |
+| E31 | Toinen laiva: tila 2024–26 | KORJATTU (päivitys) |
+| E32 | Sfinksin ajoitus ja Khafren pyramidin ajoitus | VAHVISTUI |
+| E33 | Heit el-Ghurab Khufun aikana | VAHVISTUI |
+| E34 | Wall of the Crow | VAHVISTUI mitoiltaan (AERA:n Wall of the Crow -sivu ja Hawassin teksti antavat 200 m ja 10 m) |
+| E35 | Työläisten hautausmaa | JÄÄ EPÄVARMAKSI päivämäärän ja Khufun osuuden osalta |
+| E36 | Ain Sukhna Khufun aikana | KORJATTU |
+| E37 | Tura-etäisyys | KORJATTU (tarkentui) |
+| E38 | Ramppiteoriat | VAHVISTUI |
+| E39 | Ankhhafin hauta: G 7510 vai G 7310 | VAHVISTUI |
+| E40 | Ankhhafin asema Merer-päiväkirjassa ja suhde Khufuun | KORJATTU (tarkennus) |
+| E41 | Ankhhafin rintakuva MFA 27.442 | VAHVISTUI osittain |
+| E42 | Hemiunun sukulinja, tittelit ja patsas | VAHVISTUI, varauksella sukulinjaan |
+| E43 | Nefermaat I:n ajoitus | KORJATTU |
+| E44 | Meritites I:n lapset ja Khafren äiti | VAHVISTUI (epävarmuus on oikein merkitty) |
+| E45 | Henutsen, inventaariostele ja pojat | VAHVISTUI, sanamuotoa tarkennettava |
+| E46 | Djedefren hallituskausi ja venekuoppien kartussit | KORJATTU (hallitusvuodet), VAHVISTUI (kartussit) |
+| E47 | Meresankh III: hauta, pariveistos ja ikä Khufun aikana | VAHVISTUI (hauta, löytö, veistos), JÄÄ EPÄVARMAKSI (ikä) |
+| E48 | Khufun norsunluupatsas | VAHVISTUI |
+| E49 | Nefertiabetin stele | VAHVISTUI |
+| E50 | Kawabin ja Djedefhorin haudat | VAHVISTUI |
+| E51 | Kaninisutin ajoitus | KORJATTU |
+| E52 | Wepemnofret | VAHVISTUI |
+| E53 | Hetepheres I:n haudan löytöpäivä | JÄÄ EPÄVARMAKSI, tarkennus |
+| E54 | Kuvalähteiden lisenssit (osa 3 ja osa 5) | JÄÄ EPÄVARMAKSI |
+| E55 | Osa 5: tiedostokohtaiset epäilyt | KORJATTU / JÄÄ EPÄVARMAKSI. |
+| E56 | Osa 5: myöhäisten hautojen aikalaisuus | KORJATTU (täydennys) |
+| E57 | Heit el-Ghurab ei ole Khufun aikainen | VAHVISTUI |
+| E58 | Kuninkaan karjatilat ja eläinmäärät (Redding) | VAHVISTUI (luvut) ja tarkentui (termi) |
+| E59 | Vasikoiden ikä ja status | VAHVISTUI, pieni tarkennus |
+| E60 | Panimot Heit el-Ghurabissa | VAHVISTUI (AERAn kanta) |
+| E61 | Leipomot ja bedja-muotit | VAHVISTUI |
+| E62 | Merer-tilikirjojen annokset ja palkka | VAHVISTUI ja täydentyi |
+| E63 | Oluen päiväannos (1,3 gallonaa) ja "10 leipää" | JÄÄ EPÄVARMAKSI |
+| E64 | Phyle/za-järjestelmä ja ryhmien koko | JÄÄ EPÄVARMAKSI (malleja on kaksi) |
+| E65 | Ryhmänimet ("Khufun ystävät") | VAHVISTUI osittain |
+| E66 | Märkä hiekka kelkan edessä (Djehutihotep, Amsterdam 2014) | VAHVISTUI ja KORJATTU osittain |
+| E67 | Kupari- ja doleriittityökalut, kupari Siinailta | VAHVISTUI |
+| E68 | Työläisten luunmurtumat, amputaatiot ja hoito | KORJATTU |
+| E69 | Hawassin vuorot ja työpäivä | Vuorot VAHVISTUI (Hawassin väitteenä), työpäivä JÄÄ EPÄVARMAKSI |
+| E70 | Työläisten hautalahjat | VAHVISTUI |
+| E71 | Osiris ja Isis Khufun aikana | KORJATTU (tarkennus) |
+| E72 | Hetepheres I:n kanooppiarkku ja mumifiointi 4. dynastiassa | KORJATTU |
+| E73 | Reserve heads | VAHVISTUI, lukumäärä vaihtelee |
+| E74 | Vaatteet (shendyt) ja kyynärä | VAHVISTUI |
+
+### Perustelut
+
+#### E1. Merer-papyrusten vuosi: 26 vai 27
+**Alkuperäinen väite:** Tiivistelmä r. 14, korjaus 2 (r. 21), 1.2 (r. 84 ja 90), 1.6 (r. 139), avoin kysymys 2. T17:n liite sanoo "Year 26", WP sanoo 27. Ohje: "26./27. vuosi".
+**Tulos:** JÄÄ EPÄVARMAKSI (ohje on oikea). Papyrusten oma päiväys on "karjalaskennan 13. kerran jälkeinen vuosi" ja vahvistuu monesta lähteestä. Vuosiluvusta on kaksi lukutapaa. Lehdistö sekä Talletin ja Marouardin julkaisuihin nojaavat tekstit (History.com, Archaeology 2016, the-past.com:n arvio Red Sea Scrolls -kirjasta) puhuvat yleensä 27. vuodesta. Osa tiivistelmistä (WP:n nykyinen johdanto) sanoo 26, ja Amusing Planet sanoo "26 tai 27". Red Sea Scrolls -kirjan omaa sanamuotoa en saanut näkyviin.
+**Lähteet:** https://www.history.com/news/egypts-oldest-papyri-detail-great-pyramid-construction ; https://archaeology.org/news/2016/07/19/160719-egypt-great-pyramid-logboook/ ; https://the-past.com/review/books/the-red-sea-scrolls-how-ancient-papyri-reveal-the-secrets-of-the-pyramids-2/ ; https://www.amusingplanet.com/2022/07/the-diary-of-merer-4500-year-old.html ; https://en.wikipedia.org/wiki/Diary_of_Merer (kaikki vain hakutiivistelmä)
+**Pelissä:** "Khufun hallituksen loppuvuosina (26. tai 27. vuosi)" tai pelkästään "karjanlaskun 13. kerran jälkeisenä vuonna". Pelkkää "26. vuotta" tai pelkkää "27. vuotta" ei käytetä.
+
+#### E2. "Kolme riippumatonta kohdetta" tukee päiväystä "13. laskennan jälkeinen vuosi"
+**Alkuperäinen väite:** r. 14 ja r. 175: päiväyksen "13. karjalaskennan jälkeinen vuosi" sanotaan tulevan kolmesta kohteesta: Merer, Dakhla ja venekuoppa.
+**Tulos:** KORJATTU. Tämän päiväyksen antavat vain Merer-papyrukset ja Dakhlan kalliokirjoitus. Venekuopan graffitissa lukee "14. laskenta, Shemun 1. kuukausi", eli se on myöhempi päiväys (ks. E4). Se osoittaa Khufun olleen yhä elossa, mutta se ei tue samaa päiväystä. Faktapohjan oma 1.2-taulukko (r. 84–85) erottaa nämä oikein. Virhe on vain tiivistelmässä ja suosituksessa.
+**Lähteet:** https://aeraweb.org/khufus-30-year-jubilee/ (vain hakutiivistelmä); https://fjexpeditions.com/desert/archeology/ancientroute/ancientroute.htm (vain hakutiivistelmä)
+**Pelissä:** "Kaksi toisistaan riippumatonta aikalaislähdettä (Merer ja Dakhlan kallio) antaa saman päiväyksen."
+
+#### E3. Dakhlan "Djedefren vesivuori" ja Khufun päiväys
+**Alkuperäinen väite:** r. 84, 96 ja 161 (taulukossa "Vuosi 27 (Dakhla)", varmuus "yksi lähde").
+**Tulos:** VAHVISTUI, mutta taulukon vuosi on korjattava. Kirjoitus on Libyan aavikolla noin 70 km Dakhlan Mutista länteen. Siinä Khufun Horus-nimi ja "mefat-matka karjalaskennan 13. kerran jälkeisenä vuonna Hor-Medjedun aikana". Retkikunnassa oli 400 miestä. Löytäjä oli C. Bergmann vuonna 2000, ja julkaisijat Kuper ja Förster 2003. Koska päiväys on sama kuin Mererillä, taulukossa pitää lukea "26/27" eikä "27" (faktapohjan oma sääntö). Yksi hakutulos (fjexpeditions) mainitsee lisäksi retkikuntia Khufun 25. ja 27. vuodelta. Tämä on toissijainen tieto, eikä sitä tarkistettu.
+**Lähteet:** https://fjexpeditions.com/desert/archeology/ancientroute/ancientroute.htm ; https://books.ub.uni-heidelberg.de/propylaeum/catalog/view/218/287/76976 ; https://en.wikipedia.org/wiki/Djedefre (vain hakutiivistelmä)
+**Pelissä:** "Samana vuonna Khufun retkikunta haki aavikolta mefat-ainetta." Sana "mefat" on parasta jättää kääntämättä, koska aineen laatu on tuntematon.
+
+#### E4. Venekuopan graffiti "14. laskenta, Shemu I"
+**Alkuperäinen väite:** r. 85, 162 ja 192, avoin kysymys 9. Vuosi 28/29, hautajaiset. Kaava ("laskenta" vai "laskennan jälkeinen vuosi") on varmistamatta.
+**Tulos:** VAHVISTUI. AERA kertoo, että Wasedan ryhmä julkaisi vuonna 2016 päiväyksen "14. laskenta (kerta), Shemun 1. kuukausi" neljästä graffitista. Graffitit ovat läntisestä kahdesta eteläisestä venekuopasta. Jos laskenta oli joka toinen vuosi, kyse on Khufun 28.–29. vuodesta. AERA pitää tätä Khufun viimeisenä laskentana. Kaava on "14. kerta", ei "jälkeinen vuosi". Samoista kuopista löytyi myös Djedefren nimi.
+**Lähteet:** https://aeraweb.org/khufus-30-year-jubilee/ ; https://www.researchgate.net/publication/336172957_Some_Notes_on_the_Graffiti_Written_on_the_Cover_Stones_from_the_Second_Boat_Pit_of_Khufu (vain hakutiivistelmä)
+**Pelissä:** "Khufun korkein tunnettu päiväys on 14. karjanlasku, noin hänen 28. tai 29. vuotensa." Kuolinvuotta ei esitetä varmana.
+
+#### E5. Khufun hallituskauden pituus ja vapautuskammioiden "17. laskenta"
+**Alkuperäinen väite:** r. 20 ja 1.2: Turin 23, Herodotos 50, Manetho 63, vähintään 27–29. Lisäksi 17. laskennan graffiti, kiistetty (avoin kysymys 10).
+**Tulos:** VAHVISTUI pääosin. Turinin 23 ja vähintään 28–29 vuotta (E4) ovat linjassa AERAn ja WP:n kanssa. Red Sea Scrolls -tiivistelmän mukaan Khufun kauden nykyinen arvio on 28 vuotta. "17. laskennan kerta" vapautuskammioissa on WP:n mukaan kiistanalainen (vähintään 34 v vai Turinin 23 v; Schneiderin vaihtoehdot). Al-Ahramin Hawass-artikkeli puhuu samasta graffitista nimellä "Year 17". Lukutapa jää siis epävarmaksi.
+**Lähteet:** https://en.wikipedia.org/wiki/Cattle_count ; https://english.ahram.org.eg/News/1313.aspx ; https://the-past.com/review/books/the-red-sea-scrolls-how-ancient-papyri-reveal-the-secrets-of-the-pyramids-2/ (vain hakutiivistelmä)
+**Pelissä:** "Khufu hallitsi ainakin lähes kolmekymmentä vuotta." 34+ ja 50 vuotta mainitaan vain lähteiden kiistana, jos ollenkaan.
+
+#### E6. Päiväkirjan kuukausiotsikot (esim. "III Akhet")
+**Alkuperäinen väite:** r. 141, 186 ja 189, avoin kysymys 3 [EI LÖYDETTY].
+**Tulos:** JÄÄ EPÄVARMAKSI. Hakutiivistelmä (WP:n Diary of Merer -sivun kautta) vahvistaa, että jokaisen sivun yläreunassa on otsikko, jossa mainitaan kuukausi ja vuodenaika. Sen alla on vaakarivi päivistä. Papyrus A:n ja B:n konkreettisia kuukausia ei löytynyt yhdestäkään hakutuloksesta. Lähteet olisivat T17:n ranskankielinen osa ja Red Sea Scrolls.
+**Pelissä:** Kirjoitetaan "kuukauden 27. päivä, tulvakaudella" ilman kuukauden järjestysnumeroa.
+
+#### E7. Kalenterijakso heinä–marras, kesto ja karkauspäivät
+**Alkuperäinen väite:** r. 98, 100, 141 ja 160: heinä–marras (Akhet I – Peret II), 3–5 kuukautta. Wadi al-Jarf on Talletin mukaan karkauspäivien vanhin todiste [EPÄVARMA].
+**Tulos:** Heinä–marras: VAHVISTUI (WP-tiivistelmä ja Talletin liite). Kesto: hakutulokset sanovat "roughly five months", mikä mahtuu väliin 3–5. Karkauspäivät: JÄÄ EPÄVARMAKSI. Ainoa löydetty lähde on edelleen arXiv-artikkeli, joka siteeraa Talletia. Toista riippumatonta lähdettä ei löytynyt.
+**Lähteet:** https://en.wikipedia.org/wiki/Diary_of_Merer ; https://arxiv.org/pdf/2411.08061 ; https://roger-pearse.com/weblog/2017/09/27/the-log-book-of-inspector-merer-from-wadi-al-jarf-and-the-pyramid-of-cheops-khufu (vain hakutiivistelmä)
+**Pelissä:** "Tulvakausi, heinäkuusta marraskuuhun." Siviilikalenterin syntyä ei esitetä faktana.
+
+#### E8. Joukkueen koko: 40 vai 200
+**Alkuperäinen väite:** r. 21, 145 ja 186, avoin kysymys 8.
+**Tulos:** JÄÄ EPÄVARMAKSI, mutta luvut selittyvät. Hakutiivistelmissä perusyksikkö (phyle) on noin 40 miestä, ja Merer johtaa tällaista joukkuetta. Lehdistössä (esim. Smithsonianin 2015 juttuun palaavat tekstit ja Pearse) mainitaan "noin 200 miehen" miehistö. Todennäköisesti se tarkoittaa useamman phylen kokonaisuutta. T17-sitaattia, joka ratkaisisi asian, ei saatu näkyviin.
+**Lähteet:** https://roger-pearse.com/weblog/2017/09/27/the-log-book-of-inspector-merer-from-wadi-al-jarf-and-the-pyramid-of-cheops-khufu ; https://en.wikipedia.org/wiki/Diary_of_Merer (vain hakutiivistelmä)
+**Pelissä:** "Mererin noin 40 miehen joukkue." Lukua 200 ei käytetä Mererin omasta veneporukasta.
+
+#### E9. Kuljetusrytmi ja kuormat
+**Alkuperäinen väite:** r. 146: 2–3 edestakaista matkaa kymmenessä päivässä, kuorma 70–80 t eli noin 30 lohkoa á 2,5 t, noin 200 lohkoa kuussa. Kuorma on "Talletin oletus".
+**Tulos:** VAHVISTUI (kaksi tiivistelmää). Archaeology-lehden tiivistelmän mukaan matka Turasta Gizaan kesti kaksi päivää ja tyhjänä paluu yhden päivän. Tämä sopii nelipäiväiseen kierrokseen, kun mukaan lasketaan lastaus. Kuorma 70–80 t on laskelma, ei papyruksen tieto.
+**Lähteet:** https://archaeology.org/issues/july-august-2022/features/egypt-wadi-el-jarf-port-papyri/ ; https://www.amusingplanet.com/2022/07/the-diary-of-merer-4500-year-old.html (vain hakutiivistelmä)
+**Pelissä:** "Kaksi tai kolme kivilastia kymmenessä päivässä." Tonnimäärät esitetään arvioina ("noin kolmekymmentä lohkoa").
+
+#### E10. Pyramidin valmiusaste ja peitekivet vuonna 26/27
+**Alkuperäinen väite:** r. 14, 152 ja 175–177, avoin kysymys 5. Peitekiviä asennettiin ainakin osittain, korkeus ja pyramidion [EI LÖYDETTY]. Peitekivitarve 67 390 m3.
+**Tulos:** VAHVISTUI se, että pääosa työstä oli valmis ja Tura-kalkkikivestä tehtyä ulkoverhousta asennettiin (History.com, Big Think ja Mada Masr Talletin ja Marouardin mukaan). 67 390 m3 vahvistuu Apollo-lehdestä, ja sama lähde sanoo pinnan hiotun luultavasti ylhäältä alas. Korkeus ja pyramidionin ajankohta JÄÄVÄT EPÄVARMOIKSI. Huomio: r. 112 laskee "67 390 lohkoa á 2,5 t", mikä on johdettu luku (1 m3 kalkkikiveä on noin 2,5 t). Lähteessä luku on kuutiometreinä.
+**Lähteet:** https://www.history.com/news/egypts-oldest-papyri-detail-great-pyramid-construction ; https://apollo-magazine.com/great-pyramid-giza-egypt-casing-stone/ ; https://bigthink.com/culture-religion/a-just-discovered-papyrus-reveals-how-the-great-pyramid-was-built/ (vain hakutiivistelmä)
+**Pelissä:** "Pyramidi on lähes valmis, ja valkoista verhouskiveä nostetaan paikoilleen." Ei kerrota, mihin korkeuteen asti verhous ulottuu.
+
+#### E11. Suuren pyramidin rakennusaika
+**Alkuperäinen väite:** r. 109: Herodotos 20 v, Tallet "n. 25 vuotta" (T17 s. 161), WP 20–27 v [EPÄVARMA].
+**Tulos:** JÄÄ EPÄVARMAKSI. Herodotoksen 20 vuotta on primäärilähde ja pitää paikkansa (2.124). Talletin "25 or so" -sitaattia ei saatu toisesta lähteestä. Red Sea Scrolls -tiivistelmässä mainitaan kauden pituudeksi 28 vuotta ja neljä joukkuetta.
+**Lähteet:** https://the-past.com/review/books/the-red-sea-scrolls-how-ancient-papyri-reveal-the-secrets-of-the-pyramids-2/ (vain hakutiivistelmä)
+**Pelissä:** "Rakentaminen kesti parikymmentä vuotta tai vähän yli."
+
+#### E12. Työvoiman koko
+**Alkuperäinen väite:** r. 110, avoin kysymys 8: 4 000–40 000, Lehner "enintään 20 000, ehkä 4 000", 1 200 louhijaa.
+**Tulos:** JÄÄ EPÄVARMAKSI (vaihteluväli on oikea). NOVA ja Archaeology: Lehner ja Hawass arvioivat 20 000–30 000. Yhden tiivistelmän mukaan arviot vaihtelevat noin 5 000:sta (Lehner) 36 000:een (Hawass). Lukuja "4 000" ja "1 200 louhijaa" ei vahvistettu toisesta lähteestä. Lehdistössä toistuu, että tilikirjat ruokkivat "20 000 työntekijää", mutta se on lehdistön muotoilu.
+**Lähteet:** https://www.pbs.org/wgbh/nova/article/who-built-the-pyramids/ ; https://archive.archaeology.org/online/reviews/secrets/index2.html (vain hakutiivistelmä)
+**Pelissä:** "Tuhansia, ehkä parikymmentä tuhatta ihmistä." Yhtä tarkkaa lukua ei käytetä.
+
+#### E13. Tura-etäisyys
+**Alkuperäinen väite:** r. 133 ja avoin kysymys 13: 10 km (WP) / 15 km, [EPÄVARMA 10–20 km].
+**Tulos:** JÄÄ EPÄVARMAKSI. Tarkennus: Tura-Masaran louhokset ovat noin 12 km Kairosta etelään, Niilin itärannalla, noin 6 km:n matkalla. Archaeology-lehden tiivistelmän mukaan Gizaan oli noin 15–20 km. Linnuntie ja vesireitti eroavat toisistaan.
+**Lähteet:** https://en.wikipedia.org/wiki/Stone_quarries_of_ancient_Egypt ; https://archaeology.org/issues/july-august-2022/features/egypt-wadi-el-jarf-port-papyri/ (vain hakutiivistelmä)
+**Pelissä:** "Tura, joen toisella puolella parinkymmenen kilometrin vesimatkan päässä." Tarkkaa kilometrilukua ei anneta.
+
+#### E14. Ro-She Khufu, Khufun lampi ja satama
+**Alkuperäinen väite:** r. 115, 147 ja 149. Ro-She Khufu = "Khufun lammen sisäänkäynti", sijainti [EPÄVARMA]. Satamasta viitataan sedimenttinäytteisiin ("Younes 2024").
+**Tulos:** VAHVISTUI. Archaeology-lehti: Ro-She Khufu oli hallintokeskus ja Ankhhafin alaisuudessa, ja vene ohjattiin kahden kohouman välisestä portista "Khufun lammelle". Papyrus A:ssa päivät 11–13 ovat padon töitä, joissa on 15 aper-ryhmää. Sedimenttinäytteiden lähde on Sheisha ym. 2022 (PNAS): Niilin Khufu-haara oli Khufun, Khafren ja Menkauren aikaan korkealla. "Younes 2024" voi olla WP:n alaviite, jota en voinut tarkistaa. Kannattaa viitata Sheishaan 2022.
+**Lähteet:** https://archaeology.org/issues/july-august-2022/features/egypt-wadi-el-jarf-port-papyri/ ; https://eos.org/articles/ancient-nile-tributary-may-have-aided-pyramid-construction ; https://www.natureasia.com/en/nmiddleeast/article/10.1038/nmiddleeast.2022.50 (vain hakutiivistelmä)
+**Pelissä:** "Ro-She Khufu, Khufun lammen suu: satama ja virasto pyramidin juurella." Tarkkaa paikkaa ei näytetä kartalla.
+
+#### E15. Djedefren nimet venekuoppien kattolohkoissa
+**Alkuperäinen väite:** r. 116 ja 163: "11 mainintaa, Khufun nimi 4" [EPÄVARMA].
+**Tulos:** KORJATTU (luku) / JÄÄ EPÄVARMAKSI (tulkinta). Djedefre-sivun ja muiden tiivistelmien mukaan ensimmäisen eteläisen venekuopan (vuonna 1954 avatun) kattolohkoissa on 18 Djedefren kartussia. Yhden tiivistelmän mukaan Khufun nimeä niissä ei ole lainkaan. Lukuparia 11/4 ei löytynyt. Se voi koskea toista (läntistä) kuoppaa, mutta tätä ei voitu tarkistaa. Tulkinta, että Djedefre hautasi isänsä, on yleinen mutta silti päätelmä.
+**Lähteet:** https://en.wikipedia.org/wiki/Djedefre ; https://ancientegyptonline.co.uk/great-pyramid-complex/ ; https://www.pbs.org/wgbh/nova/egypt/dispatches/990306.html (vain hakutiivistelmä)
+**Pelissä:** "Venekuoppien kansikivissä toistuu Djedefren nimi." Lukumäärää ei mainita.
+
+#### E16. Hemiunu ja Ankhhaf
+**Alkuperäinen väite:** r. 107, 108 ja 148: Hemiunu oli visiiri ja kaikkien kuninkaan rakennustöiden valvoja, ja hänen mastabassaan G 4000 on päiväyksiä. Ankhhaf oli Khufun velipuoli, visiiri ja Ro-She Khufun johtaja, mastaba G 7510.
+**Tulos:** VAHVISTUI pääosin. Hemiunu: Khufun veljenpoika ja Sneferun pojanpoika, visiiri, "kaikkien kuninkaan rakennushankkeiden valvoja". G 4000:n kivissä on Khufun ajan päiväyksiä. "Arkkitehti" on perinteinen tulkinta. Ankhhaf: G 7510 ja MFA:n rintakuva vahvistuvat. Papyruksessa hän on *iry-pat* ja Ro-She Khufun johtaja. TARKENNUS: lähteiden mukaan ei tiedetä, kenen kuninkaan aikana Ankhhaf oli visiirinä, ja haudan perusteella hän palveli visiirinä Khafrea. Siksi "visiiri Ankhhaf" vuonna 26/27 on epävarma.
+**Lähteet:** https://en.wikipedia.org/wiki/Hemiunu ; https://ancientegyptonline.co.uk/p-hemiunu/ ; https://en.wikipedia.org/wiki/Ankhhaf ; https://collections.mfa.org/objects/45982 (vain hakutiivistelmä)
+**Pelissä:** "Ylimys Ankhhaf, Khufun lammen suun johtaja." Hetken 3 otsikossa (r. 198) sanaa "visiiri" ei käytetä.
+
+#### E17. Heit el-Ghurab Khufun aikana
+**Alkuperäinen väite:** r. 22, 120 ja avoin kysymys 7: pääosin Khafren ja Menkauren aikaa, "luultavasti Khufu".
+**Tulos:** VAHVISTUI. AERA: kaupunki palveli Menkaurea, Khafrea ja "luultavasti Khufua". Kaivetut kerrokset ovat Khafren ja Menkauren ajalta, ja syvemmällä on vihjeitä vanhemmista vaiheista. Pinta-ala yli 7 ha ja sijainti 400 m Sfinksistä etelään.
+**Lähteet:** https://www.aeraweb.org/lost-city/ ; https://aeraweb.org/wp-content/uploads/2025/03/AERA_2023.pdf (vain hakutiivistelmä)
+**Pelissä:** Työläiskaupunkia käytetään vain tunnelman analogiana, ei Khufun hetken todisteena.
+
+#### E18. Tarkistamatta jääneet avautumattomien lähteiden kohdat
+**Alkuperäinen väite:** r. 72 (Arnold, Malek ja Redford: kronologiat), r. 132 (NMS:n peitekivi, "kiiltävä"), r. 215 (Met 543890: "Khufun karja"-reliefi), r. 213 (Verner 2006, Harvard).
+**Tulos:** JÄÄ EPÄVARMAKSI. Näihin ei tehty uutta vahvistusta, koska sivuja ei voinut avata.
+**Pelissä:** Näitä lähteitä ei käytetä ennen kuin ne on avattu.
+
+#### E19. Pengertien pituus (740–825 m)
+**Alkuperäinen väite:** 2.2 ja Avoimet kysymykset 3: pituus 740 / ~800 / 825 m, kääntyy 32° ja jatkuu 125 m laaksotemppeliin.
+**Tulos:** KORJATTU. Hawassin artikkeli (ICE 6.1, Harvardin Giza-arkiston PDF) antaa koko pituudeksi laaksotemppelistä pyramiditemppeliin 825 m, ja siinä on myös 32° käännös ja 125 m loppuosa. HGP:n sivu ja Lehner antavat "noin 800 m", ja eräs toinen lähde 810 m. Lukua 740 m ei löytynyt mistään. Ei selviä, sisältyykö 125 m lukuun 825 m (Hawassin muotoilu viittaa siihen, että sisältyy).
+**Lähteet:** https://gizamedia.rc.fas.harvard.edu/images/MFA-images/Giza/GizaImage/full/library/hawass_ice_6.1.pdf (vain hakutiivistelmä); https://giza.fas.harvard.edu/sites/1780/full/ (vain hakutiivistelmä); https://arxiv.org/pdf/2412.20407 (vain hakutiivistelmä)
+**Pelissä:** "Noin 800 metriä pitkä pengertie" on turvallinen; 740 m poistetaan.
+
+#### E20. Basalttilattia 1990 ja laaksotemppeli Nazlet el-Sammanin alla
+**Alkuperäinen väite:** 2.2: musta-vihreä basalttilattia löytyi maaliskuussa 1990 viemärikaivannosta.
+**Tulos:** VAHVISTUI. Hawassin artikkeli ja HGP kertovat saman: viemäröintityö Nazlet el-Sammanissa paljasti pengertien linjan ja laaksotemppelin paikan, basalttilattia maaliskuussa 1990.
+**Lähteet:** sama Hawass ICE 6.1 -PDF (vain hakutiivistelmä); https://giza.digitalhumanities.fas.harvard.edu/sites/1780/full/ (vain hakutiivistelmä)
+**Pelissä:** Laaksotemppeli on edelleen kylän alla kaivamatta; sen voi mainita "kadun alla odottavana" kohteena.
+
+#### E21. Pyramiditemppeli: mitat ja Sed-juhla
+**Alkuperäinen väite:** 2.2: 52,2 × 40 m; Sed-juhla-tulkinta [EPÄVARMA], vain WP.
+**Tulos:** Sed-osa VAHVISTUI, mitat JÄÄVÄT EPÄVARMOIKSI. AERA:n Great Pyramid Temple -projektisivu: jäljellä on basalttilattia ja graniittipilarien kolot; pihan reliefikatkelmissa on kuninkaan 30-vuotisjuhlan (Sed) kohtauksia, mikä viittaa uudistumisjuhlaan. Stadelmann tulkitsee tilan laajemmin hautajaisrituaalin osaksi. Mittoja 52,2 × 40 m ei löytynyt toisesta lähteestä (vain madainproject).
+**Lähteet:** https://aeraweb.org/projects/great-pyramid-temple/ (vain hakutiivistelmä); https://aeraweb.org/?p=7443 (vain hakutiivistelmä)
+**Pelissä:** "Seinillä kuvattiin kuninkaan juhlaa" on kelvollinen; älä väitä, että Khufu vietti Sed-juhlan, eikä lukitse mittoja.
+
+#### E22. Kuningattaren kammion mitat
+**Alkuperäinen väite:** 2.1: ~5,75 × 5,24 m, korkeus ~4,66 m, harjakatto; ilmakuilut "suljettiin molemmista päistä kunnes 1872".
+**Tulos:** KORJATTU (täydennys). Lattia 5,75 × 5,23 m vahvistuu kahdesta lähteestä (WP Great Pyramid -kopio, ancientegyptonline). Luku 4,57–4,7 m on seinien korkeus; harjakaton huippu on noin 6,1–6,2 m (lähteet 6,13 ja 6,23 m). Lehnerin, Petrien tai Maragioglio–Rinaldin alkuperäislukuja ei saatu esiin. Ilmakuilut: ne olivat suljetut molemmista päistään ja Waynman Dixon löysi ne 1872; muotoilu "suljettiin ... kunnes 1872" on harhaanjohtava. Itäseinässä on kapeneva syvennys (niche).
+**Lähteet:** https://solarspell-dls.sfis.asu.edu/mea/wikipedia/wp/g/Great_Pyramid_of_Giza.htm (vain hakutiivistelmä); https://ancientegyptonline.co.uk/queenschambergp/ (vain hakutiivistelmä); https://madainproject.com/great_pyramid_of_giza (vain hakutiivistelmä); https://en.wikipedia.org/wiki/Waynman_Dixon (vain hakutiivistelmä)
+**Pelissä:** "Noin 5,7 × 5,2 m, harjakaton huippu runsaat 6 m". Tarkat senttimetrit vasta Lehner 1997 -tarkistuksen jälkeen.
+
+#### E23. Pyramidionin materiaali
+**Alkuperäinen väite:** 2.1: materiaali tuntematon; tunnetut 4. dynastian pyramidionit valkoista kalkkikiveä; kultaus mahdollinen mutta todistamaton.
+**Tulos:** VAHVISTUI ja tarkentui. Tunnettuja 4. dynastian pyramidioneja on kaksi: Sneferun Punaisen pyramidin (Dahshur, Stadelmann) ja Khufun oman kulttipyramidin G1-d:n huippukivi, jonka Hawass löysi 1992–93. Kumpikin on hienoa Tura-laatuista kalkkikiveä. Kultauksesta ei ole näyttöä; egyptologi pitää sitä vain mahdollisena.
+**Lähteet:** https://en.wikipedia.org/wiki/Pyramid_G1-d (vain hakutiivistelmä); https://en.wikipedia.org/wiki/Pyramidion (vain hakutiivistelmä); https://uk.news.yahoo.com/fact-check-posts-claim-giza-020000417.html (vain hakutiivistelmä)
+**Pelissä:** Hyvä löytöhetki: "Pikkupyramidin oma huippukivi löytyi 1990-luvulla: valkoista kalkkikiveä, ei kultaa."
+
+#### E24. Hemiunu arkkitehtina
+**Alkuperäinen väite:** 2.1 ja 2.4: Hemiunu "uskotaan" arkkitehdiksi [EPÄVARMA]; Nefermaatin poika, Khufun veljenpoika.
+**Tulos:** VAHVISTUI sellaisenaan (päätelmä, ei suora todiste). Päätelmä perustuu haudan arvonimeen, joka käännetään "kuninkaan kaikkien rakennustöiden valvoja"; mikään teksti ei sano hänen suunnitelleen Suurta pyramidia. Isä Nefermaat (Sneferun poika) toistuu kahdessa lähteessä.
+**Lähteet:** https://ancientegyptonline.co.uk/p-hemiunu/ (vain hakutiivistelmä); https://egyptianmuseum.org/explore/old-kingdom-architects-hemiunu (vain hakutiivistelmä); https://www.encyclopedia.com/humanities/culture-magazines/hemiunu-son-nefermaat (vain hakutiivistelmä)
+**Pelissä:** "Hemiunu johti kuninkaan rakennustöitä; hänen uskotaan johtaneen myös pyramidin rakentamista."
+
+#### E25. Hemiunun mastaba G 4000: koko ja asema
+**Alkuperäinen väite:** 2.4: G 4000 on Länsikentän "suurin"; mitat [EI LÖYDETTY].
+**Tulos:** KORJATTU. Reisnerin Giza Necropolis I, liite B: G 2000 on Länsikentän suurin mastaba, kooltaan verrattavissa vain Itäkentän Ankh-hafin mastabaan. Toinen lähde (Scirp-artikkeli) kutsuu G 4000:aa Länsikentän toiseksi suurimmaksi ja antaa pituudeksi noin 52 m. Leveyttä ei löytynyt. Khufun vuosimerkinnät G 4000:n kivissä vahvistuvat (WP Hemiunu, HGP).
+**Lähteet:** https://www.gizapyramids.org/static/pdf%20library/reisner_gn_books/giza_necropolis_1/app_b_pp414to416.pdf (vain hakutiivistelmä); https://file.scirp.org/Html/5-1140110_83873.htm (vain hakutiivistelmä); https://en.wikipedia.org/wiki/Hemiunu (vain hakutiivistelmä)
+**Pelissä:** "Yksi Länsikentän suurimmista, noin 52 m pitkä". Pituus on yhden lähteen tieto.
+
+#### E26. G 2000 ja "Khufun poikien haudat" Länsikentällä
+**Alkuperäinen väite:** 2.4: Länsikentällä Khufun poikien haudat G 1200, G 2000, G 2100.
+**Tulos:** KORJATTU osittain. G 1200, G 2000 ja G 2100 ovat Reisnerin hautausmaanumeroita (ydinhautausmaita), eivät yksittäisiä prinssien hautoja; G 2100:ssa on 12 samankokoista päämastabaa ruutukaavassa. G 2000 (Lepsius 23) on yksittäinen suuri mastaba, jonka omistaja ei käynyt ilmi, ja HGP ajoittaa sen väljästi Khufun tai Khafren aikaan. Väitettä "Khufun poikien haudat" ei löytynyt; Khufun pojat (Kawab, Hordjedef, Khufukhaf) ovat Itäkentällä. Huomio "G 2000 on Länsikentällä" pitää paikkansa.
+**Lähteet:** https://en.wikipedia.org/wiki/Giza_West_Field (vain hakutiivistelmä); https://anthropology.manoa.hawaii.edu/colloquium-marlow/ (vain hakutiivistelmä); https://giza.fas.harvard.edu/sites/500/full/ (vain hakutiivistelmä); Reisner app B (yllä)
+**Pelissä:** Länsikenttä on virkamiesten ja sukulaisten kenttä; prinssit sijoitetaan Itäkentälle.
+
+#### E27. Itäkenttä G 7000: vuodet 17–24
+**Alkuperäinen väite:** 2.4: kaksoismastabat 3 × 4, Kawab, Khufukhaf I, Hordjedef; Khufun vuodet n. 17–24.
+**Tulos:** JÄÄ EPÄVARMAKSI (yksi lähdeketju). Haku vahvisti tiedot vain WP:n Giza East Field- ja Kawab-artikkeleista, jotka nojaavat Reisnerin aikajanaan. Itsenäistä toista lähdettä vuosille 17–24 ei saatu.
+**Lähteet:** https://en.wikipedia.org/wiki/Giza_East_Field (vain hakutiivistelmä); https://en.wikipedia.org/wiki/Kawab (vain hakutiivistelmä)
+**Pelissä:** "Khufun hallituskauden loppupuolella rakennetut prinssien kaksoismastabat" ilman vuosilukuja.
+
+#### E28. Kuningatarpyramidit G1-a, G1-b, G1-c: omistajat, mitat ja venekuopat
+**Alkuperäinen väite:** 2.3: G1-a 49,5 m / 30,25 m Hetepheres I; G1-b ~50 / ~30 m Meritites I (Hawass eri mieltä); G1-c 46,25 / 29,6 m Henutsen; venekuopat ristiriidassa.
+**Tulos:** Mitat ja omistajat JÄÄVÄT EPÄVARMOIKSI, venekuoppakysymys KORJATTU. Mitat toistuvat vain WP:ssä ja siitä kopioivassa Structuraessa. Omistajista: G1-a:n liitti Hetepheres I:een Lehner (aiemmin Meritites I), G1-b:stä Lehner ja Stadelmann vs. Hawass, kuten tekstissä. HGP:ssä on omat sivut G I-a:n ja G I-b:n venekuopille (kujilla niiden eteläpuolella), G I-c:lle ei ole. Khufun "viisi kuoppaa" (No. 1–5) ovat kuninkaan omia, eri kuoppia kuin kuningattarien; ristiriitaa ei siis ole. Lisäksi G1-a:n "n. 2600 eaa." ei sovi samaan taulukkoon, jossa rakentaminen sijoitetaan Khufun vuosiin 15–17.
+**Lähteet:** https://en.wikipedia.org/wiki/Pyramid_G1-a , https://en.wikipedia.org/wiki/Pyramid_G1-b , https://en.wikipedia.org/wiki/Pyramid_G1-c (vain hakutiivistelmä); https://giza.fas.harvard.edu/sites/4225/full/ ; https://giza.fas.harvard.edu/sites/4226/full/ (vain hakutiivistelmä)
+**Pelissä:** "Kolme noin 30 metrin kuningatarpyramidia; kahden vieressä veneenmuotoinen kuoppa."
+
+#### E29. Hetepheres I:n hauta G 7000 X
+**Alkuperäinen väite:** 2.3: löytyi 9.3.1925, 85 jalkaa (~26 m) syvä, sarkofagi tyhjä 1927.
+**Tulos:** KORJATTU. Reisnerin valokuvaaja Mohammedani Ibrahim huomasi 2.2.1925 kolmijalkansa seisovan kipsin päällä; kipsi peitti kuilun suun. WP:n Tomb of Hetepheres I antaa löytöpäiväksi 8.3.1925 (todennäköisesti kammion avaus). Päivää 9.3. ei löytynyt. Syvyys on yli 27 m (27,4 m, noin 90 jalkaa), ei 26 m. Tyhjä alabasterisarkofagi ja ehjä sinetöity kanooppirasia vahvistuvat; tyhjennys kesti vuodet 1926–27. Teoriat muumion katoamisesta jäävät avoimiksi.
+**Lähteet:** https://the-past.com/feature/dows-dunham-and-the-tomb-of-queen-hetepheres (vain hakutiivistelmä); https://en.wikipedia.org/wiki/Tomb_of_Hetepheres_I (vain hakutiivistelmä); https://www.nationalgeographic.com/history/history-magazine/article/this-egyptian-queens-tomb-lay-untouched-for-over-4000-years (vain hakutiivistelmä)
+**Pelissä:** "Löytyi 1925, kun valokuvaajan jalusta osui kipsiin; kuilu yli 27 m syvä; sarkofagi oli tyhjä."
+
+#### E30. Khufun laiva: 43,4 vs 43,6 m ja ajoitus
+**Alkuperäinen väite:** 2.3: 43,4 m, 1 224 osaa, löytö 1954, siirto GEM:iin 8/2021; "43,6 m" [EI LÖYDETTY]; WP:n "n. 2500 eaa." ristiriidassa.
+**Tulos:** VAHVISTUI (43,4 × 5,9 m, siirto elokuussa 2021). Lukua 43,6 m ei löytynyt mistään. Ajoitus: Djedefren kartussi on peitelohkon alapinnassa, joten laiva haudattiin Khufun kuoleman jälkeen Djedefren alussa. WP:n "n. 2500 eaa." on karkea pyöristys (radiohiili "yli 4 500 vuotta"); Khufun kronologialla hautaus osuu n. 2566 eaa. paikkeille. Ristiriita on pyöristys, ei asiavirhe.
+**Lähteet:** https://en.wikipedia.org/wiki/Khufu_ship (vain hakutiivistelmä); https://en.wikipedia.org/wiki/Ancient_Egyptian_royal_ships (vain hakutiivistelmä); https://popular-archaeology.com/article/resurrecting-the-pharaohs-solar-boat/ (vain hakutiivistelmä); https://en.wikipedia.org/wiki/Djedefre (vain hakutiivistelmä)
+**Pelissä:** Käytä 43,4 m. Pelin hetkellä (Khufu elossa) laiva ei vielä ole kuopassa.
+
+#### E31. Toinen laiva: tila 2024–26
+**Alkuperäinen väite:** 2.3: osat nostettu Wasedan avulla, rekonstruktio kesken [EPÄVARMA tila].
+**Tulos:** KORJATTU (päivitys). Kokoaminen alkoi yleisön nähden Grand Egyptian Museumissa 24.12.2025. Laiva on noin 42 m pitkä, osia noin 1 650, työ kestää arviolta neljä vuotta (3–5 v). Rahoitus JICA (3,5 milj. dollaria), mukana Wasedan japanilaisryhmä. Peitelohkojen graffiteissa (nostettu 2011) on Khufun ja Djedefren nimiä.
+**Lähteet:** https://www.wnem.com/2025/12/24/ancient-egyptian-pharaohs-boat-is-being-reassembled-public-grand-egyptian-museum/ (vain hakutiivistelmä, AP); https://www.bernama.com/tv/news.php?id=2505955 (vain hakutiivistelmä); https://thepeninsulaqatar.com/article/26/12/2025/egypts-grand-museum-begins-live-restoration-of-ancient-boat (vain hakutiivistelmä); https://www.egyptpro.sci.waseda.ac.jp/e-khufu.html (vain hakutiivistelmä)
+**Pelissä:** "Toista laivaa kootaan parhaillaan museon yleisön edessä."
+
+#### E32. Sfinksin ajoitus ja Khafren pyramidin ajoitus
+**Alkuperäinen väite:** 2.5: enemmistö Khafre (Lehner, Hawass), vähemmistö Stadelmann (Khufu) ja Dobrev (Djedefre); Khafren pyramidi n. 2550 (WP) / 2520–2494 (AERA).
+**Tulos:** VAHVISTUI. AERA: arkkitehtoninen ja geologinen näyttö sitoo Sfinksin ja sen temppelin Khafren kompleksiin, suurella todennäköisyydellä mutta ilman ehdotonta todistetta; Lehnerin ja geologi Aignerin kerrosvertailu (1979–83). Stadelmannin (nemes ja parta) ja Dobrevin (2004, IFAO) kannat vahvistuvat. Khafren hallituskausi WP:ssä n. 2558–2532 eaa.; AERA käyttää myöhäisempää kronologiaa. Erot ovat kronologiajärjestelmien eroja, ja molemmissa Khafre tulee Khufun ja Djedefren jälkeen.
+**Lähteet:** https://www.history.com/news/how-old-is-the-great-sphinx (vain hakutiivistelmä); https://www.nationalgeographic.com/premium/article/great-sphinx-giza-pyramids-pharaoh-ancient-egypt (vain hakutiivistelmä); https://aeraweb.org/why-sequence-is-important/ (tiedostossa, ei avattu); https://en.wikipedia.org/wiki/Khafre (vain hakutiivistelmä)
+**Pelissä:** Khufun hetkellä Sfinksiä ei ole; linjaus pysyy.
+
+#### E33. Heit el-Ghurab Khufun aikana
+**Alkuperäinen väite:** 2.6 ja Avoimet 5: AERA "luultavasti Khufu", ajoitus 2551–2472; Khufun asutuksesta ei näyttöä.
+**Tulos:** VAHVISTUI. AERA:n projektisivu: tunnettu pohjakuva on pääosin Khafren ja Menkauren ajalta, "toistaiseksi ei selvää näyttöä Khufusta". Maaliskuussa 2017 AERA alkoi kaivaa varhaisempaa kerrosta, joka "saattaa" olla Khufun ajalta. Lost City -sivu puhuu Menkauren, Khafren ja "luultavasti Khufun" pyramidien tukikohdasta. Pinta-arkkitehtuuri on 4. dynastian keski- ja loppupuolelta. Sijainti 400 m Sfinksistä etelään ja yli 7 ha vahvistuvat.
+**Lähteet:** https://aeraweb.org/projects/ (vain hakutiivistelmä); https://www.aeraweb.org/lost-city/ (vain hakutiivistelmä); https://aeraweb.org/wp-content/uploads/2022/08/AERA_2017.pdf (vain hakutiivistelmä)
+**Pelissä:** Khufun hetkellä Wall of the Crow -alueella on enintään varhainen leiri; Galleria-kaupunki on myöhäisempi.
+
+#### E34. Wall of the Crow
+**Alkuperäinen väite:** 2.6: 200 m pitkä, 10 m korkea, 10 m paksu; portti 2,5–2,6 m × ~7 m; Galleria-kompleksi Wallia vanhempi.
+**Tulos:** VAHVISTUI mitoiltaan (AERA:n Wall of the Crow -sivu ja Hawassin teksti antavat 200 m ja 10 m). Rakentajasta ristiriita: Hawassin mukaan muurin rakensi Khufu, mutta AERA:n järjestys (gallerioita vanhemmat, galleriat Khafre–Menkaure) sijoittaa sen myöhemmäksi. Galleria-kompleksin majoitusluku 1 500–2 000 ei löytynyt toisesta lähteestä.
+**Lähteet:** https://aeraweb.org/wall-of-the-crow/ (vain hakutiivistelmä); https://aeraweb.org/?p=1167 (vain hakutiivistelmä); https://gizamedia.rc.fas.harvard.edu/images/MFA-images/Giza/GizaImage/full/library/hawass_pyramid_builders.pdf (vain hakutiivistelmä)
+**Pelissä:** Muuri ei kuulu Khufun hetken dioraamaan, ellei Hawassin kantaa valita erikseen.
+
+#### E35. Työläisten hautausmaa
+**Alkuperäinen väite:** 2.6: löytyi 1990, hevonen astui seinään 14.8.1990; ylempi ja alempi osa; 4.–5. dynastia; Khufun osuus [EI LÖYDETTY].
+**Tulos:** JÄÄ EPÄVARMAKSI päivämäärän ja Khufun osuuden osalta. Hevostarina ja 14.8.1990 löytyvät uutislähteistä, mutta Hawassin oma kuvaus (ARCE) kertoo kaivausten alkaneen tammi–helmikuussa 1990 ja ensimmäisen työläishaudan löytyneen 14.4.1990. Ylempi (käsityöläiset, työnjohtajat) ja alempi (työmiehet) osa sekä ajoitus 4.–5. dynastiaan vahvistuvat. Khufun ajalle sidottua hautaa ei löytynyt.
+**Lähteet:** https://arce-nc.org/saleh.htm (vain hakutiivistelmä); https://gizamedia.rc.fas.harvard.edu/images/MFA-images/Giza/GizaImage/full/library/hawass_pyramid_builders.pdf (vain hakutiivistelmä); https://www.csmonitor.com/World/2010/0111/Egypt-says-Jewish-slaves-didn-t-build-pyramids (vain hakutiivistelmä); https://egymonuments.gov.eg/monuments/workers-town-and-cemetery/ (vain hakutiivistelmä)
+**Pelissä:** "Löytyi 1990" ilman päivää; hevostarinan voi kertoa legendana.
+
+#### E36. Ain Sukhna Khufun aikana
+**Alkuperäinen väite:** 2.7 ja Avoimet 9: Khufun aikainen käyttö [EPÄVARMA]; Archaeology.org: alku Khafren aikana.
+**Tulos:** KORJATTU. IFAO:n sivu: Vanhan valtakunnan päävaihe ulottuu Khefrenistä (Khafre) Pepi II:een, Keski valtakunnan vaihe Mentuhotep IV:stä Senusret I:een. Archaeology.org sanoo saman. Khufun aikana satama ei ilmeisesti ollut käytössä; Khufun Punaisenmeren satama on Wadi al-Jarf.
+**Lähteet:** https://www.ifao.egnet.net/archeologie/ayn-soukhna/ (vain hakutiivistelmä); https://www.ifao.egnet.net/bietud/ayn-soukhna/ (vain hakutiivistelmä); https://archaeology.org/issues/july-august-2022/features/egypt-wadi-el-jarf-port-papyri/ (tiedoston lähde, ei avattu)
+**Pelissä:** Ain Sukhna jätetään pois Khufun hetkestä.
+
+#### E37. Tura-etäisyys
+**Alkuperäinen väite:** 2.1 ja 2.7: 10–15 km, lähteet eroavat.
+**Tulos:** KORJATTU (tarkentui). WP Stone quarries: Tura noin 13 km Gizasta kaakkoon linnuntietä. Merer-aiheiset artikkelit antavat jokimatkan 13–17 km (ja 15–20 km). Merer: lastattu matka Gizaan kaksi päivää, tyhjänä paluu yksi päivä. Pohjois- ja Etelä-Tura vahvistuvat.
+**Lähteet:** https://en.wikipedia.org/wiki/Stone_quarries_of_ancient_Egypt (vain hakutiivistelmä); https://the-past.com/review/books/the-red-sea-scrolls-how-ancient-papyri-reveal-the-secrets-of-the-pyramids-2/ (vain hakutiivistelmä); https://www.freethink.com/culture/papyrus-reveals-great-pyramid (vain hakutiivistelmä)
+**Pelissä:** "Noin 13 km linnuntietä, jokea pitkin hieman enemmän; ylös kaksi päivää, alas yksi."
+
+#### E38. Ramppiteoriat
+**Alkuperäinen väite:** 2.1: suora, spiraali ja siksak [EPÄVARMA]; Houdin todistamaton; Hatnubin ramppi on louhoksen ramppi.
+**Tulos:** VAHVISTUI. Pieniä ramppeja on löydetty, suurta rakennusramppia ei. Suoran rampin ongelma on pituus (~1,5 km) ja jälkien puuttuminen; spiraali peittäisi kulmat ja reunat. Menetelmä on edelleen avoin.
+**Lähteet:** https://archive.archaeology.org/0705/etc/pyramid.html (vain hakutiivistelmä); https://arxiv.org/pdf/2511.06112 (vain hakutiivistelmä); https://www.americanscientist.org/sites/americanscientist.org/files/200541892740_306.pdf (vain hakutiivistelmä)
+**Pelissä:** Ramppeja esitetään "tutkijat arvelevat" -muodossa, ei yhtenä vastauksena.
+
+#### E39. Ankhhafin hauta: G 7510 vai G 7310
+**Alkuperäinen väite:** Osa 3 taulukko ja Avoimet kysymykset 4: MFA ja Wikipedia sanovat G 7510, Commonsin kuvaus G 7310; käytä G 7510.
+**Tulos:** VAHVISTUI. MFA:n tiedot (hakutiivistelmä) kertovat rintakuvan löytyneen 1925 haudasta G 7510 ja tulleen MFA:lle löytöjen jaossa 1927. G 7510 on itäkentän suurin mastaba (Wikipedia, ancient-egypt.co.uk). G 7310 on eri hauta: Harvard Giza Projectin mukaan kaksoismastaba G 7310+7320, jonka omistaja on epävarma (Reisner antoi sille nimen Bauefre/Babaef, toinen tulkinta prinsessa Hetepheres). Commonsin "G 7310" on siis virhe.
+**Lähteet:** https://collections.mfa.org/objects/45982/bust-of-prince-ankhhaf (vain hakutiivistelmä); https://en.wikipedia.org/wiki/Ankhhaf (vain hakutiivistelmä); https://www.ancient-egypt.co.uk/boston/pages/boston_03_2006%20444%201.htm (vain hakutiivistelmä); https://giza.fas.harvard.edu/sites/2152/full/ (vain hakutiivistelmä, G 7310)
+**Pelissä:** Ankhhafin hauta on G 7510, itäkentän suurin mastaba. Commonsin G 7310 -merkintää ei kopioida mihinkään.
+
+#### E40. Ankhhafin asema Merer-päiväkirjassa ja suhde Khufuun
+**Alkuperäinen väite:** "Khufun velipuoli (Sneferun poika), visiiri"; papyrus asettaa hänet Ro-She Khufun johtoon vuonna 26/27; kuvauksessa "valvoi tuolloin satama-aluetta ja viimeisiä rakennusvaiheita".
+**Tulos:** KORJATTU (tarkennus). Papyruksissa Ankhhaf on *iry-pat* ("ylimys") ja Ro-She Khufun (Ra-shi-Khufu) päällikkö; visiirin titteliä papyrukset eivät hänelle anna. Visiirin titteli tunnetaan hänen haudastaan, ja on epäselvää, kenen kuninkaan aikana hän sitä kantoi; MFA ja Wikipedia sijoittavat visiirikauden Khafren aikaan. Sneferun poikana häntä pidetään todennäköisenä, ei varmana ("likely a son of Sneferu"); hänen vaimonsa Hetepheres oli todennäköisesti Sneferun tytär. "Viimeiset rakennusvaiheet" on popularisoinnin tulkinta ("project manager during completion"), ei papyruksen sanamuoto.
+**Lähteet:** https://en.wikipedia.org/wiki/Diary_of_Merer (vain hakutiivistelmä); https://en.wikipedia.org/wiki/Ankhhaf (vain hakutiivistelmä); https://www.history.com/news/egypts-oldest-papyri-detail-great-pyramid-construction (vain hakutiivistelmä); https://ancientegyptonline.co.uk/p-ankhhaf/ (vain hakutiivistelmä)
+**Pelissä:** Vuonna 26/27 Ankhhaf esiintyy ylimyksenä ja Ro-She Khufun päällikkönä; älä kutsu häntä tuon kohtauksen aikaan visiiriksi. "Todennäköisesti Khufun velipuoli".
+
+#### E41. Ankhhafin rintakuva MFA 27.442
+**Alkuperäinen väite:** Maalattu kalkkikivi, 50,6 cm, MFA 27.442.
+**Tulos:** VAHVISTUI osittain. Tunniste 27.442 (Museum Expedition), löytö G 7510:stä 1925, MFA:lle 1927, kalkkikivi ohuen kipsipinnan kanssa: vahvistuu kahdesta lähteestä. Korkeutta 50,6 cm ei saatu näkyviin, koska MFA:n sivu ei auennut.
+**Lähteet:** https://collections.mfa.org/objects/45982 (vain hakutiivistelmä); https://the-past.com/?p=88009 (vain hakutiivistelmä); https://en.wikipedia.org/wiki/Ankhhaf (vain hakutiivistelmä)
+**Pelissä:** Kuvatekstiin "MFA Boston 27.442, löydetty 1925 haudasta G 7510". Mitta tarkistetaan MFA:lta ennen käyttöä.
+
+#### E42. Hemiunun sukulinja, tittelit ja patsas
+**Alkuperäinen väite:** Isä Nefermaat, äiti Itet, isoisä Sneferu; Khufun veljenpoika; hauta G 4000; Hildesheimin patsas 155,5 cm, Junker 1912.
+**Tulos:** VAHVISTUI, varauksella sukulinjaan. Harvard Giza Project: Hemiunu on "todennäköinen" Nefermaatin poika ja "todennäköinen" Sneferun pojanpoika; hän kantaa titteliä "kuninkaan oma poika" (kunnianimi), ylituomari ja visiiri, "viiden suurin Thotin talossa". Patsas: Roemer- und Pelizaeus-Museum, inv. RPM 1962, Tura-kalkkikivi, 155,5 x 61,5 x 104,7 cm, löytö Junker maaliskuu 1912, G 4000 pohjoinen serdab. Haudan kivissä on Khufun hallitusvuosiin viittaavia merkintöjä. Haudan mittoja ei tällä kierroksella tarkistettu. Huom: yksi hakutiivistelmä väitti häntä Khufun serkuksi, mutta se on tiivistäjän päättelyvirhe; Khufun velipuolen poika on veljenpoika.
+**Lähteet:** https://giza.fas.harvard.edu/objects/54706/full/ (vain hakutiivistelmä); https://egypt-museum.com/hemiunu/ (vain hakutiivistelmä); https://en.wikipedia.org/wiki/Hemiunu (vain hakutiivistelmä)
+**Pelissä:** "Todennäköisesti Khufun veljenpoika". Patsaan tunniste Hildesheim RPM 1962 kannattaa lisätä kuvatekstiin.
+
+#### E43. Nefermaat I:n ajoitus
+**Alkuperäinen väite:** Taulukko: Nefermaat I, "n. 2570 eaa.", Mastaba 16 Meidumissa.
+**Tulos:** KORJATTU. Nefermaat oli Sneferun vanhin poika ja Sneferun visiiri, ja hänet haudattiin Meidumiin (M16), mikä viittaa kuolemaan jo Sneferun aikana, ennen Khufua. "N. 2570 eaa." osuisi Khufun hallitukseen, joten luku näyttää siirtyneen Hemiunun riviltä.
+**Lähteet:** https://ancientegyptonline.co.uk/p-nefermaati/ (vain hakutiivistelmä); https://en.wikipedia.org/wiki/Nefermaat_I (vain hakutiivistelmä, viittaus Meidumiin)
+**Pelissä:** Nefermaat on Khufun aikaan jo kuollut; hän näkyy vain Hemiunun isänä ja Meidumin hanhien haudan omistajana.
+
+#### E44. Meritites I:n lapset ja Khafren äiti
+**Alkuperäinen väite:** Kawabin äitiys varma; Djedefren, Khafren ja Hetepheres II:n äitiys epävarma. Khafren äiti Meritites I tai Henutsen.
+**Tulos:** VAHVISTUI (epävarmuus on oikein merkitty). Kawab on Khufun ja Meritites I:n vanhin poika. Hetepheres II:n äitiys perustuu Meritites I:n haudan katkelmalliseen titulatuuriin. Khafren äitiyttä Meritites I:lle perustellaan piirtokirjoituksella, jossa Khafre kunnioittaa hänen muistoaan, mutta toisten mukaan se kertoo vain kuningattaren kuolleen Khafren aikana; vaihtoehtona Henutsen. Dodson & Hilton 2004 on Wikipedian viite, kirjaa ei avattu.
+**Lähteet:** https://en.wikipedia.org/wiki/Meritites_I (vain hakutiivistelmä); https://en.wikipedia.org/wiki/Khafre (vain hakutiivistelmä); https://ancientegyptonline.co.uk/?p=1958 (vain hakutiivistelmä)
+**Pelissä:** Vain Kawab nimetään Meritites I:n pojaksi. Khafren äitiä ei nimetä.
+
+#### E45. Henutsen, inventaariostele ja pojat
+**Alkuperäinen väite:** Vain titteli "kuninkaan vaimo"; pojat Khufukhaf I ja Minkhaf; G1-c; inventaariostele "tulkittu väärennökseksi".
+**Tulos:** VAHVISTUI, sanamuotoa tarkennettava. Henutsenille todistettu titteli on vain "kuninkaan vaimo". Inventaariostele on aito 26. dynastian esine, jonka papit laativat näennäisesti Khufun aikaiseksi; se ei ole moderni väärennös. G1-c:n etelälaita ei ole linjassa Suuren pyramidin kanssa, joten se lisättiin myöhemmin; Henutsenin haudaksi se on "todennäköisin". Poikien liittäminen Henutseniin esitetään Wikipediassa varmana, mutta muut lähteet eivät tällä kierroksella tätä vahvistaneet.
+**Lähteet:** https://en.wikipedia.org/wiki/Henutsen (vain hakutiivistelmä); https://en.wikipedia.org/wiki/Inventory_Stela (vain hakutiivistelmä); https://ancientegyptonline.co.uk/q-henutsen/ (vain hakutiivistelmä)
+**Pelissä:** "Henutsen, Khufun puoliso; myöhäinen 26. dynastian stele kutsuu häntä prinsessaksi, mutta se on myöhäistä perimätietoa."
+
+#### E46. Djedefren hallituskausi ja venekuoppien kartussit
+**Alkuperäinen väite:** Hallitus noin 7–9 v. [EPÄVARMA]; Djedefren kartussi venekuoppien sulkukivissä.
+**Tulos:** KORJATTU (hallitusvuodet), VAHVISTUI (kartussit). Turinin luettelo antaa 8 vuotta, mutta korkein tunnettu merkintä on "11. karjanlaskennan vuosi", joten hallitus oli vähintään 11 vuotta (tai 22, jos laskenta oli joka toinen vuosi); Verner kannattaa 11:tä. Itäisen venekuopan 41 peitekivessä on louhintamerkintöjä, joissa Djedefren kartussi 18 kertaa: hän hoiti isänsä hautajaiset.
+**Lähteet:** https://ancientegyptonline.co.uk/djedefre/ (vain hakutiivistelmä); https://en.wikipedia.org/wiki/Djedefre (vain hakutiivistelmä); https://journals.librarypublishing.arizona.edu/jaei/article/1046/galley/1041/download (vain hakutiivistelmä, venekuoppa)
+**Pelissä:** Ei vuosilukua Djedefren hallitukselle; "Khufun seuraaja, joka hautasi isänsä ja jonka nimi on venekuopan kivissä" riittää.
+
+#### E47. Meresankh III: hauta, pariveistos ja ikä Khufun aikana
+**Alkuperäinen väite:** n. 2578–2520 eaa. [EPÄVARMA]; hauta G 7530-40, löytö 1927; pariveistos MFA 30.1456; "Khufun aikana lapsi".
+**Tulos:** VAHVISTUI (hauta, löytö, veistos), JÄÄ EPÄVARMAKSI (ikä). Hauta on kallioon hakattu "G 7530 sub" mastaban G 7530/7540 alla, löydetty 1927 Reisnerin retkikunnan viimeisenä kaivauspäivänä. Pariveistos MFA 30.1456, Menkauren aika. Luuranko: kuolinikä 50–55 v. Haudan merkinnät vuodesta 1 ja 2 liitetään yleensä Shepseskafin alkuun, mikä ei sovi yhteen Wikipedian vuosilukujen 2578–2520 kanssa. Jos hän kuoli Shepseskafin alussa 50–55-vuotiaana, hän syntyi Khafren tai Djedefren aikana tai hieman ennen. Khufun 27. vuonna hän oli siis korkeintaan pieni lapsi, todennäköisesti ei vielä syntynyt.
+**Lähteet:** https://en.wikipedia.org/wiki/Tomb_of_Meresankh_III (vain hakutiivistelmä); https://collections.mfa.org/objects/147324 (vain hakutiivistelmä); https://en.wikipedia.org/wiki/Meresankh_III (vain hakutiivistelmä); https://giza-it.mused.org/stories/82/who-was-queen-meresankh-iii (vain hakutiivistelmä)
+**Pelissä:** Meresankh III:ta ei sijoiteta Khufun 27. vuoden kohtaukseen; hänen hautansa on tulevaisuutta.
+
+#### E48. Khufun norsunluupatsas
+**Alkuperäinen väite:** 7,5 cm, Kairo JE 36143, Abydos 1903 Petrie, punainen kruunu; Hawass: 26. dynastian jäljitelmä.
+**Tulos:** VAHVISTUI. Petrie löysi patsaan 1903 Abydoksen Kom el-Sultanista; JE 36143; 7,5 cm; Ala-Egyptin punainen kruunu. Tyylillisesti (kruunun kaari korvien ympäri) se voi olla aikalainen, mutta osa tutkijoista, erityisesti Hawass löytöyhteyden perusteella, ajoittaa sen 26. dynastiaan. Ainoa varmasti Khufun nimeä kantava kolmiulotteinen kuva.
+**Lähteet:** https://en.wikipedia.org/wiki/Khufu_Statuette (vain hakutiivistelmä); https://madainproject.com/ivory_statuette_of_khufu (vain hakutiivistelmä); https://www.gizapyramids.org/static/pdf%20library/hawass_fs_mokhtar.pdf (vain hakutiivistelmä, Hawassin oma artikkeli)
+**Pelissä:** "Pienoispatsas, jonka ajoitus on kiistanalainen", kuten osa 3 jo ehdottaa.
+
+#### E49. Nefertiabetin stele
+**Alkuperäinen väite:** Louvre E 15591, hauta G 1225, todennäköisesti Khufun sisar, ehkä tytär.
+**Tulos:** VAHVISTUI. Brysselin ULB:n Polychrome Hieroglyph Research Project: Louvre E.15591, Giza mastaba G 1225, 4. dynastia, Khufun aika. Wikipedia: todennäköisesti Sneferun tytär eli Khufun sisar, mahdollisesti Khufun tytär. Kuvaus (pantterintalja, uhripöytä, hyvin säilyneet värit) täsmää.
+**Lähteet:** https://phrp.ulb.be/MonumentDetail.php?MonKey=16 (vain hakutiivistelmä); https://en.wikipedia.org/wiki/Nefertiabet (vain hakutiivistelmä); https://egypt-museum.com/stele-of-princess-nefertiabet/ (vain hakutiivistelmä)
+**Pelissä:** "Prinsessa Nefertiabet, kuninkaan tytär" on stelen oma titteli; suhde Khufuun jätetään avoimeksi.
+
+#### E50. Kawabin ja Djedefhorin haudat
+**Alkuperäinen väite:** Kawab G 7110-7120 (visiiri, vanhin poika), Djedefhor G 7210-7220.
+**Tulos:** VAHVISTUI. Kawab: Khufun ja Meritites I:n vanhin poika, visiiri, kaksoismastaba G 7110–7120, puoliso Hetepheres II, tytär Meresankh III. G 7210–7220 on Hordjedefin (Djedefhor) ja vaimon kaksoismastaba.
+**Lähteet:** https://en.wikipedia.org/wiki/Kawab (vain hakutiivistelmä); https://en.wikipedia.org/wiki/Giza_East_Field (vain hakutiivistelmä); https://ancientegyptonline.co.uk/p-kawab/ (vain hakutiivistelmä)
+**Pelissä:** Kawab on Khufun 27. vuonna todennäköisesti elossa tai juuri kuollut; kuolinvuotta ei tiedetä, joten häntä ei kannata näyttää kohtauksessa ilman varausta.
+
+#### E51. Kaninisutin ajoitus
+**Alkuperäinen väite:** Taulukko: "Khufu tai 5. dynastian alku [EPÄVARMA]"; G 2155; KHM Wien inv. 8006.
+**Tulos:** KORJATTU. G 2155 ja KHM 8006 vahvistuvat (HGP:n Kaninisut [I] -sivu, Wikipedia). Ajoitus on lähteissä "4. dynastian loppu tai 5. dynastian alku" ja museon luettelossa 5. dynastia; mikään lähde ei sijoita häntä Khufun aikaan. Kappeli löydettiin 1913 ja siirrettiin Wieniin 1914.
+**Lähteet:** https://en.wikipedia.org/wiki/Mastaba_of_Kaninisut (vain hakutiivistelmä); https://giza.digitalhumanities.fas.harvard.edu/ancientpeople/591/full/ (vain hakutiivistelmä)
+**Pelissä:** Kaninisut ei ole Khufun aikalainen; hänen kappelinsa reliefit (myös laivakuva osa 5:ssä) ovat myöhempi vertailuaineisto.
+
+#### E52. Wepemnofret
+**Alkuperäinen väite:** Khufun poika, hauta G 1201.
+**Tulos:** VAHVISTUI. Laattastele Hearst-museo (Berkeley) 6-19825, löydetty paikaltaan G 1201:n itäjulkisivulta, Reisnerin Hearst-retkikunta 1905, ajoitus Khufun hallitus; titteleissä "kuninkaan poika". Että hän oli juuri Khufun poika, on päättelyä, ei stelen sanamuoto. Ajoitus "k. n. 2589–2580" ja "Cemetery 1200:n vanhin" jäivät tarkistamatta.
+**Lähteet:** https://giza.digitalhumanities.fas.harvard.edu/ancientpeople/1923/full/ (vain hakutiivistelmä); https://giza.fas.harvard.edu/objects/45817/full/ (vain hakutiivistelmä); https://ancient-egypt.co.uk/hearst/pages/_SJH5104.htm (vain hakutiivistelmä)
+**Pelissä:** "Prinssi Wepemnofret, Khufun aikainen kuninkaan poika"; museotunnisteeksi Hearst 6-19825.
+
+#### E53. Hetepheres I:n haudan löytöpäivä
+**Alkuperäinen väite:** "Löytö 1925 (Reisner)"; Avoimet kysymykset 11: 8. vai 9.3.1925.
+**Tulos:** JÄÄ EPÄVARMAKSI, tarkennus. Lähteet antavat kolme päivää: 2.2.1925 (kolmijalan jalka luiskahti rakoon), 8.3.1925 (Alan Rowe) ja 9.3.1925 (kuvaaja huomasi kipsilaikun). Reisner oli tuolloin Yhdysvalloissa; löydön teki retkikunnan kuvaaja ja työnjohtaja Ahmed Said. "Vuonna 1925, Reisnerin johtama Harvardin ja MFA:n retkikunta" on turvallinen muoto, "maaliskuussa 1925" ei ole.
+**Lähteet:** https://en.wikipedia.org/wiki/Tomb_of_Hetepheres_I (vain hakutiivistelmä); https://en.wikipedia.org/wiki/Hetepheres_I (vain hakutiivistelmä); https://the-past.com/feature/dows-dunham-and-the-tomb-of-queen-hetepheres (vain hakutiivistelmä); https://gizamedia.rc.fas.harvard.edu/documents/manuelian_jarce_53_2017.pdf (vain hakutiivistelmä)
+**Huom. (tarkistaja 7.10.2026):** E29 ja E72 eivät löytäneet päivää 9.3. ja nimeävät kipsin havainneeksi valokuvaaja Mohammedani Ibrahimin. National Geographicin tiivistelmä antaa havainnolle päivän 2.2. tai 9.2.1925, joten "9.3." on todennäköisesti sekaannus päivään 9.2.; kammioon kurkistettiin 7.–8.3.1925. Pelin muoto "1925" ilman päivää on joka tapauksessa oikea.
+**Pelissä:** "Löydettiin 1925 Reisnerin retkikunnan kaivauksissa" ilman päivää.
+
+#### E54. Kuvalähteiden lisenssit (osa 3 ja osa 5)
+**Alkuperäinen väite:** Osa 3: `Ägyptisches Museum Kairo 2019-11-09 Cheops 01.jpg` "lisenssiä ei saatu", Westcar-kuva ja Hetepheres II + Meresankh III -pariveistos "EI VAHVISTETTU". Osa 5: lisenssit tarkistettu Commons-API:lla.
+**Tulos:** JÄÄ EPÄVARMAKSI. Commons-API ja Commons-sivut olivat estettyjä, joten yhtään lisenssiä ei voitu tarkistaa. Westcar: World History Encyclopedia kertoo kuvan tekijäksi Keith Schengili-Robertsin ja lisenssiksi CC BY-SA (versio ei näkynyt). Cheops 01 -tiedostosta ei löytynyt hakutietoa. Djehoutyn muut tiedostot osa 5:ssä ovat CC BY-SA 4.0, mikä viittaa samaan, mutta se on oletus, ei tarkistus.
+**Lähteet:** https://www.worldhistory.org/image/6480/the-westcar-papyrus/ (vain hakutiivistelmä)
+**Pelissä:** Osa 3:n kolme vahvistamatonta tiedostoa ja kaikki osa 5:n lisenssit pitää ajaa Commons-API:n läpi ympäristössä, jossa commons.wikimedia.org on sallittu, ennen julkaisua.
+
+#### E55. Osa 5: tiedostokohtaiset epäilyt
+**Alkuperäinen väite:** Taulukon rivit `Khufukhaf I and his wife Nefertkau.jpg` (Hermann Junker, 1900, PD, G 7140), `Tomb of Queen Meresankh III ... ca. 2640 BCE`, `Relief of Hemiunu.jpg` (MFA Boston), `Reserve head of a woman.jpg` (vuosi 2551–2494 B.C.).
+**Tulos:** KORJATTU / JÄÄ EPÄVARMAKSI.
+- Khufukhaf I: kaksoismastaba G 7130–7140 on itäkentässä, ja sen kaivoi Reisnerin Harvard–MFA-retkikunta; Junker kaivoi länsikenttää vasta 1912 alkaen. Tekijä "Hermann Junker" ja vuosi 1900 ovat siis epäuskottavia, ja PD-peruste voi nojata väärään tekijätietoon. Käyttö vasta kun alkuperä selviää.
+- Meresankh III:n tiedostonimen "ca. 2640 BCE" on liian varhainen (hauta on Khafren ja Menkauren jälkeiseltä ajalta, ks. E47). Tiedostonimeä ei voi muuttaa, mutta pelin kuvatekstiin ei saa kopioida vuotta.
+- Hemiunun reliefi MFA:ssa: MFA:lla on G 4000:n reliefikatkelmia (esim. 25-12-304a), joten sijainti on uskottava, mutta kuvan esinettä ei tunnistettu.
+- Reserve head of a woman: Vuosi-sarakkeessa on esineen ajoitus, ei kuvan päiväys; sarake on epäjohdonmukainen.
+**Lähteet:** https://ancientegyptonline.co.uk/g7140/ (vain hakutiivistelmä); https://en.wikipedia.org/wiki/Nefertkau_II (vain hakutiivistelmä); https://www.mfa.org/collections/object/relief-fragment-from-tomb-of-hemiunu-479479 (vain hakutiivistelmä)
+**Pelissä:** Khufukhaf-kuva siirretään varalle, kunnes tekijä ja PD-peruste on tarkistettu.
+
+#### E56. Osa 5: myöhäisten hautojen aikalaisuus
+**Alkuperäinen väite:** Aikalaisuushuomiot luettelevat leipurit, obeliskin, Pernebin ja Meresankh III:n, mutta eivät Tin, Mererukan eikä Ptahhotepin mastabaa.
+**Tulos:** KORJATTU (täydennys). Ti oli 5. dynastian virkamies (Abusirin pyramidien valvoja), Mereruka Tetin visiiri 6. dynastiassa. Ptahhotepin hauta on niin ikään 5. dynastian loppua (ei tarkistettu tällä kierroksella). Nämä ovat 100–300 vuotta Khufua myöhempiä, eikä niitä ole merkitty.
+**Lähteet:** https://www.lonelyplanet.com/egypt/saqqara-memphis-dahshur/attractions/mastaba-of-ti/a/poi-sig/1453975/1330429 (vain hakutiivistelmä); https://egymonuments.gov.eg/monuments/tomb-of-mereruka/ (vain hakutiivistelmä); https://si.edu/object/archives/components/sova-eepa-1973-001-ref8493 (vain hakutiivistelmä)
+**Pelissä:** Tin ja Mererukan kuvat ovat arkielämän yleisviite, eivät Khufun ajan todiste; aikalaisuushuomioon lisätään rivi.
+
+#### E57. Heit el-Ghurab ei ole Khufun aikainen
+**Alkuperäinen väite:** Varoitus 1: HeG ajoittuu Khafren ja Menkauren aikaan, Khufu vain "luultavasti"; Khufun työläiskylää ei ole löydetty.
+**Tulos:** VAHVISTUI. AERA kuvaa HeG:n "Menkauren, Khafren ja luultavasti Khufun" aikaiseksi; kaivetut kerrokset ovat Khafren ja Menkauren ajalta, ja syvemmällä on nähty vilauksia vanhemmasta, mahdollisesti Khufun aikaisesta vaiheesta, jota ei ole vielä kaivettu. AERA kuvaa HeG:tä myös satamaksi ja varastoalueeksi, ei pelkäksi työläiskyläksi.
+**Lähteet:** https://aeraweb.org/projects/ (vain hakutiivistelmä); https://aeraweb.org/wp-content/uploads/2022/08/AERA_2018.pdf (vain hakutiivistelmä); https://melc.washington.edu/news/2018/10/03/first-fall-2018-arce-lecture-lost-city-pyramids-dr-mark-lehner (vain hakutiivistelmä)
+**Pelissä:** HeG-yksityiskohdat analogiana "samaa järjestelmää"; voi lisätä, että Lehner epäilee Khufun ajan kerroksen olevan syvemmällä.
+
+#### E58. Kuninkaan karjatilat ja eläinmäärät (Redding)
+**Alkuperäinen väite:** 11 nautaa ja 37 lammasta/vuohta päivässä, yli 4 000 paunaa lihaa; eläimet Niilin suiston kylistä; "kuninkaan karjatilat" ei varmennettu [EPÄVARMA].
+**Tulos:** VAHVISTUI (luvut) ja tarkentui (termi). Reddingin mallissa päivätarve 11 nautaa ja 37 lammasta/vuohta; ylläpitoon tarvittaisiin noin 21 900 naudan ja 54 750 lampaan/vuohen karja, joka vaatisi noin 640 neliömailia eli noin 5 % suistosta. Aineisto 175 000 luuta. AERAn oma tiivistelmä puhuu "farms and ranches throughout the Nile Valley and Delta", joten "karjatilat" on AERAn omaa sanastoa, mutta "kuninkaan" omistus on tulkinta. Luvut ovat mallinnusta, eivät mittauksia.
+**Lähteet:** https://www.nbcnews.com/news/all/how-did-they-feed-10-000-pyramid-builders-flna6C9580357 (vain hakutiivistelmä); https://archaeology.org/news/2013/04/25/130425-egypt-pyramids-food/ (vain hakutiivistelmä); https://www.livescience.com/29030-bureaucracy-meat-production-crucial-to-building-egypt-s-pyramids.html (vain hakutiivistelmä); https://aeraweb.org/projects/ (vain hakutiivistelmä, "farms and ranches")
+**Pelissä:** "Valtion karjatilat suistossa" on turvallinen; "kuninkaan karjatilat" sopii pelin kerrontaan, kun ei väitetä sitä tutkijan sanamuodoksi.
+
+#### E59. Vasikoiden ikä ja status
+**Alkuperäinen väite:** Vasikat nuoria uroksia 10–12 kk; korkeimman statuksen ruokavalio.
+**Tulos:** VAHVISTUI, pieni tarkennus. Reddingin AERAGram-teksti: Pottery Mound -kasan naudat 10–12 kk uroksia, korkeimman statuksen ruoka. Koko asutuksessa jakauma laajempi: noin 30 % kuoli alle 8 kk, 50 % alle 16 kk, 20 % yli 24 kk; urosten ja naaraiden suhde 6:1. Lehdistössä Redding: "ei yhtään yli 18 kk naudan luuta" (yhdestä kasasta).
+**Lähteet:** https://aeraweb.org/?p=3715 (vain hakutiivistelmä); https://www.livescience.com/42717-leopard-teeth-found-at-giza-pyramids.html (vain hakutiivistelmä); https://www.nbcnews.com/science/science-news/leopard-teeth-calf-bones-found-near-pyramids-n14546 (vain hakutiivistelmä)
+**Pelissä:** Eliitin pöydässä vasikkaa; muualla vanhempaakin nautaa ja enemmän lammasta ja vuohta.
+
+#### E60. Panimot Heit el-Ghurabissa
+**Alkuperäinen väite:** AERA 2015: panimoita ei löydetty; Wikipedia väittää toisin [EPÄVARMA].
+**Tulos:** VAHVISTUI (AERAn kanta). AERA: olut oli perusravintoa ja "olutruukut" ovat leipämuottien jälkeen yleisin keramiikkatyyppi, mutta varmaa panimoa ei ole tunnistettu; 2006–2007 Pedestal Building -kompleksin arveltiin "ehkä" sisältäneen panimon. Uudemmista (2016–2024) raporteista ei löytynyt panimolöytöä. Abydoksen 2021 "maailman vanhin panimo" on eri paikka ja aika (1. dynastia), ei Gizaa.
+**Lähteet:** https://aeraweb.org/season-of-migration-to-the-south/ (vain hakutiivistelmä); https://gizamedia.rc.fas.harvard.edu/images/MFA-images/Giza/GizaImage/full/library/lehner_aeragram8_2_2007.pdf (vain hakutiivistelmä)
+**Pelissä:** Olutruukkuja kaikkialla, olutta valmistetaan, mutta ei nimetä "löydettyä panimoa".
+
+#### E61. Leipomot ja bedja-muotit
+**Alkuperäinen väite:** Bedja-muotit, kuuma tuhka, kansimuotti, munakennopainaumat; leipomo 1991 ruudussa A7; Lehner ja Ed Wood 1994.
+**Tulos:** VAHVISTUI. Open Context (AERA:n aineisto) ja Google Arts & Culture kertovat saman: leipomo löydettiin 1991 ruudusta A7, vanhin "teollisen mittakaavan" leipomo, bedja-muotit, munakennomainen tuhkakerros, kansimuotti; Wood ja Lehner rakensivat kopion National Geographicin vuoden 1994 numeroa varten. AERA lisää, että leipämuotit ovat HeG:n yleisin keramiikkatyyppi.
+**Lähteet:** https://opencontext.org/documents/74b263b5-1bdc-43ce-9cc8-1a55593d68d5 (vain hakutiivistelmä); https://artsandculture.google.com/story/how-did-ancient-egyptians-bake-bread/XgWRhMWH03I98Q (vain hakutiivistelmä); https://gizamedia.rc.fas.harvard.edu/images/MFA-images/Giza/GizaImage/full/library/lehner_aeragram8_2_2007.pdf (vain hakutiivistelmä)
+**Pelissä:** Voi käyttää sellaisenaan; leipomo kuvataan HeG-analogiana (E57).
+
+#### E62. Merer-tilikirjojen annokset ja palkka
+**Alkuperäinen väite:** Kuuden idjerun johtaja hakee Heliopoliksesta 40 khar-säkkiä ja suuren heqat-mitan leipää; tarkat päiväannokset [EI LÖYDETTY]; palkka ruokana.
+**Tulos:** VAHVISTUI ja täydentyi. Heliopolis-merkintä löytyy sanatarkasti julkaistuista käännöksistä. Tallet ja Lehner (Red Sea Scrolls, LRB:n arvio 2025) kertovat, että tileissä on leivän ja viljan lisäksi siipikarjaa, kalaa, hedelmiä, hunajaa, kakkuja ja useita juomia: *henket* (vähäalkoholinen olut) sekä erikoisoluet *seremet* ja *sekhepet*. Lisäksi tileissä on "palkkioina" annettuja kangaspaloja (pellavaa), jotka tulkitaan maksuksi. Tarkkoja henkilökohtaisia päiväannoksia ei löytynyt edelleenkään.
+**Lähteet:** https://www.lrb.co.uk/the-paper/v47/n08/robert-cioffi/in-gold-and-lapis-lazuli (vain hakutiivistelmä); https://historyofinformation.com/detail.php?id=3553 (vain hakutiivistelmä); https://www.amusingplanet.com/2022/07/the-diary-of-merer-4500-year-old.html (vain hakutiivistelmä)
+**Pelissä:** Palkka on leipää, olutta ja pellavakangasta; olutlajeja voi nimetä (henket). Ei tarkkoja "10 leipää ja 2 kannua" -lukuja Gizalle.
+
+#### E63. Oluen päiväannos (1,3 gallonaa) ja "10 leipää"
+**Alkuperäinen väite:** Wikipedia: noin 1,3 gallonaa päivässä [EPÄVARMA].
+**Tulos:** JÄÄ EPÄVARMAKSI. 1,3 gallonan lukua ei löytynyt toisesta lähteestä. The Past (Hilary Wilson) toteaa yleisellä tasolla, että tyypillinen työläisen päiväpalkka oli kymmenen kooltaan määrittelemätöntä leipää ja olutmitta, joka vaihteli kolmasosasta kannua kahteen kannuun tuntemattoman tilavuuden kannuja; tämä ei ole Gizan 4. dynastian luku.
+**Lähteet:** https://the-past.com/?p=113921 (vain hakutiivistelmä); https://www.worldhistory.org/article/1033/beer-in-ancient-egypt/ (vain hakutiivistelmä)
+**Pelissä:** Ei litramääriä; "kannu olutta päivässä" yleisenä kuvana riittää.
+
+#### E64. Phyle/za-järjestelmä ja ryhmien koko
+**Alkuperäinen väite:** Ryhmät (gang) ja phylet (*sa*); Wikipedia: zau 40 miestä; Tallet: phyle noin 40 (4 × 10).
+**Tulos:** JÄÄ EPÄVARMAKSI (malleja on kaksi). Egyptin *za* on oikea termi (Merer: "Merer purjehtii za-ryhmineen"). Lehnerin vanhempi Gizan malli (Harvard Magazine 2003 ym.): 2 000 hengen miehistö (crew) jakautuu kahteen 1 000 hengen gangiin, kumpikin viiteen noin 200 hengen phyleen (za), ja phyle kymmeneen noin 20 hengen osastoon. Tallet 2017 päätyy Merer-aineistosta noin 40 hengen za-ryhmään. Ann Macy Roth 1991 (SAOC 48) on phyle-järjestelmän perusteos (Vanhan valtakunnan osa-aikainen kiertävä työ). Ristiriita kannattaa mainita tekstissä; joukkueen koko kuuluu toiselle agentille.
+**Lähteet:** https://www.harvardmagazine.com/2003/07/who-built-the-pyramids-html (vain hakutiivistelmä); https://isac.uchicago.edu/node/3094 (vain hakutiivistelmä); https://www.amusingplanet.com/2022/07/the-diary-of-merer-4500-year-old.html (vain hakutiivistelmä)
+**Pelissä:** Käytä sanaa *za* (kreik. phyle); koko 40 Merer-aineiston mukaan, ja mainitse, että Lehnerin malli on isompi.
+
+#### E65. Ryhmänimet ("Khufun ystävät")
+**Alkuperäinen väite:** Keventokammioiden punamaalatut merkit: "Friends/Companions of Khufu" ja "The White Crown of Khnum-Khufu is powerful".
+**Tulos:** VAHVISTUI osittain. "Friends of Khufu Gang" ja keventokammioiden työryhmämerkit vahvistuvat (Biblical Archaeology Society, Ahram Online, Colavito Vyse-väärennösväitteen kumoajana). "Valkoinen kruunu" -nimeä en saanut toisesta lähteestä tällä kierroksella: jää yhden lähteen varaan.
+**Lähteet:** https://library.biblicalarchaeology.org/endnote/endnote-3-architecture-of-the-afterlife/ (vain hakutiivistelmä); https://english.ahram.org.eg/NewsContent/9/40/1313/Heritage/Ancient-Egypt/Who-built-the-Pyramids.aspx (vain hakutiivistelmä); https://jasoncolavito.com/who-built-the-great-pyramid.html (vain hakutiivistelmä)
+**Pelissä:** "Khufun ystävät" turvallinen; "Valkoinen kruunu" vasta kun tarkistettu.
+
+#### E66. Märkä hiekka kelkan edessä (Djehutihotep, Amsterdam 2014)
+**Alkuperäinen väite:** Kastelu helpottaa vetoa; Djehutihotep 172 miestä, 60 t; Wikipedia yksi lähde [EPÄVARMA]; Vanhan valtakunnan kelkkakuvia [EI LÖYDETTY].
+**Tulos:** VAHVISTUI ja KORJATTU osittain. Fall, Bonn ym., "Sliding Friction on Wet and Dry Sand", Physical Review Letters 2014 (Amsterdamin yliopisto): sopiva vesimäärä tekee hiekasta noin kaksi kertaa jäykempää kapillaarisiltojen ansiosta, kelkan eteen ei kasaannu hiekkaa ja vetovoima voi pudota noin puoleen. Liika vesi lisää kitkaa taas. Djehutihotepin maalaus (n. 1900 eaa., Keskivaltakunta): 172 miestä, noin 6,8 m korkea patsas, arviolta 58 t (ei 60 t). Vanhan valtakunnan vastine löytyy: Tin mastaban (Saqqara, 5. dynastia, n. 2400 eaa.) kuvassa Tin patsasta vedetään kelkalla ja mies kaataa ruukusta nestettä kelkan eteen. Gizan Khufun ajalta suoraa kuvaa ei ole.
+**Lähteet:** https://physics.aps.org/articles/v7/s51 (vain hakutiivistelmä); https://dare.uva.nl/id/eb31aae0-48a6-4302-abc0-88bf85ead701 (vain hakutiivistelmä); https://csmonitor.com/Science/2014/0502/Ancient-Egyptians-used-wet-sand-to-drag-massive-pyramid-stones-say-scientists (vain hakutiivistelmä); https://archaeology.org/news/2014/05/02/140502-egypt-pyramid-sand/ (vain hakutiivistelmä); https://sites.uwm.edu/nosonovs/?p=665 (vain hakutiivistelmä, Ti-kuva); https://en.wikipedia.org/wiki/Djehutihotep (vain hakutiivistelmä)
+**Pelissä:** Vesimies kelkan edessä on perusteltu kuva; oppimiskohta: "oikea määrä vettä, ei liikaa".
+
+#### E67. Kupari- ja doleriittityökalut, kupari Siinailta
+**Alkuperäinen väite:** Kuparitaltat, -sahat, putkiporat; doleriittikuulat kovalle kivelle; kupari Siinailta Wadi al-Jarfin kautta; UCL ei auennut.
+**Tulos:** VAHVISTUI. Usea lähde luettelee Vanhan valtakunnan välineiksi kuparitaltat, sahat, putkiporat, doleriittinuijat ja hiovan hiekan; graniittia "mustelmoitiin" doleriittikuulilla lähes valmiiseen pintaan. Harvardin Giza-arkistossa on Gizan kuparitalttoja. Tallet ja Marouard (Near Eastern Archaeology 77.1, 2014): Wadi al-Jarf palveli Sneferun ja erityisesti Khufun retkiä Siinain kupari- ja turkoosikaivoksille (Wadi Maghara).
+**Lähteet:** https://theglobaleducationproject.org/egypt/studyguide/6stone.php (vain hakutiivistelmä); https://giza.digitalhumanities.fas.harvard.edu/objects/7642/full/ (vain hakutiivistelmä); https://museums.bristol.gov.uk/narratives.php?irn=2 (vain hakutiivistelmä); https://www.ancientportsantiques.com/wp-content/uploads/Documents/PLACES/RedSea/WadiJarf-Tallet2014.pdf (vain hakutiivistelmä)
+**Pelissä:** Kuparitaltta ja doleriittikuula ovat turvallisia esineitä; kupari tulee Siinailta Punaisenmeren sataman kautta.
+
+#### E68. Työläisten luunmurtumat, amputaatiot ja hoito
+**Alkuperäinen väite:** Murtumat parantuneet, "yksi käsivarren amputaatio"; amputoitu eli noin 20 vuotta [EPÄVARMA].
+**Tulos:** KORJATTU. Hawassin tiimin aineistossa (antropologit Fawzia Hussein, Azza Sarry El-Din) noin 44 % miestyöläisistä oli murtumia, joista noin 90 % parantunut hyvään asentoon; 12 käsivarren murtumaa lastoitettu puulaudoilla. Amputaatioita on kaksi, sääri ja käsivarsi, ja luiden päät olivat pyöristyneet vuosien elämän jälkeen. Hawassin mukaan sääriamputoitu eli 14 vuotta; "20 vuotta" ei vahvistunut. Mainitaan myös kallo, jossa on leikkauksen (trepanaation) jälkiä.
+**Lähteet:** https://library.biblicalarchaeology.org/article/who-really-built-the-pyramids/ (vain hakutiivistelmä); https://popular-archaeology.com/?p=13697 (vain hakutiivistelmä, Hawass-haastattelu); https://the-past.com/feature/pain-relief-in-ancient-egypt-part-2-physical-and-magical-interventions/ (vain hakutiivistelmä); https://egymonuments.gov.eg/en/monuments/workers-town-and-cemetery/ (vain hakutiivistelmä)
+**Pelissä:** Lastoitettu käsivarsi ja amputaation selvinnyt työtoveri ovat vahvoja, todistettuja yksityiskohtia (Khafre–Menkaure-ajan hautausmaalta).
+
+#### E69. Hawassin vuorot ja työpäivä
+**Alkuperäinen väite:** Kolmen kuukauden vuorot, "12 tuntia päivässä" [EPÄVARMA, yksi katkelma].
+**Tulos:** Vuorot VAHVISTUI (Hawassin väitteenä), työpäivä JÄÄ EPÄVARMAKSI. Tammikuun 2010 uutiset (CBC, Christian Science Monitor) lainaavat Hawassia: työläiset söivät lihaa säännöllisesti ja tekivät kolmen kuukauden vuoroja. 12 tunnin päivälle ei löytynyt lähdettä.
+**Lähteet:** https://www.cbc.ca/technology/story/2010/01/11/tech-egypt-pyramid.html (vain hakutiivistelmä); https://proof.csmonitor.com/World/2010/0111/Egypt-says-Jewish-slaves-didn-t-build-pyramids (vain hakutiivistelmä)
+**Pelissä:** "Kolmen kuukauden vuoro" Hawassin tulkintana; tuntimäärää ei mainita.
+
+#### E70. Työläisten hautalahjat
+**Alkuperäinen väite:** Leipä ja olut haudassa, ei mumifiointia; yksi lähde [EPÄVARMA].
+**Tulos:** VAHVISTUI. Vuoden 2010 löydöt: matalat kuilut, kymmenkunta luurankoa sikiöasennossa pää länteen, ympärillä ruukkuja, joissa oli ollut olutta ja leipää tuonpuoleista varten; ei mumifiointia, ei kultaa.
+**Lähteet:** https://www.cbc.ca/technology/story/2010/01/11/tech-egypt-pyramid.html (vain hakutiivistelmä); https://www.chinadaily.com.cn/world/2010-01/11/content_9301841.htm (vain hakutiivistelmä); https://cbsnews.com/news/more-evidence-slaves-didnt-build-pyramids (vain hakutiivistelmä)
+**Pelissä:** Voi käyttää: olut- ja leipäruukut haudassa, vainaja kyljellään pää länteen.
+
+#### E71. Osiris ja Isis Khufun aikana
+**Alkuperäinen väite:** Osiris varmasti vasta 5. dynastian puolivälistä "(Pyramid Texts, Unasin pyramidin loppuosa)"; avoimissa kysymyksissä "vasta 5. dynastian lopun lähteissä"; Isis [EI LÖYDETTY].
+**Tulos:** KORJATTU (tarkennus). Varhaisimmat Osiris-maininnat ovat yksityishautojen uhrikaavoista Niuserren ajalta, uusien dokumenttien mukaan ehkä jo Neferirkaren ajalta (5. dynastian puoliväli); varhaisin kuva Djedkare Isesin ajan lohkossa; Pyramiditekstit (Unas) ovat 5. dynastian lopusta. Muistio sekoittaa nämä ja on sisäisesti ristiriitainen. Isis mainitaan ensi kerran 5. dynastian Pyramiditeksteissä. Kumpikaan ei esiinny 4. dynastiassa, joten muistion käytännön ohje (NPC:t eivät mainitse heitä) pitää.
+**Lähteet:** https://more.bham.ac.uk/birminghamegyptology/wp-content/uploads/sites/54/2026/05/poussard_poster_osiris-compressed.pdf (vain hakutiivistelmä); https://www.ucl.ac.uk/museums-static/digitalegypt/chronology/kingdjedkare.html (vain hakutiivistelmä); https://dlab.epfl.ch/wikispeedia/wpcd/wp/i/Isis.htm (vain hakutiivistelmä); https://www.superstock.com/asset/statuette-isis-horus-late-period-isis-name-first-attested-fifth/6145-29798403 (vain hakutiivistelmä, museon esineteksti)
+**Pelissä:** Khufun ajan ihmiset eivät tunne Osirista eivätkä Isistä; jos peli kertoo sen, oppimiskohta on "nämä jumalat tulevat kirjoihin vasta noin sata vuotta myöhemmin".
+
+#### E72. Hetepheres I:n kanooppiarkku ja mumifiointi 4. dynastiassa
+**Alkuperäinen väite:** Hauta G 7000X löydettiin 9.3.1925 (Reisner) 85 jalan syvyydestä; kanooppilaatikossa 3 % natronliuos ja elimiä; "Khufun äidin (tai vaimon)".
+**Tulos:** KORJATTU. Kuilun suun löysi 2.2.1925 Reisnerin retkikunnan valokuvaaja Mohammedani Ibrahim, kun kameran jalusta painui kipsiin; hautakammioon kurkistettiin ensi kerran 7.–8.3.1925 (Alan Rowe), Reisnerin ollessa Yhdysvalloissa; kaivaus jatkui 1926 ja sarkofagi avattiin 1927 tyhjänä. Kuilu noin 27 m (27,4 m, noin 90 jalkaa). Alabasterinen kanooppiarkku oli ehjä, sisällä elinten jäänteitä noin 3 %:n natronliuoksessa; se on vanhin yksilöön liitettävä kanooppiesine ja varhainen natronin käytön todiste. Hetepheres I on Khufun äiti (Sneferun puoliso); "tai vaimon" on aiheeton.
+**Lähteet:** https://en.wikipedia.org/wiki/Tomb_of_Hetepheres_I (vain hakutiivistelmä); https://www.nationalgeographic.com/history/history-magazine/article/this-egyptian-queens-tomb-lay-untouched-for-over-4000-years (vain hakutiivistelmä); https://gizamedia.rc.fas.harvard.edu/documents/hawass_treasures_152-155.pdf (vain hakutiivistelmä); https://www.swissmummyproject.uzh.ch/en/research_projects/egyptology/canopicjars.html (vain hakutiivistelmä); https://www.spurlock.illinois.edu/exhibits/online/mummification/history2.html (vain hakutiivistelmä)
+**Pelissä:** Kanooppiarkku ja natron ovat hyvä oppimiskohta: sisäelinten poisto alkaa juuri Khufun äidin kohdalla.
+
+#### E73. Reserve heads
+**Alkuperäinen väite:** 37 tunnettua, Khufu–Khafre, Borchardtin korviketulkinta; vain Wikipedia [EPÄVARMA].
+**Tulos:** VAHVISTUI, lukumäärä vaihtelee. Met Museum (Roehrig): "hieman yli kolmekymmentä", pääosin Gizalta ja Khufun–Khafren ajalta; muut lähteet 36 tai 37, joista Gizalta 27. Harvard–MFA-retkikunta löysi 1913 kahdeksan, jaettiin Kairon ja Bostonin kesken. Tulkinnat: korvike päälle (saksalainen arkeologi alussa 1900-lukua), kuvanveiston malli tai muotti; lähes kaikilta puuttuvat korvat, mikä tulkitaan joko tahalliseksi rituaaliseksi vahingoittamiseksi tai ryöstäjien jäljeksi.
+**Lähteet:** https://www.metmuseum.org/art/collection/search/543909 (vain hakutiivistelmä); https://gizamedia.rc.fas.harvard.edu/documents/roehrig_eg_art_pyrs_72-81.pdf (vain hakutiivistelmä); https://collections.mfa.org/objects/141966 (vain hakutiivistelmä); https://egypt-museum.com/reserve-head/ (vain hakutiivistelmä)
+**Pelissä:** Sano "noin kolmekymmentä"; tarkoitus on arvoitus, mikä sopii pelin kysymykseksi.
+
+#### E74. Vaatteet (shendyt) ja kyynärä
+**Alkuperäinen väite:** Pellavainen kietaisuhame kaikilla, ylimyksillä hienompi; työläiset lantioliina tai alasti; naisilla tuppimekko. Kyynärä 52,3 cm, 7 kämmentä, 28 sormea, seked 5½.
+**Tulos:** VAHVISTUI. Vanhassa valtakunnassa arkiasu oli suorakaiteen muotoinen pellavakangas vyötärölle kiedottuna; moni ruumiillisen työn tekijä työskenteli alasti; varakkailla laskostettu lyhyt hame; naisilla olkaimellinen tuppimekko. Kuninkaallinen kyynärä Vanhassa valtakunnassa noin 52,35–52,37 cm, 7 kämmentä × 4 sormea; Suuren pyramidin korkeus 280 kyynärää ja seked 5½ kämmentä. "Kalasiris" on kreikkalainen, myöhäinen nimitys.
+**Lähteet:** https://en.wikipedia.org/wiki/Clothing_in_ancient_Egypt (vain hakutiivistelmä); https://ancientegyptonline.co.uk/clothing/ (vain hakutiivistelmä); https://en.wikipedia.org/wiki/Seked (vain hakutiivistelmä)
+**Pelissä:** Työmaalla miehet lantioliinassa tai alasti; ei nimetä tuppimekkoa "kalasirikseksi" henkilöiden suussa.
+
+### Tekstiin tehdyt korjaukset (merkitty tekstissä **[KORJATTU 7.10.2026, ks. En]**)
+
+1. Tiivistelmä ja suositus: päiväyksen "13. laskennan jälkeinen vuosi" tukee kaksi kohdetta (Merer, Dakhla), ei kolme; venekuopan graffiti on myöhempi (E2).
+2. Tapahtumataulukko: "Vuosi 27 (Dakhla)" → "Vuosi 26/27", retkikunta 400 miestä (E3).
+3. Kuvaushetkien otsikot: yhtenäisesti "26./27. vuosi"; "visiiri Ankhhaf" → "ylimys Ankhhaf" (E1, E16, E40).
+4. G 4000 on Länsikentän toiseksi suurin (n. 52 m), suurin on G 2000 (E25).
+5. Kuningatarpyramidien venekuoppien "ristiriita" on näennäinen (E28).
+6. Hetepheres I: kuilu yli 27 m (ei 26 m); löytö 1925 Reisnerin retkikunnan kaivauksissa, Reisner itse Yhdysvalloissa; "äidin (tai vaimon)" → "äidin" (E29, E53, E72).
+7. Toisen laivan kokoaminen alkoi Grand Egyptian Museumissa 24.12.2025 (E31).
+8. Ain Sukhna ei ollut käytössä Khufun aikana (IFAO: alkaa Khafresta) (E36).
+9. Tura-etäisyys: n. 13 km linnuntietä, jokimatka 13–17 km (E37; vrt. E13, jossa jokimatka 15–20 km).
+10. Ankhhafin tittelit: visiiri tunnetaan haudasta, papyruksissa *iry-pat* (E40).
+11. Nefermaat I: Sneferun aika, ei "n. 2570 eaa." (E43). Kaninisut: ei Khufun aikalainen (E51).
+12. Henutsenin inventaariostele: 26. dynastian papiston teksti, ei moderni väärennös (E45).
+13. Djedefren hallituskausi: Turin 8 v., mutta "11. laskenta" viittaa vähintään 11 vuoteen (E46). Venekuopan kartussimäärään lisätty huomio (E15).
+14. Hemiunun tittelin kirjoitusvirhe "vesiiri" → "visiiri".
+15. Työläisten amputaatiot: kaksi (sääri ja käsivarsi), ei yksi (E68).
+16. Osiris ja Isis: kumpaakaan ei tunneta 4. dynastiassa; Osiris 5. dynastian puolivälistä, Isis 5. dynastian Pyramiditeksteistä (E71).
+17. Tarkistajan jälkikorjaukset: "visiiri Ankhhaf" -jäänteet osissa 1, 2 ja 4 (E40); Tura-etäisyys osissa 1 ja 2 (E37); Ain Sukhnan ja amputaation avoimet kysymykset (E36, E68, E69); Hetepheres I:n kuilun syvyys yhtenäisesti 27,4 m (E29, E72).
+
+**Ei korjattu tekstiin (suositus, yksi lähde tai tulkinta):** pengertien 740 m poisto (E19: lukua ei löytynyt, 825 m Hawass / n. 800 m HGP); kuningattaren kammion harjakaton huippu n. 6,1–6,2 m ja ilmakuilujen muotoilu (E22); G 1200/2000/2100 ovat hautausmaanumeroita, eivät prinssien hautoja (E26); Tin mastaban kelkkakuva (E66, yksi lähde); Meresankh III:n ikä ja Commons-tiedostonimen "ca. 2640 BCE" (E47); Khufukhaf I -kuvan tekijämerkintä ja PD-peruste (E55); myöhäisten (5.–6. dynastia) hautojen aikalaisuusmerkintä osassa 5 (E56).
