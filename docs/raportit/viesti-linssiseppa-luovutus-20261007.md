@@ -30,7 +30,7 @@ Kuittaukset:
 - "vie minut Tallinnaan": kertojan laatikkoon tulee torjuntateksti, eikä lentoa tule.
 - "vie minut Varsovaan": kaupunki vaihtuu ja siirtymälento alkaa.
 - Natiivi torjuu vain sallitun alueen ulkopuoliset. Jos toive "Venetsiaan" kieltäytyy, kyse on workerin vastauksesta, jonka korjaa Pelikoodari.
-- Avoin havainto, joka ei estä VIE:tä: Varsovan yleiskuvaan jäi tumma neliö, ja Google palautti 404 viidelle tiilisisällölle.
+- Avoin havainto, joka ei estä VIE:tä: Varsovan tumma neliö on reikä yhden tiilen kohdalla. Google palautti tiilelle 404 (9 kpl), ja Cesium käsittelee epäonnistuneen tiilen tyhjänä, joten forbidHoles ei auta. Virhe on näkynyt vain tässä ajossa, 1/188 lokikansiosta. Seuraavaksi toistoajo (Varsova kahdesti). Jos reikä toistuu, Google-tileset luodaan uudelleen kerran kaupunkia kohden, kun natiivilokissa on tiilien 404. Cesiumin lokirivit sisältävät Googlen avaimen; poistin sen omista lokeista.
 
 `linssiseppa/sallitut-157` 4af2338e0 (sisältää juna-156:n 8faa57f56 ja NykyinenKaupunkiId:n Siirtosepän äänimaisemalle; NUI:n versio natiivi-ui/sallitut-157b eb6f860f) (omistaja 7.10. 00.4x, vain sallitut kaupungit):
 - OpasSallitut lukee listan /opas/aineistot-vastauksen kentästä `sallitut`, ja viimeisin lista säilyy levyllä.
