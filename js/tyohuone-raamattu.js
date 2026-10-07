@@ -56,7 +56,10 @@ export const RAAMATTU = {
           + '(kuten linna); poikkeus ei avaa muita Euroopan ulkopuolisia kohteita. EUROOPAN KAUPUNKIEN OMAT '
           + 'BLENDER-PARANNUKSET ODOTTAVAT (omistaja 7.10.2026 klo 01.3x: "Ei tehdä noita Euroopan kartta parannuksia '
           + 'vielä. Tehdään linna loppuun mahdollisimman hyväksi"): Tallinna, Visby ja muut kaupunkien 3D-parannukset '
-          + 'aloitetaan vasta omistajan päätöksellä; ensin Olavinlinna valmiiksi.',
+          + 'aloitetaan vasta omistajan päätöksellä; ensin Olavinlinna valmiiksi. EGYPTI (GIZA) ON TOINEN POIKKEUS (omistaja 7.10.2026 klo 08.4x: '
+          + '"Tehdään Egypti kokeeksi loppuun nyt noilla omilla Blender 3D-malleilla mahdollisimman pitkälle valmiiksi, mutta ei tehdä sen jälkeen '
+          + 'muita kaupunkeja"): nykyajan oppaan Giza viedään omilla malleilla mahdollisimman valmiiksi, ja Egyptistä tehdään historiallinen '
+          + 'versio (ks. HISTORIALLISET KOHTEET SEIKKAILUINA).',
         'LATAUS ON SAMA KAIKILLA VERKOILLA — EI EROA WI-FIN JA MOBIILIDATAN VÄLILLÄ (omistaja 25.9.2026 '
           + 'ja 4.10.2026 klo 14.5x, SITOVA, kaikki roolit, kaikki lataukset; omistaja 4.10. sanatarkasti: '
           + '"tee lataus samalla tavalla riippumatta onko wifiä vai ei. olen sanonut tästä jo monta kertaa että '
@@ -153,6 +156,15 @@ export const RAAMATTU = {
           + '(Olavinlinna n1500 = 1500-luvun alku, ennen Savonlinnan kaupunkia 1639) — '
           + 'nykykaupunki, sillat, tiet, katot ja moottoriveneet pois, tilalle luonnonranta, '
           + 'vanha metsä ja harkiten ajan puurakennukset; linna itse, maasto ja vesi ennallaan.',
+        'HISTORIALLISET KOHTEET SEIKKAILUINA MAAN TASALTA (omistaja 7.10.2026 klo 08.4x–08.5x, sitova): Olavinlinnaa, Kiellettyä kaupunkia ja '
+          + 'Gizan historiallista versiota (pyramidien kulta-aika, tarina ja elävät henkilöt kuten Olavinlinnassa) kehitetään yhtä aikaa. Pelaaja '
+          + 'liikkuu pääasiassa maan tasalla ("kuin pääsisi astumaan historiassa taaksepäin noihin hetkiin"). Ei aloiteta historian esittelyllä '
+          + '(tornien nimet, vuosiluvut): pelaaja astuu suoraan toiminnan ja seikkailun keskelle, ja tehtävänä on selvittää arvoitus tai löytää '
+          + 'aarre; historia opitaan pelatessa, vihjeet nojaavat oikeisiin paikkoihin, esineisiin ja henkilöihin, ja tietokerros (drone-näkymä, '
+          + 'lähteet) tarjotaan vasta lopussa tai pyydettäessä. Olavinlinna alkaa veneellä saapumisesta alaperspektiivistä elokuvamaisesti, '
+          + 'drone-näkymä vasta lopussa; pelaaja liikkuu itse linnassa, ratkaisee arvoituksen, ja palkintona on huomattava aarre. Toteutus: '
+          + 'yksi yhteinen historiamoottori (liikkuminen, katselu, esineiden tutkiminen, arvoitukset, tallennus, elokuvamaiset siirtymät), '
+          + 'Olavinlinna pilottina; liikkumistavan (pisteestä pisteeseen vai vapaa) päättää omistaja.',
         'PELIT, TALOUS JA LUENTA (omistaja 27.9.2026 klo 09.2x–10.4x, sitova; ideat '
           + 'omistajan 12-vuotiaalta tyttäreltä): 1) PELIT ovat yhtä merkittävä osa kuin '
           + 'linssit — oma kehittämissivu docs/pelikatalogi.md (+ pelikatalogi.html) samalla '
