@@ -71,6 +71,6 @@ export const OPAS_AINEISTOT = Object.freeze({
   yksityiskohdat_polut: {
     pariisi: 'esittely/pariisi-v2/pariisi-yksityiskohdat.json',
     praha: 'esittely/praha-v1/praha-yksityiskohdat.json', wien: 'esittely/wien-v1/wien-yksityiskohdat.json',
-    rooma: 'esittely/rooma-v2/rooma-yksityiskohdat.json',
+    rooma: 'esittely/rooma-v2/rooma-yksityiskohdat.json', lontoo: 'esittely/lontoo-v1/lontoo-yksityiskohdat.json',
   },
 });
