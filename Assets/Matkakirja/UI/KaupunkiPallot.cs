@@ -9,6 +9,9 @@
 //    valikon ja muun kuin karttatilan aikana (kuten päät).
 //  - Malli: Linnanrakentajan kiinnitetty kuumailmapallo (ilmapallo-v1, keski). Kaikki pallot ovat samanlaisia, joten kuva
 //    piirretään kerran omalla kameralla RenderTextureen (UI/KaupunkiPalloKuva.cs) ja jaetaan kaikille napeille.
+//  - Puoli (omistaja 7.10. 12.4x: "Kreikassa kuumailmapallo jää Ateenan nostokortin taakse"): pallo kallistuu oletuksena vasemmalle;
+//    jos pelaajan kaupungin kutsukortti (Kutsuminiatyyri) on pisteen lähellä vasemmalla, pallo peilataan oikealle. Kortin paikka on
+//    lukittu kaupunkia kohden, joten puoli päätetään kerran (KaupunkiPalloMitat.Oikealle) eikä vaihdu zoomatessa.
 //  - Tyylit: olemassa oleva ERIKOISNOSTOT-pohja (mk-erikoisnosto-paa, __kuva); nimi vain VoiceOverille.
 //  - Napautus: OpasSovitin.AvaaKaupunkitila(id) (LS1:n kaupunkitila, juna 159); lista OpasSovitin.SallitutLista / LataaSallitut. Pulu väistää palloa (Pulu.Alareuna, NakyvaAlueet).
 using System.Collections.Generic;
@@ -29,6 +32,9 @@ namespace Matkakirja.Natiivi
             public Button Nappi;
             public VisualElement Kuva;
             public bool Nakyy;
+            /// <summary>Pallo kallistuu oikealle (kuva peilattu takaisin), kun kaupungin kutsukortti on vasemmalla; päätetään
+            /// kerran kaupunkia kohden, kun kortti näkyy (kortin paikka on lukittu), ettei pallo vaihda puolta zoomatessa.</summary>
+            public bool Oikea, PuoliPaatetty;
         }
 
         /// <summary>RenderTexturen sivu: suurin koko 120 pt × min(pikselisuhde, 3).</summary>
@@ -125,12 +131,21 @@ namespace Matkakirja.Natiivi
                 return;
             }
             float koko = KaupunkiPalloMitat.Koko(korkeus);
+            // Kutsukortti (pelaajan kaupunki, Kutsuminiatyyri): pallo kortista poispäin (omistaja 7.10. 12.4x, Ateena).
+            var kortti = UiNakymat.Olemassa ? UiNakymat.Hae().Kutsu?.Laatikko ?? default : default;
+            Vector2 kk = kortti.width > 0 ? juuri.WorldToLocal(kortti.center) : new Vector2(float.NaN, float.NaN);
             foreach (var p in pallot)
             {
                 // Karttapiste ruudulle; false = pallon takana tai ruudun ulkopuolella.
                 if (!kierto.RuutuPiste(p.Lat, p.Lon, out var r)) { Nayta(p, false); continue; }
                 var q = juuri.WorldToLocal(RuntimePanelUtils.ScreenToPanel(juuri.panel, new Vector2(r.x, Screen.height - r.y)));
                 if (!KaupunkiPalloMitat.Ruutupaikka(q.x, q.y, koko, W, H, out float x, out float y)) { Nayta(p, false); continue; }
+                if (!p.PuoliPaatetty && KaupunkiPalloMitat.Oikealle(q.x, q.y, kk.x, kk.y, koko) is bool oikea)
+                {
+                    p.PuoliPaatetty = true;
+                    if (oikea != p.Oikea) { p.Oikea = oikea; p.Kuva.style.scale = new Scale(new Vector3(oikea ? -1f : 1f, 1f, 1f)); }
+                    Debug.Log($"MATKAKIRJA kaupunkipallot: {p.Id} {(oikea ? "oikealle" : "vasemmalle")} (kortti {(kk.x < q.x ? "vasemmalla" : "oikealla")}, {kk.x - q.x:0},{kk.y - q.y:0} pt)");
+                }
                 p.Nappi.style.left = x;
                 p.Nappi.style.top = y;
                 p.Nappi.style.width = koko;
@@ -163,7 +178,7 @@ namespace Matkakirja.Natiivi
             var nakyvat = pallot.Where(p => p.Nakyy).Select(p =>
             {
                 var b = p.Nappi.worldBound;
-                return string.Format(CultureInfo.InvariantCulture, "{0} {1:0},{2:0} {3:0}pt", p.Id, b.center.x, b.center.y, b.width);
+                return string.Format(CultureInfo.InvariantCulture, "{0} {1:0},{2:0} {3:0}pt {4}", p.Id, b.center.x, b.center.y, b.width, p.Oikea ? "oikea" : "vasen");
             });
             return string.Format(CultureInfo.InvariantCulture,
                 "kaupunkipallot: {0}, sallittu {1}, kuva {2}, kaupunkeja {3}, korkeus {4:0} km, peitto {5:0.00}, koko {6:0} pt, näkyvät [{7}]",

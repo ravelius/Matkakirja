@@ -39,6 +39,23 @@ namespace Matkakirja
             return (float)(KokoKaukaPt + (KokoLahiPt - KokoKaukaPt) * s);
         }
 
+        /// <summary>Kortin vaikutusalue: kortti, jonka keskipiste on alle tämän (× pallon koko) päässä pisteestä, ratkaisee puolen.</summary>
+        public const float KorttiLahella = 1.5f;
+
+        /// <summary>
+        /// PUOLI KORTISTA POISPÄIN (omistaja 7.10. 12.4x: "Kreikassa kuumailmapallo jää Ateenan nostokortin taakse … voisi olla
+        /// toisella puolella"): pallo kallistuu oletuksena vasemmalle (pelaajan kaupungin kutsukortti on useimmiten oikealla).
+        /// Jos kortti on lähellä pistettä ja sen keskipiste on pisteen vasemmalla puolella, pallo kallistuu oikealle. null = ei
+        /// päätöstä (kortti kaukana tai piilossa): pidä aiempi puoli.
+        /// </summary>
+        public static bool? Oikealle(float pisteX, float pisteY, float korttiKeskiX, float korttiKeskiY, float koko)
+        {
+            if (float.IsNaN(korttiKeskiX) || float.IsNaN(pisteX)) return null;
+            float dx = korttiKeskiX - pisteX, dy = korttiKeskiY - pisteY;
+            if (dx * dx + dy * dy > (KorttiLahella * koko) * (KorttiLahella * koko)) return null;
+            return dx < 0f;
+        }
+
         /// <summary>Napin vasen yläkulma (x, y alas) pisteestä ja koosta; false = yli pallon verran ruudun ulkopuolella.</summary>
         public static bool Ruutupaikka(float pisteX, float pisteY, float koko, float leveys, float korkeus, out float x, out float y)
         {

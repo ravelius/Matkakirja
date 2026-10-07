@@ -36,6 +36,16 @@ namespace Matkakirja.Kartta.Testit
         }
 
         [Testi]
+        static void PuoliKortistaPoispain()
+        {
+            // Rooma: kortti oikealla ylhäällä → vasemmalle (oletus); Ateena: kortti vasemmalla → oikealle.
+            Oleta.Tosi(KaupunkiPalloMitat.Oikealle(200f, 400f, 250f, 360f, 90f) == false, "kortti oikealla → vasemmalle");
+            Oleta.Tosi(KaupunkiPalloMitat.Oikealle(200f, 400f, 150f, 360f, 90f) == true, "kortti vasemmalla → oikealle");
+            Oleta.Tosi(KaupunkiPalloMitat.Oikealle(200f, 400f, 600f, 360f, 90f) == null, "kortti kaukana → ei päätöstä");
+            Oleta.Tosi(KaupunkiPalloMitat.Oikealle(200f, 400f, float.NaN, 0f, 90f) == null, "ei korttia");
+        }
+
+        [Testi]
         static void PalloSeisooPisteenPaalla()
         {
             Oleta.Tosi(KaupunkiPalloMitat.Ruutupaikka(200f, 400f, 60f, 402f, 874f, out float x, out float y), "ruudulla");
