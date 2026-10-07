@@ -79,3 +79,4 @@ Päätoimittaja = "PÄÄTOIMITTAJA (Opus, max)".
   PT kuitannut; lataa julisteet/pyramidi/pyramidi.json, muuta vain viivataso, varmuuskopio, lataa, tarkista ?t=), sitten
   merge #4140 ja ilmoita Karttasepälle. LS1 yövalot-161 OK af5922b95:llä; LS2 pallo-simut OK. Natiiviseppä iPad FACEIT ABBA
   (luvattu setsid-ajona). NUI köysikorjaus ei vielä toiminut (metrolinja katosi).
+- **13.2x Natiiviseppä**: Mac TF 160 + mac-kaanna 28da7435 setsid-ketjuna LS1:n gizan perässä (loki proto-3d/lokit/natiiviseppa-mac-tf-vahti.txt) — lukko voi olla sillä 15.00; NUI seuraavaksi kun vapaa.
