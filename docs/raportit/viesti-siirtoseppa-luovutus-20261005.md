@@ -8,7 +8,7 @@ kappeli). Lue tämä osio ja alin TILA-loki (päivän loppu), sitten CLAUDE.md j
   <haara>:refs/heads/peili/proto/<haara>`). Luovutus: tämä tiedosto haarassa siirtoseppa-luovutus (Matkakirja-siirtoseppa).
 - Haarat: **siirtoseppa/historia-h0** (kolmas persoona, junien pohja, kärki c652ba83), **siirtoseppa/historia-juna164 @ 6d2b1149**
   (kuittaus pyydetty PT:ltä; juna163 + V7 + tietokerros + v44i-merkit + nousu laiturille; pala v44j 42d49bd4),
-  **siirtoseppa/historia-fp @ f8df9987** (ENSIMMÄINEN PERSOONA + kädet-v1 + pelattavuusmallin vaiheet 1–2 osin, ei vielä junaan; pala v44l 45be7435).
+  **siirtoseppa/historia-fp @ 38c88016** (ENSIMMÄINEN PERSOONA + kädet-v1 + pelattavuusmallin vaiheet 1–2 osin, ei vielä junaan; pala v44l 45be7435).
 - TESTAUS (omistaja 7.10. 15.5x/16.0x): ennen junaa VAIN Linssit-testit/kaanna.sh + Linssit-testit/unity-tarkistus.sh; ei omia
   käännöksiä, simua, stillejä eikä savuja. Kuittaus PT:ltä yhdellä rivillä (mitä, testit, SHA) → Natiiviseppä junaan.
 - OMISTAJA 7.10. 18.5x–18.7x: KAIKKI PELIT ENSIMMÄISESSÄ PERSOONASSA (Thief-malli; ei vartaloa/peilikuvaa; kädet saavat näkyä
@@ -550,9 +550,15 @@ Edellinen luovutus on `viesti-siirtoseppa-luovutus-20261002.md` (5.10. osiot 02.
   844/844, unity-tarkistus 0. JÄLJELLÄ: pintojen äänekkyys (2.2) + seinäsääntö, nähty piiloon meno (2.5), oma kynttilä valoisuus 0,9/0,45
   (2.3), hahmon lyhty valaisee, irtipääsy (3.4), torkkuva vartija -profiili; sitten vaiheet 3–4.
 - 19.44: 2.2 pinnat + seinäsääntö (Askelaani, uusi Ydin-tiedosto + .meta) ja toimintoverbi NUI:lle (SeikkailuEsineet.Toiminto) d1734576.
-  RIIPPUVUUS historia-fp:lle: natiivi-ui/seikkailu-tekstivahti 82decfa9 (sis. 754f090b + eb115fc3: PuluVihje, napautus, OtaKatse, verbi, Tekstivahti()).
+  RIIPPUVUUS historia-fp:lle: natiivi-ui/seikkailu-jatka 6af3eb9f (sis. 82decfa9, 754f090b, eb115fc3: PuluVihje, napautus, OtaKatse, verbi, Tekstivahti, Jatka/Alusta).
   846/846, unity-tarkistus 0. LR:lle tarvitaan: osat.json "pinta" per osa, pinta:<laji>-N -merkit, partio-merkkeihin "profiili"/"henkilo".
 - 19.45: 2.3 oma kynttilä + suojaus + vartijan lyhty, 2.5 nähty piiloon meno 124503bd. historia-fp-kärki 124503bd, riippuvuus NUI 754f090b.
 - 19.47: 3.4 irtipääsy + 4.1 ote/himmennys 204aa370 (847/847, unity-tarkistus 0). NUI Tekstivahti() → botin lokiväittämiin (vaihe 3).
 - 19.50: 4.3 tarkistuspisteet portaaleista ee0029ec; V6 tallennus 6aed2877 (SeikkailuTallennus + SeikkailuTallentaja; jatko vain PelattavaPalaJatka-pyynnöstä, NUI:lle kerrottu, pohja PT:n päätös). 849/849, unity-tarkistus 0. JÄLJELLÄ huomiselle: tyrmä (LR E 101), huone 1 pressun alla + K1, tarjotin + riidan ikkuna, torkkuva vartija, kiipeily, botti + huonesimulaatio (kohta 11), anteeksianto 4.2.
 - 19.52: vihjeportaat f8df9987 (Ydin Vihjeet + SeikkailuVihjeet; PuluVihje palauttaa nyt true; Pulun lento odottaa pulu-glb:tä, nyt ääni; pulu-nokka-ääni puuttuu manifestista → Pelikoodarin aanet-fp-v1). 851/851, unity-tarkistus 0.
+- 19.57: anteeksianto 4.2 d9eac551; päävalikko → NUI SeikkailuTapit.AvaaPelattavaPala (Jatka/Alusta) ce5e596f; LR v44m (eb8b9c55: pinnat,
+  partioprofiilit + henkilöt, piilot, reitti:pelaaja-1…20, istuu:torkkuva-vartija, tarjotin/patapino ilman malleja) kytketty 38c88016:
+  reitit nimen mukaan, PiilotetutHenkilot, profiilirepliikit. RIIPPUVUUS nyt NUI natiivi-ui/seikkailu-jatka 6af3eb9f (sis. 82decfa9,
+  754f090b, eb115fc3). historia-fp-kärki 38c88016 (natiivi-backup-push uusitaan taustalla GitHubin 500-virheiden takia).
+  JÄLJELLÄ: torkkuva vartija (istuu:, profiili torkku), tarjotin + patapino (kaadettava, aani_m) mallien tultua, tyrmä (LR E 101),
+  huone 1 pressun alla + K1, riidan ikkuna, kiipeily, botti + huonesimulaatio (reitti:pelaaja), junakuittaus.
