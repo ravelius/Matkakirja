@@ -797,8 +797,9 @@ namespace Matkakirja.Natiivi
                         var pk = Object.FindAnyObjectByType<PalloKierto>();
                         var hiiri = UnityEngine.InputSystem.Mouse.current;
                         Kirjaa(pk == null ? "mac paikka: ei palloa" : string.Format(CultureInfo.InvariantCulture,
-                            "mac paikka: pituus {0:0.0000} leveys {1:0.0000} korkeus {2:0} hiiri {3} fokus {4}", pk.pituus, pk.leveys,
-                            pk.korkeus, hiiri == null ? "ei" : hiiri.leftButton.isPressed ? "pohjassa" : "ylhäällä", Application.isFocused));
+                            "mac paikka: pituus {0:0.0000} leveys {1:0.0000} korkeus {2:0} hiiri {3} fokus {4} lukko [{5}] eleet muualla {6}",
+                            pk.pituus, pk.leveys, pk.korkeus, hiiri == null ? "ei" : hiiri.leftButton.isPressed ? "pohjassa" : "ylhäällä",
+                            Application.isFocused, SyoteLukko.Kuvaus, pk.EleetMuualla));
                         return null;
                     }
                     if (laji == "hiiri" && m.Length > 1)

@@ -29,7 +29,7 @@ namespace Matkakirja.Natiivi
         bool kaytossa, pakotettu;
         int yrityksia;
         bool vetoUnitylle, rullaUnitylle;
-        string peittaja, kirjattuPeittaja;
+        string peittaja, kirjattuPeittaja, kirjattuEsto;
         string viimeKohde = "–";
         int tapahtumia;
         readonly float[] luku = new float[8];
@@ -158,6 +158,14 @@ namespace Matkakirja.Natiivi
             // Diagnostiikka (Mac TF 160: eleet lakkasivat, kunnes klikkasi karttaa): kirjataan, kun ele menee UI:lle uuden
             // peittäjän takia (Player.log, testikomento "ui mac tila").
             peittaja = uiPeittaa ? UiKerros.Hae().PeittajaPisteessa(ruutu) : null;
+            // Kartta hylkäsi eleen (PalloKierto.MacPanoroi/MacZoomaa false): syy lokiin kerran per syy.
+            string esto = !uiPeittaa && kierto != null && (kierto.SyoteEstetty || kierto.EleetMuualla)
+                ? $"syöte lukittu ({SyoteLukko.Kuvaus}), eleet muualla {kierto.EleetMuualla}" : null;
+            if (esto != kirjattuEsto)
+            {
+                kirjattuEsto = esto;
+                Debug.Log("MATKAKIRJA mac-syöte: kartta " + (esto == null ? "vapaa" : "estetty: " + esto));
+            }
             if (peittaja != kirjattuPeittaja)
             {
                 kirjattuPeittaja = peittaja;
