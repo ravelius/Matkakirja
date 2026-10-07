@@ -1,7 +1,7 @@
 {
   "rakennus": "olavinlinna",
-  "hash": "81ceb7fc7f822081",
-  "kansio": "dioraama/olavinlinna/blender/81ceb7fc7f822081/",
+  "hash": "9c8b1d8727ebf48a",
+  "kansio": "dioraama/olavinlinna/blender/9c8b1d8727ebf48a/",
   "tiedostot": [
     {
       "polku": "hahmot/apulainen-1500-faceit.glb",
@@ -290,28 +290,28 @@
     },
     {
       "polku": "kavely/merkit.json",
-      "sha256": "27bcb2988103dbcc716f3ebd70c74d3817f57495a6410d25b41d62d4c0a0a5f9",
-      "tavuja": 36368
+      "sha256": "cb3c1c99fe4cb0596fd98d1a6bc84a96887f5278dfd636a5fbb2f42104a74f3b",
+      "tavuja": 42303
     },
     {
       "polku": "kavely/muurikaytava-kavely.glb",
-      "sha256": "a2ebb5c3b658655073b402881b79aef597775f3b7d2536786e0b9c4e3f61663f",
-      "tavuja": 2032
+      "sha256": "79e7cc4a969a2446e7315ae0bbba739320307613ba3049a19efb629cbccf0db3",
+      "tavuja": 4448
     },
     {
       "polku": "kavely/muurikaytava-tormays.glb",
-      "sha256": "35d177a209604796d81da3640ca84a8acb9dbb486d2c9ab1a0a05961fce08485",
-      "tavuja": 4008
+      "sha256": "723b4225370295d02daf7d788a378b97cfd894a7d28178b8e49607d140dce56e",
+      "tavuja": 6504
     },
     {
       "polku": "kavely/muurikaytava.glb",
-      "sha256": "655c344a872ef25a13642ed8fe2c8969aa41d52fdc03dd9cf85934728727e0d4",
-      "tavuja": 34072
+      "sha256": "b4c8c0d3f6bb18bbd861b7ef63308d3c1635b9168294b0839ee826eb10df9dcd",
+      "tavuja": 47536
     },
     {
       "polku": "kavely/osat.json",
-      "sha256": "f96407a992f9ba2688bb0adc19a2db595c2abf8dad5f48fa09038f733db4d958",
-      "tavuja": 22068
+      "sha256": "793355cea2400b66423bcb9c4f8665e39dd37d8ef64b121100bff6ca7064b1e3",
+      "tavuja": 23435
     },
     {
       "polku": "kavely/palatsi-kavely.glb",
@@ -375,13 +375,13 @@
     },
     {
       "polku": "kavely/ulkoalue-kavely.glb",
-      "sha256": "17851b02608c6d13081444aca8a5ede05f470c172652130b13a48c25444d4cdd",
-      "tavuja": 206508
+      "sha256": "7c50c639b65cde45beeee477bfbc2e751987ca4f8b2f9e3e37f550479da7e390",
+      "tavuja": 201780
     },
     {
       "polku": "kavely/ulkoalue-tormays.glb",
-      "sha256": "1853e2ff32af4da1036ceee4b3d23fb9d5f70d127effd1a69c89ff9d40d14091",
-      "tavuja": 115112
+      "sha256": "45d5febfd408458771568563e28aed9b7d6d296f05137592c97a5c751b1459a2",
+      "tavuja": 119312
     },
     {
       "polku": "kavely/vesiportti-kavely.glb",
