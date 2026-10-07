@@ -25,7 +25,7 @@ namespace Matkakirja.Natiivi
         public static readonly LinssiTiedot OpasTiedot = new LinssiTiedot
         {
             Id = "opas",
-            Nimi = "Elävä opas",
+            Nimi = "Kuumailmapallo",   // omistaja 7.10. 09.1x: näkyvä nimi (valikko, otsikot, VoiceOver); id "opas" ennallaan
             Lyhyt = "Opas lentää kanssasi minne haluat ja kertoo paikoista.",
             Jarjestys = 98,
             Ikoni = "<path d=\"M12 3a6 6 0 0 0-6 6c0 4.5 6 12 6 12s6-7.5 6-12a6 6 0 0 0-6-6zm0 8.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z\"/>",
@@ -41,7 +41,7 @@ namespace Matkakirja.Natiivi
         };
 
         /// <summary>Avausruudun tekstit (KierrosTaulu).</summary>
-        public const string Otsikko = "ELÄVÄ OPAS", Alaotsikko = "KERRO, MITÄ HALUAT NÄHDÄ";
+        public const string Otsikko = "KUUMAILMAPALLO", Alaotsikko = "KERRO, MITÄ HALUAT NÄHDÄ";
         /// <summary>Workerin polku ja aikaraja (s).</summary>
         public const string Polku = "/opas/seuraava";
         public const int AikarajaS = 30;
