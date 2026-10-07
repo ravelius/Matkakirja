@@ -9,7 +9,8 @@
   "hiipiminen": "hiipiminen",
   "kyykky_idle": "kyykky_idle",
   "nousu": "nousu",
-  "puhe": "puhe"
+  "puhe": "puhe",
+  "nousu_laiturille": "nousu_laiturille"
  },
  "liikkeet": {
   "kavely": {
@@ -51,6 +52,51 @@
   },
   "puhe": {
    "kesto_s": 2.933
+  },
+  "nousu_laiturille": {
+   "kesto_s": 2.4,
+   "ruutuja": 73,
+   "fps": 30,
+   "silmukka": false,
+   "root_siirto": [
+    0.0,
+    1.28,
+    0.95
+   ],
+   "root_motion": "root-luu (glTF-solmu root, translation 0 -> root_siirto hahmon paikallisessa kehyksessä, kasvot +Z); muut luut idlen suhteen",
+   "natiivi": "soita leike kapseli paikallaan ja törmäys pois päältä; viimeisellä ruudulla siirrä kapseli root_siirto verran ja vaihda idleen (idle alkaa origosta) – tai käytä root motionia root-luusta, jolloin siirto tulee animaatiosta",
+   "ote_y": 1.28,
+   "ote_eteen": 0.66,
+   "ote_sivu": 0.25,
+   "ote_ruudut": {
+    "vasen": [
+     10,
+     40
+    ],
+    "oikea": [
+     10,
+     42
+    ]
+   },
+   "polvi_kannella": {
+    "kohta": [
+     -0.4,
+     1.28,
+     0.68
+    ],
+    "ruudut": [
+     38,
+     56
+    ]
+   },
+   "vasen_jalka_kannella_ruudusta": 56,
+   "geometria": {
+    "kansi_y": 1.28,
+    "reuna_z": 0.55,
+    "otsalauta_m": 0.3,
+    "veneen_pohja_y": 0.0
+   },
+   "huom": "oma työ avainruuduin (lahde/nousu_laiturille.py, IK leivottu). Kaikki paikat hahmon alkukehyksessä metreinä (glTF: y ylös, z eteen, jalat y = 0 = veneen pohja -7,18; kansi y = 1,28 = -5,90). Kämmenet kannella 0,11 m reunasta (kämmenen keskikohta z 0,66), oikea polvi kannelle (sääri reunan yli ilmassa), vasen jalka kannelle, nousu seisomaan. Juuren siirto +Z 0,95 eikä 0,9: idlessä oikea kantapää on 0,38 m juuren takana, 0,9:llä se jäisi 3 cm reunan yli. Alku ja loppu = idle ruutu 0 (ero < 1e-6). Root-polku: y 1,28 valmis ruudulla 38, z enintään 0,25 siihen asti (kapselin etureuna ei mene laiturin alle)."
   }
  },
  "kavely_sykli_m": 1.273,
