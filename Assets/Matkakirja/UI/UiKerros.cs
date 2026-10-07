@@ -314,6 +314,38 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>
+        /// Mac-syötteen diagnostiikka (omistaja 7.10.2026, Mac TF 160: ohjauslevyn panorointi ja zoomaus lakkasivat, kunnes klikkasi
+        /// karttaa): mikä elementti peittää ruudun pisteen (nimi, luokat, picking, opasiteetti, näkyvyys; kolme vanhempaa) tai null.
+        /// </summary>
+        public string PeittajaPisteessa(Vector2 ruutu)
+        {
+            if (!nakyvissa) return null;
+            var ylhaalta = new Vector2(ruutu.x, Screen.height - ruutu.y);
+            foreach (var kv in dokumentit)
+            {
+                var juuri = kv.Value.rootVisualElement;
+                var paneeli = juuri?.panel;
+                if (paneeli == null) continue;
+                var osuma = paneeli.PickAll(RuntimePanelUtils.ScreenToPanel(paneeli, ylhaalta), null);
+                if (osuma == null || osuma == juuri) continue;
+                var sb = new System.Text.StringBuilder($"{kv.Key}: ");
+                int n = 0;
+                for (var e = osuma; e != null && e != juuri && n < 4; e = e.parent, n++)
+                {
+                    if (n > 0) sb.Append(" < ");
+                    sb.Append(string.IsNullOrEmpty(e.name) ? e.GetType().Name : e.name);
+                    var luokat = string.Join(".", e.GetClasses());
+                    if (luokat.Length > 0) sb.Append('.').Append(luokat);
+                    var rs = e.resolvedStyle;
+                    if (n == 0) sb.Append($" [picking {e.pickingMode}, opasiteetti {rs.opacity:0.##}, {rs.visibility}, {rs.display}, " +
+                                          $"{e.worldBound.width:0}×{e.worldBound.height:0}]");
+                }
+                return sb.ToString();
+            }
+            return null;
+        }
+
+        /// <summary>
         /// Ylimmän kerroksen ScrollView ruudun pisteessä (Input Systemin pikselit, origo vasen alakulma) tai null (Mac-syöte:
         /// ohjauslevyn veto ja hiiren rulla vierittävät tekstiä). k = ruudun pikseleitä paneelin yksikköä kohden.
         /// </summary>

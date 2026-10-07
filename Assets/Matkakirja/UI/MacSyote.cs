@@ -29,6 +29,7 @@ namespace Matkakirja.Natiivi
         bool kaytossa, pakotettu;
         int yrityksia;
         bool vetoUnitylle, rullaUnitylle;
+        string peittaja, kirjattuPeittaja;
         string viimeKohde = "–";
         int tapahtumia;
         readonly float[] luku = new float[8];
@@ -70,7 +71,8 @@ namespace Matkakirja.Natiivi
 
         public static string Tila() => instanssi == null ? "ei luotu"
             : $"käytössä {instanssi.kaytossa} (pakotettu {instanssi.pakotettu}), tapahtumia {instanssi.tapahtumia}, " +
-              $"teksti Unitylle: veto {instanssi.vetoUnitylle}, rulla {instanssi.rullaUnitylle}, viimeksi {instanssi.viimeKohde}";
+              $"teksti Unitylle: veto {instanssi.vetoUnitylle}, rulla {instanssi.rullaUnitylle}, viimeksi {instanssi.viimeKohde}, " +
+              $"peittäjä {instanssi.peittaja ?? "-"}";
 
         void Asenna()
         {
@@ -153,6 +155,14 @@ namespace Matkakirja.Natiivi
             bool unityRullaa = Mouse.current != null && Mouse.current.scroll.ReadValue().sqrMagnitude > 0f;
             bool uiPeittaa = UiKerros.Peittaa(ruutu);
             var kierto = uiPeittaa ? null : FindAnyObjectByType<PalloKierto>();
+            // Diagnostiikka (Mac TF 160: eleet lakkasivat, kunnes klikkasi karttaa): kirjataan, kun ele menee UI:lle uuden
+            // peittäjän takia (Player.log, testikomento "ui mac tila").
+            peittaja = uiPeittaa ? UiKerros.Hae().PeittajaPisteessa(ruutu) : null;
+            if (peittaja != kirjattuPeittaja)
+            {
+                kirjattuPeittaja = peittaja;
+                Debug.Log("MATKAKIRJA mac-syöte: ele " + (peittaja == null ? "kartalle" : "UI:lle, peittäjä " + peittaja));
+            }
 
             if (veto != Vector2.zero)
             {
