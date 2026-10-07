@@ -1,7 +1,7 @@
-# Sisältökirjurin aloitusviesti (päivitetty 6.10.2026, tilinvaihto)
+# Sisältökirjurin aloitusviesti (päivitetty 7.10.2026 ~23.45, tilinvaihto)
 
-Lue ensin `docs/raportit/viesti-sisaltokirjuri-luovutus-20261007.md (uusin; 6.10. luovutus on sen taustana)` ja haarassa `sisaltokirjuri-oppaan-kuvat-2` oleva `data/oppaan-kuvat/JATKO.md`.
+Lue ensin `docs/raportit/viesti-sisaltokirjuri-luovutus-20261007.md` (LOPULLINEN TILA -osio alimpana) ja CLAUDE.md. Haara: sisalto-pelikatalogi-20260927 (git fetch origin && git pull).
 
-Työ: elävän oppaan kuvalista (vaihe 1: pelin 266 paikkaa, 154 valmiina; vaihe 2: 162 kaupunkia). Sonnet-agentteja ryhmittäin, enintään 6–7 rinnakkain. Työkalut ja ohje haarassa sisaltokirjuri-oppaan-kuvat-2 (`tools/oppaan-kuvat.mjs`, `data/oppaan-kuvat/AGENTTIOHJE.md`). Worktree: `tools/uusi-worktree.sh sisaltokirjuri oppaan-kuvat-3 origin/sisaltokirjuri-oppaan-kuvat-2`.
+Työ: (1) kaupunkiesittelyjen yksityiskohtakuvat (Pariisi, Praha, Wien, Rooma v4, Lontoo v1, Köpis v1 ämpärissä; odottaa Codex-kuvia: Rooma uusinta, Lontoo 10, Köpis 3 → uudet luetteloversiot `havainnekuva: true`); työkalut ja ohje `esittely-tyo/kuvat/tyokalut/` (PR #4166 / main). (2) Olavinlinnan lisätyöt Päätoimittajan mukaan (äänilista ja repliikkitarkistus valmiit, PR #4170).
 
-Muut säännöt: vain Eurooppa ei rajaa oppaan kuvia (linssi), kuvat PD / CC0 / CC BY / CC BY-SA ≥ 1 200 px, silmätarkistus pakollinen, ei pakkopushia, ämpäri vain vie-paketilla.
+Säännöt: agentit vain Opus/Sonnet (≤ 2 rinnakkain kuvahaussa), kuvat PD / CC0 / CC BY / CC BY-SA Commonsista, Italia: ei museoiden sisätiloja eikä kokoelmateoksia, ei pakkopushia, ämpäri vain `vie-paketti.sh`:lla, ei ämpärin poistoja (Julkaisija/omistaja), Codex-tilaukset aina fotorealistisia + "havainnekuva". Viestit Päätoimittajalle send_messagella `local_5df52e10-10e4-4b72-9554-0049db300dfe`. Freesoundia ei haeta skriptillä (robots.txt).
