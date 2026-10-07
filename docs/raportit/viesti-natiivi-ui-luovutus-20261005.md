@@ -6,7 +6,7 @@ worktreet /Users/Shared/Claude/wt/proto-natiivi-ui-<aihe>. Käännös: lokit/nat
 Simu vain Julkaisijan "SIMU NYT" -viestistä, oma iPhone FB234D08-4693-4496-9C7A-6C7C15B03963, iPad
 AD119F7B-A2A2-43EE-8769-7326DD757F89; lopuksi sammutus ja "simu vapaa".
 
-## TILA 7.10. klo 05.2x (uusin)
+## TILA 7.10. klo 05.1x (uusin)
 
 - JUNA 157 KUITATTU → SHA natiivi-ui/sallitut-157 5cbfb919 Natiivisepälle (käännös cb9d828d; arkki lokit/natiivi-ui-1035/sallitut-157/
   arkki-157b.jpg). Korjattu simun 04.35 löydökset: nimitörmäykset (Granada NIC, Dublin USA, Barcelona VEN → Amerikat valikossa),
