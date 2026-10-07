@@ -8,7 +8,7 @@ kappeli). Lue tämä osio ja alin TILA-loki (päivän loppu), sitten CLAUDE.md j
   <haara>:refs/heads/peili/proto/<haara>`). Luovutus: tämä tiedosto haarassa siirtoseppa-luovutus (Matkakirja-siirtoseppa).
 - Haarat: **siirtoseppa/historia-h0** (kolmas persoona, junien pohja, kärki c652ba83), **siirtoseppa/historia-juna164 @ 6d2b1149**
   (kuittaus pyydetty PT:ltä; juna163 + V7 + tietokerros + v44i-merkit + nousu laiturille; pala v44j 42d49bd4),
-  **siirtoseppa/historia-fp @ 2b88ec9a** (ENSIMMÄINEN PERSOONA + kädet-v1, ei vielä junaan; pala v44l 45be7435).
+  **siirtoseppa/historia-fp @ d0f26d0b** (ENSIMMÄINEN PERSOONA + kädet-v1 + pelattavuusmallin vaihe 1, ei vielä junaan; pala v44l 45be7435).
 - TESTAUS (omistaja 7.10. 15.5x/16.0x): ennen junaa VAIN Linssit-testit/kaanna.sh + Linssit-testit/unity-tarkistus.sh; ei omia
   käännöksiä, simua, stillejä eikä savuja. Kuittaus PT:ltä yhdellä rivillä (mitä, testit, SHA) → Natiiviseppä junaan.
 - OMISTAJA 7.10. 18.5x–18.7x: KAIKKI PELIT ENSIMMÄISESSÄ PERSOONASSA (Thief-malli; ei vartaloa/peilikuvaa; kädet saavat näkyä
@@ -539,3 +539,8 @@ Edellinen luovutus on `viesti-siirtoseppa-luovutus-20261002.md` (5.10. osiot 02.
 - 19.31: LR v44l (45be7435 = v44k + kädet-v1, pelaaja.kadet) kytketty 2b88ec9a (historia-fp): kahva_oikea = Kasi-piste, kontaktivarjo pois,
   kanto_alku/_loppu, suojauksen pito, otteen/irrotuksen ajoitus (poiminta r31, heitto r20, laske r33), nousu kamera_polulla. Kiipeily
   odottaa kiipeilymerkkejä. 839/839, unity-tarkistus 0. Aloitusviestin historia-fp-kärki → 2b88ec9a.
+- 19.38: Pelattavuusmalli VAIHE 1 aloitettu ja perusosat tehty d0f26d0b (historia-fp): kallistusvyöhykkeet (Kavely.Kallistusvyohykkeet),
+  käännössääntö (Kavely.PyydaKaanto, SeikkailuPelaaja.PyydaKaanto), napautuskävely (SeikkailuPelaaja.Napautus; NavMesh; vaarassa hiivintä
+  SeikkailuVartijat.Vaara; Mac-napsautus; NUI:lle kosketuksen kutsu ilmoitettu), valitsin ±30° (SeikkailuEsineet.ValitsinAste), portaiden
+  pehmennys 0,1 s, ohjaimen B vaihtaa. 841/841, unity-tarkistus 0. JÄLJELLÄ vaiheesta 1: tarkistus kohdan 2.2 pintojen äänekkyys
+  (vaihe 2:n Vartija-lisäysten kanssa), sitten vaihe 2 (kohta 3).
