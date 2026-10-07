@@ -135,6 +135,7 @@ namespace Matkakirja.Natiivi
         public Vector3? OmaAsetettu { get; private set; }
         public const float AsetusM = 0.9f, KasiSaumaM = 0.5f;
 
+        public static Vector3? Ontto => OnttoPaikka();
         static Vector3? OnttoPaikka()
         {
             var d = SeikkailuKavely.Data; if (d == null) return null;

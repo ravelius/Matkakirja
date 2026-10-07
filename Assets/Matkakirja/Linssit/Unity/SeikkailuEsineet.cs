@@ -123,6 +123,29 @@ namespace Matkakirja.Natiivi
             valmis(eg);
         }
 
+        /// <summary>Esineen paikka (näkyvä, ei kädessä) tai null; vihjeet (pelattavuusmalli 5).</summary>
+        public Vector3? Paikka(string id)
+        {
+            var e = esineet.Find(x => x.Id == id);
+            return e != null && e.Go != null && e.Go.activeInHierarchy && e != kadessa ? e.Go.transform.position : (Vector3?)null;
+        }
+
+        /// <summary>Lähin vielä irrottamaton kivi pisteestä (syvennyksen vihje) tai null.</summary>
+        public Vector3? Irrottamaton(Vector3 p)
+        {
+            Vector3? paras = null; float pd = float.MaxValue;
+            foreach (var e in esineet) if (e.Laji == Laji.Irrotettava && !e.Irrotettu && e.Go != null) { float d = (e.Go.transform.position - p).sqrMagnitude; if (d < pd) { pd = d; paras = e.Go.transform.position; } }
+            return paras;
+        }
+
+        /// <summary>Lähin heitettävä esine pisteestä (harhautuksen vihje) tai null.</summary>
+        public Vector3? Heitettava(Vector3 p)
+        {
+            Vector3? paras = null; float pd = float.MaxValue;
+            foreach (var e in esineet) if (e.Laji == Laji.Heitettava && e != kadessa && e.Go != null && e.Go.activeInHierarchy) { float d = (e.Go.transform.position - p).sqrMagnitude; if (d < pd) { pd = d; paras = e.Go.transform.position; } }
+            return paras;
+        }
+
         /// <summary>Esine pois näkyvistä ja poiminnasta (kappalainen vie kirjan).</summary>
         public void Piilota(string id)
         {

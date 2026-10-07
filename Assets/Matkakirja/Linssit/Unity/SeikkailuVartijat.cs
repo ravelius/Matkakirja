@@ -84,6 +84,8 @@ namespace Matkakirja.Natiivi
         public static event Action<string> Kiinnijaatiin;
         /// <summary>Seuraava Luo antaa armonajan heti (jatko tallennuksesta, pelattavuusmalli 4.3).</summary>
         public static bool AlkuArmo;
+        /// <summary>Sydän lyö (jonkin hahmon vaara, kohta 3.4).</summary>
+        public bool SydanLyo => sydanPaalla;
         public Vector3 Tarkistus => tarkistus;
         float armoAsti = -1f; const float ArmoS = 4f;
         double sykliMs = 0.955;
