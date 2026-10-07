@@ -3245,6 +3245,8 @@ async function hoidaOppaanKysymykset(pyynto, env, kors, ctx) {
   if (!valmis) return vastaa({ paikka, kysymykset }, kors);
   const aani = await oppaanValmisAani(pyynto, env, valmis.puhe_teksti || valmis.teksti).catch(() => null);
   const ajat = aani?.aani ? await aaniAjat(env, aani.aani) : null;
+  // Ilman valmista ääntä (äänetön esittely) vain teksti: natiivi näyttää sen lukukeston ajan (LS1 7.10.).
+  if (!aani) return vastaa({ paikka, kysymykset, kerro_lisaa_teksti: valmis.teksti }, kors);
   return vastaa({ paikka, kysymykset, kerro_lisaa_teksti: valmis.teksti, kerro_lisaa_aani: aani?.aani ?? null,
     kerro_lisaa_aani_pcm: aani?.aani_pcm ?? null, kerro_lisaa_aani_taajuus: aani?.aani_taajuus ?? null, kerro_lisaa_kesto_s: aani?.kesto_s ?? null,
     ...(ajat ? { kerro_lisaa_aani_ajat: ajat } : {}) }, kors);
@@ -3530,7 +3532,11 @@ async function hoidaOpas(pyynto, env, kors, runko, ctx) {
   let puheOhitus = null;
   // ESIGENEROITU ESITTELY (omistaja 7.10.): kierroksen pysähdys tai listan kohde nimellä → valmis teksti ilman mallikutsua.
   const valmisPaikka = seuraava?.paikka ?? (listatila && p.toive ? lukitut.find((x) => samaNimi(x.nimi, p.toive)) ?? null : null);
-  const valmis = valmisPaikka && listatila ? valmisKohde(await oppaanEsittely(env, p.kaupunki), valmisPaikka.id) : null;
+  const esittely = valmisPaikka && listatila ? await oppaanEsittely(env, p.kaupunki) : null;
+  const valmis = esittely ? valmisKohde(esittely, valmisPaikka.id) : null;
+  // Äänetön esittely (omistaja 7.10. 18.2x: 31 kaupunkia testattavaksi ennen ääniä): ääni vain R2:sta, ei koskaan
+  // generointia; ilman ääntä aani-, aani_pcm- ja kesto_s-kentät jäävät pois (LS1: natiivi näyttää tekstitilan).
+  const aaneton = Boolean(valmis && esittely?.aaneton === true);
   if (valmis) {
     const paikka = { ...valmisPaikka, lahde: valmisPaikka.lahde ?? 'kohdelista' };
     const nimi = valmisPaikka.nimi;
@@ -3624,7 +3630,8 @@ async function hoidaOpas(pyynto, env, kors, runko, ctx) {
   if (!tulos) return vastaa({ virhe: 'palvelin', viesti: 'Opas ei saanut seuraavaa paikkaa kiinni. Yritä uudelleen.' }, { status: 502, ...kors });
   // Ääni ja kuvan varahaku (Wikidatan P18) rinnakkain; pelin oma kuva voittaa.
   const [aani, korostus] = await Promise.all([
-    oppaanAani(pyynto, env, ctx, puheOhitus ?? tulos.teksti, kehittaja),
+    aaneton ? oppaanValmisAani(pyynto, env, puheOhitus ?? tulos.teksti).catch(() => null)
+      : oppaanAani(pyynto, env, ctx, puheOhitus ?? tulos.teksti, kehittaja),
     tulos.tyyppi === 'pysahdys' ? korostusLupaus : null,
   ]);
   // Lisäkuvat (P18 + Commons-luokka) pelin omien perään (omistaja 23.5x). Muun työn jälkeen odotetaan enintään
@@ -3663,6 +3670,7 @@ async function hoidaOpas(pyynto, env, kors, runko, ctx) {
   tulos.toiveen_ryhma = p.toive ? siltaRyhma(p.toive) : (seuraava ? 'kierros' : null);
   // Sana-ajat vain valmiille esittelylle (litteä kenttä; vanhat natiivit ohittavat sen).
   const ajat = tulos.valmis && aani?.aani ? await aaniAjat(env, aani.aani) : null;
+  if (aaneton && !aani) return vastaa({ ...tulos }, kors);
   return vastaa({ ...tulos, aani: aani?.aani ?? null, aani_pcm: aani?.aani_pcm ?? null, aani_taajuus: aani?.aani_taajuus ?? null,
     kesto_s: aani?.kesto_s ?? null, ...(ajat ? { aani_ajat: ajat } : {}) }, kors);
 }
