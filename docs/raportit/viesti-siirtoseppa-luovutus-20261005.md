@@ -1,4 +1,4 @@
-# Siirtosepän luovutus 5.–7.10.2026 — TILA 7.10. KLO 20.1x, TILINVAIHTO ~22 (Opus 5.5, high)
+# Siirtosepän luovutus 5.–7.10.2026 — LOPULLINEN 7.10. KLO 23.30, TILINVAIHTO (Opus 5.5, high)
 
 ## ALOITUSVIESTI SEURAAJALLE
 
@@ -11,6 +11,10 @@ kappeli). Lue tämä osio ja alin TILA-loki (päivän loppu), sitten CLAUDE.md j
   **siirtoseppa/historia-fp @ 7d1a7c6b** (ENSIMMÄINEN PERSOONA + kädet-v1; pelattavuusmallin 8.10. työjärjestyksestä TEHTY JO 7.10. ILLALLA lähes kaikki, ks. TILA-loki; pala v44p a727471e).
   **siirtoseppa/historia-fp-juna @ 6d23aed1** KUITATTU JUNAAN 163 (PT 20.4x; NUI 8aa55e02).
   **siirtoseppa/historia-valot @ 7d8408f9** (KEHITYSKÄRKI: valot + kytkin + tikkaat + v44q) ja **siirtoseppa/historia-valot-juna @ b91278bf** KUITATTU JUNAAN 163 (463fefc7 + kellokorjaus 0bfc86e0, joka myös korjausjunassa; varahaara ilman paketteja siirtoseppa/historia-fp-juna-2 @ 8b071c07).
+- Worktreet: wt/proto-siirtoseppa-face (historia-*, junahaarat), wt/proto-siirtoseppa-vfx (siirtoseppa/vfx-paketit 3ee905f8, master-pohja),
+  wt/proto-siirtoseppa-kello (siirtoseppa/kello-yksi-lyonti 0bfc86e0, korjausjunassa). Ei käynnissä olevia taustaajoja (23.30).
+- Junat: 163 kuitattu (historia-valot-juna b91278bf, vara historia-fp-juna-2 8b071c07); 0bfc86e0 korjausjunassa. Seuraava työ: M-osa
+  (huoneet 6–10, LR v44s datassa), K1–K5 (Pulun malli puuttuu), soihtujen volumetrinen hehku, koko palan huonesimulaatio (keittiö).
 - TESTAUS (omistaja 7.10. 15.5x/16.0x): ennen junaa VAIN Linssit-testit/kaanna.sh + Linssit-testit/unity-tarkistus.sh; ei omia
   käännöksiä, simua, stillejä eikä savuja. Kuittaus PT:ltä yhdellä rivillä (mitä, testit, SHA) → Natiiviseppä junaan.
 - OMISTAJA 7.10. 18.5x–18.7x: KAIKKI PELIT ENSIMMÄISESSÄ PERSOONASSA (Thief-malli; ei vartaloa/peilikuvaa; kädet saavat näkyä
