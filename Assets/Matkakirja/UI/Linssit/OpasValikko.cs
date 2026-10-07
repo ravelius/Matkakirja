@@ -449,6 +449,7 @@ namespace Matkakirja.Natiivi
         /// </summary>
         /// <summary>Oppaan alarivin nappi LIIKU-pohjalla: teksti (Kysy, Liiku) tai pelkkä kuvake (mikrofoni, näppäimistö), keskitettynä.</summary>
         OpasMetrolinja metro;
+        float metroKoysiVasen;
         VisualElement aikaRyhma;
 
         /// <summary>Vuorokausinappi: iPhonella oikean yläkulman ryhmään ■ ≡ -nappien vasemmalle (omistaja 12.3x), iPadilla vasemmalle.</summary>
@@ -485,6 +486,18 @@ namespace Matkakirja.Natiivi
                 vasen = OpasTapit.Reuna + OpasTapit.Halkaisija + KuvaRako;
                 ala = h - (TapitAla + KuvaRako);
             }
+            // Korin köysi (LS1 KoriVasenKoysiNorm, 0–1 ruudusta; omistajan kuittaus 7.10.: iPadilla ja iPhonen vaakana köysi peitti
+            // linjan): linja köyden oikealle puolelle. Köysi keinuu, joten raja = oikea reuna + väli, ja vasen reuna vain kasvaa
+            // saman näkymän aikana (ei hypi).
+            var koysi = OpasSovitin.KoriVasenKoysiNorm;
+            if (koysi.width > 0f && Juuri.panel != null)
+            {
+                float pw = Juuri.panel.visualTree.layout.width;
+                float koysiOikea = koysi.xMax * pw - Juuri.worldBound.xMin + KuvaRako;
+                metroKoysiVasen = Mathf.Max(metroKoysiVasen, koysiOikea);
+                vasen = Mathf.Max(vasen, Mathf.Round(metroKoysiVasen));
+            }
+            else metroKoysiVasen = 0f;
             metro.Paivita(nayta, yla, ala, Mathf.Max(h * 0.4f, OpasMetrolinja.VahinRivi * metro.Maara), LeveaRuutu ? w * 0.3f : w * 0.42f, vasen);
         }
 
