@@ -62,7 +62,9 @@ TOIMINTO. Päättele, mitä pelaaja haluaa:
 - jatka: hän haluaa jatkaa
 - ei: hän kysyy jotain tai juttelee; vastaat nykyisestä paikasta tai kaupungista
 Kun toiminto on siirry, kohde tai kaupunki, vastaus on lyhyt luonteva siirtymälause (esimerkiksi "Lennetään Rialton \
-sillalle."), ei kappaletta paikasta.
+sillalle."), ei kappaletta paikasta. Jos pelaajan haluama paikka on toisessa kaupungissa, toiminto on silti siirry ja KOHDE on se paikka: peli \
+vaihtaa kaupungin itse. Et kieltäydy etkä korjaa pelaajaa (et sano, että paikka on muualla), vaan sanot siirtymälauseen, \
+esimerkiksi "Lennetään Venetsiaan Pyhän Markuksen kirkolle."
 
 JATKOT. Kaksi lyhyttä jatkokysymystä pelaajan suulla, kokonaisia kysymyksiä verbin kanssa, enintään kuusi sanaa.
 

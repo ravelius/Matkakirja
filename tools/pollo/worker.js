@@ -37,7 +37,7 @@ import {
   MAAILMAN_SUOSIKIT_KEHOTE,
 } from './kohteet.js';
 import { OPAS_AINEISTOT } from './aineistot.js';
-import { OPAS_SALLITUT, sallittuKaupunki, pisteSallittu } from './sallitut.js';
+import { OPAS_SALLITUT, sallittuKaupunki, pisteSallittu, sallittuAluePisteelle } from './sallitut.js';
 import { vuosiluvutSanoiksi } from './puhesanat.js';
 import { kuvalista, kohteenKuvat, kaupunginKohteet, listanKuvin, kuvaKaupunkitilassa, LUKITTU_VAHINTAAN } from './opas-kuvat.js';
 import {
@@ -3313,8 +3313,24 @@ async function hoidaOppaanKysy(pyynto, env, kors, runko, ctx) {
       const paikka = j.kohde ? (await haeKohde(viite)) ?? (viite ? await haeKohde(null) : null) : null;
       if (paikka) {
         const ulkona = kaupunkiPiste ? etaisyysKm(kaupunkiPiste, paikka) > ULKONA_KM : false;
-        toiminto = pisteSallittu(paikka, null, env) ? { tyyppi: 'siirry', nimi: paikanNimi(paikka, j.kohde), lat: paikka.lat, lon: paikka.lon, ulkona }
-          : { tyyppi: 'ei-sallittu', nimi: paikanNimi(paikka, j.kohde) };
+        const nimi = paikanNimi(paikka, j.kohde);
+        // Kohde toisessa sallitussa kaupungissa (Päätoimittaja 7.10.: Pariisissa "vie minut Pyhän Markuksen kirkkoon"):
+        // kaupungin vaihto kuten kaupunkitoiveessa + kohde, ei kieltäytymistä. Ei-sallittu kuten ennen (esto kytkimen takana).
+        const alue = ulkona ? sallittuAluePisteelle(paikka, env) : null;
+        const nykyinen = p.kaupunki ? sallittuAluePisteelle(kaupunkiPiste, env) : null;
+        if (alue && alue.id !== nykyinen?.id) {
+          // Kohdekaupungin kuvalistan kohde (≤ 300 m): listan nimi ja tunnus, jotta natiivin seuraava /opas-pyyntö osuu
+          // listaan ja valmiiseen esittelyyn ("Basilica di San Marco" → "Pyhän Markuksen basilika", Q…).
+          const listalla = kaupunginKohteet(await kuvalista(env), alue.id).map((k) => ({ k, d: etaisyysKm(k, paikka) }))
+            .filter((x) => x.d <= 0.3).sort((x, y) => x.d - y.d)[0]?.k ?? null;
+          // Kohde litteinä kenttinä (LS1 7.10.): TF 156/157 lukisi alikentän nimen kaupungin nimeksi; vanhat ohittavat nämä.
+          const k = listalla ?? { nimi, id: null, lat: paikka.lat, lon: paikka.lon };
+          toiminto = { tyyppi: 'kaupunki', nimi: alue.nimi, id: alue.id, lat: alue.lat, lon: alue.lon,
+            kohde_nimi: k.nimi, kohde_id: k.id ?? null, kohde_lat: k.lat, kohde_lon: k.lon };
+        } else {
+          toiminto = pisteSallittu(paikka, null, env) ? { tyyppi: 'siirry', nimi, lat: paikka.lat, lon: paikka.lon, ulkona }
+            : { tyyppi: 'ei-sallittu', nimi };
+        }
       }
     } else if (j.toiminto === 'kaupunki' && j.kohde) {
       const k = await kaupunginSijainti(fetch, j.kohde).catch(() => null);
