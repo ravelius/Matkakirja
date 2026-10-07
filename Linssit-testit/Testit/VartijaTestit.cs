@@ -129,6 +129,25 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(v.Mittari < 0.2, "mittari laskenut");
         }
 
+        [Testi] static void IrtipaasyKerranMinuutissa()
+        {
+            var v = new Vartija(Reitti, yaw: 0); double x = 0, z = 0;
+            VartijanSyote Vieressa(double vx, double vz) => new VartijanSyote { PelaajaX = 0, PelaajaZ = 1, NakolinjaVapaa = true, Valoisuus = 1 };
+            for (int i = 0; i < 200 && v.Tila != VartijanTila.Kiinni; i++) Aja(v, ref x, ref z, Vieressa, 1 / 30.0);
+            Oleta.Sama(VartijanTila.Kiinni, v.Tila);
+            Oleta.Tosi(v.Irrottaudu(), "ikkunassa irti");
+            double z0 = z;
+            Aja(v, ref x, ref z, Vieressa, 2.9);
+            Oleta.Tosi(v.Tila == VartijanTila.Halytys && Math.Abs(z - z0) < 0.01, "horjahtaa 3 s paikallaan");
+            Aja(v, ref x, ref z, Vieressa, 3);
+            Oleta.Sama(VartijanTila.Kiinni, v.Tila);
+            Oleta.Tosi(!v.Irrottaudu(), "toinen irtipääsy minuutin sisällä ei onnistu");
+            var w = new Vartija(Reitti, yaw: 0); x = 0; z = 0;
+            for (int i = 0; i < 200 && w.Tila != VartijanTila.Kiinni; i++) Aja(w, ref x, ref z, Vieressa, 1 / 30.0);
+            Aja(w, ref x, ref z, Vieressa, Vartija.IrtiIkkunaS + 0.1);
+            Oleta.Tosi(!w.Irrottaudu(), "ikkunan jälkeen ei irti");
+        }
+
         [Testi] static void KokkiHuutaaEikaJahtaa()
         {
             var v = new Vartija(Reitti, yaw: 0) { Profiili = VartijaProfiili.Kokki }; double x = 0, z = 0;

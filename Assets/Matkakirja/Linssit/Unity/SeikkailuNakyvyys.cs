@@ -15,7 +15,11 @@ namespace Matkakirja.Natiivi
         /// <summary>Valoisuus, jossa kuva on täysin auki / täysin pimeä (vartijoiden asteikko 0…1, perusvalo 0,25).</summary>
         public const float Auki = 0.6f, Pimea = 0.2f, Muutos = 1.2f;
         public const float VinjettiMax = 0.42f, ViileysMax = -14f;
-        Volume volyymi; VolumeProfile profiili; float paino;
+        Volume volyymi, himmeys; VolumeProfile profiili, himmeysProfiili; float paino, himmeysNyt;
+        public static SeikkailuNakyvyys Aktiivinen { get; private set; }
+        /// <summary>Kuvan himmennys 0…1 (kiinnijäänti: 1,0–2,5 s, pelattavuusmalli 4.1); muutos HimmennysS:ssa.</summary>
+        public static float Himmennys;
+        public const float HimmennysS = 1.5f;
         public float Pimeys => paino;
 
         public static SeikkailuNakyvyys Luo(Transform isa)
@@ -30,6 +34,11 @@ namespace Matkakirja.Natiivi
             var wb = n.profiili.Add<WhiteBalance>(true);
             wb.temperature.Override(ViileysMax);
             n.volyymi.profile = n.profiili;
+            n.himmeys = go.AddComponent<Volume>(); n.himmeys.isGlobal = true; n.himmeys.priority = 120f; n.himmeys.weight = 0f;
+            n.himmeysProfiili = ScriptableObject.CreateInstance<VolumeProfile>(); n.himmeysProfiili.name = "SeikkailuHimmennys";
+            n.himmeysProfiili.Add<ColorAdjustments>(true).postExposure.Override(-7f);
+            n.himmeys.profile = n.himmeysProfiili;
+            Aktiivinen = n; Himmennys = 0f;
             return n;
         }
 
@@ -41,8 +50,15 @@ namespace Matkakirja.Natiivi
                 tavoite = Mathf.Clamp01((Auki - (float)SeikkailuVartijat.PelaajanValoisuus(p)) / (Auki - Pimea));
             paino = Mathf.MoveTowards(paino, tavoite, Muutos * Time.unscaledDeltaTime);
             volyymi.weight = paino * paino * (3f - 2f * paino);
+            himmeysNyt = Mathf.MoveTowards(himmeysNyt, Himmennys, Time.unscaledDeltaTime / HimmennysS);
+            himmeys.weight = himmeysNyt;
         }
 
-        void OnDestroy() { if (profiili != null) Destroy(profiili); }
+        void OnDestroy()
+        {
+            if (Aktiivinen == this) { Aktiivinen = null; Himmennys = 0f; }
+            if (profiili != null) Destroy(profiili);
+            if (himmeysProfiili != null) Destroy(himmeysProfiili);
+        }
     }
 }

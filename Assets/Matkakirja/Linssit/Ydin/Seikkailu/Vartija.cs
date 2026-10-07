@@ -82,6 +82,20 @@ namespace Matkakirja.Linssit.Seikkailu
         public bool Varoitettu => varoitusS >= VaroitusS && merkki && SydanS >= SydanVahS;
         double varoitusS, sydanLoppuS, huippu, etsiiS, halytysS, eiNaeS; bool merkki, huudettu; readonly List<(double X, double Z)> etsittavat = new List<(double, double)>();
         double Raja => Helpotettu ? 0.4 : Valppaus > 0 ? ValpasRaja : EpailyRaja;
+        // Irtipääsy (kohta 3.4, omistajan päätös 1 suosituksen mukaan): otteen jälkeen 1,0 s:n ikkuna, toiminto → hahmo horjahtaa ja
+        // pelaaja saa 3 s etumatkan; kerran per hahmo 60 sekunnissa.
+        public const double IrtiIkkunaS = 1.0, HorjahdusS = 3.0, IrtiValiS = 60;
+        double kello, viimeIrti = double.NegativeInfinity, horjahdus;
+        /// <summary>Aika otteesta (s), kun Tila = Kiinni.</summary>
+        public double OteS { get; private set; }
+
+        /// <summary>Pelaaja kiertyy irti otteesta: onnistuu ikkunan aikana kerran 60 s:ssa. Hahmo horjahtaa (3 s) ja jatkaa jahtia.</summary>
+        public bool Irrottaudu()
+        {
+            if (Tila != VartijanTila.Kiinni || OteS > IrtiIkkunaS || kello - viimeIrti < IrtiValiS) return false;
+            viimeIrti = kello; horjahdus = HorjahdusS; Tila = VartijanTila.Halytys; halytysS = 0; Vauhti = 0;
+            return true;
+        }
 
         readonly List<(double X, double Z, double OdotaS)> reitti;
         int piste; double odotus;
@@ -130,7 +144,9 @@ namespace Matkakirja.Linssit.Seikkailu
 
         public void Paivita(double dt, VartijanSyote s)
         {
-            if (Tila == VartijanTila.Kiinni) { Vauhti = 0; return; }
+            kello += dt;
+            if (Tila == VartijanTila.Kiinni) { Vauhti = 0; OteS += dt; return; }
+            if (horjahdus > 0) { horjahdus -= dt; Vauhti = 0; return; }
             if (Valppaus > 0) Valppaus = Math.Max(0, Valppaus - dt);
             double voima = NakoVoima(s);
             double dp = Etaisyys(s.VartijaX, s.VartijaZ, s.PelaajaX, s.PelaajaZ);
@@ -145,7 +161,7 @@ namespace Matkakirja.Linssit.Seikkailu
             SydanTempo = SydanS > 0 ? 70 + 50 * Math.Max(0, Math.Min(1, (Mittari - TutkiHuippu) / (1 - TutkiHuippu))) : 0;
             if (Mittari >= 1 && voima > 0)
             {
-                if (dp <= KiinniM && Profiili.Ottaa && Varoitettu) { Tila = VartijanTila.Kiinni; Vauhti = 0; return; }
+                if (dp <= KiinniM && Profiili.Ottaa && Varoitettu) { Tila = VartijanTila.Kiinni; Vauhti = 0; OteS = 0; return; }
                 if (Tila != VartijanTila.Halytys) { Tila = VartijanTila.Halytys; halytysS = 0; huudettu = false; merkki = true; }
             }
             // Kuulo: kuuluva ääni vie tutkimaan (harhautus), ellei hahmo jo näe pelaajaa tai jahtaa.

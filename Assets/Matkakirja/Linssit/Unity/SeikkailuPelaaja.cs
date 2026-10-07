@@ -45,6 +45,8 @@ namespace Matkakirja.Natiivi
         readonly List<Vector3> napautusReitti = new List<Vector3>();
         float jumiAika; Vector3 jumiPaikka;
         public bool Napautuskavely => napautusReitti.Count > 0;
+        /// <summary>Vartijan otteessa (pelattavuusmalli 4.1): ei liikettä, katse vapaa; SeikkailuVartijat ohjaa irtipääsyn ja himmennyksen.</summary>
+        public bool Otteessa;
 
         /// <summary>Napautus ruutuun (pikseleinä, Natiivi-UI:n kosketus tai Macin napsautus): lattia → kävely sinne; esine tai seinä
         /// alle 1,2 m:n päässä → toiminto (SeikkailuEsineet). Palauttaa, osuiko napautus maailmaan.</summary>
@@ -340,6 +342,7 @@ namespace Matkakirja.Natiivi
             float dt = Mathf.Min(Time.unscaledDeltaTime, 0.05f);
             var s = LueSyote();
             NapautusSyote(ref s, dt);
+            if (Otteessa) { s.LiikeX = s.LiikeY = 0; s.Juoksu = false; napautusReitti.Clear(); }
             PaivitaKadet(dt);
             if (PaivitaEle(dt))
             {

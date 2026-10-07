@@ -156,6 +156,7 @@ namespace Matkakirja.Natiivi
         {
             var p = SeikkailuPelaaja.Aktiivinen;
             if (p == null) return;
+            if (p.Otteessa) { Toiminto = null; return; }   // vartijan otteessa toiminto = irtipääsy (SeikkailuVartijat lukee)
             // Lähin heitettävä (ei kädessä eikä lennossa).
             Esine lahin = null; float pd = float.MaxValue;
             var pp = p.transform.position + Vector3.up * 0.9f;

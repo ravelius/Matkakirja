@@ -7,11 +7,13 @@
 //   askeläänet (juoksu 6 m, kävely 2,5 m, hiipiminen ei kuulu) ja heitot (Aani-jono, V4).
 // - Kiinni: pelaaja tarkistuspisteeseen (kävelyn aloituspaikka) ja vartijat partioon.
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using Matkakirja.Linssit.Dioraama;
 using Matkakirja.Linssit.Seikkailu;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.InputSystem;
 
 namespace Matkakirja.Natiivi
 {
@@ -149,6 +151,7 @@ namespace Matkakirja.Natiivi
         {
             float dt = Mathf.Min(Time.unscaledDeltaTime, 0.05f);
             var p = SeikkailuPelaaja.Aktiivinen;
+            if (ote != null) return;   // kiinnijäänti käynnissä (Ote-kulku)
             if (p != null && p != tarkistusPelaaja) { tarkistus = p.transform.position; tarkistusPelaaja = p; }   // uusi pelaaja = uusi tarkistuspiste
             var aanet = new List<Aanilahde>(jono); jono.Clear();
             if (p != null)
@@ -196,7 +199,7 @@ namespace Matkakirja.Natiivi
                     Repliikki(v, v.EdellinenTila, v.Aivot.Tila, s.NakolinjaVapaa && v.Aivot.Mittari > 0);
                     v.EdellinenTila = v.Aivot.Tila;
                 }
-                if (v.Aivot.Tila == VartijanTila.Kiinni) { Kiinni(v); break; }
+                if (v.Aivot.Tila == VartijanTila.Kiinni) { if (SeikkailuPelaaja.Ensimmainen && p != null) StartCoroutine(Ote(v, p)); else Kiinni(v); break; }
                 if (v.Aivot.Huuto)
                 {
                     // Hälytys (kohta 3.5): huuto kuuluu 20 m; enintään kaksi muuta tulee tutkimaan, muut valppaiksi (Vartija.Kutsu).
@@ -288,6 +291,45 @@ namespace Matkakirja.Natiivi
         {
             if (!Physics.Linecast(silmat, rinta, out var osuma, 1 << DioraamaNayttamo.Kerros, QueryTriggerInteraction.Ignore)) return true;
             return osuma.collider.GetComponentInParent<SeikkailuPelaaja>() != null;
+        }
+
+        V ote;
+        /// <summary>Kiinnijäänti ensimmäisessä persoonassa (pelattavuusmalli 4.1): ote olasta (nytkähdys 3°), 1,0 s:n irtipääsyikkuna
+        /// (toiminto: E, X tai toimintonappi → Vartija.Irrottaudu, 3 s etumatka), sitten kuva himmenee 1,5 s (vartija-kiinni-2) ja
+        /// pelaaja tarkistuspisteeseen (tyrmä tulee tähän), kaikki vartijat valppaina.</summary>
+        IEnumerator Ote(V v, SeikkailuPelaaja p)
+        {
+            ote = v; p.Otteessa = true; p.Tila.KameraPitch = Math.Min(p.Tila.PitchYla, p.Tila.KameraPitch + 3);
+            kirjaa?.Invoke($"seikkailu: ote ({v.Osa})");
+            SeikkailuEsineet.ToimintoPyydetty = false;
+            bool irti = false;
+            for (float t = 0; t < Vartija.IrtiIkkunaS; t += Time.unscaledDeltaTime)
+            {
+                var kb = Keyboard.current; var gp = Gamepad.current;
+                bool toiminto = SeikkailuEsineet.ToimintoPyydetty || kb != null && kb.eKey.wasPressedThisFrame || gp != null && gp.buttonWest.wasPressedThisFrame;
+                SeikkailuEsineet.ToimintoPyydetty = false;
+                if (toiminto && v.Aivot.Irrottaudu()) { irti = true; break; }
+                yield return null;
+            }
+            if (irti && p != null)
+            {
+                // Hanskakäsi vetää hihan vapaaksi: askel irti vartijasta, hahmo horjahtaa (Ydin), jahti jatkuu 3 s:n päästä.
+                var pois = p.transform.position - v.Agentti.transform.position; pois.y = 0;
+                p.Siirra(p.transform.position + (pois.sqrMagnitude > 1e-4f ? pois.normalized : -p.Hahmo.forward) * 0.5f);
+                p.KasiEle("luukku");
+                p.Otteessa = false; ote = null; v.EdellinenTila = v.Aivot.Tila;
+                kirjaa?.Invoke($"seikkailu: irtipääsy ({v.Osa})");
+                yield break;
+            }
+            SeikkailuNakyvyys.Himmennys = 1f;
+            var r = SeikkailuRepliikit.Aktiivinen;
+            if (r != null && r.Valmis && v.Agentti != null) r.Soita("vartija-kiinni-2", v.Agentti.transform);
+            yield return new WaitForSecondsRealtime(SeikkailuNakyvyys.HimmennysS);
+            if (p != null) p.Otteessa = false;
+            Kiinni(v);
+            ote = null;
+            yield return new WaitForSecondsRealtime(0.3f);
+            SeikkailuNakyvyys.Himmennys = 0f;
         }
 
         void Kiinni(V v)
