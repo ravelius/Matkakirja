@@ -6,7 +6,15 @@ worktreet /Users/Shared/Claude/wt/proto-natiivi-ui-<aihe>. Käännös: lokit/nat
 Simu vain Julkaisijan "SIMU NYT" -viestistä, oma iPhone FB234D08-4693-4496-9C7A-6C7C15B03963, iPad
 AD119F7B-A2A2-43EE-8769-7326DD757F89; lopuksi sammutus ja "simu vapaa".
 
-## TILA 7.10. klo 03.5x (uusin)
+## TILA 7.10. klo 05.2x (uusin)
+
+- JUNA 157 KUITATTU → SHA natiivi-ui/sallitut-157 5cbfb919 Natiivisepälle (käännös cb9d828d; arkki lokit/natiivi-ui-1035/sallitut-157/
+  arkki-157b.jpg). Korjattu simun 04.35 löydökset: nimitörmäykset (Granada NIC, Dublin USA, Barcelona VEN → Amerikat valikossa),
+  lähiöt (46 → 36 riviä), suosikit vain sallituilta alueilta, torjunta kertojan laatikkoon. "Islanti › Islanti" korjataan datassa
+  (Pelikoodari #4098 → Reykjavík). Kaikki junat 155–157 lähetetty; seuraavaksi lepo / Päätoimittajan uudet erät.
+- Mac v2 6f849fc8 OK. NÄYTTÖ yhä 2560×1440 (v1:n jäljiltä) → omistaja palauttaa Järjestelmäasetuksista (ei itse).
+
+## TILA 7.10. klo 03.5x
 
 - JUNA 156 KUITATTU → SHA natiivi-ui/opas-156 db65c7ae Natiivisepälle (käännös bca847c5). ☰-osumavika: toisto 18/20 + 19/20,
   juurisyy ohi-napautus 40 pt worldBound → Kosketusnappi.ContainsPoint, jälkeen 20/20 + 20/20 (skriptit/osuma-156.sh, vuoro-156b.sh).
