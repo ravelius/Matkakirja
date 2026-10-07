@@ -147,7 +147,7 @@ namespace Matkakirja.Natiivi
         // ©-rivi; GitHub-linkki ja periaatetekstit jäävät pois. Pohjat: pieni oikeusrivi (.mk-aloitus__oikeudet, Kirjain.Apuri) ja
         // palautteen lohko sellaisenaan. Lippurivin alku paketin ui-tekstit PERIAATTEET.lippurivi (Aloitusnakyma), tekijät
         // moduulit/js/packs/lippu-tekijat.json (web js/packs/lippu-tekijat.js, tools/lisaa-tekijat.mjs).
-        public static string Lippurivi = "Lippukuvat ovat Wikimedia Commonsista. Näiden tekijät lisenssi käskee nimetä: ";
+        public static string Lippurivi = "Lippukuvat ovat Wikimedia Commonsista. Lisenssi edellyttää näiden tekijöiden mainitsemista: ";   // Päätoimittaja 7.10. kielikorjaus
         const string Oikeudet = "© Visuaaliviestinnän Instituutti Tampere Oy";
         static List<(string Tekija, string Lisenssi)> lippuTekijat;
         Label lippuEl;
