@@ -1,0 +1,1 @@
+Tervetuloa Tampereelle. Ylhäältä kaupunki levittäytyy kapealle kannakselle kahden suuren järven väliin, ja sen keskellä vaahtoava koski virtaa punatiilisten tehtaiden ohi. Kierros alkaa keskustan sydämestä Hämeensillalta, jonka kaiteilla neljä pronssipatsasta on vartioinut kosken ylitystä lähes sata vuotta.

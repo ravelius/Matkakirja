@@ -1,0 +1,1 @@
+Tervetuloa Helsinkiin. Ylhäältä kaupunki on vaalea niemi, jota meri saartaa kolmelta puolelta ja jonka edustalla saaret ja luodot sirottuvat Suomenlahdelle. Kierros alkaa niemen keskeltä päärautatieasemalta, jonka graniittinen kellotorni näkyy kauas ja jonka ovella neljä kivimiestä pitelee pallolamppujaan.

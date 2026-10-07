@@ -1,0 +1,1 @@
+Tervetuloa Madridiin. Ylhäältä kaupunki on punaruskeiden kattojen meri keskellä paljasta ylätasankoa, ja sen länsilaidalla kuninkaanlinna kohoaa jyrkänteellä jokilaakson yllä. Kierros alkaa itälaidan Retiron puistosta, jonka suurella lammella hovi katseli aikanaan lavastettuja meritaisteluja ja jolla nykyään soudetaan.

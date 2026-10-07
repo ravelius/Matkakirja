@@ -1,0 +1,1 @@
+Tervetuloa Vilnaan. Ylhäältä vanhakaupunki näyttää punaisten kattojen ja barokkitornien kirjavalta tilkkutäkiltä, joka levittäytyy metsäisten kukkuloiden väliin Neris- ja Vilnia-jokien yhtymäkohtaan. Kierros alkaa linnamäen juurelta Vilnan tuomiokirkolta, jonka valkoinen pylväikkö muistuttaa antiikin temppeliä ja jonka vieressä kohoaa erillinen kellotapuli.

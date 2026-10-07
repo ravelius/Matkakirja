@@ -1,0 +1,1 @@
+Tervetuloa Edinburghiin. Ylhäältä kaupunki on tummaa kiveä ja vihreitä kukkuloita: lännessä linna kohoaa jyrkän kallion laella, ja vanhakaupunki valuu siitä kapeaa harjannetta pitkin itään. Kierros alkaa kaupungin itälaidalta Arthur's Seatilta, sammuneelta tulivuorelta, jonka huipulta koko kaupunki näkyy.

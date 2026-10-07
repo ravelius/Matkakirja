@@ -1,0 +1,1 @@
+Tervetuloa Sevillaan. Ylhäältä kaupunki on vaaleiden talojen, sisäpihojen ja appelsiinipuiden kirjoma matto, jonka länsireunaa Guadalquivir seurailee leveänä ja jonka keskeltä kohoaa katedraalin kellotorni. Kierros alkaa joen rannalta almohadien rakentamasta Kultatornista, joka on vartioinut kaupungin jokiliikennettä jo 1200-luvulta lähtien.

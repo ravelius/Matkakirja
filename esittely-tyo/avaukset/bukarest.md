@@ -1,0 +1,1 @@
+Tervetuloa Bukarestiin. Ylhäältä kaupunki on laaja tasanko, jonka halki Dâmbovița-joki kulkee suoristettuna uomana ja jonka keskeltä nousee parlamenttitalon valtava valkoinen kivimassa. Kierros alkaa vanhan keskustan kapeiden katujen keskeltä, pieneltä Stavropoleoksen kirkolta, jonka pylväät ja kaaret veistettiin kivestä 1700-luvun alussa.

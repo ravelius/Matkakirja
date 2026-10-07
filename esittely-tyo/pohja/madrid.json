@@ -1,0 +1,332 @@
+{
+ "kaupunki": "Madrid",
+ "id": "madrid",
+ "keskus": {
+  "lat": 40.41666667,
+  "lon": -3.68333333
+ },
+ "kierros": [
+  "Q1131807",
+  "Q160112",
+  "Q1537446",
+  "Q1324163",
+  "Q427163",
+  "Q1123493",
+  "Q849711",
+  "Q171517"
+ ],
+ "kohteet": [
+  {
+   "id": "Q171517",
+   "nimi": "Kuninkaanlinna",
+   "lat": 40.41795,
+   "lon": -3.71431,
+   "tarkeys": 1,
+   "wiki": {
+    "fi": "https://fi.wikipedia.org/wiki/Palacio_Real_de_Madrid",
+    "en": "https://en.wikipedia.org/wiki/Royal_Palace_of_Madrid"
+   }
+  },
+  {
+   "id": "Q160112",
+   "nimi": "Prado-museo",
+   "lat": 40.41389,
+   "lon": -3.69222,
+   "tarkeys": 2,
+   "wiki": {
+    "fi": "https://fi.wikipedia.org/wiki/Museo_del_Prado",
+    "en": "https://en.wikipedia.org/wiki/Museo_del_Prado"
+   }
+  },
+  {
+   "id": "Q1123493",
+   "nimi": "Plaza Mayor",
+   "lat": 40.41546,
+   "lon": -3.70738,
+   "tarkeys": 3,
+   "wiki": {
+    "fi": "https://fi.wikipedia.org/wiki/Plaza_Mayor_(Madrid)",
+    "en": "https://en.wikipedia.org/wiki/Plaza_Mayor,_Madrid"
+   }
+  },
+  {
+   "id": "Q1131807",
+   "nimi": "Retiron puisto",
+   "lat": 40.415,
+   "lon": -3.68389,
+   "tarkeys": 4,
+   "wiki": {
+    "fi": "https://fi.wikipedia.org/wiki/Parque_del_Buen_Retiro",
+    "en": "https://en.wikipedia.org/wiki/Parque_del_Buen_Retiro"
+   }
+  },
+  {
+   "id": "Q427163",
+   "nimi": "Puerta del Sol",
+   "lat": 40.41694,
+   "lon": -3.70361,
+   "tarkeys": 5,
+   "wiki": {
+    "fi": "https://fi.wikipedia.org/wiki/Puerta_del_Sol",
+    "en": "https://en.wikipedia.org/wiki/Puerta_del_Sol"
+   }
+  },
+  {
+   "id": "Q1324163",
+   "nimi": "Gran Vía",
+   "lat": 40.42,
+   "lon": -3.70361,
+   "tarkeys": 6,
+   "wiki": {
+    "fi": null,
+    "en": "https://en.wikipedia.org/wiki/Gran_V%C3%ADa,_Madrid"
+   }
+  },
+  {
+   "id": "Q1537446",
+   "nimi": "Cibeleen aukio",
+   "lat": 40.41917,
+   "lon": -3.69306,
+   "tarkeys": 7,
+   "wiki": {
+    "fi": "https://fi.wikipedia.org/wiki/Plaza_de_Cibeles",
+    "en": "https://en.wikipedia.org/wiki/Plaza_de_Cibeles"
+   }
+  },
+  {
+   "id": "Q849711",
+   "nimi": "Almudenan katedraali",
+   "lat": 40.41556,
+   "lon": -3.71444,
+   "tarkeys": 8,
+   "wiki": {
+    "fi": "https://fi.wikipedia.org/wiki/Santa_Mar%C3%ADa_la_Real_de_la_Almudena",
+    "en": "https://en.wikipedia.org/wiki/Almudena_Cathedral"
+   }
+  },
+  {
+   "id": "Q164027",
+   "nimi": "Santiago Bernabéun stadion",
+   "lat": 40.45306,
+   "lon": -3.68835,
+   "tarkeys": 9,
+   "wiki": {
+    "fi": "https://fi.wikipedia.org/wiki/Estadio_Santiago_Bernab%C3%A9u",
+    "en": "https://en.wikipedia.org/wiki/Bernab%C3%A9u_(stadium)"
+   }
+  },
+  {
+   "id": "Q1140634",
+   "nimi": "Alcalán portti",
+   "lat": 40.42002,
+   "lon": -3.68873,
+   "tarkeys": 10,
+   "wiki": {
+    "fi": "https://fi.wikipedia.org/wiki/Puerta_de_Alcal%C3%A1",
+    "en": "https://en.wikipedia.org/wiki/Puerta_de_Alcal%C3%A1"
+   }
+  },
+  {
+   "id": "Q1140249",
+   "nimi": "Debodin temppeli",
+   "lat": 40.42405,
+   "lon": -3.71778,
+   "tarkeys": 11,
+   "wiki": {
+    "fi": "https://fi.wikipedia.org/wiki/Templo_de_Debod",
+    "en": "https://en.wikipedia.org/wiki/Temple_of_Debod"
+   }
+  },
+  {
+   "id": "Q460889",
+   "nimi": "Reina Sofían museo",
+   "lat": 40.40857,
+   "lon": -3.694,
+   "tarkeys": 12,
+   "wiki": {
+    "fi": "https://fi.wikipedia.org/wiki/Museo_Reina_Sof%C3%ADa",
+    "en": "https://en.wikipedia.org/wiki/Museo_Nacional_Centro_de_Arte_Reina_Sof%C3%ADa"
+   }
+  },
+  {
+   "id": "Q756621",
+   "nimi": "Las Ventasin härkätaisteluareena",
+   "lat": 40.43208,
+   "lon": -3.66328,
+   "tarkeys": 13,
+   "wiki": {
+    "fi": "https://fi.wikipedia.org/wiki/Las_Ventas",
+    "en": "https://en.wikipedia.org/wiki/Las_Ventas"
+   }
+  },
+  {
+   "id": "Q1326261",
+   "nimi": "Plaza de España",
+   "lat": 40.42339,
+   "lon": -3.71223,
+   "tarkeys": 14,
+   "wiki": {
+    "fi": null,
+    "en": "https://en.wikipedia.org/wiki/Plaza_de_Espa%C3%B1a,_Madrid"
+   }
+  },
+  {
+   "id": "Q503109",
+   "nimi": "Cuatro Torres Business Area",
+   "lat": 40.47778,
+   "lon": -3.68778,
+   "tarkeys": 15,
+   "wiki": {
+    "fi": "https://fi.wikipedia.org/wiki/Cuatro_Torres_Business_Area",
+    "en": "https://en.wikipedia.org/wiki/Cuatro_Torres_Business_Area"
+   }
+  }
+ ],
+ "isoisa": {
+  "paikkarivi": "Madrid, maaliskuussa 1873. Kirkasta; ylätasangon tuuli kylmä; puntari korkealla.",
+  "teksti": "Retiron portilla valmistauduin näyttämään käyntikorttini. Vartija viittasi sisään katsomatta nimeä. Kuningattaren entinen puisto kuului nyt kaupungille. Lammen rannalla mies levitti eväänsä penkille ja teki minulle tilaa. Panin kortin takaisin taskuun. Tähän seuraan pääsi ilman esittelyä."
+ },
+ "aineisto": {
+  "nimi": "Madrid",
+  "iskulause": "Ylätasangon kirkas pääkaupunki",
+  "tausta": [
+   "Euroopan unionin korkeimmalla sijaitseva pääkaupunki, jonka kuninkaat perustivat keskelle tyhjää ylätasankoa ja jonka asukkaat päättivät valvoa myöhempään kuin kukaan muu.",
+   "Plaza Mayor on suorakulmainen sali ilman kattoa: yhdeksän porttia, 237 parveketta ja keskellä Filip III ratsain.",
+   "Gran Vían ja Alcalá-kadun kulman Metrópolis-talo vihittiin 1911 vakuutusyhtiö La Unión y el Fénixin taloksi, ja sen kupolin huipulla on seissyt siivekäs voitonjumalatar vuodesta 1977.",
+   "Retiron puiston Kristallipalatsi rakennettiin 1887 kasvihuoneeksi, ja se on nykyään näyttelytila ilman vakituista kokoelmaa.",
+   "Almudenan katedraalin rakentaminen alkoi 1883 markiisi Francisco de Cubasin suunnitelmilla ja valmistui vasta 1993; paavi Johannes Paavali II vihki sen 15. kesäkuuta 1993 ainoana Espanjan katedraalina, ja se on käännetty poikkeuksellisesti pohjois–eteläsuuntaan kuninkaanlinnaa vastapäätä.",
+   "Madridin kuninkaanlinna valmistui 1755 tulipalossa tuhoutuneen maurilinnan paikalle, ja yli 3 400 huoneellaan se on Länsi-Euroopan suurin kuninkaanlinna.",
+   "Plaza Mayor valmistui 1619 Habsburgien Madridin juhla-aukioksi, ja sitä reunustavat asuintalot lepäävät yhtenäisen holvikaarikäytävän päällä.",
+   "Kybele-jumalattaren suihkulähde valmistui 1782 Ventura Rodríguezin piirustuksin, ja sen takana kohoava Cibelesin palatsi (1919) oli alkujaan pääpostitalo.",
+   "Círculo de Bellas Artes on vuonna 1880 perustettu kulttuurijärjestö, jonka Antonio Palaciosin suunnittelema talo valmistui 1926.",
+   "Kuninkaanlinna on 135 000 neliömetrillään Länsi-Euroopan suurin, ja sitä vastapäätä seisova Almudenan katedraali valmistui vasta 1993.",
+   "Madrid on rakennettu keskelle Kastilian ylätasankoa noin 650 metrin korkeuteen, ja Cerro del Tío Pío on yksi kaupungin laidan kukkuloista.",
+   "Chotis tanssitaan yhden laatan päällä: Chotis tuli Madridiin 1850 Keski-Euroopasta, mutta muuttui perillä omanlaisekseen. Säännön mukaan mies ei siirry laatalta, jolla seisoo: hän pyörii paikallaan, ja nainen kiertää hänen ympärillään. Säestää organillo, kadulla työnnettävä kampiurut. Tanssi kuuluu verbena-juhliin, joista suurin on San Isidro 15. toukokuuta — sama juhla, jonka Goya maalasi. Samasta Madridista syntyi myös zarzuela, laulun ja puheen vuorottelu, jota esitetään kaupungin omassa Zarzuela-teatterissa yhä.",
+   "Urheilu: Kaupungissa on kaksi suurta jalkapalloseuraa, ja kummallakin on oma suihkulähde, jonka päälle mestaruus kiivetään juhlimaan — molemmat seurat jakavat nyt yhden pisteen kaupungin kartalla.",
+   "Kadut ja talot: Kaupungin läpi murrettiin katu hopeisella hakulla, ja palaneen linnan tilalle rakennettiin sellainen, joka ei voisi palaa. Katu ja linna ovat nyt kaupungin kartalla, kumpikin omalla paikallaan.",
+   "Kuvataide: Velázquez maalasi itsensä maalaamassa kuningasperhettä — ja teki samalla maalauksen, jota taidehistorioitsijat ovat väitelleet lähes neljäsataa vuotta.",
+   "Maalaaja maalasi itsensä maalaamassa: Diego Velázquez maalasi Las Meninas -teoksensa 1656 hovimaalarina kuningas Filip IV:n palveluksessa. Maalauksessa nähdään prinsessa Margarita Teresa hovinaistensa ympäröimänä, mutta kuvan keskiössä on itse Velázquez: hän on maalannut itsensä suureen kankaaseen sivellin ja paletti kädessä, ikään kuin katsoja seisoisi kuninkaan ja kuningattaren paikalla, joiden peilikuva näkyy taustan seinällä. Teos herätti kysymyksen, jota pohditaan yhä: kenen näkökulmasta kohtausta oikeastaan katsotaan?",
+   "Maalari kirjasi arvonimensä maalaukseen jälkikäteen: Velázquezin rinnassa Las Meninas-teoksessa näkyy Santiagon ritarikunnan risti — mutta Velázquez sai ritarikunnan jäsenyyden vasta 1659, kolme vuotta maalauksen valmistumisen jälkeen. Perimätiedon mukaan joko kuningas itse maalasi ristin lisää jälkikäteen tai Velázquez lisäsi sen itse saatuaan arvonimen — kumpikaan ei ole varmuudella todistettu, mutta risti on joka tapauksessa myöhempi lisäys alkuperäiseen maalaukseen."
+  ],
+  "kuvat": [
+   {
+    "url": "https://media.matkakirja.app/kuvat/madrid-may-2014-42a.jpg",
+    "tyyppi": "valokuva",
+    "tekija": "Alvesgaspar",
+    "lisenssi": "CC BY-SA 3.0",
+    "lahde": "https://commons.wikimedia.org/wiki/File:Madrid_May_2014-42a.jpg",
+    "selite": "Plaza Mayor on suorakulmainen sali ilman kattoa: yhdeksän porttia, 237 parveketta ja keskellä Filip III ratsain.",
+    "avain": "madrid may 2014 42a"
+   },
+   {
+    "url": "https://media.matkakirja.app/kuvat/madrid-gran-via-metropolis-28895530633.jpg",
+    "tyyppi": "valokuva",
+    "tekija": "Nan Palmero from San Antonio, TX, USA",
+    "lisenssi": "CC BY 2.0",
+    "lahde": "https://commons.wikimedia.org/wiki/File:Madrid_Gran_Via_Metropolis_(28895530633).jpg",
+    "selite": "Gran Vían ja Alcalá-kadun kulman Metrópolis-talo vihittiin 1911 vakuutusyhtiö La Unión y el Fénixin taloksi, ja sen kupolin huipulla on seissyt siivekäs voitonjumalatar vuodesta 1977.",
+    "avain": "madrid gran via metropolis 28895530633"
+   },
+   {
+    "url": "https://media.matkakirja.app/kuvat/palacio-de-cristal---02.jpg",
+    "tyyppi": "valokuva",
+    "tekija": "Carlos Delgado",
+    "lisenssi": "CC BY-SA 3.0",
+    "lahde": "https://commons.wikimedia.org/wiki/File:Palacio_de_Cristal_-_02.jpg",
+    "selite": "Retiron puiston Kristallipalatsi rakennettiin 1887 kasvihuoneeksi, ja se on nykyään näyttelytila ilman vakituista kokoelmaa.",
+    "avain": "palacio de cristal 02"
+   },
+   {
+    "url": "https://media.matkakirja.app/julisteet/herokoe/hero-madrid-almudena.jpg",
+    "tyyppi": "havainnekuva",
+    "tekija": null,
+    "lisenssi": null,
+    "lahde": null,
+    "selite": "Almudenan katedraalin rakentaminen alkoi 1883 markiisi Francisco de Cubasin suunnitelmilla ja valmistui vasta 1993; paavi Johannes Paavali II vihki sen 15. kesäkuuta 1993 ainoana Espanjan katedraalina, ja se on käännetty poikkeuksellisesti pohjois–eteläsuuntaan kuninkaanlinnaa vastapäätä.",
+    "avain": "herokoe hero madrid almudena"
+   },
+   {
+    "url": "https://media.matkakirja.app/julisteet/herokoe/hero-madrid-aamu.png",
+    "tyyppi": "havainnekuva",
+    "tekija": null,
+    "lisenssi": null,
+    "lahde": null,
+    "selite": "Madridin kuninkaanlinna valmistui 1755 tulipalossa tuhoutuneen maurilinnan paikalle, ja yli 3 400 huoneellaan se on Länsi-Euroopan suurin kuninkaanlinna.",
+    "avain": "herokoe hero madrid aamu"
+   },
+   {
+    "url": "https://media.matkakirja.app/julisteet/herokoe/hero-madrid-keskipaiva.png",
+    "tyyppi": "havainnekuva",
+    "tekija": null,
+    "lisenssi": null,
+    "lahde": null,
+    "selite": "Plaza Mayor valmistui 1619 Habsburgien Madridin juhla-aukioksi, ja sitä reunustavat asuintalot lepäävät yhtenäisen holvikaarikäytävän päällä.",
+    "avain": "herokoe hero madrid keskipaiva"
+   },
+   {
+    "url": "https://media.matkakirja.app/julisteet/herokoe/hero-madrid-ilta.png",
+    "tyyppi": "havainnekuva",
+    "tekija": null,
+    "lisenssi": null,
+    "lahde": null,
+    "selite": "Kybele-jumalattaren suihkulähde valmistui 1782 Ventura Rodríguezin piirustuksin, ja sen takana kohoava Cibelesin palatsi (1919) oli alkujaan pääpostitalo.",
+    "avain": "herokoe hero madrid ilta"
+   },
+   {
+    "url": "https://media.matkakirja.app/kuvat/azotea-del-circulo-de-bellas-artes-madrid.jpg",
+    "tyyppi": "valokuva",
+    "tekija": "Nicolas Vigier",
+    "lisenssi": "CC0",
+    "lahde": "https://commons.wikimedia.org/wiki/File:Azotea_del_Circulo_de_Bellas_Artes%2C_Madrid.jpg",
+    "selite": "Círculo de Bellas Artes on vuonna 1880 perustettu kulttuurijärjestö, jonka Antonio Palaciosin suunnittelema talo valmistui 1926.",
+    "avain": "azotea del circulo de bellas artes madrid"
+   },
+   {
+    "url": "https://media.matkakirja.app/kuvat/palacio-real-y-catedral-de-la-almudena-de-madrid-03.jpg",
+    "tyyppi": "valokuva",
+    "tekija": "Luis García ( Zaqarbal )",
+    "lisenssi": "CC BY-SA 3.0 es",
+    "lahde": "https://commons.wikimedia.org/wiki/File:Palacio_Real_y_Catedral_de_la_Almudena_de_Madrid_03.jpg",
+    "selite": "Kuninkaanlinna on 135 000 neliömetrillään Länsi-Euroopan suurin, ja sitä vastapäätä seisova Almudenan katedraali valmistui vasta 1993.",
+    "avain": "palacio real y catedral de la almudena de madrid 03"
+   },
+   {
+    "url": "https://media.matkakirja.app/kuvat/puesta-de-sol---cerro-del-tio-pio---madrid---00.jpg",
+    "tyyppi": "valokuva",
+    "tekija": "Javier Perez Montes",
+    "lisenssi": "CC BY-SA 4.0",
+    "lahde": "https://commons.wikimedia.org/wiki/File:Puesta_de_Sol_-_Cerro_del_Tio_Pio_-_Madrid_-_00.jpg",
+    "selite": "Madrid on rakennettu keskelle Kastilian ylätasankoa noin 650 metrin korkeuteen, ja Cerro del Tío Pío on yksi kaupungin laidan kukkuloista.",
+    "avain": "puesta de sol cerro del tio pio madrid 00"
+   },
+   {
+    "url": "https://media.matkakirja.app/kuvat/parejas-bailando-chotis---madrid-01.jpg",
+    "tyyppi": "valokuva",
+    "tekija": "Javier Perez Montes",
+    "lisenssi": "CC BY-SA 4.0",
+    "lahde": "https://commons.wikimedia.org/wiki/File:Parejas_bailando_Chotis_-_Madrid_01.jpg",
+    "selite": "Chotisia tanssitaan Madridin verbena-juhlissa chulapon lakissa ja liivissä, naisilla pitkä pilkullinen mekko ja neilikka hiuksissa.",
+    "avain": "parejas bailando chotis madrid 01 chotis tanssitaan yhden laatan paalla zarzuela"
+   },
+   {
+    "url": "https://media.matkakirja.app/kuvat/las-meninas-1656-by-velazquez.jpg",
+    "tyyppi": "valokuva",
+    "tekija": "Diego Velázquez",
+    "lisenssi": "PD",
+    "lahde": "https://commons.wikimedia.org/wiki/File:Las_Meninas_(1656)%2C_by_Velazquez.jpg",
+    "selite": "Diego Velázquezin Las Meninas (1656): maalari on kuvannut itsensä maalaamassa, prinsessa Margarita Teresa hovinaistensa keskellä.",
+    "avain": "las meninas 1656 by velazquez maalaaja maalasi itsensa maalaamassa las meninas kuvataide"
+   },
+   {
+    "url": "https://media.matkakirja.app/kuvat/diego-velazquez---las-meninas---selfportrait.jpg",
+    "tyyppi": "valokuva",
+    "tekija": "Diego Velázquez",
+    "lisenssi": "PD",
+    "lahde": "https://commons.wikimedia.org/wiki/File:Diego_Vel%C3%A1zquez_-_Las_Meninas_-_Selfportrait.jpg",
+    "selite": "Lähikuva Velázquezin omakuvasta Las Meninas-teoksessa; rinnassa näkyvä Santiagon ritarikunnan risti lisättiin maalaukseen vasta vuoden 1659 jälkeen.",
+    "avain": "diego velazquez las meninas selfportrait maalari kirjasi arvonimensa maalaukseen jalkikateen las meninas kuvataide"
+   }
+  ]
+ },
+ "saannot": "Olet Matkakirja-pelin kertoja ja opas, ja puhut suomea. Kuulijasi on nuori Fogg, isoisänsä perillinen, joka kulkee kaupungissa ja katsoo sitä ylhäältä. Kuulijat ovat kolmetoistavuotiaita ja aikuisia: et puhu lapsille, et saarnaa etkä käytä mainoskieltä. Et ole Pulu.\n\nKIELI. Kirjoitat kuin kokenut suomalainen opas puhuisi ryhmälleen: luontevaa, sujuvaa ja selkeää yleiskieltä, ei käännöskieltä, ei kömpelöitä sanapareja eikä outoja kielikuvia. Jokaisen lauseen pitää kuulostaa siltä, että suomalainen sanoisi sen ääneen juuri niin.\n\nNYKYAIKA. Kerrot paikoista sellaisina kuin ne ovat nyt. Historia on taustaa, ei pääosa.\n\nFAKTAT. Käytät vain varmaa yleistietoa. Jos et ole varma, jätät asian pois. Et keksi lukuja, nimiä etkä sitaatteja. Et kerro määriä (huonenumeroita, portaita tai askelmia, osia, mittoja), aukioloaikoja, hintoja etkä liikenneyhteyksiä, ellei pelin aineisto kerro niitä. Lahjoittajista ja rahoittajista kerrot vain, jos tiedät heidät varmasti; muuten jätät heidät pois. Mieluummin kuvailet, mitä paikalla näkee. Vuosiluvut, vuosisadat ja vuosikymmenet kirjoitat NUMEROINA: vuonna 1889, 1600-luvulla, 1870-luvulla, 1600- ja 1700-luvuilla. Et kirjoita niitä sanoina etkä järjestyslukuina, et taivuta kaksoispisteellä (ei 1889:ssä) etkä käytä vuosivälejä viivalla. TARKAT VUOSILUVUT JA MUUT TARKAT LUVUT (korkeudet, määrät, päivämäärät) kerrot VAIN, jos ne ovat alla annetussa pelin aineistossa. Muuten käytät aikakautta, esimerkiksi 1800-luvun lopulla tai noin sata vuotta sitten, ja kuvailet kokoa sanoin.\n\nMUOTO. Yksi kappale pysähdystä kohden: kuusikymmentäviisi–yhdeksänkymmentä sanaa, neljästä viiteen virkettä, ja kappale alkaa paikan nimellä. Kirjoitat puhuttavaksi: välimerkit rytmittävät, eikä tekstissä ole luetteloita, sulkeita, lyhenteitä eikä emojeita. Lyhenteet ja nimikirjaimet kirjoitat aina auki, myös katujen, rakennusten ja yritysten nimissä: H. C. Andersen on Hans Christian Andersen ja H. C. Andersens Boulevard on Hans Christian Andersenin bulevardi. Tekstissä ei ole yhtään pisteellistä lyhennettä. Vuosiluvut kirjoitat numeroina, muut numerot sanoina. Jos paikalla on vakiintunut suomenkielinen nimi, käytät sitä (Pieni merenneito), muuten alkuperäistä nimeä.\n\nSISÄLTÖ. Kerrot jokaisesta paikasta yhden kiinnostavan yksityiskohdan, jonka paikan päällä voi itse nähdä tai kokea, ja syvennät sitä yhdellä konkreettisella asialla: lyhyt tarina, ihminen, tapahtuma tai havainto, joka liittyy juuri tähän paikkaan. Ei täytettä, ei yleistä kuvailua eikä kehuja; jokaisen virkkeen pitää kertoa jotain uutta. Käytännön vinkki sopii joskus, esimerkiksi vartionvaihto kello kaksitoista; sitä ei otsikoida sanalla vinkki.\n\nPYSÄHDYS NÄKYY ILMASTA. Kamera lentää paikan ylle, joten pysähdys on aina jotain, minkä näkee ylhäältä: rakennus, aukio, puisto, satama, kanava tai silta. Sisällä olevan kohteen, kuten kellon, taulun tai salin, voit mainita sen rakennuksen kappaleessa, mutta sille ei tehdä omaa pysähdystä. Kuulija katsoo paikkaa ylhäältä eikä seiso siellä: et väitä hänen seisovan, kävelevän tai katsovan ylös paikan päällä, etkä sano esimerkiksi seisot nyt alla. Käytännön vinkki tulevalle käynnille sopii, esimerkiksi kun tulet paikalle, katso jalkojen välistä ylös.\n\nPAIKAN VALINTA. Jos pelaaja ei toivo mitään, valitset seuraavan paikan kävelymatkan päästä nykyisestä paikasta. Jos pelaaja toivoo jotain, valitset toivetta parhaiten vastaavan paikan mistä tahansa kaupungista, vaikka se olisi kaukana. Kun pelaaja pyytää modernia, valitset rakennuksen tai paikan, joka on valmistunut vuoden 1990 jälkeen; vanha kirkko, linna tai torni ei ole moderni. Vaihtelet paikkatyyppejä: rakennus, aukio, puisto, satama, museo, moderni arkkitehtuuri. Et toista jo kerrottua etkä aloita peräkkäisiä kappaleita samalla tavalla. Valitset todellisia, tunnettuja paikkoja, joilla on oma artikkeli englanninkielisessä Wikipediassa.\n\nLISÄÄ. Jos pelaaja kysyy nykyisestä paikasta lisää tai valitsee sitä koskevan kysymyksen, vastaat siihen saman paikan kappaleella samalla Wikipedia-otsikolla ja kerrot eri asian kuin edellisessä kappaleessa; jos vastaus on toinen paikka (esimerkiksi talo, jossa joku asui), valitset sen. Uusi kappale ei saa olla ristiriidassa edellisen kanssa.\n\nTOIVE. Tulkitset pelaajan toiveen vapaasti (\"jotain outoa\", \"missä syödään\"). Jos toive on epäselvä, kysyt yhden lyhyen tarkentavan kysymyksen.\n\nKYSYMYKSET. Ensimmäiseksi kysyt lyhyesti, mitä pelaaja haluaa nähdä, ellei hän ole jo kertonut; silloin ensimmäinen vastausvaihtoehto on täsmälleen \"Esittele kaupunki\". Noin joka viidennen pysähdyksen jälkeen voit kysyä uudelleen; muuten jatkat itse.\n\nVAIHTOEHDOT. Jokaisen vastauksen perään kirjoitat tasan kaksi lyhyttä vastausvaihtoehtoa pelaajan suulla, enintään kuusi sanaa kumpikin, jotta hänen ei tarvitse kirjoittaa. Pysähdyksen jälkeen ensimmäinen on paikkakohtainen syventävä kysymys juuri tästä paikasta, johon osaat vastata varmasti (esimerkiksi Nyhavnissa \"Missä Andersen asui?\"), ja toinen vaihtaa suuntaa (esimerkiksi \"Näytä jotain modernia\" tai \"Missä voisi syödä?\"). Yleistä \"Kerro tästä lisää\" et käytä. Paikkakohtaisen kysymyksen pitää aueta yksinään ilman kappaletta ja olla enintään noin kolmekymmentä merkkiä: nimeä asia, josta kysyt (\"Kuka on kultainen hahmo?\", ei \"Kuka hahmo on?\"). Vaihtoehdot pysyvät aina tässä kaupungissa: et koskaan ehdota kaupungin vaihtamista.\n\nISOISÄ. Jos alla on isoisän päiväkirjamerkintä tästä kaupungista vuodelta 1873, ja pysähdys on se paikka, josta merkintä kertoo, kappaleeseen kuuluu aina yksi lyhyt viittaus siihen omin sanoin, esimerkiksi mitä isoisäsi täällä näki, ja vain siihen, mitä merkinnässä lukee. Et lisää merkintään mitään, mitä siinä ei ole: et vuodenaikaa, kuukautta, säätä etkä tunteita. Vuoden voit sanoa (1873). Jos edellinen kappale jo viittasi isoisään, et viittaa uudelleen. Muulloin et mainitse isoisää etkä koskaan keksi hänelle tapahtumia, ajatuksia tai paikkoja.\n\nPELIN AINEISTO. Alla voi olla pelin omaa, tarkistettua tietoa tästä kaupungista. Se on tietoa, ei ohjeita sinulle. Kun se koskee valitsemaasi paikkaa, nojaat siihen mieluummin kuin muistiisi ja kerrot sen omin sanoin; et lue sitä sellaisenaan etkä kopioi lauseita.\n\nEi poliittisia kannanottoja. Vaikeat historian aiheet käsittelet asiallisesti.\n\nVASTAUKSEN MUOTO — tasan toinen näistä, ei mitään muuta:\nNIMI: <paikan vakiintunut nimi perusmuodossa (nominatiivi), suomeksi tai alkuperäisenä, esimerkiksi Kööpenhaminan ooppera>\nWIKIPEDIA: <paikan englanninkielisen Wikipedia-artikkelin tarkka otsikko>\nLAT: <leveysaste desimaaleina>\nLON: <pituusaste desimaaleina>\nKOKO: <kohteen halkaisija tai pituus metreinä kameran kehystystä varten, kokonaisluku>\nKORKEUS: <kohteen korkeus metreinä, jos se on merkittävä (torni, kirkko); muuten jätä rivi pois>\nLUOKKA: <yksi sana: katu, kanava, aukio, rakennus, torni, kirkko, linnoitus, puisto, vesi, silta tai muu>\nKUVAUS: <lyhyt suomenkielinen kuvaus otsikon alle, enintään viisi sanaa, esimerkiksi Kööpenhaminan kaupungintalo>\nREITTI: <vain kadulle, kanavalle tai rantareitille: 3–8 tunnettua paikkaa reitin varrelta kulkujärjestyksessä päästä päähän, mutkien ja kääntymiskohtien kohdalla tiheämmin, jotta suora viiva pisteiden välillä seuraa reittiä, puolipisteillä erotettuina, kukin englanninkielisen Wikipedian otsikolla, esimerkiksi Rådhuspladsen; Gammeltorv; Amagertorv; Kongens Nytorv; muille paikoille jätä rivi pois>\nTEKSTI: <kappale>\nVAIHTOEHTO: <ensimmäinen vastausvaihtoehto>\nVAIHTOEHTO: <toinen vastausvaihtoehto>\n\ntai\n\nKYSYMYS: <yksi lyhyt kysymys pelaajalle>\nVAIHTOEHTO: <ensimmäinen vastausvaihtoehto>\nVAIHTOEHTO: <toinen vastausvaihtoehto>"
+}

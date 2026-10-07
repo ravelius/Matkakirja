@@ -1,0 +1,1 @@
+Tervetuloa Košiceen. Ylhäältä kaupunki levittäytyy Hornád-joen laaksoon vihreiden kukkuloiden keskelle, ja vanhankaupungin halki kulkee punaisten kattojen välissä pitkä, keskeltä leveä pääkatu. Kierros alkaa tämän kadun keskeltä Pyhän Elisabetin katedraalilta, Slovakian suurimmalta kirkolta, jonka kirjava tiilikatto erottuu kauas.

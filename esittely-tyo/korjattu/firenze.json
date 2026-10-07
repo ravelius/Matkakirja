@@ -1,0 +1,580 @@
+{
+  "kaupunki": "Firenze",
+  "id": "firenze",
+  "versio": 2,
+  "kohteet": [
+    {
+      "id": "Q191739",
+      "nimi": "Firenzen tuomiokirkko",
+      "kuvaus": "Brunelleschin kupolin kruunaama katedraali",
+      "luokka": "kirkko",
+      "koko_m": 153,
+      "korkeus_m": 114,
+      "teksti": "Firenzen tuomiokirkko erottuu ylhäältä punaisen tiilikupolinsa ansiosta, sillä kupoli on yhä suurin koskaan muurattu. Kirkkoa alettiin rakentaa vuonna 1296 niin suurena, että kun vuonna 1418 katosta puuttui enää kupoli, kukaan ei tiennyt, miten valtava aukko katetaan. Sinä vuonna järjestetyn kilpailun voitti kultaseppänä koulutettu Filippo Brunelleschi, joka muurasi kaksi kuorta sisäkkäin ja latoi tiilet kalanruotokuvioon, jolloin koko aukon täyttävää puutelinettä ei tarvittu. Tiiliä kului yli neljä miljoonaa, ja kupoli valmistui vuonna 1436. Brunelleschi on haudattu kirkon alle, ja hänen hautansa löydettiin uudelleen kaivauksissa vuonna 1972.",
+      "lyhyt": "Firenzen tuomiokirkon keskeneräinen keskiaikainen julkisivu purettiin vuonna 1587, ja uutta odotettiin lähes kolmesataa vuotta. Sillä välin paljasta seinää koristeltiin ruhtinashäihin maalauksin, ja viimeinen niistä, vuodelta 1688, näkyy haalistuneena vielä 1800-luvun valokuvissa. Nykyinen marmorijulkisivu valmistui vasta vuonna 1887.",
+      "syventava": "Miten kupoli muurattiin ilman telineitä?",
+      "kysymykset": [
+        "Miksi kupolia ei osattu rakentaa ennen Brunelleschiä?",
+        "Kuka oli Filippo Brunelleschi?",
+        "Voiko kupolin huipulle kiivetä?",
+        "Mitä kirkon alta löytyi kaivauksissa?",
+        "Miksi julkisivu valmistui vasta niin myöhään?"
+      ],
+      "isoisa": false,
+      "lahteet": [
+        {
+          "vaite": "Kirkko on 153 metriä pitkä ja 114,5 metriä korkea.",
+          "url": "https://en.wikipedia.org/wiki/Florence_Cathedral"
+        },
+        {
+          "vaite": "Brunelleschin kupoli on yhä suurin koskaan muurattu kupoli.",
+          "url": "https://en.wikipedia.org/wiki/Florence_Cathedral"
+        },
+        {
+          "vaite": "Kirkko aloitettiin 1296; vuonna 1418 katossa oli yhä valtava kattamaton aukko, ja kaupunki järjesti kilpailun; Brunelleschi lupasi rakentaa kupolin ilman keskelle tulevaa puutelinettä; kalanruotolimitys ja kaksoiskuori.",
+          "url": "https://www.nationalgeographic.com/magazine/article/Il-Duomo"
+        },
+        {
+          "vaite": "Kupoli valmistui 1436 ja rakennettiin ilman väliaikaista puista tukikehikkoa.",
+          "url": "https://en.wikipedia.org/wiki/Florence_Cathedral"
+        },
+        {
+          "vaite": "Brunelleschi haudattiin tuomiokirkkoon; hauta löydettiin uudelleen kaivauksissa 1972.",
+          "url": "https://duomo.firenze.it/en/discover/crypt-of-santa-reparata/9191/tomba-di-filippo-brunelleschi"
+        },
+        {
+          "vaite": "Kupoliin käytettiin arviolta yli neljä miljoonaa tiiltä; Brunelleschi oli koulutukseltaan kultaseppä; kalanruotokuvio ja itsensä kantava kaksoiskuori ilman sisätelineitä.",
+          "url": "https://www.accordsolutions.it/en/blog/articoli/2023/brunelleschi-s-dome"
+        },
+        {
+          "vaite": "Arnolfon keskeneräinen julkisivu purettiin 1587–1588 Francesco I:n määräyksestä, ja julkisivu jäi paljaaksi 1800-luvulle; uusi rakennettiin 1876–1887 De Fabrisin suunnitelmasta.",
+          "url": "https://en.wikipedia.org/wiki/Florence_Cathedral"
+        },
+        {
+          "vaite": "Purkamisen jälkeen tehtiin väliaikaisia maalattuja julkisivuja ruhtinashäihin (1589, 1661, 1688); vuoden 1688 maalattu julkisivu säilyi haalistuvana 1800-luvulle ja näkyy varhaisissa valokuvissa.",
+          "url": "https://it.wikipedia.org/wiki/Facciata_di_Santa_Maria_del_Fiore"
+        }
+      ]
+    },
+    {
+      "id": "Q208633",
+      "nimi": "Ponte Vecchio",
+      "kuvaus": "Kauppojen reunustama keskiaikainen silta",
+      "luokka": "silta",
+      "koko_m": 100,
+      "teksti": "Vanha silta, Ponte Vecchio, on ylhäältä helppo tunnistaa, sillä sen kyljistä riippuu kauppojen rivi Arnon yllä. Nykyinen kolmikaarinen silta rakennettiin vuonna 1345, kun tulva oli vienyt edellisen. Aluksi sillalla myivät teurastajat ja nahkurit, mutta 1500-luvun lopulla suurherttua Ferdinando ensimmäinen määräsi, että siellä saivat toimia vain kultasepät ja jalokivikauppiaat. Syy kulki kauppojen katolla, sillä ruhtinaiden katettuun käytävään nousi lihan haju. Elokuussa 1944 vetäytyvät saksalaiset joukot tuhosivat kaikki Firenzen sillat paitsi tämän.",
+      "lyhyt": "Vanhan sillan, Ponte Vecchion, itäkyljen keskellä seisoo suihkulähteen päällä kuvanveistäjä ja kultaseppä Benvenuto Cellinin pronssinen rintakuva. Sillan johtavat kultasepät tilasivat sen vuonna 1900 Cellinin syntymän neljäsatavuotispäivän kunniaksi, ja yhä sillan kaupoissa myydään ennen kaikkea koruja.",
+      "syventava": "Miksi saksalaiset säästivät juuri tämän sillan?",
+      "kysymykset": [
+        "Miksi teurastajat ajettiin pois sillalta?",
+        "Kuka oli Benvenuto Cellini?",
+        "Miten silta selvisi toisesta maailmansodasta?",
+        "Asuuko sillan taloissa nykyään ihmisiä?",
+        "Kuka kulki käytävää sillan kauppojen yllä?"
+      ],
+      "isoisa": false,
+      "lahteet": [
+        {
+          "vaite": "Vuoden 1333 tulvan jälkeen rakennettiin uusi kolmikaarinen silta kauppoineen; valmis 1345.",
+          "url": "https://en.wikipedia.org/wiki/Ponte_Vecchio"
+        },
+        {
+          "vaite": "Teurastajien kaupat annettiin kultasepille ja jalokivikauppiaille Ferdinando I:n määräyksellä 1500-luvun lopulla (lähteet: 1593 tai dekreetti 27.9.1594), jotta käytävän ikkunoiden alla ei olisi epäjaloa ja pahanhajuista kauppaa.",
+          "url": "https://it.wikipedia.org/wiki/Ponte_Vecchio"
+        },
+        {
+          "vaite": "Ferdinando I piti teurastajien ja kalakauppiaiden hajua sopimattomana Vasarin käytävälle, joka kulkee kauppojen yläpuolella, ja karkotti heidät 1593.",
+          "url": "https://aviewoncities.com/florence/ponte-vecchio"
+        },
+        {
+          "vaite": "Saksalaiset eivät tuhonneet siltaa vetäytyessään 4.8.1944, toisin kuin kaikki muut Firenzen sillat.",
+          "url": "https://en.wikipedia.org/wiki/Ponte_Vecchio"
+        },
+        {
+          "vaite": "Vuonna 1900 sillan johtavat kultasepät tilasivat Cellinin syntymän 400-vuotisjuhlan kunniaksi pronssisen rintakuvan suihkulähteen päälle sillan itäpuolen keskelle.",
+          "url": "https://en.wikipedia.org/wiki/Ponte_Vecchio"
+        }
+      ]
+    },
+    {
+      "id": "Q271928",
+      "nimi": "Palazzo Vecchio",
+      "kuvaus": "Firenzen keskiaikainen raatihuone",
+      "luokka": "rakennus",
+      "koko_m": 90,
+      "teksti": "Vanha palatsi, Palazzo Vecchio, on linnoituksen näköinen raatihuone, jonka sakaroiden yltä kohoaa yhdeksänkymmentäneljä metriä korkea torni. Sen suunnitteli Arnolfo di Cambio, ja rakennus nousi vuodesta 1299 alkaen kaupunkivaltion hallituksen istuimeksi. Nimensä palatsi sai, kun herttua Cosimo ensimmäinen muutti hovinsa joen toiselle puolelle Pittin palatsiin. Palatsista lähtee yhä Vasarin käytävä, katettu kulkutie, jota pitkin ruhtinas pääsi uuteen kotiinsa kaduilta näkymättömissä. Nykyään talossa toimivat Firenzen pormestari ja kaupunginvaltuusto.",
+      "lyhyt": "Vanhan palatsin, Palazzo Vecchion, suuri sali rakennettiin vuonna 1494 tasavallan suuren neuvoston kokouksia varten. Sen seinille tilattiin taistelukuvat Leonardo da Vincilta ja Michelangelolta, mutta kumpikaan ei saanut työtään valmiiksi, ja nykyiset taistelufreskot maalasi Giorgio Vasari.",
+      "syventava": "Miksi Leonardon taistelukuva jäi kesken?",
+      "kysymykset": [
+        "Miksi palatsia kutsutaan vanhaksi palatsiksi?",
+        "Voiko palatsin torniin kiivetä?",
+        "Kuka oli Arnolfo di Cambio?",
+        "Mitä suuressa salissa tehdään nykyään?",
+        "Miksi Medicit muuttivat pois palatsista?"
+      ],
+      "isoisa": false,
+      "lahteet": [
+        {
+          "vaite": "Palazzo Vecchio on Firenzen raatihuone; torni on 94 metriä korkea.",
+          "url": "https://en.wikipedia.org/wiki/Palazzo_Vecchio"
+        },
+        {
+          "vaite": "Palatsin rakentaminen alkoi 1299 Arnolfo di Cambion johdolla kaupungin hallituksen istuimeksi; torni 94 metriä.",
+          "url": "https://en.wikipedia.org/wiki/Palazzo_Vecchio"
+        },
+        {
+          "vaite": "Suunnittelija Arnolfo di Cambio; sakaraharja (lähde: Lonely Planet -ote hakutuloksessa); nykyään pormestarin virasto ja kaupunginvaltuusto.",
+          "url": "https://en.wikipedia.org/wiki/Palazzo_Vecchio"
+        },
+        {
+          "vaite": "Nimi Palazzo Vecchio otettiin käyttöön, kun Cosimo muutti Pitti-palatsiin.",
+          "url": "https://en.wikipedia.org/wiki/Palazzo_Vecchio"
+        },
+        {
+          "vaite": "Vasarin käytävä rakennettiin 1565 Palazzo Vecchiosta Palazzo Pittiin, jotta Cosimo I pääsi kulkemaan palatsien välillä häiriöttä.",
+          "url": "https://en.wikipedia.org/wiki/Vasari_Corridor"
+        },
+        {
+          "vaite": "Viidensadan sali rakennettiin 1494 suuren neuvoston istuimeksi; Leonardo ja Michelangelo saivat tehtäväkseen taistelukuvat, joista kumpikaan ei valmistunut; nykyiset taistelufreskot ovat Vasarin ja hänen avustajiensa.",
+          "url": "https://www.walksinsideflorence.it/palazzo-vecchio-the-salone-dei-cinquecento-and-the-apartment/"
+        }
+      ]
+    },
+    {
+      "id": "Q51252",
+      "nimi": "Uffizin galleria",
+      "kuvaus": "Medicien taidekokoelmien museo",
+      "luokka": "rakennus",
+      "koko_m": 160,
+      "teksti": "Uffizin galleria muodostaa ylhäältä pitkän ja kapean U-kirjaimen, jonka kaksi siipeä ulottuvat Signorian aukiolta Arnon rantaan ja yhdistyvät siellä. Giorgio Vasari aloitti rakennuksen vuonna 1560 Cosimo ensimmäiselle virastotaloksi, ja nimikin tarkoittaa toimistoja. Nykyään se on yksi maailman tunnetuimmista taidemuseoista, ja Sandro Botticellin Venuksen syntymä ja Kevät ovat siellä vierekkäisissä saleissa. Venuksen hiuksissa on aitoa kultaa. Kokoelmat säilyivät Firenzessä Medicien viimeisen perijän Anna Maria Luisan ansiosta, sillä hänen vuonna 1737 allekirjoittamansa perhesopimus kielsi viemästä niitä pois.",
+      "lyhyt": "Uffizin gallerian kuuluisimpia saleja on Tribuna, kahdeksankulmainen aarrekammio, jonka Francesco ensimmäinen rakennutti 1580-luvun alussa. Sali kuvaa neljää alkuainetta: lattian kirjava marmori on maata, seinien punainen sametti tulta, tuulille avoin lyhty ilmaa ja kupolin lähes kuusituhatta Intian valtameren helmiäissimpukkaa vettä.",
+      "syventava": "Mitä Medicien perhesopimus määräsi?",
+      "kysymykset": [
+        "Miksi museon nimi tarkoittaa toimistoja?",
+        "Kuka oli Anna Maria Luisa Medici?",
+        "Mitä Botticellin Kevät esittää?",
+        "Onko museossa Leonardo da Vincin töitä?",
+        "Miksi Venuksen syntymä oli aikanaan rohkea?"
+      ],
+      "isoisa": false,
+      "lahteet": [
+        {
+          "vaite": "Vasari aloitti rakennuksen 1560 Cosimo I:lle virastoiksi, siitä nimi uffizi eli toimistot; kaksi pitkää siipeä ulottuu Signorian aukiolta joelle, jossa ne päättyvät yhdistävään siipeen.",
+          "url": "https://en.wikipedia.org/wiki/Uffizi"
+        },
+        {
+          "vaite": "Kesäkuusta 2026 Venuksen syntymä ja Kevät ovat vierekkäisissä saleissa vastakkaisilla seinillä.",
+          "url": "https://wtop.com/news/2026/06/uffizi-gallery-unveils-new-arrangement-for-botticellis-birth-of-venus-and-primavera/"
+        },
+        {
+          "vaite": "Anna Maria Luisa Medici allekirjoitti perhesopimuksen 31.10.1737; kokoelmia ei saanut myydä eikä viedä pois.",
+          "url": "https://www.finestresullarte.info/eventi/patto-di-famiglia-anna-maria-luisa-uffizi-31-ottobre"
+        },
+        {
+          "vaite": "Kultaa on käytetty pigmenttinä korostuksiin muun muassa Venuksen hiuksissa.",
+          "url": "https://en.wikipedia.org/wiki/The_Birth_of_Venus"
+        },
+        {
+          "vaite": "Tribunan rakensi Bernardo Buontalenti Francesco I:lle 1581–83 suurherttuan jalokivien ja aarteiden säilytykseen; kahdeksankulmainen; neljä alkuainetta: marmorilattia maa, punainen sametti tuli, tuulille avoin lyhty ilma, kupolin 5780 Intian valtameren helmiäissimpukkaa vesi.",
+          "url": "https://uffizi.it/en/artworks/the-tribune"
+        }
+      ]
+    },
+    {
+      "id": "Q849846",
+      "nimi": "Piazza della Signoria",
+      "kuvaus": "Firenzen poliittinen pääaukio",
+      "luokka": "aukio",
+      "koko_m": 150,
+      "teksti": "Kaupungin pääaukio, Piazza della Signoria, avautuu Vanhan palatsin edessä, ja aukiolla ratsastaa Giambolognan pronssinen Cosimo ensimmäinen. Palatsin oven vieressä seisoi Michelangelon David yli kolmesataa vuotta, ja isoisäsi näki sen vielä aukiolla vuonna 1873, kun patsasta aiottiin siirtää sateelta suojaan. Hän vertasi patsaan suurta kättä omaansa. Samana vuonna alkuperäinen siirrettiin museoon, ja nykyinen kopio pystytettiin paikalle vuonna 1910. Kiveykseen upotettu pyöreä laatta merkitsee kohdan, jossa munkki Girolamo Savonarola hirtettiin ja poltettiin vuonna 1498.",
+      "lyhyt": "Kaupungin pääaukion kulmassa on Bartolomeo Ammannatin Neptunuksen suihkulähde, Firenzen ensimmäinen suuri julkinen suihkulähde, jonka marmorista merenjumalaa firenzeläiset pilkkasivat isoksi valkoiseksi. Lähde piti saada valmiiksi jo vuonna 1565 Medicien prinssin Francescon häihin, mutta kokonaan se valmistui vasta lähes kymmenen vuotta myöhemmin.",
+      "syventava": "Miksi Savonarola poltettiin aukiolla?",
+      "kysymykset": [
+        "Miksi David siirrettiin pois aukiolta?",
+        "Mikä oli Turhuuksien rovio?",
+        "Kuka on ratsastajapatsaan Cosimo?",
+        "Mitä Perseus pitelee kädessään?",
+        "Kokoontuuko kaupunginvaltuusto yhä aukion laidalla?"
+      ],
+      "isoisa": true,
+      "lahteet": [
+        {
+          "vaite": "Giambolognan pronssinen ratsastajapatsas Cosimo I:stä pystytettiin Piazza della Signorialle 1594.",
+          "url": "https://en.wikipedia.org/wiki/Equestrian_Monument_of_Cosimo_I"
+        },
+        {
+          "vaite": "David paljastettiin 1504 Palazzo Vecchion edustalla ja seisoi aukiolla vuoteen 1873, jolloin se siirrettiin Accademiaan.",
+          "url": "https://en.wikipedia.org/wiki/David_(Michelangelo)"
+        },
+        {
+          "vaite": "Kopio on vartioinut Palazzo Vecchion sisäänkäyntiä vuodesta 1910, alkuperäinen seisoi aukiolla vuoteen 1873.",
+          "url": "https://www.frommers.com/destinations/florence/things-to-do/around-piazza-della-signoria/"
+        },
+        {
+          "vaite": "Isoisän merkintä 1873: David seisoi aukiolla, patsas aiottiin siirtää sateelta suojaan, hän katseli sen suurta kättä ja omaansa.",
+          "url": "kaanon:isoisan-paivakirja"
+        },
+        {
+          "vaite": "Pyöreä laatta Neptunuksen suihkulähteen edessä merkitsee paikan, jossa Savonarola hirtettiin ja poltettiin 23.5.1498.",
+          "url": "https://www.througheternity.com/travel-guide/savonarola-in-florence-visions-of-the-apocalypse"
+        },
+        {
+          "vaite": "Neptunuksen suihkulähde oli Firenzen ensimmäinen suuri julkinen suihkulähde; sen piti valmistua Francescon ja Itävallan Johannan häihin 1565, mutta koko suihkulähde valmistui vasta 1574–1575; lempinimi Biancone, iso valkoinen, syntyi kansan arvostelusta.",
+          "url": "https://it.wikipedia.org/wiki/Fontana_del_Nettuno_(Firenze)"
+        },
+        {
+          "vaite": "Ammannati sai suihkulähteen valmiiksi vasta 1574.",
+          "url": "https://en.wikipedia.org/wiki/Fountain_of_Neptune,_Florence"
+        }
+      ]
+    },
+    {
+      "id": "Q51177",
+      "nimi": "Santa Crocen basilika",
+      "kuvaus": "Suurmiesten hautakirkko",
+      "luokka": "kirkko",
+      "koko_m": 115,
+      "teksti": "Santa Crocen basilika on maailman suurin fransiskaanikirkko, ja nykyistä kirkkoa alettiin rakentaa vuonna 1294 vanhan kaupungin itälaidalle laajan aukion päähän. Kirkkoon on haudattu Michelangelo, Galileo Galilei, Niccolò Machiavelli ja säveltäjä Gioachino Rossini, ja Dantella on siellä muistomerkki, vaikka hänet on haudattu Ravennaan. Galilein jäännökset siirrettiin nykyiseen hautaansa vuonna 1737, lähes sata vuotta hänen kuolemansa jälkeen. Siirron yhteydessä häneltä irrotettiin oikean käden keskisormi, joka on nykyään esillä Firenzen Galileo-museossa.",
+      "lyhyt": "Santa Crocen basilika jäi marraskuussa 1966 Arnon tulvan alle, ja kirkon museosaleissa vesi nousi yli viiden metrin korkeuteen. Cimabuen krusifiksi menetti yli puolet maalipinnastaan, ja entisöity teos ripustettiin vuonna 2013 sakaristoon turvaan uusilta tulvilta.",
+      "syventava": "Miksi Galilein sormi irrotettiin?",
+      "kysymykset": [
+        "Miksi Dante ei ole haudattu Firenzeen?",
+        "Miksi Galilei saatiin haudata kirkkoon vasta myöhään?",
+        "Kuka maalasi kirkon vanhat freskot?",
+        "Miten Arnon suuri tulva vahingoitti kirkkoa?",
+        "Mikä on Stendhalin syndrooma?"
+      ],
+      "isoisa": false,
+      "lahteet": [
+        {
+          "vaite": "Santa Croce on maailman suurin fransiskaanikirkko; nykyisen kirkon rakentaminen alkoi 1294.",
+          "url": "https://en.wikipedia.org/wiki/Santa_Croce,_Florence"
+        },
+        {
+          "vaite": "Kirkossa ovat Michelangelon, Galilein, Machiavellin ja Rossinin haudat sekä Danten muistomerkki; Dante on haudattu Ravennaan.",
+          "url": "https://www.european-traveler.com/italy/visit-santa-croce-in-florence-to-see-giotto-frescoes-and-michelangelos-grave/"
+        },
+        {
+          "vaite": "Galilein jäännökset siirrettiin Santa Crocen mausoleumiin 1737, 95 vuotta kuoleman jälkeen; tällöin irrotettiin oikean käden keskisormi, joka on Museo Galileossa.",
+          "url": "https://en.wikipedia.org/wiki/Galileo%27s_middle_finger"
+        },
+        {
+          "vaite": "Cimabuen krusifiksi menetti noin 60 prosenttia maalipinnastaan ja ripustettiin sakaristoon 2013 suojaan tulvilta.",
+          "url": "https://www.santacroceopera.it/en/catalogue-of-works/cimabue-crucifix/"
+        },
+        {
+          "vaite": "Vuoden 1966 tulvassa vesi nousi entisessä ruokasalissa eli museossa 5,2 metrin korkeuteen.",
+          "url": "https://www.santacroceopera.it/en/places/museum/"
+        }
+      ]
+    },
+    {
+      "id": "Q888825",
+      "nimi": "Bobolin puutarha",
+      "kuvaus": "Medicien renessanssipuutarha",
+      "luokka": "puisto",
+      "koko_m": 700,
+      "teksti": "Bobolin puutarha nousee Pittin palatsin takaa rinteeseen, ja sen pääakselin alkupäässä on puolikkaan kilparadan muotoinen amfiteatteri, jonka keskellä seisoo muinaisegyptiläinen obeliski. Alue hankittiin vuonna 1549 Cosimo ensimmäisen puolisolle Eleonora Toledolaiselle, ja puutarhan pohjan suunnitteli Niccolò Tribolo, jonka työtä jatkoivat Giorgio Vasari, Bartolomeo Ammannati ja Bernardo Buontalenti. Patsaita on roomalaisajalta 1600-luvulle, joten puutarha on käytännössä ulkoilmamuseo. Yhdessä suihkulähteessä Medicien hovin kääpiö Morgante istuu kilpikonnan selässä viininjumala Bacchuksen asussa.",
+      "lyhyt": "Bobolin puutarhan Suuri luola on tekoluola, jonka Bernardo Buontalenti rakensi 1580- ja 1590-luvuilla ja jonka seiniin on muotoiltu tippukiviä, simpukoita sekä ihmis- ja eläinhahmoja. Rinteellä seisoo myös rokokootyylinen Kahvihuone, ikkunoin varustetun kupolin kruunaama paviljonki.",
+      "syventava": "Mistä amfiteatterin obeliski on peräisin?",
+      "kysymykset": [
+        "Kuka oli kääpiö Morgante?",
+        "Miksi Medicit halusivat näin suuren puutarhan?",
+        "Mitä Suuren luolan sisällä on?",
+        "Miten egyptiläinen obeliski päätyi Firenzeen?",
+        "Pidettiinkö amfiteatterissa oikeita näytöksiä?"
+      ],
+      "isoisa": false,
+      "lahteet": [
+        {
+          "vaite": "Pääakseli alkaa syvästä amfiteatterista, joka muistuttaa puolikasta antiikin hippodromia; keskellä egyptiläinen obeliski, tuotu Rooman Villa Medicistä.",
+          "url": "https://en.wikipedia.org/wiki/Boboli_Gardens"
+        },
+        {
+          "vaite": "Cosimo I osti alueen 1549 puolisolleen Eleonora Toledolaiselle; suunnittelija Tribolo, jatkajina Vasari, Ammannati ja Buontalenti; ulkoilmamuseo, veistokset roomalaisajalta 1600-luvulle.",
+          "url": "https://www.visittuscany.com/en/attractions/boboli-gardens/"
+        },
+        {
+          "vaite": "Bacchinon suihkulähteessä hovikääpiö Nano Morgante esittää Bacchusta kilpikonnan selässä.",
+          "url": "https://en.wikipedia.org/wiki/Boboli_Gardens"
+        },
+        {
+          "vaite": "Buontalenti työsti Suurta luolaa 1583–1593; seinillä kiviä, tippukiviä ja simpukoita, joista on muotoiltu ihmis- ja eläinhahmoja.",
+          "url": "https://en.wikipedia.org/wiki/Boboli_Gardens"
+        },
+        {
+          "vaite": "Hovikääpiö Morgante oli Medicien hovissa; Tribolon jälkeen työtä jatkoivat Vasari, Ammannati ja Buontalenti.",
+          "url": "https://www.visittuscany.com/en/attractions/boboli-gardens/"
+        },
+        {
+          "vaite": "Kaffeehaus on rokokootyylinen paviljonki, jonka kruunaa ikkunallinen kupoli.",
+          "url": "https://www.visittuscany.com/en/attractions/boboli-gardens/"
+        }
+      ]
+    },
+    {
+      "id": "Q29286",
+      "nimi": "Palazzo Pitti",
+      "kuvaus": "Suurherttuoiden ja kuninkaiden palatsi",
+      "luokka": "rakennus",
+      "koko_m": 200,
+      "teksti": "Pittin palatsi, Palazzo Pitti, on Arnon eteläpuolella, ja sen ydin on vuodelta 1458, jolloin pankkiiri Luca Pitti alkoi rakentaa itselleen kaupunkitaloa. Liiketappiot pysäyttivät työt, ja Pitti kuoli talon ollessa yhä kesken. Vuonna 1549 palatsin osti Cosimo ensimmäisen puoliso Eleonora Toledolainen, ja siitä tuli Toscanan suurherttuoiden pääasunto. Kun Firenze oli Italian pääkaupunki, kuningas Viktor Emanuel toinen asui täällä. Hänen pojanpoikansa lahjoitti palatsin sisältöineen Italian kansalle, ja nykyään se on yksi Firenzen suurimmista taidemuseoista.",
+      "lyhyt": "Pittin palatsiin päättyy Vasarin käytävä, jota pitkin Cosimo ensimmäinen saattoi kulkea Vanhasta palatsista kotiinsa joen yli kaduilta näkymättömissä. Katettua käytävää on yli seitsemänsataa metriä, ja se rakennettiin vuonna 1565 vain viidessä kuukaudessa.",
+      "syventava": "Miksi Luca Pittin rahat loppuivat?",
+      "kysymykset": [
+        "Kuka oli Eleonora Toledolainen?",
+        "Miksi Firenze oli hetken Italian pääkaupunki?",
+        "Mitä museoita palatsissa nykyään on?",
+        "Miksi Medicit muuttivat joen eteläpuolelle?",
+        "Kuinka kauan Medicit asuivat palatsissa?"
+      ],
+      "isoisa": false,
+      "lahteet": [
+        {
+          "vaite": "Palatsin ydin on vuodelta 1458 pankkiiri Luca Pittin kaupunkitalona; työt pysähtyivät tappioiden jälkeen, ja Pitti kuoli 1472 talon ollessa kesken.",
+          "url": "https://en.wikipedia.org/wiki/Palazzo_Pitti"
+        },
+        {
+          "vaite": "Palatsi myytiin 1549 Eleonora Toledolaiselle, Cosimo I:n puolisolle; siitä tuli suurherttuakunnan hallitsijasuvun pääasunto.",
+          "url": "https://en.wikipedia.org/wiki/Palazzo_Pitti"
+        },
+        {
+          "vaite": "Firenzen ollessa pääkaupunki 1865–1871 Viktor Emanuel II asui Pittissä.",
+          "url": "https://www.uffizi.it/en/pitti-palace/history"
+        },
+        {
+          "vaite": "Viktor Emanuel III lahjoitti palatsin sisältöineen Italian kansalle 1900-luvun alussa; se avattiin yleisölle yhtenä Firenzen suurimmista taidegallerioista.",
+          "url": "https://en.wikipedia.org/wiki/Palazzo_Pitti"
+        },
+        {
+          "vaite": "Viktor Emanuel III oli Viktor Emanuel II:n pojanpoika.",
+          "url": "https://en.wikipedia.org/wiki/Victor_Emmanuel_III"
+        },
+        {
+          "vaite": "Vasarin käytävä rakennettiin 1565 Palazzo Vecchiosta Palazzo Pittiin; pituus yli 700 metriä; Cosimo I kulki sitä häiriöttä.",
+          "url": "https://en.wikipedia.org/wiki/Vasari_Corridor"
+        },
+        {
+          "vaite": "Käytävä suunniteltiin ja rakennettiin viidessä kuukaudessa vuonna 1565.",
+          "url": "https://en.wikipedia.org/wiki/Vasari_Corridor"
+        }
+      ]
+    },
+    {
+      "id": "Q1348158",
+      "nimi": "Piazzale Michelangelo",
+      "kuvaus": "Näköalatasanne Arnon etelärannalla",
+      "luokka": "aukio",
+      "koko_m": 200,
+      "teksti": "Näköalatasanne Piazzale Michelangelo on Arnon etelärannan mäellä, ja sieltä koko vanha kaupunki kupoleineen ja torneineen näkyy yhdellä silmäyksellä. Tasanteen suunnitteli arkkitehti Giuseppe Poggi, ja se rakennettiin vuonna 1869, kun Firenze oli Italian pääkaupunki ja kaupunkia uudistettiin laajasti. Keskellä seisoo pronssinen jäljennös Michelangelon Davidista, ja samaan muistomerkkiin kuuluvat jäljennökset hänen neljästä vuorokaudenaikoja esittävästä veistoksestaan. Poggin piirtämään pylväshalliin oli tarkoitus tulla Michelangelo-museo, mutta siitä tuli ravintola, jonka terassilta näkymää voi katsella kahvikupin ääressä.",
+      "lyhyt": null,
+      "syventava": "Mitä vuorokaudenaikojen veistokset esittävät?",
+      "kysymykset": [
+        "Miksi tasanne nimettiin Michelangelon mukaan?",
+        "Milloin näköala on kauneimmillaan?",
+        "Miksi Firenze uudistettiin pääkaupunkivuosina?",
+        "Kuka oli arkkitehti Giuseppe Poggi?",
+        "Missä alkuperäiset veistokset ovat?"
+      ],
+      "isoisa": false,
+      "lahteet": [
+        {
+          "vaite": "Tasanne on mäellä historiallisen keskustan eteläpuolella Oltrarnossa; panoraamanäkymä kaupunkiin.",
+          "url": "https://en.wikipedia.org/wiki/Piazzale_Michelangelo"
+        },
+        {
+          "vaite": "Suunnittelija Giuseppe Poggi, rakennettu 1869 Oltrarnon uudistuksen aikana.",
+          "url": "https://en.wikipedia.org/wiki/Piazzale_Michelangelo"
+        },
+        {
+          "vaite": "Firenze oli Italian kuningaskunnan väliaikainen pääkaupunki 1865–1871.",
+          "url": "https://duomo.firenze.it/en/opera-magazine/archive/t/facade"
+        },
+        {
+          "vaite": "Muistomerkissä pronssiset jäljennökset Davidista ja San Lorenzon Medici-kappelin neljästä vuorokaudenaikojen allegoriasta; Poggin loggiaan suunniteltiin Michelangelo-museo, mutta siitä tuli ravintola, jonka terassilta näkymää voi katsella kahvikupin ääressä.",
+          "url": "https://en.wikipedia.org/wiki/Piazzale_Michelangelo"
+        }
+      ]
+    },
+    {
+      "id": "Q51175",
+      "nimi": "Santa Maria Novellan basilika",
+      "kuvaus": "Dominikaanien marmorijulkisivuinen kirkko",
+      "luokka": "kirkko",
+      "koko_m": 100,
+      "teksti": "Santa Maria Novellan basilika on dominikaanien kirkko lähellä päärautatieasemaa, joka on saanut nimensä siitä. Julkisivu on kuvioitu valkoisella ja vihreällä marmorilla, ja sen yläosan suunnitteli Leon Battista Alberti, joka sai työn valmiiksi vuonna 1470. Työn tilasi Rucellain suku, jonka vaakunan tuulen pullistamat purjeet kulkevat koristeaiheena julkisivun poikki. Sisällä on Masaccion Pyhä kolminaisuus, yksi ensimmäisistä monumentaalisista renessanssimaalauksista, joissa käytettiin keskeisperspektiiviä. Luostarin munkkien yrttitarhasta kasvoi apteekki, jota pidetään maailman vanhimpana.",
+      "lyhyt": null,
+      "syventava": "Mitä luostarin apteekki yhä valmistaa?",
+      "kysymykset": [
+        "Miksi julkisivussa on purjeiden kuvia?",
+        "Kuka oli Leon Battista Alberti?",
+        "Mitä Masaccion Pyhä kolminaisuus esittää?",
+        "Miksi asema nimettiin kirkon mukaan?",
+        "Kuka maalasi kirkon suuren krusifiksin?"
+      ],
+      "isoisa": false,
+      "lahteet": [
+        {
+          "vaite": "Santa Maria Novella on dominikaanien kirkko; asema on nimetty kirkon mukaan.",
+          "url": "https://en.wikipedia.org/wiki/Firenze_Santa_Maria_Novella_railway_station"
+        },
+        {
+          "vaite": "Alberti suunnitteli julkisivun yläosan, valmis 1470; geometrinen kuviointi valkoisesta ja vihreästä marmorista.",
+          "url": "https://en.wikipedia.org/wiki/Santa_Maria_Novella"
+        },
+        {
+          "vaite": "Rucellain suku tilasi julkisivun Albertilta; keskikehyksessä toistuu tuulen pullistamat purjeet, Rucellain tunnus.",
+          "url": "https://smn.it/en/artworks/the-facade"
+        },
+        {
+          "vaite": "Masaccion Pyhä kolminaisuus on yksi ensimmäisistä monumentaalisista renessanssimaalauksista, joissa käytetään lineaarista perspektiiviä.",
+          "url": "https://en.wikipedia.org/wiki/Holy_Trinity_(Masaccio)"
+        },
+        {
+          "vaite": "Officina juontaa dominikaanien yrttitarhaan 1221 ja tunnustetaan maailman vanhimmaksi apteekiksi.",
+          "url": "https://en.wikipedia.org/wiki/Officina_Profumo-Farmaceutica_di_Santa_Maria_Novella"
+        }
+      ]
+    },
+    {
+      "id": "Q732511",
+      "nimi": "Firenzen kastekappeli",
+      "kuvaus": "Kahdeksankulmainen romaaninen kastekirkko",
+      "luokka": "kirkko",
+      "koko_m": 40,
+      "teksti": "Firenzen kastekappeli on tuomiokirkon julkisivun edessä seisova kahdeksankulmainen rakennus, jonka katto on matala pyramidi. Sen kullattuja pronssiovia, jotka Lorenzo Ghiberti sai valmiiksi vuonna 1452, kutsutaan Paratiisin porteiksi, sillä niin Michelangelon kerrotaan niitä kuvanneen. Ovissa ovat nykyään jäljennökset, ja alkuperäiset ovat tuomiokirkon museossa. Runoilija Dante Alighieri kastettiin täällä, ja Jumalaisessa näytelmässä hän kutsuu rakennusta kauniiksi San Giovannikseen. Samassa kohdassa hän kertoo rikkoneensa yhden kappelin altaista pelastaakseen siihen hukkumassa olleen.",
+      "lyhyt": null,
+      "syventava": "Mitä Paratiisin porttien kuvat esittävät?",
+      "kysymykset": [
+        "Miksi ovia kutsutaan Paratiisin porteiksi?",
+        "Miksi alkuperäiset ovet vietiin museoon?",
+        "Mitä kupolin sisäpuolen mosaiikit esittävät?",
+        "Kuka kilpaili Ghibertin kanssa ovien tekemisestä?",
+        "Kastetaanko kappelissa yhä lapsia?"
+      ],
+      "isoisa": false,
+      "lahteet": [
+        {
+          "vaite": "Kastekappeli on kahdeksankulmainen, pyramidikattoinen ja seisoo tuomiokirkon julkisivua vastapäätä.",
+          "url": "https://www.britannica.com/topic/Gates-of-Paradise-by-Ghiberti"
+        },
+        {
+          "vaite": "Ghibertin kullatut pronssiovet valmistuivat 1452; Michelangelo kutsui niitä Paratiisin porteiksi; alkuperäiset ovat Museo dell’Opera del Duomossa ja ovilla jäljennökset.",
+          "url": "https://en.wikipedia.org/wiki/Lorenzo_Ghiberti"
+        },
+        {
+          "vaite": "Dante kastettiin kastekappelissa ja kutsui sitä Helvetin 19. laulussa nimellä mio bel San Giovanni; samassa kohdassa hän kertoo rikkoneensa yhden altaista pelastaakseen siinä hukkumassa olleen.",
+          "url": "https://duomo.firenze.it/en/opera-magazine/post/11059/dante-alighieri-the-divine-comedy-the-cathedral-and-the-baptistery-of-florence"
+        }
+      ]
+    },
+    {
+      "id": "Q844337",
+      "nimi": "San Miniato al Monte",
+      "kuvaus": "Romaaninen kirkko kukkulan laella",
+      "luokka": "kirkko",
+      "koko_m": 60,
+      "teksti": "Kukkulan kirkko San Miniato al Monte seisoo Piazzale Michelangelon yläpuolella, ja sen valkoisen ja vihreän marmorin geometrinen julkisivu näkyy kauas kaupunkiin. Kirkko vihittiin vuonna 1018 Firenzen ensimmäisen kristityn marttyyrin, pyhän Miniaksen, kunniaksi. Legendan mukaan hänet mestattiin kaupungissa, minkä jälkeen hän nosti päänsä ja kantoi sen kukkulalle, jolle kirkko myöhemmin rakennettiin. Luostarissa asuu yhä benediktiiniläismunkkeja, jotka laulavat gregoriaanista kirkkolaulua iltarukouksessa, ja kuka tahansa voi tulla kuuntelemaan.",
+      "lyhyt": null,
+      "syventava": "Kuka oli marttyyri Minias?",
+      "kysymykset": [
+        "Miksi Miniasta vainottiin?",
+        "Kauanko munkit ovat asuneet kukkulalla?",
+        "Miksi julkisivussa on vihreää marmoria?",
+        "Ketä kirkon hautausmaalle on haudattu?",
+        "Miksi kirkko rakennettiin juuri kukkulalle?"
+      ],
+      "isoisa": false,
+      "lahteet": [
+        {
+          "vaite": "Julkisivu on geometrista valkoista Carraran marmoria ja vihreää Praton serpentiiniä.",
+          "url": "https://www.visittuscany.com/en/attractions/san-miniato-al-monte-basilica/"
+        },
+        {
+          "vaite": "Kirkko vihittiin 1018 Firenzen ensimmäisen kristityn marttyyrin Miniaksen kunniaksi; legendan mukaan mestattu Minias kantoi päänsä kukkulalle.",
+          "url": "https://fua.it/LatestNews/1000-years-of-basilica-san-miniato-al-monte.html"
+        },
+        {
+          "vaite": "Basilikassa asuvat olivetaanibenediktiinimunkit laulavat gregoriaanista laulua, myös iltarukouksessa, johon vierailijat voivat osallistua.",
+          "url": "https://www.firenzemadeintuscany.com/en/article/san-miniato-al-monte-il-millenario/"
+        },
+        {
+          "vaite": "Kirkko sijaitsee Piazzale Michelangelon yläpuolella mäellä.",
+          "url": "https://en.wikipedia.org/wiki/San_Miniato_al_Monte"
+        }
+      ]
+    },
+    {
+      "id": "Q388448",
+      "nimi": "Bargellon kansallismuseo",
+      "kuvaus": "Veistosmuseo entisessä poliisipalatsissa",
+      "luokka": "rakennus",
+      "koko_m": 70,
+      "teksti": "Bargellon kansallismuseo toimii linnoituksen näköisessä palatsissa, jota alettiin rakentaa vuonna 1255 ja jossa asuivat kaupungin ylimmät virkamiehet. Vuonna 1574 taloon muutti poliisipäällikkö, jonka virkanimestä se sai nimensä, ja rakennus toimi myös vankilana. Sisäpihalla teloitettiin vankeja, kunnes suurherttua Pietro Leopoldo poisti kuolemanrangaistuksen vuonna 1786 ja poltatti mestausvälineet samalla pihalla. Vuonna 1865 talosta tuli yksi Italian ensimmäisistä kansallismuseoista, ja sen tunnetuin teos on Donatellon pronssinen David, ensimmäinen vapaasti seisova alaston miesveistos sitten antiikin.",
+      "lyhyt": null,
+      "syventava": "Miksi Donatellon David oli niin mullistava?",
+      "kysymykset": [
+        "Keitä Bargellon vankilassa pidettiin?",
+        "Miksi teloitukset lakkautettiin Toscanassa?",
+        "Kuka tilasi Donatellon Davidin?",
+        "Mitä muita veistoksia museossa on?",
+        "Miksi palatsi näyttää linnoitukselta?"
+      ],
+      "isoisa": false,
+      "lahteet": [
+        {
+          "vaite": "Rakentaminen alkoi 1255; talossa asuivat ensin Capitano del Popolo ja vuodesta 1261 podestà, kaupungin ylimmät virkamiehet; 1574 siihen sijoitettiin poliisipäällikkö eli bargello, josta nimi; myöhemmin vankila.",
+          "url": "https://en.wikipedia.org/wiki/Bargello"
+        },
+        {
+          "vaite": "Bargellossa teloitettiin; kun Pietro Leopoldo lakkautti kuolemanrangaistuksen 1786, mestauslava ja teloitusvälineet poltettiin Bargellon sisäpihalla.",
+          "url": "https://www.ancient-history-sites.com/sites/bargello-palace/"
+        },
+        {
+          "vaite": "Vuonna 1865 Bargello avattiin yhtenä Italian ensimmäisistä kansallismuseoista.",
+          "url": "https://www.italyguides.it/en/tuscany/florence/palace-of-bargello"
+        },
+        {
+          "vaite": "Donatellon pronssinen David on Bargellossa; ensimmäinen vapaasti seisova alaston miesveistos sitten antiikin.",
+          "url": "https://en.wikipedia.org/wiki/David_(Donatello,_bronze)"
+        }
+      ]
+    },
+    {
+      "id": "Q10855544",
+      "nimi": "Galleria dell'Accademia",
+      "kuvaus": "Michelangelon Davidin museo",
+      "luokka": "rakennus",
+      "koko_m": 60,
+      "teksti": "Taideakatemian galleria, Galleria dell’Accademia, on Michelangelon Davidin nykyinen koti. Patsas tuotiin tänne Signorian aukiolta vuonna 1873, mutta se odotti puulaatikossa yhdeksän vuotta, ennen kuin arkkitehti Emilio De Fabrisin sitä varten suunnittelema sali avattiin vuonna 1882. Davidin luo johtavan salin varrella on Michelangelon neljä keskeneräistä vankia, joissa hahmot näyttävät pyrkivän ulos marmorilohkareesta. Ne veistettiin paavi Julius toisen hautamuistomerkkiin. Galleria perustettiin vuonna 1784 suurherttua Pietro Leopoldon aikana taideakatemian opiskelijoiden opetuskokoelmaksi.",
+      "lyhyt": null,
+      "syventava": "Miksi Michelangelon vangit jäivät keskeneräisiksi?",
+      "kysymykset": [
+        "Kuinka korkea Michelangelon David on?",
+        "Miksi Davidin kädet ovat niin suuret?",
+        "Kuka pilasi marmorilohkareen ennen Michelangeloa?",
+        "Miksi David oli aikanaan poliittinen patsas?",
+        "Mitä muuta galleriassa on Davidin lisäksi?"
+      ],
+      "isoisa": false,
+      "lahteet": [
+        {
+          "vaite": "David siirrettiin Signorian aukiolta Accademiaan 1873.",
+          "url": "https://en.wikipedia.org/wiki/Galleria_dell%27Accademia"
+        },
+        {
+          "vaite": "Patsas odotti puulaatikossa yhdeksän vuotta; Emilio De Fabrisin suunnittelema tribuuna avattiin heinäkuussa 1882.",
+          "url": "https://cultura.gov.it/luogo/galleria-dell-accademia-di-firenze-1"
+        },
+        {
+          "vaite": "Neljä keskeneräistä Prigioni-veistosta veistettiin Julius II:n hautamonumenttiin, siirrettiin Accademiaan 1909; hahmot näyttävät nousevan lohkareesta.",
+          "url": "https://www.beculture.it/en/what-to-see-at-the-galleria-dell-accademia/"
+        },
+        {
+          "vaite": "Galleria perustettiin 1784 Pietro Leopoldon toimesta opiskelijoiden opetuskokoelmaksi.",
+          "url": "https://www.britannica.com/topic/Gallery-of-the-Academy"
+        }
+      ]
+    }
+  ]
+}

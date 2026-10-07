@@ -1,0 +1,1 @@
+Tervetuloa Firenzeen. Ylhäältä kaupunki on punaruskeiden tiilikattojen tiivis meri, jonka keskeltä tuomiokirkon valtava kupoli kohoaa ja jonka halki Arno virtaa siltojen alitse. Kierros alkaa Vanhasta palatsista, Palazzo Vecchiosta, jonka korkea torni on vartioinut kaupunkia keskiajalta asti.

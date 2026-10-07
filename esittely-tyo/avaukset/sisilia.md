@@ -1,0 +1,1 @@
+Tervetuloa Palermoon. Ylhäältä Sisilian pääkaupunki on vaaleiden talojen ja kirkonkupolien tiivis kenno, joka levittäytyy sataman ympärille vuorten rajaaman laakson pohjalle. Pohjoisessa kohoaa jyrkkä Monte Pellegrino. Kierros alkaa vanhan kaupungin länsilaidalta Erakkojen kirkolta, jonka viisi punaista kupolia hehkuu palmujen keskellä.

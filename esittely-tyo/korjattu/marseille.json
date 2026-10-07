@@ -1,0 +1,461 @@
+{
+ "kaupunki": "Marseille",
+ "id": "marseille",
+ "versio": 1,
+ "kohteet": [
+  {
+   "id": "Q975925",
+   "nimi": "Notre-Dame de la Garde",
+   "kuvaus": "Merenkulkijoiden basilika kalliolla",
+   "luokka": "kirkko",
+   "koko_m": 150,
+   "korkeus_m": 65,
+   "teksti": "Basilika Notre-Dame de la Garde kohoaa Marseillen korkeimmalla kalliolla, ja sen kellotornin huipulla kimaltaa yli yksitoista metriä korkea kullattu Neitsyt Maria lapsi sylissään. Marseillelaiset kutsuvat patsasta hyväksi äidiksi ja pitävät sitä merenkulkijoiden suojelijana. Kirkon katosta riippuu pienoislaivoja, ja seinät ovat täynnä kiitoslahjoja haaksirikoista ja vaaroista pelastuneilta, ja joukossa on jopa jalkapallopaitoja. Basilika vihittiin vuonna 1864, ja se rakennettiin Frans ensimmäisen 1500-luvulla rakennuttaman linnakkeen perustuksille. Pohjoisseinän kivessä näkyy yhä luodinjälkiä vuoden 1944 taisteluista, kun kaupunki vapautettiin.",
+   "lyhyt": "Basilika Notre-Dame de la Garden kellotornissa riippuu yli kahdeksantuhatta kiloa painava suurkello Marie Joséphine. Kun se vuonna 1845 vedettiin kaupungista mäelle, kuusitoista hevosta ei riittänyt, vaan rinteeseen valjastettiin kaikkiaan kaksikymmentäkuusi hevosta, ja nousu kesti kolme päivää.",
+   "syventava": "Miksi seinillä riippuu pienoislaivoja?",
+   "kysymykset": [
+    "Miksi patsasta kutsutaan hyväksi äidiksi?",
+    "Kuka suunnitteli basilikan?",
+    "Mitä kaikkea kiitoslahjoiksi on tuotu?",
+    "Mitä mäellä oli ennen basilikaa?",
+    "Mitä basilikalta näkee kaupungista?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Basilika on Marseillen korkeimmalla luonnonkohdalla; kellotornin päällä 11,2 metriä korkea kullattu Neitsyt ja lapsi -patsas.",
+     "url": "https://en.wikipedia.org/wiki/Notre-Dame_de_la_Garde"
+    },
+    {
+     "vaite": "Basilikaa ja patsasta kutsutaan hyväksi äidiksi (la Bonne Mère); merenkulkijoiden suojelija (myös boatnews.com: Protector of seafarers).",
+     "url": "https://www.marseille-tourisme.com/en/discover-marseille/culture-heritage/notre-dame-de-la-garde-basilica/"
+    },
+    {
+     "vaite": "Katosta riippuu pienoislaivoja; seinillä satoja kiitoslahjoja, myös Olympique de Marseillen pelaajien ja kannattajien jalkapallopaitoja.",
+     "url": "https://abcnews.go.com/Sports/wireStory/models-boats-donated-answered-prayers-hang-basilica-marseille-112533569"
+    },
+    {
+     "vaite": "Vihittiin 5.6.1864; rakennettu Frans I:n 1500-luvun linnakkeen perustuksille.",
+     "url": "https://en.wikipedia.org/wiki/Notre-Dame_de_la_Garde"
+    },
+    {
+     "vaite": "Pohjoisjulkisivussa luodin- ja sirpaleenjälkiä elokuun 1944 Marseillen taistelusta.",
+     "url": "https://europeupclose.com/article/notre-dame-de-la-garde-marseilles/"
+    },
+    {
+     "vaite": "Suurkello Marie Joséphine (8 234 kg) valettiin Lyonissa 1845; se vedettiin lokakuussa 1845 mäelle ensin kuudellatoista hevosella, nousuun lisättiin kymmenen, yhteensä 26; nousu kesti 8.–10.10.",
+     "url": "https://en.wikipedia.org/wiki/Notre-Dame_de_la_Garde"
+    },
+    {
+     "vaite": "Basilikan suurkello painaa 8 234 kg.",
+     "url": "https://www.marseille.fr/culture/patrimoine-culturel/notre-dame-de-la-garde"
+    }
+   ]
+  },
+  {
+   "id": "Q437959",
+   "nimi": "Marseillen vanha satama",
+   "kuvaus": "Kaupungin antiikkinen luonnonsatama",
+   "luokka": "vesi",
+   "koko_m": 900,
+   "teksti": "Marseillen vanha satama on pitkä ja kapea lahti keskellä kaupunkia, ja sen suuta vartioivat Saint-Jeanin linnake pohjoisrannalla ja Saint-Nicolas'n linnake etelärannalla. Kreikkalaiset merenkulkijat perustivat kaupungin tämän luonnonsataman rannalle noin vuonna 600 ennen ajanlaskun alkua. Kaupungin kapinoitua Ludvig neljästoista linnoitti sataman suun 1660-luvulla, ja linnakkeiden tykit osoittivat kaupunkiin eivätkä merelle. Aamuisin kalastajat myyvät yön saaliinsa sataman päädyn laiturilla. Kun isoisäsi kävi Marseillen satamassa vuonna 1873, saippuaa myytiin siellä tiiliskivinä; hän osti palan, mutta tervan, kalan ja suolaveden haju seurasi häntä silti majataloon.",
+   "lyhyt": "Marseillen vanhan sataman päätyyn valmistui vuonna 2013 Norman Fosterin suunnittelema katos, jonka katon alapinta on kiillotettua terästä. Peilikatto heijastaa alla kulkevat ihmiset ja kalatorin kojut ylösalaisin. Katos tehtiin, kun Marseille oli Euroopan kulttuuripääkaupunki.",
+   "syventava": "Miksi tykit osoittivat kaupunkiin?",
+   "kysymykset": [
+    "Miksi kreikkalaiset asettuivat juuri tähän lahteen?",
+    "Miksi linnakkeiden tykit osoittivat kaupunkiin?",
+    "Mitä kalatorilla myydään?",
+    "Mistä Marseillen saippua tehdään?",
+    "Miksi satama on nykyään huviveneiden käytössä?"
+   ],
+   "isoisa": true,
+   "lahteet": [
+    {
+     "vaite": "Sataman suuta vartioivat Saint-Jeanin linnake pohjoispuolella ja Saint-Nicolas'n linnake eteläpuolella.",
+     "url": "https://www.marseille-tourisme.com/en/discover-marseille/highlights/the-essentials/the-old-port/"
+    },
+    {
+     "vaite": "Fokaian kreikkalaiset perustivat Massalian noin 600 eaa. Lacydonin luonnonsataman eli vanhan sataman rannalle.",
+     "url": "https://www.ebsco.com/research-starters/history/massalia"
+    },
+    {
+     "vaite": "Ludvig XIV rakennutti Saint-Nicolas'n linnakkeen 1660–1664 ja uudisti Saint-Jeanin kaupungin kapinoiden jälkeen; molempien tykit osoittivat kaupunkiin.",
+     "url": "https://en.wikipedia.org/wiki/Fort_Saint-Nicolas_(Marseille)"
+    },
+    {
+     "vaite": "Kalastajat myyvät yön saaliin aamuisin sataman päädyn laiturilla, entisellä Quai des Belges'llä.",
+     "url": "https://marseille-tourisme.com/en/discover-marseille/traditions/fish-market-marseille"
+    },
+    {
+     "vaite": "Isoisän merkintä: Marseillen satamassa saippuaa myytiin tiiliskivinä; hän osti palan, mutta terva, kala ja suolavesi seurasivat majataloon.",
+     "url": "kaanon:isoisan-paivakirja"
+    },
+    {
+     "vaite": "Norman Fosterin ja Michel Desvignen peilikatos valmistui 2013 kulttuuripääkaupunkivuoteen; ruostumatonta kiillotettua terästä, heijastaa alla olevat ylösalaisin.",
+     "url": "https://www.archpaper.com/2013/03/norman-foster-turns-the-world-on-its-head-with-mirrored-pavilion-in-france/"
+    }
+   ]
+  },
+  {
+   "id": "Q2808698",
+   "nimi": "MuCEM",
+   "kuvaus": "Välimeren sivilisaatioiden museo",
+   "luokka": "rakennus",
+   "koko_m": 200,
+   "teksti": "Euroopan ja Välimeren sivilisaatioiden museo, MuCEM, seisoo vanhan sataman suulla entisellä laiturilla suurena kuutiona. Sen seiniä peittää tumma, pitsimäinen verkko kuituvahvisteista betonia, joka siivilöi Välimeren valoa sisätiloihin. Rudy Ricciottin ja Roland Cartan suunnittelema museo avattiin vuonna 2013. Katolta kulkee kapea mustan betonin silta yhdeksäntoista metrin korkeudessa vanhaan Saint-Jeanin linnakkeeseen, joka kuuluu nykyään museoon. Viereisessä rakennuksessa on vuonna 2022 avattu jäljennös Cosquerin luolasta, jonka alkuperäiseen suuaukkoon pääsee vain sukeltamalla.",
+   "lyhyt": "Euroopan ja Välimeren sivilisaatioiden museon, MuCEMin, kokoelmat tulivat Pariisista: niiden ytimenä on vuonna 2005 suljetun kansallisen kansanperinnemuseon aineisto. Sen perusti vuonna 1937 museomies Georges Henri Rivière, jonka tutkijat kiersivät Ranskan maaseutua keräämässä arkisia esineitä ja perinteitä.",
+   "syventava": "Mitä Cosquerin luolan seinillä on?",
+   "kysymykset": [
+    "Mitä museossa on esillä?",
+    "Miksi museo on verhottu betoniverkkoon?",
+    "Kuka on arkkitehti Rudy Ricciotti?",
+    "Mikä on Saint-Jeanin linnakkeen historia?",
+    "Millaisia maalauksia Cosquerin luolassa on?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Museo seisoo entisellä J4-laiturilla sataman suulla; kuutio, pohja 72 x 72 metriä.",
+     "url": "https://mucem.org/en/the-mucem/architecture-of-the-mucem"
+    },
+    {
+     "vaite": "Julkisivuja varjostaa kuituvahvisteisen betonin pitsimäinen verkko.",
+     "url": "https://mucem.org/en/the-mucem/architecture-of-the-mucem"
+    },
+    {
+     "vaite": "Suunnittelijat Rudy Ricciotti ja Roland Carta; avattiin 2013.",
+     "url": "https://mucem.org/en/the-mucem/architecture-of-the-mucem"
+    },
+    {
+     "vaite": "Terassilta kävelysilta Saint-Jeanin linnakkeeseen, mustaa betonia 19 metrin korkeudessa.",
+     "url": "https://mucem.org/en/the-mucem/architecture-of-the-mucem"
+    },
+    {
+     "vaite": "Saint-Jeanin linnake on osa museota.",
+     "url": "https://en.wikipedia.org/wiki/Museum_of_European_and_Mediterranean_Civilisations"
+    },
+    {
+     "vaite": "Cosquer Méditerranée avattiin 4.6.2022 Villa Méditerranéessa; alkuperäisen luolan suuaukko on 37 metrin syvyydessä.",
+     "url": "https://www.marseille-tourisme.com/en/discover-marseille/culture-heritage/discover-the-sites-and-monuments-in-marseille/the-cosquer-cave/"
+    },
+    {
+     "vaite": "Kokoelmat ovat peräisin Pariisin kansallisesta kansantaiteen ja -perinteiden museosta (MNATP), joka suljettiin 2005; kokoelmissa noin miljoona kohdetta (250 000 esinettä, 150 000 kirjaa, 350 000 valokuvaa, 100 000 julistetta ja vedosta, 100 000 postikorttia, 80 000 äänitettä, 2021).",
+     "url": "https://fr.wikipedia.org/wiki/Mus%C3%A9e_des_Civilisations_de_l%27Europe_et_de_la_M%C3%A9diterran%C3%A9e"
+    },
+    {
+     "vaite": "Cosquer Méditerranée on avoinna vuonna 2026 Villa Méditerranéessa.",
+     "url": "https://www.marseille-tourisme.com/decouvrez-marseille/culture-et-patrimoine/cosquer-mediterranee-marseille-2eme-fr-3520089/"
+    },
+    {
+     "vaite": "Kansallisen kansanperinnemuseon (MNATP) perusti vuonna 1937 Georges Henri Rivière, joka johti sitä vuoteen 1967; museon aineistoa koottiin valtion järjestämillä maaseudun kenttätutkimuksilla.",
+     "url": "https://fr.wikipedia.org/wiki/Georges_Henri_Rivi%C3%A8re"
+    }
+   ]
+  },
+  {
+   "id": "Q622500",
+   "nimi": "Ifin linna",
+   "kuvaus": "Saarilinnoitus ja entinen vankila",
+   "luokka": "linnoitus",
+   "koko_m": 250,
+   "teksti": "Ifin linna täyttää lähes koko pienen kalliosaaren Marseillen edustalla: neliön muotoinen kolmikerroksinen linnoitus, jota reunustaa kolme tykkitornia. Kuningas Frans ensimmäinen rakennutti sen 1500-luvun alkupuolella puolustamaan satamaa, mutta pian linnasta tuli vankila. Alexandre Dumas teki siitä maailmankuulun romaanissaan Monte Criston kreivi, jossa viattomana vangittu Edmond Dantès pakenee saarelta. Todellisia vankeja olivat muun muassa protestantit, kreivi Mirabeau ja vuoden 1720 ruttolaivan kapteeni. Linna avattiin yleisölle vuonna 1890, ja saarelle kulkee laiva vanhasta satamasta.",
+   "lyhyt": "Ifin linnan saarelle nousi vuonna 1516 maihin harvinainen vieras, sarvikuono, jonka Portugalin kuningas oli lähettänyt lahjaksi paaville. Eläintä kävi katsomassa myös kuningas Frans ensimmäinen, joka huomasi samalla, kuinka hyvä paikka saari olisi linnoitukselle.",
+   "syventava": "Pakeniko linnasta koskaan kukaan?",
+   "kysymykset": [
+    "Pakeniko linnasta koskaan kukaan?",
+    "Kuka oli kreivi Mirabeau?",
+    "Mitä sarvikuonolle lopulta tapahtui?",
+    "Oliko Edmond Dantès todellinen henkilö?",
+    "Miksi linna rakennettiin juuri tälle saarelle?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Linna on neliön muotoinen kolmikerroksinen rakennus, 28 metriä sivultaan, ja sitä reunustaa kolme tykkitornia; Frioulin pienin saari.",
+     "url": "https://en.wikipedia.org/wiki/Ch%C3%A2teau_d%27If"
+    },
+    {
+     "vaite": "Frans I rakennutti linnan 1524–1531 puolustamaan rannikkoa; siitä tuli pian vankila.",
+     "url": "https://en.wikipedia.org/wiki/Ch%C3%A2teau_d%27If"
+    },
+    {
+     "vaite": "Dumas'n romaani Monte Criston kreivi; Edmond Dantès vangitaan perättömästi linnaan ja pakenee.",
+     "url": "https://en.wikipedia.org/wiki/Ch%C3%A2teau_d%27If"
+    },
+    {
+     "vaite": "Vankeina protestantteja Nantesin ediktin kumoamisen jälkeen, vuoden 1720 ruttolaivan kapteeni Jean-Baptiste Chataud ja kreivi Mirabeau.",
+     "url": "https://www.ancient-history-sites.com/sites/chateau-d-if/"
+    },
+    {
+     "vaite": "Linnoitus demilitarisoitiin ja avattiin yleisölle 1890.",
+     "url": "https://en.wikipedia.org/wiki/Ch%C3%A2teau_d%27If"
+    },
+    {
+     "vaite": "Saarelle kulkee Frioul If Express -lautta vanhasta satamasta.",
+     "url": "https://cnes.fr/geoimage/paca-les-iles-du-frioul-de-lagglomeration-de-marseille-un-espace-rare-aux-defis-dun"
+    },
+    {
+     "vaite": "Tammikuussa 1516 Portugalin kuninkaan paavi Leo X:lle lähettämä sarvikuono pysähtyi Marseillen edustalle Ifin saarelle (calanques-parcnational.fr), Frans I kävi katsomassa sitä ja näki saaren strategisen arvon.",
+     "url": "https://en.wikipedia.org/wiki/Ch%C3%A2teau_d%27If"
+    },
+    {
+     "vaite": "Provencen historioitsijoiden mukaan sarvikuonoa kuljettanut portugalilainen laiva pysähtyi Ifin saarelle 23.1.1516; Frans I kävi katsomassa sitä 24.1.1516 ja huomasi matkallaan Marseillen rannikon heikon puolustuksen.",
+     "url": "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_d%27If"
+    }
+   ]
+  },
+  {
+   "id": "Q1419757",
+   "nimi": "Marseillen katedraali",
+   "kuvaus": "Raidallinen uusbysanttilainen tuomiokirkko",
+   "luokka": "kirkko",
+   "koko_m": 142,
+   "korkeus_m": 70,
+   "teksti": "Marseillen katedraali on yksi Ranskan suurimmista kirkoista: se on sataneljäkymmentäkaksi metriä pitkä, ja sen pääkupoli kohoaa seitsemänkymmenen metrin korkeuteen. Ulkoseinissä vuorottelevat vihreät ja vaaleat kiviraidat, ja kaupunkilaiset kutsuvat sitä leikillisesti pyjamakatedraaliksi. Peruskiven laski vuonna 1852 Louis-Napoléon Bonaparte, josta tuli saman vuoden lopulla keisari Napoleon kolmas, ja bysanttilaista ja romaanista tyyliä yhdistelevän kirkon rakentaminen kesti yli neljäkymmentä vuotta. Uuden kirkon vieressä on yhä jäljellä osa vanhaa, 1100-luvulla rakennettua pientä katedraalia, josta purettiin kaksi laivan osaa uuden tieltä.",
+   "lyhyt": "Marseillen katedraalin vihreä raitakivi tuotiin Firenzestä asti. Kun arkkitehti Léon Vaudoyer kuoli vuonna 1872, työtä jatkoi Henri-Jacques Espérandieu, protestanttiperheen poika, joka oli jo piirtänyt kaupungille toisen suuren katolisen kirkon, Notre-Dame de la Garden.",
+   "syventava": "Mitä vanhasta katedraalista on jäljellä?",
+   "kysymykset": [
+    "Miksi katedraalia kutsutaan pyjamakatedraaliksi?",
+    "Mitä vanhasta katedraalista on jäljellä?",
+    "Kuka suunnitteli katedraalin?",
+    "Millainen katedraali on sisältä?",
+    "Miksi kirkko rakennettiin näin suureksi?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Yksi Ranskan suurimmista katedraaleista; 142 metriä pitkä, pääkupoli 70 metriä.",
+     "url": "https://structurae.net/en/structures/cathedrale-sainte-marie-majeure"
+    },
+    {
+     "vaite": "Ulkoseinien raidat vihreää ja vaaleaa kiveä; marseillelaiset kutsuvat kirkkoa pyjamakatedraaliksi.",
+     "url": "https://ryo.co/fr/destinations/france/lieux/cathedrale-de-la-major/"
+    },
+    {
+     "vaite": "Prinssipresidentti Louis-Napoléon Bonaparte laski peruskiven 26.9.1852 (keisariksi joulukuussa 1852); rakentaminen kesti noin neljäkymmentä vuotta.",
+     "url": "https://fr.wikipedia.org/wiki/Cath%C3%A9drale_Sainte-Marie-Majeure_de_Marseille"
+    },
+    {
+     "vaite": "Vanhasta 1100-luvun romaanisesta katedraalista, Vieille Majorista, purettiin 1850-luvulla kaksi laivan jännettä; kuori ja yksi jänne ovat jäljellä.",
+     "url": "https://structurae.net/en/structures/cathedrale-sainte-marie-majeure"
+    },
+    {
+     "vaite": "Raidallinen julkisivu: paikallista kiveä ja vihreää firenzeläistä kiveä; 3000 paikkaa (structurae/worldcitytrail).",
+     "url": "https://www.lonelyplanet.com/points-of-interest/cathedrale-de-la-major/1195451"
+    },
+    {
+     "vaite": "Espérandieu tuli protestanttisesta perheestä; Vaudoyerin kuoltua 9.2.1872 hän sai vastuun katedraalin rakennustöistä; hän suunnitteli myös Notre-Dame de la Garden.",
+     "url": "https://en.wikipedia.org/wiki/Henri-Jacques_Esp%C3%A9randieu"
+    },
+    {
+     "vaite": "Ulkoseinissä vihreää firenzeläistä kiveä (pierre verte de Florence).",
+     "url": "https://fr.wikipedia.org/wiki/Cath%C3%A9drale_Sainte-Marie-Majeure_de_Marseille"
+    }
+   ]
+  },
+  {
+   "id": "Q1858504",
+   "nimi": "Saint-Victorin luostari",
+   "kuvaus": "Linnoitettu varhaiskristillinen luostarikirkko",
+   "luokka": "kirkko",
+   "koko_m": 80,
+   "teksti": "Saint-Victorin luostari nousee vanhan sataman etelärannalla kuin pieni linna, sillä sen paksut kivimuurit ja tornit muistuttavat ajasta, jolloin kirkko kuului sataman puolustukseen. Luostarin perusti Egyptin luostareista tullut munkki Johannes Cassianus noin vuonna 415, ja se oli yksi läntisen kristikunnan ensimmäisistä luostareista. Sakaraharjaiset muurit rakennutti 1300-luvulla luostarin entinen apotti, josta oli tullut paavi Urbanus viides. Kirkon alla on kryptoja, joissa on varhaiskristillisiä sarkofageja ja kreikkalaisajan hautausmaan jäänteitä.",
+   "lyhyt": "Saint-Victorin luostariin kulkee joka vuosi kynttilänpäivän aamuna kulkue vanhalta satamalta Sainte-katua pitkin. Kryptassa säilytettävä musta madonna puetaan vihreään viittaan, ja arkkipiispa siunaa kaupungin. Sen jälkeen hän siunaa läheisen leipomon veneenmuotoiset navette-keksit.",
+   "syventava": "Mitä luostarin kryptoissa on?",
+   "kysymykset": [
+    "Kuka oli Johannes Cassianus?",
+    "Kuka oli pyhä Viktor?",
+    "Miksi paavi linnoitti luostarin?",
+    "Mikä on navette-keksin tarina?",
+    "Pitävätkö munkit luostaria yhä?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Linnoitettu kirkko vanhan sataman eteläpuolella; Urbanus V:n linnoittama luostari liitettiin sataman puolustukseen.",
+     "url": "https://en.wikipedia.org/wiki/Abbey_of_St_Victor,_Marseille"
+    },
+    {
+     "vaite": "Egyptin luostareista tullut Johannes Cassianus perusti luostarin 415; yksi ensimmäisistä laatuaan lännessä.",
+     "url": "https://en.wikipedia.org/wiki/Abbey_of_St_Victor,_Marseille"
+    },
+    {
+     "vaite": "Guillaume Grimoard, apotti 1361, paavi Urbanus V 1362, laajensi kirkkoa ja ympäröi luostarin korkeilla sakaraharjaisilla muureilla.",
+     "url": "https://en.wikipedia.org/wiki/Abbey_of_St_Victor,_Marseille"
+    },
+    {
+     "vaite": "Kryptoissa sarkofageja ja kreikkalaisen ajan hautausmaan jäänteitä.",
+     "url": "https://www.marseille-tourisme.com/en/discover-marseille/culture-heritage/the-abbey-of-saint-victor/"
+    },
+    {
+     "vaite": "Kynttilänpäivänä 2.2. kulkue vanhalta satamalta Rue Saintea pitkin; musta madonna puetaan vihreään viittaan, arkkipiispa siunaa kaupungin ja navette-leipomon keksit.",
+     "url": "https://www.marseille-tourisme.com/decouvrez-marseille/traditions/la-chandeleur-a-marseille/"
+    }
+   ]
+  },
+  {
+   "id": "Q2600427",
+   "nimi": "Calanquesin kansallispuisto",
+   "kuvaus": "Kalkkikivijyrkänteiden kalliolahtia",
+   "luokka": "puisto",
+   "koko_m": 3000,
+   "teksti": "Calanquesin kansallispuisto ulottuu Marseillesta Cassisin ohi La Ciotat'han, ja ylhäältä näkyy, miten meri tunkeutuu kapeina lahtina korkeiden valkoisten kalkkikivijyrkänteiden väliin. Puisto perustettiin vuonna 2012, ja se oli Euroopan ensimmäinen kansallispuisto, joka käsittää yhtä aikaa maata, merta ja suurkaupungin laitamia. Merelle ulottuva osa on moninkertaisesti suurempi kuin maa-alue. Sukeltaja Henri Cosquer löysi täältä veden alta luolan suuaukon, ja luolan kuivien salien seinillä on kymmeniä tuhansia vuosia vanhoja maalauksia hevosista, biisoneista ja ruokeista.",
+   "lyhyt": "Calanquesin kansallispuiston kapeat kalliolahdet ovat laaksoja, joita joet kovertivat ja luolien sortumat avasivat kalkkikiveen meren ollessa nykyistä paljon alempana. Kun jääkausi päättyi ja meren pinta nousi, vesi täytti laaksot, ja niin syntyivät muun muassa Sugitonin, Sormioun ja Morgioun lahdet.",
+   "syventava": "Kuka löysi luolan veden alta?",
+   "kysymykset": [
+    "Mistä sana calanque on peräisin?",
+    "Miksi luolan suu on veden alla?",
+    "Voiko kalliolahdissa uida?",
+    "Miksi pääsyä puistoon rajoitetaan kesäisin?",
+    "Mitä eläimiä puistossa elää?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Valkoiset kalkkikivijyrkänteet ja kalliolahdet; puisto jakautuu Marseillen, Cassisin ja La Ciotat'n kesken.",
+     "url": "https://www.marseille-tourisme.com/en/discover-marseille/nature/the-calanques-of-marseille/which-calanques-to-discover/le-parc-national-des-calanques/"
+    },
+    {
+     "vaite": "Perustettiin 18.4.2012; Ranskan kymmenes kansallispuisto ja Euroopan ensimmäinen, joka on yhtä aikaa maa-, meri- ja kaupunkia reunustava puisto.",
+     "url": "https://en.wikipedia.org/wiki/Calanques_National_Park"
+    },
+    {
+     "vaite": "Maa-alue 8500 hehtaaria, merialue 43500 hehtaaria.",
+     "url": "https://en.wikipedia.org/wiki/Calanques_National_Park"
+    },
+    {
+     "vaite": "Sukeltaja Henri Cosquer löysi luolan, jonka suuaukko on 37 metriä veden alla; kuvissa hevosia, biisoneita ja ruokkeja; ikää noin 18500–27000 vuotta.",
+     "url": "https://en.wikipedia.org/wiki/Cosquer_Cave"
+    },
+    {
+     "vaite": "Puistoon kuuluu Marseillen, Cassisin ja La Ciotat'n alueita.",
+     "url": "https://en.wikipedia.org/wiki/Calanques_National_Park"
+    },
+    {
+     "vaite": "Tunnettuja kalliolahtia: Sormiou, Morgiou, Sugiton.",
+     "url": "https://odessia.com/destinations/france/calanques-national-park"
+    },
+    {
+     "vaite": "Kalliolahdet ovat jyrkkäreunaisia laaksoja, joita joet kovertivat tai karstiluolien sortumat synnyttivät meren ollessa alempana; holoseenin merennousu täytti ne osittain.",
+     "url": "https://en.wikipedia.org/wiki/Calanque"
+    }
+   ]
+  },
+  {
+   "id": "Q1464953",
+   "nimi": "Frioulin saaret",
+   "kuvaus": "Saaristo Marseillen lahdella",
+   "luokka": "muu",
+   "koko_m": 2500,
+   "teksti": "Frioulin saaret ovat karu kalliosaaristo Marseillen lahdella, ja siihen kuuluu myös Ifin linnan pieni saari. Kahta suurinta saarta, Ratonneauta ja Pomèguesia, yhdistää pitkä kivipato. Pomèguesin poukama oli jo 1500-luvulta lähtien laivojen virallinen karanteenipaikka, jotta ulkomailta tulevat taudit eivät leviäisi kaupunkiin. Pato rakennettiin 1820-luvulla, ja sen täyttämiseen kului kuudensadan miehen työ ja yli puoli miljoonaa tonnia kiveä. Ratonneaulla seisoo yhä Caroline-sairaala, joka rakennettiin keltakuumeen pelossa karanteenisairaalaksi ja nimettiin Berryn herttuattaren Marie-Carolinen mukaan.",
+   "lyhyt": "Frioulin saarille rakennettiin 1970-luvulla kylä ja huvivenesatama katalaanin arkkitehdin Josep Lluís Sertin johdolla. Lautta kulkee vanhasta satamasta saarille noin puolessa tunnissa, ja saarilla on useita uimarantoja ja poukamia, joista yhtä kutsutaan Tahitin rannaksi.",
+   "syventava": "Miksi saarille rakennettiin sairaala?",
+   "kysymykset": [
+    "Miksi laivat pidettiin karanteenissa?",
+    "Mitä Caroline-sairaalalle on myöhemmin tapahtunut?",
+    "Kuinka moni saarilla asuu nykyään?",
+    "Millaisia lintuja saarilla pesii?",
+    "Kuka oli Berryn herttuatar?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Saaristo: Pomègues, Ratonneau, If ja Tiboulen.",
+     "url": "https://calanques-parcnational.fr/en/hopital-caroline"
+    },
+    {
+     "vaite": "Pomèguesin poukama oli 1500-luvulta virallinen karanteenipaikka ulkomaisille laivoille.",
+     "url": "https://calanques-parcnational.fr/en/hopital-caroline"
+    },
+    {
+     "vaite": "Ratonneauta ja Pomèguesia yhdistävä aallonmurtaja rakennettiin 1822; 600 työmiestä ja yli 515000 tonnia kiveä.",
+     "url": "https://calanques-parcnational.fr/en/hopital-caroline"
+    },
+    {
+     "vaite": "Keltakuume-epidemian vuoksi saaristoon rakennettiin 1820-luvulla karanteenisatama ja Ratonneaulle Caroline-sairaala 1823–1828, nimetty Berryn herttuan puolison Marie-Caroline de Bourbon-Siciles'n mukaan.",
+     "url": "https://calanques-parcnational.fr/en/hopital-caroline"
+    },
+    {
+     "vaite": "Kylä 1974 Josep Lluís Sertin johtaman ryhmän suunnittelemana ja 600 venepaikan satama 1970-luvulla; lautta vanhasta satamasta noin puoli tuntia.",
+     "url": "https://cnes.fr/geoimage/paca-les-iles-du-frioul-de-lagglomeration-de-marseille-un-espace-rare-aux-defis-dun"
+    },
+    {
+     "vaite": "Pomèguesin Calanque de la Crine tunnetaan nimellä Plage de Tahiti.",
+     "url": "https://www.plages.tv/detail/calanque-de-la-crine-plage-de-tahiti-ile-de-frioul-13007"
+    }
+   ]
+  },
+  {
+   "id": "Q371217",
+   "nimi": "Saint-Charlesin asema",
+   "kuvaus": "Marseillen päärautatieasema",
+   "luokka": "rakennus",
+   "koko_m": 300,
+   "teksti": "Saint-Charlesin asema on Marseillen päärautatieasema, ja se seisoo kukkulalla kaupungin keskustan yläpuolella. Asemalta laskeutuu kaupunkiin päin leveä, seitsemän tasanteen katkoma ja patsaiden reunustama portaikko, joka vihittiin vuonna 1927, lähes kahdeksankymmentä vuotta aseman avaamisen jälkeen. Portaiden juurella on kaksi suurta veistosta, joista toinen kuvaa Ranskan siirtomaita Aasiassa ja toinen Afrikassa. Monet muutkin portaiden veistokset kertovat merenkulusta ja siirtomaista. Portaikon juurelta lähtee Ateenan bulevardi, joka vie alas kohti vanhaa satamaa.",
+   "lyhyt": null,
+   "syventava": "Mitä portaiden patsaat esittävät?",
+   "kysymykset": [
+    "Milloin rautatie saapui Marseilleen?",
+    "Kuka suunnitteli suuret portaat?",
+    "Minne asemalta pääsee junalla?",
+    "Miksi asema rakennettiin kukkulalle?",
+    "Kuka teki portaiden veistokset?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Asema on kukkulalla; portaat yhdistävät sen Ateenan bulevardiin, joka laskee vanhaan satamaan.",
+     "url": "https://cromwell-intl.com/travel/france/marseille/arrival.html"
+    },
+    {
+     "vaite": "Asema rakennettiin 1848; portaikko avattiin 1925 ja vihittiin virallisesti 24.4.1927.",
+     "url": "https://en.wikipedia.org/wiki/Marseille-Saint-Charles_station"
+    },
+    {
+     "vaite": "Portaiden juurella veistokset Colonies d'Asie ja Colonies d'Afrique.",
+     "url": "https://en.wikipedia.org/wiki/List_of_works_by_Louis_Botinelly"
+    },
+    {
+     "vaite": "Portaita reunustavat veistokset; aiheina alue, siirtomaat ja merenkulku.",
+     "url": "https://archjourney.org/projects/gare-de-marseille-saint-charles/"
+    },
+    {
+     "vaite": "Portaikossa on seitsemän tasannetta, ja se yhdistää aseman Ateenan bulevardiin.",
+     "url": "https://www.marseille-tourisme.com/decouvrez-marseille/culture-et-patrimoine/escaliers-de-la-gare-saint-charles-marseille-1er-fr-4794247/"
+    }
+   ]
+  },
+  {
+   "id": "Q202150",
+   "nimi": "Stade Vélodrome",
+   "kuvaus": "Olympique de Marseillen kotistadion",
+   "luokka": "rakennus",
+   "koko_m": 280,
+   "teksti": "Jalkapallostadion Stade Vélodrome on Olympique de Marseillen kotikenttä kaupungin eteläosassa, ja ylhäältä sen suuri soikea katto erottuu kauas. Stadion avattiin vuonna 1937 seuran ja Torinon välisellä ystävyysottelulla. Nimensä mukaisesti kenttää kiersi aluksi pyöräilyrata, mutta kun kilpailut harvenivat, rata korvattiin katsomoilla. Pitkään stadion oli avoin sään armoille, kunnes vuonna 2014 valmistuneessa uudistuksessa se sai katon. Nykyään sinne mahtuu yli kuusikymmentäseitsemäntuhatta katsojaa, ja se on Ranskan suurin jalkapalloseuran kotistadion.",
+   "lyhyt": null,
+   "syventava": "Miksi stadionia sanotaan velodromiksi?",
+   "kysymykset": [
+    "Milloin stadion sai katon?",
+    "Mitä suuria otteluita stadionilla on pelattu?",
+    "Miksi stadionia sanotaan velodromiksi?",
+    "Mikä tekee Marseillen kannattajista kuuluisia?",
+    "Mikä on Olympique de Marseillen suurin saavutus?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Avattiin 13.6.1937 Olympique de Marseillen ja Torino FC:n ystävyysottelulla; seuran kotikenttä.",
+     "url": "https://www.uefa.com/uefaeuro/history/news/0253-0d7f0e32527f-8e65aa237a5d-1000--stade-velodrome"
+    },
+    {
+     "vaite": "Pyöräilykilpailuja varten ollut rata korvattiin katsomoilla kilpailujen harvennuttua.",
+     "url": "https://www.uefa.com/uefaeuro/history/news/0253-0d7f0e32527f-8e65aa237a5d-1000--stade-velodrome"
+    },
+    {
+     "vaite": "Uudistus valmistui syyskuussa 2014 ja stadion sai katon; kapasiteetti 67394, Ranskan suurin seurastadion.",
+     "url": "https://en.wikipedia.org/wiki/Stade_V%C3%A9lodrome"
+    }
+   ]
+  }
+ ]
+}

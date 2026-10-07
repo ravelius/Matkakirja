@@ -1,0 +1,1 @@
+Tervetuloa Osloon. Ylhäältä Norjan pääkaupunki levittäytyy pitkän vuonon perukkaan, ja metsäiset kukkulat kaartuvat sen ympärille kuin suojaava kämmen. Kierros alkaa Oslon pääkadulta Karl Johans gatelta, joka halkoo keskustan suorana nauhana rautatieasemalta aina kuninkaanlinnan matalalle kukkulalle asti.

@@ -1,0 +1,1 @@
+Tervetuloa Tukholmaan. Ylhäältä kaupunki on saarten, siltojen ja salmien mosaiikki, jossa Mälarenin makea vesi virtaa Itämereen. Kierros alkaa vanhankaupungin pohjoispäästä kuninkaanlinnalta, joka rakennettiin tulipalossa tuhoutuneen keskiaikaisen linnan paikalle ja on yhä kuninkaan virallinen asunto ja työpaikka.

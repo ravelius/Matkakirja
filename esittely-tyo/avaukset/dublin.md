@@ -1,0 +1,1 @@
+Tervetuloa Dubliniin. Ylhäältä kaupunki on matalien kattojen ja vihreiden puistojen tilkkutäkki, jonka halki Liffey-joki virtaa itään kohti Dublininlahtea. Kierros alkaa joen etelärannalta Trinity Collegesta, Irlannin vanhimmasta yliopistosta, joka perustettiin vuonna 1592 ja jonka harmaat kivipihat avautuvat nyt keskellä kaupunkia.

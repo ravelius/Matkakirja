@@ -1,0 +1,1 @@
+Tervetuloa Granadaan. Ylhäältä kaupunki levittäytyy tasangolle Sierra Nevadan vuorten juurelle, ja sen yllä kohoaa kaksi kukkulaa: toisella valkoinen vanha kaupunginosa, toisella punertavien muurien kehystämä palatsilinnoitus. Kierros alkaa tuolta punaiselta kukkulalta Alhambrasta, joka oli Iberian niemimaan viimeisen muslimivaltion sydän.

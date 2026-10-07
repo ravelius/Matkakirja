@@ -1,0 +1,1 @@
+Tervetuloa Vallettaan. Ylhäältä kaupunki on vaalea kalkkikiviniemi kahden syvän sataman välissä: suorat kadut halkovat sitä ruutukaavana, ja paksut muurit kiertävät sen reunoja. Kierros alkaa kaupungin keskeltä Pyhän Johanneksen ko-katedraalilta, jonka pelkistetyn julkisivun takana on ritarikunnan kultainen barokkisisus.

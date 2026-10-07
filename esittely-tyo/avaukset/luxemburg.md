@@ -1,0 +1,1 @@
+Tervetuloa Luxemburgiin. Ylhäältä vanha kaupunki näyttää kallioiselta niemeltä, jota Alzette- ja Pétrusse-joet kiertävät syvissä vihreissä rotkoissa ja jonka jyrkkiä reunoja kantavat linnoitusmuurit ja korkeat kaarisillat. Kierros alkaa yläkaupungin sydämestä Guillaume toisen aukiolta, jota paikalliset kutsuvat Knuedleriksi.

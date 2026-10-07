@@ -1,0 +1,1 @@
+Tervetuloa Reykjavikiin. Ylhäältä maailman pohjoisin itsenäisen valtion pääkaupunki on matalien, kirjavien kattojen tilkkutäkki, joka levittäytyy lahden rantaan, ja veden takana kohoaa Esja-vuori. Kierros alkaa keskustan kukkulalta Hallgrímskirkjasta, Islannin suurimmasta kirkosta, jonka basalttipylväitä muistuttava torni näkyy kaikkialle kaupunkiin.

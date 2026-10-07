@@ -1,0 +1,1 @@
+Tervetuloa Heraklioniin. Ylhäältä Kreetan suurin kaupunki on vaaleiden talojen tiivis kenno meren rannalla, ja sen vanhaa keskustaa kiertää venetsialaisten kärkevä bastionimuuri. Etelässä siintää vuori, jonka harjanteessa paikalliset näkevät Zeuksen kasvot. Kierros alkaa muureilta, joiden suojissa kaupunki torjui piirittäjiä yli kaksikymmentä vuotta.

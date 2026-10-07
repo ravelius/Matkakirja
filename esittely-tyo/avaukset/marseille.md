@@ -1,0 +1,1 @@
+Tervetuloa Marseilleen. Ylhäältä kaupunki on vaaleiden talojen amfiteatteri, joka laskeutuu kalkkikivikukkuloilta kapean vanhan sataman ympärille ja Välimeren rantaan. Kierros alkaa kaupungin korkeimmalta kalliolta, jolla basilika Notre-Dame de la Garde ja sen kullattu Neitsyt Maria vartioivat satamaa ja merta.

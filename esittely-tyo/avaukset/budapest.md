@@ -1,0 +1,1 @@
+Tervetuloa Budapestiin. Ylhäältä kaupunki jakautuu Tonavan kahdelle puolelle: lännessä kohoavat Budan kukkulat ja linnamäki, idässä levittäytyy Pestin tasainen kattojen meri, ja joki kaartuu niiden välissä siltojen alitse. Kierros alkaa Gellértinvuorelta, jonka laelta koko kaupunki näkyy yhdellä silmäyksellä.

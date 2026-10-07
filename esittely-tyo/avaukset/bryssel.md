@@ -1,0 +1,1 @@
+Tervetuloa Brysseliin. Ylhäältä vanha keskusta erottuu viisikulmiona, jota kiertää leveä bulevardien kehä entisten kaupunginmuurien paikalla, ja sen itälaidalla yläkaupunki kohoaa palatseineen ja puistoineen. Kierros alkaa keskustan sydämestä Grand-Placelta, jota reunustavat kullatut kiltatalot ja goottilainen kaupungintalo.

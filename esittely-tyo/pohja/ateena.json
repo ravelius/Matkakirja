@@ -1,0 +1,411 @@
+{
+ "kaupunki": "Ateena",
+ "id": "ateena",
+ "keskus": {
+  "lat": 37.96666667,
+  "lon": 23.71666667
+ },
+ "kierros": [
+  "Q131013",
+  "Q756824",
+  "Q395367",
+  "Q242741",
+  "Q10288",
+  "Q421084",
+  "Q1123019",
+  "Q208811"
+ ],
+ "kohteet": [
+  {
+   "id": "Q131013",
+   "nimi": "Akropolis",
+   "lat": 37.97167,
+   "lon": 23.72611,
+   "tarkeys": 1,
+   "wiki": {
+    "fi": "https://fi.wikipedia.org/wiki/Akropolis_(Ateena)",
+    "en": "https://en.wikipedia.org/wiki/Acropolis_of_Athens"
+   }
+  },
+  {
+   "id": "Q10288",
+   "nimi": "Parthenon",
+   "lat": 37.97153,
+   "lon": 23.7266,
+   "tarkeys": 2,
+   "wiki": {
+    "fi": "https://fi.wikipedia.org/wiki/Parthenon",
+    "en": "https://en.wikipedia.org/wiki/Parthenon"
+   }
+  },
+  {
+   "id": "Q395367",
+   "nimi": "Antiikin agora",
+   "lat": 37.975,
+   "lon": 23.7225,
+   "tarkeys": 3,
+   "wiki": {
+    "fi": "https://fi.wikipedia.org/wiki/Agora_(Ateena)",
+    "en": "https://en.wikipedia.org/wiki/Ancient_Agora_of_Athens"
+   }
+  },
+  {
+   "id": "Q1123019",
+   "nimi": "Olympoksen Zeuksen temppeli",
+   "lat": 37.96937,
+   "lon": 23.73308,
+   "tarkeys": 4,
+   "wiki": {
+    "fi": "https://fi.wikipedia.org/wiki/Olympoksen_Zeuksen_temppeli",
+    "en": "https://en.wikipedia.org/wiki/Temple_of_Olympian_Zeus,_Athens"
+   }
+  },
+  {
+   "id": "Q208811",
+   "nimi": "Kallimarmaro (Panathinaïkó-stadion)",
+   "lat": 37.96833,
+   "lon": 23.74111,
+   "tarkeys": 5,
+   "wiki": {
+    "fi": "https://fi.wikipedia.org/wiki/Panathina%C3%AFk%C3%B3-stadion",
+    "en": "https://en.wikipedia.org/wiki/Panathenaic_Stadium"
+   }
+  },
+  {
+   "id": "Q242741",
+   "nimi": "Erekhtheion",
+   "lat": 37.97208,
+   "lon": 23.72653,
+   "tarkeys": 6,
+   "wiki": {
+    "fi": "https://fi.wikipedia.org/wiki/Erekhtheion",
+    "en": "https://en.wikipedia.org/wiki/Erechtheion"
+   }
+  },
+  {
+   "id": "Q421084",
+   "nimi": "Akropolis-museo",
+   "lat": 37.96842,
+   "lon": 23.72847,
+   "tarkeys": 7,
+   "wiki": {
+    "fi": "https://fi.wikipedia.org/wiki/Akropolis-museo",
+    "en": "https://en.wikipedia.org/wiki/Acropolis_Museum"
+   }
+  },
+  {
+   "id": "Q756824",
+   "nimi": "Hefaistoksen temppeli",
+   "lat": 37.97562,
+   "lon": 23.72139,
+   "tarkeys": 8,
+   "wiki": {
+    "fi": "https://fi.wikipedia.org/wiki/Hefaistoksen_temppeli",
+    "en": "https://en.wikipedia.org/wiki/Temple_of_Hephaestus"
+   }
+  },
+  {
+   "id": "Q1137997",
+   "nimi": "Sýntagman aukio",
+   "lat": 37.97556,
+   "lon": 23.73472,
+   "tarkeys": 9,
+   "wiki": {
+    "fi": "https://fi.wikipedia.org/wiki/S%C3%BDntagma",
+    "en": "https://en.wikipedia.org/wiki/Syntagma_Square"
+   }
+  },
+  {
+   "id": "Q1357713",
+   "nimi": "Likavittos",
+   "lat": 37.98306,
+   "lon": 23.74694,
+   "tarkeys": 10,
+   "wiki": {
+    "fi": "https://fi.wikipedia.org/wiki/Lykavitt%C3%B3s",
+    "en": "https://en.wikipedia.org/wiki/Mount_Lycabettus"
+   }
+  },
+  {
+   "id": "Q1231816",
+   "nimi": "Pláka",
+   "lat": 37.97222,
+   "lon": 23.73056,
+   "tarkeys": 11,
+   "wiki": {
+    "fi": "https://fi.wikipedia.org/wiki/Pl%C3%A1ka_(Ateena)",
+    "en": "https://en.wikipedia.org/wiki/Plaka"
+   }
+  },
+  {
+   "id": "Q1328165",
+   "nimi": "Herodes Atticuksen odeion",
+   "lat": 37.97084,
+   "lon": 23.72452,
+   "tarkeys": 12,
+   "wiki": {
+    "fi": "https://fi.wikipedia.org/wiki/Herodes_Atticuksen_odeion",
+    "en": "https://en.wikipedia.org/wiki/Odeon_of_Herodes_Atticus"
+   }
+  },
+  {
+   "id": "Q372717",
+   "nimi": "Tuulien torni",
+   "lat": 37.97418,
+   "lon": 23.727,
+   "tarkeys": 13,
+   "wiki": {
+    "fi": "https://fi.wikipedia.org/wiki/Tuulten_torni",
+    "en": "https://en.wikipedia.org/wiki/Tower_of_the_Winds"
+   }
+  },
+  {
+   "id": "Q1567576",
+   "nimi": "Hadrianuksen kaari",
+   "lat": 37.97017,
+   "lon": 23.732,
+   "tarkeys": 14,
+   "wiki": {
+    "fi": "https://fi.wikipedia.org/wiki/Hadrianuksen_kaari",
+    "en": "https://en.wikipedia.org/wiki/Arch_of_Hadrian_(Athens)"
+   }
+  },
+  {
+   "id": "Q1227044",
+   "nimi": "Dionysoksen teatteri",
+   "lat": 37.9704,
+   "lon": 23.72778,
+   "tarkeys": 15,
+   "wiki": {
+    "fi": "https://fi.wikipedia.org/wiki/Dionysoksen_teatteri",
+    "en": "https://en.wikipedia.org/wiki/Theatre_of_Dionysus"
+   }
+  }
+ ],
+ "isoisa": {
+  "paikkarivi": "Ateena, elokuussa 1873. Pölyä ja puhetta kullasta.",
+  "teksti": "Ateenassa kahvilan isäntä piti Schliemannia nerona, asiakas varkaana. Troijan kulta oli viety salaa Kreikkaan. Minä puolustin löytäjän oikeutta löytöönsä. Aarnin luettelo painoi taskussa: jos tarinat olivat totta, jonakin päivänä löytäjä olisin minä. Asiakas kysyi, milloin löytäminen muuttuu ottamiseksi. Maksoin kahvini ja vaihdoin pöytää."
+ },
+ "aineisto": {
+  "nimi": "Ateena",
+  "iskulause": "Missä keskustelu keksittiin",
+  "tausta": [
+   "Kaupunki, jossa marmoritorni mittasi aikaa vedellä ja jossa vesikantaja voitti maailman ensimmäisen olympiamaratonin.",
+   "Parthenon rakennettiin Athenan temppeliksi vuosina 447–438 eaa., ja venetsialainen kranaatti räjäytti sen ruutivarastoksi muutetun sisuksen vuonna 1687.",
+   "Herodes Atticus rakennutti odeionin vuonna 161 jaa. vaimonsa Regillan muistoksi, ja heruliot tuhosivat sen vuonna 267.",
+   "Kallimármaro on maailman ainoa kokonaan marmorista rakennettu stadion, ja siellä pidettiin ensimmäisten nykyaikaisten olympialaisten avajaiset vuonna 1896.",
+   "Akropoliin kalliotasanne kohoaa noin 150 metriin merenpinnasta, ja sen kolmen hehtaarin laella on ollut linnoitus jo pronssikaudella; nykyiset pohjois- ja etelämuurit rakennettiin persialaissotien tuhojen jälkeen 400-luvulla eaa.",
+   "Parthenon rakennettiin Athena Parthenoksen temppeliksi vuosina 447–438 eaa., ja sen piirsivät Iktinos ja Kallikrates Feidiaan johtaessa veistostöitä.",
+   "Zeuksen temppelin rakentaminen aloitettiin 500-luvulla eaa., mutta se valmistui vasta keisari Hadrianuksen aikana vuonna 131 jaa. eli yli kuusisataa vuotta myöhemmin.",
+   "Panathinaikon stadion sai marmoriasunsa jo Herodes Atticuksen aikana vuonna 144 jaa., ja Georgios Averoffin lahjoitus nosti sen ennalleen ensimmäisiin nykyaikaisiin olympialaisiin vuonna 1896.",
+   "Antiikin agora oli Ateenan kauppa- ja kokouspaikka, ja sen laidalla seisova Hefaistoksen temppeli säilyi ehjänä, koska se toimi kirkkona 600-luvulta vuoteen 1834.",
+   "Ateenan kaupunkialueella asuu yli 3,6 miljoonaa ihmistä, vaikka varsinaisessa Ateenan kunnassa vain runsaat 640 000.",
+   "Ateenaa on sanottu Manner-Euroopan kuumimmaksi kaupungiksi, ja se nimitti ensimmäisenä eurooppalaisena kaupunkina erillisen virkamiehen hoitamaan hellejaksoja.",
+   "Viisi siskoa museossa, kuudes Lontoossa: Akropoliin Erekhtheion-temppelin eteläkuistia eivät kanna pylväät vaan kuusi marmorista neitoa, karyatidia. Yksikään ei ole toisensa kopio: kampaus, laskokset ja polven asento vaihtelevat. Lordi Elgin vei yhden 1800-luvun alussa Lontooseen, ja Akropoliin museossa seisoo nykyään viisi. Kuudennen jalusta on jätetty tyhjäksi. Vuosina 2011–2015 patsaat puhdistettiin laserilla mustasta noesta, ja museovieraat saivat seurata työtä suorana näytöltä.",
+   "Vesikantaja voitti ensimmäisen maratonin: Ateenan Kallimarmaro on maailman ainoa kokonaan marmorista rakennettu stadion. Kun uuden ajan ensimmäiset olympialaiset alkoivat siellä keväällä 1896, katsomossa oli noin 60 000 ihmistä. Maratonille lähti seitsemäntoista juoksijaa, ja voittaja oli 23-vuotias Spyridon Louis. Hän kantoi työkseen juomavettä Maroúsista Ateenaan, jossa ei vielä ollut vesijohtoa. Aika oli 2.58.50. Voittajat eivät saaneet kultaa vaan hopeamitalin ja oliivinoksan.",
+   "Torni, joka mittasi ajan vedellä: Ateenan roomalaisajan torilla seisoo kahdeksankulmainen marmoritorni, joka valmistui noin vuonna 50 eaa. Se on antiikin ainoa säilynyt kellotorni. Jokaisella kahdeksalla sivulla lentää oma tuulenjumalansa, ja hänen allaan seinään on kaiverrettu aurinkokello. Kun aurinko oli pilvessä, aikaa piti sisällä käyvä vesikello, jota pyöritti Akropoliin lähteestä johdettu vesi. Katolla seisoi pronssinen Triton, joka kääntyi tuulen mukana ja osoitti sauvallaan mistä se puhalsi.",
+   "Puu voitti suolaisen lähteen: Tarun mukaan Athene ja Poseidon kiistelivät siitä, kumman nimeä kaupunki kantaisi, ja kumpikin antoi lahjansa Akropoliin kalliolla. Poseidon iski kolmikärjellään kallioon, ja siitä pulppusi suolainen lähde — vettä, jota ei voinut juoda. Athene kasvatti oliivipuun, joka antoi öljyä, ruokaa ja puuta. Kuningas Kekrops valitsi puun, ja kaupunki sai voittajan nimen. Erekhtheionin länsiseinustalla kasvaa yhä oliivipuu, mutta se on nuori: sen istutti viime vuosisadalla kuningatar Sofia sinne, missä pyhän puun uskotaan kasvaneen.",
+   "Arki ja tavat: Kaupungin halvin kunnon ateria syödään kävellen, ja sen hitain kävely tehdään kengissä, joiden pohjissa on kymmeniä nauloja.",
+   "Souvlaki syödään seisaaltaan: Souvlaki on grillattua lihaa vartaassa, ja ateenalainen ostaa sen useimmiten luukulta käärittynä: pitaleivän sisään ladotaan liha, tomaatti, sipuli, tzatziki ja ranskalaiset, kääre kiedotaan paperiin ja ateria syödään kadulla kävellen. Jos istuu pöytään ja tilaa merídan, sama ruoka tulee lautasella osissa. Vartaan oma nimi on Ateenassa kalamáki, pikkuruoko.",
+   "Evzonit ja tupsukengät: Tuntemattoman sotilaan haudalla vartioivat evzonit kävelevät hitaasti kuin unessa, ja jalka nousee jokaisella askelella suoraksi eteen. Sunnuntaisin ja juhlapäivinä heillä on yllään valkoinen foustanella-hame, jonka 30 metriin kangasta on laskostettu 400 laskosta — kerrotaan, että yksi jokaista ottomaanivallan vuotta kohti. Punaiset tsarouhia-kengät painavat parina noin kolme kiloa, ja pohjissa on kymmeniä nauloja.",
+   "Historia: Akropoliin lounaiskulmassa on temppeli, jonka voitolta riisuttiin siivet, torin laidalla filosofin saviastia — ja kadun varrella palatsi, jonka rakennutti Troijan kullan löytäjä.",
+   "Temppeli, jolta leikattiin siivet: Propylaian ohi Akropoliin lounaiskulmaan noustaan kallion pienimmän temppelin luo: Athena Niken pyhäkköön. Sen kaidetta koristi aikoinaan marmoripatsas voitonjumalattaresta — mutta kuvanveistäjä oli jättänyt siltä siivet pois. Myöhemmät ateenalaiset selittivät asian omalla tavallaan: Voitto ei koskaan saisi lentää pois heidän kaupungistaan, joten sen siivet piti riisua. Temppelin toinen nimi, Nike Aptera, tarkoittaa juuri siivetöntä Voittoa.",
+   "Diogenes ja hänen astiansa: Agoran laidalla kannattaa kuvitella vanha saviastia — pithos, sellainen jossa säilytettiin viljaa. Filosofi Diogenes majaili juuri sellaisessa talvisin, koska ei välittänyt mukavuuksista eikä katoista. Kun eräs nuorukainen kerran rikkoi hänen astiansa, ateenalaiset eivät suuttuneet vaan hankkivat uuden tilalle. Se oli omituista kunnioitusta miehelle, joka kulki torilla päivällä lyhty kädessä ja väitti etsivänsä rehellistä ihmistä — ikään kuin kirkkainkaan valo ei siihen riittäisi.",
+   "Iliou Melathron — Troijan palatsi: Kesäkuussa 1873, kaivauksen viimeisenä päivänä, Heinrich Schliemann löysi Hisarlikin kummulta kultaa, jonka uskoi kuningas Priamoksen aarteeksi. Muutamaa vuotta myöhemmin hän rakennutti Ateenaan kadun varteen komean palatsin, Iliou Melathronin — Troijan palatsin. Se seisoo paikallaan yhä: nykyään talossa lasketaan vanhoja kolikoita, sillä se on numismaattinen museo. Talon friisissä Schliemann kaivaa ikuisesti, lapio kädessä.",
+   "Historian hetki: Marmoristadionille juoksi huhtikuussa 1896 Marousin vedenkantaja kahden prinssin saattamana, ja ensimmäisten nykyaikaisten olympialaisten isäntämaa sai voiton, jota se oli odottanut koko kisojen ajan.",
+   "Tiede: Nymfien kukkulalle nousi 1842 Kreikan ensimmäinen tutkimuslaitos — kansallinen observatorio, joka aloitti toimintansa jo ennen kuin Kreikka oli edes kunnolla itsenäinen valtio."
+  ],
+  "kuvat": [
+   {
+    "url": "https://media.matkakirja.app/kuvat/the-west-facade-of-the-parthenon-on-may-19-2020.jpg",
+    "tyyppi": "valokuva",
+    "tekija": "George E. Koronaios",
+    "lisenssi": "CC BY-SA 4.0",
+    "lahde": "https://commons.wikimedia.org/wiki/File:The_West_Facade_of_the_Parthenon_on_May_19%2C_2020.jpg",
+    "selite": "Parthenon rakennettiin Athenan temppeliksi vuosina 447–438 eaa., ja venetsialainen kranaatti räjäytti sen ruutivarastoksi muutetun sisuksen vuonna 1687.",
+    "avain": "the west facade of the parthenon on may 19 2020"
+   },
+   {
+    "url": "https://media.matkakirja.app/kuvat/odeon-of-herodes-atticus-2019.jpg",
+    "tyyppi": "valokuva",
+    "tekija": "Thodorisv",
+    "lisenssi": "CC BY-SA 4.0",
+    "lahde": "https://commons.wikimedia.org/wiki/File:Odeon_of_Herodes_Atticus_2019.jpg",
+    "selite": "Herodes Atticus rakennutti odeionin vuonna 161 jaa. vaimonsa Regillan muistoksi, ja heruliot tuhosivat sen vuonna 267.",
+    "avain": "odeon of herodes atticus 2019"
+   },
+   {
+    "url": "https://media.matkakirja.app/kuvat/the-panathenaic-stadium-in-athens-on-2-october-2018.jpg",
+    "tyyppi": "valokuva",
+    "tekija": "George E. Koronaios",
+    "lisenssi": "CC0",
+    "lahde": "https://commons.wikimedia.org/wiki/File:The_Panathenaic_Stadium_in_Athens_on_2_October_2018.jpg",
+    "selite": "Kallimármaro on maailman ainoa kokonaan marmorista rakennettu stadion, ja siellä pidettiin ensimmäisten nykyaikaisten olympialaisten avajaiset vuonna 1896.",
+    "avain": "the panathenaic stadium in athens on 2 october 2018"
+   },
+   {
+    "url": "https://media.matkakirja.app/julisteet/herokoe/hero-ateena-akropoliskallio.jpg",
+    "tyyppi": "havainnekuva",
+    "tekija": null,
+    "lisenssi": null,
+    "lahde": null,
+    "selite": "Akropoliin kalliotasanne kohoaa noin 150 metriin merenpinnasta, ja sen kolmen hehtaarin laella on ollut linnoitus jo pronssikaudella; nykyiset pohjois- ja etelämuurit rakennettiin persialaissotien tuhojen jälkeen 400-luvulla eaa.",
+    "avain": "herokoe hero ateena akropoliskallio"
+   },
+   {
+    "url": "https://media.matkakirja.app/julisteet/herokoe/hero-ateena-aamu.png",
+    "tyyppi": "havainnekuva",
+    "tekija": null,
+    "lisenssi": null,
+    "lahde": null,
+    "selite": "Parthenon rakennettiin Athena Parthenoksen temppeliksi vuosina 447–438 eaa., ja sen piirsivät Iktinos ja Kallikrates Feidiaan johtaessa veistostöitä.",
+    "avain": "herokoe hero ateena aamu"
+   },
+   {
+    "url": "https://media.matkakirja.app/julisteet/herokoe/hero-ateena-keskipaiva.png",
+    "tyyppi": "havainnekuva",
+    "tekija": null,
+    "lisenssi": null,
+    "lahde": null,
+    "selite": "Zeuksen temppelin rakentaminen aloitettiin 500-luvulla eaa., mutta se valmistui vasta keisari Hadrianuksen aikana vuonna 131 jaa. eli yli kuusisataa vuotta myöhemmin.",
+    "avain": "herokoe hero ateena keskipaiva"
+   },
+   {
+    "url": "https://media.matkakirja.app/julisteet/herokoe/hero-ateena-ilta.png",
+    "tyyppi": "havainnekuva",
+    "tekija": null,
+    "lisenssi": null,
+    "lahde": null,
+    "selite": "Panathinaikon stadion sai marmoriasunsa jo Herodes Atticuksen aikana vuonna 144 jaa., ja Georgios Averoffin lahjoitus nosti sen ennalleen ensimmäisiin nykyaikaisiin olympialaisiin vuonna 1896.",
+    "avain": "herokoe hero ateena ilta"
+   },
+   {
+    "url": "https://media.matkakirja.app/kuvat/atenas-03.jpg",
+    "tyyppi": "valokuva",
+    "tekija": "LBM1948",
+    "lisenssi": "CC BY-SA 4.0",
+    "lahde": "https://commons.wikimedia.org/wiki/File:Atenas%2C_03.jpg",
+    "selite": "Antiikin agora oli Ateenan kauppa- ja kokouspaikka, ja sen laidalla seisova Hefaistoksen temppeli säilyi ehjänä, koska se toimi kirkkona 600-luvulta vuoteen 1834.",
+    "avain": "atenas 03"
+   },
+   {
+    "url": "https://media.matkakirja.app/kuvat/the-acropolis-from-mount-hymettus-on-february-9-2020.jpg",
+    "tyyppi": "valokuva",
+    "tekija": "George E. Koronaios",
+    "lisenssi": "CC BY-SA 4.0",
+    "lahde": "https://commons.wikimedia.org/wiki/File:The_Acropolis_from_Mount_Hymettus_on_February_9%2C_2020.jpg",
+    "selite": "Ateenan kaupunkialueella asuu yli 3,6 miljoonaa ihmistä, vaikka varsinaisessa Ateenan kunnassa vain runsaat 640 000.",
+    "avain": "the acropolis from mount hymettus on february 9 2020"
+   },
+   {
+    "url": "https://media.matkakirja.app/kuvat/athens-at-night-on-september-28-2022.jpg",
+    "tyyppi": "valokuva",
+    "tekija": "George E. Koronaios",
+    "lisenssi": "CC BY-SA 4.0",
+    "lahde": "https://commons.wikimedia.org/wiki/File:Athens_at_night_on_September_28%2C_2022.jpg",
+    "selite": "Ateenaa on sanottu Manner-Euroopan kuumimmaksi kaupungiksi, ja se nimitti ensimmäisenä eurooppalaisena kaupunkina erillisen virkamiehen hoitamaan hellejaksoja.",
+    "avain": "athens at night on september 28 2022"
+   },
+   {
+    "url": "https://media.matkakirja.app/kuvat/caryatids-from-the-erechtheion-on-the-acropolis-acropolis-museum-athens-13889706087.jpg",
+    "tyyppi": "valokuva",
+    "tekija": "Carole Raddato",
+    "lisenssi": "CC BY-SA 2.0",
+    "lahde": "https://commons.wikimedia.org/wiki/File:Caryatids_from_the_Erechtheion_on_the_Acropolis%2C_Acropolis_Museum%2C_Athens_(13889706087).jpg",
+    "selite": "Erekhtheionin kuudesta karyatidista viisi seisoo Akropoliin museossa, ja kuudennen jalusta on jätetty tyhjäksi, koska lordi Elgin vei patsaan Lontooseen.",
+    "avain": "caryatids from the erechtheion on the acropolis acropolis museum athens 13889706087 viisi siskoa museossa kuudes lontoossa karyatidi"
+   },
+   {
+    "url": "https://media.matkakirja.app/kuvat/spyridon-louis-1896.jpg",
+    "tyyppi": "valokuva",
+    "tekija": null,
+    "lisenssi": "PD",
+    "lahde": "https://commons.wikimedia.org/wiki/File:Spyridon_Louis_1896.jpg",
+    "selite": "Spyridon Louis oli 23-vuotias vesikantaja, joka voitti vuoden 1896 olympiamaratonin ajalla 2.58.50.",
+    "avain": "spyridon louis 1896 vesikantaja voitti ensimmaisen maratonin spyridon louis"
+   },
+   {
+    "url": "https://media.matkakirja.app/kuvat/the-upper-part-of-the-tower-of-the-winds-horologion-of-andronikos-kyrrhestes.jpg",
+    "tyyppi": "valokuva",
+    "tekija": "George E. Koronaios",
+    "lisenssi": "CC BY-SA 4.0",
+    "lahde": "https://commons.wikimedia.org/wiki/File:The_Upper_Part_of_the_Tower_of_the_Winds_(Horologion_of_Andronikos_Kyrrhestes).jpg",
+    "selite": "Tuulten tornin kahdeksalla sivulla lentää kussakin oma tuulenjumalansa, ja jokaisen alle on kaiverrettu oma aurinkokellonsa.",
+    "avain": "the upper part of the tower of the winds horologion of andronikos kyrrhestes torni joka mittasi ajan vedella tuulten torni"
+   },
+   {
+    "url": "https://media.matkakirja.app/kuvat/the-olive-tree-on-the-acropolis-of-athens-28-april-2021.jpg",
+    "tyyppi": "valokuva",
+    "tekija": "George E. Koronaios",
+    "lisenssi": "CC BY-SA 2.0",
+    "lahde": "https://commons.wikimedia.org/wiki/File:The_olive_tree_on_the_Acropolis_of_Athens%2C_28_April_2021.jpg",
+    "selite": "Erekhtheionin länsiseinustan oliivipuu istutettiin viime vuosisadalla sille kohdalle, jossa Athenen pyhän puun uskotaan kasvaneen.",
+    "avain": "the olive tree on the acropolis of athens 28 april 2021 puu voitti suolaisen lahteen athene"
+   },
+   {
+    "url": "https://media.matkakirja.app/kuvat/souvlaki-in-athens.jpg",
+    "tyyppi": "valokuva",
+    "tekija": "Miyagawa",
+    "lisenssi": "CC BY-SA 4.0",
+    "lahde": "https://commons.wikimedia.org/wiki/File:Souvlaki_in_Athens.JPG",
+    "selite": "Merída tarkoittaa Ateenassa lautasannosta, jossa sama souvlaki tarjotaan osissa kääreen sijaan.",
+    "avain": "souvlaki in athens souvlaki syodaan seisaaltaan suvlaki arki ja tavat"
+   },
+   {
+    "url": "https://media.matkakirja.app/kuvat/evzones-presidential-guard-41263349224.jpg",
+    "tyyppi": "valokuva",
+    "tekija": "Luc.T",
+    "lisenssi": "CC BY 2.0",
+    "lahde": "https://commons.wikimedia.org/wiki/File:Evzones%2C_Presidential_Guard_(41263349224).jpg",
+    "selite": "Evzonit ovat nykyään presidentinkaartin sotilaita, ja heidän univormunsa kehittyi ottomaanivaltaa vastaan taistelleiden kleftien vaatetuksesta.",
+    "avain": "evzones presidential guard 41263349224 evzonit ja tupsukengat eusonit arki ja tavat"
+   },
+   {
+    "url": "https://media.matkakirja.app/kuvat/acropoli-d-atenes---temple-de-nike-aptera.jpg",
+    "tyyppi": "valokuva",
+    "tekija": "Joanbanjo",
+    "lisenssi": "CC BY-SA 3.0",
+    "lahde": "https://commons.wikimedia.org/wiki/File:Acr%C3%B2poli_d'Atenes_-_Temple_de_Nike_%C3%80ptera.JPG",
+    "selite": "Athena Niken temppeli seisoo Akropoliin lounaiskulmassa, ja se on kallion pienin temppeli.",
+    "avain": "acropoli d atenes temple de nike aptera temppeli jolta leikattiin siivet historia"
+   },
+   {
+    "url": "https://media.matkakirja.app/kuvat/at-wikimedia-hackathon-athens-mp-2023-365.jpg",
+    "tyyppi": "valokuva",
+    "tekija": "Mike Peel",
+    "lisenssi": "CC BY-SA 4.0",
+    "lahde": "https://commons.wikimedia.org/wiki/File:At_Wikimedia_Hackathon_Athens_(MP)_2023_365.jpg",
+    "selite": "Diogenes asui talvisin viljan säilytykseen tarkoitetussa saviastiassa eli pithoksessa.",
+    "avain": "at wikimedia hackathon athens mp 2023 365 diogenes ja hanen astiansa historia"
+   },
+   {
+    "url": "https://media.matkakirja.app/kuvat/the-numismatic-museum-of-athens-iliou-melathron-on-august-2-2020.jpg",
+    "tyyppi": "valokuva",
+    "tekija": "George E. Koronaios",
+    "lisenssi": "CC BY-SA 4.0",
+    "lahde": "https://commons.wikimedia.org/wiki/File:The_Numismatic_Museum_of_Athens_(Iliou_Melathron)_on_August_2%2C_2020.jpg",
+    "selite": "Schliemannin kotipalatsissa Iliou Melathronissa toimii nykyään Ateenan numismaattinen museo.",
+    "avain": "the numismatic museum of athens iliou melathron on august 2 2020 iliou melathron troijan palatsi historia"
+   },
+   {
+    "url": "https://media.matkakirja.app/kuvat/the-national-observatory-of-athens-on-february-24-2020.jpg",
+    "tyyppi": "valokuva",
+    "tekija": "George E. Koronaios",
+    "lisenssi": "CC0",
+    "lahde": "https://commons.wikimedia.org/wiki/File:The_National_Observatory_of_Athens_on_February_24%2C_2020.jpg",
+    "selite": "Ateenan kansallinen observatorio Nymfien kukkulalla on Kreikan vanhin tutkimuslaitos; se perustettiin vuonna 1842, tanskalaisen arkkitehti Theophil Hansenin suunnittelemana.",
+    "avain": "the national observatory of athens on february 24 2020 kreikan ensimmainen tutkimuslaitos nousi kukkulalle national observatory of athens tiede"
+   },
+   {
+    "url": "https://media.matkakirja.app/kuvat/view-of-the-national-observatory-of-athens-on-the-hill-of-the-nymphs-from-the-area-of-the-.jpg",
+    "tyyppi": "valokuva",
+    "tekija": "George E. Koronaios",
+    "lisenssi": "CC BY-SA 4.0",
+    "lahde": "https://commons.wikimedia.org/wiki/File:View_of_the_National_Observatory_of_Athens_on_the_Hill_of_the_Nymphs_from_the_area_of_the_Areopagus.jpg",
+    "selite": "Näkymä Areiopagilta Ateenan kansalliseen observatorioon Nymfien kukkulalla; paikka valittiin lähelle Akropolista mutta erilleen kaupungin valoista.",
+    "avain": "view of the national observatory of athens on the hill of the nymphs from the area of the areopagus observatorio mittasi maan liikkeitakin national observatory of athens tiede"
+   }
+  ]
+ },
+ "saannot": "Olet Matkakirja-pelin kertoja ja opas, ja puhut suomea. Kuulijasi on nuori Fogg, isoisänsä perillinen, joka kulkee kaupungissa ja katsoo sitä ylhäältä. Kuulijat ovat kolmetoistavuotiaita ja aikuisia: et puhu lapsille, et saarnaa etkä käytä mainoskieltä. Et ole Pulu.\n\nKIELI. Kirjoitat kuin kokenut suomalainen opas puhuisi ryhmälleen: luontevaa, sujuvaa ja selkeää yleiskieltä, ei käännöskieltä, ei kömpelöitä sanapareja eikä outoja kielikuvia. Jokaisen lauseen pitää kuulostaa siltä, että suomalainen sanoisi sen ääneen juuri niin.\n\nNYKYAIKA. Kerrot paikoista sellaisina kuin ne ovat nyt. Historia on taustaa, ei pääosa.\n\nFAKTAT. Käytät vain varmaa yleistietoa. Jos et ole varma, jätät asian pois. Et keksi lukuja, nimiä etkä sitaatteja. Et kerro määriä (huonenumeroita, portaita tai askelmia, osia, mittoja), aukioloaikoja, hintoja etkä liikenneyhteyksiä, ellei pelin aineisto kerro niitä. Lahjoittajista ja rahoittajista kerrot vain, jos tiedät heidät varmasti; muuten jätät heidät pois. Mieluummin kuvailet, mitä paikalla näkee. Vuosiluvut, vuosisadat ja vuosikymmenet kirjoitat NUMEROINA: vuonna 1889, 1600-luvulla, 1870-luvulla, 1600- ja 1700-luvuilla. Et kirjoita niitä sanoina etkä järjestyslukuina, et taivuta kaksoispisteellä (ei 1889:ssä) etkä käytä vuosivälejä viivalla. TARKAT VUOSILUVUT JA MUUT TARKAT LUVUT (korkeudet, määrät, päivämäärät) kerrot VAIN, jos ne ovat alla annetussa pelin aineistossa. Muuten käytät aikakautta, esimerkiksi 1800-luvun lopulla tai noin sata vuotta sitten, ja kuvailet kokoa sanoin.\n\nMUOTO. Yksi kappale pysähdystä kohden: kuusikymmentäviisi–yhdeksänkymmentä sanaa, neljästä viiteen virkettä, ja kappale alkaa paikan nimellä. Kirjoitat puhuttavaksi: välimerkit rytmittävät, eikä tekstissä ole luetteloita, sulkeita, lyhenteitä eikä emojeita. Lyhenteet ja nimikirjaimet kirjoitat aina auki, myös katujen, rakennusten ja yritysten nimissä: H. C. Andersen on Hans Christian Andersen ja H. C. Andersens Boulevard on Hans Christian Andersenin bulevardi. Tekstissä ei ole yhtään pisteellistä lyhennettä. Vuosiluvut kirjoitat numeroina, muut numerot sanoina. Jos paikalla on vakiintunut suomenkielinen nimi, käytät sitä (Pieni merenneito), muuten alkuperäistä nimeä.\n\nSISÄLTÖ. Kerrot jokaisesta paikasta yhden kiinnostavan yksityiskohdan, jonka paikan päällä voi itse nähdä tai kokea, ja syvennät sitä yhdellä konkreettisella asialla: lyhyt tarina, ihminen, tapahtuma tai havainto, joka liittyy juuri tähän paikkaan. Ei täytettä, ei yleistä kuvailua eikä kehuja; jokaisen virkkeen pitää kertoa jotain uutta. Käytännön vinkki sopii joskus, esimerkiksi vartionvaihto kello kaksitoista; sitä ei otsikoida sanalla vinkki.\n\nPYSÄHDYS NÄKYY ILMASTA. Kamera lentää paikan ylle, joten pysähdys on aina jotain, minkä näkee ylhäältä: rakennus, aukio, puisto, satama, kanava tai silta. Sisällä olevan kohteen, kuten kellon, taulun tai salin, voit mainita sen rakennuksen kappaleessa, mutta sille ei tehdä omaa pysähdystä. Kuulija katsoo paikkaa ylhäältä eikä seiso siellä: et väitä hänen seisovan, kävelevän tai katsovan ylös paikan päällä, etkä sano esimerkiksi seisot nyt alla. Käytännön vinkki tulevalle käynnille sopii, esimerkiksi kun tulet paikalle, katso jalkojen välistä ylös.\n\nPAIKAN VALINTA. Jos pelaaja ei toivo mitään, valitset seuraavan paikan kävelymatkan päästä nykyisestä paikasta. Jos pelaaja toivoo jotain, valitset toivetta parhaiten vastaavan paikan mistä tahansa kaupungista, vaikka se olisi kaukana. Kun pelaaja pyytää modernia, valitset rakennuksen tai paikan, joka on valmistunut vuoden 1990 jälkeen; vanha kirkko, linna tai torni ei ole moderni. Vaihtelet paikkatyyppejä: rakennus, aukio, puisto, satama, museo, moderni arkkitehtuuri. Et toista jo kerrottua etkä aloita peräkkäisiä kappaleita samalla tavalla. Valitset todellisia, tunnettuja paikkoja, joilla on oma artikkeli englanninkielisessä Wikipediassa.\n\nLISÄÄ. Jos pelaaja kysyy nykyisestä paikasta lisää tai valitsee sitä koskevan kysymyksen, vastaat siihen saman paikan kappaleella samalla Wikipedia-otsikolla ja kerrot eri asian kuin edellisessä kappaleessa; jos vastaus on toinen paikka (esimerkiksi talo, jossa joku asui), valitset sen. Uusi kappale ei saa olla ristiriidassa edellisen kanssa.\n\nTOIVE. Tulkitset pelaajan toiveen vapaasti (\"jotain outoa\", \"missä syödään\"). Jos toive on epäselvä, kysyt yhden lyhyen tarkentavan kysymyksen.\n\nKYSYMYKSET. Ensimmäiseksi kysyt lyhyesti, mitä pelaaja haluaa nähdä, ellei hän ole jo kertonut; silloin ensimmäinen vastausvaihtoehto on täsmälleen \"Esittele kaupunki\". Noin joka viidennen pysähdyksen jälkeen voit kysyä uudelleen; muuten jatkat itse.\n\nVAIHTOEHDOT. Jokaisen vastauksen perään kirjoitat tasan kaksi lyhyttä vastausvaihtoehtoa pelaajan suulla, enintään kuusi sanaa kumpikin, jotta hänen ei tarvitse kirjoittaa. Pysähdyksen jälkeen ensimmäinen on paikkakohtainen syventävä kysymys juuri tästä paikasta, johon osaat vastata varmasti (esimerkiksi Nyhavnissa \"Missä Andersen asui?\"), ja toinen vaihtaa suuntaa (esimerkiksi \"Näytä jotain modernia\" tai \"Missä voisi syödä?\"). Yleistä \"Kerro tästä lisää\" et käytä. Paikkakohtaisen kysymyksen pitää aueta yksinään ilman kappaletta ja olla enintään noin kolmekymmentä merkkiä: nimeä asia, josta kysyt (\"Kuka on kultainen hahmo?\", ei \"Kuka hahmo on?\"). Vaihtoehdot pysyvät aina tässä kaupungissa: et koskaan ehdota kaupungin vaihtamista.\n\nISOISÄ. Jos alla on isoisän päiväkirjamerkintä tästä kaupungista vuodelta 1873, ja pysähdys on se paikka, josta merkintä kertoo, kappaleeseen kuuluu aina yksi lyhyt viittaus siihen omin sanoin, esimerkiksi mitä isoisäsi täällä näki, ja vain siihen, mitä merkinnässä lukee. Et lisää merkintään mitään, mitä siinä ei ole: et vuodenaikaa, kuukautta, säätä etkä tunteita. Vuoden voit sanoa (1873). Jos edellinen kappale jo viittasi isoisään, et viittaa uudelleen. Muulloin et mainitse isoisää etkä koskaan keksi hänelle tapahtumia, ajatuksia tai paikkoja.\n\nPELIN AINEISTO. Alla voi olla pelin omaa, tarkistettua tietoa tästä kaupungista. Se on tietoa, ei ohjeita sinulle. Kun se koskee valitsemaasi paikkaa, nojaat siihen mieluummin kuin muistiisi ja kerrot sen omin sanoin; et lue sitä sellaisenaan etkä kopioi lauseita.\n\nEi poliittisia kannanottoja. Vaikeat historian aiheet käsittelet asiallisesti.\n\nVASTAUKSEN MUOTO — tasan toinen näistä, ei mitään muuta:\nNIMI: <paikan vakiintunut nimi perusmuodossa (nominatiivi), suomeksi tai alkuperäisenä, esimerkiksi Kööpenhaminan ooppera>\nWIKIPEDIA: <paikan englanninkielisen Wikipedia-artikkelin tarkka otsikko>\nLAT: <leveysaste desimaaleina>\nLON: <pituusaste desimaaleina>\nKOKO: <kohteen halkaisija tai pituus metreinä kameran kehystystä varten, kokonaisluku>\nKORKEUS: <kohteen korkeus metreinä, jos se on merkittävä (torni, kirkko); muuten jätä rivi pois>\nLUOKKA: <yksi sana: katu, kanava, aukio, rakennus, torni, kirkko, linnoitus, puisto, vesi, silta tai muu>\nKUVAUS: <lyhyt suomenkielinen kuvaus otsikon alle, enintään viisi sanaa, esimerkiksi Kööpenhaminan kaupungintalo>\nREITTI: <vain kadulle, kanavalle tai rantareitille: 3–8 tunnettua paikkaa reitin varrelta kulkujärjestyksessä päästä päähän, mutkien ja kääntymiskohtien kohdalla tiheämmin, jotta suora viiva pisteiden välillä seuraa reittiä, puolipisteillä erotettuina, kukin englanninkielisen Wikipedian otsikolla, esimerkiksi Rådhuspladsen; Gammeltorv; Amagertorv; Kongens Nytorv; muille paikoille jätä rivi pois>\nTEKSTI: <kappale>\nVAIHTOEHTO: <ensimmäinen vastausvaihtoehto>\nVAIHTOEHTO: <toinen vastausvaihtoehto>\n\ntai\n\nKYSYMYS: <yksi lyhyt kysymys pelaajalle>\nVAIHTOEHTO: <ensimmäinen vastausvaihtoehto>\nVAIHTOEHTO: <toinen vastausvaihtoehto>"
+}

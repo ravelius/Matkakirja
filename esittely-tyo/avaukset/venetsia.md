@@ -1,0 +1,1 @@
+Tervetuloa Venetsiaan. Ylhäältä kaupunki on punaisten kattojen tiivis saarirykelmä keskellä vaaleaa laguunia, ja sen halki kiemurtelee Canal Grande kuin suuri käänteinen S-kirjain. Kierros alkaa Pyhän Markuksen torilta, jonka itäpäässä basilikan kupolit kohoavat ja jonka laidalla seisoo korkea kellotorni.

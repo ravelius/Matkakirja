@@ -1,0 +1,452 @@
+{
+  "kaupunki": "Ljubljana",
+  "id": "ljubljana",
+  "versio": 1,
+  "kohteet": [
+    {
+      "id": "Q2075156",
+      "nimi": "Ljubljanan linna",
+      "kuvaus": "Linnavuoren keskiaikainen linna",
+      "luokka": "linnoitus",
+      "koko_m": 200,
+      "teksti": "Ljubljanan linna kruunaa metsäisen Linnavuoren vanhankaupungin yllä, ja sen rakennusten keskeltä kohoaa näkötorni. Torni rakennettiin vuonna 1848 vartijalle, jonka tehtävä oli ampua tykillä varoituslaukaus, jos kaupungissa syttyi tulipalo, ja ilmoittaa laukauksin tärkeistä vieraista. 1800-luvulla linnaan sijoitettiin myös varuskunta, ja vuonna 1873 isoisäsi kirjoitti päiväkirjaansa, että linnassa oli vankila eikä ruhtinaita. Vuonna 1905 kaupunki osti linnan pormestari Ivan Hribarin toiveesta. Nykyään linnaan noustaan köysiradalla, joka avattiin vuonna 2006.",
+      "lyhyt": "Ljubljanan linnasta piti tulla kaupunginmuseo, mutta suunnitelma jäi toteutumatta, ja kaupunki asutti linnaan sen sijaan köyhiä perheitä. Vanhojen muurien sisällä asuttiin aina vuoteen 1963, jolloin alettiin valmistella kunnostusta, joka teki linnasta nykyisen kulttuurikeskuksen.",
+      "syventava": "Miksi linnasta tehtiin vankila?",
+      "kysymykset": [
+        "Kuka asui linnassa ennen vankilan aikaa?",
+        "Miksi linnan tornista ammuttiin tykillä?",
+        "Millainen näkymä näkötornista avautuu?",
+        "Mitä linnassa voi tehdä nykyään?",
+        "Mitä linnan Pyhän Yrjön kappelissa on?"
+      ],
+      "isoisa": true,
+      "lahteet": [
+        {
+          "vaite": "Näkötorni vuodelta 1848; siinä asui vartija, joka varoitti tykinlaukauksin tulipaloista ja ilmoitti tärkeistä vieraista.",
+          "url": "https://en.wikipedia.org/wiki/Ljubljana_Castle"
+        },
+        {
+          "vaite": "1800-luvulla linna muutettiin osin vankilaksi ja osin sotilaslinnoitukseksi.",
+          "url": "https://en.wikipedia.org/wiki/Ljubljana_Castle"
+        },
+        {
+          "vaite": "Isoisän merkintä 1873: linnassa on vankila, ei ruhtinaita.",
+          "url": "kaanon:isoisan-paivakirja"
+        },
+        {
+          "vaite": "Kaupunki osti linnan 1905 pormestari Ivan Hribarin nimenomaisesta toiveesta.",
+          "url": "https://en.wikipedia.org/wiki/Ljubljana_Castle"
+        },
+        {
+          "vaite": "Köysirata Linnavuorelle avattiin 28.12.2006.",
+          "url": "https://en.wikipedia.org/wiki/Ljubljana_Castle"
+        },
+        {
+          "vaite": "Kaupunki osti linnan 1905 Hribarin toiveesta kaupunginmuseoksi, mutta suunnitelma ei toteutunut; linnaan asutettiin köyhiä perheitä, jotka asuivat siellä vuoteen 1963, jolloin kunnostuksen valmistelu alkoi.",
+          "url": "https://en.wikipedia.org/wiki/Ljubljana_Castle"
+        }
+      ]
+    },
+    {
+      "id": "Q676315",
+      "nimi": "Tromostovje",
+      "kuvaus": "Plečnikin kolmen sillan kokonaisuus",
+      "luokka": "silta",
+      "koko_m": 45,
+      "teksti": "Kolmoissilta, sloveniaksi Tromostovje, näkyy ylhäältä kolmena vierekkäisenä siltana, jotka yhdistävät vanhankaupungin Prešerenin aukioon. Keskimmäinen kivisilta valmistui vuonna 1842 italialaisen arkkitehdin Giovanni Piccon suunnitelmasta. Kun se kävi liikenteelle liian ahtaaksi, arkkitehti Jože Plečnik ei purkanut sitä vaan lisäsi sen kummallekin puolelle jalankulkusillan, ja ne valmistuivat vuonna 1932. Siltojen kaiteet ovat betonia, ja niissä on kaikkiaan kuusisataaneljäkymmentäkaksi kaidepylvästä. Vuonna 2021 silta liitettiin Unescon maailmanperintöluetteloon osana Plečnikin töitä.",
+      "lyhyt": "Kolmoissillan paikalla mainitaan puusilta jo vuonna 1280. Plečnik suunnitteli siltojen lisäksi myös rantojen alemmat terassit, joten sillalta pääsee portaita alas aivan Ljubljanica-joen äärelle. Keskisillan kaarella on yhä latinankielinen omistuskirjoitus arkkiherttua Frans Kaarlelle.",
+      "syventava": "Miksi Plečnik ei purkanut vanhaa siltaa?",
+      "kysymykset": [
+        "Miksi siltoja on kolme eikä yksi?",
+        "Kuka oli arkkitehti Jože Plečnik?",
+        "Millainen silta paikalla oli keskiajalla?",
+        "Kulkeeko sillalla nykyään autoja?",
+        "Mitä joen rantaterasseilla tehdään nykyään?"
+      ],
+      "isoisa": false,
+      "lahteet": [
+        {
+          "vaite": "Kolmoissilta ylittää Ljubljanican ja yhdistää vanhankaupungin Prešerenin aukioon.",
+          "url": "https://en.wikipedia.org/wiki/Triple_Bridge"
+        },
+        {
+          "vaite": "Kivisilta vuodelta 1842, suunnittelija italialainen arkkitehti Giovanni Picco.",
+          "url": "https://en.wikipedia.org/wiki/Triple_Bridge"
+        },
+        {
+          "vaite": "Plečnik laajensi siltaa purkamatta vanhaa lisäämällä kaksi jalankulkusiltaa, jotka valmistuivat 1932.",
+          "url": "https://en.wikipedia.org/wiki/Triple_Bridge"
+        },
+        {
+          "vaite": "Kaiteissa on 642 betonista kaidepylvästä.",
+          "url": "https://en.wikipedia.org/wiki/Triple_Bridge"
+        },
+        {
+          "vaite": "Unescon maailmanperintöluetteloon elokuussa 2021 osana Plečnikin perintöä.",
+          "url": "https://en.wikipedia.org/wiki/Triple_Bridge"
+        },
+        {
+          "vaite": "Paikalla mainitaan puusilta jo 1280.",
+          "url": "https://en.wikipedia.org/wiki/Triple_Bridge"
+        },
+        {
+          "vaite": "Keskisillan latinankielinen omistuskirjoitus ARCHIDVCI FRANCISCO CAROLO MDCCCXLII CIVITAS.",
+          "url": "https://en.wikipedia.org/wiki/Triple_Bridge"
+        },
+        {
+          "vaite": "Plečnikin sivusilloilta portaat johtavat joen yläpuolella oleville rantaterasseille.",
+          "url": "https://www.visitljubljana.com/en/poi/triple-bridge/"
+        }
+      ]
+    },
+    {
+      "id": "Q1889515",
+      "nimi": "Prešerenin aukio",
+      "kuvaus": "Ljubljanan keskusaukio",
+      "luokka": "aukio",
+      "koko_m": 100,
+      "teksti": "Ljubljanan keskusaukio, Prešerenin aukio, avautuu Kolmoissillan päässä vanhankaupungin vastarannalla, ja sen laitaa hallitsee vaaleanpunainen fransiskaanikirkko 1600-luvulta. Aukiolla seisoo kansallisrunoilija France Prešerenin pronssipatsas, jonka yllä istuu puolialaston runotar. Kun patsas paljastettiin vuonna 1905, runottaren paljaat rinnat jakoivat koko slovenialaisen yhteiskunnan, ja piispa Anton Bonaventura Jeglič vaati sen vaihtamista siveämpään hahmoon. Runoilija katsoo aukion toiselle puolelle taloon, jossa hänen rakastettunsa Julija Primic asui. Talon julkisivusta Julijan veistetty kuva katsoo takaisin.",
+      "lyhyt": "Ljubljanan Prešerenin aukion runoilija on Slovenialle niin tärkeä, että hänen kuolinpäivänsä kahdeksas helmikuuta on maan kulttuuripäivä ja yleinen vapaapäivä. Hänen maljarunonsa Zdravljica seitsemäs säkeistö on Slovenian kansallislaulu, joka toivottaa elämää kaikille kansoille, jotka odottavat päivää, jolloin riita karkotetaan maailmasta.",
+      "syventava": "Kuka oli Julija Primic?",
+      "kysymykset": [
+        "Miksi Prešeren on Slovenian kansallisrunoilija?",
+        "Saiko Prešeren koskaan Julijan omakseen?",
+        "Miksi fransiskaanikirkko on vaaleanpunainen?",
+        "Mitä aukiolla tapahtuu nykyään?",
+        "Mitä runottaren laakerinoksa tarkoittaa?"
+      ],
+      "isoisa": false,
+      "lahteet": [
+        {
+          "vaite": "Kolmoissilta yhdistää vanhankaupungin Prešerenin aukioon.",
+          "url": "https://en.wikipedia.org/wiki/Triple_Bridge"
+        },
+        {
+          "vaite": "Fransiskaanikirkko rakennettiin 1646–1660, ja sen julkisivu on vaaleanpunainen.",
+          "url": "https://en.wikipedia.org/wiki/Franciscan_Church_of_the_Annunciation"
+        },
+        {
+          "vaite": "Patsaan yllä puolialaston runotar laakerinoksa kädessään; patsas paljastettiin 1905.",
+          "url": "https://en.wikipedia.org/wiki/Pre%C5%A1eren_Monument_(Ljubljana)"
+        },
+        {
+          "vaite": "Runottaren paljaat rinnat aiheuttivat aikansa suurimman kohun; piispa Jeglič vaati sen vaihtamista.",
+          "url": "https://rtvslo.si/news-in-english/slovenia-revealed/a-monument-that-divided-the-nation/382875"
+        },
+        {
+          "vaite": "Runoilija katsoo ikkunaan, jossa Julija Primic asui; Julijan reliefi on Wolfovan kadun talon julkisivussa aukion toisella puolella.",
+          "url": "https://en.wikipedia.org/wiki/Pre%C5%A1eren_Monument_(Ljubljana)"
+        },
+        {
+          "vaite": "Prešerenin kuolinpäivä 8. helmikuuta on Slovenian kulttuuripäivä ja yleinen vapaapäivä.",
+          "url": "https://en.wikipedia.org/wiki/Pre%C5%A1eren_Day"
+        },
+        {
+          "vaite": "Zdravljica on Prešerenin maljaruno; sen seitsemäs säkeistö on Slovenian kansallislaulu, ja se alkaa toivotuksella kaikille kansoille, jotka kaipaavat päivää, jolloin riita karkotetaan maailmasta.",
+          "url": "https://en.wikipedia.org/wiki/National_anthem_of_Slovenia"
+        },
+        {
+          "vaite": "Julija Primic asui vuodesta 1822 Teatterikadulla, nykyisellä Wolfovalla kadulla, jonka talossa on hänen reliefinsä.",
+          "url": "https://en.wikipedia.org/wiki/Julija_Primic"
+        }
+      ]
+    },
+    {
+      "id": "Q660029",
+      "nimi": "Lohikäärmesilta",
+      "kuvaus": "Lohikäärmeiden vartioima jugendsilta",
+      "luokka": "silta",
+      "koko_m": 35,
+      "teksti": "Lohikäärmesilta ylittää Ljubljanica-joen vanhankaupungin pohjoispuolella, ja sen jokaisella neljällä kulmalla seisoo kuparinen lohikäärme. Silta avattiin vuonna 1901, ja se tehtiin teräsbetonista, joka oli silloin uusi rakennustapa. Rakenne perustui insinööri Josef Melanin patentoimaan järjestelmään, ja lohikäärmeet ja kaiteet piirsi Otto Wagnerin oppilas, arkkitehti Jurij Zaninović. Alun perin silta kantoi keisari Frans Joosefin nimeä, mutta vuonna 1919 se nimettiin lohikäärmeiden mukaan. Leikillinen kaupunkitarina väittää, että lohikäärmeet heiluttavat häntäänsä, kun sillan ylittää neitsyt.",
+      "lyhyt": "Lohikäärmesillan vihki käyttöön lokakuussa 1901 Ljubljanan piispa Anton Bonaventura Jeglič. Lohikäärme on myös Ljubljanan vaakunassa linnan tornin päällä, ja sen alkuperää on selitetty sekä argonauttien tarulla että linnankappelin suojeluspyhimyksen, pyhän Yrjön, legendalla.",
+      "syventava": "Miksi lohikäärme on Ljubljanan tunnus?",
+      "kysymykset": [
+        "Miksi lohikäärme on kaupungin vaakunassa?",
+        "Miten argonautit liittyvät Ljubljanaan?",
+        "Miksi silta nimettiin aluksi keisarin mukaan?",
+        "Mistä materiaalista lohikäärmeet on tehty?",
+        "Kulkeeko sillan yli nykyään autoja?"
+      ],
+      "isoisa": false,
+      "lahteet": [
+        {
+          "vaite": "Silta ylittää Ljubljanica-joen.",
+          "url": "https://en.wikipedia.org/wiki/Dragon_Bridge_(Ljubljana)"
+        },
+        {
+          "vaite": "Neljä kuparilevystä tehtyä lohikäärmettä; silta avattiin 1901, teräsbetonia.",
+          "url": "https://en.wikipedia.org/wiki/Dragon_Bridge_(Ljubljana)"
+        },
+        {
+          "vaite": "Alkuperäinen nimi keisari Frans Joosef ensimmäisen juhlasilta; nimettiin Lohikäärmesillaksi heinäkuussa 1919.",
+          "url": "https://en.wikipedia.org/wiki/Dragon_Bridge_(Ljubljana)"
+        },
+        {
+          "vaite": "Moderni kaupunkitarina: lohikäärmeet heiluttavat häntäänsä, kun neitsyt ylittää sillan.",
+          "url": "https://en.wikipedia.org/wiki/Dragon_Bridge_(Ljubljana)"
+        },
+        {
+          "vaite": "Piispa Anton Bonaventura Jeglič avasi sillan juhlallisesti liikenteelle 4.10.1901.",
+          "url": "https://en.wikipedia.org/wiki/Dragon_Bridge_(Ljubljana)"
+        },
+        {
+          "vaite": "Lohikäärme on vaakunassa linnan tornin päällä; alkuperää selitetään Jasonin ja argonauttien tarulla sekä linnankappelin suojeluspyhimyksellä pyhällä Yrjöllä.",
+          "url": "https://ljubljana.si/en/about-ljubljana/city-emblems-and-city-holiday"
+        },
+        {
+          "vaite": "Silta rakennettiin Pittel+Brausewetterin suunnitelmin Josef Melanin patentin pohjalta; tyylin, kaiteet ja kuparilevyiset lohikäärmeet suunnitteli Otto Wagnerin koulusta valmistunut Jurij Zaninović; paikallisen legendan mukaan lohikäärmeet heiluttavat häntäänsä, kun neitsyt ylittää sillan.",
+          "url": "https://en.wikipedia.org/wiki/Dragon_Bridge_(Ljubljana)"
+        }
+      ]
+    },
+    {
+      "id": "Q1236564",
+      "nimi": "Ljubljanan tuomiokirkko",
+      "kuvaus": "Pyhän Nikolauksen barokkikatedraali",
+      "luokka": "kirkko",
+      "koko_m": 60,
+      "teksti": "Ljubljanan tuomiokirkko erottuu ylhäältä vihreästä kahdeksankulmaisesta kupolistaan ja kahdesta kellotornistaan. Pyhälle Nikolaukselle omistettu barokkikirkko rakennettiin 1700-luvun alussa piirustuksin, joita jesuiitta-arkkitehti Andrea Pozzo oli tarkistanut. Rahat eivät riittäneet oikeaan kupoliin, joten taidemaalari Giulio Quaglio maalasi vuonna 1703 kattoon kupolin, joka näytti aidolta. Todellinen kupoli rakennettiin vasta vuonna 1841, ja maalaus poistettiin. Pronssiovet valmistuivat vuonna 1996 paavi Johannes Paavali toisen vierailun kunniaksi, ja pääoven reliefit kertovat Slovenian historiasta.",
+      "lyhyt": "Ljubljanan tuomiokirkon eteläseinällä on vuodelta 1826 aurinkokello, jonka latinankielinen tunnuslause muistuttaa ohikulkijaa: ette tiedä päivää ettekä hetkeä. Kellotorneissa riippuu yhä Slovenian toiseksi vanhin kirkonkello, joka valettiin vuonna 1326, lähes neljä vuosisataa ennen nykyistä kirkkoa.",
+      "syventava": "Miksi kupoli oli aluksi maalattu?",
+      "kysymykset": [
+        "Kuka oli pyhä Nikolaus?",
+        "Miten maalattu kupoli huijasi katsojia?",
+        "Mitä pronssioviin on kuvattu?",
+        "Miksi paavi vieraili Sloveniassa?",
+        "Miksi kirkon kupoli on vihreä?"
+      ],
+      "isoisa": false,
+      "lahteet": [
+        {
+          "vaite": "Vihreä kahdeksankulmainen kupoli ja kaksi kellotornia.",
+          "url": "https://en.wikipedia.org/wiki/Ljubljana_Cathedral"
+        },
+        {
+          "vaite": "Rakennettiin 1701–1706 Andrea Pozzon tarkistamien suunnitelmien mukaan; omistettu pyhälle Nikolaukselle.",
+          "url": "https://en.wikipedia.org/wiki/Ljubljana_Cathedral"
+        },
+        {
+          "vaite": "Varat eivät riittäneet oikeaan kupoliin; Quaglio maalasi harhakupolin 1703; oikea kupoli 1841, jolloin maalaus poistettiin.",
+          "url": "https://www.ng-slo.si/en/exhibitions-and-projects/exibition-or-project/revelations-giulio-quaglio-and-the-dome-of-the-ljubljana-cathedral?id=6192"
+        },
+        {
+          "vaite": "Pronssiovet vuodelta 1996 kristinuskon 1250-vuotisjuhlan ja Johannes Paavali toisen vierailun kunniaksi; pääoven reliefi kuvaa Slovenian historiaa.",
+          "url": "https://en.wikipedia.org/wiki/Ljubljana_Cathedral"
+        },
+        {
+          "vaite": "Eteläjulkisivun aurinkokello vuodelta 1826, tunnuslause Nescitis diem neque horam; torneissa Slovenian toiseksi vanhin kello vuodelta 1326; kirkko rakennettiin 1701–1706.",
+          "url": "https://en.wikipedia.org/wiki/Ljubljana_Cathedral"
+        }
+      ]
+    },
+    {
+      "id": "Q12034073",
+      "nimi": "Plečnikin tori",
+      "kuvaus": "Ljubljanan keskustori ja hallit",
+      "luokka": "rakennus",
+      "koko_m": 250,
+      "teksti": "Ljubljanan keskustori, Plečnikin tori, levittäytyy tuomiokirkon ja joen väliin, ja sen jokirantaa reunustaa Jože Plečnikin suunnittelema pitkä hallirakennus. Joen puolella halleissa on suuret puolipyöreät ikkunat ja kadun puolella pylväikkö, ja kahdesta kohdasta rakennus aukeaa pylväsloggiaksi, jotta joelle näkisi. Plečnik suunnitteli torin 1930-luvulla, mutta rakennustyöt osuivat toisen maailmansodan vuosiin, ja rakennusaineiden pula hidasti niitä. Hallien väliin piti tulla katettu silta, mutta se jäi sodan takia rakentamatta. Vasta vuonna 2010 paikalle valmistui Teurastajien silta.",
+      "lyhyt": "Ljubljanan keskustorin vierestä joen yli kulkeva Teurastajien silta on kaupungin rakkauden silta, jonka kaiteisiin parit kiinnittävät lukkoja ennen kuin heittävät avaimet jokeen. Kuvanveistäjä Jakov Brdarin hahmot, kuten Aatami ja Eeva sekä Prometheus, seuraavat menoa vierestä.",
+      "syventava": "Miksi silta jäi Plečnikiltä rakentamatta?",
+      "kysymykset": [
+        "Mitä torilla myydään nykyään?",
+        "Miksi Teurastajien silta sai nimensä?",
+        "Kuka oli kuvanveistäjä Jakov Brdar?",
+        "Miksi parit kiinnittävät lukkoja siltaan?",
+        "Miksi Plečnik halusi hallien avautuvan joelle?"
+      ],
+      "isoisa": false,
+      "lahteet": [
+        {
+          "vaite": "Plečnik suunnitteli hallirakennuksen 1931–1939; joen puolella puolipyöreät ikkunat, kadun puolella pylväikkö; kaksi avointa pylväsloggiaa näkymiä varten.",
+          "url": "https://en.wikipedia.org/wiki/Ljubljana_Central_Market"
+        },
+        {
+          "vaite": "Toinen maailmansota ja rakennusaineiden pula hidastivat työtä; rakentaminen alkoi 1940.",
+          "url": "https://en.wikipedia.org/wiki/Ljubljana_Central_Market"
+        },
+        {
+          "vaite": "Plečnikin suunnittelema katettu silta jäi sodan takia rakentamatta; Teurastajien silta avattiin heinäkuussa 2010.",
+          "url": "https://en.wikipedia.org/wiki/Ljubljana_Central_Market"
+        },
+        {
+          "vaite": "Teurastajien silta on rakkauden silta: lukot kaiteisiin, avaimet jokeen; Jakov Brdarin veistokset Aatami ja Eeva sekä Prometheus.",
+          "url": "https://visitljubljana.com/en/poi/butchers-bridge"
+        }
+      ]
+    },
+    {
+      "id": "Q2428528",
+      "nimi": "Tivolin puisto",
+      "kuvaus": "Ljubljanan suurin puisto",
+      "luokka": "puisto",
+      "koko_m": 2000,
+      "teksti": "Tivolin puisto on Ljubljanan suurin puisto, ja se ulottuu keskustan länsilaidalta metsäisille rinteille. Sen suunnitteli ranskalainen insinööri Jean Blanchard vuonna 1813, kun Ljubljana oli Ranskan Illyrian maakuntien pääkaupunki. Puiston halki kulkee Jože Plečnikin suunnittelema Jakopičin kävelykatu, jota reunustavat lehmukset ja lyhdyt ja joka on nimetty impressionistimaalari Rihard Jakopičin mukaan. Kävelykadun varrella pidetään suurikokoisten valokuvien ulkonäyttelyitä. Sen päässä seisoo Tivolin linna, jossa toimii kansainvälinen graafisen taiteen keskus.",
+      "lyhyt": "Tivolin puiston linnan edessä vartioi neljä valurautaista koiraa, jotka valettiin vuonna 1864 määriläisessä valimossa. Koirilta puuttuvat kielet, ja kaupungilla huhuttiin, että kuvanveistäjä Anton Fernkorn ei kestänyt häpeää ja riisti henkensä. Tarina on perätön, eikä edes Fernkornin tekijyydestä ole varmuutta.",
+      "syventava": "Mitkä olivat Illyrian maakunnat?",
+      "kysymykset": [
+        "Miksi puistoa kutsutaan Tivoliksi?",
+        "Kuka oli maalari Rihard Jakopič?",
+        "Mitä puiston kartanoissa on nykyään?",
+        "Miksi ranskalaiset hallitsivat Ljubljanaa?",
+        "Mitä eläimiä puiston metsissä elää?"
+      ],
+      "isoisa": false,
+      "lahteet": [
+        {
+          "vaite": "Ljubljanan suurin puisto, ulottuu keskustan länsilaidalta Rožnikin suuntaan.",
+          "url": "https://en.wikipedia.org/wiki/Tivoli_City_Park"
+        },
+        {
+          "vaite": "Suunnittelija ranskalainen insinööri Jean Blanchard 1813, kun Ljubljana oli Illyrian maakuntien pääkaupunki.",
+          "url": "https://slovenia.si/this-is-slovenia/tivoli-park-so-lovely-and-green"
+        },
+        {
+          "vaite": "Plečnikin Jakopičin kävelykatu, jota reunustavat lehmukset ja lyhdyt; Tivolin kartanossa kansainvälinen graafisen taiteen keskus; kasvihuone.",
+          "url": "https://en.wikipedia.org/wiki/Tivoli_City_Park"
+        },
+        {
+          "vaite": "Kävelykatu on nimetty impressionistimaalari Rihard Jakopičin mukaan, ja siellä pidetään suurikokoisten valokuvien ulkonäyttelyitä; se päättyy Tivolin linnan portaiden eteen.",
+          "url": "https://en.wikipedia.org/wiki/Tivoli_City_Park"
+        },
+        {
+          "vaite": "Cekinin kartanossa toimii nykyhistorian museo.",
+          "url": "https://en.wikipedia.org/wiki/Tivoli_City_Park"
+        },
+        {
+          "vaite": "Tivolin linnan edessä on neljä valurautaista koiraa vuodelta 1864, määriläisestä valimosta; vanhoissa kirjoissa ne liitettiin Anton Dominik Fernkorniin; perätön huhu väitti hänen tehneen itsemurhan kielettömien koirien vuoksi.",
+          "url": "https://en.wikipedia.org/wiki/Tivoli_City_Park"
+        }
+      ]
+    },
+    {
+      "id": "Q6438656",
+      "nimi": "Križanke",
+      "kuvaus": "Entinen luostari ja kesäteatteri",
+      "luokka": "rakennus",
+      "koko_m": 120,
+      "teksti": "Entinen luostari Križanke näkyy ylhäältä sisäpihojen ryhmänä vanhankaupungin eteläpuolella, ja pihojen keskeltä erottuu barokkikirkon aaltoileva kupoli. Saksalaisen ritarikunnan luostarin rakentamisen uskotaan alkaneen vuonna 1228, ja luostari toimi vuoteen 1945. Vuonna 1952 kaupunki pyysi Jože Plečnikia muuttamaan rapistuneen luostarin Ljubljanan festivaalin näyttämöksi, ja jo kahdeksankymmentä vuotta täyttänyt arkkitehti valvoi työtä loppuun asti. Hän koristi seinät sgraffitoilla, kuvilla, jotka raaputetaan esiin eriväristen rappauskerrosten läpi. Rock-konserteissa kesäteatteriin mahtuu seisomaan yli kolmetuhatta kuulijaa.",
+      "lyhyt": "Entisen luostarin Križanken kesäteatteria suojasi 1960-luvun alusta kevyt kangaskatto, jonka sai vedettyä auki tai kiinni sään mukaan. Huhtikuussa 2016 odottamaton märkä lumi painoi sen alas puolessatoista tunnissa. Vuonna 2022 tilalle tuli kiinteä, läpikuultava katto, ja konsertit tähtitaivaan alla jäivät historiaan.",
+      "syventava": "Keitä olivat saksalaiset ritarit?",
+      "kysymykset": [
+        "Mistä nimi Križanke tulee?",
+        "Miksi luostari lakkautettiin sodan jälkeen?",
+        "Millaisia konsertteja pihoilla järjestetään?",
+        "Miksi pihaa kutsutaan Pirunpihaksi?",
+        "Mitä Ljubljanan festivaalilla esitetään?"
+      ],
+      "isoisa": false,
+      "lahteet": [
+        {
+          "vaite": "Rakentamisen uskotaan alkaneen 1228; luostari toimi vuoteen 1945, jolloin kompleksi kansallistettiin.",
+          "url": "https://en.wikipedia.org/wiki/Kri%C5%BEanke"
+        },
+        {
+          "vaite": "Kaupunki pyysi Plečnikia 1952 muuttamaan rapistuneen luostarin festivaalin näyttämöksi; kahdeksankymppinen Plečnik valvoi työtä koko ajan.",
+          "url": "https://en.wikipedia.org/wiki/Kri%C5%BEanke"
+        },
+        {
+          "vaite": "Sgraffito: kuva raaputetaan eriväristen rappauskerrosten läpi; käytetty koko pihalla.",
+          "url": "https://en.wikipedia.org/wiki/Kri%C5%BEanke"
+        },
+        {
+          "vaite": "Barokkikirkossa on aaltoileva kupoli; Plečnikin työt valmistuivat 1956.",
+          "url": "https://en.wikipedia.org/wiki/Kri%C5%BEanke"
+        },
+        {
+          "vaite": "Kesäteatterissa 1226 istumapaikkaa ja 3400 seisomapaikkaa; kiinteä katto.",
+          "url": "https://www.ljubljanafestival.si/en/premises-rental/summer-theatre/"
+        },
+        {
+          "vaite": "Miloš Marinčekin 1960-luvun alussa suunnittelema kevyt pomična kangaskatto petti märän huhtikuulumen alla 2016 puolessatoista tunnissa; uusi kiinteä läpikuultava katto 2022, ja muutos herätti kiistaa, koska tapahtumat taivasalla loppuivat.",
+          "url": "https://n1info.si/novice/slovenija/avditorij-krizank-pod-novo-streho-pomembna-a-polemicna-resitev/"
+        },
+        {
+          "vaite": "Uusi katto otettiin käyttöön huhtikuussa 2022.",
+          "url": "https://www.rtvslo.si/kultura/dediscina/krizanke-bodo-ze-aprila-prvic-uporabile-novo-streho/614890"
+        },
+        {
+          "vaite": "Plečnik muutti luostarin kulttuuripaikaksi 1952–1956; sisäänkäyntipihan sgraffitot.",
+          "url": "https://www.visitljubljana.com/en/poi/krizanke-summer-theatre/"
+        }
+      ]
+    },
+    {
+      "id": "Q4178650",
+      "nimi": "Nebotičnik",
+      "kuvaus": "Ljubljanan 1930-luvun pilvenpiirtäjä",
+      "luokka": "torni",
+      "koko_m": 30,
+      "korkeus_m": 70,
+      "teksti": "Pilvenpiirtäjä Nebotičnik kohoaa Ljubljanan keskustassa kolmetoistakerroksisena, ja sen korkeus on noin seitsemänkymmentä metriä. Arkkitehti Vladimir Šubic suunnitteli talon eläkelaitokselle, ja se avattiin vuonna 1933. Valmistuessaan se oli Jugoslavian kuningaskunnan korkein rakennus ja Euroopan korkein asuinrakennus. Alimmissa kerroksissa on liiketiloja, niiden yllä asuntoja ja ylimpänä kahvila, josta avautuu näkymä kaupungin yli. Talossa oli aikanaan uutta tekniikkaa, kuten kolme erillistä hissiä ja japanilaisen mallin mukainen maanjäristyksen kestävä perustus.",
+      "lyhyt": null,
+      "syventava": "Miksi perustus tehtiin maanjäristyksen kestäväksi?",
+      "kysymykset": [
+        "Mitä nimi Nebotičnik tarkoittaa?",
+        "Kuka oli arkkitehti Vladimir Šubic?",
+        "Mitä talon ylimmässä kerroksessa on nykyään?",
+        "Miksi Ljubljanaan rakennettiin pilvenpiirtäjä?",
+        "Mitä kattokahvilasta näkee kirkkaalla säällä?"
+      ],
+      "isoisa": false,
+      "lahteet": [
+        {
+          "vaite": "Kolmetoista kerrosta, korkeus 70,35 metriä; suunnittelija Vladimir Šubic eläkelaitokselle; avattiin 21.2.1933.",
+          "url": "https://en.wikipedia.org/wiki/Neboti%C4%8Dnik"
+        },
+        {
+          "vaite": "Valmistuessaan Jugoslavian kuningaskunnan korkein rakennus ja Euroopan korkein asuinrakennus.",
+          "url": "https://en.wikipedia.org/wiki/Neboti%C4%8Dnik"
+        },
+        {
+          "vaite": "Kuusi alinta kerrosta liiketiloja, seuraavat kolme asuntoja, ylimpänä panoraamakahvila.",
+          "url": "https://en.wikipedia.org/wiki/Neboti%C4%8Dnik"
+        },
+        {
+          "vaite": "Kolme erillistä hissiä ja japanilaisen mallin maanjäristyksen kestävä perustus.",
+          "url": "https://en.wikipedia.org/wiki/Neboti%C4%8Dnik"
+        }
+      ]
+    },
+    {
+      "id": "Q3444329",
+      "nimi": "Ljubljanan kaupungintalo",
+      "kuvaus": "Vanhankaupungin barokkinen raatihuone",
+      "luokka": "rakennus",
+      "koko_m": 40,
+      "teksti": "Ljubljanan kaupungintalo seisoo vanhankaupungin Kaupungintorilla linnavuoren juurella, ja siinä toimii yhä kaupungin hallinto. Alkuperäinen talo rakennettiin goottilaiseksi vuonna 1484, mutta 1700-luvun alussa rakennusmestari Gregor Maček vanhempi uudisti sen barokkityyliin venetsialaisin vaikuttein. Holvikaarien reunustamalla sisäpihalla on Francesco Robban Narkissos-suihkulähde, joka tuotiin sinne Bokalcen linnasta. Talon edessä seisoo Robban suihkulähde, jonka kolmen hahmon on tulkittu esittävän Sava-, Krka- ja Ljubljanica-jokia. Nykyinen lähde on kopio, sillä alkuperäinen siirrettiin Slovenian kansallisgalleriaan.",
+      "lyhyt": null,
+      "syventava": "Mistä Robban suihkulähde sai aiheensa?",
+      "kysymykset": [
+        "Kuka oli kuvanveistäjä Francesco Robba?",
+        "Miksi alkuperäinen suihkulähde siirrettiin museoon?",
+        "Mitä kaupungintalon goottilaisessa salissa tehdään?",
+        "Miksi talossa näkyy venetsialaisia vaikutteita?",
+        "Pääseekö kaupungintalon sisäpihoille?"
+      ],
+      "isoisa": false,
+      "lahteet": [
+        {
+          "vaite": "Alkuperäinen talo goottilainen 1484; Kaupungintorilla.",
+          "url": "https://en.wikipedia.org/wiki/Ljubljana_Town_Hall"
+        },
+        {
+          "vaite": "Barokkiuudistuksen 1717–1719 teki rakennusmestari Gregor Maček vanhempi; julkisivussa venetsialaisia vaikutteita.",
+          "url": "https://www.visitljubljana.com/en/poi/town-hall"
+        },
+        {
+          "vaite": "Kaarikäytävien ympäröimällä sisäpihalla Robban Narkissos-suihkulähde Bokalcen linnasta.",
+          "url": "https://www.visitljubljana.com/en/poi/town-hall"
+        },
+        {
+          "vaite": "Robban suihkulähteen hahmot esittävät Savaa, Krkaa ja Ljubljanicaa; torilla vuonna 2006 pystytetty kopio, alkuperäinen kansallisgalleriassa.",
+          "url": "https://en.wikipedia.org/wiki/Robba_Fountain"
+        },
+        {
+          "vaite": "Kaupungintalossa toimii kaupungin hallinto.",
+          "url": "https://en.wikipedia.org/wiki/Ljubljana_Town_Hall"
+        }
+      ]
+    }
+  ]
+}
