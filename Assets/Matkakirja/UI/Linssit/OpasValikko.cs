@@ -520,9 +520,9 @@ namespace Matkakirja.Natiivi
             siirtymaTeksti = Rakenne.El(null, siirtyma, PickingMode.Ignore);
             siirtymaTeksti.style.alignItems = Align.Center;
             siirtymaTeksti.style.transformOrigin = new TransformOrigin(Length.Percent(50), Length.Percent(100));
-            var otsikko = Rakenne.Teksti("Siirrytään", "mk-ajattelija__vuodet", siirtymaTeksti);
+            // Omistaja 7.10. 15.3x: "tuon 'siirrytään' -tekstin voi ottaa kokonaan pois" → vain kaupungin nimi ja palkki.
             siirtymaNimi = Rakenne.Teksti("", "mk-ajattelija__nimi", siirtymaTeksti);
-            foreach (var t in new[] { otsikko, siirtymaNimi }) { t.pickingMode = PickingMode.Ignore; t.style.unityTextAlign = TextAnchor.MiddleCenter; Kirjasimet.Aseta(t, Kirjasin.Lcd); }
+            siirtymaNimi.pickingMode = PickingMode.Ignore; siirtymaNimi.style.unityTextAlign = TextAnchor.MiddleCenter; Kirjasimet.Aseta(siirtymaNimi, Kirjasin.Lcd);
             siirtymaPalkki = new Latauspalkki(siirtymaTeksti);
             // Cesium ion -logo vasemmassa alakulmassa latauksen ajan (omistaja 6.10. 12.2x): Cesiumin oma kuva muuttamattomana,
             // samassa koossa ja paikassa kuin krediiteissä (musta ruutu peittää Cesiumin krediittikerroksen).
@@ -562,7 +562,15 @@ namespace Matkakirja.Natiivi
             siirtymaKierros = siirtyma.schedule.Execute(() => siirtymaPalkki.Arvo = testiEdistyminen ?? OpasSovitin.SiirtymaEdistyminen).Every(100);
         }
 
-        void AsetaSiirtymaIon() => AsetaIon(siirtymaIon, KrediititTiivis.TyhjaAlaPt);
+        // Omistaja 7.10. 15.3x: "Cesium-logon voisi sijoittaa niin, että se on yhtä paljon irti vasemmalta kuin alhaalta": sama väli
+        // ruudun vasemmasta ja alareunasta, turva-alueen sisällä (kotipalkki, vaakanäkymän Dynamic Island).
+        void AsetaSiirtymaIon()
+        {
+            float pw = siirtyma.parent?.worldBound.width ?? 0f;
+            float sk = pw > 0f && Screen.width > 0 ? pw / Screen.width : 0f;
+            float vali = Mathf.Max(Screen.safeArea.xMin * sk, Screen.safeArea.yMin * sk) + KrediititTiivis.TyhjaSivuPt;
+            AsetaIon(siirtymaIon, vali, vali);
+        }
 
         void PaivitaAvausIon()
         {
@@ -577,7 +585,7 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Cesium ion -logo (Cesiumin oma kuva muuttamattomana) vasempaan alakulmaan krediittien koossa.</summary>
-        static void AsetaIon(VisualElement e, float ala)
+        static void AsetaIon(VisualElement e, float ala, float vasen = KrediititTiivis.TyhjaSivuPt)
         {
             var t = KrediititTiivis.IonLogoKuva;
             e.style.display = t != null && t.height > 0 ? DisplayStyle.Flex : DisplayStyle.None;
@@ -585,7 +593,7 @@ namespace Matkakirja.Natiivi
             float h = KrediititTiivis.LogoPt;
             e.style.backgroundImage = new StyleBackground(t as Texture2D);
             e.style.height = h; e.style.width = h * t.width / t.height;
-            e.style.left = KrediititTiivis.TyhjaSivuPt;   // Cesiumin krediittien tapaan ruudun alakulmasta
+            e.style.left = vasen;   // oletus Cesiumin krediittien tapaan ruudun alakulmasta
             e.style.bottom = ala;
         }
 
