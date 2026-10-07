@@ -177,8 +177,8 @@ namespace Matkakirja.Natiivi
             {
                 // Äänetön kiinniotto (vouti tarttuu olkaan) → E3c tyrmä; nyt tallennuspisteeseen "pimeä kappeli" ja valppaus.
                 kirjaa?.Invoke("seikkailu: vouti otti Foggin kiinni (tyrmä → pimeä kappeli)");
-                p.Siirra(Tallennus);
                 voudinKierros.Tyrmasta();
+                Tyrmaan(p);
             }
         }
 
@@ -255,11 +255,18 @@ namespace Matkakirja.Natiivi
             double k2 = SeikkailuRepliikit.Aktiivinen?.Soita("vartija-kiinni-2", kappalainen) ?? 0;
             yield return new WaitForSeconds((float)Math.Max(1.5, k2));
             // Tyrmä (ehdotus 2.7): äänetön pako myöhemmin; nyt suoraan tallennuspisteeseen "pimeä kappeli", kohtaus ei toistu.
-            var p = SeikkailuPelaaja.Aktiivinen; if (p != null) p.Siirra(Tallennus);
+            var p = SeikkailuPelaaja.Aktiivinen; if (p != null) Tyrmaan(p);
             lyhty.intensity = 0f; kappalainen.gameObject.SetActive(false);
             voudinKierros.Tyrmasta();
             paluuTehty = false; raapaistu = false; pimeaAlku = Time.time;   // "kerran yritystä kohden"
             Nyt = Vaihe.Pimea;
+        }
+
+        /// <summary>E3c / pelattavuusmalli 4.1: kiinnijäänti kappelissa → tyrmä (jos merkit paketissa), sitten tallennuspiste "pimeä kappeli".</summary>
+        void Tyrmaan(SeikkailuPelaaja p)
+        {
+            if (p == null) return;
+            if (!SeikkailuTyrma.Aloita(transform.parent, p, () => { var q = SeikkailuPelaaja.Aktiivinen; if (q != null) q.Siirra(Tallennus); }, kirjaa)) p.Siirra(Tallennus);
         }
 
         // --- E3d: löytö (vaihe 10) Natiivi-UI:n Paljastus-pohjalla (SeikkailuTapit.NaytaLoyto heijastuksella) ---
