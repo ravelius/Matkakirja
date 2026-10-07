@@ -18,6 +18,11 @@ Avoimet työt:
 4. s2-meri 0f6e4e89 on KUITATTU junaan 154 (BMNG:n meri S2:n meriväriin).
 
 ## TILA 7.10. 12.5x (uusin)
+- SWE-RAJAT (Karttaseppä 7.10., PT kuittasi): proto linssiseppa2/swe-rajat 95cf8eb97 (wt/proto-linssiseppa2-swe-rajat): Vektorikerros
+  KorkeusVersio 2026-10-07-swe-korkeus / WebVersio 2026-10-07-swe, Maaraja Geojson/Maamaa 2026-10-07. Junaan (161) VASTA kun
+  Karttaseppä/Julkaisija ilmoittaa sarjojen olevan ämpärissä → SHA Natiivisepälle.
+- PALLO 161: simu af5922b9 (juna161-koe) käynnistyi 12.54 (iPhone 37 kaupunkia + iPad), tulos lokit/linssiseppa2-puoli.log
+  ja todistus-puoli-*-af5922b9*; raportoi Päätoimittajalle (lista puolen vaihdoista + stillit Kreikka/Ranska), "simu vapaa" Julkaisijalle.
 - KAUPUNKIPALLOT juna 161: proto linssiseppa2/pallo-puoli e16d100db (wt/proto-linssiseppa2-pallo-puoli, masterin b00c06f7 päällä):
   (1) pallo kutsukortista poispäin (omistaja 12.4x Ateena; KaupunkiPalloMitat.Oikealle, peilaus, puoli kerran per kaupunki),
   (2) vain pelaajan nykyisen maan pallot kaikilla zoomeilla (omistaja 12.5x; NostoKerros.NykyinenMaa, UiSisalto.Kaupunki.Maa).
