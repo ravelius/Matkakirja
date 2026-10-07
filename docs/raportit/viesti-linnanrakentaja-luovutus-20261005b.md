@@ -1,6 +1,6 @@
 # Linnanrakentajan luovutus 5.10.2026 klo 12.2x (Opus high)
 
-## ALOITUSVIESTI (päivitetty 7.10. klo 18.5x, tilinvaihto ~22.15–22.50)
+## ALOITUSVIESTI (päivitetty 7.10. klo 21.0x, tilinvaihto ~22.15–22.50)
 Olet Linnanrakentaja (Opus, high), checkout /Users/Shared/Claude/Matkakirja-linnanrakentaja (haara linnanrakentaja-tyo-20260929,
 vain tämä luovutus). Työhaara linnanrakentaja-linna-v42 worktreessä /Users/Shared/Claude/wt/linnanrakentaja-linna-v42 (EI vielä PR:ää).
 Lue tämä osio ja TILA LOPUSSA, sitten viimeiset päivitysrivit lopusta. Viestit: SendMessage nimellä; jos raja tai socket vaihtuu,
@@ -10,16 +10,18 @@ local_c238f4af-ae73-44e7-81f1-92848acd9217, Postivahti local_a24c43c0-8094-4141-
 kerrallaan, ehto proto-3d/tyokalut/linnanrakentaja-ajot/muisti-ok.sh (vm_stat ≥ 20 Gt, swap < 2 Gt), nice 15, ei testejä samaan
 aikaan; ei omia natiivikäännöksiä; kuittaus = peili + yksi rivi (ei stillejä). Agentit vain Opus/Sonnet.
 
-## TILA LOPUSSA (7.10. klo 18.5x)
-- OMISTAJAN LINJAT: 13.3x ensimmäinen pelattava pala (laituri → keittiö → kappeli) ensin, Giza ja Kielletty odottavat. 18.5x pelit
-  1. PERSOONASSA: Foggia ei näytetä (ei lisätyötä, ei poistoa); painopiste tilat silmänkorkeudelta. 18.7x: kauko-/takakuviin asu
-  (huppu, peittävät vaatteet, ei kasvoja) = pelaaja-v1 fogg.glb asu v2 TEHTY; 1. persoonan KÄSIMALLI hanskoin/hihoin.
-- LINNA v44k PEILISSÄ a51f1b699c598cc0 (blender a2fb2ddf, _valmiit/olavinlinna-blender-v44, MUUTOKSET.md v44…v44k), Siirtoseppä
-  kytkenyt historia-fp:hen (0656eef6). Sisältö: soutu, keittio-g102, kappeli E3 (kätkö syvennys 38,75°, kaari-ovi, ampumakäytävä,
-  ikkuna + luukku, holvimaalaukset + maalattu Tott, kilpilaatat esineinä), kavely v2 (85 merkkiä; kavely.py + kuori_kavely.py),
-  esineet (_valmiit/olavinlinna-esineet-v1/lahde/esineet.py), Fogg asu v2.
-- v44l PEILISSÄ 45be74356f79a1c6 (blender 10bcc690, 0a0b65e67): 1. persoonan kädet (_valmiit/linna-hahmot/kadet-v1, lahde/aja.sh;
-  Mixamo-leikkeet lahde/mixamo_kadet.sh) → v44/hahmot/kadet.glb + js/dioraama/pelaaja-kadet.json → rakennus.json pelaaja.kadet.
+## TILA LOPUSSA (7.10. klo 21.0x)
+- OMISTAJAN LINJAT: 13.3x ensimmäinen pelattava pala ensin, Giza ja Kielletty odottavat. 18.5x pelit 1. PERSOONASSA (Fogg ei näy;
+  asu v2 kauko-/takakuviin; kädet kadet-v1). PELATTAVUUSMALLI mainissa: docs/raportit/pelattavuusmalli-olavinlinna.md (#4163).
+- LINNA v44q (MUUTOKSET.md v44…v44q, _valmiit/olavinlinna-blender-v44; peili-hash v44q lokista tai luovutuksen loppuriviltä).
+  Siirtoseppä kytkee jokaisen viennin historia-fp:hen. Huoneet 1–8 käveltävinä: laituri, keittiö, Kirkkotorni, kappeli E3,
+  tyrmä E 101 (osa tyrma-E101), huone 6 palatsi (Linnantupa + voudin sali leivottu, palatsi.js), huone 7 muurikäytävä, huone 8
+  muurinharja + Kellotornin otteet (osa muurikaytava). Reitti kappelista: kaari-ovi → kaariportaat (RP 6,3) → ampumakäytävä
+  (rengas r 4,85, 13,4) → 165° porras pääoven ulkotasanteelle → muuriportaat → Tott-kammio → 187,5° Linnantupa; 275° → muurikäytävä.
+  Törmäystesti: proto-3d/tyokalut/linnanrakentaja-ajot/scratch-20261007/reittitesti.py (Blender -b -P … -- <kavely-v1/v2>): 0 estettä.
+- KESKEN: agentti tekee esineet-v1:een avainnippu, avainrengas, esiliina, myssy, keittokulho → cp glb:t kavely-v1/v2/ + glb= merkkeihin
+  (esine:avainnippu-tyrma, esine:avainrengas, esine:esiliina, esine:myssy, esine:keittokulho) kavely.py:ssä → kavely.py + kuori_kavely.py
+  → rsync v44/kavely → vienti → Siirtosepälle. Puuttuu myös köysikiepin glb (resepti koysikieppi on dioraamassa).
 - AJOTAPA: muutos → leivonta (scratch paistot.sh / leivo_tila.py 2k) → kopioi v44:ään → ASTC (swift proto-3d/tyokalut/astc-mip.swift
   X.jpg X-4x4.astcm 4) → worktreessä `source ~/.zshrc; zsh tools/dioraama/vie-blender.sh --lahde <v44>` → commit blender.json + push →
   `gh workflow run vie-dioraama.yml --ref linnanrakentaja-linna-v42 -f rakennus=olavinlinna -f kuiva=false -f osoitin=false` → hash:
@@ -27,7 +29,7 @@ aikaan; ei omia natiivikäännöksiä; kuittaus = peili + yksi rivi (ei stillej�
   https://media.matkakirja.app/dioraama/olavinlinna/<hash>/`. Kävely: Blender -b -P lahde/kavely.py -- v2, sitten lahde/kuori_kavely.py --
   _valmiit/olavinlinna-blender-v41/ulkokuori/ulkokuori_huippu.glb <v44>/tilat/laituri.glb $PWD/v2; rsync v2/ → v44/kavely/.
   Kappelin leivontapaketti: node scratch/rakenna_kappeli.mjs <paketti>. maalaukset.py ajetaan venv-rembg/bin/python:lla.
-- JONO (Päätoimittaja 7.10. 19.4x, PELATTAVUUSMALLI mainissa #4163: docs/raportit/pelattavuusmalli-olavinlinna.md, järjestys
+- JONO-HISTORIA (Päätoimittaja 7.10. 19.4x, PELATTAVUUSMALLI mainissa #4163: docs/raportit/pelattavuusmalli-olavinlinna.md, järjestys
   kohdan 12 sarakkeesta): (1)+(2) PINNAT JA MERKIT TEHTY v44m (eb8b9c55f5c22795, kavely.py PINTA + PELI + REITTI, kaytava(komero=));
   (3) TYRMÄ TEHTY v44n (190df07ec22e8616, kavely.py tyrma(): osa tyrma-E101 siiven pohjoisosassa, paikka A koska eteläosassa vanha
   keittiö-dioraama; merkit istuu:pelaaja-tyrma, ilmarako:tyrma, esine:avainnippu-tyrma, ovi:tyrma(-ulos/-ryomi), ontto:tyrma,
@@ -40,7 +42,8 @@ aikaan; ei omia natiivikäännöksiä; kuittaus = peili + yksi rivi (ei stillej�
   porras → voudin sali. Tott-kammioon naulakko (esine:esiliina, esine:myssy) ja takka (valo:tott-takka). kaytava(avoin=, avoin_k=)
   avaa liitosten sisäseinät (törmäystesti scratch reittitesti.py: molemmat reitit 0 vikaa). Palatsin tilat leivotaan
   (scratch rakenna_palatsi.mjs → palatsi-paketti → leivo_tila 2k paiva+hamara) → v44 tilat/valot + ASTC → v44o; palatsi.js
-  kohdistettava false; (5) tyrmä E 101 karkeana; (4) huone 6:
+  kohdistettava false; (5) huoneet 7–8 TEHTY v44q (kavely.py kirkkotorni() lohko (f)); SEURAAVAKSI huoneet 9–10 (komero: tiilet,
+  arkku kilpineen; pako: köysilasku kalliolle, rinne, vene) ja Päätoimittajan uudet linjaukset; tyrmä E 101 karkeana; (4) huone 6:
   naulakko (esiliina + myssy) Tott-kammion puolelle Linnantuvan oven viereen + takan hiillos Tott-kammioon; (5) huoneet 7–8
   (huone 7 = muurikäytävä, EI kierreporrasta; pako = köysilasku kalliolle). Huone 6:n REITTI (Päätoimittaja): kappelin kaari-ovesta
   SAMOJA muuriportaita alas Tott-kammioon ja sen ovesta Linnantupaan (L2, L15); EI uutta käytävää.
