@@ -254,3 +254,6 @@ NUI:n osa on `natiivi-ui/sallitut-157` 0f770be2. LS2:n lista on tiedostossa `pro
 - 17.5x (Päätoimittajan uusi erä), molemmille kuittausta pyydetty:
   - Yksityiskohtakuvat kaikille kaupungeille: `linssiseppa/yksityiskohdat-havainnekuva` c2884bc97. Polku kaupungin mukaan, uusi haku kun polku vaihtuu, havainnekuva-merkintä.
   - Alkulennon 1. kehys: `linssiseppa/alkulento-aani` b11f5e253 (161-master). Syy auditoinnista (ei profiloitu): moottoriäänen 78,7 s:n mp3 purettiin ja leikattiin pääsäikeessä leikkauksessa. Nyt Aanet.EsilataaLento napautuksessa (UiNakymat AloituslentoAlkoi).
+- 18.0x: molemmat kuitattu ja lähetetty Natiivisepälle.
+  - alkulento-aani b11f5e253 → juna 162 (omistaja testaa alkulennon klo 22).
+  - yksityiskohdat-havainnekuva c2884bc97 → juna 163.
