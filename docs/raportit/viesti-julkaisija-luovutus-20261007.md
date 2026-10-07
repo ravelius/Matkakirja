@@ -105,3 +105,16 @@ Päätoimittaja = "PÄÄTOIMITTAJA (Opus, max)".
   LS1 diagnostiikka-ajo (iPhone 5 min) alkulento-korjauksen käännöksen jälkeen hiljaisella hetkellä.
 - 18.1x: viety olavinlinna-e3-aanet, -tietokerros, ilmapallo-kori (glb), opas-esittely-aaneton (31). S2-kevät osa 0 uudelleen (-b).
 - 19.5x: #4156–#4162 mergetty ja Pöllö julki; S2-kevät osat 1–5 valmiit, osa 0 (-b) kesken. tf-kaynnista.sh <N> <proto SHA> <muutosloki SHA> käynnistää TF:n + ketjun.
+
+## 20.4x — ENNEN TILINVAIHTOA (raja ~22.15–22.50)
+- **Juna 162 / TF 162 klo 22**: Natiiviseppä lukitsee rungon 21.15, lähettää muutoslokin sisältölistan 21.15 ja BUILD-masterin
+  SHA:n ~21.35. Tee muutosloki-PR heti listasta (normaali push; jos git push antaa HTTP 500, `julkaisija-tyokalut/muutosloki-api.sh
+  162 "<teksti>"`), sitten `julkaisija-tyokalut/tf-kaynnista.sh 162 <proto täysi SHA> <muutosloki-merge-SHA>` → TF + irrotettu
+  ryhmäketju (tf162-ketju.log). Mac TF 162 -lupa on Natiivisepällä. Jos ulkoinen ryhmä antaa 422 ANOTHER_BUILD_IN_REVIEW, kopioi
+  ulkoinen161-uusinta.sh → 162 ja aja setsid (161:n silmukka luovutti 20.20).
+- **Pidossa**: #4168 (oppaan turvakerrokset alaikäisille, PT kuittasi) → merge + Pöllö VASTA kun TF 162 on testaajilla.
+- Valmiit tänään iltapäivällä: S2-kevät 57 630 (20.02, Karttasepälle), #4140/#4145 worldview D + Kypros, #4146/#4147 apurahakortti,
+  #4150/#4159/#4167 Päätoimittajan loki/Raamattu, #4152/#4156/#4157/#4158/#4162/#4164 Pöllö (sana-ajat, äänettömät esittelyt,
+  yksityiskohdat Pariisi/Praha/Wien/Rooma v4/Lontoo/Kööpenhamina), #4160/#4166 Sisältökirjurin luettelot. Viennit: Olavinlinnan E3-äänet,
+  tietokerros, ilmapallon kori (glb), opas-esittely-aaneton (31), opas-aaniajat.
+- Merge-odotuksessa vaadi `statusCheckRollup|length == 2` ja kaikki COMPLETED + SUCCESS (keskeneräinen = tyhjä conclusion).
