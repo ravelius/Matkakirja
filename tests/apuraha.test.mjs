@@ -13,7 +13,7 @@ test('esittely.json on kelvollinen: filosofia, korostettu kehitysmuutos, pelit, 
   assert.equal(d.nappi, 'Apurahahakemus – katso tämä ensin');
   // Omistaja 7.10.2026: ensin pelin filosofia, sitten korostettuna kehityksen siirto natiiviin, sitten Maapallo,
   // Kuumailmapallo ja ISS omina alaotsikkoinaan ja lopuksi pelit.
-  assert.equal(d.kappaleet.length, 9);
+  assert.equal(d.kappaleet.length, 8);
   assert.deepEqual(d.kappaleet.slice(2, 5).map((k) => k.otsikko), ['Maapallo', 'Kuumailmapallo', 'ISS']);
   assert.match(d.kappaleet[0].teksti, /^Matkakirja ja unohdettu aarre on kokemuksellinen oppimispeli/);
   assert.equal(d.kappaleet[1].korostus, true);
@@ -30,6 +30,19 @@ test('esittely.json on kelvollinen: filosofia, korostettu kehitysmuutos, pelit, 
   assert.ok(!/poikkileikkaus|esittelylinsseistä/.test(kaikki), kaikki);
   assert.ok(/Videopelit tulevat vain iOS-sovellukseen/.test(kaikki));
   assert.equal((kaikki.match(/Vain iOS-sovelluksessa\./g) ?? []).length, 2, 'Kuumailmapallo ja ISS merkitty iOS:n ominaisuuksiksi selaimessa');
+});
+
+test('kuvat kappaleensa vieressä (versio 7): ISS-kupola ISS-kappaleeseen, Olavinlinna Työn alla -kappaleeseen', () => {
+  const d = tarkistaApuraha(raaka);
+  assert.equal(raaka.versio, 7);
+  const kohta = (nimi) => d.kappaleet.find((k) => k.otsikko === nimi).kuvat.map((k) => k.tiedosto);
+  assert.deepEqual(kohta('ISS'), ['assets/apuraha/iss-kupola-lansi-eurooppa.jpg']);
+  assert.deepEqual(kohta('Työn alla'), ['assets/apuraha/olavinlinna-hamara.jpg']);
+  assert.equal(raaka.kuvat.find((k) => k.tiedosto.includes('olavinlinna')).rivi, 1, 'Olavinlinna-rivin viereen');
+  assert.equal(d.kuvat.length, 0, 'kaikilla kuvilla on kappale, loppuriviä ei ole');
+  for (const k of raaka.kuvat) assert.ok(Number.isInteger(k.kappale) && raaka.kappaleet[k.kappale], `kappale ${k.tiedosto}`);
+  const ilman = tarkistaApuraha({ ...raaka, kuvat: [{ tiedosto: 'a.jpg' }, { tiedosto: 'b.jpg', kappale: 99 }] });
+  assert.equal(ilman.kuvat.length, 2, 'ilman kelvollista kappaletta kortin loppuun');
 });
 
 test('paikalliset kuvat ovat repossa ja tekstissä ei ole muistiinpanoja', () => {
@@ -81,4 +94,29 @@ test('esittelylinssit avaavat kehittäjätilan linssijoukon ilman kehittäjätil
   assert.ok(kehittaja > ennen);
   assert.equal(omistetut(null, pelaaja).size, kehittaja);
   delete globalThis.localStorage;
+});
+
+test('nappi avaa valmiit linssit (omistaja 7.10.2026 klo 15.0x): sama lista webille ja natiiville, ei kehittäjälinssejä', async () => {
+  // Oma ylätason kenttä: vanhat TF-appit (kappaleen toiminto "esittelylinssit") eivät näytä nappia eivätkä tekstiä.
+  assert.ok(raaka.kappaleet.every((x) => !x.nappi && !/linssit/i.test(x.teksti ?? '')), 'kappaleissa ei nappia eikä sen tekstiä');
+  const k = { teksti: raaka.valmiitLinssit.teksti, nappi: { linssit: raaka.valmiitLinssit.linssit } };
+  assert.equal(k.teksti, 'Nappi avaa heti kaikki valmiit linssit.');
+  assert.equal(raaka.valmiitLinssit.nappi, 'Avaa valmiit linssit');
+  assert.deepEqual(tarkistaApuraha(raaka).valmiitLinssit.linssit, raaka.valmiitLinssit.linssit);
+  assert.ok(!/kehitteillä/.test(JSON.stringify(raaka.kappaleet)), 'ei lupausta kehitteillä olevista');
+  const { LINSSIT, KEHITTAJALINSSIT } = await import('../js/linssit/rekisteri.js');
+  const valmiit = LINSSIT.filter((r) => r.tila !== 'hiomassa' && r.tuo).map((r) => r.tunnus);
+  assert.deepEqual([...k.nappi.linssit].sort(), [...valmiit].sort(), 'lista = rekisterin valmiit linssit');
+  assert.ok(KEHITTAJALINSSIT.every((r) => !k.nappi.linssit.includes(r.tunnus)), 'kehittäjälinssit eivät kuulu valmiisiin');
+  // Omistus: lista rajaa; kehittäjätila ennallaan.
+  const varasto = new Map();
+  globalThis.localStorage = { getItem: (a) => varasto.get(a) ?? null, setItem: (a, b) => varasto.set(a, String(b)), removeItem: (a) => varasto.delete(a) };
+  try {
+    const { avaaEsittelylinssit, esittelylinssitAuki } = await import('../js/apuraha.js');
+    const { omistetut } = await import('../js/linssit/omistus.js');
+    avaaEsittelylinssit(['radio', 'vesistot']);
+    assert.equal(esittelylinssitAuki(), true);
+    const o = omistetut({ player: { linssit: [] } });
+    assert.ok(o.has('radio') && o.has('vesistot') && !o.has('topografia'), [...o].join(','));
+  } finally { delete globalThis.localStorage; }
 });

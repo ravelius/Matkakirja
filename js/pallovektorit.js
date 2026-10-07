@@ -84,7 +84,7 @@ const R2 = 'https://media.matkakirja.app/';
  * (erä V0). Polku on versioitu ja ämpäri lähettää sille `immutable`,
  * joten uusi ajo saa AINA uuden version — vanha jää selainten koreihin.
  */
-export const PALLOVEKTORIT_VERSIO = '2026-09-30-krim'; // rannikko = 2026-09-21-gshhs tavulleen, rajat ilman Krimin kannaksen viivaa (30.9.2026)
+export const PALLOVEKTORIT_VERSIO = '2026-10-07-swe'; // rannikko = 2026-09-21-gshhs tavulleen, rajat Natural Earth _swe (tools/worldview.mjs, 7.10.2026): Krim, Kypros, Länsi-Sahara, Somalimaa
 export const PALLOVEKTORIT_JUURI = `${R2}julisteet/pallo/vektorit/${PALLOVEKTORIT_VERSIO}/`;
 
 /*

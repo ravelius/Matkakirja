@@ -23,6 +23,8 @@
  */
 // Krim ja Sevastopol Ukrainalle lähteessä (tools/krim-ukrainalle.mjs, Päätoimittaja 30.9.2026).
 import { poistaKriminRaja } from './krim-ukrainalle.mjs';
+// Worldview Suomen kannan mukaan (tools/worldview.mjs, Päätoimittaja 7.10.2026).
+import { ADMIN0_URL, LISATTAVAT_RAJAT, OLETUS_ADMIN0_URL, nakokulmanMaat, rajaviivaKelpaa, yhteinenReuna } from './worldview.mjs';
 import { writeFileSync } from 'node:fs';
 import { gzipSync } from 'node:zlib';
 
@@ -51,6 +53,16 @@ if (!vastaus.ok) {
   process.exit(1);
 }
 const geo = await vastaus.json();
+// Näkökulma: oletusmaiden ADM0_A3 → _swe-maat (CYN, CNM → CYP), ja hylätyt viivat pois.
+const OLETUS_MAAT = valitsin('oletusmaat', OLETUS_ADMIN0_URL);
+const hae = async (u) => (/^https?:/.test(u) ? (await fetch(u)).json() : JSON.parse((await import('node:fs')).readFileSync(u, 'utf8')));
+const povMaat = await hae(valitsin('pov', ADMIN0_URL));
+const maat = nakokulmanMaat(await hae(OLETUS_MAAT), povMaat);
+const ennen = geo.features.length;
+const hylatyt = geo.features.filter((f) => !rajaviivaKelpaa(f, maat));
+geo.features = geo.features.filter((f) => rajaviivaKelpaa(f, maat));
+console.log(`Worldview: ${ennen - geo.features.length} viivaa pois: `
+  + hylatyt.map((f) => `${f.properties.ADM0_A3_L}|${f.properties.ADM0_A3_R}`).join(' '));
 
 const viivat = [];
 let pisteita = 0;
@@ -72,6 +84,12 @@ for (const f of geo.features ?? []) {
   if (g.type === 'LineString') lisaa(g.coordinates);
   else if (g.type === 'MultiLineString') for (const l of g.coordinates) lisaa(l);
 }
+// Näkökulman rajat, joita de facto -viivastossa ei ole (MAR–SAH).
+for (const [a, b] of LISATTAVAT_RAJAT) {
+  const reuna = yhteinenReuna(povMaat, a, b);
+  for (const l of reuna) lisaa(l);
+  console.log(`Worldview: ${a}–${b} lisätty ${reuna.length} viivaa (${reuna.reduce((s, l) => s + l.length, 0)} kärkeä)`);
+}
 
 // Perekopin ja Arabatin kannaksen de facto -viiva ei ole valtioiden raja.
 const krim = poistaKriminRaja(viivat);
@@ -80,7 +98,7 @@ if (krim.poistettu) console.log(`Krimin kannaksen viivoja poistettu: ${krim.pois
 const ulos = {
   setti: SETTI,
   kuvaus: 'Nykyiset valtioiden väliset maarajat',
-  lahde: 'Natural Earth 10m ne_10m_admin_0_boundary_lines_land — public domain',
+  lahde: 'Natural Earth 10m ne_10m_admin_0_boundary_lines_land, näkökulma _swe (tools/worldview.mjs) — public domain',
   harvennus: HARVENNUS,
   viivat,
 };
