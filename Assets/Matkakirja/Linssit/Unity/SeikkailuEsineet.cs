@@ -68,7 +68,8 @@ namespace Matkakirja.Natiivi
                 var sc = eg.AddComponent<SphereCollider>(); sc.center = mesh.bounds.center; sc.radius = Mathf.Max(0.04f, mesh.bounds.extents.magnitude * 0.6f);
                 var rb = eg.AddComponent<Rigidbody>(); rb.mass = 0.6f; rb.isKinematic = true; rb.interpolation = RigidbodyInterpolation.Interpolate;
                 rb.collisionDetectionMode = CollisionDetectionMode.ContinuousDynamic;
-                var laji = m.Kiintea ? Laji.Kiintea : m.Kaadettava ? Laji.Kaadettava : m.Irrotettava ? Laji.Irrotettava : m.Heitettava ? Laji.Heitettava : Laji.Nostettava;
+                // Arkku (huone 9, v44s) on kiinteä, kunnes sen kilpilukko tehdään (M-osa).
+                var laji = m.Kiintea || m.Tunnus.StartsWith("arkku", StringComparison.Ordinal) ? Laji.Kiintea : m.Kaadettava ? Laji.Kaadettava : m.Irrotettava ? Laji.Irrotettava : m.Heitettava ? Laji.Heitettava : Laji.Nostettava;
                 // Irrotettavan ulospäin = vastakkainen kuin "suunta seinään" (kierto_y), Unityssa (sin, 0, −cos) peilattuna.
                 var ulos = m.KiertoY is double ka ? -new Vector3((float)Math.Sin(ka), 0f, (float)-Math.Cos(ka)) : Vector3.zero;
                 var e = new Esine { Id = m.Tunnus, Go = eg, Rb = rb, Laji = laji, Ulos = ulos, AaniM = m.AaniM > 0 ? m.AaniM : KuuluuM };
