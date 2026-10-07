@@ -39,6 +39,8 @@ namespace Matkakirja.Linssit.Seikkailu
     {
         public string Nimi, Laji, Tunnus, Osa, Tyyppi, Glb;
         public double X, Y, Z, Leveys, Korkeus, Koko, OdotaS;
+        /// <summary>kierto_y radiaaneina (glTF y-akselin ympäri; esim. vene:laituri = keulan suunta); null jos puuttuu.</summary>
+        public double? KiertoY;
     }
 
     public sealed class KavelyData
@@ -100,7 +102,7 @@ namespace Matkakirja.Linssit.Seikkailu
                 Nimi = nimi, Laji = kp > 0 ? nimi.Substring(0, kp) : "", Tunnus = kp > 0 ? nimi.Substring(kp + 1) : nimi,
                 Osa = MiniJson.Teksti(o, "osa"), Tyyppi = MiniJson.Teksti(o, "tyyppi"), Glb = MiniJson.Teksti(o, "glb"),
                 X = p[0], Y = p[1], Z = p[2], Leveys = MiniJson.Luku(o, "leveys") ?? 0, Korkeus = MiniJson.Luku(o, "korkeus") ?? 0,
-                Koko = MiniJson.Luku(o, "koko") ?? 0, OdotaS = MiniJson.Luku(o, "odota_s") ?? 0,
+                Koko = MiniJson.Luku(o, "koko") ?? 0, OdotaS = MiniJson.Luku(o, "odota_s") ?? 0, KiertoY = MiniJson.Luku(o, "kierto_y"),
             };
         }
 

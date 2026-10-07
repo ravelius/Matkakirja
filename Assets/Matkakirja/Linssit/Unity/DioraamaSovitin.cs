@@ -360,7 +360,7 @@ namespace Matkakirja.Natiivi
                 nayttamo.Liekit?.Syttyminen(osuus, DioraamaNayttamo.UnityPiste((pysty ? rakennus.YleisPysty : rakennus.YleisVaaka).Kohde));
                 if (osuus >= 1 && !SaapuminenNahty) SaapuminenNahty = true;
                 // Uusi linna: kertojan kierroksen aikana ei elävien kohteiden sykkeitä (1.1 (73) -kuva: renkaat jaksojen päällä).
-                nayttamo.Syke?.Paivita(rakennus, SeikkailuPelaaja.Aktiivinen == null && nakyma.KohdeTila == null && osuus >= 1 && nakyma.KertojaJakso < 0 && !linssi.KertojaKaynnissa(t), nakyma.KohdeTila != null, t, y.VahennettyLiike);
+                nayttamo.Syke?.Paivita(rakennus, SeikkailuPelaaja.Aktiivinen == null && SeikkailuVene.Aktiivinen == null && nakyma.KohdeTila == null && osuus >= 1 && nakyma.KertojaJakso < 0 && !linssi.KertojaKaynnissa(t), nakyma.KohdeTila != null, t, y.VahennettyLiike);
                 // Etsintä: vaihe näkyy vasta perillä tilassa (ei kesken lennon).
                 var leikkaus = linssi.LeikkausHetkella(t);
                 bool perilla = nakyma.KohdeTila != null && leikkaus.tila == nakyma.KohdeTila && leikkaus.osuus >= 1; // ei edellisen tilan leikkausta (4.10.)
@@ -379,16 +379,24 @@ namespace Matkakirja.Natiivi
             // jatkuvan orbitin vaihe. "poikki cinemachine 0" palauttaa vanhan jousipolun A/B-vertailuun.
             // Historiamoottorin kävelytila: pelaajan olan yli -kamera ohittaa lepokamerat, pakotetun kameran ja jousen (V1 7.10.).
             var pelaaja = cm != null ? SeikkailuPelaaja.Aktiivinen : null;
-            bool cmKaytossa = cm != null && (pelaaja != null || DioraamaCinemachine.Paalla && pakotettuKamera == null);
+            var vene = cm != null ? SeikkailuVene.Aktiivinen : null;
+            // V2: vene etenee aina (myös kun pelaaja on jo laiturilla: vene jää kiinnitettynä); perillä pelaaja laiturille.
+            if (vene != null)
+            {
+                var vt = vene.Paivita(y.VahennettyLiike);
+                if (vt.Perilla && pelaaja == null && !veneLaituriin) { veneLaituriin = true; o.StartCoroutine(VeneLaituriin()); }
+            }
+            var seikkailuKamera = pelaaja != null ? pelaaja.Kamera : vene?.Kamera;
+            bool cmKaytossa = cm != null && (seikkailuKamera != null || DioraamaCinemachine.Paalla && pakotettuKamera == null);
             cm?.Kaytossa(cmKaytossa);
-            if (pelaaja != null)
+            if (seikkailuKamera != null)
             {
                 jousi.Nollaa();
-                string tapa = cm.PaivitaPelaaja(pelaaja.Kamera, nayttamo.Kamera, dt);
+                string tapa = (pelaaja != null ? "pelaaja " : "vene ") + cm.PaivitaPelaaja(seikkailuKamera, nayttamo.Kamera, dt);
                 if (tapa != pelaajaKameraTapa) { o.Kirjaa($"seikkailu: kamera {tapa}, {nayttamo.Kamera.transform.position}"); pelaajaKameraTapa = tapa; }
-                // Sumu ja syväterävyys: kohde 25 m päässä, ei taustan sumennusta (aukko 0).
-                var pp = pelaaja.transform.position;
-                kameraAsento = new Asento(new Matkakirja.Linssit.Dioraama.V3(pp.x, pp.y, -pp.z), 0, 0, KavelySumuM, 55, 0);
+                // Sumu ja syväterävyys: kohde 25 m päässä (veneessä linna kaukana: 120 m), ei taustan sumennusta (aukko 0).
+                var pp = seikkailuKamera.transform.position;
+                kameraAsento = new Asento(new Matkakirja.Linssit.Dioraama.V3(pp.x, pp.y, -pp.z), 0, 0, pelaaja != null ? KavelySumuM : VeneSumuM, 55, 0);
             }
             else if (pakotettuKamera is Asento pk) { pelaajaKameraTapa = null; jousi.Nollaa(); kameraAsento = pk; }
             else if (cmKaytossa)
@@ -416,7 +424,7 @@ namespace Matkakirja.Natiivi
             // Rengas piilossa myös 1,5 s puolilähikuvan jälkeen: blendi takaisin lepoon on vielä lähellä kasvoja (eleet-2-ajo 7.10.: kaari kokin yllä).
             if (puolilahiRinta.HasValue) himmennysAsti = Time.unscaledTime + 1.5f;
             // Kävelytilassa ei etsinnän renkaita (v44-ajo 7.10.: renkaat kameran edessä keittiössä).
-            DioraamaEtsinta.Himmennys = Time.unscaledTime < himmennysAsti || SeikkailuPelaaja.Aktiivinen != null;
+            DioraamaEtsinta.Himmennys = Time.unscaledTime < himmennysAsti || SeikkailuPelaaja.Aktiivinen != null || SeikkailuVene.Aktiivinen != null;
             puolilahiRinta = null;
             nayttamo.Paivita(kameraAsento, y.VahennettyLiike, t, asetaKamera: !cmKaytossa);
             hahmot3D.Paivita(rakennus, nakyma, nayttamo.Kamera, t);
@@ -791,17 +799,82 @@ namespace Matkakirja.Natiivi
         // aloituspaikkaan: merkki "ovi:<tid>-alku"/osa tid tai tilan kamerakohde, ja pudotus lähimmälle törmäyspinnalle.
         static string kavelyKehitysJuuri;
         string pelaajaKameraTapa;
+        bool veneLaituriin;
+        const double VeneSumuM = 120, VeneKestoS = 50;
         float himmennysAsti = -1f;
         const double KavelySumuM = 25;
+        IEnumerator VarmistaKavelyData()
+        {
+            if (SeikkailuKavely.Ladattu) yield break;
+            string osatUrl = kavelyKehitysJuuri != null ? kavelyKehitysJuuri + "osat.json" : !string.IsNullOrEmpty(rakennus.KavelyOsat) ? paketinJuuri + rakennus.KavelyOsat : null;
+            string merkitUrl = kavelyKehitysJuuri != null ? kavelyKehitysJuuri + "merkit.json" : !string.IsNullOrEmpty(rakennus.KavelyMerkit) ? paketinJuuri + rakennus.KavelyMerkit : null;
+            if (osatUrl != null) yield return SeikkailuKavely.Lataa(osatUrl, merkitUrl, peili, rakennus3D, rakennus, nayttamo.transform, o.Kirjaa);
+        }
+
+        // HISTORIAMOOTTORI V2: venesaapuminen. Reitti merkeistä vene:* (järjestyksessä; vene:laituri kierto_y = keulan suunta), muuten
+        // varareitti laiturin tilan kameran suunnasta (vedenpinnassa, 120 / 40 / 8 m → 2 m laiturin kohteesta). Perillä pelaaja nousee
+        // merkkiin nousu:laituri (tai laiturin kohteeseen) ja kamera blendaa olan yli -kameraan.
+        IEnumerator VenePaalle(double kesto)
+        {
+            if (nayttamo == null || rakennus == null) { o.Kirjaa("poikki: vene: linssi ei auki"); yield break; }
+            var vm = rakennus.Ymparisto?.Rekvisiitta?.Find(x => x.Id == "vene") ?? default;
+            if (vm.Id == null) { o.Kirjaa("poikki: vene: rekvisiitta vene puuttuu (ymparisto.mallit, maailmaan: false)"); yield break; }
+            yield return VarmistaKavelyData();
+            SeikkailuPelaaja.Poista(); SeikkailuVene.Poista(); cm?.SeikkailuPois(); veneLaituriin = false;
+            double vesi = rakennus.Ulkokuori?.VesiY ?? 0;
+            var reitti = new List<(double X, double Y, double Z)>(); double? loppuSuunta = null;
+            if (SeikkailuKavely.Data != null)
+                foreach (var m in SeikkailuKavely.Data.Lajia("vene")) { reitti.Add((m.X, vesi, m.Z)); if (m.Tunnus == "laituri") loppuSuunta = m.KiertoY; }
+            string lahde = "merkit";
+            if (reitti.Count < 2)
+            {
+                lahde = "varareitti";
+                reitti.Clear();
+                var lt = rakennus.Tila("laituri");
+                if (lt == null) { o.Kirjaa("poikki: vene: ei vene:-merkkejä eikä laituri-tilaa"); yield break; }
+                var (ks, _) = Kameraliike.AsentoSijainti(lt.Kamera);
+                double dx = ks.X - lt.Kamera.Kohde.X, dz = ks.Z - lt.Kamera.Kohde.Z, l = Math.Sqrt(dx * dx + dz * dz);
+                dx /= Math.Max(1e-6, l); dz /= Math.Max(1e-6, l);
+                foreach (double e in new[] { 120.0, 40, 8, 2 }) reitti.Add((lt.Kamera.Kohde.X + dx * e + (e > 30 ? dz * e * 0.15 : 0), vesi, lt.Kamera.Kohde.Z + dz * e - (e > 30 ? dx * e * 0.15 : 0)));
+            }
+            var ydin = new Matkakirja.Linssit.Seikkailu.Venesaapuminen(reitti, kesto, loppuSuunta);
+            bool puhelin = SystemInfo.deviceModel != null && SystemInfo.deviceModel.StartsWith("iPhone");
+            string polku = puhelin ? (vm.Kevyt ?? vm.Huippu) : (vm.Huippu ?? vm.Kevyt);
+            linssi.KertojaPois();
+            yield return SeikkailuVene.Aloita(peili(paketinJuuri + polku), ydin, nayttamo.transform, DioraamaNayttamo.Kerros, o.Kirjaa);
+            o.Kirjaa($"poikki: vene päällä ({lahde}, {reitti.Count} pistettä, {ydin.Pituus:F0} m, {ydin.KestoS:F0} s)");
+        }
+
+        IEnumerator VeneLaituriin()
+        {
+            yield return VarmistaKavelyData();
+            if (SeikkailuPelaaja.Aktiivinen != null) yield break;
+            var v = SeikkailuVene.Aktiivinen;
+            var nm = SeikkailuKavely.Data == null ? null : System.Linq.Enumerable.FirstOrDefault(SeikkailuKavely.Data.Merkit, x => x.Nimi == "nousu:laituri");
+            Vector3 alku; float yaw = 0f;
+            var lt = rakennus.Tila("laituri");
+            if (nm != null) alku = new Vector3((float)nm.X, (float)nm.Y, (float)-nm.Z);
+            else if (lt != null) alku = DioraamaNayttamo.UnityPiste(lt.Kamera.Kohde);
+            else { o.Kirjaa("seikkailu: vene perillä, ei nousupaikkaa"); yield break; }
+            if (v != null)
+            {
+                var vt = v.Ydin.Tila(v.Ydin.KestoS);
+                var d = new Vector3((float)vt.SuuntaX, 0, (float)-vt.SuuntaZ);
+                var kohti = alku - new Vector3((float)vt.X, alku.y, (float)-vt.Z);
+                var suunta = kohti.sqrMagnitude > 0.25f ? kohti : d;
+                yaw = Mathf.Atan2(suunta.x, suunta.z) * Mathf.Rad2Deg;
+            }
+            SeikkailuKavely.Leikkaukset(true);
+            Physics.SyncTransforms();
+            if (Physics.Raycast(alku + Vector3.up * 2f, Vector3.down, out var osuma, 30f, 1 << DioraamaNayttamo.Kerros)) alku = osuma.point + Vector3.up * 0.05f;
+            SeikkailuPelaaja.Luo(nayttamo.transform, alku, yaw, DioraamaNayttamo.Kerros);
+            o.Kirjaa($"seikkailu: vene perillä, pelaaja laiturilla ({alku}, yaw {yaw:F0}, {(nm != null ? "nousu:laituri" : "laiturin kohde")})");
+        }
+
         IEnumerator KavelyPaalle(string tid)
         {
             if (nayttamo == null || rakennus == null) { o.Kirjaa("poikki: kävely: linssi ei auki"); yield break; }
-            if (!SeikkailuKavely.Ladattu)
-            {
-                string osatUrl = kavelyKehitysJuuri != null ? kavelyKehitysJuuri + "osat.json" : !string.IsNullOrEmpty(rakennus.KavelyOsat) ? paketinJuuri + rakennus.KavelyOsat : null;
-                string merkitUrl = kavelyKehitysJuuri != null ? kavelyKehitysJuuri + "merkit.json" : !string.IsNullOrEmpty(rakennus.KavelyMerkit) ? paketinJuuri + rakennus.KavelyMerkit : null;
-                if (osatUrl != null) yield return SeikkailuKavely.Lataa(osatUrl, merkitUrl, peili, rakennus3D, rakennus, nayttamo.transform, o.Kirjaa);
-            }
+            yield return VarmistaKavelyData();
             int tilaTormays = SeikkailuKavely.Ladattu ? 0 : SeikkailuPelaaja.LisaaTormaykset(nayttamo.transform);   // vara: tilameshit
             SeikkailuKavely.Leikkaukset(true);
             linssi.KertojaPois();   // ei kertojan jaksotekstejä (vuosiluvut, nimet) kävellessä
@@ -1231,7 +1304,7 @@ namespace Matkakirja.Natiivi
             // törmäykset tilojen mesheistä (väliaikaiset), kamera olan yli; tapit = testisyöte s sekuntia (simulaattori ilman kosketusta).
             if (mita == "kavely")
             {
-                if (arvo == "0") { SeikkailuPelaaja.Poista(); SeikkailuKavely.Leikkaukset(false); o.Kirjaa("poikki: kävely pois"); return; }
+                if (arvo == "0") { SeikkailuPelaaja.Poista(); SeikkailuVene.Poista(); SeikkailuKavely.Leikkaukset(false); cm?.SeikkailuPois(); o.Kirjaa("poikki: kävely pois"); return; }
                 if (arvo == "tapit" && osat.Length > 7)
                 {
                     SeikkailuPelaaja.Testi = new Matkakirja.Linssit.Seikkailu.KavelySyote { LiikeX = Luku(osat[3]), LiikeY = Luku(osat[4]), KatseX = Luku(osat[5]), KatseY = Luku(osat[6]) };
@@ -1242,6 +1315,13 @@ namespace Matkakirja.Natiivi
                 if (arvo == "data") { kavelyKehitysJuuri = osat.Length > 3 ? osat[3].TrimEnd('/') + "/" : null; o.Kirjaa($"poikki: kävelydata {kavelyKehitysJuuri ?? "paketista"}"); return; }
                 string tid = osat.Length > 3 ? osat[3] : Linssi?.NakymaHetkella(YdinAika, false).KohdeTila ?? "laituri";
                 o.StartCoroutine(KavelyPaalle(tid));
+                return;
+            }
+            // "poikki vene 1 [kesto_s] | 0": historiamoottori V2 — venesaapuminen laituriin, sitten vapaa kävely.
+            if (mita == "vene")
+            {
+                if (arvo == "0") { SeikkailuVene.Poista(); SeikkailuPelaaja.Poista(); SeikkailuKavely.Leikkaukset(false); cm?.SeikkailuPois(); o.Kirjaa("poikki: vene pois"); return; }
+                o.StartCoroutine(VenePaalle(osat.Length > 3 ? Luku(osat[3]) : VeneKestoS));
                 return;
             }
             if (mita == "kavely-vanha")

@@ -56,6 +56,10 @@ namespace Matkakirja.Natiivi
         int prioriteetti = 10;
         /// <summary>DioraamaSovitin.Puolilahikuva-avaimen pääte ("tila:x|puhuja|puolilahi").</summary>
         public const string PuolilahiPaate = "|puolilahi";
+        CinemachineCamera viimeSeikkailu;
+        const float SeikkailuBlendiS = 1.6f;
+        /// <summary>Seikkailu päättyi (kävely ja vene pois): seuraava seikkailukamera leikkaa.</summary>
+        public void SeikkailuPois() => viimeSeikkailu = null;
 
         /// <summary>Elävä kamera (lepoavain tai "lento"); null = seuraava vaihto on leikkaus.</summary>
         public string Elava { get; private set; }
@@ -191,6 +195,13 @@ namespace Matkakirja.Natiivi
         /// diagnostiikan ("aivot" tai "suora") ja Elava nollataan, jotta paluu lepoon leikkaa.</summary>
         public string PaivitaPelaaja(CinemachineCamera pelaaja, Camera kamera, float dt)
         {
+            // Seikkailukameran vaihto (venesaapumisen perä → pelaajan olan yli): pehmeä blendi; ensimmäinen leikkaa.
+            if (pelaaja != viimeSeikkailu)
+            {
+                aivot.DefaultBlend = viimeSeikkailu == null ? new CinemachineBlendDefinition(CinemachineBlendDefinition.Styles.Cut, 0f)
+                    : new CinemachineBlendDefinition(CinemachineBlendDefinition.Styles.EaseInOut, SeikkailuBlendiS);
+                viimeSeikkailu = pelaaja;
+            }
             if (pelaaja.Priority.Value <= prioriteetti) pelaaja.Priority = prioriteetti + 1000;
             Elava = null;
             lentoPerlin.AmplitudeGain = 0f;
