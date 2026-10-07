@@ -158,6 +158,7 @@ namespace Matkakirja.Natiivi
             lippuEl = Rakenne.Teksti("", "mk-aloitus__oikeudet", isa);
             Kirjasimet.Aseta(lippuEl, Tyylikirja.Kirjain.Apuri);
             lippuEl.style.display = DisplayStyle.None;
+            lippuEl.style.whiteSpace = WhiteSpace.Normal;   // simu 10.2x: rivi katkesi "…":llä yhdelle riville
             PaivitaLippurivi();
             if (lippuTekijat == null) UiKerros.Hae().StartCoroutine(LataaLippuTekijat());
             palaute = PalauteLomake.PeriaateLohko(isa, UiKerros.Traileri);
