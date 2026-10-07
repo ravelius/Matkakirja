@@ -1,0 +1,1 @@
+Tervetuloa Ljubljanaan. Ylhäältä kaupunki on punaisten kattojen rykelmä, jonka keskeltä kohoaa metsäinen linnavuori ja sen laella linna. Vuoren juurella Ljubljanica-joki kiemurtelee vanhankaupungin ohi. Kierros alkaa joen rannalta Prešerenin aukiolta Kolmoissillan päästä, kansallisrunoilijan patsaan ja vaaleanpunaisen fransiskaanikirkon luota.
