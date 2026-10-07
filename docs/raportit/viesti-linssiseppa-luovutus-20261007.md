@@ -156,3 +156,15 @@ NUI:n osa on `natiivi-ui/sallitut-157` 0f770be2. LS2:n lista on tiedostossa `pro
 - iPad-mittaukset valmiit: yövalot ≈ 0 ms (+1 Mt), terävöitys ≈ 0, yö/päivä 16,7 ms. Ensiajon 58 ms oli laitteen tila.
 - Giza v2 (Sfinksi v2 + sävytetyt helmat), tileset `_tyo/linssiseppa/giza-v2-tiles`, ajo-helma.sh → simuvuoro ~13.0x.
   - Kaukaa (1,4–5 km) leikkausmaski on karkea ja sivussa; ratkaisu etäisyysrajalla vielä tekemättä.
+
+## TILANNE 13.0x (tauko 13.45–15.00; jatka tästä)
+- `linssiseppa/esitys-giza` 5a0478f55 on esityserä junaan 161 (Päätoimittajan kuittaus kesken).
+  - Sisältää: kaupunkitila, pallokori (köydet pois iPhonen pystystä, KoriVasenKoysiNorm NUI:lle), metro-API ja KierrosLahtee, yksi esitys + Kerro lisää (#4126), Giza (opas pinta, helmatuki, kokeiluotsake), siltalauseet v2.
+  - Lisäksi: avaus ja opastus kerran (todennettu simussa 12.51, `lokit/linssiseppa-opastus-20261007`).
+  - Aloitus 12.5x: esikamera esilataa 1. kohteen lähikuvan latauskuvan aikana ja yleiskuva on 2,2 km. EI VIELÄ TODENNETTU: ajo-aloitus.sh (S, APP; touch $S/sim-nyt-aloitus), Ateena ja Pariisi kylmästä, ei tyhjiä laattoja.
+  - NUI: natiivi-ui/pariisi-esitys (metrolinja köyden oikealle KoriVasenKoysiNorm:lla) yhdistetään ennen junaa.
+- Junan 161 yövalot: `linssiseppa/yovalot-paikka-161` 47622521f, yhdistelmäkäännöksessä Natiiviseppä 074c95a3 + LS2 e16d100db (Julkaisija).
+  - Toisto 159:llä ei toistanut vikaa (48_2, 1 lataus). Korjattu ajo puuttuu: ajo-yo-toisto.sh NIMI=korjattu APP=<yhdistelmä>.
+- Giza: helmat sävytetty ja OK. Linnanrakentajalta odotetaan Sfinksin helmaa ja väriä (keho tumma) sekä helmoja 150 m (kaukoreikä). Sen jälkeen omat_mallit_tileset.py → `_tyo/linssiseppa/giza-v2-tiles` → ajo-helma.sh → pelikuvat Päätoimittajalle → "vie" Julkaisijalle (paketti omat-mallit-vienti-20261007 on päivitettävä v2:lla).
+- Pelikoodari #4138 (kierros alkaa avauksen kohteesta) → todenna alku Roomassa, Lontoossa, Kööpenhaminassa ja Pariisissa.
+- iPad-mittaukset valmiit (yövalot ≈ 0 ms, terävöitys ≈ 0, yö/päivä 16,7 ms). COZY 9dede53a5 odottaa simua (ei kiire).
