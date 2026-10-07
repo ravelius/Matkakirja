@@ -72,7 +72,7 @@ namespace Matkakirja.Natiivi
             reliefi.tooltip = "Astronautin kameran reliefi: täysvärinen (1,0) tai webin vaimea (0,8). Näkyy seuraavalla avauksella.";
             Rakenne.Teksti("Astronautin reliefi", "mk-kytkinrivi__nimi", reliefi);
             reliefiTila = Rakenne.Teksti("", "mk-kytkinrivi__tila", reliefi);
-#if !MATKAKIRJA_APPSTORE
+            // Omistaja 7.10. 12.5x: kokeilukytkimet myös App Store -käännöksessä (näkyvät vasta kehittäjäkoodilla); työhuone ei.
             // Linssien avautumiskynnykset (Linssiseppä): kehittäjätilassa kaikki linssit auki.
             kynnykset = Rakenne.Nappi(null, "mk-kytkinrivi", () =>
             {
@@ -117,20 +117,17 @@ namespace Matkakirja.Natiivi
             // web #3388; KortinLukija, Striimiaani.Pelinimet).
             // Työhuone (web #kehittaja-tyohuone): Raamattu ja Kehittäjälehti kehittäjän liitteinä (Tyohuone.cs).
             // Fable 24.9.: vain kehittäjätilassa eikä koskaan App Store -buildissa.
+#if !MATKAKIRJA_APPSTORE
             Tyohuonerivi("Raamattu", "<path d=\"M5 4.5h6.5v15H6.6A1.6 1.6 0 0 1 5 17.9z\"/><path d=\"M19 4.5h-6.5v15h4.9a1.6 1.6 0 0 0 1.6-1.6z\"/>", Tyohuone.AvaaRaamattu);
             Tyohuonerivi("Kehittäjälehti", "<path d=\"M4.5 5.5h15v13h-15z\"/><path d=\"M7.5 9.5h6M7.5 12.5h9M7.5 15.5h9\"/>", Tyohuone.AvaaKehittajalehti);
 #endif
 
             kehittaja = new KehittajaIkkuna(kerros);
-#if MATKAKIRJA_APPSTORE
-            // App Storessa ei kehittäjätilaa: "Mitä uutta" ilman Kehittäjä-nappia.
-            MitaUutta = new MitaUutta(kerros, null);
-#else
+            // Omistaja 7.10. 12.5x: Kehittäjä-nappi (webin #kehittaja-btn) ja koodirivi kaikissa käännöksissä, myös App Storessa.
             MitaUutta = new MitaUutta(kerros, kehittaja.Avaa);
             // Kehittäjäkoodi (sama ikkuna aukeaa myös Asetusten Kehittäjä-kytkimestä ja Mitä uutta -näkymän napista).
             var koodi = Rakenne.Nappi(null, "mk-kytkinrivi", () => { Sulje(); kehittaja.Avaa(); }, kokeet, Ikonit.Ratas);
             Rakenne.Teksti("Kehittäjäkoodi", "mk-kytkinrivi__nimi", koodi);
-#endif
             Asetukset.Muuttui += _ => { VarmistaMaailma(); if (Auki) Paivita(); };
             kerros.Juuri(UiKerros.Valikot).schedule.Execute(VarmistaMaailma).StartingIn(1000);
         }
@@ -233,7 +230,7 @@ namespace Matkakirja.Natiivi
         readonly Label maailmaTila;
 
         /// <summary>Kehittäjän maailmanäkymä päällä (säilyy kuten webin kehittajaMaailmaPaalla); vain kehittäjätilassa.</summary>
-        public static bool Maailma => Asetukset.Kehittaja && PlayerPrefs.GetInt(MaailmaAvain, 0) == 1;
+        public static bool Maailma => Asetukset.Kehittaja && PlayerPrefs.GetInt(MaailmaAvain, 0) == 1 || Asetukset.Testaaja;   // testaaja: vapaa liikkuminen aina
 
         /// <summary>
         /// PELAAJAN NÄKYMÄ (omistaja 29.9.2026 klo 08.5x: "Maailmatilaan voisi tehdä apunapin, joka näyttäisi kartan samalla
@@ -348,8 +345,10 @@ namespace Matkakirja.Natiivi
 
         public void Avaa()
         {
-            bool paalla = Asetukset.Kehittaja;
-            selite.text = paalla ? "Kehittäjätila on päällä: Kehittäjätyökalut näkyvät Asetuksissa." : "Kehittäjätila avaa Asetuksiin Kehittäjätyökalut.";
+            bool paalla = Asetukset.Kehittaja || Asetukset.Testaaja;
+            selite.text = Asetukset.Kehittaja ? "Kehittäjätila on päällä: Kehittäjätyökalut näkyvät Asetuksissa."
+                : Asetukset.Testaaja ? "Testaajatila on päällä: kaikki linssit ja vapaa liikkuminen kartalla."
+                : "Kehittäjä- tai testaajakoodi avaa lisätoiminnot.";
             kentta.style.display = paalla ? DisplayStyle.None : DisplayStyle.Flex;
             kentta.value = "";
             virhe.style.display = DisplayStyle.None;
@@ -367,7 +366,7 @@ namespace Matkakirja.Natiivi
 
         void Kytke()
         {
-            if (Asetukset.Kehittaja) { Asetukset.AsetaKehittaja(null); Sulje(); return; }
+            if (Asetukset.Kehittaja || Asetukset.Testaaja) { Asetukset.AsetaKehittaja(null); Sulje(); return; }
             if (Asetukset.AsetaKehittaja(kentta.value)) { Sulje(); return; }
             kentta.value = "";
             virhe.style.display = DisplayStyle.Flex;

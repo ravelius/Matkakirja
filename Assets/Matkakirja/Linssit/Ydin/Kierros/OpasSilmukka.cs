@@ -321,7 +321,20 @@ namespace Matkakirja.Linssit.Kierros
         {
             double km = matkaM / 1000.0;
             double s = km < 10 ? 3.0 + 2.2 * Math.Sqrt(km) : 10.0 + 4.0 * Math.Log10(km / 10.0);
-            return Math.Max(LentoMinS, Math.Min(LentoMaxS, s));
+            if (PalloLento) s *= PalloKerroin(km);
+            return Math.Max(LentoMinS, Math.Min(LentoMaxS * (PalloLento ? PalloKerroinLyhyt : 1), s));
+        }
+
+        // ---- KUUMAILMAPALLO (Päätoimittaja 7.10. 09.2x: "liike suhteellisen hidas kuin pallolla, mutta fysiikkaa saa venyttää, jotta
+        // kaikki kiinnostavat kohteet ehditään nähdä (tuulta vastaan, nopeammin pitkillä väleillä)") ----
+        /// <summary>Korinäkymä päällä (sovitin): lyhyet lennot hitaammin, pitkät lähes ennallaan.</summary>
+        public static bool PalloLento;
+        public const double PalloKerroinLyhyt = 1.6, PalloKerroinPitka = 1.15, PalloPitkaKm = 3.0;
+        /// <summary>Lennon keston kerroin pallossa: 1,6 alle 0,5 km:n väleillä, liukuen 1,15:een 3 km:ssä ja sen yli.</summary>
+        public static double PalloKerroin(double km)
+        {
+            double t = Math.Max(0, Math.Min(1, (km - 0.5) / (PalloPitkaKm - 0.5)));
+            return PalloKerroinLyhyt + (PalloKerroinPitka - PalloKerroinLyhyt) * t;
         }
 
         /// <summary>Käynnistys: ensimmäinen pyyntö (alkutoive, esim. "Kööpenhamina").</summary>
@@ -364,7 +377,7 @@ namespace Matkakirja.Linssit.Kierros
             // Sama 5 km:n yläkuva kuin avauksessa (Päätoimittaja 6.10. 00.4x: Amsterdam laskeutui matalaan viistoon kuvaan).
             double maa = MaaPisteessa?.Invoke(lat, lon) ?? double.NaN;
             AsetaKohdeKehys(new Pysahdys { Lat = lat, Lon = lon, MaaM = double.IsNaN(maa) ? 0 : maa, NostoM = 0, Suuntima = KierrosLento.Kiedo(Suunta(Asento.Lat, Asento.Lon, lat, lon)),
-                Kallistus = AvausKallistus, EtaisyysM = AvausEtaisyysM }, double.IsNaN(maa), null, 0);
+                Kallistus = AvausKallistus, EtaisyysM = AvausEtaisyysOhitus ?? AvausEtaisyysM }, double.IsNaN(maa), null, 0);
             Ohjaus.Nollaa();
             lahto = Asento;
             double matka = KierrosLento.EtaisyysM(lahto.Lat, lahto.Lon, lat, lon);
@@ -444,6 +457,23 @@ namespace Matkakirja.Linssit.Kierros
         public (double lat, double lon)? PyynnonSijainti;
         readonly List<(string nimi, double lat, double lon)> kierrosJono = new List<(string, double, double)>();
         int kierrosIndeksi;
+        /// <summary>Kierroksen kohteet järjestyksessä (metrokartta, Pariisi-kokeilu 7.10.): tyhjä, kun kierros ei ole käynnissä.</summary>
+        public IReadOnlyList<(string nimi, double lat, double lon)> KierrosJono => kierrosJono;
+        /// <summary>Nykyisen (viimeksi pyydetyn) kierroskohteen indeksi 0…; −1 = ei kierrosta.</summary>
+        public int KierrosNykyinen
+        {
+            get
+            {
+                if (!KierrosKaynnissa && !KierrosKeskeytetty) return -1;
+                // Simu 7.10. 10.50: esihaku kasvattaa indeksiä jo kerronnan aikana (metro näytti seuraavaa) → nykyinen kohteen mukaan.
+                var n = Nykyinen;
+                if (n != null)
+                    for (int i = 0; i < kierrosJono.Count; i++)
+                        if (string.Equals(kierrosJono[i].nimi, n.Nimi, StringComparison.OrdinalIgnoreCase)
+                            || KierrosLento.EtaisyysM(kierrosJono[i].lat, kierrosJono[i].lon, n.Lat, n.Lon) < 80) return i;
+                return Math.Max(0, kierrosIndeksi - 1);
+            }
+        }
 
         /// <summary>Liiku-listan kohde: lento heti kohteeseen (kaukana siirto), ja workerin pysähdys kohteesta pyydetään samalla.</summary>
         public void Liiku(string nimi, double lat, double lon)
@@ -515,6 +545,33 @@ namespace Matkakirja.Linssit.Kierros
             return true;
         }
 
+        /// <summary>
+        /// "KERRO LISÄÄ" kierroksella (omistaja 7.10. 10.3x, yksi esitys): kierros keskeytyy kuten kysymyksessä, nykyisestä kohteesta
+        /// pyydetään pidempi teksti (PitkaPyynto: ei kierroksen lyhyt-kenttää), ja JATKA jatkaa seuraavasta (lyhyttä ei toisteta).
+        /// Kierroksen ulkopuolella tavallinen toive. true = otettu.
+        /// </summary>
+        public bool KerroLisaa(string teksti = "kerro lisää")
+        {
+            if (Vaihe == OpasVaihe.Valmis) return false;
+            if (!KierrosKaynnissa && !KierrosKeskeytetty) { Toive(teksti); return true; }
+            if (KierrosKaynnissa) KeskeytaKierros();
+            var kt = keskeytysTieto;
+            Toive(teksti);
+            KierrosKeskeytetty = true; keskeytysTieto = kt; jatkoKohde = null;
+            PitkaPyynto = true;
+            return true;
+        }
+        /// <summary>Kierroksen keskeytys ilman kesken jääneen kohteen toistoa (valmis "Kerro lisää" esitetään paikalla; JATKA seuraavasta).</summary>
+        public bool KeskeytaKierrosOhittaen()
+        {
+            bool ok = KierrosKaynnissa ? KeskeytaKierros() : KierrosKeskeytetty;
+            jatkoKohde = null;
+            return ok;
+        }
+
+        /// <summary>Seuraava pyyntö ilman kierroksen lyhyt-merkintää (sovitin kuluttaa).</summary>
+        public bool PitkaPyynto;
+
         /// <summary>JATKA KIERROSTA: kesken jäänyt kohde alusta, muuten seuraava jonosta. true = jatkui.</summary>
         public bool JatkaKierrosta()
         {
@@ -579,6 +636,7 @@ namespace Matkakirja.Linssit.Kierros
         public void AloitaKierros(IList<(string nimi, double lat, double lon)> kohteet)
         {
             if (kohteet == null || kohteet.Count == 0 || Vaihe == OpasVaihe.Valmis) return;
+            PyynnotSeis = false; EsiKohde = null;
             PelaajaValitsi();
             kierrosJono.Clear(); kierrosJono.AddRange(kohteet);
             kierrosIndeksi = 0;
@@ -641,8 +699,13 @@ namespace Matkakirja.Linssit.Kierros
             UusiPyynto();
         }
 
+        /// <summary>Esityksen avaus ja opastus soivat (sovitin): ei workerin pyyntöjä ennen kierrosta (kaupungin kysymys ei saa
+        /// soida avauksen päälle). Kierroksen aloitus (AloitaKierros) purkaa.</summary>
+        public bool PyynnotSeis;
+
         void UusiPyynto()
         {
+            if (PyynnotSeis) return;
             lykattyKysymys = null; esihakuPuheenJalkeen = false;   // uusi pyyntö korvaa puheen aikana tulleen kysymyksen
             odotettuPaikka = null;
             if (toive == null && KierrosPyynto()) return;   // kierros päättyi: ei uutta pysähdystä
@@ -867,8 +930,17 @@ namespace Matkakirja.Linssit.Kierros
         (double lat, double lon)? odotettuPaikka;
         public (double lat, double lon)? OdotettuPaikka => odotettu != 0 ? odotettuPaikka : null;
 
+        /// <summary>Kaupunkitilan aloitus (omistaja 7.10. 12.5x, Ateena TF 159: lähizoomin laatat puuttuivat): yleiskuvan etäisyys
+        /// (lyhyempi siirtymä lähikuvaan); null = AvausEtaisyysM.</summary>
+        public double? AvausEtaisyysOhitus;
+        /// <summary>Esityksen ensimmäinen kohde: latauskuvan ja avauksen aikana esikamera esilataa sen lähikuvan, ja siirtoruutu
+        /// aukeaa vasta, kun myös ne laatat ovat valmiit (latausaste kattaa kaikki kamerat). Kierroksen alku tyhjentää.</summary>
+        public (string nimi, double lat, double lon)? EsiKohde;
+
         public Kuvakulma? Esilataus(Func<OpasKohde, double> maaKorkeus)
         {
+            if (EsiKohde is (string en, double ela, double elo) && (Siirtymassa || (PyynnotSeis && Vaihe != OpasVaihe.Lentaa)))
+                return OpasKuvaus.Pysahdyksella(KehysKohteelle(new OpasKohde { Nimi = en, Lat = ela, Lon = elo, KokoM = 120 }, maaKorkeus), 0);
             // Saavuttu (odotetaan laattoja): pääkamera on jo kehyksessä → esikamera pois, latausaste mittaa vain pääkameraa.
             if (Vaihe == OpasVaihe.Lentaa && kohdeKehys != null) return VaiheAika >= LentoKestoS ? (Kuvakulma?)null : OpasKuvaus.Pysahdyksella(kohdeKehys, 0);
             if (Seuraava != null && !Seuraava.Kysymys) return OpasKuvaus.Pysahdyksella(KehysKohteelle(Seuraava, maaKorkeus), 0);

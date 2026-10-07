@@ -2361,8 +2361,9 @@
 }
 
 /* Esittelykortti: periaatelappu + matkakirjakortin otsikko ja kursiivinen alaotsikko (web .apuraha-*). */
+/* Omistaja 7.10. 14.5x: leveämpi kortti, kuvat kappaleiden vieressä (560 → 760). */
 .mk-apuraha {
-    max-width: 560px;
+    max-width: 760px;
 }
 
 .mk-apuraha__otsikko {

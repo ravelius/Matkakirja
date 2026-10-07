@@ -90,6 +90,13 @@ namespace Matkakirja
         /// 5.10. 19.42 (saarten sädekehät pois, MERI ennallaan, sama rajattu jako). Vanhat buildit lukevat v1:tä (muuttumaton).
         /// </summary>
         public const string S2EuroopanVersio = "v2";
+        /// <summary>
+        /// KAUDET (Karttaseppä 7.10.2026: s2-eurooppa/syksy/v1, talvi ja kevät tulossa samaan muotoon; sama rajattu jako kuin v2):
+        /// käytössä oleva Euroopan mosaiikki versiokenttänä ("syksy/v1"); AstronauttiKerros asettaa kauden mukaan
+        /// (Iss.Vuodenaika.S2EuroopanVersio), oletus kesä = <see cref="S2EuroopanVersio"/>. Kauden sarjassa v2:n korjauskerroksia
+        /// (kesän aineistoa) ei käytetä.
+        /// </summary>
+        public static volatile string S2EuroopanKausi = S2EuroopanVersio;
         public const int S2ValimuistiMt = 200;
 
         TcpListener[] kuuntelijat;
@@ -397,8 +404,9 @@ namespace Matkakirja
                 if (bx >= 27 && bx < 40 && by >= 13 && by < 26)
                 {
                     // Euroopan korjauskerros (rajattu jako), muuten Euroopan mosaiikki.
-                    string ek = s2EuroopanKorjausPolku?.Invoke(z, x, y);
-                    return $"{ek ?? S2Polku + "/" + S2EuroopanVersio + "/"}{t}/{x - (27 << t)}/{y - (13 << t)}.jpg";
+                    string kausi = S2EuroopanKausi;
+                    string ek = kausi == S2EuroopanVersio ? s2EuroopanKorjausPolku?.Invoke(z, x, y) : null;
+                    return $"{ek ?? S2Polku + "/" + kausi + "/"}{t}/{x - (27 << t)}/{y - (13 << t)}.jpg";
                 }
             }
             tyhja = !onko(z, x, y);

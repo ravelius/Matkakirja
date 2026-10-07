@@ -143,6 +143,28 @@ namespace Matkakirja.Natiivi
             return t;
         }
 
+        /// <summary>
+        /// Osumatesti näytön pisteessä (px, y ylös) kuten osoittimella: ylin paneeli (sortingOrder) ensin, ensimmäinen poimittu
+        /// elementti "kerros N: nimi .luokat (isä …)"; testikomento ui hiiri (HiiriTesti, Linssiseppä 2 7.10.2026).
+        /// </summary>
+        public string Poimi(Vector2 px)
+        {
+            var lista = new List<KeyValuePair<int, UIDocument>>(dokumentit);
+            lista.Sort((a, b) => (b.Value.panelSettings != null ? b.Value.panelSettings.sortingOrder : b.Key)
+                .CompareTo(a.Value.panelSettings != null ? a.Value.panelSettings.sortingOrder : a.Key));
+            foreach (var kv in lista)
+            {
+                var juuri = kv.Value.rootVisualElement;
+                if (juuri?.panel == null || juuri.resolvedStyle.display == DisplayStyle.None) continue;
+                var pt = RuntimePanelUtils.ScreenToPanel(juuri.panel, new Vector2(px.x, Screen.height - px.y));
+                var e = juuri.panel.Pick(pt);
+                if (e == null) continue;
+                string Kuvaa(VisualElement v) => v == null ? "-" : (string.IsNullOrEmpty(v.name) ? "" : v.name + " ") + "." + string.Join(".", v.GetClasses());
+                return $"kerros {kv.Key}: {Kuvaa(e)} (isä {Kuvaa(e.hierarchy.parent)})";
+            }
+            return "ei osumaa (kartta)";
+        }
+
         /// <summary>Kerroksen koko ruudun juuri (himmennykset, jotka peittävät myös turva-alueen ulkopuolen).</summary>
         public VisualElement Juuri(int kerros) => Dokumentti(kerros).rootVisualElement;
 
@@ -311,6 +333,54 @@ namespace Matkakirja.Natiivi
                 if (osuma != null && osuma != juuri) return true;
             }
             return false;
+        }
+
+        /// <summary>Osoittimen kaappaajat paneeleittain (hiiri ja kosketus 0; Mac-ohjauslevyn diagnostiikka 7.10.2026) tai "-".</summary>
+        public string Kaappaajat()
+        {
+            var l = new List<string>();
+            foreach (var kv in dokumentit)
+            {
+                var paneeli = kv.Value.rootVisualElement?.panel;
+                if (paneeli == null) continue;
+                foreach (int id in new[] { PointerId.mousePointerId, PointerId.touchPointerIdBase })
+                    if (paneeli.GetCapturingElement(id) is VisualElement e)
+                        l.Add($"{kv.Key}/{id}: {(string.IsNullOrEmpty(e.name) ? e.GetType().Name : e.name)}.{string.Join(".", e.GetClasses())}" +
+                              (e.panel == null ? " (irrotettu)" : ""));
+            }
+            return l.Count == 0 ? "-" : string.Join("; ", l);
+        }
+
+        /// <summary>
+        /// Mac-syötteen diagnostiikka (omistaja 7.10.2026, Mac TF 160: ohjauslevyn panorointi ja zoomaus lakkasivat, kunnes klikkasi
+        /// karttaa): mikä elementti peittää ruudun pisteen (nimi, luokat, picking, opasiteetti, näkyvyys; kolme vanhempaa) tai null.
+        /// </summary>
+        public string PeittajaPisteessa(Vector2 ruutu)
+        {
+            if (!nakyvissa) return null;
+            var ylhaalta = new Vector2(ruutu.x, Screen.height - ruutu.y);
+            foreach (var kv in dokumentit)
+            {
+                var juuri = kv.Value.rootVisualElement;
+                var paneeli = juuri?.panel;
+                if (paneeli == null) continue;
+                var osuma = paneeli.PickAll(RuntimePanelUtils.ScreenToPanel(paneeli, ylhaalta), null);
+                if (osuma == null || osuma == juuri) continue;
+                var sb = new System.Text.StringBuilder($"{kv.Key}: ");
+                int n = 0;
+                for (var e = osuma; e != null && e != juuri && n < 4; e = e.parent, n++)
+                {
+                    if (n > 0) sb.Append(" < ");
+                    sb.Append(string.IsNullOrEmpty(e.name) ? e.GetType().Name : e.name);
+                    var luokat = string.Join(".", e.GetClasses());
+                    if (luokat.Length > 0) sb.Append('.').Append(luokat);
+                    var rs = e.resolvedStyle;
+                    if (n == 0) sb.Append($" [picking {e.pickingMode}, opasiteetti {rs.opacity:0.##}, {rs.visibility}, {rs.display}, " +
+                                          $"{e.worldBound.width:0}×{e.worldBound.height:0}]");
+                }
+                return sb.ToString();
+            }
+            return null;
         }
 
         /// <summary>
