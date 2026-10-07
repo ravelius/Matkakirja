@@ -232,18 +232,20 @@ namespace Matkakirja.Natiivi
             return lahin != null && !KuulijaKameranTakana(e, lahin) ? lahin : KameraKohde;
         }
         const string KameraKohde = "@kamera";
+        /// <summary>Huoneen lepokameran suunta puhujasta kameraan (Unity, vaaka; DioraamaSovitin.PuhujaanPain asettaa). Vakaa viite
+        /// kääntymiselle: liikkuva puolilähikamera seuraa puhujan suuntaa, joten sitä vasten kääntyminen jahtasi kameraa (iPad 7.10. 08.33).</summary>
+        public static Vector3? LepoKameraSuunta;
 
         /// <summary>Kuulija kameran suunnasta katsottuna puhujan takana (yli KuulijaTakanaAst): puhujan kääntyminen kuulijaan veisi
         /// kasvot pois kamerasta (iPad 7.10. 07.27: vesipoika puhui selin, kun kokki oli seinän puolella) → puhuja kääntyy kameraan.</summary>
         bool KuulijaKameranTakana(Esiintyma e, string kuulija)
         {
-            var kam = DioraamaSovitin.AktiivinenKamera;
-            if (kam == null || e.Juuri == null) return false;
+            if (LepoKameraSuunta is not Vector3 k || e.Juuri == null) return false;
             foreach (var m in esiintymat)
                 if (m != e && m.HahmoId == kuulija && m.TilaId == e.TilaId && m.Juuri != null)
                 {
                     var p = e.Juuri.transform.position;
-                    Vector3 k = kam.transform.position - p, h = m.Juuri.transform.position - p; k.y = h.y = 0;
+                    Vector3 h = m.Juuri.transform.position - p; k.y = h.y = 0;
                     return k.sqrMagnitude > 0.01f && h.sqrMagnitude > 0.01f && Vector3.Angle(k, h) > KuulijaTakanaAst;
                 }
             return false;
@@ -839,11 +841,11 @@ namespace Matkakirja.Natiivi
             var paa = e.SolmuT[e.PaaIndeksi];
             if (kohde != null && e.Hahmo.Reitti == null)
                 foreach (var m in esiintymat)
-                    if (kohde == KameraKohde ? m == e && DioraamaSovitin.AktiivinenKamera != null
+                    if (kohde == KameraKohde ? m == e && LepoKameraSuunta.HasValue
                         : m != e && m.TilaId == e.TilaId && m.HahmoId == kohde && m.Juuri != null && m.Nakyvissa)
                     {
                         // Kameraan katsova puhuja (ei paikallaan olevaa kuulijaa): pää kohti kameraa, pystykulma rajattuna kuten muuten.
-                        var kohdePaa = kohde == KameraKohde ? DioraamaSovitin.AktiivinenKamera.transform.position
+                        var kohdePaa = kohde == KameraKohde ? paa.position + (LepoKameraSuunta ?? Vector3.forward) * 5f
                             : m.PaaIndeksi >= 0 ? m.SolmuT[m.PaaIndeksi].position : m.Juuri.transform.position + Vector3.up * 1.55f;
                         var eteen = -e.Juuri.transform.forward; // skinnatun mallin kasvot (ks. PaivitaSijainti)
                         var suunta = kohdePaa - paa.position;
@@ -887,9 +889,9 @@ namespace Matkakirja.Natiivi
         {
             string kohde = KatseenKohde(e);
             float tavoite = 0f;
-            if (kohde == KameraKohde && DioraamaSovitin.AktiivinenKamera != null)
+            if (kohde == KameraKohde && LepoKameraSuunta is Vector3 lk)
             {
-                var suunta = DioraamaSovitin.AktiivinenKamera.transform.position - paikka; suunta.y = 0f;
+                var suunta = lk; suunta.y = 0f;
                 if (suunta.sqrMagnitude > 0.04f) tavoite = Mathf.Clamp(Vector3.SignedAngle(oma, suunta, Vector3.up), -PuhujanMaxKatse, PuhujanMaxKatse);
             }
             else if (kohde != null)
@@ -903,9 +905,9 @@ namespace Matkakirja.Natiivi
                     }
             // Puhujan kasvot enintään PuhujaKameraAst kameran suunnasta (iPhone 7.10. 07.48: kokki kääntyi kuulijaan seinän puolelle ja
             // puolilähikuva jäi selän taakse, koska kamera pysyy poikkileikkauksen avoimella puolella).
-            if (EleetPaalla && e.HahmoId == Puhuja && kohde != null && DioraamaSovitin.AktiivinenKamera != null)
+            if (EleetPaalla && e.HahmoId == Puhuja && kohde != null && LepoKameraSuunta is Vector3 kdv)
             {
-                var kd = DioraamaSovitin.AktiivinenKamera.transform.position - paikka; kd.y = 0f;
+                var kd = kdv; kd.y = 0f;
                 if (kd.sqrMagnitude > 0.04f)
                 {
                     var halu = Quaternion.AngleAxis(tavoite, Vector3.up) * oma;

@@ -658,6 +658,9 @@ namespace Matkakirja.Natiivi
         (string, Asento, double, bool) PuhujaanPain((string Avain, Asento Perus, double Jaljella, bool Saapumassa) lepo, string tila)
         {
             string puhuja = KuunnelmaKaistale.TulevaPuhuja;
+            // Vakaa kääntymisviite hahmoille: lepokameran suunta (kanoninen (sin a, −cos a) → Unity (sin a, 0, cos a)).
+            if (tila != null && lepo.Avain == "tila:" + tila) { double la = lepo.Perus.Atsimuutti * Math.PI / 180; DioraamaHahmot3D.LepoKameraSuunta = new Vector3((float)Math.Sin(la), 0f, (float)Math.Cos(la)); }
+            else DioraamaHahmot3D.LepoKameraSuunta = null;
             if (puhuja == null || lepo.Jaljella > 0 || tila == null || lepo.Avain != "tila:" + tila || rakennus?.Tila(tila) is not Tila t) return lepo;
             Hahmo h = null;
             foreach (var x in t.Hahmot) if (x.Id == puhuja) { h = x; break; }
