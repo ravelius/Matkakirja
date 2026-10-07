@@ -133,10 +133,18 @@ namespace Matkakirja.Linssit.Kierros
             double nousu = Rajaa((matka < 1000 ? LahiKaariOsuus : KaariOsuus) * matka, 0, KaariMaxM);   // pystysuunnassa (m)
             double et = perus + nousu / cosK * h;
             et = Math.Max(et, perus + (MinKorkeusM / cosK - perus) * h);   // kesken lennon vähintään MinKorkeusM kohteen yläpuolella
-            double lento = matka < 50 ? b.Suuntima : OpasSilmukka.Suunta(a.Lat, a.Lon, b.Lat, b.Lon);
-            double w1 = KierrosLento.Smootherstep(Math.Min(1, t * 3)), w2 = KierrosLento.Smootherstep(Math.Max(0, t * 3 - 2));
-            double suunta = KierrosLento.Kiedo(a.Suuntima + KierrosLento.Kiedo(lento - a.Suuntima) * w1);
-            suunta = KierrosLento.Kiedo(suunta + KierrosLento.Kiedo(b.Suuntima - suunta) * w2);
+            double suunta;
+            if (OpasSilmukka.PalloLento)
+                // Pallo (omistaja TF 163: "liian nopeasti ja äkkinäisesti"): suunta kääntyy koko lennon ajan pehmeästi lähdöstä
+                // saapumiskehykseen (PalloTulosuunta rajaa kulman), ei ensin lentosuuntaan ja lopussa takaisin.
+                suunta = KierrosLento.Kiedo(a.Suuntima + KierrosLento.Kiedo(b.Suuntima - a.Suuntima) * KierrosLento.Smootherstep(t));
+            else
+            {
+                double lento = matka < 50 ? b.Suuntima : OpasSilmukka.Suunta(a.Lat, a.Lon, b.Lat, b.Lon);
+                double w1 = KierrosLento.Smootherstep(Math.Min(1, t * 3)), w2 = KierrosLento.Smootherstep(Math.Max(0, t * 3 - 2));
+                suunta = KierrosLento.Kiedo(a.Suuntima + KierrosLento.Kiedo(lento - a.Suuntima) * w1);
+                suunta = KierrosLento.Kiedo(suunta + KierrosLento.Kiedo(b.Suuntima - suunta) * w2);
+            }
             return new Kuvakulma(L(a.Lat, b.Lat), L(a.Lon, b.Lon), et, kall, suunta, L(a.KatseKorkeusM, b.KatseKorkeusM));
         }
 

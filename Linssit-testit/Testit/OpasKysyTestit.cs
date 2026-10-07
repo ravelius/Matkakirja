@@ -417,6 +417,19 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(!s.Siirtymassa && !s.KohdistaAvausKohteeseen("Pantheon", 41.8986, 12.4769), "siirron jälkeen ei kohdisteta");
         }
 
+        [Testi] static void ValmiinEsittelynKaupungissaEiReitinMiettimista()
+        {
+            // Omistaja TF 163 (Pariisi): "miksi lukija sanoo että mietin sopivan reitin? eikö se pitäisi olla jo valmiiksi mietittynä?"
+            Oleta.Sama(OpasSiltalauseet.OdotusValmis, OpasSiltalauseet.ValmiillaReitilla(OpasSiltalauseet.Odotus));
+            Oleta.Sama(null, OpasSiltalauseet.ValmiillaReitilla(OpasSiltalauseet.OdotusPaikalla), "paikallaan ei odotuslausetta");
+            Oleta.Sama(OpasSiltalauseet.Kierros, OpasSiltalauseet.ValmiillaReitilla(OpasSiltalauseet.Kierros), "muut ryhmät ennallaan");
+            var (ryhma, ehto) = OpasSiltalauseet.Rajaus(OpasSiltalauseet.OdotusValmis);
+            Oleta.Sama(OpasSiltalauseet.Odotus, ryhma);
+            foreach (var t in new[] { "Hetkinen, katson karttaa.", "Etsin meille parhaan reitin.", "Hetki vain, tarkistan suunnan." })
+                Oleta.Tosi(!ehto(new Siltalause { Teksti = t }), "reitin miettiminen pois: " + t);
+            foreach (var t in OpasSiltalauseet.LennonOdotukset) Oleta.Tosi(ehto(new Siltalause { Teksti = t }), "lennon odotus sallittu: " + t);
+        }
+
         [Testi] static void PelaajanToimintaHylkaaLykatynKysymyksen()
         {
             var (s, p, puhe) = Pysahdyksella();

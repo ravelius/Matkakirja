@@ -525,6 +525,8 @@ namespace Matkakirja.Natiivi
         // Uudet avaukset (Pelikoodari #4141): ämpäri on muuttumaton, joten /opas/aineistot "esittely_polut" {id: polku opas/:n
         // alta (esim. "opas/esittely-v1b/praha.json")} kertoo uuden polun; muuten opas/esittely-v1/<id>.json.
         static Dictionary<string, string> esittelyPolut = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);
+        /// <summary>Nykyisellä kaupungilla on valmis esittely (kierroksen järjestys valmiina, 37 sallittua kaupunkia).</summary>
+        static bool ValmisEsittely => YksKaupunkiId() is string id && esittelyPolut.ContainsKey(id);
         static void LueEsittelyPolut(object json)
         {
             if (json is Dictionary<string, object> j && j.TryGetValue("esittely_polut", out var ep) && ep is Dictionary<string, object> d)
@@ -1697,7 +1699,9 @@ namespace Matkakirja.Natiivi
             if (pelaajalta) pelaajanToimi = Time.unscaledTime;
             if (silmukka != null && silmukka.Siirtymassa) return false;   // kertoja odottaa näkymän aukeamista (omistaja 12.0x)
             if (siltalauseet == null || silta == null || !Asetukset.Paalla(Kytkin.Kertoja) || puhuu || silta.isPlaying) return false;
-            bool eiVaraa = ryhma == OpasSiltalauseet.Odotus || ryhma == OpasSiltalauseet.Odotus5 || ryhma == OpasSiltalauseet.Odotus12 || ryhma == OpasSiltalauseet.Virhe
+            // Valmiin esittelyn kaupungissa reitti on jo mietitty (omistaja TF 163): ei "Etsin meille parhaan reitin" -tyyppisiä lauseita.
+            if (ValmisEsittely) { ryhma = OpasSiltalauseet.ValmiillaReitilla(ryhma); if (ryhma == null) return false; }
+            bool eiVaraa = ryhma == OpasSiltalauseet.Odotus || ryhma == OpasSiltalauseet.OdotusValmis || ryhma == OpasSiltalauseet.Odotus5 || ryhma == OpasSiltalauseet.Odotus12 || ryhma == OpasSiltalauseet.Virhe
                 || ryhma == OpasSiltalauseet.EiSallittu;
             var l = siltalauseet.Valitse(ryhma, eiVaraa ? null : OpasSiltalauseet.Kuittaus, x => siltaKlipit.ContainsKey(x.Url));
             if (l == null) return false;
