@@ -204,6 +204,7 @@
       "teemat": ["harmaa", "paperi", "lasi", "lasi-avaruus"],
       "koko": "nappi.ohjaus neliönä, kulma kulma.nappi, reuna 1 pt, osuma-ala nappi.osuma; iso = nappi.ohjaus-iso (56) kuvasisällölle, esim. linnan pienoiskartta (omistaja 2.10.2026 klo 17.4x)",
       "kuvake": "24-ruudukon viivakuvake kokoa nappi.ohjaus-kuvake, viiva 1,75, ei tekstimerkkejä (×, ‹)",
+      "kontekstikuvakkeet": "seikkailun toimintonappi (omistaja 7.10.2026 klo 20.3x): käsi = poimi, käytä, avaa, aseta, laske; kaari = heitä; liekki = sytytä, puhalla, sammuta. Natiivin omat 24-ruudukon viivakuvakkeet (Ikonit.Kasi, Ikonit.Heittokaari, Ikonit.Liekki), viiva 1,75, ei tekstiä",
       "ryhma": "yksi ohjausryhmä näkymää kohden oikeaan yläkulmaan turva-alueen sisään: ‹ ensin, näkymän toiminnot, ✕ viimeisenä; väli vali.s; puhelimessa pystyssä enintään 4, loput valikkoon",
       "ulkopuolella": "sisällön omat ohjaimet (kuvan ‹ › -reunakaistat, vetokahva, liukusäätimet) ja Pulu; paneelin sisäinen ‹ Takaisin pysyy tekstinä",
       "linssivalikot": {
