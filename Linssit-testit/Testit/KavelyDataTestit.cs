@@ -55,6 +55,15 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(System.Linq.Enumerable.First(d.Lajia("vene")).KiertoY == 2.1, "kierto_y");
         }
 
+        [Testi] static void PartionLyhtyJaSoihtu()
+        {
+            // v44m: partio:portinvartija-1 lyhty, partio:portaat-1 soihtu (pelattavuusmalli 8.1: valo seinällä ennen kantajaa).
+            var d = KavelyData.Lue("{\"osat\": {}}", "[{\"nimi\": \"partio:portinvartija-1\", \"paikka\": [0, 0, 0], \"lyhty\": true}, " +
+                "{\"nimi\": \"partio:portaat-1\", \"paikka\": [1, 0, 0], \"soihtu\": true}, {\"nimi\": \"partio:piha-1\", \"paikka\": [2, 0, 0]}]");
+            var p = System.Linq.Enumerable.ToList(d.Lajia("partio"));
+            Oleta.Tosi(p[0].Lyhty && !p[0].Soihtu && p[1].Soihtu && !p[1].Lyhty && !p[2].Lyhty && !p[2].Soihtu, "lyhty ja soihtu luetaan, puuttuva = ei");
+        }
+
         [Testi] static void LuukunSarana()
         {
             var d = KavelyData.Lue("{\"osat\": {}}", "[{\"nimi\": \"luukku:koillinen\", \"paikka\": [-12.1, 11.5, -16.6], \"sarana\": [-12.2, 11.5, -16.7], \"glb\": \"esine-luukku.glb\"}, " +

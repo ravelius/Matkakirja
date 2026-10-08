@@ -33,6 +33,8 @@ namespace Matkakirja.Natiivi
             public VartijanTila EdellinenTila;
             public AudioSource Askeleet;
             public float RepliikkiAsti; public int RepliikkiLaskuri;
+            /// <summary>Kannetun valon säde (lyhty 4 m, soihtu 6 m), 0 = ei kanna.</summary>
+            public float ValoM;
         }
         /// <summary>Askeläänen klippi (rakennus.json aanet askel-kivi); SeikkailuVartijat.Askeleet asettaa.</summary>
         public static AudioClip AskelKlippi;
@@ -85,13 +87,13 @@ namespace Matkakirja.Natiivi
             var ky = SeikkailuKynttilat.Aktiivinen;
             if (ky != null && ky.Lahella(p.transform.position)) v = ky.Valoisuus(p.transform.position + Vector3.up, p.transform.position + Vector3.up);
             // Pelattavuusmalli 2.3: palava kynttilä kädessä paljastaa kantajansa (≥ 0,9, suojattuna ≥ 0,45); vartijan lyhty valaisee
-            // (≥ 1 − etäisyys / 4 m).
+            // (≥ 1 − etäisyys / 4 m; soihdun kantaja 6 m).
             if (ky != null && ky.OmaKadessa) v = Math.Max(v, ky.OmaSuojattu ? 0.45 : 0.9);
             var a = Aktiivinen;
             if (a != null)
                 foreach (var x in a.vartijat)
                     if (x.Agentti != null && x.Aivot.Profiili.Havaitsee && x.Aivot.Profiili.JahtaaMs > 0)
-                        v = Math.Max(v, 1 - Vector3.Distance(x.Agentti.transform.position, p.transform.position) / LyhtyM);
+                        v = Math.Max(v, 1 - Vector3.Distance(x.Agentti.transform.position, p.transform.position) / (x.ValoM > 0 ? x.ValoM : LyhtyM));
             return v;
         }
 
@@ -100,7 +102,7 @@ namespace Matkakirja.Natiivi
         DioraamaHahmot3D hahmot;
         Action<string> kirjaa;
         Vector3 tarkistus; SeikkailuPelaaja tarkistusPelaaja;
-        string pelaajanOsa; float osaTarkistus; string kiinniOsa; int kiinniOsassa;
+        string pelaajanOsa; float osaTarkistus, hehkuTarkistus; string kiinniOsa; int kiinniOsassa;
         /// <summary>Viimeisimmän tarkistuspisteen osa ja tapahtuma (V6 tallennus kuuntelee).</summary>
         public static string TarkistusOsa;
         public static event Action<string, Vector3> Tarkistuspiste;
@@ -161,6 +163,18 @@ namespace Matkakirja.Natiivi
                 var v = new V { Aivot = new Vartija(pisteet, yaw0) { Profiili = VartijaProfiili.Hae(eka.Profiili), Torkkuu = istuu }, Agentti = ag, Osa = eka.Osa ?? kv.Key, Nimi = kv.Key, Henkilo = henkilo, Askeleet = SeikkailuKuulija.Lahde("Askeleet:" + kv.Key, 2f, 28f) };
                 foreach (var pm in d.Lajia("piilo")) v.Aivot.Piilot.Add((pm.X, -pm.Z));   // vaihe 3: piilot ja varjot etsintään
                 v.Askeleet.loop = true; v.Askeleet.volume = 0.9f;
+                // Kannettu valo (pelattavuusmalli 8.1: portinvartijan lyhty, portaiden vastaantulijan soihtu): oikea pistevalo ilman varjoja,
+                // joten valo kasvaa kierreportaan kaarevalla seinällä ennen kuin kantaja tulee näkyviin; liekki käden kohdalle, hehku laatutasolla.
+                var kantaja = kv.Value.Find(x => x.Lyhty || x.Soihtu);
+                if (kantaja != null)
+                {
+                    bool soihtu = kantaja.Soihtu;
+                    v.ValoM = soihtu ? SoihtuM : LyhtyM;
+                    var kasi = soihtu ? new Vector3(0.3f, 1.55f, 0.2f) : new Vector3(0.28f, 0.95f, 0.12f);
+                    var liekki = DioraamaHahmot3D.LyhdynLuoja?.Invoke(vg.transform);
+                    if (liekki != null) { liekki.transform.localPosition = kasi; if (soihtu) liekki.transform.localScale *= 2.5f; }
+                    SeikkailuValot.Hehku(vg.transform, kasi + Vector3.up * 0.08f, new Color(1f, 0.62f, 0.3f), soihtu ? 1.6f : 1.1f, v.ValoM, true, DioraamaNayttamo.Kerros);
+                }
                 sv.vartijat.Add(v);
                 // Torkkuja: leikkeet torkku / syo, jos skinissä (LR pyydetty), muuten idle (Hahmot3D:n varaketju).
                 hahmot?.LisaaIrrallinen(rakennus, henkilo, vg.transform, () => (v.Leike ?? "idle", v.KavelyAika));
@@ -198,6 +212,7 @@ namespace Matkakirja.Natiivi
         {
             float dt = Mathf.Min(Time.unscaledDeltaTime, 0.05f);
             var p = SeikkailuPelaaja.Aktiivinen;
+            if (Time.unscaledTime > hehkuTarkistus) { hehkuTarkistus = Time.unscaledTime + 2f; SeikkailuValot.HehkuIsoihinLiekkeihin(Liekit, DioraamaNayttamo.Kerros); }
             if (ote != null) return;   // kiinnijäänti käynnissä (Ote-kulku)
             if (p != null && !riitaKaynnissa && (riitaAsti -= dt) <= 0) { riitaAsti = RiitaValiS; StartCoroutine(Riita(p)); }
             if (p != null && p != tarkistusPelaaja) { tarkistus = p.transform.position; tarkistusPelaaja = p; }   // uusi pelaaja = uusi tarkistuspiste
@@ -366,7 +381,7 @@ namespace Matkakirja.Natiivi
             }
             return false;
         }
-        const float PiiloM = 0.7f, HuutoM = 20f, LyhtyM = 4f;
+        const float PiiloM = 0.7f, HuutoM = 20f, LyhtyM = 4f, SoihtuM = 6f;
         readonly HashSet<string> henkilot = new HashSet<string>(StringComparer.Ordinal);
         static int Numero(string tunnus) { int vi = tunnus.LastIndexOf('-'); return vi > 0 && int.TryParse(tunnus.Substring(vi + 1), out int n) ? n : 0; }
         bool piiloPaljastui;
