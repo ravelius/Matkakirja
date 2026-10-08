@@ -22,7 +22,7 @@ namespace Matkakirja.Natiivi
     {
         /// <summary>Asetuksen pakotus "vesi 0|1"; null = oletus: päällä OletusKohteissa (omistaja 21.1x: Tukholman elävä vesi).</summary>
         public static bool? Pakotettu;
-        public static string[] OletusKohteet = { "tukholma" };
+        public static string[] OletusKohteet = { "tukholma", "pariisi" };   // kehityskaupungit (omistaja 20.4x); Pariisi index-v2:sta
         public static string VesiJuuri = "https://media.matkakirja.app/vesi/";
         public const float LahiM = 3000f, KaukoM = 20000f, PaivitysM = 400f;
         public static float NostoM = 0.4f;
@@ -70,16 +70,22 @@ namespace Matkakirja.Natiivi
         IEnumerator Lataa(string juuriUrl, double lat, double lon, int tama)
         {
             // Kohde indexistä: lähin, jonka säteellä kaupunki on.
-            string k = null;
-            using (var r = UnityWebRequest.Get(juuriUrl + "index.json"))
+            // index-v2.json (Tukholma + Pariisi; Karttaseppä 8.10.: uudet kohteet uuteen versioon, vanha ei ylikirjoitu), varana index.json.
+            string k = null; string indeksi = null;
+            foreach (var nimi in new[] { "index-v2.json", "index.json" })
             {
-                r.timeout = 15; yield return r.SendWebRequest();
-                if (r.result == UnityWebRequest.Result.Success)
+                using var r0 = UnityWebRequest.Get(juuriUrl + nimi);
+                r0.timeout = 15; yield return r0.SendWebRequest();
+                if (r0.result == UnityWebRequest.Result.Success) { indeksi = r0.downloadHandler.text; break; }
+            }
+            {
+                bool ok = indeksi != null;
+                if (ok)
                 {
-                    foreach (var o in MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(MiniJson.Objekti(MiniJson.Jasenna(r.downloadHandler.text)), "kohteet")).Select(MiniJson.Objekti))
+                    foreach (var o in MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(MiniJson.Objekti(MiniJson.Jasenna(indeksi)), "kohteet")).Select(MiniJson.Objekti))
                         if (Etaisyys(MiniJson.Luku(o, "lat") ?? 0, MiniJson.Luku(o, "lon") ?? 0, lat, lon) < (MiniJson.Luku(o, "sade_km") ?? 0) * 1000) { k = MiniJson.Teksti(o, "id"); break; }
                 }
-                else kirjaa?.Invoke($"kaupunki: vesi: index.json ei latautunut ({r.responseCode})");
+                else kirjaa?.Invoke("kaupunki: vesi: index-v2.json / index.json ei latautunut");
             }
             if (k == null || tama != avaus || Pakotettu == null && Array.IndexOf(OletusKohteet, k) < 0) yield break;
             string pohja = juuriUrl + k;
