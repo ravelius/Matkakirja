@@ -28,6 +28,7 @@ namespace Matkakirja.Natiivi
         public static float NostoM = 0.4f;
         /// <summary>Asetus "vesinosto" annettu: jsonin nosto_m_suositus ei ohita sitä (LS1:n katselmointi).</summary>
         public static bool NostoAsetettu;
+        static bool nostoIndeksista;
         /// <summary>Uusia paloja enintään näin monta kehyksessä (ei nykäystä pallon lennossa; LS1:n katselmointi).</summary>
         public const int PalojaKehyksessa = 2;
         readonly Queue<(bool, int)> jono = new Queue<(bool, int)>();
@@ -45,6 +46,8 @@ namespace Matkakirja.Natiivi
         public string Krediitti => krediitti;
         /// <summary>Veden tekijärivi ruudulle, kun vesi on ladattu (KrediititTiivis: oma rivi Googlen rivien ulkopuolella; ODbL).</summary>
         public static string KrediittiNyt { get; private set; }
+        /// <summary>Vettä piirretään (KaupunkiIlmakeha pitää taivaan arvot ajan tasalla veden heijastukselle, vaikka ilmakehä olisi pois).</summary>
+        public static bool Nakyvissa;
 
         public void Avaa(Transform vanhempi, double lat, double lon, int kerros)
         {
@@ -73,8 +76,8 @@ namespace Matkakirja.Natiivi
         {
             // Kohde indexistä: lähin, jonka säteellä kaupunki on.
             // index-v2.json (Tukholma + Pariisi; Karttaseppä 8.10.: uudet kohteet uuteen versioon, vanha ei ylikirjoitu), varana index.json.
-            string k = null; string indeksi = null;
-            foreach (var nimi in new[] { "index-v2.json", "index.json" })
+            string k = null, tiedosto = null; string indeksi = null; nostoIndeksista = false;
+            foreach (var nimi in new[] { "index-v3.json", "index-v2.json", "index.json" })   // v3: kohdekohtainen nosto_m (Karttaseppä 8.10.)
             {
                 using var r0 = UnityWebRequest.Get(juuriUrl + nimi);
                 r0.timeout = 15; yield return r0.SendWebRequest();
@@ -85,13 +88,19 @@ namespace Matkakirja.Natiivi
                 if (ok)
                 {
                     foreach (var o in MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(MiniJson.Objekti(MiniJson.Jasenna(indeksi)), "kohteet")).Select(MiniJson.Objekti))
-                        if (Etaisyys(MiniJson.Luku(o, "lat") ?? 0, MiniJson.Luku(o, "lon") ?? 0, lat, lon) < (MiniJson.Luku(o, "sade_km") ?? 0) * 1000) { k = MiniJson.Teksti(o, "id"); break; }
+                        if (Etaisyys(MiniJson.Luku(o, "lat") ?? 0, MiniJson.Luku(o, "lon") ?? 0, lat, lon) < (MiniJson.Luku(o, "sade_km") ?? 0) * 1000)
+                        {
+                            k = MiniJson.Teksti(o, "id");
+                            tiedosto = MiniJson.Teksti(o, "tiedosto");   // index-v3: uusi aineisto omalla nimellä (ämpäriä ei ylikirjoiteta)
+                            if (!NostoAsetettu && MiniJson.Luku(o, "nosto_m") is double nk) { NostoM = (float)nk; nostoIndeksista = true; }
+                            break;
+                        }
                 }
                 else kirjaa?.Invoke("kaupunki: vesi: index-v2.json / index.json ei latautunut");
             }
             Debug.Log($"MATKAKIRJA kaupunki: vesi indeksi {(indeksi != null ? "ok" : "PUUTTUU")}, kohde {k ?? "-"}");
             if (k == null || tama != avaus || Pakotettu == null && Array.IndexOf(OletusKohteet, k) < 0) yield break;
-            string pohja = juuriUrl + k;
+            string pohja = juuriUrl + (string.IsNullOrEmpty(tiedosto) ? k : tiedosto);
             VesiVerkko l = null, ka = null; (double Lat, double Lon)? origo = null;
             foreach (var (ruutu, lahiTaso) in new[] { ("6m", true), ("16m", false) })
             {
@@ -124,7 +133,7 @@ namespace Matkakirja.Natiivi
             var oj = MiniJson.ObjektiTaiNull(MiniJson.Kentta(j, "origo"));
             origo = oj != null && MiniJson.Luku(oj, "lat") is double la && MiniJson.Luku(oj, "lon") is double lo ? (la, lo) : ((double, double)?)null;
             krediitti = MiniJson.Teksti(j, "krediitti");
-            if (!NostoAsetettu && MiniJson.Luku(j, "nosto_m_suositus") is double n) NostoM = (float)n;
+            if (!NostoAsetettu && !nostoIndeksista && MiniJson.Luku(j, "nosto_m_suositus") is double n) NostoM = (float)n;
             var palat = MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(j, "palat")).Select(MiniJson.Objekti).Select(p =>
             {
                 double[] L(string k) => MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(p, k)).Select(Convert.ToDouble).ToArray();
@@ -138,6 +147,11 @@ namespace Matkakirja.Natiivi
         public void Paivita(Camera kamera)
         {
             if (juuri == null || kamera == null || (lahi == null && kauka == null)) return;
+            // Asetus "vesi 0" kesken näkymän: vesi piiloon (ei mustaa pintaa; kuvapari 8.10.).
+            bool nakyy = Pakotettu != false;
+            if (juuri.activeSelf != nakyy) juuri.SetActive(nakyy);
+            if (!nakyy) return;
+            Nakyvissa = true;
             for (int n = 0; n < PalojaKehyksessa && jono.Count > 0; n++)
             {
                 var h = jono.Dequeue();
@@ -178,7 +192,7 @@ namespace Matkakirja.Natiivi
             palat.Clear(); jono.Clear();
             if (juuri != null) UnityEngine.Object.Destroy(juuri);
             if (mat != null) UnityEngine.Object.Destroy(mat);
-            juuri = null; mat = null; lahi = kauka = null; edellinen = new Vector3(float.NaN, 0, 0); KrediittiNyt = null;
+            juuri = null; mat = null; lahi = kauka = null; edellinen = new Vector3(float.NaN, 0, 0); KrediittiNyt = null; Nakyvissa = false;
         }
 
         /// <summary>Vesipinnan korkeus juuren paikallisessa kehyksessä (x itä, z pohjoinen → y, nosto mukana); false = ei vettä (LS1:n veneet).</summary>

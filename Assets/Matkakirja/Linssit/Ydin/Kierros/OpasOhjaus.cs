@@ -14,8 +14,9 @@ namespace Matkakirja.Linssit.Kierros
 {
     public sealed class OpasOhjaus
     {
-        public const double KiertoMaxAstS = 50, KallistusMaxAstS = 28, EtaisyysMaxS = 0.9;   // täysi tappi (etäisyys log-asteikolla /s)
-        public const double SyoteAikaS = 0.18, HiipumaAikaS = 0.45, PaluuS = 1.5, KuollutAlue = 0.12;
+        // Omistaja TF 167 (9.10.): manuaaliohjaus alle puoleen (ennen 50 / 28 / 0,9) ja pehmeämpi tapin vaste (ennen 0,18 s).
+        public const double KiertoMaxAstS = 22, KallistusMaxAstS = 12, EtaisyysMaxS = 0.4;   // täysi tappi (etäisyys log-asteikolla /s)
+        public const double SyoteAikaS = 0.3, HiipumaAikaS = 0.45, PaluuS = 1.5, KuollutAlue = 0.12;
         public const double KallistusMin = 25, KallistusMax = 78, EtMinM = 110, EtMaxM = 2200, KattoYlaM = 55, YlaKerroin = 1.5;
 
         /// <summary>Pelaajan siirtymät automaattiseen kehykseen: kierto (°), jyrkkyys (°, + = vaakaan) ja etäisyyskerroin (log).</summary>

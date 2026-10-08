@@ -92,6 +92,8 @@ namespace Matkakirja.Linssit.Astronautti
             Nimi = "Astronautin kamera",
             Lyhyt = "Maa avaruudesta: astronauttien valokuvat kiertoradalta.",
             Jarjestys = 27,
+            // Webin kamera Maan kaaren yllä (js/linssit/satelliitti.js LINSSIN_IKONI) (Päätoimittaja 8.10.2026: omat viivakuvakkeet, kuvaketaulukko).
+            Ikoni = "<rect x=\"4.4\" y=\"9.6\" width=\"12.2\" height=\"9.4\" rx=\"2.2\"/><rect x=\"8.6\" y=\"6.6\" width=\"4.6\" height=\"3.4\" rx=\"1.1\"/><circle cx=\"10.5\" cy=\"14.3\" r=\"2.7\"/><path d=\"M2 21c3.6-3.4 16.4-3.4 20 0\"/>",
             Valokuva = true,
         };
 

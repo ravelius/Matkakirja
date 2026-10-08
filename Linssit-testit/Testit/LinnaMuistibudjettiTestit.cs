@@ -84,14 +84,14 @@ namespace Matkakirja.Linssit.Testit
 
         [Testi] static void VaarassaTurvallinenTaso()
         {
-            // M-iPad, vapaa 1350 (budjetti 650): huippu 1024 ei mahdu → normaali + puolikkaat (627).
+            // M-iPad, vapaa 1350 (budjetti 650): huippu 1044 ei mahdu → normaali + puolikkaat (637).
             var t = Laske(1350, Laitteet[3]);
             Oleta.Tosi(t.Kuori == KuoriTaso.Normaali && !t.TaydetPinnat && !t.RajoituksetPois, t.ToString());
             Oleta.Tosi(t.Peruste.StartsWith("vähän muistia"), t.Peruste);
             // Laitteella 0 = muisti lopussa → turvataso.
             var h = Laske(0, Laitteet[1]);
             Oleta.Tosi(h.SamaLaatu(LinnaMuistibudjetti.Portaat[0]) && h.Peruste == "HÄTÄ: turvataso", h.ToString());
-            // A-iPad, vapaa 1500 (budjetti 800): laiteluokka mahtuu → nosto täysiin pintoihin (697), iPadin kevennyksettömyys säilyy.
+            // A-iPad, vapaa 1500 (budjetti 800): laiteluokka mahtuu → nosto täysiin pintoihin (717), iPadin kevennyksettömyys säilyy.
             var a = Laske(1500, Laitteet[5]);
             Oleta.Tosi(a.Kuori == KuoriTaso.Normaali && a.TaydetPinnat && a.RajoituksetPois && !a.Taysi, a.ToString());
         }
@@ -102,12 +102,26 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama(700, LinnaMuistibudjetti.Marginaali(4000));
             Oleta.Sama(900, LinnaMuistibudjetti.Marginaali(6000));
             var portaat = LinnaMuistibudjetti.Portaat;
-            var odotetut = new[] { 531, 627, 697, 860, 1024 };
+            var odotetut = new[] { 541, 637, 717, 880, 1044 };
             for (int p = 0; p < portaat.Length; p++)
             {
                 Oleta.Sama(odotetut[p], LinnaMuistibudjetti.Tarve(portaat[p]), "porras " + p);
                 if (p > 0) Oleta.Tosi(Vahintaan(portaat[p], portaat[p - 1]), "portaat kasvavat");
             }
+        }
+
+        [Testi] static void UltraAtlaksetVainYlimmallePortaalle()
+        {
+            var p = LinnaMuistibudjetti.Portaat;
+            Oleta.Sama(LinnaMuistibudjetti.Tarve(p[4]) + LinnaMuistibudjetti.UltraAtlaksetMt, LinnaMuistibudjetti.Tarve(p[4], true), "porras 4 Ultralla");
+            Oleta.Sama(LinnaMuistibudjetti.Tarve(p[3]), LinnaMuistibudjetti.Tarve(p[3], true), "porras 3 ilman 8K:ta");
+            // M-iPad, budjetti juuri portaalle 4 ilman 8K:ta: Ultralla jää portaalle 3 (8K ei mahdu), ilman Ultraa porras 4.
+            int tarve4 = LinnaMuistibudjetti.Tarve(p[4]);
+            int vapaa = tarve4 + 700;   // marginaali 700 (vapaa < 4667)
+            var ei = LinnaMuistibudjetti.Laske(vapaa, "iPad14,3", 8192, true, 2360L * 1640);
+            var on = LinnaMuistibudjetti.Laske(vapaa, "iPad14,3", 8192, true, 2360L * 1640, ultra: true);
+            Oleta.Tosi(ei.SamaLaatu(p[4]), "ilman Ultraa porras 4: " + ei);
+            Oleta.Tosi(!on.SamaLaatu(p[4]), "Ultralla 8K ei mahdu → ei porrasta 4: " + on);
         }
     }
 }

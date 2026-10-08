@@ -386,7 +386,9 @@ namespace Matkakirja.Linssit.Kierros
         /// (kesto × PalloKerroin, rampin osuus OpasKuvaus.RamppiOsuus), joten kesto pitenee rampin lisäyksen verran. Lyhyt lento:
         /// pelkkä S-käyrä (osuus 0,5), kesto vähintään 2 × PalloRamppiS ja huippu enintään entinen.
         /// </summary>
-        public const double PalloRamppiS = 6.5;   // smootherstep: kulkunopeus 10 → 90 % ≥ 3 s (korkeuspainotus lyhentää ~10 %) (Päätoimittaja 08.3x: ≥ 3 s)
+        // Omistaja TF 167 (9.10.): "kiihdyttää hitaammin automaattisissa siirtymissä" → rampit 6,5 → 9 s (huippunopeus ennallaan,
+        // lento pitenee rampin lisäyksen verran; puhe alkaa yhä PuheEnnen ennen saapumista).
+        public const double PalloRamppiS = 9.0;   // smootherstep: kulkunopeus 10 → 90 % ≥ 3 s (korkeuspainotus lyhentää ~10 %) (Päätoimittaja 08.3x: ≥ 3 s)
         public static (double kesto, double osuus) PalloProfiili(double matkaM)
         {
             double km = matkaM / 1000.0;

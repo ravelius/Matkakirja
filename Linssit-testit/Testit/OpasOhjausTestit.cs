@@ -20,7 +20,8 @@ namespace Matkakirja.Linssit.Testit
             var o = Aja(1, 1, 0, 0);
             var a = o.Sovella(Perus, 5);
             double kierto = KierrosLento.Kiedo(a.Suuntima - Perus.Suuntima);
-            Oleta.Tosi(kierto > 25 && kierto < OpasOhjaus.KiertoMaxAstS, $"1 s täydellä tapilla {kierto:F1}° (kiihtyy pehmeästi)");
+            // TF 167 (9.10.): kierto 22 °/s, vaste 0,3 s → 1 s:ssa yli puolet huippuvauhdista, ei koko.
+            Oleta.Tosi(kierto > 0.5 * OpasOhjaus.KiertoMaxAstS && kierto < OpasOhjaus.KiertoMaxAstS, $"1 s täydellä tapilla {kierto:F1}° (kiihtyy pehmeästi)");
             Oleta.Tosi(a.Lat == Perus.Lat && a.Lon == Perus.Lon && a.KatseKorkeusM == Perus.KatseKorkeusM, "katse pysyy kohteessa");
             Oleta.Tosi(o.Aktiivinen, "tappia käytetty → automaattikierto seis");
             // Irrotus: liike hiipuu eikä pysähdy nykäisten; PaluuS:n jälkeen automaattikierto saa jatkaa pelaajan kulmasta.

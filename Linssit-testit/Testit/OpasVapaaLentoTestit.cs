@@ -36,7 +36,8 @@ namespace Matkakirja.Linssit.Testit
             var l = Alussa(90);   // katse itään
             double lon0 = l.Lon, lat0 = l.Lat;
             Aja(l, 3, 0, 1, 0, 0);
-            Oleta.Tosi(l.Lon > lon0 + 0.003 && Math.Abs(l.Lat - lat0) < 1e-4, $"itään: {l.Lon - lon0:0.0000}, lat {l.Lat - lat0:0.00000}");
+            // TF 167 (9.10.): vauhti 0,25 × korkeus (ennen 0,6): 3 s:ssa > 0,0012° (ennen 0,003°).
+            Oleta.Tosi(l.Lon > lon0 + 0.0012 && Math.Abs(l.Lat - lat0) < 1e-4, $"itään: {l.Lon - lon0:0.0000}, lat {l.Lat - lat0:0.00000}");
             double lat1 = l.Lat;
             Aja(l, 2, 1, 0, 0, 0);   // sivulle oikealle = etelään, kun katse itään
             Oleta.Tosi(l.Lat < lat1 - 0.001, $"oikealle = etelään: {l.Lat - lat1:0.0000}");
@@ -48,11 +49,11 @@ namespace Matkakirja.Linssit.Testit
             var l = Alussa(0);
             double lat0 = l.Lat, lon0 = l.Lon;
             Aja(l, 1, 0, 0, 1, 0);
-            Oleta.Tosi(l.Suunta > 30 && l.Suunta < 60, $"kääntyy oikealle: {l.Suunta:0}°");
+            Oleta.Tosi(l.Suunta > 0.55 * OpasVapaaLento.KaantoAstS && l.Suunta < OpasVapaaLento.KaantoAstS, $"kääntyy oikealle: {l.Suunta:0}° (TF 167: {OpasVapaaLento.KaantoAstS} °/s)");
             Oleta.Tosi(Math.Abs(l.Lat - lat0) < 1e-6 && Math.Abs(l.Lon - lon0) < 1e-6, "kääntö paikallaan");
             double h0 = l.KorkeusM;
             Aja(l, 2, 0, 0, 0, 1);
-            Oleta.Tosi(l.KorkeusM > h0 * 2, $"nousee: {h0:0} → {l.KorkeusM:0} m");
+            Oleta.Tosi(l.KorkeusM > h0 * 1.3, $"nousee: {h0:0} → {l.KorkeusM:0} m (TF 167: nousu 0,21 × korkeus/s)");
             Oleta.Tosi(l.Kallistus < OpasVapaaLento.KallistusKorkeudelle(h0), "ylempänä jyrkemmin alas");
         }
 

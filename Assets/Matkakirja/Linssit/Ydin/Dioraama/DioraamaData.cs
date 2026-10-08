@@ -377,6 +377,8 @@ namespace Matkakirja.Linssit.Dioraama
         public string ValoAtlasAstc, ValoAtlasAstcPuoli;
         /// <summary>Hämärän valoatlas (`valoatlas.hamara { tiedosto, puoli, astc, astcPuoli }`); null = päiväversio myös hämärässä.</summary>
         public string HamaraAtlas, HamaraAtlasPuoli, HamaraAtlasAstc, HamaraAtlasAstcPuoli;
+        /// <summary>8K-atlas (LR v45o: `astcIso` 8192² ASTC 6×6, `iso` JPEG; päivä ja hämärä) Ultra-tasolle; null = ei vietyä isoa.</summary>
+        public string ValoAtlasAstcIso, ValoAtlasIso, HamaraAtlasAstcIso, HamaraAtlasIso;
         /// <summary>Kävelyosan valoatlas (LR 8.10., juna 169): atlas on pelkkä valo (valo × 0,5, ei väriä), joten pinnan väri tulee
         /// pintamateriaalista (DioraamaValaistu _ValoVain). Tilojen atlakset (albedo × valo) ovat false.</summary>
         public bool ValoVain;
@@ -1224,9 +1226,11 @@ namespace Matkakirja.Linssit.Dioraama
             t.ValoAtlasPuoli = MiniJson.Teksti(valoatlas, "puoli");
             t.ValoAtlasAstc = MiniJson.Teksti(valoatlas, "astc");
             t.ValoAtlasAstcPuoli = MiniJson.Teksti(valoatlas, "astcPuoli");
+            t.ValoAtlasAstcIso = MiniJson.Teksti(valoatlas, "astcIso"); t.ValoAtlasIso = MiniJson.Teksti(valoatlas, "iso");
             var hamaraAtlas = MiniJson.ObjektiTaiNull(MiniJson.Kentta(valoatlas, "hamara"));
             t.HamaraAtlas = MiniJson.Teksti(hamaraAtlas, "tiedosto"); t.HamaraAtlasPuoli = MiniJson.Teksti(hamaraAtlas, "puoli");
             t.HamaraAtlasAstc = MiniJson.Teksti(hamaraAtlas, "astc"); t.HamaraAtlasAstcPuoli = MiniJson.Teksti(hamaraAtlas, "astcPuoli");
+            t.HamaraAtlasAstcIso = MiniJson.Teksti(hamaraAtlas, "astcIso"); t.HamaraAtlasIso = MiniJson.Teksti(hamaraAtlas, "iso");
         }
 
         static Tila LueTila(Dictionary<string, object> o)
