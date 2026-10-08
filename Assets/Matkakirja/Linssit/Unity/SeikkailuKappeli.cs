@@ -197,7 +197,14 @@ namespace Matkakirja.Natiivi
             voudinKierros.Paivita(Time.deltaTime, s);
             // Sydämenlyönti voudin pysähtyessä, laskeutuessa ja katsoessa sekä kappalaisen paluun aikana (käsikirjoitus kohdat 3 ja 7).
             if (p != null) SeikkailuAanet.Silmukka("sydan", voudinKierros.Sydan || Nyt == Vaihe.Paluu, p.transform.position + Vector3.up * 1.2f, 0.8f);
-            if (voudinKierros.Tila != voudinEdellinen) { kirjaa?.Invoke($"seikkailu: vouti {voudinEdellinen} → {voudinKierros.Tila}"); voudinEdellinen = voudinKierros.Tila; }
+            if (voudinKierros.Tila != voudinEdellinen)
+            {
+                kirjaa?.Invoke($"seikkailu: vouti {voudinEdellinen} → {voudinKierros.Tila}");
+                // Valinnaiset repliikit (pelattavuusmalli 3.6, omistajan luvalla): epäily laskeutuessa, ote kiinniotossa; puuttuessa hiljaa.
+                if (voudinKierros.Tila == VoudinTila.Laskeutuu) SeikkailuRepliikit.SoitaTaiVara("vouti-epaily-1", null, hehku.transform.position + Vector3.up * 0.4f);
+                else if (voudinKierros.Tila == VoudinTila.Kiinni && p != null) SeikkailuRepliikit.SoitaTaiVara("vouti-ote-1", null, p.transform.position + Vector3.up * 1.6f);
+                voudinEdellinen = voudinKierros.Tila;
+            }
             // Hehku: portaikon yläpää, laskeutuessa portaikkoa alas kaari-ovelle (laskeutumisreitti).
             hehku.transform.position = Polulla(hehkuPolku, Math.Min(1.0, voudinKierros.Laskeutuminen), false);
             hehku.intensity = (float)voudinKierros.Hehku * 1.4f;
