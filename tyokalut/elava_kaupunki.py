@@ -6,7 +6,7 @@
 #   tihennettynä VaIiM välein (y = lähimmän vesikärjen korkeus; EI Googlen laatoista, Map Tiles C4), parvet [{x, z, sade, …}].
 # OSM-aineiston origo voi poiketa vesipinnan origosta: pisteet muunnetaan ECEF:n kautta.
 # Krediitti: © OpenStreetMap contributors (ODbL); vesi lisäksi ESA WorldCover 2021 (CC BY 4.0).
-# Ajo: python3 tyokalut/elava_kaupunki.py <kohde> <osm-kansio> <vesi-kansio> <ulos.json>
+# Ajo: python3 tyokalut/elava_kaupunki.py <kohde> <osm-kansio> <vesi-kansio> <ulos.json> [vesipinnan nimi, oletus <kohde>; esim. pariisi2]
 import json, math, struct, sys
 
 VALI_M = 20.0          # reittipisteiden tihennys
@@ -146,7 +146,8 @@ class Maski:
 
 def main():
     kohde, osm, vesik, ulos = sys.argv[1:5]
-    vesi = Vesi(f"{vesik}/{kohde}-6m.json", f"{vesik}/{kohde}-6m.bytes")
+    vnimi = sys.argv[5] if len(sys.argv) > 5 else kohde
+    vesi = Vesi(f"{vesik}/{vnimi}-6m.json", f"{vesik}/{vnimi}-6m.bytes")
     kohteet = json.load(open(f"{osm}/kohteet-{kohde}.json"))
     reitit = json.load(open(f"{osm}/reitit-{kohde}.json"))
     o_osm = (kohteet["origo"]["lat"], kohteet["origo"]["lon"])
