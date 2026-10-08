@@ -103,6 +103,9 @@ namespace Matkakirja.Linssit.Kierros
             double dolly = 1 - DollyOsuus * (1 - Math.Exp(-(t / DollyAikaS) * (t / DollyAikaS)));
             // Toinen kehys: siirtolento VaiheS → VaiheS + SiirtoS (smootherstep), kaarena hieman ulos (ei läpi kohteen).
             double s = t <= VaiheS ? 0 : t >= VaiheS + SiirtoS ? 1 : KierrosLento.Smootherstep((t - VaiheS) / SiirtoS);
+            // Pallo (LS2:n PalloKierrosTestit 8.10.): ei toista kehystä eikä dollya — 13 s:n jälkeen silmä nykäisi puheen aikana
+            // 17–85 m/s, ja dolly jatkui lipumisen jarrun jälkeen (lento ei lähtenyt levosta). Liikkeen hoitaa lipuminen.
+            if (!kiertaa) { s = 0; dolly = 1; }
             bool lahemmas = Math.Abs(p.Kallistus - RakennusKallistus) < 0.5;   // rakennus/torni: yksityiskohta lähempää
             double lisaSuunta = lahemmas ? 0 : SiirtoKulma * s;
             double etKerroin = (lahemmas ? 1 + (LahemmasOsuus - 1) * s : 1) * (1 + SiirtoUlosOsuus * Math.Sin(Math.PI * s));
@@ -129,13 +132,27 @@ namespace Matkakirja.Linssit.Kierros
             double ke = (kohtiLon - k.Lon) * R * Math.Cos(k.Lat * A) * A, kn = (kohtiLat - k.Lat) * R * A;
             double de = ke - e.e, dn = kn - e.n, pit = Math.Sqrt(de * de + dn * dn);
             if (pit < 1) return k;
-            double se = e.e + de / pit * dM, sn = e.n + dn / pit * dM;   // uusi silmä
+            // KAARI SAMALLA ETÄISYYDELLÄ (omistaja 8.10. 18.4x: "Pallo voi siis kiertää samalla etäisyydellä saman kohteen toiselle
+            // puolelle jos se on lähempänä seuraavaa kohdetta mutta muuten ei kannata lähteä kauemmas"): silmä kiertää kohdetta
+            // vaakasäteellä r0 lyhyempää kaarta kohti seuraavan kohteen suuntaa, enintään sen kohdalle (lähin piste); siellä pallo
+            // vain leijuu. Ei säteittäistä liikettä, joten etäisyys kohteeseen pysyy saapumisen etäisyytenä.
+            double r0 = Math.Sqrt(e.e * e.e + e.n * e.n);
+            if (r0 < 1) return k;
+            double ero = Math.Atan2(kn, ke) - Math.Atan2(e.n, e.e);
+            ero = ero - 2 * Math.PI * Math.Floor((ero + Math.PI) / (2 * Math.PI));   // −π…π
+            double fi = Math.Sign(ero) * Math.Min(dM / r0, Math.Abs(ero)), c = Math.Cos(fi), si = Math.Sin(fi);
+            double se = e.e * c - e.n * si, sn = e.e * si + e.n * c;
             double ve = -se, vn = -sn, vaaka = Math.Sqrt(ve * ve + vn * vn), pysty = e.u - k.KatseKorkeusM;
             double suunta = Math.Atan2(ve, vn) / A, kall = Math.Atan2(vaaka, Math.Max(1, pysty)) / A;
             return new Kuvakulma(k.Lat, k.Lon, Math.Sqrt(vaaka * vaaka + pysty * pysty), kall, KierrosLento.Kiedo(suunta), k.KatseKorkeusM);
         }
         /// <summary>Lipumisen huippunopeus (m/s), S-käyrän kesto (s) ja pehmeä katto (osuus välimatkasta, enintään m; tanh).</summary>
         public const double LipumisNopeus = 4, LipumisAlkuS = 6, LipumisOsuus = 0.25, LipumisMaxM = 200;
+        /// <summary>Lipumisen ryömintä katon jälkeen: osuus lipumisnopeudesta (0,08 × 4 = 0,32 m/s), ettei pallo seiso pitkällä pysähdyksellä.</summary>
+        public const double LipumisRyomintaOsuus = 0.08;
+        /// <summary>Lipumisen nopeus ja katto skaalataan kehyksen etäisyydellä (enintään 1 tällä etäisyydellä): 119 m:n lähikuvassa
+        /// 4 m/s vei rajan ja kaaren loppuun puolessa minuutissa, jonka jälkeen pallo seisoi.</summary>
+        public const double LipumisVertailuEtM = 350;
 
         /// <summary>
         /// Lento a → b osuudella t (0…1). PEHMEÄ KAARI (omistaja 6.10. 23.4x: "kamera liikkuu välillä turhan nopeasti ja tekee turhan
@@ -222,19 +239,31 @@ namespace Matkakirja.Linssit.Kierros
         static Kuvakulma PalloLennossa(Kuvakulma a, Kuvakulma b, double t, double matka)
         {
             double p = Eteneminen(t, matka);
-            var (sv, et) = ZoomPolku(Math.Max(1, a.EtaisyysM), Math.Max(1, b.EtaisyysM), matka, p);
-            et = SumennusNosto(a, b, sv, et);
+            double w0 = Math.Max(1, a.EtaisyysM), w1 = Math.Max(1, b.EtaisyysM);
+            var (sv, et) = ZoomPolku(w0, w1, matka, p);
             double V(double x, double y) => x + (y - x) * sv;
+            double kall = V(a.Kallistus, b.Kallistus);
+            // Sumennuksen ohitus samalla zoomauspolulla (omistaja TF 166, 18.3x: "lähteekin yhtäkkiä hetkeksi taaksepäin ja palaa";
+            // PalloKierrosTasaisuusTestit: kaikki taaksepäin nykäisyt tulivat erillisestä etäisyyskummusta): suurempi rho nostaa
+            // van Wijk–Nuij-kaarta niin, että ohituskohdassa katse-etäisyys on SumennusEtM, ja kuvan nopeudella on yhä yksi kumpu.
+            // Silmän vaakaetäisyys kohteesta pidetään peruspolun mukaisena (et·sin(kall)), jolloin lisänousu menee suoraan ylös eikä
+            // silmä liiku taaksepäin; kallistus jyrkkenee nousun ajaksi.
+            double rho = SumennusRho(a, b, w0, w1, matka);
+            if (rho > ZoomRho)
+            {
+                double et2 = ZoomPolku(w0, w1, matka, p, rho).leveys;
+                if (et2 > et) { kall = Math.Asin(Math.Min(1, et * Math.Sin(kall * Math.PI / 180) / et2)) * 180 / Math.PI; et = et2; }
+            }
             double suunta = KierrosLento.Kiedo(a.Suuntima + KierrosLento.Kiedo(b.Suuntima - a.Suuntima) * sv);
-            return new Kuvakulma(V(a.Lat, b.Lat), V(a.Lon, b.Lon), et, V(a.Kallistus, b.Kallistus), suunta, V(a.KatseKorkeusM, b.KatseKorkeusM));
+            return new Kuvakulma(V(a.Lat, b.Lat), V(a.Lon, b.Lon), et, kall, suunta, V(a.KatseKorkeusM, b.KatseKorkeusM));
         }
 
         /// <summary>van Wijk–Nuij: leveydestä w0 leveyteen w1 vaakamatkan u1 yli; p 0…1 → (vaakaosuus 0…1, leveys).</summary>
-        public static (double osuus, double leveys) ZoomPolku(double w0, double w1, double u1, double p)
+        public static (double osuus, double leveys) ZoomPolku(double w0, double w1, double u1, double p, double rho = ZoomRho)
         {
             p = Math.Max(0, Math.Min(1, p));
             if (u1 < 1e-3 * Math.Max(w0, w1)) return (p, w0 * Math.Exp(Math.Log(w1 / w0) * p));   // pelkkä zoomaus
-            double r = ZoomRho, r2 = r * r, r4 = r2 * r2;
+            double r = rho, r2 = r * r, r4 = r2 * r2;
             double b0 = (w1 * w1 - w0 * w0 + r4 * u1 * u1) / (2 * w0 * r2 * u1), b1 = (w1 * w1 - w0 * w0 - r4 * u1 * u1) / (2 * w1 * r2 * u1);
             double q0 = -Asinh(b0), q1 = -Asinh(b1);   // ln(−b + √(b² + 1)) = −asinh(b), ilman kumoutumista
             double S = (q1 - q0) / r, s = S * p;
@@ -259,6 +288,40 @@ namespace Matkakirja.Linssit.Kierros
         public const double SumennusRajaM = 400, SumennusTaysiM = 300, SumennusEtM = 1100, SumennusIkkuna = 0.35, SumennusReuna = 0.08;
         /// <summary>A/B ja testit: false = ei nostoa.</summary>
         public static bool SumennusNostoPaalla = true;
+
+        /// <summary>
+        /// Zoomauspolun rho, jolla katse-etäisyys sumennuksen ohituskohdassa on vähintään SumennusNoston tavoite (ZoomRho = ei
+        /// sumennusta lähellä). Haetaan 0,05:n askelin ylöspäin (enintään SumennusRhoMax: lähtö- tai tulokehyksen vieressä oleva
+        /// sumennus jää osittaiseksi, koska kehykset pysyvät); välimuisti viimeiselle lennolle.
+        /// </summary>
+        public static double SumennusRho(Kuvakulma a, Kuvakulma b, double w0, double w1, double matka)
+        {
+            var avain = (a.Lat, a.Lon, b.Lat, b.Lon, w0, w1, SumennusNostoPaalla);
+            if (rhoAvain.Equals(avain)) return rhoArvo;
+            double rho = ZoomRho;
+            if (SumennusNostoPaalla)
+            {
+                // Tavoite polun pisteissä: SumennusNosto peruspolun leveydestä; riittääkö rho:n polku kaikkialla (16 näytettä).
+                bool Riittaa(double r)
+                {
+                    for (int i = 1; i < 16; i++)
+                    {
+                        var (o0, wb) = ZoomPolku(w0, w1, matka, i / 16.0);
+                        double tavoite = SumennusNosto(a, b, o0, wb);
+                        if (tavoite <= wb + 1) continue;
+                        double paras = 0;
+                        for (int j = 1; j < 32; j++) { var (o, w) = ZoomPolku(w0, w1, matka, j / 32.0, r); if (Math.Abs(o - o0) < 0.04) paras = Math.Max(paras, w); }
+                        if (paras < tavoite * 0.97) return false;
+                    }
+                    return true;
+                }
+                while (rho < SumennusRhoMax - 1e-9 && !Riittaa(rho)) rho += 0.05;
+            }
+            rhoAvain = avain; rhoArvo = rho;
+            return rho;
+        }
+        public const double SumennusRhoMax = 1.6;
+        static (double, double, double, double, double, double, bool) rhoAvain; static double rhoArvo;
 
         /// <summary>Katse-etäisyys nostettuna sumennuksen kohdalla (vaakaosuus sv lennolla a → b).</summary>
         public static double SumennusNosto(Kuvakulma a, Kuvakulma b, double sv, double et)

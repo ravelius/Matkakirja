@@ -303,6 +303,22 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama("T2", p[^1].t, "T2 pyydetään uudelleen");
         }
 
+        [Testi] static void KaupunkitilanJatkoOdottaaVastauksenLoppuun()
+        {
+            // TF 166 (omistaja 8.10. 18.0x): kierros keskeytetty kysymykseen, opas odottanut 4 s, vastaus juuri Esita → ei jatkoa.
+            var (s, _, _, _) = KierroksellaT1Puhuu();
+            Oleta.Tosi(s.KeskeytaKierros(), "keskeytys");
+            for (int i = 0; i < 42; i++) s.Paivita(0.1, _ => 5);
+            Oleta.Tosi(s.Vaihe == OpasVaihe.Odottaa && s.VaiheAika > 2, $"odottaa vastausta ({s.Vaihe}, {s.VaiheAika:F1} s)");
+            s.Esita(K("kysy-1", s.NykyinenKehys.Lat, s.NykyinenKehys.Lon));
+            Oleta.Tosi(!OpasSilmukka.JatkoVastauksenJalkeen(s.KierrosKeskeytetty, s.Vaihe, s.VaiheAika, 2, false, s.Seuraava != null, false), "Esita juuri tehty → ei jatkoa samassa ruudussa");
+            Oleta.Tosi(!OpasSilmukka.JatkoVastauksenJalkeen(true, OpasVaihe.Odottaa, 4.2, 2, false, true, true), "vastaus odottaa esitystä ja kysymys odottaa");
+            Oleta.Tosi(!OpasSilmukka.JatkoVastauksenJalkeen(true, OpasVaihe.Odottaa, 4.2, 2, false, false, true), "kysymyksen odotus käynnissä (vastaus ei alkanut)");
+            Oleta.Tosi(!OpasSilmukka.JatkoVastauksenJalkeen(true, OpasVaihe.Puhuu, 9, 2, true, false, false), "vastaus soi");
+            Oleta.Tosi(!OpasSilmukka.JatkoVastauksenJalkeen(true, OpasVaihe.Odottaa, 1, 2, false, false, false), "tauko vastauksen jälkeen kesken");
+            Oleta.Tosi(OpasSilmukka.JatkoVastauksenJalkeen(true, OpasVaihe.Odottaa, 2.5, 2, false, false, false), "vastaus kuultu → jatko");
+        }
+
         [Testi] static void LoppuunLuetunJalkeenJatketaanSeuraavaan()
         {
             var (s, p, puhe, _) = KierroksellaT1Puhuu();

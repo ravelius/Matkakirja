@@ -7,7 +7,7 @@
 //               pallon paikallaan"; isompi riippuma, pieni kaari)
 //   kerrokset   1–2 liikkuvaa kuvaa alfalla; vähäeleinen sinimuotoinen heilahdus ja nousu (Ydin LatausLiike, ±0,5–0,75°,
 //               nousu ≤ 4 pt, jakso 7–8 s)
-//   valokuva   taustan hidas lähentyminen ja siirto (Ken Burns 1,00 → 1,04 / 8 s ja takaisin; TaustaLahentyy, Päätoimittaja 8.10.);
+//   valokuva   koko kuvan hidas lähentyminen (Ken Burns 1,00 → 1,04 / 8 s ja takaisin; TaustaLahentyy, Päätoimittaja 8.10.);
 //              sama liike oppaan latauskuvan valokuvalle Kuvasuurennoksessa (Kuvasuurennos.Lahentyy → Latauskuva.AsetaRajaus).
 // Latauspalkki ja nimi pysyvät isännän nykyisessä pohjassa (Latauspalkki, mk-astroavaus) tämän päällä. Ilman kerroksia näkyy
 // pelkkä still-kuva (ei ajastinta). Esiin heti tai häivyttäen Tyylikirja.Kesto.Avaus (alle 250 ms). Päivitys 30 fps:n tahdissa
@@ -37,6 +37,8 @@ namespace Matkakirja.Natiivi
         public sealed class Koysi
         {
             public Vector2 Kiinto;
+            /// <summary>Kiintopisteen kerros (−1 = tausta): riippuköysi kahden liikkuvan kerroksen välillä (kori → kupu).</summary>
+            public int KiintoKerros = -1;
             public int Kerros;
             public Vector2 Kiinnitys;
             public float LeveysPt = 1.5f;
@@ -79,7 +81,10 @@ namespace Matkakirja.Natiivi
             return e;
         }
 
-        /// <summary>Taustakuva lähentyy hitaasti (valokuvat); suunta tunnisteesta (LatausLiike.Suunta).</summary>
+        /// <summary>
+        /// Koko kuva kerroksineen lähentyy hitaasti (Ken Burns, LatausLiike.Lahentyminen) juuren muunnoksena, jolloin liikkuvat
+        /// kerrokset pysyvät taustan kohdallaan (vene vedessä); suunta tunnisteesta (LatausLiike.Suunta, null = keskeltä).
+        /// </summary>
         public bool TaustaLahentyy;
         public string TaustaTunniste;
 
@@ -127,7 +132,8 @@ namespace Matkakirja.Natiivi
                     kerrokset.Add((el, k));
                 }
             if (uudetKoydet != null)
-                foreach (var k in uudetKoydet) if (k != null && k.Kerros >= 0 && k.Kerros < kerrokset.Count) koydet.Add(k);
+                foreach (var k in uudetKoydet)
+                    if (k != null && k.Kerros >= 0 && k.Kerros < kerrokset.Count && k.KiintoKerros < kerrokset.Count) koydet.Add(k);
             Asettele();
             Paivita();
             Kaynnista();
@@ -182,7 +188,7 @@ namespace Matkakirja.Natiivi
         void Kaynnista()
         {
             bool liikkuu = nakyy && (kerrokset.Count > 0 || TaustaLahentyy);
-            if (!TaustaLahentyy) AsetaRajaus(tausta, new LatausLiike.Rajaus { Skaala = 1, AnkkuriX = 0.5, AnkkuriY = 0.5 });
+            if (!TaustaLahentyy) { Juuri.style.scale = StyleKeyword.Null; Juuri.style.transformOrigin = StyleKeyword.Null; }
             if (!liikkuu) { ajastin?.Pause(); return; }
             if (ajastin == null) ajastin = Juuri.schedule.Execute(Paivita).Every(PaivitysMs);
             else ajastin.Resume();
@@ -192,7 +198,13 @@ namespace Matkakirja.Natiivi
         void Paivita()
         {
             double t = Time.unscaledTime - alku;
-            if (TaustaLahentyy) { var (sx, sy) = LatausLiike.Suunta(TaustaTunniste); AsetaRajaus(tausta, LatausLiike.Lahentyminen(t, sx, sy)); }
+            if (TaustaLahentyy)
+            {
+                var (sx, sy) = TaustaTunniste == null ? (0.0, 0.0) : LatausLiike.Suunta(TaustaTunniste);
+                var q = LatausLiike.Lahentyminen(t, sx, sy);
+                Juuri.style.transformOrigin = new TransformOrigin(Length.Percent((float)(q.AnkkuriX * 100)), Length.Percent((float)(q.AnkkuriY * 100)));
+                Juuri.style.scale = new Scale(new Vector2((float)q.Skaala, (float)q.Skaala));
+            }
             if (kerrokset.Count == 0) return;
             foreach (var (el, k) in kerrokset)
             {
@@ -221,7 +233,7 @@ namespace Matkakirja.Natiivi
             p.lineCap = LineCap.Round;
             foreach (var k in koydet)
             {
-                var a = new Vector2(ala.x + k.Kiinto.x * ala.width, ala.y + k.Kiinto.y * ala.height);
+                var a = k.KiintoKerros >= 0 ? KerroksenPiste(k.KiintoKerros, k.Kiinto, t) : new Vector2(ala.x + k.Kiinto.x * ala.width, ala.y + k.Kiinto.y * ala.height);
                 var b = KerroksenPiste(k.Kerros, k.Kiinnitys, t);
                 var c = LatausLiike.Ohjauspiste(a.x, a.y, b.x, b.y, k.Riippuma);
                 p.strokeColor = k.Vari;

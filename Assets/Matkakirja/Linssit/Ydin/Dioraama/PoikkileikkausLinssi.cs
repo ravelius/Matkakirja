@@ -101,6 +101,9 @@ namespace Matkakirja.Linssit.Dioraama
 
     public sealed class PoikkileikkausLinssi
     {
+        /// <summary>Olavinlinnan siluetti 24×24 (omistaja 8.10.2026: ikoni linssi- ja pelilistaan; UI Ikonit.Viiva["linna"]).</summary>
+        public const string LinnaIkoni = "<path d=\"M4.6 9.6 8 4l3.4 5.6z\"/><path d=\"M5.4 9.6V20.5M10.6 9.6V20.5\"/><path d=\"M10.6 13.4h1.9v-2.2h2v2.2h1.9v-2.2h2v2.2h1.2v7.1\"/><path d=\"M3 20.5h18\"/><path d=\"M8 13.2v1.6\"/>";
+
         public static readonly LinssiTiedot PoikkiTiedot = new LinssiTiedot
         {
             Id = "poikkileikkaus",
@@ -108,10 +111,10 @@ namespace Matkakirja.Linssit.Dioraama
             Nimi = "Muurien sisällä",
             Lyhyt = "Olavinlinna vuonna 1475 aukileikattuna: kurkista saleihin ja tapaa linnan väki.",
             Jarjestys = 250,
-            // 24×24: kevyt porrastettu torni + vino leikkausviiva (ei svg-kuorta).
-            Ikoni = "<path d=\"M8 21V13H7V10H9V7H11V5H13V7H15V10H17V13H16V21Z\"/>"
-                + "<path d=\"M8 16H16\"/>"
-                + "<path d=\"M4 20L19 4\" stroke-dasharray=\"1.6 2.2\"/>",
+            // Omistaja 8.10.2026 klo 19.1x: Olavinlinnan siluetti ja 1499-asun havainnekuva (Codex, latauskuvan rajaus; korvaa
+            // linssikatalogin E11-kuvan, AIKA: linna 1499-asussa).
+            Ikoni = LinnaIkoni,
+            Havainnekuva = "https://media.matkakirja.app/julisteet/olavinlinna-kortti/20261008/esittely.jpg",
         };
 
         public LinssiTiedot Tiedot => PoikkiTiedot;

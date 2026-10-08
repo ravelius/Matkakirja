@@ -75,7 +75,10 @@ for i in {1..30}; do
 done
 (( i > 1 )) && echo "odotus $(( i - 1 )) s${jaljella:+, jäljellä yhä: $jaljella}" >> $LOKI
 TMPDIR=$(mktemp -d /tmp/mkk.XXXXXX) && export TMPDIR
-trap "rm -rf $LUKKO $TMPDIR" EXIT
+# BURST-JIT POIS JO ENNEN UNITYÄ (Päätoimittaja 8.10.2026, juurikorjaus junaan 167): EditorPrefs BurstCompilation = 0 lukon sisällä,
+# palautus EXIT-trapissa (burst-jit.sh) → editori ei aloita JIT-jonoa eikä Rakennus.Kaanna tarvitse Cancelia (mono-segv 7–8 s).
+source /Users/Shared/Claude/proto-3d/tyokalut/burst-jit.sh && burst_jit_pois
+trap "burst_jit_palauta; rm -rf $LUKKO $TMPDIR" EXIT
 
 df_g=$(df -g /Users/Shared | awk 'NR==2{print $4}')
 (( df_g >= 25 )) || vika "levy: vain $df_g Gt vapaana (raja 25)"
@@ -108,9 +111,11 @@ kaanna() {
   # Uusinta kerran (1.10.2026 klo 16.24: .DS_Store syntyi kesken käännöksen; omistajan lupa Päätoimittajan kautta): jos kaatuminen
   # on "Directory not empty", siivotaan .DS_Storet ja käännetään kerran uudelleen; sim.log talteen sim-1.log:ksi.
   if ! $NICE "$UNITY" -batchmode -nographics -quit -projectPath . -buildTarget iOS -executeMethod Matkakirja.Editori.Rakennus.IosSimulaattori -logFile tulokset/sim.log; then
-    grep -q "Directory not empty" tulokset/sim.log || return 16
+    # + mono-segv (Päätoimittaja 8.10.2026: 7.10. 15.43/22.39, 8.10. 09.27 — editorin Burst-JIT:n Cancel kilpailee käynnistyksen
+    #   JIT-linkityksen kanssa 7–8 s kohdalla; juurikorjaus junaan 167): "Native Crash Reporting" → yksi uusinta samoin.
+    grep -q "Directory not empty\|Native Crash Reporting" tulokset/sim.log || return 16
     cp tulokset/sim.log tulokset/sim-1.log
-    echo "uusinta: Directory not empty → .DS_Store-siivous ja toinen yritys" | tee -a $LOKI
+    echo "uusinta: $(grep -o -m1 'Directory not empty\|Native Crash Reporting' tulokset/sim.log) → .DS_Store-siivous ja toinen yritys (sim-1.log)" | tee -a $LOKI
     find Build -name .DS_Store -delete 2>/dev/null
     $NICE "$UNITY" -batchmode -nographics -quit -projectPath . -buildTarget iOS -executeMethod Matkakirja.Editori.Rakennus.IosSimulaattori -logFile tulokset/sim.log || return 16
   fi

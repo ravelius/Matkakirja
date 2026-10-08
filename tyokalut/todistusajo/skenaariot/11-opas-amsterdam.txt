@@ -19,7 +19,7 @@ kuva 11b-kohde1 Elävä opas: 1. kohde
 tap-teksti mk-ohjausnappi#-1
 nakyy 6 Vaihda kohde -- oppaan ☰ avasi valikon
 tap-teksti Vaihda kohde
-nakyy 6 TAI VALITSE PAIKKA -- Vaihda kohde avasi täkynäkymän (146: täkyt ylhäällä, maanosat alla)
+nakyy 6 MIHIN LENNETÄÄN? -- Vaihda kohde avasi täkynäkymän (146: täkyt ylhäällä, maanosat alla; otsikko MIHIN LENNETÄÄN? 8.10.)
 # Maanosat ovat 8 täkyn alla: vieritys sormella ylös (ScrollView Clamped, ei inertiaa; Natiivi-UI 6.10.).
 veto 200 700 200 200 0.8
 odota 1

@@ -47,9 +47,11 @@ namespace Matkakirja.Natiivi
         /// kuin lautapelit; Jatka/Alusta tallennuksesta (SeikkailuTapit.AvaaPelattavaPala). Linnakierros jää linsseihin. Valmiina
         /// peli siirtyy omistajan päätöksellä VIDEOPELIT-osioon kaikille (Raamattu KAKSI PELILAJIA).
         /// </summary>
-        static readonly (string Id, string Nimi, string Selite, string Ikoni, System.Action Avaa)[] Keskeneraiset =
+        /// Kuva ja ikoni (omistaja 8.10.2026 klo 19.1x): Codexin 1499-havainnekuva veneineen (pelin alku) ja linnan siluetti.
+        static readonly (string Id, string Nimi, string Selite, string Ikoni, string KuvaUrl, System.Action Avaa)[] Keskeneraiset =
         {
-            ("olavinlinna", "Olavinlinna", "1499 · ensimmäinen osa", "taikalasit", SeikkailuTapit.AvaaPelattavaPala),
+            ("olavinlinna", "Olavinlinna", "1499 · koko seikkailu, noin 25 min", "linna",
+                "https://media.matkakirja.app/julisteet/olavinlinna-kortti/20261008b/peli.jpg", SeikkailuTapit.AvaaPelattavaPala),
         };
 
         /// <summary>Pelit-kategoriassa on jotain (Karttaselitteen Linssit-nappi näkyy myös ilman linssejä).</summary>
@@ -103,7 +105,7 @@ namespace Matkakirja.Natiivi
                 foreach (var v in Keskeneraiset)
                 {
                     var avaa = v.Avaa;
-                    AarreRivi("peli:" + v.Id, v.Nimi, null, v.Selite, () => { Sulje(); Debug.Log("MATKAKIRJA ui pelit: keskeneräinen " + v.Id); avaa(); }, pelit, Ikonit.Viiva[v.Ikoni]);
+                    AarreRivi("peli:" + v.Id, v.Nimi, v.KuvaUrl, v.Selite, () => { Sulje(); Debug.Log("MATKAKIRJA ui pelit: keskeneräinen " + v.Id); avaa(); }, pelit, Ikonit.Viiva[v.Ikoni]);
                 }
                 AarreRivi("peli:lentopeli", "Lentopeli", null, null, AloitaLentopeli, pelit, Ikonit.Viiva["kone"]);
             }
