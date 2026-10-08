@@ -24,18 +24,18 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama(8.0, Historiajana.K2Lyhyt.Kesto);
             for (int i = 1; i < h.Vaiheet.Count; i++) Oleta.Tosi(h.Vaiheet[i].Vuosi > h.Vaiheet[i - 1].Vuosi, $"vuodet kasvavat ({i})");
             Oleta.Tosi(h.LoppuVuosi > h.Vaiheet[h.Vaiheet.Count - 1].Vuosi, "loppuvuosi viimeisen vaiheen jälkeen");
-            Oleta.Tosi(!Historiajana.Lukittu, "vuodet alustavia, kunnes Sisältökirjuri tarkistaa (PT:n ehto 1)");
+            Oleta.Tosi(Historiajana.Lukittu, "vuodet Sisältökirjurin tarkistamia (PT:n ehto 1)");
         }
 
         [Testi] static void VuosiEteneeVaiheittain()
         {
             var h = Historiajana.Olavinlinna;
-            Oleta.Sama(-9000.0, h.Vuosi(0));
+            Oleta.Sama(-7500.0, h.Vuosi(0));
             Oleta.Sama(1475.0, h.Vuosi(h.VaiheenAlku(2)));
             Oleta.Sama(1499.0, h.Vuosi(h.VaiheenAlku(4)));
             Oleta.Sama(2026.0, h.Vuosi(h.Kesto + 5));
             double alku = h.VaiheenAlku(3), kesto = h.Vaiheet[3].KestoS;
-            Oleta.Tosi(Math.Abs(h.Vuosi(alku + kesto / 2) - 1489.5) < 1e-9, "vaiheen puolivälissä puolet vuosista (1480 → 1499)");
+            Oleta.Tosi(Math.Abs(h.Vuosi(alku + kesto / 2) - 1488) < 1e-9, "vaiheen puolivälissä puolet vuosista (1477 → 1499)");
             double e = h.Vuosi(0);
             for (double t = 0.1; t <= h.Kesto; t += 0.1) { double v = h.Vuosi(t); Oleta.Tosi(v >= e - 1e-9, $"vuosi ei peruutu ({t:F1} s)"); e = v; }
         }
@@ -98,6 +98,10 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(n >= 10, $"leikkauksia {n}");
             Oleta.Tosi(Historiajana.Osa("pk-kappeli-katto") == null, "muu leikkaus ei ole historiaosa");
             Oleta.Sama("b1499-kellobastioni", Historiajana.Osa("b1499-kellobastioni-lounas").Etuliite);
+            // Sisältökirjuri 9.10.: Vesiportin bastioni 1749–55 (valmis 1756), Kellobastioni olemassa 1751.
+            Oleta.Sama(1.0, Historiajana.Kasvu(1756, Historiajana.Osa("b1499-vesiportin-bastioni-l")));
+            Oleta.Sama(1.0, Historiajana.Kasvu(1751, Historiajana.Osa("b1499-kellobastioni")));
+            Oleta.Sama(0.0, Historiajana.Kasvu(1743, Historiajana.Osa("b1499-kellobastioni")));
         }
 
         [Testi] static void K2KasvattaaKaikkiOsat()

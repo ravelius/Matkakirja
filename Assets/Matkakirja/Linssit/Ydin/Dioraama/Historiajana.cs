@@ -10,8 +10,8 @@
 //   K2-lyhennys: pelattavan palan lopun drone (SeikkailuNousu) näyttää 8 s:ssa vuoden 1499 linnan kasvavan nykylinnaksi
 //   ilman kertojaa ja ilman tekstiä.
 //
-// VUODET ALUSTAVIA (Lukittu = false): Sisältökirjuri tarkistaa vuodet ja tapahtumat ennen lukitusta (PT:n ehto 1; erityisesti
-// Kellobastionin ja vesiportin bastionin vuodet, 1800-luvun palon päivämäärä ja restauroinnin vaiheet 1870-luvulta 1900-luvulle).
+// VUODET LUKITTU (PT:n ehto 1): Sisältökirjurin faktatarkistus 9.10.2026 (docs/raportit/olavinlinna-historia-animaatio-tekstit-
+// 20261009.md, PT-hyväksytty). Kellobastionille ei vuotta; epävarmat (Paksun tornin räjähdys, 1600-luvun palo) eivät ole mukana.
 using System;
 using System.Collections.Generic;
 
@@ -37,7 +37,7 @@ namespace Matkakirja.Linssit.Dioraama
     public sealed class Historiajana
     {
         /// <summary>Sisältökirjurin faktatarkistus tehty (PT:n ehto 1). Ennen sitä historiatila vain kehityskomennolla.</summary>
-        public const bool Lukittu = false;
+        public const bool Lukittu = true;   // Sisältökirjuri 9.10., PT-hyväksytty
         /// <summary>Avainsana näkyy vaiheen alusta AvainsanaAlkuS:sta AvainsanaS:n ajan.</summary>
         public const double AvainsanaAlkuS = 0.8, AvainsanaS = 5.0;
         /// <summary>Drone kiertää linnaa koko historian ajan (astetta); vaihteen korkeus ja etäisyys siirtyvät vaiheen alun
@@ -135,40 +135,43 @@ namespace Matkakirja.Linssit.Dioraama
         }
 
         /// <summary>
-        /// Vuoden 1499 jälkeen rakennetut osat (LR:n leikkaukset, merkit leikkaus:vain-1499 ja vain-1499-b; huom-kentät 7.–8.10.:
-        /// "1790-luvun länsivarustukset ja ponttonisilta", "Kellobastioni (1790-l.)"). ALUSTAVA: Sisältökirjuri tarkistaa.
+        /// Vuoden 1499 jälkeen rakennetut osat (LR:n leikkaukset, merkit leikkaus:vain-1499 ja vain-1499-b). Vuodet Sisältökirjurin
+        /// faktatarkistuksesta 9.10. (docs/raportit/olavinlinna-historia-animaatio-tekstit-20261009.md, PT-hyväksytty): Vesiportin
+        /// bastioni ja kurtiinit 1749–55 (rakennus 1751–55); Kellobastionin vuotta ei löytynyt (olemassa 1751, Venäjän aika 1743–),
+        /// joten se kasvaa ennen vuotta 1751 eikä sille näytetä vuotta; ponttonisilta nykyajan kulkuyhteys (suuri restaurointi 1961–75).
         /// </summary>
         public static readonly IReadOnlyList<HistoriaOsa> OlavinlinnanOsat = new[]
         {
-            new HistoriaOsa("b1499-vesiportin-bastioni", 1790, 8),
-            new HistoriaOsa("b1499-porttikurtiini", 1791, 6),
-            new HistoriaOsa("b1499-s201-rakennus", 1792, 6),
-            new HistoriaOsa("b1499-kellobastioni", 1790, 8),
-            new HistoriaOsa("pako-kellobastioni", 1790, 8),
-            new HistoriaOsa("b1499-ponttonisilta", 1960, 6),
+            new HistoriaOsa("b1499-vesiportin-bastioni", 1751, 5),
+            new HistoriaOsa("b1499-porttikurtiini", 1749, 6),
+            new HistoriaOsa("b1499-s201-rakennus", 1752, 4),
+            new HistoriaOsa("b1499-kellobastioni", 1745, 6),
+            new HistoriaOsa("pako-kellobastioni", 1745, 6),
+            new HistoriaOsa("b1499-ponttonisilta", 1965, 6),
         };
 
-        /// <summary>Linnan historia, noin 3 min (suunnitelma PT:lle 9.10.). Vuodet ja sanat ALUSTAVIA (Sisältökirjuri).</summary>
+        /// <summary>Linnan historia, noin 3 min. Avainsanat (vuosiluku + muutama sana) Sisältökirjurin tarkistetuista teksteistä
+        /// 9.10.; epävarmat vuodet (Kyrönsalmen synty, kivikauden ensiasutus, Kellobastioni) ilman lukua.</summary>
         public static readonly Historiajana Olavinlinna = new Historiajana(new[]
         {
-            new HistoriaVaihe(-9000, 20, 35, 3.2, "n. 9000 eaa.", "Jää vetäytyy, Kyrönsalmi aukeaa"),
-            new HistoriaVaihe(-5000, 15, 28, 2.6, "kivikausi", "Ensimmäiset asukkaat Saimaan rannoilla"),
-            new HistoriaVaihe(1475, 25, 22, 2.0, "1475", "Erik Akselinpoika Tott perustaa linnan"),
-            new HistoriaVaihe(1480, 20, 18, 1.7, "1480-luku", "Päälinnan tornit kohoavat"),
-            new HistoriaVaihe(1499, 15, 14, 1.5, "1499", "Kesäyö linnassa"),
-            new HistoriaVaihe(1500, 25, 24, 1.9, "1500–1600-luvut", "Esilinna ja uudet varustukset"),
-            new HistoriaVaihe(1743, 15, 30, 2.2, "1743", "Linna Venäjän vallan alle"),
-            new HistoriaVaihe(1800, 15, 26, 2.0, "1800-luku", "Tulipalo ja rapistuminen"),
-            new HistoriaVaihe(1870, 20, 20, 1.8, "1870-luvulta", "Restaurointi: nykyinen linna"),
+            new HistoriaVaihe(-7500, 20, 35, 3.2, "jääkauden jälkeen", "Saimaa nousee esiin, vesi virtaa Kyrönsalmen läpi"),
+            new HistoriaVaihe(-3900, 15, 28, 2.6, "kivikausi", "Asukkaita Saimaan rannoilla"),
+            new HistoriaVaihe(1475, 25, 22, 2.0, "1475", "Erik Akselinpoika Tott aloittaa linnan, ensin puuvarustus"),
+            new HistoriaVaihe(1477, 20, 18, 1.7, "1477–1480-luku", "Kivilinna: kolme tornia ja muurit"),
+            new HistoriaVaihe(1499, 15, 14, 1.5, "1499", "Erik Turesson Bielke linnan haltijaksi"),
+            new HistoriaVaihe(1550, 25, 24, 1.9, "1500–1600-luvut", "Tornit korotetaan, uusi esilinna ja Kijlin torni"),
+            new HistoriaVaihe(1743, 15, 30, 2.2, "1743", "Turun rauha: linna Venäjälle, bastionit 1750-luvulla"),
+            new HistoriaVaihe(1847, 15, 26, 2.0, "1847–1869", "Varuskunta lähtee, palot 1868 ja 1869"),
+            new HistoriaVaihe(1872, 20, 20, 1.8, "1872–1975", "Restauroinnit, oopperajuhlat vuodesta 1967"),
         }, 2026);
 
-        /// <summary>K2-lyhennys (8 s): vuoden 1499 linna → 1790-luvun varustukset kasvavat → ponttonisilta. Ei avainsanoja.</summary>
+        /// <summary>K2-lyhennys (8 s): vuoden 1499 linna → 1740–50-luvun varustukset kasvavat → ponttonisilta. Ei avainsanoja.</summary>
         public static readonly Historiajana K2Lyhyt = new Historiajana(new[]
         {
             new HistoriaVaihe(1499, 1.0, 0, 0),
-            new HistoriaVaihe(1785, 4.5, 0, 0),
-            new HistoriaVaihe(1805, 1.0, 0, 0),
-            new HistoriaVaihe(1958, 1.5, 0, 0),
-        }, 1970);
+            new HistoriaVaihe(1743, 4.5, 0, 0),
+            new HistoriaVaihe(1758, 1.0, 0, 0),
+            new HistoriaVaihe(1963, 1.5, 0, 0),
+        }, 1973);
     }
 }
