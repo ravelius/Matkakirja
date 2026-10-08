@@ -187,3 +187,22 @@ test('taulun kohtien napautuskohde (kohtaukset v2) siirtyy kuten hahmo; kohdat i
   assert.equal('kohde' in u.taulu.kohdat[1], false);
   assert.deepEqual(taulu.kohdat[0].kohde.paikka, [2, 1, 1], 'alkuperäistä ei muuteta');
 });
+
+test('Final IK: tartu-käden paikka ja kierto sekä vuoron osoituskohde siirtyvät kuten hahmo; kanna ei muutu', () => {
+  const kadet = [
+    { tyyppi: 'tartu', esine: 'e', kasi: 'r', paikka: [2, 1, 1], kierto: [0, 0, 0, 1], milloin: 'tyo', paino: 1 },
+    { tyyppi: 'kanna', esine: 'k', kasi: 'l', siirto: [0.1, 0, 0], kierto: [0, 0, 0, 1], milloin: 'aina' },
+  ];
+  const hahmot = [{ id: 'h', paikka: [2, 1, 1], kadet }];
+  const kuunnelma = [{ id: 'x', vuorot: [{ puhuja: 'h', alku_s: 0, loppu_s: 1, osoita: { paikka: [2, 1, 1], kasi: 'r' } }, { puhuja: 'h', alku_s: 1, loppu_s: 2, osoita: { kohta: 0 } }] }];
+  const u = sijoitaTila({ ...tila(), hahmot, kuunnelma, sijoitus: S({ ankkuri: [1, 0, 1], paikka: [10, 2, 10], suunta: 90 }) });
+  lahella(u.hahmot[0].kadet[0].paikka, u.hahmot[0].paikka);
+  lahella(u.kuunnelma[0].vuorot[0].osoita.paikka, u.hahmot[0].paikka);
+  assert.deepEqual(u.kuunnelma[0].vuorot[1].osoita, { kohta: 0 });
+  assert.deepEqual(u.hahmot[0].kadet[1], kadet[1], 'kanna on käden paikallinen');
+  // kierto: identiteetti kääntyy suunnan verran; kierretty +x-vektori = pisteiden kierto (suunta 90: +x → +z)
+  const [x, y, z, w] = u.hahmot[0].kadet[0].kierto;
+  const vx = [1 - 2 * (y * y + z * z), 2 * (x * y + w * z), 2 * (x * z - w * y)];
+  lahella(vx, [0, 0, 1]);
+  assert.deepEqual(kadet[0].paikka, [2, 1, 1], 'alkuperäistä ei muuteta');
+});
