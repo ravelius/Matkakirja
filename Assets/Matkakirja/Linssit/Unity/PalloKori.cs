@@ -128,7 +128,7 @@ namespace Matkakirja.Natiivi
             foreach (var m in new[] { punos, nahka, koysi }) if (m != null) Object.Destroy(m);
             KytkeAanimaisema(false);
             VasenKoysiNorm = default;
-            malliJuuri = null; malliKori = null; malliKoydet.Clear(); malliKoysiAlku.Clear();
+            malliJuuri = null; malliKori = null; malliKoydet.Clear(); malliKoysiAlku.Clear(); koysiVerkot.Clear();
             if (liekkiMat != null) Object.Destroy(liekkiMat);
             liekki = null; liekkiMat = null;
             overlay = null; juuri = null; perus = null; punos = nahka = koysi = null; fov = aspect = -1; aani = null;
@@ -298,6 +298,43 @@ namespace Matkakirja.Natiivi
                 var nimi = malli.Solmut[i].Nimi ?? "";
                 if (nimi == "kori_etureuna") { malliKori = solmut[i]; malliKoriAlku = solmut[i].localRotation; }
                 else if (nimi.StartsWith("koysi")) { malliKoydet.Add(solmut[i]); malliKoysiAlku.Add(solmut[i].localRotation); }
+            }
+            RakennaKoysiVerkot();
+        }
+
+        // KÖYDET VERLET-KETJUNA (Linssiseppä 8.10., pallo Unreal-tasolle kohta 5): jokainen köysiverkko taipuu Ydin VerletKoysin mukaan
+        // (pituusakseli = verkon suurin ulottuvuus, t = 0 alhaalla korin reunassa); jäykkä viivekierto (KoriLiike) säilyy päällä.
+        sealed class KoysiVerkko { public Mesh Mesh; public Vector3[] Alku, Uudet; public float[] T; public int A1, A2; public VerletKoysi Sim; }
+        readonly System.Collections.Generic.List<KoysiVerkko> koysiVerkot = new System.Collections.Generic.List<KoysiVerkko>();
+        void RakennaKoysiVerkot()
+        {
+            koysiVerkot.Clear();
+            foreach (var k in malliKoydet)
+                foreach (var mf in k.GetComponentsInChildren<MeshFilter>())
+                {
+                    var m = mf.sharedMesh; if (m == null || m.vertexCount == 0) continue;
+                    var b = m.bounds; var e = b.size;
+                    int ak = e.x >= e.y && e.x >= e.z ? 0 : e.y >= e.z ? 1 : 2;
+                    var alku = m.vertices; var t = new float[alku.Length];
+                    float min = b.min[ak], pit = Mathf.Max(1e-4f, e[ak]);
+                    for (int i = 0; i < alku.Length; i++) t[i] = (alku[i][ak] - min) / pit;
+                    m.MarkDynamic();
+                    var lisa = new Vector3(0.5f, 0.5f, 0.5f); lisa[ak] = 0f;   // taipuma mahtuu rajoihin (ei näkyvyyskarsintaa)
+                    m.bounds = new Bounds(b.center, b.size + lisa);
+                    koysiVerkot.Add(new KoysiVerkko { Mesh = m, Alku = alku, Uudet = new Vector3[alku.Length], T = t, A1 = (ak + 1) % 3, A2 = (ak + 2) % 3, Sim = new VerletKoysi(pit) });
+                }
+        }
+        void PaivitaKoydet(float dt, float aOikea, float aEteen)
+        {
+            foreach (var k in koysiVerkot)
+            {
+                k.Sim.Paivita(dt, aOikea, aEteen);
+                for (int i = 0; i < k.Alku.Length; i++)
+                {
+                    var (ox, oz) = k.Sim.Poikkeama(k.T[i]);
+                    var v = k.Alku[i]; v[k.A1] += (float)ox; v[k.A2] += (float)oz; k.Uudet[i] = v;
+                }
+                k.Mesh.SetVertices(k.Uudet);
             }
         }
 
@@ -620,6 +657,7 @@ namespace Matkakirja.Natiivi
             Vector3 oikea = Vector3.Cross(Vector3.up, eteen);
             float aEteen = Vector3.Dot(kiihtyvyys, eteen), aOikea = Vector3.Dot(kiihtyvyys, oikea);
             liike.Paivita(dt, aEteen, aOikea);
+            PaivitaKoydet(dt, aOikea, aEteen);
             Aanet(new Vector2(aEteen, aOikea).magnitude, v.y);
             var kKori = Quaternion.Euler((float)liike.Nyokkays, 0, -(float)liike.Kallistus);
             var kKoysi = Quaternion.Euler((float)liike.KoysiNyokkays, 0, -(float)liike.KoysiKallistus);
