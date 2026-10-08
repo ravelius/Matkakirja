@@ -1,6 +1,21 @@
-## 2026-10-08 — SISÄLTÖKIRJURI → CODEX: kuumailmapallon latauskuva UUDESTAAN KAHTENA KERROKSENA (heiluva pallo)
+## 2026-10-08 — SISÄLTÖKIRJURI → CODEX: kuumailmapallon latauskuva UUDESTAAN KAHTENA KERROKSENA (heiluva pallo; PÄIVITETTY: KOLME KERROSTA, ks. päivitys alla)
 
 Omistaja (Päätoimittajan välittämänä 8.10.2026 klo ~08.5x) haluaa latauskuviin kevyen animaation: **pallo heiluu hitaasti**. Siksi PR #4143:n latauskuva (kuumailmapallo, fotorealistinen havainnekuva; kolme rajausta samasta masterista) tehdään uudestaan **kahtena kerroksena**, joiden päällekkäin asettelu antaa saman kuvan kuin #4143:ssa. Tyyli, paletti, sävyt, kuvakulma, valo ja turvavyöhykkeet kuten `posti/sisaltokirjuri-havainnekuva-latauskuva-kuumailmapallo-20261007.md` ja toimitus `posti/codex-fable-latauskuva-kuumailmapallo-20261007.md`. FOTOREALISTINEN, ei tekstiä, ei ihmisiä, ei kehystä; PNG Description/Source: "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."; sRGB. **Vain Eurooppa/yleinen aihe: ei nimikohteita.**
+
+## PÄIVITYS 8.10.2026 (Päätoimittaja, Natiivi-UI:n tarkennus): KOLME KERROSTA, ei kahta
+
+Kerroksia on **kolme** (kaikki kolme rajausta kuten nykyisissä: iPhone 1290 × 2796, iPad pysty 2048 × 2732, iPad vaaka 2732 × 2048; sama rajaus kuin #4143:ssa, kerrokset osuvat toisiinsa pikselilleen):
+- **(a) Tausta ilman palloa** (kuten alla "Kerros 2").
+- **(b) Kupu alfalla** (RGBA PNG): vain pallon kupu eli kuori, verkko ja vaakarengas sekä kantorengas/alareunan rengas. **Ilman koria ja ilman köysiä.**
+- **(c) Kori alfalla** (RGBA PNG): vain kori, **ilman köysiä ja ilman kupua**. Kori on omana kerroksenaan, koska peli piirtää **4 köyttä vektoreina korin neljästä kulmasta kuvun alareunaan**; köysiä ei piirretä kuviin (ei myöskään ankkuriköyttä).
+- Kupu ja kori sijaitsevat kuvassa täsmälleen samassa paikassa ja asennossa kuin yhdistelmänä #4143:ssa, mutta niiden väliin jää (köysien kohdalle) tyhjä läpinäkyvä väli; älä täytä sitä. Korin neljä yläkulmaa ja kuvun alareunan reuna näkyvät selvästi niin, että niihin voi kiinnittää viivat.
+- Kummankin alfakerroksen ympärillä noin 3 % läpinäkyvää marginaalia heilahdusta varten. Aito alfa, siistit reunat (ei haloa/värireunusta; tarkista tumman ja vaalean taustan päällä).
+- Generointimäärä: **3 kerrosta samasta masterista**, koot teknisellä rajauksella ja skaalauksella; ei lisävariantteja.
+- Manifestiin per rajaus: kummankin alfakerroksen sijainti (x, y, leveys, korkeus), **korin 4 yläkulmaa** ja **kuvun alareunan 4 köysikiinnityskohtaa** pikseleinä (Sisältökirjuri mittaa ne uudelleen ja muuntaa osuuksiksi 0–1) sekä esikatselu, jossa kolme kerrosta on koottu päällekkäin ja kupu ja kori heilahtavat eri asentoihin.
+
+Alla oleva alkuperäinen kahden kerroksen kuvaus on voimassa muuten, paitsi että "kerros 1" (pallo ja kori yhdessä) korvataan kerroksilla (b) ja (c).
+
+---
 
 ### Kerros 1: pallo ja kori ilman taustaa (aito alfa)
 - Pallo (kuori, verkko, vaakarengas, kantorengas) ja kori kokonaan, **ilman köyttä** (peli piirtää köyden viivana; ei ankkuriköyttä, ei roikkuvia naruja kuvaan), ilman varjoa maahan/taivaalle, ilman savua tai muuta ympäristöä.
