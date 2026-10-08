@@ -481,6 +481,8 @@ namespace Matkakirja.Natiivi
             kaupunki.AsetaReittikamerat(reittiNakymat, silmukka.ReittiEsilataus(MaaKorkeus, reittiNakymat));
             EsilataaKortit();
             Telemetria(ennen);
+            SaaLive();
+            SaaTehosteet();
             // Lähdön valmistelu lokiin kerran sekunnissa (laattaodotuksen säätö).
             if (silmukka.LahtoValmisteilla && Time.realtimeSinceStartup - lahtoLokiAika >= 1f)
             {
@@ -645,6 +647,75 @@ namespace Matkakirja.Natiivi
 
         /// <summary>Seuraavan kohteen (lennossa nykyisen) yksityiskohtakuvat tekstuureiksi valmiiksi (YksityiskohtaKortti.Esilataa).</summary>
         string esiKortitId, esiKohdeKaupunki;
+
+        // LIVE-SÄÄ JA -AIKA (omistaja 8.10. 09.1x, Saatila; Pelikoodarin GET /opas/saa PR #4194; juna 166): LiveAika kohteen auringosta
+        // 30 s välein, sää vain LIVEn ollessa päällä kaupungin vaihtuessa ja enintään 15 min välein; 502 → arvo pysyy.
+        /// <summary>Viimeisin onnistunut säähaku (tehosteiden hienosäätö); null ennen ensimmäistä.</summary>
+        public static PalloSaaTiedot SaaTiedot { get; private set; }
+        float saaHaettu = -1e9f, liveAikaTarkistettu = -1e9f; string saaKaupunki; bool saaHaussa;
+        void SaaLive()
+        {
+            if (!Saatila.Live || silmukka == null) return;
+            var a = silmukka.Asento; float nyt = Time.realtimeSinceStartup;
+            if (nyt - liveAikaTarkistettu >= 30f) { liveAikaTarkistettu = nyt; Saatila.LiveAika = PalloSaaTiedot.AikaAuringosta(DateTime.UtcNow, a.Lat, a.Lon); }
+            string kaup = NykyinenKaupunkiId ?? Aloituskaupunki;
+            if (saaHaussa || Testi || !PalloSaaTiedot.Hae(true, kaup, saaKaupunki, nyt - saaHaettu)) return;
+            saaHaussa = true; saaHaettu = nyt; saaKaupunki = kaup;
+            o.StartCoroutine(HaeSaa(a.Lat, a.Lon, kaup));
+        }
+
+        // SÄÄTEHOSTEET (Päätoimittaja 8.10.: kevyet ensin, A/B COZYllä myöhemmin; juna 166): vain pallonäkymässä; Saatila.Saa →
+        // PalloSaaVaikutus → KaupunkiKuva (sävy ja sumu) ja PalloSaaKerros (sade, lumi, salama); ukkosen kumahdus kirjastosta.
+        readonly PalloSaaVaikutus saaVaikutus = new PalloSaaVaikutus();
+        PalloSaaKerros saaKerros;
+        void SaaTehosteet()
+        {
+            float dt = Time.unscaledDeltaTime;
+            saaVaikutus.Paivita(tauolla ? 0 : dt, nakymaAuki ? Saatila.Saa : PalloSaa.Pois, Saatila.Live ? SaaTiedot : null);
+            KaupunkiKuva.Saa = saaVaikutus.Nyt; KaupunkiKuva.Salama = saaVaikutus.Salama;
+            if (saaKerros == null && saaVaikutus.Nyt.Tyhja) return;
+            saaKerros ??= new PalloSaaKerros();
+            saaKerros.Aseta(kaupunki.Kamera, saaVaikutus.Nyt, saaVaikutus.Salama, SaaTiedot?.TuuliMs ?? 4, Time.unscaledTime);
+            if (saaVaikutus.Nyt.Ukkonen > 0.01 && ukkosKlipit == null) { ukkosKlipit = new List<AudioClip>(); o.StartCoroutine(LataaUkkonen()); }
+            if (saaVaikutus.Kumahdus) SoitaUkkonen();
+        }
+
+        /// <summary>Ukkosen kumahdukset kirjastosta (Pelikoodari: CC0, aanet/tehosteet/ukkonen/); puuttuva tiedosto ohitetaan.</summary>
+        public static readonly string[] UkkonenOsoitteet = {
+            "https://media.matkakirja.app/aanet/tehosteet/ukkonen/ukkonen-01.mp3", "https://media.matkakirja.app/aanet/tehosteet/ukkonen/ukkonen-02.mp3",
+            "https://media.matkakirja.app/aanet/tehosteet/ukkonen/ukkonen-03.mp3", "https://media.matkakirja.app/aanet/tehosteet/ukkonen/ukkonen-04.mp3" };
+        List<AudioClip> ukkosKlipit; AudioSource ukkosLahde;
+        IEnumerator LataaUkkonen()
+        {
+            foreach (var url in UkkonenOsoitteet)
+                using (var r = UnityWebRequestMultimedia.GetAudioClip(url, AudioType.MPEG))
+                {
+                    r.timeout = 15;
+                    yield return r.SendWebRequest();
+                    if (r.result == UnityWebRequest.Result.Success && DownloadHandlerAudioClip.GetContent(r) is AudioClip c && ukkosKlipit != null) ukkosKlipit.Add(c);
+                }
+            o.Kirjaa($"opas: ukkosen kumahduksia {ukkosKlipit?.Count ?? 0}/{UkkonenOsoitteet.Length}");
+        }
+        void SoitaUkkonen()
+        {
+            if (ukkosKlipit == null || ukkosKlipit.Count == 0 || !Asetukset.Paalla(Kytkin.Aanimaisema)) return;
+            if (ukkosLahde == null) { ukkosLahde = o.gameObject.AddComponent<AudioSource>(); ukkosLahde.playOnAwake = false; ukkosLahde.spatialBlend = 0; }
+            ukkosLahde.volume = 0.8f * Asetukset.Taso(Voima.Tehosteet);
+            ukkosLahde.PlayOneShot(ukkosKlipit[UnityEngine.Random.Range(0, ukkosKlipit.Count)]);
+        }
+
+        IEnumerator HaeSaa(double lat, double lon, string kaup)
+        {
+            var ic = System.Globalization.CultureInfo.InvariantCulture;
+            using var r = Pyynto($"/opas/saa?lat={lat.ToString("F4", ic)}&lon={lon.ToString("F4", ic)}&kaupunki={UnityWebRequest.EscapeURL(kaup ?? "")}");
+            r.timeout = 10;
+            yield return r.SendWebRequest();
+            saaHaussa = false;
+            var t = r.result == UnityWebRequest.Result.Success ? PalloSaaTiedot.Lue(MiniJson.Jasenna(r.downloadHandler.text) as Dictionary<string, object>) : null;
+            if (t == null) { o.Kirjaa($"opas: sää {kaup}: ei saatu ({r.responseCode}), pidetään {Saatila.LiveSaa}"); yield break; }
+            SaaTiedot = t; Saatila.LiveSaa = t.Tila;
+            o.Kirjaa($"opas: sää {kaup}: {t.Tila}, pilvisyys {t.PilvisyysPct:F0} %, sade {t.SadeMmH:F1} mm/h, sumu {t.SumuPct:F0} %, tuuli {t.TuuliMs:F0} m/s, {(t.Paiva ? "päivä" : "yö")}");
+        }
 
         // LENNON TELEMETRIA (Päätoimittaja 8.10. 08.3x): ruuduittain kulkunopeus (katsepisteen maajälki m/s), kuvan nopeus
         // (silmän nopeus / katse-etäisyys, rad/s), kääntönopeus (°/s) ja silmän korkeus; perillä yhteenveto (OpasKuvaus.Telemetria).
@@ -2464,6 +2535,8 @@ namespace Matkakirja.Natiivi
             OpasKorostusKuva.Piilota(true);
             KaupunkiYovalot.Kohde = null;
             KaupunkiYovalot.KohdeOsuus = OpasKorostusKuva.Osuus = 1f;
+            saaKerros?.Sulje(); saaKerros = null; KaupunkiKuva.Saa = default; KaupunkiKuva.Salama = 0;
+            if (ukkosLahde != null) { UnityEngine.Object.Destroy(ukkosLahde); ukkosLahde = null; }
             KyydinKameraEnnen.Ajo = null;
             KytkeNimilappu(false);
             Sumenna(false);
