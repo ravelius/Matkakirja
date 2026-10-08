@@ -35,7 +35,12 @@ Avoimet työt:
 ## 21.5x: raskaat poltot/paistot (kartta, Blender, ääni) eivät käynnisty junakäännöksen aikana (kaannospalvelun lukko varattu).
 ## 16.0x: EI omia käännöksiä (iOS/Mac); haaralle unity-tarkistus + testit; täysi käännös vain juna/TF; poikkeus vian selvitys + ilmoitus PT:lle.
 
-## TILA 7.10. 18.0x (uusin)
+## TILA 8.10. 07.2x (uusin)
+- Uusi sessio aloitti (PT local_593b89a1-2514-4d74-b956-2a73db862382). Mergetyt worktreet poistettu (e3nousu, hiiri, hiiri160, kaudet,
+  paikannimet, pallo-puoli, pallot-maailma, swe-rajat; haarat jäävät). Jäljellä wt/proto-linssiseppa2-kevat (08a6891a0, juna 164).
+- Talvi odottaa Karttasepän uutta näytettä (lumitodennäköisyys). Merkkiä "nakyma:kellotorni-kaari" ei vielä masterissa.
+
+## TILA 7.10. 18.0x
 - E3:n loppu (PT 17.5x, juna 163): SeikkailuNousu + NousuReitti, haara peili/proto/linssiseppa2/e3-nousu kärki d75b33031
   (BUILD 161:n päällä), worktree wt/proto-linssiseppa2-e3nousu. Kellotornin komero Linnanrakentajalta: Unity (−51,0; 15,8; 5,5),
   ulos (−0,985; 0; 0,174), päälinna (−20; 15; 0) r 90, pysähdys 9 m. NousuReitti-testit 5/5, unity-tarkistus 0.
