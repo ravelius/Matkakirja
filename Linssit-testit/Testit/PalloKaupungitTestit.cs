@@ -82,6 +82,83 @@ namespace Matkakirja.Linssit.Testit
         }
 
         static bool Pysahdyksella(OpasVaihe v) => v == OpasVaihe.Puhuu || v == OpasVaihe.Odottaa;
+
+        /// <summary>
+        /// KOHDEKAARI (omistaja 9.10., Päätoimittaja: "selvästi enemmän kiertoa, ja kiertäessä pallo laskeutuu ja lähestyy (spiraali)"):
+        /// pysähdyksittäin silmän kiertokulma kohteen ympäri (°), katse-etäisyyden ja silmän korkeuden muutos saapumisesta lähtöön (osuus).
+        /// </summary>
+        public sealed class Kaari { public string Kaupunki; public double KiertoKa, KiertoMax, EtMuutos, KorkeusMuutos, NousuMax; public string NousuKohta; public int Pysahdyksia; }
+        public static Kaari MittaaKaari(Kaupunki c)
+        {
+            var r = Aja(c, false); var tu = new Kaari { Kaupunki = c.Nimi };
+            double kierto = 0, et = 0, kork = 0;
+            for (int i = 0; i < c.Kohteet.Length; i++)
+            {
+                int a = r.FindIndex(x => x.Kohde == i && Pysahdyksella(x.Vaihe)), b = r.FindLastIndex(x => x.Kohde == i && Pysahdyksella(x.Vaihe));
+                if (a < 0 || b <= a) continue;
+                var (pe, pn) = Enu(c, c.Kohteet[i]);
+                double kulma = 0;
+                for (int k = a + 1; k <= b; k++)
+                {
+                    double d = Math.Atan2(r[k].N - pn, r[k].E - pe) - Math.Atan2(r[k - 1].N - pn, r[k - 1].E - pe);
+                    d -= 2 * Math.PI * Math.Floor((d + Math.PI) / (2 * Math.PI)); kulma += d;
+                }
+                kulma = Math.Abs(kulma) * 180 / Math.PI;
+                tu.Pysahdyksia++; kierto += kulma; tu.KiertoMax = Math.Max(tu.KiertoMax, kulma);
+                et += 1 - r[b].EtM / Math.Max(1, r[a].EtM);
+                double u0 = r[a].U - 35, u1 = r[b].U - 35; kork += 1 - u1 / Math.Max(1, u0);
+            }
+            (tu.NousuMax, tu.NousuKohta) = LennonNousu(c, r);
+            if (tu.Pysahdyksia > 0) { tu.KiertoKa = kierto / tu.Pysahdyksia; tu.EtMuutos = et / tu.Pysahdyksia; tu.KorkeusMuutos = kork / tu.Pysahdyksia; }
+            return tu;
+        }
+
+        /// <summary>
+        /// Lennon nousu (Päätoimittaja 9.10.: "siirtymälento matalammaksi, Notre-Dame → Concorde liian korkealla"): silmän korkein kohta
+        /// lennolla lähtö- ja tulokorkeuden yläpuolella (m), ei siirtoja eikä avauksen laskeutumista (lähtö yli 2 km).
+        /// </summary>
+        public static (double nousu, string kohta) LennonNousu(Kaupunki c) => LennonNousu(c, Aja(c, false));
+        static (double, string) LennonNousu(Kaupunki c, List<Ruutu> r)
+        {
+            double paras = 0; string kohta = null;
+            for (int k = 1; k < r.Count; k++)
+            {
+                if (r[k].Vaihe != OpasVaihe.Lentaa || r[k - 1].Vaihe == OpasVaihe.Lentaa || r[k].Kohde < 1) continue;
+                int j = k; double maks = r[k].U; while (j + 1 < r.Count && r[j + 1].Vaihe == OpasVaihe.Lentaa) { j++; maks = Math.Max(maks, r[j].U); }
+                if (r[k - 1].U > 2000) { k = j; continue; }
+                var ed = c.Kohteet[r[k].Kohde - 1]; var kk = c.Kohteet[r[k].Kohde];
+                if (KierrosLento.EtaisyysM(ed.Lat, ed.Lon, kk.Lat, kk.Lon) >= OpasSilmukka.SiirtoRajaM) { k = j; continue; }
+                double nousu = maks - Math.Max(r[k - 1].U, r[Math.Min(r.Count - 1, j + 1)].U);
+                if (nousu > paras) { paras = nousu; kohta = $"{ed.Nimi} → {kk.Nimi}"; }
+                k = j;
+            }
+            return (paras, kohta);
+        }
+
+        [Testi] static void SpiraaliLaskeeJaLahestyy()
+        {
+            var k = new Kuvakulma(48.86, 2.34, 400, 64, 120, 40);
+            var e0 = OpasKuvaus.KameraPaikka(k, k.Lat, k.Lon); var s1 = OpasKuvaus.Spiraali(k, 30, 1); var e1 = OpasKuvaus.KameraPaikka(s1, k.Lat, k.Lon);
+            Oleta.Tosi(Math.Abs(Math.Abs(KierrosLento.Kiedo(s1.Suuntima - k.Suuntima)) - 30) < 0.5, $"kaari 30° ({KierrosLento.Kiedo(s1.Suuntima - k.Suuntima):F1})");
+            Oleta.Tosi(e1.u - 40 < (e0.u - 40) * (1 - OpasKuvaus.SpiraaliLasku) + 1, $"lasku {e0.u:F0} → {e1.u:F0} m");
+            Oleta.Tosi(s1.EtaisyysM < k.EtaisyysM - 20, $"lähestyy {k.EtaisyysM:F0} → {s1.EtaisyysM:F0} m");
+            Oleta.Tosi(Math.Abs(s1.Lat - k.Lat) < 1e-12 && Math.Abs(s1.KatseKorkeusM - k.KatseKorkeusM) < 1e-9, "katse pysyy kohteessa");
+        }
+
+        [Testi] static void KohdekaariSpiraali()
+        {
+            foreach (var c0 in Lue().Where(x => x.Id == "pariisi" || x.Id == "tukholma"))
+            {
+                // Kehityskaupungeissa sovitin järjestää kierroksen lyhimmäksi (OpasReitti), joten mitataan samassa järjestyksessä.
+                var c = new Kaupunki { Id = c0.Id, Nimi = c0.Nimi, Lat = c0.Lat, Lon = c0.Lon, Kohteet = OpasReitti.Lyhin(c0.Kohteet, k => (k.Lat, k.Lon), out _).ToArray() };
+                var m = MittaaKaari(c);
+                Console.WriteLine($"      {m.Kaupunki}: {m.Pysahdyksia} pysähdystä, kierto ka {m.KiertoKa:F0}° (max {m.KiertoMax:F0}°), etäisyys −{100 * m.EtMuutos:F0} %, korkeus −{100 * m.KorkeusMuutos:F0} %, lennon nousu enintään {m.NousuMax:F0} m ({m.NousuKohta})");
+                // Ennen 9.10. (juna 168): kierto ka 4–9° (max 6–16°), ei laskua; lennon nousu Pariisissa 1 320 m (sumennusnosto).
+                Oleta.Tosi(m.KiertoMax >= 15, $"{m.Kaupunki}: pisin kohdekaari {m.KiertoMax:F0}° (≥ 15°)");
+                Oleta.Tosi(m.KorkeusMuutos > 0, $"{m.Kaupunki}: pallo laskeutuu pysähdyksellä ({100 * m.KorkeusMuutos:F1} %)");
+                Oleta.Tosi(m.NousuMax <= 150, $"{m.Kaupunki}: lennon nousu enintään {m.NousuMax:F0} m ({m.NousuKohta}; ≤ 150)");
+            }
+        }
         static (double e, double n) Enu(Kaupunki c, OpasKohde k) =>
             ((k.Lon - c.Lon) * 6371000 * Math.Cos(c.Lat * Math.PI / 180) * Math.PI / 180, (k.Lat - c.Lat) * 6371000 * Math.PI / 180);
         static (double, double, double) V(List<Ruutu> r, int k) => ((r[k].E - r[k - 1].E) / Dt, (r[k].N - r[k - 1].N) / Dt, (r[k].U - r[k - 1].U) / Dt);
@@ -113,17 +190,20 @@ namespace Matkakirja.Linssit.Testit
                     var (pe, pn) = Enu(c, c.Kohteet[i]); var (qe, qn) = Enu(c, c.Kohteet[i + 1]);
                     double ue = qe - pe, un = qn - pn, l = Math.Max(1, Math.Sqrt(ue * ue + un * un)); ue /= l; un /= l;
                     double paras = double.MinValue, pahin = 0, seis = 0, pisin = 0; int pahinK = a, pisinK = a;
+                    // Taaksepäin vain lennolla (omistaja 9.10.: kohdekaari kiertää kohdetta, myös seuraavasta poispäin; kumoaa 18.4x:n rajan).
+                    int lahtoK = Math.Max(a, r.FindLastIndex(b, b - a + 1, x => x.Kohde == i && Pysahdyksella(x.Vaihe)));
                     for (int k = a; k <= b; k++)
                     {
                         double ete = (r[k].E - pe) * ue + (r[k].N - pn) * un;
-                        paras = Math.Max(paras, ete); if (paras - ete > pahin) { pahin = paras - ete; pahinK = k; }
-                        if (k > a) { double v = Math.Sqrt(Math.Pow((r[k].E - r[k - 1].E) / Dt, 2) + Math.Pow((r[k].N - r[k - 1].N) / Dt, 2)); seis = v < 0.2 && !r[k].Leijuu ? seis + Dt : 0; if (seis > pisin) { pisin = seis; pisinK = k; } }   // leijunta kaaren päässä sallittu (omistaja 18.4x)
+                        if (k >= lahtoK) { paras = Math.Max(paras, ete); if (paras - ete > pahin) { pahin = paras - ete; pahinK = k; } }
+                        if (k > a) { double v = Math.Sqrt(Math.Pow((r[k].E - r[k - 1].E) / Dt, 2) + Math.Pow((r[k].N - r[k - 1].N) / Dt, 2)); seis = v < 0.2 && !r[k].Leijuu && Pysahdyksella(r[k].Vaihe) ? seis + Dt : 0; if (seis > pisin) { pisin = seis; pisinK = k; } }   // leijunta kaaren päässä sallittu (omistaja 18.4x); lennon S-käyräinen lähtö levosta ei ole seisomista
                     }
                     double Kulma(int k) { var (ce, cn) = (r[k].E - pe, r[k].N - pn); double a1 = Math.Atan2(cn, ce), a2 = Math.Atan2(qn - pn, qe - pe); double d = Math.Abs(a1 - a2) % (2 * Math.PI); return Math.Min(d, 2 * Math.PI - d) * 180 / Math.PI; }
                     if (pahin > t.Taaksepain) { t.Taaksepain = pahin; t.TaakseKohta = $"{vk} {c.Kohteet[i].Nimi}→{c.Kohteet[i + 1].Nimi} {r[pahinK].Vaihe} {r[pahinK].T:F0} s"; }
                     if (pisin > t.Seisahdus) { t.Seisahdus = pisin; t.SeisKohta = $"{vk} {c.Kohteet[i].Nimi}→{c.Kohteet[i + 1].Nimi} {r[pisinK].Vaihe} kulma {Kulma(pisinK):F0}°"; }
                     if (pahin > 1) t.Viat.Add($"{vk} {c.Kohteet[i].Nimi} → {c.Kohteet[i + 1].Nimi} taaksepäin {pahin:F1} m (et {r[pahinK].EtM:F0} m, {100 * pahin / r[pahinK].EtM:F1} %, silmä alussa {((r[a].E - pe) * ue + (r[a].N - pn) * un):F0} m / väli {l:F0} m)");
                     if (pisin > 3) t.Viat.Add($"{vk} {c.Kohteet[i].Nimi} → {c.Kohteet[i + 1].Nimi} seisoo {pisin:F1} s");
+                    if (pisin > 3 && Environment.GetEnvironmentVariable("NYK_DEBUG") == c.Id) for (int k = Math.Max(a, pisinK - (int)(pisin / Dt) - 15); k <= Math.Min(b, pisinK + 15); k += 5) Console.WriteLine($"        seis {r[k].T:F2} {r[k].Vaihe} kohde {r[k].Kohde} leijuu {r[k].Leijuu} v {Math.Sqrt(Math.Pow((r[k].E - r[k - 1].E) / Dt, 2) + Math.Pow((r[k].N - r[k - 1].N) / Dt, 2)):F2} u {r[k].U:F0}");
                 }
                 // Kehys ja nykäys pysähdyksellä.
                 for (int i = 0; i < c.Kohteet.Length; i++)
@@ -135,11 +215,12 @@ namespace Matkakirja.Linssit.Testit
                         if (alku < 0) alku = r[k].EtM;
                         maks = Math.Max(maks, r[k].EtM);
                         if (Pysahdyksella(r[k - 1].Vaihe) && r[k - 1].Kohde == i) nyk = Math.Max(nyk, Pit(V(r, k)));
+                        if (Environment.GetEnvironmentVariable("NYK_DEBUG") == c.Id && Pysahdyksella(r[k - 1].Vaihe) && r[k - 1].Kohde == i && Pit(V(r, k)) > 8) Console.WriteLine($"        {vk} {c.Kohteet[i].Nimi} t {r[k].T:F2} v {Pit(V(r, k)):F1} et {r[k - 1].EtM:F0}→{r[k].EtM:F0} u {r[k - 1].U:F0}→{r[k].U:F0} suunta {r[k - 1].Suunta:F1}→{r[k].Suunta:F1}");
                     }
                     if (alku > 0 && maks / alku > t.Kehys) t.Kehys = maks / alku;
                     if (alku > 0 && maks > 1.05 * alku + 1) t.Viat.Add($"{vk} {c.Kohteet[i].Nimi} kehys {alku:F0} → {maks:F0} m");
                     if (nyk > t.Nykays) t.Nykays = nyk;
-                    if (nyk > OpasKuvaus.LipumisNopeus + 1) t.Viat.Add($"{vk} {c.Kohteet[i].Nimi} nykäys {nyk:F1} m/s");
+                    if (nyk > OpasKuvaus.KaariNopeusMS + 1) t.Viat.Add($"{vk} {c.Kohteet[i].Nimi} nykäys {nyk:F1} m/s");
                 }
                 // Saumat (Lentaa ↔ pysähdys), ei siirtoja (kamera hyppää tumman ruudun alla).
                 for (int k = 3; k + 2 < r.Count; k++)
@@ -171,7 +252,7 @@ namespace Matkakirja.Linssit.Testit
 
         /// <summary>
         /// PUHEEN JA LENNON TAHDISTUS (Päätoimittaja 8.10. ilta, juna 168/169): kerronta ei soi lähdön hetkellä (lento alkaa vasta
-        /// äänen ja LoppuTaukoS:n jälkeen), kerronta alkaa vasta lennon lopussa (aikaisintaan PuheEnnenS + 0,5 s ennen lennon loppua) ja
+        /// äänen ja LoppuTaukoS:n jälkeen), kerronta alkaa lennon alussa (omistaja 9.10.: PalloPuheAlkuS lähdöstä, ei taukoja) ja
         /// hiljaisuus kerronnan lopusta seuraavan alkuun on enintään HiljaisuusMaxS, kun lähdön siltalause (SiltaS) täyttää lennon alun.
         /// Siirto-osuudet (tumma ruutu) ohitetaan.
         /// </summary>
@@ -206,7 +287,11 @@ namespace Matkakirja.Linssit.Testit
                         if (pj < 0) continue;
                         double loppu = e.t + e.kesto, ennen = loppu - tap[pj].t;
                         tu.PuheEnnen = Math.Max(tu.PuheEnnen, ennen);
-                        if (ennen > OpasSilmukka.PuheEnnen(e.kesto) + 0.5) tu.Viat.Add($"{vk} {k.Nimi}: kerronta alkaa {ennen:F1} s ennen lennon loppua (lennon keskellä)");
+                        // Omistaja 9.10. ("liikaa taukoja"): kerronta alkaa lennon alussa (PalloPuheAlkuS lähdöstä), ei odota saapumista.
+                        double lahdosta = tap[pj].t - e.t;
+                        if (lahdosta < OpasSilmukka.PalloPuheAlkuS - 0.5) tu.Viat.Add($"{vk} {k.Nimi}: kerronta alkaa {lahdosta:F1} s lähdöstä (ennen nousua)");
+                        if (!hidas && lahdosta > OpasSilmukka.PalloPuheAlkuS + 1.0 && e.kesto > OpasSilmukka.PalloPuheAlkuS + OpasSilmukka.PuheEnnenS)
+                            tu.Viat.Add($"{vk} {k.Nimi}: kerronta alkaa vasta {lahdosta:F1} s lähdöstä (lento {e.kesto:F1} s)");
                         if (!double.IsNaN(hiljaaAlkoi))
                         {
                             double hiljaisuus = (tap[pj].t - hiljaaAlkoi) - SiltaS;

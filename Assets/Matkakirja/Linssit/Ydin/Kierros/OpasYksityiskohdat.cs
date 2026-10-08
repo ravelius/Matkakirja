@@ -14,7 +14,8 @@ namespace Matkakirja.Linssit.Kierros
     public static class OpasYksityiskohdat
     {
         /// <summary>Kuvan näkymisaika (s) ja seuraavan kuvan aikaisin alku edellisen alusta.</summary>
-        public const double NayttoS = 4.0, ValiS = 5.0;
+        // Omistaja TF 168 (9.10.): "jäädä vähän pidemmäksi aikaa" → 4 → 7 s (kuvanosto; seuraava kuva vaihtaa aikaisintaan ValiS:n jälkeen).
+        public const double NayttoS = 7.0, ValiS = 5.0;
         /// <summary>Kuva ei ala, jos kerrontaa on jäljellä tätä vähemmän (s).</summary>
         public const double LoppuVaraS = 1.5;
 

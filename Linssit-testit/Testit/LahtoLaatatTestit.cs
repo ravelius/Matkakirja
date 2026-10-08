@@ -151,6 +151,7 @@ namespace Matkakirja.Linssit.Testit
             OpasSilmukka.PalloLento = true;
             try
             {
+                OpasKuvaus.SumennusNostoPaalla = false;   // rampit ilman sumennusnostoa (700 m:n lento ohittaa prefektuurin; nosto: oma testi)
                 foreach (double m in new[] { 700.0, 1363, 3000 })
                 {
                     double lat0 = 48.853, lon0 = 2.3498, lat1 = lat0 + m / 111320.0 * 0.6, lon1 = lon0 - m / 73000.0 * 0.8;
@@ -175,7 +176,7 @@ namespace Matkakirja.Linssit.Testit
                     Oleta.Tosi(kaanto <= OpasSilmukka.PalloKaantoAstS + 0.2, $"{m} m: kääntö {kaanto:F1} °/s (video6 Louvre 13,6)");
                 }
             }
-            finally { OpasSilmukka.PalloLento = false; }
+            finally { OpasSilmukka.PalloLento = false; OpasKuvaus.SumennusNostoPaalla = true; }
         }
 
         // Omistaja 8.10. ~09.0x: kierroksen aloitus yleiskuvasta laskeutuu rauhallisesti suoraan 1. kohteeseen (ei pysähdystä arviokehyksessä).
@@ -289,7 +290,7 @@ namespace Matkakirja.Linssit.Testit
                 Oleta.Tosi(KierrosLento.EtaisyysM(s.Asento.Lat, s.Asento.Lon, 48.8530, 2.3498) < 1, "katse pysyy nykyisessä kohteessa");
                 // 8.10. ilta (omistaja "jää liian kauas"): lipuminen skaalataan kehyksen koolla ja rajataan 1,2 × vaakaetäisyyteen.
                 Oleta.Tosi(Etaisyys(nyt) < Etaisyys(alku) - 10, $"silmä lähestyi seuraavaa ({Etaisyys(alku):F0} → {Etaisyys(nyt):F0} m)");
-                Oleta.Tosi(maks <= OpasKuvaus.LipumisNopeus + 1e-9 && maks > 1, $"vauhti enintään {OpasKuvaus.LipumisNopeus} m/s ({maks:F1})");
+                Oleta.Tosi(maks <= OpasKuvaus.KaariNopeusMS + 1e-9 && maks > 1, $"vauhti enintään {OpasKuvaus.KaariNopeusMS} m/s ({maks:F1})");
                 s.AaniLoppui();
                 double vauhtiLahtiessa = double.NaN;
                 for (int i = 0; i < 400 && s.Vaihe != OpasVaihe.Lentaa; i++) { vauhtiLahtiessa = s.LipumisVauhti; s.Paivita(0.05, _ => 35); }
@@ -299,23 +300,22 @@ namespace Matkakirja.Linssit.Testit
         }
 
         // Pelikoodari 8.10. (pallosanasto, siltalauseet-v3b): pallolauseiden valinta kierroksella.
+        // Omistaja 9.10. ("kuulostaa puuduttavalta"), Päätoimittaja: lause noin joka 4. siirtymään, ei peräkkäin, muulloin kierros-lause.
         [Testi] static void PallolauseetValitaanSaannoin()
         {
             var p = new OpasPallolauseet();
             Oleta.Sama(OpasPallolauseet.Lahto, p.Lahtoon(0, 500), "1. lähtö: pallo-lahto");
-            Oleta.Sama(null, p.Lahtoon(90, 1500), "heti seuraava: ei (enintään joka toinen)");
-            Oleta.Sama(OpasPallolauseet.Kaanto, p.Lahtoon(170, 500), "suunta muuttui 80° → pallo-kaanto");
-            Oleta.Sama(null, p.Lahtoon(175, 1500), "joka toinen");
-            Oleta.Sama(OpasPallolauseet.Nousu, p.Lahtoon(180, 1500), "pitkä, suunta sama → pallo-nousu");
-            Oleta.Sama(null, p.Laskuun(), "lähdössä soi pallolause → ei laskua samaan siirtymään");
-            Oleta.Sama(null, p.Lahtoon(185, 300), "viereinen siirtymä: ei");
-            Oleta.Sama(null, p.Laskuun(), "viereinen siirtymä: ei laskuakaan");
-            Oleta.Sama(null, p.Lahtoon(186, 300), "lyhyt, suora → tavallinen lähtö");
-            Oleta.Sama(OpasPallolauseet.Lasku, p.Laskuun(), "lennon loppuun pallo-lasku (lähtö tavallinen, edellinen pallo kaksi siirtymää sitten)");
-            var q = new OpasPallolauseet(); int kaannot = 0;
-            for (int i = 0; i < 20; i++) if (q.Lahtoon(i % 2 == 0 ? 0 : 120, 300) == OpasPallolauseet.Kaanto) kaannot++;
-            Oleta.Sama(OpasPallolauseet.RyhmaMax, kaannot, "ryhmää enintään kolmesti kierroksella");
-            Oleta.Sama(null, new OpasPallolauseet().Lahtoon(0, 500, r => r != OpasPallolauseet.Lahto), "ryhmää ei aineistossa → tavallinen");
+            for (int i = 1; i < OpasPallolauseet.Vali; i++) Oleta.Sama(null, p.Lahtoon(i % 2 == 0 ? 0 : 120, 1500), $"siirtymä {i}: hiljaa");
+            Oleta.Sama(OpasPallolauseet.Kaanto, p.Lahtoon(120 + 100, 500), "4. siirtymä, suunta muuttui → pallo-kaanto");
+            Oleta.Sama(null, p.Laskuun(), "lähdössä soi → ei laskua");
+            for (int i = 1; i < OpasPallolauseet.Vali; i++) p.Lahtoon(220, 300);
+            Oleta.Sama(OpasSiltalauseet.Kierros, p.Lahtoon(221, 300), "lyhyt, suora → tavallinen kierros-lause");
+            // 20 siirtymää: enintään 5 lausetta, ei kahta peräkkäin.
+            var q = new OpasPallolauseet(); int n = 0, ed = -10;
+            for (int i = 0; i < 20; i++)
+                if (q.Lahtoon(i % 2 == 0 ? 0 : 120, 1500) != null) { n++; Oleta.Tosi(i - ed >= OpasPallolauseet.Vali, $"siirtymä {i}: edellinen lause {i - ed} siirtymää sitten"); ed = i; }
+            Oleta.Sama(5, n, "20 siirtymää → 5 lausetta");
+            Oleta.Sama(OpasSiltalauseet.Kierros, new OpasPallolauseet().Lahtoon(0, 500, r => r != OpasPallolauseet.Lahto), "ryhmää ei aineistossa → tavallinen");
         }
 
         // Juna 166 (Pelikoodarin GET /opas/saa PR #4194): vastaus → Saatila.LiveSaa; LIVE-aika auringosta; hakuväli.
@@ -395,9 +395,10 @@ namespace Matkakirja.Linssit.Testit
                 }
                 var tapaukset = new[]
                 {
-                    // Prefektuuri on 230 m Notre-Damesta: lähtökehys pysyy, joten parannus vain nousun alussa (≥ 10 %).
-                    ("Notre-Dame → Concorde / prefektuuri", new Kuvakulma(48.8530, 2.3498, 420, 58, 250, 60), new Kuvakulma(48.8656, 2.3212, 400, 58, 300, 40), 48.8541, 2.3470, 1.1, 0.0),
-                    ("Concorde → Champs-Élysées / Élysée", new Kuvakulma(48.8656, 2.3212, 400, 58, 300, 40), new Kuvakulma(48.8697, 2.3079, 380, 58, 290, 40), 48.8704, 2.3167, 1.4, 600.0),
+                    // Prefektuuri on 230 m Notre-Damesta: päätepisteen vieressä ei nostoa (SumennusPaateM, omistaja 9.10. lennot matalammiksi). Nosto 9.10. matalammaksi
+                    // (omistaja: lennot matalammalla; SumennusEtM 1 100 → 500 m), joten rajat 1,1/1,4 → 1,0/1,0 ja vähintään 600 → 450 m (Élysée ohitetaan jo ilman nostoa 533 m:stä).
+                    ("Notre-Dame → Concorde / prefektuuri", new Kuvakulma(48.8530, 2.3498, 420, 58, 250, 60), new Kuvakulma(48.8656, 2.3212, 400, 58, 300, 40), 48.8541, 2.3470, 1.0, 0.0),
+                    ("Concorde → Champs-Élysées / Élysée", new Kuvakulma(48.8656, 2.3212, 400, 58, 300, 40), new Kuvakulma(48.8697, 2.3079, 380, 58, 290, 40), 48.8704, 2.3167, 1.0, 450.0),
                 };
                 foreach (var (nimi, a, b, slat, slon, kerroin, vahintaan) in tapaukset)
                 {
