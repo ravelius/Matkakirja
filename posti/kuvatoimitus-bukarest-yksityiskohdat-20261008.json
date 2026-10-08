@@ -1,0 +1,772 @@
+{
+  "task": "bukarest-yksityiskohdat-20261008",
+  "routedTaskNumber": 36,
+  "source": {
+    "path": "posti/sisaltokirjuri-codex-bukarest-yksityiskohdat-20261008.md",
+    "commit": "61a74db9eb72457dae7eab4376829e1c49534cf6",
+    "blob": "83215cb6897042d451068201bdee132ed5242625"
+  },
+  "sourceReadInFull": true,
+  "requestedImages": 6,
+  "imageCount": 5,
+  "generationCalls": 5,
+  "generationLimit": 6,
+  "sourceImagePixelsUsed": false,
+  "generationMode": "built-in image_gen, text-only, one call per produced subject; metadata-only final preparation",
+  "productionComplete": true,
+  "assets": [
+    {
+      "number": 1,
+      "qid": "Q638278",
+      "id": "puinen-riemukaari-1878",
+      "filename": "bukarest-Q638278-puinen-riemukaari-1878.png",
+      "file": "bukarest-Q638278-puinen-riemukaari-1878.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/bukarest-yksityiskohdat-20261008/production/01-puinen-riemukaari-1878/bukarest-Q638278-puinen-riemukaari-1878.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationPrompt": "Use case: historical-scene\nAsset type: photorealistic historical educational reconstruction for a Bucharest city introduction.\nCreate ONE completely NEW TEXT-ONLY image, native exactly 1536 x 1024 landscape (3:2), opaque RGB PNG, sRGB. No input images or source photographs. The result must look like a convincing real-camera color photograph of a carefully reconstructed historical scene, not a drawing, painting, engraving, watercolor, diorama, miniature or glossy CGI. Natural daylight, restrained muted colors, honest material texture, realistic perspective and exposure. No HDR, cinematic color grading or oversaturation.\nScene and time: Bucharest in October 1878, a temporary timber triumphal gateway welcoming the returning Romanian army after the War of Independence. This is a general historically informed reconstruction; the exact temporary arch design and location are uncertain. It is NOT the permanent stone Arcul de Triumf of 1922/1936 and not a present-day roundabout.\nSubject: show the WHOLE rough wooden gateway centered with open sky around its top and all its feet visible. One large round-arched central passage, plus TWO genuinely open lower round-arched side passages, one on each side, exactly three open passages total. Make the simple quickly erected joinery visually unmistakable: rough-sawn brown timber uprights, planks and exposed bracing, wood grain, a modest timber beam attic. Some plain pale cloth draped over the beam, loose green conifer garlands and a few small flowers. No masonry stone facade, carved sculptures, colonnade, stone relief, royal crown or portrait. A clearly visible plain rectangular wooden plaque above the central opening is COMPLETELY BLANK, with absolutely no markings.\nFlags: several modest plain Romanian civil tricolor cloth flags, VERTICAL blue-yellow-red bands, blue next to the pole, yellow center, red fly edge. No coat of arms, eagle, crest or inscriptions. Flags and garlands look like temporary modest decoration, not elaborate festival scenery.\nSetting: a dry sandy roadway through a broad irregular open clearing at the city edge, low plastered nineteenth-century houses and simple pitched tile roofs set well behind, scattered autumn trees. No engineered traffic circle, curbs or monumental boulevard. The arch is clearly much taller than the distant people but modest and temporary.\nPeople and peaceful action: beyond the near foreground, a SMALL distant group of anonymous fictional adult soldiers walks AWAY from the camera through the central passage, seen only from the back. They are 1870s Romanian line infantry wearing dark navy wool tunics, muted dark trousers, small dark kepi/shako-style caps, simple leather belts and modest canvas/leather packs. Keep each human very small, faces entirely hidden, no named leader or officer portrait. A few long wood-stock service rifles are safely lowered along the side or slung on backs, no aimed firearms. Do not fill the foreground with people; the whole wooden arch is the subject.\nComposition: mid-distance wide architectural camera view from slightly below normal standing eye height, almost frontal with a subtle oblique angle to show the timber thickness. Arch occupies the middle half of the frame, feet and sand foreground remain visible; all three openings legible. Natural 40mm-lens-like perspective, soft October overcast daylight, realistic plank and cloth detail.\nStrict exclusions: NO readable or pseudo-readable writing, letters, numerals, logos, heraldic emblems, signs, captions, watermarks, borders or decorative framing. No real historical person's likeness, portrait, statue or face. No recognizable facial features on any person. No modern buildings, asphalt markings, traffic lights, electricity pylons, motor vehicles, contemporary clothes or other present-day objects. No blood, injury, battle, smoke from guns or violence. Full-frame image, no split panels.",
+      "viitteet": [
+        {
+          "publisher": "Muzeul Municipiului București",
+          "title": "Doina Constantinescu: Mereu în actualitate: Arcul de Triumf, București – Materiale de Istorie și Muzeografie XI (1992), pp. 179–180",
+          "url": "https://bmim.muzeulbucurestiului.ro/fisiere/11-Bucuresti-Materiale-de-Istorie-si-Muzeografie-XI-1992_180.pdf",
+          "notes": "Institutional scholarly text confirms temporary wooden predecessor decorated with flowers and flags; exact 1878 location unresolved. Read text only; no archival image pixels viewed or used.",
+          "type": "textResearchOnly",
+          "access": "2026-10-08; primary institutional text only"
+        },
+        {
+          "publisher": "Primăria Municipiului București / Universitatea de Arhitectură și Urbanism Ion Mincu",
+          "title": "Studiu istoric – Actualizare studii istorice (2025), p. 226 note 435",
+          "url": "https://urbanism.pmb.ro/duat-su/STUDII_2025/7.PATRIMONIU/7.1_E1F2_8.5%20Studiu%20istoric-Actualizare%20studii%20istorice/1.%20Parte%20scrisa/01.E1F2_8.5_Studiu%20istoric.pdf",
+          "notes": "Official municipal study lists earlier temporary arches and 1878 temporary arch; do not label this the city's first arch. Only indexed text consulted.",
+          "type": "textResearchOnly",
+          "access": "2026-10-08; primary institutional text only"
+        },
+        {
+          "publisher": "Ministerul Apărării Naționale",
+          "title": "Repere istorice – 1878",
+          "url": "https://www.mapn.ro/repere_istorice/",
+          "notes": "Official chronology states victorious army entered Bucharest on Podul Mogoșoaiei on 8/20 October 1878. Only text consulted.",
+          "type": "textResearchOnly",
+          "access": "2026-10-08; primary institutional text only"
+        }
+      ],
+      "kuvateksti": "Bukarestin väliaikainen puinen juhlaportti ja palaavia sotilaita lokakuussa 1878. Kaaren muoto ja ympäristö on rekonstruoitu yleispiirteisesti. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "sourceCommit": "61a74db9eb72457dae7eab4376829e1c49534cf6",
+      "sourceBlob": "83215cb6897042d451068201bdee132ed5242625",
+      "sourcePath": "posti/sisaltokirjuri-codex-bukarest-yksityiskohdat-20261008.md",
+      "sourceFileRead": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/bukarest-yksityiskohdat-20261008/sources/01-tilaus.md",
+      "sourceReadInFull": true,
+      "sharedRulesReadInFull": true,
+      "sharedRulesSourcesRead": [
+        "output/bukarest-yksityiskohdat-20261008/sources/01-tilaus.md (entire)",
+        "output/bukarest-yksityiskohdat-20261008/sources/02-yhteiset-lontoo-saannot.md (entire)"
+      ],
+      "sourceImagePixelsUsed": false,
+      "generationMethod": "built-in image_gen; new text-only",
+      "status": "local-candidate-approved",
+      "historicalCorrections": [
+        "Removed 'first' arch claim because official city study lists previous temporary arches.",
+        "Replaced modern roundabout setting with generic open sandy period clearing; precise temporary arch location disputed in institutional museum research.",
+        "Three openings, blank plaque, conifer garlands and generic timber shape follow authorized visual brief; not verified as an exact 1878 architectural plan."
+      ],
+      "QA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Viewed the final native 1536x1024 PNG and separate full-frame 480x320 preview.",
+          "Entire temporary timber gate, exactly one large central opening and two smaller open side passages, visible wood grain/bracing and fully blank plaque.",
+          "Plain blue-yellow-red flags, cloth and conifer garlands; no coat of arms, readable writing, logo or watermarks observed.",
+          "Anonymous small adult soldiers walk away beyond foreground, faces hidden; period-like packs and wood-stock rifles safely slung/carried, no aimed weapons or violence.",
+          "Low period-style plastered houses, sandy open roadway and autumn trees; no stone twentieth-century arch or present-day roundabout.",
+          "Photorealistic camera rendering with naturally muted colors; all three passages readable at 480px."
+        ],
+        "limitations": [
+          "Exact 1878 arch design and location are uncertain; timber geometry and three passages are brief-based original reconstruction, not an authenticated architecture copy.",
+          "Conifer garlands, cloth, uniform details and building arrangement are generic original period suggestions.",
+          "A few rifles project upwards above packs while slung/carried; none are aimed or used."
+        ],
+        "parentReview": "pending independent root QA"
+      },
+      "r2Delivered": false,
+      "mailboxDelivered": false,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "generationAttemptsRemaining": 0,
+      "originalGeneratedPath": "/Volumes/NAS-Homes/koodaus/Chat GPT/Aktiiviset/CodexApp/generated_images/01a11b62-0d9c-7882-a932-dc403ba2a977/exec-4018531d-a4dc-48e2-9baa-0077b9cadf7c.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/bukarest-yksityiskohdat-20261008/production/01-puinen-riemukaari-1878/original-generation.png",
+      "sha256": "8229450a95f7977475616869ebee8490dc6a87d2d24078d46f4e97e4887dad7f",
+      "originalSha256": "319cd92aff214399e0deff9c60c7e5b29ff8ab60d4d08c2549a1b8ac5240c57b",
+      "originalByteExact": true,
+      "mode": "RGB",
+      "iccProfileName": "sRGB built-in",
+      "rgbPixelsUnchanged": true,
+      "previewPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/bukarest-yksityiskohdat-20261008/production/01-puinen-riemukaari-1878/qa-preview-480.png",
+      "previewDimensions": [
+        480,
+        320
+      ],
+      "generationFailed": false,
+      "outputProduced": true,
+      "technicalChanges": [
+        "Added standard sRGB ICC profile without color conversion.",
+        "Added exact Description and Source PNG text metadata.",
+        "Decoded RGB pixel bytes verified unchanged.",
+        "Preserved byte-exact tool original; created separate full-frame 480x320 QA preview."
+      ],
+      "visualReview": {
+        "task": "bukarest-yksityiskohdat-20261008",
+        "number": 1,
+        "qid": "Q638278",
+        "file": "bukarest-Q638278-puinen-riemukaari-1878.png",
+        "sha256": "8229450a95f7977475616869ebee8490dc6a87d2d24078d46f4e97e4887dad7f",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Kokonainen puinen kolmiaukkoinen tilapäiskaari, suurempi keskiaukko, tyhjä kyltti ja kolmiväriliput; pienet marssijat selin, ei kirjoitusta tai modernia liikenneympyrää."
+        ],
+        "limitations": [
+          "Tulkinta lokakuusta1878; tarkka sijainti ja arkkitehtuuri kuvitteellisia, eikä kaarta väitetä kaupungin ensimmäiseksi."
+        ],
+        "agentVerdictBeforeRootReview": true,
+        "reviewedAtUTC": "2026-10-08T12:24:33.906831+00:00"
+      },
+      "agentQA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Viewed the final native 1536x1024 PNG and separate full-frame 480x320 preview.",
+          "Entire temporary timber gate, exactly one large central opening and two smaller open side passages, visible wood grain/bracing and fully blank plaque.",
+          "Plain blue-yellow-red flags, cloth and conifer garlands; no coat of arms, readable writing, logo or watermarks observed.",
+          "Anonymous small adult soldiers walk away beyond foreground, faces hidden; period-like packs and wood-stock rifles safely slung/carried, no aimed weapons or violence.",
+          "Low period-style plastered houses, sandy open roadway and autumn trees; no stone twentieth-century arch or present-day roundabout.",
+          "Photorealistic camera rendering with naturally muted colors; all three passages readable at 480px."
+        ],
+        "limitations": [
+          "Exact 1878 arch design and location are uncertain; timber geometry and three passages are brief-based original reconstruction, not an authenticated architecture copy.",
+          "Conifer garlands, cloth, uniform details and building arrangement are generic original period suggestions.",
+          "A few rifles project upwards above packs while slung/carried; none are aimed or used."
+        ],
+        "parentReview": "pending independent root QA"
+      },
+      "mitat": [
+        1536,
+        1024
+      ],
+      "fableReceipt": false,
+      "r2Key": "julisteet/bukarest-yksityiskohdat/20261008/bukarest-Q638278-puinen-riemukaari-1878.png",
+      "url": "https://media.matkakirja.app/julisteet/bukarest-yksityiskohdat/20261008/bukarest-Q638278-puinen-riemukaari-1878.png",
+      "bytes": 2692092,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "number": 3,
+      "qid": "Q755457",
+      "id": "maneesin-perustus",
+      "filename": "bukarest-Q755457-maneesin-perustus.png",
+      "file": "bukarest-Q755457-maneesin-perustus.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/bukarest-yksityiskohdat-20261008/production/03-maneesin-perustus/bukarest-Q755457-maneesin-perustus.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationPrompt": "Use case: historical-scene\nAsset type: photorealistic historical educational reconstruction for a Bucharest city introduction.\nCreate ONE completely NEW TEXT-ONLY image, native exactly 1536 x 1024 landscape (3:2), opaque RGB PNG, sRGB. No input images or source photographs. The result must look like a convincing real-camera color photograph of a carefully reconstructed historical scene, not a drawing, painting, engraving, watercolor, diorama, miniature or glossy CGI. Natural daylight, restrained muted colors, honest material texture, realistic perspective and exposure. No HDR, cinematic color grading or oversaturation.\nScene and time: an EMPTY halted riding-manege construction site in Bucharest near the Episcopiei garden in the early 1880s, BEFORE any work on the Romanian Athenaeum concert building. Institutional history confirms the later Athenaeum reused the riding-school circular foundation; the site's exact visible details are a general reconstruction, not an authenticated plan.\nSubject: an unmistakably CIRCULAR low masonry FOUNDATION ring, approximately 30–40 meters across in a plausible schematic scale, centered in the frame and fully visible from an elevated oblique angle. The far curve and near curve form ONE coherent ellipse in perspective, enclosing a flat empty earth interior. The foundation is low, knee-height, with a few short unfinished wall stubs, rough gray stone and muted weathered brick mortared into a substantial low continuous circular footing; no tall walls. An occasional small irregular break in the near foundation can suggest unfinished access, but keep the overall round plan clearly readable. It is construction work, not an archaeological excavation, ancient amphitheater, stonehenge, fortified ring or ruin of a demolished concert hall.\nSurroundings: quiet abandoned sandy brown-gray ground with a little restrained grass and weeds, a small pile of rough stone blocks off one edge and two orderly piles of rough timber beams off another edge, a few scattered small rubble pieces. Sparse deciduous trees around the plot; simple low nineteenth-century plastered Bucharest houses with pitched tile roofs far behind. No people, workers, horses, carriages or machinery. No active construction. The center stays open bare earth.\nComposition and camera: wide realistic real-camera view from an existing modest second-story height at the edge of the plot, angled slightly downward, equivalent to a natural 35mm lens. Show the entire foundation ring with breathing room around every side and enough elevation to read the empty circular footprint. The site occupies roughly two-thirds of the image. Soft cloudy natural daylight, modest texture in stone, pale dust and weathered wood, muted gray and sand-brown palette. Deep enough natural focus to read both near and far curves. No dramatic sepia, no artificial vintage scratches.\nCritical: NO completed or partly completed Athenaeum, NO dome, classical portico, grand columns, concert building, grand staircase, hall seating, statue, museum item or identifiable art. The only central structure is the low empty circular foundation.\nStrict exclusions: NO readable or pseudo-readable writing, letters, numerals, logos, heraldic emblems, signs, captions, watermarks, borders or decorative framing. No real historical person's likeness, portrait, statue or face. No recognizable facial features on any person. No modern buildings, asphalt markings, traffic lights, electricity pylons, motor vehicles, contemporary clothes or other present-day objects. No blood, injury, battle, smoke from guns or violence. Full-frame image, no split panels.",
+      "viitteet": [
+        {
+          "publisher": "Filarmonica George Enescu",
+          "title": "Istoric Ateneul Român – Istorie și semnificație culturală",
+          "url": "https://www.filarmonicaenescu.ro/ro/istoric-ateneul-roman",
+          "notes": "Site custodian's text states Athenaeum foundation stone laid 26 October 1886 and construction used existing riding-school foundations, explaining circular form. Text only; gallery not accessed.",
+          "type": "textResearchOnly",
+          "access": "2026-10-08; primary institutional text only"
+        },
+        {
+          "publisher": "Muzeul Municipiului București",
+          "title": "Magdalena Dorojan: A mai existat o stradă cu numele «Victoriei», București – Materiale de Istorie și Muzeografie XXV (2011), p. 49",
+          "url": "https://bmim.muzeulbucurestiului.ro/fisiere/25-Bucuresti-Materiale-de-Istorie-si-Muzeografie-XXV-2011_041.pdf",
+          "notes": "Institutional scholarly text explains Equestrian Society manege/circus halted for lack of funds after circular foundation, later reused for Athenaeum; former garden context. Text extraction only; maps/images not viewed or used.",
+          "type": "textResearchOnly",
+          "access": "2026-10-08; primary institutional text only"
+        }
+      ],
+      "kuvateksti": "Keskeytyneen ratsastusmaneesin pyöreä perustus Bukarestissa 1880-luvun alkupuolella, ennen Ateneumin rakentamista. Työmaan yksityiskohdat ovat yleispiirteinen rekonstruktio. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "sourceCommit": "61a74db9eb72457dae7eab4376829e1c49534cf6",
+      "sourceBlob": "83215cb6897042d451068201bdee132ed5242625",
+      "sourcePath": "posti/sisaltokirjuri-codex-bukarest-yksityiskohdat-20261008.md",
+      "sourceFileRead": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/bukarest-yksityiskohdat-20261008/sources/01-tilaus.md",
+      "sourceReadInFull": true,
+      "sharedRulesReadInFull": true,
+      "sharedRulesSourcesRead": [
+        "output/bukarest-yksityiskohdat-20261008/sources/01-tilaus.md (entire)",
+        "output/bukarest-yksityiskohdat-20261008/sources/02-yhteiset-lontoo-saannot.md (entire)"
+      ],
+      "sourceImagePixelsUsed": false,
+      "generationMethod": "built-in image_gen; new text-only",
+      "status": "local-candidate-approved",
+      "historicalCorrections": [
+        "No exact foundation diameter, material layout or early-1880s condition authenticated by consulted institutional texts; 30–40m is brief-based approximate visual scale.",
+        "Athenaeum building, dome and portico excluded: site custodian gives construction start 26 October 1886.",
+        "Foundation's shape is low circular masonry rather than an invented complete hall or archaeological monument."
+      ],
+      "QA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Viewed the final native 1536x1024 PNG and separate full-frame 480x320 preview.",
+          "Low circular stone-and-brick masonry foundation encloses empty earth; complete ring easily legible at 480px.",
+          "Small unfinished wall stubs, piles of timber and stone, sparse weeds and abandoned sandy ground support halted work.",
+          "No workers, people, animals, modern machinery, writing, logos or watermarks observed.",
+          "Low period-style houses and trees behind; no Athenaeum dome, portico or finished concert building.",
+          "Photorealistic camera rendering; natural subdued daylight and restrained gray/sand-brown masonry textures."
+        ],
+        "limitations": [
+          "Diameter, material joints, wall stubs, timber piles and exact site layout are original schematic suggestions based on brief; not a verified historical foundation plan.",
+          "Primary institutional text establishes circular foundation and later reuse, but does not authenticate exact early-1880s surface appearance."
+        ],
+        "parentReview": "pending independent root QA"
+      },
+      "r2Delivered": false,
+      "mailboxDelivered": false,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "generationAttemptsRemaining": 0,
+      "originalGeneratedPath": "/Volumes/NAS-Homes/koodaus/Chat GPT/Aktiiviset/CodexApp/generated_images/01a11b62-0d9c-7882-a932-dc403ba2a977/exec-92f38018-dd1c-4f19-92c1-a259e082bdb3.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/bukarest-yksityiskohdat-20261008/production/03-maneesin-perustus/original-generation.png",
+      "sha256": "52fee5cc1e443cd02bd6c2ff5fbed49155a390d8c864963cf660200a4a45286a",
+      "originalSha256": "a2eddcf26c0e1c0cdb34d56ff39bba0617983fb378c96cf9ff52fca7e07e645c",
+      "originalByteExact": true,
+      "mode": "RGB",
+      "iccProfileName": "sRGB built-in",
+      "rgbPixelsUnchanged": true,
+      "previewPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/bukarest-yksityiskohdat-20261008/production/03-maneesin-perustus/qa-preview-480.png",
+      "previewDimensions": [
+        480,
+        320
+      ],
+      "generationFailed": false,
+      "outputProduced": true,
+      "technicalChanges": [
+        "Added standard sRGB ICC profile without color conversion.",
+        "Added exact Description and Source PNG text metadata.",
+        "Decoded RGB pixel bytes verified unchanged.",
+        "Preserved byte-exact tool original; created separate full-frame 480x320 QA preview."
+      ],
+      "visualReview": {
+        "task": "bukarest-yksityiskohdat-20261008",
+        "number": 3,
+        "qid": "Q755457",
+        "file": "bukarest-Q755457-maneesin-perustus.png",
+        "sha256": "52fee5cc1e443cd02bd6c2ff5fbed49155a390d8c864963cf660200a4a45286a",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Tyhjä pyöreä matala kivi-/tiiliperustus, vanhat matalat talot ja rakennuspuut; ei valmista Ateneumia, ihmisiä tai tekstiä."
+        ],
+        "limitations": [
+          "Perustuksen halkaisija ja tontin järjestely havainnollistavia; ei autenttinen pohjapiirros."
+        ],
+        "agentVerdictBeforeRootReview": true,
+        "reviewedAtUTC": "2026-10-08T12:24:33.906831+00:00"
+      },
+      "agentQA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Viewed the final native 1536x1024 PNG and separate full-frame 480x320 preview.",
+          "Low circular stone-and-brick masonry foundation encloses empty earth; complete ring easily legible at 480px.",
+          "Small unfinished wall stubs, piles of timber and stone, sparse weeds and abandoned sandy ground support halted work.",
+          "No workers, people, animals, modern machinery, writing, logos or watermarks observed.",
+          "Low period-style houses and trees behind; no Athenaeum dome, portico or finished concert building.",
+          "Photorealistic camera rendering; natural subdued daylight and restrained gray/sand-brown masonry textures."
+        ],
+        "limitations": [
+          "Diameter, material joints, wall stubs, timber piles and exact site layout are original schematic suggestions based on brief; not a verified historical foundation plan.",
+          "Primary institutional text establishes circular foundation and later reuse, but does not authenticate exact early-1880s surface appearance."
+        ],
+        "parentReview": "pending independent root QA"
+      },
+      "mitat": [
+        1536,
+        1024
+      ],
+      "fableReceipt": false,
+      "r2Key": "julisteet/bukarest-yksityiskohdat/20261008/bukarest-Q755457-maneesin-perustus.png",
+      "url": "https://media.matkakirja.app/julisteet/bukarest-yksityiskohdat/20261008/bukarest-Q755457-maneesin-perustus.png",
+      "bytes": 3168870,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "number": 4,
+      "qid": "Q3119683",
+      "id": "keksitty-musiikkikirjasto",
+      "filename": "bukarest-Q3119683-keksitty-musiikkikirjasto.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "file": "bukarest-Q3119683-keksitty-musiikkikirjasto.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/bukarest-yksityiskohdat-20261008/production/04-keksitty-musiikkikirjasto/bukarest-Q3119683-keksitty-musiikkikirjasto.png",
+      "originalGeneratedPath": "/Volumes/NAS-Homes/koodaus/Chat GPT/Aktiiviset/CodexApp/generated_images/01a11b6c-544f-7660-9d54-b03365122ded/exec-ec912221-e6ba-4bc5-96b0-243096762949.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/bukarest-yksityiskohdat-20261008/production/04-keksitty-musiikkikirjasto/original-generation.png",
+      "sha256": "d16626531ef237ef800ba181f8345e2d398f81855ebb89628c60e7a9790b93d3",
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationPrompt": "Use case: photorealistic-natural\nAsset type: original educational illustration for a Bucharest city introduction.\nCreate ONE entirely NEW TEXT-ONLY image, native exactly 1536 x 1024 landscape 3:2, opaque RGB PNG, sRGB. Use no input images or source photographs.\nPrimary request: an entirely INVENTED GENERIC old music-library atmosphere, never the actual Stavropoleos library, its room, collection, manuscript or any recognizable artifact. Real-camera photographic look of physical books and wood. This is a newly imagined scene with newly made generic props.\nScene: a quiet old-fashioned room, a dark worn wooden bookcase behind a plain wooden reading table. Shelf contains original generic brown and deep red leather-bound books with entirely BLANK unmarked spines: plain leather, natural wear and simple binding ridges only. No gilding, titles, lettering, emblems, logos or decoration that resembles text. A small plain beeswax candle on a simple metal holder casts warm light, mixed with faint natural ambient light.\nSubject: ONE invented generic open leather-bound book on the table in the foreground, creamy aged paper, realistic curved page edges and binding, its two pages visible from an oblique slightly elevated angle. On the pages are only sparse original red and black CURVED DECORATIVE BRUSH SQUIGGLES: broad loose arcs, irregular flourishes and small curling strokes, invented nonlinguistic and NON-NOTATIONAL decoration. These marks do not encode music, do not resemble an actual score or manuscript page, and form neither letters nor words. Leave generous blank paper around them. No ruled lines or rows of writing. This simply evokes the red-black palette and curling visual rhythm of old music culture without copying or recreating any collection object.\nComposition: horizontal real-camera photograph, open book large and sharp in lower center foreground, shelves softly out of focus in the background, candle off to one side. About 50mm natural lens perspective and modest depth of field; no extreme blur. Show real paper fibres, imperfect leather grain and wood pores.\nLighting and palette: gentle warm candlelight, restrained browns, muted reds, creamy paper; natural contrast, believable shadows and tiny flame. No HDR, orange-teal cinematic treatment, over-saturation, fantasy glow, painting style or glossy CGI. The whole image must look like a camera image of real physical materials.\nAvoid: any people, faces, actual Stavropoleos room or collection, identifiable museum or library artifacts, any copied artwork, authentic manuscript or score, Greek letters, any other letters or language, music notation, musical staves, readable writing or numbers, gold titles, logos, labels, signage, watermarks, captions, borders, computer screens, modern lamps or display cases.",
+      "viitteet": [
+        {
+          "publisher": "Mănăstirea Stavropoleos",
+          "title": "Patrimoniul — Biblioteca",
+          "url": "https://stavropoleos.ro/patrimoniul/",
+          "type": "textResearchOnly",
+          "notes": "Official monastery text confirms old books, musical manuscripts and psaltic notation. The generated room, blank books and decorative non-notational red-black curls are wholly invented original props and never an actual library collection page or authentic score. No source image pixels or manuscript scans used.",
+          "access": "2026-10-08; official text only"
+        }
+      ],
+      "kuvateksti": "Täysin keksitty vanhan musiikkikirjaston tunnelma: huone, kirjat ja punamustat koristekoukerot ovat kuvitteellisia eivätkä esitä Stavropoleoksen kokoelmaa tai todellista nuottisivua. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "sourceCommit": "61a74db9eb72457dae7eab4376829e1c49534cf6",
+      "sourceBlob": "83215cb6897042d451068201bdee132ed5242625",
+      "sourcePath": "posti/sisaltokirjuri-codex-bukarest-yksityiskohdat-20261008.md",
+      "sourceReadInFull": true,
+      "sharedRulesReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "generationMethod": "built-in image_gen; new text-only",
+      "status": "local-candidate-approved",
+      "QA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Viewed final native 1536x1024 image and separate full-frame 480x320 preview.",
+          "Original generic open book shows sparse red-black curved decorative flourishes without language, notation, staves or recognizable manuscript layout. No authentic collection artifact or source image used.",
+          "Shelf books have brown/red plain worn spines, simple binding ridges and natural patina; no legible titles, glyphs, labels or numbers observed.",
+          "Plausible camera look of paper fibres, leather, wood, candle wax and mild warm lighting. No people, modern lamp/computer, watermarks, signs or frame.",
+          "Open book and the decorative motifs remain clear at 480px."
+        ],
+        "limitations": [
+          "Entire setting, books and page marks are fictional; this does not depict the actual Stavropoleos library or its collection.",
+          "Page flourishes are purely decorative and intentionally do not constitute Byzantine music notation.",
+          "Minor binding-edge wear and horizontal spine ridges are visible; no readable titles or letters were found."
+        ],
+        "parentReview": "pending independent root QA"
+      },
+      "r2Delivered": false,
+      "mailboxDelivered": false,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "previewPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/bukarest-yksityiskohdat-20261008/production/04-keksitty-musiikkikirjasto/qa-preview-480.png",
+      "generationAttemptsRemaining": 0,
+      "originalSha256": "e01bffa9abeefdcacaed31a393e6670413899b5df1321e67b23b8695dad2cab5",
+      "originalByteExact": true,
+      "mode": "RGB",
+      "iccProfileName": "sRGB built-in",
+      "rgbPixelsUnchanged": true,
+      "previewDimensions": [
+        480,
+        320
+      ],
+      "generationFailed": false,
+      "outputProduced": true,
+      "technicalChanges": [
+        "Added standard sRGB ICC profile without color conversion.",
+        "Added exact Description and Source PNG text metadata.",
+        "Decoded RGB pixel bytes verified unchanged.",
+        "Preserved byte-exact tool original; created separate full-frame 480x320 QA preview."
+      ],
+      "visualReview": {
+        "task": "bukarest-yksityiskohdat-20261008",
+        "number": 4,
+        "qid": "Q3119683",
+        "file": "bukarest-Q3119683-keksitty-musiikkikirjasto.png",
+        "sha256": "d16626531ef237ef800ba181f8345e2d398f81855ebb89628c60e7a9790b93d3",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Uudet geneeriset vanhat tekstittömät kirjat ja avoimen kirjan punaiset/mustat koristekiehkurat; kameramaiset paperi-, nahka- ja puupinnat kynttilävalossa."
+        ],
+        "limitations": [
+          "Merkit ovat kokonaan keksittyjä koristeita, eivät luettavaa kreikkaa, todellisia neumeja tai kokoelman nuottikopio. Kirjastotila kuviteltu."
+        ],
+        "agentVerdictBeforeRootReview": true,
+        "reviewedAtUTC": "2026-10-08T12:24:33.906831+00:00"
+      },
+      "agentQA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Viewed final native 1536x1024 image and separate full-frame 480x320 preview.",
+          "Original generic open book shows sparse red-black curved decorative flourishes without language, notation, staves or recognizable manuscript layout. No authentic collection artifact or source image used.",
+          "Shelf books have brown/red plain worn spines, simple binding ridges and natural patina; no legible titles, glyphs, labels or numbers observed.",
+          "Plausible camera look of paper fibres, leather, wood, candle wax and mild warm lighting. No people, modern lamp/computer, watermarks, signs or frame.",
+          "Open book and the decorative motifs remain clear at 480px."
+        ],
+        "limitations": [
+          "Entire setting, books and page marks are fictional; this does not depict the actual Stavropoleos library or its collection.",
+          "Page flourishes are purely decorative and intentionally do not constitute Byzantine music notation.",
+          "Minor binding-edge wear and horizontal spine ridges are visible; no readable titles or letters were found."
+        ],
+        "parentReview": "pending independent root QA"
+      },
+      "mitat": [
+        1536,
+        1024
+      ],
+      "fableReceipt": false,
+      "r2Key": "julisteet/bukarest-yksityiskohdat/20261008/bukarest-Q3119683-keksitty-musiikkikirjasto.png",
+      "url": "https://media.matkakirja.app/julisteet/bukarest-yksityiskohdat/20261008/bukarest-Q3119683-keksitty-musiikkikirjasto.png",
+      "bytes": 2128540,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "number": 5,
+      "qid": "Q3119683",
+      "id": "lasi-ikonin-maalaus",
+      "filename": "bukarest-Q3119683-lasi-ikonin-maalaus.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "file": "bukarest-Q3119683-lasi-ikonin-maalaus.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/bukarest-yksityiskohdat-20261008/production/05-lasi-ikonin-maalaus/bukarest-Q3119683-lasi-ikonin-maalaus.png",
+      "originalGeneratedPath": "/Volumes/NAS-Homes/koodaus/Chat GPT/Aktiiviset/CodexApp/generated_images/01a11b6c-544f-7660-9d54-b03365122ded/exec-169a56d5-3423-4ccc-8803-cea159e38abe.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/bukarest-yksityiskohdat-20261008/production/05-lasi-ikonin-maalaus/original-generation.png",
+      "sha256": "4b07074aa7049159cfe07dca1e5fc332d8d550dfc0f7234da1f6ae57e88b1f52",
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationPrompt": "Use case: photorealistic-natural\nAsset type: original educational craft illustration for a Bucharest city introduction.\nCreate ONE entirely NEW TEXT-ONLY image, native exactly 1536 x 1024 landscape 3:2, opaque RGB PNG, sRGB. No input images or source photographs.\nPrimary request: close documentary camera view of only an anonymous fictional ADULT nun's TWO HANDS painting the reverse side of a small clear glass panel, using a fine loose paintbrush. No real person's likeness or any real nun's face. Crop entirely to mature adult hands, simple black fabric cuffs, glass and worktable; no head or other visible person. Exactly two naturally proportioned adult hands and normal fingers. One hand lightly steadies a clean bare corner; the other holds a thin wooden brush naturally and applies a small blue area of clothing on the accessible upper surface of the glass.\nCraft process: physically plausible REVERSE GLASS PAINTING. A single rectangular transparent glass pane rests almost flat on two low plain wooden supports above a light neutral linen cloth. The artist works on the REAR paint surface, which faces upward toward her brush. The finished image will later be viewed through the opposite unpainted smooth glass side. Fine contours, face highlights and small features were applied first, then some larger red and blue garment areas and a muted gold halo; the large background has NOT yet been filled and remains clear. All pigments are on the same exposed rear side, not a painting on both sides. The clear unpainted margin and incomplete background reveal the pane's thin crisp glass edge, subtle reflections and the linen visible underneath. No tracing page or original artwork beneath the glass.\nArtwork on glass: a wholly NEW INVENTED GENERIC symbolic saint figure, never any known icon, named saint, museum object, actual portrait or artist's style. A simple invented stylized painted serene adult face is explicitly visible as a painted motif, not a real person's face. Plain rounded gold halo, modest red and blue clothing. No special attributes, copied pose, text, inscriptions, Greek letters, glyphs, signatures, logos, crosses containing letters, decorative border or identifiable icon design. Show the half-finished pigment areas and clear glass rather than a finished framed artwork.\nScene and composition: tabletop craft close-up from slightly above and to the side, glass panel central and large, hands enter naturally from right and lower side, brush tip contacting a small blue garment patch. A few tiny plain unlabeled paint pots containing blue, red and ochre, and two loose simple brushes on a modest worn wooden table. Soft warm window daylight, gentle realistic depth of field; no modern machines. Ordinary real physical glass, fabric and wet matte paint textures, tiny honest reflections; no polished digital illustration feel.\nPalette and camera: muted surrounding wood and black cloth, brighter but realistic red/blue/gold pigment accents, natural skin texture and restrained exposure. Real-camera 50mm documentary look. No HDR, cinematic color grading, oversaturation, glowing saint, painting style for the overall image, CGI, illustration filter or dramatic lighting.\nAvoid: the adult's face, head or identifiable body, other people, real-person likeness, children, any known icon or collection artifact, copied artwork, readable writing, language or musical glyphs, numerals, signatures, labels, signage, emblems, logos, watermark, border or frame, modern equipment, injury, blood or violence.",
+      "viitteet": [
+        {
+          "publisher": "Mănăstirea Stavropoleos",
+          "title": "Viețuitorii",
+          "url": "https://stavropoleos.ro/vietuitorii/",
+          "type": "textResearchOnly",
+          "notes": "Official monastery text confirms glass-icon painting among the nuns’ crafts. No nun, actual workshop or icon copied; only a fictional adult’s hands and an invented symbolic motif.",
+          "access": "2026-10-08; official text only"
+        },
+        {
+          "publisher": "Victoria and Albert Museum",
+          "title": "Technical examination and conservation of a reverse glass painting by Thomas Gainsborough",
+          "url": "https://www.vam.ac.uk/blog/caring-for-our-collections/technical-examination-and-conservation-of-a-reverse-glass-painting-by-thomas-gainsborough",
+          "type": "textResearchOnly",
+          "notes": "Only generic technique researched: paint is applied to one side and viewed through the other, fine foreground details first, background last. No source artwork or diagram pixels accessed or copied.",
+          "access": "2026-10-08; official conservation text only"
+        }
+      ],
+      "kuvateksti": "Kuvitteellisen aikuisen nunnan kädet maalaavat lasilevyn takapuolelle kokonaan uutta, keksittyä pyhimysaihetta perinteisellä käänteisellä lasimaalaustavalla. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "sourceCommit": "61a74db9eb72457dae7eab4376829e1c49534cf6",
+      "sourceBlob": "83215cb6897042d451068201bdee132ed5242625",
+      "sourcePath": "posti/sisaltokirjuri-codex-bukarest-yksityiskohdat-20261008.md",
+      "sourceReadInFull": true,
+      "sharedRulesReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "generationMethod": "built-in image_gen; new text-only",
+      "status": "local-candidate-approved",
+      "QA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Viewed final native 1536x1024 image and separate full-frame 480x320 preview.",
+          "Exactly two anonymous adult hands with plain black cuffs; no adult face/head or other person visible. Natural hand anatomy and brush grip.",
+          "A single clear edged glass panel is supported above linen; clear incomplete background allows linen beneath to show through. Brush touches accessible paint-side blue garment area; no tracing page is beneath glass.",
+          "New generic painted symbolic face and round gold halo, with partly filled red-blue garments, are visible without text, glyphs, names, signature or recognizable icon-specific attributes.",
+          "Plain unlabeled paint cups and loose brushes, wood, linen, glass reflections and natural window light look like physical materials. No modern machinery, logos, frame or watermark.",
+          "Craft action and the glass panel remain legible at 480px."
+        ],
+        "limitations": [
+          "Fictional hands, setting and invented symbolic saint motif; no actual nun, workshop or known icon is depicted.",
+          "This single view presents the accessible rear paint surface; completed viewing from the opposite clean glass face is not shown. The exact temporal order of paint layers cannot be authenticated from a single generated image.",
+          "Generic original religious motif inevitably shares broad halo-and-robe conventions, without named-saint attributes or a copied icon composition."
+        ],
+        "parentReview": "pending independent root QA"
+      },
+      "r2Delivered": false,
+      "mailboxDelivered": false,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "previewPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/bukarest-yksityiskohdat-20261008/production/05-lasi-ikonin-maalaus/qa-preview-480.png",
+      "generationAttemptsRemaining": 0,
+      "originalSha256": "690089dc7a590f2a4dc7baddb58fc7f758156a55df63666e184cbe0befeebf58",
+      "originalByteExact": true,
+      "mode": "RGB",
+      "iccProfileName": "sRGB built-in",
+      "rgbPixelsUnchanged": true,
+      "previewDimensions": [
+        480,
+        320
+      ],
+      "generationFailed": false,
+      "outputProduced": true,
+      "technicalChanges": [
+        "Added standard sRGB ICC profile without color conversion.",
+        "Added exact Description and Source PNG text metadata.",
+        "Decoded RGB pixel bytes verified unchanged.",
+        "Preserved byte-exact tool original; created separate full-frame 480x320 QA preview."
+      ],
+      "visualReview": {
+        "task": "bukarest-yksityiskohdat-20261008",
+        "number": 5,
+        "qid": "Q3119683",
+        "file": "bukarest-Q3119683-lasi-ikonin-maalaus.png",
+        "sha256": "4b07074aa7049159cfe07dca1e5fc332d8d550dfc0f7234da1f6ae57e88b1f52",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Kaksi aikuisen kättä, sivellin ja läpinäkyvä lasilevy; uusi nimeämätön pyhimysaihe ilman nimikirjaimia, ei ihmisen kasvoja tai tunnetun ikonin kopiota."
+        ],
+        "limitations": [
+          "Työvaiheiden ajallista kerrostusta tai tarkkaa taustapuolen tekniikkaa ei voi todistaa yhdestä kuvasta; oma rekvisiitta ja maalaus."
+        ],
+        "agentVerdictBeforeRootReview": true,
+        "reviewedAtUTC": "2026-10-08T12:24:33.906831+00:00"
+      },
+      "agentQA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Viewed final native 1536x1024 image and separate full-frame 480x320 preview.",
+          "Exactly two anonymous adult hands with plain black cuffs; no adult face/head or other person visible. Natural hand anatomy and brush grip.",
+          "A single clear edged glass panel is supported above linen; clear incomplete background allows linen beneath to show through. Brush touches accessible paint-side blue garment area; no tracing page is beneath glass.",
+          "New generic painted symbolic face and round gold halo, with partly filled red-blue garments, are visible without text, glyphs, names, signature or recognizable icon-specific attributes.",
+          "Plain unlabeled paint cups and loose brushes, wood, linen, glass reflections and natural window light look like physical materials. No modern machinery, logos, frame or watermark.",
+          "Craft action and the glass panel remain legible at 480px."
+        ],
+        "limitations": [
+          "Fictional hands, setting and invented symbolic saint motif; no actual nun, workshop or known icon is depicted.",
+          "This single view presents the accessible rear paint surface; completed viewing from the opposite clean glass face is not shown. The exact temporal order of paint layers cannot be authenticated from a single generated image.",
+          "Generic original religious motif inevitably shares broad halo-and-robe conventions, without named-saint attributes or a copied icon composition."
+        ],
+        "parentReview": "pending independent root QA"
+      },
+      "mitat": [
+        1536,
+        1024
+      ],
+      "fableReceipt": false,
+      "r2Key": "julisteet/bukarest-yksityiskohdat/20261008/bukarest-Q3119683-lasi-ikonin-maalaus.png",
+      "url": "https://media.matkakirja.app/julisteet/bukarest-yksityiskohdat/20261008/bukarest-Q3119683-lasi-ikonin-maalaus.png",
+      "bytes": 2771805,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "number": 6,
+      "qid": "Q2933758",
+      "id": "voitonparaati-1878",
+      "filename": "bukarest-Q2933758-voitonparaati-1878.png",
+      "file": "bukarest-Q2933758-voitonparaati-1878.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/bukarest-yksityiskohdat-20261008/production/06-voitonparaati-1878/bukarest-Q2933758-voitonparaati-1878.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationPrompt": "Use case: historical-scene\nAsset type: photorealistic historical educational reconstruction for a Bucharest city introduction.\nCreate ONE completely NEW TEXT-ONLY image, native exactly 1536 x 1024 landscape (3:2), opaque RGB PNG, sRGB. No input images or source photographs. The result must look like a convincing real-camera color photograph of a carefully reconstructed historical scene, not a drawing, painting, engraving, watercolor, diorama, miniature or glossy CGI. Natural daylight, restrained muted colors, honest material texture, realistic perspective and exposure. No HDR, cinematic color grading or oversaturation.\nScene and time: a PEACEFUL return parade in Bucharest on Podul Mogoșoaiei, renamed Calea Victoriei in October 1878 after the victorious Romanian army returned from the War of Independence. Depict October 1878 specifically (official chronology gives 8/20 October), a historical reconstruction, not a copy of a historical photograph or painting.\nSetting: a nineteenth-century street with worn uneven stone paving narrowing toward a distant vanishing point, modest two-story plastered buildings on each side, simple shuttered windows and pitched tile roofs, occasional unlit period gas lanterns attached to walls. Green garlands and a few flower wreaths decorate building entrances. Plain small Romanian CIVIL tricolor flags on buildings and carried in the procession, VERTICAL blue-yellow-red cloth bands, blue at pole, yellow middle, red fly. No crests, crowns, heraldry or lettering. No permanent stone triumphal arch, no Athenaeum, CEC palace, modern towers, pavement markings, vehicles or post-1878 landmark buildings.\nPeople and action: anonymous fictional ADULT infantry marches AWAY from the camera into the street, several orderly modest ranks, all from behind and distant. The people are small enough to function as anonymous figures in the wide street scene; no foreground portrait or detailed visible face. Infantry wears simple plausible 1870s Romanian line-infantry uniforms: dark navy wool coats, dark trousers, small period dark kepi/shako-style caps, plain leather belts and modest packs. No modern helmets, camouflage, armored vehicles, machine guns, or fantasy military dress. A few distant cavalry riders on ordinary horses follow the same AWAY-facing direction. All carrying long wood-stock period service rifles keep them lowered securely at their side or slung; no weapons aimed or brandished, bayonets restrained and never threatening anyone.\nAudience: small sparse groups of anonymous fictional adults in simple 1870s coats, long skirts and plain hats along both street edges, seen from the BACK or rear-oblique only, also looking ahead into the distance. Arrange them with backs to the camera; no person looks toward camera or across the frame showing a face. Keep everyone wholly anonymous, no named monarch, no royal carriage, no leader portrait. No distressed or wounded people, no blood, violence or combat. The feeling is calm civic celebration.\nComposition and camera: wide view from an upper-story window/balcony roughly six meters above street level, looking straight along the street behind the retreating procession. Nearest marching figures start at least 20 meters away, each under roughly one-twelfth of image height. Leave quiet stone paving in the lower foreground, buildings frame both sides, parade recedes toward center. Natural 40mm-lens-like documentary perspective and deep focus, no exaggerated aerial view or miniature blur. Soft October daylight, restrained muted blues, browns, plaster and dusty cobbles, warm-neutral realistic light. Show the scale of the whole street and the small procession, not close people.\nStrict exclusions: NO readable or pseudo-readable writing, letters, numerals, logos, heraldic emblems, signs, captions, watermarks, borders or decorative framing. No real historical person's likeness, portrait, statue or face. No recognizable facial features on any person. No modern buildings, asphalt markings, traffic lights, electricity pylons, motor vehicles, contemporary clothes or other present-day objects. No blood, injury, battle, smoke from guns or violence. Full-frame image, no split panels.",
+      "viitteet": [
+        {
+          "publisher": "Ministerul Apărării Naționale",
+          "title": "Repere istorice – 1878",
+          "url": "https://www.mapn.ro/repere_istorice/",
+          "notes": "Official chronology confirms army entry on Podul Mogoșoaiei 8/20 October 1878 and renaming to Calea Victoriei. Text only.",
+          "type": "textResearchOnly",
+          "access": "2026-10-08; primary institutional text only"
+        },
+        {
+          "publisher": "Muzeul Municipiului București",
+          "title": "Expoziția tematică: Calea Victoriei, incursiune în istoria unei ulițe domnești",
+          "url": "https://muzeulbucurestiului.ro/en/expozitia-tematica-calea-victoriei-incursiune-in-istoria-unei-ulite-domnesti/",
+          "notes": "Municipal museum's own exhibition text confirms 1878 triumphant army entry led to street renaming. Indexed text only; exhibition images not accessed.",
+          "type": "textResearchOnly",
+          "access": "2026-10-08; primary institutional text only"
+        },
+        {
+          "publisher": "Primăria Municipiului București",
+          "title": "Povestea orașului",
+          "url": "https://www2.pmb.ro/orasul/povestea_orasului/poveste.php",
+          "notes": "City's own history gives later construction dates for Athenaeum 1888, university foundation 1891, post office 1894–1900, CEC 1900, military circle 1912; exclude these from 1878 view. Text only.",
+          "type": "textResearchOnly",
+          "access": "2026-10-08; primary institutional text only"
+        }
+      ],
+      "kuvateksti": "Nimettömiä sotilaita paluuparaatissa Bukarestin Calea Victoriein varrella lokakuussa 1878. Katunäkymä ja paraatijärjestys on rekonstruoitu yleispiirteisesti. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "sourceCommit": "61a74db9eb72457dae7eab4376829e1c49534cf6",
+      "sourceBlob": "83215cb6897042d451068201bdee132ed5242625",
+      "sourcePath": "posti/sisaltokirjuri-codex-bukarest-yksityiskohdat-20261008.md",
+      "sourceFileRead": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/bukarest-yksityiskohdat-20261008/sources/01-tilaus.md",
+      "sourceReadInFull": true,
+      "sharedRulesReadInFull": true,
+      "sharedRulesSourcesRead": [
+        "output/bukarest-yksityiskohdat-20261008/sources/01-tilaus.md (entire)",
+        "output/bukarest-yksityiskohdat-20261008/sources/02-yhteiset-lontoo-saannot.md (entire)"
+      ],
+      "sourceImagePixelsUsed": false,
+      "generationMethod": "built-in image_gen; new text-only",
+      "status": "local-candidate-review-required",
+      "historicalCorrections": [
+        "Corrected order's October–November date to October 1878; primary ministry chronology gives 8/20 October.",
+        "Avoided later Belle Epoque landmarks and permanent twentieth-century triumphal arch.",
+        "Small generic line-infantry uniforms and procession arrangement are period suggestions, not authenticated replica equipment or parade order; all fictional anonymous rear-facing adults."
+      ],
+      "QA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": false,
+        "observations": [
+          "Viewed the final native 1536x1024 PNG and separate full-frame 480x320 preview.",
+          "Wide street perspective with cobbles, modest plastered houses, garlands, plain blue-yellow-red cloth flags, unlit period-like lanterns and small receding procession.",
+          "Anonymous infantry, sparse spectators and three cavalry riders are rear-facing; no recognizable real person, portrait or clear face observed.",
+          "Wood-stock rifles carried lowered at soldiers' sides or slung, no aimed weapons, injury, blood or violence.",
+          "No text, numbers, logos, heraldic emblems, border or watermark observed.",
+          "Natural camera-like color and muted autumn daylight; generated soldiers are larger in the lower part of the frame than requested."
+        ],
+        "limitations": [
+          "FLAG REVIEW REQUIRED: cloth hangs from diagonal poles with colors reading blue at top, yellow middle and red lower; this may be rotated draping but the requested vertical-band Romanian flag representation is not unambiguous. Root must assess acceptability before delivery.",
+          "SCALE REVIEW REQUIRED: nearest anonymous rear-facing infantry figures are about 20 percent of image height, larger than prompt's preferred under one-twelfth. Faces remain fully hidden.",
+          "Street buildings, gas-lantern placement, army uniforms, equipment and procession arrangement are generic original period suggestions, not authenticated replica or exact parade order.",
+          "Distant building silhouettes are invented period scenery, not a precise documented Calea Victoriei view."
+        ],
+        "parentReview": "pending independent root QA"
+      },
+      "r2Delivered": false,
+      "mailboxDelivered": false,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "generationAttemptsRemaining": 0,
+      "originalGeneratedPath": "/Volumes/NAS-Homes/koodaus/Chat GPT/Aktiiviset/CodexApp/generated_images/01a11b62-0d9c-7882-a932-dc403ba2a977/exec-cb508c36-7fa5-49a7-a829-fae6bd1c70fc.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/bukarest-yksityiskohdat-20261008/production/06-voitonparaati-1878/original-generation.png",
+      "sha256": "8754b756b02e078fba7d7e33b6705902cdf7ed54b7f4cc49cb3a8063e9ed2195",
+      "originalSha256": "c9900085ea51bff23e44d9a6db2c395aca7e545ebef23364a11310335f360ef7",
+      "originalByteExact": true,
+      "mode": "RGB",
+      "iccProfileName": "sRGB built-in",
+      "rgbPixelsUnchanged": true,
+      "previewPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/bukarest-yksityiskohdat-20261008/production/06-voitonparaati-1878/qa-preview-480.png",
+      "previewDimensions": [
+        480,
+        320
+      ],
+      "generationFailed": false,
+      "outputProduced": true,
+      "technicalChanges": [
+        "Added standard sRGB ICC profile without color conversion.",
+        "Added exact Description and Source PNG text metadata.",
+        "Decoded RGB pixel bytes verified unchanged.",
+        "Preserved byte-exact tool original; created separate full-frame 480x320 QA preview."
+      ],
+      "visualReview": {
+        "task": "bukarest-yksityiskohdat-20261008",
+        "number": 6,
+        "qid": "Q2933758",
+        "file": "bukarest-Q2933758-voitonparaati-1878.png",
+        "sha256": "8754b756b02e078fba7d7e33b6705902cdf7ed54b7f4cc49cb3a8063e9ed2195",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Kaukaiset rivistöt ja ratsut selin, liput sininen/keltainen/punainen, vanhat kadut ja matalat talot, ei tekstiä tai väkivaltaa."
+        ],
+        "limitations": [
+          "Lähimmät selin olevat sotilaat noin20prosenttia korkeudesta ilman lähikasvoja. Liput roikkuvat pystysuuntaisina banderolleina, joten kolmivärin raidat näkyvät ylhäältä alas; ei väite erillisestä vaakaraitaisesta valtiolipusta. Sommittelu ja univormut yleisiä."
+        ],
+        "agentVerdictBeforeRootReview": false,
+        "reviewedAtUTC": "2026-10-08T12:24:33.906831+00:00"
+      },
+      "agentQA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": false,
+        "observations": [
+          "Viewed the final native 1536x1024 PNG and separate full-frame 480x320 preview.",
+          "Wide street perspective with cobbles, modest plastered houses, garlands, plain blue-yellow-red cloth flags, unlit period-like lanterns and small receding procession.",
+          "Anonymous infantry, sparse spectators and three cavalry riders are rear-facing; no recognizable real person, portrait or clear face observed.",
+          "Wood-stock rifles carried lowered at soldiers' sides or slung, no aimed weapons, injury, blood or violence.",
+          "No text, numbers, logos, heraldic emblems, border or watermark observed.",
+          "Natural camera-like color and muted autumn daylight; generated soldiers are larger in the lower part of the frame than requested."
+        ],
+        "limitations": [
+          "FLAG REVIEW REQUIRED: cloth hangs from diagonal poles with colors reading blue at top, yellow middle and red lower; this may be rotated draping but the requested vertical-band Romanian flag representation is not unambiguous. Root must assess acceptability before delivery.",
+          "SCALE REVIEW REQUIRED: nearest anonymous rear-facing infantry figures are about 20 percent of image height, larger than prompt's preferred under one-twelfth. Faces remain fully hidden.",
+          "Street buildings, gas-lantern placement, army uniforms, equipment and procession arrangement are generic original period suggestions, not authenticated replica or exact parade order.",
+          "Distant building silhouettes are invented period scenery, not a precise documented Calea Victoriei view."
+        ],
+        "parentReview": "pending independent root QA"
+      },
+      "mitat": [
+        1536,
+        1024
+      ],
+      "fableReceipt": false,
+      "r2Key": "julisteet/bukarest-yksityiskohdat/20261008/bukarest-Q2933758-voitonparaati-1878.png",
+      "url": "https://media.matkakirja.app/julisteet/bukarest-yksityiskohdat/20261008/bukarest-Q2933758-voitonparaati-1878.png",
+      "bytes": 2859818,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    }
+  ],
+  "excludedItems": [
+    {
+      "number": 2,
+      "qid": "Q164150",
+      "id": "kuvitteellinen-maanalainen-leikkaus",
+      "generationCalls": 0,
+      "reason": "Official CIC treats advanced nuclearbunker/escape tunnels as an urbanlegend and doesnot verify eight undergroundlevels; municipal text separately asserts shelter existence, but not eightlevels. Currentactual-building eightfloor/bunker diagram unverified; sourcepermitsomission, no replacementlegenddiagram authorised."
+    }
+  ],
+  "comparison": {
+    "file": "toimitetut-5.jpg",
+    "r2Key": "julisteet/bukarest-yksityiskohdat/20261008/toimitetut-5.jpg",
+    "url": "https://media.matkakirja.app/julisteet/bukarest-yksityiskohdat/20261008/toimitetut-5.jpg",
+    "sha256": "e4d2c1ffdf51f7c35ba840349d6057ed2e55f607ea663f423323173bc09d0d71",
+    "bytes": 331658,
+    "http": 200,
+    "mime": "image/jpeg",
+    "cors": "https://matkakirja.app",
+    "byteExactReadback": true
+  },
+  "deliveryStatus": "Selected candidates R2 verified and submitted through this mailbox manifest/report; Fable/editor/game receipt unverified.",
+  "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+  "editorAcceptance": false,
+  "fableReceipt": false,
+  "gameIntegrated": false,
+  "published": false,
+  "createdAt": "2026-10-08T12:24:45.576410+00:00"
+}

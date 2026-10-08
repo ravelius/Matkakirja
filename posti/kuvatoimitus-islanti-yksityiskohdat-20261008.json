@@ -1,0 +1,749 @@
+{
+  "task": "islanti-yksityiskohdat-20261008",
+  "routedTaskNumber": 39,
+  "source": {
+    "path": "posti/sisaltokirjuri-codex-islanti-yksityiskohdat-20261008.md",
+    "commit": "dd88e5a60327dc8791e66533cff276382899b3a6",
+    "blob": "d4a229772c9fe187fb08de8c48b8ee191a197971"
+  },
+  "sourceReadInFull": true,
+  "requestedImages": 5,
+  "imageCount": 5,
+  "generationCalls": 5,
+  "generationLimit": 5,
+  "sourceImagePixelsUsed": false,
+  "generationMode": "built-in image_gen, text-only, one call per produced subject; metadata-only final preparation",
+  "productionComplete": true,
+  "assets": [
+    {
+      "number": 1,
+      "qid": "Q794242",
+      "id": "kaksi-pappia-landakotissa",
+      "filename": "islanti-Q794242-kaksi-pappia-landakotissa.png",
+      "file": "islanti-Q794242-kaksi-pappia-landakotissa.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/islanti-yksityiskohdat-20261008/production/01-kaksi-pappia-landakotissa/islanti-Q794242-kaksi-pappia-landakotissa.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationPrompt": "Use case: historical-scene\nAsset type: educational historical reconstruction for a Reykjavík introduction.\nScene: a wholly imagined summer walk on the open grassy Landakot hill above Reykjavík in the late 1850s. The little settlement below consists only of low simple wooden houses, dark wooden gables, several earth-and-turf roofs, small gravel paths and a few scattered garden plots; beyond is the quiet gray-blue sea bay, low distant coastal hills and ONE tiny brown wooden fishing sailing boat. A broad modest treeless Icelandic grassy moor occupies the lower foreground. Buildings are small and irregular, not a dense modern city. No current church or cathedral, no completed Landakotskirkja, no concrete apartment blocks or modern skyline.\nSubject: exactly TWO anonymous, entirely FICTIONAL adult Catholic priests in long plain matte black cassocks and simple broad-brimmed black hats, walking gently down the hill toward the bay. Their backs face the camera COMPLETELY, heads facing directly away; show only the backs of their hats and robes, no faces or side profiles. They are SMALL figures, about one eighth of the image height, in the lower foreground within a large landscape, not close portraits. These figures are not likenesses of Bernard, Baudoin or any real historical person. No extra humans.\nComposition: horizontal wide documentary camera view from slightly behind the two walkers, looking down over the settlement toward the bay. Normal broad lens perspective, natural spatial depth, believable grass and timber texture, no theatrical posing.\nLight and palette: soft clear northern summer daylight, restrained pale sky, gray-blue water, earth browns, muted green grass and plain black cloth. Photographic realism with all surfaces naturally lit, no old-paper or sepia treatment.\nAvoid: face details, frontal or sideways heads, real portraits, present-day church, modern objects, vehicles, overhead wires, power poles, giant flags, French flag, fantasy costumes or exaggerated hats.\nCreate ONE entirely NEW TEXT-ONLY image. Native exactly 1536 x 1024 landscape, 3:2, opaque RGB PNG, sRGB. No image inputs or reference-photo pixels. Real-camera PHOTOREALISM: convincing photographic materials and normal perspective, restrained exposure and muted colors. No drawing, lithograph, watercolor, painting, illustration brushwork, stylized rendering, glossy CGI, HDR, cinematic grading or oversaturation. Full frame with no border. Absolutely no readable writing, lettering, digits, labels, signage, logos, captions or watermark anywhere. No recognizable real people, no identifiable faces, no injury, blood or violence.",
+      "viitteet": [
+        {
+          "publisher": "Kaþólska Kirkjan á Íslandi",
+          "title": "Dómkirkja Krists Konungs í Landakoti",
+          "url": "https://catholica.is/domkirkja-krist-konungs-i-landakoti/",
+          "notes": "Official cathedral text places acquisition of Landakot in 1859 and excludes the later cathedral from the nineteenth-century scene. Fictional people, scene and walk; no portrait or source-photo pixels used.",
+          "type": "textResearchOnly",
+          "access": "2026-10-08; primary extracted text only"
+        },
+        {
+          "publisher": "Kaþólska Kirkjan á Íslandi",
+          "title": "The Diocese: History",
+          "url": "https://catholica.is/en/the-diocese-history/",
+          "notes": "Official diocesan text mentions French priests arriving in 1857, with Landakot settlement three years later. The official chronology varies from the cathedral page; the image remains an imagined late-1850s visit, not a verified arrival/settlement event.",
+          "type": "textResearchOnly",
+          "access": "2026-10-08; primary extracted text only"
+        }
+      ],
+      "kuvateksti": "Kuvitteelliset nimettömät katoliset papit kävelevät Landakotin mäellä 1850-luvun lopun Reykjavíkia muistuttavassa maisemassa. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "sourceCommit": "dd88e5a60327dc8791e66533cff276382899b3a6",
+      "sourceBlob": "d4a229772c9fe187fb08de8c48b8ee191a197971",
+      "sourcePath": "posti/sisaltokirjuri-codex-islanti-yksityiskohdat-20261008.md",
+      "sourceReadInFull": true,
+      "sharedRulesReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "generationMethod": "built-in image_gen; new text-only",
+      "status": "local-candidate-approved",
+      "QA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Viewed final native 1536x1024 image and separate full-frame 480x320 preview.",
+          "Two small fictional adult priests are fully rear-facing in black cassocks and broad-brimmed hats; no facial features or real-person likeness visible.",
+          "Wide grassy hillside, low wooden and turf-roofed settlement, sea bay and tiny brown sailing fishing boat. No current church, modern buildings, vehicles or utility wires.",
+          "Natural photographic textures and muted summer daylight; no readable writing, digits, signs, logos or borders. Scene remains legible at 480px."
+        ],
+        "limitations": [
+          "Entire imagined walk, people, settlement arrangement and viewpoint; not an authenticated reconstruction or actual historical event.",
+          "Official church pages differ between 1859 Landakot acquisition and circa 1860 settlement. Caption retains a broad late-1850s imagined context and does not claim the exact arrival or settlement date.",
+          "The two figures occupy about one quarter of frame height rather than the requested one eighth, but remain small anonymous figures within the broad landscape."
+        ],
+        "parentReview": "pending independent root QA"
+      },
+      "r2Delivered": false,
+      "mailboxDelivered": false,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "sourceFileRead": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/islanti-yksityiskohdat-20261008/sources/01-tilaus.md",
+      "sharedRulesSourcesRead": [
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/islanti-yksityiskohdat-20261008/sources/01-tilaus.md (entire)",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/islanti-yksityiskohdat-20261008/sources/02-yhteiset-lontoo-saannot.md (entire)"
+      ],
+      "generationAttemptsRemaining": 0,
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11b72-61e8-77c0-a53b-b5f3cc1e0197/exec-53accc42-6551-4140-80ab-d56670a777c6.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/islanti-yksityiskohdat-20261008/production/01-kaksi-pappia-landakotissa/original-generation.png",
+      "originalSha256": "b603ed2a82b1efb2f2d260541267e97a1f7132ad58962baa2cb3d724e0429f68",
+      "originalByteExact": true,
+      "sha256": "a86b13bad36abc00b2bddbc719f2c46d47ef3e67aef53a88a687b7f26f244ce5",
+      "mode": "RGB",
+      "iccProfileName": "sRGB built-in",
+      "rgbPixelsUnchanged": true,
+      "previewPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/islanti-yksityiskohdat-20261008/production/01-kaksi-pappia-landakotissa/qa-preview-480.png",
+      "previewDimensions": [
+        480,
+        320
+      ],
+      "generationFailed": false,
+      "outputProduced": true,
+      "technicalChanges": [
+        "Added standard sRGB ICC profile without color conversion.",
+        "Added exact Description and Source PNG text metadata.",
+        "Decoded RGB pixel bytes verified unchanged.",
+        "Preserved byte-exact tool original; created separate full-frame 480x320 QA preview."
+      ],
+      "visualReview": {
+        "task": "islanti-yksityiskohdat-20261008",
+        "number": 1,
+        "qid": "Q794242",
+        "file": "islanti-Q794242-kaksi-pappia-landakotissa.png",
+        "sha256": "a86b13bad36abc00b2bddbc719f2c46d47ef3e67aef53a88a687b7f26f244ce5",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Kaksi nimetöntä papinrobed hahmoa täysin selin nummella, vanhat puu-/turvetalot, lahti ja pieni kalastusvene; ei nykykatedraalia, tekstiä tai kasvoja."
+        ],
+        "limitations": [
+          "Hahmot noin neljännes korkeudesta laajassa maisemassa. Keksitty1850-luvun lopun vierailu; ei tietyn todellisen henkilön saapumistapahtuma tai paikkatarkka kaupunkinäkymä."
+        ],
+        "agentVerdictBeforeRootReview": true,
+        "reviewedAtUTC": "2026-10-08T12:30:27.211466+00:00"
+      },
+      "agentQA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Viewed final native 1536x1024 image and separate full-frame 480x320 preview.",
+          "Two small fictional adult priests are fully rear-facing in black cassocks and broad-brimmed hats; no facial features or real-person likeness visible.",
+          "Wide grassy hillside, low wooden and turf-roofed settlement, sea bay and tiny brown sailing fishing boat. No current church, modern buildings, vehicles or utility wires.",
+          "Natural photographic textures and muted summer daylight; no readable writing, digits, signs, logos or borders. Scene remains legible at 480px."
+        ],
+        "limitations": [
+          "Entire imagined walk, people, settlement arrangement and viewpoint; not an authenticated reconstruction or actual historical event.",
+          "Official church pages differ between 1859 Landakot acquisition and circa 1860 settlement. Caption retains a broad late-1850s imagined context and does not claim the exact arrival or settlement date.",
+          "The two figures occupy about one quarter of frame height rather than the requested one eighth, but remain small anonymous figures within the broad landscape."
+        ],
+        "parentReview": "pending independent root QA"
+      },
+      "mitat": [
+        1536,
+        1024
+      ],
+      "fableReceipt": false,
+      "r2Key": "julisteet/islanti-yksityiskohdat/20261008/islanti-Q794242-kaksi-pappia-landakotissa.png",
+      "url": "https://media.matkakirja.app/julisteet/islanti-yksityiskohdat/20261008/islanti-Q794242-kaksi-pappia-landakotissa.png",
+      "bytes": 2805435,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "number": 2,
+      "qid": "Q1067075",
+      "id": "hofdin-osat-1909",
+      "filename": "islanti-Q1067075-hofdin-osat-1909.png",
+      "file": "islanti-Q1067075-hofdin-osat-1909.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/islanti-yksityiskohdat-20261008/production/02-hofdin-osat-1909/islanti-Q1067075-hofdin-osat-1909.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationPrompt": "Use case: historical-scene\nAsset type: educational historical reconstruction for a Reykjavík introduction.\nScene: an imagined cargo-unloading moment at a modest Reykjavík timber landing pier in 1909, BEFORE the later engineered Old Harbour and its breakwaters. Weathered plain planked pier in the foreground, natural open gray-blue bay beyond, a small early twentieth-century coastal steam cargo ship lying beside the pier. The ship has an unmarked dark iron hull, modest smokestack with a little steam, rigging and a simple ship-mounted cargo lifting boom extending over the pier. No modern container harbour, no later breakwaters or electric cranes.\nMain subject: the visibly UNASSEMBLED prefabricated wooden components of a white Norwegian timber house. Open unmarked wooden transport crates and plain tied bundles at the center contain separate white-painted horizontal-clapboard wall PANELS, loose rectangular white window frames with cross-mullions and small top panes, curved/angled broken-pitch MANSARD roof structural segments with dark slate pieces. They lie separately, partly stacked and braced as cargo; they do NOT form a standing house. Show convincing wood grain, paint, joints and edge thickness. ALL panels and crates are absolutely blank: omit the originally requested numbering to obey the no-writing rule.\nSecondary details: TWO tiny anonymous FICTIONAL adult dock workers near the ship boom in the background, completely REAR-FACING, wearing plain wool caps and muted brown period work clothing. No faces or profiles. At the far edge of the distant coastal grass meadow, a SMALL EMPTY low gray fieldstone foundation is visible, with absolutely nothing erected on it. The foundation is secondary and distant. No completed Höfði house anywhere.\nComposition: landscape view just above pier level, cargo components dominating the central foreground, ship behind and open sea, a distant coastal meadow and empty foundation at one side. Physically plausible lifting ropes, calm stationary cargo, no dramatic unsafe action.\nLight and palette: soft northern overcast daylight. True real-camera reconstruction in restrained natural colors: weathered brown timber, matte off-white components, dull gray slate, charcoal ship and gray-blue water. No sepia tint or monochrome filter.\nAvoid: completed buildings that resemble the house, modern equipment, frontal humans, nameplates, ship names, flags, crate marks, labels, letters, numbers or logos.\nCreate ONE entirely NEW TEXT-ONLY image. Native exactly 1536 x 1024 landscape, 3:2, opaque RGB PNG, sRGB. No image inputs or reference-photo pixels. Real-camera PHOTOREALISM: convincing photographic materials and normal perspective, restrained exposure and muted colors. No drawing, lithograph, watercolor, painting, illustration brushwork, stylized rendering, glossy CGI, HDR, cinematic grading or oversaturation. Full frame with no border. Absolutely no readable writing, lettering, digits, labels, signage, logos, captions or watermark anywhere. No recognizable real people, no identifiable faces, no injury, blood or violence.",
+      "viitteet": [
+        {
+          "publisher": "Visit Reykjavík",
+          "title": "Höfði House",
+          "url": "https://visitreykjavik.is/service/hofdi-house",
+          "notes": "Official city visitor text states the house was designed in Eastern Norway and exported to Iceland, and taken into use in 1909.",
+          "type": "textResearchOnly",
+          "access": "2026-10-08; primary extracted text only"
+        },
+        {
+          "publisher": "Minjastofnun Íslands",
+          "title": "Ágrip af íslenskri húsagerðarsögu",
+          "url": "https://www.minjastofnun.is/static/files/skjol-i-grein/agripislhusagG.pdf",
+          "notes": "Official heritage publication text describes pre-cut Norway import in 1909, timber frame, horizontal clapboard, slate mansard roof, gray-stone basement and cross-mullioned windows with small top panes. Only extracted text consulted; no photos viewed or supplied.",
+          "type": "textResearchOnly",
+          "access": "2026-10-08; primary extracted text only"
+        },
+        {
+          "publisher": "Faxaflóahafnir",
+          "title": "100 years of port history",
+          "url": "https://www.faxafloahafnir.is/en/saga-hafnar",
+          "notes": "Operator text dates engineered Reykjavík harbour construction to 1913–1917 and mentions earlier Town and Stone piers. Routine factual correction: use generic modest 1909 landing pier without later harbour walls. Unloading arrangement and distant foundation are invented, not a verified delivery record.",
+          "type": "textResearchOnly",
+          "access": "2026-10-08; primary extracted text only"
+        }
+      ],
+      "kuvateksti": "Kuvitteellinen Höfðin norjalaisten puuosien purkutilanne Reykjavíkin rantalaiturilla vuonna 1909; taloa ei ole vielä koottu. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "sourceCommit": "dd88e5a60327dc8791e66533cff276382899b3a6",
+      "sourceBlob": "d4a229772c9fe187fb08de8c48b8ee191a197971",
+      "sourcePath": "posti/sisaltokirjuri-codex-islanti-yksityiskohdat-20261008.md",
+      "sourceReadInFull": true,
+      "sharedRulesReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "generationMethod": "built-in image_gen; new text-only",
+      "status": "local-candidate-approved",
+      "QA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Viewed final native 1536x1024 image and separate full-frame 480x320 preview.",
+          "Separate white clapboard panels, loose small-paned window frames, blank wooden transport crates and slate-clad roof segments dominate the scene; no completed house.",
+          "Period steam cargo ship and lifting boom behind the components; two small rear-facing anonymous workers without identifiable faces.",
+          "Small empty low stone foundation visible on the far coastal meadow; natural bay and timber landing pier without later harbour breakwaters.",
+          "Unmarked cargo and ship, no readable letters, digits or logos. Photographic restrained daylight and all major cargo shapes readable at 480px."
+        ],
+        "limitations": [
+          "Imagined cargo-unloading composition, generic house components, steamship and foundation placement; no surviving delivery photograph used or exact 1909 unloading moment claimed.",
+          "The original numbered-component requirement was deliberately omitted because shared rules forbid visible writing and numerals.",
+          "Routine factual correction from the port operator: later engineered Old Harbour was built 1913–1917, so this image uses a modest pre-harbour landing pier.",
+          "Roof cargo suggests broken-pitch mansard construction without authenticating individual Höfði roof-panel fabrication; foundation appears on a distant small coastal promontory."
+        ],
+        "parentReview": "pending independent root QA"
+      },
+      "r2Delivered": false,
+      "mailboxDelivered": false,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "sourceFileRead": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/islanti-yksityiskohdat-20261008/sources/01-tilaus.md",
+      "sharedRulesSourcesRead": [
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/islanti-yksityiskohdat-20261008/sources/01-tilaus.md (entire)",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/islanti-yksityiskohdat-20261008/sources/02-yhteiset-lontoo-saannot.md (entire)"
+      ],
+      "generationAttemptsRemaining": 0,
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11b72-61e8-77c0-a53b-b5f3cc1e0197/exec-edf4511d-7509-41a0-9fe8-9401b7b2e9ec.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/islanti-yksityiskohdat-20261008/production/02-hofdin-osat-1909/original-generation.png",
+      "originalSha256": "df122189595a3ed098d2a3c32f9ad5b1b133da59a3af913ccdcb905e03de0f34",
+      "originalByteExact": true,
+      "sha256": "1a3ef6ceb0ddc70ffcef6779e15424e3fc0d2ac98c769c707d77f57e4da0d77b",
+      "mode": "RGB",
+      "iccProfileName": "sRGB built-in",
+      "rgbPixelsUnchanged": true,
+      "previewPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/islanti-yksityiskohdat-20261008/production/02-hofdin-osat-1909/qa-preview-480.png",
+      "previewDimensions": [
+        480,
+        320
+      ],
+      "generationFailed": false,
+      "outputProduced": true,
+      "technicalChanges": [
+        "Added standard sRGB ICC profile without color conversion.",
+        "Added exact Description and Source PNG text metadata.",
+        "Decoded RGB pixel bytes verified unchanged.",
+        "Preserved byte-exact tool original; created separate full-frame 480x320 QA preview."
+      ],
+      "visualReview": {
+        "task": "islanti-yksityiskohdat-20261008",
+        "number": 2,
+        "qid": "Q1067075",
+        "file": "islanti-Q1067075-hofdin-osat-1909.png",
+        "sha256": "1a3ef6ceb0ddc70ffcef6779e15424e3fc0d2ac98c769c707d77f57e4da0d77b",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Valkoiset tekstittömät puuseinä-/ikkuna-/kattopaketit, puulaatikot, höyrylaivan puomi, anonyymit selin työskentelijät ja kaukainen tyhjä perustus."
+        ],
+        "limitations": [
+          "Geneerinen1909puulaituri ja rakennuspaikka; myöhemmin1913aloitettu valmis satamarakenne jätetty pois. Osanumeroita ei kuvassa tekstikiellon vuoksi."
+        ],
+        "agentVerdictBeforeRootReview": true,
+        "reviewedAtUTC": "2026-10-08T12:30:27.211466+00:00"
+      },
+      "agentQA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Viewed final native 1536x1024 image and separate full-frame 480x320 preview.",
+          "Separate white clapboard panels, loose small-paned window frames, blank wooden transport crates and slate-clad roof segments dominate the scene; no completed house.",
+          "Period steam cargo ship and lifting boom behind the components; two small rear-facing anonymous workers without identifiable faces.",
+          "Small empty low stone foundation visible on the far coastal meadow; natural bay and timber landing pier without later harbour breakwaters.",
+          "Unmarked cargo and ship, no readable letters, digits or logos. Photographic restrained daylight and all major cargo shapes readable at 480px."
+        ],
+        "limitations": [
+          "Imagined cargo-unloading composition, generic house components, steamship and foundation placement; no surviving delivery photograph used or exact 1909 unloading moment claimed.",
+          "The original numbered-component requirement was deliberately omitted because shared rules forbid visible writing and numerals.",
+          "Routine factual correction from the port operator: later engineered Old Harbour was built 1913–1917, so this image uses a modest pre-harbour landing pier.",
+          "Roof cargo suggests broken-pitch mansard construction without authenticating individual Höfði roof-panel fabrication; foundation appears on a distant small coastal promontory."
+        ],
+        "parentReview": "pending independent root QA"
+      },
+      "mitat": [
+        1536,
+        1024
+      ],
+      "fableReceipt": false,
+      "r2Key": "julisteet/islanti-yksityiskohdat/20261008/islanti-Q1067075-hofdin-osat-1909.png",
+      "url": "https://media.matkakirja.app/julisteet/islanti-yksityiskohdat/20261008/islanti-Q1067075-hofdin-osat-1909.png",
+      "bytes": 2633306,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "number": 3,
+      "qid": "Q945753",
+      "id": "tjorninin-lintuparvi",
+      "filename": "islanti-Q945753-tjorninin-lintuparvi.png",
+      "file": "islanti-Q945753-tjorninin-lintuparvi.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/islanti-yksityiskohdat-20261008/production/03-tjorninin-lintuparvi/islanti-Q945753-tjorninin-lintuparvi.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationPrompt": "Use case: photorealistic-natural\nAsset type: educational scene for a Reykjavík introduction.\nScene: Tjörnin pond in central Reykjavík on a bright cold late-autumn day approaching winter. A low stone shore wall and rough stone paving at the very low water-level viewpoint. Cool quiet open water, leafless trees and subdued low waterfront houses beyond. The distant current city-hall building is only a small low modern gray concrete-and-glass silhouette beside the pond in the background, with no lettering; the birds are the focus.\nPrimary subject: a dense, lively group of anatomically plausible waterbirds gathered close to the shore: gray greylag geese with orange bills, male and female mallard ducks and two large white WHOOPER swans with yellow-and-black bills. Birds float, turn and lower their bills into the water around numerous small floating bread fragments and crumbs. The bread pieces are small wet irregular pale chunks, separate floating on ripples between the birds, enough to convey the city's historical 'bread soup' metaphor. Do not make a literal pot of soup. Normal bird proportions, each bird has one coherent body, one head and one beak, no fused birds or repeated patterns.\nComposition: wide horizontal camera photograph at the water's edge, birds and bread fragments sharp and readable in the lower foreground and middle, distant waterfront and low city hall softly but recognizably present behind. Natural moderate depth of field, realistic 35mm perspective, no extreme wide-angle distortion.\nLighting and palette: bright soft cold northern daylight, natural silvery water, restrained gray/brown bird feathers, subdued green on male mallard heads, clean white swans. No snowstorm, no artificial colored light or saturated grading.\nConstraints: absolutely NO humans anywhere, no distant people, no hands, no feeding person, no pet dogs, no signs, text or logos. No feeding instructions or celebratory staged presentation, simply the imagined pond scene.\nCreate ONE entirely NEW TEXT-ONLY image. Native exactly 1536 x 1024 landscape, 3:2, opaque RGB PNG, sRGB. No image inputs or reference-photo pixels. Real-camera PHOTOREALISM: convincing photographic materials and normal perspective, restrained exposure and muted colors. No drawing, lithograph, watercolor, painting, illustration brushwork, stylized rendering, glossy CGI, HDR, cinematic grading or oversaturation. Full frame with no border. Absolutely no readable writing, lettering, digits, labels, signage, logos, captions or watermark anywhere. No recognizable real people, no identifiable faces, no injury, blood or violence.",
+      "viitteet": [
+        {
+          "publisher": "Reykjavík City",
+          "title": "Hljómskálagarðurinn, Tjörnin, and Vatnsmýrin",
+          "url": "https://reykjavik.is/en/hljomskalagardurinn-tjornin-and-vatnsmyri",
+          "notes": "City text confirms characteristic ducks, geese and swans, wintering birds and bread attracting birds. Birding brochure text lists whooper swans, greylag geese and mallards. No source photographs used.",
+          "type": "textResearchOnly",
+          "access": "2026-10-08; primary extracted text only"
+        },
+        {
+          "publisher": "Reykjavík City",
+          "title": "Birds in Reykjavík: Tjörnin Lake and Vatnsmýri",
+          "url": "https://reykjavik.is/sites/default/files/fuglabaeklingur_-_enska_1.pdf",
+          "notes": "Official brochure extracted text confirms the named waterbird species at Tjörnin. No photo pixels viewed or used.",
+          "type": "textResearchOnly",
+          "access": "2026-10-08; primary extracted text only"
+        },
+        {
+          "publisher": "Reykjavík City",
+          "title": "Reykjavík City Hall",
+          "url": "https://reykjavik.is/en/reykjavik-city-hall",
+          "notes": "Official text dates opening to 1992 and places the office building beside Tjörnin. Current background is appropriate; exact viewpoint and flock are invented.",
+          "type": "textResearchOnly",
+          "access": "2026-10-08; primary extracted text only"
+        }
+      ],
+      "kuvateksti": "Hanhet, sorsat ja laulujoutsenet kerääntyvät Tjörninin rantaan kelluvien leivänpalojen ympärille kuvitteellisessa loppusyksyn tilanteessa. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "sourceCommit": "dd88e5a60327dc8791e66533cff276382899b3a6",
+      "sourceBlob": "d4a229772c9fe187fb08de8c48b8ee191a197971",
+      "sourcePath": "posti/sisaltokirjuri-codex-islanti-yksityiskohdat-20261008.md",
+      "sourceReadInFull": true,
+      "sharedRulesReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "generationMethod": "built-in image_gen; new text-only",
+      "status": "local-candidate-approved",
+      "QA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Viewed final native 1536x1024 image and separate full-frame 480x320 preview.",
+          "Greylag geese, male/female mallard-like ducks and two whooper swans with yellow-and-black bills gather around numerous floating wet bread fragments.",
+          "Plausible individual bird anatomy and natural feather/water texture; no fused bodies or conspicuous extra parts observed.",
+          "Low stone water-level viewpoint, bare late-autumn trees, distant waterfront and low modern gray city-hall silhouette.",
+          "No discernible humans or hands, signs, readable writing, numerals or logos observed at native or 480px. Birds and bread remain clear at 480px."
+        ],
+        "limitations": [
+          "Invented flock, quantity of bread, exact water level and composition; not a photograph of an actual feeding moment.",
+          "Background waterfront and city-hall geometry are approximate. Very distant blurred shoreline detail is not authenticated.",
+          "Bread appears as abundant separate fragments between the birds rather than completely covering the water surface."
+        ],
+        "parentReview": "pending independent root QA"
+      },
+      "r2Delivered": false,
+      "mailboxDelivered": false,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "sourceFileRead": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/islanti-yksityiskohdat-20261008/sources/01-tilaus.md",
+      "sharedRulesSourcesRead": [
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/islanti-yksityiskohdat-20261008/sources/01-tilaus.md (entire)",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/islanti-yksityiskohdat-20261008/sources/02-yhteiset-lontoo-saannot.md (entire)"
+      ],
+      "generationAttemptsRemaining": 0,
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11b72-61e8-77c0-a53b-b5f3cc1e0197/exec-223a4f71-ba72-47f9-84db-c7cf5122f5af.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/islanti-yksityiskohdat-20261008/production/03-tjorninin-lintuparvi/original-generation.png",
+      "originalSha256": "acf1d48959bb9e45bdbd7f67b881393b7ccab11d31d771bad5238beb5bbefedc",
+      "originalByteExact": true,
+      "sha256": "38ad8896f50cc40a399dbd6ba6c0a27b691c6f9f2f466f2cd0340ce6ce2499a9",
+      "mode": "RGB",
+      "iccProfileName": "sRGB built-in",
+      "rgbPixelsUnchanged": true,
+      "previewPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/islanti-yksityiskohdat-20261008/production/03-tjorninin-lintuparvi/qa-preview-480.png",
+      "previewDimensions": [
+        480,
+        320
+      ],
+      "generationFailed": false,
+      "outputProduced": true,
+      "technicalChanges": [
+        "Added standard sRGB ICC profile without color conversion.",
+        "Added exact Description and Source PNG text metadata.",
+        "Decoded RGB pixel bytes verified unchanged.",
+        "Preserved byte-exact tool original; created separate full-frame 480x320 QA preview."
+      ],
+      "visualReview": {
+        "task": "islanti-yksityiskohdat-20261008",
+        "number": 3,
+        "qid": "Q945753",
+        "file": "islanti-Q945753-tjorninin-lintuparvi.png",
+        "sha256": "38ad8896f50cc40a399dbd6ba6c0a27b691c6f9f2f466f2cd0340ce6ce2499a9",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Hanhet, sorsat ja joutsenet veden ja leipämurujen äärellä, matala kamerakulma ja nykykaupungintalon siluetti; ei käsiä, ihmisiä tai kylttejä."
+        ],
+        "limitations": [
+          "Linnusto, murut ja rakennusten sommittelu havainnollistavia; ei todellinen tapahtumavalokuva."
+        ],
+        "agentVerdictBeforeRootReview": true,
+        "reviewedAtUTC": "2026-10-08T12:30:27.211466+00:00"
+      },
+      "agentQA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Viewed final native 1536x1024 image and separate full-frame 480x320 preview.",
+          "Greylag geese, male/female mallard-like ducks and two whooper swans with yellow-and-black bills gather around numerous floating wet bread fragments.",
+          "Plausible individual bird anatomy and natural feather/water texture; no fused bodies or conspicuous extra parts observed.",
+          "Low stone water-level viewpoint, bare late-autumn trees, distant waterfront and low modern gray city-hall silhouette.",
+          "No discernible humans or hands, signs, readable writing, numerals or logos observed at native or 480px. Birds and bread remain clear at 480px."
+        ],
+        "limitations": [
+          "Invented flock, quantity of bread, exact water level and composition; not a photograph of an actual feeding moment.",
+          "Background waterfront and city-hall geometry are approximate. Very distant blurred shoreline detail is not authenticated.",
+          "Bread appears as abundant separate fragments between the birds rather than completely covering the water surface."
+        ],
+        "parentReview": "pending independent root QA"
+      },
+      "mitat": [
+        1536,
+        1024
+      ],
+      "fableReceipt": false,
+      "r2Key": "julisteet/islanti-yksityiskohdat/20261008/islanti-Q945753-tjorninin-lintuparvi.png",
+      "url": "https://media.matkakirja.app/julisteet/islanti-yksityiskohdat/20261008/islanti-Q945753-tjorninin-lintuparvi.png",
+      "bytes": 2345694,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "number": 4,
+      "qid": "Q1367886",
+      "id": "keksitty-jaaluola",
+      "filename": "islanti-Q1367886-keksitty-jaaluola.png",
+      "file": "islanti-Q1367886-keksitty-jaaluola.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/islanti-yksityiskohdat-20261008/production/04-keksitty-jaaluola/islanti-Q1367886-keksitty-jaaluola.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationPrompt": "Use case: photorealistic-natural\nAsset type: educational general artificial-ice-exhibit illustration.\nPrimary request: an ENTIRELY ORIGINAL, WHOLLY IMAGINED indoor artificial snow-and-ice tunnel. This is a generic manufactured ice exhibit, NOT a depiction of Perlan's actual installation, NOT any museum room, not a copy of a real tunnel's layout, route, wall pattern, panel or artwork, and not a natural living glacier cave. Do not base the composition on a specific known attraction.\nScene and materials: a tall softly rounded barrel-like tunnel formed from real physical packed white snow and translucent bluish ice, with natural-looking subtle ice crystals and compacted snow textures. The two walls and curved vault surround a smooth lightly frosted ice/snow floor. A gentle broad asymmetric bend takes the passage away from the camera in the distance, completely invented geometry. No museum fixtures, exhibits, railings, artworks, signs, ropes, cables, visible lighting hardware or architectural decorations.\nComposition: landscape real-camera view looking forward down the empty tunnel from its center, ice walls on both sides, narrowing perspective into the gentle bend. Eye level, natural normal-wide 28-35mm camera perspective, believable physical scale and texture. It is an ice exhibit made of snow and ice, not a glossy CGI cave.\nLight and palette: subdued diffused blue-green illumination gently penetrates the translucent ice at a few spots, restrained pale cyan and off-white with neutral shadows. The whole image remains photographically natural and softly lit, no vivid neon colors, no fantasy aurora, no dramatic beams. The white snow surfaces remain mostly neutral.\nConstraints: completely EMPTY, no humans, no museum collection objects or artifacts, no sculptures, no panels, no doors with markings, no logos, no actual Perlan interior features, no copied installation, no text or numerals.\nCreate ONE entirely NEW TEXT-ONLY image. Native exactly 1536 x 1024 landscape, 3:2, opaque RGB PNG, sRGB. No image inputs or reference-photo pixels. Real-camera PHOTOREALISM: convincing photographic materials and normal perspective, restrained exposure and muted colors. No drawing, lithograph, watercolor, painting, illustration brushwork, stylized rendering, glossy CGI, HDR, cinematic grading or oversaturation. Full frame with no border. Absolutely no readable writing, lettering, digits, labels, signage, logos, captions or watermark anywhere. No recognizable real people, no identifiable faces, no injury, blood or violence.",
+      "viitteet": [
+        {
+          "publisher": "Perlan",
+          "title": "Press Material: Texts",
+          "url": "https://perlan.is/press-material-texts",
+          "notes": "Institution text confirms a 100-metre artificial ice cave using approximately 350 tonnes of snow. Used only as context for physical snow/ice exhibit concept, not length validation or layout replication. Root explicitly permits wholly original imagined general exhibit; no actual museum layout, panels, route, artifacts or photos used.",
+          "type": "textResearchOnly",
+          "access": "2026-10-08; primary extracted text only"
+        }
+      ],
+      "kuvateksti": "Kokonaan keksitty yleinen lumi- ja jäätunneli havainnollistaa keinotekoisen jääluolan ideaa; kuva ei esitä Perlanin näyttelyä. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "sourceCommit": "dd88e5a60327dc8791e66533cff276382899b3a6",
+      "sourceBlob": "d4a229772c9fe187fb08de8c48b8ee191a197971",
+      "sourcePath": "posti/sisaltokirjuri-codex-islanti-yksityiskohdat-20261008.md",
+      "sourceReadInFull": true,
+      "sharedRulesReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "generationMethod": "built-in image_gen; new text-only",
+      "status": "local-candidate-approved",
+      "QA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Viewed final native 1536x1024 image and separate full-frame 480x320 preview.",
+          "Empty rounded snow-and-ice tunnel with a gentle invented bend, translucent icy patches, physical-looking packed snow and a lightly frosted smooth floor.",
+          "Subdued pale cyan/blue-green light, mostly neutral white snow; natural photographic material texture and restrained exposure.",
+          "No people, museum artifacts, panels, routes copied from a known attraction, logos, signs or text. Passage and ice texture remain readable at 480px."
+        ],
+        "limitations": [
+          "Wholly original imagined generic artificial ice exhibit under explicit root authorization; does not depict Perlan or a natural living glacier cave.",
+          "The actual exhibition length and exact construction materials are contextual source facts and cannot be measured or verified from this image.",
+          "The image contains no visible enclosing building or exhibit equipment, so its artificial nature is established by the caption and record."
+        ],
+        "parentReview": "pending independent root QA"
+      },
+      "r2Delivered": false,
+      "mailboxDelivered": false,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "sourceFileRead": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/islanti-yksityiskohdat-20261008/sources/01-tilaus.md",
+      "sharedRulesSourcesRead": [
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/islanti-yksityiskohdat-20261008/sources/01-tilaus.md (entire)",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/islanti-yksityiskohdat-20261008/sources/02-yhteiset-lontoo-saannot.md (entire)"
+      ],
+      "generationAttemptsRemaining": 0,
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11b72-61e8-77c0-a53b-b5f3cc1e0197/exec-7e70bafc-bd83-4580-ae52-5438d58f2e6f.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/islanti-yksityiskohdat-20261008/production/04-keksitty-jaaluola/original-generation.png",
+      "originalSha256": "cd64e4574b0f9fc188220b631eedd063f3862c9ba9d4f57159d18292ce5fa270",
+      "originalByteExact": true,
+      "sha256": "0faee8cb330a5c20751c433bb01a2c0b6b5ea4cf007792599d486cf7865b9b0d",
+      "mode": "RGB",
+      "iccProfileName": "sRGB built-in",
+      "rgbPixelsUnchanged": true,
+      "previewPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/islanti-yksityiskohdat-20261008/production/04-keksitty-jaaluola/qa-preview-480.png",
+      "previewDimensions": [
+        480,
+        320
+      ],
+      "generationFailed": false,
+      "outputProduced": true,
+      "technicalChanges": [
+        "Added standard sRGB ICC profile without color conversion.",
+        "Added exact Description and Source PNG text metadata.",
+        "Decoded RGB pixel bytes verified unchanged.",
+        "Preserved byte-exact tool original; created separate full-frame 480x320 QA preview."
+      ],
+      "visualReview": {
+        "task": "islanti-yksityiskohdat-20261008",
+        "number": 4,
+        "qid": "Q1367886",
+        "file": "islanti-Q1367886-keksitty-jaaluola.png",
+        "sha256": "0faee8cb330a5c20751c433bb01a2c0b6b5ea4cf007792599d486cf7865b9b0d",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Tyhjä kuultava jäätunneli, kaareva katto ja hillitty sinivihreä valo; ei näyttelytekstiä, museoesineitä, logoja tai ihmisiä."
+        ],
+        "limitations": [
+          "Kokonaan keksitty yleinen keinotekoinen jäätilanäyttely, ei todellisen Perlan-reitin tai luonnollisen jäätikön kuva."
+        ],
+        "agentVerdictBeforeRootReview": true,
+        "reviewedAtUTC": "2026-10-08T12:30:27.211466+00:00"
+      },
+      "agentQA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Viewed final native 1536x1024 image and separate full-frame 480x320 preview.",
+          "Empty rounded snow-and-ice tunnel with a gentle invented bend, translucent icy patches, physical-looking packed snow and a lightly frosted smooth floor.",
+          "Subdued pale cyan/blue-green light, mostly neutral white snow; natural photographic material texture and restrained exposure.",
+          "No people, museum artifacts, panels, routes copied from a known attraction, logos, signs or text. Passage and ice texture remain readable at 480px."
+        ],
+        "limitations": [
+          "Wholly original imagined generic artificial ice exhibit under explicit root authorization; does not depict Perlan or a natural living glacier cave.",
+          "The actual exhibition length and exact construction materials are contextual source facts and cannot be measured or verified from this image.",
+          "The image contains no visible enclosing building or exhibit equipment, so its artificial nature is established by the caption and record."
+        ],
+        "parentReview": "pending independent root QA"
+      },
+      "mitat": [
+        1536,
+        1024
+      ],
+      "fableReceipt": false,
+      "r2Key": "julisteet/islanti-yksityiskohdat/20261008/islanti-Q1367886-keksitty-jaaluola.png",
+      "url": "https://media.matkakirja.app/julisteet/islanti-yksityiskohdat/20261008/islanti-Q1367886-keksitty-jaaluola.png",
+      "bytes": 2207504,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "number": 5,
+      "qid": "Q1783706",
+      "id": "konserttitalon-varivalot",
+      "filename": "islanti-Q1783706-konserttitalon-varivalot.png",
+      "file": "islanti-Q1783706-konserttitalon-varivalot.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/islanti-yksityiskohdat-20261008/production/05-konserttitalon-varivalot/islanti-Q1783706-konserttitalon-varivalot.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationPrompt": "Use case: photorealistic-natural\nAsset type: educational general waterfront-concert-building light illustration.\nPrimary request: an ORIGINAL imagined view of a large contemporary glass-fronted concert building on a Reykjavík-like harbour waterfront at autumn dusk, with a NEW ORIGINAL GENERAL colored LED gradient. Building geometry is intentionally approximate and generic, not an exact reconstruction of Harpa or any artist's facade artwork. Do not use any named artist's style or copy any known light program.\nScene: a broad angular but simply massed contemporary concert building beside quiet harbor water, seen at three-quarter exterior angle from shore level. The dark slate-blue autumn evening sky occupies the top, gently rippling water with restrained reflections occupies the bottom. No people, boats with markings, signs or advertising. Keep all distant structures minimal and unobtrusive.\nGlass facade: use generic flat glass CELLS in a simple rectangular-and-trapezoidal grid with thin dark metal mullions, plausible transparent and reflective glass. Do NOT reconstruct distinctive twelve-sided quasi-bricks, intricate hexagonal honeycomb modules or any exact artist-designed pattern. The broad volumetric building outline is merely approximate. No recognizable artwork on walls.\nLight treatment: small restrained LED accents along some cell edges create a wholly invented subtle wide continuous general color gradient from muted turquoise through a small magenta region toward pale yellow. It is not a symbol, image, letter, animation frame or a copied existing facade program. Some glass remains dark and naturally transparent. Interior light is faint neutral warm light. Color lives mainly along the glass edges and in a soft modest water reflection, not a flood of saturation over the entire scene. No need for any exact visible LED count.\nComposition and camera: horizontal 3:2 real-camera architectural dusk photo, 35mm-like perspective, credible straight lines and glass reflections, full building in a roomy waterfront view, natural exposure with dark sky and visible glass textures. Muted photographic color, no cyberpunk, no HDR or dramatic cinematic glow.\nConstraints: no people or faces, no logos or text, no exact Harpa facade replication, no existing light artwork/program reproduction, no artist signature, no extreme saturation.\nCreate ONE entirely NEW TEXT-ONLY image. Native exactly 1536 x 1024 landscape, 3:2, opaque RGB PNG, sRGB. No image inputs or reference-photo pixels. Real-camera PHOTOREALISM: convincing photographic materials and normal perspective, restrained exposure and muted colors. No drawing, lithograph, watercolor, painting, illustration brushwork, stylized rendering, glossy CGI, HDR, cinematic grading or oversaturation. Full frame with no border. Absolutely no readable writing, lettering, digits, labels, signage, logos, captions or watermark anywhere. No recognizable real people, no identifiable faces, no injury, blood or violence.",
+      "viitteet": [
+        {
+          "publisher": "Harpa Conference & Concert Hall",
+          "title": "Hörpuhorn",
+          "url": "https://www.harpa.is/en/conference-concert-halls/horpuhorn",
+          "notes": "Venue text confirms LED illumination of glass facade at night. Used as contextual evidence only. Root permits generic concert building with wholly new general LED gradient and approximate geometry; no existing light work, artist style, quasi-brick pattern or source photo used.",
+          "type": "textResearchOnly",
+          "access": "2026-10-08; primary extracted text only"
+        },
+        {
+          "publisher": "Henning Larsen",
+          "title": "Harpa",
+          "url": "https://henninglarsen.com/projects/harpa",
+          "notes": "Architect text describes glass and steel facade modules and nocturnal LED colors. Distinctive quasi-brick geometry intentionally not reconstructed. No source images consulted or used; exact count is not a visible image gate.",
+          "type": "textResearchOnly",
+          "access": "2026-10-08; primary extracted text only"
+        }
+      ],
+      "kuvateksti": "Keksitty yleinen värivaloliuku kuvitteellisen sataman konserttirakennuksen lasijulkisivulla; rakennuksen geometria on viitteellinen. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "sourceCommit": "dd88e5a60327dc8791e66533cff276382899b3a6",
+      "sourceBlob": "d4a229772c9fe187fb08de8c48b8ee191a197971",
+      "sourcePath": "posti/sisaltokirjuri-codex-islanti-yksityiskohdat-20261008.md",
+      "sourceReadInFull": true,
+      "sharedRulesReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "generationMethod": "built-in image_gen; new text-only",
+      "status": "local-candidate-approved",
+      "QA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Viewed final native 1536x1024 image and separate full-frame 480x320 preview.",
+          "Approximate generic angular glass-fronted concert building on waterfront at dusk, with simple rectangular/trapezoidal glass cells.",
+          "Restrained newly invented turquoise, magenta and pale-yellow LED edge gradient; portions of glass remain dark or neutrally illuminated and reflections are modest.",
+          "No distinctive twelve-sided quasi-brick or exact hexagonal Harpa pattern reconstruction; no artist style or existing light-program reference supplied.",
+          "No discernible people, readable text, signs or logos. Natural camera perspective and subdued dusk exposure; building/light subject remains clear at 480px."
+        ],
+        "limitations": [
+          "Generic invented concert building and new invented lighting, not an exact view of Harpa or a reproduction of an existing artist light work.",
+          "Actual Harpa geometry, facade module count and 714 LED count are not reconstruction or visible-count requirements.",
+          "Architectural cells and colored strips are intentionally generic; individual glass/interior details are not authenticated."
+        ],
+        "parentReview": "pending independent root QA"
+      },
+      "r2Delivered": false,
+      "mailboxDelivered": false,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "sourceFileRead": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/islanti-yksityiskohdat-20261008/sources/01-tilaus.md",
+      "sharedRulesSourcesRead": [
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/islanti-yksityiskohdat-20261008/sources/01-tilaus.md (entire)",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/islanti-yksityiskohdat-20261008/sources/02-yhteiset-lontoo-saannot.md (entire)"
+      ],
+      "generationAttemptsRemaining": 0,
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11b72-61e8-77c0-a53b-b5f3cc1e0197/exec-41f00d7c-a1a7-4210-92b2-c0ba153aeb4b.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/islanti-yksityiskohdat-20261008/production/05-konserttitalon-varivalot/original-generation.png",
+      "originalSha256": "58c361b22ac38f0a97f8c6afd6ccb96d79bd419398d5c8a00a48cc94eb560ead",
+      "originalByteExact": true,
+      "sha256": "5786fd3d3790ff5f99c1f604c855adc51b1453f80a9b0c2420a570a1ea50ba03",
+      "mode": "RGB",
+      "iccProfileName": "sRGB built-in",
+      "rgbPixelsUnchanged": true,
+      "previewPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/islanti-yksityiskohdat-20261008/production/05-konserttitalon-varivalot/qa-preview-480.png",
+      "previewDimensions": [
+        480,
+        320
+      ],
+      "generationFailed": false,
+      "outputProduced": true,
+      "technicalChanges": [
+        "Added standard sRGB ICC profile without color conversion.",
+        "Added exact Description and Source PNG text metadata.",
+        "Decoded RGB pixel bytes verified unchanged.",
+        "Preserved byte-exact tool original; created separate full-frame 480x320 QA preview."
+      ],
+      "visualReview": {
+        "task": "islanti-yksityiskohdat-20261008",
+        "number": 5,
+        "qid": "Q1783706",
+        "file": "islanti-Q1783706-konserttitalon-varivalot.png",
+        "sha256": "5786fd3d3790ff5f99c1f604c855adc51b1453f80a9b0c2420a570a1ea50ba03",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Tyhjä satamarannan suuri lasinen konserttirakennus, alkuperäinen yleinen turkoosi/magenta/keltainen valoliuku ja heijastukset; ei tekstiä tai kopioitua valo-ohjelmaa."
+        ],
+        "limitations": [
+          "Rakennusgeometria ja suorakaide-/vinojen lasisolujen sommittelu yleisiä; ei tarkka Harpan suojatun julkisivutaiteen kopio.714valon määrä ei väite näkyvien valojen lukumäärästä."
+        ],
+        "agentVerdictBeforeRootReview": true,
+        "reviewedAtUTC": "2026-10-08T12:30:27.211466+00:00"
+      },
+      "agentQA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Viewed final native 1536x1024 image and separate full-frame 480x320 preview.",
+          "Approximate generic angular glass-fronted concert building on waterfront at dusk, with simple rectangular/trapezoidal glass cells.",
+          "Restrained newly invented turquoise, magenta and pale-yellow LED edge gradient; portions of glass remain dark or neutrally illuminated and reflections are modest.",
+          "No distinctive twelve-sided quasi-brick or exact hexagonal Harpa pattern reconstruction; no artist style or existing light-program reference supplied.",
+          "No discernible people, readable text, signs or logos. Natural camera perspective and subdued dusk exposure; building/light subject remains clear at 480px."
+        ],
+        "limitations": [
+          "Generic invented concert building and new invented lighting, not an exact view of Harpa or a reproduction of an existing artist light work.",
+          "Actual Harpa geometry, facade module count and 714 LED count are not reconstruction or visible-count requirements.",
+          "Architectural cells and colored strips are intentionally generic; individual glass/interior details are not authenticated."
+        ],
+        "parentReview": "pending independent root QA"
+      },
+      "mitat": [
+        1536,
+        1024
+      ],
+      "fableReceipt": false,
+      "r2Key": "julisteet/islanti-yksityiskohdat/20261008/islanti-Q1783706-konserttitalon-varivalot.png",
+      "url": "https://media.matkakirja.app/julisteet/islanti-yksityiskohdat/20261008/islanti-Q1783706-konserttitalon-varivalot.png",
+      "bytes": 2152393,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    }
+  ],
+  "excludedItems": [],
+  "comparison": {
+    "file": "toimitetut-5.jpg",
+    "r2Key": "julisteet/islanti-yksityiskohdat/20261008/toimitetut-5.jpg",
+    "url": "https://media.matkakirja.app/julisteet/islanti-yksityiskohdat/20261008/toimitetut-5.jpg",
+    "sha256": "e19d156a580a2aaf0861d4ce7652ab3df630d64782926a17d4e98a54915b6d6e",
+    "bytes": 282448,
+    "http": 200,
+    "mime": "image/jpeg",
+    "cors": "https://matkakirja.app",
+    "byteExactReadback": true
+  },
+  "deliveryStatus": "Selected candidates R2 verified and submitted through this mailbox manifest/report; Fable/editor/game receipt unverified.",
+  "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+  "editorAcceptance": false,
+  "fableReceipt": false,
+  "gameIntegrated": false,
+  "published": false,
+  "createdAt": "2026-10-08T12:30:38.405326+00:00"
+}

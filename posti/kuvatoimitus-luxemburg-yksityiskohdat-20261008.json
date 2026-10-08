@@ -1,0 +1,481 @@
+{
+  "task": "luxemburg-yksityiskohdat-20261008",
+  "routedTaskNumber": 37,
+  "source": {
+    "path": "posti/sisaltokirjuri-codex-luxemburg-yksityiskohdat-20261008.md",
+    "commit": "61a74db9eb72457dae7eab4376829e1c49534cf6",
+    "blob": "35b9aa16dc57a1839927968fadfdb52185e30985"
+  },
+  "sourceReadInFull": true,
+  "requestedImages": 4,
+  "imageCount": 3,
+  "generationCalls": 3,
+  "generationLimit": 4,
+  "sourceImagePixelsUsed": false,
+  "generationMode": "built-in image_gen, text-only, one call per produced subject; metadata-only final preparation",
+  "productionComplete": true,
+  "assets": [
+    {
+      "number": 1,
+      "qid": "Q1205254",
+      "id": "ruutirajahdys-1554",
+      "filename": "luxemburg-Q1205254-ruutirajahdys-1554.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "file": "luxemburg-Q1205254-ruutirajahdys-1554.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/luxemburg-yksityiskohdat-20261008/production/01-ruutirajahdys-1554/luxemburg-Q1205254-ruutirajahdys-1554.png",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11b62-3491-79c1-b5fe-40fe90425b75/exec-f7b594f7-9d1b-4f67-9754-85207fca19f2.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/luxemburg-yksityiskohdat-20261008/production/01-ruutirajahdys-1554/original-generation.png",
+      "sha256": "88f6fc21e48908a78b5c49f5c65db8cf9782eea2fab67eceaec356af8307582f",
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationPrompt": "Use case: historical-scene\nAsset type: photorealistic educational historical illustration of Luxembourg, an original approximate reconstruction.\nCreate ONE entirely NEW TEXT-ONLY image, native exactly 1536 x 1024 landscape (3:2), opaque RGB PNG, sRGB. No input images and no source photograph pixels.\nScene: Luxembourg upper town during the accidental church-roof fire and explosion of 11 June 1554. From an EMPTY narrow cobbled lane two or three houses away, look slightly upward at a modest Franciscan Gothic church with tall pointed-arch windows. The church attic roof is breaking open in an accidental burst of orange flames and thick grey smoke; a few small slate fragments and charred timber pieces fly above the roofline. Restrained photographic scale, not a huge fantasy fireball. Small tongues of fire begin along an adjacent distant roof. A thin lightning branch remains in the dark summer thundercloud above the church. Clearly a historical building accident, with the event read through roofs and smoke alone.\nArchitecture: an ORIGINAL approximate early-16th-century streetscape and church, no claim of a survey-accurate reconstruction. Two- and three-storey local sandstone houses, a few modest timber-and-plaster upper storeys, simple steep slate roofs, small unglazed or small-paned openings, rough rain-darkened cobbles. Faint rocky upper-town terrain beyond the rooftops. Do not depict Luxembourg's later cathedral or modern palace façade.\nComposition and camera: real-camera documentary view, normal 35mm perspective from eye height with a slight upward tilt, church upper wall and damaged attic clearly central, empty cobbles across the lower foreground and houses framing the view, distant fire site. No people anywhere; no victims. Full frame, no border.\nStyle, light and materials: convincingly PHOTOREALISTIC as if photographed on location, even though the historical scene is an illustration. Natural overcast storm daylight, realistic amber fire against grey smoke, believable sandstone pores, wet wood, slate roof surfaces and soot, restrained exposure and muted colors. Sharp masonry where visible with smoke naturally obscuring the roof. No illustration, painting, engraving, drawing, game render, glossy CGI, HDR, dramatic orange-teal grading or oversaturated cinema look.\nAvoid: people, bodies, injuries, blood, graphic violence, animals, weaponry, visible powder containers, contents or explosive preparation, diagrams or explanations, modern structures, vehicles, railways, electrical wiring, contemporary roof fixtures, readable writing, letters, numerals, signage, logos, watermarks, captions and frames.",
+      "viitteet": [
+        {
+          "publisher": "Service information et presse du gouvernement luxembourgeois",
+          "title": "La famille grand-ducale de Luxembourg, De l'Hôtel de ville à l'Hôtel de gouvernement",
+          "url": "https://sip.gouvernement.lu/dam-assets/publications/brochure-livre/minist-etat/sip/livre/famille_grand-ducale/La_famille_grand-ducale-FR.pdf",
+          "type": "textResearchOnly",
+          "access": "2026-10-08; official indexed primary text only, page 112; no PDF screenshot or source image pixels",
+          "notes": "Government publication confirms 11 June 1554, lightning striking the Franciscan church, powder stored in its attic, explosion and a fire destroying much of the city. Direct PDF browser extraction exceeded tool size limit; relevant official indexed text was available and read."
+        },
+        {
+          "publisher": "Commission luxembourgeoise pour la coopération avec l'UNESCO / Ville de Luxembourg",
+          "title": "UNESCO Bike Tour, dates clés",
+          "url": "https://gouvernement.lu/dam-assets/documents/actualites/2019/04-avril/19-delles-tanson-unesco/0002-UNESCO-POS-BikeTour-A2-SCREEN-FR.pdf",
+          "type": "textResearchOnly",
+          "access": "2026-10-08; PDF extracted text only; no source photographs viewed",
+          "notes": "Confirms a major 1554 powder explosion and fire that destroyed much of the upper town."
+        }
+      ],
+      "kuvateksti": "Luxemburgin yläkaupungin vuoden 1554 onnettomuuden oma likimääräinen rekonstruktio: salaman sytyttämän fransiskaanikirkon katto palaa ja hajoaa. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "sourceCommit": "61a74db9eb72457dae7eab4376829e1c49534cf6",
+      "sourceBlob": "35b9aa16dc57a1839927968fadfdb52185e30985",
+      "sourcePath": "posti/sisaltokirjuri-codex-luxemburg-yksityiskohdat-20261008.md",
+      "sourceFileRead": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/luxemburg-yksityiskohdat-20261008/sources/01-tilaus.md",
+      "sourceReadInFull": true,
+      "sharedRulesReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "sharedRulesSourcesRead": [
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/luxemburg-yksityiskohdat-20261008/sources/01-tilaus.md",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/luxemburg-yksityiskohdat-20261008/sources/02-yhteiset-lontoo-saannot.md"
+      ],
+      "generationMethod": "built-in image_gen; new text-only",
+      "status": "local-candidate-needs-parent-review",
+      "QA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": false,
+        "observations": [
+          "Viewed native generated 1536x1024 image, final native file and separate full-frame 480x320 preview; final decoded RGB pixels verified identical to tool original.",
+          "Entire cobbled lane is empty. No people, injuries, bodies, blood or explosive preparation visible.",
+          "Modest Gothic church with roof fire, airborne timber and roof fragments, grey smoke, visible lightning and a smaller neighboring roof fire; event remains clear at 480px.",
+          "Natural photographic stone, slate and timber textures, muted storm lighting; no readable writing, numerals, logos or frame.",
+          "Historical material concern for parent review: black metal rain gutters/downpipes and decorative hanging lanterns appear on the generic buildings. Their styling was not independently authenticated for 1554."
+        ],
+        "limitations": [
+          "Original approximate church and streetscape; not an authenticated plan or exact contemporary view. No source photographs or museum artwork copies used.",
+          "Smoke, lightning, flying roof fragments and the exact pictured instant are interpretive, based on the documented accident. Empty streets omit all people and casualties.",
+          "Generated black metal gutter/downpipe and lantern styling may suggest a later streetscape. Parent must decide historical acceptability before delivery. No additional generation is permitted; 1/1 call used."
+        ],
+        "parentReview": "pending independent root QA"
+      },
+      "r2Delivered": false,
+      "mailboxDelivered": false,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "originalSha256": "14d8d6f4b20a9de68f4c5ab01c6f5181987165407a5f99fecad2f58659b0e46e",
+      "originalByteExact": true,
+      "mode": "RGB",
+      "iccProfileName": "sRGB built-in",
+      "rgbPixelsUnchanged": true,
+      "previewPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/luxemburg-yksityiskohdat-20261008/production/01-ruutirajahdys-1554/qa-preview-480.png",
+      "previewDimensions": [
+        480,
+        320
+      ],
+      "technicalChanges": [
+        "Added standard sRGB ICC profile without color conversion.",
+        "Added exact Description and Source PNG text metadata.",
+        "Decoded RGB pixel bytes verified unchanged.",
+        "Preserved byte-exact tool original; created separate full-frame 480x320 QA preview."
+      ],
+      "generationAttemptsRemaining": 0,
+      "generationFailed": false,
+      "outputProduced": true,
+      "visualReview": {
+        "task": "luxemburg-yksityiskohdat-20261008",
+        "number": 1,
+        "qid": "Q1205254",
+        "file": "luxemburg-Q1205254-ruutirajahdys-1554.png",
+        "sha256": "88f6fc21e48908a78b5c49f5c65db8cf9782eea2fab67eceaec356af8307582f",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Tyhjä vanha kivikatu ja goottilaisen kirkon kattopalo/räjähdys ukkospilven alla; ei ihmisiä, uhreja, verta, ohjetekstiä tai nykyajoneuvoja. Kameraa muistuttava savu ja materiaalit."
+        ],
+        "limitations": [
+          "Kirkon ja kadun arkkitehtuuri keksitty. Kuvan sadevesikourujen, tummien putkien ja seinälyhtyjen tyylin täsmällistä1554ajoitusta ei saatu vahvistettua; kuva ei ole mittatarkka tapahtumarekonstruktio."
+        ],
+        "agentVerdictBeforeRootReview": false,
+        "reviewedAtUTC": "2026-10-08T12:24:33.906831+00:00"
+      },
+      "agentQA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": false,
+        "observations": [
+          "Viewed native generated 1536x1024 image, final native file and separate full-frame 480x320 preview; final decoded RGB pixels verified identical to tool original.",
+          "Entire cobbled lane is empty. No people, injuries, bodies, blood or explosive preparation visible.",
+          "Modest Gothic church with roof fire, airborne timber and roof fragments, grey smoke, visible lightning and a smaller neighboring roof fire; event remains clear at 480px.",
+          "Natural photographic stone, slate and timber textures, muted storm lighting; no readable writing, numerals, logos or frame.",
+          "Historical material concern for parent review: black metal rain gutters/downpipes and decorative hanging lanterns appear on the generic buildings. Their styling was not independently authenticated for 1554."
+        ],
+        "limitations": [
+          "Original approximate church and streetscape; not an authenticated plan or exact contemporary view. No source photographs or museum artwork copies used.",
+          "Smoke, lightning, flying roof fragments and the exact pictured instant are interpretive, based on the documented accident. Empty streets omit all people and casualties.",
+          "Generated black metal gutter/downpipe and lantern styling may suggest a later streetscape. Parent must decide historical acceptability before delivery. No additional generation is permitted; 1/1 call used."
+        ],
+        "parentReview": "pending independent root QA"
+      },
+      "mitat": [
+        1536,
+        1024
+      ],
+      "fableReceipt": false,
+      "r2Key": "julisteet/luxemburg-yksityiskohdat/20261008/luxemburg-Q1205254-ruutirajahdys-1554.png",
+      "url": "https://media.matkakirja.app/julisteet/luxemburg-yksityiskohdat/20261008/luxemburg-Q1205254-ruutirajahdys-1554.png",
+      "bytes": 2718327,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "number": 2,
+      "qid": "Q1348719",
+      "id": "mariankulkue-1890",
+      "filename": "luxemburg-Q1348719-mariankulkue-1890.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "file": "luxemburg-Q1348719-mariankulkue-1890.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/luxemburg-yksityiskohdat-20261008/production/02-mariankulkue-1890/luxemburg-Q1348719-mariankulkue-1890.png",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11b62-3491-79c1-b5fe-40fe90425b75/exec-84394ec5-66bd-4cfc-af57-4a1159428afd.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/luxemburg-yksityiskohdat-20261008/production/02-mariankulkue-1890/original-generation.png",
+      "sha256": "423164dd05f0d8d3e0d7669ec4d6d165840954c451a043d47b849970b9af6398",
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationPrompt": "Use case: historical-scene\nAsset type: photorealistic educational historical illustration of Luxembourg, own approximate Octave procession scene.\nCreate ONE entirely NEW TEXT-ONLY image, native exactly 1536 x 1024 landscape (3:2), opaque RGB PNG, sRGB. No references or source image pixels.\nScene: a solemn Marian closing procession walking AWAY from the camera down an old Luxembourg upper-town street around 1890. A generic ORIGINAL old carved WOOD Madonna-and-child devotional sculpture stands on a small portable wooden platform, draped in a subdued blue mantle with simple gold-colored floral embroidery and two modest generic crowns. The sculpture must be a new invented carving with simple nonportrait wooden features and an original drape, NOT a replica of the actual Consolatrix Afflictorum statue, any documented historic robe, museum artifact or identifiable artwork. Sculpted small wooden child in its mother's arms, visibly an inanimate carving, not a living baby or real-person likeness. Its general silhouette is legible beneath a square blue-and-gold textile processional canopy with four plain poles, a shallow fabric roof and narrow gold fringe. No inscriptions, heraldic arms or letters on robe, canopy, banners or platform.\nPeople: six fictional adult bearers and a few distant adult followers and clerics, ALL small in a broad street view and fully REAR-FACING, walking away. View only back of heads, plain hats, shoulders and clothes: absolutely no faces or facial features, no side portraits, no one looking toward the camera. Bearers in modest dark late-19th-century coats, some plain hats; clerics in simple white albs seen only from behind, distant followers in muted long skirts or period dark jackets. Maximum human height roughly one eighth of frame. No identifiable person, no real human likeness, no royalty or famous cleric. A couple of plain unlettered muted blue banners farther ahead.\nEnvironment: a fictional approximate late-19th-century Luxembourg narrow cobbled street lined with local pale sandstone two- and three-storey façades and steep slate roofs; plain wood shutters, small multi-pane windows, discreet unlit old gas lanterns. Original approximate architecture, not copied from any archival photograph. No motor vehicles, wires or current road signs.\nComposition and camera: documentary real-camera wide 40mm view from about 25 metres BEHIND the moving procession, slightly low eye height. Canopy and generic statue in the right third, open cobbled street and old façades to the left, procession receding into natural distance. Full-frame landscape 3:2. Statue and canopy remain clear, cloth and masonry realistically sharp, restrained natural depth of field; people small enough to be anonymous.\nStyle: real-camera PHOTOREALISM in natural overcast daylight, normal exposure, muted stone grey, dusty blue and restrained warm gold. Believable carved painted wood, worn textile, cloth folds and cobbles. It is a contemporary photographic-looking historical reconstruction, not an old drawing or a sepia plate. No painting, engraving, illustration, CGI gloss, HDR, cinematic orange-teal grading or oversaturation.\nAvoid: identifiable artwork copies, actual historic statue likeness, real-person portraits, facial features on living people, close humans, children in the procession, front or side facing people, readable writing, letters, numerals, signs, logos, captions, watermarks, borders, modern clothing, motor traffic, asphalt, current buildings or equipment.",
+      "viitteet": [
+        {
+          "publisher": "Archdiocese of Luxembourg / Par Lëtzebuerg Notre-Dame",
+          "title": "Histoire de la vénération de la Consolatrice des Affligés",
+          "url": "https://web.cathol.lu/1/paroisses/par-letzebuerg-notre-dame/cathedrale/la-consolatrice-des-affliges-die-trosterin-der-betrubten/histoire-de-la-veneration-de-la-consolatrice-des-affliges.html",
+          "type": "textResearchOnly",
+          "access": "2026-10-08; official indexed text only; no source photographs or statue pixels",
+          "notes": "Annual closing procession developed from the 1639 Octave. Statue remained in former Jesuit church from 1794, and church became cathedral in 1870. Late-19th-century scene is a plausible invented reconstruction, not a documented particular procession."
+        },
+        {
+          "publisher": "Archives diocésaines, Archdiocese of Luxembourg",
+          "title": "1866 : Octave jubilaire à Luxembourg",
+          "url": "https://web.cathol.lu/2/services/archives-diocesaines/archives-diocesaines/150-ans-de-diocese-de-luxembourg-les-grandes-etapes/1866-octave-jubilaire-a-luxembourg",
+          "type": "textResearchOnly",
+          "access": "2026-10-08; primary text opened; no images viewed",
+          "notes": "Documents revival of the Octave and large gatherings in the 19th century, two gold crowns for Madonna and child in 1866, and devotional clothing. Sculpture and costume invented here, avoiding any actual crown, robe or artwork copy."
+        },
+        {
+          "publisher": "Service Kommunikatioun a Press, Bistum Lëtzebuerg",
+          "title": "Entstehung, Entwicklung und Bedeutung der Muttergottes-Oktave",
+          "url": "https://archives.cathol.lu/grouss-evenementer-evenements-phares/muttergottesoktav-octave-notre-dame/entstehung-entwicklung-und-bedeutung-der-muttergottes-oktave.html",
+          "type": "textResearchOnly",
+          "access": "2026-10-08; official indexed text only; direct open unavailable; no pixels",
+          "notes": "Identifies lime-wood carving and a solemn closing procession. Actual carving proportions not copied: generic original wood Madonna-and-child used with explicit root permission."
+        }
+      ],
+      "kuvateksti": "Oma likimääräinen näkymä Luxemburgin Marian päätöskulkueesta noin vuonna 1890. Sinikultaisen katoksen alla kannetaan kuvitteellista vanhaa puista Maria ja lapsi -patsasta. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "sourceCommit": "61a74db9eb72457dae7eab4376829e1c49534cf6",
+      "sourceBlob": "35b9aa16dc57a1839927968fadfdb52185e30985",
+      "sourcePath": "posti/sisaltokirjuri-codex-luxemburg-yksityiskohdat-20261008.md",
+      "sourceFileRead": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/luxemburg-yksityiskohdat-20261008/sources/01-tilaus.md",
+      "sourceReadInFull": true,
+      "sharedRulesReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "sharedRulesSourcesRead": [
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/luxemburg-yksityiskohdat-20261008/sources/01-tilaus.md",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/luxemburg-yksityiskohdat-20261008/sources/02-yhteiset-lontoo-saannot.md"
+      ],
+      "generationMethod": "built-in image_gen; new text-only",
+      "status": "local-candidate-approved",
+      "QA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Viewed native generated 1536x1024 image, final native file and separate full-frame 480x320 preview; final decoded RGB pixels verified identical to tool original.",
+          "All living participants face away; only backs of heads, hats, coats, robes and a small unidentifying ear/neck edge are visible. No identifiable face or real-person portrait observed.",
+          "Generic wooden Madonna-and-child with simple crowns, original blue/gold robe and blue/gold canopy reads clearly at 480px. No actual artifact or statue pixels used.",
+          "Late 19th-century coats, long skirts, white church vestments and unlettered banners; sandstone façades, slate and cobbled lane. No motor traffic, modern signage or readable text observed.",
+          "Photographic-looking muted overcast daylight and natural cloth/stone texture; no graphic content, watermark or border."
+        ],
+        "limitations": [
+          "Invented late-19th-century procession and streetscape; not a verified reconstruction of an exact 1890 event, route or actual canopy.",
+          "Generic original wood Madonna-and-child, crowns, mantle and canopy; does not reproduce the actual Consolatrix Afflictorum sculpture, a historic robe, museum collection item or identifiable artwork.",
+          "The closest rear-facing bearers occupy roughly 40 percent of frame height, larger than the prompt requested. Anonymity is maintained by fully rear-facing poses; parent review must assess the composition against the requested small/distant treatment.",
+          "Generic devotional statue is intended as an original carving. No comparison to source photographs was made, so parent should retain the caption stating it is fictional rather than name it as an exact actual sculpture."
+        ],
+        "parentReview": "pending independent root QA"
+      },
+      "r2Delivered": false,
+      "mailboxDelivered": false,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "originalSha256": "1e16bb0784ea6b0f36c17683863d34a6db0f65aaaab41a28a04d60a757c89614",
+      "originalByteExact": true,
+      "mode": "RGB",
+      "iccProfileName": "sRGB built-in",
+      "rgbPixelsUnchanged": true,
+      "previewPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/luxemburg-yksityiskohdat-20261008/production/02-mariankulkue-1890/qa-preview-480.png",
+      "previewDimensions": [
+        480,
+        320
+      ],
+      "technicalChanges": [
+        "Added standard sRGB ICC profile without color conversion.",
+        "Added exact Description and Source PNG text metadata.",
+        "Decoded RGB pixel bytes verified unchanged.",
+        "Preserved byte-exact tool original; created separate full-frame 480x320 QA preview."
+      ],
+      "generationAttemptsRemaining": 0,
+      "generationFailed": false,
+      "outputProduced": true,
+      "visualReview": {
+        "task": "luxemburg-yksityiskohdat-20261008",
+        "number": 2,
+        "qid": "Q1348719",
+        "file": "luxemburg-Q1348719-mariankulkue-1890.png",
+        "sha256": "423164dd05f0d8d3e0d7669ec4d6d165840954c451a043d47b849970b9af6398",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Puinen Marian/lapsen veistos, sinikultainen katos ja kulkue; kaikki ihmiset selin eikä henkilöitä tunnista. Ei tekstiä tai nykyautoja."
+        ],
+        "limitations": [
+          "Veistos ja kadut yleisiä tulkintoja, ei alkuperäispatsaan tarkka jäljennös. Lähikantajat noin40prosenttia korkeudesta, mutta täysin selin; lähde sallii selin-vaihtoehdon, ei numeerista kokorajaa."
+        ],
+        "agentVerdictBeforeRootReview": true,
+        "reviewedAtUTC": "2026-10-08T12:24:33.906831+00:00"
+      },
+      "agentQA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Viewed native generated 1536x1024 image, final native file and separate full-frame 480x320 preview; final decoded RGB pixels verified identical to tool original.",
+          "All living participants face away; only backs of heads, hats, coats, robes and a small unidentifying ear/neck edge are visible. No identifiable face or real-person portrait observed.",
+          "Generic wooden Madonna-and-child with simple crowns, original blue/gold robe and blue/gold canopy reads clearly at 480px. No actual artifact or statue pixels used.",
+          "Late 19th-century coats, long skirts, white church vestments and unlettered banners; sandstone façades, slate and cobbled lane. No motor traffic, modern signage or readable text observed.",
+          "Photographic-looking muted overcast daylight and natural cloth/stone texture; no graphic content, watermark or border."
+        ],
+        "limitations": [
+          "Invented late-19th-century procession and streetscape; not a verified reconstruction of an exact 1890 event, route or actual canopy.",
+          "Generic original wood Madonna-and-child, crowns, mantle and canopy; does not reproduce the actual Consolatrix Afflictorum sculpture, a historic robe, museum collection item or identifiable artwork.",
+          "The closest rear-facing bearers occupy roughly 40 percent of frame height, larger than the prompt requested. Anonymity is maintained by fully rear-facing poses; parent review must assess the composition against the requested small/distant treatment.",
+          "Generic devotional statue is intended as an original carving. No comparison to source photographs was made, so parent should retain the caption stating it is fictional rather than name it as an exact actual sculpture."
+        ],
+        "parentReview": "pending independent root QA"
+      },
+      "mitat": [
+        1536,
+        1024
+      ],
+      "fableReceipt": false,
+      "r2Key": "julisteet/luxemburg-yksityiskohdat/20261008/luxemburg-Q1348719-mariankulkue-1890.png",
+      "url": "https://media.matkakirja.app/julisteet/luxemburg-yksityiskohdat/20261008/luxemburg-Q1348719-mariankulkue-1890.png",
+      "bytes": 2695104,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "number": 3,
+      "qid": "Q359872",
+      "id": "cordeliers-luostari-1780",
+      "filename": "luxemburg-Q359872-cordeliers-luostari-1780.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "file": "luxemburg-Q359872-cordeliers-luostari-1780.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/luxemburg-yksityiskohdat-20261008/production/03-cordeliers-luostari-1780/luxemburg-Q359872-cordeliers-luostari-1780.png",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11b62-3491-79c1-b5fe-40fe90425b75/exec-64e663e3-03cb-4d16-8a68-4846fabb926e.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/luxemburg-yksityiskohdat-20261008/production/03-cordeliers-luostari-1780/original-generation.png",
+      "sha256": "4e730342442683f427667b728fd4518165bd4234a14dfb4b5a38ce934b104674",
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationPrompt": "Use case: historical-scene\nAsset type: photorealistic educational historical illustration of Luxembourg's former Cordeliers monastery, own approximate architecture.\nCreate ONE entirely NEW TEXT-ONLY image, native exactly 1536 x 1024 landscape (3:2), opaque RGB PNG, sRGB. No input images or source photograph pixels.\nScene: the Franciscan Cordeliers monastery occupying the later Place Guillaume II (Knuedler) in Luxembourg upper town around 1780, before revolutionary confiscation. This is an ORIGINAL approximate reconstruction from textual facts, not a copied old print, museum artwork, scale model or an authenticated exact façade. A modest low, long two-storey local grey sandstone monastery building with simple repeated small wood-framed windows, a steep subdued slate roof and an arched stone entrance. Attached at one end is a simple church gable with narrow Gothic pointed-arch windows, plain slate roof and a modest small roof bellcote, no grand baroque dome or enormous tower. A glimpse through the gateway suggests a quiet enclosed convent courtyard. Small modest old-town houses beyond.\nPeople: exactly THREE completely anonymous fictional ADULT Franciscan friars, tiny in the broad architecture view, about one tenth of frame height or smaller, walking slowly toward the distant convent gate with their backs FULLY to the camera. Plain brown woolen habits, hoods hanging behind or covering the backs of their heads, coarse pale rope belts with simple visible knots and dangling rope ends. All rear-facing: no profiles, facial features, eyes or mouths. No real-person likeness and no other people.\nComposition and camera: broad real-camera architectural view from slightly raised street level, perhaps a low stoop, normal 40mm lens perspective with straight natural masonry lines. Cobblestone street spans the foreground; entire long monastery façade and church gable dominate the middle distance, the three small rear-facing friars near the gateway provide scale. Do not substitute the current city square: buildings still occupy it. Full 3:2 frame without border.\nLight and textures: convincingly real-camera PHOTOREALISTIC historical reconstruction, calm soft afternoon daylight under thin cloud, muted limestone-grey, sandstone, worn slate, natural brown cloth and pale rope. Believable rough masonry joints, uneven cobbles, weathered wood and matte wool, normal exposure and natural depth. No drawing, engraving, historical print, painting, illustration, stylized render, CGI gloss, HDR, cinematic grading or oversaturation.\nAvoid: current city hall, equestrian statue, royal monuments, present-day square layout, motor vehicles, bicycles, asphalt, electricity or utility poles, wires, modern architectural fixtures, modern clothes, portraits, front or side facing friars, identifiable humans, large foreground people, readable writing, letters, numerals, signs, labels, coats of arms, logos, captions, watermarks and borders.",
+      "viitteet": [
+        {
+          "publisher": "Ministère de la Culture / Centre national de recherche archéologique",
+          "title": "Visite de la ministre de la Culture des fouilles archéologiques préventives au Knuedler",
+          "url": "https://mcult.gouvernement.lu/fr/actualites.gouvernement2024%2Bfr%2Bactualites%2Btoutes_actualites%2Bcommuniques%2B2014%2B05-mai%2B09-fouilles-archeologiques.html",
+          "type": "textResearchOnly",
+          "access": "2026-10-08; official archaeological report opened in full; no source images viewed",
+          "notes": "Confirms Franciscans founded monastery with church and cloister in 1222 over roughly the later Place Guillaume II, rope belt knots explain Knuedler, French takeover in 1795, order dissolved in 1796. An 1811 plan still showed religious buildings and gardens. Original approximate architecture around 1780 avoids undocumented façade precision."
+        },
+        {
+          "publisher": "Ville de Luxembourg",
+          "title": "UNESCO-Tour für Alle, Place Guillaume 2",
+          "url": "https://www.vdl.lu/sites/default/files/media/document/WEB_UnescoTour_UA.pdf",
+          "type": "textResearchOnly",
+          "access": "2026-10-08; official indexed text only; no PDF screenshot or source image pixels",
+          "notes": "Confirms former Franciscan monastery at Knuedler and clothing knot name origin. Three friars, dress details, view and masonry layout are invented period suggestions."
+        }
+      ],
+      "kuvateksti": "Oma likimääräinen rekonstruktio Luxemburgin Cordeliers-fransiskaaniluostarista noin vuonna 1780 nykyisen Guillaume II:n aukion paikalla. Kolme kuvitteellista munkkia kulkee kohti luostarin porttia. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "sourceCommit": "61a74db9eb72457dae7eab4376829e1c49534cf6",
+      "sourceBlob": "35b9aa16dc57a1839927968fadfdb52185e30985",
+      "sourcePath": "posti/sisaltokirjuri-codex-luxemburg-yksityiskohdat-20261008.md",
+      "sourceFileRead": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/luxemburg-yksityiskohdat-20261008/sources/01-tilaus.md",
+      "sourceReadInFull": true,
+      "sharedRulesReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "sharedRulesSourcesRead": [
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/luxemburg-yksityiskohdat-20261008/sources/01-tilaus.md",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/luxemburg-yksityiskohdat-20261008/sources/02-yhteiset-lontoo-saannot.md"
+      ],
+      "generationMethod": "built-in image_gen; new text-only",
+      "status": "local-candidate-approved",
+      "QA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Viewed native generated 1536x1024 image, final native file and separate full-frame 480x320 preview; final decoded RGB pixels verified identical to tool original.",
+          "Exactly three fictional adult friars in brown hooded habits, all fully rear-facing and small relative to the broad architecture. No faces or additional people observed.",
+          "Low long sandstone convent building, plain church gable with pointed-arch windows and bellcote, arched gateway and glimpse of cloister; no current cityhall or equestrian statue.",
+          "Muted natural daylight, plausible masonry, slate, wooden windows and cobbles; no readable text, signage, logos, modern traffic or electrical fixtures observed.",
+          "Main convent form and three friars remain readable at 480px."
+        ],
+        "limitations": [
+          "Original approximate monastery and church architecture, not an authenticated reconstruction of exact 1780 façades, plan or stone details.",
+          "Three fictional anonymous friars, brown habits and rope knots are interpretive period suggestions; no historical portrait or artwork copied.",
+          "The pale rope belts and dangling ends are visible natively, but individual knots are too small to be a distinct motif at 480px.",
+          "Generated gutters and lantern are generic period suggestions, not independently authenticated surviving 1780 details."
+        ],
+        "parentReview": "pending independent root QA"
+      },
+      "r2Delivered": false,
+      "mailboxDelivered": false,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "originalSha256": "9449da639d07a9d4fd3b8119b35a8e9cef7fd0b76a050c28a33d0606bee142ae",
+      "originalByteExact": true,
+      "mode": "RGB",
+      "iccProfileName": "sRGB built-in",
+      "rgbPixelsUnchanged": true,
+      "previewPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/luxemburg-yksityiskohdat-20261008/production/03-cordeliers-luostari-1780/qa-preview-480.png",
+      "previewDimensions": [
+        480,
+        320
+      ],
+      "technicalChanges": [
+        "Added standard sRGB ICC profile without color conversion.",
+        "Added exact Description and Source PNG text metadata.",
+        "Decoded RGB pixel bytes verified unchanged.",
+        "Preserved byte-exact tool original; created separate full-frame 480x320 QA preview."
+      ],
+      "generationAttemptsRemaining": 0,
+      "generationFailed": false,
+      "outputProduced": true,
+      "visualReview": {
+        "task": "luxemburg-yksityiskohdat-20261008",
+        "number": 3,
+        "qid": "Q359872",
+        "file": "luxemburg-Q359872-cordeliers-luostari-1780.png",
+        "sha256": "4e730342442683f427667b728fd4518165bd4234a14dfb4b5a38ce934b104674",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Matala pitkä kivinen luostari ja kirkon pääty, kolme pientä selin kulkevaa ruskeahabiittista hahmoa; ei nykykaupungintaloa, ratsastajapatsasta tai tekstiä."
+        ],
+        "limitations": [
+          "Arkkitehtuuri suuntaa antava. Köysivyöt näkyvät, yksittäiset solmut heikosti480koossa; ei väite rakennuksen täsmällisestä historiallisesta julkisivusta."
+        ],
+        "agentVerdictBeforeRootReview": true,
+        "reviewedAtUTC": "2026-10-08T12:24:33.906831+00:00"
+      },
+      "agentQA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Viewed native generated 1536x1024 image, final native file and separate full-frame 480x320 preview; final decoded RGB pixels verified identical to tool original.",
+          "Exactly three fictional adult friars in brown hooded habits, all fully rear-facing and small relative to the broad architecture. No faces or additional people observed.",
+          "Low long sandstone convent building, plain church gable with pointed-arch windows and bellcote, arched gateway and glimpse of cloister; no current cityhall or equestrian statue.",
+          "Muted natural daylight, plausible masonry, slate, wooden windows and cobbles; no readable text, signage, logos, modern traffic or electrical fixtures observed.",
+          "Main convent form and three friars remain readable at 480px."
+        ],
+        "limitations": [
+          "Original approximate monastery and church architecture, not an authenticated reconstruction of exact 1780 façades, plan or stone details.",
+          "Three fictional anonymous friars, brown habits and rope knots are interpretive period suggestions; no historical portrait or artwork copied.",
+          "The pale rope belts and dangling ends are visible natively, but individual knots are too small to be a distinct motif at 480px.",
+          "Generated gutters and lantern are generic period suggestions, not independently authenticated surviving 1780 details."
+        ],
+        "parentReview": "pending independent root QA"
+      },
+      "mitat": [
+        1536,
+        1024
+      ],
+      "fableReceipt": false,
+      "r2Key": "julisteet/luxemburg-yksityiskohdat/20261008/luxemburg-Q359872-cordeliers-luostari-1780.png",
+      "url": "https://media.matkakirja.app/julisteet/luxemburg-yksityiskohdat/20261008/luxemburg-Q359872-cordeliers-luostari-1780.png",
+      "bytes": 2843146,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    }
+  ],
+  "excludedItems": [
+    {
+      "number": 4,
+      "qid": "Q585990",
+      "id": "thungen-tyomaa-1732",
+      "generationCalls": 0,
+      "reason": "Museumprimary dates three current round crenellated towers to1836addition;1732/33was arrow-shapedearthcore réduit. Requested1732three-tower construction cannot be shown accurately; no1836or genericreplacement authorised."
+    }
+  ],
+  "comparison": {
+    "file": "toimitetut-3.jpg",
+    "r2Key": "julisteet/luxemburg-yksityiskohdat/20261008/toimitetut-3.jpg",
+    "url": "https://media.matkakirja.app/julisteet/luxemburg-yksityiskohdat/20261008/toimitetut-3.jpg",
+    "sha256": "8aa6b6bc63a2d0003db1fb224f8592fbdaf3ffcaf44936f9cc1f4c57463a0fb5",
+    "bytes": 197679,
+    "http": 200,
+    "mime": "image/jpeg",
+    "cors": "https://matkakirja.app",
+    "byteExactReadback": true
+  },
+  "deliveryStatus": "Selected candidates R2 verified and submitted through this mailbox manifest/report; Fable/editor/game receipt unverified.",
+  "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+  "editorAcceptance": false,
+  "fableReceipt": false,
+  "gameIntegrated": false,
+  "published": false,
+  "createdAt": "2026-10-08T12:24:41.592037+00:00"
+}

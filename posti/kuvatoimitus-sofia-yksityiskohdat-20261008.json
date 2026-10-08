@@ -1,0 +1,344 @@
+{
+  "task": "sofia-yksityiskohdat-20261008",
+  "routedTaskNumber": 35,
+  "source": {
+    "path": "posti/sisaltokirjuri-codex-sofia-yksityiskohdat-20261008.md",
+    "commit": "61a74db9eb72457dae7eab4376829e1c49534cf6",
+    "blob": "b167f5d05132295f2e978f0e6d6c86f52d091e86"
+  },
+  "sourceReadInFull": true,
+  "requestedImages": 3,
+  "imageCount": 2,
+  "generationCalls": 2,
+  "generationLimit": 3,
+  "sourceImagePixelsUsed": false,
+  "generationMode": "built-in image_gen, text-only, one call per produced subject; metadata-only final preparation",
+  "productionComplete": true,
+  "assets": [
+    {
+      "number": 1,
+      "qid": "Q190435",
+      "id": "lammin-lahde-1873",
+      "filename": "sofia-Q190435-lammin-lahde-1873.png",
+      "file": "sofia-Q190435-lammin-lahde-1873.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/sofia-yksityiskohdat-20261008/production/01-lammin-lahde-1873/sofia-Q190435-lammin-lahde-1873.png",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11b61-ea03-7e32-8cba-5930e3537a40/exec-fcc66f7e-3ac7-424b-a5b4-7e6ef0171c1d.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/sofia-yksityiskohdat-20261008/production/01-lammin-lahde-1873/original-generation.png",
+      "sha256": "1f18ab3245dc2f0df008b2b2485eec21dc3124d1b879ee9db3824b0158dc9322",
+      "originalSha256": "6cbaf2d56f58b7b5087ff4707a369b2c7e3820b6502709476015d03bf03d6bd6",
+      "originalByteExact": true,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "iccProfileName": "sRGB built-in",
+      "rgbPixelsUnchanged": true,
+      "previewPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/sofia-yksityiskohdat-20261008/production/01-lammin-lahde-1873/qa-preview-480.png",
+      "previewDimensions": [
+        480,
+        320
+      ],
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationAttemptsRemaining": 0,
+      "generationFailed": false,
+      "outputProduced": true,
+      "generationPrompt": "Use case: historical-scene\nAsset type: photorealistic educational historical illustration for a Sofia city introduction.\nCreate ONE completely NEW TEXT-ONLY image, exactly 1536 x 1024 landscape 3:2, opaque RGB PNG in sRGB. No source images, reference pixels or photographic copies.\nScene: a quiet mineral spring in Sofia, Ottoman-period Bulgaria, in 1873, before the modern Central Mineral Baths built in the twentieth century. A modest shallow basin edged by low worn uneven stones holds clear warm spring water coming directly from the ground. Light natural condensation drifts from the water in cool morning air. Around the basin is tamped earth and rough small paving stones; a few low timber-and-brick domestic houses with muted plaster, simple tiled roofs and shuttered windows stand softly in the background. This is a plausible fictional reconstruction, not any exact documented historic pool or room.\nSubject: ONE anonymous fictional ADULT Bulgarian townswoman, about 30 years old, kneels centrally beside the shallow basin, seen from behind with her head turned fully away from the camera. Only the back of her plain kerchief and neck are visible: no facial features, not even a side portrait. Entire kneeling adult figure fits in the frame and occupies about one-third of frame height. Her simple everyday nineteenth-century dress consists of a plain dark wool sukman-like long skirt/dress over an off-white long-sleeved shirt, a modest muted brown woven front apron tied at the waist, and a plain cream head kerchief. No festive embroidery, jewelry or copied museum costume. Clothing is natural matte fabric, modestly worn.\nAction: she is filling ONE ordinary original unglazed reddish-brown clay water jug by dipping it gently at the water's edge. It is a usable household jug about 25 cm tall, with a broad round belly, a short open neck, small pouring lip, and one thick side handle. Her right hand securely grips that handle, the jug tilted with its open mouth partly entering the shallow clear water; subtle realistic ripples show the filling action. Her other hand rests naturally on the low dry stone basin rim for balance. Exactly two normal adult hands and anatomically plausible fingers. No pouring from a tap, pipe or spout. She is clothed and calm. No other humans.\nComposition: eye-level from a modest distance slightly to one side BEHIND the woman, natural normal-lens camera perspective. The woman, jug and basin form the center; clear warm water and thin steam are readable in the foreground; the low houses recede quietly behind. Sufficient depth of field for material texture. Full frame, no border.\nStyle and light: unmistakably real-camera photorealism with physically convincing water, stone, clay, skin, wool and linen. Soft natural cool morning daylight with subtle warm reflected light, muted earth colors, normal photographic exposure and fine documentary texture. Gentle steam rises from the whole warm water surface and disperses irregularly. No painterly brushwork, no oil painting, no illustration-style strokes, no CGI gloss, no HDR, no theatrical spotlight, no cinematic orange/teal grade or oversaturation.\nAvoid: any visible or recognizable face, a real person's likeness, children, extra people, 1913 Central Mineral Baths, ornate modern bath building, modern roads/buildings, faucets, plumbing, exposed pipes, plastic, vehicles, electric lights, modern clothing, soldiers, fire, flames, fuel, firewood, woodpiles, smoke, injuries, blood or violence. No readable writing, letters, numbers, signage, labels, brands, logos, watermark, caption or frame.",
+      "viitteet": [
+        {
+          "publisher": "Sofia Municipality",
+          "title": "The Mineral Springs",
+          "url": "https://www.sofia.bg/en/web/sofia-municipality/w/the-mineral-springs",
+          "type": "textResearchOnly",
+          "notes": "Primary municipal text verifies historic hot spring use and modern replacement baths only at beginning of twentieth century. Exact1873 basin, neighborhood layout and action remain fictional.",
+          "access": "2026-10-08; extracted text only"
+        },
+        {
+          "publisher": "Regional History Museum Sofia",
+          "title": "History of the Municipal Central Mineral Baths Building",
+          "url": "https://sofiahistorymuseum.bg/en/13-%D0%B7%D0%B0-%D0%BD%D0%B0%D1%81/145-history-of-the-municipal-central-mineral-baths-building",
+          "type": "textResearchOnly",
+          "notes": "Museum confirms modern baths designed1906 and opened1913; later water-filling facilities. Modern bath architecture/plumbing excluded from1873. No museum object pixels used.",
+          "access": "2026-10-08; extracted text only"
+        },
+        {
+          "publisher": "Maria Veleva, curator at Ethnographical Museum Sofia; original research introduction",
+          "title": "Bulgarian National Costume, p19",
+          "url": "https://bgstarina.volconst.com/k/nosii-veleva.pdf",
+          "type": "textResearchOnly",
+          "notes": "Original curator research text describes nineteenth-century dress distinctions, sukman/saya, front aprons and kerchiefs. Only extracted introductory text consulted; no illustration or garment pages viewed. Plain generic clothing is original and not a collection garment copy.",
+          "access": "2026-10-08; extracted introductory text p19 only"
+        }
+      ],
+      "kuvateksti": "Kuvitteellinen arkihetki Sofian lämpimällä lähteellä vuonna 1873: nimetön aikuinen nainen täyttää savikannun kivireunaisesta altaasta. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "sourceCommit": "61a74db9eb72457dae7eab4376829e1c49534cf6",
+      "sourceBlob": "b167f5d05132295f2e978f0e6d6c86f52d091e86",
+      "sourcePath": "posti/sisaltokirjuri-codex-sofia-yksityiskohdat-20261008.md",
+      "sourceFileRead": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/sofia-yksityiskohdat-20261008/sources/01-tilaus.md",
+      "sourceReadInFull": true,
+      "sharedRulesReadInFull": true,
+      "sharedRulesSourcesRead": [
+        "output/sofia-yksityiskohdat-20261008/sources/01-tilaus.md (entire)",
+        "output/sofia-yksityiskohdat-20261008/sources/02-yhteiset-lontoo-saannot.md (entire)",
+        "output/eurooppa-yksityiskohdat-26-20261008/worker-contract-new-orders.md (entire)"
+      ],
+      "sourceImagePixelsUsed": false,
+      "generationMethod": "built-in image_gen; new text-only",
+      "status": "local-candidate-approved",
+      "QA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Viewed native final1536x1024 RGB image and separate uncropped480x320 preview.",
+          "One adult woman kneels wholly rear-facing with plain kerchief; narrow ear/back-neck edge only, no eyes, mouth or identifiable portrait features. No other people or children.",
+          "One clay jug tilts with its open neck at the water surface, held by one plausible right hand; the second hand rests on the dry stone rim. Jug contact and water ripples remain readable at480px.",
+          "Low rough stone basin, clear water and light dispersed condensation; Ottoman-period-looking low plaster/timber houses and tiled roofs. No modern bath building, faucets, pipes, plastic, vehicles, fire or fuel.",
+          "Natural light, restrained brown/gray textiles, real-camera texture. No writing, logos, caption, frame, injury, blood or violence observed."
+        ],
+        "limitations": [
+          "Fictional adult, jug, gesture, clothing, pool and neighborhood; not a real person or an authenticated reconstruction of the exact1873 spring layout.",
+          "Woman appears larger than the prompt requested one-third frame-height, but is entirely rear-facing and nonidentifiable, with action legible.",
+          "Only a narrow nonidentifying ear/back-neck contour is visible; no facial features. Generic plain dress does not copy a museum garment.",
+          "Distant hillside dome/minaret silhouettes are illustrative period setting rather than verified Sofia1873 skyline."
+        ],
+        "parentReview": "pending independent root QA"
+      },
+      "r2Delivered": false,
+      "mailboxDelivered": false,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "technicalChanges": [
+        "Added standard sRGB ICC profile without color conversion.",
+        "Added exact Description and Source PNG text metadata.",
+        "Decoded RGB pixel bytes verified unchanged.",
+        "Preserved byte-exact tool original; created separate full-frame480x320 QA preview."
+      ],
+      "routedTaskNumber": 35,
+      "preflightPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/sofia-yksityiskohdat-20261008/production/preflight-sofia-01-03.md",
+      "visualReview": {
+        "task": "sofia-yksityiskohdat-20261008",
+        "number": 1,
+        "qid": "Q190435",
+        "file": "sofia-Q190435-lammin-lahde-1873.png",
+        "sha256": "1f18ab3245dc2f0df008b2b2485eec21dc3124d1b879ee9db3824b0158dc9322",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Nimetön aikuinen nainen täyttää savikannua höyryävästä matalasta altaasta selin; vanhat matalat talot, ei1913kylpylää, hanoja, putkia, tekstiä tai näkyviä kasvoja. Luonnolliset iho-, savi- ja kivipinnat."
+        ],
+        "limitations": [
+          "Allas, vaatetus ja ympäristö ovat kuvitteellisia. Lähikuva selkäpuolelta on tilauksen selin-vaihtoehdon mukainen, ei henkilön muotokuva."
+        ],
+        "agentVerdictBeforeRootReview": true,
+        "reviewedAtUTC": "2026-10-08T12:24:33.906831+00:00"
+      },
+      "agentQA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Viewed native final1536x1024 RGB image and separate uncropped480x320 preview.",
+          "One adult woman kneels wholly rear-facing with plain kerchief; narrow ear/back-neck edge only, no eyes, mouth or identifiable portrait features. No other people or children.",
+          "One clay jug tilts with its open neck at the water surface, held by one plausible right hand; the second hand rests on the dry stone rim. Jug contact and water ripples remain readable at480px.",
+          "Low rough stone basin, clear water and light dispersed condensation; Ottoman-period-looking low plaster/timber houses and tiled roofs. No modern bath building, faucets, pipes, plastic, vehicles, fire or fuel.",
+          "Natural light, restrained brown/gray textiles, real-camera texture. No writing, logos, caption, frame, injury, blood or violence observed."
+        ],
+        "limitations": [
+          "Fictional adult, jug, gesture, clothing, pool and neighborhood; not a real person or an authenticated reconstruction of the exact1873 spring layout.",
+          "Woman appears larger than the prompt requested one-third frame-height, but is entirely rear-facing and nonidentifiable, with action legible.",
+          "Only a narrow nonidentifying ear/back-neck contour is visible; no facial features. Generic plain dress does not copy a museum garment.",
+          "Distant hillside dome/minaret silhouettes are illustrative period setting rather than verified Sofia1873 skyline."
+        ],
+        "parentReview": "pending independent root QA"
+      },
+      "mitat": [
+        1536,
+        1024
+      ],
+      "fableReceipt": false,
+      "r2Key": "julisteet/sofia-yksityiskohdat/20261008/sofia-Q190435-lammin-lahde-1873.png",
+      "url": "https://media.matkakirja.app/julisteet/sofia-yksityiskohdat/20261008/sofia-Q190435-lammin-lahde-1873.png",
+      "bytes": 2726651,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "number": 3,
+      "qid": "Q790052",
+      "id": "moskeijan-lahdehoyry",
+      "filename": "sofia-Q790052-moskeijan-lahdehoyry.png",
+      "file": "sofia-Q790052-moskeijan-lahdehoyry.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/sofia-yksityiskohdat-20261008/production/03-moskeijan-lahdehoyry/sofia-Q790052-moskeijan-lahdehoyry.png",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11b61-ea03-7e32-8cba-5930e3537a40/exec-628720ae-6f39-480a-a1cd-e6cb8cd76836.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/sofia-yksityiskohdat-20261008/production/03-moskeijan-lahdehoyry/original-generation.png",
+      "sha256": "292dfc540b6ab3984a1a0b03d20b2e463634843ac768af819de39cf738aa3fa1",
+      "originalSha256": "42dcb09398a27c9cd5ae67c9c95ebe08188f01dda88a878a7b69968204057229",
+      "originalByteExact": true,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "iccProfileName": "sRGB built-in",
+      "rgbPixelsUnchanged": true,
+      "previewPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/sofia-yksityiskohdat-20261008/production/03-moskeijan-lahdehoyry/qa-preview-480.png",
+      "previewDimensions": [
+        480,
+        320
+      ],
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationAttemptsRemaining": 0,
+      "generationFailed": false,
+      "outputProduced": true,
+      "generationPrompt": "Use case: photorealistic-natural\nAsset type: photorealistic educational architectural illustration for a Sofia city introduction.\nCreate ONE completely NEW TEXT-ONLY image, exactly 1536 x 1024 landscape 3:2, opaque RGB PNG in sRGB. No source images, reference pixels or photographic copies.\nScene: Banya Bashi Mosque in central Sofia, in a quiet contemporary early-morning setting. Ground-level geothermal condensation is the subject: small translucent pale wisps emerge from a narrow seam between the worn paving stones close to the mosque wall, just as naturally heated mineral water beneath the site meets cool air. Localized light steam curls upward and disperses, with the surrounding pavement still clearly visible. No water fountain, tap, exposed pipe, industrial outlet or smoke. This is a plausible illustrative placement of the ground vapor, not a claim to reproduce a documented vent position.\nArchitecture: a plausible exterior detail of the historic sixteenth-century Ottoman mosque. It is a modest square masonry prayer hall beneath a SINGLE broad shallow hemispherical central dome on a low octagonal transition drum; the dome roof has weathered matte GRAY LEAD plates with realistic quiet seams, not terracotta tiles. The wall is built of real carved pale warm-gray stone alternating with narrow bands of muted red brick and light mortar. Simple tall arched windows sit within the wall, with dark glass and unobtrusive fine iron grilles, no painted words or inscriptions. One graceful slender minaret rises behind one corner, mainly pale aged masonry with some muted brickwork, a narrow single balcony with a light stone parapet and a dark gray pointed roof. No exaggerated candy stripes, no fantasy architecture, no second minaret. Keep the building credible and uncluttered.\nComposition: low camera viewpoint roughly 40 cm above the pavement, looking gently upward from beside the wall, wide enough to include the foreground vapor seam, the masonry wall in the middle distance, the curved gray dome and the slender minaret rising behind. Natural wide-normal 35mm lens perspective, realistic straight walls, no fisheye or dramatic converging distortions. Pavement seam and rising steam occupy the lower central third and remain legible at small viewing size; wall, dome and minaret remain clearly identifiable. Tight angle and sky keep unrelated contemporary buildings outside the main subject. Empty scene with absolutely NO humans.\nLighting and texture: calm cool early-morning natural daylight, soft gray-blue sky, subtle low sunlight on stone and brick, no dramatic sunbeams. Real photographic exposure, restrained natural colors, detailed matte stone grain, tiny brick irregularities, realistic lead roof, damp-looking joints near the warm seam. Thin white condensed steam, physically plausible, irregular and transparent, not a dense smoke plume. A real-camera documentary photograph appearance, fully photorealistic. Do not render as a drawing or painting.\nAvoid: people, worshippers, tourists, faces, vehicles, advertisements, flags, billboards, legible mosque inscriptions, writing, letters, numbers, symbols used as lettering, signs, logos, labels, watermarks, captions or borders. No modern building as a main subject, no huge damaged fissure, no ruins, fire, smoke, explosion, injury, blood, violence, plastic, faucets, exposed pipes or engineered steam chimney. No HDR, painterly texture, illustration strokes, glossy CGI, cinema-style grading, orange/teal palette or oversaturation.",
+      "viitteet": [
+        {
+          "publisher": "Sofia Municipality",
+          "title": "Banya Bashi Mosque",
+          "url": "https://www.sofia.bg/en/web/sofia-municipality/w/banya-bashi-mosque",
+          "type": "textResearchOnly",
+          "notes": "Primary text gives1566–1567 construction, carved stone and brick masonry, central cupola covered with lead plates. Exact facade geometry/minaret proportions not surveyed or photo-verified.",
+          "access": "2026-10-08; extracted text only"
+        },
+        {
+          "publisher": "Sofia Tourism Administration",
+          "title": "Banya Bashi Mosque",
+          "url": "https://visitsofia.bg/en/cityinfrastructure/what-to-see/temples/mosque-banya-bashi",
+          "type": "textResearchOnly",
+          "notes": "Official text verifies mosque built on natural mineral springs; local vapor seam is a plausible assignment-based illustration, not a primary-source-confirmed exact vent position.",
+          "access": "2026-10-08; extracted text only"
+        }
+      ],
+      "kuvateksti": "Banja Bashin moskeijan kivestä ja tiilestä tehdyn seinän edustalla kohoaa mineraalilähteen höyryä kivetyksen saumasta. Höyryn tarkka paikka on kuvitteellinen. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "sourceCommit": "61a74db9eb72457dae7eab4376829e1c49534cf6",
+      "sourceBlob": "b167f5d05132295f2e978f0e6d6c86f52d091e86",
+      "sourcePath": "posti/sisaltokirjuri-codex-sofia-yksityiskohdat-20261008.md",
+      "sourceFileRead": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/sofia-yksityiskohdat-20261008/sources/01-tilaus.md",
+      "sourceReadInFull": true,
+      "sharedRulesReadInFull": true,
+      "sharedRulesSourcesRead": [
+        "output/sofia-yksityiskohdat-20261008/sources/01-tilaus.md (entire)",
+        "output/sofia-yksityiskohdat-20261008/sources/02-yhteiset-lontoo-saannot.md (entire)",
+        "output/eurooppa-yksityiskohdat-26-20261008/worker-contract-new-orders.md (entire)"
+      ],
+      "sourceImagePixelsUsed": false,
+      "generationMethod": "built-in image_gen; new text-only",
+      "status": "local-candidate-approved",
+      "QA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Viewed native final1536x1024 RGB image and separate uncropped480x320 preview.",
+          "Light translucent condensation visibly rises from a narrow pavement seam in the foreground; ground seam and vapor remain readable at480px.",
+          "Carved pale stone and restrained red brick bands, matte gray segmented lead-like central dome, single slender brick/stone minaret and single balcony. No dense smoke, large damaged fissure or exposed plumbing.",
+          "Scene empty of humans and vehicles; minor far background building stays peripheral and subordinate to mosque material/vapor detail.",
+          "Normal natural morning light and photographic materials; no writing, signage, logos, watermark, caption, borders, blood or violence observed."
+        ],
+        "limitations": [
+          "Architecture is an AI interpretation from primary text; exact wall arrangement, nearby foreground wall, facade geometry and minaret proportions are not measured or photographically authenticated.",
+          "Precise present-day vapor seam and vent behavior are illustrative inferences; primary text verifies mineral springs beneath mosque, not this specific pavement opening.",
+          "Tip of minaret finial touches/crops at upper edge; main minaret shaft, balcony and pointed roof remain visible."
+        ],
+        "parentReview": "pending independent root QA"
+      },
+      "r2Delivered": false,
+      "mailboxDelivered": false,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "technicalChanges": [
+        "Added standard sRGB ICC profile without color conversion.",
+        "Added exact Description and Source PNG text metadata.",
+        "Decoded RGB pixel bytes verified unchanged.",
+        "Preserved byte-exact tool original; created separate full-frame480x320 QA preview."
+      ],
+      "routedTaskNumber": 35,
+      "preflightPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/sofia-yksityiskohdat-20261008/production/preflight-sofia-01-03.md",
+      "visualReview": {
+        "task": "sofia-yksityiskohdat-20261008",
+        "number": 3,
+        "qid": "Q790052",
+        "file": "sofia-Q790052-moskeijan-lahdehoyry.png",
+        "sha256": "292dfc540b6ab3984a1a0b03d20b2e463634843ac768af819de39cf738aa3fa1",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Tyhjän tiili-/kivimoskeijan kupoli ja minareetti, etualan kivetyksestä nouseva höyry; ei ihmisiä, autoja tai tekstiä."
+        ],
+        "limitations": [
+          "Rakennusgeometria ja höyryraon paikka likimääräisiä. Minareetin koristekärki osittain ylärajalla; höyry on pääaihe eikä koko rakennusmittaus."
+        ],
+        "agentVerdictBeforeRootReview": true,
+        "reviewedAtUTC": "2026-10-08T12:24:33.906831+00:00"
+      },
+      "agentQA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Viewed native final1536x1024 RGB image and separate uncropped480x320 preview.",
+          "Light translucent condensation visibly rises from a narrow pavement seam in the foreground; ground seam and vapor remain readable at480px.",
+          "Carved pale stone and restrained red brick bands, matte gray segmented lead-like central dome, single slender brick/stone minaret and single balcony. No dense smoke, large damaged fissure or exposed plumbing.",
+          "Scene empty of humans and vehicles; minor far background building stays peripheral and subordinate to mosque material/vapor detail.",
+          "Normal natural morning light and photographic materials; no writing, signage, logos, watermark, caption, borders, blood or violence observed."
+        ],
+        "limitations": [
+          "Architecture is an AI interpretation from primary text; exact wall arrangement, nearby foreground wall, facade geometry and minaret proportions are not measured or photographically authenticated.",
+          "Precise present-day vapor seam and vent behavior are illustrative inferences; primary text verifies mineral springs beneath mosque, not this specific pavement opening.",
+          "Tip of minaret finial touches/crops at upper edge; main minaret shaft, balcony and pointed roof remain visible."
+        ],
+        "parentReview": "pending independent root QA"
+      },
+      "mitat": [
+        1536,
+        1024
+      ],
+      "fableReceipt": false,
+      "r2Key": "julisteet/sofia-yksityiskohdat/20261008/sofia-Q790052-moskeijan-lahdehoyry.png",
+      "url": "https://media.matkakirja.app/julisteet/sofia-yksityiskohdat/20261008/sofia-Q790052-moskeijan-lahdehoyry.png",
+      "bytes": 2781116,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    }
+  ],
+  "excludedItems": [
+    {
+      "number": 2,
+      "qid": "Q276553",
+      "id": "ehtoollisfresko-1259",
+      "generationCalls": 0,
+      "reason": "Tilattu tunnistettavan Bojanan museokirkon nimetty vuoden1259ehtoollisfreskon jäljennös on ristiriidassa kokoelmateosten jäljennösten kiellon kanssa; ei valtuutusta korvaavaan uuteen teokseen."
+    }
+  ],
+  "comparison": {
+    "file": "toimitetut-2.jpg",
+    "r2Key": "julisteet/sofia-yksityiskohdat/20261008/toimitetut-2.jpg",
+    "url": "https://media.matkakirja.app/julisteet/sofia-yksityiskohdat/20261008/toimitetut-2.jpg",
+    "sha256": "b78b3dbbe0255adef442c520dc6895f190c33cd31f993cd6aa7fb6f7b946fcaf",
+    "bytes": 137450,
+    "http": 200,
+    "mime": "image/jpeg",
+    "cors": "https://matkakirja.app",
+    "byteExactReadback": true
+  },
+  "deliveryStatus": "Selected candidates R2 verified and submitted through this mailbox manifest/report; Fable/editor/game receipt unverified.",
+  "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+  "editorAcceptance": false,
+  "fableReceipt": false,
+  "gameIntegrated": false,
+  "published": false,
+  "createdAt": "2026-10-08T12:24:39.730778+00:00"
+}

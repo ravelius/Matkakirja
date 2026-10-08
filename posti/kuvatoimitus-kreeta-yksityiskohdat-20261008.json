@@ -1,0 +1,205 @@
+{
+  "task": "kreeta-yksityiskohdat-20261008",
+  "routedTaskNumber": 40,
+  "source": {
+    "path": "posti/sisaltokirjuri-codex-kreeta-yksityiskohdat-20261008.md",
+    "commit": "dd88e5a60327dc8791e66533cff276382899b3a6",
+    "blob": "4cf936fd508c1a8dc334bc44c540a66969391ba7"
+  },
+  "sourceReadInFull": true,
+  "requestedImages": 5,
+  "imageCount": 1,
+  "generationCalls": 1,
+  "generationLimit": 5,
+  "sourceImagePixelsUsed": false,
+  "generationMode": "built-in image_gen, text-only, one call per produced subject; metadata-only final preparation",
+  "productionComplete": true,
+  "assets": [
+    {
+      "number": 5,
+      "qid": "Q4426010",
+      "id": "titus-moskeijana",
+      "filename": "kreeta-Q4426010-titus-moskeijana.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "file": "kreeta-Q4426010-titus-moskeijana.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kreeta-yksityiskohdat-20261008/production/05-titus-moskeijana/kreeta-Q4426010-titus-moskeijana.png",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11b72-d573-7292-97e7-340b896cf256/exec-22351217-e4af-4234-acf1-66b33bf34682.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kreeta-yksityiskohdat-20261008/production/05-titus-moskeijana/original-generation.png",
+      "sha256": "c9dedad2122eef53b480fdb446de17388f3a4abffce56b1fb57e5ecc3260d093",
+      "originalSha256": "71e0448f2148bd137dba41d9a1035076b1eac5bc4089f2934cec07d78958fb58",
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationAttemptsRemaining": 0,
+      "generationPrompt": "Use case: historical-scene\nAsset type: historical educational image for a Crete city introduction.\nGenerate ONE completely NEW TEXT-ONLY image, native exactly 1536 x 1024 landscape 3:2, opaque RGB PNG, sRGB. No image inputs, source photographs, or archived picture composition.\n\nScene and period: the Vezir Mosque / former Saint Titus in Ottoman Candia, now Heraklion, circa 1890. The earthquake-damaged predecessor was rebuilt under Athanasios Mousis, commissioned in 1869 and inaugurated in 1871. Show this late-19th-century mosque before the 1920s minaret demolition and 1925 Orthodox dedication. This is an ORIGINAL photographic historical evocation based only on text, not a claimed exact restoration survey.\nMain subject: a large but LOW and compact square/rectangular eclectic Ottoman mosque of weathered pale stone, with a shallow broad central dome above the roofline, round-arched upper windows, a modest symmetrical stone entrance facade and an arched entry. Stone front and side walls visibly belong to one coherent low building. The whole building and full shallow dome remain within frame with ample headroom. The surfaces retain subtle age and dust rather than a pristine modern stone facelift.\nExactly ONE attached slender STONE MINARET at the mosque's southwest corner, to the right of the western facade in this view. Tall tapered shaft, believable projecting balcony and narrow pointed cap, complete tower from base to tip within the frame. No other towers, minarets or church steeples. No large modern crosses, modern bell tower or modern surrounding buildings.\nSurroundings: an old irregular stone-paved plaza, just a few simple low late-Ottoman town houses with muted plaster walls and old tiled roofs at the edges, one plain period non-electric street lantern away from the main subject. Open breathing space around the mosque. No tourist amenities.\nHumans: exactly THREE anonymous completely FICTIONAL ADULT townspeople in the far plaza, very small, dressed in modest long late-19th-century local robes/coats, one with a simple unobtrusive cap. All three are walking AWAY from camera, strictly REAR-FACING, backs of heads and clothing only. No frontal faces, profile portrait details, children, real historical person likeness or visible facial features.\nComposition: a natural documentary camera photograph from slightly above normal street eye level and a little to one side, looking at the west stone entrance and a portion of the side. Ordinary 35mm lens perspective with straight believable verticals. Complete mosque, dome and single minaret centred as the subject; cobbled plaza across foreground. This is a real-camera-looking colour reconstruction with gently subdued warm stone and gray tones, not a sepia painting or old paper scan.\nLighting and materials: ordinary soft Mediterranean morning daylight, restrained muted warm stone, quiet pale gray-blue sky, dull natural plaster and cloth tones. Authentic stone blocks, mortar joints and worn cobbles, realistic texture and exposure. No HDR, cinematic spectacle, orange-teal grading, oversaturation, decorative illustration, painterly brushwork, glossy CGI, model-like miniature, vintage film scratches or fake paper texture.\nText constraint: omit all inscriptions including the historical calligraphy above the western entry. Every lintel, stone panel and facade surface is plain WITHOUT readable or pseudo writing, letters, numbers, plaques or labels. No text in pixels.\nAvoid: more than one minaret, modern Orthodox facade additions, modern polished renovation finish, modern shops/buildings, any vehicles, cars, bicycles, utility wires, antennae, electric fittings, cafe furniture, signs, posters, museum artifacts, readable or pseudo writing, logos, watermarks, captions, borders, known real people, detailed or frontal faces, blood or violence.",
+      "viitteet": [
+        {
+          "publisher": "Ephorate of Antiquities of Heraklion",
+          "title": "Vezir Mosque – Saint Titus",
+          "url": "https://portapanigra.gr/en/category/ottoman-period/?item=1742",
+          "type": "textResearchOnly",
+          "notes": "Official archaeology text confirms the 1856 earthquake, rebuilding commissioned from Mousis in 1869, mosque opening in 1871, southwest minaret, demolition after the population exchange, and Orthodox rededication in 1925. Exact demolition year is not supplied, so the unsupported commercial claim of 1920 is not used. Scene circa 1890 stays within the ordered 1880–1920 range. Facade details, plaza, balcony and townspeople are original fictional reconstruction; historical entry inscription omitted.",
+          "access": "2026-10-08; text only"
+        },
+        {
+          "publisher": "Municipality of Heraklion",
+          "title": "Ναός του Αγίου Τίτου",
+          "url": "https://www.heraklion.gr/ourplace/st-titos/st-titos.html",
+          "type": "textResearchOnly",
+          "notes": "Official municipal text confirms rebuilding after the 1856 earthquake and Orthodox rededication in 1925 following the population exchange. No images accessed.",
+          "access": "2026-10-08; text only"
+        }
+      ],
+      "kuvateksti": "Kuvitteellinen näkymä Tituksen moskeijalle ottomaanien Candian kaupungissa noin vuonna 1890, ennen minareetin purkamista ja rakennuksen vihkimistä kirkoksi vuonna 1925. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "sourceCommit": "dd88e5a60327dc8791e66533cff276382899b3a6",
+      "sourceBlob": "4cf936fd508c1a8dc334bc44c540a66969391ba7",
+      "sourcePath": "posti/sisaltokirjuri-codex-kreeta-yksityiskohdat-20261008.md",
+      "sourceReadInFull": true,
+      "sharedRulesReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "generationMethod": "built-in image_gen; new text-only",
+      "status": "local-candidate-approved",
+      "QA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Viewed final native 1536x1024 image and separate full-frame 480x320 preview.",
+          "Whole low stone mosque, shallow dome and exactly one complete stone minaret are visible; no modern church cross or polished modern facelift.",
+          "Three small anonymous adult townspeople are rear-facing in long period clothing; no identifiable or frontal facial features.",
+          "Old stone plaza, plain lantern and modest tiled buildings; no cars, modern shopfronts, signs, inscriptions, writing, logos, watermarks or borders observed.",
+          "Natural documentary colour and physical stone textures remain clear in 480px preview."
+        ],
+        "limitations": [
+          "Original evocation of the late-19th-century mosque; facade, stone courses, windows, plaza, lamp and minaret balcony are not authenticated survey geometry.",
+          "Primary sources establish minaret removal after population exchange and before the 1925 Orthodox return; an exact demolition year was not verified.",
+          "The minaret and facade are plausible text-based historical suggestions, not a copied archived photograph or a verified precise likeness."
+        ],
+        "parentReview": "pending independent root QA"
+      },
+      "r2Delivered": false,
+      "mailboxDelivered": false,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "originalByteExact": true,
+      "mode": "RGB",
+      "iccProfileName": "sRGB built-in",
+      "rgbPixelsUnchanged": true,
+      "previewPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kreeta-yksityiskohdat-20261008/production/05-titus-moskeijana/qa-preview-480.png",
+      "previewDimensions": [
+        480,
+        320
+      ],
+      "technicalChanges": [
+        "Added standard sRGB ICC profile without color conversion.",
+        "Added exact Description and Source PNG text metadata.",
+        "Decoded RGB pixel bytes verified unchanged.",
+        "Preserved byte-exact tool original; created separate full-frame 480x320 QA preview."
+      ],
+      "sourceFileRead": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kreeta-yksityiskohdat-20261008/sources/01-tilaus.md",
+      "sharedRulesSourcesRead": [
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kreeta-yksityiskohdat-20261008/sources/02-yhteiset-lontoo-saannot.md"
+      ],
+      "visualReview": {
+        "task": "kreeta-yksityiskohdat-20261008",
+        "number": 5,
+        "qid": "Q4426010",
+        "file": "kreeta-Q4426010-titus-moskeijana.png",
+        "sha256": "c9dedad2122eef53b480fdb446de17388f3a4abffce56b1fb57e5ecc3260d093",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Kokonainen kivinen moskeija mataline kupoleineen ja yksi ehjä minareetti, kolme kaukaista aikuista selin; ei kirjoitusta, autoja tai nykyjulkisivun merkkejä."
+        ],
+        "limitations": [
+          "Oma likimääräinen circa1890tulkinta, julkisivu ja minareettiparveke eivät tarkkoja.1869tilaaminen/1871valmistuminen ja1925vihkiminen tarkennettu; minareetin tarkka1920-luvun purkuvuosi epävarma."
+        ],
+        "agentVerdictBeforeRootReview": true,
+        "reviewedAtUTC": "2026-10-08T12:30:27.211466+00:00"
+      },
+      "agentQA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Viewed final native 1536x1024 image and separate full-frame 480x320 preview.",
+          "Whole low stone mosque, shallow dome and exactly one complete stone minaret are visible; no modern church cross or polished modern facelift.",
+          "Three small anonymous adult townspeople are rear-facing in long period clothing; no identifiable or frontal facial features.",
+          "Old stone plaza, plain lantern and modest tiled buildings; no cars, modern shopfronts, signs, inscriptions, writing, logos, watermarks or borders observed.",
+          "Natural documentary colour and physical stone textures remain clear in 480px preview."
+        ],
+        "limitations": [
+          "Original evocation of the late-19th-century mosque; facade, stone courses, windows, plaza, lamp and minaret balcony are not authenticated survey geometry.",
+          "Primary sources establish minaret removal after population exchange and before the 1925 Orthodox return; an exact demolition year was not verified.",
+          "The minaret and facade are plausible text-based historical suggestions, not a copied archived photograph or a verified precise likeness."
+        ],
+        "parentReview": "pending independent root QA"
+      },
+      "mitat": [
+        1536,
+        1024
+      ],
+      "fableReceipt": false,
+      "r2Key": "julisteet/kreeta-yksityiskohdat/20261008/kreeta-Q4426010-titus-moskeijana.png",
+      "url": "https://media.matkakirja.app/julisteet/kreeta-yksityiskohdat/20261008/kreeta-Q4426010-titus-moskeijana.png",
+      "bytes": 2446234,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    }
+  ],
+  "excludedItems": [
+    {
+      "number": 1,
+      "qid": "Q636972",
+      "id": "faistoksen-levy",
+      "generationCalls": 0,
+      "reason": "Tilattu tunnistettava Iraklionin arkeologisen museon kokoelmaesine tai nimetty fresko; kaivaus- tai tuoreen esineen lavastus ei poista kokoelmajäljennöksen kieltoa. Ei lisävarianttia eikä korvaavaa esinettä tilattu."
+    },
+    {
+      "number": 2,
+      "qid": "Q2097291",
+      "id": "gazin-unikkojumalatar",
+      "generationCalls": 0,
+      "reason": "Tilattu tunnistettava Iraklionin arkeologisen museon kokoelmaesine tai nimetty fresko; kaivaus- tai tuoreen esineen lavastus ei poista kokoelmajäljennöksen kieltoa. Ei lisävarianttia eikä korvaavaa esinettä tilattu."
+    },
+    {
+      "number": 3,
+      "qid": "Q473766",
+      "id": "amnisoksen-liljafresko",
+      "generationCalls": 0,
+      "reason": "Tilattu tunnistettava Iraklionin arkeologisen museon kokoelmaesine tai nimetty fresko; kaivaus- tai tuoreen esineen lavastus ei poista kokoelmajäljennöksen kieltoa. Ei lisävarianttia eikä korvaavaa esinettä tilattu."
+    },
+    {
+      "number": 4,
+      "qid": "Q2707725",
+      "id": "kolme-minolaista-pronssikattilaa",
+      "generationCalls": 0,
+      "reason": "Tilattu tunnistettava Iraklionin arkeologisen museon kokoelmaesine tai nimetty fresko; kaivaus- tai tuoreen esineen lavastus ei poista kokoelmajäljennöksen kieltoa. Ei lisävarianttia eikä korvaavaa esinettä tilattu."
+    }
+  ],
+  "comparison": {
+    "file": "toimitetut-1.jpg",
+    "r2Key": "julisteet/kreeta-yksityiskohdat/20261008/toimitetut-1.jpg",
+    "url": "https://media.matkakirja.app/julisteet/kreeta-yksityiskohdat/20261008/toimitetut-1.jpg",
+    "sha256": "70d2d1a0f4e2926f217b44a1219b876bd16de177fe2abb3b8757973a467f636e",
+    "bytes": 52788,
+    "http": 200,
+    "mime": "image/jpeg",
+    "cors": "https://matkakirja.app",
+    "byteExactReadback": true
+  },
+  "deliveryStatus": "Selected candidates R2 verified and submitted through this mailbox manifest/report; Fable/editor/game receipt unverified.",
+  "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+  "editorAcceptance": false,
+  "fableReceipt": false,
+  "gameIntegrated": false,
+  "published": false,
+  "createdAt": "2026-10-08T12:30:33.304294+00:00"
+}

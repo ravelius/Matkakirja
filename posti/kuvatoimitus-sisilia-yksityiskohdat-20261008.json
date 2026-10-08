@@ -1,0 +1,307 @@
+{
+  "task": "sisilia-yksityiskohdat-20261008",
+  "routedTaskNumber": 41,
+  "source": {
+    "path": "posti/sisaltokirjuri-codex-sisilia-yksityiskohdat-20261008.md",
+    "commit": "5e8f0e78e20f5f8e2324787b820188efbd28b79b",
+    "blob": "8a45c9f2fb8800d01cfc476035cba962956a3909"
+  },
+  "sourceReadInFull": true,
+  "requestedImages": 4,
+  "imageCount": 2,
+  "generationCalls": 2,
+  "generationLimit": 4,
+  "sourceImagePixelsUsed": false,
+  "generationMode": "built-in image_gen, text-only, one call per produced subject; metadata-only final preparation",
+  "productionComplete": true,
+  "assets": [
+    {
+      "number": 3,
+      "qid": "Q261439",
+      "id": "teatro-massimo-suljettuna",
+      "filename": "sisilia-Q261439-teatro-massimo-suljettuna.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "file": "sisilia-Q261439-teatro-massimo-suljettuna.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/sisilia-yksityiskohdat-20261008/production/03-teatro-massimo-suljettuna/sisilia-Q261439-teatro-massimo-suljettuna.png",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11b72-d573-7292-97e7-340b896cf256/exec-9531e479-a7dd-4489-ac03-2b909147c9a5.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/sisilia-yksityiskohdat-20261008/production/03-teatro-massimo-suljettuna/original-generation.png",
+      "sha256": "1ddc3424cc9742adea6818f45508d4b87241575ac020f7c5904db672e4dddd87",
+      "originalSha256": "91a061d45addf45fe8da324f6c8d299b92b367ac99adff706d5ba5deb1c6b16c",
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationAttemptsRemaining": 0,
+      "generationPrompt": "Use case: historical-scene\nAsset type: historical educational image for a Palermo/Sicily city introduction.\nGenerate ONE completely NEW TEXT-ONLY photograph-like reconstruction, native exactly 1536 x 1024 landscape 3:2, opaque RGB PNG, sRGB. No image inputs or source photographs.\n\nScene and period: Teatro Massimo in Palermo seen from Piazza Verdi circa 1987, during its prolonged closure for restoration from 1974 to May 1997. Quiet empty daytime scene. Show the complete main front elevation, broad staircase, portico and entire visible bronze-scaled dome with its small crowning urn, all comfortably within the frame. The building is the main subject; modest stone plaza foreground.\nArchitecture: recognizable pale warm stone neoclassical Palermo opera house, grand stairway leading to a pedimented pronaos with exactly six monumental Corinthian columns, broad lower side wings behind, large shallow dome rising beyond the portico. Two distant dark bronze lion sculpture groups on stone plinths flank the lower staircase, one on each side, visually small enough that sculptural face details are not emphasized. Render only the architectural overall appearance from textual historic facts, not a replica of any source photograph or artwork composition.\nClosure details: the shadowed entry doors BEHIND the columns are plainly covered with unmarked weathered wooden boards. A modest area of period steel-tube scaffolding stands against ONE side wing, leaving the six-column portico, staircase and dome unobstructed. Closed work area indicated only by a low plain unmarked physical barrier. Dry fallen leaves gathered along a few stair edges, faint dust and slight soot marks on otherwise structurally intact stone, a few little weeds in pavement joints. These details are a fictional evocation of the closure, not a claim about a documented day. No crowds or people anywhere. No derelict ruin exaggeration.\nComposition and photographic appearance: eye-level wide documentary camera view from the plaza, only slightly oblique, natural roughly 35mm perspective, straight believable verticals, no fisheye, no tilt-shift, no aerial camera. Keep the full building and both lion groups visible with breathing room. Soft hazy ordinary daylight, gently muted slightly faded colour, natural stone beige, dull dark bronze, brown leaves, quiet pale sky. Physically convincing real-camera textures and exposure; clean optical image, not vintage print damage. No cinematic drama, HDR, oversaturation, orange-teal grading, painting, illustration, miniature or shiny CGI.\nWriting constraint: ALL stone friezes, entablatures and surfaces must be plain and completely WITHOUT letters, words or numerals, including the otherwise inscribed theatre frieze. No title or caption in the pixels. No sign or construction board at all.\nAvoid: people, film crew, actors, cameras, production equipment, cars, vehicles, modern road signs, advertising, banners, flags, logos, readable or pseudo writing, inscriptions, numerals, labels, watermarks, borders, damaged bodies, blood or violence.",
+      "viitteet": [
+        {
+          "publisher": "Fondazione Teatro Massimo",
+          "title": "Storia",
+          "url": "https://www.teatromassimo.it/chi-siamo/storia/",
+          "type": "textResearchOnly",
+          "notes": "Official theatre text confirms closure from 1974 to 12 May 1997, six Corinthian columns, two bronze lion groups and the bronze-scaled dome. Text only; no source photographs accessed. Boarded doors, scaffolding arrangement, leaves and dust are fictional closure details. The actual frieze inscription is deliberately omitted.",
+          "access": "2026-10-08; text only"
+        }
+      ],
+      "kuvateksti": "Teatro Massimo Palermossa sulkuaikanaan 1980-luvun lopulla: tyhjä portaikko, laudoitetut ovet ja sivustan rakennustelineet. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "sourceCommit": "5e8f0e78e20f5f8e2324787b820188efbd28b79b",
+      "sourceBlob": "8a45c9f2fb8800d01cfc476035cba962956a3909",
+      "sourcePath": "posti/sisaltokirjuri-codex-sisilia-yksityiskohdat-20261008.md",
+      "sourceReadInFull": true,
+      "sharedRulesReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "generationMethod": "built-in image_gen; new text-only",
+      "status": "local-candidate-approved",
+      "QA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Viewed final native 1536x1024 image and separate full-frame 480x320 preview.",
+          "Complete portico with six columns, entire dome and two bronze lion groups remain legible at 480px.",
+          "Empty plaza and staircase; boarded entry doors, one side scaffold, plain barrier, dust, dry leaves and pavement weeds evoke closure.",
+          "Natural photographic stone, bronze and daylight; no people, cars, film crew, signage, writing, logos, watermarks or borders observed."
+        ],
+        "limitations": [
+          "Original historical evocation of the verified 1974–1997 closure, not a photograph or a documented view of a specific day in 1987.",
+          "Boards, scaffold, plaza surface and vegetation details are fictional. Lion groups are simplified in the wide view; no artwork source composition was copied.",
+          "The real theatre has an inscribed frieze; the generated frieze is deliberately plain to meet the no-text requirement."
+        ],
+        "parentReview": "pending independent root QA"
+      },
+      "r2Delivered": false,
+      "mailboxDelivered": false,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "originalByteExact": true,
+      "mode": "RGB",
+      "iccProfileName": "sRGB built-in",
+      "rgbPixelsUnchanged": true,
+      "previewPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/sisilia-yksityiskohdat-20261008/production/03-teatro-massimo-suljettuna/qa-preview-480.png",
+      "previewDimensions": [
+        480,
+        320
+      ],
+      "technicalChanges": [
+        "Added standard sRGB ICC profile without color conversion.",
+        "Added exact Description and Source PNG text metadata.",
+        "Decoded RGB pixel bytes verified unchanged.",
+        "Preserved byte-exact tool original; created separate full-frame 480x320 QA preview."
+      ],
+      "sourceFileRead": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/sisilia-yksityiskohdat-20261008/sources/01-tilaus.md",
+      "sharedRulesSourcesRead": [
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/sisilia-yksityiskohdat-20261008/sources/02-yhteiset-lontoo-saannot.md"
+      ],
+      "visualReview": {
+        "task": "sisilia-yksityiskohdat-20261008",
+        "number": 3,
+        "qid": "Q261439",
+        "file": "sisilia-Q261439-teatro-massimo-suljettuna.png",
+        "sha256": "1ddc3424cc9742adea6818f45508d4b87241575ac020f7c5904db672e4dddd87",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Koko tyhjä teatterijulkisivu/kupoli/pylväikkö ja kaksi leijonaveistosta, laudoitetut ovet, sivutelineet ja portaiden lehdet; ei tekstiä, autoja tai kuvausryhmää."
+        ],
+        "limitations": [
+          "Kuvitteellinen sulkuajan1980-luvun näkymä; rakennusgeometria ja telineet likimääräisiä, sulku1974-1997 varmennettu."
+        ],
+        "agentVerdictBeforeRootReview": true,
+        "reviewedAtUTC": "2026-10-08T12:30:27.211466+00:00"
+      },
+      "agentQA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Viewed final native 1536x1024 image and separate full-frame 480x320 preview.",
+          "Complete portico with six columns, entire dome and two bronze lion groups remain legible at 480px.",
+          "Empty plaza and staircase; boarded entry doors, one side scaffold, plain barrier, dust, dry leaves and pavement weeds evoke closure.",
+          "Natural photographic stone, bronze and daylight; no people, cars, film crew, signage, writing, logos, watermarks or borders observed."
+        ],
+        "limitations": [
+          "Original historical evocation of the verified 1974–1997 closure, not a photograph or a documented view of a specific day in 1987.",
+          "Boards, scaffold, plaza surface and vegetation details are fictional. Lion groups are simplified in the wide view; no artwork source composition was copied.",
+          "The real theatre has an inscribed frieze; the generated frieze is deliberately plain to meet the no-text requirement."
+        ],
+        "parentReview": "pending independent root QA"
+      },
+      "mitat": [
+        1536,
+        1024
+      ],
+      "fableReceipt": false,
+      "r2Key": "julisteet/sisilia-yksityiskohdat/20261008/sisilia-Q261439-teatro-massimo-suljettuna.png",
+      "url": "https://media.matkakirja.app/julisteet/sisilia-yksityiskohdat/20261008/sisilia-Q261439-teatro-massimo-suljettuna.png",
+      "bytes": 2665448,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "number": 4,
+      "qid": "Q1644597",
+      "id": "martoranan-luostaripiha",
+      "filename": "sisilia-Q1644597-martoranan-luostaripiha.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "file": "sisilia-Q1644597-martoranan-luostaripiha.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/sisilia-yksityiskohdat-20261008/production/04-martoranan-luostaripiha/sisilia-Q1644597-martoranan-luostaripiha.png",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11b72-d573-7292-97e7-340b896cf256/exec-b88e6cea-a261-41df-8bd4-dd2b6deef690.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/sisilia-yksityiskohdat-20261008/production/04-martoranan-luostaripiha/original-generation.png",
+      "sha256": "49212ab6df90dd20880bd37dcc4f134696ef067352c2da80135bc13a5b792051",
+      "originalSha256": "1232b793f64444b1b1f541273ba37c1f9fd9abc9af171e6ea475a1cb7325b7d8",
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationAttemptsRemaining": 0,
+      "generationPrompt": "Use case: historical-scene\nAsset type: historical educational image for a Sicily city introduction.\nGenerate ONE completely NEW TEXT-ONLY image, native exactly 1536 x 1024 landscape 3:2, opaque RGB PNG, sRGB. No image inputs and no source photographs.\n\nScene: a modest Benedictine nuns' cloister garden in Palermo circa 1200–1250, shortly after the convent founded by Goffredo and Eloisa Martorana in 1194. This is a GENERIC ORIGINAL fictional medieval Sicilian cloister, not an authenticated reconstruction of a surviving Martorana courtyard, not a museum interior, not a copy of any architecture image or artwork. Convey the daily quiet of a medieval convent.\nArchitecture: simple warm pale limestone pointed arcades on slender plain round stone columns around a SMALL open courtyard, natural lime mortar, restrained Arab-Norman Sicilian construction. Walls remain undecorated. No elaborate copied carvings, no mosaic or fresco. Stone corridor paving under the arcade, a humble garden earth patch and one small healthy citrus tree near the centre of the courtyard, a few plain undecorated earthenware pots. A modest low plain square medieval bell tower top seen distantly above the far roofline, without recognisable later raised tower configuration.\nHuman subjects: EXACTLY TWO completely fictional anonymous ADULT Benedictine nuns, very small and distant beneath the FAR arcade. Both walk away from the camera, with their BACKS entirely toward us, facing along the far covered corridor. Simple loose BLACK wool habits and black head coverings over white linen neck cloth, full-length practical clothing, tiny back silhouettes only. No eyes, nose, mouth, visible frontal/side face, likeness of any real person, or portrait details. No other people.\nComposition: eye-level real-camera view from a shaded foreground arcade THROUGH one pointed stone arch into the sunlit small courtyard. Full broad landscape frame. Foreground arch supplies a soft architectural frame within the image, no added border. Citrus tree dominates the garden, two distant nuns remain minor figures behind it. Ordinary roughly 35mm lens, believable proportions, moderate depth of field, straight verticals, no extreme perspective or CGI symmetry.\nLight, materials and mood: calm ordinary Mediterranean midmorning daylight with soft natural shadows, muted pale limestone, dry brown garden earth, subdued green citrus leaves and just a few natural fruits, dark matte wool habits. Convincing documentary camera photorealism, physical stone and cloth texture, restrained exposure and saturation. No painterly treatment, illustration, fantasy, theatrical lighting, HDR, orange-teal grading, vintage print scratches or dramatic haze.\nAvoid: modern objects, tourists, furniture, wire, electric lighting, glass railings, museum display, vitrine, any copied artwork or identifiable collection object, precise existing cloister replication, ornamented sacred panels, visible faces, children, additional people, readable or pseudo text, letters, numbers, inscriptions, signs, logos, watermarks, captions, borders, blood or violence.",
+      "viitteet": [
+        {
+          "publisher": "Comune di Palermo",
+          "title": "Chiesa Santa Maria dell’Ammiraglio (detta Martorana)",
+          "url": "https://turismo.comune.palermo.it/palermo-welcome-luogo-dettaglio.php?det=16&id=224&tp=68",
+          "type": "textResearchOnly",
+          "notes": "Official municipal text confirms a neighbouring Benedictine nuns' convent founded in 1194 by Goffredo and Eloisa Martorana. The church was built in 1143, became the convent church in the 15th century, and its tower was raised in the 14th century. The image uses circa 1200–1250 and an entirely fictional courtyard and modest low tower. No precise surviving layout, fresco, mosaic, collection object or source image pixels.",
+          "access": "2026-10-08; text only"
+        }
+      ],
+      "kuvateksti": "Kuvitteellinen benediktiinien luostaripiha Palermossa 1200-luvun alkupuolella: kaksi nimetöntä nunnaa kulkee sitruspuun ohi. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "sourceCommit": "5e8f0e78e20f5f8e2324787b820188efbd28b79b",
+      "sourceBlob": "8a45c9f2fb8800d01cfc476035cba962956a3909",
+      "sourcePath": "posti/sisaltokirjuri-codex-sisilia-yksityiskohdat-20261008.md",
+      "sourceReadInFull": true,
+      "sharedRulesReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "generationMethod": "built-in image_gen; new text-only",
+      "status": "local-candidate-approved",
+      "QA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Viewed final native 1536x1024 image and separate full-frame 480x320 preview.",
+          "Exactly two small anonymous adult nuns in dark habits are strictly rear-facing beneath the far arcade; no facial features visible.",
+          "Generic original pointed limestone arcades, garden earth, citrus tree, plain pots and a modest low bell tower; no identifiable museum architecture or artwork copy.",
+          "Natural photographic materials and daylight; no modern objects, readable writing, labels, logos, watermarks or added borders observed."
+        ],
+        "limitations": [
+          "Fictional courtyard, tree, architecture, habits and people; not an authenticated reconstruction of Martorana's precise 12th–13th-century cloister.",
+          "The low plain tower is an original generic medieval suggestion, not the existing church tower or its later raised configuration."
+        ],
+        "parentReview": "pending independent root QA"
+      },
+      "r2Delivered": false,
+      "mailboxDelivered": false,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "originalByteExact": true,
+      "mode": "RGB",
+      "iccProfileName": "sRGB built-in",
+      "rgbPixelsUnchanged": true,
+      "previewPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/sisilia-yksityiskohdat-20261008/production/04-martoranan-luostaripiha/qa-preview-480.png",
+      "previewDimensions": [
+        480,
+        320
+      ],
+      "technicalChanges": [
+        "Added standard sRGB ICC profile without color conversion.",
+        "Added exact Description and Source PNG text metadata.",
+        "Decoded RGB pixel bytes verified unchanged.",
+        "Preserved byte-exact tool original; created separate full-frame 480x320 QA preview."
+      ],
+      "sourceFileRead": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/sisilia-yksityiskohdat-20261008/sources/01-tilaus.md",
+      "sharedRulesSourcesRead": [
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/sisilia-yksityiskohdat-20261008/sources/02-yhteiset-lontoo-saannot.md"
+      ],
+      "visualReview": {
+        "task": "sisilia-yksityiskohdat-20261008",
+        "number": 4,
+        "qid": "Q1644597",
+        "file": "sisilia-Q1644597-martoranan-luostaripiha.png",
+        "sha256": "49212ab6df90dd20880bd37dcc4f134696ef067352c2da80135bc13a5b792051",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Luonnolliset kalkkikivikaaret ja pieni sitruspuu luostaripihassa; kaksi pientä nimetöntä nunnaa täysin selin, ei tekstiä tai nykyesineitä."
+        ],
+        "limitations": [
+          "Keksitty keskiaikainen pihatila ja vaatetus, ei tunnetun säilyneen luostarin tarkka näkymä;1194perustamiskonteksti varmennettu."
+        ],
+        "agentVerdictBeforeRootReview": true,
+        "reviewedAtUTC": "2026-10-08T12:30:27.211466+00:00"
+      },
+      "agentQA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Viewed final native 1536x1024 image and separate full-frame 480x320 preview.",
+          "Exactly two small anonymous adult nuns in dark habits are strictly rear-facing beneath the far arcade; no facial features visible.",
+          "Generic original pointed limestone arcades, garden earth, citrus tree, plain pots and a modest low bell tower; no identifiable museum architecture or artwork copy.",
+          "Natural photographic materials and daylight; no modern objects, readable writing, labels, logos, watermarks or added borders observed."
+        ],
+        "limitations": [
+          "Fictional courtyard, tree, architecture, habits and people; not an authenticated reconstruction of Martorana's precise 12th–13th-century cloister.",
+          "The low plain tower is an original generic medieval suggestion, not the existing church tower or its later raised configuration."
+        ],
+        "parentReview": "pending independent root QA"
+      },
+      "mitat": [
+        1536,
+        1024
+      ],
+      "fableReceipt": false,
+      "r2Key": "julisteet/sisilia-yksityiskohdat/20261008/sisilia-Q1644597-martoranan-luostaripiha.png",
+      "url": "https://media.matkakirja.app/julisteet/sisilia-yksityiskohdat/20261008/sisilia-Q1644597-martoranan-luostaripiha.png",
+      "bytes": 2866578,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    }
+  ],
+  "excludedItems": [
+    {
+      "number": 1,
+      "qid": "Q2066497",
+      "id": "san-cataldo-postitalossa",
+      "generationCalls": 0,
+      "reason": "PrimaryFAI dates redstucco to1885 after annexdemolition/restoration; requestedred dome tips1830-70inside postofficeannex are incompatible. No recoloured or redatedsubstitute authorised; sourceallowsomission."
+    },
+    {
+      "number": 2,
+      "qid": "Q1665695",
+      "id": "palermon-nimetty-kartta",
+      "generationCalls": 0,
+      "reason": "Tilauksen neljä luettavaa kaupunginosanimeä ovat ristiriidassa yhteisten tekstittömien kuvien vaatimuksen kanssa; tekstitöntä korvaavaa karttaa ei erikseen tilattu."
+    }
+  ],
+  "comparison": {
+    "file": "toimitetut-2.jpg",
+    "r2Key": "julisteet/sisilia-yksityiskohdat/20261008/toimitetut-2.jpg",
+    "url": "https://media.matkakirja.app/julisteet/sisilia-yksityiskohdat/20261008/toimitetut-2.jpg",
+    "sha256": "78cbaa0d86d248ec8fef3eb604f7f048b34aad84efdf9216b3269b9f87301ecb",
+    "bytes": 117039,
+    "http": 200,
+    "mime": "image/jpeg",
+    "cors": "https://matkakirja.app",
+    "byteExactReadback": true
+  },
+  "deliveryStatus": "Selected candidates R2 verified and submitted through this mailbox manifest/report; Fable/editor/game receipt unverified.",
+  "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+  "editorAcceptance": false,
+  "fableReceipt": false,
+  "gameIntegrated": false,
+  "published": false,
+  "createdAt": "2026-10-08T12:30:33.184638+00:00"
+}

@@ -1,0 +1,627 @@
+{
+  "task": "kosice-yksityiskohdat-20261008",
+  "routedTaskNumber": 38,
+  "source": {
+    "path": "posti/sisaltokirjuri-codex-kosice-yksityiskohdat-20261008.md",
+    "commit": "dd88e5a60327dc8791e66533cff276382899b3a6",
+    "blob": "2dd2596be030c389b334ca6c100b85883322d31f"
+  },
+  "sourceReadInFull": true,
+  "requestedImages": 4,
+  "imageCount": 4,
+  "generationCalls": 4,
+  "generationLimit": 4,
+  "sourceImagePixelsUsed": false,
+  "generationMode": "built-in image_gen, text-only, one call per produced subject; metadata-only final preparation",
+  "productionComplete": true,
+  "assets": [
+    {
+      "number": 1,
+      "qid": "Q569428",
+      "id": "onton-kiven-legenda",
+      "filename": "kosice-Q569428-onton-kiven-legenda.png",
+      "generationPrompt": "Use case: historical-scene\nAsset type: illustrative detail for a Košice city introduction.\nCreate ONE entirely NEW TEXT-ONLY image, native exactly 1536 x 1024 landscape (3:2), opaque RGB PNG, sRGB. No input images or source photographs. Real-camera photorealistic educational illustrative scene, soft naturalistic light, normal exposure, muted colors and realistic surface texture. No HDR, cinematic grading, oversaturation, painterly overall treatment, CGI gloss or fantasy. No readable writing, letters, numbers, inscriptions, logos, signage, watermark, captions or frame.\nScene/backdrop: a wholly invented generic Gothic church building site in the fifteenth century. A close oblique view from a slightly low camera about two metres away shows a warm gray fine-grained sandstone masonry wall with narrow lime-mortar joints. Part of a plain Gothic buttress corner at the far left edge; only the lower curve of a pointed window opening at the far right, softly blurred. The masonry and arrangement must be original and unidentifiable, not any actual Košice cathedral wall or architectural replica.\nSubject: one finely dressed CLOSED stone block among the many wall blocks at centre, subtly darker than its neighbors, with a very slight shallow surface depression and an almost imperceptibly uneven narrow mortar seam. The stone should appear solid and discreet; do not show an opening, a cavity, an interior, treasure, a loose displaced block or anything revealing a real location. It merely quietly evokes a folktale about a hollow stone, without explaining it.\nComposition/framing: full landscape frame, masonry fills most of the view; one centre stone in focus while the neighboring stones gently soften in realistic shallow depth of field, normal 50mm lens perspective. Near the low left foreground a small unfinished unmarked timber scaffold component and a generic old wooden-handled stone hammer and iron chisel rest on a plank, subtle and partly outside focus. Newly dressed yet slightly uneven stone, fine tooling marks and small chips rather than a ruined modern building.\nLighting/mood: gentle side daylight, quiet and enigmatic, restrained warm gray stone and dull brown wood, no drama.\nAvoid: all humans, faces or silhouettes; specific cathedral façade identification; dark gaping hole, cutaway, hidden contents, open seam, glowing block, magic, smoke, crystals, treasure, modern objects, text and markings.",
+      "kuvateksti": "Kuvitteellinen goottilainen kivimuuri havainnollistaa Košicen onttoon kiveen liittyvää kansantarinaa; kiven todellista sijaintia tai rakennetta ei esitetä. Havainnekuva.",
+      "viitteet": [
+        {
+          "publisher": "City of Košice",
+          "title": "Potulky mestom: Povesti a legendy",
+          "url": "https://w.kosice.sk/clanok/potulky-mestom-povesti-a-legendy",
+          "type": "textResearchOnly",
+          "notes": "Official city text names the hollow-stone folktale of St Elizabeth Cathedral. It does not document a stone location or cavity. Original generic closed masonry scene, no source pixels.",
+          "access": "2026-10-08; text only"
+        },
+        {
+          "publisher": "Visit Košice",
+          "title": "Objavujte košické chrámy",
+          "url": "https://visitkosice.org/sprievodca/kosicke-chramy",
+          "type": "textResearchOnly",
+          "notes": "Official tourism text describes the Gothic cathedral and completion in 1508; fifteenth-century generic construction context is illustrative.",
+          "access": "2026-10-08; text only"
+        }
+      ],
+      "factualCorrections": [],
+      "limitations": [
+        "Wholly fictional wall, stone, tools and arrangement; legend illustration, not a location reveal or documented cathedral masonry."
+      ],
+      "productionFolder": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kosice-yksityiskohdat-20261008/production/01-onton-kiven-legenda",
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "sourceCommit": "dd88e5a60327dc8791e66533cff276382899b3a6",
+      "sourceBlob": "2dd2596be030c389b334ca6c100b85883322d31f",
+      "sourcePath": "posti/sisaltokirjuri-codex-kosice-yksityiskohdat-20261008.md",
+      "sourceReadInFull": true,
+      "sharedRulesReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "status": "local-candidate-approved",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "file": "kosice-Q569428-onton-kiven-legenda.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kosice-yksityiskohdat-20261008/production/01-onton-kiven-legenda/kosice-Q569428-onton-kiven-legenda.png",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11b6c-b2c4-71b3-ac89-f1277f1d6de0/exec-0de367c5-1515-4fb1-ab95-a31ad0fd746b.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kosice-yksityiskohdat-20261008/production/01-onton-kiven-legenda/original-generation.png",
+      "sha256": "cbcbd95e446344dfdee1f69446d1b05771aa1ac3b5aec2305a208200902dc9b8",
+      "originalSha256": "51f5bd6cf96a4a6b0790e2ff3899c2202ad466e910c7b94c7b26e0bc23a35703",
+      "originalByteExact": true,
+      "generationAttemptsRemaining": 0,
+      "generationFailed": false,
+      "outputProduced": true,
+      "generationMethod": "built-in image_gen; new text-only",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "QA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Viewed native 1536x1024 and separate full-frame 480x320 preview.",
+          "Closed subtly darker central sandstone block with faint depression; no cavity, loose block, treasure, magic or location reveal.",
+          "Original generic Gothic buttress/window details, old hammer/chisel and timber scaffold component; no people, readable marks or modern objects.",
+          "Real camera texture and muted daylight; stone distinction remains legible at 480 pixels."
+        ],
+        "limitations": [
+          "Wholly fictional wall, stone, tools and arrangement; legend illustration, not a location reveal or documented cathedral masonry."
+        ],
+        "parentReview": "pending independent root QA"
+      },
+      "mode": "RGB",
+      "iccProfileName": "sRGB built-in",
+      "rgbPixelsUnchanged": true,
+      "previewPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kosice-yksityiskohdat-20261008/production/01-onton-kiven-legenda/qa-preview-480.png",
+      "previewDimensions": [
+        480,
+        320
+      ],
+      "technicalChanges": [
+        "Added standard sRGB ICC profile without color conversion.",
+        "Added exact Description and Source PNG text metadata.",
+        "Decoded RGB pixel bytes verified unchanged.",
+        "Preserved byte-exact tool original; created separate full-frame 480x320 QA preview."
+      ],
+      "sharedRulesSourcesRead": [
+        "output/kosice-yksityiskohdat-20261008/sources/01-tilaus.md (entire)",
+        "output/kosice-yksityiskohdat-20261008/sources/02-yhteiset-lontoo-saannot.md (entire)"
+      ],
+      "r2Delivered": false,
+      "mailboxDelivered": false,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "visualReview": {
+        "task": "kosice-yksityiskohdat-20261008",
+        "number": 1,
+        "qid": "Q569428",
+        "file": "kosice-Q569428-onton-kiven-legenda.png",
+        "sha256": "cbcbd95e446344dfdee1f69446d1b05771aa1ac3b5aec2305a208200902dc9b8",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Geneerinen tyhjä kivimuuri, yksi hienovaraisesti poikkeava lohko, taltta/vasara/telinepuu; ei näkyvää aarretta, aukkoa, tekstiä tai nykykatedraalin seinän kopiota."
+        ],
+        "limitations": [
+          "Kokonaan kuvitteellinen kansantarinan ympäristö; ei todellisen kiven paikka tai rakenne."
+        ],
+        "agentVerdictBeforeRootReview": true,
+        "reviewedAtUTC": "2026-10-08T12:30:27.211466+00:00"
+      },
+      "agentQA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Viewed native 1536x1024 and separate full-frame 480x320 preview.",
+          "Closed subtly darker central sandstone block with faint depression; no cavity, loose block, treasure, magic or location reveal.",
+          "Original generic Gothic buttress/window details, old hammer/chisel and timber scaffold component; no people, readable marks or modern objects.",
+          "Real camera texture and muted daylight; stone distinction remains legible at 480 pixels."
+        ],
+        "limitations": [
+          "Wholly fictional wall, stone, tools and arrangement; legend illustration, not a location reveal or documented cathedral masonry."
+        ],
+        "parentReview": "pending independent root QA"
+      },
+      "mitat": [
+        1536,
+        1024
+      ],
+      "fableReceipt": false,
+      "r2Key": "julisteet/kosice-yksityiskohdat/20261008/kosice-Q569428-onton-kiven-legenda.png",
+      "url": "https://media.matkakirja.app/julisteet/kosice-yksityiskohdat/20261008/kosice-Q569428-onton-kiven-legenda.png",
+      "bytes": 3009582,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "number": 2,
+      "qid": "Q133708",
+      "id": "keksitty-komediakohtaus-1924",
+      "filename": "kosice-Q133708-keksitty-komediakohtaus-1924.png",
+      "generationPrompt": "Use case: historical-scene\nAsset type: illustrative theatre detail for a Košice city introduction.\nCreate ONE entirely NEW TEXT-ONLY image, native exactly 1536 x 1024 landscape (3:2), opaque RGB PNG, sRGB. No input images or source photographs. Real-camera photorealistic educational illustrative scene, soft naturalistic light, normal exposure, muted colors and realistic surface texture. No HDR, cinematic grading, oversaturation, painterly overall treatment, CGI gloss or fantasy. No readable writing, letters, numbers, inscriptions, logos, signage, watermark, captions or frame.\nPrimary request: an entirely original fictional small-town comedy stage scene evoking a Central European theatre evening in September 1924, not a copy of any actual production, cast, staging, performance photograph or work by a named stage designer. Historically the new East Slovak National Theatre's first premiere was on 13 September 1924; that fact supplies only the period, not the appearance of this invented scene.\nScene/backdrop: a modest wooden stage with a simple original hand-painted canvas backdrop suggesting a small nineteenth-century town square, plain town-hall windows and a church tower, with no writing or symbols. Dark matte muted burgundy curtains at the sides, old wood stage boards, warm soft practical period footlights in small gas-lamp-style housings, a plain tall wooden chair and a small wooden table holding completely BLANK rolled and loose parchment props. No projected images, electric special-effects rigs or modern equipment.\nSubject: exactly FOUR completely anonymous FICTIONAL ADULT actors, distant and SMALL, each full-height figure at most about 12–15 percent of image height. Three wear generic mid-nineteenth-century small-town formal costume with dull top hats, long coats and a walking cane, one wears a modest long dress and apron. They hold absurdly solemn stiff postures as they gesture toward the fictional town-hall backdrop, forming a conversational semicircle with their BACKS TO THE CAMERA. Show backs of heads/hats; heads remain turned away, no frontal face, eyes or recognizable profile. They are unknown invented comic townspeople, no known actor, historical likeness or particular play character portrait.\nComposition/framing: wide view from a distant central upper gallery looking slightly down, whole stage width visible within a large plain period proscenium; four small figures in the middle distance, empty dark foreground seats may barely edge the bottom. No visible audience. Period fabrics, painted canvas and actual wooden boards look like a camera photograph of theatrical materials. Naturalistic restrained tungsten-like warm stage lighting, no dramatic spotlight beams, no neon colors, realistic depth of field and normal wide lens.\nAvoid: close or identifiable faces, known real humans or known theatre production designs, extra people or audience heads, written scripts, titles, posters, signage, logos, modern lighting rigs/cameras, readable text of any kind.",
+      "kuvateksti": "Košicen uuden Východoslovenské národné divadlon ensimmäinen ensi-ilta oli Kocúrkovo 13.9.1924. Kuvan komediakohtaus, näyttelijät ja lavastus ovat kokonaan keksittyjä. Havainnekuva.",
+      "viitteet": [
+        {
+          "publisher": "Národné divadlo Košice",
+          "title": "Six theatrical centuries in Košice",
+          "url": "https://www.sdke.sk/en/node/403",
+          "type": "textResearchOnly",
+          "notes": "The theatre's own history verifies first premiere of the newly established VND: Kocúrkovo, 13 September 1924. Historic theatre building opened 28 September 1899. No actors' likenesses or known staging copied.",
+          "access": "2026-10-08; text only"
+        },
+        {
+          "publisher": "Národné divadlo Košice",
+          "title": "ĎAKUJEME 2024 - VIVAT NÁRODNÉ DIVADLO KOŠICE",
+          "url": "https://www.sdke.sk/sk/divadlo/dakujeme-2024-vivat-narodne-divadlo-kosice",
+          "type": "textResearchOnly",
+          "notes": "The theatre's centenary announcement independently confirms first Kocúrkovo premiere 13 September 1924 in the existing historic building. Lighting and invented scene are generic period suggestions, not an authenticated production reconstruction.",
+          "access": "2026-10-08; text only"
+        }
+      ],
+      "factualCorrections": [
+        "Specify 13 September 1924 as first premiere of newly established VND, not opening date of theatre building (28 September 1899)."
+      ],
+      "limitations": [
+        "All actors, gestures, costume arrangement, props, canvas design and stage architecture are fictional; this is not a reconstruction of the actual Kocúrkovo premiere.",
+        "Gas-lamp-style period housings provide generic visual atmosphere; actual 1924 theatre lighting technology not independently verified."
+      ],
+      "productionFolder": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kosice-yksityiskohdat-20261008/production/02-keksitty-komediakohtaus-1924",
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "sourceCommit": "dd88e5a60327dc8791e66533cff276382899b3a6",
+      "sourceBlob": "2dd2596be030c389b334ca6c100b85883322d31f",
+      "sourcePath": "posti/sisaltokirjuri-codex-kosice-yksityiskohdat-20261008.md",
+      "sourceReadInFull": true,
+      "sharedRulesReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "status": "local-candidate-approved",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "file": "kosice-Q133708-keksitty-komediakohtaus-1924.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kosice-yksityiskohdat-20261008/production/02-keksitty-komediakohtaus-1924/kosice-Q133708-keksitty-komediakohtaus-1924.png",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11b6c-b2c4-71b3-ac89-f1277f1d6de0/exec-231e6125-2a0f-43ff-99d0-f5226bb502bf.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kosice-yksityiskohdat-20261008/production/02-keksitty-komediakohtaus-1924/original-generation.png",
+      "sha256": "682bb39bcc4a2d60ecf6673c506da6514139b4b750043042db150f8fcd8aa59f",
+      "originalSha256": "82bd97079f1bc2200419f6529787ade125e467c4bc8aec5c0880c29ce364d910",
+      "originalByteExact": true,
+      "generationAttemptsRemaining": 0,
+      "generationFailed": false,
+      "outputProduced": true,
+      "generationMethod": "built-in image_gen; new text-only",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "QA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Viewed native 1536x1024 and separate full-frame 480x320 preview.",
+          "Exactly four anonymous fictional actors shown from rear; backs/hats dominate, no frontal face or recognizable real likeness. Left actor has a tiny shadowed side-face contour, not portrait detail.",
+          "Full-width wooden stage, canvas-style invented town backdrop, plain unmarked parchment props and period-looking warm footlamps; no audience people, modern equipment or readable writing.",
+          "Whole composition reads as real camera theatre materials. Stage and rear-facing figures remain clear in 480-pixel preview."
+        ],
+        "limitations": [
+          "All actors, gestures, costume arrangement, props, canvas design and stage architecture are fictional; this is not a reconstruction of the actual Kocúrkovo premiere.",
+          "Gas-lamp-style period housings provide generic visual atmosphere; actual 1924 theatre lighting technology not independently verified.",
+          "Generated figures are approximately one quarter of frame height, larger than the prompt target of 12–15 percent, while remaining distant within the full-stage view and rear-facing. Leftmost tiny side-face contour requires independent parent review."
+        ],
+        "parentReview": "pending independent root QA"
+      },
+      "mode": "RGB",
+      "iccProfileName": "sRGB built-in",
+      "rgbPixelsUnchanged": true,
+      "previewPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kosice-yksityiskohdat-20261008/production/02-keksitty-komediakohtaus-1924/qa-preview-480.png",
+      "previewDimensions": [
+        480,
+        320
+      ],
+      "technicalChanges": [
+        "Added standard sRGB ICC profile without color conversion.",
+        "Added exact Description and Source PNG text metadata.",
+        "Decoded RGB pixel bytes verified unchanged.",
+        "Preserved byte-exact tool original; created separate full-frame 480x320 QA preview."
+      ],
+      "sharedRulesSourcesRead": [
+        "output/kosice-yksityiskohdat-20261008/sources/01-tilaus.md (entire)",
+        "output/kosice-yksityiskohdat-20261008/sources/02-yhteiset-lontoo-saannot.md (entire)"
+      ],
+      "r2Delivered": false,
+      "mailboxDelivered": false,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "visualReview": {
+        "task": "kosice-yksityiskohdat-20261008",
+        "number": 2,
+        "qid": "Q133708",
+        "file": "kosice-Q133708-keksitty-komediakohtaus-1924.png",
+        "sha256": "682bb39bcc4a2d60ecf6673c506da6514139b4b750043042db150f8fcd8aa59f",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Neljä nimetöntä näyttelijää laajassa lavanäkymässä, selät katsojaan; tyhjät pergamenttirullat, uusi maalattu kaupunkikulissi ja kaasuvalon näköiset lamput. Ei kirjoitusta tai tunnettua näyttelijää."
+        ],
+        "limitations": [
+          "Hahmot noin neljännes korkeudesta; vasemmalla pieni sivukasvon reunus, ei tunnistettava lähimuotokuva. Lavastus ja valotekniikka keksittyjä; ensi-ilta13.9.1924 varmennettu."
+        ],
+        "agentVerdictBeforeRootReview": true,
+        "reviewedAtUTC": "2026-10-08T12:30:27.211466+00:00"
+      },
+      "agentQA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Viewed native 1536x1024 and separate full-frame 480x320 preview.",
+          "Exactly four anonymous fictional actors shown from rear; backs/hats dominate, no frontal face or recognizable real likeness. Left actor has a tiny shadowed side-face contour, not portrait detail.",
+          "Full-width wooden stage, canvas-style invented town backdrop, plain unmarked parchment props and period-looking warm footlamps; no audience people, modern equipment or readable writing.",
+          "Whole composition reads as real camera theatre materials. Stage and rear-facing figures remain clear in 480-pixel preview."
+        ],
+        "limitations": [
+          "All actors, gestures, costume arrangement, props, canvas design and stage architecture are fictional; this is not a reconstruction of the actual Kocúrkovo premiere.",
+          "Gas-lamp-style period housings provide generic visual atmosphere; actual 1924 theatre lighting technology not independently verified.",
+          "Generated figures are approximately one quarter of frame height, larger than the prompt target of 12–15 percent, while remaining distant within the full-stage view and rear-facing. Leftmost tiny side-face contour requires independent parent review."
+        ],
+        "parentReview": "pending independent root QA"
+      },
+      "mitat": [
+        1536,
+        1024
+      ],
+      "fableReceipt": false,
+      "r2Key": "julisteet/kosice-yksityiskohdat/20261008/kosice-Q133708-keksitty-komediakohtaus-1924.png",
+      "url": "https://media.matkakirja.app/julisteet/kosice-yksityiskohdat/20261008/kosice-Q133708-keksitty-komediakohtaus-1924.png",
+      "bytes": 2295365,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "number": 3,
+      "qid": "Q1186439",
+      "id": "kulta-aarteen-loyto-1935",
+      "filename": "kosice-Q1186439-kulta-aarteen-loyto-1935.png",
+      "generationPrompt": "Use case: historical-scene\nAsset type: illustrative historical find-context detail for a Košice city introduction.\nCreate ONE entirely NEW TEXT-ONLY image, native exactly 1536 x 1024 landscape (3:2), opaque RGB PNG, sRGB. No input images or source photographs. Real-camera photorealistic educational illustrative scene, soft naturalistic light, normal exposure, muted colors and realistic surface texture. No HDR, cinematic grading, oversaturation, painterly overall treatment, CGI gloss or fantasy. No readable writing, letters, numbers, inscriptions, logos, signage, watermark, captions or frame.\nPrimary request: an ORIGINAL invented archaeological-find-context scene evoking construction work in an old cellar in August 1935. It refers to the historical Košice gold discovery of 24 August 1935 without reproducing the real discovery place, museum reconstruction or actual museum artifacts. Text research confirms a copper container found during foundation excavation; do not use the incorrect black clay pot or a hole in a wall.\nScene/backdrop: from a low oblique viewpoint close to the ground, show a shallow exposed earth and rubble excavation at the base of a generic old brick-and-stone cellar foundation. A rough brick wall with crumbling lime mortar rises behind; dusty sand, earth, small lime fragments and rubble around the find. Ground-level exposed foundation soil is clearly the find context, not a display alcove in the vertical wall. The room/layout must be invented and unidentifiable. No museum glass or case.\nSubject: one plain ORIGINAL fictional copper sheet-metal prop container partly in the earth, a small rectangular box with softly dented flat sides and a simple flat loose lid tipped to the side. Dull reddish brown copper with dark brown patina, unquestionably metal and not black pottery. This invented plain rectangular container is deliberately unlike the actual decorated round paired-bowl treasure vessel. No engraving, animal motif, ornaments, insignia or distinctive artifact design.\nFrom its partly open rim a modest heap of dozens of wholly original smooth BLANK golden coin-shaped discs spills onto sandy rubble; discs have simple irregular plain edges and completely unmarked flat faces, no portraits, relief, mint marks, dates, heraldry, letters or historical numismatic design. A simple fictional gold-tone chain of plain oval links drapes over the heap, not an ornate Renaissance chain, with no pendant or decorative fastener. These are generic original illustrative props, NOT identical real museum coins, chain or vessel. No identifiable historical collection item anywhere.\nComposition/framing: landscape close view, invented copper container and blank gold discs centred, wall at left/back, sand and lime in foreground, natural 50mm camera perspective with gentle depth of field. Soft faint daylight from an unseen high cellar opening catches gold modestly; subdued earth, brick, copper and gold tones. Quiet dusty construction find, photoreal camera surface detail, no magical glow or theatrical treasure glamour.\nAvoid: black clay/ceramic vessel; round decorated paired-bowl vessel; actual hoard artifacts or museum reconstruction replicas; recognizable coin faces or coin patterns; people, hands, glass, reflection, showcase, placards, writing/numbers, modern tools, lamps, logos, fantasy or violence.",
+      "kuvateksti": "Košicen kultalöytö tehtiin rakennustöissä 24.8.1935. Kuvan löytöympäristö sekä kupariastia, leimattomat kullanväriset kiekot ja ketju ovat uusia keksittyjä rekvisiittoja, eivät todellisten löytöesineiden jäljennöksiä. Havainnekuva.",
+      "viitteet": [
+        {
+          "publisher": "Východoslovenské múzeum v Košiciach",
+          "title": "Stále expozície a krátkodobé výstavy",
+          "url": "https://www.vsmuzeum.sk/vystavy/",
+          "type": "textResearchOnly",
+          "notes": "Official museum indexed text confirms coins, medals and Renaissance chain were in a hammered copper-sheet container with engraved animal motifs. Correction from clay to generic plain copper prop; actual ornament and vessel shape not copied.",
+          "access": "2026-10-08; official indexed text only"
+        },
+        {
+          "publisher": "Ministry of Culture of the Slovak Republic",
+          "title": "Košický zlatý poklad v Budapešti",
+          "url": "https://www.culture.gov.sk/sk/aktualita/kosicky-zlaty-poklad-v-budapesti",
+          "type": "textResearchOnly",
+          "notes": "Primary government text confirms discovery on 24 August 1935 during reconstruction at the Financial Directorate building on Hlavná Street, hiding between 1679 and 1682 based on youngest coin. Exact actual artifacts excluded.",
+          "access": "2026-10-08; text only"
+        },
+        {
+          "publisher": "Národná banka Slovenska",
+          "title": "Biatec 7/2000, Poklady na Slovensku, p. 22 (PDF page 24)",
+          "url": "https://nbs.sk/_img/documents/_publik_nbs_fsr/biatec/rok2000/biatec_7_2000.pdf",
+          "type": "textResearchOnly",
+          "notes": "Interview with numismatist Elena Minarovičová states foundation excavation in August 1935 and a round copper container made of fitting bowls with engraved decoration; indicates hiding approximately 1680–1682. We use foundation-ground find context and a deliberately different plain rectangular original prop. PDF text only; no screenshots or image reference pixels.",
+          "access": "2026-10-08; extracted text only"
+        }
+      ],
+      "factualCorrections": [
+        "Discovery date: 24 August 1935.",
+        "Container material: copper, not black clay/ceramic; fictional rectangular undecorated copper prop deliberately differs from the actual round engraved paired-bowl vessel.",
+        "Find described by primary NBS numismatist interview as foundation excavation; replaced wall niche with exposed cellar/foundation earth beside brick masonry.",
+        "Hiding period supported as 1679–1682 (NBS approximately 1680–1682), rather than a general 1670s claim."
+      ],
+      "limitations": [
+        "Environment and placement are fictional find-context illustration, not an authenticated reconstruction of the cellar or discovery.",
+        "Copper box, blank discs and simple chain are new original generic props; actual coins, medallions, vessel and Renaissance chain are not reproduced.",
+        "No exact count or actual treasure composition is claimed by the depicted heap."
+      ],
+      "productionFolder": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kosice-yksityiskohdat-20261008/production/03-kulta-aarteen-loyto-1935",
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "sourceCommit": "dd88e5a60327dc8791e66533cff276382899b3a6",
+      "sourceBlob": "2dd2596be030c389b334ca6c100b85883322d31f",
+      "sourcePath": "posti/sisaltokirjuri-codex-kosice-yksityiskohdat-20261008.md",
+      "sourceReadInFull": true,
+      "sharedRulesReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "status": "local-candidate-approved",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "file": "kosice-Q1186439-kulta-aarteen-loyto-1935.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kosice-yksityiskohdat-20261008/production/03-kulta-aarteen-loyto-1935/kosice-Q1186439-kulta-aarteen-loyto-1935.png",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11b6c-b2c4-71b3-ac89-f1277f1d6de0/exec-5f530988-5c2b-4543-aaba-376e1a9dac5d.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kosice-yksityiskohdat-20261008/production/03-kulta-aarteen-loyto-1935/original-generation.png",
+      "sha256": "869193f2e9a925f3e8695997ad449330e141b6eabd24a826d54aa7f157f55b8a",
+      "originalSha256": "5d6902cfad55a152226bb0d697cd5bfe01bcce1df9990ea5d1a57082f80d8037",
+      "originalByteExact": true,
+      "generationAttemptsRemaining": 0,
+      "generationFailed": false,
+      "outputProduced": true,
+      "generationMethod": "built-in image_gen; new text-only",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "QA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Viewed native 1536x1024 and separate full-frame 480x320 preview.",
+          "Plain rectangular brown copper prop box with flat lid rests in exposed earth and rubble beside old brick masonry; no black ceramic vessel or display niche.",
+          "Golden discs have blank unmarked flat faces without historic coin designs, inscriptions or readable dates; simple oval-link fictional chain, no ornate museum artifact likeness.",
+          "Naturalistic dusty basement light and realistic materials. No people, modern tools, signage, glass or museum fixtures.",
+          "Corrected generic find-context scene remains legible at 480 pixels; caption identifies original props and excludes actual find-object replicas."
+        ],
+        "limitations": [
+          "Environment and placement are fictional find-context illustration, not an authenticated reconstruction of the cellar or discovery.",
+          "Copper box, blank discs and simple chain are new original generic props; actual coins, medallions, vessel and Renaissance chain are not reproduced.",
+          "No exact count or actual treasure composition is claimed by the depicted heap."
+        ],
+        "parentReview": "pending independent root QA"
+      },
+      "mode": "RGB",
+      "iccProfileName": "sRGB built-in",
+      "rgbPixelsUnchanged": true,
+      "previewPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kosice-yksityiskohdat-20261008/production/03-kulta-aarteen-loyto-1935/qa-preview-480.png",
+      "previewDimensions": [
+        480,
+        320
+      ],
+      "technicalChanges": [
+        "Added standard sRGB ICC profile without color conversion.",
+        "Added exact Description and Source PNG text metadata.",
+        "Decoded RGB pixel bytes verified unchanged.",
+        "Preserved byte-exact tool original; created separate full-frame 480x320 QA preview."
+      ],
+      "sharedRulesSourcesRead": [
+        "output/kosice-yksityiskohdat-20261008/sources/01-tilaus.md (entire)",
+        "output/kosice-yksityiskohdat-20261008/sources/02-yhteiset-lontoo-saannot.md (entire)"
+      ],
+      "r2Delivered": false,
+      "mailboxDelivered": false,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "visualReview": {
+        "task": "kosice-yksityiskohdat-20261008",
+        "number": 3,
+        "qid": "Q1186439",
+        "file": "kosice-Q1186439-kulta-aarteen-loyto-1935.png",
+        "sha256": "869193f2e9a925f3e8695997ad449330e141b6eabd24a826d54aa7f157f55b8a",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Uusi geneerinen kuparilaatikko, leimattomat kullanväriset kiekot ja ketju perustusten maassa vanhan tiiliseinän vieressä; ei museoesinekopioita, kirjoitusta tai ihmisiä."
+        ],
+        "limitations": [
+          "Löytökontekstin havainnollistus24.8.1935; kaikki esineet sekä järjestely keksittyjä, ei oikea löytöpaikkarekonstruktio."
+        ],
+        "agentVerdictBeforeRootReview": true,
+        "reviewedAtUTC": "2026-10-08T12:30:27.211466+00:00"
+      },
+      "agentQA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Viewed native 1536x1024 and separate full-frame 480x320 preview.",
+          "Plain rectangular brown copper prop box with flat lid rests in exposed earth and rubble beside old brick masonry; no black ceramic vessel or display niche.",
+          "Golden discs have blank unmarked flat faces without historic coin designs, inscriptions or readable dates; simple oval-link fictional chain, no ornate museum artifact likeness.",
+          "Naturalistic dusty basement light and realistic materials. No people, modern tools, signage, glass or museum fixtures.",
+          "Corrected generic find-context scene remains legible at 480 pixels; caption identifies original props and excludes actual find-object replicas."
+        ],
+        "limitations": [
+          "Environment and placement are fictional find-context illustration, not an authenticated reconstruction of the cellar or discovery.",
+          "Copper box, blank discs and simple chain are new original generic props; actual coins, medallions, vessel and Renaissance chain are not reproduced.",
+          "No exact count or actual treasure composition is claimed by the depicted heap."
+        ],
+        "parentReview": "pending independent root QA"
+      },
+      "mitat": [
+        1536,
+        1024
+      ],
+      "fableReceipt": false,
+      "r2Key": "julisteet/kosice-yksityiskohdat/20261008/kosice-Q1186439-kulta-aarteen-loyto-1935.png",
+      "url": "https://media.matkakirja.app/julisteet/kosice-yksityiskohdat/20261008/kosice-Q1186439-kulta-aarteen-loyto-1935.png",
+      "bytes": 2886662,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "number": 4,
+      "qid": "Q3360878",
+      "id": "keksityt-kivifragmentit",
+      "filename": "kosice-Q3360878-keksityt-kivifragmentit.png",
+      "generationPrompt": "Use case: photorealistic-natural\nAsset type: conceptual architectural detail for a Košice city introduction.\nCreate ONE entirely NEW TEXT-ONLY image, native exactly 1536 x 1024 landscape (3:2), opaque RGB PNG, sRGB. No input images or source photographs. Real-camera photorealistic educational illustrative scene, soft naturalistic light, normal exposure, muted colors and realistic surface texture. No HDR, cinematic grading, oversaturation, painterly overall treatment, CGI gloss or fantasy. No readable writing, letters, numbers, inscriptions, logos, signage, watermark, captions or frame.\nPrimary request: a wholly original invented group of generic Gothic stone fragments in a garden, illustrating reuse of old building stone associated with the nineteenth-century Jakab Palace. No actual cathedral fragments or museum-collection artifacts are replicated; neither shapes, carvings nor arrangement copy a real lapidarium. The precise garden display is fictional, not claimed to document an actual arrangement.\nScene/backdrop: a quiet garden at present, rough green lawn and low shrubs, soft overcast daylight. In the distant softly OUT-OF-FOCUS background a partial neo-Gothic palace tower and muted greenish roof only suggest Jakab Palace in Košice, avoiding sharp architectural details. No streets, cars, modern equipment or signs.\nSubject: THREE distinct ORIGINAL unidentifiable warm gray sandstone pieces placed casually on the lawn beneath shrubs: a broken curved section of a pointed Gothic portal with simple shallow moldings, a low squared buttress fragment with a weathered beveled edge, and a short broken generic stone balustrade with one simple abstract trefoil opening. They have invented modest geometric carving and faint generic leaf-like accents, not recognizable iconography, statues, sculptures, actual cathedral ornament or reproductions of surviving building stones. Chips, worn chisel texture, light moss in cracks, varied mottled sandstone and irregular broken ends; heavy physically plausible fragments resting securely on grass and soil. Maintain clear separation and distinct plausible stone shapes.\nComposition/framing: landscape garden-level camera view, fragments dominate lower two-thirds in focus, lush shrubs at the sides and blurred neo-Gothic building silhouette in the upper background; natural 50mm lens perspective and gentle depth of field, restrained real photography. Quiet informal collection-of-building-stone atmosphere, no museum display fixtures.\nAvoid: identifiable museum artifacts or actual cathedral fragment replicas, elaborate famous carvings, figures, faces, religious statues, exact real garden layout, people, signs, labels, dates, writing, street views, vehicles, showcase glass, CGI or painterly treatment.",
+      "kuvateksti": "Kokonaan keksityt goottilaiset kivikatkelmat kuvitteellisessa puutarhassa havainnollistavat vanhan rakennuskiven uusiokäyttöä Jakabovin palatsin yhteydessä; ne eivät esitä todellisia kivifragmentteja tai niiden sijoittelua. Havainnekuva.",
+      "viitteet": [
+        {
+          "publisher": "City of Košice",
+          "title": "Jakabov palác",
+          "url": "https://www.kosice.sk/mesto/jakabov-palac",
+          "type": "textResearchOnly",
+          "notes": "Official city text dates pseudo-Gothic palace to 1899 and says builder acquired material during St Elizabeth Cathedral reconstruction. It does not verify the requested fragment types, ages or garden arrangement; those remain fictional generic illustration.",
+          "access": "2026-10-08; text only"
+        },
+        {
+          "publisher": "Visit Košice",
+          "title": "Jakabov palác",
+          "url": "https://visitkosice.org/vidiet-a-zazit/jakabov-palac",
+          "type": "textResearchOnly",
+          "notes": "Official tourism text identifies neo-Gothic palace and builders. Used only to contextualize a blurred background, without photographs or building/artifact replicas.",
+          "access": "2026-10-08; text only"
+        }
+      ],
+      "factualCorrections": [
+        "Primary text supports reuse of cathedral building material but not a specific garden arrangement or portal/buttress/balustrade fragment set. Caption explicitly keeps garden and fragments conceptual and fictional."
+      ],
+      "limitations": [
+        "Stone forms, carvings, dates, provenance and garden arrangement are fictional; no actual collection objects reproduced.",
+        "Blurred background only suggests a neo-Gothic palace; no verified exact garden view."
+      ],
+      "productionFolder": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kosice-yksityiskohdat-20261008/production/04-keksityt-kivifragmentit",
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "sourceCommit": "dd88e5a60327dc8791e66533cff276382899b3a6",
+      "sourceBlob": "2dd2596be030c389b334ca6c100b85883322d31f",
+      "sourcePath": "posti/sisaltokirjuri-codex-kosice-yksityiskohdat-20261008.md",
+      "sourceReadInFull": true,
+      "sharedRulesReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "status": "local-candidate-approved",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "file": "kosice-Q3360878-keksityt-kivifragmentit.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kosice-yksityiskohdat-20261008/production/04-keksityt-kivifragmentit/kosice-Q3360878-keksityt-kivifragmentit.png",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11b6c-b2c4-71b3-ac89-f1277f1d6de0/exec-5c74731a-3686-4c97-97ef-fd114be37540.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kosice-yksityiskohdat-20261008/production/04-keksityt-kivifragmentit/original-generation.png",
+      "sha256": "a520c1aa6f753b556738061b251f04dfb1d2878e38c6c31e1b8fd0f5f0da0a1d",
+      "originalSha256": "f7383cceafeaee79a2e3bb118a93a1895769b770189999aa1420bd7a3d6197c1",
+      "originalByteExact": true,
+      "generationAttemptsRemaining": 0,
+      "generationFailed": false,
+      "outputProduced": true,
+      "generationMethod": "built-in image_gen; new text-only",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "QA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Viewed native 1536x1024 and separate full-frame 480x320 preview.",
+          "Three distinct fictional sandstone fragments: curved portal piece, squared buttress-like block and broken balustrade with a plain trefoil opening. Original generic geometric/leaf details; no identifiable statues, artifact iconography or collection-object replicas.",
+          "Natural stone wear, moss, shrubs and grass with a soft neo-Gothic palace silhouette behind; no people, signs, traffic, museum fixture or writing.",
+          "All three fragments remain distinguishable in the 480-pixel preview; photoreal material texture and muted overcast lighting."
+        ],
+        "limitations": [
+          "Stone forms, carvings, dates, provenance and garden arrangement are fictional; no actual collection objects reproduced.",
+          "Blurred background only suggests a neo-Gothic palace; no verified exact garden view."
+        ],
+        "parentReview": "pending independent root QA"
+      },
+      "mode": "RGB",
+      "iccProfileName": "sRGB built-in",
+      "rgbPixelsUnchanged": true,
+      "previewPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kosice-yksityiskohdat-20261008/production/04-keksityt-kivifragmentit/qa-preview-480.png",
+      "previewDimensions": [
+        480,
+        320
+      ],
+      "technicalChanges": [
+        "Added standard sRGB ICC profile without color conversion.",
+        "Added exact Description and Source PNG text metadata.",
+        "Decoded RGB pixel bytes verified unchanged.",
+        "Preserved byte-exact tool original; created separate full-frame 480x320 QA preview."
+      ],
+      "sharedRulesSourcesRead": [
+        "output/kosice-yksityiskohdat-20261008/sources/01-tilaus.md (entire)",
+        "output/kosice-yksityiskohdat-20261008/sources/02-yhteiset-lontoo-saannot.md (entire)"
+      ],
+      "r2Delivered": false,
+      "mailboxDelivered": false,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "visualReview": {
+        "task": "kosice-yksityiskohdat-20261008",
+        "number": 4,
+        "qid": "Q3360878",
+        "file": "kosice-Q3360878-keksityt-kivifragmentit.png",
+        "sha256": "a520c1aa6f753b556738061b251f04dfb1d2878e38c6c31e1b8fd0f5f0da0a1d",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Kolme erillistä alkuperäistä goottilaista kivikatkelmaa puutarhassa, sammal/ruoho ja sumea uusgoottilainen torni; ei tekstiä, ihmisiä tai vitriinejä."
+        ],
+        "limitations": [
+          "Geneeriset uudet fragmentit ja palatsin taustahintti, ei oikeiden esineiden muodot tai mitattu puutarhanäkymä."
+        ],
+        "agentVerdictBeforeRootReview": true,
+        "reviewedAtUTC": "2026-10-08T12:30:27.211466+00:00"
+      },
+      "agentQA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Viewed native 1536x1024 and separate full-frame 480x320 preview.",
+          "Three distinct fictional sandstone fragments: curved portal piece, squared buttress-like block and broken balustrade with a plain trefoil opening. Original generic geometric/leaf details; no identifiable statues, artifact iconography or collection-object replicas.",
+          "Natural stone wear, moss, shrubs and grass with a soft neo-Gothic palace silhouette behind; no people, signs, traffic, museum fixture or writing.",
+          "All three fragments remain distinguishable in the 480-pixel preview; photoreal material texture and muted overcast lighting."
+        ],
+        "limitations": [
+          "Stone forms, carvings, dates, provenance and garden arrangement are fictional; no actual collection objects reproduced.",
+          "Blurred background only suggests a neo-Gothic palace; no verified exact garden view."
+        ],
+        "parentReview": "pending independent root QA"
+      },
+      "mitat": [
+        1536,
+        1024
+      ],
+      "fableReceipt": false,
+      "r2Key": "julisteet/kosice-yksityiskohdat/20261008/kosice-Q3360878-keksityt-kivifragmentit.png",
+      "url": "https://media.matkakirja.app/julisteet/kosice-yksityiskohdat/20261008/kosice-Q3360878-keksityt-kivifragmentit.png",
+      "bytes": 2937435,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    }
+  ],
+  "excludedItems": [],
+  "comparison": {
+    "file": "toimitetut-4.jpg",
+    "r2Key": "julisteet/kosice-yksityiskohdat/20261008/toimitetut-4.jpg",
+    "url": "https://media.matkakirja.app/julisteet/kosice-yksityiskohdat/20261008/toimitetut-4.jpg",
+    "sha256": "7535ed00e34a69b685cd0f9555c46c8b687eacc8a32ca1424891b519ba705919",
+    "bytes": 274799,
+    "http": 200,
+    "mime": "image/jpeg",
+    "cors": "https://matkakirja.app",
+    "byteExactReadback": true
+  },
+  "deliveryStatus": "Selected candidates R2 verified and submitted through this mailbox manifest/report; Fable/editor/game receipt unverified.",
+  "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+  "editorAcceptance": false,
+  "fableReceipt": false,
+  "gameIntegrated": false,
+  "published": false,
+  "createdAt": "2026-10-08T12:30:36.972653+00:00"
+}
