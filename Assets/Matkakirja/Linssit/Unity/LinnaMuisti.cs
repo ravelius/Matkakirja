@@ -1,6 +1,6 @@
 // LINNAN MUISTIBUDJETTI (omistaja 8.10.2026 19.5x: "lisää muistin käyttöä niin paljon kuin pystyy"; Natiiviseppä). Unity-kääre
 // puhtaalle laskennalle (Ydin/Dioraama/LinnaMuistibudjetti.cs): vapaa muisti jetsam-rajaan (iOS os_proc_available_memory,
-// IssKameraKuva.VapaaMuistiMt; Mac MacLaatu.VapaaGt; muualla −1 = laiteluokka ennallaan).
+// IssKameraKuva.VapaaMuistiMt; Mac ja muualla −1 = laiteluokka ennallaan).
 //
 // ISTUNTO: budjetti lasketaan KERRAN ensimmäisestä kyselystä (esilataus kartalla tai linnan avaus) ja pidetään, kunnes linna
 // suljetaan (Nollaa), jotta esilataus ja avaus valitsevat samat tiedostot. Avauksessa esilatauksen budjetille vain turva-
@@ -39,8 +39,9 @@ namespace Matkakirja.Natiivi
             }
             catch (Exception) { }
 #if UNITY_STANDALONE_OSX && !UNITY_EDITOR
-            Matkakirja.MacLaatu.LueLaite();
-            return Matkakirja.MacLaatu.VapaaGt >= 0 ? (long)(Matkakirja.MacLaatu.VapaaGt * 1024) : -1;
+            // Mac: ei jetsam-rajaa, ja MacLaatu.VapaaGt (vapaat sivut) on pieni, koska macOS pitää muistin välimuisteissa →
+            // budjetti pudottaisi 16 Gt:n Macin turvatasolle. Laiteluokka ennallaan (Natiiviseppä 8.10.2026).
+            return -1;
 #else
             return IssKameraKuva.VapaaMuistiMt();
 #endif
