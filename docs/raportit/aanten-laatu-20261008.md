@@ -215,3 +215,28 @@ Kaupunkien äänimaisemissa puhe ja liikenne kuuluvat asiaan (tori, kahvila, rai
 - **CC BY / BY-SA:** nimeämiset pitää näyttää ☰ › Lähteet -näkymässä (Natiivi-UI, data/aanilahteet.json). BY-SA koskee vain itse äänitiedostoa, eli muokattu ääni jaetaan samalla lisenssillä. Pelin koodiin se ei leviä.
 - **tulen-rasina.mp3 404 oli väärä hälytys:** se on testiaineiston (DioraamaTestit.cs) suhteellinen polku dioraamapaketin sisällä.
 - **AaniTaulut.cs on Pelikoodarin portti** (tools/natiivi-kultaiset: "Pelikoodari päivittää natiivin portin").
+
+# Osa 4: korvaukset (8.10.2026 ilta)
+
+**Tarkennus hylkäyksiin:** alle 0,5 s:n äänissä ja narina- tai kangasäänissä AST antaa luonnostaan vääriä luokkia (esim. Kenneyn kangasäänet ovat "pilkkomista", narinat "huutoa" tai "pierua"). Siksi korvattiin vain vahvat signaalit. Seurantaan, ei korvausta: mylly-siirto (0,3 s), liina-avaus, luukku-narahdus, askel-olki (ilotulite 0,15), ihmisen matkan arktinen ja hiljainen tuuli (ei vieraita ääniä) sekä äänimaiseman kirkko-01 (musiikki 0,61, ehkä urut tarkoituksella).
+
+**Tuulet:** aidoillekin CC0-tuulille AST antaa Wind-luokkaa enintään 0,54 ja sekoittaa tuulen kohinan ajoneuvoon ja mereen. ≥ 0,7 ei siis ole tuulille realistinen raja. Korvauksissa iso virhe poistui (sireeni 0,54, juna 0,73, liikenne 0,42), ja Wind on kärkiluokka. Tuulet ovat ostokirjaston paras kohde.
+
+| ääni | ennen | korvaus | jälkeen |
+|---|---|---|---|
+| efekti-laiva, efekti-voitto | leikkautuu +0,6 / +0,5 dBFS | taso −1,5 dB | huippu −1,3 / −1,5 dBFS |
+| luola | leikkautuu +3,8 dBFS | pehmeä huippurajoitin | −2,8 dBFS, taso säilyi |
+| Candle-silmukka | sauma 41× / +9,8 dB | 0,2 s ristihäivytys | 1,5× |
+| sydan | sauma 19× | 0,1 s ristihäivytys | 1,4×, Heart sounds 0,90 |
+| tuuli-rako | sireeni 0,54 | freesound:617558 12–28 s | Wind kärjessä, liikenne ≤ 0,10 |
+| eleven-korin-narina | pieru 0,17 | freesound:264306 5,9–7,5 s | Creak 0,71, pieru 0 |
+| askel-porras-1 | rumpukone (tasainen tahti + digitaalinen hiljaisuus) | freesound:580706, oikea kävely kivirappusissa | Walk 0,15 (kärki), ei vieraita |
+| tundratuuli | juna 0,73 | freesound:617558 10–31 s | Wind kärjessä, linnut 0,18 alussa |
+| kylma-tuuli | purkaus 0,53, liikenne 0,42 | freesound:474894 1–17 s | Wind kärjessä, liikenne 0,24 |
+| tuuli-01 (äänimaisema) | linnut 0,42, liikenne | freesound:617558 (kaupungin lumimyrsky) | Wind 0,52, liikenne 0,24 (kaupunki) |
+
+**Viennit ja polut:**
+- ämpäri: aanet-e3-v2 ja aanet-fp-v1b (Siirtoseppä vaihtaa DioraamaSovittimen polut), ihmisen-matka-v2 (IhmisenMatka2Maisema.Juuri) ja aanimaisema-v2 (KaupunkiAanimaisemaSoitin).
+- repo: proto-haara pelikoodari/tehoste-korvaukset f059db199 (efekti-laiva, efekti-voitto, Candle, korin narina).
+- kirjasto-liekin-humahdus (ajoneuvo 0,24, kohinapohja −13 dBFS) jää paikalleen: sitä soitetaan vain debug-sarjassa "kirjasto", oletus on eleven-sarja.
+Työkalut: _tyo/tehoste-korjaus/ (tekniset.py, korvaukset.py, paketoi.py).
