@@ -126,9 +126,19 @@ namespace Matkakirja.Natiivi
             if (!nakyy) Sulje();
         }
 
+        bool peliNakyma;
+
         void Ruutu()
         {
             if (Juuri.style.display == DisplayStyle.None) return;
+            // Seikkailu (Päätoimittaja 8.10.2026, Thiefin taso): pienoiskartta pois (linnakierroksen huonehyppy), ☰ levossa himmeä.
+            bool peli = SeikkailuTapit.SeikkailuKaynnissa;
+            if (peli != peliNakyma)
+            {
+                peliNakyma = peli;
+                karttaRyhma.style.display = peli ? DisplayStyle.None : DisplayStyle.Flex;
+            }
+            ryhma.EnableInClassList("mk-ohjausryhma--lepo", peli && !Auki);
             // Nykyinen huone pisteenä (DioraamaAanet.NykyinenHuone = näkymän kohdetila); yleisnäkymässä ei pistettä.
             string huone = DioraamaAanet.NykyinenHuone;
             (string Nimi, Vector2 Paikka) k = default;
@@ -179,8 +189,12 @@ namespace Matkakirja.Natiivi
                     // TIETOA (Päätoimittaja 8.10.: tietokerros ilman Pulua, ettei iPad-pelaaja menetä sitä): seikkailun tietokerroksen
                     // kortisto, kun se on tarjolla (SeikkailuTietokerros, nousun jälkeen); sama KORTTI-kortisto kuin Pulun napautuksesta.
                     if (SeikkailuTapit.TietokerrosTarjolla) Komento("Tietoa", SeikkailuTapit.AvaaTietokerrosValikosta);
-                    Alanakyma("Huoneet", Nakyma.Huoneet);
-                    Komento("Esittely uudelleen", EsittelyUudelleen);
+                    // Seikkailussa vain pelin rivit (Päätoimittaja 8.10.2026): Vihje, Tietoa, Äänet, Lähteet, Sulje.
+                    if (!SeikkailuTapit.SeikkailuKaynnissa)
+                    {
+                        Alanakyma("Huoneet", Nakyma.Huoneet);
+                        Komento("Esittely uudelleen", EsittelyUudelleen);
+                    }
                     Alanakyma("Äänet", Nakyma.Aanet);
                     Alanakyma("Lähteet", Nakyma.Lahteet);
                     // Kehittäjän kuorivalinta (omistaja 5.10.: pois ruudulta hampurilaiseen): auto → huippu → normaali → kevyt.
