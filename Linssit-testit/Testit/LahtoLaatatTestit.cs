@@ -332,6 +332,31 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(PalloSaaTiedot.Hae(true, "pariisi", "pariisi", PalloSaaTiedot.HakuValiS), "15 min jälkeen uudelleen");
         }
 
+        // Juna 166: säätehosteiden painot liukuvat (ei hyppyä), ukkosella salama ja kumahdus välein.
+        [Testi] static void SaaPainotLiukuvatJaUkkonenValahtaa()
+        {
+            var v = new PalloSaaVaikutus(7);
+            v.Paivita(0.1, PalloSaa.Sade, null);
+            Oleta.Tosi(v.Nyt.Sade > 0 && v.Nyt.Sade <= 0.1 / PalloSaaVaikutus.SiirtymaS + 1e-9, $"sade alkaa liukuen ({v.Nyt.Sade:F3})");
+            for (int i = 0; i < 40; i++) v.Paivita(0.1, PalloSaa.Sade, null);
+            Oleta.Tosi(Math.Abs(v.Nyt.Sade - 0.6) < 1e-9 && Math.Abs(v.Nyt.Harmaus - 0.75) < 1e-9, "tavoitteessa 4 s:ssa");
+            for (int i = 0; i < 40; i++) v.Paivita(0.1, PalloSaa.Pois, null);
+            Oleta.Tosi(v.Nyt.Tyhja, "sää pois → kaikki painot nollaan");
+            var t = new PalloSaaTiedot { Tila = PalloSaa.Sade, SadeMmH = 4 };
+            Oleta.Tosi(Math.Abs(PalloSaaVaikutus.Tavoite(PalloSaa.Sade, t).Sade - 1) < 1e-9, "rankkasade (4 mm/h) → sade 1");
+            int salamat = 0, kumahdukset = 0; double ed = 0;
+            for (int i = 0; i < 7200; i++)   // 120 s ukkosta 60 Hz:llä
+            {
+                v.Paivita(1 / 60.0, PalloSaa.Ukkonen, null);
+                if (v.Salama > 0 && ed == 0) salamat++;   // kaksoisvälähdys = yksi salama
+                if (v.Kumahdus) kumahdukset++;
+                ed = v.Salama;
+            }
+            Oleta.Tosi(salamat >= 120 / PalloSaaVaikutus.SalamaValiMaxS - 1 && salamat <= 120 / PalloSaaVaikutus.SalamaValiMinS + 2, $"salamia {salamat} / 120 s");
+            Oleta.Tosi(kumahdukset >= salamat - 1 && kumahdukset <= salamat, $"jokaista salamaa seuraa kumahdus ({kumahdukset}/{salamat})");
+            Oleta.Tosi(PalloSaaVaikutus.Valahdys(0.04) > 0.95 && PalloSaaVaikutus.Valahdys(0.5) == 0, "välähdyksen muoto");
+        }
+
         [Testi] static void ReitinValinakymatEsiladataanPysahdyksellaJaLennossa()
         {
             var s = AssaBValmiina(() => 0.5);
