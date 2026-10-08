@@ -91,5 +91,10 @@ export const OPAS_AINEISTOT = Object.freeze({
     // erät 9–10 (8.10.)
     tampere: 'esittely/tampere-v1/tampere-yksityiskohdat.json', vilna: 'esittely/vilna-v1/vilna-yksityiskohdat.json',
     ljubljana: 'esittely/ljubljana-v1/ljubljana-yksityiskohdat.json', valletta: 'esittely/valletta-v1/valletta-yksityiskohdat.json',
+    // erät 11–13 (8.10.): kaikki 31 äänetöntä valmiina
+    sofia: 'esittely/sofia-v1/sofia-yksityiskohdat.json', bukarest: 'esittely/bukarest-v1/bukarest-yksityiskohdat.json',
+    luxemburg: 'esittely/luxemburg-v1/luxemburg-yksityiskohdat.json', kosice: 'esittely/kosice-v1/kosice-yksityiskohdat.json',
+    islanti: 'esittely/islanti-v1/islanti-yksityiskohdat.json', kreeta: 'esittely/kreeta-v1/kreeta-yksityiskohdat.json',
+    sisilia: 'esittely/sisilia-v1/sisilia-yksityiskohdat.json',
   },
 });
