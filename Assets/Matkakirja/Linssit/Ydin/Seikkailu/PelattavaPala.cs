@@ -5,7 +5,7 @@ namespace Matkakirja.Linssit.Seikkailu
 {
     public static class PelattavaPala
     {
-        public const string Hash = "e3e633f8156f7a9c";
-        public const string Versio = "v45u";   // v45t + detaljit olki ja rauta korkeuskarttoineen, alias metalli → rauta (LR 9.10.)
+        public const string Hash = "0b3bc7df34670313";
+        public const string Versio = "v45v";   // v45u + kappeli leivottu uudelleen kivikehysten kanssa (kaari-ovi, ikkuna, hagioskooppi, syvennys; LR 9.10.)
     }
 }
