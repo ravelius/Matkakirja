@@ -1,0 +1,20 @@
+// PELATTAVAN PALAN KIINNITETTY PAKETTI (Siirtoseppä 8.10.2026): appiin kiinnitetty paketti ja huonesimulaation kultaiset ovat samaa vientiä.
+using System;
+using System.IO;
+using System.Text.RegularExpressions;
+using Matkakirja.Linssit.Seikkailu;
+
+namespace Matkakirja.Linssit.Testit
+{
+    public static class PelattavaPalaTestit
+    {
+        [Testi] static void HashJaKultaisetSamaaVientia()
+        {
+            Oleta.Tosi(Regex.IsMatch(PelattavaPala.Hash, "^[0-9a-f]{16}$"), $"hash 16 heksaa ({PelattavaPala.Hash})");
+            string k = Path.Combine(AppContext.BaseDirectory, "..", "kultaiset");
+            foreach (var osa in new[] { "merkit", "osat" })
+                Oleta.Tosi(File.Exists(Path.Combine(k, $"olavinlinna-{PelattavaPala.Versio}-{osa}.json")),
+                    $"kultaiset olavinlinna-{PelattavaPala.Versio}-{osa}.json puuttuu: simulaatio ei todenna appiin kiinnitettyä pakettia");
+        }
+    }
+}
