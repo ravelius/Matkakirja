@@ -95,6 +95,6 @@ export const OPAS_AINEISTOT = Object.freeze({
     sofia: 'esittely/sofia-v1/sofia-yksityiskohdat.json', bukarest: 'esittely/bukarest-v1/bukarest-yksityiskohdat.json',
     luxemburg: 'esittely/luxemburg-v1/luxemburg-yksityiskohdat.json', kosice: 'esittely/kosice-v1/kosice-yksityiskohdat.json',
     islanti: 'esittely/islanti-v1/islanti-yksityiskohdat.json', kreeta: 'esittely/kreeta-v1/kreeta-yksityiskohdat.json',
-    sisilia: 'esittely/sisilia-v2/sisilia-yksityiskohdat.json',
+    sisilia: 'esittely/sisilia-v3/sisilia-yksityiskohdat.json',
   },
 });

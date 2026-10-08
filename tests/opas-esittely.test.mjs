@@ -254,7 +254,7 @@ test('yksityiskohdat_polut: 6 äänellistä + kaikki 31 äänetöntä (Sisältö
     sofia: 'esittely/sofia-v1/sofia-yksityiskohdat.json', bukarest: 'esittely/bukarest-v1/bukarest-yksityiskohdat.json',
     luxemburg: 'esittely/luxemburg-v1/luxemburg-yksityiskohdat.json', kosice: 'esittely/kosice-v1/kosice-yksityiskohdat.json',
     islanti: 'esittely/islanti-v1/islanti-yksityiskohdat.json', kreeta: 'esittely/kreeta-v1/kreeta-yksityiskohdat.json',
-    sisilia: 'esittely/sisilia-v2/sisilia-yksityiskohdat.json' });
+    sisilia: 'esittely/sisilia-v3/sisilia-yksityiskohdat.json' });
   // Kaikki 37 esittelykaupunkia (6 äänellistä + 31 äänetöntä) saavat yksityiskohtakuvat.
   assert.deepEqual(Object.keys(OPAS_AINEISTOT.yksityiskohdat_polut).sort(), [...OPAS_AINEISTOT.esittely].sort());
 });
