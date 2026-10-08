@@ -49,6 +49,8 @@ namespace Matkakirja.Natiivi
     public static class AjattelijaPaat
     {
         public const int Kerros = 13;
+        /// <summary>Kerroksen omat kuvakamerat (päät, kaupunkipallot): niiltä kerrosta ei riisuta.</summary>
+        public static readonly Matkakirja.Linssit.KerrosKamerat OmatKamerat = new Matkakirja.Linssit.KerrosKamerat();
         /// <summary>Kipsin sävykerroin (web KIPSI_KARTALLA.savy); A/B `ui erikoisnostot kipsi r g b`.</summary>
         public static Vector4 Savy = new Vector4(1.0f, 1.03f, 1.1f, 0f);
         /// <summary>
@@ -101,7 +103,9 @@ namespace Matkakirja.Natiivi
             p.Varjo = new RenderTexture(MaskiPx, MaskiPx, 0, RenderTextureFormat.ARGB32) { name = "AjattelijaVarjo:" + a.Tunnus, hideFlags = HideFlags.HideAndDontSave };
             p.Vali.Create(); p.Varjo.Create();
             p.VarjoMat = new Material(varjoVarjostin) { name = "AjattelijaVarjo:" + a.Tunnus };
-            foreach (var c in Camera.allCameras) if (c != k) c.cullingMask &= ~(1 << Kerros);
+            // Kerros riisutaan vain muilta kuin oman kerroksen kuvakameroilta (KerrosKamerat; TF 167 -regressio 9.10.2026).
+            OmatKamerat.Lisaa(k.GetInstanceID());
+            foreach (var c in Camera.allCameras) c.cullingMask = OmatKamerat.Maski(c.GetInstanceID(), c.cullingMask, Kerros);
             ajaja.StartCoroutine(Lataa(p));
             return p;
         }

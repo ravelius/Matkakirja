@@ -35,7 +35,7 @@ namespace Matkakirja.Linssit.Testit
 
         [Testi] static void KavelyosienValoatlakset()
         {
-            // LR v45n: 9 kävelyosalla valoatlas paketin juuresta (blender/kavely/valot/…), ASTC-vastineineen; Tila.ValoVain.
+            // LR v45r: 9 kävelyosalla valoatlas paketin juuresta (blender/kavely/valot/…), ASTC-vastineineen; Tila.ValoVain.
             var d = Matkakirja.Linssit.Testit.Huonesimulaatio.Data;
             int n = 0;
             foreach (var o in d.Osat.Values)
@@ -47,6 +47,23 @@ namespace Matkakirja.Linssit.Testit
                 n++;
             }
             Oleta.Sama(9, n);
+        }
+
+        [Testi] static void Rekvisiitta()
+        {
+            // LR v45r: 46 rekvisiittamerkkiä, glb ja osa jokaisella; ei esineiden eikä reittien päällä (sijoittelu LR:n).
+            var d = Matkakirja.Linssit.Testit.Huonesimulaatio.Data;
+            int n = 0; var ohitetut = new System.Collections.Generic.List<string>();
+            foreach (var m in d.Lajia("rekvisiitta"))
+            {
+                Oleta.Tosi(!string.IsNullOrEmpty(m.Glb) && m.Glb.StartsWith("rekvisiitta-") && m.Glb.EndsWith(".glb") && !string.IsNullOrEmpty(m.Osa), $"{m.Nimi}: glb ja osa");
+                if (d.RekvisiittaPeittaa(m)) ohitetut.Add(m.Tunnus);
+                n++;
+            }
+            Oleta.Sama(46, n);
+            // Esineen päällä olevat ohitetaan (v45p: kulho 0,11 m tarjottimesta) — v45r: LR siirsi pöytärekvisiitan ≥ r + 0,3 m:n päähän, joten mitään ei ohiteta.
+            Oleta.Tosi(ohitetut.Count == 0, "ohitetut: " + string.Join(", ", ohitetut));
+            System.Console.WriteLine("      rekvisiitta: ohitetaan esineen päältä " + string.Join(", ", ohitetut));
         }
     }
 }

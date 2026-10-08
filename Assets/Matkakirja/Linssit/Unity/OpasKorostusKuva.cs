@@ -8,6 +8,10 @@
 // Kutsut (OpasSovitin): Saapui (origon siirron jälkeen) → Nayta(kohde, maa, georef), Puhuu → Lentaa ja Sulje → Piilota().
 // Data: OpasKohde.Korostus (Ydin, Pelikoodarin muoto): "piste" | "alue" → rengas Pisteet[0]:n ympärille säteellä SadeM
 // (0 → KokoM/2), "reitti" → viiva pisteiden kautta; ilman korostusta rengas kohteen ympärille.
+// HENTO KOROSTUS (Linssiseppä 8.10.2026, suunnitelma A1, docs/raportit/pallo-elava-kaupunki-20261008.md): saapuessa hehku
+// HehkuS ajan täydellä voimalla, sitten laskee HeikkoOsuuteen (kohde näkyy, korostus ei kilpaile kertojan kanssa); renkaan
+// reunalle pehmeä valoverho ylöspäin (VerhoM, häipyy ylös), joka rakennusten takana jää niiden peittoon (ZTest, ei peitä kohdetta,
+// Map Tiles C1); sävy lämmin kultareuna. Oma geometria laattojen päällä, ei Googlen geometrian muokkausta.
 using System;
 using System.Collections.Generic;
 using CesiumForUnity;
@@ -20,8 +24,12 @@ namespace Matkakirja.Natiivi
     public static class OpasKorostusKuva
     {
         /// <summary>Sävy: kylmä vaalea lasi (ei kirkas neon), huippualfa.</summary>
-        public static readonly Color Savy = new Color(0.86f, 0.93f, 1f, 1f);
+        public static readonly Color Savy = new Color(1f, 0.88f, 0.62f, 1f);   // A1: lämmin kultareuna (ennen kylmä lasi 0,86/0,93/1)
         public const float Alfa = 0.55f, HaivytysS = 0.9f, PoistoS = 0.5f, HengitysS = 3.2f, HengitysOsuus = 0.12f;
+        /// <summary>A1: saapumisen hehku (s täydellä voimalla), lasku heikkoon (s) ja heikon voima.</summary>
+        public const float HehkuS = 2.5f, HehkuLaskuS = 1.5f, HeikkoOsuus = 0.45f;
+        /// <summary>A1: valoverhon korkeus renkaan reunalla (m; enintään puolet säteestä) ja sen alfa alhaalla.</summary>
+        public const float VerhoM = 24f, VerhoAlfa = 0.32f;
         /// <summary>Oppaan korostusosuus 0–1 (OpasSilmukka.KorostusOsuus, sovitin joka kehys; Päätoimittaja 8.10. 07.5x): rengas
         /// sammuu lähdön valmistelussa ennen liikettä ja syttyy saapumisesta, ei yhdessä ruudussa.</summary>
         public static float Osuus = 1f;
@@ -103,6 +111,15 @@ namespace Matkakirja.Natiivi
                 }
                 if (i > 0) Nauha(t, (i - 1) * 3, i * 3);
             }
+            // Valoverho renkaan keskiviivalta ylöspäin (A1): alhaalla VerhoAlfa, ylhäällä 0; kaksipuolinen kuten nauha.
+            int v0 = v.Count; double korkeus = math.min(VerhoM, sade * 0.5);
+            for (int i = 0; i <= RengasJaot; i++)
+            {
+                var (pl, pn) = Siirra(lat, lon, sade, 360.0 * i / RengasJaot);
+                v.Add(Unity(g, pl, pn, h)); c.Add(new Color(1, 1, 1, VerhoAlfa));
+                v.Add(Unity(g, pl, pn, h + korkeus)); c.Add(new Color(1, 1, 1, 0f));
+                if (i > 0) { int a = v0 + (i - 1) * 2, b = v0 + i * 2; t.AddRange(new[] { a, b, a + 1, a + 1, b, b + 1, a, a + 1, b, a + 1, b + 1, b }); }
+            }
             return Luo("rengas", v, c, t);
         }
 
@@ -159,7 +176,9 @@ namespace Matkakirja.Natiivi
             float sisaan = Mathf.SmoothStep(0, 1, (t - alku) / OpasKorostusKuva.HaivytysS);
             float pois = poisAlku < 0 ? 1 : 1 - Mathf.SmoothStep(0, 1, (t - poisAlku) / OpasKorostusKuva.PoistoS);
             float hengitys = 1 - OpasKorostusKuva.HengitysOsuus * 0.5f * (1 - Mathf.Cos(2 * Mathf.PI * (t - alku) / OpasKorostusKuva.HengitysS));
-            var c = OpasKorostusKuva.Savy; c.a = sisaan * pois * hengitys * Mathf.SmoothStep(0f, 1f, OpasKorostusKuva.Osuus);
+            // A1: hehku saapuessa, sitten heikko (kohde jää esiin, korostus ei kilpaile).
+            float hehku = Mathf.Lerp(1f, OpasKorostusKuva.HeikkoOsuus, Mathf.SmoothStep(0f, 1f, (t - alku - OpasKorostusKuva.HehkuS) / OpasKorostusKuva.HehkuLaskuS));
+            var c = OpasKorostusKuva.Savy; c.a = sisaan * pois * hengitys * hehku * Mathf.SmoothStep(0f, 1f, OpasKorostusKuva.Osuus);
             mpb.SetColor(Vari, c); r.SetPropertyBlock(mpb);
             if (poisAlku >= 0 && pois <= 0) Tuhoa();
         }

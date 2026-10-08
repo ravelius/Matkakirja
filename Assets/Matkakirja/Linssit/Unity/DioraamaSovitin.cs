@@ -1130,7 +1130,7 @@ namespace Matkakirja.Natiivi
             if (nayttamo == null) return;
             SeikkailuRepliikit.Luo(nayttamo.transform, MediaJuuri + "/seikkailu/" + RakennusId + "/repliikit-v4/manifest.json", o.Kirjaa);
             var ennen = SeikkailuAanet.Aktiivinen;
-            var a = SeikkailuAanet.Luo(nayttamo.transform, MediaJuuri + "/seikkailu/" + RakennusId + "/aanet-e3-v2/manifest.json", o.Kirjaa);
+            var a = SeikkailuAanet.Luo(nayttamo.transform, MediaJuuri + "/seikkailu/" + RakennusId + "/aanet-e3-v3/manifest.json", o.Kirjaa);
             if (a != ennen || SeikkailuSade.Aktiivinen == null)
             {
                 SeikkailuAanet.LisaaManifest(MediaJuuri + "/seikkailu/" + RakennusId + "/aanet-fp-v1b/manifest.json");   // Pelikoodari (v1b 8.10.: askel-porras-1 uusittu): askeleet, kantele (puuttuva ohitetaan)
@@ -1543,9 +1543,14 @@ namespace Matkakirja.Natiivi
             string atlas = hamara ? tila.HamaraAtlas : tila.ValoAtlas, atlasPuoli = hamara ? tila.HamaraAtlasPuoli : tila.ValoAtlasPuoli;
             string astcTaysi = hamara ? tila.HamaraAtlasAstc : tila.ValoAtlasAstc, astcPuoliP = hamara ? tila.HamaraAtlasAstcPuoli : tila.ValoAtlasAstcPuoli;
             bool puoli = PieniLaite() && !string.IsNullOrEmpty(atlasPuoli);
-            string polku = puoli ? atlasPuoli : atlas;
-            // ASTC-mipketju ensin (valoatlas.astc / astcPuoli), JPEG varalla.
-            string astcPolku = puoli ? astcPuoliP : astcTaysi;
+            // 8K (LR v45o, juna 168): vain Ultra-tasolla JA linnan muistibudjetin ylimmällä portaalla (LS2:n muistitesti 8.10.: 4 × 8K
+            // = +131 Mt; portailla 2–3 Ultrakin jää 2k:hon), jos viety; muuten kuten ennen (2k / puolikas).
+            string astcIso = hamara ? tila.HamaraAtlasAstcIso : tila.ValoAtlasAstcIso, jpgIso = hamara ? tila.HamaraAtlasIso : tila.ValoAtlasIso;
+            var ylin = LinnaMuistibudjetti.Portaat[LinnaMuistibudjetti.Portaat.Length - 1];
+            bool iso = !puoli && Laatutaso.Ultra && LinnaMuisti.Nyt.SamaLaatu(ylin) && !string.IsNullOrEmpty(astcIso);
+            string polku = iso && !string.IsNullOrEmpty(jpgIso) ? jpgIso : puoli ? atlasPuoli : atlas;
+            // ASTC-mipketju ensin (valoatlas.astc / astcPuoli / astcIso), JPEG varalla.
+            string astcPolku = iso ? astcIso : puoli ? astcPuoliP : astcTaysi;
             if (!string.IsNullOrEmpty(astcPolku))
             {
                 // Linnan piikit (iPad 2.10.): 8 valoatlasta (4096² ASTC, ~22 Mt) latautui peräkkäin kukin yhdessä ruudussa →

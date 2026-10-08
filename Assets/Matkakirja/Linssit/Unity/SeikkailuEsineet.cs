@@ -263,12 +263,46 @@ namespace Matkakirja.Natiivi
             // Liinanyytin sisältö (kalkki, pateeni, liuskekivi) näkyy vasta, kun nyytti avataan (E3 vaihe 10).
             if (se.esineet.Exists(x => x.Id == Nyytti)) foreach (var x in se.esineet) if (Array.IndexOf(NyytinSisalto, x.Id) >= 0) x.Go.SetActive(false);
             foreach (var x in se.esineet) if (x.Id.StartsWith("avainnippu", StringComparison.Ordinal)) x.Go.SetActive(false);   // tyrmä: Pulu tuo
+            // REKVISIITTA (LR v45p, omistaja 19.5x "kaikki parannukset"): kiinteät koristemallit (rekvisiitta:<huone>-<malli>-<n>) esineiden
+            // mallipolulla (välimuisti, ASTC, valaistus), ei poimittavia. Juurisolmun extras tormays "laatikko" + koko [x, y, z] (glTF, origo
+            // pohjan keskellä) → BoxCollider (pelaaja ei kulje läpi) ja NavMeshObstacle (vartijat kiertävät); ilman extras ei törmäystä.
+            int rekvisiittaa = 0;
+            foreach (var m in d.Lajia("rekvisiitta"))
+            {
+                if (string.IsNullOrEmpty(m.Glb) || se == null) continue;
+                if (d.RekvisiittaPeittaa(m)) { kirjaa?.Invoke($"seikkailu: rekvisiitta {m.Tunnus} ohitettu (esineen päällä)"); continue; }
+                GameObject rg = null;
+                yield return LataaMalli(m, go.transform, se.luodut, g => rg = g, kirjaa);
+                if (rg == null) continue;
+                rg.name = "Rekvisiitta:" + m.Tunnus; rekvisiittaa++;
+                // Törmäys vain isoille (≥ 0,35 m korkea): pöytätavarat (kulhot, omenat) eivät estä esineiden napautusta eivätkä kulkua.
+                if (varasto.TryGetValue(m.Glb, out var rv) && rv.Malli != null && RekvisiitanLaatikko(rv.Malli) is Vector3 koko && koko.y >= 0.35f)
+                {
+                    var bc = rg.AddComponent<BoxCollider>(); bc.size = koko; bc.center = new Vector3(0f, koko.y * 0.5f, 0f);
+                    var ob = rg.AddComponent<UnityEngine.AI.NavMeshObstacle>(); ob.shape = UnityEngine.AI.NavMeshObstacleShape.Box;
+                    ob.size = koko; ob.center = bc.center; ob.carving = true;
+                }
+            }
+            if (rekvisiittaa > 0) kirjaa?.Invoke($"seikkailu: rekvisiitta {rekvisiittaa} mallia");
             se.LuoOvet(d); se.LuoKiipeily(d);
             SeikkailuKomero.Luo(d, go.transform, kirjaa);   // huone 9: tiilet ja arkun kilpilukko
             SeikkailuPako.Luo(d, go.transform, kirjaa);     // huone 10: kello, köysilasku, sukellus, uinti, vene
             SeikkailuSali.Luo(d, go.transform, kirjaa);     // huone 6: kulho voudin pöytään, kiista, avaimet
             kirjaa?.Invoke($"seikkailu: esineet {se.esineet.Count} ({string.Join(", ", se.esineet.ConvertAll(x => x.Id))})");
             se.Valmis = true;
+        }
+
+        /// <summary>Rekvisiitan törmäyslaatikko juurisolmun extras-kentistä (tormays "laatikko", koko [x, y, z] glTF; Unityssa koot samat).</summary>
+        static Vector3? RekvisiitanLaatikko(GlbMalli malli)
+        {
+            foreach (var g in malli.Solmut)
+            {
+                if (g.Vanhempi >= 0 || g.Extras == null) continue;
+                if (!(g.Extras.TryGetValue("tormays", out var t) && t as string == "laatikko")) continue;
+                if (g.Extras.TryGetValue("koko", out var k) && k is List<object> l && l.Count >= 3 && l[0] is double x && l[1] is double y && l[2] is double z)
+                    return new Vector3((float)x, (float)y, (float)z);
+            }
+            return null;
         }
 
         public const string Nyytti = "liinanyytti", Kirja = "kirja", Tarjotin = "tarjotin";
@@ -468,7 +502,7 @@ namespace Matkakirja.Natiivi
         static Mesh Mesh(GlbMalli malli) => Mesh(malli, -1, null);
 
         // --- Mallivarasto (glb kerran, kuva ASTC:nä) ---
-        sealed class MalliVarasto { public GlbMalli Malli; public Texture2D Kuva; public Material Mat; public bool Valaistu, Valmis, Astc; public readonly Dictionary<string, Mesh> Meshit = new Dictionary<string, Mesh>(StringComparer.Ordinal); }
+        sealed class MalliVarasto { public GlbMalli Malli; public Texture2D Kuva, Normaali; public Material Mat; public bool Valaistu, Valmis, Astc; public readonly Dictionary<string, Mesh> Meshit = new Dictionary<string, Mesh>(StringComparer.Ordinal); }
         static readonly Dictionary<string, MalliVarasto> varasto = new Dictionary<string, MalliVarasto>(StringComparer.Ordinal);
         /// <summary>Lokia ja testiä varten: glb:t, kuvat ASTC:nä, osumat varastosta.</summary>
         public static (int Glb, int Astc, int Osumia) VarastoTila { get { int a = 0; foreach (var v in varasto.Values) if (v.Astc) a++; return (varasto.Count, a, varastoOsumia); } }
@@ -488,18 +522,33 @@ namespace Matkakirja.Natiivi
             if (v.Malli != null)
             {
                 // ASTC (v45c, astc-mip.swift: sama suunta kuin LoadImage-JPEG, samat UV:t): vain jos paketin manifestissa (ei 404:ää vanhoille).
-                string astc = glb.EndsWith(".glb", StringComparison.OrdinalIgnoreCase) ? glb.Substring(0, glb.Length - 4) + "-4x4.astcm" : null;
-                string astcUrl = astc != null ? malliUrl(malliJuuri + astc) : null;
-                if (astcUrl != null && DioraamaLevyvalimuisti.Manifestissa(astcUrl) == true)
+                // Rekvisiitta (LR v45p): <glb>-vari-6x6.astcm (2048², ASTC 6×6 ~2,5 Mt mipeineen) KAIKILLA tasoilla — glb:n upotettu 1024
+                // purkautuisi pakkaamattomaksi RGBA32:ksi (~5,3 Mt mallia kohden, 22 mallia ≈ 117 Mt); normaali samoin alla.
+                string pohjaNimi = glb.EndsWith(".glb", StringComparison.OrdinalIgnoreCase) ? glb.Substring(0, glb.Length - 4) : null;
+                foreach (string astc in pohjaNimi == null ? Array.Empty<string>() : new[] { pohjaNimi + "-vari-6x6.astcm", pohjaNimi + "-4x4.astcm" })
                 {
+                    string astcUrl = malliUrl(malliJuuri + astc);
+                    if (DioraamaLevyvalimuisti.Manifestissa(astcUrl) != true) continue;
                     byte[] a = null;
                     yield return DioraamaLevyvalimuisti.Hae(astcUrl, 60, t => a = t);
                     if (a != null) { v.Kuva = DioraamaAstc.Lue(a, "Esine:" + glb, out var syy, TextureWrapMode.Clamp); v.Astc = v.Kuva != null; if (v.Kuva == null) kirjaa?.Invoke($"seikkailu: {astc} ei käytössä ({syy}), JPEG"); }
+                    if (v.Kuva != null) break;
                 }
                 if (v.Kuva == null && v.Malli.Kuvat.Count > 0 && v.Malli.Kuvat[0] != null)
                 {
                     var k = new Texture2D(2, 2, TextureFormat.RGBA32, true, false) { name = "Esine:" + glb };
                     if (k.LoadImage(v.Malli.Kuvat[0], true)) v.Kuva = k; else Destroy(k);   // markNonReadable: CPU-kopio pois
+                }
+                // Normaalikartta (LR v45o): <glb>-normaali-4x4.astcm (esineet) tai <glb>-normaali-6x6.astcm (rekvisiitta v45p);
+                // lineaarinen, sama UV0 ja v-suunta kuin perusvärillä.
+                foreach (string nAstc in pohjaNimi == null ? Array.Empty<string>() : new[] { pohjaNimi + "-normaali-6x6.astcm", pohjaNimi + "-normaali-4x4.astcm" })
+                {
+                    string nUrl = malliUrl(malliJuuri + nAstc);
+                    if (DioraamaLevyvalimuisti.Manifestissa(nUrl) != true) continue;
+                    byte[] a = null;
+                    yield return DioraamaLevyvalimuisti.Hae(nUrl, 60, t => a = t);
+                    if (a != null) { v.Normaali = DioraamaAstc.Lue(a, "EsineN:" + glb, out var syyN, TextureWrapMode.Clamp, 0, true); if (v.Normaali == null) kirjaa?.Invoke($"seikkailu: {nAstc} ei käytössä ({syyN})"); }
+                    if (v.Normaali != null) break;
                 }
                 v.Malli.Kuvat.Clear();   // JPEG-tavut pois muistista
                 // DioraamaValaistu (B, maalattu): tilan pistevalot ja Foggin kynttilä valaisevat esineen (kilpilaattojen kohokuva näkyy vain
@@ -510,7 +559,11 @@ namespace Matkakirja.Natiivi
                 v.Mat = varjostin != null ? new Material(varjostin) { name = "Esine:" + glb } : null;
                 if (v.Mat != null)
                 {
-                    if (valaistu != null) { v.Mat.SetFloat(IdTila, 1f); if (v.Kuva != null) v.Mat.SetTexture(IdPohjaKuva, v.Kuva); }
+                    if (valaistu != null)
+                    {
+                        v.Mat.SetFloat(IdTila, 1f); if (v.Kuva != null) v.Mat.SetTexture(IdPohjaKuva, v.Kuva);
+                        if (v.Normaali != null) { v.Mat.SetTexture("_NormaaliKuva", v.Normaali); v.Mat.SetFloat("_NormaaliPaalla", 1f); }
+                    }
                     else if (v.Kuva != null) v.Mat.SetTexture(IdKuva, v.Kuva);
                 }
             }
@@ -523,6 +576,7 @@ namespace Matkakirja.Natiivi
             foreach (var v in varasto.Values)
             {
                 if (v.Kuva != null) Destroy(v.Kuva);
+                if (v.Normaali != null) Destroy(v.Normaali);
                 if (v.Mat != null) Destroy(v.Mat);
                 foreach (var me in v.Meshit.Values) if (me != null) Destroy(me);
             }
@@ -560,6 +614,7 @@ namespace Matkakirja.Natiivi
                 }
             var m = new Mesh { name = "Esine" };
             m.SetVertices(p); m.SetNormals(nr); m.SetUVs(0, uv); m.SetTriangles(kol, 0); m.RecalculateBounds();
+            if (uv.Count == p.Count && p.Count > 0) m.RecalculateTangents();   // normaalikartta (LR v45o)
             return m;
         }
 

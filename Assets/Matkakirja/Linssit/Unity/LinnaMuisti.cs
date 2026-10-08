@@ -51,7 +51,7 @@ namespace Matkakirja.Natiivi
         {
             long vapaa = VapaaMuisti();
             var t = LinnaMuistibudjetti.Laske((int)Math.Min(vapaa, int.MaxValue), SystemInfo.deviceModel, SystemInfo.systemMemorySize,
-                DioraamaLaatu.Laiteluokka, (long)Screen.width * Screen.height);
+                DioraamaLaatu.Laiteluokka, (long)Screen.width * Screen.height, Matkakirja.Laatutaso.Ultra);
             Debug.Log($"MATKAKIRJA linnamuisti: vapaa {(vapaa >= 0 ? vapaa + " Mt" : "ei tiedossa")}, budjetti {(t.BudjettiMt >= 0 ? t.BudjettiMt + " Mt" : "-")}, " +
                       $"taso {t} (tarve ~{t.TarveMt} Mt, {t.Peruste}; {syy}, {SystemInfo.deviceModel}, RAM {SystemInfo.systemMemorySize} Mt)");
             return t;

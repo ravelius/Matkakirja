@@ -5,7 +5,7 @@ namespace Matkakirja.Linssit.Seikkailu
 {
     public static class PelattavaPala
     {
-        public const string Hash = "ca94057a6b155179";
-        public const string Versio = "v45n";   // v45l + ranta-1499:n yöatlas + detaljit kivi, rappaus, puu, lankku ja aliakset (LR 8.10.)
+        public const string Hash = "1fb40fb0eefb6f36";
+        public const string Versio = "v45r";   // v45p + esine-glb:t ilman upotettua normaali-PNG:tä (−21 Mt), pöytärekvisiitta ≥ r + 0,3 m esineistä (46 merkkiä; LR 8.10.)
     }
 }

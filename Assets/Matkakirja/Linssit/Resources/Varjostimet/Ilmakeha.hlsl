@@ -3,6 +3,7 @@
 // (Cesiumin georeferenssi kaupungin keskellä); etäisyydet metreinä. Tekseli = u·(W−1) → tekstuurikoordinaatti (tekseli + 0,5) / W.
 #ifndef MATKAKIRJA_ILMAKEHA
 #define MATKAKIRJA_ILMAKEHA
+#include "Dither.hlsl"
 
 TEXTURE2D(_IlmLapaisy); SAMPLER(sampler_IlmLapaisy);
 TEXTURE3D(_IlmTaivas); SAMPLER(sampler_IlmTaivas);
