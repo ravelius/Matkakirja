@@ -10,9 +10,9 @@ AD119F7B-A2A2-43EE-8769-7326DD757F89; lopuksi sammutus ja "simu vapaa".
 
 Junaan 164 Natiivisepän esirungossa (kuitattu): f2587529, 67727816f, b529268aa, 69e0b05ae (metro-otsikko), 7d366ce92
 (tyylikirja-pariteetti; Natiiviseppä otti 7d366ce92:n Tyylikirja.cs/.uss-versiot → seikkailu-haaroissa generoi a9fe6aaa:sta).
-KUITTAUSTA ODOTTAA: natiivi-ui/metro-kaksirivi 0484007f2 (69e0b05ae:n päällä; pitkä korostettu nimi 2–3 riville iPhone pystyssä,
-ei alle 18 pt) — 164 vai 165. natiivi-ui/kasittely-veto 24d40fb9c (syötepuoli valmis, Ydin KasittelyVeto + 6 testiä;
-SeikkailuTapit.KasittelyAlkaa/Kasittely/OtaKasittely) — EI junaan; kytkentä Siirtosepän esineluokkiin vasta junan 164 jälkeen.
+JUNA 165 KUITATTU ja SHA:t Natiivisepälle: natiivi-ui/metro-kaksirivi 0484007f2 (pitkä korostettu nimi 2–3 riville iPhone pystyssä,
+ei alle 18 pt) ja natiivi-ui/kasittely-veto 24d40fb9c (syötepuoli, Ydin KasittelyVeto + 6 testiä; SeikkailuTapit.KasittelyAlkaa/
+Kasittely/OtaKasittely). SEURAAVAKSI: junan 164 lähdettyä kytkentä Siirtosepän esineluokkiin (ovi, arkun kilvet) junaan 165.
 Simut: T7-sarja 8.10. alkaen — omissa zsh-skripteissä `source /Users/Shared/Claude/proto-3d/tyokalut/simusarja.sh || exit 2`;
 uudet UDID:t iPhone 17 96044270-…, natiivi-ui-iPad11 F7513985-… (tyokalut/simusarja-udid.tsv).
 
