@@ -24,7 +24,7 @@
     height: 100%;
     padding: 10px 0 0 0;
     background-color: var(--tk-paperi-pinta);
-    color: rgba(58, 42, 26, 0.95);
+    color: var(--map-ink-95);
     overflow: hidden;
 }
 
@@ -63,13 +63,13 @@
     letter-spacing: 6.03px; /* web 1.4px */
     white-space: normal;
     /* Web .aihe-nimi ja .lehti-nimio: rgb(22, 19, 15), American Typewriter 700 (mitattu 24.9.). */
-    color: #16130f;
+    color: var(--bg);
     -unity-text-align: middle-center;
 }
 
 .mk-lehti__ylaosa--nimio .mk-lehti__ylanimi {
     letter-spacing: 13.1px; /* web 3.04px */
-    color: #16130f;
+    color: var(--bg);
 }
 
 .mk-lehti__ylaosa--nimio .mk-lehti__nimioyla {
@@ -142,13 +142,13 @@
     /* Web .lehti-ylarivi: 9,6 px, harvennus 3,264 px, rgb(90, 67, 38). */
     font-size: 9.6px;
     letter-spacing: 34px; /* web 3.264px */
-    color: rgb(90, 67, 38);
+    color: var(--tk-paperi-muste-pehmea);
 }
 
 .mk-lehti__nimio {
     font-size: 38px;
     letter-spacing: 10.53px; /* web 4px */
-    color: #16130f;
+    color: var(--bg);
     -unity-text-align: middle-center;
     white-space: normal;
     margin: 2px 0 4px 0;
@@ -207,7 +207,7 @@
     flex-shrink: 1;
     font-size: var(--tk-koko-otsikko);
     letter-spacing: 5.71px; /* web 1.2px */
-    color: #16130f;
+    color: var(--bg);
     -unity-text-align: middle-center;
     white-space: normal;
 }
@@ -227,7 +227,7 @@
     white-space: normal;
     margin-bottom: 17.6px;
     /* rgba(70, 51, 31, .9) paperin päällä esisekoitettuna (lineaarinen väriavaruus vaalensi, b12-2 #35). */
-    color: #584632;
+    color: var(--tk-paperi-muste-pehmea);
 }
 
 .mk-lehti__esittely,
@@ -235,12 +235,12 @@
     font-size: var(--tk-koko-leipa);
     white-space: normal;
     margin-bottom: 10px;
-    color: rgba(58, 42, 26, 0.95);
+    color: var(--map-ink-95);
 }
 
 /* Web #arrival-intro p: American Typewriter 16 px #5a4326. */
 .mk-lehti__esittely {
-    color: #5a4326;
+    color: var(--tk-paperi-muste-pehmea);
 }
 
 /* Web .teksti (aihesivun nosto): Iowan 16,32 px #211d18. */
@@ -361,7 +361,7 @@
 .mk-lehti__kuvakehys {
     margin: 2px 0 6px 0;
     border-width: 3px;
-    border-color: #f7efdc;
+    border-color: var(--tk-paperi-pinta);
     background-color: var(--map-ink-08);
     overflow: hidden;
 }
@@ -389,7 +389,7 @@
 .mk-lehti__kuvateksti {
     font-size: 13px;
     white-space: normal;
-    color: rgba(33, 29, 24, 0.78);
+    color: var(--tk-himmennys-tumma);
     margin-bottom: 2px;
 }
 
@@ -402,7 +402,7 @@
 .mk-lehti__lahde {
     font-size: 10.56px;
     white-space: normal;
-    color: #6a5a45;
+    color: var(--raja-muste);
     margin-bottom: 8px;
 }
 
@@ -454,13 +454,13 @@
 .mk-lehti__listanimi {
     font-size: 15.5px;
     white-space: normal;
-    color: #16130f;
+    color: var(--bg);
 }
 
 .mk-lehti__listateksti {
     font-size: var(--tk-koko-apuri);
     white-space: normal;
-    color: rgba(58, 42, 26, 0.9);
+    color: var(--map-ink-90);
 }
 
 /* --- maan perustiedot (web .maa-tunnusluvut, .maa-tunnus*, .maa-palkki, .maa-tervehdykset) -------
@@ -470,7 +470,7 @@
     margin-top: 7.2px;
     padding: 0 8.8px 6.4px 8.8px;
     background-color: var(--map-ink-04);
-    color: #4a3c28;
+    color: var(--line);
     font-size: 15.2px;
 }
 
@@ -533,7 +533,7 @@
 .mk-maa__arvoteksti {
     font-size: 15.2px;
     white-space: nowrap;
-    color: #4a3c28;
+    color: var(--line);
 }
 
 .mk-maa__alleviiva {
@@ -547,7 +547,7 @@
 .mk-maa__alleviiva > * {
     flex-grow: 1;
     font-size: 11px;
-    color: rgba(74, 60, 40, 0.8);
+    color: var(--map-ink-78);
 }
 
 .mk-maa__palkki {
@@ -585,7 +585,7 @@
     background-color: var(--map-ink-04);
     border-top-width: 1px;
     border-top-color: var(--map-ink-22);
-    color: #4a3c28;
+    color: var(--line);
 }
 
 .mk-maa__tervehdysrivi {
@@ -602,7 +602,7 @@
 
 .mk-maa__tervehdysteksti {
     font-size: 16.7px;
-    color: #4a3c28;
+    color: var(--line);
 }
 
 .mk-maa__tervehdyslippu {
@@ -643,7 +643,7 @@
 .mk-lehti__tehtavaotsake {
     font-size: 10.56px;
     letter-spacing: 30px; /* web 3.168px */
-    color: rgb(99, 85, 66);
+    color: var(--raja-muste);
     margin: 0 -16.8px 8.8px -16.8px;
     padding: 0 16.8px 5.12px 16.8px;
     border-bottom-width: 1px;
@@ -718,8 +718,8 @@
 
 .mk-lehti__julistepalkinto.mk-voitettu .mk-lehti__julistekuva {
     opacity: 1;
-    border-color: rgba(60, 44, 26, 0.8);
-    -unity-background-image-tint-color: rgb(255, 255, 255);
+    border-color: var(--map-ink-80);
+    -unity-background-image-tint-color: var(--valkoinen);
 }
 
 .mk-lehti__julistemerkki {
@@ -727,20 +727,20 @@
     font-size: 9px;
     letter-spacing: 24.44px; /* web 2.2px */
     -unity-text-align: upper-center;
-    color: rgba(60, 44, 26, 0.72);
+    color: var(--map-ink-72);
 }
 
 .mk-lehti__julistepalkinto.mk-voitettu .mk-lehti__julistemerkki {
-    color: rgba(60, 44, 26, 0.95);
+    color: var(--map-ink-96);
 }
 
 .mk-lehti__lunastus {
     min-height: 44px;
     margin-top: 8px;
     border-width: 1px;
-    border-color: rgba(60, 44, 26, 0.65);
+    border-color: var(--map-ink-66);
     border-radius: 4px;
-    background-color: rgba(255, 253, 245, 0.9);
+    background-color: var(--tk-paperi-pinta);
     color: var(--tk-paperi-muste);
 }
 
@@ -848,7 +848,7 @@
     max-width: 114px;
     font-size: 10.56px;
     letter-spacing: 11.82px; /* web 1.248px */
-    color: rgb(119, 104, 86);
+    color: var(--sea-ink);
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -1059,7 +1059,7 @@
     border-color: var(--tk-paperi-reunus);
     border-radius: 3px;
     background-color: var(--tk-paperi-pinta);
-    color: rgba(58, 42, 26, 0.95);
+    color: var(--map-ink-95);
 }
 
 .mk-nahtavyys__yla {
@@ -1206,15 +1206,15 @@
 
 /* Opas (web .opas-arkki): oma paletti, iso otsikko aksenttivärillä. */
 .mk-nahtavyys--opas {
-    background-color: #f8efdc;
-    color: #3a2a15;
+    background-color: var(--tk-tumma-muste);
+    color: var(--map-ink);
     padding-top: 10px;
 }
 
 .mk-nahtavyys--opas .mk-nahtavyys__otsikko {
     font-size: 36px;
     letter-spacing: -0.83px; /* web -0.3px */
-    color: #a53a22;
+    color: var(--mark);
 }
 
 .mk-nahtavyys--opas.mk-nahtavyys--levea .mk-nahtavyys__otsikko {
@@ -1228,7 +1228,7 @@
 
 .mk-nahtavyys--opas .mk-nahtavyys__lahderivi,
 .mk-nahtavyys--opas .mk-nahtavyys__aika {
-    color: #6d5942;
+    color: var(--raja-muste);
 }
 
 .mk-opas__ingressi {
@@ -1238,7 +1238,7 @@
     border-bottom-color: rgba(165, 58, 34, 0.3);
     font-size: 19.8px;
     white-space: normal;
-    color: #3a2a15;
+    color: var(--map-ink);
 }
 
 .mk-opas__jakso {
@@ -1252,7 +1252,7 @@
     border-bottom-color: rgba(165, 58, 34, 0.3);
     font-size: var(--tk-koko-kapiteeli);
     letter-spacing: 21.67px; /* web 2.6px */
-    color: #a53a22;
+    color: var(--mark);
 }
 
 .mk-opas__rinnakkain {
@@ -1312,7 +1312,7 @@
     margin-bottom: 5px;
     font-size: 11px;
     letter-spacing: 18.18px; /* web 2px */
-    color: #6d5942;
+    color: var(--raja-muste);
 }
 
 .mk-opas__vyorivi {
@@ -1336,7 +1336,7 @@
     flex-shrink: 1;
     font-size: 12.8px;
     white-space: normal;
-    color: #3a2a15;
+    color: var(--map-ink);
 }
 
 .mk-opas__vyonappi .mk-opas__vyonimi {
@@ -1345,7 +1345,7 @@
 }
 
 .mk-opas__vyonappi.mk-auki .mk-opas__vyonimi {
-    color: #a53a22;
+    color: var(--mark);
 }
 
 .mk-opas__tahdet {
@@ -1360,14 +1360,14 @@
     padding: 14px 10px;
     border-top-width: 3px;
     border-bottom-width: 3px;
-    border-color: #a53a22;
+    border-color: var(--mark);
 }
 
 .mk-opas__nostoteksti {
     font-size: var(--tk-koko-otsikko);
     white-space: normal;
     -unity-text-align: middle-center;
-    color: #a53a22;
+    color: var(--mark);
 }
 
 .mk-opas__laatikko {
@@ -1376,16 +1376,16 @@
     border-width: 1px;
     border-left-width: 5px;
     border-color: var(--map-ink-20);
-    border-left-color: #a53a22;
+    border-left-color: var(--mark);
     border-radius: 3px;
-    background-color: #f2e5c8;
+    background-color: var(--tk-tumma-muste);
 }
 
 .mk-opas__laatikkootsikko {
     margin-bottom: 9px;
     font-size: 12.8px;
     letter-spacing: 20.31px; /* web 2.6px */
-    color: #a53a22;
+    color: var(--mark);
 }
 
 .mk-opas__saagraafi {
@@ -1405,7 +1405,7 @@
     margin-bottom: 10px;
     font-size: var(--tk-koko-leipa);
     white-space: normal;
-    color: #3a2a15;
+    color: var(--map-ink);
 }
 
 .mk-opas__kausi {
@@ -1430,13 +1430,13 @@
 
 .mk-opas__kausisana {
     font-size: 13px;
-    color: #3a2a15;
+    color: var(--map-ink);
 }
 
 .mk-opas__kausikk {
     font-size: 11.5px;
     opacity: 0.7;
-    color: #3a2a15;
+    color: var(--map-ink);
 }
 
 .mk-opas__kausitiedot {
@@ -1452,7 +1452,7 @@
 .mk-opas__kausikuvaus {
     font-size: 15px;
     white-space: normal;
-    color: #3a2a15;
+    color: var(--map-ink);
 }
 
 .mk-opas__suunnittele {
@@ -1543,7 +1543,7 @@
 .mk-numerot__otsikkoteksti {
     font-size: var(--tk-koko-otsikko);
     letter-spacing: 5.71px; /* web 1.2px */
-    color: #16130f;
+    color: var(--bg);
     -unity-text-align: middle-center;
     white-space: normal;
 }
@@ -1619,7 +1619,7 @@
     margin: 4px 0 0 0;
     font-size: 13px;
     white-space: normal;
-    color: rgba(138, 97, 20, 0.95);
+    color: var(--accent-dark);
 }
 
 .mk-numerot__vdem {
@@ -1648,7 +1648,7 @@
     font-size: 13px;
     white-space: normal;
     -unity-text-align: upper-center;
-    color: rgba(60, 44, 26, 0.72);
+    color: var(--map-ink-72);
 }
 
 .mk-fokus__vaihtoehdot {
@@ -1667,7 +1667,7 @@
     min-height: 44px;
     padding: 8px 17px;
     border-width: 1px;
-    border-color: rgba(60, 44, 26, 0.6);
+    border-color: var(--map-ink-60);
     border-radius: 4px;
     background-color: rgba(255, 253, 245, 0.72);
     color: var(--tk-paperi-muste);
@@ -1680,8 +1680,8 @@
 }
 
 .mk-fokus__pullanappi:hover {
-    background-color: #fffdf5;
-    border-color: rgba(60, 44, 26, 0.85);
+    background-color: var(--tk-paperi-pinta);
+    border-color: var(--map-ink-85);
 }
 
 /* Varmistus on eri nappi kuin tarjous: umpireuna ja lämmin kulta. */
@@ -1689,7 +1689,7 @@
 .mk-fokus__pullanappi--varmistus:hover {
     border-color: rgba(122, 85, 20, 0.75);
     background-color: var(--kulta);
-    color: #2c1e07;
+    color: var(--tk-lasi-pinta-peitto);
 }
 
 .mk-fokus__pullanappi--varmistus .mk-nappi__teksti {
@@ -1701,7 +1701,7 @@
 .mk-fokus__pullanappi--koyha:hover {
     border-color: var(--map-ink-35);
     background-color: var(--lapinakyva);
-    color: rgba(33, 29, 24, 0.55);
+    color: var(--rivi-tausta);
 }
 
 .mk-fokus__pullahuomio,
@@ -1710,7 +1710,7 @@
     font-size: 13px;
     white-space: normal;
     -unity-text-align: upper-center;
-    color: rgba(60, 44, 26, 0.72);
+    color: var(--map-ink-72);
 }
 
 .mk-fokus__pullatehty {
@@ -1765,12 +1765,12 @@
     height: 22px;
     margin-right: 8px;
     border-width: 1.5px;
-    border-color: #2c2318;
+    border-color: var(--panel);
     border-radius: 11px;
     background-color: var(--paper);
     font-size: 11px;
     -unity-text-align: middle-center;
-    color: #2c2318;
+    color: var(--panel);
 }
 
 .mk-nahtavyys__valikkonimi {
@@ -1858,7 +1858,7 @@
     margin-left: 6.4px;
     font-size: 10.9px;
     letter-spacing: 10.09px; /* web 1.1px */
-    color: rgba(122, 85, 20, 0.95);
+    color: var(--tk-paperi-korostus);
 }
 
 /* Maan uutiset (web .arrival-uutiset, .uutinen-rivi, .uutinen-kortti). */
@@ -1993,7 +1993,7 @@
     border-width: 1px;
     border-color: var(--map-ink-45);
     border-radius: var(--tk-kulma-keski);
-    background-color: rgba(255, 250, 238, 0.9);
+    background-color: var(--tk-paperi-pinta);
     color: var(--map-ink);
 }
 
@@ -2002,7 +2002,7 @@
 }
 
 .mk-lehti__kuuntele--soi {
-    background-color: rgba(234, 184, 78, 0.28);
+    background-color: var(--tk-tumma-reunus);
 }
 
 .mk-lehti__kuuntele--vanha {
@@ -2011,7 +2011,7 @@
 }
 
 .mk-lehti__kuuntele--vanha.mk-lehti__kuuntele--soi {
-    background-color: rgba(234, 184, 78, 0.28);
+    background-color: var(--tk-tumma-reunus);
 }
 
 .mk-lehti__kuuntele-merkki {
@@ -2053,13 +2053,13 @@
     height: 7px;
     margin-right: 4px;
     border-radius: 4px;
-    background-color: #c4321f;
+    background-color: var(--mark);
 }
 
 .mk-lehti__live-teksti {
     font-size: 9.5px;
     letter-spacing: 15.79px; /* web 1.5px */
-    color: #a3281c;
+    color: var(--mark);
 }
 
 .mk-lehti__kuuntele-lahde {
@@ -2110,14 +2110,14 @@
     font-size: 15px;
     white-space: normal;
     margin-bottom: 8px;
-    color: rgba(58, 42, 26, 0.95);
+    color: var(--map-ink-95);
 }
 
 .mk-tyohuone__huomio {
     font-size: 12.5px;
     white-space: normal;
     margin-top: 8px;
-    color: #6d5a3c;
+    color: var(--raja-muste);
 }
 
 .mk-tyohuone__rivit {
@@ -2133,9 +2133,9 @@
     padding: 8px 10px;
     border-width: 1px;
     border-radius: var(--tk-kulma-nappi);
-    border-color: rgba(198, 158, 82, 0.45);
+    border-color: var(--tk-tumma-reunus);
     background-color: rgba(255, 252, 244, 0.5);
-    color: rgba(58, 42, 26, 0.95);
+    color: var(--map-ink-95);
 }
 
 .mk-tyohuone__rivi > .mk-ikoni {
@@ -2152,7 +2152,7 @@
 
 .mk-tyohuone__rivinimi {
     font-size: 15.5px;
-    color: rgba(58, 42, 26, 0.95);
+    color: var(--map-ink-95);
 }
 
 .mk-tyohuone__riviselite {
@@ -2178,7 +2178,7 @@
 
 .mk-tyohuone__tagi--kesken {
     background-color: var(--tk-tumma-muste);
-    color: #7a5a12;
+    color: var(--tk-paperi-korostus);
 }
 
 /* Raamatun kenttä näyttää lepotilassa leipätekstiltä; kohdistettu saa hennon kehyksen (web raamattu-kentta). */
@@ -2195,7 +2195,7 @@
     font-size: 15.5px;
     white-space: normal;
     -unity-text-align: upper-left;
-    color: rgba(58, 42, 26, 0.95);
+    color: var(--map-ink-95);
 }
 
 .mk-tyohuone__kentta:focus > .unity-base-text-field__input {
@@ -2267,21 +2267,21 @@
 
 .mk-tyohuone__chip--tyossa {
     background-color: var(--tk-tumma-muste);
-    color: #7a5a12;
+    color: var(--tk-paperi-korostus);
 }
 
 .mk-tyohuone__vientiavain {
     margin: 11px 0 3px 0;
     font-size: 11.5px;
     letter-spacing: 5.22px; /* web 0.6px */
-    color: rgba(58, 42, 26, 0.95);
+    color: var(--map-ink-95);
 }
 
 .mk-tyohuone__vientipari {
     margin-bottom: 2px;
     font-size: 13.5px;
     white-space: normal;
-    color: rgba(58, 42, 26, 0.95);
+    color: var(--map-ink-95);
 }
 
 .mk-tyohuone__lohko {
@@ -2293,7 +2293,7 @@
     background-color: rgba(255, 252, 244, 0.7);
     font-size: 11.5px;
     white-space: normal;
-    color: rgba(58, 42, 26, 0.95);
+    color: var(--map-ink-95);
 }
 
 /* Musiikkisivu (web .mus-rivi, .mus-tila, .mus-polku, .mus-sfx). */
@@ -2354,14 +2354,14 @@
 }
 
 .mk-tyohuone__taulurivi--otsikko {
-    background-color: rgba(122, 85, 20, 0.08);
+    background-color: var(--map-ink-07);
 }
 
 .mk-tyohuone__solu {
     padding: 5px 7px;
     font-size: 13px;
     white-space: normal;
-    color: rgba(58, 42, 26, 0.95);
+    color: var(--map-ink-95);
 }
 
 .mk-tyohuone__solu--nimi {
@@ -2458,7 +2458,7 @@
 }
 
 .mk-tilastot__rivi--maa {
-    background-color: rgba(217, 161, 59, 0.04);
+    background-color: var(--map-ink-04);
 }
 
 .mk-tilastot__nimi {
@@ -2466,7 +2466,7 @@
     width: 200px;
     padding: 5px 7px;
     font-size: var(--tk-koko-kapiteeli);
-    color: rgba(58, 42, 26, 0.95);
+    color: var(--map-ink-95);
 }
 
 .mk-tilastot__nimi--maa {
@@ -2505,7 +2505,7 @@
     flex-shrink: 1;
     font-size: 13px;
     white-space: normal;
-    color: rgba(58, 42, 26, 0.95);
+    color: var(--map-ink-95);
 }
 
 .mk-tilastot__osuus {
@@ -2563,7 +2563,7 @@
     padding: 5px 3px;
     font-size: 11px;
     -unity-text-align: middle-center;
-    color: rgba(58, 42, 26, 0.9);
+    color: var(--map-ink-90);
 }
 
 .mk-tilastot__num--valmis {
@@ -2573,7 +2573,7 @@
 
 .mk-tilastot__num--kesken {
     background-color: var(--tk-tumma-muste);
-    color: #7a5a12;
+    color: var(--tk-paperi-korostus);
 }
 
 .mk-tilastot__num--puuttuu {
@@ -2613,7 +2613,7 @@
 .mk-tilastot__kiintionimi,
 .mk-tilastot__kiintioarvo {
     font-size: var(--tk-koko-kapiteeli);
-    color: rgba(58, 42, 26, 0.9);
+    color: var(--map-ink-90);
 }
 
 .mk-tilastot__kiintioura {
@@ -2633,7 +2633,7 @@
 }
 
 .mk-tilastot__kiintiotayte--keltainen {
-    background-color: #d9b44a;
+    background-color: var(--kulta);
 }
 
 .mk-tilastot__kiintiotayte--punainen {
@@ -2669,7 +2669,7 @@
     flex-shrink: 0;
     margin-right: 9.6px;
     border-width: 1px;
-    border-color: rgb(122, 109, 89);
+    border-color: var(--sea-ink);
 }
 
 /* Leveä taitto ≥ 700 pt (LehtiKainalo.cs, web @media (min-width: 700px)). */
@@ -2800,7 +2800,7 @@
 
 .mk-lehti__osio-juttunappi .mk-nappi__teksti {
     font-size: 13.2px;
-    color: rgba(33, 29, 24, 0.72);
+    color: var(--tk-himmennys-tumma);
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;

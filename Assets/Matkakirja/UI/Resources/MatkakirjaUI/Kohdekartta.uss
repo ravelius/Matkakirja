@@ -11,7 +11,7 @@
     border-width: 1px;
     border-color: var(--tk-paperi-reunus);
     background-color: var(--tk-paperi-pinta);
-    color: rgba(58, 42, 26, 0.95);
+    color: var(--map-ink-95);
 }
 
 .mk-nahtavyydet__yla {
@@ -34,7 +34,7 @@
     font-size: 19.2px;
     letter-spacing: 52.08px; /* web 10px */
     -unity-text-align: middle-center;
-    color: #16130f;
+    color: var(--bg);
     margin: 0 36px;
 }
 
@@ -176,7 +176,7 @@
     padding: 3.2px 8.8px;
     white-space: nowrap;
     font-size: 15.2px;
-    color: #2c1e07;
+    color: var(--tk-lasi-pinta-peitto);
     background-color: var(--tk-paperi-pinta);
     border-width: 1px;
     border-color: var(--map-ink-55);
@@ -196,7 +196,7 @@
     font-size: 9.6px;
     white-space: normal;
     -unity-text-align: upper-center;
-    color: #16130f;
+    color: var(--bg);
     text-shadow: 0 0 3px rgba(247, 239, 220, 0.95);
     opacity: 0;
     transition-property: opacity;
@@ -225,14 +225,14 @@
     align-items: center;
     justify-content: center;
     border-width: 2px;
-    border-color: #2c2318;
+    border-color: var(--panel);
     border-radius: 13px;
     background-color: var(--paper);
 }
 
 .mk-kohdekartta__numero {
     font-size: 13px;
-    color: #2c2318;
+    color: var(--panel);
     -unity-text-align: middle-center;
 }
 
@@ -248,7 +248,7 @@
     border-left-width: 1px;
     border-right-width: 1px;
     border-bottom-width: 1px;
-    border-color: rgb(55, 46, 35);
+    border-color: var(--panel-2);
     background-color: var(--lapinakyva);
 }
 
@@ -271,7 +271,7 @@
     font-size: 9.3px;
     white-space: nowrap;
     -unity-text-align: middle-center;
-    color: rgb(47, 38, 27);
+    color: var(--tk-lasi-pinta-peitto);
     background-color: rgba(247, 240, 222, 0.72);
     border-radius: var(--tk-kulma-hius);
 }
@@ -335,11 +335,11 @@
 .mk-kohdekartta-kokoruutu__sulku .mk-nappi__teksti {
     font-size: 20px;
     -unity-text-align: middle-center;
-    color: #2c2318;
+    color: var(--panel);
 }
 
 .mk-kohdekartta-kokoruutu__sulku:active {
-    background-color: rgba(255, 250, 238, 0.98);
+    background-color: var(--tk-paperi-pinta);
     border-color: var(--map-ink-75);
 }
 
@@ -361,18 +361,18 @@
     background-color: var(--lapinakyva);
     font-size: 12.5px;
     letter-spacing: 3px; /* web 0.03em */
-    color: #e4dccb; /* web rgba(247, 239, 220, 0.92) pohjalla #0b0805 */
+    color: var(--tk-tumma-muste); /* web rgba(247, 239, 220, 0.92) pohjalla #0b0805 */
     white-space: normal;
 }
 
 .mk-kohdekartta-kokoruutu__selite .mk-nappi__teksti {
     font-size: 12.5px;
     letter-spacing: 3px; /* web 0.03em */
-    color: #e4dccb; /* web rgba(247, 239, 220, 0.92) pohjalla #0b0805 */
+    color: var(--tk-tumma-muste); /* web rgba(247, 239, 220, 0.92) pohjalla #0b0805 */
 }
 
 .mk-kohdekartta-kokoruutu__selite--nappi:active .mk-nappi__teksti {
-    color: #f0d9a4;
+    color: var(--tk-paperi-pergamentti);
 }
 
 /* Web .postikortti.kulttuuri-suurennos .kuvalahde: 0.6rem, vaalea 0,62, keskitetty, margin-top 0.3rem. */
@@ -448,7 +448,7 @@
     margin: 0;
     padding: 0;
     font-size: 30.4px;
-    color: #fff8ec;
+    color: var(--tk-paperi-pinta);
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.65);
 }
 
@@ -536,7 +536,7 @@
     padding: 8px;
     border-width: 0;
     border-radius: var(--tk-kulma-keski);
-    background-color: #efe1c2;
+    background-color: var(--paper);
 }
 
 .mk-avauskortti__opaskuva {
@@ -589,14 +589,14 @@
     padding: 0;
     border-width: 0;
     border-radius: 16.8px;
-    background-color: rgba(245, 240, 226, 0.92);
+    background-color: var(--tk-paperi-pinta);
     align-items: center;
     justify-content: center;
 }
 
 .mk-avauskortti__sulku .mk-nappi__teksti {
     font-size: 22px;
-    color: #3a2f24;
+    color: var(--panel-2);
 }
 
 /* Suurennos kortista (web .kartta-suurennos-kortista): huntu rgba(29,22,16,.35) (+ KuvaSumea), kortti #f5f0e2
@@ -625,7 +625,7 @@
     min-height: 33.6px;
     border-color: rgba(122, 85, 20, 0.3);
     border-radius: 16.8px;
-    background-color: rgba(245, 240, 226, 0.94);
+    background-color: var(--tk-paperi-pinta);
 }
 
 .mk-kohdekartta-kokoruutu__tyokalut {
@@ -644,14 +644,14 @@
     border-width: 1px;
     border-color: rgba(122, 85, 20, 0.35);
     border-radius: var(--tk-kulma-keski);
-    background-color: #efe1c2;
+    background-color: var(--paper);
     align-items: center;
     justify-content: center;
 }
 
 .mk-kohdekartta-kokoruutu__zoom .mk-nappi__teksti {
     font-size: 20px;
-    color: #3a2f24;
+    color: var(--panel-2);
 }
 
 /* --- AVAUSKORTIN KUTSU (web .kaupunkikortin-kutsu, Kutsuminiatyyri.cs) ------------------------------------------- */
@@ -698,8 +698,8 @@
     margin: 0;
     padding: 1px 3px 2px 3px;
     font-size: 10px;
-    color: #fff8ec;
-    background-color: rgba(33, 29, 24, 0.72);
+    color: var(--tk-paperi-pinta);
+    background-color: var(--tk-himmennys-tumma);
     -unity-text-align: middle-center;
     white-space: nowrap;
     overflow: hidden;
@@ -727,7 +727,7 @@
 }
 
 .mk-kohdekartta__ihmetahti-varjo {
-    color: rgba(0, 0, 0, 0.3);
+    color: var(--tk-himmennys-kevyt);
     translate: 0 1px;
 }
 
@@ -736,7 +736,7 @@
 }
 
 .mk-kohdekartta__ihmetahti-muste {
-    color: #4b3a1c;
+    color: var(--map-ink);
     --mk-ikoni-viiva: 1.2;
 }
 

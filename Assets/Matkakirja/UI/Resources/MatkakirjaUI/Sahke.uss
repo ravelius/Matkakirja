@@ -22,7 +22,7 @@
     border-width: 1px;
     border-bottom-width: 3px;
     border-color: rgba(122, 85, 20, 0.34);
-    border-bottom-color: rgba(40, 26, 10, 0.38);
+    border-bottom-color: var(--tk-himmennys-kevyt);
     border-radius: 9px;
     background-color: var(--tk-paperi-pinta);
     color: var(--tk-paperi-muste);
@@ -57,7 +57,7 @@
 }
 
 .mk-sahke-liuska__sulje:active {
-    background-color: rgba(122, 85, 20, 0.12);
+    background-color: var(--map-ink-12);
 }
 
 .mk-sahke-liuska__sulje .mk-nappi__teksti {
@@ -76,7 +76,7 @@
     height: 20px;
     flex-shrink: 0;
     margin: 0 7px 0 0;
-    color: #5b4a2c;
+    color: var(--tk-paperi-muste-pehmea);
     --mk-ikoni-viiva: 1.5;
 }
 
@@ -84,7 +84,7 @@
     flex-shrink: 1;
     font-size: 14.4px;
     white-space: normal;
-    color: #5b4a2c;
+    color: var(--tk-paperi-muste-pehmea);
 }
 
 .mk-sahke-liuska__paperi {
@@ -92,7 +92,7 @@
     border-width: 1px;
     border-color: rgba(122, 85, 20, 0.4);
     border-radius: 5px;
-    background-color: #fdfaf0;
+    background-color: var(--tk-paperi-pinta);
 }
 
 .mk-sahke-liuska__teksti {
@@ -106,7 +106,7 @@
     margin-top: 7px;
     font-size: 12.5px;
     white-space: normal;
-    color: #6b5c3e;
+    color: var(--raja-muste);
 }
 
 /* --- 2. apupyyntö liuskassa ------------------------------------------------ */
@@ -134,7 +134,7 @@
     border-width: 1px;
     border-color: rgba(122, 85, 20, 0.34);
     border-radius: var(--tk-kulma-pieni);
-    background-color: #fffdf6;
+    background-color: var(--valkoinen);
     color: var(--tk-paperi-muste);
 }
 
@@ -147,8 +147,8 @@
 }
 
 .mk-sahke-liuska__vaihtoehto.mk-valittu {
-    border-color: #8a6a1f;
-    background-color: #f0e2bd;
+    border-color: var(--accent-dark);
+    background-color: var(--paper);
 }
 
 .mk-sahke-liuska__kirjain {
@@ -157,7 +157,7 @@
     flex-shrink: 0;
     margin-right: 8px;
     border-radius: 11px;
-    background-color: rgba(122, 85, 20, 0.16);
+    background-color: var(--map-ink-16);
     font-size: 12.8px;
     -unity-text-align: middle-center;
     color: var(--tk-paperi-muste);
@@ -179,16 +179,16 @@
     border-color: rgba(122, 85, 20, 0.28);
     border-radius: var(--tk-kulma-pieni);
     background-color: var(--lapinakyva);
-    color: #5b4a2c;
+    color: var(--tk-paperi-muste-pehmea);
 }
 
 .mk-sahke-liuska__ohita:active {
-    background-color: rgba(122, 85, 20, 0.1);
+    background-color: var(--map-ink-07);
 }
 
 .mk-sahke-liuska__ohitateksti {
     font-size: 13.6px;
-    color: #5b4a2c;
+    color: var(--tk-paperi-muste-pehmea);
 }
 
 /* --- 4. retkikuntaosio päävalikossa --------------------------------------- */
