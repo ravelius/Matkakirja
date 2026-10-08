@@ -7,10 +7,10 @@ Tarkempi lokirivistö: muisti natiiviseppa-tila-20261003.md (uusin rivi ylimpän
 
 **BUILD 166 = proto master bdd0e8c5fbad51b8028b0637e2f417e246d94884** (runko natiiviseppa/juna-166 0c7861567 = 8adddd2c + Siirtoseppä 0d5c33250
 + LS1 d3b9f48e8 + NUI a7953991e; käännös 93e99b966 17.22; omistajan pyynnöstä aikaistettu, yön juna peruttu; muutosloki 203 merkkiä).
-AVOINNA: Mac TF 166 -odottaja (iOS-alkuaika Julkaisijalta), juna/b13 → 0c786156 Julkaisijan luvalla.
+VALMIS 17.3x: juna/b13 = 0c786156, T7-asennus 17.33, iOS TF 166 37791987373, Mac TF 166 workflow 37793591409 (seuraa).
 JUNA 167: NUI 24372c44d (Olavinlinnan latauskuva, KUITATTU). Jonon kohta 3 (mono-segv-juurikorjaus): proto-3d/tyokalut/burst-jit.sh (testattu)
-+ valmis proto-kaanna.sh.juna167 (burst_jit_pois lukon sisällä, palautus trapissa) → vaihda elävään `mv proto-kaanna.sh.juna167 proto-kaanna.sh`
-junavahdin 166-asennuksen jälkeen ja ennen 167:ää; mac-kaanna.sh + TF-workflow samoin (Julkaisija). Segv-uusinta (Native Crash Reporting) jo elävänä.
+→ KUITATTU proto natiiviseppa/burst-jit-pois 9a98cd437 + README ce9d0c4d5 (junaan 167), ELÄVÄNÄ 17.4x proto-kaanna.sh + mac-kaanna.sh
+(varmuuskopio proto-kaanna.sh.ennen-burst-20261008); TF-workflow'n Unity-vienti Julkaisijalle kerrottu. Segv-uusinta (Native Crash Reporting) jo elävänä.
 Worktreet: vain wt/proto-natiiviseppa-j144 jäljellä.
 
 ## TILA 8.10. 09.5x
