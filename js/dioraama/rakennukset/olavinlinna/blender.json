@@ -1,7 +1,7 @@
 {
   "rakennus": "olavinlinna",
-  "hash": "f5066037051d1fe1",
-  "kansio": "dioraama/olavinlinna/blender/f5066037051d1fe1/",
+  "hash": "34c0c9374db2e84b",
+  "kansio": "dioraama/olavinlinna/blender/34c0c9374db2e84b/",
   "tiedostot": [
     {
       "polku": "hahmot/apulainen-1500-faceit.glb",
@@ -510,8 +510,8 @@
     },
     {
       "polku": "kavely/merkit.json",
-      "sha256": "51e35a93142c86036d37f1ea2b20eb20a3b1cb3a9f31188fe359d4cc3550e124",
-      "tavuja": 58031
+      "sha256": "1deb27cec7a8c01430d95aacd2e922b91d20097d6297544c5ee118636f9b70b8",
+      "tavuja": 58030
     },
     {
       "polku": "kavely/muurikaytava-kavely.glb",
@@ -530,8 +530,8 @@
     },
     {
       "polku": "kavely/osat.json",
-      "sha256": "363fa2b0ad89d1af061ee626c5d97cd1e693067dc9d9758e3169f53317da1173",
-      "tavuja": 25802
+      "sha256": "13f17dd04c9d538e084042cd0a62d2ad56c3159795bded897f047b4a5dbb5fe7",
+      "tavuja": 25846
     },
     {
       "polku": "kavely/palatsi-kavely.glb",
@@ -580,13 +580,13 @@
     },
     {
       "polku": "kavely/ranta-1499-kavely.glb",
-      "sha256": "e5cd308ed89ce1615d84b008ed03145e8bb7d60f398ab09ca351508201c2f8b8",
-      "tavuja": 212
+      "sha256": "71c6a39261c12e2004efda883b2acef226ff207a081833bd72305184ca65efc0",
+      "tavuja": 125996
     },
     {
       "polku": "kavely/ranta-1499-tormays.glb",
-      "sha256": "f0cd757510159a94a781fb9142a6e7fd3f2b9e5d95a20ba788adb946c6e72672",
-      "tavuja": 216
+      "sha256": "335b54d1c5f4c690d458be83a12e6ea3ebb9b74949f3d750013a37200bdb933a",
+      "tavuja": 166164
     },
     {
       "polku": "kavely/ranta-1499.glb",
