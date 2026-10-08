@@ -1,0 +1,1021 @@
+{
+  "task": "dublin-yksityiskohdat-20261008",
+  "routedTaskNumber": 22,
+  "source": {
+    "path": "posti/sisaltokirjuri-codex-dublin-yksityiskohdat-20261008.md",
+    "commit": "e25334cd78327a78ac287682bc677d3750540fe2",
+    "blob": "941881e10680fb1ad9d461363c8e72c9794336c4"
+  },
+  "sourceReadInFull": true,
+  "requestedImages": 8,
+  "imageCount": 7,
+  "generationCalls": 8,
+  "generationLimit": 8,
+  "sourceImagePixelsUsed": false,
+  "generationMode": "built-in image_gen, text-only, one call per produced subject; metadata-only final preparation",
+  "productionComplete": true,
+  "assets": [
+    {
+      "number": 1,
+      "qid": "Q1193916",
+      "id": "beckett-silta-avoin",
+      "file": "dublin-Q1193916-beckett-silta-avoin.png",
+      "filename": "dublin-Q1193916-beckett-silta-avoin.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/dublin-yksityiskohdat-20261008/production/01-beckett-silta-avoin/dublin-Q1193916-beckett-silta-avoin.png",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11ab2-1b56-7c31-a379-186b1d870adc/exec-9911a138-2fae-4187-8ed0-7e95044f8930.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/dublin-yksityiskohdat-20261008/production/01-beckett-silta-avoin/original-generation.png",
+      "sha256": "d9cd33ee04eeb64388859e0bd8df3951cb5b021c42b23dfb0e16661a8b9be70c",
+      "originalSha256": "41fe790a789d86693acbdd797e2df28e239aea4ad674d5d17040adc54879ebba",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "generationCalls": 1,
+      "generationPrompt": "Use case: photorealistic-natural\nAsset type: photo-like educational illustration for a Dublin city guide.\nCreate ONE entirely new image from TEXT ONLY, landscape 1536 × 1024 pixels, opaque RGB PNG, sRGB. No reference images.\nScene: Dublin Docklands on the River Liffey in the period after 2009, viewed from a slightly elevated position on Sir John Rogerson's Quay in calm afternoon daylight, gray-blue lightly overcast sky. Muted modern glass-and-stone buildings on the far quay.\nPrimary subject: Samuel Beckett Bridge fully OPEN for maritime passage. Show the ENTIRE white harp-shaped swing bridge, including both ends of its deck, its tall curved leaning pylon and the complete harp arrangement of fine stay cables, all connected and rotating as ONE inseparable steel superstructure. The pylon, all cables and the deck have rotated together through 90 degrees around the single circular concrete river pier near the south quay. In this open state the complete long deck runs PARALLEL to both riverbanks and to the flow of the river, with both free deck ends visibly over water; it does not connect the two banks. The single pier is offset toward the south bank, outside the broad central navigation channel. The pylon is part of the same rotated harp plane as the deck. No detached, unmoved or extra pylon. No remaining bridge deck or cable crosses the navigation channel. No bascule lifting, no split deck, no separate moving center segment.\nMaritime passage: ONE plain modern cargo coaster, modest enough to fit safely in the Liffey navigation channel, passing along the unobstructed water corridor beside the open bridge on the far side of its pier. The whole ship is visible and clearly separate from bridge cables and deck, with generous safe water clearance. Gray hull, small off-white wheelhouse aft, simple unmarked working deck. No people visible, no flags, no name, no logo or lettering. No massive ocean-going container ship.\nComposition: wide three-quarter riverside overview with enough elevation to make the bridge deck direction, both riverbanks and broad open channel clearly readable. A diagonal river view allows the long open bridge to be seen largely broadside while its deck visibly parallels the quays. Keep the entire pylon tip, both free deck ends, all stays, pier, ship and water clearance inside frame with generous margins.\nMedium: convincing real camera photograph-like reconstruction, realistic painted steel, fine cables, concrete, water ripples and glass. Natural soft afternoon light, restrained exposure, muted white, steel gray and blue-gray colors. No HDR, no glossy CGI, no cinematic saturation.\nText: none.\nAvoid: any closed cross-river deck, stationary pylon with rotated deck, unsupported cables, wrong rotation, extra bridge, ship passing under a closed deck, collision, people, recognizable faces, vehicles on the open deck, text, numbers, logos, signs, watermark, caption, frame or border.",
+      "viitteet": [
+        {
+          "publisher": "Dublin City Council",
+          "title": "Visiting the Docklands — Samuel Beckett Bridge",
+          "url": "https://www.dublincity.ie/planning-and-land-use/learn-about-councils-plans-city/public-realm-strategy-and-master-plans/dublin-docklands/visiting-docklands",
+          "type": "textResearchOnly",
+          "notes": "Official text confirms cable-stayed structure, curved pylon, river pier and 90-degree rotation for maritime passage; no page image pixels opened or used.",
+          "access": "2026-10-08; extracted web text read"
+        },
+        {
+          "publisher": "Santiago Calatrava — Architects & Engineers",
+          "title": "Samuel Beckett Bridge / Dublin",
+          "url": "https://www.calatrava.eu/projects/samuel-beckett-bridge-dublin.html",
+          "type": "textResearchOnly",
+          "notes": "Designer text confirms balanced steel superstructure with unequal spans, curved inclined pylon, 90-degree horizontal rotation and rotation mechanisms in the intermediate concrete pier. Only prose used; photographs not opened.",
+          "access": "2026-10-08; extracted web text read"
+        },
+        {
+          "publisher": "Roughan & O Donovan",
+          "title": "Samuel Beckett Bridge",
+          "url": "https://www.rod.ie/projects/samuel-beckett-bridge",
+          "type": "textResearchOnly",
+          "notes": "Official independent engineering-checker text confirms steel box girder, 90-degree rotation, asymmetric pylon base outside main navigation channel, harp cable configuration and circular concrete main pier. Photographs not opened or used.",
+          "access": "2026-10-08; extracted web text read"
+        }
+      ],
+      "kuvateksti": "Samuel Beckettin sillan koko harppurakenne havainnollistettuna joen suuntaiseen avoimeen asentoon kääntyneenä, jotta alus voi kulkea vapaassa väylässä. Rantaympäristö ja katselusuunta ovat kuvitteellisia. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "technicalChanges": [
+        "Preserved byte-exact tool original as original-generation.png.",
+        "Added standard sRGB ICC profile without color conversion.",
+        "Added exact Description and Source PNG text metadata.",
+        "Decoded RGB pixel values unchanged; equality verified.",
+        "Created a separate full-frame 480x320 QA preview."
+      ],
+      "QA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": false,
+        "observations": [
+          "Native 1536x1024 final and separate full-frame 480x320 preview viewed directly.",
+          "White pylon, cable stays and deck remain one connected harp superstructure; long deck runs approximately parallel to the quay, leaving the broad water channel open.",
+          "Both deck ends and pylon tip inside frame; one modest modern cargo coaster in clear water, no crossing deck over its navigation path.",
+          "Natural muted daylight, believable painted steel/concrete/water materials, no close people or recognizable faces.",
+          "No legible caption, numeral, watermark, frame or prominent branding observed; minute distant background and bow marks remain too small to identify."
+        ],
+        "limitations": [
+          "Bridge pier is depicted near the far bank from the pictured quay viewpoint; this does not establish the commissioned Sir John Rogersons Quay view or correct south-bank placement. Parent factual QA requested before delivery.",
+          "Exact riverbank geometry, buildings, quay viewpoint and vessel are fictional; the mechanism illustration is not a measured topographical reconstruction.",
+          "Some tiny distant facade and ship-bow marks resemble unidentifiable markings at native resolution; no clearly readable text observed.",
+          "No second generation, edit, crop or visual repair is permitted under the one-call limit."
+        ],
+        "parentReviewRequired": true
+      },
+      "preflightClarification": {
+        "status": "mechanism-normalized-from-primary-text",
+        "decision": "The full pylon/cables/deck steel superstructure rotates as one unit, not an isolated central deck beneath a fixed pylon.",
+        "reason": "Designer and engineering-checker prose describes horizontal rotation on the intermediate river pier."
+      },
+      "sourceCommit": "e25334cd78327a78ac287682bc677d3750540fe2",
+      "sourceBlob": "941881e10680fb1ad9d461363c8e72c9794336c4",
+      "sourceReadInFull": true,
+      "sharedRulesReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "generationMethod": "built-in image_gen; entirely new text-only generation",
+      "status": "local-candidate-awaiting-parent-qa",
+      "r2Delivered": false,
+      "mailboxDelivered": false,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "previewPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/dublin-yksityiskohdat-20261008/production/01-beckett-silta-avoin/qa-preview-480.png",
+      "rgbPixelsUnchanged": true,
+      "originalBytesPreserved": true,
+      "metadataDescription": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "metadataSource": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "iccProfilePresent": true,
+      "createdAt": "2026-10-08T08:54:06.251584+00:00",
+      "visualReview": {
+        "task": "dublin-yksityiskohdat-20261008",
+        "number": 1,
+        "qid": "Q1193916",
+        "file": "dublin-Q1193916-beckett-silta-avoin.png",
+        "sha256": "d9cd33ee04eeb64388859e0bd8df3951cb5b021c42b23dfb0e16661a8b9be70c",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Yhtenäinen pylväs/vaijeri/kansirakenne on joen suuntainen ja avoin leveä väylä mahdollistaa aluksen kulun ilman risteävää siltakantta. Koko pylväs ja kannen päät näkyvät. Rannan sijoittelu ei vastaa varmennettua tilauksen kamerapaikkaa; hyväksytään mekanismia havainnollistavana ehdokkaana tämä raja avoimesti kirjaten."
+        ],
+        "limitations": [
+          "Katselusuunta, rantapuoli ja rakennukset ovat keksittyjä. Kuva ei todista Sir John Rogerson’s Quayn kamerapaikkaa tai oikeaa etelärannan sijoittelua; tässä näkymässä kiertopilari on vastarannan vieressä.",
+          "Sillan, aluksen ja ympäristön tarkat mitat ovat havainnollisia, eivät mittatarkka topografinen rekonstruktio.",
+          "Aluksen keulassa ja kaukaisissa julkisivuissa näkyy pieniä merkintämäisiä muotoja; luettavaa sanaa tai numeroa ei havaittu natiivi- tai480-arviossa."
+        ],
+        "agentVerdictBeforeRootReview": false,
+        "reviewedAtUTC": "2026-10-08T08:59:00.017197+00:00"
+      },
+      "agentQA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": false,
+        "observations": [
+          "Native 1536x1024 final and separate full-frame 480x320 preview viewed directly.",
+          "White pylon, cable stays and deck remain one connected harp superstructure; long deck runs approximately parallel to the quay, leaving the broad water channel open.",
+          "Both deck ends and pylon tip inside frame; one modest modern cargo coaster in clear water, no crossing deck over its navigation path.",
+          "Natural muted daylight, believable painted steel/concrete/water materials, no close people or recognizable faces.",
+          "No legible caption, numeral, watermark, frame or prominent branding observed; minute distant background and bow marks remain too small to identify."
+        ],
+        "limitations": [
+          "Bridge pier is depicted near the far bank from the pictured quay viewpoint; this does not establish the commissioned Sir John Rogersons Quay view or correct south-bank placement. Parent factual QA requested before delivery.",
+          "Exact riverbank geometry, buildings, quay viewpoint and vessel are fictional; the mechanism illustration is not a measured topographical reconstruction.",
+          "Some tiny distant facade and ship-bow marks resemble unidentifiable markings at native resolution; no clearly readable text observed.",
+          "No second generation, edit, crop or visual repair is permitted under the one-call limit."
+        ],
+        "parentReviewRequired": true
+      },
+      "mitat": [
+        1536,
+        1024
+      ],
+      "fableReceipt": false,
+      "r2Key": "julisteet/dublin-yksityiskohdat/20261008/dublin-Q1193916-beckett-silta-avoin.png",
+      "url": "https://media.matkakirja.app/julisteet/dublin-yksityiskohdat/20261008/dublin-Q1193916-beckett-silta-avoin.png",
+      "bytes": 2521416,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "number": 2,
+      "qid": "Q1049842",
+      "id": "vankilan-kumipallot",
+      "file": "dublin-Q1049842-vankilan-kumipallot.png",
+      "filename": "dublin-Q1049842-vankilan-kumipallot.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/dublin-yksityiskohdat-20261008/production/02-vankilan-kumipallot/dublin-Q1049842-vankilan-kumipallot.png",
+      "sha256": "a0728afb8c827c475f7b7ee68bcc89ffd0ca65ab3feb485695f6b1154830189c",
+      "originalSha256": "b97767c312fd8799c964e9939ad6d926d955a89adbe6bcb1ce4decfa41467eb9",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11ab9-838f-7791-bd5c-d6220f1b50ec/exec-76ff024a-7fc0-4657-9d24-4ec513aa7f74.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/dublin-yksityiskohdat-20261008/production/02-vankilan-kumipallot/original-generation.png",
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationPrompt": "Use case: historical-scene\nAsset type: photorealistic educational havainnekuva for a Dublin city introduction.\nCreate ONE entirely new text-only image. Native output exactly 1536 x 1024, 3:2 landscape, opaque RGB PNG, sRGB. No reference images.\nScene: a fictional scene inspired by a prison-ball anecdote, outside a tall grey rough stone prison boundary wall in Dublin in 1923. View from a modest neighboring terraced house's small rear garden, low eye-level camera angle looking somewhat upward. The unadorned high wall occupies the left half of the frame, its clean bare upper coping clearly visible against an overcast sky. A simple period brick rear house and worn wooden yard fencing on the right, a plain empty clothesline with wooden posts, short slightly uneven lawn below. No exact identifiable modern-site reconstruction is required.\nMain subject: exactly THREE small plain BLACK rubber balls, each tennis-ball sized but black smooth rubber with no markings: ONE airborne just above and beyond the top of the wall, visibly traveling toward the garden, and exactly TWO separate black balls resting on the foreground lawn. Keep the airborne ball easy to read against the pale sky; no motion diagram, arc line, duplicate positions, or trail. The wall clearly separates prison side from this garden.\nPeriod details: weathered grey stone and mortar, simple old brick and timber, no barbed wire or spikes along the wall, no modern household objects, no plastic, no antennae or aerials.\nStyle: convincing real-camera photographic appearance, restrained black-and-white photograph tonal range or very faint faded sepia, natural soft overcast daylight, authentic stone, grass and rubber textures, moderate documentary contrast. Ordinary quiet moment, physically plausible scale, no HDR, no cinematic color grading, no dramatic fantasy or painterly style.\nConstraints: absolutely NO people, human faces, historical-person likenesses, writing, numbers, text, logos, signs, plaques, tourists, watermark, border or frame. No modern prison signage, cars, security cameras, lights, fences, wires, windows or roofs with contemporary features. Do not depict any real named prisoner. No blood, injury or violence.",
+      "kuvateksti": "Kilmainhamin vankilan pallokertomuksesta kuviteltu kohtaus vuoden 1923 naapuripihalla; pihan asettelu ja pallojen lento eivät ole dokumentoitu tapahtumakuva. Havainnekuva.",
+      "viitteet": [
+        {
+          "publisher": "Office of Public Works / Kilmainham Gaol Museum",
+          "title": "1910–1924",
+          "url": "https://www.kilmainhamgaolmuseum.ie/1910-1924/",
+          "type": "textResearchOnly",
+          "notes": "Official museum text verifies the Civil War prison context in 1923 and the last prisoner leaving in 1924. Does not verify the rubber-ball anecdote, ball material, or neighboring-garden arrangement.",
+          "access": "2026-10-08; complete relevant text read, no images opened."
+        },
+        {
+          "publisher": "Office of Public Works / Kilmainham Gaol Museum",
+          "title": "Collection",
+          "url": "https://www.kilmainhamgaolmuseum.ie/collection/",
+          "type": "textResearchOnly",
+          "notes": "Museum collection text lists a rounders bat dated 1923; used only as game-playing period context. No collection artifact image reproduced.",
+          "access": "2026-10-08; text only."
+        }
+      ],
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "previewPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/dublin-yksityiskohdat-20261008/production/02-vankilan-kumipallot/qa-preview-480.png",
+      "rgbPixelsUnchanged": true,
+      "originalPreservedByteExact": true,
+      "technicalChanges": [
+        "Added standard sRGB ICC profile without color conversion.",
+        "Added exact Description and Source PNG text metadata.",
+        "Decoded RGB pixel values unchanged; byte equality verified.",
+        "Created separate full-frame 480x320 QA preview."
+      ],
+      "QA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Exactly one black rubber ball airborne above the bare prison wall and exactly two resting on the lawn.",
+          "High rough grey stone wall, modest old brick rear house, plain clothesline and wooden fencing; no barbed wire or observed modern object.",
+          "No people, recognizable faces, actual-person likeness, text, numerals, logos, watermark, frame, blood or violence.",
+          "Camera-like monochrome textures and natural soft overcast light; all three balls remain legible in full-frame 480px preview."
+        ],
+        "limitations": [
+          "The ball/neighbour anecdote was not independently verified in the primary museum text; explicitly fictional anecdote-based scene.",
+          "Garden arrangement, wall proportions and ball trajectories are illustrative, not a site survey or verified 1923 view.",
+          "Foreground balls appear larger through the low camera perspective; exact physical ball diameter is not certified."
+        ]
+      },
+      "sourceCommit": "e25334cd78327a78ac287682bc677d3750540fe2",
+      "sourceBlob": "941881e10680fb1ad9d461363c8e72c9794336c4",
+      "sourceReadInFull": true,
+      "sharedRulesReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "generationMethod": "built-in image_gen; new text-only generation",
+      "status": "local-candidate-approved",
+      "r2Delivered": false,
+      "mailboxDelivered": false,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "visualReview": {
+        "task": "dublin-yksityiskohdat-20261008",
+        "number": 2,
+        "qid": "Q1049842",
+        "file": "dublin-Q1049842-vankilan-kumipallot.png",
+        "sha256": "a0728afb8c827c475f7b7ee68bcc89ffd0ca65ab3feb485695f6b1154830189c",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Yksi tumma pallo muurin yläpuolella ja kaksi nurmella; kivimuuri, aikakauden tiilitalo ja pyykkinaru. Ei piikkilankaa, ihmisiä, kylttejä tai modernia kalustoa. Fotorealistinen vähäsävyinen havainnollistus kertomuksesta, ei varmennettu tapahtumakuva."
+        ],
+        "limitations": [
+          "The ball/neighbour anecdote was not independently verified in the primary museum text; explicitly fictional anecdote-based scene.",
+          "Garden arrangement, wall proportions and ball trajectories are illustrative, not a site survey or verified 1923 view.",
+          "Foreground balls appear larger through the low camera perspective; exact physical ball diameter is not certified."
+        ],
+        "agentVerdictBeforeRootReview": true,
+        "reviewedAtUTC": "2026-10-08T09:04:50.988629+00:00"
+      },
+      "agentQA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Exactly one black rubber ball airborne above the bare prison wall and exactly two resting on the lawn.",
+          "High rough grey stone wall, modest old brick rear house, plain clothesline and wooden fencing; no barbed wire or observed modern object.",
+          "No people, recognizable faces, actual-person likeness, text, numerals, logos, watermark, frame, blood or violence.",
+          "Camera-like monochrome textures and natural soft overcast light; all three balls remain legible in full-frame 480px preview."
+        ],
+        "limitations": [
+          "The ball/neighbour anecdote was not independently verified in the primary museum text; explicitly fictional anecdote-based scene.",
+          "Garden arrangement, wall proportions and ball trajectories are illustrative, not a site survey or verified 1923 view.",
+          "Foreground balls appear larger through the low camera perspective; exact physical ball diameter is not certified."
+        ]
+      },
+      "mitat": [
+        1536,
+        1024
+      ],
+      "fableReceipt": false,
+      "r2Key": "julisteet/dublin-yksityiskohdat/20261008/dublin-Q1049842-vankilan-kumipallot.png",
+      "url": "https://media.matkakirja.app/julisteet/dublin-yksityiskohdat/20261008/dublin-Q1049842-vankilan-kumipallot.png",
+      "bytes": 2919165,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "number": 4,
+      "qid": "Q1134365",
+      "id": "spire-massavaimennin",
+      "file": "dublin-Q1134365-spire-massavaimennin.png",
+      "filename": "dublin-Q1134365-spire-massavaimennin.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/dublin-yksityiskohdat-20261008/production/04-spire-massavaimennin/dublin-Q1134365-spire-massavaimennin.png",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11ab2-1b56-7c31-a379-186b1d870adc/exec-67c615f8-be4d-47cc-9e08-ecbef9d3c6a9.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/dublin-yksityiskohdat-20261008/production/04-spire-massavaimennin/original-generation.png",
+      "sha256": "560900aa1e1996d6165e6ab15121ce55228d1c2d4075dd87e458e051ec700b4f",
+      "originalSha256": "bca792fc5dc49c02375d46976c4ea894e7ca3be0a469ab23663f126ebc565167",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "generationCalls": 1,
+      "generationPrompt": "Use case: scientific-educational\nAsset type: photorealistic material cutaway illustration for a Dublin city guide.\nCreate ONE entirely new TEXT-ONLY image. Landscape 1536 × 1024 pixels, opaque RGB PNG, sRGB. No input photographs or reference drawings.\nPrimary request: an independently imagined, physically tangible explanatory cutaway MODEL of the UPPER PORTION of Dublin's stainless-steel Spire, built in 2003. Photograph-like natural material appearance. This is a simplified explanatory model, NOT a measured engineering plan or a photograph of the real inaccessible interior.\nComposition: one vertical tapering hollow stainless-steel cone shown from a slightly oblique side angle. Include the WHOLE slender upper cone and its intact narrow tip, with generous open space above the tip and on all sides. The lower end of the depicted upper portion is visible below the damping mechanisms. A clean longitudinal segment of the metal shell is removed on the front, revealing the interior; the back and sides of the same continuous cone remain. Keep the tip and both mechanisms entirely within frame, no close crop. Widen the explanatory model only as needed for readable internal parts rather than claiming true proportions.\nMechanism facts: show EXACTLY TWO separate stainless-steel pendulum masses, suspended independently on taut CABLE HANGERS from support brackets inside the cone. Put both masses at two distinct levels in the same LOWER part of the depicted upper portion, representing the fifth frustum roughly two-thirds of the way up the actual monument. There is a long tapering empty upper portion leading above them to the tip; neither mass sits directly at the pointed tip. The upper mass is modestly larger than the lower one. Each mass connects laterally to the cone's inner wall by FOUR viscous damping units, some naturally occluded in perspective; show small plain metal piston-like damping units and cable hangers, NO coil springs. The two compact rounded steel mass forms and their internal brackets are schematic simplifications. Leave a simple central clearance for service lines through the mechanisms without turning it into a crowded installation drawing.\nMaterials and light: realistic shot-peened stainless steel outer shell, restrained silver-gray reflections, subtle fine metal surface texture, ordinary steel hangers and viscous units. The exposed section has natural depth, soft shadows and solid thickness. Gentle diffuse daylight against a muted light blue-gray sky-like neutral background. Muted colors, realistic exposure, no HDR, no glossy CGI, no dramatic spotlight, no oversaturation.\nText: absolutely NONE. No words, letters, numerals, labels, callouts, dimensions, ruler, grid, arrows, diagram legends or symbols. The material cutaway itself explains the relationship.\nAvoid: a single central mass, any mass hung from a coil spring, a ball-shaped skyscraper damper, machinery at the very tip, extra masses, copies of any source drawing, human figures, recognizable faces, buildings, logos, signs, watermark, frame or border.",
+      "viitteet": [
+        {
+          "publisher": "The Structural Engineer; design-team paper hosted by Ritchie Studio",
+          "title": "The Spire of Dublin — C. Deavy, A. Allsop and K. Jones, 16 August 2005",
+          "url": "https://www.ritchie.studio/wp-content/uploads/2011/02/IStructE-Paper.pdf",
+          "type": "textResearchOnly",
+          "notes": "Design-team prose confirms two stainless-steel masses suspended on cables, each connected to the inner wall via four viscous damping units, fifth frustum, separate levels around 77m and 70m; exact tip location explicitly impractical. Shot-peened stainless shell. Only extracted prose used; no PDF rendering, screenshot, source photograph pixels or drawing copy. Exact mass profiles are not established by prose and are therefore explicitly simplified.",
+          "access": "2026-10-08; extracted PDF text read via web"
+        },
+        {
+          "publisher": "Ritchie Studio",
+          "title": "Spire of Dublin",
+          "url": "https://www.ritchie.studio/projects/dublin/",
+          "type": "textResearchOnly",
+          "notes": "Architect project prose confirms completion in 2003 and stainless-steel monument context. No source photography opened or used.",
+          "access": "2026-10-08; extracted web text read"
+        }
+      ],
+      "kuvateksti": "Spiren kaksi vaijereista riippuvaa massaa ja viskoosivaimennusta esittävä, itsenäisesti kuviteltu materiaalileikkaus neulan yläosasta. Todelliset vaimentimet sijaitsevat viidennessä kartiojaksossa; kuvan mittasuhteet, massojen muodot ja sisäosien sijoittelu ovat yksinkertaistuksia, eivät mitattu suunnitelma. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "technicalChanges": [
+        "Preserved byte-exact tool original as original-generation.png.",
+        "Added standard sRGB ICC profile without color conversion.",
+        "Added exact Description and Source PNG text metadata.",
+        "Decoded RGB pixel values unchanged; equality verified.",
+        "Created a separate full-frame 480x320 QA preview."
+      ],
+      "QA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": false,
+        "observations": [
+          "Native 1536x1024 final and separate full-frame 480x320 preview viewed directly.",
+          "Two distinct compact steel masses at different levels inside the opened shell; upper mass larger than lower. Both legible at 480px.",
+          "Taut vertical hangers and lateral piston-like damping units shown; no coil springs, labels, dimensions, arrows, humans or recognizable faces.",
+          "Entire pointed tip visible; continuous steel upper-cone outline and natural reflective metal texture against muted sky.",
+          "Photograph-like cutaway material model, no copied engineering drawing or collection artwork."
+        ],
+        "limitations": [
+          "Independently imagined explanatory model: broadened shell, shortened vertical spacing, simplified rounded mass forms and internal brackets are not actual measured dimensions or component drawings.",
+          "Authoritative prose verifies material, count, cable hangers, viscous units and fifth-frustum placement, but not exact mass profiles; generated rounded profiles must not be treated as verified actual shape.",
+          "Tip is fully inside frame but has only about 18px of top clearance; the requested generous tip margin was not achieved. Parent composition QA requested before delivery.",
+          "The bottom of the upper-portion shell continues beyond the lower image edge; this is not a whole-monument view.",
+          "Four lateral units per mass are schematically shown or occluded; exact hanger anchors, service routing and construction geometry are simplified.",
+          "No second generation, edit, crop or visual repair is permitted under the one-call limit."
+        ],
+        "parentReviewRequired": true
+      },
+      "preflightClarification": {
+        "status": "approved-by-root-before-generation",
+        "decision": "Use TWO independent cable-suspended stainless masses with viscous units in the fifth frustum at different levels, rather than one spring-hung cylinder at the tip. Show complete upper tip and call the widened material cutaway an imagined simplified model, not a measured plan. Landscape common format overrides portrait wording.",
+        "reason": "Original brief conflicts with the design-team primary paper. Root approved this factual correction before the sole generation call.",
+        "received": "2026-10-08"
+      },
+      "sourceCommit": "e25334cd78327a78ac287682bc677d3750540fe2",
+      "sourceBlob": "941881e10680fb1ad9d461363c8e72c9794336c4",
+      "sourceReadInFull": true,
+      "sharedRulesReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "generationMethod": "built-in image_gen; entirely new text-only generation",
+      "status": "local-candidate-awaiting-parent-qa",
+      "r2Delivered": false,
+      "mailboxDelivered": false,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "previewPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/dublin-yksityiskohdat-20261008/production/04-spire-massavaimennin/qa-preview-480.png",
+      "rgbPixelsUnchanged": true,
+      "originalBytesPreserved": true,
+      "metadataDescription": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "metadataSource": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "iccProfilePresent": true,
+      "createdAt": "2026-10-08T08:54:06.251584+00:00",
+      "visualReview": {
+        "task": "dublin-yksityiskohdat-20261008",
+        "number": 4,
+        "qid": "Q1134365",
+        "file": "dublin-Q1134365-spire-massavaimennin.png",
+        "sha256": "560900aa1e1996d6165e6ab15121ce55228d1c2d4075dd87e458e051ec700b4f",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Kaksi erillistä metallimassaa eri tasoissa, vaijerimaiset kannattimet ja mäntämaiset sivuvaimentimet; ei kierrejousia tai tekstiä. Koko kärki kuva-alassa18pikselin pienellä ylämarginaalilla, selkeä480-esikatselussa. Oma yksinkertaistettu materiaalileikkaus, ei todellinen mitattu huippumekanismi."
+        ],
+        "limitations": [
+          "Suunnittelijoiden paperi vahvistaa kaksi vaijereista riippuvaa massaa ja viskoosivaimennuksen viidennessä kartiojaksossa noin70/77m. Kuva ei ole todellinen mitattu sisärakenne.",
+          "Kartion leveys, pystyetäisyydet, pyöreät massamuodot, ankkurit ja vaimenninyksiköiden geometria ovat havainnollistavia yksinkertaistuksia.",
+          "Kärki näkyy kokonaan mutta ylämarginaali on kapea. Yläosan kuori jatkuu alareunan ulkopuolelle; koko monumenttia ei esitetä."
+        ],
+        "agentVerdictBeforeRootReview": false,
+        "reviewedAtUTC": "2026-10-08T08:59:00.018162+00:00"
+      },
+      "agentQA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": false,
+        "observations": [
+          "Native 1536x1024 final and separate full-frame 480x320 preview viewed directly.",
+          "Two distinct compact steel masses at different levels inside the opened shell; upper mass larger than lower. Both legible at 480px.",
+          "Taut vertical hangers and lateral piston-like damping units shown; no coil springs, labels, dimensions, arrows, humans or recognizable faces.",
+          "Entire pointed tip visible; continuous steel upper-cone outline and natural reflective metal texture against muted sky.",
+          "Photograph-like cutaway material model, no copied engineering drawing or collection artwork."
+        ],
+        "limitations": [
+          "Independently imagined explanatory model: broadened shell, shortened vertical spacing, simplified rounded mass forms and internal brackets are not actual measured dimensions or component drawings.",
+          "Authoritative prose verifies material, count, cable hangers, viscous units and fifth-frustum placement, but not exact mass profiles; generated rounded profiles must not be treated as verified actual shape.",
+          "Tip is fully inside frame but has only about 18px of top clearance; the requested generous tip margin was not achieved. Parent composition QA requested before delivery.",
+          "The bottom of the upper-portion shell continues beyond the lower image edge; this is not a whole-monument view.",
+          "Four lateral units per mass are schematically shown or occluded; exact hanger anchors, service routing and construction geometry are simplified.",
+          "No second generation, edit, crop or visual repair is permitted under the one-call limit."
+        ],
+        "parentReviewRequired": true
+      },
+      "mitat": [
+        1536,
+        1024
+      ],
+      "fableReceipt": false,
+      "r2Key": "julisteet/dublin-yksityiskohdat/20261008/dublin-Q1134365-spire-massavaimennin.png",
+      "url": "https://media.matkakirja.app/julisteet/dublin-yksityiskohdat/20261008/dublin-Q1134365-spire-massavaimennin.png",
+      "bytes": 1474151,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "number": 5,
+      "qid": "Q742767",
+      "id": "dubh-linn-viikinkilaivat",
+      "file": "dublin-Q742767-dubh-linn-viikinkilaivat.png",
+      "filename": "dublin-Q742767-dubh-linn-viikinkilaivat.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/dublin-yksityiskohdat-20261008/production/05-dubh-linn-viikinkilaivat/dublin-Q742767-dubh-linn-viikinkilaivat.png",
+      "sha256": "4dd78bf7346e4de74ed2ba72875c8184ce73b803cab9b1bfaf9158984bbb1b40",
+      "originalSha256": "8fd6b7118bd03534994afb0348427a547837635de2e4d941f6a2c49b18e59048",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11ab9-838f-7791-bd5c-d6220f1b50ec/exec-10d3230f-6d53-4ae9-96f0-382b9e6d186b.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/dublin-yksityiskohdat-20261008/production/05-dubh-linn-viikinkilaivat/original-generation.png",
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationPrompt": "Use case: historical-scene\nAsset type: photorealistic historical educational havainnekuva for a Dublin city introduction.\nCreate ONE entirely new text-only image, native exactly 1536 x 1024, landscape 3:2, opaque RGB PNG, sRGB. No input or reference image pixels.\nScene: an original plausible historical reconstruction of the Dubh Linn black pool on the River Poddle close to the River Liffey in Dublin, late 900s AD. This is a sheltered river-harbor pool where Viking-age ships are moored beside an emerging modest trading settlement. NOT present-day Dublin Castle or a museum display.\nMain subjects: three long narrow Scandinavian Viking-age working longships and exactly one distinctly wider, deeper-bellied merchant vessel, all made of natural weathered timber with overlapping clinker-built planks. Plain raised gently curved wooden prows and sterns, no elaborate fantasy dragon sculpture. Each has a single wooden mast and yard, the plain muted wool square sails furled tightly around the horizontal yards. Natural-fiber ropes run to rough timber mooring posts and a simple low wooden landing edge; some rope coils rest aboard. All vessels are afloat and quietly moored, spatially separated enough that the one broad merchant ship is visibly different from the slender longships. These are imagined period working ships, not copies of specific museum objects or modern replicas.\nComposition: low camera viewpoint close to the water at the shore. Dark softly rippling brown-black water across the foreground, nearby curved bows and rope moorings clear, full ships extending through the midground, low grassy shore behind. Wide scene feels like a real camera captured it.\nSettlement: a handful of small plain rectangular post-and-wattle huts, sections of woven twig walls visible under muted mud daub, simple low thatched roofs, and a low rough timber-post-and-wattle palisade following the bank. Low green landscape without stone buildings or tall features. Morning mist softens the distant edge while nearby hulls remain crisp.\nStyle: authentic camera-shot photorealism with credible material textures, natural cool diffused misty morning daylight, muted brown timber, dark water and soft green bank, restrained exposure and normal photographic contrast. No HDR, no cinematic grading, no glossy CGI, no saturated fantasy scene, no illustration or painting.\nAvoid: all people, faces, real-person likenesses, modern ships, engines, metal railings, concrete quays, museum replica styling, labels, exhibition props, castle, towers, churches, stone walls, modern buildings, flags, banners, shields with symbols, writing, letters, numbers, signs, logos, watermarks, borders or frames. No violence, blood or injury.",
+      "kuvateksti": "Kuvitteellinen rekonstruktio Dubh Linnin laivasatamasta 900-luvun lopulla: pitkälaivoja ja leveä kauppalaiva Poddlen tummassa lammessa. Havainnekuva.",
+      "viitteet": [
+        {
+          "publisher": "Office of Public Works / Dublin Castle",
+          "title": "The Castle Gardens",
+          "url": "https://dublincastle.ie/the-castle-gardens/",
+          "type": "textResearchOnly",
+          "notes": "Official OPW text locates the original black pool on or near the current gardens and explicitly states Vikings harboured ships and set up a trading base there. No images or modern garden features used.",
+          "access": "2026-10-08; text only."
+        },
+        {
+          "publisher": "National Museum of Ireland",
+          "title": "The Viking Age in Ireland",
+          "url": "https://source.museum.ie/en-IE/Collections-Research/Irish-Antiquities-Division-Collections/Collections-List-(1)/Viking/The-Viking-Age-in-Ireland",
+          "type": "textResearchOnly",
+          "notes": "Institutional text verifies fortified Dublin established 841, 10th-century town growth, post-and-wattle house walls and timber construction. It notes no complete Viking ship has been found in Ireland. No museum object or replica pixels used.",
+          "access": "2026-10-08; relevant text read."
+        },
+        {
+          "publisher": "Viking Ship Museum, Roskilde",
+          "title": "The Hull of the Ship",
+          "url": "https://www.vikingeskibsmuseet.dk/en/professions/education/all-about-the-viking-ship/the-hull-of-the-ship",
+          "type": "textResearchOnly",
+          "notes": "Shipbuilding educational text verifies clinker-built lightweight strong Viking-age hulls. Used construction principles only, not a particular excavated or reconstructed vessel.",
+          "access": "2026-10-08; text only."
+        },
+        {
+          "publisher": "Dublin City Council",
+          "title": "The 18th Annual Sir John T. Gilbert Lecture - Transcript",
+          "url": "https://www.dublincity.ie/library/blog/18th-annual-sir-john-t-gilbert-lecture-transcript",
+          "type": "textResearchOnly",
+          "notes": "Institutionally hosted scholar lecture text connects ships to Poddle/Dubh Linn and mentions bank, post-and-wattle palisade and 10th-century town. Exact hull/shore layout remains fictional.",
+          "access": "2026-10-08; indexed relevant text read."
+        }
+      ],
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "previewPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/dublin-yksityiskohdat-20261008/production/05-dubh-linn-viikinkilaivat/qa-preview-480.png",
+      "rgbPixelsUnchanged": true,
+      "originalPreservedByteExact": true,
+      "technicalChanges": [
+        "Added standard sRGB ICC profile without color conversion.",
+        "Added exact Description and Source PNG text metadata.",
+        "Decoded RGB pixel values unchanged; byte equality verified.",
+        "Created separate full-frame 480x320 QA preview."
+      ],
+      "QA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Three narrow clinker-like wooden ships and one distinctly wider cargo vessel afloat in dark sheltered water.",
+          "Furled sails, single masts, rope coils and timber mooring posts; visible wattle/thatch huts and low wooden palisade behind.",
+          "No people, flags, symbols, text, numerals, logos, watermarks, museum-display features, modern ships, stone castle or towers.",
+          "Natural muted morning light, subtle mist, realistic worn timber, ropes and dark water. Full scene remains clear at 480px."
+        ],
+        "limitations": [
+          "Imagined ship, shoreline, hut and mooring layout; no exact archaeological reconstruction or known vessel copied.",
+          "No complete Viking ship has been found in Ireland, per National Museum text; hull interpretation uses general period shipbuilding evidence.",
+          "Foreground mast and merchant vessel edge naturally extend beyond the full-frame camera view."
+        ]
+      },
+      "sourceCommit": "e25334cd78327a78ac287682bc677d3750540fe2",
+      "sourceBlob": "941881e10680fb1ad9d461363c8e72c9794336c4",
+      "sourceReadInFull": true,
+      "sharedRulesReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "generationMethod": "built-in image_gen; new text-only generation",
+      "status": "local-candidate-approved",
+      "r2Delivered": false,
+      "mailboxDelivered": false,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "visualReview": {
+        "task": "dublin-yksityiskohdat-20261008",
+        "number": 5,
+        "qid": "Q742767",
+        "file": "dublin-Q742767-dubh-linn-viikinkilaivat.png",
+        "sha256": "4dd78bf7346e4de74ed2ba72875c8184ce73b803cab9b1bfaf9158984bbb1b40",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Kolme kapeaa puulaivaa ja yksi leveämpi kauppalaiva tummassa suojaisassa vedessä, purjeet koottuina ja kiinnitysköysiä/laituripaaluja. Rannalla vitsaspunos/olkitaloja ja matala puuaita, ei kivitorneja, linnaa tai lippuja. Etualan masto ulottuu yläreunan ulkopuolelle; materiaali ja laivasataman pääaihe selkeitä."
+        ],
+        "limitations": [
+          "Imagined ship, shoreline, hut and mooring layout; no exact archaeological reconstruction or known vessel copied.",
+          "No complete Viking ship has been found in Ireland, per National Museum text; hull interpretation uses general period shipbuilding evidence.",
+          "Foreground mast and merchant vessel edge naturally extend beyond the full-frame camera view."
+        ],
+        "agentVerdictBeforeRootReview": true,
+        "reviewedAtUTC": "2026-10-08T09:04:50.990531+00:00"
+      },
+      "agentQA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Three narrow clinker-like wooden ships and one distinctly wider cargo vessel afloat in dark sheltered water.",
+          "Furled sails, single masts, rope coils and timber mooring posts; visible wattle/thatch huts and low wooden palisade behind.",
+          "No people, flags, symbols, text, numerals, logos, watermarks, museum-display features, modern ships, stone castle or towers.",
+          "Natural muted morning light, subtle mist, realistic worn timber, ropes and dark water. Full scene remains clear at 480px."
+        ],
+        "limitations": [
+          "Imagined ship, shoreline, hut and mooring layout; no exact archaeological reconstruction or known vessel copied.",
+          "No complete Viking ship has been found in Ireland, per National Museum text; hull interpretation uses general period shipbuilding evidence.",
+          "Foreground mast and merchant vessel edge naturally extend beyond the full-frame camera view."
+        ]
+      },
+      "mitat": [
+        1536,
+        1024
+      ],
+      "fableReceipt": false,
+      "r2Key": "julisteet/dublin-yksityiskohdat/20261008/dublin-Q742767-dubh-linn-viikinkilaivat.png",
+      "url": "https://media.matkakirja.app/julisteet/dublin-yksityiskohdat/20261008/dublin-Q742767-dubh-linn-viikinkilaivat.png",
+      "bytes": 2364041,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "number": 6,
+      "qid": "Q258464",
+      "id": "keksitty-koristesivu",
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "status": "local-candidate-approved",
+      "generationPrompt": "Use case: photorealistic-natural\nAsset type: educational Dublin city illustration, explicitly a NEW IMAGINARY manuscript ornament page.\nCreate ONE entirely new TEXT-ONLY image, exactly 1536 x 1024 landscape, opaque RGB PNG in sRGB. No input/reference images, no reference photographs.\nScene/backdrop: a simple dark worn wooden table in soft natural window light.\nSubject: an open old handmade parchment codex inspired broadly by Irish manuscript craft around AD 800, with a wholly ORIGINAL INVENTED illuminated ornament page. The entire open book and all outer page edges fit comfortably inside the frame. Thick uneven mottled ivory parchment with small natural creases, handmade dark leather binding, restrained medieval red, yellow, green and violet mineral-looking pigments with fine dark ink.\nDecoration: the main page contains a large INVENTED rounded interlaced knot with several asymmetrical spiral medallions, and tiny abstract animal-like woven shapes mixed into the interlace. Rich fine hand-drawn geometric micro-ornaments: little triangles, circles, dots, loops and diamond lattices. The central ornament and all peripheral decoration are completely non-linguistic GEOMETRIC PATTERNS, not letters or calligraphy. The facing page contains only sparse geometric corner interlace on plain parchment.\nComposition/framing: camera about 45 degrees above the table; horizontal photograph of the book, dominant ornamented page fills most of the frame, entire book/page perimeter visibly uncropped; slight natural perspective, modest surrounding table space.\nStyle/medium: convincing real camera-shot photorealistic appearance of a handmade parchment book under present-day natural light. Fine parchment grain, softly worn pigment and ink, focus enough to distinguish the ornament while retaining natural camera depth. Muted light, restrained saturation, no HDR, no cinematic grading, no stylized illustration or glossy CGI.\nText: ABSOLUTELY NONE. No readable words, Latin, alphabets, numbers, pseudo-writing, glyph rows, initials, monograms, Chi/Rho shapes, religious symbol text or modern marks. Do not reproduce any actual Book of Kells page or known manuscript composition. Do not copy museum collection artwork or any source photograph. No hands, people, portraits, human figures, glass cases, reflections, labels, museum signs, logos, captions, watermark or image border.",
+      "sourceReadInFull": true,
+      "sharedRulesReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "generationMethod": "built-in image_gen; text-only",
+      "file": "dublin-Q258464-keksitty-koristesivu.png",
+      "filename": "dublin-Q258464-keksitty-koristesivu.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/dublin-yksityiskohdat-20261008/production/06-keksitty-koristesivu/dublin-Q258464-keksitty-koristesivu.png",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11aba-24dd-7851-b8b2-ed0b75298bd3/exec-f538e114-a925-4b1d-8427-7cce35ada962.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/dublin-yksityiskohdat-20261008/production/06-keksitty-koristesivu/original-generation.png",
+      "previewPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/dublin-yksityiskohdat-20261008/production/06-keksitty-koristesivu/qa-preview-480.png",
+      "sha256": "725d566ded3d0c6309cca262b2746ab26956001c6120691156d1a959650fdbe8",
+      "originalSha256": "e07dfab12ee032309ff572326d07276cd1d137cb1632f750e7cae97cda1fc676",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "rgbPixelsUnchanged": true,
+      "generationFailed": false,
+      "outputProduced": true,
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "technicalChanges": [
+        "Added standard sRGB ICC profile without color conversion.",
+        "Added exact Description and Source PNG text metadata.",
+        "RGB pixel values unchanged; byte equality of decoded pixels verified.",
+        "Created separate full-frame 480x320 QA preview."
+      ],
+      "sourceCommit": "e25334cd78327a78ac287682bc677d3750540fe2",
+      "sourceBlob": "941881e10680fb1ad9d461363c8e72c9794336c4",
+      "r2Delivered": false,
+      "mailboxDelivered": false,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "kuvateksti": "Kokonaan uusi kuvitteellinen koristesivu noin vuoden 800 irlantilaisen käsikirjoitusperinteen innoittamana. Pergamenttikirjan punokset, spiraalit ja eläinaiheiset kuviot ovat keksittyjä; kuva ei esitä Kellsin kirjan alkuperäistä sivua. Havainnekuva.",
+      "viitteet": [
+        {
+          "publisher": "Trinity College Dublin Library",
+          "title": "The Book of Kells",
+          "url": "https://www.tcd.ie/library/research-collections/book-of-kells.php",
+          "type": "textResearchOnly",
+          "notes": "Official text provides around 800 dating, vellum material, abstract animal ornament, and red/yellow/green/purple pigment context. Only broad material/craft facts used; no actual folio reproduced.",
+          "access": "2026-10-08; official indexed text only, no photographs or scans opened"
+        },
+        {
+          "publisher": "Trinity College Dublin",
+          "title": "Uncovering the mysteries of The Book of Kells",
+          "url": "https://www.tcd.ie/news_events/articles/2024/uncovering-the-mysteries-of-the-book-of-kells/",
+          "type": "textResearchOnly",
+          "notes": "Institutional text supports hand-painted interlace/animal ornament and yellow/red/purple pigment context. No named folio composition, text, letters, portraits or image pixels passed to generation.",
+          "access": "2026-10-08; official indexed text only"
+        }
+      ],
+      "QA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Native 1536×1024 final and separate 480×320 full-frame preview viewed.",
+          "Whole open codex, all page/binding edges and table margin visible; mottled parchment and ink surfaces appear photographic.",
+          "Original round woven motif, four surrounding spirals and abstract bird/animal loops; red/yellow/green/violet muted pigments discernible.",
+          "No words, Latin, numerals, letter monogram, pseudo-writing, Chi Rho motif, modern marks, known page copy, people, hands, signs, labels, logos, watermark or image border observed.",
+          "Ornament remains clear and main subject recognizable at 480 px."
+        ],
+        "limitations": [
+          "Wholly fictional new ornament composition and book, not the original Book of Kells or a verified medieval folio.",
+          "The result is viewed more nearly from above than the requested45-degree camera angle; entire book/page edges are retained.",
+          "Literal lettering and small human figures deliberately replaced by nonlinguistic geometric and abstract animal ornament under root instruction."
+        ]
+      },
+      "preflightClarification": {
+        "status": "approved-by-root",
+        "decision": "Invent entirely new manuscript page; no known Book of Kells composition, literal Chi Rho, Latin or pseudo-writing."
+      },
+      "visualReview": {
+        "task": "dublin-yksityiskohdat-20261008",
+        "number": 6,
+        "qid": "Q258464",
+        "file": "dublin-Q258464-keksitty-koristesivu.png",
+        "sha256": "725d566ded3d0c6309cca262b2746ab26956001c6120691156d1a959650fdbe8",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Kokonaan keksitty tekstitön punos/spiralikoristesivu ja avattu pergamenttikirja, kaikki kirjan ja sivujen reunat näkyvät. Ei ChiRho-kirjaimia, latinaa, numeroita tai yksittäisen tunnetun sivun jäljennöstä. Valokuvamainen pergamentti ja inkki. Kulma tilattua pystympi, kirjattu rajaksi."
+        ],
+        "limitations": [
+          "Wholly fictional new ornament composition and book, not the original Book of Kells or a verified medieval folio.",
+          "The result is viewed more nearly from above than the requested45-degree camera angle; entire book/page edges are retained.",
+          "Literal lettering and small human figures deliberately replaced by nonlinguistic geometric and abstract animal ornament under root instruction."
+        ],
+        "agentVerdictBeforeRootReview": true,
+        "reviewedAtUTC": "2026-10-08T09:04:50.993373+00:00"
+      },
+      "agentQA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Native 1536×1024 final and separate 480×320 full-frame preview viewed.",
+          "Whole open codex, all page/binding edges and table margin visible; mottled parchment and ink surfaces appear photographic.",
+          "Original round woven motif, four surrounding spirals and abstract bird/animal loops; red/yellow/green/violet muted pigments discernible.",
+          "No words, Latin, numerals, letter monogram, pseudo-writing, Chi Rho motif, modern marks, known page copy, people, hands, signs, labels, logos, watermark or image border observed.",
+          "Ornament remains clear and main subject recognizable at 480 px."
+        ],
+        "limitations": [
+          "Wholly fictional new ornament composition and book, not the original Book of Kells or a verified medieval folio.",
+          "The result is viewed more nearly from above than the requested45-degree camera angle; entire book/page edges are retained.",
+          "Literal lettering and small human figures deliberately replaced by nonlinguistic geometric and abstract animal ornament under root instruction."
+        ]
+      },
+      "mitat": [
+        1536,
+        1024
+      ],
+      "fableReceipt": false,
+      "r2Key": "julisteet/dublin-yksityiskohdat/20261008/dublin-Q258464-keksitty-koristesivu.png",
+      "url": "https://media.matkakirja.app/julisteet/dublin-yksityiskohdat/20261008/dublin-Q258464-keksitty-koristesivu.png",
+      "bytes": 2943705,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "number": 7,
+      "qid": "Q258464",
+      "id": "pitka-kirjastosali",
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "status": "local-candidate-approved",
+      "generationPrompt": "Use case: photorealistic-natural\nAsset type: educational Dublin city interior illustration.\nCreate ONE entirely new TEXT-ONLY image, exactly 1536 x 1024 landscape, opaque RGB PNG in sRGB. No input/reference images or source photographs.\nScene/backdrop: an ORIGINAL approximate architectural reconstruction inspired by the Long Room of Trinity College Dublin's Old Library, as an empty library with full bookshelves around 2020-2022 before book removal for restoration. This is an illustrative architectural view, not an exact present-day documentary record.\nArchitecture: a very long narrow hall with two storeys of dark OAK bookcases on both sides. Deep shelf alcoves project at right angles from side walls, regular carved oak pilasters, an oak gallery walkway and balustrade around the upper floor, two discreet dark timber spiral stairs near side alcoves. Above is a tall dark brown OAK-SHEETED BARREL VAULT with timber ribs and panel divisions, emphatically wood rather than a white plaster ceiling. A smooth unobstructed worn wood floor down the central aisle.\nDetails: shelves filled with many anonymous INVENTED dark leather-bound book spines with absolutely blank unmarked spines; no identifiable real book or manuscript. Modest pale marble bust silhouettes on plain dark wooden plinths alongside projecting shelves on each side. All busts are wholly invented anonymous generic sculptures with simplified indistinct facial features, some angled toward the shelving; no actual collection statue replicas and no recognizable famous, living or historical person's likeness.\nComposition/framing: camera at human eye level on the central aisle, horizontal symmetrical deep perspective down the hall, dark timber vault visible in upper half, long book-lined sides and a clear open floor leading to a distant simple end wall. Original camera composition constructed from textual architectural facts only.\nStyle/medium: convincing real camera-shot photorealism, oak grain and leather texture, natural soft muted daylight entering side windows, restrained warm browns and neutral gray-white marble. Realistic exposure and shadows, no HDR, no cinematic grading, no orange colour cast or glossy CGI.\nText: NONE. No letters, numerals, spine titles, shelf labels, plaque inscriptions, signs, captions, logos, watermark or image border. No visitors, actual people, identifiable portraits, tourist queues, ropes, barriers, display cases, glass exhibits, historical harp, Proclamation manuscript or any identifiable museum collection object. No Gaia/globe installation or current restoration works. Do not replicate an actual source photograph or use source image pixels.",
+      "sourceReadInFull": true,
+      "sharedRulesReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "generationMethod": "built-in image_gen; text-only",
+      "file": "dublin-Q258464-pitka-kirjastosali.png",
+      "filename": "dublin-Q258464-pitka-kirjastosali.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/dublin-yksityiskohdat-20261008/production/07-pitka-kirjastosali/dublin-Q258464-pitka-kirjastosali.png",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11aba-24dd-7851-b8b2-ed0b75298bd3/exec-dae17eee-866e-4790-80d8-73f55b336d12.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/dublin-yksityiskohdat-20261008/production/07-pitka-kirjastosali/original-generation.png",
+      "previewPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/dublin-yksityiskohdat-20261008/production/07-pitka-kirjastosali/qa-preview-480.png",
+      "sha256": "281b2ace5106fc59dcf393fe729c83ac96b1b764466bc8dfee8ee6d1008aee63",
+      "originalSha256": "d380e17cf38b6e38e87a414612443057e448bce1670bcc723f4ab0c15ed06faf",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "rgbPixelsUnchanged": true,
+      "generationFailed": false,
+      "outputProduced": true,
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "technicalChanges": [
+        "Added standard sRGB ICC profile without color conversion.",
+        "Added exact Description and Source PNG text metadata.",
+        "RGB pixel values unchanged; byte equality of decoded pixels verified.",
+        "Created separate full-frame 480x320 QA preview."
+      ],
+      "sourceCommit": "e25334cd78327a78ac287682bc677d3750540fe2",
+      "sourceBlob": "941881e10680fb1ad9d461363c8e72c9794336c4",
+      "r2Delivered": false,
+      "mailboxDelivered": false,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "kuvateksti": "Trinity Collegen Pitkän salin arkkitehtuurista tehty likimääräinen kuvitteellinen näkymä 2020-luvun alun täysine kirjahyllyineen. Katon tynnyriholvi on tammea; kirjat ja anonyymit marmoriset rintakuvat ovat keksittyjä. Havainnekuva.",
+      "viitteet": [
+        {
+          "publisher": "Trinity College Dublin Library",
+          "title": "A Great Many Choice Books – The New Library",
+          "url": "https://www.tcd.ie/library/exhibitions/choicebooks/newlibrary.php",
+          "type": "textResearchOnly",
+          "notes": "Official archive text confirms dark oak interior, projecting shelf alcoves, timber gallery, busts on wooden plinths and1861 barrel-vault ceiling sheeted in oak. Used only textual architectural facts; no artwork/photos viewed.",
+          "access": "2026-10-08; web text only"
+        },
+        {
+          "publisher": "Trinity College Dublin Estates and Facilities",
+          "title": "Old Library Redevelopment Project",
+          "url": "https://www.tcd.ie/estatesandfacilities/services/capital-projects--planning/current-projects/old-library-redevelopment-project/",
+          "type": "textResearchOnly",
+          "notes": "Official current page states90 percent books removed, links decant from December 2022 and says Gaia was installed in November 2023. Thus filled-shelf scene is explicitly inspired by early 2020s before decant, notcurrent 2026 state. No photo/video opened.",
+          "access": "2026-10-08; web text only"
+        }
+      ],
+      "QA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Native 1536×1024 final and separate 480×320 full-frame preview viewed.",
+          "Symmetrical long empty central aisle, dark oak two-level shelf alcoves/gallery, two side spiral stairs and dark wood barrel vault clearly visible.",
+          "Full anonymous leather book shelves without readable spine titles or labels.",
+          "Small generic marble busts on plain dark wood plinths; no recognizable famous face or identifiable collection statue observed.",
+          "No visitors, actual people, signs, plaques, glass cases, barriers, rope queues, harp, Proclamation, Gaia, modern installation, readable words/numerals, logos, watermark or image border observed.",
+          "Muted natural side-window daylight, oak grain floor, leather and marble material details; main room clearly recognizable at 480 px."
+        ],
+        "limitations": [
+          "Own approximate interior architecture, idealized symmetrical arrangement and invented books/busts; not a survey-accurate replica or authenticated photographic record.",
+          "Filled shelves refer to the early 2020s before decant beginning December 2022. This is not a representation of the current 2026 restoration state.",
+          "Original brief white ceiling corrected to oak using Trinity archival text and root decision."
+        ]
+      },
+      "architectureClarification": {
+        "status": "approved-by-root",
+        "decision": "Use dark oak barrel vault instead of white; approximateLong Room architecture, generic invented busts and books, filled shelves anchored before restoration decant.",
+        "received": "2026-10-08",
+        "reason": "Trinity archival text identifies1861 oak vault; project text confirms later book removal."
+      },
+      "visualReview": {
+        "task": "dublin-yksityiskohdat-20261008",
+        "number": 7,
+        "qid": "Q258464",
+        "file": "dublin-Q258464-pitka-kirjastosali.png",
+        "sha256": "281b2ace5106fc59dcf393fe729c83ac96b1b764466bc8dfee8ee6d1008aee63",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Symmetrinen tyhjä kirjaston keskikäytävä, kaksikerroksiset tammiset hyllyt, tammiholvi ja kierreportaat. Keksityt kirjanselät ja yleiset anonyymit marmoririntakuvat, ei tunnettuja kokoelmaportraitteja, tekstiä, vierailijoita tai näyttelylaitteita. Likimääräinen tilatulkinta ennen vuoden2022hyllyjen tyhjennystä."
+        ],
+        "limitations": [
+          "Own approximate interior architecture, idealized symmetrical arrangement and invented books/busts; not a survey-accurate replica or authenticated photographic record.",
+          "Filled shelves refer to the early 2020s before decant beginning December 2022. This is not a representation of the current 2026 restoration state.",
+          "Original brief white ceiling corrected to oak using Trinity archival text and root decision."
+        ],
+        "agentVerdictBeforeRootReview": true,
+        "reviewedAtUTC": "2026-10-08T09:04:50.995262+00:00"
+      },
+      "agentQA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Native 1536×1024 final and separate 480×320 full-frame preview viewed.",
+          "Symmetrical long empty central aisle, dark oak two-level shelf alcoves/gallery, two side spiral stairs and dark wood barrel vault clearly visible.",
+          "Full anonymous leather book shelves without readable spine titles or labels.",
+          "Small generic marble busts on plain dark wood plinths; no recognizable famous face or identifiable collection statue observed.",
+          "No visitors, actual people, signs, plaques, glass cases, barriers, rope queues, harp, Proclamation, Gaia, modern installation, readable words/numerals, logos, watermark or image border observed.",
+          "Muted natural side-window daylight, oak grain floor, leather and marble material details; main room clearly recognizable at 480 px."
+        ],
+        "limitations": [
+          "Own approximate interior architecture, idealized symmetrical arrangement and invented books/busts; not a survey-accurate replica or authenticated photographic record.",
+          "Filled shelves refer to the early 2020s before decant beginning December 2022. This is not a representation of the current 2026 restoration state.",
+          "Original brief white ceiling corrected to oak using Trinity archival text and root decision."
+        ]
+      },
+      "mitat": [
+        1536,
+        1024
+      ],
+      "fableReceipt": false,
+      "r2Key": "julisteet/dublin-yksityiskohdat/20261008/dublin-Q258464-pitka-kirjastosali.png",
+      "url": "https://media.matkakirja.app/julisteet/dublin-yksityiskohdat/20261008/dublin-Q258464-pitka-kirjastosali.png",
+      "bytes": 2599950,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "number": 8,
+      "qid": "Q261012",
+      "id": "vesiputkikiista-1775",
+      "file": "dublin-Q261012-vesiputkikiista-1775.png",
+      "filename": "dublin-Q261012-vesiputkikiista-1775.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/dublin-yksityiskohdat-20261008/production/08-vesiputkikiista-1775/dublin-Q261012-vesiputkikiista-1775.png",
+      "sha256": "1c1cf58bacfc669e3ecd234145f0ccfc8cdbdf4771773c3edccadd1e81f9eac5",
+      "originalSha256": "a59b190fc58a50dceac5f96d4f58e4864019bf06f2af05e5f0f8425c411c0568",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11ab9-838f-7791-bd5c-d6220f1b50ec/exec-57b4eed1-5613-4fc5-b52b-070efe969f23.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/dublin-yksityiskohdat-20261008/production/08-vesiputkikiista-1775/original-generation.png",
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationPrompt": "Use case: historical-scene\nAsset type: photorealistic educational historical havainnekuva for a Dublin city introduction.\nCreate ONE entirely new text-only image. Native exactly 1536 x 1024, landscape 3:2, opaque RGB PNG, sRGB. No input or reference images.\nScene: a fictional quiet pause in a brewery water-supply dispute in Georgian Dublin in spring 1775. It evokes the period incident without portraying any real historical individual and without claiming an exact day, surveyed location, or documented arrangement.\nComposition: wide, moderate-distance eye-level camera from BEHIND the people on an ordinary old cobbled lane outside a modest brewery entrance. A narrow open earth trench crosses the lower foreground diagonally, clearly exposing a long dull brown wooden water pipe made from bored timber/log sections at its bottom, a plausible period material interpretation. Simple Georgian brick facades with sash windows and two plain stone gate pillars form the background. Cool overcast spring daylight.\nPeople: exactly FOUR generic fictional adult men: one anonymous middle-aged brewery worker/master on the left in a plain dark long coat, knee breeches, wool stockings and period leather shoes, NO wig, short plain greying hair seen ONLY from the back; and three municipal workmen on the right in plain worn linen/wool work coats or smocks, knee breeches, stockings and simple brimmed hats. EVERY person is fully REAR-facing, all necks and heads averted away from camera, absolutely no cheek profiles, eyes, facial features or recognizable likenesses. All are looking toward the trench or brewery gate. Their figures fit fully in the wider scene with space around them.\nTool and action: the brewery man calmly holds the plain WOODEN shaft of a work pickaxe at waist level with one relaxed hand, while the dark wrought-IRON pick head rests firmly ON THE GROUND beside his feet. The iron tool is low and inactive, not raised, swung, pointed, aimed or brandished at anyone. Other workmen have simple shovels lowered with blades resting on the earth and plain cloth sacks nearby. They have paused their work, with a few feet of calm open space between them. No touching, physical aggression, fighting, chase, intimidation pose, shouting gesture, or weapon threat.\nStyle: convincing real-camera photographic appearance, original believable 18th-century clothing and street materials, natural muted colors, soft cool cloudy daylight, restrained exposure, realistic timber grain, worn cobbles, brick and linen, normal documentary photographic contrast. No HDR, cinematic grade, glossy CGI, painting, stage play or dramatic action-poster look.\nAvoid: any actual Arthur Guinness portrait or likeness, real-person faces, visible human facial details, front-facing humans, modern people or clothing, logos, harps, crest symbols, brewery branding, writing, numerals, signs, plaques, letters, inscriptions, text, watermark, frame or border. No modern pipes, plastic, machinery, streetlights, safety signage or modern construction gear. No blood, injuries, bodies, active violence, weapon threats or raised tools.",
+      "kuvateksti": "Vuoden 1775 Dublinin vesikiistasta kuviteltu kohtaus: panimohenkilö ja työmiehet pysähtyvät kaivannon äärelle. Puinen putki on aikakauden materiaalitulkinta, eivätkä hahmot esitä Arthur Guinnessia. Havainnekuva.",
+      "viitteet": [
+        {
+          "publisher": "South Dublin Libraries",
+          "title": "By the Sign of the Dolphin",
+          "url": "https://source.southdublinlibraries.ie/bitstream/10599/13402/1/BytheSignOftheDolphin.pdf",
+          "type": "textResearchOnly",
+          "notes": "Institutional library indexed text describes 1775 work gang and sheriff sent to cut off brewery water, and a pickaxe borrowed from a workman. PDF direct open inaccessible; only indexed text read; no page pixels viewed."
+        },
+        {
+          "publisher": "Dublin City Council",
+          "title": "Newmarket and Weavers’ Square: A Pattern of Past and Present",
+          "url": "https://www.dublincity.ie/sites/default/files/media/file-uploads/2018-05/Newmarket_Final_lo-res_1__31.3.09.pdf",
+          "type": "textResearchOnly",
+          "notes": "Official archaeological booklet text documents extensive underground wooden pipe systems from 1680s and wooden water pipe serving excavated 1720s Ardee Street brewery. Does not establish material or location of exact Guinness dispute pipe."
+        },
+        {
+          "publisher": "Guinness Storehouse",
+          "title": "Water",
+          "url": "https://www.guinness-storehouse.com/en/guinness-ingredients-experience/water",
+          "type": "textResearchOnly",
+          "notes": "Primary company institutional text confirms Arthur Guinness accessed Dublin city watercourse as part of original lease in 1759. Does not independently specify 1775 confrontation timing or exact pipe."
+        }
+      ],
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "previewPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/dublin-yksityiskohdat-20261008/production/08-vesiputkikiista-1775/qa-preview-480.png",
+      "rgbPixelsUnchanged": true,
+      "originalPreservedByteExact": true,
+      "technicalChanges": [
+        "Added standard sRGB ICC profile without color conversion.",
+        "Added exact Description and Source PNG text metadata.",
+        "Decoded RGB pixel values unchanged; byte equality verified.",
+        "Created separate full-frame 480x320 QA preview."
+      ],
+      "QA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Four fictional men are seen from behind, heads directed away toward the trench/brewery. No recognizable human face or actual historical-person likeness observed.",
+          "Wooden-shafted iron work pick is held low with head on cobbled ground; all three shovels are lowered. No threat, contact, violence, blood or injury.",
+          "Open trench exposes long timber pipe sections; brick facades, plain gate pillars, worn coats, breeches and stockings form a plausible period setting.",
+          "No text, numerals, logos, harps, crests, signage, modern pipes, machinery, watermark or frame observed.",
+          "Muted cloudy spring daylight and camera-like stone, brick, timber and textile textures; scene legible at 480px."
+        ],
+        "limitations": [
+          "Exact month/day of the 1775 confrontation not confirmed in institutional primary text read; spring 1775 label approved by root instead of brief April.",
+          "Wooden disputed pipe material is an illustrative inference from period Dublin pipe archaeology, not verified as the exact incident pipe.",
+          "Pickaxe iron head and wooden shaft are a period tool interpretation, not a reconstruction of the specific borrowed tool.",
+          "Fictional figures, gate, street and brewery/chimneys; building detail is not a verified 1775 site view.",
+          "Figures occupy about half to two-thirds of frame height but are rear-facing; rightmost worker has a slightly turned shadowed head without recognizable facial detail."
+        ]
+      },
+      "historicalClarification": {
+        "originalBrief": "April 1775; kivinen hakku; exact wooden dispute pipe.",
+        "evidence": "Institutional library text confirms year 1775 and pickaxe; secondary historical-record citations date encounter 16 May, while other secondary text says April. Institutional primary text read does not resolve month or exact tool/pipe material.",
+        "approvedByRoot": "2026-10-08; use spring 1775 without exact month/day, wood-hafted iron work pick lowered/resting on ground, fictional rear-facing brewery person/workmen, wooden pipe as period material interpretation.",
+        "remainingUncertainty": "Exact month/day, site arrangement, tool specimen and disputed pipe material unverified."
+      },
+      "sourceCommit": "e25334cd78327a78ac287682bc677d3750540fe2",
+      "sourceBlob": "941881e10680fb1ad9d461363c8e72c9794336c4",
+      "sourceReadInFull": true,
+      "sharedRulesReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "generationMethod": "built-in image_gen; new text-only generation",
+      "status": "local-candidate-approved",
+      "r2Delivered": false,
+      "mailboxDelivered": false,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "visualReview": {
+        "task": "dublin-yksityiskohdat-20261008",
+        "number": 8,
+        "qid": "Q261012",
+        "file": "dublin-Q261012-vesiputkikiista-1775.png",
+        "sha256": "1c1cf58bacfc669e3ecd234145f0ccfc8cdbdf4771773c3edccadd1e81f9eac5",
+        "nativeViewed": true,
+        "nativeRGBOriginalViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Neljän anonyymin aikakauden aikuisen selät, puinen putki avoimessa kaivannossa ja rautainen puuvartinen työhakku maassa. Lapiot alhaalla, ei uhkaamista, osumia, vammoja, tunnistettavia ihmiskasvoja tai tekstiä. Valokuvamainen pilvinen valo ja Georgian-kauden tiili/kivityön yleisvaikutelma."
+        ],
+        "limitations": [
+          "Exact month/day of the 1775 confrontation not confirmed in institutional primary text read; spring 1775 label approved by root instead of brief April.",
+          "Wooden disputed pipe material is an illustrative inference from period Dublin pipe archaeology, not verified as the exact incident pipe.",
+          "Pickaxe iron head and wooden shaft are a period tool interpretation, not a reconstruction of the specific borrowed tool.",
+          "Fictional figures, gate, street and brewery/chimneys; building detail is not a verified 1775 site view.",
+          "Figures occupy about half to two-thirds of frame height but are rear-facing; rightmost worker has a slightly turned shadowed head without recognizable facial detail."
+        ],
+        "agentVerdictBeforeRootReview": true,
+        "reviewedAtUTC": "2026-10-08T09:07:16.300230+00:00"
+      },
+      "agentQA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Four fictional men are seen from behind, heads directed away toward the trench/brewery. No recognizable human face or actual historical-person likeness observed.",
+          "Wooden-shafted iron work pick is held low with head on cobbled ground; all three shovels are lowered. No threat, contact, violence, blood or injury.",
+          "Open trench exposes long timber pipe sections; brick facades, plain gate pillars, worn coats, breeches and stockings form a plausible period setting.",
+          "No text, numerals, logos, harps, crests, signage, modern pipes, machinery, watermark or frame observed.",
+          "Muted cloudy spring daylight and camera-like stone, brick, timber and textile textures; scene legible at 480px."
+        ],
+        "limitations": [
+          "Exact month/day of the 1775 confrontation not confirmed in institutional primary text read; spring 1775 label approved by root instead of brief April.",
+          "Wooden disputed pipe material is an illustrative inference from period Dublin pipe archaeology, not verified as the exact incident pipe.",
+          "Pickaxe iron head and wooden shaft are a period tool interpretation, not a reconstruction of the specific borrowed tool.",
+          "Fictional figures, gate, street and brewery/chimneys; building detail is not a verified 1775 site view.",
+          "Figures occupy about half to two-thirds of frame height but are rear-facing; rightmost worker has a slightly turned shadowed head without recognizable facial detail."
+        ]
+      },
+      "mitat": [
+        1536,
+        1024
+      ],
+      "fableReceipt": false,
+      "r2Key": "julisteet/dublin-yksityiskohdat/20261008/dublin-Q261012-vesiputkikiista-1775.png",
+      "url": "https://media.matkakirja.app/julisteet/dublin-yksityiskohdat/20261008/dublin-Q261012-vesiputkikiista-1775.png",
+      "bytes": 2798259,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    }
+  ],
+  "excludedItems": [
+    {
+      "number": 3,
+      "qid": "Q1339254",
+      "id": "cuchulainn-veistos",
+      "generationCalls": 1,
+      "outputProduced": false,
+      "generationFailed": true,
+      "reason": "Built-in image generation failed automatic output moderation (sexual category) for the requested nonsexual classical bronze statue. One permitted call consumed; no image, original path or SHA returned. No retry.",
+      "R2Delivered": false
+    }
+  ],
+  "comparison": {
+    "file": "toimitetut-7.jpg",
+    "r2Key": "julisteet/dublin-yksityiskohdat/20261008/toimitetut-7.jpg",
+    "url": "https://media.matkakirja.app/julisteet/dublin-yksityiskohdat/20261008/toimitetut-7.jpg",
+    "sha256": "0046af6ab802430d6471edc950c92cdf0e24d1c01757d202c265e963746f2c87",
+    "bytes": 390478,
+    "http": 200,
+    "mime": "image/jpeg",
+    "cors": "https://matkakirja.app",
+    "byteExactReadback": true
+  },
+  "deliveryStatus": "Selected candidates R2 verified and submitted through this mailbox manifest/report; Fable/editor/game receipt unverified.",
+  "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+  "editorAcceptance": false,
+  "fableReceipt": false,
+  "gameIntegrated": false,
+  "published": false,
+  "createdAt": "2026-10-08T09:07:34.198513+00:00"
+}
