@@ -5,6 +5,9 @@
 // suunnan ja värin, taivaan ylä- ja alaosan ambientin (Ydin KoriValaistus) ja kaupunkikameran valotuksen; normaalikartta ilman
 // tangentteja ruutuderivaatoista (kotangenttikehys), kiiltoheijastus karheudesta. Ennen ensimmäistä AsetaValoa (_KoriValotus.w = 0)
 // vanha kiinteä yläviisto valo.
+// KUPU (Linssiseppä 8.10.2026, Linnanrakentajan kupu_nakyma.glb): _Cull 0 kaksipuolisille (kangas, nauhat; takapinnan normaali
+// käännetään), _Lapikuulto = auringon valo kankaan läpi (pinnan takaa tuleva valo), ORM:n B = metallisuus (heijastus albedon
+// värinen, hajavalo pienenee). Polttimen valo pistevalona (_KoriPoltinP näkymäavaruudessa, w = 1), muuten ylhäältä kuten ennen.
 Shader "Matkakirja/Linssit/PalloKori"
 {
     Properties
@@ -12,6 +15,7 @@ Shader "Matkakirja/Linssit/PalloKori"
         _Vari ("Väri", Color) = (0.55, 0.40, 0.24, 1) _Kuvio ("Kuvio", Float) = 1 _Toisto ("Toisto", Vector) = (40, 4, 0, 0)
         _MainTex ("Väri", 2D) = "white" {} _NorTex ("Normaali", 2D) = "bump" {} _OrmTex ("ORM", 2D) = "white" {}
         _NorVoima ("Normaalin voima", Float) = 1 _OnKartat ("Kartat", Float) = 0
+        _Cull ("Cull", Float) = 2 _Lapikuulto ("Läpikuulto", Float) = 0
     }
     SubShader
     {
@@ -20,14 +24,15 @@ Shader "Matkakirja/Linssit/PalloKori"
         {
             Name "Kori"
             Tags { "LightMode" = "UniversalForward" }
+            Cull [_Cull]
             HLSLPROGRAM
             #pragma vertex vert
             #pragma fragment frag
             #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
             CBUFFER_START(UnityPerMaterial)
-            half4 _Vari; float _Kuvio; float4 _Toisto; float _NorVoima; float _OnKartat;
+            half4 _Vari; float _Kuvio; float4 _Toisto; float _NorVoima; float _OnKartat; float _Cull; float _Lapikuulto;
             CBUFFER_END
-            float4 _KoriAurinkoV, _KoriAurinkoVari, _KoriYlosV, _KoriTaivasYla, _KoriTaivasAla, _KoriValotus, _KoriPoltin;
+            float4 _KoriAurinkoV, _KoriAurinkoVari, _KoriYlosV, _KoriTaivasYla, _KoriTaivasAla, _KoriValotus, _KoriPoltin, _KoriPoltinP;
             TEXTURE2D(_MainTex); SAMPLER(sampler_MainTex);
             TEXTURE2D(_NorTex); SAMPLER(sampler_NorTex);
             TEXTURE2D(_OrmTex); SAMPLER(sampler_OrmTex);
@@ -50,7 +55,7 @@ Shader "Matkakirja/Linssit/PalloKori"
                 tn.xy *= _NorVoima;
                 return normalize(tn.x * t * s + tn.y * b * s + tn.z * n);
             }
-            half3 Valaise(half3 albedo, float3 n, float3 pv, half ao, half karheus)
+            half3 Valaise(half3 albedo, float3 n, float3 pv, half ao, half karheus, half metalli)
             {
                 if (_KoriValotus.w < 0.5)   // ei vielä kaupungin valoa: vanha kiinteä yläviisto valo (näkymäavaruudessa ylös ≈ +y)
                     return albedo * (0.55h + 0.45h * (half)saturate(dot(n, normalize(float3(-0.3, 0.8, 0.5)))));
@@ -60,26 +65,39 @@ Shader "Matkakirja/Linssit/PalloKori"
                 half3 amb = lerp((half3)_KoriTaivasAla.rgb, (half3)_KoriTaivasYla.rgb, puoli) * ao;
                 float3 h = normalize(l + katse);
                 half kiilto = (half)exp2(10.0 * (1.0 - karheus) + 1.0);
-                half heijastus = (half)pow(saturate(dot(n, h)), kiilto) * (1.0h - karheus) * 0.35h * (half)saturate(dot(n, l));
-                half3 c = albedo * (amb + (half3)_KoriAurinkoVari.rgb * kaari) + (half3)_KoriAurinkoVari.rgb * heijastus;
-                // Polttimen lämmin valo ylhäältä (Poltin.Liekki, PalloKori.PoltinValo): paikallinen valo, ei kaupungin valotusta.
-                half3 poltin = albedo * (half3)_KoriPoltin.rgb * (half)saturate(dot(n, ylos) * 0.6 + 0.4) * ao;
+                half heijastus = (half)pow(saturate(dot(n, h)), kiilto) * (1.0h - karheus) * lerp(0.35h, 1.0h, metalli) * (half)saturate(dot(n, l));
+                half3 hajaAlb = albedo * (1.0h - 0.8h * metalli);
+                half3 kiiltoVari = lerp((half3)1.0h, albedo, metalli);
+                // Läpikuulto: kankaan takaa (auringon puolelta) tuleva valo kuultaa läpi; albedon värisenä.
+                half lapi = (half)saturate(-dot(n, l)) * (half)_Lapikuulto;
+                half3 c = hajaAlb * (amb + (half3)_KoriAurinkoVari.rgb * (kaari + lapi)) + (half3)_KoriAurinkoVari.rgb * kiiltoVari * heijastus;
+                // Polttimen lämmin valo (Poltin.Liekki, PalloKori.PoltinValo): paikallinen valo, ei kaupungin valotusta. Pistevalona,
+                // kun kupu on ladattu (_KoriPoltinP.w = 1; voimakkuus 1 korin reunan etäisyydellä ~4,5 m), muuten ylhäältä.
+                half poltinK;
+                if (_KoriPoltinP.w > 0.5)
+                {
+                    float3 dp = _KoriPoltinP.xyz - pv; float d2 = dot(dp, dp);
+                    poltinK = (half)(saturate(dot(n, dp * rsqrt(max(d2, 1e-4))) * 0.6 + 0.4) * min(3.0, 21.0 / (1.0 + d2)));   // katto: suun köydet ja helma ovat aivan liekin vieressä
+                }
+                else poltinK = (half)saturate(dot(n, ylos) * 0.6 + 0.4);
+                half3 poltin = hajaAlb * (half3)_KoriPoltin.rgb * poltinK * ao;
                 return c * (half3)_KoriValotus.rgb + poltin;
             }
-            half4 frag(V v) : SV_Target
+            half4 frag(V v, FRONT_FACE_TYPE etu : FRONT_FACE_SEMANTIC) : SV_Target
             {
                 float3 n = normalize(v.n);
+                n = IS_FRONT_VFACE(etu, n, -n);   // kaksipuolinen kangas: takapinta katsojaan päin
                 if (_Kuvio > 2.5)
                 {
                     half3 albedo = SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex, v.uv).rgb * _Vari.rgb;
-                    half ao = 1.0h, karheus = 0.85h;
+                    half ao = 1.0h, karheus = 0.85h, metalli = 0.0h;
                     if (_OnKartat > 0.5)
                     {
                         n = Kartta(n, v.pv, v.uv);
                         half3 orm = SAMPLE_TEXTURE2D(_OrmTex, sampler_OrmTex, v.uv).rgb;
-                        ao = orm.r; karheus = orm.g;
+                        ao = orm.r; karheus = orm.g; metalli = orm.b;
                     }
-                    return half4(Valaise(albedo, n, v.pv, ao, karheus), 1.0h);
+                    return half4(Valaise(albedo, n, v.pv, ao, karheus, metalli), 1.0h);
                 }
                 half k = 1.0h;
                 if (_Kuvio > 0.5 && _Kuvio < 1.5)
@@ -93,7 +111,7 @@ Shader "Matkakirja/Linssit/PalloKori"
                 }
                 else if (_Kuvio > 1.5)
                     k = 0.8h + 0.2h * (half)sin(6.2831 * (v.uv.x * 3.0 + v.uv.y));
-                return half4(Valaise(_Vari.rgb * k, n, v.pv, 1.0h, 0.9h), 1.0h);
+                return half4(Valaise(_Vari.rgb * k, n, v.pv, 1.0h, 0.9h, 0.0h), 1.0h);
             }
             ENDHLSL
         }

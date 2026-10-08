@@ -53,6 +53,8 @@ namespace Matkakirja.Linssit.Dioraama
         /// <summary>PALLO (Linssiseppä 8.10.2026): materiaalin normalTexture ja pbrMetallicRoughness.metallicRoughnessTexture
         /// (glTF: G = karheus, B = metallisuus; Blenderin ORM-vienti R = AO) → images-indeksit, tai -1.</summary>
         public int NormaaliKuva = -1, OrmKuva = -1;
+        /// <summary>PALLO (Linssiseppä 8.10.2026, kupu): materiaalin doubleSided (kankaan sisä- ja ulkopinta).</summary>
+        public bool KaksiPuolinen;
         /// <summary>COLOR_0 raakoina tavuina RGBA (R = AO, G = lämpö, B = 0, A = 255; kohta 3).</summary>
         public byte[] Varit;
         /// <summary>ERÄ 2B: materiaalin pbrMetallicRoughness.baseColorFactor [r,g,b,a] (LINEAARINEN, glTF-spec) —
@@ -291,7 +293,7 @@ namespace Matkakirja.Linssit.Dioraama
                     var nivelet = Nivelet(a, k);
                     var painot = nivelet != null ? Painot(a, k) : null;
                     if (nivelet != null && painot == null) throw new DioraamaGlbVirhe("JOINTS_0 ilman WEIGHTS_0:aa");
-                    var osa = new GlbOsa { Pinta = pinta, Vari = materiaaliVari, Paikat = paikat, Normaalit = normaalit, Uv = tex, Uv1 = tex1, Kuva = kuva, NormaaliKuva = normaaliKuva, OrmKuva = ormKuva, Varit = vari, Kolmiot = kolmiot, Nivelet = nivelet, Painot = painot };
+                    var osa = new GlbOsa { Pinta = pinta, Vari = materiaaliVari, Paikat = paikat, Normaalit = normaalit, Uv = tex, Uv1 = tex1, Kuva = kuva, NormaaliKuva = normaaliKuva, OrmKuva = ormKuva, KaksiPuolinen = materiaaliObj != null && MiniJson.Kentta(materiaaliObj, "doubleSided") is bool kp && kp, Varit = vari, Kolmiot = kolmiot, Nivelet = nivelet, Painot = painot };
                     // MORPH: vain POSITION-deltat (normaalit lasketaan muodoille Unityssa; FACEIT-vienti antaa vain POSITIONin).
                     var nimet = MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(MiniJson.ObjektiTaiNull(MiniJson.Kentta(mesh, "extras")), "targetNames"));
                     int ti = 0;

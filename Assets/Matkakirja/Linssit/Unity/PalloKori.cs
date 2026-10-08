@@ -15,6 +15,11 @@
 // (heijastus, kunnes siirtoseppa/aanimaisema on mainissa). Leikkeet Resources/Aanet/Pallokori: eleven-* (ElevenLabs-ääniefektit,
 // omistajan kokeilulupa) ja kirjasto-* (PD/CC0; lähteet proto-3d/_lahteet/pallokori-aanet/*/LAHTEET.md); A/B `opas kori aanet
 // eleven|kirjasto` (puuttuva kirjastoääni → eleven).
+// KUPU (Linssiseppä 8.10.2026, Linnanrakentajan kupu_nakyma.glb, _valmiit/ilmapallo-v1/kupu): sama origo kuin korilla (korin pohjan
+// keskellä, +Y ylös), mutta kupu riippuu maailman pystysuunnassa kameran (silmä 1,5 m korin pohjasta) yläpuolella eikä käänny katseen
+// mukana: näkyy, kun katse nousee (~35° ylös), suun läpi sisäpinta. Kangas ja nauhat kaksipuolisia, auringon läpikuulto; polttimen
+// valo pistevalona polttimista (y 5,75–5,9) ja liekki polttimien kohdalla. Documents/pallokori/kupu_nakyma.glb (testi) tai R2
+// KupuOsoite; ilman kupua kori kuten ennen.
 // A/B: komento `opas kori 0|1`.
 using System.IO;
 using System.Threading.Tasks;
@@ -55,7 +60,16 @@ namespace Matkakirja.Natiivi
         bool narinaRajanYli;
         AudioSource aani;
         public const string MalliOsoite = "https://media.matkakirja.app/kartta/ilmapallo/v1/kori_nakyma.glb";
-        static GlbMalli malli; static bool malliHaussa;
+        public const string KupuOsoite = "https://media.matkakirja.app/kartta/ilmapallo/v1/kupu_nakyma.glb";
+        static GlbMalli malli, kupuMalli; static bool malliHaussa, kupuHaussa;
+        // Tekstuurit mallikohtaisesti kerran (mallit ovat staattisia; Luo rakentaa näkymän uudelleen kameran vaihtuessa).
+        static readonly System.Collections.Generic.Dictionary<int, Texture2D> koriTekstuurit = new System.Collections.Generic.Dictionary<int, Texture2D>(),
+            kupuTekstuurit = new System.Collections.Generic.Dictionary<int, Texture2D>();
+        Transform kupuJuuri, poltinPiste;
+        /// <summary>Silmän korkeus korin pohjasta (m; mallin kamera-solmu).</summary>
+        const float SilmaM = 1.5f;
+        /// <summary>Polttimien liekin juuri kupu_nakyma.glb:ssä (m; poltinsolmun kaksi poltinta y 5,6–5,9).</summary>
+        static readonly Vector3 PoltinPaikka = new Vector3(0f, 5.9f, 0f);
         Transform malliJuuri, malliKori; readonly System.Collections.Generic.List<Transform> malliKoydet = new System.Collections.Generic.List<Transform>();
         readonly System.Collections.Generic.List<Quaternion> malliKoysiAlku = new System.Collections.Generic.List<Quaternion>();
         Quaternion malliKoriAlku;
@@ -66,6 +80,8 @@ namespace Matkakirja.Natiivi
         /// <summary>Korin reunan yläreuna ruudun alalaidasta, osuutena ruudun korkeudesta (Päätoimittaja: ~12 %).</summary>
         const float ReunaOsuus = 0.12f;
         const float KiihtyvyysAikavakioS = 0.15f, HyppyM = 300f;
+        /// <summary>Korin kameran kaukotaso (m): kuvun laki 26,4 m korin pohjasta.</summary>
+        const float KaukoM = 40f;
 
         readonly KoriLiike liike = new KoriLiike();
         Camera perus, overlay;
@@ -129,7 +145,8 @@ namespace Matkakirja.Natiivi
             foreach (var m in new[] { punos, nahka, koysi }) if (m != null) Object.Destroy(m);
             KytkeAanimaisema(false);
             VasenKoysiNorm = default;
-            malliJuuri = null; malliKori = null; malliKoydet.Clear(); malliKoysiAlku.Clear(); koysiVerkot.Clear();
+            malliJuuri = null; malliKori = null; kupuJuuri = null; poltinPiste = null; kupuLiekki = null;
+            Shader.SetGlobalVector(IdPoltinP, Vector4.zero); malliKoydet.Clear(); malliKoysiAlku.Clear(); koysiVerkot.Clear();
             if (liekkiMat != null) Object.Destroy(liekkiMat);
             liekki = null; liekkiMat = null;
             overlay = null; juuri = null; perus = null; punos = nahka = koysi = null; fov = aspect = -1; aani = null;
@@ -146,7 +163,7 @@ namespace Matkakirja.Natiivi
             overlay.clearFlags = CameraClearFlags.SolidColor;
             overlay.backgroundColor = Color.clear;
             overlay.cullingMask = 1 << Kerros;
-            overlay.nearClipPlane = 0.05f; overlay.farClipPlane = 20f;
+            overlay.nearClipPlane = 0.05f; overlay.farClipPlane = KaukoM;
             overlay.allowHDR = false; overlay.allowMSAA = false;
             overlay.depth = kamera.depth - 1f;   // ennen kaupunkikameraa: tekstuuri valmis koosteelle
             var od = overlay.GetUniversalAdditionalCameraData();
@@ -231,8 +248,11 @@ namespace Matkakirja.Natiivi
         {
             foreach (Transform t in koriKaanto) Object.Destroy(t.gameObject);
             foreach (Transform t in koysiKaanto) Object.Destroy(t.gameObject);
-            if (malli != null) { if (malliJuuri == null) RakennaMalli(); return; }
-            if (!malliHaussa && Matkakirja.Natiivi.LinssiOhjain.Instanssi != null) Matkakirja.Natiivi.LinssiOhjain.Instanssi.StartCoroutine(HaeMalli());
+            var ohjain = Matkakirja.Natiivi.LinssiOhjain.Instanssi;
+            if (kupuMalli == null && !kupuHaussa && ohjain != null)
+                ohjain.StartCoroutine(HaeGlb("kupu_nakyma.glb", "pallokupu-v1.glb", KupuOsoite, h => kupuHaussa = h, m => kupuMalli = m));
+            if (malli != null) { if (malliJuuri == null) RakennaMalli(); if (kupuMalli != null && kupuJuuri == null) RakennaKupu(); return; }
+            if (!malliHaussa && ohjain != null) ohjain.StartCoroutine(HaeGlb("kori_nakyma.glb", "pallokori-v1.glb", MalliOsoite, h => malliHaussa = h, m => malli = m));
             float h = EtaisyysM * Mathf.Tan(fov * 0.5f * Mathf.Deg2Rad), w = h * aspect;
             float yla = -h + 2 * h * ReunaOsuus, nahkaK = 0.05f * h;
             Laatikko(koriKaanto, punos, new Vector3(0, (yla - nahkaK + -1.6f * h) * 0.5f, EtaisyysM + 0.02f), new Vector3(2.6f * w, (yla - nahkaK) + 1.6f * h, 0.04f));
@@ -245,17 +265,18 @@ namespace Matkakirja.Natiivi
             }
         }
 
-        /// <summary>GLB levyltä (Documents → välimuisti) tai R2:sta; jäsennys taustasäikeellä. Saapuessa näkymä rakennetaan uudelleen.</summary>
-        System.Collections.IEnumerator HaeMalli()
+        /// <summary>GLB levyltä (Documents → välimuisti) tai R2:sta; jäsennys taustasäikeellä. Saapuessa näkymä rakennetaan uudelleen.
+        /// Kori ja kupu samalla tavalla (haussa-lippu ja tulos annetaan kutsujalta).</summary>
+        System.Collections.IEnumerator HaeGlb(string testiNimi, string valimuistiNimi, string osoite, System.Action<bool> haussa, System.Action<GlbMalli> valmis)
         {
-            malliHaussa = true;
-            string testi = Path.Combine(Application.persistentDataPath, "pallokori", "kori_nakyma.glb");
-            string valimuisti = Path.Combine(Application.persistentDataPath, "kuvat", "pallokori-v1.glb");
+            haussa(true);
+            string testi = Path.Combine(Application.persistentDataPath, "pallokori", testiNimi);
+            string valimuisti = Path.Combine(Application.persistentDataPath, "kuvat", valimuistiNimi);
             byte[] glb = null;
             foreach (var p in new[] { testi, valimuisti }) if (glb == null && File.Exists(p)) try { glb = File.ReadAllBytes(p); } catch (System.Exception) { }
             if (glb == null)
             {
-                using var r = UnityEngine.Networking.UnityWebRequest.Get(MalliOsoite);
+                using var r = UnityEngine.Networking.UnityWebRequest.Get(osoite);
                 r.timeout = 30;
                 yield return r.SendWebRequest();
                 if (r.result == UnityEngine.Networking.UnityWebRequest.Result.Success)
@@ -263,15 +284,15 @@ namespace Matkakirja.Natiivi
                     glb = r.downloadHandler.data;
                     try { Directory.CreateDirectory(Path.GetDirectoryName(valimuisti)); File.WriteAllBytes(valimuisti, glb); } catch (System.Exception) { }
                 }
-                else Debug.Log($"MATKAKIRJA kaupunki: kori: malli ei latautunut ({r.responseCode}), paikkamerkki");
+                else Debug.Log($"MATKAKIRJA kaupunki: kori: {testiNimi} ei latautunut ({r.responseCode}){(osoite == MalliOsoite ? ", paikkamerkki" : "")}");
             }
-            if (glb == null) { malliHaussa = false; yield break; }
+            if (glb == null) { haussa(false); yield break; }
             var tyo = Task.Run(() => DioraamaGlb.Lue(glb, true));
             while (!tyo.IsCompleted) yield return null;
-            malliHaussa = false;
-            if (tyo.IsFaulted) { Debug.Log("MATKAKIRJA kaupunki: kori: GLB virhe " + tyo.Exception?.GetBaseException().Message); yield break; }
-            malli = tyo.Result;
-            Debug.Log($"MATKAKIRJA kaupunki: kori: malli {malli.Solmut.Count} solmua, {malli.Kuvat.Count} kuvaa");
+            haussa(false);
+            if (tyo.IsFaulted) { Debug.Log($"MATKAKIRJA kaupunki: kori: {testiNimi} GLB virhe " + tyo.Exception?.GetBaseException().Message); yield break; }
+            valmis(tyo.Result);
+            Debug.Log($"MATKAKIRJA kaupunki: kori: {testiNimi} {tyo.Result.Solmut.Count} solmua, {tyo.Result.Kuvat.Count} kuvaa");
             fov = -1;   // seuraava kehys rakentaa mallin
         }
 
@@ -280,27 +301,62 @@ namespace Matkakirja.Natiivi
             malliJuuri = new GameObject("Korimalli") { layer = Kerros }.transform;
             malliJuuri.SetParent(juuri, false);
             malliJuuri.localPosition = new Vector3(0, -1.5f, 0);   // mallin kamera (0; 1,5; 0) = overlay-kamera
-            var tekstuurit = new System.Collections.Generic.Dictionary<int, Texture2D>();
-            var solmut = new Transform[malli.Solmut.Count];
-            for (int i = 0; i < malli.Solmut.Count; i++)
-            {
-                var sm = malli.Solmut[i];
-                var go = new GameObject(sm.Nimi ?? "solmu") { layer = Kerros };
-                solmut[i] = go.transform;
-                go.transform.localPosition = new Vector3(sm.Translation[0], sm.Translation[1], sm.Translation[2]);
-                go.transform.localRotation = new Quaternion(sm.Rotation[0], sm.Rotation[1], sm.Rotation[2], sm.Rotation[3]);
-                go.transform.localScale = new Vector3(sm.Scale[0], sm.Scale[1], sm.Scale[2]);
-                foreach (var osa in sm.Osat) Osa(go.transform, osa, tekstuurit);
-            }
+            var solmut = Solmut(malli, malliJuuri, koriTekstuurit);
             for (int i = 0; i < solmut.Length; i++)
             {
-                int v = malli.Solmut[i].Vanhempi;
-                solmut[i].SetParent(v >= 0 ? solmut[v] : malliJuuri, false);
                 var nimi = malli.Solmut[i].Nimi ?? "";
                 if (nimi == "kori_etureuna") { malliKori = solmut[i]; malliKoriAlku = solmut[i].localRotation; }
                 else if (nimi.StartsWith("koysi")) { malliKoydet.Add(solmut[i]); malliKoysiAlku.Add(solmut[i].localRotation); }
             }
             RakennaKoysiVerkot();
+        }
+
+        /// <summary>GLB:n solmut ja osat juuren alle (glTF-hierarkia, TRS).</summary>
+        Transform[] Solmut(GlbMalli m, Transform juuriT, System.Collections.Generic.Dictionary<int, Texture2D> tekstuurit)
+        {
+            var solmut = new Transform[m.Solmut.Count];
+            for (int i = 0; i < m.Solmut.Count; i++)
+            {
+                var sm = m.Solmut[i];
+                var go = new GameObject(sm.Nimi ?? "solmu") { layer = Kerros };
+                solmut[i] = go.transform;
+                go.transform.localPosition = new Vector3(sm.Translation[0], sm.Translation[1], sm.Translation[2]);
+                go.transform.localRotation = new Quaternion(sm.Rotation[0], sm.Rotation[1], sm.Rotation[2], sm.Rotation[3]);
+                go.transform.localScale = new Vector3(sm.Scale[0], sm.Scale[1], sm.Scale[2]);
+                foreach (var osa in sm.Osat) Osa(go.transform, osa, tekstuurit, m);
+            }
+            for (int i = 0; i < solmut.Length; i++)
+            {
+                int v = m.Solmut[i].Vanhempi;
+                solmut[i].SetParent(v >= 0 ? solmut[v] : juuriT, false);
+            }
+            return solmut;
+        }
+
+        /// <summary>Kupu korin kameran alle; asento joka kehys (KupuAsento): maailman pystyssä, silmän yläpuolella.</summary>
+        void RakennaKupu()
+        {
+            if (overlay == null) return;
+            kupuJuuri = new GameObject("Kupumalli") { layer = Kerros }.transform;
+            kupuJuuri.SetParent(overlay.transform, false);
+            Solmut(kupuMalli, kupuJuuri, kupuTekstuurit);
+            poltinPiste = new GameObject("polttimen piste") { layer = Kerros }.transform;
+            poltinPiste.SetParent(kupuJuuri, false);
+            poltinPiste.localPosition = PoltinPaikka;
+            KupuAsento();
+        }
+
+        /// <summary>Kuvun juuri: korin pohja SilmaM maailman pystysuunnassa silmän alapuolella, akselit maailman suuntaiset (kupu ei
+        /// käänny katseen mukana). Korin kamera on kaupunkikameran lapsi, joten asento lasketaan sen paikallisiin koordinaatteihin.</summary>
+        void KupuAsento()
+        {
+            if (kupuJuuri == null || overlay == null) return;
+            // Itsetarkistus lukee tekstuurin ylimmän rivin taivaana: kupu piiloon siihen asti (ylös katsottaessa se peittäisi rivin).
+            bool nayta = tarkistettu || pehmeaEiToimi || rt == null;
+            if (kupuJuuri.gameObject.activeSelf != nayta) kupuJuuri.gameObject.SetActive(nayta);
+            var q = Quaternion.Inverse(overlay.transform.rotation);
+            kupuJuuri.localRotation = q;
+            kupuJuuri.localPosition = q * (Vector3.down * SilmaM);
         }
 
         // KÖYDET VERLET-KETJUNA (Linssiseppä 8.10., pallo Unreal-tasolle kohta 5): jokainen köysiverkko taipuu Ydin VerletKoysin mukaan
@@ -363,7 +419,7 @@ namespace Matkakirja.Natiivi
             }
         }
 
-        void Osa(Transform v, GlbOsa osa, System.Collections.Generic.Dictionary<int, Texture2D> tekstuurit)
+        void Osa(Transform v, GlbOsa osa, System.Collections.Generic.Dictionary<int, Texture2D> tekstuurit, GlbMalli malli)
         {
             int n = (osa.Paikat?.Length ?? 0) / 3;
             if (n == 0) return;
@@ -383,6 +439,11 @@ namespace Matkakirja.Natiivi
             go.AddComponent<MeshFilter>().sharedMesh = mesh;
             var r = go.AddComponent<MeshRenderer>(); r.shadowCastingMode = ShadowCastingMode.Off; r.receiveShadows = false;
             var m = Materiaali(Shader.Find("Matkakirja/Linssit/PalloKori"), Color.white, 3, new Vector4(1, 1, 0, 0));
+            // Kupu (8.10.): kaksipuolinen kangas ja nauhat (Cull Off, takapinnan normaali käännetään varjostimessa), auringon läpikuulto.
+            if (osa.KaksiPuolinen) m.SetFloat("_Cull", (float)CullMode.Off);
+            var pinta = osa.Pinta ?? "";
+            if (pinta.Contains("kangas")) m.SetFloat("_Lapikuulto", KangasLapikuulto);
+            else if (pinta.Contains("nauha")) m.SetFloat("_Lapikuulto", KangasLapikuulto * 0.4f);
             if (osa.Kuva >= 0 && osa.Kuva < malli.Kuvat.Count && malli.Kuvat[osa.Kuva] != null)
             {
                 if (!tekstuurit.TryGetValue(osa.Kuva, out var t))
@@ -411,7 +472,9 @@ namespace Matkakirja.Natiivi
             r.sharedMaterial = m;
         }
 
-        const int LinAvain = 100000;   // lineaaristen (normaali, ORM) tekstuurien avaimet samassa välimuistissa
+        const int LinAvain = 100000;
+        /// <summary>Kuvun kankaan läpikuulto (auringon valo kankaan takaa, osuus suorasta valosta).</summary>
+        const float KangasLapikuulto = 0.55f;   // lineaaristen (normaali, ORM) tekstuurien avaimet samassa välimuistissa
 
         void Laatikko(Transform v, Material m, Vector3 p, Vector3 koko)
         {
@@ -506,7 +569,7 @@ namespace Matkakirja.Natiivi
             overlay.targetTexture = null;
             overlay.clearFlags = CameraClearFlags.Depth;
             overlay.cullingMask = 1 << Kerros;
-            overlay.nearClipPlane = 0.05f; overlay.farClipPlane = 20f;
+            overlay.nearClipPlane = 0.05f; overlay.farClipPlane = KaukoM;
             overlay.GetUniversalAdditionalCameraData().renderType = CameraRenderType.Overlay;
             var pd = kamera.GetUniversalAdditionalCameraData();
             if (pd != null && kooste != null) pd.cameraStack.Remove(kooste);
@@ -604,14 +667,21 @@ namespace Matkakirja.Natiivi
         // korin reunaan ylhäältä (_KoriPoltin) ja liekkikuva hehkuineen kuvan yläreunaan (PalloLiekki).
         readonly Poltin poltin = new Poltin();
         public Poltin Poltin => poltin;
-        static readonly int IdPoltin = Shader.PropertyToID("_KoriPoltin"), IdVoima = Shader.PropertyToID("_Voima");
+        static readonly int IdPoltin = Shader.PropertyToID("_KoriPoltin"), IdPoltinP = Shader.PropertyToID("_KoriPoltinP"), IdVoima = Shader.PropertyToID("_Voima");
         public const float PoltinValo = 1.6f;
-        GameObject liekki; Material liekkiMat;
+        GameObject liekki, kupuLiekki; Material liekkiMat;
         void PaivitaPoltin(float dt, float pystyNopeus)
         {
             poltin.Paivita(dt, pystyNopeus);
             float l = (float)poltin.Liekki;
             Shader.SetGlobalVector(IdPoltin, new Vector4(1f, 0.62f, 0.3f, 0f) * (l * PoltinValo));
+            // Pistevalo polttimista, kun kupu on rakennettu (näkymäavaruus = korin kameran; PalloKori.shader _KoriPoltinP).
+            if (poltinPiste != null && overlay != null)
+            {
+                var pv = overlay.worldToCameraMatrix.MultiplyPoint(poltinPiste.position);
+                Shader.SetGlobalVector(IdPoltinP, new Vector4(pv.x, pv.y, pv.z, 1f));
+            }
+            else Shader.SetGlobalVector(IdPoltinP, Vector4.zero);
             if (liekki == null)
             {
                 var sh = Shader.Find("Matkakirja/Linssit/PalloLiekki");
@@ -623,6 +693,7 @@ namespace Matkakirja.Natiivi
             }
             bool nakyy = l > 0.01f;
             if (liekki.activeSelf != nakyy) liekki.SetActive(nakyy);
+            if (kupuLiekki != null && kupuLiekki.activeSelf != nakyy) kupuLiekki.SetActive(nakyy);
             if (!nakyy) return;
             // Liekin juuri kuvan yläreunassa keskellä, kieli nousee kuvan ulkopuolelle (kamera katsoo eteen, poltin on yläpuolella).
             const float z = 1.2f;
@@ -631,6 +702,23 @@ namespace Matkakirja.Natiivi
             liekki.transform.localRotation = Quaternion.identity;
             liekki.transform.localScale = new Vector3(korkeus * 1.3f, korkeus, 1f);
             liekkiMat.SetFloat(IdVoima, l);
+            // Kupu: liekki polttimien kohdalla (näkyy ylös katsottaessa), kuvatasoon päin; korkeus ~1,8 m.
+            if (poltinPiste != null)
+            {
+                if (kupuLiekki == null)
+                {
+                    kupuLiekki = GameObject.CreatePrimitive(PrimitiveType.Quad); Object.Destroy(kupuLiekki.GetComponent<Collider>());
+                    kupuLiekki.name = "polttimen liekki (kupu)"; kupuLiekki.layer = Kerros; kupuLiekki.transform.SetParent(poltinPiste, false);
+                    var r = kupuLiekki.GetComponent<MeshRenderer>(); r.shadowCastingMode = ShadowCastingMode.Off; r.receiveShadows = false;
+                    r.sharedMaterial = liekkiMat;
+                }
+                const float LiekkiM = 1.8f;
+                var kohti = overlay.transform.position - poltinPiste.position;
+                var ylos = Vector3.ProjectOnPlane(Vector3.up, kohti);
+                if (ylos.sqrMagnitude < 1e-6f) ylos = Vector3.ProjectOnPlane(overlay.transform.up, kohti);
+                kupuLiekki.transform.SetPositionAndRotation(poltinPiste.position + Vector3.up * (LiekkiM * 0.4f), Quaternion.LookRotation(-kohti, ylos));
+                kupuLiekki.transform.localScale = new Vector3(LiekkiM * 0.7f, LiekkiM, 1f);
+            }
         }
 
         // LÄMMÖN VÄREILY (kohta 3): kaupunkikameran värikopio vain liekin aikana (Natiiviseppä 8.10.: requiresColorOption On, muuten
@@ -660,6 +748,7 @@ namespace Matkakirja.Natiivi
             if (!Mathf.Approximately(fov, perus.fieldOfView) || !Mathf.Approximately(aspect, perus.aspect))
             { fov = perus.fieldOfView; aspect = perus.aspect; Rakenna(); }
             SovitaMalli();
+            KupuAsento();
             AsetaValo();
             float dt = Mathf.Max(Time.unscaledDeltaTime, 1e-3f);
             Vector3 p = perus.transform.position;
