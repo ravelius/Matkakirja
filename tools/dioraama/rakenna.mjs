@@ -466,6 +466,9 @@ export function lisaaBlender(rakennusJson, blender) {
   const atlas = (id, v) => ({
     tiedosto: B(`valot/${id}${v}.jpg`), puoli: B(`valot/${id}${v}-2k.jpg`),
     astc: B(`valot/${id}${v}-4x4.astcm`), astcPuoli: B(`valot/${id}${v}-2k-4x4.astcm`),
+    // Huippu- ja Täysi-taso (8.10.2026, omistaja: isot atlakset; Natiiviseppä valitsee tason budjetin mukaan):
+    // 8192² samalle UV1:lle, ASTC 6×6 mipeineen. Vain jos viety; muuten natiivi käyttää astc-kenttää.
+    ...(on.has(`valot/${id}${v}-8k-6x6.astcm`) ? { astcIso: B(`valot/${id}${v}-8k-6x6.astcm`), iso: B(`valot/${id}${v}-8k.jpg`) } : {}),
   });
   // Äänitilat (Linnanrakentaja 30.9., Siirtosepän kuittaus): yleisnäkymän taustaäänet soivat massa-tilasta
   // (natiivin Aanimaisema.MassaTilaId), joten kohdistamaton tila, jolla on ääniä mutta ei leivottua glb:tä, jää

@@ -461,6 +461,35 @@ if '--leivo' in argv:
     # 2k tallennetusta 4k-kuvasta: kuva.copy() leivotusta float-puskurista oli musta (29.9. korjaus).
     k2 = bpy.data.images.load(os.path.join(ULOS, 'valot', f'{TILA}.jpg')); k2.scale(RESO // 2, RESO // 2)
     k2.filepath_raw = os.path.join(ULOS, 'valot', f'{TILA}-2k.jpg'); k2.file_format = 'JPEG'; k2.save(quality=90)
+    # --iso N (8.10.2026, omistaja: Huippu- ja Täysi-tasot isoilla atlaksilla; Linnanrakentaja): N²-atlas samalle UV1:lle ilman
+    # N²-kokoista Cycles-valoleivontaa. Väri (DIFFUSE COLOR, 4 näytettä) leivotaan sekä N:llä että RESO:lla, valo = COMBINED / väri
+    # RESO:lla (valo vaihtelee pehmeästi), ja iso atlas = väri_N × valo skaalattuna N:ään. Mustissa kohdissa (väri < 0,02:
+    # aukot, hiillos) käytetään COMBINED:ia skaalattuna. Tallennus kuten pää-atlas (näyttömuunnos mukaan): valot/<tila>-<N>.jpg.
+    ISO = int(arg('--iso', '0'))
+    if ISO:
+        import numpy as np
+        def vari_leivonta(reso):
+            im = bpy.data.images.new(f'{TILA}_vari{reso}', reso, reso, float_buffer=True)
+            for m in kaytetyt: m.node_tree.nodes.active.image = im
+            sc.cycles.samples = 4; b = sc.render.bake; b.use_pass_direct = False; b.use_pass_indirect = False; b.use_pass_color = True
+            b.margin = max(6, reso // 340); bpy.ops.object.bake(type='DIFFUSE')
+            a = np.empty(reso * reso * 4, np.float32); im.pixels.foreach_get(a); return a.reshape(reso, reso, 4)[..., :3]
+        yhd = np.empty(RESO * RESO * 4, np.float32); kuva.pixels.foreach_get(yhd); yhd = yhd.reshape(RESO, RESO, 4)[..., :3]
+        t1 = __import__('time').time()
+        v_lo = vari_leivonta(RESO); v_hi = vari_leivonta(ISO)
+        k_ = ISO // RESO
+        valo = np.where(v_lo > 0.02, yhd / np.maximum(v_lo, 0.02), 0.0)
+        def ylos(a):   # bilineaarinen skaalaus k_-kertaiseksi (pikselikeskukset kohdakkain)
+            s = (np.arange(ISO) + 0.5) / k_ - 0.5; i0 = np.clip(np.floor(s).astype(int), 0, RESO - 1); i1 = np.clip(i0 + 1, 0, RESO - 1)
+            w = np.clip(s - np.floor(s), 0, 1).astype(np.float32)
+            a = a[i0] * (1 - w)[:, None, None] + a[i1] * w[:, None, None]
+            return a[:, i0] * (1 - w)[None, :, None] + a[:, i1] * w[None, :, None]
+        valo_hi = ylos(valo); yhd_hi = ylos(yhd)
+        tulos = np.where(v_hi > 0.02, v_hi * valo_hi, yhd_hi)
+        iso = bpy.data.images.new(f'{TILA}_iso', ISO, ISO, float_buffer=True)
+        iso.pixels.foreach_set(np.concatenate([tulos, np.ones((ISO, ISO, 1), np.float32)], axis=2).ravel())
+        iso.save_render(os.path.join(ULOS, 'valot', f'{TILA}-{ISO}.jpg'), scene=sc)
+        print('LEIVO: iso atlas', ISO, round(__import__('time').time() - t1, 1), 's')
     # Vientiä varten: pinnan alkuperäinen nimi takaisin (ei kuvatekstuureja glb:hen), UV "valo" = TEXCOORD_1.
     for m in kaytetyt:
         m.name = m.name.replace('_pbr', '')
