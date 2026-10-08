@@ -232,12 +232,16 @@ test('sana-ajat (LS1 7.10.): aani_ajat vain kun R2:ssa on <sha>.ajat.json; GET p
   assert.equal('aani_ajat' in d2, false);
 });
 
-test('yksityiskohdat_polut: Rooma v5, Lontoo v2, Kööpenhamina v3 (Sisältökirjuri 8.10.)', async () => {
+test('yksityiskohdat_polut: 6 äänellistä + äänettömät erät 1–2 (Sisältökirjuri 8.10.)', async () => {
   const { OPAS_AINEISTOT } = await import('../tools/pollo/aineistot.js');
   assert.deepEqual(OPAS_AINEISTOT.yksityiskohdat_polut, { pariisi: 'esittely/pariisi-v2/pariisi-yksityiskohdat.json',
     praha: 'esittely/praha-v1/praha-yksityiskohdat.json', wien: 'esittely/wien-v1/wien-yksityiskohdat.json',
     rooma: 'esittely/rooma-v5/rooma-yksityiskohdat.json', lontoo: 'esittely/lontoo-v2/lontoo-yksityiskohdat.json',
-    koopenhamina: 'esittely/koopenhamina-v3/koopenhamina-yksityiskohdat.json' });
+    koopenhamina: 'esittely/koopenhamina-v3/koopenhamina-yksityiskohdat.json',
+    venetsia: 'esittely/venetsia-v1/venetsia-yksityiskohdat.json', barcelona: 'esittely/barcelona-v1/barcelona-yksityiskohdat.json',
+    berliini: 'esittely/berliini-v2/berliini-yksityiskohdat.json', amsterdam: 'esittely/amsterdam-v1/amsterdam-yksityiskohdat.json',
+    madrid: 'esittely/madrid-v1/madrid-yksityiskohdat.json', ateena: 'esittely/ateena-v1/ateena-yksityiskohdat.json',
+    firenze: 'esittely/firenze-v1/firenze-yksityiskohdat.json' });
 });
 
 test('äänetön esittely (omistaja 7.10. 18.2x): ei generointia, ei aani-, aani_pcm- eikä kesto_s-kenttiä; R2:n ääni soi, jos on', async () => {
