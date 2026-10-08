@@ -1,3 +1,16 @@
+# TILANNE 8.10. klo 05.4x
+
+- **TALVI_P (lumitodennäköisyys) toteutettu** `kausimosaiikki.mjs`:ään lipun TALVI_P=1 taakse. Kopiot: `-talvip-20261008.mjs` (näyte 1) ja `-talvip2-20261008.mjs` (näyte 2).
+  Näyte 1 (Puola–Ukraina–Karpaatit 3 × 3, x35–37 × rivit 20–22, 05.33): lumiraja on luonnollinen, mutta muutama ruudun muotoinen läikkä jää, koska p laskettiin 12 näkymästä.
+  Kuva `kuvapari-talvip-nayte-20261008.jpg`, ja PT:lle on raportoitu.
+- **AJOSSA: näyte 2** (`kaudet/aja-talvip-nayte2.sh`, PGID 92429, 05.34 alkaen, noin 1,5 h) → `s2-eurooppa-talvip-nayte2/`.
+  p luetaan SCL-kaistasta kaikista talvikuvista (≤ 32 per ruutu), ja värit tulevat 12 näkymästä.
+  Valmistuttua: kuvapari (talvi2e | näyte 1 | näyte 2) ja yksi rivi PT:lle.
+  Koko ajo vasta PT:n kuittauksen jälkeen, junien väliin ja Natiivisepän kanssa sovittuna: `TALVI2=1 TALVI_P=1 TALVI_ITA=1 KAUSI=talvi ULOS=s2-eurooppa-talvi3`, kaikki 169 lohkoa, noin 10 h.
+  Talvella ei rengasta. Paketti: `kokoa-kausi.py talvi v1 <p> "<talvi3/laatat>"`.
+
+---
+
 # TILANNE 8.10. klo 04.5x
 
 **TALVI EI VIENTIIN (PT 04.4x).** Talvi2e (03.58) korjasi Itä-Euroopan ruutukuvion ja Mezeninlahden, mutta lumirajalla on MGRS-portaikko
