@@ -83,9 +83,12 @@ namespace Matkakirja.Natiivi
         {
             var s = Aktiivinen; if (s == null || !s.aanet.TryGetValue(tunnus, out var a) || a.Klippi == null) return;
             var l = SeikkailuKuulija.Lahde("Tehoste:" + tunnus, 2f, 25f);
-            SeikkailuKuulija.Aseta(l, paikka); l.clip = a.Klippi; l.volume = voimakkuus; l.pitch = savel; l.Play();
+            SeikkailuKuulija.Aseta(l, paikka); l.clip = a.Klippi; l.volume = voimakkuus * MikserinTaso(tunnus); l.pitch = savel; l.Play();
             Destroy(l.gameObject, a.Klippi.length / Mathf.Max(0.1f, savel) + 0.2f);
         }
+
+        /// <summary>☰-mikseri (PT 8.10.): sääääni (tuuli, sade …) Sää-säätimellä, muut tehosteet Tehosteet-säätimellä.</summary>
+        public static float MikserinTaso(string tunnus) => Asetukset.Taso(Matkakirja.Linssit.Seikkailu.AaniLuokka.OnkoSaa(tunnus) ? Voima.Saa : Voima.Tehosteet);
 
         /// <summary>Ladattu klippi tunnuksella tai null (pelaajan askeleet valitsevat pinnan äänitteen).</summary>
         public static AudioClip Klippi(string tunnus) => tunnus != null && Aktiivinen != null && Aktiivinen.aanet.TryGetValue(tunnus, out var a) ? a.Klippi : null;
@@ -99,7 +102,7 @@ namespace Matkakirja.Natiivi
                 if (!paalla || !s.aanet.TryGetValue(tunnus, out var a) || a.Klippi == null) return;
                 l = SeikkailuKuulija.Lahde("Silmukka:" + tunnus, 2f, 25f); l.clip = a.Klippi; l.loop = true; s.silmukat[tunnus] = l;
             }
-            SeikkailuKuulija.Aseta(l, paikka); l.volume = voimakkuus; l.pitch = savel;
+            SeikkailuKuulija.Aseta(l, paikka); l.volume = voimakkuus * MikserinTaso(tunnus); l.pitch = savel;
             if (paalla && !l.isPlaying) l.Play(); else if (!paalla && l.isPlaying) l.Stop();
         }
 

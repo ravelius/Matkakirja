@@ -365,7 +365,7 @@ namespace Matkakirja.Natiivi
                 {
                     SeikkailuKuulija.Aseta(aa, ag.transform.position + Vector3.up * 0.1f);
                     if (aa.clip == null && AskelKlippi != null) aa.clip = AskelKlippi;
-                    if (v.Kavelee && aa.clip != null) { aa.pitch = Mathf.Clamp(0.85f + 0.25f * v2, 0.85f, 1.25f); if (!aa.isPlaying) aa.Play(); }
+                    if (v.Kavelee && aa.clip != null) { aa.pitch = Mathf.Clamp(0.85f + 0.25f * v2, 0.85f, 1.25f); aa.volume = 0.9f * Asetukset.Taso(Voima.Tehosteet); if (!aa.isPlaying) aa.Play(); }
                     else if (aa.isPlaying) aa.Stop();
                 }
                 // Kävelytahti nopeuden mukaan (silmukka on mitoitettu sykliMs:iin), ei liukuvia jalkoja.
@@ -442,7 +442,7 @@ namespace Matkakirja.Natiivi
             bool liikkuu = p.Tila.Vauhti > 0.3 && !p.Eleessa && !p.Otteessa && klippi != null;
             if (!liikkuu) { if (omatAskeleet.isPlaying) omatAskeleet.Stop(); return; }
             if (omatAskeleet.clip != klippi) { omatAskeleet.clip = klippi; omatAskeleet.Play(); }
-            omatAskeleet.volume = voima; omatAskeleet.pitch = Mathf.Clamp(0.8f + 0.2f * (float)p.Tila.Vauhti, 0.8f, 1.45f);
+            omatAskeleet.volume = voima * Asetukset.Taso(Voima.Tehosteet); omatAskeleet.pitch = Mathf.Clamp(0.8f + 0.2f * (float)p.Tila.Vauhti, 0.8f, 1.45f);
             if (!omatAskeleet.isPlaying) omatAskeleet.Play();
         }
 

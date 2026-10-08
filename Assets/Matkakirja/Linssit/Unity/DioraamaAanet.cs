@@ -43,6 +43,17 @@ namespace Matkakirja.Natiivi
         public const float PuheTaso = 0.708f;
         /// <summary>Hahmojen repliikit ja kuunnelman rivit ☰-mikserin "Hahmojen repliikit" -tasolla (Natiivi-UI 8.10., Voima.Repliikit).</summary>
         static float RepliikkiTaso => Asetukset.Taso(Voima.Repliikit);
+        // ☰-mikseri (PT 8.10. 22.17): silmukat soivat Aanisoittimen poolissa, joka kertoo jo Tausta-tasolla (TaustanKerroin), joten
+        // sääsilmukat (AaniLuokka.OnkoSaa: tuuli, sade …) saavat tässä lisäksi Sää-tason; omat kertaäänet saavat Tehosteet-tason.
+        static int mikseriRuutu = -1; static float mSaa = 1f, mTehosteet = 1f;
+        static void LueMikseri()
+        {
+            if (Time.frameCount == mikseriRuutu) return;
+            mikseriRuutu = Time.frameCount;
+            mSaa = Asetukset.Taso(Voima.Saa); mTehosteet = Asetukset.Taso(Voima.Tehosteet);
+        }
+        static float MaisemaTaso(string aaniId) { LueMikseri(); return Matkakirja.Linssit.Seikkailu.AaniLuokka.OnkoSaa(aaniId) ? mSaa : 1f; }
+        static float TehosteTaso { get { LueMikseri(); return mTehosteet; } }
 
         // --- MIKSERIKOUKUT (Pelikoodarin AaniMikseri, omistajan kehittäjämikseri 30.9.2026) ------------------------------------
         // AaniMikseri omistaa säätöjen tilan ja tallennuksen ja kirjoittaa kertoimet näihin; tämä luokka vain soittaa.
@@ -253,7 +264,7 @@ namespace Matkakirja.Natiivi
                         && (Ryhma(ap.AaniId, true) != "taustat" || ap.AaniId.EndsWith("-ambienssi", StringComparison.Ordinal))) continue;
                     double pankinVoimakkuus = rak.Aanet.TryGetValue(ap.AaniId, out var aani) ? aani.Voimakkuus : 1;
                     double taso01Raw = aanimaisemaPaalla ? tavoite * ap.Voimakkuus * pankinVoimakkuus
-                        * Kerroin(HuoneKerroin, tila.Id) * Kerroin(TaustaKerroin, ap.AaniId) * RyhmanKerroin(Ryhma(ap.AaniId, true)) : 0;
+                        * Kerroin(HuoneKerroin, tila.Id) * Kerroin(TaustaKerroin, ap.AaniId) * RyhmanKerroin(Ryhma(ap.AaniId, true)) * MaisemaTaso(ap.AaniId) : 0;
                     ehdokkaat.Add((tila.Id, ap.AaniId, taso01Raw));
                 }
                 if (aanimaisemaPaalla)
@@ -291,7 +302,7 @@ namespace Matkakirja.Natiivi
             // Kertaäänten ryhmät: sama väistö ja liuku (0,4 s) kuin silmukoilla, kerrottuna ryhmän mikserikertoimella.
             foreach (var kv in kertaLahteet)
                 if (kv.Value != null)
-                    kv.Value.volume = Mathf.MoveTowards(kv.Value.volume, (float)duck * RyhmanKerroin(kv.Key), Time.unscaledDeltaTime / 0.4f);
+                    kv.Value.volume = Mathf.MoveTowards(kv.Value.volume, (float)duck * RyhmanKerroin(kv.Key) * TehosteTaso, Time.unscaledDeltaTime / 0.4f);
             soivatTaustat.Clear();
             foreach (var e in ehdokkaat) if (sallitut.Contains((e.Tila, e.Aani))) soivatTaustat.Add((e.Tila, e.Aani, (float)(e.Taso * duck)));
             foreach (var e in ehdokkaat)
