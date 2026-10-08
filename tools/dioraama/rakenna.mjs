@@ -460,6 +460,9 @@ export function lisaaBlender(rakennusJson, blender) {
     const es = [...on.keys()].filter((p) => /^kavely\/esine-[^/]+\.glb$/.test(p)).sort();
     if (es.length) rakennusJson.kavely.esineet = Object.fromEntries(es.map((p) => [p.slice('kavely/esine-'.length, -4), B(p)]));
   }
+  // Toistuvat detaljimateriaalit (8.10.2026, Thief-vertailun #1; Linnanrakentaja + Siirtoseppä): materiaalit/detaljit.json
+  // (pintanimi → albedo-overlay, normaali, karheus, astc, m, voima; polut paketin juuresta). Vain jos viety.
+  if (on.has('materiaalit/detaljit.json')) rakennusJson.detaljit = B('materiaalit/detaljit.json');
   const atlas = (id, v) => ({
     tiedosto: B(`valot/${id}${v}.jpg`), puoli: B(`valot/${id}${v}-2k.jpg`),
     astc: B(`valot/${id}${v}-4x4.astcm`), astcPuoli: B(`valot/${id}${v}-2k-4x4.astcm`),

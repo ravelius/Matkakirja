@@ -98,6 +98,8 @@ for f in "$LAHDE"/kavely/valot/*.(jpg|astcm)(N); do lisaa "kavely/valot/${f:t}" 
 for f in "$LAHDE"/hahmot/*.glb(N); do lisaa "hahmot/${f:t}" "hahmot/${f:t}"; done
 # Hahmojen tekstuurit ASTC 6×6 -mipketjuina (8.10.2026, Siirtoseppä: RGBA32 66 Mt): hahmot/<glb>-<kuvaindeksi>-6x6.astcm.
 for f in "$LAHDE"/hahmot/*.astcm(N); do lisaa "hahmot/${f:t}" "hahmot/${f:t}"; done
+# Toistuvat detaljimateriaalit (8.10.2026, Thief-vertailun #1): materiaalit/detaljit.json + <pinta>-{albedo,normaali,karheus}{.jpg,-6x6.astcm}.
+for f in "$LAHDE"/materiaalit/*.(json|jpg|astcm)(N); do lisaa "materiaalit/${f:t}" "materiaalit/${f:t}"; done
 for g in "$LAHDE"/tilat/*.glb; do
   id=${g:t:r}; lisaa "tilat/$id.glb" "tilat/$id.glb"
   for v in "" "-hamara"; do

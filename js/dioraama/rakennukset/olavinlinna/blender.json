@@ -1,7 +1,7 @@
 {
   "rakennus": "olavinlinna",
-  "hash": "f0eefe781a6f2399",
-  "kansio": "dioraama/olavinlinna/blender/f0eefe781a6f2399/",
+  "hash": "aa4f945e438f1134",
+  "kansio": "dioraama/olavinlinna/blender/aa4f945e438f1134/",
   "tiedostot": [
     {
       "polku": "hahmot/apulainen-1500-0-6x6.astcm",
@@ -1130,8 +1130,8 @@
     },
     {
       "polku": "kavely/osat.json",
-      "sha256": "0120c7f600f953571c969dc34a89ab093a23d22b0bce5db0353c08d604699bd6",
-      "tavuja": 28460
+      "sha256": "7b475dfbff8085190d78649861a59011bc008e10b50e08f22863b25cfccdc9be",
+      "tavuja": 28716
     },
     {
       "polku": "kavely/palatsi-kavely.glb",
@@ -1472,6 +1472,41 @@
       "polku": "kirjasto/materiaali/paanukatto/paanukatto_nor_gl.jpg",
       "sha256": "2e2dbd57a8a1a09936b2a92373408c7658033966ffee25eddfe98b5988491da3",
       "tavuja": 1750511
+    },
+    {
+      "polku": "materiaalit/detaljit.json",
+      "sha256": "88429b85aaaed3e54d3cc8fc5bc23a77ae60911b2e3c833da755553846ce9459",
+      "tavuja": 809
+    },
+    {
+      "polku": "materiaalit/kivi-albedo-6x6.astcm",
+      "sha256": "3b334ebc2bb9fdf9db8883980bedc04a9adb60274d8df6178deda9728e791c74",
+      "tavuja": 626304
+    },
+    {
+      "polku": "materiaalit/kivi-albedo.jpg",
+      "sha256": "11d0ecbf2434de7f459f035ee01124b5c54d7d22148cc204fe255f380d3743a7",
+      "tavuja": 332318
+    },
+    {
+      "polku": "materiaalit/kivi-karheus-6x6.astcm",
+      "sha256": "2fe8a61dff146bb2d19a96cd2ca4575cc89b6e473891fbd7a330d0eff53c3e6d",
+      "tavuja": 626304
+    },
+    {
+      "polku": "materiaalit/kivi-karheus.jpg",
+      "sha256": "c735c217989e59997f1d127aa7c9330fdfd3bdc9bc0f5d21569e8f31540b2c46",
+      "tavuja": 61213
+    },
+    {
+      "polku": "materiaalit/kivi-normaali-6x6.astcm",
+      "sha256": "8297e3cfc6f94fa994eec98be1ce964679507eef141e1b1482bee9c94da736ea",
+      "tavuja": 626304
+    },
+    {
+      "polku": "materiaalit/kivi-normaali.jpg",
+      "sha256": "affe61b5fe2a04f699ea59e2e8f1772ba77f95f2f423ca044e2723ea42cb395d",
+      "tavuja": 514866
     },
     {
       "polku": "tilat/fatabuuri.glb",
