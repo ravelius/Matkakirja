@@ -35,6 +35,18 @@ kappeli). Lue tämä osio ja alin TILA-loki (päivän loppu), sitten CLAUDE.md j
   Jos aika loppuu, pois tässä järjestyksessä: K1, renki, portinvartija, torkkuva vartija (EI varoitussääntö, tyrmä, kappeli, tallennus).
 - Kädet v44l on jo kytketty (2b88ec9a).
 
+## TILA 8.10. 07.50 — JUNA 164 KUITATTU: historia-valot-juna @ da5fdf62a
+
+- PT kuittasi da5fdf62a (= b91278bf + historia-valot 7aab3f25 + master 062bb439): 897/897, unity-tarkistus 0; merge-pyyntö Natiivisepälle lähetetty.
+  Mukana LS2:n testit e4faa414 (koko pala 1–20 Thief-ajurilla 0 kiinni) ja LS2:n löydökset 1–5 korjattuna (odotus_s, alkukatse 180 − kierto_y,
+  pinnan kierto, lyhty vain kantajasta, tarjotin ja torkkuja). Pois vain K1. aanet-fp-v1 ämpärissä (Pelikoodari, 5 tunnusta, 200).
+- M-OSA haarassa siirtoseppa/historia-m @ 6ea1203a (historia-valot mukana): naamio (Ydin + Pue), avainrengas laukkuun, lukitut ovet, ote-kiipeily
+  takakuvassa (Kiipeily-ydin, puuskat, lyhty, Foggin takakuvahahmo), köysi sakaraan, komeron tiilet + arkun kilpilukko (SeikkailuKomero),
+  Kurkistus. EI simussa. Seuraavaksi huone 10 (kello, köysilasku Kiipeily-ytimellä, 25 s, K4/uinti/K5, köyden katkaisu), huone 6:n vouti/hoitaja-kiista
+  (repliikit vain luvalla). LR tekee Foggin ote_idle/ote_siirto/ote_lipsahdus/koysilasku/uinti/ryominta; köysikieppi v44t peilissä 9553a74d.
+  Vesiportin bastionin B-muutos junan 164 jälkeen yhdessä LR:n kanssa (reitti + merkit).
+- LS2 tekee kappelin vaiheille 1–11 Ydin-luokan + jumitestin (historia-valot 7aab3f25 päälle).
+
 ## TILA 8.10. (uusi tili, Opus 5.5 high) — JUNA 164 = OLAVINLINNAN 1. PERSOONAN PALA
 
 - Kehityskärki siirtoseppa/historia-valot @ b4c7b451 (wt/proto-siirtoseppa-face): + e01175df kannetut valot (portinvartijan lyhty 4 m,
