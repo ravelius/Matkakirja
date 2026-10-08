@@ -9,6 +9,8 @@ const avain = process.env.FREESOUND_API_KEY;
 if (!avain) throw new Error('FREESOUND_API_KEY puuttuu');
 mkdirSync(kansio, { recursive: true });
 const kaikki = [];
+// Vahti: jumiutunut lataus ei saa kaataa koko ajoa (8.10.: esikuuntelun lataus jäi roikkumaan); JSON kirjoitetaan joka äänen jälkeen.
+setTimeout(() => { console.log('vahti: aika loppui, lopetetaan'); process.exit(0); }, 6 * 60e3).unref();
 for (const h of haut) {
   const [tunnus, sanat, min = '1', max = '60'] = h.split('|');
   const url = `https://freesound.org/apiv2/search/text/?query=${encodeURIComponent(sanat)}&filter=${encodeURIComponent(`license:"Creative Commons 0" duration:[${min} TO ${max}]`)}`
@@ -24,6 +26,7 @@ for (const h of haut) {
     kaikki.push({ tiedosto: nimi, tunnus, id: s.id, nimi: s.name, tekija: s.username, lisenssi: s.license, kesto_s: s.duration, arvio: s.avg_rating,
       arvioita: s.num_ratings, url: s.url, tagit: s.tags?.slice(0, 12), kuvaus: String(s.description ?? '').slice(0, 300) });
     console.log(tunnus, s.id, s.name, s.username, s.duration, s.license);
+    writeFileSync(join(kansio, 'freesound.json'), JSON.stringify(kaikki, null, 1));
   }
 }
 writeFileSync(join(kansio, 'freesound.json'), JSON.stringify(kaikki, null, 1));
