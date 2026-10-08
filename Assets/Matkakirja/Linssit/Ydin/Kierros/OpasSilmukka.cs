@@ -16,6 +16,9 @@ namespace Matkakirja.Linssit.Kierros
         public string Id, Nimi, Alarivi, Teksti, Aani;
         /// <summary>PCM-virta (Pöllö, juna 145): raaka s16le mono AaniTaajuus Hz, chunked; ensimmäiset tavut ~0,3 s. null = vain mp3.</summary>
         public string AaniPcm;
+        /// <summary>Sanakohtaiset ajat (Pelikoodari 7.10.: "aani_ajat" → {"sanat":[[merkki, alku, loppu],…]}, merkki näyttötekstiin);
+        /// null = ei kohdistusta (yksityiskohtakuvat varapolulla).</summary>
+        public string AaniAjat;
         /// <summary>Kohteen luokka workerilta (valinnainen, esim. katu, kanava, aukio, torni, kirkko, linnoitus, puisto); OpasKuvaus.Kehysta käyttää.</summary>
         public string Luokka;
         /// <summary>Kohteen korostus maassa (Pelikoodari #4018+, juna 145; valinnainen): piste, alue tai reitti.</summary>
@@ -54,13 +57,13 @@ namespace Matkakirja.Linssit.Kierros
             {
                 var vaihtoehdot = new List<string>();
                 if (j.TryGetValue("vaihtoehdot", out var vo) && vo is IList<object> lista) foreach (var x in lista) if (x is string t && t.Length > 0) vaihtoehdot.Add(t);
-                return string.IsNullOrEmpty(S("teksti")) ? null : new OpasKohde { Kysymys = true, Teksti = S("teksti"), Aani = S("aani"), AaniPcm = S("aani_pcm"), Luokka = S("luokka"),
+                return string.IsNullOrEmpty(S("teksti")) ? null : new OpasKohde { Kysymys = true, Teksti = S("teksti"), Aani = S("aani"), AaniPcm = S("aani_pcm"), AaniAjat = S("aani_ajat"), Luokka = S("luokka"),
                     AaniTaajuus = (int)D("aani_taajuus", 24000), KestoS = D("kesto_s", 0), Vaihtoehdot = vaihtoehdot.ToArray() };
             }
             var k = new OpasKohde
             {
                 Id = S("id"), Nimi = S("nimi"), Alarivi = S("alarivi"), Teksti = S("teksti"), Aani = S("aani"), AaniPcm = S("aani_pcm"),
-                AaniTaajuus = (int)D("aani_taajuus", 24000),
+                AaniAjat = S("aani_ajat"), AaniTaajuus = (int)D("aani_taajuus", 24000),
                 Lat = D("lat", double.NaN), Lon = D("lon", double.NaN), KokoM = D("koko_m", 60), KorkeusM = D("korkeus_m", 0), KestoS = D("kesto_s", 0),
             };
             if (j.TryGetValue("vaihtoehdot", out var pv) && pv is IList<object> pl)
@@ -377,7 +380,7 @@ namespace Matkakirja.Linssit.Kierros
             // Sama 5 km:n yläkuva kuin avauksessa (Päätoimittaja 6.10. 00.4x: Amsterdam laskeutui matalaan viistoon kuvaan).
             double maa = MaaPisteessa?.Invoke(lat, lon) ?? double.NaN;
             AsetaKohdeKehys(new Pysahdys { Lat = lat, Lon = lon, MaaM = double.IsNaN(maa) ? 0 : maa, NostoM = 0, Suuntima = KierrosLento.Kiedo(Suunta(Asento.Lat, Asento.Lon, lat, lon)),
-                Kallistus = AvausKallistus, EtaisyysM = AvausEtaisyysOhitus ?? AvausEtaisyysM }, double.IsNaN(maa), null, 0);
+                Kallistus = AvausKallistusOhitus ?? AvausKallistus, EtaisyysM = AvausEtaisyysOhitus ?? AvausEtaisyysM }, double.IsNaN(maa), null, 0);
             Ohjaus.Nollaa();
             lahto = Asento;
             double matka = KierrosLento.EtaisyysM(lahto.Lat, lahto.Lon, lat, lon);
@@ -448,6 +451,30 @@ namespace Matkakirja.Linssit.Kierros
             SiirtoAlkaa?.Invoke(lat, lon);
         }
 
+        /// <summary>Kaupunkitilan avausnäkymässä ensimmäinen kohde näkyy kuvan alakolmanneksessa: katsepiste on näin monta
+        /// osuutta etäisyydestä kohteen takana katsesuunnassa (1,1 km / 50°, pystykenttä ~40°: kohde ~1/6 kuvan korkeudesta keskeltä alas).</summary>
+        public const double AvausKatseEteenOsuus = 0.18;
+
+        /// <summary>
+        /// Kaupunkitila (omistaja TF 162, Rooma kartan pallosta: "kohde on liian kaukana"; Päätoimittaja 22.4x: avausnäkymä
+        /// puoliväliin, ei lähikuvaa, koska avausteksti kuvaa kaupunkia ylhäältä): kun esityksen ensimmäinen kohde selviää vielä
+        /// siirtoruudun aikana, avausnäkymän kehys (etäisyys ja kallistus ennallaan, AvausEtaisyysOhitus/AvausKallistusOhitus)
+        /// katsoo kohti kohdetta niin, että se on kuvan alakolmanneksessa ja vanha kaupunki ympärillä. Kierroksen alku lentää
+        /// tästä pehmeästi kohteen kehykseen. Ruudun alla, joten ei liukua; true = kohdistettiin.
+        /// </summary>
+        public bool KohdistaAvausKohteeseen(string nimi, double lat, double lon)
+        {
+            if (!Siirtymassa || !siirtyma || kohdeKehys == null) return false;
+            double et = kohdeKehys.EtaisyysM, suunta = kohdeKehys.Suuntima * Math.PI / 180, d = AvausKatseEteenOsuus * et;
+            double kLat = lat + d * Math.Cos(suunta) / 111320.0;
+            double kLon = lon + d * Math.Sin(suunta) / (111320.0 * Math.Cos(lat * Math.PI / 180));
+            double maa = MaaPisteessa?.Invoke(kLat, kLon) ?? double.NaN;
+            AsetaKohdeKehys(new Pysahdys { Lat = kLat, Lon = kLon, MaaM = double.IsNaN(maa) ? 0 : maa, NostoM = 0, Suuntima = kohdeKehys.Suuntima,
+                Kallistus = kohdeKehys.Kallistus, EtaisyysM = et }, double.IsNaN(maa), null, 0);
+            Asento = KehysAsento(kohdeKehys, 0);
+            return true;
+        }
+
         // ---- KYSY, LIIKU, KAUPUNKIKIERROS, KESKUSTELU (omistaja 6.10. 11.57) ----
         /// <summary>Kaupunkikierros käynnissä (Liiku-listan alin rivi): kohteet jonossa, opas jatkaa itse lyhyellä kerronnalla.</summary>
         public bool KierrosKaynnissa { get; private set; }
@@ -504,7 +531,11 @@ namespace Matkakirja.Linssit.Kierros
         }
 
         /// <summary>Siirtoruudun jälkeen näkymä on auki näin kauan ennen kertojaa (omistaja 6.10. 16.5x: ~1,3 s).</summary>
-        public const double AvausTaukoS = 1.3;
+        // Päätoimittaja 7.10. 22.5x, mitattu BUILD 163 (linssi → Pariisi): latausikkuna häipyy 1,1 s siirron jälkeen
+        // (mk-astroavaus--haipyy), ja puhe alkoi 1,3 s:n tauolla vain 0,16 s sen jälkeen → tavoite ≥ 1 s näkymän auettua: 1,1 + 1,2.
+        public const double AvausTaukoS = 2.3;
+        /// <summary>Siirron jälkeinen avaustauko käynnissä (latausikkuna häipyy, puhe ei vielä ala).</summary>
+        public bool AvausTauolla => avausViive > 0;
         double avausViive;
 
         // ---- KIERROKSEN KESKEYTYS, JATKO JA LOPETUS (omistaja TF 149, Päätoimittaja 16.3x/16.4x, juna 151) ----
@@ -768,7 +799,8 @@ namespace Matkakirja.Linssit.Kierros
                 // Kysymys ei liikuta kameraa: opas kysyy, ja pelaajan valinta (chat) tulee Toive-kutsuna.
                 // Omistaja (TF 144): opas odottaa pelaajan valintaa — ei oletusvaihtoehtoa eikä esihakua (siltalause täyttää odotuksen).
                 // Omistaja TF 152 (Sydney): kysymys ei katkaise puhetta — se esitetään vasta puheen ja LoppuTaukoS:n jälkeen.
-                if (PuheSoi) { lykattyKysymys = k; return; }
+                // Omistaja TF 162 (linssi → Pariisi): "Lukija aloitti jo latausikkunassa" → kysymys odottaa myös siirtymän loppuun.
+                if (PuheSoi || Siirtymassa || avausViive > 0) { lykattyKysymys = k; return; }
                 KysyNyt(k);
                 return;
             }
@@ -779,7 +811,7 @@ namespace Matkakirja.Linssit.Kierros
         /// <summary>Kertojan puhe soi (pysähdys tai pelaajan kysymyksen vastaus): workerin kysymys odottaa sen loppuun.</summary>
         public bool PuheSoi => Vaihe == OpasVaihe.Puhuu && (!aaniLoppui || hiljaS < LoppuTaukoS)
             || Vaihe == OpasVaihe.Lentaa && puheAloitettu && !aaniLoppui;
-        /// <summary>Puheen aikana tullut workerin kysymys (esitetään puheen jälkeen; pelaajan toiminta hylkää sen).</summary>
+        /// <summary>Puheen tai siirtymän aikana tullut workerin kysymys (esitetään niiden jälkeen; pelaajan toiminta hylkää sen).</summary>
         OpasKohde lykattyKysymys;
         public bool KysymysOdottaaPuhetta => lykattyKysymys != null;
         /// <summary>Pelaajan kysymyksen vastaus soi: esihaku tehdään vasta sen jälkeen (omistaja TF 152: vastaus katkesi).</summary>
@@ -823,7 +855,9 @@ namespace Matkakirja.Linssit.Kierros
             if (virhe && VirheTauko <= 0) { virhe = false; UusiPyynto(); }
             // Vastaamaton kysymys (simu 18.39: worker kysyi saman 9 kertaa): opas valitsee itse ensimmäisen vaihtoehdon.
             if (OdottaaVastausta && aaniLoppui) kysymysAika += dt;   // odotus kestää pelaajan valintaan asti (omistaja, TF 144)
-            if (lykattyKysymys != null && !PuheSoi) { var lk = lykattyKysymys; lykattyKysymys = null; KysyNyt(lk); }
+            // Siirron jälkeen myös avaustauko (AvausTaukoS) kuten kertojalla: BUILD 163 -todistusajossa kysymys vapautui samalla
+            // ruudulla, jolla siirto päättyi, eli latausikkunan vielä näkyessä.
+            if (lykattyKysymys != null && !PuheSoi && !Siirtymassa && avausViive <= 0) { var lk = lykattyKysymys; lykattyKysymys = null; KysyNyt(lk); }
             if (esihakuPuheenJalkeen && Vaihe == OpasVaihe.Puhuu && !PuheSoi)
             {
                 esihakuPuheenJalkeen = false;
@@ -933,6 +967,8 @@ namespace Matkakirja.Linssit.Kierros
         /// <summary>Kaupunkitilan aloitus (omistaja 7.10. 12.5x, Ateena TF 159: lähizoomin laatat puuttuivat): yleiskuvan etäisyys
         /// (lyhyempi siirtymä lähikuvaan); null = AvausEtaisyysM.</summary>
         public double? AvausEtaisyysOhitus;
+        /// <summary>Kaupunkitilan avausnäkymän kallistus (Päätoimittaja 22.4x: ~50°, ei 25°:n pystykuvaa); null = AvausKallistus.</summary>
+        public double? AvausKallistusOhitus;
         /// <summary>Esityksen ensimmäinen kohde: latauskuvan ja avauksen aikana esikamera esilataa sen lähikuvan, ja siirtoruutu
         /// aukeaa vasta, kun myös ne laatat ovat valmiit (latausaste kattaa kaikki kamerat). Kierroksen alku tyhjentää.</summary>
         public (string nimi, double lat, double lon)? EsiKohde;

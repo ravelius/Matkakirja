@@ -42,5 +42,15 @@ namespace Matkakirja.Kartta.Testit
             Oleta.Tosi(KaupunkiPalloMitat.Ruutupaikka(-30f, 400f, 60f, 402f, 874f, out _, out _), "reunan yli puoliksi: näkyy");
             Oleta.Tosi(!KaupunkiPalloMitat.Ruutupaikka(float.NaN, 0f, 60f, 402f, 874f, out _, out _), "NaN");
         }
+
+        /// <summary>Omistaja TF 162: kehittäjän maailmanäkymässä (huntu pois) kaikkien maiden pallot; pelissä vain oma maa.</summary>
+        [Testi]
+        static void MaailmanakymassaKaikkiMaat()
+        {
+            Oleta.Tosi(KaupunkiPalloMitat.Nakyy("GRC", "GRC", false) && !KaupunkiPalloMitat.Nakyy("ITA", "GRC", false), "peli: vain oma maa");
+            Oleta.Tosi(!KaupunkiPalloMitat.Nakyy("ITA", null, false), "peli: ei maata → ei palloja");
+            Oleta.Tosi(KaupunkiPalloMitat.Nakyy("ITA", "GRC", true) && KaupunkiPalloMitat.Nakyy("GRC", "GRC", true), "maailmanäkymä: kaikki maat");
+            Oleta.Tosi(KaupunkiPalloMitat.Nakyy("FIN", null, true), "maailmanäkymä: myös ilman pelaajan maata");
+        }
     }
 }

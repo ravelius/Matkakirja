@@ -113,8 +113,8 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama(puheita, puhe.Count, "kertoja ei ala ennen näkymää");
             edistys = 0.97;
             for (int i = 0; i < 5; i++) s.Paivita(0.1, _ => 5);
-            Oleta.Tosi(!puhe.Contains("Colosseum"), "avaustauko: kertoja ei vielä (1,3 s)");
-            for (int i = 0; i < 15; i++) s.Paivita(0.1, _ => 5);
+            Oleta.Tosi(!puhe.Contains("Colosseum"), "avaustauko: kertoja ei vielä (2,3 s: latausikkuna häipyy 1,1 s + 1,2 s)");
+            for (int i = 0; i < 25; i++) s.Paivita(0.1, _ => 5);
             Oleta.Tosi(!s.Siirtymassa && s.Vaihe == OpasVaihe.Puhuu && s.Nykyinen?.Id == "Colosseum", "näkymä auki, kertoja alkaa");
             Oleta.Tosi(puhe.Contains("Colosseum"));
         }
@@ -204,7 +204,7 @@ namespace Matkakirja.Linssit.Testit
             maa = 290;
             s.Paivita(0.1, _ => double.NaN);
             Oleta.Tosi(s.Siirtymassa, "korjatun kehyksen laatoille hetki");
-            for (int i = 0; i < 25; i++) s.Paivita(0.1, _ => double.NaN);
+            for (int i = 0; i < 35; i++) s.Paivita(0.1, _ => double.NaN);
             Oleta.Tosi(!s.Siirtymassa && s.Vaihe == OpasVaihe.Puhuu, "näkymä auki näytteen jälkeen");
             Oleta.Tosi(s.NykyinenKehys.MaaM == 290 && s.Asento.KatseKorkeusM > 200, $"kehys oikealla maalla (katse {s.Asento.KatseKorkeusM:F0} m)");
         }
@@ -367,6 +367,54 @@ namespace Matkakirja.Linssit.Testit
             for (int i = 0; i < 15; i++) s.Paivita(0.1, _ => 5);
             Oleta.Sama(1, kysyt.Count, "kysymys puheen jälkeen");
             Oleta.Tosi(s.OdottaaVastausta && !s.KysymysOdottaaPuhetta);
+        }
+
+        [Testi] static void KysymysOdottaaSiirtymanLoppuun()
+        {
+            // Omistaja TF 162: linssi → Pariisi, workerin kysymys soi latausruudun aikana.
+            var (s, p, puhe) = Pysahdyksella();
+            double edistys = 0.2;
+            s.LatausEdistys = () => edistys;
+            int ennen = p.Count;
+            s.PakotaSiirto = true;
+            s.VaihdaPaikka(48.861, 2.351, "Pariisi");   // kaupungin valinta linssin valikosta
+            for (int i = 0; i < 6; i++) s.Paivita(0.1, _ => 5);
+            Oleta.Tosi(s.Siirtymassa && p.Count > ennen, $"siirtymä käynnissä ja pyyntö lähti ({s.Siirtymassa}, {p.Count - ennen})");
+            var kysyt = new List<string>(); s.Kysyy += k => kysyt.Add(k.Teksti);
+            s.Vastaus(p[^1].n, new OpasKohde { Kysymys = true, Teksti = "Mitä haluaisit nähdä?", Vaihtoehdot = new[] { "a", "b" } });
+            for (int i = 0; i < 30; i++) s.Paivita(0.1, _ => 5);
+            Oleta.Tosi(kysyt.Count == 0 && s.KysymysOdottaaPuhetta, $"ei kysymystä latausruudun aikana ({kysyt.Count}, {s.KysymysOdottaaPuhetta}, p {p.Count}, {s.Vaihe}, siirto {s.Siirtymassa})");
+            edistys = 1.0;
+            for (int i = 0; i < 40 && s.Siirtymassa; i++) s.Paivita(0.1, _ => 5);
+            Oleta.Tosi(!s.Siirtymassa, "siirtymä ohi");
+            Oleta.Sama(0, kysyt.Count, "ei samalla ruudulla, jolla siirto päättyi (latausikkuna vielä näkyy)");
+            for (int i = 0; i < (int)(OpasSilmukka.AvausTaukoS / 0.1) - 1; i++) s.Paivita(0.1, _ => 5);
+            Oleta.Sama(0, kysyt.Count, "avaustauko ennen kysymystä kuten kertojalla");
+            for (int i = 0; i < 400 && kysyt.Count == 0; i++) { s.Paivita(0.1, _ => 5); if (s.Vaihe == OpasVaihe.Puhuu) s.AaniLoppui(); }
+            Oleta.Sama(1, kysyt.Count, "kysymys siirtymän (ja puheen) jälkeen");
+        }
+
+        [Testi] static void KaupunkitilanAvausPuolivaliinKohtiEnsimmaistaKohdetta()
+        {
+            // Omistaja TF 162 (Rooma kartan pallosta) / Päätoimittaja 22.4x: avausnäkymä 1,1 km / 50°, katse kohti ensimmäistä
+            // kohdetta (alakolmannes); kohde tuntematon → sama kehys keskustaan.
+            var (s, p, puhe) = Pysahdyksella();
+            s.LatausEdistys = () => 0.2;
+            s.AvausEtaisyysOhitus = 1100; s.AvausKallistusOhitus = 50;
+            s.PakotaSiirto = true;
+            s.VaihdaPaikka(41.8933, 12.4829, "Rooma");
+            for (int i = 0; i < 5; i++) s.Paivita(0.1, _ => 5);
+            Oleta.Tosi(s.Siirtymassa && Math.Abs(s.Asento.EtaisyysM - 1100) < 1 && Math.Abs(s.Asento.Kallistus - 50) < 1e-6, $"keskustan kehys 1,1 km / 50° ({s.Asento})");
+            Oleta.Tosi(KierrosLento.EtaisyysM(s.Asento.Lat, s.Asento.Lon, 41.8933, 12.4829) < 5, "keskusta, kun kohde ei tiedossa");
+            Oleta.Tosi(s.KohdistaAvausKohteeseen("Colosseum", 41.8902, 12.4922), "kohdistus siirtoruudun aikana");
+            Oleta.Tosi(Math.Abs(s.Asento.EtaisyysM - 1100) < 1 && Math.Abs(s.Asento.Kallistus - 50) < 1e-6, $"etäisyys ja kallistus ennallaan ({s.Asento})");
+            double d = KierrosLento.EtaisyysM(s.Asento.Lat, s.Asento.Lon, 41.8902, 12.4922);
+            Oleta.Tosi(Math.Abs(d - OpasSilmukka.AvausKatseEteenOsuus * 1100) < 10, $"katsepiste kohteen takana ({d:F0} m)");
+            double suunta = OpasSilmukka.Suunta(41.8902, 12.4922, s.Asento.Lat, s.Asento.Lon);
+            Oleta.Tosi(Math.Abs(KierrosLento.Kiedo(suunta - s.Asento.Suuntima)) < 2, $"katsesuunnassa ({suunta:F0}° vs {s.Asento.Suuntima:F0}°)");
+            s.LatausEdistys = () => 1.0;
+            for (int i = 0; i < 60 && s.Siirtymassa; i++) s.Paivita(0.1, _ => 5);
+            Oleta.Tosi(!s.Siirtymassa && !s.KohdistaAvausKohteeseen("Pantheon", 41.8986, 12.4769), "siirron jälkeen ei kohdisteta");
         }
 
         [Testi] static void PelaajanToimintaHylkaaLykatynKysymyksen()

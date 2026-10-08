@@ -149,6 +149,7 @@ namespace Matkakirja.Natiivi
             {
                 if (esitysAlkaa) Viimeisin.silmukka.PyynnotSeis = true;   // esitys: avaus ja opastus ensin, ei workerin kaupunkikysymystä
                 Viimeisin.silmukka.AvausEtaisyysOhitus = Kaupunkitila ? KaupunkitilaAvausM : (double?)null;
+                Viimeisin.silmukka.AvausKallistusOhitus = Kaupunkitila ? KaupunkitilaAvausKallistus : (double?)null;
                 Viimeisin.silmukka.VaihdaPaikka(lat, lon, nimi.Trim());   // kamera lentää heti kaupungin yleiskuvaan (Natiivi-UI 6.10. 00.2x)
             }
             var v = Viimeisin;
@@ -251,7 +252,9 @@ namespace Matkakirja.Natiivi
                 return;
             }
             nakymaAuki = true;
-            KytkeNimilappu(true);
+            // Omistaja 7.10. 21.4x: "Notre Damen kyltti kartalla ei ole oikealla kohdalla, kannattaa ottaa pois kokonaan kun on tuo
+            // pilvi kuitenkin kohteen ympärillä" → kierroksen kohteiden nimilappu pois, korostus riittää.
+            KytkeNimilappu(false);
             istunto = Guid.NewGuid().ToString("N");
             testiIndeksi = 0;
             if (kierto != null) SyoteLukko.Esta(this);
@@ -363,12 +366,18 @@ namespace Matkakirja.Natiivi
             // Aloitusvalikko: ei kameraa eikä laattoja; silmukka etenee silti (toive tai kysymys ennen valintaa → ensimmäinen
             // lento on pakotettu siirto, joka avaa kartan SiirtoAlkaa-kutsussa suoraan kohteeseen).
             if (kaupunkiOdottaa) { silmukka.Paivita(Time.unscaledDeltaTime, MaaKorkeus, () => false); return; }
-            kori.Kayta(Kaupunkitila && nakymaAuki, kaupunki.Kamera);   // kuumailmapallon korinäkymä (kokeilu, Päätoimittaja 7.10. 09.1x)
+            // Kuumailmapallon korinäkymä (Päätoimittaja 7.10. 09.1x) koko oppaassa: omistaja TF 162 tuli linssivalikon kautta
+            // (aloitusvalikko → Pariisi, ei kaupunkitilaa) eikä nähnyt koria eikä köysiä.
+            kori.Kayta(nakymaAuki, kaupunki.Kamera);
             IlmoitaKierros();
             // Esilataus latauskuvan aikana: esityksen ensimmäinen kohde heti, kun kierroslista on haettu (omistaja 12.5x).
             if (Kaupunkitila && silmukka.PyynnotSeis && silmukka.EsiKohde == null && (kierrosKohteet ?? kohteet) is List<OpasTaky> ek && ek.Count > 0 && kohteetKaupunki == Aloituskaupunki)
-            { silmukka.EsiKohde = (ek[0].Nimi, ek[0].Lat, ek[0].Lon); o.Kirjaa($"opas: esilataus ensimmäinen kohde {ek[0].Nimi}"); }
-            if (esitysAlkaa && Kaupunkitila && !silmukka.Siirtymassa && kohteet != null && kohteet.Count > 0 && kohteetKaupunki == Aloituskaupunki)
+            {
+                silmukka.EsiKohde = (ek[0].Nimi, ek[0].Lat, ek[0].Lon); o.Kirjaa($"opas: esilataus ensimmäinen kohde {ek[0].Nimi}");
+                // Omistaja TF 162 (Rooma) / Päätoimittaja 22.4x: avausnäkymä katsoo ensimmäistä kohdetta (alakolmannes), 1,1 km / 50°.
+                if (silmukka.KohdistaAvausKohteeseen(ek[0].Nimi, ek[0].Lat, ek[0].Lon)) o.Kirjaa($"opas: avausnäkymä kohti ensimmäistä kohdetta ({ek[0].Nimi}, {silmukka.Asento})");
+            }
+            if (esitysAlkaa && Kaupunkitila && !silmukka.Siirtymassa && !silmukka.AvausTauolla && kohteet != null && kohteet.Count > 0 && kohteetKaupunki == Aloituskaupunki)
             { esitysAlkaa = false; o.StartCoroutine(EsitysAvaus(KaupunkitilaId)); }
             if (jatkoVastauksenJalkeen && silmukka.KierrosKeskeytetty && silmukka.Vaihe == OpasVaihe.Odottaa && silmukka.VaiheAika > JatkoViiveS && !puhuu)
             { jatkoVastauksenJalkeen = false; o.Kirjaa("opas: kierros jatkuu vastauksen jälkeen"); JatkaKierrosta(); }
@@ -427,8 +436,14 @@ namespace Matkakirja.Natiivi
             var vt = silmukka.VapaaTapit;
             bool vapaaLiikkuu = silmukka.VapaaTila && (Math.Abs(vt.vx) + Math.Abs(vt.vy) + Math.Abs(vt.ox) + Math.Abs(vt.oy)) > 0.05;
             if (vapaaLiikkuu) kaupunki.Karkeaksi();
-            else if (kaupunki.KarkeaKaytossa && !silmukka.Siirtymassa && silmukka.Vaihe != OpasVaihe.Lentaa && kaupunki.Latausaste >= CesiumKaupunki.ValmisProsentti)
+            // Omistaja TF 162 (iPad, Notre-Dame möykkynä): laitteella laatat eivät kierron aikana ehkä koskaan saavuta 99 %:a, jolloin
+            // karkea valinta jäi päälle koko kerronnan ajaksi → tarkentuu viimeistään TarkennaViimeistaanS pysähdyksen alusta.
+            else if (kaupunki.KarkeaKaytossa && !silmukka.Siirtymassa && silmukka.Vaihe != OpasVaihe.Lentaa
+                && (kaupunki.Latausaste >= CesiumKaupunki.ValmisProsentti || silmukka.VaiheAika > TarkennaViimeistaanS))
+            {
+                if (kaupunki.Latausaste < CesiumKaupunki.ValmisProsentti) o.Kirjaa($"opas: tarkennus aikarajalla {silmukka.VaiheAika:F1} s, laatat {kaupunki.Latausaste:F0} %");
                 kaupunki.Tarkenna();
+            }
             if (silmukka.Vaihe != ennen) o.Kirjaa($"opas: {ennen} → {silmukka.Vaihe} {(silmukka.Nykyinen?.Nimi ?? "")}, laatat {kaupunki.Latausaste:F0} %");
             if (silmukka.Vaihe != ennen && silmukka.Vaihe == OpasVaihe.Lentaa) OpasKorostusKuva.Piilota();
             y.Kuvaa(silmukka.Asento);
@@ -495,7 +510,8 @@ namespace Matkakirja.Natiivi
         }
         public const string KerroLisaaTeksti = "Kerro lisää";
         /// <summary>Kaupunkitilan yleiskuvan etäisyys (m; oletus 5 000): lyhyempi siirtymä ensimmäiseen kohteeseen (omistaja 12.5x).</summary>
-        public const double KaupunkitilaAvausM = 2200;
+        // Päätoimittaja 22.4x (omistaja TF 162, Rooma: "kohde on liian kaukana"): puoliväli 2,2 km:n pystykuvan ja lähikuvan välillä.
+        public const double KaupunkitilaAvausM = 1100, KaupunkitilaAvausKallistus = 50;
 
         // ---- ESITYKSEN AVAUS JA OPASTUS (omistaja 7.10. 10.1x / 12.4x) ----
         // Kaupunkitilan esitys: siirtymä → kaupungin avaus (opas/esittely-v1/<id>.json "avaus") → opastuslause VAIN pelaajan
@@ -526,8 +542,163 @@ namespace Matkakirja.Natiivi
             return EsittelyJuuri + "esittely-v1/" + UnityWebRequest.EscapeURL(kaupunkiId) + ".json";
         }
 
+        // ---- YKSITYISKOHTAKUVAT (omistaja 7.10. 10.1x, Päätoimittaja 16.5x, juna 163) ----
+        // Kerronnan aikana kuva ankkurisanan kohdalla (OpasYksityiskohdat, YksityiskohtaKortti). Paketin polku /opas/aineistot
+        // "yksityiskohdat_polut" {kaupunki-id: polku}; sana-ajat kohteen "aani_ajat" (kerro lisää: kerro_lisaa_aani_ajat) tai avauksen
+        // .ajat.json; ilman aikoja ankkurin osuus tekstistä × klipin kesto. Ei kuvaa, kun valikko tai chat on auki.
+        static Dictionary<string, string> yksPolut = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);
+        static string yksKaupunki;
+        YksityiskohtaKortti kortti;
+        Coroutine yksAjo;
+
+        static string YksKaupunkiId() => KaupunkitilaId ?? OpasSallitut.Nimella(sallitut, Aloituskaupunki)?.Id;
+
+        // Luettelot välimuistissa polun mukaan; esilataus jo kaupunkitilan avautuessa (iPad-simu 21.32: avauksen 3,7 s:n kuva jäi
+        // pois, kun luettelo latautui vasta esityksen alussa).
+        static readonly Dictionary<string, List<OpasYksityiskohdat.Kuva>> yksValimuisti = new Dictionary<string, List<OpasYksityiskohdat.Kuva>>();
+        static readonly HashSet<string> yksLataukset = new HashSet<string>();
+        static string yksPolku;
+
+        /// <summary>Kaupungin luettelo välimuistiin taustalla (ei mitään, jos polkua ei ole, se on jo ladattu tai latautumassa).</summary>
+        static void EsilataaYksityiskohdat(string id)
+        {
+            if (id == null || Testi || !yksPolut.TryGetValue(id, out var polku)) return;
+            if (yksValimuisti.ContainsKey(polku) || !yksLataukset.Add(polku)) return;
+            var lo = LinssiOhjain.Instanssi;
+            if (lo == null) { yksLataukset.Remove(polku); return; }
+            lo.StartCoroutine(HaeYksityiskohdat(id, polku));
+        }
+
+        static IEnumerator HaeYksityiskohdat(string id, string polku)
+        {
+            using (var r = UnityWebRequest.Get("https://media.matkakirja.app/" + polku))
+            {
+                r.timeout = 10;
+                yield return r.SendWebRequest();
+                var l = r.result == UnityWebRequest.Result.Success ? OpasYksityiskohdat.Lue(MiniJson.Jasenna(r.downloadHandler.text)) : null;
+                if (l != null) yksValimuisti[polku] = l;
+                KirjaaS($"opas: yksityiskohtakuvat {id}: {(l != null ? l.Count + " kuvaa" : "ei latautunut (" + r.responseCode + ")")} [{polku}]");
+            }
+            yksLataukset.Remove(polku);
+        }
+
+        /// <summary>Nykyisen kaupungin luettelo (mikä tahansa esittelykaupunki, jolla on yksityiskohdat_polut-rivi).</summary>
+        void VarmistaYksityiskohdat()
+        {
+            string id = YksKaupunkiId();
+            yksKaupunki = id;
+            yksPolku = id != null && yksPolut.TryGetValue(id, out var p) ? p : null;
+            EsilataaYksityiskohdat(id);
+        }
+
+        static bool YksPeittaa()
+        {
+            if (Matkakirja.Natiivi.OpasValikko.Viimeisin?.Auki == true) return true;
+            return !tekstiAvasiChatin && ChatAuki;
+        }
+        static bool ChatAuki => Matkakirja.Natiivi.UiNakymat.Olemassa && Matkakirja.Natiivi.UiNakymat.Hae()?.Chat?.Auki == true;
+
+        // ÄÄNETÖN KAPPALE NÄKYVIIN: oppaan chat (Näytä teksti -näkymä, kappaleet ovat jo siellä) aukeaa itsestään, jos se ei ollut
+        // auki, ja sulkeutuu kappaleen jälkeen, ellei uutta äänetöntä kappaletta ala heti (ei välkettä peräkkäisissä).
+        static bool tekstiAvasiChatin;
+        double tekstiKulunut;
+        void TekstiNakyviin()
+        {
+            if (Testi || ChatAuki) return;
+            ChatOppaalle(true);
+            tekstiAvasiChatin = ChatAuki;
+        }
+        IEnumerator TekstiPoisViiveella()
+        {
+            yield return new WaitForSecondsRealtime(1.5f);
+            TekstiPois();
+        }
+        void TekstiPois()
+        {
+            if (!tekstiAvasiChatin || tekstina != null) return;
+            tekstiAvasiChatin = false;
+            if (ChatAuki) ChatOppaalle(false);
+        }
+
+        void YksPois()
+        {
+            if (yksAjo != null) { o.StopCoroutine(yksAjo); yksAjo = null; }
+            kortti?.Piilota();
+        }
+
+        /// <summary>Kerronta alkoi: kohteen (tai "avaus") kuvat ajoitetaan ja näytetään soivan klipin ajan mukaan.</summary>
+        void YksAloita(string kohdeId, string teksti, AudioSource lahde, AudioClip klippi, string ajatUrl, double kestoS)
+        {
+            if (lahde == null || klippi == null) return;
+            YksAloita(kohdeId, teksti, ajatUrl, kestoS, () => lahde != null ? lahde.time : 0f,
+                () => lahde != null && lahde.clip == klippi && (lahde.isPlaying || tauolla));
+        }
+
+        /// <summary>Äänetön kappale: aika on kulunut lukuaika (TekstiLoppuu, tauko pysäyttää), jatkuu niin kauan kuin kappale on esillä.</summary>
+        void YksAloitaTeksti(string kohdeId, string teksti, double kestoS, Func<bool> esilla)
+            => YksAloita(kohdeId, teksti, null, kestoS, () => tekstiKulunut, esilla);
+
+        void YksAloita(string kohdeId, string teksti, string ajatUrl, double kestoS, Func<double> aika, Func<bool> kaynnissa)
+        {
+            YksPois();
+            VarmistaYksityiskohdat();
+            if (string.IsNullOrEmpty(kohdeId) || string.IsNullOrEmpty(teksti) || Testi) return;
+            if (kohdeId.EndsWith("-lisaa")) kohdeId = kohdeId.Substring(0, kohdeId.Length - 6);
+            yksAjo = o.StartCoroutine(YksAja(kohdeId, teksti, ajatUrl, kestoS, aika, kaynnissa));
+        }
+
+        IEnumerator YksAja(string kohdeId, string teksti, string ajatUrl, double kestoS, Func<double> aika, Func<bool> kaynnissa)
+        {
+            float raja = Time.unscaledTime + 12f;
+            while (yksPolku != null && yksLataukset.Contains(yksPolku) && Time.unscaledTime < raja && kaynnissa()) yield return null;
+            var yksKuvat = yksPolku != null && yksValimuisti.TryGetValue(yksPolku, out var vk) ? vk : null;
+            if (yksKuvat == null || yksKuvat.Count == 0) yield break;
+            List<(int, double)> ajat = null;
+            if (!string.IsNullOrEmpty(ajatUrl))
+                using (var r = UnityWebRequest.Get(ajatUrl))
+                {
+                    r.timeout = 5;
+                    yield return r.SendWebRequest();
+                    if (r.result == UnityWebRequest.Result.Success) ajat = OpasYksityiskohdat.LueAjat(MiniJson.Jasenna(r.downloadHandler.text));
+                }
+            var lista = OpasYksityiskohdat.Ajoita(yksKuvat, kohdeId, teksti, kestoS, ajat);
+            if (lista.Count == 0) yield break;
+            o.Kirjaa($"opas: yksityiskohtakuvat {kohdeId}: {lista.Count} ({(ajat != null && ajat.Count > 0 ? "sana-ajat" : "osuus tekstistä")}) "
+                     + string.Join(", ", lista.ConvertAll(x => $"{x.AikaS:F1} s")));
+            kortti ??= new YksityiskohtaKortti(o);
+            foreach (var (kuva, t) in lista)
+            {
+                // Kuva lähtee ~0,35 s ennen ankkuria (lataus ja sisääntulo), kun klippi yhä soi.
+                if (aika() > t + 1.0) continue;   // luettelo tai ajat tulivat myöhässä: ankkuri jo ohi, ei kuvaa väärään kohtaan
+                while (kaynnissa() && aika() < t - 0.35) yield return null;
+                if (!kaynnissa()) yield break;
+                if (YksPeittaa() || kaupunki?.Kamera == null) continue;
+                kortti.Nayta(kaupunki.Kamera, kuva, YksPeittaa);
+            }
+            yksAjo = null;
+        }
+
+        /// <summary>Avaus ilman ääntä (tai Kertoja pois): teksti chattiin ja näkyviin lukuajan, yksityiskohtakuvat lukuajasta.</summary>
+        IEnumerator AvausTekstina(string teksti)
+        {
+            double kesto = KierrosLento.LukuKesto(teksti);
+            o.Kirjaa($"opas: esitys avaus tekstinä ({kesto:F1} s)");
+            KysymysChattiin(new OpasKohde { Id = "avaus", Teksti = teksti });
+            TekstiNakyviin();
+            var avausK = new OpasKohde { Id = "avaus", Teksti = teksti };
+            tekstina = avausK; tekstiKulunut = 0;
+            YksAloitaTeksti("avaus", teksti, kesto, () => tekstina == avausK);
+            double t = 0;
+            while (t < kesto && silmukka != null && Kaupunkitila && tekstina == avausK) { if (!tauolla) t += Time.unscaledDeltaTime; tekstiKulunut = t; yield return null; }
+            if (tekstina == avausK) tekstina = null;
+            TekstiPois();
+        }
+
         IEnumerator EsitysAvaus(string kaupunkiId)
         {
+            // Yksityiskohtaluettelo esiin heti (iPad-simu 7.10. 21.24: avauksen kuva jäi pois, kun luettelo latautui vasta
+            // avauksen soidessa ja ajoitus odotti 3 s).
+            VarmistaYksityiskohdat();
             o.Kirjaa($"opas: esitys alkaa ({kaupunkiId}): avaus{(OpastusKuultu ? "" : " + opastus (1. kyyti)")}{(kaupunkiId != null && esittelyPolut.ContainsKey(kaupunkiId) ? " [" + esittelyPolut[kaupunkiId] + "]" : "")}");
             if (!Testi && !string.IsNullOrEmpty(kaupunkiId))
             {
@@ -539,7 +710,11 @@ namespace Matkakirja.Natiivi
                     if (r.result == UnityWebRequest.Result.Success && MiniJson.Jasenna(r.downloadHandler.text) is Dictionary<string, object> j)
                         avaus = j.TryGetValue("avaus", out var a) ? a as Dictionary<string, object> : null;
                 }
-                if (avaus != null && avaus.TryGetValue("aani", out var au) && au is string url) yield return SoitaJaOdota(url, "avaus");
+                string avausTeksti = avaus != null && avaus.TryGetValue("teksti", out var at) ? at as string : null;
+                if (avaus != null && avaus.TryGetValue("aani", out var au) && au is string url && Asetukset.Paalla(Kytkin.Kertoja))
+                    yield return SoitaJaOdota(url, "avaus", avausTeksti);
+                else if (!string.IsNullOrWhiteSpace(avausTeksti) && silmukka != null)
+                    yield return AvausTekstina(avausTeksti);
                 if (!OpastusKuultu && silmukka != null && Kaupunkitila)
                 {
                     string ourl = null;
@@ -561,7 +736,7 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Esityksen puhe (avaus, opastus) siltalauseiden kanavalla; odottaa loppuun (ei kertojaa päälle).</summary>
-        IEnumerator SoitaJaOdota(string url, string mika)
+        IEnumerator SoitaJaOdota(string url, string mika, string teksti = null)
         {
             if (silta == null || !Asetukset.Paalla(Kytkin.Kertoja)) yield break;
             using var p = UnityWebRequestMultimedia.GetAudioClip(url, AudioType.MPEG);
@@ -571,6 +746,8 @@ namespace Matkakirja.Natiivi
             if (p.result != UnityWebRequest.Result.Success || silmukka == null) { o.Kirjaa($"opas: esitys {mika} ei latautunut ({p.responseCode})"); yield break; }
             var klippi = DownloadHandlerAudioClip.GetContent(p);
             silta.clip = klippi; silta.volume = 1f; silta.Play();
+            // Avauksen sana-ajat avauksen äänen rinnalla (.mp3 → .ajat.json, Pelikoodari #4152); puuttuessa varapolku.
+            if (teksti != null) YksAloita("avaus", teksti, silta, klippi, url.EndsWith(".mp3") ? url.Substring(0, url.Length - 4) + ".ajat.json" : null, klippi.length);
             o.Kirjaa($"opas: esitys {mika} soi ({klippi.length:F1} s, lataus {Time.realtimeSinceStartup - t0:F1} s)");
             float loppu = Time.realtimeSinceStartup + klippi.length + 0.6f;
             while (Time.realtimeSinceStartup < loppu && silmukka != null && Kaupunkitila) yield return null;
@@ -918,7 +1095,7 @@ namespace Matkakirja.Natiivi
                 string S(string n) => jl.TryGetValue(n, out var x) ? x as string : null;
                 double D(string n, double o0) => jl.TryGetValue(n, out var x) && x != null && !(x is string) ? Convert.ToDouble(x, System.Globalization.CultureInfo.InvariantCulture) : o0;
                 kerroLisaa = new OpasKohde { Id = k.Id + "-lisaa", Nimi = k.Nimi, Alarivi = k.Alarivi, Teksti = kts.Trim(), Aani = S("kerro_lisaa_aani"),
-                    AaniPcm = S("kerro_lisaa_aani_pcm"), AaniTaajuus = (int)D("kerro_lisaa_aani_taajuus", 24000), KestoS = D("kerro_lisaa_kesto_s", 0),
+                    AaniPcm = S("kerro_lisaa_aani_pcm"), AaniAjat = S("kerro_lisaa_aani_ajat"), AaniTaajuus = (int)D("kerro_lisaa_aani_taajuus", 24000), KestoS = D("kerro_lisaa_kesto_s", 0),
                     Lat = k.Lat, Lon = k.Lon, KokoM = k.KokoM, KorkeusM = k.KorkeusM, Luokka = k.Luokka, Kuvat = k.Kuvat, Korostus = k.Korostus, Kierros = true };
                 kerroLisaaId = k.Id;
             }
@@ -954,6 +1131,7 @@ namespace Matkakirja.Natiivi
                 if (!System.IO.File.Exists(SallitutPolku)) return;
                 var lj = MiniJson.Jasenna(System.IO.File.ReadAllText(SallitutPolku));
                 LueEsittelyPolut(lj);
+                yksPolut = OpasYksityiskohdat.LuePolut(lj);
                 var l = OpasSallitut.Lue(lj);
                 if (l.Count > 0) { AsetaSallitut(l); Debug.Log($"MATKAKIRJA linssit: opas: sallitut kaupungit levyltä {l.Count}"); }
             }
@@ -1086,6 +1264,7 @@ namespace Matkakirja.Natiivi
         {
             if (kaupunkitila == k) return;
             kaupunkitila = k;
+            if (k != null) EsilataaYksityiskohdat(k.Id);   // yksityiskohtakuvat valmiiksi ennen avausta
             if (Viimeisin != null && Viimeisin.silmukka != null) Viimeisin.silmukka.Sallitut = SilmukanSallitut;
             KirjaaS(k != null ? $"opas: kaupunkitila {k.Nimi} ({k.Id})" : "opas: kaupunkitila päättyi");
             if (k == null) PalloTekstuuriMuistiin();   // takaisin kartalle: seuraavan siirtymän kuva valmiiksi
@@ -1124,6 +1303,8 @@ namespace Matkakirja.Natiivi
             var teksti = r.downloadHandler.text;
             var hj = MiniJson.Jasenna(teksti);
             LueEsittelyPolut(hj);
+            yksPolut = OpasYksityiskohdat.LuePolut(hj);
+            if (kaupunkitila != null) EsilataaYksityiskohdat(kaupunkitila.Id);
             var l = OpasSallitut.Lue(hj);
             if (l.Count == 0 && sallitut != null && sallitut.Count > 0) { KirjaaS($"opas: sallitut-lista tyhjä vastauksessa, pidetään {sallitut.Count} edellistä"); yield break; }
             if (l.Count > 0) try { System.IO.File.WriteAllText(SallitutPolku, teksti); } catch (Exception) { }
@@ -1179,6 +1360,8 @@ namespace Matkakirja.Natiivi
         public static event Action SiirtymaValmis;
         public static float SiirtymaEdistyminen => SiirtymaEdistys;
         bool siirtymaEdellinen;
+        /// <summary>Karkea laattavalinta tarkentuu pysähdyksellä viimeistään tämän ajan kuluttua, vaikka laatat eivät ole 99 %.</summary>
+        public const double TarkennaViimeistaanS = 4.0;
 
         // ---- KUVASUURENNOKSEN SUMENNUS (omistaja 12.1x): kevyt Gaussian-syväterävyys koko kuvalle ja kamera seis ----
         UnityEngine.Rendering.Volume sumennus;
@@ -1967,6 +2150,9 @@ namespace Matkakirja.Natiivi
             if (kertoja && !string.IsNullOrEmpty(avain) && klipit.TryGetValue(avain, out var klippi) && klippi != null && puhe != null)
             {
                 puhe.clip = klippi; puhe.volume = 1f; puhe.Play();
+                TekstiPois();   // äänellinen kerronta: tekstitilan itse avaama chat kiinni
+                // PCM-virran klipin pituus ei ole kerronnan kesto: vastauksen kesto_s ensin (yksityiskohtakuvien varapolku).
+                if (!k.Kysymys) YksAloita(k.Id, k.Teksti, puhe, klippi, k.AaniAjat, k.KestoS > 0 && pcmVirrat.ContainsKey(avain) ? k.KestoS : klippi.length);
                 puhuu = true; y.Repliikki(true); puheAlkoi = Time.unscaledTime;
                 pelaajanToimi = -1f;   // kerronta alkoi: odotus-lausetta ei tarvita
                 pcmNyt = pcmVirrat.TryGetValue(avain, out var v) ? v : null;
@@ -1975,7 +2161,11 @@ namespace Matkakirja.Natiivi
             }
             o.Kirjaa($"opas: kappale tekstinä ({(!kertoja ? "Kertoja pois" : string.IsNullOrEmpty(avain) ? "ei ääntä vastauksessa" : "ääni ei latautunut")})");
             tekstina = k;
-            double s = k.KestoS > 0 ? k.KestoS : KierrosLento.PysahdysKesto(k.Teksti);
+            // ÄÄNETÖN KAUPUNKIESITYS (Päätoimittaja 7.10. 18.2x): kesto lukunopeudesta (kesto_s etusijalla, jos annettu), teksti
+            // näkyy itsestään oppaan Näytä teksti -näkymässä, ja yksityiskohtakuvat ajoitetaan kuluvasta lukuajasta.
+            double s = k.KestoS > 0 ? k.KestoS : KierrosLento.LukuKesto(k.Teksti);
+            tekstiKulunut = 0;
+            if (!k.Kysymys) { TekstiNakyviin(); YksAloitaTeksti(k.Id, k.Teksti, s, () => tekstina == k); }
             o.StartCoroutine(TekstiLoppuu(s, k));
         }
         OpasKohde tekstina, aaniOdotus;
@@ -2048,8 +2238,8 @@ namespace Matkakirja.Natiivi
         IEnumerator TekstiLoppuu(double s, OpasKohde k)
         {
             double t = 0;
-            while (t < s) { if (!tauolla) t += Time.unscaledDeltaTime; yield return null; }   // tauko pysäyttää myös tekstikappaleen
-            if (silmukka != null && tekstina == k && !puhuu) { tekstina = null; silmukka.AaniLoppui(); }
+            while (t < s) { if (!tauolla) t += Time.unscaledDeltaTime; if (tekstina == k) tekstiKulunut = t; yield return null; }   // tauko pysäyttää myös tekstikappaleen
+            if (silmukka != null && tekstina == k && !puhuu) { tekstina = null; silmukka.AaniLoppui(); o.StartCoroutine(TekstiPoisViiveella()); }
         }
 
         /// <summary>
@@ -2116,6 +2306,7 @@ namespace Matkakirja.Natiivi
 
         void Hiljenna()
         {
+            YksPois();
             pcmNyt = null;
             if (puhe != null && puhe.isPlaying) puhe.Stop();
             if (puhuu) { puhuu = false; y.Repliikki(false); }
@@ -2141,6 +2332,7 @@ namespace Matkakirja.Natiivi
 
         public void Sulje()
         {
+            YksPois(); kortti?.Sulje(); kortti = null; tekstiAvasiChatin = false;
             luotain?.Dispose(); luotain = null;
             OpasKorostusKuva.Piilota(true);
             KaupunkiYovalot.Kohde = null;

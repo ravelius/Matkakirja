@@ -72,7 +72,10 @@ namespace Matkakirja
 
         void LateUpdate()
         {
-            bool haluttu = Pakota ?? (Pelikello.Valinnassa || Pelikello.Lennossa);
+            // ALKULENTO v3 (omistaja 7.10. 14.5x: "Pelin alkulennosta voisi ottaa pois kokonaan sen yöosuuden, eli kartta näkyisi
+            // koko maapallolla ... pelataan varman päälle ja otetaan se pois kokonaan"): ei automaattista yöpuolta valinnassa eikä
+            // aloituslennolla, koko pallo päivässä; vain kehittäjäkomento `paivanvalo 1` näyttää rajan.
+            bool haluttu = Pakota ?? false;
             w = Mathf.MoveTowards(w, haluttu ? 1f : 0f, Time.unscaledDeltaTime / HaivytysS);
             if (w <= 0f) { Pois(); return; }
             if (georeferenssi == null) georeferenssi = FindAnyObjectByType<CesiumGeoreference>();
