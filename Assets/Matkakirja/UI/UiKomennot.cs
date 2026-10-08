@@ -539,6 +539,13 @@ namespace Matkakirja.Natiivi
                     // "ui seikkailutapit loyto": seikkailun löytö pergamenttipohjalla (testiteksti).
                     // "ui seikkailutapit tietokerros|tietokortti": tietokerros tarjolle (3 testikorttia) tai tietokortin merkki.
                     else if (loput.Trim() == "tietokerros") { SeikkailuTapit.NaytaTietokerros(new[] { "Pyhä Olavi", "Kappeli", "Torni" }, new[] { "Testiteksti 1.", "Testiteksti 2.", "Testiteksti 3." }, new[] { "Lyhyt 1", null, "Lyhyt 3" }); return "=seikkailutapit: tietokerros tarjolla (napauta Pulua)"; }
+                    // "ui seikkailutapit oikeatappi on|off" (testikytkin) ja "veto suora|selaus" (katseen vetosuunta).
+                    else if (loput.Trim().StartsWith("oikeatappi ")) SeikkailuTapit.OikeaTappi = loput.Trim().EndsWith("on");
+                    else if (loput.Trim().StartsWith("veto ")) SeikkailuTapit.VetoSuora = loput.Trim().EndsWith("suora");
+                    // "ui seikkailutapit teksti": tekstivahti (seikkailussa ei näkyvää tekstiä paitsi löytö ja tietokerros).
+                    // "ui seikkailutapit pala": pelattavan palan avaus Jatka/Alusta-valinnalla (tallennuksen mukaan).
+                    else if (loput.Trim() == "pala") { SeikkailuTapit.AvaaPelattavaPala(); return "=seikkailutapit: pala avataan"; }
+                    else if (loput.Trim() == "teksti") return "=seikkailutapit: teksti " + SeikkailuTapit.Tekstivahti();
                     else if (loput.Trim() == "tietokortti") { SeikkailuTapit.TietokorttiAvautui("testi"); return "=seikkailutapit: tietokortin merkki"; }
                     else if (loput.Trim() == "loyto") { SeikkailuTapit.NaytaLoyto("Liinanyytti", "Kalkki, pateeni ja liuskekivi kääritty liinaan."); return "=seikkailutapit: löytö näytetty"; }
                     return "=" + SeikkailuTapit.Kuvaus();
