@@ -109,3 +109,11 @@ test('kierros: sijainti listan toisessa päässä → kierros alkaa sieltä (omi
     assert.equal(toka.id, 'Q106');
   } finally { globalThis.fetch = vanha; }
 });
+
+test('sallittujen näyttönimi löytää listan kaupungin (Reykjavík → islanti, 7.10.)', async () => {
+  const { listanKaupunki } = await import('../tools/pollo/opas-kuvat.js');
+  const lista = { kaupungit: { islanti: { nimi: 'Islanti', kohteet: ['Q1'] } }, kohteet: {} };
+  assert.equal(listanKaupunki(lista, 'Reykjavík')?.id, 'islanti');
+  assert.equal(listanKaupunki(lista, 'Islanti')?.id, 'islanti');
+  assert.equal(listanKaupunki(lista, 'Tuntematon'), null);
+});

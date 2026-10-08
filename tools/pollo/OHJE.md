@@ -187,7 +187,7 @@ koodimuutos main-haarassa julkaisee workerin uudelleen itsestään.
   valmiin äänen säilöistä tai 204, opas antaa ääni-urlin vain R2:ssa jo olevalle äänelle, eivätkä GET-polut tuota.
   Ohitus vain äänilupalipulla `x-matkakirja-aanilupa` = salaisuus `POLLO_AANILUPA`, omistajan luvalla tarkalle määrälle.
 - **KV:n päiväkiintiö** (6.10.2026, ilmaistaso 1 000 kirjoitusta/vrk; `reuna.js`): kaikki KV-kutsut fail-open. Oppaan
-  äänen teksti on R2:ssa (`opas/teksti/<sha>.json`, KV varana). Istunnon tila (kierros, suunnat, isoisä) ja lisäkuvien
+  äänen teksti on R2:ssa (`opas/teksti/<sha>.json`, KV varana; R2:n elinkaarisääntö `opas-teksti-48h` poistaa tekstit 48 h:n jälkeen, alaikäistarkistus 7.10.2026). Istunnon tila (kierros, suunnat, isoisä) ja lisäkuvien
   välimuisti ovat R2:ssa (`tila/…`, vanhenemisaika oliossa). Tuotantolukot ja Nominatimin vuoro ovat isolaatin muistissa
   (Cache API ei toimi *.workers.dev-osoitteissa). Oppaan IP-laskuri kirjoitetaan harvana
   (10 pyynnön välein), ja testitunnuksen ja kehittäjän pyynnöt eivät kirjoita IP-laskureita. Päivän operaatiot näkyvät
@@ -353,6 +353,7 @@ uudelleen) tai kun ajetaan `npx wrangler deploy` komentoriviltä.
 | `POLLO_PAIVARAJA` | `30` | Kysymystä per vierailija per vuorokausi. Estää yksittäistä käyttäjää kuluttamasta budjettia. |
 | `POLLO_KUUKAUSIRAJA` | `1500` | **Kova kuukausikatto** koko palvelulle. Kun se täyttyy, pöllö lopettaa vastaamisen kuun loppuun asti. |
 | `POLLO_MALLI` | `claude-haiku-4-5-20251001` | Käytettävä malli. Halvin ja nopein riittää — pöllö vastaa lyhyesti. |
+| `OPAS_TESTI_MALLI` | `claude-haiku-5-5` | Testi- ja kehitysliikenteen malli (proto3d-/kehityskäännökset, node/curl, testiotsakkeet; tools/pollo/kulut.js). `pois` = tuotantomalli kaikille. Jaetut välimuistit (kohteet, Liiku, valmiit kysymykset, suosikit) generoidaan aina tuotantomallilla. Jokaisesta mallikutsusta lokirivi `kulu: <reitti> <testi\|peli> <malli> in= cw= cr= out=`. |
 
 Ylityksestä pelaaja saa siistin viestin ("Pöllö on vastannut sinulle jo
 monta kertaa tänään"), ei virhettä.

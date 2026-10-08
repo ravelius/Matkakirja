@@ -84,14 +84,14 @@ test('puhe_teksti: näytölle kirjoitusasu, äänen tunniste ääntämisversiost
   assert.ok(String(d.aani).includes(sha), `ääni ${d.aani}`);
 });
 
-test('omat kohteet (Giza): vain kokeilu-otsakkeella; Liiku kierros LS1:n järjestyksessä', async () => {
+test('omat kohteet (Giza): vain kokeilu-otsakkeella; Liiku kierros pienimmän kierron järjestyksessä (8.10.)', async () => {
   const { omatKohteet } = await import('../tools/pollo/opas-esittely.js');
   const { sallittuKaupunki, sallitutPyynnolle } = await import('../tools/pollo/sallitut.js');
   const kok = { OPAS_KOKEILU: ['giza'], OPAS_SALLITUT_ESTO: '1' };
   assert.equal(omatKohteet('Gizan pyramidit'), null, 'TF-appit eivät näe Gizaa');
   assert.equal(sallittuKaupunki('Gizan pyramidit', { OPAS_SALLITUT_ESTO: '1' }), null);
   assert.ok(!sallitutPyynnolle({}).some((x) => x.id === 'giza'));
-  assert.deepEqual(omatKohteet('Gizan pyramidit', kok).kierros, ['Q130958', 'Q208358', 'Q238623', 'Q37200']);
+  assert.deepEqual(omatKohteet('Gizan pyramidit', kok).kierros, ['Q130958', 'Q37200', 'Q208358', 'Q238623']);
   assert.equal(sallittuKaupunki('Gizan pyramidit', kok)?.id, 'giza');
   assert.ok(sallitutPyynnolle(kok).some((x) => x.id === 'giza'));
   const vanha = globalThis.fetch; globalThis.fetch = async () => new Response('{}');
@@ -101,7 +101,7 @@ test('omat kohteet (Giza): vain kokeilu-otsakkeella; Liiku kierros LS1:n järjes
     assert.equal(ilman.status, 403, 'ilman otsaketta ei-sallittu');
     const d = await (await worker.fetch(new Request('https://pollo.example/opas/liiku?kaupunki=Gizan%20pyramidit',
       { headers: { ...H, 'x-matkakirja-kokeilu': 'giza' } }), e, {})).json();
-    assert.deepEqual(d.kierros, ['Q130958', 'Q208358', 'Q238623', 'Q37200']);
+    assert.deepEqual(d.kierros, ['Q130958', 'Q37200', 'Q208358', 'Q238623']);
     assert.deepEqual(d.kohteet.map((k) => k.nimi), ['Gizan suuri sfinksi', 'Khefrenin pyramidi', 'Mykerinoksen pyramidi', 'Kheopsin pyramidi']);
     const a = await (await worker.fetch(new Request('https://pollo.example/opas/aineistot', { headers: { origin: 'https://matkakirja.app', 'x-matkakirja-kokeilu': 'giza' } }),
       { POLLO_ORIGINIT: 'https://matkakirja.app' }, {})).json();
@@ -126,4 +126,167 @@ test('Giza kokeilu-otsakkeella: kierros alkaa Sfinksin valmiista kerronnasta ilm
       body: JSON.stringify({ kaupunki: 'Gizan pyramidit', toive: 'Esittele kaupunki', istunto: 'g2' }) }), e, { waitUntil() {} });
     assert.equal(ilman.status, 403);
   } finally { globalThis.fetch = vanha; }
+});
+
+test('/opas/kysymykset: valmiin esittelyn kohde → 5 valmista kysymystä ja Kerro lisää litteinä kenttinä', async () => {
+  const e = ymparisto();
+  const k0 = { ...ESITTELY.kohteet[0], kysymykset: ['Kuka tämän rakensi?', 'Miksi se on täällä?', 'Mitä sisällä on?', 'Kuka täällä asui?', 'Mitä tänään tapahtuu?'] };
+  e.OPAS_ESITTELY_TESTI = { testila: { ...ESITTELY, kohteet: [k0, ...ESITTELY.kohteet.slice(1)] } };
+  const vanha = globalThis.fetch; let malli = 0;
+  globalThis.fetch = async (u) => { if (String(u).includes('anthropic')) malli += 1;
+    return new Response(JSON.stringify({ content: [{ type: 'text', text: 'Mikä tämä on?\nKuka teki?\nMiksi?\nMilloin?\nMissä?\nMitä?' }], stop_reason: 'end_turn' })); };
+  try {
+    const hae = (q) => worker.fetch(new Request(`https://pollo.example/opas/kysymykset?paikka=${q}&nimi=Kohde&kaupunki=Testil%C3%A4`, { headers: H }), e, { waitUntil() {} }).then((v) => v.json());
+    const d = await hae('Q100');
+    assert.deepEqual(d.kysymykset, k0.kysymykset); assert.equal(malli, 0, 'valmiit kysymykset ilman mallia');
+    assert.equal(d.kerro_lisaa_teksti, k0.teksti); assert.ok(!('kerro_lisaa_kesto_s' in d), 'ilman ääntä ei kestoa (LS1: lukukesto)');
+    assert.equal(d.kerro_lisaa, undefined, 'ei alikenttää (#4107: vanhat natiivit)');
+    assert.equal(d.kerro_lisaa_aani ?? null, null, 'ei esigeneroitua ääntä → ei kenttää');
+    const ilman = await hae('Q999');
+    assert.equal(ilman.kerro_lisaa_teksti, undefined); assert.ok(ilman.kysymykset.length > 0);
+  } finally { globalThis.fetch = vanha; }
+});
+
+test('Kerro lisää: ei maksullista generointia – ääni vain R2:sta, muuten null; tekstiä ei tallenneta', async () => {
+  const { createHash } = await import('node:crypto');
+  const e = ymparisto(); const kirjoitukset = [];
+  const vanhaPut = e.PUHE_R2.put; e.PUHE_R2.put = async (k, v) => { kirjoitukset.push(k); return vanhaPut(k, v); };
+  e.ELEVEN_API_KEY = 'e';
+  let eleven = 0;
+  const vanha = globalThis.fetch;
+  globalThis.fetch = async (u) => { if (String(u).includes('elevenlabs')) eleven += 1;
+    return new Response(JSON.stringify({ content: [{ type: 'text', text: 'A?\nB?\nC?\nD?\nE?\nF?' }], stop_reason: 'end_turn' })); };
+  try {
+    const hae = () => worker.fetch(new Request('https://pollo.example/opas/kysymykset?paikka=Q101&nimi=Kohde&kaupunki=Testil%C3%A4', { headers: H }), e, { waitUntil() {} }).then((v) => v.json());
+    const a = await hae();
+    assert.equal(a.kerro_lisaa_aani ?? null, null); assert.equal(a.kerro_lisaa_aani_pcm ?? null, null);
+    assert.ok(!kirjoitukset.some((k) => k.startsWith('opas/teksti/')), 'tekstiä ei tallenneta → GET ei voi generoida');
+    const sha = createHash('sha256').update(`william|eleven_v4_turbo|${ESITTELY.kohteet[1].teksti}`).digest('hex').slice(0, 32);
+    await vanhaPut(`opas/${sha}.mp3`, 'mp3');
+    const b = await hae();
+    assert.ok(String(b.kerro_lisaa_aani).endsWith(`/opas/aani/${sha}.mp3`)); assert.equal(b.kerro_lisaa_aani_pcm, null);
+    const g = await worker.fetch(new Request(`https://pollo.example/opas/aani/${'f'.repeat(32)}.mp3`), e, { waitUntil() {} });
+    assert.equal(g.status, 404, 'tuntematon sha ei generoi');
+    assert.equal(eleven, 0, 'ElevenLabsia ei kutsuttu');
+  } finally { globalThis.fetch = vanha; }
+});
+
+test('esittely-indeksi: pilotti pariisi, praha, wien (vienti 7.10.)', async () => {
+  const { OPAS_AINEISTOT } = await import('../tools/pollo/aineistot.js');
+  assert.deepEqual(OPAS_AINEISTOT.esittely.slice(0, 6), ['pariisi', 'praha', 'wien', 'rooma', 'lontoo', 'koopenhamina']);
+  // Äänettömät 31 (omistaja 7.10. 18.2x): kaikki sallitut kaupungit, jokaisella oma polku esittely-aaneton-v3:ssa (8.10. avaukseen pallovirke).
+  const { OPAS_SALLITUT } = await import('../tools/pollo/sallitut.js');
+  assert.deepEqual([...OPAS_AINEISTOT.esittely].sort(), OPAS_SALLITUT.sallitut.map((x) => x.id).sort());
+  for (const id of OPAS_AINEISTOT.esittely.slice(6)) assert.equal(OPAS_AINEISTOT.esittely_polut[id], `opas/esittely-aaneton-v3/${id}.json`);
+});
+
+test('avauksen lupaama alku: kierros alkaa esittelyn kierros[0]:sta, ei kameraa lähimmästä (Rooma: Forum, ei Trevi)', async () => {
+  const env = ymparisto();
+  env.OPAS_ESITTELY_TESTI = { testila: { ...ESITTELY, avaus: { teksti: 'Kierros alkaa Kohteesta 5.' }, kierros: ['Q105'] } };
+  const { d, malli } = await opas(env, { toive: 'Esittele kaupunki', istunto: 'a1' });
+  assert.equal(malli, 0); assert.equal(d.id, 'Q105'); assert.deepEqual(d.kierros, { numero: 1, maara: 8 });
+  const ilman = ymparisto();
+  ilman.OPAS_ESITTELY_TESTI = { testila: { ...ESITTELY, kierros: ['Q105'] } };
+  assert.equal((await opas(ilman, { toive: 'Esittele kaupunki', istunto: 'a2' })).d.id, 'Q100', 'ilman avausta lähin kuten ennen');
+});
+
+test('Liiku-kierros alkaa avauksen lupaamasta kohteesta (LS1 lukee kierroksen /opas/liiku-vastauksesta)', async () => {
+  const vanha = globalThis.fetch; globalThis.fetch = async () => new Response('{}');
+  try {
+    const e = ymparisto();
+    e.OPAS_ESITTELY_TESTI = { testila: { ...ESITTELY, avaus: { teksti: 'Kierros alkaa Kohteesta 5.' }, kierros: ['Q105'] } };
+    const hae = async (env) => (await (await worker.fetch(new Request('https://pollo.example/opas/liiku?kaupunki=Testil%C3%A4&lat=60&lon=25',
+      { headers: H }), env, { waitUntil() {} })).json()).kierros;
+    assert.equal((await hae(e))[0], 'Q105');
+    assert.equal((await hae(ymparisto()))[0], 'Q100', 'ilman avausta lähin kuten ennen');
+  } finally { globalThis.fetch = vanha; }
+});
+
+test('esittely_polut: Praha ja Wien poikkeavasta polusta (avaus + kierros), muut esittely-v1', async () => {
+  const urlit = [];
+  const haku = async (u) => { urlit.push(String(u)); return new Response(JSON.stringify(ESITTELY)); };
+  await oppaanEsittely({}, 'Praha', haku); await oppaanEsittely({}, 'Rooma', haku);
+  assert.deepEqual(urlit, ['https://media.matkakirja.app/opas/esittely-v1b/praha.json', 'https://media.matkakirja.app/opas/esittely-v1/rooma.json']);
+});
+
+test('sana-ajat (LS1 7.10.): aani_ajat vain kun R2:ssa on <sha>.ajat.json; GET palauttaa R2:sta, puuttuva 404', async () => {
+  const { createHash } = await import('node:crypto');
+  const sha = createHash('sha256').update(`william|eleven_v4_turbo|${ESITTELY.kohteet[0].teksti}`).digest('hex').slice(0, 32);
+  const ajat = JSON.stringify({ versio: 1, teksti: ESITTELY.kohteet[0].teksti, sanat: [[0, 0.1, 0.4]] });
+  const env = ymparisto();
+  const vanhaGet = env.PUHE_R2.get;
+  env.PUHE_R2.get = async (k) => (k === `opas/${sha}.mp3` ? { body: new Uint8Array(4), text: async () => '' }
+    : k === `opas/${sha}.ajat.json` ? { body: ajat, text: async () => ajat } : vanhaGet(k));
+  const { d } = await opas(env, { toive: 'Esittele kaupunki', istunto: 'aj1' });
+  assert.equal(d.valmis, true);
+  assert.ok(String(d.aani_ajat).endsWith(`/opas/aani/${sha}.ajat.json`), `aani_ajat ${d.aani_ajat}`);
+  const g = await worker.fetch(new Request(`https://pollo.example/opas/aani/${sha}.ajat.json`), env, { waitUntil() {} });
+  assert.equal(g.status, 200); assert.deepEqual(await g.json(), JSON.parse(ajat));
+  const puuttuu = await worker.fetch(new Request(`https://pollo.example/opas/aani/${'e'.repeat(32)}.ajat.json`), env, { waitUntil() {} });
+  assert.equal(puuttuu.status, 404);
+  // Ilman ajat-tiedostoa kenttää ei ole (vanhat natiivit ja varapolku).
+  const ilman = ymparisto();
+  const g2 = ilman.PUHE_R2.get;
+  ilman.PUHE_R2.get = async (k) => (k === `opas/${sha}.mp3` ? { body: new Uint8Array(4), text: async () => '' } : g2(k));
+  const { d: d2 } = await opas(ilman, { toive: 'Esittele kaupunki', istunto: 'aj2' });
+  assert.equal('aani_ajat' in d2, false);
+});
+
+test('yksityiskohdat_polut: 6 äänellistä + kaikki 31 äänetöntä (Sisältökirjuri 8.10.)', async () => {
+  const { OPAS_AINEISTOT } = await import('../tools/pollo/aineistot.js');
+  assert.deepEqual(OPAS_AINEISTOT.yksityiskohdat_polut, { pariisi: 'esittely/pariisi-v2/pariisi-yksityiskohdat.json',
+    praha: 'esittely/praha-v1/praha-yksityiskohdat.json', wien: 'esittely/wien-v1/wien-yksityiskohdat.json',
+    rooma: 'esittely/rooma-v5/rooma-yksityiskohdat.json', lontoo: 'esittely/lontoo-v2/lontoo-yksityiskohdat.json',
+    koopenhamina: 'esittely/koopenhamina-v3/koopenhamina-yksityiskohdat.json',
+    venetsia: 'esittely/venetsia-v1/venetsia-yksityiskohdat.json', barcelona: 'esittely/barcelona-v1/barcelona-yksityiskohdat.json',
+    berliini: 'esittely/berliini-v2/berliini-yksityiskohdat.json', amsterdam: 'esittely/amsterdam-v1/amsterdam-yksityiskohdat.json',
+    madrid: 'esittely/madrid-v1/madrid-yksityiskohdat.json', ateena: 'esittely/ateena-v1/ateena-yksityiskohdat.json',
+    firenze: 'esittely/firenze-v2/firenze-yksityiskohdat.json',
+    lissabon: 'esittely/lissabon-v1/lissabon-yksityiskohdat.json', tukholma: 'esittely/tukholma-v1/tukholma-yksityiskohdat.json',
+    helsinki: 'esittely/helsinki-v2/helsinki-yksityiskohdat.json', budapest: 'esittely/budapest-v1/budapest-yksityiskohdat.json',
+    edinburgh: 'esittely/edinburgh-v1/edinburgh-yksityiskohdat.json', dublin: 'esittely/dublin-v1/dublin-yksityiskohdat.json',
+    krakova: 'esittely/krakova-v1/krakova-yksityiskohdat.json', sevilla: 'esittely/sevilla-v1/sevilla-yksityiskohdat.json',
+    oslo: 'esittely/oslo-v1/oslo-yksityiskohdat.json',
+    bryssel: 'esittely/bryssel-v1/bryssel-yksityiskohdat.json', marseille: 'esittely/marseille-v1/marseille-yksityiskohdat.json',
+    bergen: 'esittely/bergen-v1/bergen-yksityiskohdat.json', granada: 'esittely/granada-v1/granada-yksityiskohdat.json',
+    tampere: 'esittely/tampere-v2/tampere-yksityiskohdat.json', vilna: 'esittely/vilna-v2/vilna-yksityiskohdat.json',
+    ljubljana: 'esittely/ljubljana-v1/ljubljana-yksityiskohdat.json', valletta: 'esittely/valletta-v1/valletta-yksityiskohdat.json',
+    sofia: 'esittely/sofia-v1/sofia-yksityiskohdat.json', bukarest: 'esittely/bukarest-v1/bukarest-yksityiskohdat.json',
+    luxemburg: 'esittely/luxemburg-v1/luxemburg-yksityiskohdat.json', kosice: 'esittely/kosice-v1/kosice-yksityiskohdat.json',
+    islanti: 'esittely/islanti-v1/islanti-yksityiskohdat.json', kreeta: 'esittely/kreeta-v1/kreeta-yksityiskohdat.json',
+    sisilia: 'esittely/sisilia-v3/sisilia-yksityiskohdat.json' });
+  // Kaikki 37 esittelykaupunkia (6 äänellistä + 31 äänetöntä) saavat yksityiskohtakuvat.
+  assert.deepEqual(Object.keys(OPAS_AINEISTOT.yksityiskohdat_polut).sort(), [...OPAS_AINEISTOT.esittely].sort());
+});
+
+test('äänetön esittely (omistaja 7.10. 18.2x): ei generointia, ei aani-, aani_pcm- eikä kesto_s-kenttiä; R2:n ääni soi, jos on', async () => {
+  const env = ymparisto();
+  env.OPAS_ESITTELY_TESTI = { testila: { ...ESITTELY, aaneton: true } };
+  env.ELEVEN_API_KEY = 'e';
+  const kirjoitukset = [];
+  const vanhaPut = env.PUHE_R2.put;
+  env.PUHE_R2.put = async (k, v) => { kirjoitukset.push(k); return vanhaPut(k, v); };
+  const H2 = { ...H }; delete H2['x-matkakirja-testi'];   // tuotantopyyntö: tavallisesti tekstitallenne → GET generoisi
+  const vanha = globalThis.fetch;
+  globalThis.fetch = async () => new Response(JSON.stringify({ query: { pages: {} }, claims: {}, entities: {} }));
+  try {
+    const d = await (await worker.fetch(new Request('https://pollo.example/opas/seuraava', { method: 'POST', headers: H2,
+      body: JSON.stringify({ kaupunki: 'Testilä', sijainti: { lat: 60, lon: 25 }, toive: 'Esittele kaupunki', istunto: 'an1' }) }), env, { waitUntil() {} })).json();
+    assert.equal(d.valmis, true); assert.equal(d.teksti, 'Kohde 0 on valmis pitkä kerronta.');
+    for (const k of ['aani', 'aani_pcm', 'kesto_s', 'aani_ajat']) assert.equal(k in d, false, `${k} ei kuulu äänettömälle`);
+    assert.ok(!kirjoitukset.some((k) => /teksti|opas\/[0-9a-f]{32}\.(t|json)/.test(k)), `ei tekstitallennetta: ${kirjoitukset}`);
+  } finally { globalThis.fetch = vanha; }
+  // Ääni myöhemmin R2:een → soi ilman muutosta.
+  const { createHash } = await import('node:crypto');
+  const sha = createHash('sha256').update(`william|eleven_v4_turbo|${ESITTELY.kohteet[0].teksti}`).digest('hex').slice(0, 32);
+  const g = env.PUHE_R2.get;
+  env.PUHE_R2.get = async (k) => (k === `opas/${sha}.mp3` ? { body: new Uint8Array(4), text: async () => '' } : g(k));
+  const { d: d2 } = await opas(env, { toive: 'Esittele kaupunki', istunto: 'an2' });
+  assert.ok(String(d2.aani).includes(sha));
+});
+
+test('näyttönimi ≠ tunnus: Reykjavík löytää islanti-esittelyn', async () => {
+  const urlit = [];
+  await oppaanEsittely({}, 'Reykjavík', async (u) => { urlit.push(String(u)); return new Response(JSON.stringify(ESITTELY)); });
+  assert.deepEqual(urlit, ['https://media.matkakirja.app/opas/esittely-aaneton-v3/islanti.json']);
 });

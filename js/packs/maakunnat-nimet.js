@@ -1181,6 +1181,7 @@ export const MAAKUNNAT_KAIKKI = {
   },
   CYP: {
     "Famagusta": "Famagusta",
+    "Kyproksen pohjoisosa": "Kyproksen pohjoisosa",
     "Larnaca": "Larnaca",
     "Limassol": "Limassol",
     "Nicosia": "Nikosia",

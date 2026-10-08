@@ -720,7 +720,7 @@ test('worker tuntee kehyslajit ja putoaa tuntemattomalla aloitukseen', () => {
   // äänikeskustelun kokeelle), ja chat antaa sille pyynnön kehyslajin.
   assert.ok(/kehysOhje\(kehysLaji\(kehys\)\)/.test(kehote),
     'kehyslajia ei liitetä järjestelmäkehotteeseen');
-  assert.ok(/pulunKehote\(\{[^}]*kehys: runko\?\.kehys/.test(kehote),
+  assert.ok(/pulunKehote(?:Osat)?\(\{[^}]*kehys: runko\?\.kehys/.test(kehote),
     'chat ei välitä kehyslajia kehotteelle');
 });
 
@@ -2696,6 +2696,8 @@ test('ajattelu suljetaan mallin mukaan, eikä se syö vastauksen sanarajaa', asy
   assert.deepEqual(ajatteluKentat('claude-sonnet-5'), { thinking: { type: 'disabled' } });
   assert.deepEqual(ajatteluKentat('claude-opus-5'), { thinking: { type: 'disabled' } });
   assert.deepEqual(ajatteluKentat('claude-haiku-4-5-20251001'), {});
+  // Haiku 5.5 (testimalli, kulut.js): ajattelu pois, muuten 700 tokenin katto kuluu ajatteluun (8.10.2026).
+  assert.deepEqual(ajatteluKentat('claude-haiku-5-5'), { thinking: { type: 'disabled' } });
   // Sonnet 5.5: `disabled` = 400, pienin tila on ajattelu vain työkalujen välissä.
   assert.deepEqual(ajatteluKentat('claude-sonnet-5-5'), { thinking: { type: 'between_tools' } });
   // Näillä `disabled` on 400: pienin vaiva on ainoa säädin.
@@ -3013,7 +3015,8 @@ test('järjestelmäkehote välimuistiin; luettava vastaus saa alkuohjeen välimu
       { status: 200, headers: { 'content-type': 'application/json' } });
   };
   try {
-    for (const runko of [{ kysymys: 'Mikä on Pariisi?' }, { kysymys: 'Mikä on Pariisi?', luetaan: 1 }]) {
+    for (const runko of [{ kysymys: 'Mikä on Pariisi?' }, { kysymys: 'Mikä on Pariisi?', luetaan: 1 },
+      { kysymys: 'Entä Louvre?', kehys: 'jatko' }]) {
       const v = await worker.fetch(new Request('https://pollo.example/', {
         method: 'POST',
         headers: { 'content-type': 'application/json', 'cf-connecting-ip': '203.0.113.7', origin: 'https://matkakirja.app' },
@@ -3024,12 +3027,17 @@ test('järjestelmäkehote välimuistiin; luettava vastaus saa alkuohjeen välimu
   } finally {
     globalThis.fetch = alkuperainen;
   }
-  const [kirjoitettu, luettava] = rungot.map((r) => r.system);
-  assert.equal(kirjoitettu.length, 1, 'kirjoitettu: yksi lohko kuten ennen');
-  assert.deepEqual(kirjoitettu[0].cache_control, { type: 'ephemeral' });
-  // Välimuistissa oleva etuliite tavu tavulta sama; alkuohje omana lohkonaan sen jälkeen.
-  assert.deepEqual(luettava[0], kirjoitettu[0]);
-  assert.deepEqual(luettava[1], { type: 'text', text: LUETTAVAN_ALKU });
+  const [kirjoitettu, luettava, jatko] = rungot.map((r) => r.system);
+  // K3 (8.10.2026): pohja + äänitagit välimuistilohkoina, kehyslaji (ja alkuohje) rajan jälkeen ilman välimuistia.
+  assert.equal(kirjoitettu.length, 3, 'pohja, äänitagit, kehys');
+  assert.deepEqual(kirjoitettu.map((l) => Boolean(l.cache_control)), [true, true, false]);
+  assert.match(kirjoitettu[2].text, /VASTAUKSEN LAJI: UUDEN AIHEEN/);
+  // Välimuistissa oleva etuliite tavu tavulta sama; alkuohje kehyksen perässä rajan jälkeen.
+  assert.deepEqual(luettava.slice(0, 2), kirjoitettu.slice(0, 2));
+  assert.ok(luettava[2].text.endsWith(LUETTAVAN_ALKU) && !luettava[2].cache_control);
+  // Kehyslajin vaihto (uusi → jatko) ei muuta välimuistilohkoja: ei uutta 14 k:n kirjoitusta.
+  assert.deepEqual(jatko.slice(0, 2), kirjoitettu.slice(0, 2));
+  assert.match(jatko[2].text, /VASTAUKSEN LAJI: JATKOKYSYMYS/);
 });
 
 test('Pulun taustatieto: valmis vastaus kontekstiin, ei näytettäväksi (omistaja 5.10.2026 klo 16.4x)', async () => {

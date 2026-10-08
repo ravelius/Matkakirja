@@ -8,6 +8,7 @@
  */
 import { OPAS_AINEISTOT } from './aineistot.js';
 import { OPAS_OMAT } from './opas-omat.js';
+import { OPAS_SALLITUT, sallittuId } from './sallitut.js';
 
 export const ESITTELY_JUURI = 'https://media.matkakirja.app/opas/esittely-v1/';
 const MUISTI_MS = 10 * 60 * 1000;
@@ -29,7 +30,10 @@ export function omatKohteet(kaupunki, env = null) {
 
 /** Kaupungin valmis esittely tai null (ei listalla, haku epäonnistui tai muoto väärä). env.OPAS_ESITTELY_TESTI: { id: data }. */
 export async function oppaanEsittely(env, kaupunki, haku = fetch, nyt = Date.now()) {
-  const id = kaupunkiId(kaupunki);
+  // Näyttönimi ≠ tunnus (Reykjavík → islanti): sallitut-listan tunnus, jos nimen oma id ei ole indeksissä.
+  const oma = kaupunkiId(kaupunki);
+  const id = (OPAS_AINEISTOT.esittely ?? []).includes(oma) ? oma
+    : (OPAS_SALLITUT.sallitut.find((x) => sallittuId(x.nimi) === sallittuId(kaupunki))?.id ?? oma);
   if (!id) return null;
   if (env?.OPAS_ESITTELY_TESTI) return env.OPAS_ESITTELY_TESTI[id] ?? null;
   const omat = omatKohteet(kaupunki, env);
@@ -39,12 +43,26 @@ export async function oppaanEsittely(env, kaupunki, haku = fetch, nyt = Date.now
   if (m && nyt - m.aika < MUISTI_MS) return m.data;
   let data = null;
   try {
-    const v = await haku(`${ESITTELY_JUURI}${id}.json`);
+    const polku = OPAS_AINEISTOT.esittely_polut?.[id];
+    const v = await haku(polku ? `https://media.matkakirja.app/${polku}` : `${ESITTELY_JUURI}${id}.json`);
     const d = v.ok ? await v.json() : null;
     data = Array.isArray(d?.kohteet) ? d : null;
   } catch { data = null; }
   muisti.set(id, { aika: nyt, data });
   return data;
+}
+
+/*
+ * KIERROKSEN ALKU (omistaja 7.10.: avaus lupaa "Kierros alkaa X:stä"): kaupungin avauksen nimeämä ensimmäinen pysähdys
+ * (esittelypohjan kierroksen ensimmäinen). Ilman tätä worker aloitti kameraa lähimmästä (Rooma keskipisteestä Trevi, avaus
+ * Forum Romanum). Uusissa esittelyissä kenttä kierros: [id, …]; ämpärin muuttumattomille v1-tiedostoille taulu.
+ */
+export const ESITTELY_ALKU = Object.freeze({ pariisi: 'Q2981', rooma: 'Q180212', lontoo: 'Q41225', koopenhamina: 'Q110289' });
+
+/** Avauksen lupaama kierroksen ensimmäinen kohde (Q) tai null (ei avausta → alku kameraa lähimmästä kuten ennen). */
+export function esittelynAlku(esittely, kaupunki) {
+  if (!esittely?.avaus) return null;
+  return esittely.kierros?.[0] ?? ESITTELY_ALKU[kaupunkiId(kaupunki)] ?? null;
 }
 
 /** Kohteen valmis kerronta tunnuksella; lyhyt (kierros) jos pyydetty ja olemassa. */

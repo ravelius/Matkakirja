@@ -2360,6 +2360,11 @@ export const MAAKUNTIEN_PULU = {
       { q: "Mitä Lara-rannalla tehdään merikilpikonnien hyväksi?", a: "Lara on Välimeren tärkeimpiä caretta- ja vihreän merikilpikonnan pesimärantoja. Kalastusosasto on pitänyt siellä hautomoa vuodesta 1978 ja siirtää vaarassa olevat munat suojaan." },
       { q: "Miksi Kuninkaiden haudat on nimetty kuninkaiden mukaan?", a: "Nimi tulee hautojen komeudesta: kuninkaita niihin ei haudattu, vaan Paphosin aatelisia ja korkeita virkamiehiä 200-luvulle jaa. asti. Osassa haudoista on dorilaisia pylväitä ja seinämaalauksia." },
     ],
+    "Kyproksen pohjoisosa": [
+      { q: "Mikä Kyrenian haaksirikko on?", a: "Kreikkalainen kauppalaiva, joka upposi noin vuonna 294 eaa. Kyrenian edustalla. Sukeltaja löysi hylyn 1965, ja arkeologit kaivoivat sen esiin 1967–1969. Hylky on esillä Kyrenian linnan museossa." },
+      { q: "Miksi Pyhän Hilarionin linna on vuorten harjalla?", a: "Linna kohoaa Kyrenian vuorten harjanteella, ja yhdessä Buffaventon ja Kantaran linnojen kanssa se muodostaa vuorten linnoitusketjun. Bysanttilaiset alkoivat linnoittaa niitä 1000-luvulta alkaen." },
+      { q: "Mikä Lala Mustafa Pashan moskeija oli ennen?", a: "Se oli Famagustan Pyhän Nikolaoksen katedraali, jonka rakentaminen alkoi 1298 ja joka vihittiin katoliseksi katedraaliksi 1328. Ottomaanit muuttivat sen moskeijaksi Famagustan valloituksen jälkeen 1571." },
+    ],
   },
   MLT: {
     "Southern Harbour": [

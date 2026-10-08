@@ -32,6 +32,7 @@
     },
     "offline": { "type": "object", "required": ["tiedosto", "sha256", "tavuja"], "description": "offline.json: maittain ladattavat laatat, maasto ja media (skeema 1.9)" },
     "lisenssit": { "type": "object", "required": ["tiedosto", "sha256", "tavuja"], "description": "lisenssit.json: aineistojen lisenssit ja attribuutiot (tools/vienti/lisenssit.mjs)" },
+    "asetukset": { "type": "object", "required": ["tiedosto", "sha256", "tavuja"], "description": "Skeema 1.59: kokoelmat/asetukset.json, natiivin Asetus.cs lukema valinnainen asetustiedosto (tavallinen objekti, ei kokoelmamuotoa; tools/vienti/asetukset.mjs)" },
     "logiikka": {
       "type": "array",
       "description": "Jokainen paketin funktio ({ $funktio } raakakerroksessa) luokiteltuna: mistä natiivi saa sen tuloksen (skeema 1.5, tools/vienti/logiikka.mjs). Lähdetekstiä ei ajeta.",
