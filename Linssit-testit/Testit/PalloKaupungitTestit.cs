@@ -41,7 +41,7 @@ namespace Matkakirja.Linssit.Testit
 
         static OpasKohde Kopio(OpasKohde k) => new OpasKohde { Id = k.Id, Nimi = k.Nimi, Lat = k.Lat, Lon = k.Lon, KokoM = k.KokoM, KorkeusM = k.KorkeusM, Luokka = k.Luokka, KestoS = k.KestoS, Kierros = true };
 
-        static List<Ruutu> Aja(Kaupunki c, bool hidas)
+        static List<Ruutu> Aja(Kaupunki c, bool hidas, List<(double t, string laji, string kohde, double kesto)> tap = null)
         {
             bool vanha = OpasSilmukka.PalloLento; OpasSilmukka.PalloLento = true;
             try
@@ -50,8 +50,9 @@ namespace Matkakirja.Linssit.Testit
                 var vastaukset = new List<(double t, int n, string toive)>(); var hiljaa = new List<double>();
                 double t = 0, lentoAlkoi = double.NaN;
                 s.Pyyda += (n, toive) => vastaukset.Add((t + VastausS, n, toive));
-                s.AlkaaPuhua += k => hiljaa.Add(t + k.KestoS);
-                s.LentoAlkaa += (k, m, _) => lentoAlkoi = t;
+                s.AlkaaPuhua += k => { hiljaa.Add(t + k.KestoS); tap?.Add((t, "puhe", k.Id, k.KestoS)); };
+                s.LentoAlkaa += (k, m, _) => { lentoAlkoi = t; tap?.Add((t, "lento", k?.Id, s.LentoKestoS)); };
+                s.Saapui += k => tap?.Add((t, "saapui", k.Id, 0));
                 Func<bool> laatat = null;
                 if (hidas) { s.LatausEdistys = () => HidasLatausaste; laatat = () => double.IsNaN(lentoAlkoi) || t - lentoAlkoi >= s.LentoKestoS + HidasSaapumisLaatatS; }
                 s.Aloita(c.Nimi);
@@ -67,7 +68,7 @@ namespace Matkakirja.Linssit.Testit
                         var k = Array.Find(c.Kohteet, x => x.Nimi == v.toive);
                         if (k != null) s.Vastaus(v.n, Kopio(k));
                     }
-                    for (int j = hiljaa.Count - 1; j >= 0; j--) if (hiljaa[j] <= t) { hiljaa.RemoveAt(j); s.AaniLoppui(); }
+                    for (int j = hiljaa.Count - 1; j >= 0; j--) if (hiljaa[j] <= t) { hiljaa.RemoveAt(j); s.AaniLoppui(); tap?.Add((t, "hiljaa", s.Nykyinen?.Id, 0)); }
                     s.Paivita(Dt, _ => 35, laatat);
                     var e = OpasKuvaus.KameraPaikka(s.Asento, c.Lat, c.Lon);
                     int kohde = s.Nykyinen == null ? -1 : Array.FindIndex(c.Kohteet, k => k.Id == s.Nykyinen.Id);
@@ -165,6 +166,70 @@ namespace Matkakirja.Linssit.Testit
             if (t.Kaanto > OpasSilmukka.PalloKaantoAstS + 0.2) t.Viat.Add($"kääntö {t.Kaanto:F1} °/s");
             if (t.Perilla < c.Kohteet.Length) t.Viat.Add($"perillä {t.Perilla}/{c.Kohteet.Length}");
             return t;
+        }
+
+        /// <summary>
+        /// PUHEEN JA LENNON TAHDISTUS (Päätoimittaja 8.10. ilta, juna 168/169): kerronta ei soi lähdön hetkellä (lento alkaa vasta
+        /// äänen ja LoppuTaukoS:n jälkeen), kerronta alkaa vasta lennon lopussa (aikaisintaan PuheEnnenS + 0,5 s ennen lennon loppua) ja
+        /// hiljaisuus kerronnan lopusta seuraavan alkuun on enintään HiljaisuusMaxS, kun lähdön siltalause (SiltaS) täyttää lennon alun.
+        /// Siirto-osuudet (tumma ruutu) ohitetaan.
+        /// </summary>
+        // Nykytila 8.10.: nopea 6,0–6,8 s, pitkät (~15 s) lennot 8,2–8,3 s; raja kiristetään Päätoimittajan valinnan jälkeen.
+        public const double SiltaS = 4, HiljaisuusMaxS = 9;
+        public sealed class Tahdistus { public string Kaupunki; public double Hiljaisuus, HiljaisuusHidas, PuheEnnen, Paallekkain; public int Osuuksia; public List<string> Viat = new List<string>(); }
+        public static Tahdistus MittaaTahdistus(Kaupunki c)
+        {
+            var tu = new Tahdistus { Kaupunki = c.Nimi };
+            foreach (bool hidas in new[] { false, true })
+            {
+                var tap = new List<(double t, string laji, string kohde, double kesto)>(); string vk = hidas ? "Hidas" : "Nopea";
+                Aja(c, hidas, tap);
+                double hiljaaAlkoi = double.NaN; string edPuhe = null;
+                for (int i = 0; i < tap.Count; i++)
+                {
+                    var e = tap[i];
+                    if (e.laji == "hiljaa") hiljaaAlkoi = e.t;
+                    if (e.laji == "lento")
+                    {
+                        var k = Array.Find(c.Kohteet, x => x.Id == e.kohde);
+                        int ki = Array.IndexOf(c.Kohteet, k);
+                        if (k == null || ki <= 0) continue;
+                        var ed = c.Kohteet[ki - 1];
+                        if (KierrosLento.EtaisyysM(ed.Lat, ed.Lon, k.Lat, k.Lon) >= OpasSilmukka.SiirtoRajaM) { hiljaaAlkoi = double.NaN; continue; }
+                        tu.Osuuksia++;
+                        // Kerronta soi lähdössä: edellinen puhe ei ole loppunut.
+                        if (double.IsNaN(hiljaaAlkoi) || tap.FindLastIndex(i, x => x.laji == "puhe") > tap.FindLastIndex(i, x => x.laji == "hiljaa"))
+                        { tu.Paallekkain++; tu.Viat.Add($"{vk} {ed.Nimi} → {k.Nimi}: kerronta soi lähdössä"); }
+                        // Seuraavan kerronnan alku suhteessa lennon loppuun.
+                        int pj = tap.FindIndex(i, x => x.laji == "puhe" && x.kohde == k.Id);
+                        if (pj < 0) continue;
+                        double loppu = e.t + e.kesto, ennen = loppu - tap[pj].t;
+                        tu.PuheEnnen = Math.Max(tu.PuheEnnen, ennen);
+                        if (ennen > OpasSilmukka.PuheEnnenS + 0.5) tu.Viat.Add($"{vk} {k.Nimi}: kerronta alkaa {ennen:F1} s ennen lennon loppua (lennon keskellä)");
+                        if (!double.IsNaN(hiljaaAlkoi))
+                        {
+                            double hiljaisuus = (tap[pj].t - hiljaaAlkoi) - SiltaS;
+                            // Hidas verkko: laattaodotus (LahtoOdotusMaxS 5 s) on hiljaisuutta — raportoidaan, raja vasta Päätoimittajan
+                            // valinnan jälkeen (lyhyempi laattaodotus pallossa tai lisälause), ks. docs/raportit/puhe-ja-lento-37-kaupunkia.
+                            if (hidas) { tu.HiljaisuusHidas = Math.Max(tu.HiljaisuusHidas, hiljaisuus); hiljaaAlkoi = double.NaN; continue; }
+                            tu.Hiljaisuus = Math.Max(tu.Hiljaisuus, hiljaisuus);
+                            if (hiljaisuus > HiljaisuusMaxS) tu.Viat.Add($"{vk} {ed.Nimi} → {k.Nimi}: hiljaisuus {hiljaisuus:F1} s (puhe loppui {hiljaaAlkoi:F1}, lento {e.t:F1}–{loppu:F1}, seuraava puhe {tap[pj].t:F1})");
+                        }
+                        hiljaaAlkoi = double.NaN;
+                    }
+                }
+            }
+            return tu;
+        }
+
+        [Testi] static void PuheJaLentoTahdissaKaikissaKaupungeissa()
+        {
+            var tulokset = Lue().Select(MittaaTahdistus).ToList();
+            Console.WriteLine("      | Kaupunki | osuuksia | hiljaisuus nopea s | hiljaisuus hidas s | puhe alkaa ennen lennon loppua s | kerronta lähdössä | viat |");
+            foreach (var t in tulokset) Console.WriteLine($"      | {t.Kaupunki} | {t.Osuuksia} | {t.Hiljaisuus:F1} | {t.HiljaisuusHidas:F1} | {t.PuheEnnen:F1} | {t.Paallekkain} | {t.Viat.Count} |");
+            var viat = tulokset.Where(t => t.Viat.Count > 0).Select(t => $"{t.Kaupunki}: {string.Join("; ", t.Viat.Take(3))}{(t.Viat.Count > 3 ? $" (+{t.Viat.Count - 3})" : "")}").ToList();
+            foreach (var v in viat) Console.WriteLine("      VIKA " + v);
+            Oleta.Tosi(viat.Count == 0, $"{viat.Count} kaupungissa tahdistusvikoja");
         }
 
         [Testi] static void PallokierrosKaikissaKaupungeissa()
