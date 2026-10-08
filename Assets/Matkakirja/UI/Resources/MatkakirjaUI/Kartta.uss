@@ -22,7 +22,7 @@
 .mk-kartuscha.mk-auki {
     max-width: none;
     padding: 11.2px 13.6px 12px 13.6px;
-    background-color: var(--tk-tumma-muste);
+    background-color: rgba(247, 239, 219, 0.94);
     border-width: 1px;
     border-color: var(--map-ink-55);
 }
@@ -354,7 +354,7 @@
     overflow: hidden;
     white-space: nowrap;
     font-size: 17px;
-    color: var(--tk-lasi-pinta-peitto);
+    color: var(--overlay-card);
 }
 
 .mk-kartuscha__pisteet {
@@ -422,7 +422,7 @@
     padding: 0;
     border-radius: var(--tk-kulma-kortti);
     border-color: var(--map-ink-35);
-    background-color: var(--tk-paperi-pergamentti);
+    background-color: rgba(239, 220, 180, 0.9);
     color: var(--map-ink);
 }
 
@@ -431,7 +431,7 @@
 }
 
 .mk-seliteNappi:active {
-    background-color: var(--paper-dark);
+    background-color: rgba(225, 204, 160, 0.95);
 }
 
 .mk-seliteNappi.mk-valittu {
@@ -638,7 +638,7 @@
     border-radius: 12.5px;
     border-width: 1px;
     border-color: var(--map-ink-45);
-    background-color: var(--tk-paperi-pinta);
+    background-color: rgba(255, 252, 240, 0.9);
     align-items: center;
     justify-content: center;
 }
@@ -1159,7 +1159,7 @@
 }
 
 .mk-nosto__lukija.mk-nosto__lukija--irti {
-    background-color: var(--tk-paperi-pinta);
+    background-color: rgba(246, 241, 228, 0.94);
 }
 
 .mk-nosto__ylarivi {
@@ -1325,7 +1325,7 @@
     border-width: 0;
     border-radius: 0;
     background-color: var(--lapinakyva);
-    color: var(--valkoinen);
+    color: rgba(255, 255, 255, 0.92);
 }
 
 .mk-nosto__selaa--vasen {
@@ -1342,7 +1342,7 @@
 
 .mk-nosto__selaa .mk-nappi__teksti {
     font-size: var(--tk-koko-nimio);
-    color: var(--valkoinen);
+    color: rgba(255, 255, 255, 0.92);
 }
 
 /* Web .nostosarja-kuvalaskuri: American Typewriter 10,88 px, harvennus 0,44, #f6f0e0 pohjalla rgba(18, 12, 4, 0.55). */

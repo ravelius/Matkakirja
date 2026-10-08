@@ -343,7 +343,7 @@
 }
 
 .mk-ylapalkki--kelluva .mk-pilleri:active {
-    background-color: var(--paper-dark);
+    background-color: rgba(225, 204, 160, 0.95);
 }
 
 .mk-ylapalkki--kelluva .mk-pilleri > .mk-ikoni {
@@ -364,7 +364,7 @@
 }
 
 .mk-ylapalkki--kelluva .mk-ikoninappi:active {
-    background-color: var(--paper-dark);
+    background-color: rgba(225, 204, 160, 0.95);
 }
 
 /* Saaririvi (omistaja 24.9.2026): pilleri ja napit Dynamic Islandin korkeudelle (37 pt) sen kummallekin
@@ -2500,7 +2500,7 @@
 }
 
 .mk-aloitus__kohde:active {
-    background-color: var(--tk-paperi-pinta);
+    background-color: rgba(255, 252, 242, 0.9);
     border-color: var(--map-ink-60);
 }
 
@@ -2648,7 +2648,7 @@
 }
 
 .mk-laukku__linssi:active {
-    background-color: var(--tk-tumma-muste);
+    background-color: rgba(252, 241, 212, 0.9);
 }
 
 .mk-laukku__linssi.mk-esikatselu {
@@ -2662,7 +2662,7 @@
 }
 
 .mk-laukku__linssi--ei.mk-paalla {
-    background-color: var(--tk-tumma-muste);
+    background-color: rgba(252, 241, 212, 0.9);
 }
 
 .mk-laukku__linssi--kesken {
@@ -2730,7 +2730,7 @@
 }
 
 .mk-laukku__aktivoi:active {
-    background-color: var(--tk-paperi-pinta);
+    background-color: rgba(255, 250, 238, 0.9);
     color: #9c6f1e;
 }
 
@@ -3496,7 +3496,7 @@
 }
 
 .mk-lukija-valikko__kappale--nykyinen {
-    background-color: var(--tk-tumma-reunus);
+    background-color: rgba(234, 184, 78, 0.3);
     color: var(--tk-paperi-korostus);
 }
 
@@ -3828,7 +3828,7 @@
     border-color: var(--map-ink-32);
     border-radius: 4px;
     background-color: rgba(255, 252, 244, 0.75);
-    color: var(--panel-2);
+    color: rgba(50, 36, 22, 0.94);
     font-size: 13px;
     white-space: normal;
 }
@@ -3939,7 +3939,7 @@
 
 .mk-palaute__kentta:focus > .unity-base-text-field__input {
     border-color: rgba(176, 138, 60, 0.95);
-    background-color: var(--tk-paperi-pinta);
+    background-color: rgba(255, 252, 240, 0.9);
 }
 
 /* Rasti (.periaate-rasti): ruutu + teksti, koko rivi napautettava. */
@@ -4364,7 +4364,7 @@
     padding: 0;
     font-size: 10.5px;
     letter-spacing: 114.29px; /* web 12px */
-    color: var(--kulta);
+    color: rgba(234, 184, 78, 0.95);
     -unity-text-align: middle-right;
 }
 

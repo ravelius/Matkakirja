@@ -389,7 +389,7 @@
 .mk-lehti__kuvateksti {
     font-size: 13px;
     white-space: normal;
-    color: var(--tk-himmennys-tumma);
+    color: rgba(33, 29, 24, 0.78);
     margin-bottom: 2px;
 }
 
@@ -740,7 +740,7 @@
     border-width: 1px;
     border-color: var(--map-ink-66);
     border-radius: 4px;
-    background-color: var(--tk-paperi-pinta);
+    background-color: rgba(255, 253, 245, 0.9);
     color: var(--tk-paperi-muste);
 }
 
@@ -1619,7 +1619,7 @@
     margin: 4px 0 0 0;
     font-size: 13px;
     white-space: normal;
-    color: var(--accent-dark);
+    color: rgba(138, 97, 20, 0.95);
 }
 
 .mk-numerot__vdem {
@@ -1858,7 +1858,7 @@
     margin-left: 6.4px;
     font-size: 10.9px;
     letter-spacing: 10.09px; /* web 1.1px */
-    color: var(--tk-paperi-korostus);
+    color: rgba(122, 85, 20, 0.95);
 }
 
 /* Maan uutiset (web .arrival-uutiset, .uutinen-rivi, .uutinen-kortti). */
@@ -1993,7 +1993,7 @@
     border-width: 1px;
     border-color: var(--map-ink-45);
     border-radius: var(--tk-kulma-keski);
-    background-color: var(--tk-paperi-pinta);
+    background-color: rgba(255, 250, 238, 0.9);
     color: var(--map-ink);
 }
 
@@ -2002,7 +2002,7 @@
 }
 
 .mk-lehti__kuuntele--soi {
-    background-color: var(--tk-tumma-reunus);
+    background-color: rgba(234, 184, 78, 0.28);
 }
 
 .mk-lehti__kuuntele--vanha {
@@ -2011,7 +2011,7 @@
 }
 
 .mk-lehti__kuuntele--vanha.mk-lehti__kuuntele--soi {
-    background-color: var(--tk-tumma-reunus);
+    background-color: rgba(234, 184, 78, 0.28);
 }
 
 .mk-lehti__kuuntele-merkki {
@@ -2133,7 +2133,7 @@
     padding: 8px 10px;
     border-width: 1px;
     border-radius: var(--tk-kulma-nappi);
-    border-color: var(--tk-tumma-reunus);
+    border-color: var(--overlay-line);
     background-color: rgba(255, 252, 244, 0.5);
     color: var(--map-ink-95);
 }

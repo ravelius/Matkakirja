@@ -158,8 +158,8 @@
 .mk-kysymys__kuvakehys--lippu .mk-kysymys__kuva {
     height: 150px;
     border-width: 8px;
-    border-color: var(--tk-tumma-muste);
-    background-color: var(--tk-tumma-muste);
+    border-color: rgba(252, 241, 212, 0.92);
+    background-color: rgba(252, 241, 212, 0.92);
     -unity-background-scale-mode: scale-to-fit;
 }
 

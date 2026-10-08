@@ -618,7 +618,7 @@
     min-height: 34px;
     padding: 4px 16px;
     border-color: var(--map-ink-50);
-    background-color: var(--tk-paperi-pinta);
+    background-color: rgba(247, 241, 226, 0.92);
     color: var(--map-ink);
 }
 
@@ -867,7 +867,7 @@
     min-height: 34px;
     padding: 4px 12px 4px 12px;
     border-color: var(--map-ink-50);
-    background-color: var(--tk-paperi-pinta);
+    background-color: rgba(247, 241, 226, 0.94);
     color: var(--map-ink);
 }
 

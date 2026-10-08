@@ -589,7 +589,7 @@
     padding: 0;
     border-width: 0;
     border-radius: 16.8px;
-    background-color: var(--tk-paperi-pinta);
+    background-color: rgba(245, 240, 226, 0.92);
     align-items: center;
     justify-content: center;
 }
@@ -625,7 +625,7 @@
     min-height: 33.6px;
     border-color: rgba(122, 85, 20, 0.3);
     border-radius: 16.8px;
-    background-color: var(--tk-paperi-pinta);
+    background-color: rgba(245, 240, 226, 0.94);
 }
 
 .mk-kohdekartta-kokoruutu__tyokalut {
