@@ -123,7 +123,7 @@ namespace Matkakirja.Linssit.Seikkailu
                 Nimi = nimi, Laji = kp > 0 ? nimi.Substring(0, kp) : "", Tunnus = kp > 0 ? nimi.Substring(kp + 1) : nimi,
                 Osa = MiniJson.Teksti(o, "osa"), Tyyppi = MiniJson.Teksti(o, "tyyppi"), Glb = MiniJson.Teksti(o, "glb"),
                 X = p[0], Y = p[1], Z = p[2], Leveys = MiniJson.Luku(o, "leveys") ?? 0, Korkeus = MiniJson.Luku(o, "korkeus") ?? 0,
-                Koko = MiniJson.Luku(o, "koko") ?? 0, OdotaS = MiniJson.Luku(o, "odota_s") ?? 0, KiertoY = MiniJson.Luku(o, "kierto_y"), Heitettava = MiniJson.Kentta(o, "heitettava") is bool hb && hb, Irrotettava = MiniJson.Kentta(o, "irrotettava") is bool ib && ib,
+                Koko = MiniJson.Luku(o, "koko") ?? 0, OdotaS = MiniJson.Luku(o, "odota_s") ?? MiniJson.Luku(o, "odotus_s") ?? 0, KiertoY = MiniJson.Luku(o, "kierto_y"), Heitettava = MiniJson.Kentta(o, "heitettava") is bool hb && hb, Irrotettava = MiniJson.Kentta(o, "irrotettava") is bool ib && ib,
                 Sarana = MiniJson.Kentta(o, "sarana") is object sa ? Vektori(sa) : null,
                 Yla = MiniJson.Kentta(o, "yla") is object ya ? Vektori(ya) : null,
                 Kiintea = MiniJson.Kentta(o, "kiintea") is bool kb && kb,
