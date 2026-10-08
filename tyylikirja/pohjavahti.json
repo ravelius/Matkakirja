@@ -46,9 +46,6 @@
   "Assets/Matkakirja/UI/Linssit/IhmisenTutkimusNakyma.cs": {
    "vari": 2
   },
-  "Assets/Matkakirja/UI/Linssit/IssKytkimet.cs": {
-   "vari": 14
-  },
   "Assets/Matkakirja/UI/Linssit/IssKytkinpoyta.cs": {
    "vari": 1
   },
@@ -71,7 +68,7 @@
    "vari": 7
   },
   "Assets/Matkakirja/UI/Linssit/RadioNakyma.cs": {
-   "vari": 47
+   "vari": 3
   },
   "Assets/Matkakirja/UI/Linssit/Tiedeliitenakyma.cs": {
    "vari": 1
