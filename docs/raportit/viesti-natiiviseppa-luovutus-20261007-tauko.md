@@ -3,7 +3,14 @@
 Luovuttaja: Natiiviseppä (Opus 5.5, high). Edellinen: viesti-natiiviseppa-luovutus-20261005-iltapaiva.md (käytännöt voimassa).
 Tarkempi lokirivistö: muisti natiiviseppa-tila-20261003.md (uusin rivi ylimpänä).
 
-## TILA 9.10. 00.4x (UUSIN)
+## TILA 9.10. 00.5x (UUSIN)
+TF 168 käynnissä 6a67a9b1:stä (iOS 37847901354, 21:35Z; muutosloki #4240 = 268 merkin teksti), Mac-odottaja päällä, juna/b13 = 4d13b1e3.
+**JUNA 169 git-runko = natiiviseppa/juna-169 f9c826a1d** (wt/proto-natiiviseppa-j169; BUILD 168 6a67a9b19 + Siirtoseppä 1b43eb127 (latauslaskuri, ASTC-tuki)
++ juna169 1630e8ef1 (v45s, dioraama-TAA ⊇ 95577f871) + LS1 13f809ad1 (ylöskatse) + ajallinen-169 df7c7d41a (kaupunki-TAA oletus pois) + NUI 311bb35ac
+(kooste-UI) + budjetti-169 9747db7f4 (UltraAtlaksetMt 300, LS2 kuittasi)) — ei ristiriitoja; TESTIT + simukäännös vasta TF 168 -käännöksen jälkeen.
+Muutosloki 169: mainitse "Olavinlinna avautuu varmemmin" + ylöskatse. Kuvapari Ajallinen pois/päällä (LS1 sk-ajallinen169.txt) junan 169 käännöksestä.
+
+## TILA 9.10. 00.4x
 **BUILD 168 = proto master 6a67a9b19273488b811e530272b8be27d6ffae79** (runko natiiviseppa/juna-168 4d13b1e3e = 7f0dcae51 + Siirtoseppä d4c3bf1f4 (v45r)
 + LS1 pallo-168 9f6ac8bfe + tf167-168 6265a62ac + NUI 901b20232 + LS2 989685f09 + kaupunki-sse; simukäännös 6a67a9b19 00.35 0 shader erroria,
 app lokit/natiiviseppa-app-168-4d13b1e3e; muutosloki 268 PT:n). Julkaisijalle lähetetty; AVOINNA: iOS-alkuaika → Mac-odottaja, juna/b13 51b873a2 → 4d13b1e3.
