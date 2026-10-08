@@ -1,4 +1,4 @@
-# TILANNE 8.10. klo 23.0x
+# TILANNE 8.10. klo 22.5x
 
 - **Junaan 168 (kevyet, PT 22.49):**
   1) Pariisin nosto: LS2:n koodi lukee index-v3 → v2 → index, ja nosto_m ohittaa jsonin. LS2 lähettää arvon noin 00.30.
