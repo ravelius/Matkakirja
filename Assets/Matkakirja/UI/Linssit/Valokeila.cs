@@ -15,18 +15,20 @@ namespace Matkakirja.Natiivi
 {
     public static class Valokeila
     {
-        public const int Leveys = 640, Korkeus = 400; // web .aikajana-ilmiokuva aspect-ratio 16 / 10, pieni kuva 640
+        // Terävyys (Päätoimittaja 8.10.2026): web .aikajana-ilmiokuva 16 / 10 oli pieni kuva 640; natiivissa ~365 pt × 3 (iPhone)
+        // ja ~680 pt × 2 (iPad) → 1152 × 720 (maski prosentteina, ulkoasu ennallaan). Välimuistin katto 12 → 8 muistin takia.
+        public const int Leveys = 1152, Korkeus = 720;
         const int Lohkot = 6; // web VALOKEILAN_LOHKOT
 
         static readonly Dictionary<string, Texture2D> muisti = new Dictionary<string, Texture2D>();
         static readonly LinkedList<string> jarjestys = new LinkedList<string>();
-        const int Katto = 12;
+        const int Katto = 8;
 
         /// <summary>Maskattu kuva (välimuistista tai laskettuna); null, jos kuvaa ei saatu.</summary>
         public static void Hae(string osoite, int siemen, Action<Texture2D> valmis) =>
             Hae(osoite, "#" + siemen, Leveys, Korkeus, () => Soikiot(siemen), valmis);
 
-        public const int KertomusL = 600, KertomusK = 400;
+        public const int KertomusL = 1080, KertomusK = 720; // oli 600 × 400 (web); 3:2 laitteen tarkkuudella
         static readonly float[] KertomusAsemat = { 0.34f, 0.58f, 0.78f, 0.94f }, KertomusArvot = { 1f, 0.72f, 0.2f, 0f };
 
         /// <summary>
@@ -51,7 +53,7 @@ namespace Matkakirja.Natiivi
                 () => new List<Soikio> { new Soikio { Cx = 50, Cy = 50, Rx = 52, Ry = 52, Asemat = Kertomus2Asemat, Arvot = Kertomus2Arvot } }, valmis);
         }
 
-        public const int Kertomus2L = 960, Kertomus2K = 640;
+        public const int Kertomus2L = 1200, Kertomus2K = 800; // oli 960 × 640; puolen ruudun kuva laitteen tarkkuudella
         static readonly float[] Kertomus2Asemat = { 0.70f, 0.82f, 0.92f, 1.0f }, Kertomus2Arvot = { 1f, 0.62f, 0.16f, 0f };
 
         static void Hae(string osoite, string muoto, int leveys, int korkeus, Func<List<Soikio>> soikiot, Action<Texture2D> valmis)

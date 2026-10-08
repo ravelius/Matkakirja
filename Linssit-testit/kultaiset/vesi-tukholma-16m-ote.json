@@ -1,0 +1,101 @@
+{
+ "kohde": "tukholma",
+ "origo": {
+  "lat": 59.3293,
+  "lon": 18.0686,
+  "ellipsoidikorkeus_m": 0
+ },
+ "sade_km": 15,
+ "ruutu_m": 16,
+ "muoto": "little-endian: kaikki kärjet (float32 x itä, y pohjoinen, z ylös [ENU origossa, maan kaarevuus mukana], d rantaetäisyys m, katto 30), sitten kaikki indeksit (uint32, palan omat kärjet: indeksi + pala.karjet[0])",
+ "karkia": 2116,
+ "indekseja": 8088,
+ "nosto_m_suositus": 0.4,
+ "nosto_selitys": "z on vesitaso ilman nostoa; lisää nosto (ENU z) ajossa, jotta Googlen vesipinnan kohina peittyy mutta laiturit ja veneet jäävät näkyviin",
+ "ranta": "alfa = smoothstep(0, 3, d) pehmentää rannan; d = 0 rantaviivalla",
+ "geoidi_keskusta_m": 23.205,
+ "krediitti": "Vesi: © OpenStreetMap contributors (ODbL), ESA WorldCover 2021 (CC BY 4.0)",
+ "lahteet": [
+  "OSM water-polygons-split-4326 (osmdata.openstreetmap.de)",
+  "Geofabrik gis_osm_water_a_free_1",
+  "ESA WorldCover 2021 v200",
+  "Copernicus GLO-30 (vesitasot)",
+  "NGA EGM2008 2,5′ (PROJ us_nga_egm08_25)"
+ ],
+ "luotu": "2026-10-08T17:35:49.644Z",
+ "palat": [
+  {
+   "karjet": [
+    0,
+    12
+   ],
+   "indeksit": [
+    0,
+    42
+   ],
+   "bbox": [
+    -213.4,
+    346.59,
+    34.92,
+    -175.21,
+    381.68,
+    34.92
+   ]
+  },
+  {
+   "karjet": [
+    12,
+    872
+   ],
+   "indeksit": [
+    42,
+    3270
+   ],
+   "bbox": [
+    -888.21,
+    -888,
+    23.13,
+    120.03,
+    63.04,
+    23.21
+   ]
+  },
+  {
+   "karjet": [
+    884,
+    1015
+   ],
+   "indeksit": [
+    3312,
+    3924
+   ],
+   "bbox": [
+    120,
+    -888,
+    23.03,
+    1128.27,
+    120.17,
+    23.2
+   ]
+  },
+  {
+   "karjet": [
+    1899,
+    217
+   ],
+   "indeksit": [
+    7236,
+    852
+   ],
+   "bbox": [
+    440.97,
+    120.04,
+    23.06,
+    1127.97,
+    327.53,
+    23.17
+   ]
+  }
+ ],
+ "huom": "testiote: 4 keskimmäistä palaa vesi-tukholma-16m:stä (Karttaseppä 8.10.)"
+}

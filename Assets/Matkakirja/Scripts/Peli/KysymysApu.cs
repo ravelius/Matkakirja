@@ -650,12 +650,14 @@ namespace Matkakirja.Natiivi
                 AikaLoppui = q.AikaLoppui,
                 Viesti = viesti,
             };
+            // Commons-varan leveydet laitteen tarkkuudelle (190–225 pt × 3; oli 640 / 320 / 480; Wikimedian vakioportaat 960 ja 1280;
+            // terävyys, Päätoimittaja 8.10.2026). Peilatut osoitteet (osoitteet) ensin kuten ennen.
             string Osoite(string tiedosto, int leveys) =>
                 tiedosto.StartsWith("http", StringComparison.Ordinal) ? tiedosto
                 : osoitteet != null && osoitteet.TryGetValue(tiedosto, out var u) && !string.IsNullOrEmpty(u) ? u
                 : CommonsUrl(tiedosto, leveys);
-            if (q.Laji == KysymysMuoto.Kuva && !string.IsNullOrEmpty(q.KuvaTiedosto)) d.KuvaUrl = Osoite(q.KuvaTiedosto, 640);
-            else if (q.Laji == KysymysMuoto.Lippu && !string.IsNullOrEmpty(q.LippuTiedosto)) d.KuvaUrl = Osoite(q.LippuTiedosto, 320);
+            if (q.Laji == KysymysMuoto.Kuva && !string.IsNullOrEmpty(q.KuvaTiedosto)) d.KuvaUrl = Osoite(q.KuvaTiedosto, 1280);
+            else if (q.Laji == KysymysMuoto.Lippu && !string.IsNullOrEmpty(q.LippuTiedosto)) d.KuvaUrl = Osoite(q.LippuTiedosto, 960);
             // Kuvan tekijä kerrotaan faktassa vastauksen jälkeen (web: vastaus paljastaisi paikan).
             if (d.KuvaUrl != null) d.KuvaLahde = q.Laji == KysymysMuoto.Lippu ? "Lippu: Wikimedia Commons" : null;
             if (q.Laji == KysymysMuoto.Pulma && q.PulmaTiedot != null)
@@ -667,7 +669,7 @@ namespace Matkakirja.Natiivi
                 d.Luonnos = t.Luonnos;
                 if (t.Kuvat != null)
                 {
-                    d.VaihtoehtoKuvat = t.Kuvat.Select(x => string.IsNullOrEmpty(x?.Tiedosto) ? null : CommonsUrl(x.Tiedosto, 480)).ToList();
+                    d.VaihtoehtoKuvat = t.Kuvat.Select(x => string.IsNullOrEmpty(x?.Tiedosto) ? null : CommonsUrl(x.Tiedosto, 960)).ToList();
                     d.KuvaLahde = t.KuvaLahteet;
                 }
             }

@@ -205,6 +205,11 @@ namespace Matkakirja.Natiivi
         readonly PalloKierto kierto;
         readonly CesiumKaupunki kaupunki;
         readonly PalloKori kori = new PalloKori();
+        /// <summary>Katse ylös korista (omistaja 21.1x, PT 22.0x): kupu näkyy vedettäessä.</summary>
+        readonly KoriKatseVeto koriKatse = new KoriKatseVeto();
+        /// <summary>Pallon äänimaisema kehityskaupungeissa (Pelikoodari 8.10., Tausta-säädin).</summary>
+        readonly PalloAanimaisemaSoitin palloAanet = new PalloAanimaisemaSoitin();
+        public static string KoriKatseTila => Auki ? Viimeisin.koriKatse.Tila() : "opas ei auki";
         readonly Dictionary<string, double> maaKorkeudet = new Dictionary<string, double>(StringComparer.Ordinal);
         readonly Dictionary<string, AudioClip> klipit = new Dictionary<string, AudioClip>(StringComparer.Ordinal);
         ILinssiYmparisto y;
@@ -370,6 +375,7 @@ namespace Matkakirja.Natiivi
             // Kuumailmapallon korinäkymä (Päätoimittaja 7.10. 09.1x) koko oppaassa: omistaja TF 162 tuli linssivalikon kautta
             // (aloitusvalikko → Pariisi, ei kaupunkitilaa) eikä nähnyt koria eikä köysiä.
             kori.Kayta(nakymaAuki, kaupunki.Kamera);
+            koriKatse.Paivita(kori.Nakyy, kaupunki.Kamera, kierto);
             IlmoitaKierros();
             // Esilataus latauskuvan aikana: esityksen ensimmäinen kohde heti, kun kierroslista on haettu (omistaja 12.5x).
             // Linssireitti (omistaja 8.10. ~09.0x): sama esilataus siirtoruudun aikana (palkki kattaa myös 1. kohteen), ilman avausnäkymän kohdistusta.
@@ -399,6 +405,10 @@ namespace Matkakirja.Natiivi
                     puhuu || (silta != null && silta.isPlaying), silmukka.Seuraava != null, kysyOdotus.Kaynnissa))
             { jatkoVastauksenJalkeen = false; o.Kirjaa("opas: kierros jatkuu vastauksen jälkeen"); JatkaKierrosta(); }
             OpasSilmukka.PalloLento = kori.Nakyy;
+            // Laattaodotus lähdössä (hidas verkko 11–13 s ilman kertojaa, Päätoimittaja 8.10. ilta: hyväksytään, kun pallon omat äänet
+            // soivat): korin narina ja köysi kerran odotuksen alussa; tuuli soi äänimaisemassa korkeuden mukaan (TuuliMaa ≥ 0,08).
+            if (OpasSilmukka.PalloLento && silmukka.LaattaOdotusS > 0.5) { if (!odotusAaniSoi) { odotusAaniSoi = true; kori.OdotusAani(); } }
+            else if (silmukka.LaattaOdotusS <= 0) odotusAaniSoi = false;
             // PCM: loppu = kaikki ladattu ja soitettu; varmistus: klippi pysähtyi (ei saa jäädä odottamaan ikuisesti, toisto 16.4x).
             bool pcmPysahtyi = pcmNyt != null && puhe != null && !puhe.isPlaying && Time.unscaledTime - puheAlkoi > 1f;
             bool loppui = !tauolla && (pcmNyt != null ? (puhe != null && pcmNyt.SoitettuLoppuun(puhe.timeSamples)) || pcmPysahtyi : Time.unscaledTime >= puheLoppuu && (puhe == null || !puhe.isPlaying));
@@ -704,12 +714,18 @@ namespace Matkakirja.Natiivi
         }
         /// <summary>Kertojan ja siltalauseen taso mikserin Lukija-säätimestä (OpasAanitasot; ennen 8.10. aina 1,0).</summary>
         static float KertojanTaso => (float)Matkakirja.Linssit.Aanet.OpasAanitasot.Kertoja(Asetukset.Taso(Voima.Lukija));
-        /// <summary>Ukkonen: −3 dB (omistaja TF 166), mikserin Sää, väistö −9 dB kertojan alla (ilman väistöä kumahdus oli hetkellisesti
-        /// kertojan tasolla; PalloKaupungitTestit.Aanitasot junassa 169).</summary>
+        /// <summary>Ukkonen: −3 dB (omistaja TF 166), mikserin Sää, väistö kertojan alla (PalloKaupungitTestit.Aanitasot: ilman väistöä
+        /// kumahdus oli hetkellisesti kertojan tasolla).</summary>
         float UkkosenTavoite() => (float)Matkakirja.Linssit.Aanet.OpasAanitasot.Ukkonen(PalloKori.TehosteKerroin, Asetukset.Taso(Voima.Saa), OpasAaniSoi);
         /// <summary>Joka ruutu: mikserin muutokset kuuluvat heti, ukkosen väistö liukuu.</summary>
         void PaivitaAanitasot()
         {
+            {
+                var g = kaupunki.Georef; var kam = kaupunki.Kamera;
+                float mt = g != null ? Mathf.Max(1e-6f, g.transform.lossyScale.x) : 1f;
+                double kork = g != null && kam != null ? (kam.transform.position.y - g.transform.position.y) / mt : 300;
+                palloAanet.Paivita(o, nakymaAuki ? NykyinenKaupunkiId : null, kork);
+            }
             if (puhe != null) puhe.volume = KertojanTaso;
             if (silta != null) silta.volume = KertojanTaso;
             if (ukkosLahde != null) ukkosLahde.volume = (float)Matkakirja.Linssit.Aanet.OpasAanitasot.Liuku(ukkosLahde.volume, UkkosenTavoite(), Time.unscaledDeltaTime);
@@ -952,7 +968,7 @@ namespace Matkakirja.Natiivi
         string kysymystenId, kysymystenNimi;
         /// <summary>Kaupunkitilassa kysymyksen vastauksen jälkeen kierros jatkuu tämän tauon jälkeen (s).</summary>
         public const float JatkoViiveS = 2f;
-        bool jatkoVastauksenJalkeen;
+        bool jatkoVastauksenJalkeen, odotusAaniSoi;
         int ilmoitettuIndeksi = -2, ilmoitettuMaara = -1; string[] ilmoitetutKysymykset;
         void IlmoitaKierros()
         {
@@ -1928,7 +1944,7 @@ namespace Matkakirja.Natiivi
         const double PalloLaskuS = 4.5;
         IEnumerator PalloLaskuun(OpasKohde k)
         {
-            double alku = silmukka.LentoKestoS - OpasSilmukka.PuheEnnenS - PalloLaskuS;
+            double alku = silmukka.LentoKestoS - OpasSilmukka.PuheEnnen(silmukka.LentoKestoS) - PalloLaskuS;
             while (silmukka != null && silmukka.Vaihe == OpasVaihe.Lentaa && silmukka.Nykyinen == k && silmukka.VaiheAika < alku) yield return null;
             if (silmukka == null || silmukka.Vaihe != OpasVaihe.Lentaa || silmukka.Nykyinen != k || alku < 3 || silta == null || silta.isPlaying) yield break;
             var r = pallolauseet.Laskuun(siltalauseet.OnRyhma);
@@ -2217,20 +2233,109 @@ namespace Matkakirja.Natiivi
             o.Kirjaa($"opas: PCM-virta valmis {Time.realtimeSinceStartup - t0:F1} s, {virta.KirjoitettuS:F1} s ääntä ({virta.KirjoitettuS / Mathf.Max(0.1f, Time.realtimeSinceStartup - (tEka >= 0 ? tEka : t0)):F2} ×)");
         }
 
+        // ---- OMA KORKEUSMALLI (Linssiseppä 8.10., PT: Googlen Map Tiles -ehdot C4 kieltävät korkeuksien lukemisen laatoista) ----
+        // Kaikki oppaan pintanäytteet (kohteen maa ja kehä, kehyksen maa, vapaan lennon pinta, testikomento `opas pinta`) kulkevat
+        // Pinnat-kutsun kautta: kytkin OmaKorkeusPaalla (asetus opas.OmaKorkeus, oletus 1; komento `opas korkeus oma|google`)
+        // valitsee Karttasepän mallin (Ydin OmaKorkeus, R2 kartta/korkeus/v1/korkeus-<id>.json + -lahi/-kauko.png, kaupunki
+        // lähimmästä sallitusta) tai vanhan Googlen SampleHeightMostDetailedin. Mallin ulkopuolella tai latauksen epäonnistuessa NaN
+        // (kutsujat käyttävät lähintä tunnettua tai arviota), ei Googlea. Enintään kaksi kaupunkia muistissa.
+        public static bool? OmaKorkeusPakko;
+        public static bool OmaKorkeusPaalla => OmaKorkeusPakko ?? Asetus.Luku("opas.OmaKorkeus", 1) != 0;
+        public const string KorkeusJuuri = "https://media.matkakirja.app/kartta/korkeus/v1/";
+        static readonly Dictionary<string, OmaKorkeus> korkeusMallit = new Dictionary<string, OmaKorkeus>();
+        static readonly List<string> korkeusJarjestys = new List<string>();
+        static readonly HashSet<string> korkeusHaussa = new HashSet<string>(), korkeusPuuttuu = new HashSet<string>();
+        /// <summary>Ladatun mallin krediitti (Lähteet): viimeksi käytetyn kaupungin.</summary>
+        public static string OmaKorkeusKrediitti { get; private set; }
+
+        static string KorkeusId(double lat, double lon)
+        {
+            string paras = null; double lahin = double.MaxValue;
+            foreach (var k in SallitutLista)
+            {
+                double d = KierrosLento.EtaisyysM(k.Lat, k.Lon, lat, lon);
+                if (d < lahin && d < Math.Max(k.RM, 5000) + 15000) { lahin = d; paras = k.Id; }
+            }
+            return paras ?? Kehityskaupungit.Lahella(lat, lon);
+        }
+
+        /// <summary>Pinnan ellipsoidikorkeus pisteissä (lon, lat): NaN, jos ei osumaa.</summary>
+        IEnumerator Pinnat(double3[] pisteet, Action<double[]> valmis)
+        {
+            var hs = new double[pisteet.Length];
+            for (int i = 0; i < hs.Length; i++) hs[i] = double.NaN;
+            if (pisteet.Length == 0) { valmis(hs); yield break; }
+            if (OmaKorkeusPaalla)
+            {
+                string id = KorkeusId(pisteet[0].y, pisteet[0].x);
+                if (id == null) { valmis(hs); yield break; }
+                if (!korkeusMallit.ContainsKey(id) && !korkeusPuuttuu.Contains(id))
+                {
+                    if (!korkeusHaussa.Contains(id)) o.StartCoroutine(LataaKorkeus(id));
+                    float t0 = Time.realtimeSinceStartup;
+                    while (korkeusHaussa.Contains(id) && Time.realtimeSinceStartup - t0 < 40f) yield return null;
+                }
+                if (korkeusMallit.TryGetValue(id, out var m))
+                {
+                    for (int i = 0; i < hs.Length; i++) hs[i] = m.Korkeus(pisteet[i].y, pisteet[i].x);
+                    OmaKorkeusKrediitti = m.Krediitti;
+                }
+                valmis(hs); yield break;
+            }
+            var pinta = kaupunki.Pinta;
+            if (pinta == null) { valmis(hs); yield break; }
+            var tehtava = pinta.SampleHeightMostDetailed(pisteet);
+            while (!tehtava.IsCompleted) yield return null;
+            var t = tehtava.IsFaulted ? null : tehtava.Result;
+            if (t?.sampleSuccess != null)
+                for (int i = 0; i < hs.Length && i < t.sampleSuccess.Length; i++) if (t.sampleSuccess[i]) hs[i] = t.longitudeLatitudeHeightPositions[i].z;
+            valmis(hs);
+        }
+
+        /// <summary>Kaupungin malli: Documents/korkeus/ (testi) tai R2; PNG:t puretaan taustasäikeessä.</summary>
+        IEnumerator LataaKorkeus(string id)
+        {
+            korkeusHaussa.Add(id);
+            float t0 = Time.realtimeSinceStartup;
+            string kansio = System.IO.Path.Combine(Application.persistentDataPath, "korkeus");
+            var tavut = new Dictionary<string, byte[]>();
+            IEnumerator Hae(string nimi)
+            {
+                string pol = System.IO.Path.Combine(kansio, nimi);
+                if (System.IO.File.Exists(pol)) { try { tavut[nimi] = System.IO.File.ReadAllBytes(pol); } catch (Exception) { } if (tavut.ContainsKey(nimi)) yield break; }
+                using var p = UnityWebRequest.Get(KorkeusJuuri + nimi);
+                p.timeout = 60;
+                yield return p.SendWebRequest();
+                if (p.result == UnityWebRequest.Result.Success) tavut[nimi] = p.downloadHandler.data;
+            }
+            string jsonNimi = "korkeus-" + id + ".json";
+            yield return Hae(jsonNimi);
+            if (!tavut.TryGetValue(jsonNimi, out var jt)) { korkeusHaussa.Remove(id); korkeusPuuttuu.Add(id); o.Kirjaa($"opas: korkeusmalli {id} puuttuu"); yield break; }
+            string json = Encoding.UTF8.GetString(jt);
+            var j = MiniJson.Objekti(MiniJson.Jasenna(json));
+            foreach (var oo in MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(j, "osat")))
+                if (MiniJson.Teksti(MiniJson.Objekti(oo), "tiedosto") is string n) yield return Hae(n);
+            var tyo = System.Threading.Tasks.Task.Run(() => OmaKorkeus.Lue(json, n => tavut.TryGetValue(n, out var b) ? b : null));
+            while (!tyo.IsCompleted) yield return null;
+            korkeusHaussa.Remove(id);
+            if (tyo.IsFaulted || tyo.Result.Osat.Count == 0) { korkeusPuuttuu.Add(id); o.Kirjaa($"opas: korkeusmalli {id} virheellinen ({tyo.Exception?.GetBaseException().Message})"); yield break; }
+            korkeusMallit[id] = tyo.Result; korkeusJarjestys.Remove(id); korkeusJarjestys.Add(id);
+            while (korkeusJarjestys.Count > 2) { korkeusMallit.Remove(korkeusJarjestys[0]); korkeusJarjestys.RemoveAt(0); }
+            o.Kirjaa($"opas: korkeusmalli {id} ladattu {Time.realtimeSinceStartup - t0:F1} s ({string.Join(", ", tyo.Result.Osat.ConvertAll(x => $"{x.Nimi} {x.W}×{x.H} {x.RuutuM:F0} m"))})");
+        }
+
         /// <summary>Kohteen maa ja korkeus: keskipiste + kehä (OpasKuvaus.MaaJaKorkeus; Eiffel-korjaus 7.10.).</summary>
         IEnumerator Korkeus(OpasKohde k)
         {
-            var pinta = kaupunki.Pinta;
-            if (pinta == null) yield break;
+            if (kaupunki.Pinta == null && !OmaKorkeusPaalla) yield break;
             double r = OpasKuvaus.KehaSade(k.KokoM);
             var pisteet = new double3[1 + OpasKuvaus.KehaPisteita];
             pisteet[0] = new double3(k.Lon, k.Lat, 0);
             for (int i = 0; i < OpasKuvaus.KehaPisteita; i++) { var (la, lo) = OpasKuvaus.KehaPiste(k.Lat, k.Lon, r, i); pisteet[1 + i] = new double3(lo, la, 0); }
-            var tehtava = pinta.SampleHeightMostDetailed(pisteet);
-            while (!tehtava.IsCompleted) yield return null;
-            var t = tehtava.IsFaulted ? null : tehtava.Result;
-            if (t == null || t.sampleSuccess == null || t.sampleSuccess.Length < pisteet.Length) yield break;
-            double H(int i) => t.sampleSuccess[i] ? t.longitudeLatitudeHeightPositions[i].z : double.NaN;
+            double[] hs = null;
+            yield return Pinnat(pisteet, x => hs = x);
+            if (hs == null) yield break;
+            double H(int i) => hs[i];
             var keha = new List<double>();
             for (int i = 1; i < pisteet.Length; i++) keha.Add(H(i));
             double keskus = H(0);
@@ -2248,7 +2353,7 @@ namespace Matkakirja.Natiivi
         /// pisteissä (SampleHeightMostDetailed, yksittäiset pisteet ilman kehää) lokiin.</summary>
         public static bool Pinta(IReadOnlyList<(double lat, double lon)> pisteet)
         {
-            if (!Auki || Viimeisin.kaupunki.Pinta == null || pisteet.Count == 0) return false;
+            if (!Auki || (Viimeisin.kaupunki.Pinta == null && !OmaKorkeusPaalla) || pisteet.Count == 0) return false;
             Viimeisin.o.StartCoroutine(Viimeisin.PintaNayte(pisteet));
             return true;
         }
@@ -2256,12 +2361,11 @@ namespace Matkakirja.Natiivi
         {
             var q = new double3[p.Count];
             for (int i = 0; i < p.Count; i++) q[i] = new double3(p[i].lon, p[i].lat, 0);
-            var t = kaupunki.Pinta.SampleHeightMostDetailed(q);
-            while (!t.IsCompleted) yield return null;
-            var r = t.IsFaulted ? null : t.Result;
+            double[] hs = null;
+            yield return Pinnat(q, x => hs = x);
             for (int i = 0; i < p.Count; i++)
                 o.Kirjaa($"opas: pinta {p[i].lat.ToString("F5", System.Globalization.CultureInfo.InvariantCulture)}, {p[i].lon.ToString("F5", System.Globalization.CultureInfo.InvariantCulture)}: "
-                    + (r != null && r.sampleSuccess[i] ? $"{r.longitudeLatitudeHeightPositions[i].z:F2} m (ellipsoidi)" : "ei osumaa"));
+                    + (hs != null && !double.IsNaN(hs[i]) ? $"{hs[i]:F2} m (ellipsoidi, {(OmaKorkeusPaalla ? "oma malli" : "Google")})" : "ei osumaa"));
         }
 
         IEnumerator KorkeusPisteessa(double lat, double lon)
@@ -2284,7 +2388,7 @@ namespace Matkakirja.Natiivi
                 foreach (var avain in poistettavat) pisteKorkeudet.Remove(avain);
             }
             // Vapaa lento (LS1 6.10.): enintään 6 näytettä kesken (kamera, ennakko ja kehät), muut pyydetään seuraavalla kierroksella.
-            if (pinta == null || pisteKorkeudet.ContainsKey(a) || (silmukka != null && silmukka.VapaaTila && pisteNaytteet.Count >= 6) || !pisteNaytteet.Add(a)) yield break;
+            if ((pinta == null && !OmaKorkeusPaalla) || pisteKorkeudet.ContainsKey(a) || (silmukka != null && silmukka.VapaaTila && pisteNaytteet.Count >= 6) || !pisteNaytteet.Add(a)) yield break;
             float t0 = Time.realtimeSinceStartup;
             // Kehyksen maa (ei vapaa tila): keskipiste + kehä kuten Korkeus(k), jottei tornin tai katon keskipiste ehdi kehykseen
             // ennen kohteen omaa näytettä (Eiffel-korjaus 7.10.). Vapaa lento näytteistää yhden pisteen (luotain, kehät erikseen).
@@ -2292,23 +2396,22 @@ namespace Matkakirja.Natiivi
             var pisteet = new double3[kehalla ? 1 + OpasKuvaus.KehaPisteita : 1];
             pisteet[0] = new double3(lon, lat, 0);
             if (kehalla) for (int i = 0; i < OpasKuvaus.KehaPisteita; i++) { var (la, lo) = OpasKuvaus.KehaPiste(lat, lon, OpasKuvaus.KehaSade(60), i); pisteet[1 + i] = new double3(lo, la, 0); }
-            var tehtava = pinta.SampleHeightMostDetailed(pisteet);
-            while (!tehtava.IsCompleted) yield return null;
+            double[] hs = null;
+            yield return Pinnat(pisteet, x => hs = x);
             pisteNaytteet.Remove(a);
-            var tulos = tehtava.IsFaulted ? null : tehtava.Result;
-            bool ok = tulos?.sampleSuccess != null && tulos.sampleSuccess.Length > 0 && tulos.sampleSuccess[0];
-            if (kehalla && tulos?.sampleSuccess != null && tulos.sampleSuccess.Length == pisteet.Length)
+            bool ok = hs != null && hs.Length > 0 && !double.IsNaN(hs[0]);
+            double tulosH = ok ? hs[0] : double.NaN;
+            if (kehalla && hs != null && hs.Length == pisteet.Length)
             {
                 var keha = new List<double>();
-                for (int i = 1; i < pisteet.Length; i++) keha.Add(tulos.sampleSuccess[i] ? tulos.longitudeLatitudeHeightPositions[i].z : double.NaN);
-                double keskus = ok ? tulos.longitudeLatitudeHeightPositions[0].z : double.NaN;
-                var (maaK, _) = OpasKuvaus.MaaJaKorkeus(keskus, keha);
-                if (!double.IsNaN(maaK)) { ok = true; tulos.longitudeLatitudeHeightPositions[0] = new double3(lon, lat, maaK); }
+                for (int i = 1; i < pisteet.Length; i++) keha.Add(hs[i]);
+                var (maaK, _) = OpasKuvaus.MaaJaKorkeus(tulosH, keha);
+                if (!double.IsNaN(maaK)) { ok = true; tulosH = maaK; }
             }
             // Epäonnistunut näyte (simu 17.0x: Pláka 0,1 s:ssa, arvio 45 m, vaikka Ateena ~100 m): lähin tunnettu korkeus 15 km:n
             // sisältä (sama kaupunki), vasta sitten yleisarvio.
             double vara = viimeMaa.h is double vh && KierrosLento.EtaisyysM(viimeMaa.lat, viimeMaa.lon, lat, lon) < 15000 ? vh : OpasSilmukka.MaaArvioM;
-            pisteKorkeudet[a] = ok ? tulos.longitudeLatitudeHeightPositions[0].z : vara;
+            pisteKorkeudet[a] = ok ? tulosH : vara;
             if (ok) viimeMaa = (lat, lon, pisteKorkeudet[a]);
             if (silmukka == null || !silmukka.VapaaTila)   // vapaa lento näytteistää useita kertoja sekunnissa: ei lokiin
                 o.Kirjaa($"opas: maa ({lat:F4}, {lon:F4}) {(ok ? "" : "näyte epäonnistui, lähin tunnettu ")}{pisteKorkeudet[a]:F0} m, {Time.realtimeSinceStartup - t0:F1} s");
@@ -2601,7 +2704,7 @@ namespace Matkakirja.Natiivi
             klipit.Clear();
             pcmVirrat.Clear(); pcmNyt = null;
             maaKorkeudet.Clear();
-            kori.Sulje(); OpasSilmukka.PalloLento = false;
+            kori.Sulje(); koriKatse.Pois(); palloAanet.Sulje(); OpasSilmukka.PalloLento = false;
             AsetaKaupunkitila(null);
             Vaihtui?.Invoke(null);
         }

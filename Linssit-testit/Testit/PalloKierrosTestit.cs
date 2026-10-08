@@ -45,6 +45,7 @@ namespace Matkakirja.Linssit.Testit
         {
             public double T, E, N, U, EtM;
             public OpasVaihe Vaihe;
+            public bool Leijuu;   // lipumiskaari päässä (omistaja 8.10. 18.4x: "pallo vain leijuu")
             public int Kohde;   // nykyisen pysähdyksen indeksi Reitissä (−1 = ei vielä perillä ensimmäisessä)
         }
 
@@ -96,7 +97,7 @@ namespace Matkakirja.Linssit.Testit
                     s.Paivita(Dt, _ => 35, laatat);
                     var e = OpasKuvaus.KameraPaikka(s.Asento, Lat0, Lon0);
                     int kohde = s.Nykyinen == null ? -1 : Array.FindIndex(Reitti, k => k.Id == s.Nykyinen.Id);
-                    r.Add(new Ruutu { T = t, E = e.e, N = e.n, U = e.u, EtM = s.Asento.EtaisyysM, Vaihe = s.Vaihe, Kohde = kohde });
+                    r.Add(new Ruutu { T = t, E = e.e, N = e.n, U = e.u, EtM = s.Asento.EtaisyysM, Vaihe = s.Vaihe, Kohde = kohde, Leijuu = s.Leijuu });
                     // Valmis: viimeinen kerronta loppui ja opas odottaa (kierros päättyi).
                     if (kohde == Reitti.Length - 1 && hiljaa.Count == 0 && s.Vaihe != OpasVaihe.Puhuu && !s.KierrosKaynnissa) break;
                 }
@@ -174,7 +175,7 @@ namespace Matkakirja.Linssit.Testit
                     for (int k = Math.Max(1, a); k <= b; k++)
                     {
                         double ve = (r[k].E - r[k - 1].E) / Dt, vn = (r[k].N - r[k - 1].N) / Dt;
-                        if (Math.Sqrt(ve * ve + vn * vn) < SeisooMS) { seis += Dt; if (seis > pisin) { pisin = seis; pisinT = r[k].T; pisinV = r[k].Vaihe; } }
+                        if (Math.Sqrt(ve * ve + vn * vn) < SeisooMS && !r[k].Leijuu) { seis += Dt; if (seis > pisin) { pisin = seis; pisinT = r[k].T; pisinV = r[k].Vaihe; } }
                         else seis = 0;
                     }
                     Console.WriteLine($"      {verkko} {Reitti[i].Id} → {Reitti[i + 1].Id}: pisin seisahdus {pisin:F1} s (päättyi {pisinT:F1} s, {pisinV})");

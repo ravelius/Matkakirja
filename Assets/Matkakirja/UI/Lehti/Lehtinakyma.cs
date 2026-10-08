@@ -1688,7 +1688,8 @@ namespace Matkakirja.Natiivi
                 if (kuva != null)
                 {
                     var k = Rakenne.El("mk-lehti__sisallyskuva", b, PickingMode.Ignore);
-                    NostoSisalto.HaeKuvaPienena(kuva, 104, 104, t => { if (t != null) k.style.backgroundImage = new StyleBackground(t); });
+                    int px = Mathf.CeilToInt(52f * UiKerros.PikseliaPisteessa); // 52 pt laitteen tarkkuudella (oli 104 px)
+                    NostoSisalto.HaeKuvaPienena(kuva, px, px, t => { if (t != null) k.style.backgroundImage = new StyleBackground(t); });
                 }
                 var t2 = Rakenne.El("mk-lehti__sisallysteksti", b, PickingMode.Ignore);
                 string otsikko = s.Laji == LehtiSivuLaji.Etusivu && lehti.Laji == LehtiLaji.Kaupunki ? "Etusivu" : s.Otsikko ?? s.Lyhyt ?? "";

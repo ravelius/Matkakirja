@@ -124,14 +124,19 @@ namespace Matkakirja.Linssit.Kierros
         /// on, pitäen kuitenkin kameran suunnan siihen päin, missä nykyinen kohde on"): silmä siirtyy vaakasuunnassa matkan d kohti
         /// pistettä (lat, lon), katsepiste ja silmän korkeus pysyvät; suuntima, kallistus ja etäisyys lasketaan uudesta silmästä.
         /// </summary>
-        public static Kuvakulma Lipunut(Kuvakulma k, double kohtiLat, double kohtiLon, double dM)
+        public static Kuvakulma Lipunut(Kuvakulma k, double kohtiLat, double kohtiLon, double dM) => Lipunut(k, kohtiLat, kohtiLon, dM, out _);
+
+        /// <summary>kaariLoppu = kaari on päässä (seuraavan puolella tai sen tasalla): pallo leijuu (omistaja 18.4x).</summary>
+        public static Kuvakulma Lipunut(Kuvakulma k, double kohtiLat, double kohtiLon, double dM, out bool kaariLoppu)
         {
-            if (dM <= 0.01) return k;
-            var e = KameraPaikka(k, k.Lat, k.Lon);
             const double R = 6371000, A = Math.PI / 180;
             double ke = (kohtiLon - k.Lon) * R * Math.Cos(k.Lat * A) * A, kn = (kohtiLat - k.Lat) * R * A;
+            // Seuraava samassa paikassa (alle 50 m): pallo leijuu (omistaja 18.4x; aineistossa lähes päällekkäisiä kohteita).
+            kaariLoppu = ke * ke + kn * kn < 50 * 50;
+            if (kaariLoppu || dM <= 0.01) return k;
+            var e = KameraPaikka(k, k.Lat, k.Lon);
             double de = ke - e.e, dn = kn - e.n, pit = Math.Sqrt(de * de + dn * dn);
-            if (pit < 1) return k;
+            if (pit < 1) { kaariLoppu = true; return k; }
             // KAARI SAMALLA ETÄISYYDELLÄ (omistaja 8.10. 18.4x: "Pallo voi siis kiertää samalla etäisyydellä saman kohteen toiselle
             // puolelle jos se on lähempänä seuraavaa kohdetta mutta muuten ei kannata lähteä kauemmas"): silmä kiertää kohdetta
             // vaakasäteellä r0 lyhyempää kaarta kohti seuraavan kohteen suuntaa, enintään sen kohdalle (lähin piste); siellä pallo
@@ -140,7 +145,12 @@ namespace Matkakirja.Linssit.Kierros
             if (r0 < 1) return k;
             double ero = Math.Atan2(kn, ke) - Math.Atan2(e.n, e.e);
             ero = ero - 2 * Math.PI * Math.Floor((ero + Math.PI) / (2 * Math.PI));   // −π…π
-            double fi = Math.Sign(ero) * Math.Min(dM / r0, Math.Abs(ero)), c = Math.Cos(fi), si = Math.Sin(fi);
+            // Seuraava kaaren sisällä (PalloKaupungitTestit: Granada, Alhambran 500 m:n kaari vei silmän 128 m:n päässä olevan
+            // seuraavan ohi, ja lento palasi taaksepäin): kaari päättyy, kun silmä on seuraavan tasalla (0,9 × etäisyys).
+            double lK = Math.Sqrt(ke * ke + kn * kn), loppuKulma = lK < r0 ? Math.Acos(Math.Min(1, 0.9 * lK / r0)) : 0;
+            double jaljella = Math.Max(0, Math.Abs(ero) - loppuKulma);
+            kaariLoppu = dM / r0 >= jaljella;
+            double fi = Math.Sign(ero) * Math.Min(dM / r0, jaljella), c = Math.Cos(fi), si = Math.Sin(fi);
             double se = e.e * c - e.n * si, sn = e.e * si + e.n * c;
             double ve = -se, vn = -sn, vaaka = Math.Sqrt(ve * ve + vn * vn), pysty = e.u - k.KatseKorkeusM;
             double suunta = Math.Atan2(ve, vn) / A, kall = Math.Atan2(vaaka, Math.Max(1, pysty)) / A;
@@ -249,13 +259,41 @@ namespace Matkakirja.Linssit.Kierros
             // Silmän vaakaetäisyys kohteesta pidetään peruspolun mukaisena (et·sin(kall)), jolloin lisänousu menee suoraan ylös eikä
             // silmä liiku taaksepäin; kallistus jyrkkenee nousun ajaksi.
             double rho = SumennusRho(a, b, w0, w1, matka);
-            if (rho > ZoomRho)
-            {
-                double et2 = ZoomPolku(w0, w1, matka, p, rho).leveys;
-                if (et2 > et) { kall = Math.Asin(Math.Min(1, et * Math.Sin(kall * Math.PI / 180) / et2)) * 180 / Math.PI; et = et2; }
-            }
+            if (rho > ZoomRho) et = Math.Max(et, ZoomPolku(w0, w1, matka, p, rho).leveys);
+            // ZOOMAUS PYSTYSUUNNASSA (PalloKaupungitTestit 8.10.: 37 kaupungissa silmä kulki taaksepäin 1–75 m, kun pallo lähti
+            // kaaren päästä katsoen kohteesta poispäin tai saapui kääntörajan takia sivuttain/taaksepäin; zoomauskaari työnsi silmää
+            // katsesuunnan mukana eteen ja veti takaisin): silmän vaakaetäisyys kohteesta muuttuu suoraan lähtö- ja tulokehyksen
+            // välillä (vaakaosuuden mukana), ja kaaren lisäetäisyys menee ylöspäin (kallistus jyrkkenee). Katse-etäisyys ja kuvan
+            // koko seuraavat yhä van Wijk–Nuij-polkua.
+            double A = Math.PI / 180, ha = a.EtaisyysM * Math.Sin(a.Kallistus * A), hb = b.EtaisyysM * Math.Sin(b.Kallistus * A);
+            double ua = a.EtaisyysM * Math.Cos(a.Kallistus * A), ub = b.EtaisyysM * Math.Cos(b.Kallistus * A);
+            double hv = V(ha, hb), uv = V(ua, ub);
             double suunta = KierrosLento.Kiedo(a.Suuntima + KierrosLento.Kiedo(b.Suuntima - a.Suuntima) * sv);
+            // LYHYT LENTO, SILMÄN SUORA POLKU (PalloKaupungitTestit: Granada 128 m, suunta 73 → 98° 300 m:n vaakaetäisyydellä kaarsi
+            // silmää 22 m eteen ja 12 m takaisin): silmä kulkee vaakatasossa suoraan lähtöpaikasta loppupaikkaan ja katsoo kohteeseen,
+            // jos silmän ja katsepisteen polut eivät lähesty toisiaan (ei nopeaa kääntöä); muuten suunta kääntyy kuten ennen.
+            if (matka < LyhytSuoraM && TryLyhytSuora(a, b, sv, ha, hb, out double h2, out double s2)) { hv = h2; suunta = s2; }
+            et = Math.Max(et, Math.Sqrt(hv * hv + uv * uv));
+            kall = Math.Asin(Math.Min(1, hv / et)) / A;
             return new Kuvakulma(V(a.Lat, b.Lat), V(a.Lon, b.Lon), et, kall, suunta, V(a.KatseKorkeusM, b.KatseKorkeusM));
+        }
+
+        public const double LyhytSuoraM = 1500;
+        static bool TryLyhytSuora(Kuvakulma a, Kuvakulma b, double sv, double ha, double hb, out double h, out double suunta)
+        {
+            h = 0; suunta = 0;
+            var ea = KameraPaikka(a, a.Lat, a.Lon); var eb = KameraPaikka(b, a.Lat, a.Lon);
+            const double R = 6371000, A = Math.PI / 180;
+            double be = (b.Lon - a.Lon) * R * Math.Cos(a.Lat * A) * A, bn = (b.Lat - a.Lat) * R * A;
+            double raja = 0.4 * Math.Min(ha, hb);
+            for (int i = 0; i <= 16; i++)
+            {
+                double f = i / 16.0, de = be * f - (ea.e + (eb.e - ea.e) * f), dn = bn * f - (ea.n + (eb.n - ea.n) * f);
+                if (de * de + dn * dn < raja * raja) return false;
+            }
+            double te = be * sv - (ea.e + (eb.e - ea.e) * sv), tn = bn * sv - (ea.n + (eb.n - ea.n) * sv);
+            h = Math.Sqrt(te * te + tn * tn); suunta = KierrosLento.Kiedo(Math.Atan2(te, tn) / A);
+            return true;
         }
 
         /// <summary>van Wijk–Nuij: leveydestä w0 leveyteen w1 vaakamatkan u1 yli; p 0…1 → (vaakaosuus 0…1, leveys).</summary>

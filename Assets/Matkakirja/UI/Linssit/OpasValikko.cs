@@ -166,7 +166,7 @@ namespace Matkakirja.Natiivi
         bool riviAuki;
         IVisualElementScheduledItem esittely;
         bool nappiNakyy;
-        enum Nakyma { Paa, Takyt, Maanosat, Maat, Kaupungit, Kysy, Liiku, Mika, Aika, Lahteet }
+        enum Nakyma { Paa, Takyt, Maanosat, Maat, Kaupungit, Kysy, Liiku, Mika, Aika, Lahteet, Aanet }
 
         /// <summary>Oppaan linssi auki (✕ pois, LinssiUi.PaivitaSulku).</summary>
         public static bool Nakyy => Viimeisin != null && Viimeisin.nakyy;
@@ -1678,13 +1678,27 @@ namespace Matkakirja.Natiivi
                 case Nakyma.Lahteet:
                     Takaisin("Lähteet", Nakyma.Paa);
                     Komento("Kartta- ja maastoaineistot", () => { KrediititTiivis.NaytaKaikki(); Debug.Log("MATKAKIRJA opas: kartta-aineistot"); });
+                    // Kenttä-äänitysten nimeämiset (Pelikoodari 8.10.2026, CC BY / BY-SA): oma alanäkymä.
+                    Alanakyma("Äänet", () => Avaa(Nakyma.Aanet));
                     // Säätiedot (Pelikoodari 8.10.: /opas/saa, MET Norwayn lisenssiehto): aina näkyvissä, kun sää on käytettävissä.
                     Kirjasimet.Aseta(Rakenne.Teksti(SaaLahde, "mk-linssivalikko__lahde", Kohde), Kirjasin.Moderni);
+                    // Korkeusmallit (Päätoimittaja 8.10.2026: LS1:n korkeuslukija 25d32fd39; tekstit Karttasepän korkeus-20261008-jsoneista).
+                    foreach (var k in KorkeusLahteet) Kirjasimet.Aseta(Rakenne.Teksti(k, "mk-linssivalikko__lahde", Kohde), Kirjasin.Moderni);
+                    // Elävän kaupungin aineistot (LS1 8.10.2026: ElavaKaupunki.Krediitti, esim. OSM ODbL ja ESA WorldCover; null = ei riviä).
+                    string elava = ElavaKrediitti();
+                    if (!string.IsNullOrWhiteSpace(elava)) Kirjasimet.Aseta(Rakenne.Teksti(elava.Trim(), "mk-linssivalikko__lahde", Kohde), Kirjasin.Moderni);
                     Viiva();
                     Vieritys();
                     var lahteet = KuvaLahteet();
                     if (lahteet.Count == 0) Kirjasimet.Aseta(Rakenne.Teksti("Ei kuvalähteitä.", "mk-linssivalikko__lahde", rivit), Kirjasin.Moderni);
                     foreach (var l in lahteet) Kirjasimet.Aseta(Rakenne.Teksti(l, "mk-linssivalikko__lahde", rivit), Kirjasin.Moderni);
+                    break;
+                case Nakyma.Aanet:
+                    Takaisin("Äänet", Nakyma.Lahteet);
+                    Vieritys();
+                    var aanet = AaniLahteet();
+                    if (aanet.Count == 0) Kirjasimet.Aseta(Rakenne.Teksti("Ei äänilähteitä.", "mk-linssivalikko__lahde", rivit), Kirjasin.Moderni);
+                    foreach (var l in aanet) Kirjasimet.Aseta(Rakenne.Teksti(l, "mk-linssivalikko__lahde", rivit), Kirjasin.Moderni);
                     break;
                 case Nakyma.Kysy:
                     RakennaKysy();
@@ -1975,6 +1989,13 @@ namespace Matkakirja.Natiivi
         };
         const string SaatilaAvain = "matkakirja-pallo-saatila";
         /// <summary>Säätietojen lähderivi (CC BY 4.0 -ehto; Pelikoodarin worker /opas/saa).</summary>
+        static readonly string[] KorkeusLahteet =
+        {
+            "Korkeus, Pariisi: © IGN – LiDAR HD (Licence Ouverte Etalab 2.0)",
+            "Korkeus, Tukholma ja muut kaupungit: Copernicus GLO-30 © DLR e.V. 2010–2014 ja © Airbus Defence and Space GmbH 2014–2018, Copernicus-ohjelma (EU/ESA)",
+            "Rakennukset: © OpenStreetMap contributors (ODbL)",
+        };
+
         const string SaaLahde = "Säätiedot: MET Norway (Norjan ilmatieteen laitos), CC BY 4.0";
 
         /// <summary>LS1:n silta (junat 165–166): KaupunkiKuva.Valinta "paiva" | "yo" = voimassa oleva Saatila.Aika.</summary>
@@ -2229,6 +2250,38 @@ namespace Matkakirja.Natiivi
                 string rivi = string.Join(" · ", osat);
                 // Havainnekuva näkyy aina (tekijä usein tyhjä, LS1); muu kuva vain, jos tekijä tai lisenssi on annettu.
                 if ((havainne || osat.Count > 1) && !tulos.Contains(rivi)) tulos.Add(rivi);
+            }
+            return tulos;
+        }
+
+        /// <summary>LS1:n Matkakirja.Natiivi.ElavaKaupunki.Krediitti heijastuksella (junasta riippumaton); null, jos ei ole.</summary>
+        static string ElavaKrediitti() =>
+            typeof(OpasValikko).Assembly.GetType("Matkakirja.Natiivi.ElavaKaupunki")
+                ?.GetProperty("Krediitti", System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Static)?.GetValue(null) as string;
+
+        [Serializable] sealed class AaniNimeaminen { public string lahde, nimi, tekija, lisenssi, url; }
+        [Serializable] sealed class AaniLahdeTiedosto { public AaniNimeaminen[] nimeamiset; }
+
+        /// <summary>
+        /// Pelin kenttä-äänitysten nimeämiset (Pelikoodari 8.10.2026: 43 CC BY / BY-SA -äänitystä maisemakoreissa ja kaupunkien
+        /// äänissä; lisenssiehto): "nimi · tekijä · lisenssi" kuten kuvalähteet. Data: kopio webin data/aanilahteet.json:sta
+        /// (Resources/Lahteet), joten näkyy myös ilman verkkoa; päivitys kopioimalla tiedosto uudelleen.
+        /// </summary>
+        static List<string> AaniLahteet()
+        {
+            var tulos = new List<string>();
+            var ta = Resources.Load<TextAsset>("Lahteet/aanilahteet");
+            if (ta == null) return tulos;
+            AaniLahdeTiedosto d = null;
+            try { d = JsonUtility.FromJson<AaniLahdeTiedosto>(ta.text); }
+            catch (Exception e) { Debug.LogWarning("MATKAKIRJA opas: aanilahteet.json: " + e.Message); }
+            if (d?.nimeamiset == null) return tulos;
+            foreach (var a in d.nimeamiset)
+            {
+                var osat = new[] { a?.nimi, a?.tekija, a?.lisenssi }.Where(x => !string.IsNullOrWhiteSpace(x)).Select(x => x.Trim()).ToList();
+                if (osat.Count < 2) continue;
+                string rivi = string.Join(" · ", osat);
+                if (!tulos.Contains(rivi)) tulos.Add(rivi);
             }
             return tulos;
         }

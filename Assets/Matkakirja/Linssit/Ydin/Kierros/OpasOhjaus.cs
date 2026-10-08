@@ -66,6 +66,23 @@ namespace Matkakirja.Linssit.Kierros
             return new Kuvakulma(perus.Lat, perus.Lon, et, kall, KierrosLento.Kiedo(perus.Suuntima + Kierto), perus.KatseKorkeusM);
         }
 
+        /// <summary>
+        /// Rajat ilman pelaajan ohjausta (kallistus KallistusMin…KallistusMax, kamera vähintään KattoYlaM maan yläpuolella): lennon
+        /// kohdekehys on sama kuin pysähdyksen Sovella-asento levossa (Linssiseppä 8.10., PalloKaupungitTestit: matalilla kehyksillä
+        /// kamera hyppäsi saapuessa 1,5–14,5 m, kun raja tuli voimaan vasta pysähdyksellä).
+        /// </summary>
+        public static Kuvakulma Rajoita(Kuvakulma perus, double maaM)
+        {
+            double kall = Rajaa(perus.Kallistus, KallistusMin, KallistusMax), et = perus.EtaisyysM;
+            double tarve = (maaM + KattoYlaM - perus.KatseKorkeusM) / Math.Max(1e-6, et);
+            if (tarve > 0)
+            {
+                if (tarve >= 1) et = Math.Max(et, maaM + KattoYlaM - perus.KatseKorkeusM);
+                kall = Math.Min(kall, Math.Acos(Math.Min(1, tarve)) * 180 / Math.PI);
+            }
+            return new Kuvakulma(perus.Lat, perus.Lon, et, kall, perus.Suuntima, perus.KatseKorkeusM);
+        }
+
         /// <summary>Lennon alussa: siirtymät pois (lento alkaa nykyisestä asennosta, joten mikään ei hyppää).</summary>
         public void Nollaa()
         {

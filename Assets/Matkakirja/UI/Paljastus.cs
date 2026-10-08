@@ -54,6 +54,9 @@ namespace Matkakirja.Natiivi
         const float MusiikinKerroin = 0.13f / 0.35f;
 
         const int KuvaMs = 420, TekstiMs = 760, LeimaMs = 700, PieniLiikeMs = 900;
+        // Seikkailun löytö (Päätoimittaja 8.10.2026, Thiefin taso): animaatiot ≤ 250 ms (mk-paljastus--peli) ja Jatka ~0,6 s:n
+        // jälkeen (oli 1,2 s), ettei ohitus tapahdu vahingossa; muut paljastukset ennallaan.
+        const int PeliKuvaMs = 200, PeliTekstiMs = 400;
 
         readonly VisualElement kerros, scene, tunnus, kuva, kuvapaikka, reuna, caption, loyto, leima;
         readonly Label alaotsake, nimi, palkkio, fakta, isoisa, arvo, leimaPvm;
@@ -189,6 +192,9 @@ namespace Matkakirja.Natiivi
             sulkuSallittu = false;
             ohitaOdotus = null;
             foreach (var c in new[] { "mk-auki", "mk-kuva", "mk-nakyy", "mk-lyoty", "mk-jatka" }) kerros.RemoveFromClassList(c);
+            bool peli = tyyppi == "seikkailu";
+            kerros.EnableInClassList("mk-paljastus--peli", peli);
+            kerros.EnableInClassList("mk-paljastus--tumma", peli);   // KORTTI-pohjan tumma variantti vain videopelissä (omistaja 21.2x)
             jatka.pickingMode = PickingMode.Ignore;
             kerros.style.display = DisplayStyle.Flex;
             Auki = true;
@@ -233,8 +239,9 @@ namespace Matkakirja.Natiivi
                 OdotaTaiNapauta(PieniLiikeMs, JatkaEsiin);
                 return;
             }
-            Myohemmin(KuvaMs, KuvaEsiin);
-            Myohemmin(KuvaMs + TekstiMs, () =>
+            int kuvaMs = peli ? PeliKuvaMs : KuvaMs, tekstiMs = peli ? PeliTekstiMs : TekstiMs;
+            Myohemmin(kuvaMs, KuvaEsiin);
+            Myohemmin(kuvaMs + tekstiMs, () =>
             {
                 kerros.AddToClassList("mk-nakyy");
                 if (!paa) { JatkaEsiin(); return; }

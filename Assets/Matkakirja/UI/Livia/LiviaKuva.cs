@@ -377,7 +377,7 @@ namespace Matkakirja.Natiivi
                 const float X = -7, Y = -10, W = 126, H = 126;
                 var md = mgc.Allocate(4, 6, kyparaKuva);
                 if (md.vertexCount == 0) return;
-                var valk = new Color32(255, 255, 255, 255);
+                var valk = Tyylikirja.Kehys.Valkoinen;
                 void Kulma(float x, float y, float u, float v)
                 {
                     var p = m.Kuvaa(new Vector2(x, y));

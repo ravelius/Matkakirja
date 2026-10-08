@@ -111,12 +111,16 @@ namespace Matkakirja.Natiivi
             vasen = new OpasTapit.Tappi(juuri, "mk-tappi mk-tappi--vasen", Ikonit.Viiva["kompassi"], v => Vasen = v);
             oikea = new OpasTapit.Tappi(juuri, "mk-tappi mk-tappi--oikea", Ikonit.Viiva["silma"], v => Oikea = v);
             vasen.Juuri.tooltip = "Liiku";
+            // Thiefin taso (Päätoimittaja 8.10.2026): tapit näkyvät vain kosketuksessa, levossa näkymättöminä paikallaan.
+            vasen.Juuri.AddToClassList("mk-tappi--vain-kosketus");
+            oikea.Juuri.AddToClassList("mk-tappi--vain-kosketus");
             oikea.Juuri.tooltip = "Katso ympärillesi";
             toimintoRivi = Ohjausnappi.Ryhma(juuri);
             toimintoRivi.style.top = StyleKeyword.Auto;
             toimintoRivi.style.right = OpasTapit.Reuna + OpasTapit.Halkaisija * 0.5f - Tyylikirja.Nappi.Ohjaus * 0.5f;
             toimintoRivi.style.bottom = TappiAla + OpasTapit.Halkaisija + 8f;
             toimintoNappi = Ohjausnappi.Nappi(Ikonit.Kasi, "Poimi", PyydaToiminto, toimintoRivi);
+            toimintoRivi.AddToClassList("mk-ohjausryhma--haivytys");   // häivyttäen (Päätoimittaja 8.10.2026), ei ponnahdusta
             toimintoRivi.style.display = DisplayStyle.None;
             kerros.JokaRuutu += Paivita;
             viimeisin = this;
@@ -187,7 +191,7 @@ namespace Matkakirja.Natiivi
             string tila = !nakyy ? null : TestiToiminto == null || TestiToiminto == "auto" ? EsineTila() : TestiToiminto == "pois" ? null : TestiToiminto;
             if (tila == toimintoTila) return;
             toimintoTila = tila;
-            toimintoRivi.style.display = tila == null ? DisplayStyle.None : DisplayStyle.Flex;
+            Rakenne.Nayta(toimintoRivi, tila != null, Tyylikirja.Kesto.Sulku);
             if (tila == null) return;
             toimintoNappi.Clear();
             toimintoNappi.Add(new SvgIkoni(Kuvake(tila)));
@@ -398,6 +402,42 @@ namespace Matkakirja.Natiivi
             PuluKaappaa();
         }
 
+        static MethodInfo maailmaVihje;
+        static bool maailmaVihjeHaettu;
+
+        /// <summary>Seikkailu käynnissä (SeikkailuPelaaja.Aktiivinen; linnan ☰-valikon Vihje-rivi näkyy vain silloin).</summary>
+        public static bool SeikkailuKaynnissa => PelaajaAktiivinen();
+
+        /// <summary>
+        /// VIHJEEN PYYNTÖ ILMAN PULUA (omistaja 8.10.: videopeleissä ei Pulua; Päätoimittaja: linnan ☰ → Vihje): sama vihjereitti kuin
+        /// P/Y-näppäimellä, mutta ilman tietokerroksen tarjousta. Siirtosepän maailmavihje (kimallus + ääni) tulee SeikkailuPelaaja.
+        /// PyydaVihje() (Siirtoseppä 8.10., historia-m c15eb5b8a; vanha nimi PuluVihje samaan reittiin varana). true = vihje annettiin.
+        /// </summary>
+        public static bool PyydaVihje(string lahde)
+        {
+            if (!maailmaVihjeHaettu)
+            {
+                maailmaVihjeHaettu = true;
+                var tp = typeof(SeikkailuTapit).Assembly.GetType("Matkakirja.Natiivi.SeikkailuPelaaja");
+                const BindingFlags F = BindingFlags.Public | BindingFlags.Static;
+                maailmaVihje = tp?.GetMethod("PyydaVihje", F, null, System.Type.EmptyTypes, null)
+                    ?? tp?.GetMethod("PuluVihje", F, null, System.Type.EmptyTypes, null);
+            }
+            bool annettu = maailmaVihje?.Invoke(null, null) is bool b && b;
+            Debug.Log($"MATKAKIRJA seikkailutapit: vihje pyydetty ({lahde}) → " + (annettu ? "annettu" : "ei vihjettä"));
+            return annettu;
+        }
+
+        /// <summary>Tietokerros tarjolla (NaytaTietokerros kutsuttu, seikkailu käynnissä): linnan ☰-valikon Tietoa-rivi.</summary>
+        public static bool TietokerrosTarjolla => tkOtsikot != null;
+
+        /// <summary>Linnan ☰ → Tietoa (ilman Pulua, Päätoimittaja 8.10.): sama kortisto kuin Pulun napautuksesta.</summary>
+        public static void AvaaTietokerrosValikosta()
+        {
+            Debug.Log("MATKAKIRJA seikkailutapit: tietokerros valikosta");
+            AvaaTietokerros();
+        }
+
         /// <summary>Tarjous pois (seikkailu päättyi): Pulun napautus palaa ennalleen.</summary>
         static void PoistaTietokerros()
         {
@@ -416,6 +456,7 @@ namespace Matkakirja.Natiivi
                 h.style.display = DisplayStyle.None;
                 h.RegisterCallback<PointerDownEvent>(ev => { if (ev.target == h) Rakenne.Nayta(h, false, 250); });
                 var kortti = new Kortti("mk-tietoja", pohja: true);
+                kortti.AddToClassList("mk-kortti-kehys--tumma");   // KORTTI-pohjan tumma variantti vain videopelissä (omistaja 8.10. 21.2x "A")
                 h.Add(kortti);
                 var vieritys = new ScrollView(ScrollViewMode.Vertical);
                 vieritys.AddToClassList("mk-tietoja__vieritys");

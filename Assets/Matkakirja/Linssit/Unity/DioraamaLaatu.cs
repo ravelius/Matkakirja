@@ -6,16 +6,23 @@
 //   iPad     M-sarja (≥ 7000 Mt) → täysi; iPad mini A17 Pro (iPad16,1/16,2) ja muistiltaan pienemmät → kevennys
 //   muu      Mac ("Mac…"), editori ja tuntematon: muistin mukaan (≥ 7000 Mt → täysi)
 // Simulaattori ilmoittaa simuloidun laitteen tunnuksen (esim. iPhone18,1), joten sääntö on testattavissa.
+// 8.10.2026 (omistaja 19.5x: "lisää muistin käyttöä niin paljon kuin pystyy"; Natiiviseppä): yllä oleva laiteluokka on nyt
+// ALARAJA; linnan istunnon taso tulee vapaasta muistista (LinnaMuisti, Ydin/Dioraama/LinnaMuistibudjetti.cs), joka nostaa
+// kevennetyt laitteet täyteen, kun muistia riittää, ja laskee laiteluokan alle vain jetsam-vaarassa.
 using UnityEngine;
 
 namespace Matkakirja.Natiivi
 {
     public static class DioraamaLaatu
     {
-        static bool? taysi;
+        static bool? laiteluokka;
 
-        /// <summary>Täysi laatu tälle laitteelle (välimuistissa; "poikki kuori" -pakotus ohittaa kuoren tason erikseen).</summary>
-        public static bool Taysi => taysi ??= OnkoTaysi(SystemInfo.deviceModel, SystemInfo.systemMemorySize);
+        /// <summary>Laiteluokan täysi laatu (välimuistissa): LinnaMuistin alaraja ja taso, kun vapaa muisti ei ole tiedossa.</summary>
+        public static bool Laiteluokka => laiteluokka ??= OnkoTaysi(SystemInfo.deviceModel, SystemInfo.systemMemorySize);
+
+        /// <summary>Täysi laatu tällä linnan istunnolla (kuoren detaljinormaalit). Omistaja 8.10.2026 19.5x: muistibudjetin mukaan
+        /// (LinnaMuisti), laiteluokka alarajana; "poikki kuori" -pakotus ohittaa kuoren tason erikseen.</summary>
+        public static bool Taysi => LinnaMuisti.Nyt.Taysi;
 
         public static bool OnkoTaysi(string malli, int muistiMt)
         {
@@ -36,6 +43,7 @@ namespace Matkakirja.Natiivi
             return int.TryParse(malli.Substring(etuliite.Length, pilkku - etuliite.Length), out var n) ? n : (int?)null;
         }
 
-        public static string Kuvaus => $"laatu {(Taysi ? "täysi" : "kevennetty")} ({SystemInfo.deviceModel}, {SystemInfo.systemMemorySize} Mt)";
+        public static string Kuvaus => $"laatu {(Taysi ? "täysi" : "kevennetty")} (laiteluokka {(Laiteluokka ? "täysi" : "kevennetty")}, {SystemInfo.deviceModel}, " +
+                                       $"{SystemInfo.systemMemorySize} Mt; {LinnaMuisti.Kuvaus()})";
     }
 }

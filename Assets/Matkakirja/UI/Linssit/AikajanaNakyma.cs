@@ -424,7 +424,9 @@ namespace Matkakirja.Natiivi
         {
             var r = eKehys.layout;
             if (float.IsNaN(r.width) || r.width < 40f || r.height < 40f) return;
-            int w = 400, h = Mathf.RoundToInt(400f * r.height / r.width);
+            // Laatikon leveys laitteen tarkkuudella, enintään 1000 px (oli webin 400 px: reuna ja rakeisuus pehmeinä iPhonessa;
+            // RepaleinenPergamentti skaalaa muodot w / 400:lla, joten ulkoasu ennallaan; terävyys, Päätoimittaja 8.10.2026).
+            int w = Mathf.Min(1000, Mathf.CeilToInt(r.width * UiKerros.PikseliaPisteessa)), h = Mathf.RoundToInt(w * r.height / r.width);
             var koko = new Vector2Int(w, h);
             if (koko == paperinKoko) return;
             paperinKoko = koko;

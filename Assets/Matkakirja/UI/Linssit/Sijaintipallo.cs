@@ -3,7 +3,7 @@
 // aina uuteen paikkaa jos nuolinäppäimillä selataan kohteita."): astronautin kameran kuvanäkymän vasemmassa alakulmassa
 // (pikkukuvanauhan yllä) pieni pallo (puhelin 72 pt, tabletti 96 pt). Pinta BMNG Z1 (4 tiiltä, kuukausi kuten kyydissä), meripihkan piste kohteessa, joka
 // on pallon keskellä. Selatessa (‹ ›, nuolinäppäimet, pyyhkäisy) pallo kiertyy lyhintä reittiä 0,7 s ease-in-out.
-// Toteutus: oma kerros 12 ja ortokamera RenderTextureen (320², MSAA 4), piirto vain liikkeen aikana (kamera päällä liikkeen
+// Toteutus: oma kerros 12 ja ortokamera RenderTextureen (360², MSAA 4), piirto vain liikkeen aikana (kamera päällä liikkeen
 // ja yhden kehyksen ajan) → levossa ei kustannusta. Pääkamera ei piirrä kerrosta 12. A/B `ui linssi sijaintipallo 0|1`.
 // PYÖRITETTÄVÄ KOHDESELAIN (omistaja 3.10.2026, vain natiivi; Päätoimittaja hyväksyi toteutuksen): "Voisiko mini maapalloa pystyä
 // pyörittämään? Se valitsisi silloin aina automaattisesti pienen viiveen jälkeen keskimmäisimmän kohteen. Kohteiden nimet voisivat
@@ -339,10 +339,11 @@ namespace Matkakirja.Natiivi
             lista = Ehdokkaat?.Invoke();
             ehdokas = esiladattu = null;
             nimiLaatikko.style.display = DisplayStyle.Flex;   // läpinäkyvänä valmiiksi, jotta häivytys ehtii alkaa
-            // Kaksinkertainen koko: tarkempi RenderTexture (320² venyisi sumeaksi), vaihdetaan kerran.
-            if (rt != null && rt.width < 640)
+            // Kaksinkertainen koko: tarkempi RenderTexture (360² venyisi sumeaksi), vaihdetaan kerran. 360/720 = 120/240 pt × 3
+            // (iPhone; oli 320/640, terävyys Päätoimittaja 8.10.2026).
+            if (rt != null && rt.width < 720)
             {
-                var iso = new RenderTexture(640, 640, 16, RenderTextureFormat.ARGB32) { name = "Sijaintipallo", antiAliasing = 4, hideFlags = HideFlags.HideAndDontSave };
+                var iso = new RenderTexture(720, 720, 16, RenderTextureFormat.ARGB32) { name = "Sijaintipallo", antiAliasing = 4, hideFlags = HideFlags.HideAndDontSave };
                 iso.Create();
                 kamera.targetTexture = iso;
                 var vanha = rt;
@@ -637,7 +638,7 @@ namespace Matkakirja.Natiivi
             r.receiveShadows = false;
             pallo = p.transform;
 
-            rt = new RenderTexture(320, 320, 16, RenderTextureFormat.ARGB32) { name = "Sijaintipallo", antiAliasing = 4, hideFlags = HideFlags.HideAndDontSave };
+            rt = new RenderTexture(360, 360, 16, RenderTextureFormat.ARGB32) { name = "Sijaintipallo", antiAliasing = 4, hideFlags = HideFlags.HideAndDontSave };
             rt.Create();
             var kg = new GameObject("SijaintipallonKamera");
             kg.transform.SetParent(juuri.transform, false);
@@ -647,7 +648,7 @@ namespace Matkakirja.Natiivi
             kamera.orthographicSize = Sade * 1.02f;
             kamera.nearClipPlane = Sade; kamera.farClipPlane = 5f * Sade;
             kamera.clearFlags = CameraClearFlags.SolidColor;
-            kamera.backgroundColor = new Color(0, 0, 0, 0);
+            kamera.backgroundColor = (Color)Tyylikirja.Kehys.Lapinakyva;
             kamera.cullingMask = 1 << Kerros;
             kamera.targetTexture = rt;
             kamera.allowHDR = false; kamera.allowMSAA = true;
