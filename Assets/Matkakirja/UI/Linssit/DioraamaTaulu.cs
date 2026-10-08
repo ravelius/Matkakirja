@@ -598,7 +598,11 @@ namespace Matkakirja.Natiivi
         void PaivitaAvainsana(Rakennus rakennus, Nakyma nakyma)
         {
             Avainsana nyt = null;
-            if (nakyma.KertojaJakso >= 0 && nakyma.KertojaJakso < rakennus.Kertoja.Count && !(Linna?.Auki ?? false))
+            // Ei tekstiä pelissä (omistajan linja; PT 9.10. BUILD 169 -still: "Erik Akselinpoika Tott" vasemmassa alakulmassa
+            // seikkailun aikana): kertojan avainsanat vain linnan esittelyssä, ei pelattavan palan aikana (vene, kävely, yö).
+            bool seikkailu = Matkakirja.Natiivi.SeikkailuPelaaja.Aktiivinen != null || Matkakirja.Natiivi.SeikkailuVene.Aktiivinen != null
+                || Matkakirja.Natiivi.SeikkailuYo.Aktiivinen != null;
+            if (!seikkailu && nakyma.KertojaJakso >= 0 && nakyma.KertojaJakso < rakennus.Kertoja.Count && !(Linna?.Auki ?? false))
             {
                 var j = rakennus.Kertoja[nakyma.KertojaJakso];
                 if (j.Avainsanat.Count > 0 && DioraamaAanet.PuheenKohta(j.Aani) is float kohta)
