@@ -104,7 +104,8 @@ namespace Matkakirja.Natiivi
         // palautettavat
         static AnisotropicFiltering vanhaAniso;
         static int vanhaMsaa = -1;
-        static bool vanhaAllowMsaa, vanhaJalki, tallennettu;
+        static bool vanhaAllowMsaa, vanhaJalki, tallennettu, filmi;
+        static CameraOverrideOption vanhaSyvyys;
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
         static void Rekisteroi()
@@ -134,6 +135,11 @@ namespace Matkakirja.Natiivi
             vanhaAllowMsaa = kamera.allowMSAA;
             var lisa = kamera.GetUniversalAdditionalCameraData();
             if (lisa != null) { vanhaJalki = lisa.renderPostProcessing; if (Volyymi) lisa.renderPostProcessing = true; }
+            // ELOKUVAMAINEN JÄLKIKÄSITTELY (omistaja 9.10.; Natiiviseppä, juna 170): KaupunkiFilmi tarvitsee jälkikäsittelyn ja kaukaisen
+            // pehmennyksen syvyystekstuurin (Mobile_RPAssetissa pois); molemmat palautetaan Suljettu-kohdassa.
+            filmi = KaupunkiFilmi.Kaytossa;
+            if (lisa != null && filmi) { lisa.renderPostProcessing = true; vanhaSyvyys = lisa.requiresDepthOption; lisa.requiresDepthOption = CameraOverrideOption.On; }
+            if (filmi) KaupunkiFilmi.Avaa();
             kameraNyt = kamera;
             AsetaReunat();
             Laatutaso.Muuttui -= AsetaReunat; Laatutaso.Muuttui += AsetaReunat;
@@ -185,7 +191,10 @@ namespace Matkakirja.Natiivi
                 k.Kamera.allowMSAA = vanhaAllowMsaa;
                 var lisa = k.Kamera.GetUniversalAdditionalCameraData();
                 if (lisa != null) lisa.renderPostProcessing = vanhaJalki;
+                if (lisa != null && filmi) lisa.requiresDepthOption = vanhaSyvyys;
             }
+            if (filmi) KaupunkiFilmi.Sulje();
+            filmi = false;
             if (volyymiGo != null) Object.Destroy(volyymiGo);
             if (profiili != null) Object.Destroy(profiili);
             volyymiGo = null; profiili = null;
