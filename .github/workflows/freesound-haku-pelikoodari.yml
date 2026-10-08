@@ -18,20 +18,7 @@ jobs:
           FREESOUND_API_KEY: ${{ secrets.FREESOUND_API }}
         run: >
           node tools/aanet/freesound-haku.mjs /tmp/fs
-          "tuuli|wind gust|8|60"
-          "tuuli|strong wind|8|60"
-          "tuuli|wind howling tundra|8|90"
-          "tuuli|arctic wind|8|90"
-          "poltin|hot air balloon burner|1|10"
-          "poltin|gas burner whoosh|0.5|6"
-          "kori|wicker basket creak|0.5|6"
-          "luukku|trapdoor creak|0.5|5"
-          "luukku|wooden hatch creak|0.5|5"
-          "liina|cloth unfold|0.3|3"
-          "liina|fabric flap|0.3|3"
-          "askel-olki|footsteps straw|3|40"
-          "askel-porras|footsteps stone stairs|3|40"
-          "nappula|wooden game piece|0.1|1.5"
+          "lisenssi|id:94031,160461,165464,176134,202876,245691,253301,271525,315660,340276,407583,410078,411509,411774,411996,416891,433002,436942,438877,456092,466570,486437,504694,511005,535816,543449,543819,557122,565015,570907,573187,577480,579250,586106,612318,635103,635912,650986,666866,677252,677253,683118,713120,714271,723081,731247,731249,764981,818589,842183,843466,844137,845957,848927,856165,862556"
       - if: always()
         uses: actions/upload-artifact@v4
         with:

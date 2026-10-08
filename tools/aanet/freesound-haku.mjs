@@ -18,7 +18,8 @@ const api = (url) => fetch(url, { headers: { authorization: `Token ${avain}` }, 
 
 async function tallenna(tunnus, i, s) {
   const nimi = `${tunnus}-fs${i + 1}-${s.id}.mp3`;
-  const a = await fetch(s.previews['preview-hq-mp3'], { signal: AbortSignal.timeout(60000) }).catch(() => ({ ok: false }));
+  // tunnus "lisenssi": vain metatiedot (maisemakorin lisenssitarkistus 8.10.), ei esikuuntelua
+  const a = tunnus === 'lisenssi' ? { ok: false } : await fetch(s.previews['preview-hq-mp3'], { signal: AbortSignal.timeout(60000) }).catch(() => ({ ok: false }));
   if (a.ok) try { writeFileSync(join(kansio, nimi), Buffer.from(await a.arrayBuffer())); } catch { console.log(nimi, 'lataus katkesi'); }
   kaikki.push({ tiedosto: nimi, tunnus, id: s.id, nimi: s.name, tekija: s.username, lisenssi: s.license, kesto_s: s.duration, arvio: s.avg_rating,
     arvioita: s.num_ratings, url: s.url, tagit: s.tags?.slice(0, 12), kuvaus: String(s.description ?? '').slice(0, 300) });
