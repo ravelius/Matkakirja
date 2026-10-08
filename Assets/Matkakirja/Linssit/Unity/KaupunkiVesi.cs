@@ -76,7 +76,7 @@ namespace Matkakirja.Natiivi
         {
             // Kohde indexistä: lähin, jonka säteellä kaupunki on.
             // index-v2.json (Tukholma + Pariisi; Karttaseppä 8.10.: uudet kohteet uuteen versioon, vanha ei ylikirjoitu), varana index.json.
-            string k = null; string indeksi = null; nostoIndeksista = false;
+            string k = null, tiedosto = null; string indeksi = null; nostoIndeksista = false;
             foreach (var nimi in new[] { "index-v3.json", "index-v2.json", "index.json" })   // v3: kohdekohtainen nosto_m (Karttaseppä 8.10.)
             {
                 using var r0 = UnityWebRequest.Get(juuriUrl + nimi);
@@ -91,6 +91,7 @@ namespace Matkakirja.Natiivi
                         if (Etaisyys(MiniJson.Luku(o, "lat") ?? 0, MiniJson.Luku(o, "lon") ?? 0, lat, lon) < (MiniJson.Luku(o, "sade_km") ?? 0) * 1000)
                         {
                             k = MiniJson.Teksti(o, "id");
+                            tiedosto = MiniJson.Teksti(o, "tiedosto");   // index-v3: uusi aineisto omalla nimellä (ämpäriä ei ylikirjoiteta)
                             if (!NostoAsetettu && MiniJson.Luku(o, "nosto_m") is double nk) { NostoM = (float)nk; nostoIndeksista = true; }
                             break;
                         }
@@ -99,7 +100,7 @@ namespace Matkakirja.Natiivi
             }
             Debug.Log($"MATKAKIRJA kaupunki: vesi indeksi {(indeksi != null ? "ok" : "PUUTTUU")}, kohde {k ?? "-"}");
             if (k == null || tama != avaus || Pakotettu == null && Array.IndexOf(OletusKohteet, k) < 0) yield break;
-            string pohja = juuriUrl + k;
+            string pohja = juuriUrl + (string.IsNullOrEmpty(tiedosto) ? k : tiedosto);
             VesiVerkko l = null, ka = null; (double Lat, double Lon)? origo = null;
             foreach (var (ruutu, lahiTaso) in new[] { ("6m", true), ("16m", false) })
             {
