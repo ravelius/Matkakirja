@@ -36,6 +36,8 @@ Shader "Matkakirja/Linssit/DioraamaValaistu"
         _Tila ("Tila: 0 = A proseduraalinen, 1 = B maalattu", Float) = 0
         _KuvioTyyppi ("Kuvion tyyppi (DioraamaKuvio-taulukon indeksi)", Float) = 0
         _KuvioParametrit ("Kuvion parametrit (koko_u, koko_v, sauma, vaihtelu)", Vector) = (1, 1, 0.02, 0.3)
+        _ValoAtlas ("Kävelyosan valoatlas (UV1, valo × 0,5, LR 8.10.)", 2D) = "grey" {}
+        _ValoVain ("Valo atlaksesta (1) vai reaaliaikaisista valoista (0)", Float) = 0
     }
     SubShader
     {
@@ -72,6 +74,7 @@ Shader "Matkakirja/Linssit/DioraamaValaistu"
             half4 _DioraamaTaivasAla; // rgb = alaväri (lineaarinen)
 
             TEXTURE2D(_PohjaKuva); SAMPLER(sampler_PohjaKuva);
+            TEXTURE2D(_ValoAtlas); SAMPLER(sampler_ValoAtlas);
 
             CBUFFER_START(UnityPerMaterial)
                 half4 _Vari;
@@ -81,6 +84,8 @@ Shader "Matkakirja/Linssit/DioraamaValaistu"
                 float _Tila;             // 0 = A (proseduraalinen), 1 = B (maalattu)
                 float _KuvioTyyppi;      // DioraamaKuvio-taulukon indeksi (int pyöristettynä)
                 float4 _KuvioParametrit; // koko_u, koko_v, sauma, vaihtelu
+                float4 _ValoAtlas_ST;
+                float _ValoVain;         // 1 = kävelyosa: valo leivotusta atlaksesta (UV1), ei pää- eikä taivasvaloa
             CBUFFER_END
 
             struct Syote
@@ -89,6 +94,7 @@ Shader "Matkakirja/Linssit/DioraamaValaistu"
                 float3 normaali : NORMAL;
                 half4 vari : COLOR;
                 float2 uv : TEXCOORD0;
+                float2 uv1 : TEXCOORD1;
             };
             struct Vali
             {
@@ -97,6 +103,7 @@ Shader "Matkakirja/Linssit/DioraamaValaistu"
                 half4 vari : COLOR;
                 float3 paikkaW : TEXCOORD1;
                 float2 uv : TEXCOORD2;
+                float2 uv1 : TEXCOORD3;
             };
 
             Vali vert(Syote i)
@@ -108,6 +115,7 @@ Shader "Matkakirja/Linssit/DioraamaValaistu"
                 o.normaaliW = TransformObjectToWorldNormal(i.normaali);
                 o.vari = i.vari; // R = AO, G = lämpö, B = satunnainen (ei värejä: ei sRGB-muunnosta)
                 o.uv = TRANSFORM_TEX(i.uv, _PohjaKuva);
+                o.uv1 = i.uv1;
                 return o;
             }
 
@@ -118,6 +126,10 @@ Shader "Matkakirja/Linssit/DioraamaValaistu"
             half4 frag(Vali i) : SV_Target
             {
                 float3 n = normalize(i.normaaliW);
+                // Lisävalojen silmukka (LIGHT_LOOP_BEGIN) lukee inputData-muuttujaa (Forward+: klusteri ruutu-UV:sta).
+                InputData inputData = (InputData)0;
+                inputData.positionWS = i.paikkaW;
+                inputData.normalizedScreenSpaceUV = GetNormalizedScreenSpaceUV(i.paikka);
                 half ao = (half)i.vari.r, lampo = (half)i.vari.g, satunnainen = (half)i.vari.b;
 
                 // Vesi virtaa (_Virtaus, muilla pinnoilla 0,0): sama UV kuvioon ja pohjakuvaan.
@@ -141,10 +153,7 @@ Shader "Matkakirja/Linssit/DioraamaValaistu"
                 half3 valo = taivas + paavalo.color * WrapLambert(dot(n, paavalo.direction), 0.3h) * paavalo.shadowAttenuation;
 
                 #if defined(_ADDITIONAL_LIGHTS) || USE_CLUSTER_LIGHT_LOOP
-                // LIGHT_LOOP_BEGIN: tavallinen silmukka Forwardissa, klusterit Forward+:ssa (inputData.positionWS ja ruutu-UV).
-                InputData inputData = (InputData)0;
-                inputData.positionWS = i.paikkaW;
-                inputData.normalizedScreenSpaceUV = GetNormalizedScreenSpaceUV(i.paikka);
+                // LIGHT_LOOP_BEGIN: tavallinen silmukka Forwardissa, klusterit Forward+:ssa (inputData frag-alussa).
                 uint lisavaloja = GetAdditionalLightsCount();
                 LIGHT_LOOP_BEGIN(lisavaloja)
                     Light lisavalo = GetAdditionalLight(lightIndex, i.paikkaW, half4(1, 1, 1, 1));
@@ -153,7 +162,25 @@ Shader "Matkakirja/Linssit/DioraamaValaistu"
                 LIGHT_LOOP_END
                 #endif
 
-                half3 vari = albedo * valo * lerp(1.0h, ao, 0.85h) + _Lampo.rgb * (lampo * lampo * 0.45h) * _DioraamaLepatus; // g²·0,45: oikea pistevalo valaisee jo (sama kuin esikatselussa)
+                half3 vari = albedo * valo * lerp(1.0h, ao, 0.85h) + _Lampo.rgb * (lampo * lampo * 0.45h) * _DioraamaLepatus;
+                if (_ValoVain > 0.5)
+                {
+                    // Kävelyosa (LR 8.10.): leivottu valo (GI, AO, liekit; tallennettu × 0,5) × pinnan väri. Reaaliaikaisista
+                    // lisävaloista vain varjot tummentavat (hahmot heittävät liekin varjon), kuten DioraamaLeivottu.
+                    half3 leivottu = SAMPLE_TEXTURE2D(_ValoAtlas, sampler_ValoAtlas, i.uv1).rgb * 2.0h;
+                    half varjo = 1.0h;
+                    #if defined(_ADDITIONAL_LIGHT_SHADOWS)
+                    {
+                        uint lisavalojaV = GetAdditionalLightsCount();
+                        LIGHT_LOOP_BEGIN(lisavalojaV)
+                            Light lv = GetAdditionalLight(lightIndex, i.paikkaW, half4(1, 1, 1, 1));
+                            half osuus = (half)saturate(lv.distanceAttenuation * 1.5) * (half)saturate(dot(n, lv.direction) * 2.0 + 0.3);
+                            varjo *= lerp(1.0h, lv.shadowAttenuation, osuus * 0.75h);
+                        LIGHT_LOOP_END
+                    }
+                    #endif
+                    vari = albedo * leivottu * varjo;
+                } // g²·0,45: oikea pistevalo valaisee jo (sama kuin esikatselussa)
 
                 // Etäisyyssumu (era 1 kohta 6, kuten DioraamaMaalattu/DioraamaHahmo): massa ja keittiö erottuvat.
                 float etaisyys = length(_WorldSpaceCameraPos - i.paikkaW);
@@ -193,6 +220,8 @@ Shader "Matkakirja/Linssit/DioraamaValaistu"
                 float _Tila;
                 float _KuvioTyyppi;
                 float4 _KuvioParametrit;
+                float4 _ValoAtlas_ST;
+                float _ValoVain;
             CBUFFER_END
 
             struct SyoteVarjo { float4 paikka : POSITION; float3 normaali : NORMAL; };
@@ -236,6 +265,8 @@ Shader "Matkakirja/Linssit/DioraamaValaistu"
                 float _Tila;
                 float _KuvioTyyppi;
                 float4 _KuvioParametrit;
+                float4 _ValoAtlas_ST;
+                float _ValoVain;
             CBUFFER_END
 
             struct SyoteSyvyys { float4 paikka : POSITION; };

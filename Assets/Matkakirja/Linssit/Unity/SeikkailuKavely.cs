@@ -28,7 +28,7 @@ namespace Matkakirja.Natiivi
 
         /// <summary>Lataa osat.json (osatUrl) ja merkit.json (merkitUrl, voi olla null), piirtää osat ja lisää törmäykset; glb-polut osat.jsonin
         /// kansiosta. url = peilikuvaus (ämpäri → peili).</summary>
-        public static IEnumerator Lataa(string osatUrl, string merkitUrl, Func<string, string> url, DioraamaRakennus r3d, Rakennus rakennus, Transform isa, Action<string> kirjaa)
+        public static IEnumerator Lataa(string osatUrl, string merkitUrl, Func<string, string> url, DioraamaRakennus r3d, Rakennus rakennus, Transform isa, Action<string> kirjaa, Action<Tila> valoAtlas = null)
         {
             Pura();
             string osat = null, merkit = null, juuri = osatUrl.Substring(0, osatUrl.LastIndexOf('/') + 1);
@@ -46,7 +46,14 @@ namespace Matkakirja.Natiivi
                 if (!string.IsNullOrEmpty(osa.Nakyva) && !tilaPiirtaa)
                 {
                     byte[] b = null; yield return DioraamaLevyvalimuisti.Hae(url(juuri + osa.Nakyva), 120, t => b = t);
-                    if (b != null && r3d != null && r3d.LisaaTila(rakennus, new Tila { Id = "kavely:" + osa.Id, Nimi = osa.Id, Kohdistettava = true }, b, kirjaa)) piirretty++;
+                    // Kävelyosan valoatlas (LR 8.10., juna 169): pelkkä valo UV1:llä → pintamateriaali × valo (DioraamaValaistu _ValoVain).
+                    var kt = new Tila { Id = "kavely:" + osa.Id, Nimi = osa.Id, Kohdistettava = true };
+                    if (osa.ValoAtlas != null) { DioraamaData.LueValoAtlas(kt, osa.ValoAtlas); kt.ValoVain = !string.IsNullOrEmpty(kt.ValoAtlas); }
+                    if (b != null && r3d != null && r3d.LisaaTila(rakennus, kt, b, kirjaa))
+                    {
+                        piirretty++;
+                        if (kt.ValoVain) valoAtlas?.Invoke(kt);
+                    }
                 }
                 if (!string.IsNullOrEmpty(osa.Tormays))
                 {

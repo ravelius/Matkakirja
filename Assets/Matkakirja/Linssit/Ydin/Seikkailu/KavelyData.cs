@@ -20,6 +20,8 @@ namespace Matkakirja.Linssit.Seikkailu
         public double? KattoY;
         /// <summary>Märkyys 0–1 (LR v45f: sateen jälkeinen yö; vesiportti 0,85, ulkoalue 0,75, sisätilat 0).</summary>
         public double Markyys;
+        /// <summary>Leivottu valoatlas (LR 8.10., juna 169; `valoatlas` kuten tiloissa, polut paketin juuresta); null = ei atlasta.</summary>
+        public Dictionary<string, object> ValoAtlas;
         /// <summary>Osan oletuspinta askelille (pelattavuusmalli 2.2: kivi, porras, puu, olki, sora, vesi); null = kivi.</summary>
         public string Pinta;
     }
@@ -105,6 +107,7 @@ namespace Matkakirja.Linssit.Seikkailu
                         Kavely = MiniJson.Teksti(t, "kavely"), Varmuus = MiniJson.Teksti(v, "varmuus"),
                         KattoY = MiniJson.Luku(MiniJson.ObjektiTaiNull(MiniJson.Kentta(v, "kamera_rajat")), "katto_y"), Pinta = MiniJson.Teksti(v, "pinta"),
                         Markyys = MiniJson.Luku(v, "markyys") ?? 0,
+                        ValoAtlas = MiniJson.ObjektiTaiNull(MiniJson.Kentta(v, "valoatlas")),
                     };
                     var r = MiniJson.ObjektiTaiNull(MiniJson.Kentta(v, "rajat"));
                     osa.RajatMin = Vektori(MiniJson.Kentta(r, "min")); osa.RajatMax = Vektori(MiniJson.Kentta(r, "max"));

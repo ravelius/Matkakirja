@@ -51,7 +51,9 @@ namespace Matkakirja.Natiivi
         // piirretään DioraamaLeivottu-varjostimella: yksi materiaali per tila (atlas on tilakohtainen), ei reaaliaikaisia
         // varjoja. Muut tilat kuten ennen (pintakohtainen maalattu/valaistu materiaali).
         readonly Shader varjostinLeivottu;
-        static readonly int IdValoAtlas = Shader.PropertyToID("_ValoAtlas");
+        static readonly int IdValoAtlas = Shader.PropertyToID("_ValoAtlas"), IdValoVain = Shader.PropertyToID("_ValoVain");
+        /// <summary>Kävelyosien valo-kloonit (LR 8.10., juna 169): pintamateriaali × tilan valoatlas; avain tila|pinta.</summary>
+        readonly Dictionary<string, (string Tila, Material Pohja, Material Klooni)> valoKloonit = new Dictionary<string, (string, Material, Material)>();
         readonly Dictionary<string, Material> leivotut = new Dictionary<string, Material>();
         /// <summary>Tilan liput (pinta "lippu"): sama atlas, heiluva materiaali (DioraamaLeivottu _Heilunta 1).</summary>
         readonly Dictionary<string, Material> leivotutLiput = new Dictionary<string, Material>();
@@ -71,6 +73,7 @@ namespace Matkakirja.Natiivi
             if (string.IsNullOrEmpty(tilaId) || kuva == null) return;
             odottavatValoAtlakset[tilaId] = kuva;
             if (leivotut.TryGetValue(tilaId, out var m) && m != null) m.SetTexture(IdValoAtlas, kuva);
+            foreach (var k in valoKloonit.Values) if (k.Tila == tilaId && k.Klooni != null) k.Klooni.SetTexture(IdValoAtlas, kuva);
             if (leivotutLiput.TryGetValue(tilaId, out var l) && l != null) l.SetTexture(IdValoAtlas, kuva);
         }
 
@@ -142,6 +145,26 @@ namespace Matkakirja.Natiivi
                 if (pinta.ToistoV != 0) virtausV = pinta.VirtausV / pinta.ToistoV;
             }
             m.SetVector(IdVirtaus, new Vector4((float)virtausU, (float)virtausV, 0, 0));
+            // Valo-kloonit perivät pohjakuvan ja tilan (kävelyosat, juna 169).
+            foreach (var k in valoKloonit.Values)
+                if (k.Pohja == m && k.Klooni != null)
+                {
+                    k.Klooni.CopyPropertiesFromMaterial(m); k.Klooni.SetFloat(IdValoVain, 1f);
+                    if (odottavatValoAtlakset.TryGetValue(k.Tila, out var atlas)) k.Klooni.SetTexture(IdValoAtlas, atlas);
+                }
+        }
+
+        /// <summary>Kävelyosan pinnan materiaali, jossa valo tulee tilan valoatlaksesta (UV1) eikä reaaliaikaisista valoista.</summary>
+        Material ValoKlooni(string tilaId, Rakennus rakennus, string pinta)
+        {
+            var pohja = MateriaaliPinnalle(rakennus, pinta);
+            string avain = tilaId + "|" + pohja.name;
+            if (valoKloonit.TryGetValue(avain, out var k) && k.Klooni != null) return k.Klooni;
+            var m = new Material(pohja) { name = pohja.name + "@" + tilaId };
+            m.SetFloat(IdValoVain, 1f);
+            if (odottavatValoAtlakset.TryGetValue(tilaId, out var atlas)) m.SetTexture(IdValoAtlas, atlas);
+            valoKloonit[avain] = (tilaId, pohja, m);
+            return m;
         }
 
         /// <summary>Rakentaa yhden tilan glb-tavuista. Palauttaa false (ja kirjaa syyn), jos glb ei kelvannut —
@@ -162,8 +185,11 @@ namespace Matkakirja.Natiivi
             tyhjat[tila.Id] = DioraamaTyhja.Lue(malli);
             bool leivottu = !string.IsNullOrEmpty(tila.ValoAtlas) && varjostinLeivottu != null;
             if (leivottu) foreach (var osa in malli.Osat) if (osa.Uv1 == null || osa.Uv1.Length < (osa.Paikat?.Length ?? 0) / 3 * 2) leivottu = false;
-            if (!string.IsNullOrEmpty(tila.ValoAtlas) && !leivottu) kirjaa?.Invoke($"poikki: {tila.Id} valoatlas ilman UV1:tä tai varjostinta (maalattu varalla)");
-            var uv1t = leivottu ? new Vector2[kaikkiKarjet] : null;
+            // Kävelyosa: atlas on pelkkä valo → pintamateriaalin kloonit (DioraamaValaistu _ValoVain), ei DioraamaLeivottua.
+            bool valoVain = leivottu && tila.ValoVain && valaistus;
+            if (valoVain) leivottu = false;
+            if (!string.IsNullOrEmpty(tila.ValoAtlas) && !leivottu && !valoVain) kirjaa?.Invoke($"poikki: {tila.Id} valoatlas ilman UV1:tä tai varjostinta (maalattu varalla)");
+            var uv1t = leivottu || valoVain ? new Vector2[kaikkiKarjet] : null;
             Material leivottuMateriaali = null;
             if (leivottu)
             {
@@ -203,7 +229,7 @@ namespace Matkakirja.Natiivi
                 kolmiotOsittain[oi] = kolmiot;
                 kolmioita += kolmiot.Length / 3;
                 materiaalitJarjestyksessa[oi] = leivottu ? (osa.Pinta == "lippu" ? LippuMateriaali(tila.Id, leivottuMateriaali) : leivottuMateriaali)
-                    : MateriaaliPinnalle(rakennus, osa.Pinta);
+                    : valoVain ? ValoKlooni(tila.Id, rakennus, osa.Pinta) : MateriaaliPinnalle(rakennus, osa.Pinta);
                 kv += n;
             }
 
@@ -321,6 +347,8 @@ namespace Matkakirja.Natiivi
             leivotut.Clear(); tyhjat.Clear();
             foreach (var m in leivotutLiput.Values) if (m != null) UnityEngine.Object.Destroy(m);
             leivotutLiput.Clear();
+            foreach (var k in valoKloonit.Values) if (k.Klooni != null) UnityEngine.Object.Destroy(k.Klooni);
+            valoKloonit.Clear();
             odottavatValoAtlakset.Clear(); // tekstuurit omistaa DioraamaSovitin (ladatutValoAtlakset)
             odottavatPohjakuvat.Clear();
             viimeisinRakennus = null;

@@ -369,6 +369,9 @@ namespace Matkakirja.Linssit.Dioraama
         public string ValoAtlasAstc, ValoAtlasAstcPuoli;
         /// <summary>Hämärän valoatlas (`valoatlas.hamara { tiedosto, puoli, astc, astcPuoli }`); null = päiväversio myös hämärässä.</summary>
         public string HamaraAtlas, HamaraAtlasPuoli, HamaraAtlasAstc, HamaraAtlasAstcPuoli;
+        /// <summary>Kävelyosan valoatlas (LR 8.10., juna 169): atlas on pelkkä valo (valo × 0,5, ei väriä), joten pinnan väri tulee
+        /// pintamateriaalista (DioraamaValaistu _ValoVain). Tilojen atlakset (albedo × valo) ovat false.</summary>
+        public bool ValoVain;
         /// <summary>LINNA, leikkausikkuna kuoreen (speksi dioraama-rajapinnat-blender-20260929.md kohta 3):
         /// `leikkaus: { laajennus 1.0, kameraan true }` (oletus) tai käsin `{ min, max }` (korvaa rajat).</summary>
         public double LeikkausLaajennus = 1.0;
@@ -1177,6 +1180,18 @@ namespace Matkakirja.Linssit.Dioraama
             return t;
         }
 
+        /// <summary>`valoatlas: { tiedosto, puoli, astc, astcPuoli, hamara: {…} }` tilaan (tilat ja kävelyosat, LR 8.10.).</summary>
+        public static void LueValoAtlas(Tila t, Dictionary<string, object> valoatlas)
+        {
+            t.ValoAtlas = MiniJson.Teksti(valoatlas, "tiedosto");
+            t.ValoAtlasPuoli = MiniJson.Teksti(valoatlas, "puoli");
+            t.ValoAtlasAstc = MiniJson.Teksti(valoatlas, "astc");
+            t.ValoAtlasAstcPuoli = MiniJson.Teksti(valoatlas, "astcPuoli");
+            var hamaraAtlas = MiniJson.ObjektiTaiNull(MiniJson.Kentta(valoatlas, "hamara"));
+            t.HamaraAtlas = MiniJson.Teksti(hamaraAtlas, "tiedosto"); t.HamaraAtlasPuoli = MiniJson.Teksti(hamaraAtlas, "puoli");
+            t.HamaraAtlasAstc = MiniJson.Teksti(hamaraAtlas, "astc"); t.HamaraAtlasAstcPuoli = MiniJson.Teksti(hamaraAtlas, "astcPuoli");
+        }
+
         static Tila LueTila(Dictionary<string, object> o)
         {
             var t = new Tila
@@ -1296,14 +1311,7 @@ namespace Matkakirja.Linssit.Dioraama
                     t.LeikkausMax = LueV3(MiniJson.Kentta(leikkaus, "max"));
                 }
             }
-            var valoatlas = MiniJson.ObjektiTaiNull(MiniJson.Kentta(o, "valoatlas"));
-            t.ValoAtlas = MiniJson.Teksti(valoatlas, "tiedosto");
-            t.ValoAtlasPuoli = MiniJson.Teksti(valoatlas, "puoli");
-            t.ValoAtlasAstc = MiniJson.Teksti(valoatlas, "astc");
-            t.ValoAtlasAstcPuoli = MiniJson.Teksti(valoatlas, "astcPuoli");
-            var hamaraAtlas = MiniJson.ObjektiTaiNull(MiniJson.Kentta(valoatlas, "hamara"));
-            t.HamaraAtlas = MiniJson.Teksti(hamaraAtlas, "tiedosto"); t.HamaraAtlasPuoli = MiniJson.Teksti(hamaraAtlas, "puoli");
-            t.HamaraAtlasAstc = MiniJson.Teksti(hamaraAtlas, "astc"); t.HamaraAtlasAstcPuoli = MiniJson.Teksti(hamaraAtlas, "astcPuoli");
+            LueValoAtlas(t, MiniJson.ObjektiTaiNull(MiniJson.Kentta(o, "valoatlas")));
             t.GlbSha256 = MiniJson.Teksti(glb, "sha256");
             foreach (var rivi in MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(o, "liekit")))
             {
