@@ -92,6 +92,8 @@ namespace Matkakirja.Natiivi
             var n = p != null ? p.GetComponentInParent<DioraamaNayttamo>() : null;
             if (n != null && n.Kamera != null) cam = n.Kamera;
             if (p == null || cam == null || p.Eleessa) return false;
+            // Käsiteltävä (ovi, arkun kilpi) ulottuvilla 1,6 m: napautus on aina toiminto (avaa hitaasti ja hiljaa), ei kävely (NUI 8.10.).
+            if (SeikkailuKasittely.Alla(ruutu)) { SeikkailuEsineet.ToimintoPyydetty = true; return true; }
             var sade = cam.ScreenPointToRay(ruutu);
             if (!Physics.Raycast(sade, out var osuma, NapautusM, 1 << DioraamaNayttamo.Kerros, QueryTriggerInteraction.Ignore)) return false;
             var vaaka = osuma.point - p.transform.position; vaaka.y = 0;
