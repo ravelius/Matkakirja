@@ -35,7 +35,7 @@ namespace Matkakirja.Natiivi
                         float w = iso.resolvedStyle.width;
                         if (float.IsNaN(w) || w <= 0) w = 300;
                         iso.style.height = Mathf.Round(w * tx.height / Mathf.Max(1f, tx.width));
-                    }, "liput");
+                    }, LiputIso.Kansio(m.Lippu[0]));   // 1024 px, jos peilissä (terävyys 9.10.2026)
                 Kirjasimet.Aseta(Rakenne.Teksti("Nykyinen lippu", "mk-lippu__valinta", s), Kirjasin.Kone);
                 var symbolit = Rakenne.Lista(MiniJson.Kentta(t, "symboliikka"));
                 if (symbolit != null && symbolit.Count > 0)
