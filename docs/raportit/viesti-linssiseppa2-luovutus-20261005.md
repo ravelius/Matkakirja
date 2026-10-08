@@ -35,7 +35,14 @@ Avoimet työt:
 ## 21.5x: raskaat poltot/paistot (kartta, Blender, ääni) eivät käynnisty junakäännöksen aikana (kaannospalvelun lukko varattu).
 ## 16.0x: EI omia käännöksiä (iOS/Mac); haaralle unity-tarkistus + testit; täysi käännös vain juna/TF; poikkeus vian selvitys + ilmoitus PT:lle.
 
-## TILA 8.10. iltapäivä (uusin)
+## TILA 8.10. iltapäivä, myöhemmin (uusin)
+- v44z-haarat MERGETTY (historia-m e0c46d263), worktreet poistettu. PT: M-osa junaan 167; työnjako Siirtosepän kanssa:
+  (1) huonesimulaatio LR:n 1499-M-geometrialla, kun hash tulee; (2) M-jumitestit; (3) SeikkailuTallennuksen M-tila → Kirjoita/Lue-testi.
+- (2) VALMIS: linssiseppa2/m-jumi 5f0f19943 (e0c46d263 päällä), worktree wt/proto-linssiseppa2-m-jumi: MOsanJumiTestit (3) + JUMI KORJATTU
+  Pako.Kiinni (kiinni köysilaskussa/kalliolla → Kello, uusi yritys; SeikkailuPako kuuntelee Kiinnijaatiin). 952/952, tarkistus 0. SHA Siirtosepälle.
+- ODOTTAA: (3) rajapinta Siirtosepältä; (1) LR:n hash; vihjeportaat 6–10 (tarjottu, Siirtoseppä ei vielä vastannut).
+
+## TILA 8.10. iltapäivä
 - v44z (LR 92f60298: harja 5 m liitoksesta + silta itäkyljestä) TODENNETTU: P linssiseppa2/v44x-p aba56d9f9 (historia-valot b73018ba5,
   913/913, pala 1–5 134 s, rajattu 20 pisteeseen) ja M linssiseppa2/v44x-m 4ac32a5df (historia-m f4286888c, 947/947, HarjaKorjattu=true).
   SHAt Siirtosepälle. Poista worktreet wt/proto-linssiseppa2-v44x-p ja -v44x-m mergen jälkeen.
