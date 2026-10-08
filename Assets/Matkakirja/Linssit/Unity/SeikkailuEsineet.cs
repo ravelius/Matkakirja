@@ -109,7 +109,23 @@ namespace Matkakirja.Natiivi
                 g.transform.position = new Vector3((float)m.X, (float)m.Y, (float)-m.Z);
                 if (m.KiertoY is double ky) g.transform.rotation = Quaternion.Euler(0f, (float)(-ky * 180 / Math.PI), 0f);
                 var bc = g.AddComponent<BoxCollider>(); bc.size = new Vector3(w, h, 0.2f); bc.center = new Vector3(0f, h / 2f, 0f);
-                ovet.Add(new Ovi { M = m, Go = g, Paikka = g.transform.position });
+                var ovi = new Ovi { M = m, Go = g, Paikka = g.transform.position };
+                ovet.Add(ovi);
+                // Käsittely käsin (pelattavuusmalli 6): veto 60° avaa, nopea veto narahtaa; ilman avainta kahva kolahtaa kerran vedossa.
+                float kertyma = 0f; bool kolahti = false;
+                SeikkailuKasittely.Lisaa(new SeikkailuKasittely.Kasiteltava
+                {
+                    Nimi = "ovi:" + m.Tunnus, Paikka = () => ovi.Paikka + Vector3.up,
+                    Tarjolla = pl => !ovi.Auki && kadessa == null && LahinOvi(pl) == ovi,
+                    Kaanna = (pl, asteet, narahti) =>
+                    {
+                        if (LukittuOvi.Avaa(ovi.M.Lukko, ovi.M.Avain, Avaimet, false) == OviTulos.Lukossa) { if (!kolahti) { kolahti = true; AvaaOvi(pl, ovi, false); } return; }
+                        kertyma += Mathf.Abs((float)asteet);
+                        if (narahti) { SeikkailuAanet.Soita("luukku-narahdus", ovi.Paikka + Vector3.up, 0.9f); SeikkailuVartijat.Aani(ovi.Paikka, ovi.M.AaniNopeaM > 0 ? ovi.M.AaniNopeaM : 4); }
+                        if (kertyma >= 60f) { kertyma = 0f; AvaaOvi(pl, ovi, false); }
+                    },
+                    Loppui = () => { kertyma = 0f; kolahti = false; },
+                });
             }
         }
 
@@ -121,9 +137,9 @@ namespace Matkakirja.Natiivi
             return null;
         }
 
-        void AvaaOvi(SeikkailuPelaaja p, Ovi o)
+        /// <summary>Oven avaus: napautus/toimintonappi hitaasti ja hiljaa (pelattavuusmalli 6: 1,5 s), narahdus tulee vain nopeasta vedosta.</summary>
+        void AvaaOvi(SeikkailuPelaaja p, Ovi o, bool nopea = false)
         {
-            bool nopea = p.Tila.Vauhti > 1.5;
             var tulos = LukittuOvi.Avaa(o.M.Lukko, o.M.Avain, Avaimet, nopea);
             var c = o.Paikka + Vector3.up;
             if (tulos == OviTulos.Lukossa)

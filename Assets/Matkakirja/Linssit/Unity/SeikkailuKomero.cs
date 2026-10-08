@@ -58,6 +58,23 @@ namespace Matkakirja.Natiivi
                 k.kilpiaOn = i == 2;
                 k.lukko = new Kilpilukko(tavoite, sallittu);
             }
+            // Käsittely käsin (pelattavuusmalli 6): kilpi kääntyy vedon mukana (x-asteet); napautus "Käännä" 15° kuten ennen.
+            if (k.kilpiaOn)
+                for (int i = 0; i < 2; i++)
+                {
+                    int ki = i;
+                    SeikkailuKasittely.Lisaa(new SeikkailuKasittely.Kasiteltava
+                    {
+                        Nimi = "kilpi:arkku-" + (ki + 1), Paikka = () => k.kilvet[ki], Tarjolla = pl => k != null && k.LahinKilpi(pl) is int lk && (lk == 0 || lk == 1),
+                        Kaanna = (pl, asteet, narahti) =>
+                        {
+                            if (k == null || k.lukko.Auki) return;
+                            k.lukko.Kaanna(ki + 1, asteet);
+                            if (narahti) SeikkailuAanet.Soita("kivi-irtoaa", k.kilvet[ki], 0.5f, 1.4f);
+                        },
+                        Loppui = () => { if (k != null && k.lukko != null) k.kirjaa?.Invoke($"seikkailu: kilvet {k.lukko.Kilpi1:F0}° / {k.lukko.Kilpi2:F0}°"); },
+                    });
+                }
             kirjaa?.Invoke($"seikkailu: komero ({tm.Count} tiiltä, arkku {(am != null ? "kyllä" : "ei")}, kilpiä {(k.kilpiaOn ? 2 : 0)})");
         }
 
@@ -158,6 +175,6 @@ namespace Matkakirja.Natiivi
         }
 
         public static void Poista() { var a = Aktiivinen; Aktiivinen = null; if (a != null) Destroy(a.gameObject); }
-        void OnDestroy() { if (Aktiivinen == this) Aktiivinen = null; }
+        void OnDestroy() { if (Aktiivinen == this) Aktiivinen = null; SeikkailuKasittely.Poista("kilpi:arkku-1"); SeikkailuKasittely.Poista("kilpi:arkku-2"); }
     }
 }
