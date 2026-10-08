@@ -35,7 +35,13 @@ Avoimet työt:
 ## 21.5x: raskaat poltot/paistot (kartta, Blender, ääni) eivät käynnisty junakäännöksen aikana (kaannospalvelun lukko varattu).
 ## 16.0x: EI omia käännöksiä (iOS/Mac); haaralle unity-tarkistus + testit; täysi käännös vain juna/TF; poikkeus vian selvitys + ilmoitus PT:lle.
 
-## TILA 8.10. aamu, myöhemmin (uusin)
+## TILA 8.10. aamupäivä (uusin)
+- LR v44w (f8aa682f): proto linssiseppa2/muuri-v44w 8aa45baf4 (historia-m 3cd1e87e3 päällä), worktree wt/proto-linssiseppa2-muuri.
+  Kultaiset v44w, MuurikaytavaHiipien OK (30 s), HarjaHiipien tiedoksi (HarjaKorjattu=false): tikkaiden yläpää 0,9/1,5 m harjan
+  hahmoista soihdun valossa → epäily. Kuulo ilman pystyrajaa (osa muurikaytava = käytävä+harja+ranta). SHA Siirtosepälle, kopio LR:lle.
+- ODOTTAA: Siirtosepän/LR:n harjakorjaus → todenna (2,5 m vain arvio), vaihda HarjaKorjattu=true.
+
+## TILA 8.10. aamu, myöhemmin
 - huonesim-m2 MERGETTY (historia-m 3cd1e87e3, 944/944): SeikkailuSali käyttää VoudinKiistaa, KiistaValiS 20 s (pisin odotus 32 s).
   Worktree poistettu. ODOTTAA LR:n muurikäytävän hashia (tulee suoraan LS2:lle) → uusi worktree historia-m:n kärjestä, kultaiset päivitys.
 
