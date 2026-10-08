@@ -14,9 +14,9 @@ float4 _IlmAurinko;     // xyz suunta aurinkoon (maailma), w = auringon zeniitti
 float4 _IlmParam;       // x kameran korkeus m, y valotus, z ilmaperspektiivin voima 0–1, w taivaan voima 0–1
 float4 _IlmPilviParam;  // x peitto 0–1, y varjon voima, z jakso m (uv1), w pilvikorkeus m
 float4 _IlmTuuli;       // xy pilvikentän siirtymä m (tuuli × aika)
-float4 _IlmMaailma;     // x metriä maailmayksikköä kohden (georeferenssin skaala)
+float4 _IlmMaailma;     // x metriä maailmayksikköä kohden (georeferenssin skaala), y kauko-udun kerroin (≥ 1; KaupunkiIlmakeha.KaukoUtu)
 float4 _IlmPilviKerros; // x pilvikerros 0/1 (KaupunkiIlmakeha.Pilvet), y pohja m, z paksuus m (pallon pilvet, raportin kohta 6a)
-float4 _IlmSaa;         // x katujen märkyys 0–1, y pilvien tummuus 0–1 (Ydin KaupunkiKuuro; LS1:n kuurot)
+float4 _IlmSaa;         // x katujen märkyys 0–1, y pilvien tummuus 0–1 (Ydin KaupunkiKuuro; LS1:n kuurot), z aamusumu veden yllä 0–1
 
 static const float IlmR = 6360.0, IlmRT = 6460.0, IlmApKm = 200.0;
 
@@ -71,6 +71,7 @@ float3 IlmTaivas(float3 d)
 /// Ilmaperspektiivi pinnalle etäisyydellä etM katsesuunnassa d: RGB sironta (L_in), A ei käytössä; T = läpäisy kanavittain.
 void IlmIlmaperspektiivi(float etM, float3 d, out float3 sironta, out float3 lapaisy)
 {
+    etM *= max(1.0, _IlmMaailma.y);   // kauko-utu (omistaja 9.10.: "vähän sumua kauemmas"): sama LUT, pidempi tehollinen matka
     float u = IlmTekseli(sqrt(saturate(etM * 0.001 / IlmApKm)), 32);
     float v = IlmTekseli(sqrt(saturate((1.0 - dot(d, _IlmAurinko.xyz)) * 0.5)), 32);
     int t0, t1; float th; IlmTasot(_IlmParam.x, t0, t1, th);

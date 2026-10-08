@@ -26,10 +26,14 @@ namespace Matkakirja.Natiivi
         }
         static bool kaupunkiKirjattu;
         /// <summary>Valotus (radianssi × valotus ennen sävytystä; Karttaseppä: 10–30), ilmaperspektiivin voima, pilvien varjon voima.</summary>
+        /// <summary>Kauko-utu (omistaja 9.10. "vähän sumua kauemmas (ehkä)", maltillisesti): ilmaperspektiivin matka × kerroin.
+        /// Aamusumu veden yllä: auringon noustessa (itä, korkeus −2…14°) Aamusumu × häivytys (VesiPinta, toinen kerros).</summary>
+        public static float KaukoUtu = 1.4f, Aamusumu = 1f;
         public static float Valotus = 12f, ApVoima = 1f, VarjoVoima = 0.45f, PilviJaksoM = 30000f, PilviKorkeusM = (float)Matkakirja.Linssit.Ilmakeha.KaupunkiPilvet.PohjaM;
-        /// <summary>Pallon pilvikerros taivaskupolissa (raportin kohta 6a, PT 23.28): asetus "pilvet 0|1", oletus pois kuvapariin asti.
-        /// Pohja = PilviKorkeusM (sama kuin pilvien varjoilla), paksuus PilviPaksuusM.</summary>
-        public static bool Pilvet;
+        /// <summary>Pallon pilvikerros taivaskupolissa (raportin kohta 6a; omistaja 9.10. "pilviä voisi vähän lisätä taivaalle"): oletus
+        /// päällä kehityskaupungeissa (kuten ilmakehä), asetus "pilvet 0|1" pakottaa. Pohja = PilviKorkeusM, paksuus PilviPaksuusM.</summary>
+        public static bool? PilvetPakotettu;
+        public static bool Pilvet => PilvetPakotettu ?? kehitys;
         /// <summary>Tuuli (m/s, x itä, y pohjoinen): pilvikentän ja pilvien varjojen siirtymä sekä laivojen savu (VeneSavu).</summary>
         public static Vector2 TuuliMs = new Vector2(6f, 2f);
         public static float PilviPaksuusM = (float)Matkakirja.Linssit.Ilmakeha.KaupunkiPilvet.PaksuusM;
@@ -95,9 +99,10 @@ namespace Matkakirja.Natiivi
             pilvisyys = (float)Matkakirja.Linssit.Kierros.KaupunkiKuuro.Peitto(Mathf.Clamp01(pilvisyys));
             float tumma = (float)Matkakirja.Linssit.Kierros.KaupunkiKuuro.Tummuus;
             Shader.SetGlobalVector(IdPilviParam, new Vector4(pilvisyys, VarjoVoima * voima * (1f + tumma), PilviJaksoM, PilviKorkeusM));
-            Shader.SetGlobalVector(IdSaa, new Vector4((float)Matkakirja.Linssit.Kierros.KaupunkiKuuro.Markyys * voima, tumma, 0f, 0f));
+            Shader.SetGlobalVector(IdSaa, new Vector4((float)Matkakirja.Linssit.Kierros.KaupunkiKuuro.Markyys * voima, tumma,
+                (float)Matkakirja.Linssit.Ilmakeha.AamuSumu.Voima(aurinkoKorkeusAst, aurinkoAtsimuuttiAst) * Aamusumu, 0f));
             Shader.SetGlobalVector(IdTuuli, new Vector4(tuuliM.x, tuuliM.y, 0f, 0f));
-            Shader.SetGlobalVector(IdMaailma, new Vector4(1f / Mathf.Max(1e-6f, mitta), 0f, 0f, 0f));
+            Shader.SetGlobalVector(IdMaailma, new Vector4(1f / Mathf.Max(1e-6f, mitta), Mathf.Max(1f, KaukoUtu), 0f, 0f));
             Shader.SetGlobalVector(IdPilviKerros, new Vector4(Pilvet && Paalla ? 1f : 0f, PilviKorkeusM, PilviPaksuusM, 0f));
         }
 

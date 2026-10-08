@@ -86,6 +86,9 @@ Shader "Matkakirja/Linssit/VesiPinta"
                 float cosv = saturate(dot(-d, n)), fresnel = 0.02 + 0.98 * pow(1.0 - cosv, 5.0);
                 float3 taivas = IlmSavytys(IlmTaivas(r) * _IlmParam.y);
                 float aurinko = pow(saturate(dot(r, _IlmAurinko.xyz)), 900.0) * _Kimallus * step(0.0, _IlmAurinko.y);
+                // Välke (omistaja 9.10.): satunnaiset kimallukset laajemmassa heijastuskeilassa, vaihtuvat 8 kertaa sekunnissa.
+                float2 kk = floor(pm.xz * 1.5) + floor(t * 8.0); float kipina = step(0.985, frac(sin(dot(kk, float2(12.9898, 78.233))) * 43758.5453));
+                aurinko += pow(saturate(dot(r, _IlmAurinko.xyz)), 60.0) * kipina * 4.0 * (1.0 - saturate(et * m / 2500.0)) * step(0.0, _IlmAurinko.y);
                 float3 c = lerp(_Syva.rgb * saturate(_IlmAurinko.y * 3.0 + 0.15), taivas, fresnel) + aurinko * IlmLapaisy(_IlmParam.x, _IlmAurinko.y);
                 // Vaahto: valkoinen auringon ja taivaan valossa (näyttöavaruudessa kuten _Syva), vain lähellä (ei välkettä kaukana).
                 float vaahtoV = saturate(vaahto) * (1.0 - saturate(et * m / 4000.0));
@@ -94,6 +97,44 @@ Shader "Matkakirja/Linssit/VesiPinta"
                 c = lerp(c, c * lapaisy + IlmSavytys(sironta * _IlmParam.y), _IlmParam.z);
                 float alfa = smoothstep(0.0, 3.0, v.ranta) * 0.97;
                 return half4((half3)IlmDither(MixFog((half3)c, v.sumu), v.p.xy), alfa);   // ei portaita B10G11R11-puskurissa
+            }
+            ENDHLSL
+        }
+        Pass
+        {
+            // AAMUSUMU (Ydin AamuSumu, _IlmSaa.z): sama vesiverkko 3 m ylempänä, hidas kohina, rannalla ja lähellä kameraa häivytetty.
+            Name "VesiSumu"
+            Tags { "LightMode" = "SRPDefaultUnlit" }
+            Blend SrcAlpha OneMinusSrcAlpha
+            ZWrite Off
+            Cull Off
+            HLSLPROGRAM
+            #pragma vertex vert
+            #pragma fragment frag
+            #pragma multi_compile_fog
+            #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
+            #include "Ilmakeha.hlsl"
+            struct A { float4 p : POSITION; float2 uv : TEXCOORD0; };
+            struct V { float4 p : SV_POSITION; float3 w : TEXCOORD0; float ranta : TEXCOORD1; float sumu : TEXCOORD2; };
+            V vert(A a)
+            {
+                V v; v.w = TransformObjectToWorld(a.p.xyz) + float3(0, 3.0 / max(1e-6, _IlmMaailma.x), 0);
+                v.p = TransformWorldToHClip(v.w); v.ranta = a.uv.x; v.sumu = ComputeFogFactor(v.p.z);
+                if (_IlmSaa.z <= 0.001) v.p = float4(0, 0, -1, 1);   // ei sumua: kolmiot pois (ei pikselityötä)
+                return v;
+            }
+            half4 frag(V v) : SV_Target
+            {
+                float m = _IlmMaailma.x; float2 pm = v.w.xz * m * 0.01 + _IlmTuuli.xy * 0.003;
+                float2 i = floor(pm), f = frac(pm); f = f * f * (3.0 - 2.0 * f);
+                float a00 = frac(sin(dot(i, float2(127.1, 311.7))) * 43758.5453), a10 = frac(sin(dot(i + float2(1, 0), float2(127.1, 311.7))) * 43758.5453);
+                float a01 = frac(sin(dot(i + float2(0, 1), float2(127.1, 311.7))) * 43758.5453), a11 = frac(sin(dot(i + float2(1, 1), float2(127.1, 311.7))) * 43758.5453);
+                float n = lerp(lerp(a00, a10, f.x), lerp(a01, a11, f.x), f.y);
+                float et = length(v.w - _WorldSpaceCameraPos) * m;
+                float alfa = _IlmSaa.z * 0.45 * (0.5 + 0.5 * n) * smoothstep(0.0, 25.0, v.ranta) * smoothstep(60.0, 300.0, et);
+                // Sumun väri: auringon läpäisy (lämmin aamuvalo) + taivas, sävytettynä kuten taivas.
+                float3 c = IlmSavytys((IlmLapaisy(_IlmParam.x, _IlmAurinko.y) * 0.25 + IlmTaivas(float3(0, 1, 0))) * _IlmParam.y);
+                return half4(MixFog((half3)c, v.sumu), alfa);
             }
             ENDHLSL
         }

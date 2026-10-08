@@ -39,5 +39,24 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(SavuLajit.Laji("vene") == null && SavuLajit.Laji("kanootti") == null, "pienet: ei savua");
             Oleta.Tosi(SavuLajit.Laji("hoyrylaiva")!.Value.Enintaan <= 40, "hiukkasia enintään 40 / laiva");
         }
-    }
+    
+        [Testi] static void AamusumuVainAamulla()
+        {
+            Oleta.Sama(1.0, AamuSumu.Voima(4, 90), "aamu, aurinko 4° idässä: täysi");
+            Oleta.Sama(0.0, AamuSumu.Voima(4, 270), "ilta: ei sumua");
+            Oleta.Sama(0.0, AamuSumu.Voima(20, 120), "aurinko korkealla: haihtunut");
+            Oleta.Sama(0.0, AamuSumu.Voima(-10, 80), "yö: ei vielä");
+            Oleta.Tosi(AamuSumu.Voima(10, 100) > 0 && AamuSumu.Voima(10, 100) < 1, "haihtuu vähitellen");
+        }
+
+        [Testi] static void VarjostimetUtuSumuVälke()
+        {
+            string V(string n) => System.IO.File.ReadAllText(System.IO.Path.Combine(AppContext.BaseDirectory, "..", "..", "Assets", "Matkakirja", "Linssit", "Resources", "Varjostimet", n));
+            Oleta.Tosi(V("Ilmakeha.hlsl").Contains("etM *= max(1.0, _IlmMaailma.y);"), "kauko-utu ilmaperspektiivissä");
+            string v = V("VesiPinta.shader");
+            Oleta.Tosi(v.Contains("Name \"VesiSumu\"") && v.Contains("_IlmSaa.z"), "aamusumukerros");
+            Oleta.Tosi(v.Contains("kipina"), "välke");
+            Oleta.Tosi(V("IlmakehaLaatat.shader").Contains("_IlmSaa.x"), "märät kadut");
+        }
+}
 }
