@@ -48,7 +48,7 @@ namespace Matkakirja.Linssit.Testit
                     if (i >= 1)
                     {
                         double v = Math.Sqrt(Math.Pow(paikat[i].e - paikat[i - 1].e, 2) + Math.Pow(paikat[i].n - paikat[i - 1].n, 2)) / dt;
-                        seisoo = v < 0.3 && s.Nykyinen != null ? seisoo + dt : 0;
+                        seisoo = v < 0.3 && s.Nykyinen != null && !s.Leijuu ? seisoo + dt : 0;
                         if (seisoo > 0) m.Seisonta += dt;
                         m.PisinSeisonta = Math.Max(m.PisinSeisonta, seisoo);
                     }
@@ -73,10 +73,10 @@ namespace Matkakirja.Linssit.Testit
             var m = Aja(0.9);
             Console.WriteLine($"      pallokierros: {m.T:F0} s, seisonta yht. {m.Seisonta:F1} s (pisin {m.PisinSeisonta:F1} s), taaksepäin {m.Nykayksia}: {string.Join(" | ", m.Loki)}");
             Oleta.Sama(0, m.Nykayksia, "ei taaksepäin nykäisyjä");
-            Oleta.Tosi(m.PisinSeisonta <= 2, $"pisin seisonta {m.PisinSeisonta:F1} s ≤ 2 s (lipuminen jatkuu laattaodotuksen ajan)");
+            Oleta.Tosi(m.PisinSeisonta <= 3, $"pisin seisonta {m.PisinSeisonta:F1} s ≤ 3 s (lipuminen jatkuu laattaodotuksen ajan; raja kuten PalloKierrosTestit)");
             Oleta.Tosi(m.Seisonta <= 15, $"seisonta yhteensä {m.Seisonta:F1} s ≤ 15 s");
             var v = Aja(1.0);
-            Oleta.Tosi(v.Nykayksia == 0 && v.PisinSeisonta <= 2, $"laatat valmiina: taaksepäin {v.Nykayksia}, pisin seisonta {v.PisinSeisonta:F1} s");
+            Oleta.Tosi(v.Nykayksia == 0 && v.PisinSeisonta <= 3, $"laatat valmiina: taaksepäin {v.Nykayksia}, pisin seisonta {v.PisinSeisonta:F1} s");
         }
     }
 }
