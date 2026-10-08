@@ -1,10 +1,11 @@
 // HUONESIMULAATIO (Linssiseppä 2, 8.10.2026; pelattavuusmalli-olavinlinna.md kohta 11): Olavinlinnan ensimmäinen pala (huoneet 1–5,
 // reitti:pelaaja-1…20) ilman Unityä. Ydin-luokat (Vartija, Askelaani) v44s-datalla (kultaiset/olavinlinna-v44s-*.json) ja
-// SeikkailuVartijat-sovittimen säännöt: partioreitit merkeistä (odota_s tai odotus_s, muuten 2 s), valoisuus = tilojen liekit
-// (DioraamaLiekit: perus 0,25, 1 − d / 5 m, piste 1 m jalkojen yllä; kultaiset/olavinlinna-v44s-liekit.json) + valo:-merkit (sade,
-// voima) + havaitsevan hahmon lyhty 1 − d / 4 m + palava kynttilä ≥ 0,9 (kyyryssä 0,45), piilo 0,7 m (kyykky vain hiipien; nähty
-// piiloon meno ei suojaa), askeleet pinnan mukaan seinäsäännöllä, huuto kutsuu 2 lähintä 20 m:stä, riita 40 s:n välein (pelaaja
-// vesiportilla tai ulkona), kiinni → tarkistuspiste (portaalin ylitys ilman vaaraa), armo 4 s, kaikki valppaiksi.
+// SeikkailuVartijat-sovittimen säännöt (7aab3f25): partioreitit merkeistä (odotus 2 s, jos odota_s/odotus_s puuttuu), valoisuus = tilojen
+// liekit (DioraamaLiekit: perus 0,25, 1 − d / 5 m, piste 1 m jalkojen yllä; kultaiset/olavinlinna-v44s-liekit.json) + valo:-merkit (sade,
+// voima) + lyhdyn (4 m) tai soihdun (6 m) kantaja + palava kynttilä ≥ 0,9 (kyyryssä 0,45), piilo 0,7 m (kyykky vain hiipien; nähty
+// piiloon meno ei suojaa), askeleet pinnan mukaan seinäsäännöllä (tarjotin kädessä vain juoksu kuuluu), huuto kutsuu 2 lähintä 20 m:stä,
+// riita 40 s:n välein (pelaaja vesiportilla tai ulkona), torkkuja ottaa tarjottimen myös heränneenä (ei hälytyksessä) ja istuu syömään,
+// kiinni → tarkistuspiste (portaalin ylitys ilman vaaraa), armo 4 s, kaikki valppaiksi.
 // Yksinkertaistukset: hahmot ja pelaaja kulkevat suoraan (ei NavMeshiä); näkölinja vapaa samassa osassa ja naapuriosaan vain
 // portaalin (ovi:-merkki) kautta, kerrosero ≤ 2 m; mukana vain hahmot, joiden reitti on alle 25 m:n päässä pelaajan reitistä.
 // Kopioi() kloonaa koko tilan (myös Vartijan yksityiset kentät), jotta testiajuri voi kokeilla ajoituksia etukäteen.
@@ -19,11 +20,11 @@ namespace Matkakirja.Linssit.Testit
 {
     public sealed class Huonesimulaatio
     {
-        public const double Dt = 1 / 30.0, KaukoM = 20, PiiloM = 0.7, LyhtyM = 4, ArmoS = 4, RiitaValiS = 40, HuutoM = 20, HeittoAaniM = 12, PoimintaM = 1.2, AnnaM = 1.6;
+        public const double Dt = 1 / 30.0, KaukoM = 20, PiiloM = 0.7, LyhtyM = 4, SoihtuM = 6, ArmoS = 4, RiitaValiS = 40, HuutoM = 20, HeittoAaniM = 12, PoimintaM = 1.2, AnnaM = 1.6;
 
         public sealed class Hahmo
         {
-            public string Nimi; public Vartija Aivot; public double X, Y, Z; public bool NakiViimeksi;
+            public string Nimi; public Vartija Aivot; public double X, Y, Z, ValoM; public bool NakiViimeksi;
             public string Osa; public double OsaX, OsaY, OsaZ;   // osan välimuisti (Askelaani.Osa vain liikkuessa)
             public List<(double X, double Y, double Z)> Pisteet = new List<(double, double, double)>();
         }
@@ -32,7 +33,6 @@ namespace Matkakirja.Linssit.Testit
         static List<(double X, double Y, double Z, double Sade, double Voima)> valot;
         static List<(double X, double Y, double Z)> reitti;
         static (double X, double Z) vene;
-        static Dictionary<string, double> odotus;
         public static KavelyData Data { get { Lataa(); return data; } }
         /// <summary>reitti:pelaaja-N järjestyksessä (huoneet 1–5).</summary>
         public static List<(double X, double Y, double Z)> Reitti { get { Lataa(); return reitti; } }
@@ -49,12 +49,9 @@ namespace Matkakirja.Linssit.Testit
                 valot.Add(((double)p[0], (double)p[1], (double)p[2], Math.Clamp(2.5 + 2.5 * (MiniJson.Luku(o, "koko") ?? 1), 2.5, 6), 1));
             }
             // valo:-merkit, joilla on säde (hiilipannu, takka, raot); KavelyMerkki ei pidä kenttiä sade/voima, joten luetaan raakana.
-            // Samoin odotus_s (v44m–v44s: portinvartija, renki, portaat, apulainen), jota KavelyData ei vielä lue (se lukee odota_s).
-            odotus = new Dictionary<string, double>(StringComparer.Ordinal);
             foreach (var m in MiniJson.TaulukkoTaiTyhja(MiniJson.Jasenna(Lue("olavinlinna-v44s-merkit.json"))))
             {
                 var o = MiniJson.ObjektiTaiNull(m); string nimi = MiniJson.Teksti(o, "nimi") ?? "";
-                if (MiniJson.Luku(o, "odotus_s") is double os) odotus[nimi] = os;
                 if (!nimi.StartsWith("valo:", StringComparison.Ordinal) || !(MiniJson.Luku(o, "sade") is double sade) || MiniJson.Kentta(o, "liikkuu") is bool lb && lb) continue;
                 var p = MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(o, "paikka"));
                 valot.Add(((double)p[0], (double)p[1], (double)p[2], sade, MiniJson.Luku(o, "voima") ?? 1));
@@ -97,11 +94,13 @@ namespace Matkakirja.Linssit.Testit
                 var eka = kv.Value.Find(x => x.Profiili != null || x.Henkilo != null) ?? kv.Value[0];
                 bool istuu = eka.Laji == "istuu";
                 var p = new List<(double, double, double)>();
-                foreach (var m in kv.Value) p.Add((m.X, m.Z, istuu ? 1e9 : m.OdotaS > 0 ? m.OdotaS : odotus.TryGetValue(m.Nimi, out var os) && os > 0 ? os : 2.0));
+                foreach (var m in kv.Value) p.Add((m.X, m.Z, istuu ? 1e9 : m.OdotaS > 0 ? m.OdotaS : 2.0));
                 // Alkusuunta glTF-kehyksessä: kierto_y (rad) = katse (sin, cos) x/z-tasossa (portinvartija laiturille, torkkuja kammioon).
                 var h = new Hahmo { Nimi = kv.Key, X = kv.Value[0].X, Y = kv.Value[0].Y, Z = kv.Value[0].Z,
                     Aivot = new Vartija(p, eka.KiertoY is double k ? k * 180 / Math.PI : 0) { Profiili = VartijaProfiili.Hae(eka.Profiili), Torkkuu = istuu } };
                 foreach (var m in kv.Value) h.Pisteet.Add((m.X, m.Y, m.Z));
+                var kantaja = kv.Value.Find(x => x.Lyhty || x.Soihtu);
+                if (kantaja != null) h.ValoM = kantaja.Soihtu ? SoihtuM : LyhtyM;
                 foreach (var pm in d.Lajia("piilo")) h.Aivot.Piilot.Add((pm.X, pm.Z));
                 s.Hahmot.Add(h);
             }
@@ -138,14 +137,13 @@ namespace Matkakirja.Linssit.Testit
             return k;
         }
 
-        /// <summary>Pelaajan valoisuus (SeikkailuVartijat.PelaajanValoisuus): liekit 1 m jalkojen yllä, valo:-merkit, kynttilä, lyhdyt.</summary>
+        /// <summary>Pelaajan valoisuus (SeikkailuVartijat.PelaajanValoisuus): liekit 1 m jalkojen yllä, valo:-merkit, kynttilä, kannetut valot.</summary>
         public double Valoisuus()
         {
             double v = 0.25;
             foreach (var l in valot) { double d = Etaisyys3(l.X, l.Y, l.Z, PX, PY + 1, PZ); if (d < l.Sade) v = Math.Max(v, l.Voima * (1 - d / l.Sade)); }
             if (Kynttila) v = Math.Max(v, Hiipii ? 0.45 : 0.9);
-            foreach (var h in Hahmot)
-                if (h.Aivot.Profiili.Havaitsee && h.Aivot.Profiili.JahtaaMs > 0) v = Math.Max(v, 1 - Etaisyys3(h.X, h.Y, h.Z, PX, PY, PZ) / LyhtyM);
+            foreach (var h in Hahmot) if (h.ValoM > 0) v = Math.Max(v, 1 - Etaisyys3(h.X, h.Y, h.Z, PX, PY, PZ) / h.ValoM);
             return Math.Min(1, v);
         }
 
@@ -195,7 +193,8 @@ namespace Matkakirja.Linssit.Testit
                 foreach (var m in Data.Lajia("esine")) if (m.Kannettava && m.Tunnus == "tarjotin" && Etaisyys2(PX, PZ, m.X, m.Z) <= PoimintaM && Math.Abs(PY - m.Y) < 1.5) Tarjotin = true;
             if (Tarjotin)
                 foreach (var h in Hahmot)
-                    if (h.Aivot.Profiili == VartijaProfiili.Torkku && h.Aivot.Torkkuu && !h.Aivot.Syo && Etaisyys3(h.X, h.Y, h.Z, PX, PY, PZ) < AnnaM) { h.Aivot.Syo = true; Tarjotin = false; Annettu = true; Kynttila = true; }
+                    if (h.Aivot.Profiili == VartijaProfiili.Torkku && !h.Aivot.Syo && h.Aivot.Tila != VartijanTila.Halytys && h.Aivot.Tila != VartijanTila.Kiinni
+                        && Etaisyys3(h.X, h.Y, h.Z, PX, PY, PZ) < AnnaM) { h.Aivot.Torkkuu = true; h.Aivot.Syo = true; Tarjotin = false; Annettu = true; Kynttila = true; }
         }
 
         /// <summary>Heitettävät ja kaadettavat pelaajan ulottuvilla (≤ 1,2 m), joita ei ole käytetty.</summary>
@@ -233,7 +232,7 @@ namespace Matkakirja.Linssit.Testit
             if (osa != null && osa != pelaajanOsa) { if (pelaajanOsa != null && !Vaara()) { Tarkistus = (PX, PY, PZ); TarkistusSeuraava = Seuraava; } pelaajanOsa = osa; }
             var aanet = new List<Aanilahde>(Jono); Jono.Clear();
             double sade = Askelaani.Sade(Askelaani.Pinta(d, PX, PY, PZ), Hiipii ? Liiketapa.Hiipiminen : Liiketapa.Kavely);
-            if (vauhti > 0.3 && sade > 0) aanet.Add(new Aanilahde(PX, PZ, sade, osa));
+            if (vauhti > 0.3 && sade > 0 && !Tarjotin) aanet.Add(new Aanilahde(PX, PZ, sade, osa));   // tarjotin kädessä: palvelijan askeleet (ei juoksua)
             bool piilossa = Piilossa();
             if (piilossa && !oliPiilossa) foreach (var h in Hahmot) if (h.Aivot.Mittari >= Vartija.TutkiHuippu && h.NakiViimeksi) { paljastui = true; break; }
             if (!piilossa) paljastui = false;
