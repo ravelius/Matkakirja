@@ -1,0 +1,89 @@
+// SADE (omistajan palaute 8.10. (2), Siirtoseppä): Pelikoodarin aanet-saa-v1-silmukat (−23 LUFS, sauma valmiina, loop ilman
+// ristihäivytystä) kaksiulotteisina taustoina ☰-mikserin "Sää"-voimalla (Asetukset.Taso(Voima.Saa)). Tila pelaajan kävelyosasta
+// (pienin osa, jonka rajoihin pelaaja osuu) ja sen märkyydestä (LR v45f): ulkona (märkyys ≥ 0,5) sade kivelle ja tippuminen
+// räystäiltä, veden äärellä (≥ 0,8 tai veneessä) sade veteen, puupinnan lähellä (pinta-merkki puu*, 6 m) sade puulle, veneessä
+// sade pressulle; sisällä sade kuuluu vaimeana ja vesi tippuu muurista. Kaukainen ukkonen aina hiljaa. Liukuva siirtymä 1,5 s.
+using System;
+using System.Collections.Generic;
+using Matkakirja.Linssit.Seikkailu;
+using UnityEngine;
+
+namespace Matkakirja.Natiivi
+{
+    public sealed class SeikkailuSade : MonoBehaviour
+    {
+        public static SeikkailuSade Aktiivinen { get; private set; }
+        static readonly string[] Tunnukset = { "sade-kivi", "sade-vesi", "sade-puu", "sade-pressu", "tippuminen-raystas", "tippuminen-muuri", "ukkonen-jyly" };
+        readonly Dictionary<string, AudioSource> lahteet = new Dictionary<string, AudioSource>();
+        readonly Dictionary<string, float> tavoite = new Dictionary<string, float>();
+        float tarkistusT;
+
+        public static void Luo(Transform isa)
+        {
+            Poista();
+            var go = new GameObject("Seikkailu sade");
+            go.transform.SetParent(isa, false);
+            Aktiivinen = go.AddComponent<SeikkailuSade>();
+        }
+
+        public static void Poista() { var s = Aktiivinen; Aktiivinen = null; if (s != null) Destroy(s.gameObject); }
+
+        /// <summary>Tavoitevoimakkuudet (0–1 ennen Sää-voimaa) pelaajan paikasta; testattava ilman Unityä ei ole tarpeen (puhdas taulukko).</summary>
+        public static void Tavoitteet(double markyys, bool veneessa, bool puulla, IDictionary<string, float> ulos)
+        {
+            bool ulkona = veneessa || markyys >= 0.5;
+            bool vesi = veneessa || markyys >= 0.8;
+            ulos["sade-kivi"] = ulkona && !veneessa ? 0.75f : 0.16f;
+            ulos["sade-vesi"] = vesi ? (veneessa ? 0.8f : 0.55f) : 0f;
+            ulos["sade-puu"] = puulla && !veneessa ? 0.6f : 0f;
+            ulos["sade-pressu"] = veneessa ? 0.85f : 0f;
+            ulos["tippuminen-raystas"] = ulkona && !veneessa ? 0.35f : 0f;
+            ulos["tippuminen-muuri"] = ulkona ? 0f : markyys > 0 ? 0.5f : 0.28f;
+            ulos["ukkonen-jyly"] = ulkona ? 0.45f : 0.3f;
+        }
+
+        void Update()
+        {
+            float dt = Time.unscaledDeltaTime;
+            if (Time.unscaledTime >= tarkistusT)
+            {
+                tarkistusT = Time.unscaledTime + 0.5f;
+                var p = SeikkailuPelaaja.Aktiivinen;
+                bool veneessa = p == null && SeikkailuVene.Aktiivinen != null;
+                double markyys = 0; bool puulla = false;
+                var d = SeikkailuKavely.Data;
+                if (p != null && d != null)
+                {
+                    var pos = p.transform.position; double x = pos.x, y = pos.y, z = -pos.z, pienin = double.MaxValue;
+                    foreach (var o in d.Osat.Values)
+                    {
+                        if (x < o.RajatMin[0] - 0.5 || x > o.RajatMax[0] + 0.5 || z < o.RajatMin[2] - 0.5 || z > o.RajatMax[2] + 0.5 || y < o.RajatMin[1] - 1 || y > o.RajatMax[1] + 1) continue;
+                        double tilavuus = (o.RajatMax[0] - o.RajatMin[0]) * (o.RajatMax[1] - o.RajatMin[1] + 1) * (o.RajatMax[2] - o.RajatMin[2]);
+                        if (tilavuus < pienin) { pienin = tilavuus; markyys = o.Markyys; }
+                    }
+                    foreach (var m in d.Merkit)
+                        if (m.Laji == "pinta" && m.Tunnus != null && m.Tunnus.StartsWith("puu", StringComparison.Ordinal)
+                            && (m.X - x) * (m.X - x) + (m.Z - z) * (m.Z - z) < 36 && Math.Abs(m.Y - y) < 3) { puulla = true; if (m.Markyys > markyys) markyys = m.Markyys; break; }
+                }
+                Tavoitteet(markyys, veneessa, puulla, tavoite);
+            }
+            float taso = Asetukset.Taso(Voima.Saa);
+            foreach (var t in Tunnukset)
+            {
+                tavoite.TryGetValue(t, out var v);
+                if (!lahteet.TryGetValue(t, out var l) || l == null)
+                {
+                    if (v <= 0f) continue;
+                    var klippi = SeikkailuAanet.Klippi(t); if (klippi == null) continue;   // manifest vielä latautumassa
+                    l = gameObject.AddComponent<AudioSource>();
+                    l.clip = klippi; l.loop = true; l.spatialBlend = 0f; l.playOnAwake = false; l.volume = 0f;
+                    l.time = UnityEngine.Random.Range(0f, Mathf.Max(0f, klippi.length - 0.1f));   // silmukat eri kohdista, ei yhtäaikaisia saumoja
+                    l.Play(); lahteet[t] = l;
+                }
+                float nyt = l.volume / Mathf.Max(taso, 1e-4f);
+                nyt = Mathf.MoveTowards(nyt, v, dt / 1.5f);
+                l.volume = nyt * taso;
+            }
+        }
+    }
+}

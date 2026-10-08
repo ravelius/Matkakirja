@@ -504,7 +504,7 @@ namespace Matkakirja.Natiivi
             kelloSiirto = 0;
             kuoriOdotusAlku = -1f; SaapumisOdotus = false; RakennusLatautuu = false; LatausVirhe = null; // näyttämö (ja sen odotuspiilotus) tuhoutuu alla
             // Historiamoottori: seikkailu pois (näyttämön lapset tuhoutuvat; globaalit kuoren leikkaukset ja kävelydata nollataan).
-            SeikkailuVartijat.Poista(); SeikkailuVene.Poista(); SeikkailuPelaaja.Poista(); SeikkailuRepliikit.Poista(); SeikkailuEsineet.Poista(); SeikkailuKynttilat.Poista(); SeikkailuKappeli.Poista(); SeikkailuAanet.Poista(); SeikkailuTallentaja.Poista(); SeikkailuVihjeet.Poista(); SeikkailuValot.Poista(); SeikkailuYo.Poista(); SeikkailuKasittely.Tyhjenna(); SeikkailuKavely.Pura();
+            SeikkailuVartijat.Poista(); SeikkailuVene.Poista(); SeikkailuPelaaja.Poista(); SeikkailuRepliikit.Poista(); SeikkailuEsineet.Poista(); SeikkailuKynttilat.Poista(); SeikkailuKappeli.Poista(); SeikkailuAanet.Poista(); SeikkailuTallentaja.Poista(); SeikkailuVihjeet.Poista(); SeikkailuValot.Poista(); SeikkailuYo.Poista(); SeikkailuSade.Poista(); SeikkailuKasittely.Tyhjenna(); SeikkailuKavely.Pura();
             SeikkailuEsineet.Kolahti -= KokkiKuuleeKolahduksen;
             cm?.SeikkailuPois(); PelattavaPalaPyydetty = false; KameraVapaa = false;
             if (DioraamaLevyvalimuisti.TestiOsoitin == PelattavaPalaHash)
@@ -994,6 +994,7 @@ namespace Matkakirja.Natiivi
             if (vm.Id == null) { o.Kirjaa("poikki: vene: rekvisiitta vene puuttuu (ymparisto.mallit, maailmaan: false)"); yield break; }
             yield return VarmistaKavelyData();
             SeikkailuPelaaja.Poista(); SeikkailuVene.Poista(); cm?.SeikkailuPois(); veneLaituriin = false; veneRepliikki = 0;
+            AanetPaalle();
             SeikkailuRepliikit.Luo(nayttamo.transform, MediaJuuri + "/seikkailu/" + RakennusId + "/repliikit-v3/manifest.json", o.Kirjaa);
             SeikkailuTietokerros.Luo(nayttamo.transform, MediaJuuri + "/seikkailu/" + RakennusId + "/tietokerros-v1/tietokerros.json", RakennusId, o.Kirjaa);
             double vesi = rakennus.Ulkokuori?.VesiY ?? 0;
@@ -1111,6 +1112,23 @@ namespace Matkakirja.Natiivi
         float kokkiRepliikkiAsti; int kokkiLaskuri;
 
         /// <summary>E3a: kappelin kohtaus ja pimeys (SeikkailuKappeli); kynttilät ensin, keskustelun ääni rakennuksen äänistä.</summary>
+        /// <summary>Seikkailun äänet ja repliikit (kerran; jo veneessä, Siirtoseppä 8.10.: veneyön "Hä?" ja sydän sekä sade soivat
+        /// vasta laiturilla luotuina). Toinen kutsu ei lataa manifesteja uudelleen.</summary>
+        void AanetPaalle()
+        {
+            if (nayttamo == null) return;
+            SeikkailuRepliikit.Luo(nayttamo.transform, MediaJuuri + "/seikkailu/" + RakennusId + "/repliikit-v3/manifest.json", o.Kirjaa);
+            var ennen = SeikkailuAanet.Aktiivinen;
+            var a = SeikkailuAanet.Luo(nayttamo.transform, MediaJuuri + "/seikkailu/" + RakennusId + "/aanet-e3-v1/manifest.json", o.Kirjaa);
+            if (a != ennen || SeikkailuSade.Aktiivinen == null)
+            {
+                SeikkailuAanet.LisaaManifest(MediaJuuri + "/seikkailu/" + RakennusId + "/aanet-fp-v1/manifest.json");   // Pelikoodari: askeleet, kantele (puuttuva ohitetaan)
+                SeikkailuAanet.LisaaManifest(MediaJuuri + "/seikkailu/" + RakennusId + "/aanet-fp-v2/manifest.json");   // M-osa: tiilet, köysi, kello, uinti, airot …
+                SeikkailuAanet.LisaaManifest(MediaJuuri + "/seikkailu/" + RakennusId + "/aanet-saa-v1/manifest.json");   // Pelikoodari 8.10.: sade, tippuminen, ukkonen
+                SeikkailuSade.Luo(nayttamo.transform);
+            }
+        }
+
         IEnumerator KappeliPaalle()
         {
             if (nayttamo == null || rakennus == null) yield break;
@@ -1120,7 +1138,7 @@ namespace Matkakirja.Natiivi
                 var ky = SeikkailuKynttilat.Luo(nayttamo.transform, "kappeli", nayttamo.Liekit, rakennus3D, o.Kirjaa);
                 if (ky != null) ky.Ydin.OmaKynttila = true;
             }
-            SeikkailuRepliikit.Luo(nayttamo.transform, MediaJuuri + "/seikkailu/" + RakennusId + "/repliikit-v3/manifest.json", o.Kirjaa);
+            AanetPaalle();
             AudioClip klippi = null;
             if (rakennus.Aanet != null && rakennus.Aanet.TryGetValue("kappeli-keskustelu", out var ka) && !string.IsNullOrEmpty(ka.Tiedosto))
             {
@@ -1129,9 +1147,6 @@ namespace Matkakirja.Natiivi
                 yield return q.SendWebRequest();
                 if (q.result == UnityEngine.Networking.UnityWebRequest.Result.Success) klippi = UnityEngine.Networking.DownloadHandlerAudioClip.GetContent(q);
             }
-            SeikkailuAanet.Luo(nayttamo.transform, MediaJuuri + "/seikkailu/" + RakennusId + "/aanet-e3-v1/manifest.json", o.Kirjaa);
-            SeikkailuAanet.LisaaManifest(MediaJuuri + "/seikkailu/" + RakennusId + "/aanet-fp-v1/manifest.json");   // Pelikoodari: askeleet, kantele (puuttuva ohitetaan)
-            SeikkailuAanet.LisaaManifest(MediaJuuri + "/seikkailu/" + RakennusId + "/aanet-fp-v2/manifest.json");   // M-osa: tiilet, köysi, kello, uinti, airot …
             SeikkailuKappeli.Luo(nayttamo.transform, rakennus, nayttamo.Hahmot3D, klippi, o.Kirjaa);
             var glbt = new List<string>();
             nayttamo.Hahmot3D?.IrrallistenGlb(glbt);
