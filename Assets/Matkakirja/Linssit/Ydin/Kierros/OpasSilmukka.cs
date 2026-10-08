@@ -612,7 +612,7 @@ namespace Matkakirja.Linssit.Kierros
             KierrosKaynnissa = kierros;   // Toive keskeyttää kierroksen; kierroksen oma siirto ei
             if (!PakotaSiirto && KierrosLento.EtaisyysM(Asento.Lat, Asento.Lon, lat, lon) < 150) return;
             var arvio = new OpasKohde { Nimi = nimi, Lat = lat, Lon = lon, KokoM = 120 };
-            double maa = MaaPisteessa?.Invoke(lat, lon) ?? double.NaN, tulo = Suunta(Asento.Lat, Asento.Lon, lat, lon);
+            double maa = MaaPisteessa?.Invoke(lat, lon) ?? double.NaN, tulo = PalloLento ? LennonSuunta(lat, lon) : Suunta(Asento.Lat, Asento.Lon, lat, lon);
             if (PalloLento)
             {
                 // Pallo: arviokehyksen suunta kääntörajan sisällä (PalloKaupungitTestit: avauksen laskeutuminen kääntyi 190°, 36 °/s).
@@ -1103,7 +1103,7 @@ namespace Matkakirja.Linssit.Kierros
             if (double.IsNaN(maa)) maa = MaaPisteessa?.Invoke(k.Lat, k.Lon) ?? double.NaN;
             arvio = double.IsNaN(maa);
             if (arvio) maa = MaaArvioM;
-            tulo = Suunta(Asento.Lat, Asento.Lon, k.Lat, k.Lon);
+            tulo = PalloLento ? LennonSuunta(k.Lat, k.Lon) : Suunta(Asento.Lat, Asento.Lon, k.Lat, k.Lon);
             double matkaM = KierrosLento.EtaisyysM(Asento.Lat, Asento.Lon, k.Lat, k.Lon);
             if (matkaM < 150) tulo = Asento.Suuntima;
             // Raja koskee lopullista kehyssuuntimaa (tulo + SivuKulma; video6 Louvre: kääntö 13,6 °/s, kun sivukulma jäi rajan ulkopuolelle).
@@ -1277,7 +1277,25 @@ namespace Matkakirja.Linssit.Kierros
                 Leijuu = loppu;
                 return;
             }
-            Asento = Ohjaus.Sovella(OpasKuvaus.Pysahdyksella(NykyinenKehys, kierto), NykyinenKehys.MaaM);
+            // Pallon avausnäkymä (kehys ilman kohdetta; omistaja TF 168: "parin kertojan lauseen jälkeen kip kääntyy kovalla vauhdilla
+            // 180 astetta"): vanha pysähdys kiersi ja hyppäsi 13 s:n kohdalla toiseen kehykseen (> 1 000 m/s) kesken avauksen. Pallo
+            // pysyy avauksen ajan rauhassa kehyksessä (ohjaus toimii), ensimmäinen lento lähtee levosta.
+            Asento = Ohjaus.Sovella(OpasKuvaus.Pysahdyksella(NykyinenKehys, kierto, !PalloLento), NykyinenKehys.MaaM);
+        }
+
+        /// <summary>
+        /// Lennon suunta kohteeseen (Linssiseppä 9.10., omistaja TF 168: "matkaa seinen puolelta toiselle ihan turhaan"): normaalisti
+        /// katsepisteestä kohteeseen, mutta kun kohde on silmän ja katsepisteen välissä kuvan suunnassa (avausnäkymä katsoo 1. kohteen
+        /// ohi, AvausKatseEteenOsuus), katsepisteestä laskettu suunta osoittaisi takaisin kameraa kohti → 180°:n käännös ja kohteen
+        /// toiselle puolelle. Silloin suunta silmästä kohteeseen.
+        /// </summary>
+        public double LennonSuunta(double lat, double lon)
+        {
+            double A = Math.PI / 180, h = Asento.EtaisyysM * Math.Sin(Asento.Kallistus * A), su = Asento.Suuntima * A;
+            double eLat = Asento.Lat - h * Math.Cos(su) / 111320.0, eLon = Asento.Lon - h * Math.Sin(su) / (111320.0 * Math.Cos(Asento.Lat * A));
+            double sk = Suunta(eLat, eLon, lat, lon), dk = KierrosLento.EtaisyysM(eLat, eLon, lat, lon);
+            if (Math.Abs(KierrosLento.Kiedo(sk - Asento.Suuntima)) < 60 && dk < h + 50) return sk;
+            return Suunta(Asento.Lat, Asento.Lon, lat, lon);
         }
 
         /// <summary>Lähtöhetken kiertonopeus (°/s), joka hiipuu lennon alussa (OpasKuvaus.KierronHiipuminen).</summary>
