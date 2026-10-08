@@ -1,0 +1,1777 @@
+{
+ "Kartta": [
+  {
+   "rivi": 99,
+   "valitsin": ".mk-kartuscha--tabletti .mk-kartuscha__nimi",
+   "ennen": 26.8,
+   "jalkeen": 26,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 181,
+   "valitsin": ".mk-kartuscha__arvo",
+   "ennen": 11.2,
+   "jalkeen": 12,
+   "arvio": "KASVAA +7 %, nowrap: voi leikkautua, tarkista"
+  },
+  {
+   "rivi": 189,
+   "valitsin": ".mk-kartuscha__sija",
+   "ennen": 10.56,
+   "jalkeen": 12,
+   "arvio": "kasvaa +14 %, ei kiinteää leveyttä (rivi joustaa)"
+  },
+  {
+   "rivi": 356,
+   "valitsin": ".mk-kartuscha__mknimi",
+   "ennen": 17.0,
+   "jalkeen": 16,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 383,
+   "valitsin": ".mk-kartuscha__pisteluku",
+   "ennen": 10.56,
+   "jalkeen": 12,
+   "arvio": "kasvaa +14 %, ei kiinteää leveyttä (rivi joustaa)"
+  },
+  {
+   "rivi": 499,
+   "valitsin": ".mk-selite__otsikko",
+   "ennen": 11.0,
+   "jalkeen": 12,
+   "arvio": "kasvaa +9 %, ei kiinteää leveyttä (rivi joustaa)"
+  },
+  {
+   "rivi": 672,
+   "valitsin": ".mk-selite__valilehti .mk-nappi__teksti",
+   "ennen": 10.88,
+   "jalkeen": 12,
+   "arvio": "kasvaa +10 %, ei kiinteää leveyttä (rivi joustaa)"
+  },
+  {
+   "rivi": 746,
+   "valitsin": ".mk-maakunnat__nuoli",
+   "ennen": 11.0,
+   "jalkeen": 12,
+   "arvio": "KASVAA +9 %, kiinteä leveys 14px: tarkista"
+  },
+  {
+   "rivi": 808,
+   "valitsin": ".mk-maakunnat__lnimi",
+   "ennen": 11.0,
+   "jalkeen": 12,
+   "arvio": "kasvaa +9 %, ei kiinteää leveyttä (rivi joustaa)"
+  },
+  {
+   "rivi": 861,
+   "valitsin": ".mk-maakunnat--tabletti .mk-maakunnat__lnimi",
+   "ennen": 15.0,
+   "jalkeen": 14,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 955,
+   "valitsin": ".mk-maakuntaKortti__otsikko",
+   "ennen": 20.0,
+   "jalkeen": 21,
+   "arvio": "kasvaa +5 %, ei kiinteää leveyttä (rivi joustaa)"
+  },
+  {
+   "rivi": 1168,
+   "valitsin": ".mk-nosto__ylarivi",
+   "ennen": 10.88,
+   "jalkeen": 12,
+   "arvio": "kasvaa +10 %, ei kiinteää leveyttä (rivi joustaa)"
+  },
+  {
+   "rivi": 1196,
+   "valitsin": ".mk-nosto__paivaysteksti",
+   "ennen": 11.0,
+   "jalkeen": 12,
+   "arvio": "kasvaa +9 %, ei kiinteää leveyttä (rivi joustaa)"
+  },
+  {
+   "rivi": 1357,
+   "valitsin": ".mk-nosto__laskuri",
+   "ennen": 10.88,
+   "jalkeen": 12,
+   "arvio": "kasvaa +10 %, ei kiinteää leveyttä (rivi joustaa)"
+  },
+  {
+   "rivi": 1371,
+   "valitsin": ".mk-nosto__visaotsikko",
+   "ennen": 11.0,
+   "jalkeen": 12,
+   "arvio": "kasvaa +9 %, ei kiinteää leveyttä (rivi joustaa)"
+  },
+  {
+   "rivi": 1441,
+   "valitsin": ".mk-nosto__kysyotsikko",
+   "ennen": 13.0,
+   "jalkeen": 12,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 1587,
+   "valitsin": ".mk-nosto__liiteotsake",
+   "ennen": 10.5,
+   "jalkeen": 12,
+   "arvio": "kasvaa +14 %, ei kiinteää leveyttä (rivi joustaa)"
+  },
+  {
+   "rivi": 1642,
+   "valitsin": ".mk-nosto__kohdenappi .mk-nappi__teksti",
+   "ennen": 15.0,
+   "jalkeen": 14,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 1658,
+   "valitsin": ".mk-nosto__lunastus .mk-nappi__teksti",
+   "ennen": 15.0,
+   "jalkeen": 14,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 1680,
+   "valitsin": ".mk-nosto__nykyteksti",
+   "ennen": 10.88,
+   "jalkeen": 12,
+   "arvio": "kasvaa +10 %, ei kiinteää leveyttä (rivi joustaa)"
+  },
+  {
+   "rivi": 1700,
+   "valitsin": ".mk-nosto__leikekirjaotsake",
+   "ennen": 11.0,
+   "jalkeen": 12,
+   "arvio": "kasvaa +9 %, ei kiinteää leveyttä (rivi joustaa)"
+  },
+  {
+   "rivi": 1818,
+   "valitsin": ".mk-leima__teksti",
+   "ennen": 16.8,
+   "jalkeen": 16,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 2023,
+   "valitsin": ".mk-nosto-viuhka__nimi",
+   "ennen": 13.0,
+   "jalkeen": 12,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 2248,
+   "valitsin": ".mk-maakunnat--tabletti.mk-maakunnat--kartta .mk-maakunnat__lnimi",
+   "ennen": 17.0,
+   "jalkeen": 16,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  }
+ ],
+ "Kohdekartta": [
+  {
+   "rivi": 34,
+   "valitsin": ".mk-nahtavyydet__otsikko",
+   "ennen": 19.2,
+   "jalkeen": 18,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 106,
+   "valitsin": ".mk-kohdekartta__kokoruutu .mk-nappi__teksti",
+   "ennen": 10.6,
+   "jalkeen": 12,
+   "arvio": "kasvaa +13 %, ei kiinteää leveyttä (rivi joustaa)"
+  },
+  {
+   "rivi": 178,
+   "valitsin": ".mk-kohdekartta__kyltti",
+   "ennen": 15.2,
+   "jalkeen": 16,
+   "arvio": "KASVAA +5 %, nowrap: voi leikkautua, tarkista"
+  },
+  {
+   "rivi": 234,
+   "valitsin": ".mk-kohdekartta__numero",
+   "ennen": 13.0,
+   "jalkeen": 12,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 336,
+   "valitsin": ".mk-kohdekartta-kokoruutu__sulku .mk-nappi__teksti",
+   "ennen": 20.0,
+   "jalkeen": 21,
+   "arvio": "kasvaa +5 %, ei kiinteää leveyttä (rivi joustaa)"
+  },
+  {
+   "rivi": 598,
+   "valitsin": ".mk-avauskortti__sulku .mk-nappi__teksti",
+   "ennen": 22.0,
+   "jalkeen": 21,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 653,
+   "valitsin": ".mk-kohdekartta-kokoruutu__zoom .mk-nappi__teksti",
+   "ennen": 20.0,
+   "jalkeen": 21,
+   "arvio": "kasvaa +5 %, ei kiinteää leveyttä (rivi joustaa)"
+  }
+ ],
+ "Kysymys": [
+  {
+   "rivi": 62,
+   "valitsin": ".mk-kysymys__leima",
+   "ennen": 11.0,
+   "jalkeen": 12,
+   "arvio": "kasvaa +9 %, ei kiinteää leveyttä (rivi joustaa)"
+  },
+  {
+   "rivi": 133,
+   "valitsin": ".mk-kysymys__selite",
+   "ennen": 12.8,
+   "jalkeen": 12,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 176,
+   "valitsin": ".mk-kysymys__kehys",
+   "ennen": 15.0,
+   "jalkeen": 14,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 206,
+   "valitsin": ".mk-kysymys__vihjemerkki",
+   "ennen": 14.7,
+   "jalkeen": 14,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 213,
+   "valitsin": ".mk-kysymys__vihjeteksti",
+   "ennen": 14.7,
+   "jalkeen": 14,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 300,
+   "valitsin": ".mk-kysymys__kirjain",
+   "ennen": 15.0,
+   "jalkeen": 14,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 314,
+   "valitsin": ".mk-kysymys__vaihtoehdot--tiivis .mk-kysymys__vaihtoehtoteksti",
+   "ennen": 15.0,
+   "jalkeen": 14,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 391,
+   "valitsin": ".mk-kysymys__tuomio",
+   "ennen": 22.0,
+   "jalkeen": 21,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 429,
+   "valitsin": ".mk-kysymys__lahdeotsikko",
+   "ennen": 10.9,
+   "jalkeen": 12,
+   "arvio": "kasvaa +10 %, ei kiinteää leveyttä (rivi joustaa)"
+  },
+  {
+   "rivi": 570,
+   "valitsin": ".mk-kysymys__muotokuvaselite",
+   "ennen": 12.8,
+   "jalkeen": 12,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 583,
+   "valitsin": ".mk-kysymys__tervehdys",
+   "ennen": 15.2,
+   "jalkeen": 16,
+   "arvio": "kasvaa +5 %, ei kiinteää leveyttä (rivi joustaa)"
+  },
+  {
+   "rivi": 600,
+   "valitsin": ".mk-kysymys__varoitusteksti",
+   "ennen": 14.7,
+   "jalkeen": 14,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 665,
+   "valitsin": ".mk-kysymys__repliikki",
+   "ennen": 14.7,
+   "jalkeen": 14,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 821,
+   "valitsin": ".mk-paljastus__nimi",
+   "ennen": 20.0,
+   "jalkeen": 21,
+   "arvio": "kasvaa +5 %, ei kiinteää leveyttä (rivi joustaa)"
+  },
+  {
+   "rivi": 905,
+   "valitsin": ".mk-paljastus__leimateksti",
+   "ennen": 15.0,
+   "jalkeen": 14,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 940,
+   "valitsin": ".mk-paljastus__jatka .mk-nappi__teksti",
+   "ennen": 14.72,
+   "jalkeen": 14,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 968,
+   "valitsin": ".mk-kysymys__apuveikkaus",
+   "ennen": 15.0,
+   "jalkeen": 14,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  }
+ ],
+ "Lehti": [
+  {
+   "rivi": 169,
+   "valitsin": ".mk-lehti__paivaysteksti",
+   "ennen": 11.2,
+   "jalkeen": 12,
+   "arvio": "kasvaa +7 %, ei kiinteää leveyttä (rivi joustaa)"
+  },
+  {
+   "rivi": 267,
+   "valitsin": ".mk-lehti__osasto",
+   "ennen": 11.0,
+   "jalkeen": 12,
+   "arvio": "kasvaa +9 %, ei kiinteää leveyttä (rivi joustaa)"
+  },
+  {
+   "rivi": 334,
+   "valitsin": ".mk-lehti__linkki .mk-nappi__teksti",
+   "ennen": 13.0,
+   "jalkeen": 12,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 390,
+   "valitsin": ".mk-lehti__kuvateksti",
+   "ennen": 13.0,
+   "jalkeen": 12,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 403,
+   "valitsin": ".mk-lehti__lahde",
+   "ennen": 10.56,
+   "jalkeen": 12,
+   "arvio": "kasvaa +14 %, ei kiinteää leveyttä (rivi joustaa)"
+  },
+  {
+   "rivi": 474,
+   "valitsin": ".mk-maa__luvut",
+   "ennen": 15.2,
+   "jalkeen": 16,
+   "arvio": "kasvaa +5 %, ei kiinteää leveyttä (rivi joustaa)"
+  },
+  {
+   "rivi": 493,
+   "valitsin": ".mk-maa__otsake",
+   "ennen": 10.56,
+   "jalkeen": 12,
+   "arvio": "kasvaa +14 %, ei kiinteää leveyttä (rivi joustaa)"
+  },
+  {
+   "rivi": 511,
+   "valitsin": ".mk-maa__tunnus",
+   "ennen": 15.2,
+   "jalkeen": 16,
+   "arvio": "kasvaa +5 %, ei kiinteää leveyttä (rivi joustaa)"
+  },
+  {
+   "rivi": 534,
+   "valitsin": ".mk-maa__arvoteksti",
+   "ennen": 15.2,
+   "jalkeen": 16,
+   "arvio": "KASVAA +5 %, nowrap: voi leikkautua, tarkista"
+  },
+  {
+   "rivi": 549,
+   "valitsin": ".mk-maa__alleviiva > *",
+   "ennen": 11.0,
+   "jalkeen": 12,
+   "arvio": "kasvaa +9 %, ei kiinteää leveyttä (rivi joustaa)"
+  },
+  {
+   "rivi": 570,
+   "valitsin": ".mk-maa__johdin",
+   "ennen": 15.2,
+   "jalkeen": 16,
+   "arvio": "kasvaa +5 %, ei kiinteää leveyttä (rivi joustaa)"
+  },
+  {
+   "rivi": 604,
+   "valitsin": ".mk-maa__tervehdysteksti",
+   "ennen": 16.7,
+   "jalkeen": 16,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 644,
+   "valitsin": ".mk-lehti__tehtavaotsake",
+   "ennen": 10.56,
+   "jalkeen": 12,
+   "arvio": "kasvaa +14 %, ei kiinteää leveyttä (rivi joustaa)"
+  },
+  {
+   "rivi": 662,
+   "valitsin": ".mk-lehti__tehtavavihje",
+   "ennen": 13.0,
+   "jalkeen": 12,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 675,
+   "valitsin": ".mk-lehti__tehtavatulos",
+   "ennen": 15.0,
+   "jalkeen": 14,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 841,
+   "valitsin": ".mk-lehti__selaussuunta",
+   "ennen": 13.12,
+   "jalkeen": 14,
+   "arvio": "kasvaa +7 %, ei kiinteää leveyttä (rivi joustaa)"
+  },
+  {
+   "rivi": 849,
+   "valitsin": ".mk-lehti__selausaihe",
+   "ennen": 10.56,
+   "jalkeen": 12,
+   "arvio": "KASVAA +14 %, kiinteä leveys 114px: tarkista (nowrap)"
+  },
+  {
+   "rivi": 871,
+   "valitsin": ".mk-lehti__liite .mk-nappi__teksti",
+   "ennen": 13.0,
+   "jalkeen": 12,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 930,
+   "valitsin": ".mk-lehti__sisallyssulje .mk-nappi__teksti",
+   "ennen": 22.4,
+   "jalkeen": 21,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 981,
+   "valitsin": ".mk-lehti__sisallysrivinimi",
+   "ennen": 13.44,
+   "jalkeen": 14,
+   "arvio": "kasvaa +4 %, ei kiinteää leveyttä (rivi joustaa)"
+  },
+  {
+   "rivi": 988,
+   "valitsin": ".mk-lehti__sisallysingressi",
+   "ennen": 13.12,
+   "jalkeen": 14,
+   "arvio": "kasvaa +7 %, ei kiinteää leveyttä (rivi joustaa)"
+  },
+  {
+   "rivi": 1129,
+   "valitsin": ".mk-nahtavyys__lainausteksti",
+   "ennen": 17.0,
+   "jalkeen": 16,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 1239,
+   "valitsin": ".mk-opas__ingressi",
+   "ennen": 19.8,
+   "jalkeen": 21,
+   "arvio": "kasvaa +6 %, ei kiinteää leveyttä (rivi joustaa)"
+  },
+  {
+   "rivi": 1313,
+   "valitsin": ".mk-opas__vyootsikko",
+   "ennen": 11.0,
+   "jalkeen": 12,
+   "arvio": "kasvaa +9 %, ei kiinteää leveyttä (rivi joustaa)"
+  },
+  {
+   "rivi": 1337,
+   "valitsin": ".mk-opas__vyonimi",
+   "ennen": 12.8,
+   "jalkeen": 12,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 1354,
+   "valitsin": ".mk-opas__tahdet",
+   "ennen": 12.8,
+   "jalkeen": 12,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 1386,
+   "valitsin": ".mk-opas__laatikkootsikko",
+   "ennen": 12.8,
+   "jalkeen": 12,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 1432,
+   "valitsin": ".mk-opas__kausisana",
+   "ennen": 13.0,
+   "jalkeen": 12,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 1453,
+   "valitsin": ".mk-opas__kausikuvaus",
+   "ennen": 15.0,
+   "jalkeen": 14,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 1508,
+   "valitsin": ".mk-lehti__opasnauha .mk-nappi__teksti",
+   "ennen": 11.2,
+   "jalkeen": 12,
+   "arvio": "kasvaa +7 %, ei kiinteää leveyttä (rivi joustaa)"
+  },
+  {
+   "rivi": 1527,
+   "valitsin": ".mk-lehti__opaslinkki .mk-nappi__teksti",
+   "ennen": 15.0,
+   "jalkeen": 14,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 1553,
+   "valitsin": ".mk-numerot__ingressi",
+   "ennen": 19.0,
+   "jalkeen": 18,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 1620,
+   "valitsin": ".mk-numerot__silloin",
+   "ennen": 13.0,
+   "jalkeen": 12,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 1648,
+   "valitsin": ".mk-fokus__vihje",
+   "ennen": 13.0,
+   "jalkeen": 12,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 1677,
+   "valitsin": ".mk-fokus__pullanappi .mk-nappi__teksti",
+   "ennen": 15.0,
+   "jalkeen": 14,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 1710,
+   "valitsin": ".mk-fokus__pullahuomio, .mk-fokus__pullatehty",
+   "ennen": 13.0,
+   "jalkeen": 12,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 1771,
+   "valitsin": ".mk-nahtavyys__valikkonumero",
+   "ennen": 11.0,
+   "jalkeen": 12,
+   "arvio": "KASVAA +9 %, kiinteä leveys 22px: tarkista"
+  },
+  {
+   "rivi": 1778,
+   "valitsin": ".mk-nahtavyys__valikkonimi",
+   "ennen": 14.7,
+   "jalkeen": 14,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 1819,
+   "valitsin": ".mk-lehti__maalinkki .mk-nappi__teksti",
+   "ennen": 11.2,
+   "jalkeen": 12,
+   "arvio": "kasvaa +7 %, ei kiinteää leveyttä (rivi joustaa)"
+  },
+  {
+   "rivi": 1859,
+   "valitsin": ".mk-lehti__saavihje",
+   "ennen": 10.9,
+   "jalkeen": 12,
+   "arvio": "kasvaa +10 %, ei kiinteää leveyttä (rivi joustaa)"
+  },
+  {
+   "rivi": 1945,
+   "valitsin": ".mk-uutinen__otsikko",
+   "ennen": 17.0,
+   "jalkeen": 16,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 1980,
+   "valitsin": ".mk-lehti__aanirooli",
+   "ennen": 10.5,
+   "jalkeen": 12,
+   "arvio": "kasvaa +14 %, ei kiinteää leveyttä (rivi joustaa)"
+  },
+  {
+   "rivi": 2110,
+   "valitsin": ".mk-tyohuone__periaate",
+   "ennen": 15.0,
+   "jalkeen": 14,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 2170,
+   "valitsin": ".mk-tyohuone__tagi",
+   "ennen": 11.0,
+   "jalkeen": 12,
+   "arvio": "kasvaa +9 %, ei kiinteää leveyttä (rivi joustaa)"
+  },
+  {
+   "rivi": 2251,
+   "valitsin": ".mk-tyohuone__tuoreetotsikko",
+   "ennen": 11.0,
+   "jalkeen": 12,
+   "arvio": "kasvaa +9 %, ei kiinteää leveyttä (rivi joustaa)"
+  },
+  {
+   "rivi": 2260,
+   "valitsin": ".mk-tyohuone__chip",
+   "ennen": 13.0,
+   "jalkeen": 12,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 2328,
+   "valitsin": ".mk-tyohuone__polku",
+   "ennen": 10.5,
+   "jalkeen": 12,
+   "arvio": "kasvaa +14 %, ei kiinteää leveyttä (rivi joustaa)"
+  },
+  {
+   "rivi": 2362,
+   "valitsin": ".mk-tyohuone__solu",
+   "ennen": 13.0,
+   "jalkeen": 12,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 2399,
+   "valitsin": ".mk-tilastot__ohjausnimi",
+   "ennen": 11.0,
+   "jalkeen": 12,
+   "arvio": "kasvaa +9 %, ei kiinteää leveyttä (rivi joustaa)"
+  },
+  {
+   "rivi": 2496,
+   "valitsin": ".mk-tilastot__nuoli",
+   "ennen": 11.0,
+   "jalkeen": 12,
+   "arvio": "kasvaa +9 %, ei kiinteää leveyttä (rivi joustaa)"
+  },
+  {
+   "rivi": 2506,
+   "valitsin": ".mk-tilastot__nimiteksti",
+   "ennen": 13.0,
+   "jalkeen": 12,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 2513,
+   "valitsin": ".mk-tilastot__osuus",
+   "ennen": 10.5,
+   "jalkeen": 12,
+   "arvio": "kasvaa +14 %, ei kiinteää leveyttä (rivi joustaa)"
+  },
+  {
+   "rivi": 2564,
+   "valitsin": ".mk-tilastot__num",
+   "ennen": 11.0,
+   "jalkeen": 12,
+   "arvio": "KASVAA +9 %, kiinteä leveys 58px: tarkista"
+  },
+  {
+   "rivi": 2725,
+   "valitsin": ".mk-lehti__osiot-otsikko",
+   "ennen": 12.8,
+   "jalkeen": 12,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 2784,
+   "valitsin": ".mk-lehti__osio-piste",
+   "ennen": 13.2,
+   "jalkeen": 14,
+   "arvio": "kasvaa +6 %, ei kiinteää leveyttä (rivi joustaa)"
+  },
+  {
+   "rivi": 2802,
+   "valitsin": ".mk-lehti__osio-juttunappi .mk-nappi__teksti",
+   "ennen": 13.2,
+   "jalkeen": 14,
+   "arvio": "KASVAA +6 %, nowrap: voi leikkautua, tarkista"
+  }
+ ],
+ "Linssit": [
+  {
+   "rivi": 74,
+   "valitsin": ".mk-linssiSulje .mk-nappi__teksti",
+   "ennen": 13.0,
+   "jalkeen": 12,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 121,
+   "valitsin": ".mk-linssivalitsin__tyhja",
+   "ennen": 13.0,
+   "jalkeen": 12,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 185,
+   "valitsin": ".mk-linssirivi__tila",
+   "ennen": 11.0,
+   "jalkeen": 12,
+   "arvio": "kasvaa +9 %, ei kiinteää leveyttä (rivi joustaa)"
+  },
+  {
+   "rivi": 192,
+   "valitsin": ".mk-linssirivi__lyhyt",
+   "ennen": 13.0,
+   "jalkeen": 12,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 342,
+   "valitsin": ".mk-astroavaus__nimi",
+   "ennen": 17.0,
+   "jalkeen": 16,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 491,
+   "valitsin": ".mk-astrokuva__selite.mk-kiinni .mk-astrokuva__otsikko",
+   "ennen": 13.0,
+   "jalkeen": 12,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 509,
+   "valitsin": ".mk-astrokuva__teksti",
+   "ennen": 13.0,
+   "jalkeen": 12,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 537,
+   "valitsin": ".mk-astrokuva__vakanen .mk-nappi__teksti",
+   "ennen": 15.0,
+   "jalkeen": 14,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 685,
+   "valitsin": ".mk-vertailulappu__nimi",
+   "ennen": 13.0,
+   "jalkeen": 12,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 741,
+   "valitsin": ".mk-vertailuarkki__muuta .mk-nappi__teksti",
+   "ennen": 13.0,
+   "jalkeen": 12,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 782,
+   "valitsin": ".mk-vertailukortti__nimi",
+   "ennen": 17.0,
+   "jalkeen": 16,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 797,
+   "valitsin": ".mk-vertailukortti__nimio",
+   "ennen": 11.0,
+   "jalkeen": 12,
+   "arvio": "kasvaa +9 %, ei kiinteää leveyttä (rivi joustaa)"
+  },
+  {
+   "rivi": 808,
+   "valitsin": ".mk-vertailukortti__tyhja",
+   "ennen": 13.0,
+   "jalkeen": 12,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 846,
+   "valitsin": ".mk-maakyltti__nimi",
+   "ennen": 12.8,
+   "jalkeen": 12,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 997,
+   "valitsin": ".mk-aikajana-nappi--teksti .mk-nappi__teksti",
+   "ennen": 13.0,
+   "jalkeen": 12,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 1065,
+   "valitsin": ".mk-aikajana-nappi .mk-nappi__teksti",
+   "ennen": 13.0,
+   "jalkeen": 12,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 1111,
+   "valitsin": ".mk-linssivalikko__kohta .mk-nappi__teksti, .mk-linssivalikko__nimi",
+   "ennen": 13.0,
+   "jalkeen": 12,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 1234,
+   "valitsin": ".mk-aikajana-paneeli__alarivi",
+   "ennen": 13.0,
+   "jalkeen": 12,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 1310,
+   "valitsin": ".mk-aikajana-kertomus--kapea.mk-keskella .mk-aikajana-kertomus__teksti",
+   "ennen": 20.0,
+   "jalkeen": 21,
+   "arvio": "kasvaa +5 %, ei kiinteää leveyttä (rivi joustaa)"
+  },
+  {
+   "rivi": 1334,
+   "valitsin": ".mk-aikajana-valinaytos__otsikko",
+   "ennen": 19.0,
+   "jalkeen": 18,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 1419,
+   "valitsin": ".mk-aikajana-laatikko__otsikko",
+   "ennen": 22.0,
+   "jalkeen": 21,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 1555,
+   "valitsin": ".mk-aikajana-avausnappi .mk-nappi__teksti",
+   "ennen": 17.0,
+   "jalkeen": 16,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 1649,
+   "valitsin": ".mk-minipuluKortti__oma",
+   "ennen": 13.0,
+   "jalkeen": 12,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 1681,
+   "valitsin": ".mk-minipuluKortti__kentta",
+   "ennen": 15.0,
+   "jalkeen": 14,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 1766,
+   "valitsin": ".mk-astroTaulu__otsikko",
+   "ennen": 13.0,
+   "jalkeen": 12,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 1816,
+   "valitsin": ".mk-astroTaulu__riviOtsikko",
+   "ennen": 15.0,
+   "jalkeen": 14,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 1851,
+   "valitsin": ".mk-astroTaulu__linkkiTeksti",
+   "ennen": 13.0,
+   "jalkeen": 12,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 2240,
+   "valitsin": ".mk-radio__linkkinimi",
+   "ennen": 13.0,
+   "jalkeen": 12,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 2328,
+   "valitsin": ".mk-aikajana-lue .mk-nappi__teksti",
+   "ennen": 13.0,
+   "jalkeen": 12,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 2389,
+   "valitsin": ".mk-tiedeliite__nimio",
+   "ennen": 15.0,
+   "jalkeen": 14,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 2459,
+   "valitsin": ".mk-tiedeliite__sisallysnimi",
+   "ennen": 13.0,
+   "jalkeen": 12,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 2618,
+   "valitsin": ".mk-tiedeliite__navinappi .mk-nappi__teksti",
+   "ennen": 13.0,
+   "jalkeen": 12,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 2675,
+   "valitsin": ".mk-karuselli__nimi",
+   "ennen": 11.0,
+   "jalkeen": 12,
+   "arvio": "KASVAA +9 %, nowrap: voi leikkautua, tarkista"
+  },
+  {
+   "rivi": 2754,
+   "valitsin": ".mk-aikaselain__vuosi",
+   "ennen": 11.0,
+   "jalkeen": 12,
+   "arvio": "KASVAA +9 %, nowrap: voi leikkautua, tarkista"
+  },
+  {
+   "rivi": 2822,
+   "valitsin": ".mk-ihmisnosto__sulje .mk-nappi__teksti",
+   "ennen": 13.0,
+   "jalkeen": 12,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 2895,
+   "valitsin": ".mk-ihmisnosto__kuvateksti",
+   "ennen": 10.5,
+   "jalkeen": 12,
+   "arvio": "kasvaa +14 %, ei kiinteää leveyttä (rivi joustaa)"
+  },
+  {
+   "rivi": 2902,
+   "valitsin": ".mk-ihmisnosto__lahde",
+   "ennen": 11.0,
+   "jalkeen": 12,
+   "arvio": "kasvaa +9 %, ei kiinteää leveyttä (rivi joustaa)"
+  },
+  {
+   "rivi": 2981,
+   "valitsin": ".mk-ihmisnosto__kysymys .mk-nappi__teksti",
+   "ennen": 13.0,
+   "jalkeen": 12,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 3182,
+   "valitsin": ".mk-radiomerkki__nimi",
+   "ennen": 11.0,
+   "jalkeen": 12,
+   "arvio": "KASVAA +9 %, nowrap: voi leikkautua, tarkista"
+  },
+  {
+   "rivi": 3191,
+   "valitsin": ".mk-radiomerkki__nimi--soi",
+   "ennen": 13.0,
+   "jalkeen": 12,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 3323,
+   "valitsin": ".mk-valikkonappi--toiminto .mk-valikkonappi__nimi",
+   "ennen": 11.0,
+   "jalkeen": 12,
+   "arvio": "kasvaa +9 %, ei kiinteää leveyttä (rivi joustaa)"
+  },
+  {
+   "rivi": 3353,
+   "valitsin": ".mk-valikkonappi--rivi > .mk-valikkonappi__nimi",
+   "ennen": 15.0,
+   "jalkeen": 14,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 3359,
+   "valitsin": ".mk-selite__sulje.mk-linssivalitsin__takaisin",
+   "ennen": 13.0,
+   "jalkeen": 12,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 3366,
+   "valitsin": ".mk-linssivalitsin__valiotsikko",
+   "ennen": 10.5,
+   "jalkeen": 12,
+   "arvio": "kasvaa +14 %, ei kiinteää leveyttä (rivi joustaa)"
+  },
+  {
+   "rivi": 3377,
+   "valitsin": ".mk-radio-mastonimi",
+   "ennen": 15.0,
+   "jalkeen": 14,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 3402,
+   "valitsin": ".mk-vuosi__paneeli",
+   "ennen": 15.0,
+   "jalkeen": 14,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 3464,
+   "valitsin": ".mk-vuosi__valinta .unity-base-popup-field__text",
+   "ennen": 15.0,
+   "jalkeen": 14,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 3484,
+   "valitsin": ".mk-vuosi__lahde",
+   "ennen": 11.0,
+   "jalkeen": 12,
+   "arvio": "kasvaa +9 %, ei kiinteää leveyttä (rivi joustaa)"
+  },
+  {
+   "rivi": 3615,
+   "valitsin": ".mk-isskyyti__teksti",
+   "ennen": 13.0,
+   "jalkeen": 12,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 3641,
+   "valitsin": ".mk-isskyyti__live",
+   "ennen": 13.0,
+   "jalkeen": 12,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 3863,
+   "valitsin": ".mk-issohjaus__paa",
+   "ennen": 11.0,
+   "jalkeen": 12,
+   "arvio": "kasvaa +9 %, ei kiinteää leveyttä (rivi joustaa)"
+  },
+  {
+   "rivi": 4007,
+   "valitsin": ".mk-linssivalitsin__vakanen",
+   "ennen": 15.0,
+   "jalkeen": 14,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 4045,
+   "valitsin": ".mk-linssivalitsin__aarreluku",
+   "ennen": 11.0,
+   "jalkeen": 12,
+   "arvio": "kasvaa +9 %, ei kiinteää leveyttä (rivi joustaa)"
+  },
+  {
+   "rivi": 4072,
+   "valitsin": ".mk-linssivalitsin__esinappi",
+   "ennen": 13.0,
+   "jalkeen": 12,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 4105,
+   "valitsin": ".mk-linssivalitsin__esiotsikko",
+   "ennen": 15.0,
+   "jalkeen": 14,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 4112,
+   "valitsin": ".mk-linssivalitsin__esiteksti",
+   "ennen": 13.0,
+   "jalkeen": 12,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  }
+ ],
+ "Matkakirja": [
+  {
+   "rivi": 16,
+   "valitsin": ".mk-juuri",
+   "ennen": 15.0,
+   "jalkeen": 14,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 71,
+   "valitsin": ".mk-nappi__teksti",
+   "ennen": 15.0,
+   "jalkeen": 14,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 342,
+   "valitsin": ".mk-ylapalkki--kelluva .mk-pilleri",
+   "ennen": 15.0,
+   "jalkeen": 14,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 439,
+   "valitsin": ".mk-ilmoitus__teksti",
+   "ennen": 16.8,
+   "jalkeen": 16,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 632,
+   "valitsin": ".mk-valintarivi__nimi",
+   "ennen": 17.0,
+   "jalkeen": 16,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 885,
+   "valitsin": ".mk-paavalikko--pergamentti .mk-pudotus__otsikko",
+   "ennen": 10.5,
+   "jalkeen": 12,
+   "arvio": "kasvaa +14 %, ei kiinteää leveyttä (rivi joustaa)"
+  },
+  {
+   "rivi": 1310,
+   "valitsin": ".mk-masto__maa",
+   "ennen": 10.5,
+   "jalkeen": 12,
+   "arvio": "kasvaa +14 %, ei kiinteää leveyttä (rivi joustaa)"
+  },
+  {
+   "rivi": 1345,
+   "valitsin": ".mk-kansikuva__teksti",
+   "ennen": 13.0,
+   "jalkeen": 12,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 1416,
+   "valitsin": ".mk-liuska__kuvanimi",
+   "ennen": 20.0,
+   "jalkeen": 21,
+   "arvio": "KASVAA +5 %, nowrap: voi leikkautua, tarkista"
+  },
+  {
+   "rivi": 1576,
+   "valitsin": ".mk-tietoja__kappale",
+   "ennen": 13.0,
+   "jalkeen": 12,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 1590,
+   "valitsin": ".mk-tietoja__otsikko",
+   "ennen": 13.0,
+   "jalkeen": 12,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 1603,
+   "valitsin": ".mk-tietoja__johdanto",
+   "ennen": 13.0,
+   "jalkeen": 12,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 1621,
+   "valitsin": ".mk-tietoja__nimi",
+   "ennen": 13.0,
+   "jalkeen": 12,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 1684,
+   "valitsin": ".mk-elamapalkki__selite",
+   "ennen": 13.0,
+   "jalkeen": 12,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 1815,
+   "valitsin": ".mk-laukku__seuraava",
+   "ennen": 11.0,
+   "jalkeen": 12,
+   "arvio": "kasvaa +9 %, ei kiinteää leveyttä (rivi joustaa)"
+  },
+  {
+   "rivi": 1872,
+   "valitsin": ".mk-laukku__aarretila",
+   "ennen": 10.5,
+   "jalkeen": 12,
+   "arvio": "kasvaa +14 %, ei kiinteää leveyttä (rivi joustaa)"
+  },
+  {
+   "rivi": 1981,
+   "valitsin": ".mk-juliste__yla",
+   "ennen": 22.0,
+   "jalkeen": 21,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 1986,
+   "valitsin": ".mk-juliste__ala",
+   "ennen": 17.0,
+   "jalkeen": 16,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 2012,
+   "valitsin": ".mk-juliste__osa",
+   "ennen": 13.0,
+   "jalkeen": 12,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 2074,
+   "valitsin": ".mk-saapumiskortti__teksti",
+   "ennen": 17.0,
+   "jalkeen": 16,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 2121,
+   "valitsin": ".mk-aloitus__intro--lento .mk-aloitus__paikka",
+   "ennen": 13.0,
+   "jalkeen": 12,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 2173,
+   "valitsin": ".mk-aloitus__valinta .mk-nappi__teksti",
+   "ennen": 15.0,
+   "jalkeen": 14,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 2274,
+   "valitsin": ".mk-aloitus__porttilause",
+   "ennen": 17.0,
+   "jalkeen": 16,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 2466,
+   "valitsin": ".mk-apuraha__kokoteksti",
+   "ennen": 15.0,
+   "jalkeen": 14,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 2522,
+   "valitsin": ".mk-aloitus__kohdenimi",
+   "ennen": 15.0,
+   "jalkeen": 14,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 2527,
+   "valitsin": ".mk-aloitus__kohdemaa",
+   "ennen": 11.0,
+   "jalkeen": 12,
+   "arvio": "kasvaa +9 %, ei kiinteää leveyttä (rivi joustaa)"
+  },
+  {
+   "rivi": 2715,
+   "valitsin": ".mk-laukku__linssilyhyt",
+   "ennen": 13.0,
+   "jalkeen": 12,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 2786,
+   "valitsin": ".mk-seloste-nappi .mk-nappi__teksti",
+   "ennen": 11.0,
+   "jalkeen": 12,
+   "arvio": "kasvaa +9 %, ei kiinteää leveyttä (rivi joustaa)"
+  },
+  {
+   "rivi": 2806,
+   "valitsin": ".mk-pikkuseloste__teksti",
+   "ennen": 13.0,
+   "jalkeen": 12,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 2874,
+   "valitsin": ".mk-minipopup__sulje .mk-nappi__teksti",
+   "ennen": 20.0,
+   "jalkeen": 21,
+   "arvio": "kasvaa +5 %, ei kiinteää leveyttä (rivi joustaa)"
+  },
+  {
+   "rivi": 2957,
+   "valitsin": ".mk-tietaja__nimi",
+   "ennen": 11.0,
+   "jalkeen": 12,
+   "arvio": "kasvaa +9 %, ei kiinteää leveyttä (rivi joustaa)"
+  },
+  {
+   "rivi": 2964,
+   "valitsin": ".mk-tietaja__raja",
+   "ennen": 10.5,
+   "jalkeen": 12,
+   "arvio": "kasvaa +14 %, ei kiinteää leveyttä (rivi joustaa)"
+  },
+  {
+   "rivi": 3020,
+   "valitsin": ".mk-saa__selite",
+   "ennen": 11.0,
+   "jalkeen": 12,
+   "arvio": "kasvaa +9 %, ei kiinteää leveyttä (rivi joustaa)"
+  },
+  {
+   "rivi": 3139,
+   "valitsin": ".mk-lehti__maapistenimi",
+   "ennen": 11.0,
+   "jalkeen": 12,
+   "arvio": "KASVAA +9 %, nowrap: voi leikkautua, tarkista"
+  },
+  {
+   "rivi": 3160,
+   "valitsin": ".mk-lippu__valinta",
+   "ennen": 11.0,
+   "jalkeen": 12,
+   "arvio": "kasvaa +9 %, ei kiinteää leveyttä (rivi joustaa)"
+  },
+  {
+   "rivi": 3182,
+   "valitsin": ".mk-lippu__versiotyhdys",
+   "ennen": 11.0,
+   "jalkeen": 12,
+   "arvio": "kasvaa +9 %, ei kiinteää leveyttä (rivi joustaa)"
+  },
+  {
+   "rivi": 3205,
+   "valitsin": ".mk-lippu__versionimi",
+   "ennen": 10.5,
+   "jalkeen": 12,
+   "arvio": "kasvaa +14 %, ei kiinteää leveyttä (rivi joustaa)"
+  },
+  {
+   "rivi": 3246,
+   "valitsin": ".mk-lippu__tunnusotsikko",
+   "ennen": 12.8,
+   "jalkeen": 12,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 3286,
+   "valitsin": ".mk-lippu__tunnusnimi",
+   "ennen": 12.8,
+   "jalkeen": 12,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 3294,
+   "valitsin": ".mk-lippu__tunnusselite",
+   "ennen": 13.3,
+   "jalkeen": 14,
+   "arvio": "kasvaa +5 %, ei kiinteää leveyttä (rivi joustaa)"
+  },
+  {
+   "rivi": 3330,
+   "valitsin": ".mk-aloitus__oikeudet",
+   "ennen": 11.0,
+   "jalkeen": 12,
+   "arvio": "kasvaa +9 %, ei kiinteää leveyttä (rivi joustaa)"
+  },
+  {
+   "rivi": 3556,
+   "valitsin": ".mk-lukija-valikko__kelausnappi",
+   "ennen": 13.1,
+   "jalkeen": 14,
+   "arvio": "kasvaa +7 %, ei kiinteää leveyttä (rivi joustaa)"
+  },
+  {
+   "rivi": 3609,
+   "valitsin": ".mk-lukija-saadot",
+   "ennen": 15.0,
+   "jalkeen": 14,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 3623,
+   "valitsin": ".mk-lukija-saadot__nimi",
+   "ennen": 15.0,
+   "jalkeen": 14,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 3641,
+   "valitsin": ".mk-lukija-saadot__arvo",
+   "ennen": 15.0,
+   "jalkeen": 14,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 3662,
+   "valitsin": ".mk-lukija-saadot__valinta .unity-base-popup-field__text",
+   "ennen": 15.0,
+   "jalkeen": 14,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 3770,
+   "valitsin": ".mk-reaktiot__luku",
+   "ennen": 10.5,
+   "jalkeen": 12,
+   "arvio": "kasvaa +14 %, ei kiinteää leveyttä (rivi joustaa)"
+  },
+  {
+   "rivi": 3775,
+   "valitsin": ".mk-reaktiot__kuittaus",
+   "ennen": 11.0,
+   "jalkeen": 12,
+   "arvio": "kasvaa +9 %, ei kiinteää leveyttä (rivi joustaa)"
+  },
+  {
+   "rivi": 3817,
+   "valitsin": ".mk-reaktio__vaihtoehto .mk-nappi__teksti",
+   "ennen": 13.0,
+   "jalkeen": 12,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 3832,
+   "valitsin": ".mk-reaktio__kentta > .unity-base-text-field__input",
+   "ennen": 13.0,
+   "jalkeen": 12,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 3838,
+   "valitsin": ".mk-reaktio__livia",
+   "ennen": 13.0,
+   "jalkeen": 12,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 3895,
+   "valitsin": ".mk-palaute__teksti",
+   "ennen": 15.0,
+   "jalkeen": 14,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 3902,
+   "valitsin": ".mk-palaute__nimio",
+   "ennen": 13.0,
+   "jalkeen": 12,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 3981,
+   "valitsin": ".mk-palaute__rastiteksti",
+   "ennen": 13.0,
+   "jalkeen": 12,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 4158,
+   "valitsin": ".mk-wiki__nuoli .mk-nappi__teksti",
+   "ennen": 22.0,
+   "jalkeen": 21,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 4178,
+   "valitsin": ".mk-wiki__laskuri",
+   "ennen": 11.0,
+   "jalkeen": 12,
+   "arvio": "kasvaa +9 %, ei kiinteää leveyttä (rivi joustaa)"
+  },
+  {
+   "rivi": 4191,
+   "valitsin": ".mk-wiki__p",
+   "ennen": 15.0,
+   "jalkeen": 14,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 4198,
+   "valitsin": ".mk-wiki__h2",
+   "ennen": 17.0,
+   "jalkeen": 16,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 4243,
+   "valitsin": ".mk-lukijaaani__nimi",
+   "ennen": 13.0,
+   "jalkeen": 12,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 4356,
+   "valitsin": ".mk-pelikello__kello",
+   "ennen": 22.0,
+   "jalkeen": 21,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 4365,
+   "valitsin": ".mk-pelikello__paiva",
+   "ennen": 10.5,
+   "jalkeen": 12,
+   "arvio": "kasvaa +14 %, ei kiinteää leveyttä (rivi joustaa)"
+  },
+  {
+   "rivi": 4414,
+   "valitsin": ".mk-pilleri--kaksirivinen .mk-pilleri__kello",
+   "ennen": 11.0,
+   "jalkeen": 12,
+   "arvio": "kasvaa +9 %, ei kiinteää leveyttä (rivi joustaa)"
+  }
+ ],
+ "Pulu": [
+  {
+   "rivi": 96,
+   "valitsin": ".mk-kupla__kappale",
+   "ennen": 14.7,
+   "jalkeen": 14,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 225,
+   "valitsin": ".mk-pulukuva__teksti",
+   "ennen": 13.1,
+   "jalkeen": 14,
+   "arvio": "kasvaa +7 %, ei kiinteää leveyttä (rivi joustaa)"
+  },
+  {
+   "rivi": 240,
+   "valitsin": ".mk-pulukuva__nappi",
+   "ennen": 13.1,
+   "jalkeen": 14,
+   "arvio": "kasvaa +7 %, ei kiinteää leveyttä (rivi joustaa)"
+  },
+  {
+   "rivi": 334,
+   "valitsin": ".mk-matkakirja--puhelin .mk-matkakirja__tunnelma",
+   "ennen": 10.56,
+   "jalkeen": 12,
+   "arvio": "kasvaa +14 %, ei kiinteää leveyttä (rivi joustaa)"
+  },
+  {
+   "rivi": 353,
+   "valitsin": ".mk-matkakirja__tunnelma.mk-matkakirja__tunnelma--paikka",
+   "ennen": 12.8,
+   "jalkeen": 12,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 368,
+   "valitsin": ".mk-matkakirja__lahdeotsikko",
+   "ennen": 10.9,
+   "jalkeen": 12,
+   "arvio": "kasvaa +10 %, ei kiinteää leveyttä (rivi joustaa)"
+  },
+  {
+   "rivi": 503,
+   "valitsin": ".mk-matkakirja--pieni .mk-matkakirja__lyhyt",
+   "ennen": 12.8,
+   "jalkeen": 12,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 514,
+   "valitsin": ".mk-matkakirja--pieni.mk-matkakirja--puhelin .mk-matkakirja__lyhyt",
+   "ennen": 11.2,
+   "jalkeen": 12,
+   "arvio": "kasvaa +7 %, ei kiinteää leveyttä (rivi joustaa)"
+  },
+  {
+   "rivi": 645,
+   "valitsin": ".mk-suurennos__teksti",
+   "ennen": 15.0,
+   "jalkeen": 14,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 653,
+   "valitsin": ".mk-suurennos__lahde",
+   "ennen": 11.0,
+   "jalkeen": 12,
+   "arvio": "kasvaa +9 %, ei kiinteää leveyttä (rivi joustaa)"
+  },
+  {
+   "rivi": 763,
+   "valitsin": ".mk-chat__livia",
+   "ennen": 15.0,
+   "jalkeen": 14,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 785,
+   "valitsin": ".mk-chat__paikkarivi",
+   "ennen": 13.0,
+   "jalkeen": 12,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 819,
+   "valitsin": ".mk-chat__siru .mk-nappi__teksti",
+   "ennen": 13.0,
+   "jalkeen": 12,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 875,
+   "valitsin": ".mk-chat__palaa .mk-nappi__teksti",
+   "ennen": 13.0,
+   "jalkeen": 12,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 969,
+   "valitsin": ".mk-traileri__iskulause",
+   "ennen": 19.0,
+   "jalkeen": 18,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 1095,
+   "valitsin": ".mk-chat__sanelutila",
+   "ennen": 13.0,
+   "jalkeen": 12,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 1167,
+   "valitsin": ".mk-chat__matkakirja",
+   "ennen": 13.0,
+   "jalkeen": 12,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 1185,
+   "valitsin": ".mk-poiminnat__nimio",
+   "ennen": 11.0,
+   "jalkeen": 12,
+   "arvio": "kasvaa +9 %, ei kiinteää leveyttä (rivi joustaa)"
+  },
+  {
+   "rivi": 1202,
+   "valitsin": ".mk-poiminnat__pilleri .mk-nappi__teksti",
+   "ennen": 13.0,
+   "jalkeen": 12,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  }
+ ],
+ "Sahke": [
+  {
+   "rivi": 64,
+   "valitsin": ".mk-sahke-liuska__sulje .mk-nappi__teksti",
+   "ennen": 20.0,
+   "jalkeen": 21,
+   "arvio": "kasvaa +5 %, ei kiinteää leveyttä (rivi joustaa)"
+  },
+  {
+   "rivi": 99,
+   "valitsin": ".mk-sahke-liuska__teksti",
+   "ennen": 15.0,
+   "jalkeen": 14,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 120,
+   "valitsin": ".mk-sahke-liuska__kysymys",
+   "ennen": 15.2,
+   "jalkeen": 16,
+   "arvio": "kasvaa +5 %, ei kiinteää leveyttä (rivi joustaa)"
+  },
+  {
+   "rivi": 161,
+   "valitsin": ".mk-sahke-liuska__kirjain",
+   "ennen": 12.8,
+   "jalkeen": 12,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  }
+ ],
+ "Sahketehtava": [
+  {
+   "rivi": 55,
+   "valitsin": ".mk-st__otsikko",
+   "ennen": 20.0,
+   "jalkeen": 21,
+   "arvio": "kasvaa +5 %, ei kiinteää leveyttä (rivi joustaa)"
+  },
+  {
+   "rivi": 210,
+   "valitsin": ".mk-st__rivi",
+   "ennen": 15.0,
+   "jalkeen": 14,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 384,
+   "valitsin": ".mk-st__tulos",
+   "ennen": 15.0,
+   "jalkeen": 14,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 399,
+   "valitsin": ".mk-st__vinkki",
+   "ennen": 15.0,
+   "jalkeen": 14,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 444,
+   "valitsin": ".mk-st__pullanappi .mk-nappi__teksti",
+   "ennen": 15.0,
+   "jalkeen": 14,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  },
+  {
+   "rivi": 469,
+   "valitsin": ".mk-st__pullahuomio, .mk-st__pullatehty",
+   "ennen": 13.0,
+   "jalkeen": 12,
+   "arvio": "pienenee: ei uutta rivinvaihtoa"
+  }
+ ]
+}

@@ -1,0 +1,1112 @@
+[
+{
+"pinta": "Kartta.uss",
+"rivi": 374,
+"valitsin": ".mk-kartuscha__piste",
+"om": "border-radius",
+"px": 2.5,
+"lahin_token": 2,
+"ero": 0.5,
+"ympyra_tai_kapseli": true
+},
+{
+"pinta": "Kartta.uss",
+"rivi": 638,
+"valitsin": ".mk-peukalo__linssi",
+"om": "border-radius",
+"px": 12.5,
+"lahin_token": 12,
+"ero": 0.5,
+"ympyra_tai_kapseli": true
+},
+{
+"pinta": "Kartta.uss",
+"rivi": 890,
+"valitsin": ".mk-maakunnat__lisaa",
+"om": "border-radius",
+"px": 15.0,
+"lahin_token": 12,
+"ero": 3.0,
+"ympyra_tai_kapseli": true
+},
+{
+"pinta": "Kartta.uss",
+"rivi": 973,
+"valitsin": ".mk-maakuntaKortti__kartta",
+"om": "border-radius",
+"px": 4.0,
+"lahin_token": 2,
+"ero": 2.0,
+"ympyra_tai_kapseli": false
+},
+{
+"pinta": "Kartta.uss",
+"rivi": 1080,
+"valitsin": ".mk-offlineTila__palkki",
+"om": "border-radius",
+"px": 1.0,
+"lahin_token": 2,
+"ero": 1.0,
+"ympyra_tai_kapseli": true
+},
+{
+"pinta": "Kartta.uss",
+"rivi": 1158,
+"valitsin": ".mk-nosto__lukija.mk-nosto__lukija--kiinni",
+"om": "border-radius",
+"px": 17.0,
+"lahin_token": 12,
+"ero": 5.0,
+"ympyra_tai_kapseli": false
+},
+{
+"pinta": "Kartta.uss",
+"rivi": 1468,
+"valitsin": ".mk-nosto__kierros",
+"om": "border-radius",
+"px": 4.0,
+"lahin_token": 2,
+"ero": 2.0,
+"ympyra_tai_kapseli": false
+},
+{
+"pinta": "Kartta.uss",
+"rivi": 1693,
+"valitsin": ".mk-nosto__leikekirja",
+"om": "border-radius",
+"px": 4.0,
+"lahin_token": 2,
+"ero": 2.0,
+"ympyra_tai_kapseli": false
+},
+{
+"pinta": "Kartta.uss",
+"rivi": 1781,
+"valitsin": ".mk-leima",
+"om": "border-radius",
+"px": 14.0,
+"lahin_token": 12,
+"ero": 2.0,
+"ympyra_tai_kapseli": false
+},
+{
+"pinta": "Kohdekartta.uss",
+"rivi": 229,
+"valitsin": ".mk-kohdekartta__ympyra",
+"om": "border-radius",
+"px": 13.0,
+"lahin_token": 12,
+"ero": 1.0,
+"ympyra_tai_kapseli": true
+},
+{
+"pinta": "Kohdekartta.uss",
+"rivi": 591,
+"valitsin": ".mk-avauskortti__sulku",
+"om": "border-radius",
+"px": 16.8,
+"lahin_token": 12,
+"ero": 4.800000000000001,
+"ympyra_tai_kapseli": true
+},
+{
+"pinta": "Kohdekartta.uss",
+"rivi": 611,
+"valitsin": ".mk-kohdekartta-kokoruutu--kortista > .mk-kohdekartta-kokoruutu__kortti",
+"om": "border-radius",
+"px": 14.0,
+"lahin_token": 12,
+"ero": 2.0,
+"ympyra_tai_kapseli": false
+},
+{
+"pinta": "Kohdekartta.uss",
+"rivi": 627,
+"valitsin": ".mk-kohdekartta-kokoruutu--kortista .mk-kohdekartta-kokoruutu__sulku",
+"om": "border-radius",
+"px": 16.8,
+"lahin_token": 12,
+"ero": 4.800000000000001,
+"ympyra_tai_kapseli": true
+},
+{
+"pinta": "Kysymys.uss",
+"rivi": 234,
+"valitsin": ".mk-nappi.mk-kysymys__vaihtoehto",
+"om": "border-top-left-radius",
+"px": 14.0,
+"lahin_token": 12,
+"ero": 2.0,
+"ympyra_tai_kapseli": false
+},
+{
+"pinta": "Kysymys.uss",
+"rivi": 236,
+"valitsin": ".mk-nappi.mk-kysymys__vaihtoehto",
+"om": "border-bottom-right-radius",
+"px": 16.0,
+"lahin_token": 12,
+"ero": 4.0,
+"ympyra_tai_kapseli": false
+},
+{
+"pinta": "Kysymys.uss",
+"rivi": 298,
+"valitsin": ".mk-kysymys__kirjain",
+"om": "border-radius",
+"px": 15.0,
+"lahin_token": 12,
+"ero": 3.0,
+"ympyra_tai_kapseli": true
+},
+{
+"pinta": "Kysymys.uss",
+"rivi": 375,
+"valitsin": ".mk-kysymys__tulos",
+"om": "border-top-left-radius",
+"px": 14.0,
+"lahin_token": 12,
+"ero": 2.0,
+"ympyra_tai_kapseli": false
+},
+{
+"pinta": "Kysymys.uss",
+"rivi": 377,
+"valitsin": ".mk-kysymys__tulos",
+"om": "border-bottom-right-radius",
+"px": 15.0,
+"lahin_token": 12,
+"ero": 3.0,
+"ympyra_tai_kapseli": false
+},
+{
+"pinta": "Kysymys.uss",
+"rivi": 490,
+"valitsin": ".mk-nappi.mk-kysymys__apu",
+"om": "border-bottom-right-radius",
+"px": 14.0,
+"lahin_token": 12,
+"ero": 2.0,
+"ympyra_tai_kapseli": false
+},
+{
+"pinta": "Kysymys.uss",
+"rivi": 520,
+"valitsin": ".mk-nappi.mk-kysymys__jatka",
+"om": "border-top-left-radius",
+"px": 14.0,
+"lahin_token": 12,
+"ero": 2.0,
+"ympyra_tai_kapseli": false
+},
+{
+"pinta": "Kysymys.uss",
+"rivi": 522,
+"valitsin": ".mk-nappi.mk-kysymys__jatka",
+"om": "border-bottom-right-radius",
+"px": 15.0,
+"lahin_token": 12,
+"ero": 3.0,
+"ympyra_tai_kapseli": false
+},
+{
+"pinta": "Kysymys.uss",
+"rivi": 644,
+"valitsin": ".mk-laattaikoni__kuva",
+"om": "border-radius",
+"px": 28.0,
+"lahin_token": 12,
+"ero": 16.0,
+"ympyra_tai_kapseli": false
+},
+{
+"pinta": "Lehti.uss",
+"rivi": 314,
+"valitsin": ".mk-lehti__aika",
+"om": "border-radius",
+"px": 4.0,
+"lahin_token": 2,
+"ero": 2.0,
+"ympyra_tai_kapseli": false
+},
+{
+"pinta": "Lehti.uss",
+"rivi": 386,
+"valitsin": ".mk-lehti__kuvakehys.mk-lehti__paakuva",
+"om": "border-radius",
+"px": 4.0,
+"lahin_token": 2,
+"ero": 2.0,
+"ympyra_tai_kapseli": false
+},
+{
+"pinta": "Lehti.uss",
+"rivi": 742,
+"valitsin": ".mk-lehti__lunastus",
+"om": "border-radius",
+"px": 4.0,
+"lahin_token": 2,
+"ero": 2.0,
+"ympyra_tai_kapseli": false
+},
+{
+"pinta": "Lehti.uss",
+"rivi": 1011,
+"valitsin": ".mk-lehti__sisallyspaluu",
+"om": "border-top-left-radius",
+"px": 14.0,
+"lahin_token": 12,
+"ero": 2.0,
+"ympyra_tai_kapseli": false
+},
+{
+"pinta": "Lehti.uss",
+"rivi": 1014,
+"valitsin": ".mk-lehti__sisallyspaluu",
+"om": "border-bottom-left-radius",
+"px": 14.0,
+"lahin_token": 12,
+"ero": 2.0,
+"ympyra_tai_kapseli": false
+},
+{
+"pinta": "Lehti.uss",
+"rivi": 1146,
+"valitsin": ".mk-nahtavyys__kuvakehys",
+"om": "border-radius",
+"px": 4.0,
+"lahin_token": 2,
+"ero": 2.0,
+"ympyra_tai_kapseli": false
+},
+{
+"pinta": "Lehti.uss",
+"rivi": 1671,
+"valitsin": ".mk-fokus__pullanappi",
+"om": "border-radius",
+"px": 4.0,
+"lahin_token": 2,
+"ero": 2.0,
+"ympyra_tai_kapseli": false
+},
+{
+"pinta": "Lehti.uss",
+"rivi": 1769,
+"valitsin": ".mk-nahtavyys__valikkonumero",
+"om": "border-radius",
+"px": 11.0,
+"lahin_token": 10,
+"ero": 1.0,
+"ympyra_tai_kapseli": true
+},
+{
+"pinta": "Lehti.uss",
+"rivi": 1893,
+"valitsin": ".mk-uutiset__pikkukuva",
+"om": "border-radius",
+"px": 4.0,
+"lahin_token": 2,
+"ero": 2.0,
+"ympyra_tai_kapseli": false
+},
+{
+"pinta": "Lehti.uss",
+"rivi": 2055,
+"valitsin": ".mk-lehti__live-piste",
+"om": "border-radius",
+"px": 4.0,
+"lahin_token": 2,
+"ero": 2.0,
+"ympyra_tai_kapseli": true
+},
+{
+"pinta": "Lehti.uss",
+"rivi": 2621,
+"valitsin": ".mk-tilastot__kiintioura",
+"om": "border-radius",
+"px": 4.0,
+"lahin_token": 2,
+"ero": 2.0,
+"ympyra_tai_kapseli": true
+},
+{
+"pinta": "Linssit.uss",
+"rivi": 154,
+"valitsin": ".mk-linssirivi__ikoni",
+"om": "border-radius",
+"px": 17.0,
+"lahin_token": 12,
+"ero": 5.0,
+"ympyra_tai_kapseli": true
+},
+{
+"pinta": "Linssit.uss",
+"rivi": 524,
+"valitsin": ".mk-astrokuva__vakanen",
+"om": "border-radius",
+"px": 13.0,
+"lahin_token": 12,
+"ero": 1.0,
+"ympyra_tai_kapseli": true
+},
+{
+"pinta": "Linssit.uss",
+"rivi": 582,
+"valitsin": ".mk-astrokuva__pikku",
+"om": "border-radius",
+"px": 4.0,
+"lahin_token": 2,
+"ero": 2.0,
+"ympyra_tai_kapseli": false
+},
+{
+"pinta": "Linssit.uss",
+"rivi": 1272,
+"valitsin": ".mk-aikajana-kertomus__laatikko",
+"om": "border-radius",
+"px": 4.0,
+"lahin_token": 2,
+"ero": 2.0,
+"ympyra_tai_kapseli": false
+},
+{
+"pinta": "Linssit.uss",
+"rivi": 1592,
+"valitsin": ".mk-minipuluKortti__sulje",
+"om": "border-radius",
+"px": 14.0,
+"lahin_token": 12,
+"ero": 2.0,
+"ympyra_tai_kapseli": true
+},
+{
+"pinta": "Linssit.uss",
+"rivi": 1940,
+"valitsin": ".mk-radio--levea .mk-radio__kotelo",
+"om": "border-top-left-radius",
+"px": 14.0,
+"lahin_token": 12,
+"ero": 2.0,
+"ympyra_tai_kapseli": false
+},
+{
+"pinta": "Linssit.uss",
+"rivi": 1941,
+"valitsin": ".mk-radio--levea .mk-radio__kotelo",
+"om": "border-top-right-radius",
+"px": 14.0,
+"lahin_token": 12,
+"ero": 2.0,
+"ympyra_tai_kapseli": false
+},
+{
+"pinta": "Linssit.uss",
+"rivi": 2578,
+"valitsin": ".mk-tiedeliite__piste",
+"om": "border-radius",
+"px": 5.0,
+"lahin_token": 6,
+"ero": 1.0,
+"ympyra_tai_kapseli": true
+},
+{
+"pinta": "Linssit.uss",
+"rivi": 2738,
+"valitsin": ".mk-aikaselain__viiva",
+"om": "border-radius",
+"px": 1.0,
+"lahin_token": 2,
+"ero": 1.0,
+"ympyra_tai_kapseli": true
+},
+{
+"pinta": "Linssit.uss",
+"rivi": 2817,
+"valitsin": ".mk-ihmisnosto__sulje",
+"om": "border-radius",
+"px": 15.0,
+"lahin_token": 12,
+"ero": 3.0,
+"ympyra_tai_kapseli": true
+},
+{
+"pinta": "Linssit.uss",
+"rivi": 2838,
+"valitsin": ".mk-ihmisnosto__pilkku",
+"om": "border-radius",
+"px": 5.0,
+"lahin_token": 6,
+"ero": 1.0,
+"ympyra_tai_kapseli": true
+},
+{
+"pinta": "Linssit.uss",
+"rivi": 3069,
+"valitsin": ".mk-vananappi__pilkku",
+"om": "border-radius",
+"px": 5.0,
+"lahin_token": 6,
+"ero": 1.0,
+"ympyra_tai_kapseli": true
+},
+{
+"pinta": "Linssit.uss",
+"rivi": 3099,
+"valitsin": ".mk-ihmisnosto-piste__syke",
+"om": "border-radius",
+"px": 7.0,
+"lahin_token": 6,
+"ero": 1.0,
+"ympyra_tai_kapseli": true
+},
+{
+"pinta": "Linssit.uss",
+"rivi": 3117,
+"valitsin": ".mk-ihmisnosto-piste__ydin",
+"om": "border-radius",
+"px": 3.0,
+"lahin_token": 2,
+"ero": 1.0,
+"ympyra_tai_kapseli": true
+},
+{
+"pinta": "Linssit.uss",
+"rivi": 3152,
+"valitsin": ".mk-tiedeliite__sisallyspilkku",
+"om": "border-radius",
+"px": 5.0,
+"lahin_token": 6,
+"ero": 1.0,
+"ympyra_tai_kapseli": true
+},
+{
+"pinta": "Linssit.uss",
+"rivi": 3398,
+"valitsin": ".mk-vuosi__paneeli",
+"om": "border-radius",
+"px": 14.0,
+"lahin_token": 12,
+"ero": 2.0,
+"ympyra_tai_kapseli": false
+},
+{
+"pinta": "Linssit.uss",
+"rivi": 3627,
+"valitsin": ".mk-isskyyti__piste",
+"om": "border-radius",
+"px": 3.5,
+"lahin_token": 2,
+"ero": 1.5,
+"ympyra_tai_kapseli": true
+},
+{
+"pinta": "Linssit.uss",
+"rivi": 3906,
+"valitsin": ".mk-issohjaus__liuku.mk-saadin #unity-dragger",
+"om": "border-radius",
+"px": 18.0,
+"lahin_token": 12,
+"ero": 6.0,
+"ympyra_tai_kapseli": true
+},
+{
+"pinta": "Linssit.uss",
+"rivi": 4020,
+"valitsin": ".mk-linssivalitsin__tiedot .mk-laukku__tietaja .mk-laukku__muotokuva",
+"om": "border-radius",
+"px": 32.0,
+"lahin_token": 12,
+"ero": 20.0,
+"ympyra_tai_kapseli": true
+},
+{
+"pinta": "Matkakirja.uss",
+"rivi": 386,
+"valitsin": ".mk-ylapalkki--saari .mk-ikoninappi",
+"om": "border-radius",
+"px": 18.0,
+"lahin_token": 12,
+"ero": 6.0,
+"ympyra_tai_kapseli": true
+},
+{
+"pinta": "Matkakirja.uss",
+"rivi": 402,
+"valitsin": ".mk-ylapalkki--saari .mk-ylapalkki__napit > .mk-ylapalkki__vieras",
+"om": "border-radius",
+"px": 18.0,
+"lahin_token": 12,
+"ero": 6.0,
+"ympyra_tai_kapseli": true
+},
+{
+"pinta": "Matkakirja.uss",
+"rivi": 424,
+"valitsin": ".mk-ilmoitus",
+"om": "border-radius",
+"px": 14.0,
+"lahin_token": 12,
+"ero": 2.0,
+"ympyra_tai_kapseli": false
+},
+{
+"pinta": "Matkakirja.uss",
+"rivi": 491,
+"valitsin": ".mk-kortti__varjo",
+"om": "border-top-left-radius",
+"px": 26.0,
+"lahin_token": 12,
+"ero": 14.0,
+"ympyra_tai_kapseli": false
+},
+{
+"pinta": "Matkakirja.uss",
+"rivi": 492,
+"valitsin": ".mk-kortti__varjo",
+"om": "border-top-right-radius",
+"px": 16.0,
+"lahin_token": 12,
+"ero": 4.0,
+"ympyra_tai_kapseli": false
+},
+{
+"pinta": "Matkakirja.uss",
+"rivi": 493,
+"valitsin": ".mk-kortti__varjo",
+"om": "border-bottom-right-radius",
+"px": 24.0,
+"lahin_token": 12,
+"ero": 12.0,
+"ympyra_tai_kapseli": false
+},
+{
+"pinta": "Matkakirja.uss",
+"rivi": 494,
+"valitsin": ".mk-kortti__varjo",
+"om": "border-bottom-left-radius",
+"px": 18.0,
+"lahin_token": 12,
+"ero": 6.0,
+"ympyra_tai_kapseli": false
+},
+{
+"pinta": "Matkakirja.uss",
+"rivi": 511,
+"valitsin": ".mk-kortti",
+"om": "border-top-left-radius",
+"px": 22.0,
+"lahin_token": 12,
+"ero": 10.0,
+"ympyra_tai_kapseli": false
+},
+{
+"pinta": "Matkakirja.uss",
+"rivi": 513,
+"valitsin": ".mk-kortti",
+"om": "border-bottom-right-radius",
+"px": 20.0,
+"lahin_token": 12,
+"ero": 8.0,
+"ympyra_tai_kapseli": false
+},
+{
+"pinta": "Matkakirja.uss",
+"rivi": 514,
+"valitsin": ".mk-kortti",
+"om": "border-bottom-left-radius",
+"px": 14.0,
+"lahin_token": 12,
+"ero": 2.0,
+"ympyra_tai_kapseli": false
+},
+{
+"pinta": "Matkakirja.uss",
+"rivi": 1134,
+"valitsin": ".mk-saadin #unity-tracker",
+"om": "border-radius",
+"px": 4.0,
+"lahin_token": 2,
+"ero": 2.0,
+"ympyra_tai_kapseli": true
+},
+{
+"pinta": "Matkakirja.uss",
+"rivi": 1141,
+"valitsin": ".mk-saadin .unity-base-slider__fill",
+"om": "border-radius",
+"px": 4.0,
+"lahin_token": 2,
+"ero": 2.0,
+"ympyra_tai_kapseli": false
+},
+{
+"pinta": "Matkakirja.uss",
+"rivi": 1471,
+"valitsin": ".mk-liuska__pallo",
+"om": "border-radius",
+"px": 4.0,
+"lahin_token": 2,
+"ero": 2.0,
+"ympyra_tai_kapseli": true
+},
+{
+"pinta": "Matkakirja.uss",
+"rivi": 1791,
+"valitsin": ".mk-laukku__muotokuva",
+"om": "border-radius",
+"px": 18.0,
+"lahin_token": 12,
+"ero": 6.0,
+"ympyra_tai_kapseli": true
+},
+{
+"pinta": "Matkakirja.uss",
+"rivi": 2436,
+"valitsin": ".mk-apuraha__kuva",
+"om": "border-radius",
+"px": 4.0,
+"lahin_token": 2,
+"ero": 2.0,
+"ympyra_tai_kapseli": false
+},
+{
+"pinta": "Matkakirja.uss",
+"rivi": 2616,
+"valitsin": ".mk-laukku__linssi",
+"om": "border-radius",
+"px": 32.0,
+"lahin_token": 12,
+"ero": 20.0,
+"ympyra_tai_kapseli": true
+},
+{
+"pinta": "Matkakirja.uss",
+"rivi": 2635,
+"valitsin": ".mk-laukku__linssikuva",
+"om": "border-radius",
+"px": 32.0,
+"lahin_token": 12,
+"ero": 20.0,
+"ympyra_tai_kapseli": false
+},
+{
+"pinta": "Matkakirja.uss",
+"rivi": 2672,
+"valitsin": ".mk-laukku__linssi--kesken",
+"om": "border-radius",
+"px": 22.0,
+"lahin_token": 12,
+"ero": 10.0,
+"ympyra_tai_kapseli": true
+},
+{
+"pinta": "Matkakirja.uss",
+"rivi": 2677,
+"valitsin": ".mk-laukku__linssi--kesken .mk-laukku__linssikuva",
+"om": "border-radius",
+"px": 22.0,
+"lahin_token": 12,
+"ero": 10.0,
+"ympyra_tai_kapseli": false
+},
+{
+"pinta": "Matkakirja.uss",
+"rivi": 2780,
+"valitsin": ".mk-seloste-nappi",
+"om": "border-radius",
+"px": 9.0,
+"lahin_token": 8,
+"ero": 1.0,
+"ympyra_tai_kapseli": true
+},
+{
+"pinta": "Matkakirja.uss",
+"rivi": 2914,
+"valitsin": ".mk-tietaja__nykykuva",
+"om": "border-radius",
+"px": 72.0,
+"lahin_token": 12,
+"ero": 60.0,
+"ympyra_tai_kapseli": true
+},
+{
+"pinta": "Matkakirja.uss",
+"rivi": 2949,
+"valitsin": ".mk-tietaja__kuva",
+"om": "border-radius",
+"px": 27.0,
+"lahin_token": 12,
+"ero": 15.0,
+"ympyra_tai_kapseli": true
+},
+{
+"pinta": "Matkakirja.uss",
+"rivi": 3117,
+"valitsin": ".mk-lehti__maapiste",
+"om": "border-radius",
+"px": 5.0,
+"lahin_token": 6,
+"ero": 1.0,
+"ympyra_tai_kapseli": true
+},
+{
+"pinta": "Matkakirja.uss",
+"rivi": 3314,
+"valitsin": ".mk-lippu__tunnus--tarkennettu .mk-lippu__tunnusteksti",
+"om": "border-radius",
+"px": 4.0,
+"lahin_token": 2,
+"ero": 2.0,
+"ympyra_tai_kapseli": false
+},
+{
+"pinta": "Matkakirja.uss",
+"rivi": 3440,
+"valitsin": ".mk-lukija__rengas",
+"om": "border-radius",
+"px": 15.0,
+"lahin_token": 12,
+"ero": 3.0,
+"ympyra_tai_kapseli": false
+},
+{
+"pinta": "Matkakirja.uss",
+"rivi": 3486,
+"valitsin": ".mk-lukija-valikko__kappale",
+"om": "border-radius",
+"px": 4.0,
+"lahin_token": 2,
+"ero": 2.0,
+"ympyra_tai_kapseli": false
+},
+{
+"pinta": "Matkakirja.uss",
+"rivi": 3829,
+"valitsin": ".mk-reaktio__kentta > .unity-base-text-field__input",
+"om": "border-radius",
+"px": 4.0,
+"lahin_token": 2,
+"ero": 2.0,
+"ympyra_tai_kapseli": false
+},
+{
+"pinta": "Matkakirja.uss",
+"rivi": 3961,
+"valitsin": ".mk-palaute__ruutu",
+"om": "border-radius",
+"px": 4.0,
+"lahin_token": 2,
+"ero": 2.0,
+"ympyra_tai_kapseli": false
+},
+{
+"pinta": "Matkakirja.uss",
+"rivi": 4152,
+"valitsin": ".mk-wiki__nuoli",
+"om": "border-radius",
+"px": 18.0,
+"lahin_token": 12,
+"ero": 6.0,
+"ympyra_tai_kapseli": true
+},
+{
+"pinta": "Pohjat/Pinnat/astronautin-auto.uss",
+"rivi": 35,
+"valitsin": ".mk-astrokuva__autopiste",
+"om": "border-radius",
+"px": 4.0,
+"lahin_token": 2,
+"ero": 2.0,
+"ympyra_tai_kapseli": false
+},
+{
+"pinta": "Pohjat/Pinnat/lentopeli.uss",
+"rivi": 71,
+"valitsin": ".mk-lento-vipu__rata",
+"om": "border-radius",
+"px": 4.0,
+"lahin_token": 2,
+"ero": 2.0,
+"ympyra_tai_kapseli": true
+},
+{
+"pinta": "Pohjat/Pinnat/lentopeli.uss",
+"rivi": 82,
+"valitsin": ".mk-lento-vipu__nuppi",
+"om": "border-radius",
+"px": 14.0,
+"lahin_token": 12,
+"ero": 2.0,
+"ympyra_tai_kapseli": true
+},
+{
+"pinta": "Pohjat/Pinnat/linssin-valikko.uss",
+"rivi": 83,
+"valitsin": ".mk-minikartta__piste",
+"om": "border-radius",
+"px": 3.5,
+"lahin_token": 2,
+"ero": 1.5,
+"ympyra_tai_kapseli": true
+},
+{
+"pinta": "Pohjat/Pinnat/linssin-valikko.uss",
+"rivi": 168,
+"valitsin": ".mk-opas-nimilappu__nasta",
+"om": "border-radius",
+"px": 4.0,
+"lahin_token": 2,
+"ero": 2.0,
+"ympyra_tai_kapseli": true
+},
+{
+"pinta": "Pohjat/Pinnat/pillerivalikko.uss",
+"rivi": 148,
+"valitsin": ".mk-pillerivalikko--v2 .mk-tasorivi__avatar",
+"om": "border-radius",
+"px": 16.0,
+"lahin_token": 12,
+"ero": 4.0,
+"ympyra_tai_kapseli": true
+},
+{
+"pinta": "Pohjat/Pinnat/pillerivalikko.uss",
+"rivi": 290,
+"valitsin": ".mk-tasonakyma__avatar",
+"om": "border-radius",
+"px": 55.0,
+"lahin_token": 12,
+"ero": 43.0,
+"ympyra_tai_kapseli": true
+},
+{
+"pinta": "Pohjat/Pinnat/pillerivalikko.uss",
+"rivi": 304,
+"valitsin": ".mk-tietaja__rengas",
+"om": "border-radius",
+"px": 31.0,
+"lahin_token": 12,
+"ero": 19.0,
+"ympyra_tai_kapseli": false
+},
+{
+"pinta": "Pohjat/auto.uss",
+"rivi": 27,
+"valitsin": ".mk-nostoselain__autopiste",
+"om": "border-radius",
+"px": 4.0,
+"lahin_token": 2,
+"ero": 2.0,
+"ympyra_tai_kapseli": true
+},
+{
+"pinta": "Pohjat/iss-ohjaamo.uss",
+"rivi": 20,
+"valitsin": ".mk-issohjaamo__paneeli",
+"om": "border-radius",
+"px": 18.0,
+"lahin_token": 12,
+"ero": 6.0,
+"ympyra_tai_kapseli": false
+},
+{
+"pinta": "Pohjat/iss-ohjaamo.uss",
+"rivi": 87,
+"valitsin": ".mk-issohjaamo__napa",
+"om": "border-radius",
+"px": 11.0,
+"lahin_token": 10,
+"ero": 1.0,
+"ympyra_tai_kapseli": true
+},
+{
+"pinta": "Pohjat/iss-ohjaamo.uss",
+"rivi": 139,
+"valitsin": ".mk-issohjaamo__kamera",
+"om": "border-radius",
+"px": 24.0,
+"lahin_token": 12,
+"ero": 12.0,
+"ympyra_tai_kapseli": true
+},
+{
+"pinta": "Pohjat/iss-ohjaamo.uss",
+"rivi": 203,
+"valitsin": ".mk-issohjaamo__rumpu",
+"om": "border-radius",
+"px": 28.0,
+"lahin_token": 12,
+"ero": 16.0,
+"ympyra_tai_kapseli": true
+},
+{
+"pinta": "Pohjat/kortti.uss",
+"rivi": 8,
+"valitsin": ".mk-kortti-kehys--pohja",
+"om": "border-radius",
+"px": 16.0,
+"lahin_token": 12,
+"ero": 4.0,
+"ympyra_tai_kapseli": false
+},
+{
+"pinta": "Pohjat/metrolinja.uss",
+"rivi": 48,
+"valitsin": ".mk-metrolinja__piste",
+"om": "border-radius",
+"px": 4.0,
+"lahin_token": 2,
+"ero": 2.0,
+"ympyra_tai_kapseli": true
+},
+{
+"pinta": "Pohjat/ohjausnappi.uss",
+"rivi": 100,
+"valitsin": ".mk-tappi",
+"om": "border-radius",
+"px": 32.0,
+"lahin_token": 12,
+"ero": 20.0,
+"ympyra_tai_kapseli": true
+},
+{
+"pinta": "Pohjat/ohjausnappi.uss",
+"rivi": 130,
+"valitsin": ".mk-tappi__nuppi",
+"om": "border-radius",
+"px": 13.0,
+"lahin_token": 12,
+"ero": 1.0,
+"ympyra_tai_kapseli": true
+},
+{
+"pinta": "Pulu.uss",
+"rivi": 172,
+"valitsin": ".mk-kupla__muotokuva",
+"om": "border-radius",
+"px": 4.8,
+"lahin_token": 6,
+"ero": 1.2000000000000002,
+"ympyra_tai_kapseli": false
+},
+{
+"pinta": "Pulu.uss",
+"rivi": 809,
+"valitsin": ".mk-chat__siru",
+"om": "border-radius",
+"px": 16.0,
+"lahin_token": 12,
+"ero": 4.0,
+"ympyra_tai_kapseli": false
+},
+{
+"pinta": "Pulu.uss",
+"rivi": 912,
+"valitsin": ".mk-traileri__kuva",
+"om": "border-radius",
+"px": 18.0,
+"lahin_token": 12,
+"ero": 6.0,
+"ympyra_tai_kapseli": false
+},
+{
+"pinta": "Pulu.uss",
+"rivi": 1196,
+"valitsin": ".mk-poiminnat__pilleri",
+"om": "border-radius",
+"px": 14.0,
+"lahin_token": 12,
+"ero": 2.0,
+"ympyra_tai_kapseli": false
+},
+{
+"pinta": "Sahke.uss",
+"rivi": 159,
+"valitsin": ".mk-sahke-liuska__kirjain",
+"om": "border-radius",
+"px": 11.0,
+"lahin_token": 10,
+"ero": 1.0,
+"ympyra_tai_kapseli": true
+},
+{
+"pinta": "Sahketehtava.uss",
+"rivi": 105,
+"valitsin": ".mk-st__reika",
+"om": "border-radius",
+"px": 4.0,
+"lahin_token": 2,
+"ero": 2.0,
+"ympyra_tai_kapseli": true
+},
+{
+"pinta": "Sahketehtava.uss",
+"rivi": 177,
+"valitsin": ".mk-st__leima",
+"om": "border-radius",
+"px": 28.0,
+"lahin_token": 12,
+"ero": 16.0,
+"ympyra_tai_kapseli": true
+},
+{
+"pinta": "Sahketehtava.uss",
+"rivi": 432,
+"valitsin": ".mk-nappi.mk-st__pullanappi",
+"om": "border-radius",
+"px": 4.0,
+"lahin_token": 2,
+"ero": 2.0,
+"ympyra_tai_kapseli": false
+},
+{
+"pinta": "Sahketehtava.uss",
+"rivi": 520,
+"valitsin": ".mk-nappi.mk-st__toissijainen",
+"om": "border-bottom-right-radius",
+"px": 14.0,
+"lahin_token": 12,
+"ero": 2.0,
+"ympyra_tai_kapseli": false
+},
+{
+"pinta": "Sahketehtava.uss",
+"rivi": 534,
+"valitsin": ".mk-nappi.mk-st__ensisijainen",
+"om": "border-top-left-radius",
+"px": 14.0,
+"lahin_token": 12,
+"ero": 2.0,
+"ympyra_tai_kapseli": false
+},
+{
+"pinta": "Sahketehtava.uss",
+"rivi": 536,
+"valitsin": ".mk-nappi.mk-st__ensisijainen",
+"om": "border-bottom-right-radius",
+"px": 15.0,
+"lahin_token": 12,
+"ero": 3.0,
+"ympyra_tai_kapseli": false
+},
+{
+"pinta": "Sahketehtava.uss",
+"rivi": 576,
+"valitsin": ".mk-st__valitsin",
+"om": "border-top-left-radius",
+"px": 16.0,
+"lahin_token": 12,
+"ero": 4.0,
+"ympyra_tai_kapseli": false
+},
+{
+"pinta": "Sahketehtava.uss",
+"rivi": 578,
+"valitsin": ".mk-st__valitsin",
+"om": "border-bottom-right-radius",
+"px": 15.0,
+"lahin_token": 12,
+"ero": 3.0,
+"ympyra_tai_kapseli": false
+}
+]
