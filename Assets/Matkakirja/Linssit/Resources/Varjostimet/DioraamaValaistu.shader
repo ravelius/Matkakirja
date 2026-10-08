@@ -39,6 +39,10 @@ Shader "Matkakirja/Linssit/DioraamaValaistu"
         _ValoAtlas ("Kävelyosan valoatlas (UV1, valo × 0,5, LR 8.10.)", 2D) = "grey" {}
         _ValoVain ("Valo atlaksesta (1) vai reaaliaikaisista valoista (0)", Float) = 0
         _Markyys ("Märkyys 0–1 (kävelydata, LR v45f)", Float) = 0
+        _Detalji ("Detalji (x = 1 / toistoväli m, y = voima, z = päällä)", Vector) = (0.6667, 0.6, 0, 0)
+        _DetaljiAlbedo ("Detalji: albedo (0,5-pohjainen)", 2D) = "grey" {}
+        _DetaljiNormaali ("Detalji: normaali (OpenGL Y+)", 2D) = "bump" {}
+        _DetaljiKarheus ("Detalji: karheus (R)", 2D) = "white" {}
     }
     SubShader
     {
@@ -67,6 +71,7 @@ Shader "Matkakirja/Linssit/DioraamaValaistu"
             #include "DioraamaKuviot.hlsl"
             #include "DioraamaUsva.hlsl"
             #include "DioraamaMarkyys.hlsl"
+            #include "DioraamaDetalji.hlsl"
 
             // Globaalit: DioraamaNayttamo.cs (sumu+lepatus, kaikki dioraaman varjostimet) ja DioraamaValot.cs
             // (taivas, RAKENNUS.valaistus.taivas-datasta, vain tämä varjostin lukee näitä kahta).
@@ -90,6 +95,7 @@ Shader "Matkakirja/Linssit/DioraamaValaistu"
                 float4 _ValoAtlas_ST;
                 float _ValoVain;         // 1 = kävelyosa: valo leivotusta atlaksesta (UV1), ei pää- eikä taivasvaloa
                 float _Markyys;          // märkyys 0–1 (SeikkailuKavely.AsetaMarkyys)
+                float4 _Detalji;         // x = 1 / toistoväli m, y = voima, z = päällä (DioraamaRakennus.AsetaDetalji)
             CBUFFER_END
 
             struct Syote
@@ -151,6 +157,11 @@ Shader "Matkakirja/Linssit/DioraamaValaistu"
                     albedo = _Vari.rgb * kuvio;
                 }
 
+                // Detalji (juna 169): albedo-overlay, valaistus detaljinormaalilla.
+                DetaljiTulos dt = DioraamaDetalji(_Detalji, i.paikkaW, n);
+                albedo *= dt.albedo;
+                n = dt.normaali;
+
                 half3 taivas = (half3)lerp(_DioraamaTaivasAla.rgb, _DioraamaTaivasYla.rgb, (half)(n.y * 0.5 + 0.5)) * _DioraamaTaivasYla.a;
 
                 Light paavalo = GetMainLight(TransformWorldToShadowCoord(i.paikkaW));
@@ -171,7 +182,7 @@ Shader "Matkakirja/Linssit/DioraamaValaistu"
                 {
                     // Kävelyosa (LR 8.10.): leivottu valo (GI, AO, liekit; tallennettu × 0,5) × pinnan väri. Reaaliaikaisista
                     // lisävaloista vain varjot tummentavat (hahmot heittävät liekin varjon), kuten DioraamaLeivottu.
-                    half3 leivottu = SAMPLE_TEXTURE2D(_ValoAtlas, sampler_ValoAtlas, i.uv1).rgb * 2.0h;
+                    half3 leivottu = SAMPLE_TEXTURE2D(_ValoAtlas, sampler_ValoAtlas, i.uv1).rgb * 2.0h * dt.valo;
                     half varjo = 1.0h;
                     #if defined(_ADDITIONAL_LIGHT_SHADOWS)
                     {
@@ -242,6 +253,7 @@ Shader "Matkakirja/Linssit/DioraamaValaistu"
                 float4 _ValoAtlas_ST;
                 float _ValoVain;
                 float _Markyys;
+                float4 _Detalji;
             CBUFFER_END
 
             struct SyoteVarjo { float4 paikka : POSITION; float3 normaali : NORMAL; };
@@ -288,6 +300,7 @@ Shader "Matkakirja/Linssit/DioraamaValaistu"
                 float4 _ValoAtlas_ST;
                 float _ValoVain;
                 float _Markyys;
+                float4 _Detalji;
             CBUFFER_END
 
             struct SyoteSyvyys { float4 paikka : POSITION; };

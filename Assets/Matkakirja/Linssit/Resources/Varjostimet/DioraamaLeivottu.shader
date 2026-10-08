@@ -22,6 +22,10 @@ Shader "Matkakirja/Linssit/DioraamaLeivottu"
         _Heilunta ("Lipun heilunta", Float) = 0
         _Leikattava ("Kuoren leikkaus koskee tätä", Float) = 0
         _Markyys ("Märkyys 0–1 (kävelydata, LR v45f)", Float) = 0
+        _Detalji ("Detalji (x = 1 / toistoväli m, y = voima, z = päällä)", Vector) = (0.6667, 0.6, 0, 0)
+        _DetaljiAlbedo ("Detalji: albedo (0,5-pohjainen)", 2D) = "grey" {}
+        _DetaljiNormaali ("Detalji: normaali (OpenGL Y+)", 2D) = "bump" {}
+        _DetaljiKarheus ("Detalji: karheus (R)", 2D) = "white" {}
     }
     SubShader
     {
@@ -46,6 +50,7 @@ Shader "Matkakirja/Linssit/DioraamaLeivottu"
             #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Lighting.hlsl"
             #include "DioraamaUsva.hlsl"
             #include "DioraamaMarkyys.hlsl"
+            #include "DioraamaDetalji.hlsl"
 
             half _DioraamaLepatus;
             half4 _DioraamaSumuVari;
@@ -65,6 +70,7 @@ Shader "Matkakirja/Linssit/DioraamaLeivottu"
                 float _Heilunta;
                 float _Leikattava;
                 float _Markyys;
+                float4 _Detalji;
             CBUFFER_END
 
             // Sama leikkaustilavuus kuin DioraamaKuori.shaderissa (globaalit DioraamaUlkokuori.PaivitaLeikkaus): tilat, joita
@@ -119,10 +125,13 @@ Shader "Matkakirja/Linssit/DioraamaLeivottu"
                 if (_Leikattava > 0.5 && _DioraamaLeikkausMin.w > 0.001 && Leikkauksessa(i.paikkaW)) discard;
                 half3 vari = SAMPLE_TEXTURE2D(_ValoAtlas, sampler_ValoAtlas, i.uv1).rgb * _Kirkkaus;
 
-                // Märkyys (DioraamaMarkyys.hlsl); liekkien lämpö kiiltää märällä pinnalla enemmän (lisa × kiilto).
+                // Detalji (DioraamaDetalji.hlsl, juna 169): albedo-overlay ja kohokuvio leivotun valon päälle.
                 float3 nW = normalize(i.normaaliW);
-                half mm = DioraamaMarkyys(vari, _Markyys, nW, i.paikkaW);
-                half kiilto = 1.0h + mm * 0.8h;
+                DetaljiTulos dt = DioraamaDetalji(_Detalji, i.paikkaW, nW);
+                vari *= dt.albedo * dt.valo;
+                // Märkyys (DioraamaMarkyys.hlsl) detaljinormaalilla; liekkien lämpö kiiltää märällä, sileällä pinnalla enemmän.
+                half mm = DioraamaMarkyys(vari, _Markyys, dt.normaali, i.paikkaW);
+                half kiilto = 1.0h + mm * 0.8h * (1.25h - 0.5h * dt.karheus);
 
                 half lisa = 0;
                 int maara = (int)min(_DioraamaLiekkiMaara, 8.0);

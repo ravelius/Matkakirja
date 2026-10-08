@@ -54,6 +54,12 @@ namespace Matkakirja.Natiivi
         static readonly int IdValoAtlas = Shader.PropertyToID("_ValoAtlas"), IdValoVain = Shader.PropertyToID("_ValoVain"), IdMarkyys = Shader.PropertyToID("_Markyys");
         /// <summary>Kävelyosien valo-kloonit (LR 8.10., juna 169): pintamateriaali × tilan valoatlas; avain tila|pinta.</summary>
         readonly Dictionary<string, (string Tila, Material Pohja, Material Klooni)> valoKloonit = new Dictionary<string, (string, Material, Material)>();
+        /// <summary>Detaljit (juna 169): tilan alimeshien pinnat, leivottujen tilojen pintakohtaiset kloonit ja asetetut detaljit.</summary>
+        readonly Dictionary<string, string[]> tilaPinnat = new Dictionary<string, string[]>();
+        readonly Dictionary<string, Material> leivotutKloonit = new Dictionary<string, Material>();
+        readonly Dictionary<string, (Texture2D A, Texture2D N, Texture2D K, Vector4 P)> detaljit = new Dictionary<string, (Texture2D, Texture2D, Texture2D, Vector4)>();
+        static readonly int IdDetalji = Shader.PropertyToID("_Detalji"), IdDetaljiAlbedo = Shader.PropertyToID("_DetaljiAlbedo"),
+            IdDetaljiNormaali = Shader.PropertyToID("_DetaljiNormaali"), IdDetaljiKarheus = Shader.PropertyToID("_DetaljiKarheus");
         readonly Dictionary<string, Material> leivotut = new Dictionary<string, Material>();
         /// <summary>Tilan liput (pinta "lippu"): sama atlas, heiluva materiaali (DioraamaLeivottu _Heilunta 1).</summary>
         readonly Dictionary<string, Material> leivotutLiput = new Dictionary<string, Material>();
@@ -74,6 +80,7 @@ namespace Matkakirja.Natiivi
             odottavatValoAtlakset[tilaId] = kuva;
             if (leivotut.TryGetValue(tilaId, out var m) && m != null) m.SetTexture(IdValoAtlas, kuva);
             foreach (var k in valoKloonit.Values) if (k.Tila == tilaId && k.Klooni != null) k.Klooni.SetTexture(IdValoAtlas, kuva);
+            foreach (var p in leivotutKloonit) if (p.Key.StartsWith(tilaId + "#", StringComparison.Ordinal) && p.Value != null) p.Value.SetTexture(IdValoAtlas, kuva);
             if (leivotutLiput.TryGetValue(tilaId, out var l) && l != null) l.SetTexture(IdValoAtlas, kuva);
         }
 
@@ -250,12 +257,16 @@ namespace Matkakirja.Natiivi
             go.AddComponent<MeshFilter>().sharedMesh = mesh;
             var renderer = go.AddComponent<MeshRenderer>();
             renderer.sharedMaterials = materiaalitJarjestyksessa;
+            var pinnatJarjestyksessa = new string[malli.Osat.Count];
+            for (int oi = 0; oi < malli.Osat.Count; oi++) pinnatJarjestyksessa[oi] = malli.Osat[oi].Pinta;
+            tilaPinnat[tila.Id] = pinnatJarjestyksessa;
+            if (leivottu && detaljit.Count > 0) DetaljiLeivottuun(tila.Id, renderer, leivottuMateriaali, pinnatJarjestyksessa);
             // era 2b (kohta 2): aurinko+lamput+tuli heittävät ja vastaanottavat varjoja. Ei haittaa Valaistus=false
             // -tilassa (DioraamaMaalattu ei kirjoita ShadowCaster-passia eikä lue varjokarttaa -- renderer-liput
             // jäävät silloin vaikutuksettomiksi).
             // Leivottu tila: valo ja varjot ovat jo atlaksessa (ei varjokarttaa, halvempi iPhonella).
             renderer.shadowCastingMode = leivottu ? ShadowCastingMode.Off : ShadowCastingMode.On;
-            renderer.receiveShadows = !leivottu;
+            renderer.receiveShadows = true;   // juna 169: leivottu tila ottaa liekkien varjot (DioraamaLeivottu, Ultra)
 
             tilat[tila.Id] = go;
             Kolmiot += kolmioita;
@@ -299,6 +310,63 @@ namespace Matkakirja.Natiivi
         /// <summary>Historiamoottori E3: tilan leivottu materiaali (_Kirkkaus: kynttilöiden sammuminen himmentää huoneen), tai null.</summary>
         public Material LeivottuMateriaali(string tilaId) => leivotut.TryGetValue(tilaId, out var m) ? m : null;
 
+        /// <summary>Tilan leivottu materiaali ja sen pintakohtaiset detaljikloonit (kynttilöiden himmennys koskee kaikkia).</summary>
+        public IEnumerable<Material> LeivotutMateriaalit(string tilaId)
+        {
+            if (leivotut.TryGetValue(tilaId, out var m) && m != null) yield return m;
+            foreach (var p in leivotutKloonit) if (p.Key.StartsWith(tilaId + "#", StringComparison.Ordinal) && p.Value != null) yield return p.Value;
+        }
+
+        static string PintaAvain(Rakennus rakennus, string pinta)
+            => pinta != null && rakennus?.Pinnat != null && !rakennus.Pinnat.ContainsKey(pinta) && PintaAliakset.TryGetValue(pinta, out var a) ? a : pinta;
+
+        static void KirjoitaDetalji(Material m, (Texture2D A, Texture2D N, Texture2D K, Vector4 P) d)
+        {
+            if (m == null || !m.HasProperty(IdDetalji)) return;
+            if (d.A != null) m.SetTexture(IdDetaljiAlbedo, d.A);
+            if (d.N != null) m.SetTexture(IdDetaljiNormaali, d.N);
+            if (d.K != null) m.SetTexture(IdDetaljiKarheus, d.K);
+            m.SetVector(IdDetalji, d.P);
+        }
+
+        /// <summary>
+        /// DETALJIKARTAT (LR 8.10., juna 169): pinnan detalji kaikkiin sitä käyttäviin materiaaleihin — pintamateriaali (valaistut tilat
+        /// ja kävelyosat), kävelyosien valo-kloonit ja leivottujen tilojen alimeshit (pintakohtainen klooni tilan leivotusta materiaalista,
+        /// vaihdetaan rendererin materiaalilistaan). Myöhemmin lisättävät tilat saavat detaljin LisaaTila-vaiheessa.
+        /// </summary>
+        public void AsetaDetalji(string pinta, Texture2D albedo, Texture2D normaali, Texture2D karheus, double m, double voima)
+        {
+            if (string.IsNullOrEmpty(pinta)) return;
+            var d = (albedo, normaali, karheus, new Vector4(1f / (float)Math.Max(0.05, m), (float)voima, albedo != null || normaali != null ? 1f : 0f, 0f));
+            detaljit[pinta] = d;
+            if (materiaalit.TryGetValue(pinta, out var pm)) KirjoitaDetalji(pm, d);
+            foreach (var k in valoKloonit.Values) if (k.Pohja == pm && pm != null) KirjoitaDetalji(k.Klooni, d);
+            foreach (var tp in tilaPinnat)
+                if (leivotut.TryGetValue(tp.Key, out var lm) && lm != null && tilat.TryGetValue(tp.Key, out var go) && go != null)
+                    DetaljiLeivottuun(tp.Key, go.GetComponent<MeshRenderer>(), lm, tp.Value);
+        }
+
+        void DetaljiLeivottuun(string tilaId, MeshRenderer r, Material leivottu, string[] pinnat)
+        {
+            if (r == null || pinnat == null) return;
+            var mats = r.sharedMaterials; bool muuttui = false;
+            for (int i = 0; i < mats.Length && i < pinnat.Length; i++)
+            {
+                string p = PintaAvain(viimeisinRakennus, pinnat[i]);
+                if (p == null || !detaljit.TryGetValue(p, out var d)) continue;
+                if (mats[i] != leivottu && !(mats[i] != null && mats[i].name.StartsWith(leivottu.name + "#", StringComparison.Ordinal))) continue;   // liput omillaan
+                string avain = tilaId + "#" + p;
+                if (!leivotutKloonit.TryGetValue(avain, out var kl) || kl == null)
+                {
+                    kl = new Material(leivottu) { name = leivottu.name + "#" + p };
+                    leivotutKloonit[avain] = kl;
+                }
+                KirjoitaDetalji(kl, d);
+                if (mats[i] != kl) { mats[i] = kl; muuttui = true; }
+            }
+            if (muuttui) r.sharedMaterials = mats;
+        }
+
         Material MateriaaliPinnalle(Rakennus rakennus, string pintaId)
         {
             if (pintaId != null && rakennus?.Pinnat != null && !rakennus.Pinnat.ContainsKey(pintaId) && PintaAliakset.TryGetValue(pintaId, out var alias)
@@ -328,6 +396,7 @@ namespace Matkakirja.Natiivi
             m.SetVector(IdKuvioParametrit, new Vector4((float)(kuvio?.KokoU ?? 0), (float)(kuvio?.KokoV ?? 0),
                 (float)(kuvio?.Sauma ?? 0), (float)(kuvio?.Vaihtelu ?? 0)));
             materiaalit[avain] = m;
+            if (detaljit.TryGetValue(avain, out var dd)) KirjoitaDetalji(m, dd);
             // Pohjakuva voi olla ladattu jo ennen tätä tilaa (toinen tila käytti samaa pintaa aiemmin): aseta heti.
             if (odottavatPohjakuvat.TryGetValue(avain, out var kuva)) AsetaPohjakuvaMateriaaliin(m, avain, kuva, rakennus);
             return m;
@@ -351,6 +420,8 @@ namespace Matkakirja.Natiivi
             leivotutLiput.Clear();
             foreach (var k in valoKloonit.Values) if (k.Klooni != null) UnityEngine.Object.Destroy(k.Klooni);
             valoKloonit.Clear();
+            foreach (var k in leivotutKloonit.Values) if (k != null) UnityEngine.Object.Destroy(k);
+            leivotutKloonit.Clear(); tilaPinnat.Clear(); detaljit.Clear();   // detaljitekstuurit omistaa DioraamaSovitin
             odottavatValoAtlakset.Clear(); // tekstuurit omistaa DioraamaSovitin (ladatutValoAtlakset)
             odottavatPohjakuvat.Clear();
             viimeisinRakennus = null;

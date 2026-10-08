@@ -183,6 +183,7 @@ namespace Matkakirja.Natiivi
         readonly Dictionary<string, Texture2D> ladatutLiekkiAtlakset = new Dictionary<string, Texture2D>(StringComparer.Ordinal);
         /// <summary>Olavinlinna: tilojen leivotut valoatlakset (avain tilan id), sama omistus kuin pinnoilla.</summary>
         readonly Dictionary<string, Texture2D> ladatutValoAtlakset = new Dictionary<string, Texture2D>(StringComparer.Ordinal);
+        readonly List<Texture2D> ladatutDetaljit = new List<Texture2D>();   // juna 169: detaljikartat (DioraamaRakennus.AsetaDetalji)
         string peiliKuvaus = "pois (ämpäri)";
         Func<string, string> peili = s => s;
         bool peiliPaalla;
@@ -273,6 +274,7 @@ namespace Matkakirja.Natiivi
             {
                 linssi.Avaa(rakennus, ymparisto.Aika, SaapuminenNahty);
                 TaydennaPinnatJaLiekit();
+                o.StartCoroutine(LataaDetaljit());
                 LataaUlkokuori();
                 AloitaKuoriOdotus(ymparisto.Aika);
                 TaydennaLataamattomat();
@@ -653,6 +655,8 @@ namespace Matkakirja.Natiivi
             ladatutLiekkiAtlakset.Clear();
             foreach (var vanhaKuva in ladatutValoAtlakset.Values) if (vanhaKuva != null) UnityEngine.Object.Destroy(vanhaKuva);
             ladatutValoAtlakset.Clear();
+            foreach (var dk in ladatutDetaljit) if (dk != null) UnityEngine.Object.Destroy(dk);
+            ladatutDetaljit.Clear();
         }
 
         string edellinenPeili = "pois (ämpäri)";
@@ -758,6 +762,7 @@ namespace Matkakirja.Natiivi
                 linssi.Avaa(rakennus, YdinAika, SaapuminenNahty);
                 aanet?.RakennusValmis(rakennus); // rakennus oli null Avaa-kutsun hetkellä: äänet saavat sen vasta nyt.
                 TaydennaPinnatJaLiekit();
+                o.StartCoroutine(LataaDetaljit());
                 LataaUlkokuori();
                 AloitaKuoriOdotus(YdinAika);
                 TaydennaLataamattomat();
@@ -1573,6 +1578,61 @@ namespace Matkakirja.Natiivi
             ladatutValoAtlakset[tila.Id] = kuva;
             rakennus3D.AsetaValoAtlas(tila.Id, kuva);
             o.Kirjaa($"poikki: valoatlas {tila.Id} valmis ({kuva.width}x{kuva.height}{(puoli ? ", puolikas" : "")})");
+        }
+
+        /// <summary>
+        /// DETALJIKARTAT (LR 8.10., juna 169): detaljitiedosto (osoitin rakennus.json:ssa) ja kunkin pinnan albedo, normaali ja karheus
+        /// — ASTC ensin, JPEG varalla, kaikki LINEAARISINA (LR: albedo on 0,5-pohjainen overlay). Valmiit kartat
+        /// DioraamaRakennus.AsetaDetalji:lle; ilman detaljeja ei mitään.
+        /// </summary>
+        IEnumerator LataaDetaljit()
+        {
+            int kerta = avauskerta;
+            var r = rakennus; if (r == null) yield break;
+            if (!string.IsNullOrEmpty(r.DetaljitTiedosto) && r.Detaljit.Count == 0)
+            {
+                string json = null;
+                yield return HaeTeksti(peili(paketinJuuri + r.DetaljitTiedosto), t => json = t);
+                if (json == null) { o.Kirjaa($"poikki: detaljit {r.DetaljitTiedosto} ei latautunut"); yield break; }
+                try { DioraamaData.LueDetaljitTiedosto(json, r); }
+                catch (Exception e) { o.Kirjaa("poikki: detaljit jäsennys: " + e.Message); yield break; }
+            }
+            foreach (var d in new List<Detalji>(r.Detaljit.Values))
+            {
+                Texture2D a = null, n = null, k = null;
+                yield return LataaDetaljiKuva(d.AstcAlbedo, d.Albedo, "Detalji:" + d.Pinta + ":albedo", t => a = t);
+                yield return LataaDetaljiKuva(d.AstcNormaali, d.Normaali, "Detalji:" + d.Pinta + ":normaali", t => n = t);
+                yield return LataaDetaljiKuva(d.AstcKarheus, d.Karheus, "Detalji:" + d.Pinta + ":karheus", t => k = t);
+                if (kerta != avauskerta || rakennus3D == null)
+                {
+                    foreach (var t in new[] { a, n, k }) if (t != null) UnityEngine.Object.Destroy(t);
+                    yield break;
+                }
+                foreach (var t in new[] { a, n, k }) if (t != null) ladatutDetaljit.Add(t);
+                rakennus3D.AsetaDetalji(d.Pinta, a, n, k, d.M, d.Voima);
+                o.Kirjaa($"poikki: detalji {d.Pinta} ({(a != null ? "albedo " : "")}{(n != null ? "normaali " : "")}{(k != null ? "karheus " : "")}m {d.M:F1}, voima {d.Voima:F2})");
+            }
+        }
+
+        IEnumerator LataaDetaljiKuva(string astc, string jpg, string nimi, Action<Texture2D> valmis)
+        {
+            if (!string.IsNullOrEmpty(astc))
+            {
+                byte[] tavut = null;
+                yield return HaeTavut(peili(paketinJuuri + astc), t => tavut = t);
+                string syy = "ei latautunut";
+                var kuva = tavut != null ? DioraamaAstc.Lue(tavut, nimi, out syy, TextureWrapMode.Repeat, 0, true) : null;
+                if (kuva != null) { kuva.anisoLevel = 4; valmis(kuva); yield break; }
+                o.Kirjaa($"poikki: {nimi} ASTC ei käytössä ({syy}), JPEG varalla");
+            }
+            if (string.IsNullOrEmpty(jpg)) yield break;
+            byte[] jt = null;
+            yield return HaeTavut(peili(paketinJuuri + jpg), t => jt = t);
+            if (jt == null) { o.Kirjaa($"poikki: {nimi} ei latautunut"); yield break; }
+            var j = new Texture2D(2, 2, TextureFormat.RGBA32, true, true) { name = nimi, wrapMode = TextureWrapMode.Repeat, filterMode = FilterMode.Trilinear, anisoLevel = 4 };
+            if (!j.LoadImage(jt, false)) { UnityEngine.Object.Destroy(j); yield break; }
+            j.Compress(false); j.Apply(false, true);
+            valmis(j);
         }
 
         IEnumerator LataaAtlas(string atlasPolku)

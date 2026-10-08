@@ -1,0 +1,36 @@
+// Detaljikartat (LR 8.10., juna 169): rakennus.json:n juuren "detaljit" pintanimen mukaan.
+using Matkakirja.Linssit.Dioraama;
+
+namespace Matkakirja.Linssit.Testit
+{
+    public static class DetaljiTestit
+    {
+        const string Fixture = @"{
+          ""id"": ""detalji-testi"", ""nimi"": ""Detaljit"", ""versio"": 1,
+          ""detaljit"": {
+            ""kivi"": { ""albedo"": ""blender/materiaalit/kivi-albedo.jpg"", ""normaali"": ""blender/materiaalit/kivi-normaali.jpg"",
+                        ""karheus"": ""blender/materiaalit/kivi-karheus.jpg"", ""astc"": { ""albedo"": ""blender/materiaalit/kivi-albedo-4x4.astcm"" },
+                        ""m"": 1.2, ""voima"": 0.7 },
+            ""puu"": { ""albedo"": ""blender/materiaalit/puu-albedo.jpg"", ""voima"": 3 }
+          }
+        }";
+
+        [Testi] static void DetaljitPinnoittain()
+        {
+            var r = DioraamaData.Lue(Fixture);
+            Oleta.Sama(2, r.Detaljit.Count);
+            var k = r.Detaljit["kivi"];
+            Oleta.Tosi(k.Albedo.EndsWith("kivi-albedo.jpg") && k.Normaali != null && k.Karheus != null, "kivi: kolme karttaa");
+            Oleta.Tosi(k.AstcAlbedo != null && k.AstcNormaali == null, "kivi: ASTC vain albedolle");
+            Oleta.Tosi(System.Math.Abs(k.M - 1.2) < 1e-9 && System.Math.Abs(k.Voima - 0.7) < 1e-9, "kivi: m 1,2, voima 0,7");
+            var p = r.Detaljit["puu"];
+            Oleta.Tosi(System.Math.Abs(p.M - 1.5) < 1e-9 && System.Math.Abs(p.Voima - 1) < 1e-9 && p.Normaali == null, "puu: oletus-m, voima rajattu 1:een");
+            Oleta.Sama(0, DioraamaData.Lue(@"{ ""id"": ""x"", ""nimi"": ""x"", ""versio"": 1 }").Detaljit.Count);
+            // LR v45l: osoitin erilliseen tiedostoon.
+            var o = DioraamaData.Lue(@"{ ""id"": ""x"", ""nimi"": ""x"", ""versio"": 1, ""detaljit"": ""blender/materiaalit/detaljit.json"" }");
+            Oleta.Sama("blender/materiaalit/detaljit.json", o.DetaljitTiedosto);
+            DioraamaData.LueDetaljitTiedosto(@"{ ""versio"": 1, ""koodaus"": ""lineaarinen"", ""detaljit"": { ""kivi"": { ""albedo"": ""a.jpg"", ""astc"": { ""albedo"": ""a-6x6.astcm"", ""normaali"": ""n-6x6.astcm"", ""karheus"": ""k-6x6.astcm"" }, ""m"": 1.5, ""voima"": 0.6, ""lahde"": ""x"", ""lisenssi"": ""CC0"" } } }", o);
+            Oleta.Tosi(o.Detaljit.TryGetValue("kivi", out var ok) && ok.AstcKarheus == "k-6x6.astcm", "erillinen tiedosto jäsennetty");
+        }
+    }
+}

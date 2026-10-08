@@ -23,6 +23,13 @@ namespace Matkakirja.Natiivi
         Kynttilat ydin;
         readonly List<(GameObject Go, Vector3 Paikka)> liekit = new List<(GameObject, Vector3)>();
         Material leivottu; float kirkkausAlku = 1f;
+        DioraamaRakennus r3d; string leivottuTila;
+        /// <summary>Kirkkaus tilan leivottuun materiaaliin ja sen detaljikloneihin (juna 169).</summary>
+        void AsetaKirkkaus(float k)
+        {
+            if (r3d != null && leivottuTila != null) foreach (var m in r3d.LeivotutMateriaalit(leivottuTila)) m.SetFloat(IdKirkkaus, k);
+            else if (leivottu != null) leivottu.SetFloat(IdKirkkaus, k);
+        }
         Light omaValo;
         GameObject omaLiekki;
         DioraamaLiekit liekitLahde;
@@ -42,7 +49,7 @@ namespace Matkakirja.Natiivi
             var paikat = new List<(double, double, double)>();
             foreach (var l in k.liekit) paikat.Add((l.Paikka.x, l.Paikka.y, l.Paikka.z));
             k.ydin = new Kynttilat(paikat);
-            k.leivottu = rakennus3D?.LeivottuMateriaali(tilaId);
+            k.leivottu = rakennus3D?.LeivottuMateriaali(tilaId); k.r3d = rakennus3D; k.leivottuTila = tilaId;
             // Candle VFX -liekit tilan kynttilöihin (PT 7.10.: kevyet, kaikilla laitteilla); oma 3D-liekki piiloon, sammutus kuten ennen.
             foreach (var l in k.liekit)
                 if (l.Go != null && SeikkailuValot.Liekki(l.Go.transform, l.Go.layer) != null)
@@ -216,7 +223,7 @@ namespace Matkakirja.Natiivi
         {
             for (int i = 0; i < liekit.Count; i++)
                 if (liekit[i].Go != null && liekit[i].Go.activeSelf != ydin.Palaa(i)) liekit[i].Go.SetActive(ydin.Palaa(i));
-            if (leivottu != null) leivottu.SetFloat(IdKirkkaus, kirkkausAlku * Mathf.Lerp(Himmein, 1f, (float)ydin.Osuus));
+            if (leivottu != null) AsetaKirkkaus(kirkkausAlku * Mathf.Lerp(Himmein, 1f, (float)ydin.Osuus));
             if (ikuinenValoLight == null && liekit.Count > 0) AsetaPaikat();
             SeikkailuAanet.Silmukka("tuuli-rako", LuukkuAuki, Luukku, 0.6f);
             // Luukku kääntyy saranallaan 0,8 s:ssa; auki kylmä sinertävä yövalo.
@@ -300,7 +307,7 @@ namespace Matkakirja.Natiivi
         {
             if (Aktiivinen == this) Aktiivinen = null;
             Shader.SetGlobalVector(IdKanto, Vector4.zero);
-            if (leivottu != null) leivottu.SetFloat(IdKirkkaus, kirkkausAlku);
+            if (leivottu != null) AsetaKirkkaus(kirkkausAlku);
             foreach (var l in liekit) if (l.Go != null) l.Go.SetActive(true);
             if (omaValo != null) Destroy(omaValo.gameObject);
             if (omaLiekki != null) Destroy(omaLiekki);
