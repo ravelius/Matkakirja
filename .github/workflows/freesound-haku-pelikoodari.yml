@@ -1,0 +1,28 @@
+# Kertaluonteinen Freesound-haku (Pelikoodari 8.10.2026, Olavinlinnan aanet-fp-v2). Vain tämän haaran pushista; ei mergetä.
+name: Freesound-haku (Pelikoodari)
+on:
+  push:
+    branches: [pelikoodari-freesound-haku]
+permissions:
+  contents: read
+jobs:
+  hae:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - env:
+          FREESOUND_API_KEY: ${{ secrets.FREESOUND_API_KEY }}
+        run: >
+          node tools/aanet/freesound-haku.mjs /tmp/fs
+          "airot|rowing boat oars|3|40"
+          "airot|oars rowing water|3|40"
+          "koysi|rope creak tension|1|20"
+          "koysi|rope slide hands friction|1|20"
+          "kello-halytys|church bell alarm tolling single bell|5|60"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: freesound
+          path: /tmp/fs/
