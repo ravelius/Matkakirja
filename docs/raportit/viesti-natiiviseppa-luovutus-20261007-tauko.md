@@ -3,7 +3,15 @@
 Luovuttaja: Natiiviseppä (Opus 5.5, high). Edellinen: viesti-natiiviseppa-luovutus-20261005-iltapaiva.md (käytännöt voimassa).
 Tarkempi lokirivistö: muisti natiiviseppa-tila-20261003.md (uusin rivi ylimpänä).
 
-## TILA 8.10. 07.4x (UUSIN)
+## TILA 8.10. 09.5x (UUSIN)
+
+**BUILD 164 VALMIS**: iOS TF 164 (37736834965) + Mac TF 164 (37738691540) ladattu; junavahti asensi 164:n 4 T7-simuun 09.41 (ensimmäinen
+T7-junaasennus OK; 09.27 satunnainen Unity mono-segv, uusinta onnistui). mac-tf.sh käyttää nyt proto-3d/tyokalut/mac-kaanna.sh (master-kopio).
+**BUILD 165 = proto master 8adddd2c376fca44fc69eb58f106417b3a57b7d6** (runko natiiviseppa/juna-165 8c35a7cf6 = df24a24d + Siirtoseppä becd20404
++ NUI cf66d208, 0484007f, 39d43932, 9417aa6a + LS1 ee3b7207b; käännös 868821345 09.50; app lokit/natiiviseppa-app-165-8c35a7cf6; muutosloki
+Julkaisijalla). AVOINNA: juna/b13 → 8c35a7cf (Julkaisijan ajoitus, LS1:n simuvuoro) + juna.log; Mac TF 165 -odottaja iOS-ajon alkuajalla.
+
+## TILA 8.10. 07.4x
 
 **T7-TYÖKALUVAIHTO VALMIS JA TODENNETTU** (Päätoimittaja hyväksyi). Elävät: proto-3d/tyokalut/simusarja.sh (kääre: `source … || exit 2`
 → `xcrun simctl` → --set T7, vanha sisäinen UDID → samannimisen T7-laitteen UDID; `simusarja.sh simctl|udid|lista|luo`),
