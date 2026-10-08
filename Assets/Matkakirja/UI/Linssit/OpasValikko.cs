@@ -2325,14 +2325,12 @@ namespace Matkakirja.Natiivi
         static List<string> KuvaLahteet()
         {
             var tulos = new List<string>();
-            var p = typeof(OpasValikko).Assembly.GetType("Matkakirja.Natiivi.OpasSovitin")
-                ?.GetProperty("KuvaLahteet", System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Static);
-            if (!(p?.GetValue(null) is System.Collections.IEnumerable lista)) return tulos;
-            foreach (var o in lista)
+            // Suoraan LS1:n OpasSovitin.KuvaLahteet (9.10.: heijastus pois, puuttuva rajapinta kaatuu käännökseen).
+            var lista = OpasSovitin.KuvaLahteet;
+            if (lista == null) return tulos;
+            foreach (var (kohdeN, tekijaN, lisenssiN, havainne) in lista)
             {
-                if (!(o is System.Runtime.CompilerServices.ITuple t) || t.Length < 4) continue;
-                string kohde = t[0] as string, tekija = (t[1] as string ?? "").Trim(), lisenssi = (t[2] as string ?? "").Trim();
-                bool havainne = t[3] is bool b && b;
+                string kohde = kohdeN, tekija = (tekijaN ?? "").Trim(), lisenssi = (lisenssiN ?? "").Trim();
                 var osat = new List<string>();
                 if (!string.IsNullOrWhiteSpace(kohde)) osat.Add(kohde.Trim());
                 if (havainne) osat.Add("Tekoälyllä tuotettu havainnekuva");
@@ -2344,10 +2342,8 @@ namespace Matkakirja.Natiivi
             return tulos;
         }
 
-        /// <summary>LS1:n Matkakirja.Natiivi.ElavaKaupunki.Krediitti heijastuksella (junasta riippumaton); null, jos ei ole.</summary>
-        static string ElavaKrediitti() =>
-            typeof(OpasValikko).Assembly.GetType("Matkakirja.Natiivi.ElavaKaupunki")
-                ?.GetProperty("Krediitti", System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Static)?.GetValue(null) as string;
+        /// <summary>LS1:n ElavaKaupunki.Krediitti suoraan (9.10.: heijastus pois, puuttuva rajapinta kaatuu käännökseen); null = ei riviä.</summary>
+        static string ElavaKrediitti() => ElavaKaupunki.Krediitti;
 
         [Serializable] sealed class AaniNimeaminen { public string lahde, nimi, tekija, lisenssi, url; }
         [Serializable] sealed class AaniLahdeTiedosto { public AaniNimeaminen[] nimeamiset; }
