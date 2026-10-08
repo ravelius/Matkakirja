@@ -58,10 +58,14 @@ namespace Matkakirja.Linssit.Seikkailu
             if (Perilla) return;
             if (puuskaVaroitus > 0 && Loppui(ref puuskaVaroitus, dt)) { puuska = PuuskaS; Lipsahdukset = 0; }
             else if (puuska > 0 && Loppui(ref puuska, dt)) { Lipsahdukset = 0; toipuminen = 0; }
-            if (toipuminen > 0 && !Loppui(ref toipuminen, dt)) return;
+            // Lyhdyn kello kulkee myös lipsahduksen toipumisen aikana (LS2 8.10.: varoitus venyi 2,0 → 2,5 s).
             if (lyhtyVaroitus > 0 && Loppui(ref lyhtyVaroitus, dt)) lyhty = LyhtyS;
             else if (lyhty > 0) lyhty -= dt;
-            if (lyhty > 0 && (suunta != 0 || Siirtyy != 0)) { Havaittu = true; lyhty = 0; }
+            if (toipuminen > 0 && !Loppui(ref toipuminen, dt)) return;
+            // Lyhdyn valossa kesken jäänyt siirtymä odottaa, ellei pelaaja ohjaa, ja vain ohjattu liike havaitaan (LS2 8.10.: paikallaan oleva
+            // havaittiin, kun puuska päättyi lyhdyn valossa ja puuskan pysäyttämä siirtymä jatkui itsestään).
+            bool odottaa = lyhty > 0 && suunta == 0 && Siirtyy != 0;
+            if (lyhty > 0 && suunta != 0) { Havaittu = true; lyhty = 0; }
             if (puuska > 0)
             {
                 // Liike puuskassa: ote lipsuu ja pitää (0,5 s toipuminen), toinen liike samassa puuskassa → putoaa (himmennys, alkuun).
@@ -78,6 +82,7 @@ namespace Matkakirja.Linssit.Seikkailu
                 if (suunta > 0 && Ote < Otteita - 1 || suunta < 0 && Ote > 0) Siirtyy = Math.Sign(suunta);
                 else return;
             }
+            if (odottaa) return;
             Osuus += dt / OteS;
             if (Osuus >= 1 - 1e-6)
             {

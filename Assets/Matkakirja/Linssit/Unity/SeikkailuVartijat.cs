@@ -36,6 +36,7 @@ namespace Matkakirja.Natiivi
             /// <summary>Kannetun valon säde (lyhty 4 m, soihtu 6 m), 0 = ei kanna.</summary>
             public float ValoM;
             public bool Tunnisti;
+            public Vector3 Alku;
         }
         /// <summary>Askeläänen klippi (rakennus.json aanet askel-kivi); SeikkailuVartijat.Askeleet asettaa.</summary>
         public static AudioClip AskelKlippi;
@@ -189,6 +190,7 @@ namespace Matkakirja.Natiivi
                     if (liekki != null) { liekki.transform.localPosition = kasi; if (soihtu) liekki.transform.localScale *= 2.5f; }
                     SeikkailuValot.Hehku(vg.transform, kasi + Vector3.up * 0.08f, new Color(1f, 0.62f, 0.3f), soihtu ? 1.6f : 1.1f, v.ValoM, true, DioraamaNayttamo.Kerros);
                 }
+                v.Alku = alku;
                 sv.vartijat.Add(v);
                 if (Odottavat.Contains(kv.Key)) vg.SetActive(false);   // pako: rannan soihtuvartijat vasta kellon jälkeen (SeikkailuPako)
                 // Torkkuja: leikkeet torkku / syo, jos skinissä (LR pyydetty), muuten idle (Hahmot3D:n varaketju).
@@ -584,6 +586,20 @@ namespace Matkakirja.Natiivi
         {
             var a = Aktiivinen; var p = SeikkailuPelaaja.Aktiivinen; if (a == null || p == null || a.ote != null) return;
             foreach (var v in a.vartijat) if (v.Nimi == reitti) { a.kirjaa?.Invoke($"seikkailu: ote ranteesta ({reitti})"); v.Aivot.OtaKiinni(); a.StartCoroutine(a.Ote(v, p)); return; }
+        }
+
+        /// <summary>Reitti takaisin piiloon (pako: uusi yritys, LS2 8.10.): hahmo alkupisteeseensä, rauhaan ja näkymättömiin.</summary>
+        public static void Odottamaan(string reitti)
+        {
+            var a = Aktiivinen; if (a == null) return;
+            foreach (var v in a.vartijat)
+                if (v.Nimi == reitti && v.Agentti != null && v.Agentti.gameObject.activeSelf)
+                {
+                    var alku = v.Alku; if (v.Agentti.isOnNavMesh) v.Agentti.Warp(alku);
+                    v.Aivot.Nollaa(alku.x, alku.z); v.EdellinenTila = VartijanTila.Partio;
+                    v.Agentti.gameObject.SetActive(false);
+                    a.kirjaa?.Invoke($"seikkailu: reitti {reitti} piiloon");
+                }
         }
 
         /// <summary>Hälytyskello (huone 10 vaihe 1): kaikki vartijat valppaiksi (60 s).</summary>

@@ -4,6 +4,8 @@
 // (sukellus, kaukokuva 4 s) → uinti takakuvassa 12 s veneelle (vene:pako) → rannan vartija pitää kiinnitysköydestä: Katkaise (tai Töytäise,
 // omistajan päätös 1) → K5 (virta vie veneen sumuun, 12 s) → valmis. Aikaraja: kalliolla 20 s kellon alusta rannan soihtuvartijat esiin
 // (partio:ranta, SeikkailuVartijat.Odottavat), 45 s → kiinni (lähin vartija vie tyrmään). Ohjatut jaksot SeikkailuPelaaja.Ohjattu-kutsulla.
+// Vaiheet ja ajat Ydin Pakossa (LS2 8.10.): uusi kiinnitys myöhästymisen jälkeen aloittaa 45 s:n ikkunan alusta (ennen jokainen uusi
+// yritys myöhästyi heti kalliolle päästessä, koska kello jatkui).
 using System;
 using System.Collections.Generic;
 using Matkakirja.Linssit.Seikkailu;
@@ -14,11 +16,11 @@ namespace Matkakirja.Natiivi
     public sealed class SeikkailuPako : MonoBehaviour
     {
         public static SeikkailuPako Aktiivinen { get; private set; }
-        public const float KramppiM = 1.6f, K4M = 2.5f, RantaEsiinS = 20f, MyohassaS = 45f, K4S = 4f, UintiS = 12f, KoysiS = 10f, K5S = 12f;
-        enum Vaihe { Odottaa, Kello, Lasku, Kallio, K4, Uinti, Koysi, K5, Valmis }
-        Vaihe vaihe = Vaihe.Odottaa;
+        public const float KramppiM = 1.6f, K4M = 2.5f;
+        readonly Pako ydin = new Pako();
         Vector3 krampi, pako1, k4, k4Katse, k5, k5Katse, vene, koysi; bool k4On, k5On, veneOn;
-        float kello = -1f, t; bool rantaEsiin; Action<string> kirjaa;
+        Vector3 sukellusAlku, uintiAlku; Action<string> kirjaa;
+        public Pako Ydin => ydin;
         /// <summary>Pako päättyi (K5:n jälkeen): sovitin voi viedä drone-näkymään ja tietokerrokseen.</summary>
         public static event Action Valmis;
         /// <summary>Toimintonapin verbi ohjatun jakson aikana (SeikkailuEsineet lukee) ja sen teko.</summary>
@@ -51,8 +53,8 @@ namespace Matkakirja.Natiivi
 
         void Halytyskello()
         {
-            if (vaihe != Vaihe.Odottaa) return;
-            vaihe = Vaihe.Kello; kello = Time.time;
+            if (ydin.Vaihe != PakoVaihe.Odottaa) return;
+            ydin.ArkkuAuki(); ydin.KelloSoi = false;
             SeikkailuAanet.Soita("kello", krampi + Vector3.up * 6f, 1f);   // hälytyskello Kellotornissa (TULKINTA; ääni aanet-fp:hen tarvittaessa)
             SeikkailuVartijat.Valpastu();
             SeikkailuRepliikit.SoitaTaiVara("vartija-kello-1", "vartija-valpas-1", krampi + Vector3.up * 3f);   // "Kello soimaan!"
@@ -60,7 +62,7 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Toimintonapin verbi kävellessä (Kiinnitä krampin luona kellon jälkeen) tai null.</summary>
-        public string Verbi(SeikkailuPelaaja p) => vaihe == Vaihe.Kello && p != null && (p.transform.position + Vector3.up - krampi).sqrMagnitude < KramppiM * KramppiM * 2f ? "Kiinnitä" : null;
+        public string Verbi(SeikkailuPelaaja p) => ydin.Vaihe == PakoVaihe.Kello && p != null && (p.transform.position + Vector3.up - krampi).sqrMagnitude < KramppiM * KramppiM * 2f ? "Kiinnitä" : null;
 
         public bool Toimi(SeikkailuPelaaja p)
         {
@@ -73,69 +75,76 @@ namespace Matkakirja.Natiivi
             for (int i = 0; i <= n; i++) otteet.Add((Vector3.Lerp(krampi, ala, i / (float)n), ulos));
             p.KasiEle("poiminta");
             SeikkailuAanet.Soita("lyhty-narina", krampi, 0.6f, 0.7f);
-            vaihe = Vaihe.Lasku;
+            ydin.Kiinnita();
+            if (ydin.UusiYritys)
+            {
+                ydin.UusiYritys = false; kirjaa?.Invoke("seikkailu: pako: uusi yritys (45 s alusta)");
+                SeikkailuVartijat.Odottamaan("ranta"); SeikkailuVartijat.Odottamaan("seisoo-ranta-vartija");
+            }
             kirjaa?.Invoke($"seikkailu: köysi kramppiin → köysilasku ({n} m)");
-            p.AloitaOteKiipeily(otteet, null, ok => { vaihe = Vaihe.Kallio; kirjaa?.Invoke("seikkailu: kalliolla"); }, "koysilasku");
+            p.AloitaOteKiipeily(otteet, null, ok => { ydin.LaskuValmis(); kirjaa?.Invoke("seikkailu: kalliolla"); }, "koysilasku");
             return true;
         }
 
         void Update()
         {
             var p = SeikkailuPelaaja.Aktiivinen; if (p == null) return;
-            float kulunut = kello >= 0 ? Time.time - kello : 0f;
-            if (vaihe == Vaihe.Kallio)
-            {
-                if (kulunut > RantaEsiinS && !rantaEsiin) { rantaEsiin = true; SeikkailuVartijat.Aktivoi("ranta"); SeikkailuRepliikit.SoitaTaiVara("ranta-soihtu-1", null, pako1 + Vector3.up * 1.6f); }
-                if (kulunut > MyohassaS) { kirjaa?.Invoke("seikkailu: pako myöhästyi"); vaihe = Vaihe.Kello; SeikkailuVartijat.Halyta(); return; }
-                if (k4On && new Vector2(p.transform.position.x - k4.x, p.transform.position.z - k4.z).sqrMagnitude < K4M * K4M) AloitaSukellus(p);
-            }
+            // Kello, köysilasku ja kallio kulkevat tässä; ohjatut jaksot (K4…K5) SeikkailuPelaaja.Ohjattu-kutsussa.
+            if (ydin.Vaihe != PakoVaihe.Kello && ydin.Vaihe != PakoVaihe.Lasku && ydin.Vaihe != PakoVaihe.Kallio) return;
+            bool k4Lahella = k4On && new Vector2(p.transform.position.x - k4.x, p.transform.position.z - k4.z).sqrMagnitude < K4M * K4M;
+            ydin.Paivita(Time.deltaTime, k4Lahella);
+            if (ydin.RantaEsiin) { ydin.RantaEsiin = false; SeikkailuVartijat.Aktivoi("ranta"); SeikkailuRepliikit.SoitaTaiVara("ranta-soihtu-1", null, pako1 + Vector3.up * 1.6f); }
+            if (ydin.Myohastyi) { ydin.Myohastyi = false; kirjaa?.Invoke("seikkailu: pako myöhästyi"); SeikkailuVartijat.Halyta(); return; }
+            if (ydin.Sukelsi) { ydin.Sukelsi = false; AloitaSukellus(p); }
         }
 
         void AloitaSukellus(SeikkailuPelaaja p)
         {
-            vaihe = Vaihe.K4; t = 0f;
             kirjaa?.Invoke("seikkailu: K4 sukellus");
-            var alku = p.transform.position;
+            var alku = p.transform.position; sukellusAlku = alku;
             var vesi = veneOn ? vene.y : alku.y - 1f;
-            var uintiAlku = new Vector3(k4Katse.x, vesi, k4Katse.z);
+            uintiAlku = new Vector3(k4Katse.x, vesi, k4Katse.z);
             if (veneOn) uintiAlku = Vector3.Lerp(new Vector3(alku.x, vesi, alku.z), vene, 0.25f);
             p.Ohjattu = dt =>
             {
-                t += dt;
-                switch (vaihe)
+                ydin.Paivita(dt, false);
+                float t = (float)ydin.VaiheS;
+                if (ydin.UintiAlkoi) { ydin.UintiAlkoi = false; SeikkailuAanet.Soita("vesisanko", p.transform.position, 0.9f, 0.6f); SeikkailuVartijat.Aktivoi("seisoo-ranta-vartija"); }
+                if (ydin.SoutajaHuutaa) { ydin.SoutajaHuutaa = false; SeikkailuRepliikit.SoitaTaiVara("soutaja-pako-1", null, vene + Vector3.up * 1.2f); }   // "Tänne!"
+                if (ydin.Veneessa) { ydin.Veneessa = false; AsetaKoysi(true); kirjaa?.Invoke("seikkailu: veneellä, vartija pitää köydestä"); }
+                if (ydin.Katkaistu) Katkaistu();
+                switch (ydin.Vaihe)
                 {
-                    case Vaihe.K4:
+                    case PakoVaihe.K4:
                         // Kaukokuva K4: sukellus salmeen kallion juurelta (hahmo pieni kuvassa).
                         p.Kuva(k4, k4Katse);
-                        p.transform.position = Vector3.Lerp(alku, uintiAlku - Vector3.up * 1.4f, Mathf.SmoothStep(0f, 1f, t / K4S));
-                        if (t >= K4S) { vaihe = Vaihe.Uinti; t = 0f; SeikkailuAanet.Soita("vesisanko", p.transform.position, 0.9f, 0.6f); SeikkailuVartijat.Aktivoi("seisoo-ranta-vartija"); }
+                        p.transform.position = Vector3.Lerp(sukellusAlku, uintiAlku - Vector3.up * 1.4f, Mathf.SmoothStep(0f, 1f, t / (float)Pako.K4S));
                         return true;
-                    case Vaihe.Uinti:
+                    case PakoVaihe.Uinti:
                         {
                             // Uinti takakuvassa veneelle (virta kuljettaa); silmät vesirajassa.
                             var kohde = veneOn ? vene - (vene - uintiAlku).normalized * 1.2f : uintiAlku + Vector3.forward * 10f;
-                            var pos = Vector3.Lerp(uintiAlku, kohde, t / UintiS) - Vector3.up * 1.4f;
+                            var pos = Vector3.Lerp(uintiAlku, kohde, t / (float)Pako.UintiS) - Vector3.up * 1.4f;
                             p.transform.position = pos;
                             var suunta = kohde - uintiAlku; suunta.y = 0; suunta = suunta.sqrMagnitude > 1e-4f ? suunta.normalized : Vector3.forward;
                             p.Hahmo.rotation = Quaternion.LookRotation(suunta);
                             p.AsetaLeike("uinti");
                             p.Kuva(pos - suunta * SeikkailuPelaaja.TakaM + Vector3.up * (SeikkailuPelaaja.Korkeus + SeikkailuPelaaja.TakaYlos), pos + Vector3.up * 1.4f + suunta * 2f);
-                            if (t >= UintiS - 1.5f && t - dt < UintiS - 1.5f) SeikkailuRepliikit.SoitaTaiVara("soutaja-pako-1", null, vene + Vector3.up * 1.2f);   // "Tänne!"
-                            if (t >= UintiS) { vaihe = Vaihe.Koysi; t = 0f; AsetaKoysi(true); kirjaa?.Invoke("seikkailu: veneellä, vartija pitää köydestä"); }
                             return true;
                         }
-                    case Vaihe.Koysi:
-                        // Soutaja nostaa veneeseen (ensimmäinen persoona veneessä); vartija pitää kiinnitysköydestä: Katkaise.
+                    case PakoVaihe.Koysi:
+                        // Soutaja nostaa veneeseen (ensimmäinen persoona veneessä); vartija pitää kiinnitysköydestä: Katkaise (armo 20 s Ytimessä).
                         p.transform.position = vene;
                         p.Kuva(vene + Vector3.up * 1.0f, koysi, false);
-                        if (t > KoysiS * 2f) Katkaise();   // armo: soutaja irrottaa itse (ei jumia)
                         return true;
-                    case Vaihe.K5:
+                    case PakoVaihe.K5:
                         // Kaukokuva K5: virta vie veneen sumuun → drone (sovitin).
                         p.Kuva(k5On ? k5 : vene + new Vector3(10f, 6f, 10f), k5On ? k5Katse : vene, true);
-                        if (k5On) p.transform.position = Vector3.Lerp(vene, k5Katse, Mathf.Clamp01(t / K5S) * 0.15f);
-                        if (t >= K5S) { vaihe = Vaihe.Valmis; SeikkailuNakyvyys.Himmennys = 1f; kirjaa?.Invoke("seikkailu: PAKO VALMIS"); Valmis?.Invoke(); return false; }
+                        if (k5On) p.transform.position = Vector3.Lerp(vene, k5Katse, Mathf.Clamp01(t / (float)Pako.K5S) * 0.15f);
                         return true;
+                    case PakoVaihe.Valmis:
+                        ydin.Valmistui = false; SeikkailuNakyvyys.Himmennys = 1f; kirjaa?.Invoke("seikkailu: PAKO VALMIS"); Valmis?.Invoke();
+                        return false;
                 }
                 return false;
             };
@@ -143,16 +152,18 @@ namespace Matkakirja.Natiivi
 
         void AsetaKoysi(bool paalla) { OhjattuVerbi = paalla ? "Katkaise" : null; OhjattuToimi = paalla ? (Action)Katkaise : null; }
 
-        void Katkaise()
+        void Katkaise() { if (ydin.Katkaise()) Katkaistu(); }
+
+        /// <summary>Köysi poikki (pelaaja tai armo): äänet ja repliikit, sitten K5.</summary>
+        void Katkaistu()
         {
-            if (vaihe != Vaihe.Koysi) return;
+            ydin.Katkaistu = false;
             AsetaKoysi(false);
             SeikkailuAanet.Soita("raapaisu", koysi, 0.9f, 0.8f);
             SeikkailuAanet.Soita("vesisanko", koysi, 0.7f, 0.9f);   // vartija istahtaa matalaan veteen vahingoittumatta (omistajan päätös 1)
             kirjaa?.Invoke("seikkailu: köysi katkaistu → K5");
             SeikkailuRepliikit.SoitaTaiVara("ranta-vartija-1", null, koysi + Vector3.up * 1.2f);   // istahtaa matalaan veteen
             SeikkailuRepliikit.SoitaTaiVara("soutaja-pako-2", null, vene + Vector3.up * 1.2f);
-            vaihe = Vaihe.K5; t = 0f;
         }
 
         public static void Poista() { var a = Aktiivinen; Aktiivinen = null; if (a != null) Destroy(a.gameObject); OhjattuVerbi = null; OhjattuToimi = null; }

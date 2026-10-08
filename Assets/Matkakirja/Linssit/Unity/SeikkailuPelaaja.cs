@@ -90,7 +90,7 @@ namespace Matkakirja.Natiivi
         public const float TakaM = 2.5f, TakaYlos = 0.4f, TakaSiirtymaS = 0.6f, OteRiippuu = 1.55f, OteIrti = 0.35f;
         public Transform TakakuvaHahmo { get; private set; }
         Kiipeily oteKiipeily; List<(Vector3 P, Vector3 Ulos)> otteet; Action<bool> oteValmis;
-        string oteLeike;
+        string oteLeike; float lipsahdusAsti;
         float takaPaino; Vector3 takaPaikka; Quaternion takaKierto = Quaternion.identity; bool himmensi, lyhtyKayty;
         public Kiipeily OteKiipeily => oteKiipeily;
         public bool Takakuva => takaPaino > 1e-3f;
@@ -147,7 +147,7 @@ namespace Matkakirja.Natiivi
             // Lyhty kulkee yläpuolella kerran (huone 8 vaihe 5), kun pelaaja on puolivälissä (myös uudella yrityksellä pudotuksen jälkeen).
             if (k.Ote == 0) lyhtyKayty = false;
             if (!lyhtyKayty && k.Ote >= otteet.Count / 2 && k.Siirtyy == 0) { lyhtyKayty = true; k.LyhtyYlla(); Debug.Log("MATKAKIRJA seikkailu: lyhty yllä"); }
-            if (k.Lipsahti) { k.Lipsahti = false; SeikkailuAanet.Soita("kivi-irtoaa", transform.position + Vector3.up * OteRiippuu, 0.7f, 1.2f); Debug.Log($"MATKAKIRJA seikkailu: ote lipsahti ({k.Ote + 1})"); }
+            if (k.Lipsahti) { k.Lipsahti = false; lipsahdusAsti = Time.time + (float)Kiipeily.ToipuminenS; SeikkailuAanet.Soita("kivi-irtoaa", transform.position + Vector3.up * OteRiippuu, 0.7f, 1.2f); Debug.Log($"MATKAKIRJA seikkailu: ote lipsahti ({k.Ote + 1})"); }
             if (k.Putosi) { k.Putosi = false; Debug.Log("MATKAKIRJA seikkailu: ote petti, kiipeilyn alkuun"); }
             if (k.Himmenee != himmensi) { himmensi = k.Himmenee; SeikkailuNakyvyys.Himmennys = himmensi ? 1f : 0f; }
             if (k.Havaittu) { k.Havaittu = false; Debug.Log("MATKAKIRJA seikkailu: lyhdyn valossa liikkui"); OteHavaittu?.Invoke(); }
@@ -159,7 +159,7 @@ namespace Matkakirja.Natiivi
             kavely.HahmoYaw = Mathf.Atan2(-ulos.x, -ulos.z) * Mathf.Rad2Deg;   // kasvot seinään
             hahmo.localRotation = Quaternion.Euler(0, (float)kavely.HahmoYaw, 0);
             // Takakuvan hahmon leike (LR pyydetty 8.10.: ote_idle, ote_siirto 0,6 s; puuttuessa Hahmot3D:n varaketju idleen).
-            string ol = oteLeike ?? (k.Siirtyy != 0 ? "ote_siirto" : "ote_idle");
+            string ol = oteLeike ?? (Time.time < lipsahdusAsti ? "ote_lipsahdus" : k.Siirtyy != 0 ? "ote_siirto" : "ote_idle");   // LR v44u
             if (ol != leike) { leike = ol; leikeAika = 0; }
             leikeAika += dt;
             takaPaino = Mathf.MoveTowards(takaPaino, 1f, dt / TakaSiirtymaS);
