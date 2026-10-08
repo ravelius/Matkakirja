@@ -35,7 +35,7 @@ namespace Matkakirja.Linssit.Testit
 
         [Testi] static void KavelyosienValoatlakset()
         {
-            // LR v45n: 9 kävelyosalla valoatlas paketin juuresta (blender/kavely/valot/…), ASTC-vastineineen; Tila.ValoVain.
+            // LR v45o: 9 kävelyosalla valoatlas paketin juuresta (blender/kavely/valot/…), ASTC-vastineineen; Tila.ValoVain.
             var d = Matkakirja.Linssit.Testit.Huonesimulaatio.Data;
             int n = 0;
             foreach (var o in d.Osat.Values)
