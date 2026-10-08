@@ -35,6 +35,19 @@ kappeli). Lue tämä osio ja alin TILA-loki (päivän loppu), sitten CLAUDE.md j
   Jos aika loppuu, pois tässä järjestyksessä: K1, renki, portinvartija, torkkuva vartija (EI varoitussääntö, tyrmä, kappeli, tallennus).
 - Kädet v44l on jo kytketty (2b88ec9a).
 
+## TILA 9.10. 01.4x — JUNA 169 = f68c05428 (⊇ siirtoseppa/juna169 7cb1335bc), lähtee aamulla; JUNA 170 siirtoseppa/juna170 7b8b4353f
+
+- BUILD 167 = proto master 7f0dcae51 (runko C + repliikit-v4). BUILD 168 = 6a67a9b1 (juna168-v45o d4c3bf1f4): EI sisällä latausvian
+  korjausta 1b43eb127 (seikkailun hahmot ohittivat laskurin → "hahmot 10/13" → 60 s latausvirhe sulkee linnan; simulla aina). PT: ei
+  korjausjunaa, TF 168 vain sisäisillä; juna 169 sisältää korjauksen.
+- Juna 169 (PT kuittasi 7cb1335bc): huonekohtainen lataus alusta asti (esineiden ja rekvisiitan ASTC vain pelaajan osa + naapurit),
+  v45u e3e633f8156f7a9c (8K 10 tilalle Ultra porras 4, POM Ultralla, hahmojen 2k-kankaat + normaalit, detaljit olki/rauta), TAA,
+  Sonniss-tuulet ämpäristä (aanet/sonniss-tuulet-v1), hahmojen normaalikartat, AloitaHahmoGlb-korjaus, ASTC vain tuella.
+  LS2:n muisti 20bea87c6: Ultra 963–1019, PC 636–692, Mobile p0 286–342 Mt; Ultran pinnoille 10 Mt varaa (UltraAtlaksetMt 300).
+- Juna 170 (siirtoseppa/juna170, wt/proto-siirtoseppa-kello): kuoren lähidetalji (kuori-alias, DioraamaKuori _KuoriLahi*), rekvisiitan
+  ORM (AO). Seuraavaksi kuvaparit TF 169:stä (laituri yö, keittiö, kappeli).
+- Worktreet: wt/proto-siirtoseppa-face = siirtoseppa/juna168-v45o, wt/proto-siirtoseppa-kello = siirtoseppa/juna170.
+
 ## TILA 8.10. 21.0x — JUNA 167 B = final-ik-167 2b4d59890 (fp-v3); JUNA 168 historia-m 96e47e994; JUNA 169 grafiikka-169 f13c72a85
 
 - Juna 167: PT kuittasi Final IK:n (runko B). Kärki siirtoseppa/final-ik-167 @ 2b4d59890 = 71d34bb97 + aanet-fp-v3 (PT/Julkaisija);
