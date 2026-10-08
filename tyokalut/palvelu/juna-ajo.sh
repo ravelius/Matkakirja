@@ -11,7 +11,10 @@
 export PATH=/usr/local/bin:/opt/homebrew/bin:/usr/bin:/bin:/usr/sbin:/sbin
 GIT=/Users/Shared/Claude/proto-3d/Matkakirja-proto
 JUNA=${JUNA:-$(git -C $GIT for-each-ref --format='%(refname:short)' 'refs/heads/juna/b*' | sort -V | tail -1)}
-SIMS=(1572C658-6455-4E55-8C05-3F88CB3C32F6 3B4CDACB-CCBE-42EC-809D-FB4D0B43CC7D C1D5E34C-DFA8-4326-AD85-92B58A672AA7 993F8873-E2D9-4230-81CE-CBF9230D9B55)
+# T7-LAITESARJA (omistaja 7.10. 23.0x; Natiiviseppä 8.10.): samat laitteet (iPhone 18 Pro, iPad Pro 13 M5, pariteetti-iPad11-834,
+# pariteetti-iPhone-vaaka) T7-sarjasta; vanhat UDID:t käännetään simusarja.sh:lla. T7 puuttuu → ei junakäännöstä.
+source /Users/Shared/Claude/proto-3d/tyokalut/simusarja.sh || { echo "$(date '+%d.%m. %H:%M') VIKA T7: simulaattorisarja puuttuu, juna odottaa"; exit 1; }
+SIMS=(${(f)"$(for s in 1572C658-6455-4E55-8C05-3F88CB3C32F6 3B4CDACB-CCBE-42EC-809D-FB4D0B43CC7D C1D5E34C-DFA8-4326-AD85-92B58A672AA7 993F8873-E2D9-4230-81CE-CBF9230D9B55; do mk_kaanna $s; done)"})
 TILA=/Users/Shared/Claude/proto-3d/lokit/kaannospalvelu/juna-viimeisin.txt
 aika() { date '+%d.%m. %H:%M'; }
 # Tunnin varmuuskopio GitHubiin (Fable 25.9. klo 10.4x): vahdin 10 min kierros ajaa sen (synkronisesti: launchd lopettaisi taustaprosessin), kun edellisestä
@@ -44,6 +47,9 @@ if [[ $1 == vahti && -d $LK ]] && (( $(date +%s) - $(stat -f %m $LK) > 900 )); t
     fi
   fi
 fi
+# TAUKO (Fable 26.9. klo 15.1x, Karttasepän poltto): lipputiedosto pysäyttää ajastimen ja vahdin; käännökset käsin eriin.
+TAUKO=/tmp/matkakirja-juna-tauko
+[[ -f $TAUKO && -z $JUNA_PAKOTA ]] && { [[ $1 == vahti ]] || echo "$(aika) tauko ($(cat $TAUKO 2>/dev/null)), ei käännöstä"; exit 0; }
 [[ -n $JUNA ]] || { echo "$(aika) ei junaa"; exit 0; }
 nyt=$(git -C $GIT rev-parse --short "$JUNA" 2>/dev/null) || { echo "$(aika) ei junaa $JUNA"; exit 0; }
 [[ "$(cat $TILA 2>/dev/null)" == "$JUNA $nyt" || "$(cat $TILA 2>/dev/null)" == "$nyt" ]] && { [[ $1 == vahti ]] || echo "$(aika) $JUNA $nyt ennallaan"; exit 0; }
@@ -62,6 +68,18 @@ if [[ $1 == vahti ]]; then
 fi
 if [[ -f $JUMI && "$(cat $JUMI)" == "$JUNA $nyt" ]]; then echo "$(aika) jumivahti: $JUNA $nyt jumittui jo kerran, ei uutta yritystä (tarkista käsin)"; exit 0; fi
 [[ -f $JUMI.uusi ]] && { echo "$JUNA $nyt" > $JUMI; rm -f $JUMI.uusi; echo "$(aika) jumivahti: $JUNA $nyt käännetään uudelleen (kerran)"; }
-tulos=$(/Users/Shared/Claude/proto-3d/tyokalut/proto-kaanna.sh "$JUNA" $SIMS 2>&1 | tail -1)
+# EI JUURI KÄÄNNETTYÄ JUNAA UUDELLEEN (Burst-selvitys docs/raportit/burst-linkkeri-selvitys-20260929.md, omistajan lupa
+# 29.9.2026): jonoon jäänyt ajo käänsi saman kärjen heti edellisen perään (ajastin 22.20 ja 10.06), mikä laukaisi Burstin
+# linkkerikaatumisen. Jos jono on varattu, vuoroa odotetaan täällä (enintään 60 min), ja kärki ja tila tarkistetaan vasta sitten.
+for i in {1..360}; do [[ -d $LK ]] || break; sleep 10; done
+nyt=$(git -C $GIT rev-parse --short "$JUNA" 2>/dev/null) || { echo "$(aika) ei junaa $JUNA"; exit 0; }
+[[ "$(cat $TILA 2>/dev/null)" == "$JUNA $nyt" ]] && { echo "$(aika) ${1:-ajastin}: $JUNA $nyt käännettiin jo jonon aikana, ohitetaan"; exit 0; }
+# KÄYNNISSÄ OLEVAT OHITETAAN (omistaja 1.10.2026 klo 09.0x): käynnissä oleva simulaattori = joku testaa (08.48 juna 93
+# asentui Laitetestaajan 92-ajon päälle). Ohitettu asentaa .appin kopiosta itse (proto-3d/lokit/juna-<versio>-<sha>/).
+kaynnissa=$(xcrun simctl list devices booted 2>/dev/null)
+kohteet=(); ohi=()
+for s in $SIMS; do [[ $kaynnissa == *$s* ]] && ohi+=(${s:0:8}) || kohteet+=($s); done
+(( ${#ohi} )) && echo "$(aika) ${1:-ajastin}: käynnissä, ei asennusta: $ohi"
+tulos=$(/Users/Shared/Claude/proto-3d/tyokalut/proto-kaanna.sh "$JUNA" $kohteet 2>&1 | tail -1)
 echo "$(aika) ${1:-ajastin}: $tulos"
 [[ "$tulos" == KÄÄNNETTY* ]] && echo "$JUNA $nyt" > $TILA
