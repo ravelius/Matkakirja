@@ -394,6 +394,7 @@ namespace Matkakirja.Natiivi
                 PelattavaPalaJatka = false;
                 SeikkailuTallentaja.Luo(nayttamo.transform, "olavinlinna", PelattavaPalaHash, jatka, o.Kirjaa);
                 SeikkailuVihjeet.Luo(nayttamo.transform, o.Kirjaa);
+                SeikkailuYo.Luo(nayttamo.transform, mustaAlku: true);   // omistaja 8.10.: pimeämpi yö, ei lintuperspektiiviä ennen venettä
                 if (jatka != null && jatka.OnTarkistus) o.StartCoroutine(JatkaTallennuksesta(jatka));
                 else o.StartCoroutine(VenePaalle(VeneKestoS));
                 o.Kirjaa($"seikkailu: pelattava pala käynnistyy{(jatka != null ? " (jatko tallennuksesta)" : "")}");
@@ -416,6 +417,7 @@ namespace Matkakirja.Natiivi
                 }
             }
             var seikkailuKamera = pelaaja != null ? pelaaja.Kamera : vene?.Kamera;
+            if (seikkailuKamera != null) SeikkailuYo.Aktiivinen?.Avaa();   // musta alku avautuu vasta veneen tai pelaajan kameraan
             bool cmKaytossa = cm != null && (seikkailuKamera != null || DioraamaCinemachine.Paalla && pakotettuKamera == null);
             cm?.Kaytossa(cmKaytossa);
             if (KameraVapaa && nayttamo.Kamera != null)
@@ -502,7 +504,7 @@ namespace Matkakirja.Natiivi
             kelloSiirto = 0;
             kuoriOdotusAlku = -1f; SaapumisOdotus = false; RakennusLatautuu = false; LatausVirhe = null; // näyttämö (ja sen odotuspiilotus) tuhoutuu alla
             // Historiamoottori: seikkailu pois (näyttämön lapset tuhoutuvat; globaalit kuoren leikkaukset ja kävelydata nollataan).
-            SeikkailuVartijat.Poista(); SeikkailuVene.Poista(); SeikkailuPelaaja.Poista(); SeikkailuRepliikit.Poista(); SeikkailuEsineet.Poista(); SeikkailuKynttilat.Poista(); SeikkailuKappeli.Poista(); SeikkailuAanet.Poista(); SeikkailuTallentaja.Poista(); SeikkailuVihjeet.Poista(); SeikkailuValot.Poista(); SeikkailuKasittely.Tyhjenna(); SeikkailuKavely.Pura();
+            SeikkailuVartijat.Poista(); SeikkailuVene.Poista(); SeikkailuPelaaja.Poista(); SeikkailuRepliikit.Poista(); SeikkailuEsineet.Poista(); SeikkailuKynttilat.Poista(); SeikkailuKappeli.Poista(); SeikkailuAanet.Poista(); SeikkailuTallentaja.Poista(); SeikkailuVihjeet.Poista(); SeikkailuValot.Poista(); SeikkailuYo.Poista(); SeikkailuKasittely.Tyhjenna(); SeikkailuKavely.Pura();
             SeikkailuEsineet.Kolahti -= KokkiKuuleeKolahduksen;
             cm?.SeikkailuPois(); PelattavaPalaPyydetty = false; KameraVapaa = false;
             if (DioraamaLevyvalimuisti.TestiOsoitin == PelattavaPalaHash)
