@@ -1,7 +1,7 @@
 # Kehityskaupunkien lentokerronta: Tukholman lähikohteet ja historiaosiot (Pelikoodari 9.10.2026, juna 170)
 
 Omistajan palaute PT:n kautta: kohteita lähempää, historiaa tai muuta lentojen aikana, vähemmän pelkkiä siirtymiä ja
-taukoja. **Tekstit ovat PT:n tarkistettavana. Mitään ei ole generoitu.**
+taukoja. **PT kuittasi tekstit kahdella korjauksella, ja ne on generoitu (9.10. klo 01.xx).** Tulos on lopussa.
 
 ## Yhteenveto
 
@@ -149,7 +149,7 @@ Ennen kuin Pariisi oli Pariisi, Seinen rannoilla asui kelttiläinen parisiiheimo
 
 ### Laiva vaakunassa (`pariisi-historia-vaakuna`, 432 mrk, ~31 s)
 
-Pariisin vaakunassa purjehtii laiva, ja sen alla lukee latinaksi Fluctuat nec mergitur: aallot heittelevät, mutta se ei uppoa. Laiva on peräisin jokikauppiaiden mahtavalta killalta, joka sai Seinen kaupan oikeudet vuonna 1170. Vaakunana laiva mainitaan ensimmäisen kerran vuonna 1358, ja tunnuslause vahvistettiin virallisesti vuonna 1853. Marraskuun 2015 terrori-iskujen jälkeen pariisilaiset kirjoittivat sen kylteihin ja seiniin.
+Pariisin vaakunassa purjehtii laiva, ja sen alla lukee latinaksi Fluctuat nec mergitur: aallot heittelevät, mutta se ei uppoa. Laiva on peräisin jokikauppiaiden mahtavalta killalta, joka sai Seinen kaupan oikeudet vuonna 1170. Vaakunana laiva mainitaan ensimmäisen kerran vuonna 1358, ja tunnuslause vahvistettiin virallisesti vuonna 1853. Vaikeina aikoina pariisilaiset ovat kirjoittaneet sen kylteihin ja seiniin.
 
 *Lähteet:* https://en.wikipedia.org/wiki/Coat_of_arms_of_Paris · https://en.wikipedia.org/wiki/Fluctuat_nec_mergitur
 
@@ -194,3 +194,20 @@ Pariisin kaduilla seisoo noin sata tummanvihreää valurautaista juomavesikaivoa
 - Kohteet: R2 opas/<sha>.mp3|pcm|ajat.json kuten nyt. Uusi esittely opas/esittely-v3/tukholma.json, jossa kohteet ja kierros.
 - Historiaosiot: uusi tiedosto opas/historia-v1/<kaupunki>.json (tunnus, otsikko, teksti, ääni, ajat, kesto_s) ja äänet R2:een.
 - Kytkentä on LS1:n tehtävä: osio soi lennon aikana, jos lento on pidempi kuin osio, eikä sama osio toistu kierroksella.
+
+## Tulos (9.10.)
+
+- **PT:n korjaukset:**
+  - Pariisin vaakunan viimeinen lause on nyt "Vaikeina aikoina…".
+  - Vreeswijkin hauta Katarinan kirkkomaalla varmistui (sv.wikipedia), joten nimi pysyy ja lähde lisättiin.
+  - Lisäksi vuosivälit ja päivämäärä kirjoitettiin puheeseen sopiviksi.
+- **Generointi:** 26 ääntä, 13 447 puhuttua merkkiä (vuosiluvut sanoina). **Toteutui 764 krediittiä** (saldo 102 850 → 103 614).
+  - Kohdetekstit 55–60 s ja lyhyet 22–25 s.
+  - Historiaosiot 28–46 s, yhteensä Tukholma 290 s ja Pariisi 295 s.
+- **R2:** opas/<sha>.mp3|pcm|ajat.json, eli sana-ajat on tehty kaikille 26 äänelle.
+- **Vientipaketti** `_valmiit/kehityskaupungit-170-vienti-20261009`:
+  - opas/esittely-v3/tukholma.json, jossa kierros 14 kohdetta lyhimpänä reittinä (6,3 km):
+    Kuninkaanlinna → Suurkirkko → Stortorget → Gamla stan → Ritarihuone → Riddarholmenin kirkko → Kaupungintalo → Valtiopäivätalo →
+    Kuninkaanpuisto → Kansallismuseo → Skeppsholmen → Vasa-museo → Skansen → Katarinan kirkko
+  - opas/historia-v1/{tukholma,pariisi}.json
+- **Worker-indeksi:** PR ravelius/Matkakirja#4244. Siinä esittely_polut.tukholma vaihtuu v3:een ja lisätään uusi historia_polut. PR mergetään viennin jälkeen.
