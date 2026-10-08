@@ -103,6 +103,9 @@ namespace Matkakirja.Linssit.Kierros
             double dolly = 1 - DollyOsuus * (1 - Math.Exp(-(t / DollyAikaS) * (t / DollyAikaS)));
             // Toinen kehys: siirtolento VaiheS → VaiheS + SiirtoS (smootherstep), kaarena hieman ulos (ei läpi kohteen).
             double s = t <= VaiheS ? 0 : t >= VaiheS + SiirtoS ? 1 : KierrosLento.Smootherstep((t - VaiheS) / SiirtoS);
+            // Pallo (LS2:n PalloKierrosTestit 8.10.): ei toista kehystä eikä dollya — 13 s:n jälkeen silmä nykäisi puheen aikana
+            // 17–85 m/s, ja dolly jatkui lipumisen jarrun jälkeen (lento ei lähtenyt levosta). Liikkeen hoitaa lipuminen.
+            if (!kiertaa) { s = 0; dolly = 1; }
             bool lahemmas = Math.Abs(p.Kallistus - RakennusKallistus) < 0.5;   // rakennus/torni: yksityiskohta lähempää
             double lisaSuunta = lahemmas ? 0 : SiirtoKulma * s;
             double etKerroin = (lahemmas ? 1 + (LahemmasOsuus - 1) * s : 1) * (1 + SiirtoUlosOsuus * Math.Sin(Math.PI * s));
@@ -136,6 +139,8 @@ namespace Matkakirja.Linssit.Kierros
         }
         /// <summary>Lipumisen huippunopeus (m/s), S-käyrän kesto (s) ja pehmeä katto (osuus välimatkasta, enintään m; tanh).</summary>
         public const double LipumisNopeus = 4, LipumisAlkuS = 6, LipumisOsuus = 0.25, LipumisMaxM = 200;
+        /// <summary>Lipumisen ryömintä katon jälkeen: osuus lipumisnopeudesta (0,08 × 4 = 0,32 m/s), ettei pallo seiso pitkällä pysähdyksellä.</summary>
+        public const double LipumisRyomintaOsuus = 0.08;
 
         /// <summary>
         /// Lento a → b osuudella t (0…1). PEHMEÄ KAARI (omistaja 6.10. 23.4x: "kamera liikkuu välillä turhan nopeasti ja tekee turhan
