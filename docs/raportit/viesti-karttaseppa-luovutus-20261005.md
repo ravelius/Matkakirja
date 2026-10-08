@@ -1,3 +1,20 @@
+# TILANNE 8.10. klo 20.4x
+
+- **OMISTAJA 20.2x: "B"** = oma vesipinta Googlen 3D-laattojen päälle. Rantaviivat OSM:stä, ESA WorldCover täydentää.
+  Krediitti ☰ › Lähteet: "Vesi: © OpenStreetMap contributors (ODbL), ESA WorldCover 2021 (CC BY 4.0)".
+- **Tukholman vesipinta VALMIS ja LS2:lla:** /Users/Shared/Claude/proto-3d/_tyo/karttaseppa/vesi-tukholma-20261008/
+  Versiot: 6 m suositus (1,04 M kolmiota, 25 Mt), 4 m ja 16 m LOD. Työkalu: T7 `vesimaski/vesipinta.mjs`, ajoaika noin 10 s / kaupunki.
+  Lähteet T7:llä (`vesimaski/lahteet/`): OSM water-polygons (meri), Geofabrik Ruotsi (gis_osm_water_a), EGM2008 2,5′. GLO-30 NAS:lla.
+  Overpass EI käy: robots.txt kieltää /api/:n. Muut maat haetaan Geofabrikin maakohtaisista shp-paketeista.
+- **SEURAAVAKSI:**
+  1) LS2:n kuittaus muodosta.
+  2) PT:n kuvapari (LS2 ottaa pelistä).
+  3) Työkalu repoon (tools/vesipinta/, PR).
+  4) Euroopan kaupungit (keskustat.json, 15 km) ja ämpäri Julkaisijan kautta (LAHTEET.md: ODbL + CC BY).
+  Vesitaso on painotettu alakanttiin (GLO-30:n 10 %:n persentiili sisäruuduista), koska liian korkea vesi peittäisi laiturit.
+
+---
+
 # TILANNE 8.10. klo 20.2x
 
 - **Siivous:** wt/karttaseppa-pallo-unreal poistettu (1,3 Gt). PT:lle kerrottu, että talviajo kirjoittaa vain T7:lle.
