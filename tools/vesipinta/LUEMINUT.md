@@ -51,3 +51,11 @@ z on vesitaso ilman nostoa; nosto (suositus 0,4 m) tehdään ajossa.
   piiput, maailmanpyörät, aukiot alueina, suihkulähteet ja nimetyt vesialueet. Oma PBF-lukija ilman riippuvuuksia. Ruotsi noin 60 s.
 - Koordinaatit ENU-metreinä samasta origosta kuin vesi. Korkeutta ei anneta, koska Googlen laatoista ei saa mitata.
 - Krediitti: "© OpenStreetMap contributors (ODbL)". Tiedostot ovat ODbL-johdannaistietokantoja (teko-ohje tässä).
+
+## Korkeus (pallon kehystys ja törmäys ilman Googlen laattoja, PT 8.10.)
+
+- `korkeus.mjs <kaupunki-id> --lahde ign|glo --geoidi <tif> [--glo <kansio>] [--rakennukset rakennukset-<id>.json] --ulos <kansio>`
+  → `korkeus-<id>-kauko.png` (+ `-lahi.png`): 16-bit, ellipsoidikorkeus = pohja_m + arvo/10. Origo ja pysähdykset `pallo-37-kaupunkia.json`.
+  `ign` = IGN LiDAR HD MNS (data.geopf.fr WMS-R, Etalab 2.0) + RAF20; `glo` = Copernicus GLO-30 + EGM2008.
+- `rakennukset.mjs <kaupunki-id> --pbf <maa.osm.pbf>` → OSM-rakennukset korkeuksineen lähiruudun rasterointiin.
+- Raportti: docs/raportit/pallo-korkeusdata-20261008.md.
