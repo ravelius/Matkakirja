@@ -37,6 +37,8 @@ namespace Matkakirja.Natiivi
         public sealed class Koysi
         {
             public Vector2 Kiinto;
+            /// <summary>Kiintopisteen kerros (−1 = tausta): riippuköysi kahden liikkuvan kerroksen välillä (kori → kupu).</summary>
+            public int KiintoKerros = -1;
             public int Kerros;
             public Vector2 Kiinnitys;
             public float LeveysPt = 1.5f;
@@ -127,7 +129,8 @@ namespace Matkakirja.Natiivi
                     kerrokset.Add((el, k));
                 }
             if (uudetKoydet != null)
-                foreach (var k in uudetKoydet) if (k != null && k.Kerros >= 0 && k.Kerros < kerrokset.Count) koydet.Add(k);
+                foreach (var k in uudetKoydet)
+                    if (k != null && k.Kerros >= 0 && k.Kerros < kerrokset.Count && k.KiintoKerros < kerrokset.Count) koydet.Add(k);
             Asettele();
             Paivita();
             Kaynnista();
@@ -221,7 +224,7 @@ namespace Matkakirja.Natiivi
             p.lineCap = LineCap.Round;
             foreach (var k in koydet)
             {
-                var a = new Vector2(ala.x + k.Kiinto.x * ala.width, ala.y + k.Kiinto.y * ala.height);
+                var a = k.KiintoKerros >= 0 ? KerroksenPiste(k.KiintoKerros, k.Kiinto, t) : new Vector2(ala.x + k.Kiinto.x * ala.width, ala.y + k.Kiinto.y * ala.height);
                 var b = KerroksenPiste(k.Kerros, k.Kiinnitys, t);
                 var c = LatausLiike.Ohjauspiste(a.x, a.y, b.x, b.y, k.Riippuma);
                 p.strokeColor = k.Vari;
