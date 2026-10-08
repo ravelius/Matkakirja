@@ -37,6 +37,7 @@ import {
   MAAILMAN_SUOSIKIT_KEHOTE,
 } from './kohteet.js';
 import { OPAS_AINEISTOT } from './aineistot.js';
+import { SAA_RAJAPINTA, SAA_UA, SAA_VALIMUISTI_S, SAA_LAHDE, saaAvain, jasennaSaa } from './saa.js';
 import { kuluKentat, valitseMalli, kuluRivi } from './kulut.js';
 import { tarkistaSyote, TURVA_JATKOT } from './opas-turva.js';
 import { oppaanEsittely, valmisKohde, omatKohteet, esittelynAlku } from './opas-esittely.js';
@@ -3356,6 +3357,51 @@ async function hoidaOppaanLiiku(pyynto, env, kors) {
   }
 }
 
+/**
+ * GET /opas/saa?lat&lon[&kaupunki] → kohteen nykyinen sää (pallon sää "automaatti", omistaja 8.10.2026; saa.js):
+ * { tila: selkea|pilvinen|sade|sumu|lumi|ukkonen, saakoodi, pilvisyys_pct, sumu_pct, sade_mm_h, lumi, ukkonen, tuuli_ms,
+ * tuulen_suunta_ast, lampotila_c, paiva, aika, lat, lon, lahde }. MET Norway, 15 min välimuisti kaupunkia (tai ~1 km:n
+ * ruutua) kohden; rinnakkaiset haut jakavat saman. Virheessä 502 ilman tilaa (natiivi pitää nykyisen sään).
+ */
+const saaKaynnissa = new Map();
+async function hoidaOppaanSaa(pyynto, env, kors) {
+  if (!oppaanAsiakas(pyynto, kors, env)) return new Response('Origin ei ole sallittu', { status: 403 });
+  const ip = pyynto.headers.get('cf-connecting-ip');
+  if (ip && oppaanTiheysYlittyy(`saa:${ip}`, Date.now(), 30)) {
+    return vastaa({ virhe: 'liian-tiheaan', viesti: 'Sää päivittyy pian.' }, { status: 429, ...kors });
+  }
+  const url = new URL(pyynto.url);
+  const lat = Number(url.searchParams.get('lat')), lon = Number(url.searchParams.get('lon'));
+  if (!Number.isFinite(lat) || !Number.isFinite(lon) || Math.abs(lat) > 90 || Math.abs(lon) > 180 || (lat === 0 && lon === 0)) {
+    return vastaa({ virhe: 'kysely', viesti: 'Sijainti puuttuu.' }, { status: 400, ...kors });
+  }
+  const kaupunki = siivoaTeksti(url.searchParams.get('kaupunki') ?? '', 80) || null;
+  const avain = saaAvain({ kaupunki, lat, lon });
+  const valmis = (tulos) => { const v = vastaa(tulos, kors); v.headers.set('cache-control', 'public, max-age=300'); return v; };
+  const talletettu = await reunaLue(avain);
+  if (talletettu) { try { return valmis(JSON.parse(talletettu)); } catch { /* uusi */ } }
+  if (!saaKaynnissa.has(avain)) {
+    saaKaynnissa.set(avain, (async () => {
+      // MET: enintään 4 desimaalia, tunnistava User-Agent (api.met.no/doc/TermsOfService).
+      const v = await fetch(`${SAA_RAJAPINTA}?lat=${lat.toFixed(4)}&lon=${lon.toFixed(4)}`,
+        { headers: { 'user-agent': SAA_UA, accept: 'application/json' }, signal: AbortSignal.timeout?.(6000) });
+      if (!v.ok) { const e = new Error(`met ${v.status}`); e.status = v.status; throw e; }
+      const tietue = jasennaSaa(await v.json());
+      if (!tietue) throw new Error('met: ei aikasarjaa');
+      const tulos = { ...tietue, lat: Math.round(lat * 1e4) / 1e4, lon: Math.round(lon * 1e4) / 1e4, lahde: SAA_LAHDE };
+      await reunaKirjoita(avain, JSON.stringify(tulos), SAA_VALIMUISTI_S);
+      console.log(`opas: sää ${kaupunki ?? avain} → ${tulos.tila} (${tulos.saakoodi})`);
+      return tulos;
+    })().finally(() => saaKaynnissa.delete(avain)));
+  }
+  try {
+    return valmis(await saaKaynnissa.get(avain));
+  } catch (virhe) {
+    console.log(`opas: sää epäonnistui (${virhe?.status ?? virhe?.message ?? 'verkko'})`);
+    return vastaa({ virhe: 'palvelin', viesti: 'Säätä ei saatu juuri nyt.' }, { status: 502, ...kors });
+  }
+}
+
 /** Oppaan IP-rajat (sama kuin /opas/seuraava): Response (429) tai null. */
 async function oppaanRajatYlittyvat(pyynto, env, kors, ctx) {
   const ip = pyynto.headers.get('cf-connecting-ip');
@@ -3781,6 +3827,7 @@ export default {
     if (pyynto.method === 'GET' && new URL(pyynto.url).pathname === '/opas/kysymykset') return hoidaOppaanKysymykset(pyynto, env, kors, ctx);
     if (pyynto.method === 'GET' && new URL(pyynto.url).pathname === '/opas/liiku') return hoidaOppaanLiiku(pyynto, env, kors);
     if (pyynto.method === 'GET' && new URL(pyynto.url).pathname === '/opas/lahella') return hoidaOppaanLahella(pyynto, env, kors);
+    if (pyynto.method === 'GET' && new URL(pyynto.url).pathname === '/opas/saa') return hoidaOppaanSaa(pyynto, env, kors);
     if (pyynto.method === 'GET' && new URL(pyynto.url).pathname === '/opas/aineistot') {
       // Staattisten aineistojen indeksi (aineistot.js); lyhyt välimuisti, jotta uusi kaupunki näkyy pian viennin jälkeen.
       if (!oppaanAsiakas(pyynto, kors, env)) return new Response('Origin ei ole sallittu', { status: 403 });
