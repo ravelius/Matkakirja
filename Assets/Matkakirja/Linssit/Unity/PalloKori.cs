@@ -45,6 +45,13 @@ namespace Matkakirja.Natiivi
         // Omistaja TF 163 (23.2x): "korin natina on häiritsevää se saisi olla paljon pienemmällä" → narina ja köysi −12 dB (×0,25),
         // vain liikkeen muutoksessa (kiihtyvyys ylittää rajan, ei jatkuvasti) ja vähintään 20 s välein; liekki ja kangas ennallaan.
         public const float NarinaKiihtyvyys = 1.2f, NarinaValiS = 20f, NarinaTaso = 0.25f, PystyRaja = 1.8f, PystyValiS = 6f, Voimakkuus = 0.9f;
+        /// <summary>
+        /// Pallon tehosteet kertojaan nähden (omistaja TF 166, 8.10. 17.5x: "äänitehosteet saisivat olla hieman hiljemmalla"):
+        /// −3 dB oletuksena; asetukset.json "pallo.TehosteetDb" ohittaa (osoitinvaihdolla ilman käännöstä). Korin narina, köysi,
+        /// liekki ja kangas (Soita) sekä ukkosen kumahdukset (OpasSovitin.SoitaUkkonen).
+        /// </summary>
+        public static float TehosteKerroin => Mathf.Pow(10f, Matkakirja.Peli.Asetus.Luku("pallo.TehosteetDb", TehosteetDbOletus) / 20f);
+        public const float TehosteetDbOletus = -3f;
         bool narinaRajanYli;
         AudioSource aani;
         public const string MalliOsoite = "https://media.matkakirja.app/kartta/ilmapallo/v1/kori_nakyma.glb";
@@ -191,7 +198,7 @@ namespace Matkakirja.Natiivi
         {
             var c = Leike(nimi);
             if (c == null || aani == null) return;
-            aani.PlayOneShot(c, Voimakkuus * taso);
+            aani.PlayOneShot(c, Voimakkuus * taso * TehosteKerroin);
             Debug.Log($"MATKAKIRJA kaupunki: kori ääni {nimi} ({AaniSarja}, {taso:F2})");
         }
 

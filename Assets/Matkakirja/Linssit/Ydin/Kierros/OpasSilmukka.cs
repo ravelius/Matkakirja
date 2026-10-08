@@ -687,6 +687,14 @@ namespace Matkakirja.Linssit.Kierros
         /// <summary>Seuraava pyyntö ilman kierroksen lyhyt-merkintää (sovitin kuluttaa).</summary>
         public bool PitkaPyynto;
 
+        /// <summary>
+        /// Kaupunkitilan automaattinen jatko kysymyksen vastauksen jälkeen (OpasSovitin): vasta kun vastaus on kuultu — kierros
+        /// keskeytetty, opas odottaa yli viiveen, mikään ääni ei soi, vastaus ei odota esitystä (Seuraava) eikä kysymyksen odotus
+        /// ole käynnissä. TF 166: vastaus tuli 4 s:ssa Odottaa-vaiheen jo kestäessä → jatko laukesi ennen vastausta.
+        /// </summary>
+        public static bool JatkoVastauksenJalkeen(bool keskeytetty, OpasVaihe vaihe, double vaiheAika, double viiveS, bool aaniSoi, bool vastausOdottaa, bool kysymysOdottaa) =>
+            keskeytetty && vaihe == OpasVaihe.Odottaa && vaiheAika > viiveS && !aaniSoi && !vastausOdottaa && !kysymysOdottaa;
+
         /// <summary>JATKA KIERROSTA: kesken jäänyt kohde alusta, muuten seuraava jonosta. true = jatkui.</summary>
         public bool JatkaKierrosta()
         {
@@ -1034,7 +1042,9 @@ namespace Matkakirja.Linssit.Kierros
                     // Puhe alkaa PuheEnnenS ennen saapumista, kuitenkin aikaisintaan PuheAikaisinS nousun jälkeen (simu 19.54: tauko ~5 s → ≤ 3 s).
                     if (!puheAloitettu && VaiheAika >= Math.Max(PuheAikaisinS, LentoKestoS - PuheEnnenS)) { puheAloitettu = true; aaniLoppui = false; AlkaaPuhua?.Invoke(Nykyinen); }
                     // Saapuminen odottaa laattoja enintään SaapumisOdotusS (simu 18.39: saapuessa laatat 28–45 %).
-                    if (t >= 1 && laatatValmiit != null && !laatatValmiit() && VaiheAika < LentoKestoS + SaapumisOdotusS) break;
+                    // Pallo ei jää lennon loppuun seisomaan (LS2:n PalloKierrosTestit, hidas verkko: 3 s paikallaan kehyksessä): kertoja
+                    // alkoi jo PuheEnnenS ennen saapumista, ja pysähdyksen lipuminen alkaa heti laattojen latautuessa.
+                    if (t >= 1 && laatatValmiit != null && !laatatValmiit() && VaiheAika < LentoKestoS + SaapumisOdotusS && !(PalloLento && Nykyinen?.Id != null)) break;
                     if (t >= 1 && kehysVaihto < 1) break;   // korjattu kehys liukuu loppuun ennen saapumista
                     if (t >= 1 && siirtyma)
                     {
@@ -1158,6 +1168,9 @@ namespace Matkakirja.Linssit.Kierros
         public double LipumisVauhti { get; private set; }
         /// <summary>Lipumisen jarrutus lähdön valmistelussa (s): pelaajan valinta nopeammin.</summary>
         double LipumisJarru => korostusPika ? 0.5 : 1.0;
+        double LipumisSkaala => NykyinenKehys == null ? 1 : Math.Min(1, NykyinenKehys.EtaisyysM / OpasKuvaus.LipumisVertailuEtM);
+        /// <summary>Lipumisen jarrutuksen aika (s): kuluu vasta, kun lähtö on muuten valmis (laatat).</summary>
+        double jarruAika;
         /// <summary>Kuva koko ruudulla (Kuvasuurennos): pysähdyksen kierto ja dolly seis; puhe jatkuu.</summary>
         public bool KameraSeis;
         /// <summary>Seuraava lento on pelaajan toiveen tai paikan vaihdon seuraus (siltalause soitettiin jo valinnasta).</summary>
@@ -1180,17 +1193,19 @@ namespace Matkakirja.Linssit.Kierros
                 if (kohti is (double klat, double klon) && lipumisKohti == null)
                 {
                     lipumisKohti = (klat, klon);   // suunta ja katto lukitaan ensimmäisestä tiedosta (esihaun vaihdos ei hyppää)
-                    lipumisKatto = Math.Min(OpasKuvaus.LipumisMaxM, OpasKuvaus.LipumisOsuus * KierrosLento.EtaisyysM(NykyinenKehys.Lat, NykyinenKehys.Lon, klat, klon));
+                    lipumisKatto = Math.Min(OpasKuvaus.LipumisMaxM, OpasKuvaus.LipumisOsuus * KierrosLento.EtaisyysM(NykyinenKehys.Lat, NykyinenKehys.Lon, klat, klon)) * LipumisSkaala;
                 }
                 if (lipumisKohti != null && !Ohjaus.Aktiivinen && !KameraSeis)
                 {
                     // Vauhti S-käyrällä ylös (LipumisAlkuS) ja lähdön valmistelussa S-käyrällä nollaan ennen lentoa (lento alkaa levosta).
                     lipumisAika += dt;
                     double ylos = KierrosLento.Smootherstep(Math.Min(1, lipumisAika / OpasKuvaus.LipumisAlkuS));
-                    LipumisVauhti = OpasKuvaus.LipumisNopeus * ylos * (1 - KierrosLento.Smootherstep(Math.Min(1, valmisteluAika / LipumisJarru)));
+                    LipumisVauhti = OpasKuvaus.LipumisNopeus * LipumisSkaala * ylos * (1 - KierrosLento.Smootherstep(Math.Min(1, jarruAika / LipumisJarru)));
                     lipumisRaaka += LipumisVauhti * dt;
                 }
-                double d = lipumisKatto > 0 ? lipumisKatto * Math.Tanh(lipumisRaaka / lipumisKatto) : 0;
+                // Katto tanh-käyränä + hidas ryömintä (LS2:n PalloKierrosTestit: pitkällä pysähdyksellä tanh vei vauhdin alle 0,2 m/s,
+                // kun dolly poistui pallotilasta): pallo ei koskaan seiso täysin ennen lähdön jarrua.
+                double d = lipumisKatto > 0 ? lipumisKatto * Math.Tanh(lipumisRaaka / lipumisKatto) + OpasKuvaus.LipumisRyomintaOsuus * lipumisRaaka : 0;
                 Asento = Ohjaus.Sovella(lipumisKohti is (double la, double lo) ? OpasKuvaus.Lipunut(perus, la, lo, d) : perus, NykyinenKehys.MaaM);
                 return;
             }
@@ -1214,14 +1229,17 @@ namespace Matkakirja.Linssit.Kierros
         {
             // "Kerro lisää" (sama paikka) ei lähde mihinkään: korostus jää palamaan.
             bool sama = SamaPaikka();
-            if (!valmistelu || sama) { LahtoValmisteilla = false; korostusPika = false; valmisteluAika = 0; return ehdot && sama; }
-            if (!LahtoValmisteilla) { korostusPika = pika; valmisteluAika = 0; }   // nopeus valitaan valmistelun alussa
+            if (!valmistelu || sama) { LahtoValmisteilla = false; korostusPika = false; valmisteluAika = 0; jarruAika = 0; return ehdot && sama; }
+            if (!LahtoValmisteilla) { korostusPika = pika; valmisteluAika = 0; jarruAika = 0; }   // nopeus valitaan valmistelun alussa
             LahtoValmisteilla = true;
             valmisteluAika += Math.Max(0, dt);
             if (!ehdot) return false;
             bool laatat = LahtoLaatatValmiit(dt);
-            // Pallo: lipuminen on pysähtynyt ennen lentoa (ei nopeushyppyä).
-            bool lipuminenSeis = lipumisKohti == null || valmisteluAika >= LipumisJarru;
+            // Pallo: lipuminen pysähtyy ennen lentoa (ei nopeushyppyä), mutta vasta kun laatat ovat valmiit: laattaodotuksen ajan pallo
+            // lipuu edelleen (omistaja TF 166, 18.3x: "jää välillä aivan liikaa paikalleen"; TF-lokissa lähtö odotti laattoja 5,0 s
+            // joka kerta, ja pallo seisoi jarrutuksen jälkeen koko odotuksen).
+            if (laatat) jarruAika += Math.Max(0, dt);
+            bool lipuminenSeis = lipumisKohti == null || jarruAika >= LipumisJarru;
             return laatat && KorostusOsuus <= 0 && lipuminenSeis;
         }
 
