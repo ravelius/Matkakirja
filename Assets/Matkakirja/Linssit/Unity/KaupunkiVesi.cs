@@ -43,6 +43,8 @@ namespace Matkakirja.Natiivi
 
         public KaupunkiVesi(Action<string> kirjaa) { this.kirjaa = kirjaa; }
         public string Krediitti => krediitti;
+        /// <summary>Veden tekijärivi ruudulle, kun vesi on ladattu (KrediititTiivis: oma rivi Googlen rivien ulkopuolella; ODbL).</summary>
+        public static string KrediittiNyt { get; private set; }
 
         public void Avaa(Transform vanhempi, double lat, double lon, int kerros)
         {
@@ -103,6 +105,7 @@ namespace Matkakirja.Natiivi
             var sh = Shader.Find("Matkakirja/Linssit/VesiPinta");
             if (sh != null) mat = new Material(sh) { name = "KaupunkiVesi" };
             lahi = l; kauka = ka;
+            KrediittiNyt = string.IsNullOrEmpty(krediitti) ? "Vesi: © OpenStreetMap contributors, ESA WorldCover" : krediitti;
             kirjaa?.Invoke($"kaupunki: vesi ladattu ({lahi?.Palat.Length ?? 0} lähi- ja {kauka?.Palat.Length ?? 0} kaukopalaa, nosto {NostoM:F1} m)");
         }
 
@@ -166,7 +169,7 @@ namespace Matkakirja.Natiivi
             palat.Clear(); jono.Clear();
             if (juuri != null) UnityEngine.Object.Destroy(juuri);
             if (mat != null) UnityEngine.Object.Destroy(mat);
-            juuri = null; mat = null; lahi = kauka = null; edellinen = new Vector3(float.NaN, 0, 0);
+            juuri = null; mat = null; lahi = kauka = null; edellinen = new Vector3(float.NaN, 0, 0); KrediittiNyt = null;
         }
 
         /// <summary>Vesipinnan korkeus juuren paikallisessa kehyksessä (x itä, z pohjoinen → y, nosto mukana); false = ei vettä (LS1:n veneet).</summary>

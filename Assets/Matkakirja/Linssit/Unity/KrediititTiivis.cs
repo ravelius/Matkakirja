@@ -248,6 +248,9 @@ namespace Matkakirja.Natiivi
 
             // Oma tekijärivi Googlen rivien alle, erilleen niistä (väli 2 dp kuten logon alla).
             string omat = Matkakirja.Linssit.CesiumOmatMallit.Tekijat;
+            // Oma vesipinta (LS2 8.10., ODbL vaatii näkyvän nimeämisen): veden tekijärivi samalle omalle riville, Googlen rivien ulkopuolelle.
+            string vesi = KaupunkiVesi.KrediittiNyt;
+            if (!string.IsNullOrEmpty(vesi)) omat = string.IsNullOrEmpty(omat) ? vesi : omat + " · " + vesi;
             var od = string.IsNullOrEmpty(omat) ? DisplayStyle.None : DisplayStyle.Flex;
             if (omaTekija.style.display != od) omaTekija.style.display = od;
             if (od == DisplayStyle.Flex)
