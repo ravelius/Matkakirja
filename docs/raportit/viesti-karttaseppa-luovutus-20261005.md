@@ -6,8 +6,10 @@
   Versiot: 6 m suositus (1,04 M kolmiota, 25 Mt), 4 m ja 16 m LOD. Työkalu: T7 `vesimaski/vesipinta.mjs`, ajoaika noin 10 s / kaupunki.
   Lähteet T7:llä (`vesimaski/lahteet/`): OSM water-polygons (meri), Geofabrik Ruotsi (gis_osm_water_a), EGM2008 2,5′. GLO-30 NAS:lla.
   Overpass EI käy: robots.txt kieltää /api/:n. Muut maat haetaan Geofabrikin maakohtaisista shp-paketeista.
-- **SEURAAVAKSI:**
-  1) LS2:n kuittaus muodosta.
+- **LS2 kuittasi muodon (20.4x)**: lähellä 6 m, yli 3 km 16 m:n LOD. LS2:n järjestys: Ydin-lukija ja testit → taivas ja ilmaperspektiivi → vesi Tukholmaan ja kuvapari PT:lle.
+  Työkalu: PR https://github.com/ravelius/Matkakirja/pull/4227 (worktree wt/karttaseppa-vesipinta). PT:lle on viety mittakaava-arvio: 1 070 keskustaa, 15 km ≈ 30 Gt, ehdotus 10 km ≈ 14 Gt, lataus kohteeseen mentäessä. Odottaa kuvaparia ja PT:n päätöstä säteestä.
+- **SEURAAVAKSI (vanha lista):**
+  1) LS2:n kuittaus muodosta (tehty).
   2) PT:n kuvapari (LS2 ottaa pelistä).
   3) Työkalu repoon (tools/vesipinta/, PR).
   4) Euroopan kaupungit (keskustat.json, 15 km) ja ämpäri Julkaisijan kautta (LAHTEET.md: ODbL + CC BY).
