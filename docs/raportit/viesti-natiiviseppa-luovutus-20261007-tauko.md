@@ -3,7 +3,16 @@
 Luovuttaja: Natiiviseppä (Opus 5.5, high). Edellinen: viesti-natiiviseppa-luovutus-20261005-iltapaiva.md (käytännöt voimassa).
 Tarkempi lokirivistö: muisti natiiviseppa-tila-20261003.md (uusin rivi ylimpänä).
 
-## TILA 8.10. 17.3x (UUSIN)
+## TILA 8.10. 19.4x (UUSIN)
+
+**JUNA 167 = RUNKO B** (Päätoimittaja 19.3x): natiiviseppa/juna-167-ik **d9ca9d63c** (wt/proto-natiiviseppa-j167b) = runko A 3c6377160 + Siirtoseppä
+final-ik-167 71d34bb97 (Final IK + Grounder, Peli-testien unity-tarkistus kääntää firstpassin); testit 448/419/1018, unity 0, tarkista 0.
+Runko A = natiiviseppa/juna-167 3c6377160 (wt/proto-natiiviseppa-j144) = BUILD 166 + Siirtoseppä 96b04efb3 + LS1 7df28c8c4 + NUI 896d6b823 (⊇ eaedca9c5,
+24372c44d) + ce9d0c4d5 (burst) + e70e9a65e. KÄÄNNÖS 22.00 (Julkaisijan NYT varattu) muutosloki B:llä (273 merkkiä, PT hyväksyi). B kaatuu
+IL2CPP/RootMotion → käännä A kysymättä. 21.15 asti kuittaukset molempiin (tyojonot.md JUNA 167). Herätys 21.25 ajastettu.
+JUNA 168 -ehdokkaat: NUI 4758e5316 (⊇ 0426a8f26; EHTO Siirtosepän c15eb5b8a samaan junaan) + NUI pohjavahti-168c b62e2569d.
+
+## TILA 8.10. 17.3x
 
 **BUILD 166 = proto master bdd0e8c5fbad51b8028b0637e2f417e246d94884** (runko natiiviseppa/juna-166 0c7861567 = 8adddd2c + Siirtoseppä 0d5c33250
 + LS1 d3b9f48e8 + NUI a7953991e; käännös 93e99b966 17.22; omistajan pyynnöstä aikaistettu, yön juna peruttu; muutosloki 203 merkkiä).
