@@ -8,6 +8,8 @@ AD119F7B-A2A2-43EE-8769-7326DD757F89; lopuksi sammutus ja "simu vapaa".
 
 ## TILA 8.10. klo 18.0x+ (JATKA TÄSTÄ)
 
+KUITTAUSTA ODOTTAA (junaan 167): natiivi-ui/tappi-sivu 44506c0e1 (be7fef450:n päällä; vasen tappi x vapaassa tilassa, kompassi).
+Oppaan kysymysvika: kysytty LS1:ltä tarvitaanko UI-apua (UI-polku Kysy-rivi → Sulje → OpasSovitin.Kysy(t), muuten Chat.Kysy).
 JUNA 167 kuitattu ja Natiivisepällä: linna-latauskuva 24372c44d, mikseri-167 be7fef450 (⊇ olavinlinna-peli 40e71625b;
 worktree wt/proto-natiivi-ui-olavpeli). Mikseri: ☰ → Peli → Mikseri (Äänentasot-paneeli, 7 luokkaa, uudet Voima.Repliikit/Saa →
 Siirtoseppä/LS1 kytkevät soittimiin; kehittäjälle Tallenna oletuksiksi → leikepöytä → asetukset.json aanet.mikseri.*).
