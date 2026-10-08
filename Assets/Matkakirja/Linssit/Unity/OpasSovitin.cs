@@ -701,7 +701,7 @@ namespace Matkakirja.Natiivi
         {
             if (ukkosKlipit == null || ukkosKlipit.Count == 0 || !Asetukset.Paalla(Kytkin.Aanimaisema)) return;
             if (ukkosLahde == null) { ukkosLahde = o.gameObject.AddComponent<AudioSource>(); ukkosLahde.playOnAwake = false; ukkosLahde.spatialBlend = 0; }
-            ukkosLahde.volume = 0.8f * Asetukset.Taso(Voima.Tehosteet);
+            ukkosLahde.volume = 0.8f * PalloKori.TehosteKerroin * Asetukset.Taso(Voima.Tehosteet);   // −3 dB (omistaja TF 166)
             ukkosLahde.PlayOneShot(ukkosKlipit[UnityEngine.Random.Range(0, ukkosKlipit.Count)]);
         }
 
@@ -1831,7 +1831,7 @@ namespace Matkakirja.Natiivi
         }
 
         // ---- SILTALAUSEET (juna 146; Ydin OpasSiltalauseet) ----
-        public const string SiltalauseetOsoite = "https://media.matkakirja.app/aanet/opas/siltalauseet-v3b/siltalauseet.json";   // v3b (Pelikoodari 8.10.): v2 + pallo-lahto/-nousu/-kaanto/-lasku (pallo-lasku-04 pois)   // v2 (Pelikoodari 7.10.): v1 + "ei-sallittu" (omistaja hyväksyi 09.4x)
+        public const string SiltalauseetOsoite = "https://media.matkakirja.app/aanet/opas/siltalauseet-v4/siltalauseet.json";   // v4 (Pelikoodari 8.10. ilta, omistaja TF 166 "siirtymälauseista jää pätkä alusta pois"): v3b + puhe aikaisintaan 120 ms:n kohdalla, 30 ms:n sisäänhäivytys   // v3b (Pelikoodari 8.10.): v2 + pallo-lahto/-nousu/-kaanto/-lasku (pallo-lasku-04 pois)   // v2 (Pelikoodari 7.10.): v1 + "ei-sallittu" (omistaja hyväksyi 09.4x)
         /// <summary>Kuittaukset-v1 (Pelikoodari 6.10.): kysymys, odotus5, odotus12, virhe; yhdistetään siltalauseisiin.</summary>
         public const string KuittauksetOsoite = "https://media.matkakirja.app/aanet/opas/kuittaukset-v1/kuittaukset.json";
         /// <summary>Kysymyksen odotusportaat (juna 150): 5 s / 12 s / 25 s, myöhäinen vastaus hylätään.</summary>
