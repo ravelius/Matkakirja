@@ -1,3 +1,16 @@
+# TILANNE 9.10. klo 01.4x
+
+- **Pohjapiirrokset VALMIIT kaikille 37 kaupungille** (01.32): _tyo/karttaseppa/jalanjaljet-20261009/ (295 kohdetta; Wikidatalla 265). LS1:lle ilmoitettu.
+  Korjaus: koko_m > 250 → ei lähintä rakennusta (Canal Grande, Užupis).
+- **Concorden lähdepaketti VALMIS** (LS2 ja LR): _tyo/karttaseppa/concorde/ (LUEMINUT.md).
+  - OSM 420 m (alue-osm.mjs)
+  - IGN-ortokuva 2021 0,2 m/px (vuoden 2024 kuvassa olympiarakennelmat)
+  - RGE ALTI 1 m ja LiDAR HD MNT/MNS 0,5 m (concorde-ign.mjs); RAF20 N = 43,799 m
+- Talvi3 käynnissä.
+- **Odottaa:** LS1 paketoi pohjapiirrokset; LR:n malli.
+
+---
+
 # TILANNE 9.10. klo 00.5x
 
 - **Vesi index-v3 ÄMPÄRISSÄ 00.16** (todennettu): tukholma2 0,4, pariisi2 2,0.
