@@ -2,7 +2,7 @@
 
 - **Junaan 168 (kevyet, PT 22.49):**
   1) Pariisin nosto: LS2:n koodi lukee index-v3 → v2 → index, ja nosto_m ohittaa jsonin. LS2 lähettää arvon noin 00.30.
-     Sitten `zsh /Users/Shared/Claude/proto-3d/_tyo/karttaseppa/tee-vesi-index-v3.sh <pariisin_nosto>` → _valmiit/vesi-index-v3-vienti-<pvm> (index-v3 + tukholma2), PT:n lupa ja Julkaisija.
+     Sitten `zsh /Users/Shared/Claude/proto-3d/_tyo/karttaseppa/tee-vesi-index-v3.sh <pariisin_nosto>` → _valmiit/vesi-index-v3-vienti-<pvm> (index-v3 + tukholma2). **PT:n ENNAKKOLUPA 22.5x:** kun LS2:n testiarvo ja kuvapari tukholma vs. tukholma2 ovat kunnossa, anna paketti suoraan Julkaisijalle ja lähetä rivi PT:lle.
   2) Tukholman tarkennus: tukholma2-6m/-16m (_tyo/karttaseppa/vesi/), vesipinta.mjs `--geoidi2 SWEN17 --meri-h 0.0 --nimitaso Mälaren=0.7`. Meri −0,19 m, Mälaren +0,52 m.
      index-v3: { id: tukholma, tiedosto: tukholma2 }. LS2:lta pyydetty "tiedosto"-kentän tuki ja kuvapari.
 - Työkalu #4227 päivitetty (cae505d9f).
