@@ -324,6 +324,7 @@ namespace Matkakirja.Natiivi
             var malli = v.Malli; var mat = v.Mat; bool valaistu = v.Valaistu;
             var eg = new GameObject("Esine:" + m.Tunnus) { layer = DioraamaNayttamo.Kerros };
             eg.transform.SetParent(isa, false);
+            v.Kayttajat.Add(eg);
             eg.transform.position = new Vector3((float)m.X, (float)m.Y, (float)-m.Z);
             // kierto_y (glTF, rad) → Unity: z-peilaus kääntää kiertosuunnan.
             if (m.KiertoY is double ky) eg.transform.rotation = Quaternion.Euler(0f, (float)(-ky * 180 / Math.PI), 0f);
@@ -502,7 +503,15 @@ namespace Matkakirja.Natiivi
         static Mesh Mesh(GlbMalli malli) => Mesh(malli, -1, null);
 
         // --- Mallivarasto (glb kerran, kuva ASTC:nä) ---
-        sealed class MalliVarasto { public GlbMalli Malli; public Texture2D Kuva, Normaali; public Material Mat; public bool Valaistu, Valmis, Astc; public readonly Dictionary<string, Mesh> Meshit = new Dictionary<string, Mesh>(StringComparer.Ordinal); }
+        sealed class MalliVarasto
+        {
+            public GlbMalli Malli; public Texture2D Kuva, Normaali; public Material Mat; public bool Valaistu, Valmis, Astc;
+            public readonly Dictionary<string, Mesh> Meshit = new Dictionary<string, Mesh>(StringComparer.Ordinal);
+            /// <summary>Huonekohtainen lataus (PT 9.10. 00.08, v45b-raportin ehdotus 3): mallin käyttäjät ja ladatut ASTC-osoitteet, joista
+            /// kuvat voi purkaa uudelleen (levyvälimuistista); vain ASTC-kuvat vapautetaan (glb:n JPEG-tavut on jo poistettu muistista).</summary>
+            public readonly List<GameObject> Kayttajat = new List<GameObject>();
+            public string KuvaUrl, NormaaliUrl; public bool Ladattu = true, Lataamassa;
+        }
         static readonly Dictionary<string, MalliVarasto> varasto = new Dictionary<string, MalliVarasto>(StringComparer.Ordinal);
         /// <summary>Lokia ja testiä varten: glb:t, kuvat ASTC:nä, osumat varastosta.</summary>
         public static (int Glb, int Astc, int Osumia) VarastoTila { get { int a = 0; foreach (var v in varasto.Values) if (v.Astc) a++; return (varasto.Count, a, varastoOsumia); } }
@@ -531,7 +540,7 @@ namespace Matkakirja.Natiivi
                     byte[] a = null;
                     yield return DioraamaLevyvalimuisti.Hae(astcUrl, 60, t => a = t);
                     if (a != null) { v.Kuva = DioraamaAstc.Lue(a, "Esine:" + glb, out var syy, TextureWrapMode.Clamp); v.Astc = v.Kuva != null; if (v.Kuva == null) kirjaa?.Invoke($"seikkailu: {astc} ei käytössä ({syy}), JPEG"); }
-                    if (v.Kuva != null) break;
+                    if (v.Kuva != null) { v.KuvaUrl = astcUrl; break; }
                 }
                 if (v.Kuva == null && v.Malli.Kuvat.Count > 0 && v.Malli.Kuvat[0] != null)
                 {
@@ -547,7 +556,7 @@ namespace Matkakirja.Natiivi
                     byte[] a = null;
                     yield return DioraamaLevyvalimuisti.Hae(nUrl, 60, t => a = t);
                     if (a != null) { v.Normaali = DioraamaAstc.Lue(a, "EsineN:" + glb, out var syyN, TextureWrapMode.Clamp, 0, true); if (v.Normaali == null) kirjaa?.Invoke($"seikkailu: {nAstc} ei käytössä ({syyN})"); }
-                    if (v.Normaali != null) break;
+                    if (v.Normaali != null) { v.NormaaliUrl = nUrl; break; }
                 }
                 v.Malli.Kuvat.Clear();   // JPEG-tavut pois muistista
                 // DioraamaValaistu (B, maalattu): tilan pistevalot ja Foggin kynttilä valaisevat esineen (kilpilaattojen kohokuva näkyy vain
@@ -568,6 +577,76 @@ namespace Matkakirja.Natiivi
             }
             v.Valmis = true;
             valmis(v.Malli != null ? v : null);
+        }
+
+        float huoneTarkistus;
+        static readonly HashSet<string> aktiivisetOsat = new HashSet<string>(StringComparer.Ordinal);
+        public static int Vapautettuja { get; private set; }
+
+        /// <summary>
+        /// HUONEKOHTAINEN LATAUS (PT 9.10. 00.08): mallin ASTC-kuvat pidetään muistissa vain, jos jokin sen käyttäjistä on pelaajan osassa
+        /// tai sen naapurissa (KavelyOsa.Naapurit, kumpaan suuntaan tahansa); muuten kuvat vapautetaan ja renderöijät piilotetaan.
+        /// Esineiden GameObjectit, fysiikka ja tila säilyvät (ei tallennusriskiä). Takaisin tultaessa kuvat puretaan levyvälimuistista.
+        /// Tuntematon osa (pelaaja osien ulkopuolella) = kaikki ladattuina.
+        /// </summary>
+        void HuoneLataus(Vector3 pp)
+        {
+            var d = SeikkailuKavely.Data; if (d == null) return;
+            string osa = Askelaani.Osa(d, pp.x, pp.y, -pp.z);
+            aktiivisetOsat.Clear();
+            if (osa != null)
+            {
+                aktiivisetOsat.Add(osa);
+                if (d.Osat.TryGetValue(osa, out var o)) foreach (var n in o.Naapurit) aktiivisetOsat.Add(n);
+                foreach (var kv in d.Osat) if (kv.Value.Naapurit.Contains(osa)) aktiivisetOsat.Add(kv.Key);
+            }
+            foreach (var kv in varasto)
+            {
+                var v = kv.Value;
+                if (!v.Valmis || v.KuvaUrl == null || v.Mat == null) continue;   // vain ASTC-kuvat (uudelleenpurku levyvälimuistista)
+                v.Kayttajat.RemoveAll(g => g == null);
+                bool tarvitaan = osa == null || v.Kayttajat.Count == 0;
+                if (!tarvitaan)
+                    foreach (var g in v.Kayttajat)
+                    {
+                        var gp = g.transform.position; string go = Askelaani.Osa(d, gp.x, gp.y, -gp.z);
+                        if (go == null || aktiivisetOsat.Contains(go)) { tarvitaan = true; break; }
+                    }
+                if (!tarvitaan && v.Ladattu) Vapauta(v);
+                else if (tarvitaan && !v.Ladattu && !v.Lataamassa) StartCoroutine(Palauta(v));
+            }
+        }
+
+        void Vapauta(MalliVarasto v)
+        {
+            foreach (var g in v.Kayttajat) foreach (var mr in g.GetComponentsInChildren<MeshRenderer>(true)) mr.enabled = false;
+            v.Mat.SetTexture(IdPohjaKuva, null);
+            if (v.Mat.HasProperty("_NormaaliKuva")) { v.Mat.SetTexture("_NormaaliKuva", null); v.Mat.SetFloat("_NormaaliPaalla", 0f); }
+            if (v.Kuva != null) Destroy(v.Kuva);
+            if (v.Normaali != null) Destroy(v.Normaali);
+            v.Kuva = null; v.Normaali = null; v.Ladattu = false; Vapautettuja++;
+        }
+
+        IEnumerator Palauta(MalliVarasto v)
+        {
+            v.Lataamassa = true;
+            byte[] a = null;
+            yield return DioraamaLevyvalimuisti.Hae(v.KuvaUrl, 60, t => a = t);
+            if (a != null) v.Kuva = DioraamaAstc.Lue(a, "Esine:palautus", out _, TextureWrapMode.Clamp);
+            if (v.NormaaliUrl != null)
+            {
+                byte[] n = null;
+                yield return DioraamaLevyvalimuisti.Hae(v.NormaaliUrl, 60, t => n = t);
+                if (n != null) v.Normaali = DioraamaAstc.Lue(n, "EsineN:palautus", out _, TextureWrapMode.Clamp, 0, true);
+            }
+            if (v.Mat != null)
+            {
+                if (v.Kuva != null) v.Mat.SetTexture(IdPohjaKuva, v.Kuva);
+                if (v.Normaali != null && v.Mat.HasProperty("_NormaaliKuva")) { v.Mat.SetTexture("_NormaaliKuva", v.Normaali); v.Mat.SetFloat("_NormaaliPaalla", 1f); }
+            }
+            v.Kayttajat.RemoveAll(g => g == null);
+            foreach (var g in v.Kayttajat) foreach (var mr in g.GetComponentsInChildren<MeshRenderer>(true)) mr.enabled = true;
+            v.Ladattu = true; v.Lataamassa = false;
         }
 
         static void TyhjennaVarasto()
@@ -621,6 +700,7 @@ namespace Matkakirja.Natiivi
         {
             var p = SeikkailuPelaaja.Aktiivinen;
             if (p == null) return;
+            if (Time.unscaledTime >= huoneTarkistus) { huoneTarkistus = Time.unscaledTime + 1f; HuoneLataus(p.transform.position); }
             if (p.Ohjataan)
             {
                 // Ohjattu jakso (pako): toimintonappi vain jakson omalle teolle (Katkaise).
