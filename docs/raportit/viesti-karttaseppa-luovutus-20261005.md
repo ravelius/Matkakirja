@@ -1,3 +1,15 @@
+# TILANNE 8.10. klo 10.0x
+
+- **Näyte 5 valmis 10.04** (kuva `kuvapari-talvip-nayte5-20261008.jpg`, näyte 4 | 5): utu väheni, mutta 27,3° E:n pystyreuna jäi, joten koko ajoa EI käynnistetty.
+  Reuna on vino kuten kuvauskaistan reuna, joten raja on ruudun sisällä. Ruutusovitus (TALVI_P5) ketjuuntui (a-rajat) eikä auta, joten se jätetään pois. PT:lle on raportoitu.
+- **Näyte 6 valmiina:** `kaudet/aja-talvip-nayte6.sh` (TALVI_PS = jyrkempi S, TALVI_P6 = näkymäkohtainen sovitus lumettomilla pikseleillä). tila.json valmiina.
+  Odottaa junakäännöksen lukkoa (juna/b13 10.04). Sitten ajo irrotettuna ja vertailu `"näyte 4" … "näyte 6"`.
+  **Jos reuna katoaa eikä uusia virheitä tule → koko ajo** `aja-talvi3-osa.sh` (päivitetty näytteen 6 lipuille; tila.json kopioidaan nayte6:sta).
+  Muistiehto ennen rinnakkaisajoa: PhysMem unused > 20 Gt (nyt noin 7,5 Gt → yksi tai kaksi prosessia).
+- Koodikopiot: `-talvip4-`, `-talvip5-20261008.mjs`. Ankkurisääntö (vain kun oma ≥ 20000 px) koskee vain TALVI_P5:tä.
+
+---
+
 # TILANNE 8.10. klo 08.06
 
 - **PT hyväksyi näytteen 4 linjan (08.0x) ja tilasi näytteen 5:** lumettoman värin sovitus naapuriruutuun (27° E:n pystyreuna) ja jyrkempi S-käyrä (puolivälin utu).
