@@ -1,0 +1,614 @@
+{
+ "kaupunki": "gdansk",
+ "kaupunkiQ": "Q1792",
+ "kohteet": [
+  {
+   "q": "Q608585",
+   "nimi": "Gdańskin Główne Miasto",
+   "peruste": "kaupungin päänähtävyys",
+   "koko_m": 900,
+   "lat": 54.34886,
+   "lon": 18.65288,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "2053 Gdańsk. Kościół św. Katarzyny. Widok na miasto. Foto Barbara Maliszewska.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2053_Gda%C5%84sk._Ko%C5%9Bci%C3%B3%C5%82_%C5%9Bw._Katarzyny._Widok_na_miasto._Foto_Barbara_Maliszewska.JPG?width=1280",
+     "tekija": "Barbara Maliszewska",
+     "lisenssi": "CC BY-SA 3.0 pl",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/pl/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2053_Gda%C5%84sk._Ko%C5%9Bci%C3%B3%C5%82_%C5%9Bw._Katarzyny._Widok_na_miasto._Foto_Barbara_Maliszewska.JPG",
+     "selite": "Gdańskin historiallisen keskustan punakattoiset talot ja kirkot levittäytyvät Motławan rannalle.",
+     "leveys": 4912,
+     "korkeus": 3264,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "2056 Gdańsk. Kościół św. Katarzyny. Widok na miasto. Foto Barbara Maliszewska.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2056_Gda%C5%84sk._Ko%C5%9Bci%C3%B3%C5%82_%C5%9Bw._Katarzyny._Widok_na_miasto._Foto_Barbara_Maliszewska.JPG?width=1280",
+     "tekija": "Barbara Maliszewska",
+     "lisenssi": "CC BY-SA 3.0 pl",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/pl/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2056_Gda%C5%84sk._Ko%C5%9Bci%C3%B3%C5%82_%C5%9Bw._Katarzyny._Widok_na_miasto._Foto_Barbara_Maliszewska.JPG",
+     "selite": "Mariankirkon massiivinen tiilitorni hallitsee vanhan kaupungin siluettia.",
+     "leveys": 4912,
+     "korkeus": 3264,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q679506",
+   "nimi": "Długi Targ (Pitkä tori)",
+   "peruste": "kaupungin päänähtävyys",
+   "koko_m": 250,
+   "lat": 54.3485,
+   "lon": 18.65367,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Gdańsk 0100 102.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gda%C5%84sk_0100_102.jpg?width=1280",
+     "tekija": "FrDr",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Gda%C5%84sk_0100_102.jpg",
+     "selite": "Pitkän torin ja Pitkän kadun värikkäät porvaristalot johtavat kohti kaupungintalon tornia.",
+     "leveys": 5472,
+     "korkeus": 3648,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Gdańsk, Główne Miasto, Rarusz (HB1).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gda%C5%84sk%2C_G%C5%82%C3%B3wne_Miasto%2C_Rarusz_(HB1).jpg?width=1280",
+     "tekija": "Henryk Bielamowicz",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Gda%C5%84sk%2C_G%C5%82%C3%B3wne_Miasto%2C_Rarusz_(HB1).jpg",
+     "selite": "Kaupungintalon korkea torni nousee Pitkän torin päässä puiden yläpuolelle.",
+     "leveys": 1632,
+     "korkeus": 1703,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q783294",
+   "nimi": "Neptunuksen suihkukaivo",
+   "peruste": "sitelinks",
+   "koko_m": 40,
+   "lat": 54.34856,
+   "lon": 18.65338,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "02024 0104 Neptune Monument in Gdańsk.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/02024_0104_Neptune_Monument_in_Gda%C5%84sk.jpg?width=1280",
+     "tekija": "Silar",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:02024_0104_Neptune_Monument_in_Gda%C5%84sk.jpg",
+     "selite": "Merenjumala Neptunuksen pronssinen suihkukaivo on Gdańskin kaupungin tunnetuimpia vertauskuvia.",
+     "leveys": 4063,
+     "korkeus": 2708,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Fontanna Neptuna w Gdańsku, sierpień 2013.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Fontanna_Neptuna_w_Gda%C5%84sku%2C_sierpie%C5%84_2013.jpg?width=1280",
+     "tekija": "Araspaterka",
+     "lisenssi": "CC BY-SA 3.0 pl",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/pl/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Fontanna_Neptuna_w_Gda%C5%84sku%2C_sierpie%C5%84_2013.jpg",
+     "selite": "Kaivo seisoo Pitkän torin keskellä Artus-kartanon edustalla.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q933903",
+   "nimi": "Gdańskin Mariankirkko",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 54.34984,
+   "lon": 18.6535,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Bazylika Mariacka DSC01870.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bazylika_Mariacka_DSC01870.jpg?width=1280",
+     "tekija": "Gyddanyzc",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bazylika_Mariacka_DSC01870.jpg",
+     "selite": "Mariankirkko on tiilestä rakennettu valtava goottilainen kirkko ja yksi maailman suurimmista tiilikirkoista.",
+     "leveys": 3520,
+     "korkeus": 2090,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Bazylika konkatedralna Wniebowzięcia Najświętszej Maryi Panny w Gdańsku z drona.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bazylika_konkatedralna_Wniebowzi%C4%99cia_Naj%C5%9Bwi%C4%99tszej_Maryi_Panny_w_Gda%C5%84sku_z_drona.jpg?width=1280",
+     "tekija": "Aneta p",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bazylika_konkatedralna_Wniebowzi%C4%99cia_Naj%C5%9Bwi%C4%99tszej_Maryi_Panny_w_Gda%C5%84sku_z_drona.jpg",
+     "selite": "Kirkon pitkä katto ja torni kohoavat vanhan kaupungin talojen yläpuolelle.",
+     "leveys": 4281,
+     "korkeus": 2852,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "489A1758Bazylika konkatedralna Wniebowzięcia Najświętszej Maryi Panny w Gdańsku - widziana z Góry Gradowej.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/489A1758Bazylika_konkatedralna_Wniebowzi%C4%99cia_Naj%C5%9Bwi%C4%99tszej_Maryi_Panny_w_Gda%C5%84sku_-_widziana_z_G%C3%B3ry_Gradowej.jpg?width=1280",
+     "tekija": "Radosław Dybała",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:489A1758Bazylika_konkatedralna_Wniebowzi%C4%99cia_Naj%C5%9Bwi%C4%99tszej_Maryi_Panny_w_Gda%C5%84sku_-_widziana_z_G%C3%B3ry_Gradowej.jpg",
+     "selite": "Illansinisessä valossa kirkon torni ja kaupungintalon torni erottuvat siluetista.",
+     "leveys": 6720,
+     "korkeus": 4480,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q253930",
+   "nimi": "Gdańskin vanha nosturi",
+   "peruste": "sitelinks",
+   "koko_m": 60,
+   "lat": 54.35056,
+   "lon": 18.6575,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "2025-04 Gdańsk Brama Żuraw (4).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2025-04_Gda%C5%84sk_Brama_%C5%BBuraw_(4).jpg?width=1280",
+     "tekija": "Marek Mróz",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2025-04_Gda%C5%84sk_Brama_%C5%BBuraw_(4).jpg",
+     "selite": "Keskiaikainen satamanosturi on puinen ja tiilinen portti-ja nostolaite Motławan rannalla.",
+     "leveys": 3838,
+     "korkeus": 2559,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "02024 0183 Motlawa River Embankment.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/02024_0183_Motlawa_River_Embankment.jpg?width=1280",
+     "tekija": "Silar",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:02024_0183_Motlawa_River_Embankment.jpg",
+     "selite": "Nosturi kohoaa vanhan kaupungin rantatalojen keskeltä joen vierellä.",
+     "leveys": 4928,
+     "korkeus": 3264,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Gdańsk (DerHexer) 2010-07-15 006.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gda%C5%84sk_(DerHexer)_2010-07-15_006.jpg?width=1280",
+     "tekija": "DerHexer",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Gda%C5%84sk_(DerHexer)_2010-07-15_006.jpg",
+     "selite": "Joelta katsottuna nosturin tumma puurakenne erottuu tiiliseinien edessä.",
+     "leveys": 2848,
+     "korkeus": 4288,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1450669",
+   "nimi": "Vihreä portti",
+   "peruste": "sitelinks",
+   "koko_m": 80,
+   "lat": 54.34794,
+   "lon": 18.65573,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Gdańsk, Brama Zielona (WLZ14).JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gda%C5%84sk%2C_Brama_Zielona_(WLZ14).JPG?width=1280",
+     "tekija": "1bumer",
+     "lisenssi": "CC BY-SA 3.0 pl",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/pl/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Gda%C5%84sk%2C_Brama_Zielona_(WLZ14).JPG",
+     "selite": "Hollantilaisrenessanssin tyylinen portti avautuu Pitkän torin päästä Motławan rantaan.",
+     "leveys": 3800,
+     "korkeus": 2500,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "635492 Gdańsk Brama Zielona.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/635492_Gda%C5%84sk_Brama_Zielona.JPG?width=1280",
+     "tekija": "Dawid Galus",
+     "lisenssi": "CC BY-SA 3.0 pl",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/pl/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:635492_Gda%C5%84sk_Brama_Zielona.JPG",
+     "selite": "Tiilinen portti rakennettiin entisaikojen kuninkaiden vierailujen paikaksi.",
+     "leveys": 4272,
+     "korkeus": 2848,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1426552",
+   "nimi": "Kultainen portti",
+   "peruste": "sitelinks",
+   "koko_m": 60,
+   "lat": 54.34967,
+   "lon": 18.64802,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Gdańsk, Brama Złota,.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gda%C5%84sk%2C_Brama_Z%C5%82ota%2C.jpg?width=1280",
+     "tekija": "Paulucha",
+     "lisenssi": "CC BY-SA 3.0 pl",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/pl/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Gda%C5%84sk%2C_Brama_Z%C5%82ota%2C.jpg",
+     "selite": "Renessanssityylinen portti avaa Pitkän kadun länsipään, ja sen yläreunassa on koristeveistoksia.",
+     "leveys": 1920,
+     "korkeus": 2426,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Gdańsk Główne Miasto, Brama Złota (4).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gda%C5%84sk_G%C5%82%C3%B3wne_Miasto%2C_Brama_Z%C5%82ota_(4).jpg?width=1280",
+     "tekija": "MagdalenaBorucka",
+     "lisenssi": "CC BY-SA 3.0 pl",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/pl/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Gda%C5%84sk_G%C5%82%C3%B3wne_Miasto%2C_Brama_Z%C5%82ota_(4).jpg",
+     "selite": "Illan valot korostavat Kultaisen portin pylväitä ja patsaita.",
+     "leveys": 2576,
+     "korkeus": 3608,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2135657",
+   "nimi": "Gdańskin pääraatihuone",
+   "peruste": "sitelinks",
+   "koko_m": 80,
+   "lat": 54.34883,
+   "lon": 18.6527,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Ayuntamiento Principal, Gdansk, Polonia, 2013-05-20, DD 10.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ayuntamiento_Principal%2C_Gdansk%2C_Polonia%2C_2013-05-20%2C_DD_10.jpg?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ayuntamiento_Principal%2C_Gdansk%2C_Polonia%2C_2013-05-20%2C_DD_10.jpg",
+     "selite": "Kaupungintalon korkea gotiikkatorni on kaupungin tunnetuin maamerkki Pitkän kadun päässä.",
+     "leveys": 2494,
+     "korkeus": 3744,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Gdańsk - Ratusz Głównego Miasta (by Sfu).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gda%C5%84sk_-_Ratusz_G%C5%82%C3%B3wnego_Miasta_(by_Sfu).jpg?width=1280",
+     "tekija": "Marcin Białek",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Gda%C5%84sk_-_Ratusz_G%C5%82%C3%B3wnego_Miasta_(by_Sfu).jpg",
+     "selite": "Torni kohoaa punatiilisen raatihuoneen yläpuolelle.",
+     "leveys": 1793,
+     "korkeus": 3132,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q475195",
+   "nimi": "Mariacka-katu",
+   "peruste": "kaupungin päänähtävyys",
+   "koko_m": 150,
+   "lat": 54.34972,
+   "lon": 18.65528,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Gdansk - St. Mary's Street 4.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gdansk_-_St._Mary's_Street_4.jpg?width=1280",
+     "tekija": "Grzegorz Gruszczyński",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Gdansk_-_St._Mary's_Street_4.jpg",
+     "selite": "Mariacka-kadun kapeissa taloissa on koristeellisia portaita ja kivisiä terasseja.",
+     "leveys": 6016,
+     "korkeus": 4016,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Gdansk - St. Mary's Street 8.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gdansk_-_St._Mary's_Street_8.jpg?width=1280",
+     "tekija": "Grzegorz Gruszczyński",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Gdansk_-_St._Mary's_Street_8.jpg",
+     "selite": "Katu johtaa Motławan rantaan ja on yksi vanhan kaupungin kauneimmista.",
+     "leveys": 6016,
+     "korkeus": 4016,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Gdańsk view 14.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gda%C5%84sk_view_14.jpg?width=1280",
+     "tekija": "Sirleonidas",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Gda%C5%84sk_view_14.jpg",
+     "selite": "Kadun päässä kohoaa Mariankirkon tummanpunainen tiilirunko.",
+     "leveys": 2586,
+     "korkeus": 3448,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1236685",
+   "nimi": "Oliwan katedraali",
+   "peruste": "sitelinks",
+   "koko_m": 100,
+   "lat": 54.41111,
+   "lon": 18.55778,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "09-07-2015 Archikatedra Oliwska (1).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/09-07-2015_Archikatedra_Oliwska_(1).jpg?width=1280",
+     "tekija": "Kapsuglan",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:09-07-2015_Archikatedra_Oliwska_(1).jpg",
+     "selite": "Entisen luostarikirkon kaksitorninen goottilainen julkisivu kohoaa Oliwan puistoalueella.",
+     "leveys": 1836,
+     "korkeus": 3264,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "64, Gdańsk-Oliwa, Katedra Oliwska 02.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/64%2C_Gda%C5%84sk-Oliwa%2C_Katedra_Oliwska_02.JPG?width=1280",
+     "tekija": "Aniceta",
+     "lisenssi": "CC BY-SA 3.0 pl",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/pl/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:64%2C_Gda%C5%84sk-Oliwa%2C_Katedra_Oliwska_02.JPG",
+     "selite": "Katedraali tunnetaan pitkästä pituudestaan ja kuuluisista urkuistaan.",
+     "leveys": 2736,
+     "korkeus": 3648,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q715753",
+   "nimi": "Artus-kartano",
+   "peruste": "sitelinks",
+   "koko_m": 60,
+   "lat": 54.34877,
+   "lon": 18.65337,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Corte Artus, Gdansk, Polonia, 2013-05-20, DD 03.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Corte_Artus%2C_Gdansk%2C_Polonia%2C_2013-05-20%2C_DD_03.jpg?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Corte_Artus%2C_Gdansk%2C_Polonia%2C_2013-05-20%2C_DD_03.jpg",
+     "selite": "Artus-kartanon koristeellinen julkisivu oli ennen kauppiaiden kokoontumispaikka.",
+     "leveys": 4952,
+     "korkeus": 3301,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Dwór Artusa by AW.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dw%C3%B3r_Artusa_by_AW.jpg?width=1280",
+     "tekija": "Wolskaola",
+     "lisenssi": "CC BY-SA 3.0 pl",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/pl/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Dw%C3%B3r_Artusa_by_AW.jpg",
+     "selite": "Rakennus seisoo Pitkän torin laidalla Neptunuksen kaivon takana.",
+     "leveys": 2848,
+     "korkeus": 3677,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1549228",
+   "nimi": "Gdańskin suuri asevarasto",
+   "peruste": "kaupungin päänähtävyys",
+   "koko_m": 80,
+   "lat": 54.35056,
+   "lon": 18.64917,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Gran Armería, Gdansk, Polonia, 2013-05-20, DD 12.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gran_Armer%C3%ADa%2C_Gdansk%2C_Polonia%2C_2013-05-20%2C_DD_12.jpg?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Gran_Armer%C3%ADa%2C_Gdansk%2C_Polonia%2C_2013-05-20%2C_DD_12.jpg",
+     "selite": "Hollantilaistyylinen renessanssirakennus rakennettiin kaupungin aseiden varastoksi.",
+     "leveys": 3167,
+     "korkeus": 2372,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Gdansk-Zbrojownia-fasada od Targu Weglowego.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gdansk-Zbrojownia-fasada_od_Targu_Weglowego.jpg?width=1280",
+     "tekija": "Stanislaw Kosiedowski",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Gdansk-Zbrojownia-fasada_od_Targu_Weglowego.jpg",
+     "selite": "Julkisivun runsaat koristeet ja kupariset tornit tekevät siitä erottuvan.",
+     "leveys": 3000,
+     "korkeus": 2000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1409002",
+   "nimi": "Wisłoujścien linnake",
+   "peruste": "kaupungin päänähtävyys",
+   "koko_m": 300,
+   "lat": 54.39476,
+   "lon": 18.68086,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Gdansk Wisłoujście Fortress 1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gdansk_Wis%C5%82ouj%C5%9Bcie_Fortress_1.jpg?width=1280",
+     "tekija": "konikmorski",
+     "lisenssi": "CC BY-SA 3.0 pl",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/pl/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Gdansk_Wis%C5%82ouj%C5%9Bcie_Fortress_1.jpg",
+     "selite": "Linnakkeen vanha majakkatorni valvoi Veikselin suistoa Gdańskin satamassa.",
+     "leveys": 3888,
+     "korkeus": 2592,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "1707 Wisłoujście Gdańsk.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/1707_Wis%C5%82ouj%C5%9Bcie_Gda%C5%84sk.jpg?width=1280",
+     "tekija": "MikGom",
+     "lisenssi": "CC BY-SA 3.0 pl",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/pl/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:1707_Wis%C5%82ouj%C5%9Bcie_Gda%C5%84sk.jpg",
+     "selite": "Tähtimäinen linnake suojasi kaupungin satamareittiä vuosisatojen ajan.",
+     "leveys": 4272,
+     "korkeus": 2848,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q517081",
+   "nimi": "Westerplatte",
+   "peruste": "sitelinks",
+   "koko_m": 1500,
+   "lat": 54.4075,
+   "lon": 18.67139,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "635519 Gdansk Latarnia Morska 05.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/635519_Gdansk_Latarnia_Morska_05.JPG?width=1280",
+     "tekija": "Dawid Galus",
+     "lisenssi": "CC BY-SA 3.0 pl",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/pl/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:635519_Gdansk_Latarnia_Morska_05.JPG",
+     "selite": "Westerplatte on kapea niemi Gdańskin sataman suulla, jossa toinen maailmansota alkoi vuonna 1939.",
+     "leveys": 4272,
+     "korkeus": 2848,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "635519 Gdansk Latarnia Morska 06.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/635519_Gdansk_Latarnia_Morska_06.JPG?width=1280",
+     "tekija": "Dawid Galus",
+     "lisenssi": "CC BY-SA 3.0 pl",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/pl/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:635519_Gdansk_Latarnia_Morska_06.JPG",
+     "selite": "Niemeltä näkyy satamaan johtava väylä Veikselin suulla.",
+     "leveys": 4272,
+     "korkeus": 2848,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1950176",
+   "nimi": "Motława",
+   "peruste": "sitelinks",
+   "koko_m": 500,
+   "lat": 54.36005,
+   "lon": 18.6642,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Gdańsk żuraw (3).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gda%C5%84sk_%C5%BCuraw_(3).jpg?width=1280",
+     "tekija": "XEvansGambitx",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Gda%C5%84sk_%C5%BCuraw_(3).jpg",
+     "selite": "Motława virtaa Gdańskin vanhan kaupungin ohi ja yhdistää sen Veikseliin.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Danzig waterfront - panoramio.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Danzig_waterfront_-_panoramio.jpg?width=1280",
+     "tekija": "Raki_Man",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Danzig_waterfront_-_panoramio.jpg",
+     "selite": "Joen rantaa reunustavat tiilitalot ja vanhat kauppiaiden varastot.",
+     "leveys": 2272,
+     "korkeus": 1704,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Centrum Gdańska.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Centrum_Gda%C5%84ska.jpg?width=1280",
+   "tekija": "Kjsz2017",
+   "lisenssi": "CC BY 3.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Centrum_Gda%C5%84ska.jpg",
+   "selite": "Ylhäältä näkyy Gdańskin vanha kaupunki kanavien ja Motławan ympäröimänä.",
+   "leveys": 2896,
+   "korkeus": 1936,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Gdańsk, widok z wieży kościoła pw. Wniebowzięcia NMP (8).JPG",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gda%C5%84sk%2C_widok_z_wie%C5%BCy_ko%C5%9Bcio%C5%82a_pw._Wniebowzi%C4%99cia_NMP_(8).JPG?width=1280",
+   "tekija": "Bazie",
+   "lisenssi": "CC BY-SA 3.0 pl",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/pl/deed.en",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Gda%C5%84sk%2C_widok_z_wie%C5%BCy_ko%C5%9Bcio%C5%82a_pw._Wniebowzi%C4%99cia_NMP_(8).JPG",
+   "selite": "Ylhäältä näkyvät Gdańskin vanhan kaupungin punaiset katot ja kapeat kadut.",
+   "leveys": 1745,
+   "korkeus": 1190,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

@@ -1,0 +1,421 @@
+{
+ "kaupunki": "belgrad",
+ "kaupunkiQ": "Q3711",
+ "kohteet": [
+  {
+   "q": "Q1409017",
+   "nimi": "Belgradin linnoitus",
+   "peruste": "sitelinks",
+   "koko_m": 600,
+   "lat": 44.8236,
+   "lon": 20.4503,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Kalemegdan, Belgrade Fortress.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kalemegdan%2C_Belgrade_Fortress.jpg?width=1280",
+     "tekija": "BrankaVV",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kalemegdan%2C_Belgrade_Fortress.jpg",
+     "selite": "Kalemegdanin linnoitus kohoaa Savan ja Tonavan yhtymäkohdan yllä.",
+     "leveys": 5184,
+     "korkeus": 3113,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Kalemegdan, a04.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kalemegdan%2C_a04.jpg?width=1280",
+     "tekija": "Mickey Mystique",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kalemegdan%2C_a04.jpg",
+     "selite": "Linnoituksen tiilimuurit ja vallihaudat vartioivat vanhaa kaupunkia.",
+     "leveys": 3968,
+     "korkeus": 2976,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Belgrade Fortress Kalemegdan-9924.NEF.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Belgrade_Fortress_Kalemegdan-9924.NEF.jpg?width=1280",
+     "tekija": "Zcvetkovic",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Belgrade_Fortress_Kalemegdan-9924.NEF.jpg",
+     "selite": "Linnoituksen portit avautuvat Kalemegdanin puistoon.",
+     "leveys": 2933,
+     "korkeus": 2000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q330385",
+   "nimi": "Pyhän Savan katedraali",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 44.79808,
+   "lon": 20.46855,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Church of Saint Sava 4.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Church_of_Saint_Sava_4.jpg?width=1280",
+     "tekija": "kallerna",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Church_of_Saint_Sava_4.jpg",
+     "selite": "Pyhän Savan katedraali on maailman suurimpia ortodoksisia kirkkoja.",
+     "leveys": 5000,
+     "korkeus": 3710,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Church of Saint Sava (Belgrade, Serbia).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Church_of_Saint_Sava_(Belgrade%2C_Serbia).jpg?width=1280",
+     "tekija": "Petar Milošević",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Church_of_Saint_Sava_(Belgrade%2C_Serbia).jpg",
+     "selite": "Valaistu kupoli näkyy illalla kauas yli Vračarin kaupunginosan.",
+     "leveys": 4608,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Црква светог Саве, Београд (Church of Saint Sava, 2023).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%A6%D1%80%D0%BA%D0%B2%D0%B0_%D1%81%D0%B2%D0%B5%D1%82%D0%BE%D0%B3_%D0%A1%D0%B0%D0%B2%D0%B5%2C_%D0%91%D0%B5%D0%BE%D0%B3%D1%80%D0%B0%D0%B4_(Church_of_Saint_Sava%2C_2023).jpg?width=1280",
+     "tekija": "Petar Milošević",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%D0%A6%D1%80%D0%BA%D0%B2%D0%B0_%D1%81%D0%B2%D0%B5%D1%82%D0%BE%D0%B3_%D0%A1%D0%B0%D0%B2%D0%B5%2C_%D0%91%D0%B5%D0%BE%D0%B3%D1%80%D0%B0%D0%B4_(Church_of_Saint_Sava%2C_2023).jpg",
+     "selite": "Katedraalin valkoinen kivirakennus ja kupolit ilmasta nähtynä.",
+     "leveys": 5272,
+     "korkeus": 3948,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1420986",
+   "nimi": "Knez Mihailovan katu",
+   "peruste": "sitelinks",
+   "koko_m": 600,
+   "lat": 44.81778,
+   "lon": 20.45694,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Knez Mihailova Street (Belgrade).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Knez_Mihailova_Street_(Belgrade).jpg?width=1280",
+     "tekija": "Jaimrsilva",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Knez_Mihailova_Street_(Belgrade).jpg",
+     "selite": "Knez Mihailova on Belgradin vanhan keskustan kävelykatu ja kauppakatu.",
+     "leveys": 2272,
+     "korkeus": 1704,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Bělehrad, Knez Mihailova IV.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/B%C4%9Blehrad%2C_Knez_Mihailova_IV.jpg?width=1280",
+     "tekija": "I would appreciate being notified if you use my work outside Wikimedia. More of my work can be found in my personal gallery.",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:B%C4%9Blehrad%2C_Knez_Mihailova_IV.jpg",
+     "selite": "Kadun 1800-luvun julkisivut johtavat kohti Kalemegdanin linnoitusta.",
+     "leveys": 4770,
+     "korkeus": 3178,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1264635",
+   "nimi": "Skadarlija",
+   "peruste": "sitelinks",
+   "koko_m": 300,
+   "lat": 44.8178,
+   "lon": 20.4643,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Skadarska street 2016.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Skadarska_street_2016.jpg?width=1280",
+     "tekija": "Skelanard (Aleksandr Petukhov)",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Skadarska_street_2016.jpg",
+     "selite": "Skadarlijan kivetty katu on Belgradin boheemi ravintolakortteli.",
+     "leveys": 4250,
+     "korkeus": 2834,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Skadarska Street, Belgrade - panoramio.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Skadarska_Street%2C_Belgrade_-_panoramio.jpg?width=1280",
+     "tekija": "Alexey Komarov",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Skadarska_Street%2C_Belgrade_-_panoramio.jpg",
+     "selite": "Vanhat talot ja puutarhaterassit luovat kaupunginosan tunnelman.",
+     "leveys": 4882,
+     "korkeus": 3255,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q189419",
+   "nimi": "Zemun",
+   "peruste": "sitelinks",
+   "koko_m": 1500,
+   "lat": 44.85,
+   "lon": 20.4,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Zemun panoramic view.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Zemun_panoramic_view.jpg?width=1280",
+     "tekija": "Jean-David & Anne-Laure",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Zemun_panoramic_view.jpg",
+     "selite": "Zemunin punakattoinen vanhakaupunki levittyy Tonavan rannalle.",
+     "leveys": 1600,
+     "korkeus": 1200,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Велики трг Земун - panoramio.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%92%D0%B5%D0%BB%D0%B8%D0%BA%D0%B8_%D1%82%D1%80%D0%B3_%D0%97%D0%B5%D0%BC%D1%83%D0%BD_-_panoramio.jpg?width=1280",
+     "tekija": "Саша Шљукић",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%D0%92%D0%B5%D0%BB%D0%B8%D0%BA%D0%B8_%D1%82%D1%80%D0%B3_%D0%97%D0%B5%D0%BC%D1%83%D0%BD_-_panoramio.jpg",
+     "selite": "Zemunin keskusaukion rakennukset kertovat Itävalta-Unkarin ajasta.",
+     "leveys": 2632,
+     "korkeus": 1498,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Jutarnja carolija.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Jutarnja_carolija.jpg?width=1280",
+     "tekija": "Ivanbuki",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Jutarnja_carolija.jpg",
+     "selite": "Aamusumu kietoo Zemunin kattojen ja kirkontornin Tonavan rannalla.",
+     "leveys": 3400,
+     "korkeus": 2267,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2633804",
+   "nimi": "Tasavallan aukio",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 44.81644,
+   "lon": 20.46011,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Republic Square (27420599076).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Republic_Square_(27420599076).jpg?width=1280",
+     "tekija": "Erik Cleves Kristensen",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Republic_Square_(27420599076).jpg",
+     "selite": "Tasavallan aukio on Belgradin tärkein tapaamispaikka kansallismuseon ja -teatterin välissä.",
+     "leveys": 3058,
+     "korkeus": 1818,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Republic Square and National Theatre behind (13809268703).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Republic_Square_and_National_Theatre_behind_(13809268703).jpg?width=1280",
+     "tekija": "Jorge Láscar from Melbourne, Australia",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Republic_Square_and_National_Theatre_behind_(13809268703).jpg",
+     "selite": "Ruhtinas Mihailon ratsastajapatsas seisoo aukion keskellä.",
+     "leveys": 4288,
+     "korkeus": 2848,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1265998",
+   "nimi": "Pyhän Mikaelin katedraali",
+   "peruste": "sitelinks",
+   "koko_m": 100,
+   "lat": 44.81806,
+   "lon": 20.45214,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Saborna crkva - pogled sa reke.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Saborna_crkva_-_pogled_sa_reke.JPG?width=1280",
+     "tekija": "Photoshooterka",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Saborna_crkva_-_pogled_sa_reke.JPG",
+     "selite": "Belgradin vanha ortodoksinen katedraali kohoaa Savan rannan yläpuolella.",
+     "leveys": 4288,
+     "korkeus": 3216,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Saborna crkva, Beograd 06.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Saborna_crkva%2C_Beograd_06.jpg?width=1280",
+     "tekija": "ZoranCvetkovic",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Saborna_crkva%2C_Beograd_06.jpg",
+     "selite": "Katedraalin barokkityylinen kellotorni on 1800-luvun alun Belgradia.",
+     "leveys": 3727,
+     "korkeus": 2752,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1590792",
+   "nimi": "Serbian kansalliskokouksen talo",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 44.81167,
+   "lon": 20.46583,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "House of the National Assembly of the Republic of Serbia Belgrade 2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/House_of_the_National_Assembly_of_the_Republic_of_Serbia_Belgrade_2.jpg?width=1280",
+     "tekija": "kallerna",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:House_of_the_National_Assembly_of_the_Republic_of_Serbia_Belgrade_2.jpg",
+     "selite": "Parlamenttitalo on vihreäkupolinen uusklassinen rakennus Belgradin keskustassa.",
+     "leveys": 5100,
+     "korkeus": 3450,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "House of the National Assembly of the Republic of Serbia Belgrade 1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/House_of_the_National_Assembly_of_the_Republic_of_Serbia_Belgrade_1.jpg?width=1280",
+     "tekija": "kallerna",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:House_of_the_National_Assembly_of_the_Republic_of_Serbia_Belgrade_1.jpg",
+     "selite": "Rakennus valmistui 1930-luvulla ja on Serbian kansanedustuslaitoksen koti.",
+     "leveys": 5000,
+     "korkeus": 3050,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1254795",
+   "nimi": "Pyhän Markuksen kirkko",
+   "peruste": "sitelinks",
+   "koko_m": 100,
+   "lat": 44.81028,
+   "lon": 20.46889,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Saint Mark church Belgrade Tasmajdan.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Saint_Mark_church_Belgrade_Tasmajdan.JPG?width=1280",
+     "tekija": "Orjen",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Saint_Mark_church_Belgrade_Tasmajdan.JPG",
+     "selite": "Pyhän Markuksen kirkko on serbo-bysanttilaistyylinen tiilikirkko Tašmajdanin puiston laidalla.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Bg 0372 Sveti-Marko-Tašmajdan.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bg_0372_Sveti-Marko-Ta%C5%A1majdan.jpg?width=1280",
+     "tekija": "Stebunik",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bg_0372_Sveti-Marko-Ta%C5%A1majdan.jpg",
+     "selite": "Kirkko on 1900-luvun alun rakennus, jonka tiilipinta ja kupolit jäljittelevät keskiaikaista serbialaista tyyliä.",
+     "leveys": 2048,
+     "korkeus": 1536,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1548278",
+   "nimi": "Suuri sotasaari",
+   "peruste": "sitelinks",
+   "koko_m": 1500,
+   "lat": 44.83333,
+   "lon": 20.43333,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Great War Island pontoon bridge.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Great_War_Island_pontoon_bridge.jpg?width=1280",
+     "tekija": "Nikola Smolenski",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Great_War_Island_pontoon_bridge.jpg",
+     "selite": "Suuri sotasaari on Savan ja Tonavan yhtymäkohdan luonnonsuojelualue keskellä kaupunkia.",
+     "leveys": 2560,
+     "korkeus": 1920,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Ушће Саве у Дунав поред десне обале Великог ратног острва и Калемегдана.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%A3%D1%88%D1%9B%D0%B5_%D0%A1%D0%B0%D0%B2%D0%B5_%D1%83_%D0%94%D1%83%D0%BD%D0%B0%D0%B2_%D0%BF%D0%BE%D1%80%D0%B5%D0%B4_%D0%B4%D0%B5%D1%81%D0%BD%D0%B5_%D0%BE%D0%B1%D0%B0%D0%BB%D0%B5_%D0%92%D0%B5%D0%BB%D0%B8%D0%BA%D0%BE%D0%B3_%D1%80%D0%B0%D1%82%D0%BD%D0%BE%D0%B3_%D0%BE%D1%81%D1%82%D1%80%D0%B2%D0%B0_%D0%B8_%D0%9A%D0%B0%D0%BB%D0%B5%D0%BC%D0%B5%D0%B3%D0%B4%D0%B0%D0%BD%D0%B0.jpg?width=1280",
+   "tekija": "Petar Milošević",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%D0%A3%D1%88%D1%9B%D0%B5_%D0%A1%D0%B0%D0%B2%D0%B5_%D1%83_%D0%94%D1%83%D0%BD%D0%B0%D0%B2_%D0%BF%D0%BE%D1%80%D0%B5%D0%B4_%D0%B4%D0%B5%D1%81%D0%BD%D0%B5_%D0%BE%D0%B1%D0%B0%D0%BB%D0%B5_%D0%92%D0%B5%D0%BB%D0%B8%D0%BA%D0%BE%D0%B3_%D1%80%D0%B0%D1%82%D0%BD%D0%BE%D0%B3_%D0%BE%D1%81%D1%82%D1%80%D0%B2%D0%B0_%D0%B8_%D0%9A%D0%B0%D0%BB%D0%B5%D0%BC%D0%B5%D0%B3%D0%B4%D0%B0%D0%BD%D0%B0.jpg",
+   "selite": "Belgrad syntyi Savan ja Tonavan yhtymäkohtaan, jota vartioi Kalemegdanin linnoitus.",
+   "leveys": 8000,
+   "korkeus": 5760,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Sava river in Belgrade, view from Kalemegdan fortress.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sava_river_in_Belgrade%2C_view_from_Kalemegdan_fortress.jpg?width=1280",
+   "tekija": "Petar Milošević",
+   "lisenssi": "CC BY 3.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Sava_river_in_Belgrade%2C_view_from_Kalemegdan_fortress.jpg",
+   "selite": "Savan joki ja sen sillat Belgradin vanhankaupungin ja Uuden Belgradin välillä.",
+   "leveys": 2592,
+   "korkeus": 1944,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

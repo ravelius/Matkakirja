@@ -198,6 +198,12 @@
   "syy": "ei ulkokuvaa tervahaudoista; löydetyt kuvat ovat museon sisätiloista"
  },
  {
+  "q": "Q8656",
+  "nimi": "Croix-Rousse",
+  "kaupunki": "lyon",
+  "syy": "ei tunnistettavaa vapaata kuvaa >= 1200 px"
+ },
+ {
   "q": "Q68118772",
   "nimi": "Amazonasin maantieteellinen ja historiallinen instituutti",
   "kaupunki": "manaus",
@@ -208,6 +214,12 @@
   "nimi": "Muzdalifah",
   "kaupunki": "mekka",
   "syy": "ei kelvollista kuvaa (vain yksi huonolaatuinen, ei tunnistettava)"
+ },
+ {
+  "q": "Q672082",
+  "nimi": "Sant'Eustorgion basilika",
+  "kaupunki": "milano",
+  "syy": "ei vapaata ulkokuvaa >= 1 200 px (vain piirroksia ja epigrafisia kuvia)"
  },
  {
   "q": "Q5776873",
@@ -262,6 +274,18 @@
   "nimi": "Pompidou-keskus",
   "kaupunki": "pariisi",
   "syy": "ei hyvää vapaata ulkokuvaa: löytyneet kuvat ovat joko kaukaa, ihmispainotteisia tai väärä kohde"
+ },
+ {
+  "q": "Q658743",
+  "nimi": "Kristuksen ylösnousemuksen katedraali",
+  "kaupunki": "podgorica",
+  "syy": "moderni rakennus (valmistui 2013), suunnittelijan oikeudet; ohitettu"
+ },
+ {
+  "q": "Q1267436",
+  "nimi": "Millennium-silta",
+  "kaupunki": "podgorica",
+  "syy": "moderni silta (2005), suunnittelijan oikeudet; ohitettu"
  },
  {
   "q": "Q2289928",
@@ -322,6 +346,12 @@
   "nimi": "Sanganebin kansallispuisto",
   "kaupunki": "suakin",
   "syy": "ei vapaata kuvaa >= 1200 px, jossa kohde on tunnistettavasti"
+ },
+ {
+  "q": "Q1734896",
+  "nimi": "Kašvetin kirkko",
+  "kaupunki": "tbilisi",
+  "syy": "vain sisätilakuvia tai väkijoukkokuvia, ei vapaata ulkokuvaa"
  },
  {
   "q": "Q1003130",

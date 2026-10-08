@@ -1,0 +1,369 @@
+{
+ "kaupunki": "bern",
+ "kaupunkiQ": "Q70",
+ "kohteet": [
+  {
+   "q": "Q687973",
+   "nimi": "Bernin vanhakaupunki",
+   "peruste": "UNESCO",
+   "koko_m": 600,
+   "lat": 46.94806,
+   "lon": 7.45028,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Altstadt Bern KGS-Nr 9554.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Altstadt_Bern_KGS-Nr_9554.jpg?width=1280",
+     "tekija": "Lightshaper",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Altstadt_Bern_KGS-Nr_9554.jpg",
+     "selite": "Bernin keskiaikainen vanhakaupunki asettuu Aare-joen mutkan sisään ja kuuluu Unescon maailmanperintöön.",
+     "leveys": 2407,
+     "korkeus": 1605,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Blick vom Rosengarten auf Nydeggkirche & Altstadt Bern (2022).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Blick_vom_Rosengarten_auf_Nydeggkirche_%26_Altstadt_Bern_(2022).jpg?width=1280",
+     "tekija": "JoachimKohler-HB",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Blick_vom_Rosengarten_auf_Nydeggkirche_%26_Altstadt_Bern_(2022).jpg",
+     "selite": "Vanhakaupungin punakattoiset talot kohoavat jyrkän rinteen päällä Aaren yläpuolella.",
+     "leveys": 4800,
+     "korkeus": 3200,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Bern 122.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bern_122.jpg?width=1280",
+     "tekija": "FrDr",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bern_122.jpg",
+     "selite": "Vanhakaupungin pitkät kadut ja yhtenäiset katot erottuvat ylhäältä katsottuna.",
+     "leveys": 5472,
+     "korkeus": 3648,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q30911",
+   "nimi": "Bundeshaus, Sveitsin parlamenttitalo",
+   "peruste": "sitelinks",
+   "koko_m": 120,
+   "lat": 46.94667,
+   "lon": 7.44417,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Bundeshaus Bern 2009, Flooffy.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bundeshaus_Bern_2009%2C_Flooffy.jpg?width=1280",
+     "tekija": "Flooffy",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bundeshaus_Bern_2009%2C_Flooffy.jpg",
+     "selite": "Bundeshaus on Sveitsin liittovaltion parlamentin ja hallituksen kotipaikka.",
+     "leveys": 1280,
+     "korkeus": 843,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "2023-07-01 Offene Bundesmeile Drumherum BE 014.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2023-07-01_Offene_Bundesmeile_Drumherum_BE_014.jpg?width=1280",
+     "tekija": "Ahmet Düz, Dreiländer- & Oberrheinfotograf",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2023-07-01_Offene_Bundesmeile_Drumherum_BE_014.jpg",
+     "selite": "Vihreän kupolin kruunaama parlamenttitalo kohoaa Aaren rinteellä vanhankaupungin vierellä.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q246105",
+   "nimi": "Zytglogge-kellotorni",
+   "peruste": "sitelinks",
+   "koko_m": 60,
+   "lat": 46.94806,
+   "lon": 7.44778,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Bern - Kramgasse mit Zytglogge (2014).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bern_-_Kramgasse_mit_Zytglogge_(2014).jpg?width=1280",
+     "tekija": "JoachimKohler-HB",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bern_-_Kramgasse_mit_Zytglogge_(2014).jpg",
+     "selite": "Zytglogge on keskiaikainen kellotorni, jonka tähtitieteellinen kello on Bernin tunnetuin nähtävyys.",
+     "leveys": 4500,
+     "korkeus": 3000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "67 Zytgloggeturm.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/67_Zytgloggeturm.JPG?width=1280",
+     "tekija": "Tilman-AB",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:67_Zytgloggeturm.JPG",
+     "selite": "Tornin kello ja kellopeli kiehtovat kävijöitä jo satojen vuosien ajalta.",
+     "leveys": 2288,
+     "korkeus": 1712,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "2008-07-19 Zytglogge.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2008-07-19_Zytglogge.jpg?width=1280",
+     "tekija": "Maksym Kozlenko",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2008-07-19_Zytglogge.jpg",
+     "selite": "Torni toimi aikoinaan kaupungin länsiporttina ja sulkee Kramgassen kadun näkymän.",
+     "leveys": 2700,
+     "korkeus": 1800,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q688315",
+   "nimi": "Bernin Münster",
+   "peruste": "sitelinks",
+   "koko_m": 100,
+   "lat": 46.94722,
+   "lon": 7.45139,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Berner Muenster2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Berner_Muenster2.jpg?width=1280",
+     "tekija": "Wladyslaw Sojka",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Berner_Muenster2.jpg",
+     "selite": "Myöhäisgoottilainen Münster on Sveitsin korkeimman kirkontornin omistava tuomiokirkko.",
+     "leveys": 1488,
+     "korkeus": 3043,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Aare, Kirchenfeldbrücke mit Tram, Casino & Münsterturm (Bern 2022).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aare%2C_Kirchenfeldbr%C3%BCcke_mit_Tram%2C_Casino_%26_M%C3%BCnsterturm_(Bern_2022).jpg?width=1280",
+     "tekija": "JoachimKohler-HB",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aare%2C_Kirchenfeldbr%C3%BCcke_mit_Tram%2C_Casino_%26_M%C3%BCnsterturm_(Bern_2022).jpg",
+     "selite": "Münsterin torni nousee Aaren yllä siltojen ja vanhankaupungin takaa.",
+     "leveys": 4200,
+     "korkeus": 2800,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "2014 Bern Münster Cathedral, Bern Switzerland Ank Kumar Infosys Limited 03.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2014_Bern_M%C3%BCnster_Cathedral%2C_Bern_Switzerland_Ank_Kumar_Infosys_Limited_03.jpg?width=1280",
+     "tekija": "Ank Kumar",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2014_Bern_M%C3%BCnster_Cathedral%2C_Bern_Switzerland_Ank_Kumar_Infosys_Limited_03.jpg",
+     "selite": "Kirkon harmaa torni hallitsee Bernin vanhankaupungin siluettia.",
+     "leveys": 3411,
+     "korkeus": 3411,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q20850350",
+   "nimi": "Bärenpark",
+   "peruste": "kaupungin päänähtävyys",
+   "koko_m": 150,
+   "lat": 46.94806,
+   "lon": 7.45917,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Baerenpark Bern 01 09.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Baerenpark_Bern_01_09.jpg?width=1280",
+     "tekija": "Хрюша",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Baerenpark_Bern_01_09.jpg",
+     "selite": "Karhupuisto Aaren rinteessä jatkaa kaupungin vaakunaeläimen, karhun, vanhaa perinnettä.",
+     "leveys": 1575,
+     "korkeus": 1049,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q458115",
+   "nimi": "Nydeggin silta",
+   "peruste": "kaupungin päänähtävyys",
+   "koko_m": 150,
+   "lat": 46.94833,
+   "lon": 7.45889,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Nydeggbruecke Untertorbruecke Bern.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Nydeggbruecke_Untertorbruecke_Bern.jpg?width=1280",
+     "tekija": "Baikonur",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Nydeggbruecke_Untertorbruecke_Bern.jpg",
+     "selite": "Kaarisilta ylittää Aaren vanhankaupungin itäpäässä Nydeggin kirkon kupeessa.",
+     "leveys": 2288,
+     "korkeus": 1712,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Aare im Mattequartier in Bern im Aug. 2014.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aare_im_Mattequartier_in_Bern_im_Aug._2014.jpg?width=1280",
+     "tekija": "JoachimKohler-HB",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aare_im_Mattequartier_in_Bern_im_Aug._2014.jpg",
+     "selite": "Aaren vihertävä vesi virtaa Matten kaupunginosan ja vanhojen siltojen alitse.",
+     "leveys": 4800,
+     "korkeus": 3200,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2167108",
+   "nimi": "Rosengarten",
+   "peruste": "kaupungin päänähtävyys",
+   "koko_m": 200,
+   "lat": 46.9519,
+   "lon": 7.46028,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Bern Rosengarten Teil-Ansicht.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bern_Rosengarten_Teil-Ansicht.jpg?width=1280",
+     "tekija": "Schofför",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bern_Rosengarten_Teil-Ansicht.jpg",
+     "selite": "Ruusutarha rinteellä tarjoaa Bernin kuuluisimman näkymän yli vanhankaupungin.",
+     "leveys": 1600,
+     "korkeus": 1072,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1588585",
+   "nimi": "Käfigturm",
+   "peruste": "kaupungin päänähtävyys",
+   "koko_m": 50,
+   "lat": 46.94816,
+   "lon": 7.44394,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Anna Seiler Brunnen DSC05727.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Anna_Seiler_Brunnen_DSC05727.jpg?width=1280",
+     "tekija": "Krol:k",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Anna_Seiler_Brunnen_DSC05727.jpg",
+     "selite": "Vanha kaupunginportti ja vankilatorni seisoo Marktgassen päässä Anna Seilerin suihkukaivon takana.",
+     "leveys": 2144,
+     "korkeus": 3444,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1743111",
+   "nimi": "Kirchenfeldbrücke",
+   "peruste": "kaupungin päänähtävyys",
+   "koko_m": 250,
+   "lat": 46.94567,
+   "lon": 7.44862,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Mattenquartier1.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mattenquartier1.JPG?width=1280",
+     "tekija": "Adrian Michael",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mattenquartier1.JPG",
+     "selite": "1800-luvun lopun teräskaarisilta ylittää Aaren laakson vanhankaupungin ja Kirchenfeldin välillä.",
+     "leveys": 5184,
+     "korkeus": 3888,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q390003",
+   "nimi": "Einsteinhaus",
+   "peruste": "kaupungin päänähtävyys",
+   "koko_m": 40,
+   "lat": 46.94767,
+   "lon": 7.44997,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Albert einstein house bern.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Albert_einstein_house_bern.JPG?width=1280",
+     "tekija": "Dsmntl",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Albert_einstein_house_bern.JPG",
+     "selite": "Kramgassen talossa asui Albert Einstein, joka kehitti täällä suhteellisuusteoriaansa.",
+     "leveys": 1932,
+     "korkeus": 2576,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Blick vom Rosengarten auf die Berner Altstadt (2022).jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Blick_vom_Rosengarten_auf_die_Berner_Altstadt_(2022).jpg?width=1280",
+   "tekija": "JoachimKohler-HB",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Blick_vom_Rosengarten_auf_die_Berner_Altstadt_(2022).jpg",
+   "selite": "Bern levittäytyy Aaren mutkaan, ja vanhankaupungin punaiset katot ympäröivät kirkontornia.",
+   "leveys": 4800,
+   "korkeus": 3200,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Altstadt Bern von Rosengarten im Winter (33274502068).jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Altstadt_Bern_von_Rosengarten_im_Winter_(33274502068).jpg?width=1280",
+   "tekija": "Thomas Woodtli from Zürich, Switzerland",
+   "lisenssi": "CC BY-SA 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Altstadt_Bern_von_Rosengarten_im_Winter_(33274502068).jpg",
+   "selite": "Talvella lumi peittää Aaren rinteet, ja vanhakaupunki näyttää erityisen rauhalliselta.",
+   "leveys": 4032,
+   "korkeus": 3024,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}
