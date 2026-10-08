@@ -51,6 +51,17 @@
 - #4217 13 havainnekuvaluetteloa julki; #4088 (Opus-kytkin) suljettu PT:n päätöksellä, haara säilyy.
 - PYSÄHDYKSET: #4219 (data/oppaan-kuvat/kaupungit: Granada, Košice, Knossos, Tampere koordinaatit OSM API 0.6:sta; Nominatimin
   robots.txt kieltää /search, Overpass oli 504). Vaikuttaa vasta kuvalistassa v8 (Sisältökirjurilla v7 paketissa 20261008c) → sovi kuka rakentaa.
+- 8.10. 19–22: KUULEMATON LAADUNVARMISTUS docs/raportit/aanten-laatu-20261008.md osat 1–5 (_tyo/aani-qa: AST-luokitin venv-aaniluokitin,
+  tarkista.py, kaikki.py, inventaario.py). Korvaukset: aanet-saa-v3, aanet-fp-v3 (köydet, sukellus), e3-v2, fp-v1b, ihmisen-matka-v2,
+  aanimaisema-v2 (_tyo/tehoste-korjaus/). Natiivi: proto-haarat pelikoodari/maisemakori-nc cd3f3c770 (CC BY-NC pois, Peli-testit 419/419;
+  työtila wt/pelikoodari-natiivi-aanet sparse) ja pelikoodari/tehoste-korvaukset e49be4764 (LS1 katselmoi) → runko C. Web #4229 (NC pois,
+  data/aanilahteet.json 43 nimeämistä → Natiivi-UI:n Lähteet-näkymä). AaniTaulut.cs on Pelikoodarin portti (natiivi-kultaiset).
+  Luokittimen rajat: alle 0,5 s:n äänet, narinat ja kankaat epäluotettavia; tuulille Wind enintään ~0,54.
+- TUKHOLMAN KERTOJAT tuotannossa (#4231, opas/esittely-v2/tukholma.json; tools/opas/tee-esittelyaanet-v2.mjs = avaus + alkuvara 120 ms).
+  Pariisilla äänet olivat jo. 31 muun kaupungin äänet yhä omistajan luvan takana.
+- SONNISS GDC (PT: ilmaiset äänet AssetBundle/Addressables-paketteina, ei avoimia mp3:ia): sonniss.com Cloudflaren bottitarkistuksen
+  takana → omistaja lataa selaimella vuodet 2017, 2018 ja 2020 kansioon /Volumes/T7 4TB/sonniss/; hakemisto archive.orgin listoista
+  _tyo/sonniss/hakemisto.json (EI ääniä kolmansien osapuolten kopioista). Ostot vasta, jos aihe puuttuu (raportin osa 5).
 - Simulaattorit 8.10. alkaen T7-sarjassa: `source /Users/Shared/Claude/proto-3d/tyokalut/simusarja.sh || exit 2`; nohup/xargs/timeout/env-ajoissa `xcrun simctl --set "$MK_SIMSET" …` ja UDID `mk_kaanna <UDID>`.
 
 # Pelikoodarin luovutus 7.10.2026 (päivitetty klo 23.4x, VAIHTO NYT)
