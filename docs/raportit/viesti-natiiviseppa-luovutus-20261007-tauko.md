@@ -3,7 +3,14 @@
 Luovuttaja: Natiiviseppä (Opus 5.5, high). Edellinen: viesti-natiiviseppa-luovutus-20261005-iltapaiva.md (käytännöt voimassa).
 Tarkempi lokirivistö: muisti natiiviseppa-tila-20261003.md (uusin rivi ylimpänä).
 
-## TILA 9.10. 01.0x (UUSIN)
+## TILA 9.10. 01.3x (UUSIN)
+JUNA 169 runko natiiviseppa/juna-169 **a38cb271a** (+ NUI 2e519d7a7 ⊇ 6b087ec39 ⊇ 9649b22b8, + LS1 avaus-169 42f2ec5b2 välivaihe); testit 453/419/1088
+(Linssit-satunnaishylkäys kerran, uusinta läpi), tarkista 0. EI LUKITA vielä: odottaa LS1:n lopullista 169-SHA:ta (⊇ sumennus-169 8aef6a2ff;
+siltalauseet, kohdekaari, kierto, siirtymä, Concorde, kuvanoston kytkentä) ja Siirtoseppä 7cb1335bc (v45t/v45u, testiluvut Siirtosepältä).
+TAKARAJA 06.30 (herätys ajastettu 06.25): lukitse silloin ilman myöhästyneitä (→ 170). Simukäännös, kun LS2:n simu vapautuu (Julkaisija ilmoittaa).
+Muutosloki PT:ltä lukituksessa. Seuraava 8K-lisäys → uusi UltraAtlaksetMt (LS2 mittaa).
+
+## TILA 9.10. 01.0x
 BUILD 168 6a67a9b19: iOS TF 37847901354, Mac TF käynnistetty 00.51, junavahti T7 4/4 00.50.
 **JUNA 169 = natiiviseppa/juna-169 45ac381fd** (PT KUITTASI): BUILD 168 + Siirtoseppä 1b43eb127 + juna169 0d8de8b8a (v45s 8K+POM, TAA, tuulet, hahmolaskuri)
 + LS1 13f809ad1 + ajallinen-169 734ec0ba5 + NUI c6fbfead6 (⊇ a6748a855 ⊇ 01698c19b liput/julisteet, pallon Mikseri) + 3bad314c0 + budjetti-169 9747db7f4;
