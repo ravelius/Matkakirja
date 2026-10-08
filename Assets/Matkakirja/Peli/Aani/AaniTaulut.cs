@@ -285,13 +285,13 @@ namespace Matkakirja.Peli
             return t;
         }
 
-        /// <summary>aani-ehdokkaat.js OLETUSKORIT (ei viety pakettiin; jälki 7 ja paketin maisemakori-rivit vartioivat).</summary>
+        /// <summary>aani-ehdokkaat.js OLETUSKORIT (ei viety pakettiin; jälki 7 ja paketin maisemakori-rivit vartioivat).
+        /// 8.10.2026: CC BY-NC -äänet 723081, 848927 ja 411996 poistettu (maksullinen peli; Freesound-API, Pelikoodari).</summary>
         static readonly (string, string[])[] OletuskoritWeb =
         {
             ("lentoasema", new[] { "https://cdn.freesound.org/previews/731/731249_10924423-lq.mp3#voima=3.04" }),
             ("lentokone", new[] { "https://cdn.freesound.org/previews/433/433002_138-lq.mp3#voima=2.69" }),
             ("basaari", new[] {
-                "https://cdn.freesound.org/previews/723/723081_2978883-lq.mp3#voima=0.55",
                 "https://cdn.freesound.org/previews/511/511005_571436-lq.mp3#voima=1.23" }),
             ("aavikko", new[] {
                 "https://cdn.freesound.org/previews/714/714271_14696146-lq.mp3#voima=0.98",
@@ -300,7 +300,6 @@ namespace Matkakirja.Peli
                 "https://cdn.freesound.org/previews/635/635912_2247456-lq.mp3#voima=4.32",
                 "https://cdn.freesound.org/previews/579/579250_2977885-lq.mp3#voima=0.27" }),
             ("meri", new[] {
-                "https://cdn.freesound.org/previews/848/848927_17398983-lq.mp3#voima=0.82",
                 "https://cdn.freesound.org/previews/635/635103_10065335-lq.mp3#voima=0.15",
                 "https://cdn.freesound.org/previews/411/411509_1661766-lq.mp3#voima=0.15",
                 "https://cdn.freesound.org/previews/573/573187_97550-lq.mp3#voima=0.54",
@@ -317,11 +316,9 @@ namespace Matkakirja.Peli
                 "https://cdn.freesound.org/previews/714/714271_14696146-lq.mp3#alku=20&voima=0.98",
                 "https://cdn.freesound.org/previews/504/504694_778707-lq.mp3#voima=2.4",
                 "https://cdn.freesound.org/previews/612/612318_13563349-lq.mp3#voima=0.3",
-                "https://cdn.freesound.org/previews/764/764981_15688695-lq.mp3#voima=0.86",
-                "https://cdn.freesound.org/previews/411/411996_7037-lq.mp3#alku=52&voima=0.92" }),
+                "https://cdn.freesound.org/previews/764/764981_15688695-lq.mp3#voima=0.86" }),
             ("ylanko", new[] { "https://cdn.freesound.org/previews/543/543449_3377875-lq.mp3#voima=0.22" }),
             ("kaupunki", new[] {
-                "https://cdn.freesound.org/previews/723/723081_2978883-lq.mp3#voima=0.55",
                 "https://cdn.freesound.org/previews/677/677253_9756914-lq.mp3#voima=0.47",
                 "https://cdn.freesound.org/previews/511/511005_571436-lq.mp3#voima=1.23" }),
             ("satama", new[] {
