@@ -359,8 +359,26 @@ namespace Matkakirja.Linssit.Kierros
             if (!PalloLento) return Math.Max(LentoMinS, Math.Min(LentoMaxS, s));
             // Omistajan tarkennus 23.4x: "pallolla voi olla sama huippunopeus" → kesto kuten TF 163:ssa (PalloKerroin); pehmeys
             // tulee S-käyristä (OpasKuvaus.Lennossa: suunta etenemisen mukaan, ei kääntymistä paikallaan).
-            s *= PalloKerroin(km);
-            return Math.Max(LentoMinS, Math.Min(LentoMaxS * PalloKerroinLyhyt, s));
+            return PalloProfiili(matkaM).kesto;
+        }
+
+        /// <summary>
+        /// PALLON RAMPIT (Päätoimittaja 8.10. 07.5x: "lepo → huippunopeus 1–1,5 s … noin 3 s:n S-käyriksi, huippunopeus ennallaan"):
+        /// kiihdytys ja jarrutus vähintään PalloRamppiS (smootherstep, OpasKuvaus.Eteneminen). Huippunopeus kuten TF 163:ssa
+        /// (kesto × PalloKerroin, rampin osuus OpasKuvaus.RamppiOsuus), joten kesto pitenee rampin lisäyksen verran. Lyhyt lento:
+        /// pelkkä S-käyrä (osuus 0,5), kesto enintään 2 × PalloRamppiS ja huippu enintään entinen.
+        /// </summary>
+        public const double PalloRamppiS = 3.5;
+        public static (double kesto, double osuus) PalloProfiili(double matkaM)
+        {
+            double km = matkaM / 1000.0;
+            double s = (km < 10 ? 3.0 + 2.2 * Math.Sqrt(km) : 10.0 + 4.0 * Math.Log10(km / 10.0)) * PalloKerroin(km);
+            double t0 = Math.Max(LentoMinS, Math.Min(LentoMaxS * PalloKerroinLyhyt, s));
+            double a0 = OpasKuvaus.RamppiOsuus(matkaM);
+            double tasainen = t0 * (1 - a0);   // 1 / huippunopeus (lennon osuutta sekunnissa)
+            if (a0 * t0 >= PalloRamppiS) return (t0, a0);
+            if (tasainen >= PalloRamppiS) return (tasainen + PalloRamppiS, PalloRamppiS / (tasainen + PalloRamppiS));
+            return (Math.Max(t0, Math.Min(2 * PalloRamppiS, 2 * tasainen)), 0.5);
         }
 
         /// <summary>Pallolennon suunnan muutos enintään PalloKaantoAstS (Päätoimittaja 23.2x).</summary>

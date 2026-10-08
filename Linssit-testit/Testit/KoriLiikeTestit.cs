@@ -36,10 +36,17 @@ namespace Matkakirja.Linssit.Testit
                 double T = OpasSilmukka.LennonKesto(m);
                 var r = Mittaa(m, T);
                 OpasSilmukka.PalloLento = false;
-                double vanha = OpasSilmukka.LennonKesto(m) * OpasSilmukka.PalloKerroin(m / 1000);
-                Oleta.Tosi(Math.Abs(T - Math.Max(OpasSilmukka.LentoMinS, Math.Min(OpasSilmukka.LentoMaxS * OpasSilmukka.PalloKerroinLyhyt, vanha))) < 1e-9,
-                    $"{m} m: sama kesto ja huippunopeus kuin TF 163 ({T:F1} s)");
-                Oleta.Tosi(r.kaannosEnnenLiiketta < 0.5, $"{m} m: ei kääntymistä paikallaan ({r.kaannosEnnenLiiketta:F2}° ennen 1 %:n etenemistä)");
+                double vanha = Math.Max(OpasSilmukka.LentoMinS, Math.Min(OpasSilmukka.LentoMaxS * OpasSilmukka.PalloKerroinLyhyt,
+                    OpasSilmukka.LennonKesto(m) * OpasSilmukka.PalloKerroin(m / 1000)));
+                // Päätoimittaja 8.10. 07.5x: rampit vähintään PalloRamppiS, huippunopeus kuten TF 163 (kesto pitenee).
+                var (_, osuus) = OpasSilmukka.PalloProfiili(m);
+                double huippu = 1 / (T * (1 - osuus)), huippuEnnen = 1 / (vanha * (1 - OpasKuvaus.RamppiOsuus(m)));
+                Oleta.Tosi(huippu <= huippuEnnen + 1e-9 && (osuus >= 0.5 - 1e-9 || huippu >= huippuEnnen - 1e-9),
+                    $"{m} m: huippunopeus kuten TF 163 ({huippu:F4} / {huippuEnnen:F4} per s, kesto {vanha:F1} → {T:F1} s)");
+                Oleta.Tosi(osuus * T >= Math.Min(OpasSilmukka.PalloRamppiS, T / 2) - 1e-9, $"{m} m: ramppi {osuus * T:F1} s");
+                // Suunta etenee etenemisen mukana: 1 %:n kohdalla enintään ~1 % koko käännöksestä (pitkä lento kääntyy enemmän).
+                double kokoKaanto = Math.Abs(KierrosLento.Kiedo(OpasSilmukka.PalloTulosuunta(180, 0, T) - 180));
+                Oleta.Tosi(r.kaannosEnnenLiiketta < Math.Max(0.5, 0.011 * kokoKaanto), $"{m} m: ei kääntymistä paikallaan ({r.kaannosEnnenLiiketta:F2}° ennen 1 %:n etenemistä, koko {kokoKaanto:F0}°)");
                 Oleta.Tosi(r.kaanto <= 10.2, $"{m} m: kääntyminen {r.kaanto:F1}°/s");
                 Oleta.Tosi(r.alkuKiihtyvyys < 0.08 * r.maksKiihtyvyys && r.loppuKiihtyvyys < 0.08 * r.maksKiihtyvyys,
                     $"{m} m: kiihtyvyys alkaa ja loppuu nollasta (S-käyrä): alku {r.alkuKiihtyvyys:F1}, loppu {r.loppuKiihtyvyys:F1}, maks {r.maksKiihtyvyys:F1} m/s²");

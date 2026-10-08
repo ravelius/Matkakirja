@@ -190,10 +190,13 @@ namespace Matkakirja.Linssit.Kierros
         /// smootherstep-rampilla, joten nopeus, kiihtyvyys ja nykäisy ovat jatkuvia). Lyhyellä matkalla ramppi on puolet lennosta (S-käyrä),
         /// pitkällä (≥ 2 km) neljännes, jolloin keskellä on tasainen vauhti (Päätoimittaja 23.4x).
         /// </summary>
+        /// <summary>Rampin osuus lennosta matkan mukaan: ≤ 500 m puolet (S-käyrä), ≥ 2 km neljännes.</summary>
+        public static double RamppiOsuus(double matkaM) => matkaM >= 2000 ? 0.25 : matkaM <= 500 ? 0.5 : 0.5 - 0.25 * (matkaM - 500) / 1500;
+
         public static double Eteneminen(double t, double matkaM)
         {
             t = Math.Max(0, Math.Min(1, t));
-            double a = matkaM >= 2000 ? 0.25 : matkaM <= 500 ? 0.5 : 0.5 - 0.25 * (matkaM - 500) / 1500;
+            double a = OpasSilmukka.PalloLento ? OpasSilmukka.PalloProfiili(matkaM).osuus : RamppiOsuus(matkaM);
             double kokonais = 1 - a;   // a·½ + (1 − 2a) + a·½
             // Nopeusrampit smootherstepinä (Päätoimittaja 8.10. 07.5x): kiihtyvyys alkaa ja loppuu nollasta (ei nykäisyä), rampin
             // pinta-ala sama a/2 kuin smoothstepillä → huippunopeus ja kesto ennallaan (omistaja).
