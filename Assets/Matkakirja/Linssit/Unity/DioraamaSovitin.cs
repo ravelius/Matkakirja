@@ -1612,13 +1612,15 @@ namespace Matkakirja.Natiivi
                 yield return LataaDetaljiKuva(d.AstcAlbedo, d.Albedo, "Detalji:" + d.Pinta + ":albedo", t => a = t);
                 yield return LataaDetaljiKuva(d.AstcNormaali, d.Normaali, "Detalji:" + d.Pinta + ":normaali", t => n = t);
                 yield return LataaDetaljiKuva(d.AstcKarheus, d.Karheus, "Detalji:" + d.Pinta + ":karheus", t => k = t);
+                Texture2D h = null;   // POM-korkeus vain Ultralle (LR v45s)
+                if (Laatutaso.Ultra && d.SyvyysM > 0) yield return LataaDetaljiKuva(d.AstcKorkeus, d.Korkeus, "Detalji:" + d.Pinta + ":korkeus", t => h = t);
                 if (kerta != avauskerta || rakennus3D == null)
                 {
-                    foreach (var t in new[] { a, n, k }) if (t != null) UnityEngine.Object.Destroy(t);
+                    foreach (var t in new[] { a, n, k, h }) if (t != null) UnityEngine.Object.Destroy(t);
                     yield break;
                 }
-                foreach (var t in new[] { a, n, k }) if (t != null) ladatutDetaljit.Add(t);
-                rakennus3D.AsetaDetalji(d.Pinta, a, n, k, d.M, d.Voima);
+                foreach (var t in new[] { a, n, k, h }) if (t != null) ladatutDetaljit.Add(t);
+                rakennus3D.AsetaDetalji(d.Pinta, a, n, k, d.M, d.Voima, h, d.SyvyysM);
                 o.Kirjaa($"poikki: detalji {d.Pinta} ({(a != null ? "albedo " : "")}{(n != null ? "normaali " : "")}{(k != null ? "karheus " : "")}m {d.M:F1}, voima {d.Voima:F2})");
             }
         }

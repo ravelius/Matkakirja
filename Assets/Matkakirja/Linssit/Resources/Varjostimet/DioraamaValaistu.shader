@@ -45,6 +45,8 @@ Shader "Matkakirja/Linssit/DioraamaValaistu"
         _DetaljiAlbedo ("Detalji: albedo (0,5-pohjainen)", 2D) = "grey" {}
         _DetaljiNormaali ("Detalji: normaali (OpenGL Y+)", 2D) = "bump" {}
         _DetaljiKarheus ("Detalji: karheus (R)", 2D) = "white" {}
+        _DetaljiKorkeus ("Detalji: korkeus (POM, lineaarinen)", 2D) = "white" {}
+        _DetaljiPom ("POM (x = syvyys UV, y = päällä)", Vector) = (0, 0, 0, 0)
     }
     SubShader
     {
@@ -99,6 +101,7 @@ Shader "Matkakirja/Linssit/DioraamaValaistu"
                 float _ValoVain;         // 1 = kävelyosa: valo leivotusta atlaksesta (UV1), ei pää- eikä taivasvaloa
                 float _Markyys;          // märkyys 0–1 (SeikkailuKavely.AsetaMarkyys)
                 float4 _Detalji;         // x = 1 / toistoväli m, y = voima, z = päällä (DioraamaRakennus.AsetaDetalji)
+                float4 _DetaljiPom;      // POM: x = syvyys UV, y = päällä (Ultra)
                 float _NormaaliPaalla;   // 1 = _NormaaliKuva tangenttiavaruudessa (mesh-tangentit; SeikkailuEsineet)
             CBUFFER_END
 
@@ -174,7 +177,7 @@ Shader "Matkakirja/Linssit/DioraamaValaistu"
                 }
 
                 // Detalji (juna 169): albedo-overlay, valaistus detaljinormaalilla.
-                DetaljiTulos dt = DioraamaDetalji(_Detalji, i.paikkaW, n);
+                DetaljiTulos dt = DioraamaDetalji(_Detalji, i.paikkaW, n, _DetaljiPom);
                 albedo *= dt.albedo;
                 n = dt.normaali;
 
@@ -271,6 +274,7 @@ Shader "Matkakirja/Linssit/DioraamaValaistu"
                 float _ValoVain;
                 float _Markyys;
                 float4 _Detalji;
+                float4 _DetaljiPom;
                 float _NormaaliPaalla;
             CBUFFER_END
 
@@ -319,6 +323,7 @@ Shader "Matkakirja/Linssit/DioraamaValaistu"
                 float _ValoVain;
                 float _Markyys;
                 float4 _Detalji;
+                float4 _DetaljiPom;
                 float _NormaaliPaalla;
             CBUFFER_END
 

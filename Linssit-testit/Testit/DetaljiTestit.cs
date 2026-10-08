@@ -29,8 +29,10 @@ namespace Matkakirja.Linssit.Testit
             // LR v45l: osoitin erilliseen tiedostoon.
             var o = DioraamaData.Lue(@"{ ""id"": ""x"", ""nimi"": ""x"", ""versio"": 1, ""detaljit"": ""blender/materiaalit/detaljit.json"" }");
             Oleta.Sama("blender/materiaalit/detaljit.json", o.DetaljitTiedosto);
-            DioraamaData.LueDetaljitTiedosto(@"{ ""versio"": 1, ""koodaus"": ""lineaarinen"", ""detaljit"": { ""kivi"": { ""albedo"": ""a.jpg"", ""astc"": { ""albedo"": ""a-6x6.astcm"", ""normaali"": ""n-6x6.astcm"", ""karheus"": ""k-6x6.astcm"" }, ""m"": 1.5, ""voima"": 0.6, ""lahde"": ""x"", ""lisenssi"": ""CC0"" } } }", o);
+            DioraamaData.LueDetaljitTiedosto(@"{ ""versio"": 1, ""koodaus"": ""lineaarinen"", ""detaljit"": { ""kivi"": { ""albedo"": ""a.jpg"", ""astc"": { ""albedo"": ""a-6x6.astcm"", ""normaali"": ""n-6x6.astcm"", ""karheus"": ""k-6x6.astcm"", ""korkeus"": ""h-6x6.astcm"" }, ""korkeus"": ""h.jpg"", ""syvyys_m"": 0.03, ""m"": 1.5, ""voima"": 0.6, ""lahde"": ""x"", ""lisenssi"": ""CC0"" } } }", o);
             Oleta.Tosi(o.Detaljit.TryGetValue("kivi", out var ok) && ok.AstcKarheus == "k-6x6.astcm", "erillinen tiedosto jäsennetty");
+            Oleta.Tosi(ok.Korkeus == "h.jpg" && ok.AstcKorkeus == "h-6x6.astcm" && System.Math.Abs(ok.SyvyysM - 0.03) < 1e-9, "POM: korkeus ja syvyys_m (LR v45s)");
+            Oleta.Tosi(r.Detaljit["kivi"].SyvyysM == 0 && r.Detaljit["kivi"].Korkeus == null, "ilman korkeutta ei POM:ia");
         }
 
         [Testi] static void KavelyosienValoatlakset()
