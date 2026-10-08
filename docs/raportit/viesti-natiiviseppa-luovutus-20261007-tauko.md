@@ -12,7 +12,7 @@ Proto-haara natiiviseppa/t7-simusarja 77a806aa7 (todistusajo, sarja.sh, simkoske
 palvelu-kopio). Todennus Julkaisijan vuorolla: lokit/natiiviseppa-t7-todennus/t7-tyokalut-20261008.png. Roolien ohje Postivahdille.
 Avoinna: MCP-simutyökalu näkee vain sisäisen sarjan; vanhojen sarjojen poisto omistajan Run-rivillä päivän käytön jälkeen.
 
-**JUNA 164 = ILLAN JUNA** (Päätoimittaja 07.4x): ESIRUNKO natiiviseppa/juna-164 **b85458f10** (wt/proto-natiiviseppa-j144) = 062bb439 +
+**JUNA 164 = ILLAN JUNA** (Päätoimittaja 07.4x): ESIRUNKO natiiviseppa/juna-164 **29817f360** (myöh. + NUI 67727816f, b529268aa, 69e0b05ae ⊇ 8b4659e98, 7d366ce92 tyylikirja-pariteetti — kaikki KUITATTU; tyylikirjan ristiriita ratkaistu 7d366ce92:n generoiduilla; testit 448/419/882, unity 0); alkuperäinen b85458f10 (wt/proto-natiiviseppa-j144) = 062bb439 +
 Siirtoseppä välikärki 844b24ac1 + NUI f25875292 (⊇ 8aa55e02) + 8b4659e98 + LS2 08a6891a0 + 7d66739d0 + 77a806aa7; testit 448/419/882,
 unity 0, ei ristiriitoja. EI KÄÄNNETÄ ennen Siirtosepän Olavinlinna-palan kuittausta (iltapäivä; lopullinen kärki korvaa 844b:n).
 LS1 eec1a9283 lisätään vasta Päätoimittajan videokatselmuksen jälkeen (koeyhdistelmä ok, Linssit 885).
