@@ -6,6 +6,14 @@ worktreet /Users/Shared/Claude/wt/proto-natiivi-ui-<aihe>. Käännös: lokit/nat
 Simu vain Julkaisijan "SIMU NYT" -viestistä, oma iPhone FB234D08-4693-4496-9C7A-6C7C15B03963, iPad
 AD119F7B-A2A2-43EE-8769-7326DD757F89; lopuksi sammutus ja "simu vapaa".
 
+## TILA 8.10. klo 19.3x (JATKA TÄSTÄ)
+
+Juna 167: olavinlinna-kortti 896d6b823 Natiivisepän rungossa A (3c6377160); kuvat 200.
+JUNA 168 VALMIS, KUITTAUSPYYNTÖ VASTA RAJAPINNAN SOPIMISEN JÄLKEEN: natiivi-ui/vihje-valikko 007b189a9 (896d6b823:n päällä):
+linnan ☰ → "Vihje" vain seikkailussa → SeikkailuTapit.PyydaVihje → SeikkailuPelaaja.PuluVihje/VihjePyydetty. TEHTÄVÄ: junan 167 (22.00)
+jälkeen sovi Siirtosepän kanssa maailmavihjeen rajapinnan nimi (jos muuttuu, päivitä PyydaVihje), testit, 1 rivin kuittauspyyntö PT:lle.
+Juna 168 myös: pohjavahti-168c b62e2569d (kuitattu). Odottaa: Codexin yökuva Olavinlinnan pelille (Sisältökirjuri) → Pelit-rivi uudella polulla.
+
 ## TILA 8.10. klo 19.2x (JATKA TÄSTÄ)
 
 JUNA 167: natiivi-ui/olavinlinna-kortti 896d6b823 (KUITATTU; peli-kuva ilman venettä 20261008b, molemmat kuvat 200): Ikonit.Viiva["linna"],
