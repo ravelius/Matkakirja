@@ -1,0 +1,335 @@
+{
+  "task": "oslo-yksityiskohdat-20261008",
+  "routedTaskNumber": 25,
+  "source": {
+    "path": "posti/sisaltokirjuri-codex-oslo-yksityiskohdat-20261008.md",
+    "commit": "2b92a87a4de9d3f1b588fb4f63e6d4ad461cb47b",
+    "blob": "29868d19584898d892f98bf76a60be3304a022f1"
+  },
+  "sourceReadInFull": true,
+  "requestedImages": 4,
+  "imageCount": 2,
+  "generationCalls": 3,
+  "generationLimit": 4,
+  "sourceImagePixelsUsed": false,
+  "generationMode": "built-in image_gen, text-only, one call per produced subject; metadata-only final preparation",
+  "productionComplete": true,
+  "assets": [
+    {
+      "number": 2,
+      "qid": "Q961220",
+      "id": "suljettu-laivan-siirtolaatikko",
+      "file": "oslo-Q961220-suljettu-laivan-siirtolaatikko.png",
+      "filename": "oslo-Q961220-suljettu-laivan-siirtolaatikko.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oslo-yksityiskohdat-20261008/production/02-suljettu-laivan-siirtolaatikko/oslo-Q961220-suljettu-laivan-siirtolaatikko.png",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11acf-e1d7-71b1-b806-68befc578da6/exec-e7e9a1be-5831-4b4c-8a54-0e4879e7827d.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oslo-yksityiskohdat-20261008/production/02-suljettu-laivan-siirtolaatikko/original-generation.png",
+      "sha256": "782f52af7e87a7237b62939816c7683228c32ca7308f17c7b1b5b53daa308f61",
+      "originalSha256": "33d53cf825340dfe260a93540aac44b0cc8f1ee152aa63dbb4181a557b039efd",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationPrompt": "Use case: photorealistic-natural\nAsset type: educational illustrative image for an Oslo city introduction.\nCreate exactly ONE entirely new TEXT-ONLY image, native 1536 x 1024 landscape 3:2, opaque RGB PNG, sRGB. No input photographs or image references.\nScene: an anonymous newly built pale modern museum hall in September 2025, inspired only by verified written facts about the overhead transfer of the Oseberg ship to a new museum. The protective enclosure and hall are fictional and must not copy the appearance of any actual ship, museum object, shipping rig, photograph, or exact museum architecture.\nSubject: ONE very long closed opaque rectangular protective crate, roughly 22 metres long and 4 metres tall, plain off-white or light gray matte solid panels with subtle seams. All six sides are closed and completely opaque. No windows, no transparent sections, no cutaway, no visible cargo, no ship silhouette, no bow or stern or carved Viking forms anywhere. The smooth unmarked box is the clear main subject.\nLift system: the entire closed crate hangs horizontally from a substantial ceiling-level steel crane runway beam inside the hall, with two separated heavy hoist trolleys and load-bearing vertical steel cables attached to an external supporting steel frame around the opaque enclosure. Mechanically plausible, balanced vertical support at both ends. All transport rails are overhead. The long crate is visibly suspended several metres above a clean empty floor, with a wide band of free space below. The top crane beam and both complete end faces of the long crate are inside the frame; do not crop the main object or crane supports. The whole crate takes about two thirds of the image width, with generous space around it.\nComposition: wide side view from human eye level, a slight angle revealing a closed short end and the very long solid side. Crane runway clearly visible along the upper hall, uncluttered pale concrete museum interior, quiet daylight. Distant rear of hall at the far right: only two tiny anonymous rear-facing adult workers wearing plain hard hats and neutral work clothes; each under one tenth of frame height. Their faces are not visible. They stand safely FAR TO THE SIDE of the lifted load, never under it. No other people.\nStyle/medium: utterly convincing real-camera architectural photograph-like scene, natural muted gray daylight, realistic matte panels, steel cables and pale concrete textures, normal lens perspective and exposure, restrained colors. The image must read as a camera-shot scene, not a drawing or 3D rendering. No HDR, no cinematic grading, no glossy CGI or painterly effect.\nAvoid: ANY visible ship or museum artifact, identifiable replicas, decorative carvings, transparent box or cutaway, cargo silhouettes, real-person likeness, close faces, logos, words, numbers, signs, warning boards, labels, watermarks, captions, borders, floor rails, old museum architecture, unsafe workers beneath load, dramatic spectacle.",
+      "viitteet": [
+        {
+          "publisher": "Vikingtidsmuseet, Universitetet i Oslo",
+          "title": "Snart flytter vi vikingskipene",
+          "url": "https://www.vikingtidsmuseet.no/aktuelt/snart-flytter-vi-vikingskipene.html",
+          "type": "textResearchOnly",
+          "notes": "Official HTML text read without fetching source photos. June 20 2025, updated September 9 2025. Ships in 50-ton steel rigs transported suspended from powerful crane runway; 106.5m route and 4.6m lowering."
+        },
+        {
+          "publisher": "Vikingtidsmuseet, Universitetet i Oslo",
+          "title": "Nå har Osebergskipet kommet hjem!",
+          "url": "https://www.vikingtidsmuseet.no/aktuelt/na-er-flyttingen-av-osebergskipet-i-gang.html",
+          "type": "textResearchOnly",
+          "notes": "Official HTML text read without fetching photos/video. September 10 2025 live text: suspended above base at17:50 then lowered4.6m; complete19:30. Dustcover removed during preparations. No floor-rail transfer in2025."
+        }
+      ],
+      "kuvateksti": "Kuviteltu suljettu suojalaatikko havainnollistaa Osebergin laivan syyskuussa 2025 toteutettua kattokiskosiirtoa. Laatikon ja hallin ulkoasu on oma tulkinta, ei oikean kuljetusrigin tai suojakuoren dokumentaarinen jäljennös. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "technicalChanges": [
+        "Added standard sRGB ICC profile without color conversion.",
+        "Added exact Description and Source PNG text metadata.",
+        "RGB pixel values unchanged; byte equality of decoded pixels verified.",
+        "Created separate full-frame480x320 QA preview."
+      ],
+      "QA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Native1536x1024 image and separate full-frame480x320 preview inspected.",
+          "Entire long closed solid-panel crate is visible with clear opaque end and side; no windows, cutaway, ship, cargo or museum artifact is visible.",
+          "Two ceiling-level hoists with vertical support cables carry the crate above an empty floor; no floor rails observed.",
+          "Two very small hard-hat figures are rear-facing at the distant right side, safely outside the load footprint; no facial details or actual-person likeness.",
+          "Natural muted gray light and camera-like pale concrete/metal texture; crate remains clear at480px. No words, numbers, logos, labels, signage, watermark or frame observed."
+        ],
+        "limitations": [
+          "The closed opaque enclosure and pale hall are fictional; official text says the actual dustcover was removed before the move. No claim of a documentary enclosure or exact rig appearance.",
+          "The lifting arrangement is an approximate illustrative design, not engineering documentation.",
+          "Ceiling-level crane runway extends beyond the frame; the entire enclosed crate and both suspended ends are visible."
+        ],
+        "limits": [
+          "The closed opaque enclosure and pale hall are fictional; official text says the actual dustcover was removed before the move. No claim of a documentary enclosure or exact rig appearance.",
+          "The lifting arrangement is an approximate illustrative design, not engineering documentation.",
+          "Ceiling-level crane runway extends beyond the frame; the entire enclosed crate and both suspended ends are visible."
+        ],
+        "parentReviewRequired": true
+      },
+      "briefClarification": {
+        "status": "approved-by-root",
+        "decision": "Closed opaque fictional protective box illustrating verified2025 overhead transfer; no claim to copy actual rig or documentary protective enclosure.",
+        "received": "2026-10-08",
+        "reason": "Official museum text confirms suspended transfer by a powerful crane runway in September 2025. Official move-day report says dustcover was removed beforehand; the requested fully opaque closed enclosure is fictional, not a literal depiction of the actual steel rig."
+      },
+      "sourceCommit": "2b92a87a4de9d3f1b588fb4f63e6d4ad461cb47b",
+      "sourceBlob": "29868d19584898d892f98bf76a60be3304a022f1",
+      "sourceReadInFull": true,
+      "sharedRulesReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "generationMethod": "built-in image_gen; text-only",
+      "status": "local-candidate-approved",
+      "r2Delivered": false,
+      "mailboxDelivered": false,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "previewPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oslo-yksityiskohdat-20261008/production/02-suljettu-laivan-siirtolaatikko/qa-preview-480.png",
+      "rgbPixelsUnchanged": true,
+      "originalBytesPreserved": true,
+      "visualReview": {
+        "task": "oslo-yksityiskohdat-20261008",
+        "number": 2,
+        "qid": "Q961220",
+        "file": "oslo-Q961220-suljettu-laivan-siirtolaatikko.png",
+        "sha256": "782f52af7e87a7237b62939816c7683228c32ca7308f17c7b1b5b53daa308f61",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Pitkä suljettu läpinäkymätön laatikko roikkuu kahdesta kattokiskon nostimesta, vapaata tilaa alla ja kaksi hyvin pientä selin nähtyä kypärätyöntekijää sivussa. Ei näkyvää laivaa tai kokoelmateoksen kopiota. Moderni halli, laatikko ja nostimien muoto omia yleisiä kuvitustulkintoja."
+        ],
+        "limitations": [
+          "The closed opaque enclosure and pale hall are fictional; official text says the actual dustcover was removed before the move. No claim of a documentary enclosure or exact rig appearance.",
+          "The lifting arrangement is an approximate illustrative design, not engineering documentation.",
+          "Ceiling-level crane runway extends beyond the frame; the entire enclosed crate and both suspended ends are visible."
+        ],
+        "agentVerdictBeforeRootReview": true,
+        "reviewedAtUTC": "2026-10-08T09:35:22.987248+00:00"
+      },
+      "agentQA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Native1536x1024 image and separate full-frame480x320 preview inspected.",
+          "Entire long closed solid-panel crate is visible with clear opaque end and side; no windows, cutaway, ship, cargo or museum artifact is visible.",
+          "Two ceiling-level hoists with vertical support cables carry the crate above an empty floor; no floor rails observed.",
+          "Two very small hard-hat figures are rear-facing at the distant right side, safely outside the load footprint; no facial details or actual-person likeness.",
+          "Natural muted gray light and camera-like pale concrete/metal texture; crate remains clear at480px. No words, numbers, logos, labels, signage, watermark or frame observed."
+        ],
+        "limitations": [
+          "The closed opaque enclosure and pale hall are fictional; official text says the actual dustcover was removed before the move. No claim of a documentary enclosure or exact rig appearance.",
+          "The lifting arrangement is an approximate illustrative design, not engineering documentation.",
+          "Ceiling-level crane runway extends beyond the frame; the entire enclosed crate and both suspended ends are visible."
+        ],
+        "limits": [
+          "The closed opaque enclosure and pale hall are fictional; official text says the actual dustcover was removed before the move. No claim of a documentary enclosure or exact rig appearance.",
+          "The lifting arrangement is an approximate illustrative design, not engineering documentation.",
+          "Ceiling-level crane runway extends beyond the frame; the entire enclosed crate and both suspended ends are visible."
+        ],
+        "parentReviewRequired": true
+      },
+      "mitat": [
+        1536,
+        1024
+      ],
+      "fableReceipt": false,
+      "r2Key": "julisteet/oslo-yksityiskohdat/20261008/oslo-Q961220-suljettu-laivan-siirtolaatikko.png",
+      "url": "https://media.matkakirja.app/julisteet/oslo-yksityiskohdat/20261008/oslo-Q961220-suljettu-laivan-siirtolaatikko.png",
+      "bytes": 1989325,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "number": 4,
+      "qid": "Q863932",
+      "id": "linnan-pysaytetty-tyomaa",
+      "file": "oslo-Q863932-linnan-pysaytetty-tyomaa.png",
+      "filename": "oslo-Q863932-linnan-pysaytetty-tyomaa.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oslo-yksityiskohdat-20261008/production/04-linnan-pysaytetty-tyomaa/oslo-Q863932-linnan-pysaytetty-tyomaa.png",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11acf-e1d7-71b1-b806-68befc578da6/exec-9e5d1fd6-79d5-4369-92e0-00debc10738f.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oslo-yksityiskohdat-20261008/production/04-linnan-pysaytetty-tyomaa/original-generation.png",
+      "sha256": "3d42048c5ca0e9b7f4aa03ccc1f05f17bfaf3d7c0dfe109e847cfa292a1ed21a",
+      "originalSha256": "74032cb5fc59f60f18d7747aabbce8e2796de2f08c235531296106e6ad2465c2",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationPrompt": "Use case: historical-scene\nAsset type: educational photorealistic historical illustration for an Oslo city introduction.\nCreate exactly ONE wholly new TEXT-ONLY image, native 1536 x 1024 landscape 3:2, opaque RGB PNG, sRGB. No input photographs, no historical drawings or image references.\nScene: a fictional quiet abandoned-for-now royal-palace FOUNDATION construction site on Bellevue Hill in Christiania (Oslo), autumn 1827, after the verified funding stoppage. Official written history says the foundations were completed in spring 1827, construction stopped that June, and substantial construction resumed only in 1834. Portray that LOW FOUNDATION/BASEMENT stage, not a standing palace. This is an approximate fictional site arrangement, not a reproduction of any Linstow drawing, museum collection picture, existing artwork or exact construction plan.\nMain subject: a LONG LOW pale stone masonry foundation and unfinished basement wall courses on the left half of the hilltop, only about waist-high or at most one metre high above the surrounding soil. Individual unfinished masonry courses and open foundation trenches are clear, but there is NO finished above-ground facade, no multi-storey building, no roof or roof beams, no windows, no columns, no portico, no temple pediment and no completed projecting wings. Uneven temporary rough timber scaffolding with plain planks and slender braced uprights stands only beside the low masonry. Foundation is completely visible inside the image with ample margins.\nConstruction materials and tools: modest piles of rough pale stone and a few neatly stacked cut blocks near the foundation, one simple wooden handcart, a small wooden tripod with a rope pulley and hand windlass for lifting stone, lowered idle ropes. Two plain wooden-handled masonry tools resting on the soil in the foreground, quiet and unused. All tools, scaffolds and materials are plausible for Norwegian building work in the 1820s; no industrial machinery. No people are necessary, and prefer NO people at all.\nComposition: distant wide view from the foot of the gently rising bare grassy hill, at ordinary human eye level looking uphill. The long low masonry foundation sits LEFT of centre in the middle distance. The foreground and right half are mostly empty rough earth and worn grass, with idle tools, shallow wheel ruts and scattered small stones. Sparse distant autumn trees, a gray overcast autumn sky and no visible surrounding buildings. Enough close ground texture to read as a real camera photograph while keeping the whole low foundation legible.\nMedium and lighting: highly convincing camera-shot photograph-like historical reconstruction with natural soft muted gray autumn daylight, restrained pale stone, weathered wood, earth brown and dull grass colors. Normal documentary wide-lens perspective and exposure, physically natural textures. Calm quiet empty-site mood. No dramatic fog or fantasy atmosphere. No HDR, no cinematic grading, no oversaturated colors, no painterly look, no CGI sheen.\nAvoid: standing palace or substantial above-ground facade, modern Royal Palace front or rear, completed wings, columns, portico, pediment, roof, tall walls, ornate finished plaster, modern buildings, cars, asphalt, power lines, modern cranes, mechanical vehicles, site boards, readable words/numbers, signs, flags, emblems, logos, captions, watermarks, frames, identifiable human faces or actual persons, copied historical plans/drawings or protected museum collection art.",
+      "viitteet": [
+        {
+          "publisher": "Det norske kongehus",
+          "title": "Byggingen av Slottet",
+          "url": "https://www.kongehuset.no/kongelige-eiendommer/det-kongelige-slott/byggingen-av-slottet",
+          "type": "textResearchOnly",
+          "notes": "Official text timeline read only; no Linstow drawing pixels fetched/viewed. Confirms1827 foundation completion and work pause,1833 redesign,1834 restart and1836 topping out."
+        }
+      ],
+      "kuvateksti": "Hiljainen kuninkaanlinnan perustustyömaa Oslossa syksyllä 1827: matala kivi- ja kellarimuuraus havainnollistaa rakentamisen pysähtymistä. Hovin aikajanan mukaan perustukset valmistuivat keväällä 1827 ja rakentaminen jatkui vuonna 1834; työmaan järjestely on oma likimääräinen tulkinta. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "technicalChanges": [
+        "Added standard sRGB ICC profile without color conversion.",
+        "Added exact Description and Source PNG text metadata.",
+        "RGB pixel values unchanged; byte equality of decoded pixels verified.",
+        "Created separate full-frame480x320 QA preview."
+      ],
+      "QA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Native1536x1024 image and separate full-frame480x320 preview inspected.",
+          "Low stone foundation/basement courses, open unfinished wall top and simple timber scaffolding appear in the left middle distance. No standing palace facade, roof, portico, columns or completed wings.",
+          "Idle wooden handcart, stone piles, generic timber lifting frame with rope pulley, and resting wood-handled spade/pickaxe support the quiet paused-worksite scene.",
+          "No people, vehicles, industrial cranes, modern surrounding buildings, signage, words, logos, watermarks or copied drawings observed.",
+          "Muted cloudy autumn light, rough earth/grass, plausible stone and weathered wood render photograph-like; the low masonry and idle tools remain legible at480px."
+        ],
+        "limitations": [
+          "Approximate fictional site arrangement and masonry geometry; no exact1827 plan or Linstow drawing has been reproduced.",
+          "Low basement masonry appears locally about1-2m high; no substantial palace facade, roof, columns or completed wings.",
+          "Period tools and timber hoist are plausible generic forms rather than verified implements from this site."
+        ],
+        "limits": [
+          "Approximate fictional site arrangement and masonry geometry; no exact1827 plan or Linstow drawing has been reproduced.",
+          "Low basement masonry appears locally about1-2m high; no substantial palace facade, roof, columns or completed wings.",
+          "Period tools and timber hoist are plausible generic forms rather than verified implements from this site."
+        ],
+        "parentReviewRequired": true
+      },
+      "briefClarification": {
+        "status": "approved-by-root",
+        "decision": "Autumn1827 quiet LOW FOUNDATION/BASEMENT stone masonry site; no substantial upper facade, portico or completed wings. Correct Royal House timeline and approximate fictional site arrangement disclosed in caption/record.",
+        "received": "2026-10-08",
+        "reason": "Royal House timeline says foundations were completed in spring1827, work stopped after Parliament refused more funds onJune15. 1833 plans changed; work resumed early1834; topping out1836. Above-ground palace facade is unsupported for1827."
+      },
+      "sourceCommit": "2b92a87a4de9d3f1b588fb4f63e6d4ad461cb47b",
+      "sourceBlob": "29868d19584898d892f98bf76a60be3304a022f1",
+      "sourceReadInFull": true,
+      "sharedRulesReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "generationMethod": "built-in image_gen; text-only",
+      "status": "local-candidate-approved",
+      "r2Delivered": false,
+      "mailboxDelivered": false,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "previewPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oslo-yksityiskohdat-20261008/production/04-linnan-pysaytetty-tyomaa/qa-preview-480.png",
+      "rgbPixelsUnchanged": true,
+      "originalBytesPreserved": true,
+      "visualReview": {
+        "task": "oslo-yksityiskohdat-20261008",
+        "number": 4,
+        "qid": "Q863932",
+        "file": "oslo-Q863932-linnan-pysaytetty-tyomaa.png",
+        "sha256": "3d42048c5ca0e9b7f4aa03ccc1f05f17bfaf3d7c0dfe109e847cfa292a1ed21a",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Hiljainen matalan kellari/perustuskivimuurauksen työmaa, puutelineet ja vinssi, kivikasoja, tyhjä puukärry ja maassa työvälineitä. Ei valmista korkeaa julkisivua, portiikkia, nykyisiä sivusiipiä tai modernia kalustoa. Vuoden1827perustusvaiheen tilatulkinta."
+        ],
+        "limitations": [
+          "Approximate fictional site arrangement and masonry geometry; no exact1827 plan or Linstow drawing has been reproduced.",
+          "Low basement masonry appears locally about1-2m high; no substantial palace facade, roof, columns or completed wings.",
+          "Period tools and timber hoist are plausible generic forms rather than verified implements from this site."
+        ],
+        "agentVerdictBeforeRootReview": true,
+        "reviewedAtUTC": "2026-10-08T09:35:22.990896+00:00"
+      },
+      "agentQA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Native1536x1024 image and separate full-frame480x320 preview inspected.",
+          "Low stone foundation/basement courses, open unfinished wall top and simple timber scaffolding appear in the left middle distance. No standing palace facade, roof, portico, columns or completed wings.",
+          "Idle wooden handcart, stone piles, generic timber lifting frame with rope pulley, and resting wood-handled spade/pickaxe support the quiet paused-worksite scene.",
+          "No people, vehicles, industrial cranes, modern surrounding buildings, signage, words, logos, watermarks or copied drawings observed.",
+          "Muted cloudy autumn light, rough earth/grass, plausible stone and weathered wood render photograph-like; the low masonry and idle tools remain legible at480px."
+        ],
+        "limitations": [
+          "Approximate fictional site arrangement and masonry geometry; no exact1827 plan or Linstow drawing has been reproduced.",
+          "Low basement masonry appears locally about1-2m high; no substantial palace facade, roof, columns or completed wings.",
+          "Period tools and timber hoist are plausible generic forms rather than verified implements from this site."
+        ],
+        "limits": [
+          "Approximate fictional site arrangement and masonry geometry; no exact1827 plan or Linstow drawing has been reproduced.",
+          "Low basement masonry appears locally about1-2m high; no substantial palace facade, roof, columns or completed wings.",
+          "Period tools and timber hoist are plausible generic forms rather than verified implements from this site."
+        ],
+        "parentReviewRequired": true
+      },
+      "mitat": [
+        1536,
+        1024
+      ],
+      "fableReceipt": false,
+      "r2Key": "julisteet/oslo-yksityiskohdat/20261008/oslo-Q863932-linnan-pysaytetty-tyomaa.png",
+      "url": "https://media.matkakirja.app/julisteet/oslo-yksityiskohdat/20261008/oslo-Q863932-linnan-pysaytetty-tyomaa.png",
+      "bytes": 2900679,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    }
+  ],
+  "excludedItems": [
+    {
+      "number": 1,
+      "qid": "Q961220",
+      "id": "oseberg-kayrry-haudassa",
+      "generationCalls": 0,
+      "reason": "Identifiable Oseberg cart and sleigh museum artefact replicas conflict with explicit museum-collection reproduction exclusion, even in fictional burial context; no substitute authorised."
+    },
+    {
+      "number": 3,
+      "qid": "Q373850",
+      "id": "49-kellon-kellopeli",
+      "generationCalls": 1,
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oslo-yksityiskohdat-20261008/production/03-49-kellon-kellopeli/oslo-Q373850-49-kellon-kellopeli.png",
+      "sha256": "ed08bc329f59b15c46c7924224a12d09844e169eb307f8bc40095659927477e8",
+      "reason": "Itsenäinen näkyvien kellojen laskenta18+16+14=48. Kaikki näkyvät kellot erillisiä ja kuva-alassa;49kellon täysi sarja ei toteudu. Työntekijän koordinaattilaskenta vastaa pääsession havaintoa.",
+      "R2Delivered": false
+    }
+  ],
+  "comparison": {
+    "file": "toimitetut-2.jpg",
+    "r2Key": "julisteet/oslo-yksityiskohdat/20261008/toimitetut-2.jpg",
+    "url": "https://media.matkakirja.app/julisteet/oslo-yksityiskohdat/20261008/toimitetut-2.jpg",
+    "sha256": "d18a5489dec29a458262fe677861ac9ccaed76efe534827139174f99718ff106",
+    "bytes": 106158,
+    "http": 200,
+    "mime": "image/jpeg",
+    "cors": "https://matkakirja.app",
+    "byteExactReadback": true
+  },
+  "deliveryStatus": "Selected candidates R2 verified and submitted through this mailbox manifest/report; Fable/editor/game receipt unverified.",
+  "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+  "editorAcceptance": false,
+  "fableReceipt": false,
+  "gameIntegrated": false,
+  "published": false,
+  "createdAt": "2026-10-08T09:36:54.779441+00:00"
+}

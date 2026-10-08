@@ -1,0 +1,341 @@
+{
+  "task": "krakova-yksityiskohdat-20261008",
+  "routedTaskNumber": 23,
+  "source": {
+    "path": "posti/sisaltokirjuri-codex-krakova-yksityiskohdat-20261008.md",
+    "commit": "2b92a87a4de9d3f1b588fb4f63e6d4ad461cb47b",
+    "blob": "7f5e3b486805fc9d7e9181df05b573a005782202"
+  },
+  "sourceReadInFull": true,
+  "requestedImages": 5,
+  "imageCount": 2,
+  "generationCalls": 3,
+  "generationLimit": 5,
+  "sourceImagePixelsUsed": false,
+  "generationMode": "built-in image_gen, text-only, one call per produced subject; metadata-only final preparation",
+  "productionComplete": true,
+  "assets": [
+    {
+      "number": 2,
+      "qid": "Q1143171",
+      "id": "alttarin-osat-kellarissa",
+      "file": "krakova-Q1143171-alttarin-osat-kellarissa.png",
+      "filename": "krakova-Q1143171-alttarin-osat-kellarissa.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/krakova-yksityiskohdat-20261008/production/02-alttarin-osat-kellarissa/krakova-Q1143171-alttarin-osat-kellarissa.png",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11ace-aaaa-7801-9bbf-e79137d7d1ab/exec-1de8c339-2200-4b92-a85c-f2ea8f6fee69.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/krakova-yksityiskohdat-20261008/production/02-alttarin-osat-kellarissa/original-generation.png",
+      "sha256": "746d1598224b3cb1ae33127ab6fd6a24adbfd79f297823a7afd7793c529c2113",
+      "originalSha256": "62092fab1f0f57b9b786792cd1091332c6a7e999831bd65170e8150c2293df47",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "generationCalls": 1,
+      "generationPrompt": "Use case: historical-scene\nAsset type: photorealistic historical educational storage illustration for a Krakow city introduction.\nCreate ONE entirely new TEXT-ONLY image, exactly 1536 x 1024 landscape, opaque RGB PNG, sRGB. No input or reference images.\n\nScene: a fictional wartime art-storage chamber in Nuremberg's underground castle-hill art-bunker area during 1940–1945. A low barrel-vaulted stone storage passage, masonry and rough pale sandstone, dim cool cellar atmosphere. This represents the broadly documented wartime storage context under the castle hill; do not recreate any exact known room or photograph. It is not a view of the imperial castle's own palace cellar.\nEye-level camera, looking along a low vaulted passage receding into shadow. The vault and worn stone floor are clearly visible behind and around the crates.\n\nForeground subject: FOUR large unfinished raw-wood transport crates, visibly separate, three partly open and one closed. Rough planks, plain iron fastenings, lids propped simply beside the crates. Straw and unprinted brown packing paper cushion the partly visible contents.\nFrom one open crate, only a small fragment of an ORIGINAL GENERIC gilded carved wooden hand is visible among straw: a few simple carved fingers and part of a palm, clearly wooden with fine grain, tiny rubbed gold-leaf patches, no arm/body/face.\nFrom another open crate, only a small piece of ORIGINAL GENERIC gilded abstract leaf-shaped wood carving peeks out of unprinted paper.\nFrom the third open crate, a simple undecorated gilt wooden moulding fragment is partly visible under straw.\nAll carving designs must be newly invented generic shapes with NO resemblance to a named figure, saint, person, existing altar, Veit Stoss sculpture, museum artwork or other identifiable artwork. No complete sculpture, no faces, no heads, no torso, no religious imagery or recognizable art composition. The scene illustrates wartime packing and storage, not an artwork replica.\n\nPhotograph-like reconstruction: natural ordinary camera appearance, neutral perspective, restrained cool dim light diffused from an unseen small cellar opening; muted stone gray and faded brown wood, only quiet dull gold accents. Authentic unvarnished wood grain, straw, creased packing paper, worn stone texture. The four crates remain clear at a small preview size.\nNO theatrical spotlights, no HDR, no cinematic grading, no dramatic glow, no glossy CGI, no painting style. No people, soldiers, human faces, identifying artwork, museum collection replicas, letters or numbers on crates, stamped marks, text, labels, signs, symbols, flags, Nazi imagery, logos, watermark, border, electric modern equipment, injury, blood or violence.\n",
+      "generationMethod": "built-in image_gen; text-only",
+      "sourceImagePixelsUsed": false,
+      "sourceCommit": "2b92a87a4de9d3f1b588fb4f63e6d4ad461cb47b",
+      "sourceBlob": "7f5e3b486805fc9d7e9181df05b573a005782202",
+      "sourceReadInFull": true,
+      "sharedRulesReadInFull": true,
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "technicalChanges": [
+        "Added standard sRGB ICC profile without color conversion.",
+        "Added exact Description and Source PNG text metadata.",
+        "Decoded RGB pixel equality verified; original-generation.png is byte-identical to tool output.",
+        "Created separate full-frame 480x320 QA preview."
+      ],
+      "rgbPixelsUnchanged": true,
+      "previewPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/krakova-yksityiskohdat-20261008/production/02-alttarin-osat-kellarissa/qa-preview-480.png",
+      "QA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Native final 1536x1024 RGB image and separate full-frame 480x320 preview visually inspected.",
+          "Four large foreground crates: three open with straw/unprinted paper and one closed; vaulted passage recedes behind.",
+          "Only generic partial gilded wooden hand, abstract leaf and moulding fragments visible; no heads, faces, full figures, named artwork or recognizable altarpiece composition.",
+          "No people, text, labels, symbols, logos, modern equipment, blood or violence observed.",
+          "Natural muted cellar lighting, restrained gold, credible worn wood/stone materials; important packing details readable at 480px."
+        ],
+        "limitations": [
+          "Fictional storage chamber and packing arrangement; not a verified exact room or documented crate placement.",
+          "Source location clarified with root approval to art bunker under castle hill 1940–1945, rather than a claim about the imperial castle own cellar.",
+          "Generated fragments are original generic substitutes, not the actual Veit Stoss altar components; attribution to a specific identifiable sculpture is intentionally absent."
+        ]
+      },
+      "status": "local-candidate-approved",
+      "r2Delivered": false,
+      "mailboxDelivered": false,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "rootQASeparate": true,
+      "kuvateksti": "Kuvitteellinen puuveistosten sota-ajan varastointikohtaus Nürnbergin linnakukkulan alla olevassa taidebunkkerissa, 1940–1945. Näkyvät kullatut puukatkelmat ovat yleisiä keksittyjä muotoja. Havainnekuva.",
+      "viitteet": [
+        {
+          "publisher": "Museen der Stadt Nürnberg",
+          "title": "Kunstwerke | Historischer Kunstbunker",
+          "url": "https://museen.nuernberg.de/kunstbunker/dauerausstellung/kunstwerke/",
+          "type": "textResearchOnly",
+          "notes": "Official text places stored art under Burgberg and lists the Krakow Marian altarpiece among wartime objects. No image pixels opened or used.",
+          "access": "2026-10-08; official page text read only"
+        },
+        {
+          "publisher": "Stadt Nürnberg",
+          "title": "100 Jahre Heinz Schmeißner, Die Einlagerung des Krakauer Veit-Stoss-Altares in Nürnberg",
+          "url": "https://www.nuernberg.de/imperia/md/stadtplanung/broschueren/100_jahre_schmeissner_broschuere040305_gesamt.pdf",
+          "type": "textResearchOnly",
+          "notes": "Official indexed text dates preparation and transport to March 1940 and storage in the Kunstbunker through wartime bombardment and 1945; also records 1946 return. No PDF pages, drawings or photographs viewed.",
+          "access": "2026-10-08; official indexed text excerpts read only"
+        },
+        {
+          "publisher": "Congress- und Tourismus-Zentrale Nürnberg",
+          "title": "Historischer Kunstbunker",
+          "url": "https://tourismus.nuernberg.de/sehen/museen/erinnerungskultur/location/historischer-kunstbunker/",
+          "type": "textResearchOnly",
+          "notes": "Official text locates old rock vaults under Burgberg at Obere Schmiedgasse 52 and dates conversion to art storage from 1940. Used for broad location and cellar context, not a room replica.",
+          "access": "2026-10-08; official indexed text read only"
+        }
+      ],
+      "locationClarification": {
+        "status": "approved-by-root",
+        "decision": "Use underground castle-hill art-bunker storage1940–1945; do not claim imperial castle own cellar. Retain fictional vaulted packing illustration and original generic fragments.",
+        "received": "2026-10-08",
+        "reason": "Official Nuremberg texts identify Historischer Kunstbunker under Burgberg."
+      },
+      "visualReview": {
+        "task": "krakova-yksityiskohdat-20261008",
+        "number": 2,
+        "qid": "Q1143171",
+        "file": "krakova-Q1143171-alttarin-osat-kellarissa.png",
+        "sha256": "746d1598224b3cb1ae33127ab6fd6a24adbfd79f297823a7afd7793c529c2113",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Neljä raakapuista laatikkoa holvatun varastotilan yhteydessä, olkea ja keksittyjä yleisiä kullattuja puukäden/lehden/listan osia. Ei tunnistettavaa Stoss-teoksen kokonaisuutta, kasvoja, laatikkotekstiä tai tunnuksia. Sijainti tarkennettu linnakukkulan alapuolisen taidebunkkerin fiktiiviseksi tilaksi1940–1945."
+        ],
+        "limitations": [
+          "Fictional storage chamber and packing arrangement; not a verified exact room or documented crate placement.",
+          "Source location clarified with root approval to art bunker under castle hill 1940–1945, rather than a claim about the imperial castle own cellar.",
+          "Generated fragments are original generic substitutes, not the actual Veit Stoss altar components; attribution to a specific identifiable sculpture is intentionally absent."
+        ],
+        "agentVerdictBeforeRootReview": true,
+        "reviewedAtUTC": "2026-10-08T09:35:22.976310+00:00"
+      },
+      "agentQA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Native final 1536x1024 RGB image and separate full-frame 480x320 preview visually inspected.",
+          "Four large foreground crates: three open with straw/unprinted paper and one closed; vaulted passage recedes behind.",
+          "Only generic partial gilded wooden hand, abstract leaf and moulding fragments visible; no heads, faces, full figures, named artwork or recognizable altarpiece composition.",
+          "No people, text, labels, symbols, logos, modern equipment, blood or violence observed.",
+          "Natural muted cellar lighting, restrained gold, credible worn wood/stone materials; important packing details readable at 480px."
+        ],
+        "limitations": [
+          "Fictional storage chamber and packing arrangement; not a verified exact room or documented crate placement.",
+          "Source location clarified with root approval to art bunker under castle hill 1940–1945, rather than a claim about the imperial castle own cellar.",
+          "Generated fragments are original generic substitutes, not the actual Veit Stoss altar components; attribution to a specific identifiable sculpture is intentionally absent."
+        ]
+      },
+      "mitat": [
+        1536,
+        1024
+      ],
+      "fableReceipt": false,
+      "r2Key": "julisteet/krakova-yksityiskohdat/20261008/krakova-Q1143171-alttarin-osat-kellarissa.png",
+      "url": "https://media.matkakirja.app/julisteet/krakova-yksityiskohdat/20261008/krakova-Q1143171-alttarin-osat-kellarissa.png",
+      "bytes": 2930754,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "number": 5,
+      "qid": "Q641398",
+      "id": "multauurnat-kumpuun",
+      "file": "krakova-Q641398-multauurnat-kumpuun.png",
+      "filename": "krakova-Q641398-multauurnat-kumpuun.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/krakova-yksityiskohdat-20261008/production/05-multauurnat-kumpuun/krakova-Q641398-multauurnat-kumpuun.png",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11acf-4fff-7a40-ba42-5ea97ae096f8/exec-80f70101-fe62-4ef6-8c74-f2fed5c8e54d.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/krakova-yksityiskohdat-20261008/production/05-multauurnat-kumpuun/original-generation.png",
+      "sha256": "29041c7b8f68e6793a0cf3b1d772625999357141e80bf0b7271a02b28074f7fb",
+      "originalSha256": "8ec0bd601540b1d5bc00fafa1986b1255cb8e9a9efff0d87b27959eade4a2541",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "generationCalls": 1,
+      "generationPrompt": "Use case: historical-scene\nAsset type: photorealistic educational city-detail reconstruction.\nCreate ONE entirely new TEXT-ONLY image, native 1536 x 1024 landscape PNG, opaque RGB, sRGB. No input pictures or source-image pixels.\n\nScene: a quiet ordinary workday during 1820–1823 on Sikornik hill west of Kraków, while the memorial earth mound is still being built. The subject is the placement of small plain urns containing EARTH brought from battlefields into the unfinished mound. These are soil containers, never funeral ashes or human remains.\nComposition: a broad camera view from a little below the worksite, looking upward toward the rough half-built earthen mound. The large uneven, unfinished mound and its loose brown soil are the main image. In the near middle ground, two small anonymous adult male volunteers, entirely seen from behind, kneel facing the slope and lower a simple lidded clay soil urn about 30 cm high into a shallow recess in the mound's side. A second plain unglazed clay urn is nearby with its lid resting beside it and ordinary dark soil visible inside. Their bodies and clothes naturally obscure all facial details. The people should be small, each at most about one fifth of image height, so the mound and worksite dominate. The deposition action must remain legible.\nA few other small anonymous volunteers, both women and men, are farther away, also facing away from the camera, carrying soil urns or standing near simple wooden wheelbarrows. Period-plausible early-1820s practical linen/wool work clothing, long plain coats, trousers, simple caps, long skirts. No uniforms, emblems or elaborate costume. Wooden wheelbarrows with a single wooden wheel, rough timber handles, iron-bladed shovels resting with their blades lowered on the soil, footprints and coarse soil clods. No modern construction machines.\nBackdrop: grassy rural hill, modest scattered trees and only a faint distant preindustrial Kraków silhouette in soft haze. No large modern city detail. The mound must be asymmetrical and incompletely shaped, without a finished summit monument, formal spiral footpath or later Austrian fortifications.\nStyle and lighting: convincing real camera photograph appearance, natural soft afternoon daylight, restrained exposure, muted earthy browns, gray-green grass and pale sky; realistic soil, dull clay, wool, timber and skin textures. A natural documentary photograph-like historical reconstruction, not a painting, drawing, illustration texture, sepia print, glossy render or dramatic cinematic poster. No HDR or oversaturated colors.\nAvoid absolutely: ashes, bones, coffins, funerals, corpses, injuries, violence or blood; recognizable faces or the likeness of any named historical/real person including Kościuszko; large foreground people; any flags; Austrian fortress; today's smooth conical mound and long spiral path; modern buildings, cars, machines, signs, plaques, inscriptions, numerals, words, logos, watermarks or borders. No readable markings even on urns or tools.",
+      "viitteet": [
+        {
+          "publisher": "Komitet Kopca Kościuszki w Krakowie",
+          "title": "16.10.1820/Założenie podstawy Pomnika",
+          "url": "https://kopieckosciuszki.pl/zalozenie-podstawy-pomnika/",
+          "type": "textResearchOnly",
+          "notes": "Official text confirms foundation event 16 October 1820, soil carried by wheelbarrows and civic participation. Only soil/worksite facts used; no named person likeness or source picture used.",
+          "access": "2026-10-08; official page text read, no images opened."
+        },
+        {
+          "publisher": "Komitet Kopca Kościuszki w Krakowie",
+          "title": "Kopiec Kościuszki i Komitet świętują 200 lat istnienia",
+          "url": "https://www.kopieckosciuszki.pl/kopiec-swietuje-200-lat-istnienia/",
+          "type": "textResearchOnly",
+          "notes": "Official text confirms volunteer participation, earth from Racławice and other battlefields, 1821 deposit of Maciejowice soil and completion 25 October 1823.",
+          "access": "2026-10-08; official page text read, no images opened."
+        }
+      ],
+      "kuvateksti": "Taistelukentiltä tuodun mullan sijoittamista Kościuszkon keskeneräiseen muistokumpuun Krakovassa vuosina 1820–1823. Kohtaus ja uurnien ulkoasu on rekonstruoitu tekstilähteistä. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "technicalChanges": [
+        "Added standard sRGB ICC profile without color conversion.",
+        "Added exact Description and Source PNG text metadata.",
+        "Decoded RGB pixel values unchanged and byte equality verified.",
+        "Preserved byte-exact original generation PNG.",
+        "Created separate full-frame 480x320 QA preview."
+      ],
+      "QA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Native 1536x1024 image and full-frame 480x320 preview visually inspected.",
+          "Two entirely rear-facing kneeling volunteers place a lidded plain clay soil urn in a recess in unfinished rough earth; a nearby open urn visibly contains soil.",
+          "Background volunteers also face away; no recognizable human face or identifiable real person observed.",
+          "Wooden wheelbarrows, lowered/resting shovel blades and simple early-1820s clothing visible.",
+          "No modern objects, Austrian fort, formal spiral path, flags, text, numerals, watermark, border, injury, bones or remains observed.",
+          "Photograph-like natural muted afternoon light with legible deposition action at 480 pixels."
+        ],
+        "limitations": [
+          "Two rear-facing men in the middle foreground occupy roughly 40 percent of image height, exceeding the prompt small-figure target of one fifth. Anonymous back views satisfy the no-recognizable-faces rule; parent QA must assess scale.",
+          "Specific urn shapes, size, volunteer poses, mound construction stage and distant skyline are illustrative and not verified reconstructions of a documented moment.",
+          "Official monument committee text confirms construction 1820–1823, soil from battlefields, volunteers and wheelbarrows. It does not establish the exact urn form or this deposition arrangement."
+        ],
+        "limits": [
+          "Two rear-facing men in the middle foreground occupy roughly 40 percent of image height, exceeding the prompt small-figure target of one fifth. Anonymous back views satisfy the no-recognizable-faces rule; parent QA must assess scale.",
+          "Specific urn shapes, size, volunteer poses, mound construction stage and distant skyline are illustrative and not verified reconstructions of a documented moment.",
+          "Official monument committee text confirms construction 1820–1823, soil from battlefields, volunteers and wheelbarrows. It does not establish the exact urn form or this deposition arrangement."
+        ]
+      },
+      "sourceCommit": "2b92a87a4de9d3f1b588fb4f63e6d4ad461cb47b",
+      "sourceBlob": "7f5e3b486805fc9d7e9181df05b573a005782202",
+      "sourceReadInFull": true,
+      "sharedRulesReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "generationMethod": "built-in image_gen; text-only",
+      "status": "local-candidate-approved",
+      "r2Delivered": false,
+      "mailboxDelivered": false,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "previewPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/krakova-yksityiskohdat-20261008/production/05-multauurnat-kumpuun/qa-preview-480.png",
+      "rgbPixelsUnchanged": true,
+      "visualReview": {
+        "task": "krakova-yksityiskohdat-20261008",
+        "number": 5,
+        "qid": "Q641398",
+        "file": "krakova-Q641398-multauurnat-kumpuun.png",
+        "sha256": "29041c7b8f68e6793a0cf3b1d772625999357141e80bf0b7271a02b28074f7fb",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Kaksi selin olevaa anonyymiä aikuista asettaa multauurnaa keskeneräiseen kumpuun, muilla hahmoilla multaruukkuja, kottikärryjä ja lapioita. Ei vainajien tuhkaa tai ihmisjäänteitä. Ei myöhempää linnoitusta, modernia kierretietä tai tunnistettavia kasvoja; päivänvalo valokuvamainen."
+        ],
+        "limitations": [
+          "Two rear-facing men in the middle foreground occupy roughly 40 percent of image height, exceeding the prompt small-figure target of one fifth. Anonymous back views satisfy the no-recognizable-faces rule; parent QA must assess scale.",
+          "Specific urn shapes, size, volunteer poses, mound construction stage and distant skyline are illustrative and not verified reconstructions of a documented moment.",
+          "Official monument committee text confirms construction 1820–1823, soil from battlefields, volunteers and wheelbarrows. It does not establish the exact urn form or this deposition arrangement."
+        ],
+        "agentVerdictBeforeRootReview": true,
+        "reviewedAtUTC": "2026-10-08T09:35:22.981214+00:00"
+      },
+      "agentQA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Native 1536x1024 image and full-frame 480x320 preview visually inspected.",
+          "Two entirely rear-facing kneeling volunteers place a lidded plain clay soil urn in a recess in unfinished rough earth; a nearby open urn visibly contains soil.",
+          "Background volunteers also face away; no recognizable human face or identifiable real person observed.",
+          "Wooden wheelbarrows, lowered/resting shovel blades and simple early-1820s clothing visible.",
+          "No modern objects, Austrian fort, formal spiral path, flags, text, numerals, watermark, border, injury, bones or remains observed.",
+          "Photograph-like natural muted afternoon light with legible deposition action at 480 pixels."
+        ],
+        "limitations": [
+          "Two rear-facing men in the middle foreground occupy roughly 40 percent of image height, exceeding the prompt small-figure target of one fifth. Anonymous back views satisfy the no-recognizable-faces rule; parent QA must assess scale.",
+          "Specific urn shapes, size, volunteer poses, mound construction stage and distant skyline are illustrative and not verified reconstructions of a documented moment.",
+          "Official monument committee text confirms construction 1820–1823, soil from battlefields, volunteers and wheelbarrows. It does not establish the exact urn form or this deposition arrangement."
+        ],
+        "limits": [
+          "Two rear-facing men in the middle foreground occupy roughly 40 percent of image height, exceeding the prompt small-figure target of one fifth. Anonymous back views satisfy the no-recognizable-faces rule; parent QA must assess scale.",
+          "Specific urn shapes, size, volunteer poses, mound construction stage and distant skyline are illustrative and not verified reconstructions of a documented moment.",
+          "Official monument committee text confirms construction 1820–1823, soil from battlefields, volunteers and wheelbarrows. It does not establish the exact urn form or this deposition arrangement."
+        ]
+      },
+      "mitat": [
+        1536,
+        1024
+      ],
+      "fableReceipt": false,
+      "r2Key": "julisteet/krakova-yksityiskohdat/20261008/krakova-Q641398-multauurnat-kumpuun.png",
+      "url": "https://media.matkakirja.app/julisteet/krakova-yksityiskohdat/20261008/krakova-Q641398-multauurnat-kumpuun.png",
+      "bytes": 2894793,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    }
+  ],
+  "excludedItems": [
+    {
+      "number": 1,
+      "qid": "Q18820",
+      "id": "wawelin-kasettipaat",
+      "generationCalls": 0,
+      "reason": "Requested recognizable Wawel museum coffer-head collection replicas conflict with explicit museum-collection exclusion. No alternative authorised."
+    },
+    {
+      "number": 3,
+      "qid": "Q638519",
+      "id": "kaksitoista-kellonsoittajaa",
+      "generationCalls": 1,
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/krakova-yksityiskohdat-20261008/production/03-kaksitoista-kellonsoittajaa/krakova-Q638519-kaksitoista-kellonsoittajaa.png",
+      "sha256": "0dd5f7c0a8160132eccfbf06e353874f6209125f5ff8c9f213bcb3c55fb9ba2a",
+      "reason": "Kuvassa vain10soittajaa eli5molemmin puolin, ei vaadittua12/6+6. Köydet näyttävät liittyvän kiinteisiin tukipalkkeihin eivätkä selvästi liikkuvaan kellon ikeeseen; liikkeen välitys on epäselvä.",
+      "R2Delivered": false
+    },
+    {
+      "number": 4,
+      "qid": "Q919596",
+      "id": "jagellonien-maapallo",
+      "generationCalls": 0,
+      "reason": "Identifiable Globus Jagellonicus museum artefact reproduction and explicitly readableAMERICA inscription conflict with common museum-reproduction and no-text rules; no substitute authorised."
+    }
+  ],
+  "comparison": {
+    "file": "toimitetut-2.jpg",
+    "r2Key": "julisteet/krakova-yksityiskohdat/20261008/toimitetut-2.jpg",
+    "url": "https://media.matkakirja.app/julisteet/krakova-yksityiskohdat/20261008/toimitetut-2.jpg",
+    "sha256": "8e11b1963dfdcf44f2acfa31f5d67b73ea880f8817ee6f61051ac844cc11ad96",
+    "bytes": 136664,
+    "http": 200,
+    "mime": "image/jpeg",
+    "cors": "https://matkakirja.app",
+    "byteExactReadback": true
+  },
+  "deliveryStatus": "Selected candidates R2 verified and submitted through this mailbox manifest/report; Fable/editor/game receipt unverified.",
+  "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+  "editorAcceptance": false,
+  "fableReceipt": false,
+  "gameIntegrated": false,
+  "published": false,
+  "createdAt": "2026-10-08T09:35:28.144961+00:00"
+}

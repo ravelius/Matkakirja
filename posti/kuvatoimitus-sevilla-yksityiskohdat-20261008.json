@@ -1,0 +1,55 @@
+{
+  "task": "sevilla-yksityiskohdat-20261008",
+  "routedTaskNumber": 24,
+  "source": {
+    "path": "posti/sisaltokirjuri-codex-sevilla-yksityiskohdat-20261008.md",
+    "commit": "2b92a87a4de9d3f1b588fb4f63e6d4ad461cb47b",
+    "blob": "a370189127cdff22d13c69ec05fc4faf92ca84c2"
+  },
+  "sourceReadInFull": true,
+  "requestedImages": 3,
+  "imageCount": 0,
+  "generationCalls": 2,
+  "generationLimit": 3,
+  "sourceImagePixelsUsed": false,
+  "generationMode": "built-in image_gen, text-only, one call per produced subject; metadata-only final preparation",
+  "productionComplete": true,
+  "assets": [],
+  "excludedItems": [
+    {
+      "number": 1,
+      "qid": "Q943873",
+      "id": "ketju-ja-ponttonisilta",
+      "generationCalls": 0,
+      "reason": "Required two-body Torre del Oro in1248 conflicts with official architectural history: secondbody was added in14thcentury. Direct towerchain/boatbridge geography also uncertain. No different towerphase or event substitute authorised."
+    },
+    {
+      "number": 2,
+      "qid": "Q834479",
+      "id": "giraldan-nelja-palloa",
+      "generationCalls": 1,
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/sevilla-yksityiskohdat-20261008/production/02-giraldan-nelja-palloa/sevilla-Q834479-giraldan-nelja-palloa.png",
+      "sha256": "8b9960fa794116ee625271f5ef6f96d1bc8f14def5afa8e0664189f5fc8c5f02",
+      "reason": "Huipun pystytangossa näkyy täsmälleen3kultaista metallipalloa, ei tilauksen4palloa. Kaikki näkyvät pallot mahtuvat kuvaan, joten puuttuvaa neljättä ei voi selittää rajauksella.",
+      "R2Delivered": false
+    },
+    {
+      "number": 3,
+      "qid": "Q2274061",
+      "id": "maestranzan-monikulmio",
+      "generationCalls": 1,
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/sevilla-yksityiskohdat-20261008/production/03-maestranzan-monikulmio/sevilla-Q2274061-maestranzan-monikulmio.png",
+      "sha256": "c7f666e101743661b96854ed6035f9265814660acae098185169efb3d6afb54c",
+      "reason": "Sisäaidassa näkyy luettava numeron5muoto. Kameranäkymä on vino ja ulkoreuna näyttää lähellä säännöllistä ellipsiä; tilauksen selvästi epäsäännöllistä30erimittaisen sivun ylhäältä todettavaa pohjamuotoa ei voi varmentaa.",
+      "R2Delivered": false
+    }
+  ],
+  "comparison": null,
+  "deliveryStatus": "Omissions-only report and manifest submitted through mailbox; no selected images or R2 media uploads.",
+  "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+  "editorAcceptance": false,
+  "fableReceipt": false,
+  "gameIntegrated": false,
+  "published": false,
+  "createdAt": "2026-10-08T09:36:49.771113+00:00"
+}
