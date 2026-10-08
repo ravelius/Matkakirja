@@ -1,0 +1,586 @@
+{
+  "task": "marseille-yksityiskohdat-20261008",
+  "routedTaskNumber": 27,
+  "source": {
+    "path": "posti/sisaltokirjuri-codex-marseille-yksityiskohdat-20261008.md",
+    "commit": "552404190b0c427812baf7366122e168c29de8f7",
+    "blob": "d34ad1dde631be0c9ea0943356b9bafc06152c2c"
+  },
+  "sourceReadInFull": true,
+  "requestedImages": 5,
+  "imageCount": 4,
+  "generationCalls": 5,
+  "generationLimit": 5,
+  "sourceImagePixelsUsed": false,
+  "generationMode": "built-in image_gen, text-only, one call per produced subject; metadata-only final preparation",
+  "productionComplete": true,
+  "assets": [
+    {
+      "number": 1,
+      "qid": "Q437959",
+      "id": "fokaialaisten-saapuminen",
+      "file": "marseille-Q437959-fokaialaisten-saapuminen.png",
+      "filename": "marseille-Q437959-fokaialaisten-saapuminen.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/marseille-yksityiskohdat-20261008/production/01-fokaialaisten-saapuminen/marseille-Q437959-fokaialaisten-saapuminen.png",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11aeb-3549-7653-bdb0-6b2130a54254/exec-0c27cf87-fcd5-4564-976a-7d82cbea07dc.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/marseille-yksityiskohdat-20261008/production/01-fokaialaisten-saapuminen/original-generation.png",
+      "sha256": "70d43b002f96f93328a308a0821d1cef4643461f0cb71f0be0b3da17fb16a854",
+      "originalSha256": "224a8593bc498381057b88acfcbafffc669f30fcf7dbc894dbc5eb315b00a113",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "generationCalls": 1,
+      "generationPrompt": "Use case: historical-scene\nAsset type: photorealistic historical educational illustration for Marseille.\nCreate ONE entirely new image from TEXT ONLY, native 1536 x 1024 landscape (3:2), opaque RGB PNG, sRGB. No reference/input photographs or paintings.\nScene: an imagined arrival of Phocaean Greek sailors in the natural Lacydon inlet on the Mediterranean coast around 600 BCE, before the Greek city existed. View from a slightly elevated rocky shore toward a narrow sheltered natural bay. A low pale limestone slope is on the left; pale scrub-covered limestone hills beyond the bay. Completely undeveloped natural shoreline: rocks, gravel, wild grasses, sparse low shrubs; no settlement skyline.\nSubjects: TWO plain wooden Archaic Greek long oared sailing vessels approaching or resting close to the shore in the center of the inlet, one nearer and one somewhat farther away. Each boat has a single wooden mast, one broad square off-white linen sail supported by a simple horizontal yard, believable natural-fiber rigging and rows of wooden oars. Long narrow modest timber hulls, curved raised bows, no ornate carvings. A simple painted EYE shape on each bow is a nonlinguistic geometric protective motif, never lettering. No later Roman ships or medieval ships.\nAt the nearby shore, a small group of four anonymous fictional adult sailors and local shore dwellers meet quietly and greet each other. They are small and distant, no more than one twelfth of image height, viewed from behind or from rear oblique angles with their heads turned away; no facial features can be distinguished. Modest early archaic cloth tunics and wraps in undyed linen and muted earthy wool; no armor, crests or theatrical costumes. Nobody depicts a named historic individual. Do not portray a legendary wedding.\nComposition: landscape camera photograph-like view; boats and inlet remain clearly legible, the low shore and small greeting group provide scale. Natural plausible horizon and geography. An original composition invented from these words; do not copy or borrow the arrangement or visual style of any artwork.\nMedium: extremely convincing real camera-shot appearance, quiet natural morning daylight, muted limestone beige, dusty earth, faded linen and subdued blue-green water. Real wood grain, woven sails and subtle water ripples. Neutral photographic exposure, no HDR, no cinematic grading, no painterly treatment, no glossy CGI.\nAvoid: city buildings, fortifications, stone quays, temples, Roman architecture, churches, castles, modern structures or vessels, engines, steamships, colorful decorations, all words and numerals, signs, logos, watermarks, image borders. No identifiable faces or real-person likeness. No blood, injuries, bodies or violence.\n",
+      "viitteet": [
+        {
+          "publisher": "Musées de Marseille / Ville de Marseille",
+          "title": "Le Port antique",
+          "url": "https://musees.marseille.fr/le-port-antique",
+          "type": "textResearchOnly",
+          "access": "2026-10-08; official web text read only; no image links opened or pixels used",
+          "notes": "Museum text confirms Phocaean Greek foundation of Massalia around 600 BCE and distinguishes later Hellenistic, Roman and late-antique port remains; those later structures excluded."
+        },
+        {
+          "publisher": "Ville de Marseille",
+          "title": "2 600 ans d’histoire",
+          "url": "https://www.marseille.fr/decouvrir-marseille/histoire-de-marseille/pr%C3%A9sentation",
+          "type": "textResearchOnly",
+          "access": "2026-10-08; official indexed text read; direct text fetch returned 403; no source image pixels viewed",
+          "notes": "Official indexed city history places Phocaean arrival in natural Lacydon around 600 BCE and cites Herodotus on long penteconters rather than round merchant vessels. Used as broad period/ship context only."
+        }
+      ],
+      "kuvateksti": "Kuvitteellinen näkymä fokaialaisten kreikkalaisten merenkulkijoiden saapumisesta Lacydonin luonnonlahteen noin 600 eaa., ennen Massalian kaupungin rakentumista. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "technicalChanges": [
+        "Added standard sRGB ICC profile without color conversion.",
+        "Added exact Description and Source PNG text metadata.",
+        "Decoded RGB pixels unchanged and verified equal to tool original.",
+        "Created separate full-frame 480x320 QA preview."
+      ],
+      "QA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Native 1536x1024 final RGB PNG and full-frame 480x320 preview personally viewed.",
+          "Two long plain wooden oared sailing vessels, one square cloth sail each, nonlinguistic painted eye motifs on bows; no lettering observed.",
+          "Natural pale limestone inlet, scrub and shore; no city, fortifications, churches, Roman structures or modern objects.",
+          "Four shore adults seen from behind or rear oblique views. Crews are small. No identifiable facial detail or real-person likeness observed.",
+          "Natural morning light, realistic timber/linen/water/limestone texture and muted colors; composition and boat subject remain clear at 480px.",
+          "No words, numerals, logos, signs, watermarks, image borders, blood, injury or violence observed."
+        ],
+        "limitations": [
+          "Fictional coastline and greeting arrangement, not a surveyed reconstruction of the ancient Lacydon shoreline or a documented encounter.",
+          "Long hulls, rigging and archaic cloth are visual approximations; no claim to reconstruct a specific surviving vessel.",
+          "Four shore figures are roughly one seventh of image height, larger than the requested one twelfth, but rear-facing; boat crews remain small and distant."
+        ]
+      },
+      "sourceCommit": "552404190b0c427812baf7366122e168c29de8f7",
+      "sourceBlob": "d34ad1dde631be0c9ea0943356b9bafc06152c2c",
+      "sourceReadInFull": true,
+      "sharedRulesReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "generationMethod": "built-in image_gen; new text-only generation",
+      "previewPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/marseille-yksityiskohdat-20261008/production/01-fokaialaisten-saapuminen/qa-preview-480.png",
+      "rgbPixelsUnchanged": true,
+      "status": "local-candidate-approved",
+      "r2Delivered": false,
+      "mailboxDelivered": false,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "preservedOriginalByteExact": true,
+      "visualReview": {
+        "task": "marseille-yksityiskohdat-20261008",
+        "number": 1,
+        "qid": "Q437959",
+        "file": "marseille-Q437959-fokaialaisten-saapuminen.png",
+        "sha256": "70d43b002f96f93328a308a0821d1cef4643461f0cb71f0be0b3da17fb16a854",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Kaksi arkaaista puista soutu/purjelaivaa neliöpurjeineen ja keulasilmineen, neljä pientä anonyymiä selin olevaa rannalla, luonnonlahti ilman kaupunkia. Ei roomalaista tai modernia arkkitehtuuria, tekstiä, lippuja tai tunnistettavia kasvoja."
+        ],
+        "limitations": [
+          "Fictional coastline and greeting arrangement, not a surveyed reconstruction of the ancient Lacydon shoreline or a documented encounter.",
+          "Long hulls, rigging and archaic cloth are visual approximations; no claim to reconstruct a specific surviving vessel.",
+          "Four shore figures are roughly one seventh of image height, larger than the requested one twelfth, but rear-facing; boat crews remain small and distant."
+        ],
+        "agentVerdictBeforeRootReview": true,
+        "reviewedAtUTC": "2026-10-08T10:29:18.533123+00:00"
+      },
+      "agentQA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Native 1536x1024 final RGB PNG and full-frame 480x320 preview personally viewed.",
+          "Two long plain wooden oared sailing vessels, one square cloth sail each, nonlinguistic painted eye motifs on bows; no lettering observed.",
+          "Natural pale limestone inlet, scrub and shore; no city, fortifications, churches, Roman structures or modern objects.",
+          "Four shore adults seen from behind or rear oblique views. Crews are small. No identifiable facial detail or real-person likeness observed.",
+          "Natural morning light, realistic timber/linen/water/limestone texture and muted colors; composition and boat subject remain clear at 480px.",
+          "No words, numerals, logos, signs, watermarks, image borders, blood, injury or violence observed."
+        ],
+        "limitations": [
+          "Fictional coastline and greeting arrangement, not a surveyed reconstruction of the ancient Lacydon shoreline or a documented encounter.",
+          "Long hulls, rigging and archaic cloth are visual approximations; no claim to reconstruct a specific surviving vessel.",
+          "Four shore figures are roughly one seventh of image height, larger than the requested one twelfth, but rear-facing; boat crews remain small and distant."
+        ]
+      },
+      "mitat": [
+        1536,
+        1024
+      ],
+      "fableReceipt": false,
+      "r2Key": "julisteet/marseille-yksityiskohdat/20261008/marseille-Q437959-fokaialaisten-saapuminen.png",
+      "url": "https://media.matkakirja.app/julisteet/marseille-yksityiskohdat/20261008/marseille-Q437959-fokaialaisten-saapuminen.png",
+      "bytes": 3231799,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "number": 3,
+      "qid": "Q622500",
+      "id": "ruttoaluksen-saapuminen-1720",
+      "file": "marseille-Q622500-ruttoaluksen-saapuminen-1720.png",
+      "filename": "marseille-Q622500-ruttoaluksen-saapuminen-1720.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/marseille-yksityiskohdat-20261008/production/03-ruttoaluksen-saapuminen-1720/marseille-Q622500-ruttoaluksen-saapuminen-1720.png",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11af3-d4ec-7b70-be19-d325dbdf7bd0/exec-5bc6f819-cfa7-421f-b25f-4b74ead4aba5.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/marseille-yksityiskohdat-20261008/production/03-ruttoaluksen-saapuminen-1720/original-generation.png",
+      "sha256": "6ae6be91a2f7140ebcf817e21f5f58d27096798b035df51c0056b42cf5071e50",
+      "originalSha256": "fb6b5f1aa6a3d7f2a857b10960d17621ec145b063dfdf5e5181ae10188b85c6b",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "generationCalls": 1,
+      "generationPrompt": "Use case: historical-scene\nAsset type: photograph-like historical educational illustration for a Marseille city introduction.\nCreate ONE entirely new TEXT-ONLY image, exactly 1536 x 1024 landscape, opaque RGB PNG, sRGB. No input photographs or image references.\nScene: a quiet early-eighteenth-century wooden merchant sailing ship arriving at the entrance to Marseille's old harbor in late May 1720. This is a wholly invented period ship and harbor arrangement illustrating the textile-trade arrival context; do not reproduce any museum painting, actual vessel portrait, or historical-person portrait.\nSubject: one substantial three-masted wooden cargo vessel, with period rope rigging and muted off-white square canvas sails partly furled. Exactly three visible masts: foremast, mainmast, smaller mizzenmast. Plain dark weathered timber hull with no name, text, marks or decorated portrait. A few worn unmarked cloth-wrapped cargo bales sit low along the near deck behind the rail, not on the outside of the hull. No flag of any color anywhere.\nPeople: one SMALL distant fictional captain on the deck, entirely REAR-FACING to the camera, looking toward the city, dark plain early-1700s long coat and simple tricorn hat. At most three other very small anonymous sailors on deck, all with backs to the camera and no visible facial details. Several tiny rear-facing dockworkers can appear on the distant quay. No actual person likeness, no recognizable face, no portraits.\nComposition: wide view from low near-water height, looking diagonally toward the ship from its forward quarter, so the wooden bow and long near side are visible. Harbor entrance and old stone fort are behind it. Ship centered with bow angled toward the harbor; small rear-facing captain turns away from the viewer toward the city. Keep all masts and spars inside frame. Gentle harbor water foreground, no waves hiding the hull.\nBackdrop: old Fort Saint-Jean in sober pale stone with the historic square medieval harbor tower, slender round seventeenth-century watchtower and low rampart; modest pale limestone and plaster houses with clay-tile roofs climb the ridge behind, as in early-1700s Marseille. No exact present-day skyline reconstruction. Natural rocky shore.\nMaterials and lighting: convincing camera-captured photograph-like reconstruction, subdued natural late-spring daylight under thin cloud, muted pale limestone, gray-blue water, brown timber and worn natural canvas. Real rope fibers, soft sail creases, aged wood grain, restrained contrast and realistic distance haze. No HDR, no illustration brushwork, no glossy CGI, no dramatic cinematic grading or oversaturation.\nAvoid: two-masted rig, yellow quarantine flag or any flag, readable text, names, numbers, crests, logos, watermark, border, modern buildings or roads, modern MuCEM, Foster canopy, modern footbridges, nineteenth-century Notre-Dame de la Garde basilica or gold statue, steamship, engines, modern metal ship, close-up people, front-facing people, visible faces, specific captain portrait, patients, sick people, dead people, injuries, blood, violence, rats or disease spectacle.",
+      "viitteet": [
+        {
+          "publisher": "Ville de Marseille",
+          "title": "Dossier officiel de concertation / calanques, pièces jointes partie 3",
+          "url": "https://www.marseille.fr/sites/default/files/contenu/logement/PDF_Concertations/pieces_jointes_piece_3_partie3.pdf",
+          "type": "textResearchOnly",
+          "notes": "Official city-hosted indexed text identifies Grand Saint Antoine as a three-masted vessel about forty metres long carrying precious Levant textiles. Primary-text basis for changing the order two-mast brief. No document images or photo pixels viewed.",
+          "access": "2026-10-08; indexed primary text excerpt read. Direct PDF web open rejected 37.8MB file as too large; no PDF image pages viewed."
+        },
+        {
+          "publisher": "Musée d’Histoire de Marseille / Ville de Marseille",
+          "title": "L’arrivée du Grand Saint Antoine à Marseille",
+          "url": "https://musee-histoire.marseille.fr/node/2295",
+          "type": "textResearchOnly",
+          "notes": "Official museum text confirms arrival on 25 May 1720, valuable cargo, health documentation and captain remaining in stern during voyage. Event context only; no named-person likeness or museum imagery used. Yellow flag not established by these primary text sources and omitted by root decision.",
+          "access": "2026-10-08; full page text read only"
+        },
+        {
+          "publisher": "Ville de Marseille",
+          "title": "Le Fort Saint-Jean",
+          "url": "https://www.marseille.fr/culture/patrimoine-culturel/le-fort-saint-jean",
+          "type": "textResearchOnly",
+          "notes": "Official city text confirms seventeenth-century Tour du Fanal and fort building starting 1668 with Vauban succeeding in 1678. Used for old fort period context; no modern museum pixels viewed.",
+          "access": "2026-10-08; official indexed text read only"
+        }
+      ],
+      "kuvateksti": "Kuvitteellinen kolmimastoinen tekstiililastia kuljettava kauppalaiva saapuu Marseillen satamaan Grand-Saint-Antoinen vuoden 1720 saapumisen historiallisessa yhteydessä. Pieni selin kuvattu kapteeni katsoo kohti kaupunkia; hahmo ei ole Chataud’n muotokuva. Mastomäärä on tarkennettu Marseillen kaupungin lähteen mukaan, ja lähteissä vahvistamaton keltainen karanteenilippu on jätetty pois. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "technicalChanges": [
+        "Added standard sRGB ICC profile without color conversion.",
+        "Added exact Description and Source PNG text metadata.",
+        "RGB pixel values unchanged; decoded pixel byte equality verified.",
+        "Created separate full-frame 480x320 QA preview."
+      ],
+      "QA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Native 1536x1024 final and separate full-frame 480x320 preview inspected; entire vessel, all three masts and fort remain legible.",
+          "Exactly three visible masts, no yellow or other flag; unmarked wooden merchant hull and cloth cargo bales.",
+          "Captain entirely rear-facing in plain coat and tricorn, small distant crew; no identifiable faces or named-person portrait.",
+          "Quiet sea-level harbor arrival, stone square/round towers and old pale ridge houses; no MuCEM, Foster canopy, modern basilica, steamship or modern infrastructure.",
+          "No disease spectacle, sick people, dead people, injury, blood, violence, text, numbers, logos, watermark or border observed.",
+          "Photographic wood, rope, canvas, stone and water materials with subdued natural daylight and muted colors."
+        ],
+        "limitations": [
+          "Ship, rigging details and exact waterfront arrangement are fictional, not an exact archaeological reconstruction of Grand-Saint-Antoine or specific museum painting.",
+          "The ship captain is entirely rear-facing and small but located toward the bow rather than the stern mentioned in the historical voyage text; no specific person likeness is claimed.",
+          "No primary evidence for a yellow quarantine flag aboard the arriving ship was established; omitted with root approval."
+        ]
+      },
+      "historicalClarification": {
+        "status": "approved-by-root",
+        "received": "2026-10-08",
+        "decision": "Three masts according to official city text; omit unverified yellow quarantine flag. Fictional 1720 textile-trade vessel and rear-facing small captain.",
+        "reason": "Source order two-mast/yellow-flag claims conflicted with or were not established by primary evidence."
+      },
+      "sourceCommit": "552404190b0c427812baf7366122e168c29de8f7",
+      "sourceBlob": "d34ad1dde631be0c9ea0943356b9bafc06152c2c",
+      "sourceReadInFull": true,
+      "sharedRulesReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "generationMethod": "built-in image_gen; text-only",
+      "status": "local-candidate-approved",
+      "r2Delivered": false,
+      "mailboxDelivered": false,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "previewPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/marseille-yksityiskohdat-20261008/production/03-ruttoaluksen-saapuminen-1720/qa-preview-480.png",
+      "rgbPixelsUnchanged": true,
+      "visualReview": {
+        "task": "marseille-yksityiskohdat-20261008",
+        "number": 3,
+        "qid": "Q622500",
+        "file": "marseille-Q622500-ruttoaluksen-saapuminen-1720.png",
+        "sha256": "6ae6be91a2f7140ebcf817e21f5f58d27096798b035df51c0056b42cf5071e50",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Kolme mastoa virallisen lähdetarkennuksen mukaan, merkitön aikakauden kauppalaiva, tekstiilipaaleja ja pieni selin oleva kapteeni. Ei vahvistamatonta keltaista lippua, sairauskuvaa, uhreja tai myöhempiä MuCEM/Foster-rakennuksia. Alus ja rantamuodot kuvituksellisia."
+        ],
+        "limitations": [
+          "Ship, rigging details and exact waterfront arrangement are fictional, not an exact archaeological reconstruction of Grand-Saint-Antoine or specific museum painting.",
+          "The ship captain is entirely rear-facing and small but located toward the bow rather than the stern mentioned in the historical voyage text; no specific person likeness is claimed.",
+          "No primary evidence for a yellow quarantine flag aboard the arriving ship was established; omitted with root approval."
+        ],
+        "agentVerdictBeforeRootReview": true,
+        "reviewedAtUTC": "2026-10-08T10:29:18.544427+00:00"
+      },
+      "agentQA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Native 1536x1024 final and separate full-frame 480x320 preview inspected; entire vessel, all three masts and fort remain legible.",
+          "Exactly three visible masts, no yellow or other flag; unmarked wooden merchant hull and cloth cargo bales.",
+          "Captain entirely rear-facing in plain coat and tricorn, small distant crew; no identifiable faces or named-person portrait.",
+          "Quiet sea-level harbor arrival, stone square/round towers and old pale ridge houses; no MuCEM, Foster canopy, modern basilica, steamship or modern infrastructure.",
+          "No disease spectacle, sick people, dead people, injury, blood, violence, text, numbers, logos, watermark or border observed.",
+          "Photographic wood, rope, canvas, stone and water materials with subdued natural daylight and muted colors."
+        ],
+        "limitations": [
+          "Ship, rigging details and exact waterfront arrangement are fictional, not an exact archaeological reconstruction of Grand-Saint-Antoine or specific museum painting.",
+          "The ship captain is entirely rear-facing and small but located toward the bow rather than the stern mentioned in the historical voyage text; no specific person likeness is claimed.",
+          "No primary evidence for a yellow quarantine flag aboard the arriving ship was established; omitted with root approval."
+        ]
+      },
+      "mitat": [
+        1536,
+        1024
+      ],
+      "fableReceipt": false,
+      "r2Key": "julisteet/marseille-yksityiskohdat/20261008/marseille-Q622500-ruttoaluksen-saapuminen-1720.png",
+      "url": "https://media.matkakirja.app/julisteet/marseille-yksityiskohdat/20261008/marseille-Q622500-ruttoaluksen-saapuminen-1720.png",
+      "bytes": 2516765,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "number": 4,
+      "qid": "Q2600427",
+      "id": "cosquer-elainhahmot",
+      "file": "marseille-Q2600427-cosquer-elainhahmot.png",
+      "filename": "marseille-Q2600427-cosquer-elainhahmot.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/marseille-yksityiskohdat-20261008/production/04-cosquer-elainhahmot/marseille-Q2600427-cosquer-elainhahmot.png",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11af3-d4ec-7b70-be19-d325dbdf7bd0/exec-b94e6724-6ac9-4894-862c-23328cc84564.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/marseille-yksityiskohdat-20261008/production/04-cosquer-elainhahmot/original-generation.png",
+      "sha256": "d1bd793c295bae09a216e4c37979640f4f63f3a1c684fd2d45f58209a25fd0df",
+      "originalSha256": "a080432cf452b35929931d897d4b6f39dc6f2bf15d960eea73266ef192161357",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "generationCalls": 1,
+      "generationPrompt": "Use case: historical-scene\nAsset type: photograph-like educational cave-art interpretation for a Marseille city introduction.\nCreate ONE entirely new TEXT-ONLY image, exactly 1536 x 1024 landscape, opaque RGB PNG, sRGB. No input photographs or image references.\nScene: the natural limestone wall of a damp Mediterranean Palaeolithic cave in the context of the original Cosquer cave near Marseille. This is a wholly invented ORIGINAL cave-art interpretation, not a replica, not a specific authentic archaeological panel, not a photograph of the actual Cosquer artwork, and not a museum facsimile. Invent all outlines, animal poses, positions, stone cracks, and their relationship from scratch. Do not reproduce any known Cosquer panel, museum painting, modern reconstruction or artwork composition.\nSubject: a large simple charcoal-outline horse in profile is central, with a smaller partial horse nearby, and two separate small bison outlines around it. One or two small upright Great Auk-like seabird outlines appear lower on the natural rock, with short wings, stocky upright bodies and long heavy beaks. These animal silhouettes are sparse, irregular, primitive pigment marks made in charcoal black and muted reddish-brown ochre. Their outlines follow uneven limestone relief, with natural gaps and faded areas; no cartoon faces, no modern drawing style, no deliberate decorative pattern.\nComposition: viewed straight on from roughly 1.3 metres. Uninterrupted rough limestone wall fills the ENTIRE 3:2 landscape frame. The central animals stay clearly legible with enough space around them. No frame or museum setting.\nMaterials and lighting: photograph of real physical pigment on irregular pale limestone, natural stone pores, fine cracks, subtle calcite streaks and slight moist shimmer along the lower surface. Restrained warm small-lamp beam falls gently on the central horse; shadow deepens naturally toward the edges. The source of light is outside the picture and invisible. Quiet muted gray-beige rock, charcoal and earth-red pigment, dark natural edges. Convincing camera-captured physical materials, natural exposure, no HDR, no glossy CGI, no theatrical cinematic grading, no bright saturated colors.\nAvoid: exact historical panel recreation, exact known animal tracing, copy of any museum facsimile or collection artwork, modern museum interior, people, hands, handprints, fingerprints, flashlight, lamp, cables, equipment, signs, captions, text, letters, numbers, logos, symbols, watermark, border, bright modern paints, cartoon illustration.",
+      "viitteet": [
+        {
+          "publisher": "Ministère de la Culture / Archéologie en France",
+          "title": "La grotte Cosquer",
+          "url": "https://archeologie.culture.gouv.fr/france/fr/la-grotte-cosquer",
+          "type": "textResearchOnly",
+          "notes": "Official text describes horses, bisons, marine animals, natural limestone location and updated chronology around 33000–19000 years ago (32500–19000 cal BP). Used only for general archaeological context. No source image pixels viewed or used. Older order dates are not repeated in the caption.",
+          "access": "2026-10-08; web text read only"
+        },
+        {
+          "publisher": "Ministère de la Culture / La grotte Cosquer",
+          "title": "Les animaux",
+          "url": "https://archeologie.culture.gouv.fr/cosquer/fr/les-animaux",
+          "type": "textResearchOnly",
+          "notes": "Official text lists horses, bisons and marine animals and identifies seabirds as likely Great Auks. Only general animal categories used; no media links opened or motifs traced.",
+          "access": "2026-10-08; full web text read only"
+        }
+      ],
+      "kuvateksti": "Cosquerin ylemmän paleoliittikauden eläinaiheista tehty alkuperäinen, kuvitteellisesti sommiteltu luolataiteen tulkinta: hevosia, biisoneja ja isoruokkia muistuttavia merilintuja luonnollisella kalkkikiviseinällä. Kuva ei ole valokuva aidosta Cosquerin seinäpaneelista eikä museokopion jäljennös. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "technicalChanges": [
+        "Added standard sRGB ICC profile without color conversion.",
+        "Added exact Description and Source PNG text metadata.",
+        "RGB pixel values unchanged; decoded pixel byte equality verified.",
+        "Created separate full-frame 480x320 QA preview."
+      ],
+      "QA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Native 1536x1024 and separate full-frame 480x320 QA preview inspected.",
+          "Central horse, faded smaller horse, two bisons and two upright auk-like birds are readable; composition is invented rather than an archaeological panel tracing.",
+          "Natural irregular limestone, calcite/cracks and moisture shimmer; charcoal and muted red-brown physical pigment, restrained lamp illumination and dark edges.",
+          "No people, hands, handprints, lamps, equipment, museum architecture, text, numbers, logos or border observed."
+        ],
+        "limitations": [
+          "Animal poses, rock formations and motif arrangement are wholly fictional; this is not documentation of an authentic Cosquer panel.",
+          "No archaeological image pixels viewed; fidelity to any actual panel is deliberately not claimed.",
+          "Current Ministry chronology differs from the order exact two-age formulation; caption uses Upper Palaeolithic without the older 27000/19000 date claim."
+        ]
+      },
+      "sourceCommit": "552404190b0c427812baf7366122e168c29de8f7",
+      "sourceBlob": "d34ad1dde631be0c9ea0943356b9bafc06152c2c",
+      "sourceReadInFull": true,
+      "sharedRulesReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "generationMethod": "built-in image_gen; text-only",
+      "status": "local-candidate-approved",
+      "r2Delivered": false,
+      "mailboxDelivered": false,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "previewPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/marseille-yksityiskohdat-20261008/production/04-cosquer-elainhahmot/qa-preview-480.png",
+      "rgbPixelsUnchanged": true,
+      "chronologyClarification": {
+        "status": "approved-by-root",
+        "received": "2026-10-08",
+        "decision": "Use Upper Palaeolithic in caption, no exact 27000/19000 age pair; wholly invented animal-motif interpretation, no authentic Cosquer panel or museum facsimile copy."
+      },
+      "visualReview": {
+        "task": "marseille-yksityiskohdat-20261008",
+        "number": 4,
+        "qid": "Q2600427",
+        "file": "marseille-Q2600427-cosquer-elainhahmot.png",
+        "sha256": "d1bd793c295bae09a216e4c37979640f4f63f3a1c684fd2d45f58209a25fd0df",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Valokuvamainen rosoinen kalkkikivi ja hiili/okrapigmentti, hevonen, biisonit ja kaksi yleistä merilintumotiivia. Kokonaan keksitty järjestely eikä Cosquerin tunnetun paneelin tai museoiden kopion jäljennös. Ei käsijälkiä, tekstiä tai laitteita."
+        ],
+        "limitations": [
+          "Animal poses, rock formations and motif arrangement are wholly fictional; this is not documentation of an authentic Cosquer panel.",
+          "No archaeological image pixels viewed; fidelity to any actual panel is deliberately not claimed.",
+          "Current Ministry chronology differs from the order exact two-age formulation; caption uses Upper Palaeolithic without the older 27000/19000 date claim."
+        ],
+        "agentVerdictBeforeRootReview": true,
+        "reviewedAtUTC": "2026-10-08T10:29:18.550092+00:00"
+      },
+      "agentQA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Native 1536x1024 and separate full-frame 480x320 QA preview inspected.",
+          "Central horse, faded smaller horse, two bisons and two upright auk-like birds are readable; composition is invented rather than an archaeological panel tracing.",
+          "Natural irregular limestone, calcite/cracks and moisture shimmer; charcoal and muted red-brown physical pigment, restrained lamp illumination and dark edges.",
+          "No people, hands, handprints, lamps, equipment, museum architecture, text, numbers, logos or border observed."
+        ],
+        "limitations": [
+          "Animal poses, rock formations and motif arrangement are wholly fictional; this is not documentation of an authentic Cosquer panel.",
+          "No archaeological image pixels viewed; fidelity to any actual panel is deliberately not claimed.",
+          "Current Ministry chronology differs from the order exact two-age formulation; caption uses Upper Palaeolithic without the older 27000/19000 date claim."
+        ]
+      },
+      "mitat": [
+        1536,
+        1024
+      ],
+      "fableReceipt": false,
+      "r2Key": "julisteet/marseille-yksityiskohdat/20261008/marseille-Q2600427-cosquer-elainhahmot.png",
+      "url": "https://media.matkakirja.app/julisteet/marseille-yksityiskohdat/20261008/marseille-Q2600427-cosquer-elainhahmot.png",
+      "bytes": 3043020,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "number": 5,
+      "qid": "Q1858504",
+      "id": "luostarin-perustaminen-415",
+      "file": "marseille-Q1858504-luostarin-perustaminen-415.png",
+      "filename": "marseille-Q1858504-luostarin-perustaminen-415.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/marseille-yksityiskohdat-20261008/production/05-luostarin-perustaminen-415/marseille-Q1858504-luostarin-perustaminen-415.png",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11aeb-3549-7653-bdb0-6b2130a54254/exec-928b0654-7ca9-4d58-b79e-31ef7fc0de18.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/marseille-yksityiskohdat-20261008/production/05-luostarin-perustaminen-415/original-generation.png",
+      "sha256": "c1a59eb43e517ba782175e3c9597b2aecc133f418ceacf2b1fb08c77b1177815",
+      "originalSha256": "3b4fe7affb89e55ae080a48130a9eeb135b1af0b6d00f863c125ad43c79e1995",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "generationCalls": 1,
+      "generationPrompt": "Use case: historical-scene\nAsset type: photorealistic historical educational illustration for Marseille.\nCreate ONE entirely new image from TEXT ONLY, native 1536 x 1024 landscape (3:2), opaque RGB PNG, sRGB. No reference photographs, portraits, icons, artworks or image inputs.\nScene: an explicitly fictional modest early monastic construction site on the limestone slope above the SOUTH shore of the ancient harbor of Massilia, southern Gaul, in the early fifth century CE, around the traditional foundation period circa 415. This is a broad historical evocation, not a documentary reconstruction of the foundation event or any known building. The site is outside the late Roman town, against a low natural limestone outcrop. Looking slightly down from the hillside toward the harbor and modest late-Roman town on the opposite shore.\nBuildings: two very small plain limestone monk cells and a small unfinished rectangular prayer room, all low and unfortified. Simple rough pale masonry, modest straight doorways, one cell has a plain small clay-tile roof; the prayer room has low unfinished stone walls and a visible small rectangular stone foundation. Piles of loose hand-sized building stones nearby. Nothing monumental. The small prayer room is an invented utilitarian structure and must NOT resemble the later historical Saint-Victor church. No medieval abbey, fortress walls, towers, battlements, cathedral, nave, domes or large ornate arches.\nPeople: four anonymous fictional adult monks, all distant and FULLY REAR-FACING to the camera with faces entirely turned away. Three carry modest irregular limestone building stones toward the foundation; one stands facing the worksite. They are at most one sixth of image height and secondary to the site and harbor. Plain dark brown or charcoal rough wool tunics and simple shoulder wraps appropriate to late antiquity, restrained and practical, no ceremonial ornament, no ornate medieval habits, no saint-like posture. Their faces, beards and identities are not visible. No actual named historical or living person, no portrait likeness, no halos. No paper plans or written documents.\nHarbor context: the calm natural harbor bay in the middle distance, with two small plain wooden Mediterranean cargo boats and simple muted off-white square sails. On the far shore, a modest cluster of low late-Roman limestone and plaster houses with simple terracotta roof tiles, a plain low stone quay; pale scrubby hills behind. Plausible late-antique setting only, all geography and arrangement invented from text, no modern Marseille landmarks.\nComposition: wide photographic view from modest elevation, the low cells and unfinished prayer room visible in the middle foreground, the rear-facing monk group small beside the stone foundation, bay beyond clearly visible. An original unstaged camera-like composition, not a copied historical painting.\nLighting and medium: real camera-photo appearance, natural soft Mediterranean daylight, neutral exposure, subdued limestone beige, faded terracotta, brown wool and blue-gray water. Real stone dust, rough masonry and woven fabric textures. No painting or illustration brushwork, no HDR, no dramatic cinematic lighting, no oversaturation, no glossy CGI.\nAvoid: recognizable human faces and real person likenesses, Saint-Victor's later towers and fortress walls, ornate churches, medieval architecture and costumes, modern buildings or equipment, all text, numbers, signs, inscriptions, logos, watermarks or image frames. No blood, injury, bodies or violence.\n",
+      "viitteet": [
+        {
+          "publisher": "Ville de Marseille",
+          "title": "L’Abbaye Saint-Victor",
+          "url": "https://www.marseille.fr/node/792",
+          "type": "textResearchOnly",
+          "access": "2026-10-08; entire relevant official origin text read; no images opened or source pixels used",
+          "notes": "City text places Cassian’s monastic foundation around 415 at a cave outside the town and dates the actual church to 440. The pictured small unfinished prayer room and cells are fictional utilitarian buildings, not a reconstruction of the 440 church."
+        },
+        {
+          "publisher": "Musées de Marseille / Ville de Marseille",
+          "title": "Le Port antique",
+          "url": "https://musees.marseille.fr/le-port-antique",
+          "type": "textResearchOnly",
+          "access": "2026-10-08; museum web text read only; no images opened or pixels used",
+          "notes": "Museum text distinguishes late-antique fourth–fifth-century port remains and notes the dynamism of late-antique Marseille. Used only as general Massilia harbor context."
+        }
+      ],
+      "kuvateksti": "Kuvitteellinen näkymä Marseillen varhaisen luostarin rakentamisesta 400-luvun alussa, noin vuoden 415 perustamisperinteen yhteydessä. Munkit, solut ja keskeneräinen rukoushuone ovat kuvituksellisia, eivät Cassianuksen muotokuva tai tarkka rakennusrekonstruktio. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "technicalChanges": [
+        "Added standard sRGB ICC profile without color conversion.",
+        "Added exact Description and Source PNG text metadata.",
+        "Decoded RGB pixels unchanged and verified equal to tool original.",
+        "Created separate full-frame 480x320 QA preview."
+      ],
+      "QA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": false,
+        "observations": [
+          "Native 1536x1024 final RGB PNG and full-frame 480x320 QA preview personally viewed.",
+          "Four fully rear-facing fictional adult monks carry limestone or face the building site. No faces or real-person identity visible.",
+          "Two small plain stone cells and an unfinished low rectangular prayer room/foundation occupy the foreground; no Saint-Victor medieval towers or walls at this building site.",
+          "Far harbor shore contains a conspicuous square tower and wall/fortress-like elements with unverified late-Roman dating and a potentially medieval visual reading. This historical-background concern prevents worker approval for delivery.",
+          "Natural daylight and realistic limestone, tiled roof, wool and water surfaces, restrained photographic colors; worksite readable at 480px.",
+          "No words, numbers, signs, logos, halos, watermark, image border, blood, injury or violence observed."
+        ],
+        "limitations": [
+          "The far shore includes a prominent square tower and apparent fortress/battlement-like masonry, with an unverified period appearance that may read as medieval. Delivery is held pending independent parent QA; no regeneration permitted under the one-call limit.",
+          "The foreground monks are roughly one fifth to one quarter of image height, larger than the one-sixth prompt target, but all are fully rear-facing without visible faces.",
+          "Fictional architecture, coastline, clothing and work arrangement, not a surveyed reconstruction or a documented founding scene.",
+          "The official text dates the actual Saint-Victor church to 440; only small fictional early monastic rooms and foundation work were requested for the circa-415 image."
+        ]
+      },
+      "historicalClarification": {
+        "status": "approved-by-root-before-generation",
+        "received": "2026-10-08",
+        "decision": "Early-fifth-century/circa-415 foundation context, low fictional monk cells and small unfinished prayer room; no portrayal of the actual 440 church as completed in 415; fully rear-facing fictional monks without Cassian portrait identity.",
+        "primarySource": "https://www.marseille.fr/node/792"
+      },
+      "sourceCommit": "552404190b0c427812baf7366122e168c29de8f7",
+      "sourceBlob": "d34ad1dde631be0c9ea0943356b9bafc06152c2c",
+      "sourceReadInFull": true,
+      "sharedRulesReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "generationMethod": "built-in image_gen; new text-only generation",
+      "previewPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/marseille-yksityiskohdat-20261008/production/05-luostarin-perustaminen-415/qa-preview-480.png",
+      "rgbPixelsUnchanged": true,
+      "status": "local-candidate-held-parent-qa",
+      "r2Delivered": false,
+      "mailboxDelivered": false,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "preservedOriginalByteExact": true,
+      "visualReview": {
+        "task": "marseille-yksityiskohdat-20261008",
+        "number": 5,
+        "qid": "Q1858504",
+        "file": "marseille-Q1858504-luostarin-perustaminen-415.png",
+        "sha256": "c1a59eb43e517ba782175e3c9597b2aecc133f418ceacf2b1fb08c77b1177815",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Etualan matalat solut, keskeneräinen pieni rukoushuone ja neljä selin olevaa fiktiivistä munkkia. Vastarannan yleinen suora kivimuuri/neliötorni voi kuvata myös myöhäisantiikin linnoitettua kaupunkia eikä näy yksiselitteistä myöhempää Saint-Victorin rakennusta; tämä on epävarma kuvitustopografia eikä tarkka415kaupunkirekonstruktio."
+        ],
+        "limitations": [
+          "Luostarin perustamiskonteksti on400-luvun alussa; pienet solut ja keskeneräinen rukoushuone ovat keksittyjä eivätkä vuonna440rakennetun kirkon jäljennös.",
+          "Vastarannan kaupungin muuri/neliötorni, katot ja satama ovat oma yleinen tilatulkinta. Niitä ei vahvistettu nimenomaisesti vuoden415Massilian rakennuksiksi.",
+          "Munkit ovat täysin selin, eivät Cassianuksen muotokuva. Tarkkaa rakennusjärjestelyä tai historiallista yksittäistapahtumaa ei dokumentoida."
+        ],
+        "agentVerdictBeforeRootReview": false,
+        "reviewedAtUTC": "2026-10-08T10:29:18.556194+00:00"
+      },
+      "agentQA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": false,
+        "observations": [
+          "Native 1536x1024 final RGB PNG and full-frame 480x320 QA preview personally viewed.",
+          "Four fully rear-facing fictional adult monks carry limestone or face the building site. No faces or real-person identity visible.",
+          "Two small plain stone cells and an unfinished low rectangular prayer room/foundation occupy the foreground; no Saint-Victor medieval towers or walls at this building site.",
+          "Far harbor shore contains a conspicuous square tower and wall/fortress-like elements with unverified late-Roman dating and a potentially medieval visual reading. This historical-background concern prevents worker approval for delivery.",
+          "Natural daylight and realistic limestone, tiled roof, wool and water surfaces, restrained photographic colors; worksite readable at 480px.",
+          "No words, numbers, signs, logos, halos, watermark, image border, blood, injury or violence observed."
+        ],
+        "limitations": [
+          "The far shore includes a prominent square tower and apparent fortress/battlement-like masonry, with an unverified period appearance that may read as medieval. Delivery is held pending independent parent QA; no regeneration permitted under the one-call limit.",
+          "The foreground monks are roughly one fifth to one quarter of image height, larger than the one-sixth prompt target, but all are fully rear-facing without visible faces.",
+          "Fictional architecture, coastline, clothing and work arrangement, not a surveyed reconstruction or a documented founding scene.",
+          "The official text dates the actual Saint-Victor church to 440; only small fictional early monastic rooms and foundation work were requested for the circa-415 image."
+        ]
+      },
+      "mitat": [
+        1536,
+        1024
+      ],
+      "fableReceipt": false,
+      "r2Key": "julisteet/marseille-yksityiskohdat/20261008/marseille-Q1858504-luostarin-perustaminen-415.png",
+      "url": "https://media.matkakirja.app/julisteet/marseille-yksityiskohdat/20261008/marseille-Q1858504-luostarin-perustaminen-415.png",
+      "bytes": 3188553,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    }
+  ],
+  "excludedItems": [
+    {
+      "number": 2,
+      "qid": "Q975925",
+      "id": "suurkellon-kuljetus-1845",
+      "generationCalls": 1,
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/marseille-yksityiskohdat-20261008/production/02-suurkellon-kuljetus-1845/marseille-Q975925-suurkellon-kuljetus-1845.png",
+      "sha256": "3c157c3009a24cca9c60bee2ade69f281ccea744abf2a657e6631e5e7f9652fa",
+      "reason": "26hevosen/13parin lukumäärää ei voi luotettavasti varmistaa päällekkäisistä ja epäyhtenäisistä pariasemista. Taustaan muodostui myös myöhempään suureen La Major -katedraaliin viittaava kupoli/tornirakenne. Tilauksen täsmällinen määrä ja1845ympäristö eivät varmistu.",
+      "R2Delivered": false
+    }
+  ],
+  "comparison": {
+    "file": "toimitetut-4.jpg",
+    "r2Key": "julisteet/marseille-yksityiskohdat/20261008/toimitetut-4.jpg",
+    "url": "https://media.matkakirja.app/julisteet/marseille-yksityiskohdat/20261008/toimitetut-4.jpg",
+    "sha256": "46c8b45cf9adfabf84d9a63e449b295ee6212be90c68f174cf5aed84f9992cba",
+    "bytes": 295110,
+    "http": 200,
+    "mime": "image/jpeg",
+    "cors": "https://matkakirja.app",
+    "byteExactReadback": true
+  },
+  "deliveryStatus": "Selected candidates R2 verified and submitted through this mailbox manifest/report; Fable/editor/game receipt unverified.",
+  "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+  "editorAcceptance": false,
+  "fableReceipt": false,
+  "gameIntegrated": false,
+  "published": false,
+  "createdAt": "2026-10-08T10:30:55.101544+00:00"
+}

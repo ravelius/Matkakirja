@@ -1,0 +1,476 @@
+{
+  "task": "bryssel-yksityiskohdat-20261008",
+  "routedTaskNumber": 26,
+  "source": {
+    "path": "posti/sisaltokirjuri-codex-bryssel-yksityiskohdat-20261008.md",
+    "commit": "552404190b0c427812baf7366122e168c29de8f7",
+    "blob": "982c05b114f10d8902d44f14497ed6c30c53adb2"
+  },
+  "sourceReadInFull": true,
+  "requestedImages": 3,
+  "imageCount": 3,
+  "generationCalls": 3,
+  "generationLimit": 3,
+  "sourceImagePixelsUsed": false,
+  "generationMode": "built-in image_gen, text-only, one call per produced subject; metadata-only final preparation",
+  "productionComplete": true,
+  "assets": [
+    {
+      "qid": "Q269654",
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "sourceCommit": "552404190b0c427812baf7366122e168c29de8f7",
+      "sourceBlob": "982c05b114f10d8902d44f14497ed6c30c53adb2",
+      "sourceReadInFull": true,
+      "sharedRulesReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "generationMethod": "built-in image_gen; new text-only",
+      "status": "local-candidate-approved",
+      "rootReview": "pending",
+      "r2Delivered": false,
+      "mailboxDelivered": false,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "technicalChanges": [
+        "Added standard sRGB ICC profile without color conversion.",
+        "Added exact Description and Source PNG text metadata.",
+        "RGB pixel values unchanged; byte equality of decoded pixels verified.",
+        "Preserved tool original as a byte-identical original-generation.png.",
+        "Created separate full-frame 480x320 QA preview."
+      ],
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/bryssel-yksityiskohdat-20261008/production/01-lasilattian-romaaniset-rauniot/bryssel-Q269654-lasilattian-romaaniset-rauniot.png",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11ae9-ff4b-7f90-87a7-6c43a1a14746/exec-28c9b54a-6fa8-481b-b44a-4715093f2513.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/bryssel-yksityiskohdat-20261008/production/01-lasilattian-romaaniset-rauniot/original-generation.png",
+      "sha256": "d082799d4f359023ba06381f7f6321bef3e8d129acae5058edcad9dbad814f83",
+      "originalSha256": "cf019e7c383b068b92adff8f1ae2f28ef97e1f1e66b2ee7d193bc4757c9dd2a1",
+      "mode": "RGB",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "previewPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/bryssel-yksityiskohdat-20261008/production/01-lasilattian-romaaniset-rauniot/qa-preview-480.png",
+      "rgbPixelsUnchanged": true,
+      "originalBytesPreserved": true,
+      "sRGBICC": true,
+      "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "number": 1,
+      "id": "lasilattian-romaaniset-rauniot",
+      "filename": "bryssel-Q269654-lasilattian-romaaniset-rauniot.png",
+      "kuvateksti": "Brysselin katedraalin 1000-luvun romaanisia perustuksia havainnollistava lasilattianäkymä. Jäänteiden sijoittelu on likimääräinen; perustuksia paljastui vuosien 1983–2000 kunnostustöissä. Havainnekuva.",
+      "viitteet": [
+        {
+          "publisher": "Cathedral of St. Michael and St. Gudula",
+          "title": "The Romanesque Church",
+          "url": "https://cathedralisbruxellensis.be/en/oeuvres/the-romanesque-church/",
+          "type": "textResearchOnly",
+          "notes": "Official cathedral text dates the earlier Romanesque church to 1047 and confirms its foundations were uncovered beneath the present cathedral. No source images viewed or used.",
+          "access": "2026-10-08; web text opened and read"
+        },
+        {
+          "publisher": "Cathedral of St. Michael and St. Gudula / Belgian Buildings Agency restoration history",
+          "title": "Lecture by Mr Hugo Claes — St Michael and St Gudula Cathedral, the restoration of a unique building",
+          "url": "https://cathedralisbruxellensis.be/en/events/conference-dhr-hugo-claes-la-cathedrale-des-saints-michel-et-gudule-la-restauration-dun-edifice-unique-issu-des-origines-de-larchitecture-gothique-brabanconne/",
+          "type": "textResearchOnly",
+          "notes": "Official cathedral historical text confirms restoration 1983–2000, first phase 1983–1990 including floor reconstruction, and discovery of Romanesque foundations during the works. Exact discovery year is not given; caption uses entire campaign interval rather than asserting a particular 1980s year. No page images viewed or used.",
+          "access": "2026-10-08; official indexed text read"
+        }
+      ],
+      "file": "bryssel-Q269654-lasilattian-romaaniset-rauniot.png",
+      "generationPrompt": "Use case: photorealistic-natural\nAsset type: educational illustrative image for Brussels city introduction.\nCreate ONE entirely NEW text-only image, native 1536 x 1024 landscape 3:2, opaque RGB PNG in sRGB. No input images and no copied photographic composition.\nScene: present-day stone floor inside a northern European Gothic cathedral, inspired by Brussels Cathedral. Camera at about 1.5 m standing eye height, tilted obliquely DOWN for a close view of the floor. One clear rectangular flat glass viewing pane, securely inset flush into the floor in a narrow plain dark metal frame, occupies the central majority of the image. Surround it with modest worn gray-beige cathedral stone paving slabs.\nBelow the glass: a shallow archaeological space containing dimly lit rough gray limestone low foundation walls, one eroded simple circular Romanesque column base and sandy gray-brown earth. These suggest the remains of an eleventh-century church. Invent an original approximate arrangement of these old masonry remnants rather than copying any exact excavation layout, museum object or decorated artifact. The old stones are solid load-bearing wall remnants with ordinary imperfect mortar joints. Restrained concealed ambient illumination makes the foundations visible under the glass without showing lamps or cables.\nLight: soft lateral daylight from cathedral windows. Show subtle physically credible pale window reflections on the flat glass, consistent with its plane and the camera angle; most of the glass stays transparent so the ruins are clear. No reflected person, camera, photographer, tripod or photographer shadow. Natural quiet neutral colors, realistic stone grain, glass sheen and dust, camera-shot optical perspective and plausible depth. Close floor composition; no distant altar or artwork needed.\nStyle: convincing natural unprocessed camera photograph appearance, documentary exposure, not HDR, not cinematic, not glossy CGI, not an illustration drawing. No excessive color saturation.\nAvoid: humans, text, signs, plaques, inscriptions, digits, labels, logos, watermarks, borders, museum display cases or raised glass vitrines, modern equipment, recognizable artworks, copied artifacts, fanciful intact ancient columns, magical glow, photographer reflection or shadow.",
+      "QA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Native 1536x1024 RGB image and separate full-frame 480x320 preview visually inspected.",
+          "Flat glass pane appears flush in a narrow plain metal frame surrounded by worn cathedral stone slabs.",
+          "Oblique downward floor view contains rough gray foundation walls, an eroded circular column base and sandy earth beneath transparent glass.",
+          "Subtle pale window reflections on glass remain readable beside the foundations; no photographer, camera, human or shadow observed.",
+          "Natural muted side light, camera-like stone and glass texture; no text, logos, labels, plaque, copied decorative artifact, museum vitrine or image border observed."
+        ],
+        "limitations": [
+          "Original approximate archaeological wall/base layout and glass-pane design, not a measured reconstruction of the exact Brussels excavation.",
+          "Source verifies restoration campaign 1983–2000 but not the precise year in which these specific remnants were uncovered.",
+          "Reflections and concealed archaeological illumination are illustrative; actual floor/window optical geometry was not copied or independently measured."
+        ]
+      },
+      "visualReview": {
+        "task": "bryssel-yksityiskohdat-20261008",
+        "number": 1,
+        "qid": "Q269654",
+        "file": "bryssel-Q269654-lasilattian-romaaniset-rauniot.png",
+        "sha256": "d082799d4f359023ba06381f7f6321bef3e8d129acae5058edcad9dbad814f83",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Tasoon upotettu lasi ja metallikehys, alla yleisiä muurien/kolumnipohjien jäänteitä, hiekkamaata ja luonnolliset ikkunaheijastukset. Ei tekstiä, kuvaajan varjoa, ihmisiä tai museoesinekopiota."
+        ],
+        "limitations": [
+          "Original approximate archaeological wall/base layout and glass-pane design, not a measured reconstruction of the exact Brussels excavation.",
+          "Source verifies restoration campaign 1983–2000 but not the precise year in which these specific remnants were uncovered.",
+          "Reflections and concealed archaeological illumination are illustrative; actual floor/window optical geometry was not copied or independently measured."
+        ],
+        "agentVerdictBeforeRootReview": true,
+        "reviewedAtUTC": "2026-10-08T10:29:18.514599+00:00"
+      },
+      "agentQA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Native 1536x1024 RGB image and separate full-frame 480x320 preview visually inspected.",
+          "Flat glass pane appears flush in a narrow plain metal frame surrounded by worn cathedral stone slabs.",
+          "Oblique downward floor view contains rough gray foundation walls, an eroded circular column base and sandy earth beneath transparent glass.",
+          "Subtle pale window reflections on glass remain readable beside the foundations; no photographer, camera, human or shadow observed.",
+          "Natural muted side light, camera-like stone and glass texture; no text, logos, labels, plaque, copied decorative artifact, museum vitrine or image border observed."
+        ],
+        "limitations": [
+          "Original approximate archaeological wall/base layout and glass-pane design, not a measured reconstruction of the exact Brussels excavation.",
+          "Source verifies restoration campaign 1983–2000 but not the precise year in which these specific remnants were uncovered.",
+          "Reflections and concealed archaeological illumination are illustrative; actual floor/window optical geometry was not copied or independently measured."
+        ]
+      },
+      "mitat": [
+        1536,
+        1024
+      ],
+      "fableReceipt": false,
+      "r2Key": "julisteet/bryssel-yksityiskohdat/20261008/bryssel-Q269654-lasilattian-romaaniset-rauniot.png",
+      "url": "https://media.matkakirja.app/julisteet/bryssel-yksityiskohdat/20261008/bryssel-Q269654-lasilattian-romaaniset-rauniot.png",
+      "bytes": 2830723,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "qid": "Q269654",
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "sourceCommit": "552404190b0c427812baf7366122e168c29de8f7",
+      "sourceBlob": "982c05b114f10d8902d44f14497ed6c30c53adb2",
+      "sourceReadInFull": true,
+      "sharedRulesReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "generationMethod": "built-in image_gen; new text-only",
+      "status": "local-candidate-approved",
+      "rootReview": "pending",
+      "r2Delivered": false,
+      "mailboxDelivered": false,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "technicalChanges": [
+        "Added standard sRGB ICC profile without color conversion.",
+        "Added exact Description and Source PNG text metadata.",
+        "RGB pixel values unchanged; byte equality of decoded pixels verified.",
+        "Preserved tool original as a byte-identical original-generation.png.",
+        "Created separate full-frame 480x320 QA preview."
+      ],
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/bryssel-yksityiskohdat-20261008/production/02-katedraalin-kellopeli/bryssel-Q269654-katedraalin-kellopeli.png",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11ae9-ff4b-7f90-87a7-6c43a1a14746/exec-653189ff-9b93-4593-ad5d-59386be08181.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/bryssel-yksityiskohdat-20261008/production/02-katedraalin-kellopeli/original-generation.png",
+      "sha256": "7585e6ec2b8c401721d7fe6b301e37ac2d8979cbbdd27328f511e61c39b2d35a",
+      "originalSha256": "ab1e88cf7cad450aafa4c9b9b950a495cd2312ea6fbb600f3ca1952abcce523c",
+      "mode": "RGB",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "previewPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/bryssel-yksityiskohdat-20261008/production/02-katedraalin-kellopeli/qa-preview-480.png",
+      "rgbPixelsUnchanged": true,
+      "originalBytesPreserved": true,
+      "sRGBICC": true,
+      "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "number": 2,
+      "id": "katedraalin-kellopeli",
+      "filename": "bryssel-Q269654-katedraalin-kellopeli.png",
+      "kuvateksti": "Brysselin katedraalin etelätornin 49 kellon kellopeliä havainnollistava rajattu osanäkymä. Kellojen sijoittelu, kehikko ja mekanismi ovat likimääräisiä. Havainnekuva.",
+      "viitteet": [
+        {
+          "publisher": "Cathedral of St. Michael and St. Gudula",
+          "title": "The Bells and the Carillon",
+          "url": "https://cathedralisbruxellensis.be/en/oeuvres/the-bells-and-the-carillon/",
+          "type": "textResearchOnly",
+          "notes": "Official cathedral text identifies the south-tower location, operator Tintinnabulum and seven swinging bells integrated into the carillon, cast between 1966 and 1975. The large seventeenth-century Salvator belongs to the north tower and is not depicted. No images used.",
+          "access": "2026-10-08; web text opened and read"
+        },
+        {
+          "publisher": "urban.brussels / Direction du Patrimoine culturel",
+          "title": "La culture du carillon — inventory PCI/CIE BRU0003",
+          "url": "https://www.patrimoine.brussels/decouvrir/inventaires-du-patrimoine-bruxellois/inventaire-du-patrimoine-culturel-immateriel/la-culture-du-carillon",
+          "type": "textResearchOnly",
+          "notes": "Official regional heritage inventory states that since 1975 the cathedral south tower houses a 49-bell carillon owned by the City of Brussels, technically and artistically managed by Tintinnabulum. 49 is installation context only; this original partial illustration does not claim to show all bells. No image pixels viewed or used.",
+          "access": "2026-10-08; web text opened and read"
+        },
+        {
+          "publisher": "Ville de Bruxelles",
+          "title": "Tintinnabulum — Définition de la structure",
+          "url": "https://www.bruxelles.be/sites/default/files/bxl/DIV18_019_ASBL_WEB_1904.pdf",
+          "type": "textResearchOnly",
+          "notes": "City institutional operator description identifies Tintinnabulum technical and artistic management, city ownership and maintenance of the 49 bells. Used only as indexed textual confirmation; direct PDF fetch returned 403 and no pages or images were viewed.",
+          "access": "2026-10-08; official indexed text read; direct PDF fetch unavailable"
+        }
+      ],
+      "file": "bryssel-Q269654-katedraalin-kellopeli.png",
+      "generationPrompt": "Use case: photorealistic-natural\nAsset type: educational illustrative image for Brussels city introduction.\nCreate ONE entirely NEW text-only image, native 1536 x 1024 landscape 3:2, opaque RGB PNG in sRGB. No input images and no copied photographic composition.\nScene: present-day bell chamber inside the south tower of a northern European Gothic cathedral, inspired by Brussels Cathedral. Its real carillon installation contains 49 bells; this image is only an original approximate PARTIAL VIEW of several bells within that larger installation. Do not try to show all 49 and do not make a count diagram.\nSubject: multiple differently sized solid bronze carillon bells, suspended mouth-down from a heavy dark worn oak and plain steel supporting framework. One or two large bronze bells dominate the foreground; several progressively smaller bells recede into the chamber behind. Fixed bell crowns have clearly plausible bolted connections to the supporting timbers/steel. Each visible open bell has a physically credible internal hanging clapper with a rounded striker, rather than a loose external dangling weight. Plain thin mechanical pull rods and small levers connect to clapper mechanisms between the bells, with visible plausible endpoints. This is mechanical linkage, not electric wire. No identical floating duplicate bells. The bronze surfaces are completely plain and undecorated: natural patina and wear only, absolutely no relief words, cast inscriptions, maker marks, dates, symbols or logos.\nComposition: camera inside the bell chamber at standing eye height, looking slightly upward. Close wide partial chamber view. Large bell mouths and clappers are readable in the foreground, smaller bells arranged farther behind. Thick unadorned oak beams and ordinary steel braces visually support the weight. Rough pale gray cathedral stone walls in background; narrow Gothic tower openings with old wooden louver shutters admit limited soft daylight.\nStyle and light: convincing natural camera photograph appearance, 35mm perspective, quiet documentary framing, realistic bronze patina, worn oak grain, unpolished iron and limestone. Muted neutral brown and gray color, natural side daylight, chamber dim but bells legible. Ordinary restrained exposure, no HDR, no cinematic color grading, no studio glow, no glossy CGI, no dramatic sun shafts.\nAvoid: people, any readable or illegible writing, numerals, labels, cast words, plaques, identifiable maker marks, logos, watermark, borders, electric cables, plastic wiring, motor boxes, screens or modern devices, elaborate ornament, copied exact existing bell installation geometry or identifiable museum object.",
+      "QA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Native 1536x1024 RGB image and separate full-frame 480x320 preview visually inspected.",
+          "Two prominent large plain bronze bells in the foreground with several smaller bells receding in the chamber.",
+          "Internal clapper shafts with rounded strikers visible below open bell mouths; heavy timber beams and bolted plain steel braces visibly support bell crowns.",
+          "Mechanical rods/levers are visually distinct from electrical cables; no motor box, device, screen or plastic wiring observed.",
+          "Rough stone walls and narrow Gothic openings with louvers admit muted daylight.",
+          "No human, inscription, date, numeral, logo, maker label, identifying ornament, watermark or border observed.",
+          "Partial chamber view remains legible at 480px; 49 is verified installation context, never a visible-count requirement."
+        ],
+        "limitations": [
+          "Original approximate partial arrangement of bells, timber/steel supports and linkages, not documentation of the exact existing Brussels installation.",
+          "Clapper and rod geometry is illustrative and was not verified against an engineering drawing; some smaller clapper strikers hang prominently near/below the mouths.",
+          "Requested aged bronze/oak appearance is illustrative; official source dates the swinging bells to 1966–1975 rather than medieval manufacture.",
+          "Not all 49 bells are visible or requested to be visible."
+        ]
+      },
+      "visualReview": {
+        "task": "bryssel-yksityiskohdat-20261008",
+        "number": 2,
+        "qid": "Q269654",
+        "file": "bryssel-Q269654-katedraalin-kellopeli.png",
+        "sha256": "7585e6ec2b8c401721d7fe6b301e37ac2d8979cbbdd27328f511e61c39b2d35a",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Eri kokoisia pronssikelloja, puiset/teräksiset tuet ja mekaaninen välitys luonnollisessa kellohuonevalossa. Osanäkymä vastaa tilauksen kulmaa;49kelloa koskee asennuksen taustafaktaa, ei kuvan näkyvää lukumäärää. Kielten ja tankojen tarkka geometria on havainnollistava."
+        ],
+        "limitations": [
+          "Original approximate partial arrangement of bells, timber/steel supports and linkages, not documentation of the exact existing Brussels installation.",
+          "Clapper and rod geometry is illustrative and was not verified against an engineering drawing; some smaller clapper strikers hang prominently near/below the mouths.",
+          "Requested aged bronze/oak appearance is illustrative; official source dates the swinging bells to 1966–1975 rather than medieval manufacture.",
+          "Not all 49 bells are visible or requested to be visible."
+        ],
+        "agentVerdictBeforeRootReview": true,
+        "reviewedAtUTC": "2026-10-08T10:29:18.520417+00:00"
+      },
+      "agentQA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Native 1536x1024 RGB image and separate full-frame 480x320 preview visually inspected.",
+          "Two prominent large plain bronze bells in the foreground with several smaller bells receding in the chamber.",
+          "Internal clapper shafts with rounded strikers visible below open bell mouths; heavy timber beams and bolted plain steel braces visibly support bell crowns.",
+          "Mechanical rods/levers are visually distinct from electrical cables; no motor box, device, screen or plastic wiring observed.",
+          "Rough stone walls and narrow Gothic openings with louvers admit muted daylight.",
+          "No human, inscription, date, numeral, logo, maker label, identifying ornament, watermark or border observed.",
+          "Partial chamber view remains legible at 480px; 49 is verified installation context, never a visible-count requirement."
+        ],
+        "limitations": [
+          "Original approximate partial arrangement of bells, timber/steel supports and linkages, not documentation of the exact existing Brussels installation.",
+          "Clapper and rod geometry is illustrative and was not verified against an engineering drawing; some smaller clapper strikers hang prominently near/below the mouths.",
+          "Requested aged bronze/oak appearance is illustrative; official source dates the swinging bells to 1966–1975 rather than medieval manufacture.",
+          "Not all 49 bells are visible or requested to be visible."
+        ]
+      },
+      "mitat": [
+        1536,
+        1024
+      ],
+      "fableReceipt": false,
+      "r2Key": "julisteet/bryssel-yksityiskohdat/20261008/bryssel-Q269654-katedraalin-kellopeli.png",
+      "url": "https://media.matkakirja.app/julisteet/bryssel-yksityiskohdat/20261008/bryssel-Q269654-katedraalin-kellopeli.png",
+      "bytes": 2702228,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "number": 3,
+      "qid": "Q821009",
+      "id": "berlaymont-nelja-siipea",
+      "file": "bryssel-Q821009-berlaymont-nelja-siipea.png",
+      "filename": "bryssel-Q821009-berlaymont-nelja-siipea.png",
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationPrompt": "Use case: photorealistic-natural\nAsset type: educational architectural illustration for a Brussels city introduction.\nCreate ONE completely new TEXT-ONLY image, exactly 1536 x 1024 landscape (3:2), opaque RGB PNG, sRGB. No image inputs or reference photographs.\n\nPrimary subject: the renovated Berlaymont building in Brussels, the European Commission headquarters, viewed from an elevated oblique aerial camera. Its defining geometry is ONE central circulation hub with EXACTLY FOUR long office wings of UNEQUAL lengths radiating outward as an asymmetric cross. Show each of the FOUR separate wing ends clearly, separated by open ground between wings. Keep the single central hub readable. The four wings are substantial multi-storey office slabs with gently curved facades, not straight abstract diagram arms. No additional wing, no closed courtyard and no separate tower.\n\nMaterials and architecture: pale silver-gray glass and steel facade, continuous floor glazing behind finely repeated movable glass sun-shading louvers on the VERTICAL facades. Flat roof planes with restrained plausible building services. Small, subdued light-orange terracotta cladding accents on a limited central frontage area; NOT a tall brown-red brick tower. The pale facade and four-wing form dominate the structure. The wings appear slightly elevated over a broad public esplanade due to the structural support arrangement. Architectural massing is a convincing approximation of the documented Berlaymont form, not a measured survey or technical plan.\n\nComposition: own camera viewpoint, looking diagonally down at approximately 55 degrees, as from 250–300 m up; not directly top-down. Rotate the asymmetric cross diagonally in the frame so no rear wing is hidden behind the core. Include all four wings ENTIRELY with generous margins. The building is centered and occupies roughly 60 percent of the image width. Both roof shapes and multi-storey facade heights are apparent. A small portion of the Schuman street/square area appears in the foreground, with a subdued curved junction edge and a lightly planted public square; generic adjacent office buildings, streets and trees surround the building. The surroundings are illustrative urban context, not a claim of the exact October 2026 traffic plan. Keep the main four-wing silhouette legible at 480px.\n\nMedium and lighting: realistic camera-shot architectural photograph appearance, muted natural colors, gentle diffuse daytime light with slight atmospheric haze. Real glass reflections, restrained silvery louver surfaces, believable gray roofs and urban textures. No HDR, no cinematic grading, no oversaturation, no glossy CGI appearance. Buildings and streets reach the frame edges naturally; no artificial backdrop.\n\nAvoid: Atomium, EU flags or any flags, readable words or numerals, signage, captions, plaques, logos, emblems, ads or banners, posters on facades, watermarks, borders, close-up or recognizable people. No distinct artworks. No large bright red/brown masonry center, no extra high tower, no glass-louver blankets on roof, no fantasy symmetrical star, no duplicated wings.\n",
+      "viitteet": [
+        {
+          "publisher": "European Commission, Joint Research Centre",
+          "title": "Improving Energy Efficiency in Commercial Buildings: IEECB 2006 proceedings, Volume 2",
+          "url": "https://publications.jrc.ec.europa.eu/repository/bitstream/JRC33885/IEECB06proceedings%20Vol2.pdf",
+          "type": "textResearchOnly",
+          "notes": "Indexed institutional text confirms cross-shaped building, central hub with four wings of different sizes, curved facades, double-skin facade with inner full-height glazing and outer moving glass louvers.",
+          "access": "2026-10-08; official indexed text excerpt read only. Direct PDF too large for open tool; no PDF pages or image pixels viewed."
+        },
+        {
+          "publisher": "visit.brussels",
+          "title": "The Berlaymont building",
+          "url": "https://www.visit.brussels/en/visitors/venue-details.The-Berlaymont-building.244004",
+          "type": "textResearchOnly",
+          "notes": "Official Brussels tourism text confirms cross shape, four asymmetric wings, support structure, public esplanade and renovation completed in 2004.",
+          "access": "2026-10-08; text page read; no image links opened."
+        },
+        {
+          "publisher": "STRABAG Belgium",
+          "title": "Berlaymont",
+          "url": "https://www.strabag.be/en/projects/berlaymont-en",
+          "type": "textResearchOnly",
+          "notes": "Renovation contractor confirms renovation 1998–2004, retained structural frame and new computer-controlled mobile glass louvers on facade.",
+          "access": "2026-10-08; text page read; no image links opened."
+        },
+        {
+          "publisher": "NBK Keramik",
+          "title": "Europaparlament Berlaymont, Brussels",
+          "url": "https://nbkterracotta.com/en/project/europaparlament-berlaymont/",
+          "type": "textResearchOnly",
+          "notes": "Primary facade supplier confirms glass and steel facade and light-orange terracotta panels covering only relatively small frontage area; does not support tall brown-red brick tower.",
+          "access": "2026-10-08; text page read; no image links opened."
+        },
+        {
+          "publisher": "Beliris",
+          "title": "La nouvelle phase du réaménagement du rond-point Schuman donne le coup d’envoi du nouveau plan de circulation",
+          "url": "https://www.beliris.brussels/presse/circulation-schuman.html",
+          "type": "textResearchOnly",
+          "notes": "Official 18 August 2025 update describes changed circulation and centre/south transformation into shared concentric-circle space, works until end 2026. Exact October 2026 layout unverified.",
+          "access": "2026-10-08; text page read; no maps, photos or image links opened."
+        }
+      ],
+      "sourceCommit": "552404190b0c427812baf7366122e168c29de8f7",
+      "sourceBlob": "982c05b114f10d8902d44f14497ed6c30c53adb2",
+      "sourceReadInFull": true,
+      "sharedRulesReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "generationMethod": "built-in image_gen; text-only",
+      "architectureClarification": {
+        "status": "approved-by-root",
+        "received": "2026-10-08",
+        "decision": "Neljä eripituista hieman kaarevaa siipeä samasta ytimestä, vaaleat teräs- ja lasijulkisivut lasisäleineen, pieni hillitty terrakotta-alue; ei erillistä korkeaa punatiilistä keskustornia eikä koko katon lasisälepeittoa. Schumanin aukio ja kadut viitteellisinä; ei väitettä tarkasta lokakuun 2026 liikennejärjestelystä.",
+        "reason": "Primaarilähteiden faktatarkennus säilyttää neljän siiven pääaiheen."
+      },
+      "QA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Native 1536x1024 file and full-frame 480x320 preview viewed.",
+          "Exactly four separate unequal gently curved office wings radiate from one visible core; all four wing ends are fully inside the frame and the cross stays legible at 480px.",
+          "Pale glazed/silver facade with repeated louver-like shading, flat roof planes with small services, and limited muted-orange central-frontage cladding; no separate red/brown brick high tower or roof covered entirely in glass louvers.",
+          "Elevated oblique aerial composition has visible roofs and facades, surrounding offices, streets, trees and an illustrative curved square/junction foreground.",
+          "Muted natural light, camera-like material texture and restrained glass reflections. No Atomium, flags, logos, readable lettering/numerals, facade ads, watermark, border or identifiable faces observed."
+        ],
+        "limitations": [
+          "Arkkitehtuurin siipipituudet, keskiosa, katot, yksityiskohdat ja oma ilmakulma ovat likimääräisiä tekstilähteisiin perustuvia ratkaisuja; kuva ei ole mitattu suunnitelma eikä paikan päällä otettu valokuva.",
+          "Schumanin aukio ja ympäröivä kaupunkirakenne ovat viitteellisiä; tarkkaa lokakuun 2026 liikennejärjestelyä tai uudistustyömaan tilaa ei esitetä todennettuna.",
+          "Rakennus täyttää arviolta noin 75 prosenttia kuvan leveydestä, enemmän kuin noin 60 prosentin promptitavoite; kaikki neljä siipeä ja koko rakennus näkyvät silti ympäristön ja selkeiden reunamarginaalien kanssa.",
+          "Lähdetilauksen korkea ruskeanpunainen tiilikeskustorni ja kattojen kattava lasisälepeitto tarkennettiin päätekijän hyväksynnällä primaarilähteiden mukaisiksi 2026-10-08."
+        ]
+      },
+      "status": "local-candidate-approved",
+      "r2Delivered": false,
+      "mailboxDelivered": false,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/bryssel-yksityiskohdat-20261008/production/03-berlaymont-nelja-siipea/bryssel-Q821009-berlaymont-nelja-siipea.png",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11aea-95c9-7873-85c3-6eb7f5f61420/exec-09430142-8a1d-4649-aed5-fb1562abf6c7.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/bryssel-yksityiskohdat-20261008/production/03-berlaymont-nelja-siipea/original-generation.png",
+      "sha256": "ab634c60b1e9a2eb438baecb4462cc77a6074542134c8fafedfb2c5aea0dfdab",
+      "originalSha256": "eeb0068a08b2d87e5c781e19fbd3d5bb88a7d7c290489210cde2e2e2b8c01922",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "previewPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/bryssel-yksityiskohdat-20261008/production/03-berlaymont-nelja-siipea/qa-preview-480.png",
+      "rgbPixelsUnchanged": true,
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "technicalChanges": [
+        "Added standard sRGB ICC profile without color conversion.",
+        "Added exact Description and Source PNG text metadata.",
+        "RGB pixel values unchanged; decoded byte equality verified.",
+        "Created separate full-frame 480x320 QA preview."
+      ],
+      "kuvateksti": "Berlaymontin neljä eripituista siipeä haarautuvat yhdestä keskiosasta. Lasisäleiset julkisivut ja pieni terrakotta-alue on tarkennettu rakennuslähteiden mukaan; Schumanin aukioympäristö on viitteellinen. Havainnekuva.",
+      "visualReview": {
+        "task": "bryssel-yksityiskohdat-20261008",
+        "number": 3,
+        "qid": "Q821009",
+        "file": "bryssel-Q821009-berlaymont-nelja-siipea.png",
+        "sha256": "ab634c60b1e9a2eb438baecb4462cc77a6074542134c8fafedfb2c5aea0dfdab",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Neljä selvästi erillistä eripituista kaarevaa siipeä yhdestä ytimestä, lasijulkisivut ja pieni terrakotta-alue. Ei ylimääräistä punaista tiilikeskitornia, EUlogoja tai lippuja. Koko rakennus kuva-alassa. Kadut, Schumanin ympäristö ja mitat likimääräisiä."
+        ],
+        "limitations": [
+          "Arkkitehtuurin siipipituudet, keskiosa, katot, yksityiskohdat ja oma ilmakulma ovat likimääräisiä tekstilähteisiin perustuvia ratkaisuja; kuva ei ole mitattu suunnitelma eikä paikan päällä otettu valokuva.",
+          "Schumanin aukio ja ympäröivä kaupunkirakenne ovat viitteellisiä; tarkkaa lokakuun 2026 liikennejärjestelyä tai uudistustyömaan tilaa ei esitetä todennettuna.",
+          "Rakennus täyttää arviolta noin 75 prosenttia kuvan leveydestä, enemmän kuin noin 60 prosentin promptitavoite; kaikki neljä siipeä ja koko rakennus näkyvät silti ympäristön ja selkeiden reunamarginaalien kanssa.",
+          "Lähdetilauksen korkea ruskeanpunainen tiilikeskustorni ja kattojen kattava lasisälepeitto tarkennettiin päätekijän hyväksynnällä primaarilähteiden mukaisiksi 2026-10-08."
+        ],
+        "agentVerdictBeforeRootReview": true,
+        "reviewedAtUTC": "2026-10-08T10:29:18.526862+00:00"
+      },
+      "agentQA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Native 1536x1024 file and full-frame 480x320 preview viewed.",
+          "Exactly four separate unequal gently curved office wings radiate from one visible core; all four wing ends are fully inside the frame and the cross stays legible at 480px.",
+          "Pale glazed/silver facade with repeated louver-like shading, flat roof planes with small services, and limited muted-orange central-frontage cladding; no separate red/brown brick high tower or roof covered entirely in glass louvers.",
+          "Elevated oblique aerial composition has visible roofs and facades, surrounding offices, streets, trees and an illustrative curved square/junction foreground.",
+          "Muted natural light, camera-like material texture and restrained glass reflections. No Atomium, flags, logos, readable lettering/numerals, facade ads, watermark, border or identifiable faces observed."
+        ],
+        "limitations": [
+          "Arkkitehtuurin siipipituudet, keskiosa, katot, yksityiskohdat ja oma ilmakulma ovat likimääräisiä tekstilähteisiin perustuvia ratkaisuja; kuva ei ole mitattu suunnitelma eikä paikan päällä otettu valokuva.",
+          "Schumanin aukio ja ympäröivä kaupunkirakenne ovat viitteellisiä; tarkkaa lokakuun 2026 liikennejärjestelyä tai uudistustyömaan tilaa ei esitetä todennettuna.",
+          "Rakennus täyttää arviolta noin 75 prosenttia kuvan leveydestä, enemmän kuin noin 60 prosentin promptitavoite; kaikki neljä siipeä ja koko rakennus näkyvät silti ympäristön ja selkeiden reunamarginaalien kanssa.",
+          "Lähdetilauksen korkea ruskeanpunainen tiilikeskustorni ja kattojen kattava lasisälepeitto tarkennettiin päätekijän hyväksynnällä primaarilähteiden mukaisiksi 2026-10-08."
+        ]
+      },
+      "mitat": [
+        1536,
+        1024
+      ],
+      "fableReceipt": false,
+      "r2Key": "julisteet/bryssel-yksityiskohdat/20261008/bryssel-Q821009-berlaymont-nelja-siipea.png",
+      "url": "https://media.matkakirja.app/julisteet/bryssel-yksityiskohdat/20261008/bryssel-Q821009-berlaymont-nelja-siipea.png",
+      "bytes": 3349394,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    }
+  ],
+  "excludedItems": [],
+  "comparison": {
+    "file": "toimitetut-3.jpg",
+    "r2Key": "julisteet/bryssel-yksityiskohdat/20261008/toimitetut-3.jpg",
+    "url": "https://media.matkakirja.app/julisteet/bryssel-yksityiskohdat/20261008/toimitetut-3.jpg",
+    "sha256": "76ae927917523b32f04e2850c9ef3793932c869ff51888356ff67d607339c11b",
+    "bytes": 202390,
+    "http": 200,
+    "mime": "image/jpeg",
+    "cors": "https://matkakirja.app",
+    "byteExactReadback": true
+  },
+  "deliveryStatus": "Selected candidates R2 verified and submitted through this mailbox manifest/report; Fable/editor/game receipt unverified.",
+  "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+  "editorAcceptance": false,
+  "fableReceipt": false,
+  "gameIntegrated": false,
+  "published": false,
+  "createdAt": "2026-10-08T10:29:25.818462+00:00"
+}
