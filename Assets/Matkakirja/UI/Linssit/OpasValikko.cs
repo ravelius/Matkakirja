@@ -2350,7 +2350,7 @@ namespace Matkakirja.Natiivi
 
         /// <summary>
         /// Pelin kenttä-äänitysten nimeämiset (Pelikoodari 8.10.2026: 43 CC BY / BY-SA -äänitystä maisemakoreissa ja kaupunkien
-        /// äänissä sekä pallon äänimaiseman 3 CC BY -ääntä, yhteensä 46; lisenssiehto): "nimi · tekijä · lisenssi" kuten kuvalähteet. Data: kopio webin data/aanilahteet.json:sta
+        /// äänissä sekä pallon äänimaiseman 3 CC BY -ääntä, yhteensä 46; 9.10. +5: proomu, sumutorvi ja Olavinlinnan läpipeluun luuta, varusteet ja yölinnut = 51; lisenssiehto): "nimi · tekijä · lisenssi" kuten kuvalähteet. Data: kopio webin data/aanilahteet.json:sta
         /// (Resources/Lahteet), joten näkyy myös ilman verkkoa; päivitys kopioimalla tiedosto uudelleen.
         /// </summary>
         static List<string> AaniLahteet()
