@@ -1,3 +1,14 @@
+# TILANNE 8.10. klo 08.0x
+
+- **Näyte 4 VALMIS 08.03** (`s2-eurooppa-talvip-nayte4/`, kuva `kuvapari-talvip-nayte4-20261008.jpg`, näyte 3 | 4). TALVI_PKAIKKI=1: p 43–63 kuvasta per ruutu.
+  Lumirajan suorakulmiot ovat suurimmaksi osaksi poissa. Jäljellä yksi suora pystyreuna lumettomalla alueella (n. 27° E, 51–52° N). Se on lumettoman värin ero, koska 12 värinäkymää ovat ruuduittain eri päiviltä. Puolivälin p näyttää paikoin utuiselta.
+  PT:lle on raportoitu ja kysytty: näyte 5 (lumettoman värin sovitus naapuriin) vai koko ajo näytteen 4 linjalla (169 lohkoa, ~15 min/lohko, ~40 h yhdellä prosessilla).
+  Julkaisijalle on ilmoitettu "valmis".
+- **EI uusia ajoja ennen kuin Julkaisija ilmoittaa TF 164:n ladatuksi** (käännös 08.15–08.30).
+- Vertailu: `python3 kaudet/vertaa-talvip.py <ulos.jpg> "<nimi A>" <kansio A> "<nimi B>" <kansio B>` (T7 iss-eurooppa-s2, z8-rajaus lohkoille 36_21, 37_21, 37_20).
+
+---
+
 # TILANNE 8.10. klo 07.2x
 
 - **Näyte 3 valmis 07.23** (`s2-eurooppa-talvip-nayte3/`, kuva `kuvapari-talvip-nayte3-20261008.jpg`): suorakulmiot jäivät lähes ennalleen.
