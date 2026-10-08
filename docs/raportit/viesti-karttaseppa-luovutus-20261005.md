@@ -1,6 +1,6 @@
-# TILANNE 8.10. klo 08.3x
+# TILANNE 8.10. klo 08.06
 
-- **PT hyväksyi näytteen 4 linjan (08.2x) ja tilasi näytteen 5:** lumettoman värin sovitus naapuriruutuun (27° E:n pystyreuna) ja jyrkempi S-käyrä (puolivälin utu).
+- **PT hyväksyi näytteen 4 linjan (08.0x) ja tilasi näytteen 5:** lumettoman värin sovitus naapuriruutuun (27° E:n pystyreuna) ja jyrkempi S-käyrä (puolivälin utu).
   **Jos pystyreuna katoaa eikä uusia virheitä tule, koko ajo käynnistetään ilman uutta kysymystä.** Ajetaan rinnakkain muistin sallimissa rajoissa: PhysMem unused > 20 Gt, nice 15, ei junakäännösten aikana.
   PT:lle lähetetään näytteen 5 kuvapari ja koko ajon arvioitu valmistumisaika.
 - **Koodi valmis** (`TALVI_P5=1`, kopio ennen muutosta `-talvip4-20261008.mjs`):
