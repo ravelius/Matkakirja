@@ -6,6 +6,18 @@ worktreet /Users/Shared/Claude/wt/proto-natiivi-ui-<aihe>. Käännös: lokit/nat
 Simu vain Julkaisijan "SIMU NYT" -viestistä, oma iPhone FB234D08-4693-4496-9C7A-6C7C15B03963, iPad
 AD119F7B-A2A2-43EE-8769-7326DD757F89; lopuksi sammutus ja "simu vapaa".
 
+## TILA 8.10. klo 09.1x (JATKA TÄSTÄ)
+
+JUNA 165 kuitattu ja Natiivisepällä: metro-kaksirivi 0484007f2, kasittely-veto cf66d2088 (Siirtoseppä kytki, historia-valot
+5626b2bf8), latauskuva 39d43932a (LATAUSKUVA-pohja: UI/Latauskuva.cs, Ydin LatausLiike + 9 testiä; vähäeleinen ±0,5–0,75°,
+ankkuriköysi; oppaan valokuvan Ken Burns Kuvasuurennos.Lahentyy; kierron korjaus pallon latauskuvaan, LatausLiike.Peita).
+Web-PR #4188 (LATAUSKUVA tyylikirjaan, f0443998b): mergeä vihreänä (CI testit odotti ajuria), sitten tarkista että proton
+kopio = mainin lähde. Luettelo: docs/raportit/latauskuvat-liike-20261008.md. Pallon osat (tausta, kupu, kori) Codexilta
+Sisältökirjurin kautta → Linssiseppä kytkee (Latauskuva.Kerros/Koysi/Koysi.Ankkuri).
+Kiertovika: 3D-näkymät (kartta, Olavinlinna) eivät toistuneet simussa (164koe, iPad11+iPhone); latauskuvaan ei päästy
+testikomennoilla (opas toive ei käynnistä siirtymää). Päätoimittaja kysyy omistajalta näkymän. Simuskriptit scratchpadissa
+(kierto*.zsh) → kopioi tarvittaessa lokit/natiivi-ui-1035/skriptit/.
+
 ## TILA 8.10. klo 08.xx (JATKA TÄSTÄ)
 
 Junaan 164 Natiivisepän esirungossa (kuitattu): f2587529, 67727816f, b529268aa, 69e0b05ae (metro-otsikko), 7d366ce92
