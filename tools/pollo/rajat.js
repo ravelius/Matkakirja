@@ -574,6 +574,9 @@ export function tyhjanSyy({ virhe = null, stop = null } = {}) {
  */
 export function ajatteluKentat(malli) {
   const m = String(malli ?? '');
+  // Haiku 5.5 ajattelee oletuksena (adaptiivinen): testiliikenteen kutsut (kulut.js) kuluttivat koko 700 tokenin katon
+  // ajatteluun ilman tekstiä (mitattu 8.10.2026; suositus raportissa haiku-5-5-vertailu.md). Vanhemmat Haikut eivät ajattele.
+  if (/haiku-5/.test(m)) return { thinking: { type: 'disabled' } };
   if (/haiku|claude-3/.test(m)) return {};
   if (/sonnet-5-5/.test(m)) return { thinking: { type: 'between_tools' } };
   if (/fable|mythos|opus-5-5/.test(m)) return { output_config: { effort: 'low' } };

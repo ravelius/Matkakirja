@@ -2696,6 +2696,8 @@ test('ajattelu suljetaan mallin mukaan, eikä se syö vastauksen sanarajaa', asy
   assert.deepEqual(ajatteluKentat('claude-sonnet-5'), { thinking: { type: 'disabled' } });
   assert.deepEqual(ajatteluKentat('claude-opus-5'), { thinking: { type: 'disabled' } });
   assert.deepEqual(ajatteluKentat('claude-haiku-4-5-20251001'), {});
+  // Haiku 5.5 (testimalli, kulut.js): ajattelu pois, muuten 700 tokenin katto kuluu ajatteluun (8.10.2026).
+  assert.deepEqual(ajatteluKentat('claude-haiku-5-5'), { thinking: { type: 'disabled' } });
   // Sonnet 5.5: `disabled` = 400, pienin tila on ajattelu vain työkalujen välissä.
   assert.deepEqual(ajatteluKentat('claude-sonnet-5-5'), { thinking: { type: 'between_tools' } });
   // Näillä `disabled` on 400: pienin vaiva on ainoa säädin.
