@@ -533,7 +533,6 @@ namespace Matkakirja.Natiivi
             aluskerrosMat = new Material(sh) { name = "ReikaTayte" };
             aluskerros = LuoTileset("Kaupunki aluskerros (Googlen reiät)", 1, AluskerrosSse, MaastoValimuisti);
             aluskerros.forbidHoles = false;
-            aluskerros.showCreditsOnScreen = false;
             aluskerros.opaqueMaterial = aluskerrosMat;   // vain muoto, tasainen sävy, ei kuvaa
             aluskerros.transform.localPosition = new Vector3(0f, -AluskerrosSyvyysM, 0f);   // georeferenssin paikallinen ylös = y origossa
             aluskerros.gameObject.SetActive(true);
