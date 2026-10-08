@@ -80,7 +80,7 @@ export const OPAS_AINEISTOT = Object.freeze({
     madrid: 'esittely/madrid-v1/madrid-yksityiskohdat.json', ateena: 'esittely/ateena-v1/ateena-yksityiskohdat.json',
     firenze: 'esittely/firenze-v2/firenze-yksityiskohdat.json',
     // erät 3–4 (8.10.)
-    lissabon: 'esittely/lissabon-v1/lissabon-yksityiskohdat.json', tukholma: 'esittely/tukholma-v2/tukholma-yksityiskohdat.json',
+    lissabon: 'esittely/lissabon-v1/lissabon-yksityiskohdat.json', tukholma: 'esittely/tukholma-v3/tukholma-yksityiskohdat.json',
     helsinki: 'esittely/helsinki-v2/helsinki-yksityiskohdat.json', budapest: 'esittely/budapest-v1/budapest-yksityiskohdat.json',
     // erät 5–6 (8.10.)
     edinburgh: 'esittely/edinburgh-v1/edinburgh-yksityiskohdat.json', dublin: 'esittely/dublin-v1/dublin-yksityiskohdat.json',
@@ -102,5 +102,10 @@ export const OPAS_AINEISTOT = Object.freeze({
   // { kaupunki, versio, osiot: [{ tunnus, otsikko, teksti, sha, kesto_s, lahteet }] }, ääni R2 opas/<sha>.mp3|pcm|ajat.json.
   historia_polut: {
     tukholma: 'opas/historia-v1/tukholma.json', pariisi: 'opas/historia-v1/pariisi.json',
+  },
+  // Historiaosioiden yksityiskohtakuvat (Sisältökirjuri 9.10.): kohde_id = osion tunnus, ankkuri osion tekstissä.
+  historia_yksityiskohdat_polut: {
+    tukholma: 'esittely/tukholma-historia-v1/tukholma-historia-yksityiskohdat.json',
+    pariisi: 'esittely/pariisi-historia-v1/pariisi-historia-yksityiskohdat.json',
   },
 });
