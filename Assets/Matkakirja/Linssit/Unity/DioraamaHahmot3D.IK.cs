@@ -80,7 +80,9 @@ namespace Matkakirja.Natiivi
                 var g0 = e.Ik.GetComponent<GrounderFBBIK>();
                 // maxStep 0,5 (LS2:n Grounder-testi 8.10.: 0,3:lla tukijalka ponnahti 9 cm joka askeleella, 0,5:llä ei kertaakaan;
                 // askelma 0,17–0,205 m). Paino nousee pehmeästi nollasta.
-                if (g0 != null) { g0.solver.maxStep = 0.5f; g0.weight = 0f; }
+                // quality Best (säde + kapseli) ja heightOffset −0,02 (LS2:n ruudukko 8.10.: varpaat portaan etureunassa 8,5 → 2,6 cm,
+                // kantapää 3,9 ja leijunta 4,2 cm, ponnahdukset 0, sama askelmilla 0,17–0,205 m). Kustannus rajattu JalatMaxM:llä.
+                if (g0 != null) { g0.solver.maxStep = 0.5f; g0.solver.quality = Grounding.Quality.Best; g0.solver.heightOffset = -0.02f; g0.weight = 0f; }
             }
             var g = e.Ik.GetComponent<GrounderFBBIK>();
             if (g != null && g.solver.legs != null)
