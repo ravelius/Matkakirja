@@ -992,3 +992,14 @@
     border-width: 2px;
     border-color: var(--accent-dark);
 }
+
+/* Seikkailun löytö (Päätoimittaja 8.10.2026, Thiefin taso): pelin sisällä animaatiot ≤ 250 ms; muut paljastukset ennallaan. */
+.mk-paljastus.mk-paljastus--peli,
+.mk-paljastus.mk-paljastus--peli .mk-paljastus__tunnus,
+.mk-paljastus.mk-paljastus--peli .mk-paljastus__kuvapaikka,
+.mk-paljastus.mk-paljastus--peli .mk-paljastus__caption,
+.mk-paljastus.mk-paljastus--peli .mk-paljastus__loyto,
+.mk-paljastus.mk-paljastus--peli .mk-paljastus__leima,
+.mk-paljastus.mk-paljastus--peli .mk-paljastus__jatka {
+    transition-duration: 0.22s;
+}

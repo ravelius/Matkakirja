@@ -111,12 +111,16 @@ namespace Matkakirja.Natiivi
             vasen = new OpasTapit.Tappi(juuri, "mk-tappi mk-tappi--vasen", Ikonit.Viiva["kompassi"], v => Vasen = v);
             oikea = new OpasTapit.Tappi(juuri, "mk-tappi mk-tappi--oikea", Ikonit.Viiva["silma"], v => Oikea = v);
             vasen.Juuri.tooltip = "Liiku";
+            // Thiefin taso (Päätoimittaja 8.10.2026): tapit näkyvät vain kosketuksessa, levossa näkymättöminä paikallaan.
+            vasen.Juuri.AddToClassList("mk-tappi--vain-kosketus");
+            oikea.Juuri.AddToClassList("mk-tappi--vain-kosketus");
             oikea.Juuri.tooltip = "Katso ympärillesi";
             toimintoRivi = Ohjausnappi.Ryhma(juuri);
             toimintoRivi.style.top = StyleKeyword.Auto;
             toimintoRivi.style.right = OpasTapit.Reuna + OpasTapit.Halkaisija * 0.5f - Tyylikirja.Nappi.Ohjaus * 0.5f;
             toimintoRivi.style.bottom = TappiAla + OpasTapit.Halkaisija + 8f;
             toimintoNappi = Ohjausnappi.Nappi(Ikonit.Kasi, "Poimi", PyydaToiminto, toimintoRivi);
+            toimintoRivi.AddToClassList("mk-ohjausryhma--haivytys");   // häivyttäen (Päätoimittaja 8.10.2026), ei ponnahdusta
             toimintoRivi.style.display = DisplayStyle.None;
             kerros.JokaRuutu += Paivita;
             viimeisin = this;
@@ -187,7 +191,7 @@ namespace Matkakirja.Natiivi
             string tila = !nakyy ? null : TestiToiminto == null || TestiToiminto == "auto" ? EsineTila() : TestiToiminto == "pois" ? null : TestiToiminto;
             if (tila == toimintoTila) return;
             toimintoTila = tila;
-            toimintoRivi.style.display = tila == null ? DisplayStyle.None : DisplayStyle.Flex;
+            Rakenne.Nayta(toimintoRivi, tila != null, Tyylikirja.Kesto.Sulku);
             if (tila == null) return;
             toimintoNappi.Clear();
             toimintoNappi.Add(new SvgIkoni(Kuvake(tila)));
