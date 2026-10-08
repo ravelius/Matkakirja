@@ -1,3 +1,12 @@
+# TILANNE 9.10. klo 00.1x
+
+- **Talvi3 jatkui käsin 00.14** (TF 167 ladattu 23.26, Laitetestaajan kaappaus valmis 00.13). Varmuusjatko ohitettiin pito-prosesseilla (perl sleep, päättyvät 00.16).
+  Swap 9,7 Gt (vahti: > 14 Gt → STOP osaan 2).
+- **Vesi index-v3 Julkaisijalle** (PT:n ennakkolupa): _valmiit/vesi-index-v3-vienti-20261009 (45 Mt): tukholma2 nosto 0,4, pariisi2 nosto 2,0 (LS2:n testi: 0,4 ja 1,2 jättivät Googlen soikioita). Odottaa Julkaisijan "ämpärissä"-viestiä, sitten tarkistus `curl -sI media.matkakirja.app/vesi/index-v3.json?t=…`.
+- Seuraavaksi: talvi3 valmiiksi (osa1 86/91, osa2 47/78 klo 22.30), uusinta 20 lohkoa pk2:lla, ennen/jälkeen-kuvat PT:lle, paketti.
+
+---
+
 # TILANNE 8.10. klo 23.1x
 
 - **LS1:n löydös korjattu:** Pariisin kanavissa z 42–45 m (vesitason varapolku 0 m kapeille vesille).
