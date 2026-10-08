@@ -1,4 +1,4 @@
-# TILANNE 8.10. klo 20.4x
+# TILANNE 8.10. klo 20.3x
 
 - **OMISTAJA 20.2x: "B"** = oma vesipinta Googlen 3D-laattojen päälle. Rantaviivat OSM:stä, ESA WorldCover täydentää.
   Krediitti ☰ › Lähteet: "Vesi: © OpenStreetMap contributors (ODbL), ESA WorldCover 2021 (CC BY 4.0)".
