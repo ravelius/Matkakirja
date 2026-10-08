@@ -55,6 +55,10 @@ namespace Matkakirja.Natiivi
         readonly KoriKompassi kompassi = new KoriKompassi();
         Transform kompassiJuuri, kompassiKardaani, kompassiRuusu, kompassiMerkki;
         static readonly Vector3 KompassiPaikka = new Vector3(0.30f, 1.122f, 0.84f);   // korin reunalla oikealla (mallin koordinaatit)
+        public const string KompassiOsoite = "https://media.matkakirja.app/kartta/ilmapallo/v1/kompassi_nakyma.glb";
+        static GlbMalli kompassiMalli; static bool kompassiHaussa;
+        static readonly System.Collections.Generic.Dictionary<int, Texture2D> kompassiTekstuurit = new System.Collections.Generic.Dictionary<int, Texture2D>();
+        bool kompassiGlb;
         /// <summary>Äänisarja (A/B): "eleven" tai "kirjasto".</summary>
         public static string AaniSarja = "eleven";
         // Omistaja 18.5x: äänet kuuluviin mutta säästeliäästi (TF 161: 0,55 jäi kaupungin äänimaiseman alle).
@@ -159,7 +163,7 @@ namespace Matkakirja.Natiivi
             foreach (var m in new[] { punos, nahka, koysi }) if (m != null) Object.Destroy(m);
             KytkeAanimaisema(false);
             VasenKoysiNorm = default;
-            kompassiJuuri = null; kompassiKardaani = null; kompassiRuusu = null; kompassiMerkki = null;
+            kompassiJuuri = null; kompassiKardaani = null; kompassiRuusu = null; kompassiMerkki = null; kompassiGlb = false;
             malliJuuri = null; malliKori = null; kupuJuuri = null; poltinPiste = null; kupuLiekki = null;
             Shader.SetGlobalVector(IdPoltinP, Vector4.zero); malliKoydet.Clear(); malliKoysiAlku.Clear(); koysiVerkot.Clear();
             if (liekkiMat != null) Object.Destroy(liekkiMat);
@@ -273,7 +277,15 @@ namespace Matkakirja.Natiivi
             var ohjain = Matkakirja.Natiivi.LinssiOhjain.Instanssi;
             if (kupuMalli == null && !kupuHaussa && ohjain != null)
                 ohjain.StartCoroutine(HaeGlb("kupu_nakyma.glb", "pallokupu-v1.glb", KupuOsoite, h => kupuHaussa = h, m => kupuMalli = m));
-            if (malli != null) { if (malliJuuri == null) RakennaMalli(); if (kupuMalli != null && kupuJuuri == null) RakennaKupu(); return; }
+            if (kompassiMalli == null && !kompassiHaussa && ohjain != null)
+                ohjain.StartCoroutine(HaeGlb("kompassi_nakyma.glb", "pallokompassi-v1.glb", KompassiOsoite, h => kompassiHaussa = h, m => kompassiMalli = m));
+            if (malli != null)
+            {
+                if (malliJuuri == null) RakennaMalli();
+                if (kupuMalli != null && kupuJuuri == null) RakennaKupu();
+                if (kompassiMalli != null && !kompassiGlb && malliJuuri != null) RakennaKompassi(malliJuuri);
+                return;
+            }
             if (!malliHaussa && ohjain != null) ohjain.StartCoroutine(HaeGlb("kori_nakyma.glb", "pallokori-v1.glb", MalliOsoite, h => malliHaussa = h, m => malli = m));
             float h = EtaisyysM * Mathf.Tan(fov * 0.5f * Mathf.Deg2Rad), w = h * aspect;
             float yla = -h + 2 * h * ReunaOsuus, nahkaK = 0.05f * h;
@@ -334,10 +346,28 @@ namespace Matkakirja.Natiivi
             RakennaKompassi(malliJuuri);
         }
 
-        /// <summary>Väliaikainen kompassi (messinkikotelo, kerma ruusu punaisella pohjoisella, merkki) korin reunalle.</summary>
+        /// <summary>Kompassi korin reunalle: Linnanrakentajan kompassi_nakyma.glb (solmut kompassi_kardaani → kompassi_ruusu,
+        /// kompassi_merkki, lasi läpikuultavana), tai väliaikainen messinkimalli, kunnes GLB on ladattu.</summary>
         void RakennaKompassi(Transform v)
         {
             if (kompassiJuuri != null) Object.Destroy(kompassiJuuri.gameObject);
+            if (kompassiMalli != null)
+            {
+                kompassiJuuri = new GameObject("kompassi") { layer = Kerros }.transform;
+                kompassiJuuri.SetParent(v, false); kompassiJuuri.localPosition = KompassiPaikka;
+                var solmut = Solmut(kompassiMalli, kompassiJuuri, kompassiTekstuurit);
+                kompassiKardaani = kompassiRuusu = kompassiMerkki = null;
+                for (int i = 0; i < solmut.Length; i++)
+                    switch (kompassiMalli.Solmut[i].Nimi)
+                    {
+                        case "kompassi_kardaani": kompassiKardaani = solmut[i]; break;
+                        case "kompassi_ruusu": kompassiRuusu = solmut[i]; break;
+                        case "kompassi_merkki": kompassiMerkki = solmut[i]; break;
+                    }
+                kompassiGlb = kompassiKardaani != null && kompassiRuusu != null && kompassiMerkki != null;
+                if (kompassiGlb) { Debug.Log("MATKAKIRJA kaupunki: kori: kompassi_nakyma.glb käytössä"); return; }
+                Object.Destroy(kompassiJuuri.gameObject);   // solmut puuttuvat → väliaikainen malli
+            }
             var sh = Shader.Find("Matkakirja/Linssit/PalloKori");
             Material M(Color c) => Materiaali(sh, c, 0, Vector4.one);
             Transform Osa(string nimi, Transform vh, PrimitiveType t, Vector3 p, Vector3 koko, Material m)
@@ -501,6 +531,16 @@ namespace Matkakirja.Natiivi
             go.transform.SetParent(v, false);
             go.AddComponent<MeshFilter>().sharedMesh = mesh;
             var r = go.AddComponent<MeshRenderer>(); r.shadowCastingMode = ShadowCastingMode.Off; r.receiveShadows = false;
+            var pintaNimi = osa.Pinta ?? "";
+            if (pintaNimi.Contains("lasi"))
+            {
+                // Kompassin lasikupu (alphaMode BLEND, alfa ~0,16): läpikuultava, ei valaistusta.
+                var sp = Shader.Find("Sprites/Default");
+                var lm = new Material(sp != null ? sp : Shader.Find("Universal Render Pipeline/Unlit")) { name = "Kompassin lasi", renderQueue = 3000 };
+                float al = osa.Vari != null && osa.Vari.Length >= 4 ? osa.Vari[3] : 0.16f;
+                lm.color = new Color(0.9f, 0.93f, 0.96f, Mathf.Clamp(al, 0.08f, 0.35f));
+                r.sharedMaterial = lm; return;
+            }
             var m = Materiaali(Shader.Find("Matkakirja/Linssit/PalloKori"), Color.white, 3, new Vector4(1, 1, 0, 0));
             // Kupu (8.10.): kaksipuolinen kangas ja nauhat (Cull Off, takapinnan normaali käännetään varjostimessa), auringon läpikuulto.
             if (osa.KaksiPuolinen) m.SetFloat("_Cull", (float)CullMode.Off);
