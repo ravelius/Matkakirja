@@ -687,6 +687,14 @@ namespace Matkakirja.Linssit.Kierros
         /// <summary>Seuraava pyyntö ilman kierroksen lyhyt-merkintää (sovitin kuluttaa).</summary>
         public bool PitkaPyynto;
 
+        /// <summary>
+        /// Kaupunkitilan automaattinen jatko kysymyksen vastauksen jälkeen (OpasSovitin): vasta kun vastaus on kuultu — kierros
+        /// keskeytetty, opas odottaa yli viiveen, mikään ääni ei soi, vastaus ei odota esitystä (Seuraava) eikä kysymyksen odotus
+        /// ole käynnissä. TF 166: vastaus tuli 4 s:ssa Odottaa-vaiheen jo kestäessä → jatko laukesi ennen vastausta.
+        /// </summary>
+        public static bool JatkoVastauksenJalkeen(bool keskeytetty, OpasVaihe vaihe, double vaiheAika, double viiveS, bool aaniSoi, bool vastausOdottaa, bool kysymysOdottaa) =>
+            keskeytetty && vaihe == OpasVaihe.Odottaa && vaiheAika > viiveS && !aaniSoi && !vastausOdottaa && !kysymysOdottaa;
+
         /// <summary>JATKA KIERROSTA: kesken jäänyt kohde alusta, muuten seuraava jonosta. true = jatkui.</summary>
         public bool JatkaKierrosta()
         {

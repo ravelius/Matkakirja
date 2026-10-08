@@ -392,7 +392,11 @@ namespace Matkakirja.Natiivi
             }
             if (esitysAlkaa && Kaupunkitila && !silmukka.Siirtymassa && !silmukka.AvausTauolla && kohteet != null && kohteet.Count > 0 && kohteetKaupunki == Aloituskaupunki)
             { esitysAlkaa = false; o.StartCoroutine(EsitysAvaus(KaupunkitilaId)); }
-            if (jatkoVastauksenJalkeen && silmukka.KierrosKeskeytetty && silmukka.Vaihe == OpasVaihe.Odottaa && silmukka.VaiheAika > JatkoViiveS && !puhuu)
+            // Vasta kun vastaus on kuultu: ei odottavaa vastausta (Seuraava = Esita(vastaus) ennen kuin se alkaa) eikä kysymyksen
+            // odotusta (Alkoi vasta vastauksen puheesta). TF 166 (omistaja 8.10. 18.0x "ei ota kysymyksiä vastaan, jatkaa seuraavaan"):
+            // vastaus tuli 4 s:ssa, kun Vaihe oli jo Odottaa yli JatkoViiveS → kierros jatkui samassa ruudussa ja vastaus jäi soimatta.
+            if (jatkoVastauksenJalkeen && OpasSilmukka.JatkoVastauksenJalkeen(silmukka.KierrosKeskeytetty, silmukka.Vaihe, silmukka.VaiheAika, JatkoViiveS,
+                    puhuu || (silta != null && silta.isPlaying), silmukka.Seuraava != null, kysyOdotus.Kaynnissa))
             { jatkoVastauksenJalkeen = false; o.Kirjaa("opas: kierros jatkuu vastauksen jälkeen"); JatkaKierrosta(); }
             OpasSilmukka.PalloLento = kori.Nakyy;
             // PCM: loppu = kaikki ladattu ja soitettu; varmistus: klippi pysähtyi (ei saa jäädä odottamaan ikuisesti, toisto 16.4x).
@@ -930,6 +934,8 @@ namespace Matkakirja.Natiivi
         static bool esitysAlkaa;
         bool kerroLisaaOdottaa;
         OpasKohde kerroLisaa; string kerroLisaaId;
+        /// <summary>Kohde, jonka kysymykset Kysy-lista näyttää (lennon aikana yhä edellinen pysähdys).</summary>
+        string kysymystenId, kysymystenNimi;
         /// <summary>Kaupunkitilassa kysymyksen vastauksen jälkeen kierros jatkuu tämän tauon jälkeen (s).</summary>
         public const float JatkoViiveS = 2f;
         bool jatkoVastauksenJalkeen;
@@ -1112,7 +1118,9 @@ namespace Matkakirja.Natiivi
             if (string.Equals(teksti.Trim(), KerroLisaaTeksti, StringComparison.OrdinalIgnoreCase) && Kaupunkitila)
             {
                 var nyt = v.silmukka.Nykyinen;
-                if (v.kerroLisaa != null && nyt != null && v.kerroLisaaId == nyt.Id)
+                // Lennon aikana Nykyinen on jo seuraava kohde, mutta Kysy-lista näyttää edellisen kohteen kysymykset ja "Kerro lisää"
+                // tarkoittaa sitä (todistusajo kysy166b 8.10.: worker-polku → /opas/seuraava → valmis esittely jatkoi seuraavaan).
+                if (v.kerroLisaa != null && v.kerroLisaaId != null && (nyt != null && v.kerroLisaaId == nyt.Id || v.kerroLisaaId == v.kysymystenId))
                 {
                     // Valmis pidempi teksti (Pelikoodari #4126): heti paikalla, ei workeria; kierros jatkuu sen jälkeen seuraavasta.
                     v.o.Kirjaa("opas: kerro lisää (valmis teksti)");
@@ -1121,10 +1129,21 @@ namespace Matkakirja.Natiivi
                     v.jatkoVastauksenJalkeen = true;
                     return true;
                 }
-                v.o.Kirjaa("opas: kerro lisää (worker)");
-                v.silmukka.KerroLisaa();
-                v.kerroLisaaOdottaa = true;
-                return true;
+                if (ValmisEsittely)
+                {
+                    // Valmiissa esittelyssä /opas/seuraava palauttaa aina kierroksen seuraavan kohteen (toivetta ei mallinneta), joten
+                    // ilman valmista tekstiä "Kerro lisää" kysytään oppaalta kuten muutkin kysymykset (POST /opas/kysy).
+                    string nimi = v.kysymystenNimi ?? nyt?.Nimi;
+                    teksti = string.IsNullOrEmpty(nimi) ? "Kerro lisää tästä paikasta." : $"Kerro lisää kohteesta {nimi}.";
+                    v.o.Kirjaa("opas: kerro lisää (kysymyksenä: " + teksti + ")");
+                }
+                else
+                {
+                    v.o.Kirjaa("opas: kerro lisää (worker)");
+                    v.silmukka.KerroLisaa();
+                    v.kerroLisaaOdottaa = true;
+                    return true;
+                }
             }
             v.o.Kirjaa("opas: kysy \"" + teksti.Trim() + "\"");
             // Kierroksella kysymys keskeyttää kierroksen heti (omistaja TF 149): kamera paikalleen, kertoja vaikenee, JATKA-nappi vastauksen jälkeen.
@@ -1276,6 +1295,7 @@ namespace Matkakirja.Natiivi
             if (lista == null || lista.Length == 0) lista = k.Kysymykset;
             k.Kysymykset = lista;
             kysymykset = OpasKysyVastaus.Yhdista(jatkoKysymykset, lista ?? Array.Empty<string>());
+            kysymystenId = k.Id; kysymystenNimi = k.Nimi;
             o.Kirjaa($"opas: kysymykset {kysymykset.Length} ({k.Nimi}){(kerroLisaaId == k.Id ? ", kerro lisää valmiina" + (kerroLisaa.AaniAvain == null ? " (ei ääntä)" : "") : "")}");
         }
 
