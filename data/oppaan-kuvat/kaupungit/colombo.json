@@ -1,0 +1,483 @@
+{
+ "kaupunki": "colombo",
+ "kaupunkiQ": "Q35381",
+ "kohteet": [
+  {
+   "q": "Q5521071",
+   "nimi": "Gangaramayan temppeli",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 6.91625,
+   "lon": 79.85642,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Gangaramaya Temple.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gangaramaya_Temple.JPG?width=1280",
+     "tekija": "AKS.9955",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Gangaramaya_Temple.JPG",
+     "selite": "Gangaramaya on Colombon tunnetuin buddhalainen temppeli, joka yhdistää kandyläistä ja thaimaalaista tyyliä.",
+     "leveys": 4893,
+     "korkeus": 3116,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Colombo 2 Gangarama. Ducks.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Colombo_2_Gangarama._Ducks.jpg?width=1280",
+     "tekija": "Prabathmt",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Colombo_2_Gangarama._Ducks.jpg",
+     "selite": "Beira-järven saarella oleva Seema Malaka -paviljonki kuuluu Gangaramayan temppelikokonaisuuteen.",
+     "leveys": 1280,
+     "korkeus": 720,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1492279",
+   "nimi": "Galle Face Green",
+   "peruste": "pelin nosto",
+   "koko_m": 600,
+   "lat": 6.92655,
+   "lon": 79.84355,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Colombo galle face beach.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Colombo_galle_face_beach.JPG?width=1280",
+     "tekija": "Saqib Qayyum",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Colombo_galle_face_beach.JPG",
+     "selite": "Galle Face Green on merenrantapuisto ja kävelyreitti Colombon keskustan tuntumassa.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Colombo galle face2.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Colombo_galle_face2.JPG?width=1280",
+     "tekija": "Saqib Qayyum",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Colombo_galle_face2.JPG",
+     "selite": "Nurmikenttä oli alun perin hevoskilparata, ja nykyään sieltä näkee Colombon pilvenpiirtäjät.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3449463",
+   "nimi": "Lotus Tower",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 6.92694,
+   "lon": 79.85833,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Blue lotus tower.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Blue_lotus_tower.jpg?width=1280",
+     "tekija": "Mohamed Rilwan1210",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Blue_lotus_tower.jpg",
+     "selite": "Lotus Tower on Colombon lootuksenkukkaa muistuttava tv- ja näkötorni.",
+     "leveys": 2369,
+     "korkeus": 2064,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "ColomboSkyline - November 2017 (1).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/ColomboSkyline_-_November_2017_(1).jpg?width=1280",
+     "tekija": "Rehman Abubakr",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:ColomboSkyline_-_November_2017_(1).jpg",
+     "selite": "Torni kohoaa Colombon keskustan pilvenpiirtäjien rinnalla.",
+     "leveys": 2966,
+     "korkeus": 1669,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "ColomboSkyline - November 2017 (2).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/ColomboSkyline_-_November_2017_(2).jpg?width=1280",
+     "tekija": "Rehman Abubakr",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:ColomboSkyline_-_November_2017_(2).jpg",
+     "selite": "Torni on kaupungin korkein rakennelma ja erottuu kauas horisontissa.",
+     "leveys": 3138,
+     "korkeus": 1765,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2033487",
+   "nimi": "Colombon kansallismuseo",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 6.91,
+   "lon": 79.86083,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Colombo National Museum Sri Lanka.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Colombo_National_Museum_Sri_Lanka.JPG?width=1280",
+     "tekija": "Hasindu2008",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Colombo_National_Museum_Sri_Lanka.JPG",
+     "selite": "Colombon kansallismuseo toimii valkoisessa siirtomaa-ajan rakennuksessa puiston keskellä.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Colombo National Museum Sri Lanka (3).JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Colombo_National_Museum_Sri_Lanka_(3).JPG?width=1280",
+     "tekija": "Hasindu2008",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Colombo_National_Museum_Sri_Lanka_(3).JPG",
+     "selite": "Museo on Sri Lankan suurin ja esittelee saaren historiaa ja kulttuuria.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Colombo National Museum Sri Lanka (2).JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Colombo_National_Museum_Sri_Lanka_(2).JPG?width=1280",
+     "tekija": "Hasindu2008",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Colombo_National_Museum_Sri_Lanka_(2).JPG",
+     "selite": "Rakennuksen kaarikäytävät ja koristeelliset julkisivut ovat 1800-luvun lopulta.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2667449",
+   "nimi": "Punainen moskeija",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": 6.9385,
+   "lon": 79.8518,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "BORING DAYS COLOURFUL THINGS.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/BORING_DAYS_COLOURFUL_THINGS.jpg?width=1280",
+     "tekija": "Ranji Banji",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:BORING_DAYS_COLOURFUL_THINGS.jpg",
+     "selite": "Jami Ul-Alfar eli Punainen moskeija on punavalkoraidallinen Pettahin maamerkki.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "20160122 Sri Lanka 3611 Colombo sRGB (25770936075).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20160122_Sri_Lanka_3611_Colombo_sRGB_(25770936075).jpg?width=1280",
+     "tekija": "Dan Lundberg",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20160122_Sri_Lanka_3611_Colombo_sRGB_(25770936075).jpg",
+     "selite": "Moskeijan kupolit ja minareetit kohoavat Pettahin vilkkaan kauppakadun yläpuolelle.",
+     "leveys": 3648,
+     "korkeus": 2736,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "20160122 Sri Lanka 3608 Colombo sRGB (25144341573).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20160122_Sri_Lanka_3608_Colombo_sRGB_(25144341573).jpg?width=1280",
+     "tekija": "Dan Lundberg",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20160122_Sri_Lanka_3608_Colombo_sRGB_(25144341573).jpg",
+     "selite": "Pihan kaaret ja pylväät on maalattu samoin punavalkoisin raidoin.",
+     "leveys": 3648,
+     "korkeus": 2736,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q814829",
+   "nimi": "Beira-järvi",
+   "peruste": "pelin nosto",
+   "koko_m": 800,
+   "lat": 6.92943,
+   "lon": 79.85418,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Beira Lake and Gangaramaya Temple.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Beira_Lake_and_Gangaramaya_Temple.jpg?width=1280",
+     "tekija": "Adbar",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Beira_Lake_and_Gangaramaya_Temple.jpg",
+     "selite": "Beira-järvi on kaupungin keskellä oleva keinotekoinen järvi, jota hollantilaiset käyttivät puolustukseen.",
+     "leveys": 3872,
+     "korkeus": 2592,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Beira lake at Nite.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Beira_lake_at_Nite.jpg?width=1280",
+     "tekija": "Arvindkumarn",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Beira_lake_at_Nite.jpg",
+     "selite": "Iltaisin järven silta ja pilvenpiirtäjät heijastuvat valoina veteen.",
+     "leveys": 4244,
+     "korkeus": 1865,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q4039225",
+   "nimi": "Galle Face Hotel",
+   "peruste": "pelin nosto",
+   "koko_m": 200,
+   "lat": 6.92001,
+   "lon": 79.84621,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Galle Face Hotel, Colombo.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Galle_Face_Hotel%2C_Colombo.JPG?width=1280",
+     "tekija": "AKS.9955",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Galle_Face_Hotel%2C_Colombo.JPG",
+     "selite": "Galle Face Hotel on vuodelta 1864 oleva siirtomaa-ajan hotelli meren äärellä.",
+     "leveys": 4305,
+     "korkeus": 1105,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q763007",
+   "nimi": "Colombon satama",
+   "peruste": "pelin nosto",
+   "koko_m": 1500,
+   "lat": 6.95278,
+   "lon": 79.84472,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "20160122 Sri Lanka 3614 Colombo sRGB (25470240960).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20160122_Sri_Lanka_3614_Colombo_sRGB_(25470240960).jpg?width=1280",
+     "tekija": "Dan Lundberg",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20160122_Sri_Lanka_3614_Colombo_sRGB_(25470240960).jpg",
+     "selite": "Ilmakuvassa Colombon satama nostureineen ja vanhat satamarakennukset.",
+     "leveys": 3648,
+     "korkeus": 2736,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "ColomboHarbour-August2013-03.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/ColomboHarbour-August2013-03.JPG?width=1280",
+     "tekija": "Rehman Abubakr",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:ColomboHarbour-August2013-03.JPG",
+     "selite": "Majakka ja konttilaiva sataman aallonmurtajalla.",
+     "leveys": 3000,
+     "korkeus": 1686,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Colombo Harbour - panoramio (3).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Colombo_Harbour_-_panoramio_(3).jpg?width=1280",
+     "tekija": "anjana.sudam",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Colombo_Harbour_-_panoramio_(3).jpg",
+     "selite": "Sataman viljasiilot ja rahtialukset tekevät Colombosta Intian valtameren tärkeän solmukohdan.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q16736534",
+   "nimi": "Wolvendaalin kirkko",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": 6.9421,
+   "lon": 79.859,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Sri Lanka - 015 - Old Dutch church (1630266877).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sri_Lanka_-_015_-_Old_Dutch_church_(1630266877).jpg?width=1280",
+     "tekija": "McKay Savage from London, UK",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Sri_Lanka_-_015_-_Old_Dutch_church_(1630266877).jpg",
+     "selite": "Wolvendaalin kirkko on hollantilaisten rakennuttama reformoitu kirkko 1700-luvulta.",
+     "leveys": 2592,
+     "korkeus": 1944,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Wolvendaalse Kerk, voorgevel - 20652234 - RCE.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Wolvendaalse_Kerk%2C_voorgevel_-_20652234_-_RCE.jpg?width=1280",
+     "tekija": "AnonymousUnknown author",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Wolvendaalse_Kerk%2C_voorgevel_-_20652234_-_RCE.jpg",
+     "selite": "Kirkon julkisivun hollantilaistyylinen kaarevahuippu on tunnistettava osa Colombon vanhaa kaupunkikuvaa.",
+     "leveys": 6127,
+     "korkeus": 4585,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q5471883",
+   "nimi": "Fortin rautatieasema",
+   "peruste": "pelin nosto",
+   "koko_m": 200,
+   "lat": 6.93361,
+   "lon": 79.85083,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Colombo Fort Railway Station 3.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Colombo_Fort_Railway_Station_3.JPG?width=1280",
+     "tekija": "Gobbler",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Colombo_Fort_Railway_Station_3.JPG",
+     "selite": "Fortin asema on Colombon päärautatieasema ja Sri Lankan junaliikenteen solmukohta.",
+     "leveys": 1944,
+     "korkeus": 2592,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Colombo Fort Railway Station 2.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Colombo_Fort_Railway_Station_2.JPG?width=1280",
+     "tekija": "Gobbler",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Colombo_Fort_Railway_Station_2.JPG",
+     "selite": "Aseman julkisivun edessä odottavat perinteiset tuk-tuk-ajoneuvot.",
+     "leveys": 2592,
+     "korkeus": 1944,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Colombo Fort Railway station - panoramio (1).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Colombo_Fort_Railway_station_-_panoramio_(1).jpg?width=1280",
+     "tekija": "Alexey Komarov",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Colombo_Fort_Railway_station_-_panoramio_(1).jpg",
+     "selite": "Aseman pitkä peltikatos suojaa laitureita monsuunisateelta.",
+     "leveys": 4478,
+     "korkeus": 2993,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q6400051",
+   "nimi": "Khanin kellotorni",
+   "peruste": "pelin nosto",
+   "koko_m": 50,
+   "lat": 6.93717,
+   "lon": 79.84929,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Khan Clock Tower (5439875749).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Khan_Clock_Tower_(5439875749).jpg?width=1280",
+     "tekija": "Jorge Láscar from Australia",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Khan_Clock_Tower_(5439875749).jpg",
+     "selite": "Khanin kellotorni on Pettahin tunnettu maamerkki vilkkaan liikenteen keskellä.",
+     "leveys": 4288,
+     "korkeus": 2848,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Colombo-torre.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Colombo-torre.jpg?width=1280",
+     "tekija": "No machine-readable author provided. Jolle~commonswiki assumed (based on copyright claims).",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Colombo-torre.jpg",
+     "selite": "Valkoinen kellotorni kohoaa kauppakorttelien yläpuolelle.",
+     "leveys": 1200,
+     "korkeus": 1600,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Colombo city skyline at night.png",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Colombo_city_skyline_at_night.png?width=1280",
+   "tekija": "Gihanud2001",
+   "lisenssi": "CC0",
+   "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Colombo_city_skyline_at_night.png",
+   "selite": "Colombon valaistu horisontti ja Lotus Tower yön hetkellä.",
+   "leveys": 1440,
+   "korkeus": 1080,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Colombo day before rain.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Colombo_day_before_rain.jpg?width=1280",
+   "tekija": "Abishek Palraj",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Colombo_day_before_rain.jpg",
+   "selite": "Ennen monsuunisadetta tummat pilvet nousevat Colombon yllä.",
+   "leveys": 5260,
+   "korkeus": 3507,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

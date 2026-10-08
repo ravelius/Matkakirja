@@ -1,0 +1,219 @@
+{
+ "kaupunki": "bermuda",
+ "kaupunkiQ": "Q23635",
+ "pieniAlue": true,
+ "kohteet": [
+  {
+   "q": "Q30985",
+   "nimi": "Hamilton",
+   "peruste": "sitelinks",
+   "koko_m": 800,
+   "lat": 32.295,
+   "lon": -64.78306,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "FRONT STREET IN HAMILTON, BERMUDA.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/FRONT_STREET_IN_HAMILTON%2C_BERMUDA.jpg?width=1280",
+     "tekija": "Jerrye and Roy Klotz MD",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:FRONT_STREET_IN_HAMILTON%2C_BERMUDA.jpg",
+     "selite": "Valkoiset kalkkikivikatot ja pastellitalot reunustavat Hamiltonin satamaa Bermudan pääkaupungissa.",
+     "leveys": 5154,
+     "korkeus": 3300,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Sessions House, Hamilton, Bermuda.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sessions_House%2C_Hamilton%2C_Bermuda.jpg?width=1280",
+     "tekija": "JoeyBagODonuts",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Sessions_House%2C_Hamilton%2C_Bermuda.jpg",
+     "selite": "Kellotornillinen oikeustalo on Bermudan parlamentin ja tuomioistuimen koti Hamiltonissa.",
+     "leveys": 2048,
+     "korkeus": 1365,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Cathedral of the Most Holy Trinity.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cathedral_of_the_Most_Holy_Trinity.jpg?width=1280",
+     "tekija": "Concord",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cathedral_of_the_Most_Holy_Trinity.jpg",
+     "selite": "Anglikaaninen katedraali kohoaa kaupungin keskustassa vaaleasta kalkkikivestä rakennettuna.",
+     "leveys": 2048,
+     "korkeus": 3648,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 4,
+     "tiedosto": "Front Street, Hamilton, Bermuda.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Front_Street%2C_Hamilton%2C_Bermuda.jpg?width=1280",
+     "tekija": "JoeyBagODonuts",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Front_Street%2C_Hamilton%2C_Bermuda.jpg",
+     "selite": "Värikkäät kolmikerroksiset talot ja risteilyalus rannassa kuvaavat Hamiltonin Front Streetiä.",
+     "leveys": 2048,
+     "korkeus": 1365,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q28063",
+   "nimi": "St. George's",
+   "peruste": "sitelinks",
+   "koko_m": 600,
+   "lat": 32.37944,
+   "lon": -64.67778,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "St. George's town hall.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/St._George's_town_hall.jpg?width=1280",
+     "tekija": "Flickr user reivax",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:St._George's_town_hall.jpg",
+     "selite": "Punertava kaupungintalo ja sen kaksihaaraiset portaat seisovat vanhassa linnoituskaupungissa.",
+     "leveys": 2185,
+     "korkeus": 1309,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Bermuda (UK) Number 163 building in St. George's square with cannons.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bermuda_(UK)_Number_163_building_in_St._George's_square_with_cannons.jpg?width=1280",
+     "tekija": "Tomwsulcer",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bermuda_(UK)_Number_163_building_in_St._George's_square_with_cannons.jpg",
+     "selite": "Kaupungintalon sisäänkäynnin edessä on vanhoja tykkejä muistuttamassa linnoituskaupungin ajasta.",
+     "leveys": 2538,
+     "korkeus": 1903,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "2016-06-11 St. George's Foundation's UNESCO World Heritage Centre, St. George's Town, Bermuda.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2016-06-11_St._George's_Foundation's_UNESCO_World_Heritage_Centre%2C_St._George's_Town%2C_Bermuda.jpg?width=1280",
+     "tekija": "Seán Pòl Ó Creachmhaoil",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2016-06-11_St._George's_Foundation's_UNESCO_World_Heritage_Centre%2C_St._George's_Town%2C_Bermuda.jpg",
+     "selite": "UNESCOn maailmanperintökeskus on vanhassa kivirakennuksessa saaren vanhimmassa kaupungissa.",
+     "leveys": 3170,
+     "korkeus": 2404,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q8564779",
+   "nimi": "Fort St. Catherine",
+   "peruste": "UNESCO",
+   "koko_m": 200,
+   "lat": 32.3906,
+   "lon": -64.6745,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Approaching St. Catherine's Fort, Bermuda - panoramio (1).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Approaching_St._Catherine's_Fort%2C_Bermuda_-_panoramio_(1).jpg?width=1280",
+     "tekija": "David Broad",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Approaching_St._Catherine's_Fort%2C_Bermuda_-_panoramio_(1).jpg",
+     "selite": "Kivilinnake vartioi vanhaa kulkureittiä meren rannalla turkoosin veden äärellä.",
+     "leveys": 4185,
+     "korkeus": 2088,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "RML 10 inch Mk II gun closeup Fort St Catherine.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/RML_10_inch_Mk_II_gun_closeup_Fort_St_Catherine.jpg?width=1280",
+     "tekija": "Flickr user \"reivax\" : https://www.flickr.com/photos/reivax",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:RML_10_inch_Mk_II_gun_closeup_Fort_St_Catherine.jpg",
+     "selite": "Vanha raskas tykki osoittaa linnakkeen muurilta merelle.",
+     "leveys": 3008,
+     "korkeus": 2000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Bermuda (UK) image number 136 sign denoting Fort St. Catherine.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bermuda_(UK)_image_number_136_sign_denoting_Fort_St._Catherine.jpg?width=1280",
+     "tekija": "Tomwsulcer",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bermuda_(UK)_image_number_136_sign_denoting_Fort_St._Catherine.jpg",
+     "selite": "Linnakkeen kyltti seisoo pyöreän kivitornin edessä Bermudan itäpäässä.",
+     "leveys": 2053,
+     "korkeus": 1219,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q7865260",
+   "nimi": "St. Georgen ja sen linnoitusten maailmanperintökohde",
+   "peruste": "UNESCO",
+   "koko_m": 2000,
+   "lat": 32.37944,
+   "lon": -64.67778,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "BL 6 inch rifle, with two BL 9.2 inch rifles beyond, at St. David's Battery, Bermuda, 2011.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/BL_6_inch_rifle%2C_with_two_BL_9.2_inch_rifles_beyond%2C_at_St._David's_Battery%2C_Bermuda%2C_2011.jpg?width=1280",
+     "tekija": "Seán Pòl Ó Creachmhaoil",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:BL_6_inch_rifle%2C_with_two_BL_9.2_inch_rifles_beyond%2C_at_St._David's_Battery%2C_Bermuda%2C_2011.jpg",
+     "selite": "Rannikkopatterin raskaat tykit muistuttavat saaren monikerroksisesta puolustusjärjestelmästä.",
+     "leveys": 4272,
+     "korkeus": 2848,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Horseshoebay.Bermuda.JPG",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Horseshoebay.Bermuda.JPG?width=1280",
+   "tekija": "Ekem",
+   "lisenssi": "CC BY-SA 3.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Horseshoebay.Bermuda.JPG",
+   "selite": "Vaaleanpunertava hiekka ja turkoosi meri ovat Bermudan tunnetuimpia rantamaisemia.",
+   "leveys": 3648,
+   "korkeus": 2736,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Elbow Beach, Bermuda - view looking east.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Elbow_Beach%2C_Bermuda_-_view_looking_east.jpg?width=1280",
+   "tekija": "No machine-readable author provided. LeeG~commonswiki assumed (based on copyright claims).",
+   "lisenssi": "Public domain",
+   "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Elbow_Beach%2C_Bermuda_-_view_looking_east.jpg",
+   "selite": "Hiekkadyynit reunustavat Bermudan etelärannan pitkää vaaleaa hiekkarantaa.",
+   "leveys": 2272,
+   "korkeus": 1704,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

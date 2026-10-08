@@ -37,7 +37,9 @@ import {
   MAAILMAN_SUOSIKIT_KEHOTE,
 } from './kohteet.js';
 import { OPAS_AINEISTOT } from './aineistot.js';
-import { OPAS_SALLITUT, sallittuKaupunki, pisteSallittu } from './sallitut.js';
+import { tarkistaSyote, TURVA_JATKOT } from './opas-turva.js';
+import { oppaanEsittely, valmisKohde, omatKohteet, esittelynAlku } from './opas-esittely.js';
+import { OPAS_SALLITUT, sallittuKaupunki, pisteSallittu, sallittuAluePisteelle, kokeilut, sallitutPyynnolle } from './sallitut.js';
 import { vuosiluvutSanoiksi } from './puhesanat.js';
 import { kuvalista, kohteenKuvat, kaupunginKohteet, listanKuvin, kuvaKaupunkitilassa, LUKITTU_VAHINTAAN } from './opas-kuvat.js';
 import {
@@ -2738,6 +2740,35 @@ async function oppaanAaniTunniste(teksti) {
   return (await sha256Heksa(new TextEncoder().encode(`william|eleven_v4_turbo|${teksti}`))).slice(0, 32);
 }
 
+/**
+ * Vain esigeneroitu ääni (Päätoimittaja 7.10.: Kerro lisää ei saa synnyttää maksullista generointia): url:t vain, jos
+ * opas/<sha>.mp3 tai .pcm on jo R2:ssa. Tekstiä EI tallenneta, joten GET /opas/aani/<sha> ei voi generoida sitä.
+ */
+async function oppaanValmisAani(pyynto, env, teksti) {
+  if (!teksti || !env.PUHE_R2) return null;
+  const sha = await oppaanAaniTunniste(vuosiluvutSanoiksi(teksti));
+  const onko = async (k) => { try { return Boolean(await (env.PUHE_R2.head ? env.PUHE_R2.head(k) : env.PUHE_R2.get(k))); } catch { return false; } };
+  const [mp3, pcm] = await Promise.all([onko(`opas/${sha}.mp3`), onko(`opas/${sha}.pcm`)]);
+  if (!mp3 && !pcm) return null;
+  const juuri = `${new URL(pyynto.url).origin}/opas/aani/${sha}`;
+  return { aani: mp3 ? `${juuri}.mp3` : null, aani_pcm: pcm ? `${juuri}.pcm` : null, aani_taajuus: OPAS_PCM_TAAJUUS,
+    kesto_s: Math.round((vuosiluvutSanoiksi(teksti).length / OPAS_MERKKIA_SEKUNNISSA) * 10) / 10 };
+}
+
+/**
+ * SANA-AJAT (LS1 7.10.: yksityiskohtakuva ankkurisanan kohdalla): ääni-URL …/opas/aani/<sha>.mp3 → …/<sha>.ajat.json, jos
+ * R2:ssa on opas/<sha>.ajat.json ({ versio, teksti (näytön teksti), sanat: [[merkki_indeksi, alku_s, loppu_s], …] };
+ * tools/opas/tee-aaniajat.mjs kohdistuksesta). Muuten null (natiivi käyttää varapolkua).
+ */
+async function aaniAjat(env, aaniUrl) {
+  const m = /\/opas\/aani\/([0-9a-f]{32})\.mp3$/.exec(aaniUrl ?? '');
+  if (!m || !env.PUHE_R2) return null;
+  try {
+    const on = await (env.PUHE_R2.head ? env.PUHE_R2.head(`opas/${m[1]}.ajat.json`) : env.PUHE_R2.get(`opas/${m[1]}.ajat.json`));
+    return on ? aaniUrl.replace(/\.mp3$/, '.ajat.json') : null;
+  } catch { return null; }
+}
+
 /** POST: ääni-url heti (teksti KV:hen, katto lasketaan nyt) → { aani, kesto_s } tai null. */
 async function oppaanAani(pyynto, env, ctx, naytettava, kehittaja) {
   if (!naytettava) return null;
@@ -2839,9 +2870,16 @@ function kirjaaOppaanAani(env, ctx, tietue) {
 
 /** GET /opas/aani/<sha>.mp3: valmis ääni (välimuisti, R2) tai tuotetaan nyt ja palautetaan kokonaisena. */
 async function hoidaOppaanAani(pyynto, env, ctx) {
-  const m = /^\/opas\/aani\/([0-9a-f]{32})\.(mp3|pcm)$/.exec(new URL(pyynto.url).pathname);
+  const m = /^\/opas\/aani\/([0-9a-f]{32})\.(mp3|pcm|ajat\.json)$/.exec(new URL(pyynto.url).pathname);
   if (!m) return new Response('Ei löydy', { status: 404 });
   if (m[2] === 'pcm') return hoidaOppaanPcm(pyynto, env, ctx, m[1]);
+  if (m[2] === 'ajat.json') {
+    // Sanakohtaiset ajat (yksityiskohtakuvat ankkurisanan kohdalla, LS1 7.10.): vain R2:sta, ei koskaan tuoteta.
+    const olio = env.PUHE_R2 ? await env.PUHE_R2.get(`opas/${m[1]}.ajat.json`).catch(() => null) : null;
+    if (!olio) return new Response('Ei löydy', { status: 404 });
+    return new Response(olio.body, { headers: { 'content-type': 'application/json; charset=utf-8',
+      'cache-control': 'public, max-age=31536000, immutable', 'access-control-allow-origin': '*' } });
+  }
   const sha = m[1];
   const avain = `opas/${sha}.mp3`;
   const valmis = async () => {
@@ -3035,6 +3073,12 @@ const eiSallittu = (kaupunki, kors) => vastaa({ virhe: 'ei-sallittu', viesti: EI
 /** Kohdelistasta pois sallitun alueen ulkopuoliset (kaupunki annettuna sen r_m-säteeltä, muuten mistä tahansa sallitusta). */
 const sallitutKohteet = (env, tulos, kaupunki = null) => ({ ...tulos, kohteet: (tulos?.kohteet ?? []).filter((k) => pisteSallittu(k, kaupunki, env)) });
 
+/** Liiku-listan Kaupunkikierros (#4138:n jatko, LS1 7.10.): avauksen lupaamasta kohteesta, muuten sijaintia lähimmästä. */
+function liikunKierros(lukitut, alku, alkuId) {
+  const kohteet = lukitut.slice(0, KIERROKSEN_PITUUS);
+  return lyhinReitti(kohteet, alku, { ensimmainen: kohteet.find((k) => k.id === alkuId) ?? null }).map((k) => k.id);
+}
+
 async function hoidaOppaanKohteet(pyynto, env, kors, ctx) {
   const url = new URL(pyynto.url);
   const natiivit = env.POLLO_NATIIVIT ? lueLista(env.POLLO_NATIIVIT) : NATIIVIT_OLETUS;
@@ -3178,8 +3222,13 @@ async function oppaanKysymykset(env, { paikka, nimi, kaupunki }) {
   }
 }
 
-/** GET /opas/kysymykset?paikka&nimi&kaupunki → { paikka, kysymykset }. */
-async function hoidaOppaanKysymykset(pyynto, env, kors) {
+/**
+ * GET /opas/kysymykset?paikka&nimi&kaupunki → { paikka, kysymykset }. Valmiin esittelyn kohteella (omistaja 7.10. klo 10.3x,
+ * "Yksi esitys + Kerro lisää"): esittelyn 5 valmista kysymystä (jos on) ja Kysy-valikon ensimmäinen rivi "Kerro lisää" =
+ * kohteen pitkä pysähdysteksti ja sen ääni LITTEINÄ kenttinä (kerro_lisaa_teksti, _aani, _aani_pcm, _aani_taajuus,
+ * _kesto_s; vanhat natiivit ohittavat ne, ks. #4107).
+ */
+async function hoidaOppaanKysymykset(pyynto, env, kors, ctx) {
   if (!oppaanAsiakas(pyynto, kors, env)) return new Response('Origin ei ole sallittu', { status: 403 });
   const ip = pyynto.headers.get('cf-connecting-ip');
   if (ip && oppaanTiheysYlittyy(`kysymykset:${ip}`, Date.now(), 60)) {
@@ -3190,8 +3239,18 @@ async function hoidaOppaanKysymykset(pyynto, env, kors) {
   const paikka = siivoaTeksti(url.searchParams.get('paikka') ?? '', 120) || null;
   const nimi = siivoaTeksti(url.searchParams.get('nimi') ?? '', 120) || null;
   if (!paikka || !nimi) return vastaa({ virhe: 'kysely', viesti: 'Paikka ja nimi tarvitaan.' }, { status: 400, ...kors });
-  const kysymykset = await oppaanKysymykset(env, { paikka, nimi, kaupunki: siivoaTeksti(url.searchParams.get('kaupunki') ?? '', 80) || null });
-  return vastaa({ paikka, kysymykset }, kors);
+  const kaupunki = siivoaTeksti(url.searchParams.get('kaupunki') ?? '', 80) || null;
+  const valmis = kaupunki ? valmisKohde(await oppaanEsittely(env, kaupunki), paikka) : null;
+  const omat = Array.isArray(valmis?.kysymykset) && valmis.kysymykset.length ? valmis.kysymykset.slice(0, 5) : null;
+  const kysymykset = omat ?? await oppaanKysymykset(env, { paikka, nimi, kaupunki });
+  if (!valmis) return vastaa({ paikka, kysymykset }, kors);
+  const aani = await oppaanValmisAani(pyynto, env, valmis.puhe_teksti || valmis.teksti).catch(() => null);
+  const ajat = aani?.aani ? await aaniAjat(env, aani.aani) : null;
+  // Ilman valmista ääntä (äänetön esittely) vain teksti: natiivi näyttää sen lukukeston ajan (LS1 7.10.).
+  if (!aani) return vastaa({ paikka, kysymykset, kerro_lisaa_teksti: valmis.teksti }, kors);
+  return vastaa({ paikka, kysymykset, kerro_lisaa_teksti: valmis.teksti, kerro_lisaa_aani: aani?.aani ?? null,
+    kerro_lisaa_aani_pcm: aani?.aani_pcm ?? null, kerro_lisaa_aani_taajuus: aani?.aani_taajuus ?? null, kerro_lisaa_kesto_s: aani?.kesto_s ?? null,
+    ...(ajat ? { kerro_lisaa_aani_ajat: ajat } : {}) }, kors);
 }
 
 /**
@@ -3248,6 +3307,12 @@ async function hoidaOppaanLiiku(pyynto, env, kors) {
   const lat = Number(url.searchParams.get('lat')), lon = Number(url.searchParams.get('lon'));
   // Lukittu kaupunki (Päätoimittaja 6.10. 20.3x): Liiku näyttää koko kohdelistan merkittävyysjärjestyksessä kuvineen.
   const kuvaLista = await kuvalista(env);
+  const omat = omatKohteet(kaupunki, env);
+  if (omat) {
+    return vastaa({ kaupunki, kohteet: omat.kohteet.map((k, i) => ({ id: k.id, nimi: k.nimi, lat: k.lat, lon: k.lon, alarivi: k.kuvaus ?? null,
+      luokka: k.luokka ?? null, tarkeys: i + 1, kuva: kohteenKuvat(kuvaLista, k.id)[0] ?? null, kuvat: kohteenKuvat(kuvaLista, k.id) })),
+      kierros: omat.kierros }, kors);
+  }
   const lukitut = kaupunginKohteet(kuvaLista, kaupunki).filter((k) => pisteSallittu(k, kaupunki, env));
   if (lukitut.length >= LUKITTU_VAHINTAAN) {
     // Kaupunkikierros-rivi (omistaja 6.10. 23.4x, natiivi lukee kentän junasta 156): 8 tärkeintä lyhimpänä reittinä
@@ -3255,7 +3320,7 @@ async function hoidaOppaanLiiku(pyynto, env, kors) {
     const alku = Number.isFinite(lat) && Number.isFinite(lon) && !(lat === 0 && lon === 0) ? { lat, lon } : null;
     return vastaa({ kaupunki, kohteet: lukitut.map((k, i) => ({ id: k.id, nimi: k.nimi, lat: k.lat, lon: k.lon, alarivi: null,
       luokka: null, tarkeys: i + 1, kuva: k.kuvat[0] ?? null, kuvat: k.kuvat })),
-      kierros: lyhinReitti(lukitut.slice(0, KIERROKSEN_PITUUS), alku).map((k) => k.id) }, kors);
+      kierros: liikunKierros(lukitut, alku, esittelynAlku(await oppaanEsittely(env, kaupunki), kaupunki)) }, kors);
   }
   try {
     const viite = await tarkistettuSijainti(kaupunki, Number.isFinite(lat) && Number.isFinite(lon) && !(lat === 0 && lon === 0) ? { lat, lon } : null);
@@ -3296,6 +3361,13 @@ async function hoidaOppaanKysy(pyynto, env, kors, runko, ctx) {
   if (raja) return raja;
   const p = siivoaKeskustelu(runko);
   if (!p.kysymys) return vastaa({ virhe: 'kysely', viesti: 'Kysymys puuttuu.' }, { status: 400, ...kors });
+  // Syötesuodatin (alaikäistarkistus kohta 2): henkilötiedot, asiattomat ja hätä → valmis vastaus ilman mallia ja ääntä.
+  const turva = tarkistaSyote(p.kysymys);
+  if (turva) {
+    console.log(`opas: kysy → suodatin (${turva.tyyppi})`);
+    return vastaa({ teksti: turva.teksti, aani: null, aani_pcm: null, aani_taajuus: null, kesto_s: null, toiminto: null,
+      kysymykset: TURVA_JATKOT }, kors);
+  }
   try {
     const kaupunkiPiste = p.kaupunki ? await kaupunginSijainti(fetch, p.kaupunki).catch(() => null) : null;
     const lista = p.kaupunki ? await pysyvaLue(env.PUHE_R2, liikuAvain(p.kaupunki)).then((x) => (x ? JSON.parse(x) : [])).catch(() => []) : [];
@@ -3313,8 +3385,24 @@ async function hoidaOppaanKysy(pyynto, env, kors, runko, ctx) {
       const paikka = j.kohde ? (await haeKohde(viite)) ?? (viite ? await haeKohde(null) : null) : null;
       if (paikka) {
         const ulkona = kaupunkiPiste ? etaisyysKm(kaupunkiPiste, paikka) > ULKONA_KM : false;
-        toiminto = pisteSallittu(paikka, null, env) ? { tyyppi: 'siirry', nimi: paikanNimi(paikka, j.kohde), lat: paikka.lat, lon: paikka.lon, ulkona }
-          : { tyyppi: 'ei-sallittu', nimi: paikanNimi(paikka, j.kohde) };
+        const nimi = paikanNimi(paikka, j.kohde);
+        // Kohde toisessa sallitussa kaupungissa (Päätoimittaja 7.10.: Pariisissa "vie minut Pyhän Markuksen kirkkoon"):
+        // kaupungin vaihto kuten kaupunkitoiveessa + kohde, ei kieltäytymistä. Ei-sallittu kuten ennen (esto kytkimen takana).
+        const alue = ulkona ? sallittuAluePisteelle(paikka, env) : null;
+        const nykyinen = p.kaupunki ? sallittuAluePisteelle(kaupunkiPiste, env) : null;
+        if (alue && alue.id !== nykyinen?.id) {
+          // Kohdekaupungin kuvalistan kohde (≤ 300 m): listan nimi ja tunnus, jotta natiivin seuraava /opas-pyyntö osuu
+          // listaan ja valmiiseen esittelyyn ("Basilica di San Marco" → "Pyhän Markuksen basilika", Q…).
+          const listalla = kaupunginKohteet(await kuvalista(env), alue.id).map((k) => ({ k, d: etaisyysKm(k, paikka) }))
+            .filter((x) => x.d <= 0.3).sort((x, y) => x.d - y.d)[0]?.k ?? null;
+          // Kohde litteinä kenttinä (LS1 7.10.): TF 156/157 lukisi alikentän nimen kaupungin nimeksi; vanhat ohittavat nämä.
+          const k = listalla ?? { nimi, id: null, lat: paikka.lat, lon: paikka.lon };
+          toiminto = { tyyppi: 'kaupunki', nimi: alue.nimi, id: alue.id, lat: alue.lat, lon: alue.lon,
+            kohde_nimi: k.nimi, kohde_id: k.id ?? null, kohde_lat: k.lat, kohde_lon: k.lon };
+        } else {
+          toiminto = pisteSallittu(paikka, null, env) ? { tyyppi: 'siirry', nimi, lat: paikka.lat, lon: paikka.lon, ulkona }
+            : { tyyppi: 'ei-sallittu', nimi };
+        }
       }
     } else if (j.toiminto === 'kaupunki' && j.kohde) {
       const k = await kaupunginSijainti(fetch, j.kohde).catch(() => null);
@@ -3343,6 +3431,8 @@ async function hoidaOpas(pyynto, env, kors, runko, ctx) {
     return v;
   }
   const p = siivoaOpasPyynto(runko);
+  // Vapaa toive suodattimen läpi (alaikäistarkistus kohta 2): suodatettu toive ohitetaan, kierros jatkuu.
+  if (p.toive && tarkistaSyote(p.toive)) { console.log('opas: toive → suodatin'); p.toive = null; }
   if (p.kaupunki && !sallittuKaupunki(p.kaupunki, env)) return eiSallittu(p.kaupunki, kors);
   const kehittaja = kehittajaOhitus(pyynto, env);
   const kv = env.POLLO_KV ?? null;
@@ -3377,8 +3467,10 @@ async function hoidaOpas(pyynto, env, kors, runko, ctx) {
     kuvalista(env)]);
   // KUVALISTA KAUPUNKI KERRALLAAN (omistaja 6.10. 20.0x, Päätoimittaja 20.3x; opas-kuvat.js): lukitun kaupungin pysähdykset,
   // kierros ja kuvat vain kohdelistasta ja kuvalistasta. Muut kaupungit kuten ennen, kunnes niiden lista yhdistetään.
-  const lukitut = kaupunginKohteet(kuvaLista, p.kaupunki).filter((k) => pisteSallittu(k, p.kaupunki, env));
-  const listatila = lukitut.length >= LUKITTU_VAHINTAAN;
+  // OMAT KOHTEET (omistaja 7.10. 08.4x: Giza omilla Blender-malleilla): koodissa oleva kohdelista ja kierros.
+  const omat = omatKohteet(p.kaupunki, env);
+  const lukitut = omat ? omat.kohteet : kaupunginKohteet(kuvaLista, p.kaupunki).filter((k) => pisteSallittu(k, p.kaupunki, env));
+  const listatila = Boolean(omat) || lukitut.length >= LUKITTU_VAHINTAAN;
   // Liiku-listan esihaku taustalla (juna 148 todistusajo: kylmä /opas/liiku ~10 s → natiivin lista jäi tyhjäksi).
   if (p.kaupunki && sijainti && typeof ctx?.waitUntil === 'function') {
     ctx.waitUntil(oppaanLiikuLista(env, p.kaupunki, sijainti).catch(() => null));
@@ -3397,7 +3489,12 @@ async function hoidaOpas(pyynto, env, kors, runko, ctx) {
   // kierroksen alkuun (muu reitti lähin naapuri sen jälkeen).
   const aloitaKierros = Boolean(kierrosAvain && onKierrosToive(p.toive));
   // Lukitusta listasta kierros on valmis heti: 8 tärkeintä lyhimpänä reittinä, alku sijaintia lähimmästä (omistaja 6.10. 23.4x).
-  const listanKierros = aloitaKierros && listatila ? lyhinReitti(lukitut.slice(0, KIERROKSEN_PITUUS), sijainti) : null;
+  // Valmiin esittelyn avaus nimeää alun ("Kierros alkaa Forum Romanumilta"): reitti alkaa siitä, muuten kameraa lähimmästä.
+  const kierroksenKohteet = lukitut.slice(0, KIERROKSEN_PITUUS);
+  const alkuId = aloitaKierros && listatila && !omat ? esittelynAlku(await oppaanEsittely(env, p.kaupunki), p.kaupunki) : null;
+  const listanKierros = aloitaKierros && listatila
+    ? (omat ? omat.kierros.map((id) => lukitut.find((k) => k.id === id)).filter(Boolean)
+      : lyhinReitti(kierroksenKohteet, sijainti, { ensimmainen: kierroksenKohteet.find((k) => k.id === alkuId) ?? null })) : null;
   const suunnittelu = aloitaKierros && !listanKierros ? (async () => {
     try {
       const suunnitelma = jasennaKierros((await kysyMallitiedot(env, {
@@ -3442,6 +3539,30 @@ async function hoidaOpas(pyynto, env, kors, runko, ctx) {
   let kuvaLupaus = null;
   let kuvaAlku = 0;
   let p18Lupaus = null;
+  let puheOhitus = null;
+  // ESIGENEROITU ESITTELY (omistaja 7.10.): kierroksen pysähdys tai listan kohde nimellä → valmis teksti ilman mallikutsua.
+  const valmisPaikka = seuraava?.paikka ?? (listatila && p.toive ? lukitut.find((x) => samaNimi(x.nimi, p.toive)) ?? null : null);
+  const esittely = valmisPaikka && listatila ? await oppaanEsittely(env, p.kaupunki) : null;
+  const valmis = esittely ? valmisKohde(esittely, valmisPaikka.id) : null;
+  // Äänetön esittely (omistaja 7.10. 18.2x: 31 kaupunkia testattavaksi ennen ääniä): ääni vain R2:sta, ei koskaan
+  // generointia; ilman ääntä aani-, aani_pcm- ja kesto_s-kentät jäävät pois (LS1: natiivi näyttää tekstitilan).
+  const aaneton = Boolean(valmis && esittely?.aaneton === true);
+  if (valmis) {
+    const paikka = { ...valmisPaikka, lahde: valmisPaikka.lahde ?? 'kohdelista' };
+    const nimi = valmisPaikka.nimi;
+    tuloksenPaikka = { nimi, koko_m: valmis.koko_m, ...paikka };
+    tulos = { tyyppi: 'pysahdys', id: paikka.id, nimi, alarivi: valmis.kuvaus ?? null, lat: paikka.lat, lon: paikka.lon,
+      koko_m: valmis.koko_m ?? paikka.koko_m ?? 150, ...(valmis.korkeus_m ? { korkeus_m: valmis.korkeus_m } : {}),
+      ...(valmis.luokka ? { luokka: valmis.luokka } : {}), teksti: (p.lyhyt && valmis.lyhyt) || valmis.teksti, valmis: true,
+      wiki: paikka.wiki ?? null, kuva: null, vaihtoehdot: valmis.syventava ? [valmis.syventava] : [], koordinaatit: paikka.lahde,
+      ...(seuraava ? { kierros: { numero: seuraava.numero, maara: seuraava.maara } } : {}),
+      kuvat: kohteenKuvat(kuvaLista, paikka.id) };
+    // Ääntämisversio (esim. roomalaiset numerot): näytölle kirjoitusasu, ääneen puhe_*-kenttä, jos se on.
+    puheOhitus = (p.lyhyt && valmis.lyhyt ? valmis.puhe_lyhyt : valmis.puhe_teksti) || null;
+    kuvaAlku = Date.now();
+    korostusLupaus = paikanKorostus(fetch, { lat: paikka.lat, lon: paikka.lon, koko_m: tulos.koko_m, luokka: valmis.luokka,
+      reitti: [], nimi, nimet: [nimi], id: paikka.id }, sijainti, osm);
+  }
   try {
     for (let yritys = 0; yritys < 2 && !tulos; yritys += 1) {
       const vastaus = jasennaOpas((await kysyMallitiedot(env, kutsu)).teksti, seuraava?.paikka.nimi ?? null);
@@ -3519,7 +3640,8 @@ async function hoidaOpas(pyynto, env, kors, runko, ctx) {
   if (!tulos) return vastaa({ virhe: 'palvelin', viesti: 'Opas ei saanut seuraavaa paikkaa kiinni. Yritä uudelleen.' }, { status: 502, ...kors });
   // Ääni ja kuvan varahaku (Wikidatan P18) rinnakkain; pelin oma kuva voittaa.
   const [aani, korostus] = await Promise.all([
-    oppaanAani(pyynto, env, ctx, tulos.teksti, kehittaja),
+    aaneton ? oppaanValmisAani(pyynto, env, puheOhitus ?? tulos.teksti).catch(() => null)
+      : oppaanAani(pyynto, env, ctx, puheOhitus ?? tulos.teksti, kehittaja),
     tulos.tyyppi === 'pysahdys' ? korostusLupaus : null,
   ]);
   // Lisäkuvat (P18 + Commons-luokka) pelin omien perään (omistaja 23.5x). Muun työn jälkeen odotetaan enintään
@@ -3556,13 +3678,19 @@ async function hoidaOpas(pyynto, env, kors, runko, ctx) {
     tulos.vaihtoehtojen_ryhmat = tulos.vaihtoehdot.map((x, i) => (tulos.tyyppi === 'pysahdys' && i === 0 ? 'syventava' : siltaRyhma(x)));
   }
   tulos.toiveen_ryhma = p.toive ? siltaRyhma(p.toive) : (seuraava ? 'kierros' : null);
+  // Sana-ajat vain valmiille esittelylle (litteä kenttä; vanhat natiivit ohittavat sen).
+  const ajat = tulos.valmis && aani?.aani ? await aaniAjat(env, aani.aani) : null;
+  if (aaneton && !aani) return vastaa({ ...tulos }, kors);
   return vastaa({ ...tulos, aani: aani?.aani ?? null, aani_pcm: aani?.aani_pcm ?? null, aani_taajuus: aani?.aani_taajuus ?? null,
-    kesto_s: aani?.kesto_s ?? null }, kors);
+    kesto_s: aani?.kesto_s ?? null, ...(ajat ? { aani_ajat: ajat } : {}) }, kors);
 }
 
 export default {
   async fetch(pyynto, env, ctx) {
     const alkuMs = Date.now();
+    // Kokeilukohteet vain kehityskäännöksille (x-matkakirja-kokeilu: giza; Päätoimittaja 7.10.).
+    const kokeilu = kokeilut(pyynto.headers.get('x-matkakirja-kokeilu'));
+    if (kokeilu.length) env = { ...env, OPAS_KOKEILU: kokeilu };
     const sallitut = lueLista(env.POLLO_ORIGINIT);
     const origin = pyynto.headers.get('origin');
     const kors = { origin, sallitut };
@@ -3577,13 +3705,13 @@ export default {
     }
     if (pyynto.method === 'GET' && new URL(pyynto.url).pathname === '/opas/tunnus') return hoidaOppaanTunnus(pyynto, env);
     if (pyynto.method === 'GET' && new URL(pyynto.url).pathname === '/opas/kohteet') return hoidaOppaanKohteet(pyynto, env, kors, ctx);
-    if (pyynto.method === 'GET' && new URL(pyynto.url).pathname === '/opas/kysymykset') return hoidaOppaanKysymykset(pyynto, env, kors);
+    if (pyynto.method === 'GET' && new URL(pyynto.url).pathname === '/opas/kysymykset') return hoidaOppaanKysymykset(pyynto, env, kors, ctx);
     if (pyynto.method === 'GET' && new URL(pyynto.url).pathname === '/opas/liiku') return hoidaOppaanLiiku(pyynto, env, kors);
     if (pyynto.method === 'GET' && new URL(pyynto.url).pathname === '/opas/lahella') return hoidaOppaanLahella(pyynto, env, kors);
     if (pyynto.method === 'GET' && new URL(pyynto.url).pathname === '/opas/aineistot') {
       // Staattisten aineistojen indeksi (aineistot.js); lyhyt välimuisti, jotta uusi kaupunki näkyy pian viennin jälkeen.
       if (!oppaanAsiakas(pyynto, kors, env)) return new Response('Origin ei ole sallittu', { status: 403 });
-      const v = vastaa({ ...OPAS_AINEISTOT, sallitut: OPAS_SALLITUT.sallitut, raja: [] }, kors);
+      const v = vastaa({ ...OPAS_AINEISTOT, sallitut: sallitutPyynnolle(env), raja: [] }, kors);
       v.headers.set('cache-control', 'public, max-age=300');
       return v;
     }

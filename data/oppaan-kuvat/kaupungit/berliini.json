@@ -1,0 +1,754 @@
+{
+ "kaupunki": "berliini",
+ "kaupunkiQ": "Q64",
+ "kohteet": [
+  {
+   "q": "Q82425",
+   "nimi": "Brandenburgin portti",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": 52.51627,
+   "lon": 13.37772,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Brandenburger Tor morgens.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Brandenburger_Tor_morgens.jpg?width=1280",
+     "tekija": "Thomas Wolf, www.foto-tw.de",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Brandenburger_Tor_morgens.jpg",
+     "selite": "Brandenburgin portti on klassistinen kaupunginportti ja Berliinin tunnetuin symboli.",
+     "leveys": 5009,
+     "korkeus": 3347,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Berlijn-Dorotheenstadt, de Brandenburger Tor Dm09065019 vanaf Tiergarten IMG 1273 2026-05-14 18.34.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Berlijn-Dorotheenstadt%2C_de_Brandenburger_Tor_Dm09065019_vanaf_Tiergarten_IMG_1273_2026-05-14_18.34.jpg?width=1280",
+     "tekija": "Michielverbeek",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Berlijn-Dorotheenstadt%2C_de_Brandenburger_Tor_Dm09065019_vanaf_Tiergarten_IMG_1273_2026-05-14_18.34.jpg",
+     "selite": "Portin huipulla kohoaa Quadriga, nelivaljakkoa ajava voitonjumalatar.",
+     "leveys": 3835,
+     "korkeus": 2760,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Archway of Brandenburg Gate during UEFA Euro 2024, July 2024.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Archway_of_Brandenburg_Gate_during_UEFA_Euro_2024%2C_July_2024.jpg?width=1280",
+     "tekija": "Steven1991",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Archway_of_Brandenburg_Gate_during_UEFA_Euro_2024%2C_July_2024.jpg",
+     "selite": "Portin doorilaiset pylväät on mallinnettu Ateenan Akropoliin esimerkin mukaan.",
+     "leveys": 4032,
+     "korkeus": 2690,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q151897",
+   "nimi": "Valtiopäivätalo",
+   "peruste": "pelin nosto",
+   "koko_m": 200,
+   "lat": 52.51861,
+   "lon": 13.37611,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Reichstagsgebäude von Westen.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Reichstagsgeb%C3%A4ude_von_Westen.jpg?width=1280",
+     "tekija": "Jörg Braukmann",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Reichstagsgeb%C3%A4ude_von_Westen.jpg",
+     "selite": "Valtiopäivätalo on Saksan parlamentin rakennus, jota kruunaa lasikupoli.",
+     "leveys": 8483,
+     "korkeus": 5000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "At Berlin 2009 008.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/At_Berlin_2009_008.jpg?width=1280",
+     "tekija": "Photograph by Mike Peel (www.mikepeel.net).",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:At_Berlin_2009_008.jpg",
+     "selite": "Rakennuksen pääjulkisivua koristaa pylväikkö ja kolmiopäätyinen portiikki.",
+     "leveys": 3875,
+     "korkeus": 2583,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "At Berlin 2009 012.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/At_Berlin_2009_012.jpg?width=1280",
+     "tekija": "Photograph by Mike Peel (www.mikepeel.net).",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:At_Berlin_2009_012.jpg",
+     "selite": "Portiikin päädyn kirjoitus omistaa rakennuksen kansalle.",
+     "leveys": 3888,
+     "korkeus": 2592,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q151356",
+   "nimi": "Berliinin televisiotorni",
+   "peruste": "pelin nosto",
+   "koko_m": 368,
+   "lat": 52.52083,
+   "lon": 13.40944,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "2022-09-07 09-11 Berlin 060 Rotes Rathaus, Fernsehturm.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2022-09-07_09-11_Berlin_060_Rotes_Rathaus%2C_Fernsehturm.jpg?width=1280",
+     "tekija": "Allie_Caulfield",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2022-09-07_09-11_Berlin_060_Rotes_Rathaus%2C_Fernsehturm.jpg",
+     "selite": "Televisiotorni kohoaa Alexanderplatzin tuntumassa ja näkyy yli koko kaupungin.",
+     "leveys": 5773,
+     "korkeus": 3817,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "20251021 Berliner Fernsehturm.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20251021_Berliner_Fernsehturm.jpg?width=1280",
+     "tekija": "Flocci Nivis",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20251021_Berliner_Fernsehturm.jpg",
+     "selite": "Torni nousee Berliinin keskustan kattojen ja rautatiesiltojen yläpuolelle.",
+     "leveys": 5745,
+     "korkeus": 3830,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "200806 Berlin 187.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/200806_Berlin_187.JPG?width=1280",
+     "tekija": "Mark Ahsmann",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:200806_Berlin_187.JPG",
+     "selite": "Tornin pallossa on näköalataso ja pyörivä ravintola.",
+     "leveys": 2448,
+     "korkeus": 3264,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q151963",
+   "nimi": "Museosaari",
+   "peruste": "pelin nosto",
+   "koko_m": 500,
+   "lat": 52.52139,
+   "lon": 13.39556,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Berlin Museumsinsel Fernsehturm.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Berlin_Museumsinsel_Fernsehturm.jpg?width=1280",
+     "tekija": "Thomas Wolf, www.foto-tw.de",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Berlin_Museumsinsel_Fernsehturm.jpg",
+     "selite": "Museosaari on Spreen saaren museokeskittymä, ja siellä Bode-museon kupoli seisoo kärjessä.",
+     "leveys": 5454,
+     "korkeus": 3684,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "2013-05-24 Berliner Fernsehturm 05.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2013-05-24_Berliner_Fernsehturm_05.jpg?width=1280",
+     "tekija": "Meine Mutter (Erlaubnis liegt vor)",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2013-05-24_Berliner_Fernsehturm_05.jpg",
+     "selite": "Ilmasta näkyvät Vanha museo ja saaren museorakennusten rivistö Spreen ympäröimänä.",
+     "leveys": 3888,
+     "korkeus": 2592,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Berlin-Pergamonmuseum-08-2016-gje.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Berlin-Pergamonmuseum-08-2016-gje.jpg?width=1280",
+     "tekija": "Gerd Eichmann",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Berlin-Pergamonmuseum-08-2016-gje.jpg",
+     "selite": "Pergamon-museon sisäpihaa reunustaa pylväikkö.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q154563",
+   "nimi": "Berliinin tuomiokirkko",
+   "peruste": "sitelinks",
+   "koko_m": 120,
+   "lat": 52.51917,
+   "lon": 13.40111,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Berliner Dom von Humboldt-Box.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Berliner_Dom_von_Humboldt-Box.jpg?width=1280",
+     "tekija": "Thomas Wolf, www.foto-tw.de",
+     "lisenssi": "CC BY-SA 3.0 de",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Berliner_Dom_von_Humboldt-Box.jpg",
+     "selite": "Berliinin tuomiokirkko on suuri vihreäkupolinen kirkko Spreesaarella.",
+     "leveys": 17932,
+     "korkeus": 16801,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "20170422 AlteNationalgalerie 4647 (36014328951).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20170422_AlteNationalgalerie_4647_(36014328951).jpg?width=1280",
+     "tekija": "Ray Swi-hymn from Sijhih-Taipei, Taiwan",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20170422_AlteNationalgalerie_4647_(36014328951).jpg",
+     "selite": "Kirkon kupoli kohoaa Museosaaren puiden ja pylväikön takaa.",
+     "leveys": 3648,
+     "korkeus": 5472,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "2016-05-08 Berlin Cathedral.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2016-05-08_Berlin_Cathedral.jpg?width=1280",
+     "tekija": "Sergey Galyonkin",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2016-05-08_Berlin_Cathedral.jpg",
+     "selite": "Kirkon pääportaalia koristaa runsas mosaiikki ja veistokset.",
+     "leveys": 3219,
+     "korkeus": 4587,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q313746",
+   "nimi": "East Side Gallery",
+   "peruste": "pelin nosto",
+   "koko_m": 300,
+   "lat": 52.50306,
+   "lon": 13.44472,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Friedrichshain, Berlin, Germany - panoramio (40).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Friedrichshain%2C_Berlin%2C_Germany_-_panoramio_(40).jpg?width=1280",
+     "tekija": "Rodrigo Pereira da S…",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Friedrichshain%2C_Berlin%2C_Germany_-_panoramio_(40).jpg",
+     "selite": "East Side Gallery on pitkä jäljellä oleva pätkä Berliinin muuria, jonka taiteilijat ovat maalanneet.",
+     "leveys": 2048,
+     "korkeus": 1536,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Berlijn-Friedrichshain, de East Side Gallery bij Universal Music IMG 1895 2026-05-23 11.04.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Berlijn-Friedrichshain%2C_de_East_Side_Gallery_bij_Universal_Music_IMG_1895_2026-05-23_11.04.jpg?width=1280",
+     "tekija": "Michielverbeek",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Berlijn-Friedrichshain%2C_de_East_Side_Gallery_bij_Universal_Music_IMG_1895_2026-05-23_11.04.jpg",
+     "selite": "Muuriosuus kulkee Spreen rantaa pitkin Friedrichshainissa.",
+     "leveys": 4520,
+     "korkeus": 2192,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Friedrichshain, Berlin, Germany - panoramio (41).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Friedrichshain%2C_Berlin%2C_Germany_-_panoramio_(41).jpg?width=1280",
+     "tekija": "Rodrigo Pereira da S…",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Friedrichshain%2C_Berlin%2C_Germany_-_panoramio_(41).jpg",
+     "selite": "Muurin pinnan maalaukset syntyivät muurin murtumisen jälkeen vuonna 1990.",
+     "leveys": 2048,
+     "korkeus": 1536,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q68689",
+   "nimi": "Checkpoint Charlie",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": 52.5075,
+   "lon": 13.39028,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "2012-07 Checkpoint Charlie Berlin AlliiertenMuseum anagoria 01.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2012-07_Checkpoint_Charlie_Berlin_AlliiertenMuseum_anagoria_01.JPG?width=1280",
+     "tekija": "Anagoria",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2012-07_Checkpoint_Charlie_Berlin_AlliiertenMuseum_anagoria_01.JPG",
+     "selite": "Checkpoint Charlie oli kylmän sodan aikana liittoutuneiden rajanylityspaikka jaetussa Berliinissä.",
+     "leveys": 4752,
+     "korkeus": 3168,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Checkpoint Charlie, Berlin, Germany (Ank Kumar) 02.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Checkpoint_Charlie%2C_Berlin%2C_Germany_(Ank_Kumar)_02.jpg?width=1280",
+     "tekija": "Ank Kumar",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Checkpoint_Charlie%2C_Berlin%2C_Germany_(Ank_Kumar)_02.jpg",
+     "selite": "Friedrichstraßen risteyksessä seisoo nykyään jäljennös vartiokopista.",
+     "leveys": 2448,
+     "korkeus": 3264,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q154987",
+   "nimi": "Voitonpylväs",
+   "peruste": "sitelinks",
+   "koko_m": 120,
+   "lat": 52.51451,
+   "lon": 13.35011,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Siegessaeule Berlin09072023.png",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Siegessaeule_Berlin09072023.png?width=1280",
+     "tekija": "Zonk43",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Siegessaeule_Berlin09072023.png",
+     "selite": "Voitonpylväs on kultaisella Victoria-patsaalla kruunattu muistomerkki Tiergartenin keskellä.",
+     "leveys": 3428,
+     "korkeus": 5142,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Berlin (DE), Siegessäule -- 2021 -- 8666.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Berlin_(DE)%2C_Siegess%C3%A4ule_--_2021_--_8666.jpg?width=1280",
+     "tekija": "Anil Öztas",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Berlin_(DE)%2C_Siegess%C3%A4ule_--_2021_--_8666.jpg",
+     "selite": "Pylväs rakennettiin Preussin sotavoittojen muistoksi 1800-luvulla.",
+     "leveys": 3024,
+     "korkeus": 4032,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Berlin (DE), Hofjägerallee -- 2021 -- 8664.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Berlin_(DE)%2C_Hofj%C3%A4gerallee_--_2021_--_8664.jpg?width=1280",
+     "tekija": "Anil Öztas",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Berlin_(DE)%2C_Hofj%C3%A4gerallee_--_2021_--_8664.jpg",
+     "selite": "Pylväs on näkyvä pääte leveälle allee-kadulle.",
+     "leveys": 2851,
+     "korkeus": 3801,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q154996",
+   "nimi": "Charlottenburgin linna",
+   "peruste": "sitelinks",
+   "koko_m": 400,
+   "lat": 52.52111,
+   "lon": 13.29583,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Schloss Charlottenburg 2025.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Schloss_Charlottenburg_2025.jpg?width=1280",
+     "tekija": "abbilder",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Schloss_Charlottenburg_2025.jpg",
+     "selite": "Charlottenburgin linna on Berliinin suurin säilynyt barokkilinna puutarhoineen.",
+     "leveys": 7728,
+     "korkeus": 5152,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Berlin (4163606728).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Berlin_(4163606728).jpg?width=1280",
+     "tekija": "Ana Raquel S. Hernandes from Sao Paulo, Brazil",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Berlin_(4163606728).jpg",
+     "selite": "Linnan etupihaa hallitsee vihreäkupolinen keskitorni ja ratsastajapatsas.",
+     "leveys": 1280,
+     "korkeus": 857,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Berlin (4163607394).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Berlin_(4163607394).jpg?width=1280",
+     "tekija": "Ana Raquel S. Hernandes from Sao Paulo, Brazil",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Berlin_(4163607394).jpg",
+     "selite": "Linnan puistossa on muotopuutarhoja ja suihkulähde.",
+     "leveys": 1280,
+     "korkeus": 857,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q170119",
+   "nimi": "Berliinin kaupunkilinna",
+   "peruste": "sitelinks",
+   "koko_m": 250,
+   "lat": 52.5175,
+   "lon": 13.40278,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Humboldt Forum 9155.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Humboldt_Forum_9155.jpg?width=1280",
+     "tekija": "Dosseman",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Humboldt_Forum_9155.jpg",
+     "selite": "Uudelleenrakennettu kaupunkilinna Spreen rannalla toimii nykyään Humboldt-foorumina.",
+     "leveys": 8256,
+     "korkeus": 5504,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Humboldt Forum 0795.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Humboldt_Forum_0795.jpg?width=1280",
+     "tekija": "Dosseman",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Humboldt_Forum_0795.jpg",
+     "selite": "Barokkijulkisivun takaa pilkottaa televisiotorni.",
+     "leveys": 8256,
+     "korkeus": 5504,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Humboldt Forum 9156.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Humboldt_Forum_9156.jpg?width=1280",
+     "tekija": "Dosseman",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Humboldt_Forum_9156.jpg",
+     "selite": "Rakennuksen kupoli ja pääjulkisivu muistuttavat Preussin kuninkaiden entistä asuntoa.",
+     "leveys": 5504,
+     "korkeus": 8256,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q152252",
+   "nimi": "Potsdamer Platz",
+   "peruste": "sitelinks",
+   "koko_m": 400,
+   "lat": 52.50894,
+   "lon": 13.37633,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Berlin - Potsdamer Platz - 2016.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Berlin_-_Potsdamer_Platz_-_2016.jpg?width=1280",
+     "tekija": "Avda",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Berlin_-_Potsdamer_Platz_-_2016.jpg",
+     "selite": "Potsdamer Platz on muuri-ajan jälkeen rakennettu uusi liike- ja viihdekeskus.",
+     "leveys": 2867,
+     "korkeus": 1911,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Daniel Cox - Potsdamer Platz in Berlin (DEU).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Daniel_Cox_-_Potsdamer_Platz_in_Berlin_(DEU).jpg?width=1280",
+     "tekija": "Daniel Cox",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Daniel_Cox_-_Potsdamer_Platz_in_Berlin_(DEU).jpg",
+     "selite": "Aukion pilvenpiirtäjät edustavat Berliinin nykyarkkitehtuuria.",
+     "leveys": 4608,
+     "korkeus": 3072,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Germany - NARA - 68154987 (cropped).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Germany_-_NARA_-_68154987_(cropped).jpg?width=1280",
+     "tekija": "Unknown authorUnknown author or not provided",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Germany_-_NARA_-_68154987_(cropped).jpg",
+     "selite": "Potsdamer Platz oli ennen sotaa Euroopan vilkkaimpia liikenneristeyksiä.",
+     "leveys": 3753,
+     "korkeus": 2648,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q170103",
+   "nimi": "Gendarmenmarkt",
+   "peruste": "sitelinks",
+   "koko_m": 200,
+   "lat": 52.51361,
+   "lon": 13.39278,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Berlin (DE), Gendarmenmarkt -- 2021 -- 9143.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Berlin_(DE)%2C_Gendarmenmarkt_--_2021_--_9143.jpg?width=1280",
+     "tekija": "Anil Öztas",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Berlin_(DE)%2C_Gendarmenmarkt_--_2021_--_9143.jpg",
+     "selite": "Gendarmenmarkt on suorakaiteen muotoinen aukio, jota reunustavat konserttitalo ja kaksi kupolikirkkoa.",
+     "leveys": 6508,
+     "korkeus": 3681,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q695082",
+   "nimi": "Oberbaumbrücke",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 52.50194,
+   "lon": 13.44556,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Oberbaumbrücke mit U-Bahn.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Oberbaumbr%C3%BCcke_mit_U-Bahn.jpg?width=1280",
+     "tekija": "Sarah Jane at Flickr",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Oberbaumbr%C3%BCcke_mit_U-Bahn.jpg",
+     "selite": "Oberbaumbrücke on punatiilinen silta Spreen yli, ja metro kulkee sen yläkannella.",
+     "leveys": 3865,
+     "korkeus": 1926,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "-Sunset on Oberbaumbrücke- (43668194515).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/-Sunset_on_Oberbaumbr%C3%BCcke-_(43668194515).jpg?width=1280",
+     "tekija": "Guido from Berlin",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:-Sunset_on_Oberbaumbr%C3%BCcke-_(43668194515).jpg",
+     "selite": "Sillan tiilitornit hohtavat auringonlaskussa Spreen yllä.",
+     "leveys": 2048,
+     "korkeus": 1280,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "2018-08-04 DE Berlin-Friedrichshain-Kreuzberg, Spree, Oberbaumbrücke, B-1553V, Pankow 05604060 (49572569238).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2018-08-04_DE_Berlin-Friedrichshain-Kreuzberg%2C_Spree%2C_Oberbaumbr%C3%BCcke%2C_B-1553V%2C_Pankow_05604060_(49572569238).jpg?width=1280",
+     "tekija": "Paul Korecky",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2018-08-04_DE_Berlin-Friedrichshain-Kreuzberg%2C_Spree%2C_Oberbaumbr%C3%BCcke%2C_B-1553V%2C_Pankow_05604060_(49572569238).jpg",
+     "selite": "Silta yhdistää Kreuzbergin ja Friedrichshainin kaupunginosat.",
+     "leveys": 5953,
+     "korkeus": 3968,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q153951",
+   "nimi": "Keisari Vilhelmin muistokirkko",
+   "peruste": "sitelinks",
+   "koko_m": 80,
+   "lat": 52.50472,
+   "lon": 13.33528,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Gedächtniskirche1.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ged%C3%A4chtniskirche1.JPG?width=1280",
+     "tekija": "nl:User:GerardM",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ged%C3%A4chtniskirche1.JPG",
+     "selite": "Muistokirkon pommituksessa tuhoutunut torni on jätetty sodan muistomerkiksi.",
+     "leveys": 1608,
+     "korkeus": 2539,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Berlin-Gedaechtniskirche-30-2022-gje.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Berlin-Gedaechtniskirche-30-2022-gje.jpg?width=1280",
+     "tekija": "Gerd Eichmann",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Berlin-Gedaechtniskirche-30-2022-gje.jpg",
+     "selite": "Rauniotornin vieressä seisoo uudempi, moderni kellotorni.",
+     "leveys": 3024,
+     "korkeus": 4032,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Berlin, Hardenbergstrasse mit Gedächtniskirche & Europa-Center (2024).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Berlin%2C_Hardenbergstrasse_mit_Ged%C3%A4chtniskirche_%26_Europa-Center_(2024).jpg?width=1280",
+     "tekija": "JoachimKohler-HB",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Berlin%2C_Hardenbergstrasse_mit_Ged%C3%A4chtniskirche_%26_Europa-Center_(2024).jpg",
+     "selite": "Kirkko seisoo Länsi-Berliinin vilkkaan kaupallisen keskustan sydämessä.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q151374",
+   "nimi": "Berliinin olympiastadion",
+   "peruste": "sitelinks",
+   "koko_m": 350,
+   "lat": 52.51472,
+   "lon": 13.23944,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Olympiastadion Berlin 2015.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Olympiastadion_Berlin_2015.jpg?width=1280",
+     "tekija": "Thomas Wolf, www.foto-tw.de",
+     "lisenssi": "CC BY-SA 3.0 de",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Olympiastadion_Berlin_2015.jpg",
+     "selite": "Olympiastadion rakennettiin 1936 olympialaisia varten, ja sen kaksi tornia ja olympiarenkaat ovat tunnuskuva.",
+     "leveys": 7020,
+     "korkeus": 4636,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Berliner Olympiastadion, Gesamtansicht 2013.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Berliner_Olympiastadion%2C_Gesamtansicht_2013.jpg?width=1280",
+     "tekija": "Rebecca Leisten www.rebecca-leisten.de",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Berliner_Olympiastadion%2C_Gesamtansicht_2013.jpg",
+     "selite": "Stadion on laaja soikio Berliinin länsiosassa.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1097",
+   "nimi": "Berliinin päärautatieasema",
+   "peruste": "sitelinks",
+   "koko_m": 300,
+   "lat": 52.52508,
+   "lon": 13.36939,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Berlín hlavní nádraží.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Berl%C3%ADn_hlavn%C3%AD_n%C3%A1dra%C5%BE%C3%AD.jpg?width=1280",
+     "tekija": "Ondřej Žváček",
+     "lisenssi": "CC BY 2.5",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.5",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Berl%C3%ADn_hlavn%C3%AD_n%C3%A1dra%C5%BE%C3%AD.jpg",
+     "selite": "Päärautatieasema on lasinen risteysasema Spreen rannalla.",
+     "leveys": 4720,
+     "korkeus": 3063,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "(20260614 100717648 HDR) Berlin Hauptbahnhof.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/(20260614_100717648_HDR)_Berlin_Hauptbahnhof.jpg?width=1280",
+     "tekija": "Roy Zuo",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:(20260614_100717648_HDR)_Berlin_Hauptbahnhof.jpg",
+     "selite": "Aseman lasikatto kattaa useita raidetasoja.",
+     "leveys": 4096,
+     "korkeus": 3072,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Aerial view of Berlin (32881394137).jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aerial_view_of_Berlin_(32881394137).jpg?width=1280",
+   "tekija": "dronepicr",
+   "lisenssi": "CC BY 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aerial_view_of_Berlin_(32881394137).jpg",
+   "selite": "Berliinin keskusta, jota hallitsee televisiotorni, levittäytyy Spreen molemmin puolin.",
+   "leveys": 4026,
+   "korkeus": 2679,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Berlin City aerial (47035539954).jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Berlin_City_aerial_(47035539954).jpg?width=1280",
+   "tekija": "dronepicr",
+   "lisenssi": "CC BY 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Berlin_City_aerial_(47035539954).jpg",
+   "selite": "Kaupungin siluettia hallitsee televisiotorni.",
+   "leveys": 6062,
+   "korkeus": 2465,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

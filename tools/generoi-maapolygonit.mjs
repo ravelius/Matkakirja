@@ -111,20 +111,21 @@
 
 // Krim ja Sevastopol Ukrainalle lähteessä (tools/krim-ukrainalle.mjs, Päätoimittaja 30.9.2026).
 import { krimUkrainalleAdmin0 } from './krim-ukrainalle.mjs';
+import { ADMIN0_URL, ADMIN0_TIEDOSTO } from './worldview.mjs';
 import {
   readFileSync, writeFileSync, existsSync, mkdirSync,
 } from 'node:fs';
 import { laudanProjektio } from './fokuskartta/piirto.js';
 import { MAAILMANKARTTA } from '../js/packs/maailmankartta.js';
 
-const LAHDE = 'https://raw.githubusercontent.com/nvkelso/natural-earth-vector'
-  + '/master/geojson/ne_10m_admin_0_countries.geojson';
+// Worldview Suomen kannan mukaan: Natural Earthin _swe-näkökulma (tools/worldview.mjs, Päätoimittaja 7.10.2026).
+const LAHDE = ADMIN0_URL;
 /*
  * Noudon välimuisti, EI repon aineistoa (.gitignore `.nevalimuisti/`).
  * Ks. tiedoston alku: 13 megatavun lähdettä ei säilytetä repossa, mutta
  * toleranssikokeiluja ei myöskään ajeta kymmentä latausta.
  */
-const PAIKALLINEN = new URL('../.nevalimuisti/ne_10m_admin_0_countries.geojson',
+const PAIKALLINEN = new URL(`../.nevalimuisti/${ADMIN0_TIEDOSTO}`,
   import.meta.url);
 /*
  * ═══ RANNIKON NAULAUS JO LÄHTEESSÄ (Fablen päätös 20.9.2026) ═══════

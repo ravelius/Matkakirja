@@ -1,0 +1,385 @@
+{
+ "kaupunki": "granada",
+ "kaupunkiQ": "Q8810",
+ "kohteet": [
+  {
+   "q": "Q47476",
+   "nimi": "Alhambra",
+   "peruste": "UNESCO",
+   "koko_m": 700,
+   "lat": 37.17634,
+   "lon": -3.58821,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Alhambra in the evening.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Alhambra_in_the_evening.jpg?width=1280",
+     "tekija": "Jebulon",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Alhambra_in_the_evening.jpg",
+     "selite": "Alhambra on Nasrid-hallitsijoiden linnoitus- ja palatsialue Sierra Nevadan juurella.",
+     "leveys": 4563,
+     "korkeus": 1614,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Granada Spain Alhambra-seen-from-Albaicín-01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Granada_Spain_Alhambra-seen-from-Albaic%C3%ADn-01.jpg?width=1280",
+     "tekija": "CEphoto, Uwe Aranas",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Granada_Spain_Alhambra-seen-from-Albaic%C3%ADn-01.jpg",
+     "selite": "Albaicínin rinteeltä Alhambra kohoaa lumihuippuisten vuorten edessä.",
+     "leveys": 4136,
+     "korkeus": 1617,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Patio de los Arrayanes detail Alhambra Granada Spain.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Patio_de_los_Arrayanes_detail_Alhambra_Granada_Spain.jpg?width=1280",
+     "tekija": "Jebulon",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Patio_de_los_Arrayanes_detail_Alhambra_Granada_Spain.jpg",
+     "selite": "Myrttien piha heijastaa palatsin julkisivua pitkässä vesialtaassa.",
+     "leveys": 3019,
+     "korkeus": 2053,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q525811",
+   "nimi": "Generalife",
+   "peruste": "sitelinks",
+   "koko_m": 250,
+   "lat": 37.17694,
+   "lon": -3.58528,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Fountain in Generalife gardens, Granada, Spain.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Fountain_in_Generalife_gardens%2C_Granada%2C_Spain.jpg?width=1280",
+     "tekija": "Jebulon",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Fountain_in_Generalife_gardens%2C_Granada%2C_Spain.jpg",
+     "selite": "Generalife oli Nasrid-hallitsijoiden kesäpalatsi ja puutarha Alhambran vieressä.",
+     "leveys": 4592,
+     "korkeus": 2958,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Rose arch Generalife gardens, Granada, Spain.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Rose_arch_Generalife_gardens%2C_Granada%2C_Spain.jpg?width=1280",
+     "tekija": "Jebulon",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Rose_arch_Generalife_gardens%2C_Granada%2C_Spain.jpg",
+     "selite": "Puutarhan ruusukaarten läpi näkyy Alhambran torni.",
+     "leveys": 2985,
+     "korkeus": 4485,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q576339",
+   "nimi": "Albayzín",
+   "peruste": "UNESCO",
+   "koko_m": 600,
+   "lat": 37.1817,
+   "lon": -3.5983,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "View of Albaicín from Alhambra. Granada, Spain.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/View_of_Albaic%C3%ADn_from_Alhambra._Granada%2C_Spain.jpg?width=1280",
+     "tekija": "Ввласенко",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:View_of_Albaic%C3%ADn_from_Alhambra._Granada%2C_Spain.jpg",
+     "selite": "Albayzín on Granadan vanha maurilaiskaupunginosa, jonka valkoiset talot nousevat rinteelle.",
+     "leveys": 3508,
+     "korkeus": 2387,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Alhambra, Generalife and Albayzín, Granada-110167.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Alhambra%2C_Generalife_and_Albayz%C3%ADn%2C_Granada-110167.jpg?width=1280",
+     "tekija": "Francesco Bandarin",
+     "lisenssi": "CC BY-SA 3.0 igo",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/igo/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Alhambra%2C_Generalife_and_Albayz%C3%ADn%2C_Granada-110167.jpg",
+     "selite": "Alhambran ikkunasta avautuu näkymä Albayzínin kapeille kujille ja rinnekaupunkiin.",
+     "leveys": 1536,
+     "korkeus": 2048,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q5419362",
+   "nimi": "Granadan katedraali",
+   "peruste": "sitelinks",
+   "koko_m": 120,
+   "lat": 37.17599,
+   "lon": -3.59904,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Granada (26080378875).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Granada_(26080378875).jpg?width=1280",
+     "tekija": "Brett Hodnett",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Granada_(26080378875).jpg",
+     "selite": "Granadan katedraali on espanjalaisen renessanssin teos kaupungin keskustassa.",
+     "leveys": 3347,
+     "korkeus": 2705,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Facade details of Cathedral of Granada in Plaza de las Pasiegas 03.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Facade_details_of_Cathedral_of_Granada_in_Plaza_de_las_Pasiegas_03.jpg?width=1280",
+     "tekija": "John Samuel",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Facade_details_of_Cathedral_of_Granada_in_Plaza_de_las_Pasiegas_03.jpg",
+     "selite": "Julkisivun kaaret ja reliefit avautuvat Plaza de las Pasiegasille.",
+     "leveys": 4272,
+     "korkeus": 2848,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q4270926",
+   "nimi": "Leijonain piha",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": 37.1771,
+   "lon": -3.58927,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Court of the Lions, Alhambra de Granada (Spain).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Court_of_the_Lions%2C_Alhambra_de_Granada_(Spain).jpg?width=1280",
+     "tekija": "Heparina1985",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Court_of_the_Lions%2C_Alhambra_de_Granada_(Spain).jpg",
+     "selite": "Leijonain piha on Alhambran Nasrid-palatsin tunnetuin sisäpiha.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Pavillon Cour des Lions Alhambra Granada Spain.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Pavillon_Cour_des_Lions_Alhambra_Granada_Spain.jpg?width=1280",
+     "tekija": "Jebulon",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Pavillon_Cour_des_Lions_Alhambra_Granada_Spain.jpg",
+     "selite": "Pihan paviljonki on koristeltu hienoin kaarin ja pylväin.",
+     "leveys": 2155,
+     "korkeus": 3012,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2046808",
+   "nimi": "Kaarle V:n palatsi",
+   "peruste": "sitelinks",
+   "koko_m": 100,
+   "lat": 37.17694,
+   "lon": -3.58944,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Alhambra - Palacio Carlos V. - South.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Alhambra_-_Palacio_Carlos_V._-_South.jpg?width=1280",
+     "tekija": "Ingo Mehling",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Alhambra_-_Palacio_Carlos_V._-_South.jpg",
+     "selite": "Kaarle V:n palatsi on renessanssirakennus keskellä Alhambran maurilaisia palatseja.",
+     "leveys": 6858,
+     "korkeus": 2505,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Granada - Alhambra - Palacio de Carlos V.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Granada_-_Alhambra_-_Palacio_de_Carlos_V.jpg?width=1280",
+     "tekija": "Benjamin Smith",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Granada_-_Alhambra_-_Palacio_de_Carlos_V.jpg",
+     "selite": "Neliömäisen palatsin sisällä on pyöreä, kaksikerroksinen pylväspiha.",
+     "leveys": 6241,
+     "korkeus": 3462,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Dawn Charles V Palace Alhambra Granada Andalusia Spain.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dawn_Charles_V_Palace_Alhambra_Granada_Andalusia_Spain.jpg?width=1280",
+     "tekija": "Jebulon",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Dawn_Charles_V_Palace_Alhambra_Granada_Andalusia_Spain.jpg",
+     "selite": "Aamuvalossa palatsi erottuu Alhambran tornien joukosta.",
+     "leveys": 4592,
+     "korkeus": 3056,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q429192",
+   "nimi": "Kuninkaallinen kappeli",
+   "peruste": "sitelinks",
+   "koko_m": 60,
+   "lat": 37.17599,
+   "lon": -3.59904,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Royal Chapel of Granada (Spain).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Royal_Chapel_of_Granada_(Spain).jpg?width=1280",
+     "tekija": "Heparina1985",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Royal_Chapel_of_Granada_(Spain).jpg",
+     "selite": "Kuninkaallinen kappeli on myöhäisgoottilainen hautakappeli, johon katoliset kuninkaat Isabella ja Ferdinand on haudattu.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Capilla Real de Granada. Portada norte.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Capilla_Real_de_Granada._Portada_norte.jpg?width=1280",
+     "tekija": "José Luis Filpo Cabana",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Capilla_Real_de_Granada._Portada_norte.jpg",
+     "selite": "Pohjoisportin reunat on koristeltu runsain goottilaisin yksityiskohdin.",
+     "leveys": 2547,
+     "korkeus": 2547,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2842387",
+   "nimi": "Sacromonte",
+   "peruste": "pelin nosto",
+   "koko_m": 600,
+   "lat": 37.18083,
+   "lon": -3.59278,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Caves of Sacromonte (46464490595).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Caves_of_Sacromonte_(46464490595).jpg?width=1280",
+     "tekija": "Jocelyn Erskine-Kellie from London, UK",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Caves_of_Sacromonte_(46464490595).jpg",
+     "selite": "Sacromonte on Granadan luolakaupunginosa, jossa asuu perinteisesti romaneja.",
+     "leveys": 5888,
+     "korkeus": 3964,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "AA A CAVE HOUSE ON THE HILLS OF SACROMONTE IN GRANADA 2016.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/AA_A_CAVE_HOUSE_ON_THE_HILLS_OF_SACROMONTE_IN_GRANADA_2016.jpg?width=1280",
+     "tekija": "Øyvind Holmstad",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:AA_A_CAVE_HOUSE_ON_THE_HILLS_OF_SACROMONTE_IN_GRANADA_2016.jpg",
+     "selite": "Rinteeseen louhitut luola-asunnot ovat osa alueen vanhaa rakennuskantaa.",
+     "leveys": 5206,
+     "korkeus": 3432,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q5663883",
+   "nimi": "Alcaicería",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 37.17589,
+   "lon": -3.59839,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Entrada a la alcaicería de Granada.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Entrada_a_la_alcaicer%C3%ADa_de_Granada.jpg?width=1280",
+     "tekija": "Jesus Abizanda from Barbastro, Huesca, Spain",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Entrada_a_la_alcaicer%C3%ADa_de_Granada.jpg",
+     "selite": "Alcaicería on entisen maurilaisen silkkitorin paikalla oleva kapea kauppakuja.",
+     "leveys": 1200,
+     "korkeus": 1600,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Granada - La Alcaicería 1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Granada_-_La_Alcaicer%C3%ADa_1.jpg?width=1280",
+     "tekija": "Zarateman",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Granada_-_La_Alcaicer%C3%ADa_1.jpg",
+     "selite": "Kujien kauppoihin on myyty käsitöitä ja matkamuistoja aina nykypäiviin asti.",
+     "leveys": 1536,
+     "korkeus": 2048,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Granada - View from Mirador de San Nicolás - 02.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Granada_-_View_from_Mirador_de_San_Nicol%C3%A1s_-_02.jpg?width=1280",
+   "tekija": "Diego Delso",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Granada_-_View_from_Mirador_de_San_Nicol%C3%A1s_-_02.jpg",
+   "selite": "Granada ja Alhambra näkyvät Sierra Nevadan edessä Albayzínin näköalapaikalta katsottuna.",
+   "leveys": 6709,
+   "korkeus": 3770,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Cathedral and Capilla Real, from Alhambra, Granada, Spain.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cathedral_and_Capilla_Real%2C_from_Alhambra%2C_Granada%2C_Spain.jpg?width=1280",
+   "tekija": "Jebulon",
+   "lisenssi": "CC0",
+   "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cathedral_and_Capilla_Real%2C_from_Alhambra%2C_Granada%2C_Spain.jpg",
+   "selite": "Alhambran tornista näkyvät katedraali ja Granadan vanhan keskustan katot.",
+   "leveys": 4592,
+   "korkeus": 3056,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

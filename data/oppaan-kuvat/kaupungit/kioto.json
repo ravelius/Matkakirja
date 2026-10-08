@@ -1,0 +1,725 @@
+{
+ "kaupunki": "kioto",
+ "kaupunkiQ": "Q34600",
+ "kohteet": [
+  {
+   "q": "Q270983",
+   "nimi": "Kinkaku-ji",
+   "peruste": "pelin nosto",
+   "koko_m": 200,
+   "lat": 35.0395,
+   "lon": 135.7285,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Golden Pavilion Kinkaku-ji 2024.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Golden_Pavilion_Kinkaku-ji_2024.jpg?width=1280",
+     "tekija": "Nacaru",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Golden_Pavilion_Kinkaku-ji_2024.jpg",
+     "selite": "Kinkaku-ji eli Kultainen paviljonki on kullalla päällystetty zen-temppelin sali.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Water reflection of Kinkaku-ji Temple a sunny day, Kyoto, Japan.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Water_reflection_of_Kinkaku-ji_Temple_a_sunny_day%2C_Kyoto%2C_Japan.jpg?width=1280",
+     "tekija": "Basile Morin",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Water_reflection_of_Kinkaku-ji_Temple_a_sunny_day%2C_Kyoto%2C_Japan.jpg",
+     "selite": "Paviljonki heijastuu Peilijärven pintaan.",
+     "leveys": 5928,
+     "korkeus": 3335,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Kinkaku-ji in November 2016 -02.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kinkaku-ji_in_November_2016_-02.jpg?width=1280",
+     "tekija": "Martin Falbisoner",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kinkaku-ji_in_November_2016_-02.jpg",
+     "selite": "Syksyn lehdet kehystävät kultaista paviljonkia.",
+     "leveys": 3343,
+     "korkeus": 4457,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q257473",
+   "nimi": "Ginkaku-ji",
+   "peruste": "pelin nosto",
+   "koko_m": 200,
+   "lat": 35.02667,
+   "lon": 135.79833,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Silver Pavilion, Ginkaku-ji, Kyoto, 20240820 1047 4990.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Silver_Pavilion%2C_Ginkaku-ji%2C_Kyoto%2C_20240820_1047_4990.jpg?width=1280",
+     "tekija": "Jakub Hałun",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Silver_Pavilion%2C_Ginkaku-ji%2C_Kyoto%2C_20240820_1047_4990.jpg",
+     "selite": "Ginkaku-ji eli Hopeapaviljonki on Higashiyaman jalkojen zen-temppeli.",
+     "leveys": 4726,
+     "korkeus": 3155,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Sunlight through clouds and view of Ginkaku-ji Temple from above, Kyoto, Japan.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sunlight_through_clouds_and_view_of_Ginkaku-ji_Temple_from_above%2C_Kyoto%2C_Japan.jpg?width=1280",
+     "tekija": "Basile Morin",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Sunlight_through_clouds_and_view_of_Ginkaku-ji_Temple_from_above%2C_Kyoto%2C_Japan.jpg",
+     "selite": "Temppelialueelta avautuu näkymä Kioton kaupunkiin.",
+     "leveys": 6720,
+     "korkeus": 4480,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Dry-sand Zen garden made of beige stripes a sunny day at Higashiyama Jisho-ji Buddhist temple Ginkaku-ji Kyoto Japan.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dry-sand_Zen_garden_made_of_beige_stripes_a_sunny_day_at_Higashiyama_Jisho-ji_Buddhist_temple_Ginkaku-ji_Kyoto_Japan.jpg?width=1280",
+     "tekija": "Basile Morin",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Dry-sand_Zen_garden_made_of_beige_stripes_a_sunny_day_at_Higashiyama_Jisho-ji_Buddhist_temple_Ginkaku-ji_Kyoto_Japan.jpg",
+     "selite": "Kuivan hiekan puutarhan raidat on haravoitu käsin.",
+     "leveys": 6616,
+     "korkeus": 4416,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q714828",
+   "nimi": "Fushimi Inari-taisha",
+   "peruste": "pelin nosto",
+   "koko_m": 300,
+   "lat": 34.9672,
+   "lon": 135.77339,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Double torii path at Fushimi Inari Taisha Shrine, Kyoto, Japan.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Double_torii_path_at_Fushimi_Inari_Taisha_Shrine%2C_Kyoto%2C_Japan.jpg?width=1280",
+     "tekija": "Basile Morin",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Double_torii_path_at_Fushimi_Inari_Taisha_Shrine%2C_Kyoto%2C_Japan.jpg",
+     "selite": "Fushimi Inari -pyhäkön tuhannet punaiset torii-portit kulkevat vuoren rinnettä ylös.",
+     "leveys": 6473,
+     "korkeus": 4315,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Torii path with lantern at Fushimi Inari Taisha Shrine, Kyoto, Japan.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Torii_path_with_lantern_at_Fushimi_Inari_Taisha_Shrine%2C_Kyoto%2C_Japan.jpg?width=1280",
+     "tekija": "Basile Morin",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Torii_path_with_lantern_at_Fushimi_Inari_Taisha_Shrine%2C_Kyoto%2C_Japan.jpg",
+     "selite": "Jokaisen portin on lahjoittanut yritys tai yksityishenkilö.",
+     "leveys": 5765,
+     "korkeus": 3843,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "20181110 Fushimi Inari Torii 12.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20181110_Fushimi_Inari_Torii_12.jpg?width=1280",
+     "tekija": "Balon Greyjoy",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20181110_Fushimi_Inari_Torii_12.jpg",
+     "selite": "Polku jatkuu metsän halki vuoren huipulle.",
+     "leveys": 5151,
+     "korkeus": 3339,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q221716",
+   "nimi": "Kiyomizu-dera",
+   "peruste": "pelin nosto",
+   "koko_m": 250,
+   "lat": 34.99483,
+   "lon": 135.785,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Kiyomizu-dera, Kyoto, November 2016 -01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kiyomizu-dera%2C_Kyoto%2C_November_2016_-01.jpg?width=1280",
+     "tekija": "Martin Falbisoner",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kiyomizu-dera%2C_Kyoto%2C_November_2016_-01.jpg",
+     "selite": "Kiyomizu-deran puinen lava kohoaa rinteen yllä ilman yhtään naulaa.",
+     "leveys": 5852,
+     "korkeus": 3601,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Kiyomizu-dera, Kyoto, November 2016 -02.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kiyomizu-dera%2C_Kyoto%2C_November_2016_-02.jpg?width=1280",
+     "tekija": "Martin Falbisoner",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kiyomizu-dera%2C_Kyoto%2C_November_2016_-02.jpg",
+     "selite": "Temppelin pagodi ja päärakennus syksyn värien keskellä.",
+     "leveys": 5659,
+     "korkeus": 3738,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Kiyomizu-dera, Kyoto, November 2016 -07.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kiyomizu-dera%2C_Kyoto%2C_November_2016_-07.jpg?width=1280",
+     "tekija": "Martin Falbisoner",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kiyomizu-dera%2C_Kyoto%2C_November_2016_-07.jpg",
+     "selite": "Syksyisin temppeli valaistaan iltaisin.",
+     "leveys": 2942,
+     "korkeus": 3922,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1013399",
+   "nimi": "Nijō-linna",
+   "peruste": "pelin nosto",
+   "koko_m": 400,
+   "lat": 35.01417,
+   "lon": 135.7475,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Nijo Castle 2017.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Nijo_Castle_2017.jpg?width=1280",
+     "tekija": "CCP2017",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Nijo_Castle_2017.jpg",
+     "selite": "Nijō-linnan Ninomaru-palatsi on shōgunin entinen asuinpaikka.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Ninomaru Palace, November 2016.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ninomaru_Palace%2C_November_2016.jpg?width=1280",
+     "tekija": "Martin Falbisoner",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ninomaru_Palace%2C_November_2016.jpg",
+     "selite": "Palatsin seinät ja katot on koristeltu runsain puuleikkauksin.",
+     "leveys": 4539,
+     "korkeus": 2864,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Nijo Castle Ninomaru 03.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Nijo_Castle_Ninomaru_03.JPG?width=1280",
+     "tekija": "Reggaeman",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Nijo_Castle_Ninomaru_03.JPG",
+     "selite": "Ninomaru-palatsin ympäri on kivipuutarha.",
+     "leveys": 4288,
+     "korkeus": 2848,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1202239",
+   "nimi": "Kioton keisarillinen palatsi",
+   "peruste": "pelin nosto",
+   "koko_m": 500,
+   "lat": 35.02528,
+   "lon": 135.76222,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Kyoto-gosho Shishinden zenkei-5.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kyoto-gosho_Shishinden_zenkei-5.jpg?width=1280",
+     "tekija": "Saigen Jiro",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kyoto-gosho_Shishinden_zenkei-5.jpg",
+     "selite": "Shishinden oli keisarin seremoniasali Kioton keisarillisessa palatsissa.",
+     "leveys": 5880,
+     "korkeus": 3784,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Kyoto, palazzo imperiale, padiglione shishinden, 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kyoto%2C_palazzo_imperiale%2C_padiglione_shishinden%2C_01.jpg?width=1280",
+     "tekija": "Sailko",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kyoto%2C_palazzo_imperiale%2C_padiglione_shishinden%2C_01.jpg",
+     "selite": "Palatsin punaiset portit ja hiekkapiha ovat keisarillisen kaupungin tunnusmerkkejä.",
+     "leveys": 5472,
+     "korkeus": 3648,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2859566",
+   "nimi": "Arashiyama",
+   "peruste": "pelin nosto",
+   "koko_m": 800,
+   "lat": 35.00958,
+   "lon": 135.66639,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Arashiyama Togetsukyo-bridge.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Arashiyama_Togetsukyo-bridge.jpg?width=1280",
+     "tekija": "Tomomarusan",
+     "lisenssi": "CC BY 2.5",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.5",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Arashiyama_Togetsukyo-bridge.jpg",
+     "selite": "Togetsukyō on Arashiyaman tunnetuin silta Katsura-joen yli.",
+     "leveys": 3008,
+     "korkeus": 2000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Togetsukyo Bridge, Arashiyama, Kyoto, Japan, aerial photograph by Don Ramey Logan.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Togetsukyo_Bridge%2C_Arashiyama%2C_Kyoto%2C_Japan%2C_aerial_photograph_by_Don_Ramey_Logan.jpg?width=1280",
+     "tekija": "Don Ramey Logan",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Togetsukyo_Bridge%2C_Arashiyama%2C_Kyoto%2C_Japan%2C_aerial_photograph_by_Don_Ramey_Logan.jpg",
+     "selite": "Arashiyama on vuoriston juurella sijaitseva Kioton länsiosa.",
+     "leveys": 3006,
+     "korkeus": 1854,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Togetsukyo Bridge in Arashiyama, Kyoto.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Togetsukyo_Bridge_in_Arashiyama%2C_Kyoto.jpg?width=1280",
+     "tekija": "User: (WT-shared) ChubbyWimbus at wts wikivoyage",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Togetsukyo_Bridge_in_Arashiyama%2C_Kyoto.jpg",
+     "selite": "Silta on ollut paikallaan satoja vuosia.",
+     "leveys": 2560,
+     "korkeus": 1920,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1759226",
+   "nimi": "Tenryū-ji",
+   "peruste": "UNESCO",
+   "koko_m": 200,
+   "lat": 35.01599,
+   "lon": 135.67379,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Tenryū-ji Garten.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tenry%C5%AB-ji_Garten.jpg?width=1280",
+     "tekija": "Marco Almbauer",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tenry%C5%AB-ji_Garten.jpg",
+     "selite": "Tenryū-ji on Arashiyaman zen-temppeli, jonka puutarha on yli 600-vuotias.",
+     "leveys": 5616,
+     "korkeus": 3114,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "250208 Tenryu-ji Kan'u-tei Kyoto Japan02s3.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/250208_Tenryu-ji_Kan'u-tei_Kyoto_Japan02s3.jpg?width=1280",
+     "tekija": "663highland",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:250208_Tenryu-ji_Kan'u-tei_Kyoto_Japan02s3.jpg",
+     "selite": "Talviset lumet laskeutuvat temppelin puutarhaan.",
+     "leveys": 5472,
+     "korkeus": 3648,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q653319",
+   "nimi": "Sanjūsangen-dō",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 34.98788,
+   "lon": 135.77171,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Sanjusangendo temple01s1408.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sanjusangendo_temple01s1408.jpg?width=1280",
+     "tekija": "663highland",
+     "lisenssi": "CC BY 2.5",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.5",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Sanjusangendo_temple01s1408.jpg",
+     "selite": "Sanjūsangen-dō on 120 metriä pitkä puinen sali, jossa on tuhat Kannon-patsasta.",
+     "leveys": 1920,
+     "korkeus": 1280,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Sanjusangendo Temple @ Kyoto (13310871374).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sanjusangendo_Temple_%40_Kyoto_(13310871374).jpg?width=1280",
+     "tekija": "Guilhem Vellut from Annecy, France",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Sanjusangendo_Temple_%40_Kyoto_(13310871374).jpg",
+     "selite": "Halli on Japanin pisin puurakennus.",
+     "leveys": 3968,
+     "korkeus": 2976,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1046403",
+   "nimi": "Tō-ji",
+   "peruste": "UNESCO",
+   "koko_m": 200,
+   "lat": 34.98056,
+   "lon": 135.74778,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Kyoto-Toji Temple-xl.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kyoto-Toji_Temple-xl.jpg?width=1280",
+     "tekija": "Nakai_Chan",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kyoto-Toji_Temple-xl.jpg",
+     "selite": "Tō-jin viisikerroksinen pagodi on Japanin korkein puupagodi.",
+     "leveys": 4208,
+     "korkeus": 2800,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Toji Temple, Kyoto, Japan 1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Toji_Temple%2C_Kyoto%2C_Japan_1.jpg?width=1280",
+     "tekija": "Andrevan",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Toji_Temple%2C_Kyoto%2C_Japan_1.jpg",
+     "selite": "Pagodi kohoaa temppelialueen lammen yllä.",
+     "leveys": 1494,
+     "korkeus": 1992,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q926312",
+   "nimi": "Gion",
+   "peruste": "sitelinks",
+   "koko_m": 300,
+   "lat": 35.00349,
+   "lon": 135.77505,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "JP 日本 Japan 京都 Kyoto Higashiyama-ku Gion 花見小路通 Hanamikoji Dori 10am morning June 2026 N13P 09.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/JP_%E6%97%A5%E6%9C%AC_Japan_%E4%BA%AC%E9%83%BD_Kyoto_Higashiyama-ku_Gion_%E8%8A%B1%E8%A6%8B%E5%B0%8F%E8%B7%AF%E9%80%9A_Hanamikoji_Dori_10am_morning_June_2026_N13P_09.jpg?width=1280",
+     "tekija": "HAGAT hOMSZE",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:JP_%E6%97%A5%E6%9C%AC_Japan_%E4%BA%AC%E9%83%BD_Kyoto_Higashiyama-ku_Gion_%E8%8A%B1%E8%A6%8B%E5%B0%8F%E8%B7%AF%E9%80%9A_Hanamikoji_Dori_10am_morning_June_2026_N13P_09.jpg",
+     "selite": "Gion on Kioton geishakaupunginosa, jonka Hanamikōji-katu on säilyttänyt perinteisen ilmeensä.",
+     "leveys": 4080,
+     "korkeus": 3060,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Streets of Gion, Kyoto - Gion7708.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Streets_of_Gion%2C_Kyoto_-_Gion7708.jpg?width=1280",
+     "tekija": "lumoplank",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Streets_of_Gion%2C_Kyoto_-_Gion7708.jpg",
+     "selite": "Ilta-aikaan puutalojen valot syttyvät Gionin kapeilla kaduilla.",
+     "leveys": 4930,
+     "korkeus": 3326,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q385141",
+   "nimi": "Heian-jingū",
+   "peruste": "sitelinks",
+   "koko_m": 300,
+   "lat": 35.01667,
+   "lon": 135.78222,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Heian Shrine Torii Gate.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Heian_Shrine_Torii_Gate.JPG?width=1280",
+     "tekija": "Hirayuki1886",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Heian_Shrine_Torii_Gate.JPG",
+     "selite": "Heian-jingūn jättiläismäinen punainen torii seisoo ison kadun päällä.",
+     "leveys": 4608,
+     "korkeus": 3072,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Kyoto Heian-jingu Großes Torii 4.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kyoto_Heian-jingu_Gro%C3%9Fes_Torii_4.jpg?width=1280",
+     "tekija": "Zairon",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kyoto_Heian-jingu_Gro%C3%9Fes_Torii_4.jpg",
+     "selite": "Pyhäkkö rakennettiin muistoksi Kioton perustamisesta 794.",
+     "leveys": 4057,
+     "korkeus": 2982,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1201304",
+   "nimi": "Kyoto Tower",
+   "peruste": "sitelinks",
+   "koko_m": 130,
+   "lat": 34.9875,
+   "lon": 135.75917,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Bottom view of Kyoto Tower at night, Japan.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bottom_view_of_Kyoto_Tower_at_night%2C_Japan.jpg?width=1280",
+     "tekija": "Basile Morin",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bottom_view_of_Kyoto_Tower_at_night%2C_Japan.jpg",
+     "selite": "Kyoto Tower on kaupungin korkein rakennus ja tunnettu valkoinen torni aseman edessä.",
+     "leveys": 3901,
+     "korkeus": 5851,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Kyoto Tower 2023-12 ac (1).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kyoto_Tower_2023-12_ac_(1).jpg?width=1280",
+     "tekija": "Asturio Cantabrio",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kyoto_Tower_2023-12_ac_(1).jpg",
+     "selite": "Torni kohoaa Kioton aseman vieressä.",
+     "leveys": 3725,
+     "korkeus": 4966,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1089767",
+   "nimi": "Nanzen-ji",
+   "peruste": "sitelinks",
+   "koko_m": 200,
+   "lat": 35.01111,
+   "lon": 135.79417,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Garden of Nanzen-ji Temple in Kyoto, 20240820 1143 5038.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Garden_of_Nanzen-ji_Temple_in_Kyoto%2C_20240820_1143_5038.jpg?width=1280",
+     "tekija": "Jakub Hałun",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Garden_of_Nanzen-ji_Temple_in_Kyoto%2C_20240820_1143_5038.jpg",
+     "selite": "Nanzen-ji on yksi Kioton tärkeimpiä zen-temppeleitä.",
+     "leveys": 5552,
+     "korkeus": 3682,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Garden of Nanzen-ji Temple in Kyoto, 20240820 1141 5034.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Garden_of_Nanzen-ji_Temple_in_Kyoto%2C_20240820_1141_5034.jpg?width=1280",
+     "tekija": "Jakub Hałun",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Garden_of_Nanzen-ji_Temple_in_Kyoto%2C_20240820_1141_5034.jpg",
+     "selite": "Temppelin puutarhoissa on hiekkaa, mäntyjä ja kiviä.",
+     "leveys": 5748,
+     "korkeus": 3838,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q11650434",
+   "nimi": "Nishiki-tori",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 35.00503,
+   "lon": 135.76614,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Tsukemono shop by collinox in Nishiki Ichiba, Kyoto.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tsukemono_shop_by_collinox_in_Nishiki_Ichiba%2C_Kyoto.jpg?width=1280",
+     "tekija": "collinox",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tsukemono_shop_by_collinox_in_Nishiki_Ichiba%2C_Kyoto.jpg",
+     "selite": "Nishiki-tori on Kioton keskustan katettu ruokatori.",
+     "leveys": 3872,
+     "korkeus": 2592,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Nishiki ichiba kyoto.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Nishiki_ichiba_kyoto.jpg?width=1280",
+     "tekija": "Pitan",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Nishiki_ichiba_kyoto.jpg",
+     "selite": "Torilla myydään marinoituja vihanneksia ja paikallisia herkkuja.",
+     "leveys": 2448,
+     "korkeus": 3264,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q692714",
+   "nimi": "Yasaka-jinja",
+   "peruste": "sitelinks",
+   "koko_m": 200,
+   "lat": 35.00364,
+   "lon": 135.77853,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Honden, Yasaka-jinja, Kyoto, 20240820 1700 5154.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Honden%2C_Yasaka-jinja%2C_Kyoto%2C_20240820_1700_5154.jpg?width=1280",
+     "tekija": "Jakub Hałun",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Honden%2C_Yasaka-jinja%2C_Kyoto%2C_20240820_1700_5154.jpg",
+     "selite": "Yasaka-jinja on Gionin vieressä oleva šintolainen pyhäkkö.",
+     "leveys": 4885,
+     "korkeus": 3003,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Yasaka Shrine; April 2018.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Yasaka_Shrine%3B_April_2018.jpg?width=1280",
+     "tekija": "Natalie Maguire",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Yasaka_Shrine%3B_April_2018.jpg",
+     "selite": "Pyhäkön länsiportti avautuu suoraan Shijō-kadulle.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q587371",
+   "nimi": "Ryōan-ji",
+   "peruste": "UNESCO",
+   "koko_m": 100,
+   "lat": 35.03444,
+   "lon": 135.71833,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Ninna-ji and Ryoan-ji, Kyoto - Ryoanji7753.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ninna-ji_and_Ryoan-ji%2C_Kyoto_-_Ryoanji7753.jpg?width=1280",
+     "tekija": "lumoplank",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ninna-ji_and_Ryoan-ji%2C_Kyoto_-_Ryoanji7753.jpg",
+     "selite": "Ryōan-jin kuivapuutarhassa on viisitoista kiveä hiekkamerellä.",
+     "leveys": 5602,
+     "korkeus": 4053,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Ryoan-ji-Garden-2018.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ryoan-ji-Garden-2018.jpg?width=1280",
+     "tekija": "Bjørn Christian Tørrissen",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ryoan-ji-Garden-2018.jpg",
+     "selite": "Puutarha on tunnettu minimalistisuudestaan.",
+     "leveys": 5472,
+     "korkeus": 3648,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Kyoto Skyline - Pentinlo.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kyoto_Skyline_-_Pentinlo.jpg?width=1280",
+   "tekija": "Reginald Pentinlo",
+   "lisenssi": "CC BY 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kyoto_Skyline_-_Pentinlo.jpg",
+   "selite": "Kioto sijaitsee vuorten ympäröimässä laaksossa.",
+   "leveys": 5184,
+   "korkeus": 3456,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Kyoto city skyline from Kiyomizu-dera 2025-05-31.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kyoto_city_skyline_from_Kiyomizu-dera_2025-05-31.jpg?width=1280",
+   "tekija": "LMP 2001",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kyoto_city_skyline_from_Kiyomizu-dera_2025-05-31.jpg",
+   "selite": "Kiyomizu-deralta avautuu näkymä kaupungin yli Kyoto Toweriin.",
+   "leveys": 4000,
+   "korkeus": 3000,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

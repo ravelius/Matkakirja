@@ -1,0 +1,535 @@
+{
+ "kaupunki": "islanti",
+ "kaupunkiQ": "Q189",
+ "kohteet": [
+  {
+   "q": "Q271466",
+   "nimi": "Hallgrímskirkja",
+   "peruste": "sitelinks",
+   "koko_m": 100,
+   "lat": 64.14194,
+   "lon": -21.92694,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Hallgrimskirkja 2026.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hallgrimskirkja_2026.jpg?width=1280",
+     "tekija": "VeraVidiVici",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Hallgrimskirkja_2026.jpg",
+     "selite": "Hallgrímskirkjan betoninen torni kohoaa Reykjavíkin kukkulalla ja näkyy kaupungin yli.",
+     "leveys": 4080,
+     "korkeus": 3060,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Hallgrimskirkja mai 2026.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hallgrimskirkja_mai_2026.jpg?width=1280",
+     "tekija": "Steinninn",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Hallgrimskirkja_mai_2026.jpg",
+     "selite": "Kirkon torni ja sen edustan kuviopäällystetty aukio kaupungin ylle katsottuna.",
+     "leveys": 1318,
+     "korkeus": 1157,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Hallgrimskirkja 2026 Utsida.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hallgrimskirkja_2026_Utsida.jpg?width=1280",
+     "tekija": "VeraVidiVici",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Hallgrimskirkja_2026_Utsida.jpg",
+     "selite": "Hallgrímskirkjan basalttipylväitä muistuttava julkisivu ja sivusiipi.",
+     "leveys": 3060,
+     "korkeus": 4080,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1783706",
+   "nimi": "Harpa",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 64.15028,
+   "lon": -21.9325,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "*Das Opern- und Konzerthaus in Reykjavik. 05.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/*Das_Opern-_und_Konzerthaus_in_Reykjavik._05.jpg?width=1280",
+     "tekija": "Holger Uwe Schmitt",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:*Das_Opern-_und_Konzerthaus_in_Reykjavik._05.jpg",
+     "selite": "Harpa-konserttitalon lasiseinäinen julkisivu hohtaa Reykjavíkin satamassa.",
+     "leveys": 5906,
+     "korkeus": 3822,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "*Das Opern- und Konzerthaus in Reykjavik. 04.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/*Das_Opern-_und_Konzerthaus_in_Reykjavik._04.jpg?width=1280",
+     "tekija": "Holger Uwe Schmitt",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:*Das_Opern-_und_Konzerthaus_in_Reykjavik._04.jpg",
+     "selite": "Harpan lasiset kuutiot ja viereinen rakennus kaupungin satama-alueella.",
+     "leveys": 5906,
+     "korkeus": 2778,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "*Das Opern- und Konzerthaus in Reykjavik. 03.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/*Das_Opern-_und_Konzerthaus_in_Reykjavik._03.jpg?width=1280",
+     "tekija": "Holger Uwe Schmitt",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:*Das_Opern-_und_Konzerthaus_in_Reykjavik._03.jpg",
+     "selite": "Konserttitalon vihertävän lasisen julkisivun kiteinen muoto.",
+     "leveys": 5906,
+     "korkeus": 3258,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1367886",
+   "nimi": "Perlan",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 64.12917,
+   "lon": -21.91917,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "20190623 Perlan 8841 (48469867211).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20190623_Perlan_8841_(48469867211).jpg?width=1280",
+     "tekija": "Ray Swi-hymn from Sijhih-Taipei, Taiwan",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20190623_Perlan_8841_(48469867211).jpg",
+     "selite": "Perlanin lasikupolin alla lepäävät suuret kuumavesisäiliöt Öskjuhlíðin kukkulalla.",
+     "leveys": 7952,
+     "korkeus": 5304,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "20190623 Perlan 8842 (48469866386).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20190623_Perlan_8842_(48469866386).jpg?width=1280",
+     "tekija": "Ray Swi-hymn from Sijhih-Taipei, Taiwan",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20190623_Perlan_8842_(48469866386).jpg",
+     "selite": "Perlanin säiliörakennukset kohoavat nurmikkoisen mäen laella.",
+     "leveys": 7952,
+     "korkeus": 5304,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1067075",
+   "nimi": "Höfði",
+   "peruste": "sitelinks",
+   "koko_m": 80,
+   "lat": 64.14653,
+   "lon": -21.90637,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Hofdi House Reykjavik (cropped).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hofdi_House_Reykjavik_(cropped).jpg?width=1280",
+     "tekija": "Laurentgauthier",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Hofdi_House_Reykjavik_(cropped).jpg",
+     "selite": "Höfði on valkoinen merenrantatalo, jossa Reagan ja Gorbatšov tapasivat vuonna 1986.",
+     "leveys": 1795,
+     "korkeus": 1084,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "1986 trafen sich hier trafen sich hier Ronald Reagan und Michael Gorbatschow. 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/1986_trafen_sich_hier_trafen_sich_hier_Ronald_Reagan_und_Michael_Gorbatschow._01.jpg?width=1280",
+     "tekija": "Holger Uwe Schmitt",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:1986_trafen_sich_hier_trafen_sich_hier_Ronald_Reagan_und_Michael_Gorbatschow._01.jpg",
+     "selite": "Höfði-talo ja sen vieressä merimiehen patsas Reykjavíkin rannalla.",
+     "leveys": 4542,
+     "korkeus": 3128,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "1986 trafen sich hier trafen sich hier Ronald Reagan und Michael Gorbatschow. 02.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/1986_trafen_sich_hier_trafen_sich_hier_Ronald_Reagan_und_Michael_Gorbatschow._02.jpg?width=1280",
+     "tekija": "Holger Uwe Schmitt",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:1986_trafen_sich_hier_trafen_sich_hier_Ronald_Reagan_und_Michael_Gorbatschow._02.jpg",
+     "selite": "Höfðin puinen päärakennus kohoaa nurmikon takana.",
+     "leveys": 3936,
+     "korkeus": 5906,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q945753",
+   "nimi": "Tjörnin",
+   "peruste": "sitelinks",
+   "koko_m": 300,
+   "lat": 64.14453,
+   "lon": -21.94263,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "1992 wurde das Rathaus in Reykjavik eröffnet. 04.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/1992_wurde_das_Rathaus_in_Reykjavik_er%C3%B6ffnet._04.jpg?width=1280",
+     "tekija": "Holger Uwe Schmitt",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:1992_wurde_das_Rathaus_in_Reykjavik_er%C3%B6ffnet._04.jpg",
+     "selite": "Tjörnin on Reykjavíkin keskustan lampi, jonka reunalla seisoo kaupungintalo.",
+     "leveys": 5906,
+     "korkeus": 3937,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "201708 Reykjavik centre a01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/201708_Reykjavik_centre_a01.jpg?width=1280",
+     "tekija": "Ziko van Dijk",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:201708_Reykjavik_centre_a01.jpg",
+     "selite": "Tjörnin-lammen rannalla seisova Fríkirkjan-kirkko.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "1992 wurde das Rathaus in Reykjavik eröffnet. 06.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/1992_wurde_das_Rathaus_in_Reykjavik_er%C3%B6ffnet._06.jpg?width=1280",
+     "tekija": "Holger Uwe Schmitt",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:1992_wurde_das_Rathaus_in_Reykjavik_er%C3%B6ffnet._06.jpg",
+     "selite": "Joutsen uiskentelee Tjörninin vesillä keskustan rakennusten edessä.",
+     "leveys": 5906,
+     "korkeus": 3224,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q451045",
+   "nimi": "Alþingishúsið",
+   "peruste": "sitelinks",
+   "koko_m": 80,
+   "lat": 64.14667,
+   "lon": -21.94028,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Alþingishúsið.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Al%C3%BEingish%C3%BAsi%C3%B0.jpg?width=1280",
+     "tekija": "APK",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Al%C3%BEingish%C3%BAsi%C3%B0.jpg",
+     "selite": "Alþingishúsið on Islannin parlamentin tummasta basaltista rakennettu talo Austurvöllurin laidalla.",
+     "leveys": 2883,
+     "korkeus": 2618,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "201708 Reykjavík c24.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/201708_Reykjav%C3%ADk_c24.jpg?width=1280",
+     "tekija": "Ziko van Dijk",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:201708_Reykjav%C3%ADk_c24.jpg",
+     "selite": "Parlamenttitalon takaosa ja puutarha Reykjavíkin keskustassa.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1270853",
+   "nimi": "Reykjavíkin tuomiokirkko",
+   "peruste": "sitelinks",
+   "koko_m": 60,
+   "lat": 64.14666,
+   "lon": -21.93936,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Dómkirkjan í Reykjavík 2023.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/D%C3%B3mkirkjan_%C3%AD_Reykjav%C3%ADk_2023.jpg?width=1280",
+     "tekija": "APK",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:D%C3%B3mkirkjan_%C3%AD_Reykjav%C3%ADk_2023.jpg",
+     "selite": "Dómkirkjan on Reykjavíkin pieni valkoinen tuomiokirkko Austurvöllurin vieressä.",
+     "leveys": 2804,
+     "korkeus": 2619,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "+Der Sitz des Bischofs von Island. 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%2BDer_Sitz_des_Bischofs_von_Island._01.jpg?width=1280",
+     "tekija": "Holger Uwe Schmitt",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%2BDer_Sitz_des_Bischofs_von_Island._01.jpg",
+     "selite": "Tuomiokirkon torni ja viherkattoinen pitkä kirkkosali.",
+     "leveys": 5906,
+     "korkeus": 3855,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "201708 Reykjavík c26.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/201708_Reykjav%C3%ADk_c26.jpg?width=1280",
+     "tekija": "Ziko van Dijk",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:201708_Reykjav%C3%ADk_c26.jpg",
+     "selite": "Tuomiokirkko nurmikon ja kivetyn aukion reunalla.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q794242",
+   "nimi": "Landakotskirkja",
+   "peruste": "sitelinks",
+   "koko_m": 80,
+   "lat": 64.14744,
+   "lon": -21.94855,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Basílica de Cristo el Rey, Reikiavik, Distrito de la Capital, Islandia, 2014-08-13, DD 093.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bas%C3%ADlica_de_Cristo_el_Rey%2C_Reikiavik%2C_Distrito_de_la_Capital%2C_Islandia%2C_2014-08-13%2C_DD_093.JPG?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bas%C3%ADlica_de_Cristo_el_Rey%2C_Reikiavik%2C_Distrito_de_la_Capital%2C_Islandia%2C_2014-08-13%2C_DD_093.JPG",
+     "selite": "Landakotskirkja on Reykjavíkin kookas roomalaiskatolinen kirkko Landakotin kukkulalla.",
+     "leveys": 4286,
+     "korkeus": 3541,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "10 Cathedral Reykjavik 270918.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/10_Cathedral_Reykjavik_270918.jpg?width=1280",
+     "tekija": "NAC",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:10_Cathedral_Reykjavik_270918.jpg",
+     "selite": "Landakotskirkjan tornimainen julkisivu ja kirkkorakennus puiston reunalla.",
+     "leveys": 2048,
+     "korkeus": 1365,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Basílica de Cristo el Rey, Reikiavik, Distrito de la Capital, Islandia, 2014-08-13, DD 091.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bas%C3%ADlica_de_Cristo_el_Rey%2C_Reikiavik%2C_Distrito_de_la_Capital%2C_Islandia%2C_2014-08-13%2C_DD_091.JPG?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bas%C3%ADlica_de_Cristo_el_Rey%2C_Reikiavik%2C_Distrito_de_la_Capital%2C_Islandia%2C_2014-08-13%2C_DD_091.JPG",
+     "selite": "Kirkon kapea torni kohoaa pystysuorana Reykjavíkin keskustan yllä.",
+     "leveys": 2928,
+     "korkeus": 5157,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q151212",
+   "nimi": "Laugardalsvöllur",
+   "peruste": "sitelinks",
+   "koko_m": 250,
+   "lat": 64.14356,
+   "lon": -21.87897,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Laugardalsvöllur, Iceland's national football stadium.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Laugardalsv%C3%B6llur%2C_Iceland's_national_football_stadium.jpg?width=1280",
+     "tekija": "Quintin Soloviev",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Laugardalsv%C3%B6llur%2C_Iceland's_national_football_stadium.jpg",
+     "selite": "Laugardalsvöllur on Islannin jalkapallomaajoukkueen kotistadion Reykjavíkin Laugardalurissa.",
+     "leveys": 5280,
+     "korkeus": 3675,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Eimskipsvöllurinn, Iceland Football Stadium.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Eimskipsv%C3%B6llurinn%2C_Iceland_Football_Stadium.jpg?width=1280",
+     "tekija": "Lee Vilenski",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Eimskipsv%C3%B6llurinn%2C_Iceland_Football_Stadium.jpg",
+     "selite": "Stadionin katsomo ja sisäänkäynti Laugardalurin urheilualueella.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q626963",
+   "nimi": "Islannin kansallismuseo",
+   "peruste": "sitelinks",
+   "koko_m": 100,
+   "lat": 64.1419,
+   "lon": -21.94811,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Nationalmuseum 20120919 2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Nationalmuseum_20120919_2.jpg?width=1280",
+     "tekija": "Helmut Seger",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Nationalmuseum_20120919_2.jpg",
+     "selite": "Islannin kansallismuseo esittelee maan historiaa asutuksesta nykypäivään.",
+     "leveys": 1920,
+     "korkeus": 1080,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "20190623 NM 8620 (48470219387).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20190623_NM_8620_(48470219387).jpg?width=1280",
+     "tekija": "Ray Swi-hymn from Sijhih-Taipei, Taiwan",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20190623_NM_8620_(48470219387).jpg",
+     "selite": "Kansallismuseon rakennus puiden ja lippujen reunustamana.",
+     "leveys": 7952,
+     "korkeus": 5304,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Building of the National Museum in Reykjavík.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Building_of_the_National_Museum_in_Reykjav%C3%ADk.jpg?width=1280",
+     "tekija": "Szilas",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Building_of_the_National_Museum_in_Reykjav%C3%ADk.jpg",
+     "selite": "Museorakennuksen harmaa torniosa Reykjavíkin yliopiston lähellä.",
+     "leveys": 4136,
+     "korkeus": 2808,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q565455",
+   "nimi": "Islannin kansallisteatteri",
+   "peruste": "sitelinks",
+   "koko_m": 100,
+   "lat": 64.14721,
+   "lon": -21.93163,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "2026-08-13-Reykjavik-Nationaltheater-1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2026-08-13-Reykjavik-Nationaltheater-1.jpg?width=1280",
+     "tekija": "Gunnar Klack",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2026-08-13-Reykjavik-Nationaltheater-1.jpg",
+     "selite": "Islannin kansallisteatterin harmaa, korkea julkisivu seisoo Reykjavíkin keskustassa Hverfisgatan varrella.",
+     "leveys": 4250,
+     "korkeus": 3500,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "2026-08-13-Reykjavik-Nationaltheater-2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2026-08-13-Reykjavik-Nationaltheater-2.jpg?width=1280",
+     "tekija": "Gunnar Klack",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2026-08-13-Reykjavik-Nationaltheater-2.jpg",
+     "selite": "Kansallisteatterin pylväsmäinen betonijulkisivu sivusta nähtynä.",
+     "leveys": 3500,
+     "korkeus": 3500,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "20190623 Harbor 8998 (48468737112).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20190623_Harbor_8998_(48468737112).jpg?width=1280",
+     "tekija": "Ray Swi-hymn from Sijhih-Taipei, Taiwan",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20190623_Harbor_8998_(48468737112).jpg",
+     "selite": "Kansallisteatteri kohoaa Arnarhóllin nurmikkomäen taustalla.",
+     "leveys": 7952,
+     "korkeus": 5304,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Approaching Reykjavik - aerial 2021-10-05.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Approaching_Reykjavik_-_aerial_2021-10-05.jpg?width=1280",
+   "tekija": "Eric Kilby",
+   "lisenssi": "CC BY-SA 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Approaching_Reykjavik_-_aerial_2021-10-05.jpg",
+   "selite": "Reykjavík on Islannin pääkaupunki ja pohjoisin maailman pääkaupunki, jonka taustalla kohoavat vuoret.",
+   "leveys": 8256,
+   "korkeus": 4749,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Iceland Today - Society, Landscapes and Infrastructure (P-070318-00-49).jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Iceland_Today_-_Society%2C_Landscapes_and_Infrastructure_(P-070318-00-49).jpg?width=1280",
+   "tekija": "Europäische Kommission - Audiovisueller Dienst, Halldór Kolbeins, CE - Service audiovisuel, EC - Audiovisual Service, FACTSTORY",
+   "lisenssi": "CC BY 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Iceland_Today_-_Society%2C_Landscapes_and_Infrastructure_(P-070318-00-49).jpg",
+   "selite": "Reykjavíkin rantaa ja kaupunkia illan valossa.",
+   "leveys": 11232,
+   "korkeus": 4882,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

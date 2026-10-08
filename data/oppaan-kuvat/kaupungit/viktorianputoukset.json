@@ -1,0 +1,286 @@
+{
+ "kaupunki": "viktorianputoukset",
+ "kaupunkiQ": "Q43278",
+ "kohteet": [
+  {
+   "q": "Q317323",
+   "nimi": "Victoria Falls -silta",
+   "peruste": "sitelinks",
+   "koko_m": 250,
+   "lat": -17.92833,
+   "lon": 25.85722,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Victoria Falls Bridge.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Victoria_Falls_Bridge.JPG?width=1280",
+     "tekija": "No machine-readable author provided. Benjism89 assumed (based on copyright claims).",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Victoria_Falls_Bridge.JPG",
+     "selite": "Kaarisilta kulkee Sambesi-joen rotkon yli Sambian ja Zimbabwen rajalla putousten alapuolella.",
+     "leveys": 2048,
+     "korkeus": 1536,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "A beauty of a bridge.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/A_beauty_of_a_bridge.jpg?width=1280",
+     "tekija": "Edward Middleton",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:A_beauty_of_a_bridge.jpg",
+     "selite": "Silta valmistui 1900-luvun alussa Cecil Rhodesin kaavaileman Kapkaupungin ja Kairon radan osaksi.",
+     "leveys": 4423,
+     "korkeus": 3317,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Border Bridge to Zimbabwe near Victoria Falls (33933889986).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Border_Bridge_to_Zimbabwe_near_Victoria_Falls_(33933889986).jpg?width=1280",
+     "tekija": "Henning Supertramp",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Border_Bridge_to_Zimbabwe_near_Victoria_Falls_(33933889986).jpg",
+     "selite": "Sillan kohdalta aukeaa näkymä syvään rotkoon, jonka pohjalla Sambesi virtaa koskena.",
+     "leveys": 4965,
+     "korkeus": 2920,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1640800",
+   "nimi": "Victoria Fallsin kansallispuisto",
+   "peruste": "sitelinks",
+   "koko_m": 3000,
+   "lat": -17.951,
+   "lon": 25.84072,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Victoria Falls, Zimbabwe 05.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Victoria_Falls%2C_Zimbabwe_05.jpg?width=1280",
+     "tekija": "Bernard Gagnon",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Victoria_Falls%2C_Zimbabwe_05.jpg",
+     "selite": "Putousten kansallispuisto suojaa Zimbabwen puolella Sambesin jylhää rotkoa ja sen sateenmetsää.",
+     "leveys": 4107,
+     "korkeus": 2738,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "1 Victoria Falls.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/1_Victoria_Falls.jpg?width=1280",
+     "tekija": "PLBechly",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:1_Victoria_Falls.jpg",
+     "selite": "Putouksen vesisumu nousee korkealle, ja auringonpaisteessa siihen kaartuu usein sateenkaari.",
+     "leveys": 2526,
+     "korkeus": 1886,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Victoria falls during dry season 2011.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Victoria_falls_during_dry_season_2011.jpg?width=1280",
+     "tekija": "BetterWORLDphoto",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Victoria_falls_during_dry_season_2011.jpg",
+     "selite": "Kuivakaudella vedenpinta laskee, ja basalttiseinämä paljastuu rotkon toisella puolella.",
+     "leveys": 2144,
+     "korkeus": 1424,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1323548",
+   "nimi": "Mosi-oa-Tunyan kansallispuisto",
+   "peruste": "sitelinks",
+   "koko_m": 3000,
+   "lat": -17.86667,
+   "lon": 25.83333,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Mosi-oa-Tunya, Livingstone (20260519-P1075665).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mosi-oa-Tunya%2C_Livingstone_(20260519-P1075665).jpg?width=1280",
+     "tekija": "Matti Blume",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mosi-oa-Tunya%2C_Livingstone_(20260519-P1075665).jpg",
+     "selite": "Sambian puolella putouksen ylle nousee vesisumu, jonka vuoksi paikkaa sanotaan jyliseväksi savuksi.",
+     "leveys": 5184,
+     "korkeus": 3888,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Mosi-oa-Tunya National Park, Zambia (48598087667).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mosi-oa-Tunya_National_Park%2C_Zambia_(48598087667).jpg?width=1280",
+     "tekija": "Fabio Achilli from Milano, Italy",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mosi-oa-Tunya_National_Park%2C_Zambia_(48598087667).jpg",
+     "selite": "Ilmasta näkee, kuinka Sambesi syöksyy kapeaan halkeamaan ja jatkaa siksak-muotoista rotkoa pitkin.",
+     "leveys": 4608,
+     "korkeus": 3152,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Forever rainbow.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Forever_rainbow.jpg?width=1280",
+     "tekija": "MiltoneMedia",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Forever_rainbow.jpg",
+     "selite": "Putousten sumussa sateenkaari ilmestyy lähes aina auringonpaisteessa.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q108044157",
+   "nimi": "Livingstonen patsas",
+   "peruste": "pelin nosto",
+   "koko_m": 20,
+   "lat": -17.92278,
+   "lon": 25.84722,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Livingstone statue at Victoria Falls, Zimbabwean side.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Livingstone_statue_at_Victoria_Falls%2C_Zimbabwean_side.jpg?width=1280",
+     "tekija": "Ninaras",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Livingstone_statue_at_Victoria_Falls%2C_Zimbabwean_side.jpg",
+     "selite": "Skotlantilaisen tutkimusmatkailijan David Livingstonen patsas seisoo putousten luona, jonka hän nimesi kuningatar Victorian mukaan.",
+     "leveys": 2632,
+     "korkeus": 2278,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "David Livingstone à Victoria Falls.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/David_Livingstone_%C3%A0_Victoria_Falls.JPG?width=1280",
+     "tekija": "Wayne77",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:David_Livingstone_%C3%A0_Victoria_Falls.JPG",
+     "selite": "Patsas esittää Livingstonea kävelykeppi kädessä, ja se on yksi putousten tunnetuimmista maamerkeistä.",
+     "leveys": 3144,
+     "korkeus": 4462,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1393804",
+   "nimi": "Victoria Falls (kaupunki)",
+   "peruste": "sitelinks",
+   "koko_m": 2000,
+   "lat": -17.93333,
+   "lon": 25.83333,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "ZW-Victoria-falls-stadt-1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/ZW-Victoria-falls-stadt-1.jpg?width=1280",
+     "tekija": "Bgabel",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:ZW-Victoria-falls-stadt-1.jpg",
+     "selite": "Zimbabwen puolella putousten lähellä oleva kaupunki elää matkailusta ja sen keskusta on rauhallinen.",
+     "leveys": 1215,
+     "korkeus": 807,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Tram at Vic Falls.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tram_at_Vic_Falls.jpg?width=1280",
+     "tekija": "Peter in s",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tram_at_Vic_Falls.jpg",
+     "selite": "Vanha ratikkavaunu seisoo raiteilla kaupungissa, jonne rautatie tuli putousten vuoksi.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1866604",
+   "nimi": "Livingstone",
+   "peruste": "sitelinks",
+   "koko_m": 3000,
+   "lat": -17.85,
+   "lon": 25.86667,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Livingstone downtown.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Livingstone_downtown.jpg?width=1280",
+     "tekija": "cowbridgeguide.co.uk",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Livingstone_downtown.jpg",
+     "selite": "Sambian puoleinen Livingstonen kaupunki on putousten matkailun portti ja se on nimetty tutkimusmatkailijan mukaan.",
+     "leveys": 4896,
+     "korkeus": 3672,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Victoria Falls, Zimbabwe 04.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Victoria_Falls%2C_Zimbabwe_04.jpg?width=1280",
+   "tekija": "Bernard Gagnon",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Victoria_Falls%2C_Zimbabwe_04.jpg",
+   "selite": "Ilmasta näkee, kuinka leveä Sambesi putoaa yhtäkkiä kapeaan, siksak-muotoiseen rotkoon.",
+   "leveys": 4949,
+   "korkeus": 3299,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Moonbow at Victoria Falls.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Moonbow_at_Victoria_Falls.jpg?width=1280",
+   "tekija": "Scolopendra33",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Moonbow_at_Victoria_Falls.jpg",
+   "selite": "Täydenkuun valossa putousten sumuun voi syntyä kuun sateenkaari.",
+   "leveys": 5472,
+   "korkeus": 3648,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": [
+  {
+   "q": "Q84446338",
+   "nimi": "Paholaisen allas",
+   "peruste": "pelin nosto",
+   "lat": -17.9236,
+   "lon": 25.8524,
+   "syy": "vapaat kuvat esittävät uimareita pääosassa"
+  }
+ ]
+}

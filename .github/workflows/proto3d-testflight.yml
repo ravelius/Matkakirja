@@ -208,6 +208,13 @@ jobs:
           # Oma käännöskopio: Natiivisepän Unity pääkopiossa ei estä; vain tämän kopion Library-lukko.
           if [ -z "$syy" ] && [ -e Temp/UnityLockfile ] && lsof Temp/UnityLockfile >/dev/null 2>&1; then syy="Library-lukko on varattu"; fi
           if [ -z "$syy" ] && [ "$(git rev-parse HEAD)" != "$(git rev-parse "$PROTO_REF^{commit}")" ]; then syy="käännöskopio ei ole kohdassa $PROTO_REF"; fi
+          # Kaatuneen Unityn mono_crash*.json (TF 161 7.10.2026: "fatal error in the mono runtime" → uusinta ohittui,
+          # koska tiedosto jäi työkopioon) siirretään talteen lokeihin, ei poisteta eikä lasketa muutokseksi.
+          for f in mono_crash*.json; do
+            [ -e "$f" ] || continue
+            mkdir -p /Users/Shared/Claude/proto-3d/lokit/tf-mono-crash && mv "$f" "/Users/Shared/Claude/proto-3d/lokit/tf-mono-crash/$(date +%Y%m%d-%H%M)-$f"
+            echo "::warning::$f siirretty lokit/tf-mono-crash/ (edellinen Unity kaatui)"
+          done
           muutokset=$(git status --porcelain | grep -v " Assets/Matkakirja/Materiaalit/" || true)
           if [ -z "$syy" ] && [ -n "$muutokset" ]; then syy="työkopiossa on muutoksia: $(echo "$muutokset" | head -3 | tr '\n' ' ')"; fi
           master=$(git rev-parse --short "$PROTO_REF^{commit}")
@@ -225,6 +232,9 @@ jobs:
       # Vienti kirjoittaa ProjectSettingsiin bundleVersionin, buildNumberin
       # ja iPhoneSdkVersionin sekä koskee Materiaaleihin: palautus aina.
       - name: Unity-vienti Build/yo
+        # PRIORITEETTI (Päätoimittaja 7.10.2026, TF 155: Unity nice 19:llä ja taustapoltot nice 15:llä → Burst AOT nälkiintyi
+        # ja unity-vahti tappoi viennin): junan Unity-vienti ja arkistointi nice 10:llä, alle taustapolttojen 15.
+        shell: nice -n 10 bash --noprofile --norc -eo pipefail {0}
         if: env.VIE_UNITYSTA == 'true' && env.OHITA != '1'
         working-directory: ${{ env.PROJEKTI }}
         env:
@@ -627,6 +637,9 @@ jobs:
       # vain Unity-iPhone-target lukee — UnityFramework ei tue profiilia.
       # --keychain rajaa codesignin tähän nippuun. Hakulistaa ei vaihdeta.
       - name: Arkistoi ja allekirjoita
+        # PRIORITEETTI (Päätoimittaja 7.10.2026, TF 155: Unity nice 19:llä ja taustapoltot nice 15:llä → Burst AOT nälkiintyi
+        # ja unity-vahti tappoi viennin): junan Unity-vienti ja arkistointi nice 10:llä, alle taustapolttojen 15.
+        shell: nice -n 10 bash --noprofile --norc -eo pipefail {0}
         if: env.OHITA != '1'
         working-directory: ${{ env.PROJEKTI }}
         env:
@@ -635,7 +648,14 @@ jobs:
           TEAM_ID: ${{ secrets.TEAM_ID }}
         run: |
           set -euo pipefail
-          xcodebuild \
+          # Omistaja 7.10.2026 klo 21.5x: -jobs 12 (12 tehoydintä), kun omistaja ei käytä konetta (HIDIdleTime > 300 s), muuten 8;
+          # kevyt-lipulla tai kuormarajalla 4 (proto-kaanna.sh:n linja).
+          joutilas=$(( $(ioreg -c IOHIDSystem 2>/dev/null | awk '/HIDIdleTime/ {print $NF; exit}') / 1000000000 ))
+          if [ -e /tmp/matkakirja-kuormaraja ] || [ -e /tmp/matkakirja-kevyt ]; then JOBS=4
+          elif [ "$joutilas" -gt 300 ]; then JOBS=12; else JOBS=8; fi
+          echo "xcodebuild -jobs $JOBS (HIDIdleTime ${joutilas} s)"
+          alku=$SECONDS
+          xcodebuild -jobs "$JOBS" \
             -project "Build/$VIENTI_KANSIO/Unity-iPhone.xcodeproj" \
             -scheme Unity-iPhone \
             -configuration Release \
@@ -647,6 +667,7 @@ jobs:
             PROVISIONING_PROFILE_SPECIFIER_APP="$PROFIILI_NIMI" \
             OTHER_CODE_SIGN_FLAGS="--keychain $AVAINNIPPU" \
             archive
+          echo "vaiheaika: xcodebuild archive $(( SECONDS - alku )) s (-jobs $JOBS)" | tee -a "$GITHUB_STEP_SUMMARY"
 
       - name: Vie IPA
         if: env.OHITA != '1'
@@ -757,6 +778,24 @@ jobs:
       # Avainnippu ($HOME/Library/Keychains/matkakirja-testflight.keychain-db)
       # on pysyvä eikä sitä poisteta — varmenne ja yksityinen avain
       # säilyvät seuraavaa ajoa varten (ks. "Pysyvä avainnippu" -vaihe).
+      # VÄLITUOTTEIDEN SIIVOUS (Päätoimittaja 7.10.2026 klo 09.1x: levy laski 14 Gi 16 minuutissa, kova raja 30 Gi).
+      # Ajon lopuksi, vain kun tämä ajo piti käännöspalvelun lukkoa (muuten toinen käännös voi käyttää kansioita):
+      # Build/yo (Unity-vienti, ~2,4 Gt), xcodebuild-arkiston oletus-DerivedData Unity-iPhone-* (~6 Gt) ja arkisto/IPA
+      # RUNNER_TEMPista. Ladattu build on App Store Connectissa; proto-kaanna.sh säilyttää simulaattorin .app:n.
+      - name: Siivoa välituotteet
+        if: always() && env.LUKKO_OMA == '1'
+        working-directory: ${{ env.PROJEKTI }}
+        run: |
+          ennen=$(df -g /Users/Shared | awk 'NR==2 {print $4}')
+          # INKREMENTAALINEN (omistaja 7.10.2026 klo 21.5x): Unity-vienti Build/yo ja arkiston DerivedData Unity-iPhone-* säilyvät
+          # seuraavaa käännöstä varten (kiinteät polut → vain yksi sarja); alle 36 Gi vapaana ne poistetaan kuten ennen.
+          if [ "$ennen" -lt 36 ]; then
+            [ "${VIENTI_KANSIO:-yo}" = "yo" ] && rm -rf Build/yo || true
+            rm -rf "$HOME"/Library/Developer/Xcode/DerivedData/Unity-iPhone-* || true
+          fi
+          rm -rf "$RUNNER_TEMP/proto3d.xcarchive" "$RUNNER_TEMP/ipa" || true
+          echo "Siivous: vapaana ${ennen} Gi → $(df -g /Users/Shared | awk 'NR==2 {print $4}') Gi"
+
       - name: Vapauta käännöspalvelun lukko
         if: always() && env.LUKKO_OMA == '1'
         run: |

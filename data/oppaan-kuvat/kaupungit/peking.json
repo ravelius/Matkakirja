@@ -1,0 +1,722 @@
+{
+ "kaupunki": "peking",
+ "kaupunkiQ": "Q956",
+ "kohteet": [
+  {
+   "q": "Q80290",
+   "nimi": "Kielletty kaupunki",
+   "peruste": "pelin nosto",
+   "koko_m": 900,
+   "lat": 39.91583,
+   "lon": 116.39083,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Hall of Supreme Harmony (20241127120000).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hall_of_Supreme_Harmony_(20241127120000).jpg?width=1280",
+     "tekija": "N509FZ",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Hall_of_Supreme_Harmony_(20241127120000).jpg",
+     "selite": "Ylimmän sopusoinnun sali on Kielletyn kaupungin keisarillisten seremonioiden pääsali.",
+     "leveys": 7190,
+     "korkeus": 4793,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "China (Beijing) Aerial view of Forbidden City (38884882275).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/China_(Beijing)_Aerial_view_of_Forbidden_City_(38884882275).jpg?width=1280",
+     "tekija": "Güldem Üstün from Istanbul, TURKEY",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:China_(Beijing)_Aerial_view_of_Forbidden_City_(38884882275).jpg",
+     "selite": "Kielletty kaupunki on laaja palatsialue, jota ympäröivät muuri ja vallihauta.",
+     "leveys": 3737,
+     "korkeus": 2349,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "景山公园 (20315852831)- cropped.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%E6%99%AF%E5%B1%B1%E5%85%AC%E5%9B%AD_(20315852831)-_cropped.jpg?width=1280",
+     "tekija": "Han Zheng",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%E6%99%AF%E5%B1%B1%E5%85%AC%E5%9B%AD_(20315852831)-_cropped.jpg",
+     "selite": "Jingshanin kukkulalta näkee Kielletyn kaupungin kattojen meren.",
+     "leveys": 4143,
+     "korkeus": 2762,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 4,
+     "tiedosto": "Beijing 北京 (50540087421).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Beijing_%E5%8C%97%E4%BA%AC_(50540087421).jpg?width=1280",
+     "tekija": "Melvin Loi from Macau, Macau",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Beijing_%E5%8C%97%E4%BA%AC_(50540087421).jpg",
+     "selite": "Palatsin kattojen kullanvärinen lasite ja punaiset pilarit olivat keisarillisen vallan tunnus.",
+     "leveys": 5194,
+     "korkeus": 3464,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q125445",
+   "nimi": "Taivaan temppeli",
+   "peruste": "pelin nosto",
+   "koko_m": 500,
+   "lat": 39.8822,
+   "lon": 116.4066,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Temple of Heaven - Hall of Prayer for Good Harvests 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Temple_of_Heaven_-_Hall_of_Prayer_for_Good_Harvests_01.jpg?width=1280",
+     "tekija": "xiquinhosilva",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Temple_of_Heaven_-_Hall_of_Prayer_for_Good_Harvests_01.jpg",
+     "selite": "Sadonkorjuurukoushalli on Taivaan temppelin tunnetuin rakennus.",
+     "leveys": 2560,
+     "korkeus": 1612,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Temple of Heaven - Hall of Prayer for Good Harvests.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Temple_of_Heaven_-_Hall_of_Prayer_for_Good_Harvests.jpg?width=1280",
+     "tekija": "xiquinhosilva",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Temple_of_Heaven_-_Hall_of_Prayer_for_Good_Harvests.jpg",
+     "selite": "Pyöreä halli seisoo kolmikerroksisella marmoriterassilla.",
+     "leveys": 2560,
+     "korkeus": 2382,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Temple of Heaven - Hall of Prayer for Good Harvests 03.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Temple_of_Heaven_-_Hall_of_Prayer_for_Good_Harvests_03.jpg?width=1280",
+     "tekija": "xiquinhosilva",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Temple_of_Heaven_-_Hall_of_Prayer_for_Good_Harvests_03.jpg",
+     "selite": "Hallin sininen kolmikerroksinen katto on Pekingin tunnetuimpia kuvia.",
+     "leveys": 2560,
+     "korkeus": 1707,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q4132",
+   "nimi": "Kesäpalatsi",
+   "peruste": "pelin nosto",
+   "koko_m": 1500,
+   "lat": 39.9975,
+   "lon": 116.2689,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Longevity Hill of the Summer Palace.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Longevity_Hill_of_the_Summer_Palace.jpg?width=1280",
+     "tekija": "xiquinhosilva",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Longevity_Hill_of_the_Summer_Palace.jpg",
+     "selite": "Pitkän iän kukkulan temppelit kohoavat Kunmingjärven rannalla.",
+     "leveys": 2560,
+     "korkeus": 1702,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Peking Sommerpalast Fähre-20071020-RM-121328.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Peking_Sommerpalast_F%C3%A4hre-20071020-RM-121328.jpg?width=1280",
+     "tekija": "Ermell",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Peking_Sommerpalast_F%C3%A4hre-20071020-RM-121328.jpg",
+     "selite": "Lohikäärmeveneet liikennöivät Kunmingjärvellä Kesäpalatsin edustalla.",
+     "leveys": 3648,
+     "korkeus": 2736,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Kunming Lake of Summer Palace (20240706140421).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kunming_Lake_of_Summer_Palace_(20240706140421).jpg?width=1280",
+     "tekija": "HoweyYuan",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kunming_Lake_of_Summer_Palace_(20240706140421).jpg",
+     "selite": "Kunmingjärvi vie suurimman osan Kesäpalatsin puistoalueesta.",
+     "leveys": 8192,
+     "korkeus": 6144,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q798826",
+   "nimi": "Badalingin Kiinan muuri",
+   "peruste": "UNESCO",
+   "koko_m": 1000,
+   "lat": 40.35428,
+   "lon": 116.00649,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Badaling China Great-Wall-of-China-01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Badaling_China_Great-Wall-of-China-01.jpg?width=1280",
+     "tekija": "CEphoto, Uwe Aranas",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Badaling_China_Great-Wall-of-China-01.jpg",
+     "selite": "Badalingin osuus on Kiinan muurin tunnetuin ja kuvatuin kohta Pekingin lähellä.",
+     "leveys": 4184,
+     "korkeus": 2680,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Badaling China Great-Wall-of-China-02.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Badaling_China_Great-Wall-of-China-02.jpg?width=1280",
+     "tekija": "CEphoto, Uwe Aranas",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Badaling_China_Great-Wall-of-China-02.jpg",
+     "selite": "Muuri kiemurtelee vuorten harjanteilla vartiotornien välissä.",
+     "leveys": 4104,
+     "korkeus": 2736,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Badaling China Great-Wall-of-China-06.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Badaling_China_Great-Wall-of-China-06.jpg?width=1280",
+     "tekija": "CEphoto, Uwe Aranas",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Badaling_China_Great-Wall-of-China-06.jpg",
+     "selite": "Badalingin muurin vartiotornit näkyvät kauas vuoristomaisemassa.",
+     "leveys": 4093,
+     "korkeus": 2729,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q83973",
+   "nimi": "Taivaallisen rauhan portti",
+   "peruste": "sitelinks",
+   "koko_m": 250,
+   "lat": 39.90735,
+   "lon": 116.39122,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Tiananmen Gate 2019.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tiananmen_Gate_2019.jpg?width=1280",
+     "tekija": "Jp16103",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tiananmen_Gate_2019.jpg",
+     "selite": "Taivaallisen rauhan portti on Kielletyn kaupungin eteläinen portti.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "天安门夜景.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%E5%A4%A9%E5%AE%89%E9%97%A8%E5%A4%9C%E6%99%AF.jpg?width=1280",
+     "tekija": "Charlie fong冯成",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%E5%A4%A9%E5%AE%89%E9%97%A8%E5%A4%9C%E6%99%AF.jpg",
+     "selite": "Portti on kuuluisa illan valaistuksestaan.",
+     "leveys": 4032,
+     "korkeus": 2200,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Gate of Heavenly Peace, Tiananmen - panoramio.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gate_of_Heavenly_Peace%2C_Tiananmen_-_panoramio.jpg?width=1280",
+     "tekija": "konget",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Gate_of_Heavenly_Peace%2C_Tiananmen_-_panoramio.jpg",
+     "selite": "Portin edessä seisoo marmorinen koristepilari.",
+     "leveys": 2560,
+     "korkeus": 1920,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q164055",
+   "nimi": "Taivaallisen rauhan aukio",
+   "peruste": "sitelinks",
+   "koko_m": 900,
+   "lat": 39.90457,
+   "lon": 116.39139,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Tiananmen Square 4.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tiananmen_Square_4.jpg?width=1280",
+     "tekija": "TarnishedPath",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tiananmen_Square_4.jpg",
+     "selite": "Taivaallisen rauhan aukio on yksi maailman suurimmista kaupunkiaukioista.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q692723",
+   "nimi": "Yonghe-temppeli",
+   "peruste": "pelin nosto",
+   "koko_m": 200,
+   "lat": 39.94709,
+   "lon": 116.41092,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Yonghe Gong Lama Temple.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Yonghe_Gong_Lama_Temple.jpg?width=1280",
+     "tekija": "Jesse",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Yonghe_Gong_Lama_Temple.jpg",
+     "selite": "Yonghe on Pekingin tunnetuin tiibetinbuddhalainen temppeli.",
+     "leveys": 3198,
+     "korkeus": 2399,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Yonghe Temple, Peking.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Yonghe_Temple%2C_Peking.jpg?width=1280",
+     "tekija": "Ambassador of the United States of America to the People's Republic of China",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Yonghe_Temple%2C_Peking.jpg",
+     "selite": "Temppelin pihoilla on useita värikkäitä saleja ja pagodeja.",
+     "leveys": 2016,
+     "korkeus": 1512,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q907894",
+   "nimi": "Vanha kesäpalatsi",
+   "peruste": "pelin nosto",
+   "koko_m": 800,
+   "lat": 40.01205,
+   "lon": 116.30679,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Ruins of Old Summer Palace (Yuanmingyuan) - 2019 - 16.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ruins_of_Old_Summer_Palace_(Yuanmingyuan)_-_2019_-_16.jpg?width=1280",
+     "tekija": "Leiem",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ruins_of_Old_Summer_Palace_(Yuanmingyuan)_-_2019_-_16.jpg",
+     "selite": "Vanhan kesäpalatsin eurooppalaistyylisten rakennusten raunioita on jätetty näkyviin muistoksi.",
+     "leveys": 5152,
+     "korkeus": 3864,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Ruins of Old Summer Palace (Yuanmingyuan) - 2019 - 12.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ruins_of_Old_Summer_Palace_(Yuanmingyuan)_-_2019_-_12.jpg?width=1280",
+     "tekija": "Leiem",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ruins_of_Old_Summer_Palace_(Yuanmingyuan)_-_2019_-_12.jpg",
+     "selite": "Yuanmingyuanin kivipilarit ovat jäänteitä keisarillisesta huvilapuistosta.",
+     "leveys": 5152,
+     "korkeus": 3864,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q734499",
+   "nimi": "Jingshanin puisto",
+   "peruste": "pelin nosto",
+   "koko_m": 500,
+   "lat": 39.92361,
+   "lon": 116.39056,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Wanchun Pavilion, Jingshan Park, Beijing - November 2006.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Wanchun_Pavilion%2C_Jingshan_Park%2C_Beijing_-_November_2006.jpg?width=1280",
+     "tekija": "harryalverson",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Wanchun_Pavilion%2C_Jingshan_Park%2C_Beijing_-_November_2006.jpg",
+     "selite": "Wanchunin paviljonki seisoo Jingshanin kukkulan huipulla Kielletyn kaupungin takana.",
+     "leveys": 3456,
+     "korkeus": 2304,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Guanmiao Pavilion, Jingshan Park, Beijing - November 2016 3.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Guanmiao_Pavilion%2C_Jingshan_Park%2C_Beijing_-_November_2016_3.jpg?width=1280",
+     "tekija": "Another Believer",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Guanmiao_Pavilion%2C_Jingshan_Park%2C_Beijing_-_November_2016_3.jpg",
+     "selite": "Kukkulan rinteillä on viisi paviljonkia.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q133650",
+   "nimi": "Beihai-puisto",
+   "peruste": "sitelinks",
+   "koko_m": 700,
+   "lat": 39.92444,
+   "lon": 116.38306,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Beihai Park White Pagoda-20131229-RM-115733.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Beihai_Park_White_Pagoda-20131229-RM-115733.jpg?width=1280",
+     "tekija": "Reinhold Möller Ermell",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Beihai_Park_White_Pagoda-20131229-RM-115733.jpg",
+     "selite": "Beihai-puisto on järvipuisto, jonka saarella kohoaa valkoinen pagodi.",
+     "leveys": 4608,
+     "korkeus": 2514,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Beihai Park White Pagoda-20110104-RM-105854.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Beihai_Park_White_Pagoda-20110104-RM-105854.jpg?width=1280",
+     "tekija": "Ermell",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Beihai_Park_White_Pagoda-20110104-RM-105854.jpg",
+     "selite": "Valkoinen stuupa hallitsee Jade-saarta Beihain keskellä.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q133525",
+   "nimi": "Pekingin kansallinen stadion",
+   "peruste": "sitelinks",
+   "koko_m": 350,
+   "lat": 39.99154,
+   "lon": 116.39048,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Beijing national stadium.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Beijing_national_stadium.jpg?width=1280",
+     "tekija": "Peter23",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Beijing_national_stadium.jpg",
+     "selite": "Linnunpesäksi kutsuttu stadion rakennettiin vuoden 2008 olympialaisia varten.",
+     "leveys": 1762,
+     "korkeus": 1019,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Lascar Beijing National Stadium (Bird's nest) (4497567401).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lascar_Beijing_National_Stadium_(Bird's_nest)_(4497567401).jpg?width=1280",
+     "tekija": "Jorge Láscar from Australia",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Lascar_Beijing_National_Stadium_(Bird's_nest)_(4497567401).jpg",
+     "selite": "Teräsrakenne muodostaa stadionin ulkokuoren.",
+     "leveys": 3216,
+     "korkeus": 2136,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Beijing China Beijing-National-Stadium-02.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Beijing_China_Beijing-National-Stadium-02.jpg?width=1280",
+     "tekija": "CEphoto, Uwe Aranas",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Beijing_China_Beijing-National-Stadium-02.jpg",
+     "selite": "Stadionin teräsverkko erottuu laajalta aukiolta.",
+     "leveys": 3893,
+     "korkeus": 2573,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q41135",
+   "nimi": "Mingien hautausmaa",
+   "peruste": "UNESCO",
+   "koko_m": 2000,
+   "lat": 40.25333,
+   "lon": 116.2175,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Ming Changling Tomb After Snow.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ming_Changling_Tomb_After_Snow.jpg?width=1280",
+     "tekija": "Charlie fong",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ming_Changling_Tomb_After_Snow.jpg",
+     "selite": "Mingien keisarien hautapaikat sijaitsevat vuorten kainalossa Pekingin pohjoispuolella.",
+     "leveys": 5472,
+     "korkeus": 3648,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Rear tower at Changling tomb, Beijing.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Rear_tower_at_Changling_tomb%2C_Beijing.jpg?width=1280",
+     "tekija": "Daniel Case",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Rear_tower_at_Changling_tomb%2C_Beijing.jpg",
+     "selite": "Changlingin haudan takatorni on Mingien hautojen suurin kokonaisuus.",
+     "leveys": 3784,
+     "korkeus": 5688,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q197703",
+   "nimi": "Zhengyangmen",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 39.89925,
+   "lon": 116.39167,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Gate of Qianmen Street and watchtower of Zhengyangmen Gate.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gate_of_Qianmen_Street_and_watchtower_of_Zhengyangmen_Gate.JPG?width=1280",
+     "tekija": "そらみみ (Soramimi)",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Gate_of_Qianmen_Street_and_watchtower_of_Zhengyangmen_Gate.JPG",
+     "selite": "Zhengyangmenin porttitorni suojasi muinoin Pekingin sisäkaupungin eteläistä sisäänkäyntiä.",
+     "leveys": 3264,
+     "korkeus": 2448,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Qianmen Gate (9866358593).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Qianmen_Gate_(9866358593).jpg?width=1280",
+     "tekija": "Gary Todd from Xinzheng, China",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Qianmen_Gate_(9866358593).jpg",
+     "selite": "Portin vartiotorni ja linnoitettu etuvarustus ovat säilyneet.",
+     "leveys": 3888,
+     "korkeus": 2592,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q244877",
+   "nimi": "Pekingin kansallinen uimahalli",
+   "peruste": "sitelinks",
+   "koko_m": 200,
+   "lat": 39.99167,
+   "lon": 116.38417,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Lascar The Beijing National Aquatics Center (Water Cube) (4475631690).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lascar_The_Beijing_National_Aquatics_Center_(Water_Cube)_(4475631690).jpg?width=1280",
+     "tekija": "Jorge Láscar from Australia",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Lascar_The_Beijing_National_Aquatics_Center_(Water_Cube)_(4475631690).jpg",
+     "selite": "Vesikuutioksi kutsutun uimahallin vaahtomaista julkisivua on helppo tunnistaa.",
+     "leveys": 3216,
+     "korkeus": 2136,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q860188",
+   "nimi": "Kansallinen esittävän taiteen keskus",
+   "peruste": "sitelinks",
+   "koko_m": 200,
+   "lat": 39.90333,
+   "lon": 116.38361,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "National Centre for the Performing Arts - 54446779583.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/National_Centre_for_the_Performing_Arts_-_54446779583.jpg?width=1280",
+     "tekija": "xiquinhosilva",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:National_Centre_for_the_Performing_Arts_-_54446779583.jpg",
+     "selite": "Kansallinen esittävän taiteen keskus on lasinen ja titaaninen kupoli keskustan vieressä.",
+     "leveys": 2560,
+     "korkeus": 1707,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Lascar National Centre for the Performing Arts (The Egg) (4474852849).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lascar_National_Centre_for_the_Performing_Arts_(The_Egg)_(4474852849).jpg?width=1280",
+     "tekija": "Jorge Láscar from Australia",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Lascar_National_Centre_for_the_Performing_Arts_(The_Egg)_(4474852849).jpg",
+     "selite": "Munaksi kutsuttu rakennus kelluu keinotekoisen järven keskellä.",
+     "leveys": 3216,
+     "korkeus": 2136,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2741116",
+   "nimi": "Rumpu- ja kellotorni",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 39.94019,
+   "lon": 116.38964,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Beijing drum tower.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Beijing_drum_tower.JPG?width=1280",
+     "tekija": "Gisling",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Beijing_drum_tower.JPG",
+     "selite": "Rumputorni löi aikoinaan Pekingin kellonaikoja.",
+     "leveys": 1500,
+     "korkeus": 962,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Beijing Drum Tower.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Beijing_Drum_Tower.jpg?width=1280",
+     "tekija": "Toadspike",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Beijing_Drum_Tower.jpg",
+     "selite": "Rumpu- ja kellotorni sijaitsevat keskiaikaisen akselin pohjoispäässä.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1139574",
+   "nimi": "Daxingin kansainvälinen lentoasema",
+   "peruste": "sitelinks",
+   "koko_m": 1500,
+   "lat": 39.51194,
+   "lon": 116.41056,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Beijing New Airport.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Beijing_New_Airport.jpg?width=1280",
+     "tekija": "王之桐",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Beijing_New_Airport.jpg",
+     "selite": "Daxingin lentoasema on tähtimäinen terminaali Pekingin eteläpuolella.",
+     "leveys": 5272,
+     "korkeus": 2962,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1060121",
+   "nimi": "Lugou-silta",
+   "peruste": "sitelinks",
+   "koko_m": 300,
+   "lat": 39.84904,
+   "lon": 116.21289,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Lugouqiao2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lugouqiao2.jpg?width=1280",
+     "tekija": "Taken by Fanghong",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Lugouqiao2.jpg",
+     "selite": "Lugou-silta eli Marco Polon silta on vanha kivinen kaarisilta Pekingin läntisellä laidalla.",
+     "leveys": 2560,
+     "korkeus": 1920,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Skyline of Beijing CBD with B-5906 approaching (20211016171955).jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Skyline_of_Beijing_CBD_with_B-5906_approaching_(20211016171955).jpg?width=1280",
+   "tekija": "N509FZ",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Skyline_of_Beijing_CBD_with_B-5906_approaching_(20211016171955).jpg",
+   "selite": "Pekingin pilvenpiirtäjät kohoavat historiallisen keskustan takana.",
+   "leveys": 6787,
+   "korkeus": 4525,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Jingshan View of Beijing CBD - Flickr.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Jingshan_View_of_Beijing_CBD_-_Flickr.jpg?width=1280",
+   "tekija": "Gary Todd from Xinzheng, China",
+   "lisenssi": "CC0",
+   "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Jingshan_View_of_Beijing_CBD_-_Flickr.jpg",
+   "selite": "Jingshanin kukkulalta näkee Pekingin uuden liikekeskuksen tornit vanhan kaupungin yllä.",
+   "leveys": 4752,
+   "korkeus": 3168,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

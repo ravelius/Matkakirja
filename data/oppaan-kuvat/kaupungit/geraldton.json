@@ -1,0 +1,273 @@
+{
+ "kaupunki": "geraldton",
+ "kaupunkiQ": "Q605267",
+ "kohteet": [
+  {
+   "q": "Q28376315",
+   "nimi": "Point Mooren majakka",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": -28.78277,
+   "lon": 114.57941,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "OIC geraldton west end point moore lighthouse.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/OIC_geraldton_west_end_point_moore_lighthouse.jpg?width=1280",
+     "tekija": "User:Orderinchaos",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:OIC_geraldton_west_end_point_moore_lighthouse.jpg",
+     "selite": "Punavalkoraidallinen Point Mooren majakka on Geraldtonin rannikon tunnetuin maamerkki.",
+     "leveys": 1600,
+     "korkeus": 1200,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Standing out - panoramio (1).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Standing_out_-_panoramio_(1).jpg?width=1280",
+     "tekija": "Stephen Edmonds",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Standing_out_-_panoramio_(1).jpg",
+     "selite": "Majakka nousee tummaa taivasta vasten Geraldtonin länsipäässä.",
+     "leveys": 1200,
+     "korkeus": 1200,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Point Moore Lighthouse October 2023 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Point_Moore_Lighthouse_October_2023_01.jpg?width=1280",
+     "tekija": "DaHuzyBru",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Point_Moore_Lighthouse_October_2023_01.jpg",
+     "selite": "Majakka valmistui vuonna 1878 ohjaamaan laivoja Champion Bayn satamaan.",
+     "leveys": 3024,
+     "korkeus": 4032,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q640228",
+   "nimi": "Houtman Abrolhos",
+   "peruste": "sitelinks",
+   "koko_m": 8000,
+   "lat": -28.71667,
+   "lon": 113.78333,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Beacon Island Abrolhos.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Beacon_Island_Abrolhos.jpg?width=1280",
+     "tekija": "Guy de la Bedoyere",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Beacon_Island_Abrolhos.jpg",
+     "selite": "Beacon Island on pieni saari Houtman Abrolhosin matalien riuttojen keskellä, entinen Batavian hautausmaa.",
+     "leveys": 2400,
+     "korkeus": 1607,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Wallabi Group (excluding North Island).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Wallabi_Group_(excluding_North_Island).jpg?width=1280",
+     "tekija": "It was created by Hesperian. Any IP involved in the creation of this image is released into the public domain.",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Wallabi_Group_(excluding_North_Island).jpg",
+     "selite": "Wallabi-ryhmän saaret ja riutat erottuvat tummansinisen meren keskellä.",
+     "leveys": 1283,
+     "korkeus": 897,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q20717401",
+   "nimi": "Geraldtonin rautatieasema",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": -28.76691,
+   "lon": 114.6151,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "OIC geraldton railway stn front.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/OIC_geraldton_railway_stn_front.jpg?width=1280",
+     "tekija": "User:Orderinchaos",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:OIC_geraldton_railway_stn_front.jpg",
+     "selite": "Rautatieaseman julkisivu muistuttaa 1879 avatusta radasta, joka avasi sisämaan.",
+     "leveys": 1200,
+     "korkeus": 1600,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Former Geraldton Railway Station platform.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Former_Geraldton_Railway_Station_platform.jpg?width=1280",
+     "tekija": "JarrahTree",
+     "lisenssi": "CC BY 2.5 au",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.5/au/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Former_Geraldton_Railway_Station_platform.jpg",
+     "selite": "Entisen aseman katettu laituri jatkuu pitkänä tiilirakennuksen vierellä.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q5069977",
+   "nimi": "Champion Bay",
+   "peruste": "pelin nosto",
+   "koko_m": 3000,
+   "lat": -28.75,
+   "lon": 114.6,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Geraldton harbor.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Geraldton_harbor.JPG?width=1280",
+     "tekija": "Dinkum",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Geraldton_harbor.JPG",
+     "selite": "Perinteinen puuvene on ankkurissa Geraldtonin satamassa Champion Bayn rannalla.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2564397",
+   "nimi": "West Wallabi Island",
+   "peruste": "pelin nosto",
+   "koko_m": 4000,
+   "lat": -28.4653,
+   "lon": 113.695,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "The Fort - West Wallabi Island - Colour.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/The_Fort_-_West_Wallabi_Island_-_Colour.JPG?width=1280",
+     "tekija": "Rupert Gerritsen",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:The_Fort_-_West_Wallabi_Island_-_Colour.JPG",
+     "selite": "Linnakkeen kiviraunioita West Wallabilla, jonne Batavian haaksirikkoiset rakensivat suojan vuonna 1629.",
+     "leveys": 1280,
+     "korkeus": 960,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Sea View and Firebeacon - West Wallabi Island.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sea_View_and_Firebeacon_-_West_Wallabi_Island.jpg?width=1280",
+     "tekija": "Rupert Gerritsen",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Sea_View_and_Firebeacon_-_West_Wallabi_Island.jpg",
+     "selite": "Matala kalkkikivinen ranta ja pensaikko reunustavat West Wallabin rannikkoa.",
+     "leveys": 1631,
+     "korkeus": 1083,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1007955",
+   "nimi": "Kalbarri",
+   "peruste": "sitelinks",
+   "koko_m": 3000,
+   "lat": -27.711,
+   "lon": 114.17,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "00 1795. Kalbarri, Western Australia.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/00_1795._Kalbarri%2C_Western_Australia.jpg?width=1280",
+     "tekija": "W. Bulach",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:00_1795._Kalbarri%2C_Western_Australia.jpg",
+     "selite": "Kalbarrin rantakylä Murchison-joen suulla on suosittu lomakohde.",
+     "leveys": 4200,
+     "korkeus": 2800,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "The Murchason Gorge with Kalbarri Skywalk Platform.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/The_Murchason_Gorge_with_Kalbarri_Skywalk_Platform.jpg?width=1280",
+     "tekija": "Findlay Osborn",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:The_Murchason_Gorge_with_Kalbarri_Skywalk_Platform.jpg",
+     "selite": "Murchison-joen rotkon reunalla näkyy Kalbarri Skywalkin näköalatasanne.",
+     "leveys": 4896,
+     "korkeus": 3672,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Murchison River, Kalbarri National Park, Western Australia.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Murchison_River%2C_Kalbarri_National_Park%2C_Western_Australia.jpg?width=1280",
+     "tekija": "Kwokka3",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Murchison_River%2C_Kalbarri_National_Park%2C_Western_Australia.jpg",
+     "selite": "Punaisen hiekkakiven kallio kohoaa Murchison-joen laakson yllä.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "St Francis Xavier Cathedral, Geraldton, October 2023 02.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/St_Francis_Xavier_Cathedral%2C_Geraldton%2C_October_2023_02.jpg?width=1280",
+   "tekija": "DaHuzyBru",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:St_Francis_Xavier_Cathedral%2C_Geraldton%2C_October_2023_02.jpg",
+   "selite": "Katedraalin kaksoistornit hallitsevat Geraldtonin keskustaa.",
+   "leveys": 3024,
+   "korkeus": 4032,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "OIC geraldton cbd marine terrace E from cathedral.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/OIC_geraldton_cbd_marine_terrace_E_from_cathedral.jpg?width=1280",
+   "tekija": "User:Orderinchaos",
+   "lisenssi": "CC BY-SA 3.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:OIC_geraldton_cbd_marine_terrace_E_from_cathedral.jpg",
+   "selite": "Marine Terrace on Geraldtonin keskustan pääkatu.",
+   "leveys": 3264,
+   "korkeus": 2448,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": [
+  {
+   "q": "Q38164557",
+   "nimi": "Batavian haaksirikkopaikka",
+   "peruste": "pelin nosto",
+   "lat": -28.46968,
+   "lon": 113.74695,
+   "syy": "ei vapaata kuvaa kohteesta >= 1200 px"
+  }
+ ]
+}

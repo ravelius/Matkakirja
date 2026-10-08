@@ -75,6 +75,7 @@
  */
 // Krim ja Sevastopol Ukrainalle lähteessä (tools/krim-ukrainalle.mjs, Päätoimittaja 30.9.2026).
 import { krimUkrainalleAdmin0, krimUkrainalleAdmin1 } from './krim-ukrainalle.mjs';
+import { nakokulmaAdmin1 } from './worldview.mjs';
 import { existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -719,7 +720,8 @@ export function teeMaakuntavektorit(a) {
   const kerro = a.kerro ?? (() => {});
   const ne = JSON.parse(readFileSync(a.ne, 'utf8'));
   // Admin-1: UA-43/UA-40 UKR:lle; admin-0-tila: Krimin monikulmio UKR:n renkaaseen.
-  if (ne.features.some((f) => f.properties.iso_3166_2)) krimUkrainalleAdmin1(ne);
+  // Worldview (tools/worldview.mjs, 7.10.2026): Pohjois-Kypros CYP:n alueeksi "Kyproksen pohjoisosa".
+  if (ne.features.some((f) => f.properties.iso_3166_2)) { krimUkrainalleAdmin1(ne); nakokulmaAdmin1(ne); }
   else krimUkrainalleAdmin0(ne);
   const maittain = new Map();
   for (const f of ne.features) {

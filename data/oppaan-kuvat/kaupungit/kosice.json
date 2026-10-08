@@ -1,0 +1,270 @@
+{
+ "kaupunki": "kosice",
+ "kaupunkiQ": "Q25409",
+ "kohteet": [
+  {
+   "q": "Q569428",
+   "nimi": "Pyhän Elisabetin katedraali",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": 48.72049,
+   "lon": 21.25759,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Dóm svätej Alžbety a Kaplnka sv. Michala, Košice, Slovensko.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/D%C3%B3m_sv%C3%A4tej_Al%C5%BEbety_a_Kaplnka_sv._Michala%2C_Ko%C5%A1ice%2C_Slovensko.jpg?width=1280",
+     "tekija": "Maros M r a z (Maros)",
+     "lisenssi": "CC BY 2.5",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.5",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:D%C3%B3m_sv%C3%A4tej_Al%C5%BEbety_a_Kaplnka_sv._Michala%2C_Ko%C5%A1ice%2C_Slovensko.jpg",
+     "selite": "Slovakian suurin goottilainen kirkko hallitsee Košicen pääkadun keskustaa, ja sen vieressä seisoo Pyhän Mikaelin kappeli.",
+     "leveys": 6011,
+     "korkeus": 3482,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Dóm sv. Alžbety - 1.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/D%C3%B3m_sv._Al%C5%BEbety_-_1.JPG?width=1280",
+     "tekija": "Xpucmo",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:D%C3%B3m_sv._Al%C5%BEbety_-_1.JPG",
+     "selite": "Katedraalin kaksi tornia kohoavat pääkatua reunustavan puiston yläpuolelle.",
+     "leveys": 1280,
+     "korkeus": 960,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Cathedral of St. Elizabeth in Košice.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cathedral_of_St._Elizabeth_in_Ko%C5%A1ice.jpg?width=1280",
+     "tekija": "Ville Miettinen",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cathedral_of_St._Elizabeth_in_Ko%C5%A1ice.jpg",
+     "selite": "Goottilaisen kirkon korkea kuoripääty ja kattorakenteet näkyvät kauas kaupungin ylle.",
+     "leveys": 1600,
+     "korkeus": 2589,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q133708",
+   "nimi": "Košicen kansallisteatteri",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": 48.7217,
+   "lon": 21.2573,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Kosice State Theatre 1.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kosice_State_Theatre_1.JPG?width=1280",
+     "tekija": "Erika Mlejová (sk:Redaktor:Erika Mlejová)",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kosice_State_Theatre_1.JPG",
+     "selite": "Uusbarokkinen teatteri seisoo pääkadun keskellä, ja sen edessä on laulava suihkulähde.",
+     "leveys": 1200,
+     "korkeus": 1600,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Košice - Divadlo3.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ko%C5%A1ice_-_Divadlo3.jpg?width=1280",
+     "tekija": "Ladislav Luppa",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ko%C5%A1ice_-_Divadlo3.jpg",
+     "selite": "Teatterin koristeellinen julkisivu ja kupoli erottuvat Hlavná-kadun laajentuessa aukioksi.",
+     "leveys": 4574,
+     "korkeus": 3041,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q787510",
+   "nimi": "Hlavná-katu",
+   "peruste": "pelin nosto",
+   "koko_m": 1200,
+   "lat": 48.7236,
+   "lon": 21.2565,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "A walk after the rain.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/A_walk_after_the_rain.jpg?width=1280",
+     "tekija": "Pedro",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:A_walk_after_the_rain.jpg",
+     "selite": "Pääkatu on Košicen vanhankaupungin pitkä jalankulkuväylä, jonka päässä kohoaa katedraali.",
+     "leveys": 3696,
+     "korkeus": 2448,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1753933",
+   "nimi": "Urbanin torni",
+   "peruste": "pelin nosto",
+   "koko_m": 40,
+   "lat": 48.72049,
+   "lon": 21.25759,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "UrbanTower2021.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/UrbanTower2021.jpg?width=1280",
+     "tekija": "André Savetier",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:UrbanTower2021.jpg",
+     "selite": "Valkoinen kellotorni seisoo katedraalin vieressä ja siinä roikkuu Slovakian suurin kello.",
+     "leveys": 2888,
+     "korkeus": 4728,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3076009",
+   "nimi": "Laulava suihkulähde",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": 48.7211,
+   "lon": 21.2576,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Košice-fountain 2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ko%C5%A1ice-fountain_2.jpg?width=1280",
+     "tekija": "János Korom Dr.",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ko%C5%A1ice-fountain_2.jpg",
+     "selite": "Suihkulähteen vesi liikkuu musiikin tahtiin ja valaistus vaihtuu illan hämärtyessä.",
+     "leveys": 1618,
+     "korkeus": 1077,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Centre de Košice (agost 2012) - panoramio (5).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Centre_de_Ko%C5%A1ice_(agost_2012)_-_panoramio_(5).jpg?width=1280",
+     "tekija": "EliziR",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Centre_de_Ko%C5%A1ice_(agost_2012)_-_panoramio_(5).jpg",
+     "selite": "Lähde sijaitsee pääkadun puistossa teatterin ja katedraalin välissä.",
+     "leveys": 3648,
+     "korkeus": 2736,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3360878",
+   "nimi": "Jakabin palatsi",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": 48.7219,
+   "lon": 21.2627,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Dům pobytu Edvarda Beneše v Košicích roku 1945..jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/D%C5%AFm_pobytu_Edvarda_Bene%C5%A1e_v_Ko%C5%A1ic%C3%ADch_roku_1945..jpg?width=1280",
+     "tekija": "Richtr Jan",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:D%C5%AFm_pobytu_Edvarda_Bene%C5%A1e_v_Ko%C5%A1ic%C3%ADch_roku_1945..jpg",
+     "selite": "Neogoottilainen palatsi on 1800-luvun lopulta, ja sen torneista ja vihreistä kattopinnoista tunnistaa sen kaukaa.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Jakab's Palace, Košice, Slovakia.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Jakab's_Palace%2C_Ko%C5%A1ice%2C_Slovakia.jpg?width=1280",
+     "tekija": "Maros M r a z (Maros)",
+     "lisenssi": "CC BY 2.5",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.5",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Jakab's_Palace%2C_Ko%C5%A1ice%2C_Slovakia.jpg",
+     "selite": "Jakabin palatsin keskitorni ja koristeelliset yksityiskohdat muistuttavat linnaa.",
+     "leveys": 2099,
+     "korkeus": 3149,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1186439",
+   "nimi": "Itä-Slovakian museo",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": 48.72722,
+   "lon": 21.25333,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Budova východoslovenského múzea v Košiciach.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Budova_v%C3%BDchodoslovensk%C3%A9ho_m%C3%BAzea_v_Ko%C5%A1iciach.jpg?width=1280",
+     "tekija": "Robert Kimle",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Budova_v%C3%BDchodoslovensk%C3%A9ho_m%C3%BAzea_v_Ko%C5%A1iciach.jpg",
+     "selite": "Museon rakennus esittelee Itä-Slovakian historiaa ja sijaitsee vanhankaupungin kupeessa.",
+     "leveys": 1944,
+     "korkeus": 2592,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "View over Old Town from St. Elisabeth Cathedral Bell Tower - Kosice - Slovakia (36428414991).jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/View_over_Old_Town_from_St._Elisabeth_Cathedral_Bell_Tower_-_Kosice_-_Slovakia_(36428414991).jpg?width=1280",
+   "tekija": "Adam Jones from Kelowna, BC, Canada",
+   "lisenssi": "CC BY-SA 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:View_over_Old_Town_from_St._Elisabeth_Cathedral_Bell_Tower_-_Kosice_-_Slovakia_(36428414991).jpg",
+   "selite": "Katedraalin tornista näkyvät vanhankaupungin pääkatu, teatteri ja punaiset katot.",
+   "leveys": 3596,
+   "korkeus": 2679,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Košice z vyhliadkovej veže 5.JPG",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ko%C5%A1ice_z_vyhliadkovej_ve%C5%BEe_5.JPG?width=1280",
+   "tekija": "Bubamara",
+   "lisenssi": "CC BY 2.5",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/2.5",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ko%C5%A1ice_z_vyhliadkovej_ve%C5%BEe_5.JPG",
+   "selite": "Košice levittäytyy laaksoon metsäisten kukkuloiden ympäröimänä.",
+   "leveys": 2592,
+   "korkeus": 1456,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": [
+  {
+   "q": "Q3403979",
+   "nimi": "Miklušin vankila",
+   "peruste": "pelin nosto",
+   "lat": 48.7228,
+   "lon": 21.2597,
+   "syy": "vain sisätilakuvia museonäyttelystä, ei tunnistettavaa ulkokuvaa"
+  }
+ ]
+}

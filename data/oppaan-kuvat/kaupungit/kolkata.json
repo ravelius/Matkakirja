@@ -1,0 +1,536 @@
+{
+ "kaupunki": "kolkata",
+ "kaupunkiQ": "Q1348",
+ "kohteet": [
+  {
+   "q": "Q1356352",
+   "nimi": "Victoria Memorial",
+   "peruste": "sitelinks",
+   "koko_m": 300,
+   "lat": 22.5449,
+   "lon": 88.3425,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Victoria Memorial situated in Kolkata.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Victoria_Memorial_situated_in_Kolkata.jpg?width=1280",
+     "tekija": "Subhrajyoti07",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Victoria_Memorial_situated_in_Kolkata.jpg",
+     "selite": "Victoria Memorial on marmorinen muistomerkki ja museo, joka kuuluu Kolkatan tunnetuimpiin nähtävyyksiin.",
+     "leveys": 12725,
+     "korkeus": 5694,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Victoria Memorial, Kolkata at night.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Victoria_Memorial%2C_Kolkata_at_night.jpg?width=1280",
+     "tekija": "Dlinemedia",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Victoria_Memorial%2C_Kolkata_at_night.jpg",
+     "selite": "Valkoinen kupolirakennus erottuu iltataivasta vasten Maidan-puiston reunalla.",
+     "leveys": 6769,
+     "korkeus": 4513,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Victoria Memorial Illuminated at Night.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Victoria_Memorial_Illuminated_at_Night.jpg?width=1280",
+     "tekija": "DeepanjanGhosh",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Victoria_Memorial_Illuminated_at_Night.jpg",
+     "selite": "Muistomerkki ja sen puutarhat valaistaan iltaisin.",
+     "leveys": 6704,
+     "korkeus": 3771,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q739641",
+   "nimi": "Howrah-silta",
+   "peruste": "pelin nosto",
+   "koko_m": 500,
+   "lat": 22.58527,
+   "lon": 88.34694,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Cantilever howrah bridge^ kolkatta - panoramio.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cantilever_howrah_bridge%5E_kolkatta_-_panoramio.jpg?width=1280",
+     "tekija": "rajaraman sundaram",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cantilever_howrah_bridge%5E_kolkatta_-_panoramio.jpg",
+     "selite": "Howrah-silta on ulokesilta, joka yhdistää Kolkatan Hooghly-joen yli kaksoiskaupunki Howrahiin.",
+     "leveys": 4608,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Howrah Bridge, Foggy.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Howrah_Bridge%2C_Foggy.jpg?width=1280",
+     "tekija": "Dey.sandip",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Howrah_Bridge%2C_Foggy.jpg",
+     "selite": "Sillan terässiltarakenne häipyy aamusumuun joen yllä.",
+     "leveys": 4270,
+     "korkeus": 2775,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q986105",
+   "nimi": "Howrahin rautatieasema",
+   "peruste": "pelin nosto",
+   "koko_m": 300,
+   "lat": 22.58287,
+   "lon": 88.34281,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Howrah Railway Station 04.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Howrah_Railway_Station_04.jpg?width=1280",
+     "tekija": "Bernard Gagnon",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Howrah_Railway_Station_04.jpg",
+     "selite": "Howrahin punatiilinen asemarakennus on yksi Intian vilkkaimmista rautatieasemista.",
+     "leveys": 4552,
+     "korkeus": 3207,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Howrah Railway Station 02.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Howrah_Railway_Station_02.jpg?width=1280",
+     "tekija": "Bernard Gagnon",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Howrah_Railway_Station_02.jpg",
+     "selite": "Asema kohoaa Hooghly-joen länsirannalla vastapäätä Kolkatan keskustaa.",
+     "leveys": 5091,
+     "korkeus": 2005,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1364900",
+   "nimi": "Intian museo",
+   "peruste": "sitelinks",
+   "koko_m": 200,
+   "lat": 22.55806,
+   "lon": 88.35083,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Indian Museum Building with Quadrangle - Inside North View - Indian Museum - Kolkata 2014-02-14 9248.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Indian_Museum_Building_with_Quadrangle_-_Inside_North_View_-_Indian_Museum_-_Kolkata_2014-02-14_9248.JPG?width=1280",
+     "tekija": "Biswarup Ganguly",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Indian_Museum_Building_with_Quadrangle_-_Inside_North_View_-_Indian_Museum_-_Kolkata_2014-02-14_9248.JPG",
+     "selite": "Intian museo on Aasian vanhimpia museoita, ja sen valkoinen kaarikäytäväpiha on tunnettu rakennus.",
+     "leveys": 6016,
+     "korkeus": 4000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Front view of the Indian Museum building in Kolkata, West Bengal, India, photographed on October 21, 2023.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Front_view_of_the_Indian_Museum_building_in_Kolkata%2C_West_Bengal%2C_India%2C_photographed_on_October_21%2C_2023.jpg?width=1280",
+     "tekija": "Billjones94",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Front_view_of_the_Indian_Museum_building_in_Kolkata%2C_West_Bengal%2C_India%2C_photographed_on_October_21%2C_2023.jpg",
+     "selite": "Museon sisäänkäynnin yläpuolella on perustamisvuoden kyltti.",
+     "leveys": 2631,
+     "korkeus": 1749,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q6755210",
+   "nimi": "Marble Palace",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 22.58238,
+   "lon": 88.36014,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Marble Palace Kolkata.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Marble_Palace_Kolkata.jpg?width=1280",
+     "tekija": "en:User:Mjanich",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Marble_Palace_Kolkata.jpg",
+     "selite": "Marble Palace on 1800-luvun kauppiaskartano, jonka julkisivua koristavat valkoiset pylväät.",
+     "leveys": 2560,
+     "korkeus": 1920,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Marble Palace,Kolkata,West Bengal.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Marble_Palace%2CKolkata%2CWest_Bengal.jpg?width=1280",
+     "tekija": "Ishan ghosh90",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Marble_Palace%2CKolkata%2CWest_Bengal.jpg",
+     "selite": "Talon edessä on suihkulähde ja nurmikko, ja sisällä on taidekokoelma.",
+     "leveys": 1600,
+     "korkeus": 1200,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1157765",
+   "nimi": "Dakshineswarin Kali-temppeli",
+   "peruste": "sitelinks",
+   "koko_m": 200,
+   "lat": 22.655,
+   "lon": 88.35778,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Dakshineswar Kali Temple, North 24 Parganas district, India.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dakshineswar_Kali_Temple%2C_North_24_Parganas_district%2C_India.jpg?width=1280",
+     "tekija": "Ravi Dwivedi",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Dakshineswar_Kali_Temple%2C_North_24_Parganas_district%2C_India.jpg",
+     "selite": "Dakshineswarin temppeli on Kali-jumalattarelle omistettu pyhäkkö Hooghlyn rannalla.",
+     "leveys": 2178,
+     "korkeus": 1322,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Dakshineswar Kali Temple, Dakshineswar, North 24 Parganas district, India.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dakshineswar_Kali_Temple%2C_Dakshineswar%2C_North_24_Parganas_district%2C_India.jpg?width=1280",
+     "tekija": "Ravi Dwivedi",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Dakshineswar_Kali_Temple%2C_Dakshineswar%2C_North_24_Parganas_district%2C_India.jpg",
+     "selite": "Temppelin monitornisen päärakennuksen ympärillä on laaja pyhäkköalue.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q535970",
+   "nimi": "Kalighatin Kali-temppeli",
+   "peruste": "sitelinks",
+   "koko_m": 120,
+   "lat": 22.52028,
+   "lon": 88.34208,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Kalighat Temple Kolkata India - panoramio.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kalighat_Temple_Kolkata_India_-_panoramio.jpg?width=1280",
+     "tekija": "Hiroki Ogawa",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kalighat_Temple_Kolkata_India_-_panoramio.jpg",
+     "selite": "Kalighat on Kolkatan vanhimpia Kali-temppeleitä, ja sen ympärillä on vilkas kauppakatu.",
+     "leveys": 2400,
+     "korkeus": 1800,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Kalighat Kali Temple.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kalighat_Kali_Temple.jpg?width=1280",
+     "tekija": "Bernard Gagnon",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kalighat_Kali_Temple.jpg",
+     "selite": "Temppelin kupoli on koristeltu värikkäin raidoin.",
+     "leveys": 3278,
+     "korkeus": 4640,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2035004",
+   "nimi": "Eden Gardens",
+   "peruste": "sitelinks",
+   "koko_m": 250,
+   "lat": 22.56444,
+   "lon": 88.34333,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Eden Gardens, Kolkata street view.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Eden_Gardens%2C_Kolkata_street_view.jpg?width=1280",
+     "tekija": "Prong$31",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Eden_Gardens%2C_Kolkata_street_view.jpg",
+     "selite": "Eden Gardens on kriketin suurstadion Kolkatassa ja yksi Intian tunnetuimmista urheilupaikoista.",
+     "leveys": 4608,
+     "korkeus": 3456,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2750027",
+   "nimi": "Fort William",
+   "peruste": "sitelinks",
+   "koko_m": 600,
+   "lat": 22.55778,
+   "lon": 88.33806,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Gates of Fort William in Kolkata 02.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gates_of_Fort_William_in_Kolkata_02.jpg?width=1280",
+     "tekija": "Pinakpani",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Gates_of_Fort_William_in_Kolkata_02.jpg",
+     "selite": "Fort William on Itä-Intian kauppakomppanian rakentama linnoitus Hooghlyn rannalla, jota käyttää nykyään armeija.",
+     "leveys": 2415,
+     "korkeus": 2012,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q985758",
+   "nimi": "Writers' Building",
+   "peruste": "pelin nosto",
+   "koko_m": 200,
+   "lat": 22.57369,
+   "lon": 88.34963,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Red brick wall of the Writers' Building, Kolkata 02.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Red_brick_wall_of_the_Writers'_Building%2C_Kolkata_02.jpg?width=1280",
+     "tekija": "Pinakpani",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Red_brick_wall_of_the_Writers'_Building%2C_Kolkata_02.jpg",
+     "selite": "Punatiilinen Writers' Building on Kolkatan hallintokorttelin vanha virastorakennus.",
+     "leveys": 4128,
+     "korkeus": 2322,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3051967",
+   "nimi": "St. John's -kirkko",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": 22.5699,
+   "lon": 88.34595,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "St. John's Church in Kolkata.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/St._John's_Church_in_Kolkata.JPG?width=1280",
+     "tekija": "SayantanRoni",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:St._John's_Church_in_Kolkata.JPG",
+     "selite": "Kirkko on Kolkatan vanhimpia anglikaanisia kirkkoja, jota ympäröi puistomainen kirkkomaa.",
+     "leveys": 4896,
+     "korkeus": 3672,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "St. John's Church in Kolkata.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/St._John's_Church_in_Kolkata.jpg?width=1280",
+     "tekija": "Anutam.majumder",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:St._John's_Church_in_Kolkata.jpg",
+     "selite": "Kirkon pylväskäytävä ja torni mukailevat uusklassista tyyliä.",
+     "leveys": 3888,
+     "korkeus": 2592,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q12062296",
+   "nimi": "Nakhodan moskeija",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": 22.57639,
+   "lon": 88.35583,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Nakhoda Masjid - Prayer Hall (4).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Nakhoda_Masjid_-_Prayer_Hall_(4).jpg?width=1280",
+     "tekija": "Sumitsurai",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Nakhoda_Masjid_-_Prayer_Hall_(4).jpg",
+     "selite": "Nakhodan moskeija on Kolkatan suurin moskeija, ja sen rukoussali on koristeltu kaarin ja laatoin.",
+     "leveys": 4000,
+     "korkeus": 2667,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Nakhoda Masjid (17).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Nakhoda_Masjid_(17).jpg?width=1280",
+     "tekija": "Sumitsurai",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Nakhoda_Masjid_(17).jpg",
+     "selite": "Värillinen lasi ja koristeelliset kaaret valaisevat moskeijan sisätiloja.",
+     "leveys": 3000,
+     "korkeus": 2000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1145433",
+   "nimi": "Vidyasagar Setu",
+   "peruste": "sitelinks",
+   "koko_m": 500,
+   "lat": 22.55694,
+   "lon": 88.32778,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Vidyasagar Setu - Kolkata 2014-07-11 7360.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Vidyasagar_Setu_-_Kolkata_2014-07-11_7360.JPG?width=1280",
+     "tekija": "Biswarup Ganguly",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Vidyasagar_Setu_-_Kolkata_2014-07-11_7360.JPG",
+     "selite": "Vidyasagar Setu on vinoköysisilta Hooghly-joen yli, joka yhdistää Kolkatan ja Howrahin.",
+     "leveys": 5691,
+     "korkeus": 3784,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Vidyasagar Setu (8434955861).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Vidyasagar_Setu_(8434955861).jpg?width=1280",
+     "tekija": "Rajarshi MITRA from Mumbai, India",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Vidyasagar_Setu_(8434955861).jpg",
+     "selite": "Sillan kansi ja tornit sateisen taivaan alla.",
+     "leveys": 4464,
+     "korkeus": 2367,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q7461557",
+   "nimi": "Shaheed Minar",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": 22.56286,
+   "lon": 88.34923,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Another View of Shaheed Minar Kolkata 2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Another_View_of_Shaheed_Minar_Kolkata_2.jpg?width=1280",
+     "tekija": "Prady9",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Another_View_of_Shaheed_Minar_Kolkata_2.jpg",
+     "selite": "Shaheed Minar on korkea valkoinen muistotorni Kolkatan Esplanade-alueella.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Shaheed Minar Kolkata Full View.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Shaheed_Minar_Kolkata_Full_View.jpg?width=1280",
+     "tekija": "Prady9",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Shaheed_Minar_Kolkata_Full_View.jpg",
+     "selite": "Torni nousee puiston ja liikenteen yläpuolelle.",
+     "leveys": 3000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q5146558",
+   "nimi": "College Street",
+   "peruste": "pelin nosto",
+   "koko_m": 300,
+   "lat": 22.57551,
+   "lon": 88.36335,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Old second-hand books being sold by a shopkeeper at the College Street in Kolkata, West Bengal.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Old_second-hand_books_being_sold_by_a_shopkeeper_at_the_College_Street_in_Kolkata%2C_West_Bengal.jpg?width=1280",
+     "tekija": "Billjones94",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Old_second-hand_books_being_sold_by_a_shopkeeper_at_the_College_Street_in_Kolkata%2C_West_Bengal.jpg",
+     "selite": "College Street tunnetaan kirjakauppiaiden jalkakäytäväkojuista ja Aasian suurimmasta kirjamarkkinasta.",
+     "leveys": 2336,
+     "korkeus": 1908,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Kolkata skyline at night.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kolkata_skyline_at_night.jpg?width=1280",
+   "tekija": "DeepanjanGhosh",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kolkata_skyline_at_night.jpg",
+   "selite": "Kolkatan rantaviivan toimistotornit valaistuina Hooghly-joen rannalla.",
+   "leveys": 5472,
+   "korkeus": 3078,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Kolkata Skyline From Vidyasagar Seti 2.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kolkata_Skyline_From_Vidyasagar_Seti_2.jpg?width=1280",
+   "tekija": "Innocentbunny",
+   "lisenssi": "CC BY-SA 3.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kolkata_Skyline_From_Vidyasagar_Seti_2.jpg",
+   "selite": "Kolkatan siluetti ja Hooghlyn ylittävä silta.",
+   "leveys": 4160,
+   "korkeus": 2340,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

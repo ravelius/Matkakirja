@@ -1,0 +1,322 @@
+{
+ "kaupunki": "mekka",
+ "kaupunkiQ": "Q5806",
+ "kohteet": [
+  {
+   "q": "Q428858",
+   "nimi": "Masjid al-Haram",
+   "peruste": "pelin nosto",
+   "koko_m": 500,
+   "lat": 21.4225,
+   "lon": 39.82611,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Edited Great Mosque of Mecca1 5-2019-ccsa4.0 (cropped).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Edited_Great_Mosque_of_Mecca1_5-2019-ccsa4.0_(cropped).jpg?width=1280",
+     "tekija": "Saudipics.com",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Edited_Great_Mosque_of_Mecca1_5-2019-ccsa4.0_(cropped).jpg",
+     "selite": "Masjid al-Haram eli Suuri moskeija on islamin pyhin moskeija, ja sen keskellä on Kaaba.",
+     "leveys": 3081,
+     "korkeus": 2521,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Masjid ul haram.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Masjid_ul_haram.JPG?width=1280",
+     "tekija": "User:Ummat",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Masjid_ul_haram.JPG",
+     "selite": "Illalla moskeijan ulkoseinät ja minareetti valaistaan.",
+     "leveys": 2592,
+     "korkeus": 1944,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Masjidil Haram (Umroh Ramadhan 2023)-3.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Masjidil_Haram_(Umroh_Ramadhan_2023)-3.jpg?width=1280",
+     "tekija": "Indonesiagood",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Masjidil_Haram_(Umroh_Ramadhan_2023)-3.jpg",
+     "selite": "Moskeijan julkisivua koristavat korkeat holvikaaret ja koristeelliset ikkunat.",
+     "leveys": 1280,
+     "korkeus": 960,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q29466",
+   "nimi": "Kaaba",
+   "peruste": "pelin nosto",
+   "koko_m": 30,
+   "lat": 21.4225,
+   "lon": 39.82617,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Al Kaba.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Al_Kaba.jpg?width=1280",
+     "tekija": "Al Badr Massa",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Al_Kaba.jpg",
+     "selite": "Kaaba on mustalla kankaalla peitetty kuutiomainen rakennus, jota kohti muslimit rukoilevat.",
+     "leveys": 1728,
+     "korkeus": 1608,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q189476",
+   "nimi": "Abraj Al Bait",
+   "peruste": "pelin nosto",
+   "koko_m": 300,
+   "lat": 21.41889,
+   "lon": 39.82639,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Abraj-al-Bait-Towers.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Abraj-al-Bait-Towers.JPG?width=1280",
+     "tekija": "King Eliot",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Abraj-al-Bait-Towers.JPG",
+     "selite": "Abraj Al Bait on Suuren moskeijan vieressä kohoava tornikompleksi, jonka keskustorni on kellotorni.",
+     "leveys": 3216,
+     "korkeus": 4288,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Clock Tower Makkah from Marwa.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Clock_Tower_Makkah_from_Marwa.jpg?width=1280",
+     "tekija": "King Eliot",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Clock_Tower_Makkah_from_Marwa.jpg",
+     "selite": "Kellotorni nousee moskeijan kaarihallien takaa Mekan keskustassa.",
+     "leveys": 4433,
+     "korkeus": 3325,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Abraj al bait Clock 3.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Abraj_al_bait_Clock_3.jpg?width=1280",
+     "tekija": "King Eliot",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Abraj_al_bait_Clock_3.jpg",
+     "selite": "Tornin huipulla oleva jättimäinen kellotaulu on näkyvissä kauas.",
+     "leveys": 4608,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 4,
+     "tiedosto": "Al Abraj al Bait ZamZam Tawer hotel - panoramio.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Al_Abraj_al_Bait_ZamZam_Tawer_hotel_-_panoramio.jpg?width=1280",
+     "tekija": "khadim-un-nabi Rao",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Al_Abraj_al_Bait_ZamZam_Tawer_hotel_-_panoramio.jpg",
+     "selite": "Hotellitornit muodostavat symmetrisen julkisivun keskustornin ympärille.",
+     "leveys": 4816,
+     "korkeus": 3456,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1033157",
+   "nimi": "Jabal al-Nour",
+   "peruste": "pelin nosto",
+   "koko_m": 1000,
+   "lat": 21.45806,
+   "lon": 39.86139,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Gable Noor.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gable_Noor.JPG?width=1280",
+     "tekija": "King Eliot",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Gable_Noor.JPG",
+     "selite": "Jabal al-Nour on Mekan lähellä kohoava vuori, jonka huipun lähellä sijaitsee Hiran luola.",
+     "leveys": 3721,
+     "korkeus": 2792,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Jabal al-Nur, Mecca, Saudi Arabia (2).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Jabal_al-Nur%2C_Mecca%2C_Saudi_Arabia_(2).jpg?width=1280",
+     "tekija": "Richard Mortel",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Jabal_al-Nur%2C_Mecca%2C_Saudi_Arabia_(2).jpg",
+     "selite": "Vuoren kalliohuippu kohoaa Mekan koillispuolella aavikon yläpuolelle.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Jabbal An-Nour (2024).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Jabbal_An-Nour_(2024).jpg?width=1280",
+     "tekija": "Kaliper1",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Jabbal_An-Nour_(2024).jpg",
+     "selite": "Vuoren kaksi huippua erottuvat jyrkästi ruskeasta kalliosta.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q216894",
+   "nimi": "Arafat-vuori",
+   "peruste": "sitelinks",
+   "koko_m": 1000,
+   "lat": 21.35483,
+   "lon": 39.98389,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Jabal rahma.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Jabal_rahma.jpg?width=1280",
+     "tekija": "Yousefmadari at ml.wikipedia",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Jabal_rahma.jpg",
+     "selite": "Arafat-vuori eli Armon vuori on pyhiinvaellus hajjin tärkeimpiä paikkoja Mekan itäpuolella.",
+     "leveys": 1600,
+     "korkeus": 1200,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q42004",
+   "nimi": "Jannat al-Mu'alla",
+   "peruste": "pelin nosto",
+   "koko_m": 200,
+   "lat": 21.43699,
+   "lon": 39.82921,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Jannat-ul-Maualla at present.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Jannat-ul-Maualla_at_present.JPG?width=1280",
+     "tekija": "Md iet (talk)",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Jannat-ul-Maualla_at_present.JPG",
+     "selite": "Jannat al-Mu'alla on Mekan vanhin hautausmaa, joka sijaitsee Hajunin rinteellä Suuren moskeijan pohjoispuolella.",
+     "leveys": 3840,
+     "korkeus": 2880,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Entrance to oldest section of al-Malaa cemetery at Mecca, Saudi Arabia.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Entrance_to_oldest_section_of_al-Malaa_cemetery_at_Mecca%2C_Saudi_Arabia.jpg?width=1280",
+     "tekija": "Richard Mortel",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Entrance_to_oldest_section_of_al-Malaa_cemetery_at_Mecca%2C_Saudi_Arabia.jpg",
+     "selite": "Hautausmaan vanhimman osan sisäänkäynti on yksinkertainen portti rinteen alla.",
+     "leveys": 4016,
+     "korkeus": 3024,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q4116104",
+   "nimi": "Jabal Thawr",
+   "peruste": "sitelinks",
+   "koko_m": 800,
+   "lat": 21.38333,
+   "lon": 39.85,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Mount sour1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mount_sour1.jpg?width=1280",
+     "tekija": "Yousefmadari at ml.wikipedia",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mount_sour1.jpg",
+     "selite": "Jabal Thawr on Mekan eteläpuolella kohoava vuori, jonka luolassa Muhammed ja Abu Bakr kätkeytyivät.",
+     "leveys": 1600,
+     "korkeus": 1200,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Jabele thor - panoramio.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Jabele_thor_-_panoramio.jpg?width=1280",
+     "tekija": "Abdul Razzaq Phulpot…",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Jabele_thor_-_panoramio.jpg",
+     "selite": "Vuoren kolmiomainen huippu erottuu aavikkomaisemasta.",
+     "leveys": 1600,
+     "korkeus": 1200,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Makkah Aerial View.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Makkah_Aerial_View.jpg?width=1280",
+   "tekija": "King Eliot",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Makkah_Aerial_View.jpg",
+   "selite": "Ylhäältä Mekka levittäytyy vuorten ympäröimään laaksoon, ja kellotorni erottuu kaukaa.",
+   "leveys": 3264,
+   "korkeus": 1967,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Mecca from Jabal Nur.JPG",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mecca_from_Jabal_Nur.JPG?width=1280",
+   "tekija": "Adiput (talk)",
+   "lisenssi": "Public domain",
+   "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mecca_from_Jabal_Nur.JPG",
+   "selite": "Jabal al-Nourilta Mekan kaupunki näkyy tiiviinä rakennusten merenä.",
+   "leveys": 2048,
+   "korkeus": 1536,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": [
+  {
+   "q": "Q1788735",
+   "nimi": "Muzdalifah",
+   "peruste": "sitelinks",
+   "lat": 21.3925,
+   "lon": 39.93778,
+   "syy": "ei kelvollista kuvaa (vain yksi huonolaatuinen, ei tunnistettava)"
+  }
+ ]
+}

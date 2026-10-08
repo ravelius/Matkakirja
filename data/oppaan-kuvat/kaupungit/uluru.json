@@ -1,0 +1,236 @@
+{
+ "kaupunki": "uluru",
+ "kaupunkiQ": "Q33910",
+ "pieniAlue": true,
+ "jarjestys": [
+  "Q33910",
+  "Q279980",
+  "Q18042",
+  "Q584201",
+  "Q1419721"
+ ],
+ "kohteet": [
+  {
+   "q": "Q33910",
+   "nimi": "Uluru",
+   "peruste": "sitelinks",
+   "koko_m": 3500,
+   "lat": -25.345,
+   "lon": 131.03611,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Sunset at Uluru on July 30, 2005.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sunset_at_Uluru_on_July_30%2C_2005.jpg?width=1280",
+     "tekija": "Thomas Schoch",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Sunset_at_Uluru_on_July_30%2C_2005.jpg",
+     "selite": "Uluru hehkuu auringonlaskussa oranssina, ja kallio on anangu-kansan pyhä paikka.",
+     "leveys": 1561,
+     "korkeus": 1171,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "094 Ayers Rock at dawn, July 1976 (51753208805).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/094_Ayers_Rock_at_dawn%2C_July_1976_(51753208805).jpg?width=1280",
+     "tekija": "wilford peloquin",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:094_Ayers_Rock_at_dawn%2C_July_1976_(51753208805).jpg",
+     "selite": "Aamuvalossa Uluru kohoaa punaisena kupolina tasaisen aavikon yllä.",
+     "leveys": 2560,
+     "korkeus": 1920,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "14. Uluru at dawn.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/14._Uluru_at_dawn.jpg?width=1280",
+     "tekija": "BriMiDra",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:14._Uluru_at_dawn.jpg",
+     "selite": "Kallion pinnan syvät kolot ja raot ovat muodostuneet vuosimiljoonien kuluessa sateesta ja tuulesta.",
+     "leveys": 2048,
+     "korkeus": 1536,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q279980",
+   "nimi": "Kata Tjuta",
+   "peruste": "sitelinks",
+   "koko_m": 3500,
+   "lat": -25.3,
+   "lon": 130.7593,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "01-valley-of-the-wind-walk-olgas-kata-tjuta-australia.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/01-valley-of-the-wind-walk-olgas-kata-tjuta-australia.JPG?width=1280",
+     "tekija": "HjalmarGerbig",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:01-valley-of-the-wind-walk-olgas-kata-tjuta-australia.JPG",
+     "selite": "Kata Tjutan pyöreät punaiset kalliokupolit kohoavat Tuulten laakson yllä.",
+     "leveys": 1920,
+     "korkeus": 1080,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "ApproachToKataJuta edit1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/ApproachToKataJuta_edit1.jpg?width=1280",
+     "tekija": "Jellocube27 (talk) (Uploads)",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:ApproachToKataJuta_edit1.jpg",
+     "selite": "Kata Tjutan kupolit siintävät tien päässä ja ovat anangu-kansan pyhiä paikkoja.",
+     "leveys": 2970,
+     "korkeus": 906,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q18042",
+   "nimi": "Yulara",
+   "peruste": "sitelinks",
+   "koko_m": 1500,
+   "lat": -25.24056,
+   "lon": 130.98889,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Yulara from helicopter (August 2004).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Yulara_from_helicopter_(August_2004).jpg?width=1280",
+     "tekija": "Menphrad at English Wikipedia",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Yulara_from_helicopter_(August_2004).jpg",
+     "selite": "Yularan lomakeskus kyyhöttää keskellä punaista aavikkoa matkailijoiden tukikohtana Ulurun lähellä.",
+     "leveys": 3264,
+     "korkeus": 2448,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Ayers Rock Resort main road entry point, October 2025 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ayers_Rock_Resort_main_road_entry_point%2C_October_2025_01.jpg?width=1280",
+     "tekija": "DaHuzyBru",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ayers_Rock_Resort_main_road_entry_point%2C_October_2025_01.jpg",
+     "selite": "Yularan tervetuliaiskyltti ja tie johtavat lomakeskukseen Ulurun ja Kata Tjutan välissä.",
+     "leveys": 5712,
+     "korkeus": 4284,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q584201",
+   "nimi": "Amadeuksenjärvi",
+   "peruste": "sitelinks",
+   "koko_m": 5000,
+   "lat": -24.75,
+   "lon": 130.91667,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Lake Amadeus ESA345627.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lake_Amadeus_ESA345627.jpg?width=1280",
+     "tekija": "European Space Agency",
+     "lisenssi": "CC BY-SA 3.0 igo",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/igo/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Lake_Amadeus_ESA345627.jpg",
+     "selite": "Amadeuksenjärvi on punaisen aavikon keskellä sijaitseva suolajärvi, joka on yleensä kuiva.",
+     "leveys": 1680,
+     "korkeus": 1188,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Lake Amadeus from fixed wing aircraft.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lake_Amadeus_from_fixed_wing_aircraft.jpg?width=1280",
+     "tekija": "Hopeontheriver",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Lake_Amadeus_from_fixed_wing_aircraft.jpg",
+     "selite": "Ilmasta suolajärven vaalea pinta ja ruskeat saarekkeet erottuvat selvästi.",
+     "leveys": 1280,
+     "korkeus": 853,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1419721",
+   "nimi": "Mount Conner",
+   "peruste": "sitelinks",
+   "koko_m": 3500,
+   "lat": -25.49278,
+   "lon": 131.89778,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Mt Conner, seen from the road to Uluru.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mt_Conner%2C_seen_from_the_road_to_Uluru.jpg?width=1280",
+     "tekija": "Menphrad at German Wikipedia",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mt_Conner%2C_seen_from_the_road_to_Uluru.jpg",
+     "selite": "Mount Connerin tasaharjainen pöytävuori erottuu kaukaa Ulurun tien varrella ja sekoitetaan usein Uluruun.",
+     "leveys": 3264,
+     "korkeus": 2448,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Mount Conner - panoramio.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mount_Conner_-_panoramio.jpg?width=1280",
+     "tekija": "ogwen",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mount_Conner_-_panoramio.jpg",
+     "selite": "Tasapäinen Mount Conner kohoaa aavikon tasangolta ruskeanpunaisena kallioseinänä.",
+     "leveys": 2048,
+     "korkeus": 1536,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Aerial view of Uluru.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aerial_view_of_Uluru.jpg?width=1280",
+   "tekija": "Emily Cox",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aerial_view_of_Uluru.jpg",
+   "selite": "Ilmasta Uluru yksinäisenä punaisena kalliona tasaisen aavikon keskellä.",
+   "leveys": 3922,
+   "korkeus": 2499,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Golden Uluru Sunset.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Golden_Uluru_Sunset.jpg?width=1280",
+   "tekija": "Matheus Hobold Sovernigo",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Golden_Uluru_Sunset.jpg",
+   "selite": "Auringonlasku värjää Ulurun kuparinhohtoiseksi aavikkoruohikon yllä.",
+   "leveys": 6000,
+   "korkeus": 4000,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

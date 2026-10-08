@@ -9,10 +9,11 @@
  *          aliakset: { Q: Q } }
  * Kuva: { url (vain peili), tyyppi, tekija, lisenssi, lisenssiUrl, lahdeUrl, selite, leveys, korkeus, jarjestys, tarkistettu }.
  */
+import { OPAS_SALLITUT, sallittuId } from './sallitut.js';
 
 // Ämpärin objektit ovat muuttumattomia (vie-paketti.sh ei ylikirjoita, Cache-Control immutable 1 v): jokainen kuvaerä
 // saa oman polun (kuvat-v2, kuvat-v3 …). Polku vaihdetaan wranglerin muuttujalla OPAS_KUVALISTA_URL ilman koodimuutosta.
-export const KUVALISTA_URL = 'https://media.matkakirja.app/opas/kuvat-v2/kuvat.json';
+export const KUVALISTA_URL = 'https://media.matkakirja.app/opas/kuvat-v4/kuvat.json';
 const KUVALISTA_TUORE_MS = 10 * 60 * 1000;
 const UUSINTA_VIRHEESTA_MS = 60 * 1000;
 export const KUVIA_ENINTAAN = 5;
@@ -72,6 +73,9 @@ export function listanKaupunki(lista, kaupunki) {
   for (const [id, k] of Object.entries(lista.kaupungit ?? {})) {
     if (normaali(k.nimi) === n || k.Q === kaupunki) return { id, ...k };
   }
+  // Sallittujen näyttönimi ≠ listan tunnus (Reykjavík → islanti; natiivi lähettää sallitut-listan nimen).
+  const s = OPAS_SALLITUT.sallitut.find((x) => sallittuId(x.nimi) === sallittuId(kaupunki));
+  if (s && lista.kaupungit?.[s.id]) return { id: s.id, ...lista.kaupungit[s.id] };
   return null;
 }
 

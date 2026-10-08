@@ -1,0 +1,369 @@
+{
+ "kaupunki": "halifax",
+ "kaupunkiQ": "Q2141",
+ "kohteet": [
+  {
+   "q": "Q321867",
+   "nimi": "Citadel Hill",
+   "peruste": "pelin nosto",
+   "koko_m": 300,
+   "lat": 44.6475,
+   "lon": -63.58028,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Halifax NS-01245 - Citadel Hill (28368615541).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Halifax_NS-01245_-_Citadel_Hill_(28368615541).jpg?width=1280",
+     "tekija": "Dennis G. Jarvis",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Halifax_NS-01245_-_Citadel_Hill_(28368615541).jpg",
+     "selite": "Citadel Hillin tähtilinnoituksen portti avautuu vihreän vallin sisään Halifaxin keskustan yläpuolella.",
+     "leveys": 6071,
+     "korkeus": 4106,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Citadel Hill Halifax Signal Mast.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Citadel_Hill_Halifax_Signal_Mast.jpg?width=1280",
+     "tekija": "Markus Gregory",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Citadel_Hill_Halifax_Signal_Mast.jpg",
+     "selite": "Citadel Hillin viheralueella nousevat signaalimastot kaupungin yläpuolelle.",
+     "leveys": 4928,
+     "korkeus": 3280,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q13405050",
+   "nimi": "Halifaxin satama",
+   "peruste": "pelin nosto",
+   "koko_m": 3000,
+   "lat": 44.62,
+   "lon": -63.55,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "26 Halifax, NS.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/26_Halifax%2C_NS.jpg?width=1280",
+     "tekija": "David Wilson",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:26_Halifax%2C_NS.jpg",
+     "selite": "Halifaxin satama avautuu riippusillan alla Dartmouthin ja Halifaxin väliin.",
+     "leveys": 1800,
+     "korkeus": 1079,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "1998-08-15 Halifax-Harbour.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/1998-08-15_Halifax-Harbour.jpg?width=1280",
+     "tekija": "Eduard47",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:1998-08-15_Halifax-Harbour.jpg",
+     "selite": "Satamassa purjeveneet ja Kanadan lippu erottuvat Dartmouthin rantaa vasten.",
+     "leveys": 3012,
+     "korkeus": 2016,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q4901477",
+   "nimi": "Halifax Public Gardens",
+   "peruste": "pelin nosto",
+   "koko_m": 300,
+   "lat": 44.6428,
+   "lon": -63.5822,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "1998-08-16 Halifax, Public Garden (1).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/1998-08-16_Halifax%2C_Public_Garden_(1).jpg?width=1280",
+     "tekija": "Eduard47",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:1998-08-16_Halifax%2C_Public_Garden_(1).jpg",
+     "selite": "Halifaxin Public Gardensin viktoriaaninen suihkulähde seisoo vehreän puutarhan keskellä.",
+     "leveys": 2010,
+     "korkeus": 3012,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "BridgeHalifaxPublicGardenHalifaxNovaScotia.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/BridgeHalifaxPublicGardenHalifaxNovaScotia.jpg?width=1280",
+     "tekija": "Hantsheroes",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:BridgeHalifaxPublicGardenHalifaxNovaScotia.jpg",
+     "selite": "Puutarhan koristeellinen silta johtaa vanhojen kukkapenkkien yli.",
+     "leveys": 1280,
+     "korkeus": 854,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1725585",
+   "nimi": "Vanha kellotorni",
+   "peruste": "pelin nosto",
+   "koko_m": 30,
+   "lat": 44.6472,
+   "lon": -63.5775,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Halifax Town Clock.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Halifax_Town_Clock.jpg?width=1280",
+     "tekija": "Aconcagua (talk)",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Halifax_Town_Clock.jpg",
+     "selite": "Halifaxin vanha kellotorni on Citadel Hillin rinteellä seisova kaupungin tunnetuin maamerkki.",
+     "leveys": 1488,
+     "korkeus": 1116,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "City of Halifax - panoramio.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/City_of_Halifax_-_panoramio.jpg?width=1280",
+     "tekija": "Jiaqian AirplaneFan",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:City_of_Halifax_-_panoramio.jpg",
+     "selite": "Kellotorni erottuu Halifaxin keskustan nykyaikaisten rakennusten keskellä.",
+     "leveys": 4912,
+     "korkeus": 3264,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q512474",
+   "nimi": "Pier 21",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 44.63775,
+   "lon": -63.56605,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Pier 21 2010 1.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Pier_21_2010_1.JPG?width=1280",
+     "tekija": "Skeezix1000",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Pier_21_2010_1.JPG",
+     "selite": "Pier 21 on punatiilinen entinen matkustajasatama, jonka kautta tuhannet maahanmuuttajat saapuivat Kanadaan.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q6765824",
+   "nimi": "Atlantin merimuseo",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": 44.64769,
+   "lon": -63.57106,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "MMAabove.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/MMAabove.JPG?width=1280",
+     "tekija": "Letterofmarque",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:MMAabove.JPG",
+     "selite": "Atlantin merimuseo seisoo Halifaxin satamarannalla laitureiden vieressä.",
+     "leveys": 1404,
+     "korkeus": 911,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "433 - Halifax NS.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/433_-_Halifax_NS.JPG?width=1280",
+     "tekija": "Share Bear (dmahalin@gmail.com)",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:433_-_Halifax_NS.JPG",
+     "selite": "Museon edessä purjevene keinuu Halifaxin sataman vedessä.",
+     "leveys": 2272,
+     "korkeus": 1704,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2100784",
+   "nimi": "Point Pleasant Park",
+   "peruste": "pelin nosto",
+   "koko_m": 800,
+   "lat": 44.62278,
+   "lon": -63.56917,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "A pavillion in Point Pleasant Park, Halifax. (8280051734).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/A_pavillion_in_Point_Pleasant_Park%2C_Halifax._(8280051734).jpg?width=1280",
+     "tekija": "KMW2700 from Edmonton, Canada",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:A_pavillion_in_Point_Pleasant_Park%2C_Halifax._(8280051734).jpg",
+     "selite": "Point Pleasant Parkin metsäisellä niemellä kulkee kävelypolku, ja paviljonki katsoo merelle.",
+     "leveys": 2048,
+     "korkeus": 1536,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Anchor from HMCS Bonaventure.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Anchor_from_HMCS_Bonaventure.jpg?width=1280",
+     "tekija": "DataAdventure",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Anchor_from_HMCS_Bonaventure.jpg",
+     "selite": "Puiston rannalla seisoo suuri ankkarimuistomerkki meren äärellä.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1547982",
+   "nimi": "Pyhän Paavalin kirkko",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": 44.6475,
+   "lon": -63.57472,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Halifax NS-01253 - St. Paul’s (29063142815).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Halifax_NS-01253_-_St._Paul%E2%80%99s_(29063142815).jpg?width=1280",
+     "tekija": "Dennis G. Jarvis",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Halifax_NS-01253_-_St._Paul%E2%80%99s_(29063142815).jpg",
+     "selite": "Pyhän Paavalin kirkko on Halifaxin vanhin säilynyt rakennus ja Kanadan vanhin protestanttinen kirkko.",
+     "leveys": 4000,
+     "korkeus": 6000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Halifax - NS - St. Paul’s Church.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Halifax_-_NS_-_St._Paul%E2%80%99s_Church.jpg?width=1280",
+     "tekija": "– Wladyslaw [Disk.]",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Halifax_-_NS_-_St._Paul%E2%80%99s_Church.jpg",
+     "selite": "Kirkon valkoinen puurakennus ja pieni kellotorni seisovat Grand Paraden laidalla.",
+     "leveys": 1737,
+     "korkeus": 2594,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q7083564",
+   "nimi": "Vanha hautausmaa",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": 44.6434,
+   "lon": -63.5728,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Camp Hill Cemetary Halifax 1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Camp_Hill_Cemetary_Halifax_1.jpg?width=1280",
+     "tekija": "Paul Harrison",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Camp_Hill_Cemetary_Halifax_1.jpg",
+     "selite": "Halifaxin vanhan hautausmaan liuskekivinen hautakivikenttä on yksi Kanadan vanhimmista.",
+     "leveys": 3000,
+     "korkeus": 2002,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Welsford-Parker Monument at the entrance to the Old Burying Ground in Halifax, Nova Scotia, Canada.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Welsford-Parker_Monument_at_the_entrance_to_the_Old_Burying_Ground_in_Halifax%2C_Nova_Scotia%2C_Canada.jpg?width=1280",
+     "tekija": "Tim Bryson",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Welsford-Parker_Monument_at_the_entrance_to_the_Old_Burying_Ground_in_Halifax%2C_Nova_Scotia%2C_Canada.jpg",
+     "selite": "Hautausmaan sisäänkäynnin vieressä seisoo Welsford-Parkerin muistomerkki.",
+     "leveys": 1280,
+     "korkeus": 1022,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q579321",
+   "nimi": "Dalhousien yliopisto",
+   "peruste": "sitelinks",
+   "koko_m": 300,
+   "lat": 44.63694,
+   "lon": -63.59167,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Henri Hicks Building, Dalhousie University.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Henri_Hicks_Building%2C_Dalhousie_University.jpg?width=1280",
+     "tekija": "mricon",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Henri_Hicks_Building%2C_Dalhousie_University.jpg",
+     "selite": "Dalhousien yliopiston Henri Hicks -rakennus on punatiilinen vanha kampusrakennus kellotorneineen.",
+     "leveys": 2985,
+     "korkeus": 1959,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Halifax Harbour Sunset Skyline, Nova Scotia (24237034620).jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Halifax_Harbour_Sunset_Skyline%2C_Nova_Scotia_(24237034620).jpg?width=1280",
+   "tekija": "Tony Webster from Minneapolis, Minnesota",
+   "lisenssi": "CC BY-SA 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Halifax_Harbour_Sunset_Skyline%2C_Nova_Scotia_(24237034620).jpg",
+   "selite": "Halifaxin keskustan siluetti hohtaa iltarusossa sataman toisella puolella.",
+   "leveys": 5669,
+   "korkeus": 2909,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "2022-08-15 01 Wide angle view of Halifax skyline, Nova Scotia, Canada.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2022-08-15_01_Wide_angle_view_of_Halifax_skyline%2C_Nova_Scotia%2C_Canada.jpg?width=1280",
+   "tekija": "Gordon Leggett",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2022-08-15_01_Wide_angle_view_of_Halifax_skyline%2C_Nova_Scotia%2C_Canada.jpg",
+   "selite": "Halifaxin keskusta ja satama ovat vierekkäin sataman rannalla.",
+   "leveys": 10444,
+   "korkeus": 3325,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

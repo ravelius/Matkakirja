@@ -1,0 +1,268 @@
+{
+ "kaupunki": "nikosia",
+ "kaupunkiQ": "Q3856",
+ "kohteet": [
+  {
+   "q": "Q1476251",
+   "nimi": "Selimiyen moskeija",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": 35.17639,
+   "lon": 33.36444,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Selimiye mosque Nicosia (29852320938).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Selimiye_mosque_Nicosia_(29852320938).jpg?width=1280",
+     "tekija": "dronepicr",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Selimiye_mosque_Nicosia_(29852320938).jpg",
+     "selite": "Selimiyen moskeija oli ennen goottilainen Pyhän Sofian katedraali, ja nykyisin siitä nousevat kaksi minareettia.",
+     "leveys": 6240,
+     "korkeus": 4160,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Selimiye Mosque, North Nicosia, Northern Cyprus (PPL1-Corrected) julesvernex2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Selimiye_Mosque%2C_North_Nicosia%2C_Northern_Cyprus_(PPL1-Corrected)_julesvernex2.jpg?width=1280",
+     "tekija": "Jules Verne Times Two",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Selimiye_Mosque%2C_North_Nicosia%2C_Northern_Cyprus_(PPL1-Corrected)_julesvernex2.jpg",
+     "selite": "Ranskalaisten ristiretkeläisten rakentama kirkko on yksi Kyproksen tärkeimmistä goottirakennuksista.",
+     "leveys": 5992,
+     "korkeus": 4000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2332172",
+   "nimi": "Büyük Han",
+   "peruste": "pelin nosto",
+   "koko_m": 70,
+   "lat": 35.1763,
+   "lon": 33.3625,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Büyük Han, Nicosia, Cyprus.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/B%C3%BCy%C3%BCk_Han%2C_Nicosia%2C_Cyprus.jpg?width=1280",
+     "tekija": "Michal Klajban",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:B%C3%BCy%C3%BCk_Han%2C_Nicosia%2C_Cyprus.jpg",
+     "selite": "Büyük Han on ottomaanien rakentama karavaanisarai Nikosian vanhassakaupungissa.",
+     "leveys": 5472,
+     "korkeus": 3579,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Gran Posada, Nicosia Norte, Chipre del Norte, 2021-12-13, DD 37-39 HDR.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gran_Posada%2C_Nicosia_Norte%2C_Chipre_del_Norte%2C_2021-12-13%2C_DD_37-39_HDR.jpg?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Gran_Posada%2C_Nicosia_Norte%2C_Chipre_del_Norte%2C_2021-12-13%2C_DD_37-39_HDR.jpg",
+     "selite": "Sisäpihan keskellä seisoo pieni moskeija, ja pihan ympärillä kiertävät kaarikäytävät.",
+     "leveys": 8560,
+     "korkeus": 4433,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q7919752",
+   "nimi": "Nikosian venetsialaiset muurit",
+   "peruste": "sitelinks",
+   "koko_m": 1500,
+   "lat": 35.17106,
+   "lon": 33.37006,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "CY-nikosia-stadtmauer.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/CY-nikosia-stadtmauer.jpg?width=1280",
+     "tekija": "Balou46",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:CY-nikosia-stadtmauer.jpg",
+     "selite": "Venetsialaiset kaupunginmuurit ympäröivät vanhaakaupunkia tähtimäisenä kehänä, jossa on 11 bastionia.",
+     "leveys": 4928,
+     "korkeus": 3264,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Nicosia city Venitian historic ancient walls and gardens Republic of Cyprus.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Nicosia_city_Venitian_historic_ancient_walls_and_gardens_Republic_of_Cyprus.jpg?width=1280",
+     "tekija": "AncientNicosia",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Nicosia_city_Venitian_historic_ancient_walls_and_gardens_Republic_of_Cyprus.jpg",
+     "selite": "Muurien juurella olevat puistot ovat entisiä vallihautoja.",
+     "leveys": 3072,
+     "korkeus": 2048,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1148462",
+   "nimi": "Kyproksen museo",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": 35.17167,
+   "lon": 33.35528,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Cyprusmuseum.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cyprusmuseum.JPG?width=1280",
+     "tekija": "ChristosV",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cyprusmuseum.JPG",
+     "selite": "Kyproksen museo on saaren tärkein arkeologinen museo, jonka kokoelmat ulottuvat neoliittiselta kaudelta keskiaikaan.",
+     "leveys": 2592,
+     "korkeus": 1944,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q20501264",
+   "nimi": "Faneromenin kirkko",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": 35.17353,
+   "lon": 33.3625,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Chirch Panagia Phaneromeni Nicosia -1a.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Chirch_Panagia_Phaneromeni_Nicosia_-1a.jpg?width=1280",
+     "tekija": "Молли",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Chirch_Panagia_Phaneromeni_Nicosia_-1a.jpg",
+     "selite": "Faneromenin kirkko on Nikosian vanhankaupungin suurin ortodoksinen kirkko, joka valmistui 1700-luvulla.",
+     "leveys": 1340,
+     "korkeus": 1787,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q5644014",
+   "nimi": "Omeryen hamam",
+   "peruste": "pelin nosto",
+   "koko_m": 40,
+   "lat": 35.1726,
+   "lon": 33.3654,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Hamam baths, Cyprus.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hamam_baths%2C_Cyprus.jpg?width=1280",
+     "tekija": "Mikettg at English Wikipedia",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Hamam_baths%2C_Cyprus.jpg",
+     "selite": "Omeryen hamam on ottomaanien aikainen höyrykylpylä entisen kirkon paikalla, ja sen kupolit ovat edelleen näkyvissä.",
+     "leveys": 2304,
+     "korkeus": 1728,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q6535231",
+   "nimi": "Leventis-museo",
+   "peruste": "pelin nosto",
+   "koko_m": 50,
+   "lat": 35.17056,
+   "lon": 33.36166,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Leventio Museum in Ledra.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Leventio_Museum_in_Ledra.JPG?width=1280",
+     "tekija": "Andreas2009 at en.wikipedia",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Leventio_Museum_in_Ledra.JPG",
+     "selite": "Leventis-museo kertoo Nikosian historiasta keltaisessa 1900-luvun alun kaupunkitalossa.",
+     "leveys": 2304,
+     "korkeus": 3072,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q4542914",
+   "nimi": "Arabahmetin moskeija",
+   "peruste": "sitelinks",
+   "koko_m": 60,
+   "lat": 35.1771,
+   "lon": 33.3579,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Arabahmet Mosque, Nicosia, Cyprus 03.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Arabahmet_Mosque%2C_Nicosia%2C_Cyprus_03.jpg?width=1280",
+     "tekija": "Michal Klajban",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Arabahmet_Mosque%2C_Nicosia%2C_Cyprus_03.jpg",
+     "selite": "Arabahmetin moskeija on 1500-luvun ottomaanien rakennus, jossa on kupoli ja kaunis minareetti.",
+     "leveys": 3352,
+     "korkeus": 3441,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q6452341",
+   "nimi": "Kyrenian portti",
+   "peruste": "sitelinks",
+   "koko_m": 50,
+   "lat": 35.18139,
+   "lon": 33.36167,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Ataturk Meydan, Turk Lefkosa.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ataturk_Meydan%2C_Turk_Lefkosa.jpg?width=1280",
+     "tekija": "TorbeyCharbel",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ataturk_Meydan%2C_Turk_Lefkosa.jpg",
+     "selite": "Kyrenian portti on Nikosian muurien pohjoinen portti, jonka edessä on laaja Atatürkin aukio.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Nicosia's skyline 2024.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Nicosia's_skyline_2024.jpg?width=1280",
+   "tekija": "PomposPompou",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Nicosia's_skyline_2024.jpg",
+   "selite": "Nikosian pilvenpiirtäjät ja vanhat matalat talot kohtaavat Kyproksen jaetussa pääkaupungissa.",
+   "leveys": 4000,
+   "korkeus": 2250,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

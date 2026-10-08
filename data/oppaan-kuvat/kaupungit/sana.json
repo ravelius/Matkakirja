@@ -1,0 +1,387 @@
+{
+ "kaupunki": "sana",
+ "kaupunkiQ": "Q2471",
+ "jarjestys": [
+  "Q12220316",
+  "Q12195545",
+  "Q2548705",
+  "Q4115837",
+  "Q12204207",
+  "Q13668725",
+  "Q13668727"
+ ],
+ "kohteet": [
+  {
+   "q": "Q12220316",
+   "nimi": "Sanan vanhakaupunki",
+   "peruste": "UNESCO",
+   "koko_m": 1500,
+   "lat": 15.3551,
+   "lon": 44.2145,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Old City of Sana'a-111110.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Old_City_of_Sana'a-111110.jpg?width=1280",
+     "tekija": "Maria Gropa",
+     "lisenssi": "CC BY-SA 3.0 igo",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/igo/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Old_City_of_Sana'a-111110.jpg",
+     "selite": "Sanan vanhakaupunki on tornitalojen ja moskeijoiden tiivis kokonaisuus vuoristotasangolla.",
+     "leveys": 2816,
+     "korkeus": 2112,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Old City of Sana'a-111117.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Old_City_of_Sana'a-111117.jpg?width=1280",
+     "tekija": "Maria Gropa",
+     "lisenssi": "CC BY-SA 3.0 igo",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/igo/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Old_City_of_Sana'a-111117.jpg",
+     "selite": "Talojen julkisivuja koristavat valkoiset kalkkikuviot tiilen päällä.",
+     "leveys": 2816,
+     "korkeus": 2112,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "San'a01 flickr.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/San'a01_flickr.jpg?width=1280",
+     "tekija": "Ai@ce",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:San'a01_flickr.jpg",
+     "selite": "Vanhankaupungin monikerroksiset tornitalot ovat yhä asuttuja koteja.",
+     "leveys": 1200,
+     "korkeus": 888,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 4,
+     "tiedosto": "Old City of Sana'a-111119.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Old_City_of_Sana'a-111119.jpg?width=1280",
+     "tekija": "Maria Gropa",
+     "lisenssi": "CC BY-SA 3.0 igo",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/igo/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Old_City_of_Sana'a-111119.jpg",
+     "selite": "Minareetit ja kupolit nousevat tornitalojen yläpuolelle vanhassakaupungissa.",
+     "leveys": 2816,
+     "korkeus": 2112,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q12195545",
+   "nimi": "Bab al-Yaman",
+   "peruste": "pelin nosto",
+   "koko_m": 120,
+   "lat": 15.35123,
+   "lon": 44.2159,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Bab ul Yemen, Sana'a (2286897962).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bab_ul_Yemen%2C_Sana'a_(2286897962).jpg?width=1280",
+     "tekija": "Dan from Brussels, Europe",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bab_ul_Yemen%2C_Sana'a_(2286897962).jpg",
+     "selite": "Bab al-Yaman on vanhankaupungin muurin pääportti, jonka takana kohoavat tornitalot.",
+     "leveys": 2288,
+     "korkeus": 1712,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Bab ul Yemen, Sana'a (2286109217).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bab_ul_Yemen%2C_Sana'a_(2286109217).jpg?width=1280",
+     "tekija": "Dan from Brussels, Europe",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bab_ul_Yemen%2C_Sana'a_(2286109217).jpg",
+     "selite": "Portin kolme kaarta avautuvat vanhankaupungin kauppakaduille.",
+     "leveys": 2288,
+     "korkeus": 1712,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Bab al Yemen.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bab_al_Yemen.jpg?width=1280",
+     "tekija": "Bernard Gagnon",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bab_al_Yemen.jpg",
+     "selite": "Savitiilestä rakennettu portti ja sen krenelointi hallitsevat vanhankaupungin sisäänkäyntiä.",
+     "leveys": 3344,
+     "korkeus": 2072,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2548705",
+   "nimi": "Suuri moskeija",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 15.35309,
+   "lon": 44.21493,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Yemen-2005-IMG 20181115 0014b2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Yemen-2005-IMG_20181115_0014b2.jpg?width=1280",
+     "tekija": "Angela Schoettler († 2023)",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Yemen-2005-IMG_20181115_0014b2.jpg",
+     "selite": "Sanan suuri moskeija on yksi islamin vanhimmista moskeijoista, ja sen minareetit näkyvät vanhankaupungin yli.",
+     "leveys": 3400,
+     "korkeus": 2240,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Sanaa PICT0013 (14569535198).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sanaa_PICT0013_(14569535198).jpg?width=1280",
+     "tekija": "lelebella",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Sanaa_PICT0013_(14569535198).jpg",
+     "selite": "Moskeijan laaja sisäpiha ja minareetti keskellä vanhaakaupunkia.",
+     "leveys": 2400,
+     "korkeus": 1600,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Sana'a3.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sana'a3.JPG?width=1280",
+     "tekija": "Scastellsf",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Sana'a3.JPG",
+     "selite": "Suuren moskeijan katot ja minareetit vanhankaupungin talojen yllä.",
+     "leveys": 2560,
+     "korkeus": 1920,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 4,
+     "tiedosto": "Great Mosque of Sana'a.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Great_Mosque_of_Sana'a.jpg?width=1280",
+     "tekija": "Rick McCharles",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Great_Mosque_of_Sana'a.jpg",
+     "selite": "Moskeijan rukoussalin pylväät ja matot ovat osa sen vanhaa sisätilaa.",
+     "leveys": 2560,
+     "korkeus": 1920,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q4115837",
+   "nimi": "Al-Salehin moskeija",
+   "peruste": "sitelinks",
+   "koko_m": 300,
+   "lat": 15.3258,
+   "lon": 44.2077,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Al Saleh Mosque - Sana'a 2013.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Al_Saleh_Mosque_-_Sana'a_2013.jpg?width=1280",
+     "tekija": "Om Eshak",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Al_Saleh_Mosque_-_Sana'a_2013.jpg",
+     "selite": "Al-Salehin moskeija on Jemenin suurin moskeija, jossa on useita minareetteja ja kultaisia kupoleita.",
+     "leveys": 3200,
+     "korkeus": 2008,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Al Saleh Mosque, Sana'a.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Al_Saleh_Mosque%2C_Sana'a.jpg?width=1280",
+     "tekija": "Rod Waddington",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Al_Saleh_Mosque%2C_Sana'a.jpg",
+     "selite": "Moskeijan korkeat minareetit hallitsevat Sanan uudempia kaupunginosia.",
+     "leveys": 3820,
+     "korkeus": 5870,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Al Saleh Mosque.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Al_Saleh_Mosque.jpg?width=1280",
+     "tekija": "Fuad Al-Qrize",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Al_Saleh_Mosque.jpg",
+     "selite": "Palmujen reunustama moskeijan julkisivu ja minareetit.",
+     "leveys": 4160,
+     "korkeus": 2340,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q12204207",
+   "nimi": "Al-Bakiriyyan moskeija",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": 15.35306,
+   "lon": 44.215,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Al-Bakirya Mosque, Sana'a (2286793096).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Al-Bakirya_Mosque%2C_Sana'a_(2286793096).jpg?width=1280",
+     "tekija": "Dan from Brussels, Europe",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Al-Bakirya_Mosque%2C_Sana'a_(2286793096).jpg",
+     "selite": "Al-Bakiriyyan moskeija on osmanien ajalta, ja sen kupolit ja koristeellinen minareetti erottuvat vanhassakaupungissa.",
+     "leveys": 1984,
+     "korkeus": 1488,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Al-Bakirya Mosque, Sana'a (2286792446).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Al-Bakirya_Mosque%2C_Sana'a_(2286792446).jpg?width=1280",
+     "tekija": "Dan from Brussels, Europe",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Al-Bakirya_Mosque%2C_Sana'a_(2286792446).jpg",
+     "selite": "Moskeijan valkoiset kupolit nousevat tiilirakennusten yläpuolelle.",
+     "leveys": 1984,
+     "korkeus": 1488,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Jemen1988-153 hg.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Jemen1988-153_hg.jpg?width=1280",
+     "tekija": "H. Grobe",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Jemen1988-153_hg.jpg",
+     "selite": "Moskeijan kupolit ja kivinen runko vanhankaupungin laidalla.",
+     "leveys": 4061,
+     "korkeus": 2562,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q13668725",
+   "nimi": "Al-Mahdin moskeija",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": 15.353,
+   "lon": 44.2092,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Al-Mahdi Mosque, Sana'a (2286844096).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Al-Mahdi_Mosque%2C_Sana'a_(2286844096).jpg?width=1280",
+     "tekija": "Dan from Brussels, Europe",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Al-Mahdi_Mosque%2C_Sana'a_(2286844096).jpg",
+     "selite": "Al-Mahdin moskeijan minareetti ja kupoli kuuluvat vanhankaupungin siluettiin.",
+     "leveys": 1984,
+     "korkeus": 1488,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Mosque in Sana'a.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mosque_in_Sana'a.jpg?width=1280",
+     "tekija": "Bernard Gagnon",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mosque_in_Sana'a.jpg",
+     "selite": "Moskeija seisoo tornitalojen ympäröimänä vanhankaupungin tiheässä korttelissa.",
+     "leveys": 1792,
+     "korkeus": 2147,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q13668727",
+   "nimi": "Talhan moskeija",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": 15.35389,
+   "lon": 44.2125,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Sana, Yemen (4324293041).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sana%2C_Yemen_(4324293041).jpg?width=1280",
+     "tekija": "yeowatzup",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Sana%2C_Yemen_(4324293041).jpg",
+     "selite": "Talhan moskeijan kupolit näkyvät vanhankaupungin kattojen keskellä.",
+     "leveys": 3759,
+     "korkeus": 2505,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "사나 모스크.png",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%EC%82%AC%EB%82%98_%EB%AA%A8%EC%8A%A4%ED%81%AC.png?width=1280",
+     "tekija": "ko:User:Homoludens@Korean Wikipedia",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%EC%82%AC%EB%82%98_%EB%AA%A8%EC%8A%A4%ED%81%AC.png",
+     "selite": "Talhan moskeijan valkoinen kupoli kohoaa vanhankaupungin kapean kujan päässä.",
+     "leveys": 1600,
+     "korkeus": 1200,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Old City Sana'a skyline.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Old_City_Sana'a_skyline.jpg?width=1280",
+   "tekija": "Matt May",
+   "lisenssi": "CC BY 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Old_City_Sana'a_skyline.jpg",
+   "selite": "Sanan vanhakaupunki ja sitä ympäröivä vuoristo hämärässä.",
+   "leveys": 3072,
+   "korkeus": 2048,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Old Sana'a skyline.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Old_Sana'a_skyline.jpg?width=1280",
+   "tekija": "stepnout",
+   "lisenssi": "CC BY 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Old_Sana'a_skyline.jpg",
+   "selite": "Sana on vuoristotasangolla sijaitseva Jemenin pääkaupunki.",
+   "leveys": 2592,
+   "korkeus": 1944,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

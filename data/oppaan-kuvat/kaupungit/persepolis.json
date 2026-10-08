@@ -1,0 +1,440 @@
+{
+ "kaupunki": "persepolis",
+ "kaupunkiQ": "Q129072",
+ "kohteet": [
+  {
+   "q": "Q617256",
+   "nimi": "Apadana",
+   "peruste": "pelin nosto",
+   "koko_m": 110,
+   "lat": 29.93517,
+   "lon": 52.88967,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Apadana and Tachara of Persepolis.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Apadana_and_Tachara_of_Persepolis.jpg?width=1280",
+     "tekija": "Carole Raddato",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Apadana_and_Tachara_of_Persepolis.jpg",
+     "selite": "Apadana oli Persepoliksen suuri vastaanottosali, jonka kymmenet pylväät kohosivat kymmenien metrien korkeuteen.",
+     "leveys": 4928,
+     "korkeus": 3264,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Apadana Persepolis 2014 (2).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Apadana_Persepolis_2014_(2).jpg?width=1280",
+     "tekija": "Radosław Botev",
+     "lisenssi": "CC BY 3.0 pl",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0/pl/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Apadana_Persepolis_2014_(2).jpg",
+     "selite": "Jäljellä olevat pylväät kertovat salin alkuperäisestä mittakaavasta.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "138-Persepolis (16101705047).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/138-Persepolis_(16101705047).jpg?width=1280",
+     "tekija": "anmede",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:138-Persepolis_(16101705047).jpg",
+     "selite": "Illan valossa pylväiden hiekkakivi hehkuu oranssina.",
+     "leveys": 3746,
+     "korkeus": 2808,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 4,
+     "tiedosto": "Apadana Persepolis 2014 (3).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Apadana_Persepolis_2014_(3).jpg?width=1280",
+     "tekija": "Radosław Botev",
+     "lisenssi": "CC BY 3.0 pl",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0/pl/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Apadana_Persepolis_2014_(3).jpg",
+     "selite": "Puukäytävä johtaa pylväikön ohi terassin keskelle.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q5527015",
+   "nimi": "Kaikkien kansojen portti",
+   "peruste": "pelin nosto",
+   "koko_m": 40,
+   "lat": 29.93611,
+   "lon": 52.88903,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Gate of All Nations 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gate_of_All_Nations_01.jpg?width=1280",
+     "tekija": "Majid Taghipour",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Gate_of_All_Nations_01.jpg",
+     "selite": "Kaikkien kansojen portin vartijoina seisovat jättimäiset siivekkäät härät, jotka tervehtivät Persepoliksen vieraita.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "126-Persepolis (16101754497).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/126-Persepolis_(16101754497).jpg?width=1280",
+     "tekija": "anmede",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:126-Persepolis_(16101754497).jpg",
+     "selite": "Portin kautta saapuivat kuninkaan vieraat valtakunnan eri puolilta.",
+     "leveys": 4151,
+     "korkeus": 3113,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Gate of All Nations Persepolis 2014 (2).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gate_of_All_Nations_Persepolis_2014_(2).jpg?width=1280",
+     "tekija": "Radosław Botev",
+     "lisenssi": "CC BY 3.0 pl",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0/pl/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Gate_of_All_Nations_Persepolis_2014_(2).jpg",
+     "selite": "Portin takaa avautuu näkymä pylväiden ja kaksi härkävartijaa osoittavan portin sisäpuolelle.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q5776535",
+   "nimi": "Sadan pylvään sali",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": 29.93528,
+   "lon": 52.89111,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "General view of Persepolis Hall of hundred columns 2014 (1).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/General_view_of_Persepolis_Hall_of_hundred_columns_2014_(1).jpg?width=1280",
+     "tekija": "Radosław Botev",
+     "lisenssi": "CC BY 3.0 pl",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0/pl/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:General_view_of_Persepolis_Hall_of_hundred_columns_2014_(1).jpg",
+     "selite": "Sadan pylvään salin kivijalat näkyvät laajana ruudukkona terassilla.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Persepolis-Iran 09.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Persepolis-Iran_09.jpg?width=1280",
+     "tekija": "Folkertherlyn",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Persepolis-Iran_09.jpg",
+     "selite": "Salin portaat ja ovenpielet ovat säilyneet, vaikka katto on tuhoutunut.",
+     "leveys": 4928,
+     "korkeus": 3280,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Takhtejamshid 1234.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Takhtejamshid_1234.jpg?width=1280",
+     "tekija": "Mardetanha",
+     "lisenssi": "CC BY 2.5",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.5",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Takhtejamshid_1234.jpg",
+     "selite": "Salin ympärillä terassilla on laajoja raunioita hallintorakennusten jäljiltä.",
+     "leveys": 4272,
+     "korkeus": 2848,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q6564498",
+   "nimi": "Tachara",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": 29.93438,
+   "lon": 52.88955,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Tachar Persepolis Iran.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tachar_Persepolis_Iran.JPG?width=1280",
+     "tekija": "درفش کاویانی",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tachar_Persepolis_Iran.JPG",
+     "selite": "Tachara oli Dareios I:n palatsi, ja sen portaikkoa koristavat reliefit ovat hyvin säilyneet.",
+     "leveys": 2592,
+     "korkeus": 1944,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "2009-11-24 Persepolis 03 (cropped).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2009-11-24_Persepolis_03_(cropped).jpg?width=1280",
+     "tekija": "Hansueli Krapf",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2009-11-24_Persepolis_03_(cropped).jpg",
+     "selite": "Ovet ja ikkunaruudut on veistetty yhtenä kappaleena tummaa kiveä.",
+     "leveys": 4603,
+     "korkeus": 2660,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "135-Persepolis (16287566345).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/135-Persepolis_(16287566345).jpg?width=1280",
+     "tekija": "anmede",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:135-Persepolis_(16287566345).jpg",
+     "selite": "Palatsin ovenpielet seisovat vielä paikoillaan terassin kulmassa.",
+     "leveys": 3936,
+     "korkeus": 2952,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q648705",
+   "nimi": "Naqsh-e Rustam",
+   "peruste": "sitelinks",
+   "koko_m": 300,
+   "lat": 29.98889,
+   "lon": 52.87472,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "The Islamic Republic 049 (8498647398).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/The_Islamic_Republic_049_(8498647398).jpg?width=1280",
+     "tekija": "Stefan Krasowski from New York, NY, USA",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:The_Islamic_Republic_049_(8498647398).jpg",
+     "selite": "Kaaba-ye Zardosht on tornimainen rakennus Naqsh-e Rustamin hautakalliolla.",
+     "leveys": 2816,
+     "korkeus": 2112,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "201312 iran Shiraz 54 (12476358413).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/201312_iran_Shiraz_54_(12476358413).jpg?width=1280",
+     "tekija": "Franco Pecchio from Milano, Italy",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:201312_iran_Shiraz_54_(12476358413).jpg",
+     "selite": "Akhaimenidikuninkaiden haudat on veistetty ristin muotoisina julkisivuina kalliorinteeseen.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "20101229 Naqsh e Rostam Shiraz Iran Panorama.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20101229_Naqsh_e_Rostam_Shiraz_Iran_Panorama.jpg?width=1280",
+     "tekija": "User:Ggia",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20101229_Naqsh_e_Rostam_Shiraz_Iran_Panorama.jpg",
+     "selite": "Neljä kuninkaanhautaa on kaivettu rinteeseen vierekkäin.",
+     "leveys": 8000,
+     "korkeus": 2432,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 4,
+     "tiedosto": "6278.NaqshERostam (2640229644).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/6278.NaqshERostam_(2640229644).jpg?width=1280",
+     "tekija": "Ensie & Matthias from San Diego, California, USA",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:6278.NaqshERostam_(2640229644).jpg",
+     "selite": "Haudan julkisivu muistuttaa Persepoliksen palatsin ovea.",
+     "leveys": 1800,
+     "korkeus": 1200,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q230025",
+   "nimi": "Pasargadai",
+   "peruste": "UNESCO",
+   "koko_m": 2000,
+   "lat": 30.2,
+   "lon": 53.17944,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "HG73351-2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/HG73351-2.jpg?width=1280",
+     "tekija": "Herbert karim masihi",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:HG73351-2.jpg",
+     "selite": "Pasargadai oli Persian Kyyros Suuren ensimmäinen pääkaupunki, ja sen pylväät kohoavat yhä tasangolla.",
+     "leveys": 3671,
+     "korkeus": 1969,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "HG73400-2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/HG73400-2.jpg?width=1280",
+     "tekija": "Herbert karim masihi",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:HG73400-2.jpg",
+     "selite": "Yksittäinen pylväs seisoo kaupungin hallintorakennusten jäljellä olevana merkkinä.",
+     "leveys": 3673,
+     "korkeus": 2066,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Pasargadae, Marv Dasht, near Shiraz - 4-8-2013.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Pasargadae%2C_Marv_Dasht%2C_near_Shiraz_-_4-8-2013.jpg?width=1280",
+     "tekija": "Soheil Callage",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Pasargadae%2C_Marv_Dasht%2C_near_Shiraz_-_4-8-2013.jpg",
+     "selite": "Vihreä tasanko ympäröi Pasargadain raunioita Kyyroksen haudan taustalla.",
+     "leveys": 1403,
+     "korkeus": 933,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2635530",
+   "nimi": "Kyyros Suuren hauta",
+   "peruste": "sitelinks",
+   "koko_m": 50,
+   "lat": 30.19392,
+   "lon": 53.16719,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Pasargad Tomb Cyrus3.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Pasargad_Tomb_Cyrus3.jpg?width=1280",
+     "tekija": "Bernd81",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Pasargad_Tomb_Cyrus3.jpg",
+     "selite": "Kyyros Suuren hauta on porrastettu kivirakennus Pasargadain tasangolla, jossa on pieni haudankammio.",
+     "leveys": 5996,
+     "korkeus": 4000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Cyrus the Great Tomb.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cyrus_the_Great_Tomb.jpg?width=1280",
+     "tekija": "Bockomet",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cyrus_the_Great_Tomb.jpg",
+     "selite": "Hauta on rakennettu valkoisista kivilohkoista kuusiportaisen jalustan päälle.",
+     "leveys": 2480,
+     "korkeus": 1618,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Cyrus the great tomb in day.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cyrus_the_great_tomb_in_day.jpg?width=1280",
+     "tekija": "Alavivala",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cyrus_the_great_tomb_in_day.jpg",
+     "selite": "Auringonlaskussa hauta hehkuu kullankeltaisena.",
+     "leveys": 2000,
+     "korkeus": 1250,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q9630189",
+   "nimi": "Artakserkses III:n hauta",
+   "peruste": "pelin nosto",
+   "koko_m": 40,
+   "lat": 29.9359,
+   "lon": 52.89246,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Iran - Marvdasht - Persoilis - The tomb of the Third Ardeshir - panoramio.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Iran_-_Marvdasht_-_Persoilis_-_The_tomb_of_the_Third_Ardeshir_-_panoramio.jpg?width=1280",
+     "tekija": "Alireza Javaheri",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Iran_-_Marvdasht_-_Persoilis_-_The_tomb_of_the_Third_Ardeshir_-_panoramio.jpg",
+     "selite": "Artakserkses III:n hauta on veistetty Persepoliksen takana kohoavaan kallioon.",
+     "leveys": 4928,
+     "korkeus": 3264,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "20101229 Artaxerxes III tomb Persepolis Iran.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20101229_Artaxerxes_III_tomb_Persepolis_Iran.jpg?width=1280",
+     "tekija": "User:Ggia",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20101229_Artaxerxes_III_tomb_Persepolis_Iran.jpg",
+     "selite": "Julkisivun reliefit esittävät kuningasta valtaistuimen kantajien päällä.",
+     "leveys": 3839,
+     "korkeus": 2832,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Iran - Pars - Perspolis - panoramio.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Iran_-_Pars_-_Perspolis_-_panoramio.jpg?width=1280",
+   "tekija": "Alireza Javaheri",
+   "lisenssi": "CC BY 3.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Iran_-_Pars_-_Perspolis_-_panoramio.jpg",
+   "selite": "Ylhäältä Persepoliksen terassi näkyy laajana kiviperustojen verkkona aavikon reunalla.",
+   "leveys": 2500,
+   "korkeus": 1750,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "General view of Persepolis, Iran (5).jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/General_view_of_Persepolis%2C_Iran_(5).jpg?width=1280",
+   "tekija": "Carole Raddato",
+   "lisenssi": "CC BY-SA 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:General_view_of_Persepolis%2C_Iran_(5).jpg",
+   "selite": "Rauniot levittäytyvät laajalle terassille Zagros-vuorten juurella.",
+   "leveys": 4928,
+   "korkeus": 3264,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

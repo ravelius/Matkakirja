@@ -1,0 +1,336 @@
+{
+ "kaupunki": "kamtsatka",
+ "kaupunkiQ": "Q993",
+ "kohteet": [
+  {
+   "q": "Q210252",
+   "nimi": "Kljutševskaja sopka",
+   "peruste": "pelin nosto",
+   "koko_m": 8000,
+   "lat": 56.06667,
+   "lon": 160.63333,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Klyuchevskaya Volcano Russia 11Mar2018 SkySat.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Klyuchevskaya_Volcano_Russia_11Mar2018_SkySat.jpg?width=1280",
+     "tekija": "Planet Labs, Inc",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Klyuchevskaya_Volcano_Russia_11Mar2018_SkySat.jpg",
+     "selite": "Kljutševskaja sopka on Euraasian korkein toimiva tulivuori, jonka rinteet ovat talvella lumen peitossa.",
+     "leveys": 2050,
+     "korkeus": 1265,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Ključevskaja za východu slunce.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Klju%C4%8Devskaja_za_v%C3%BDchodu_slunce.jpg?width=1280",
+     "tekija": "Tamten at cs.wikipedia",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Klju%C4%8Devskaja_za_v%C3%BDchodu_slunce.jpg",
+     "selite": "Auringonnousu värjää tulivuoren symmetrisen kartion vaaleanpunaiseksi.",
+     "leveys": 2048,
+     "korkeus": 1536,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1235610",
+   "nimi": "Gejsirien laakso",
+   "peruste": "pelin nosto",
+   "koko_m": 6000,
+   "lat": 54.43056,
+   "lon": 160.13944,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Valley of Geysers (Kamchatka, 2020)-1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Valley_of_Geysers_(Kamchatka%2C_2020)-1.jpg?width=1280",
+     "tekija": "Rubin16",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Valley_of_Geysers_(Kamchatka%2C_2020)-1.jpg",
+     "selite": "Gejsirien laakso on Kamtšatkan kuuluisin kuumien lähteiden ja höyryävien aukkojen kanjoni.",
+     "leveys": 2305,
+     "korkeus": 1537,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Valley of Geysers (Kamchatka, 2020)-3.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Valley_of_Geysers_(Kamchatka%2C_2020)-3.jpg?width=1280",
+     "tekija": "Rubin16",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Valley_of_Geysers_(Kamchatka%2C_2020)-3.jpg",
+     "selite": "Joen varrella nousee höyryä rinteiden kuumista lähteistä.",
+     "leveys": 2305,
+     "korkeus": 1537,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1137163",
+   "nimi": "Avatšanlahti",
+   "peruste": "sitelinks",
+   "koko_m": 8000,
+   "lat": 52.93333,
+   "lon": 158.6,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "АвачинскаяБухтаКамчатка.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%90%D0%B2%D0%B0%D1%87%D0%B8%D0%BD%D1%81%D0%BA%D0%B0%D1%8F%D0%91%D1%83%D1%85%D1%82%D0%B0%D0%9A%D0%B0%D0%BC%D1%87%D0%B0%D1%82%D0%BA%D0%B0.jpg?width=1280",
+     "tekija": "Alexandr_pilat@inbox.ru",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%D0%90%D0%B2%D0%B0%D1%87%D0%B8%D0%BD%D1%81%D0%BA%D0%B0%D1%8F%D0%91%D1%83%D1%85%D1%82%D0%B0%D0%9A%D0%B0%D0%BC%D1%87%D0%B0%D1%82%D0%BA%D0%B0.jpg",
+     "selite": "Avatšanlahti on suojaisa luonnonsatama, jonka rannalla Petropavlovsk-Kamtšatski sijaitsee.",
+     "leveys": 4272,
+     "korkeus": 2848,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Avacha bay, Mutnovsky and Vilyuchinsky volcanoes.png",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Avacha_bay%2C_Mutnovsky_and_Vilyuchinsky_volcanoes.png?width=1280",
+     "tekija": "Nikita Zhuravlev",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Avacha_bay%2C_Mutnovsky_and_Vilyuchinsky_volcanoes.png",
+     "selite": "Lahden takana kohoavat Kamtšatkan eteläiset tulivuoret.",
+     "leveys": 5481,
+     "korkeus": 3083,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Avacha Bay viewed from Sopka Mishennaya in Petropavlovsk-Kamchatskiy 28 August 2010.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Avacha_Bay_viewed_from_Sopka_Mishennaya_in_Petropavlovsk-Kamchatskiy_28_August_2010.jpg?width=1280",
+     "tekija": "Aviateur · Moscow",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Avacha_Bay_viewed_from_Sopka_Mishennaya_in_Petropavlovsk-Kamchatskiy_28_August_2010.jpg",
+     "selite": "Avatšanlahden suu avautuu Tyyneenmereen kaupungin yläpuolelta katsottuna.",
+     "leveys": 1200,
+     "korkeus": 716,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q839630",
+   "nimi": "Korjakskaja sopka",
+   "peruste": "sitelinks",
+   "koko_m": 8000,
+   "lat": 53.31667,
+   "lon": 158.68333,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Kamchatka Volcano Koryaksky (24231533812).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kamchatka_Volcano_Koryaksky_(24231533812).jpg?width=1280",
+     "tekija": "kuhnmi",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kamchatka_Volcano_Koryaksky_(24231533812).jpg",
+     "selite": "Korjakskaja sopka kohoaa Petropavlovskin ja Jelizovon taakse symmetrisenä tulivuorena.",
+     "leveys": 5874,
+     "korkeus": 3671,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Koryaksky Volcano (15498556068).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Koryaksky_Volcano_(15498556068).jpg?width=1280",
+     "tekija": "kuhnmi",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Koryaksky_Volcano_(15498556068).jpg",
+     "selite": "Illan valo punertaa aktiivisen tulivuoren rinteitä.",
+     "leveys": 6000,
+     "korkeus": 3375,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Koryaksky Volcano - Kamchatka, Russian Federation - Summer 1993.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Koryaksky_Volcano_-_Kamchatka%2C_Russian_Federation_-_Summer_1993.jpg?width=1280",
+     "tekija": "Giorgio Galeotti",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Koryaksky_Volcano_-_Kamchatka%2C_Russian_Federation_-_Summer_1993.jpg",
+     "selite": "Lumiset uomat uurtavat vuoren jyrkkää kartiota.",
+     "leveys": 7500,
+     "korkeus": 5000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q791652",
+   "nimi": "Avatšinskaja sopka",
+   "peruste": "sitelinks",
+   "koko_m": 8000,
+   "lat": 53.25556,
+   "lon": 158.83333,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Avachinsky Volcano (23682444539).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Avachinsky_Volcano_(23682444539).jpg?width=1280",
+     "tekija": "kuhnmi",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Avachinsky_Volcano_(23682444539).jpg",
+     "selite": "Avatšinskaja sopka on Petropavlovskin lähimpiä aktiivisia tulivuoria ja suosittu vaelluskohde.",
+     "leveys": 5619,
+     "korkeus": 3512,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Avachinsky volcano - 54749943768.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Avachinsky_volcano_-_54749943768.jpg?width=1280",
+     "tekija": "-= Nikita Zhuravlev =-",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Avachinsky_volcano_-_54749943768.jpg",
+     "selite": "Kraatterin punertavat kivet ja höyry paljastavat tulivuoren toiminnan.",
+     "leveys": 5568,
+     "korkeus": 3132,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q48784",
+   "nimi": "Tolbatšik",
+   "peruste": "sitelinks",
+   "koko_m": 10000,
+   "lat": 55.83,
+   "lon": 160.33,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Tolbachik (cropped).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tolbachik_(cropped).jpg?width=1280",
+     "tekija": "Original: Anton Korablev Derivative work: Aristeas",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tolbachik_(cropped).jpg",
+     "selite": "Tolbatšik on Kljutševskajan tulivuorialueen laavakenttien ja tuhkakartioiden vuori.",
+     "leveys": 6000,
+     "korkeus": 2750,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Tolbatschik aus Südwesten.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tolbatschik_aus_S%C3%BCdwesten.jpg?width=1280",
+     "tekija": "Leo Palkovics",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tolbatschik_aus_S%C3%BCdwesten.jpg",
+     "selite": "Tulivuoren lumipeitteinen huippu kohoaa mustan tuhkamaan yläpuolelle.",
+     "leveys": 4320,
+     "korkeus": 3116,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1471913",
+   "nimi": "Kurilijärvi",
+   "peruste": "sitelinks",
+   "koko_m": 8000,
+   "lat": 51.45722,
+   "lon": 157.09861,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Kurilskoye lake - panoramio (10).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kurilskoye_lake_-_panoramio_(10).jpg?width=1280",
+     "tekija": "lusika33",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kurilskoye_lake_-_panoramio_(10).jpg",
+     "selite": "Kurilijärvi on Etelä-Kamtšatkan kraatterijärvi, jonka rannoilla elää lohia ja karhuja.",
+     "leveys": 3000,
+     "korkeus": 1839,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Kurilskoye lake - panoramio (1).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kurilskoye_lake_-_panoramio_(1).jpg?width=1280",
+     "tekija": "lusika33",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kurilskoye_lake_-_panoramio_(1).jpg",
+     "selite": "Järven keskellä kohoaa vihreä kallioinen saari.",
+     "leveys": 3000,
+     "korkeus": 2002,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q864337",
+   "nimi": "Karymskaja sopka",
+   "peruste": "sitelinks",
+   "koko_m": 6000,
+   "lat": 54.04778,
+   "lon": 159.44222,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Действующий вулкан Карымская Сопка на Камчатке.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%94%D0%B5%D0%B9%D1%81%D1%82%D0%B2%D1%83%D1%8E%D1%89%D0%B8%D0%B9_%D0%B2%D1%83%D0%BB%D0%BA%D0%B0%D0%BD_%D0%9A%D0%B0%D1%80%D1%8B%D0%BC%D1%81%D0%BA%D0%B0%D1%8F_%D0%A1%D0%BE%D0%BF%D0%BA%D0%B0_%D0%BD%D0%B0_%D0%9A%D0%B0%D0%BC%D1%87%D0%B0%D1%82%D0%BA%D0%B5.jpg?width=1280",
+     "tekija": "Tany Solovey",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%D0%94%D0%B5%D0%B9%D1%81%D1%82%D0%B2%D1%83%D1%8E%D1%89%D0%B8%D0%B9_%D0%B2%D1%83%D0%BB%D0%BA%D0%B0%D0%BD_%D0%9A%D0%B0%D1%80%D1%8B%D0%BC%D1%81%D0%BA%D0%B0%D1%8F_%D0%A1%D0%BE%D0%BF%D0%BA%D0%B0_%D0%BD%D0%B0_%D0%9A%D0%B0%D0%BC%D1%87%D0%B0%D1%82%D0%BA%D0%B5.jpg",
+     "selite": "Karymskaja sopka on yksi Kamtšatkan aktiivisimmista tulivuorista, joka purkautuu usein.",
+     "leveys": 4608,
+     "korkeus": 3072,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Kamchatka Kamchatka Landscape (17539395548).jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kamchatka_Kamchatka_Landscape_(17539395548).jpg?width=1280",
+   "tekija": "kuhnmi",
+   "lisenssi": "CC BY 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kamchatka_Kamchatka_Landscape_(17539395548).jpg",
+   "selite": "Kamtšatkan rannikon kallioiden ja tulivuorten maisema avautuu Tyynenmeren yli.",
+   "leveys": 6000,
+   "korkeus": 3375,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Three Volcanoes-ElizovskyDistrict-Russia.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Three_Volcanoes-ElizovskyDistrict-Russia.jpg?width=1280",
+   "tekija": "Козинцев",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Three_Volcanoes-ElizovskyDistrict-Russia.jpg",
+   "selite": "Kamtšatkan tulivuoret kohoavat tuhkaisen tasangon taakse.",
+   "leveys": 5760,
+   "korkeus": 3840,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

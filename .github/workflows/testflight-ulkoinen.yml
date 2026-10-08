@@ -22,6 +22,10 @@ on:
         description: 'Pilkuin erotetut CFBundleVersionit, jotka vanhennetaan ensin (vain omistajan luvalla)'
         type: string
         default: ''
+      poista:
+        description: 'Pilkuin erotetut CFBundleVersionit, jotka irrotetaan ulkoisesta ryhmästä (vain Päätoimittajan/omistajan luvalla)'
+        type: string
+        default: ''
       bundle_id:
         description: 'Bundle id'
         type: string
@@ -71,10 +75,11 @@ jobs:
           BUILD: ${{ inputs.build_numero }}
           RYHMA: ${{ inputs.ryhma }}
           VANHENNA: ${{ inputs.vanhenna }}
+          POISTA: ${{ inputs.poista }}
         run: |
           set -euo pipefail
           python3 -m pip install --quiet --break-system-packages "pyjwt[crypto]==2.9.0"
-          python3 tools/testflight/ulkoinen-ryhma.py --bundle-id "${{ inputs.bundle_id }}" --build "$BUILD" --ryhma "$RYHMA" --vanhenna "$VANHENNA"
+          python3 tools/testflight/ulkoinen-ryhma.py --bundle-id "${{ inputs.bundle_id }}" --build "$BUILD" --ryhma "$RYHMA" --vanhenna "$VANHENNA" --poista "$POISTA"
 
       - name: Siivoa avain
         if: always()

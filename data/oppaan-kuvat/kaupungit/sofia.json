@@ -1,0 +1,395 @@
+{
+ "kaupunki": "sofia",
+ "kaupunkiQ": "Q472",
+ "kohteet": [
+  {
+   "q": "Q43282",
+   "nimi": "Aleksanteri Nevskin katedraali",
+   "peruste": "pelin nosto",
+   "koko_m": 120,
+   "lat": 42.69584,
+   "lon": 23.33297,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "AlexanderNevskyCathedral-Sofia-6.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/AlexanderNevskyCathedral-Sofia-6.jpg?width=1280",
+     "tekija": "Plamen Agov (user:MrPanyGoff)",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:AlexanderNevskyCathedral-Sofia-6.jpg",
+     "selite": "Aleksanteri Nevskin katedraali on Sofian tunnetuin maamerkki ja yksi Balkanin suurimmista ortodoksikirkoista.",
+     "leveys": 3127,
+     "korkeus": 1986,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Saint Alexander Nevsky Cathedral, Façade from Northeast.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Saint_Alexander_Nevsky_Cathedral%2C_Fa%C3%A7ade_from_Northeast.jpg?width=1280",
+     "tekija": "Julian Lupyan",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Saint_Alexander_Nevsky_Cathedral%2C_Fa%C3%A7ade_from_Northeast.jpg",
+     "selite": "Katedraalin kullatut kupolit ja vihreät kattopinnat hallitsevat torin laitaa.",
+     "leveys": 6213,
+     "korkeus": 3914,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Alexander Nevsky Cathedral, Sofia (by Pudelek).JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Alexander_Nevsky_Cathedral%2C_Sofia_(by_Pudelek).JPG?width=1280",
+     "tekija": "Pudelek (Marcin Szala)",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Alexander_Nevsky_Cathedral%2C_Sofia_(by_Pudelek).JPG",
+     "selite": "Kirkko rakennettiin Bulgarian vapautuksen muistoksi venäläisten sotilaiden kunniaksi.",
+     "leveys": 2908,
+     "korkeus": 1883,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q276553",
+   "nimi": "Bojanan kirkko",
+   "peruste": "UNESCO",
+   "koko_m": 60,
+   "lat": 42.64467,
+   "lon": 23.26617,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Boyana Church 2 TB.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Boyana_Church_2_TB.JPG?width=1280",
+     "tekija": "Todor Bozhinov / Тодор Божинов",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Boyana_Church_2_TB.JPG",
+     "selite": "Bojanan kirkko on pieni keskiaikainen tiilikirkko Sofian laitamilla, ja se kuuluu UNESCOn maailmanperintöön.",
+     "leveys": 3648,
+     "korkeus": 2736,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Boyana Church Mural Paintings.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Boyana_Church_Mural_Paintings.jpg?width=1280",
+     "tekija": "Interact-Bulgaria",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Boyana_Church_Mural_Paintings.jpg",
+     "selite": "Sisällä on vuodelta 1259 peräisin olevia freskoja, joiden realismi oli aikanaan harvinaista.",
+     "leveys": 6264,
+     "korkeus": 2986,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2598073",
+   "nimi": "Pyhän Yrjön rotunda",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": 42.69686,
+   "lon": 23.32286,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Saint George Rotunda Church, Sofia (1).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Saint_George_Rotunda_Church%2C_Sofia_(1).jpg?width=1280",
+     "tekija": "Radosław Botev",
+     "lisenssi": "CC BY 3.0 pl",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0/pl/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Saint_George_Rotunda_Church%2C_Sofia_(1).jpg",
+     "selite": "Pyhän Yrjön rotunda on Sofian vanhin säilynyt rakennus, ja sen punatiiliset seinät ovat peräisin roomalaisajalta.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Saint George Rotunda Church, Sofia, Bulgaria (1).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Saint_George_Rotunda_Church%2C_Sofia%2C_Bulgaria_(1).jpg?width=1280",
+     "tekija": "TodorBelomorski",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Saint_George_Rotunda_Church%2C_Sofia%2C_Bulgaria_(1).jpg",
+     "selite": "Rotunda piilee nykyisten hallintorakennusten ympäröimässä sisäpihassa.",
+     "leveys": 4128,
+     "korkeus": 3096,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q520753",
+   "nimi": "Sveta Nedelyan kirkko",
+   "peruste": "sitelinks",
+   "koko_m": 80,
+   "lat": 42.69678,
+   "lon": 23.32155,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "StNedelyaChurch Sofia.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/StNedelyaChurch_Sofia.jpg?width=1280",
+     "tekija": "MrPanyGoff",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:StNedelyaChurch_Sofia.jpg",
+     "selite": "Sveta Nedelyan kirkko on Sofian keskustan aukion ortodoksinen pääkirkko.",
+     "leveys": 2668,
+     "korkeus": 1900,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Saint Nedelya Church, Sofia (2).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Saint_Nedelya_Church%2C_Sofia_(2).jpg?width=1280",
+     "tekija": "Radosław Botev",
+     "lisenssi": "CC BY 3.0 pl",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0/pl/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Saint_Nedelya_Church%2C_Sofia_(2).jpg",
+     "selite": "Kirkon kupoli ja pylväskäytävä erottuvat kaupungin keskiaikaisesta kerroksesta.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q790052",
+   "nimi": "Banja Bashin moskeija",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": 42.69951,
+   "lon": 23.32258,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Banya Bashi Mosque, Sofia.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Banya_Bashi_Mosque%2C_Sofia.JPG?width=1280",
+     "tekija": "Pudelek (Marcin Szala)",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Banya_Bashi_Mosque%2C_Sofia.JPG",
+     "selite": "Banja Bashin moskeija on 1500-luvulla rakennettu ottomaanien ajan pyhäkkö Sofian keskustassa.",
+     "leveys": 2763,
+     "korkeus": 1918,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Banya Bashi Mosque.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Banya_Bashi_Mosque.jpg?width=1280",
+     "tekija": "Apokats",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Banya_Bashi_Mosque.jpg",
+     "selite": "Moskeijan pyöreä kupoli ja korkea minareetti erottuvat tiilirakennuksen yllä.",
+     "leveys": 3264,
+     "korkeus": 2448,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q841581",
+   "nimi": "Sofian yliopisto",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 42.69361,
+   "lon": 23.335,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Sofia University \"St. Kliment Ohridski\" (37849719131).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sofia_University_%22St._Kliment_Ohridski%22_(37849719131).jpg?width=1280",
+     "tekija": "Deensel",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Sofia_University_%22St._Kliment_Ohridski%22_(37849719131).jpg",
+     "selite": "Sofian yliopisto on Bulgarian vanhin korkeakoulu, ja sen päärakennus seisoo kaupungin keskustassa.",
+     "leveys": 3712,
+     "korkeus": 3006,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3269914",
+   "nimi": "Kansalliskulttuuripalatsi",
+   "peruste": "pelin nosto",
+   "koko_m": 300,
+   "lat": 42.68472,
+   "lon": 23.31889,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "National Palace of Culture, Sofia 2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/National_Palace_of_Culture%2C_Sofia_2.jpg?width=1280",
+     "tekija": "Ivano Giambattista",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:National_Palace_of_Culture%2C_Sofia_2.jpg",
+     "selite": "Kansalliskulttuuripalatsi on Bulgarian suurin kongressi- ja kulttuurikeskus, jonka edustalla on suihkulähteitä.",
+     "leveys": 4000,
+     "korkeus": 2701,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "National Palace of Culture (23997858848).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/National_Palace_of_Culture_(23997858848).jpg?width=1280",
+     "tekija": "Deensel",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:National_Palace_of_Culture_(23997858848).jpg",
+     "selite": "Palatsin edustalta johtaa puiston läpi pitkä suihkulähdeaukio kohti Vitoshaa.",
+     "leveys": 2992,
+     "korkeus": 3992,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q942127",
+   "nimi": "Sofian synagoga",
+   "peruste": "sitelinks",
+   "koko_m": 60,
+   "lat": 42.70028,
+   "lon": 23.32101,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Sofia Synagogue 11c.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sofia_Synagogue_11c.jpg?width=1280",
+     "tekija": "Plamen Agov (Пламен Агов)",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Sofia_Synagogue_11c.jpg",
+     "selite": "Sofian synagoga on Balkanin suurimpia ja koristeellisia, maurilaistyylisiä synagogia.",
+     "leveys": 2363,
+     "korkeus": 1784,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "CentralSynagogue-Sofia009.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/CentralSynagogue-Sofia009.jpg?width=1280",
+     "tekija": "Gitanes232",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:CentralSynagogue-Sofia009.jpg",
+     "selite": "Julkisivun raidalliset tiilet ja kolmilehtiset ikkunat ovat tyypillistä maurilaista tyyliä.",
+     "leveys": 3120,
+     "korkeus": 4160,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1858012",
+   "nimi": "Ivan Vazovin kansallisteatteri",
+   "peruste": "sitelinks",
+   "koko_m": 80,
+   "lat": 42.69417,
+   "lon": 23.32656,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "IvanVazov National Theatre 7.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/IvanVazov_National_Theatre_7.jpg?width=1280",
+     "tekija": "Plamen Agov (user:MrPanyGoff)",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:IvanVazov_National_Theatre_7.jpg",
+     "selite": "Ivan Vazovin kansallisteatteri on uusklassinen teatteritalo Sofian keskustan puistossa.",
+     "leveys": 2703,
+     "korkeus": 1950,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Ivan Vazov National Theatre, Sofia.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ivan_Vazov_National_Theatre%2C_Sofia.JPG?width=1280",
+     "tekija": "Pudelek (Marcin Szala)",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ivan_Vazov_National_Theatre%2C_Sofia.JPG",
+     "selite": "Teatterin edessä on suihkulähteitä ja kahviloita, ja se on kaupunkilaisten suosittu kohtaamispaikka.",
+     "leveys": 2134,
+     "korkeus": 1509,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q190435",
+   "nimi": "Sofian keskeinen mineraalikylpylä",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": 42.69937,
+   "lon": 23.32368,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Sofia Central Mineral Baths 20180224.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sofia_Central_Mineral_Baths_20180224.jpg?width=1280",
+     "tekija": "Suicasmo",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Sofia_Central_Mineral_Baths_20180224.jpg",
+     "selite": "Entinen kylpylärakennus on tiilikoristeinen jugend-henkinen talo, joka kertoo kaupungin kuumista lähteistä.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "CentralMineralBath-Sofia-8a 3.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/CentralMineralBath-Sofia-8a_3.jpg?width=1280",
+     "tekija": "MrPanyGoff",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:CentralMineralBath-Sofia-8a_3.jpg",
+     "selite": "Raidallinen julkisivu ja kupolikatto tekevät rakennuksesta tunnistettavan.",
+     "leveys": 2188,
+     "korkeus": 1952,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Sofia seen from Vitosha 1.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sofia_seen_from_Vitosha_1.jpg?width=1280",
+   "tekija": "Ivano Giambattista",
+   "lisenssi": "CC0",
+   "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Sofia_seen_from_Vitosha_1.jpg",
+   "selite": "Vitosha-vuoren rinteiltä Sofia levittäytyy laajaksi kaupungiksi laaksoon.",
+   "leveys": 4000,
+   "korkeus": 2719,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Cathedral Saint Alexander Nevsky (23997168458).jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cathedral_Saint_Alexander_Nevsky_(23997168458).jpg?width=1280",
+   "tekija": "Deensel",
+   "lisenssi": "CC BY 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cathedral_Saint_Alexander_Nevsky_(23997168458).jpg",
+   "selite": "Ilmasta näkee Sofian keskustan katedraaleineen ja taustalla kohoavan Vitoshan.",
+   "leveys": 2823,
+   "korkeus": 3528,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

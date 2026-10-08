@@ -1,0 +1,225 @@
+{
+ "kaupunki": "timbuktu",
+ "kaupunkiQ": "Q9427",
+ "kohteet": [
+  {
+   "q": "Q2480949",
+   "nimi": "Djingareyberin moskeija",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": 16.77139,
+   "lon": -3.01,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Mali - Timbuktu, the oldest of the two mosques (8441194496).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mali_-_Timbuktu%2C_the_oldest_of_the_two_mosques_(8441194496).jpg?width=1280",
+     "tekija": "Jeanne Menjoulet from Paris, France",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mali_-_Timbuktu%2C_the_oldest_of_the_two_mosques_(8441194496).jpg",
+     "selite": "Djingareyberin savimoskeija on kaupungin vanhin, ja sen paksut seinät ovat kestäneet Saharan kuivassa ilmastossa.",
+     "leveys": 6970,
+     "korkeus": 4715,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "La plus grande Mosquée de la ville de Tombouctou.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/La_plus_grande_Mosqu%C3%A9e_de_la_ville_de_Tombouctou.jpg?width=1280",
+     "tekija": "Ousmane Garba Kounta",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:La_plus_grande_Mosqu%C3%A9e_de_la_ville_de_Tombouctou.jpg",
+     "selite": "Moskeijan pitkää muuria koristavat tapit ja hammastettu harja, jotka ovat tyypillistä sudanilaista savirakentamista.",
+     "leveys": 3888,
+     "korkeus": 2592,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Djinguereber in Timbuktu.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Djinguereber_in_Timbuktu.jpg?width=1280",
+     "tekija": "upyernoz from Haverford, USA",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Djinguereber_in_Timbuktu.jpg",
+     "selite": "Moskeijan pyramidimainen minareetti nousee muurin takaa Timbuktun hiekkaisen kadun yllä.",
+     "leveys": 2796,
+     "korkeus": 1804,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1265294",
+   "nimi": "Sankorén moskeija",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": 16.77583,
+   "lon": -3.00556,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Mosquée Sankoré.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mosqu%C3%A9e_Sankor%C3%A9.jpg?width=1280",
+     "tekija": "Ousmane Garba Kounta",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mosqu%C3%A9e_Sankor%C3%A9.jpg",
+     "selite": "Sankorén moskeija oli keskiajan Timbuktun oppineisuuden keskus, ja sen kartiomainen minareetti on kaupungin tunnuksia.",
+     "leveys": 3888,
+     "korkeus": 2592,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "2007 Sankore Mosque Timbuktu 02.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2007_Sankore_Mosque_Timbuktu_02.jpg?width=1280",
+     "tekija": "Anne and David",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2007_Sankore_Mosque_Timbuktu_02.jpg",
+     "selite": "Minareetista työntyvät puupalkit toimivat rappaajien telineinä, kun savipinta korjataan.",
+     "leveys": 1600,
+     "korkeus": 1200,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2843735",
+   "nimi": "Sidi Yahyan moskeija",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": 16.77233,
+   "lon": -3.00717,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "ASC Leiden - van Achterberg Collection - 05 - 36 - La mosquée de Sidi Yahya avec un tombeau - Tombouctou, Mali - Novembre-décembre 1993.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/ASC_Leiden_-_van_Achterberg_Collection_-_05_-_36_-_La_mosqu%C3%A9e_de_Sidi_Yahya_avec_un_tombeau_-_Tombouctou%2C_Mali_-_Novembre-d%C3%A9cembre_1993.jpg?width=1280",
+     "tekija": "Angeline A. van Achterberg",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:ASC_Leiden_-_van_Achterberg_Collection_-_05_-_36_-_La_mosqu%C3%A9e_de_Sidi_Yahya_avec_un_tombeau_-_Tombouctou%2C_Mali_-_Novembre-d%C3%A9cembre_1993.jpg",
+     "selite": "Sidi Yahyan moskeija kuuluu Timbuktun kolmeen suureen savimoskeijaan, jotka muodostivat kaupungin yliopiston.",
+     "leveys": 4555,
+     "korkeus": 6756,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "ASC Leiden - van Achterberg Collection - 05 - 38 - La mosquée de Sidi Yahya. L'entrée de l'école coranique - Tombouctou, Mali - Novembre-décembre 1993.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/ASC_Leiden_-_van_Achterberg_Collection_-_05_-_38_-_La_mosqu%C3%A9e_de_Sidi_Yahya._L'entr%C3%A9e_de_l'%C3%A9cole_coranique_-_Tombouctou%2C_Mali_-_Novembre-d%C3%A9cembre_1993.jpg?width=1280",
+     "tekija": "Angeline A. van Achterberg",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:ASC_Leiden_-_van_Achterberg_Collection_-_05_-_38_-_La_mosqu%C3%A9e_de_Sidi_Yahya._L'entr%C3%A9e_de_l'%C3%A9cole_coranique_-_Tombouctou%2C_Mali_-_Novembre-d%C3%A9cembre_1993.jpg",
+     "selite": "Moskeijan muurissa on hammastettu harja ja ovi, jonka takana toimi koraanikoulu.",
+     "leveys": 6756,
+     "korkeus": 4450,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3815720",
+   "nimi": "Ahmed Baban instituutti",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": 16.77683,
+   "lon": -3.0058,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "CEDRHAB Timbuktu.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/CEDRHAB_Timbuktu.jpg?width=1280",
+     "tekija": "upyernoz from Haverford, USA",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:CEDRHAB_Timbuktu.jpg",
+     "selite": "Ahmed Baban instituutti säilyttää ja entisöi Timbuktun satoja vuosia vanhoja käsikirjoituksia.",
+     "leveys": 2490,
+     "korkeus": 1512,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q96145287",
+   "nimi": "Gordon Laingin talo",
+   "peruste": "pelin nosto",
+   "koko_m": 30,
+   "lat": 16.77244,
+   "lon": -3.00873,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Gordon Laing House.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gordon_Laing_House.jpg?width=1280",
+     "tekija": "upyernoz from Haverford, USA",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Gordon_Laing_House.jpg",
+     "selite": "Skotlantilainen tutkimusmatkailija Gordon Laing majoittui tässä talossa vuonna 1826, ensimmäisenä eurooppalaisena Timbuktussa.",
+     "leveys": 1817,
+     "korkeus": 2806,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q96145612",
+   "nimi": "René Cailliéen talo",
+   "peruste": "pelin nosto",
+   "koko_m": 30,
+   "lat": 16.77233,
+   "lon": -3.00779,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "ASC Leiden - van Achterberg Collection - 05 - 12 - La maison de René Caillié, explorateur - Tombouctou, Mali - Novembre-décembre 1993.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/ASC_Leiden_-_van_Achterberg_Collection_-_05_-_12_-_La_maison_de_Ren%C3%A9_Cailli%C3%A9%2C_explorateur_-_Tombouctou%2C_Mali_-_Novembre-d%C3%A9cembre_1993.jpg?width=1280",
+     "tekija": "Angeline A. van Achterberg",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:ASC_Leiden_-_van_Achterberg_Collection_-_05_-_12_-_La_maison_de_Ren%C3%A9_Cailli%C3%A9%2C_explorateur_-_Tombouctou%2C_Mali_-_Novembre-d%C3%A9cembre_1993.jpg",
+     "selite": "Ranskalainen René Caillié asui tässä talossa Timbuktussa vuonna 1828, ja ovea koristaa muistolaatta.",
+     "leveys": 4450,
+     "korkeus": 6756,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "TIMBUKTU-EINZUG.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/TIMBUKTU-EINZUG.jpg?width=1280",
+   "tekija": "Drawn by Martin Bernatz after a sketch by Heinrich Barth",
+   "lisenssi": "Public domain",
+   "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:TIMBUKTU-EINZUG.jpg",
+   "selite": "Heinrich Barthin retkikunta lähestyy Timbuktua vuonna 1853, ja kaupungin minareetit erottuvat horisontissa.",
+   "leveys": 3594,
+   "korkeus": 2207,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Empty street in Timbuktu.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Empty_street_in_Timbuktu.jpg?width=1280",
+   "tekija": "upyernoz from Haverford, USA",
+   "lisenssi": "CC BY 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Empty_street_in_Timbuktu.jpg",
+   "selite": "Timbuktun hiekkaiset kadut kulkevat savitalojen välissä Saharan reunalla.",
+   "leveys": 2772,
+   "korkeus": 1581,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

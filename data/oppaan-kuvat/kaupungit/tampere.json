@@ -1,0 +1,359 @@
+{
+ "kaupunki": "tampere",
+ "kaupunkiQ": "Q40840",
+ "kohteet": [
+  {
+   "q": "Q1190334",
+   "nimi": "Näsinneula",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": 61.50479,
+   "lon": 23.74266,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Tampere view 2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tampere_view_2.jpg?width=1280",
+     "tekija": "Tiia Monto",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tampere_view_2.jpg",
+     "selite": "Näsinneula on Särkänniemen näköalatorni, joka kohoaa Näsijärven rannalla Tampereen siluetissa.",
+     "leveys": 4865,
+     "korkeus": 2897,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "FI-Tampere-20131006 120609 HDR.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/FI-Tampere-20131006_120609_HDR.JPG?width=1280",
+     "tekija": "Brylie Oxley",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:FI-Tampere-20131006_120609_HDR.JPG",
+     "selite": "Tornin huipulla on näköalatasanne ja pyörivä ravintola.",
+     "leveys": 2592,
+     "korkeus": 4608,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1236638",
+   "nimi": "Tampereen tuomiokirkko",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": 61.5025,
+   "lon": 23.76972,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Tampereen tuomiokirkko (T03).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tampereen_tuomiokirkko_(T03).jpg?width=1280",
+     "tekija": "Old Pionear",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tampereen_tuomiokirkko_(T03).jpg",
+     "selite": "Tuomiokirkko on kansallisromanttisen arkkitehtuurin tunnetuimpia kirkkoja.",
+     "leveys": 3139,
+     "korkeus": 4740,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Catedral de Tampere 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Catedral_de_Tampere_01.jpg?width=1280",
+     "tekija": "Axel Cotón Gutiérrez",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Catedral_de_Tampere_01.jpg",
+     "selite": "Graniittirakennuksen jyhkeät tornit ja kaarevat ikkunat tekevät kirkosta tunnistettavan.",
+     "leveys": 2592,
+     "korkeus": 1944,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q222028",
+   "nimi": "Tammerkoski",
+   "peruste": "sitelinks",
+   "koko_m": 300,
+   "lat": 61.49806,
+   "lon": 23.76389,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Tammerkoski patosillalta 2017 02.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tammerkoski_patosillalta_2017_02.jpg?width=1280",
+     "tekija": "Trogain",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tammerkoski_patosillalta_2017_02.jpg",
+     "selite": "Tammerkoski virtaa Tampereen halki ja ajoi aikanaan kaupungin teollisuutta.",
+     "leveys": 4160,
+     "korkeus": 3120,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Tammerkoski (22286032958).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tammerkoski_(22286032958).jpg?width=1280",
+     "tekija": "kooikkari from Finland",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tammerkoski_(22286032958).jpg",
+     "selite": "Illalla kosken rannan tehdasrakennukset ja piippu valaistaan.",
+     "leveys": 4608,
+     "korkeus": 3072,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q961917",
+   "nimi": "Särkänniemi",
+   "peruste": "sitelinks",
+   "koko_m": 500,
+   "lat": 61.50528,
+   "lon": 23.74389,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Särkänniemi 20150804.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/S%C3%A4rk%C3%A4nniemi_20150804.jpg?width=1280",
+     "tekija": "Cryonic07",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:S%C3%A4rk%C3%A4nniemi_20150804.jpg",
+     "selite": "Särkänniemi on niemelle rakennettu huvipuisto ja elämyskeskus Näsinneulan juurella.",
+     "leveys": 5060,
+     "korkeus": 3141,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Näsinneula view 8.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/N%C3%A4sinneula_view_8.jpg?width=1280",
+     "tekija": "kallerna",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:N%C3%A4sinneula_view_8.jpg",
+     "selite": "Ilmasta näkyvät huvipuiston laitteet ja niemen muoto järven rannalla.",
+     "leveys": 5100,
+     "korkeus": 3400,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q15846380",
+   "nimi": "Finlaysonin tehdasalue",
+   "peruste": "pelin nosto",
+   "koko_m": 400,
+   "lat": 61.50168,
+   "lon": 23.75977,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Finlaysonin alueen Kuusvooninkinen.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Finlaysonin_alueen_Kuusvooninkinen.jpg?width=1280",
+     "tekija": "Jokinen Martti",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Finlaysonin_alueen_Kuusvooninkinen.jpg",
+     "selite": "Finlaysonin tehdasalue oli Pohjoismaiden suurimpia teollisuusalueita, ja sen tiilirakennukset ovat nyt kulttuurikäytössä.",
+     "leveys": 4140,
+     "korkeus": 2800,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Finlayson, kuusvooninkinen.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Finlayson%2C_kuusvooninkinen.jpg?width=1280",
+     "tekija": "Laura Jokisalo",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Finlayson%2C_kuusvooninkinen.jpg",
+     "selite": "Valkoisen kuusvooninkisen torni on alueen tunnistettava osa.",
+     "leveys": 4000,
+     "korkeus": 6000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3533268",
+   "nimi": "Pyynikin näkötorni",
+   "peruste": "pelin nosto",
+   "koko_m": 40,
+   "lat": 61.49633,
+   "lon": 23.732,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Pyynikki tower.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Pyynikki_tower.jpg?width=1280",
+     "tekija": "Tiia Monto",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Pyynikki_tower.jpg",
+     "selite": "Pyynikin näkötorni sijaitsee Pyynikinharjun päällä, ja sen kahvila tunnetaan munkeistaan.",
+     "leveys": 3195,
+     "korkeus": 4956,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Parque y Torre Pyynikki (Tampere) 02.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Parque_y_Torre_Pyynikki_(Tampere)_02.jpg?width=1280",
+     "tekija": "Axel Cotón Gutiérrez",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Parque_y_Torre_Pyynikki_(Tampere)_02.jpg",
+     "selite": "Tornista avautuu näkymä Näsijärvelle ja Näsinneulalle.",
+     "leveys": 2592,
+     "korkeus": 1944,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q17319120",
+   "nimi": "Hämeensilta",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": 61.49792,
+   "lon": 23.76361,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Hämeensilta1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/H%C3%A4meensilta1.jpg?width=1280",
+     "tekija": "Visa580",
+     "lisenssi": "CC BY 2.5",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.5",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:H%C3%A4meensilta1.jpg",
+     "selite": "Hämeensilta ylittää Tammerkosken keskustassa ja yhdistää kaupungin kaksi puolta.",
+     "leveys": 2304,
+     "korkeus": 1728,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "FI-Tampere-20131012 182314 HDR.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/FI-Tampere-20131012_182314_HDR.JPG?width=1280",
+     "tekija": "Brylie Oxley",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:FI-Tampere-20131012_182314_HDR.JPG",
+     "selite": "Sillalta näkyy Tammerkosken uoma ja tehdasrakennusten piiput.",
+     "leveys": 4608,
+     "korkeus": 2592,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q18346706",
+   "nimi": "Museokeskus Vapriikki",
+   "peruste": "pelin nosto",
+   "koko_m": 120,
+   "lat": 61.50301,
+   "lon": 23.76036,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Vapriikki 0004 (29559450630).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Vapriikki_0004_(29559450630).jpg?width=1280",
+     "tekija": "Photo: Saana Säilynoja/Vapriikki Photo Archives",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Vapriikki_0004_(29559450630).jpg",
+     "selite": "Vapriikki on entiseen Tampellan konepajaan sijoitettu museokeskus Tammerkosken rannalla.",
+     "leveys": 4741,
+     "korkeus": 3161,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Museokeskus Vapriikki (29769680481).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Museokeskus_Vapriikki_(29769680481).jpg?width=1280",
+     "tekija": "Photo: Saana Säilynoja/Vapriikki Photo Archives",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Museokeskus_Vapriikki_(29769680481).jpg",
+     "selite": "Tiilinen tehdasrakennus ja kosken pato muodostavat museon tunnelmallisen miljöön.",
+     "leveys": 5080,
+     "korkeus": 3387,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q41776569",
+   "nimi": "Amurin työläismuseokortteli",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 61.49928,
+   "lon": 23.74336,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Amuri Museum - Saarikuja - Makasiinikatu C IMG 0174.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Amuri_Museum_-_Saarikuja_-_Makasiinikatu_C_IMG_0174.JPG?width=1280",
+     "tekija": "Anneli Salo",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Amuri_Museum_-_Saarikuja_-_Makasiinikatu_C_IMG_0174.JPG",
+     "selite": "Amurin museokortteli säilyttää puutalokorttelin, jossa näkee tamperelaisten työläisten asumisen eri vuosikymmeniltä.",
+     "leveys": 4000,
+     "korkeus": 2664,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Amuri museum of workers’ housing2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Amuri_museum_of_workers%E2%80%99_housing2.jpg?width=1280",
+     "tekija": "Visa580",
+     "lisenssi": "CC BY 2.5",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.5",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Amuri_museum_of_workers%E2%80%99_housing2.jpg",
+     "selite": "Vanhat puurakennukset ovat tiiviisti kadun varrella.",
+     "leveys": 2304,
+     "korkeus": 1728,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Tampere aerial view 3.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tampere_aerial_view_3.jpg?width=1280",
+   "tekija": "kallerna",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tampere_aerial_view_3.jpg",
+   "selite": "Tampere on rakentunut Näsijärven ja Pyhäjärven väliselle kannakselle.",
+   "leveys": 4900,
+   "korkeus": 3270,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Aerial view Tampere 3.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aerial_view_Tampere_3.jpg?width=1280",
+   "tekija": "kallerna",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aerial_view_Tampere_3.jpg",
+   "selite": "Ilmasta näkyy Tampereen sijainti harjujen ja järvien ympäröimänä.",
+   "leveys": 4700,
+   "korkeus": 3110,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

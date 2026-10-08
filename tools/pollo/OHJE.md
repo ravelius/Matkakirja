@@ -187,7 +187,7 @@ koodimuutos main-haarassa julkaisee workerin uudelleen itsestään.
   valmiin äänen säilöistä tai 204, opas antaa ääni-urlin vain R2:ssa jo olevalle äänelle, eivätkä GET-polut tuota.
   Ohitus vain äänilupalipulla `x-matkakirja-aanilupa` = salaisuus `POLLO_AANILUPA`, omistajan luvalla tarkalle määrälle.
 - **KV:n päiväkiintiö** (6.10.2026, ilmaistaso 1 000 kirjoitusta/vrk; `reuna.js`): kaikki KV-kutsut fail-open. Oppaan
-  äänen teksti on R2:ssa (`opas/teksti/<sha>.json`, KV varana). Istunnon tila (kierros, suunnat, isoisä) ja lisäkuvien
+  äänen teksti on R2:ssa (`opas/teksti/<sha>.json`, KV varana; R2:n elinkaarisääntö `opas-teksti-48h` poistaa tekstit 48 h:n jälkeen, alaikäistarkistus 7.10.2026). Istunnon tila (kierros, suunnat, isoisä) ja lisäkuvien
   välimuisti ovat R2:ssa (`tila/…`, vanhenemisaika oliossa). Tuotantolukot ja Nominatimin vuoro ovat isolaatin muistissa
   (Cache API ei toimi *.workers.dev-osoitteissa). Oppaan IP-laskuri kirjoitetaan harvana
   (10 pyynnön välein), ja testitunnuksen ja kehittäjän pyynnöt eivät kirjoita IP-laskureita. Päivän operaatiot näkyvät

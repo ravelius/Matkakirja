@@ -1,0 +1,289 @@
+{
+ "kaupunki": "kano",
+ "kaupunkiQ": "Q182984",
+ "kohteet": [
+  {
+   "q": "Q683614",
+   "nimi": "Kanon suurmoskeija",
+   "peruste": "pelin nosto",
+   "koko_m": 250,
+   "lat": 11.99486,
+   "lon": 8.51764,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "The Kano Central Mosque.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/The_Kano_Central_Mosque.jpg?width=1280",
+     "tekija": "Usmanmaifada",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:The_Kano_Central_Mosque.jpg",
+     "selite": "Kanon keskusmoskeijan kaksi minarettia ja vihreä kupoli hallitsevat kaupungin keskustaa.",
+     "leveys": 4608,
+     "korkeus": 2240,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Kano Mosque in 1960.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kano_Mosque_in_1960.jpg?width=1280",
+     "tekija": "Dr Mary Gillham Archive Project",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kano_Mosque_in_1960.jpg",
+     "selite": "Valkoinen moskeija ja sen sirot minareetit näkyvät puiden takaa.",
+     "leveys": 1500,
+     "korkeus": 981,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3457094",
+   "nimi": "Gidan Rumfa",
+   "peruste": "pelin nosto",
+   "koko_m": 400,
+   "lat": 11.9923,
+   "lon": 8.516,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Gate to the Gidan Rumfa (2009) in Kano, Nigeria..jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gate_to_the_Gidan_Rumfa_(2009)_in_Kano%2C_Nigeria..jpg?width=1280",
+     "tekija": "Jonathan Riddell; Flickr User: jriddell; https://www.flickr.com/photos/jriddell/",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Gate_to_the_Gidan_Rumfa_(2009)_in_Kano%2C_Nigeria..jpg",
+     "selite": "Emiirin palatsin portti on rakennettu hausalaiseen tapaan punaisesta savitiilestä.",
+     "leveys": 2592,
+     "korkeus": 1944,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Gidan Rumfa- Emir Palace Kano.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gidan_Rumfa-_Emir_Palace_Kano.jpg?width=1280",
+     "tekija": "Ikeme Uchechukwu Sixtus",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Gidan_Rumfa-_Emir_Palace_Kano.jpg",
+     "selite": "Palatsin torniportti ja lippu erottuvat Kanon vanhankaupungin ylle.",
+     "leveys": 3024,
+     "korkeus": 4032,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Emires palace Kano 11.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Emires_palace_Kano_11.jpg?width=1280",
+     "tekija": "Muktee1494",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Emires_palace_Kano_11.jpg",
+     "selite": "Palatsin ulkoseinät on koristeltu värikkäin kaarin ja vihrein ovin.",
+     "leveys": 4160,
+     "korkeus": 1872,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q5559489",
+   "nimi": "Gidan Makaman museo",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": 11.9888,
+   "lon": 8.52106,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Gidan Makam Museum Kano.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gidan_Makam_Museum_Kano.jpg?width=1280",
+     "tekija": "Suleiman Umar, Aminu Abdullahi, Abubakar Yusuf, www.kanostreetsonosm.org.ng",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Gidan_Makam_Museum_Kano.jpg",
+     "selite": "Gidan Makaman museo on entinen hausalaisen hallitsijan virkatalo ja Kanon historian museo.",
+     "leveys": 4864,
+     "korkeus": 2736,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "A view of Gidan Makama Museum.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/A_view_of_Gidan_Makama_Museum.jpg?width=1280",
+     "tekija": "Jean-fidele E. Ananou",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:A_view_of_Gidan_Makama_Museum.jpg",
+     "selite": "Savirakennuksen sisäänkäynnin koristeet ovat tyypillistä hausalaista rakennustaidetta.",
+     "leveys": 5539,
+     "korkeus": 3693,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q125759325",
+   "nimi": "Dala-kukkula",
+   "peruste": "pelin nosto",
+   "koko_m": 600,
+   "lat": 12.00921,
+   "lon": 8.50681,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Dala Hill the Cradle of Kano State Nigeria.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dala_Hill_the_Cradle_of_Kano_State_Nigeria.jpg?width=1280",
+     "tekija": "David Nkwa (Nkwafilms)",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Dala_Hill_the_Cradle_of_Kano_State_Nigeria.jpg",
+     "selite": "Dala-kukkula kohoaa kaupungin matalien korttelien keskeltä ja on Kanon vanhin asuinpaikka.",
+     "leveys": 2730,
+     "korkeus": 1536,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Dalla Hill from Kano City.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dalla_Hill_from_Kano_City.jpg?width=1280",
+     "tekija": "DipoTayo",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Dalla_Hill_from_Kano_City.jpg",
+     "selite": "Kukkulalta ja sen juurelta avautuu näkymä kaupungin vanhoille alueille.",
+     "leveys": 4272,
+     "korkeus": 2848,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q6446186",
+   "nimi": "Kurmin tori",
+   "peruste": "pelin nosto",
+   "koko_m": 200,
+   "lat": 12,
+   "lon": 8.51667,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Sandalwood and incense materials at Kurmi Market Kano.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sandalwood_and_incense_materials_at_Kurmi_Market_Kano.jpg?width=1280",
+     "tekija": "Fatima Bukar",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Sandalwood_and_incense_materials_at_Kurmi_Market_Kano.jpg",
+     "selite": "Kurmin torilla myydään yrttejä, mausteita ja suitsukkeita.",
+     "leveys": 2288,
+     "korkeus": 1520,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Packaged herbs.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Packaged_herbs.jpg?width=1280",
+     "tekija": "Fatima Bukar",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Packaged_herbs.jpg",
+     "selite": "Myyjät pakkaavat kuivattuja lääke- ja mausteyrttejä pusseihin.",
+     "leveys": 2235,
+     "korkeus": 1247,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q110825995",
+   "nimi": "Kofar Nassarawan portti",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "aliakset": [
+    "Q25043923"
+   ],
+   "lat": 11.99089,
+   "lon": 8.53068,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Kofar Nasarawa - Kano City Gate.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kofar_Nasarawa_-_Kano_City_Gate.jpg?width=1280",
+     "tekija": "Suleiman Umar, Aminu Abdullahi, Abubakar Yusuf, www.kanostreetsonosm.org.ng",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kofar_Nasarawa_-_Kano_City_Gate.jpg",
+     "selite": "Kofar Nassarawa on yksi Kanon vanhan kaupunginmuurin porteista.",
+     "leveys": 4864,
+     "korkeus": 2736,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Sabuwar Kofa - Kano City Gate.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sabuwar_Kofa_-_Kano_City_Gate.jpg?width=1280",
+     "tekija": "Suleiman Umar, Aminu Abdullahi, Abubakar Yusuf, www.kanostreetsonosm.org.ng",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Sabuwar_Kofa_-_Kano_City_Gate.jpg",
+     "selite": "Muurin portit on uusittu punaisin ja valkoisin kaarikoristein.",
+     "leveys": 4864,
+     "korkeus": 2736,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Ancient Walls of Kano Emirate 02.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ancient_Walls_of_Kano_Emirate_02.jpg?width=1280",
+     "tekija": "Anasskoko",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ancient_Walls_of_Kano_Emirate_02.jpg",
+     "selite": "Muurin vanhat savirakenteet ovat paikoin hyvin kuluneet.",
+     "leveys": 4608,
+     "korkeus": 3456,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "KanofromDalaHill.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/KanofromDalaHill.jpg?width=1280",
+   "tekija": "Shiraz Chakera",
+   "lisenssi": "CC BY-SA 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:KanofromDalaHill.jpg",
+   "selite": "Kanon vanhakaupunki levittäytyy savitalojen mereksi Dala-kukkulan ympärille.",
+   "leveys": 1712,
+   "korkeus": 1286,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Mittelholzer-kano.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mittelholzer-kano.jpg?width=1280",
+   "tekija": "Walter Mittelholzer (1894-1937)",
+   "lisenssi": "Public domain",
+   "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mittelholzer-kano.jpg",
+   "selite": "Vanha ilmakuva näyttää kaupungin tiiviit korttelit 1930-luvun alussa.",
+   "leveys": 1200,
+   "korkeus": 787,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": [
+  {
+   "q": "Q109265005",
+   "nimi": "Kofar Matan värjäämöt",
+   "peruste": "pelin nosto",
+   "lat": 12.00085,
+   "lon": 8.5261,
+   "syy": "vain vesileimallisia tai ihmispainotteisia kuvia"
+  }
+ ]
+}

@@ -3,15 +3,75 @@
  * kaupunkien tiedostot ovat jo ämpärissä. Ämpärin objektit ovat muuttumattomia ja CDN välimuistittaa myös 404:n,
  * joten natiivi hakee tiedoston vain listatuille id:ille.
  *   tiet:       media.matkakirja.app/kartta/tiet-v1/<id>.json tai tiet_polut[id] (yövalot, Linssiseppä)
+ *   esittely:   media.matkakirja.app/opas/esittely-v1/<id>.json tai esittely_polut[id] (esigeneroitu kerronta; worker tarjoaa
+ *               valmiin, natiivi lukee avauksen)
  *   aanikartta: media.matkakirja.app/aanet/aanikartta-v1/<id>.json (kaupunkiäänimaisema, Siirtoseppä; lisätään vasta,
  *               kun kaupungin silmukat ovat ämpärissä)
  * Id: kaupungin nimi pienaakkosin, ä/å → a, ö/ø → o, é → e, välit ja muut merkit → "-" (pariisi, koopenhamina).
  * Lista päivitetään tähän jokaisen viennin jälkeen (Pelikoodari).
  */
 export const OPAS_AINEISTOT = Object.freeze({
-  tiet: ['pariisi', 'venetsia', 'koopenhamina', 'ateena', 'rooma', 'lontoo', 'amsterdam'],   // vienti 6.10. (kartta-tiet-vienti-20261006)
+  tiet: [
+    'pariisi', 'venetsia', 'koopenhamina', 'ateena', 'rooma', 'lontoo', 'amsterdam',   // vienti 6.10. (kartta-tiet-vienti-20261006)
+    'barcelona', 'bergen', 'berliini', 'bryssel', 'budapest', 'bukarest', 'dublin', 'edinburgh', 'firenze', 'granada',
+    'helsinki', 'islanti', 'kosice', 'krakova', 'kreeta', 'lissabon', 'ljubljana', 'luxemburg', 'madrid', 'marseille',
+    'oslo', 'praha', 'sevilla', 'sisilia', 'sofia', 'tampere', 'tukholma', 'valletta', 'varsova', 'vilna',
+    'wien',   // 7.10. 05.29: sallitut 3D-kaupungit (kartta-tiet-vienti-20261007)
+  ],
   // Poikkeavat polut (ämpäri on muuttumaton): 6 km:n säde isoille kaupungeille (Linssiseppä 6.10.), paketti
   // kartta-tiet-vienti-20261006b. Natiivi käyttää tätä polkua, jos id on tässä, muuten kartta/tiet-v1/<id>.json.
   tiet_polut: { pariisi: 'kartta/tiet-v2/pariisi.json', lontoo: 'kartta/tiet-v2/lontoo.json', rooma: 'kartta/tiet-v2/rooma.json' },
-  aanikartta: ['pariisi'],   // kartta 7.10. 00.30 (aanimaisema-vienti-20261006), silmukat 00.47 (-20261007)
+  aanikartta: ['pariisi', 'venetsia', 'koopenhamina'],   // pariisi 7.10. 00.30 (-20261006); venetsia + koopenhamina 03.30 (-20261007b); silmukat aanimaisema-v1
+  // Esigeneroitu oppaan esittely (opas/esittely-v1/<id>.json, worker lukee itse; opas-esittely.js). 7.10.: pilotti; erä 2 (Rooma, Lontoo, Kööpenhamina) omistajan kuuntelun jälkeen.
+  esittely: [
+    'pariisi', 'praha', 'wien', 'rooma', 'lontoo', 'koopenhamina',
+    // Äänettömät testattavaksi (omistaja 7.10. 18.2x; opas/esittely-aaneton-v1, aaneton: true → ei generointia).
+    'amsterdam', 'ateena', 'barcelona', 'bergen', 'berliini', 'bryssel', 'budapest', 'bukarest', 'dublin',
+    'edinburgh', 'firenze', 'granada', 'helsinki', 'islanti', 'kosice', 'krakova', 'kreeta', 'lissabon',
+    'ljubljana', 'luxemburg', 'madrid', 'marseille', 'oslo', 'sevilla', 'sisilia', 'sofia', 'tampere', 'tukholma',
+    'valletta', 'venetsia', 'vilna',
+  ],
+  // Poikkeavat esittelypolut (ämpäri muuttumaton): Praha ja Wien avauksen ja kierros-kentän kanssa 7.10. (-20261007c).
+  // Worker ja natiivi käyttävät tätä polkua, jos id on tässä, muuten opas/esittely-v1/<id>.json.
+  esittely_polut: {
+    praha: 'opas/esittely-v1b/praha.json', wien: 'opas/esittely-v1b/wien.json',
+    amsterdam: 'opas/esittely-aaneton-v1/amsterdam.json',
+    ateena: 'opas/esittely-aaneton-v1/ateena.json',
+    barcelona: 'opas/esittely-aaneton-v1/barcelona.json',
+    bergen: 'opas/esittely-aaneton-v1/bergen.json',
+    berliini: 'opas/esittely-aaneton-v1/berliini.json',
+    bryssel: 'opas/esittely-aaneton-v1/bryssel.json',
+    budapest: 'opas/esittely-aaneton-v1/budapest.json',
+    bukarest: 'opas/esittely-aaneton-v1/bukarest.json',
+    dublin: 'opas/esittely-aaneton-v1/dublin.json',
+    edinburgh: 'opas/esittely-aaneton-v1/edinburgh.json',
+    firenze: 'opas/esittely-aaneton-v1/firenze.json',
+    granada: 'opas/esittely-aaneton-v1/granada.json',
+    helsinki: 'opas/esittely-aaneton-v1/helsinki.json',
+    islanti: 'opas/esittely-aaneton-v1/islanti.json',
+    kosice: 'opas/esittely-aaneton-v1/kosice.json',
+    krakova: 'opas/esittely-aaneton-v1/krakova.json',
+    kreeta: 'opas/esittely-aaneton-v1/kreeta.json',
+    lissabon: 'opas/esittely-aaneton-v1/lissabon.json',
+    ljubljana: 'opas/esittely-aaneton-v1/ljubljana.json',
+    luxemburg: 'opas/esittely-aaneton-v1/luxemburg.json',
+    madrid: 'opas/esittely-aaneton-v1/madrid.json',
+    marseille: 'opas/esittely-aaneton-v1/marseille.json',
+    oslo: 'opas/esittely-aaneton-v1/oslo.json',
+    sevilla: 'opas/esittely-aaneton-v1/sevilla.json',
+    sisilia: 'opas/esittely-aaneton-v1/sisilia.json',
+    sofia: 'opas/esittely-aaneton-v1/sofia.json',
+    tampere: 'opas/esittely-aaneton-v1/tampere.json',
+    tukholma: 'opas/esittely-aaneton-v1/tukholma.json',
+    valletta: 'opas/esittely-aaneton-v1/valletta.json',
+    venetsia: 'opas/esittely-aaneton-v1/venetsia.json',
+    vilna: 'opas/esittely-aaneton-v1/vilna.json',
+  },
+  // Yksityiskohtakuvat (Sisältökirjuri 7.10.; natiivi lentää kuvan sivuun ankkurisanan kohdalla): luettelo media-juuresta.
+  yksityiskohdat_polut: {
+    pariisi: 'esittely/pariisi-v2/pariisi-yksityiskohdat.json',
+    praha: 'esittely/praha-v1/praha-yksityiskohdat.json', wien: 'esittely/wien-v1/wien-yksityiskohdat.json',
+    rooma: 'esittely/rooma-v4/rooma-yksityiskohdat.json', lontoo: 'esittely/lontoo-v1/lontoo-yksityiskohdat.json',
+    koopenhamina: 'esittely/koopenhamina-v1/koopenhamina-yksityiskohdat.json',
+  },
 });

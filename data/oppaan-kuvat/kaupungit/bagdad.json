@@ -1,0 +1,349 @@
+{
+ "kaupunki": "bagdad",
+ "kaupunkiQ": "Q1530",
+ "kohteet": [
+  {
+   "q": "Q521251",
+   "nimi": "Irakin kansallismuseo",
+   "peruste": "pelin nosto",
+   "koko_m": 200,
+   "lat": 33.32861,
+   "lon": 44.38583,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Courtyard of the Iraq Museum in Baghdad, Iraq.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Courtyard_of_the_Iraq_Museum_in_Baghdad%2C_Iraq.jpg?width=1280",
+     "tekija": "Osama Shukir Muhammed Amin FRCP(Glasg)",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Courtyard_of_the_Iraq_Museum_in_Baghdad%2C_Iraq.jpg",
+     "selite": "Irakin kansallismuseon sisäpiha ja rakennus säilyttävät Mesopotamian vanhimpia esineitä.",
+     "leveys": 6016,
+     "korkeus": 4016,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Prehistory Hall. the Iraq Museum in Baghdad, Iraq.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Prehistory_Hall._the_Iraq_Museum_in_Baghdad%2C_Iraq.jpg?width=1280",
+     "tekija": "Osama Shukir Muhammed Amin FRCP(Glasg)",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Prehistory_Hall._the_Iraq_Museum_in_Baghdad%2C_Iraq.jpg",
+     "selite": "Esihistorian salin vitriineissä on keramiikkaa Mesopotamian varhaisista asutuksista.",
+     "leveys": 6016,
+     "korkeus": 4016,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q154116",
+   "nimi": "Al-Kadhimiyan moskeija",
+   "peruste": "sitelinks",
+   "koko_m": 250,
+   "lat": 33.37997,
+   "lon": 44.33796,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Al-Kadhimiya Mosque 2020 (2).png",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Al-Kadhimiya_Mosque_2020_(2).png?width=1280",
+     "tekija": "المكتب الاعلامي لرئيس الوزراء",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Al-Kadhimiya_Mosque_2020_(2).png",
+     "selite": "Al-Kadhimiyan moskeijan kullatut kupolit ja minareetit hohtavat yöllä Bagdadin pohjoisosassa.",
+     "leveys": 1920,
+     "korkeus": 1080,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "القبتين الذهبيتين للعتبة الكاظمية.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%D8%A7%D9%84%D9%82%D8%A8%D8%AA%D9%8A%D9%86_%D8%A7%D9%84%D8%B0%D9%87%D8%A8%D9%8A%D8%AA%D9%8A%D9%86_%D9%84%D9%84%D8%B9%D8%AA%D8%A8%D8%A9_%D8%A7%D9%84%D9%83%D8%A7%D8%B8%D9%85%D9%8A%D8%A9.jpg?width=1280",
+     "tekija": "Gilgamish-ankidu",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%D8%A7%D9%84%D9%82%D8%A8%D8%AA%D9%8A%D9%86_%D8%A7%D9%84%D8%B0%D9%87%D8%A8%D9%8A%D8%AA%D9%8A%D9%86_%D9%84%D9%84%D8%B9%D8%AA%D8%A8%D8%A9_%D8%A7%D9%84%D9%83%D8%A7%D8%B8%D9%85%D9%8A%D8%A9.jpg",
+     "selite": "Moskeijan kaksi kullattua kupolia kohoavat Kadhimiyan kaupunginosan ylle.",
+     "leveys": 1536,
+     "korkeus": 2048,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q334716",
+   "nimi": "Abu Hanifan moskeija",
+   "peruste": "sitelinks",
+   "koko_m": 200,
+   "lat": 33.37198,
+   "lon": 44.35841,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "مرقد الامام ابو حنيفة النعمان.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%D9%85%D8%B1%D9%82%D8%AF_%D8%A7%D9%84%D8%A7%D9%85%D8%A7%D9%85_%D8%A7%D8%A8%D9%88_%D8%AD%D9%86%D9%8A%D9%81%D8%A9_%D8%A7%D9%84%D9%86%D8%B9%D9%85%D8%A7%D9%86.jpg?width=1280",
+     "tekija": "Zaid isam",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%D9%85%D8%B1%D9%82%D8%AF_%D8%A7%D9%84%D8%A7%D9%85%D8%A7%D9%85_%D8%A7%D8%A8%D9%88_%D8%AD%D9%86%D9%8A%D9%81%D8%A9_%D8%A7%D9%84%D9%86%D8%B9%D9%85%D8%A7%D9%86.jpg",
+     "selite": "Abu Hanifan moskeijan kultainen minareetin huippu ja kupoli kohoavat Adhamiyyan kaupunginosassa.",
+     "leveys": 4000,
+     "korkeus": 6000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "A view of the main hall of the Abu Hanifa Mosque.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/A_view_of_the_main_hall_of_the_Abu_Hanifa_Mosque.jpg?width=1280",
+     "tekija": "Usamasaad",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:A_view_of_the_main_hall_of_the_Abu_Hanifa_Mosque.jpg",
+     "selite": "Moskeijan pääsalin koristeellinen saarnatuoli ja punainen matto ovat rukoussalin keskipiste.",
+     "leveys": 3648,
+     "korkeus": 2736,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q15260416",
+   "nimi": "Mustansiriyan madrasa",
+   "peruste": "pelin nosto",
+   "koko_m": 120,
+   "lat": 33.3385,
+   "lon": 44.3896,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "المدرسة المستنصرية في بغداد (3).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%D8%A7%D9%84%D9%85%D8%AF%D8%B1%D8%B3%D8%A9_%D8%A7%D9%84%D9%85%D8%B3%D8%AA%D9%86%D8%B5%D8%B1%D9%8A%D8%A9_%D9%81%D9%8A_%D8%A8%D8%BA%D8%AF%D8%A7%D8%AF_(3).jpg?width=1280",
+     "tekija": "Taisir Mahdi",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%D8%A7%D9%84%D9%85%D8%AF%D8%B1%D8%B3%D8%A9_%D8%A7%D9%84%D9%85%D8%B3%D8%AA%D9%86%D8%B5%D8%B1%D9%8A%D8%A9_%D9%81%D9%8A_%D8%A8%D8%BA%D8%AF%D8%A7%D8%AF_(3).jpg",
+     "selite": "Mustansiriyan madrasan tiilinen sisäpiha ja kaarevat galleriat ovat 1200-luvun abbasidiajan oppilaitosta.",
+     "leveys": 4140,
+     "korkeus": 2750,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Mustansiriya Madrasah5.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mustansiriya_Madrasah5.jpg?width=1280",
+     "tekija": "Makaay31",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mustansiriya_Madrasah5.jpg",
+     "selite": "Madrasan portaalin tiiliseinää peittää hienosti kaiverrettu geometrinen koristelu.",
+     "leveys": 2032,
+     "korkeus": 1514,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2562384",
+   "nimi": "Mutanabbin katu",
+   "peruste": "pelin nosto",
+   "koko_m": 400,
+   "lat": 33.34095,
+   "lon": 44.38884,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "مشهد من شارع المتنبي.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%D9%85%D8%B4%D9%87%D8%AF_%D9%85%D9%86_%D8%B4%D8%A7%D8%B1%D8%B9_%D8%A7%D9%84%D9%85%D8%AA%D9%86%D8%A8%D9%8A.jpg?width=1280",
+     "tekija": "Mondalawy",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%D9%85%D8%B4%D9%87%D8%AF_%D9%85%D9%86_%D8%B4%D8%A7%D8%B1%D8%B9_%D8%A7%D9%84%D9%85%D8%AA%D9%86%D8%A8%D9%8A.jpg",
+     "selite": "Mutanabbin katu on Bagdadin kirjakauppojen katu, jonka varrella myydään kirjoja ja lehtiä.",
+     "leveys": 4920,
+     "korkeus": 3280,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "شارع المتنبي ليلا.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%D8%B4%D8%A7%D8%B1%D8%B9_%D8%A7%D9%84%D9%85%D8%AA%D9%86%D8%A8%D9%8A_%D9%84%D9%8A%D9%84%D8%A7.jpg?width=1280",
+     "tekija": "Mondalawy",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%D8%B4%D8%A7%D8%B1%D8%B9_%D8%A7%D9%84%D9%85%D8%AA%D9%86%D8%A8%D9%8A_%D9%84%D9%8A%D9%84%D8%A7.jpg",
+     "selite": "Illalla Mutanabbin katu hiljenee vanhojen kaariarkadien ja kirjakauppojen varjoon.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Al-Mutanabbi Street Gate.png",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Al-Mutanabbi_Street_Gate.png?width=1280",
+     "tekija": "Ayham4002",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Al-Mutanabbi_Street_Gate.png",
+     "selite": "Kadun portti on koristeltu tiilikuviolla ja kaarella, joka johdattaa kirjamarkkinalle.",
+     "leveys": 2936,
+     "korkeus": 3797,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q12204223",
+   "nimi": "Haydarkhanan moskeija",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": 33.34255,
+   "lon": 44.38942,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Haydar-Khana Mosque.png",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Haydar-Khana_Mosque.png?width=1280",
+     "tekija": "Ayham4002",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Haydar-Khana_Mosque.png",
+     "selite": "Haydarkhanan moskeijan turkoosi kupoli ja minareetti hallitsevat Rasheed Streetin vanhaa kaupunginosaa.",
+     "leveys": 3024,
+     "korkeus": 2944,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Main dome of Haydar-Khana Mosque.png",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Main_dome_of_Haydar-Khana_Mosque.png?width=1280",
+     "tekija": "Ayham4002",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Main_dome_of_Haydar-Khana_Mosque.png",
+     "selite": "Moskeijan kupolia peittävät sini- ja keltaiset laatat, joissa on kasvikuvioita.",
+     "leveys": 1784,
+     "korkeus": 1627,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Minaret of the Haydar-Khana Mosque.png",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Minaret_of_the_Haydar-Khana_Mosque.png?width=1280",
+     "tekija": "Ayham4002",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Minaret_of_the_Haydar-Khana_Mosque.png",
+     "selite": "Minareetin sinertävä laattakoristelu erottuu kirkasta taivasta vasten.",
+     "leveys": 3024,
+     "korkeus": 4032,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q109259513",
+   "nimi": "Qushlan kellotorni",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": 33.34037,
+   "lon": 44.38666,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "القشلة العراق 02.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%D8%A7%D9%84%D9%82%D8%B4%D9%84%D8%A9_%D8%A7%D9%84%D8%B9%D8%B1%D8%A7%D9%82_02.jpg?width=1280",
+     "tekija": "Ayat Jaryan",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%D8%A7%D9%84%D9%82%D8%B4%D9%84%D8%A9_%D8%A7%D9%84%D8%B9%D8%B1%D8%A7%D9%82_02.jpg",
+     "selite": "Qushlan kellotorni kohoaa vanhan ottomaanikasarmin puiston palmujen yläpuolelle.",
+     "leveys": 7728,
+     "korkeus": 5152,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Qushla1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Qushla1.jpg?width=1280",
+     "tekija": "mohammed aladdin",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Qushla1.jpg",
+     "selite": "Kellotorni seisoo Tigrisin rannalla Qushlan puutarhassa Bagdadin vanhassa keskustassa.",
+     "leveys": 1996,
+     "korkeus": 1366,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Alqushla tower.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Alqushla_tower.jpg?width=1280",
+     "tekija": "Yasin Alqaisy",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Alqushla_tower.jpg",
+     "selite": "Kellotornin keltainen tiili ja kellotaulu erottuvat kirkasta taivasta vasten.",
+     "leveys": 3024,
+     "korkeus": 3780,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q20669819",
+   "nimi": "Abbasidipalatsi",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 33.34307,
+   "lon": 44.38352,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Abbasid Palace1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Abbasid_Palace1.jpg?width=1280",
+     "tekija": "Mohammed Qays Kazem",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Abbasid_Palace1.jpg",
+     "selite": "Abbasidipalatsin tiilinen julkisivu ja korkea portaali ovat 1100-luvun lopun kalifaatin ajalta.",
+     "leveys": 1280,
+     "korkeus": 960,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Tigris river from Al Shohada' bridge.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tigris_river_from_Al_Shohada'_bridge.jpg?width=1280",
+   "tekija": "Samir Al-Ibrahem",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tigris_river_from_Al_Shohada'_bridge.jpg",
+   "selite": "Tigris halkoo Bagdadin keskustaa, ja sen rannoilla kohoavat kaupungin rakennukset.",
+   "leveys": 7728,
+   "korkeus": 4354,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "بغداد نهر دجلة.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%D8%A8%D8%BA%D8%AF%D8%A7%D8%AF_%D9%86%D9%87%D8%B1_%D8%AF%D8%AC%D9%84%D8%A9.jpg?width=1280",
+   "tekija": "مصطفى نادر",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%D8%A8%D8%BA%D8%AF%D8%A7%D8%AF_%D9%86%D9%87%D8%B1_%D8%AF%D8%AC%D9%84%D8%A9.jpg",
+   "selite": "Bagdadin vanhoja kortteleita ja Tigrisin siltoja näkyy joen mutkan molemmin puolin.",
+   "leveys": 5184,
+   "korkeus": 3456,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

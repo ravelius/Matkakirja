@@ -1,0 +1,382 @@
+{
+ "kaupunki": "astana",
+ "kaupunkiQ": "Q1520",
+ "kohteet": [
+  {
+   "q": "Q804210",
+   "nimi": "Bajterek",
+   "peruste": "sitelinks",
+   "koko_m": 100,
+   "lat": 51.12833,
+   "lon": 71.43056,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Night at Esil District, Astana (P1190721).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Night_at_Esil_District%2C_Astana_(P1190721).jpg?width=1280",
+     "tekija": "Matti Blume",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Night_at_Esil_District%2C_Astana_(P1190721).jpg",
+     "selite": "Bajterek-torni kohoaa Esil-joen läntisen rannan yllä ja on kaupungin tunnetuin yömaamerkki.",
+     "leveys": 4608,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Baiterek August.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Baiterek_August.jpg?width=1280",
+     "tekija": "Quarot",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Baiterek_August.jpg",
+     "selite": "Tornin latvassa on kultainen pallo, joka kuvaa kansantarun elämänpuuta ja sen oksille munivaa lintua.",
+     "leveys": 4000,
+     "korkeus": 6000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q671484",
+   "nimi": "Khan Shatyr",
+   "peruste": "sitelinks",
+   "koko_m": 200,
+   "lat": 51.13222,
+   "lon": 71.40389,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Khan-Shatyr shopping mall.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Khan-Shatyr_shopping_mall.jpg?width=1280",
+     "tekija": "Dauren Nabijan",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Khan-Shatyr_shopping_mall.jpg",
+     "selite": "Khan Shatyr on jättimäinen teltan muotoinen ostoskeskus, jonka läpikuultava katto suojaa talvipakkaselta.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Khan Shatyr.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Khan_Shatyr.jpg?width=1280",
+     "tekija": "Quarot",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Khan_Shatyr.jpg",
+     "selite": "Kartiomainen rakennus kohoaa vihreän rinteen päälle ja erottuu kauas aroon Astanan länsiosassa.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q413579",
+   "nimi": "Akorda",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 51.12583,
+   "lon": 71.44639,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Astana-2021-10 - 25.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Astana-2021-10_-_25.jpg?width=1280",
+     "tekija": "Vyacheslav Bukharov",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Astana-2021-10_-_25.jpg",
+     "selite": "Akorda on Kazakstanin presidentin virka-asunto, jonka sininen kupoli ja valkoinen julkisivu erottuvat puiston takaa.",
+     "leveys": 4019,
+     "korkeus": 1690,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Astana-2021-10 - 24.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Astana-2021-10_-_24.jpg?width=1280",
+     "tekija": "Vyacheslav Bukharov",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Astana-2021-10_-_24.jpg",
+     "selite": "Palatsi seisoo Esil-joen itärannalla, ja sen edessä on laaja aukio sekä puistoja.",
+     "leveys": 3909,
+     "korkeus": 1132,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2119741",
+   "nimi": "Rauhan ja sovinnon palatsi",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 51.12306,
+   "lon": 71.46361,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Presidential Park 04.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Presidential_Park_04.jpg?width=1280",
+     "tekija": "Davide Mauro",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Presidential_Park_04.jpg",
+     "selite": "Pyramidin muotoinen palatsi kohoaa Presidentin puistossa ja on tarkoitettu uskontojen väliselle vuoropuhelulle.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Astana DSC04116 (7709631558).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Astana_DSC04116_(7709631558).jpg?width=1280",
+     "tekija": "jtstewart",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Astana_DSC04116_(7709631558).jpg",
+     "selite": "Pyramidia kohti johtava vesikouru ja portaat antavat sille juhlavan lähestymisen.",
+     "leveys": 4912,
+     "korkeus": 3264,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Kazakhstan P9130213 (28303078239).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kazakhstan_P9130213_(28303078239).jpg?width=1280",
+     "tekija": "t_y_l",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kazakhstan_P9130213_(28303078239).jpg",
+     "selite": "Palatsin kolmiomainen kyljys nousee jyrkästi puiston yläpuolelle ja näkyy kauas.",
+     "leveys": 4608,
+     "korkeus": 3456,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q4494668",
+   "nimi": "Hazrat Sultanin moskeija",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 51.125,
+   "lon": 71.47222,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Kazakhstan P9130238 (28303684079).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kazakhstan_P9130238_(28303684079).jpg?width=1280",
+     "tekija": "t_y_l",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kazakhstan_P9130238_(28303684079).jpg",
+     "selite": "Hazrat Sultan on yksi Keski-Aasian suurimmista moskeijoista, ja sen valkoiset minareetit näkyvät kauas.",
+     "leveys": 4608,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Rustam Minnikhanov on Expo 2017 72.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Rustam_Minnikhanov_on_Expo_2017_72.jpg?width=1280",
+     "tekija": "Лаззат Хайдаров",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Rustam_Minnikhanov_on_Expo_2017_72.jpg",
+     "selite": "Moskeijan julkisivua koristavat koristeelliset kaaret, ja portaat johtavat laajalle aukiolle.",
+     "leveys": 5568,
+     "korkeus": 3712,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q21371563",
+   "nimi": "Astana Opera",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 51.13556,
+   "lon": 71.41092,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "The State Opera and Ballet Theatre “Astana Opera”.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/The_State_Opera_and_Ballet_Theatre_%E2%80%9CAstana_Opera%E2%80%9D.jpg?width=1280",
+     "tekija": "Nikolamikovic82",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:The_State_Opera_and_Ballet_Theatre_%E2%80%9CAstana_Opera%E2%80%9D.jpg",
+     "selite": "Astana Operan valkoinen pylväsjulkisivu on rakennettu klassisen oopperatalon mallin mukaan.",
+     "leveys": 3024,
+     "korkeus": 4032,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Astana Opera 02.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Astana_Opera_02.jpg?width=1280",
+     "tekija": "Davide Mauro",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Astana_Opera_02.jpg",
+     "selite": "Oopperatalo seisoo Astanan uudella puolella, ja sen takana kohoavat kaupungin lasitornit.",
+     "leveys": 6000,
+     "korkeus": 3200,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q746559",
+   "nimi": "Astana Arena",
+   "peruste": "sitelinks",
+   "koko_m": 250,
+   "lat": 51.1082,
+   "lon": 71.4026,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Panorama of the Astana Arena.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Panorama_of_the_Astana_Arena.jpg?width=1280",
+     "tekija": "ChelseaFunNumberOne",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Panorama_of_the_Astana_Arena.jpg",
+     "selite": "Astana Arenassa on avattava katto, jonka ansiosta jalkapalloa voi pelata talvipakkasillakin.",
+     "leveys": 4128,
+     "korkeus": 1872,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1813417",
+   "nimi": "Nur-Astanan moskeija",
+   "peruste": "sitelinks",
+   "koko_m": 100,
+   "lat": 51.12656,
+   "lon": 71.41574,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Astana-2021-10 - 41.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Astana-2021-10_-_41.jpg?width=1280",
+     "tekija": "Vyacheslav Bukharov",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Astana-2021-10_-_41.jpg",
+     "selite": "Nur-Astanan moskeijan kultainen kupoli ja valkoiset minareetit erottuvat syksyisen puiston takaa.",
+     "leveys": 3929,
+     "korkeus": 2013,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Nur-Sultan - 190217 DSC 3720.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Nur-Sultan_-_190217_DSC_3720.jpg?width=1280",
+     "tekija": "Ilya Varlamov",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Nur-Sultan_-_190217_DSC_3720.jpg",
+     "selite": "Talvella lumi peittää puiston, mutta moskeijan kultakupoli hohtaa lasitornien keskellä.",
+     "leveys": 4887,
+     "korkeus": 3258,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q713955",
+   "nimi": "Nurjol-bulevardi",
+   "peruste": "pelin nosto",
+   "koko_m": 300,
+   "lat": 51.12721,
+   "lon": 71.43695,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Вид на Бульвар Нуржол.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%92%D0%B8%D0%B4_%D0%BD%D0%B0_%D0%91%D1%83%D0%BB%D1%8C%D0%B2%D0%B0%D1%80_%D0%9D%D1%83%D1%80%D0%B6%D0%BE%D0%BB.jpg?width=1280",
+     "tekija": "Шалкер Гам",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%D0%92%D0%B8%D0%B4_%D0%BD%D0%B0_%D0%91%D1%83%D0%BB%D1%8C%D0%B2%D0%B0%D1%80_%D0%9D%D1%83%D1%80%D0%B6%D0%BE%D0%BB.jpg",
+     "selite": "Nurjol-bulevardi on hallintokeskuksen pääakseli, jonka päissä kohoavat kaksi korkeaa tornia.",
+     "leveys": 3024,
+     "korkeus": 4032,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Astana DSC04189 (7709788152).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Astana_DSC04189_(7709788152).jpg?width=1280",
+     "tekija": "jtstewart",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Astana_DSC04189_(7709788152).jpg",
+     "selite": "Kukkapenkit ja valtavat asuinrakennukset reunustavat bulevardin kävelyaukioita.",
+     "leveys": 4912,
+     "korkeus": 3264,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q18405670",
+   "nimi": "Kazakstanin kansallismuseo",
+   "peruste": "pelin nosto",
+   "koko_m": 200,
+   "lat": 51.1178,
+   "lon": 71.4701,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "National Museum of Kazakhstan 04.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/National_Museum_of_Kazakhstan_04.jpg?width=1280",
+     "tekija": "Davide Mauro",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:National_Museum_of_Kazakhstan_04.jpg",
+     "selite": "Kansallismuseon sinivalkoinen lasirakennus erottuu suihkulähteen takaa Astanan uudella museoalueella.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Astana-Ishim-River-embankment-7797.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Astana-Ishim-River-embankment-7797.jpg?width=1280",
+   "tekija": "Vmenkov",
+   "lisenssi": "CC BY-SA 3.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Astana-Ishim-River-embankment-7797.jpg",
+   "selite": "Esil-joen rannat ovat Astanan keskustan kävelyreittejä, ja korkeat talot reunustavat vesistöä.",
+   "leveys": 2048,
+   "korkeus": 1536,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Astana (14935145827).jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Astana_(14935145827).jpg?width=1280",
+   "tekija": "Alex J. Butler from United Kingdom",
+   "lisenssi": "CC BY 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Astana_(14935145827).jpg",
+   "selite": "Astana on noussut tasaiselle arolle, ja sen uudet kaupunginosat avautuvat Esil-joen yli kulkevan sillan taakse.",
+   "leveys": 3264,
+   "korkeus": 1836,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

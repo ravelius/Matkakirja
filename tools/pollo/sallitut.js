@@ -5,8 +5,10 @@
  * Sääntö: SALLITTU: keskusta (0–0,5 km, 17 pistettä) tarkkoja >= 50 % ja r_m >= 1 km; vesipisteet (mediaanireuna >=
  * 12 m) pois; r_m = uloin rengas, jota ennen kaikissa renkaissa tarkkoja >= 2 ja >= 50 % maapisteistä (yksi >= 1/3
  * rengas sallitaan kerran, jos seuraava on hyvä); RAJA: keskusta tarkkoja >= 20 % tai keskitasoa >= 40 %; muuten POIS
- * Mukana vain SALLITTU-luokka (Päätoimittaja 7.10. 01.2x: "vain oikea 3D"); RAJA-kaupungit (Sisilia, Varsova, Kiova,
- * Sarajevo, Tromssa) ja POIS-luokka eivät ole. Sisilia lisätään, jos LS2:n uusintamittaus korjatulla pisteellä on tarkka.
+ * Mukana SALLITTU-luokka (Päätoimittaja 7.10. 01.2x: "vain oikea 3D") + Sisilia (Palermo, LS2:n uusintamittaus);
+ * Varsova poistettu 7.10. 07.1x (Googlen 404-tiilet: pysyvä reikä yleiskuvassa; palaa, jos LS1 löytää reiättömän);
+ * Kreeta ja Islanti mitattu uudelleen Heraklionin ja Reykjavikin keskustoista.
+ * RAJA-kaupungit Kiova, Sarajevo ja Tromssa sekä POIS-luokka eivät ole mukana.
  * /opas/aineistot palauttaa sallitut (raja: [] yhteensopivuuden vuoksi); natiivi (LS1 OpasSallitut) rajaa niillä
  * kaupunkiehdotukset, lennot ja vapaan liikkeen. Worker torjuu muut kaupungit ja r_m-säteen ulkopuoliset kohteet.
  * Id kuten KaupunkiTiet.Tunnus / aineistoindeksi (pienaakkoset, diakriitit pois, muut → "-").
@@ -31,7 +33,7 @@ export const OPAS_SALLITUT = Object.freeze({
     {"id": "wien", "nimi": "Wien", "lat": 48.21437, "lon": 16.37199, "r_m": 20000},
     {"id": "dublin", "nimi": "Dublin", "lat": 53.33259, "lon": -6.25881, "r_m": 15000},
     {"id": "edinburgh", "nimi": "Edinburgh", "lat": 55.93615, "lon": -3.17025, "r_m": 15000},
-    {"id": "kreeta", "nimi": "Kreeta", "lat": 35.28554, "lon": 25.30426, "r_m": 15000},
+    {"id": "kreeta", "nimi": "Kreeta", "lat": 35.31443, "lon": 25.13487, "r_m": 15000},
     {"id": "bergen", "nimi": "Bergen", "lat": 60.38804, "lon": 5.32924, "r_m": 10000},
     {"id": "bryssel", "nimi": "Bryssel", "lat": 50.85045, "lon": 4.35292, "r_m": 10000},
     {"id": "bukarest", "nimi": "Bukarest", "lat": 44.43251, "lon": 26.10329, "r_m": 10000},
@@ -44,13 +46,28 @@ export const OPAS_SALLITUT = Object.freeze({
     {"id": "valletta", "nimi": "Valletta", "lat": 35.88815, "lon": 14.49975, "r_m": 10000},
     {"id": "vilna", "nimi": "Vilna", "lat": 54.69282, "lon": 25.26939, "r_m": 10000},
     {"id": "ateena", "nimi": "Ateena", "lat": 37.96964, "lon": 23.71825, "r_m": 7000},
-    {"id": "islanti", "nimi": "Islanti", "lat": 64.14135, "lon": -21.81218, "r_m": 7000},
+    {"id": "islanti", "nimi": "Reykjavík", "lat": 64.14401, "lon": -21.93145, "r_m": 3000},
     {"id": "amsterdam", "nimi": "Amsterdam", "lat": 52.3661, "lon": 4.90092, "r_m": 5000},
     {"id": "kosice", "nimi": "Košice", "lat": 48.71823, "lon": 21.25015, "r_m": 5000},
     {"id": "luxemburg", "nimi": "Luxemburg", "lat": 49.6132, "lon": 6.12956, "r_m": 5000},
     {"id": "venetsia", "nimi": "Venetsia", "lat": 45.43566, "lon": 12.33596, "r_m": 3000},
+    {"id": "sisilia", "nimi": "Sisilia", "lat": 38.0992, "lon": 13.34633, "r_m": 20000},
   ],
 });
+
+/*
+ * KOKEILUKOHTEET (Päätoimittaja 7.10. 08.5x): vain kehityskäännöksille, jotka lähettävät otsakkeen
+ * x-matkakirja-kokeilu: <id>[,<id>] (worker siirtää sen env.OPAS_KOKEILU-listaksi). TF-appit eivät näe näitä.
+ * Giza: omat Blender-mallit (omistaja 08.4x), TF 157/158:ssa mallit pois päältä → ei tuotannon listalle.
+ */
+export const OPAS_SALLITUT_KOKEILU = Object.freeze({
+  giza: { id: 'giza', nimi: 'Gizan pyramidit', lat: 29.9765, lon: 31.1313, r_m: 1500 },
+});
+/** Pyynnön kokeilukohteet: otsakkeen id:t, jotka ovat kokeilulistalla. */
+export const kokeilut = (otsake) => String(otsake ?? '').split(',').map((x) => x.trim().toLowerCase()).filter((x) => OPAS_SALLITUT_KOKEILU[x]);
+const kokeilussa = (env) => (env?.OPAS_KOKEILU ?? []).map((x) => OPAS_SALLITUT_KOKEILU[x]).filter(Boolean);
+/** Sallitut tälle pyynnölle (/opas/aineistot): tuotannon lista + pyynnön kokeilukohteet. */
+export const sallitutPyynnolle = (env) => [...OPAS_SALLITUT.sallitut, ...kokeilussa(env)];
 
 /** Kaupungin id nimestä (sama kaava kuin aineistoindeksissä). */
 export const sallittuId = (nimi) => String(nimi ?? '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '')
@@ -61,7 +78,8 @@ export const sallittuId = (nimi) => String(nimi ?? '').toLowerCase().normalize('
  * suodatus, Kysyn ei-sallittu) on päällä vain, kun env.OPAS_SALLITUT_ESTO = '1' — TF 154/155 eivät vielä lue listaa
  * (natiivi junassa 157). Testi voi antaa oman listan env.OPAS_SALLITUT_TESTI ({ sallitut }), jolloin esto on päällä.
  */
-const lista = (env) => env?.OPAS_SALLITUT_TESTI ?? (String(env?.OPAS_SALLITUT_ESTO ?? '') === '1' ? OPAS_SALLITUT : null);
+const perus = (env) => env?.OPAS_SALLITUT_TESTI ?? (String(env?.OPAS_SALLITUT_ESTO ?? '') === '1' ? OPAS_SALLITUT : null);
+const lista = (env) => { const l = perus(env); return l && kokeilussa(env).length ? { sallitut: [...l.sallitut, ...kokeilussa(env)] } : l; };
 const kaikki = (l) => l.sallitut;
 const metreina = (a, b) => {
   const r = Math.PI / 180, dLat = (b.lat - a.lat) * r, dLon = (b.lon - a.lon) * r;
@@ -75,7 +93,8 @@ export function sallittuKaupunki(nimi, env = null) {
   if (!id) return null;
   const l = lista(env);
   if (!l) return { id, nimi, rajaton: true };
-  return l.sallitut.find((x) => x.id === id) ?? null;
+  // Id kaupungin pelinimestä (Islanti → islanti) tai näyttönimestä (Reykjavík).
+  return l.sallitut.find((x) => x.id === id || sallittuId(x.nimi) === id) ?? null;
 }
 
 /** Onko piste jonkin sallitun kaupungin r_m-säteellä; kaupunki annettuna vain sen säteellä. */
@@ -85,4 +104,14 @@ export function pisteSallittu(piste, kaupunki = null, env = null) {
   if (!Number.isFinite(piste?.lat) || !Number.isFinite(piste?.lon)) return false;
   const alueet = kaupunki ? [sallittuKaupunki(kaupunki, env)].filter(Boolean) : kaikki(l);
   return alueet.some((a) => metreina(a, piste) <= a.r_m);
+}
+
+/**
+ * Sallittu alue, jonka r_m-säteellä piste on (lähin keskus), tai null. Käyttää listaa kytkimestä riippumatta: Kysyn
+ * toive toisen sallitun kaupungin kohteeseen vaihtaa kaupungin (Päätoimittaja 7.10.), vaikka esto olisi pois.
+ */
+export function sallittuAluePisteelle(piste, env = null) {
+  if (!Number.isFinite(piste?.lat) || !Number.isFinite(piste?.lon)) return null;
+  const l = { sallitut: [...(env?.OPAS_SALLITUT_TESTI ?? OPAS_SALLITUT).sallitut, ...kokeilussa(env)] };
+  return l.sallitut.map((a) => ({ a, d: metreina(a, piste) })).filter((x) => x.d <= x.a.r_m).sort((x, y) => x.d - y.d)[0]?.a ?? null;
 }

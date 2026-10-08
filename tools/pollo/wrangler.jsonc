@@ -35,6 +35,11 @@
     "POLLO_KUUKAUSIRAJA": "1500",
     "POLLO_MALLI": "claude-sonnet-5-5",
     /*
+     * Sallitut 3D-kaupungit (sallitut.js, omistaja 7.10.2026): esto päälle, kun juna 157 on TF:ssä (Päätoimittaja;
+     * TF 157 testaajilla 7.10. 06.59). Ei-sallittu kaupunki → 403 ei-sallittu, kohteet r_m-säteelle, Kysy ei-sallittu.
+     */
+    "OPAS_SALLITUT_ESTO": "1",
+    /*
      * Striimiluennan moottori (omistaja 27.9.2026): 'xai' = Grok TTS,
      * ääni ara (vaatii XAI_API_KEY-salaisuuden; ilman sitä pudotaan
      * OpenAI:hin), 'openai' = gpt-4o-mini-tts kuten ennen 27.9.

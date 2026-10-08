@@ -1,0 +1,744 @@
+{
+ "kaupunki": "dubai",
+ "kaupunkiQ": "Q612",
+ "kohteet": [
+  {
+   "q": "Q12495",
+   "nimi": "Burj Khalifa",
+   "peruste": "pelin nosto",
+   "koko_m": 300,
+   "lat": 25.19722,
+   "lon": 55.27417,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "An image of Burj Khalifa.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/An_image_of_Burj_Khalifa.jpg?width=1280",
+     "tekija": "Changdervishal1999",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:An_image_of_Burj_Khalifa.jpg",
+     "selite": "Burj Khalifa on maailman korkein rakennus, ja sen varjo piirtyy pitkälle ympäröivän kaupungin ylle.",
+     "leveys": 1200,
+     "korkeus": 803,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Dubai skyline 2015 (crop).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dubai_skyline_2015_(crop).jpg?width=1280",
+     "tekija": "Tim.Reckmann",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Dubai_skyline_2015_(crop).jpg",
+     "selite": "Burj Khalifa kohoaa Downtownin pilvenpiirtäjien yläpuolelle aavikon reunalla.",
+     "leveys": 1558,
+     "korkeus": 1179,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Long exposure photo of Burj Khalifa in Dubai at night by Robert Bock, 2016 (Unsplash).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Long_exposure_photo_of_Burj_Khalifa_in_Dubai_at_night_by_Robert_Bock%2C_2016_(Unsplash).jpg?width=1280",
+     "tekija": "Robert Bock robertbock",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Long_exposure_photo_of_Burj_Khalifa_in_Dubai_at_night_by_Robert_Bock%2C_2016_(Unsplash).jpg",
+     "selite": "Illalla torni ja sen ympäristö valaistaan ja Dubain suihkulähde loistaa sen juurella.",
+     "leveys": 5760,
+     "korkeus": 3840,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 4,
+     "tiedosto": "Burj Khalifa Image.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Burj_Khalifa_Image.jpg?width=1280",
+     "tekija": "Meandmybrix",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Burj_Khalifa_Image.jpg",
+     "selite": "Tornin kapeneva muoto auttaa sitä kestämään aavikon tuulia.",
+     "leveys": 2305,
+     "korkeus": 1729,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q62939",
+   "nimi": "Burj al-Arab",
+   "peruste": "sitelinks",
+   "koko_m": 250,
+   "lat": 25.14139,
+   "lon": 55.18528,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Burj Al Arab and the beach (Pexels 823696).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Burj_Al_Arab_and_the_beach_(Pexels_823696).jpg?width=1280",
+     "tekija": "Aleksandar Pasaric",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Burj_Al_Arab_and_the_beach_(Pexels_823696).jpg",
+     "selite": "Purjeen muotoinen hotelli kohoaa omalta keinotekoiselta saareltaan Persianlahdella.",
+     "leveys": 6498,
+     "korkeus": 4332,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Burj Al Arab during sunset.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Burj_Al_Arab_during_sunset.jpg?width=1280",
+     "tekija": "Nicolascornet",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Burj_Al_Arab_during_sunset.jpg",
+     "selite": "Auringonlaskussa Burj al-Arabin siluetti heijastuu rannan märkään hiekkaan.",
+     "leveys": 2500,
+     "korkeus": 1668,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "A burjalrab green view.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/A_burjalrab_green_view.jpg?width=1280",
+     "tekija": "Afk2007",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:A_burjalrab_green_view.jpg",
+     "selite": "Madinat Jumeirahin kanavilta hotellin purjemainen julkisivu näkyy palmujen takaa.",
+     "leveys": 3456,
+     "korkeus": 2347,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 4,
+     "tiedosto": "Burj Al-Arab (13996844503).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Burj_Al-Arab_(13996844503).jpg?width=1280",
+     "tekija": "Marco Becerra from Lewisville, TX, USA",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Burj_Al-Arab_(13996844503).jpg",
+     "selite": "Iltavalaistuksessa hotellin pinta vaihtaa väriä ja uima-allasalue hohtaa sen edessä.",
+     "leveys": 4283,
+     "korkeus": 2845,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q277294",
+   "nimi": "Palm Jumeirah",
+   "peruste": "pelin nosto",
+   "koko_m": 5000,
+   "lat": 25.11722,
+   "lon": 55.13444,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Artificial Archipelagos, Dubai, United Arab Emirates ISS022-E-024940 lrg (cropped).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Artificial_Archipelagos%2C_Dubai%2C_United_Arab_Emirates_ISS022-E-024940_lrg_(cropped).jpg?width=1280",
+     "tekija": "Member of the Expedition 22 crew.",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Artificial_Archipelagos%2C_Dubai%2C_United_Arab_Emirates_ISS022-E-024940_lrg_(cropped).jpg",
+     "selite": "Palm Jumeirah on merenpohjaan ruopattu palmunmuotoinen saari, joka näkyy selvästi avaruuteen asti.",
+     "leveys": 1265,
+     "korkeus": 1233,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Palm jumeirah core.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Palm_jumeirah_core.jpg?width=1280",
+     "tekija": "Aheilner",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Palm_jumeirah_core.jpg",
+     "selite": "Palmun rungosta haarautuvat lehdet ovat rakennettu hiekalla täytetyiksi niemiksi.",
+     "leveys": 1280,
+     "korkeus": 857,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Atlantis, The Palm from Le Royal Méridien Beach Resort and Spa in Dubai 3.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Atlantis%2C_The_Palm_from_Le_Royal_M%C3%A9ridien_Beach_Resort_and_Spa_in_Dubai_3.jpg?width=1280",
+     "tekija": "CT Cooper",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Atlantis%2C_The_Palm_from_Le_Royal_M%C3%A9ridien_Beach_Resort_and_Spa_in_Dubai_3.jpg",
+     "selite": "Rannikolta katsottuna palmu näkyy etäällä merellä hotellien takana.",
+     "leveys": 3072,
+     "korkeus": 2304,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1262853",
+   "nimi": "Dubai Creek",
+   "peruste": "sitelinks",
+   "koko_m": 1500,
+   "lat": 25.25583,
+   "lon": 55.31667,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "The view of Dubai Creek.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/The_view_of_Dubai_Creek.jpg?width=1280",
+     "tekija": "Phil6007",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:The_view_of_Dubai_Creek.jpg",
+     "selite": "Dubai Creek on kaupungin vanha satamalahti, jota abrat ylittävät kauppiaiden ja matkailijoiden kyydissä.",
+     "leveys": 7221,
+     "korkeus": 4819,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Dubai Creek from Bur Dubai (5374118618).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dubai_Creek_from_Bur_Dubai_(5374118618).jpg?width=1280",
+     "tekija": "McKay Savage from London, UK",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Dubai_Creek_from_Bur_Dubai_(5374118618).jpg",
+     "selite": "Lahden pohjoisrannalla Deiran pankkitornit kohoavat veden yläpuolelle.",
+     "leveys": 2048,
+     "korkeus": 1365,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Dubai Creek, City and Dhow (12870166304).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dubai_Creek%2C_City_and_Dhow_(12870166304).jpg?width=1280",
+     "tekija": "Rod Waddington from Kergunyah, Australia",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Dubai_Creek%2C_City_and_Dhow_(12870166304).jpg",
+     "selite": "Perinteinen puinen dhow-alus seisoo lahdella, jonka rannalla kaupunki on kasvanut.",
+     "leveys": 4167,
+     "korkeus": 2681,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 4,
+     "tiedosto": "A boat on the Dubai Creek 20240605.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/A_boat_on_the_Dubai_Creek_20240605.jpg?width=1280",
+     "tekija": "Steven Sun",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:A_boat_on_the_Dubai_Creek_20240605.jpg",
+     "selite": "Abra on puinen lahden ylittävä pikkulautta, joka on kulkenut samaa reittiä vuosikymmeniä.",
+     "leveys": 5964,
+     "korkeus": 3854,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2384491",
+   "nimi": "Dubai Fountain",
+   "peruste": "sitelinks",
+   "koko_m": 300,
+   "lat": 25.19519,
+   "lon": 55.27506,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Dubai Fountain 7.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dubai_Fountain_7.JPG?width=1280",
+     "tekija": "Nealt",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Dubai_Fountain_7.JPG",
+     "selite": "Dubai Fountain ammuttaa vettä Burj Khalifan juurella olevasta tekolammesta musiikin tahtiin.",
+     "leveys": 3264,
+     "korkeus": 2448,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "At the Top SKY @ Burj Khalifa @ Dubai (15698484788).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/At_the_Top_SKY_%40_Burj_Khalifa_%40_Dubai_(15698484788).jpg?width=1280",
+     "tekija": "Guilhem Vellut from Annecy, France",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:At_the_Top_SKY_%40_Burj_Khalifa_%40_Dubai_(15698484788).jpg",
+     "selite": "Ylhäältä katsottuna suihkulähteen tekojärvi ympäröi Downtownin rakennuksia.",
+     "leveys": 3968,
+     "korkeus": 2976,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q20386392",
+   "nimi": "Dubai Frame",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 25.23553,
+   "lon": 55.30032,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "190410 Dubai Frame.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/190410_Dubai_Frame.jpg?width=1280",
+     "tekija": "Rennboot",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:190410_Dubai_Frame.jpg",
+     "selite": "Dubai Frame on jättimäinen kehyksen muotoinen rakennus, joka erottaa vanhan ja uuden Dubain toisistaan.",
+     "leveys": 1500,
+     "korkeus": 1000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "DONIS Dubai Frame Nighttime.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/DONIS_Dubai_Frame_Nighttime.jpg?width=1280",
+     "tekija": "Sachimo",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:DONIS_Dubai_Frame_Nighttime.jpg",
+     "selite": "Hämärässä kehys erottuu kaupungin siluetista kultaisena viivana.",
+     "leveys": 1240,
+     "korkeus": 930,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q22948398",
+   "nimi": "Tulevaisuuden museo",
+   "peruste": "sitelinks",
+   "koko_m": 120,
+   "lat": 25.21912,
+   "lon": 55.2821,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Museum of the Future.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Museum_of_the_Future.jpg?width=1280",
+     "tekija": "Александр Сигачёв",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Museum_of_the_Future.jpg",
+     "selite": "Tulevaisuuden museon soikean rakennuksen julkisivua koristavat arabialaisen kalligrafian säkeet.",
+     "leveys": 6000,
+     "korkeus": 8000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Museum of the Future 9.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Museum_of_the_Future_9.jpg?width=1280",
+     "tekija": "EditQ",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Museum_of_the_Future_9.jpg",
+     "selite": "Rengasmainen rakennus nousee Sheikh Zayed Roadin varrelle Dubain keskustassa.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1135647",
+   "nimi": "Dubai Marina",
+   "peruste": "sitelinks",
+   "koko_m": 1500,
+   "lat": 25.08135,
+   "lon": 55.14408,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "A night at the Dubai Marina.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/A_night_at_the_Dubai_Marina.jpg?width=1280",
+     "tekija": "GenerousExistence",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:A_night_at_the_Dubai_Marina.jpg",
+     "selite": "Dubai Marina on keinotekoisen kanavan varrelle rakennettu pilvenpiirtäjien kaupunginosa.",
+     "leveys": 4000,
+     "korkeus": 2250,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Artificial water channel.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Artificial_water_channel.jpg?width=1280",
+     "tekija": "Shadab Ali",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Artificial_water_channel.jpg",
+     "selite": "Kanavan rannalla huvijahdit ja hotellit seisovat vierekkäin.",
+     "leveys": 4032,
+     "korkeus": 1960,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2298717",
+   "nimi": "Jumeirahin moskeija",
+   "peruste": "sitelinks",
+   "koko_m": 80,
+   "lat": 25.23397,
+   "lon": 55.2655,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Dub-jum-mos2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dub-jum-mos2.jpg?width=1280",
+     "tekija": "Bgabel",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Dub-jum-mos2.jpg",
+     "selite": "Jumeirahin moskeija on Dubain tunnetuin moskeija, ja sen kaksi minareettia ovat vaaleaa kiveä.",
+     "leveys": 1536,
+     "korkeus": 1024,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Jumeira 1 - Dubai - United Arab Emirates - panoramio.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Jumeira_1_-_Dubai_-_United_Arab_Emirates_-_panoramio.jpg?width=1280",
+     "tekija": "ianpudsey",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Jumeira_1_-_Dubai_-_United_Arab_Emirates_-_panoramio.jpg",
+     "selite": "Moskeijan kupolit ja minareetit on rakennettu keskiaikaisten fatimidimoskeijoiden esikuvan mukaan.",
+     "leveys": 4608,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Jumeirah Mosque 3.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Jumeirah_Mosque_3.jpg?width=1280",
+     "tekija": "EditQ",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Jumeirah_Mosque_3.jpg",
+     "selite": "Vaalea kalkkikivi kuultaa kultaisena iltapäivän auringossa.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 4,
+     "tiedosto": "Interior at Jumeirah Mosque.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Interior_at_Jumeirah_Mosque.jpg?width=1280",
+     "tekija": "scottgunn",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Interior_at_Jumeirah_Mosque.jpg",
+     "selite": "Sisällä kupoli ja holvit on koristeltu värikkäin kuvioin.",
+     "leveys": 1600,
+     "korkeus": 1065,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q292826",
+   "nimi": "Al Fahidin linnoitus",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": 25.26344,
+   "lon": 55.29718,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Al Fahidi Fort (1).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Al_Fahidi_Fort_(1).jpg?width=1280",
+     "tekija": "Marko",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Al_Fahidi_Fort_(1).jpg",
+     "selite": "Al Fahidin linnoitus on Dubain vanhin säilynyt rakennus, ja sen pyöreä torni on rakennettu korallikivestä.",
+     "leveys": 4864,
+     "korkeus": 3648,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "35-4 ARCH IMG7073.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/35-4_ARCH_IMG7073.jpg?width=1280",
+     "tekija": "Mohamedhaseb",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:35-4_ARCH_IMG7073.jpg",
+     "selite": "Illalla linnoituksen muurit valaistaan kullanvärisiksi.",
+     "leveys": 4838,
+     "korkeus": 2483,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Al Fahidi Fort (also known as Dubai Fort) DSC 8960.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Al_Fahidi_Fort_(also_known_as_Dubai_Fort)_DSC_8960.jpg?width=1280",
+     "tekija": "Rye jb23",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Al_Fahidi_Fort_(also_known_as_Dubai_Fort)_DSC_8960.jpg",
+     "selite": "Linnoituksen paksut muurit suojasivat vanhaa Dubaita ennen öljyaikaa.",
+     "leveys": 3871,
+     "korkeus": 2581,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q5310547",
+   "nimi": "Kultasuuk",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 25.27167,
+   "lon": 55.29861,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Dubai Gold Souk (8668422526).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dubai_Gold_Souk_(8668422526).jpg?width=1280",
+     "tekija": "Rob Young from United Kingdom",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Dubai_Gold_Souk_(8668422526).jpg",
+     "selite": "Deiran kultasuukin katettu kuja on täynnä koruliikkeitä, joissa kulta punnitaan päivän hinnan mukaan.",
+     "leveys": 3936,
+     "korkeus": 2952,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "VAE-dubai-eingang-gold-souk.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/VAE-dubai-eingang-gold-souk.jpg?width=1280",
+     "tekija": "Balou46",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:VAE-dubai-eingang-gold-souk.jpg",
+     "selite": "Puinen portti johdattaa Dubain Kultakaupungin suukin korukujille.",
+     "leveys": 4928,
+     "korkeus": 3264,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Street of the Dubai Gold Souk.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Street_of_the_Dubai_Gold_Souk.jpg?width=1280",
+     "tekija": "CT Cooper",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Street_of_the_Dubai_Gold_Souk.jpg",
+     "selite": "Suukin katetun kujan kauppiaat ovat myyneet kultaa jo vuosikymmeniä.",
+     "leveys": 3072,
+     "korkeus": 2304,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2094764",
+   "nimi": "Bastakian kaupunginosa",
+   "peruste": "pelin nosto",
+   "koko_m": 300,
+   "lat": 25.26389,
+   "lon": 55.3,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Al Bastakiya 10.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Al_Bastakiya_10.jpg?width=1280",
+     "tekija": "EditQ",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Al_Bastakiya_10.jpg",
+     "selite": "Bastakiassa vanhat talot jäähdytettiin tuulitorneilla, jotka ottavat tuulen sisään kaikista suunnista.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Al Bastakia.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Al_Bastakia.jpg?width=1280",
+     "tekija": "Hiren Bhatia",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Al_Bastakia.jpg",
+     "selite": "Iltavalaistuksessa tuulitorni ja kupoli erottuvat kaupunginosan hiekanvärisistä seinistä.",
+     "leveys": 4608,
+     "korkeus": 3072,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Al Bastakiya 12.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Al_Bastakiya_12.jpg?width=1280",
+     "tekija": "EditQ",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Al_Bastakiya_12.jpg",
+     "selite": "Kujien varrella vanhoja koralli- ja hiekkakivitaloja on kunnostettu gallerioiksi ja kahviloiksi.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3021334",
+   "nimi": "Deira",
+   "peruste": "sitelinks",
+   "koko_m": 1500,
+   "lat": 25.26667,
+   "lon": 55.31667,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Deira Old Souq.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Deira_Old_Souq.jpg?width=1280",
+     "tekija": "Iwona Rege",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Deira_Old_Souq.jpg",
+     "selite": "Deiran vanhat suukit ovat kapeita kujia, joissa myydään kankaita, mausteita ja kultaa.",
+     "leveys": 5402,
+     "korkeus": 3601,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Deira Skyline.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Deira_Skyline.JPG?width=1280",
+     "tekija": "Ahmedn97",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Deira_Skyline.JPG",
+     "selite": "Deiran pankkitornit kohoavat Dubai Creekin pohjoisrannalla.",
+     "leveys": 1600,
+     "korkeus": 1200,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Across the water to Deira (5373514059).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Across_the_water_to_Deira_(5373514059).jpg?width=1280",
+     "tekija": "McKay Savage from London, UK",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Across_the_water_to_Deira_(5373514059).jpg",
+     "selite": "Lahden yli näkee Deiran satamalaiturit ja moskeijan minareetin.",
+     "leveys": 2048,
+     "korkeus": 1365,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q40132250",
+   "nimi": "Ain Dubai",
+   "peruste": "sitelinks",
+   "koko_m": 250,
+   "lat": 25.08011,
+   "lon": 55.12406,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Dubai observation wheel.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dubai_observation_wheel.jpg?width=1280",
+     "tekija": "Moh sabik",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Dubai_observation_wheel.jpg",
+     "selite": "Ain Dubai on Bluewaters-saarelle rakennettu maailman suurimpiin kuuluva maailmanpyörä.",
+     "leveys": 5464,
+     "korkeus": 3636,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Ain Dubai, the ferris wheel located in Dubai, United Arab Emirates.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ain_Dubai%2C_the_ferris_wheel_located_in_Dubai%2C_United_Arab_Emirates.jpg?width=1280",
+     "tekija": "Richard N Horne",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ain_Dubai%2C_the_ferris_wheel_located_in_Dubai%2C_United_Arab_Emirates.jpg",
+     "selite": "Pyörän taustalla näkyvät Dubai Marinan ja Jumeirah Beach Residencen tornit.",
+     "leveys": 6104,
+     "korkeus": 4069,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q665502",
+   "nimi": "Jebel Ali",
+   "peruste": "sitelinks",
+   "koko_m": 3000,
+   "lat": 24.96047,
+   "lon": 55.10088,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Jebel Ali Port 2 Imresolt.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Jebel_Ali_Port_2_Imresolt.jpg?width=1280",
+     "tekija": "Imre Solt",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Jebel_Ali_Port_2_Imresolt.jpg",
+     "selite": "Jebel Alin satama on Lähi-idän suurimpia konttisatamia ja ihmisen rakentama syväsatama.",
+     "leveys": 1210,
+     "korkeus": 584,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Port Jebel Ali on 1 May 2007 Pict 1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Port_Jebel_Ali_on_1_May_2007_Pict_1.jpg?width=1280",
+     "tekija": "Imre Solt",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Port_Jebel_Ali_on_1_May_2007_Pict_1.jpg",
+     "selite": "Ilmasta satama näkyy laajana laiturien ja konttien verkostona aavikon reunalla.",
+     "leveys": 1280,
+     "korkeus": 766,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Dubai aerial.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dubai_aerial.jpg?width=1280",
+   "tekija": "Nino Verde",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Dubai_aerial.jpg",
+   "selite": "Ilmasta Dubain pilvenpiirtäjät kohoavat aavikon ja Persianlahden välissä.",
+   "leveys": 1772,
+   "korkeus": 1181,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Burj Khalifa Dubai, UAE at Sunset 001 by Eric Chamchoum.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Burj_Khalifa_Dubai%2C_UAE_at_Sunset_001_by_Eric_Chamchoum.jpg?width=1280",
+   "tekija": "ECWiki1",
+   "lisenssi": "CC BY 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Burj_Khalifa_Dubai%2C_UAE_at_Sunset_001_by_Eric_Chamchoum.jpg",
+   "selite": "Auringonlaskun aikaan Dubain pilvenpiirtäjien siluetti piirtyy valtatien päähän.",
+   "leveys": 4032,
+   "korkeus": 3024,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

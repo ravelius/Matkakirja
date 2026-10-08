@@ -1,0 +1,709 @@
+{
+ "kaupunki": "tokio",
+ "kaupunkiQ": "Q1490",
+ "kohteet": [
+  {
+   "q": "Q615183",
+   "nimi": "Sensō-ji",
+   "peruste": "pelin nosto",
+   "koko_m": 250,
+   "lat": 35.71456,
+   "lon": 139.79664,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Main building, Sensoji Temple, Asakusa, Tokyo.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Main_building%2C_Sensoji_Temple%2C_Asakusa%2C_Tokyo.jpg?width=1280",
+     "tekija": "Daderot",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Main_building%2C_Sensoji_Temple%2C_Asakusa%2C_Tokyo.jpg",
+     "selite": "Sensō-ji on Tokion vanhin buddhalaistemppeli ja Asakusan sydän.",
+     "leveys": 3264,
+     "korkeus": 2448,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Main Hall, Sensoji 20241019.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Main_Hall%2C_Sensoji_20241019.jpg?width=1280",
+     "tekija": "This Photo was taken by Supanut Arunoprayote. Feel free to use any of my images, but please mention me as the author and may send me a message. (สามารถใช้ภาพได้อิสระ แต่กรุณาใส่เครดิตผู้ถ่ายและอาจส่งข้อความบอกกล่าวด้วย) Please do not upload an updated image here without consultation with the Author. The author would like to make corrections only at his own source. This ensures that the changes are preserved.Please if you think that any changes should be required, please inform the author.Otherwise you can upload a new image with a new name. Please use one of the templates derivative or extract.",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Main_Hall%2C_Sensoji_20241019.jpg",
+     "selite": "Temppelin pääsali on punaisine pilareineen valaistu illalla.",
+     "leveys": 6398,
+     "korkeus": 4265,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q57965",
+   "nimi": "Tokyo Skytree",
+   "peruste": "sitelinks",
+   "koko_m": 400,
+   "lat": 35.71006,
+   "lon": 139.81072,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Tokyo Skytree 2014 Ⅲ.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tokyo_Skytree_2014_%E2%85%A2.jpg?width=1280",
+     "tekija": "Kakidai",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tokyo_Skytree_2014_%E2%85%A2.jpg",
+     "selite": "Skytree on Japanin korkein torni ja Sumida-joen rannan maamerkki.",
+     "leveys": 1632,
+     "korkeus": 2500,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Asahi Breweries headquarters building with the Asahi Flame and Skytree at blue hour with full moon, Sumida-ku, Tokyo, Japan.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Asahi_Breweries_headquarters_building_with_the_Asahi_Flame_and_Skytree_at_blue_hour_with_full_moon%2C_Sumida-ku%2C_Tokyo%2C_Japan.jpg?width=1280",
+     "tekija": "Basile Morin",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Asahi_Breweries_headquarters_building_with_the_Asahi_Flame_and_Skytree_at_blue_hour_with_full_moon%2C_Sumida-ku%2C_Tokyo%2C_Japan.jpg",
+     "selite": "Asahin olutpanimon kultainen liekki ja Skytree erottuvat Sumida-joen yli.",
+     "leveys": 4735,
+     "korkeus": 3788,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Tokyo Skytree in spring.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tokyo_Skytree_in_spring.jpg?width=1280",
+     "tekija": "Ruthsic",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tokyo_Skytree_in_spring.jpg",
+     "selite": "Kirsikankukat kehystävät Skytreen keväällä.",
+     "leveys": 3140,
+     "korkeus": 4702,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q183536",
+   "nimi": "Tokyo Tower",
+   "peruste": "sitelinks",
+   "koko_m": 200,
+   "lat": 35.65861,
+   "lon": 139.74556,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Japan-Tokyo-tower-1024.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Japan-Tokyo-tower-1024.jpg?width=1280",
+     "tekija": "Ermell",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Japan-Tokyo-tower-1024.jpg",
+     "selite": "Punavalkoinen Tokyo Tower on Pariisin Eiffel-tornista innoituksensa saanut radiotorni.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Tokyo Tower at night 2.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tokyo_Tower_at_night_2.JPG?width=1280",
+     "tekija": "kakidai",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tokyo_Tower_at_night_2.JPG",
+     "selite": "Torni on illalla valaistu oranssiksi.",
+     "leveys": 2337,
+     "korkeus": 3328,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Minato City, Tokyo, Japan.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Minato_City%2C_Tokyo%2C_Japan.jpg?width=1280",
+     "tekija": "David Kernan",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Minato_City%2C_Tokyo%2C_Japan.jpg",
+     "selite": "Tokyo Tower kohoaa Minaton kaupunginosan yllä.",
+     "leveys": 5995,
+     "korkeus": 3372,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q287165",
+   "nimi": "Meiji-jingū",
+   "peruste": "sitelinks",
+   "koko_m": 700,
+   "lat": 35.67611,
+   "lon": 139.69917,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Torii @ Meiji Jingu Shrine @ Yoyogi Park (13607317544).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Torii_%40_Meiji_Jingu_Shrine_%40_Yoyogi_Park_(13607317544).jpg?width=1280",
+     "tekija": "Guilhem Vellut from Annecy, France",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Torii_%40_Meiji_Jingu_Shrine_%40_Yoyogi_Park_(13607317544).jpg",
+     "selite": "Meiji-jingūn suuri torii avaa polun metsäiseen pyhäkköön Tokion keskellä.",
+     "leveys": 3968,
+     "korkeus": 2976,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Meiji-jingu Torii 1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Meiji-jingu_Torii_1.jpg?width=1280",
+     "tekija": "Zairon",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Meiji-jingu_Torii_1.jpg",
+     "selite": "Pyhäkkö on omistettu keisari Meijille ja hänen puolisolleen.",
+     "leveys": 4592,
+     "korkeus": 3448,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q21083961",
+   "nimi": "Shibuyan risteys",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 35.6595,
+   "lon": 139.70054,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Shibuya Crossing, Aerial.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Shibuya_Crossing%2C_Aerial.jpg?width=1280",
+     "tekija": "David Kernan",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Shibuya_Crossing%2C_Aerial.jpg",
+     "selite": "Shibuyan risteys on maailman kuuluisimpia jalankulkijoiden risteyksiä.",
+     "leveys": 3840,
+     "korkeus": 2160,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q500681",
+   "nimi": "Tokion keisarillinen palatsi",
+   "peruste": "sitelinks",
+   "koko_m": 1000,
+   "lat": 35.6825,
+   "lon": 139.7521,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Nijuubashi2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Nijuubashi2.jpg?width=1280",
+     "tekija": "Kirin Square",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Nijuubashi2.jpg",
+     "selite": "Nijūbashin silta johtaa keisarillisen palatsin sisäpihalle.",
+     "leveys": 1502,
+     "korkeus": 1216,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Imperial Palace Tokyo Nijubashi Bridge.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Imperial_Palace_Tokyo_Nijubashi_Bridge.JPG?width=1280",
+     "tekija": "Chris 73",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Imperial_Palace_Tokyo_Nijubashi_Bridge.JPG",
+     "selite": "Palatsia ympäröi vallihauta, ja kivimuurit ovat Edon linnan aikaisia.",
+     "leveys": 1600,
+     "korkeus": 1200,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Chiyoda Tokyo August Tokyo Imperial Palace 2014 74.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Chiyoda_Tokyo_August_Tokyo_Imperial_Palace_2014_74.JPG?width=1280",
+     "tekija": "User:Piotrus",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Chiyoda_Tokyo_August_Tokyo_Imperial_Palace_2014_74.JPG",
+     "selite": "Vallihaudan ympärillä on laaja puistoalue keskellä Tokiota.",
+     "leveys": 3264,
+     "korkeus": 2448,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q283196",
+   "nimi": "Tokion asema",
+   "peruste": "sitelinks",
+   "koko_m": 300,
+   "lat": 35.68083,
+   "lon": 139.76694,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Tokyo Station (Marunouchi Building).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tokyo_Station_(Marunouchi_Building).jpg?width=1280",
+     "tekija": "Alexandr3126",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tokyo_Station_(Marunouchi_Building).jpg",
+     "selite": "Tokion aseman punatiilinen Marunouchi-rakennus valmistui vuonna 1914.",
+     "leveys": 4272,
+     "korkeus": 2848,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Tokyo Station Marunouchi Building P5228775.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tokyo_Station_Marunouchi_Building_P5228775.jpg?width=1280",
+     "tekija": "Kestrel",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tokyo_Station_Marunouchi_Building_P5228775.jpg",
+     "selite": "Aseman rakennus on illalla valaistu osana Marunouchin liikekeskustaa.",
+     "leveys": 1920,
+     "korkeus": 2560,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Marunouchi Central Plaza with blue sky, Tokyo station and Shin-Marunouchi Building, panoramic view from JP Tower, Tokyo, Japan.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Marunouchi_Central_Plaza_with_blue_sky%2C_Tokyo_station_and_Shin-Marunouchi_Building%2C_panoramic_view_from_JP_Tower%2C_Tokyo%2C_Japan.jpg?width=1280",
+     "tekija": "Basile Morin",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Marunouchi_Central_Plaza_with_blue_sky%2C_Tokyo_station_and_Shin-Marunouchi_Building%2C_panoramic_view_from_JP_Tower%2C_Tokyo%2C_Japan.jpg",
+     "selite": "Asemarakennus on nykyaikaisten pilvenpiirtäjien ympäröimä.",
+     "leveys": 6115,
+     "korkeus": 4077,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q776863",
+   "nimi": "Shinjuku-gyoen",
+   "peruste": "sitelinks",
+   "koko_m": 500,
+   "lat": 35.68717,
+   "lon": 139.71064,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Shinjuku Gyoen National Garden and NTT DoCoMo Yoyogi Building, Tokyo, Japan.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Shinjuku_Gyoen_National_Garden_and_NTT_DoCoMo_Yoyogi_Building%2C_Tokyo%2C_Japan.jpg?width=1280",
+     "tekija": "Basile Morin",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Shinjuku_Gyoen_National_Garden_and_NTT_DoCoMo_Yoyogi_Building%2C_Tokyo%2C_Japan.jpg",
+     "selite": "Shinjuku-gyoenin avoimet nurmikot ja puut ovat vastapaino ympäröivälle kaupungille.",
+     "leveys": 6265,
+     "korkeus": 4177,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Footbridge over a pond in Shinjuku Gyoen National Garden and NTT DoCoMo Yoyogi Building, Tokyo, Japan.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Footbridge_over_a_pond_in_Shinjuku_Gyoen_National_Garden_and_NTT_DoCoMo_Yoyogi_Building%2C_Tokyo%2C_Japan.jpg?width=1280",
+     "tekija": "Basile Morin",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Footbridge_over_a_pond_in_Shinjuku_Gyoen_National_Garden_and_NTT_DoCoMo_Yoyogi_Building%2C_Tokyo%2C_Japan.jpg",
+     "selite": "Japanilaistyylisessä puutarhassa on lampia ja siltoja.",
+     "leveys": 6126,
+     "korkeus": 4084,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q746216",
+   "nimi": "Uenon puisto",
+   "peruste": "pelin nosto",
+   "koko_m": 500,
+   "lat": 35.71222,
+   "lon": 139.77111,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Shinobazu Pond @ Ueno Park (14041716455).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Shinobazu_Pond_%40_Ueno_Park_(14041716455).jpg?width=1280",
+     "tekija": "Guilhem Vellut from Annecy, France",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Shinobazu_Pond_%40_Ueno_Park_(14041716455).jpg",
+     "selite": "Shinobazun lampi on Uenon puiston suosittu kohde.",
+     "leveys": 3968,
+     "korkeus": 2976,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q653433",
+   "nimi": "Tokion kansallismuseo",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 35.71889,
+   "lon": 139.77639,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Tokyo National Museum, Honkan 2010.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tokyo_National_Museum%2C_Honkan_2010.jpg?width=1280",
+     "tekija": "Wiiii",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tokyo_National_Museum%2C_Honkan_2010.jpg",
+     "selite": "Honkan on Tokion kansallismuseon pääsiipi Uenon puistossa.",
+     "leveys": 3476,
+     "korkeus": 2307,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q111973",
+   "nimi": "Tokion metropolin hallintorakennus",
+   "peruste": "sitelinks",
+   "koko_m": 250,
+   "lat": 35.68951,
+   "lon": 139.69171,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Tokyo Metropolitan Government Building No.1 - Shinjuku, Tokyo - DSC05442.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tokyo_Metropolitan_Government_Building_No.1_-_Shinjuku%2C_Tokyo_-_DSC05442.jpg?width=1280",
+     "tekija": "Daderot",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tokyo_Metropolitan_Government_Building_No.1_-_Shinjuku%2C_Tokyo_-_DSC05442.jpg",
+     "selite": "Tokion metropolin hallintorakennuksen kaksoistornit hallitsevat Shinjukun horisonttia.",
+     "leveys": 3648,
+     "korkeus": 5472,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "TokyoMetropolitanGovernmentOffice.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/TokyoMetropolitanGovernmentOffice.jpg?width=1280",
+     "tekija": "Markus Leupold-Löwenthal",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:TokyoMetropolitanGovernmentOffice.jpg",
+     "selite": "Rakennuksen näköalakerrokset ovat ilmaiseksi vierailijoiden käytössä.",
+     "leveys": 3438,
+     "korkeus": 2292,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1046736",
+   "nimi": "Rainbow Bridge",
+   "peruste": "sitelinks",
+   "koko_m": 800,
+   "lat": 35.63639,
+   "lon": 139.76361,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Rainbow Bridge, Tokyo, South view from Odaiba 20190419 1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Rainbow_Bridge%2C_Tokyo%2C_South_view_from_Odaiba_20190419_1.jpg?width=1280",
+     "tekija": "DXR",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Rainbow_Bridge%2C_Tokyo%2C_South_view_from_Odaiba_20190419_1.jpg",
+     "selite": "Rainbow Bridge ylittää Tokionlahden Odaiban ja Shibaura-sataman välillä.",
+     "leveys": 7567,
+     "korkeus": 5045,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Rainbow bridge, Odaiba, Tokyo - Sony A7R (11812224916).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Rainbow_bridge%2C_Odaiba%2C_Tokyo_-_Sony_A7R_(11812224916).jpg?width=1280",
+     "tekija": "Luke Ma from Taipei, Taiwan ROC",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Rainbow_bridge%2C_Odaiba%2C_Tokyo_-_Sony_A7R_(11812224916).jpg",
+     "selite": "Silta valaistaan öisin värikkäästi.",
+     "leveys": 2000,
+     "korkeus": 1335,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "20030727 27 July 2003 Rainbow Bridge Tokyo Harbar Connecting Bridge 1 Odaiba Tokyo Japan.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20030727_27_July_2003_Rainbow_Bridge_Tokyo_Harbar_Connecting_Bridge_1_Odaiba_Tokyo_Japan.jpg?width=1280",
+     "tekija": "Morio",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20030727_27_July_2003_Rainbow_Bridge_Tokyo_Harbar_Connecting_Bridge_1_Odaiba_Tokyo_Japan.jpg",
+     "selite": "Odaiban rannalta on näkymä sillalle ja Tokion satamalle.",
+     "leveys": 2288,
+     "korkeus": 1712,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q418096",
+   "nimi": "Akihabara",
+   "peruste": "sitelinks",
+   "koko_m": 300,
+   "lat": 35.69833,
+   "lon": 139.77306,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Akihabara Electric Town 9999 281.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Akihabara_Electric_Town_9999_281.jpg?width=1280",
+     "tekija": "Hyppolyte de Saint-Rambert",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Akihabara_Electric_Town_9999_281.jpg",
+     "selite": "Akihabara on tunnettu elektroniikasta, animesta ja pelikaupoista.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Sotokanda, Akihabara Electric Town at night 20231114.png",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sotokanda%2C_Akihabara_Electric_Town_at_night_20231114.png?width=1280",
+     "tekija": "Phineyes",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Sotokanda%2C_Akihabara_Electric_Town_at_night_20231114.png",
+     "selite": "Akihabaran neonvalot syttyvät illalla.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q733748",
+   "nimi": "Tokyo Dome",
+   "peruste": "sitelinks",
+   "koko_m": 300,
+   "lat": 35.70556,
+   "lon": 139.75194,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Tokyo Dome 5.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tokyo_Dome_5.jpg?width=1280",
+     "tekija": "Syced",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tokyo_Dome_5.jpg",
+     "selite": "Tokyo Dome on ilmatuettu kupolistadion, jossa pelataan baseballia ja pidetään konsertteja.",
+     "leveys": 4080,
+     "korkeus": 3072,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Tokyo Dome 2015.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tokyo_Dome_2015.jpg?width=1280",
+     "tekija": "IQRemix",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tokyo_Dome_2015.jpg",
+     "selite": "Stadionin aukio täyttyy konserttien ja pelien yleisöstä.",
+     "leveys": 3710,
+     "korkeus": 2167,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2378708",
+   "nimi": "Kaminarimon",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": 35.71113,
+   "lon": 139.79632,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Kaminarimon (outer gate), Sensoji Temple, Akakusa, Tokyo.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kaminarimon_(outer_gate)%2C_Sensoji_Temple%2C_Akakusa%2C_Tokyo.jpg?width=1280",
+     "tekija": "Daderot",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kaminarimon_(outer_gate)%2C_Sensoji_Temple%2C_Akakusa%2C_Tokyo.jpg",
+     "selite": "Kaminarimon on Sensō-jin ulompi portti, jossa roikkuu iso punainen lyhty.",
+     "leveys": 3264,
+     "korkeus": 2448,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Asakusa Sensoji Kaminarimon 2012.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Asakusa_Sensoji_Kaminarimon_2012.JPG?width=1280",
+     "tekija": "Kakidai",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Asakusa_Sensoji_Kaminarimon_2012.JPG",
+     "selite": "Portin vartijapatsaat suojelevat temppelialuetta.",
+     "leveys": 3430,
+     "korkeus": 2395,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q746052",
+   "nimi": "Ginza",
+   "peruste": "sitelinks",
+   "koko_m": 200,
+   "lat": 35.67136,
+   "lon": 139.76562,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Ginza-WAKO 2012.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ginza-WAKO_2012.JPG?width=1280",
+     "tekija": "Kakidai",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ginza-WAKO_2012.JPG",
+     "selite": "Ginzan Wako-tavaratalon kellotorni on Tokion ostoskaupunginosan tunnetuin maamerkki.",
+     "leveys": 4030,
+     "korkeus": 3100,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Ginza Wako main shop.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ginza_Wako_main_shop.JPG?width=1280",
+     "tekija": "Tokumeigakarinoaoshima",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ginza_Wako_main_shop.JPG",
+     "selite": "Wakon rakennus Ginzan risteyksessä on kaupunginosan symboli.",
+     "leveys": 2560,
+     "korkeus": 1920,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q176821",
+   "nimi": "Ryōgoku Kokugikan",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 35.69694,
+   "lon": 139.79333,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Ryogoku Great Sumo Hall.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ryogoku_Great_Sumo_Hall.jpg?width=1280",
+     "tekija": "Steve Cadman",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ryogoku_Great_Sumo_Hall.jpg",
+     "selite": "Kokugikan on Tokion pääsumohalli.",
+     "leveys": 2272,
+     "korkeus": 1704,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Ryogoku Kokugikan painting 1a 2013-08-29.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ryogoku_Kokugikan_painting_1a_2013-08-29.jpg?width=1280",
+     "tekija": "Guilhem Vellut",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ryogoku_Kokugikan_painting_1a_2013-08-29.jpg",
+     "selite": "Hallin julkisivua koristavat sumopainijoiden maalaukset.",
+     "leveys": 3648,
+     "korkeus": 2736,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q242803",
+   "nimi": "Yasukuni-jinja",
+   "peruste": "sitelinks",
+   "koko_m": 200,
+   "lat": 35.69396,
+   "lon": 139.74269,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Yasukuni Shrine Sinmon 2010.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Yasukuni_Shrine_Sinmon_2010.jpg?width=1280",
+     "tekija": "Wiiii",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Yasukuni_Shrine_Sinmon_2010.jpg",
+     "selite": "Yasukuni on šintolainen pyhäkkö Tokion keskustassa.",
+     "leveys": 2652,
+     "korkeus": 1776,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Yasukuni Shrine Sinmon.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Yasukuni_Shrine_Sinmon.jpg?width=1280",
+     "tekija": "Kakidai",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Yasukuni_Shrine_Sinmon.jpg",
+     "selite": "Pyhäkön portissa on keisarillinen krysanteemisinetti.",
+     "leveys": 1497,
+     "korkeus": 1000,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Skyscrapers of Shinjuku 2009 January (revised).jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Skyscrapers_of_Shinjuku_2009_January_(revised).jpg?width=1280",
+   "tekija": "Morio",
+   "lisenssi": "CC BY-SA 3.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Skyscrapers_of_Shinjuku_2009_January_(revised).jpg",
+   "selite": "Shinjukun pilvenpiirtäjät kohoavat Tokion horisontissa Fuji-vuoren edessä.",
+   "leveys": 3400,
+   "korkeus": 1858,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "US Air Force photo 170903-F-PM645-1558 An aerial view of Shinjuku’s skyscraper district from a UH-1N Iroquois.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/US_Air_Force_photo_170903-F-PM645-1558_An_aerial_view_of_Shinjuku%E2%80%99s_skyscraper_district_from_a_UH-1N_Iroquois.jpg?width=1280",
+   "tekija": "U.S. Air Force photo by Yasuo Osakabe",
+   "lisenssi": "Public domain",
+   "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:US_Air_Force_photo_170903-F-PM645-1558_An_aerial_view_of_Shinjuku%E2%80%99s_skyscraper_district_from_a_UH-1N_Iroquois.jpg",
+   "selite": "Tokio on maailman suurimpia kaupunkialueita.",
+   "leveys": 3600,
+   "korkeus": 2400,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

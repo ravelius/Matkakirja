@@ -1,0 +1,513 @@
+{
+ "kaupunki": "tukholma",
+ "kaupunkiQ": "Q1754",
+ "kohteet": [
+  {
+   "q": "Q750444",
+   "nimi": "Tukholman kuninkaanlinna",
+   "peruste": "pelin nosto",
+   "koko_m": 200,
+   "lat": 59.32667,
+   "lon": 18.07167,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Stockholms slott (Stockholm Palace) (24831039126).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Stockholms_slott_(Stockholm_Palace)_(24831039126).jpg?width=1280",
+     "tekija": "Jorge Láscar from Melbourne, Australia",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Stockholms_slott_(Stockholm_Palace)_(24831039126).jpg",
+     "selite": "Kuninkaanlinna kohoaa Gamla stanin rannalla ja on Ruotsin kuningasperheen virallinen asuinpaikka.",
+     "leveys": 5520,
+     "korkeus": 3680,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "20180624 Slottet 7516 (48412801992).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20180624_Slottet_7516_(48412801992).jpg?width=1280",
+     "tekija": "Ray Swi-hymn from Sijhih-Taipei, Taiwan",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20180624_Slottet_7516_(48412801992).jpg",
+     "selite": "Linnan sisäpihaa ympäröivät barokkityyliset siivet.",
+     "leveys": 7952,
+     "korkeus": 5304,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q579854",
+   "nimi": "Gamla stan",
+   "peruste": "sitelinks",
+   "koko_m": 800,
+   "lat": 59.325,
+   "lon": 18.07083,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Gamla stan February 2013 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gamla_stan_February_2013_01.jpg?width=1280",
+     "tekija": "Arild Vågen",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Gamla_stan_February_2013_01.jpg",
+     "selite": "Gamla stan on Tukholman keskiaikainen vanhakaupunki, joka sijaitsee saarella kaupungin sydämessä.",
+     "leveys": 5544,
+     "korkeus": 3701,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Sweden, Stockholm, Gamla Stan (Old Town), Dusk 150628-69.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sweden%2C_Stockholm%2C_Gamla_Stan_(Old_Town)%2C_Dusk_150628-69.jpg?width=1280",
+     "tekija": "Richardmaackphotography",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Sweden%2C_Stockholm%2C_Gamla_Stan_(Old_Town)%2C_Dusk_150628-69.jpg",
+     "selite": "Illan hämärässä vanhakaupungin rantarivi heijastuu veteen.",
+     "leveys": 5453,
+     "korkeus": 3636,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q901371",
+   "nimi": "Vasa-museo",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 59.32807,
+   "lon": 18.09139,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Vasa Museum building view from the sea (3).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Vasa_Museum_building_view_from_the_sea_(3).jpg?width=1280",
+     "tekija": "Hanay",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Vasa_Museum_building_view_from_the_sea_(3).jpg",
+     "selite": "Vasa-museossa on esillä 1600-luvun sotalaiva Vasa, joka upposi neitsytmatkallaan.",
+     "leveys": 4608,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Stockholm August 2020 - Kastellet, Vasa Museum, and Nordic Museum.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Stockholm_August_2020_-_Kastellet%2C_Vasa_Museum%2C_and_Nordic_Museum.jpg?width=1280",
+     "tekija": "Martin Falbisoner",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Stockholm_August_2020_-_Kastellet%2C_Vasa_Museum%2C_and_Nordic_Museum.jpg",
+     "selite": "Museo sijaitsee Djurgårdenin saarella lähellä Pohjoismaista museota.",
+     "leveys": 5264,
+     "korkeus": 2859,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q648483",
+   "nimi": "Tukholman kaupungintalo",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 59.3275,
+   "lon": 18.05472,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Stockholms stadshus september 2011.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Stockholms_stadshus_september_2011.jpg?width=1280",
+     "tekija": "Arild Vågen",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Stockholms_stadshus_september_2011.jpg",
+     "selite": "Tiilinen kaupungintalo tornineen on Tukholman tunnetuimpia maamerkkejä Mälaren-järven rannalla.",
+     "leveys": 2513,
+     "korkeus": 2672,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "20180624 Stadshus 6969 (48412243881).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20180624_Stadshus_6969_(48412243881).jpg?width=1280",
+     "tekija": "Ray Swi-hymn from Sijhih-Taipei, Taiwan",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20180624_Stadshus_6969_(48412243881).jpg",
+     "selite": "Torni kohoaa yli satametriseksi vesistön yläpuolelle.",
+     "leveys": 7952,
+     "korkeus": 5304,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q208559",
+   "nimi": "Drottningholmin linna",
+   "peruste": "UNESCO",
+   "koko_m": 300,
+   "lat": 59.32169,
+   "lon": 17.88638,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Drottningholm Palace (by Pudelek) 3.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Drottningholm_Palace_(by_Pudelek)_3.jpg?width=1280",
+     "tekija": "Pudelek",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Drottningholm_Palace_(by_Pudelek)_3.jpg",
+     "selite": "Drottningholm on Ruotsin kuningasperheen asuinlinna ja maailmanperintökohde Mälaren-järven saarella.",
+     "leveys": 3038,
+     "korkeus": 1877,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "20180624 D-holmPalace 7163 (48412098431).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20180624_D-holmPalace_7163_(48412098431).jpg?width=1280",
+     "tekija": "Ray Swi-hymn from Sijhih-Taipei, Taiwan",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20180624_D-holmPalace_7163_(48412098431).jpg",
+     "selite": "Linnan keltaiset siivet ja puutarhat noudattavat ranskalaista esikuvaa.",
+     "leveys": 7952,
+     "korkeus": 5304,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q725108",
+   "nimi": "Ulkoilmamuseo Skansen",
+   "peruste": "pelin nosto",
+   "koko_m": 500,
+   "lat": 59.32445,
+   "lon": 18.101,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Skansen Entré 2015a.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Skansen_Entr%C3%A9_2015a.jpg?width=1280",
+     "tekija": "Holger.Ellgaard",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Skansen_Entr%C3%A9_2015a.jpg",
+     "selite": "Skansen on maailman vanhin ulkoilmamuseo, jossa on koottuna rakennuksia eri puolilta Ruotsia.",
+     "leveys": 4164,
+     "korkeus": 3008,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q213988",
+   "nimi": "Skogskyrkogården",
+   "peruste": "UNESCO",
+   "koko_m": 800,
+   "lat": 59.27556,
+   "lon": 18.09944,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Skogskyrkogarden-night-2007-11-03.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Skogskyrkogarden-night-2007-11-03.JPG?width=1280",
+     "tekija": "BloodIce",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Skogskyrkogarden-night-2007-11-03.JPG",
+     "selite": "Metsähautausmaa on maailmanperintökohde, jossa arkkitehtuuri ja luonto sulautuvat toisiinsa.",
+     "leveys": 3888,
+     "korkeus": 2592,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Skogskyrk Grav 2006.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Skogskyrk_Grav_2006.jpg?width=1280",
+     "tekija": "Holger Ellgaard",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Skogskyrk_Grav_2006.jpg",
+     "selite": "Haudat sijaitsevat männikössä pitkien runkojen keskellä.",
+     "leveys": 2560,
+     "korkeus": 1720,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q657118",
+   "nimi": "Riddarholmenin kirkko",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": 59.32472,
+   "lon": 18.06472,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Riddarholmskyrkan juni 2005.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Riddarholmskyrkan_juni_2005.jpg?width=1280",
+     "tekija": "Nordelch",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Riddarholmskyrkan_juni_2005.jpg",
+     "selite": "Riddarholmenin kirkko on Ruotsin kuninkaiden hautakirkko, jonka kapea rautatorni erottuu kaukaa.",
+     "leveys": 2491,
+     "korkeus": 3038,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "00 5279 Stockholm, Riddarholmskyrkan.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/00_5279_Stockholm%2C_Riddarholmskyrkan.jpg?width=1280",
+     "tekija": "W. Bulach",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:00_5279_Stockholm%2C_Riddarholmskyrkan.jpg",
+     "selite": "Valurautainen torni on kaupungin siluetin helposti tunnistettava piirre.",
+     "leveys": 1867,
+     "korkeus": 2800,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1133075",
+   "nimi": "Suurkirkko (Storkyrkan)",
+   "peruste": "sitelinks",
+   "koko_m": 80,
+   "lat": 59.32583,
+   "lon": 18.07056,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Storkyrkan 2025 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Storkyrkan_2025_01.jpg?width=1280",
+     "tekija": "ArildV",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Storkyrkan_2025_01.jpg",
+     "selite": "Storkyrkan on Tukholman vanhin kirkko ja Ruotsin kuninkaallisten häiden ja kruunajaisten tyyssija.",
+     "leveys": 4404,
+     "korkeus": 4404,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "0 2054 Storkyrkan, Stockholm.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/0_2054_Storkyrkan%2C_Stockholm.jpg?width=1280",
+     "tekija": "W. Bulach",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:0_2054_Storkyrkan%2C_Stockholm.jpg",
+     "selite": "Kirkon torni nousee Gamla stanin kapeiden katujen yläpuolelle.",
+     "leveys": 1333,
+     "korkeus": 2000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3048023",
+   "nimi": "Stortorget",
+   "peruste": "sitelinks",
+   "koko_m": 100,
+   "lat": 59.325,
+   "lon": 18.07083,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Stortorget i Gamla Stan i Stockholm-2.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Stortorget_i_Gamla_Stan_i_Stockholm-2.JPG?width=1280",
+     "tekija": "Øyvind Holmstad",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Stortorget_i_Gamla_Stan_i_Stockholm-2.JPG",
+     "selite": "Stortorget on Gamla stanin vanha tori, jonka värikkäät pääty-ikkunat ovat Tukholman tunnetuimpia näkymiä.",
+     "leveys": 4945,
+     "korkeus": 3310,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "05.08.2013. Stockholm - panoramio (11).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/05.08.2013._Stockholm_-_panoramio_(11).jpg?width=1280",
+     "tekija": "Sandor Bordas",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:05.08.2013._Stockholm_-_panoramio_(11).jpg",
+     "selite": "Torin ympärillä seisovat kapeat 1600-luvun kauppiastalot.",
+     "leveys": 2592,
+     "korkeus": 1944,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q844426",
+   "nimi": "Sergelin tori",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 59.3325,
+   "lon": 18.06444,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Sergels torg.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sergels_torg.jpg?width=1280",
+     "tekija": "Original photographer: Anders Bengtsson; Image merging / retouching: Waldir",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Sergels_torg.jpg",
+     "selite": "Sergelin tori on Tukholman keskustan nykyaikainen pääaukio lasisen obeliskin ympärillä.",
+     "leveys": 3484,
+     "korkeus": 3466,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "00 5329 Stockholm - Sergels torg (T-centralen).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/00_5329_Stockholm_-_Sergels_torg_(T-centralen).jpg?width=1280",
+     "tekija": "W. Bulach",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:00_5329_Stockholm_-_Sergels_torg_(T-centralen).jpg",
+     "selite": "Aukion mustavalkoinen kuviointi on tunnettu tukholmalainen piirre.",
+     "leveys": 3600,
+     "korkeus": 2400,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q32926",
+   "nimi": "Globen",
+   "peruste": "sitelinks",
+   "koko_m": 120,
+   "lat": 59.29361,
+   "lon": 18.08333,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Globen 2013-06-24.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Globen_2013-06-24.jpg?width=1280",
+     "tekija": "Esquilo",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Globen_2013-06-24.jpg",
+     "selite": "Globen on maailman suurimpiin kuuluva pallon muotoinen rakennus ja Tukholman tunnettu areena.",
+     "leveys": 3200,
+     "korkeus": 2000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Globen Stockholm February 2007.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Globen_Stockholm_February_2007.jpg?width=1280",
+     "tekija": "Fredrik Posse",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Globen_Stockholm_February_2007.jpg",
+     "selite": "Iltaisin pallo valaistaan värikkäästi.",
+     "leveys": 2833,
+     "korkeus": 2000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1721899",
+   "nimi": "Kaknästornet",
+   "peruste": "sitelinks",
+   "koko_m": 60,
+   "lat": 59.335,
+   "lon": 18.12639,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Kaknastower Stockholm view from Djurgarden.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kaknastower_Stockholm_view_from_Djurgarden.jpg?width=1280",
+     "tekija": "Tage Olsin",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kaknastower_Stockholm_view_from_Djurgarden.jpg",
+     "selite": "Kaknäsin torni on Tukholman korkein rakennus ja radio- ja televisiotorni.",
+     "leveys": 2336,
+     "korkeus": 3504,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q849086",
+   "nimi": "Skeppsholmen",
+   "peruste": "sitelinks",
+   "koko_m": 600,
+   "lat": 59.32583,
+   "lon": 18.08417,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Skeppsholmen 2.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Skeppsholmen_2.JPG?width=1280",
+     "tekija": "Jan Ainali",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Skeppsholmen_2.JPG",
+     "selite": "Skeppsholmen on entinen laivaston saari, jossa on nykyään museoita ja puistoja.",
+     "leveys": 3453,
+     "korkeus": 2088,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "0884Skeppsholmen.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/0884Skeppsholmen.jpg?width=1280",
+     "tekija": "L.G.foto",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:0884Skeppsholmen.jpg",
+     "selite": "Saari sijaitsee aivan Gamla stanin ja Djurgårdenin välissä.",
+     "leveys": 4835,
+     "korkeus": 3223,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Stockholm City From Södermalm (223659989).jpeg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Stockholm_City_From_S%C3%B6dermalm_(223659989).jpeg?width=1280",
+   "tekija": "Francisco Anzola",
+   "lisenssi": "CC BY 3.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Stockholm_City_From_S%C3%B6dermalm_(223659989).jpeg",
+   "selite": "Tukholma levittyy useille saarille Mälaren-järven ja Itämeren välissä.",
+   "leveys": 2048,
+   "korkeus": 1316,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Stockholm Old Town (193365183).jpeg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Stockholm_Old_Town_(193365183).jpeg?width=1280",
+   "tekija": "Dronepicr",
+   "lisenssi": "CC BY 3.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Stockholm_Old_Town_(193365183).jpeg",
+   "selite": "Vanhakaupunki heijastuu tyyneen veteen Gamla stanin rannalla.",
+   "leveys": 2048,
+   "korkeus": 1366,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

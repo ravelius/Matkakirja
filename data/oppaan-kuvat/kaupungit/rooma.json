@@ -1,0 +1,784 @@
+{
+ "kaupunki": "rooma",
+ "kaupunkiQ": "Q220",
+ "kohteet": [
+  {
+   "q": "Q10285",
+   "nimi": "Colosseum",
+   "peruste": "pelin nosto",
+   "koko_m": 190,
+   "lat": 41.89028,
+   "lon": 12.49222,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Colosseo 2020.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Colosseo_2020.jpg?width=1280",
+     "tekija": "FeaturedPics",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Colosseo_2020.jpg",
+     "selite": "Colosseum on antiikin Rooman suurin amfiteatteri, ja sen ulkoseinästä on jäljellä kolme kaarikerrosta.",
+     "leveys": 12051,
+     "korkeus": 8442,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Foto aerea del Colosseo.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Foto_aerea_del_Colosseo.jpg?width=1280",
+     "tekija": "Aeroshot.it",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Foto_aerea_del_Colosseo.jpg",
+     "selite": "Ilmasta näkyy amfiteatterin soikea muoto ja sen keskellä paljastuneet maanalaiset käytävät.",
+     "leveys": 1920,
+     "korkeus": 1140,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Rome - Exterior of the Colosseum (5178267201).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Rome_-_Exterior_of_the_Colosseum_(5178267201).jpg?width=1280",
+     "tekija": "Dennis G. Jarvis",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Rome_-_Exterior_of_the_Colosseum_(5178267201).jpg",
+     "selite": "Colosseumin kehä on yksi Rooman tunnetuimmista maamerkeistä.",
+     "leveys": 4288,
+     "korkeus": 2848,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 4,
+     "tiedosto": "Panoramic photograph of interior of Colosseum.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Panoramic_photograph_of_interior_of_Colosseum.jpg?width=1280",
+     "tekija": "ThePhotografer",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Panoramic_photograph_of_interior_of_Colosseum.jpg",
+     "selite": "Areenan sisällä näkyvät katsomon portaat ja lattian alle jääneet kellarit.",
+     "leveys": 12791,
+     "korkeus": 8020,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q12512",
+   "nimi": "Pietarinkirkko",
+   "peruste": "pelin nosto",
+   "koko_m": 250,
+   "lat": 41.90222,
+   "lon": 12.45342,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Basilica di San Pietro in Vaticano September 2015-1a.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Basilica_di_San_Pietro_in_Vaticano_September_2015-1a.jpg?width=1280",
+     "tekija": "Alvesgaspar",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Basilica_di_San_Pietro_in_Vaticano_September_2015-1a.jpg",
+     "selite": "Pietarinkirkko on katolisen kirkon tärkeimpiä pyhäkköjä, ja sen julkisivu on Carlo Maderno suunnittelema.",
+     "leveys": 13066,
+     "korkeus": 6823,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Vatican City and St. Peter Square evening twilight aerial view.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Vatican_City_and_St._Peter_Square_evening_twilight_aerial_view.jpg?width=1280",
+     "tekija": "lafiguradelpadre Congreso",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Vatican_City_and_St._Peter_Square_evening_twilight_aerial_view.jpg",
+     "selite": "Pietarinaukion soikea muoto avautuu basilikan eteen kuin kaksi suurta sylikaarta.",
+     "leveys": 3072,
+     "korkeus": 2048,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Rome, Vatican, Italy, Facade of St. Peter's Basilica.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Rome%2C_Vatican%2C_Italy%2C_Facade_of_St._Peter's_Basilica.jpg?width=1280",
+     "tekija": "Vyacheslav Argenberg",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Rome%2C_Vatican%2C_Italy%2C_Facade_of_St._Peter's_Basilica.jpg",
+     "selite": "Julkisivun yläreunaa koristavat Kristuksen ja apostolien patsaat.",
+     "leveys": 3072,
+     "korkeus": 2048,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q180212",
+   "nimi": "Forum Romanum",
+   "peruste": "pelin nosto",
+   "koko_m": 400,
+   "lat": 41.8922,
+   "lon": 12.4852,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Foro Romano Musei Capitolini Roma.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Foro_Romano_Musei_Capitolini_Roma.jpg?width=1280",
+     "tekija": "This Photo was taken by Wolfgang Moroder. Feel free to use my photos, but please mention me as the author and send me a message. This image is not in the public domain. Please respect the copyright protection. It may only be used according to the rules mentioned here. This specifically excludes use in social media, if applicable terms of the licenses listed here not appropriate. Please do not upload an updated image here without consultation with the Author. The author would like to make corrections only at his own source. This ensures that the changes are preserved.Please if you think that any changes should be required, please inform the author.Otherwise you can upload a new image with a new name. Please use one of the templates derivative or extract.",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Foro_Romano_Musei_Capitolini_Roma.jpg",
+     "selite": "Capitoliumin museoista avautuu laaja näkymä foorumin raunioille.",
+     "leveys": 17000,
+     "korkeus": 6980,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Forum romanum 6k (5760x2097).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Forum_romanum_6k_(5760x2097).jpg?width=1280",
+     "tekija": "BeBo86",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Forum_romanum_6k_(5760x2097).jpg",
+     "selite": "Rauniot levittyvät Capitolinuksen ja Palatinuksen kukkuloiden väliin.",
+     "leveys": 5760,
+     "korkeus": 2097,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Foro Romano visto dal Vittoriano Roma.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Foro_Romano_visto_dal_Vittoriano_Roma.jpg?width=1280",
+     "tekija": "This Photo was taken by Wolfgang Moroder. Feel free to use my photos, but please mention me as the author and send me a message. This image is not in the public domain. Please respect the copyright protection. It may only be used according to the rules mentioned here. This specifically excludes use in social media, if applicable terms of the licenses listed here not appropriate. Please do not upload an updated image here without consultation with the Author. The author would like to make corrections only at his own source. This ensures that the changes are preserved.Please if you think that any changes should be required, please inform the author.Otherwise you can upload a new image with a new name. Please use one of the templates derivative or extract.",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Foro_Romano_visto_dal_Vittoriano_Roma.jpg",
+     "selite": "Forum Romanum oli antiikin Rooman poliittinen ja uskonnollinen keskus, josta on jäljellä rauniot ja pylväät.",
+     "leveys": 11183,
+     "korkeus": 6152,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q185382",
+   "nimi": "Trevin suihkulähde",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": 41.90093,
+   "lon": 12.48331,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Fuente de Trevi, Roma, Italia, 2022-09-15, DD 02.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Fuente_de_Trevi%2C_Roma%2C_Italia%2C_2022-09-15%2C_DD_02.jpg?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Fuente_de_Trevi%2C_Roma%2C_Italia%2C_2022-09-15%2C_DD_02.jpg",
+     "selite": "Trevin suihkulähde on barokkinen vesilähde, jonka keskellä seisoo merenjumala Oceanus.",
+     "leveys": 7073,
+     "korkeus": 4824,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Fontana di Trevi di notte.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Fontana_di_Trevi_di_notte.JPG?width=1280",
+     "tekija": "RoyFokker",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Fontana_di_Trevi_di_notte.JPG",
+     "selite": "Illalla valaistu suihkulähde hohtaa kullanruskeana kapean aukion ympäröimänä.",
+     "leveys": 3888,
+     "korkeus": 2592,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Oceanus (Trevi fountain).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Oceanus_(Trevi_fountain).jpg?width=1280",
+     "tekija": "Wilfredor",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Oceanus_(Trevi_fountain).jpg",
+     "selite": "Marmorinen Oceanus ratsastaa simpukkavaunuissa merihevosten vetämänä.",
+     "leveys": 6967,
+     "korkeus": 10199,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q99309",
+   "nimi": "Pantheon",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": 41.89861,
+   "lon": 12.47694,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Pantheon (Rome) - Exterior 10.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Pantheon_(Rome)_-_Exterior_10.jpg?width=1280",
+     "tekija": "John Samuel",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Pantheon_(Rome)_-_Exterior_10.jpg",
+     "selite": "Pantheon on antiikin Rooman temppeli, jonka valtava kupoli on yhä ehjä.",
+     "leveys": 4272,
+     "korkeus": 2848,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Pantheon (Rome) - Exterior 04.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Pantheon_(Rome)_-_Exterior_04.jpg?width=1280",
+     "tekija": "John Samuel",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Pantheon_(Rome)_-_Exterior_04.jpg",
+     "selite": "Pylväikön päätykolmiossa lukee rakennuttajan Marcus Agrippan nimi.",
+     "leveys": 4272,
+     "korkeus": 2848,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q848072",
+   "nimi": "Espanjalaiset portaat",
+   "peruste": "pelin nosto",
+   "koko_m": 120,
+   "lat": 41.90611,
+   "lon": 12.48278,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Spanische Treppe - Scalinata di Trinità dei Monti - Piazza di Spagna - panoramio.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Spanische_Treppe_-_Scalinata_di_Trinit%C3%A0_dei_Monti_-_Piazza_di_Spagna_-_panoramio.jpg?width=1280",
+     "tekija": "qwesy qwesy",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Spanische_Treppe_-_Scalinata_di_Trinit%C3%A0_dei_Monti_-_Piazza_di_Spagna_-_panoramio.jpg",
+     "selite": "Espanjalaiset portaat nousevat Piazza di Spagnalta Trinità dei Monti -kirkolle.",
+     "leveys": 4608,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Spanish Steps, Rome (Ank Kumar) 05.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Spanish_Steps%2C_Rome_(Ank_Kumar)_05.jpg?width=1280",
+     "tekija": "Ank Kumar",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Spanish_Steps%2C_Rome_(Ank_Kumar)_05.jpg",
+     "selite": "Portaiden juurella on Barcaccia-suihkulähde, jonka muotona on uppoava vene.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q486382",
+   "nimi": "Castel Sant’Angelo",
+   "peruste": "pelin nosto",
+   "koko_m": 200,
+   "lat": 41.90304,
+   "lon": 12.46631,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Castel Sant'Angelo at dusk, Rome, Italy.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Castel_Sant'Angelo_at_dusk%2C_Rome%2C_Italy.jpg?width=1280",
+     "tekija": "Jebulon",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Castel_Sant'Angelo_at_dusk%2C_Rome%2C_Italy.jpg",
+     "selite": "Castel Sant’Angelo rakennettiin alun perin keisari Hadrianuksen hautamonumentiksi.",
+     "leveys": 4371,
+     "korkeus": 2898,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Engelsburg und Engelsbrücke abends.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Engelsburg_und_Engelsbr%C3%BCcke_abends.jpg?width=1280",
+     "tekija": "Thomas Wolf, www.foto-tw.de",
+     "lisenssi": "CC BY-SA 3.0 de",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Engelsburg_und_Engelsbr%C3%BCcke_abends.jpg",
+     "selite": "Tiberin ylittävän sillan enkelipatsaat johdattavat linnan edustalle.",
+     "leveys": 7471,
+     "korkeus": 4844,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "StAngelo Bridge Rome.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/StAngelo_Bridge_Rome.jpg?width=1280",
+     "tekija": "AngMoKio",
+     "lisenssi": "CC BY-SA 2.5",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:StAngelo_Bridge_Rome.jpg",
+     "selite": "Linnan pyöreä muoto kohoaa Tiberin rannalla siltaa vasten.",
+     "leveys": 2976,
+     "korkeus": 1756,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q463400",
+   "nimi": "Piazza Navona",
+   "peruste": "sitelinks",
+   "koko_m": 300,
+   "lat": 41.89871,
+   "lon": 12.47316,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Piazza Navona 1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Piazza_Navona_1.jpg?width=1280",
+     "tekija": "Myrabella",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Piazza_Navona_1.jpg",
+     "selite": "Piazza Navona seuraa antiikin Domitianuksen stadionin pitkulaista muotoa.",
+     "leveys": 3504,
+     "korkeus": 2424,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "PiazzaNavona1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/PiazzaNavona1.jpg?width=1280",
+     "tekija": "Meshari Alawfi",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:PiazzaNavona1.jpg",
+     "selite": "Aukion laidalla kohoavat Sant’Agnese in Agonen barokkikirkko ja Egyptin obeliski.",
+     "leveys": 6016,
+     "korkeus": 4016,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Piazza Navona Gange fontana dei Fiumi Roma.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Piazza_Navona_Gange_fontana_dei_Fiumi_Roma.jpg?width=1280",
+     "tekija": "This Photo was taken by Wolfgang Moroder. Feel free to use my photos, but please mention me as the author and send me a message. This image is not in the public domain. Please respect the copyright protection. It may only be used according to the rules mentioned here. This specifically excludes use in social media, if applicable terms of the licenses listed here not appropriate. Please do not upload an updated image here without consultation with the Author. The author would like to make corrections only at his own source. This ensures that the changes are preserved.Please if you think that any changes should be required, please inform the author.Otherwise you can upload a new image with a new name. Please use one of the templates derivative or extract.",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Piazza_Navona_Gange_fontana_dei_Fiumi_Roma.jpg",
+     "selite": "Berninin Neljän virran suihkulähteessä kukin hahmo edustaa yhtä maanosaa.",
+     "leveys": 6200,
+     "korkeus": 8272,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q506234",
+   "nimi": "Viktor Emanuel II:n monumentti",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 41.89472,
+   "lon": 12.48306,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Altar della Patria September 2015-1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Altar_della_Patria_September_2015-1.jpg?width=1280",
+     "tekija": "Alvesgaspar",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Altar_della_Patria_September_2015-1.jpg",
+     "selite": "Valkoinen marmorimonumentti rakennettiin Italian ensimmäisen kuninkaan muistoksi.",
+     "leveys": 7324,
+     "korkeus": 4232,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Altare della Patria (Roma).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Altare_della_Patria_(Roma).jpg?width=1280",
+     "tekija": "ThePhotografer",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Altare_della_Patria_(Roma).jpg",
+     "selite": "Monumentti hallitsee Piazza Venezian aukiota keskellä Roomaa.",
+     "leveys": 8314,
+     "korkeus": 5246,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q34925",
+   "nimi": "Capitolium",
+   "peruste": "sitelinks",
+   "koko_m": 250,
+   "lat": 41.89333,
+   "lon": 12.48306,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Piazza del Campidoglio Roma.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Piazza_del_Campidoglio_Roma.jpg?width=1280",
+     "tekija": "Jensens",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Piazza_del_Campidoglio_Roma.jpg",
+     "selite": "Capitolium on yksi Rooman seitsemästä kukkulasta, ja sen aukion suunnitteli Michelangelo.",
+     "leveys": 2200,
+     "korkeus": 1370,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Fountain in Piazza del Campidoglio (Rome) - Nile.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Fountain_in_Piazza_del_Campidoglio_(Rome)_-_Nile.jpg?width=1280",
+     "tekija": "Diana Ringo",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Fountain_in_Piazza_del_Campidoglio_(Rome)_-_Nile.jpg",
+     "selite": "Aukion portaiden vierellä lepäävä jokijumala Nile on antiikkinen veistos.",
+     "leveys": 3844,
+     "korkeus": 2543,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q200642",
+   "nimi": "Palatinus",
+   "peruste": "sitelinks",
+   "koko_m": 400,
+   "lat": 41.88833,
+   "lon": 12.48694,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Ruins of the Domus Augustana on Palatine Hill..jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ruins_of_the_Domus_Augustana_on_Palatine_Hill..jpg?width=1280",
+     "tekija": "Livioandronico2013",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ruins_of_the_Domus_Augustana_on_Palatine_Hill..jpg",
+     "selite": "Palatinuksen kukkulalla sijaitsivat keisarien palatsit, joista on jäljellä tiiliraunioita.",
+     "leveys": 6016,
+     "korkeus": 3626,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Pinus pinea and ruins on Palatine Hill.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Pinus_pinea_and_ruins_on_Palatine_Hill.jpg?width=1280",
+     "tekija": "Livioandronico2013",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Pinus_pinea_and_ruins_on_Palatine_Hill.jpg",
+     "selite": "Kukkulaa luonnehtivat Rooman tyypilliset pinjat ja antiikin raunioiden muurit.",
+     "leveys": 4000,
+     "korkeus": 5667,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q207808",
+   "nimi": "Circus Maximus",
+   "peruste": "sitelinks",
+   "koko_m": 600,
+   "lat": 41.8859,
+   "lon": 12.4857,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Circus Maximus seen from Palatine hill.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Circus_Maximus_seen_from_Palatine_hill.JPG?width=1280",
+     "tekija": "Livioandronico2013",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Circus_Maximus_seen_from_Palatine_hill.JPG",
+     "selite": "Circus Maximus oli antiikin Rooman suurin vaunukilpailujen areena.",
+     "leveys": 6016,
+     "korkeus": 4000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Circus Maximus et Domus Augustana - Rome 111001.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Circus_Maximus_et_Domus_Augustana_-_Rome_111001.JPG?width=1280",
+     "tekija": "Jean-Pol GRANDMONT",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Circus_Maximus_et_Domus_Augustana_-_Rome_111001.JPG",
+     "selite": "Nykyään areenasta on jäljellä pitkä ruohoinen aukio Palatinuksen juurella.",
+     "leveys": 3699,
+     "korkeus": 2466,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q84090",
+   "nimi": "Lateraanin Johanneksen arkkibasilika",
+   "peruste": "UNESCO",
+   "koko_m": 150,
+   "lat": 41.88591,
+   "lon": 12.50616,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Archbasilica of St. John Lateran in 2018.05.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Archbasilica_of_St._John_Lateran_in_2018.05.jpg?width=1280",
+     "tekija": "CAPTAIN RAJU",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Archbasilica_of_St._John_Lateran_in_2018.05.jpg",
+     "selite": "Lateraanin basilika on Rooman piispan eli paavin oma katedraali.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Archbasilica of St. John Lateran HD.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Archbasilica_of_St._John_Lateran_HD.jpg?width=1280",
+     "tekija": "Livioandronico2013",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Archbasilica_of_St._John_Lateran_HD.jpg",
+     "selite": "Julkisivun huipulla seisovat Kristuksen ja pyhimysten patsaat.",
+     "leveys": 7507,
+     "korkeus": 6805,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q186282",
+   "nimi": "Santa Maria Maggiore",
+   "peruste": "UNESCO",
+   "koko_m": 150,
+   "lat": 41.8975,
+   "lon": 12.49861,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Basilique Santa Maria Maggiore - Rome (IT62) - 2021-08-29 - 6.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Basilique_Santa_Maria_Maggiore_-_Rome_(IT62)_-_2021-08-29_-_6.jpg?width=1280",
+     "tekija": "Chabe01",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Basilique_Santa_Maria_Maggiore_-_Rome_(IT62)_-_2021-08-29_-_6.jpg",
+     "selite": "Santa Maria Maggiore on yksi Rooman neljästä suuresta patriarkaalisesta basilikasta.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Dome of Santa Maria Maggiore (Rome).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dome_of_Santa_Maria_Maggiore_(Rome).jpg?width=1280",
+     "tekija": "Livioandronico2013",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Dome_of_Santa_Maria_Maggiore_(Rome).jpg",
+     "selite": "Basilikan kupoli kohoaa Esquilinuksen kukkulan yläpuolelle.",
+     "leveys": 5088,
+     "korkeus": 3805,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q502098",
+   "nimi": "Caracallan kylpylät",
+   "peruste": "sitelinks",
+   "koko_m": 400,
+   "lat": 41.88026,
+   "lon": 12.49276,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Baths of Caracalla, facing Caldarium.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Baths_of_Caracalla%2C_facing_Caldarium.jpg?width=1280",
+     "tekija": "Ethan Doyle White",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Baths_of_Caracalla%2C_facing_Caldarium.jpg",
+     "selite": "Caracallan kylpylät olivat keisarillisen ajan valtava julkinen kylpylä- ja liikuntakeskus.",
+     "leveys": 2592,
+     "korkeus": 1552,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Terme di Caracalla3.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Terme_di_Caracalla3.jpg?width=1280",
+     "tekija": "СССР",
+     "lisenssi": "CC BY-SA 2.5 ca",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.5/ca/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Terme_di_Caracalla3.jpg",
+     "selite": "Tiilimuurit antavat aavistuksen kylpylän alkuperäisestä mittakaavasta.",
+     "leveys": 2515,
+     "korkeus": 1775,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q824997",
+   "nimi": "Piazza del Popolo",
+   "peruste": "sitelinks",
+   "koko_m": 300,
+   "lat": 41.91071,
+   "lon": 12.47632,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Piazza del Popolo in Rome (1).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Piazza_del_Popolo_in_Rome_(1).jpg?width=1280",
+     "tekija": "Krzysztof Golik",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Piazza_del_Popolo_in_Rome_(1).jpg",
+     "selite": "Piazza del Popolo on Rooman pohjoinen porttiaukio, jonka keskellä seisoo obeliski.",
+     "leveys": 5115,
+     "korkeus": 3104,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Piazza del Popolo in Rome 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Piazza_del_Popolo_in_Rome_01.jpg?width=1280",
+     "tekija": "Krzysztof Golik",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Piazza_del_Popolo_in_Rome_01.jpg",
+     "selite": "Pincion kukkulalta aukio avautuu symmetrisenä kokonaisuutena.",
+     "leveys": 5076,
+     "korkeus": 3384,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q678313",
+   "nimi": "Villa Borghese",
+   "peruste": "sitelinks",
+   "koko_m": 800,
+   "lat": 41.91365,
+   "lon": 12.4851,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Plaza de Siena, Villa Borghese, Roma, Italia, 2022-09-14, DD 14.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Plaza_de_Siena%2C_Villa_Borghese%2C_Roma%2C_Italia%2C_2022-09-14%2C_DD_14.jpg?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Plaza_de_Siena%2C_Villa_Borghese%2C_Roma%2C_Italia%2C_2022-09-14%2C_DD_14.jpg",
+     "selite": "Villa Borghese on Rooman suuri puisto, jonka sisällä on aukioita, museoita ja puutarhoja.",
+     "leveys": 8080,
+     "korkeus": 5387,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q914255",
+   "nimi": "Trastevere",
+   "peruste": "sitelinks",
+   "koko_m": 600,
+   "lat": 41.88722,
+   "lon": 12.46556,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Trastevere streets, Rome, Italy.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Trastevere_streets%2C_Rome%2C_Italy.jpg?width=1280",
+     "tekija": "Alessandro Cossu",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Trastevere_streets%2C_Rome%2C_Italy.jpg",
+     "selite": "Trastevere on Tiberin länsipuolen kaupunginosa, jonka kapeat kujat ovat täynnä kukkaköynnöksiä.",
+     "leveys": 2448,
+     "korkeus": 3264,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q189417",
+   "nimi": "Via Appia",
+   "peruste": "UNESCO",
+   "koko_m": 300,
+   "lat": 41.84139,
+   "lon": 12.5325,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Appian Way.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Appian_Way.jpg?width=1280",
+     "tekija": "Livioandronico2013",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Appian_Way.jpg",
+     "selite": "Via Appia oli antiikin Rooman tärkeimpiä maanteitä, ja sen kiveys on säilynyt kaupungin etelälaidalla.",
+     "leveys": 6016,
+     "korkeus": 4000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Via appia.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Via_appia.jpg?width=1280",
+     "tekija": "Kleuske at Dutch Wikipedia",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Via_appia.jpg",
+     "selite": "Tien varrella kohoavat pinjat ja vanhat hautamuistomerkit.",
+     "leveys": 1704,
+     "korkeus": 2272,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Rome skyline panorama.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Rome_skyline_panorama.jpg?width=1280",
+   "tekija": "Nicholas Hartmann",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Rome_skyline_panorama.jpg",
+   "selite": "Rooman kupolit ja katot levittäytyvät seitsemän kukkulan kaupungin ylle.",
+   "leveys": 5472,
+   "korkeus": 1824,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Vista di Roma dal Castel Sant'Angelo 155Mpx.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Vista_di_Roma_dal_Castel_Sant'Angelo_155Mpx.jpg?width=1280",
+   "tekija": "KOSTYÁL, Zsigmond HoremWeb Place of Auditions",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Vista_di_Roma_dal_Castel_Sant'Angelo_155Mpx.jpg",
+   "selite": "Castel Sant’Angelolta näkee kaupungin yli Tiberin ja Vatikaanin suuntaan.",
+   "leveys": 25305,
+   "korkeus": 6154,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

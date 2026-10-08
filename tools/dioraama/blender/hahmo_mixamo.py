@@ -8,6 +8,8 @@
 #   <leike>:<s> lyhentää leikkeen s sekuntiin ja sulkee sen silmukaksi; --korvaa idle=a,puhe=b,tyo=c vaihtaa natiivin leikkeet.
 #   --tyo <nimi>: korvaa hahmon työleikkeen (natiivi soittaa nimeä 'tyo') annetulla leikkeellä; muuten vanhat leikkeet ennallaan.
 #   Identiteettikoe: lähteeksi UAL-glb (samat luunimet) → tuloksen pitää vastata alkuperäistä leikettä.
+#   <leike>+kallistus | +kuuntelu (7.10.): pään lisäliike kohdistuksen päälle kuulijan reaktioihin (HBM:ssä ei pään kallistusta):
+#   kallistus = pää kallistuu sivulle ~11° ja palaa, kuuntelu = pää painuu eteen ~7° ja nyökkää kevyesti. Kaula saa 40 %.
 import bpy, math, os, sys
 from mathutils import Matrix, Quaternion, Vector
 A = sys.argv[sys.argv.index('--') + 1:]
@@ -50,7 +52,7 @@ arm.animation_data_create(); arm.animation_data.action = None
 for pb in arm.pose.bones: pb.matrix_basis = Matrix()
 Tw = arm.matrix_world.to_quaternion()
 
-def retarget(lahde, nimi, toiminto, sek=None):
+def retarget(lahde, nimi, toiminto, sek=None, liike=None):
     uudet = tuo(lahde); src = [o for o in uudet if o.type == 'ARMATURE'][0]
     # FBX-tuoja asettaa kohtauksen kuvanopeuden tiedoston mukaan (Kevin Iglesias 25 fps): lähde näytteistetään sen omalla
     # nopeudella ja kohde kirjoitetaan aina 30 fps:llä (5.10.: muuten koko hahmon leikkeet vietiin 20 % hitaampina).
@@ -104,6 +106,18 @@ def retarget(lahde, nimi, toiminto, sek=None):
     ps = src.data.bones[pari['pelvis']]; pt = arm.data.bones['pelvis']
     ps_rest = Sw @ LEPO[ps.name].translation; pt_rest = arm.matrix_world @ pt.head_local
     suhde = (pt_rest.z - (arm.matrix_world @ arm.data.bones['foot_l'].head_local).z) / max(1e-4, ps_rest.z - (Sw @ LEPO[pari['foot_l']].translation).z)
+    # pään lisäliike: akselit hahmon maailmasta (x = vasen, z = ylös, eteen = x × z)
+    kx = ((arm.matrix_world @ arm.data.bones['thigh_l'].head_local) - (arm.matrix_world @ arm.data.bones['thigh_r'].head_local)).normalized()
+    kz = Vector((0, 0, 1)); kz = (kz - kx * kz.dot(kx)).normalized(); keteen = kx.cross(kz).normalized()
+    def lisa(t, kesto, kerroin):
+        if not liike: return Quaternion()
+        a = min(1.0, t / 0.45, max(0.0, (kesto - t) / 0.55)); a = a * a * (3 - 2 * a)
+        if liike == 'kallistus':
+            return Quaternion(keteen, math.radians(11) * a * kerroin) @ Quaternion(kx, math.radians(3) * a * kerroin)
+        if liike == 'kuuntelu':
+            return Quaternion(kx, (math.radians(7) + math.radians(2.2) * math.sin(2 * math.pi * 0.8 * t)) * a * kerroin) @ \
+                   Quaternion(keteen, math.radians(4) * a * kerroin)
+        return Quaternion()
     uusi = bpy.data.actions.new(nimi); uusi.use_fake_user = True; arm.animation_data.action = uusi
     f0, f1 = (int(round(x)) for x in act.frame_range)
     n = int(round((f1 - f0) / fps_l * 30)) + 1
@@ -119,6 +133,8 @@ def retarget(lahde, nimi, toiminto, sek=None):
                 s = src.pose.bones[pari[b.name]]
                 q_s = (Sq @ s.matrix.to_quaternion()).normalized()
                 q_w = (q_s @ sw_rest[b.name].inverted()) @ linja[b.name] @ tw_rest[b.name]
+                if liike and b.name in ('Head', 'neck_01'):
+                    q_w = lisa(i / 30, n / 30, 1.0 if b.name == 'Head' else 0.4) @ q_w
                 q = (Tw.inverted() @ q_w).normalized()
                 paikka = ylin.translation
                 if b.name == 'pelvis':
@@ -149,8 +165,10 @@ def retarget(lahde, nimi, toiminto, sek=None):
 for x in LAHTEET:
     polku, nimi = x.rsplit('=', 1); toiminto = sek = None
     if ':' in nimi: nimi, sek = nimi.split(':'); sek = float(sek)
+    liike = None
+    if '+' in nimi: nimi, liike = nimi.split('+')
     if '@' in nimi: nimi, toiminto = nimi.split('@')
-    retarget(polku, nimi, toiminto, sek); vanhat.add(nimi)
+    retarget(polku, nimi, toiminto, sek, liike); vanhat.add(nimi)
 # --korvaa idle=hengitys,puhe=puhe_m,tyo=rukous: natiivin soittama nimi saa uuden leikkeen, vanha (UAL) poistetaan
 KORVAA = dict(x.split('=') for x in A[A.index('--korvaa') + 1].split(',')) if '--korvaa' in A else {}
 if TYO: KORVAA['tyo'] = TYO

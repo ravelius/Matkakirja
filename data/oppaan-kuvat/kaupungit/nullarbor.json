@@ -1,0 +1,180 @@
+{
+ "kaupunki": "nullarbor",
+ "kaupunkiQ": "Q381050",
+ "pieniAlue": true,
+ "kohteet": [
+  {
+   "q": "Q4997480",
+   "nimi": "Bunda Cliffs",
+   "peruste": "pelin nosto",
+   "koko_m": 8000,
+   "lat": -31.95,
+   "lon": 130.23333,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Bunda Cliffs (14560382521).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bunda_Cliffs_(14560382521).jpg?width=1280",
+     "tekija": "Chris Fithall",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bunda_Cliffs_(14560382521).jpg",
+     "selite": "Bunda Cliffsin kalkkikivijyrkänne kohoaa pystysuorana Intian valtameren yllä.",
+     "leveys": 4883,
+     "korkeus": 3235,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Bunda Cliffs, 2017 (01).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bunda_Cliffs%2C_2017_(01).jpg?width=1280",
+     "tekija": "Bahnfrend",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bunda_Cliffs%2C_2017_(01).jpg",
+     "selite": "Turkoosi meri hakkaa jyrkänteen juurta, jonka päällä Nullarborin tasanko alkaa.",
+     "leveys": 4910,
+     "korkeus": 3238,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Bunda Cliffs, 2017 (04).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bunda_Cliffs%2C_2017_(04).jpg?width=1280",
+     "tekija": "Bahnfrend",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bunda_Cliffs%2C_2017_(04).jpg",
+     "selite": "Jyrkänteen reunalta näkyy matala pensaikko ja pitkä hiekkaranta.",
+     "leveys": 4894,
+     "korkeus": 3214,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q186733",
+   "nimi": "Iso Australianlahti",
+   "peruste": "sitelinks",
+   "koko_m": 20000,
+   "lat": -33,
+   "lon": 130,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Great Australian Bight Marine Park.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Great_Australian_Bight_Marine_Park.jpg?width=1280",
+     "tekija": "Nachoman-au",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Great_Australian_Bight_Marine_Park.jpg",
+     "selite": "Iso Australianlahden kalliorannikko putoaa jyrkästi mereen.",
+     "leveys": 1600,
+     "korkeus": 1200,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Great Australian Bight, Eyre Highway scenic lookout no. 3 - 1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Great_Australian_Bight%2C_Eyre_Highway_scenic_lookout_no._3_-_1.jpg?width=1280",
+     "tekija": "Chuq",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Great_Australian_Bight%2C_Eyre_Highway_scenic_lookout_no._3_-_1.jpg",
+     "selite": "Eyre Highwayn näköalapaikalta avautuu pensaikkoinen rannikko ja lahden turkoosi meri.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q548172",
+   "nimi": "Eucla",
+   "peruste": "sitelinks",
+   "koko_m": 2000,
+   "lat": -31.675,
+   "lon": 128.883,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Old Telegraph Station, Eucla SA. Main homestead slowly being buried by the sand dunes.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Old_Telegraph_Station%2C_Eucla_SA._Main_homestead_slowly_being_buried_by_the_sand_dunes.jpg?width=1280",
+     "tekija": "MaryWShields",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Old_Telegraph_Station%2C_Eucla_SA._Main_homestead_slowly_being_buried_by_the_sand_dunes.jpg",
+     "selite": "Euclan vanhan lennätinaseman rauniot hautautuvat hiljalleen hiekkadyyneihin.",
+     "leveys": 5570,
+     "korkeus": 3132,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Beach at Eucla - panoramio.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Beach_at_Eucla_-_panoramio.jpg?width=1280",
+     "tekija": "darrylkeith",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Beach_at_Eucla_-_panoramio.jpg",
+     "selite": "Euclan edustalla valkoinen hiekkaranta jatkuu horisonttiin.",
+     "leveys": 3456,
+     "korkeus": 2304,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q824741",
+   "nimi": "Eyre Highway",
+   "peruste": "pelin nosto",
+   "koko_m": 3000,
+   "lat": -31.5742,
+   "lon": 130.163,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Australia's Longest Straight Road 146,6 km - panoramio.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Australia's_Longest_Straight_Road_146%2C6_km_-_panoramio.jpg?width=1280",
+     "tekija": "Korkut Tas",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Australia's_Longest_Straight_Road_146%2C6_km_-_panoramio.jpg",
+     "selite": "Eyre Highwayn suora tie halkoo puutonta tasankoa satoja kilometrejä.",
+     "leveys": 3264,
+     "korkeus": 2448,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Checkpoint, Border Village, 2017 (01).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Checkpoint%2C_Border_Village%2C_2017_(01).jpg?width=1280",
+     "tekija": "Bahnfrend",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Checkpoint%2C_Border_Village%2C_2017_(01).jpg",
+     "selite": "Border Villagen tarkastuspiste on tien varrella Etelä- ja Länsi-Australian rajalla.",
+     "leveys": 4928,
+     "korkeus": 3264,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Nullabor Plains Australia - panoramio.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Nullabor_Plains_Australia_-_panoramio.jpg?width=1280",
+   "tekija": "ross bate",
+   "lisenssi": "CC BY 3.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Nullabor_Plains_Australia_-_panoramio.jpg",
+   "selite": "Nullarborin tasangolla maa on laakeaa, punaista ja lähes puutonta.",
+   "leveys": 4288,
+   "korkeus": 2848,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

@@ -198,6 +198,8 @@ import { avaaEsittelylinssit, esittelylinssitAuki, lataaApuraha } from './apurah
 import { pohjatLataaTyyli, luoPohjaGalleria } from './pohjat/pohjat.js';
 import { lahetaKaynti } from './kaynti.js';
 // Kävijälaskurin versio: sama APP_VERSION-teksti kuin versiorivillä (#app-version), luetaan sivulta.
+/** Apurahakortin Palaute ja mukaan -osio (omistaja 7.10.2026: pois apurahakierroksen ajaksi; palautus yhdellä rivillä). */
+const APURAHA_PALAUTE = false;
 const APURAHA_VERSIO = () => globalThis.document?.getElementById('app-version')?.textContent ?? '';
 import { kortinKuvalahde, taytaLahderivi } from './tekijakortti.js';
 // Tietäjätasot: matkalaukun nimikerivi ja pöllön onnittelukuplat.
@@ -2329,6 +2331,7 @@ function puePohjaKortiksi(kortti, { otsikko = null, sulje = null } = {}) {
   }
   for (const e of kortti.querySelectorAll('.apuraha-lista')) e.className = 'tk-leipa tk-lista';
   for (const e of kortti.querySelectorAll('.apuraha-toiminto')) e.className = 'tk-nappi tk-nappi--toiminto';
+  for (const e of kortti.querySelectorAll('.apuraha-upotus')) e.className = 'tk-kuva tk-kuva--upotus tk-kuva--suurennettava';
   if (sulje) sulje.className = 'tk-nappi tk-nappi--haamu tk-nappi--levea';
 }
 
@@ -17713,12 +17716,9 @@ export class UI {
     keskus.appendChild(nappi);
     portti.appendChild(keskus);
 
-    // Alareunan linkki pelin periaatteisiin.
+    // Alareuna: iOS-huomautus (apurahan esittelystä). "Oppiminen on hauskaa" -linkki poistettu (omistaja 7.10.2026
+    // klo 09.4x): sen lähde-, palaute- ja oikeustiedot ovat nyt apurahakortin lopussa.
     const alaosa = html('div', 'start-gate-alaosa');
-    const linkki = html('button', 'start-linkki', 'Oppiminen on hauskaa');
-    linkki.type = 'button';
-    linkki.addEventListener('click', () => this.naytaPeriaatteet());
-    alaosa.appendChild(linkki);
     portti.appendChild(alaosa);
 
     /*
@@ -17734,7 +17734,7 @@ export class UI {
       apuraha.addEventListener('click', () => this.naytaApuraha(esittely));
       keskus.appendChild(apuraha);
       if (esittely.webHuomautus) {
-        alaosa.insertBefore(html('p', 'start-huomautus', esittely.webHuomautus), linkki);
+        alaosa.appendChild(html('p', 'start-huomautus', esittely.webHuomautus));
       }
     });
 
@@ -17760,16 +17760,43 @@ export class UI {
     kortti.appendChild(otsikko);
     if (esittely.alaotsikko) kortti.appendChild(html('p', 'apuraha-alaotsikko', esittely.alaotsikko));
 
+    // Kaikki kuvat suurennoksen selaukseen kortin järjestyksessä (kappaleiden kuvat, sitten loppurivi).
+    const kaikkiKuvat = [...esittely.kappaleet.flatMap((k) => k.kuvat ?? []), ...esittely.kuvat];
+    const lista = kaikkiKuvat.map((k) => ({ src: k.tiedosto, caption: k.teksti || '' }));
+    const pikkukuva = (k, luokka) => {
+      const b = html('button', luokka);
+      b.type = 'button';
+      b.setAttribute('aria-label', k.teksti || `Kuva ${kaikkiKuvat.indexOf(k) + 1}`);
+      const img = html('img');
+      img.src = k.tiedosto;
+      img.alt = k.teksti || '';
+      img.loading = 'lazy';
+      // Pikkukuvan painopiste (esittely.json "rajaus", esim. radion paneeli alhaalla: "50% 90%").
+      if (typeof k.rajaus === 'string' && /^\d{1,3}% \d{1,3}%$/.test(k.rajaus)) img.style.objectPosition = k.rajaus;
+      b.appendChild(img);
+      b.addEventListener('click', () => this.openLightbox(null, k.teksti || '', k.tiedosto, lista));
+      return b;
+    };
+
     for (const k of esittely.kappaleet) {
       if (k.otsikko) kortti.appendChild(html('h3', 'periaate-valiotsikko', k.otsikko));
+      // Kuva pienenä kappaleensa vieressä (omistaja 7.10.2026 klo 14.5x, esittely.json "kappale"); teksti kiertää kuvan.
+      // Listakappaleessa "rivi" vie kuvan listan rivin viereen (Olavinlinna-rivi), muuten kappaleen alkuun.
+      const riville = (kuva) => k.lista?.length && Number.isInteger(kuva.rivi) && kuva.rivi >= 0 && kuva.rivi < k.lista.length;
+      for (const kuva of (k.kuvat ?? []).filter((x) => !riville(x))) kortti.appendChild(pikkukuva(kuva, 'apuraha-upotus'));
       if (k.teksti) kortti.appendChild(html('p', `periaate-teksti apuraha-teksti${k.korostus ? ' apuraha-teksti--korostus' : ''}`, k.teksti));
       if (k.lista?.length) {
         const ol = html('ol', 'apuraha-lista');
-        for (const r of k.lista) ol.appendChild(html('li', null, r));
+        k.lista.forEach((r, i) => {
+          const li = html('li', null);
+          for (const kuva of (k.kuvat ?? []).filter((x) => riville(x) && x.rivi === i)) li.appendChild(pikkukuva(kuva, 'apuraha-upotus'));
+          li.appendChild(document.createTextNode(r));
+          ol.appendChild(li);
+        });
         kortti.appendChild(ol);
       }
       if (k.nappi?.toiminto === 'esittelylinssit') {
-        // Kaikki selaimen toimivat linssit heti käyttöön ilman pisteitä (js/apuraha.js → js/linssit/omistus.js).
+        // Vanha kappalenappi: kaikki selaimen toimivat linssit heti käyttöön ilman pisteitä (js/apuraha.js → js/linssit/omistus.js).
         const rivi = html('p', 'periaate-linkit');
         const b = html('button', 'ghost apuraha-toiminto');
         b.type = 'button';
@@ -17797,33 +17824,64 @@ export class UI {
       }
     }
 
-    if (esittely.kuvat.length) {
-      const rivi = html('div', 'apuraha-kuvat');
-      rivi.style.setProperty('--apuraha-kuvia', String(esittely.kuvat.length));
-      const lista = esittely.kuvat.map((k) => ({ src: k.tiedosto, caption: k.teksti || '' }));
-      esittely.kuvat.forEach((k, i) => {
-        const b = html('button', 'apuraha-kuva');
-        b.type = 'button';
-        b.setAttribute('aria-label', k.teksti || `Kuva ${i + 1}`);
-        const img = html('img');
-        img.src = k.tiedosto;
-        img.alt = k.teksti || '';
-        img.loading = 'lazy';
-        // Pikkukuvan painopiste (esittely.json "rajaus", esim. radion paneeli alhaalla: "50% 90%").
-        if (typeof k.rajaus === 'string' && /^\d{1,3}% \d{1,3}%$/.test(k.rajaus)) img.style.objectPosition = k.rajaus;
-        b.appendChild(img);
-        b.addEventListener('click', () => this.openLightbox(null, k.teksti || '', k.tiedosto, lista));
-        rivi.appendChild(b);
+    // "Avaa valmiit linssit" (omistaja 7.10.2026 klo 15.0x, esittely.json valmiitLinssit): vain listan linssit heti
+    // käyttöön ilman pisteitä ja ilman kehittäjätilaa (js/apuraha.js → js/linssit/omistus.js); sama lista natiivilla.
+    if (esittely.valmiitLinssit) {
+      const v = esittely.valmiitLinssit;
+      if (v.teksti) kortti.appendChild(html('p', 'periaate-teksti apuraha-teksti', v.teksti));
+      const rivi = html('p', 'periaate-linkit');
+      const b = html('button', 'ghost apuraha-toiminto');
+      b.type = 'button';
+      const valmis = () => { b.textContent = v.valmis; b.disabled = true; };
+      b.textContent = v.nappi;
+      if (esittelylinssitAuki()) valmis();
+      b.addEventListener('click', () => {
+        avaaEsittelylinssit(v.linssit);
+        lahetaKaynti('esittelylinssit', APURAHA_VERSIO());
+        sfx.play('paper');
+        valmis();
+        this.render?.();
       });
+      rivi.appendChild(b);
       kortti.appendChild(rivi);
     }
+
+    if (esittely.kuvat.length) {
+      // Kuvat ilman kappaletta kortin loppuun riviksi kuten ennen versiota 7.
+      const rivi = html('div', 'apuraha-kuvat');
+      rivi.style.setProperty('--apuraha-kuvia', String(esittely.kuvat.length));
+      for (const k of esittely.kuvat) rivi.appendChild(pikkukuva(k, 'apuraha-kuva'));
+      kortti.appendChild(rivi);
+    }
+
+    /*
+     * Lähde-, palaute- ja oikeustiedot kortin loppuun pienellä (omistaja 7.10.2026 klo 09.4x: "Oppiminen on hauskaa"
+     * -linkki pois, apurahakortti korvaa sen tiedot). Lippukuvien tekijät: lisenssi vaatii nimeämisen, eikä niiden
+     * alle mahdu omaa lähderiviä. GitHub-linkkiä ja periaatetekstejä ei siirretty.
+     */
+    let lippurivi = null;
+    if (LIPPU_TEKIJAT.length) {
+      lippurivi = html('p', 'periaate-teksti periaate-liput');
+      lippurivi.textContent = PERIAATTEET.lippurivi
+        + `${LIPPU_TEKIJAT.map((l) => `${l.tekija} (${l.lisenssi})`).join(', ')}.`;
+      kortti.appendChild(lippurivi);
+    }
+    // Palaute ja mukaan -osio pois apurahakierroksen ajaksi (omistaja 7.10.2026 klo 14.5x); palautus: APURAHA_PALAUTE = true.
+    if (APURAHA_PALAUTE) kortti.appendChild(this.periaatePalaute());
+    const oikeudet = html('p', 'periaate-oikeudet', PERIAATTEET.oikeudet);
+    kortti.appendChild(oikeudet);
 
     const sulje = html('button', 'ghost periaate-sulje', 'Takaisin');
     sulje.type = 'button';
     sulje.addEventListener('click', () => lappu.close());
     kortti.appendChild(sulje);
 
-    if (korttiPohjalla()) puePohjaKortiksi(kortti, { otsikko, sulje });
+    // KORTTI-pohja (peruttava ?kortti=vanha): lähde- ja oikeusrivit apurina; palautelomake pitää kenttiensä tyylit.
+    if (korttiPohjalla()) {
+      if (lippurivi) lippurivi.className = 'tk-apuri';
+      oikeudet.className = 'tk-apuri';
+      puePohjaKortiksi(kortti, { otsikko, sulje });
+    }
     lappu.addEventListener('close', () => { lappu.remove(); if (this.apurahaDialog === lappu) this.apurahaDialog = null; });
     lappu.addEventListener('click', (e) => { if (e.target === lappu) lappu.close(); });
     document.body.appendChild(lappu);
@@ -17835,85 +17893,7 @@ export class UI {
   }
 
   /**
-   * Pelin periaatteet omana ikkunanaan aloitussivulta (omistajan toive).
-   * Sisältö on tiivistys README:stä ja Raamatun perustuslaista: miksi peli
-   * on olemassa ja millä säännöillä sisältöä siihen tehdään.
-   */
-  naytaPeriaatteet() {
-    sfx.play('paper');
-    const lappu = html('dialog', 'dialog periaate-lappu');
-    const kortti = html('div', 'dialog-card');
-    lappu.appendChild(kortti);
-
-    const otsikko = html('h2', 'periaate-otsikko', PERIAATTEET.otsikko);
-    kortti.appendChild(otsikko);
-
-    // Tekstit: js/ui-tekstit.js PERIAATTEET (sama lähde natiivin paketissa).
-    for (const osa of PERIAATTEET.osat) {
-      if (osa.otsikko) {
-        const h = html('h3', 'periaate-valiotsikko');
-        h.textContent = osa.otsikko;
-        kortti.appendChild(h);
-      }
-      const p = html('p', `periaate-teksti ${osa.karki ? 'kärki' : ''}`.trim());
-      p.textContent = osa.teksti;
-      kortti.appendChild(p);
-    }
-
-    // Lippukuvat näkyvät pieninä tervehdysten vieressä, eikä niiden alle
-    // mahdu omaa lähderiviä. Valtaosa on public domainia, mutta muutaman
-    // lisenssi vaatii tekijän nimeämisen — se tehdään tässä, jotta
-    // "jokaisen kohdalla lukee kuka sen on tehnyt" pitää paikkansa.
-    if (LIPPU_TEKIJAT.length) {
-      const lippurivi = html('p', 'periaate-teksti periaate-liput');
-      lippurivi.textContent = PERIAATTEET.lippurivi
-        + `${LIPPU_TEKIJAT.map((l) => `${l.tekija} (${l.lisenssi})`).join(', ')}.`;
-      kortti.appendChild(lippurivi);
-    }
-
-    const linkit = html('p', 'periaate-linkit');
-    const gh = html('a', 'periaate-linkki', PERIAATTEET.linkki.teksti);
-    gh.href = PERIAATTEET.linkki.url;
-    gh.target = '_blank';
-    gh.rel = 'noopener';
-    linkit.appendChild(gh);
-    kortti.appendChild(linkit);
-
-    kortti.appendChild(this.periaatePalaute());
-
-    const oikeudet = html('p', 'periaate-oikeudet', PERIAATTEET.oikeudet);
-    kortti.appendChild(oikeudet);
-
-    const sulje = html('button', 'ghost periaate-sulje', 'Takaisin');
-    sulje.type = 'button';
-    sulje.addEventListener('click', () => lappu.close());
-    kortti.appendChild(sulje);
-    // KORTTI-pohja (peruttava ?kortti=vanha): kärki korostettuna, lähde- ja oikeusrivit apurina; palautelomake
-    // pitää kenttiensä tyylit (kenttäpohja odottaa omistajan päätöstä).
-    if (korttiPohjalla()) {
-      for (const e of kortti.querySelectorAll('.periaate-teksti')) {
-        e.className = e.classList.contains('periaate-liput') ? 'tk-apuri'
-          : `tk-leipa${e.classList.contains('kärki') ? ' tk-leipa--korostus' : ''}`;
-      }
-      oikeudet.className = 'tk-apuri';
-      puePohjaKortiksi(kortti, { otsikko, sulje });
-    }
-
-    lappu.addEventListener('close', () => lappu.remove());
-    lappu.addEventListener('click', (e) => { if (e.target === lappu) lappu.close(); });
-    document.body.appendChild(lappu);
-    lappu.showModal();
-    // showModal siirtää kohdistuksen ensimmäiseen napautettavaan
-    // elementtiin, joka on kortin lopussa — selain vieritti ikkunan
-    // valmiiksi alas (omistajan havainto). Kohdistus otsikkoon ja
-    // vieritys alkuun.
-    kortti.scrollTop = 0;
-    otsikko.setAttribute('tabindex', '-1');
-    otsikko.focus({ preventScroll: true });
-  }
-
-  /**
-   * Palautelohko periaateikkunan loppuun (omistajan toive). Viesti menee
+   * Palautelohko apurahakortin loppuun (alun perin periaateikkunan, omistajan toive). Viesti menee
    * ulkopuoliselle lomakepalvelulle, joka välittää sen tekijälle —
    * sähköpostiosoitetta ei ole sivulla eikä lähdekoodissa, joten
    * roskapostirobotit eivät saa sitä käsiinsä.

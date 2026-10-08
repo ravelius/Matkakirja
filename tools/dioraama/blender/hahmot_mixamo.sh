@@ -16,7 +16,12 @@ K=/Users/Shared/Claude/proto-3d/_lahteet/kevin-iglesias-hbm/fbx
 E() { local s=$1; shift; for e in "$@"; do case $e in
   kumarrus) echo "$K/Human$s@Reverence01.fbx=ele_kumarrus";; kysymys) echo "$K/Human$s@Question01.fbx=ele_kysymys";;
   nyokkays) echo "$K/Human$s@HeadNod01.fbx=ele_nyokkays";; pudistus) echo "$K/Human$s@HeadShake01.fbx=ele_pudistus";;
-  puhe1) echo "$K/Human$s@Talk01.fbx=ele_puhe1";; puhe2) echo "$K/Human$s@Talk02.fbx=ele_puhe2";; puhe3) echo "$K/Human$s@Talk03.fbx=ele_puhe3";; esac; done; }
+  puhe1) echo "$K/Human$s@Talk01.fbx=ele_puhe1";; puhe2) echo "$K/Human$s@Talk02.fbx=ele_puhe2";; puhe3) echo "$K/Human$s@Talk03.fbx=ele_puhe3";;
+  kallistus) echo "$K/Human$s@Idle01.fbx=ele_kallistus+kallistus";; kuuntelu) echo "$K/Human$s@Idle02.fbx=ele_kuuntelu+kuuntelu";; esac; done; }
+# 7.10. (Siirtoseppä, omistaja "linna loppuun, eleet yms."): jokaiselle puhujalle kolme puhe-elettä ja kaikille kuulijan reaktiot.
+# Natiivi ajoittaa eleet lauseisiin ja painotuksiin (merkkikohdistus) ja valitsee hahmon ele_*-leikkeistä. kallistus/kuuntelu =
+# HBM Idle01/02 + pään lisäliike (hahmo_mixamo.py +kallistus/+kuuntelu), koska HBM:ssä ei ole pään kallistusta.
+KAIKKI=(puhe1 puhe2 puhe3 nyokkays kallistus kuuntelu)
 BI="$M/Breathing Idle.fbx"; BO="$M/Bored.fbx"; UI="$M/Unarmed Idle.fbx"; OM="$M/Old Man Idle.fbx"
 TA="$M/Talking.fbx"; GC="$M/Talking General Conversation.fbx"; OH="$M/Talking One Hand Question.fbx"; AR="$M/Standing Arguing.fbx"
 tee() {  # nimi idle-fbx puhe-fbx [lisäleikkeet...] -- korvaukset
@@ -24,17 +29,17 @@ tee() {  # nimi idle-fbx puhe-fbx [lisäleikkeet...] -- korvaukset
   while [ $# -gt 0 ] && [ "$1" != -- ]; do l+=("$1"); shift; done; shift; k=$1
   nice -n 15 $B -b --factory-startup -P $H/hahmo_mixamo.py -- $V/$n.glb $U/$n.glb "$i=hengitys:12" "$p=puhe_m:12" $l --korvaa $k 2>&1 | grep -E "^MIXAMO valmis|Error|Traceback" | sed "s#^#$n: #" | cut -c1-160
 }
-tee kappalainen-1500 "$OM" "$GC" "$M/Praying.fbx=rukous:12" "$M/Sitting Idle.fbx=istuu:12" "$M/Sitting Talking.fbx=istuu_puhe:12" ${(f)"$(E M puhe1 puhe2)"} -- idle=hengitys,puhe=puhe_m,tyo=rukous
-tee kirjuri-1500 "$BI" "$OH" ${(f)"$(E M puhe1 puhe2 puhe3 kysymys)"} -- idle=hengitys,puhe=puhe_m  # työ UAL: kirjuri seisoo pulpetin ääressä (istuva Writing leijui 5.10.)
-tee vouti-1500 "$BO" "$AR" "$M/Pointing Forward.fbx=osoitus:12" ${(f)"$(E M kumarrus kysymys)"} -- idle=hengitys,puhe=puhe_m,tyo=osoitus
-tee vartija-1500 "$BO" "$TA" "$M/Looking Around.fbx=katselu_m:12" ${(f)"$(E M puhe1 puhe2 pudistus)"} -- idle=hengitys,puhe=puhe_m,tyo=katselu_m
-tee portinvartija-1500 "$BI" "$GC" "$M/Looking Around.fbx=katselu_m:12" -- idle=hengitys,puhe=puhe_m,tyo=katselu_m
-tee talonpoika-1500 "$UI" "$TA" "$M/Picking Up.fbx=nosto:12" ${(f)"$(E M puhe1 puhe2)"} -- idle=hengitys,puhe=puhe_m,tyo=nosto
-tee vesipoika-1500 "$UI" "$OH" "$M/Picking Up.fbx=nosto:12" ${(f)"$(E M nyokkays)"} -- idle=hengitys,puhe=puhe_m,tyo=nosto
-tee soutaja-1500 "$BI" "$GC" "$M/Paddling.fbx=melonta:12" ${(f)"$(E M puhe1 pudistus)"} -- idle=hengitys,puhe=puhe_m,tyo=melonta
-tee kokki-1500 "$BO" "$AR" ${(f)"$(E M puhe1 puhe3)"} -- idle=hengitys,puhe=puhe_m
-tee renki-1500 "$UI" "$OH" ${(f)"$(E M puhe2 kumarrus)"} -- idle=hengitys,puhe=puhe_m
-tee apulainen-1500 "$BI" "$GC" ${(f)"$(E F puhe3)"} -- idle=hengitys,puhe=puhe_m
+tee kappalainen-1500 "$OM" "$GC" "$M/Praying.fbx=rukous:12" "$M/Sitting Idle.fbx=istuu:12" "$M/Sitting Talking.fbx=istuu_puhe:12" ${(f)"$(E M $KAIKKI)"} -- idle=hengitys,puhe=puhe_m,tyo=rukous
+tee kirjuri-1500 "$BI" "$OH" ${(f)"$(E M $KAIKKI kysymys)"} -- idle=hengitys,puhe=puhe_m  # työ UAL: kirjuri seisoo pulpetin ääressä (istuva Writing leijui 5.10.)
+tee vouti-1500 "$BO" "$AR" "$M/Pointing Forward.fbx=osoitus:12" ${(f)"$(E M $KAIKKI kumarrus kysymys)"} -- idle=hengitys,puhe=puhe_m,tyo=osoitus
+tee vartija-1500 "$BO" "$TA" "$M/Looking Around.fbx=katselu_m:12" ${(f)"$(E M $KAIKKI pudistus)"} -- idle=hengitys,puhe=puhe_m,tyo=katselu_m
+tee portinvartija-1500 "$BI" "$GC" "$M/Looking Around.fbx=katselu_m:12" ${(f)"$(E M $KAIKKI)"} -- idle=hengitys,puhe=puhe_m,tyo=katselu_m
+tee talonpoika-1500 "$UI" "$TA" "$M/Picking Up.fbx=nosto:12" ${(f)"$(E M $KAIKKI)"} -- idle=hengitys,puhe=puhe_m,tyo=nosto
+tee vesipoika-1500 "$UI" "$OH" "$M/Picking Up.fbx=nosto:12" ${(f)"$(E M $KAIKKI)"} -- idle=hengitys,puhe=puhe_m,tyo=nosto
+tee soutaja-1500 "$BI" "$GC" "$M/Paddling.fbx=melonta:12" ${(f)"$(E M $KAIKKI pudistus)"} -- idle=hengitys,puhe=puhe_m,tyo=melonta
+tee kokki-1500 "$BO" "$AR" ${(f)"$(E M $KAIKKI)"} -- idle=hengitys,puhe=puhe_m
+tee renki-1500 "$UI" "$OH" ${(f)"$(E M $KAIKKI kumarrus)"} -- idle=hengitys,puhe=puhe_m
+tee apulainen-1500 "$BI" "$GC" ${(f)"$(E F $KAIKKI)"} -- idle=hengitys,puhe=puhe_m
 # Esineet ja työliikkeet (hahmo_esineet.py, 6.10.): kokin kauha ja hämmennys (pata keittio.js [13.3, 0.9, 4.9] kokin kehyksessä
 # oikealle 0,2 m, eteen 1,2 m, kauhan kärki 1,12 m; jaettu skaalalla 0,969), apulaisen vati (kanto) ja luuta (tyo), rengin säkki.
 es() { local n=$1; shift; nice -n 15 $B -b --factory-startup -P $H/hahmo_esineet.py -- $U/$n.glb $U/$n.glb "$@" 2>&1 | grep -E "^ESINEET valmis|Error|Traceback" | sed "s#^#$n: #" | cut -c1-160; }
