@@ -705,7 +705,7 @@ namespace Matkakirja.Natiivi
         {
             if (ukkosKlipit == null || ukkosKlipit.Count == 0 || !Asetukset.Paalla(Kytkin.Aanimaisema)) return;
             if (ukkosLahde == null) { ukkosLahde = o.gameObject.AddComponent<AudioSource>(); ukkosLahde.playOnAwake = false; ukkosLahde.spatialBlend = 0; }
-            ukkosLahde.volume = 0.8f * PalloKori.TehosteKerroin * Asetukset.Taso(Voima.Tehosteet);   // −3 dB (omistaja TF 166)
+            ukkosLahde.volume = 0.8f * PalloKori.TehosteKerroin * Asetukset.Taso(Voima.Saa);   // −3 dB (omistaja TF 166); mikserin Sää-luokka (NUI be7fef450)
             ukkosLahde.PlayOneShot(ukkosKlipit[UnityEngine.Random.Range(0, ukkosKlipit.Count)]);
         }
 
