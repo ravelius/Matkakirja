@@ -614,7 +614,11 @@ namespace Matkakirja.Natiivi
             avausIon.style.unityBackgroundScaleMode = ScaleMode.ScaleToFit;
             avausIon.style.display = DisplayStyle.None;
             kerrosJuuri.schedule.Execute(PaivitaAvausIon).Every(100);
-            OpasSovitin.PalloTekstuuriValmis += () => UiKerros.PaaSaikeessa(() => { if (siirtyma.style.display != DisplayStyle.None && OpasSovitin.Kaupunkitila && !palloNakyy) AsetaPalloKuva(true); });
+            OpasSovitin.PalloTekstuuriValmis += () => UiKerros.PaaSaikeessa(() => { if (siirtyma.style.display != DisplayStyle.None && OpasSovitin.Kaupunkitila && (!palloNakyy || palloNimi != OpasSovitin.PalloKuvaRuudulle())) AsetaPalloKuva(true); });
+            // KIERTO (omistaja 8.10.: "jos pelaaja vaihtaa … orientaatiota pystyn ja vaakan välillä, niin kuva pitäisi päivittyä niin,
+            // että ei jää mustia palkkeja"): ruudun koon muuttuessa näkyvä kuva sovitetaan heti peittäväksi uuteen kokoon, ja jos
+            // rajaus vaihtuu (puhelin / iPad pysty / vaaka), uusi rajaus haetaan muistiin ja vaihdetaan valmistuessa; ion-logo uuteen paikkaan.
+            siirtyma.RegisterCallback<GeometryChangedEvent>(e => { if (e.oldRect.size != e.newRect.size) Kierretty(); });
             OpasSovitin.SiirtymaAlkaa += n => UiKerros.PaaSaikeessa(() => SiirtymaAlkaa(n));
             OpasSovitin.SiirtymaValmis += () => UiKerros.PaaSaikeessa(SiirtymaValmis);
         }
@@ -718,12 +722,42 @@ namespace Matkakirja.Natiivi
             return liukuKuva;
         }
 
+        /// <summary>Ruudun koko muuttui siirtymän ollessa auki (kierto): kuva peittäväksi heti, oikea rajaus perään.</summary>
+        void Kierretty()
+        {
+            if (siirtyma.style.display == DisplayStyle.None) return;
+            if (palloNakyy && palloKuvaNyt != null) SovitaPalloKuva(palloKuvaNyt);
+            if (OpasSovitin.Kaupunkitila && palloNimi != OpasSovitin.PalloKuvaRuudulle()) AsetaPalloKuva(true);
+            AsetaSiirtymaIon();
+            Debug.Log($"MATKAKIRJA opas: siirtymä kierretty {siirtyma.worldBound.width:0}×{siirtyma.worldBound.height:0}, rajaus {OpasSovitin.PalloKuvaRuudulle()} (näkyy {palloNimi ?? "-"})");
+        }
+
+        string palloNimi;
+        Texture2D palloKuvaNyt;
+
+        /// <summary>Kuvan paikka itse (peittävä skaala, LatausLiike.Peita): leveällä vaakaruudulla yläreuna kohtaan VaakaKuvanAlku
+        /// (kupu ilmoineen näkyviin) ja tumma liuku alaosaan tekstille; muuten keskitetty. Ei mustia palkkeja missään koossa.</summary>
+        void SovitaPalloKuva(Texture2D t)
+        {
+            var koko = siirtyma.parent?.worldBound.size ?? Vector2.one;
+            float w = Mathf.Max(koko.x, 1f), h = Mathf.Max(koko.y, 1f);
+            bool levea = w > h * 1.5f;
+            var (x, y, kw, kh) = Matkakirja.Linssit.LatausLiike.Peita(w, h, t.width / (double)Mathf.Max(1, t.height), levea ? VaakaKuvanAlku : -1);
+            siirtymaKuva.style.right = StyleKeyword.Auto; siirtymaKuva.style.bottom = StyleKeyword.Auto;
+            siirtymaKuva.style.width = (float)kw; siirtymaKuva.style.height = (float)kh;
+            siirtymaKuva.style.left = (float)x; siirtymaKuva.style.top = (float)y;
+            siirtymaLiuku.style.display = levea ? DisplayStyle.Flex : DisplayStyle.None;
+            if (levea) siirtymaLiuku.style.backgroundImage = new StyleBackground(LiukuKuva());
+            siirtymaTeksti.style.marginBottom = h * 0.07f;
+        }
+
         void AsetaPalloKuva(bool nayta)
         {
             string n = nayta ? OpasSovitin.PalloKuvaRuudulle() : null;
             if (n == null)
             {
                 palloNakyy = false;
+                palloNimi = null; palloKuvaNyt = null;
                 siirtymaKuva.style.display = DisplayStyle.None;
                 siirtymaLiuku.style.display = DisplayStyle.None;
                 siirtymaTeksti.style.scale = StyleKeyword.Null;
@@ -740,19 +774,11 @@ namespace Matkakirja.Natiivi
             siirtymaTeksti.style.marginBottom = Mathf.Max(koko.y, 1f) * 0.07f;
             var t = OpasSovitin.PalloTekstuuri(n);
             if (t == null) { OpasSovitin.PalloTekstuuriMuistiin(n); return; }   // valmistuessa PalloTekstuuriValmis → tänne uudelleen
-            // Kuvan paikka itse (peittävä skaala): leveällä vaakaruudulla yläreuna kohtaan VaakaKuvanAlku (kupu ilmoineen näkyviin)
-            // ja tumma liuku alaosaan tekstille; muuten keskitetty.
-            float w = Mathf.Max(koko.x, 1f), h = Mathf.Max(koko.y, 1f), kuvasuhde = t.width / (float)Mathf.Max(1, t.height);
-            float kw = Mathf.Max(w, h * kuvasuhde), kh = kw / kuvasuhde;
-            bool levea = w > h * 1.5f;
-            siirtymaKuva.style.right = StyleKeyword.Auto; siirtymaKuva.style.bottom = StyleKeyword.Auto;
-            siirtymaKuva.style.width = kw; siirtymaKuva.style.height = kh;
-            siirtymaKuva.style.left = (w - kw) * 0.5f;
-            siirtymaKuva.style.top = levea ? -VaakaKuvanAlku * kh : (h - kh) * 0.5f;
-            siirtymaLiuku.style.display = levea ? DisplayStyle.Flex : DisplayStyle.None;
-            if (levea) siirtymaLiuku.style.backgroundImage = new StyleBackground(LiukuKuva());
+            SovitaPalloKuva(t);
+            palloNimi = n; palloKuvaNyt = t;
             siirtymaTeksti.style.scale = UiKerros.Tabletti ? new Scale(new Vector3(IpadIsonnus, IpadIsonnus, 1f)) : (StyleScale)StyleKeyword.Null;
-            bool myohassa = siirtyma.resolvedStyle.opacity > 0.5f && Time.realtimeSinceStartup - siirtymaAlku > 0.3f;
+            // Kierron rajausvaihto (kuva jo näkyvissä) vaihtaa suoraan ilman häivytystä mustasta.
+            bool myohassa = !palloNakyy && siirtyma.resolvedStyle.opacity > 0.5f && Time.realtimeSinceStartup - siirtymaAlku > 0.3f;
             siirtymaKuva.style.backgroundImage = new StyleBackground(t);
             siirtymaKuva.style.display = DisplayStyle.Flex;
             palloNakyy = true;
@@ -1438,7 +1464,7 @@ namespace Matkakirja.Natiivi
         {
             if (k == null) { if (latausSuurennos?.Auki ?? false) { latausSuurennos.Sulje(); Debug.Log("MATKAKIRJA opas: latauskuva suljettu"); } return; }
             if (!nakyy || !KuvatPaalla || (suurennos?.Auki ?? false)) return;
-            latausSuurennos ??= new Kuvasuurennos(UiKerros.Hae().Juuri(UiKerros.Valikot)) { Tayteen = true, Kokoruutu = true, LahdeKokoruudussa = true, Osuus = LatausKuvaOsuus };
+            latausSuurennos ??= new Kuvasuurennos(UiKerros.Hae().Juuri(UiKerros.Valikot)) { Tayteen = true, Kokoruutu = true, LahdeKokoruudussa = true, Osuus = LatausKuvaOsuus, Lahentyy = true };
             latausSuurennos.Avaa(new[] { Lehtikuvaksi(k, OpasSovitin.Viimeisin?.Silmukka?.Nykyinen?.Nimi) }, 0);
             Debug.Log("MATKAKIRJA opas: latauskuva näkyviin " + k.Url);
         }
