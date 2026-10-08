@@ -1,7 +1,7 @@
 {
   "rakennus": "olavinlinna",
-  "hash": "3416210ba86914e7",
-  "kansio": "dioraama/olavinlinna/blender/3416210ba86914e7/",
+  "hash": "9b73d7713d81c57a",
+  "kansio": "dioraama/olavinlinna/blender/9b73d7713d81c57a/",
   "tiedostot": [
     {
       "polku": "hahmot/apulainen-1500-faceit.glb",
@@ -204,6 +204,11 @@
       "tavuja": 77692
     },
     {
+      "polku": "kavely/esine-kivi-heitto.glb",
+      "sha256": "9d1deeaa7ed1627d920cc2a01a8e0ea96547634ebf8ce9b2bdb6529f8afb3297",
+      "tavuja": 50240
+    },
+    {
       "polku": "kavely/esine-koysikieppi.glb",
       "sha256": "ac336df83066bf1be9153a3d5dc62e4de331f470395979d8af5b7eb4bf3dbcd9",
       "tavuja": 407084
@@ -325,28 +330,28 @@
     },
     {
       "polku": "kavely/merkit.json",
-      "sha256": "c0991c67cca7af090426476c0af0da0b49d8a8608c37fb59a64cdd548695793a",
-      "tavuja": 53713
+      "sha256": "3d2e408b4ae6555978b93117c13440a15aaecabd3cd58353d15f66529569f87d",
+      "tavuja": 56361
     },
     {
       "polku": "kavely/muurikaytava-kavely.glb",
-      "sha256": "8dc49d178f078992d2ac7ca62ce2fa8582628e9f06c778a5ba387060a870c742",
-      "tavuja": 3512
+      "sha256": "3db52102c82013fb12448db01d649391a85322c63d0df7e1d3f9bc4815dfe2c8",
+      "tavuja": 3752
     },
     {
       "polku": "kavely/muurikaytava-tormays.glb",
-      "sha256": "d0113ee44100eb641f39ee3f2ef65d9c496f9b697ece5b083f8ca4cf24893708",
-      "tavuja": 5568
+      "sha256": "bf0a3c150e1fdb3a84cdfe13d1b2cff9ab783f43407b5d8ee89755a98cd14440",
+      "tavuja": 7728
     },
     {
       "polku": "kavely/muurikaytava.glb",
-      "sha256": "8aef26fc0e31160a0618d167714e7f0d094a60d3abf0245df43b96af638258e2",
-      "tavuja": 46596
+      "sha256": "54231d8273113bb52cdada7b10937e66dcad2f40f00dbdef14dd6a7a2a102532",
+      "tavuja": 56920
     },
     {
       "polku": "kavely/osat.json",
-      "sha256": "793355cea2400b66423bcb9c4f8665e39dd37d8ef64b121100bff6ca7064b1e3",
-      "tavuja": 23435
+      "sha256": "1fc4003297d526ba4d79155423ca2521d819d799362b1a6753acf86ee05e7d56",
+      "tavuja": 23705
     },
     {
       "polku": "kavely/palatsi-kavely.glb",
