@@ -4,7 +4,9 @@
   - Notre-Dame: orto 2018 (ennen paloa); LiDAR MNS työmaa-aikainen (nosturit), MNT ja RGE ALTI kelpaavat; leikkauspolygoni OSM.
   - Riddarholmen: leikkauspolygoni ja OSM. Lantmäteriet vaatii Geotorget-tunnuksen (OMISTAJAN toimi, PT:lle kerrottu).
   - concorde-ign.mjs on yleistetty (--nimi, --orto-kerros, --orto-vuosi).
-- Talvi3 käynnissä.
+- **Talvi3: osa1 VALMIS (91/91), osa2 53/78 (02.15).**
+  **UUSINTA KÄYNNISSÄ** 02.16 vapautuneella paikalla: `kaudet/aja-talvi3-uusinta.sh` → `s2-eurooppa-talvi3-uusinta/` (20 lohkoa, lohkot.txt, pk2-koodi; junalukko ja STOP huomioidaan). Swap-vahti: `vahti-uusinta.sh` (> 14 Gt → STOP).
+  Valmistuttua: kerrokset uusinta → osa1 → osa2, suorat-reunat.py uudelleen, ennen/jälkeen-kuvat PT:lle (Etelä-Ruotsi, Pommeri, Baltia), sitten yksi paketti.
 
 ---
 
