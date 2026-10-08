@@ -24,3 +24,11 @@ Peili on varmuuskopio, jossa **paikallinen proto-git on totuus** (ravelius/Matka
    hylkäys kirjataan tiedostoon `proto-3d/lokit/varmuuskopio-VIKA.txt` (Postivahti välittää Fablelle rivinä), ajo jatkuu;
 3. ajo: post-merge-koukku (master), juna-ajo.sh:n vahtikierros tunnin välein (`lokit/varmuuskopio-viimeisin.txt`) ja käsin.
 Pelilogiikka on proto-gitissä (Assets/Matkakirja/Peli); erillistä natiivi-peli-repoa ei enää ole.
+
+## Editorin Burst-JIT käännösten aikana (burst-jit.sh, 8.10.2026)
+
+`proto-kaanna.sh` ja `mac-kaanna.sh` asettavat käännöslukon ajaksi EditorPrefs-arvon `BurstCompilation = 0` (palautus EXIT-trapissa,
+kaatuneen ajon jälkeen merkkitiedostosta `/tmp/matkakirja-burst-jit-alkuperainen`), jotta editori ei aloita JIT-jonoa eikä
+Rakennus.Kaanna joudu perumaan sitä (mono-segv 7.–8.10.). EditorPrefs on Mac-käyttäjäkohtainen (koodaus): **käännöksen aikana
+käynnistyvä interaktiivinen Unity saa Burst-JIT:n pois päältä** (vain hitaampi editori, ei vaikuta pelaajan AOT:hen); jo käynnissä
+olevat editorit eivät muutu. Hyväksytty (Päätoimittaja 8.10.).
