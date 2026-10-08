@@ -271,7 +271,7 @@ namespace Matkakirja.Natiivi
                 // askeleet herättivät torkkujan ennen kuin tarjotinta ehti antaa). Juoksu kuuluu silti.
                 bool lupa = SeikkailuEsineet.Aktiivinen?.Kadessa == SeikkailuEsineet.Tarjotin && p.Tila.Tapa != Liiketapa.Juoksu;
                 if (p.Tila.Vauhti > 0.3 && sade > 0 && !lupa) aanet.Add(new Aanilahde(pp0.x, pp0.z, sade, Askelaani.Osa(kd, pp0.x, pp0.y, -pp0.z), pp0.y));
-                OmatAskeleet(p, pinta, pp0);
+                OmatAskeleet(p, pinta, pp0, Askelaani.Markyys(kd, pp0.x, pp0.y, -pp0.z));
             }
             bool piilossa = p != null && Piilossa(p);
             // Nähty piiloon meno (pelattavuusmalli 2.5): jos jonkin mittari ≥ 0,6 ja näkölinja vapaa piiloon mentäessä, piilo ei suojaa
@@ -431,10 +431,10 @@ namespace Matkakirja.Natiivi
         }
         /// <summary>Pelaajan omat askeleet (pelattavuusmalli 2.2): pinnan äänite (aanet-fp-manifestista tai rakennuksesta, varana kivi)
         /// silmukkana jalkojen kohdalta, voimakkuus pinnan ja liiketavan mukaan, tahti nopeudesta. Hiivintä kuuluu itselle hiljaa.</summary>
-        void OmatAskeleet(SeikkailuPelaaja p, string pinta, Vector3 jalat)
+        void OmatAskeleet(SeikkailuPelaaja p, string pinta, Vector3 jalat, double markyys = 0)
         {
             if (omatAskeleet == null) { omatAskeleet = SeikkailuKuulija.Lahde("Askeleet:pelaaja", 1f, 12f); omatAskeleet.loop = true; }
-            var (tunnukset, voima) = Askelaani.OmaAskel(pinta, p.Tila.Tapa);
+            var (tunnukset, voima) = Askelaani.OmaAskel(pinta, p.Tila.Tapa, markyys);
             AudioClip klippi = null;
             foreach (var t in tunnukset) { klippi = SeikkailuAanet.Klippi(t) ?? (AskelKlipit.TryGetValue(t, out var k) ? k : null); if (klippi != null) break; }
             klippi ??= AskelKlippi;
