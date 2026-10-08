@@ -468,7 +468,7 @@ namespace Matkakirja.Natiivi
         static Mesh Mesh(GlbMalli malli) => Mesh(malli, -1, null);
 
         // --- Mallivarasto (glb kerran, kuva ASTC:nä) ---
-        sealed class MalliVarasto { public GlbMalli Malli; public Texture2D Kuva; public Material Mat; public bool Valaistu, Valmis, Astc; public readonly Dictionary<string, Mesh> Meshit = new Dictionary<string, Mesh>(StringComparer.Ordinal); }
+        sealed class MalliVarasto { public GlbMalli Malli; public Texture2D Kuva, Normaali; public Material Mat; public bool Valaistu, Valmis, Astc; public readonly Dictionary<string, Mesh> Meshit = new Dictionary<string, Mesh>(StringComparer.Ordinal); }
         static readonly Dictionary<string, MalliVarasto> varasto = new Dictionary<string, MalliVarasto>(StringComparer.Ordinal);
         /// <summary>Lokia ja testiä varten: glb:t, kuvat ASTC:nä, osumat varastosta.</summary>
         public static (int Glb, int Astc, int Osumia) VarastoTila { get { int a = 0; foreach (var v in varasto.Values) if (v.Astc) a++; return (varasto.Count, a, varastoOsumia); } }
@@ -501,6 +501,15 @@ namespace Matkakirja.Natiivi
                     var k = new Texture2D(2, 2, TextureFormat.RGBA32, true, false) { name = "Esine:" + glb };
                     if (k.LoadImage(v.Malli.Kuvat[0], true)) v.Kuva = k; else Destroy(k);   // markNonReadable: CPU-kopio pois
                 }
+                // Normaalikartta (LR v45o): <glb>-normaali-4x4.astcm, lineaarinen, sama UV0 ja v-suunta kuin perusvärillä.
+                string nAstc = glb.EndsWith(".glb", StringComparison.OrdinalIgnoreCase) ? glb.Substring(0, glb.Length - 4) + "-normaali-4x4.astcm" : null;
+                string nUrl = nAstc != null ? malliUrl(malliJuuri + nAstc) : null;
+                if (nUrl != null && DioraamaLevyvalimuisti.Manifestissa(nUrl) == true)
+                {
+                    byte[] a = null;
+                    yield return DioraamaLevyvalimuisti.Hae(nUrl, 60, t => a = t);
+                    if (a != null) { v.Normaali = DioraamaAstc.Lue(a, "EsineN:" + glb, out var syyN, TextureWrapMode.Clamp, 0, true); if (v.Normaali == null) kirjaa?.Invoke($"seikkailu: {nAstc} ei käytössä ({syyN})"); }
+                }
                 v.Malli.Kuvat.Clear();   // JPEG-tavut pois muistista
                 // DioraamaValaistu (B, maalattu): tilan pistevalot ja Foggin kynttilä valaisevat esineen (kilpilaattojen kohokuva näkyy vain
                 // matalasta sivuvalosta, v44k); vara DioraamaMaasto. Värikanavat: AO 1, ei lämpöä, B 0,5 (ei hehkua ilman värejä).
@@ -510,7 +519,11 @@ namespace Matkakirja.Natiivi
                 v.Mat = varjostin != null ? new Material(varjostin) { name = "Esine:" + glb } : null;
                 if (v.Mat != null)
                 {
-                    if (valaistu != null) { v.Mat.SetFloat(IdTila, 1f); if (v.Kuva != null) v.Mat.SetTexture(IdPohjaKuva, v.Kuva); }
+                    if (valaistu != null)
+                    {
+                        v.Mat.SetFloat(IdTila, 1f); if (v.Kuva != null) v.Mat.SetTexture(IdPohjaKuva, v.Kuva);
+                        if (v.Normaali != null) { v.Mat.SetTexture("_NormaaliKuva", v.Normaali); v.Mat.SetFloat("_NormaaliPaalla", 1f); }
+                    }
                     else if (v.Kuva != null) v.Mat.SetTexture(IdKuva, v.Kuva);
                 }
             }
@@ -523,6 +536,7 @@ namespace Matkakirja.Natiivi
             foreach (var v in varasto.Values)
             {
                 if (v.Kuva != null) Destroy(v.Kuva);
+                if (v.Normaali != null) Destroy(v.Normaali);
                 if (v.Mat != null) Destroy(v.Mat);
                 foreach (var me in v.Meshit.Values) if (me != null) Destroy(me);
             }
@@ -560,6 +574,7 @@ namespace Matkakirja.Natiivi
                 }
             var m = new Mesh { name = "Esine" };
             m.SetVertices(p); m.SetNormals(nr); m.SetUVs(0, uv); m.SetTriangles(kol, 0); m.RecalculateBounds();
+            if (uv.Count == p.Count && p.Count > 0) m.RecalculateTangents();   // normaalikartta (LR v45o)
             return m;
         }
 
