@@ -1,0 +1,261 @@
+{
+  "task": "tower-christian-yksityiskohdat-20261008",
+  "source": {
+    "path": "posti/sisaltokirjuri-codex-tower-christian-historiallinen-20261008.md",
+    "commit": "3c64c291e23040a8ef51ca68db30735d59da9331",
+    "blob": "2e31bfaf046497e3b89dfcf24f069ee16e9aefb8"
+  },
+  "sourceReadInFull": true,
+  "generationMode": "built-in image_gen",
+  "generationCalls": 2,
+  "generationLimit": 2,
+  "perItemGenerationCalls": 1,
+  "additionalVariantsAuthorised": false,
+  "sourceImagePixelsUsed": false,
+  "previousImagesRegenerated": false,
+  "previousImagesRedelivered": false,
+  "parentCompletion": {
+    "lontoo": {
+      "parentTask": "lontoo-yksityiskohdat-10-20261007",
+      "previousDeliveredImages": 9,
+      "newCandidates": 1,
+      "cumulativeGenerationCalls": 10,
+      "generationLimit": 10
+    },
+    "koopenhamina": {
+      "parentTask": "koopenhamina-yksityiskohdat-3-20261007",
+      "previousDeliveredImages": 2,
+      "newCandidates": 1,
+      "cumulativeGenerationCalls": 3,
+      "generationLimit": 3
+    }
+  },
+  "assets": [
+    {
+      "task": "lontoo-tower-bridge-bussihyppy-1952-20261008",
+      "number": 2,
+      "qid": "Q83125",
+      "city": "lontoo",
+      "filename": "lontoo-Q83125-tower-bridge-bussihyppy-1952.png",
+      "parentTask": "lontoo-yksityiskohdat-10-20261007",
+      "producerParentTask": "lontoo-yksityiskohdat-20261007",
+      "routedTaskNumber": 4,
+      "previousGenerationCalls": 9,
+      "parentGenerationLimit": 10,
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationMode": "built-in image_gen",
+      "generationPrompt": "Use case: historical-scene\nAsset type: one photorealistic city-guide historical illustration, not a documentary photograph.\nGenerate ONE wholly NEW landscape PNG, native exactly 1536 × 1024, 3:2, opaque sRGB, from TEXT ONLY.\n\nPrimary request: Tower Bridge in December 1952, the restrained moment when a red RT-type London double-decker bus crosses the narrow gap between the two opening road bascules. The NORTH bascule is raised ONLY A FEW DEGREES, while the SOUTH bascule remains nearly horizontal. The gap is about ONE METRE, not a yawning open river chasm. The bus is centred above the joint; its FRONT WHEELS have already reached the SOUTH side and its rear wheels are only briefly clear of the slightly raised NORTH side. It is close to road height, gently nose-down, not soaring or performing a stunt.\n\nComposition and geometry: Wide natural photographic side view from the Thames riverbank, looking slightly upward. Both distinctive pale stone Tower Bridge towers and their TWO high connecting walkways fit in the background. The bridge roadway remains virtually level across the whole span, with only a subtle small step at the central joint. One coherent bridge, not a bridge built on top of another. The bus moves north to south, shown broadly side-on with enough obliqueness to see its front. Its front wheels sit on the almost-flat receiving bascule immediately beyond the narrow central joint; the rear wheels hover just above the raised approach. The joint is visibly narrower than the bus wheelbase. The bus is ordinary full-size relative to the stone towers, not a giant vehicle. Preserve plausible continuous roadway, metal side trusses, gravity, wheel contact and perspective. No steeply raised bascule or dramatic open gap.\n\nPeriod and materials: December 1952. ALL painted iron/steel elements of Tower Bridge — suspension chains, upper walkway structure, roadway trusses and railings — are dark CHOCOLATE BROWN. Pale grey-beige stone towers retain their natural masonry colour; do not paint the stone brown. A period RT double-decker bus has a restrained deep red body, two rows of rectangular windows, a rounded period roof and bonnet/cab front, black tyres and modest metal trim. Empty blank destination panels and completely unmarked side panels. No adverts, London Transport emblem, route numerals, readable registration plate or lettering.\n\nLighting and style: The commissioned grey winter daytime interpretation, soft overcast natural light, slightly hazy Thames below. Photorealistic materials and ordinary real-camera optics, muted natural colours, believable depth. No HDR, hypercontrast, cinematic saturation, action-movie treatment, motion streaks or antique print border. This is a modern photo-looking historical illustration, not an actual archival image.\n\nConstraints: No identifiable people or visible faces. Bus windows dark with no distinct passengers. No people on the walkway. No injuries, blood, violence, damage or accident aftermath. No other vehicles required. No modern buildings, Shard, City Hall, modern riverboats, cranes or contemporary skyline. NO BLUE, WHITE or RED-WHITE-BLUE PAINT on bridge metalwork. No text, letters, numbers, signage, logos, advertisements, watermark, frame or montage. Do not copy any known photograph or comic composition.",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-830dc879-33d1-4dee-a96b-abf1a68e0ebf.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tower-christian-yksityiskohdat-20261008/production/lontoo/original-generation.png",
+      "originalSha256": "0c9b2b1b8372366ff83703450d03238481dea59b3dad7fccfb15b51dec8465c2",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tower-christian-yksityiskohdat-20261008/production/lontoo/lontoo-Q83125-tower-bridge-bussihyppy-1952.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sha256": "ab736d38672b0056cc830cfc333d1426df79a533a3b5c20e9d573077f9c8e9b9",
+      "metadataExact": true,
+      "sRGBVerified": true,
+      "opaqueRGBVerified": true,
+      "originalRGBPixelsUnchanged": true,
+      "sourceImagePixelsUsed": false,
+      "technicalChanges": [
+        "Original generation preserved unchanged.",
+        "Embedded sRGB profile and exact PNG Description/Source without changing RGB pixels.",
+        "Created full-frame 480px technical QA preview; no creative editing."
+      ],
+      "parentQA": {
+        "task": "lontoo-tower-bridge-bussihyppy-1952-20261008",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "jointDetailViewed": true,
+        "approvedForDelivery": true,
+        "status": "deliver-for-editor-review-with-composition-limitations",
+        "observations": [
+          "Brown bridge ironwork, red period RT-style bus, grey winter daylight, very shallow north bascule rise and near-flat south bascule.",
+          "Central narrow separation is visible below the bus chassis in native technical detail; front wheels are beyond it on the south side. No steep aerial flight or wide-open river chasm.",
+          "No readable words or numbers, identifiable faces, violence, modern towers or contemporary vehicles."
+        ],
+        "limitations": [
+          "Rear-wheel clearance is obscured by the foreground bridge railing, so the exact brief airborne interval is not visually proven.",
+          "Tower pinnacles meet or extend beyond the top frame; the towers themselves and two high walkways are visible.",
+          "The image uses the commissioned daytime light although primary contemporary text places the actual event in the evening; caption describes an illustration, not an archival photograph.",
+          "Exact gap width, bascule angles, vehicle dimensions and heraldic details are illustrative, not measured reconstruction."
+        ],
+        "file": "lontoo-Q83125-tower-bridge-bussihyppy-1952.png",
+        "sha256": "ab736d38672b0056cc830cfc333d1426df79a533a3b5c20e9d573077f9c8e9b9"
+      },
+      "file": "lontoo-Q83125-tower-bridge-bussihyppy-1952.png",
+      "r2Key": "julisteet/lontoo-yksityiskohdat/20261008/lontoo-Q83125-tower-bridge-bussihyppy-1952.png",
+      "mitat": [
+        1536,
+        1024
+      ],
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "kuvateksti": "Tower Bridgen joulukuun 1952 bussiylitystä havainnollistava näkymä: punainen kaksikerrosbussi kapean raon kohdalla ja sillan ruskeat metalliosat. Päivänvalo ja tarkat mittasuhteet ovat kuvituksellinen tulkinta. Havainnekuva.",
+      "viitteet": [
+        {
+          "publisher": "Tower Bridge / City Bridge Foundation",
+          "title": "The day a bus jumped over Tower Bridge",
+          "url": "https://www.towerbridge.org.uk/stories/bus-jump",
+          "type": "textResearchOnly",
+          "access": "Read live 8 October 2026; no image pixels opened or supplied.",
+          "notes": "Primary bridge history and transcribed contemporary newspaper: north bascule just beginning to rise, south nearly flat. Exact metre gap and angles are commissioned illustrative estimates, not verified measurements. Contemporary account places actual incident at 9.30pm; commissioned image uses grey daytime and is not an archival photograph."
+        },
+        {
+          "publisher": "Tower Bridge / City Bridge Foundation",
+          "title": "Royal connections to Tower Bridge",
+          "url": "https://www.towerbridge.org.uk/stories/royal-connections-to-tower-bridge",
+          "type": "textResearchOnly",
+          "access": "Read live 8 October 2026; no image pixels opened or supplied.",
+          "notes": "Text states original chocolate brown metalwork and red/white/blue repaint for 1977 jubilee."
+        }
+      ],
+      "visualReview": {
+        "task": "lontoo-tower-bridge-bussihyppy-1952-20261008",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "jointDetailViewed": true,
+        "approvedForDelivery": true,
+        "status": "deliver-for-editor-review-with-composition-limitations",
+        "observations": [
+          "Brown bridge ironwork, red period RT-style bus, grey winter daylight, very shallow north bascule rise and near-flat south bascule.",
+          "Central narrow separation is visible below the bus chassis in native technical detail; front wheels are beyond it on the south side. No steep aerial flight or wide-open river chasm.",
+          "No readable words or numbers, identifiable faces, violence, modern towers or contemporary vehicles."
+        ],
+        "limitations": [
+          "Rear-wheel clearance is obscured by the foreground bridge railing, so the exact brief airborne interval is not visually proven.",
+          "Tower pinnacles meet or extend beyond the top frame; the towers themselves and two high walkways are visible.",
+          "The image uses the commissioned daytime light although primary contemporary text places the actual event in the evening; caption describes an illustration, not an archival photograph.",
+          "Exact gap width, bascule angles, vehicle dimensions and heraldic details are illustrative, not measured reconstruction."
+        ],
+        "file": "lontoo-Q83125-tower-bridge-bussihyppy-1952.png",
+        "sha256": "ab736d38672b0056cc830cfc333d1426df79a533a3b5c20e9d573077f9c8e9b9"
+      },
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "r2Delivered": true,
+      "url": "https://media.matkakirja.app/julisteet/lontoo-yksityiskohdat/20261008/lontoo-Q83125-tower-bridge-bussihyppy-1952.png",
+      "bytes": 2431568,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "task": "koopenhamina-christian-iv-kruunu-1596-20261008",
+      "number": 2,
+      "qid": "Q206101",
+      "city": "koopenhamina",
+      "filename": "koopenhamina-Q206101-christian-iv-kruunu-1596-avoin.png",
+      "parentTask": "koopenhamina-yksityiskohdat-3-20261007",
+      "producerParentTask": "koopenhamina-yksityiskohdat-20261007",
+      "routedTaskNumber": 6,
+      "previousGenerationCalls": 2,
+      "parentGenerationLimit": 3,
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationMode": "built-in image_gen",
+      "generationPrompt": "Use case: photorealistic-natural\nAsset type: one museum-object illustration for a Copenhagen city guide, photo-looking but not a documentary photograph.\nGenerate ONE wholly NEW landscape PNG, native exactly 1536 × 1024 pixels, 3:2, opaque sRGB, from TEXT ONLY.\n\nPrimary request: Christian IV of Denmark's specific OPEN Renaissance crown from 1596, the open form preserved at Rosenborg. A rich gold circumferential band with enamel ornament, pearls and coloured table-cut jewels, rising decorative foliate points around the rim. OPEN TOP: the separate rim points stand upright around the circumference and never join above the middle. The centre has open space; there is NO closed dome, no fabric cap, NO golden arch spanning the crown, no crossed arches, NO orb and NO cross anywhere.\n\nObject form and materials: This is an elaborate late-16th-century Danish Renaissance metalwork crown, not a generic modern imperial crown. Fine chased gold and enamel, broad leaf-like decorative points alternating with smaller points, pearl accents and restrained red/green jewel settings. The larger gold points contain small shallow Renaissance allegorical relief motifs, including a discreet pelican motif, expressed as gold ornament rather than a literal scene. Delicate filigree and handmade gold texture with natural aged patina. Follow the open circlet and ornamental foliate/lily-like point concept; no large spherical finial above the centre. Every raised point belongs to the rim. Exact miniature reliefs and jewel placements are illustrative, not a measured replica.\n\nComposition: The entire crown rests on ONE dark velvet cushion. Wide landscape museum close-up, crown and cushion fit inside the image with breathing room; crown fills about two-thirds of frame width. Slightly oblique front-side camera view from a little below the crown's midline, still showing the far rim points separated behind the open centre. Natural medium-telephoto camera perspective, sharp crown texture and softly blurred dark background. The cushion is plainly dark velvet without text, heraldic lettering or decorative props.\n\nLight and mood: Warm, soft restrained museum display light catches gold edges and pearls. Real photographed-metal appearance, modest jewel glints, natural shadows and smooth background falloff. Muted colours, no HDR, exaggerated glow, oversaturation or fantasy glamour.\n\nAbsolute exclusions: NO arches, crossing bands, dome, enclosed roof, textile cap, central orb, cross or cruciform finial. No second crown, loose crown jewels, sceptre, royal person or hands. No visible glass case, glass reflections, people, guards, faces, labels, text, letters, numerals, signage, logos, watermark, border or frame. One whole new original image, no reference-image pixels, no additional variant.",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-a8172521-2853-4b78-ba6e-b68d4920af31.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tower-christian-yksityiskohdat-20261008/production/koopenhamina/original-generation.png",
+      "originalSha256": "10118e87158ef8bcbfdf5b1136457a3111cd933b42005aaab8f7c155934bf62b",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tower-christian-yksityiskohdat-20261008/production/koopenhamina/koopenhamina-Q206101-christian-iv-kruunu-1596-avoin.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sha256": "0f7eabf423514f839667121a3364b4ba8f20524b03a6bb624895664c2afc56dd",
+      "metadataExact": true,
+      "sRGBVerified": true,
+      "opaqueRGBVerified": true,
+      "originalRGBPixelsUnchanged": true,
+      "sourceImagePixelsUsed": false,
+      "technicalChanges": [
+        "Original generation preserved unchanged.",
+        "Embedded sRGB profile and exact PNG Description/Source without changing RGB pixels.",
+        "Created full-frame 480px technical QA preview; no creative editing."
+      ],
+      "parentQA": {
+        "task": "koopenhamina-christian-iv-kruunu-1596-20261008",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "status": "deliver-for-editor-review",
+        "observations": [
+          "Open gold Renaissance circlet with separate foliate points, pearls and muted red/green jewels.",
+          "No arches, central orb, central cross, dome or textile cap.",
+          "Crown on dark velvet cushion, warm soft museum light, dark blurred background, photoreal metal and velvet textures.",
+          "No people, glass reflections, signs, readable text, logos or additional crown objects."
+        ],
+        "limitations": [
+          "Jewels and miniature allegorical gold reliefs are original illustrative details, not a measured replica or an authenticated documentary record."
+        ],
+        "file": "koopenhamina-Q206101-christian-iv-kruunu-1596-avoin.png",
+        "sha256": "0f7eabf423514f839667121a3364b4ba8f20524b03a6bb624895664c2afc56dd"
+      },
+      "file": "koopenhamina-Q206101-christian-iv-kruunu-1596-avoin.png",
+      "r2Key": "julisteet/koopenhamina-yksityiskohdat/20261008/koopenhamina-Q206101-christian-iv-kruunu-1596-avoin.png",
+      "mitat": [
+        1536,
+        1024
+      ],
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "kuvateksti": "Christian IV:n vuoden 1596 avoimen renessanssikruunun havainnollistus tummalla samettipatjalla. Koristeiden ja jalokivien yksityiskohdat ovat kuvituksellinen tulkinta. Havainnekuva.",
+      "viitteet": [
+        {
+          "publisher": "The Royal Danish Collection",
+          "title": "Christian IV’s crown",
+          "url": "https://denkongeligesamling.dk/en/the-collection/objects/christian-iv-s-crown/",
+          "type": "textResearchOnly",
+          "access": "Read live 8 October 2026; no image pixels opened or supplied.",
+          "notes": "1596 gold and enamel open crown; allegorical reliefs on larger points, golden arches added for 1648 coronation and removed in 1670. Small jewel and relief details in this image are illustrative, not measured replication."
+        }
+      ],
+      "visualReview": {
+        "task": "koopenhamina-christian-iv-kruunu-1596-20261008",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "status": "deliver-for-editor-review",
+        "observations": [
+          "Open gold Renaissance circlet with separate foliate points, pearls and muted red/green jewels.",
+          "No arches, central orb, central cross, dome or textile cap.",
+          "Crown on dark velvet cushion, warm soft museum light, dark blurred background, photoreal metal and velvet textures.",
+          "No people, glass reflections, signs, readable text, logos or additional crown objects."
+        ],
+        "limitations": [
+          "Jewels and miniature allegorical gold reliefs are original illustrative details, not a measured replica or an authenticated documentary record.",
+          "Crown fills approximately 83% of the image width, tighter than the requested approximate two-thirds; the complete crown remains inside the frame."
+        ],
+        "file": "koopenhamina-Q206101-christian-iv-kruunu-1596-avoin.png",
+        "sha256": "0f7eabf423514f839667121a3364b4ba8f20524b03a6bb624895664c2afc56dd"
+      },
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "r2Delivered": true,
+      "url": "https://media.matkakirja.app/julisteet/koopenhamina-yksityiskohdat/20261008/koopenhamina-Q206101-christian-iv-kruunu-1596-avoin.png",
+      "bytes": 2319364,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    }
+  ],
+  "imageCount": 2,
+  "newR2DeliveredImages": 2,
+  "deliveryStatus": "Two new image candidates R2 verified; submitted with this mailbox manifest/report for Fable review. Parent production: London10 and Copenhagen3; game integration unverified.",
+  "editorAcceptance": false,
+  "gameIntegrated": false,
+  "published": false,
+  "createdAt": "2026-10-08T04:30:06.401796+00:00",
+  "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+  "parentProductionComplete": true,
+  "routedParentTasks": [
+    "lontoo-yksityiskohdat-10-20261007",
+    "koopenhamina-yksityiskohdat-3-20261007"
+  ]
+}
