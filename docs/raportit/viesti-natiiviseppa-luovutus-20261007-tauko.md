@@ -3,7 +3,16 @@
 Luovuttaja: Natiiviseppä (Opus 5.5, high). Edellinen: viesti-natiiviseppa-luovutus-20261005-iltapaiva.md (käytännöt voimassa).
 Tarkempi lokirivistö: muisti natiiviseppa-tila-20261003.md (uusin rivi ylimpänä).
 
-## TILA 8.10. 19.4x (UUSIN)
+## JUNALISTAT 8.10. 20.4x (UUSIN)
+- JUNA 167 = RUNKO B natiiviseppa/juna-167-ik **46bb3721d** (+ Siirtoseppä 2b4d59890 aanet-fp-v3); A cd20157b1 varalla. Lukitus 21.30, käännös 22.00.
+- JUNA 168: LS1 dbc488776 + cdd0e711e (⊇ juna-167-ik d9ca9d63c); NUI 4758e5316 (EHTO Siirtoseppä c15eb5b8a) → NUI f0b94520e (harmaat pallot,
+  ⊇ 4758e5316, KUITATTU); NUI a9cffd2a0 (äänilähteet) odottaa kuittausta + Pelikoodarin NC-korjaus samaan junaan.
+- JUNA 169: grafiikka-169 c4c3018ba (KUITATTU) + Siirtoseppä grafiikka-169 f09dc4728; NUI fecc37c10 (äänilähteet ⊇ 1f12fee65 harmaat ⊇ 346435604
+  terävä ⊇ e56225d0b pohjavahti 9; EHTO web-PR #4225 mainissa) — jos #4225 puuttuu: NUI e9c9de7a3 (pohjavahti 6, ehto täyttyi #4223).
+  LS2 odottaa BUILD 169 -SHA:ta (muistitestin viittaus LinnaMuistibudjettiin).
+- JUNA 170: LS1 pallo-grafiikka-170 fa4ec528a; pallon laattojen SSE/välimuisti budjetista; STP/TAA.
+
+## TILA 8.10. 19.4x
 
 **JUNA 167 = RUNKO B** (Päätoimittaja 19.3x): natiiviseppa/juna-167-ik **d9ca9d63c** (wt/proto-natiiviseppa-j167b) = runko A 3c6377160 + Siirtoseppä
 final-ik-167 71d34bb97 (Final IK + Grounder, Peli-testien unity-tarkistus kääntää firstpassin); testit 448/419/1018, unity 0, tarkista 0.
