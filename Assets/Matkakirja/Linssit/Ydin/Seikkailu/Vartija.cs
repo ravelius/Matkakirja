@@ -50,7 +50,13 @@ namespace Matkakirja.Linssit.Seikkailu
         public readonly double X, Z, KuuluvuusM;
         /// <summary>Kävelyosa, jossa ääni syntyi (seinäsääntö, Askelaani.Kuuluvuus); null = ei tiedossa.</summary>
         public readonly string Osa;
-        public Aanilahde(double x, double z, double kuuluvuusM, string osa = null) { X = x; Z = z; KuuluvuusM = kuuluvuusM; Osa = osa; }
+        /// <summary>Korkeus (m; NaN = ei tiedossa): yli KerrosM:n korkeusero puolittaa kuuluvuuden (LS2 8.10.: harjan vartijat kuulivat
+        /// 3,2 m alempana tikkaiden juurella kävelevän, koska muurikäytävä, harja ja ranta ovat samaa osaa).</summary>
+        public readonly double Y;
+        public const double KerrosM = 2.5;
+        public Aanilahde(double x, double z, double kuuluvuusM, string osa = null, double y = double.NaN) { X = x; Z = z; KuuluvuusM = kuuluvuusM; Osa = osa; Y = y; }
+        /// <summary>Kuuluvuus kuulijan korkeudella: yli 2,5 m:n korkeusero → puolet.</summary>
+        public double KuuluvuusKorkeudella(double kuulijaY) => !double.IsNaN(Y) && Math.Abs(Y - kuulijaY) > KerrosM ? KuuluvuusM * 0.5 : KuuluvuusM;
     }
 
     /// <summary>Yhden kehyksen havaintosyöte sovittimelta.</summary>
@@ -104,6 +110,9 @@ namespace Matkakirja.Linssit.Seikkailu
         public const double NousuS = 1.5, SyoAlasS = 6, SyoKatseS = 3;
         /// <summary>Torkkuu (profiili torkku): ei näe; ääni herättää. Syö: näkee vain katsejaksoissa.</summary>
         public bool Torkkuu, Syo;
+        /// <summary>Uppoutunut katselemaan (huone 8: vartija ja talonpoika katsovat järvelle Muurinharja-kohtauksessa): ei selkäaistia
+        /// (LahiM), näkee vain katseensa suuntaan. Pelattavuusmalli 8.2: köysikieppi otetaan heidän takaansa kyyryssä.</summary>
+        public bool Uppoutunut;
         // Riidan ikkuna (pelattavuusmalli 8.1 huone 2): portinvartija riitelee soutajan kanssa 12 s selin porttiin, näkö 4 m ±35°.
         public const double RiitaS = 12, RiitaNakoM = 4, RiitaKulma = 35;
         public double Riita { get; private set; }
@@ -168,7 +177,7 @@ namespace Matkakirja.Linssit.Seikkailu
             double ulottuma = nako * (0.35 + 0.65 * Math.Max(0, Math.Min(1, s.Valoisuus))) * (s.Hiipii ? 0.7 : 1) * liike * (Helpotettu ? 0.85 : 1);
             if (d > ulottuma) return 0;
             double ero = Math.Abs(Kulma(Suunta(dx, dz) - Yaw));
-            bool lahella = d < LahiM && Riita <= 0;         // aivan vieressä vartija tuntee pelaajan selkänsäkin takaa (ei riidan tuoksinassa)
+            bool lahella = d < LahiM && Riita <= 0 && !Uppoutunut;   // aivan vieressä vartija tuntee pelaajan selkänsäkin takaa (ei riidan tuoksinassa eikä uppoutuneena)
             double kulma = Riita > 0 ? RiitaKulma : Profiili.NakoKulma;
             if (ero > kulma && !lahella) return 0;
             double keskelle = ero <= kulma ? 1 - 0.5 * ero / kulma : 0.35;

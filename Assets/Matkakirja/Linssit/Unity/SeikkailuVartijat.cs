@@ -24,7 +24,7 @@ namespace Matkakirja.Natiivi
         public const double ValoisuusOletus = 0.7, JuoksuKuuluuM = 6, KavelyKuuluuM = 2.5, KavelyKestoS = 1.333;   // skin.kavely_kesto_s (Linnanrakentaja)
         static readonly List<Aanilahde> jono = new List<Aanilahde>();
         /// <summary>Heitetty esine tms. (Unity x, z): kuuluu vartijoille seuraavalla ruudulla.</summary>
-        public static void Aani(Vector3 paikka, double kuuluvuusM) => jono.Add(new Aanilahde(paikka.x, paikka.z, kuuluvuusM, Askelaani.Osa(SeikkailuKavely.Data, paikka.x, paikka.y, -paikka.z)));
+        public static void Aani(Vector3 paikka, double kuuluvuusM) => jono.Add(new Aanilahde(paikka.x, paikka.z, kuuluvuusM, Askelaani.Osa(SeikkailuKavely.Data, paikka.x, paikka.y, -paikka.z), paikka.y));
 
         sealed class V
         {
@@ -37,6 +37,8 @@ namespace Matkakirja.Natiivi
             public float ValoM;
             public bool Tunnisti;
             public Vector3 Alku;
+            /// <summary>Huone 8: talonpoika kääntyy kerran (kaantyy_s) kohti käytävää 5 s pelaajan tultua 8 m:n päähän; 0 ei, 1 odottaa, 2 kääntynyt, 3 tehty.</summary>
+            public double KaantyyS, AlkuYaw; public int KaantyyVaihe; public float KaantyyAika;
         }
         /// <summary>Askeläänen klippi (rakennus.json aanet askel-kivi); SeikkailuVartijat.Askeleet asettaa.</summary>
         public static AudioClip AskelKlippi;
@@ -175,6 +177,7 @@ namespace Matkakirja.Natiivi
                 double yaw0 = eka.KiertoY is double ky0 ? 180 - ky0 * 180 / Math.PI : 0;
                 var v = new V { Aivot = new Vartija(pisteet, yaw0) { Profiili = (seisoo || istuu) && eka.Profiili == null ? VartijaProfiili.Linnavaki : VartijaProfiili.Hae(eka.Profiili),
                     // Istuvat syövät (linnaväki ja noppa: näkevät katsejaksoissa); vouti valveilla (SeikkailuSali ohjaa katseen).
+                    Uppoutunut = seisoo && eka.Tunnus.StartsWith("harja", StringComparison.Ordinal),   // huone 8: katsovat järvelle
                     Torkkuu = istuu && eka.Profiili != null, Syo = istuu && (eka.Tunnus.StartsWith("linnavaki", StringComparison.Ordinal) || eka.Tunnus.StartsWith("noppa", StringComparison.Ordinal)) }, Agentti = ag, Osa = eka.Osa ?? kv.Key, Nimi = kv.Key, Henkilo = henkilo, Askeleet = SeikkailuKuulija.Lahde("Askeleet:" + kv.Key, 2f, 28f) };
                 foreach (var pm in d.Lajia("piilo")) v.Aivot.Piilot.Add((pm.X, -pm.Z));   // vaihe 3: piilot ja varjot etsintään
                 v.Askeleet.loop = true; v.Askeleet.volume = 0.9f;
@@ -190,7 +193,7 @@ namespace Matkakirja.Natiivi
                     if (liekki != null) { liekki.transform.localPosition = kasi; if (soihtu) liekki.transform.localScale *= 2.5f; }
                     SeikkailuValot.Hehku(vg.transform, kasi + Vector3.up * 0.08f, new Color(1f, 0.62f, 0.3f), soihtu ? 1.6f : 1.1f, v.ValoM, true, DioraamaNayttamo.Kerros);
                 }
-                v.Alku = alku;
+                v.Alku = alku; v.KaantyyS = eka.KaantyyS; v.AlkuYaw = yaw0;
                 sv.vartijat.Add(v);
                 if (Odottavat.Contains(kv.Key)) vg.SetActive(false);   // pako: rannan soihtuvartijat vasta kellon jälkeen (SeikkailuPako)
                 // Torkkuja: leikkeet torkku / syo, jos skinissä (LR pyydetty), muuten idle (Hahmot3D:n varaketju).
@@ -264,7 +267,7 @@ namespace Matkakirja.Natiivi
                 // Kulkulupa (tarjotin) kävellen: askeleet ovat palvelijan askeleita, eivät herätä tutkimaan (LS2 8.10.: tarjottimen kantajan
                 // askeleet herättivät torkkujan ennen kuin tarjotinta ehti antaa). Juoksu kuuluu silti.
                 bool lupa = SeikkailuEsineet.Aktiivinen?.Kadessa == SeikkailuEsineet.Tarjotin && p.Tila.Tapa != Liiketapa.Juoksu;
-                if (p.Tila.Vauhti > 0.3 && sade > 0 && !lupa) aanet.Add(new Aanilahde(pp0.x, pp0.z, sade, Askelaani.Osa(kd, pp0.x, pp0.y, -pp0.z)));
+                if (p.Tila.Vauhti > 0.3 && sade > 0 && !lupa) aanet.Add(new Aanilahde(pp0.x, pp0.z, sade, Askelaani.Osa(kd, pp0.x, pp0.y, -pp0.z), pp0.y));
                 OmatAskeleet(p, pinta, pp0);
             }
             bool piilossa = p != null && Piilossa(p);
@@ -279,6 +282,7 @@ namespace Matkakirja.Natiivi
             foreach (var v in vartijat)
             {
                 var ag = v.Agentti; if (ag == null || !ag.isOnNavMesh) continue;
+                if (v.KaantyyS > 0 && v.KaantyyVaihe < 3 && p != null) Kaantyy(v, p);
                 var vp = ag.transform.position;
                 // Seinäsääntö: oma osa täysi säde, naapuriosa puolet, muu ei kuulu.
                 var kuuluvat = aanet;
@@ -286,7 +290,7 @@ namespace Matkakirja.Natiivi
                 {
                     string vosa = Askelaani.Osa(SeikkailuKavely.Data, vp.x, vp.y, -vp.z);
                     kuuluvat = new List<Aanilahde>(aanet.Count);
-                    foreach (var a in aanet) { double r = Askelaani.Kuuluvuus(SeikkailuKavely.Data, a.KuuluvuusM, a.Osa, vosa); if (r > 0) kuuluvat.Add(new Aanilahde(a.X, a.Z, r, a.Osa)); }
+                    foreach (var a in aanet) { double r = Askelaani.Kuuluvuus(SeikkailuKavely.Data, a.KuuluvuusKorkeudella(vp.y), a.Osa, vosa); if (r > 0) kuuluvat.Add(new Aanilahde(a.X, a.Z, r, a.Osa, a.Y)); }
                 }
                 var s = new VartijanSyote { VartijaX = vp.x, VartijaZ = vp.z, Valoisuus = PelaajanValoisuus(p), Aanet = kuuluvat, PelaajaVauhti = p != null ? p.Tila.Vauhti : (double?)null,
                     Tarjotin = SeikkailuEsineet.Aktiivinen?.Kadessa == SeikkailuEsineet.Tarjotin, Naamio = SeikkailuEsineet.Aktiivinen?.Naamio == true && v.Osa != NaamioEiKelpaaOsa };
@@ -604,6 +608,14 @@ namespace Matkakirja.Natiivi
                     v.Agentti.gameObject.SetActive(false);
                     a.kirjaa?.Invoke($"seikkailu: reitti {reitti} piiloon");
                 }
+        }
+
+        void Kaantyy(V v, SeikkailuPelaaja p)
+        {
+            float nyt = Time.time;
+            if (v.KaantyyVaihe == 0 && (p.transform.position - v.Agentti.transform.position).sqrMagnitude < 8f * 8f) { v.KaantyyVaihe = 1; v.KaantyyAika = nyt + 5f; }
+            else if (v.KaantyyVaihe == 1 && nyt >= v.KaantyyAika) { v.KaantyyVaihe = 2; v.KaantyyAika = nyt + (float)v.KaantyyS; v.Aivot.Uppoutunut = false; v.Aivot.Yaw = v.AlkuYaw + 180; kirjaa?.Invoke($"seikkailu: {v.Nimi} kääntyy käytävää kohti ({v.KaantyyS:F0} s)"); }
+            else if (v.KaantyyVaihe == 2 && nyt >= v.KaantyyAika) { v.KaantyyVaihe = 3; v.Aivot.Yaw = v.AlkuYaw; v.Aivot.Uppoutunut = true; }
         }
 
         /// <summary>Hälytyskello (huone 10 vaihe 1): kaikki vartijat valppaiksi (60 s).</summary>

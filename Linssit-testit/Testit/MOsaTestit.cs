@@ -115,5 +115,16 @@ namespace Matkakirja.Linssit.Testit
             var w = new Vartija(Reitti, yaw: 0); w.OtaKiinni(); w.Paivita(1.2, new VartijanSyote());
             Oleta.Tosi(!w.Irrottaudu(), "ikkuna 1 s ohi: ei irtipääsyä");
         }
+
+        [Testi] static void UppoutunutJaKorkeus()
+        {
+            // Huone 8: järvelle katsova (uppoutunut) ei aisti selän takana alle 2 m:n päässä; tavallinen aistii.
+            var takana = new VartijanSyote { PelaajaZ = -1.0, NakolinjaVapaa = true, Valoisuus = 0.63, Hiipii = true, PelaajaVauhti = 0.5 };
+            Oleta.Tosi(new Vartija(Reitti, yaw: 0).NakoVoima(takana) > 0, "tavallinen aistii selän takaa alle 2 m");
+            Oleta.Sama(0.0, new Vartija(Reitti, yaw: 0) { Uppoutunut = true }.NakoVoima(takana));
+            // Kuulo: yli 2,5 m:n korkeusero puolittaa kuuluvuuden.
+            var a = new Aanilahde(0, 0, 6, "muurikaytava", 13.4);
+            Oleta.Tosi(a.KuuluvuusKorkeudella(16.6) == 3 && a.KuuluvuusKorkeudella(14.0) == 6 && new Aanilahde(0, 0, 6).KuuluvuusKorkeudella(99) == 6, "korkeusraja 2,5 m, ilman korkeutta ennallaan");
+        }
     }
 }

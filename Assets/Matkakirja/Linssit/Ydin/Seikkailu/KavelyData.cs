@@ -67,6 +67,8 @@ namespace Matkakirja.Linssit.Seikkailu
         public bool Puettava, Lukko;
         public string Avain;
         public double AaniNopeaM, Raapaisut, KestoS, KaantoAste, SallittuAste;
+        /// <summary>seisoo: kääntyy kerran näin moneksi sekunniksi taaksepäin (v44q seisoo:harja-talonpoika kaantyy_s 4).</summary>
+        public double KaantyyS;
         public double[] Ulkonormaali;
         /// <summary>kamera:K4/K5 (v44r): katseen kohde, glTF; null jos puuttuu.</summary>
         public double[] Katse;
@@ -139,7 +141,7 @@ namespace Matkakirja.Linssit.Seikkailu
                 Henkilo = MiniJson.Teksti(o, "henkilo"), Profiili = MiniJson.Teksti(o, "profiili"),
                 Puettava = MiniJson.Kentta(o, "puettava") is bool pub && pub, Lukko = MiniJson.Kentta(o, "lukko") is bool lub && lub, Avain = MiniJson.Teksti(o, "avain"),
                 AaniNopeaM = MiniJson.Luku(o, "aani_nopea_m") ?? 0, Raapaisut = MiniJson.Luku(o, "raapaisut") ?? 0, KestoS = MiniJson.Luku(o, "kesto_s") ?? 0,
-                KaantoAste = MiniJson.Luku(o, "kaanto_aste") ?? 0, SallittuAste = MiniJson.Luku(o, "sallittu_aste") ?? 0,
+                KaantoAste = MiniJson.Luku(o, "kaanto_aste") ?? 0, KaantyyS = MiniJson.Luku(o, "kaantyy_s") ?? 0, SallittuAste = MiniJson.Luku(o, "sallittu_aste") ?? 0,
                 Ulkonormaali = MiniJson.Kentta(o, "ulkonormaali") is object un ? Vektori(un) : null,
                 Katse = MiniJson.Kentta(o, "katse") is object ka ? Vektori(ka) : null,
                 Lyhty = MiniJson.Kentta(o, "lyhty") is bool lyb && lyb, Soihtu = MiniJson.Kentta(o, "soihtu") is bool sob && sob,
