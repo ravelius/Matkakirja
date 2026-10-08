@@ -236,6 +236,64 @@ namespace Matkakirja.Linssit.Testit
             }
         }
 
+        /// <summary>
+        /// ÄÄNITASOT 37 KAUPUNGISSA (Päätoimittaja 8.10. ilta, juna 169): kertoja vs. tuuli, sade, ukkonen ja kori mikserin oletuksilla
+        /// (Lukija 0,9, Tehosteet 1, Sää 1) OpasAanitasot-ketjuilla ja mitatuilla leikevoimakkuuksilla (kultaiset/pallo-aanitasot-20261008.json).
+        /// Puheen aikana: jatkuvat (tuuli kameran korkeudelta, rankkasade) yhteensä ≥ JatkuvaMarginaaliDb kertojan alla; tapahtumat
+        /// (ukkonen, korin narina) hetkellisesti ≥ TapahtumaMarginaaliDb kertojan alla; huippusumma (kertojan ja tapahtumien huiput,
+        /// jatkuvien RMS) ≤ 1,0 (ei leikkautumista); tehosteiden −3 dB (TehosteKerroin) mukana.
+        /// </summary>
+        public const double JatkuvaMarginaaliDb = 10, TapahtumaMarginaaliDb = 6;
+        static double Db(double x) => 20 * Math.Log10(Math.Max(1e-9, x));
+        static double Lin(double db) => Math.Pow(10, db / 20);
+        public sealed class Tasot { public string Kaupunki; public double JatkuvaMarginaali = double.MaxValue, TapahtumaMarginaali = double.MaxValue, HuippuSumma, TuuliMaks; public List<string> Viat = new List<string>(); }
+        public static Tasot MittaaTasot(Kaupunki c)
+        {
+            var g = (Dictionary<string, object>)MiniJson.Jasenna(File.ReadAllText(Path.Combine(AppContext.BaseDirectory, "..", "kultaiset", "pallo-aanitasot-20261008.json")));
+            double L(string lahde, string kentta) => Convert.ToDouble(((Dictionary<string, object>)g[lahde])[kentta], System.Globalization.CultureInfo.InvariantCulture);
+            const double Lukija = 0.9, Tehosteet = 1, Saa = 1, TK = 0.7079458;   // mikserin oletukset; TehosteKerroin = −3 dB
+            var tu = new Tasot { Kaupunki = c.Nimi };
+            var tap = new List<(double t, string laji, string kohde, double kesto)>();
+            var r = Aja(c, false, tap);
+            double kertoja = L("kertoja", "integroitu_lufs") + Db(Matkakirja.Linssit.Aanet.OpasAanitasot.Kertoja(Lukija));
+            double kertojaHuippu = Lin(L("kertoja", "huippu_db")) * Matkakirja.Linssit.Aanet.OpasAanitasot.Kertoja(Lukija);
+            double gU = Matkakirja.Linssit.Aanet.OpasAanitasot.Ukkonen(TK, Saa, true), gN = Matkakirja.Linssit.Aanet.OpasAanitasot.Kori(0.9, 0.25, TK, Tehosteet, true);
+            double ukkonen = L("ukkonen", "momentaari_max_lufs") + Db(gU), narina = L("korin_narina", "momentaari_max_lufs") + Db(gN);
+            double sadeG = Matkakirja.Linssit.Aanet.OpasAanitasot.Maisema(1, true), sade = L("sade", "integroitu_lufs") + Db(sadeG);
+            int ti = 0; bool puhuu = false;
+            foreach (var x in r)
+            {
+                while (ti < tap.Count && tap[ti].t <= x.T) { if (tap[ti].laji == "puhe") puhuu = true; else if (tap[ti].laji == "hiljaa") puhuu = false; ti++; }
+                if (!puhuu) continue;
+                double h = Math.Max(0, x.U - 35);
+                double tuuliTaso = Matkakirja.Linssit.Aanet.KaupunkiAanimaisema.TuuliMaa + (Matkakirja.Linssit.Aanet.KaupunkiAanimaisema.TuuliYla - Matkakirja.Linssit.Aanet.KaupunkiAanimaisema.TuuliMaa) * Matkakirja.Linssit.Aanet.KaupunkiAanimaisema.KorkeusOsuus(h);
+                double tuuliG = Matkakirja.Linssit.Aanet.OpasAanitasot.Maisema(tuuliTaso, true);
+                tu.TuuliMaks = Math.Max(tu.TuuliMaks, tuuliTaso);
+                double tuuli = L("tuuli", "integroitu_lufs") + Db(tuuliG);
+                double jatkuva = 10 * Math.Log10(Math.Pow(10, tuuli / 10) + Math.Pow(10, sade / 10));
+                tu.JatkuvaMarginaali = Math.Min(tu.JatkuvaMarginaali, kertoja - jatkuva);
+                tu.TapahtumaMarginaali = Math.Min(tu.TapahtumaMarginaali, kertoja - Math.Max(ukkonen, narina));
+                double summa = kertojaHuippu + Lin(L("ukkonen", "huippu_db")) * gU + Lin(L("korin_narina", "huippu_db")) * gN
+                    + Lin(L("tuuli", "rms_db")) * tuuliG + Lin(L("sade", "rms_db")) * sadeG;
+                tu.HuippuSumma = Math.Max(tu.HuippuSumma, summa);
+            }
+            if (tu.JatkuvaMarginaali < JatkuvaMarginaaliDb) tu.Viat.Add($"tuuli ja sade {tu.JatkuvaMarginaali:F1} dB kertojan alla");
+            if (tu.TapahtumaMarginaali < TapahtumaMarginaaliDb) tu.Viat.Add($"ukkonen/kori {tu.TapahtumaMarginaali:F1} dB kertojan alla");
+            if (tu.HuippuSumma > 1) tu.Viat.Add($"huippusumma {tu.HuippuSumma:F2} > 1 (leikkautuu)");
+            return tu;
+        }
+
+        [Testi] static void AanitasotKaikissaKaupungeissa()
+        {
+            Oleta.Tosi(Math.Abs(20 * Math.Log10(0.7079458) + 3) < 0.01, "TehosteKerroin = −3 dB");
+            var tulokset = Lue().Select(MittaaTasot).ToList();
+            Console.WriteLine("      | Kaupunki | tuuli+sade kertojan alla dB | ukkonen/kori kertojan alla dB | huippusumma | tuulen taso maks | viat |");
+            foreach (var t in tulokset) Console.WriteLine($"      | {t.Kaupunki} | {t.JatkuvaMarginaali:F1} | {t.TapahtumaMarginaali:F1} | {t.HuippuSumma:F2} | {t.TuuliMaks:F2} | {t.Viat.Count} |");
+            var viat = tulokset.Where(t => t.Viat.Count > 0).Select(t => $"{t.Kaupunki}: {string.Join("; ", t.Viat)}").ToList();
+            foreach (var v in viat) Console.WriteLine("      VIKA " + v);
+            Oleta.Tosi(viat.Count == 0, $"{viat.Count} kaupungissa äänitasovikoja");
+        }
+
         [Testi] static void PuheJaLentoTahdissaKaikissaKaupungeissa()
         {
             var tulokset = Lue().Select(MittaaTahdistus).ToList();
