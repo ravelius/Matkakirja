@@ -6,6 +6,15 @@ worktreet /Users/Shared/Claude/wt/proto-natiivi-ui-<aihe>. Käännös: lokit/nat
 Simu vain Julkaisijan "SIMU NYT" -viestistä, oma iPhone FB234D08-4693-4496-9C7A-6C7C15B03963, iPad
 AD119F7B-A2A2-43EE-8769-7326DD757F89; lopuksi sammutus ja "simu vapaa".
 
+## TILA 8.10. klo 10.xx (JATKA TÄSTÄ)
+
+PALLON SÄÄTILA (omistaja 8.10. 09.1x–09.2x, juna 166): proto natiivi-ui/saatila 9417aa6ae (worktree wt/proto-natiivi-ui-tkpariteetti;
+⊇ 39d43932a + 0484007f2) — KUITTAUSTA ODOTTAA. Ydin Saatila (LIVE, AikaValinta/SaaValinta, LiveAika ← LS1, LiveSaa ← LS1:n
+/opas/saa-haku, Muuttui, Tallenne) + SaaVihje (ensikerran vihje 15 s / 5 s); OpasValikko ☾-lista (LIVE-laatikko, AIKA, SÄÄ),
+napin LIVE-tila (tila.live-kuulto) ja sääkulma; Ikonit.Viiva pilvi/sade/sumu/lumi/ukkonen; Lähteet: MET Norway CC BY 4.0.
+Web-PR #4193 (tila.live, live-kuulto, OHJAUSNAPPI.saakuvakkeet/live): mergeä vihreänä, tarkista proton kopio = main.
+LS1 kytkee 166-haaraan; Pelikoodarin worker PR #4194.
+
 ## TILA 8.10. klo 09.1x (JATKA TÄSTÄ)
 
 JUNA 165 kuitattu ja Natiivisepällä: metro-kaksirivi 0484007f2, kasittely-veto cf66d2088 (Siirtoseppä kytki, historia-valot
