@@ -1,0 +1,2333 @@
+[
+ {
+  "arvo": "rgba(176,138,60,0.95)",
+  "c": [
+   176,
+   138,
+   60,
+   0.95
+  ],
+  "ehdotus": [
+   217,
+   161,
+   59,
+   0.95
+  ],
+  "token": "--accent",
+  "d": 9.5,
+  "n": 1,
+  "paikat": [
+   "Matkakirja:3941 .mk-palaute__kentta:focus > .unity-base-text-fie"
+  ]
+ },
+ {
+  "arvo": "rgb(134,122,106)",
+  "c": [
+   134,
+   122,
+   106,
+   1.0
+  ],
+  "ehdotus": [
+   130,
+   130,
+   130,
+   1.0
+  ],
+  "token": "--tk-harmaa-pinta",
+  "d": 9.0,
+  "n": 1,
+  "paikat": [
+   "Lehti:637 .mk-lehti__tehtava"
+  ]
+ },
+ {
+  "arvo": "#a8741a",
+  "c": [
+   168,
+   116,
+   26,
+   1.0
+  ],
+  "ehdotus": [
+   138,
+   97,
+   20,
+   1.0
+  ],
+  "token": "--accent-dark",
+  "d": 8.9,
+  "n": 4,
+  "paikat": [
+   "Lehti:1108 .mk-nahtavyys__kaiutin.mk-valittu",
+   "Matkakirja:3377 .mk-lukija.mk-lukee",
+   "Matkakirja:3442 .mk-lukija__rengas",
+   "Matkakirja:3443 .mk-lukija__rengas"
+  ]
+ },
+ {
+  "arvo": "rgb(149,136,119)",
+  "c": [
+   149,
+   136,
+   119,
+   1.0
+  ],
+  "ehdotus": [
+   179,
+   156,
+   125,
+   1.0
+  ],
+  "token": "--muted",
+  "d": 8.8,
+  "n": 3,
+  "paikat": [
+   "Lehti:793 .mk-lehti__poistu",
+   "Lehti:800 .mk-lehti__poistu .mk-nappi__teksti",
+   "Lehti:815 .mk-lehti__selaus"
+  ]
+ },
+ {
+  "arvo": "rgb(143,132,115)",
+  "c": [
+   143,
+   132,
+   115,
+   1.0
+  ],
+  "ehdotus": [
+   130,
+   130,
+   130,
+   1.0
+  ],
+  "token": "--tk-harmaa-pinta",
+  "d": 8.8,
+  "n": 1,
+  "paikat": [
+   "Matkakirja:3406 .mk-lukija__valikkonappi"
+  ]
+ },
+ {
+  "arvo": "rgb(80,75,68)",
+  "c": [
+   80,
+   75,
+   68,
+   1.0
+  ],
+  "ehdotus": [
+   92,
+   74,
+   50,
+   1.0
+  ],
+  "token": "--tk-paperi-muste-pehmea",
+  "d": 8.7,
+  "n": 1,
+  "paikat": [
+   "Kartta:1682 .mk-nosto__nykyteksti"
+  ]
+ },
+ {
+  "arvo": "#9d978a",
+  "c": [
+   157,
+   151,
+   138,
+   1.0
+  ],
+  "ehdotus": [
+   170,
+   170,
+   170,
+   1.0
+  ],
+  "token": "--tk-harmaa-reunus",
+  "d": 8.6,
+  "n": 1,
+  "paikat": [
+   "Kohdekartta:384 .mk-kohdekartta-kokoruutu__lahde"
+  ]
+ },
+ {
+  "arvo": "rgb(92,63,14)",
+  "c": [
+   92,
+   63,
+   14,
+   1.0
+  ],
+  "ehdotus": [
+   92,
+   74,
+   50,
+   1.0
+  ],
+  "token": "--tk-paperi-muste-pehmea",
+  "d": 8.1,
+  "n": 2,
+  "paikat": [
+   "Kartta:1311 .mk-nosto__lisaa",
+   "Kartta:1317 .mk-nosto__lisaa .mk-nappi__teksti"
+  ]
+ },
+ {
+  "arvo": "rgb(204,196,180)",
+  "c": [
+   204,
+   196,
+   180,
+   1.0
+  ],
+  "ehdotus": [
+   189,
+   189,
+   189,
+   1.0
+  ],
+  "token": "--tk-harmaa-muste-pehmea",
+  "d": 7.8,
+  "n": 1,
+  "paikat": [
+   "Kartta:1668 .mk-nosto__kuvakehys--nyky"
+  ]
+ },
+ {
+  "arvo": "rgba(94,66,16,0.85)",
+  "c": [
+   94,
+   66,
+   16,
+   0.85
+  ],
+  "ehdotus": [
+   92,
+   74,
+   50,
+   0.85
+  ],
+  "token": "--tk-paperi-muste-pehmea",
+  "d": 7.6,
+  "n": 1,
+  "paikat": [
+   "Kartta:1586 .mk-nosto__liiteotsake"
+  ]
+ },
+ {
+  "arvo": "rgb(196,187,171)",
+  "c": [
+   196,
+   187,
+   171,
+   1.0
+  ],
+  "ehdotus": [
+   201,
+   180,
+   143,
+   1.0
+  ],
+  "token": "--tk-tumma-muste-pehmea",
+  "d": 7.6,
+  "n": 1,
+  "paikat": [
+   "Kartta:2104 .mk-nosto__havainne"
+  ]
+ },
+ {
+  "arvo": "rgb(193,183,168)",
+  "c": [
+   193,
+   183,
+   168,
+   1.0
+  ],
+  "ehdotus": [
+   201,
+   180,
+   143,
+   1.0
+  ],
+  "token": "--tk-tumma-muste-pehmea",
+  "d": 7.6,
+  "n": 1,
+  "paikat": [
+   "Lehti:790 .mk-lehti__poistu"
+  ]
+ },
+ {
+  "arvo": "rgb(57,53,47)",
+  "c": [
+   57,
+   53,
+   47,
+   1.0
+  ],
+  "ehdotus": [
+   33,
+   29,
+   24,
+   1.0
+  ],
+  "token": "--tk-paperi-muste",
+  "d": 7.6,
+  "n": 1,
+  "paikat": [
+   "Matkakirja:3296 .mk-lippu__tunnusselite"
+  ]
+ },
+ {
+  "arvo": "rgb(200,190,175)",
+  "c": [
+   200,
+   190,
+   175,
+   1.0
+  ],
+  "ehdotus": [
+   189,
+   189,
+   189,
+   1.0
+  ],
+  "token": "--tk-harmaa-muste-pehmea",
+  "d": 7.5,
+  "n": 1,
+  "paikat": [
+   "Lehti:714 .mk-lehti__julistekuva"
+  ]
+ },
+ {
+  "arvo": "#a0701c",
+  "c": [
+   160,
+   112,
+   28,
+   1.0
+  ],
+  "ehdotus": [
+   138,
+   97,
+   20,
+   1.0
+  ],
+  "token": "--accent-dark",
+  "d": 6.7,
+  "n": 1,
+  "paikat": [
+   "Pulu:411 .mk-matkakirja__kuva:hover"
+  ]
+ },
+ {
+  "arvo": "#9b8b6e",
+  "c": [
+   155,
+   139,
+   110,
+   1.0
+  ],
+  "ehdotus": [
+   179,
+   156,
+   125,
+   1.0
+  ],
+  "token": "--muted",
+  "d": 6.6,
+  "n": 2,
+  "paikat": [
+   "Linssit:2897 .mk-ihmisnosto__kuvateksti",
+   "Linssit:3010 .mk-ihmisnosto__lahdeteksti"
+  ]
+ },
+ {
+  "arvo": "#857657",
+  "c": [
+   133,
+   118,
+   87,
+   1.0
+  ],
+  "ehdotus": [
+   138,
+   108,
+   70,
+   1.0
+  ],
+  "token": "--map-ink-soft",
+  "d": 6.6,
+  "n": 1,
+  "paikat": [
+   "Linssit:2904 .mk-ihmisnosto__lahde"
+  ]
+ },
+ {
+  "arvo": "#d9ccb4",
+  "c": [
+   217,
+   204,
+   180,
+   1.0
+  ],
+  "ehdotus": [
+   241,
+   230,
+   208,
+   1.0
+  ],
+  "token": "--tk-tumma-muste",
+  "d": 6.0,
+  "n": 1,
+  "paikat": [
+   "Linssit:2679 .mk-karuselli__nimi"
+  ]
+ },
+ {
+  "arvo": "rgb(128,111,88)",
+  "c": [
+   128,
+   111,
+   88,
+   1.0
+  ],
+  "ehdotus": [
+   110,
+   99,
+   80,
+   1.0
+  ],
+  "token": "--sea-ink",
+  "d": 5.8,
+  "n": 3,
+  "paikat": [
+   "Matkakirja:2201 .mk-aloitus__ohita",
+   "Matkakirja:2214 .mk-aloitus__ohita .mk-nappi__teksti",
+   "Matkakirja:725 .mk-liiku__nappi"
+  ]
+ },
+ {
+  "arvo": "#9c6f1e",
+  "c": [
+   156,
+   111,
+   30,
+   1.0
+  ],
+  "ehdotus": [
+   138,
+   97,
+   20,
+   1.0
+  ],
+  "token": "--accent-dark",
+  "d": 5.8,
+  "n": 1,
+  "paikat": [
+   "Matkakirja:2734 .mk-laukku__aktivoi:active"
+  ]
+ },
+ {
+  "arvo": "rgb(188,177,156)",
+  "c": [
+   188,
+   177,
+   156,
+   1.0
+  ],
+  "ehdotus": [
+   201,
+   180,
+   143,
+   1.0
+  ],
+  "token": "--tk-tumma-muste-pehmea",
+  "d": 5.7,
+  "n": 1,
+  "paikat": [
+   "Lehti:2654 .mk-nosto__visanappi.mk-fokus__vastaus"
+  ]
+ },
+ {
+  "arvo": "rgba(164,105,28,0.75)",
+  "c": [
+   164,
+   105,
+   28,
+   0.75
+  ],
+  "ehdotus": [
+   138,
+   97,
+   20,
+   0.75
+  ],
+  "token": "--accent-dark",
+  "d": 5.5,
+  "n": 1,
+  "paikat": [
+   "Lehti:1598 .mk-numerot__ennusteteksti"
+  ]
+ },
+ {
+  "arvo": "rgb(176,164,144)",
+  "c": [
+   176,
+   164,
+   144,
+   1.0
+  ],
+  "ehdotus": [
+   179,
+   156,
+   125,
+   1.0
+  ],
+  "token": "--muted",
+  "d": 5.4,
+  "n": 1,
+  "paikat": [
+   "Lehti:650 .mk-lehti__tehtavaotsake"
+  ]
+ },
+ {
+  "arvo": "#c9a15a",
+  "c": [
+   201,
+   161,
+   90,
+   1.0
+  ],
+  "ehdotus": [
+   217,
+   161,
+   59,
+   1.0
+  ],
+  "token": "--accent",
+  "d": 5.4,
+  "n": 2,
+  "paikat": [
+   "Linssit:2967 .mk-ihmisnosto__kysyotsikko",
+   "Linssit:3023 .mk-ihmisnosto__lahdelinkki .mk-nappi__teksti"
+  ]
+ },
+ {
+  "arvo": "#7a6a4a",
+  "c": [
+   122,
+   106,
+   74,
+   1.0
+  ],
+  "ehdotus": [
+   110,
+   99,
+   80,
+   1.0
+  ],
+  "token": "--sea-ink",
+  "d": 5.4,
+  "n": 1,
+  "paikat": [
+   "Sahke:56 .mk-sahke-liuska__sulje"
+  ]
+ },
+ {
+  "arvo": "rgb(102,96,88)",
+  "c": [
+   102,
+   96,
+   88,
+   1.0
+  ],
+  "ehdotus": [
+   110,
+   99,
+   80,
+   1.0
+  ],
+  "token": "--sea-ink",
+  "d": 5.2,
+  "n": 1,
+  "paikat": [
+   "Kartta:2149 .mk-suurennos__pysaytys"
+  ]
+ },
+ {
+  "arvo": "#d9ccb0",
+  "c": [
+   217,
+   204,
+   176,
+   1.0
+  ],
+  "ehdotus": [
+   236,
+   216,
+   174,
+   1.0
+  ],
+  "token": "--tk-paperi-pergamentti",
+  "d": 5.1,
+  "n": 2,
+  "paikat": [
+   "Kohdekartta:429 .mk-avauskortti__hero",
+   "Kohdekartta:679 .mk-kutsu__kortti"
+  ]
+ },
+ {
+  "arvo": "#c69e52",
+  "c": [
+   198,
+   158,
+   82,
+   1.0
+  ],
+  "ehdotus": [
+   217,
+   161,
+   59,
+   1.0
+  ],
+  "token": "--accent",
+  "d": 5.1,
+  "n": 1,
+  "paikat": [
+   "Matkakirja:3129 .mk-lehti__maapiste--paa"
+  ]
+ },
+ {
+  "arvo": "rgb(232,237,245)",
+  "c": [
+   232,
+   237,
+   245,
+   1.0
+  ],
+  "ehdotus": [
+   224,
+   224,
+   224,
+   1.0
+  ],
+  "token": "--tk-harmaa-muste",
+  "d": 4.9,
+  "n": 2,
+  "paikat": [
+   "Linssit:332 .mk-astroavaus__otsikko",
+   "Linssit:345 .mk-astroavaus__nimi"
+  ]
+ },
+ {
+  "arvo": "rgba(198,158,82,0.6)",
+  "c": [
+   198,
+   158,
+   82,
+   0.6
+  ],
+  "ehdotus": [
+   217,
+   161,
+   59,
+   0.6
+  ],
+  "token": "--accent",
+  "d": 4.3,
+  "n": 1,
+  "paikat": [
+   "Lehti:2202 .mk-tyohuone__kentta:focus > .unity-base-text-fi"
+  ]
+ },
+ {
+  "arvo": "rgba(8,12,18,0.72)",
+  "c": [
+   8,
+   12,
+   18,
+   0.72
+  ],
+  "ehdotus": [
+   0,
+   0,
+   0,
+   0.72
+  ],
+  "token": "--lapinakyva",
+  "d": 4.2,
+  "n": 1,
+  "paikat": [
+   "Pulu:888 .mk-traileri"
+  ]
+ },
+ {
+  "arvo": "rgba(232,237,245,0.72)",
+  "c": [
+   232,
+   237,
+   245,
+   0.72
+  ],
+  "ehdotus": [
+   224,
+   224,
+   224,
+   0.72
+  ],
+  "token": "--tk-harmaa-muste",
+  "d": 4.1,
+  "n": 1,
+  "paikat": [
+   "Linssit:358 .mk-astroavaus__lahde"
+  ]
+ },
+ {
+  "arvo": "rgba(228,196,128,0.62)",
+  "c": [
+   228,
+   196,
+   128,
+   0.62
+  ],
+  "ehdotus": [
+   220,
+   192,
+   143,
+   0.62
+  ],
+  "token": "--paper-dark",
+  "d": 3.9,
+  "n": 1,
+  "paikat": [
+   "Kysymys:924 .mk-paljastus__jatka"
+  ]
+ },
+ {
+  "arvo": "#e2efdc",
+  "c": [
+   226,
+   239,
+   220,
+   1.0
+  ],
+  "ehdotus": [
+   223,
+   246,
+   232,
+   1.0
+  ],
+  "token": "--tk-lasi-avaruus-muste",
+  "d": 3.9,
+  "n": 4,
+  "paikat": [
+   "Lehti:2175 .mk-tyohuone__tagi--valmis",
+   "Lehti:2264 .mk-tyohuone__chip--valmis",
+   "Lehti:2481 .mk-tilastot__nimi--tuore-valmis",
+   "Lehti:2570 .mk-tilastot__num--valmis"
+  ]
+ },
+ {
+  "arvo": "rgb(255,86,86)",
+  "c": [
+   255,
+   86,
+   86,
+   1.0
+  ],
+  "ehdotus": [
+   255,
+   90,
+   74,
+   1.0
+  ],
+  "token": "--tk-lcd-vaara",
+  "d": 3.9,
+  "n": 1,
+  "paikat": [
+   "Linssit:3629 .mk-isskyyti__piste"
+  ]
+ },
+ {
+  "arvo": "rgba(228,196,128,0.7)",
+  "c": [
+   228,
+   196,
+   128,
+   0.7
+  ],
+  "ehdotus": [
+   220,
+   192,
+   143,
+   0.7
+  ],
+  "token": "--paper-dark",
+  "d": 3.8,
+  "n": 1,
+  "paikat": [
+   "Kysymys:947 .mk-paljastus--paikallis .mk-paljastus__jatka"
+  ]
+ },
+ {
+  "arvo": "rgba(236,206,150,0.85)",
+  "c": [
+   236,
+   206,
+   150,
+   0.85
+  ],
+  "ehdotus": [
+   220,
+   192,
+   143,
+   0.85
+  ],
+  "token": "--paper-dark",
+  "d": 3.8,
+  "n": 1,
+  "paikat": [
+   "Linssit:2049 .mk-radio__virta"
+  ]
+ },
+ {
+  "arvo": "rgba(34,22,8,0.92)",
+  "c": [
+   34,
+   22,
+   8,
+   0.92
+  ],
+  "ehdotus": [
+   42,
+   31,
+   22,
+   0.92
+  ],
+  "token": "--panel",
+  "d": 3.8,
+  "n": 1,
+  "paikat": [
+   "Linssit:2165 .mk-radio__kaupunki"
+  ]
+ },
+ {
+  "arvo": "rgb(140,138,134)",
+  "c": [
+   140,
+   138,
+   134,
+   1.0
+  ],
+  "ehdotus": [
+   130,
+   130,
+   130,
+   1.0
+  ],
+  "token": "--tk-harmaa-pinta",
+  "d": 3.7,
+  "n": 1,
+  "paikat": [
+   "Linssit:1402 .mk-avaustausta__kuva"
+  ]
+ },
+ {
+  "arvo": "rgba(122,96,57,0.6)",
+  "c": [
+   122,
+   96,
+   57,
+   0.6
+  ],
+  "ehdotus": [
+   138,
+   108,
+   70,
+   0.6
+  ],
+  "token": "--map-ink-soft",
+  "d": 3.5,
+  "n": 1,
+  "paikat": [
+   "Kysymys:443 .mk-kysymys__lahdelinkki"
+  ]
+ },
+ {
+  "arvo": "rgba(255,253,245,0.9)",
+  "c": [
+   255,
+   253,
+   245,
+   0.9
+  ],
+  "ehdotus": [
+   245,
+   240,
+   226,
+   0.9
+  ],
+  "token": "--tk-paperi-pinta",
+  "d": 3.5,
+  "n": 1,
+  "paikat": [
+   "Lehti:743 .mk-lehti__lunastus"
+  ]
+ },
+ {
+  "arvo": "rgba(214,168,84,0.92)",
+  "c": [
+   214,
+   168,
+   84,
+   0.92
+  ],
+  "ehdotus": [
+   217,
+   161,
+   59,
+   0.92
+  ],
+  "token": "--accent",
+  "d": 3.5,
+  "n": 1,
+  "paikat": [
+   "Linssit:1542 .mk-aikajana-avausnappi"
+  ]
+ },
+ {
+  "arvo": "rgba(255,252,244,0.7)",
+  "c": [
+   255,
+   252,
+   244,
+   0.7
+  ],
+  "ehdotus": [
+   245,
+   240,
+   226,
+   0.7
+  ],
+  "token": "--tk-paperi-pinta",
+  "d": 3.3,
+  "n": 4,
+  "paikat": [
+   "Lehti:2293 .mk-tyohuone__lohko",
+   "Matkakirja:3807 .mk-reaktio__vaihtoehto",
+   "Matkakirja:3853 .mk-reaktio__nappi",
+   "Pulu:1197 .mk-poiminnat__pilleri"
+  ]
+ },
+ {
+  "arvo": "rgba(232,237,245,0.5)",
+  "c": [
+   232,
+   237,
+   245,
+   0.5
+  ],
+  "ehdotus": [
+   224,
+   224,
+   224,
+   0.5
+  ],
+  "token": "--tk-harmaa-muste",
+  "d": 3.3,
+  "n": 1,
+  "paikat": [
+   "Linssit:352 .mk-astroavaus__viiva"
+  ]
+ },
+ {
+  "arvo": "rgba(233,250,240,0.92)",
+  "c": [
+   233,
+   250,
+   240,
+   0.92
+  ],
+  "ehdotus": [
+   223,
+   246,
+   232,
+   0.92
+  ],
+  "token": "--tk-lasi-avaruus-muste",
+  "d": 3.2,
+  "n": 4,
+  "paikat": [
+   "Linssit:1752 .mk-astroTaulu",
+   "Linssit:1817 .mk-astroTaulu__riviOtsikko",
+   "Linssit:435 .mk-astrokuva__selite",
+   "Linssit:511 .mk-astrokuva__teksti"
+  ]
+ },
+ {
+  "arvo": "rgba(233,250,240,0.9)",
+  "c": [
+   233,
+   250,
+   240,
+   0.9
+  ],
+  "ehdotus": [
+   223,
+   246,
+   232,
+   0.9
+  ],
+  "token": "--tk-lasi-avaruus-muste",
+  "d": 3.2,
+  "n": 2,
+  "paikat": [
+   "Linssit:1877 .mk-astroNakymat .mk-nappi__teksti",
+   "Linssit:3839 .mk-isskyyti__ylilento"
+  ]
+ },
+ {
+  "arvo": "rgba(120,108,84,0.8)",
+  "c": [
+   120,
+   108,
+   84,
+   0.8
+  ],
+  "ehdotus": [
+   110,
+   99,
+   80,
+   0.8
+  ],
+  "token": "--sea-ink",
+  "d": 3.1,
+  "n": 1,
+  "paikat": [
+   "Kartta:1993 .mk-nosto-merkki__nimio--meri"
+  ]
+ },
+ {
+  "arvo": "rgba(255,253,245,0.72)",
+  "c": [
+   255,
+   253,
+   245,
+   0.72
+  ],
+  "ehdotus": [
+   245,
+   240,
+   226,
+   0.72
+  ],
+  "token": "--tk-paperi-pinta",
+  "d": 3.1,
+  "n": 2,
+  "paikat": [
+   "Lehti:1672 .mk-fokus__pullanappi",
+   "Sahketehtava:434 .mk-nappi.mk-st__pullanappi"
+  ]
+ },
+ {
+  "arvo": "rgba(230,214,184,0.9)",
+  "c": [
+   230,
+   214,
+   184,
+   0.9
+  ],
+  "ehdotus": [
+   239,
+   220,
+   180,
+   0.9
+  ],
+  "token": "--paper",
+  "d": 3.1,
+  "n": 1,
+  "paikat": [
+   "Matkakirja:913 .mk-paavalikko__takaisin"
+  ]
+ },
+ {
+  "arvo": "rgba(255,252,244,0.75)",
+  "c": [
+   255,
+   252,
+   244,
+   0.75
+  ],
+  "ehdotus": [
+   245,
+   240,
+   226,
+   0.75
+  ],
+  "token": "--tk-paperi-pinta",
+  "d": 3.1,
+  "n": 1,
+  "paikat": [
+   "Matkakirja:3830 .mk-reaktio__kentta > .unity-base-text-field__in"
+  ]
+ },
+ {
+  "arvo": "rgba(255,252,242,0.85)",
+  "c": [
+   255,
+   252,
+   242,
+   0.85
+  ],
+  "ehdotus": [
+   245,
+   240,
+   226,
+   0.85
+  ],
+  "token": "--tk-paperi-pinta",
+  "d": 3.0,
+  "n": 1,
+  "paikat": [
+   "Kartta:678 .mk-selite__valilehti.mk-valittu"
+  ]
+ },
+ {
+  "arvo": "rgba(255,252,244,0.55)",
+  "c": [
+   255,
+   252,
+   244,
+   0.55
+  ],
+  "ehdotus": [
+   245,
+   240,
+   226,
+   0.55
+  ],
+  "token": "--tk-paperi-pinta",
+  "d": 3.0,
+  "n": 1,
+  "paikat": [
+   "Lehti:955 .mk-lehti__sisallysrivi"
+  ]
+ },
+ {
+  "arvo": "rgba(246,236,198,0.85)",
+  "c": [
+   246,
+   236,
+   198,
+   0.85
+  ],
+  "ehdotus": [
+   250,
+   244,
+   214,
+   0.85
+  ],
+  "token": "--kerma",
+  "d": 3.0,
+  "n": 1,
+  "paikat": [
+   "Linssit:2553 .mk-tiedeliite__karuselli-nuoli"
+  ]
+ },
+ {
+  "arvo": "rgba(255,252,242,0.9)",
+  "c": [
+   255,
+   252,
+   242,
+   0.9
+  ],
+  "ehdotus": [
+   245,
+   240,
+   226,
+   0.9
+  ],
+  "token": "--tk-paperi-pinta",
+  "d": 3.0,
+  "n": 1,
+  "paikat": [
+   "Matkakirja:2503 .mk-aloitus__kohde:active"
+  ]
+ },
+ {
+  "arvo": "rgba(225,204,160,0.95)",
+  "c": [
+   225,
+   204,
+   160,
+   0.95
+  ],
+  "ehdotus": [
+   236,
+   216,
+   174,
+   0.95
+  ],
+  "token": "--tk-paperi-pergamentti",
+  "d": 2.9,
+  "n": 4,
+  "paikat": [
+   "Kartta:434 .mk-seliteNappi:active",
+   "Linssit:25 .mk-linssiNappi:active",
+   "Matkakirja:346 .mk-ylapalkki--kelluva .mk-pilleri:active",
+   "Matkakirja:367 .mk-ylapalkki--kelluva .mk-ikoninappi:active"
+  ]
+ },
+ {
+  "arvo": "rgba(255,252,243,0.5)",
+  "c": [
+   255,
+   252,
+   243,
+   0.5
+  ],
+  "ehdotus": [
+   245,
+   240,
+   226,
+   0.5
+  ],
+  "token": "--tk-paperi-pinta",
+  "d": 2.9,
+  "n": 1,
+  "paikat": [
+   "Kysymys:238 .mk-nappi.mk-kysymys__vaihtoehto"
+  ]
+ },
+ {
+  "arvo": "rgba(255,252,244,0.5)",
+  "c": [
+   255,
+   252,
+   244,
+   0.5
+  ],
+  "ehdotus": [
+   245,
+   240,
+   226,
+   0.5
+  ],
+  "token": "--tk-paperi-pinta",
+  "d": 2.9,
+  "n": 2,
+  "paikat": [
+   "Lehti:2137 .mk-tyohuone__rivi",
+   "Lehti:560 .mk-maa__palkki"
+  ]
+ },
+ {
+  "arvo": "rgba(233,250,240,0.7)",
+  "c": [
+   233,
+   250,
+   240,
+   0.7
+  ],
+  "ehdotus": [
+   223,
+   246,
+   232,
+   0.7
+  ],
+  "token": "--tk-lasi-avaruus-muste",
+  "d": 2.9,
+  "n": 1,
+  "paikat": [
+   "Linssit:3781 .mk-issohjaus__merkki"
+  ]
+ },
+ {
+  "arvo": "rgba(18,40,30,0.92)",
+  "c": [
+   18,
+   40,
+   30,
+   0.92
+  ],
+  "ehdotus": [
+   12,
+   34,
+   20,
+   0.92
+  ],
+  "token": "--tk-lcd-pinta",
+  "d": 2.8,
+  "n": 1,
+  "paikat": [
+   "Linssit:1661 .mk-minipuluKortti__vastaus"
+  ]
+ },
+ {
+  "arvo": "rgba(233,250,240,0.85)",
+  "c": [
+   233,
+   250,
+   240,
+   0.85
+  ],
+  "ehdotus": [
+   223,
+   246,
+   232,
+   0.85
+  ],
+  "token": "--tk-lasi-avaruus-muste",
+  "d": 2.8,
+  "n": 3,
+  "paikat": [
+   "Linssit:3742 .mk-issohjaus__segmenttinappi .mk-nappi__teksti",
+   "Linssit:3812 .mk-isskyyti__kohde .mk-nappi__teksti",
+   "Linssit:3853 .mk-issohjaus__nimi"
+  ]
+ },
+ {
+  "arvo": "rgba(255,252,244,0.6)",
+  "c": [
+   255,
+   252,
+   244,
+   0.6
+  ],
+  "ehdotus": [
+   245,
+   240,
+   226,
+   0.6
+  ],
+  "token": "--tk-paperi-pinta",
+  "d": 2.8,
+  "n": 2,
+  "paikat": [
+   "Matkakirja:3554 .mk-lukija-valikko__kelausnappi",
+   "Matkakirja:3562 .mk-lukija-valikko__kelausnappi:active"
+  ]
+ },
+ {
+  "arvo": "rgba(255,252,242,0.7)",
+  "c": [
+   255,
+   252,
+   242,
+   0.7
+  ],
+  "ehdotus": [
+   245,
+   240,
+   226,
+   0.7
+  ],
+  "token": "--tk-paperi-pinta",
+  "d": 2.7,
+  "n": 3,
+  "paikat": [
+   "Kartta:1015 .mk-maakuntaKortti__kysymys",
+   "Kartta:891 .mk-maakunnat__lisaa",
+   "Kysymys:987 .mk-kysymys__apunappi"
+  ]
+ },
+ {
+  "arvo": "rgba(120,90,40,0.5)",
+  "c": [
+   120,
+   90,
+   40,
+   0.5
+  ],
+  "ehdotus": [
+   122,
+   85,
+   20,
+   0.5
+  ],
+  "token": "--tk-paperi-korostus",
+  "d": 2.7,
+  "n": 1,
+  "paikat": [
+   "Kysymys:195 .mk-kysymys__vihje"
+  ]
+ },
+ {
+  "arvo": "rgba(40,26,8,0.65)",
+  "c": [
+   40,
+   26,
+   8,
+   0.65
+  ],
+  "ehdotus": [
+   46,
+   33,
+   20,
+   0.65
+  ],
+  "token": "--overlay-card",
+  "d": 2.7,
+  "n": 1,
+  "paikat": [
+   "Linssit:3116 .mk-ihmisnosto-piste__ydin"
+  ]
+ },
+ {
+  "arvo": "rgba(225,204,160,0.7)",
+  "c": [
+   225,
+   204,
+   160,
+   0.7
+  ],
+  "ehdotus": [
+   236,
+   216,
+   174,
+   0.7
+  ],
+  "token": "--tk-paperi-pergamentti",
+  "d": 2.7,
+  "n": 1,
+  "paikat": [
+   "Linssit:3263 .mk-valikkonappi:active"
+  ]
+ },
+ {
+  "arvo": "rgba(230,214,184,0.62)",
+  "c": [
+   230,
+   214,
+   184,
+   0.62
+  ],
+  "ehdotus": [
+   239,
+   220,
+   180,
+   0.62
+  ],
+  "token": "--paper",
+  "d": 2.7,
+  "n": 1,
+  "paikat": [
+   "Matkakirja:949 .mk-kytkinrivi"
+  ]
+ },
+ {
+  "arvo": "rgba(247,239,219,0.94)",
+  "c": [
+   247,
+   239,
+   219,
+   0.94
+  ],
+  "ehdotus": [
+   241,
+   230,
+   208,
+   0.94
+  ],
+  "token": "--tk-tumma-muste",
+  "d": 2.6,
+  "n": 1,
+  "paikat": [
+   "Kartta:25 .mk-kartuscha.mk-auki"
+  ]
+ },
+ {
+  "arvo": "rgba(255,252,240,0.9)",
+  "c": [
+   255,
+   252,
+   240,
+   0.9
+  ],
+  "ehdotus": [
+   245,
+   240,
+   226,
+   0.9
+  ],
+  "token": "--tk-paperi-pinta",
+  "d": 2.6,
+  "n": 2,
+  "paikat": [
+   "Kartta:641 .mk-peukalo__linssi",
+   "Matkakirja:3942 .mk-palaute__kentta:focus > .unity-base-text-fie"
+  ]
+ },
+ {
+  "arvo": "rgba(255,252,242,0.5)",
+  "c": [
+   255,
+   252,
+   242,
+   0.5
+  ],
+  "ehdotus": [
+   245,
+   240,
+   226,
+   0.5
+  ],
+  "token": "--tk-paperi-pinta",
+  "d": 2.6,
+  "n": 4,
+  "paikat": [
+   "Kohdekartta:62 .mk-nahtavyydet__kokoruutu",
+   "Lehti:1192 .mk-nahtavyys__wiki",
+   "Lehti:866 .mk-lehti__liite",
+   "Matkakirja:1908 .mk-laukku__julisteet"
+  ]
+ },
+ {
+  "arvo": "rgba(255,252,240,0.8)",
+  "c": [
+   255,
+   252,
+   240,
+   0.8
+  ],
+  "ehdotus": [
+   245,
+   240,
+   226,
+   0.8
+  ],
+  "token": "--tk-paperi-pinta",
+  "d": 2.6,
+  "n": 1,
+  "paikat": [
+   "Matkakirja:3963 .mk-palaute__ruutu"
+  ]
+ },
+ {
+  "arvo": "rgba(255,252,240,0.7)",
+  "c": [
+   255,
+   252,
+   240,
+   0.7
+  ],
+  "ehdotus": [
+   245,
+   240,
+   226,
+   0.7
+  ],
+  "token": "--tk-paperi-pinta",
+  "d": 2.5,
+  "n": 6,
+  "paikat": [
+   "Lehti:2203 .mk-tyohuone__kentta:focus > .unity-base-text-fi",
+   "Lehti:2223 .mk-tyohuone__nappi",
+   "Matkakirja:3929 .mk-palaute__kentta > .unity-base-text-field__in",
+   "Matkakirja:4016 .mk-palaute__kuvanappi",
+   "Matkakirja:4094 .mk-palaute__valinta > .unity-base-popup-field__",
+   "Pulu:1227 .mk-minipopup__poista"
+  ]
+ },
+ {
+  "arvo": "rgba(233,250,240,0.6)",
+  "c": [
+   233,
+   250,
+   240,
+   0.6
+  ],
+  "ehdotus": [
+   223,
+   246,
+   232,
+   0.6
+  ],
+  "token": "--tk-lasi-avaruus-muste",
+  "d": 2.5,
+  "n": 3,
+  "paikat": [
+   "Linssit:1767 .mk-astroTaulu__otsikko",
+   "Linssit:1825 .mk-astroTaulu__riviSelite",
+   "Linssit:1852 .mk-astroTaulu__linkkiTeksti"
+  ]
+ },
+ {
+  "arvo": "rgba(40,26,10,0.94)",
+  "c": [
+   40,
+   26,
+   10,
+   0.94
+  ],
+  "ehdotus": [
+   46,
+   33,
+   20,
+   0.94
+  ],
+  "token": "--overlay-card",
+  "d": 2.5,
+  "n": 1,
+  "paikat": [
+   "Linssit:2185 .mk-radio__kaupunki--kauka"
+  ]
+ },
+ {
+  "arvo": "rgba(158,44,33,0.45)",
+  "c": [
+   158,
+   44,
+   33,
+   0.45
+  ],
+  "ehdotus": [
+   176,
+   58,
+   43,
+   0.45
+  ],
+  "token": "--mark",
+  "d": 2.5,
+  "n": 1,
+  "paikat": [
+   "Matkakirja:1706 .mk-elamapalkki__lohko--kulunut"
+  ]
+ },
+ {
+  "arvo": "rgba(252,241,212,0.9)",
+  "c": [
+   252,
+   241,
+   212,
+   0.9
+  ],
+  "ehdotus": [
+   250,
+   244,
+   214,
+   0.9
+  ],
+  "token": "--kerma",
+  "d": 2.5,
+  "n": 2,
+  "paikat": [
+   "Matkakirja:2651 .mk-laukku__linssi:active",
+   "Matkakirja:2665 .mk-laukku__linssi--ei.mk-paalla"
+  ]
+ },
+ {
+  "arvo": "rgba(252,241,212,0.92)",
+  "c": [
+   252,
+   241,
+   212,
+   0.92
+  ],
+  "ehdotus": [
+   250,
+   244,
+   214,
+   0.92
+  ],
+  "token": "--kerma",
+  "d": 2.4,
+  "n": 2,
+  "paikat": [
+   "Kysymys:161 .mk-kysymys__kuvakehys--lippu .mk-kysymys__kuva",
+   "Kysymys:162 .mk-kysymys__kuvakehys--lippu .mk-kysymys__kuva"
+  ]
+ },
+ {
+  "arvo": "rgba(255,250,238,0.9)",
+  "c": [
+   255,
+   250,
+   238,
+   0.9
+  ],
+  "ehdotus": [
+   245,
+   240,
+   226,
+   0.9
+  ],
+  "token": "--tk-paperi-pinta",
+  "d": 2.4,
+  "n": 3,
+  "paikat": [
+   "Lehti:1996 .mk-lehti__kuuntele",
+   "Linssit:663 .mk-vertailulappu",
+   "Matkakirja:2733 .mk-laukku__aktivoi:active"
+  ]
+ },
+ {
+  "arvo": "rgba(255,252,240,0.6)",
+  "c": [
+   255,
+   252,
+   240,
+   0.6
+  ],
+  "ehdotus": [
+   245,
+   240,
+   226,
+   0.6
+  ],
+  "token": "--tk-paperi-pinta",
+  "d": 2.4,
+  "n": 2,
+  "paikat": [
+   "Lehti:2416 .mk-tilastot__vipunappi",
+   "Lehti:2552 .mk-tilastot__kaikki"
+  ]
+ },
+ {
+  "arvo": "rgba(251,241,216,0.85)",
+  "c": [
+   251,
+   241,
+   216,
+   0.85
+  ],
+  "ehdotus": [
+   241,
+   230,
+   208,
+   0.85
+  ],
+  "token": "--tk-tumma-muste",
+  "d": 2.4,
+  "n": 1,
+  "paikat": [
+   "Linssit:2209 .mk-radio__viisari"
+  ]
+ },
+ {
+  "arvo": "rgba(242,192,94,0.72)",
+  "c": [
+   242,
+   192,
+   94,
+   0.72
+  ],
+  "ehdotus": [
+   234,
+   184,
+   78,
+   0.72
+  ],
+  "token": "--kulta",
+  "d": 2.4,
+  "n": 1,
+  "paikat": [
+   "Linssit:3183 .mk-radiomerkki__nimi"
+  ]
+ },
+ {
+  "arvo": "rgba(233,250,240,0.65)",
+  "c": [
+   233,
+   250,
+   240,
+   0.65
+  ],
+  "ehdotus": [
+   223,
+   246,
+   232,
+   0.65
+  ],
+  "token": "--tk-lasi-avaruus-muste",
+  "d": 2.4,
+  "n": 1,
+  "paikat": [
+   "Linssit:3864 .mk-issohjaus__paa"
+  ]
+ },
+ {
+  "arvo": "rgba(255,250,238,0.65)",
+  "c": [
+   255,
+   250,
+   238,
+   0.65
+  ],
+  "ehdotus": [
+   245,
+   240,
+   226,
+   0.65
+  ],
+  "token": "--tk-paperi-pinta",
+  "d": 2.3,
+  "n": 2,
+  "paikat": [
+   "Lehti:1581 .mk-numerot__kuvio",
+   "Matkakirja:2973 .mk-saa"
+  ]
+ },
+ {
+  "arvo": "rgba(242,192,94,0.9)",
+  "c": [
+   242,
+   192,
+   94,
+   0.9
+  ],
+  "ehdotus": [
+   234,
+   184,
+   78,
+   0.9
+  ],
+  "token": "--kulta",
+  "d": 2.3,
+  "n": 1,
+  "paikat": [
+   "Linssit:2179 .mk-radio__kaupunki--keski"
+  ]
+ },
+ {
+  "arvo": "rgba(255,252,242,0.45)",
+  "c": [
+   255,
+   252,
+   242,
+   0.45
+  ],
+  "ehdotus": [
+   245,
+   240,
+   226,
+   0.45
+  ],
+  "token": "--tk-paperi-pinta",
+  "d": 2.3,
+  "n": 1,
+  "paikat": [
+   "Matkakirja:2498 .mk-aloitus__kohde"
+  ]
+ },
+ {
+  "arvo": "rgba(255,252,243,0.42)",
+  "c": [
+   255,
+   252,
+   243,
+   0.42
+  ],
+  "ehdotus": [
+   245,
+   240,
+   226,
+   0.42
+  ],
+  "token": "--tk-paperi-pinta",
+  "d": 2.2,
+  "n": 2,
+  "paikat": [
+   "Kysymys:492 .mk-nappi.mk-kysymys__apu",
+   "Sahketehtava:522 .mk-nappi.mk-st__toissijainen"
+  ]
+ },
+ {
+  "arvo": "rgba(255,250,238,0.7)",
+  "c": [
+   255,
+   250,
+   238,
+   0.7
+  ],
+  "ehdotus": [
+   245,
+   240,
+   226,
+   0.7
+  ],
+  "token": "--tk-paperi-pinta",
+  "d": 2.2,
+  "n": 1,
+  "paikat": [
+   "Lehti:1933 .mk-uutinen__kaanna"
+  ]
+ },
+ {
+  "arvo": "rgba(255,250,238,0.55)",
+  "c": [
+   255,
+   250,
+   238,
+   0.55
+  ],
+  "ehdotus": [
+   245,
+   240,
+   226,
+   0.55
+  ],
+  "token": "--tk-paperi-pinta",
+  "d": 2.2,
+  "n": 2,
+  "paikat": [
+   "Linssit:157 .mk-linssirivi__ikoni",
+   "Linssit:764 .mk-vertailukortti"
+  ]
+ },
+ {
+  "arvo": "rgb(234,255,243)",
+  "c": [
+   234,
+   255,
+   243,
+   1.0
+  ],
+  "ehdotus": [
+   223,
+   246,
+   232,
+   1.0
+  ],
+  "token": "--tk-lasi-avaruus-muste",
+  "d": 2.2,
+  "n": 4,
+  "paikat": [
+   "Linssit:1724 .mk-astrokuva__vakanen > .mk-ikoni",
+   "Linssit:527 .mk-astrokuva__vakanen",
+   "Linssit:539 .mk-astrokuva__vakanen .mk-nappi__teksti",
+   "Linssit:557 .mk-astrokuva__lisanimi"
+  ]
+ },
+ {
+  "arvo": "#eafff3",
+  "c": [
+   234,
+   255,
+   243,
+   1.0
+  ],
+  "ehdotus": [
+   223,
+   246,
+   232,
+   1.0
+  ],
+  "token": "--tk-lasi-avaruus-muste",
+  "d": 2.2,
+  "n": 6,
+  "paikat": [
+   "Linssit:1570 .mk-minipuluKortti",
+   "Linssit:1625 .mk-minipuluKortti__kysymys",
+   "Linssit:1691 .mk-minipuluKortti__kentta > .unity-base-text-fi",
+   "Pulu:679 .mk-chat.mk-chat--linssi",
+   "Pulu:684 .mk-chat--linssi .mk-chat__viesti",
+   "Pulu:729 .mk-chat--linssi .mk-chat__kentta"
+  ]
+ },
+ {
+  "arvo": "rgba(212,175,90,0.22)",
+  "c": [
+   212,
+   175,
+   90,
+   0.22
+  ],
+  "ehdotus": [
+   234,
+   184,
+   78,
+   0.22
+  ],
+  "token": "--kulta",
+  "d": 2.2,
+  "n": 1,
+  "paikat": [
+   "Linssit:3058 .mk-vananappi.mk-valittu"
+  ]
+ },
+ {
+  "arvo": "rgba(250,238,208,0.7)",
+  "c": [
+   250,
+   238,
+   208,
+   0.7
+  ],
+  "ehdotus": [
+   250,
+   244,
+   214,
+   0.7
+  ],
+  "token": "--kerma",
+  "d": 2.2,
+  "n": 1,
+  "paikat": [
+   "Matkakirja:2728 .mk-laukku__aktivoi"
+  ]
+ },
+ {
+  "arvo": "rgba(255,250,238,0.6)",
+  "c": [
+   255,
+   250,
+   238,
+   0.6
+  ],
+  "ehdotus": [
+   245,
+   240,
+   226,
+   0.6
+  ],
+  "token": "--tk-paperi-pinta",
+  "d": 2.1,
+  "n": 1,
+  "paikat": [
+   "Kohdekartta:101 .mk-kohdekartta__kokoruutu"
+  ]
+ },
+ {
+  "arvo": "rgba(244,231,202,0.86)",
+  "c": [
+   244,
+   231,
+   202,
+   0.86
+  ],
+  "ehdotus": [
+   241,
+   230,
+   208,
+   0.86
+  ],
+  "token": "--tk-tumma-muste",
+  "d": 2.1,
+  "n": 2,
+  "paikat": [
+   "Linssit:825 .mk-maakyltti",
+   "Pulu:446 .mk-matkakirja.mk-matkakirja--pieni"
+  ]
+ },
+ {
+  "arvo": "rgba(40,27,10,0.6)",
+  "c": [
+   40,
+   27,
+   10,
+   0.6
+  ],
+  "ehdotus": [
+   46,
+   33,
+   20,
+   0.6
+  ],
+  "token": "--overlay-card",
+  "d": 2.0,
+  "n": 1,
+  "paikat": [
+   "Linssit:3304 .mk-valikkonappi--kytkin .mk-valikkonappi__nimi"
+  ]
+ },
+ {
+  "arvo": "rgba(234,255,243,0.65)",
+  "c": [
+   234,
+   255,
+   243,
+   0.65
+  ],
+  "ehdotus": [
+   223,
+   246,
+   232,
+   0.65
+  ],
+  "token": "--tk-lasi-avaruus-muste",
+  "d": 2.0,
+  "n": 2,
+  "paikat": [
+   "Pulu:698 .mk-chat--linssi .mk-chat__odottaa",
+   "Pulu:703 .mk-chat--linssi .mk-chat__valmislahde"
+  ]
+ },
+ {
+  "arvo": "rgba(120,88,34,0.55)",
+  "c": [
+   120,
+   88,
+   34,
+   0.55
+  ],
+  "ehdotus": [
+   122,
+   85,
+   20,
+   0.55
+  ],
+  "token": "--tk-paperi-korostus",
+  "d": 1.9,
+  "n": 1,
+  "paikat": [
+   "Linssit:3129 .mk-vanalappu"
+  ]
+ },
+ {
+  "arvo": "rgba(255,250,238,0.45)",
+  "c": [
+   255,
+   250,
+   238,
+   0.45
+  ],
+  "ehdotus": [
+   245,
+   240,
+   226,
+   0.45
+  ],
+  "token": "--tk-paperi-pinta",
+  "d": 1.9,
+  "n": 1,
+  "paikat": [
+   "Linssit:3258 .mk-valikkonappi"
+  ]
+ },
+ {
+  "arvo": "rgba(236,222,196,0.5)",
+  "c": [
+   236,
+   222,
+   196,
+   0.5
+  ],
+  "ehdotus": [
+   243,
+   230,
+   208,
+   0.5
+  ],
+  "token": "--ink-light",
+  "d": 1.9,
+  "n": 1,
+  "paikat": [
+   "Matkakirja:2744 .mk-laukku__aktivoi.mk-pois"
+  ]
+ },
+ {
+  "arvo": "rgba(240,220,170,0.35)",
+  "c": [
+   240,
+   220,
+   170,
+   0.35
+  ],
+  "ehdotus": [
+   236,
+   216,
+   174,
+   0.35
+  ],
+  "token": "--tk-paperi-pergamentti",
+  "d": 1.7,
+  "n": 1,
+  "paikat": [
+   "Kysymys:200 .mk-kysymys__vihje"
+  ]
+ },
+ {
+  "arvo": "rgba(252,241,212,0.55)",
+  "c": [
+   252,
+   241,
+   212,
+   0.55
+  ],
+  "ehdotus": [
+   250,
+   244,
+   214,
+   0.55
+  ],
+  "token": "--kerma",
+  "d": 1.7,
+  "n": 1,
+  "paikat": [
+   "Matkakirja:2642 .mk-laukku__linssi--ei"
+  ]
+ },
+ {
+  "arvo": "rgba(255,252,244,0.25)",
+  "c": [
+   255,
+   252,
+   244,
+   0.25
+  ],
+  "ehdotus": [
+   245,
+   240,
+   226,
+   0.25
+  ],
+  "token": "--tk-paperi-pinta",
+  "d": 1.7,
+  "n": 1,
+  "paikat": [
+   "Pulu:1209 .mk-poiminnat__pilleri--oma"
+  ]
+ },
+ {
+  "arvo": "rgba(214,168,62,0.16)",
+  "c": [
+   214,
+   168,
+   62,
+   0.16
+  ],
+  "ehdotus": [
+   217,
+   161,
+   59,
+   0.16
+  ],
+  "token": "--accent",
+  "d": 1.6,
+  "n": 1,
+  "paikat": [
+   "Kysymys:926 .mk-paljastus__jatka"
+  ]
+ },
+ {
+  "arvo": "rgba(165,58,34,0.3)",
+  "c": [
+   165,
+   58,
+   34,
+   0.3
+  ],
+  "ehdotus": [
+   176,
+   58,
+   43,
+   0.3
+  ],
+  "token": "--mark",
+  "d": 1.5,
+  "n": 2,
+  "paikat": [
+   "Lehti:1238 .mk-opas__ingressi",
+   "Lehti:1252 .mk-opas__valiotsikko"
+  ]
+ },
+ {
+  "arvo": "rgba(192,57,43,0.12)",
+  "c": [
+   192,
+   57,
+   43,
+   0.12
+  ],
+  "ehdotus": [
+   176,
+   58,
+   43,
+   0.12
+  ],
+  "token": "--mark",
+  "d": 1.5,
+  "n": 1,
+  "paikat": [
+   "Matkakirja:1705 .mk-elamapalkki__lohko--kulunut"
+  ]
+ },
+ {
+  "arvo": "rgba(214,168,62,0.18)",
+  "c": [
+   214,
+   168,
+   62,
+   0.18
+  ],
+  "ehdotus": [
+   217,
+   161,
+   59,
+   0.18
+  ],
+  "token": "--accent",
+  "d": 1.3,
+  "n": 2,
+  "paikat": [
+   "Kartta:1469 .mk-nosto__kierros",
+   "Kartta:1694 .mk-nosto__leikekirja"
+  ]
+ },
+ {
+  "arvo": "rgba(156,107,23,0.14)",
+  "c": [
+   156,
+   107,
+   23,
+   0.14
+  ],
+  "ehdotus": [
+   138,
+   97,
+   20,
+   0.14
+  ],
+  "token": "--accent-dark",
+  "d": 1.3,
+  "n": 1,
+  "paikat": [
+   "Matkakirja:3813 .mk-reaktio__vaihtoehto:active"
+  ]
+ },
+ {
+  "arvo": "rgba(233,250,240,0.1)",
+  "c": [
+   233,
+   250,
+   240,
+   0.1
+  ],
+  "ehdotus": [
+   223,
+   246,
+   232,
+   0.1
+  ],
+  "token": "--tk-lasi-avaruus-muste",
+  "d": 1.1,
+  "n": 1,
+  "paikat": [
+   "Linssit:1839 .mk-astroTaulu__linkki"
+  ]
+ },
+ {
+  "arvo": "rgba(233,250,240,0.18)",
+  "c": [
+   233,
+   250,
+   240,
+   0.18
+  ],
+  "ehdotus": [
+   223,
+   246,
+   232,
+   0.18
+  ],
+  "token": "--tk-lasi-avaruus-muste",
+  "d": 0.7,
+  "n": 1,
+  "paikat": [
+   "Linssit:3919 .mk-issohjaus__liuku.mk-saadin #unity-tracker.mk"
+  ]
+ }
+]
