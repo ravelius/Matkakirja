@@ -67,3 +67,9 @@ z on vesitaso ilman nostoa; nosto (suositus 0,4 m) tehdään ajossa.
 - Jokien taso (OSM river, ESA) on liukuva: 1 km:n lohkojen persentiili, tasoitus 3 × 3 ja bilineaarinen interpolointi (sulut eivät tee portaita).
 - `--tasokorkeus korkeus-<id>.json`: vesitasot lähiruudun pintamallista (Pariisi: IGN LiDAR HD, 20 %:n persentiili; vedestä heijastuneet pulssit).
   Tarkistus: LiDAR − vesi sisävesillä p10 0,02 m, p25 0,29 m.
+
+## Kansallinen geoidi ja kiinteät tasot (Tukholma, PT 8.10. 22.49)
+
+`--geoidi2 <tif> --meri-h <H> --nimitaso "Mälaren=0.7"`: meri ja nimetyt vedet kiinteällä korkeudella kansallisessa järjestelmässä
+(Ruotsi: PROJ `se_lantmateriet_SWEN17_RH2000.tif`, RH2000). Tukholma: meri 0,0 m (−0,19 m EGM2008-tasoon), Mälaren 0,7 m (+0,52 m).
+Geofabrikin dbf on UTF-8 (nimet ä/ö oikein).
