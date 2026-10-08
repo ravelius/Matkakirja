@@ -16,6 +16,14 @@
   luettelot järjestyksessä venetsia, barcelona, amsterdam, … (tekstit opas/esittely-aaneton-v1); kytke kuten #4183.
 - Worktree wt/pelikoodari-esittely POISTETTU (levy); haara origin/pelikoodari-esittely 90067f28 (työkalut tools/opas/).
   Käytössä wt/pelikoodari-yoportti (haara pelikoodari-kulu-k4).
+- PALLOSANASTO (omistaja 08.3x, Päätoimittaja kuitannut): docs #4191 (fysiikkasäännöt: noste lämpötilaerosta, poltin vain
+  nostaa, vaakaliike tuulesta), kertojan PALLO-osio #4189 (d4165bd15), 31 avausta opas/esittely-aaneton-v3 + #4190 (921a9693b),
+  siltalauseet-v3 (16 ääntä, 74 krediittiä) ja v3b ilman pallo-lasku-04:ää ämpärissä; natiivin ryhmävalinta Linssisepälle
+  junaan 165 (osoite siltalauseet-v3b). Työkalut _tyo/siltalauseet-v3/ ja _tyo/esittely-aaneton-v2/lisaa-pallo.mjs.
+  ODOTTAA: Linssisepän uudet kierrosjärjestykset → tarkista "Kierros alkaa …" -virkkeet ja äänitetyt tekstit; ääni → krediitit
+  Päätoimittajalle ennen tekoa. Worktree wt/pelikoodari-pallosanasto poistetaan #4191:n mergen jälkeen.
+- TURBO MAKSAA ~0,066 krediittiä/merkki (historia 8.10.), 31 kaupungin erä ≈ 23 000. Creator-vaihto: 30 äänipaikkaa (tilillä
+  261) ja ei pcm_44100 API:lla → ei heti; omistajan päätös (Päätoimittaja vie).
 - Simulaattorit 8.10. alkaen T7-sarjassa: `source /Users/Shared/Claude/proto-3d/tyokalut/simusarja.sh || exit 2`; nohup/xargs/timeout/env-ajoissa `xcrun simctl --set "$MK_SIMSET" …` ja UDID `mk_kaanna <UDID>`.
 
 # Pelikoodarin luovutus 7.10.2026 (päivitetty klo 23.4x, VAIHTO NYT)
