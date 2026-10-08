@@ -26,6 +26,11 @@ namespace Matkakirja.Linssit.Kierros
             public List<Kohde> Kohteet = new List<Kohde>();
         }
 
+        /// <summary>KORKEUS (PT 9.10., Map Tiles C4): mallin korkeus on aina mallit.json:n ellipsoidikorkeus omasta korkeusmallista;
+        /// Googlen pinnan mukaista korjausta ei ole. Googlen pinta näytteistetään vain kehittäjätilassa lokiin (saumojen arviointi),
+        /// ei koskaan oman korkeusmallin ollessa käytössä.</summary>
+        public static bool GooglenPintaLokiin(bool kehittajatila, bool omaKorkeusmalli) => kehittajatila && !omaKorkeusmalli;
+
         /// <summary>Mallit näytetään, kun kaupunkinäkymän keskus on enintään tämän matkan päässä (m).</summary>
         public const double LahellaM = 30000;
 

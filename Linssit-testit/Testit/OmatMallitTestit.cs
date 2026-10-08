@@ -32,5 +32,18 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(Math.Abs(leveys - 238.5) < 1.5 && Math.Abs(korkeus - 238.1) < 1.5, $"sivut {leveys:F1} × {korkeus:F1} m");
             Oleta.Tosi(Math.Abs(l[0].e + l[2].e) < 2 && Math.Abs(l[0].n + l[1].n) < 2, "keskitetty");
         }
-    }
+    
+        // KORKEUS (PT 9.10. päätös 2, Map Tiles C4): ei Googlen pinnan mukaista korjausta; näyte vain kehittäjätilassa lokiin.
+        [Testi] static void KorkeusVainOmastaMallista()
+        {
+            Oleta.Tosi(!OmatMallit.GooglenPintaLokiin(false, false), "pelaaja: ei näytteitä");
+            Oleta.Tosi(!OmatMallit.GooglenPintaLokiin(true, true), "oma korkeusmalli: ei näytteitä");
+            Oleta.Tosi(OmatMallit.GooglenPintaLokiin(true, false), "kehittäjä: vain loki");
+            // Unity-osa ei siirrä mallia eikä leikkausankkuria Googlen pinnan mukaan (lähdetarkistus).
+            string u = System.IO.File.ReadAllText(System.IO.Path.Combine(AppContext.BaseDirectory, "..", "..", "Assets", "Matkakirja", "Linssit", "Unity", "CesiumOmatMallit.cs"));
+            int i = u.IndexOf("async void MittaaKorkeudet()", StringComparison.Ordinal), j = u.IndexOf("static (string json", i, StringComparison.Ordinal);
+            string m = u.Substring(i, j - i);
+            Oleta.Tosi(!m.Contains("localPosition") && !m.Contains("longitudeLatitudeHeight =") && !u.Contains("KorjausRajaM"), "ei korkeuskorjausta Googlen pinnasta");
+        }
+}
 }
