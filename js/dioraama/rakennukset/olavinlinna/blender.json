@@ -1,7 +1,7 @@
 {
   "rakennus": "olavinlinna",
-  "hash": "a88cc3e780b88c0b",
-  "kansio": "dioraama/olavinlinna/blender/a88cc3e780b88c0b/",
+  "hash": "4d339f1cb9352d4c",
+  "kansio": "dioraama/olavinlinna/blender/4d339f1cb9352d4c/",
   "tiedostot": [
     {
       "polku": "hahmot/apulainen-1500-faceit.glb",
@@ -124,9 +124,19 @@
       "tavuja": 2505524
     },
     {
+      "polku": "kavely/esine-arkku-komero-4x4.astcm",
+      "sha256": "13c7cb199f3619b3d048259e32b30a82a06b1b438db10e7bb5ab2727b0f2fdd1",
+      "tavuja": 1398144
+    },
+    {
       "polku": "kavely/esine-arkku-komero.glb",
       "sha256": "b796a77d3c75671b2d36e8abc161c9fb2cff7e26038103f07f137eb5bfed10e7",
       "tavuja": 324800
+    },
+    {
+      "polku": "kavely/esine-avainnippu-4x4.astcm",
+      "sha256": "3556c74d797f233a1a5120288d782bfffe9a258eb94047fef244b946f95aff2d",
+      "tavuja": 1398144
     },
     {
       "polku": "kavely/esine-avainnippu.glb",
@@ -134,9 +144,19 @@
       "tavuja": 233864
     },
     {
+      "polku": "kavely/esine-avainrengas-4x4.astcm",
+      "sha256": "0320187761b7671f0cdb88c188491f0053ee6a2c5c5eaee2f13fa7aefd7e2ec6",
+      "tavuja": 1398144
+    },
+    {
       "polku": "kavely/esine-avainrengas.glb",
       "sha256": "5fe19d4036cd68d4d1c90e7d96a92de8b0e25dfb610e7ceb33e9178a0e39c889",
       "tavuja": 298488
+    },
+    {
+      "polku": "kavely/esine-esiliina-4x4.astcm",
+      "sha256": "49672bd4ecce6d8f217202ec6ec0d30ab3cce09900067e8967dcb48c458eda7e",
+      "tavuja": 1398144
     },
     {
       "polku": "kavely/esine-esiliina.glb",
@@ -144,9 +164,19 @@
       "tavuja": 178992
     },
     {
+      "polku": "kavely/esine-hiilipannu-4x4.astcm",
+      "sha256": "ff19928cc26e6f52eea5634ae4d0377d43cdfdc9038405734dd29eac7dc08bc9",
+      "tavuja": 1398144
+    },
+    {
       "polku": "kavely/esine-hiilipannu.glb",
       "sha256": "513df1cbf65b0de331c4b6ee519a06ee73e668e0b082dd43d36cd812cea1f82e",
       "tavuja": 336128
+    },
+    {
+      "polku": "kavely/esine-ikuinen-valo-4x4.astcm",
+      "sha256": "ca42c72ca3fbb9d6cf46e5d8d5ba26968c09ab3d212cadcb4e08f877de468d48",
+      "tavuja": 349568
     },
     {
       "polku": "kavely/esine-ikuinen-valo.glb",
@@ -154,9 +184,19 @@
       "tavuja": 282772
     },
     {
+      "polku": "kavely/esine-kalkki-4x4.astcm",
+      "sha256": "e5c1f151f88f51a65d9d6f3f3943538d729decfebf8e2b95b76b1c4fe94ab0e1",
+      "tavuja": 349568
+    },
+    {
       "polku": "kavely/esine-kalkki.glb",
       "sha256": "fa2088a3bb1c7529f791abf5fd6f30b555c0db1feb12ee6bd0c00f12967c86e9",
       "tavuja": 131832
+    },
+    {
+      "polku": "kavely/esine-kauha-4x4.astcm",
+      "sha256": "b113b777833e594f477739b380425c10d5fde3e297596b9b9a7da6b537ca20ee",
+      "tavuja": 349568
     },
     {
       "polku": "kavely/esine-kauha.glb",
@@ -164,9 +204,19 @@
       "tavuja": 68500
     },
     {
+      "polku": "kavely/esine-keittokulho-4x4.astcm",
+      "sha256": "1445122aedacad3859aebf37506cf8821fdbfca364d68ca8d4cf4ee47a818c46",
+      "tavuja": 1398144
+    },
+    {
       "polku": "kavely/esine-keittokulho.glb",
       "sha256": "86de5259cc3db935be4a3386de159a9b674062ab2bfc76af996cd4fafd94eb59",
       "tavuja": 210372
+    },
+    {
+      "polku": "kavely/esine-kilpilaatta-sture-4x4.astcm",
+      "sha256": "da1f0f4c0f5bd0a0246c3f60b0e0c06a65bb2a3dad1c638c06a28d838354ed6e",
+      "tavuja": 349568
     },
     {
       "polku": "kavely/esine-kilpilaatta-sture.glb",
@@ -174,9 +224,19 @@
       "tavuja": 539200
     },
     {
+      "polku": "kavely/esine-kilpilaatta-tott-4x4.astcm",
+      "sha256": "10e1553ca3596ad8d6d7f1b1a2d075729c619cd7c34d13342404351199ac3bfd",
+      "tavuja": 349568
+    },
+    {
       "polku": "kavely/esine-kilpilaatta-tott.glb",
       "sha256": "18d02815f53b1c63fb7aba30452fc0dddc3014ad8a1ad9c07e695b6fccea2c7c",
       "tavuja": 504108
+    },
+    {
+      "polku": "kavely/esine-kirja-4x4.astcm",
+      "sha256": "b0a8a6674e7984160828ac31386f9db26cb1183c7a443855bec61d1ecc814ecd",
+      "tavuja": 349568
     },
     {
       "polku": "kavely/esine-kirja.glb",
@@ -184,9 +244,19 @@
       "tavuja": 128000
     },
     {
+      "polku": "kavely/esine-kivi-1-4x4.astcm",
+      "sha256": "9481edc2d67912c00ef57bb0403bdfa1b5010922ccb5c2edc680d64cec7f5bcf",
+      "tavuja": 349568
+    },
+    {
       "polku": "kavely/esine-kivi-1.glb",
       "sha256": "6d6eec52a3bb5252a0212fab8ab5e8cc8b488b34d20c26393fc7cb5ab2a4973f",
       "tavuja": 72392
+    },
+    {
+      "polku": "kavely/esine-kivi-2-4x4.astcm",
+      "sha256": "60ed8a80fbd1962c72e40da1f590bdbbee3009bc74c9226ebf14c0e76b13b08b",
+      "tavuja": 349568
     },
     {
       "polku": "kavely/esine-kivi-2.glb",
@@ -194,9 +264,19 @@
       "tavuja": 68540
     },
     {
+      "polku": "kavely/esine-kivi-3-4x4.astcm",
+      "sha256": "a13107003e591ab18875e6a4c1dec9f6108d3d481b2c9ca97bd961c9fce8a998",
+      "tavuja": 349568
+    },
+    {
       "polku": "kavely/esine-kivi-3.glb",
       "sha256": "2844e86904f485dab0dfaaff7e3496b3a51866cbe5b11b6863ee13647015e414",
       "tavuja": 73316
+    },
+    {
+      "polku": "kavely/esine-kivi-4-4x4.astcm",
+      "sha256": "8f67bd897a1e0b08a1ae6a2059f16f340266e2ae7bcaf2da62a3e5195ccc6435",
+      "tavuja": 349568
     },
     {
       "polku": "kavely/esine-kivi-4.glb",
@@ -204,9 +284,19 @@
       "tavuja": 77692
     },
     {
+      "polku": "kavely/esine-kivi-heitto-4x4.astcm",
+      "sha256": "3590c9d8ffbb7e782a64b2c518f84279c51259ec5eb6eb1eaab0db3bd317da5e",
+      "tavuja": 349568
+    },
+    {
       "polku": "kavely/esine-kivi-heitto.glb",
       "sha256": "9d1deeaa7ed1627d920cc2a01a8e0ea96547634ebf8ce9b2bdb6529f8afb3297",
       "tavuja": 50240
+    },
+    {
+      "polku": "kavely/esine-koysi-vene-4x4.astcm",
+      "sha256": "961a2bcd9043e3f096651bb114b9165993572d333adb48db4a202cf659f319b4",
+      "tavuja": 1398144
     },
     {
       "polku": "kavely/esine-koysi-vene.glb",
@@ -214,9 +304,19 @@
       "tavuja": 346808
     },
     {
+      "polku": "kavely/esine-koysikieppi-4x4.astcm",
+      "sha256": "0bcc1a3985d2fe24c02331d34a6cd07a42fbc3f77b2685709b0eec193bc89e01",
+      "tavuja": 1398144
+    },
+    {
       "polku": "kavely/esine-koysikieppi.glb",
       "sha256": "063e0d2f6752454f2512cbb216ca3c3c6dcb571c61954f5787ace70896fd4dc3",
       "tavuja": 350560
+    },
+    {
+      "polku": "kavely/esine-kuppi-4x4.astcm",
+      "sha256": "b73677ccadca0b6c7ced60e051b9265143f44253be7546f5af3991e7bea16440",
+      "tavuja": 349568
     },
     {
       "polku": "kavely/esine-kuppi.glb",
@@ -224,9 +324,19 @@
       "tavuja": 103936
     },
     {
+      "polku": "kavely/esine-lautanen-4x4.astcm",
+      "sha256": "1c8a3ce1a1e019be89d3f604626cf753ce9f1dee55438dfbc3c10799b89bcb25",
+      "tavuja": 349568
+    },
+    {
       "polku": "kavely/esine-lautanen.glb",
       "sha256": "f1a131c8a4e5e5658cb774b598d267470cbb6f5882c5f80540d58f09293ba795",
       "tavuja": 65176
+    },
+    {
+      "polku": "kavely/esine-leipa-4x4.astcm",
+      "sha256": "31158d8e42a536cfe0fc3f11e75a829806bf3e6f2bf585f67d61bfc21594a5bb",
+      "tavuja": 349568
     },
     {
       "polku": "kavely/esine-leipa.glb",
@@ -234,9 +344,19 @@
       "tavuja": 60388
     },
     {
+      "polku": "kavely/esine-liinanyytti-4x4.astcm",
+      "sha256": "4768aeb5d577aec218aa3570ea7ab221df93cb62b6f70f8bbb6ca5564d032b79",
+      "tavuja": 349568
+    },
+    {
       "polku": "kavely/esine-liinanyytti.glb",
       "sha256": "5b64e92a16283d099b890d7e37cb5baa4993be9eabecafbeeb5ab7f9a6e0bb82",
       "tavuja": 81456
+    },
+    {
+      "polku": "kavely/esine-liuskekivi-4x4.astcm",
+      "sha256": "0b900a96ea4658a7275d3c0da50a79fc67adaf296d34199950331150feb7773c",
+      "tavuja": 349568
     },
     {
       "polku": "kavely/esine-liuskekivi.glb",
@@ -244,9 +364,19 @@
       "tavuja": 76656
     },
     {
+      "polku": "kavely/esine-luukku-4x4.astcm",
+      "sha256": "6ca925c33d816c13c1b4e1a0069d5e15f325a0d66fe0fa2e63e887d3c8430764",
+      "tavuja": 349568
+    },
+    {
       "polku": "kavely/esine-luukku.glb",
       "sha256": "47a44032ffc0ddd0357f32f50294282b10a79e02f17daff23539b0816c5b7bee",
       "tavuja": 99032
+    },
+    {
+      "polku": "kavely/esine-myssy-4x4.astcm",
+      "sha256": "b3aaf8d152302d9d7fe8f707483f088e67c2072a9143ff03eba48565c049f3fd",
+      "tavuja": 349568
     },
     {
       "polku": "kavely/esine-myssy.glb",
@@ -254,9 +384,19 @@
       "tavuja": 71844
     },
     {
+      "polku": "kavely/esine-nauris-4x4.astcm",
+      "sha256": "38a0ef599342c76f25da07bee19c371059c68f3abdc3eca24483e45305e85b0c",
+      "tavuja": 349568
+    },
+    {
       "polku": "kavely/esine-nauris.glb",
       "sha256": "065251ab3215119b9ea0a5bb8a5c7b8da8b3fcf063916352fcf63880287f2ed4",
       "tavuja": 93868
+    },
+    {
+      "polku": "kavely/esine-patapino-4x4.astcm",
+      "sha256": "7eadbb961cb40eec2135cd30a47ecc613d1e227fccea9144cb0d03a1025d5ac2",
+      "tavuja": 1398144
     },
     {
       "polku": "kavely/esine-patapino.glb",
@@ -264,9 +404,19 @@
       "tavuja": 239572
     },
     {
+      "polku": "kavely/esine-pateeni-4x4.astcm",
+      "sha256": "9081df1ec5806e651242e307f0baadab6920be58c5a4251c4cbc9fc973ae8875",
+      "tavuja": 349568
+    },
+    {
       "polku": "kavely/esine-pateeni.glb",
       "sha256": "c772b3f53341481bf7c1982d97e404c9ae053442ccf76df2fc51d8dd27e6c92b",
       "tavuja": 48168
+    },
+    {
+      "polku": "kavely/esine-sammutin-4x4.astcm",
+      "sha256": "196892b2fd0c135c5cac1e8dfa530ba608733e1dd71b8993ecb48767b7c2ff78",
+      "tavuja": 349568
     },
     {
       "polku": "kavely/esine-sammutin.glb",
@@ -274,9 +424,19 @@
       "tavuja": 41228
     },
     {
+      "polku": "kavely/esine-sarvilyhty-4x4.astcm",
+      "sha256": "a18de76a1e566171253e1b8206abe027ee5a6f67355eed117c2b110e7a7dc73c",
+      "tavuja": 349568
+    },
+    {
       "polku": "kavely/esine-sarvilyhty.glb",
       "sha256": "c122eb529cc44122dada312c40e7be86feb9d4da62fb4c098a7eb368fc899cb1",
       "tavuja": 92180
+    },
+    {
+      "polku": "kavely/esine-savipurkki-4x4.astcm",
+      "sha256": "eb270ce8280638147ebacfdf15bb28ae397c01ae47b41f558fdc3754fdf0f00f",
+      "tavuja": 349568
     },
     {
       "polku": "kavely/esine-savipurkki.glb",
@@ -284,9 +444,19 @@
       "tavuja": 112148
     },
     {
+      "polku": "kavely/esine-tarjotin-4x4.astcm",
+      "sha256": "78e178c5399caf973f957503ff31f42f717703adec582ab94dc93f323dd8149f",
+      "tavuja": 1398144
+    },
+    {
       "polku": "kavely/esine-tarjotin.glb",
       "sha256": "84ba3f31c0a018ff0b5c1adcfc8fef5a4734a78edee35211f513d5c96c37f9e6",
       "tavuja": 282000
+    },
+    {
+      "polku": "kavely/esine-tiili-komero-4x4.astcm",
+      "sha256": "a5841fc07fc2487c5e4334375f9e8540797eaf70398cec2f8b990613fbeec6c0",
+      "tavuja": 349568
     },
     {
       "polku": "kavely/esine-tiili-komero.glb",
