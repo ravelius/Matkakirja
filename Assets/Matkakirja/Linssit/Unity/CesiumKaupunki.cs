@@ -12,6 +12,7 @@
 // KAMERA: pallon oma kamera PalloKierto.Kuvaa-metodilla ennen Cesiumin laattavalintaa (KyydinKameraEnnen, −50). ESILATAUS:
 // piilokamera additionalCameras-listassa (native CameraManager ottaa myös pois päältä olevat kamerat).
 using System;
+using System.Collections.Generic;
 using System.IO;
 using CesiumForUnity;
 using Matkakirja.Linssit;
@@ -466,6 +467,7 @@ namespace Matkakirja.Natiivi
         {
             Kaytossa = data;
             if (hallinta != null && esikamera != null) hallinta.additionalCameras.Remove(esikamera);
+            ReittikameratPois();
             omat.Sulje();
             if (maasto != null) UnityEngine.Object.Destroy(maasto.gameObject);
             if (rakennukset != null) UnityEngine.Object.Destroy(rakennukset.gameObject);
@@ -662,6 +664,43 @@ namespace Matkakirja.Natiivi
         {
             if (esikamera == null || georef == null) return;
             if (hallinta != null && !hallinta.additionalCameras.Contains(esikamera)) hallinta.additionalCameras.Add(esikamera);
+            Suuntaa(esikamera, k);
+        }
+
+        /// <summary>
+        /// Reitin esilatauskamerat (OpasSilmukka.ReittiEsilataus, Päätoimittaja 8.10. 07.4x): lennon välinäkymät seuraavaan pysähdykseen
+        /// samoilla ehtorajoilla kuin esikamera (vain heti näytettävä reitti; 0 näkymää → kaikki pois laattavalinnasta).
+        /// </summary>
+        public void AsetaReittikamerat(Kuvakulma[] nakymat, int maara)
+        {
+            if (georef == null || juuri == null || nakymat == null) maara = 0;
+            while (reittikamerat.Count < maara)
+            {
+                var c = new GameObject("Kaupunki reitin esilataus").AddComponent<Camera>();
+                c.transform.SetParent(juuri.transform, false);
+                c.enabled = false; c.cullingMask = 0;
+                reittikamerat.Add(c);
+            }
+            for (int i = 0; i < reittikamerat.Count; i++)
+            {
+                var c = reittikamerat[i];
+                if (c == null || hallinta == null) continue;
+                if (i < maara) { Suuntaa(c, nakymat[i]); if (!hallinta.additionalCameras.Contains(c)) hallinta.additionalCameras.Add(c); }
+                else hallinta.additionalCameras.Remove(c);
+            }
+        }
+
+        public void ReittikameratPois()
+        {
+            if (hallinta == null) return;
+            foreach (var c in reittikamerat) if (c != null) hallinta.additionalCameras.Remove(c);
+        }
+
+        readonly List<Camera> reittikamerat = new List<Camera>();
+
+        /// <summary>Piilokamera kuvakulmaan: sama laskenta kuin PalloKierto (kohde, suuntima, kallistus pystystä, etäisyys).</summary>
+        void Suuntaa(Camera kam, Kuvakulma k)
+        {
             double3 kohde = CesiumWgs84Ellipsoid.LongitudeLatitudeHeightToEarthCenteredEarthFixed(new double3(k.Lon, k.Lat, k.KatseKorkeusM));
             double3 ylos = math.normalize(CesiumWgs84Ellipsoid.GeodeticSurfaceNormal(kohde));
             double3 ita = math.normalize(math.cross(new double3(0, 0, 1), ylos));
@@ -674,16 +713,16 @@ namespace Matkakirja.Natiivi
             var p = gt.TransformPoint((float3)georef.TransformEarthCenteredEarthFixedPositionToUnity(silma));
             var t = gt.TransformPoint((float3)georef.TransformEarthCenteredEarthFixedPositionToUnity(kohde));
             var yl = gt.TransformDirection((float3)georef.TransformEarthCenteredEarthFixedDirectionToUnity(ylos));
-            esikamera.transform.SetPositionAndRotation(p, Quaternion.LookRotation(t - p, yl));
+            kam.transform.SetPositionAndRotation(p, Quaternion.LookRotation(t - p, yl));
             if (kamera != null)
             {
-                esikamera.fieldOfView = kamera.fieldOfView;
-                esikamera.aspect = kamera.aspect;
-                esikamera.nearClipPlane = kamera.nearClipPlane;
-                esikamera.farClipPlane = kamera.farClipPlane;
+                kam.fieldOfView = kamera.fieldOfView;
+                kam.aspect = kamera.aspect;
+                kam.nearClipPlane = kamera.nearClipPlane;
+                kam.farClipPlane = kamera.farClipPlane;
                 // Esilataus samalla valinnalla kuin karkea vaihe (lennon kohde ei lataa tavoitetarkkuutta etukäteen).
                 var r0 = kamera.pixelRect; float sk = karkeaKaytossa ? KarkeaSkaala : 1f;
-                esikamera.pixelRect = new Rect(r0.x, r0.y, Mathf.Max(8f, r0.width * sk), Mathf.Max(8f, r0.height * sk));
+                kam.pixelRect = new Rect(r0.x, r0.y, Mathf.Max(8f, r0.width * sk), Mathf.Max(8f, r0.height * sk));
             }
         }
 
@@ -714,6 +753,7 @@ namespace Matkakirja.Natiivi
             Cesium3DTileset.OnCesium3DTilesetLoadFailure -= LatausVirhe;
             avausAika = -1f; AsetaAvausLatautuu(false);
             if (hallinta != null && esikamera != null) hallinta.additionalCameras.Remove(esikamera);
+            ReittikameratPois(); reittikamerat.Clear();   // tuhoutuvat juuren mukana
             if (hallinta != null && karkea != null) hallinta.additionalCameras.Remove(karkea);
             if (hallinta != null) hallinta.useMainCamera = true;
             if (karkea != null) UnityEngine.Object.Destroy(karkea.gameObject);

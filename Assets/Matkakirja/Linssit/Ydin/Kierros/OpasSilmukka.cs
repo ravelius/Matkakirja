@@ -181,6 +181,20 @@ namespace Matkakirja.Linssit.Kierros
         public const double VastausMaxS = 25;
         /// <summary>Saapumisen enimmäisodotus laattoja varten (s) lennon päätyttyä.</summary>
         public const double SaapumisOdotusS = 4;
+        /// <summary>
+        /// LÄHTÖ ODOTTAA LAATTOJA (Päätoimittaja 8.10. 07.4x, juna 164 -video: Île de la Citén korttelin kokoinen sumea laikku
+        /// lennon alussa Notre-Damelta Louvreen, lähtö 87 %:ssa; avauksesta 1. kohteeseen 61 %:ssa; omistaja moitti sumeita laattoja
+        /// jo TF 162:ssa): lähtö odottaa, kunnes seuraavan kohteen ja reitin laatat (esikamera + ReittiEsilataus-kamerat; latausaste
+        /// kattaa kaikki kamerat) ovat ≥ LahtoValmis, kuitenkin enintään LahtoOdotusMaxS normaalin pysähdyksen yli, ettei kierros jumitu.
+        /// Pelaajan ohitus (⏭) tai toive odottaa enintään LahtoPelaajaMaxS (painallukseen vastataan heti).
+        /// </summary>
+        public const double LahtoValmis = 0.98, LahtoOdotusMaxS = 5, LahtoPelaajaMaxS = 2;
+        /// <summary>Reitin esilatausnäkymät lennon osuuksina (0 = lähtö, 1 = perillä; perillä on esikamera).</summary>
+        public static readonly double[] ReittiNaytteet = { 0.15, 0.35, 0.55, 0.75 };
+        double lahtoOdotusS;
+        bool ohitettu;
+        /// <summary>Viimeisimmän lähdön odotus laattoja varten (s; sovitin kirjaa lokiin).</summary>
+        public double LahtoOdottiS { get; private set; }
 
         public OpasVaihe Vaihe { get; private set; } = OpasVaihe.Alku;
         public OpasKohde Nykyinen { get; private set; }
@@ -672,6 +686,7 @@ namespace Matkakirja.Linssit.Kierros
             lykattyKysymys = null; esihakuPuheenJalkeen = false; OdottaaVastausta = false; kysymysAika = -1;
             if (Vaihe == OpasVaihe.Puhuu || (puheAloitettu && !aaniLoppui)) Hiljenna?.Invoke();
             aaniLoppui = true; hiljaS = double.MaxValue;
+            ohitettu = true;   // lähtö odottaa laattoja enintään LahtoPelaajaMaxS
             if (Vaihe == OpasVaihe.Lentaa) PysahdyTahan();
             if (Seuraava == null && odotettu == 0) UusiPyynto();   // kierros: jonosta; muuten workerin seuraava
             return true;
@@ -895,11 +910,14 @@ namespace Matkakirja.Linssit.Kierros
                         var loppu = new Kuvakulma(a.Lat, a.Lon, a.EtaisyysM * AlkuLiukuKerroin, a.Kallistus + AlkuLiukuKallistus, a.Suuntima + 20, a.KatseKorkeusM);
                         Asento = KierrosLento.Valissa(a, loppu, KierrosLento.Smootherstep(Math.Min(1, VaiheAika / AlkuLiukuS)), 0);
                     }
-                    if (Seuraava != null && aaniLoppuiTaiAlku() && !OdottaaVastausta && !OhjausPitaa) AloitaLento(maaKorkeus);
+                    if (Seuraava != null && aaniLoppuiTaiAlku() && !OdottaaVastausta && !OhjausPitaa && LahtoLaatatValmiit(dt)) AloitaLento(maaKorkeus);
                     break;
                 case OpasVaihe.Puhuu:
                     if (!VapaaAsento(dt)) PysahdysAsento(dt);   // vapaassa tilassa kysymyksen vastaus ei palauta kameraa
-                    if (aaniLoppui && VaiheAika >= TaukoS && hiljaS >= LoppuTaukoS && Seuraava != null && !OhjausPitaa) AloitaLento(maaKorkeus);
+                    if (aaniLoppui && VaiheAika >= TaukoS && hiljaS >= LoppuTaukoS && Seuraava != null && !OhjausPitaa)
+                    {
+                        if (LahtoLaatatValmiit(dt)) AloitaLento(maaKorkeus);
+                    }
                     else if (aaniLoppui && Seuraava == null && odotettu == 0 && !esihakuPuheenJalkeen) { Vaihe = OpasVaihe.Odottaa; VaiheAika = 0; }
                     break;
                 case OpasVaihe.Lentaa:
@@ -1071,9 +1089,52 @@ namespace Matkakirja.Linssit.Kierros
         bool aaniLoppuiTaiAlku() => Vaihe == OpasVaihe.Alku || aaniLoppui;
         Kuvakulma? alkuAsento;
 
+        /// <summary>Lähteekö lento nyt (LahtoValmis tai odotus täynnä); siirto (kauas tai pakotettu) ja "kerro lisää" lähtevät heti.</summary>
+        bool LahtoLaatatValmiit(double dt)
+        {
+            if (LatausEdistys == null || PakotaSiirto || Seuraava == null || VapaaTila) return true;
+            double matka = KierrosLento.EtaisyysM(Asento.Lat, Asento.Lon, Seuraava.Lat, Seuraava.Lon);
+            if (matka >= SiirtoRajaM || matka < 50) return true;
+            if (LatausEdistys() >= LahtoValmis || lahtoOdotusS >= (ohitettu || toiveesta ? LahtoPelaajaMaxS : LahtoOdotusMaxS)) return true;
+            lahtoOdotusS += Math.Max(0, dt);
+            return false;
+        }
+
+        /// <summary>
+        /// REITIN ESILATAUS (Päätoimittaja 8.10. 07.4x; ks. LahtoValmis): esikamera lataa vain seuraavan kohteen pysähdysnäkymän, mutta
+        /// lennon alussa kääntyvä kamera näki pysähdyksellä selän taakse jääneen korttelin latautumattomana. Pysähdyksellä (seuraava
+        /// tiedossa) lennon välinäkymät ReittiNaytteet samalla laskennalla kuin lento (OpasKuvaus.Lennossa nykyisestä asennosta),
+        /// lennon aikana vielä edessä olevat. Googlen ehdot (CesiumKaupunki, ESILATAUKSEN EHTORAJAT): vain reitti SEURAAVAAN
+        /// pysähdykseen, joka näytetään heti; sovitin poistaa kamerat, kun suunnitelma muuttuu (0 näkymää). Palauttaa näkymien määrän.
+        /// </summary>
+        public int ReittiEsilataus(Func<OpasKohde, double> maaKorkeus, Kuvakulma[] ulos)
+        {
+            if (ulos == null || VapaaTila || Siirtymassa || Tauolla) return 0;
+            Kuvakulma a, b; double t0;
+            if (Vaihe == OpasVaihe.Lentaa)
+            {
+                if (siirto || siirtyma || kohdeKehys == null || avausViive > 0 || VaiheAika >= LentoKestoS) return 0;
+                a = lahto; b = KohdeAsento(); t0 = VaiheAika / Math.Max(0.01, LentoKestoS);
+            }
+            else if (Seuraava != null && !Seuraava.Kysymys && !PakotaSiirto)
+            {
+                a = Asento;
+                double matka = KierrosLento.EtaisyysM(a.Lat, a.Lon, Seuraava.Lat, Seuraava.Lon);
+                if (matka >= SiirtoRajaM || matka < 50) return 0;   // siirto ei lennä; "kerro lisää" jää paikalleen
+                b = KehysAsento(KehysKohteelle(Seuraava, maaKorkeus), 0);
+                t0 = 0;
+            }
+            else return 0;
+            int n = 0;
+            foreach (var t in ReittiNaytteet)
+                if (t > t0 && n < ulos.Length) ulos[n++] = OpasKuvaus.Lennossa(a, b, t);
+            return n;
+        }
+
         void AloitaLento(Func<OpasKohde, double> maaKorkeus)
         {
             var k = Seuraava; Seuraava = null;
+            LahtoOdottiS = lahtoOdotusS; lahtoOdotusS = 0; ohitettu = false;
             // "Kerro lisää" (Pelikoodari #4009): sama paikka uudelleen → kamera jää kiertämään, kappale alkaa heti.
             // Vain, kun nykyinen kehys on oikean kohteen: valinnan ja Liikun välitön lento kehystää arviokohteen (koko 120, ei
             // korkeutta → katu, 143 m), ja juna 156:n VIE-este (Eiffel tornin juurella, simu 7.10. 04.1x) syntyi, kun workerin

@@ -444,7 +444,8 @@ namespace Matkakirja.Natiivi
                 if (kaupunki.Latausaste < CesiumKaupunki.ValmisProsentti) o.Kirjaa($"opas: tarkennus aikarajalla {silmukka.VaiheAika:F1} s, laatat {kaupunki.Latausaste:F0} %");
                 kaupunki.Tarkenna();
             }
-            if (silmukka.Vaihe != ennen) o.Kirjaa($"opas: {ennen} → {silmukka.Vaihe} {(silmukka.Nykyinen?.Nimi ?? "")}, laatat {kaupunki.Latausaste:F0} %");
+            if (silmukka.Vaihe != ennen) o.Kirjaa($"opas: {ennen} → {silmukka.Vaihe} {(silmukka.Nykyinen?.Nimi ?? "")}, laatat {kaupunki.Latausaste:F0} %"
+                + (silmukka.Vaihe == OpasVaihe.Lentaa && silmukka.LahtoOdottiS > 0 ? $", lähtö odotti laattoja {silmukka.LahtoOdottiS:F1} s" : ""));
             if (silmukka.Vaihe != ennen && silmukka.Vaihe == OpasVaihe.Lentaa) OpasKorostusKuva.Piilota();
             y.Kuvaa(silmukka.Asento);
             PaivitaKameraTila();
@@ -459,8 +460,11 @@ namespace Matkakirja.Natiivi
             var esi = silmukka.Esilataus(MaaKorkeus);
             if (esi.HasValue) kaupunki.AsetaEsikamera(esi.Value);
             else kaupunki.EsikameraPois();   // ei esilattavaa: piilokamera ei pidä vanhoja laattoja elossa
+            // Reitin välinäkymät (Päätoimittaja 8.10. 07.4x: sumea kortteli lennon alussa); 0 näkymää → reittikamerat pois.
+            kaupunki.AsetaReittikamerat(reittiNakymat, silmukka.ReittiEsilataus(MaaKorkeus, reittiNakymat));
         }
 
+        readonly Kuvakulma[] reittiNakymat = new Kuvakulma[OpasSilmukka.ReittiNaytteet.Length];
         double MaaKorkeus(OpasKohde k) => maaKorkeudet.TryGetValue(Avain(k), out var h) ? h : MaaPisteessa(k.Lat, k.Lon);
         double MaaPisteessa(double lat, double lon) => pisteKorkeudet.TryGetValue(PisteAvain(lat, lon), out var h) ? h : double.NaN;
         static string PisteAvain(double lat, double lon) => lat.ToString("F4") + "," + lon.ToString("F4");
