@@ -357,6 +357,21 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(PalloSaaVaikutus.Valahdys(0.04) > 0.95 && PalloSaaVaikutus.Valahdys(0.5) == 0, "välähdyksen muoto");
         }
 
+        // Juna 166 (video 165 Concorde: kuvan nopeudella kaksi kumpua): van Wijk–Nuij-polku alkaa ja loppuu oikeaan leveyteen,
+        // vaakaosuus on monotoninen ja kaari maltillinen.
+        [Testi] static void ZoomPolkuPaatepisteetJaKaari()
+        {
+            foreach (var (w0, w1, u) in new[] { (420.0, 350.0, 2518.0), (350.0, 900.0, 700.0), (500.0, 500.0, 0.0) })
+            {
+                var alku = OpasKuvaus.ZoomPolku(w0, w1, u, 0); var loppu = OpasKuvaus.ZoomPolku(w0, w1, u, 1);
+                Oleta.Tosi(Math.Abs(alku.osuus) < 1e-9 && Math.Abs(alku.leveys - w0) < 1e-6 && Math.Abs(loppu.osuus - 1) < 1e-6 && Math.Abs(loppu.leveys - w1) < 1e-3,
+                    $"{u} m: päätepisteet ({alku.leveys:F1} → {loppu.leveys:F1})");
+                double ed = -1, maks = 0;
+                for (int i = 0; i <= 100; i++) { var x = OpasKuvaus.ZoomPolku(w0, w1, u, i / 100.0); Oleta.Tosi(x.osuus >= ed - 1e-12, "vaakaosuus monotoninen"); ed = x.osuus; maks = Math.Max(maks, x.leveys); }
+                Oleta.Tosi(maks <= Math.Max(w0, w1) * 1.6 + 1, $"{u} m: kaari maltillinen (huippu {maks:F0} m)");
+            }
+        }
+
         [Testi] static void ReitinValinakymatEsiladataanPysahdyksellaJaLennossa()
         {
             var s = AssaBValmiina(() => 0.5);

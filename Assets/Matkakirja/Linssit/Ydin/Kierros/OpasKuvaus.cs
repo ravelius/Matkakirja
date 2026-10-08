@@ -149,6 +149,7 @@ namespace Matkakirja.Linssit.Kierros
             t = Math.Max(0, Math.Min(1, t));
             double matka = KierrosLento.EtaisyysM(a.Lat, a.Lon, b.Lat, b.Lon);
             if (matka >= LahiRajaM) return OpasSilmukka.Lennossa(a, b, t);
+            if (OpasSilmukka.PalloLento) return PalloLennossa(a, b, t, matka);
             double s = Eteneminen(t, matka);
             // Nousukaari etenemisen mukaan (Päätoimittaja 8.10. 07.5x, juna 164 -video: lepo → huippu 1–1,5 s ja viimeinen 0,5 s
             // jyrkkä): ajasta laskettu sin²(πt) aloitti nousun täydellä kiihtyvyydellä (h'' = 2π² hetkellä 0) ja päätti laskun
@@ -209,6 +210,38 @@ namespace Matkakirja.Linssit.Kierros
             }
             return (nousu, hidastus, huippu, kasvu);
         }
+
+        /// <summary>
+        /// PALLOLENTO OPTIMAALISELLA ZOOMAUS- JA PANOROINTIPOLULLA (van Wijk & Nuij 2003; juna 166, video 165:n telemetria: pitkillä
+        /// hypyillä kuvan nopeudella oli kaksi kumpua, nousu ja laskeutuminen, Concorde +69 % huipun jälkeen): näkymän leveys w ∝
+        /// katse-etäisyys ja vaakamatka u kulkevat geodeesia pitkin, jolla koettu nopeus on vakio polun parametrissa s; s = S·p, missä
+        /// p on etenemisen S-käyrä (rampit PalloProfiili) → kuvan nopeudella on yksi kumpu, ja se alkaa ja loppuu nollasta. Suunta ja
+        /// kallistus seuraavat vaakaosuutta (ei kääntymistä paikallaan). ZoomRho: pienempi = matalampi kaari.
+        /// </summary>
+        public const double ZoomRho = 0.6;   // 2,5 km: et 420 → ~600 m → 350 m (ennen ~1 500 m)
+        static Kuvakulma PalloLennossa(Kuvakulma a, Kuvakulma b, double t, double matka)
+        {
+            double p = Eteneminen(t, matka);
+            var (sv, et) = ZoomPolku(Math.Max(1, a.EtaisyysM), Math.Max(1, b.EtaisyysM), matka, p);
+            double V(double x, double y) => x + (y - x) * sv;
+            double suunta = KierrosLento.Kiedo(a.Suuntima + KierrosLento.Kiedo(b.Suuntima - a.Suuntima) * sv);
+            return new Kuvakulma(V(a.Lat, b.Lat), V(a.Lon, b.Lon), et, V(a.Kallistus, b.Kallistus), suunta, V(a.KatseKorkeusM, b.KatseKorkeusM));
+        }
+
+        /// <summary>van Wijk–Nuij: leveydestä w0 leveyteen w1 vaakamatkan u1 yli; p 0…1 → (vaakaosuus 0…1, leveys).</summary>
+        public static (double osuus, double leveys) ZoomPolku(double w0, double w1, double u1, double p)
+        {
+            p = Math.Max(0, Math.Min(1, p));
+            if (u1 < 1e-3 * Math.Max(w0, w1)) return (p, w0 * Math.Exp(Math.Log(w1 / w0) * p));   // pelkkä zoomaus
+            double r = ZoomRho, r2 = r * r, r4 = r2 * r2;
+            double b0 = (w1 * w1 - w0 * w0 + r4 * u1 * u1) / (2 * w0 * r2 * u1), b1 = (w1 * w1 - w0 * w0 - r4 * u1 * u1) / (2 * w1 * r2 * u1);
+            double q0 = -Asinh(b0), q1 = -Asinh(b1);   // ln(−b + √(b² + 1)) = −asinh(b), ilman kumoutumista
+            double S = (q1 - q0) / r, s = S * p;
+            double u = w0 / r2 * (Math.Cosh(q0) * Math.Tanh(r * s + q0) - Math.Sinh(q0));
+            double w = w0 * Math.Cosh(q0) / Math.Cosh(r * s + q0);
+            return (Math.Max(0, Math.Min(1, u / u1)), w);
+        }
+        static double Asinh(double x) => Math.Sign(x) * Math.Log(Math.Abs(x) + Math.Sqrt(x * x + 1));
 
         /// <summary>
         /// Nousukaari 0–1 etenemisestä (Päätoimittaja 8.10. 08.3x: "laskeutuminen myös S-käyrällä ja ennen jarrutusta"): nousu
