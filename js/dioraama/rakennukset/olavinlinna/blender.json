@@ -1,7 +1,7 @@
 {
   "rakennus": "olavinlinna",
-  "hash": "cb1c356eb133f1c1",
-  "kansio": "dioraama/olavinlinna/blender/cb1c356eb133f1c1/",
+  "hash": "a88cc3e780b88c0b",
+  "kansio": "dioraama/olavinlinna/blender/a88cc3e780b88c0b/",
   "tiedostot": [
     {
       "polku": "hahmot/apulainen-1500-faceit.glb",
@@ -15,8 +15,8 @@
     },
     {
       "polku": "hahmot/fogg.glb",
-      "sha256": "ed1d52718d449bd4388aca0c8e083e3ad70de8bc524a455c5abc3cc0391a9a95",
-      "tavuja": 2500808
+      "sha256": "df9c936285f97a51253b34c40becc82771600b6b72357041bc8c55b13fbfb82f",
+      "tavuja": 2431384
     },
     {
       "polku": "hahmot/kadet.glb",
@@ -140,13 +140,13 @@
     },
     {
       "polku": "kavely/esine-esiliina.glb",
-      "sha256": "12b8e2bf81d078f5d1b46a1d3082ae7f5984aeecb84d4325f4d403523dec7824",
-      "tavuja": 227400
+      "sha256": "9afb0438ef9f1b8fb79a042aebecf4a6aebd7c99c9ebd79c001e05b46e2ee5b7",
+      "tavuja": 178992
     },
     {
       "polku": "kavely/esine-hiilipannu.glb",
-      "sha256": "a1ba07c67c48b5d01cb283e01e59994102caea693e6f331731d1b0223c3f75d0",
-      "tavuja": 429800
+      "sha256": "513df1cbf65b0de331c4b6ee519a06ee73e668e0b082dd43d36cd812cea1f82e",
+      "tavuja": 336128
     },
     {
       "polku": "kavely/esine-ikuinen-valo.glb",
@@ -170,13 +170,13 @@
     },
     {
       "polku": "kavely/esine-kilpilaatta-sture.glb",
-      "sha256": "8600b4efdd037893ad6932fabc4f00a3d759a31d74040651ac4d579eae9eb347",
-      "tavuja": 1051636
+      "sha256": "b4e9cb144245aac92bef7ab2addbbd22c2e5b189351b0a000af0fae33c88fea9",
+      "tavuja": 539200
     },
     {
       "polku": "kavely/esine-kilpilaatta-tott.glb",
-      "sha256": "296525648af2f72f73fb32610433b49677277c1ba0732d9195bb7f95a6dc2228",
-      "tavuja": 959428
+      "sha256": "18d02815f53b1c63fb7aba30452fc0dddc3014ad8a1ad9c07e695b6fccea2c7c",
+      "tavuja": 504108
     },
     {
       "polku": "kavely/esine-kirja.glb",
@@ -210,13 +210,13 @@
     },
     {
       "polku": "kavely/esine-koysi-vene.glb",
-      "sha256": "7a3035c7be24605ad7c50ec6b1ef923e5fa00bb42e7d547f707818a3b123e662",
-      "tavuja": 419348
+      "sha256": "a58f86b0a0743d023497776fd97a5322b5ed63a725baeb1ef6657303c8dac103",
+      "tavuja": 346808
     },
     {
       "polku": "kavely/esine-koysikieppi.glb",
-      "sha256": "ac336df83066bf1be9153a3d5dc62e4de331f470395979d8af5b7eb4bf3dbcd9",
-      "tavuja": 407084
+      "sha256": "063e0d2f6752454f2512cbb216ca3c3c6dcb571c61954f5787ace70896fd4dc3",
+      "tavuja": 350560
     },
     {
       "polku": "kavely/esine-kuppi.glb",
@@ -260,8 +260,8 @@
     },
     {
       "polku": "kavely/esine-patapino.glb",
-      "sha256": "d08f386de35253072a65524b3a8ea9f47c71c1f5f53f229b1d534ffed270756b",
-      "tavuja": 270456
+      "sha256": "f100cce5f9d10b010bb2a65d43a0b11199e919dea8b5dfc05a70ac7db24e333d",
+      "tavuja": 239572
     },
     {
       "polku": "kavely/esine-pateeni.glb",
@@ -290,8 +290,8 @@
     },
     {
       "polku": "kavely/esine-tiili-komero.glb",
-      "sha256": "7f6fdff907a51576ba2888aa6790675342f873a612edb1bb5c45ca7d67bf4c5c",
-      "tavuja": 33120
+      "sha256": "6370a89216ed87718c201bebe41b4843587d7287e2f4f43a154d829b82157395",
+      "tavuja": 28448
     },
     {
       "polku": "kavely/kappeli-kavely-kavely.glb",
