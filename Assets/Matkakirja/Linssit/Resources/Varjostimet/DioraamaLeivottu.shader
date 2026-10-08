@@ -45,6 +45,7 @@ Shader "Matkakirja/Linssit/DioraamaLeivottu"
             #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
             #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Lighting.hlsl"
             #include "DioraamaUsva.hlsl"
+            #include "DioraamaMarkyys.hlsl"
 
             half _DioraamaLepatus;
             half4 _DioraamaSumuVari;
@@ -55,10 +56,6 @@ Shader "Matkakirja/Linssit/DioraamaLeivottu"
             // ja sen väri (rgb) · voimakkuus (a). Oletus nolla: ei vaikutusta esittelyyn.
             float4 _DioraamaKantoValo;
             float4 _DioraamaKantoVari;
-            // Märät pinnat (omistajan palaute 8.10. (2), Siirtoseppä): seikkailu asettaa päälle (0 = esittely ennallaan) ja kiillon
-            // värin (kuunvalo, rgb; a ei käytössä). Materiaalin _Markyys tulee kävelydatasta (osa.markyys / pinta-merkit).
-            float _DioraamaMarkyysPaalla;
-            float4 _DioraamaMarkyysKiilto;
 
             TEXTURE2D(_ValoAtlas); SAMPLER(sampler_ValoAtlas);
 
@@ -122,21 +119,10 @@ Shader "Matkakirja/Linssit/DioraamaLeivottu"
                 if (_Leikattava > 0.5 && _DioraamaLeikkausMin.w > 0.001 && Leikkauksessa(i.paikkaW)) discard;
                 half3 vari = SAMPLE_TEXTURE2D(_ValoAtlas, sampler_ValoAtlas, i.uv1).rgb * _Kirkkaus;
 
-                // Märkyys: märkä pinta tummuu (vaakapinnat eniten, hento laikukkuus), ja kiilto heijastaa kuunvaloa
-                // loivassa kulmassa (Fresnel). Liekkien lämpö kiiltää märällä pinnalla enemmän (lisa × kiilto).
-                half mm = 0, kiilto = 1;
+                // Märkyys (DioraamaMarkyys.hlsl); liekkien lämpö kiiltää märällä pinnalla enemmän (lisa × kiilto).
                 float3 nW = normalize(i.normaaliW);
-                if (_Markyys * _DioraamaMarkyysPaalla > 0.001)
-                {
-                    half yla = (half)saturate(nW.y);
-                    half kuvio = 0.78h + 0.22h * (half)sin(i.paikkaW.x * 1.7 + sin(i.paikkaW.z * 2.3) * 1.3);
-                    mm = (half)(_Markyys * _DioraamaMarkyysPaalla) * lerp(0.45h, 1.0h, yla) * kuvio;
-                    vari *= lerp(1.0h, 0.58h, mm);
-                    float3 v = normalize(_WorldSpaceCameraPos - i.paikkaW);
-                    half fres = (half)pow(1.0 - saturate(dot(nW, v)), 5.0);
-                    vari += (half3)_DioraamaMarkyysKiilto.rgb * fres * mm * yla * 0.6h;
-                    kiilto = 1.0h + mm * 0.8h;
-                }
+                half mm = DioraamaMarkyys(vari, _Markyys, nW, i.paikkaW);
+                half kiilto = 1.0h + mm * 0.8h;
 
                 half lisa = 0;
                 int maara = (int)min(_DioraamaLiekkiMaara, 8.0);

@@ -38,6 +38,7 @@ Shader "Matkakirja/Linssit/DioraamaValaistu"
         _KuvioParametrit ("Kuvion parametrit (koko_u, koko_v, sauma, vaihtelu)", Vector) = (1, 1, 0.02, 0.3)
         _ValoAtlas ("Kävelyosan valoatlas (UV1, valo × 0,5, LR 8.10.)", 2D) = "grey" {}
         _ValoVain ("Valo atlaksesta (1) vai reaaliaikaisista valoista (0)", Float) = 0
+        _Markyys ("Märkyys 0–1 (kävelydata, LR v45f)", Float) = 0
     }
     SubShader
     {
@@ -65,6 +66,7 @@ Shader "Matkakirja/Linssit/DioraamaValaistu"
             #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Lighting.hlsl"
             #include "DioraamaKuviot.hlsl"
             #include "DioraamaUsva.hlsl"
+            #include "DioraamaMarkyys.hlsl"
 
             // Globaalit: DioraamaNayttamo.cs (sumu+lepatus, kaikki dioraaman varjostimet) ja DioraamaValot.cs
             // (taivas, RAKENNUS.valaistus.taivas-datasta, vain tämä varjostin lukee näitä kahta).
@@ -87,6 +89,7 @@ Shader "Matkakirja/Linssit/DioraamaValaistu"
                 float4 _KuvioParametrit; // koko_u, koko_v, sauma, vaihtelu
                 float4 _ValoAtlas_ST;
                 float _ValoVain;         // 1 = kävelyosa: valo leivotusta atlaksesta (UV1), ei pää- eikä taivasvaloa
+                float _Markyys;          // märkyys 0–1 (SeikkailuKavely.AsetaMarkyys)
             CBUFFER_END
 
             struct Syote
@@ -163,7 +166,7 @@ Shader "Matkakirja/Linssit/DioraamaValaistu"
                 LIGHT_LOOP_END
                 #endif
 
-                half3 vari = albedo * valo * lerp(1.0h, ao, 0.85h) + _Lampo.rgb * (lampo * lampo * 0.45h) * _DioraamaLepatus;
+                half3 vari = albedo * valo * lerp(1.0h, ao, 0.85h) + _Lampo.rgb * (lampo * lampo * 0.45h) * _DioraamaLepatus; // g²·0,45: oikea pistevalo valaisee jo (sama kuin esikatselussa)
                 if (_ValoVain > 0.5)
                 {
                     // Kävelyosa (LR 8.10.): leivottu valo (GI, AO, liekit; tallennettu × 0,5) × pinnan väri. Reaaliaikaisista
@@ -194,7 +197,8 @@ Shader "Matkakirja/Linssit/DioraamaValaistu"
                     }
                     #endif
                     vari = albedo * (leivottu * varjo + liikkuva);
-                } // g²·0,45: oikea pistevalo valaisee jo (sama kuin esikatselussa)
+                }
+                DioraamaMarkyys(vari, _Markyys, n, i.paikkaW);   // märät pinnat (kävelyosat ulkona)
 
                 // Etäisyyssumu (era 1 kohta 6, kuten DioraamaMaalattu/DioraamaHahmo): massa ja keittiö erottuvat.
                 float etaisyys = length(_WorldSpaceCameraPos - i.paikkaW);
@@ -237,6 +241,7 @@ Shader "Matkakirja/Linssit/DioraamaValaistu"
                 float4 _KuvioParametrit;
                 float4 _ValoAtlas_ST;
                 float _ValoVain;
+                float _Markyys;
             CBUFFER_END
 
             struct SyoteVarjo { float4 paikka : POSITION; float3 normaali : NORMAL; };
@@ -282,6 +287,7 @@ Shader "Matkakirja/Linssit/DioraamaValaistu"
                 float4 _KuvioParametrit;
                 float4 _ValoAtlas_ST;
                 float _ValoVain;
+                float _Markyys;
             CBUFFER_END
 
             struct SyoteSyvyys { float4 paikka : POSITION; };

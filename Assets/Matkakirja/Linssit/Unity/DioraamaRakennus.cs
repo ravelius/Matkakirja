@@ -51,7 +51,7 @@ namespace Matkakirja.Natiivi
         // piirretään DioraamaLeivottu-varjostimella: yksi materiaali per tila (atlas on tilakohtainen), ei reaaliaikaisia
         // varjoja. Muut tilat kuten ennen (pintakohtainen maalattu/valaistu materiaali).
         readonly Shader varjostinLeivottu;
-        static readonly int IdValoAtlas = Shader.PropertyToID("_ValoAtlas"), IdValoVain = Shader.PropertyToID("_ValoVain");
+        static readonly int IdValoAtlas = Shader.PropertyToID("_ValoAtlas"), IdValoVain = Shader.PropertyToID("_ValoVain"), IdMarkyys = Shader.PropertyToID("_Markyys");
         /// <summary>Kävelyosien valo-kloonit (LR 8.10., juna 169): pintamateriaali × tilan valoatlas; avain tila|pinta.</summary>
         readonly Dictionary<string, (string Tila, Material Pohja, Material Klooni)> valoKloonit = new Dictionary<string, (string, Material, Material)>();
         readonly Dictionary<string, Material> leivotut = new Dictionary<string, Material>();
@@ -149,7 +149,9 @@ namespace Matkakirja.Natiivi
             foreach (var k in valoKloonit.Values)
                 if (k.Pohja == m && k.Klooni != null)
                 {
+                    float markyys = k.Klooni.HasProperty(IdMarkyys) ? k.Klooni.GetFloat(IdMarkyys) : 0f;   // AsetaMarkyys säilyy
                     k.Klooni.CopyPropertiesFromMaterial(m); k.Klooni.SetFloat(IdValoVain, 1f);
+                    if (markyys > 0f) k.Klooni.SetFloat(IdMarkyys, markyys);
                     if (odottavatValoAtlakset.TryGetValue(k.Tila, out var atlas)) k.Klooni.SetTexture(IdValoAtlas, atlas);
                 }
         }
