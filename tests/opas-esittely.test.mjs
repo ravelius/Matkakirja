@@ -241,7 +241,7 @@ test('yksityiskohdat_polut: 6 äänellistä + kaikki 31 äänetöntä (Sisältö
     venetsia: 'esittely/venetsia-v1/venetsia-yksityiskohdat.json', barcelona: 'esittely/barcelona-v1/barcelona-yksityiskohdat.json',
     berliini: 'esittely/berliini-v2/berliini-yksityiskohdat.json', amsterdam: 'esittely/amsterdam-v1/amsterdam-yksityiskohdat.json',
     madrid: 'esittely/madrid-v1/madrid-yksityiskohdat.json', ateena: 'esittely/ateena-v1/ateena-yksityiskohdat.json',
-    firenze: 'esittely/firenze-v1/firenze-yksityiskohdat.json',
+    firenze: 'esittely/firenze-v2/firenze-yksityiskohdat.json',
     lissabon: 'esittely/lissabon-v1/lissabon-yksityiskohdat.json', tukholma: 'esittely/tukholma-v1/tukholma-yksityiskohdat.json',
     helsinki: 'esittely/helsinki-v2/helsinki-yksityiskohdat.json', budapest: 'esittely/budapest-v1/budapest-yksityiskohdat.json',
     edinburgh: 'esittely/edinburgh-v1/edinburgh-yksityiskohdat.json', dublin: 'esittely/dublin-v1/dublin-yksityiskohdat.json',
@@ -249,12 +249,12 @@ test('yksityiskohdat_polut: 6 äänellistä + kaikki 31 äänetöntä (Sisältö
     oslo: 'esittely/oslo-v1/oslo-yksityiskohdat.json',
     bryssel: 'esittely/bryssel-v1/bryssel-yksityiskohdat.json', marseille: 'esittely/marseille-v1/marseille-yksityiskohdat.json',
     bergen: 'esittely/bergen-v1/bergen-yksityiskohdat.json', granada: 'esittely/granada-v1/granada-yksityiskohdat.json',
-    tampere: 'esittely/tampere-v1/tampere-yksityiskohdat.json', vilna: 'esittely/vilna-v1/vilna-yksityiskohdat.json',
+    tampere: 'esittely/tampere-v2/tampere-yksityiskohdat.json', vilna: 'esittely/vilna-v2/vilna-yksityiskohdat.json',
     ljubljana: 'esittely/ljubljana-v1/ljubljana-yksityiskohdat.json', valletta: 'esittely/valletta-v1/valletta-yksityiskohdat.json',
     sofia: 'esittely/sofia-v1/sofia-yksityiskohdat.json', bukarest: 'esittely/bukarest-v1/bukarest-yksityiskohdat.json',
     luxemburg: 'esittely/luxemburg-v1/luxemburg-yksityiskohdat.json', kosice: 'esittely/kosice-v1/kosice-yksityiskohdat.json',
     islanti: 'esittely/islanti-v1/islanti-yksityiskohdat.json', kreeta: 'esittely/kreeta-v1/kreeta-yksityiskohdat.json',
-    sisilia: 'esittely/sisilia-v1/sisilia-yksityiskohdat.json' });
+    sisilia: 'esittely/sisilia-v2/sisilia-yksityiskohdat.json' });
   // Kaikki 37 esittelykaupunkia (6 äänellistä + 31 äänetöntä) saavat yksityiskohtakuvat.
   assert.deepEqual(Object.keys(OPAS_AINEISTOT.yksityiskohdat_polut).sort(), [...OPAS_AINEISTOT.esittely].sort());
 });
