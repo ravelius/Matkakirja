@@ -1201,7 +1201,8 @@
    -7.984
   ],
   "kannettava": true,
-  "huom": "heidän takanaan sisäreunalla; köysi (reseptin koysikieppi-malli)",
+  "glb": "esine-koysikieppi.glb",
+  "huom": "heidän takanaan sisäreunalla; hamppuköysi 14 m Ø 16 mm litteänä kiepinä 0,63 × 0,51 × 0,08 m (esineet-v1)",
   "osa": "muurikaytava"
  },
  {
@@ -1556,7 +1557,7 @@
    15.1,
    -6.076
   ],
-  "huom": "huone 10: köysi kramppiin → köysilasku kalliolle (takakuva); laskupaikka AVOIN (Kellobastioni 1790-l. kuoressa)",
+  "huom": "huone 10: köysi kramppiin → köysilasku kalliolle (takakuva); laskupaikka paljas kallio Kellobastionin pohjoispuolella (bastioni 1790-l. rajattu pois 1499-näkymästä)",
   "osa": "muurikaytava"
  },
  {
@@ -2624,5 +2625,745 @@
    -12.6
   ],
   "osa": "kirkkotorni-portaat"
+ },
+ {
+  "nimi": "reitti:pelaaja-21",
+  "paikka": [
+   -18.76,
+   9.6,
+   -16.54
+  ],
+  "osa": "kappeli-kavely",
+  "huom": "kaari-ovi (huone 6 alkaa)"
+ },
+ {
+  "nimi": "reitti:pelaaja-22",
+  "paikka": [
+   -19.124,
+   9.6,
+   -16.75
+  ],
+  "osa": "kappeli-kavely",
+  "huom": "kaari-oven aukko"
+ },
+ {
+  "nimi": "reitti:pelaaja-23",
+  "paikka": [
+   -20.423,
+   9.6,
+   -17.5
+  ],
+  "osa": "kappeli-kavely",
+  "huom": "kaariportaiden alapää"
+ },
+ {
+  "nimi": "reitti:pelaaja-24",
+  "paikka": [
+   -19.235,
+   10.55,
+   -19.598
+  ],
+  "osa": "kappeli-kavely",
+  "huom": "kaariportaat"
+ },
+ {
+  "nimi": "reitti:pelaaja-25",
+  "paikka": [
+   -17.031,
+   11.5,
+   -20.685
+  ],
+  "osa": "kappeli-kavely",
+  "huom": "kaariportaiden tasanne"
+ },
+ {
+  "nimi": "reitti:pelaaja-26",
+  "paikka": [
+   -16.277,
+   11.5,
+   -20.839
+  ],
+  "osa": "kappeli-kavely",
+  "huom": "kaariportaiden tasanne"
+ },
+ {
+  "nimi": "reitti:pelaaja-27",
+  "paikka": [
+   -14.198,
+   12.45,
+   -20.784
+  ],
+  "osa": "kappeli-kavely",
+  "huom": "kaariportaat"
+ },
+ {
+  "nimi": "reitti:pelaaja-28",
+  "paikka": [
+   -12.25,
+   13.4,
+   -20.056
+  ],
+  "osa": "kappeli-kavely",
+  "huom": "kaariportaiden yläpää"
+ },
+ {
+  "nimi": "reitti:pelaaja-29",
+  "paikka": [
+   -12.975,
+   13.4,
+   -18.8
+  ],
+  "osa": "kappeli-kavely",
+  "huom": "ampumakäytävä"
+ },
+ {
+  "nimi": "reitti:pelaaja-30",
+  "paikka": [
+   -11.971,
+   13.4,
+   -18.029
+  ],
+  "osa": "kappeli-kavely",
+  "huom": "ampumakäytävä"
+ },
+ {
+  "nimi": "reitti:pelaaja-31",
+  "paikka": [
+   -11.2,
+   13.4,
+   -17.025
+  ],
+  "osa": "kappeli-kavely",
+  "huom": "ampumakäytävä"
+ },
+ {
+  "nimi": "reitti:pelaaja-32",
+  "paikka": [
+   -10.715,
+   13.4,
+   -15.855
+  ],
+  "osa": "kappeli-kavely",
+  "huom": "ampumakäytävä"
+ },
+ {
+  "nimi": "reitti:pelaaja-33",
+  "paikka": [
+   -10.55,
+   13.4,
+   -14.6
+  ],
+  "osa": "kappeli-kavely",
+  "huom": "ampumakäytävä"
+ },
+ {
+  "nimi": "reitti:pelaaja-34",
+  "paikka": [
+   -10.715,
+   13.4,
+   -13.345
+  ],
+  "osa": "kappeli-kavely",
+  "huom": "ampumakäytävä"
+ },
+ {
+  "nimi": "reitti:pelaaja-35",
+  "paikka": [
+   -11.2,
+   13.4,
+   -12.175
+  ],
+  "osa": "kappeli-kavely",
+  "huom": "ampumakäytävä"
+ },
+ {
+  "nimi": "reitti:pelaaja-36",
+  "paikka": [
+   -11.971,
+   13.4,
+   -11.171
+  ],
+  "osa": "kappeli-kavely",
+  "huom": "ampumakäytävä"
+ },
+ {
+  "nimi": "reitti:pelaaja-37",
+  "paikka": [
+   -12.975,
+   13.4,
+   -10.4
+  ],
+  "osa": "kappeli-kavely",
+  "huom": "ampumakäytävä"
+ },
+ {
+  "nimi": "reitti:pelaaja-38",
+  "paikka": [
+   -14.145,
+   13.4,
+   -9.915
+  ],
+  "osa": "kappeli-kavely",
+  "huom": "voudin portaan suu"
+ },
+ {
+  "nimi": "reitti:pelaaja-39",
+  "paikka": [
+   -13.769,
+   13.4,
+   -8.515
+  ],
+  "osa": "kappeli-kavely",
+  "huom": "voudin portaan yläpää"
+ },
+ {
+  "nimi": "reitti:pelaaja-40",
+  "paikka": [
+   -18.454,
+   9.6,
+   -9.09
+  ],
+  "osa": "kappeli-kavely",
+  "huom": "pääoven ulkotasanne"
+ },
+ {
+  "nimi": "reitti:pelaaja-41",
+  "paikka": [
+   -18.491,
+   9.6,
+   -9.622
+  ],
+  "osa": "kirkkotorni-portaat",
+  "huom": "muuriportaiden yläpää"
+ },
+ {
+  "nimi": "reitti:pelaaja-42",
+  "paikka": [
+   -20.879,
+   6.5,
+   -13.758
+  ],
+  "osa": "kirkkotorni-portaat",
+  "huom": "muuriportaiden tasanne"
+ },
+ {
+  "nimi": "reitti:pelaaja-43",
+  "paikka": [
+   -20.879,
+   6.5,
+   -14.742
+  ],
+  "osa": "kirkkotorni-portaat",
+  "huom": "muuriportaiden tasanne (ampuma-aukkokomero)"
+ },
+ {
+  "nimi": "reitti:pelaaja-44",
+  "paikka": [
+   -18.491,
+   3.4,
+   -18.878
+  ],
+  "osa": "kirkkotorni-portaat",
+  "huom": "muuriportaiden alapää"
+ },
+ {
+  "nimi": "reitti:pelaaja-45",
+  "paikka": [
+   -17.544,
+   3.4,
+   -17.527
+  ],
+  "osa": "kirkkotorni-portaat",
+  "huom": "Tott-kammio, portaiden juuri (istuva vartija)"
+ },
+ {
+  "nimi": "reitti:pelaaja-46",
+  "paikka": [
+   -14.773,
+   3.4,
+   -10.853
+  ],
+  "osa": "kirkkotorni-portaat",
+  "huom": "naulakko: esiliina ja myssy (naamio)"
+ },
+ {
+  "nimi": "reitti:pelaaja-47",
+  "paikka": [
+   -15.701,
+   3.4,
+   -10.83
+  ],
+  "osa": "kirkkotorni-portaat",
+  "huom": "eteläoven edusta"
+ },
+ {
+  "nimi": "reitti:pelaaja-48",
+  "paikka": [
+   -15.792,
+   3.4,
+   -10.136
+  ],
+  "osa": "kirkkotorni-portaat",
+  "huom": "Tott-kammion eteläovi"
+ },
+ {
+  "nimi": "reitti:pelaaja-49",
+  "paikka": [
+   -17.097,
+   3.4,
+   -7.45
+  ],
+  "osa": "palatsi",
+  "huom": "käytävä"
+ },
+ {
+  "nimi": "reitti:pelaaja-50",
+  "paikka": [
+   -16.144,
+   3.4,
+   -5.579
+  ],
+  "osa": "palatsi",
+  "huom": "Linnantuvan pohjoisovi"
+ },
+ {
+  "nimi": "reitti:pelaaja-51",
+  "paikka": [
+   -15.781,
+   3.4,
+   -4.867
+  ],
+  "osa": "palatsi",
+  "huom": "Linnantupa"
+ },
+ {
+  "nimi": "reitti:pelaaja-52",
+  "paikka": [
+   -13.812,
+   3.4,
+   1.201
+  ],
+  "osa": "palatsi",
+  "huom": "pitkä pöytä: keittokulho"
+ },
+ {
+  "nimi": "reitti:pelaaja-53",
+  "paikka": [
+   -18.136,
+   3.4,
+   -2.881
+  ],
+  "osa": "palatsi",
+  "huom": "kohti salin porrasta"
+ },
+ {
+  "nimi": "reitti:pelaaja-54",
+  "paikka": [
+   -19.112,
+   3.4,
+   -1.823
+  ],
+  "osa": "palatsi",
+  "huom": "salin portaan alapää"
+ },
+ {
+  "nimi": "reitti:pelaaja-55",
+  "paikka": [
+   -16.978,
+   7.5,
+   2.365
+  ],
+  "osa": "palatsi",
+  "huom": "salin portaan yläpää"
+ },
+ {
+  "nimi": "reitti:pelaaja-56",
+  "paikka": [
+   -15.548,
+   7.5,
+   2.198
+  ],
+  "osa": "palatsi",
+  "huom": "voudin sali"
+ },
+ {
+  "nimi": "reitti:pelaaja-57",
+  "paikka": [
+   -9.924,
+   7.5,
+   6.627
+  ],
+  "osa": "palatsi",
+  "huom": "voudin pöytä: kulho pöytään, avainrengas"
+ },
+ {
+  "nimi": "reitti:pelaaja-58",
+  "paikka": [
+   -15.548,
+   7.5,
+   2.198
+  ],
+  "osa": "palatsi",
+  "huom": "paluu"
+ },
+ {
+  "nimi": "reitti:pelaaja-59",
+  "paikka": [
+   -16.978,
+   7.5,
+   2.365
+  ],
+  "osa": "palatsi",
+  "huom": "salin portaan yläpää"
+ },
+ {
+  "nimi": "reitti:pelaaja-60",
+  "paikka": [
+   -19.112,
+   3.4,
+   -1.823
+  ],
+  "osa": "palatsi",
+  "huom": "salin portaan alapää"
+ },
+ {
+  "nimi": "reitti:pelaaja-61",
+  "paikka": [
+   -15.781,
+   3.4,
+   -4.867
+  ],
+  "osa": "palatsi",
+  "huom": "Linnantupa"
+ },
+ {
+  "nimi": "reitti:pelaaja-62",
+  "paikka": [
+   -16.144,
+   3.4,
+   -5.579
+  ],
+  "osa": "palatsi",
+  "huom": "Linnantuvan pohjoisovi"
+ },
+ {
+  "nimi": "reitti:pelaaja-63",
+  "paikka": [
+   -17.097,
+   3.4,
+   -7.45
+  ],
+  "osa": "palatsi",
+  "huom": "käytävä"
+ },
+ {
+  "nimi": "reitti:pelaaja-64",
+  "paikka": [
+   -15.792,
+   3.4,
+   -10.136
+  ],
+  "osa": "kirkkotorni-portaat",
+  "huom": "Tott-kammion eteläovi (huone 7 alkaa)"
+ },
+ {
+  "nimi": "reitti:pelaaja-65",
+  "paikka": [
+   -15.701,
+   3.4,
+   -10.83
+  ],
+  "osa": "kirkkotorni-portaat",
+  "huom": "eteläoven edusta"
+ },
+ {
+  "nimi": "reitti:pelaaja-66",
+  "paikka": [
+   -17.544,
+   3.4,
+   -17.527
+  ],
+  "osa": "kirkkotorni-portaat",
+  "huom": "Tott-kammio, portaiden juuri"
+ },
+ {
+  "nimi": "reitti:pelaaja-67",
+  "paikka": [
+   -18.491,
+   3.4,
+   -18.878
+  ],
+  "osa": "kirkkotorni-portaat",
+  "huom": "muuriportaiden alapää"
+ },
+ {
+  "nimi": "reitti:pelaaja-68",
+  "paikka": [
+   -20.879,
+   6.5,
+   -14.742
+  ],
+  "osa": "kirkkotorni-portaat",
+  "huom": "muuriportaiden tasanne: odota komerossa"
+ },
+ {
+  "nimi": "reitti:pelaaja-69",
+  "paikka": [
+   -20.879,
+   6.5,
+   -13.758
+  ],
+  "osa": "kirkkotorni-portaat",
+  "huom": "muuriportaiden tasanne"
+ },
+ {
+  "nimi": "reitti:pelaaja-70",
+  "paikka": [
+   -18.491,
+   9.6,
+   -9.622
+  ],
+  "osa": "kirkkotorni-portaat",
+  "huom": "muuriportaiden yläpää"
+ },
+ {
+  "nimi": "reitti:pelaaja-71",
+  "paikka": [
+   -18.454,
+   9.6,
+   -9.09
+  ],
+  "osa": "kappeli-kavely",
+  "huom": "pääoven ulkotasanne"
+ },
+ {
+  "nimi": "reitti:pelaaja-72",
+  "paikka": [
+   -13.769,
+   13.4,
+   -8.515
+  ],
+  "osa": "kappeli-kavely",
+  "huom": "voudin portaan yläpää"
+ },
+ {
+  "nimi": "reitti:pelaaja-73",
+  "paikka": [
+   -14.145,
+   13.4,
+   -9.915
+  ],
+  "osa": "kappeli-kavely",
+  "huom": "ampumakäytävä (K3)"
+ },
+ {
+  "nimi": "reitti:pelaaja-74",
+  "paikka": [
+   -15.46,
+   13.4,
+   -9.75
+  ],
+  "osa": "kappeli-kavely",
+  "huom": "ampumakäytävä"
+ },
+ {
+  "nimi": "reitti:pelaaja-75",
+  "paikka": [
+   -16.772,
+   13.4,
+   -9.948
+  ],
+  "osa": "kappeli-kavely",
+  "huom": "ampumakäytävä"
+ },
+ {
+  "nimi": "reitti:pelaaja-76",
+  "paikka": [
+   -17.98,
+   13.4,
+   -10.493
+  ],
+  "osa": "kappeli-kavely",
+  "huom": "ampumakäytävä"
+ },
+ {
+  "nimi": "reitti:pelaaja-77",
+  "paikka": [
+   -18.996,
+   13.4,
+   -11.346
+  ],
+  "osa": "kappeli-kavely",
+  "huom": "ampumakäytävä"
+ },
+ {
+  "nimi": "reitti:pelaaja-78",
+  "paikka": [
+   -19.743,
+   13.4,
+   -12.441
+  ],
+  "osa": "kappeli-kavely",
+  "huom": "ampumakäytävä"
+ },
+ {
+  "nimi": "reitti:pelaaja-79",
+  "paikka": [
+   -20.165,
+   13.4,
+   -13.698
+  ],
+  "osa": "kappeli-kavely",
+  "huom": "ampumakäytävä"
+ },
+ {
+  "nimi": "reitti:pelaaja-80",
+  "paikka": [
+   -20.232,
+   13.4,
+   -15.023
+  ],
+  "osa": "kappeli-kavely",
+  "huom": "ampumakäytävä, muurikäytävän kohta"
+ },
+ {
+  "nimi": "reitti:pelaaja-81",
+  "paikka": [
+   -21.676,
+   13.4,
+   -15.149
+  ],
+  "osa": "kappeli-kavely",
+  "huom": "muurikäytävän suu"
+ },
+ {
+  "nimi": "reitti:pelaaja-82",
+  "paikka": [
+   -21.955,
+   13.4,
+   -15.039
+  ],
+  "osa": "muurikaytava",
+  "huom": "muurikäytävän ovi (avainrengas)"
+ },
+ {
+  "nimi": "reitti:pelaaja-83",
+  "paikka": [
+   -26.512,
+   13.4,
+   -13.237
+  ],
+  "osa": "muurikaytava",
+  "huom": "aukkojen väli: varjo"
+ },
+ {
+  "nimi": "reitti:pelaaja-84",
+  "paikka": [
+   -30.604,
+   13.4,
+   -11.62
+  ],
+  "osa": "muurikaytava",
+  "huom": "aukkojen väli: varjo"
+ },
+ {
+  "nimi": "reitti:pelaaja-85",
+  "paikka": [
+   -34.602,
+   13.4,
+   -10.04
+  ],
+  "osa": "muurikaytava",
+  "huom": "aukkojen väli: varjo"
+ },
+ {
+  "nimi": "reitti:pelaaja-86",
+  "paikka": [
+   -37.714,
+   13.4,
+   -8.81
+  ],
+  "osa": "muurikaytava",
+  "huom": "muurikäytävän pää"
+ },
+ {
+  "nimi": "reitti:pelaaja-87",
+  "paikka": [
+   -37.632,
+   13.4,
+   -8.466
+  ],
+  "osa": "muurikaytava",
+  "huom": "tikkaat muurinharjalle"
+ },
+ {
+  "nimi": "reitti:pelaaja-88",
+  "paikka": [
+   -36.702,
+   16.6,
+   -8.834
+  ],
+  "osa": "muurikaytava",
+  "huom": "muurinharja, luukun vieressä (tikkaiden yläpää)"
+ },
+ {
+  "nimi": "reitti:pelaaja-89",
+  "paikka": [
+   -35.452,
+   16.6,
+   -7.984
+  ],
+  "osa": "muurikaytava",
+  "huom": "köysikieppi"
+ },
+ {
+  "nimi": "reitti:pelaaja-90",
+  "paikka": [
+   -37.998,
+   16.6,
+   -7.623
+  ],
+  "osa": "muurikaytava",
+  "huom": "harjan pää"
+ },
+ {
+  "nimi": "reitti:pelaaja-91",
+  "paikka": [
+   -38.723,
+   16.6,
+   -9.594
+  ],
+  "osa": "muurikaytava",
+  "huom": "sakara: köysi, kaiteen yli"
+ },
+ {
+  "nimi": "reitti:pelaaja-92",
+  "paikka": [
+   -39.216,
+   16.7,
+   -10.15
+  ],
+  "osa": "muurikaytava",
+  "huom": "kiipeilyn alku (ote 1)"
+ },
+ {
+  "nimi": "reitti:pelaaja-93",
+  "paikka": [
+   -50.988,
+   14.8,
+   -5.485
+  ],
+  "osa": "muurikaytava",
+  "huom": "komeron kynnys (huone 9)"
+ },
+ {
+  "nimi": "reitti:pelaaja-94",
+  "paikka": [
+   -50.883,
+   15.1,
+   -6.076
+  ],
+  "osa": "muurikaytava",
+  "huom": "köysilaskun alku (huone 10)"
  }
 ]
