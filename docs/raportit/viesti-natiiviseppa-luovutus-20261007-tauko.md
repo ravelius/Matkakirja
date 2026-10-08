@@ -9,7 +9,8 @@ Tarkempi lokirivistö: muisti natiiviseppa-tila-20261003.md (uusin rivi ylimpän
 T7-junaasennus OK; 09.27 satunnainen Unity mono-segv, uusinta onnistui). mac-tf.sh käyttää nyt proto-3d/tyokalut/mac-kaanna.sh (master-kopio).
 **BUILD 165 = proto master 8adddd2c376fca44fc69eb58f106417b3a57b7d6** (runko natiiviseppa/juna-165 8c35a7cf6 = df24a24d + Siirtoseppä becd20404
 + NUI cf66d208, 0484007f, 39d43932, 9417aa6a + LS1 ee3b7207b; käännös 868821345 09.50; app lokit/natiiviseppa-app-165-8c35a7cf6; muutosloki
-Julkaisijalla). AVOINNA: juna/b13 → 8c35a7cf (Julkaisijan ajoitus, LS1:n simuvuoro) + juna.log; Mac TF 165 -odottaja iOS-ajon alkuajalla.
+Julkaisijalla). VALMIS 10.07: iOS TF 165 (37740538758) + Mac TF 165 (37741564392) ladattu, juna/b13 = 8c35a7cf, T7-asennus OK.
+JUNA 166 -ehdokkaat (PT:n lista auki, runkoa ei vielä): Siirtoseppä historia-valot 0d5c33250 (v44z 1499), LS1 juna-166 67f6eaab5 (⊇ 4d62e0675); tulossa LS1 latauskuvan kytkentä + ukkosen äänet.
 
 ## TILA 8.10. 07.4x
 
