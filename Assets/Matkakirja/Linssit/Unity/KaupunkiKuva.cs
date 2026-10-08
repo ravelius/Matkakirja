@@ -18,6 +18,7 @@
 // väri, aamulla ja illalla auringon puolella kajo). Bloom vain jos Hehku > 0 (iPad-muistimittaus ensin). Viritys:
 // "vuorokausi 0|1 tunti 7.5 kupoli 0|1" asetustiedostossa (tunti = paikallinen aurinkotunti, oletus nykyhetki).
 using CesiumForUnity;
+using Matkakirja.Linssit;
 using Matkakirja.Linssit.Kierros;
 using UnityEngine;
 using UnityEngine.Rendering;
@@ -129,11 +130,13 @@ namespace Matkakirja.Natiivi
             QualitySettings.anisotropicFiltering = AnisotropicFiltering.ForceEnable;
             Texture.SetGlobalAnisotropicFilteringLimits(8, 16);
 
-            if (Msaa > 1 && GraphicsSettings.currentRenderPipeline is UniversalRenderPipelineAsset urp)
-            { vanhaMsaa = urp.msaaSampleCount; urp.msaaSampleCount = Msaa; }
-            vanhaAllowMsaa = kamera.allowMSAA; kamera.allowMSAA = true;
+            if (GraphicsSettings.currentRenderPipeline is UniversalRenderPipelineAsset urp) vanhaMsaa = urp.msaaSampleCount;
+            vanhaAllowMsaa = kamera.allowMSAA;
             var lisa = kamera.GetUniversalAdditionalCameraData();
             if (lisa != null) { vanhaJalki = lisa.renderPostProcessing; if (Volyymi) lisa.renderPostProcessing = true; }
+            kameraNyt = kamera;
+            AsetaReunat();
+            Laatutaso.Muuttui -= AsetaReunat; Laatutaso.Muuttui += AsetaReunat;
 
             if (Volyymi) LuoVolyymi();
             ajo = new GameObject("KaupunkiKuva").AddComponent<KaupunkiKuvaAjo>();
@@ -141,10 +144,31 @@ namespace Matkakirja.Natiivi
             Debug.Log($"MATKAKIRJA kaupunki: kuva päällä (SSE {(k.Kaytossa == CesiumKaupunki.Lahde.Google ? GoogleSse : MaastoSse)}/{RakennusSse}, MSAA {Msaa}x, aniso 8–16, sumu {(Sumu ? $"{AlkuKerroin}×/{AlkuMinM} m–{LoppuKerroin}×/{LoppuMinM} m" : "pois")}, {(!Volyymi ? "ei Volumea" : Savytys ? "Neutral" : "ei sävytystä")}, kontrasti {Kontrasti}, saturaatio {Saturaatio}, hehku {Hehku})");
         }
 
+        // AJALLINEN REUNANPEHMENNYS (Natiiviseppä 8.10., juna 169/170): Laatutaso.Ajallinen → MSAA 1 ja TAA kaupunkikameralle
+        // (jälkikäsittely päälle; overlayt KaupunkiKoosteessa, joten pinoa ei ole); muuten MSAA Msaa× kuten ennen. Muuttui (lämpö,
+        // pakotus) vaihtaa kesken näkymän; kori, sää ja kortti siirtyvät koosteen ja pinon välillä omalla tarkistuksellaan.
+        static Camera kameraNyt;
+        /// <summary>Komento `opas ajallinen`: reunanpehmennys heti kesken näkymän (overlayt vaihtavat tilaa omalla tarkistuksellaan).</summary>
+        public static void PaivitaReunat() => AsetaReunat();
+        static void AsetaReunat()
+        {
+            var kamera = kameraNyt;
+            if (kamera == null) return;
+            bool taa = KaupunkiKooste.Kaytossa;
+            if (GraphicsSettings.currentRenderPipeline is UniversalRenderPipelineAsset urp) urp.msaaSampleCount = taa ? 1 : Mathf.Max(1, Msaa);
+            if (taa) { var d = kamera.GetUniversalAdditionalCameraData(); if (d != null) d.renderPostProcessing = true; }
+            Laatutaso.KaytaAjallista(kamera, taa);
+            kamera.allowMSAA = !taa;
+            Debug.Log($"MATKAKIRJA kaupunki: reunanpehmennys {(taa ? "ajallinen (TAA, MSAA 1, overlayt koosteessa)" : $"MSAA {Msaa}x")}");
+        }
+
         static void Suljettu(CesiumKaupunki k)
         {
             if (!tallennettu) return;
             tallennettu = false;
+            Laatutaso.Muuttui -= AsetaReunat;
+            if (kameraNyt != null) Laatutaso.KaytaAjallista(kameraNyt, false);
+            kameraNyt = null;
             GoogleSse = 16f; MaastoSse = 10f; RakennusSse = 16f; Msaa = 4; // asetustiedosto luetaan uudelleen seuraavassa avauksessa
             AlkuKerroin = 15f; LoppuKerroin = 80f; AlkuMinM = 3000f; LoppuMinM = 15000f; Sumu = false; Savytys = false; Volyymi = false;
             Kontrasti = 12f; Saturaatio = 10f; Hehku = 0f; VuorokausiPaalla = true; Kupoli = false; Tunti = -1f; asetuksetMuokattu = default;

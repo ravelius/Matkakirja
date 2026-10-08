@@ -24,6 +24,7 @@
 using System.IO;
 using System.Threading.Tasks;
 using Matkakirja.Linssit.Dioraama;
+using Matkakirja.Linssit;
 using Matkakirja.Linssit.Kierros;
 using UnityEngine;
 using UnityEngine.Rendering;
@@ -107,6 +108,9 @@ namespace Matkakirja.Natiivi
         Vector3 edPaikka, edNopeus, kiihtyvyys;
         int historia;
         bool kaytossa;
+        /// <summary>TAA (Laatutaso.Ajallinen, Natiiviseppä 8.10.): korin kamera piirtää KaupunkiKoosteeseen pinon sijaan (ei pehmennystä
+        /// eikä väreilyä); Natiivi-UI näyttää koosteen UI:n alimpana kerroksena.</summary>
+        bool koosteessa;
 
         public bool Nakyy => kaytossa && juuri != null && juuri.gameObject.activeSelf;
         /// <summary>Testi (Editori KoriKoosteTesti): korin oma kamera ja koostekamera.</summary>
@@ -118,7 +122,7 @@ namespace Matkakirja.Natiivi
         public void Kayta(bool paalla, Camera kamera)
         {
             paalla &= Paalla && kamera != null;
-            if (paalla && (perus != kamera || overlay == null)) Luo(kamera);
+            if (paalla && (perus != kamera || overlay == null || koosteessa != KaupunkiKooste.Kaytossa)) Luo(kamera);
             if (paalla && overlay != null && rt != null) { VarmistaKohde(); Itsetarkistus(); }   // ruudun koko (kierto) ennen piirtoa
             if (paalla == kaytossa) return;
             kaytossa = paalla;
@@ -138,7 +142,7 @@ namespace Matkakirja.Natiivi
                 var d = perus.GetUniversalAdditionalCameraData();
                 if (d != null) d.cameraStack.Remove(kooste);
             }
-            if (overlay != null) { overlay.targetTexture = null; Object.Destroy(overlay.gameObject); }
+            if (overlay != null) { KaupunkiKooste.Poista(overlay); overlay.targetTexture = null; Object.Destroy(overlay.gameObject); }
             if (kooste != null) Object.Destroy(kooste.gameObject);
             if (rt != null) { rt.Release(); Object.Destroy(rt); }
             if (variKopio) { VariKuvanTarve.Vapauta(variKopioKamera); variKopio = false; }
@@ -161,6 +165,13 @@ namespace Matkakirja.Natiivi
             var go = new GameObject("Pallon kori (overlay)") { layer = Kerros };
             go.transform.SetParent(kamera.transform, false);
             overlay = go.AddComponent<Camera>();
+            koosteessa = KaupunkiKooste.Kaytossa;
+            if (koosteessa)
+            {
+                overlay.cullingMask = 1 << Kerros; overlay.nearClipPlane = 0.05f; overlay.farClipPlane = KaukoM;
+                KaupunkiKooste.Lisaa(overlay, KaupunkiKooste.Kori);
+                goto materiaalit;
+            }
             if (pehmeaEiToimi) { SuoraTila(kamera); goto materiaalit; }
             overlay.clearFlags = CameraClearFlags.SolidColor;
             overlay.backgroundColor = Color.clear;
