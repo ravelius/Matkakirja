@@ -49,10 +49,12 @@ namespace Matkakirja.Natiivi
         public void Avaa(Transform vanhempi, double lat, double lon, int kerros)
         {
             Sulje();
+            Debug.Log($"MATKAKIRJA kaupunki: vesi avaus {lat:F4},{lon:F4}, pakotettu {(Pakotettu?.ToString() ?? "-")}, juuri {JuuriUrl()}");
             if (Pakotettu == false || vanhempi == null) return;
             this.kerros = kerros; vanhempi0 = vanhempi;
             int tama = ++avaus;
-            LinssiOhjain.Instanssi?.StartCoroutine(Lataa(JuuriUrl(), lat, lon, tama));
+            if (LinssiOhjain.Instanssi == null) { Debug.Log("MATKAKIRJA kaupunki: vesi: ei korutiinin isäntää (LinssiOhjain)"); return; }
+            LinssiOhjain.Instanssi.StartCoroutine(Lataa(JuuriUrl(), lat, lon, tama));
         }
         Transform vanhempi0;
 
@@ -87,6 +89,7 @@ namespace Matkakirja.Natiivi
                 }
                 else kirjaa?.Invoke("kaupunki: vesi: index-v2.json / index.json ei latautunut");
             }
+            Debug.Log($"MATKAKIRJA kaupunki: vesi indeksi {(indeksi != null ? "ok" : "PUUTTUU")}, kohde {k ?? "-"}");
             if (k == null || tama != avaus || Pakotettu == null && Array.IndexOf(OletusKohteet, k) < 0) yield break;
             string pohja = juuriUrl + k;
             VesiVerkko l = null, ka = null; (double Lat, double Lon)? origo = null;
@@ -96,7 +99,7 @@ namespace Matkakirja.Natiivi
                 using (var r = UnityWebRequest.Get($"{pohja}-{ruutu}.json")) { r.timeout = 20; yield return r.SendWebRequest(); if (r.result == UnityWebRequest.Result.Success) json = r.downloadHandler.text; }
                 using (var r = UnityWebRequest.Get($"{pohja}-{ruutu}.bytes")) { r.timeout = 60; yield return r.SendWebRequest(); if (r.result == UnityWebRequest.Result.Success) tavut = r.downloadHandler.data; }
                 if (tama != avaus) yield break;
-                if (json == null || tavut == null) { kirjaa?.Invoke($"kaupunki: vesi {pohja}-{ruutu} ei latautunut"); continue; }
+                if (json == null || tavut == null) { Debug.Log($"MATKAKIRJA kaupunki: vesi {pohja}-{ruutu} ei latautunut"); continue; }
                 var v = Jasenna(json, tavut, out var o);
                 origo ??= o;
                 if (lahiTaso) l = v; else ka = v;
@@ -112,7 +115,7 @@ namespace Matkakirja.Natiivi
             if (sh != null) mat = new Material(sh) { name = "KaupunkiVesi" };
             lahi = l; kauka = ka;
             KrediittiNyt = string.IsNullOrEmpty(krediitti) ? "Vesi: © OpenStreetMap contributors, ESA WorldCover" : krediitti;
-            kirjaa?.Invoke($"kaupunki: vesi ladattu ({lahi?.Palat.Length ?? 0} lähi- ja {kauka?.Palat.Length ?? 0} kaukopalaa, nosto {NostoM:F1} m)");
+            Debug.Log($"MATKAKIRJA kaupunki: vesi ladattu ({lahi?.Palat.Length ?? 0} lähi- ja {kauka?.Palat.Length ?? 0} kaukopalaa, nosto {NostoM:F1} m)");
         }
 
         VesiVerkko Jasenna(string json, byte[] tavut, out (double Lat, double Lon)? origo)
