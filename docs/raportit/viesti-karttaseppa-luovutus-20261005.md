@@ -1,3 +1,14 @@
+# TILANNE 9.10. klo 00.5x
+
+- **Vesi index-v3 ÄMPÄRISSÄ 00.16** (todennettu): tukholma2 0,4, pariisi2 2,0.
+- **POHJAPIIRROKSET (LS1/omistaja, juna 170):** `vesimaski/jalanjaljet.mjs <kaupunki-id> --pbf <alue.pbf>`. Lähde: opas-kierrokset-20261008.json (id = Wikidata, luokka); ID:t samat kuin pallo-37-listassa (tarkistettu).
+  Tukholma ja Pariisi valmiit → _tyo/karttaseppa/jalanjaljet-20261009/. LS1:lle ilmoitettu.
+  **Loput 35:** Geofabrik-lataus `lahteet/pbf/lataa.sh` (PID 24774, alueet.txt: kaupunki → alue, 30 aluetta, lataus.log). Sitten silmukka:
+  `for k in $(awk '{print $1}' alueet.txt); do node jalanjaljet.mjs $k --pbf lahteet/pbf/<alue>-latest.osm.pbf --ulos jalanjaljet; done` → kopio jalanjaljet-20261009/ ja rivi LS1:lle.
+- Talvi3 käynnissä (00.14 alkaen).
+
+---
+
 # TILANNE 9.10. klo 00.1x
 
 - **Talvi3 jatkui käsin 00.14** (TF 167 ladattu 23.26, Laitetestaajan kaappaus valmis 00.13). Varmuusjatko ohitettiin pito-prosesseilla (perl sleep, päättyvät 00.16).
