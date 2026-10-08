@@ -3,7 +3,16 @@
 Luovuttaja: Natiiviseppä (Opus 5.5, high). Edellinen: viesti-natiiviseppa-luovutus-20261005-iltapaiva.md (käytännöt voimassa).
 Tarkempi lokirivistö: muisti natiiviseppa-tila-20261003.md (uusin rivi ylimpänä).
 
-## TILA 9.10. 01.3x (UUSIN)
+## TILA 9.10. 02.0x (UUSIN)
+JUNA 169 runko natiiviseppa/juna-169 **6f193cd9d** (+ Siirtoseppä 7b8b4353f, NUI 351657a2c metro-kyltti ⊇ 2e519d7a7); simukäännös 42d7035ab 01.40 0 shader
+erroria (6f193cd9d = + NUI, vain C#); testit 453/419/1088. LUKITUS: LS1:n lopullinen 169-SHA (⊇ sumennus-169 8aef6a2ff) tai TAKARAJA 06.30 (herätys
+06.25) ilman sitä; muutosloki PT:ltä; TF aamulla. LS2 vahvisti linnan avautuvan (saapuminen 26,5 s).
+JUNA 170 (kootaan 169:n jälkeen): LS1 avaus-170 db9ad39ca (⊇ kompassi-glb-170 94a9410e4 ⊇ muotokorostus ⊇ kompassi), NUI c247d7872 (⊇ 552b2b52b ⊇ 501cd4c71
+⊇ 179086094), LS2 laivat-170 4b6f0d820 (+ lopullinen pilvi-SHA tulossa; ehto varjostimet), Siirtoseppä juna170 2124ddf2f (⊇ 7b8b4353f), OMA filmi-170
+916a367cb (elokuvamainen jälkikäsittely, OMISTAJA HYVÄKSYI; kuvapari skenaariot proto-3d/tyokalut/natiiviseppa-ajot/sk-filmi170-{tukholma,pariisi}.txt,
+käännös + iPad13-simu pyydetty Julkaisijalta). Ehdot: KaupunkiYovalot + LS2-varjostimet kääntyvät; kuvaparit päivä/yö PT:lle.
+
+## TILA 9.10. 01.3x
 JUNA 169 runko natiiviseppa/juna-169 **a38cb271a** (+ NUI 2e519d7a7 ⊇ 6b087ec39 ⊇ 9649b22b8, + LS1 avaus-169 42f2ec5b2 välivaihe); testit 453/419/1088
 (Linssit-satunnaishylkäys kerran, uusinta läpi), tarkista 0. EI LUKITA vielä: odottaa LS1:n lopullista 169-SHA:ta (⊇ sumennus-169 8aef6a2ff;
 siltalauseet, kohdekaari, kierto, siirtymä, Concorde, kuvanoston kytkentä) ja Siirtoseppä 7cb1335bc (v45t/v45u, testiluvut Siirtosepältä).
