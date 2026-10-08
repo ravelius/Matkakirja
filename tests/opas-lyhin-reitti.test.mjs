@@ -38,3 +38,18 @@ test('kiinteä ensimmäinen ja reunatapaukset', () => {
   assert.deepEqual(lyhinReitti([PARIISI[0]], null).map((x) => x.id), ['Eiffel-torni']);
   assert.equal(lyhinReitti(PARIISI, null)[0].nimi, 'Eiffel-torni', 'ilman sijaintia alku listan tärkein');
 });
+
+// PIENIN KIERTO (omistaja 8.10.2026; Linssisepän malli docs/raportit/kierrosjarjestykset-20261008.md).
+test('pieninKiertoReitti: 1. kohde pysyy, kierto ei kasva, matka ≤ 130 % lyhimmästä', async () => {
+  const { pieninKiertoReitti, reitinKierto, lyhinReitti } = await import('../tools/pollo/opas.js');
+  // Neliön kulmat + keskipiste: lyhin reitti siksakkaa, pienin kierto kiertää kehää.
+  const p = [{ id: 'A', lat: 0, lon: 0 }, { id: 'B', lat: 0.01, lon: 0.01 }, { id: 'C', lat: 0, lon: 0.01 }, { id: 'D', lat: 0.01, lon: 0 },
+    { id: 'E', lat: 0.005, lon: 0.005 }];
+  const alku = { lat: -0.01, lon: -0.01 };
+  const lyhin = lyhinReitti(p, alku, { ensimmainen: p[0] }), uusi = pieninKiertoReitti(p, alku, { ensimmainen: p[0] });
+  assert.equal(uusi[0].id, 'A');
+  assert.deepEqual([...uusi].map((x) => x.id).sort(), ['A', 'B', 'C', 'D', 'E']);
+  assert.ok(reitinKierto(alku, uusi).kierto <= reitinKierto(alku, lyhin).kierto + 1e-9);
+  assert.ok(reitinKierto(alku, uusi).matka <= reitinKierto(alku, lyhin).matka * 1.3 + 1e-9);
+  assert.deepEqual(pieninKiertoReitti(p.slice(0, 2), alku).length, 2, 'alle 3 kohdetta ennallaan');
+});

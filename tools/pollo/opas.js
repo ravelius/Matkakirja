@@ -571,6 +571,47 @@ export function lyhinReitti(paikat, alku = null, { ensimmainen = null } = {}) {
 }
 
 /*
+ * PIENIN KIERTO (omistaja 8.10.2026 08.3x/08.4x: kameran kierto oman akselinsa ympäri väsyttää eniten; järjestystä saa
+ * muuttaa, jos reitti järkevöityy; Linssisepän malli docs/raportit/kierrosjarjestykset-20261008.md). Kamera katsoo
+ * kohdetta tulosuunnasta, joten kierto = lentosuuntien muutokset avausnäkymän suunnasta (40°) ensimmäiseen osuuteen ja
+ * osuuksien välillä. Ensimmäinen kohde pysyy (esittelyn "Kierros alkaa …"), muut kaikki järjestykset; pienin kierto,
+ * tasatilanteessa lyhin matka; matka enintään 130 % lyhimmästä reitistä (lyhinReitti). Kahdeksalla kohteella 7! = 5 040
+ * järjestystä (~1 ms).
+ */
+export const AVAUS_SUUNTA_AST = 40;   // natiivin OpasSilmukka.Avauskuva
+const suuntaAst = (a, b) => {
+  const r = Math.PI / 180, f1 = a.lat * r, f2 = b.lat * r, dl = (b.lon - a.lon) * r;
+  return (Math.atan2(Math.sin(dl) * Math.cos(f2), Math.cos(f1) * Math.sin(f2) - Math.sin(f1) * Math.cos(f2) * Math.cos(dl)) / r + 360) % 360;
+};
+const kulmaEro = (a, b) => { const d = Math.abs(a - b) % 360; return d > 180 ? 360 - d : d; };
+/** Reitin kokonaiskierto (°) ja matka (m) alkupisteestä (kamera tai kaupungin keskipiste). */
+export function reitinKierto(alku, reitti) {
+  let kierto = 0, matka = 0, ed = AVAUS_SUUNTA_AST, p = alku ?? reitti[0];
+  for (const k of reitti) {
+    if (k === p) continue;
+    const s = suuntaAst(p, k); kierto += kulmaEro(ed, s); ed = s; matka += etaisyys(p, k); p = k;
+  }
+  return { kierto, matka };
+}
+function* jarjestykset(a) {
+  if (a.length <= 1) { yield a; return; }
+  for (let i = 0; i < a.length; i += 1) for (const r of jarjestykset([...a.slice(0, i), ...a.slice(i + 1)])) yield [a[i], ...r];
+}
+export function pieninKiertoReitti(paikat, alku = null, { ensimmainen = null, matkaKerroin = 1.3 } = {}) {
+  const lyhin = lyhinReitti(paikat, alku, { ensimmainen });
+  if (lyhin.length < 3 || lyhin.length > 9) return lyhin;
+  const raja = reitinKierto(alku, lyhin).matka * matkaKerroin;
+  let paras = null;
+  for (const loput of jarjestykset(lyhin.slice(1))) {
+    const reitti = [lyhin[0], ...loput];
+    const m = reitinKierto(alku, reitti);
+    if (m.matka > raja + 1e-9) continue;
+    if (!paras || m.kierto < paras.m.kierto - 1e-6 || (Math.abs(m.kierto - paras.m.kierto) < 1e-6 && m.matka < paras.m.matka)) paras = { reitti, m };
+  }
+  return paras?.reitti ?? lyhin;
+}
+
+/*
  * SUUNNANVAIHTOSIRU (Päätoimittaja 5.10.2026 ilta): toinen vaihtoehto valitaan koodissa listasta, ei mallilta (malli
  * tarjosi lähes aina "Näytä jotain modernia"). Ensin sellainen, jota istunnossa ei ole vielä tarjottu; sama ei koskaan
  * kahdesti peräkkäin; ei paikkaa vastaavaa (puistossa ei "Jotain vihreää"). Kaikkien jälkeen kierros alkaa alusta.

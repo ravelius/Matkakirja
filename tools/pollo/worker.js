@@ -22,7 +22,7 @@ import { kirjaaKaynti, lueKaynnit } from './kaynnit.js';
 import {
   OPAS_KEHOTE, siivoaOpasPyynto, kaupunginSijainti, paikanKoordinaatit, kaydytNimiksi, oppaanViesti, jasennaOpas,
   kaupunginAineisto, aineistoLohko, kuvatPaikalle, wikidataKuva, lisaKuvatValimuistilla, yhdistaKuvat, OPAS_KIERROS_KEHOTE, kierroksenViesti, jasennaKierros,
-  seuraavaKierrokselta, paikanNimi, onKierrosToive, ESITTELE_KAUPUNKI, LISAA_KAUPUNKIA, KIERROKSEN_PITUUS, lyhinReitti,
+  seuraavaKierrokselta, paikanNimi, onKierrosToive, ESITTELE_KAUPUNKI, LISAA_KAUPUNKIA, KIERROKSEN_PITUUS, lyhinReitti, pieninKiertoReitti,
   seuraavaSuunta, SUUNNANVAIHDOT, paikanKorostus, siltaRyhma, kuvallaTekijatiedot, kohteetErana, kohteetLahella, etaisyys,
 } from './opas.js';
 import { OPAS_AINEISTO } from './opas-aineisto.js';
@@ -3099,7 +3099,8 @@ const sallitutKohteet = (env, tulos, kaupunki = null) => ({ ...tulos, kohteet: (
 /** Liiku-listan Kaupunkikierros (#4138:n jatko, LS1 7.10.): avauksen lupaamasta kohteesta, muuten sijaintia lähimmästä. */
 function liikunKierros(lukitut, alku, alkuId) {
   const kohteet = lukitut.slice(0, KIERROKSEN_PITUUS);
-  return lyhinReitti(kohteet, alku, { ensimmainen: kohteet.find((k) => k.id === alkuId) ?? null }).map((k) => k.id);
+  // Pienin kameran kierto (omistaja 8.10.; opas.js pieninKiertoReitti), 1. kohde esittelyn alusta.
+  return pieninKiertoReitti(kohteet, alku, { ensimmainen: kohteet.find((k) => k.id === alkuId) ?? null }).map((k) => k.id);
 }
 
 async function hoidaOppaanKohteet(pyynto, env, kors, ctx) {
@@ -3561,7 +3562,7 @@ async function hoidaOpas(pyynto, env, kors, runko, ctx) {
   const alkuId = aloitaKierros && listatila && !omat ? esittelynAlku(await oppaanEsittely(env, p.kaupunki), p.kaupunki) : null;
   const listanKierros = aloitaKierros && listatila
     ? (omat ? omat.kierros.map((id) => lukitut.find((k) => k.id === id)).filter(Boolean)
-      : lyhinReitti(kierroksenKohteet, sijainti, { ensimmainen: kierroksenKohteet.find((k) => k.id === alkuId) ?? null })) : null;
+      : pieninKiertoReitti(kierroksenKohteet, sijainti, { ensimmainen: kierroksenKohteet.find((k) => k.id === alkuId) ?? null })) : null;
   const suunnittelu = aloitaKierros && !listanKierros ? (async () => {
     try {
       const suunnitelma = jasennaKierros((await kysyMallitiedot(env, {

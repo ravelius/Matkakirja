@@ -9,8 +9,9 @@ export const OPAS_OMAT = Object.freeze({
   giza: {
     nimi: 'Gizan pyramidit',
     kokeilu: true,   // vain otsakkeella x-matkakirja-kokeilu: giza (Päätoimittaja 7.10. 08.5x)
-    // LS1: Sfinksi → Khefren → Mykerinos → Kheops.
-    kierros: ['Q130958', 'Q208358', 'Q238623', 'Q37200'],
+    // Pienin kameran kierto (omistaja 8.10., opas.js pieninKiertoReitti): Sfinksi → Kheops → Khefren → Mykerinos
+    // (kierto 363° → 189°, matka 2,1 → 1,5 km; aiemmin LS1: Sfinksi → Khefren → Mykerinos → Kheops).
+    kierros: ['Q130958', 'Q37200', 'Q208358', 'Q238623'],
     // Kerronta: Opus-kirjoittaja + -tarkistaja 7.10. (lähteet ja muutokset proto-3d/_tyo/opas-esittely/korjattu/giza*).
     kohteet: [
       {"id":"Q130958","nimi":"Gizan suuri sfinksi","lat":29.97528,"lon":31.13778,"koko_m":73,"korkeus_m":20,"luokka":"muu","kuvaus":"Kallioon veistetty ihmispäinen leijona","teksti":"Gizan suuri sfinksi makaa pyramidien edustalla kaivannossa, sillä se on veistetty suoraan tasangon kalkkikivikalliosta louhimalla kivi sen ympäriltä pois. Leijonanruumis on seitsemänkymmentäkolme metriä pitkä, ja ihmiskasvot katsovat itään kohti nousevaa aurinkoa ja Gizan kaupunkia, joka alkaa heti muinaisalueen laidalta. Kasvojen uskotaan esittävän faarao Khefreniä tai hänen isäänsä Kheopsia, mutta tutkijat eivät ole asiasta yksimielisiä. Nenää eivät tuhonneet Napoleonin sotilaat tykinkuulilla, kuten usein kerrotaan, sillä se oli vaurioitunut jo 900-luvulla. Kasvoissa näkyy yhä jälkiä pitkistä tangoista tai taltoista, joilla nenä väännettiin irti.","lyhyt":"Gizan suuren sfinksin etutassujen välissä on graniittinen unisteela. Sen mukaan nuori prinssi Thutmosis nukahti metsästysretkellä sfinksin varjoon, ja unessa sfinksi lupasi hänelle kuninkuuden, jos hän kaivaisi sen esiin hiekasta. Prinssistä tuli faarao Thutmosis neljäs, joka pystytti steelan ensimmäisenä hallitusvuotenaan.","syventava":"Kuka hakkasi sfinksin nenän irti?"},
