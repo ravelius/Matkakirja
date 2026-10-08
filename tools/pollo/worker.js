@@ -3360,10 +3360,15 @@ async function oppaanRajatYlittyvat(pyynto, env, kors, ctx) {
  * ja ääni samasta tekstistä (opas/<sha>.mp3), joten toinen kysyjä ei maksa mallia eikä ääntä. Vapaa teksti (mikrofoni,
  * näppäimistö) kysytään aina mallilta. Keskusteluhistoria ei vaikuta valmiin kysymyksen vastaukseen. Testiliikenne lukee
  * talletetun mutta ei kirjoita (sen vastaus voi olla testimallin).
+ * TURVAPROFIILI (Päätoimittaja 8.10., ehto b): jaetut vastaukset tuotetaan AINA alaikäisprofiililla — KESKUSTELU_KEHOTE:n
+ * TURVALLISUUS-osio (#4168) on ainoa profiili, ja syötesuodatin (tarkistaSyote) ajetaan ennen välimuistia. Profiili on
+ * avaimessa, ja jos kehotteesta puuttuu alaikäisten turvaosio, jaettua vastausta ei lueta eikä kirjoiteta.
  */
+const JAETTU_TURVAPROFIILI = 'alaikainen';
+const ALAIKAISTEN_TURVAOSIO = 'TURVALLISUUS. Osa kuulijoista on alaikäisiä.';
 const kysymysNormaali = (t) => String(t ?? '').trim().toLowerCase().replace(/\s+/g, ' ');
 async function valmiinKysymyksenAvain(env, p) {
-  if (!p.kaupunki || !p.paikka?.id || !p.kysymys || !env.PUHE_R2) return null;
+  if (!p.kaupunki || !p.paikka?.id || !p.kysymys || !env.PUHE_R2 || !KESKUSTELU_KEHOTE.includes(ALAIKAISTEN_TURVAOSIO)) return null;
   const haettu = kysymysNormaali(p.kysymys);
   const valmis = valmisKohde(await oppaanEsittely(env, p.kaupunki), p.paikka.id);
   let lista = Array.isArray(valmis?.kysymykset) ? valmis.kysymykset : [];
@@ -3373,7 +3378,7 @@ async function valmiinKysymyksenAvain(env, p) {
   if (!Array.isArray(lista) || !lista.some((k) => kysymysNormaali(k) === haettu)) return null;
   const tiiviste = async (t) => sha256Heksa(new TextEncoder().encode(t));
   const versio = (await tiiviste(KESKUSTELU_KEHOTE)).slice(0, 8);
-  return `opas:kysyvastaus:${versio}:${kysymysNormaali(p.kaupunki)}:${p.paikka.id}:${(await tiiviste(haettu)).slice(0, 16)}`;
+  return `opas:kysyvastaus:${JAETTU_TURVAPROFIILI}:${versio}:fi:${kysymysNormaali(p.kaupunki)}:${p.paikka.id}:${(await tiiviste(haettu)).slice(0, 16)}`;
 }
 
 /** POST /opas/kysy: oppaan keskustelu (Kysy-siru, mikrofoni, näppäimistö) → vastaus + ääni + toiminto + 2 jatkoa. */
