@@ -6,6 +6,12 @@ worktreet /Users/Shared/Claude/wt/proto-natiivi-ui-<aihe>. Käännös: lokit/nat
 Simu vain Julkaisijan "SIMU NYT" -viestistä, oma iPhone FB234D08-4693-4496-9C7A-6C7C15B03963, iPad
 AD119F7B-A2A2-43EE-8769-7326DD757F89; lopuksi sammutus ja "simu vapaa".
 
+## 8.10. klo 07.3x: PULUN VIHJE NÄPPÄIMELLÄ (pelattavuusmalli kohta 6), kuittausta odottaa
+
+natiivi-ui/seikkailu-pulu-nappain f2587529 (8aa55e02:n päällä, worktree wt/proto-natiivi-ui-seikkailutoiminto): Mac P ja
+peliohjaimen Y toimivat seikkailussa kuten Pulun reunakuvan napautus (SeikkailuTapit.LuePuluNappain → PuluKaappaa). Testit läpi,
+kuittauspyyntö lähetettiin Päätoimittajalle 07.3x. Kuittauksen jälkeen SHA Natiivisepälle seuraavaan junaan.
+
 ## 7.10. klo 21.4x: OMISTAJAN PARIISI-PALAUTE JUNAAN 162 (SHA Natiivisepälle 21.4x)
 
 natiivi-ui/pariisi-otsikko a27f2e2c (natiiviseppa/juna-162-koe 8b3ffb91:n päällä; worktree wt/proto-natiivi-ui-otsikko):
