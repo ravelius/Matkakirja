@@ -474,7 +474,8 @@ namespace Matkakirja.Natiivi
             KameraKuvattu?.Invoke(kierto != null ? kierto.GetComponent<Camera>() : null, silmukka);
             // Esilataus: lennon aikana laskeutumiskehys, muuten esihaetun kohteen kehys (OpasKuvaus, sama kuin lento).
             var esi = silmukka.Esilataus(MaaKorkeus);
-            if (esi.HasValue) kaupunki.AsetaEsikamera(esi.Value);
+            // Siirtoruudun aikana 1. kohde puolikkaalla tarkkuudella: yleiskuva saa kaistan, tarkka kohde latautuu laskeutumisessa.
+            if (esi.HasValue) kaupunki.AsetaEsikamera(esi.Value, silmukka.Siirtymassa ? CesiumKaupunki.ReittiSkaala : 1f);
             else kaupunki.EsikameraPois();   // ei esilattavaa: piilokamera ei pidä vanhoja laattoja elossa
             // Reitin välinäkymät (Päätoimittaja 8.10. 07.4x: sumea kortteli lennon alussa); 0 näkymää → reittikamerat pois.
             kaupunki.AsetaReittikamerat(reittiNakymat, silmukka.ReittiEsilataus(MaaKorkeus, reittiNakymat));
@@ -2435,7 +2436,8 @@ namespace Matkakirja.Natiivi
             y?.Peite(false);
             o.Kirjaa($"opas: peite pois {Time.realtimeSinceStartup - t0:F1} s, laatat {kaupunki.Latausaste:F0} %");
         }
-        const float PeiteRaja = 35f, PeiteMaxS = 4f;
+        // Päätoimittaja 8.10. 09.0x: peite pois vasta ≥ 95 % (yleiskuva ja 1. kohde), turvaraja ~12 s (oli 35 % / 4 s).
+        const float PeiteRaja = 95f, PeiteMaxS = 12f;
 
         public void Sulje()
         {

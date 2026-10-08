@@ -674,11 +674,12 @@ namespace Matkakirja.Natiivi
         //      Googlen otsakkeita ("your client must respect the max-age value"; laatat: private, max-age=14400, must-revalidate,
         //      ETag → If-None-Match). CesiumRuntimeSettings 1024/1000 rajaa vain koon, ei pidennä säilytysaikaa.
         /// <summary>Esilatauskamera kuvakulmaan: sama laskenta kuin PalloKierto (kohde, suuntima, kallistus pystystä, etäisyys).</summary>
-        public void AsetaEsikamera(Kuvakulma k)
+        public void AsetaEsikamera(Kuvakulma k, float skaala = 1f)
         {
             if (esikamera == null || georef == null) return;
             if (hallinta != null && !hallinta.additionalCameras.Contains(esikamera)) hallinta.additionalCameras.Add(esikamera);
             Suuntaa(esikamera, k);
+            if (skaala < 0.999f) { var r = esikamera.pixelRect; esikamera.pixelRect = new Rect(r.x, r.y, Mathf.Max(8f, r.width * skaala), Mathf.Max(8f, r.height * skaala)); }
         }
 
         /// <summary>
