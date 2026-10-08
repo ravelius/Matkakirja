@@ -3,7 +3,17 @@
 Luovuttaja: Natiiviseppä (Opus 5.5, high). Edellinen: viesti-natiiviseppa-luovutus-20261005-iltapaiva.md (käytännöt voimassa).
 Tarkempi lokirivistö: muisti natiiviseppa-tila-20261003.md (uusin rivi ylimpänä).
 
-## TILA 8.10. 09.5x (UUSIN)
+## TILA 8.10. 17.3x (UUSIN)
+
+**BUILD 166 = proto master bdd0e8c5fbad51b8028b0637e2f417e246d94884** (runko natiiviseppa/juna-166 0c7861567 = 8adddd2c + Siirtoseppä 0d5c33250
++ LS1 d3b9f48e8 + NUI a7953991e; käännös 93e99b966 17.22; omistajan pyynnöstä aikaistettu, yön juna peruttu; muutosloki 203 merkkiä).
+AVOINNA: Mac TF 166 -odottaja (iOS-alkuaika Julkaisijalta), juna/b13 → 0c786156 Julkaisijan luvalla.
+JUNA 167: NUI 24372c44d (Olavinlinnan latauskuva, KUITATTU). Jonon kohta 3 (mono-segv-juurikorjaus): proto-3d/tyokalut/burst-jit.sh (testattu)
++ valmis proto-kaanna.sh.juna167 (burst_jit_pois lukon sisällä, palautus trapissa) → vaihda elävään `mv proto-kaanna.sh.juna167 proto-kaanna.sh`
+junavahdin 166-asennuksen jälkeen ja ennen 167:ää; mac-kaanna.sh + TF-workflow samoin (Julkaisija). Segv-uusinta (Native Crash Reporting) jo elävänä.
+Worktreet: vain wt/proto-natiiviseppa-j144 jäljellä.
+
+## TILA 8.10. 09.5x
 
 **BUILD 164 VALMIS**: iOS TF 164 (37736834965) + Mac TF 164 (37738691540) ladattu; junavahti asensi 164:n 4 T7-simuun 09.41 (ensimmäinen
 T7-junaasennus OK; 09.27 satunnainen Unity mono-segv, uusinta onnistui). mac-tf.sh käyttää nyt proto-3d/tyokalut/mac-kaanna.sh (master-kopio).
