@@ -79,9 +79,11 @@ namespace Matkakirja.Natiivi
         public static Material LaattaMateriaali()
         {
             if (!Paalla || !Lataa()) return null;
+            if (laattaMat != null) return laattaMat;   // yksi materiaali koko istunnolle (LS1:n katselmointi: ei uutta joka avauksella)
             var sh = Shader.Find("Matkakirja/Linssit/IlmakehaLaatat");
-            return sh != null ? new Material(sh) { name = "CesiumKaupunki:ilmakehä" } : null;
+            return laattaMat = sh != null ? new Material(sh) { name = "CesiumKaupunki:ilmakehä" } : null;
         }
+        static Material laattaMat;
 
         public static string Kuvaus() => $"ilmakehä {(Paalla ? "päällä" : "pois")} (voima {voima:F2}, valotus {Valotus:F0}, LUTit {(ladattu ? "ladattu" : puuttuu ? "PUUTTUU" : "ei vielä")})";
     }
