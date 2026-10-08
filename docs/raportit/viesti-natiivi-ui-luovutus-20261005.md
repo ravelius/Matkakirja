@@ -6,6 +6,13 @@ worktreet /Users/Shared/Claude/wt/proto-natiivi-ui-<aihe>. Käännös: lokit/nat
 Simu vain Julkaisijan "SIMU NYT" -viestistä, oma iPhone FB234D08-4693-4496-9C7A-6C7C15B03963, iPad
 AD119F7B-A2A2-43EE-8769-7326DD757F89; lopuksi sammutus ja "simu vapaa".
 
+## TILA 8.10. klo 18.0x (JATKA TÄSTÄ)
+
+Juna 167 (Natiiviseppä kirjannut): linna-latauskuva 24372c44d. KUITTAUSTA ODOTTAA: natiivi-ui/olavinlinna-peli dcbaf72d3
+(juna-166:n päällä, worktree wt/proto-natiivi-ui-olavpeli): Pelit-välilehti LAUTAPELIT + VIDEOPELIT, Olavinlinna-rivi →
+SeikkailuTapit.AvaaPelattavaPala; kysymys VideopelitKaikille (nyt vain kehittäjä). Pallon kerroksellinen latauskuva: MINÄ kytken
+(LS1 sopi 17.5x, Kuvat.Hae R2:sta, juna 167) kun Codexin kerrokset tulevat. #4208 testit ajossa uudelleen (peruuntuivat) → mergeä.
+
 ## TILA 8.10. klo 17.3x (JATKA TÄSTÄ)
 
 Junassa 165: säätila 9417aa6ae. Junassa 166 (kuitattu): latauskuvat-liike a7953991e (pallon still Ken Burns).
