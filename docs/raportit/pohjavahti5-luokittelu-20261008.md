@@ -55,3 +55,16 @@ värinäytteillä ennen muutosta.
   alfalla; 34 uutta kuulto-tokenia; pahin ΔE 2,94. Testit 953/419/448, tarkista.sh 0.
 - ΔE 3–10 pinnoittain (kaappaukset/pohjavahti6-20261008/<pinta>.png; arvoja / deklaraatioita): Linssit 15/22, Lehti 14/19, Matkakirja 11/16,
   Kartta 8/9, Kysymys 3/3, Pulu 3/3, Kohdekartta 2/3, Sahke 1/1, Sahketehtava 1/1.
+
+## Pohjavahti 7: ΔE 3–10 Päätoimittajan säännöllä (8.10.2026)
+
+Proto 6677e9501 (e9c9de7a3:n päällä), web-PR #4225 (pinottu #4223:n päälle). Sääntö: ΔE < 7 → ehdotukseen, paitsi jos lämmin sävy
+muuttuisi neutraaliksi harmaaksi (tk-harmaa-*); ΔE ≥ 7 → ennalleen, paitsi fokusvärit → accent; erikoistokenit astro-valkoinen ja
+aktiivinen-oranssi.
+
+- Ehdotukseen 51 deklaraatiota, fokus → accent 2 (palaute- ja työhuonekenttä, ΔE 9,5 ja 4,3), erikoistokeneiksi 8 (astro-valkoinen 4,
+  aktiivinen-oranssi 4). Uusia tokeneita: 15 kuulto- ja 4 erikoistokenia.
+- Ennalleen 16, jokaisessa `/* väripoikkeus: syy (Päätoimittaja 8.10.2026) */`; pohjavahti.py ohittaa merkityt. Lämmin sävy → harmaa
+  6 (Kartta 1668, Kohdekartta 384, Lehti 637 ja 714, Linssit 1402, Matkakirja 3406); oma sävy ΔE ≥ 7 10 (Kartta 1311, 1317, 1586, 1682
+  ja 2104, Lehti 790, 793, 800 ja 815, Matkakirja 3296).
+- Testit: tarkista.sh 0, Linssit 953, Peli 419, Kartta 448; pohjavahti kirjattu.
