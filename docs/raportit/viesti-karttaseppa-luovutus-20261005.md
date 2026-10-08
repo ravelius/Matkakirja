@@ -1,3 +1,13 @@
+# TILANNE 8.10. klo 23.1x
+
+- **LS1:n löydös korjattu:** Pariisin kanavissa z 42–45 m (vesitason varapolku 0 m kapeille vesille).
+  vesipinta.mjs: varapolku (kaikki ruudut, sitten naapuritaso) ja katetut vedet pois LiDARista (pinta > taso + 3 m), varmuuskopio `vesipinta-ennen-kanavakorjausta.mjs`.
+  Uudet: _tyo/karttaseppa/vesi/pariisi2-6m/-16m ja tukholma2 (ajettu uudelleen samalla korjauksella); maskit päivitetty kaupunki-*-kansioihin.
+- **index-v3-paketti** (tee-vesi-index-v3.sh) sisältää nyt tukholma2 + pariisi2 ja tiedosto-kentät. Kehitys-A/B: vesi-koe-a (vanhat), vesi-koe-b (tukholma2 + pariisi2). LS2 ottaa kuvaparit noin 00.15.
+  **PT:n ennakkolupa:** kun kuvaparit ja Pariisin nostoarvo ovat kunnossa, `zsh tee-vesi-index-v3.sh <arvo>` → Julkaisija, rivi PT:lle.
+
+---
+
 # TILANNE 8.10. klo 22.5x
 
 - **Junaan 168 (kevyet, PT 22.49):**
