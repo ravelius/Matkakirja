@@ -6,6 +6,14 @@ worktreet /Users/Shared/Claude/wt/proto-natiivi-ui-<aihe>. Käännös: lokit/nat
 Simu vain Julkaisijan "SIMU NYT" -viestistä, oma iPhone FB234D08-4693-4496-9C7A-6C7C15B03963, iPad
 AD119F7B-A2A2-43EE-8769-7326DD757F89; lopuksi sammutus ja "simu vapaa".
 
+## 8.10. klo 11.0x: OLAVINLINNAN LATAUSKUVA (omistaja hyväksyi 10.5x) — ODOTTAA KUVIA
+
+Sisältökirjuri tilaa Codexilta kerrokset (tausta linna 1499 ilman lippua, lippu alfalla, valinnainen usva; 3 rajausta; lipun
+kiinnityspiste ja tangon nuppi/juuri pikseleinä). Kun polut tulevat: DioraamaTaulu nimiruutu (mk-astroavaus) → Latauskuva-pohja
+nimiOtsikon alle (Juuri ensimmäiseksi lapseksi), tausta TaustaLahentyy (Ken Burns), lippu Kerros ±0,6° / 7,5 s kääntö tangon
+juuresta, naru Koysi (Riippuma ~0,03); sovitus LatausLiike.Peita + kierto kuten pallossa. Ilman kuvia musta kuten nyt.
+Omistaja: mustat palkit korjautuneet ainakin iPhonessa (39d43932a).
+
 ## TILA 8.10. klo 10.xx (JATKA TÄSTÄ)
 
 PALLON SÄÄTILA (omistaja 8.10. 09.1x–09.2x, juna 166): proto natiivi-ui/saatila 9417aa6ae (worktree wt/proto-natiivi-ui-tkpariteetti;
