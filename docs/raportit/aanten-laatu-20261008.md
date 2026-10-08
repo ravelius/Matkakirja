@@ -202,3 +202,16 @@ Kaupunkien äänimaisemissa puhe ja liikenne kuuluvat asiaan (tori, kahvila, rai
 | muu | freesound-731249 | 131.03 | Speech 0.90; Clip-clop 0.34 | puhe 0.90 | 0 | -11.4 | -40.6 | – | ok |
 | muu | freesound-315660-ampari | 78.74 | Vehicle 0.84; Fixed-wing aircraft, airplane 0.67 | liikenne 0.84 | 0 | -0.8 | -37.9 | – | ok |
 | muu | candle-crackling | 30.0 | Rain on surface 0.44; Rain 0.25 | – | 0 | -3.3 | -35.6 | 40.8× / 9.8 dB | SAUMA naksahtaa (40,8×, +9,8 dB) |
+
+# Osa 3: ulkoisten kenttä-äänitysten lisenssit (8.10.2026 ilta, PT kiireellinen)
+
+- **Laajuus:** kaikki pelin ulkoiset äänet: js/aani-ehdokkaat.js (kaupunkien kenttä-äänitykset ja oletuskorit), jotka natiivi lukee sisältöpaketista ja AaniTaulut.cs:n oletuksista. Käytössä 154: 56 Freesound + 98 radio aporee (archive.org). Lisenssit on haettu Freesound-API:lla ja archive.orgin metadata-API:lla (robots sallii).
+- **Tulos:** 108 CC0/PD, 43 CC BY / BY-SA ja **3 CC BY-NC**: 723081 (basaari, kaupunki), 848927 (meri) ja 411996 (savanni). NC-äänet olivat vain oletuskoreissa ilman ehdokasriviä, joten webin lisenssiportti ei tuntenut niitä, eikä natiivissa ole porttia. Ne soivat tuotannossa noin 104 maisemakorissa.
+- **Korjaus:**
+  - web ravelius/Matkakirja#4229: NC pois, POISTETUT-bugi korjattu ja data/aanilahteet.json (43 nimeämistä).
+  - natiivi: proto-haara pelikoodari/maisemakori-nc (AaniTaulut.cs, aanijalki.json, paketin fixture).
+  - tuotannon sisältöpaketti korjautuu seuraavassa viennissä.
+- **Suora haku:** peli ei hae ääniä suoraan Freesoundista eikä archive.orgista. AaniOsoite.Url ohjaa ne omaan peiliin media.matkakirja.app/aanet/freesound-<id>.mp3 ja aporee-…, ja kaikki käytössä olevat peilit vastaavat 200. Alkuperäinen osoite on vain varareitti, jos peili puuttuu. Puuttuvat 7 aporee-peiliä ovat pelkästään työkalulistassa (tools/korvaajat.json), eivät pelissä.
+- **CC BY / BY-SA:** nimeämiset pitää näyttää ☰ › Lähteet -näkymässä (Natiivi-UI, data/aanilahteet.json). BY-SA koskee vain itse äänitiedostoa, eli muokattu ääni jaetaan samalla lisenssillä. Pelin koodiin se ei leviä.
+- **tulen-rasina.mp3 404 oli väärä hälytys:** se on testiaineiston (DioraamaTestit.cs) suhteellinen polku dioraamapaketin sisällä.
+- **AaniTaulut.cs on Pelikoodarin portti** (tools/natiivi-kultaiset: "Pelikoodari päivittää natiivin portin").
