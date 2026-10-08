@@ -1,3 +1,18 @@
+# TILANNE 8.10. klo 08.3x
+
+- **PT hyväksyi näytteen 4 linjan (08.2x) ja tilasi näytteen 5:** lumettoman värin sovitus naapuriruutuun (27° E:n pystyreuna) ja jyrkempi S-käyrä (puolivälin utu).
+  **Jos pystyreuna katoaa eikä uusia virheitä tule, koko ajo käynnistetään ilman uutta kysymystä.** Ajetaan rinnakkain muistin sallimissa rajoissa: PhysMem unused > 20 Gt, nice 15, ei junakäännösten aikana.
+  PT:lle lähetetään näytteen 5 kuvapari ja koko ajon arvioitu valmistumisaika.
+- **Koodi valmis** (`TALVI_P5=1`, kopio ennen muutosta `-talvip4-20261008.mjs`):
+  1. Ruudun lumeton väri sovitetaan jo kerättyyn lumettomaan väriin päällekkäisalueella (kvantiilit 20/80, a 0,85–1,18, |b| ≤ 0,03). Tulos tallennetaan `T.paljas`-kenttään; ruutu ilman päällekkäisyyttä on ankkuri.
+  2. S-käyrä: smootherstep 0,40–0,60.
+- **ODOTTAA TF 164:ää** (Julkaisija ilmoittaa). Sitten `kaudet/aja-talvip-nayte5.sh` irrotettuna (perl setsid), noin 40 min, ja vertailu:
+  `python3 kaudet/vertaa-talvip.py kuvapari-talvip-nayte5-20261008.jpg "näyte 4" s2-eurooppa-talvip-nayte4 "näyte 5" s2-eurooppa-talvip-nayte5`.
+- **Koko ajo:** `kaudet/aja-talvi3-osa.sh <osa> <x0> <x1>`, kaistat 1: 27–31, 2: 32–35, 3: 36–39 → `s2-eurooppa-talvi3-osaN/`. Ajo on jatkettava ja uusii 3 kertaa. Noin 54 lohkoa × 15 min ≈ 13–14 h.
+  Valmistuttua: tarkista kaistarajojen saumat (x = 32 ja 36), koska `T.paljas` on prosessikohtainen. Paketti: `kokoa-kausi.py talvi v1 <p> "<osa1/laatat>:<osa2/laatat>:<osa3/laatat>"`, sitten LAHTEET.md ja Julkaisija.
+
+---
+
 # TILANNE 8.10. klo 08.0x
 
 - **Näyte 4 VALMIS 08.03** (`s2-eurooppa-talvip-nayte4/`, kuva `kuvapari-talvip-nayte4-20261008.jpg`, näyte 3 | 4). TALVI_PKAIKKI=1: p 43–63 kuvasta per ruutu.
