@@ -324,6 +324,10 @@ namespace Matkakirja.Linssit.Kierros
         {
             ("Pariisin poliisiprefektuuri", 48.8541, 2.3470),
             ("Élysée-palatsi", 48.8704, 2.3167),
+            // Juna 167 -video ja kohdekuvat 9.10. (Linssiseppä): Palais-Royalin puutarhan itäpuoli, Concorden luoteiskulma, Kungsholmen.
+            ("Banque de France", 48.8649, 2.3404),
+            ("Yhdysvaltain suurlähetystö ja Hôtel de Pontalba", 48.8687, 2.3196),
+            ("Tukholman poliisitalo (Kronoberg)", 59.3326, 18.0373),
         };
         public const double SumennusRajaM = 400, SumennusTaysiM = 300, SumennusEtM = 1100, SumennusIkkuna = 0.35, SumennusReuna = 0.08;
         /// <summary>A/B ja testit: false = ei nostoa.</summary>
