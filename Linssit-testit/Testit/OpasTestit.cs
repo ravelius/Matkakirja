@@ -280,7 +280,8 @@ namespace Matkakirja.Linssit.Testit
             for (int i = 0; i < 40; i++) s.Paivita(0.05, _ => 50);
             Oleta.Tosi(s.Vaihe == OpasVaihe.Puhuu || s.Vaihe == OpasVaihe.Odottaa, s.Vaihe.ToString());
             s.Vastaus(2, K("b", 55.6798, 12.5904));
-            s.Paivita(0.05, _ => 50);
+            // Kohteen korostus sammuu ennen liikettä (Päätoimittaja 8.10. 07.5x): tauko jo ohi → nopea sammutus KorostusPikaS.
+            for (int i = 0; i * 0.05 < OpasSilmukka.KorostusPikaS + 0.06 && s.Vaihe != OpasVaihe.Lentaa; i++) s.Paivita(0.05, _ => 50);
             Oleta.Sama(OpasVaihe.Lentaa, s.Vaihe);
         }
     }

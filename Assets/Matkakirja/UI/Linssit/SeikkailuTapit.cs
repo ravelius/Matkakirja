@@ -282,6 +282,10 @@ namespace Matkakirja.Natiivi
 
         bool oikeaNakyy;
 
+        /// <summary>Pulun reunakuva piiloon seikkailun ajaksi (omistaja 8.10.: Pulu ei kuulu videopeliin).</summary>
+        public static bool PuluPiiloon = true;
+        bool puluPiilotettu;
+
         void Paivita()
         {
             PaivitaToiminto();
@@ -295,6 +299,11 @@ namespace Matkakirja.Natiivi
             if (!nayta) PoistaTietokerros();   // seikkailu päättyi: tietokerroksen tarjous pois
             // Pulun napautus seikkailun ajan: tietokerros tai vihje (PuluKaappaa); muulloin Pulun oma (chat).
             Pulu.Hae().NapautusKaappaa = nayta ? PuluKaappaa : (System.Func<bool>)null;
+            // Pulu pois videopelistä (omistaja 8.10. klo 19.0x): reunakuva piiloon seikkailun ajaksi, takaisin sen päättyessä.
+            // Vihje ja tietokerros toimivat yhä P- ja Y-näppäimellä (PuluKaappaa); maailman sisäiset vihjeet junaan 168.
+            var pu = Pulu.Hae();
+            if (nayta && PuluPiiloon && pu.Nakyvissa) { pu.Nayta(false); puluPiilotettu = true; }
+            else if (!nayta && puluPiilotettu) { pu.Nayta(true); puluPiilotettu = false; }
             vasen.Nayta(nayta);
             oikeaNakyy = nayta && OikeaTappi;
             oikea.Nayta(oikeaNakyy);

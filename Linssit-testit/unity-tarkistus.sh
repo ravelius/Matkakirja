@@ -94,11 +94,26 @@ kartta() {
   KARTTA_REF="-r:$ULOS/Matkakirja.Kartta-$kohde.dll"
 }
 
+# Assets/Plugins (asmdefitön, esim. RootMotion Final IK) → Assembly-CSharp-firstpass kuten Unityssä; polut response-tiedostoon
+# (välilyönnit, "Shared Scripts"). $1 = ios|editori, loput = moduuliviitteet ja määrittelyt.
+FP_RSP="$ULOS/firstpass.rsp"
+: > "$FP_RSP"
+[ -d "$ASSETS/../Plugins" ] && find "$ASSETS/../Plugins" -name '*.cs' -not -path '*/Editor/*' | while IFS= read -r f; do printf '"%s"\n' "$f" >> "$FP_RSP"; done
+firstpass() {
+  kohde=$1; shift
+  FP_REF=""
+  [ -s "$FP_RSP" ] || return 0
+  kaanna "firstpass ($kohde)" "$ULOS/firstpass-$kohde.log" $YHTEISET $NETSTD "$@" -nowarn:0618,0414,0649,0169 \
+    -out:"$ULOS/Assembly-CSharp-firstpass-$kohde.dll" @"$FP_RSP"
+  FP_REF="-r:$ULOS/Assembly-CSharp-firstpass-$kohde.dll"
+}
+
 # 2a. iOS-laite (IL2CPP): UNITY_IOS ilman UNITY_EDITORia.
 IOS=""
 for f in "$IOS_MODUULIT"/UnityEngine*.dll; do IOS="$IOS -r:$f"; done
 kartta ios $IOS -define:"$DEF_YHT;ENABLE_IL2CPP"
-kaanna "Assembly-CSharp (ios)" "$ULOS/ios.log" $YHTEISET $NETSTD $IOS $PAKETIT -r:"$ULOS/Matkakirja.Peli.dll" -r:"$ULOS/Matkakirja.Linssit.Ydin.dll" $KARTTA_REF \
+firstpass ios $IOS -define:"$DEF_YHT;ENABLE_IL2CPP"
+kaanna "Assembly-CSharp (ios)" "$ULOS/ios.log" $YHTEISET $NETSTD $IOS $PAKETIT $FP_REF -r:"$ULOS/Matkakirja.Peli.dll" -r:"$ULOS/Matkakirja.Linssit.Ydin.dll" $KARTTA_REF \
   -define:"$DEF_YHT;ENABLE_IL2CPP" -out:"$ULOS/Assembly-CSharp-ios.dll" $SKRIPTIT
 
 # 2b. Editori iOS-kohteella: UNITY_EDITOR, joten #else-haarat käännetään.
@@ -106,7 +121,8 @@ EDI=""
 for f in "$EDITORI_MODUULIT"/*.dll; do EDI="$EDI -r:$f"; done
 EDI="$EDI -r:$S/Managed/UnityEditor.dll"
 kartta editori $EDI -define:"$DEF_YHT;UNITY_EDITOR;UNITY_EDITOR_OSX;UNITY_EDITOR_64"
-kaanna "Assembly-CSharp (editori)" "$ULOS/editori.log" $YHTEISET $NETSTD $EDI $PAKETIT -r:"$ULOS/Matkakirja.Peli.dll" -r:"$ULOS/Matkakirja.Linssit.Ydin.dll" $KARTTA_REF \
+firstpass editori $EDI -define:"$DEF_YHT;UNITY_EDITOR;UNITY_EDITOR_OSX;UNITY_EDITOR_64"
+kaanna "Assembly-CSharp (editori)" "$ULOS/editori.log" $YHTEISET $NETSTD $EDI $PAKETIT $FP_REF -r:"$ULOS/Matkakirja.Peli.dll" -r:"$ULOS/Matkakirja.Linssit.Ydin.dll" $KARTTA_REF \
   -define:"$DEF_YHT;UNITY_EDITOR;UNITY_EDITOR_OSX;UNITY_EDITOR_64" -out:"$ULOS/Assembly-CSharp-editori.dll" $SKRIPTIT
 
 echo "unity-tarkistus: $(echo "$SKRIPTIT" | wc -l | tr -d ' ') skriptiä + $(echo "$KARTTA" | grep -c . || true) karttaskriptiä + $(find "$ASSETS/Peli" -name '*.cs' | wc -l | tr -d ' ') pelilogiikkatiedostoa, virheitä yhteensä $VIRHEITA"

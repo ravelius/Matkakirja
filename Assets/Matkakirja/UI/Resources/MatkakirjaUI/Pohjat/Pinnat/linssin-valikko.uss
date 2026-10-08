@@ -103,6 +103,18 @@
     border-color: var(--tk-reunus);
 }
 
+/* LIVE-LAATIKKO (omistaja 8.10.2026 klo 09.1x, pallon säätila): ☾-listan ylin rivi omana korostettuna pyöristettynä
+ * suorakulmiona; pois teeman toiminto-harmaa, päällä tila-live (oranssi). */
+.tk-teema-harmaa.mk-linssivalikko--pohja .mk-linssivalikko__kohta.mk-linssivalikko__live {
+    margin-bottom: var(--tk-vali-s);
+    border-radius: var(--tk-kulma-nappi);
+    background-color: var(--tk-toiminto);
+}
+
+.tk-teema-harmaa.mk-linssivalikko--pohja .mk-linssivalikko__kohta.mk-linssivalikko__live.mk-valittu {
+    background-color: var(--tk-tila-live);
+}
+
 .tk-teema-harmaa.mk-linssivalikko--pohja .mk-linssivalikko__tila,
 .tk-teema-harmaa.mk-linssivalikko--pohja .mk-linssivalikko__lahde {
     color: var(--tk-muste-pehmea);

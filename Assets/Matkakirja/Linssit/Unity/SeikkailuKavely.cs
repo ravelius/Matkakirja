@@ -57,6 +57,11 @@ namespace Matkakirja.Natiivi
                         var go = new GameObject("Törmäys:" + osa.Id) { layer = DioraamaNayttamo.Kerros };
                         go.transform.SetParent(isa, false);
                         go.AddComponent<MeshCollider>().sharedMesh = m;
+                        // Hahmojen jalkojen maa (Final IK Grounder, IkKerros): sama törmäysmalli omassa kerroksessaan, jotta
+                        // esineiden SphereColliderit (DioraamaNayttamo.Kerros) eivät nosta jalkaa (Linnanrakentaja 8.10.).
+                        var ikMaa = new GameObject("IkMaa:" + osa.Id) { layer = DioraamaHahmot3D.IkKerros };
+                        ikMaa.transform.SetParent(go.transform, false);
+                        ikMaa.AddComponent<MeshCollider>().sharedMesh = m;
                         tormaykset.Add(go); tormays++;
                     }
                 }

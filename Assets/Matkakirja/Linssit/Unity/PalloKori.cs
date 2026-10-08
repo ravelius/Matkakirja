@@ -9,8 +9,8 @@
 // katse −Z): Documents/pallokori/kori_nakyma.glb (testi) tai R2 MalliOsoite, välimuisti persistentDataPath. Luetaan DioraamaGlb:llä
 // (taustasäie), baseColor-tekstuuri PalloKori-varjostimen _Kuvio 3:lla. Kunnes malli on ladattu, paikkamerkki (laatikot ja
 // sylinterit). Korin solmu keinuu omasta pivotistaan (köysien kiinnitysten keskeltä) ja köysisolmut omistaan (alapää).
-// ÄÄNET (Päätoimittaja 7.10. 09.2x): ylhäällä lähes hiljaista; korin narina ja köysien kiristys säästeliäästi vain nopeissa
-// siirtymissä (kiihtyvyys yli NarinaKiihtyvyys, vähintään NarinaValiS välein), nousun alussa lyhyt liekin humahdus ja laskun
+// ÄÄNET (Päätoimittaja 7.10. 09.2x, omistaja TF 163): ylhäällä lähes hiljaista; korin narina ja köysien kiristys hiljaa (NarinaTaso)
+// vain liikkeen muutoksissa (kiihtyvyys ylittää NarinaKiihtyvyyden, vähintään NarinaValiS välein), nousun alussa lyhyt liekin humahdus ja laskun
 // alussa kankaan huokaus. Kaupungin äänimaisema korkeuden mukaan Siirtosepän KaupunkiAanimaisemaSoitin.Kamera-Funcilla
 // (heijastus, kunnes siirtoseppa/aanimaisema on mainissa). Leikkeet Resources/Aanet/Pallokori: eleven-* (ElevenLabs-ääniefektit,
 // omistajan kokeilulupa) ja kirjasto-* (PD/CC0; lähteet proto-3d/_lahteet/pallokori-aanet/*/LAHTEET.md); A/B `opas kori aanet
@@ -42,7 +42,17 @@ namespace Matkakirja.Natiivi
         /// <summary>Äänisarja (A/B): "eleven" tai "kirjasto".</summary>
         public static string AaniSarja = "eleven";
         // Omistaja 18.5x: äänet kuuluviin mutta säästeliäästi (TF 161: 0,55 jäi kaupungin äänimaiseman alle).
-        public const float NarinaKiihtyvyys = 1.2f, NarinaValiS = 7f, PystyRaja = 1.8f, PystyValiS = 6f, Voimakkuus = 0.9f;
+        // Omistaja TF 163 (23.2x): "korin natina on häiritsevää se saisi olla paljon pienemmällä" → narina ja köysi −12 dB (×0,25),
+        // vain liikkeen muutoksessa (kiihtyvyys ylittää rajan, ei jatkuvasti) ja vähintään 20 s välein; liekki ja kangas ennallaan.
+        public const float NarinaKiihtyvyys = 1.2f, NarinaValiS = 20f, NarinaTaso = 0.25f, PystyRaja = 1.8f, PystyValiS = 6f, Voimakkuus = 0.9f;
+        /// <summary>
+        /// Pallon tehosteet kertojaan nähden (omistaja TF 166, 8.10. 17.5x: "äänitehosteet saisivat olla hieman hiljemmalla"):
+        /// −3 dB oletuksena; asetukset.json "pallo.TehosteetDb" ohittaa (osoitinvaihdolla ilman käännöstä). Korin narina, köysi,
+        /// liekki ja kangas (Soita) sekä ukkosen kumahdukset (OpasSovitin.SoitaUkkonen).
+        /// </summary>
+        public static float TehosteKerroin => Mathf.Pow(10f, Matkakirja.Peli.Asetus.Luku("pallo.TehosteetDb", TehosteetDbOletus) / 20f);
+        public const float TehosteetDbOletus = -3f;
+        bool narinaRajanYli;
         AudioSource aani;
         public const string MalliOsoite = "https://media.matkakirja.app/kartta/ilmapallo/v1/kori_nakyma.glb";
         static GlbMalli malli; static bool malliHaussa;
@@ -188,7 +198,7 @@ namespace Matkakirja.Natiivi
         {
             var c = Leike(nimi);
             if (c == null || aani == null) return;
-            aani.PlayOneShot(c, Voimakkuus * taso);
+            aani.PlayOneShot(c, Voimakkuus * taso * TehosteKerroin);
             Debug.Log($"MATKAKIRJA kaupunki: kori ääni {nimi} ({AaniSarja}, {taso:F2})");
         }
 
@@ -403,10 +413,12 @@ namespace Matkakirja.Natiivi
         {
             float nyt = Time.unscaledTime;
             if (historia < 2) return;
-            if (vaakaKiihtyvyys > NarinaKiihtyvyys && nyt - viimeNarina > NarinaValiS)
+            bool yli = vaakaKiihtyvyys > NarinaKiihtyvyys, muutos = yli && !narinaRajanYli;
+            narinaRajanYli = yli;
+            if (muutos && nyt - viimeNarina > NarinaValiS)
             {
                 viimeNarina = nyt;
-                float taso = Mathf.Clamp01((vaakaKiihtyvyys - NarinaKiihtyvyys) / 4f) * 0.6f + 0.4f;
+                float taso = (Mathf.Clamp01((vaakaKiihtyvyys - NarinaKiihtyvyys) / 4f) * 0.6f + 0.4f) * NarinaTaso;
                 Soita("korin-narina", taso);
                 Soita("koyden-kiristys", taso * 0.7f);
             }

@@ -181,6 +181,38 @@ namespace Matkakirja.Linssit.Kierros
         public const double VastausMaxS = 25;
         /// <summary>Saapumisen enimmäisodotus laattoja varten (s) lennon päätyttyä.</summary>
         public const double SaapumisOdotusS = 4;
+        /// <summary>
+        /// LÄHTÖ ODOTTAA LAATTOJA (Päätoimittaja 8.10. 07.4x, juna 164 -video: Île de la Citén korttelin kokoinen sumea laikku
+        /// lennon alussa Notre-Damelta Louvreen, lähtö 87 %:ssa; avauksesta 1. kohteeseen 61 %:ssa; omistaja moitti sumeita laattoja
+        /// jo TF 162:ssa): lähtö odottaa, kunnes seuraavan kohteen ja reitin laatat (esikamera + ReittiEsilataus-kamerat; latausaste
+        /// kattaa kaikki kamerat) ovat ≥ LahtoValmis, kuitenkin enintään LahtoOdotusMaxS normaalin pysähdyksen yli, ettei kierros jumitu.
+        /// Pelaajan ohitus (⏭) valmiiseen seuraavaan tai toive odottaa enintään LahtoPelaajaMaxS (painallukseen vastataan heti).
+        /// </summary>
+        public const double LahtoValmis = 0.98, LahtoOdotusMaxS = 5, LahtoPelaajaMaxS = 2;
+        /// <summary>Reitin esilatausnäkymät lennon osuuksina (0 = lähtö, 1 = perillä; perillä on esikamera).</summary>
+        public static readonly double[] ReittiNaytteet = { 0.15, 0.4, 0.65 };
+        /// <summary>Latausaste kertoo uusien kameroiden laatoista vasta tämän jälkeen (video2 8.10. 07.5x: 1. lento lähti 61 %:ssa
+        /// samassa ruudussa, jossa seuraava tuli — aste oli vielä edellisen näkymän 100 %).</summary>
+        public const double LahtoMittausS = 0.5;
+        OpasKohde seuraavaMitattu; double seuraavaIka;
+        double lahtoOdotusS;
+        bool ohitettu;
+        /// <summary>
+        /// KOHTEEN KOROSTUS (Päätoimittaja 8.10. 07.5x: kohteen valo sammui ja syttyi yhdessä ruudussa lähdössä): 0–1, häivytys
+        /// KorostusS. Syttyy saapumisesta (Puhuu), sammuu lähdön valmistelussa ENNEN liikettä — lento alkaa vasta, kun korostus on
+        /// sammunut (sovitin: yövalojen kohdevalo × osuus, rengas pois valmistelun alussa).
+        /// </summary>
+        public const double KorostusS = 1.0, KorostusPikaS = 0.4;
+        /// <summary>Sammutus kertojan lopputauon aikana (LoppuTaukoS, kamera paikallaan) → automaattinen lähtö ei viivästy; pelaajan
+        /// valinta tai lähtö odotustilasta sammuttaa KorostusPikaS:ssa (painallukseen vastataan heti).</summary>
+        bool korostusPika;
+        public double KorostusOsuus { get; private set; }
+        /// <summary>Lähtö valmisteilla (ehdot täyttyivät; korostus sammuu, laatat latautuvat).</summary>
+        public bool LahtoValmisteilla { get; private set; }
+        /// <summary>Korostus kuuluu nykyiseen kohteeseen: perillä (Puhuu tai Odottaa kehyksessä), ei kysymys.</summary>
+        bool KorostusKohteella => (Vaihe == OpasVaihe.Puhuu || Vaihe == OpasVaihe.Odottaa) && NykyinenKehys != null && Nykyinen != null && !Nykyinen.Kysymys;
+        /// <summary>Viimeisimmän lähdön odotus laattoja varten (s; sovitin kirjaa lokiin).</summary>
+        public double LahtoOdottiS { get; private set; }
 
         public OpasVaihe Vaihe { get; private set; } = OpasVaihe.Alku;
         public OpasKohde Nykyinen { get; private set; }
@@ -203,6 +235,8 @@ namespace Matkakirja.Linssit.Kierros
 
         /// <summary>Lento seuraavaan alkoi (kohde, matka m, pelaajan toiveesta): siltalause kierroksen siirtymään (juna 146).</summary>
         public event Action<OpasKohde, double, bool> LentoAlkaa;
+        /// <summary>Avauksen laskeutumisessa kohde vaihtui arviosta lopulliseen kehykseen (sovittimen loki).</summary>
+        public event Action<OpasKohde> LentoKohdeVaihtui;
 
         // ---- SALLITUT KAUPUNGIT (omistaja 7.10. 00.4x, juna 157): lennot ja workerin kohteet vain sallitun 3D:n alueelle ----
         /// <summary>Sallitut kaupungit (Pöllön /opas/aineistot "sallitut"); tyhjä = ei rajausta.</summary>
@@ -256,13 +290,21 @@ namespace Matkakirja.Linssit.Kierros
         public const double MaaArvioM = 45, KehysVaihtoS = 1.0, SiirtoMaaOdotusS = 0.5, SiirtoMaatonEdistys = 0.9;
         bool kehysArvio; OpasKohde kehysKohde; double kehysTulo, kehysVaihto = 1, maaTunnettu = -10;
         Kuvakulma? kehysVanha;
+        double kehysVaihtoS = KehysVaihtoS, maaPyydetty;
+        /// <summary>
+        /// AVAUKSEN LASKEUTUMINEN (omistaja 8.10. ~09.0x: "ei odoteta yläilmoissa vaan ladataan kumpikin näkymä etukäteen ja pallo
+        /// laskeutuu rauhallisesti ensimmäiseen kohteeseen alkuesittelyn aikana"): yleiskuvasta (≥ AvausKorkeaM) lähtevä kierroksen
+        /// aloituslento kestää vähintään AvausLaskuS, ja kun workerin vastaus tulee kesken lennon, kohde vaihtuu arviokehyksestä
+        /// lopulliseen kehykseen AvausVaihtoS:n liu'ulla samassa lennossa (ei pysähdystä arviokehyksessä eikä toista lentoa).
+        /// </summary>
+        public const double AvausLaskuS = 18, AvausKorkeaM = 2000, AvausVaihtoS = 3;
         /// <summary>Lennon kohdekehys on yhä maa-arviolla (ei näytettä).</summary>
         public bool KehysArviolla => kehysArvio && Vaihe == OpasVaihe.Lentaa;
 
         void AsetaKohdeKehys(Pysahdys p, bool arvio, OpasKohde k, double tulo)
         {
             kohdeKehys = p; kehysArvio = arvio; kehysKohde = k; kehysTulo = tulo;
-            kehysVanha = null; kehysVaihto = 1; maaTunnettu = -10;
+            kehysVanha = null; kehysVaihto = 1; maaTunnettu = -10; kehysVaihtoS = KehysVaihtoS; maaPyydetty = 0;
             if (arvio) MaaTarvitaan?.Invoke(p.Lat, p.Lon);
         }
 
@@ -324,8 +366,44 @@ namespace Matkakirja.Linssit.Kierros
         {
             double km = matkaM / 1000.0;
             double s = km < 10 ? 3.0 + 2.2 * Math.Sqrt(km) : 10.0 + 4.0 * Math.Log10(km / 10.0);
-            if (PalloLento) s *= PalloKerroin(km);
-            return Math.Max(LentoMinS, Math.Min(LentoMaxS * (PalloLento ? PalloKerroinLyhyt : 1), s));
+            if (!PalloLento) return Math.Max(LentoMinS, Math.Min(LentoMaxS, s));
+            // Omistajan tarkennus 23.4x: "pallolla voi olla sama huippunopeus" → kesto kuten TF 163:ssa (PalloKerroin); pehmeys
+            // tulee S-käyristä (OpasKuvaus.Lennossa: suunta etenemisen mukaan, ei kääntymistä paikallaan).
+            return PalloProfiili(matkaM).kesto;
+        }
+
+        /// <summary>
+        /// PALLON RAMPIT (Päätoimittaja 8.10. 07.5x: "lepo → huippunopeus 1–1,5 s … noin 3 s:n S-käyriksi, huippunopeus ennallaan"):
+        /// kiihdytys ja jarrutus vähintään PalloRamppiS (smootherstep, OpasKuvaus.Eteneminen). Huippunopeus kuten TF 163:ssa
+        /// (kesto × PalloKerroin, rampin osuus OpasKuvaus.RamppiOsuus), joten kesto pitenee rampin lisäyksen verran. Lyhyt lento:
+        /// pelkkä S-käyrä (osuus 0,5), kesto vähintään 2 × PalloRamppiS ja huippu enintään entinen.
+        /// </summary>
+        public const double PalloRamppiS = 6.5;   // smootherstep: kulkunopeus 10 → 90 % ≥ 3 s (korkeuspainotus lyhentää ~10 %) (Päätoimittaja 08.3x: ≥ 3 s)
+        public static (double kesto, double osuus) PalloProfiili(double matkaM)
+        {
+            double km = matkaM / 1000.0;
+            double s = (km < 10 ? 3.0 + 2.2 * Math.Sqrt(km) : 10.0 + 4.0 * Math.Log10(km / 10.0)) * PalloKerroin(km);
+            double t0 = Math.Max(LentoMinS, Math.Min(LentoMaxS * PalloKerroinLyhyt, s));
+            double a0 = OpasKuvaus.RamppiOsuus(matkaM);
+            double tasainen = t0 * (1 - a0);   // 1 / huippunopeus (lennon osuutta sekunnissa)
+            if (a0 * t0 >= PalloRamppiS) return (t0, a0);
+            if (tasainen >= PalloRamppiS) return (tasainen + PalloRamppiS, PalloRamppiS / (tasainen + PalloRamppiS));
+            return (Math.Max(t0, 2 * PalloRamppiS), 0.5);   // lyhyt: pelkkä S-käyrä, rampit PalloRamppiS (huippu enintään entinen)
+        }
+
+        /// <summary>Pallolennon suunnan muutos enintään PalloKaantoAstS (Päätoimittaja 23.2x).</summary>
+        public const double PalloKaantoAstS = 10;
+
+        /// <summary>
+        /// Pallolennon saapumissuunta: kohteen kehys katsoo enintään niin paljon nykyisestä suunnasta poispäin, että suunta kääntyy
+        /// koko lennon ajan etenemisen mukana (huippu enintään 2 × keskiarvo) enintään PalloKaantoAstS asteen sekuntinopeudella.
+        /// </summary>
+        public static double PalloTulosuunta(double nykyinen, double lentosuunta, double kestoS)
+        {
+            // Kääntö vaakaliikkeen mukana: huippu ≈ 2 × keskiarvo (S-käyrä) × korkeussuhde (vaakanopeus ∝ korkeus, pitkillä lennoilla ≤ 1,6) → 3,2.
+            double max = PalloKaantoAstS * kestoS / 3.2;
+            double d = KierrosLento.Kiedo(lentosuunta - nykyinen);
+            return KierrosLento.Kiedo(nykyinen + Math.Max(-max, Math.Min(max, d)));
         }
 
         // ---- KUUMAILMAPALLO (Päätoimittaja 7.10. 09.2x: "liike suhteellisen hidas kuin pallolla, mutta fysiikkaa saa venyttää, jotta
@@ -417,7 +495,12 @@ namespace Matkakirja.Linssit.Kierros
 
         // ---- SIIRTO ILMAN LENTOA (omistaja 6.10. 12.0x) ----
         /// <summary>Kaupungin rajan arvio: tätä pidemmälle ei lennetä, vaan siirrytään latausruudun kautta.</summary>
-        public const double SiirtoRajaM = 30000, SiirtoValmis = 0.95, SiirtoMinS = 1.0, SiirtoMaxS = 25;
+        // SiirtoMaxS 12 (Päätoimittaja 8.10. 09.0x: peite pois vasta yleiskuva + 1. kohde ≥ 95 %, turvaraja ~12 s).
+        // Juna 165 (lupa 09.2x): turvaraja 20 s, kun 1. kohde ladataan yleiskuvan jälkeen.
+        public const double SiirtoRajaM = 30000, SiirtoValmis = 0.95, SiirtoMinS = 1.0, SiirtoMaxS = 20;
+        /// <summary>Siirron 1. vaihe valmis: yleiskuva ≥ SiirtoValmis (vasta sitten 1. kohteen esilataus).</summary>
+        public bool YleiskuvaValmis { get; private set; }
+        double yleiskuvaAika;
 
         /// <summary>
         /// Workerin pyyntöjen sijainti (omistaja TF 152: natiivi lähetti Ateenalle, Amsterdamille, Pariisille ja Sydneylle Kööpenhaminan
@@ -445,7 +528,7 @@ namespace Matkakirja.Linssit.Kierros
         void AloitaSiirtoJosKaukana(double matkaM, double lat, double lon, string nimi)
         {
             siirto = matkaM >= SiirtoRajaM || PakotaSiirto;
-            PakotaSiirto = false;
+            PakotaSiirto = false; YleiskuvaValmis = false;
             if (!siirto) return;
             SiirtoNimi = nimi; SiirtoEdistys = 0;
             SiirtoAlkaa?.Invoke(lat, lon);
@@ -525,6 +608,7 @@ namespace Matkakirja.Linssit.Kierros
             lahto = Asento;
             double matka = KierrosLento.EtaisyysM(lahto.Lat, lahto.Lon, lat, lon);
             LentoKestoS = LennonKesto(matka);
+            if (KierrosKaynnissa && lahto.EtaisyysM >= AvausKorkeaM) LentoKestoS = Math.Max(LentoKestoS, AvausLaskuS);   // avauksen laskeutuminen
             AloitaSiirtoJosKaukana(matka, lat, lon, nimi);
             Vaihe = OpasVaihe.Lentaa; VaiheAika = 0;
             puheAloitettu = true; siirtyma = true;   // perillä odotetaan workerin pysähdystä (sama paikka → kerronta heti)
@@ -603,6 +687,14 @@ namespace Matkakirja.Linssit.Kierros
         /// <summary>Seuraava pyyntö ilman kierroksen lyhyt-merkintää (sovitin kuluttaa).</summary>
         public bool PitkaPyynto;
 
+        /// <summary>
+        /// Kaupunkitilan automaattinen jatko kysymyksen vastauksen jälkeen (OpasSovitin): vasta kun vastaus on kuultu — kierros
+        /// keskeytetty, opas odottaa yli viiveen, mikään ääni ei soi, vastaus ei odota esitystä (Seuraava) eikä kysymyksen odotus
+        /// ole käynnissä. TF 166: vastaus tuli 4 s:ssa Odottaa-vaiheen jo kestäessä → jatko laukesi ennen vastausta.
+        /// </summary>
+        public static bool JatkoVastauksenJalkeen(bool keskeytetty, OpasVaihe vaihe, double vaiheAika, double viiveS, bool aaniSoi, bool vastausOdottaa, bool kysymysOdottaa) =>
+            keskeytetty && vaihe == OpasVaihe.Odottaa && vaiheAika > viiveS && !aaniSoi && !vastausOdottaa && !kysymysOdottaa;
+
         /// <summary>JATKA KIERROSTA: kesken jäänyt kohde alusta, muuten seuraava jonosta. true = jatkui.</summary>
         public bool JatkaKierrosta()
         {
@@ -655,6 +747,9 @@ namespace Matkakirja.Linssit.Kierros
             lykattyKysymys = null; esihakuPuheenJalkeen = false; OdottaaVastausta = false; kysymysAika = -1;
             if (Vaihe == OpasVaihe.Puhuu || (puheAloitettu && !aaniLoppui)) Hiljenna?.Invoke();
             aaniLoppui = true; hiljaS = double.MaxValue;
+            // Seuraava jo valmiina → pelaaja odottaa välitöntä lähtöä: laatoille enintään LahtoPelaajaMaxS. Ilman sitä (kierroksen
+            // aloitus avauksesta, workerin vastaus) täysi LahtoOdotusMaxS kuten automaattisessa lähdössä.
+            ohitettu = Seuraava != null;
             if (Vaihe == OpasVaihe.Lentaa) PysahdyTahan();
             if (Seuraava == null && odotettu == 0) UusiPyynto();   // kierros: jonosta; muuten workerin seuraava
             return true;
@@ -864,6 +959,10 @@ namespace Matkakirja.Linssit.Kierros
                 if (!OdottaaVastausta && Seuraava == null && odotettu == 0 && (Nykyinen ?? edellinen) is OpasKohde nk && !nk.OdottaaValintaa && !Pysaytetty) UusiPyynto();
             }
 
+            if (!ReferenceEquals(Seuraava, seuraavaMitattu)) { seuraavaMitattu = Seuraava; seuraavaIka = 0; } else seuraavaIka += Math.Max(0, dt);
+            double korTavoite = KorostusKohteella && !LahtoValmisteilla ? 1 : 0;
+            KorostusOsuus = korTavoite > KorostusOsuus ? Math.Min(korTavoite, KorostusOsuus + Math.Max(0, dt) / KorostusS)
+                : Math.Max(korTavoite, KorostusOsuus - Math.Max(0, dt) / (korostusPika ? KorostusPikaS : KorostusS));
             switch (Vaihe)
             {
                 case OpasVaihe.Alku:
@@ -878,11 +977,18 @@ namespace Matkakirja.Linssit.Kierros
                         var loppu = new Kuvakulma(a.Lat, a.Lon, a.EtaisyysM * AlkuLiukuKerroin, a.Kallistus + AlkuLiukuKallistus, a.Suuntima + 20, a.KatseKorkeusM);
                         Asento = KierrosLento.Valissa(a, loppu, KierrosLento.Smootherstep(Math.Min(1, VaiheAika / AlkuLiukuS)), 0);
                     }
-                    if (Seuraava != null && aaniLoppuiTaiAlku() && !OdottaaVastausta && !OhjausPitaa) AloitaLento(maaKorkeus);
+                    bool odotusEhdot = Seuraava != null && aaniLoppuiTaiAlku() && !OdottaaVastausta && !OhjausPitaa;
+                    if (LahtoSaa(odotusEhdot, odotusEhdot, true, dt)) AloitaLento(maaKorkeus);
                     break;
                 case OpasVaihe.Puhuu:
                     if (!VapaaAsento(dt)) PysahdysAsento(dt);   // vapaassa tilassa kysymyksen vastaus ei palauta kameraa
-                    if (aaniLoppui && VaiheAika >= TaukoS && hiljaS >= LoppuTaukoS && Seuraava != null && !OhjausPitaa) AloitaLento(maaKorkeus);
+                    // Valmistelu (korostus sammuu) alkaa jo äänen lopusta, lähtö vasta tauon jälkeen.
+                    // Kosketuksen irrotuksen jälkeinen OhjausTaukoS kuluu samalla (sammutus ei pidennä taukoa).
+                    bool valmistelu = aaniLoppui && Seuraava != null && !PelaajaOhjaa;
+                    bool lahtoEhdot = valmistelu && !OhjausPitaa && VaiheAika >= TaukoS && hiljaS >= LoppuTaukoS;
+                    // Tauko jo ohi (seuraava tuli myöhässä) tai pelaajan valinta: nopea sammutus.
+                    if (LahtoSaa(lahtoEhdot, valmistelu, ohitettu || toiveesta || hiljaS >= LoppuTaukoS, dt)) AloitaLento(maaKorkeus);
+                    else if (lahtoEhdot) { }
                     else if (aaniLoppui && Seuraava == null && odotettu == 0 && !esihakuPuheenJalkeen) { Vaihe = OpasVaihe.Odottaa; VaiheAika = 0; }
                     break;
                 case OpasVaihe.Lentaa:
@@ -898,33 +1004,59 @@ namespace Matkakirja.Linssit.Kierros
                         // Näkymä ei aukea maa-arviolla: edistys enintään SiirtoMaatonEdistys ennen näytettä, ja korjatun kehyksen
                         // laatoille SiirtoMaaOdotusS (latausaste lasketaan uudesta kamerasta).
                         bool maaOdottaa = kehysArvio && MaaPisteessa != null;
-                        SiirtoEdistys = Math.Max(0, Math.Min(maaOdottaa ? SiirtoMaatonEdistys : 1, ed));
+                        // Näyte uudelleen sekunnin välein (video8 8.10.: ensimmäinen pyyntö lähti ennen kuin kaupunki oli auki, hylättiin
+                        // hiljaa, ja siirto odotti 90 %:n katossa aina 25 s:n aikarajaan asti).
+                        if (maaOdottaa && VaiheAika - maaPyydetty >= 1.0) { maaPyydetty = VaiheAika; MaaTarvitaan?.Invoke(kohdeKehys.Lat, kohdeKehys.Lon); }
+                        double aste = Math.Max(0, Math.Min(maaOdottaa ? SiirtoMaatonEdistys : 1, ed));
                         bool tuore = VaiheAika - maaTunnettu >= SiirtoMaaOdotusS;
-                        if (VaiheAika < SiirtoMinS || ((SiirtoEdistys < SiirtoValmis || !tuore) && VaiheAika < SiirtoMaxS)) break;
+                        // KAKSI VAIHETTA (Päätoimittaja 8.10. 09.2x, video9: 12 s:n rajalla laatat 70 %): ensin vain yleiskuva ≥ SiirtoValmis,
+                        // sitten 1. kohteen esikamera (Esilataus) ja uudelleen ≥ SiirtoValmis LahtoMittausS:n jälkeen; palkki 0–60 % / 60–100 %.
+                        if (!YleiskuvaValmis && aste >= SiirtoValmis && tuore && VaiheAika >= SiirtoMinS) { YleiskuvaValmis = true; yleiskuvaAika = VaiheAika; }
+                        bool kohdeKesken = EsiKohde != null && (!YleiskuvaValmis || VaiheAika - yleiskuvaAika < LahtoMittausS);
+                        SiirtoEdistys = EsiKohde == null ? aste : YleiskuvaValmis ? 0.6 + 0.4 * (VaiheAika - yleiskuvaAika < LahtoMittausS ? 0 : aste) : 0.6 * aste;
+                        if (VaiheAika < SiirtoMinS || ((aste < SiirtoValmis || !tuore || kohdeKesken) && VaiheAika < SiirtoMaxS)) break;
                         siirto = false; VaiheAika = LentoKestoS + SaapumisOdotusS;   // perillä, laatat valmiit
                         avausViive = AvausTaukoS;   // omistaja 16.5x: reilu sekunti ennen kertojaa, ei "hätiköityä" alkua
                     }
                     // Näkymä auki siirron jälkeen, kertoja odottaa AvausTaukoS (kamera kehyksessä, puhe ei vielä ala).
                     if (avausViive > 0) { Asento = KehysAsento(kohdeKehys, 0); avausViive -= Math.Max(0, dt); break; }
-                    kehysVaihto = Math.Min(1, kehysVaihto + Math.Max(0, dt) / KehysVaihtoS);
+                    // Kesken avauksen laskeutumisen tullut vastaus: kohde vaihtuu lopulliseen kehykseen samassa lennossa.
+                    if (siirtyma && Seuraava != null && !Seuraava.Kysymys && kehysKohde != null && kehysKohde.Id == null
+                        && VaiheAika < LentoKestoS - 2
+                        && KierrosLento.EtaisyysM(kehysKohde.Lat, kehysKohde.Lon, Seuraava.Lat, Seuraava.Lon) < 150)
+                    {
+                        var k = Seuraava; Seuraava = null;
+                        var vanha = KohdeAsento();
+                        var kehys = KehysKohteelle(k, maaKorkeus, out bool kArvio, out double kTulo);
+                        AsetaKohdeKehys(kehys, kArvio, k, kTulo);
+                        kehysVanha = vanha; kehysVaihto = 0; kehysVaihtoS = AvausVaihtoS;
+                        Nykyinen = k; edellinen = null; siirtyma = false; puheAloitettu = false; toiveesta = false;
+                        LentoKohdeVaihtui?.Invoke(k);
+                    }
+                    kehysVaihto = Math.Min(1, kehysVaihto + Math.Max(0, dt) / kehysVaihtoS);
                     double t = Math.Min(1, VaiheAika / LentoKestoS);
                     Asento = OpasKuvaus.Lennossa(lahto, KohdeAsento(), t);
+                    if (kiertoJatko > 0 && VaiheAika < OpasKuvaus.KiertoAlkuS)
+                        Asento = new Kuvakulma(Asento.Lat, Asento.Lon, Asento.EtaisyysM, Asento.Kallistus,
+                            KierrosLento.Kiedo(Asento.Suuntima + OpasKuvaus.KierronHiipuminen(kiertoJatko, VaiheAika)), Asento.KatseKorkeusM);
                     // Puhe alkaa PuheEnnenS ennen saapumista, kuitenkin aikaisintaan PuheAikaisinS nousun jälkeen (simu 19.54: tauko ~5 s → ≤ 3 s).
                     if (!puheAloitettu && VaiheAika >= Math.Max(PuheAikaisinS, LentoKestoS - PuheEnnenS)) { puheAloitettu = true; aaniLoppui = false; AlkaaPuhua?.Invoke(Nykyinen); }
                     // Saapuminen odottaa laattoja enintään SaapumisOdotusS (simu 18.39: saapuessa laatat 28–45 %).
-                    if (t >= 1 && laatatValmiit != null && !laatatValmiit() && VaiheAika < LentoKestoS + SaapumisOdotusS) break;
+                    // Pallo ei jää lennon loppuun seisomaan (LS2:n PalloKierrosTestit, hidas verkko: 3 s paikallaan kehyksessä): kertoja
+                    // alkoi jo PuheEnnenS ennen saapumista, ja pysähdyksen lipuminen alkaa heti laattojen latautuessa.
+                    if (t >= 1 && laatatValmiit != null && !laatatValmiit() && VaiheAika < LentoKestoS + SaapumisOdotusS && !(PalloLento && Nykyinen?.Id != null)) break;
                     if (t >= 1 && kehysVaihto < 1) break;   // korjattu kehys liukuu loppuun ennen saapumista
                     if (t >= 1 && siirtyma)
                     {
                         // Siirtymälento perillä: kaupungin yleiskuva kiertää; ei saapumista, puhetta eikä esihakua.
                         siirtyma = false;
-                        NykyinenKehys = kohdeKehys; kierto = 0;
+                        NykyinenKehys = kohdeKehys; kierto = 0; lipumisAika = 0; lipumisKohti = null; lipumisRaaka = 0; LipumisVauhti = 0;
                         Vaihe = OpasVaihe.Odottaa; VaiheAika = 0;
                         break;
                     }
                     if (t >= 1)
                     {
-                        NykyinenKehys = kohdeKehys; kierto = 0;
+                        NykyinenKehys = kohdeKehys; kierto = 0; lipumisAika = 0; lipumisKohti = null; lipumisRaaka = 0; LipumisVauhti = 0;
                         Vaihe = OpasVaihe.Puhuu; VaiheAika = 0;
                         if (VapaaTila) vapaaKehyksessa = true;   // vapaassa tilassa lennetty kohde: kehys kerronnan ajan
                         if (!puheAloitettu) aaniLoppui = false;
@@ -951,7 +1083,10 @@ namespace Matkakirja.Linssit.Kierros
             arvio = double.IsNaN(maa);
             if (arvio) maa = MaaArvioM;
             tulo = Suunta(Asento.Lat, Asento.Lon, k.Lat, k.Lon);
-            if (KierrosLento.EtaisyysM(Asento.Lat, Asento.Lon, k.Lat, k.Lon) < 150) tulo = Asento.Suuntima;
+            double matkaM = KierrosLento.EtaisyysM(Asento.Lat, Asento.Lon, k.Lat, k.Lon);
+            if (matkaM < 150) tulo = Asento.Suuntima;
+            // Raja koskee lopullista kehyssuuntimaa (tulo + SivuKulma; video6 Louvre: kääntö 13,6 °/s, kun sivukulma jäi rajan ulkopuolelle).
+            else if (PalloLento) tulo = PalloTulosuunta(Asento.Suuntima - OpasKuvaus.SivuKulma, tulo, LennonKesto(matkaM));
             return OpasKuvaus.Kehysta(k, maa, tulo);   // luokka k.Luokasta, muuten koosta ja korkeudesta
         }
 
@@ -975,7 +1110,9 @@ namespace Matkakirja.Linssit.Kierros
 
         public Kuvakulma? Esilataus(Func<OpasKohde, double> maaKorkeus)
         {
-            if (EsiKohde is (string en, double ela, double elo) && (Siirtymassa || (PyynnotSeis && Vaihe != OpasVaihe.Lentaa)))
+            // Linssireitti (omistaja 8.10. ~09.0x): esilataus jatkuu siirron jälkeen kysymysvaiheessa, kunnes kierros alkaa.
+            if (EsiKohde is (string en, double ela, double elo) && ((Siirtymassa && YleiskuvaValmis) || (PyynnotSeis && Vaihe != OpasVaihe.Lentaa && !Siirtymassa)
+                || (Vaihe == OpasVaihe.Odottaa && Nykyinen == null && Seuraava == null)))
                 return OpasKuvaus.Pysahdyksella(KehysKohteelle(new OpasKohde { Nimi = en, Lat = ela, Lon = elo, KokoM = 120 }, maaKorkeus), 0);
             // Saavuttu (odotetaan laattoja): pääkamera on jo kehyksessä → esikamera pois, latausaste mittaa vain pääkameraa.
             if (Vaihe == OpasVaihe.Lentaa && kohdeKehys != null) return VaiheAika >= LentoKestoS ? (Kuvakulma?)null : OpasKuvaus.Pysahdyksella(kohdeKehys, 0);
@@ -1026,6 +1163,14 @@ namespace Matkakirja.Linssit.Kierros
             return true;
         }
         public bool PelaajaOhjaa;
+        double lipumisAika, lipumisKatto, lipumisRaaka, valmisteluAika; (double lat, double lon)? lipumisKohti;
+        /// <summary>Lipumisen nykyinen vauhti (m/s; telemetria ja testit).</summary>
+        public double LipumisVauhti { get; private set; }
+        /// <summary>Lipumisen jarrutus lähdön valmistelussa (s): pelaajan valinta nopeammin.</summary>
+        double LipumisJarru => korostusPika ? 0.5 : 1.0;
+        double LipumisSkaala => NykyinenKehys == null ? 1 : Math.Min(1, NykyinenKehys.EtaisyysM / OpasKuvaus.LipumisVertailuEtM);
+        /// <summary>Lipumisen jarrutuksen aika (s): kuluu vasta, kun lähtö on muuten valmis (laatat).</summary>
+        double jarruAika;
         /// <summary>Kuva koko ruudulla (Kuvasuurennos): pysähdyksen kierto ja dolly seis; puhe jatkuu.</summary>
         public bool KameraSeis;
         /// <summary>Seuraava lento on pelaajan toiveen tai paikan vaihdon seuraus (siltalause soitettiin jo valinnasta).</summary>
@@ -1040,15 +1185,111 @@ namespace Matkakirja.Linssit.Kierros
             Ohjaus.Paivita(dt, Tapit.kierto, Tapit.korkeus, Tapit.etaisyys);
             if (!Ohjaus.Aktiivinen && !KameraSeis) kierto += dt;   // kuvasuurennoksen ajan kamera seis (omistaja 12.1x)   // aika saapumisesta: ei nollaudu Puhuu ↔ Odottaa eikä "kerro lisää" -kappaleessa
             // Ohjauksen etäisyysrajat ovat perusasennon suhteisia (Siirtoseppä bfd0b8af), joten kaupungin 5 km:n yläkuva säilyy.
+            if (PalloLento && NykyinenKehys.Id != null)
+            {
+                // Pallo (omistaja 8.10.): ei kiertoa kohteen ympäri; lipuu kohti seuraavaa, kamera pysyy nykyisessä kohteessa.
+                var perus = OpasKuvaus.Pysahdyksella(NykyinenKehys, kierto, false);
+                var kohti = Seuraava != null && !Seuraava.Kysymys ? ((double, double)?)(Seuraava.Lat, Seuraava.Lon) : OdotettuPaikka;
+                if (kohti is (double klat, double klon) && lipumisKohti == null)
+                {
+                    lipumisKohti = (klat, klon);   // suunta ja katto lukitaan ensimmäisestä tiedosta (esihaun vaihdos ei hyppää)
+                    lipumisKatto = Math.Min(OpasKuvaus.LipumisMaxM, OpasKuvaus.LipumisOsuus * KierrosLento.EtaisyysM(NykyinenKehys.Lat, NykyinenKehys.Lon, klat, klon)) * LipumisSkaala;
+                }
+                if (lipumisKohti != null && !Ohjaus.Aktiivinen && !KameraSeis)
+                {
+                    // Vauhti S-käyrällä ylös (LipumisAlkuS) ja lähdön valmistelussa S-käyrällä nollaan ennen lentoa (lento alkaa levosta).
+                    lipumisAika += dt;
+                    double ylos = KierrosLento.Smootherstep(Math.Min(1, lipumisAika / OpasKuvaus.LipumisAlkuS));
+                    LipumisVauhti = OpasKuvaus.LipumisNopeus * LipumisSkaala * ylos * (1 - KierrosLento.Smootherstep(Math.Min(1, jarruAika / LipumisJarru)));
+                    lipumisRaaka += LipumisVauhti * dt;
+                }
+                // Katto tanh-käyränä + hidas ryömintä (LS2:n PalloKierrosTestit: pitkällä pysähdyksellä tanh vei vauhdin alle 0,2 m/s,
+                // kun dolly poistui pallotilasta): pallo ei koskaan seiso täysin ennen lähdön jarrua.
+                double d = lipumisKatto > 0 ? lipumisKatto * Math.Tanh(lipumisRaaka / lipumisKatto) + OpasKuvaus.LipumisRyomintaOsuus * lipumisRaaka : 0;
+                Asento = Ohjaus.Sovella(lipumisKohti is (double la, double lo) ? OpasKuvaus.Lipunut(perus, la, lo, d) : perus, NykyinenKehys.MaaM);
+                return;
+            }
             Asento = Ohjaus.Sovella(OpasKuvaus.Pysahdyksella(NykyinenKehys, kierto), NykyinenKehys.MaaM);
         }
+
+        /// <summary>Lähtöhetken kiertonopeus (°/s), joka hiipuu lennon alussa (OpasKuvaus.KierronHiipuminen).</summary>
+        double kiertoJatko;
 
         bool aaniLoppuiTaiAlku() => Vaihe == OpasVaihe.Alku || aaniLoppui;
         Kuvakulma? alkuAsento;
 
+        /// <summary>"Kerro lisää": seuraava on nykyisen oikean kohteen kehyksessä (sama ehto kuin AloitaLennon oikotiellä). Avauksen
+        /// yleiskuva kohteen kohdalla ei ole sama paikka (video3 8.10.: 1. lento lähti 57 %:ssa odottamatta, ilman reitin esilatausta,
+        /// ja pysähtyi kesken odottamaan laattoja — matka katsepisteestä oli alle 50 m).</summary>
+        bool SamaPaikka() => Seuraava != null && NykyinenKehys != null && kehysKohde != null && kehysKohde.Id != null
+            && KierrosLento.EtaisyysM(NykyinenKehys.Lat, NykyinenKehys.Lon, Seuraava.Lat, Seuraava.Lon) < 50;
+
+        /// <summary>Lähdön valmistelu: ehdot täyttyvät → korostus sammuu ja laatat odotetaan; lento, kun molemmat valmiit.</summary>
+        bool LahtoSaa(bool ehdot, bool valmistelu, bool pika, double dt)
+        {
+            // "Kerro lisää" (sama paikka) ei lähde mihinkään: korostus jää palamaan.
+            bool sama = SamaPaikka();
+            if (!valmistelu || sama) { LahtoValmisteilla = false; korostusPika = false; valmisteluAika = 0; jarruAika = 0; return ehdot && sama; }
+            if (!LahtoValmisteilla) { korostusPika = pika; valmisteluAika = 0; jarruAika = 0; }   // nopeus valitaan valmistelun alussa
+            LahtoValmisteilla = true;
+            valmisteluAika += Math.Max(0, dt);
+            if (!ehdot) return false;
+            bool laatat = LahtoLaatatValmiit(dt);
+            // Pallo: lipuminen pysähtyy ennen lentoa (ei nopeushyppyä), mutta vasta kun laatat ovat valmiit: laattaodotuksen ajan pallo
+            // lipuu edelleen (omistaja TF 166, 18.3x: "jää välillä aivan liikaa paikalleen"; TF-lokissa lähtö odotti laattoja 5,0 s
+            // joka kerta, ja pallo seisoi jarrutuksen jälkeen koko odotuksen).
+            if (laatat) jarruAika += Math.Max(0, dt);
+            bool lipuminenSeis = lipumisKohti == null || jarruAika >= LipumisJarru;
+            return laatat && KorostusOsuus <= 0 && lipuminenSeis;
+        }
+
+        /// <summary>Lähteekö lento nyt (LahtoValmis tai odotus täynnä); siirto (kauas tai pakotettu) ja "kerro lisää" lähtevät heti.</summary>
+        bool LahtoLaatatValmiit(double dt)
+        {
+            if (LatausEdistys == null || PakotaSiirto || Seuraava == null || VapaaTila) return true;
+            double matka = KierrosLento.EtaisyysM(Asento.Lat, Asento.Lon, Seuraava.Lat, Seuraava.Lon);
+            if (matka >= SiirtoRajaM) return true;
+            if ((seuraavaIka >= LahtoMittausS && LatausEdistys() >= LahtoValmis) || lahtoOdotusS >= (ohitettu || toiveesta ? LahtoPelaajaMaxS : LahtoOdotusMaxS)) return true;
+            lahtoOdotusS += Math.Max(0, dt);
+            return false;
+        }
+
+        /// <summary>
+        /// REITIN ESILATAUS (Päätoimittaja 8.10. 07.4x; ks. LahtoValmis): esikamera lataa vain seuraavan kohteen pysähdysnäkymän, mutta
+        /// lennon alussa kääntyvä kamera näki pysähdyksellä selän taakse jääneen korttelin latautumattomana. Pysähdyksellä (seuraava
+        /// tiedossa) lennon välinäkymät ReittiNaytteet samalla laskennalla kuin lento (OpasKuvaus.Lennossa nykyisestä asennosta),
+        /// lennon aikana vielä edessä olevat. Googlen ehdot (CesiumKaupunki, ESILATAUKSEN EHTORAJAT): vain reitti SEURAAVAAN
+        /// pysähdykseen, joka näytetään heti; sovitin poistaa kamerat, kun suunnitelma muuttuu (0 näkymää). Palauttaa näkymien määrän.
+        /// </summary>
+        public int ReittiEsilataus(Func<OpasKohde, double> maaKorkeus, Kuvakulma[] ulos)
+        {
+            if (ulos == null || VapaaTila || Siirtymassa || Tauolla) return 0;
+            Kuvakulma a, b; double t0;
+            if (Vaihe == OpasVaihe.Lentaa)
+            {
+                // Myös siirtymälento (kierroksen aloitus yleiskuvasta arviokehykseen, video4 5–12 s karkeana).
+                if (siirto || kohdeKehys == null || avausViive > 0 || VaiheAika >= LentoKestoS) return 0;
+                a = lahto; b = KohdeAsento(); t0 = VaiheAika / Math.Max(0.01, LentoKestoS);
+            }
+            else if (Seuraava != null && !Seuraava.Kysymys && !PakotaSiirto)
+            {
+                a = Asento;
+                double matka = KierrosLento.EtaisyysM(a.Lat, a.Lon, Seuraava.Lat, Seuraava.Lon);
+                if (matka >= SiirtoRajaM || SamaPaikka()) return 0;   // siirto ei lennä; "kerro lisää" jää paikalleen
+                b = KehysAsento(KehysKohteelle(Seuraava, maaKorkeus), 0);
+                t0 = 0;
+            }
+            else return 0;
+            int n = 0;
+            foreach (var t in ReittiNaytteet)
+                if (t > t0 && n < ulos.Length) ulos[n++] = OpasKuvaus.Lennossa(a, b, t);
+            return n;
+        }
+
         void AloitaLento(Func<OpasKohde, double> maaKorkeus)
         {
             var k = Seuraava; Seuraava = null;
+            LahtoOdottiS = lahtoOdotusS; lahtoOdotusS = 0; ohitettu = false; LahtoValmisteilla = false; korostusPika = false;
             // "Kerro lisää" (Pelikoodari #4009): sama paikka uudelleen → kamera jää kiertämään, kappale alkaa heti.
             // Vain, kun nykyinen kehys on oikean kohteen: valinnan ja Liikun välitön lento kehystää arviokohteen (koko 120, ei
             // korkeutta → katu, 143 m), ja juna 156:n VIE-este (Eiffel tornin juurella, simu 7.10. 04.1x) syntyi, kun workerin
@@ -1066,8 +1307,15 @@ namespace Matkakirja.Linssit.Kierros
             var kehys = KehysKohteelle(k, maaKorkeus, out bool maaArvio, out double tulo);
             AsetaKohdeKehys(kehys, maaArvio, k, tulo);
             Nykyinen = k; edellinen = null;
+            // Pysähdyksen kierto hiipuu lennon alussa S-käyränä (ei pysähdy kerralla): lähtöhetken nopeus talteen.
+            kiertoJatko = (Vaihe == OpasVaihe.Puhuu || Vaihe == OpasVaihe.Odottaa) && NykyinenKehys != null && !Ohjaus.Aktiivinen && !KameraSeis
+                && !(PalloLento && NykyinenKehys.Id != null)   // pallon pysähdys ei kierrä (lipuminen), joten jatkoa ei ole
+                ? OpasKuvaus.KiertoNopeus(kierto) : 0;
             Ohjaus.Nollaa();   // lento alkaa pelaajan kulmasta (Asento sisältää jo ohjauksen), ei hyppyä
             lahto = Asento;
+            if (kiertoJatko > 0)
+                lahto = new Kuvakulma(lahto.Lat, lahto.Lon, lahto.EtaisyysM, lahto.Kallistus,
+                    KierrosLento.Kiedo(lahto.Suuntima + kiertoJatko * OpasKuvaus.KiertoAlkuS * 0.5), lahto.KatseKorkeusM);
             double matka = KierrosLento.EtaisyysM(lahto.Lat, lahto.Lon, k.Lat, k.Lon);
             LentoKestoS = LennonKesto(matka);
             AloitaSiirtoJosKaukana(matka, k.Lat, k.Lon, k.Nimi);

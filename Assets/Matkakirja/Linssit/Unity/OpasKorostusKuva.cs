@@ -22,6 +22,9 @@ namespace Matkakirja.Natiivi
         /// <summary>Sävy: kylmä vaalea lasi (ei kirkas neon), huippualfa.</summary>
         public static readonly Color Savy = new Color(0.86f, 0.93f, 1f, 1f);
         public const float Alfa = 0.55f, HaivytysS = 0.9f, PoistoS = 0.5f, HengitysS = 3.2f, HengitysOsuus = 0.12f;
+        /// <summary>Oppaan korostusosuus 0–1 (OpasSilmukka.KorostusOsuus, sovitin joka kehys; Päätoimittaja 8.10. 07.5x): rengas
+        /// sammuu lähdön valmistelussa ennen liikettä ja syttyy saapumisesta, ei yhdessä ruudussa.</summary>
+        public static float Osuus = 1f;
         public const float RengasLeveysOsuus = 0.12f, RengasMinLeveysM = 6f, ViivaLeveysM = 9f, NostoM = 3f;
         public const int RengasJaot = 72;
 
@@ -156,7 +159,7 @@ namespace Matkakirja.Natiivi
             float sisaan = Mathf.SmoothStep(0, 1, (t - alku) / OpasKorostusKuva.HaivytysS);
             float pois = poisAlku < 0 ? 1 : 1 - Mathf.SmoothStep(0, 1, (t - poisAlku) / OpasKorostusKuva.PoistoS);
             float hengitys = 1 - OpasKorostusKuva.HengitysOsuus * 0.5f * (1 - Mathf.Cos(2 * Mathf.PI * (t - alku) / OpasKorostusKuva.HengitysS));
-            var c = OpasKorostusKuva.Savy; c.a = sisaan * pois * hengitys;
+            var c = OpasKorostusKuva.Savy; c.a = sisaan * pois * hengitys * Mathf.SmoothStep(0f, 1f, OpasKorostusKuva.Osuus);
             mpb.SetColor(Vari, c); r.SetPropertyBlock(mpb);
             if (poisAlku >= 0 && pois <= 0) Tuhoa();
         }

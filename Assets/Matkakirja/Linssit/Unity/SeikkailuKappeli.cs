@@ -39,6 +39,21 @@ namespace Matkakirja.Natiivi
         public Vector3 Tallennus { get; private set; }
         /// <summary>Kappelin valoarvoituksen vaiheet 1–11 (Pulun vihjeet, tallennus).</summary>
         public KappelinArvoitus Arvoitus { get; } = new KappelinArvoitus();
+        /// <summary>Kappeli on jo ratkaistu (jatko tallennuksesta huoneisiin 6–10): ei kohtausta eikä voudin kierrosta uudelleen.</summary>
+        public bool Ratkaistu { get; private set; }
+
+        /// <summary>Koko peli 1–10 (Siirtoseppä 8.10.): jatko tallennuksesta, jossa kalkki ja pateeni ovat alttarilla, palauttaa ratkaistun
+        /// kappelin (pimeä, löytö alttarilla). Kesken jäänyt arvoitus alkaa tarkistuspisteestä alusta kuten ennen.</summary>
+        public void Palauta(SeikkailuTallennus t)
+        {
+            var a = KappelinArvoitus.Lue(t);
+            if (!(a.KalkkiAlttarilla && a.PateeniAlttarilla)) return;
+            Ratkaistu = true; loppu = true; loydetty = true;
+            alttarilla.Add("kalkki"); alttarilla.Add("pateeni"); alttarilla.Add("liuskekivi");
+            if (SeikkailuKynttilat.Aktiivinen is SeikkailuKynttilat ky) for (int i = 0; i < ky.Ydin.Maara; i++) ky.Ydin.Aseta(i, false);
+            SeikkailuEsineet.Aktiivinen?.PalautaKappeli();
+            kirjaa?.Invoke("seikkailu: jatko: kappeli ratkaistu (löytö alttarilla), ei kohtausta");
+        }
         readonly List<Vector3> kilvet = new List<Vector3>(), vedot = new List<Vector3>();
         public const float KilpiM = 1.0f;
 
@@ -143,7 +158,7 @@ namespace Matkakirja.Natiivi
             if (Nyt == Vaihe.Pimea || Nyt == Vaihe.Paluu) PaivitaVouti(p);
             PaivitaArvoitus(p);
             if (Nyt == Vaihe.Pimea && !paluuTehty && (raapaistu || Time.time - pimeaAlku > PaluuS)) StartCoroutine(Paluu());
-            if (Nyt == Vaihe.Odottaa && p != null && Vector3.Distance(p.transform.position, ovi) < AlkuM) StartCoroutine(Kohtaus());
+            if (Nyt == Vaihe.Odottaa && !Ratkaistu && p != null && Vector3.Distance(p.transform.position, ovi) < AlkuM) StartCoroutine(Kohtaus());
             // Valaistuun kappeliin kohtauksen tai sammutuksen aikana (yli 2,5 m kaari-ovelta kohti alttaria): kappalainen näkee.
             if ((Nyt == Vaihe.Kohtaus || Nyt == Vaihe.Pimeys) && p != null && !nahty && Vector3.Distance(p.transform.position, ovi) > 2.5f
                 && Vector3.Distance(p.transform.position, alttari) < Vector3.Distance(ovi, alttari) + 0.5f)

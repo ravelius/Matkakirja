@@ -13,6 +13,8 @@
 # simulaattoreihin (Raamattu, SIMULAATTORIEN OMISTUS); simulaattori sammutetaan lopuksi, jos se ei ollut päällä.
 setopt null_glob
 APP=${1:?app}; UDID=${2:?UDID}; OUT=${3:?tuloskansio}
+source /Users/Shared/Claude/proto-3d/tyokalut/simusarja.sh || exit 2   # T7-laitesarja (Natiiviseppä 8.10.): xcrun simctl → T7
+UDID=$(mk_kaanna $UDID)
 BID=app.matkakirja.proto3d
 mkdir -p $OUT; OUT=${OUT:A}
 oli_paalla=$(xcrun simctl list devices booted | grep -c $UDID)

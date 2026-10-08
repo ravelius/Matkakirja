@@ -120,6 +120,19 @@ namespace Matkakirja.Natiivi
             e.Go.transform.SetParent(transform, true); e.Go.transform.position = paikka; e.Rb.isKinematic = true;
         }
 
+        /// <summary>Jatko ratkaistun kappelin jälkeen: kivet irti, nyytti avattu, kalkki ja pateeni alttarilla, liuskekivi laukussa.</summary>
+        public void PalautaKappeli()
+        {
+            foreach (var e in esineet)
+            {
+                if (e.Go == null) continue;
+                if (e.Laji == Laji.Irrotettava && e.Id.StartsWith("kivi", StringComparison.Ordinal)) { e.Irrotettu = true; e.Go.SetActive(false); }
+                else if (e.Id == Nyytti) e.Go.SetActive(false);
+                else if (Array.IndexOf(NyytinSisalto, e.Id) >= 0) e.Go.SetActive(true);
+            }
+            foreach (var id in NyytinSisalto) if (esineet.Exists(x => x.Id == id)) AsetaAlttarille(id);
+        }
+
         public void TaytaM(MTila m)
         {
             foreach (var x in puetut) m.Puettu.Add(x);
@@ -170,6 +183,9 @@ namespace Matkakirja.Natiivi
                 });
             }
         }
+
+        /// <summary>Onko lukittu ovi (ovi:&lt;tunnus&gt;) auki (LS2:n vihjeportaat).</summary>
+        public bool OviAuki(string tunnus) { foreach (var o in ovet) if (o.M.Tunnus == tunnus) return o.Auki; return false; }
 
         Ovi LahinOvi(SeikkailuPelaaja p)
         {

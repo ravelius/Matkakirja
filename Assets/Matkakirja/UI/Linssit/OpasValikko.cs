@@ -16,6 +16,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Matkakirja.Linssit;
 using Matkakirja.Linssit.Kierros;
 using Matkakirja.Peli;
 using UnityEngine;
@@ -165,7 +166,7 @@ namespace Matkakirja.Natiivi
         bool riviAuki;
         IVisualElementScheduledItem esittely;
         bool nappiNakyy;
-        enum Nakyma { Paa, Takyt, Maanosat, Maat, Kaupungit, Kysy, Liiku, Mika, Aika }
+        enum Nakyma { Paa, Takyt, Maanosat, Maat, Kaupungit, Kysy, Liiku, Mika, Aika, Lahteet }
 
         /// <summary>Oppaan linssi auki (✕ pois, LinssiUi.PaivitaSulku).</summary>
         public static bool Nakyy => Viimeisin != null && Viimeisin.nakyy;
@@ -266,10 +267,13 @@ namespace Matkakirja.Natiivi
             // Juna 156: tauko siirtyi ohjainriville oikean tapin alle (Seuraavan viereen); ylänurkassa ■ ja ☰.
             kuvaNappi.style.display = DisplayStyle.None;
             nappi = Ohjausnappi.Nappi(Ikonit.Valikko, "Valikko", () => { Debug.Log("MATKAKIRJA opas: ☰ " + (Auki ? "kiinni" : "auki")); if (Auki) Sulje(); else Avaa(Nakyma.Paa); }, ryhma);
-            // VUOROKAUDENAIKA (omistaja 6.10. 18.5x): OHJAUSNAPPI vasempaan yläkulmaan; kuvake = voimassa oleva tila, A = automaattinen.
+            // VUOROKAUDENAIKA (omistaja 6.10. 18.5x): OHJAUSNAPPI vasempaan yläkulmaan; kuvake = voimassa oleva tila.
+            // SÄÄTILA (omistaja 8.10. 09.1x–09.2x "kumpikin toiminto saman napin alle"; Päätoimittaja): sama nappi avaa listan, jossa
+            // AIKA (päivä | yö) ja SÄÄ (pois | automaatti | käsin); valinta Ydin Saatila-luokkaan (LS1 tehosteet, Pelikoodari säähaku).
             aikaRyhma = Ohjausnappi.Ryhma(Juuri);
             aikaRyhma.AddToClassList("mk-ohjausryhma--vasen");
-            aikaNappi = Ohjausnappi.Nappi(Ikonit.Viiva["paiva"], "Vuorokaudenaika", () => { if (Auki && nakyma == Nakyma.Aika) Sulje(); else Avaa(Nakyma.Aika); }, aikaRyhma);
+            aikaNappi = Ohjausnappi.Nappi(Ikonit.Viiva["paiva"], "Aika ja sää", () => { SuljeSaaVihje(); if (Auki && nakyma == Nakyma.Aika) Sulje(); else Avaa(Nakyma.Aika); }, aikaRyhma);
+            LueSaatila();
 
             // Elävä opas nykyajassa (omistaja 5.10.2026 klo 20.5x): LASI-lista harmaan lasin tokeneilla ja modernilla kirjasimella.
             valikko = Rakenne.El("mk-linssivalikko mk-linssivalikko--pohja tk-teema-harmaa", kerros.Juuri(kerrosNro));
@@ -384,6 +388,9 @@ namespace Matkakirja.Natiivi
             tapit = new OpasTapit(Juuri);
             nimilappu = new OpasNimilappu(Juuri);
             kerros.JokaRuutu += PaivitaTapit;
+            // SÄÄTILAN ENSIKERRAN VIHJE (omistaja 8.10. 09.2x): NIMILAPPU-pohjan lappu ja viiva ☾-napin alle (ei nastaa).
+            RakennaSaaVihje();
+            kerros.JokaRuutu += PaivitaSaaVihje;
             // METROLINJA (omistaja 7.10. 10.2x): kierroksen eteneminen vasemmassa reunassa keskellä (OpasMetrolinja).
             metro = new OpasMetrolinja(Juuri);
             kerros.JokaRuutu += PaivitaMetro;
@@ -404,6 +411,7 @@ namespace Matkakirja.Natiivi
             if (nakyy == this.nakyy && Juuri.style.display == (nakyy ? DisplayStyle.Flex : DisplayStyle.None)) return;
             this.nakyy = nakyy;
             Juuri.style.display = nakyy ? DisplayStyle.Flex : DisplayStyle.None;
+            if (nakyy) saaVihje.Alkoi(Time.unscaledTime); else saaVihje.Loppui();
             if (!nakyy) { Sulje(); SiirtymaPeru(); }
             var ui = UiNakymat.Olemassa ? UiNakymat.Hae() : null;
             ui?.Chat?.OpasTila(nakyy);
@@ -586,6 +594,14 @@ namespace Matkakirja.Natiivi
             siirtymaKuva.style.left = 0; siirtymaKuva.style.right = 0; siirtymaKuva.style.top = 0; siirtymaKuva.style.bottom = 0;
             siirtymaKuva.style.backgroundSize = new BackgroundSize(Length.Percent(100), Length.Percent(100));
             siirtymaKuva.style.display = DisplayStyle.None;
+            // Kerroksellinen pallo (LATAUSKUVA-pohja) heti stillin päälle, liu'un ja tekstien alle.
+            palloKerrokset = new Latauskuva(siirtyma);
+            palloKerrokset.Juuri.RemoveFromHierarchy();
+            siirtyma.Insert(siirtyma.IndexOf(siirtymaKuva) + 1, palloKerrokset.Juuri);
+            // Kerrokset levylle valmiiksi (laitteen pysty- ja vaakarajaus), jotta ne ehtivät jo ensimmäiseen siirtymään.
+            int pysty = Matkakirja.Linssit.LatausLiike.Rajausindeksi(Mathf.Min(Screen.width, Screen.height), Mathf.Max(Screen.width, Screen.height));
+            foreach (int r in new[] { pysty, 2 })
+                foreach (var k in new[] { "tausta-maaankkuri", "kori", "kupu" }) Kuvat.Esilataa(PalloKerrosUrl(r, k));
             // Tumma liuku leveän vaakaruudun alaosaan (4:3-rajauksesta näkyy vain kaista): kuvan oma alasävy (Tyylikirja.Kehys.Bg).
             siirtymaLiuku = Rakenne.El(null, siirtyma, PickingMode.Ignore);
             siirtymaLiuku.style.position = Position.Absolute;
@@ -614,7 +630,11 @@ namespace Matkakirja.Natiivi
             avausIon.style.unityBackgroundScaleMode = ScaleMode.ScaleToFit;
             avausIon.style.display = DisplayStyle.None;
             kerrosJuuri.schedule.Execute(PaivitaAvausIon).Every(100);
-            OpasSovitin.PalloTekstuuriValmis += () => UiKerros.PaaSaikeessa(() => { if (siirtyma.style.display != DisplayStyle.None && OpasSovitin.Kaupunkitila && !palloNakyy) AsetaPalloKuva(true); });
+            OpasSovitin.PalloTekstuuriValmis += () => UiKerros.PaaSaikeessa(() => { if (siirtyma.style.display != DisplayStyle.None && OpasSovitin.Kaupunkitila && (!palloNakyy || palloNimi != OpasSovitin.PalloKuvaRuudulle())) AsetaPalloKuva(true); });
+            // KIERTO (omistaja 8.10.: "jos pelaaja vaihtaa … orientaatiota pystyn ja vaakan välillä, niin kuva pitäisi päivittyä niin,
+            // että ei jää mustia palkkeja"): ruudun koon muuttuessa näkyvä kuva sovitetaan heti peittäväksi uuteen kokoon, ja jos
+            // rajaus vaihtuu (puhelin / iPad pysty / vaaka), uusi rajaus haetaan muistiin ja vaihdetaan valmistuessa; ion-logo uuteen paikkaan.
+            siirtyma.RegisterCallback<GeometryChangedEvent>(e => { if (e.oldRect.size != e.newRect.size) Kierretty(); });
             OpasSovitin.SiirtymaAlkaa += n => UiKerros.PaaSaikeessa(() => SiirtymaAlkaa(n));
             OpasSovitin.SiirtymaValmis += () => UiKerros.PaaSaikeessa(SiirtymaValmis);
         }
@@ -718,12 +738,47 @@ namespace Matkakirja.Natiivi
             return liukuKuva;
         }
 
+        /// <summary>Ruudun koko muuttui siirtymän ollessa auki (kierto): kuva peittäväksi heti, oikea rajaus perään.</summary>
+        void Kierretty()
+        {
+            if (siirtyma.style.display == DisplayStyle.None) return;
+            if (palloNakyy && palloKuvaNyt != null) SovitaPalloKuva(palloKuvaNyt);
+            if (palloKerroksetNakyy) SovitaPalloKerrokset();
+            if (OpasSovitin.Kaupunkitila && palloNimi != OpasSovitin.PalloKuvaRuudulle()) AsetaPalloKuva(true);
+            AsetaSiirtymaIon();
+            Debug.Log($"MATKAKIRJA opas: siirtymä kierretty {siirtyma.worldBound.width:0}×{siirtyma.worldBound.height:0}, rajaus {OpasSovitin.PalloKuvaRuudulle()} (näkyy {palloNimi ?? "-"})");
+        }
+
+        string palloNimi;
+        Texture2D palloKuvaNyt;
+
+        /// <summary>Kuvan paikka itse (peittävä skaala, LatausLiike.Peita): leveällä vaakaruudulla yläreuna kohtaan VaakaKuvanAlku
+        /// (kupu ilmoineen näkyviin) ja tumma liuku alaosaan tekstille; muuten keskitetty. Ei mustia palkkeja missään koossa.</summary>
+        void SovitaPalloKuva(Texture2D t)
+        {
+            var koko = siirtyma.parent?.worldBound.size ?? Vector2.one;
+            float w = Mathf.Max(koko.x, 1f), h = Mathf.Max(koko.y, 1f);
+            bool levea = w > h * 1.5f;
+            var (x, y, kw, kh) = Matkakirja.Linssit.LatausLiike.Peita(w, h, t.width / (double)Mathf.Max(1, t.height), levea ? VaakaKuvanAlku : -1);
+            siirtymaKuva.style.right = StyleKeyword.Auto; siirtymaKuva.style.bottom = StyleKeyword.Auto;
+            siirtymaKuva.style.width = (float)kw; siirtymaKuva.style.height = (float)kh;
+            siirtymaKuva.style.left = (float)x; siirtymaKuva.style.top = (float)y;
+            siirtymaLiuku.style.display = levea ? DisplayStyle.Flex : DisplayStyle.None;
+            if (levea) siirtymaLiuku.style.backgroundImage = new StyleBackground(LiukuKuva());
+            siirtymaTeksti.style.marginBottom = h * 0.07f;
+        }
+
         void AsetaPalloKuva(bool nayta)
         {
             string n = nayta ? OpasSovitin.PalloKuvaRuudulle() : null;
             if (n == null)
             {
                 palloNakyy = false;
+                palloNimi = null; palloKuvaNyt = null;
+                palloLiike?.Pause();
+                PiilotaPalloKerrokset();
+                Latauskuva.AsetaRajaus(siirtymaKuva, null);
+                siirtymaKuva.style.backgroundSize = new BackgroundSize(Length.Percent(100), Length.Percent(100));
                 siirtymaKuva.style.display = DisplayStyle.None;
                 siirtymaLiuku.style.display = DisplayStyle.None;
                 siirtymaTeksti.style.scale = StyleKeyword.Null;
@@ -740,21 +795,15 @@ namespace Matkakirja.Natiivi
             siirtymaTeksti.style.marginBottom = Mathf.Max(koko.y, 1f) * 0.07f;
             var t = OpasSovitin.PalloTekstuuri(n);
             if (t == null) { OpasSovitin.PalloTekstuuriMuistiin(n); return; }   // valmistuessa PalloTekstuuriValmis → tänne uudelleen
-            // Kuvan paikka itse (peittävä skaala): leveällä vaakaruudulla yläreuna kohtaan VaakaKuvanAlku (kupu ilmoineen näkyviin)
-            // ja tumma liuku alaosaan tekstille; muuten keskitetty.
-            float w = Mathf.Max(koko.x, 1f), h = Mathf.Max(koko.y, 1f), kuvasuhde = t.width / (float)Mathf.Max(1, t.height);
-            float kw = Mathf.Max(w, h * kuvasuhde), kh = kw / kuvasuhde;
-            bool levea = w > h * 1.5f;
-            siirtymaKuva.style.right = StyleKeyword.Auto; siirtymaKuva.style.bottom = StyleKeyword.Auto;
-            siirtymaKuva.style.width = kw; siirtymaKuva.style.height = kh;
-            siirtymaKuva.style.left = (w - kw) * 0.5f;
-            siirtymaKuva.style.top = levea ? -VaakaKuvanAlku * kh : (h - kh) * 0.5f;
-            siirtymaLiuku.style.display = levea ? DisplayStyle.Flex : DisplayStyle.None;
-            if (levea) siirtymaLiuku.style.backgroundImage = new StyleBackground(LiukuKuva());
+            SovitaPalloKuva(t);
+            palloNimi = n; palloKuvaNyt = t;
+            HaePalloKerrokset(n);
             siirtymaTeksti.style.scale = UiKerros.Tabletti ? new Scale(new Vector3(IpadIsonnus, IpadIsonnus, 1f)) : (StyleScale)StyleKeyword.Null;
-            bool myohassa = siirtyma.resolvedStyle.opacity > 0.5f && Time.realtimeSinceStartup - siirtymaAlku > 0.3f;
+            // Kierron rajausvaihto (kuva jo näkyvissä) vaihtaa suoraan ilman häivytystä mustasta.
+            bool myohassa = !palloNakyy && siirtyma.resolvedStyle.opacity > 0.5f && Time.realtimeSinceStartup - siirtymaAlku > 0.3f;
             siirtymaKuva.style.backgroundImage = new StyleBackground(t);
             siirtymaKuva.style.display = DisplayStyle.Flex;
+            if (!palloNakyy) KaynnistaPalloLiike();
             palloNakyy = true;
             if (myohassa)
             {
@@ -769,6 +818,121 @@ namespace Matkakirja.Natiivi
         }
         float siirtymaAlku;
         int siirtymaKerta;
+
+        // LATAUSKUVA-POHJA STILL-KUVALLE (omistaja 8.10. "latauskuvat kevyesti animoiduiksi"; Päätoimittaja): kunnes pallon kerrokset
+        // (tausta, kupu, kori) tulevat, nykyinen still-kuva lähentyy hitaasti keskeltä (LatausLiike.Lahentyminen 1,00 → 1,04 / 8 s ja
+        // takaisin) taustan rajauksena; 33 ms UI-ajastin, ei täyttä ruudunpäivitystä.
+        IVisualElementScheduledItem palloLiike;
+        float palloLiikeAlku;
+
+        // KERROKSELLINEN PALLO (omistaja 8.10.: "ilmapallo kuva pitää tehdä kahdesta osasta uudestaan niin että pallo heiluu hitaasti
+        // ruudulla ja köysi piirretään vektorina", "heilunnaksi riittää hyvin vähäeleinen liike", ankkuriköysi; LS1 sopi 17.5x, että
+        // Natiivi-UI kytkee): Codexin tausta (maa-ankkuri), kori ja kupu R2:sta Kuvat.Hae-reitillä; kun kaikki kolme ovat saatavilla,
+        // ne korvaavat stillin (häivytys), muuten still lähentyy kuten ennen. Kupu heiluu yläosastaan ±0,6° / 3 pt / 7,5 s, kori ±0,5°
+        // / 2 pt eri vaiheessa; 4 riippuköyttä korin kulmista kuvun alareunaan ja ankkuriköysi korista maahan vektoreina (Latauskuva.
+        // Koysi). Kiinnityspisteet Sisältökirjurin mittauksesta (alfa-bbox, osuudet koko kuvasta, sisaltokirjuri-vertailu/
+        // pallo-kiinnityspisteet-osuuksina.json). Tausta polulta 20261008b (Codexin korjattu, saumaton; Sisältökirjuri tarkisti 8.10.),
+        // kupu ja kori 20261008; puuttuessa still pysyy.
+        const string PalloKerrosJuuri = "https://media.matkakirja.app/julisteet/latauskuva-kuumailmapallo-kerrokset/";
+        static string PalloKerrosUrl(int rajaus, string kerros) =>
+            PalloKerrosJuuri + (kerros == "tausta-maaankkuri" ? "20261008b" : "20261008") + "/latauskuva-pallo-" + PalloKerrosRajaus[rajaus] + "-" + kerros + ".png";
+        static readonly string[] PalloKerrosRajaus = { "iphone", "ipad-pysty", "ipad-vaaka" };
+        /// <summary>Rajauksittain: kuvun 4 ja korin 4 kiinnityspistettä (takavasen, takaoikea, etuvasen, etuoikea), kuvun ja korin
+        /// kääntöpiste, ankkuriköyden korin piste ja maa-ankkuri.</summary>
+        static readonly (Vector2[] Kupu, Vector2[] Kori, Vector2 KupuKaanto, Vector2 KoriKaanto, Vector2 Ankkuri, Vector2 Maa)[] PalloPisteet =
+        {
+            (new[] { new Vector2(0.4732f, 0.4657f), new Vector2(0.5423f, 0.4657f), new Vector2(0.4922f, 0.4705f), new Vector2(0.5233f, 0.4713f) },
+             new[] { new Vector2(0.4888f, 0.5455f), new Vector2(0.5302f, 0.5455f), new Vector2(0.4870f, 0.5486f), new Vector2(0.5302f, 0.5486f) },
+             new Vector2(0.5069f, 0.3301f), new Vector2(0.5095f, 0.5467f), new Vector2(0.5095f, 0.5590f), new Vector2(0.5186f, 0.7913f)),
+            (new[] { new Vector2(0.4840f, 0.4657f), new Vector2(0.5266f, 0.4657f), new Vector2(0.4957f, 0.4705f), new Vector2(0.5149f, 0.4713f) },
+             new[] { new Vector2(0.4936f, 0.5455f), new Vector2(0.5191f, 0.5455f), new Vector2(0.4926f, 0.5486f), new Vector2(0.5191f, 0.5486f) },
+             new Vector2(0.5048f, 0.3301f), new Vector2(0.5064f, 0.5467f), new Vector2(0.5064f, 0.5590f), new Vector2(0.5120f, 0.7913f)),
+            (new[] { new Vector2(0.4880f, 0.3415f), new Vector2(0.5199f, 0.3415f), new Vector2(0.4968f, 0.3479f), new Vector2(0.5112f, 0.3489f) },
+             new[] { new Vector2(0.4952f, 0.4479f), new Vector2(0.5144f, 0.4479f), new Vector2(0.4944f, 0.4521f), new Vector2(0.5144f, 0.4521f) },
+             new Vector2(0.5036f, 0.1606f), new Vector2(0.5048f, 0.4495f), new Vector2(0.5048f, 0.4660f), new Vector2(0.5090f, 0.7759f)),
+        };
+        Latauskuva palloKerrokset;
+        readonly Texture2D[] palloKerrosKuvat = new Texture2D[3];
+        int palloKerrosRajaus = -1, palloKerrosKerta;
+        bool palloKerroksetNakyy;
+
+        void HaePalloKerrokset(string stilliNimi)
+        {
+            int r = System.Array.FindIndex(PalloKerrosRajaus, x => stilliNimi.Contains("-" + x + "."));
+            if (r < 0 || r == palloKerrosRajaus) return;
+            palloKerrosRajaus = r;
+            int kerta = ++palloKerrosKerta;
+            var nimet = new[] { "tausta-maaankkuri", "kori", "kupu" };
+            for (int i = 0; i < 3; i++)
+            {
+                int j = i;
+                Kuvat.Hae(PalloKerrosUrl(r, nimet[i]), t =>
+                {
+                    if (kerta != palloKerrosKerta || !palloNakyy) return;
+                    if (palloKerrosKuvat[j] != null && palloKerrosKuvat[j] != t) Kuvat.Vapauta(palloKerrosKuvat[j]);
+                    palloKerrosKuvat[j] = t;
+                    if (t != null) Kuvat.Kiinnita(t);
+                    if (palloKerrosKuvat[0] != null && palloKerrosKuvat[1] != null && palloKerrosKuvat[2] != null) NaytaPalloKerrokset(r);
+                });
+            }
+        }
+
+        void NaytaPalloKerrokset(int r)
+        {
+            var p = PalloPisteet[r];
+            var koydet = new List<Latauskuva.Koysi>();
+            for (int i = 0; i < 4; i++)
+                koydet.Add(new Latauskuva.Koysi { KiintoKerros = 0, Kiinto = p.Kori[i], Kerros = 1, Kiinnitys = p.Kupu[i], LeveysPt = 1f, Riippuma = 0.02f });
+            koydet.Add(Latauskuva.Koysi.Ankkuri(p.Maa, 0, p.Ankkuri));
+            palloKerrokset.Aseta(palloKerrosKuvat[0], new[]
+            {
+                new Latauskuva.Kerros { Kuva = palloKerrosKuvat[1], Paikka = new Rect(0, 0, 1, 1), Kaanto = p.KoriKaanto,
+                    Liike = new Matkakirja.Linssit.LatausLiike.Profiili { KulmaAste = 0.5, NousuPt = 2, JaksoS = 7.5, Vaihe = -0.6 } },
+                new Latauskuva.Kerros { Kuva = palloKerrosKuvat[2], Paikka = new Rect(0, 0, 1, 1), Kaanto = p.KupuKaanto,
+                    Liike = new Matkakirja.Linssit.LatausLiike.Profiili { KulmaAste = 0.6, NousuPt = 3, JaksoS = 7.5 } },
+            }, koydet);
+            palloKerroksetNakyy = true;
+            SovitaPalloKerrokset();
+            bool myohassa = siirtyma.resolvedStyle.opacity > 0.5f && Time.realtimeSinceStartup - siirtymaAlku > 0.3f;
+            palloKerrokset.Nayta(true, myohassa);
+            // Still pois kerrosten alta (ei kaksoiskuvaa reunoilla); häivytyksen ajan näkyvissä.
+            siirtymaKuva.schedule.Execute(() => { if (palloKerroksetNakyy) { palloLiike?.Pause(); siirtymaKuva.style.visibility = Visibility.Hidden; } })
+                .StartingIn(myohassa ? Tyylikirja.Kesto.Avaus + 50 : 0);
+            Debug.Log($"MATKAKIRJA opas: pallon kerroksellinen latauskuva {PalloKerrosRajaus[r]}");
+        }
+
+        void SovitaPalloKerrokset()
+        {
+            var t = palloKerrosKuvat[0];
+            if (t == null) return;
+            var koko = siirtyma.parent?.worldBound.size ?? Vector2.one;
+            float w = Mathf.Max(koko.x, 1f), h = Mathf.Max(koko.y, 1f);
+            var (x, y, kw, kh) = Matkakirja.Linssit.LatausLiike.Peita(w, h, t.width / (double)Mathf.Max(1, t.height), w > h * 1.5f ? VaakaKuvanAlku : -1);
+            palloKerrokset.Sovita(new Rect((float)x, (float)y, (float)kw, (float)kh));
+        }
+
+        void PiilotaPalloKerrokset()
+        {
+            palloKerrosKerta++;
+            palloKerrosRajaus = -1;
+            palloKerroksetNakyy = false;
+            palloKerrokset?.Nayta(false);
+            palloKerrokset?.Aseta(null);
+            siirtymaKuva.style.visibility = StyleKeyword.Null;
+            for (int i = 0; i < 3; i++) { if (palloKerrosKuvat[i] != null) Kuvat.Vapauta(palloKerrosKuvat[i]); palloKerrosKuvat[i] = null; }
+        }
+
+        void KaynnistaPalloLiike()
+        {
+            palloLiikeAlku = Time.unscaledTime;
+            if (palloLiike == null)
+                palloLiike = siirtymaKuva.schedule.Execute(() =>
+                {
+                    if (!palloNakyy) return;
+                    Latauskuva.AsetaRajaus(siirtymaKuva, Matkakirja.Linssit.LatausLiike.Lahentyminen(Time.unscaledTime - palloLiikeAlku, 0, 0));
+                }).Every(Latauskuva.PaivitysMs);
+            else palloLiike.Resume();
+        }
 
         /// <summary>Kohde ladattu: musta ruutu häipyy (Cupolan häivytys) ja näkymä aukeaa.</summary>
         public void SiirtymaValmis()
@@ -1239,6 +1403,7 @@ namespace Matkakirja.Natiivi
             if (ohjainRivi.style.right.value.value != riviOikea) ohjainRivi.style.right = riviOikea;
             if (ohjainRivi.style.bottom.value.value != ohjainAla) ohjainRivi.style.bottom = ohjainAla;
 
+            tapit.Vapaa(VapaaTila);
             tapit.Paivita((pysahdys || VapaaTila) && !Auki && !(chat?.Auki ?? false), tappiAla, sivu);
             // Kohteen nimilappu pysähdyksellä (myös valikon aikana; chat peittää sen joka tapauksessa).
             nimilappu.Paivita(pysahdys && !(chat?.Auki ?? false) ? l.Nykyinen.Nimi : null);
@@ -1438,7 +1603,7 @@ namespace Matkakirja.Natiivi
         {
             if (k == null) { if (latausSuurennos?.Auki ?? false) { latausSuurennos.Sulje(); Debug.Log("MATKAKIRJA opas: latauskuva suljettu"); } return; }
             if (!nakyy || !KuvatPaalla || (suurennos?.Auki ?? false)) return;
-            latausSuurennos ??= new Kuvasuurennos(UiKerros.Hae().Juuri(UiKerros.Valikot)) { Tayteen = true, Kokoruutu = true, LahdeKokoruudussa = true, Osuus = LatausKuvaOsuus };
+            latausSuurennos ??= new Kuvasuurennos(UiKerros.Hae().Juuri(UiKerros.Valikot)) { Tayteen = true, Kokoruutu = true, LahdeKokoruudussa = true, Osuus = LatausKuvaOsuus, Lahentyy = true };
             latausSuurennos.Avaa(new[] { Lehtikuvaksi(k, OpasSovitin.Viimeisin?.Silmukka?.Nykyinen?.Nimi) }, 0);
             Debug.Log("MATKAKIRJA opas: latauskuva näkyviin " + k.Url);
         }
@@ -1502,12 +1667,24 @@ namespace Matkakirja.Natiivi
                     // Tauko ja kuvat valikon riveinä, tila tekstissä (omistaja 6.10. 12.1x).
                     Komento(KuvatPaalla ? "Kuvat: päällä" : "Kuvat: pois", VaihdaKuvat);
                     Komento("Näytä teksti", NaytaTeksti);
-                    Komento("Tietoja ja lähteet", () => { KrediititTiivis.NaytaKaikki(); Debug.Log("MATKAKIRJA opas: tietoja ja lähteet"); });
+                    // LÄHTEET (omistaja 7.10. 22.5x: kuvien tekijät eivät näy kuvissa, vaan täällä; sama alanäkymä kuin linnan Lähteet).
+                    Alanakyma("Lähteet", () => Avaa(Nakyma.Lahteet));
                     Viiva();
                     Komento("Poistu linssistä", () => UiNakymat.Hae()?.Linssit?.SuljeLinssi());
                     break;
                 case Nakyma.Takyt:
                     if (aloitus) RakennaAloitusPaikat(kaikki); else RakennaTakyt(kaikki);
+                    break;
+                case Nakyma.Lahteet:
+                    Takaisin("Lähteet", Nakyma.Paa);
+                    Komento("Kartta- ja maastoaineistot", () => { KrediititTiivis.NaytaKaikki(); Debug.Log("MATKAKIRJA opas: kartta-aineistot"); });
+                    // Säätiedot (Pelikoodari 8.10.: /opas/saa, MET Norwayn lisenssiehto): aina näkyvissä, kun sää on käytettävissä.
+                    Kirjasimet.Aseta(Rakenne.Teksti(SaaLahde, "mk-linssivalikko__lahde", Kohde), Kirjasin.Moderni);
+                    Viiva();
+                    Vieritys();
+                    var lahteet = KuvaLahteet();
+                    if (lahteet.Count == 0) Kirjasimet.Aseta(Rakenne.Teksti("Ei kuvalähteitä.", "mk-linssivalikko__lahde", rivit), Kirjasin.Moderni);
+                    foreach (var l in lahteet) Kirjasimet.Aseta(Rakenne.Teksti(l, "mk-linssivalikko__lahde", rivit), Kirjasin.Moderni);
                     break;
                 case Nakyma.Kysy:
                     RakennaKysy();
@@ -1790,37 +1967,185 @@ namespace Matkakirja.Natiivi
         bool? testiLopeta;
         Button aikaNappi;
         string aikaKuvake;
-        static readonly (string Arvo, string Nimi)[] AikaValinnat = { ("auto", "Automaattinen"), ("aamu", "Aamu"), ("paiva", "Päivä"), ("ilta", "Ilta") };
+        static readonly (PalloAika Arvo, string Nimi)[] AikaValinnat = { (PalloAika.Paiva, "Päivä"), (PalloAika.Yo, "Yö") };
+        static readonly (PalloSaa Arvo, string Nimi)[] SaaValinnat =
+        {
+            (PalloSaa.Pois, "Pois"), (PalloSaa.Selkea, "Selkeä"), (PalloSaa.Pilvinen, "Pilvinen"), (PalloSaa.Sade, "Sade"),
+            (PalloSaa.Sumu, "Sumu"), (PalloSaa.Lumi, "Lumi"), (PalloSaa.Ukkonen, "Ukkonen"),
+        };
+        const string SaatilaAvain = "matkakirja-pallo-saatila";
+        /// <summary>Säätietojen lähderivi (CC BY 4.0 -ehto; Pelikoodarin worker /opas/saa).</summary>
+        const string SaaLahde = "Säätiedot: MET Norway (Norjan ilmatieteen laitos), CC BY 4.0";
 
-        /// <summary>LS1: KaupunkiKuva.Valinta (auto | aamu | paiva | ilta), pysyy avauksesta toiseen.</summary>
-        static string AikaValinta { get => KaupunkiKuva.Valinta ?? "auto"; set => KaupunkiKuva.Valinta = value; }
+        /// <summary>LS1:n silta (junat 165–166): KaupunkiKuva.Valinta "paiva" | "yo" = voimassa oleva Saatila.Aika.</summary>
+        static string AikaValinta { get => KaupunkiKuva.Valinta ?? "paiva"; set => KaupunkiKuva.Valinta = value; }
 
-        /// <summary>LS1: KaupunkiKuva.Nyt (aamu | paiva | ilta | yo), voimassa oleva tila.</summary>
+        /// <summary>LS1: KaupunkiKuva.Nyt (paiva | yo), voimassa oleva tila.</summary>
         static string AikaNyt => KaupunkiKuva.Nyt ?? "paiva";
 
+        static string Avain(PalloAika a) => a == PalloAika.Yo ? "yo" : "paiva";
+        static string Nimi(PalloAika a) => AikaValinnat.FirstOrDefault(x => x.Arvo == a).Nimi;
+        static string Nimi(PalloSaa s) => SaaValinnat.FirstOrDefault(x => x.Arvo == s).Nimi;
+
+        /// <summary>
+        /// Tallennettu säätila (PlayerPrefs; oletus LIVE pois, päivä, sää pois) Saatila-luokkaan; jokainen muutos tallennetaan ja
+        /// voimassa oleva aika kirjoitetaan LS1:n sillalle.
+        /// </summary>
+        static bool saatilaLuettu;
+        static void LueSaatila()
+        {
+            if (saatilaLuettu) return;
+            saatilaLuettu = true;
+            Saatila.Lue(PlayerPrefs.GetString(SaatilaAvain, ""));
+            AikaValinta = Avain(Saatila.Aika);
+            Saatila.Muuttui += () =>
+            {
+                PlayerPrefs.SetString(SaatilaAvain, Saatila.Tallenne); PlayerPrefs.Save();
+                if (AikaValinta != Avain(Saatila.Aika)) AikaValinta = Avain(Saatila.Aika);
+            };
+        }
+
+        const string SaaVihjeAvain = "matkakirja-saatila-vihje-nahty";
+        const string SaaVihjeTeksti = "Näytä nykyinen vuorokauden aika ja säätila";
+        SaaVihje saaVihje;
+        Label saaVihjeLappu;
+        VisualElement saaVihjeViiva;
+        bool saaVihjeNakyy;
+
+        void RakennaSaaVihje()
+        {
+            saaVihje = new SaaVihje(PlayerPrefs.GetInt(SaaVihjeAvain, 0) == 1);
+            saaVihjeViiva = Rakenne.El("tk-teema-harmaa mk-opas-nimilappu__viiva", Juuri, PickingMode.Ignore);
+            saaVihjeLappu = Rakenne.Teksti(SaaVihjeTeksti, "tk-teema-harmaa mk-opas-nimilappu", Juuri);
+            saaVihjeLappu.style.whiteSpace = WhiteSpace.Normal;
+            saaVihjeLappu.style.maxWidth = 220f;
+            Kirjasimet.Aseta(saaVihjeLappu, Kirjasin.Moderni);
+            saaVihjeLappu.RegisterCallback<PointerDownEvent>(e => { e.StopPropagation(); SuljeSaaVihje(); });
+            saaVihjeLappu.style.display = DisplayStyle.None; saaVihjeViiva.style.display = DisplayStyle.None;
+        }
+
+        /// <summary>Napautus kuplaan tai ☾-nappiin: pois eikä tule enää.</summary>
+        void SuljeSaaVihje()
+        {
+            if (saaVihje == null || saaVihje.Nahty && !saaVihjeNakyy) return;
+            saaVihje.Suljettu();
+            TallennaSaaVihje();
+            AsetaSaaVihje(false);
+        }
+
+        void TallennaSaaVihje()
+        {
+            if (!saaVihje.Nahty || PlayerPrefs.GetInt(SaaVihjeAvain, 0) == 1) return;
+            PlayerPrefs.SetInt(SaaVihjeAvain, 1); PlayerPrefs.Save();
+        }
+
+        /// <summary>Joka ruudulla: ensimmäisellä pallokerralla 15 s alusta 5 s näkyvissä (SaaVihje); ei valikon, chatin eikä siirtymän aikana.</summary>
+        void PaivitaSaaVihje()
+        {
+            if (saaVihje == null) return;
+            var chat = UiNakymat.Olemassa ? UiNakymat.Hae().Chat : null;
+            bool este = Auki || (chat?.Auki ?? false) || (siirtyma != null && siirtyma.style.display != DisplayStyle.None);
+            bool n = nakyy && saaVihje.Nakyy(Time.unscaledTime, Saatila.Live, este);
+            TallennaSaaVihje();
+            AsetaSaaVihje(n);
+            if (!n || aikaNappi.panel == null) return;
+            // ☾-napin alle: viiva napin keskeltä alas 12 pt, lappu viivan päähän napin vasemmasta reunasta (ruudun sisällä).
+            var nb = Juuri.WorldToLocal(aikaNappi.worldBound);
+            float x = nb.center.x, y = nb.yMax + 4f;
+            saaVihjeViiva.style.left = x - 0.75f; saaVihjeViiva.style.top = y; saaVihjeViiva.style.height = 12f;
+            saaVihjeLappu.style.top = y + 12f;
+            saaVihjeLappu.style.left = Mathf.Max(8f, nb.xMin);
+        }
+
+        void AsetaSaaVihje(bool n)
+        {
+            if (n == saaVihjeNakyy) return;
+            saaVihjeNakyy = n;
+            foreach (var e in new VisualElement[] { saaVihjeLappu, saaVihjeViiva })
+            {
+                if (n)
+                {
+                    e.style.display = DisplayStyle.Flex;
+                    var el = e;
+                    el.schedule.Execute(() => { if (saaVihjeNakyy) el.AddToClassList("mk-opas-nimilappu--nakyy"); });
+                }
+                else
+                {
+                    e.RemoveFromClassList("mk-opas-nimilappu--nakyy");
+                    var el = e;
+                    el.schedule.Execute(() => { if (!saaVihjeNakyy) el.style.display = DisplayStyle.None; }).StartingIn(Tyylikirja.Kesto.Sulku);
+                }
+            }
+            Debug.Log("MATKAKIRJA opas: säätilan vihje " + (n ? "näkyviin" : "pois"));
+        }
+
+        /// <summary>Sään kuvake (Ikonit.Viiva): selkeä = aurinko; null = sää pois.</summary>
+        static string SaaKuvake(PalloSaa s) => s switch
+        {
+            PalloSaa.Selkea => "paiva", PalloSaa.Pilvinen => "pilvi", PalloSaa.Sade => "sade", PalloSaa.Sumu => "sumu",
+            PalloSaa.Lumi => "lumi", PalloSaa.Ukkonen => "ukkonen", _ => null,
+        };
+
+        /// <summary>
+        /// ☾-nappi: LIVE päällä → vain teksti LIVE läpikuultavalla oranssilla pohjalla (omistaja 8.10. 09.1x; tila.live-kuulto, koko ja
+        /// kulma ennallaan); muuten ajan kuvake ja sen kulmassa pieni sääkuvake, kun sää ei ole pois.
+        /// </summary>
         void PaivitaAika()
         {
-            string nyt = AikaNyt, val = AikaValinta;
-            string k = nyt + (val == "auto" ? ":A" : "");
+            string nyt = AikaNyt;
+            string k = nyt + "|" + Saatila.Saa + "|" + Saatila.Live;
             if (k != aikaKuvake && Ikonit.Viiva.TryGetValue(nyt, out var svg))
             {
                 aikaKuvake = k;
                 aikaNappi.Clear();
-                aikaNappi.Add(new SvgIkoni(svg));
-                if (val == "auto") Kirjasimet.Aseta(Rakenne.Teksti("A", "mk-ohjausnappi__merkki", aikaNappi), Kirjasin.ModerniLihava);
-                aikaNappi.tooltip = "Vuorokaudenaika: " + (AikaValinnat.FirstOrDefault(x => x.Arvo == val).Nimi ?? val);
+                aikaNappi.EnableInClassList("mk-ohjausnappi--live", Saatila.Live);
+                if (Saatila.Live) Kirjasimet.Aseta(Rakenne.Teksti("LIVE", "mk-ohjausnappi__live", aikaNappi), Kirjasin.ModerniLihava);
+                else
+                {
+                    aikaNappi.Add(new SvgIkoni(svg));
+                    if (SaaKuvake(Saatila.Saa) is string sk && Ikonit.Viiva.TryGetValue(sk, out var ssvg))
+                    {
+                        var pieni = new SvgIkoni(ssvg);
+                        pieni.AddToClassList("mk-ohjausnappi__saa");
+                        aikaNappi.Add(pieni);
+                    }
+                }
+                aikaNappi.tooltip = (Saatila.Live ? "Live: " : "Aika ja sää: ") + Nimi(Saatila.Aika) + ", sää " + Nimi(Saatila.Saa).ToLowerInvariant();
             }
             if (aikaNappi.parent?.panel != null && Juuri.panel != null) nimilappu.Este = Juuri.WorldToLocal(aikaNappi.parent.worldBound);
         }
 
+        /// <summary>
+        /// ☾-lista (omistaja 8.10.2026 klo 09.1x): ylimpänä LIVE omassa korostetussa laatikossaan (päällä tila-live oranssi, pois
+        /// teeman toiminto-harmaa), sitten AIKA (päivä, yö) ja SÄÄ (pois … ukkonen) ✓-merkein. LIVE kytkee molemmat kohteen
+        /// todellisiin ja palauttaa pois kytkettäessä käsivalinnat; käsivalinta LIVEn aikana sammuttaa LIVEn (Saatila).
+        /// </summary>
         void RakennaAika()
         {
-            Kirjasimet.Aseta(Rakenne.Teksti("VUOROKAUDENAIKA", "mk-linssivalitsin__valiotsikko", valikko), Kirjasin.ModerniLihava);
-            string val = AikaValinta;
+            var live = Komento("LIVE", () => { Saatila.Live = !Saatila.Live; aikaKuvake = null; Debug.Log("MATKAKIRJA opas: live " + (Saatila.Live ? "päälle" : "pois")); }, valikko);
+            live.AddToClassList("mk-linssivalikko__live");
+            live.EnableInClassList("mk-valittu", Saatila.Live);
+            live.tooltip = Saatila.Live ? "Live päällä: kohteen kellonaika ja sää" : "Live pois";
+            Kirjasimet.Aseta(Rakenne.Teksti("AIKA", "mk-linssivalitsin__valiotsikko", valikko), Kirjasin.ModerniLihava);
             foreach (var (arvo, nimi) in AikaValinnat)
             {
-                string a = arvo;
-                Komento(nimi + (a == val ? "  ✓" : ""), () => { AikaValinta = a; aikaKuvake = null; Debug.Log("MATKAKIRJA opas: vuorokaudenaika " + a); });
+                var a = arvo;
+                Komento(nimi + (!Saatila.Live && a == Saatila.Aika ? "  ✓" : ""), () =>
+                {
+                    Saatila.AikaValinta = a; aikaKuvake = null;
+                    Debug.Log("MATKAKIRJA opas: aika " + Avain(a));
+                });
+            }
+            Viiva();
+            Kirjasimet.Aseta(Rakenne.Teksti("SÄÄ", "mk-linssivalitsin__valiotsikko", valikko), Kirjasin.ModerniLihava);
+            foreach (var (arvo, nimi) in SaaValinnat)
+            {
+                var sv = arvo;
+                Komento(nimi + (!Saatila.Live && sv == Saatila.Saa ? "  ✓" : ""), () =>
+                {
+                    Saatila.SaaValinta = sv; aikaKuvake = null;
+                    Debug.Log("MATKAKIRJA opas: sää " + sv);
+                });
             }
         }
 
@@ -1881,6 +2206,32 @@ namespace Matkakirja.Natiivi
         void Tyhja(string teksti) => Kirjasimet.Aseta(Rakenne.Teksti(teksti, "mk-linssivalikko__lahde", Kohde), Kirjasin.Moderni);
 
         void Viiva() => Rakenne.El("mk-linssivalikko__viiva", Kohde, PickingMode.Ignore);
+
+        /// <summary>
+        /// Nykyisen kaupungin yksityiskohtakuvien tekijät (LS1: OpasSovitin.KuvaLahteet, (Kohde, Tekija, Lisenssi, Havainnekuva)
+        /// heijastuksella): "kohde · tekijä · lisenssi"; havainnekuvassa "kohde · Tekoälyllä tuotettu havainnekuva"; kukin kerran.
+        /// </summary>
+        static List<string> KuvaLahteet()
+        {
+            var tulos = new List<string>();
+            var p = typeof(OpasValikko).Assembly.GetType("Matkakirja.Natiivi.OpasSovitin")
+                ?.GetProperty("KuvaLahteet", System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Static);
+            if (!(p?.GetValue(null) is System.Collections.IEnumerable lista)) return tulos;
+            foreach (var o in lista)
+            {
+                if (!(o is System.Runtime.CompilerServices.ITuple t) || t.Length < 4) continue;
+                string kohde = t[0] as string, tekija = (t[1] as string ?? "").Trim(), lisenssi = (t[2] as string ?? "").Trim();
+                bool havainne = t[3] is bool b && b;
+                var osat = new List<string>();
+                if (!string.IsNullOrWhiteSpace(kohde)) osat.Add(kohde.Trim());
+                if (havainne) osat.Add("Tekoälyllä tuotettu havainnekuva");
+                else { if (tekija.Length > 0) osat.Add(tekija); if (lisenssi.Length > 0) osat.Add(lisenssi); }
+                string rivi = string.Join(" · ", osat);
+                // Havainnekuva näkyy aina (tekijä usein tyhjä, LS1); muu kuva vain, jos tekijä tai lisenssi on annettu.
+                if ((havainne || osat.Count > 1) && !tulos.Contains(rivi)) tulos.Add(rivi);
+            }
+            return tulos;
+        }
 
         void Vieritys()
         {
@@ -2002,8 +2353,21 @@ namespace Matkakirja.Natiivi
                 case "mika":
                     testiMika = o.Length > 1 ? o[1] != "pois" : true;
                     return "opas: mikä tämä on " + (testiMika == true ? "näkyy (testi)" : "pois");
+                case "saavihje":
+                    // `ui opasvalikko saavihje [nollaa]`: tila; nollaa = vihje tulee uudelleen (testi).
+                    if (o.Length > 1 && o[1] == "nollaa") { PlayerPrefs.DeleteKey(SaaVihjeAvain); saaVihje = new SaaVihje(false); saaVihje.Alkoi(Time.unscaledTime); }
+                    return $"opas: säätilan vihje {(saaVihjeNakyy ? "näkyy" : "piilossa")}, nähty {saaVihje.Nahty} @ {saaVihjeLappu.worldBound}";
                 case "aika":
-                    Avaa(Nakyma.Aika); return "opas: vuorokaudenaika " + AikaValinta + " / " + AikaNyt;
+                    // `ui opasvalikko aika [live|paiva|yo|pois|selkea|…]`: lista auki tai valinnat suoraan (live = kytkin).
+                    for (int j = 1; j < o.Length; j++)
+                    {
+                        if (o[j] == "live") Saatila.Live = !Saatila.Live;
+                        else if (o[j] == "paiva" || o[j] == "yo") Saatila.AikaValinta = o[j] == "yo" ? PalloAika.Yo : PalloAika.Paiva;
+                        else if (System.Enum.TryParse(o[j], true, out PalloSaa sv) && System.Enum.IsDefined(typeof(PalloSaa), sv)) Saatila.SaaValinta = sv;
+                        aikaKuvake = null;
+                    }
+                    if (o.Length == 1) Avaa(Nakyma.Aika);
+                    return $"opas: live {(Saatila.Live ? "päällä" : "pois")}, aika {Saatila.Aika} (KaupunkiKuva {AikaValinta} / {AikaNyt}), sää {Saatila.Saa}, tallenne {Saatila.Tallenne}";
                 case "jatka":
                     testiJatka = o.Length > 1 ? o[1] != "pois" : true;
                     return "opas: jatka kierrosta " + (testiJatka == true ? "näkyy (testi)" : "pois");

@@ -34,12 +34,14 @@ namespace Matkakirja.Linssit.Testit
             foreach (var n in Vuodenaika.Nimet) Oleta.Tosi(n.Length <= 5, "kilven nimi enintään 5 merkkiä: " + n);
         }
     
-        /// <summary>Kauden Euroopan S2-mosaiikki (Karttaseppä 7.10.): syksy syksy/v1, muut kesän v2 (null), syys–marraskuu.</summary>
+        /// <summary>Kauden Euroopan S2-mosaiikki (Karttaseppä 7.10.): syksy syksy/v1, kevät kevat/v1, kesä ja talvi kesän v2 (null).</summary>
         [Testi] static void KaudenS2Mosaiikki()
         {
             Oleta.Tosi(Vuodenaika.S2EuroopanVersio(Vuodenaika.Syksy) == "syksy/v1", "syksy");
-            Oleta.Tosi(Vuodenaika.S2EuroopanVersio(Vuodenaika.Kesa) == null && Vuodenaika.S2EuroopanVersio(Vuodenaika.Kevat) == null, "kesä ja kevät v2");
+            Oleta.Tosi(Vuodenaika.S2EuroopanVersio(Vuodenaika.Kevat) == "kevat/v1", "kevät");
+            Oleta.Tosi(Vuodenaika.S2EuroopanVersio(Vuodenaika.Kesa) == null && Vuodenaika.S2EuroopanVersio(Vuodenaika.Talvi) == null, "kesä ja talvi v2");
             Oleta.Tosi(Vuodenaika.S2EuroopanVersio(Vuodenaika.Kausi(10)) == "syksy/v1" && Vuodenaika.S2EuroopanVersio(Vuodenaika.Kausi(12)) == null, "lokakuu syksy, joulukuu ei");
+            Oleta.Tosi(Vuodenaika.S2EuroopanVersio(Vuodenaika.Kausi(4)) == "kevat/v1" && Vuodenaika.S2EuroopanVersio(Vuodenaika.Kausi(7)) == null, "huhtikuu kevät, heinäkuu kesä");
         }
 }
 }

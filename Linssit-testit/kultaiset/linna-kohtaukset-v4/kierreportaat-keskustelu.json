@@ -1,0 +1,300 @@
+{
+ "huone": "kierreportaat",
+ "malli": "eleven_v4",
+ "repliikit": [
+  {
+   "puhuja": "Kirjuri",
+   "teksti": "Kolmas kerros, neljäs kerros… Ilman voudin sinettiä ei yksikään kirje lähde linnasta, ja minä juoksen näitä portaita edestakaisin."
+  },
+  {
+   "puhuja": "Renki",
+   "teksti": "Varovasti, herra kirjuri, näissä portaissa ei ohiteta ketään. Kapeaa ja ahdasta – vihollisellekin, kiitos siitä."
+  },
+  {
+   "puhuja": "Kirjuri",
+   "teksti": "Viisi kerrosta, ja ylin asuttu on kolmas. Neljännellä vain tuuli ja vartijat. Minä en ole kumpaakaan."
+  }
+ ],
+ "puhujat": [
+  {
+   "puhuja": "Kirjuri",
+   "voice_id": "RgBrizTAuszgl4fIyXzH",
+   "rivi": 0,
+   "alku_s": 0.04,
+   "loppu_s": 10.04,
+   "sanat": [
+    {
+     "sana": "Kolmas",
+     "alku_s": 0.04,
+     "loppu_s": 0.387
+    },
+    {
+     "sana": "kerros,",
+     "alku_s": 0.44,
+     "loppu_s": 1.0
+    },
+    {
+     "sana": "neljäs",
+     "alku_s": 1.32,
+     "loppu_s": 1.72
+    },
+    {
+     "sana": "kerros…",
+     "alku_s": 1.8,
+     "loppu_s": 2.92
+    },
+    {
+     "sana": "Ilman",
+     "alku_s": 3.0,
+     "loppu_s": 3.24
+    },
+    {
+     "sana": "voudin",
+     "alku_s": 3.32,
+     "loppu_s": 3.64
+    },
+    {
+     "sana": "sinettiä",
+     "alku_s": 3.72,
+     "loppu_s": 4.28
+    },
+    {
+     "sana": "ei",
+     "alku_s": 4.36,
+     "loppu_s": 4.52
+    },
+    {
+     "sana": "yksikään",
+     "alku_s": 4.6,
+     "loppu_s": 5.08
+    },
+    {
+     "sana": "kirje",
+     "alku_s": 5.16,
+     "loppu_s": 5.48
+    },
+    {
+     "sana": "lähde",
+     "alku_s": 5.56,
+     "loppu_s": 5.88
+    },
+    {
+     "sana": "linnasta,",
+     "alku_s": 6.0,
+     "loppu_s": 6.76
+    },
+    {
+     "sana": "ja",
+     "alku_s": 6.84,
+     "loppu_s": 6.88
+    },
+    {
+     "sana": "minä",
+     "alku_s": 6.92,
+     "loppu_s": 7.08
+    },
+    {
+     "sana": "juoksen",
+     "alku_s": 7.16,
+     "loppu_s": 7.64
+    },
+    {
+     "sana": "näitä",
+     "alku_s": 7.667,
+     "loppu_s": 7.88
+    },
+    {
+     "sana": "portaita",
+     "alku_s": 7.96,
+     "loppu_s": 8.44
+    },
+    {
+     "sana": "edestakaisin.",
+     "alku_s": 8.52,
+     "loppu_s": 10.04
+    }
+   ]
+  },
+  {
+   "puhuja": "Renki",
+   "voice_id": "M5M01S43Sb00tnajCRvZ",
+   "rivi": 1,
+   "alku_s": 10.04,
+   "loppu_s": 19.0,
+   "sanat": [
+    {
+     "sana": "Varovasti,",
+     "alku_s": 10.04,
+     "loppu_s": 10.707
+    },
+    {
+     "sana": "herra",
+     "alku_s": 10.733,
+     "loppu_s": 10.92
+    },
+    {
+     "sana": "kirjuri,",
+     "alku_s": 11.0,
+     "loppu_s": 11.8
+    },
+    {
+     "sana": "näissä",
+     "alku_s": 11.88,
+     "loppu_s": 12.16
+    },
+    {
+     "sana": "portaissa",
+     "alku_s": 12.2,
+     "loppu_s": 12.76
+    },
+    {
+     "sana": "ei",
+     "alku_s": 12.84,
+     "loppu_s": 13.0
+    },
+    {
+     "sana": "ohiteta",
+     "alku_s": 13.08,
+     "loppu_s": 13.48
+    },
+    {
+     "sana": "ketään.",
+     "alku_s": 13.56,
+     "loppu_s": 14.32
+    },
+    {
+     "sana": "Kapeaa",
+     "alku_s": 14.6,
+     "loppu_s": 15.08
+    },
+    {
+     "sana": "ja",
+     "alku_s": 15.16,
+     "loppu_s": 15.24
+    },
+    {
+     "sana": "ahdasta",
+     "alku_s": 15.32,
+     "loppu_s": 15.8
+    },
+    {
+     "sana": "–",
+     "alku_s": 16.36,
+     "loppu_s": 16.387
+    },
+    {
+     "sana": "vihollisellekin,",
+     "alku_s": 16.413,
+     "loppu_s": 17.56
+    },
+    {
+     "sana": "kiitos",
+     "alku_s": 17.64,
+     "loppu_s": 17.96
+    },
+    {
+     "sana": "siitä.",
+     "alku_s": 18.04,
+     "loppu_s": 19.0
+    }
+   ],
+   "tauko_s": 0.0
+  },
+  {
+   "puhuja": "Kirjuri",
+   "voice_id": "RgBrizTAuszgl4fIyXzH",
+   "rivi": 2,
+   "alku_s": 19.0,
+   "loppu_s": 27.32,
+   "sanat": [
+    {
+     "sana": "Viisi",
+     "alku_s": 19.0,
+     "loppu_s": 19.32
+    },
+    {
+     "sana": "kerrosta,",
+     "alku_s": 19.4,
+     "loppu_s": 20.2
+    },
+    {
+     "sana": "ja",
+     "alku_s": 20.28,
+     "loppu_s": 20.36
+    },
+    {
+     "sana": "ylin",
+     "alku_s": 20.44,
+     "loppu_s": 20.68
+    },
+    {
+     "sana": "asuttu",
+     "alku_s": 20.76,
+     "loppu_s": 21.24
+    },
+    {
+     "sana": "on",
+     "alku_s": 21.32,
+     "loppu_s": 21.48
+    },
+    {
+     "sana": "kolmas.",
+     "alku_s": 21.56,
+     "loppu_s": 22.4
+    },
+    {
+     "sana": "Neljännellä",
+     "alku_s": 22.68,
+     "loppu_s": 23.36
+    },
+    {
+     "sana": "vain",
+     "alku_s": 23.48,
+     "loppu_s": 23.72
+    },
+    {
+     "sana": "tuuli",
+     "alku_s": 23.8,
+     "loppu_s": 24.2
+    },
+    {
+     "sana": "ja",
+     "alku_s": 24.36,
+     "loppu_s": 24.44
+    },
+    {
+     "sana": "vartijat.",
+     "alku_s": 24.52,
+     "loppu_s": 25.56
+    },
+    {
+     "sana": "Minä",
+     "alku_s": 25.64,
+     "loppu_s": 25.88
+    },
+    {
+     "sana": "en",
+     "alku_s": 25.96,
+     "loppu_s": 26.04
+    },
+    {
+     "sana": "ole",
+     "alku_s": 26.16,
+     "loppu_s": 26.28
+    },
+    {
+     "sana": "kumpaakaan.",
+     "alku_s": 26.32,
+     "loppu_s": 27.32
+    }
+   ],
+   "tauko_s": 0.0
+  }
+ ],
+ "raaka_mean_dB": -18.4,
+ "mean_dB": -17.5,
+ "max_dB": -0.5,
+ "LUFS": -16.8,
+ "kesto_s": 27.32,
+ "esivara_siirto_s": 0.04
+}

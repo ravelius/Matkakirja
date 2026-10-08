@@ -41,6 +41,10 @@ namespace Matkakirja.Natiivi
 
         static VisualElement lahteet, lista;
         static Label tiivis;
+        // OMAT 3D-MALLIT (LS1 7.10. 00.4x, Gizan pyramidit Googlen tiilien päällä): oma tekijärivi Matkakirja.Linssit.CesiumOmatMallit
+        // .Tekijat erillään Googlen riveistä (Googlen ehdot: ei Google-logon eikä Googlen rivien päällä eikä niiden joukossa), omana
+        // rivinään lähderivin alla samalla rivipohjalla (Riviin). Piilossa, kun omia malleja ei ole ruudulla (Tekijat null).
+        static Label omaTekija;
         static int tiivisAvain = -1;
 
         // OMISTAJA 6.10. 12.2x (Päätoimittaja tarkisti Googlen ehdot: logoa ei muuteta eikä tehdä läpinäkyväksi, kartan päällä
@@ -142,7 +146,8 @@ namespace Matkakirja.Natiivi
         {
             if (oma == null) return "krediitit: ei vielä rakennettu";
             string L(VisualElement e, string n) => e.resolvedStyle.display == DisplayStyle.None ? n + " piilossa" : $"{n} näkyy {e.worldBound.width:0}×{e.worldBound.height:0}";
-            return $"krediitit (omat): {L(googleEl, "Google")} | {L(ionEl, "Cesium ion")} | lähteet {lista?.childCount} kpl, {(Time.unscaledTime < kaikkiAsti ? "kaikki" : "rivi")}, {lahteet.worldBound.width:0}×{lahteet.worldBound.height:0}";
+            return $"krediitit (omat): {L(googleEl, "Google")} | {L(ionEl, "Cesium ion")} | lähteet {lista?.childCount} kpl, {(Time.unscaledTime < kaikkiAsti ? "kaikki" : "rivi")}, {lahteet.worldBound.width:0}×{lahteet.worldBound.height:0}"
+                   + (omaTekija != null && omaTekija.resolvedStyle.display != DisplayStyle.None ? $" | omat mallit \"{omaTekija.text}\" {omaTekija.worldBound.xMin:0},{omaTekija.worldBound.yMin:0} {omaTekija.worldBound.width:0}×{omaTekija.worldBound.height:0}" : " | omat mallit ei");
         }
 
         /// <summary>Kerran kehyksessä kaupunkinäkymän ajan (paalla = näkymä auki).</summary>
@@ -189,6 +194,10 @@ namespace Matkakirja.Natiivi
                 lahteet.Add(lista);
                 lahteet.AddManipulator(new Clickable(() => kaikkiAsti = Time.unscaledTime < kaikkiAsti ? -1f : Time.unscaledTime + KaikkiS));
                 oma.Add(lahteet);
+                omaTekija = Riviin(new Label { name = "MatkakirjaOmatMallit" });
+                omaTekija.style.whiteSpace = WhiteSpace.NoWrap;
+                omaTekija.style.display = DisplayStyle.None;
+                oma.Add(omaTekija);
             }
             if (oma.parent != juuri) { oma.RemoveFromHierarchy(); juuri.Add(oma); }
             var nd = paalla ? DisplayStyle.Flex : DisplayStyle.None;
@@ -236,6 +245,17 @@ namespace Matkakirja.Natiivi
             if (tiivis.style.display != td) { tiivis.style.display = td; lista.style.display = kaikki ? DisplayStyle.Flex : DisplayStyle.None; }
             foreach (var t in lahteet.Query<Label>().ToList())
                 if (Mathf.Abs(t.resolvedStyle.fontSize - RiviPt * pt) > 0.5f) t.style.fontSize = RiviPt * pt;
+
+            // Oma tekijärivi Googlen rivien alle, erilleen niistä (väli 2 dp kuten logon alla).
+            string omat = Matkakirja.Linssit.CesiumOmatMallit.Tekijat;
+            var od = string.IsNullOrEmpty(omat) ? DisplayStyle.None : DisplayStyle.Flex;
+            if (omaTekija.style.display != od) omaTekija.style.display = od;
+            if (od == DisplayStyle.Flex)
+            {
+                if (omaTekija.text != omat) omaTekija.text = omat;
+                if (Mathf.Abs(omaTekija.resolvedStyle.fontSize - RiviPt * pt) > 0.5f) omaTekija.style.fontSize = RiviPt * pt;
+                omaTekija.style.marginTop = 2 * pt;
+            }
         }
 
         static void AsetaLogo(VisualElement e, Texture t, float pt)

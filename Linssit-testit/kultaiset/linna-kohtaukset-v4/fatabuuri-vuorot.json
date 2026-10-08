@@ -1,0 +1,26 @@
+{
+ "huone": "fatabuuri",
+ "tiedosto": "fatabuuri-keskustelu.mp3",
+ "kesto_s": 21.83,
+ "vuorot": [
+  {
+   "puhuja": "hoitaja",
+   "alku_s": 0.07,
+   "loppu_s": 7.71,
+   "teksti": "Kolme viittaa, kaksi verkaröijyä, tusina tinakannuja. Kaikki kirjaan – muuten vouti kysyy."
+  },
+  {
+   "puhuja": "renki",
+   "alku_s": 8.29,
+   "loppu_s": 12.43,
+   "teksti": "Arkun kansi oli raollaan, kun tulin. Joku on käynyt täällä ilman lupaa."
+  },
+  {
+   "puhuja": "hoitaja",
+   "alku_s": 12.9,
+   "loppu_s": 21.63,
+   "teksti": "Ilman lupaa? Kellotornin holviin ei tulla kuin avaimella. Tämä on linnan arvotavaran varasto, ei mikään ruokakellari."
+  }
+ ],
+ "esivara_siirto_s": 0.07
+}

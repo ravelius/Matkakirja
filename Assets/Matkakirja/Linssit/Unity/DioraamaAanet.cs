@@ -41,6 +41,8 @@ namespace Matkakirja.Natiivi
         /// <summary>Puheväylän taso −3 dB (Päätoimittaja 30.9.: puhetiedostot −0,2 dBTP, silmukoiden päällä pelivaraa);
         /// masterissa lisäksi DioraamaLimitteri (−1 dBFS).</summary>
         public const float PuheTaso = 0.708f;
+        /// <summary>Hahmojen repliikit ja kuunnelman rivit ☰-mikserin "Hahmojen repliikit" -tasolla (Natiivi-UI 8.10., Voima.Repliikit).</summary>
+        static float RepliikkiTaso => Asetukset.Taso(Voima.Repliikit);
 
         // --- MIKSERIKOUKUT (Pelikoodarin AaniMikseri, omistajan kehittäjämikseri 30.9.2026) ------------------------------------
         // AaniMikseri omistaa säätöjen tilan ja tallennuksen ja kirjoittaa kertoimet näihin; tämä luokka vain soittaa.
@@ -445,10 +447,10 @@ namespace Matkakirja.Natiivi
                 {
                     double hetki = AudioSettings.dspTime + 0.05;
                     if (!AloitaPuhe(kayttaja, aaniId)) return false;
-                    puheTauolla = false; puheKuiva.clip = kuiva; puheKuiva.volume = PuheTaso; puheKuiva.PlayScheduled(hetki);
+                    puheTauolla = false; puheKuiva.clip = kuiva; puheKuiva.volume = PuheTaso * RepliikkiTaso; puheKuiva.PlayScheduled(hetki);
                     float kaikuTaso = KaikuPois ? 0f : Kerroin(KaikuKerroin, NykyinenHuone ?? "", 1f);
                     if (kaiku != null && kaikuTaso > 0.001f)
-                    { puheKaiku.clip = kaiku; puheKaiku.volume = PuheTaso * kaikuTaso; puheKaiku.PlayScheduled(hetki); }
+                    { puheKaiku.clip = kaiku; puheKaiku.volume = PuheTaso * kaikuTaso * RepliikkiTaso; puheKaiku.PlayScheduled(hetki); }
                     puheLoppuu = Time.unscaledTime + Math.Max(kuiva.length, kaiku != null ? kaiku.length : 0f) + 0.05f;
                     Debug.Log($"MATKAKIRJA linssit: poikki: mikseri {aaniId}: kuiva {kuiva.length:F3} s + kaiku {(kaiku != null && kaikuTaso > 0.001f ? kaiku.length.ToString("F3") + " s × " + kaikuTaso.ToString("F2") : "pois")}, dsp {hetki:F3}");
                     return true;
@@ -461,7 +463,7 @@ namespace Matkakirja.Natiivi
             // Ennen PlayOneShot kertaäänilähteeltä: repliikkiä ei voinut katkaista, ja seuraava puhe (vartija, kortti,
             // kertoja, Pulu) soi sen päälle. Nyt sama pysäytettävä puhelähde kuin kertojalla.
             if (!AloitaPuhe(kayttaja, aaniId)) return false;
-            puheTauolla = false; puheKuiva.clip = k; puheKuiva.volume = PuheTaso; puheKuiva.Play();
+            puheTauolla = false; puheKuiva.clip = k; puheKuiva.volume = PuheTaso * RepliikkiTaso; puheKuiva.Play();
             puheLoppuu = Time.unscaledTime + k.length;
             return true;
         }

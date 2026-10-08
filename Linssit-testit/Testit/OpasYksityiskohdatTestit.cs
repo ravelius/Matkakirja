@@ -71,6 +71,13 @@ namespace Matkakirja.Linssit.Testit
             l[0].Kuvateksti = "Sade Pantheonin kattoaukosta. Havainnekuva."; l[0].Tekija = "Codex / ChatGPT ImageGen, Matkakirja";
             Oleta.Sama("Tekoälyllä tuotettu, ei valokuva", OpasYksityiskohdat.Tekijarivi(l[0]), "ei kahdesti, ei Codexia");
             Oleta.Sama("Kuva: besopha, CC BY 2.0", OpasYksityiskohdat.Tekijarivi(l[1]));
+            // Omistaja 22.5x: kortissa vain kuvateksti, tekijä ja havainnekuvan merkintä eivät näy (jäävät dataan).
+            foreach (var x in l)
+            {
+                string t = OpasYksityiskohdat.KortinTeksti(x);
+                Oleta.Tosi(!t.Contains("CC BY") && !t.Contains("Kuva:") && !t.Contains("Tekoälyllä"), "kortissa ei tekijää: " + t);
+                Oleta.Sama((x.Kuvateksti ?? "").Trim(), t);
+            }
         }
     
         [Testi] static void LukuaikaAanettomalle()

@@ -66,6 +66,33 @@ namespace Matkakirja.Natiivi
 
         /// <summary>Kokoruudun kuvan osuus ruudusta (1 = reunasta reunaan; oppaan latauskuva 0,8, juna 156).</summary>
         public float Osuus { get; set; } = 1f;
+
+        /// <summary>
+        /// LATAUSKUVA-pohjan valokuvaliike (oppaan latauskuva, Päätoimittaja 8.10.): kuva lähentyy ja liukuu hitaasti (Ken Burns
+        /// 1,00 → 1,04 / 8 s ja takaisin, Linssit LatausLiike.Lahentyminen) taustan rajauksena; nipistyszoom keskeyttää liikkeen.
+        /// </summary>
+        public bool Lahentyy { get; set; }
+        IVisualElementScheduledItem lahentymisAjastin;
+        float lahentymisAlku;
+        string lahentymisTunniste;
+
+        void PaivitaLahentyminen()
+        {
+            if (!Lahentyy) return;
+            if (!Auki || ladattu == null || zoom > 1.001f) { Latauskuva.AsetaRajaus(kuva, null); return; }
+            var (sx, sy) = Matkakirja.Linssit.LatausLiike.Suunta(lahentymisTunniste);
+            Latauskuva.AsetaRajaus(kuva, Matkakirja.Linssit.LatausLiike.Lahentyminen(Time.unscaledTime - lahentymisAlku, sx, sy));
+        }
+
+        void KaynnistaLahentyminen(string tunniste)
+        {
+            if (!Lahentyy) { lahentymisAjastin?.Pause(); return; }
+            Latauskuva.AsetaRajaus(kuva, null);
+            lahentymisTunniste = tunniste;
+            lahentymisAlku = Time.unscaledTime;
+            if (lahentymisAjastin == null) lahentymisAjastin = kuva.schedule.Execute(PaivitaLahentyminen).Every(Latauskuva.PaivitysMs);
+            else lahentymisAjastin.Resume();
+        }
         const float ZoomMax = 4f, AlasSulku = 90f, Liike = 8f;
         readonly KuvaSelaus selaus;
         readonly Dictionary<int, Vector2> osoittimet = new Dictionary<int, Vector2>();
@@ -140,6 +167,7 @@ namespace Matkakirja.Natiivi
             Auki = false;
             versio++;
             NollaaZoom();
+            lahentymisAjastin?.Pause();
             if (lahto.HasValue)
             {
                 // Kutistuu takaisin pikkukuvaan; tausta häivyttää lennon ajan (web: poisto 60 ms lennon jälkeen).
@@ -323,6 +351,7 @@ namespace Matkakirja.Natiivi
                 if (t == null || v != versio) return;
                 ladattu = t;
                 kuva.style.backgroundImage = new StyleBackground(t);
+                KaynnistaLahentyminen(k.Lahde);
                 Mitoita();
                 if (nauha == null) return;
                 nauha.style.display = DisplayStyle.Flex;

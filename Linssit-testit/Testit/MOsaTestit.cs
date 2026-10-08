@@ -126,5 +126,15 @@ namespace Matkakirja.Linssit.Testit
             var a = new Aanilahde(0, 0, 6, "muurikaytava", 13.4);
             Oleta.Tosi(a.KuuluvuusKorkeudella(16.6) == 3 && a.KuuluvuusKorkeudella(14.0) == 6 && new Aanilahde(0, 0, 6).KuuluvuusKorkeudella(99) == 6, "korkeusraja 2,5 m, ilman korkeutta ennallaan");
         }
+
+        [Testi] static void ValppausVaheneeTorkkuvallaJaSyovalla()
+        {
+            // LS1 8.10.: torkkuvan ja syövän vartijan valppaus jäi pysyväksi kiinnijäännin jälkeen.
+            var v = new Vartija(Reitti, yaw: 0) { Profiili = VartijaProfiili.Vartija, Torkkuu = true, Syo = true };
+            v.Nollaa(0, 0, valpas: true);
+            v.Torkkuu = true; v.Syo = true;
+            for (int i = 0; i < 610; i++) v.Paivita(0.1, new VartijanSyote { PelaajaZ = 30, Valoisuus = 0 });
+            Oleta.Tosi(v.Valppaus == 0, $"valppaus 60 s:ssa nollaan ({v.Valppaus:F1})");
+        }
     }
 }
