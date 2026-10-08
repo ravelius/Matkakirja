@@ -37,7 +37,13 @@ Shader "Matkakirja/Linssit/DioraamaLeivottu"
             HLSLPROGRAM
             #pragma vertex vert
             #pragma fragment frag
+            // Liekkien varjot leivotulle pinnalle (juna 169): valo on leivottu, mutta varjoa heittävän lisävalon (SeikkailuVarjot,
+            // Ultra) varjo tummentaa pintaa — hahmot ja esineet heittävät liekin varjon. Varjottomat valot eivät muuta mitään.
+            #pragma multi_compile _ _CLUSTER_LIGHT_LOOP
+            #pragma multi_compile_fragment _ _ADDITIONAL_LIGHT_SHADOWS
+            #pragma multi_compile_fragment _ _SHADOWS_SOFT _SHADOWS_SOFT_LOW _SHADOWS_SOFT_MEDIUM _SHADOWS_SOFT_HIGH
             #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
+            #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Lighting.hlsl"
 
             half _DioraamaLepatus;
             half4 _DioraamaSumuVari;
@@ -153,6 +159,22 @@ Shader "Matkakirja/Linssit/DioraamaLeivottu"
                     kv *= kv;
                     vari += pohja * (half)(kv * _DioraamaKantoVari.a) * (half3)_DioraamaKantoVari.rgb;
                 }
+
+                #if defined(_ADDITIONAL_LIGHT_SHADOWS)
+                {
+                    InputData inputData = (InputData)0;
+                    inputData.positionWS = i.paikkaW;
+                    inputData.normalizedScreenSpaceUV = GetNormalizedScreenSpaceUV(i.paikka);
+                    half varjo = 1.0h;
+                    uint lisavaloja = GetAdditionalLightsCount();
+                    LIGHT_LOOP_BEGIN(lisavaloja)
+                        Light lv = GetAdditionalLight(lightIndex, i.paikkaW, half4(1, 1, 1, 1));
+                        half osuus = (half)saturate(lv.distanceAttenuation * 1.5) * (half)saturate(dot(nW, lv.direction) * 2.0 + 0.3);
+                        varjo *= lerp(1.0h, lv.shadowAttenuation, osuus * 0.75h);
+                    LIGHT_LOOP_END
+                    vari *= varjo;
+                }
+                #endif
 
                 float etaisyys = length(_WorldSpaceCameraPos - i.paikkaW);
                 half sumu = (half)saturate((etaisyys - _DioraamaSumu.x) / max(1e-3, _DioraamaSumu.y - _DioraamaSumu.x));

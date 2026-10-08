@@ -54,6 +54,11 @@ Shader "Matkakirja/Linssit/DioraamaValaistu"
             #pragma fragment frag
             #pragma multi_compile _ _MAIN_LIGHT_SHADOWS _MAIN_LIGHT_SHADOWS_CASCADE
             #pragma multi_compile _ _ADDITIONAL_LIGHTS
+            // Grafiikka 8.10. (juna 169): Ultra-renderöijä on Forward+ (klusteroitu valosilmukka) ja piirtää lisävalojen pehmeät
+            // varjot (liekit, SeikkailuVarjot). Ilman näitä Forward+ ei antaisi tälle varjostimelle yhtään lisävaloa.
+            #pragma multi_compile _ _CLUSTER_LIGHT_LOOP
+            #pragma multi_compile_fragment _ _ADDITIONAL_LIGHT_SHADOWS
+            #pragma multi_compile_fragment _ _SHADOWS_SOFT _SHADOWS_SOFT_LOW _SHADOWS_SOFT_MEDIUM _SHADOWS_SOFT_HIGH
             #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
             #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Lighting.hlsl"
             #include "DioraamaKuviot.hlsl"
@@ -135,14 +140,17 @@ Shader "Matkakirja/Linssit/DioraamaValaistu"
                 Light paavalo = GetMainLight(TransformWorldToShadowCoord(i.paikkaW));
                 half3 valo = taivas + paavalo.color * WrapLambert(dot(n, paavalo.direction), 0.3h) * paavalo.shadowAttenuation;
 
-                #if defined(_ADDITIONAL_LIGHTS)
+                #if defined(_ADDITIONAL_LIGHTS) || USE_CLUSTER_LIGHT_LOOP
+                // LIGHT_LOOP_BEGIN: tavallinen silmukka Forwardissa, klusterit Forward+:ssa (inputData.positionWS ja ruutu-UV).
+                InputData inputData = (InputData)0;
+                inputData.positionWS = i.paikkaW;
+                inputData.normalizedScreenSpaceUV = GetNormalizedScreenSpaceUV(i.paikka);
                 uint lisavaloja = GetAdditionalLightsCount();
-                for (uint li = 0u; li < lisavaloja; li++)
-                {
-                    Light lisavalo = GetAdditionalLight(li, i.paikkaW);
-                    // ei lisävalojen varjoja (Mobile_RPAsset): shadowAttenuation on aina 1 tässä liukuhihnassa.
-                    valo += lisavalo.color * lisavalo.distanceAttenuation * WrapLambert(dot(n, lisavalo.direction), 0.3h);
-                }
+                LIGHT_LOOP_BEGIN(lisavaloja)
+                    Light lisavalo = GetAdditionalLight(lightIndex, i.paikkaW, half4(1, 1, 1, 1));
+                    // Mobile_RPAsset: ei lisävalojen varjoja (shadowAttenuation 1); Ultra: liekkien pehmeät varjot.
+                    valo += lisavalo.color * lisavalo.distanceAttenuation * lisavalo.shadowAttenuation * WrapLambert(dot(n, lisavalo.direction), 0.3h);
+                LIGHT_LOOP_END
                 #endif
 
                 half3 vari = albedo * valo * lerp(1.0h, ao, 0.85h) + _Lampo.rgb * (lampo * lampo * 0.45h) * _DioraamaLepatus; // g²·0,45: oikea pistevalo valaisee jo (sama kuin esikatselussa)
