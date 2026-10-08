@@ -1,0 +1,467 @@
+{
+ "kaupunki": "thessaloniki",
+ "kaupunkiQ": "Q17151",
+ "kohteet": [
+  {
+   "q": "Q550576",
+   "nimi": "Valkoinen torni",
+   "peruste": "sitelinks",
+   "koko_m": 30,
+   "lat": 40.62639,
+   "lon": 22.94833,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "+ 1912 wurde der Turm nach der Eroberung Thessalonikis weiß getüncht. Seitdem trägt er diesen Namen. 05.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%2B_1912_wurde_der_Turm_nach_der_Eroberung_Thessalonikis_wei%C3%9F_get%C3%BCncht._Seitdem_tr%C3%A4gt_er_diesen_Namen._05.jpg?width=1280",
+     "tekija": "Holger Uwe Schmitt",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%2B_1912_wurde_der_Turm_nach_der_Eroberung_Thessalonikis_wei%C3%9F_get%C3%BCncht._Seitdem_tr%C3%A4gt_er_diesen_Namen._05.jpg",
+     "selite": "Valkoinen torni on Thessalonikin rantabulevardin tunnetuin symboli ja entinen linnoitustorni.",
+     "leveys": 5347,
+     "korkeus": 3741,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "1, Λευκός Πύργος (photosiotas).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/1%2C_%CE%9B%CE%B5%CF%85%CE%BA%CF%8C%CF%82_%CE%A0%CF%8D%CF%81%CE%B3%CE%BF%CF%82_(photosiotas).jpg?width=1280",
+     "tekija": "photosiotas",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:1%2C_%CE%9B%CE%B5%CF%85%CE%BA%CF%8C%CF%82_%CE%A0%CF%8D%CF%81%CE%B3%CE%BF%CF%82_(photosiotas).jpg",
+     "selite": "Pyöreä kivitorni kohoaa Thermaikoksenlahden rannalla ja on kaupungin tunnetuin maamerkki.",
+     "leveys": 3327,
+     "korkeus": 2329,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "11 Λευκος Πυργος.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/11_%CE%9B%CE%B5%CF%85%CE%BA%CE%BF%CF%82_%CE%A0%CF%85%CF%81%CE%B3%CE%BF%CF%82.jpg?width=1280",
+     "tekija": "ΣΟΛΑΚΙΔΗΣ ΣΩΤΗΡΙΟΣ",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:11_%CE%9B%CE%B5%CF%85%CE%BA%CE%BF%CF%82_%CE%A0%CF%85%CF%81%CE%B3%CE%BF%CF%82.jpg",
+     "selite": "Rantapromenadilta näkee tornin ja kaupungin merenrannan rakennusten rivin.",
+     "leveys": 2048,
+     "korkeus": 1536,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1258082",
+   "nimi": "Galeriuksen riemukaari",
+   "peruste": "UNESCO",
+   "koko_m": 25,
+   "lat": 40.63224,
+   "lon": 22.95174,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Arch of Galerius in September (3).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Arch_of_Galerius_in_September_(3).jpg?width=1280",
+     "tekija": "Armineaghayan",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Arch_of_Galerius_in_September_(3).jpg",
+     "selite": "Roomalaisen keisari Galeriuksen riemukaari on keskellä nykykaupungin katuverkkoa.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "07Thessaloniki Galerius3.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/07Thessaloniki_Galerius3.jpg?width=1280",
+     "tekija": "Fingalo",
+     "lisenssi": "CC BY-SA 2.0 de",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0/de/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:07Thessaloniki_Galerius3.jpg",
+     "selite": "Kaaren marmoripilarit on koristeltu sotaretkiä esittävin reliefein.",
+     "leveys": 3264,
+     "korkeus": 2448,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1584841",
+   "nimi": "Galeriuksen rotunda",
+   "peruste": "kaupungin päänähtävyys",
+   "koko_m": 40,
+   "lat": 40.6333,
+   "lon": 22.95285,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Rotunda of Galerius (February 2009).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Rotunda_of_Galerius_(February_2009).jpg?width=1280",
+     "tekija": "George M. Groutas",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Rotunda_of_Galerius_(February_2009).jpg",
+     "selite": "Pyöreä tiilirakennus oli alun perin roomalaisen keisarin mausoleumiksi tarkoitettu ja toimi myöhemmin kirkkona.",
+     "leveys": 3872,
+     "korkeus": 2592,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q730019",
+   "nimi": "Pyhän Demetriuksen kirkko",
+   "peruste": "UNESCO",
+   "koko_m": 70,
+   "lat": 40.63882,
+   "lon": 22.94786,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Hagios Demetrios, Thessaloniki 01-edit.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hagios_Demetrios%2C_Thessaloniki_01-edit.jpg?width=1280",
+     "tekija": "DMY, edited by MenkinAlRire",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Hagios_Demetrios%2C_Thessaloniki_01-edit.jpg",
+     "selite": "Kaupunkia suojelevan pyhän Demetriuksen basilika on yksi Kreikan suurimmista kirkoista.",
+     "leveys": 3371,
+     "korkeus": 2446,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Church of Agios Dimitrios, Thessaloniki - panoramio - macrolepis.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Church_of_Agios_Dimitrios%2C_Thessaloniki_-_panoramio_-_macrolepis.jpg?width=1280",
+     "tekija": "macrolepis",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Church_of_Agios_Dimitrios%2C_Thessaloniki_-_panoramio_-_macrolepis.jpg",
+     "selite": "Tiilinen basilika kellotorneineen sijaitsee vanhankaupungin rinteessä.",
+     "leveys": 2816,
+     "korkeus": 2112,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q667472",
+   "nimi": "Aristoteleen aukio",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 40.63246,
+   "lon": 22.94119,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Aristotelous Plateia.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aristotelous_Plateia.jpg?width=1280",
+     "tekija": "User:JFKennedy",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aristotelous_Plateia.jpg",
+     "selite": "Merelle avautuva Aristoteleen aukio on kaupungin keskeinen kokoontumispaikka.",
+     "leveys": 2151,
+     "korkeus": 1378,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "20160516 154 thessaloniki.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20160516_154_thessaloniki.jpg?width=1280",
+     "tekija": "Jean Housen",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20160516_154_thessaloniki.jpg",
+     "selite": "Aukion reunustaa 1900-luvun alun yhtenäinen arkadirakennusten rivi.",
+     "leveys": 3872,
+     "korkeus": 2592,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1568660",
+   "nimi": "Hagia Sofian kirkko",
+   "peruste": "UNESCO",
+   "koko_m": 50,
+   "lat": 40.63284,
+   "lon": 22.94709,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Thessaloniki Saint Sophia Church west wall.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Thessaloniki_Saint_Sophia_Church_west_wall.jpg?width=1280",
+     "tekija": "Ymblanter",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Thessaloniki_Saint_Sophia_Church_west_wall.jpg",
+     "selite": "Thessalonikin Hagia Sofia on varhaisen bysanttilaisen ajan kupolikirkko kaupungin keskustassa.",
+     "leveys": 5272,
+     "korkeus": 4008,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q7963249",
+   "nimi": "Thessalonikin kaupunginmuuri",
+   "peruste": "UNESCO",
+   "koko_m": 1000,
+   "lat": 40.6425,
+   "lon": 22.95444,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Wallsthess.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Wallsthess.jpg?width=1280",
+     "tekija": "Elisa Triolo",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Wallsthess.jpg",
+     "selite": "Muurin kivi- ja tiilirivit kiertävät vanhaakaupunkia rinteessä.",
+     "leveys": 2272,
+     "korkeus": 1704,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "07Thessaloniki04.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/07Thessaloniki04.jpg?width=1280",
+     "tekija": "Fingalo",
+     "lisenssi": "CC BY-SA 2.0 de",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0/de/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:07Thessaloniki04.jpg",
+     "selite": "Muurilta avautuu näkymä alla levittäytyvään kaupunkiin ja lahdelle.",
+     "leveys": 3166,
+     "korkeus": 2375,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "20160516 007 thessaloniki.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20160516_007_thessaloniki.jpg?width=1280",
+     "tekija": "Jean Housen",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20160516_007_thessaloniki.jpg",
+     "selite": "Muurin luona kulkevat kapeat kadut ja pienet talot kuuluvat yläkaupungin ilmeeseen.",
+     "leveys": 3872,
+     "korkeus": 2592,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1584774",
+   "nimi": "Acheiropoíitoksen kirkko",
+   "peruste": "UNESCO",
+   "koko_m": 50,
+   "lat": 40.63497,
+   "lon": 22.94786,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Church of the Acheiropoietos.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Church_of_the_Acheiropoietos.JPG?width=1280",
+     "tekija": "Knop92",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Church_of_the_Acheiropoietos.JPG",
+     "selite": "Viidennen vuosisadan basilika on yksi kaupungin vanhimmista kirkoista.",
+     "leveys": 2048,
+     "korkeus": 1536,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Abside Acheiropoietos 00559.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Abside_Acheiropoietos_00559.JPG?width=1280",
+     "tekija": "G.Garitan",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Abside_Acheiropoietos_00559.JPG",
+     "selite": "Tiilinen apsidi ja kaariaukot kuuluvat varhaiskristillisen kirkon ilmeeseen.",
+     "leveys": 4912,
+     "korkeus": 3264,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1650229",
+   "nimi": "Panagía Chalkéonin kirkko",
+   "peruste": "UNESCO",
+   "koko_m": 30,
+   "lat": 40.63679,
+   "lon": 22.94366,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "THES Panaghia Chalkeon 5944.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/THES_Panaghia_Chalkeon_5944.JPG?width=1280",
+     "tekija": "Konstantinos Stampoulis (el:User:Geraki)",
+     "lisenssi": "CC BY-SA 2.5",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:THES_Panaghia_Chalkeon_5944.JPG",
+     "selite": "Pieni ristikupolikirkko on 1000-luvulta ja kuuluu Thessalonikin bysanttilaisiin helmiin.",
+     "leveys": 2304,
+     "korkeus": 1728,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "19ου Παναγία Χαλκέων.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/19%CE%BF%CF%85_%CE%A0%CE%B1%CE%BD%CE%B1%CE%B3%CE%AF%CE%B1_%CE%A7%CE%B1%CE%BB%CE%BA%CE%AD%CF%89%CE%BD.jpg?width=1280",
+     "tekija": "Αλεξανδρής Αλέξης",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:19%CE%BF%CF%85_%CE%A0%CE%B1%CE%BD%CE%B1%CE%B3%CE%AF%CE%B1_%CE%A7%CE%B1%CE%BB%CE%BA%CE%AD%CF%89%CE%BD.jpg",
+     "selite": "Illan valossa tiilirakenteen kupoli ja kaaret erottuvat selvästi.",
+     "leveys": 4665,
+     "korkeus": 3510,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q962846",
+   "nimi": "Vlatádeksen luostari",
+   "peruste": "UNESCO",
+   "koko_m": 60,
+   "lat": 40.64183,
+   "lon": 22.95447,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Monastery of the Vlatades 09.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Monastery_of_the_Vlatades_09.jpg?width=1280",
+     "tekija": "Stolbovsky",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Monastery_of_the_Vlatades_09.jpg",
+     "selite": "Vlatádeksen luostari sijaitsee yläkaupungissa ja katsoo alas lahdelle.",
+     "leveys": 4710,
+     "korkeus": 3533,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Kloster Vlatadon Apsiden.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kloster_Vlatadon_Apsiden.jpg?width=1280",
+     "tekija": "Moleskine",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kloster_Vlatadon_Apsiden.jpg",
+     "selite": "Kirkon kivi- ja tiilipinnoitettu apsidi on bysanttilaista rakennustapaa.",
+     "leveys": 4592,
+     "korkeus": 2584,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1504317",
+   "nimi": "Pyhän Nikolaos Orfanoksen kirkko",
+   "peruste": "UNESCO",
+   "koko_m": 30,
+   "lat": 40.63776,
+   "lon": 22.95599,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Agios Nikolaos Orphanos.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Agios_Nikolaos_Orphanos.JPG?width=1280",
+     "tekija": "Buchhändler",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Agios_Nikolaos_Orphanos.JPG",
+     "selite": "Pieni kivikirkko sisältää harvinaisia 1300-luvun seinämaalauksia.",
+     "leveys": 3072,
+     "korkeus": 2304,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Agios Nikolaos Orfanos - panoramio.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Agios_Nikolaos_Orfanos_-_panoramio.jpg?width=1280",
+     "tekija": "LucT",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Agios_Nikolaos_Orfanos_-_panoramio.jpg",
+     "selite": "Kirkko seisoo rauhallisessa puutarhassa yläkaupungin laidalla.",
+     "leveys": 4496,
+     "korkeus": 3000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q17028617",
+   "nimi": "Yläkaupunki (Ano Poli)",
+   "peruste": "kaupungin päänähtävyys",
+   "koko_m": 800,
+   "lat": 40.642,
+   "lon": 22.952,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Άποψη της Άνω Πόλης.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%CE%86%CF%80%CE%BF%CF%88%CE%B7_%CF%84%CE%B7%CF%82_%CE%86%CE%BD%CF%89_%CE%A0%CF%8C%CE%BB%CE%B7%CF%82.jpg?width=1280",
+     "tekija": "PLAKLE",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%CE%86%CF%80%CE%BF%CF%88%CE%B7_%CF%84%CE%B7%CF%82_%CE%86%CE%BD%CF%89_%CE%A0%CF%8C%CE%BB%CE%B7%CF%82.jpg",
+     "selite": "Rinteelle noussut Ano Poli säilyttää punakattoisten talojen ja kapeiden kujien vanhan tunnelman.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "2006 July 30, Thessaloniki 19.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2006_July_30%2C_Thessaloniki_19.jpg?width=1280",
+     "tekija": "Syced",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2006_July_30%2C_Thessaloniki_19.jpg",
+     "selite": "Valkoiset pikkutalot nojaavat vanhaan kaupunginmuuriin.",
+     "leveys": 2272,
+     "korkeus": 1704,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "-rpEUROPE Round Table Thessaloniki (35015483615).jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/-rpEUROPE_Round_Table_Thessaloniki_(35015483615).jpg?width=1280",
+   "tekija": "re:publica from Germany",
+   "lisenssi": "CC BY-SA 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:-rpEUROPE_Round_Table_Thessaloniki_(35015483615).jpg",
+   "selite": "Thessaloniki on Pohjois-Kreikan satamakaupunki, jonka rantabulevardi kaartaa Thermaikoksenlahden rantaa.",
+   "leveys": 5472,
+   "korkeus": 3648,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "White Tower of Thessaloniki aerial view.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/White_Tower_of_Thessaloniki_aerial_view.jpg?width=1280",
+   "tekija": "Damian Pankowiec",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:White_Tower_of_Thessaloniki_aerial_view.jpg",
+   "selite": "Ilmakuvassa Valkoinen torni ja rantaviiva erottuvat kaupungin keskeltä.",
+   "leveys": 4931,
+   "korkeus": 2771,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

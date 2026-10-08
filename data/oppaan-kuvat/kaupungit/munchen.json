@@ -1,0 +1,434 @@
+{
+ "kaupunki": "munchen",
+ "kaupunkiQ": "Q1726",
+ "kohteet": [
+  {
+   "q": "Q252648",
+   "nimi": "Marienplatz",
+   "peruste": "sitelinks",
+   "koko_m": 200,
+   "lat": 48.13722,
+   "lon": 11.57528,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "2296 - München - Marienplatz viewed from Frauenkirche.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2296_-_M%C3%BCnchen_-_Marienplatz_viewed_from_Frauenkirche.JPG?width=1280",
+     "tekija": "Andrew Bossi",
+     "lisenssi": "CC BY-SA 2.5",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2296_-_M%C3%BCnchen_-_Marienplatz_viewed_from_Frauenkirche.JPG",
+     "selite": "Marienplatz on Münchenin vanhankaupungin sydän, jota hallitsee uusgoottilainen kaupungintalo.",
+     "leveys": 3648,
+     "korkeus": 2736,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "2013-02-26 Marienplatz München 005.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2013-02-26_Marienplatz_M%C3%BCnchen_005.JPG?width=1280",
+     "tekija": "Michael Lucan",
+     "lisenssi": "CC BY-SA 3.0 de",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2013-02-26_Marienplatz_M%C3%BCnchen_005.JPG",
+     "selite": "Aukion keskellä kohoaa Mariapatsas, ja sen takana kaupungintalon goottilainen julkisivu.",
+     "leveys": 2200,
+     "korkeus": 1410,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Altes Rathaus Marienplatz Munich.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Altes_Rathaus_Marienplatz_Munich.jpg?width=1280",
+     "tekija": "joaoa",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Altes_Rathaus_Marienplatz_Munich.jpg",
+     "selite": "Vanha kaupungintalo torneineen sulkee Marienplatzin itäpään.",
+     "leveys": 1280,
+     "korkeus": 1036,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q152979",
+   "nimi": "Uusi kaupungintalo",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 48.13778,
+   "lon": 11.57583,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Marienplatz und Rathaus München.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Marienplatz_und_Rathaus_M%C3%BCnchen.jpg?width=1280",
+     "tekija": "Burkhard Mücke",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Marienplatz_und_Rathaus_M%C3%BCnchen.jpg",
+     "selite": "Uusgoottilaisen kaupungintalon tornissa on kellopeli, joka vetää päivittäin yleisöä Marienplatzille.",
+     "leveys": 5100,
+     "korkeus": 4440,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "13.7.20 Munchen 228 (50114835742).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/13.7.20_Munchen_228_(50114835742).jpg?width=1280",
+     "tekija": "Donald Judge",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:13.7.20_Munchen_228_(50114835742).jpg",
+     "selite": "Kaupungintalon korkea torni nousee pitkän, runsaasti koristellun julkisivun yläpuolelle.",
+     "leveys": 5472,
+     "korkeus": 3648,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "2019-08-03 New Town Hall, Munich, Germany 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2019-08-03_New_Town_Hall%2C_Munich%2C_Germany_01.jpg?width=1280",
+     "tekija": "Maksym Kozlenko",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2019-08-03_New_Town_Hall%2C_Munich%2C_Germany_01.jpg",
+     "selite": "Ylhäältä näkee, miten kaupungintalo ja Marienplatz ovat vanhankaupungin keskipiste.",
+     "leveys": 8851,
+     "korkeus": 3920,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q167193",
+   "nimi": "Frauenkirche",
+   "peruste": "sitelinks",
+   "koko_m": 120,
+   "lat": 48.13858,
+   "lon": 11.57362,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Frauenkirche München abends.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Frauenkirche_M%C3%BCnchen_abends.jpg?width=1280",
+     "tekija": "Thomas Wolf, www.foto-tw.de",
+     "lisenssi": "CC BY-SA 3.0 de",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Frauenkirche_M%C3%BCnchen_abends.jpg",
+     "selite": "Frauenkirchen kaksi sipulikupolitornia ovat Münchenin tunnetuin siluetti.",
+     "leveys": 2208,
+     "korkeus": 1577,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "GER München, Frauenkirche 001.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/GER_M%C3%BCnchen%2C_Frauenkirche_001.jpg?width=1280",
+     "tekija": "-wuppertaler",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:GER_M%C3%BCnchen%2C_Frauenkirche_001.jpg",
+     "selite": "Myöhäisgoottilaisen tiilikatedraalin tornit kohoavat yli 90 metriin.",
+     "leveys": 2745,
+     "korkeus": 3660,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q131631",
+   "nimi": "Nymphenburgin linna",
+   "peruste": "sitelinks",
+   "koko_m": 800,
+   "lat": 48.15806,
+   "lon": 11.50361,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Schloss Nymphenburg in München.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Schloss_Nymphenburg_in_M%C3%BCnchen.JPG?width=1280",
+     "tekija": "High Contrast",
+     "lisenssi": "CC BY 3.0 de",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0/de/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Schloss_Nymphenburg_in_M%C3%BCnchen.JPG",
+     "selite": "Nymphenburg oli Baijerin hallitsijoiden barokkinen kesäresidenssi.",
+     "leveys": 3840,
+     "korkeus": 2500,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Aerial image of Schloss Nymphenburg.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aerial_image_of_Schloss_Nymphenburg.jpg?width=1280",
+     "tekija": "Carsten Steger",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aerial_image_of_Schloss_Nymphenburg.jpg",
+     "selite": "Ilmasta näkee linnan, sen kanavat ja laajan barokkipuiston.",
+     "leveys": 5568,
+     "korkeus": 3712,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "20220923 Nymphenburg Palace 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20220923_Nymphenburg_Palace_01.jpg?width=1280",
+     "tekija": "Flocci Nivis",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20220923_Nymphenburg_Palace_01.jpg",
+     "selite": "Pitkä pääjulkisivu avautuu puistoon päin keskellä siipirakennusten välissä.",
+     "leveys": 5820,
+     "korkeus": 3885,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q686548",
+   "nimi": "Residenz-palatsi",
+   "peruste": "sitelinks",
+   "koko_m": 250,
+   "lat": 48.14105,
+   "lon": 11.57871,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Munchen Rezydencja 2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Munchen_Rezydencja_2.jpg?width=1280",
+     "tekija": "Andrzej Otrębski",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Munchen_Rezydencja_2.jpg",
+     "selite": "Residenz oli Baijerin ruhtinaiden ja kuninkaiden kaupunkipalatsi vuosisatojen ajan.",
+     "leveys": 2816,
+     "korkeus": 2112,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Façade of the inner courtyard of the munich residence.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Fa%C3%A7ade_of_the_inner_courtyard_of_the_munich_residence.jpg?width=1280",
+     "tekija": "AuHaidhausen",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Fa%C3%A7ade_of_the_inner_courtyard_of_the_munich_residence.jpg",
+     "selite": "Palatsin julkisivut heijastavat sen satojen vuosien rakennushistoriaa.",
+     "leveys": 7216,
+     "korkeus": 4968,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q260223",
+   "nimi": "Englischer Garten",
+   "peruste": "sitelinks",
+   "koko_m": 1500,
+   "lat": 48.15278,
+   "lon": 11.59194,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Monopteros in Englischer Garten, Munich.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Monopteros_in_Englischer_Garten%2C_Munich.JPG?width=1280",
+     "tekija": "High Contrast",
+     "lisenssi": "CC BY 3.0 de",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0/de/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Monopteros_in_Englischer_Garten%2C_Munich.JPG",
+     "selite": "Englischer Garten on yksi maailman suurimmista kaupunkipuistoista, ja Monopteros-temppeli kohoaa sen kumpareella.",
+     "leveys": 3350,
+     "korkeus": 2050,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Monopteros, Englischer Garten, Munich, 20251110 0843 6044.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Monopteros%2C_Englischer_Garten%2C_Munich%2C_20251110_0843_6044.jpg?width=1280",
+     "tekija": "Jakub Hałun",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Monopteros%2C_Englischer_Garten%2C_Munich%2C_20251110_0843_6044.jpg",
+     "selite": "Syksyllä puiston nurmet ja vanhat puut ympäröivät klassistista pyöreää temppeliä.",
+     "leveys": 4447,
+     "korkeus": 2969,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q686629",
+   "nimi": "Viktualienmarkt",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 48.1353,
+   "lon": 11.5761,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Viktualienmarkt Aerial View in Munich.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Viktualienmarkt_Aerial_View_in_Munich.jpg?width=1280",
+     "tekija": "Diliff",
+     "lisenssi": "CC BY 2.5",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.5",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Viktualienmarkt_Aerial_View_in_Munich.jpg",
+     "selite": "Viktualienmarkt on Münchenin keskustan päivittäinen ruokatori kojuineen ja olutpuutarhoineen.",
+     "leveys": 5556,
+     "korkeus": 2389,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "München, Viktualienmarkt, Maibaum -- 2011 -- 2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/M%C3%BCnchen%2C_Viktualienmarkt%2C_Maibaum_--_2011_--_2.jpg?width=1280",
+     "tekija": "Dietmar Rabich",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:M%C3%BCnchen%2C_Viktualienmarkt%2C_Maibaum_--_2011_--_2.jpg",
+     "selite": "Torin vappupuuhun on koottu kuvat baijerilaisista käsityöläisammateista.",
+     "leveys": 2167,
+     "korkeus": 3250,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q259799",
+   "nimi": "Theatinerkirche",
+   "peruste": "sitelinks",
+   "koko_m": 80,
+   "lat": 48.14194,
+   "lon": 11.57639,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Exterior of Theatinerkirche, Munich.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Exterior_of_Theatinerkirche%2C_Munich.jpg?width=1280",
+     "tekija": "Wilfredor",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Exterior_of_Theatinerkirche%2C_Munich.jpg",
+     "selite": "Keltainen Theatinerkirche on italialaisvaikutteinen barokkikirkko Odeonsplatzin laidalla.",
+     "leveys": 7873,
+     "korkeus": 9066,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Theatinerkirche München 2014.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Theatinerkirche_M%C3%BCnchen_2014.jpg?width=1280",
+     "tekija": "High Contrast",
+     "lisenssi": "CC BY 3.0 de",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0/de/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Theatinerkirche_M%C3%BCnchen_2014.jpg",
+     "selite": "Kirkon valtava kupoli ja kaksoistornit hallitsevat Münchenin kattomerta.",
+     "leveys": 2550,
+     "korkeus": 1880,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q254294",
+   "nimi": "Siegestor",
+   "peruste": "sitelinks",
+   "koko_m": 80,
+   "lat": 48.15235,
+   "lon": 11.58214,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Siegestor Muenchen January 2013.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Siegestor_Muenchen_January_2013.JPG?width=1280",
+     "tekija": "Hendrik Schöttle",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Siegestor_Muenchen_January_2013.JPG",
+     "selite": "Voitonportti päättää Ludwigstraßen ja kruunataan Baijeria esittävällä leijonakvadrigalla.",
+     "leveys": 2000,
+     "korkeus": 1335,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Siegestor Munich at Dusk.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Siegestor_Munich_at_Dusk.JPG?width=1280",
+     "tekija": "Martin Falbisoner",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Siegestor_Munich_at_Dusk.JPG",
+     "selite": "Hämärässä valaistu portti hohtaa Schwabingin kaupunginosan portilla.",
+     "leveys": 3781,
+     "korkeus": 1822,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q707669",
+   "nimi": "Bavaria-patsas",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 48.13069,
+   "lon": 11.54579,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Bavaria Statue and Ruhmeshalle Munich, April 2019 -01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bavaria_Statue_and_Ruhmeshalle_Munich%2C_April_2019_-01.jpg?width=1280",
+     "tekija": "Martin Falbisoner",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bavaria_Statue_and_Ruhmeshalle_Munich%2C_April_2019_-01.jpg",
+     "selite": "Valtava Bavaria-patsas seisoo Ruhmeshallen eli kunniahallin edessä Theresienwiesen yläpuolella.",
+     "leveys": 3572,
+     "korkeus": 2217,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Ruhmeshalle und Bavaria München Schwanthalerhöhe.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ruhmeshalle_und_Bavaria_M%C3%BCnchen_Schwanthalerh%C3%B6he.jpg?width=1280",
+     "tekija": "Schlaier",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ruhmeshalle_und_Bavaria_M%C3%BCnchen_Schwanthalerh%C3%B6he.jpg",
+     "selite": "Dorilaisen kunniahallin pylväikkö kehystää 1800-luvun pronssipatsasta.",
+     "leveys": 3321,
+     "korkeus": 2126,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Historische Altstadt Muenchen 01.JPG",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Historische_Altstadt_Muenchen_01.JPG?width=1280",
+   "tekija": "Karl Schillinger",
+   "lisenssi": "CC0",
+   "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Historische_Altstadt_Muenchen_01.JPG",
+   "selite": "München levittäytyy Isar-joen tasangolle, ja Frauenkirchen tornit nousevat vanhankaupungin yllä.",
+   "leveys": 1700,
+   "korkeus": 1337,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Frauenkirche Munich - View from Peterskirche Tower2.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Frauenkirche_Munich_-_View_from_Peterskirche_Tower2.jpg?width=1280",
+   "tekija": "Diliff",
+   "lisenssi": "CC BY 2.5",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/2.5",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Frauenkirche_Munich_-_View_from_Peterskirche_Tower2.jpg",
+   "selite": "Punaiset tiilikatot ja Frauenkirchen tornit antavat Münchenin keskustalle tunnistettavan ilmeen.",
+   "leveys": 3952,
+   "korkeus": 2464,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}
