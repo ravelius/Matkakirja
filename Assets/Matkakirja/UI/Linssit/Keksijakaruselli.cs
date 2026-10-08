@@ -24,7 +24,8 @@ namespace Matkakirja.Natiivi
     {
         static readonly float[] Mitat = { 1.45f, 0.62f, 0.52f, 0.44f }; // web KARUSELLIN_MITAT
         const float Vali = 1.05f, Kynnys = 8f, HeitonAika = 0.18f, HeitonKatto = 3f;
-        const int KuvaL = 240, KuvaK = 300;
+        // Terävyys (Päätoimittaja 8.10.2026): keskikortti 1,45 × 112 pt ≈ 162 pt → × 3 ≈ 487 px (oli 240 × 300, web).
+        const int KuvaL = 480, KuvaK = 600;
         const float Sigma = 2.6f * KuvaL / 400f; // web tools/tee-pienet-kuvat.mjs SUMENNUS_SIGMA 400 px:n leveydellä
 
         sealed class Kortti

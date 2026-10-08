@@ -783,6 +783,9 @@ namespace Matkakirja.Natiivi
     {
         public const float KylkiOsuus = 0.30f, KylkiKatto = 220f;
         const float KarttaMs = 220f;
+        /// <summary>Suurennoksen piirron yläraja (2 × 1024 ylinäytteistettynä ≈ 50 Mt hetkellisesti; iPhone tarvitsee ~1 060).</summary>
+        const int IsoLeveys = 1024;
+        Texture2D terava;
         readonly VisualElement juuri;
         VisualElement karttaTausta, karttaIso, kylki;
         IVisualElementScheduledItem karttaAnimaatio;
@@ -804,6 +807,20 @@ namespace Matkakirja.Natiivi
             karttaTausta.focusable = true;
             karttaIso = Rakenne.El("mk-maakuntaKortti__karttaiso", karttaTausta, PickingMode.Ignore);
             karttaIso.style.backgroundImage = new StyleBackground(kartta);
+            // Terävyys (Päätoimittaja 8.10.2026): kylkikartta on 512 px, suurennos jopa 900 pt → piirretään laitteen
+            // tarkkuudella (enintään IsoLeveys) avauksen jälkeen ja vaihdetaan päälle; vapautetaan sulkiessa.
+            string avain = MaakuntaMinikartta.Avain(kartta);
+            int px = Mathf.Min(IsoLeveys, Mathf.CeilToInt(lev * UiKerros.PikseliaPisteessa));
+            if (avain != null && px > kartta.width)
+                karttaTausta.schedule.Execute(() =>
+                {
+                    if (karttaIso == null) return;
+                    var iso = MaakuntaMinikartta.Hae(avain, px);
+                    if (iso == null) return;
+                    if (karttaIso == null) { UnityEngine.Object.Destroy(iso); return; }
+                    terava = iso;
+                    karttaIso.style.backgroundImage = new StyleBackground(iso);
+                }).StartingIn((long)KarttaMs + 20);
             karttaTausta.RegisterCallback<PointerDownEvent>(e => { e.StopPropagation(); Sulje(false); });
             karttaTausta.RegisterCallback<KeyDownEvent>(e => { if (e.keyCode == KeyCode.Escape) { e.StopPropagation(); Sulje(false); } });
             Animoi(alku, loppu, 0f, 0.45f, null);
@@ -815,11 +832,13 @@ namespace Matkakirja.Natiivi
         {
             if (karttaTausta == null) return;
             var tausta = karttaTausta;
+            var vapautettava = terava; terava = null;
             if (heti || kylki?.panel == null || karttaIso == null)
             {
                 karttaAnimaatio?.Pause();
                 tausta.RemoveFromHierarchy();
                 karttaTausta = karttaIso = null;
+                if (vapautettava != null) UnityEngine.Object.Destroy(vapautettava);
                 return;
             }
             var nyt = new Rect(karttaIso.layout.position, karttaIso.layout.size);
@@ -827,6 +846,7 @@ namespace Matkakirja.Natiivi
             {
                 tausta.RemoveFromHierarchy();
                 if (karttaTausta == tausta) karttaTausta = karttaIso = null;
+                if (vapautettava != null) UnityEngine.Object.Destroy(vapautettava);
             });
         }
 

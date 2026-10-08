@@ -88,11 +88,11 @@ namespace Matkakirja.Natiivi
 
         /// <summary>
         /// Pehmeä ellipsimaski kuvan alfaan (kerran per kuva): täysi peitto keskellä, häivytys reunaan; lähdekuvan ei tarvitse
-        /// olla luettava (GPU-kopio RenderTexturen kautta). Enintään 256 px lyhyempi sivu.
+        /// olla luettava (GPU-kopio RenderTexturen kautta). Enintään 512 px lyhyempi sivu (140 pt × 3; oli 256, terävyys 8.10.2026).
         /// </summary>
         static Texture2D Maskaa(Texture2D lahde)
         {
-            float s = Mathf.Min(1f, 256f / Mathf.Min(lahde.width, lahde.height));
+            float s = Mathf.Min(1f, 512f / Mathf.Min(lahde.width, lahde.height));
             int w = Mathf.Max(8, Mathf.RoundToInt(lahde.width * s)), h = Mathf.Max(8, Mathf.RoundToInt(lahde.height * s));
             var rt = RenderTexture.GetTemporary(w, h, 0, RenderTextureFormat.ARGB32, RenderTextureReadWrite.sRGB);
             var ennen = RenderTexture.active;

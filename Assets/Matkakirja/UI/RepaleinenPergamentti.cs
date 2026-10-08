@@ -25,7 +25,7 @@ namespace Matkakirja.Natiivi
         {
             r = Mathf.Clamp01(r);
             float ydin = Mathf.Pow(1f - r, 2.2f), kajo = Mathf.Pow(1f - r, 1.2f);
-            var c = Color.Lerp(new Color(1f, 0.67f, 0.29f), new Color(1f, 0.94f, 0.77f), ydin);
+            var c = Color.Lerp(new Color(1f, 0.67f, 0.29f), (Color)Tyylikirja.Kehys.Paper, ydin);
             c.a = 0.55f * kajo * 0.6f + 0.4f * ydin;
             return c;
         }

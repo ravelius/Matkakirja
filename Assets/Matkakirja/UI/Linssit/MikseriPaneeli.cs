@@ -40,9 +40,9 @@ namespace Matkakirja.Natiivi
         public static IMikseriLahde Lahde;
         public const int Kerros = 39; // LinssiUi.SulkuKerros 38:n yläpuolella, Valikot 40:n alla
 
-        static readonly Color Lasi = new Color(0.07f, 0.06f, 0.05f, 0.86f);
-        static readonly Color Kulta = new Color(0.918f, 0.722f, 0.306f);
-        static readonly Color Paperi = new Color(0.97f, 0.94f, 0.88f);
+        static readonly Color Lasi = (Color)Tyylikirja.Kuulto.Bg85;
+        static readonly Color Kulta = (Color)Tyylikirja.Kehys.Kulta;
+        static readonly Color Paperi = (Color)Tyylikirja.Kehys.InkLight;
 
         readonly VisualElement juuri, lappu, paneeli, rivit;
         readonly Label otsikko, tila;
@@ -102,7 +102,7 @@ namespace Matkakirja.Natiivi
             otsikko.style.color = Kulta; otsikko.style.fontSize = 13; otsikko.style.flexGrow = 1;
             otsikko.pickingMode = PickingMode.Ignore;
             var kiinni = Rakenne.Nappi("×", "mk-mikseri__kiinni", () => Avaa(false), yla); // ✕ puuttuu kirjasimesta (laatikko)
-            kiinni.style.backgroundColor = new Color(0, 0, 0, 0);
+            kiinni.style.backgroundColor = (Color)Tyylikirja.Kehys.Lapinakyva;
             var kt = kiinni.Q<Label>();
             if (kt != null) { kt.style.color = Paperi; kt.style.fontSize = 22; }
             yla.RegisterCallback<PointerDownEvent>(e => { vedetaan = true; vetoAlku = e.position; paikkaAlku = paikka; yla.CapturePointer(e.pointerId); });

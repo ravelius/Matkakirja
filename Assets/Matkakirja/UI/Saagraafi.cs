@@ -151,8 +151,8 @@ namespace Matkakirja.Natiivi
         static readonly Color Kaista = new Color32(164, 105, 28, 33);         // 0.13
         static readonly Color Kulta = new Color32(164, 105, 28, 255);         // #a4691c
         const float LiukuAlfa = 0.22f;
-        static readonly Color Apuviiva = new Color32(70, 51, 31, 46);         // 0.18
-        static readonly Color Pohjaviiva = new Color32(70, 51, 31, 153);      // 0.6
+        static readonly Color Apuviiva = Tyylikirja.Kehys.MapInk18;
+        static readonly Color Pohjaviiva = Tyylikirja.Kehys.MapInk60;
 
         readonly float[] keski, sade, ylin, alin;
         readonly bool kaista;

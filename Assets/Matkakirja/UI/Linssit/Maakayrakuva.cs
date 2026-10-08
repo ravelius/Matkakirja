@@ -128,10 +128,10 @@ namespace Matkakirja.Natiivi
             }
         }
 
-        static readonly Color Toinen = new Color32(176, 58, 43, 255);    // #b03a2b
+        static readonly Color Toinen = Tyylikirja.Kehys.Mark;    // #b03a2b
         static readonly Color Kolmas = new Color32(74, 107, 58, 255);    // #4a6b3a
         static readonly Color Neljas = new Color32(53, 87, 127, 255);    // #35577f
-        static readonly Color Suomi = new Color32(70, 51, 31, 97);       // rgba(70,51,31,.38)
+        static readonly Color Suomi = Tyylikirja.Kehys.MapInk40;       // rgba(70,51,31,.38)
         const float LisaAlfa = 0.85f, EnnusteAlfa = 0.45f;
 
         /// <summary>Webin css-luokan kynä: väri (opacity mukana) ja viivan leveys viewBox-yksiköissä.</summary>
