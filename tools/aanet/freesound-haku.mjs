@@ -11,7 +11,7 @@ mkdirSync(kansio, { recursive: true });
 const KENTAT = 'id,name,username,license,duration,previews,description,tags,avg_rating,num_ratings,url';
 const kaikki = [];
 // Vahti: jumiutunut lataus ei saa kaataa koko ajoa (8.10.: esikuuntelun lataus jäi roikkumaan); JSON kirjoitetaan joka äänen jälkeen.
-setTimeout(() => { console.log('vahti: aika loppui, lopetetaan'); process.exit(0); }, 6 * 60e3).unref();
+setTimeout(() => { console.log("vahti: aika loppui, lopetetaan"); process.exit(0); }, 8 * 60e3).unref();
 
 const api = (url) => fetch(url, { headers: { authorization: `Token ${avain}` }, signal: AbortSignal.timeout(30000) })
   .catch((e) => ({ ok: false, status: e.name }));

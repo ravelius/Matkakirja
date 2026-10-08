@@ -18,13 +18,20 @@ jobs:
           FREESOUND_API_KEY: ${{ secrets.FREESOUND_API }}
         run: >
           node tools/aanet/freesound-haku.mjs /tmp/fs
-          "koysi-kiinnitys|creak|0.5|6"
-          "koysi-kiinnitys|rope|0.5|6"
-          "koysi-kiinnitys|creaking wood rope|0.5|20"
-          "koysi-lasku|creaking|3|30"
-          "koysi-lasku|rope|3|30"
-          "sukellus|splash|0.5|3"
-          "sukellus|water splash big|0.5|3"
+          "tuuli|wind gust|8|60"
+          "tuuli|strong wind|8|60"
+          "tuuli|wind howling tundra|8|90"
+          "tuuli|arctic wind|8|90"
+          "poltin|hot air balloon burner|1|10"
+          "poltin|gas burner whoosh|0.5|6"
+          "kori|wicker basket creak|0.5|6"
+          "luukku|trapdoor creak|0.5|5"
+          "luukku|wooden hatch creak|0.5|5"
+          "liina|cloth unfold|0.3|3"
+          "liina|fabric flap|0.3|3"
+          "askel-olki|footsteps straw|3|40"
+          "askel-porras|footsteps stone stairs|3|40"
+          "nappula|wooden game piece|0.1|1.5"
       - if: always()
         uses: actions/upload-artifact@v4
         with:
