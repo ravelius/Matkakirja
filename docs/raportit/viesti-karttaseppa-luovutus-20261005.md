@@ -11,6 +11,8 @@
   Arvio (17.13: osa1 24/91, osa2 25/78): valmis pe 9.10. noin klo 08–11. Työjono: /Users/Shared/Claude/Matkakirja-fable/scratchpad/tyojonot.md (Karttaseppä); erä valmis → 1 rivi PT:lle ja seuraava kohta heti, [PT]/[LUPA] ohitetaan.
   **Valmistuttua:** tarkista kaistasauma x = 34 (z6 lohkoraja 33|34), tee yleiskuva (neljännekset), lähetä yksi rivi PT:lle, sitten
   `kokoa-kausi.py talvi v1 <_valmiit/s2-eurooppa-talvi-vienti-<pvm>> "<osa1/laatat>:<osa2/laatat>" "<kuvaus>"`, LAHTEET.md (pohjana kevät) ja Julkaisija.
+  **JUNA 167 (8.10. 22.00):** `kaudet/tauko-talvi3-2145.sh` (PID 75365) asettaa STOPin molempiin osiin klo 21.45, ilman STOP.lukkoa, joten vahti ei jatka.
+  **Jatko käsin vasta Julkaisijan TF 167 -ilmoituksen jälkeen (~22.30):** poista `osa1/STOP` ja `osa2/STOP`, sitten perl setsid `aja-talvi3-osa-v2.sh 1 27 33` ja `… 2 34 39`.
   Jos osa 2 pysähtyi STOPiin: poista STOP ja käynnistä uudelleen, kun muistia on (perl setsid).
 
 ---
