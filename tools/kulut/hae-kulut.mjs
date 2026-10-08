@@ -2,7 +2,7 @@
  * Kustannussuunnitelman lähtödata (Pelikoodari 8.10.2026): hakee
  * Anthropicin kulu- ja käyttöraportit admin-avaimella ja kirjoittaa
  * ne JSONina (ei avaimia, vain summat ja avainten nimet/tunnukset).
- * Ajetaan Actionsissa, koska ANTHROPIC_ADMIN_KEY on vain secreteissä.
+ * Ajetaan Actionsissa (.github/workflows/hae-kulut.yml), koska ANTHROPIC_ADMIN_KEY on vain secreteissä.
  *
  *   ANTHROPIC_ADMIN_KEY=… OPENAI_ADMIN_KEY=… node tools/kulut/hae-kulut.mjs <kansio> [alku-ISO]
  */
