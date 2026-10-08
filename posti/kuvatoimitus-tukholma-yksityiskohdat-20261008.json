@@ -1,0 +1,235 @@
+{
+  "task": "tukholma-yksityiskohdat-20261008",
+  "routedTaskNumber": 18,
+  "source": {
+    "path": "posti/sisaltokirjuri-codex-tukholma-yksityiskohdat-20261008.md",
+    "commit": "39a28e262e8275c98d8c9c06fb5c7f144b774d48",
+    "blob": "640c2d0d32adc627d65015df8a5c5baea95d48c1"
+  },
+  "sourceReadInFull": true,
+  "requestedImages": 3,
+  "imageCount": 1,
+  "generationCalls": 1,
+  "generationLimit": 3,
+  "sourceImagePixelsUsed": false,
+  "generationMode": "built-in image_gen, text-only, one call per produced subject; metadata-only final preparation",
+  "productionComplete": true,
+  "assets": [
+    {
+      "number": 1,
+      "routedTaskNumber": 18,
+      "qid": "Q849086",
+      "id": "lustholmenin-puutarhat",
+      "file": "tukholma-Q849086-lustholmenin-puutarhat.png",
+      "filename": "tukholma-Q849086-lustholmenin-puutarhat.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tukholma-yksityiskohdat-20261008/production/01-lustholmenin-puutarhat/tukholma-Q849086-lustholmenin-puutarhat.png",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11a8a-5349-79f1-8739-b3bbb247a029/exec-65497a48-e63e-4ec4-a66a-d06ccef4825c.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tukholma-yksityiskohdat-20261008/production/01-lustholmenin-puutarhat/original-generation.png",
+      "sha256": "2614b7a6afa245c39c4c8a1f0f055d43546631ea7209ddac097bbc0960830349",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationCallState": "completed",
+      "generationMode": "built-in-text-only",
+      "generationPrompt": "Use case: historical-scene\nAsset type: one educational historical detail image, landscape PNG, exact native canvas 1536 x 1024 pixels, opaque RGB, sRGB.\nPrimary request: Create one completely new, naturally camera-looking photorealistic historical interpretation of a royal Swedish pleasure-garden islet near medieval Stockholm in the late sixteenth century, on a quiet summer day. This is an original plausible interpretation of Lustholmen's garden era, not a reproduction of an artwork, a historic map, a modern place photograph, or an exact archaeological survey.\nScene and composition: A broad oblique aerial camera view from approximately thirty metres above the water to the southeast, looking toward the islet. Show the entire irregular natural island shoreline inside the frame, with ample unbroken water around every side and below it. The island occupies the middle of the picture. At the far top of the frame, across a broad stretch of water, show a faint, small, hazy medieval Stockholm skyline of low timber and masonry buildings and pitched roofs; it must be distant and subordinate.\nSubject details: A modest royal garden made from fenced geometric rectangular planting beds and low timber-edged kitchen-garden boxes, green herbs and vegetables with restrained flowering beds, sandy paths forming simple intersecting walks, an orchard of fruit trees, and exactly three small generic plank-built wooden garden pavilions with wooden shingle roofs. These pavilions are original period-plausible designs, without reference to any surviving or known museum object or building. Keep some open grass and natural rocky margins. Rough granite rocks line the shores. A small plain timber landing dock meets the water, with one simple clinker-built wooden rowing boat tied beside it. Two or three tiny anonymous fictional gardeners work deep in the garden with their backs to the camera, in plain muted period linen and wool clothing; they occupy only a very small part of the scene and faces cannot be discerned.\nStyle and light: Real camera appearance with physically believable textures, ordinary natural summer daylight, gentle shadows, muted natural greens and browns, calm grey-blue water, unexaggerated dynamic range. Clear readable garden structure at small display size, with no miniature-model or tilt-shift appearance. The scene is a photorealistic interpretation, not a drawing, painting, engraving, videogame render or cinematic fantasy.\nHistorical limits: The royal garden era predates the island's later naval infrastructure. The island outline, the planting scheme and pavilion placement are deliberately original plausible historical interpretation. Do not use the present-day island skyline or present-day layouts.\nAvoid: barracks, naval yards, shipbuilding infrastructure, bridges, the af Chapman ship, any large ship, the present Royal Palace, City Hall, modern skyline, modern objects, machinery, paved modern roads, modern railings, museum displays, recognizable faces, portraits or likenesses of any real living or historical person, blood, violence, readable writing or numerals, signs, labels, logos, watermark, decorative frame, HDR, overly saturated colors, cinematic grading, dramatic sunset, artificial golden lighting.\nNo text anywhere in the image. Generate a single landscape image at exactly 1536 x 1024 pixels.",
+      "sourceCommit": "39a28e262e8275c98d8c9c06fb5c7f144b774d48",
+      "sourceBlob": "640c2d0d32adc627d65015df8a5c5baea95d48c1",
+      "sourceImagePixelsUsed": false,
+      "viitteet": [
+        {
+          "publisher": "Statens fastighetsverk",
+          "title": "Skeppsholmen och Kastellholmen",
+          "url": "https://www.sfv.se/vara-fastigheter/sverige/stockholms-lan/skepps-och-kastellholmen/skeppsholmen-och-kastellholmen",
+          "type": "textResearchOnly",
+          "access": "2026-10-08; official page opened as text; no image/map opened or passed to generator",
+          "notes": "Historia text confirms transformation into a royal pleasure garden and a royal pleasure palace during the time of Gustav Vasa’s sons. Geometry, orchards and three generic wooden pavilions come from the order as original historical interpretation rather than a documented reconstruction."
+        },
+        {
+          "publisher": "Stockholms stad / Stockholmskällan",
+          "title": "Stockholms örlogsvarv och Galärvarvet",
+          "url": "https://stockholmskallan.stockholm.se/teman/Stockholmsplatser/stockholms-orlogsvarv-och-galarvarvet/",
+          "type": "textResearchOnly",
+          "access": "2026-10-08; official page opened as text; no image/map opened or passed to generator",
+          "notes": "Text places the move to present-day Skeppsholmen in the 1640s, supporting exclusion of later naval buildings and yard infrastructure from the late-sixteenth-century garden scene."
+        }
+      ],
+      "kuvateksti": "Lustholmenin kuninkaallinen puutarhasaari 1500-luvun loppupuolella: puutarhapalstat, hedelmätarha ja puiset huvimajat ovat historiallinen tulkinta. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "preflight": {
+        "passed": true,
+        "criticalBlockingUncertainty": false,
+        "historicalInterpretation": "Original plausible garden-era interpretation; exact island outline, garden layout and pavilion locations are not documented by the selected texts.",
+        "sourcesReadInFull": true,
+        "scopeReadInFull": true,
+        "sharedRulesReadInFull": true,
+        "excludedItemsGenerated": false,
+        "preparedAt": "2026-10-08T08:05:55.299112+00:00"
+      },
+      "preview480Path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tukholma-yksityiskohdat-20261008/production/01-lustholmenin-puutarhat/qa-preview-480.png",
+      "deliveryState": "local-candidate-only",
+      "technicalChanges": [
+        {
+          "operation": "metadata-only PNG chunk rewrite",
+          "changes": "Added standard sRGB ICC profile in iCCP and Description/Source tEXt fields, both exactly the required Finnish disclosure. Removed nonrequested ancillary metadata from final only; IHDR and compressed IDAT image data preserved verbatim.",
+          "removedAncillaryChunks": [
+            "caBX"
+          ],
+          "rgbPixelsUnchanged": true,
+          "resized": false,
+          "cropped": false,
+          "retouched": false
+        },
+        {
+          "operation": "QA preview only",
+          "changes": "Full-frame 480 x 320 LANCZOS preview; native master unchanged."
+        }
+      ],
+      "QA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "viewedNativeDimensions": [
+          1536,
+          1024
+        ],
+        "viewedPreviewDimensions": [
+          480,
+          320
+        ],
+        "observations": [
+          "Koko saari ja sen rantaviiva mahtuvat kuvaan; vettä näkyy saaren kaikilla sivuilla ja runsaasti etualalla.",
+          "Aidatut geometriset puutarhapalstat, hiekkapolut, hedelmäpuiden alue ja kolme puista huvimajaa erottuvat sekä natiivikoossa että 480 x 320 -esikatselussa.",
+          "Kiviranta, pieni puulaituri ja laituriin sidottu soutuvene näkyvät selvästi.",
+          "Kaksi hyvin pientä puutarhuria työskentelee selin/viistosti poispäin; tunnistettavia kasvoja tai todellisen henkilön näköisyyttä ei havaita.",
+          "Luonnollinen kesäpäivän valo, vaimeat värit ja valokuvamainen pinta; ei havaittavaa HDR-käsittelyä, elokuvamaista värimäärittelyä tai maalaustyyliä.",
+          "Taustan vanha kaupunki pysyy kaukaisena sivuaiheena eikä näkyviä nykyaikaisia maamerkkejä havaita.",
+          "Ei havaittu kasarmeja, telakkaa, siltaa, af Chapman -laivaa, nykyistä Kuninkaallista linnaa, kaupungintaloa, moderneja esineitä, luettavaa tekstiä, numeroita, logoja, vesileimaa tai kehystä.",
+          "Alkuperäinen on säilytetty tavutarkasti; metadataa saanut natiivi RGB-kuva on pikselitarkasti sama.",
+          "1536 x 1024 RGB PNG on läpinäkymätön; final-tiedoston ainoat metatietokentät ovat sRGB ICC, Description ja Source, ja molemmat tekstit ovat täsmälleen määrätty merkintä."
+        ],
+        "limitations": [
+          "Saaren muoto ja koko, puutarhan yksityiskohtainen järjestely, huvimajojen ulkoasu ja sijainti sekä taustan kaupungin siluetti ovat oma historiallinen tulkinta, eivät mittatarkka tai arkeologisesti todistettu rekonstruktio.",
+          "Puupaviljonkien lukumäärä ja geometriset puutarhapalstat perustuvat tilausbriefiin; valitut viralliset tekstilähteet vahvistavat yleisen puutarhasaaren aikakauden, eivät näitä yksityiskohtia.",
+          "Taustalla näkyy lisäksi yksi pieni aikakauteen sopiva purjevene. Se ei ole pääaihe tai tunnistettava museolaiva.",
+          "ApprovedForDelivery tarkoittaa tämän paikallisen kandidaatin kuva-QA:ta; kuvaa ei ole toimitettu R2:een, postiin, peliin eikä julkaistu."
+        ],
+        "checkedAt": "2026-10-08T08:08:50.309791+00:00"
+      },
+      "originalSha256": "da8503427912a88af516a81584d9600554554694f9379a669357ef8a8169d7c5",
+      "pixelSha256": "ae496042c07fcc06ea254d3fbba9e9f7373ebecd1098658745c7ce199b162f92",
+      "mode": "RGB",
+      "opaque": true,
+      "srgbIcc": true,
+      "rgbPixelsUnchanged": true,
+      "preview480Dimensions": [
+        480,
+        320
+      ],
+      "status": "approved-local-candidate",
+      "visualReview": {
+        "task": "tukholma-yksityiskohdat-20261008",
+        "number": 1,
+        "qid": "Q849086",
+        "file": "tukholma-Q849086-lustholmenin-puutarhat.png",
+        "sha256": "2614b7a6afa245c39c4c8a1f0f055d43546631ea7209ddac097bbc0960830349",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Koko puutarhasaari rantaviivoineen ja ympäröivä vesi, kolme puista paviljonkia, hedelmätarha, istutukset ja kaksi pientä puutarhuria näkyvät. Kameramainen luonnollinen valo, ei myöhempää telakkaa, siltaa, nykymaamerkkejä tai tekstiä."
+        ],
+        "limitations": [
+          "Saaren muoto ja koko, puutarhan yksityiskohtainen järjestely, huvimajojen ulkoasu ja sijainti sekä taustan kaupungin siluetti ovat oma historiallinen tulkinta, eivät mittatarkka tai arkeologisesti todistettu rekonstruktio.",
+          "Puupaviljonkien lukumäärä ja geometriset puutarhapalstat perustuvat tilausbriefiin; valitut viralliset tekstilähteet vahvistavat yleisen puutarhasaaren aikakauden, eivät näitä yksityiskohtia.",
+          "Taustalla näkyy lisäksi yksi pieni aikakauteen sopiva purjevene. Se ei ole pääaihe tai tunnistettava museolaiva.",
+          "ApprovedForDelivery tarkoittaa tämän paikallisen kandidaatin kuva-QA:ta; kuvaa ei ole toimitettu R2:een, postiin, peliin eikä julkaistu."
+        ],
+        "agentVerdictBeforeRootReview": true,
+        "reviewedAtUTC": "2026-10-08T08:19:37.845039+00:00"
+      },
+      "agentQA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "viewedNativeDimensions": [
+          1536,
+          1024
+        ],
+        "viewedPreviewDimensions": [
+          480,
+          320
+        ],
+        "observations": [
+          "Koko saari ja sen rantaviiva mahtuvat kuvaan; vettä näkyy saaren kaikilla sivuilla ja runsaasti etualalla.",
+          "Aidatut geometriset puutarhapalstat, hiekkapolut, hedelmäpuiden alue ja kolme puista huvimajaa erottuvat sekä natiivikoossa että 480 x 320 -esikatselussa.",
+          "Kiviranta, pieni puulaituri ja laituriin sidottu soutuvene näkyvät selvästi.",
+          "Kaksi hyvin pientä puutarhuria työskentelee selin/viistosti poispäin; tunnistettavia kasvoja tai todellisen henkilön näköisyyttä ei havaita.",
+          "Luonnollinen kesäpäivän valo, vaimeat värit ja valokuvamainen pinta; ei havaittavaa HDR-käsittelyä, elokuvamaista värimäärittelyä tai maalaustyyliä.",
+          "Taustan vanha kaupunki pysyy kaukaisena sivuaiheena eikä näkyviä nykyaikaisia maamerkkejä havaita.",
+          "Ei havaittu kasarmeja, telakkaa, siltaa, af Chapman -laivaa, nykyistä Kuninkaallista linnaa, kaupungintaloa, moderneja esineitä, luettavaa tekstiä, numeroita, logoja, vesileimaa tai kehystä.",
+          "Alkuperäinen on säilytetty tavutarkasti; metadataa saanut natiivi RGB-kuva on pikselitarkasti sama.",
+          "1536 x 1024 RGB PNG on läpinäkymätön; final-tiedoston ainoat metatietokentät ovat sRGB ICC, Description ja Source, ja molemmat tekstit ovat täsmälleen määrätty merkintä."
+        ],
+        "limitations": [
+          "Saaren muoto ja koko, puutarhan yksityiskohtainen järjestely, huvimajojen ulkoasu ja sijainti sekä taustan kaupungin siluetti ovat oma historiallinen tulkinta, eivät mittatarkka tai arkeologisesti todistettu rekonstruktio.",
+          "Puupaviljonkien lukumäärä ja geometriset puutarhapalstat perustuvat tilausbriefiin; valitut viralliset tekstilähteet vahvistavat yleisen puutarhasaaren aikakauden, eivät näitä yksityiskohtia.",
+          "Taustalla näkyy lisäksi yksi pieni aikakauteen sopiva purjevene. Se ei ole pääaihe tai tunnistettava museolaiva.",
+          "ApprovedForDelivery tarkoittaa tämän paikallisen kandidaatin kuva-QA:ta; kuvaa ei ole toimitettu R2:een, postiin, peliin eikä julkaistu."
+        ],
+        "checkedAt": "2026-10-08T08:08:50.309791+00:00"
+      },
+      "mitat": [
+        1536,
+        1024
+      ],
+      "editorAcceptance": false,
+      "fableReceipt": false,
+      "gameIntegrated": false,
+      "published": false,
+      "r2Key": "julisteet/tukholma-yksityiskohdat/20261008/tukholma-Q849086-lustholmenin-puutarhat.png",
+      "url": "https://media.matkakirja.app/julisteet/tukholma-yksityiskohdat/20261008/tukholma-Q849086-lustholmenin-puutarhat.png",
+      "bytes": 3095603,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    }
+  ],
+  "excludedItems": [
+    {
+      "number": 2,
+      "qid": "Q750444",
+      "id": "erikin-kruunu-1561",
+      "generationCalls": 0,
+      "reason": "Explicit new routing restriction forbids a recognisable replica of the specific ErikXIV museum-collection crown; no generic substitute authorised."
+    },
+    {
+      "number": 3,
+      "qid": "Q901371",
+      "id": "vasan-vakaustesti-1628",
+      "generationCalls": 0,
+      "reason": "Conservative pre-generation decision under explicit museum-ship restriction: the named Vasa is the central object; a faithful identifiable ship representation conflicts with the rule, and replacing it with another generic ship is not authorised."
+    }
+  ],
+  "comparison": {
+    "file": "toimitetut-1.jpg",
+    "r2Key": "julisteet/tukholma-yksityiskohdat/20261008/toimitetut-1.jpg",
+    "url": "https://media.matkakirja.app/julisteet/tukholma-yksityiskohdat/20261008/toimitetut-1.jpg",
+    "sha256": "a1982c5377be13b6991178b7e573ebb7ab836f1e73197b39fa5e8e34a8271292",
+    "bytes": 64017,
+    "http": 200,
+    "mime": "image/jpeg",
+    "cors": "https://matkakirja.app",
+    "byteExactReadback": true
+  },
+  "deliveryStatus": "Selected candidates R2 verified and submitted through this mailbox manifest/report; Fable/editor/game receipt unverified.",
+  "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+  "editorAcceptance": false,
+  "fableReceipt": false,
+  "gameIntegrated": false,
+  "published": false,
+  "createdAt": "2026-10-08T08:23:41.392597+00:00"
+}

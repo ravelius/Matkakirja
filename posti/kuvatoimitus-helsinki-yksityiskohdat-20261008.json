@@ -1,0 +1,446 @@
+{
+  "task": "helsinki-yksityiskohdat-20261008",
+  "routedTaskNumber": 19,
+  "source": {
+    "path": "posti/sisaltokirjuri-codex-helsinki-yksityiskohdat-20261008.md",
+    "commit": "920c79f437aa1a5a4623a17276ac4f5fc7323df8",
+    "blob": "8a8bd9208bd8419af1485da17fc56f3506510a5e"
+  },
+  "sourceReadInFull": true,
+  "requestedImages": 6,
+  "imageCount": 3,
+  "generationCalls": 4,
+  "generationLimit": 6,
+  "sourceImagePixelsUsed": false,
+  "generationMode": "built-in image_gen, text-only, one call per produced subject; metadata-only final preparation",
+  "productionComplete": true,
+  "assets": [
+    {
+      "number": 1,
+      "qid": "Q1044613",
+      "id": "asemaehdotus-1904",
+      "file": "helsinki-Q1044613-asemaehdotus-1904.png",
+      "filename": "helsinki-Q1044613-asemaehdotus-1904.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/helsinki-yksityiskohdat-20261008/production/01-asemaehdotus-1904/helsinki-Q1044613-asemaehdotus-1904.png",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11a95-764f-79f0-b330-d230a6a523c8/exec-36296840-0ee5-4400-970c-2ac1aad9345c.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/helsinki-yksityiskohdat-20261008/production/01-asemaehdotus-1904/original-generation.png",
+      "sha256": "8cb0d6dbe40594a084fb24c7ca6a962133074ae3ede6da2ad37832101d8c4e4a",
+      "originalSha256": "98c61f4efcfed1ca5b0b55e7fa146cbe5c70beb4fead91358353576fa766c3f5",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationPrompt": "Use case: historical-scene\nAsset type: photorealistic historical educational image for a Helsinki city introduction.\nCreate ONE entirely new TEXT-ONLY image, exactly 1536 x 1024 landscape, opaque RGB PNG in sRGB. No input photographs or reference image pixels.\nPrimary request: an imagined real-camera view of the UNBUILT 1904 Finnish National Romantic competition proposal for Helsinki's central railway station. This is a fictional visualisation of the rejected early proposal, never an archival photograph of an actual completed building.\nArchitecture: a broad massive, castle-like station facade of coarse gray Finnish granite with a single dominant high tower topped by a long steep pointed roof, several smaller turrets and sharply pitched dark roofs. Rounded heavy stone entrance arch, rough-hewn masonry, deep windows and asymmetrical National Romantic massing. Show the ENTIRE main facade and all roof peaks, with generous clear sky margins above.\nEssential subject: exactly EIGHT large gray granite BEAR SCULPTURES, all clearly identifiable and individually countable, crouching or sitting on separate square stone plinths integrated into the main entrance and its broad steps. A group of four bears to each side of the principal entrance; their separations are clear, none hidden behind another. Bears have simple solid sculptural forms, no live animals. No other figurative statues.\nSetting: fictional early-1900s Rautatientori square in front, naturally uneven cobblestone surface, one small plain horse-drawn cart at the far side. One very small anonymous driver fully rear-facing in a dark plain period coat and brimmed hat; no facial features visible. No foreground people.\nComposition: wide oblique front view at street-level camera eye height from the square, a modest diagonal angle that keeps the eight stone bears legible across the central entrance area. The monumental facade occupies the middle two thirds of the image; enough space for cobbles below and uncut tall tower above. Natural plausible architecture and perspective.\nStyle/medium: completely convincing REAL CAMERA photographic appearance, restrained natural gray daylight, subdued gray-brown colors, tactile granite grain, timber cart and authentic period ground. Real optical detail, quiet exposure, no watercolor, architectural drawing, painting, lithograph, illustration outlines, 3D render gloss, HDR, cinematic effects or oversaturated color.\nAvoid: actual final1919 Helsinki station silhouette, its straight Art Deco clock tower, clock faces, lantern-bearing human statues, modern cars or vehicles, modern streetlights, overhead wires, modern buildings, contemporary clothes, identifiable or historical real human likenesses, readable words, numbers, lettering, signs, plaques, inscriptions, logos, watermark, captions, signatures, frame, border, injury, blood or violence.",
+      "viitteet": [
+        {
+          "publisher": "Helsingin kaupunginmuseo",
+          "title": "Helsingin rautatieasema, rakennusinventointitieto",
+          "url": "https://hkm.finna.fi/Record/hkm.C07A4B3E-AE39-4216-9C2F-66039919E1AC",
+          "type": "textResearchOnly",
+          "notes": "Institutional text confirms the winning National Romantic1904 proposal and a complete facade redesign in December1904. No collection drawing or photograph pixels viewed or used. Exact eight-bear count comes from the authorised brief; exact proposal geometry was not verified from drawing pixels.",
+          "access": "2026-10-08; indexed text and page text read only"
+        },
+        {
+          "publisher": "Helsingin kaupunki",
+          "title": "Helsinki-info2/2019, Helsingin rautatieasema",
+          "url": "https://www.hel.fi/static/liitteet/kanslia/helsinki-info/arkisto/2018/Helsinki0219.pdf",
+          "type": "textResearchOnly",
+          "notes": "City publication indexed text describes the abandoned granite castle with bears and the1904 architectural change. Text extraction only; no PDF pages, drawing or photograph pixels viewed.",
+          "access": "2026-10-08; indexed excerpts and extracted PDF text only"
+        }
+      ],
+      "kuvateksti": "Kuvitteellinen kameranäkymä Eliel Saarisen toteutumattomasta vuoden 1904 kansallisromanttisesta asemaehdotuksesta. Sisäänkäyntiä reunustaa kahdeksan graniittikarhua; rakennuksen tarkka julkisivugeometria on tulkinnallinen. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "technicalChanges": [
+        "Added standard sRGB ICC profile without color conversion.",
+        "Added exact Description and Source PNG text metadata.",
+        "RGB pixel values unchanged; byte equality of decoded pixels verified.",
+        "Created separate full-frame480x320 QA preview."
+      ],
+      "QA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Final native1536x1024 and separate full-frame480x320 preview both viewed using original detail.",
+          "Exactly eight gray stone bear sculptures clearly separable: four left and four right of the entrance; count remains legible in480px preview.",
+          "Massive rough granite, steep pointed dominant tower and several turrets; no final1919 straight clock tower or lantern-bearing human statues observed.",
+          "Small horse cart driver is rear-facing; no recognizable face or actual person likeness observed.",
+          "Natural restrained daytime camera appearance; no text, digits, logos, watermark, frame, injury or blood observed.",
+          "Whole dominant tower finial is present but top clearance is narrow; no subject was cropped."
+        ],
+        "limitations": [
+          "This is an imagined camera view of an unbuilt proposal, not an actual1904 building or archival photograph.",
+          "Exact National Romantic facade, tower placement and eight-bear arrangement are interpreted from the authorised brief and historical text, not a measured reproduction of the competition drawing.",
+          "Dominant tower has only narrow clearance at top of frame; entire finial remains visible in native and480px views."
+        ]
+      },
+      "sourceCommit": "920c79f437aa1a5a4623a17276ac4f5fc7323df8",
+      "sourceBlob": "8a8bd9208bd8419af1485da17fc56f3506510a5e",
+      "sourceReadInFull": true,
+      "sharedRulesReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "generationMethod": "built-in image_gen; text-only",
+      "status": "local-candidate-approved",
+      "r2Delivered": false,
+      "mailboxDelivered": false,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "mode": "RGB",
+      "previewPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/helsinki-yksityiskohdat-20261008/production/01-asemaehdotus-1904/qa-preview-480.png",
+      "rgbPixelsUnchanged": true,
+      "visualReview": {
+        "task": "helsinki-yksityiskohdat-20261008",
+        "number": 1,
+        "qid": "Q1044613",
+        "file": "helsinki-Q1044613-asemaehdotus-1904.png",
+        "sha256": "8cb0d6dbe40594a084fb24c7ca6a962133074ae3ede6da2ad37832101d8c4e4a",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Kahdeksan erillistä graniittikarhua (neljä kummallakin puolella), raskas kansallisromanttinen julkisivu ja jyrkkä tornikatto. Ei lopullisen aseman lyhdynkantajia tai suoraa kellotornia. Korkein huippu on kapealla marginaalilla kokonaan kuvassa. Tulkinta toteutumattomasta suunnitelmasta, ei väite historiallisesta valokuvasta."
+        ],
+        "limitations": [
+          "This is an imagined camera view of an unbuilt proposal, not an actual1904 building or archival photograph.",
+          "Exact National Romantic facade, tower placement and eight-bear arrangement are interpreted from the authorised brief and historical text, not a measured reproduction of the competition drawing.",
+          "Dominant tower has only narrow clearance at top of frame; entire finial remains visible in native and480px views."
+        ],
+        "agentVerdictBeforeRootReview": true,
+        "reviewedAtUTC": "2026-10-08T08:24:23.036292+00:00"
+      },
+      "agentQA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Final native1536x1024 and separate full-frame480x320 preview both viewed using original detail.",
+          "Exactly eight gray stone bear sculptures clearly separable: four left and four right of the entrance; count remains legible in480px preview.",
+          "Massive rough granite, steep pointed dominant tower and several turrets; no final1919 straight clock tower or lantern-bearing human statues observed.",
+          "Small horse cart driver is rear-facing; no recognizable face or actual person likeness observed.",
+          "Natural restrained daytime camera appearance; no text, digits, logos, watermark, frame, injury or blood observed.",
+          "Whole dominant tower finial is present but top clearance is narrow; no subject was cropped."
+        ],
+        "limitations": [
+          "This is an imagined camera view of an unbuilt proposal, not an actual1904 building or archival photograph.",
+          "Exact National Romantic facade, tower placement and eight-bear arrangement are interpreted from the authorised brief and historical text, not a measured reproduction of the competition drawing.",
+          "Dominant tower has only narrow clearance at top of frame; entire finial remains visible in native and480px views."
+        ]
+      },
+      "mitat": [
+        1536,
+        1024
+      ],
+      "fableReceipt": false,
+      "r2Key": "julisteet/helsinki-yksityiskohdat/20261008/helsinki-Q1044613-asemaehdotus-1904.png",
+      "url": "https://media.matkakirja.app/julisteet/helsinki-yksityiskohdat/20261008/helsinki-Q1044613-asemaehdotus-1904.png",
+      "bytes": 2431950,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "number": 2,
+      "qid": "Q1635596",
+      "id": "vuoristoradan-jarrumestari",
+      "file": "helsinki-Q1635596-vuoristoradan-jarrumestari.png",
+      "filename": "helsinki-Q1635596-vuoristoradan-jarrumestari.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/helsinki-yksityiskohdat-20261008/production/02-vuoristoradan-jarrumestari/helsinki-Q1635596-vuoristoradan-jarrumestari.png",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11a95-764f-79f0-b330-d230a6a523c8/exec-b902c989-8683-4fdb-950b-e723700e4120.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/helsinki-yksityiskohdat-20261008/production/02-vuoristoradan-jarrumestari/original-generation.png",
+      "sha256": "8086d3cc01299d75ab3336e70ad319015556640b0dcccd7a0d7f7ad9cce593f0",
+      "originalSha256": "70b3aefacdce8cd30f4f40f95d8c4fe6cd54b0dc02307190107e57f62da38c48",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationPrompt": "Use case: historical-scene\nAsset type: photorealistic historical educational image for Helsinki city introduction.\nCreate ONE entirely new TEXT-ONLY image exactly 1536 x 1024 landscape, opaque RGB PNG in sRGB. No reference photos or image pixels.\nPrimary request: Helsinki Linnanmäki wooden Vuoristorata train in the early1950s, shortly after the 1951 opening, showing the manual brakeman's elevated REAR seat and hand-operated long brake lever.\nScene: daylight at the wooden scenic roller coaster, the train on a gentle curve just above a lattice of weathered timber track beams, trestles and diagonal wooden supports. Trees and distant wooden track behind, no modern park rides or urban landmarks.\nTrain: four simple open early-1950s passenger cars, plain dark brown painted timber sides, worn bench upholstery, small exposed steel undercarriage wheels on narrow steel running rails mounted atop the timber structure. All cars and riders face the direction of travel away from the camera. They follow one connected train around the bend. The last car is nearest the camera; the other three cars extend away ahead.\nEssential subject: a single fictional anonymous adult male brakeman seated at the extreme REAR end of the last car on a visibly raised little seat, well above the passenger backrests. Camera sees the full back of his head, shoulders and plain dark wool jacket, with a simple dark brimmed hat; absolutely no face or cheek profile. His hand clearly grips a long plain iron brake lever beside the elevated rear seat. The lever rises from a mechanical pivot on the last car and visibly connects down toward the chassis; it is a functional hand brake, not a walking stick or pole. Brakeman sits upright with feet supported on the rear platform. No hat badges, no writing.\nPassengers: six small anonymous riders in the lower seats ahead, all entirely REAR-FACING, their heads turned away from camera. Plain subdued early1950s coats and a few brimmed hats, no modern clothes or accessories, no visible faces.\nComposition: wide candid documentary camera view diagonally from behind the train and slightly to one side at about the height of the rear seating platform. Train and raised brakeman occupy the central area, rear seat and iron hand lever clearly separated against background, timber framework visible under train and to sides. Keep the entire brakeman, hat, rear car and lever inside frame with breathing room. Let the setting remain wider than a portrait of the person.\nPhotographic style: authentic camera-captured appearance, muted near-monochrome gray-brown early1950s color, natural soft daytime light, realistic timber grain, matte fabric and steel, restrained contrast, fine subtle film texture, no painterly brushwork, drawing, illustration, CGI sheen, HDR or cinematic saturated treatment.\nAvoid: recognizable people, any frontal or side human faces, actual historical individuals' likeness, modern coaster plastic trains, shoulder harnesses, automatic control panels, modern ride structures, futuristic track, logos, text, numbers, signs, advertisements, inscriptions, watermark, caption, signature, border, frame, injury, blood or violent peril.",
+      "viitteet": [
+        {
+          "publisher": "Vuoristoradan Jarrumestarit",
+          "title": "Historia",
+          "url": "https://jarrumestarit.fi/historia/",
+          "type": "textResearchOnly",
+          "notes": "Brakemen own history confirms opening13July1951, wooden coaster, and manual train brake operated from the last car. No archive image pixels viewed or used. Anonymous clothing, train details and viewpoint remain fictional.",
+          "access": "2026-10-08; indexed excerpts and page text only"
+        },
+        {
+          "publisher": "Vuoristoradan Jarrumestarit",
+          "title": "Tekniikka",
+          "url": "https://jarrumestarit.fi/tekniikka/",
+          "type": "textResearchOnly",
+          "notes": "Primary operator-history technical text places Helsinki1951 in the scenic railway tradition and confirms historical manual-brakeman mechanism. No image pixels viewed.",
+          "access": "2026-10-08; indexed text only"
+        }
+      ],
+      "kuvateksti": "Kuvitteellinen näkymä Linnanmäen Vuoristoradan junasta 1950-luvun alussa. Selin näkyvä jarrumestari istuu korotetulla takapaikalla ja käyttää pitkää käsijarruvipua. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "technicalChanges": [
+        "Added standard sRGB ICC profile without color conversion.",
+        "Added exact Description and Source PNG text metadata.",
+        "RGB pixel values unchanged; byte equality of decoded pixels verified.",
+        "Created separate full-frame480x320 QA preview."
+      ],
+      "QA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Final native1536x1024 and separate full-frame480x320 preview both viewed using original detail.",
+          "Raised seat at extreme rear of train visibly higher than passenger benches; hand grips long lever connected to pivot and linkage beside rear car.",
+          "Brakeman and six passengers rear-facing with no identifiable faces; anonymous period coats and hats.",
+          "Timber trestles, steel running rails, plain old passenger cars and restrained gray-brown camera texture; subject remains clear in480px preview.",
+          "No modern ride controls, plastic trains, signs, lettering, logos, watermark, frame, injury or blood observed."
+        ],
+        "limitations": [
+          "Train exterior, brake linkage, timber layout and anonymous clothing are an illustrative reconstruction, not a measured historical engineering diagram.",
+          "Brakeman occupies a substantial part of the frame but is fully rear-facing with no recognizable face; rear-facing alternatives are explicitly authorised."
+        ]
+      },
+      "sourceCommit": "920c79f437aa1a5a4623a17276ac4f5fc7323df8",
+      "sourceBlob": "8a8bd9208bd8419af1485da17fc56f3506510a5e",
+      "sourceReadInFull": true,
+      "sharedRulesReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "generationMethod": "built-in image_gen; text-only",
+      "status": "local-candidate-approved",
+      "r2Delivered": false,
+      "mailboxDelivered": false,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "mode": "RGB",
+      "previewPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/helsinki-yksityiskohdat-20261008/production/02-vuoristoradan-jarrumestari/qa-preview-480.png",
+      "rgbPixelsUnchanged": true,
+      "visualReview": {
+        "task": "helsinki-yksityiskohdat-20261008",
+        "number": 2,
+        "qid": "Q1635596",
+        "file": "helsinki-Q1635596-vuoristoradan-jarrumestari.png",
+        "sha256": "8086d3cc01299d75ab3336e70ad319015556640b0dcccd7a0d7f7ad9cce593f0",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Korotettu takapaikka, muita matkustajia selvästi korkeammalla selin oleva jarrumestari ja käsijarruvipu, vanhat vaunut ja puinen ratatuenta. Kaikki näkyvät ihmiset selin, ei tunnistettavia kasvoja tai kirjoitusta. Tekninen mekaniikka havainnollinen."
+        ],
+        "limitations": [
+          "Train exterior, brake linkage, timber layout and anonymous clothing are an illustrative reconstruction, not a measured historical engineering diagram.",
+          "Brakeman occupies a substantial part of the frame but is fully rear-facing with no recognizable face; rear-facing alternatives are explicitly authorised."
+        ],
+        "agentVerdictBeforeRootReview": true,
+        "reviewedAtUTC": "2026-10-08T08:24:23.037962+00:00"
+      },
+      "agentQA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Final native1536x1024 and separate full-frame480x320 preview both viewed using original detail.",
+          "Raised seat at extreme rear of train visibly higher than passenger benches; hand grips long lever connected to pivot and linkage beside rear car.",
+          "Brakeman and six passengers rear-facing with no identifiable faces; anonymous period coats and hats.",
+          "Timber trestles, steel running rails, plain old passenger cars and restrained gray-brown camera texture; subject remains clear in480px preview.",
+          "No modern ride controls, plastic trains, signs, lettering, logos, watermark, frame, injury or blood observed."
+        ],
+        "limitations": [
+          "Train exterior, brake linkage, timber layout and anonymous clothing are an illustrative reconstruction, not a measured historical engineering diagram.",
+          "Brakeman occupies a substantial part of the frame but is fully rear-facing with no recognizable face; rear-facing alternatives are explicitly authorised."
+        ]
+      },
+      "mitat": [
+        1536,
+        1024
+      ],
+      "fableReceipt": false,
+      "r2Key": "julisteet/helsinki-yksityiskohdat/20261008/helsinki-Q1635596-vuoristoradan-jarrumestari.png",
+      "url": "https://media.matkakirja.app/julisteet/helsinki-yksityiskohdat/20261008/helsinki-Q1635596-vuoristoradan-jarrumestari.png",
+      "bytes": 2478524,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "sourceCommit": "920c79f437aa1a5a4623a17276ac4f5fc7323df8",
+      "sourceBlob": "8a8bd9208bd8419af1485da17fc56f3506510a5e",
+      "sourceReadInFull": true,
+      "sharedRulesReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "generationMethod": "built-in image_gen; new text-only",
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "r2Delivered": false,
+      "mailboxDelivered": false,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "number": 5,
+      "qid": "Q1355001",
+      "id": "jumalanaiti-ikoni",
+      "file": "helsinki-Q1355001-jumalanaiti-ikoni.png",
+      "filename": "helsinki-Q1355001-jumalanaiti-ikoni.png",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11a95-c8d7-7f51-8f30-a32001e1840e/exec-5328c873-6912-43bb-9b77-e863d22fdc9b.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/helsinki-yksityiskohdat-20261008/production/05-jumalanaiti-ikoni/original-generation.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/helsinki-yksityiskohdat-20261008/production/05-jumalanaiti-ikoni/helsinki-Q1355001-jumalanaiti-ikoni.png",
+      "previewPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/helsinki-yksityiskohdat-20261008/production/05-jumalanaiti-ikoni/qa-preview-480.png",
+      "sha256": "d1f61f315b5722be1364469395f973ddd5320ae6c9ae5d79809724b9d26f229e",
+      "originalSha256": "62f75f62ece1ab0bf9fef064412ff0dce7d74fbc4df4c14afcab60e0b5dd8132",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "rgbPixelsUnchanged": true,
+      "originalByteEquality": true,
+      "sRGBICCBytes": 588,
+      "metadata": {
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "generationPrompt": "Use case: photorealistic-natural\nAsset type: original educational illustration for Helsinki city introduction.\nCreate ONE entirely NEW TEXT-ONLY image, native 1536 × 1024 pixels, landscape 3:2, opaque RGB PNG with sRGB appearance. No reference or input images.\nPrimary request: a convincing real-camera close-up of an ORIGINAL, GENERIC nineteenth-century Russian/Byzantine-tradition Virgin Mary and Christ child icon, situated beside a dark wood icon stand in a quiet Orthodox cathedral. This invented icon is not the Kozelshchyna/Kozelštšanin icon, not the specific stolen Uspenski icon, and not any actual museum or church collection painting. Do not reproduce a specific known icon composition, modern artist or contemporary work.\nSubject: the painted Virgin in a modest dark burgundy mantle gently holding the clothed child; two clearly PAINTED faces rendered as traditional flat icon painting, with gold circular halos on an aged gold ground. Painted figures and faces belong only to the invented icon, not to living people. Use original, understated hand-painted arrangement and ornament. A decorative silver oklad-like border frames the actual religious object, with restrained embossed floral metalwork; it does not form a border around the image.\nComposition: photographed diagonally from the front and a little below, close enough to inspect the painted surface and silver embossing. The entire icon and its silver object border remain inside the canvas with breathing space on all sides, occupying about the central two thirds of the scene. Extend the dark quiet church surroundings naturally to the sides to retain 3:2 landscape. In front of the icon, a few small wax candles and one red glass oil lamp; a little dark wood visible. Side candles softly blur; the icon remains readable.\nLighting and medium: photorealistic camera-shot appearance, physically believable aged paint, fine craquelure, slightly tarnished silver, wood grain and glass. Gentle natural candle illumination with a trace of soft ambient daylight, muted gold, burgundy and dark brown, restrained exposure and highlights. Quiet devotional atmosphere, no HDR, no cinematic saturation, no glossy CGI.\nText and constraints: ZERO letters, inscriptions, numbers or writing anywhere. The gold background, halos and silver ornament have absolutely no Greek or Cyrillic abbreviations, no calligraphy, no engraved words, no signatures, no date, no maker's marks. This generic icon is deliberately inscription-free.\nAvoid: actual human visitors, real human faces outside the icon, specific actual religious artwork or a collection reproduction, identifying likenesses, museum cases, labels, signs, logos, watermark, image border, modern lights, cameras or security equipment.",
+      "kuvateksti": "Alkuperäinen, yleinen 1800-luvun venäläistyylinen Jumalanäidin ja lapsen ikoni hopeakehyksessä kynttilöiden ja punaisen lasilampun äärellä. Ei esitä Uspenskin tiettyä varastettua ikonia. Havainnekuva.",
+      "viitteet": [
+        {
+          "publisher": "Helsingin ortodoksinen seurakunta",
+          "title": "Kozelštšanin Jumalansynnyttäjän ihmeitätekevän ikonin paluu",
+          "url": "https://hos.fi/kozelstsanin-jumalansynnyttajan-ihmeitatekevan-ikonin-paluu/",
+          "type": "textResearchOnly",
+          "notes": "Official parish text establishes the Uspenski theft/recovery context. Used only to distinguish that specific icon from the requested invented generic Virgin-and-child illustration. No source composition, photo pixels or actual icon reproduction used.",
+          "access": "2026-10-08; indexed text read only; no source images viewed"
+        }
+      ],
+      "technicalChanges": [
+        "Preserved byte-exact tool original as original-generation.png.",
+        "Added standard sRGB ICC profile without color conversion.",
+        "Added exact Description and Source PNG text metadata.",
+        "RGB pixel values unchanged; decoded byte equality verified.",
+        "Created separate full-frame 480x320 QA preview."
+      ],
+      "QA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Native final 1536x1024 image and full-frame 480x320 preview viewed.",
+          "Main original generic painted Virgin-and-child icon clearly visible with gold halos, silver embossed object border, candles, red glass lamp and dark wood.",
+          "Real-camera materials and optical blur; natural muted candle illumination.",
+          "No lettering, Greek or Cyrillic abbreviations, numbers, signatures, logos, watermark, human visitors, museum cases or security equipment observed.",
+          "Silver object border and icon retained inside native frame; image itself has no decorative outer frame."
+        ],
+        "limitations": [
+          "The icon, ornament and cathedral surroundings are invented, not a verified reconstruction of the Uspenski interior or its specific stolen icon.",
+          "A small heavily blurred secondary religious icon silhouette appears at the left edge of the church background; no identifiable human visitor or readable facial features.",
+          "Upper silver object edge is close to the top image margin, though retained in frame."
+        ]
+      },
+      "briefClarification": {
+        "status": "approved-by-root",
+        "decision": "Original generic nineteenth-century Virgin-and-child icon; explicitly no replica of the stolen icon or museum collection painting. Religious painted facial features allowed; no human visitors.",
+        "received": "2026-10-08"
+      },
+      "status": "local-candidate-approved",
+      "generationFailed": false,
+      "outputProduced": true,
+      "visualReview": {
+        "task": "helsinki-yksityiskohdat-20261008",
+        "number": 5,
+        "qid": "Q1355001",
+        "file": "helsinki-Q1355001-jumalanaiti-ikoni.png",
+        "sha256": "d1f61f315b5722be1364469395f973ddd5320ae6c9ae5d79809724b9d26f229e",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Valokuvamainen kynttilänvalo, keksitty yleinen Jumalanäidin ja lapsen ikoni hopeisessa oklad-kehyksessä, punainen lasilamppu ja tumma puu. Ikonissa ei kreikkalaista/kyrillistä kirjoitusta, signeerausta tai numeroita. Ei tietyn varastetun yksilön kopio, ihmisvierailijoita tai tunnistettavaa kokoelmateosta."
+        ],
+        "limitations": [
+          "The icon, ornament and cathedral surroundings are invented, not a verified reconstruction of the Uspenski interior or its specific stolen icon.",
+          "A small heavily blurred secondary religious icon silhouette appears at the left edge of the church background; no identifiable human visitor or readable facial features.",
+          "Upper silver object edge is close to the top image margin, though retained in frame."
+        ],
+        "agentVerdictBeforeRootReview": true,
+        "reviewedAtUTC": "2026-10-08T08:24:23.039362+00:00"
+      },
+      "agentQA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Native final 1536x1024 image and full-frame 480x320 preview viewed.",
+          "Main original generic painted Virgin-and-child icon clearly visible with gold halos, silver embossed object border, candles, red glass lamp and dark wood.",
+          "Real-camera materials and optical blur; natural muted candle illumination.",
+          "No lettering, Greek or Cyrillic abbreviations, numbers, signatures, logos, watermark, human visitors, museum cases or security equipment observed.",
+          "Silver object border and icon retained inside native frame; image itself has no decorative outer frame."
+        ],
+        "limitations": [
+          "The icon, ornament and cathedral surroundings are invented, not a verified reconstruction of the Uspenski interior or its specific stolen icon.",
+          "A small heavily blurred secondary religious icon silhouette appears at the left edge of the church background; no identifiable human visitor or readable facial features.",
+          "Upper silver object edge is close to the top image margin, though retained in frame."
+        ]
+      },
+      "mitat": [
+        1536,
+        1024
+      ],
+      "fableReceipt": false,
+      "r2Key": "julisteet/helsinki-yksityiskohdat/20261008/helsinki-Q1355001-jumalanaiti-ikoni.png",
+      "url": "https://media.matkakirja.app/julisteet/helsinki-yksityiskohdat/20261008/helsinki-Q1355001-jumalanaiti-ikoni.png",
+      "bytes": 2615230,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    }
+  ],
+  "excludedItems": [
+    {
+      "number": 3,
+      "qid": "Q1418136",
+      "id": "kalevala-freskot-1928",
+      "generationCalls": 0,
+      "reason": "Identifiable National Museum Gallen-Kallela fresco reproduction conflicts with explicit museum-collection-reproduction exclusion; no substitute authorised."
+    },
+    {
+      "number": 4,
+      "qid": "Q738015",
+      "id": "apostolit-merelta-1873",
+      "generationCalls": 0,
+      "reason": "Official1852 conservation record and parish text document ochre walls and cobalt-blue star-painted domes at least into1860s; repaint date relative to1873 not verified. Requested present white/green color scheme cannot be placed in1873 reliably. No current-view substitute authorised."
+    },
+    {
+      "number": 6,
+      "qid": "Q541933",
+      "id": "havis-amanda-lakki",
+      "generationCalls": 1,
+      "outputProduced": false,
+      "generationFailed": true,
+      "reason": "Built-in generation failed automatic output moderation (sexual category) while depicting the requested public bronze statue. One permitted call consumed; no image, original path or hash returned, no retry.",
+      "R2Delivered": false
+    }
+  ],
+  "comparison": {
+    "file": "toimitetut-3.jpg",
+    "r2Key": "julisteet/helsinki-yksityiskohdat/20261008/toimitetut-3.jpg",
+    "url": "https://media.matkakirja.app/julisteet/helsinki-yksityiskohdat/20261008/toimitetut-3.jpg",
+    "sha256": "f56e876dc45aa36331733c27aec45c4063f23848cd73105f542b7456aac0b6b7",
+    "bytes": 182360,
+    "http": 200,
+    "mime": "image/jpeg",
+    "cors": "https://matkakirja.app",
+    "byteExactReadback": true
+  },
+  "deliveryStatus": "Selected candidates R2 verified and submitted through this mailbox manifest/report; Fable/editor/game receipt unverified.",
+  "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+  "editorAcceptance": false,
+  "fableReceipt": false,
+  "gameIntegrated": false,
+  "published": false,
+  "createdAt": "2026-10-08T08:24:31.280408+00:00"
+}

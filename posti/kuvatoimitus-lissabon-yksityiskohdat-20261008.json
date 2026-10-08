@@ -1,0 +1,610 @@
+{
+  "task": "lissabon-yksityiskohdat-20261008",
+  "routedTaskNumber": 17,
+  "source": {
+    "path": "posti/sisaltokirjuri-codex-lissabon-yksityiskohdat-20261008.md",
+    "commit": "39a28e262e8275c98d8c9c06fb5c7f144b774d48",
+    "blob": "160af694a2cfc6f0c84164e2abb07125721ee94a"
+  },
+  "sourceReadInFull": true,
+  "requestedImages": 4,
+  "imageCount": 4,
+  "generationCalls": 4,
+  "generationLimit": 4,
+  "sourceImagePixelsUsed": false,
+  "generationMode": "built-in image_gen, text-only, one call per produced subject; metadata-only final preparation",
+  "productionComplete": true,
+  "assets": [
+    {
+      "number": 1,
+      "qid": "Q999002",
+      "id": "gaiola-leikkaus",
+      "filename": "lissabon-Q999002-gaiola-leikkaus.png",
+      "viitteet": [
+        {
+          "publisher": "Instituto Superior Técnico, Universidade de Lisboa",
+          "title": "Episódio 9: A Gaiola Pombalina",
+          "url": "https://110.tecnico.ulisboa.pt/arquivos/episodio-9-a-gaiola-pombalina/",
+          "type": "textResearchOnly",
+          "notes": "Yliopiston omien rakennetekniikan asiantuntijoiden teksti. Puinen pysty-, vaaka- ja vinokehikko, Andreaan ristit ja muurattu täyte. Sotilaiden kokeista kerrotaan vaikeasti vahvistettavina. Museomallien kuvia tai muita lähdepikseleitä ei avattu eikä käytetty.",
+          "access": "2026-10-08T08:06:48.500Z"
+        }
+      ],
+      "kuvateksti": "Pombalina-tyyppisen talon havainnollinen leikkaus näyttää muurauksen sisällä olevan puisen Andreaan ristikehikon. Rakennus ja sen rakenneratkaisujen esitys ovat tulkinta 1755 jälkeisestä Lissabonista. Havainnekuva.",
+      "limitations": [
+        "Rakennus on alkuperäinen havainnollinen tulkinta, ei tietyn suojellun talon mitattu rakenne.",
+        "Leikkaus on mahdoton kameran dokumentaarisena otoksena; materiaalit ja ympäristö esitetään valokuvamaisesti."
+      ],
+      "productionFolder": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/lissabon-yksityiskohdat-20261008/production/01-gaiola-leikkaus",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/lissabon-yksityiskohdat-20261008/production/01-gaiola-leikkaus/lissabon-Q999002-gaiola-leikkaus.png",
+      "promptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/lissabon-yksityiskohdat-20261008/production/01-gaiola-leikkaus/generation-prompt.txt",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11a89-bc4e-76b2-b209-5f9736ff043b/exec-a530485b-7ac3-4ddd-935c-16d64bd90d77.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/lissabon-yksityiskohdat-20261008/production/01-gaiola-leikkaus/original-generation.png",
+      "sha256": "c93ee3bc3ee60d4a24ce2bde000ea3c2a134d00ff0dc93fd779898c1ededbfab",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationCalls": 1,
+      "generationPrompt": "Use case: historical-scene\nAsset type: original educational historical illustration with a convincing real-camera material appearance.\nCreate exactly one NEW text-only image, native 1536 x 1024 pixels, landscape 3:2, opaque RGB sRGB PNG. Full-frame horizontal composition.\nScene: Lisbon's rebuilt Baixa in the late 1750s. One original, full-size four-storey period apartment house beside a narrow ordinary stone street and a neighboring plaster house. No humans.\nPrimary subject: a clean oblique architectural material cutaway, viewed from about 30 degrees above street level. The front wall has been selectively removed across all four storeys to expose the integral Pombalina timber framework INSIDE the masonry. This is a full-scale house in its street, not a toy, not a museum display, not a replica of any museum scale model.\nConstruction accuracy: four coherent floor levels including masonry ground level; repeated stout vertical posts, horizontal timber rails, and clearly joined diagonal pairs making Saint Andrew's X braces in the upper internal wall panels; normal horizontal floor joists bearing on the framework; brick and small-stone masonry infill between timber members, readable in a few intact panel sections and on the cut edges. Timber must visibly meet timber at joints, no floating beams, no random crosses across doorways, no imaginary engineering. A stone foundation connects logically to the ground floor. Wood grain, reddish brick, pale rubble masonry, thick worn lime plaster and red clay roof tiles look tangible and naturally irregular.\nRetain enough pale lime-plastered exterior on one side to show tall period windows and simple iron balcony rails; simple red pitched tiled roof. The open material section is dominant and readable, roof and adjacent street remain inside frame. Calm educational clarity with ordinary plausible building proportions.\nStyle: natural photographic materials, camera-like perspective and texture, soft Lisbon daylight, muted warm neutrals, no HDR, no glossy CGI, no drawing, no engraving, no oil painting, no schematic lines. The cutaway is an illustrative visual device.\nAbsolutely no words, letters, numerals, measurements, labels, arrows, signs, logos, watermark, border, readable print or modern objects. No people, no artworks, no copied museum object.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "status": "local-candidate-QA-approved",
+      "technicalChanges": [
+        "Lisätty sRGB ICC -profiili ja vain Description/Source-metatiedot.",
+        "Generoidut RGB-pikselit säilytetty täsmälleen; ei rajauksia, skaalausta, värimuutoksia tai kuvakorjauksia."
+      ],
+      "sourceCommit": "39a28e262e8275c98d8c9c06fb5c7f144b774d48",
+      "sourceBlob": "160af694a2cfc6f0c84164e2abb07125721ee94a",
+      "sourceImagePixelsUsed": false,
+      "QA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Valokuvamaiset puun, tiilen, rappauksen ja kivipohjan materiaalit; luonnollinen valo ja vaimea väri.",
+          "Muurattu katutaso ja kolme asuinkerrosta erottuvat; katon alla on lisäksi ullakon runkoa.",
+          "Andreaan X-ristit, pystypuut, vaakapuut ja välipohjapalkit muodostavat selkeästi liittyvän kehikon; muuraustäytettä näkyy useissa paneeleissa.",
+          "Talo on normaalin kadun ja viereisten talojen yhteydessä, ei museopienoismalli.",
+          "Natiivi ja koko kuvan 480 × 320 esikatselu katsottu; ei ihmisiä, luettavaa tekstiä, merkkejä, logoja tai vesileimaa."
+        ],
+        "limitations": [
+          "Rakennus on alkuperäinen havainnollinen tulkinta, ei tietyn suojellun talon mitattu rakenne.",
+          "Leikkaus on mahdoton kameran dokumentaarisena otoksena; materiaalit ja ympäristö esitetään valokuvamaisesti.",
+          "Kattoharjan ylin osa rajautuu kuvan yläreunan ulkopuolelle; rakenne, neljä kerrosta ja ullakon osa näkyvät."
+        ]
+      },
+      "file": "lissabon-Q999002-gaiola-leikkaus.png",
+      "preview480Path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/lissabon-yksityiskohdat-20261008/production/01-gaiola-leikkaus/qa-fullframe-480.png",
+      "preservedOriginalSha256": "48eeb7648ed4126a416d43760d0857066788da5fcc3601560a37293cf0dc6d33",
+      "technicalQA": {
+        "format": "PNG",
+        "mode": "RGB",
+        "opaque": true,
+        "nativeSizeVerified": true,
+        "RGBPixelsUnchanged": true,
+        "sRGBICC": true,
+        "metadataKeys": [
+          "Description",
+          "Source",
+          "icc_profile"
+        ],
+        "metadataExact": true,
+        "originalCopyByteExact": true
+      },
+      "generationMethod": "built-in image_gen, NEW text-only generation",
+      "qaCompletedAt": "2026-10-08T08:13:53.644542+00:00",
+      "r2Uploaded": false,
+      "mailboxDelivered": false,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "formatRuleApplied": "Yhteinen 1536 × 1024 RGB sRGB; yksittäinen 16:9-maininta tulkittu vaakasommitteluksi, ei rinnakkaista rajausvarianttia.",
+      "photoRuleApplied": "Yhteinen valokuvamainen tyyli ohittaa piirros/kaiverrus-tyylisanat.",
+      "visualReview": {
+        "task": "lissabon-yksityiskohdat-20261008",
+        "number": 1,
+        "qid": "Q999002",
+        "file": "lissabon-Q999002-gaiola-leikkaus.png",
+        "sha256": "c93ee3bc3ee60d4a24ce2bde000ea3c2a134d00ff0dc93fd779898c1ededbfab",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Neljän kerroksen ja ullakon puinen X-ristikehikko liittyy muuraukseen ja välipohjiin. Materiaalileikkaus valokuvamainen, ei museopienoismalli; kattoharja rajautuu osin, päämekanismi näkyy."
+        ],
+        "limitations": [
+          "Rakennus on alkuperäinen havainnollinen tulkinta, ei tietyn suojellun talon mitattu rakenne.",
+          "Leikkaus on mahdoton kameran dokumentaarisena otoksena; materiaalit ja ympäristö esitetään valokuvamaisesti.",
+          "Kattoharjan ylin osa rajautuu kuvan yläreunan ulkopuolelle; rakenne, neljä kerrosta ja ullakon osa näkyvät."
+        ],
+        "agentVerdictBeforeRootReview": true,
+        "reviewedAtUTC": "2026-10-08T08:22:06.607370+00:00"
+      },
+      "agentQA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Valokuvamaiset puun, tiilen, rappauksen ja kivipohjan materiaalit; luonnollinen valo ja vaimea väri.",
+          "Muurattu katutaso ja kolme asuinkerrosta erottuvat; katon alla on lisäksi ullakon runkoa.",
+          "Andreaan X-ristit, pystypuut, vaakapuut ja välipohjapalkit muodostavat selkeästi liittyvän kehikon; muuraustäytettä näkyy useissa paneeleissa.",
+          "Talo on normaalin kadun ja viereisten talojen yhteydessä, ei museopienoismalli.",
+          "Natiivi ja koko kuvan 480 × 320 esikatselu katsottu; ei ihmisiä, luettavaa tekstiä, merkkejä, logoja tai vesileimaa."
+        ],
+        "limitations": [
+          "Rakennus on alkuperäinen havainnollinen tulkinta, ei tietyn suojellun talon mitattu rakenne.",
+          "Leikkaus on mahdoton kameran dokumentaarisena otoksena; materiaalit ja ympäristö esitetään valokuvamaisesti.",
+          "Kattoharjan ylin osa rajautuu kuvan yläreunan ulkopuolelle; rakenne, neljä kerrosta ja ullakon osa näkyvät."
+        ]
+      },
+      "mitat": [
+        1536,
+        1024
+      ],
+      "fableReceipt": false,
+      "r2Key": "julisteet/lissabon-yksityiskohdat/20261008/lissabon-Q999002-gaiola-leikkaus.png",
+      "url": "https://media.matkakirja.app/julisteet/lissabon-yksityiskohdat/20261008/lissabon-Q999002-gaiola-leikkaus.png",
+      "bytes": 2988987,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "number": 2,
+      "qid": "Q999002",
+      "id": "marssikoe-1756",
+      "filename": "lissabon-Q999002-marssikoe-1756.png",
+      "viitteet": [
+        {
+          "publisher": "Quake – Lisbon Earthquake Centre",
+          "title": "El nacimiento de una nueva Lisboa",
+          "url": "https://lisbonquake.com/es/blog/the-birth-of-a-new-lisbon",
+          "type": "textResearchOnly",
+          "notes": "Keskuksen oma opetusteksti kuvaa sotilaiden marssilla tehdyn kokeen nimenomaan legendana. Ei vahvistettu aikalaisdokumentti. Verkkosivun kuvia ei avattu eikä käytetty.",
+          "access": "2026-10-08T08:06:48.500Z"
+        },
+        {
+          "publisher": "Instituto Superior Técnico, Universidade de Lisboa",
+          "title": "Episódio 9: A Gaiola Pombalina",
+          "url": "https://110.tecnico.ulisboa.pt/arquivos/episodio-9-a-gaiola-pombalina/",
+          "type": "textResearchOnly",
+          "notes": "Yliopiston omien rakennetekniikan asiantuntijoiden teksti. Puinen pysty-, vaaka- ja vinokehikko, Andreaan ristit ja muurattu täyte. Sotilaiden kokeista kerrotaan vaikeasti vahvistettavina. Museomallien kuvia tai muita lähdepikseleitä ei avattu eikä käytetty.",
+          "access": "2026-10-08T08:06:48.500Z"
+        }
+      ],
+      "kuvateksti": "Kertomusperinteeseen perustuva tulkinta Pombalina-rakenteiden kokeesta: sotilaat marssivat kolmen yksinkertaisen puumallin ympärillä. Kokeen täsmällistä toteutusta ei ole varmistettu aikalaislähteestä. Havainnekuva.",
+      "limitations": [
+        "Sotilaiden marssikoe on lähteessä legendaa, ei varmistettu dokumentaarinen tapahtumakuva.",
+        "Kolmen puumallin ulkonäkö, sijoittelu, asut ja kokeen järjestely ovat kuvallista tulkintaa.",
+        "Kuva ei esitä mitattua maanjäristystä, tärinän suuruutta tai rakenneteknistä todistusta."
+      ],
+      "productionFolder": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/lissabon-yksityiskohdat-20261008/production/02-marssikoe-1756",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/lissabon-yksityiskohdat-20261008/production/02-marssikoe-1756/lissabon-Q999002-marssikoe-1756.png",
+      "promptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/lissabon-yksityiskohdat-20261008/production/02-marssikoe-1756/generation-prompt.txt",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11a89-bc4e-76b2-b209-5f9736ff043b/exec-ce18d78c-9a99-4f01-ab0c-55bcffff8a10.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/lissabon-yksityiskohdat-20261008/production/02-marssikoe-1756/original-generation.png",
+      "sha256": "caac831dfab6cd01c381db440da36453c77a2d906acb34692743e153aa3c8d23",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationCalls": 1,
+      "generationPrompt": "Use case: historical-scene\nAsset type: original photo-looking interpretive illustration of a historical tradition.\nCreate exactly one NEW text-only image, native 1536 x 1024 pixels, landscape 3:2, opaque RGB sRGB PNG. This scene illustrates a LEGEND about soldiers testing early earthquake-resistant timber construction; do not imply a verified documentary reconstruction or physically measured earthquake.\nScene: an open Lisbon riverside square circa 1756–1758, seen slightly from above, low plain stone wall and distant quiet Tagus horizon. Three simple ORIGINAL small wooden house frames about one metre high stand separately on bare packed ground in the foreground. Clearly only three models, modest carpenter-made post-and-beam boxes, each with an uncomplicated gabled roof frame and timber X bracing, no elaborate tiny furniture or detailed decorative facades. Not copies of museum models.\nBeyond and around them, a compact marching column of anonymous fictional adult Portuguese infantry is seen from behind or sufficiently far away that no faces can be recognized. Dark subdued blue long coats, simple black tricorne hats, pale cross belts, breeches and stockings, plausible mid-18th-century dress. A rear-facing drummer leads the column at the far side, drum undecorated. Marching is ordinary and coordinated, slight dust near boots, no dramatic cracked earth, no shaking-motion effects.\nA few small anonymous rear-facing engineering observers stand well behind the models, holding rolled plain blank parchment; nothing readable. No named official, no famous face.\nComposition: broad horizontal documentary-like overview, wooden frames sharp enough to show their simple joinery, marching line surrounding the display without blocking all three models. Plausible human/model scale and stable perspective.\nStyle: materials and lighting must look camera-shot, natural daylight, restrained colors, lived-in cobbles/earth and cloth, no HDR, no cinematic grading, no painting, no engraving.\nNo letters, words, numerals, written plans, inscriptions, labels, signs, logos, watermark, border, modern objects, modern measurement devices, weapons in action or violence. Only anonymous fictional people seen from behind or far away, no identifiable faces or likeness of real historical people. No sourced photographs or museum collection object reproductions.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "status": "local-candidate-QA-approved",
+      "technicalChanges": [
+        "Lisätty sRGB ICC -profiili ja vain Description/Source-metatiedot.",
+        "Generoidut RGB-pikselit säilytetty täsmälleen; ei rajauksia, skaalausta, värimuutoksia tai kuvakorjauksia."
+      ],
+      "sourceCommit": "39a28e262e8275c98d8c9c06fb5c7f144b774d48",
+      "sourceBlob": "160af694a2cfc6f0c84164e2abb07125721ee94a",
+      "sourceImagePixelsUsed": false,
+      "QA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Täsmälleen kolme yksinkertaista alkuperäistä puumallikehikkoa erottuu etualalta myös 480-leveässä esikatselussa.",
+          "Sotilasjono ja tarkkailijat kuvattu selin; kasvoja tai tunnistettavia todellisia henkilöitä ei näy.",
+          "Puut, vaatteet, maa, kivimuuri ja jokitausta näyttävät kameralla kuvatuilta; luonnollinen päivänvalo ja vaimeat värit.",
+          "Sotilaat kantavat aikakauden musketteja pystyasennossa; niitä ei käytetä, eikä kuvassa ole väkivaltaa.",
+          "Ei luettavia piirroksia tai kirjoitusta; ei tärinämittauksia, maahan liioiteltuja järistyshalkeamia tai muita fysikaalisia tarkkuusväitteitä.",
+          "Natiivi ja koko kuvan 480 × 320 esikatselu katsottu."
+        ],
+        "limitations": [
+          "Sotilaiden marssikoe on lähteessä legendaa, ei varmistettu dokumentaarinen tapahtumakuva.",
+          "Kolmen puumallin ulkonäkö, sijoittelu, asut ja kokeen järjestely ovat kuvallista tulkintaa.",
+          "Kuva ei esitä mitattua maanjäristystä, tärinän suuruutta tai rakenneteknistä todistusta.",
+          "Sotilasjono kulkee mallien takana; kuvasta ei voi todentaa kokeen etenemistä tai maaperän todellista tärinää."
+        ]
+      },
+      "file": "lissabon-Q999002-marssikoe-1756.png",
+      "preview480Path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/lissabon-yksityiskohdat-20261008/production/02-marssikoe-1756/qa-fullframe-480.png",
+      "preservedOriginalSha256": "3373fef468f5e9d721761ae2100517a00f4179a93d11fe7052af24f585f89723",
+      "technicalQA": {
+        "format": "PNG",
+        "mode": "RGB",
+        "opaque": true,
+        "nativeSizeVerified": true,
+        "RGBPixelsUnchanged": true,
+        "sRGBICC": true,
+        "metadataKeys": [
+          "Description",
+          "Source",
+          "icc_profile"
+        ],
+        "metadataExact": true,
+        "originalCopyByteExact": true
+      },
+      "generationMethod": "built-in image_gen, NEW text-only generation",
+      "qaCompletedAt": "2026-10-08T08:13:53.716499+00:00",
+      "r2Uploaded": false,
+      "mailboxDelivered": false,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "scopeDecision": "Marssikoe rajattu perimätiedoksi/legendaksi Quaken nimenomaisen legendamuodon ja Técnicon vaikeasti vahvistettavan kertomuksen perusteella.",
+      "formatRuleApplied": "Yhteinen 1536 × 1024 RGB sRGB; yksittäinen 16:9-maininta tulkittu vaakasommitteluksi, ei rinnakkaista rajausvarianttia.",
+      "photoRuleApplied": "Yhteinen valokuvamainen tyyli ohittaa piirros/kaiverrus-tyylisanat.",
+      "visualReview": {
+        "task": "lissabon-yksityiskohdat-20261008",
+        "number": 2,
+        "qid": "Q999002",
+        "file": "lissabon-Q999002-marssikoe-1756.png",
+        "sha256": "caac831dfab6cd01c381db440da36453c77a2d906acb34692743e153aa3c8d23",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Kolme puista mallia ja selin marssiva sotilasjono/tarkkailijat. Ei tunnistettavia kasvoja tai tekstiä; musketit kannossa eikä niitä käytetä. Kuvateksti kertoo kertomusperinteestä ja varmistamattomasta kokeen toteutuksesta."
+        ],
+        "limitations": [
+          "Sotilaiden marssikoe on lähteessä legendaa, ei varmistettu dokumentaarinen tapahtumakuva.",
+          "Kolmen puumallin ulkonäkö, sijoittelu, asut ja kokeen järjestely ovat kuvallista tulkintaa.",
+          "Kuva ei esitä mitattua maanjäristystä, tärinän suuruutta tai rakenneteknistä todistusta.",
+          "Sotilasjono kulkee mallien takana; kuvasta ei voi todentaa kokeen etenemistä tai maaperän todellista tärinää."
+        ],
+        "agentVerdictBeforeRootReview": true,
+        "reviewedAtUTC": "2026-10-08T08:22:06.608978+00:00"
+      },
+      "agentQA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Täsmälleen kolme yksinkertaista alkuperäistä puumallikehikkoa erottuu etualalta myös 480-leveässä esikatselussa.",
+          "Sotilasjono ja tarkkailijat kuvattu selin; kasvoja tai tunnistettavia todellisia henkilöitä ei näy.",
+          "Puut, vaatteet, maa, kivimuuri ja jokitausta näyttävät kameralla kuvatuilta; luonnollinen päivänvalo ja vaimeat värit.",
+          "Sotilaat kantavat aikakauden musketteja pystyasennossa; niitä ei käytetä, eikä kuvassa ole väkivaltaa.",
+          "Ei luettavia piirroksia tai kirjoitusta; ei tärinämittauksia, maahan liioiteltuja järistyshalkeamia tai muita fysikaalisia tarkkuusväitteitä.",
+          "Natiivi ja koko kuvan 480 × 320 esikatselu katsottu."
+        ],
+        "limitations": [
+          "Sotilaiden marssikoe on lähteessä legendaa, ei varmistettu dokumentaarinen tapahtumakuva.",
+          "Kolmen puumallin ulkonäkö, sijoittelu, asut ja kokeen järjestely ovat kuvallista tulkintaa.",
+          "Kuva ei esitä mitattua maanjäristystä, tärinän suuruutta tai rakenneteknistä todistusta.",
+          "Sotilasjono kulkee mallien takana; kuvasta ei voi todentaa kokeen etenemistä tai maaperän todellista tärinää."
+        ]
+      },
+      "mitat": [
+        1536,
+        1024
+      ],
+      "fableReceipt": false,
+      "r2Key": "julisteet/lissabon-yksityiskohdat/20261008/lissabon-Q999002-marssikoe-1756.png",
+      "url": "https://media.matkakirja.app/julisteet/lissabon-yksityiskohdat/20261008/lissabon-Q999002-marssikoe-1756.png",
+      "bytes": 2657307,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "number": 3,
+      "qid": "Q168001",
+      "id": "santa-justa-vihkiaiset",
+      "filename": "lissabon-Q168001-santa-justa-vihkiaiset.png",
+      "viitteet": [
+        {
+          "publisher": "Transportes de Lisboa / CARRIS",
+          "title": "113.º Aniversário do Elevador de Santa Justa – comunicado à imprensa, 09.07.2015",
+          "url": "https://ttsl.pt/wp-content/uploads/2018/07/113-aniversario-Elevador-Santa-Justa_09072015.pdf",
+          "type": "textResearchOnly",
+          "notes": "Liikennelaitoksen oma tiedote vahvistaa passadiçon asennuksen 31.8.1901 ja hissin avauksen 10.7.1902. Monarkin läsnäoloa se ei vahvista. Käytetty vain PDF:n tekstiä, ei kuvia.",
+          "access": "2026-10-08T08:06:48.500Z"
+        },
+        {
+          "publisher": "CARRIS",
+          "title": "Elevador",
+          "url": "https://www.carris.pt/descubra/frota/elevador/",
+          "type": "textResearchOnly",
+          "notes": "Liikennelaitoksen oma ajantasainen historiallinen kuvaus vahvistaa 10.7.1902 hissiavauksen ja 1907 sähköistyksen. Sivun kuvia ei avattu eikä käytetty.",
+          "access": "2026-10-08T08:06:48.500Z"
+        }
+      ],
+      "kuvateksti": "Seremoniallinen havainnollistus Santa Justan rautasillan valmistumisesta elokuussa 1901. Hissi avattiin yleisölle 10. heinäkuuta 1902. Henkilöryhmä on keksitty, eikä kuva varmista monarkin läsnäoloa. Havainnekuva.",
+      "limitations": [
+        "Virallinen liikennelaitoksen tiedote vahvistaa sillan asennuksen, ei kuvan seremonian yksityiskohtia tai monarkin läsnäoloa.",
+        "Ryhmän henkilöt ja seremonian sommittelu ovat anonyymi historiallinen tulkinta.",
+        "Ristiriitainen MWNF-tietue on jätetty tuotantofaktojen ulkopuolelle."
+      ],
+      "productionFolder": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/lissabon-yksityiskohdat-20261008/production/03-santa-justa-vihkiaiset",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/lissabon-yksityiskohdat-20261008/production/03-santa-justa-vihkiaiset/lissabon-Q168001-santa-justa-vihkiaiset.png",
+      "promptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/lissabon-yksityiskohdat-20261008/production/03-santa-justa-vihkiaiset/generation-prompt.txt",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11a89-bc4e-76b2-b209-5f9736ff043b/exec-55d44d94-33b4-4be9-8bc0-d9ea2ce310e0.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/lissabon-yksityiskohdat-20261008/production/03-santa-justa-vihkiaiset/original-generation.png",
+      "sha256": "074ddd13629d6bbea477f4a4c32f57bca1f739534609cb93712d4cad521398a6",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationCalls": 1,
+      "generationPrompt": "Use case: historical-scene\nAsset type: original photo-looking historical interpretation of a bridge-completion ceremony.\nCreate exactly one NEW text-only image, native 1536 x 1024 pixels, landscape 3:2, opaque RGB sRGB PNG.\nScene: on the elevated iron gangway of Santa Justa in Lisbon, late August 1901, after placement of the gangway and before the lift begins public operation the following year. This is a generic ceremonial illustration, not a portrait or a verified documentary photograph.\nCamera at gangway level, broad view of the iron walkway leading toward the partly finished paired iron lift tower. Coherent walkway deck and load-bearing structure; original plausible late-19th-century Neo-Gothic iron balustrades with repeating narrow pointed arch patterns. Behind the tower and to one side, period Lisbon roofscape and distant Tagus river, no modern skyline. Tower detail subdued and unfinished, no electric modern equipment.\nA small group of entirely fictional anonymous adult attendees stands on the gangway a moderate distance from the camera, looking away toward the city. All heads seen from behind; no readable faces. A few in restrained ceremonial military coats and period formal hats, others in dark tailcoats and top hats and long period dresses. No named monarch, no identifiable ruler, no portrait likeness, no distinctive beard. People are a secondary ceremonial group, iron bridge remains dominant.\nA few plain fabric celebratory pennants without writing or emblems. Sunny but gentle natural Lisbon daylight, camera-like metal and fabric texture, muted palette, photographic appearance, no HDR or cinematic oversaturation. This is an original scene, not a copy of a historical photo.\nNo text, letters, numerals, signs, plaques, labels, logos, watermark, border, modern buildings, cars or modern tourist equipment. No identifiable faces, no real-person likeness, no violence. No museum collection art reproductions.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "status": "local-candidate-QA-approved",
+      "technicalChanges": [
+        "Lisätty sRGB ICC -profiili ja vain Description/Source-metatiedot.",
+        "Generoidut RGB-pikselit säilytetty täsmälleen; ei rajauksia, skaalausta, värimuutoksia tai kuvakorjauksia."
+      ],
+      "sourceCommit": "39a28e262e8275c98d8c9c06fb5c7f144b774d48",
+      "sourceBlob": "160af694a2cfc6f0c84164e2abb07125721ee94a",
+      "sourceImagePixelsUsed": false,
+      "QA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Rautainen kulkusilta ja kaiteet ovat pääaihe; osin keskeneräinen torni, kattonäkymä ja jokitausta tukevat 1901-ajankohtaa.",
+          "Keksitty seremoniallinen ryhmä näkyy selin; kuvassa ei ole todellisen hallitsijan kasvoja tai partatunnisteita.",
+          "Kaiteet, sillan kansi ja henkilöiden mittakaava ovat johdonmukaisia rajatussa näkymässä.",
+          "Luonnollinen päivänvalo, vaimea väritys ja valokuvamaiset rauta-/kangasmateriaalit.",
+          "Ei tekstiä, lipuissa ei tunnuksia tai kirjoitusta, ei logoa, vesileimaa, moderneja ajoneuvoja tai turistilaitteita.",
+          "Natiivi ja koko kuvan 480 × 320 esikatselu katsottu."
+        ],
+        "limitations": [
+          "Virallinen liikennelaitoksen tiedote vahvistaa sillan asennuksen, ei kuvan seremonian yksityiskohtia tai monarkin läsnäoloa.",
+          "Ryhmän henkilöt ja seremonian sommittelu ovat anonyymi historiallinen tulkinta.",
+          "Ristiriitainen MWNF-tietue on jätetty tuotantofaktojen ulkopuolelle.",
+          "Tornin yläosa rajautuu kuvan yläreunan ulkopuolelle; sillan/tornin yksityiskohdat ovat havainnollinen tulkinta."
+        ]
+      },
+      "file": "lissabon-Q168001-santa-justa-vihkiaiset.png",
+      "preview480Path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/lissabon-yksityiskohdat-20261008/production/03-santa-justa-vihkiaiset/qa-fullframe-480.png",
+      "preservedOriginalSha256": "1d07c3ad3dfb6bd604ea601988883e527dc11e042b158dfde60b75d4c7580c81",
+      "technicalQA": {
+        "format": "PNG",
+        "mode": "RGB",
+        "opaque": true,
+        "nativeSizeVerified": true,
+        "RGBPixelsUnchanged": true,
+        "sRGBICC": true,
+        "metadataKeys": [
+          "Description",
+          "Source",
+          "icc_profile"
+        ],
+        "metadataExact": true,
+        "originalCopyByteExact": true
+      },
+      "scopeDecision": "Root vahvisti 03-rajauksen ennen kutsua: passadiçon asennus 31.8.1901; keksitty anonyymi seremoniallinen ryhmä; ei väitettä monarkkivierailusta tai hissiavauksesta 1901.",
+      "generationMethod": "built-in image_gen, NEW text-only generation",
+      "qaCompletedAt": "2026-10-08T08:13:53.774274+00:00",
+      "r2Uploaded": false,
+      "mailboxDelivered": false,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "formatRuleApplied": "Yhteinen 1536 × 1024 RGB sRGB; yksittäinen 16:9-maininta tulkittu vaakasommitteluksi, ei rinnakkaista rajausvarianttia.",
+      "photoRuleApplied": "Yhteinen valokuvamainen tyyli ohittaa piirros/kaiverrus-tyylisanat.",
+      "visualReview": {
+        "task": "lissabon-yksityiskohdat-20261008",
+        "number": 3,
+        "qid": "Q168001",
+        "file": "lissabon-Q168001-santa-justa-vihkiaiset.png",
+        "sha256": "074ddd13629d6bbea477f4a4c32f57bca1f739534609cb93712d4cad521398a6",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Rautainen sillankansi, kaiteet, keskeneräinen torni ja keksitty selin oleva seremoniallinen ryhmä. Ei väitettä todistetusta monarkkivierailusta tai hissin avauksesta1901; sillan asennus erotettu1902hissin avauksesta. Tornin yläosa rajautuu mutta tilausta hallitseva sillan taso näkyy."
+        ],
+        "limitations": [
+          "Virallinen liikennelaitoksen tiedote vahvistaa sillan asennuksen, ei kuvan seremonian yksityiskohtia tai monarkin läsnäoloa.",
+          "Ryhmän henkilöt ja seremonian sommittelu ovat anonyymi historiallinen tulkinta.",
+          "Ristiriitainen MWNF-tietue on jätetty tuotantofaktojen ulkopuolelle.",
+          "Tornin yläosa rajautuu kuvan yläreunan ulkopuolelle; sillan/tornin yksityiskohdat ovat havainnollinen tulkinta."
+        ],
+        "agentVerdictBeforeRootReview": true,
+        "reviewedAtUTC": "2026-10-08T08:22:06.610309+00:00"
+      },
+      "agentQA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Rautainen kulkusilta ja kaiteet ovat pääaihe; osin keskeneräinen torni, kattonäkymä ja jokitausta tukevat 1901-ajankohtaa.",
+          "Keksitty seremoniallinen ryhmä näkyy selin; kuvassa ei ole todellisen hallitsijan kasvoja tai partatunnisteita.",
+          "Kaiteet, sillan kansi ja henkilöiden mittakaava ovat johdonmukaisia rajatussa näkymässä.",
+          "Luonnollinen päivänvalo, vaimea väritys ja valokuvamaiset rauta-/kangasmateriaalit.",
+          "Ei tekstiä, lipuissa ei tunnuksia tai kirjoitusta, ei logoa, vesileimaa, moderneja ajoneuvoja tai turistilaitteita.",
+          "Natiivi ja koko kuvan 480 × 320 esikatselu katsottu."
+        ],
+        "limitations": [
+          "Virallinen liikennelaitoksen tiedote vahvistaa sillan asennuksen, ei kuvan seremonian yksityiskohtia tai monarkin läsnäoloa.",
+          "Ryhmän henkilöt ja seremonian sommittelu ovat anonyymi historiallinen tulkinta.",
+          "Ristiriitainen MWNF-tietue on jätetty tuotantofaktojen ulkopuolelle.",
+          "Tornin yläosa rajautuu kuvan yläreunan ulkopuolelle; sillan/tornin yksityiskohdat ovat havainnollinen tulkinta."
+        ]
+      },
+      "mitat": [
+        1536,
+        1024
+      ],
+      "fableReceipt": false,
+      "r2Key": "julisteet/lissabon-yksityiskohdat/20261008/lissabon-Q168001-santa-justa-vihkiaiset.png",
+      "url": "https://media.matkakirja.app/julisteet/lissabon-yksityiskohdat/20261008/lissabon-Q168001-santa-justa-vihkiaiset.png",
+      "bytes": 2410814,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "number": 4,
+      "qid": "Q1470414",
+      "id": "carmon-romahdus-1755",
+      "filename": "lissabon-Q1470414-carmon-romahdus-1755.png",
+      "viitteet": [
+        {
+          "publisher": "Museu Arqueológico do Carmo / Associação dos Arqueólogos Portugueses",
+          "title": "Ruínas e Museu Arqueológico do Carmo – História",
+          "url": "https://www.museuarqueologicodocarmo.arqueologos.pt/mac.html",
+          "type": "textResearchOnly",
+          "notes": "Monumenttia ylläpitävän museon oma historia vahvistaa goottilaisen kirkon, vuoden 1755 maanjäristyksen vauriot ja seuraavan tulipalon. Nykyiset navan pilarit/kaaret osin 1756 alkaneesta uusgoottilaisesta jälleenrakennuksesta: niitä ei jäljennetä vuoden 1755 näkymään. Ei museokokoelman tai teosten kuvia eikä lähdepikseleitä.",
+          "access": "2026-10-08T08:06:48.500Z"
+        }
+      ],
+      "kuvateksti": "Tulkinta Carmon goottilaisen kirkon katon romahtamisesta Lissabonin vuoden 1755 maanjäristyksessä. Aamumessun hetki, sisustus ja poistuvat hahmot ovat havainnollista rekonstruktiota. Havainnekuva.",
+      "limitations": [
+        "Museon historia vahvistaa maanjäristysvauriot, ei kuvan tarkkaa romahtamishetkeä, messun vaihetta tai irtaimistoa.",
+        "Kirkon sisustus, alkuperäiset holvit ja henkilöiden sijoittelu ovat tulkintaa; nykyisen museon kokoelmateoksia tai jälleenrakennettuja kaaria ei kopioida."
+      ],
+      "productionFolder": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/lissabon-yksityiskohdat-20261008/production/04-carmon-romahdus-1755",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/lissabon-yksityiskohdat-20261008/production/04-carmon-romahdus-1755/lissabon-Q1470414-carmon-romahdus-1755.png",
+      "promptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/lissabon-yksityiskohdat-20261008/production/04-carmon-romahdus-1755/generation-prompt.txt",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11a89-bc4e-76b2-b209-5f9736ff043b/exec-856f6fe4-68a9-44af-bfe9-e9bcb39a1245.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/lissabon-yksityiskohdat-20261008/production/04-carmon-romahdus-1755/original-generation.png",
+      "sha256": "3c15fcc21fa0775c1b17cd96967006253354cf2fe6ee08ffa34bdd4bbf4b05a4",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationCalls": 1,
+      "generationPrompt": "Use case: historical-scene\nAsset type: original historically informed photo-looking illustration, suitable for ages 13 and up.\nCreate exactly one NEW text-only image, native 1536 x 1024 pixels, landscape 3:2, opaque RGB sRGB PNG. Broad horizontal composition within the entire 3:2 frame.\nScene: inside the PRE-1755 Gothic Carmo church in Lisbon on the morning of 1 November 1755, an interpretive moment as an earthquake damages the masonry roof during a service. Architectural collapse is the subject, people remain unharmed.\nCamera near the main nave entrance, looking toward a distant simple dim sanctuary, slightly low eye level. Coherent Gothic stone nave with paired rows of pointed arches and ribbed vault bays; perspective, ribs, pillars and floor geometry all aligned. Plain period stone floor. In upper-middle distance, a large vault bay is breaking apart: several stone fragments and pieces of roof material falling through a broad pale dust cloud. Retained side vaults still connect logically to pillars. Never place falling blocks above or touching people; no one trapped or struck.\nA small group of anonymous fictional adult churchgoers and friars is safely withdrawing through the clear near side aisle, seen entirely from the rear and at moderate distance. Plausible 18th-century coats, long skirts and head scarves; friars in brown cloaks with modest pale scapular fabric. No faces, no distressed children. Upright moving people only, no fallen bodies. Their path remains visibly separate from the distant debris.\nNatural soft morning light through high pointed side windows; a few quiet candles still glow at the distant simple wooden liturgical furnishing. Sanctuary and furnishing must be invented and plain, low-detail, dim, no recognizable altarpiece, sculpture, painting, museum collection piece, inscriptions or artifact replica. Do not reproduce today's Carmo Museum exhibits or later rebuilt nave details.\nStyle: real-camera looking textures of weathered stone, linen, timber and dust, muted gray-beige colors, natural window light and small candle warmth. Sober architectural scene, no movie horror, no HDR, no engraving, no painting.\nAbsolutely no injuries, blood, corpses, crushed bodies, severed parts, graphic disaster gore, violence, body contact with debris, panic closeups or child distress. No recognizable faces or real-person likeness. No writing, letters, numerals, signage, logos, watermark, border or modern objects.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "status": "local-candidate-QA-approved",
+      "technicalChanges": [
+        "Lisätty sRGB ICC -profiili ja vain Description/Source-metatiedot.",
+        "Generoidut RGB-pikselit säilytetty täsmälleen; ei rajauksia, skaalausta, värimuutoksia tai kuvakorjauksia."
+      ],
+      "sourceCommit": "39a28e262e8275c98d8c9c06fb5c7f144b774d48",
+      "sourceBlob": "160af694a2cfc6f0c84164e2abb07125721ee94a",
+      "sourceImagePixelsUsed": false,
+      "QA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Holvien hajoaminen, kivilohkareet ja pöly ovat kuvan pääaihe; goottilaiset pilarit, suippokaaret ja lattian perspektiivi ovat johdonmukaisia.",
+          "Selin kuvatut aikuiset ja munkit ovat vasemman sivukäytävän kohdalla erillään keskilaivan näkyvästä putoavasta materiaalista.",
+          "Ei verisiä vammoja, ruumiita, murskautuneita ihmisiä, osumia, lapsia, lapsen ahdistusta tai tunnistettavia kasvoja.",
+          "Tavallinen hämärä puinen liturginen kaluste ja kynttilät; ei museokokoelman tunnistettavia teoksia tai esineitä.",
+          "Pehmeä aamuvalo ikkunoista, vaimea kivi-/puusävy ja valokuvamainen materiaali; ei elokuvakauhun väritystä tai HDR:ää.",
+          "Natiivi ja koko kuvan 480 × 320 esikatselu katsottu; ei luettavaa tekstiä, logoja tai vesileimaa."
+        ],
+        "limitations": [
+          "Museon historia vahvistaa maanjäristysvauriot, ei kuvan tarkkaa romahtamishetkeä, messun vaihetta tai irtaimistoa.",
+          "Kirkon sisustus, alkuperäiset holvit ja henkilöiden sijoittelu ovat tulkintaa; nykyisen museon kokoelmateoksia tai jälleenrakennettuja kaaria ei kopioida.",
+          "Selin näkyvien ihmisten tarkka poistumisen suunta jää kuvalliseen tulkintaan; vasemmalla on selkeä ehjä sivukäytävä, eikä ketään ole sortuvien kivien alla."
+        ]
+      },
+      "file": "lissabon-Q1470414-carmon-romahdus-1755.png",
+      "preview480Path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/lissabon-yksityiskohdat-20261008/production/04-carmon-romahdus-1755/qa-fullframe-480.png",
+      "preservedOriginalSha256": "5a00a90a11d839fa90ea7c40429e54ead12a850823fa1417d25525d5a8b88441",
+      "technicalQA": {
+        "format": "PNG",
+        "mode": "RGB",
+        "opaque": true,
+        "nativeSizeVerified": true,
+        "RGBPixelsUnchanged": true,
+        "sRGBICC": true,
+        "metadataKeys": [
+          "Description",
+          "Source",
+          "icc_profile"
+        ],
+        "metadataExact": true,
+        "originalCopyByteExact": true
+      },
+      "generationMethod": "built-in image_gen, NEW text-only generation",
+      "qaCompletedAt": "2026-10-08T08:13:53.829826+00:00",
+      "r2Uploaded": false,
+      "mailboxDelivered": false,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "formatRuleApplied": "Yhteinen 1536 × 1024 RGB sRGB; yksittäinen 16:9-maininta tulkittu vaakasommitteluksi, ei rinnakkaista rajausvarianttia.",
+      "photoRuleApplied": "Yhteinen valokuvamainen tyyli ohittaa piirros/kaiverrus-tyylisanat.",
+      "visualReview": {
+        "task": "lissabon-yksityiskohdat-20261008",
+        "number": 4,
+        "qid": "Q1470414",
+        "file": "lissabon-Q1470414-carmon-romahdus-1755.png",
+        "sha256": "3c15fcc21fa0775c1b17cd96967006253354cf2fe6ee08ffa34bdd4bbf4b05a4",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Goottilaisen keskilaivan holvi hajoaa; pölyä ja kiviä keskellä, selin olevat aikuiset ehjällä vasemmalla sivukäytävällä. Ei osumia, vammoja, verta tai ruumiita, ei tunnistettavia kasvoja tai tekstiä. Luonnollinen ikkunavalo ja hillitty kameratuntu."
+        ],
+        "limitations": [
+          "Museon historia vahvistaa maanjäristysvauriot, ei kuvan tarkkaa romahtamishetkeä, messun vaihetta tai irtaimistoa.",
+          "Kirkon sisustus, alkuperäiset holvit ja henkilöiden sijoittelu ovat tulkintaa; nykyisen museon kokoelmateoksia tai jälleenrakennettuja kaaria ei kopioida.",
+          "Selin näkyvien ihmisten tarkka poistumisen suunta jää kuvalliseen tulkintaan; vasemmalla on selkeä ehjä sivukäytävä, eikä ketään ole sortuvien kivien alla."
+        ],
+        "agentVerdictBeforeRootReview": true,
+        "reviewedAtUTC": "2026-10-08T08:22:06.611534+00:00"
+      },
+      "agentQA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Holvien hajoaminen, kivilohkareet ja pöly ovat kuvan pääaihe; goottilaiset pilarit, suippokaaret ja lattian perspektiivi ovat johdonmukaisia.",
+          "Selin kuvatut aikuiset ja munkit ovat vasemman sivukäytävän kohdalla erillään keskilaivan näkyvästä putoavasta materiaalista.",
+          "Ei verisiä vammoja, ruumiita, murskautuneita ihmisiä, osumia, lapsia, lapsen ahdistusta tai tunnistettavia kasvoja.",
+          "Tavallinen hämärä puinen liturginen kaluste ja kynttilät; ei museokokoelman tunnistettavia teoksia tai esineitä.",
+          "Pehmeä aamuvalo ikkunoista, vaimea kivi-/puusävy ja valokuvamainen materiaali; ei elokuvakauhun väritystä tai HDR:ää.",
+          "Natiivi ja koko kuvan 480 × 320 esikatselu katsottu; ei luettavaa tekstiä, logoja tai vesileimaa."
+        ],
+        "limitations": [
+          "Museon historia vahvistaa maanjäristysvauriot, ei kuvan tarkkaa romahtamishetkeä, messun vaihetta tai irtaimistoa.",
+          "Kirkon sisustus, alkuperäiset holvit ja henkilöiden sijoittelu ovat tulkintaa; nykyisen museon kokoelmateoksia tai jälleenrakennettuja kaaria ei kopioida.",
+          "Selin näkyvien ihmisten tarkka poistumisen suunta jää kuvalliseen tulkintaan; vasemmalla on selkeä ehjä sivukäytävä, eikä ketään ole sortuvien kivien alla."
+        ]
+      },
+      "mitat": [
+        1536,
+        1024
+      ],
+      "fableReceipt": false,
+      "r2Key": "julisteet/lissabon-yksityiskohdat/20261008/lissabon-Q1470414-carmon-romahdus-1755.png",
+      "url": "https://media.matkakirja.app/julisteet/lissabon-yksityiskohdat/20261008/lissabon-Q1470414-carmon-romahdus-1755.png",
+      "bytes": 2348495,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    }
+  ],
+  "excludedItems": [],
+  "comparison": {
+    "file": "toimitetut-4.jpg",
+    "r2Key": "julisteet/lissabon-yksityiskohdat/20261008/toimitetut-4.jpg",
+    "url": "https://media.matkakirja.app/julisteet/lissabon-yksityiskohdat/20261008/toimitetut-4.jpg",
+    "sha256": "83cf24ec809887f2f61356f36f96d63bfb829d051d55fb804dc60924aa8f1823",
+    "bytes": 261473,
+    "http": 200,
+    "mime": "image/jpeg",
+    "cors": "https://matkakirja.app",
+    "byteExactReadback": true
+  },
+  "deliveryStatus": "Selected candidates R2 verified and submitted through this mailbox manifest/report; Fable/editor/game receipt unverified.",
+  "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+  "editorAcceptance": false,
+  "fableReceipt": false,
+  "gameIntegrated": false,
+  "published": false,
+  "createdAt": "2026-10-08T08:22:19.556119+00:00"
+}
