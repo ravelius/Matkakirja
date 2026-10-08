@@ -906,6 +906,9 @@ namespace Matkakirja.Natiivi
             TekstiPois();
         }
 
+        /// <summary>Hiljainen hetki avauksen (ja opastuksen) jälkeen ennen kierroksen ensimmäistä lentoa.</summary>
+        public const float AvausLepoS = 2.5f;
+
         IEnumerator EsitysAvaus(string kaupunkiId)
         {
             // Yksityiskohtaluettelo esiin heti (iPad-simu 7.10. 21.24: avauksen kuva jäi pois, kun luettelo latautui vasta
@@ -941,6 +944,8 @@ namespace Matkakirja.Natiivi
                     if (ourl != null) { yield return SoitaJaOdota(ourl, "opastus"); OpastusKuultu = true; }
                 }
             }
+            // Avaus kunnolla ohi ennen ensimmäistä siirtymää (omistaja TF 168, 9.10.: "parin kertojan lauseen jälkeen kip kääntyy").
+            if (!Testi) yield return new WaitForSeconds(AvausLepoS);
             if (silmukka == null || !Kaupunkitila) yield break;
             o.Kirjaa("opas: esitys: kaupunkikierros");
             Kaupunkikierros();
