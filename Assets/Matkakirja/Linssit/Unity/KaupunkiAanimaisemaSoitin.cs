@@ -90,6 +90,12 @@ namespace Matkakirja.Natiivi
         readonly KaupunkiAanimaisema mikseri = new KaupunkiAanimaisema();
         readonly AudioSource[] lahteet = new AudioSource[KaupunkiAanimaisema.Kerrokset.Length];
         readonly float[] hiljaaAlkaen = new float[KaupunkiAanimaisema.Kerrokset.Length];
+        // KAUPUNKIKOHTAISET SILMUKAT (Linssiseppä 8.10., pallo-aanimaisema-v1; PT: hiljennys kaupunginvaihdossa): ladatun lähteen osoite
+        // kerroksittain; jos SilmukanUrl antaa kerrokselle toisen osoitteen (kehityskaupungista muuhun tai päinvastoin), lähde vapautetaan
+        // ja oikea ladataan seuraavassa kehyksessä. Tarkistus kerran sekunnissa.
+        readonly string[] lahdeUrl = new string[KaupunkiAanimaisema.Kerrokset.Length];
+        float urlTarkistettu;
+        string KerroksenUrl(string kerros) => SilmukanUrl != null ? SilmukanUrl(kerros) : Juuri + "aanimaisema-v2/" + kerros + "-01.mp3";
         readonly HashSet<string> ladataan = new HashSet<string>();
         IReadOnlyDictionary<string, double> painot;
         double karttaLat = double.NaN, karttaLon = double.NaN;
@@ -130,6 +136,13 @@ namespace Matkakirja.Natiivi
             if (k.HasValue) viimeK = k;
             else if (Kamera == null && OpasSovitin.KaupunkiNakyvissa)
                 k = viimeK.HasValue ? (viimeK.Value.KorkeusM, SiirtymaNopeusMs, viimeK.Value.Lat, viimeK.Value.Lon) : (LentoKorkeusM, SiirtymaNopeusMs, double.NaN, double.NaN);
+            if (Time.unscaledTime - urlTarkistettu > 1f)
+            {
+                urlTarkistettu = Time.unscaledTime;
+                for (int i = 0; i < lahteet.Length; i++)
+                    if (lahteet[i] != null && lahdeUrl[i] != null && lahdeUrl[i] != KerroksenUrl(KaupunkiAanimaisema.Kerrokset[i]))
+                    { Debug.Log($"MATKAKIRJA äänimaisema: {KaupunkiAanimaisema.Kerrokset[i]} vaihtuu kaupungin mukana ({lahdeUrl[i]})"); Vapauta(i); lahdeUrl[i] = null; }
+            }
             bool eiPaikkaa = k.HasValue && double.IsNaN(k.Value.Lat);   // ensimmäinen lento: vain tuuli ja suhina, ei kartan reunan ääniä
             if (eiPaikkaa) { painot = null; karttaLat = double.NaN; }
             string nyk = KaupunkiId == null ? NykyinenKaupunki() : null;
@@ -251,7 +264,7 @@ namespace Matkakirja.Natiivi
         {
             string kerros = KaupunkiAanimaisema.Kerrokset[i];
             // Oletus: Pelikoodarin nimeäminen aanimaisema-v2/<kerros>-01.mp3 (aanimaisema.json korvaa, kun se on).
-            string url = SilmukanUrl != null ? SilmukanUrl(kerros) : Juuri + "aanimaisema-v2/" + kerros + "-01.mp3";
+            string url = KerroksenUrl(kerros);
             if (string.IsNullOrEmpty(url) || ladataan.Contains(kerros)) return;
             // Puuttuva silmukka (404, esim. tuuli ennen Pelikoodarin vientiä) yritetään uudelleen vasta UusintaS:n päästä (simu 7.10.: 1 209 hakua).
             if (epaonnistunut.TryGetValue(url, out float milloin) && Time.unscaledTime - milloin < UusintaS) return;
@@ -267,7 +280,7 @@ namespace Matkakirja.Natiivi
                 if (c.length > 1) l.time = UnityEngine.Random.Range(0f, c.length * 0.9f);
                 if (kerros != KaupunkiAanimaisema.Sade && kerros != KaupunkiAanimaisema.Tuuli) g.AddComponent<AudioLowPassFilter>().cutoffFrequency = 22000;
                 l.Play();
-                lahteet[i] = l; hiljaaAlkaen[i] = 0;
+                lahteet[i] = l; hiljaaAlkaen[i] = 0; lahdeUrl[i] = url;
                 AvaaVara(i, url);
                 Debug.Log($"MATKAKIRJA äänimaisema: {kerros} soi ({c.length:F0} s)");
             }));
