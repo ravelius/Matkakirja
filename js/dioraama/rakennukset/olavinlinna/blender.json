@@ -1,7 +1,7 @@
 {
   "rakennus": "olavinlinna",
-  "hash": "82fc2bb75a60e82a",
-  "kansio": "dioraama/olavinlinna/blender/82fc2bb75a60e82a/",
+  "hash": "cb1c356eb133f1c1",
+  "kansio": "dioraama/olavinlinna/blender/cb1c356eb133f1c1/",
   "tiedostot": [
     {
       "polku": "hahmot/apulainen-1500-faceit.glb",
@@ -209,6 +209,11 @@
       "tavuja": 50240
     },
     {
+      "polku": "kavely/esine-koysi-vene.glb",
+      "sha256": "7a3035c7be24605ad7c50ec6b1ef923e5fa00bb42e7d547f707818a3b123e662",
+      "tavuja": 419348
+    },
+    {
       "polku": "kavely/esine-koysikieppi.glb",
       "sha256": "ac336df83066bf1be9153a3d5dc62e4de331f470395979d8af5b7eb4bf3dbcd9",
       "tavuja": 407084
@@ -284,6 +289,11 @@
       "tavuja": 282000
     },
     {
+      "polku": "kavely/esine-tiili-komero.glb",
+      "sha256": "7f6fdff907a51576ba2888aa6790675342f873a612edb1bb5c45ca7d67bf4c5c",
+      "tavuja": 33120
+    },
+    {
       "polku": "kavely/kappeli-kavely-kavely.glb",
       "sha256": "983b1e373bab5a04e068468c3601409cbef7706635653242662cc423c14a9c15",
       "tavuja": 4044
@@ -330,8 +340,8 @@
     },
     {
       "polku": "kavely/merkit.json",
-      "sha256": "ff3918ff577c0a419638f18c607d1ef746e82eb29921ea51465f5c554911f3f1",
-      "tavuja": 57413
+      "sha256": "cda3e786b694af2c9d126a64eb9f1ee4e1fd843ae20b59d3d0ba1bb25d7fbe89",
+      "tavuja": 57828
     },
     {
       "polku": "kavely/muurikaytava-kavely.glb",
