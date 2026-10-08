@@ -59,6 +59,9 @@ namespace Matkakirja.Natiivi
             AukiMuuttui += auki => { if (!auki) osa = Osa.Kaikki; };
             Otsikko("Äänentasot").AddToClassList("mk-aanentasot__otsikko");
             foreach (var v in Asetukset.VoimaJarjestys) Saadinrivi(v);
+            // KEHITTÄJÄ (omistaja 8.10. 17.5x): "Tallenna oletuksiksi" kirjoittaa tasot asetukset.json-palana (aanet.mikseri) laitteelle
+            // Documents/mikseri-oletukset.json, leikepöydälle ja lokiin; vienti kokoelmat/asetukset.jsoniin → kaikkien oletus.
+            oletuksiksi = Rakenne.Nappi("Tallenna oletuksiksi", "mk-pikkunappi", TallennaOletuksiksi, Sisalto);
 
             offlineOsio = Rakenne.El("mk-offline", Sisalto, PickingMode.Ignore);
             Rakenne.Teksti("LATAA OFFLINE-KÄYTTÖÖN", "mk-pudotus__otsikko", offlineOsio);
@@ -73,6 +76,19 @@ namespace Matkakirja.Natiivi
         }
 
         void Saadinrivi(Voima v) => saatimet[v] = LuoSaadinrivi(Sisalto, v);
+
+        readonly Button oletuksiksi;
+
+        static void TallennaOletuksiksi()
+        {
+            Asetukset.Tallenna();
+            string json = Asetukset.MikseriJson();
+            string polku = System.IO.Path.Combine(Application.persistentDataPath, "mikseri-oletukset.json");
+            try { System.IO.File.WriteAllText(polku, json); } catch (Exception e) { Debug.LogWarning("MATKAKIRJA mikseri: " + e.Message); }
+            GUIUtility.systemCopyBuffer = json;
+            Debug.Log("MATKAKIRJA mikseri oletuksiksi: " + json);
+            if (UiNakymat.Olemassa) UiNakymat.Hae().Tilarivi.Viesti("Mikserin tasot tallennettu oletuksiksi vientiä varten (leikepöydällä)");
+        }
 
         /// <summary>Äänentason liukusäädinrivi (myös iPhonen Asetukset-osion yläosa, Paavalikko).</summary>
         public static (Slider Saadin, Label Arvo) LuoSaadinrivi(VisualElement isa, Voima v)
@@ -108,6 +124,7 @@ namespace Matkakirja.Natiivi
         {
             foreach (var e in Sisalto.Children())
                 if (e != offlineOsio) e.style.display = osa == Osa.Offline ? DisplayStyle.None : DisplayStyle.Flex;
+            if (oletuksiksi != null) oletuksiksi.style.display = osa != Osa.Offline && Asetukset.Kehittaja ? DisplayStyle.Flex : DisplayStyle.None;
             PaivitaSaatimet(saatimet);
             PaivitaOffline();
         }

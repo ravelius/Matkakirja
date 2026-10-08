@@ -93,6 +93,9 @@ namespace Matkakirja.Natiivi
         public const string Jaa = "<path d=\"M12 3.6v11\"/><path d=\"M8.2 7.3 12 3.6l3.8 3.7\"/><path d=\"M8.8 10.2H6.6a1 1 0 0 0-1 1v8.2a1 1 0 0 0 1 1h10.8a1 1 0 0 0 1-1v-8.2a1 1 0 0 0-1-1h-2.2\"/>";
         public const string Puhekupla = "<path d=\"M4 5h16v10H9l-4 4v-4H4z\"/><circle cx=\"9.5\" cy=\"10\" r=\"0.9\"/><circle cx=\"14.5\" cy=\"10\" r=\"0.9\"/>";
 
+        /// <summary>Olavinlinnan siluetti (sama merkkijono kuin Ydin PoikkileikkausLinssi.PoikkiTiedot.Ikoni).</summary>
+        const string PoikkileikkausLinssiIkoni = Matkakirja.Linssit.Dioraama.PoikkileikkausLinssi.LinnaIkoni;
+
         /// <summary>VIIVA_IKONIT avaimittain (sama avain kuin webissä, js/ui-apurit.js).</summary>
         public static readonly Dictionary<string, string> Viiva = new Dictionary<string, string>
         {
@@ -101,6 +104,9 @@ namespace Matkakirja.Natiivi
             ["paiva"] = "<circle cx=\"12\" cy=\"12\" r=\"4\"/><path d=\"M12 3v2.4M12 18.6V21M3 12h2.4M18.6 12H21M5.6 5.6l1.7 1.7M16.7 16.7l1.7 1.7M5.6 18.4l1.7-1.7M16.7 7.3l1.7-1.7\"/>",
             ["ilta"] = "<path d=\"M3 17.5h18\"/><path d=\"M7.5 17.5a4.5 4.5 0 0 1 9 0\"/><path d=\"M12 9.5v-5M9.6 7.1 12 9.5l2.4-2.4\"/>",
             ["yo"] = "<path d=\"M19 14.6A7.6 7.6 0 1 1 9.4 5a6 6 0 0 0 9.6 9.6z\"/>",
+            // LINNA (omistaja 8.10.2026 klo 19.1x "tee olavinlinnan esittelylle ja pelille kuva ja ikoni linssi ja pelilistaan"):
+            // Olavinlinnan siluetti, pyöreä torni kartiokatolla ja sakaroitu muurinpätkä (sama 24-ruudukko ja viiva kuin muissa).
+            ["linna"] = PoikkileikkausLinssiIkoni,
             // SÄÄ (omistaja 8.10.2026 klo 09.1x "Saa tottakai piirtää"; pallon säätila ☾-napissa): sama pilvi, alla sade, sumu, lumi
             // tai salama; selkeä = paiva. Tyylikirja pohjat.OHJAUSNAPPI.saakuvakkeet.
             ["pilvi"] = "<path d=\"M7.2 18.5h10.3a3.6 3.6 0 0 0 .5-7.2 5.2 5.2 0 0 0-9.9-1.4 4.3 4.3 0 0 0-.9 8.6z\"/>",

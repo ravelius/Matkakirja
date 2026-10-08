@@ -61,7 +61,7 @@ namespace Matkakirja.Natiivi
             p.Siirra(t.istuin + Vector3.up * 0.05f); p.Tila.KameraYaw = p.Tila.HahmoYaw = t.katse; p.Tila.KameraPitch = 10;
             SeikkailuNakyvyys.Himmennys = 0f;
             if (SeikkailuVihjeet.Aktiivinen != null) SeikkailuVihjeet.Aktiivinen.Ydin.Tyrmassa = true;
-            kirjaa?.Invoke($"seikkailu: tyrmä (muunnelma {t.ydin.Muunnelma}: {(t.ydin.Muunnelma == 1 ? "Pulu tuo avaimet" : t.ydin.Muunnelma == 2 ? "vesipojan ovi" : "irtokivi")})");
+            kirjaa?.Invoke($"seikkailu: tyrmä (muunnelma {t.ydin.Muunnelma}: {(t.ydin.Muunnelma == 1 ? "avaimet ilmaraosta" : t.ydin.Muunnelma == 2 ? "vesipojan ovi" : "irtokivi")})");
             return true;
         }
 
@@ -72,10 +72,12 @@ namespace Matkakirja.Natiivi
             if (ydin.PuluPudotti)
             {
                 ydin.PuluPudotti = false;
-                SeikkailuAanet.Soita("pulu-kujerrus", rako, 0.9f); SeikkailuAanet.Soita("pulu-siivet", rako, 0.8f);
+                // Pulu pois videopelistä (omistaja 8.10. 19.0x): avaimet pudotetaan ilmaraosta (askeleet ja avainnipun helinä raossa).
+                if (SeikkailuVartijat.AskelKlippi != null) AudioSource.PlayClipAtPoint(SeikkailuVartijat.AskelKlippi, rako, 0.5f);
+                SeikkailuAanet.SoitaTaiVara("avainnippu", "avain-lukko", rako, 0.8f);
                 if (avainId != null) SeikkailuEsineet.Aktiivinen?.Nayta(avainId, avaimet);
                 SeikkailuAanet.Soita("kivi-lasku", avaimet, 0.4f, 1.6f);   // avaimet kilahtavat olkiin
-                kirjaa?.Invoke("seikkailu: tyrmä: Pulu pudotti avaimet");
+                kirjaa?.Invoke("seikkailu: tyrmä: avaimet pudotettiin ilmaraosta");
             }
             if (ydin.VesipoikaAvasi)
             {
@@ -87,7 +89,7 @@ namespace Matkakirja.Natiivi
             }
             if (ydin.Vihje) { ydin.Vihje = false; SeikkailuVihjeet.Aktiivinen?.Pakota(2, "tyrmä 20 s"); }
             if (ydin.Vaihe == TyrmanVaihe.AvaimetOlissa && avainId != null && SeikkailuEsineet.Aktiivinen?.Kadessa == avainId) ydin.Poimi();
-            if (ydin.PuluAvasi) { ydin.PuluAvasi = false; SeikkailuAanet.Soita("avain-lukko", ovi + Vector3.up, 0.8f); kirjaa?.Invoke("seikkailu: tyrmä: Pulu avasi oven (60 s)"); }
+            if (ydin.PuluAvasi) { ydin.PuluAvasi = false; SeikkailuAanet.Soita("avain-lukko", ovi + Vector3.up, 0.8f); kirjaa?.Invoke("seikkailu: tyrmä: lukko aukesi (60 s)"); }
             var maali = ydin.Muunnelma == 3 && ryomiOn ? ryomi : ulos;
             if (ydin.Vaihe == TyrmanVaihe.OviAuki && Vector3.Distance(p.transform.position, maali) < UlosM && ydin.Ulos()) StartCoroutine(Ulos());
         }

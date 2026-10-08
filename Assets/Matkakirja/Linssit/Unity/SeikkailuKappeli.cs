@@ -39,6 +39,21 @@ namespace Matkakirja.Natiivi
         public Vector3 Tallennus { get; private set; }
         /// <summary>Kappelin valoarvoituksen vaiheet 1–11 (Pulun vihjeet, tallennus).</summary>
         public KappelinArvoitus Arvoitus { get; } = new KappelinArvoitus();
+        /// <summary>Kappeli on jo ratkaistu (jatko tallennuksesta huoneisiin 6–10): ei kohtausta eikä voudin kierrosta uudelleen.</summary>
+        public bool Ratkaistu { get; private set; }
+
+        /// <summary>Koko peli 1–10 (Siirtoseppä 8.10.): jatko tallennuksesta, jossa kalkki ja pateeni ovat alttarilla, palauttaa ratkaistun
+        /// kappelin (pimeä, löytö alttarilla). Kesken jäänyt arvoitus alkaa tarkistuspisteestä alusta kuten ennen.</summary>
+        public void Palauta(SeikkailuTallennus t)
+        {
+            var a = KappelinArvoitus.Lue(t);
+            if (!(a.KalkkiAlttarilla && a.PateeniAlttarilla)) return;
+            Ratkaistu = true; loppu = true; loydetty = true;
+            alttarilla.Add("kalkki"); alttarilla.Add("pateeni"); alttarilla.Add("liuskekivi");
+            if (SeikkailuKynttilat.Aktiivinen is SeikkailuKynttilat ky) for (int i = 0; i < ky.Ydin.Maara; i++) ky.Ydin.Aseta(i, false);
+            SeikkailuEsineet.Aktiivinen?.PalautaKappeli();
+            kirjaa?.Invoke("seikkailu: jatko: kappeli ratkaistu (löytö alttarilla), ei kohtausta");
+        }
         readonly List<Vector3> kilvet = new List<Vector3>(), vedot = new List<Vector3>();
         public const float KilpiM = 1.0f;
 
@@ -88,6 +103,7 @@ namespace Matkakirja.Natiivi
             var hg = new GameObject("Voudin hehku"); hg.transform.SetParent(go.transform, false); hg.transform.position = k.portaikkoYla;
             k.hehku = hg.AddComponent<Light>(); k.hehku.type = LightType.Point; k.hehku.range = 3f; k.hehku.color = new Color(1f, 0.75f, 0.45f); k.hehku.intensity = 0f; k.hehku.shadows = LightShadows.None;
             k.voudinAskeleet = SeikkailuKuulija.Lahde("Voudin askeleet", 3f, 25f); k.voudinAskeleet.loop = true; k.voudinAskeleet.volume = 0.7f;
+            SeikkailuPako.Valmis -= k.PakoValmis; SeikkailuPako.Valmis += k.PakoValmis;   // M-osa: nousu pakon jälkeen (myös jatkossa tallennuksesta)
             SeikkailuEsineet.Kolahti += k.Kova; SeikkailuEsineet.Aanteli += k.Tavallinen; SeikkailuEsineet.Raapaistiin += k.Raapaisu; SeikkailuEsineet.Nostettiin += k.Nosto; SeikkailuKynttilat.LuukkuAani += k.Tavallinen; SeikkailuEsineet.AsetettiinAlttarille += k.Asetettu;
             SeikkailuEsineet.Aanteli += k.Koputus;
             SeikkailuEsineet.Alttari = k.alttari;
@@ -142,7 +158,7 @@ namespace Matkakirja.Natiivi
             if (Nyt == Vaihe.Pimea || Nyt == Vaihe.Paluu) PaivitaVouti(p);
             PaivitaArvoitus(p);
             if (Nyt == Vaihe.Pimea && !paluuTehty && (raapaistu || Time.time - pimeaAlku > PaluuS)) StartCoroutine(Paluu());
-            if (Nyt == Vaihe.Odottaa && p != null && Vector3.Distance(p.transform.position, ovi) < AlkuM) StartCoroutine(Kohtaus());
+            if (Nyt == Vaihe.Odottaa && !Ratkaistu && p != null && Vector3.Distance(p.transform.position, ovi) < AlkuM) StartCoroutine(Kohtaus());
             // Valaistuun kappeliin kohtauksen tai sammutuksen aikana (yli 2,5 m kaari-ovelta kohti alttaria): kappalainen näkee.
             if ((Nyt == Vaihe.Kohtaus || Nyt == Vaihe.Pimeys) && p != null && !nahty && Vector3.Distance(p.transform.position, ovi) > 2.5f
                 && Vector3.Distance(p.transform.position, alttari) < Vector3.Distance(ovi, alttari) + 0.5f)
@@ -196,7 +212,14 @@ namespace Matkakirja.Natiivi
             voudinKierros.Paivita(Time.deltaTime, s);
             // Sydämenlyönti voudin pysähtyessä, laskeutuessa ja katsoessa sekä kappalaisen paluun aikana (käsikirjoitus kohdat 3 ja 7).
             if (p != null) SeikkailuAanet.Silmukka("sydan", voudinKierros.Sydan || Nyt == Vaihe.Paluu, p.transform.position + Vector3.up * 1.2f, 0.8f);
-            if (voudinKierros.Tila != voudinEdellinen) { kirjaa?.Invoke($"seikkailu: vouti {voudinEdellinen} → {voudinKierros.Tila}"); voudinEdellinen = voudinKierros.Tila; }
+            if (voudinKierros.Tila != voudinEdellinen)
+            {
+                kirjaa?.Invoke($"seikkailu: vouti {voudinEdellinen} → {voudinKierros.Tila}");
+                // Valinnaiset repliikit (pelattavuusmalli 3.6, omistajan luvalla): epäily laskeutuessa, ote kiinniotossa; puuttuessa hiljaa.
+                if (voudinKierros.Tila == VoudinTila.Laskeutuu) SeikkailuRepliikit.SoitaTaiVara("vouti-epaily-1", null, hehku.transform.position + Vector3.up * 0.4f);
+                else if (voudinKierros.Tila == VoudinTila.Kiinni && p != null) SeikkailuRepliikit.SoitaTaiVara("vouti-ote-1", null, p.transform.position + Vector3.up * 1.6f);
+                voudinEdellinen = voudinKierros.Tila;
+            }
             // Hehku: portaikon yläpää, laskeutuessa portaikkoa alas kaari-ovelle (laskeutumisreitti).
             hehku.transform.position = Polulla(hehkuPolku, Math.Min(1.0, voudinKierros.Laskeutuminen), false);
             hehku.intensity = (float)voudinKierros.Hehku * 1.4f;
@@ -363,9 +386,24 @@ namespace Matkakirja.Natiivi
             if (es != null && !alttarilla.Contains("liuskekivi")) es.AsetaAlttarille("liuskekivi");
             yield return new WaitForSeconds(1.2f);
             var p = SeikkailuPelaaja.Aktiivinen;
-            SeikkailuAanet.Soita("pulu-kujerrus", (p != null ? p.transform.position : alttari) + Vector3.up * 1.7f, 0.9f);
+            // M-osa (huoneet 6–10) mukana: kappeli ei pääty dronekuvaan, vaan pala jatkuu huoneeseen 6 ja K2-nousu siirtyy pakon loppuun
+            // (K5 → drone nykyiseen linnaan, SeikkailuPako.Valmis).
+            if (SeikkailuPako.Aktiivinen != null)
+            {
+                kirjaa?.Invoke("seikkailu: kappeli valmis, pala jatkuu huoneeseen 6 (nousu pakon jälkeen)");
+                SeikkailuTallentaja.Aktiivinen?.Tallenna("kappeli valmis");
+                yield break;
+            }
             kirjaa?.Invoke("seikkailu: pelattava pala: loppu (kalkki alttarilla, liuskekivi laukussa)");
             yield return new WaitForSeconds(1.5f);
+            yield return Nousu();
+        }
+
+        void PakoValmis() { SeikkailuPako.Valmis -= PakoValmis; kirjaa?.Invoke("seikkailu: pelattava pala: loppu (pako valmis, K5 → drone)"); StartCoroutine(Nousu()); }
+
+        /// <summary>K2: drone nykyiseen linnaan (LS2:n SeikkailuNousu; varalla 9 s:n nousu), sitten tietokerroksen loppu ja tallennus pois.</summary>
+        IEnumerator Nousu()
+        {
             var kamera = FindKamera();
             if (kamera == null) yield break;
             DioraamaSovitin.KameraVapaa = true;
@@ -495,6 +533,7 @@ namespace Matkakirja.Natiivi
         {
             if (Aktiivinen == this) Aktiivinen = null;
             DioraamaHahmot3D.PiilotetutTilat.Remove("kappeli");
+            SeikkailuPako.Valmis -= PakoValmis;
             SeikkailuEsineet.Kolahti -= Kova; SeikkailuEsineet.Aanteli -= Tavallinen; SeikkailuEsineet.Raapaistiin -= Raapaisu; SeikkailuEsineet.Nostettiin -= Nosto; SeikkailuKynttilat.LuukkuAani -= Tavallinen; SeikkailuEsineet.AsetettiinAlttarille -= Asetettu; SeikkailuEsineet.Aanteli -= Koputus; SeikkailuEsineet.Alttari = null;
             if (voudinAskeleet != null) Destroy(voudinAskeleet.gameObject);
         }

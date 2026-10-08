@@ -1,5 +1,6 @@
 // LINNAN ESILATAUS (Päätoimittaja ja omistaja 4.10.2026): linna avataan vasta täydellä tarkkuudella, joten kun Olavinlinnan linssi on
-// pelaajan saatavilla, koko laitekohtainen paketti (Tiedostot: iPad ~430 Mt, iPhone ~190 Mt) ladataan taustalla suoraan levy-
+// pelaajan saatavilla, koko laitekohtainen paketti (Tiedostot: iPad ~430 Mt, iPhone ~190 Mt; 8.10. alkaen linnan muistibudjetin
+// tason mukaan, täydellä tasolla iPhonellakin ~430 Mt, LinnaMuisti) ladataan taustalla suoraan levy-
 // välimuistiin (DioraamaLevyvalimuisti.Esilataa) jo kartalla, kevyt kuori ensin. Omistajan linja: sama kaikilla verkoilla, ei
 // verkkotyypin tarkistusta. Kerran käynnistystä kohti; uusi osoitin (hash) siivoaa vanhan kansion Aseta-kutsussa. Linssin oma lataus
 // odottaa kesken olevan tiedoston eikä lataa sitä toista kertaa.
@@ -137,6 +138,8 @@ namespace Matkakirja.Natiivi
         {
             var l = new List<string>();
             void Lisaa(string p) { if (!string.IsNullOrEmpty(p) && !l.Contains(p)) l.Add(p); }
+            // Linnan muistibudjetti (omistaja 8.10.2026 19.5x) lasketaan tässä ja avaus pitää sen: samat tiedostot kuin avauksessa.
+            LinnaMuisti.Esilataus();
             bool astc = SystemInfo.SupportsTextureFormat(TextureFormat.ASTC_4x4);
             bool hamara = DioraamaTunnelma.Hamara(r);
             bool pieni = DioraamaSovitin.PieniLaite();
@@ -203,7 +206,7 @@ namespace Matkakirja.Natiivi
             var l = new List<string>();
             if (juuriJson == null || !juuriJson.TryGetValue("ymparisto", out var yo) || !(yo is Dictionary<string, object> y)) return l;
             string taso = DioraamaUlkokuori.Valittu.ToString().ToLowerInvariant();
-            bool puhelin = SystemInfo.deviceModel != null && SystemInfo.deviceModel.StartsWith("iPhone");
+            bool puhelin = !LinnaMuisti.Nyt.RajoituksetPois; // kuten DioraamaYmparisto (8.10.2026)
             string ortoTaso = taso == "huippu" && puhelin ? "normaali" : taso;
             void Keraa(object o, string polku)
             {

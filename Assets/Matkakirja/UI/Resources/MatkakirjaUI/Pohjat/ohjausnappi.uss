@@ -13,6 +13,24 @@
     align-items: center;
 }
 
+/* Seikkailu (Päätoimittaja 8.10.2026, Thiefin taso): ☰-ryhmä levossa himmeä kuten TAPPI (0,55); toimintonappi häivyttäen
+ * (Rakenne.Nayta: mk-auki), häivytys kuten TAPPI. */
+.mk-ohjausryhma.mk-ohjausryhma--lepo {
+    opacity: 0.55;
+    transition-property: opacity;
+    transition-duration: 0.2s;
+}
+
+.mk-ohjausryhma.mk-ohjausryhma--haivytys {
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 0.2s;
+}
+
+.mk-ohjausryhma.mk-ohjausryhma--haivytys.mk-auki {
+    opacity: 1;
+}
+
 /* Vasemman yläkulman ryhmä (oppaan vuorokaudenaika, omistaja 6.10. 18.5x). */
 .mk-ohjausryhma.mk-ohjausryhma--vasen {
     right: auto;
@@ -116,6 +134,11 @@
 
 .mk-tappi.mk-tappi--nakyy {
     opacity: 0.55;
+}
+
+/* Seikkailu (Päätoimittaja 8.10.2026, Thiefin taso): tappi näkyy vain kosketuksessa, levossa näkymätön (osuma-ala pysyy). */
+.mk-tappi.mk-tappi--nakyy.mk-tappi--vain-kosketus {
+    opacity: 0;
 }
 
 .mk-tappi.mk-tappi--nakyy.mk-tappi--kosketus {

@@ -1,6 +1,6 @@
 // PELATTAVUUSMALLIN RAJAT (Linssiseppä 2, 8.10.2026; pelattavuusmalli-olavinlinna.md kohta 11, Ydin-taso): valo edestä 5 m → epäily
 // ≤ 0,6 s; pimeä 0,1 kyyryssä 4 m → ei epäilyä 30 s:ssa; 3 m selän takana → ei havaintoa; pinnat × tila (18 arvoa, kohta 2.2); kivellä
-// kävely 2,4 m → tutkii, 2,6 m → ei, eri osa ei kuule (v44z-osat); vaiheiden kestot ±0,1 s (kohta 3.3) ja valppaus 60 s; varoitus
+// kävely 2,4 m → tutkii, 2,6 m → ei, eri osa ei kuule (PelattavaPala.Versio-osat); vaiheiden kestot ±0,1 s (kohta 3.3) ja valppaus 60 s; varoitus
 // ennen jokaista kiinniottoa kaikilla profiileilla (1 000 siemenajoa). Täydentää VartijaTestit- ja AskelaaniTestit-tiedostoja.
 using System;
 using System.Collections.Generic;
@@ -166,6 +166,16 @@ namespace Matkakirja.Linssit.Testit
                 Oleta.Tosi(vaiheissa >= Vartija.VaroitusS - Dt && merkki && sydan >= Vartija.SydanVahS - Dt, $"ajo {ajo} ({p.Nimi}): kiinni ilman varoitusta (vaiheissa {vaiheissa:F2} s, sydän {sydan:F2} s)");
             }
             Oleta.Tosi(kiinni > 30, $"kiinniottoja syntyi ({kiinni})");
+        }
+
+        // Kohta 3.3 / 4.1: kiinnijäännin jälkeinen valppaus (60 s) laskee myös torkkuvalla ja syövällä (Tott-kammion torkkuja).
+        [Testi] static void TorkkujanValppausLaskee()
+        {
+            var v = new Vartija(Paikallaan, yaw: 0) { Profiili = VartijaProfiili.Torkku, Torkkuu = true, Syo = true };
+            v.Nollaa(0, 0, valpas: true);
+            double x = 0, z = 0;
+            Aja(v, ref x, ref z, _ => Pelaaja(50, 50, 0.25, 0, nakyy: false), Vartija.ValppausS + 0.5);
+            Oleta.Tosi(v.Torkkuu && v.Valppaus == 0, $"torkkuja edelleen syömässä, valppaus ohi ({v.Valppaus:F1} s)");
         }
     }
 }

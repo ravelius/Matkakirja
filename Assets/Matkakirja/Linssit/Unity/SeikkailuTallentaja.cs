@@ -55,6 +55,13 @@ namespace Matkakirja.Natiivi
             try
             {
                 var ka = SeikkailuEsineet.Aktiivinen; t.Kadessa = ka != null ? ka.Kadessa : null;
+                // M-osa (huoneet 6–10): tila komponenteista, vain kun esineet ovat ladattuina (muuten vanhat M-avaimet jäävät).
+                if (ka != null && ka.Valmis)
+                {
+                    var m = new MTila();
+                    ka.TaytaM(m); SeikkailuSali.Aktiivinen?.TaytaM(m); SeikkailuKomero.Aktiivinen?.TaytaM(m); SeikkailuPako.Aktiivinen?.TaytaM(m);
+                    m.Kirjoita(t);
+                }
                 t.KulunutS = Time.unscaledTime - alku;
                 var tmp = polku + ".tmp";
                 File.WriteAllText(tmp, t.Kirjoita());

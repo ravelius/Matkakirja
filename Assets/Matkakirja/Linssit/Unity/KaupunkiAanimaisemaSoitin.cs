@@ -25,7 +25,7 @@ namespace Matkakirja.Natiivi
         public static Func<double, double, int> KirkkojaLahella;
         public static Func<string, string> SilmukanUrl;
         public static Func<double> Sade;
-        public static string KelloUrl = Juuri + "aanimaisema-v1/kello-01.mp3";
+        public static string KelloUrl = Juuri + "aanimaisema-v2/kello-01.mp3";   // v2 8.10.: tuuli-01 vaihdettu (laaduntarkistus), muut kuten v1
         /// <summary>Kaupungin tunnus (LS1: oppaan kaupunki); äänikartta ladataan Juuri + "aanikartta-v1/&lt;id&gt;.json" (Pelikoodari).</summary>
         public static Func<string> KaupunkiId;
         public const string Juuri = "https://media.matkakirja.app/aanet/";
@@ -150,9 +150,12 @@ namespace Matkakirja.Natiivi
                 Sade = Sade?.Invoke() ?? 0, Puhe = (tila != null && tila.Voimassa < 0.999) || OpasSovitin.OpasAaniSoi, Paalla = paalla && k.HasValue,
             }, Time.unscaledDeltaTime);
             float kokonais = (float)mikseri.Kokonais * Taso;
+            // ☰-mikseri (Natiivi-UI 8.10.): sade ja tuuli "Sää"-tasolla (Voima.Saa), muu äänimaisema "Äänimaisema"-tasolla (Voima.Tausta).
+            float saa = Asetukset.Taso(Voima.Saa), tausta = Asetukset.Taso(Voima.Tausta);
             for (int i = 0; i < lahteet.Length; i++)
             {
-                float t = (float)mikseri.Tasot[i] * kokonais;
+                string kerros = KaupunkiAanimaisema.Kerrokset[i];
+                float t = (float)mikseri.Tasot[i] * kokonais * (kerros == KaupunkiAanimaisema.Sade || kerros == KaupunkiAanimaisema.Tuuli ? saa : tausta);
                 var l = lahteet[i];
                 if (t > 0.001f && l == null) { Avaa(i); continue; }
                 if (l == null) continue;
@@ -247,8 +250,8 @@ namespace Matkakirja.Natiivi
         void Avaa(int i)
         {
             string kerros = KaupunkiAanimaisema.Kerrokset[i];
-            // Oletus: Pelikoodarin nimeäminen aanimaisema-v1/<kerros>-01.mp3 (aanimaisema.json korvaa, kun se on).
-            string url = SilmukanUrl != null ? SilmukanUrl(kerros) : Juuri + "aanimaisema-v1/" + kerros + "-01.mp3";
+            // Oletus: Pelikoodarin nimeäminen aanimaisema-v2/<kerros>-01.mp3 (aanimaisema.json korvaa, kun se on).
+            string url = SilmukanUrl != null ? SilmukanUrl(kerros) : Juuri + "aanimaisema-v2/" + kerros + "-01.mp3";
             if (string.IsNullOrEmpty(url) || ladataan.Contains(kerros)) return;
             // Puuttuva silmukka (404, esim. tuuli ennen Pelikoodarin vientiä) yritetään uudelleen vasta UusintaS:n päästä (simu 7.10.: 1 209 hakua).
             if (epaonnistunut.TryGetValue(url, out float milloin) && Time.unscaledTime - milloin < UusintaS) return;

@@ -161,6 +161,14 @@ namespace Matkakirja.Linssit.Dioraama
     }
 
     /// <summary>Pintapankin (js/dioraama/pankit/pinnat.js) rivi.</summary>
+    /// <summary>Pinnan detaljikartta (LR 8.10.): albedo 0,5-pohjainen overlay, normaali tangenttiavaruudessa (OpenGL Y+), karheus kiiltoon;
+    /// polut paketin juuresta, ASTC-vastineet valinnaisia (`astc: { albedo, normaali, karheus }`). M = toistoväli metreinä.</summary>
+    public sealed class Detalji
+    {
+        public string Pinta, Albedo, Normaali, Karheus, AstcAlbedo, AstcNormaali, AstcKarheus;
+        public double M = 1.5, Voima = 0.6;
+    }
+
     public sealed class Pinta
     {
         public string Id, Vari, Tekstuuri;
@@ -323,6 +331,19 @@ namespace Matkakirja.Linssit.Dioraama
         public Reitti Reitti;
         public List<Repliikki> Repliikit = new List<Repliikki>();
         public Repliikki Reaktio;
+        /// <summary>Final IK (Linnanrakentaja 5.10.2026): kädet esineisiin (`kadet`), tyhjä = ei käsi-IK:ta.</summary>
+        public List<KasiKohde> Kadet = new List<KasiKohde>();
+    }
+
+    /// <summary>Käden kohde (`kadet[]`): "tartu" = kämmen kiinteään kahvaan (Paikka ja Kierto sijoitettuina kuten hahmon paikka),
+    /// "kanna" = esine kiinni käden luussa (Siirto ja Kierto käden paikallisessa). Kasi "r" | "l"; Milloin "aina" | "tyo" |
+    /// "puhe" | "idle" (silmukka); Paino 0–1. Kierto = kämmenen kehys (kämmen −Y, sormet +Z), [x, y, z, w]; null = ei annettu.</summary>
+    public sealed class KasiKohde
+    {
+        public string Tyyppi = "tartu", Esine, Kasi = "r", Milloin = "aina";
+        public V3 Paikka, Siirto;
+        public double[] Kierto;
+        public double Paino = 1;
     }
 
     /// <summary>Yksi huone/tila rakennuksessa (kohta 1: TILA), täydennettynä rakennuskoneen glb-tiedoilla.</summary>
@@ -356,6 +377,9 @@ namespace Matkakirja.Linssit.Dioraama
         public string ValoAtlasAstc, ValoAtlasAstcPuoli;
         /// <summary>Hämärän valoatlas (`valoatlas.hamara { tiedosto, puoli, astc, astcPuoli }`); null = päiväversio myös hämärässä.</summary>
         public string HamaraAtlas, HamaraAtlasPuoli, HamaraAtlasAstc, HamaraAtlasAstcPuoli;
+        /// <summary>Kävelyosan valoatlas (LR 8.10., juna 169): atlas on pelkkä valo (valo × 0,5, ei väriä), joten pinnan väri tulee
+        /// pintamateriaalista (DioraamaValaistu _ValoVain). Tilojen atlakset (albedo × valo) ovat false.</summary>
+        public bool ValoVain;
         /// <summary>LINNA, leikkausikkuna kuoreen (speksi dioraama-rajapinnat-blender-20260929.md kohta 3):
         /// `leikkaus: { laajennus 1.0, kameraan true }` (oletus) tai käsin `{ min, max }` (korvaa rajat).</summary>
         public double LeikkausLaajennus = 1.0;
@@ -679,6 +703,12 @@ namespace Matkakirja.Linssit.Dioraama
         public List<Tila> Tilat = new List<Tila>();
         public Dictionary<string, Henkilo> Henkilot = new Dictionary<string, Henkilo>();
         public Dictionary<string, Pinta> Pinnat = new Dictionary<string, Pinta>();
+        /// <summary>Detaljikartat pintanimen mukaan (LR 8.10., juna 169: `detaljit: { kivi: { albedo, normaali, karheus, astc, m, voima } }`);
+        /// triplanaarisesti leivotun valon päälle (DioraamaDetalji.hlsl). Pinta ilman merkintää jää ilman detaljia.</summary>
+        public Dictionary<string, Detalji> Detaljit = new Dictionary<string, Detalji>();
+        /// <summary>Detaljit omassa tiedostossaan (LR v45l: `detaljit: "blender/materiaalit/detaljit.json"`, polku paketin juuresta);
+        /// null = rivissä tai ei detaljeja. Sovitin lataa ja jäsentää sen (LueDetaljit).</summary>
+        public string DetaljitTiedosto;
         /// <summary>Käytetyt liekkimääritykset (era 2); tyhjä vanhassa muodossa.</summary>
         public Dictionary<string, Liekki> Liekit = new Dictionary<string, Liekki>();
         public Dictionary<string, Aani> Aanet = new Dictionary<string, Aani>();
@@ -933,6 +963,8 @@ namespace Matkakirja.Linssit.Dioraama
                 var o = MiniJson.ObjektiTaiNull(pari.Value);
                 if (o != null) r.Henkilot[pari.Key] = LueHenkilo(pari.Key, o);
             }
+            if (MiniJson.Kentta(juuri, "detaljit") is string detaljitTiedosto) r.DetaljitTiedosto = detaljitTiedosto;
+            else LueDetaljit(MiniJson.ObjektiTaiNull(MiniJson.Kentta(juuri, "detaljit")), r.Detaljit);
             foreach (var pari in MiniJson.ObjektiTaiNull(MiniJson.Kentta(juuri, "pinnat")) ?? new Dictionary<string, object>())
             {
                 var o = MiniJson.ObjektiTaiNull(pari.Value);
@@ -1164,6 +1196,39 @@ namespace Matkakirja.Linssit.Dioraama
             return t;
         }
 
+        /// <summary>Detaljit pintanimen mukaan objektista `{ kivi: { albedo, normaali, karheus, astc: {…}, m, voima } }`.</summary>
+        public static void LueDetaljit(Dictionary<string, object> detaljit, Dictionary<string, Detalji> ulos)
+        {
+            foreach (var pari in detaljit ?? new Dictionary<string, object>())
+            {
+                var o = MiniJson.ObjektiTaiNull(pari.Value);
+                if (o == null) continue;
+                var astc = MiniJson.ObjektiTaiNull(MiniJson.Kentta(o, "astc"));
+                ulos[pari.Key] = new Detalji
+                {
+                    Pinta = pari.Key, Albedo = MiniJson.Teksti(o, "albedo"), Normaali = MiniJson.Teksti(o, "normaali"), Karheus = MiniJson.Teksti(o, "karheus"),
+                    AstcAlbedo = MiniJson.Teksti(astc, "albedo"), AstcNormaali = MiniJson.Teksti(astc, "normaali"), AstcKarheus = MiniJson.Teksti(astc, "karheus"),
+                    M = MiniJson.Luku(o, "m") is double m && m > 0.05 ? m : 1.5, Voima = Math.Max(0, Math.Min(1, MiniJson.Luku(o, "voima") ?? 0.6)),
+                };
+            }
+        }
+
+        /// <summary>Erillinen detaljitiedosto (LR v45l: `{ versio, koodaus, detaljit: {…} }`) rakennukseen.</summary>
+        public static void LueDetaljitTiedosto(string json, Rakennus r)
+            => LueDetaljit(MiniJson.ObjektiTaiNull(MiniJson.Kentta(MiniJson.ObjektiTaiNull(MiniJson.Jasenna(json)), "detaljit")), r.Detaljit);
+
+        /// <summary>`valoatlas: { tiedosto, puoli, astc, astcPuoli, hamara: {…} }` tilaan (tilat ja kävelyosat, LR 8.10.).</summary>
+        public static void LueValoAtlas(Tila t, Dictionary<string, object> valoatlas)
+        {
+            t.ValoAtlas = MiniJson.Teksti(valoatlas, "tiedosto");
+            t.ValoAtlasPuoli = MiniJson.Teksti(valoatlas, "puoli");
+            t.ValoAtlasAstc = MiniJson.Teksti(valoatlas, "astc");
+            t.ValoAtlasAstcPuoli = MiniJson.Teksti(valoatlas, "astcPuoli");
+            var hamaraAtlas = MiniJson.ObjektiTaiNull(MiniJson.Kentta(valoatlas, "hamara"));
+            t.HamaraAtlas = MiniJson.Teksti(hamaraAtlas, "tiedosto"); t.HamaraAtlasPuoli = MiniJson.Teksti(hamaraAtlas, "puoli");
+            t.HamaraAtlasAstc = MiniJson.Teksti(hamaraAtlas, "astc"); t.HamaraAtlasAstcPuoli = MiniJson.Teksti(hamaraAtlas, "astcPuoli");
+        }
+
         static Tila LueTila(Dictionary<string, object> o)
         {
             var t = new Tila
@@ -1283,14 +1348,7 @@ namespace Matkakirja.Linssit.Dioraama
                     t.LeikkausMax = LueV3(MiniJson.Kentta(leikkaus, "max"));
                 }
             }
-            var valoatlas = MiniJson.ObjektiTaiNull(MiniJson.Kentta(o, "valoatlas"));
-            t.ValoAtlas = MiniJson.Teksti(valoatlas, "tiedosto");
-            t.ValoAtlasPuoli = MiniJson.Teksti(valoatlas, "puoli");
-            t.ValoAtlasAstc = MiniJson.Teksti(valoatlas, "astc");
-            t.ValoAtlasAstcPuoli = MiniJson.Teksti(valoatlas, "astcPuoli");
-            var hamaraAtlas = MiniJson.ObjektiTaiNull(MiniJson.Kentta(valoatlas, "hamara"));
-            t.HamaraAtlas = MiniJson.Teksti(hamaraAtlas, "tiedosto"); t.HamaraAtlasPuoli = MiniJson.Teksti(hamaraAtlas, "puoli");
-            t.HamaraAtlasAstc = MiniJson.Teksti(hamaraAtlas, "astc"); t.HamaraAtlasAstcPuoli = MiniJson.Teksti(hamaraAtlas, "astcPuoli");
+            LueValoAtlas(t, MiniJson.ObjektiTaiNull(MiniJson.Kentta(o, "valoatlas")));
             t.GlbSha256 = MiniJson.Teksti(glb, "sha256");
             foreach (var rivi in MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(o, "liekit")))
             {
@@ -1412,6 +1470,24 @@ namespace Matkakirja.Linssit.Dioraama
             }
             var reaktio = MiniJson.ObjektiTaiNull(MiniJson.Kentta(o, "reaktio"));
             if (reaktio != null) h.Reaktio = LueRepliikki(reaktio);
+            foreach (var rivi in MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(o, "kadet")))
+            {
+                var k = MiniJson.ObjektiTaiNull(rivi);
+                if (k == null) continue;
+                var kk = new KasiKohde
+                {
+                    Tyyppi = MiniJson.Teksti(k, "tyyppi") ?? "tartu",
+                    Esine = MiniJson.Teksti(k, "esine"),
+                    Kasi = MiniJson.Teksti(k, "kasi") == "l" ? "l" : "r",
+                    Milloin = MiniJson.Teksti(k, "milloin") ?? "aina",
+                    Paino = Math.Clamp(MiniJson.Luku(k, "paino") ?? 1, 0, 1),
+                    Paikka = LueV3(MiniJson.Kentta(k, "paikka")),
+                    Siirto = LueV3(MiniJson.Kentta(k, "siirto")),
+                };
+                var q = MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(k, "kierto"));
+                if (q.Count == 4 && q.TrueForAll(x => x is double)) kk.Kierto = new[] { (double)q[0], (double)q[1], (double)q[2], (double)q[3] };
+                h.Kadet.Add(kk);
+            }
             return h;
         }
 

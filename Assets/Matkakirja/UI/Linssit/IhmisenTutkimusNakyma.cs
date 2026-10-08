@@ -24,7 +24,7 @@ namespace Matkakirja.Natiivi
         {
             ["paavirta"] = "Pää", ["eurooppa"] = "Eur.", ["siperia"] = "Sib.", ["amerikat"] = "Am.", ["tyynimeri"] = "Tyyni",
         };
-        static readonly Color Kulta = new Color32(212, 175, 90, 255);
+        static readonly Color Kulta = Tyylikirja.Kehys.Kulta;
 
         readonly VisualElement napit, pisteet, lappu;
         readonly Label lappuOtsikko, lappuTeksti;

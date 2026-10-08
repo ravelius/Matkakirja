@@ -1,0 +1,371 @@
+{
+  "R_km": 6360,
+  "RT_km": 6460,
+  "ap_etaisyys_km": 200,
+  "taivas_zeniitti": {
+    "kaava": "UE SkyViewLut: r = R + tason korkeus, beta = acos(sqrt(r² − R²) / r), ZHA = π − beta. u < 0,5: c = 1 − (1 − 2u)², θv = ZHA·c; muuten c = (2u − 1)², θv = ZHA + beta·c",
+    "kaanteinen": "θv < ZHA: u = (1 − sqrt(1 − θv/ZHA)) / 2; muuten u = 0,5 + 0,5·sqrt((θv − ZHA)/beta)"
+  },
+  "taivas_atsimuutti": {
+    "kaava": "cos φ = 1 − 2v² (φ = kulma auringon atsimuutista, tiheä auringon puolella)",
+    "kaanteinen": "v = sqrt((1 − cos φ)/2)"
+  },
+  "korkeustasot_z": "z = taso·32 + w·31, taso 0 = 500 m, 1 = 1500 m, 2 = 3000 m",
+  "tyokalu": "tools/ilmakeha/ilmakeha-lut.mjs",
+  "luotu": "2026-10-08T17:13:11.363Z",
+  "mie_kerroin": 1,
+  "albedo": 0.3,
+  "korkeudet_m": [
+    500,
+    1500,
+    3000
+  ],
+  "yksikko": "radianssi suhteessa auringon irradianssiin E = 1 (kanavittain valkoinen aurinko). Näyttöön: väri = valotus × L, valotus noin 10–30, sitten sävytys.",
+  "vakiot": {
+    "R_m": 6360000,
+    "RT_m": 6460000,
+    "rayleigh": [
+      0.000005802,
+      0.000013558,
+      0.0000331
+    ],
+    "HR_m": 8000,
+    "mie_sironta": 0.000003996,
+    "mie_sammutus": 0.0000044,
+    "HM_m": 1200,
+    "g": 0.8,
+    "otsoni": [
+      6.5e-7,
+      0.000001881,
+      8.5e-8
+    ]
+  },
+  "taulukot": [
+    {
+      "tiedosto": "lapaisy.bytes",
+      "muoto": "RGBAHalf little-endian, x nopein",
+      "mitat": [
+        256,
+        64
+      ],
+      "kuvaus": "Läpäisy ilmakehän ylärajalle, Hillaire 2020 / UE SkyAtmosphere -UV: H = sqrt(RT² − R²), rho = sqrt(r² − R²), d = −r·mu + sqrt(r²(mu² − 1) + RT²), u = (d − (RT − r)) / (rho + H − (RT − r)), v = rho / H (u, v ∈ [0,1], tekseli = u·(W−1), v·(H−1)). Käänteinen: rho = H·v, r = sqrt(rho² + R²), d = (RT − r) + u·(rho + H − (RT − r)), mu = (H² − rho² − d²) / (2·r·d). Maahan osuva suunta (mu < 0 ja r²(mu² − 1) + R² ≥ 0) → läpäisy 0 (varjostin tarkistaa)."
+    },
+    {
+      "tiedosto": "taivas.bytes",
+      "muoto": "RGBAHalf little-endian, x nopein",
+      "mitat": [
+        96,
+        64,
+        96
+      ],
+      "kuvaus": "Taivaan radianssi. u = x/(W−1): katseen zeniitti UE SkyViewLut -mappauksella (taivas_zeniitti, horisontti tason korkeudelta). v = y/(H−1): atsimuutti auringosta cos φ = 1 − 2v² (taivas_atsimuutti). z = taso·32 + w·31, w = auringon zeniitti / 100° (0–100°). Taso = KORKEUDET-indeksi; varjostin interpoloi kahden tason välillä."
+    },
+    {
+      "tiedosto": "ilmaperspektiivi.bytes",
+      "muoto": "RGBAHalf little-endian, x nopein",
+      "mitat": [
+        32,
+        32,
+        96
+      ],
+      "kuvaus": "Sironnut valo kamerasta maan pinnalle (kohde korkeudella max(0, kamera − d)). u = x/(W−1): d = u² · 200 km. v = y/(H−1): cos γ = 1 − 2v² (γ katseen ja auringon välinen kulma; käänteinen v = sqrt((1 − cos γ)/2), tiheä auringon suunnassa). z kuten taivaassa. RGB = L_in, A = keskimääräinen läpäisy. Pinta: väri = pinta·T + L_in·valotus."
+    },
+    {
+      "tiedosto": "ilmaperspektiivi-lapaisy.bytes",
+      "muoto": "RGBAHalf little-endian, x nopein",
+      "mitat": [
+        32,
+        32,
+        96
+      ],
+      "kuvaus": "Sama kuin ilmaperspektiivi, RGB = läpäisy kanavittain (punertuminen kaukana)."
+    }
+  ],
+  "naytteet": [
+    {
+      "taulukko": "lapaisy",
+      "tekseli": [
+        0,
+        0
+      ],
+      "syote": {
+        "korkeus_m": 0,
+        "mu": 1
+      },
+      "odotettu": [
+        0.94043,
+        0.868164,
+        0.762695,
+        1
+      ]
+    },
+    {
+      "taulukko": "lapaisy",
+      "tekseli": [
+        128,
+        10
+      ],
+      "syote": {
+        "korkeus_m": 2538.8,
+        "mu": 0.08332
+      },
+      "odotettu": [
+        0.640625,
+        0.340332,
+        0.129639,
+        1
+      ]
+    },
+    {
+      "taulukko": "lapaisy",
+      "tekseli": [
+        255,
+        32
+      ],
+      "syote": {
+        "korkeus_m": 25949.8,
+        "mu": -0.090059
+      },
+      "odotettu": [
+        0.0121536,
+        0.000109494,
+        0,
+        1
+      ]
+    },
+    {
+      "taulukko": "lapaisy",
+      "tekseli": [
+        40,
+        63
+      ],
+      "syote": {
+        "korkeus_m": 100000,
+        "mu": -0.027494
+      },
+      "odotettu": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "taulukko": "lapaisy",
+      "tekseli": [
+        200,
+        50
+      ],
+      "syote": {
+        "korkeus_m": 63169.6,
+        "mu": -0.101536
+      },
+      "odotettu": [
+        0.751953,
+        0.458008,
+        0.625488,
+        1
+      ]
+    },
+    {
+      "taulukko": "taivas",
+      "tekseli": [
+        48,
+        0,
+        10
+      ],
+      "syote": {
+        "korkeus_m": 500,
+        "katseen_zeniitti_deg": 90.7283,
+        "atsimuutti_auringosta_deg": 0,
+        "auringon_zeniitti_deg": 32.2581
+      },
+      "odotettu": [
+        0.0454102,
+        0.0715332,
+        0.104675,
+        1
+      ]
+    },
+    {
+      "taulukko": "taivas",
+      "tekseli": [
+        60,
+        63,
+        40
+      ],
+      "syote": {
+        "korkeus_m": 1500,
+        "katseen_zeniitti_deg": 97.3908,
+        "atsimuutti_auringosta_deg": 180,
+        "auringon_zeniitti_deg": 25.8065
+      },
+      "odotettu": [
+        0.00855255,
+        0.0174408,
+        0.0384827,
+        1
+      ]
+    },
+    {
+      "taulukko": "taivas",
+      "tekseli": [
+        95,
+        20,
+        70
+      ],
+      "syote": {
+        "korkeus_m": 3000,
+        "katseen_zeniitti_deg": 180,
+        "atsimuutti_auringosta_deg": 37.0188,
+        "auringon_zeniitti_deg": 19.3548
+      },
+      "odotettu": [
+        0.00249672,
+        0.00539398,
+        0.0127945,
+        1
+      ]
+    },
+    {
+      "taulukko": "taivas",
+      "tekseli": [
+        24,
+        32,
+        31
+      ],
+      "syote": {
+        "korkeus_m": 500,
+        "katseen_zeniitti_deg": 68.5138,
+        "atsimuutti_auringosta_deg": 61.053,
+        "auringon_zeniitti_deg": 100
+      },
+      "odotettu": [
+        1.19209e-7,
+        1.19209e-7,
+        4.17233e-7,
+        1
+      ]
+    },
+    {
+      "taulukko": "taivas",
+      "tekseli": [
+        47,
+        10,
+        95
+      ],
+      "syote": {
+        "korkeus_m": 3000,
+        "katseen_zeniitti_deg": 91.7493,
+        "atsimuutti_auringosta_deg": 18.2664,
+        "auringon_zeniitti_deg": 100
+      },
+      "odotettu": [
+        0.0000637174,
+        0.0000025034,
+        7.15256e-7,
+        1
+      ]
+    },
+    {
+      "taulukko": "ilmaperspektiivi",
+      "tekseli": [
+        0,
+        16,
+        5
+      ],
+      "syote": {
+        "korkeus_m": 500,
+        "etaisyys_m": 1,
+        "cos_gamma": 0.467222,
+        "auringon_zeniitti_deg": 16.129
+      },
+      "odotettu": [
+        8.34465e-7,
+        0.00000172853,
+        0.00000411272,
+        1
+      ]
+    },
+    {
+      "taulukko": "ilmaperspektiivi",
+      "tekseli": [
+        31,
+        31,
+        20
+      ],
+      "syote": {
+        "korkeus_m": 500,
+        "etaisyys_m": 200000,
+        "cos_gamma": -1,
+        "auringon_zeniitti_deg": 64.5161
+      },
+      "odotettu": [
+        0.0736694,
+        0.0910645,
+        0.0939331,
+        0.0543518
+      ]
+    },
+    {
+      "taulukko": "ilmaperspektiivi",
+      "tekseli": [
+        16,
+        0,
+        50
+      ],
+      "syote": {
+        "korkeus_m": 1500,
+        "etaisyys_m": 53277.84,
+        "cos_gamma": 1,
+        "auringon_zeniitti_deg": 58.0645
+      },
+      "odotettu": [
+        0.400635,
+        0.320557,
+        0.226563,
+        0.42627
+      ]
+    },
+    {
+      "taulukko": "ilmaperspektiivi",
+      "tekseli": [
+        24,
+        20,
+        80
+      ],
+      "syote": {
+        "korkeus_m": 3000,
+        "etaisyys_m": 119875.13,
+        "cos_gamma": 0.167534,
+        "auringon_zeniitti_deg": 51.6129
+      },
+      "odotettu": [
+        0.0435181,
+        0.0668945,
+        0.0890503,
+        0.222656
+      ]
+    },
+    {
+      "taulukko": "ilmaperspektiivi",
+      "tekseli": [
+        8,
+        28,
+        95
+      ],
+      "syote": {
+        "korkeus_m": 3000,
+        "etaisyys_m": 13319.46,
+        "cos_gamma": -0.631634,
+        "auringon_zeniitti_deg": 100
+      },
+      "odotettu": [
+        5.96046e-8,
+        5.96046e-8,
+        1.78814e-7,
+        0.8125
+      ]
+    }
+  ]
+}

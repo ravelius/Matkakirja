@@ -35,7 +35,7 @@ namespace Matkakirja.Natiivi
     // vahingossa Matkakirja.NimiLadonta.cs:n omaa V3:a.
     using V3 = Matkakirja.Linssit.Dioraama.V3;
 
-    public sealed class DioraamaHahmot3D
+    public sealed partial class DioraamaHahmot3D
     {
         /// <summary>"poikki hahmot 2d|3d" (DioraamaSovitin.Komento): oletus 3d (tosi). Vaikuttaa SEURAAVIIN
         /// LisaaTila-kutsuihin ("poikki lataa" lataa tilat uudelleen) — sama sopimus kuin DioraamaLiekit.
@@ -62,6 +62,8 @@ namespace Matkakirja.Natiivi
             public SolmuMalli[] SkinSolmut;
             public bool Skin;
             public List<Texture2D> Tekstuurit = new List<Texture2D>();
+            /// <summary>Valmiiksi ladatut ASTC-kuvat glTF:n images-indeksin mukaan (juna 169; null = glb:n PNG/JPEG).</summary>
+            public Texture2D[] AstcKuvat;
         }
 
         /// <summary>Yksi hahmo-instanssi näyttämöllä. Juuri/SolmuT ovat null, kunnes henkilön glb on latautunut
@@ -90,6 +92,9 @@ namespace Matkakirja.Natiivi
             public float KatseKulma;
             public int PaaIndeksi = -2;
             public Quaternion PaaKierto = Quaternion.identity;
+            public RootMotion.FinalIK.FullBodyBipedIK Ik; // Final IK (DioraamaHahmot3D.IK.cs): luodaan ensimmäisellä kohdistuksella
+            public bool IkYritetty; public float JalkaMittausT;
+            public string Silmukka; public float KasiPainoR, KasiPainoL; // kädet esineisiin (kadet[].milloin)
             public string EleNimi; public double EleAlku; // kertaeleen (ele_<ele>) vuoro ja alkuhetki
             // Eleet puheen tahdissa (7.10.): ajoitettu kertaele, kuulijan nyökkäys, puhujan katseen kohde, vakaa siemen.
             public string AjoitettuEle; public double AjoitettuAlku = double.NegativeInfinity; public int EleLaskuri;
@@ -98,15 +103,17 @@ namespace Matkakirja.Natiivi
             public int Siemen = int.MinValue;
             // Irrallinen hahmo (historiamoottori V2c: soutaja veneessä): vanhempi, leike ja ulkoinen kello; ei tilan paikkaa eikä eleitä.
             public Transform Isa; public Func<(string Leike, double Aika)> IrrallinenTila; public GlbAnimaatio IrrallinenEdellinen; public Quaternion IrrallinenKierto = Quaternion.identity;
+            /// <summary>Jalat maahan Final IK Grounderilla (seikkailun kävelevät hahmot; omistaja 8.10.).</summary>
+            public bool IrrallinenJalat;
         }
 
         /// <summary>Irrallinen hahmo (V2c): henkilön glb, vanhempana isa (esim. veneen istuin_soutaja, ilman omaa siirtoa tai kiertoa),
         /// leike soi kellon ajasta (soutu.json: veneen ja soutajan leikkeet samasta kellosta). Glb latautuu IrrallistenGlb-listan kautta.</summary>
-        public void LisaaIrrallinen(Rakennus rakennus, string henkiloId, Transform isa, Func<(string Leike, double Aika)> tila, Quaternion? kierto = null)
+        public void LisaaIrrallinen(Rakennus rakennus, string henkiloId, Transform isa, Func<(string Leike, double Aika)> tila, Quaternion? kierto = null, bool jalat = false)
         {
             if (rakennus?.Henkilot == null || !rakennus.Henkilot.TryGetValue(henkiloId, out var henkilo) || string.IsNullOrEmpty(henkilo.Malli3d?.NatiiviGlb)) return;
             var e = new Esiintyma { TilaId = "irrallinen", HahmoId = henkiloId, Hahmo = new Hahmo { Id = henkiloId, HenkiloId = henkiloId }, Henkilo = henkilo,
-                Isa = isa, IrrallinenTila = tila, IrrallinenKierto = kierto ?? Quaternion.identity };
+                Isa = isa, IrrallinenTila = tila, IrrallinenKierto = kierto ?? Quaternion.identity, IrrallinenJalat = jalat };
             esiintymat.Add(e);
             if (malliCache.TryGetValue(henkilo.Malli3d.NatiiviGlb, out var malli)) Rakenna(e, malli);
         }
@@ -161,6 +168,7 @@ namespace Matkakirja.Natiivi
                 foreach (var k in e.IrrallinenEdellinen.Kanavat) { int i = k.Solmu; var g = e.Malli.Glb.Solmut[i];
                     Array.Copy(g.Translation, 0, sk.T, i * 3, 3); Array.Copy(g.Rotation, 0, sk.R, i * 4, 4); Array.Copy(g.Scale, 0, sk.S, i * 3, 3); }
             e.IrrallinenEdellinen = anim;
+            if (e.IrrallinenJalat) IkPalauta(e);
             DioraamaSekoitin.Nayte(anim, anim.Kesto > 0 ? (float)(aika % anim.Kesto) : 0f, sk.T, sk.R, sk.S);
             foreach (var k in anim.Kanavat)
             {
@@ -170,6 +178,7 @@ namespace Matkakirja.Natiivi
                 else if (k.Polku == 1) tr.localRotation = new Quaternion(sk.R[i * 4], sk.R[i * 4 + 1], sk.R[i * 4 + 2], sk.R[i * 4 + 3]);
                 else tr.localScale = new Vector3(sk.S[i * 3], sk.S[i * 3 + 1], sk.S[i * 3 + 2]);
             }
+            if (e.IrrallinenJalat) IkJalat(e, leike);
         }
 
         /// <summary>Keskustelun puhuja (KuunnelmaKaistale.PuhuvaHahmo; DioraamaSovitin asettaa joka kehys) ja tila. Saman huoneen
@@ -394,11 +403,11 @@ namespace Matkakirja.Natiivi
         /// translation/rotation ovat siis JO Unity-peilattuja). Rakentaa jaetun Mesh/Material-mallin kerran ja
         /// rakentaa Transform-hierarkian kaikille tätä glb-polkua jo odottaville Esiintymille (LisaaTila saattoi
         /// luoda niitä ennen tätä kutsua — sama jälkikäteistäydennys kuin DioraamaHahmot.AsetaAtlas).</summary>
-        public void AsetaGlb(string glbPolku, GlbMalli malli)
+        public void AsetaGlb(string glbPolku, GlbMalli malli, Texture2D[] astcKuvat = null)
         {
             if (string.IsNullOrEmpty(glbPolku) || malli?.Solmut == null || malli.Solmut.Count == 0 || malliCache.ContainsKey(glbPolku)) return;
             var materiaaliCache = new Dictionary<string, Material>(StringComparer.Ordinal);
-            var hm = new HenkiloMalli { Glb = malli, Solmut = new SolmuMalli[malli.Solmut.Count] };
+            var hm = new HenkiloMalli { Glb = malli, Solmut = new SolmuMalli[malli.Solmut.Count], AstcKuvat = astcKuvat };
             hm.Skin = malli.Skinit.Count > 0 && malli.Animaatiot.Count > 0;
             if (hm.Skin) hm.SkinSolmut = new SolmuMalli[malli.Solmut.Count];
             for (int i = 0; i < malli.Solmut.Count; i++)
@@ -719,9 +728,15 @@ namespace Matkakirja.Natiivi
         {
             string avain = "kuva:" + kuva;
             if (cache.TryGetValue(avain, out var m)) return m;
-            var tex = new Texture2D(2, 2, TextureFormat.RGBA32, true, false) { name = "Hahmo3D-kuva" + kuva };
-            if (!tex.LoadImage(malli.Kuvat[kuva], false)) { UnityEngine.Object.Destroy(tex); tex = null; }
-            else { tex.wrapMode = TextureWrapMode.Repeat; tex.Apply(true, true); hm.Tekstuurit.Add(tex); }
+            // ASTC 6×6 + mipit (Natiiviseppä/LS2 8.10.: RGBA32-hahmot veivät 66 Mt), muuten glb:n kuva RGBA32:na kuten ennen.
+            var tex = hm.AstcKuvat != null && kuva < hm.AstcKuvat.Length ? hm.AstcKuvat[kuva] : null;
+            if (tex != null) { tex.wrapMode = TextureWrapMode.Repeat; hm.Tekstuurit.Add(tex); }
+            else
+            {
+                tex = new Texture2D(2, 2, TextureFormat.RGBA32, true, false) { name = "Hahmo3D-kuva" + kuva };
+                if (!tex.LoadImage(malli.Kuvat[kuva], false)) { UnityEngine.Object.Destroy(tex); tex = null; }
+                else { tex.wrapMode = TextureWrapMode.Repeat; tex.Apply(true, true); hm.Tekstuurit.Add(tex); }
+            }
             m = new Material(Varjostin()) { name = "Hahmo3D/" + avain };
             m.SetColor(IdVari, Color.white);
             if (tex != null) { m.SetTexture(IdPohjaKuva, tex); m.SetFloat(IdTila, 1f); }
@@ -843,6 +858,7 @@ namespace Matkakirja.Natiivi
             if (!string.IsNullOrEmpty(perus) && perus != "idle" && perus != "kavely" && tavoite != perus && !reitilla
                 && e.Malli.Glb.Animaatio(Leike(m3, perus + "_puhe")) != null)
                 tavoite = perus + "_puhe";
+            e.Silmukka = tavoite;
             string leike = Leike(m3, tavoite);
             bool ensimmainen = e.Sekoitin.Nykyinen == null;
             // Idle ↔ puhe: pidempi häivytys (omistaja 5.10.: siirtymät "outoja"), muut ennallaan.
@@ -884,6 +900,7 @@ namespace Matkakirja.Natiivi
             float dt = double.IsNaN(e.EdellinenT) ? (float)(VaiheYksikko(e.HahmoId) * kesto) : (float)Math.Clamp(t - e.EdellinenT, 0, 0.1);
             e.EdellinenT = t;
             e.Sekoitin.Paivita(dt);
+            IkPalauta(e);
             PaivitaKasvot(e, t);
             var s = e.Sekoitin;
             for (int i = 0; i < e.SolmuT.Length; i++)
@@ -895,6 +912,7 @@ namespace Matkakirja.Natiivi
                 tr.localScale = new Vector3(s.S[i * 3], s.S[i * 3 + 1], s.S[i * 3 + 2]);
             }
             PaivitaSijainti(e, t);
+            Ik(e);
             PaaKatse(e, t, e.KuulijaEle != null && e.Sekoitin.Nykyinen == e.KuulijaEle);
         }
 

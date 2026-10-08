@@ -49,7 +49,7 @@ namespace Matkakirja.Natiivi
         readonly UiKerros kerros;
         readonly VisualElement juuri;
         readonly List<Pallo> pallot = new List<Pallo>();
-        KaupunkiPalloKuva kuva;
+        KaupunkiPalloKuva kuva, kipsiKuva;
         PalloKierto kierto;
         bool listaVaihtui = true;
         float lataus = -1f;
@@ -99,6 +99,7 @@ namespace Matkakirja.Natiivi
             pallot.Clear();
             if (lista == null || lista.Count == 0) return;
             kuva ??= KaupunkiPalloKuva.Luo(Pikselit);
+            if (lista.Any(k => !Kehityskaupunki(k.Id))) kipsiKuva ??= KaupunkiPalloKuva.Luo(Pikselit, kipsi: true);
             foreach (var k in lista)
             {
                 if (string.IsNullOrEmpty(k.Id) || double.IsNaN(k.Lat) || double.IsNaN(k.Lon)) continue;
@@ -113,11 +114,30 @@ namespace Matkakirja.Natiivi
                 juuri.Add(b);
                 var kv = Rakenne.El("mk-erikoisnosto-paa__kuva", b, PickingMode.Ignore);
                 kv.name = b.name;   // todistusajon ui-puu listaa kuvaelementit (napin nimi ei näy siellä)
-                if (kuva?.Kuva != null) kv.style.backgroundImage = new StyleBackground(Background.FromRenderTexture(kuva.Kuva));
+                // Kehityskaupunki: värillinen pallo; muut kipsinä (omistaja 8.10.2026 klo 20.4x), toimivat samoin.
+                var oma = Kehityskaupunki(id) || kipsiKuva?.Kuva == null ? kuva : kipsiKuva;
+                if (oma?.Kuva != null) kv.style.backgroundImage = new StyleBackground(Background.FromRenderTexture(oma.Kuva));
                 pallot.Add(new Pallo { Id = id, Nimi = k.Nimi, Lat = k.Lat, Lon = k.Lon, Nappi = b, Kuva = kv });
             }
             Debug.Log($"MATKAKIRJA kaupunkipallot: {pallot.Count} kaupunkia: {string.Join(", ", pallot.Select(p => p.Id))}");
         }
+
+        /// <summary>
+        /// Pidemmälle viety kaupunki (omistaja 8.10.2026: Tukholma ja Pariisi): lista on Linssisepän Ytimessä
+        /// (Matkakirja.Linssit.Kehityskaupungit.On); kunnes se on mukana, varana omistajan nimeämät.
+        /// </summary>
+        static bool Kehityskaupunki(string id)
+        {
+            if (kehitysOn == null && !kehitysHaettu)
+            {
+                kehitysHaettu = true;
+                var m = System.Type.GetType("Matkakirja.Linssit.Kehityskaupungit, Matkakirja.Linssit.Ydin")?.GetMethod("On", new[] { typeof(string) });
+                if (m != null && m.ReturnType == typeof(bool)) kehitysOn = (System.Func<string, bool>)System.Delegate.CreateDelegate(typeof(System.Func<string, bool>), m);
+            }
+            return kehitysOn != null ? kehitysOn(id) : id == "tukholma" || id == "pariisi";
+        }
+        static System.Func<string, bool> kehitysOn;
+        static bool kehitysHaettu;
 
         static void Avaa(string id)
         {
@@ -129,6 +149,7 @@ namespace Matkakirja.Natiivi
         {
             if (pallot.Count == 0) return;
             kuva?.Askel();
+            kipsiKuva?.Askel();
             bool sallittu = Sallittu();
             juuri.style.display = sallittu ? DisplayStyle.Flex : DisplayStyle.None;
             kierto ??= Object.FindAnyObjectByType<PalloKierto>();

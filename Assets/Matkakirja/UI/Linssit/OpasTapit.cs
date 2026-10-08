@@ -13,7 +13,9 @@ namespace Matkakirja.Natiivi
 {
     public sealed class OpasTapit
     {
-        /// <summary>Vasen tappi: y = lähemmäs (+) / kauemmas (−); x ei käytössä. −1…1, irrotus → 0.</summary>
+        /// <summary>Vasen tappi: y = lähemmäs (+) / kauemmas (−); x = sivuttain (+ oikealle) vain vapaassa tilassa (omistaja 8.10.:
+        /// "vasemmanpuoleiseen joystickiin pitää lisätä vapaassa liikkumistilassa sivuttaissuunnassa liikkuminen"; LS1 OpasVapaaLento),
+        /// pysähdyksellä x ei vaikuta. −1…1, irrotus → 0.</summary>
         public static Vector2 Vasen { get; private set; }
         /// <summary>Oikea tappi: x = kierto (+ myötäpäivään), y = korkeus (+ ylemmäs); −1…1, irrotus → 0.</summary>
         public static Vector2 Oikea { get; private set; }
@@ -28,10 +30,22 @@ namespace Matkakirja.Natiivi
 
         public OpasTapit(VisualElement isa)
         {
-            vasen = new Tappi(isa, "mk-tappi mk-tappi--vasen", PystyIkoni, v => Vasen = new Vector2(0f, v.y));
+            vasen = new Tappi(isa, "mk-tappi mk-tappi--vasen", PystyIkoni, v => Vasen = v);
             oikea = new Tappi(isa, "mk-tappi mk-tappi--oikea", Ikonit.PaivitaVersio, v => Oikea = v);
             vasen.Juuri.tooltip = "Lähemmäs ja kauemmas";
             oikea.Juuri.tooltip = "Kierrä kohdetta ja nosta tai laske kameraa";
+        }
+
+        bool vapaa;
+
+        /// <summary>Vapaa tila: vasemman tapin kuvake nelisuuntaiseksi (kompassi, liike kaikkiin suuntiin), pysähdyksellä pystynuolet.</summary>
+        public void Vapaa(bool paalla)
+        {
+            if (paalla == vapaa || vasen?.Nuppi == null) return;
+            vapaa = paalla;
+            vasen.Nuppi.Clear();
+            Rakenne.Ikoni(paalla ? Ikonit.Viiva["kompassi"] : PystyIkoni, "mk-tappi__ikoni", vasen.Nuppi);
+            vasen.Juuri.tooltip = paalla ? "Liiku eteen, taakse ja sivuille" : "Lähemmäs ja kauemmas";
         }
 
         /// <summary>Näkyvyys, alareuna ja etäisyys sivureunasta joka ruudulla OpasValikolta (juna 156: iPadilla sisemmäs ja

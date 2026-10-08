@@ -24,7 +24,7 @@ namespace Matkakirja.Natiivi
 {
     public class IhmisenMatka2Maisema : MonoBehaviour
     {
-        public const string Juuri = "https://media.matkakirja.app/aanet/tehosteet/ihmisen-matka/";
+        public const string Juuri = "https://media.matkakirja.app/aanet/tehosteet/ihmisen-matka-v2/";   // v2 8.10.: luola, tundratuuli, kylma-tuuli korjattu (laaduntarkistus)
         public const string Manifesti = Juuri + "manifesti.json";
         /// <summary>Taso (web MAISEMAN_VOIMA): kuulokokeen nuppi, omistaja säätää laitteellaan.</summary>
         public const float MaisemanVoima = 0.10f;

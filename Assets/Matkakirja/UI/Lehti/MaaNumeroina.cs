@@ -307,8 +307,8 @@ namespace Matkakirja.Natiivi
         protected const float L = 300f;
         protected const float Akselikoko = 8.5f, Pienikoko = 7.5f;
         protected static readonly Color Kulta = new Color32(164, 105, 28, 255);           // #a4691c
-        protected static readonly Color Apuviiva = new Color32(70, 51, 31, 46);           // 0.18
-        protected static readonly Color Pohjaviiva = new Color32(70, 51, 31, 153);        // 0.6
+        protected static readonly Color Apuviiva = Tyylikirja.Kehys.MapInk18;
+        protected static readonly Color Pohjaviiva = Tyylikirja.Kehys.MapInk60;
 
         readonly float k;
         struct Teksti { public Label L; public float X, Y, Ankkuri, Koko; }
@@ -394,8 +394,8 @@ namespace Matkakirja.Natiivi
     public sealed class NumeroKayra : NumeroKuvio
     {
         const float Vasen = 36f, Oikea = 290f, Yla = 12f;
-        static readonly Color Suomi = new Color32(70, 51, 31, 97);          // 0.38
-        static readonly Color Silloin = new Color32(138, 97, 20, 255);      // #8a6114
+        static readonly Color Suomi = Tyylikirja.Kehys.MapInk40;
+        static readonly Color Silloin = Tyylikirja.Kehys.AccentDark;      // #8a6114
         const float EnnusteAlfa = 0.45f;
 
         readonly NumeroSarja sarja, suomi;
@@ -546,7 +546,7 @@ namespace Matkakirja.Natiivi
     public sealed class NumeroPyramidi : NumeroKuvio
     {
         const float Korkeus = 168f, Keski = 150f, Kaytava = 10f, Leveinta = 96f, Ala = 150f, Yla = 16f;
-        static readonly Color Miehet = new Color32(70, 51, 31, 140);        // 0.55
+        static readonly Color Miehet = Tyylikirja.Kehys.MapInk55;
         static readonly Color Naiset = new Color32(164, 105, 28, 199);      // 0.78
 
         readonly NumeroPyramidiTiedot t;

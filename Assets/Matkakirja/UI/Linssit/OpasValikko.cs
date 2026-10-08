@@ -166,7 +166,7 @@ namespace Matkakirja.Natiivi
         bool riviAuki;
         IVisualElementScheduledItem esittely;
         bool nappiNakyy;
-        enum Nakyma { Paa, Takyt, Maanosat, Maat, Kaupungit, Kysy, Liiku, Mika, Aika, Lahteet }
+        enum Nakyma { Paa, Takyt, Maanosat, Maat, Kaupungit, Kysy, Liiku, Mika, Aika, Lahteet, Aanet }
 
         /// <summary>Oppaan linssi auki (✕ pois, LinssiUi.PaivitaSulku).</summary>
         public static bool Nakyy => Viimeisin != null && Viimeisin.nakyy;
@@ -594,6 +594,14 @@ namespace Matkakirja.Natiivi
             siirtymaKuva.style.left = 0; siirtymaKuva.style.right = 0; siirtymaKuva.style.top = 0; siirtymaKuva.style.bottom = 0;
             siirtymaKuva.style.backgroundSize = new BackgroundSize(Length.Percent(100), Length.Percent(100));
             siirtymaKuva.style.display = DisplayStyle.None;
+            // Kerroksellinen pallo (LATAUSKUVA-pohja) heti stillin päälle, liu'un ja tekstien alle.
+            palloKerrokset = new Latauskuva(siirtyma);
+            palloKerrokset.Juuri.RemoveFromHierarchy();
+            siirtyma.Insert(siirtyma.IndexOf(siirtymaKuva) + 1, palloKerrokset.Juuri);
+            // Kerrokset levylle valmiiksi (laitteen pysty- ja vaakarajaus), jotta ne ehtivät jo ensimmäiseen siirtymään.
+            int pysty = Matkakirja.Linssit.LatausLiike.Rajausindeksi(Mathf.Min(Screen.width, Screen.height), Mathf.Max(Screen.width, Screen.height));
+            foreach (int r in new[] { pysty, 2 })
+                foreach (var k in new[] { "tausta-maaankkuri", "kori", "kupu" }) Kuvat.Esilataa(PalloKerrosUrl(r, k));
             // Tumma liuku leveän vaakaruudun alaosaan (4:3-rajauksesta näkyy vain kaista): kuvan oma alasävy (Tyylikirja.Kehys.Bg).
             siirtymaLiuku = Rakenne.El(null, siirtyma, PickingMode.Ignore);
             siirtymaLiuku.style.position = Position.Absolute;
@@ -735,6 +743,7 @@ namespace Matkakirja.Natiivi
         {
             if (siirtyma.style.display == DisplayStyle.None) return;
             if (palloNakyy && palloKuvaNyt != null) SovitaPalloKuva(palloKuvaNyt);
+            if (palloKerroksetNakyy) SovitaPalloKerrokset();
             if (OpasSovitin.Kaupunkitila && palloNimi != OpasSovitin.PalloKuvaRuudulle()) AsetaPalloKuva(true);
             AsetaSiirtymaIon();
             Debug.Log($"MATKAKIRJA opas: siirtymä kierretty {siirtyma.worldBound.width:0}×{siirtyma.worldBound.height:0}, rajaus {OpasSovitin.PalloKuvaRuudulle()} (näkyy {palloNimi ?? "-"})");
@@ -767,6 +776,7 @@ namespace Matkakirja.Natiivi
                 palloNakyy = false;
                 palloNimi = null; palloKuvaNyt = null;
                 palloLiike?.Pause();
+                PiilotaPalloKerrokset();
                 Latauskuva.AsetaRajaus(siirtymaKuva, null);
                 siirtymaKuva.style.backgroundSize = new BackgroundSize(Length.Percent(100), Length.Percent(100));
                 siirtymaKuva.style.display = DisplayStyle.None;
@@ -787,6 +797,7 @@ namespace Matkakirja.Natiivi
             if (t == null) { OpasSovitin.PalloTekstuuriMuistiin(n); return; }   // valmistuessa PalloTekstuuriValmis → tänne uudelleen
             SovitaPalloKuva(t);
             palloNimi = n; palloKuvaNyt = t;
+            HaePalloKerrokset(n);
             siirtymaTeksti.style.scale = UiKerros.Tabletti ? new Scale(new Vector3(IpadIsonnus, IpadIsonnus, 1f)) : (StyleScale)StyleKeyword.Null;
             // Kierron rajausvaihto (kuva jo näkyvissä) vaihtaa suoraan ilman häivytystä mustasta.
             bool myohassa = !palloNakyy && siirtyma.resolvedStyle.opacity > 0.5f && Time.realtimeSinceStartup - siirtymaAlku > 0.3f;
@@ -813,6 +824,103 @@ namespace Matkakirja.Natiivi
         // takaisin) taustan rajauksena; 33 ms UI-ajastin, ei täyttä ruudunpäivitystä.
         IVisualElementScheduledItem palloLiike;
         float palloLiikeAlku;
+
+        // KERROKSELLINEN PALLO (omistaja 8.10.: "ilmapallo kuva pitää tehdä kahdesta osasta uudestaan niin että pallo heiluu hitaasti
+        // ruudulla ja köysi piirretään vektorina", "heilunnaksi riittää hyvin vähäeleinen liike", ankkuriköysi; LS1 sopi 17.5x, että
+        // Natiivi-UI kytkee): Codexin tausta (maa-ankkuri), kori ja kupu R2:sta Kuvat.Hae-reitillä; kun kaikki kolme ovat saatavilla,
+        // ne korvaavat stillin (häivytys), muuten still lähentyy kuten ennen. Kupu heiluu yläosastaan ±0,6° / 3 pt / 7,5 s, kori ±0,5°
+        // / 2 pt eri vaiheessa; 4 riippuköyttä korin kulmista kuvun alareunaan ja ankkuriköysi korista maahan vektoreina (Latauskuva.
+        // Koysi). Kiinnityspisteet Sisältökirjurin mittauksesta (alfa-bbox, osuudet koko kuvasta, sisaltokirjuri-vertailu/
+        // pallo-kiinnityspisteet-osuuksina.json). Tausta polulta 20261008b (Codexin korjattu, saumaton; Sisältökirjuri tarkisti 8.10.),
+        // kupu ja kori 20261008; puuttuessa still pysyy.
+        const string PalloKerrosJuuri = "https://media.matkakirja.app/julisteet/latauskuva-kuumailmapallo-kerrokset/";
+        static string PalloKerrosUrl(int rajaus, string kerros) =>
+            PalloKerrosJuuri + (kerros == "tausta-maaankkuri" ? "20261008b" : "20261008") + "/latauskuva-pallo-" + PalloKerrosRajaus[rajaus] + "-" + kerros + ".png";
+        static readonly string[] PalloKerrosRajaus = { "iphone", "ipad-pysty", "ipad-vaaka" };
+        /// <summary>Rajauksittain: kuvun 4 ja korin 4 kiinnityspistettä (takavasen, takaoikea, etuvasen, etuoikea), kuvun ja korin
+        /// kääntöpiste, ankkuriköyden korin piste ja maa-ankkuri.</summary>
+        static readonly (Vector2[] Kupu, Vector2[] Kori, Vector2 KupuKaanto, Vector2 KoriKaanto, Vector2 Ankkuri, Vector2 Maa)[] PalloPisteet =
+        {
+            (new[] { new Vector2(0.4732f, 0.4657f), new Vector2(0.5423f, 0.4657f), new Vector2(0.4922f, 0.4705f), new Vector2(0.5233f, 0.4713f) },
+             new[] { new Vector2(0.4888f, 0.5455f), new Vector2(0.5302f, 0.5455f), new Vector2(0.4870f, 0.5486f), new Vector2(0.5302f, 0.5486f) },
+             new Vector2(0.5069f, 0.3301f), new Vector2(0.5095f, 0.5467f), new Vector2(0.5095f, 0.5590f), new Vector2(0.5186f, 0.7913f)),
+            (new[] { new Vector2(0.4840f, 0.4657f), new Vector2(0.5266f, 0.4657f), new Vector2(0.4957f, 0.4705f), new Vector2(0.5149f, 0.4713f) },
+             new[] { new Vector2(0.4936f, 0.5455f), new Vector2(0.5191f, 0.5455f), new Vector2(0.4926f, 0.5486f), new Vector2(0.5191f, 0.5486f) },
+             new Vector2(0.5048f, 0.3301f), new Vector2(0.5064f, 0.5467f), new Vector2(0.5064f, 0.5590f), new Vector2(0.5120f, 0.7913f)),
+            (new[] { new Vector2(0.4880f, 0.3415f), new Vector2(0.5199f, 0.3415f), new Vector2(0.4968f, 0.3479f), new Vector2(0.5112f, 0.3489f) },
+             new[] { new Vector2(0.4952f, 0.4479f), new Vector2(0.5144f, 0.4479f), new Vector2(0.4944f, 0.4521f), new Vector2(0.5144f, 0.4521f) },
+             new Vector2(0.5036f, 0.1606f), new Vector2(0.5048f, 0.4495f), new Vector2(0.5048f, 0.4660f), new Vector2(0.5090f, 0.7759f)),
+        };
+        Latauskuva palloKerrokset;
+        readonly Texture2D[] palloKerrosKuvat = new Texture2D[3];
+        int palloKerrosRajaus = -1, palloKerrosKerta;
+        bool palloKerroksetNakyy;
+
+        void HaePalloKerrokset(string stilliNimi)
+        {
+            int r = System.Array.FindIndex(PalloKerrosRajaus, x => stilliNimi.Contains("-" + x + "."));
+            if (r < 0 || r == palloKerrosRajaus) return;
+            palloKerrosRajaus = r;
+            int kerta = ++palloKerrosKerta;
+            var nimet = new[] { "tausta-maaankkuri", "kori", "kupu" };
+            for (int i = 0; i < 3; i++)
+            {
+                int j = i;
+                Kuvat.Hae(PalloKerrosUrl(r, nimet[i]), t =>
+                {
+                    if (kerta != palloKerrosKerta || !palloNakyy) return;
+                    if (palloKerrosKuvat[j] != null && palloKerrosKuvat[j] != t) Kuvat.Vapauta(palloKerrosKuvat[j]);
+                    palloKerrosKuvat[j] = t;
+                    if (t != null) Kuvat.Kiinnita(t);
+                    if (palloKerrosKuvat[0] != null && palloKerrosKuvat[1] != null && palloKerrosKuvat[2] != null) NaytaPalloKerrokset(r);
+                });
+            }
+        }
+
+        void NaytaPalloKerrokset(int r)
+        {
+            var p = PalloPisteet[r];
+            var koydet = new List<Latauskuva.Koysi>();
+            for (int i = 0; i < 4; i++)
+                koydet.Add(new Latauskuva.Koysi { KiintoKerros = 0, Kiinto = p.Kori[i], Kerros = 1, Kiinnitys = p.Kupu[i], LeveysPt = 1f, Riippuma = 0.02f });
+            koydet.Add(Latauskuva.Koysi.Ankkuri(p.Maa, 0, p.Ankkuri));
+            palloKerrokset.Aseta(palloKerrosKuvat[0], new[]
+            {
+                new Latauskuva.Kerros { Kuva = palloKerrosKuvat[1], Paikka = new Rect(0, 0, 1, 1), Kaanto = p.KoriKaanto,
+                    Liike = new Matkakirja.Linssit.LatausLiike.Profiili { KulmaAste = 0.5, NousuPt = 2, JaksoS = 7.5, Vaihe = -0.6 } },
+                new Latauskuva.Kerros { Kuva = palloKerrosKuvat[2], Paikka = new Rect(0, 0, 1, 1), Kaanto = p.KupuKaanto,
+                    Liike = new Matkakirja.Linssit.LatausLiike.Profiili { KulmaAste = 0.6, NousuPt = 3, JaksoS = 7.5 } },
+            }, koydet);
+            palloKerroksetNakyy = true;
+            SovitaPalloKerrokset();
+            bool myohassa = siirtyma.resolvedStyle.opacity > 0.5f && Time.realtimeSinceStartup - siirtymaAlku > 0.3f;
+            palloKerrokset.Nayta(true, myohassa);
+            // Still pois kerrosten alta (ei kaksoiskuvaa reunoilla); häivytyksen ajan näkyvissä.
+            siirtymaKuva.schedule.Execute(() => { if (palloKerroksetNakyy) { palloLiike?.Pause(); siirtymaKuva.style.visibility = Visibility.Hidden; } })
+                .StartingIn(myohassa ? Tyylikirja.Kesto.Avaus + 50 : 0);
+            Debug.Log($"MATKAKIRJA opas: pallon kerroksellinen latauskuva {PalloKerrosRajaus[r]}");
+        }
+
+        void SovitaPalloKerrokset()
+        {
+            var t = palloKerrosKuvat[0];
+            if (t == null) return;
+            var koko = siirtyma.parent?.worldBound.size ?? Vector2.one;
+            float w = Mathf.Max(koko.x, 1f), h = Mathf.Max(koko.y, 1f);
+            var (x, y, kw, kh) = Matkakirja.Linssit.LatausLiike.Peita(w, h, t.width / (double)Mathf.Max(1, t.height), w > h * 1.5f ? VaakaKuvanAlku : -1);
+            palloKerrokset.Sovita(new Rect((float)x, (float)y, (float)kw, (float)kh));
+        }
+
+        void PiilotaPalloKerrokset()
+        {
+            palloKerrosKerta++;
+            palloKerrosRajaus = -1;
+            palloKerroksetNakyy = false;
+            palloKerrokset?.Nayta(false);
+            palloKerrokset?.Aseta(null);
+            siirtymaKuva.style.visibility = StyleKeyword.Null;
+            for (int i = 0; i < 3; i++) { if (palloKerrosKuvat[i] != null) Kuvat.Vapauta(palloKerrosKuvat[i]); palloKerrosKuvat[i] = null; }
+        }
 
         void KaynnistaPalloLiike()
         {
@@ -1295,6 +1403,7 @@ namespace Matkakirja.Natiivi
             if (ohjainRivi.style.right.value.value != riviOikea) ohjainRivi.style.right = riviOikea;
             if (ohjainRivi.style.bottom.value.value != ohjainAla) ohjainRivi.style.bottom = ohjainAla;
 
+            tapit.Vapaa(VapaaTila);
             tapit.Paivita((pysahdys || VapaaTila) && !Auki && !(chat?.Auki ?? false), tappiAla, sivu);
             // Kohteen nimilappu pysähdyksellä (myös valikon aikana; chat peittää sen joka tapauksessa).
             nimilappu.Paivita(pysahdys && !(chat?.Auki ?? false) ? l.Nykyinen.Nimi : null);
@@ -1569,13 +1678,27 @@ namespace Matkakirja.Natiivi
                 case Nakyma.Lahteet:
                     Takaisin("Lähteet", Nakyma.Paa);
                     Komento("Kartta- ja maastoaineistot", () => { KrediititTiivis.NaytaKaikki(); Debug.Log("MATKAKIRJA opas: kartta-aineistot"); });
+                    // Kenttä-äänitysten nimeämiset (Pelikoodari 8.10.2026, CC BY / BY-SA): oma alanäkymä.
+                    Alanakyma("Äänet", () => Avaa(Nakyma.Aanet));
                     // Säätiedot (Pelikoodari 8.10.: /opas/saa, MET Norwayn lisenssiehto): aina näkyvissä, kun sää on käytettävissä.
                     Kirjasimet.Aseta(Rakenne.Teksti(SaaLahde, "mk-linssivalikko__lahde", Kohde), Kirjasin.Moderni);
+                    // Korkeusmallit (Päätoimittaja 8.10.2026: LS1:n korkeuslukija 25d32fd39; tekstit Karttasepän korkeus-20261008-jsoneista).
+                    foreach (var k in KorkeusLahteet) Kirjasimet.Aseta(Rakenne.Teksti(k, "mk-linssivalikko__lahde", Kohde), Kirjasin.Moderni);
+                    // Elävän kaupungin aineistot (LS1 8.10.2026: ElavaKaupunki.Krediitti, esim. OSM ODbL ja ESA WorldCover; null = ei riviä).
+                    string elava = ElavaKrediitti();
+                    if (!string.IsNullOrWhiteSpace(elava)) Kirjasimet.Aseta(Rakenne.Teksti(elava.Trim(), "mk-linssivalikko__lahde", Kohde), Kirjasin.Moderni);
                     Viiva();
                     Vieritys();
                     var lahteet = KuvaLahteet();
                     if (lahteet.Count == 0) Kirjasimet.Aseta(Rakenne.Teksti("Ei kuvalähteitä.", "mk-linssivalikko__lahde", rivit), Kirjasin.Moderni);
                     foreach (var l in lahteet) Kirjasimet.Aseta(Rakenne.Teksti(l, "mk-linssivalikko__lahde", rivit), Kirjasin.Moderni);
+                    break;
+                case Nakyma.Aanet:
+                    Takaisin("Äänet", Nakyma.Lahteet);
+                    Vieritys();
+                    var aanet = AaniLahteet();
+                    if (aanet.Count == 0) Kirjasimet.Aseta(Rakenne.Teksti("Ei äänilähteitä.", "mk-linssivalikko__lahde", rivit), Kirjasin.Moderni);
+                    foreach (var l in aanet) Kirjasimet.Aseta(Rakenne.Teksti(l, "mk-linssivalikko__lahde", rivit), Kirjasin.Moderni);
                     break;
                 case Nakyma.Kysy:
                     RakennaKysy();
@@ -1866,6 +1989,13 @@ namespace Matkakirja.Natiivi
         };
         const string SaatilaAvain = "matkakirja-pallo-saatila";
         /// <summary>Säätietojen lähderivi (CC BY 4.0 -ehto; Pelikoodarin worker /opas/saa).</summary>
+        static readonly string[] KorkeusLahteet =
+        {
+            "Korkeus, Pariisi: © IGN – LiDAR HD (Licence Ouverte Etalab 2.0)",
+            "Korkeus, Tukholma ja muut kaupungit: Copernicus GLO-30 © DLR e.V. 2010–2014 ja © Airbus Defence and Space GmbH 2014–2018, Copernicus-ohjelma (EU/ESA)",
+            "Rakennukset: © OpenStreetMap contributors (ODbL)",
+        };
+
         const string SaaLahde = "Säätiedot: MET Norway (Norjan ilmatieteen laitos), CC BY 4.0";
 
         /// <summary>LS1:n silta (junat 165–166): KaupunkiKuva.Valinta "paiva" | "yo" = voimassa oleva Saatila.Aika.</summary>
@@ -2120,6 +2250,38 @@ namespace Matkakirja.Natiivi
                 string rivi = string.Join(" · ", osat);
                 // Havainnekuva näkyy aina (tekijä usein tyhjä, LS1); muu kuva vain, jos tekijä tai lisenssi on annettu.
                 if ((havainne || osat.Count > 1) && !tulos.Contains(rivi)) tulos.Add(rivi);
+            }
+            return tulos;
+        }
+
+        /// <summary>LS1:n Matkakirja.Natiivi.ElavaKaupunki.Krediitti heijastuksella (junasta riippumaton); null, jos ei ole.</summary>
+        static string ElavaKrediitti() =>
+            typeof(OpasValikko).Assembly.GetType("Matkakirja.Natiivi.ElavaKaupunki")
+                ?.GetProperty("Krediitti", System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Static)?.GetValue(null) as string;
+
+        [Serializable] sealed class AaniNimeaminen { public string lahde, nimi, tekija, lisenssi, url; }
+        [Serializable] sealed class AaniLahdeTiedosto { public AaniNimeaminen[] nimeamiset; }
+
+        /// <summary>
+        /// Pelin kenttä-äänitysten nimeämiset (Pelikoodari 8.10.2026: 43 CC BY / BY-SA -äänitystä maisemakoreissa ja kaupunkien
+        /// äänissä; lisenssiehto): "nimi · tekijä · lisenssi" kuten kuvalähteet. Data: kopio webin data/aanilahteet.json:sta
+        /// (Resources/Lahteet), joten näkyy myös ilman verkkoa; päivitys kopioimalla tiedosto uudelleen.
+        /// </summary>
+        static List<string> AaniLahteet()
+        {
+            var tulos = new List<string>();
+            var ta = Resources.Load<TextAsset>("Lahteet/aanilahteet");
+            if (ta == null) return tulos;
+            AaniLahdeTiedosto d = null;
+            try { d = JsonUtility.FromJson<AaniLahdeTiedosto>(ta.text); }
+            catch (Exception e) { Debug.LogWarning("MATKAKIRJA opas: aanilahteet.json: " + e.Message); }
+            if (d?.nimeamiset == null) return tulos;
+            foreach (var a in d.nimeamiset)
+            {
+                var osat = new[] { a?.nimi, a?.tekija, a?.lisenssi }.Where(x => !string.IsNullOrWhiteSpace(x)).Select(x => x.Trim()).ToList();
+                if (osat.Count < 2) continue;
+                string rivi = string.Join(" · ", osat);
+                if (!tulos.Contains(rivi)) tulos.Add(rivi);
             }
             return tulos;
         }

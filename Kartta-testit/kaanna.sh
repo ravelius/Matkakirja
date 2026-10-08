@@ -41,6 +41,7 @@ LAHTEET="
 ../Assets/Matkakirja/Kartta/KaupunkiRasteri.cs
 ../Assets/Matkakirja/Kartta/LaattaPortit.cs
 ../Assets/Matkakirja/Kartta/Lampopaatos.cs
+../Assets/Matkakirja/Kartta/Laitetaso.cs
 ../Assets/Matkakirja/Kartta/LennonAikajana.cs
 ../Assets/Matkakirja/Kartta/LennonKamerareitti.cs
 ../Assets/Matkakirja/Kartta/LennonV3.cs

@@ -1,0 +1,32 @@
+{
+ "huone": "keittio",
+ "tiedosto": "keittio-keskustelu.mp3",
+ "kesto_s": 31.16,
+ "vuorot": [
+  {
+   "puhuja": "kokki",
+   "alku_s": 0.04,
+   "loppu_s": 9.83,
+   "teksti": "Kalaa ja naurista, naurista ja kalaa! Jos vouti vielä kerran kysyy, mitä tänään syödään, sanon: samaa mitä järvi ja pelto antaa."
+  },
+  {
+   "puhuja": "vesipoika",
+   "alku_s": 10.5,
+   "loppu_s": 16.55,
+   "teksti": "Kaksi sankoa lisää. Tuli on palanu aamusta asti – kohta tää keittiö kiehuu itekin."
+  },
+  {
+   "puhuja": "kokki",
+   "alku_s": 17.16,
+   "loppu_s": 24.53,
+   "teksti": "Vie tää vati Linnantupaan sotilaille. Yläsaliin mä vien itse – siellä ei kelpaa sankonkantajan likaiset sormet."
+  },
+  {
+   "puhuja": "vouti",
+   "alku_s": 25.09,
+   "loppu_s": 30.94,
+   "teksti": "Kokki, en ehdi aterioimaan. Iltarukous alkaa, ja minun on vielä pistäydyttävä kappelissa."
+  }
+ ],
+ "esivara_siirto_s": 0.04
+}

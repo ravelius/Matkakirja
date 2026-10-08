@@ -1,0 +1,19 @@
+{
+  "tyokalu": "tools/ilmakeha/pilvet.mjs",
+  "luotu": "2026-10-08T17:13:53.213Z",
+  "koko": [
+    1024,
+    1024
+  ],
+  "siemen": 7,
+  "saumaton": true,
+  "kanavat": {
+    "R": "isot kumpupilvet (Worley 4/8/16/32 + gradientti 4–64), venytetty 1–99 %",
+    "G": "yksityiskohta (gradientti 16–256), venytetty 1–99 %",
+    "B": "0 (ei käytössä)"
+  },
+  "tuonti": "Linear (ei sRGB), Repeat, mipit päällä, muoto R8G8 tai ASTC 6×6",
+  "yhdistelma": "TOISTON ESTO (PT 8.10.): näytteistä R kolmesti eri mittakaavoissa ja kulmissa: uv1 = uv; uv2 = rot(37°)·uv·0,413 + (0,31, 0,17); uv3 = rot(−61°)·uv·0,137 + (0,71, 0,43); D = 0,55·R(uv1) + 0,25·R(uv2) + 0,2·R(uv3). Mittakaavat eivät ole rationaalisessa suhteessa, joten kuvio ei toistu näkyvästi.",
+  "peitto": "pilvi = smoothstep(1 − peitto, 1 − peitto + 0,2, D − 0,15·(1 − G(uv·2,3))); peitto 0–1 sääkerroksesta",
+  "mittakaava_ehdotus": "uv1:n jakso noin 30 km maassa (uv3:n jakso noin 220 km)"
+}

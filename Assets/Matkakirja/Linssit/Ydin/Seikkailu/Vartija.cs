@@ -19,13 +19,19 @@ namespace Matkakirja.Linssit.Seikkailu
         public bool Havaitsee = true, Kuulee = true, Ottaa = true;
         /// <summary>Tarjotin on kulkulupa (pelattavuusmalli 2.4/8.1): kävelijää tarjotin kädessä ei epäillä. Kokki epäilee silti.</summary>
         public bool TarjotinLupa = true;
+        /// <summary>Naamio (pelattavuusmalli 8.2 huone 6: esiliina ja myssy) on kulkulupa kuten tarjotin; kokki tuntee väkensä.</summary>
+        public bool NaamioLupa = true;
+        /// <summary>Tunnistaa naamioituneen, kun tämä on alle TunnistaaM:n päässä yli TunnistaaS (apulainen 2 m, 2 s; 0 = ei tunnista).</summary>
+        public double TunnistaaM, TunnistaaS;
         /// <summary>Jahtinopeus m/s; 0 = ei jahtaa (kokki huutaa paikaltaan, apulainen).</summary>
         public double JahtaaMs = 2.2;
 
         public static readonly VartijaProfiili Vartija = new VartijaProfiili();
         public static readonly VartijaProfiili Portinvartija = new VartijaProfiili { Nimi = "portinvartija" };
-        public static readonly VartijaProfiili Kokki = new VartijaProfiili { Nimi = "kokki", NakoM = 6, NakoKulma = 45, JahtaaMs = 0, Ottaa = false, TarjotinLupa = false };
-        public static readonly VartijaProfiili Apulainen = new VartijaProfiili { Nimi = "apulainen", NakoM = 5, NakoKulma = 45, Kuulee = false, JahtaaMs = 0, Ottaa = false };
+        public static readonly VartijaProfiili Kokki = new VartijaProfiili { Nimi = "kokki", NakoM = 6, NakoKulma = 45, JahtaaMs = 0, Ottaa = false, TarjotinLupa = false, NaamioLupa = false };
+        public static readonly VartijaProfiili Apulainen = new VartijaProfiili { Nimi = "apulainen", NakoM = 5, NakoKulma = 45, Kuulee = false, JahtaaMs = 0, Ottaa = false, TunnistaaM = 2, TunnistaaS = 2 };
+        /// <summary>Linnaväki (huone 6: syövät ja noppaa pelaavat): näkee ja huutaa, ei jahtaa eikä ota kiinni; naamio kelpaa.</summary>
+        public static readonly VartijaProfiili Linnavaki = new VartijaProfiili { Nimi = "linnavaki", NakoM = 7, NakoKulma = 50, JahtaaMs = 0, Ottaa = false };
         public static readonly VartijaProfiili Renki = new VartijaProfiili { Nimi = "renki", Havaitsee = false, Kuulee = false, JahtaaMs = 0, Ottaa = false };
         /// <summary>Torkkuva vartija (muuriportaiden juurella): torkkuessa ei näe, kävelyn ääni herättää (nousee 1,5 s), syödessä näkee
         /// vain katsejaksoissa (pää alas 6 s, katse 3 s); muuten kuin vartija.</summary>
@@ -33,7 +39,8 @@ namespace Matkakirja.Linssit.Seikkailu
 
         public static VartijaProfiili Hae(string nimi) => nimi switch
         {
-            "portinvartija" => Portinvartija, "kokki" => Kokki, "apulainen" => Apulainen, "renki" => Renki, "vesipoika" => Renki, "torkku" => Torkku, _ => Vartija,
+            "portinvartija" => Portinvartija, "kokki" => Kokki, "apulainen" => Apulainen, "renki" => Renki, "vesipoika" => Renki, "torkku" => Torkku,
+            "linnavaki" => Linnavaki, _ => Vartija,
         };
     }
 
@@ -43,7 +50,13 @@ namespace Matkakirja.Linssit.Seikkailu
         public readonly double X, Z, KuuluvuusM;
         /// <summary>Kävelyosa, jossa ääni syntyi (seinäsääntö, Askelaani.Kuuluvuus); null = ei tiedossa.</summary>
         public readonly string Osa;
-        public Aanilahde(double x, double z, double kuuluvuusM, string osa = null) { X = x; Z = z; KuuluvuusM = kuuluvuusM; Osa = osa; }
+        /// <summary>Korkeus (m; NaN = ei tiedossa): yli KerrosM:n korkeusero puolittaa kuuluvuuden (LS2 8.10.: harjan vartijat kuulivat
+        /// 3,2 m alempana tikkaiden juurella kävelevän, koska muurikäytävä, harja ja ranta ovat samaa osaa).</summary>
+        public readonly double Y;
+        public const double KerrosM = 2.5;
+        public Aanilahde(double x, double z, double kuuluvuusM, string osa = null, double y = double.NaN) { X = x; Z = z; KuuluvuusM = kuuluvuusM; Osa = osa; Y = y; }
+        /// <summary>Kuuluvuus kuulijan korkeudella: yli 2,5 m:n korkeusero → puolet.</summary>
+        public double KuuluvuusKorkeudella(double kuulijaY) => !double.IsNaN(Y) && Math.Abs(Y - kuulijaY) > KerrosM ? KuuluvuusM * 0.5 : KuuluvuusM;
     }
 
     /// <summary>Yhden kehyksen havaintosyöte sovittimelta.</summary>
@@ -60,6 +73,8 @@ namespace Matkakirja.Linssit.Seikkailu
         public double? PelaajaVauhti;
         /// <summary>Pelaajalla tarjotin kädessä (kulkulupa: ei epäilyä, jos ei juokse eikä kyyristele).</summary>
         public bool Tarjotin;
+        /// <summary>Pelaaja naamioitunut palvelijaksi (esiliina ja myssy): kulkulupa kuten tarjotin, apulainen tunnistaa läheltä.</summary>
+        public bool Naamio;
     }
 
     public sealed class Vartija
@@ -95,6 +110,9 @@ namespace Matkakirja.Linssit.Seikkailu
         public const double NousuS = 1.5, SyoAlasS = 6, SyoKatseS = 3;
         /// <summary>Torkkuu (profiili torkku): ei näe; ääni herättää. Syö: näkee vain katsejaksoissa.</summary>
         public bool Torkkuu, Syo;
+        /// <summary>Uppoutunut katselemaan (huone 8: vartija ja talonpoika katsovat järvelle Muurinharja-kohtauksessa): ei selkäaistia
+        /// (LahiM), näkee vain katseensa suuntaan. Pelattavuusmalli 8.2: köysikieppi otetaan heidän takaansa kyyryssä.</summary>
+        public bool Uppoutunut;
         // Riidan ikkuna (pelattavuusmalli 8.1 huone 2): portinvartija riitelee soutajan kanssa 12 s selin porttiin, näkö 4 m ±35°.
         public const double RiitaS = 12, RiitaNakoM = 4, RiitaKulma = 35;
         public double Riita { get; private set; }
@@ -109,6 +127,9 @@ namespace Matkakirja.Linssit.Seikkailu
         public double OteS { get; private set; }
         /// <summary>Horjuu tai nousee (irtipääsy, torkkujan herääminen): sovitin soittaa nousu_istumasta torkkujalle.</summary>
         public bool Horjuu => horjahdus > 0;
+
+        /// <summary>Ote ilman jahtia (huone 6: vouti tarttuu ranteeseen, kun avaimia otetaan hänen katsoessaan): irtipääsyn ikkuna alkaa.</summary>
+        public void OtaKiinni() { Tila = VartijanTila.Kiinni; OteS = 0; Vauhti = 0; }
 
         /// <summary>Pelaaja kiertyy irti otteesta: onnistuu ikkunan aikana kerran 60 s:ssa. Hahmo horjahtaa (3 s) ja jatkaa jahtia.</summary>
         public bool Irrottaudu()
@@ -149,13 +170,14 @@ namespace Matkakirja.Linssit.Seikkailu
             if (s.Piilossa || !s.NakolinjaVapaa || !Profiili.Havaitsee) return 0;
             if (Torkkuu && !SyoKatsoo) return 0;
             if (s.Tarjotin && Profiili.TarjotinLupa && !s.Hiipii && (s.PelaajaVauhti ?? 0) < 2.5 && Tila != VartijanTila.Halytys) return 0;
+            if (s.Naamio && Profiili.NaamioLupa && !s.Hiipii && (s.PelaajaVauhti ?? 0) < 2.5 && Tila != VartijanTila.Halytys && !Tunnisti) return 0;
             double dx = s.PelaajaX - s.VartijaX, dz = s.PelaajaZ - s.VartijaZ, d = Math.Sqrt(dx * dx + dz * dz);
             double nako = Riita > 0 ? RiitaNakoM : Valppaus > 0 ? Math.Max(Profiili.NakoM, ValpasNakoM * Profiili.NakoM / NakoM) : Profiili.NakoM;
             double liike = s.PelaajaVauhti is double pv ? (pv < 0.15 ? 0.8 : pv > 2.5 ? 1.25 : 1.0) : 1.0;
             double ulottuma = nako * (0.35 + 0.65 * Math.Max(0, Math.Min(1, s.Valoisuus))) * (s.Hiipii ? 0.7 : 1) * liike * (Helpotettu ? 0.85 : 1);
             if (d > ulottuma) return 0;
             double ero = Math.Abs(Kulma(Suunta(dx, dz) - Yaw));
-            bool lahella = d < LahiM && Riita <= 0;         // aivan vieressä vartija tuntee pelaajan selkänsäkin takaa (ei riidan tuoksinassa)
+            bool lahella = d < LahiM && Riita <= 0 && !Uppoutunut;   // aivan vieressä vartija tuntee pelaajan selkänsäkin takaa (ei riidan tuoksinassa eikä uppoutuneena)
             double kulma = Riita > 0 ? RiitaKulma : Profiili.NakoKulma;
             if (ero > kulma && !lahella) return 0;
             double keskelle = ero <= kulma ? 1 - 0.5 * ero / kulma : 0.35;
@@ -165,9 +187,21 @@ namespace Matkakirja.Linssit.Seikkailu
             return (0.2 + 0.65 * lahelle) * keskelle;
         }
 
+        double tunnistusS;
+        /// <summary>Apulainen on ollut naamioituneen vieressä tarpeeksi kauan ("Kuka sinä olet?"): naamio ei enää suojaa häneltä.</summary>
+        public bool Tunnisti => Profiili.TunnistaaS > 0 && tunnistusS >= Profiili.TunnistaaS;
+
         public void Paivita(double dt, VartijanSyote s)
         {
             kello += dt;
+            // Valppaus vähenee kaikissa tiloissa (LS1:n läpipeluuajuri 8.10.: torkkuvilla ja syövillä se jäi pysyväksi, raja 0,2 ikuisesti).
+            if (Valppaus > 0) Valppaus = Math.Max(0, Valppaus - dt);
+            if (Profiili.TunnistaaM > 0)
+            {
+                double tx = s.PelaajaX - s.VartijaX, tz = s.PelaajaZ - s.VartijaZ;
+                bool lahella = s.Naamio && s.NakolinjaVapaa && !s.Piilossa && tx * tx + tz * tz < Profiili.TunnistaaM * Profiili.TunnistaaM;
+                tunnistusS = lahella ? tunnistusS + dt : Tunnisti && s.Naamio ? tunnistusS : 0;   // tunnistettu pysyy, kunnes naamio riisutaan
+            }
             if (Tila == VartijanTila.Kiinni) { Vauhti = 0; OteS += dt; return; }
             if (horjahdus > 0) { horjahdus -= dt; Vauhti = 0; return; }
             if (Riita > 0)
@@ -195,7 +229,6 @@ namespace Matkakirja.Linssit.Seikkailu
                 Torkkuu = false; Syo = false; horjahdus = NousuS; AloitaVaihe(VartijanTila.Etsinta); merkki = true; rauhaS = 0;
                 return;
             }
-            if (Valppaus > 0) Valppaus = Math.Max(0, Valppaus - dt);
             double voima = NakoVoima(s);
             double dp = Etaisyys(s.VartijaX, s.VartijaZ, s.PelaajaX, s.PelaajaZ);
             if (voima > 0) { Mittari = Math.Min(1, Mittari + voima * dt); EpailyX = s.PelaajaX; EpailyZ = s.PelaajaZ; rauhaS = 0; eiNaeS = 0; }
@@ -336,7 +369,7 @@ namespace Matkakirja.Linssit.Seikkailu
         {
             Tila = VartijanTila.Partio; Mittari = 0; piste = Lahin(x, z); odotus = 0; rauhaS = 0;
             varoitusS = 0; merkki = false; SydanS = 0; SydanTempo = 0; Huuto = false; huudettu = false; etsittavat.Clear();
-            Valppaus = valpas ? ValppausS : 0;
+            Valppaus = valpas ? ValppausS : 0; tunnistusS = 0;
         }
     }
 }

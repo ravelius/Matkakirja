@@ -1,0 +1,38 @@
+{
+ "mitattu": "2026-10-08 ffmpeg astats + ebur128 (Linssiseppä); lähteet: siltalauseet-v4 (8 ryhmää, William = kertojan ääni), aanimaisema-v1/tuuli-01, sade-01, tehosteet/ukkonen-01…04, Resources/Aanet/Pallokori/eleven-*.wav",
+ "kertoja": {
+  "integroitu_lufs": -17.4,
+  "huippu_db": -1.6,
+  "momentaari_max_lufs": -13.6
+ },
+ "tuuli": {
+  "integroitu_lufs": -20.4,
+  "rms_db": -21.5,
+  "huippu_db": -2.0
+ },
+ "sade": {
+  "integroitu_lufs": -20.3,
+  "rms_db": -20.6,
+  "huippu_db": -1.8
+ },
+ "ukkonen": {
+  "momentaari_max_lufs": -12.2,
+  "huippu_db": -1.7
+ },
+ "korin_narina": {
+  "momentaari_max_lufs": -18.0,
+  "huippu_db": -3.7
+ },
+ "koyden_kiristys": {
+  "momentaari_max_lufs": -22.4,
+  "huippu_db": -4.2
+ },
+ "liekin_humahdus": {
+  "momentaari_max_lufs": -10.7,
+  "huippu_db": -0.6
+ },
+ "kankaan_huokaus": {
+  "momentaari_max_lufs": -50.7,
+  "huippu_db": -29.6
+ }
+}

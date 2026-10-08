@@ -9,6 +9,9 @@
 //    ja KaupunkiPalloMitat.AnkkuriOsuus kuvan alareunasta. Kamera katsoo hieman ylhäältä (10°), jotta kori näkyy.
 //  - Varjostin: ajattelijapäiden AjattelijaPaa (sama valo ja sävykartoitus kuin päillä kartalla), sävykerroin 1, ei normaalikarttaa.
 //  - Oma kerros 13 kuten päät (muut kamerat eivät piirrä sitä), kaukana päistä (x −5000).
+//  - KIPSI (omistaja 8.10.2026 klo 20.4x: muiden kuin kehityskaupunkien pallot harmaiksi, "jotta tunnistan heti, mitkä ovat
+//    pidemmälle vietyjä kaupunkeja"): toinen kuva samasta mallista, paletti harmaasävyinä ja ERIKOISNOSTOT-pohjan kipsisävy
+//    (AjattelijaPaat.Savy, sama valo) kuten ajattelijoiden kipsipäät; oma kamera x −6000.
 using Matkakirja.Linssit.Dioraama;
 using UnityEngine;
 using UnityEngine.Rendering;
@@ -27,15 +30,15 @@ namespace Matkakirja.Natiivi
 
         const float KameraKallistus = 10f, YlaVara = 0.02f;
 
-        public static KaupunkiPalloKuva Luo(int pikselit)
+        public static KaupunkiPalloKuva Luo(int pikselit, bool kipsi = false)
         {
             var k = new KaupunkiPalloKuva();
-            try { k.Rakenna(pikselit); }
+            try { k.Rakenna(pikselit, kipsi); }
             catch (System.Exception e) { k.Virhe = e.Message; Debug.LogWarning("MATKAKIRJA kaupunkipallot: " + e.Message); }
             return k;
         }
 
-        void Rakenna(int pikselit)
+        void Rakenna(int pikselit, bool kipsi)
         {
             var varjostin = Resources.Load<Shader>("AjattelijaPaa");
             var glb = Resources.Load<TextAsset>("KaupunkiPallo/ilmapallo_keski");
@@ -66,14 +69,18 @@ namespace Matkakirja.Natiivi
             {
                 // Palettilaatat: ei mipmappeja eikä suodatusta, jottei naapurilaatan väri vuoda reunoille.
                 var t = new Texture2D(2, 2, TextureFormat.RGBA32, false, false) { name = "KaupunkiPallo:paletti", wrapMode = TextureWrapMode.Clamp, filterMode = FilterMode.Point };
-                if (t.LoadImage(m.Kuvat[o.Kuva], false)) mat.SetTexture("_MainTex", t);
+                if (t.LoadImage(m.Kuvat[o.Kuva], false))
+                {
+                    if (kipsi) Harmaaksi(t);
+                    mat.SetTexture("_MainTex", t);
+                }
             }
             mat.SetFloat("_NormaaliPaalla", 0f);
-            mat.SetVector("_Savy", new Vector4(1f, 1f, 1f, 0f));
+            mat.SetVector("_Savy", kipsi ? AjattelijaPaat.Savy : new Vector4(1f, 1f, 1f, 0f));
 
-            juuri = new GameObject("KaupunkiPalloKuva");
+            juuri = new GameObject(kipsi ? "KaupunkiPalloKuva (kipsi)" : "KaupunkiPalloKuva");
             Object.DontDestroyOnLoad(juuri);
-            juuri.transform.position = new Vector3(-5000f, -5000f, 0f);
+            juuri.transform.position = new Vector3(kipsi ? -6000f : -5000f, -5000f, 0f);
             var malli = new GameObject("Malli") { layer = AjattelijaPaat.Kerros };
             malli.transform.SetParent(juuri.transform, false);
             // Peilattu x: pallo kallistuu vasemmalle, poispäin pelaajan kaupungin kutsukortista, joka avautuu nastan oikealle
@@ -91,7 +98,7 @@ namespace Matkakirja.Natiivi
             float ala = KaupunkiPalloMitat.AnkkuriOsuus;
             float sivu = Mathf.Max(b.max.y / (1f - ala - YlaVara), 2f * Mathf.Max(Mathf.Abs(b.min.x), Mathf.Abs(b.max.x)) * 1.05f);
             Kuva = new RenderTexture(pikselit, pikselit, 16, RenderTextureFormat.ARGB32)
-                { name = "KaupunkiPallo", antiAliasing = 4, hideFlags = HideFlags.HideAndDontSave };
+                { name = kipsi ? "KaupunkiPallo (kipsi)" : "KaupunkiPallo", antiAliasing = 4, hideFlags = HideFlags.HideAndDontSave };
             Kuva.Create();
             var kg = new GameObject("Kamera");
             kg.transform.SetParent(juuri.transform, false);
@@ -120,6 +127,19 @@ namespace Matkakirja.Natiivi
             kamera.enabled = true;
             piirtoKehyksia = 2;
             Valmis = true;
+        }
+
+        /// <summary>Paletti harmaasävyiksi (Rec. 709 -luminanssi sRGB-arvoista; alfa ennallaan).</summary>
+        static void Harmaaksi(Texture2D t)
+        {
+            var px = t.GetPixels32();
+            for (int i = 0; i < px.Length; i++)
+            {
+                byte l = (byte)Mathf.Clamp(Mathf.RoundToInt(0.2126f * px[i].r + 0.7152f * px[i].g + 0.0722f * px[i].b), 0, 255);
+                px[i].r = px[i].g = px[i].b = l;
+            }
+            t.SetPixels32(px);
+            t.Apply(false, false);
         }
 
         /// <summary>Joka ruutu: kamera pois, kun kuva on piirretty (RenderTexture säilyttää sen).</summary>

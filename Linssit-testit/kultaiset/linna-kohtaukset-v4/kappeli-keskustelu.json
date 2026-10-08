@@ -1,0 +1,299 @@
+{
+ "huone": "kappeli",
+ "malli": "eleven_v4",
+ "repliikit": [
+  {
+   "puhuja": "Kappalainen",
+   "teksti": "Dominus vobiscum… Herra vouti, iltarukous alkaa, ja te seisotte käytävällä kuin kadonnutta lammasta etsien."
+  },
+  {
+   "puhuja": "Vouti",
+   "teksti": "Anteeksi, isä. En etsi mitään. Laskin vain vihkimäristit – kaksitoista, niin kuin aina."
+  },
+  {
+   "puhuja": "Kappalainen",
+   "teksti": "Laskekaa mieluummin syntinne. Ja siirtykää: tuon pienen aukon takana sairaat odottavat näkevänsä alttarin."
+  },
+  {
+   "puhuja": "Vouti",
+   "teksti": "Fatabuurin avain… missä minä sitä pitelinkään?"
+  }
+ ],
+ "puhujat": [
+  {
+   "puhuja": "Kappalainen",
+   "voice_id": "83b91EQobLgd0b5QVgjN",
+   "rivi": 0,
+   "alku_s": 0.1,
+   "loppu_s": 9.46,
+   "sanat": [
+    {
+     "sana": "Dominus",
+     "alku_s": 0.1,
+     "loppu_s": 0.66
+    },
+    {
+     "sana": "vobiscum…",
+     "alku_s": 0.74,
+     "loppu_s": 2.34
+    },
+    {
+     "sana": "Herra",
+     "alku_s": 2.42,
+     "loppu_s": 2.58
+    },
+    {
+     "sana": "vouti,",
+     "alku_s": 2.66,
+     "loppu_s": 3.54
+    },
+    {
+     "sana": "iltarukous",
+     "alku_s": 3.66,
+     "loppu_s": 4.26
+    },
+    {
+     "sana": "alkaa,",
+     "alku_s": 4.34,
+     "loppu_s": 5.3
+    },
+    {
+     "sana": "ja",
+     "alku_s": 5.34,
+     "loppu_s": 5.38
+    },
+    {
+     "sana": "te",
+     "alku_s": 5.46,
+     "loppu_s": 5.54
+    },
+    {
+     "sana": "seisotte",
+     "alku_s": 5.62,
+     "loppu_s": 6.02
+    },
+    {
+     "sana": "käytävällä",
+     "alku_s": 6.1,
+     "loppu_s": 6.66
+    },
+    {
+     "sana": "kuin",
+     "alku_s": 6.74,
+     "loppu_s": 6.9
+    },
+    {
+     "sana": "kadonnutta",
+     "alku_s": 7.06,
+     "loppu_s": 7.62
+    },
+    {
+     "sana": "lammasta",
+     "alku_s": 7.7,
+     "loppu_s": 8.26
+    },
+    {
+     "sana": "etsien.",
+     "alku_s": 8.42,
+     "loppu_s": 9.46
+    }
+   ]
+  },
+  {
+   "puhuja": "Vouti",
+   "voice_id": "MZvBk0qJWqOzeRt8hTt6",
+   "rivi": 1,
+   "alku_s": 9.46,
+   "loppu_s": 16.74,
+   "sanat": [
+    {
+     "sana": "Anteeksi,",
+     "alku_s": 9.46,
+     "loppu_s": 9.98
+    },
+    {
+     "sana": "isä.",
+     "alku_s": 10.02,
+     "loppu_s": 10.42
+    },
+    {
+     "sana": "En",
+     "alku_s": 10.9,
+     "loppu_s": 11.06
+    },
+    {
+     "sana": "etsi",
+     "alku_s": 11.18,
+     "loppu_s": 11.38
+    },
+    {
+     "sana": "mitään.",
+     "alku_s": 11.46,
+     "loppu_s": 12.02
+    },
+    {
+     "sana": "Laskin",
+     "alku_s": 12.5,
+     "loppu_s": 12.82
+    },
+    {
+     "sana": "vain",
+     "alku_s": 12.86,
+     "loppu_s": 13.06
+    },
+    {
+     "sana": "vihkimäristit",
+     "alku_s": 13.1,
+     "loppu_s": 13.94
+    },
+    {
+     "sana": "–",
+     "alku_s": 14.42,
+     "loppu_s": 14.447
+    },
+    {
+     "sana": "kaksitoista,",
+     "alku_s": 14.473,
+     "loppu_s": 15.22
+    },
+    {
+     "sana": "niin",
+     "alku_s": 15.54,
+     "loppu_s": 15.62
+    },
+    {
+     "sana": "kuin",
+     "alku_s": 15.7,
+     "loppu_s": 15.86
+    },
+    {
+     "sana": "aina.",
+     "alku_s": 16.02,
+     "loppu_s": 16.74
+    }
+   ],
+   "tauko_s": 0.0
+  },
+  {
+   "puhuja": "Kappalainen",
+   "voice_id": "83b91EQobLgd0b5QVgjN",
+   "rivi": 2,
+   "alku_s": 16.74,
+   "loppu_s": 25.3,
+   "sanat": [
+    {
+     "sana": "Laskekaa",
+     "alku_s": 16.74,
+     "loppu_s": 17.3
+    },
+    {
+     "sana": "mieluummin",
+     "alku_s": 17.38,
+     "loppu_s": 17.94
+    },
+    {
+     "sana": "syntinne.",
+     "alku_s": 18.02,
+     "loppu_s": 18.82
+    },
+    {
+     "sana": "Ja",
+     "alku_s": 19.3,
+     "loppu_s": 19.38
+    },
+    {
+     "sana": "siirtykää:",
+     "alku_s": 19.46,
+     "loppu_s": 20.38
+    },
+    {
+     "sana": "tuon",
+     "alku_s": 20.66,
+     "loppu_s": 20.82
+    },
+    {
+     "sana": "pienen",
+     "alku_s": 20.9,
+     "loppu_s": 21.3
+    },
+    {
+     "sana": "aukon",
+     "alku_s": 21.38,
+     "loppu_s": 21.7
+    },
+    {
+     "sana": "takana",
+     "alku_s": 21.78,
+     "loppu_s": 22.18
+    },
+    {
+     "sana": "sairaat",
+     "alku_s": 22.26,
+     "loppu_s": 22.82
+    },
+    {
+     "sana": "odottavat",
+     "alku_s": 22.9,
+     "loppu_s": 23.38
+    },
+    {
+     "sana": "näkevänsä",
+     "alku_s": 23.42,
+     "loppu_s": 23.94
+    },
+    {
+     "sana": "alttarin.",
+     "alku_s": 24.02,
+     "loppu_s": 25.3
+    }
+   ],
+   "tauko_s": 0.0
+  },
+  {
+   "puhuja": "Vouti",
+   "voice_id": "MZvBk0qJWqOzeRt8hTt6",
+   "rivi": 3,
+   "alku_s": 25.3,
+   "loppu_s": 29.3,
+   "sanat": [
+    {
+     "sana": "Fatabuurin",
+     "alku_s": 25.3,
+     "loppu_s": 26.02
+    },
+    {
+     "sana": "avain…",
+     "alku_s": 26.18,
+     "loppu_s": 27.46
+    },
+    {
+     "sana": "missä",
+     "alku_s": 27.54,
+     "loppu_s": 27.86
+    },
+    {
+     "sana": "minä",
+     "alku_s": 27.94,
+     "loppu_s": 28.06
+    },
+    {
+     "sana": "sitä",
+     "alku_s": 28.1,
+     "loppu_s": 28.34
+    },
+    {
+     "sana": "pitelinkään?",
+     "alku_s": 28.42,
+     "loppu_s": 29.3
+    }
+   ],
+   "tauko_s": 0.0
+  }
+ ],
+ "raaka_mean_dB": -18.3,
+ "mean_dB": -17.5,
+ "max_dB": -0.5,
+ "LUFS": -16.5,
+ "kesto_s": 29.3,
+ "esivara_siirto_s": 0.1
+}

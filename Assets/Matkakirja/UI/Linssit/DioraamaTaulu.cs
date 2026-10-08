@@ -19,8 +19,8 @@ namespace Matkakirja.Natiivi
         // Minipulu (lintu rajattuna, 58 × 70): kokopulun kuvassa lintu jäi 64 pt:n laatikossa liian pieneksi (savuke 29.9.).
         const float PuluMinPt = 56f, PuluMaxPt = 96f, PuluEtaisyysvertailuM = 14f;
         const int AnimaatioMs = 220;
-        static readonly Color Pergamentti = new Color(0.9373f, 0.9020f, 0.8235f, 0.94f);
-        static readonly Color Teksti = new Color(0.2039f, 0.1569f, 0.1137f);
+        static readonly Color Pergamentti = (Color)Tyylikirja.Kuulto.TummaMuste94;
+        static readonly Color Teksti = (Color)Tyylikirja.Kehys.Panel2;
 
         readonly VisualElement juuri, lauta, nakyma, lappuKerros;
         /// <summary>Huone, jonka kortin pelaaja on pyytänyt napautuksella (DioraamaSyote); null = ei korttia (omistaja 5.10. 23.0x).</summary>
@@ -179,7 +179,7 @@ namespace Matkakirja.Natiivi
             kuoriNappi.style.position = Position.Absolute;
             // Oikeaan yläkulmaan sulkunapin alle (Päätoimittaja 30.9.: vasemmassa alakulmassa se peitti kertojan laatikon ja infotaulun).
             kuoriNappi.style.right = 14; kuoriNappi.style.top = 110;
-            kuoriNappi.style.backgroundColor = new Color(0.1f, 0.08f, 0.06f, 0.6f);
+            kuoriNappi.style.backgroundColor = (Color)Tyylikirja.Kuulto.PaperiMuste60;
             kuoriNappi.style.color = Color.white;
             kuoriNappi.style.fontSize = 12;
             kuoriNappi.style.paddingLeft = 10; kuoriNappi.style.paddingRight = 10; kuoriNappi.style.paddingTop = 6; kuoriNappi.style.paddingBottom = 6;
@@ -309,6 +309,12 @@ namespace Matkakirja.Natiivi
             // sen ilmestyessä (Päätoimittaja 4.10.). Edistyminen: LatausEdistyminen (Siirtoseppä kytkee linnan latauksen).
             latauspalkki = new Latauspalkki(nimiOtsikko);
             latauspalkki.Juuri.AddToClassList("tk-teema-tumma");
+            this.nimiOtsikko = nimiOtsikko;
+            // OLAVINLINNAN LATAUSKUVA (omistaja 8.10. 10.5x, LATAUSKUVA-pohja): kuva tekstin ja palkin alle; esilataus levylle heti.
+            linnaKuva = new Latauskuva(nimiruutu) { TaustaLahentyy = true };
+            linnaKuva.Juuri.SendToBack();
+            nimiruutu.RegisterCallback<GeometryChangedEvent>(e => { if (e.oldRect.size != e.newRect.size && linnaKuvaRajaus >= 0) AsetaLinnaKuva(); });
+            EsilataaLinnaKuvat();
 
             avainsana = Rakenne.El("mk-astroavaus__otsikko--haipyy", kerros.Juuri(LinssiUi.Ylakerros), PickingMode.Ignore);
             avainsana.style.position = Position.Absolute;
@@ -402,6 +408,106 @@ namespace Matkakirja.Natiivi
         }
 
         readonly VisualElement nimiruutu;
+        readonly VisualElement nimiOtsikko;
+
+        // OLAVINLINNAN LATAUSKUVA (omistaja 8.10.2026 klo 10.5x; Codexin kerrokset 15.45, claude/postilaatikko 3910eb5c8, manifesti
+        // posti/kuvatoimitus-olavinlinna-latauskuva-20261008.json): LATAUSKUVA-pohja nimiruudun alle, vain Olavinlinnalle (latauskuva
+        // vain 3D-maailmoihin, omistaja 17.1x). Tausta (linna 1499, salmi, tumma alaosa) + usva + vene; koko kuva lähentyy hitaasti,
+        // vene keinuu kölistä ±0,6° ja nousee 2,5 pt (7,5 s), usva ±0,5° / 3 pt / 8 s eri vaiheessa. Rajaus ruudun mukaan (puhelin pysty,
+        // iPad pysty, vaaka) ja peittävä sovitus myös kierrossa; teksti ja palkki kuvan tummaan alaosaan. Ilman kuvia musta kuten ennen.
+        const string LinnaKuvaJuuri = "https://media.matkakirja.app/julisteet/olavinlinna-latauskuva/20261008/";
+        static readonly string[] LinnaRajaus = { "iphone-portrait", "ipad-portrait", "ipad-landscape" };
+        /// <summary>Kölin kääntöpiste taustan osuuksina (manifestin pikselit / mitat).</summary>
+        static readonly Vector2[] LinnaKoli =
+        {
+            new Vector2(670.65f / 1290f, 1789.10f / 2796f), new Vector2(1065.24f / 2048f, 1747.64f / 2732f), new Vector2(1421.32f / 2732f, 1310.79f / 2048f),
+        };
+        /// <summary>Leveällä vaakaruudulla kuvan yläreuna (tornien huiput näkyviin, alaosa rajautuu).</summary>
+        const float LinnaVaakaAlku = 0.06f;
+        readonly Latauskuva linnaKuva;
+        int linnaKuvaRajaus = -1, linnaKuvaKerta;
+        readonly Texture2D[] linnaTekstuurit = new Texture2D[3];
+
+        static bool OnOlavinlinna(string nimi) => (nimi ?? "").ToUpperInvariant().Contains("OLAVINLINNA");
+
+        static string LinnaUrl(int rajaus, string kerros) => LinnaKuvaJuuri + LinnaRajaus[rajaus] + "-" + kerros + ".png";
+
+        /// <summary>Laitteen kaksi rajausta (pysty ja vaaka) levylle valmiiksi (Kuvat.Esilataa); sama kaikilla verkoilla.</summary>
+        static void EsilataaLinnaKuvat()
+        {
+            int pysty = Matkakirja.Linssit.LatausLiike.Rajausindeksi(Mathf.Min(Screen.width, Screen.height), Mathf.Max(Screen.width, Screen.height));
+            foreach (int r in new[] { pysty, 2 })
+                foreach (var k in new[] { "background", "mist", "boat" }) Kuvat.Esilataa(LinnaUrl(r, k));
+        }
+
+        /// <summary>Nimiruudun koon mukainen rajaus ja kerrokset (haku levyltä tai verkosta); sovitus aina uuteen kokoon.</summary>
+        void AsetaLinnaKuva()
+        {
+            var koko = nimiruutu.worldBound.size;
+            if (!(koko.x > 1f) || !(koko.y > 1f)) koko = nimiruutu.parent?.worldBound.size ?? Vector2.zero;
+            if (!(koko.x > 1f) || !(koko.y > 1f)) { nimiruutu.schedule.Execute(AsetaLinnaKuva).StartingIn(16); return; }
+            int r = Matkakirja.Linssit.LatausLiike.Rajausindeksi(koko.x, koko.y);
+            if (r != linnaKuvaRajaus || linnaTekstuurit[0] == null)
+            {
+                // Kierto: näkyvä kuva peittäväksi heti uuteen kokoon, oikea rajaus perään (ei mustia palkkeja välissä).
+                if (linnaTekstuurit[0] != null) SovitaLinnaKuva(r, koko);
+                linnaKuvaRajaus = r;
+                int kerta = ++linnaKuvaKerta;
+                var nimet = new[] { "background", "mist", "boat" };
+                for (int i = 0; i < 3; i++)
+                {
+                    int j = i;
+                    Kuvat.Hae(LinnaUrl(r, nimet[i]), t =>
+                    {
+                        if (kerta != linnaKuvaKerta || !nimiruutuAuki) return;
+                        if (linnaTekstuurit[j] != null && linnaTekstuurit[j] != t) Kuvat.Vapauta(linnaTekstuurit[j]);
+                        linnaTekstuurit[j] = t;
+                        if (t != null) Kuvat.Kiinnita(t);
+                        if (linnaTekstuurit[0] != null && linnaTekstuurit[1] != null && linnaTekstuurit[2] != null) NaytaLinnaKuva(r);
+                    });
+                }
+                return;
+            }
+            SovitaLinnaKuva(r, koko);
+        }
+
+        void NaytaLinnaKuva(int r)
+        {
+            var koli = LinnaKoli[r];
+            linnaKuva.Aseta(linnaTekstuurit[0], new[]
+            {
+                new Latauskuva.Kerros { Kuva = linnaTekstuurit[1], Paikka = new Rect(0, 0, 1, 1), Kaanto = new Vector2(0.5f, koli.y - 0.03f),
+                    Liike = new Matkakirja.Linssit.LatausLiike.Profiili { KulmaAste = 0.5, NousuPt = 3, JaksoS = 8, Vaihe = 1.3 } },
+                new Latauskuva.Kerros { Kuva = linnaTekstuurit[2], Paikka = new Rect(0, 0, 1, 1), Kaanto = koli,
+                    Liike = new Matkakirja.Linssit.LatausLiike.Profiili { KulmaAste = 0.6, NousuPt = 2.5, JaksoS = 7.5 } },
+            });
+            SovitaLinnaKuva(r, nimiruutu.worldBound.size);
+            // Teksti ja palkki kuvan tummaan alaosaan (kuten pallon latauskuvassa).
+            nimiruutu.style.justifyContent = Justify.FlexEnd;
+            nimiOtsikko.style.marginBottom = Mathf.Max(nimiruutu.worldBound.height, 1f) * 0.07f;
+            linnaKuva.Nayta(true, Time.unscaledTime - nimiruutuAlku > 0.3f);
+            Debug.Log($"MATKAKIRJA linssit: nimiruutu: Olavinlinnan latauskuva {LinnaRajaus[r]} ({Time.unscaledTime - nimiruutuAlku:F1} s avauksesta)");
+        }
+
+        void SovitaLinnaKuva(int r, Vector2 koko)
+        {
+            var t = linnaTekstuurit[0];
+            if (t == null) return;
+            float w = Mathf.Max(koko.x, 1f), h = Mathf.Max(koko.y, 1f);
+            var (x, y, kw, kh) = Matkakirja.Linssit.LatausLiike.Peita(w, h, t.width / (double)Mathf.Max(1, t.height), w > h * 1.5f ? LinnaVaakaAlku : -1);
+            linnaKuva.Sovita(new Rect((float)x, (float)y, (float)kw, (float)kh));
+        }
+
+        void PiilotaLinnaKuva()
+        {
+            linnaKuvaKerta++;
+            linnaKuvaRajaus = -1;
+            linnaKuva.Nayta(false);
+            linnaKuva.Aseta(null);
+            for (int i = 0; i < 3; i++) { if (linnaTekstuurit[i] != null) Kuvat.Vapauta(linnaTekstuurit[i]); linnaTekstuurit[i] = null; }
+            nimiruutu.style.justifyContent = StyleKeyword.Null;
+            nimiOtsikko.style.marginBottom = StyleKeyword.Null;
+        }
         readonly Puhujakuva puhujakuva;
         // AVAINSANAT (Päätoimittaja 5.10., omistajan TF 141 -palaute "muutamia vuosilukuja sekä muita lyhyitä sanoja luennan tueksi"):
         // vasen alakulma ilman laatikkoa, vuosiluku goottilaisella ja 1–3 sanaa antiikvalla (havainteen kultaiset varjostetut tyylit),
@@ -464,6 +570,7 @@ namespace Matkakirja.Natiivi
                 nimiruutu.RemoveFromClassList("mk-astroavaus--haipyy");
                 nimiruutu.style.opacity = 1f;
                 nimiruutu.style.display = DisplayStyle.Flex;
+                if (OnOlavinlinna(nimi)) AsetaLinnaKuva();
             }
             if (odotus)
             {
@@ -484,7 +591,7 @@ namespace Matkakirja.Natiivi
                 Debug.Log($"MATKAKIRJA linssit: nimiruutu: häivytys {Time.unscaledTime - nimiruutuAlku:F1} s avauksesta");
                 nimiruutu.AddToClassList("mk-astroavaus--haipyy");
                 nimiruutu.style.opacity = 0f;
-                nimiruutu.schedule.Execute(() => { if (!nimiruutuAuki) nimiruutu.style.display = DisplayStyle.None; }).StartingIn(1200);
+                nimiruutu.schedule.Execute(() => { if (!nimiruutuAuki) { nimiruutu.style.display = DisplayStyle.None; PiilotaLinnaKuva(); } }).StartingIn(1200);
             }
         }
 

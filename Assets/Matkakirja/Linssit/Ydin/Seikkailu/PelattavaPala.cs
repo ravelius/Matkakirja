@@ -5,7 +5,7 @@ namespace Matkakirja.Linssit.Seikkailu
 {
     public static class PelattavaPala
     {
-        public const string Hash = "92f6029878e2011b";
-        public const string Versio = "v44z";   // vuoden 1499 linna (etuvarustus ja silta, ranta-1499), harja ja muurikäytävän piilot; kuorileikkauksia 32
+        public const string Hash = "ca94057a6b155179";
+        public const string Versio = "v45n";   // v45l + ranta-1499:n yöatlas + detaljit kivi, rappaus, puu, lankku ja aliakset (LR 8.10.)
     }
 }

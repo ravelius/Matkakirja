@@ -1,0 +1,26 @@
+{
+ "huone": "kierreportaat",
+ "tiedosto": "kierreportaat-keskustelu.mp3",
+ "kesto_s": 27.32,
+ "vuorot": [
+  {
+   "puhuja": "kirjuri",
+   "alku_s": 0.04,
+   "loppu_s": 9.52,
+   "teksti": "Kolmas kerros, neljäs kerros… Ilman voudin sinettiä ei yksikään kirje lähde linnasta, ja minä juoksen näitä portaita edestakaisin."
+  },
+  {
+   "puhuja": "renki",
+   "alku_s": 10.06,
+   "loppu_s": 18.37,
+   "teksti": "Varovasti, herra kirjuri, näissä portaissa ei ohiteta ketään. Kapeaa ja ahdasta – vihollisellekin, kiitos siitä."
+  },
+  {
+   "puhuja": "kirjuri",
+   "alku_s": 18.98,
+   "loppu_s": 27.1,
+   "teksti": "Viisi kerrosta, ja ylin asuttu on kolmas. Neljännellä vain tuuli ja vartijat. Minä en ole kumpaakaan."
+  }
+ ],
+ "esivara_siirto_s": 0.04
+}

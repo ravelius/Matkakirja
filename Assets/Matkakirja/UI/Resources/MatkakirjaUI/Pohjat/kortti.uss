@@ -60,3 +60,29 @@
     margin-left: 0;
     margin-top: var(--tk-vali-s);
 }
+
+/* KORTTI-pohjan TUMMA variantti (omistaja 8.10.2026 klo 21.2x "A"; tyylikirja pohjat.KORTTI teemat paperi + tumma): vain
+ * videopeleissä (seikkailun tietokortit), koska pimeässä pelissä kirkas paperi häikäisee; muualla kortit paperisina.
+ * VAIN --tk-tumma-*-tokenit. */
+.mk-kortti-kehys--pohja.mk-kortti-kehys--tumma {
+    background-color: var(--tk-tumma-pinta);
+}
+
+.mk-kortti-kehys--tumma .mk-kortti--pohja {
+    border-color: var(--tk-tumma-reunus);
+    background-color: var(--tk-tumma-pinta);
+    color: var(--tk-tumma-muste);
+}
+
+.mk-kortti-kehys--tumma .mk-kortti--pohja .mk-kortti__otsikko {
+    border-color: var(--tk-tumma-reunus);
+}
+
+.mk-kortti-kehys--tumma .mk-kortti__kapiteeli {
+    color: var(--tk-tumma-muste-pehmea);
+}
+
+.mk-kortti-kehys--tumma .mk-nappi--toiminto {
+    border-color: var(--tk-tumma-reunus);
+    color: var(--tk-tumma-muste);
+}
