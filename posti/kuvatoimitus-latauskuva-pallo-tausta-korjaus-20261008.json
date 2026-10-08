@@ -1,0 +1,1960 @@
+{
+  "task": "kuumailmapallo-tausta-korjaus-20261008",
+  "taskNumber": 42,
+  "correctsTaskNumber": 9,
+  "source": {
+    "path": "posti/sisaltokirjuri-codex-pallo-tausta-korjaus-20261008.md",
+    "commit": "310fe02b89d6e2716c6b0ec499c5d8744547989a",
+    "blob": "d17a862cd89393182d8afd331556f0b2a114065a"
+  },
+  "sourceReadInFull": true,
+  "previousManifestPath": "posti/kuvatoimitus-latauskuva-pallo-kerrokset-20261008.json",
+  "previousManifestSHA256": "c29fbda036a4c2ae66d53b524c678b2570289e65e6141581b3e61d345006ac10",
+  "layerCount": 3,
+  "imageCount": 9,
+  "newBackgroundCount": 3,
+  "retainedEnvelopeBasketCount": 6,
+  "assets": [
+    {
+      "device": "iphone",
+      "role": "tausta",
+      "file": "latauskuva-pallo-iphone-tausta-maaankkuri.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuumailmapallo-tausta-korjaus-20261008/final/latauskuva-pallo-iphone-tausta-maaankkuri.png",
+      "dimensions": [
+        1290,
+        2796
+      ],
+      "sha256": "2ba6e09bf991c07d9ff119298a8bd31b97f3444b690dd851748de639a45f9523",
+      "bytes": 1582654,
+      "sourceCropBox": [
+        338,
+        0,
+        917,
+        1254
+      ],
+      "placement": {
+        "x": 0,
+        "y": 0,
+        "width": 1290,
+        "height": 2796
+      },
+      "checks": {
+        "dimensionsMatchPreviousCrop": true,
+        "sourceCropBoxMatchPrevious": true,
+        "sRGB": true,
+        "textMetadataExact": true,
+        "format": "PNG",
+        "opaque": true,
+        "bottom15MeanLstar": 9.604468223637463,
+        "bottom15SourcePixelsByteIdentical": true,
+        "cityPixelsUnchangedBelowMasterY775": true,
+        "groundAnchorPixelsUnchanged": true,
+        "bottom25PixelsByteIdentical": true,
+        "bottom25MeanLstar": 14.209072635030354
+      },
+      "r2Key": "julisteet/latauskuva-kuumailmapallo-kerrokset/20261008b/latauskuva-pallo-iphone-tausta-maaankkuri.png",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "generationPrompt": "Use case: precise-object-edit.\nAsset type: seamless repair of ONE existing approved loading-image BACKGROUND MASTER, not a new scene.\nInput image is the EDIT TARGET. Output opaque RGB PNG at exactly the same 1254 x 1254 square canvas and framing.\n\nCorrect only the faint pale rectangular balloon-removal patch near the center of the sky: the old patch roughly spans x541-724, y397-716, especially the vertical edges around x541 and x724 and its lower edge. The visible fault is an overly even, slightly brighter sky region; remove the local tonal discontinuity and any straight vertical or horizontal border. Use the naturally continuing surrounding blue-gray to warm sand sky gradient, fine irregular atmospheric texture and existing soft cloud bands. Clouds crossing the region must connect naturally across it. No uniform light blob, repeating cloud clone, obvious rectangle, differently grained fill, visible feather ring or straight seam, even under twice-normal contrast. Make a broad organic seamless transition over several dozen pixels around the patch, not a narrow rectangular fill. The correction is confined to this local sky region and its soft surrounding blend, approximately x450-820,y330-760; do not change anything else.\n\nLOCK AND PRESERVE: exact existing camera, original city skyline and every tower/building below roughly y775, horizon, haze elsewhere, all unrelated clouds, overall exposure and subdued photographic colors. Keep the tiny stone weight with its recessed iron eye at approximately x638,y992 entirely unchanged, in exactly the same position and scale. Keep the ground bank, the entire lower25percent and dark warm-brown footer #1d1610 unchanged. Do not add or remove city structures or relight the scene. No whole-scene regeneration, enhancement, recoloring, new clouds outside the small correction area or composition change.\n\nThis input background has NO balloon and NO basket; keep it that way. Do not add a balloon envelope, basket, rope, rigging, person, aircraft, text, logo, watermark, sign or border. The separate approved balloon envelope/basket PNGs will remain untouched. Only smooth the sky patch into continuous physically believable real-camera sky, retaining original fine grain and soft haze.\nOne authorised background repair edit only, no variants.\n",
+      "technicalLayerInstruction": "Same-master background removal, then authorised small ground anchor and low earth lip. Original foreground object placement and bottom15% unchanged.",
+      "viitteet": [
+        {
+          "type": "selected-master-of-open-draft-PR",
+          "url": "https://github.com/ravelius/Matkakirja/pull/4143",
+          "commit": "b8843b344babc5d0c3c3f1b097b9df60d600490b",
+          "masterSHA256": "f47701aa0b6ec9115b3a09deec89b25433fe1df34e8ffec0243a56e63c578751",
+          "nativeDimensions": [
+            1254,
+            1254
+          ],
+          "usage": "Same composition, object source pixels, light, colours and original crop coordinate boxes; no new creative scene."
+        },
+        {
+          "type": "game-owned-3D-design-reference",
+          "path": "posti/liitteet/latauskuva-pallo-3d-viite-20261007.jpg",
+          "blob": "e13e25f0e0f405111b9b5e77edc8474409c091a3",
+          "sha256": "52be35e076350d433b8e4475ea9628a214008d823a4e8e387b375740d627229a",
+          "usage": "Already present in source master provenance; inspected, not used to generate new layer objects."
+        }
+      ],
+      "kuvateksti": "Kuumailmapallon latauskuvan tausta-kerros. Havainnekuva.",
+      "previousBackgroundBeforeAnchor": {
+        "file": "latauskuva-pallo-iphone-tausta.png",
+        "r2Key": "julisteet/latauskuva-kuumailmapallo-kerrokset/20261008/latauskuva-pallo-iphone-tausta.png",
+        "sha256": "83d274a96724884315582b8ad5330134aa95ce466fa8ab19c8a414519fcf07df",
+        "url": "https://media.matkakirja.app/julisteet/latauskuva-kuumailmapallo-kerrokset/20261008/latauskuva-pallo-iphone-tausta.png"
+      },
+      "groundAnchorIncluded": true,
+      "url": "https://media.matkakirja.app/julisteet/latauskuva-kuumailmapallo-kerrokset/20261008b/latauskuva-pallo-iphone-tausta-maaankkuri.png",
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "previousURL": "https://media.matkakirja.app/julisteet/latauskuva-kuumailmapallo-kerrokset/20261008/latauskuva-pallo-iphone-tausta-maaankkuri.png",
+      "previousSHA256": "f48ee446068cb965a7bcdb393e31284a819a5bbbc62f68da79348788f91e9da1"
+    },
+    {
+      "device": "iphone",
+      "role": "kupu",
+      "file": "latauskuva-pallo-iphone-kupu.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/latauskuva-pallo-kerrokset-20261008/final/latauskuva-pallo-iphone-kupu.png",
+      "dimensions": [
+        1290,
+        2796
+      ],
+      "sha256": "6534e96831c3445739db5d8a729d020d9605f07e801106617a2340d0cc99338b",
+      "bytes": 198023,
+      "sourceCropBox": [
+        338,
+        0,
+        917,
+        1254
+      ],
+      "placement": {
+        "x": 0,
+        "y": 0,
+        "width": 1290,
+        "height": 2796,
+        "contentBBox": [
+          483,
+          918,
+          827,
+          1419
+        ]
+      },
+      "checks": {
+        "dimensionsMatchPreviousCrop": true,
+        "sourceCropBoxMatchPrevious": true,
+        "sRGB": true,
+        "textMetadataExact": true,
+        "format": "PNG",
+        "realAlpha": true,
+        "alphaExtrema": [
+          0,
+          255
+        ],
+        "outerEdgeAlphaMax": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "transparentMarginAtLeast3Percent": true
+      },
+      "r2Key": "julisteet/latauskuva-kuumailmapallo-kerrokset/20261008/latauskuva-pallo-iphone-kupu.png",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "generationPrompt": "Use case: photorealistic-natural. Generate ONE entirely NEW square photographic master image, high resolution preferably2816×2816, opaqueRGB. The user requires ALL images to look as if taken with a real camera. This must look like an actual full-frame colour photograph: believable fabric weave/seams, physical fine ropes, wicker basket, atmospheric haze and natural soft daylight. NO painting, watercolour, drawing, book illustration, paper texture, cartoon, CGI render or stylisation.\nReference image is ONLY the game's balloon-design reference, not an edit target. Recreate its round upper pear-shaped envelope, tapering neck, alternating vertical muted brick-red(#b03a2b) and cream(#faf4d6)fabric gores, sparse thin dark-brown(#46331f)crossing netting and one thin horizontal ring. Keep the long delicate suspension to a separate carrier hoop and a VERY SMALL empty gold-brown wicker basket(#d9a13b/#8a6114). A thin anchor rope trails into haze above the dark footer. No people, burner flames, advertising, text or logos.\nEXACT RELATIVE COMPOSITION, irrespective of output pixel count: place the COMPLETE balloon envelope, net, hoop and basket entirely within the CENTRAL26% of canvas width (x37%–63%) and between40% and63% of total canvas HEIGHT. Balloon-and-rigging must be quite small in the square: its TOP begins forty percent DOWN from the upper edge, and the BASKET ends near sixty-three percent. Do not put it near the top or enlarge it. It must stay whole inside both a full-height tall phone crop and a bottom-anchored4:3landscape crop. Top8% is quiet empty sky. Plenty of soft real clouded sky above balloon, not paper.\nBackground: distant anonymous contemporary European city, hazy modest domes/spires and a few modern plain towers, no identifiable landmark, signage or people. Its subdued silhouette lies around70%–74%height and fades out before75%. Natural calm pale dusty-blue/cream/warm sand atmospheric colour; restrained exposure, no HDR, dramatic cinema glow or oversaturated sunset.\nFOOTER: bottom25% of whole square contains NO balloon, rope, building or other detail. Entire width fades smoothly down into near-uniform dark warm-brown#1d1610. Bottom15% must be almost uniformly#1d1610, CIELAB meanL*<=12. No bright speckles or texture there. Straight full-width lower fade, NOT circular vignette, frame or border. No UI, no lettering, no watermarks. Photographic subject and sky, opaquePNG.",
+      "technicalLayerInstruction": "Technical cutout of the original master at unchanged coordinates; envelope/net/horizontal ring/carrier hoop only, no basket or suspension ropes; edge alpha and sky-colour decontamination.",
+      "viitteet": [
+        {
+          "type": "selected-master-of-open-draft-PR",
+          "url": "https://github.com/ravelius/Matkakirja/pull/4143",
+          "commit": "b8843b344babc5d0c3c3f1b097b9df60d600490b",
+          "masterSHA256": "f47701aa0b6ec9115b3a09deec89b25433fe1df34e8ffec0243a56e63c578751",
+          "nativeDimensions": [
+            1254,
+            1254
+          ],
+          "usage": "Same composition, object source pixels, light, colours and original crop coordinate boxes; no new creative scene."
+        },
+        {
+          "type": "game-owned-3D-design-reference",
+          "path": "posti/liitteet/latauskuva-pallo-3d-viite-20261007.jpg",
+          "blob": "e13e25f0e0f405111b9b5e77edc8474409c091a3",
+          "sha256": "52be35e076350d433b8e4475ea9628a214008d823a4e8e387b375740d627229a",
+          "usage": "Already present in source master provenance; inspected, not used to generate new layer objects."
+        }
+      ],
+      "kuvateksti": "Kuumailmapallon latauskuvan kupu-kerros. Havainnekuva.",
+      "url": "https://media.matkakirja.app/julisteet/latauskuva-kuumailmapallo-kerrokset/20261008/latauskuva-pallo-iphone-kupu.png",
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "retainedUnchanged": true,
+      "newUpload": false,
+      "acceptedPerCorrectionSource": true,
+      "currentReadbackHTTP": 200
+    },
+    {
+      "device": "iphone",
+      "role": "kori",
+      "file": "latauskuva-pallo-iphone-kori.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/latauskuva-pallo-kerrokset-20261008/final/latauskuva-pallo-iphone-kori.png",
+      "dimensions": [
+        1290,
+        2796
+      ],
+      "sha256": "31e55b6e88d9f42cbae647ce0722950974988832ee2a789e6b8dd1880042affe",
+      "bytes": 22695,
+      "sourceCropBox": [
+        338,
+        0,
+        917,
+        1254
+      ],
+      "placement": {
+        "x": 0,
+        "y": 0,
+        "width": 1290,
+        "height": 2796,
+        "contentBBox": [
+          619,
+          1518,
+          698,
+          1570
+        ]
+      },
+      "checks": {
+        "dimensionsMatchPreviousCrop": true,
+        "sourceCropBoxMatchPrevious": true,
+        "sRGB": true,
+        "textMetadataExact": true,
+        "format": "PNG",
+        "realAlpha": true,
+        "alphaExtrema": [
+          0,
+          255
+        ],
+        "outerEdgeAlphaMax": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "transparentMarginAtLeast3Percent": true
+      },
+      "r2Key": "julisteet/latauskuva-kuumailmapallo-kerrokset/20261008/latauskuva-pallo-iphone-kori.png",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "generationPrompt": "Use case: photorealistic-natural. Generate ONE entirely NEW square photographic master image, high resolution preferably2816×2816, opaqueRGB. The user requires ALL images to look as if taken with a real camera. This must look like an actual full-frame colour photograph: believable fabric weave/seams, physical fine ropes, wicker basket, atmospheric haze and natural soft daylight. NO painting, watercolour, drawing, book illustration, paper texture, cartoon, CGI render or stylisation.\nReference image is ONLY the game's balloon-design reference, not an edit target. Recreate its round upper pear-shaped envelope, tapering neck, alternating vertical muted brick-red(#b03a2b) and cream(#faf4d6)fabric gores, sparse thin dark-brown(#46331f)crossing netting and one thin horizontal ring. Keep the long delicate suspension to a separate carrier hoop and a VERY SMALL empty gold-brown wicker basket(#d9a13b/#8a6114). A thin anchor rope trails into haze above the dark footer. No people, burner flames, advertising, text or logos.\nEXACT RELATIVE COMPOSITION, irrespective of output pixel count: place the COMPLETE balloon envelope, net, hoop and basket entirely within the CENTRAL26% of canvas width (x37%–63%) and between40% and63% of total canvas HEIGHT. Balloon-and-rigging must be quite small in the square: its TOP begins forty percent DOWN from the upper edge, and the BASKET ends near sixty-three percent. Do not put it near the top or enlarge it. It must stay whole inside both a full-height tall phone crop and a bottom-anchored4:3landscape crop. Top8% is quiet empty sky. Plenty of soft real clouded sky above balloon, not paper.\nBackground: distant anonymous contemporary European city, hazy modest domes/spires and a few modern plain towers, no identifiable landmark, signage or people. Its subdued silhouette lies around70%–74%height and fades out before75%. Natural calm pale dusty-blue/cream/warm sand atmospheric colour; restrained exposure, no HDR, dramatic cinema glow or oversaturated sunset.\nFOOTER: bottom25% of whole square contains NO balloon, rope, building or other detail. Entire width fades smoothly down into near-uniform dark warm-brown#1d1610. Bottom15% must be almost uniformly#1d1610, CIELAB meanL*<=12. No bright speckles or texture there. Straight full-width lower fade, NOT circular vignette, frame or border. No UI, no lettering, no watermarks. Photographic subject and sky, opaquePNG.",
+      "technicalLayerInstruction": "Technical cutout of the original master basket at unchanged coordinates, no dome or rope; edge alpha and decontamination.",
+      "viitteet": [
+        {
+          "type": "selected-master-of-open-draft-PR",
+          "url": "https://github.com/ravelius/Matkakirja/pull/4143",
+          "commit": "b8843b344babc5d0c3c3f1b097b9df60d600490b",
+          "masterSHA256": "f47701aa0b6ec9115b3a09deec89b25433fe1df34e8ffec0243a56e63c578751",
+          "nativeDimensions": [
+            1254,
+            1254
+          ],
+          "usage": "Same composition, object source pixels, light, colours and original crop coordinate boxes; no new creative scene."
+        },
+        {
+          "type": "game-owned-3D-design-reference",
+          "path": "posti/liitteet/latauskuva-pallo-3d-viite-20261007.jpg",
+          "blob": "e13e25f0e0f405111b9b5e77edc8474409c091a3",
+          "sha256": "52be35e076350d433b8e4475ea9628a214008d823a4e8e387b375740d627229a",
+          "usage": "Already present in source master provenance; inspected, not used to generate new layer objects."
+        }
+      ],
+      "kuvateksti": "Kuumailmapallon latauskuvan kori-kerros. Havainnekuva.",
+      "url": "https://media.matkakirja.app/julisteet/latauskuva-kuumailmapallo-kerrokset/20261008/latauskuva-pallo-iphone-kori.png",
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "retainedUnchanged": true,
+      "newUpload": false,
+      "acceptedPerCorrectionSource": true,
+      "currentReadbackHTTP": 200
+    },
+    {
+      "device": "ipad-pysty",
+      "role": "tausta",
+      "file": "latauskuva-pallo-ipad-pysty-tausta-maaankkuri.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuumailmapallo-tausta-korjaus-20261008/final/latauskuva-pallo-ipad-pysty-tausta-maaankkuri.png",
+      "dimensions": [
+        2048,
+        2732
+      ],
+      "sha256": "b5abaae5d7bbbbb28f417a80971cd7d6376fcf91500b4cdfb601ac1339622db2",
+      "bytes": 2466628,
+      "sourceCropBox": [
+        157,
+        0,
+        1097,
+        1254
+      ],
+      "placement": {
+        "x": 0,
+        "y": 0,
+        "width": 2048,
+        "height": 2732
+      },
+      "checks": {
+        "dimensionsMatchPreviousCrop": true,
+        "sourceCropBoxMatchPrevious": true,
+        "sRGB": true,
+        "textMetadataExact": true,
+        "format": "PNG",
+        "opaque": true,
+        "bottom15MeanLstar": 9.64473375025515,
+        "bottom15SourcePixelsByteIdentical": true,
+        "cityPixelsUnchangedBelowMasterY775": true,
+        "groundAnchorPixelsUnchanged": true,
+        "bottom25PixelsByteIdentical": true,
+        "bottom25MeanLstar": 14.143962523517196
+      },
+      "r2Key": "julisteet/latauskuva-kuumailmapallo-kerrokset/20261008b/latauskuva-pallo-ipad-pysty-tausta-maaankkuri.png",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "generationPrompt": "Use case: precise-object-edit.\nAsset type: seamless repair of ONE existing approved loading-image BACKGROUND MASTER, not a new scene.\nInput image is the EDIT TARGET. Output opaque RGB PNG at exactly the same 1254 x 1254 square canvas and framing.\n\nCorrect only the faint pale rectangular balloon-removal patch near the center of the sky: the old patch roughly spans x541-724, y397-716, especially the vertical edges around x541 and x724 and its lower edge. The visible fault is an overly even, slightly brighter sky region; remove the local tonal discontinuity and any straight vertical or horizontal border. Use the naturally continuing surrounding blue-gray to warm sand sky gradient, fine irregular atmospheric texture and existing soft cloud bands. Clouds crossing the region must connect naturally across it. No uniform light blob, repeating cloud clone, obvious rectangle, differently grained fill, visible feather ring or straight seam, even under twice-normal contrast. Make a broad organic seamless transition over several dozen pixels around the patch, not a narrow rectangular fill. The correction is confined to this local sky region and its soft surrounding blend, approximately x450-820,y330-760; do not change anything else.\n\nLOCK AND PRESERVE: exact existing camera, original city skyline and every tower/building below roughly y775, horizon, haze elsewhere, all unrelated clouds, overall exposure and subdued photographic colors. Keep the tiny stone weight with its recessed iron eye at approximately x638,y992 entirely unchanged, in exactly the same position and scale. Keep the ground bank, the entire lower25percent and dark warm-brown footer #1d1610 unchanged. Do not add or remove city structures or relight the scene. No whole-scene regeneration, enhancement, recoloring, new clouds outside the small correction area or composition change.\n\nThis input background has NO balloon and NO basket; keep it that way. Do not add a balloon envelope, basket, rope, rigging, person, aircraft, text, logo, watermark, sign or border. The separate approved balloon envelope/basket PNGs will remain untouched. Only smooth the sky patch into continuous physically believable real-camera sky, retaining original fine grain and soft haze.\nOne authorised background repair edit only, no variants.\n",
+      "technicalLayerInstruction": "Same-master background removal, then authorised small ground anchor and low earth lip. Original foreground object placement and bottom15% unchanged.",
+      "viitteet": [
+        {
+          "type": "selected-master-of-open-draft-PR",
+          "url": "https://github.com/ravelius/Matkakirja/pull/4143",
+          "commit": "b8843b344babc5d0c3c3f1b097b9df60d600490b",
+          "masterSHA256": "f47701aa0b6ec9115b3a09deec89b25433fe1df34e8ffec0243a56e63c578751",
+          "nativeDimensions": [
+            1254,
+            1254
+          ],
+          "usage": "Same composition, object source pixels, light, colours and original crop coordinate boxes; no new creative scene."
+        },
+        {
+          "type": "game-owned-3D-design-reference",
+          "path": "posti/liitteet/latauskuva-pallo-3d-viite-20261007.jpg",
+          "blob": "e13e25f0e0f405111b9b5e77edc8474409c091a3",
+          "sha256": "52be35e076350d433b8e4475ea9628a214008d823a4e8e387b375740d627229a",
+          "usage": "Already present in source master provenance; inspected, not used to generate new layer objects."
+        }
+      ],
+      "kuvateksti": "Kuumailmapallon latauskuvan tausta-kerros. Havainnekuva.",
+      "previousBackgroundBeforeAnchor": {
+        "file": "latauskuva-pallo-ipad-pysty-tausta.png",
+        "r2Key": "julisteet/latauskuva-kuumailmapallo-kerrokset/20261008/latauskuva-pallo-ipad-pysty-tausta.png",
+        "sha256": "28db9e4c7ac9ab530c38a5f620bff6b16e9df5fa59d4ff4d72dc1e5678bafbfd",
+        "url": "https://media.matkakirja.app/julisteet/latauskuva-kuumailmapallo-kerrokset/20261008/latauskuva-pallo-ipad-pysty-tausta.png"
+      },
+      "groundAnchorIncluded": true,
+      "url": "https://media.matkakirja.app/julisteet/latauskuva-kuumailmapallo-kerrokset/20261008b/latauskuva-pallo-ipad-pysty-tausta-maaankkuri.png",
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "previousURL": "https://media.matkakirja.app/julisteet/latauskuva-kuumailmapallo-kerrokset/20261008/latauskuva-pallo-ipad-pysty-tausta-maaankkuri.png",
+      "previousSHA256": "03c5a35f06302e57425640ffb94da1cf26cd59245baa2f6797650b629a697e82"
+    },
+    {
+      "device": "ipad-pysty",
+      "role": "kupu",
+      "file": "latauskuva-pallo-ipad-pysty-kupu.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/latauskuva-pallo-kerrokset-20261008/final/latauskuva-pallo-ipad-pysty-kupu.png",
+      "dimensions": [
+        2048,
+        2732
+      ],
+      "sha256": "b627a106d40e1ac6086f15c415804cbce4773892619e4f9683123ca3193488f1",
+      "bytes": 204851,
+      "sourceCropBox": [
+        157,
+        0,
+        1097,
+        1254
+      ],
+      "placement": {
+        "x": 0,
+        "y": 0,
+        "width": 2048,
+        "height": 2732,
+        "contentBBox": [
+          866,
+          897,
+          1203,
+          1386
+        ]
+      },
+      "checks": {
+        "dimensionsMatchPreviousCrop": true,
+        "sourceCropBoxMatchPrevious": true,
+        "sRGB": true,
+        "textMetadataExact": true,
+        "format": "PNG",
+        "realAlpha": true,
+        "alphaExtrema": [
+          0,
+          255
+        ],
+        "outerEdgeAlphaMax": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "transparentMarginAtLeast3Percent": true
+      },
+      "r2Key": "julisteet/latauskuva-kuumailmapallo-kerrokset/20261008/latauskuva-pallo-ipad-pysty-kupu.png",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "generationPrompt": "Use case: photorealistic-natural. Generate ONE entirely NEW square photographic master image, high resolution preferably2816×2816, opaqueRGB. The user requires ALL images to look as if taken with a real camera. This must look like an actual full-frame colour photograph: believable fabric weave/seams, physical fine ropes, wicker basket, atmospheric haze and natural soft daylight. NO painting, watercolour, drawing, book illustration, paper texture, cartoon, CGI render or stylisation.\nReference image is ONLY the game's balloon-design reference, not an edit target. Recreate its round upper pear-shaped envelope, tapering neck, alternating vertical muted brick-red(#b03a2b) and cream(#faf4d6)fabric gores, sparse thin dark-brown(#46331f)crossing netting and one thin horizontal ring. Keep the long delicate suspension to a separate carrier hoop and a VERY SMALL empty gold-brown wicker basket(#d9a13b/#8a6114). A thin anchor rope trails into haze above the dark footer. No people, burner flames, advertising, text or logos.\nEXACT RELATIVE COMPOSITION, irrespective of output pixel count: place the COMPLETE balloon envelope, net, hoop and basket entirely within the CENTRAL26% of canvas width (x37%–63%) and between40% and63% of total canvas HEIGHT. Balloon-and-rigging must be quite small in the square: its TOP begins forty percent DOWN from the upper edge, and the BASKET ends near sixty-three percent. Do not put it near the top or enlarge it. It must stay whole inside both a full-height tall phone crop and a bottom-anchored4:3landscape crop. Top8% is quiet empty sky. Plenty of soft real clouded sky above balloon, not paper.\nBackground: distant anonymous contemporary European city, hazy modest domes/spires and a few modern plain towers, no identifiable landmark, signage or people. Its subdued silhouette lies around70%–74%height and fades out before75%. Natural calm pale dusty-blue/cream/warm sand atmospheric colour; restrained exposure, no HDR, dramatic cinema glow or oversaturated sunset.\nFOOTER: bottom25% of whole square contains NO balloon, rope, building or other detail. Entire width fades smoothly down into near-uniform dark warm-brown#1d1610. Bottom15% must be almost uniformly#1d1610, CIELAB meanL*<=12. No bright speckles or texture there. Straight full-width lower fade, NOT circular vignette, frame or border. No UI, no lettering, no watermarks. Photographic subject and sky, opaquePNG.",
+      "technicalLayerInstruction": "Technical cutout of the original master at unchanged coordinates; envelope/net/horizontal ring/carrier hoop only, no basket or suspension ropes; edge alpha and sky-colour decontamination.",
+      "viitteet": [
+        {
+          "type": "selected-master-of-open-draft-PR",
+          "url": "https://github.com/ravelius/Matkakirja/pull/4143",
+          "commit": "b8843b344babc5d0c3c3f1b097b9df60d600490b",
+          "masterSHA256": "f47701aa0b6ec9115b3a09deec89b25433fe1df34e8ffec0243a56e63c578751",
+          "nativeDimensions": [
+            1254,
+            1254
+          ],
+          "usage": "Same composition, object source pixels, light, colours and original crop coordinate boxes; no new creative scene."
+        },
+        {
+          "type": "game-owned-3D-design-reference",
+          "path": "posti/liitteet/latauskuva-pallo-3d-viite-20261007.jpg",
+          "blob": "e13e25f0e0f405111b9b5e77edc8474409c091a3",
+          "sha256": "52be35e076350d433b8e4475ea9628a214008d823a4e8e387b375740d627229a",
+          "usage": "Already present in source master provenance; inspected, not used to generate new layer objects."
+        }
+      ],
+      "kuvateksti": "Kuumailmapallon latauskuvan kupu-kerros. Havainnekuva.",
+      "url": "https://media.matkakirja.app/julisteet/latauskuva-kuumailmapallo-kerrokset/20261008/latauskuva-pallo-ipad-pysty-kupu.png",
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "retainedUnchanged": true,
+      "newUpload": false,
+      "acceptedPerCorrectionSource": true,
+      "currentReadbackHTTP": 200
+    },
+    {
+      "device": "ipad-pysty",
+      "role": "kori",
+      "file": "latauskuva-pallo-ipad-pysty-kori.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/latauskuva-pallo-kerrokset-20261008/final/latauskuva-pallo-ipad-pysty-kori.png",
+      "dimensions": [
+        2048,
+        2732
+      ],
+      "sha256": "76dfa412e62d695ad1ce55a1557769d42229a94621c0764baeb92d30d0438970",
+      "bytes": 30203,
+      "sourceCropBox": [
+        157,
+        0,
+        1097,
+        1254
+      ],
+      "placement": {
+        "x": 0,
+        "y": 0,
+        "width": 2048,
+        "height": 2732,
+        "contentBBox": [
+          1000,
+          1483,
+          1077,
+          1535
+        ]
+      },
+      "checks": {
+        "dimensionsMatchPreviousCrop": true,
+        "sourceCropBoxMatchPrevious": true,
+        "sRGB": true,
+        "textMetadataExact": true,
+        "format": "PNG",
+        "realAlpha": true,
+        "alphaExtrema": [
+          0,
+          255
+        ],
+        "outerEdgeAlphaMax": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "transparentMarginAtLeast3Percent": true
+      },
+      "r2Key": "julisteet/latauskuva-kuumailmapallo-kerrokset/20261008/latauskuva-pallo-ipad-pysty-kori.png",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "generationPrompt": "Use case: photorealistic-natural. Generate ONE entirely NEW square photographic master image, high resolution preferably2816×2816, opaqueRGB. The user requires ALL images to look as if taken with a real camera. This must look like an actual full-frame colour photograph: believable fabric weave/seams, physical fine ropes, wicker basket, atmospheric haze and natural soft daylight. NO painting, watercolour, drawing, book illustration, paper texture, cartoon, CGI render or stylisation.\nReference image is ONLY the game's balloon-design reference, not an edit target. Recreate its round upper pear-shaped envelope, tapering neck, alternating vertical muted brick-red(#b03a2b) and cream(#faf4d6)fabric gores, sparse thin dark-brown(#46331f)crossing netting and one thin horizontal ring. Keep the long delicate suspension to a separate carrier hoop and a VERY SMALL empty gold-brown wicker basket(#d9a13b/#8a6114). A thin anchor rope trails into haze above the dark footer. No people, burner flames, advertising, text or logos.\nEXACT RELATIVE COMPOSITION, irrespective of output pixel count: place the COMPLETE balloon envelope, net, hoop and basket entirely within the CENTRAL26% of canvas width (x37%–63%) and between40% and63% of total canvas HEIGHT. Balloon-and-rigging must be quite small in the square: its TOP begins forty percent DOWN from the upper edge, and the BASKET ends near sixty-three percent. Do not put it near the top or enlarge it. It must stay whole inside both a full-height tall phone crop and a bottom-anchored4:3landscape crop. Top8% is quiet empty sky. Plenty of soft real clouded sky above balloon, not paper.\nBackground: distant anonymous contemporary European city, hazy modest domes/spires and a few modern plain towers, no identifiable landmark, signage or people. Its subdued silhouette lies around70%–74%height and fades out before75%. Natural calm pale dusty-blue/cream/warm sand atmospheric colour; restrained exposure, no HDR, dramatic cinema glow or oversaturated sunset.\nFOOTER: bottom25% of whole square contains NO balloon, rope, building or other detail. Entire width fades smoothly down into near-uniform dark warm-brown#1d1610. Bottom15% must be almost uniformly#1d1610, CIELAB meanL*<=12. No bright speckles or texture there. Straight full-width lower fade, NOT circular vignette, frame or border. No UI, no lettering, no watermarks. Photographic subject and sky, opaquePNG.",
+      "technicalLayerInstruction": "Technical cutout of the original master basket at unchanged coordinates, no dome or rope; edge alpha and decontamination.",
+      "viitteet": [
+        {
+          "type": "selected-master-of-open-draft-PR",
+          "url": "https://github.com/ravelius/Matkakirja/pull/4143",
+          "commit": "b8843b344babc5d0c3c3f1b097b9df60d600490b",
+          "masterSHA256": "f47701aa0b6ec9115b3a09deec89b25433fe1df34e8ffec0243a56e63c578751",
+          "nativeDimensions": [
+            1254,
+            1254
+          ],
+          "usage": "Same composition, object source pixels, light, colours and original crop coordinate boxes; no new creative scene."
+        },
+        {
+          "type": "game-owned-3D-design-reference",
+          "path": "posti/liitteet/latauskuva-pallo-3d-viite-20261007.jpg",
+          "blob": "e13e25f0e0f405111b9b5e77edc8474409c091a3",
+          "sha256": "52be35e076350d433b8e4475ea9628a214008d823a4e8e387b375740d627229a",
+          "usage": "Already present in source master provenance; inspected, not used to generate new layer objects."
+        }
+      ],
+      "kuvateksti": "Kuumailmapallon latauskuvan kori-kerros. Havainnekuva.",
+      "url": "https://media.matkakirja.app/julisteet/latauskuva-kuumailmapallo-kerrokset/20261008/latauskuva-pallo-ipad-pysty-kori.png",
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "retainedUnchanged": true,
+      "newUpload": false,
+      "acceptedPerCorrectionSource": true,
+      "currentReadbackHTTP": 200
+    },
+    {
+      "device": "ipad-vaaka",
+      "role": "tausta",
+      "file": "latauskuva-pallo-ipad-vaaka-tausta-maaankkuri.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuumailmapallo-tausta-korjaus-20261008/final/latauskuva-pallo-ipad-vaaka-tausta-maaankkuri.png",
+      "dimensions": [
+        2732,
+        2048
+      ],
+      "sha256": "3108324c206faaea9804df3f6a89ea97de1620a3c88e181fea3939a96c551d95",
+      "bytes": 2489074,
+      "sourceCropBox": [
+        0,
+        263,
+        1254,
+        1203
+      ],
+      "placement": {
+        "x": 0,
+        "y": 0,
+        "width": 2732,
+        "height": 2048
+      },
+      "checks": {
+        "dimensionsMatchPreviousCrop": true,
+        "sourceCropBoxMatchPrevious": true,
+        "sRGB": true,
+        "textMetadataExact": true,
+        "format": "PNG",
+        "opaque": true,
+        "bottom15MeanLstar": 10.108381472253862,
+        "bottom15SourcePixelsByteIdentical": true,
+        "cityPixelsUnchangedBelowMasterY775": true,
+        "groundAnchorPixelsUnchanged": true,
+        "bottom25PixelsByteIdentical": true,
+        "bottom25MeanLstar": 13.639482677007306
+      },
+      "r2Key": "julisteet/latauskuva-kuumailmapallo-kerrokset/20261008b/latauskuva-pallo-ipad-vaaka-tausta-maaankkuri.png",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "generationPrompt": "Use case: precise-object-edit.\nAsset type: seamless repair of ONE existing approved loading-image BACKGROUND MASTER, not a new scene.\nInput image is the EDIT TARGET. Output opaque RGB PNG at exactly the same 1254 x 1254 square canvas and framing.\n\nCorrect only the faint pale rectangular balloon-removal patch near the center of the sky: the old patch roughly spans x541-724, y397-716, especially the vertical edges around x541 and x724 and its lower edge. The visible fault is an overly even, slightly brighter sky region; remove the local tonal discontinuity and any straight vertical or horizontal border. Use the naturally continuing surrounding blue-gray to warm sand sky gradient, fine irregular atmospheric texture and existing soft cloud bands. Clouds crossing the region must connect naturally across it. No uniform light blob, repeating cloud clone, obvious rectangle, differently grained fill, visible feather ring or straight seam, even under twice-normal contrast. Make a broad organic seamless transition over several dozen pixels around the patch, not a narrow rectangular fill. The correction is confined to this local sky region and its soft surrounding blend, approximately x450-820,y330-760; do not change anything else.\n\nLOCK AND PRESERVE: exact existing camera, original city skyline and every tower/building below roughly y775, horizon, haze elsewhere, all unrelated clouds, overall exposure and subdued photographic colors. Keep the tiny stone weight with its recessed iron eye at approximately x638,y992 entirely unchanged, in exactly the same position and scale. Keep the ground bank, the entire lower25percent and dark warm-brown footer #1d1610 unchanged. Do not add or remove city structures or relight the scene. No whole-scene regeneration, enhancement, recoloring, new clouds outside the small correction area or composition change.\n\nThis input background has NO balloon and NO basket; keep it that way. Do not add a balloon envelope, basket, rope, rigging, person, aircraft, text, logo, watermark, sign or border. The separate approved balloon envelope/basket PNGs will remain untouched. Only smooth the sky patch into continuous physically believable real-camera sky, retaining original fine grain and soft haze.\nOne authorised background repair edit only, no variants.\n",
+      "technicalLayerInstruction": "Same-master background removal, then authorised small ground anchor and low earth lip. Original foreground object placement and bottom15% unchanged.",
+      "viitteet": [
+        {
+          "type": "selected-master-of-open-draft-PR",
+          "url": "https://github.com/ravelius/Matkakirja/pull/4143",
+          "commit": "b8843b344babc5d0c3c3f1b097b9df60d600490b",
+          "masterSHA256": "f47701aa0b6ec9115b3a09deec89b25433fe1df34e8ffec0243a56e63c578751",
+          "nativeDimensions": [
+            1254,
+            1254
+          ],
+          "usage": "Same composition, object source pixels, light, colours and original crop coordinate boxes; no new creative scene."
+        },
+        {
+          "type": "game-owned-3D-design-reference",
+          "path": "posti/liitteet/latauskuva-pallo-3d-viite-20261007.jpg",
+          "blob": "e13e25f0e0f405111b9b5e77edc8474409c091a3",
+          "sha256": "52be35e076350d433b8e4475ea9628a214008d823a4e8e387b375740d627229a",
+          "usage": "Already present in source master provenance; inspected, not used to generate new layer objects."
+        }
+      ],
+      "kuvateksti": "Kuumailmapallon latauskuvan tausta-kerros. Havainnekuva.",
+      "previousBackgroundBeforeAnchor": {
+        "file": "latauskuva-pallo-ipad-vaaka-tausta.png",
+        "r2Key": "julisteet/latauskuva-kuumailmapallo-kerrokset/20261008/latauskuva-pallo-ipad-vaaka-tausta.png",
+        "sha256": "b24fab62a94708e86b3ac029dfeef2a603de3bfafae7f0cc1b798c43d9ffbf47",
+        "url": "https://media.matkakirja.app/julisteet/latauskuva-kuumailmapallo-kerrokset/20261008/latauskuva-pallo-ipad-vaaka-tausta.png"
+      },
+      "groundAnchorIncluded": true,
+      "url": "https://media.matkakirja.app/julisteet/latauskuva-kuumailmapallo-kerrokset/20261008b/latauskuva-pallo-ipad-vaaka-tausta-maaankkuri.png",
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "previousURL": "https://media.matkakirja.app/julisteet/latauskuva-kuumailmapallo-kerrokset/20261008/latauskuva-pallo-ipad-vaaka-tausta-maaankkuri.png",
+      "previousSHA256": "4eb6bf54baae88d22fef66490d48e04c5e07267944d5851e7d11b78c4b7bf041"
+    },
+    {
+      "device": "ipad-vaaka",
+      "role": "kupu",
+      "file": "latauskuva-pallo-ipad-vaaka-kupu.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/latauskuva-pallo-kerrokset-20261008/final/latauskuva-pallo-ipad-vaaka-kupu.png",
+      "dimensions": [
+        2732,
+        2048
+      ],
+      "sha256": "be24f0b75939774a5b68a3a51c1e9cf41dd6e3d5a8d07064e6f07573a98aa14f",
+      "bytes": 207810,
+      "sourceCropBox": [
+        0,
+        263,
+        1254,
+        1203
+      ],
+      "placement": {
+        "x": 0,
+        "y": 0,
+        "width": 2732,
+        "height": 2048,
+        "contentBBox": [
+          1208,
+          324,
+          1545,
+          813
+        ]
+      },
+      "checks": {
+        "dimensionsMatchPreviousCrop": true,
+        "sourceCropBoxMatchPrevious": true,
+        "sRGB": true,
+        "textMetadataExact": true,
+        "format": "PNG",
+        "realAlpha": true,
+        "alphaExtrema": [
+          0,
+          255
+        ],
+        "outerEdgeAlphaMax": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "transparentMarginAtLeast3Percent": true
+      },
+      "r2Key": "julisteet/latauskuva-kuumailmapallo-kerrokset/20261008/latauskuva-pallo-ipad-vaaka-kupu.png",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "generationPrompt": "Use case: photorealistic-natural. Generate ONE entirely NEW square photographic master image, high resolution preferably2816×2816, opaqueRGB. The user requires ALL images to look as if taken with a real camera. This must look like an actual full-frame colour photograph: believable fabric weave/seams, physical fine ropes, wicker basket, atmospheric haze and natural soft daylight. NO painting, watercolour, drawing, book illustration, paper texture, cartoon, CGI render or stylisation.\nReference image is ONLY the game's balloon-design reference, not an edit target. Recreate its round upper pear-shaped envelope, tapering neck, alternating vertical muted brick-red(#b03a2b) and cream(#faf4d6)fabric gores, sparse thin dark-brown(#46331f)crossing netting and one thin horizontal ring. Keep the long delicate suspension to a separate carrier hoop and a VERY SMALL empty gold-brown wicker basket(#d9a13b/#8a6114). A thin anchor rope trails into haze above the dark footer. No people, burner flames, advertising, text or logos.\nEXACT RELATIVE COMPOSITION, irrespective of output pixel count: place the COMPLETE balloon envelope, net, hoop and basket entirely within the CENTRAL26% of canvas width (x37%–63%) and between40% and63% of total canvas HEIGHT. Balloon-and-rigging must be quite small in the square: its TOP begins forty percent DOWN from the upper edge, and the BASKET ends near sixty-three percent. Do not put it near the top or enlarge it. It must stay whole inside both a full-height tall phone crop and a bottom-anchored4:3landscape crop. Top8% is quiet empty sky. Plenty of soft real clouded sky above balloon, not paper.\nBackground: distant anonymous contemporary European city, hazy modest domes/spires and a few modern plain towers, no identifiable landmark, signage or people. Its subdued silhouette lies around70%–74%height and fades out before75%. Natural calm pale dusty-blue/cream/warm sand atmospheric colour; restrained exposure, no HDR, dramatic cinema glow or oversaturated sunset.\nFOOTER: bottom25% of whole square contains NO balloon, rope, building or other detail. Entire width fades smoothly down into near-uniform dark warm-brown#1d1610. Bottom15% must be almost uniformly#1d1610, CIELAB meanL*<=12. No bright speckles or texture there. Straight full-width lower fade, NOT circular vignette, frame or border. No UI, no lettering, no watermarks. Photographic subject and sky, opaquePNG.",
+      "technicalLayerInstruction": "Technical cutout of the original master at unchanged coordinates; envelope/net/horizontal ring/carrier hoop only, no basket or suspension ropes; edge alpha and sky-colour decontamination.",
+      "viitteet": [
+        {
+          "type": "selected-master-of-open-draft-PR",
+          "url": "https://github.com/ravelius/Matkakirja/pull/4143",
+          "commit": "b8843b344babc5d0c3c3f1b097b9df60d600490b",
+          "masterSHA256": "f47701aa0b6ec9115b3a09deec89b25433fe1df34e8ffec0243a56e63c578751",
+          "nativeDimensions": [
+            1254,
+            1254
+          ],
+          "usage": "Same composition, object source pixels, light, colours and original crop coordinate boxes; no new creative scene."
+        },
+        {
+          "type": "game-owned-3D-design-reference",
+          "path": "posti/liitteet/latauskuva-pallo-3d-viite-20261007.jpg",
+          "blob": "e13e25f0e0f405111b9b5e77edc8474409c091a3",
+          "sha256": "52be35e076350d433b8e4475ea9628a214008d823a4e8e387b375740d627229a",
+          "usage": "Already present in source master provenance; inspected, not used to generate new layer objects."
+        }
+      ],
+      "kuvateksti": "Kuumailmapallon latauskuvan kupu-kerros. Havainnekuva.",
+      "url": "https://media.matkakirja.app/julisteet/latauskuva-kuumailmapallo-kerrokset/20261008/latauskuva-pallo-ipad-vaaka-kupu.png",
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "retainedUnchanged": true,
+      "newUpload": false,
+      "acceptedPerCorrectionSource": true,
+      "currentReadbackHTTP": 200
+    },
+    {
+      "device": "ipad-vaaka",
+      "role": "kori",
+      "file": "latauskuva-pallo-ipad-vaaka-kori.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/latauskuva-pallo-kerrokset-20261008/final/latauskuva-pallo-ipad-vaaka-kori.png",
+      "dimensions": [
+        2732,
+        2048
+      ],
+      "sha256": "5abdc8662a815934dff812db5debfd6c400f3e57a0dbe0c1679db74db9540be5",
+      "bytes": 30153,
+      "sourceCropBox": [
+        0,
+        263,
+        1254,
+        1203
+      ],
+      "placement": {
+        "x": 0,
+        "y": 0,
+        "width": 2732,
+        "height": 2048,
+        "contentBBox": [
+          1342,
+          910,
+          1419,
+          962
+        ]
+      },
+      "checks": {
+        "dimensionsMatchPreviousCrop": true,
+        "sourceCropBoxMatchPrevious": true,
+        "sRGB": true,
+        "textMetadataExact": true,
+        "format": "PNG",
+        "realAlpha": true,
+        "alphaExtrema": [
+          0,
+          255
+        ],
+        "outerEdgeAlphaMax": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "transparentMarginAtLeast3Percent": true
+      },
+      "r2Key": "julisteet/latauskuva-kuumailmapallo-kerrokset/20261008/latauskuva-pallo-ipad-vaaka-kori.png",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "generationPrompt": "Use case: photorealistic-natural. Generate ONE entirely NEW square photographic master image, high resolution preferably2816×2816, opaqueRGB. The user requires ALL images to look as if taken with a real camera. This must look like an actual full-frame colour photograph: believable fabric weave/seams, physical fine ropes, wicker basket, atmospheric haze and natural soft daylight. NO painting, watercolour, drawing, book illustration, paper texture, cartoon, CGI render or stylisation.\nReference image is ONLY the game's balloon-design reference, not an edit target. Recreate its round upper pear-shaped envelope, tapering neck, alternating vertical muted brick-red(#b03a2b) and cream(#faf4d6)fabric gores, sparse thin dark-brown(#46331f)crossing netting and one thin horizontal ring. Keep the long delicate suspension to a separate carrier hoop and a VERY SMALL empty gold-brown wicker basket(#d9a13b/#8a6114). A thin anchor rope trails into haze above the dark footer. No people, burner flames, advertising, text or logos.\nEXACT RELATIVE COMPOSITION, irrespective of output pixel count: place the COMPLETE balloon envelope, net, hoop and basket entirely within the CENTRAL26% of canvas width (x37%–63%) and between40% and63% of total canvas HEIGHT. Balloon-and-rigging must be quite small in the square: its TOP begins forty percent DOWN from the upper edge, and the BASKET ends near sixty-three percent. Do not put it near the top or enlarge it. It must stay whole inside both a full-height tall phone crop and a bottom-anchored4:3landscape crop. Top8% is quiet empty sky. Plenty of soft real clouded sky above balloon, not paper.\nBackground: distant anonymous contemporary European city, hazy modest domes/spires and a few modern plain towers, no identifiable landmark, signage or people. Its subdued silhouette lies around70%–74%height and fades out before75%. Natural calm pale dusty-blue/cream/warm sand atmospheric colour; restrained exposure, no HDR, dramatic cinema glow or oversaturated sunset.\nFOOTER: bottom25% of whole square contains NO balloon, rope, building or other detail. Entire width fades smoothly down into near-uniform dark warm-brown#1d1610. Bottom15% must be almost uniformly#1d1610, CIELAB meanL*<=12. No bright speckles or texture there. Straight full-width lower fade, NOT circular vignette, frame or border. No UI, no lettering, no watermarks. Photographic subject and sky, opaquePNG.",
+      "technicalLayerInstruction": "Technical cutout of the original master basket at unchanged coordinates, no dome or rope; edge alpha and decontamination.",
+      "viitteet": [
+        {
+          "type": "selected-master-of-open-draft-PR",
+          "url": "https://github.com/ravelius/Matkakirja/pull/4143",
+          "commit": "b8843b344babc5d0c3c3f1b097b9df60d600490b",
+          "masterSHA256": "f47701aa0b6ec9115b3a09deec89b25433fe1df34e8ffec0243a56e63c578751",
+          "nativeDimensions": [
+            1254,
+            1254
+          ],
+          "usage": "Same composition, object source pixels, light, colours and original crop coordinate boxes; no new creative scene."
+        },
+        {
+          "type": "game-owned-3D-design-reference",
+          "path": "posti/liitteet/latauskuva-pallo-3d-viite-20261007.jpg",
+          "blob": "e13e25f0e0f405111b9b5e77edc8474409c091a3",
+          "sha256": "52be35e076350d433b8e4475ea9628a214008d823a4e8e387b375740d627229a",
+          "usage": "Already present in source master provenance; inspected, not used to generate new layer objects."
+        }
+      ],
+      "kuvateksti": "Kuumailmapallon latauskuvan kori-kerros. Havainnekuva.",
+      "url": "https://media.matkakirja.app/julisteet/latauskuva-kuumailmapallo-kerrokset/20261008/latauskuva-pallo-ipad-vaaka-kori.png",
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "retainedUnchanged": true,
+      "newUpload": false,
+      "acceptedPerCorrectionSource": true,
+      "currentReadbackHTTP": 200
+    }
+  ],
+  "crops": [
+    {
+      "device": "iphone",
+      "dimensions": [
+        1290,
+        2796
+      ],
+      "sourceCropBox": [
+        338,
+        0,
+        917,
+        1254
+      ],
+      "fullCanvasLayers": true,
+      "coordinateOrigin": "top-left; pixel units",
+      "mapping": {
+        "scaleX": 2.227979274611399,
+        "scaleY": 2.229665071770335,
+        "offsetX": -753.0569948186528,
+        "offsetY": 0.0
+      },
+      "layers": {
+        "tausta": {
+          "x": 0,
+          "y": 0,
+          "width": 1290,
+          "height": 2796
+        },
+        "kupu": {
+          "x": 0,
+          "y": 0,
+          "width": 1290,
+          "height": 2796,
+          "contentBBox": [
+            483,
+            918,
+            827,
+            1419
+          ]
+        },
+        "kori": {
+          "x": 0,
+          "y": 0,
+          "width": 1290,
+          "height": 2796,
+          "contentBBox": [
+            619,
+            1518,
+            698,
+            1570
+          ]
+        }
+      },
+      "ropeAnchors": {
+        "kupu": [
+          {
+            "id": "back-left",
+            "x": 610.4663,
+            "y": 1302.1244
+          },
+          {
+            "id": "back-right",
+            "x": 699.5855,
+            "y": 1302.1244
+          },
+          {
+            "id": "front-left",
+            "x": 634.9741,
+            "y": 1315.5024
+          },
+          {
+            "id": "front-right",
+            "x": 675.0777,
+            "y": 1317.7321
+          }
+        ],
+        "kori": [
+          {
+            "id": "back-left",
+            "x": 630.5181,
+            "y": 1525.0909
+          },
+          {
+            "id": "back-right",
+            "x": 683.9896,
+            "y": 1525.0909
+          },
+          {
+            "id": "front-left",
+            "x": 628.2902,
+            "y": 1534.0096
+          },
+          {
+            "id": "front-right",
+            "x": 683.9896,
+            "y": 1534.0096
+          }
+        ]
+      },
+      "pivots": {
+        "kupu": [
+          653.9119,
+          923.0813
+        ],
+        "kori": [
+          657.2539,
+          1528.4354
+        ]
+      },
+      "originalReference": {
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/latauskuva-kuumailmapallo-20261007/final/latauskuva-pallo-iphone.png",
+        "sha256": "7f5846ce7594b97c1d7139400d5ba9858bdfc730777c02403b691b09a810c113"
+      },
+      "horizontalSwingTestFractions": [
+        -0.06,
+        0,
+        0.06
+      ],
+      "anchorRopeBasketAttachment": [
+        657.2539,
+        1562.9952
+      ],
+      "groundAnchor": [
+        668.982,
+        2212.5412
+      ],
+      "groundAnchorBBox": [
+        647.4508,
+        2206.4766,
+        690.9409,
+        2241.4377
+      ],
+      "groundAnchorWidthFraction": 0.03371329879101897,
+      "anchorRopeIncludedInRaster": false,
+      "ropeAnchorNote": "Four corresponding back-left/back-right/front-left/front-right pairs on the visible envelope lower edge and basket upper rim. Carrier hoop remains in dome layer; positions are initial source-pixel measurements for editor review."
+    },
+    {
+      "device": "ipad-pysty",
+      "dimensions": [
+        2048,
+        2732
+      ],
+      "sourceCropBox": [
+        157,
+        0,
+        1097,
+        1254
+      ],
+      "fullCanvasLayers": true,
+      "coordinateOrigin": "top-left; pixel units",
+      "mapping": {
+        "scaleX": 2.178723404255319,
+        "scaleY": 2.178628389154705,
+        "offsetX": -342.0595744680851,
+        "offsetY": 0.0
+      },
+      "layers": {
+        "tausta": {
+          "x": 0,
+          "y": 0,
+          "width": 2048,
+          "height": 2732
+        },
+        "kupu": {
+          "x": 0,
+          "y": 0,
+          "width": 2048,
+          "height": 2732,
+          "contentBBox": [
+            866,
+            897,
+            1203,
+            1386
+          ]
+        },
+        "kori": {
+          "x": 0,
+          "y": 0,
+          "width": 2048,
+          "height": 2732,
+          "contentBBox": [
+            1000,
+            1483,
+            1077,
+            1535
+          ]
+        }
+      },
+      "ropeAnchors": {
+        "kupu": [
+          {
+            "id": "back-left",
+            "x": 991.3191,
+            "y": 1272.319
+          },
+          {
+            "id": "back-right",
+            "x": 1078.4681,
+            "y": 1272.319
+          },
+          {
+            "id": "front-left",
+            "x": 1015.2851,
+            "y": 1285.3907
+          },
+          {
+            "id": "front-right",
+            "x": 1054.5021,
+            "y": 1287.5694
+          }
+        ],
+        "kori": [
+          {
+            "id": "back-left",
+            "x": 1010.9277,
+            "y": 1490.1818
+          },
+          {
+            "id": "back-right",
+            "x": 1063.217,
+            "y": 1490.1818
+          },
+          {
+            "id": "front-left",
+            "x": 1008.7489,
+            "y": 1498.8963
+          },
+          {
+            "id": "front-right",
+            "x": 1063.217,
+            "y": 1498.8963
+          }
+        ]
+      },
+      "pivots": {
+        "kupu": [
+          1033.8043,
+          901.9522
+        ],
+        "kori": [
+          1037.0723,
+          1493.4498
+        ]
+      },
+      "originalReference": {
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/latauskuva-kuumailmapallo-20261007/final/latauskuva-pallo-ipad-pysty.png",
+        "sha256": "12af951f2a192581e81890a9176d9271d9194a6bfcb9dbe07281e0779650bc76"
+      },
+      "horizontalSwingTestFractions": [
+        -0.06,
+        0,
+        0.06
+      ],
+      "anchorRopeBasketAttachment": [
+        1037.0723,
+        1527.2185
+      ],
+      "groundAnchor": [
+        1048.5411,
+        2161.8965
+      ],
+      "groundAnchorBBox": [
+        1027.486,
+        2155.9707,
+        1070.0146,
+        2190.1315
+      ],
+      "groundAnchorWidthFraction": 0.02076595744680849,
+      "anchorRopeIncludedInRaster": false,
+      "ropeAnchorNote": "Four corresponding back-left/back-right/front-left/front-right pairs on the visible envelope lower edge and basket upper rim. Carrier hoop remains in dome layer; positions are initial source-pixel measurements for editor review."
+    },
+    {
+      "device": "ipad-vaaka",
+      "dimensions": [
+        2732,
+        2048
+      ],
+      "sourceCropBox": [
+        0,
+        263,
+        1254,
+        1203
+      ],
+      "fullCanvasLayers": true,
+      "coordinateOrigin": "top-left; pixel units",
+      "mapping": {
+        "scaleX": 2.178628389154705,
+        "scaleY": 2.178723404255319,
+        "offsetX": 0.0,
+        "offsetY": -573.0042553191489
+      },
+      "layers": {
+        "tausta": {
+          "x": 0,
+          "y": 0,
+          "width": 2732,
+          "height": 2048
+        },
+        "kupu": {
+          "x": 0,
+          "y": 0,
+          "width": 2732,
+          "height": 2048,
+          "contentBBox": [
+            1208,
+            324,
+            1545,
+            813
+          ]
+        },
+        "kori": {
+          "x": 0,
+          "y": 0,
+          "width": 2732,
+          "height": 2048,
+          "contentBBox": [
+            1342,
+            910,
+            1419,
+            962
+          ]
+        }
+      },
+      "ropeAnchors": {
+        "kupu": [
+          {
+            "id": "back-left",
+            "x": 1333.3206,
+            "y": 699.3702
+          },
+          {
+            "id": "back-right",
+            "x": 1420.4657,
+            "y": 699.3702
+          },
+          {
+            "id": "front-left",
+            "x": 1357.2855,
+            "y": 712.4426
+          },
+          {
+            "id": "front-right",
+            "x": 1396.5008,
+            "y": 714.6213
+          }
+        ],
+        "kori": [
+          {
+            "id": "back-left",
+            "x": 1352.9282,
+            "y": 917.2426
+          },
+          {
+            "id": "back-right",
+            "x": 1405.2153,
+            "y": 917.2426
+          },
+          {
+            "id": "front-left",
+            "x": 1350.7496,
+            "y": 925.9574
+          },
+          {
+            "id": "front-right",
+            "x": 1405.2153,
+            "y": 925.9574
+          }
+        ]
+      },
+      "pivots": {
+        "kupu": [
+          1375.8038,
+          328.9872
+        ],
+        "kori": [
+          1379.0718,
+          920.5106
+        ]
+      },
+      "originalReference": {
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/latauskuva-kuumailmapallo-20261007/final/latauskuva-pallo-ipad-vaaka.png",
+        "sha256": "e3600ea55acfeeaa7ea4242e9dcab2cff571e2997a1f2a8897d1202cddd1e5b9"
+      },
+      "horizontalSwingTestFractions": [
+        -0.06,
+        0,
+        0.06
+      ],
+      "anchorRopeBasketAttachment": [
+        1379.0718,
+        954.2809
+      ],
+      "groundAnchor": [
+        1390.5401,
+        1588.9866
+      ],
+      "groundAnchorBBox": [
+        1369.4858,
+        1583.0604,
+        1412.0126,
+        1617.2228
+      ],
+      "groundAnchorWidthFraction": 0.01556618819776713,
+      "anchorRopeIncludedInRaster": false,
+      "ropeAnchorNote": "Four corresponding back-left/back-right/front-left/front-right pairs on the visible envelope lower edge and basket upper rim. Carrier hoop remains in dome layer; positions are initial source-pixel measurements for editor review."
+    }
+  ],
+  "previewTransforms": [
+    {
+      "device": "iphone",
+      "previewSheet": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/latauskuva-pallo-kerrokset-20261008/qa/iphone-kolme-asentoa.jpg",
+      "neutralComposite": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/latauskuva-pallo-kerrokset-20261008/qa/iphone-keskella-komposiitti.png",
+      "neutralLayersOnly": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/latauskuva-pallo-kerrokset-20261008/qa/iphone-kolme-kerrosta-ilman-viivoja.png",
+      "states": [
+        {
+          "state": "vasen",
+          "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/latauskuva-pallo-kerrokset-20261008/qa/iphone-vasen-komposiitti.png",
+          "domeTranslateX": -77.39999999999999,
+          "basketTranslateX": -28.38,
+          "domeRotationDegrees": -3,
+          "basketRotationDegrees": 2,
+          "ropeLinePairs": [
+            {
+              "id": "back-left",
+              "dome": {
+                "x": 552.9634237806565,
+                "y": 1303.8787016254798
+              },
+              "basket": {
+                "x": 602.2711080937045,
+                "y": 1524.1598714150957
+              }
+            },
+            {
+              "id": "back-right",
+              "dome": {
+                "x": 641.9604890143563,
+                "y": 1299.2145630738737
+              },
+              "basket": {
+                "x": 655.710034700656,
+                "y": 1526.0259998530237
+              }
+            },
+            {
+              "id": "front-left",
+              "dome": {
+                "x": 578.1377871151327,
+                "y": 1315.9557283930158
+              },
+              "basket": {
+                "x": 599.733307128948,
+                "y": 1532.9953857953278
+              }
+            },
+            {
+              "id": "front-right",
+              "dome": {
+                "x": 618.3031200067512,
+                "y": 1316.0835124118735
+              },
+              "basket": {
+                "x": 655.3987765594154,
+                "y": 1534.939266821959
+              }
+            }
+          ],
+          "groundRope": {
+            "basket": {
+              "x": 627.667780373861,
+              "y": 1562.9741471036145
+            },
+            "ground": {
+              "x": 668.982,
+              "y": 2212.5412
+            }
+          },
+          "vectorRopesPreviewOnly": true
+        },
+        {
+          "state": "keskella",
+          "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/latauskuva-pallo-kerrokset-20261008/qa/iphone-keskella-komposiitti.png",
+          "domeTranslateX": 0,
+          "basketTranslateX": 0,
+          "domeRotationDegrees": 0,
+          "basketRotationDegrees": 0,
+          "ropeLinePairs": [
+            {
+              "id": "back-left",
+              "dome": {
+                "x": 610.4663,
+                "y": 1302.1244
+              },
+              "basket": {
+                "x": 630.5181,
+                "y": 1525.0909
+              }
+            },
+            {
+              "id": "back-right",
+              "dome": {
+                "x": 699.5855,
+                "y": 1302.1244
+              },
+              "basket": {
+                "x": 683.9896,
+                "y": 1525.0909
+              }
+            },
+            {
+              "id": "front-left",
+              "dome": {
+                "x": 634.9741,
+                "y": 1315.5024
+              },
+              "basket": {
+                "x": 628.2902,
+                "y": 1534.0096
+              }
+            },
+            {
+              "id": "front-right",
+              "dome": {
+                "x": 675.0777,
+                "y": 1317.7321
+              },
+              "basket": {
+                "x": 683.9896,
+                "y": 1534.0096
+              }
+            }
+          ],
+          "groundRope": {
+            "basket": {
+              "x": 657.2539,
+              "y": 1562.9952
+            },
+            "ground": {
+              "x": 668.982,
+              "y": 2212.5412
+            }
+          },
+          "vectorRopesPreviewOnly": true
+        },
+        {
+          "state": "oikea",
+          "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/latauskuva-pallo-kerrokset-20261008/qa/iphone-oikea-komposiitti.png",
+          "domeTranslateX": 77.39999999999999,
+          "basketTranslateX": 28.38,
+          "domeRotationDegrees": 3,
+          "basketRotationDegrees": -2,
+          "ropeLinePairs": [
+            {
+              "id": "back-left",
+              "dome": {
+                "x": 668.0882575890769,
+                "y": 1299.331167584383
+              },
+              "basket": {
+                "x": 658.7976653602614,
+                "y": 1526.0260033429734
+              }
+            },
+            {
+              "id": "back-right",
+              "dome": {
+                "x": 757.0853228227767,
+                "y": 1303.995306135989
+              },
+              "basket": {
+                "x": 712.2365919672129,
+                "y": 1524.1598749050454
+              }
+            },
+            {
+              "id": "front-left",
+              "dome": {
+                "x": 691.8623200783169,
+                "y": 1313.9734726487404
+              },
+              "basket": {
+                "x": 656.8823806779861,
+                "y": 1535.0170229006121
+              }
+            },
+            {
+              "id": "front-right",
+              "dome": {
+                "x": 731.7942660066656,
+                "y": 1318.2989771771672
+              },
+              "basket": {
+                "x": 712.5478501084535,
+                "y": 1533.0731418739808
+              }
+            }
+          ],
+          "groundRope": {
+            "basket": {
+              "x": 686.8400196261391,
+              "y": 1562.9741471036145
+            },
+            "ground": {
+              "x": 668.982,
+              "y": 2212.5412
+            }
+          },
+          "vectorRopesPreviewOnly": true
+        }
+      ]
+    },
+    {
+      "device": "ipad-pysty",
+      "previewSheet": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/latauskuva-pallo-kerrokset-20261008/qa/ipad-pysty-kolme-asentoa.jpg",
+      "neutralComposite": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/latauskuva-pallo-kerrokset-20261008/qa/ipad-pysty-keskella-komposiitti.png",
+      "neutralLayersOnly": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/latauskuva-pallo-kerrokset-20261008/qa/ipad-pysty-kolme-kerrosta-ilman-viivoja.png",
+      "states": [
+        {
+          "state": "vasen",
+          "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/latauskuva-pallo-kerrokset-20261008/qa/ipad-pysty-vasen-komposiitti.png",
+          "domeTranslateX": -122.88,
+          "basketTranslateX": -45.056,
+          "domeRotationDegrees": -3,
+          "basketRotationDegrees": 2,
+          "ropeLinePairs": [
+            {
+              "id": "back-left",
+              "dome": {
+                "x": 887.8808251286841,
+                "y": 1274.034928740713
+              },
+              "basket": {
+                "x": 966.0016781391403,
+                "y": 1489.2713573958135
+              }
+            },
+            {
+              "id": "back-right",
+              "dome": {
+                "x": 974.9103904530106,
+                "y": 1269.4739024900966
+              },
+              "basket": {
+                "x": 1018.25912491039,
+                "y": 1491.0962276487396
+              }
+            },
+            {
+              "id": "front-left",
+              "dome": {
+                "x": 912.4981004778332,
+                "y": 1285.834430902846
+              },
+              "basket": {
+                "x": 963.5200737412172,
+                "y": 1497.904509734456
+              }
+            },
+            {
+              "id": "front-right",
+              "dome": {
+                "x": 951.7753792901697,
+                "y": 1285.9576858742364
+              },
+              "basket": {
+                "x": 1017.954993246376,
+                "y": 1499.8054190107976
+              }
+            }
+          ],
+          "groundRope": {
+            "basket": {
+              "x": 990.8377893657023,
+              "y": 1527.1979290203597
+            },
+            "ground": {
+              "x": 1048.5411,
+              "y": 2161.8965
+            }
+          },
+          "vectorRopesPreviewOnly": true
+        },
+        {
+          "state": "keskella",
+          "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/latauskuva-pallo-kerrokset-20261008/qa/ipad-pysty-keskella-komposiitti.png",
+          "domeTranslateX": 0,
+          "basketTranslateX": 0,
+          "domeRotationDegrees": 0,
+          "basketRotationDegrees": 0,
+          "ropeLinePairs": [
+            {
+              "id": "back-left",
+              "dome": {
+                "x": 991.3191,
+                "y": 1272.319
+              },
+              "basket": {
+                "x": 1010.9277,
+                "y": 1490.1818
+              }
+            },
+            {
+              "id": "back-right",
+              "dome": {
+                "x": 1078.4681,
+                "y": 1272.319
+              },
+              "basket": {
+                "x": 1063.217,
+                "y": 1490.1818
+              }
+            },
+            {
+              "id": "front-left",
+              "dome": {
+                "x": 1015.2851,
+                "y": 1285.3907
+              },
+              "basket": {
+                "x": 1008.7489,
+                "y": 1498.8963
+              }
+            },
+            {
+              "id": "front-right",
+              "dome": {
+                "x": 1054.5021,
+                "y": 1287.5694
+              },
+              "basket": {
+                "x": 1063.217,
+                "y": 1498.8963
+              }
+            }
+          ],
+          "groundRope": {
+            "basket": {
+              "x": 1037.0723,
+              "y": 1527.2185
+            },
+            "ground": {
+              "x": 1048.5411,
+              "y": 2161.8965
+            }
+          },
+          "vectorRopesPreviewOnly": true
+        },
+        {
+          "state": "oikea",
+          "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/latauskuva-pallo-kerrokset-20261008/qa/ipad-pysty-oikea-komposiitti.png",
+          "domeTranslateX": 122.88,
+          "basketTranslateX": 45.056,
+          "domeRotationDegrees": 3,
+          "basketRotationDegrees": -2,
+          "ropeLinePairs": [
+            {
+              "id": "back-left",
+              "dome": {
+                "x": 1094.8738238514059,
+                "y": 1269.5879216043675
+              },
+              "basket": {
+                "x": 1055.8855750286928,
+                "y": 1491.09622415879
+              }
+            },
+            {
+              "id": "back-right",
+              "dome": {
+                "x": 1181.9033891757322,
+                "y": 1274.1489478549838
+              },
+              "basket": {
+                "x": 1108.1430217999425,
+                "y": 1489.2713539058639
+              }
+            },
+            {
+              "id": "front-left",
+              "dome": {
+                "x": 1118.122859362113,
+                "y": 1283.8959908211373
+              },
+              "basket": {
+                "x": 1054.0122339587977,
+                "y": 1499.8814545442633
+              }
+            },
+            {
+              "id": "front-right",
+              "dome": {
+                "x": 1157.1720894787165,
+                "y": 1288.1241641844867
+              },
+              "basket": {
+                "x": 1108.4471534639565,
+                "y": 1497.9805452679218
+              }
+            }
+          ],
+          "groundRope": {
+            "basket": {
+              "x": 1083.3068106342978,
+              "y": 1527.1979290203597
+            },
+            "ground": {
+              "x": 1048.5411,
+              "y": 2161.8965
+            }
+          },
+          "vectorRopesPreviewOnly": true
+        }
+      ]
+    },
+    {
+      "device": "ipad-vaaka",
+      "previewSheet": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/latauskuva-pallo-kerrokset-20261008/qa/ipad-vaaka-kolme-asentoa.jpg",
+      "neutralComposite": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/latauskuva-pallo-kerrokset-20261008/qa/ipad-vaaka-keskella-komposiitti.png",
+      "neutralLayersOnly": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/latauskuva-pallo-kerrokset-20261008/qa/ipad-vaaka-kolme-kerrosta-ilman-viivoja.png",
+      "states": [
+        {
+          "state": "vasen",
+          "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/latauskuva-pallo-kerrokset-20261008/qa/ipad-vaaka-vasen-komposiitti.png",
+          "domeTranslateX": -163.92,
+          "basketTranslateX": -60.104,
+          "domeRotationDegrees": -3,
+          "basketRotationDegrees": 2,
+          "ropeLinePairs": [
+            {
+              "id": "back-left",
+              "dome": {
+                "x": 1188.8431702302446,
+                "y": 701.0860018672636
+              },
+              "basket": {
+                "x": 1292.9541775299674,
+                "y": 916.33219229531
+              }
+            },
+            {
+              "id": "back-right",
+              "dome": {
+                "x": 1275.8688408993855,
+                "y": 696.5251797268766
+              },
+              "basket": {
+                "x": 1345.2094256413975,
+                "y": 918.1569857693435
+              }
+            },
+            {
+              "id": "front-left",
+              "dome": {
+                "x": 1213.4593837220748,
+                "y": 712.8862606396227
+              },
+              "basket": {
+                "x": 1290.4727625403607,
+                "y": 924.9656514311001
+              }
+            },
+            {
+              "id": "front-right",
+              "dome": {
+                "x": 1252.7349648642023,
+                "y": 713.0096045821386
+              },
+              "basket": {
+                "x": 1344.9052835075345,
+                "y": 926.8664769486495
+              }
+            }
+          ],
+          "groundRope": {
+            "basket": {
+              "x": 1317.7892335265074,
+              "y": 954.260328045683
+            },
+            "ground": {
+              "x": 1390.5401,
+              "y": 1588.9866
+            }
+          },
+          "vectorRopesPreviewOnly": true
+        },
+        {
+          "state": "keskella",
+          "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/latauskuva-pallo-kerrokset-20261008/qa/ipad-vaaka-keskella-komposiitti.png",
+          "domeTranslateX": 0,
+          "basketTranslateX": 0,
+          "domeRotationDegrees": 0,
+          "basketRotationDegrees": 0,
+          "ropeLinePairs": [
+            {
+              "id": "back-left",
+              "dome": {
+                "x": 1333.3206,
+                "y": 699.3702
+              },
+              "basket": {
+                "x": 1352.9282,
+                "y": 917.2426
+              }
+            },
+            {
+              "id": "back-right",
+              "dome": {
+                "x": 1420.4657,
+                "y": 699.3702
+              },
+              "basket": {
+                "x": 1405.2153,
+                "y": 917.2426
+              }
+            },
+            {
+              "id": "front-left",
+              "dome": {
+                "x": 1357.2855,
+                "y": 712.4426
+              },
+              "basket": {
+                "x": 1350.7496,
+                "y": 925.9574
+              }
+            },
+            {
+              "id": "front-right",
+              "dome": {
+                "x": 1396.5008,
+                "y": 714.6213
+              },
+              "basket": {
+                "x": 1405.2153,
+                "y": 925.9574
+              }
+            }
+          ],
+          "groundRope": {
+            "basket": {
+              "x": 1379.0718,
+              "y": 954.2809
+            },
+            "ground": {
+              "x": 1390.5401,
+              "y": 1588.9866
+            }
+          },
+          "vectorRopesPreviewOnly": true
+        },
+        {
+          "state": "oikea",
+          "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/latauskuva-pallo-kerrokset-20261008/qa/ipad-vaaka-oikea-komposiitti.png",
+          "domeTranslateX": 163.92,
+          "basketTranslateX": 60.104,
+          "domeRotationDegrees": 3,
+          "basketRotationDegrees": -2,
+          "ropeLinePairs": [
+            {
+              "id": "back-left",
+              "dome": {
+                "x": 1477.9144732679842,
+                "y": 696.639204074743
+              },
+              "basket": {
+                "x": 1412.93407441952,
+                "y": 918.1569892592931
+              }
+            },
+            {
+              "id": "back-right",
+              "dome": {
+                "x": 1564.9401439371252,
+                "y": 701.20002621513
+              },
+              "basket": {
+                "x": 1465.18932253095,
+                "y": 916.3321957852597
+              }
+            },
+            {
+              "id": "front-left",
+              "dome": {
+                "x": 1501.162373651034,
+                "y": 710.9479147626353
+              },
+              "basket": {
+                "x": 1411.0609436976392,
+                "y": 926.9425124821151
+              }
+            },
+            {
+              "id": "front-right",
+              "dome": {
+                "x": 1540.2099060974285,
+                "y": 715.175999154859
+              },
+              "basket": {
+                "x": 1465.493464664813,
+                "y": 925.0416869645658
+              }
+            }
+          ],
+          "groundRope": {
+            "basket": {
+              "x": 1440.3543664734925,
+              "y": 954.260328045683
+            },
+            "ground": {
+              "x": 1390.5401,
+              "y": 1588.9866
+            }
+          },
+          "vectorRopesPreviewOnly": true
+        }
+      ]
+    }
+  ],
+  "previewAssets": [
+    {
+      "device": "iphone",
+      "purpose": "three swing positions; ropes are preview vectors only",
+      "file": "iphone-kolme-asentoa.jpg",
+      "r2Key": "julisteet/latauskuva-kuumailmapallo-kerrokset/20261008b/qa/iphone-kolme-asentoa.jpg",
+      "url": "https://media.matkakirja.app/julisteet/latauskuva-kuumailmapallo-kerrokset/20261008b/qa/iphone-kolme-asentoa.jpg",
+      "sha256": "6a018670b0ec18b94501a9ed3013bf0681c37eb405bd1d68fd030134070e550d",
+      "bytes": 66541,
+      "http": 200,
+      "mime": "image/jpeg",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "device": "iphone",
+      "purpose": "contrast2 seam inspection, not game asset",
+      "file": "iphone-patch-contrast2.png",
+      "r2Key": "julisteet/latauskuva-kuumailmapallo-kerrokset/20261008b/qa/iphone-patch-contrast2.png",
+      "url": "https://media.matkakirja.app/julisteet/latauskuva-kuumailmapallo-kerrokset/20261008b/qa/iphone-patch-contrast2.png",
+      "sha256": "f471035717e4d4dbb2e6e35e8a0019b7cf73587cf5906231823979fbd33da628",
+      "bytes": 348661,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "device": "ipad-pysty",
+      "purpose": "three swing positions; ropes are preview vectors only",
+      "file": "ipad-pysty-kolme-asentoa.jpg",
+      "r2Key": "julisteet/latauskuva-kuumailmapallo-kerrokset/20261008b/qa/ipad-pysty-kolme-asentoa.jpg",
+      "url": "https://media.matkakirja.app/julisteet/latauskuva-kuumailmapallo-kerrokset/20261008b/qa/ipad-pysty-kolme-asentoa.jpg",
+      "sha256": "e1526b08cb07d6945ecd1b5f9b29242ad3005ebf7e172be87fd3e70d639cdb80",
+      "bytes": 93645,
+      "http": 200,
+      "mime": "image/jpeg",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "device": "ipad-pysty",
+      "purpose": "contrast2 seam inspection, not game asset",
+      "file": "ipad-pysty-patch-contrast2.png",
+      "r2Key": "julisteet/latauskuva-kuumailmapallo-kerrokset/20261008b/qa/ipad-pysty-patch-contrast2.png",
+      "url": "https://media.matkakirja.app/julisteet/latauskuva-kuumailmapallo-kerrokset/20261008b/qa/ipad-pysty-patch-contrast2.png",
+      "sha256": "791a1569cd2861898307c316d83b210b892015643063751b1920644120057a28",
+      "bytes": 340934,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "device": "ipad-vaaka",
+      "purpose": "three swing positions; ropes are preview vectors only",
+      "file": "ipad-vaaka-kolme-asentoa.jpg",
+      "r2Key": "julisteet/latauskuva-kuumailmapallo-kerrokset/20261008b/qa/ipad-vaaka-kolme-asentoa.jpg",
+      "url": "https://media.matkakirja.app/julisteet/latauskuva-kuumailmapallo-kerrokset/20261008b/qa/ipad-vaaka-kolme-asentoa.jpg",
+      "sha256": "b84aaf95f26ec9d4e90a2d7e5280d9476e0fa61e8db54eb2b3cfbf469a12e468",
+      "bytes": 92063,
+      "http": 200,
+      "mime": "image/jpeg",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "device": "ipad-vaaka",
+      "purpose": "contrast2 seam inspection, not game asset",
+      "file": "ipad-vaaka-patch-contrast2.png",
+      "r2Key": "julisteet/latauskuva-kuumailmapallo-kerrokset/20261008b/qa/ipad-vaaka-patch-contrast2.png",
+      "url": "https://media.matkakirja.app/julisteet/latauskuva-kuumailmapallo-kerrokset/20261008b/qa/ipad-vaaka-patch-contrast2.png",
+      "sha256": "c26a69099b9b0ac2df60bf1874b5231cb9760f0e254fc6c7cb5d34973bcc743b",
+      "bytes": 341071,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    }
+  ],
+  "generationCalls": 1,
+  "generationLimit": 3,
+  "envelopeBasketGenerationCalls": 0,
+  "mode": "built-in image_gen edit on background master; requested technical feather and unchanged prior crop exports",
+  "generationPrompts": [
+    {
+      "mode": "built-in image_gen edit",
+      "generationPrompt": "Use case: precise-object-edit.\nAsset type: seamless repair of ONE existing approved loading-image BACKGROUND MASTER, not a new scene.\nInput image is the EDIT TARGET. Output opaque RGB PNG at exactly the same 1254 x 1254 square canvas and framing.\n\nCorrect only the faint pale rectangular balloon-removal patch near the center of the sky: the old patch roughly spans x541-724, y397-716, especially the vertical edges around x541 and x724 and its lower edge. The visible fault is an overly even, slightly brighter sky region; remove the local tonal discontinuity and any straight vertical or horizontal border. Use the naturally continuing surrounding blue-gray to warm sand sky gradient, fine irregular atmospheric texture and existing soft cloud bands. Clouds crossing the region must connect naturally across it. No uniform light blob, repeating cloud clone, obvious rectangle, differently grained fill, visible feather ring or straight seam, even under twice-normal contrast. Make a broad organic seamless transition over several dozen pixels around the patch, not a narrow rectangular fill. The correction is confined to this local sky region and its soft surrounding blend, approximately x450-820,y330-760; do not change anything else.\n\nLOCK AND PRESERVE: exact existing camera, original city skyline and every tower/building below roughly y775, horizon, haze elsewhere, all unrelated clouds, overall exposure and subdued photographic colors. Keep the tiny stone weight with its recessed iron eye at approximately x638,y992 entirely unchanged, in exactly the same position and scale. Keep the ground bank, the entire lower25percent and dark warm-brown footer #1d1610 unchanged. Do not add or remove city structures or relight the scene. No whole-scene regeneration, enhancement, recoloring, new clouds outside the small correction area or composition change.\n\nThis input background has NO balloon and NO basket; keep it that way. Do not add a balloon envelope, basket, rope, rigging, person, aircraft, text, logo, watermark, sign or border. The separate approved balloon envelope/basket PNGs will remain untouched. Only smooth the sky patch into continuous physically believable real-camera sky, retaining original fine grain and soft haze.\nOne authorised background repair edit only, no variants.\n"
+    }
+  ],
+  "technicalRepair": {
+    "organicEllipticalCoreCenter": [
+      632.5,
+      556.5
+    ],
+    "coreRadii": [
+      155,
+      220
+    ],
+    "featherWidthApproxPixels": [
+      39,
+      55
+    ],
+    "smoothstepTransition": true,
+    "topFeatherMasterY": [
+      305,
+      350
+    ],
+    "bottomFeatherMasterY": [
+      716,
+      770
+    ],
+    "localMedianRGBMatchCorrection": [
+      -4.0,
+      -1.0,
+      1.0
+    ],
+    "allPixelsOutsideMaskByteIdentical": true,
+    "cityBelowMasterY775AndGroundAnchorUnchanged": true,
+    "masterBottom25PixelsByteIdentical": true,
+    "noManualSkyPaintingOrRepeatedClonePattern": true
+  },
+  "visualReview": {
+    "taskNumber": 42,
+    "approvedForBackgroundSeamRepairDelivery": true,
+    "masterNativeAndContrast2Viewed": true,
+    "allThreeNativeBackgroundsViewed": true,
+    "allThreeContrast2PatchDetailsViewed": true,
+    "allNineSwingCompositesViewed": true,
+    "rectangleOrTonalPatchVisibleAtContrast2": false,
+    "oldInputsAndEnvelopeBasketUntouched": true,
+    "observations": [
+      "Cloud textures and sky gradient continue across the former removal area; no straight repair border observed at contrast2.",
+      "Exact previous crops and all attachment coordinates retained; source city, ground anchor and footer pixels frozen.",
+      "No new balloon, basket, rope or other object generated into the background."
+    ],
+    "constraintConflict": {
+      "sourceRequestsExactPreviousFooterPreservation": true,
+      "sourceAlsoStatesLstarLimit12ForBottom25": true,
+      "priorAndNewBottom25Means": {
+        "iphone": 14.209072635030354,
+        "ipad-pysty": 14.143962523517196,
+        "ipad-vaaka": 13.639482677007306
+      },
+      "literalMeanLimit12AcrossBottom25Satisfied": false,
+      "bottom15Limit12Satisfied": true,
+      "resolution": "Exact explicitly requested preservation honoured. Original lower25mean exceeds12; no footer recolouring in this sky-only correction. Report actual measures for editorial review."
+    },
+    "assetSha256": {
+      "latauskuva-pallo-iphone-tausta-maaankkuri.png": "2ba6e09bf991c07d9ff119298a8bd31b97f3444b690dd851748de639a45f9523",
+      "latauskuva-pallo-ipad-pysty-tausta-maaankkuri.png": "b5abaae5d7bbbbb28f417a80971cd7d6376fcf91500b4cdfb601ac1339622db2",
+      "latauskuva-pallo-ipad-vaaka-tausta-maaankkuri.png": "3108324c206faaea9804df3f6a89ea97de1620a3c88e181fea3939a96c551d95"
+    },
+    "reviewedAtUTC": "2026-10-08T15:13:15.437811+00:00"
+  },
+  "newBackgroundR2ReadbacksByteExact": true,
+  "retainedAssetsCurrentReadbacksByteExact": true,
+  "oldFilesUnchanged": true,
+  "allAttachmentPointsAndCropsUnchanged": true,
+  "productionCompleteForSkySeamRepair": true,
+  "footerNumericConflictReported": true,
+  "deliveryStatus": "Three background corrections R2 verified; normal mailbox push pending.",
+  "editorAcceptance": false,
+  "fableReceipt": false,
+  "gameIntegrated": false,
+  "published": false,
+  "updatedAt": "2026-10-08T15:13:28.894035+00:00"
+}
