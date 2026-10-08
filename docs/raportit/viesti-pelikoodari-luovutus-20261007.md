@@ -29,6 +29,11 @@
 - YKSITYISKOHTAKUVAT KAIKKI 37 ESITTELYKAUPUNKIA tuotannossa (#4200–#4205; 31 äänetöntä Sisältökirjurilta, v2/v3:t
   oikeustarkistuksista: berliini, helsinki, tampere, vilna, firenze v2, sisilia v3). Tarkistin: _tyo/yksityiskohdat-31/valmiit.txt +
   scratchpad ankkurit-v3.mjs (ankkurit v3-teksteistä + media_url 200). Codex-havainnekuvien v2-luettelot tulevat kaupunki kerrallaan.
+- 8.10. ilta: SILTALAUSEET-v4 ämpärissä (alkukatko korjattu, puhe ≥ 120 ms, ei generointia; _tyo/siltalauseet-esivara/);
+  LS1 vaihtaa OpasSovitin.SiltalauseetOsoite → v4 junaan 167. Ämpärin mp3:illa immutable-välimuisti → ÄLÄ ylikirjoita, aina uusi polku.
+  KYSY-VIKA (TF 166): worker ok (curl-toisto scratchpad toista-kysy.mjs), natiivi ei lähetä kysymyksiä kierroksella → LS1.
+  M-OSAN REPLIIKIT: valmis ajo proto-3d/tyokalut/pelikoodari-ajot/olavinlinna-m-repliikit.py (kuiva ok, ~48 krediittiä), --aja vasta
+  omistajan luvalla Päätoimittajan kautta.
 - OLAVINLINNA aanet-fp-v2 (M-osa, huoneet 6–10): 18 CC0/PD-tehostetta, paketti _valmiit/olavinlinna-fp-aanet-v2-vienti-20261008
   (Julkaisija vie), rakennus _tyo/olavinlinna-fp-aanet-v2/rakenna.py (vaiheet perus/lisat/freesound), agentin EHDOKKAAT.md raaka/-kansiossa.
   Freesound: secret FREESOUND_API, haku haarassa pelikoodari-freesound-haku (push-työnkulku, ei mergetä). Natiivikytkijä Päätoimittajalta.
