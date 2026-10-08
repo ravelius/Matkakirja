@@ -16,8 +16,10 @@ namespace Matkakirja.Linssit.Kierros
 {
     public sealed class OpasVapaaLento
     {
-        public const double NopeusKerroin = 0.6, NousuKerroin = 0.5, KaantoAstS = 55, SyoteAikaS = 0.2, HiipumaAikaS = 0.5, KuollutAlue = 0.12;
-        public const double MinKorkeusM = 40, MaxKorkeusM = 12000, MinNopeusMS = 15, EnnakkoS = 0.6, NostoAikaS = 0.25;
+        // Omistaja TF 167 (9.10. 00.0x): "Pallo saisi liikkua yli puolet hitaammin manuaali ohjauksella": vauhti ja nousu 0,42 ×,
+        // kääntö 0,65 ×, pehmeämpi kiihdytys (ennen 0,6 / 0,5 / 55 °/s / 15 m/s / 0,2 s).
+        public const double NopeusKerroin = 0.25, NousuKerroin = 0.21, KaantoAstS = 36, SyoteAikaS = 0.35, HiipumaAikaS = 0.5, KuollutAlue = 0.12;
+        public const double MinKorkeusM = 40, MaxKorkeusM = 12000, MinNopeusMS = 6.5, EnnakkoS = 0.6, NostoAikaS = 0.25;
         /// <summary>
         /// Naapuruston näytteet (Päätoimittaja 6.10.: Eiffel-tornin ristikko läpäisi pistenäytteen): kaksi kehää kameran ympärillä
         /// (20 ja 45 m, kummassakin 8 suuntaa); pinnaksi suurin tunnettu korkeus kamerasta, ennakosta ja kehiltä.

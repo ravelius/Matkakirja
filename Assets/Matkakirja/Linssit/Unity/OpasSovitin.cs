@@ -28,7 +28,8 @@ namespace Matkakirja.Natiivi
             Nimi = "Kuumailmapallo",   // omistaja 7.10. 09.1x: näkyvä nimi (valikko, otsikot, VoiceOver); id "opas" ennallaan
             Lyhyt = "Opas lentää kanssasi minne haluat ja kertoo paikoista.",
             Jarjestys = 98,
-            Ikoni = "<path d=\"M12 3a6 6 0 0 0-6 6c0 4.5 6 12 6 12s6-7.5 6-12a6 6 0 0 0-6-6zm0 8.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z\"/>",
+            // Kuumailmapallo (oli karttanasta) (Päätoimittaja 8.10.2026: omat viivakuvakkeet, kuvaketaulukko).
+            Ikoni = "<path d=\"M12 2.8c-3.9 0-6.6 2.9-6.6 6.5 0 2.9 2 4.9 3.7 6.6h5.8c1.7-1.7 3.7-3.7 3.7-6.6 0-3.6-2.7-6.5-6.6-6.5z\"/><path d=\"M12 2.8c-1.6 1.8-2.4 4-2.4 6.5 0 2.6.6 4.7 1.4 6.6M12 2.8c1.6 1.8 2.4 4 2.4 6.5 0 2.6-.6 4.7-1.4 6.6\"/><path d=\"M9.1 15.9l1.2 2.8M14.9 15.9l-1.2 2.8\"/><rect x=\"10\" y=\"18.7\" width=\"4\" height=\"2.7\" rx=\".6\"/>",
             Valokuva = true,
             Kesken = false,   // omistaja 6.10. 20.1x: matkaopas pois keskeneräisistä
             Lahde = new Lahde
@@ -483,6 +484,9 @@ namespace Matkakirja.Natiivi
             KaupunkiYovalot.Kohde = yk != null && kh != null && !yk.Kysymys && silmukka.KorostusOsuus > 0.001 ? (yk.Lat, yk.Lon, kh.MaaM, yk.KokoM) : ((double, double, double, double)?)null;
             // Kohdevalo ja rengas häivyttyvät silmukan korostusosuuden mukaan (sammuvat ennen lähtöä, syttyvät saapumisesta).
             KaupunkiYovalot.KohdeOsuus = OpasKorostusKuva.Osuus = (float)silmukka.KorostusOsuus;
+            // A3 lähitarkkuus: pysähdyksellä (ei lento eikä siirto) kohteen ympärille tarkemmat laatat, kun valinta on tarkentunut.
+            kaupunki.AsetaLahikamera(yk != null && kh != null && !yk.Kysymys && !silmukka.Siirtymassa && silmukka.Vaihe != OpasVaihe.Lentaa && kaupunki.Georef != null
+                ? KohdeMaailmassa(yk.Lat, yk.Lon, kh.MaaM + Math.Max(10, yk.KorkeusM * 0.4)) : (Vector3?)null);
             LatausKuvaPaivita();
             Luotaa();
             KameraKuvattu?.Invoke(kierto != null ? kierto.GetComponent<Camera>() : null, silmukka);
@@ -2233,6 +2237,14 @@ namespace Matkakirja.Natiivi
             o.Kirjaa($"opas: PCM-virta valmis {Time.realtimeSinceStartup - t0:F1} s, {virta.KirjoitettuS:F1} s ääntä ({virta.KirjoitettuS / Mathf.Max(0.1f, Time.realtimeSinceStartup - (tEka >= 0 ? tEka : t0)):F2} ×)");
         }
 
+        /// <summary>Paikka (lat, lon, ellipsoidikorkeus) kaupunkinäkymän maailmassa (georeferenssi).</summary>
+        Vector3 KohdeMaailmassa(double lat, double lon, double h)
+        {
+            var ecef = CesiumForUnity.CesiumWgs84Ellipsoid.LongitudeLatitudeHeightToEarthCenteredEarthFixed(new double3(lon, lat, h));
+            var u = kaupunki.Georef.TransformEarthCenteredEarthFixedPositionToUnity(ecef);
+            return new Vector3((float)u.x, (float)u.y, (float)u.z);
+        }
+
         // ---- OMA KORKEUSMALLI (Linssiseppä 8.10., PT: Googlen Map Tiles -ehdot C4 kieltävät korkeuksien lukemisen laatoista) ----
         // Kaikki oppaan pintanäytteet (kohteen maa ja kehä, kehyksen maa, vapaan lennon pinta, testikomento `opas pinta`) kulkevat
         // Pinnat-kutsun kautta: kytkin OmaKorkeusPaalla (asetus opas.OmaKorkeus, oletus 1; komento `opas korkeus oma|google`)
@@ -2247,6 +2259,13 @@ namespace Matkakirja.Natiivi
         static readonly HashSet<string> korkeusHaussa = new HashSet<string>(), korkeusPuuttuu = new HashSet<string>();
         /// <summary>Ladatun mallin krediitti (Lähteet): viimeksi käytetyn kaupungin.</summary>
         public static string OmaKorkeusKrediitti { get; private set; }
+
+        /// <summary>Pinnan ellipsoidikorkeus ladatusta omasta mallista (elävän kaupungin kyyhkyt); NaN, jos mallia ei ole muistissa.</summary>
+        public static double OmaMaa(double lat, double lon)
+        {
+            string id = KorkeusId(lat, lon);
+            return id != null && korkeusMallit.TryGetValue(id, out var m) ? m.Korkeus(lat, lon) : double.NaN;
+        }
 
         static string KorkeusId(double lat, double lon)
         {

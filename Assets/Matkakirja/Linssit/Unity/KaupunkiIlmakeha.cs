@@ -26,7 +26,7 @@ namespace Matkakirja.Natiivi
         }
         static bool kaupunkiKirjattu;
         /// <summary>Valotus (radianssi × valotus ennen sävytystä; Karttaseppä: 10–30), ilmaperspektiivin voima, pilvien varjon voima.</summary>
-        public static float Valotus = 20f, ApVoima = 1f, VarjoVoima = 0.45f, PilviJaksoM = 30000f, PilviKorkeusM = 2000f;
+        public static float Valotus = 12f, ApVoima = 1f, VarjoVoima = 0.45f, PilviJaksoM = 30000f, PilviKorkeusM = 2000f;
         static float voima;
         static Texture2D lapaisy, pilvet; static Texture3D taivas, ap, apLapaisy;
         static bool ladattu, puuttuu;
@@ -79,7 +79,7 @@ namespace Matkakirja.Natiivi
         {
             Kaupunki(lat, lon);
             voima = Mathf.MoveTowards(voima, Paalla ? 1f : 0f, Time.unscaledDeltaTime);
-            if (voima <= 0f && !Paalla) return;
+            if (voima <= 0f && !Paalla && !KaupunkiVesi.Nakyvissa) return;   // vesi tarvitsee taivaan arvot heijastukseen
             if (!Lataa()) { voima = 0f; return; }
             float k = aurinkoKorkeusAst * Mathf.Deg2Rad, a = aurinkoAtsimuuttiAst * Mathf.Deg2Rad;
             var s = new Vector3(Mathf.Cos(k) * Mathf.Sin(a), Mathf.Sin(k), Mathf.Cos(k) * Mathf.Cos(a));

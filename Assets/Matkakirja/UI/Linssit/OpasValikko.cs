@@ -2147,7 +2147,28 @@ namespace Matkakirja.Natiivi
             live.AddToClassList("mk-linssivalikko__live");
             live.EnableInClassList("mk-valittu", Saatila.Live);
             live.tooltip = Saatila.Live ? "Live päällä: kohteen kellonaika ja sää" : "Live pois";
-            Kirjasimet.Aseta(Rakenne.Teksti("AIKA", "mk-linssivalitsin__valiotsikko", valikko), Kirjasin.ModerniLihava);
+            // VAAKA (omistaja TF 167, 9.10.2026 klo 00.0x: "Valikko näyttää vaaka tilassa pystyvalikon asettelun"): samat rivit
+            // sarakkeina LIVEn alla (AIKA | SÄÄ 1–4 | SÄÄ 5–7), jotta lista mahtuu korkeuteen (iPhone vaaka ~393 pt) ja peitto pysyy
+            // pienenä; pystyssä yksi sarake kuten ennen.
+            bool vaaka = Screen.width > Screen.height;
+            VisualElement Sarake(VisualElement rivi)
+            {
+                var s = Rakenne.El(null, rivi, PickingMode.Ignore);
+                s.style.flexDirection = FlexDirection.Column;
+                s.style.minWidth = SarakeLeveys;
+                s.style.marginRight = Tyylikirja.Vali.S;
+                return s;
+            }
+            VisualElement sarakkeet = null, aikaSarake = valikko, saa1 = valikko, saa2 = valikko;
+            if (vaaka)
+            {
+                sarakkeet = Rakenne.El(null, valikko, PickingMode.Ignore);
+                sarakkeet.style.flexDirection = FlexDirection.Row;
+                sarakkeet.style.alignItems = Align.FlexStart;
+                aikaSarake = Sarake(sarakkeet); saa1 = Sarake(sarakkeet); saa2 = Sarake(sarakkeet);
+                saa2.style.marginRight = 0;
+            }
+            Kirjasimet.Aseta(Rakenne.Teksti("AIKA", "mk-linssivalitsin__valiotsikko", aikaSarake), Kirjasin.ModerniLihava);
             foreach (var (arvo, nimi) in AikaValinnat)
             {
                 var a = arvo;
@@ -2155,10 +2176,13 @@ namespace Matkakirja.Natiivi
                 {
                     Saatila.AikaValinta = a; aikaKuvake = null;
                     Debug.Log("MATKAKIRJA opas: aika " + Avain(a));
-                });
+                }, aikaSarake);
             }
-            Viiva();
-            Kirjasimet.Aseta(Rakenne.Teksti("SÄÄ", "mk-linssivalitsin__valiotsikko", valikko), Kirjasin.ModerniLihava);
+            if (!vaaka) Viiva();
+            Kirjasimet.Aseta(Rakenne.Teksti("SÄÄ", "mk-linssivalitsin__valiotsikko", saa1), Kirjasin.ModerniLihava);
+            // Toisen säädesarakkeen otsikkorivi tyhjänä, jotta rivit ovat samalla korkeudella.
+            if (vaaka) Kirjasimet.Aseta(Rakenne.Teksti(" ", "mk-linssivalitsin__valiotsikko", saa2), Kirjasin.ModerniLihava);
+            int i = 0, puoli = (SaaValinnat.Length + 1) / 2;
             foreach (var (arvo, nimi) in SaaValinnat)
             {
                 var sv = arvo;
@@ -2166,9 +2190,12 @@ namespace Matkakirja.Natiivi
                 {
                     Saatila.SaaValinta = sv; aikaKuvake = null;
                     Debug.Log("MATKAKIRJA opas: sää " + sv);
-                });
+                }, i++ < puoli ? saa1 : saa2);
             }
         }
+
+        /// <summary>Vaakatilan sarakkeen vähimmäisleveys (pisin rivi "Ukkonen  ✓" mahtuu; LINSSIN VALIKON rivi).</summary>
+        const float SarakeLeveys = 132f;
 
         void LopetaKierros()
         {
@@ -2264,7 +2291,7 @@ namespace Matkakirja.Natiivi
 
         /// <summary>
         /// Pelin kenttä-äänitysten nimeämiset (Pelikoodari 8.10.2026: 43 CC BY / BY-SA -äänitystä maisemakoreissa ja kaupunkien
-        /// äänissä; lisenssiehto): "nimi · tekijä · lisenssi" kuten kuvalähteet. Data: kopio webin data/aanilahteet.json:sta
+        /// äänissä sekä pallon äänimaiseman 3 CC BY -ääntä, yhteensä 46; lisenssiehto): "nimi · tekijä · lisenssi" kuten kuvalähteet. Data: kopio webin data/aanilahteet.json:sta
         /// (Resources/Lahteet), joten näkyy myös ilman verkkoa; päivitys kopioimalla tiedosto uudelleen.
         /// </summary>
         static List<string> AaniLahteet()
@@ -2308,10 +2335,15 @@ namespace Matkakirja.Natiivi
             if (aloitus) { AsetteleAloitus(); return; }
             if (nakyma == Nakyma.Aika && aikaNappi != null)
             {
-                // Vuorokaudenajan lista vasemman yläkulman napin alle.
+                // Vuorokaudenajan lista napin alle: vasemmassa puoliskossa napin vasen reuna, oikeassa napin oikea reuna (TF 167:
+                // ☀ ☰:n vieressä oikealla → lista leikkautui oikeasta reunasta).
                 var an = aikaNappi.worldBound;
                 var ay = isa.WorldToLocal(new Vector2(an.xMin, an.yMax));
-                valikko.style.top = ay.y + 8; valikko.style.left = ay.x; valikko.style.right = StyleKeyword.Auto;
+                var ao = isa.WorldToLocal(new Vector2(an.xMax, an.yMax));
+                float lev = isa.resolvedStyle.width;
+                valikko.style.top = ay.y + 8;
+                if (!float.IsNaN(lev) && (ay.x + ao.x) / 2f > lev / 2f) { valikko.style.left = StyleKeyword.Auto; valikko.style.right = Mathf.Max(0, lev - ao.x); }
+                else { valikko.style.left = ay.x; valikko.style.right = StyleKeyword.Auto; }
                 SovitaKorkeus();
                 return;
             }

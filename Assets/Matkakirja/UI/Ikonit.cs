@@ -107,6 +107,10 @@ namespace Matkakirja.Natiivi
             // LINNA (omistaja 8.10.2026 klo 19.1x "tee olavinlinnan esittelylle ja pelille kuva ja ikoni linssi ja pelilistaan"):
             // Olavinlinnan siluetti, pyöreä torni kartiokatolla ja sakaroitu muurinpätkä (sama 24-ruudukko ja viiva kuin muissa).
             ["linna"] = PoikkileikkausLinssiIkoni,
+            // PELIT (Päätoimittaja 8.10.2026: omat viivakuvakkeet, kuvaketaulukko): Mylly (kaksi myllyneliötä ja nappulat), Tavli (kolmiolauta), Lentopeli (kone ja katkoviivavana).
+            ["mylly"] = "<rect x=\"3.5\" y=\"3.5\" width=\"17\" height=\"17\" rx=\"1\"/><rect x=\"8\" y=\"8\" width=\"8\" height=\"8\" rx=\".6\"/><path d=\"M12 3.5V8M12 16v4.5M3.5 12H8M16 12h4.5\"/><g class=\"taytto\"><circle cx=\"3.5\" cy=\"3.5\" r=\"2.1\"/><circle cx=\"16\" cy=\"12\" r=\"2.1\"/><circle cx=\"12\" cy=\"20.5\" r=\"2.1\"/></g>",
+            ["tavli"] = "<rect x=\"3\" y=\"4.5\" width=\"18\" height=\"15\" rx=\"1.6\"/><path d=\"M12 4.5v15\"/><path d=\"M4.5 4.5l1.5 5.5 1.5-5.5M7.5 4.5 9 10l1.5-5.5M13.5 4.5l1.5 5.5 1.5-5.5M16.5 4.5 18 10l1.5-5.5\"/><path d=\"M4.5 19.5 6 14l1.5 5.5M7.5 19.5 9 14l1.5 5.5M13.5 19.5 15 14l1.5 5.5M16.5 19.5 18 14l1.5 5.5\"/>",
+            ["lentopeli"] = "<path d=\"M13.8 4.2v4.3l5.4 3.3v1.6l-5.4-1.7v3.2l1.7 1.4v1.2l-1.7-.6-1.7.6v-1.2l1.7-1.4v-3.2l-5.4 1.7v-1.6l5.4-3.3z\"/><path d=\"M3.2 20.4l1.5-.5M6.1 19.2l1.2-.8M8.3 17.4l.7-1\"/>",
             // SÄÄ (omistaja 8.10.2026 klo 09.1x "Saa tottakai piirtää"; pallon säätila ☾-napissa): sama pilvi, alla sade, sumu, lumi
             // tai salama; selkeä = paiva. Tyylikirja pohjat.OHJAUSNAPPI.saakuvakkeet.
             ["pilvi"] = "<path d=\"M7.2 18.5h10.3a3.6 3.6 0 0 0 .5-7.2 5.2 5.2 0 0 0-9.9-1.4 4.3 4.3 0 0 0-.9 8.6z\"/>",

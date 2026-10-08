@@ -32,6 +32,8 @@ namespace Matkakirja.Linssit.Aikajana
             Nimi = "Ihmisen matka",
             Lyhyt = "Ihmisen matka Afrikasta koko maapallolle: kello juoksee, valot syttyvät.",
             Jarjestys = 26,
+            // Webin jalanjälki (js/linssit/ihmisen-matka.js) (Päätoimittaja 8.10.2026: omat viivakuvakkeet, kuvaketaulukko).
+            Ikoni = "<path d=\"M9.5 14.5c-1.6-1.2-2.3-3-2.3-5.2C7.2 6.3 8.9 4 11.4 4c2.3 0 3.6 1.9 3.6 4.3 0 1.7-.6 3-.6 4.3 0 1.4.9 2.2.9 3.6 0 2-1.4 3.3-3.3 3.3-1.9 0-3.2-1.1-3.2-2.7 0-1 .3-1.6.7-2.3z\"/><circle cx=\"16.6\" cy=\"6.2\" r=\"1\"/><circle cx=\"17.6\" cy=\"9\" r=\"0.9\"/>",
         };
 
         /// <summary>
@@ -45,6 +47,8 @@ namespace Matkakirja.Linssit.Aikajana
             Nimi = "Ihmisen matka II",
             Lyhyt = "Sama matka valon kertomana: valokeila kulkee tarinan mukana, muu maailma odottaa hämärässä.",
             Jarjestys = 27,
+            // Kaksi jalanjälkeä (II) (Päätoimittaja 8.10.2026: omat viivakuvakkeet, kuvaketaulukko).
+            Ikoni = "<path d=\"M6.4 21c-1.4 0-2.3-1-2.3-2.5 0-1.8 1-3.4 1.4-5 .3-1.4 1-2.4 2.3-2.4 1.4 0 2.1 1.2 2 2.7-.1 1.4-.8 2.3-.9 3.6-.1 1.3.4 2-.1 2.6-.5.6-1.4 1-2.4 1z\"/><circle cx=\"10.2\" cy=\"9.4\" r=\".85\"/><path d=\"M15.4 12.6c-1.4 0-2.3-1-2.3-2.5 0-1.8 1-3.4 1.4-5 .3-1.4 1-2.4 2.3-2.4 1.4 0 2.1 1.2 2 2.7-.1 1.4-.8 2.3-.9 3.6-.1 1.3.4 2-.1 2.6-.5.6-1.4 1-2.4 1z\"/><circle cx=\"19.4\" cy=\"2.9\" r=\".85\"/>",
             // Omistaja 4.10.2026 klo 23.0x: "Siirrä ihmis 2 linssi keskeneräisiin".
             Kesken = true,
         };
