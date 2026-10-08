@@ -123,7 +123,7 @@ namespace Matkakirja.Natiivi
             if (overlay != null) { overlay.targetTexture = null; Object.Destroy(overlay.gameObject); }
             if (kooste != null) Object.Destroy(kooste.gameObject);
             if (rt != null) { rt.Release(); Object.Destroy(rt); }
-            if (variKopio && perus != null) { var dk = perus.GetUniversalAdditionalCameraData(); if (dk != null) dk.requiresColorOption = variKopio0; variKopio = false; }
+            if (variKopio) { VariKuvanTarve.Vapauta(variKopioKamera); variKopio = false; }
             if (koosteMat != null) Object.Destroy(koosteMat);
             kooste = null; rt = null; koosteMat = null; koosteTaso = null;
             foreach (var m in new[] { punos, nahka, koysi }) if (m != null) Object.Destroy(m);
@@ -636,15 +636,14 @@ namespace Matkakirja.Natiivi
         // LÄMMÖN VÄREILY (kohta 3): kaupunkikameran värikopio vain liekin aikana (Natiiviseppä 8.10.: requiresColorOption On, muuten
         // ennallaan; Mobile-tasolla opaque texture on muuten pois), ja kooste vääristää kopiota liekin yläpuolella.
         static readonly int IdVareily = Shader.PropertyToID("_Vareily");
-        bool variKopio; CameraOverrideOption variKopio0;
+        bool variKopio; Camera variKopioKamera;
         void PaivitaVareily()
         {
-            bool tarvitaan = poltin.Taso > 0.001 && koosteMat != null;
-            var d = perus != null ? perus.GetUniversalAdditionalCameraData() : null;
-            if (d != null && tarvitaan != variKopio)
+            bool tarvitaan = poltin.Taso > 0.001 && koosteMat != null && perus != null;
+            if (tarvitaan != variKopio)
             {
-                if (tarvitaan) { variKopio0 = d.requiresColorOption; d.requiresColorOption = CameraOverrideOption.On; }
-                else d.requiresColorOption = variKopio0;
+                if (tarvitaan) { VariKuvanTarve.Pyyda(perus); variKopioKamera = perus; }
+                else VariKuvanTarve.Vapauta(variKopioKamera);
                 variKopio = tarvitaan;
             }
             // Ensimmäisessä ruudussa kopiota ei vielä ole: väreily alkaa vasta seuraavasta (taso nousee 0,15 s:ssa joka tapauksessa).
