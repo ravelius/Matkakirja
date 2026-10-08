@@ -72,7 +72,13 @@ int main(int argc, char **argv) {
     NSError *virhe = nil;
     id konteksti = ((id (*)(id, SEL, id, NSError **))objc_msgSend)(NSClassFromString(@"SimServiceContext"),
         NSSelectorFromString(@"sharedServiceContextForDeveloperDir:error:"), kehitys, &virhe);
-    id joukko = ((id (*)(id, SEL, NSError **))objc_msgSend)(konteksti, NSSelectorFromString(@"defaultDeviceSetWithError:"), &virhe);
+    // T7-LAITESARJA (omistaja 7.10.2026; Natiiviseppä 8.10.): simulaattorit ovat vain T7-sarjassa (simusarja.sh, MK_SIMSET).
+    // Sarja puuttuu → virhe, EI paluuta sisäiseen oletussarjaan.
+    const char *ymp = getenv("MK_SIMSET");
+    NSString *sarja = ymp && *ymp ? [NSString stringWithUTF8String:ymp] : @"/Volumes/T7 4TB/Simulaattorit/Sarja";
+    if (![NSFileManager.defaultManager fileExistsAtPath:sarja]) { fprintf(stderr, "T7-laitesarjaa ei löydy: %s (liitä T7)\n", sarja.UTF8String); return 3; }
+    id joukko = ((id (*)(id, SEL, id, NSError **))objc_msgSend)(konteksti, NSSelectorFromString(@"deviceSetWithPath:error:"), sarja, &virhe);
+    if (!joukko) { fprintf(stderr, "T7-laitesarja ei auennut: %s\n", virhe.localizedDescription.UTF8String); return 3; }
     NSDictionary *laitteet = ((id (*)(id, SEL))objc_msgSend)(joukko, NSSelectorFromString(@"devicesByUDID"));
     NSString *haku = [NSString stringWithUTF8String:argv[1]].uppercaseString;
     id laite = nil;
