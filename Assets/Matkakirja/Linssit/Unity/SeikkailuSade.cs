@@ -13,7 +13,10 @@ namespace Matkakirja.Natiivi
     public sealed class SeikkailuSade : MonoBehaviour
     {
         public static SeikkailuSade Aktiivinen { get; private set; }
-        static readonly string[] Tunnukset = { "sade-kivi", "sade-vesi", "sade-puu", "sade-pressu", "tippuminen-raystas", "tippuminen-muuri", "ukkonen-jyly" };
+        /// <summary>Korkean tuulen raja (m, Unity y): muurin harja ja tornin yläosa ulkona (piha ~0, harja ~10–12).</summary>
+        public const float KorkeallaY = 8.5f;
+        static readonly string[] Tunnukset = { "sade-kivi", "sade-vesi", "sade-puu", "sade-pressu", "tippuminen-raystas", "tippuminen-muuri", "ukkonen-jyly",
+            "tuuli-kostea", "tuuli-korkea" };   // Sonniss-tuulet (Pelikoodari 9.10., ämpärissä sonniss-tuulet-v1)
         readonly Dictionary<string, AudioSource> lahteet = new Dictionary<string, AudioSource>();
         readonly Dictionary<string, float> tavoite = new Dictionary<string, float>();
         float tarkistusT;
@@ -29,7 +32,7 @@ namespace Matkakirja.Natiivi
         public static void Poista() { var s = Aktiivinen; Aktiivinen = null; if (s != null) Destroy(s.gameObject); }
 
         /// <summary>Tavoitevoimakkuudet (0–1 ennen Sää-voimaa) pelaajan paikasta; testattava ilman Unityä ei ole tarpeen (puhdas taulukko).</summary>
-        public static void Tavoitteet(double markyys, bool veneessa, bool puulla, IDictionary<string, float> ulos)
+        public static void Tavoitteet(double markyys, bool veneessa, bool puulla, IDictionary<string, float> ulos, bool korkealla = false)
         {
             bool ulkona = veneessa || markyys >= 0.5;
             bool vesi = veneessa || markyys >= 0.8;
@@ -40,6 +43,9 @@ namespace Matkakirja.Natiivi
             ulos["tippuminen-raystas"] = ulkona && !veneessa ? 0.35f : 0f;
             ulos["tippuminen-muuri"] = ulkona ? 0f : markyys > 0 ? 0.5f : 0.28f;
             ulos["ukkonen-jyly"] = ulkona ? 0.45f : 0.3f;
+            // Kostea tuuli sateen ja yön alla (ulkona ja veneessä, sisällä vaimeana), korkea tuuli muurin harjalla ja tornissa.
+            ulos["tuuli-kostea"] = veneessa ? 0.5f : ulkona ? 0.4f : 0.1f;
+            ulos["tuuli-korkea"] = korkealla && !veneessa ? 0.55f : 0f;
         }
 
         void Update()
@@ -65,7 +71,8 @@ namespace Matkakirja.Natiivi
                         if (m.Laji == "pinta" && m.Tunnus != null && m.Tunnus.StartsWith("puu", StringComparison.Ordinal)
                             && (m.X - x) * (m.X - x) + (m.Z - z) * (m.Z - z) < 36 && Math.Abs(m.Y - y) < 3) { puulla = true; if (m.Markyys > markyys) markyys = m.Markyys; break; }
                 }
-                Tavoitteet(markyys, veneessa, puulla, tavoite);
+                bool korkealla = p != null && markyys >= 0.5 && p.transform.position.y > KorkeallaY;
+                Tavoitteet(markyys, veneessa, puulla, tavoite, korkealla);
             }
             float taso = Asetukset.Taso(Voima.Saa);
             foreach (var t in Tunnukset)
