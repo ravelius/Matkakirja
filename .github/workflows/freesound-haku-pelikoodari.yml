@@ -17,13 +17,17 @@ jobs:
           FREESOUND_API_KEY: ${{ secrets.FREESOUND_API }}
         run: >
           node tools/aanet/freesound-haku.mjs /tmp/fs
-          "sade-vesi|rain on lake water surface|15|180"
-          "sade-vesi|rain falling on water river pond|15|180"
-          "sade-pressu|rain on tarp canvas tent|15|180"
-          "sade-vene|rain on wooden boat|10|180"
-          "sade-kivi|rain on stone pavement courtyard|15|180"
-          "sade-laituri|rain on wooden dock pier|10|180"
-          "tippuminen|dripping water drops gutter eaves|10|120"
+          "sade-vesi|rain lake|15|180"
+          "sade-vesi|rain water surface|15|180"
+          "sade-vesi|rain pond|15|180"
+          "sade-pressu|rain tarp|15|180"
+          "sade-pressu|rain tent|15|180"
+          "sade-vene|rain boat|15|180"
+          "sade-kivi|rain stone|15|180"
+          "sade-kivi|rain pavement|15|180"
+          "sade-laituri|rain wood|15|180"
+          "tippuminen|dripping gutter|15|180"
+          "tippuminen|water drips|15|180"
       - uses: actions/upload-artifact@v4
         with:
           name: freesound

@@ -15,6 +15,7 @@ for (const h of haut) {
     + '&sort=rating_desc&page_size=8&fields=id,name,username,license,duration,previews,description,tags,avg_rating,num_ratings,url';
   const v = await fetch(url, { headers: { authorization: `Token ${avain}` } });
   if (!v.ok) { console.log(tunnus, 'haku', v.status); continue; }
+  console.log(tunnus, sanat, "osumia", (await v.clone().json()).count);
   const d = await v.json();
   for (const [i, s] of (d.results ?? []).slice(0, 6).entries()) {
     const nimi = `${tunnus}-fs${i + 1}-${s.id}.mp3`;
