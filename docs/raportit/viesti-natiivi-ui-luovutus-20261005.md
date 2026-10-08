@@ -8,7 +8,7 @@ AD119F7B-A2A2-43EE-8769-7326DD757F89; lopuksi sammutus ja "simu vapaa".
 
 ## TILA 8.10. klo 19.2x (JATKA TÄSTÄ)
 
-KUITTAUSTA ODOTTAA junaan 167: natiivi-ui/olavinlinna-kortti 5c991410e (eaedca9c5:n päällä, korvaa sen): Ikonit.Viiva["linna"],
+JUNA 167: natiivi-ui/olavinlinna-kortti 896d6b823 (5c991410e kuitattu; 896d6b823 = peli-kuva ilman venettä polulla 20261008b, kuittaus pyydetty): Ikonit.Viiva["linna"],
 linssin havainnekuva ja Pelit-rivin kuva R2 julisteet/olavinlinna-kortti/20261008/{esittely,peli}.jpg — vientipaketti
 _valmiit/olavinlinna-kortti-vienti-20261008 Julkaisijalla (tarkista 200 ?t=). Kuvaparit docs/raportit/kaappaukset/olavinlinna-kortti-20261008/.
 Juna 168: pohjavahti-168c b62e2569d (eaedca9c5-linjasta erillinen haara, ⊇ 7e5f4f527). Codexin yökuva pelille → Sisältökirjuri, juna 168.
