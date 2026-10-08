@@ -4,12 +4,14 @@
 // kiertävät vesillä (Ydin Parvi). Mallit Ydin VeneMalleista (oma proseduraalinen geometria), varjostimet ElavaKohde ja ElavaVana.
 // Paikka: CesiumGlobeAnchor paketin origoon (paikalliset akselit itä, ylös, pohjoinen), korkeus paketista = oma vesipinta (Map Tiles
 // C4: ei korkeuksia Googlen laatoista) + VesiNostoM (Linssiseppä 2:n oma vesipinta nostaa veden; liitetään, kun molemmat ovat mainissa).
-// MUUT PALLOT (B3, kaikissa kaupungeissa, myös ilman pakettia): Ydin MuutPallot 2/4/6 palloa 300–800 m:n korkeudella
+// KEHITYSKAUPUNGIT (omistaja 20.4x, PT 21.58): elävä kaupunki vain Kehityskaupungit-listan kaupungeissa (Tukholma, Pariisi).
+// MUUT PALLOT (B3, kehityskaupungeissa, myös ilman vesipakettia): Ydin MuutPallot 2/4/6 palloa 300–800 m:n korkeudella
 // georeferenssin maan korkeudesta, ajelehtivat tuulen mukana PallotSadeM:n alueella; piilossa alle PalloLahinM:n päässä kamerasta.
 // Näkyvyys: veneet NakyvaM ja parvet ParviNakyvaM kameran ympäriltä. Määrä muistin mukaan (15 / 40 / 100). Krediitti: Krediitti
 // (© OpenStreetMap contributors, ODbL) Lähteet-näkymään. Kytkin: asetukset.json "elava.Paalla" (oletus 1), komento `opas elava 0|1`.
 using System.Collections.Generic;
 using CesiumForUnity;
+using Matkakirja.Linssit;
 using Matkakirja.Linssit.Elava;
 using Matkakirja.Linssit.Kierros;
 using Unity.Mathematics;
@@ -45,6 +47,7 @@ namespace Matkakirja.Natiivi
         readonly List<ParviOlio> parvet = new List<ParviOlio>();
         Camera kamera;
         int kerros;
+        CesiumKaupunki kaupunki;
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
         static void Kytke()
@@ -63,7 +66,7 @@ namespace Matkakirja.Natiivi
         {
             Sulje(k);
             var gr = k?.Georef;
-            if (!Paalla || gr == null) return;
+            if (!Paalla || gr == null || Kehityskaupungit.Lahella(gr.latitude, gr.longitude) == null) return;
             string id = null;
             foreach (var p in Paketit)
                 if (Etaisyys(p.Lat, p.Lon, gr.latitude, gr.longitude) < p.SadeM) { id = p.Id; break; }
@@ -86,7 +89,7 @@ namespace Matkakirja.Natiivi
             ankkuri.longitudeLatitudeHeight = new double3(lon, lat, 0);
             ankkuri.rotationEastUpNorth = quaternion.identity;
             var e2 = go.AddComponent<ElavaKaupunki>();
-            e2.liikenne = l; e2.kerros = CesiumKaupunki.Kerros;
+            e2.liikenne = l; e2.kerros = CesiumKaupunki.Kerros; e2.kaupunki = k;
             // Muiden pallojen korkeus georeferenssin origon korkeudesta (kohteen maa, ei luettu Googlen laatoista tässä).
             e2.maaM = (float)gr.height;
             int siemen = Mathf.Abs((int)(lat * 1000) * 31 + (int)(lon * 1000));
@@ -200,7 +203,7 @@ namespace Matkakirja.Natiivi
                 pallot.Paivita(dt);
                 for (int j = 0; j < pallot.Maara; j++)
                 {
-                    var p = new Vector3((float)pallot.X[j], maaM + (float)pallot.Y[j], (float)pallot.Z[j]);
+                    var p = new Vector3((float)pallot.X[j], maaM + (float)pallot.Y[j], (float)pallot.Z[j]);   // maaM = georef-origon korkeus (oma korkeusmalli)
                     bool nakyy = (p - c).sqrMagnitude > PalloLahinM * PalloLahinM;
                     if (palloT[j].gameObject.activeSelf != nakyy) palloT[j].gameObject.SetActive(nakyy);
                     // Kori heilahtaa hieman (köysien varassa), kuori kiertyy hitaasti.
@@ -210,7 +213,8 @@ namespace Matkakirja.Natiivi
             }
             if (liikenne == null) return;
             liikenne.Liike.Paivita(dt);
-            float nosto = VesiNostoM;
+            // Linssiseppä 2:n oma vesipinta (sama origo kuin paketilla) nostaa veden NostoM:llä; muuten Googlen vesi.
+            float nosto = kaupunki != null && kaupunki.Vesi?.Juuri != null ? KaupunkiVesi.NostoM : VesiNostoM;
             foreach (var v in veneet)
             {
                 var k = v.K;
