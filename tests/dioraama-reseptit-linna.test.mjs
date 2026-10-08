@@ -7,7 +7,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 
 import {
-  kiekko, kierreportaat, kierrePiste, sakarat, paalu, laiturikansi, vene, lippu, rako, kupoli,
+  kiekko, kierreportaat, kierrePiste, sakarat, paalu, laiturikansi, vene, lippu, rako, kupoli, tynnyriholvi,
   RESEPTIT as LINNA, OLETUSPINNAT,
 } from '../tools/dioraama/reseptit-linna.mjs';
 import { RESEPTIT, sijoita } from '../tools/dioraama/reseptit.mjs';
@@ -49,8 +49,9 @@ const OLETUKSET = {
   lippu: {},
   rako: {},
   kupoli: { sade: 5, korkeus: 2.5 },
+  tynnyriholvi: { pituus: 6, leveys: 4, nousu: 1.5, paadyt: true },
 };
-const FUNKTIOT = { kiekko, kierreportaat, sakarat, paalu, laiturikansi, vene, lippu, rako, kupoli };
+const FUNKTIOT = { kiekko, kierreportaat, sakarat, paalu, laiturikansi, vene, lippu, rako, kupoli, tynnyriholvi };
 
 /* ==================== Kaikille yhteiset ==================== */
 for (const [nimi, param] of Object.entries(OLETUKSET)) {
@@ -68,13 +69,13 @@ for (const [nimi, param] of Object.entries(OLETUKSET)) {
   });
 }
 
-test('reseptit.mjs:n RESEPTIT sisältää kaikki 9 linnareseptiä ja ne ovat samat funktiot', () => {
+test('reseptit.mjs:n RESEPTIT sisältää kaikki 10 linnareseptiä ja ne ovat samat funktiot', () => {
   for (const nimi of Object.keys(FUNKTIOT)) {
     assert.equal(typeof RESEPTIT[nimi], 'function', `puuttuu: ${nimi}`);
     assert.equal(RESEPTIT[nimi], FUNKTIOT[nimi]);
   }
   assert.deepEqual(Object.keys(LINNA).sort(), Object.keys(FUNKTIOT).sort());
-  assert.equal(Object.keys(FUNKTIOT).length, 9);
+  assert.equal(Object.keys(FUNKTIOT).length, 10);
 });
 
 test('OLETUSPINNAT: jokaiselle reseptille kaikki tuotetut roolit on kartoitettu, pinnat speksin mukaiset', () => {

@@ -1,11 +1,15 @@
-// OLAVINLINNA / kappeli: Kirkkotornin 3. kerros (torni [0, 0, −20], sisäsäde 5), y 9…13,5: alttarit, 12 vihkimisristiä.
+// OLAVINLINNA / kappeli: Kirkkotornin 3. kerros (torni [0, 0, −20], sisäsäde 3,9), lattia y 9,4 (malli 9,6): alttarit, 12 vihkimisristiä.
 // Erä 3 (docs/raportit/dioraama-rajapinnat-era3-20260929.md). Taulun faktat: Sisältökirjuri 29.9.
 // (docs/raportit/sisaltokirjuri-olavinlinna-era3-20260929.md); tila 'luonnos' kunnes äänet ja tarkistus valmiit.
 //
-// Asettelu: torni [0, 0, −20], auki-sektori 100…230 (kompassi, kamera etelä-kaakosta). Pääalttari itäseinällä (80°),
-// sivualttarit 40° ja 320° (fi.wikipedia: kolme alttaria), hagioskooppirako pohjassa (3°), ikkunarako itään (59°),
-// 12 vihkimisristiä seinäkaarella sektorin ulkopuolella. EI krusifiksia (Hannes Autere 1939). Massan lattiat y 4,5 ja
-// y 14,0 (alapinta 13,5 = kappelin katto) eivät ole tässä; oma lattia on `kiekko` (y 9,0…9,4) ja holvi `kupoli`.
+// Asettelu: torni [0, 0, −20], auki-sektori 95…230 (kompassi, kamera etelä-kaakosta). Pääalttari itäseinällä (80°),
+// sivualttarit 40° ja 320° (fi.wikipedia: kolme alttaria), hagioskooppirako pohjassa (3°), 12 vihkimisristiä
+// seinäkaarella sektorin ulkopuolella. EI krusifiksia (Hannes Autere 1939).
+// Mitat lähteistä (7.10.2026, _lahteet/olavinlinna-pohjat/SEIKKAILU-TARKISTUS.md kohta 4 ja sivulöydöt; V = kaksi
+// lähdettä, A = päätelty): Kirkkotornin 3. kerros (V), ikkunaton lukuun ottamatta koillismuurin ahdasta luukkuikkunaa (Aspelin 1875), RISTIHOLVI (Maconi 1910), sisähalkaisija
+// noin 7,8 m (A, Maconin leikkaus), lattia +92,6 (malli 9,6, muunnos malli = NN − 83,0), holvin laki +98,2 (malli 15,2).
+// Kappelin yläosaa kiertää 8-aukkoinen ampumakäytävä +96,4…+96,9 (malli 13,4…13,9) MUURIN SISÄLLÄ: ei aukkoja huoneeseen.
+// Oma lattia on `kiekko` (y 9,0…9,4) ja holvi `kupoli` + ristiholvi (laki 5,6 m lattiasta).
 
 const TAULU = {
   otsikko: 'Kirkkotornin kappeli',
@@ -23,8 +27,9 @@ const TAULU = {
 // Geometria-apurit. Kompassikulma a (0 = pohjoinen −z, 90 = itä +x); tornin keskipiste [0, −20].
 const RAD = Math.PI / 180;
 const CX = 0, CZ = -20;
-const LATTIA = 9.4; // lattian yläpinta
-const SEINA = 4.98; // sisäseinän pinta (sisäsäde 5, hitsaus ei näy)
+const LATTIA = 9.4; // lattian yläpinta (sijoitus +0,2 → malli 9,6)
+const SEINA = 3.88; // sisäseinän pinta (sisäsäde 3,9, hitsaus ei näy)
+const HOLVI = { lahto: 12.3, laki: 15.0 }; // ristiholvin lähtö seinällä (L3: lattia + 2,8…3,3) ja laki (lattia + 5,6)
 const r3 = (v) => Math.round(v * 1000) / 1000;
 // Piste kompassikulmassa a, säteellä r, korkeudella y.
 const pol = (a, r, y) => [r3(CX + r * Math.sin(a * RAD)), y, r3(CZ - r * Math.cos(a * RAD))];
@@ -38,9 +43,9 @@ const seinalla = (resepti, a, r, extra = {}) => ({ resepti, paikka: pol(a, r, LA
 
 // --- Alttarit (kolme, fi.wikipedia): pääalttari itäseinällä, kaksi sivualttaria. Kynttilänjalat + kirja + vati päällä.
 const ALTTARIT = [
-  { a: 80, r: 4.5, leveys: 1.4, korkeus: 1.0, jalka: 0.36 },
-  { a: 40, r: 4.5, leveys: 1.1, korkeus: 0.95, jalka: 0.28 },
-  { a: 320, r: 4.5, leveys: 1.1, korkeus: 0.95, jalka: 0.28 },
+  { a: 80, r: 3.5, leveys: 1.4, korkeus: 1.0, jalka: 0.36 },
+  { a: 38, r: 3.5, leveys: 1.0, korkeus: 0.95, jalka: 0.28 },
+  { a: 322, r: 3.5, leveys: 1.0, korkeus: 0.95, jalka: 0.28 },
 ];
 const KYNTTILAN_KARKI = 0.98; // kynttilänjalan kynttilän yläpää (kerroin korkeus × 0,98)
 const LIEKIT = [];
@@ -62,7 +67,7 @@ ALTTARIT.forEach((al, i) => {
   if (i === 0) ALTTARIPALIKAT.push({ resepti: 'pullo', paikka: paik(P, s, -0.28, yPaalla, 0.06), suunta: 0, sade: 0.04, korkeus: 0.15 });
 });
 // Pääalttarin molemmin puolin lattiakynttilänjalat (kantavat tunnelmaa) + polvituoli portaan edessä.
-const PA = pol(80, 4.5, LATTIA);
+const PA = pol(80, 3.5, LATTIA);
 const LATTIAJALAT = [-1, 1].map((m, j) => {
   const pj = paik(PA, 260, m * 1.15, 0, 0.35);
   liekki(paik(pj, 0, 0, 0.9 * KYNTTILAN_KARKI, 0), 1.8, 0.11 + j * 0.31);
@@ -70,34 +75,75 @@ const LATTIAJALAT = [-1, 1].map((m, j) => {
 });
 const POLVITUOLI = { resepti: 'penkki', paikka: paik(PA, 260, 0, 0, 0.98), suunta: 260, leveys: 0.7, syvyys: 0.3, korkeus: 0.22 };
 
-// --- Kynttiläkruunu holvin keskeltä: kiinnitys holvin sisäpinnan huipussa (y 13,2), ketju 0,75, 6 kynttilää.
-const KRUUNU = { y: 13.2, sade: 0.42, ketju: 0.75, n: 6 };
+// --- Kynttiläkruunu holvin keskeltä: kiinnitys ristiholvin laessa (y 15,0), ketju 1,8, 6 kynttilää.
+const KRUUNU = { y: HOLVI.laki, sade: 0.42, ketju: 1.8, n: 6 };
 for (let i = 0; i < KRUUNU.n; i++) {
   const ka = (360 * i) / KRUUNU.n + 18; // kuten resepti: u = sade sin ka, w = sade cos ka (suunta 0: z = pz − w)
   liekki([r3(CX + KRUUNU.sade * Math.sin(ka * RAD)), r3(KRUUNU.y - KRUUNU.ketju + 0.02 + 0.15), r3(CZ - KRUUNU.sade * Math.cos(ka * RAD))], 1.5, i * 0.17);
 }
 
 // --- Pulpetti kirjoineen (kirja kansissa on osa reseptiä) + kynttilä takalistalla.
-const PULPETTI = [1.3, LATTIA, -22.4];
+const PULPETTI = [0.9, LATTIA, -21.9]; // 7.10.: sisäsäde 3,9 → lähemmäs keskustaa (sivualttari 38°)
 const pulpKynt = paik(PULPETTI, 180, -0.2, 1.1, -0.2);
 liekki(paik(pulpKynt, 0, 0, 0.25 * KYNTTILAN_KARKI, 0), 1.4, 0.6);
 
-// --- 12 vihkimisristiä seinäkaarella, tasavälein sektorin (100…230) ulkopuolella: väli 18,6° alkaen 242°.
+// --- 12 vihkimisristiä seinäkaarella sektorin (95…230) ulkopuolella.
 const RISTIT = [];
-for (let k = 0; k < 12; k++) {
-  const a = (242 + 18.6 * k) % 360;
-  RISTIT.push({ resepti: 'vihkimisristi', paikka: pol(a, SEINA, 10.75), suunta: a + 180, sade: 0.34 });
+// 7.10. E3: kaari-ovi (300°), kätkö (38,75°) ja oikea ikkuna (58,7°) vaativat välit: 12 ristiä näkyvälle kaarelle
+// (230…95) esteiden väleihin (kaari-ovi 291…309, hagioskooppi 3, kätkö 35…42, ikkuna 57…61).
+for (const a of [236, 252, 268, 284, 318, 333, 348, 13, 28, 49.5, 71, 87]) {
+  RISTIT.push({ resepti: 'vihkimisristi', paikka: pol(a, SEINA, 10.75), suunta: a + 180, sade: 0.26 }); // 7.10.: 0,34 → 0,26 (pienempi seinä)
 }
 
-// Hagioskooppirako (pohjaseinä 3°, kammion aukko) ja itäinen ikkunarako (59°): kivireunus laatoista.
+// Hagioskooppirako (pohjaseinä 3°, kammion aukko) ja koillismuurin ainoa ahdas ikkuna (Aspelin 1875, Sisältökirjurin
+// lähdetarkistus #4129; Maconi 1910 ei näytä sitä): kivireunus laatoista. Ikkuna 58,7° ristien 49,4° ja 68° välissä, korkealla
+// (lattia + 1,5…2,3), suljettu rautaluukulla; valo tulee edelleen kynttilöistä.
+const KIVI = { yla: 'kivi', sivu: 'kivi', ala: 'kivi' }; // 7.10.: kivireunus (laatan oletus yla = lankku näytti puulta)
+// Sivualttarin (38°) kätkösyvennys E3:lle: kompassi a0…a1 (ristien 30,8° ja 49,4° välissä), lattia + 1,1…1,5 (alttaripöydän
+// yläpuolella), syvyys 0,4. Irrotettavat kivet, kalkki, pateeni ja liuskekivi ovat kavely-merkkien esineitä (eivät leivottuja).
+// 7.10. E3-käsikirjoitus (#4155): ontelo 0,5 × 0,4 × 0,4 m, umpimuuraus neljästä kivestä (2 × 2).
+const SYV = { a: 38.75, a0: 35.06, a1: 42.44, y0: LATTIA + 1.1, y1: LATTIA + 1.5, leveys: 0.5, syvyys: 0.4 };
+// Kaari-ovi (Maconi 1910: "oikealla kaari-ovi noin 1,05 m, josta askelmat seinänsisäiseen tilaan"; E3: portaat ampumakäytävään,
+// TULKINTA) luoteessa 300°, 1,05 × 2,4 m. Kävelyosa kappeli-kavely jatkaa portaat seinän sisään.
+const KAARIOVI = { a: 300, puoli: 7.75, y0: 9.0, y1: LATTIA + 2.4 };
+const IKKUNA = { a: 58.7, puoli: 1.92, y0: LATTIA + 1.5, y1: LATTIA + 2.3 };
+const SEINAN_AUKOT = [
+  [KAARIOVI.a - KAARIOVI.puoli, KAARIOVI.a + KAARIOVI.puoli, KAARIOVI.y0, KAARIOVI.y1],
+  [SYV.a0, SYV.a1, SYV.y0, SYV.y1],
+  [IKKUNA.a - IKKUNA.puoli, IKKUNA.a + IKKUNA.puoli, IKKUNA.y0, IKKUNA.y1],
+];
+// Torniseinä vaakakaistoina: kaistan rajat = aukkojen y-rajat; kaistalla vapaat kulmavälit näkyvällä kaarella 230…455 → kukin
+// torni-palikka, jonka auki = välin komplementti (torni pitää välin [loppu, alku + 360]).
+function seinaAukoin() {
+  const Y0 = 9.0, Y1 = 15.6;
+  const rajat = [...new Set([Y0, Y1, ...SEINAN_AUKOT.flatMap(([, , y0, y1]) => [y0, y1])])].filter((y) => y >= Y0 && y <= Y1).sort((p, q) => p - q);
+  const osat = [];
+  for (let i = 0; i < rajat.length - 1; i++) {
+    const ya = rajat[i], yb = rajat[i + 1], ym = (ya + yb) / 2;
+    const esteet = SEINAN_AUKOT.filter(([, , y0, y1]) => ym > y0 && ym < y1)
+      .map(([a0, a1]) => [a0 < 230 ? a0 + 360 : a0, a1 < 230 ? a1 + 360 : a1]).sort((p, q) => p[0] - q[0]);
+    let alku = 230;
+    for (const [a0, a1] of [...esteet, [455, 455]]) {
+      if (a0 - alku > 0.01) osat.push({ resepti: 'torni', paikka: [CX, ya, CZ], suunta: 0, sade: 6.6, paksuus: 2.7, korkeus: r3(yb - ya), segmentit: 32, auki: { alku: r3(a0 - 360), loppu: r3(alku) } });
+      alku = Math.max(alku, a1);
+    }
+  }
+  // Ikkunatunnelin ja kaari-oven aukon katot (seinän paksuuden läpi / oven syvennys)
+  osat.push({ resepti: 'laatta', paikka: pol(IKKUNA.a, SEINA + 1.36, IKKUNA.y1 + 0.04), suunta: IKKUNA.a + 180, leveys: 0.36, syvyys: 2.8, paksuus: 0.06, pinnat: KIVI });
+  osat.push({ resepti: 'laatta', paikka: pol(KAARIOVI.a, SEINA + 0.4, KAARIOVI.y1 + 0.04), suunta: KAARIOVI.a + 180, leveys: 1.15, syvyys: 0.9, paksuus: 0.06, pinnat: KIVI });
+  // Kaari-oven aukon pohja ulkopinnan sisällä (r 6,45): dioraamassa ei näy taivasta; kävelyosan portaat pysyvät r < 6,3.
+  osat.push({ resepti: 'laatta', paikka: pol(KAARIOVI.a, 6.47, KAARIOVI.y1), suunta: KAARIOVI.a + 180, leveys: 2.0, syvyys: 0.05, paksuus: r3(KAARIOVI.y1 - KAARIOVI.y0), pinnat: KIVI });
+  return osat;
+}
 const REIAT = [];
 for (const h of [
   { a: 3, y: 10.05, leveys: 0.24, korkeus: 0.5 }, // hagioskooppi
-  { a: 59, y: 10.3, leveys: 0.26, korkeus: 0.85 }, // ikkuna (aamuaurinko)
+  { a: 58.7, y: LATTIA + 1.5, leveys: 0.26, korkeus: 0.8, aukko: true }, // koillisikkuna (Aspelin 1875): todellinen aukko
 ]) {
-  REIAT.push({ resepti: 'rako', paikka: pol(h.a, SEINA, h.y), suunta: h.a + 180, leveys: h.leveys, korkeus: h.korkeus });
-  REIAT.push({ resepti: 'laatta', paikka: pol(h.a, 4.85, h.y), suunta: h.a + 180, leveys: h.leveys + 0.3, syvyys: 0.3, paksuus: 0.07 });
-  REIAT.push({ resepti: 'laatta', paikka: pol(h.a, 4.85, h.y + h.korkeus + 0.07), suunta: h.a + 180, leveys: h.leveys + 0.3, syvyys: 0.3, paksuus: 0.07 });
+  if (!h.aukko) REIAT.push({ resepti: 'rako', paikka: pol(h.a, SEINA, h.y), suunta: h.a + 180, leveys: h.leveys, korkeus: h.korkeus });
+  REIAT.push({ resepti: 'laatta', paikka: pol(h.a, SEINA - 0.13, h.y), suunta: h.a + 180, leveys: h.leveys + 0.3, syvyys: 0.3, paksuus: 0.07, pinnat: KIVI });
+  REIAT.push({ resepti: 'laatta', paikka: pol(h.a, SEINA - 0.13, h.y + h.korkeus + 0.07), suunta: h.a + 180, leveys: h.leveys + 0.3, syvyys: 0.3, paksuus: 0.07, pinnat: KIVI });
+  // Rautaluukku on kävelyosan avattava esine (esine-luukku.glb, merkki luukku:koillinen), ei leivottu.
 }
 
 // --- Hahmot: kappalainen pääalttarin ääressä (messu), vouti seurakuntalaisena penkin luona.
@@ -106,7 +152,8 @@ const KAPPELI_HAHMOT = [
     // 5.10. (Päätoimittaja, Siirtosepän video): [3.35, LATTIA + 0.22, -20.8] oli polvituolin (penkki 0,22) päällä, joten
     // kappalainen seisoi puhuessaan jakkaralla. Nyt lattialla polvituolin vieressä kameran puolella (polvituolin kehyksessä
     // u −0,75, w 0,98), jossa sekä seisova puhe että polvirukous (tyo) mahtuvat. Lähin lattiakynttilä 0,75 m.
-    id: 'kappalainen', henkilo: 'kappalainen-1500', paikka: [3.597, LATTIA, -19.873], suunta: 90, peilattu: false,
+    // 7.10.: sisäsäde 5 → 3,9, paikka lasketaan polvituolin kehyksestä (u −0,75, w 0,98).
+    id: 'kappalainen', henkilo: 'kappalainen-1500', paikka: paik(PA, 260, -0.75, 0, 0.98), suunta: 90, peilattu: false,
     silmukka: 'tyo', heraa: 1, reitti: null,
     repliikit: [
       { id: 'kappalainen-1', aani: 'kappeli-kappalainen-1', teksti: 'Dominus vobiscum. Herra olkoon teidän kanssanne – ja ääni alas, jos sallitte.' },
@@ -115,7 +162,7 @@ const KAPPELI_HAHMOT = [
     reaktio: { id: 'pulu-kappalainen-r1', aani: 'kappeli-pulu-kappalainen-r1', teksti: 'Latinaa! En ymmärrä sanaakaan, mutta kaiku tekee siitä aivan taivaallista.' },
   },
   {
-    id: 'vouti', henkilo: 'vouti-1500', paikka: [-0.3, LATTIA, -18.3], suunta: 90, peilattu: false,
+    id: 'vouti', henkilo: 'vouti-1500', paikka: [-0.1, LATTIA, -18.3], suunta: 90, peilattu: false,
     silmukka: 'idle', heraa: 2, reitti: null,
     repliikit: [
       { id: 'vouti-1', aani: 'kappeli-vouti-1', teksti: 'Kaksitoista ristiä seinällä, yksi jokaista apostolia kohti. Lasken ne aina.' },
@@ -123,6 +170,21 @@ const KAPPELI_HAHMOT = [
     ],
     reaktio: { id: 'pulu-vouti-r1', aani: 'kappeli-pulu-vouti-r1', teksti: 'Pieni aukko, suuri kuulumisen tarve. Nykyään sama tehdään suoratoistona.' },
   },
+];
+
+// Holvimaalausten jäänteet ja pääalttarin oikean puolen maalattu kilpi (Kansallismuseo: lehti- ja kukkakuvioita sekä vaakunoita;
+// Härö 1997: holvissa pääalttarin oikealla maalattu, todennäköisesti Tottin vaakuna). Projektorit leivo_tila.py:lle: kuva
+// (_valmiit-polku), keski (paikallinen), kompassi, tapa 'pysty' (vaakasuora heijastus kompassin suuntaan) tai 'alhaalta'
+// (pystysuora heijastus holviin), leveys/korkeus (m), syvyys (m heijastussuunnassa), voima (peitto). Kuvat:
+// _valmiit/olavinlinna-maalaukset-v1 (oma proseduraalinen työ).
+const MK = (k) => `olavinlinna-maalaukset-v1/kuvat/${k}.png`;
+const PP = (a, r, y) => [r3(CX + r * Math.sin(a * RAD)), y, r3(CZ - r * Math.cos(a * RAD))];
+const MAALAUKSET = [
+  { kuva: MK('kilpi-tott'), keski: PP(86, 3.5, 13.0), kompassi: 86, tapa: 'pysty', leveys: 0.45, korkeus: 0.56, syvyys: 0.7, voima: 0.85 },
+  { kuva: MK('holvi-lehti-1'), keski: PP(320, 1.8, 14.0), kompassi: 50, tapa: 'alhaalta', leveys: 2.4, korkeus: 1.2, syvyys: 1.6, voima: 0.8 },
+  { kuva: MK('holvi-lehti-2'), keski: PP(20, 1.9, 14.0), kompassi: 110, tapa: 'alhaalta', leveys: 2.2, korkeus: 1.1, syvyys: 1.6, voima: 0.75 },
+  { kuva: MK('holvi-lehti-3'), keski: PP(268, 2.2, 13.9), kompassi: 358, tapa: 'alhaalta', leveys: 2.0, korkeus: 1.0, syvyys: 1.6, voima: 0.7 },
+  { kuva: MK('holvi-lehti-2'), keski: PP(0, 3.6, 13.2), kompassi: 0, tapa: 'pysty', leveys: 1.6, korkeus: 0.8, syvyys: 0.7, voima: 0.7 },
 ];
 
 export const TILA = {
@@ -148,10 +210,12 @@ export const TILA = {
       teksti: 'Reikä seinässä messun seuraamiseen – Suomessa harvinaista herkkua. Ja voudilta näyttää puuttuvan muutakin kuin hartautta.' },
   ],
   kohdistettava: true,
+  maalaukset: MAALAUKSET,
   // Uusi tapa (dioraama-rajapinnat-blender-20260929.md kohta 2): Kirkkotorni kuoressa mallin (−15,4, 14,6) (kartiokaton
-  // huippu säteellä, 29.9. klo 21) eli glTF z −14,6; seinä ja lattia säteellä 6,6 kuoren sisäpuolella; torni seisoo pihan tasolla −3,0, joten 3. krs lattia ≈ 6,4.
-  sijoitus: { ankkuri: [0, 0, -20], paikka: [-15.4, -3.0, -14.6], suunta: 0 },
-  rajat: { min: [-5, 9, -25], max: [5, 13.5, -15] },
+  // huippu säteellä, 29.9. klo 21) eli glTF z −14,6; seinä ja lattia säteellä 6,6 kuoren sisäpuolella.
+  // 7.10. korkeus lähteistä: lattia +92,6 NN = malli 9,6 (ennen 6,4), joten sijoitus y −3,0 → +0,2.
+  sijoitus: { ankkuri: [0, 0, -20], paikka: [-15.4, 0.2, -14.6], suunta: 0 },
+  rajat: { min: [-4, 9, -24], max: [4, 15.1, -16] },
   // Leikkaus kuoren tornin säteelle (≈ 7,5) ja kartiokaton huipun (32,3 → lähteessä 35,3) yli (Siirtoseppä 1.0.55).
   leikkaus: { laajennus: 1.0, kameraan: true, min: [-8, 9, -28], max: [8, 35.8, -12] },
   naapurit: ['massa', 'muurinharja', 'keskushalli'],
@@ -168,26 +232,31 @@ export const TILA = {
     teksti: 'Kappeli on Kirkkotornin kolmannessa kerroksessa, ja sen seinää kiertää kaksitoista vihkimäristiä. Katossa on säilynyt katkelmia maalauksista, muun muassa lehti- ja kukkakuvioita ja vaakunoita. Seinän pieni aukko on hagioskooppi, josta rikolliset ja sairaat seurasivat messua – Suomessa harvinainen ratkaisu.' },
   taulu: TAULU,
   // Elävä linna (29.9.): Kirkkotornin kylki kappelin kerroksessa kameran puolella (kynttilänvalo ikkunoissa).
-  elava: { kohde: [1.9, 11.5, -12.8], sade: 6 },
+  elava: { kohde: [1.9, 12.0, -12.8], sade: 6 },
   // Tumma yleisvalo; kynttiläkruunu ja alttarikynttilät kantavat tunnelman (jalkojen .valo tulee reseptistä).
   valot: [
     { paikka: [0, 12.1, -20], sade: 8, voima: 1.8, vari: '#ffb070', lepatus: 0.3 }, // kruunun ja penkkien alue
     // 5.10.: y 10,9 → 12,1. Matalalla valo oli kappalaisen rinnan korkeudella 0,25 m:n päässä, ja iho hehkui keltaisena.
-    { paikka: [3.6, 12.1, -20.8], sade: 4.5, voima: 1.5, vari: '#ff9a4a', lepatus: 0.25 }, // pääalttari ja kappalainen
-    { paikka: [0, 11.0, -22.9], sade: 4.5, voima: 0.9, vari: '#ffb070', lepatus: 0.2 }, // pohjaseinän ristit ja hagioskooppi
-    // Itäisen ikkunaraon (59°) aamuaurinko: keila alkaa seinäpinnasta ja osuu lattialle penkkien ja pulpetin väliin.
-    {
-      tyyppi: 'keila', paikka: pol(59, 5.0, 10.9), kohti: [0.8, 9.4, -20.6], kulma: 26, sade: 9, voima: 220, vari: '#ffd0a0',
-    },
+    { paikka: [2.5, 12.1, -20.6], sade: 4.5, voima: 1.5, vari: '#ff9a4a', lepatus: 0.25 }, // pääalttari ja kappalainen
+    { paikka: [0, 11.0, -22.4], sade: 4.5, voima: 0.9, vari: '#ffb070', lepatus: 0.2 }, // pohjaseinän ristit ja hagioskooppi
   ],
   palikat: [
-    // Pyöreä lattia (sade 7 = tornin ulkosäde): auki-sektorin kohdalla lattia jää "näyttämöksi".
+    // Pyöreä lattia (sade 6,6, kuoren tornin sisällä): auki-sektorin kohdalla lattia jää "näyttämöksi".
     { resepti: 'kiekko', paikka: [CX, LATTIA, CZ], suunta: 0, sade: 6.6, paksuus: 0.4, segmentit: 32, pinnat: { yla: 'kivi' } },
     // Tornin seinä kerroksen korkeudelta (uusi tapa 29.9.: kuoressa ei ole sisäpintaa, massan torni ei ole mukana).
-    { resepti: 'torni', paikka: [CX, 9.0, CZ], suunta: 0, sade: 6.6, paksuus: 1.6, korkeus: 4.5, segmentit: 32, auki: { alku: 100, loppu: 230 } },
-    // Holvikatto: alkaa y 11,6, huippu y 13,45; sama auki-sektori kuin tornilla. Maalaukset (lehti- ja kukka-aiheet):
-    // holvi-pinta rappaus, Codexin maalaus-pinta tulee erä 3b:ssä.
-    { resepti: 'kupoli', paikka: [CX, 11.6, CZ], suunta: 0, sade: 5, korkeus: 1.85, segmentit: 32, auki: { alku: 100, loppu: 230 }, pinnat: { holvi: 'rappaus' } },
+    // Seinä 2,7 m (sisäsäde 3,9) ja holvin yläpuolelle asti (y 9,0…15,6), ettei kennojen seinäkaarien yllä näy rakoa.
+    // 7.10. E3: seinä (sisäsäde 3,9, y 9,0…15,6) aukkolistasta SEINAN_AUKOT: dioraaman leikkaus 95…230, kätkö, ikkuna ja kaari-ovi.
+    ...seinaAukoin(),
+    // syvennyksen takaseinä ja katto (lattia = alaosan yläreuna)
+    { resepti: 'laatta', paikka: pol(SYV.a, SEINA + SYV.syvyys + 0.03, SYV.y1), suunta: SYV.a + 180, leveys: SYV.leveys + 0.1, syvyys: 0.05, paksuus: SYV.y1 - SYV.y0, pinnat: KIVI },
+    { resepti: 'laatta', paikka: pol(SYV.a, SEINA + SYV.syvyys / 2, SYV.y1 + 0.04), suunta: SYV.a + 180, leveys: SYV.leveys + 0.1, syvyys: SYV.syvyys + 0.1, paksuus: 0.06, pinnat: KIVI },
+    { resepti: 'laatta', paikka: pol(SYV.a, SEINA + SYV.syvyys / 2, SYV.y0 + 0.01), suunta: SYV.a + 180, leveys: SYV.leveys + 0.1, syvyys: SYV.syvyys + 0.1, paksuus: 0.06, pinnat: KIVI },
+    // Tottin ja Sturen kilpilaatat ovat kohokuvaesineitä (esine-kilpilaatta-tott/-sture.glb, kävelymerkit), eivät leivottuja:
+    // kohokuva näkyy vain matalassa sivuvalossa (E3 vaihe 3), mikä vaatii reaaliaikaisen valon.
+    // Ristiholvi (Maconi 1910): taitteet seinällä y 12,3, kennojen seinäkaaret y 13,8, laki y 15,0. Taitekulmat
+    // 5° + 45°·j osuvat sektorin ruudukkoon (230° + 11,25°·i). Maalaukset (lehti- ja kukka-aiheet): holvi-pinta rappaus.
+    { resepti: 'kupoli', paikka: [CX, HOLVI.lahto, CZ], suunta: 0, sade: SEINA - 0.06, korkeus: HOLVI.laki - HOLVI.lahto, paksuus: 0.3,
+      segmentit: 32, renkaat: 12, ristiholvi: { kulma: 5, nousu: 0.55, reuna: 0.25 }, auki: { alku: 95, loppu: 230 }, pinnat: { holvi: 'rappaus' } },
     ...ALTTARIPALIKAT,
     ...LATTIAJALAT,
     POLVITUOLI,
@@ -196,24 +265,24 @@ export const TILA = {
     // Kynttiläkruunu holvin keskeltä.
     { resepti: 'kynttilakruunu', paikka: [CX, KRUUNU.y, CZ], suunta: 0, sade: KRUUNU.sade, ketju: KRUUNU.ketju, kynttilia: KRUUNU.n },
     // Kirkonpenkit alttaria (itä) kohti: etupuoli w+ = itä (suunta 90).
-    { resepti: 'kirkonpenkki', paikka: [-0.3, LATTIA, -20], suunta: 90 },
-    { resepti: 'kirkonpenkki', paikka: [-1.5, LATTIA, -20], suunta: 90 },
-    // Voudin sinetti, vaihe 2: tuore naarmu ja avaimen kuva toisen penkin selkänojan yläpuussa (etupinta x −1,685,
+    { resepti: 'kirkonpenkki', paikka: [-0.1, LATTIA, -20], suunta: 90 },
+    { resepti: 'kirkonpenkki', paikka: [-1.3, LATTIA, -20], suunta: 90 },
+    // Voudin sinetti, vaihe 2: tuore naarmu ja avaimen kuva toisen penkin selkänojan yläpuussa (etupinta x −1,485,
     // yläpuu y 10,12…10,35), eteläpäässä kameran puolella.
-    { resepti: 'kaiverrus', paikka: [-1.685, 10.24, -19.4], suunta: 90, leveys: 0.12 },
-    { resepti: 'kirkonpenkki', paikka: [-2.7, LATTIA, -20], suunta: 90 },
+    { resepti: 'kaiverrus', paikka: [-1.485, 10.24, -19.4], suunta: 90, leveys: 0.12 },
+    { resepti: 'kirkonpenkki', paikka: [-2.5, LATTIA, -20], suunta: 90, leveys: 1.6 },
     // Pulpetti kirjoineen (etupuoli etelään) + kynttilä takalistalla.
     { resepti: 'pulpetti', paikka: PULPETTI, suunta: 180 },
     { resepti: 'kynttilanjalka', paikka: pulpKynt, suunta: 0, korkeus: 0.25 },
-    // Sanctus-kello ikkunaraon alla, vaatearkku pohjoisseinällä (kalkit, messupuvut).
-    seinalla('kello', 60, 4.4),
-    seinalla('arkku', 342, 4.5),
-    { resepti: 'kirja', paikka: paik(pol(342, 4.5, LATTIA), 162, 0.15, 0.55, 0), suunta: 165 },
-    { resepti: 'ruukku', paikka: paik(pol(342, 4.5, LATTIA), 162, -0.22, 0.55, 0), suunta: 0, sade: 0.07, korkeus: 0.14 },
+    // Sanctus-kello alttarien välissä, vaatearkku pohjoisseinällä (kalkit, messupuvut).
+    seinalla('kello', 59, 3.45),
+    seinalla('arkku', 342, 3.45),
+    { resepti: 'kirja', paikka: paik(pol(342, 3.45, LATTIA), 162, 0.15, 0.55, 0), suunta: 165 },
+    { resepti: 'ruukku', paikka: paik(pol(342, 3.45, LATTIA), 162, -0.22, 0.55, 0), suunta: 0, sade: 0.07, korkeus: 0.14 },
   ],
   // Voudin sinetin etsintä, vaihe 2: napautus penkin kaiverrukseen (kynttilän valossa naarmu ja fatabuurin avaimen kuva).
   etsinta: [
-    { etsinta: 'voudin-sinetti', vaihe: 2, tyyppi: 'vihje', kohde: [-1.68, 10.24, -19.4], sade: 0.6,
+    { etsinta: 'voudin-sinetti', vaihe: 2, tyyppi: 'vihje', kohde: [-1.48, 10.24, -19.4], sade: 0.6,
       teksti: 'Penkin selkänojassa on tuore naarmu: raskas avainnippu on raapaissut puuta. Painaumasta erottuu ison avaimen parta – fatabuurin avaimen.',
       pulu: 'Ensin rukous, sitten aittaan. Vouti oli järjestelmällinen mies – paitsi sormuksensa kanssa.',
       rivi: 'Penkissä on tuore jälki – fatabuurin avaimen parta.' },

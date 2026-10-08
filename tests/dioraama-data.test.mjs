@@ -36,6 +36,7 @@ const RESEPTIT = new Set([
   'kangaspakka', 'vaatepino', 'vaateorsi', // Fatabuuri vaateaitaksi 29.9.
   // Tunnelma 29.9. (tunnelma.js): lyhty tolpassa.
   'lyhty',
+  'tynnyriholvi', // Palatsi 7.10. (voudin sali)
 ]);
 
 const KIELLETYT_TAGIT = [/\[softly\]/i, /\[whispers\]/i];

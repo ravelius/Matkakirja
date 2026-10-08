@@ -341,6 +341,21 @@ export function lisaaBlender(rakennusJson, blender) {
     // skin.faceit-kentän.
     if (on.has(`hahmot/${id}-faceit.glb`)) h.malli3d.skin.faceit = B(`hahmot/${id}-faceit.glb`);
   }
+  // Pelaajahahmo (Siirtoseppä 7.10.2026, E1 pystyleike): blender/hahmot/fogg.glb + js/dioraama/pelaaja.json (leikkeet, liikkeiden
+  // mitatut nopeudet ja toistokertoimet, kapseli). Vain jos glb on viety.
+  if (on.has('hahmot/fogg.glb')) {
+    const P = JSON.parse(readFileSync(new URL('../../js/dioraama/pelaaja.json', import.meta.url), 'utf8'));
+    delete P.huom;
+    rakennusJson.pelaaja = { glb: B('hahmot/fogg.glb'), ...P };
+  }
+  // Ensimmäisen persoonan kädet (omistaja 7.10. 18.5x: pelit 1. persoonassa; Siirtoseppä historia-fp): blender/hahmot/kadet.glb +
+  // js/dioraama/pelaaja-kadet.json (leikkeet, liikkeet, kahva, kamera) → pelaaja.kadet.
+  if (on.has('hahmot/kadet.glb')) {
+    const KJ = JSON.parse(readFileSync(new URL('../../js/dioraama/pelaaja-kadet.json', import.meta.url), 'utf8'));
+    delete KJ.huom;
+    rakennusJson.pelaaja = rakennusJson.pelaaja || {};
+    rakennusJson.pelaaja.kadet = { glb: B('hahmot/kadet.glb'), ...KJ };
+  }
   rakennusJson.tunnelma = 'hamara';
   rakennusJson.ulkokuori = {
     ...Object.fromEntries(Object.keys(tasot).map((t) => [t, B(`ulkokuori/ulkokuori_${t}.glb`)])),
@@ -428,6 +443,22 @@ export function lisaaBlender(rakennusJson, blender) {
     astc(ya, 'horisontti_kuva_astc', 'horisontti-1k-4x4.astcm'); astc(ya.hamara, 'horisontti_kuva_astc', 'horisontti-hamara-1k-4x4.astcm');
     if (ya.taivas) { astc(ya, 'taivas_astc', 'taivas-2k-4x4.astcm'); astc(ya, 'taivas_hamara_astc', 'taivas-hamara-2k-4x4.astcm'); }
     astc(ya.aluskasvit, 'atlas_astc', 'aluskasvit-4x4.astcm'); astc(ya.aluskasvit, 'atlas_hamara_astc', 'aluskasvit-hamara-4x4.astcm');
+  }
+  // Staattiset ympäristömallit (Siirtoseppä 7.10., natiivi historia-h0): ymparisto/mallit/<id>.glb (+ <id>-kevyt.glb) →
+  // ymparisto.mallit[] { id, huippu, kevyt }. Rantakivikko ja kalliojalusta, myöhemmin vene. Vanha natiivi ohittaa kentän.
+  const mallit = [...on.keys()].filter((p) => /^ymparisto\/mallit\/[^/]+\.glb$/.test(p) && !p.endsWith('-kevyt.glb')).sort()
+    .map((p) => { const id = p.slice('ymparisto/mallit/'.length, -4); const kevyt = `ymparisto/mallit/${id}-kevyt.glb`;
+      return { id, huippu: B(p), kevyt: B(on.has(kevyt) ? kevyt : p), ...(rakennusJson.ymparistoMallit?.[id] ?? {}) }; });
+  delete rakennusJson.ymparistoMallit; delete rakennusJson.lisaHenkilot;   // rakennuskohtaiset lisäkentät malleille, esim. vene { maailmaan: false } (Siirtoseppä 7.10.)
+  if (mallit.length) { rakennusJson.ymparisto = rakennusJson.ymparisto || {}; rakennusJson.ymparisto.mallit = mallit; }
+  // Vapaa kävely (omistaja 7.10. 08.4x; Linnanrakentaja + Siirtoseppä): kavely/osat.json (osien glb:t, rajat, naapurit,
+  // portaalit, leikkaukset, kamera_rajat) ja kavely/merkit.json (ovi:, piilo:, esine:, partio:). Polut osat.jsonissa
+  // suhteessa kavely/-kansioon. Vain jos viety; vanha natiivi ohittaa kentän.
+  if (on.has('kavely/osat.json') && on.has('kavely/merkit.json')) {
+    rakennusJson.kavely = { osat: B('kavely/osat.json'), merkit: B('kavely/merkit.json') };
+    // Esineet (merkit esine:<nimi>, Siirtoseppä 7.10.: heittoon): nimi → glb.
+    const es = [...on.keys()].filter((p) => /^kavely\/esine-[^/]+\.glb$/.test(p)).sort();
+    if (es.length) rakennusJson.kavely.esineet = Object.fromEntries(es.map((p) => [p.slice('kavely/esine-'.length, -4), B(p)]));
   }
   const atlas = (id, v) => ({
     tiedosto: B(`valot/${id}${v}.jpg`), puoli: B(`valot/${id}${v}-2k.jpg`),
@@ -530,7 +561,9 @@ export async function rakennaData(rakennus, {
   const tilaIdt = new Set(rakennus.tilat.map((t) => t.id));
 
   const kaytetytPinnat = new Set();
-  const kaytetytHenkilot = new Set();
+  // lisaHenkilot (7.10.2026, Siirtoseppä): henkilöt, joita ei ole vielä sijoitettu tiloihin mutta joiden kohtaus tulee
+  // käsikirjoituksesta (esim. pystyleikkeen portinvartija). Mukaan rakennus.json:n henkilöihin skin-glb:ineen.
+  const kaytetytHenkilot = new Set(rakennus.lisaHenkilot ?? []);
   const kaytetytAanet = new Set();
   const tilaTulokset = [];
   let aoMsYht = 0;

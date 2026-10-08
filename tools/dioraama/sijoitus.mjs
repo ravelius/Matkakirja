@@ -78,6 +78,8 @@ export function sijoitaTila(tila) {
   }
   for (const v of t.valot ?? []) { pisteeksi(v, 'paikka'); pisteeksi(v, 'kohti'); }
   for (const l of t.liekit ?? []) pisteeksi(l, 'paikka');
+  // Maalausprojektorit (kappeli 7.10.): keskipiste ja kompassisuunta samaan sijoitukseen (leivo_tila.py).
+  for (const md of t.maalaukset ?? []) { pisteeksi(md, 'keski'); if (typeof md.kompassi === 'number') md.kompassi = suuntaan(md.kompassi); }
   // Elävä linna (29.9.): yleisnäkymän napautuskohde ja reittihahmon polku samaan sijoitukseen.
   pisteeksi(t.elava, 'kohde');
   for (const v of t.etsinta ?? []) pisteeksi(v, 'kohde');  // voudin sinetti: vihjeen/löydön kohta
