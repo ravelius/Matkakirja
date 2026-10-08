@@ -84,15 +84,15 @@ namespace Matkakirja.Linssit.Testit
 
         [Testi] static void VaarassaTurvallinenTaso()
         {
-            // M-iPad, vapaa 1500 (budjetti 800): huippu 1164 ei mahdu → normaali + puolikkaat (637).
-            var t = Laske(1500, Laitteet[3]);
+            // M-iPad, vapaa 1350 (budjetti 650): huippu 1024 ei mahdu → normaali + puolikkaat (627).
+            var t = Laske(1350, Laitteet[3]);
             Oleta.Tosi(t.Kuori == KuoriTaso.Normaali && !t.TaydetPinnat && !t.RajoituksetPois, t.ToString());
             Oleta.Tosi(t.Peruste.StartsWith("vähän muistia"), t.Peruste);
             // Laitteella 0 = muisti lopussa → turvataso.
             var h = Laske(0, Laitteet[1]);
             Oleta.Tosi(h.SamaLaatu(LinnaMuistibudjetti.Portaat[0]) && h.Peruste == "HÄTÄ: turvataso", h.ToString());
-            // A-iPad, vapaa 1700 (budjetti 1000): laiteluokka mahtuu → nosto täysiin pintoihin, iPadin kevennyksettömyys säilyy.
-            var a = Laske(1700, Laitteet[5]);
+            // A-iPad, vapaa 1500 (budjetti 800): laiteluokka mahtuu → nosto täysiin pintoihin (697), iPadin kevennyksettömyys säilyy.
+            var a = Laske(1500, Laitteet[5]);
             Oleta.Tosi(a.Kuori == KuoriTaso.Normaali && a.TaydetPinnat && a.RajoituksetPois && !a.Taysi, a.ToString());
         }
 
@@ -102,7 +102,7 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama(700, LinnaMuistibudjetti.Marginaali(4000));
             Oleta.Sama(900, LinnaMuistibudjetti.Marginaali(6000));
             var portaat = LinnaMuistibudjetti.Portaat;
-            var odotetut = new[] { 526, 637, 837, 1000, 1164 };
+            var odotetut = new[] { 531, 627, 697, 860, 1024 };
             for (int p = 0; p < portaat.Length; p++)
             {
                 Oleta.Sama(odotetut[p], LinnaMuistibudjetti.Tarve(portaat[p]), "porras " + p);

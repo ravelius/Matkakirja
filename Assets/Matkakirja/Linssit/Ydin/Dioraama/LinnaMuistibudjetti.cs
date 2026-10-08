@@ -7,11 +7,11 @@
 // vapaaMt = −1 (editori, simulaattori, Mac ilman tietoa) → laiteluokan taso täsmälleen ennallaan.
 //
 // PORTAAT (komponentit kasvavat portaittain; tarve = linnan oma lisäys avauksen hetken vapaaseen muistiin):
-//   0 turva   kevyt kuori,    puolikkaat pinnat, puhelinkevennykset, ei detaljinormaaleja   ~530 Mt
-//   1         normaali kuori, puolikkaat pinnat, puhelinkevennykset                          ~640 Mt
-//   2         normaali kuori, täydet pinnat,     puhelinkevennykset                          ~840 Mt
-//   3         huippukuori,    täydet pinnat,     puhelinkevennykset, detaljinormaalit        ~1000 Mt (iPhone 16/17 ennen)
-//   4         huippukuori,    täydet pinnat,     ei kevennyksiä,     detaljinormaalit        ~1160 Mt (M-iPad ennen)
+//   0 turva   kevyt kuori,    puolikkaat pinnat, puhelinkevennykset, ei detaljinormaaleja   ~530 Mt (LS2 8.10.: mitattu 297)
+//   1         normaali kuori, puolikkaat pinnat, puhelinkevennykset                          ~630 Mt (mitattu 390)
+//   2         normaali kuori, täydet pinnat,     puhelinkevennykset                          ~700 Mt (mitattu 444)
+//   3         huippukuori,    täydet pinnat,     puhelinkevennykset, detaljinormaalit        ~860 Mt (mitattu 510; iPhone 16/17 ennen)
+//   4         huippukuori,    täydet pinnat,     ei kevennyksiä,     detaljinormaalit        ~1020 Mt (mitattu 639; M-iPad ennen)
 // ARVIOT (Mt, GPU-muisti + hallitun keon kasvu, joka ei Boehm-GC:llä palaudu käyttöjärjestelmälle; paketti iPad ~430 Mt,
 // iPhone ~190 Mt, DioraamaEsilataus): perus 400 = tilojen glb:t, 3D-hahmot animaatioineen, äänet, puut, aluskasvit, horisontti,
 // taivas, URP:n renderöintikohteet ja glb-jäsennyksen keko. Kuori+maasto: kevyt 50 (150 k kolmiota, 2k-atlas), normaali 145
@@ -68,11 +68,14 @@ namespace Matkakirja.Linssit.Dioraama
         /// <summary>Hätävahti linnan ollessa auki: vapaa alle tämän → kuvien LRU pienemmäksi (ei tason vaihtoa kesken).</summary>
         public const int HataMt = 500;
 
-        // Tarpeen osat (Mt), ks. alkukommentti.
+        // Tarpeen osat (Mt), ks. alkukommentti. LS2:n mittaus paketista v45i 8.10.2026 (linssiseppa2/muistitesti 4a74f594e, GPU-tekstuurit
+        // + glb pelin valintasäännöin): kevyt kuori 62 (detalji latautuu myös kevyellä: 2k RGBA32-maski 21 + diffit 21) → 65; pinnat ja
+        // valoatlakset täydet 96 / puolikkaat 42 (valoatlakset 5–10 Mt, ei 22) → 130 / 60 (~35 % varaa). Perus 400 sisältää 3D-hahmot
+        // 66 Mt (RGBA32; ASTC säästäisi ~50) ja ajonaikaiset puskurit; muut osat mitattua väljempiä (kuori+maasto 128/237, orto 21/85).
         public const int PerusMt = 400;
-        public const int KuoriKevytMt = 50, KuoriNormaaliMt = 145, KuoriHuippuMt = 350, HuipunYlinMipMt = 67;
+        public const int KuoriKevytMt = 65, KuoriNormaaliMt = 145, KuoriHuippuMt = 350, HuipunYlinMipMt = 67;
         public const int OrtoKevytMt = 6, OrtoNormaaliMt = 22, OrtoHuippuMt = 89;
-        public const int PinnatTaydetMt = 270, PinnatPuolikkaatMt = 70;
+        public const int PinnatTaydetMt = 130, PinnatPuolikkaatMt = 60;
         public const int NormaalitMt = 25, VeneMt = 30;
 
         /// <summary>Portaat alhaalta ylös (komponentit kasvavat; ks. alkukommentti).</summary>
