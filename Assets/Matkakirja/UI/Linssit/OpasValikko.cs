@@ -1682,6 +1682,9 @@ namespace Matkakirja.Natiivi
                     Alanakyma("Äänet", () => Avaa(Nakyma.Aanet));
                     // Säätiedot (Pelikoodari 8.10.: /opas/saa, MET Norwayn lisenssiehto): aina näkyvissä, kun sää on käytettävissä.
                     Kirjasimet.Aseta(Rakenne.Teksti(SaaLahde, "mk-linssivalikko__lahde", Kohde), Kirjasin.Moderni);
+                    // Elävän kaupungin aineistot (LS1 8.10.2026: ElavaKaupunki.Krediitti, esim. OSM ODbL ja ESA WorldCover; null = ei riviä).
+                    string elava = ElavaKrediitti();
+                    if (!string.IsNullOrWhiteSpace(elava)) Kirjasimet.Aseta(Rakenne.Teksti(elava.Trim(), "mk-linssivalikko__lahde", Kohde), Kirjasin.Moderni);
                     Viiva();
                     Vieritys();
                     var lahteet = KuvaLahteet();
@@ -2241,6 +2244,11 @@ namespace Matkakirja.Natiivi
             }
             return tulos;
         }
+
+        /// <summary>LS1:n Matkakirja.Natiivi.ElavaKaupunki.Krediitti heijastuksella (junasta riippumaton); null, jos ei ole.</summary>
+        static string ElavaKrediitti() =>
+            typeof(OpasValikko).Assembly.GetType("Matkakirja.Natiivi.ElavaKaupunki")
+                ?.GetProperty("Krediitti", System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Static)?.GetValue(null) as string;
 
         [Serializable] sealed class AaniNimeaminen { public string lahde, nimi, tekija, lisenssi, url; }
         [Serializable] sealed class AaniLahdeTiedosto { public AaniNimeaminen[] nimeamiset; }
