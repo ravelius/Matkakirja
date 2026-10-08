@@ -6,6 +6,15 @@ worktreet /Users/Shared/Claude/wt/proto-natiivi-ui-<aihe>. Käännös: lokit/nat
 Simu vain Julkaisijan "SIMU NYT" -viestistä, oma iPhone FB234D08-4693-4496-9C7A-6C7C15B03963, iPad
 AD119F7B-A2A2-43EE-8769-7326DD757F89; lopuksi sammutus ja "simu vapaa".
 
+## TILA 8.10. klo 18.0x+ (JATKA TÄSTÄ)
+
+JUNA 167 kuitattu ja Natiivisepällä: linna-latauskuva 24372c44d, mikseri-167 be7fef450 (⊇ olavinlinna-peli 40e71625b;
+worktree wt/proto-natiivi-ui-olavpeli). Mikseri: ☰ → Peli → Mikseri (Äänentasot-paneeli, 7 luokkaa, uudet Voima.Repliikit/Saa →
+Siirtoseppä/LS1 kytkevät soittimiin; kehittäjälle Tallenna oletuksiksi → leikepöytä → asetukset.json aanet.mikseri.*).
+ODOTTAA: pallon kerroksellinen latauskuva natiivi-ui/pallo-kerrokset 61ef45312 (24372c44d:n päällä, worktree
+wt/proto-natiivi-ui-tkpariteetti) — EI junaan ennen Codexin korjattua taustaa (R2 20261008b, Sisältökirjuri ilmoittaa); tarkista
+kuvat, sitten SHA Päätoimittajalle. #4208 mergetty (3d44bfab5).
+
 ## TILA 8.10. klo 18.0x (JATKA TÄSTÄ)
 
 Juna 167 (Natiiviseppä kirjannut): linna-latauskuva 24372c44d. JUNA 167 KUITATTU ja SHA Natiivisepälle: natiivi-ui/olavinlinna-peli 40e71625b (korvaa dcbaf72d3; LAUTAPELIT kaikille + kehittäjälle KESKENERÄISET, omistaja 17.4x)
