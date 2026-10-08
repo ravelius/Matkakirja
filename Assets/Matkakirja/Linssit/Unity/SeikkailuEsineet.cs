@@ -518,12 +518,12 @@ namespace Matkakirja.Natiivi
         // --- Mallivarasto (glb kerran, kuva ASTC:nä) ---
         sealed class MalliVarasto
         {
-            public GlbMalli Malli; public Texture2D Kuva, Normaali; public Material Mat; public bool Valaistu, Valmis, Astc;
+            public GlbMalli Malli; public Texture2D Kuva, Normaali, Orm; public Material Mat; public bool Valaistu, Valmis, Astc;
             public readonly Dictionary<string, Mesh> Meshit = new Dictionary<string, Mesh>(StringComparer.Ordinal);
             /// <summary>Huonekohtainen lataus (PT 9.10. 00.08, v45b-raportin ehdotus 3): mallin käyttäjät ja ladatut ASTC-osoitteet, joista
             /// kuvat voi purkaa uudelleen (levyvälimuistista); vain ASTC-kuvat vapautetaan (glb:n JPEG-tavut on jo poistettu muistista).</summary>
             public readonly List<GameObject> Kayttajat = new List<GameObject>();
-            public string KuvaUrl, NormaaliUrl; public bool Ladattu = true, Lataamassa;
+            public string KuvaUrl, NormaaliUrl, OrmUrl; public bool Ladattu = true, Lataamassa;
         }
         static readonly Dictionary<string, MalliVarasto> varasto = new Dictionary<string, MalliVarasto>(StringComparer.Ordinal);
         /// <summary>Lokia ja testiä varten: glb:t, kuvat ASTC:nä, osumat varastosta.</summary>
@@ -575,6 +575,21 @@ namespace Matkakirja.Natiivi
                     if (a != null) { v.Normaali = DioraamaAstc.Lue(a, "EsineN:" + glb, out var syyN, TextureWrapMode.Clamp, 0, true); if (v.Normaali == null) kirjaa?.Invoke($"seikkailu: {nAstc} ei käytössä ({syyN})"); }
                     if (v.Normaali != null) { v.NormaaliUrl = nUrl; break; }
                 }
+                // ORM (rekvisiitta, LR v45p): <glb>-orm-6x6.astcm lineaarisena; AO valoon.
+                if (pohjaNimi != null && DioraamaAstc.AstcTuettu)
+                {
+                    string oUrl = malliUrl(malliJuuri + pohjaNimi + "-orm-6x6.astcm");
+                    if (DioraamaLevyvalimuisti.Manifestissa(oUrl) == true)
+                    {
+                        v.OrmUrl = oUrl;
+                        if (v.Ladattu)
+                        {
+                            byte[] a = null;
+                            yield return DioraamaLevyvalimuisti.Hae(oUrl, 60, t => a = t);
+                            if (a != null) v.Orm = DioraamaAstc.Lue(a, "EsineORM:" + glb, out _, TextureWrapMode.Clamp, 0, true);
+                        }
+                    }
+                }
                 v.Malli.Kuvat.Clear();   // JPEG-tavut pois muistista
                 // DioraamaValaistu (B, maalattu): tilan pistevalot ja Foggin kynttilä valaisevat esineen (kilpilaattojen kohokuva näkyy vain
                 // matalasta sivuvalosta, v44k); vara DioraamaMaasto. Värikanavat: AO 1, ei lämpöä, B 0,5 (ei hehkua ilman värejä).
@@ -588,6 +603,7 @@ namespace Matkakirja.Natiivi
                     {
                         v.Mat.SetFloat(IdTila, 1f); if (v.Kuva != null) v.Mat.SetTexture(IdPohjaKuva, v.Kuva);
                         if (v.Normaali != null) { v.Mat.SetTexture("_NormaaliKuva", v.Normaali); v.Mat.SetFloat("_NormaaliPaalla", 1f); }
+                        if (v.Orm != null) { v.Mat.SetTexture("_OrmKuva", v.Orm); v.Mat.SetFloat("_OrmPaalla", 1f); }
                     }
                     else if (v.Kuva != null) v.Mat.SetTexture(IdKuva, v.Kuva);
                 }
@@ -633,9 +649,11 @@ namespace Matkakirja.Natiivi
             foreach (var g in v.Kayttajat) foreach (var mr in g.GetComponentsInChildren<MeshRenderer>(true)) mr.enabled = false;
             v.Mat.SetTexture(IdPohjaKuva, null);
             if (v.Mat.HasProperty("_NormaaliKuva")) { v.Mat.SetTexture("_NormaaliKuva", null); v.Mat.SetFloat("_NormaaliPaalla", 0f); }
+            if (v.Mat.HasProperty("_OrmKuva")) { v.Mat.SetTexture("_OrmKuva", null); v.Mat.SetFloat("_OrmPaalla", 0f); }
             if (v.Kuva != null) Destroy(v.Kuva);
             if (v.Normaali != null) Destroy(v.Normaali);
-            v.Kuva = null; v.Normaali = null; v.Ladattu = false; Vapautettuja++;
+            if (v.Orm != null) Destroy(v.Orm);
+            v.Kuva = null; v.Normaali = null; v.Orm = null; v.Ladattu = false; Vapautettuja++;
         }
 
         IEnumerator Palauta(MalliVarasto v)
@@ -650,8 +668,15 @@ namespace Matkakirja.Natiivi
                 yield return DioraamaLevyvalimuisti.Hae(v.NormaaliUrl, 60, t => n = t);
                 if (n != null) v.Normaali = DioraamaAstc.Lue(n, "EsineN:palautus", out _, TextureWrapMode.Clamp, 0, true);
             }
+            if (v.OrmUrl != null)
+            {
+                byte[] o = null;
+                yield return DioraamaLevyvalimuisti.Hae(v.OrmUrl, 60, t => o = t);
+                if (o != null) v.Orm = DioraamaAstc.Lue(o, "EsineORM:palautus", out _, TextureWrapMode.Clamp, 0, true);
+            }
             if (v.Mat != null)
             {
+                if (v.Orm != null && v.Mat.HasProperty("_OrmKuva")) { v.Mat.SetTexture("_OrmKuva", v.Orm); v.Mat.SetFloat("_OrmPaalla", 1f); }
                 if (v.Kuva != null) v.Mat.SetTexture(IdPohjaKuva, v.Kuva);
                 if (v.Normaali != null && v.Mat.HasProperty("_NormaaliKuva")) { v.Mat.SetTexture("_NormaaliKuva", v.Normaali); v.Mat.SetFloat("_NormaaliPaalla", 1f); }
             }
@@ -666,6 +691,7 @@ namespace Matkakirja.Natiivi
             {
                 if (v.Kuva != null) Destroy(v.Kuva);
                 if (v.Normaali != null) Destroy(v.Normaali);
+                if (v.Orm != null) Destroy(v.Orm);
                 if (v.Mat != null) Destroy(v.Mat);
                 foreach (var me in v.Meshit.Values) if (me != null) Destroy(me);
             }
