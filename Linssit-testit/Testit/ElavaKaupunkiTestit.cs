@@ -64,6 +64,8 @@ namespace Matkakirja.Linssit.Testit
             var mallit = new List<(string Nimi, VeneVerkko V)>();
             foreach (var t in VeneMallit.Tyypit) mallit.Add((t, VeneMallit.Luo(t)));
             for (int i = 0; i < VeneMallit.PalloVarit.Length; i++) mallit.Add(("pallo" + i, VeneMallit.Pallo(i)));
+            for (int i = 0; i < 3; i++) mallit.Add(("auto" + i, VeneMallit.Auto(i)));
+            mallit.Add(("raitiovaunu", VeneMallit.Raitiovaunu()));
             mallit.Add(("lokki", VeneMallit.LokinVartalo())); mallit.Add(("kyyhky", VeneMallit.KyyhkynVartalo()));
             mallit.Add(("kyyhkyn siipi", VeneMallit.LokinSiipi(1, true))); mallit.Add(("siipi+", VeneMallit.LokinSiipi(1))); mallit.Add(("siipi-", VeneMallit.LokinSiipi(-1)));
             foreach (var (nimi, v) in mallit)
@@ -92,7 +94,7 @@ namespace Matkakirja.Linssit.Testit
                     double l = Math.Sqrt(Math.Pow(v.Normaalit[i * 3], 2) + Math.Pow(v.Normaalit[i * 3 + 1], 2) + Math.Pow(v.Normaalit[i * 3 + 2], 2));
                     Oleta.Tosi(Math.Abs(l - 1) < 1e-4, nimi + ": normaali yksikkö");
                 }
-                Oleta.Tosi(ulos >= 0.8 * kolmioita, $"{nimi}: ulospäin {ulos}/{kolmioita}");
+                Oleta.Tosi(ulos >= (nimi.StartsWith("auto") ? 0.6 : 0.8) * kolmioita, $"{nimi}: ulospäin {ulos}/{kolmioita}");   // autossa renkaiden sisäpinnat osoittavat keskustaa kohti (laatikot silti ulospäin omasta keskipisteestään)
                 if (Array.IndexOf(VeneMallit.Tyypit, nimi) >= 0)
                     Oleta.Tosi(Math.Abs((maxZ - minZ) - v.Pituus) < 0.05 * v.Pituus + 0.5, $"{nimi}: pituus {maxZ - minZ:F1} ≈ {v.Pituus}");
             }
@@ -145,6 +147,26 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(joki >= 5, $"jokilaivoja {joki}");
             var c = v.Parvet.Find(p => p.Nimi == "Place de la Concorde");
             Oleta.Tosi(c != null && c.Kyyhky && Math.Abs(c.Lat - 48.8656) < 0.003 && Math.Abs(c.Lon - 2.3212) < 0.004, "Concorden kyyhkyt");
+        }
+
+        // KATULIIKENNE (9.10., B4): autot pääkaduilla ja raitiovaunut kiskoilla, korkeus annetusta funktiosta, määräraja, yksisuuntaisilla
+        // kaduilla ei peruutusta; päissä piilossa.
+        [Testi] static void KatuliikennePariisissa()
+        {
+            var json = System.IO.File.ReadAllText("../Assets/Matkakirja/Linssit/Resources/Elava/elava-pariisi.json");
+            var k = KatuLiikenne.Lue(json, (x, z) => x > 3000 ? double.NaN : 35.0, 200, 5);
+            Oleta.Tosi(k.Autot.Kulkijat.Count <= 200 && k.Autot.Kulkijat.Count >= 150, $"autoja {k.Autot.Kulkijat.Count}");
+            Oleta.Tosi(k.Raitiot.Kulkijat.Count >= 4, $"raitiovaunuja {k.Raitiot.Kulkijat.Count}");
+            var suunta = new Dictionary<ReittiLiike.Kulkija, int>();
+            foreach (var a in k.Autot.Kulkijat) suunta[a] = a.Suunta;
+            for (int i = 0; i < 1200; i++) { k.Autot.Paivita(0.1); k.Raitiot.Paivita(0.1); }
+            foreach (var a in k.Autot.Kulkijat)
+            {
+                Oleta.Tosi(Math.Abs(a.Y - 35) < 1e-9, "korkeus funktiosta (puuttuvat naapureista)");
+                if (k.Autot.Reitit[a.Reitti].Yksisuunta) Oleta.Tosi(a.Suunta == 1, "yksisuuntainen ei peruuta");
+            }
+            var r0 = k.Autot.Reitit[0]; var piilo = new ReittiLiike.Kulkija { Reitti = 0, S = 5 };
+            Oleta.Tosi(KatuLiikenne.Piilossa(k.Autot, piilo), "päässä piilossa");
         }
 
         static string TukholmaJson() => System.IO.File.ReadAllText("../Assets/Matkakirja/Linssit/Resources/Elava/elava-tukholma.json");
