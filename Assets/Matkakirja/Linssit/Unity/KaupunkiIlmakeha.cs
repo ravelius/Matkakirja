@@ -92,7 +92,7 @@ namespace Matkakirja.Natiivi
         public static void Paivita(double lat, double lon, float korkeusM, float aurinkoKorkeusAst, float aurinkoAtsimuuttiAst, float pilvisyys, Vector2 tuuliM, float mitta)
         {
             Kaupunki(lat, lon);
-            if (IltaYolla && KaupunkiKuva.Valinta == "yo") aurinkoKorkeusAst = Mathf.Max(aurinkoKorkeusAst, IltaAurinkoAst);
+            if (IltaYolla && KaupunkiKuva.Nyt == "yo") aurinkoKorkeusAst = Mathf.Max(aurinkoKorkeusAst, IltaAurinkoAst);
             voima = Mathf.MoveTowards(voima, Paalla ? 1f : 0f, Time.unscaledDeltaTime);
             if (voima <= 0f && !Paalla && !KaupunkiVesi.Nakyvissa) return;   // vesi tarvitsee taivaan arvot heijastukseen
             if (!Lataa()) { voima = 0f; return; }
