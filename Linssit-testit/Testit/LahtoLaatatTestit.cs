@@ -69,6 +69,22 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(t <= tv + OpasSilmukka.LahtoPelaajaMaxS + 0.1, $"⏭: laatoille enintään {OpasSilmukka.LahtoPelaajaMaxS} s ({t:F2} s, tauko {tv:F2} s)");
         }
 
+        // Juna 164 -video: kierros alkoi ⏭:llä avauksesta (seuraavaa ei vielä ollut) → 1. lento saa täyden odotuksen.
+        [Testi] static void OhitusIlmanValmistaSeuraavaaOdottaaTaydesti()
+        {
+            var s = new OpasSilmukka(new Kuvakulma(55.68, 12.57, 1500, 50, 0, 40));
+            var p = new List<(int n, string t)>();
+            s.Pyyda += (n, t) => p.Add((n, t));
+            s.Aloita("Kööpenhamina");
+            s.Vastaus(p[^1].n, K("A", 55.6760, 12.5700));
+            for (int i = 0; i < 300 && s.Vaihe != OpasVaihe.Puhuu; i++) s.Paivita(0.1, _ => 5);
+            s.LatausEdistys = () => 0.5;
+            Oleta.Tosi(s.OhitaKohde(), "ohitus ilman seuraavaa (saapumisen esihaku vielä vastauksetta)");
+            s.Vastaus(p[^1].n, K("B", 55.6800, 12.5900));
+            double t = LahtoAika(s);
+            Oleta.Tosi(t > OpasSilmukka.LahtoOdotusMaxS - 0.1, $"täysi odotus ({t:F2} s)");
+        }
+
         [Testi] static void ReitinValinakymatEsiladataanPysahdyksellaJaLennossa()
         {
             var s = AssaBValmiina(() => 0.5);

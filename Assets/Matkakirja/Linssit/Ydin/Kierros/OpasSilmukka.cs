@@ -186,7 +186,7 @@ namespace Matkakirja.Linssit.Kierros
         /// lennon alussa Notre-Damelta Louvreen, lähtö 87 %:ssa; avauksesta 1. kohteeseen 61 %:ssa; omistaja moitti sumeita laattoja
         /// jo TF 162:ssa): lähtö odottaa, kunnes seuraavan kohteen ja reitin laatat (esikamera + ReittiEsilataus-kamerat; latausaste
         /// kattaa kaikki kamerat) ovat ≥ LahtoValmis, kuitenkin enintään LahtoOdotusMaxS normaalin pysähdyksen yli, ettei kierros jumitu.
-        /// Pelaajan ohitus (⏭) tai toive odottaa enintään LahtoPelaajaMaxS (painallukseen vastataan heti).
+        /// Pelaajan ohitus (⏭) valmiiseen seuraavaan tai toive odottaa enintään LahtoPelaajaMaxS (painallukseen vastataan heti).
         /// </summary>
         public const double LahtoValmis = 0.98, LahtoOdotusMaxS = 5, LahtoPelaajaMaxS = 2;
         /// <summary>Reitin esilatausnäkymät lennon osuuksina (0 = lähtö, 1 = perillä; perillä on esikamera).</summary>
@@ -686,7 +686,9 @@ namespace Matkakirja.Linssit.Kierros
             lykattyKysymys = null; esihakuPuheenJalkeen = false; OdottaaVastausta = false; kysymysAika = -1;
             if (Vaihe == OpasVaihe.Puhuu || (puheAloitettu && !aaniLoppui)) Hiljenna?.Invoke();
             aaniLoppui = true; hiljaS = double.MaxValue;
-            ohitettu = true;   // lähtö odottaa laattoja enintään LahtoPelaajaMaxS
+            // Seuraava jo valmiina → pelaaja odottaa välitöntä lähtöä: laatoille enintään LahtoPelaajaMaxS. Ilman sitä (kierroksen
+            // aloitus avauksesta, workerin vastaus) täysi LahtoOdotusMaxS kuten automaattisessa lähdössä.
+            ohitettu = Seuraava != null;
             if (Vaihe == OpasVaihe.Lentaa) PysahdyTahan();
             if (Seuraava == null && odotettu == 0) UusiPyynto();   // kierros: jonosta; muuten workerin seuraava
             return true;
