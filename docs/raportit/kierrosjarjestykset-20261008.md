@@ -1,0 +1,83 @@
+# Kierrosjärjestykset: pienin kokonaiskierto (Linssiseppä 8.10.2026)
+
+Omistaja 8.10. 08.3x/08.4x (Päätoimittajan kautta): kameran kierto oman akselinsa ympäri väsyttää eniten; kohteiden järjestystä saa muuttaa, jos reitti järkevöityy. Ensin pienin kokonaiskierto, sitten matka.
+
+**Malli:** kamera katsoo kohdetta tulosuunnasta (+ vakio sivukulma 25°), joten kierto = lentosuunnan muutokset (avausnäkymän suunnasta 40° ensimmäiseen osuuteen ja osuuksien välillä). Vanha = tuotannon järjestys workerin omilla funktioilla (tools/pollo origin/main: kuvalista + lyhinReitti esittelyn alusta, omat kohteet = omat.kierros). Uusi = 1. kohde pysyy (esittelyn lupaama), muut 7 kaikki järjestykset; pienin kierto, tasatilanteessa lyhin; matka enintään 130 % vanhasta.
+
+Laskenta: docs/raportit/kierrosjarjestykset-20261008.mjs (toistettavissa: `node docs/raportit/kierrosjarjestykset-20261008.mjs $PWD/tools/pollo`). Workeriin ehdotan algoritmia (lyhinReitti → pienin kierto ≤ 130 % matka) eikä käsin kirjattuja listoja, jotta kuvalistan muutokset pysyvät mukana.
+
+**Yhteensä 37 kaupunkia:** kierto 21980° → 18530° (-16 %), matka 283.8 → 319.6 km (+13 %).
+
+| Kaupunki | Kierto ° vanha → uusi | Matka km vanha → uusi | Vanha järjestys | Uusi järjestys |
+|---|---|---|---|---|
+| Barcelona | 660 → 485 | 9.5 → 10.7 | Palau de la Música Catalana · Arc de Triomf · Pyhän Ristin ja Pyhän Eulalian katedraali · La Rambla · Casa Batlló · Casa Milà · Sagrada Família · Güellin puisto | Palau de la Música Catalana · Pyhän Ristin ja Pyhän Eulalian katedraali · La Rambla · Casa Batlló · Casa Milà · Güellin puisto · Sagrada Família · Arc de Triomf |
+| Berliini | 590 → 509 | 11.3 → 14.6 | Berliinin televisiotorni · Berliinin tuomiokirkko · Museosaari · Brandenburgin portti · Valtiopäivätalo · Voitonpylväs · Checkpoint Charlie · East Side Gallery | Berliinin televisiotorni · Brandenburgin portti · Checkpoint Charlie · East Side Gallery · Berliinin tuomiokirkko · Museosaari · Valtiopäivätalo · Voitonpylväs |
+| Budapest | 701 → 533 | 8.3 → 10.3 | Gellértinvuori · Budan linna · Széchenyin ketjusilta · Matiaksenkirkko · Kalastajanlinnake · Unkarin parlamenttitalo · Pyhän Tapanin kirkko · Sankarien aukio | Gellértinvuori · Budan linna · Matiaksenkirkko · Kalastajanlinnake · Unkarin parlamenttitalo · Sankarien aukio · Pyhän Tapanin kirkko · Széchenyin ketjusilta |
+| Firenze | 635 → 445 | 4.4 → 3.8 | Palazzo Vecchio · Piazza della Signoria · Uffizin galleria · Ponte Vecchio · Palazzo Pitti · Bobolin puutarha · Santa Crocen basilika · Firenzen tuomiokirkko | Palazzo Vecchio · Santa Crocen basilika · Firenzen tuomiokirkko · Piazza della Signoria · Uffizin galleria · Ponte Vecchio · Palazzo Pitti · Bobolin puutarha |
+| Granada | 673 → 452 | 5 → 5.8 | Alhambra · Generalife · Leijonain piha · Kaarle V:n palatsi · Sacromonte · Albayzín · Granadan katedraali · Kuninkaallinen kappeli | Alhambra · Generalife · Kaarle V:n palatsi · Granadan katedraali · Kuninkaallinen kappeli · Albayzín · Sacromonte · Leijonain piha |
+| Helsinki | 700 → 581 | 9.2 → 10.9 | Helsingin päärautatieasema · Temppeliaukion kirkko · Oodi · Helsingin tuomiokirkko · Senaatintori · Kauppatori · Uspenskin katedraali · Suomenlinna | Helsingin päärautatieasema · Senaatintori · Uspenskin katedraali · Helsingin tuomiokirkko · Oodi · Temppeliaukion kirkko · Kauppatori · Suomenlinna |
+| Kööpenhamina | 406 → 362 | 7.6 → 8.5 | Tivoli · Christiansborgin linna · Rundetårn · Rosenborgin linna · Pieni merenneito · Amalienborgin linna · Nyhavn · Vapahtajan kirkko | Tivoli · Christiansborgin linna · Nyhavn · Amalienborgin linna · Pieni merenneito · Rosenborgin linna · Rundetårn · Vapahtajan kirkko |
+| Lissabon | 499 → 499 | 9.6 → 9.6 | Praça do Comércio · Lissabonin tuomiokirkko · Alfama · São Jorgen linna · Santa Justan hissi · Hieronymuksen luostari · Löytöretkien muistomerkki · Belémin torni | (ennallaan) |
+| Ljubljana | 551 → 551 | 2.4 → 2.7 | Prešerenin aukio · Tromostovje · Ljubljanan tuomiokirkko · Plečnikin tori · Lohikäärmesilta · Ljubljanan linna · Križanke · Tivolin puisto | Prešerenin aukio · Tromostovje · Ljubljanan linna · Lohikäärmesilta · Plečnikin tori · Ljubljanan tuomiokirkko · Križanke · Tivolin puisto |
+| Lontoo | 599 → 497 | 7.1 → 7.2 | Big Ben · Westminsterin palatsi · Westminster Abbey · Buckinghamin palatsi · Lontoon silmä · St Paulin katedraali · Lontoon Tower · Tower Bridge | Big Ben · Buckinghamin palatsi · Westminster Abbey · Westminsterin palatsi · Lontoon silmä · St Paulin katedraali · Lontoon Tower · Tower Bridge |
+| Madrid | 669 → 509 | 4.6 → 5.6 | Retiron puisto · Prado-museo · Cibeleen aukio · Gran Vía · Puerta del Sol · Plaza Mayor · Almudenan katedraali · Kuninkaanlinna | Retiron puisto · Prado-museo · Puerta del Sol · Plaza Mayor · Almudenan katedraali · Kuninkaanlinna · Gran Vía · Cibeleen aukio |
+| Marseille | 690 → 649 | 25.2 → 27.3 | Notre-Dame de la Garde · Saint-Victorin luostari · Marseillen vanha satama · Marseillen katedraali · MuCEM · Ifin linna · Frioulin saaret · Calanquesin kansallispuisto | Notre-Dame de la Garde · Saint-Victorin luostari · Ifin linna · Frioulin saaret · MuCEM · Marseillen katedraali · Marseillen vanha satama · Calanquesin kansallispuisto |
+| Pariisi | 622 → 560 | 12 → 13.2 | Notre-Dame · Louvre · Orsayn taidemuseo · Eiffel-torni · Riemukaari · Champs-Élysées · Concorden aukio · Sacré-Cœur | Notre-Dame · Concorden aukio · Champs-Élysées · Riemukaari · Eiffel-torni · Orsayn taidemuseo · Louvre · Sacré-Cœur |
+| Rooma | 700 → 630 | 6.3 → 8 | Forum Romanum · Colosseum · Trevin suihkulähde · Espanjalaiset portaat · Pantheon · Piazza Navona · Castel Sant’Angelo · Pietarinkirkko | Forum Romanum · Pantheon · Piazza Navona · Pietarinkirkko · Castel Sant’Angelo · Espanjalaiset portaat · Trevin suihkulähde · Colosseum |
+| Tukholma | 657 → 510 | 22.8 → 28.8 | Tukholman kuninkaanlinna · Tukholman kaupungintalo · Riddarholmenin kirkko · Gamla stan · Vasa-museo · Ulkoilmamuseo Skansen · Skogskyrkogården · Drottningholmin linna | Tukholman kuninkaanlinna · Gamla stan · Riddarholmenin kirkko · Drottningholmin linna · Tukholman kaupungintalo · Vasa-museo · Ulkoilmamuseo Skansen · Skogskyrkogården |
+| Wien | 702 → 624 | 12.5 → 15.2 | Stephansdom · Wienin Riesenrad · Belvedere · Wienin valtionooppera · Hofburg · Itävallan parlamenttitalo · Wienin raatihuone · Schönbrunnin linna | Stephansdom · Belvedere · Wienin valtionooppera · Itävallan parlamenttitalo · Wienin raatihuone · Wienin Riesenrad · Hofburg · Schönbrunnin linna |
+| Dublin | 470 → 470 | 6 → 6 | Trinity College · Spire · Ha'penny-silta · Dublinin linna · Christ Church -katedraali · Pyhän Patrickin katedraali · Guinness Storehouse · Kilmainhamin vankila | (ennallaan) |
+| Edinburgh | 497 → 418 | 5.2 → 5.6 | Arthur's Seat · Holyroodin palatsi · Calton Hill · Royal Mile · St Gilesin katedraali · Greyfriars Kirkyard · Edinburghin linna · Scottin muistomerkki | Arthur's Seat · Holyroodin palatsi · Royal Mile · St Gilesin katedraali · Greyfriars Kirkyard · Edinburghin linna · Scottin muistomerkki · Calton Hill |
+| Kreeta | 335 → 335 | 9.3 → 9.3 | Heraklionin venetsialaiset muurit · Pyhän Menaksen tuomiokirkko · Morosinin suihkulähde · Pyhän Tituksen kirkko · Koulesin linnoitus · Iraklionin arkeologinen museo · Knossoksen valtaistuinsali · Knossos | (ennallaan) |
+| Bergen | 553 → 553 | 12.6 → 12.6 | Bryggen · Bergenhusin linnake · Mariankirkko · Fløibanen · Bergenin tuomiokirkko · Fløyen · Fantoftin sauvakirkko · Troldhaugen | (ennallaan) |
+| Bryssel | 609 → 607 | 8.9 → 9.6 | Grand-Place · Brysselin kaupungintalo · Manneken Pis · Oikeuspalatsi · Kuninkaanpalatsi · Pyhän Mikaelin ja Pyhän Gudulan katedraali · Saint-Hubertin kauppakäytävät · Atomium | Grand-Place · Oikeuspalatsi · Kuninkaanpalatsi · Pyhän Mikaelin ja Pyhän Gudulan katedraali · Saint-Hubertin kauppakäytävät · Brysselin kaupungintalo · Manneken Pis · Atomium |
+| Bukarest | 673 → 598 | 7.3 → 8.8 | Stavropoleoksen kirkko · Romanian patriarkaalinen katedraali · Romanian parlamenttitalo · CEC-palatsi · Vallankumouksen aukio · Romanian kansallinen taidemuseo · Romanian ateneum · Riemukaari | Stavropoleoksen kirkko · CEC-palatsi · Romanian kansallinen taidemuseo · Romanian ateneum · Vallankumouksen aukio · Romanian patriarkaalinen katedraali · Romanian parlamenttitalo · Riemukaari |
+| Krakova | 745 → 638 | 3.4 → 3.8 | Wawelin linna · Wawelin katedraali · Kazimierz · Rynek Główny (Krakovan pääaukio) · Sukiennice (kauppahalli) · Mariankirkko · Florianin portti · Barbaakani | Wawelin linna · Wawelin katedraali · Rynek Główny (Krakovan pääaukio) · Sukiennice (kauppahalli) · Mariankirkko · Florianin portti · Barbaakani · Kazimierz |
+| Oslo | 748 → 556 | 13.9 → 16.1 | Karl Johans gate · Oslon oopperatalo · Akershusin linnoitus · Oslon kaupungintalo · Oslon kuninkaanlinna · Viikinkilaivamuseo · Vigelandin puisto · Holmenkollbakken | Karl Johans gate · Oslon kaupungintalo · Viikinkilaivamuseo · Akershusin linnoitus · Oslon oopperatalo · Oslon kuninkaanlinna · Vigelandin puisto · Holmenkollbakken |
+| Praha | 763 → 578 | 4.9 → 5.1 | Kaarlensilta · Venceslauksen aukio · Vanhankaupungin aukio · Prahan astronominen kello · Malá Strana · Pyhän Vituksen katedraali · Prahan linna · Petřínin näkötorni | Kaarlensilta · Malá Strana · Pyhän Vituksen katedraali · Prahan linna · Petřínin näkötorni · Prahan astronominen kello · Vanhankaupungin aukio · Venceslauksen aukio |
+| Sevilla | 521 → 470 | 3.6 → 4.2 | Torre del Oro · Maestranzan areena · Metropol Parasol · Giralda · Sevillan katedraali · Intian arkisto · Sevillan Alcázar · Plaza de España | Torre del Oro · Maestranzan areena · Giralda · Sevillan Alcázar · Plaza de España · Intian arkisto · Sevillan katedraali · Metropol Parasol |
+| Sofia | 726 → 589 | 10 → 10.8 | Aleksanteri Nevskin katedraali · Sofian yliopisto · Banja Bashin moskeija · Sofian synagoga · Pyhän Yrjön rotunda · Sveta Nedelyan kirkko · Kansalliskulttuuripalatsi · Bojanan kirkko | Aleksanteri Nevskin katedraali · Pyhän Yrjön rotunda · Sveta Nedelyan kirkko · Sofian synagoga · Banja Bashin moskeija · Sofian yliopisto · Kansalliskulttuuripalatsi · Bojanan kirkko |
+| Tampere | 403 → 403 | 4.3 → 4.3 | Hämeensilta · Tammerkoski · Tampereen tuomiokirkko · Museokeskus Vapriikki · Finlaysonin tehdasalue · Särkänniemi · Näsinneula · Pyynikin näkötorni | (ennallaan) |
+| Valletta | 672 → 392 | 4.2 → 4.4 | Pyhän Johanneksen ko-katedraali · Yläbarrakan puutarhat · Auberge de Castille · Manoel-teatteri · Suurmestarin palatsi · Piirityskello-muistomerkki · Grand Harbour · Pyhän Elmon linnake | Pyhän Johanneksen ko-katedraali · Suurmestarin palatsi · Piirityskello-muistomerkki · Grand Harbour · Yläbarrakan puutarhat · Auberge de Castille · Manoel-teatteri · Pyhän Elmon linnake |
+| Vilna | 663 → 493 | 5.9 → 6.2 | Vilnan tuomiokirkko · Vilnan vanhakaupunki · Vilnan yliopisto · Aamuportti · Užupis · Pyhän Annan kirkko · Gediminasin torni · Pyhän Pietarin ja Pyhän Paavalin kirkko | Vilnan tuomiokirkko · Pyhän Annan kirkko · Užupis · Aamuportti · Vilnan yliopisto · Vilnan vanhakaupunki · Gediminasin torni · Pyhän Pietarin ja Pyhän Paavalin kirkko |
+| Ateena | 487 → 357 | 3.5 → 4.2 | Akropolis · Hefaistoksen temppeli · Antiikin agora · Erekhtheion · Parthenon · Akropolis-museo · Olympoksen Zeuksen temppeli · Kallimarmaro (Panathinaïkó-stadion) | Akropolis · Parthenon · Olympoksen Zeuksen temppeli · Kallimarmaro (Panathinaïkó-stadion) · Akropolis-museo · Erekhtheion · Antiikin agora · Hefaistoksen temppeli |
+| Reykjavík | 729 → 569 | 6.1 → 6.6 | Hallgrímskirkja · Reykjavíkin tuomiokirkko · Alþingishúsið · Tjörnin · Landakotskirkja · Harpa · Höfði · Perlan | Hallgrímskirkja · Perlan · Tjörnin · Landakotskirkja · Alþingishúsið · Reykjavíkin tuomiokirkko · Harpa · Höfði |
+| Amsterdam | 444 → 431 | 4.9 → 6.3 | Rembrandtin talo · Amsterdamin keskusrautatieasema · Dam-aukio · Amsterdamin kuninkaallinen palatsi · Anne Frankin talo · Amsterdamin kanaalivyöhyke · Rijksmuseum · Van Gogh -museo | Rembrandtin talo · Amsterdamin kuninkaallinen palatsi · Anne Frankin talo · Van Gogh -museo · Rijksmuseum · Amsterdamin kanaalivyöhyke · Dam-aukio · Amsterdamin keskusrautatieasema |
+| Košice | 410 → 316 | 2.1 → 2.3 | Pyhän Elisabetin katedraali · Urbanin torni · Laulava suihkulähde · Košicen kansallisteatteri · Jakabin palatsi · Miklušin vankila · Hlavná-katu · Itä-Slovakian museo | Pyhän Elisabetin katedraali · Urbanin torni · Laulava suihkulähde · Košicen kansallisteatteri · Hlavná-katu · Itä-Slovakian museo · Miklušin vankila · Jakabin palatsi |
+| Luxemburg | 557 → 464 | 3.7 → 4.4 | Guillaume II:n aukio · Thüngenin linnake · Bockin kasematit · Suurherttuan palatsi · Notre Damen katedraali · Adolphe-silta · Pétrusse | Guillaume II:n aukio · Adolphe-silta · Pétrusse · Notre Damen katedraali · Suurherttuan palatsi · Bockin kasematit · Thüngenin linnake |
+| Venetsia | 566 → 542 | 2.8 → 3.4 | Pyhän Markuksen tori · Pyhän Markuksen kellotorni · Pyhän Markuksen basilika · Huokausten silta · Dogen palatsi · Santa Maria della Salute · Rialton silta · Canal Grande | Pyhän Markuksen tori · Pyhän Markuksen kellotorni · Dogen palatsi · Huokausten silta · Pyhän Markuksen basilika · Rialton silta · Canal Grande · Santa Maria della Salute |
+| Sisilia | 355 → 355 | 3.4 → 3.4 | San Giovanni degli Eremiti · Palatiinikappeli · Normannien palatsi · Palermon katedraali · San Cataldon kirkko · Martoranan kirkko · Quattro Canti · Teatro Massimo | (ennallaan) |
+
+## Uudet järjestykset tunnuksina
+
+- Barcelona: `["Q327940", "Q17155", "Q850593", "Q461371", "Q207870", "Q212867", "Q48435", "Q631075"]`
+- Berliini: `["Q151356", "Q82425", "Q68689", "Q313746", "Q154563", "Q151963", "Q151897", "Q154987"]`
+- Budapest: `["Q577122", "Q46313", "Q493133", "Q493117", "Q11819", "Q299973", "Q338665", "Q465534"]`
+- Firenze: `["Q271928", "Q51177", "Q191739", "Q849846", "Q51252", "Q208633", "Q29286", "Q888825"]`
+- Granada: `["Q47476", "Q525811", "Q2046808", "Q5419362", "Q429192", "Q576339", "Q2842387", "Q4270926"]`
+- Helsinki: `["Q1044613", "Q1329554", "Q1355001", "Q738015", "Q18659999", "Q1132809", "Q541933", "Q1292442"]`
+- Kööpenhamina: `["Q110289", "Q940733", "Q943946", "Q211053", "Q214619", "Q206101", "Q1140534", "Q29157"]`
+- Ljubljana: `["Q1889515", "Q676315", "Q2075156", "Q660029", "Q12034073", "Q1236564", "Q6438656", "Q2428528"]`
+- Lontoo: `["Q41225", "Q42182", "Q5933", "Q62408", "Q160659", "Q173882", "Q62378", "Q83125"]`
+- Madrid: `["Q1131807", "Q160112", "Q427163", "Q1123493", "Q849711", "Q171517", "Q1324163", "Q1537446"]`
+- Marseille: `["Q975925", "Q1858504", "Q622500", "Q1464953", "Q2808698", "Q1419757", "Q437959", "Q2600427"]`
+- Pariisi: `["Q2981", "Q189503", "Q550", "Q64436", "Q243", "Q23402", "Q19675", "Q28785"]`
+- Rooma: `["Q180212", "Q99309", "Q463400", "Q12512", "Q486382", "Q848072", "Q185382", "Q10285"]`
+- Tukholma: `["Q750444", "Q579854", "Q657118", "Q208559", "Q648483", "Q901371", "Q725108", "Q213988"]`
+- Wien: `["Q5943", "Q211818", "Q209937", "Q702121", "Q686468", "Q697578", "Q46242", "Q131330"]`
+- Edinburgh: `["Q712311", "Q505950", "Q852908", "Q1547466", "Q2876448", "Q212065", "Q2502213", "Q1199959"]`
+- Bryssel: `["Q215429", "Q850537", "Q635307", "Q269654", "Q1491935", "Q1255327", "Q152072", "Q180901"]`
+- Bukarest: `["Q3119683", "Q5010221", "Q1319192", "Q755457", "Q3390456", "Q1514860", "Q164150", "Q638278"]`
+- Krakova: `["Q18820", "Q638519", "Q770631", "Q1072350", "Q1143171", "Q1363724", "Q807309", "Q93706"]`
+- Oslo: `["Q1490775", "Q373850", "Q961220", "Q644464", "Q43280", "Q863932", "Q1126911", "Q33572"]`
+- Praha: `["Q204871", "Q753289", "Q5949", "Q193369", "Q12256", "Q729370", "Q421678", "Q847613"]`
+- Sevilla: `["Q943873", "Q2274061", "Q834479", "Q498261", "Q956018", "Q477051", "Q231606", "Q3087671"]`
+- Sofia: `["Q43282", "Q2598073", "Q520753", "Q942127", "Q790052", "Q841581", "Q3269914", "Q276553"]`
+- Valletta: `["Q613619", "Q1368885", "Q110391255", "Q220899", "Q7898477", "Q2499012", "Q576800", "Q1438745"]`
+- Vilna: `["Q1281237", "Q937290", "Q945499", "Q937212", "Q658192", "Q445649", "Q1497616", "Q1283798"]`
+- Ateena: `["Q131013", "Q10288", "Q1123019", "Q208811", "Q421084", "Q242741", "Q395367", "Q756824"]`
+- Reykjavík: `["Q271466", "Q1367886", "Q945753", "Q794242", "Q451045", "Q1270853", "Q1783706", "Q1067075"]`
+- Amsterdam: `["Q277316", "Q1056152", "Q165366", "Q224124", "Q190804", "Q478707", "Q839050", "Q50719"]`
+- Košice: `["Q569428", "Q1753933", "Q3076009", "Q133708", "Q787510", "Q1186439", "Q3403979", "Q3360878"]`
+- Luxemburg: `["Q359872", "Q365643", "Q950660", "Q1348719", "Q1205254", "Q125561209", "Q585990"]`
+- Venetsia: `["Q217527", "Q754194", "Q189883", "Q52517", "Q172988", "Q52505", "Q309243", "Q52531"]`
