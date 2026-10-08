@@ -26,6 +26,14 @@ namespace Matkakirja.Natiivi
             var ca = y.yoProfiili.Add<ColorAdjustments>(true);
             ca.postExposure.Override(ValotusEV); ca.saturation.Override(Kyllaisyys); ca.contrast.Override(8f);
             y.yoProfiili.Add<WhiteBalance>(true).temperature.Override(Kylmyys);
+            // Grafiikka (omistaja 8.10. 19.5x, juna 169): liekit hehkuvat (bloom vain kirkkaimmille, lämmin sävy), kylmä yö ja lämpimät
+            // liekit split toningilla, hento vinjetti. RP-assetin oletusprofiilin (Bloom, Vignette 0,2, Neutral) päälle prioriteetilla 105.
+            var bl = y.yoProfiili.Add<Bloom>(true);
+            bl.threshold.Override(1.0f); bl.intensity.Override(0.9f); bl.scatter.Override(0.7f); bl.tint.Override(new Color(1f, 0.82f, 0.62f));
+            var st = y.yoProfiili.Add<SplitToning>(true);
+            st.shadows.Override(new Color(0.36f, 0.46f, 0.62f)); st.highlights.Override(new Color(1f, 0.74f, 0.48f)); st.balance.Override(-15f);
+            var vi = y.yoProfiili.Add<Vignette>(true);
+            vi.intensity.Override(0.3f); vi.smoothness.Override(0.45f);
             y.yo.profile = y.yoProfiili;
             y.musta = go.AddComponent<Volume>(); y.musta.isGlobal = true; y.musta.priority = 130f;
             y.mustaProfiili = ScriptableObject.CreateInstance<VolumeProfile>(); y.mustaProfiili.name = "SeikkailuAlkuMusta";

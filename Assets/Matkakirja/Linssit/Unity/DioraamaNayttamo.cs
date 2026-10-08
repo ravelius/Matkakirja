@@ -343,6 +343,7 @@ namespace Matkakirja.Natiivi
             Lokit?.Paivita(t, vahennettyLiike);
             // Aurinko/pistevalojen lepatus + kohdetilan mukainen varjoetäisyys (era 2b, DioraamaValot.cs).
             Valot?.Paivita(t, vahennettyLiike, Kamera);
+            SeikkailuVarjot.Paivita(transform, Kamera);   // seikkailun liekkien pehmeät varjot (lähimmät)
         }
 
         /// <summary>"poikki dof 0|1" ja Hehku-ominaisuus ("poikki hehku 0|1") voivat vaihtaa tilaa milloin tahansa;
@@ -351,7 +352,7 @@ namespace Matkakirja.Natiivi
         void PaivitaDofTila()
         {
             bool dofPaalla = DofPaalla;
-            bool jokinPaalla = dofPaalla || hehku;
+            bool jokinPaalla = dofPaalla || hehku || SeikkailuYo.Aktiivinen != null;   // seikkailun yö: bloom, sävytys, vinjetti
             if (syvyys != null) syvyys.active = dofPaalla;
             if (hehkuBloom != null) hehkuBloom.active = hehku;
             if (volyymi != null) volyymi.enabled = jokinPaalla;
