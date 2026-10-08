@@ -193,6 +193,8 @@ namespace Matkakirja.Natiivi
                         case "sumu": Sumu = v != 0; break;
                         case "ilmakeha": KaupunkiIlmakeha.Paalla = v != 0; break;   // LS2 8.10.: fysikaalinen taivas, ilmaperspektiivi, pilvien varjot
                         case "ilmvalotus": KaupunkiIlmakeha.Valotus = v; break;
+                        case "vesi": KaupunkiVesi.Paalla = v != 0; break;   // LS2 8.10.: oma vesipinta (seuraava kaupungin avaus)
+                        case "vesinosto": KaupunkiVesi.NostoM = v; break;
                         case "sumualku": AlkuKerroin = v; break;
                         case "sumuloppu": LoppuKerroin = v; break;
                         case "sumualkumin": AlkuMinM = v; break;
@@ -387,6 +389,7 @@ namespace Matkakirja.Natiivi
                 float kork = gr != null ? Mathf.Max(30f, (kamera.transform.position.y - gr.transform.position.y) / Mathf.Max(1e-6f, mt)) : 300f;
                 KaupunkiIlmakeha.Paivita(kork, KaupunkiKuva.KoriAurinkoKorkeus, KaupunkiKuva.KoriAtsimuutti, Mathf.Lerp(0.35f, 0.95f, harmaus),
                     new Vector2(6f, 2f) * Time.time, mt);
+                kaupunki.Vesi?.Paivita(kamera);
             }
             if (KaupunkiKuva.jako != null)
             {
