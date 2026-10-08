@@ -9,7 +9,7 @@ AD119F7B-A2A2-43EE-8769-7326DD757F89; lopuksi sammutus ja "simu vapaa".
 ## TILA 8.10. klo 19.3x (JATKA TÄSTÄ)
 
 Juna 167: olavinlinna-kortti 896d6b823 Natiivisepän rungossa A (3c6377160); kuvat 200.
-JUNA 168 KUITTAUSPYYNTÖ LÄHETETTY: natiivi-ui/vihje-valikko 0426a8f26 (896d6b823:n päällä; kutsuu SeikkailuPelaaja.PyydaVihje, Siirtoseppä c15eb5b8a):
+JUNA 168 KUITATTU ja Natiivisepällä (ehto Siirtosepän c15eb5b8a samaan junaan): natiivi-ui/vihje-valikko 0426a8f26 (896d6b823:n päällä; kutsuu SeikkailuPelaaja.PyydaVihje, Siirtoseppä c15eb5b8a):
 linnan ☰ → "Vihje" vain seikkailussa → SeikkailuTapit.PyydaVihje → SeikkailuPelaaja.PuluVihje/VihjePyydetty. TEHTÄVÄ: junan 167 (22.00)
 jälkeen sovi Siirtosepän kanssa maailmavihjeen rajapinnan nimi (jos muuttuu, päivitä PyydaVihje), testit, 1 rivin kuittauspyyntö PT:lle.
 Juna 168 myös: pohjavahti-168c b62e2569d (kuitattu). Odottaa: Codexin yökuva Olavinlinnan pelille (Sisältökirjuri) → Pelit-rivi uudella polulla.
