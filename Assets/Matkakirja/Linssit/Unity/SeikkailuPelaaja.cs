@@ -48,6 +48,42 @@ namespace Matkakirja.Natiivi
         /// <summary>Vartijan otteessa (pelattavuusmalli 4.1): ei liikettä, katse vapaa; SeikkailuVartijat ohjaa irtipääsyn ja himmennyksen.</summary>
         public bool Otteessa;
 
+        // Kiipeily tikkaita (pelattavuusmalli 2.6, v44q kiipeily:tikkaat-*): eteen-syöte kiipeää 0,30 m/s (kädet-v1 kiipeily), taakse laskeutuu;
+        // yläpäässä astutaan 0,6 m eteen, alapäässä taakse. Kapseli paikallaan, törmäys pois kiipeilyn ajan.
+        public const float KiipeilyMs = 0.30f, TikkaatEtaisyys = 0.35f;
+        Vector3 kAla, kYla, kSuunta; float kKorkeus; bool kiipeilee;
+        public bool Kiipeilee => kiipeilee;
+
+        /// <summary>Aloita kiipeily tikkaille (ala, ylä Unityssa; suunta = katse tikkaisiin, vaaka). Ylhäältä aloitettaessa alas.</summary>
+        public void AloitaKiipeily(Vector3 ala, Vector3 yla, Vector3 suunta, bool ylhaalta)
+        {
+            kAla = ala; kYla = yla; suunta.y = 0; kSuunta = suunta.sqrMagnitude > 1e-4f ? suunta.normalized : hahmo.forward;
+            kKorkeus = ylhaalta ? yla.y - ala.y : 0f; kiipeilee = true;
+            cc.enabled = false; pysty = 0; kavely.NopeusX = kavely.NopeusZ = 0; napautusReitti.Clear();
+            kavely.HahmoYaw = Mathf.Atan2(kSuunta.x, kSuunta.z) * Mathf.Rad2Deg;
+            KasiEle("kiipeily_alku");
+            Debug.Log($"MATKAKIRJA seikkailu: kiipeily alkaa ({(ylhaalta ? "ylhäältä" : "alhaalta")}, {yla.y - ala.y:F1} m)");
+        }
+
+        bool PaivitaKiipeily(float dt, in KavelySyote s)
+        {
+            if (!kiipeilee) return false;
+            float h = kYla.y - kAla.y, liike = (float)Math.Clamp(s.LiikeY, -1, 1);
+            kKorkeus = Mathf.Clamp(kKorkeus + liike * KiipeilyMs * dt, 0f, h);
+            transform.position = kAla - kSuunta * TikkaatEtaisyys + Vector3.up * kKorkeus;
+            if (Math.Abs(liike) > 0.1f) kasiKiipeilyAika += dt * Math.Abs(liike);
+            if (kKorkeus >= h - 1e-3f && liike > 0.3f) Lopeta(kYla + kSuunta * 0.6f);
+            else if (kKorkeus <= 1e-3f && liike < -0.3f) Lopeta(kAla - kSuunta * 0.5f);
+            return kiipeilee;
+            void Lopeta(Vector3 p)
+            {
+                kiipeilee = false; transform.position = p + Vector3.up * 0.05f; viimeMaassa = transform.position; cc.enabled = true;
+                KasiEle("kiipeily_loppu");
+                Debug.Log("MATKAKIRJA seikkailu: kiipeily päättyi");
+            }
+        }
+        double kasiKiipeilyAika;
+
         /// <summary>Napautus ruutuun (pikseleinä, Natiivi-UI:n kosketus tai Macin napsautus): lattia → kävely sinne; esine tai seinä
         /// alle 1,2 m:n päässä → toiminto (SeikkailuEsineet). Palauttaa, osuiko napautus maailmaan.</summary>
         public static bool Napautus(Vector2 ruutu)
@@ -116,7 +152,7 @@ namespace Matkakirja.Natiivi
         string kasiEle; float kasiEleLoppuu; double kasiAika; string kasiPerus = "piilossa";
         public (string Leike, double Aika) KadetLeike()
         {
-            string l = kasiEle ?? kasiPerus; double t = kasiAika;
+            string l = kasiEle ?? kasiPerus; double t = kasiEle == null && kasiPerus == "kiipeily" ? kasiKiipeilyAika : kasiAika;   // kiipeilyn otteet syötteen tahdissa
             // Pito (suojaus 15–75 silmukkana niin kauan kuin kyyristytään).
             if (kasiEle == null && Malli?.Kadet != null && Malli.Kadet.PitoS.TryGetValue(l, out var pito) && t > pito.Alku)
                 t = pito.Alku + (t - pito.Alku) % (pito.Loppu - pito.Alku);
@@ -143,13 +179,14 @@ namespace Matkakirja.Natiivi
             string perus = "piilossa";
             var ky = SeikkailuKynttilat.Aktiivinen;
             bool kynttila = ky != null && ky.Ydin.OmaPalaa && ky.OmaAsetettu == null;
-            if (kynttila) perus = kavely.Tapa == Liiketapa.Hiipiminen && Malli.Kadet.Leikkeet.ContainsKey("suojaus") ? "suojaus" : "kanto_idle";
+            if (kiipeilee && Malli.Kadet.Leikkeet.ContainsKey("kiipeily")) perus = "kiipeily";
+            else if (kynttila) perus = kavely.Tapa == Liiketapa.Hiipiminen && Malli.Kadet.Leikkeet.ContainsKey("suojaus") ? "suojaus" : "kanto_idle";
             else if (SeikkailuEsineet.Aktiivinen?.Kadessa != null) perus = "kanto_idle";
             if (kasiEle != null && Time.unscaledTime >= kasiEleLoppuu) { kasiEle = null; kasiAika = 0; }
             if (kasiEle == null && perus != kasiPerus)
             {
                 // Siirtymät: kynttilä esiin (kanto_alku) ja pois (kanto_loppu), jos leikkeet ovat mallissa.
-                string siirto = kasiPerus == "piilossa" && perus == "kanto_idle" ? "kanto_alku" : kasiPerus != "piilossa" && perus == "piilossa" && kasiPerus != "suojaus" ? "kanto_loppu" : null;
+                string siirto = kasiPerus == "piilossa" && perus == "kanto_idle" ? "kanto_alku" : kasiPerus != "piilossa" && perus == "piilossa" && kasiPerus != "suojaus" && kasiPerus != "kiipeily" ? "kanto_loppu" : null;
                 kasiPerus = perus; kasiAika = 0;
                 if (siirto != null) KasiEle(siirto);
             }
@@ -356,6 +393,15 @@ namespace Matkakirja.Natiivi
             NapautusSyote(ref s, dt);
             if (Time.unscaledTime > leikkausTarkistus) { leikkausTarkistus = Time.unscaledTime + 0.5f; SeikkailuKavely.PaivitaLeikkaukset(transform.position); }
             if (Otteessa) { s.LiikeX = s.LiikeY = 0; s.Juoksu = false; napautusReitti.Clear(); }
+            if (PaivitaKiipeily(dt, s))
+            {
+                // Kiipeillessä vain katse kääntyy (keho tikkaisiin päin).
+                var ks = s; ks.LiikeX = ks.LiikeY = 0; double hy = kavely.HahmoYaw; kavely.Paivita(dt, ks); kavely.HahmoYaw = hy; kavely.NopeusX = kavely.NopeusZ = 0;
+                olka.rotation = Quaternion.Euler((float)kavely.KameraPitch, (float)kavely.KameraYaw, 0);
+                if (Ensimmainen) olka.localPosition = new Vector3(0f, SilmaY, 0f);
+                silmaMaailma = float.NaN;
+                return;
+            }
             PaivitaKadet(dt);
             if (PaivitaEle(dt))
             {
