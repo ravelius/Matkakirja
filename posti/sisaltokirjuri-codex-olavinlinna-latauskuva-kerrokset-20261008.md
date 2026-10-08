@@ -1,0 +1,24 @@
+## 2026-10-08 — SISÄLTÖKIRJURI → CODEX: Olavinlinnan latauskuva kerroksina (kevyesti liikkuva nimiruudun taustakuva)
+
+Omistaja hyväksyi 8.10. klo ~10.5x Olavinlinnan nimiruutuun kevyesti liikkuvan latauskuvan. Kuvan muoto ja kerrokset kuten pallon latauskuvassa (`posti/sisaltokirjuri-codex-latauskuva-pallo-kaksi-kerrosta-20261008.md`): **fotorealistinen** havainnekuva, ei tekstiä, ei ihmisiä, ei logoja, ei vesileimaa, ei kehystä; PNG sRGB; metatietoihin PNG `Description`/`Source`: "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."; kuvateksti/manifesti päättyy sanaan "Havainnekuva.". Natiivi-UI kokoaa kerrokset peliin.
+
+### Aihe ja viitekuvat (linnan muoto!)
+**Olavinlinna Kyrönsalmessa Savonlinnassa, elokuun ilta, VUODEN 1499 ASU.** Linnan muotolähde ovat liitteenä olevat pelin 3D-mallin (v44z) vertailurenderit:
+- `posti/liitteet/olavinlinna-latauskuva-v44z-a.jpg` (kaukaa: kamera lounaassa, suunta linnasta 215°, katse koilliseen, 180 m, 2 m vedestä; **Kellotorni vasemmalla, Kirkkotorni keskellä ja Pyhän Eerikin torni oikealla**),
+- `posti/liitteet/olavinlinna-latauskuva-v44z-b.jpg` (lähempää: 228°, 105 m; Kellotorni ja päälinnan länsimuuri).
+Seuraa tornien, päälinnan muurien ja itäosan muotoa ja suhteita viitekuvista. **Karkeat paikkamerkit viitekuvissa pitää maalata luonnollisiksi:** etualan ruskeat kumpareet = luonnollinen graniittikallio rantaviivassa; tumma vyö muurin juurella ja etuvarustuksen laatikko = matala kivimuuri, jossa puusilta. Oikealla näkyvä itäosan muuri on 1500-luvun lopun/1600-luvun alun esilinnaa: **madalla se tai anna sen haihtua usvaan** (puhdas 1499).
+**EI Kellobastionia, EI Vesiportin bastionia, ei 1600-luvun lisärakennuksia, ei nykyaikaisia rakenteita** (ei siltoja nykyaikaisina, ei kylttejä, ei lippuja Suomen/Ruotsin väreissä, ei autoja/laitureita/turistiveneitä).
+Valo: matala lämmin elokuun illan valo luoteesta (kameran vasemmalta takaa), hämärätaivas (vaalea ruusunharmaa/laventeli, luonnollinen, ei ylikylläinen), tyyni vesi heijastuksineen. Vaimeat värit, ei HDR:ää.
+
+### Kerrokset (kaikki samassa rajauksessa/koossa; 3 rajausta: iPhone pysty 1290×2796, iPad pysty 2048×2732, iPad vaaka 2732×2048)
+Tee yksi **master** (suositus neliö, esim. 2048×2048 tai suurempi) josta rajaukset tehdään teknisesti kuten pallossa; linna (tornit ja päälinnan muurit) kokonaan **keskimmäisellä ~46 %:n leveydellä** ja korkeusvyöhykkeellä ~28–62 %, jotta se säilyy myös iPhone-pystyrajauksessa; itäosan muuri saa häipyä oikealle usvaan. Yläreunan ~8 % rauhallista taivasta. **Alin ~25 % jokaisessa rajauksessa tummenee tasaisesti syvän tummaksi (nimelle ja latauspalkille; pelin tausta `#1d1610`, alimman 15 %:n keskimääräinen L* ≤ 12)**: vesi syvenee tummaksi, ei yksityiskohtia.
+- **(a) TAUSTA:** koko kuva (linna 1499, Kyrönsalmi, taivas, vesi, tumma alaosa) **ILMAN venettä**. Pieni 1499-vuoden **linnanherran vaakunaviiri tai pääskyviiri** (kolmikulmainen/pääskynhäntäinen viiri) saa olla tornin huipun tangossa osana taustaa (EI sinikeltaista ristilippua, ei Suomen lippua, ei Ruotsin lippua; ei erillistä kerrosta).
+- **(b) VENE alfalla:** pieni perinteinen **puuvene** (soutuvene tai pieni purjeveneen runko 1400-luvun tyyliin, ei moottoria, ei ihmisiä tunnistettavina — korkeintaan pieni hahmo selin tai ei lainkaan) salmessa linnan edessä, **sama koko kuin tausta, muu läpinäkyvää** (RGBA, aito alfa, siistit reunat ilman haloa; veneen **vesiheijastus mukaan alfaan pehmeänä** tai jätä pois: kerro). Venettä **ei** ole taustassa. Vene riittävän suuri nähtäväksi mutta pieni (noin 6–9 % kuvan leveydestä), sijoitus vedenpinnalle linnan edessä noin 60–68 % korkeudella, **ei alimmassa tummassa 25 %:ssa**; veneen ympärille ~4 % läpinäkyvää marginaalia heilumista varten.
+- **(c) valinnainen USVAKAISTALE alfalla:** vaalea matala usvakaistale vedenpinnan yllä (RGBA, pehmeä, sama koko), esim. linnan juurella ja salmessa; ei peitä linnan siluettia kokonaan.
+Generointimäärä: **3 kerrosta (a, b, c) samasta masterista**, koot teknisellä rajauksella/skaalauksella; ei lisävariantteja.
+
+### Mitat manifestiin (Codex mittaa, Sisältökirjuri tarkistaa)
+Per rajaus (iPhone / iPad pysty / iPad vaaka), pikkseleinä taustakuvan koordinaatistossa: **veneen kölin keskikohta (kääntöpiste)** (x, y), veneen rajauslaatikko (x, y, leveys, korkeus), usvakerroksen sijainti. Esikatselu: kolme kerrosta päällekkäin, vene kolmessa asennossa.
+
+### Toimitus
+R2 `julisteet/olavinlinna-latauskuva/20261008/…png`, manifesti `posti/kuvatoimitus-olavinlinna-latauskuva-20261008.json` (url, r2Key, sha256, mitat, generationPrompt, viitteet, kölin kääntöpisteet), kuittaus `posti/codex-fable-olavinlinna-latauskuva-20261008.md`. Ei main-mergeä, versionnostoa eikä julkaisua Codexilta. Sisältökirjuri tarkistaa alfan, reunat, valon ja linnan muodon silmin ja välittää polut Natiivi-UI:lle. **Jonossa pallon latauskuvan jälkeen.**
