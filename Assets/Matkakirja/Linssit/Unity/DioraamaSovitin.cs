@@ -1600,8 +1600,23 @@ namespace Matkakirja.Natiivi
             GlbMalli malli;
             try { malli = DioraamaGlb.Lue(tavut, true); }
             catch (Exception e) { o.Kirjaa($"poikki: hahmo3d {glbPolku} virhe: {e.Message}"); yield break; }
-            if (kerta != avauskerta || nayttamo?.Hahmot3D == null) yield break; // ks. LataaTila-kommentti
-            nayttamo.Hahmot3D.AsetaGlb(glbPolku, malli);
+            // Hahmon kuvat ASTC 6×6:na (juna 169: <glb>-<kuva>-6x6.astcm, vain jos paketin manifestissa), muuten glb:n kuva.
+            Texture2D[] astcKuvat = null;
+            if (glbPolku.EndsWith(".glb", StringComparison.OrdinalIgnoreCase))
+                for (int ki = 0; ki < malli.Kuvat.Count; ki++)
+                {
+                    string url = peili(paketinJuuri + glbPolku.Substring(0, glbPolku.Length - 4) + "-" + ki + "-6x6.astcm");
+                    if (DioraamaLevyvalimuisti.Manifestissa(url) != true) continue;
+                    byte[] a = null;
+                    yield return DioraamaLevyvalimuisti.Hae(url, 60, t => a = t);
+                    string syy = "ei latautunut";
+                    var k = a != null ? DioraamaAstc.Lue(a, "Hahmo3D:" + glbPolku + ":" + ki, out syy, TextureWrapMode.Repeat) : null;
+                    if (k == null) { o.Kirjaa($"poikki: hahmo3d {glbPolku} kuva {ki} ASTC ei käytössä ({syy}), glb:n kuva"); continue; }
+                    astcKuvat ??= new Texture2D[malli.Kuvat.Count];
+                    astcKuvat[ki] = k;
+                }
+            if (kerta != avauskerta || nayttamo?.Hahmot3D == null) { if (astcKuvat != null) foreach (var k in astcKuvat) if (k != null) UnityEngine.Object.Destroy(k); yield break; } // ks. LataaTila-kommentti
+            nayttamo.Hahmot3D.AsetaGlb(glbPolku, malli, astcKuvat);
             o.Kirjaa($"poikki: hahmo3d {glbPolku} valmis ({malli.Solmut.Count} solmua"
                 + (malli.Skinit.Count > 0 ? $", skin {malli.Skinit[0].Nivelet.Length} luuta, leikkeet {string.Join(",", malli.Animaatiot.ConvertAll(a => a.Nimi))}" : "") + ")");
         }
