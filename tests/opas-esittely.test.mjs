@@ -244,7 +244,7 @@ test('yksityiskohdat_polut: 6 äänellistä + kaikki 31 äänetöntä (Sisältö
     berliini: 'esittely/berliini-v2/berliini-yksityiskohdat.json', amsterdam: 'esittely/amsterdam-v1/amsterdam-yksityiskohdat.json',
     madrid: 'esittely/madrid-v1/madrid-yksityiskohdat.json', ateena: 'esittely/ateena-v1/ateena-yksityiskohdat.json',
     firenze: 'esittely/firenze-v2/firenze-yksityiskohdat.json',
-    lissabon: 'esittely/lissabon-v1/lissabon-yksityiskohdat.json', tukholma: 'esittely/tukholma-v1/tukholma-yksityiskohdat.json',
+    lissabon: 'esittely/lissabon-v1/lissabon-yksityiskohdat.json', tukholma: 'esittely/tukholma-v2/tukholma-yksityiskohdat.json',
     helsinki: 'esittely/helsinki-v2/helsinki-yksityiskohdat.json', budapest: 'esittely/budapest-v1/budapest-yksityiskohdat.json',
     edinburgh: 'esittely/edinburgh-v1/edinburgh-yksityiskohdat.json', dublin: 'esittely/dublin-v1/dublin-yksityiskohdat.json',
     krakova: 'esittely/krakova-v1/krakova-yksityiskohdat.json', sevilla: 'esittely/sevilla-v1/sevilla-yksityiskohdat.json',
