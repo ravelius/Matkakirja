@@ -36,6 +36,25 @@ namespace Matkakirja.Linssit.Seikkailu
         /// <summary>Viimeisen vedon loppu (soutukello pysähtyy tähän, sitten liuku).</summary>
         public double SoutuLoppuS { get; }
 
+        /// <summary>Reitin loppuosa enintään maxM metriä (omistaja 8.10.: "soutukohtaus aivan liian pitkä" → noin 22 s samalla soutuvauhdilla):
+        /// alku siirtyy reittiä pitkin kohti loppua, loppu ja sen suunta ennallaan.</summary>
+        public static List<(double X, double Y, double Z)> Lyhenna(IReadOnlyList<(double X, double Y, double Z)> reitti, double maxM)
+        {
+            var ulos = new List<(double X, double Y, double Z)>();
+            if (reitti == null || reitti.Count == 0) return ulos;
+            double jaljella = maxM; ulos.Add(reitti[reitti.Count - 1]);
+            for (int i = reitti.Count - 1; i > 0 && jaljella > 0; i--)
+            {
+                var b = reitti[i]; var a = reitti[i - 1];
+                double dx = a.X - b.X, dz = a.Z - b.Z, l = Math.Sqrt(dx * dx + dz * dz);
+                if (l <= jaljella) { ulos.Insert(0, a); jaljella -= l; continue; }
+                double u = jaljella / Math.Max(1e-9, l);
+                ulos.Insert(0, (b.X + dx * u, b.Y + (a.Y - b.Y) * u, b.Z + dz * u));
+                jaljella = 0;
+            }
+            return ulos;
+        }
+
         public Venesaapuminen(IReadOnlyList<(double X, double Y, double Z)> reitti, double kestoS = 50, double? loppuSuunta = null)
         {
             if (reitti == null || reitti.Count < 2) throw new ArgumentException("reitissä vähintään 2 pistettä");

@@ -205,7 +205,7 @@
    "voice_id": "RgBrizTAuszgl4fIyXzH",
    "rivi": 2,
    "alku_s": 19.0,
-   "loppu_s": 27.4,
+   "loppu_s": 27.32,
    "sanat": [
     {
      "sana": "Viisi",
@@ -285,7 +285,7 @@
     {
      "sana": "kumpaakaan.",
      "alku_s": 26.32,
-     "loppu_s": 27.4
+     "loppu_s": 27.32
     }
    ],
    "tauko_s": 0.0

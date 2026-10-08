@@ -180,7 +180,7 @@
    "voice_id": "wocshSIDGCqslHrj4bVd",
    "rivi": 2,
    "alku_s": 16.75,
-   "loppu_s": 26.11,
+   "loppu_s": 26.03,
    "sanat": [
     {
      "sana": "Ja",
@@ -280,7 +280,7 @@
     {
      "sana": "hermoni.",
      "alku_s": 25.15,
-     "loppu_s": 26.11
+     "loppu_s": 26.03
     }
    ],
    "tauko_s": 0.0
