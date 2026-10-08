@@ -32,5 +32,21 @@ namespace Matkakirja.Linssit.Testit
             DioraamaData.LueDetaljitTiedosto(@"{ ""versio"": 1, ""koodaus"": ""lineaarinen"", ""detaljit"": { ""kivi"": { ""albedo"": ""a.jpg"", ""astc"": { ""albedo"": ""a-6x6.astcm"", ""normaali"": ""n-6x6.astcm"", ""karheus"": ""k-6x6.astcm"" }, ""m"": 1.5, ""voima"": 0.6, ""lahde"": ""x"", ""lisenssi"": ""CC0"" } } }", o);
             Oleta.Tosi(o.Detaljit.TryGetValue("kivi", out var ok) && ok.AstcKarheus == "k-6x6.astcm", "erillinen tiedosto jäsennetty");
         }
+
+        [Testi] static void KavelyosienValoatlakset()
+        {
+            // LR v45l: 8 kävelyosalla valoatlas paketin juuresta (blender/kavely/valot/…), ASTC-vastineineen; Tila.ValoVain.
+            var d = Matkakirja.Linssit.Testit.Huonesimulaatio.Data;
+            int n = 0;
+            foreach (var o in d.Osat.Values)
+            {
+                if (o.ValoAtlas == null) continue;
+                var t = new Tila { Id = "kavely:" + o.Id };
+                DioraamaData.LueValoAtlas(t, o.ValoAtlas);
+                Oleta.Tosi(t.ValoAtlas.StartsWith("blender/kavely/valot/") && t.ValoAtlasAstc != null && t.ValoAtlasPuoli != null, $"{o.Id}: polut paketin juuresta ({t.ValoAtlas})");
+                n++;
+            }
+            Oleta.Sama(8, n);
+        }
     }
 }
