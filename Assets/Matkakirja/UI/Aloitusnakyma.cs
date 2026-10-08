@@ -717,6 +717,10 @@ namespace Matkakirja.Natiivi
 
         void Nayta(int n)
         {
+            // Kirjoituskoneen lyönti sillä hetkellä, kun uusi sana ilmestyy (web typeText: sfx.play('pen'), KIRJOITUSRYTMI
+            // intro/flight/saapuminen). Omistaja 7.10.2026: "ei kuulu kirjoituskoneen ääntä alkutekstissä" — puuttui
+            // natiivista kokonaan (iOS ja Mac); usean sanan hyppäys luennan tahdissa = yksi lyönti.
+            if (n > sana) Aanet.Tehoste("pen");
             sana = Mathf.Min(n, sanat.Length);
             runko.text = string.Join(" ", sanat, 0, sana);
             if (sana >= sanat.Length) { kirjoitus?.Pause(); Valmis(); }
@@ -728,6 +732,7 @@ namespace Matkakirja.Natiivi
             if (sanat == null || sana >= sanat.Length) { Valmis(); return; }
             string s = sanat[sana++];
             runko.text = sana == 1 ? s : runko.text + " " + s;
+            Aanet.Tehoste("pen");   // kirjoituskoneen lyönti (ks. Nayta)
             if (sana >= sanat.Length) { Valmis(); return; }
             int viive = (int)(Tahti * (0.7 + 0.6 * arpa.NextDouble()));
             bool osui = false;
@@ -920,6 +925,7 @@ namespace Matkakirja.Natiivi
             valintaPisteet = kk.pisteet;
             valintaKierto = kierto;
             ValitseePallolla = true;
+            if (valintaMerkit != null) valintaMerkit.ValintaIlmanAjoa = true;
 
             // Verho ja arkki häipyvät (web intro-fade); pallo saa syötteen.
             juuri.style.opacity = 0f;
@@ -992,6 +998,7 @@ namespace Matkakirja.Natiivi
             }
             if (valintaMerkit != null)
             {
+                valintaMerkit.ValintaIlmanAjoa = false;
                 foreach (var id in valintaIdt) valintaMerkit.Korosta(id, null);
                 valintaMerkit.NaytaVain(null);
                 valintaMerkit.Renkaat(null);

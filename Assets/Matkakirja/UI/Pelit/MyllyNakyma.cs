@@ -95,7 +95,7 @@ namespace Matkakirja.Natiivi
 
         public bool Auki { get; private set; }
 
-        /// <summary>Pelin aikaisen tilapaneelin PANEELI-teema (Tyylikirja .tk-teema-*): lasi; vertailuun "ui mylly teema …".</summary>
+        /// <summary>Pelin aikaisen tilapaneelin PANEELI-teema (Tyylikirja .tk-teema-*, LAUTAPELI-pohja): paperi; vertailuun "ui mylly teema …".</summary>
         const string PaneelinTeema = "tk-teema-paperi"; // omistaja 11.0x: alkuperäinen paperi (tumma ja lasi kokeiltu)
         static readonly string[] Teemat = { "tk-teema-lasi", "tk-teema-tumma", "tk-teema-paperi" };
 

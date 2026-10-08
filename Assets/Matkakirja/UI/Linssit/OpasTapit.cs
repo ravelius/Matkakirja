@@ -64,7 +64,8 @@ namespace Matkakirja.Natiivi
                  + $"oikea {Oikea.x:0.00},{Oikea.y:0.00} @ {b.xMin:0},{b.yMin:0} {b.width:0}×{b.height:0}, kosketaan {Kosketaan}";
         }
 
-        sealed class Tappi
+        /// <summary>Yksi tappi (TAPPI-pohja); käytössä myös SeikkailuTapit.</summary>
+        internal sealed class Tappi
         {
             public readonly VisualElement Juuri, Nuppi;
             readonly System.Action<Vector2> asetaArvo;

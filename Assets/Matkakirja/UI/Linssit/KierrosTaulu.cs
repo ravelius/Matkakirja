@@ -133,9 +133,20 @@ namespace Matkakirja.Natiivi
         /// Oppaan lyhyt ilmoitus kertojan laatikossa (PUHE TEKSTINÄ -pohja; juna 157: LS1:n torjunta "valitse kohde listasta", kun
         /// ei-sallittu-siltalause ei soinut). Oppaan chat ei aukea itsestään, joten PuluChat.Vastaa jäi näkymättömiin (simu 04.35).
         /// </summary>
-        public static void Ilmoitus(string teksti, float kestoS = 5f) { ilmoitusTeksti = teksti; ilmoitusAsti = Time.unscaledTime + kestoS; }
+        /// <summary>
+        /// Kertojan laatikon ilmoitus (torjunta ym.). Näkyy lukuajan (15 merkkiä/s), kuitenkin vähintään IlmoitusMinS; jos siirtoruutu
+        /// ("Siirrytään") on auki, ajastin alkaa vasta kun kaupunki näkyy (LS2:n löydös juna 159:ssä: alle 4 s ja ruudun päällä).
+        /// </summary>
+        public static void Ilmoitus(string teksti, float kestoS = 0f)
+        {
+            ilmoitusTeksti = teksti;
+            ilmoitusKesto = Mathf.Max(kestoS, IlmoitusMinS, (teksti?.Length ?? 0) / IlmoitusMerkkiaS);
+            ilmoitusAsti = -1f; ilmoitusOdottaa = true;
+        }
+        public const float IlmoitusMinS = 6f, IlmoitusMerkkiaS = 15f;
         static string ilmoitusTeksti;
-        static float ilmoitusAsti = -1f;
+        static float ilmoitusAsti = -1f, ilmoitusKesto;
+        static bool ilmoitusOdottaa;
 
         /// <summary>Testi `ui opasvalikko otsikko <nimi>|<alarivi>` / `pois`: pysähdyksen otsikko pysyvästi näkyviin (pitkä nimi).</summary>
         public static string Testiotsikko;
@@ -152,6 +163,8 @@ namespace Matkakirja.Natiivi
             var alue = Screen.safeArea;
             var vy = RuntimePanelUtils.ScreenToPanel(paneeli, new Vector2(alue.xMin, Screen.height - alue.yMax));
             float yla = Mathf.Round(Mathf.Max(0f, vy.y) + 8f + Tyylikirja.Nappi.Ohjaus + 8f);
+            // iPhonella metrolinja on vasemmassa yläkulmassa (omistaja 12.3x): otsikko sen alle.
+            if (OpasMetrolinja.Alareuna > 0f) yla = Mathf.Max(yla, Mathf.Round(paneeli.visualTree.WorldToLocal(new Vector2(0, OpasMetrolinja.Alareuna)).y + 8f));
             float vasen = Mathf.Round(Mathf.Max(0f, vy.x) + 28f);
             if (otsikko.style.top.value.value != yla) otsikko.style.top = yla;
             if (otsikko.style.left.value.value != vasen) otsikko.style.left = vasen;
@@ -181,7 +194,13 @@ namespace Matkakirja.Natiivi
                 alarivi.text = l.Nykyinen.Alarivi ?? "";
             }
             // Opas kevyeksi (Päätoimittaja 5.10.): nimi ja alarivi häipyvät 3 s saapumisen jälkeen (omistaja 23.0x), palaavat seuraavalla pysähdyksellä.
-            otsikko.style.opacity = puhuu && l.Nykyinen != null && Time.unscaledTime - nimiAlku < NimiNakyyS ? 1f : 0f;
+            bool nimiNakyy = puhuu && l.Nykyinen != null && Time.unscaledTime - nimiAlku < NimiNakyyS;
+            // Omistaja 7.10. 21.4x ("Notre Dame tulee nyt kaksi kertaa"): kun metrolinja näkyy, erillistä otsikkoa ei ole; nimi
+            // suurenee metrolinjassa ja alarivi tulee sen alle selitteeksi samaksi ajaksi (OpasMetrolinja.Korostus).
+            bool metro = OpasMetrolinja.Alareuna > 0f;
+            OpasMetrolinja.Korostus = metro && nimiNakyy;
+            OpasMetrolinja.KorostusSelite = alarivi.text;
+            otsikko.style.opacity = nimiNakyy && !metro ? 1f : 0f;
             if (Testiotsikko != null)
             {
                 var o = Testiotsikko.Split('|');
@@ -189,6 +208,7 @@ namespace Matkakirja.Natiivi
                 otsikko.style.opacity = 1f;
             }
             string teksti = s.TekstiRuudulle;
+            if (ilmoitusOdottaa && !l.Siirtymassa) { ilmoitusOdottaa = false; ilmoitusAsti = Time.unscaledTime + ilmoitusKesto; }
             bool ilmoitus = Time.unscaledTime < ilmoitusAsti;
             if (ilmoitus) teksti = ilmoitusTeksti;
             if (teksti != null && kertojaTeksti.text != teksti) kertojaTeksti.text = teksti;
