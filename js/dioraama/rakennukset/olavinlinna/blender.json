@@ -1,7 +1,7 @@
 {
   "rakennus": "olavinlinna",
-  "hash": "4e11ddc967f80ba9",
-  "kansio": "dioraama/olavinlinna/blender/4e11ddc967f80ba9/",
+  "hash": "82fc2bb75a60e82a",
+  "kansio": "dioraama/olavinlinna/blender/82fc2bb75a60e82a/",
   "tiedostot": [
     {
       "polku": "hahmot/apulainen-1500-faceit.glb",
@@ -330,8 +330,8 @@
     },
     {
       "polku": "kavely/merkit.json",
-      "sha256": "1610ec9ba98fd13b3be4b4fa6e58196770058e20d3f277b4f2baf910b41004e0",
-      "tavuja": 57398
+      "sha256": "ff3918ff577c0a419638f18c607d1ef746e82eb29921ea51465f5c554911f3f1",
+      "tavuja": 57413
     },
     {
       "polku": "kavely/muurikaytava-kavely.glb",
@@ -350,8 +350,8 @@
     },
     {
       "polku": "kavely/osat.json",
-      "sha256": "cbdf156bccbc40c63ea1955716ea70b54255889873419e6e2e525260a5aa3a50",
-      "tavuja": 25999
+      "sha256": "4b9ed45f1c5c533f428d4419cc3b4f6b271ca26c23aa603f1189394b303501ec",
+      "tavuja": 25589
     },
     {
       "polku": "kavely/palatsi-kavely.glb",
@@ -410,8 +410,8 @@
     },
     {
       "polku": "kavely/ranta-1499.glb",
-      "sha256": "d95e78ac64eb67f3690c6f8e0ae81916840a6d6c4be23ecbed0cba68798fbd56",
-      "tavuja": 883928
+      "sha256": "7040e646c2b62d24d083884836035100170a34dfcdc548b3bce1d16f6ac73015",
+      "tavuja": 908696
     },
     {
       "polku": "kavely/tyrma-E101-kavely.glb",
@@ -435,22 +435,22 @@
     },
     {
       "polku": "kavely/ulkoalue-tormays.glb",
-      "sha256": "e6df92c4bb4482eab53c0fd54afa3832cfad22e93ca05d56fd65043451b6c192",
-      "tavuja": 135520
+      "sha256": "779af636fb6236ee85870ceb0edf09339ae403f7b9afc1eb98980f6e1ea0a429",
+      "tavuja": 135496
     },
     {
       "polku": "kavely/vesiportti-kavely.glb",
-      "sha256": "802f5ea048e7e7eed48259311ef1136b3f0ec51173d66482f266d0f351d5a717",
+      "sha256": "459f24bf42ea540e3530f10b52837052d6c325e17a90bbfbe5f9e2aca6b92d78",
       "tavuja": 1052
     },
     {
       "polku": "kavely/vesiportti-tormays.glb",
-      "sha256": "2e685bbb6eb1fd23cb2c026aee66a34f7fbf52f8612f13ba32a368a90021ae85",
-      "tavuja": 2212
+      "sha256": "5070f1830a78be3cc121ac4e5da8642b6b76268155a69588162e2542d6682e8b",
+      "tavuja": 2248
     },
     {
       "polku": "kavely/vesiportti.glb",
-      "sha256": "aa9168fb33a551b0932f3fcb18f0fef94e449c43cc7afc7d738252c002fe349f",
+      "sha256": "23f96f117d43dfb96246fffee9520d92343fd69e6d7bb2cd7b0049264ab47021",
       "tavuja": 18096
     },
     {
