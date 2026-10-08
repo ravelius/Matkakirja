@@ -272,7 +272,7 @@ namespace Matkakirja.Natiivi
             // AIKA (päivä | yö) ja SÄÄ (pois | automaatti | käsin); valinta Ydin Saatila-luokkaan (LS1 tehosteet, Pelikoodari säähaku).
             aikaRyhma = Ohjausnappi.Ryhma(Juuri);
             aikaRyhma.AddToClassList("mk-ohjausryhma--vasen");
-            aikaNappi = Ohjausnappi.Nappi(Ikonit.Viiva["paiva"], "Aika ja sää", () => { if (Auki && nakyma == Nakyma.Aika) Sulje(); else Avaa(Nakyma.Aika); }, aikaRyhma);
+            aikaNappi = Ohjausnappi.Nappi(Ikonit.Viiva["paiva"], "Aika ja sää", () => { SuljeSaaVihje(); if (Auki && nakyma == Nakyma.Aika) Sulje(); else Avaa(Nakyma.Aika); }, aikaRyhma);
             LueSaatila();
 
             // Elävä opas nykyajassa (omistaja 5.10.2026 klo 20.5x): LASI-lista harmaan lasin tokeneilla ja modernilla kirjasimella.
@@ -388,6 +388,9 @@ namespace Matkakirja.Natiivi
             tapit = new OpasTapit(Juuri);
             nimilappu = new OpasNimilappu(Juuri);
             kerros.JokaRuutu += PaivitaTapit;
+            // SÄÄTILAN ENSIKERRAN VIHJE (omistaja 8.10. 09.2x): NIMILAPPU-pohjan lappu ja viiva ☾-napin alle (ei nastaa).
+            RakennaSaaVihje();
+            kerros.JokaRuutu += PaivitaSaaVihje;
             // METROLINJA (omistaja 7.10. 10.2x): kierroksen eteneminen vasemmassa reunassa keskellä (OpasMetrolinja).
             metro = new OpasMetrolinja(Juuri);
             kerros.JokaRuutu += PaivitaMetro;
@@ -408,6 +411,7 @@ namespace Matkakirja.Natiivi
             if (nakyy == this.nakyy && Juuri.style.display == (nakyy ? DisplayStyle.Flex : DisplayStyle.None)) return;
             this.nakyy = nakyy;
             Juuri.style.display = nakyy ? DisplayStyle.Flex : DisplayStyle.None;
+            if (nakyy) saaVihje.Alkoi(Time.unscaledTime); else saaVihje.Loppui();
             if (!nakyy) { Sulje(); SiirtymaPeru(); }
             var ui = UiNakymat.Olemassa ? UiNakymat.Hae() : null;
             ui?.Chat?.OpasTila(nakyy);
@@ -1870,6 +1874,80 @@ namespace Matkakirja.Natiivi
             };
         }
 
+        const string SaaVihjeAvain = "matkakirja-saatila-vihje-nahty";
+        const string SaaVihjeTeksti = "Näytä nykyinen vuorokauden aika ja säätila";
+        SaaVihje saaVihje;
+        Label saaVihjeLappu;
+        VisualElement saaVihjeViiva;
+        bool saaVihjeNakyy;
+
+        void RakennaSaaVihje()
+        {
+            saaVihje = new SaaVihje(PlayerPrefs.GetInt(SaaVihjeAvain, 0) == 1);
+            saaVihjeViiva = Rakenne.El("tk-teema-harmaa mk-opas-nimilappu__viiva", Juuri, PickingMode.Ignore);
+            saaVihjeLappu = Rakenne.Teksti(SaaVihjeTeksti, "tk-teema-harmaa mk-opas-nimilappu", Juuri);
+            saaVihjeLappu.style.whiteSpace = WhiteSpace.Normal;
+            saaVihjeLappu.style.maxWidth = 220f;
+            Kirjasimet.Aseta(saaVihjeLappu, Kirjasin.Moderni);
+            saaVihjeLappu.RegisterCallback<PointerDownEvent>(e => { e.StopPropagation(); SuljeSaaVihje(); });
+            saaVihjeLappu.style.display = DisplayStyle.None; saaVihjeViiva.style.display = DisplayStyle.None;
+        }
+
+        /// <summary>Napautus kuplaan tai ☾-nappiin: pois eikä tule enää.</summary>
+        void SuljeSaaVihje()
+        {
+            if (saaVihje == null || saaVihje.Nahty && !saaVihjeNakyy) return;
+            saaVihje.Suljettu();
+            TallennaSaaVihje();
+            AsetaSaaVihje(false);
+        }
+
+        void TallennaSaaVihje()
+        {
+            if (!saaVihje.Nahty || PlayerPrefs.GetInt(SaaVihjeAvain, 0) == 1) return;
+            PlayerPrefs.SetInt(SaaVihjeAvain, 1); PlayerPrefs.Save();
+        }
+
+        /// <summary>Joka ruudulla: ensimmäisellä pallokerralla 15 s alusta 5 s näkyvissä (SaaVihje); ei valikon, chatin eikä siirtymän aikana.</summary>
+        void PaivitaSaaVihje()
+        {
+            if (saaVihje == null) return;
+            var chat = UiNakymat.Olemassa ? UiNakymat.Hae().Chat : null;
+            bool este = Auki || (chat?.Auki ?? false) || (siirtyma != null && siirtyma.style.display != DisplayStyle.None);
+            bool n = nakyy && saaVihje.Nakyy(Time.unscaledTime, Saatila.Live, este);
+            TallennaSaaVihje();
+            AsetaSaaVihje(n);
+            if (!n || aikaNappi.panel == null) return;
+            // ☾-napin alle: viiva napin keskeltä alas 12 pt, lappu viivan päähän napin vasemmasta reunasta (ruudun sisällä).
+            var nb = Juuri.WorldToLocal(aikaNappi.worldBound);
+            float x = nb.center.x, y = nb.yMax + 4f;
+            saaVihjeViiva.style.left = x - 0.75f; saaVihjeViiva.style.top = y; saaVihjeViiva.style.height = 12f;
+            saaVihjeLappu.style.top = y + 12f;
+            saaVihjeLappu.style.left = Mathf.Max(8f, nb.xMin);
+        }
+
+        void AsetaSaaVihje(bool n)
+        {
+            if (n == saaVihjeNakyy) return;
+            saaVihjeNakyy = n;
+            foreach (var e in new VisualElement[] { saaVihjeLappu, saaVihjeViiva })
+            {
+                if (n)
+                {
+                    e.style.display = DisplayStyle.Flex;
+                    var el = e;
+                    el.schedule.Execute(() => { if (saaVihjeNakyy) el.AddToClassList("mk-opas-nimilappu--nakyy"); });
+                }
+                else
+                {
+                    e.RemoveFromClassList("mk-opas-nimilappu--nakyy");
+                    var el = e;
+                    el.schedule.Execute(() => { if (!saaVihjeNakyy) el.style.display = DisplayStyle.None; }).StartingIn(Tyylikirja.Kesto.Sulku);
+                }
+            }
+            Debug.Log("MATKAKIRJA opas: säätilan vihje " + (n ? "näkyviin" : "pois"));
+        }
+
         /// <summary>Sään kuvake (Ikonit.Viiva): selkeä = aurinko; null = sää pois.</summary>
         static string SaaKuvake(PalloSaa s) => s switch
         {
@@ -2144,6 +2222,10 @@ namespace Matkakirja.Natiivi
                 case "mika":
                     testiMika = o.Length > 1 ? o[1] != "pois" : true;
                     return "opas: mikä tämä on " + (testiMika == true ? "näkyy (testi)" : "pois");
+                case "saavihje":
+                    // `ui opasvalikko saavihje [nollaa]`: tila; nollaa = vihje tulee uudelleen (testi).
+                    if (o.Length > 1 && o[1] == "nollaa") { PlayerPrefs.DeleteKey(SaaVihjeAvain); saaVihje = new SaaVihje(false); saaVihje.Alkoi(Time.unscaledTime); }
+                    return $"opas: säätilan vihje {(saaVihjeNakyy ? "näkyy" : "piilossa")}, nähty {saaVihje.Nahty} @ {saaVihjeLappu.worldBound}";
                 case "aika":
                     // `ui opasvalikko aika [live|paiva|yo|pois|selkea|…]`: lista auki tai valinnat suoraan (live = kytkin).
                     for (int j = 1; j < o.Length; j++)
